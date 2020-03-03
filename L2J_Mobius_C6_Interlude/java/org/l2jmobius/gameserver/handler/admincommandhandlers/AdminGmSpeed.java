@@ -47,7 +47,6 @@ public class AdminGmSpeed implements IAdminCommandHandler
 	{
 		final StringTokenizer st = new StringTokenizer(command);
 		final String cmd = st.nextToken();
-		
 		if (cmd.equals("admin_gmspeed"))
 		{
 			if (!st.hasMoreTokens())
@@ -64,7 +63,6 @@ public class AdminGmSpeed implements IAdminCommandHandler
 				{
 					final int val = Integer.parseInt(token);
 					final boolean sendMessage = player.getFirstEffect(SUPER_HASTE_ID) != null;
-					
 					player.stopSkillEffects(SUPER_HASTE_ID);
 					
 					if ((val == 0) && sendMessage)

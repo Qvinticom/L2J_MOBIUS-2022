@@ -294,14 +294,12 @@ public class BlockCheckerEngine
 			synchronized (this)
 			{
 				_isStarted = false;
-				
 				if (_task != null)
 				{
 					_task.cancel(true);
 				}
 				
 				_abnormalEnd = true;
-				
 				ThreadPool.execute(new EndEvent());
 			}
 		}
@@ -344,7 +342,6 @@ public class BlockCheckerEngine
 			_bluePoints = _spawns.size() / 2;
 			final ExCubeGameChangePoints initialPoints = new ExCubeGameChangePoints(300, _bluePoints, _redPoints);
 			ExCubeGameExtendedChangePoints clientSetUp;
-			
 			for (PlayerInstance player : _holder.getAllPlayers())
 			{
 				if (player == null)
@@ -354,7 +351,6 @@ public class BlockCheckerEngine
 				
 				// Send the secret client packet set up
 				final boolean isRed = _holder.getRedPlayers().contains(player);
-				
 				clientSetUp = new ExCubeGameExtendedChangePoints(300, _bluePoints, _redPoints, isRed, player, 0);
 				player.sendPacket(clientSetUp);
 				
@@ -488,7 +484,6 @@ public class BlockCheckerEngine
 					final BlockInstance block = (BlockInstance) spawn.getLastSpawn();
 					// switch color
 					block.setRed((random % 2) == 0);
-					
 					block.disableCoreAI(true);
 					_spawns.add(spawn);
 					random++;
@@ -523,7 +518,6 @@ public class BlockCheckerEngine
 			
 			_redPoints += _numOfBoxes / 2;
 			_bluePoints += _numOfBoxes / 2;
-			
 			_holder.broadCastPacketToTeam(new ExCubeGameChangePoints((int) ((_startedTime - System.currentTimeMillis()) / 1000), getBluePoints(), getRedPoints()));
 		}
 	}
@@ -609,7 +603,6 @@ public class BlockCheckerEngine
 			}
 			
 			_isRedWinner = _redPoints > _bluePoints;
-			
 			if (_isRedWinner)
 			{
 				rewardAsWinner(true);
@@ -714,7 +707,6 @@ public class BlockCheckerEngine
 		private void setPlayersBack()
 		{
 			final ExCubeGameEnd end = new ExCubeGameEnd(_isRedWinner);
-			
 			for (PlayerInstance player : _holder.getAllPlayers())
 			{
 				if (player == null)

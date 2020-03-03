@@ -84,7 +84,6 @@ public class Q00379_FantasyWine extends Quest
 				{
 					final int random = getRandom(10);
 					final int item;
-					
 					if (random < 3)
 					{
 						item = OLD_WINE_15_YEAR;
@@ -115,14 +114,12 @@ public class Q00379_FantasyWine extends Quest
 	public String onKill(Npc npc, PlayerInstance killer, boolean isSummon)
 	{
 		final QuestState qs = getQuestState(killer, false);
-		
 		if ((qs == null) || !Util.checkIfInRange(Config.ALT_PARTY_RANGE, npc, killer, true))
 		{
 			return null;
 		}
 		
 		final ItemHolder dropItem = ((npc.getId() == ENKU_ORC_CHAMPION) ? LEAF_OF_EUCALYPTUS : STONE_OF_CHILL);
-		
 		if (giveItemRandomly(killer, npc, dropItem.getId(), 1, dropItem.getCount(), 1.0, true) && hasAllItems(killer, true, LEAF_OF_EUCALYPTUS, STONE_OF_CHILL))
 		{
 			qs.setCond(2);
@@ -143,7 +140,6 @@ public class Q00379_FantasyWine extends Quest
 		{
 			final boolean hasLeafOfEucalyptus = hasItem(player, LEAF_OF_EUCALYPTUS);
 			final boolean hasStoneOfChill = hasItem(player, STONE_OF_CHILL);
-			
 			if (!hasLeafOfEucalyptus && !hasStoneOfChill)
 			{
 				htmltext = "30074-07.html";

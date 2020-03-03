@@ -33,7 +33,6 @@ public class RequestUserFactionInfo implements IClientIncomingPacket
 	{
 		packet.readD();
 		_openDialog = packet.readC() != 0;
-		
 		return true;
 	}
 	

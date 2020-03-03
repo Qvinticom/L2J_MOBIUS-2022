@@ -53,7 +53,6 @@ public class RequestShowResetShopList implements IClientIncomingPacket
 		
 		final BeautyData beautyData = BeautyShopData.getInstance().getBeautyData(player.getRace(), player.getAppearance().getSexType());
 		int requiredAdena = 0;
-		
 		if (_hairId > 0)
 		{
 			final BeautyItem hair = beautyData.getHairList().get(_hairId);
@@ -64,7 +63,6 @@ public class RequestShowResetShopList implements IClientIncomingPacket
 			}
 			
 			requiredAdena += hair.getResetAdena();
-			
 			if (_colorId > 0)
 			{
 				final BeautyItem color = hair.getColors().get(_colorId);

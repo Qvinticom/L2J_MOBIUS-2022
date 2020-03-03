@@ -58,7 +58,6 @@ public class Q00551_OlympiadStarter extends Quest
 			return getNoQuestMsg(player);
 		}
 		String htmltext = event;
-		
 		if (event.equalsIgnoreCase("31688-03.html"))
 		{
 			qs.startQuest();
@@ -221,7 +220,6 @@ public class Q00551_OlympiadStarter extends Quest
 	{
 		final QuestState qs = getQuestState(player, true);
 		String htmltext = getNoQuestMsg(player);
-		
 		if ((player.getLevel() < 75) || (player.getNobleLevel() == 0))
 		{
 			htmltext = "31688-00.htm";

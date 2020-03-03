@@ -171,7 +171,6 @@ public abstract class AbstractResidence extends ListenersContainer implements IN
 			ps.setInt(2, func.getLevel());
 			ps.setLong(3, func.getExpiration());
 			ps.setInt(4, _residenceId);
-			
 			ps.setInt(5, func.getLevel());
 			ps.setLong(6, func.getExpiration());
 			ps.execute();

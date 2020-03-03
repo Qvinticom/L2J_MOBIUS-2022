@@ -101,7 +101,6 @@ public class Q10375_SuccubusDisciples extends Quest
 	{
 		final QuestState qs = getQuestState(player, true);
 		String htmltext = getNoQuestMsg(player);
-		
 		if (qs.isCompleted())
 		{
 			htmltext = getAlreadyCompletedMsg(player);

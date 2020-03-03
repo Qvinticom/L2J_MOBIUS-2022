@@ -75,7 +75,6 @@ public class SiegeGuardAI extends CreatureAI implements Runnable
 		
 		_attackTimeout = Integer.MAX_VALUE;
 		_globalAggro = -10; // 10 seconds timeout of ATTACK after respawn
-		
 		_attackRange = ((Attackable) _actor).getPhysicalAttackRange();
 	}
 	
@@ -163,7 +162,6 @@ public class SiegeGuardAI extends CreatureAI implements Runnable
 	public void changeIntention(CtrlIntention intention, Object arg0, Object arg1)
 	{
 		((Attackable) _actor).setReturningToSpawnPoint(false);
-		
 		if (intention == AI_INTENTION_IDLE /* || intention == AI_INTENTION_ACTIVE */) // active becomes idle if only a summon is present
 		{
 			// Check if actor is not dead
@@ -295,7 +293,6 @@ public class SiegeGuardAI extends CreatureAI implements Runnable
 			{
 				// Get the hate level of the Attackable against this Creature target contained in _aggroList
 				final int aggro = npc.getHating(hated);
-				
 				if ((aggro + _globalAggro) > 0)
 				{
 					// Set the Creature movement type to run and send Server->Client packet ChangeMoveType to all others PlayerInstance
@@ -323,7 +320,6 @@ public class SiegeGuardAI extends CreatureAI implements Runnable
 		double dist2 = 0;
 		int range = 0;
 		final SiegeGuardInstance sGuard = (SiegeGuardInstance) _actor;
-		
 		final Creature attackTarget = getAttackTarget();
 		
 		try
@@ -369,13 +365,11 @@ public class SiegeGuardAI extends CreatureAI implements Runnable
 				for (Skill sk : skills)
 				{
 					final int castRange = sk.getCastRange();
-					
 					if (((sk.getSkillType() == Skill.SkillType.BUFF) || (sk.getSkillType() == Skill.SkillType.HEAL) || ((dist2 >= ((castRange * castRange) / 9)) && (dist2 <= (castRange * castRange)) && (castRange > 70))) && !_actor.isSkillDisabled(sk) && (_actor.getCurrentMp() >= _actor.getStat().getMpConsume(sk)) && !sk.isPassive())
 					{
 						if ((sk.getSkillType() == Skill.SkillType.BUFF) || (sk.getSkillType() == Skill.SkillType.HEAL))
 						{
 							boolean useSkillSelf = true;
-							
 							if (((sk.getSkillType() == Skill.SkillType.BUFF) || (sk.getSkillType() == Skill.SkillType.HEAL) || ((dist2 >= ((castRange * castRange) / 9)) && (dist2 <= (castRange * castRange)) && (castRange > 70))) && !_actor.isSkillDisabled(sk) && (_actor.getCurrentMp() >= _actor.getStat().getMpConsume(sk)) && !sk.isPassive())
 							{
 								useSkillSelf = false;
@@ -384,11 +378,9 @@ public class SiegeGuardAI extends CreatureAI implements Runnable
 							if (sk.getSkillType() == Skill.SkillType.BUFF)
 							{
 								final Effect[] effects = _actor.getAllEffects();
-								
 								for (int i = 0; (effects != null) && (i < effects.length); i++)
 								{
 									final Effect effect = effects[i];
-									
 									if (effect.getSkill() == sk)
 									{
 										useSkillSelf = false;
@@ -403,7 +395,6 @@ public class SiegeGuardAI extends CreatureAI implements Runnable
 						}
 						
 						final WorldObject oldTarget = _actor.getTarget();
-						
 						clientStopMoving(null);
 						_accessor.doCast(sk);
 						_actor.setTarget(oldTarget);
@@ -462,7 +453,6 @@ public class SiegeGuardAI extends CreatureAI implements Runnable
 		{
 			// Force mobs to attak anybody if confused
 			Creature hated = null;
-			
 			if (_actor.isConfused())
 			{
 				hated = attackTarget;
@@ -491,13 +481,11 @@ public class SiegeGuardAI extends CreatureAI implements Runnable
 				for (Skill sk : skills)
 				{
 					final int castRange = sk.getCastRange();
-					
 					if (((castRange * castRange) >= dist2) && (castRange <= 70) && !sk.isPassive() && (_actor.getCurrentMp() >= _actor.getStat().getMpConsume(sk)) && !_actor.isSkillDisabled(sk))
 					{
 						if ((sk.getSkillType() == Skill.SkillType.BUFF) || (sk.getSkillType() == Skill.SkillType.HEAL))
 						{
 							boolean useSkillSelf = true;
-							
 							if ((sk.getSkillType() == Skill.SkillType.HEAL) && (_actor.getCurrentHp() > (int) (_actor.getMaxHp() / 1.5)))
 							{
 								useSkillSelf = false;
@@ -507,11 +495,9 @@ public class SiegeGuardAI extends CreatureAI implements Runnable
 							if (sk.getSkillType() == Skill.SkillType.BUFF)
 							{
 								final Effect[] effects = _actor.getAllEffects();
-								
 								for (int i = 0; (effects != null) && (i < effects.length); i++)
 								{
 									final Effect effect = effects[i];
-									
 									if (effect.getSkill() == sk)
 									{
 										useSkillSelf = false;
@@ -526,7 +512,6 @@ public class SiegeGuardAI extends CreatureAI implements Runnable
 						}
 						
 						final WorldObject oldTarget = _actor.getTarget();
-						
 						clientStopMoving(null);
 						_accessor.doCast(sk);
 						_actor.setTarget(oldTarget);
@@ -572,7 +557,6 @@ public class SiegeGuardAI extends CreatureAI implements Runnable
 			if (attackTarget != null)
 			{
 				final Attackable npc = (Attackable) _actor;
-				
 				npc.stopHating(attackTarget);
 			}
 			
@@ -582,7 +566,6 @@ public class SiegeGuardAI extends CreatureAI implements Runnable
 			
 			// Set the AI Intention to AI_INTENTION_ACTIVE
 			setIntention(AI_INTENTION_ACTIVE, null, null);
-			
 			_actor.setWalking();
 			return;
 		}
@@ -621,9 +604,7 @@ public class SiegeGuardAI extends CreatureAI implements Runnable
 			}
 			
 			final NpcInstance npc = (NpcInstance) creature;
-			
 			final String factionId = ((NpcInstance) actor).getFactionId();
-			
 			if (!factionId.equalsIgnoreCase(npc.getFactionId()))
 			{
 				continue;
@@ -753,7 +734,6 @@ public class SiegeGuardAI extends CreatureAI implements Runnable
 		}
 		
 		final Attackable me = (Attackable) _actor;
-		
 		if (target != null)
 		{
 			// Add the target to the actor _aggroList or update hate if already present
@@ -761,7 +741,6 @@ public class SiegeGuardAI extends CreatureAI implements Runnable
 			
 			// Get the hate of the actor against the target
 			aggro = me.getHating(target);
-			
 			if (aggro <= 0)
 			{
 				if (me.getMostHated() == null)
@@ -783,7 +762,6 @@ public class SiegeGuardAI extends CreatureAI implements Runnable
 				}
 				
 				final SiegeGuardInstance sGuard = (SiegeGuardInstance) _actor;
-				
 				final double homeX = target.getX() - sGuard.getHomeX();
 				final double homeY = target.getY() - sGuard.getHomeY();
 				

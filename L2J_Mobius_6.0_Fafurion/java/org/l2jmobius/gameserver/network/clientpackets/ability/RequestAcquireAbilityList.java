@@ -181,7 +181,6 @@ public class RequestAcquireAbilityList implements IClientIncomingPacket
 			}
 			
 			pointsSpent[learn.getTreeId() - 1] += points;
-			
 			player.addSkill(skill, true);
 			player.setAbilityPointsUsed(player.getAbilityPointsUsed() + points);
 		}

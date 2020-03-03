@@ -65,7 +65,6 @@ public class MissQueen extends Quest
 	{
 		String htmltext = event;
 		final QuestState st = player.getQuestState(getName());
-		
 		if (event.equals("newbie_coupon"))
 		{
 			if ((player.getClassId().level() == 0) && (player.getLevel() >= 6) && (player.getLevel() <= 25) && (player.getPkKills() <= 0))
@@ -108,7 +107,6 @@ public class MissQueen extends Quest
 				htmltext = "31760-06.htm";
 			}
 		}
-		
 		return htmltext;
 	}
 	
@@ -120,7 +118,6 @@ public class MissQueen extends Quest
 		{
 			st = newQuestState(player);
 		}
-		
 		return "31760.htm";
 	}
 	

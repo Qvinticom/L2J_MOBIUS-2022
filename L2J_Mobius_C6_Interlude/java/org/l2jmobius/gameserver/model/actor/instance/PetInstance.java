@@ -83,7 +83,6 @@ public class PetInstance extends Summon
 		{
 			_data = PetDataTable.getInstance().getPetData(getTemplate().getNpcId(), getStat().getLevel());
 		}
-		
 		return _data;
 	}
 	
@@ -151,7 +150,6 @@ public class PetInstance extends Summon
 				
 				ItemInstance food = null;
 				food = _inventory.getItemByItemId(foodId);
-				
 				if ((food != null) && (_curFed < (0.55 * getStat().getMaxFeed())))
 				{
 					if (destroyItem("Feed", food.getObjectId(), 1, null, false))
@@ -272,7 +270,6 @@ public class PetInstance extends Summon
 	{
 		final boolean isOwner = player.getObjectId() == getOwner().getObjectId();
 		final boolean thisIsTarget = (player.getTarget() != null) && (player.getTarget().getObjectId() == getObjectId());
-		
 		if (isOwner && thisIsTarget)
 		{
 			if (player != getOwner())
@@ -343,7 +340,6 @@ public class PetInstance extends Summon
 				return item;
 			}
 		}
-		
 		return null;
 	}
 	
@@ -355,12 +351,10 @@ public class PetInstance extends Summon
 	public Weapon getActiveWeaponItem()
 	{
 		final ItemInstance weapon = getActiveWeaponInstance();
-		
 		if (weapon == null)
 		{
 			return null;
 		}
-		
 		return (Weapon) weapon.getItem();
 	}
 	
@@ -395,14 +389,12 @@ public class PetInstance extends Summon
 	public boolean destroyItem(String process, int objectId, int count, WorldObject reference, boolean sendMessage)
 	{
 		final ItemInstance item = _inventory.destroyItem(process, objectId, count, getOwner(), reference);
-		
 		if (item == null)
 		{
 			if (sendMessage)
 			{
 				getOwner().sendPacket(SystemMessageId.INCORRECT_ITEM_COUNT_2);
 			}
-			
 			return false;
 		}
 		
@@ -435,7 +427,6 @@ public class PetInstance extends Summon
 	public boolean destroyItemByItemId(String process, int itemId, int count, WorldObject reference, boolean sendMessage)
 	{
 		final ItemInstance item = _inventory.destroyItemByItemId(process, itemId, count, getOwner(), reference);
-		
 		if (item == null)
 		{
 			if (sendMessage)
@@ -466,7 +457,6 @@ public class PetInstance extends Summon
 	{
 		getAI().setIntention(CtrlIntention.AI_INTENTION_IDLE);
 		broadcastPacket(new StopMove(getObjectId(), getX(), getY(), getZ(), getHeading()));
-		
 		if (!(object instanceof ItemInstance))
 		{
 			// dont try to pickup anything that is not an item :)
@@ -553,7 +543,6 @@ public class PetInstance extends Summon
 		_inventory.addItem("Pickup", target, getOwner(), this);
 		// FIXME Just send the updates if possible (old way wasn't working though)
 		getOwner().sendPacket(new PetItemList(this));
-		
 		getAI().setIntention(CtrlIntention.AI_INTENTION_IDLE);
 		
 		if (getFollowStatus())
@@ -621,7 +610,6 @@ public class PetInstance extends Summon
 	{
 		final ItemInstance oldItem = _inventory.getItemByObjectId(objectId);
 		final ItemInstance newItem = _inventory.transferItem(process, objectId, count, target, actor, reference);
-		
 		if (newItem == null)
 		{
 			return null;
@@ -737,7 +725,6 @@ public class PetInstance extends Summon
 		try
 		{
 			final ItemInstance removedItem = owner.getInventory().destroyItem("PetDestroy", _controlItemId, 1, getOwner(), this);
-			
 			final InventoryUpdate iu = new InventoryUpdate();
 			iu.addRemovedItem(removedItem);
 			owner.sendPacket(iu);
@@ -806,7 +793,6 @@ public class PetInstance extends Summon
 	public void dropItemHere(ItemInstance dropit, boolean protect)
 	{
 		dropit = _inventory.dropItem("Drop", dropit.getObjectId(), dropit.getCount(), getOwner(), this);
-		
 		if (dropit != null)
 		{
 			if (protect)
@@ -1145,7 +1131,6 @@ public class PetInstance extends Summon
 	public void updateRefOwner(PlayerInstance owner)
 	{
 		final int oldOwnerId = getOwner().getObjectId();
-		
 		setOwner(owner);
 		World.getInstance().removePet(oldOwnerId);
 		World.getInstance().addPet(oldOwnerId, this);

@@ -37,7 +37,6 @@ public class RequestExPledgeCrestLarge extends GameClientPacket
 	protected void runImpl()
 	{
 		final byte[] data = CrestCache.getInstance().getPledgeCrestLarge(_crestId);
-		
 		if (data != null)
 		{
 			sendPacket(new ExPledgeCrestLarge(_crestId, data));

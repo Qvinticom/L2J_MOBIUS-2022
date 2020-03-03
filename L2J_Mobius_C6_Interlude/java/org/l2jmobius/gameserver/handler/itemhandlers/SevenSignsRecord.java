@@ -38,7 +38,6 @@ public class SevenSignsRecord implements IItemHandler
 	public void useItem(Playable playable, ItemInstance item)
 	{
 		PlayerInstance player;
-		
 		if (playable instanceof PlayerInstance)
 		{
 			player = (PlayerInstance) playable;

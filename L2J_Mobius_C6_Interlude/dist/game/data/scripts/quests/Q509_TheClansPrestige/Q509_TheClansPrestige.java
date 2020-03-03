@@ -143,7 +143,6 @@ public class Q509_TheClansPrestige extends Quest
 			final int x = radar[evt - 1][0];
 			final int y = radar[evt - 1][1];
 			final int z = radar[evt - 1][2];
-			
 			if ((x + y + z) > 0)
 			{
 				st.addRadar(x, y, z);
@@ -200,7 +199,6 @@ public class Q509_TheClansPrestige extends Quest
 					final int item = REWARD_LIST[raid - 1][1];
 					final int count = st.getQuestItemsCount(item);
 					final int reward = Rnd.get(REWARD_LIST[raid - 1][2], REWARD_LIST[raid - 1][3]);
-					
 					if (count == 0)
 					{
 						htmltext = "31331-" + raid + "a.htm";

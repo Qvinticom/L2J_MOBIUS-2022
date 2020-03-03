@@ -156,7 +156,6 @@ public class OracleTeleport extends AbstractNpcAI
 	{
 		String htmltext = "";
 		final QuestState qs = getQuestState(player, true);
-		
 		final int npcId = npc.getId();
 		if (event.equalsIgnoreCase("Return"))
 		{
@@ -278,7 +277,6 @@ public class OracleTeleport extends AbstractNpcAI
 	{
 		String htmltext = "";
 		final QuestState qs = getQuestState(player, true);
-		
 		final int npcId = npc.getId();
 		if (CommonUtil.contains(TOWN_DAWN, npcId))
 		{

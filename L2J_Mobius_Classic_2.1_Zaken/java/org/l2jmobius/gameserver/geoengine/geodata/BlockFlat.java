@@ -37,7 +37,6 @@ public class BlockFlat extends ABlock
 	{
 		_height = bb.getShort();
 		_nswe = format != GeoFormat.L2D ? 0x0F : (byte) (0xFF);
-		
 		if (format == GeoFormat.L2OFF)
 		{
 			bb.getShort();

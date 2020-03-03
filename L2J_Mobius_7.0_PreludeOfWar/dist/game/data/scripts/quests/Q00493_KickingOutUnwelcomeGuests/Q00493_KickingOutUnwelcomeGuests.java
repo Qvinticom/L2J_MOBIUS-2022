@@ -97,7 +97,6 @@ public class Q00493_KickingOutUnwelcomeGuests extends Quest
 	{
 		String htmltext = getNoQuestMsg(player);
 		final QuestState qs = getQuestState(player, true);
-		
 		if (npc.getId() == GEORGIO)
 		{
 			switch (qs.getState())
@@ -154,7 +153,6 @@ public class Q00493_KickingOutUnwelcomeGuests extends Quest
 			final int killedUndead = qs.getInt(Integer.toString(UNDEAD_CREATURE));
 			final int killedMessenger = qs.getInt(Integer.toString(SHILEN_MESSENGER));
 			final int killedHellish = qs.getInt(Integer.toString(HELLISH_CREATURE));
-			
 			if ((killedLunatic == 50) && (killedRessurected == 50) && (killedUndead == 50) && (killedMessenger == 50) && (killedHellish == 50))
 			{
 				qs.setCond(2, true);

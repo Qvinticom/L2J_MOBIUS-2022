@@ -37,14 +37,12 @@ public class RequestAnswerJoinAlly extends GameClientPacket
 	protected void runImpl()
 	{
 		final PlayerInstance player = getClient().getPlayer();
-		
 		if (player == null)
 		{
 			return;
 		}
 		
 		final PlayerInstance requestor = player.getRequest().getPartner();
-		
 		if (requestor == null)
 		{
 			return;

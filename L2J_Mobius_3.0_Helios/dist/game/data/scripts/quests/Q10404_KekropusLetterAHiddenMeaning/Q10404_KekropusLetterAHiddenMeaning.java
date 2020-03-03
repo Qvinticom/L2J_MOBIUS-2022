@@ -111,7 +111,6 @@ public class Q10404_KekropusLetterAHiddenMeaning extends LetterQuest
 	{
 		String htmltext = getNoQuestMsg(player);
 		final QuestState qs = getQuestState(player, false);
-		
 		if (qs == null)
 		{
 			return htmltext;
@@ -138,7 +137,6 @@ public class Q10404_KekropusLetterAHiddenMeaning extends LetterQuest
 		{
 			final PlayerInstance player = creature.getActingPlayer();
 			final QuestState qs = getQuestState(player, false);
-			
 			if ((qs != null) && qs.isCond(2))
 			{
 				showOnScreenMsg(player, NpcStringId.FIELDS_OF_MASSACRE_IS_A_GOOD_HUNTING_ZONE_FOR_LV_61_OR_ABOVE, ExShowScreenMessage.TOP_CENTER, 6000);

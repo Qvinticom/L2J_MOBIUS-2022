@@ -200,13 +200,11 @@ public abstract class Item extends ListenersContainer implements IIdentifiable
 		_referencePrice = set.getInt("price", 0);
 		_crystalType = set.getEnum("crystal_type", CrystalType.class, CrystalType.NONE);
 		_crystalCount = set.getInt("crystal_count", 0);
-		
 		_stackable = set.getBoolean("is_stackable", false);
 		_sellable = set.getBoolean("is_sellable", true);
 		_dropable = set.getBoolean("is_dropable", true);
 		_destroyable = set.getBoolean("is_destroyable", true);
 		_tradeable = set.getBoolean("is_tradable", true);
-		
 		_questItem = set.getBoolean("is_questitem", false);
 		if (Config.CUSTOM_DEPOSITABLE_ENABLED)
 		{
@@ -226,10 +224,8 @@ public abstract class Item extends ListenersContainer implements IIdentifiable
 		_forNpc = set.getBoolean("for_npc", false);
 		_isAppearanceable = set.getBoolean("isAppearanceable", false);
 		_isBlessed = set.getBoolean("blessed", false);
-		
 		_immediateEffect = set.getBoolean("immediate_effect", false);
 		_exImmediateEffect = set.getBoolean("ex_immediate_effect", false);
-		
 		_defaultAction = set.getEnum("default_action", ActionType.class, ActionType.NONE);
 		_useSkillDisTime = set.getInt("useSkillDisTime", 0);
 		_defaultEnchantLevel = set.getInt("enchanted", 0);

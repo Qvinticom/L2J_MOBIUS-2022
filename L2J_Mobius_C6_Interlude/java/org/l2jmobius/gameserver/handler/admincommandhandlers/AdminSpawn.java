@@ -115,7 +115,6 @@ public class AdminSpawn implements IAdminCommandHandler
 			{
 				st.nextToken();
 				final String letter = st.nextToken();
-				
 				int from = 0;
 				
 				try
@@ -336,7 +335,6 @@ public class AdminSpawn implements IAdminCommandHandler
 	private void showMonsters(PlayerInstance activeChar, int level, int from)
 	{
 		final StringBuilder tb = new StringBuilder();
-		
 		final NpcTemplate[] mobs = NpcTable.getInstance().getAllMonstersOfLevel(level);
 		
 		// Start
@@ -349,7 +347,6 @@ public class AdminSpawn implements IAdminCommandHandler
 		for (int i = from; i < mobs.length; i++)
 		{
 			final String txt = "<a action=\"bypass -h admin_spawn_monster " + mobs[i].getNpcId() + "\">" + mobs[i].getName() + "</a><br1>";
-			
 			if ((tb.length() + txt.length() + end2.length()) > 8192)
 			{
 				end1 = end1.replace("$from$", "" + i);
@@ -388,7 +385,6 @@ public class AdminSpawn implements IAdminCommandHandler
 		for (int i = from; i < mobs.length; i++)
 		{
 			final String txt = "<a action=\"bypass -h admin_spawn_monster " + mobs[i].getNpcId() + "\">" + mobs[i].getName() + "</a><br1>";
-			
 			if ((tb.length() + txt.length() + end2.length()) > 8192)
 			{
 				end1 = end1.replace("$from$", "" + i);

@@ -39,7 +39,6 @@ public class CastleCmd implements IVoicedCommandHandler
 		{
 			final DoorInstance door = (DoorInstance) activeChar.getTarget();
 			final Castle castle = CastleManager.getInstance().getCastleById(activeChar.getClan().getHasCastle());
-			
 			if ((door == null) || (castle == null))
 			{
 				return false;
@@ -54,7 +53,6 @@ public class CastleCmd implements IVoicedCommandHandler
 		{
 			final DoorInstance door = (DoorInstance) activeChar.getTarget();
 			final Castle castle = CastleManager.getInstance().getCastleById(activeChar.getClan().getHasCastle());
-			
 			if ((door == null) || (castle == null))
 			{
 				return false;

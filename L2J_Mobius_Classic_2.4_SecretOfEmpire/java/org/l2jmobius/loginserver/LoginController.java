@@ -78,7 +78,6 @@ public class LoginController
 	private LoginController() throws GeneralSecurityException
 	{
 		LOGGER.info("Loading LoginController...");
-		
 		_keyPairs = new ScrambledKeyPair[10];
 		_blowfishKeyGenerator = KeyGenerator.getInstance("Blowfish");
 		final KeyPairGenerator rsaKeyPairGenerator = KeyPairGenerator.getInstance("RSA");
@@ -105,7 +104,6 @@ public class LoginController
 	public SessionKey assignSessionKeyToClient(String account, LoginClient client)
 	{
 		final SessionKey key = new SessionKey(Rnd.nextInt(), Rnd.nextInt(), Rnd.nextInt(), Rnd.nextInt());
-		
 		_loginServerClients.put(account, client);
 		return key;
 	}
@@ -248,7 +246,6 @@ public class LoginController
 			{
 				// account isnt on any GS verify LS itself
 				ret = AuthLoginResult.ALREADY_ON_LS;
-				
 				if (_loginServerClients.putIfAbsent(info.getLogin(), client) == null)
 				{
 					ret = AuthLoginResult.AUTH_SUCCESS;
@@ -456,7 +453,6 @@ public class LoginController
 	public void setCharactersOnServer(String account, int charsNum, long[] timeToDel, int serverId)
 	{
 		final LoginClient client = _loginServerClients.get(account);
-		
 		if (client == null)
 		{
 			return;
@@ -508,7 +504,6 @@ public class LoginController
 					{
 						ip = rset.getString("ip");
 						type = rset.getString("type");
-						
 						if (!isValidIPAddress(ip))
 						{
 							continue;

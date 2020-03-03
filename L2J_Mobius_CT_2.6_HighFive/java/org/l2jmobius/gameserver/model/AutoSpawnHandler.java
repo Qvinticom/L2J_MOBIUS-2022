@@ -184,7 +184,6 @@ public class AutoSpawnHandler
 		}
 		
 		final AutoSpawnInstance newSpawn = new AutoSpawnInstance(npcId, initialDelay, respawnDelay, despawnDelay);
-		
 		if (spawnPoints != null)
 		{
 			for (int[] spawnPoint : spawnPoints)
@@ -267,7 +266,6 @@ public class AutoSpawnHandler
 		}
 		
 		final int objectId = spawnInst._objectId;
-		
 		if (!isSpawnRegistered(objectId))
 		{
 			return;
@@ -430,7 +428,6 @@ public class AutoSpawnHandler
 				if (!spawnInst.isRandomSpawn())
 				{
 					locationIndex = spawnInst._lastLocIndex + 1;
-					
 					if (locationIndex == locationCount)
 					{
 						locationIndex = 0;
@@ -444,7 +441,6 @@ public class AutoSpawnHandler
 				final int y = locationList[locationIndex].getY();
 				final int z = locationList[locationIndex].getZ();
 				final int heading = locationList[locationIndex].getHeading();
-				
 				final Spawn newSpawn = new Spawn(spawnInst.getId());
 				newSpawn.setXYZ(x, y, z);
 				if (heading != -1)
@@ -460,7 +456,6 @@ public class AutoSpawnHandler
 				// Add the new spawn information to the spawn table, but do not store it.
 				SpawnTable.getInstance().addNewSpawn(newSpawn, false);
 				Npc npcInst = null;
-				
 				if (spawnInst._spawnCount == 1)
 				{
 					npcInst = newSpawn.doSpawn();
@@ -532,7 +527,6 @@ public class AutoSpawnHandler
 			try
 			{
 				final AutoSpawnInstance spawnInst = _registeredSpawns.get(_objectId);
-				
 				if (spawnInst == null)
 				{
 					LOGGER.info("AutoSpawnHandler: No spawn registered for object ID = " + _objectId + ".");

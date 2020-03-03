@@ -51,11 +51,9 @@ public class CompShotPacks implements IItemHandler
 		}
 		
 		final PlayerInstance player = (PlayerInstance) playable;
-		
 		final int itemId = item.getItemId();
 		int itemToCreateId = 0;
 		int amount = 0; // default regular pack
-		
 		if ((itemId >= 5134) && (itemId <= 5139)) // SS
 		{
 			if (itemId == 5134)

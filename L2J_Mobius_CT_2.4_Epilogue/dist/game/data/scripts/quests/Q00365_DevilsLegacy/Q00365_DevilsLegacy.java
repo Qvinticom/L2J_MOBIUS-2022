@@ -212,7 +212,6 @@ public class Q00365_DevilsLegacy extends Quest
 	{
 		final QuestState qs = getQuestState(player, true);
 		String htmltext = getNoQuestMsg(player);
-		
 		switch (npc.getId())
 		{
 			case RANDOLF:

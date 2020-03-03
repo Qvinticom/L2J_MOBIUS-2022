@@ -99,7 +99,6 @@ public class SoulShots implements IItemHandler
 			// Consume Soulshots if player has enough of them
 			final int saSSCount = (int) player.getStat().calcStat(Stat.SOULSHOT_COUNT, 0, null, null);
 			final int SSCount = saSSCount == 0 ? weaponItem.getSoulShotCount() : saSSCount;
-			
 			if (!Config.DONT_DESTROY_SS && !player.destroyItemWithoutTrace("Consume", item.getObjectId(), SSCount, null, false))
 			{
 				if (player.getAutoSoulShot().containsKey(itemId))

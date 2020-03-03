@@ -89,7 +89,6 @@ public class PEvasionRateFinalizer implements IStatFunction
 		{
 			return (0.3 * Math.max(enchantLevel - 3, 0)) + (0.3 * Math.max(enchantLevel - 6, 0));
 		}
-		
 		return (0.2 * Math.max(enchantLevel - 3, 0)) + (0.2 * Math.max(enchantLevel - 6, 0));
 	}
 }

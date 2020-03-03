@@ -32,7 +32,6 @@ public class AccountInfo
 	{
 		Objects.requireNonNull(login, "login");
 		Objects.requireNonNull(passHash, "passHash");
-		
 		if (login.isEmpty())
 		{
 			throw new IllegalArgumentException("login");

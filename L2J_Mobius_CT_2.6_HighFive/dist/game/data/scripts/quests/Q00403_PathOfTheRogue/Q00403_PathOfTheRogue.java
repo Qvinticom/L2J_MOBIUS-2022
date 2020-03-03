@@ -227,7 +227,6 @@ public class Q00403_PathOfTheRogue extends Quest
 					if (!hasQuestItems(killer, randomItem))
 					{
 						giveItems(killer, randomItem, 1);
-						
 						if (hasQuestItems(killer, STOLEN_ITEMS))
 						{
 							qs.setCond(6, true);

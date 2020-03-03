@@ -66,7 +66,6 @@ public class FriendsBBSManager extends BaseBBSManager
 			final StringTokenizer st = new StringTokenizer(command, ";");
 			st.nextToken();
 			final String action = st.nextToken();
-			
 			if (action.equals("select"))
 			{
 				activeChar.selectFriend((st.hasMoreTokens()) ? Integer.parseInt(st.nextToken()) : 0);
@@ -107,7 +106,6 @@ public class FriendsBBSManager extends BaseBBSManager
 				activeChar.getFriendList().clear();
 				activeChar.getSelectedFriendList().clear();
 				showFriendsList(activeChar, false);
-				
 				activeChar.sendMessage("You have cleared your friend list.");
 				activeChar.sendPacket(new FriendList(activeChar));
 			}
@@ -130,7 +128,6 @@ public class FriendsBBSManager extends BaseBBSManager
 						statement.close();
 						
 						final String name = CharNameTable.getInstance().getPlayerName(friendId);
-						
 						final PlayerInstance player = World.getInstance().getPlayer(friendId);
 						if (player != null)
 						{
@@ -151,7 +148,6 @@ public class FriendsBBSManager extends BaseBBSManager
 				
 				activeChar.getSelectedFriendList().clear();
 				showFriendsList(activeChar, false);
-				
 				activeChar.sendPacket(new FriendList(activeChar)); // update friendList *heavy method*
 			}
 			else if (action.equals("mail"))
@@ -167,7 +163,6 @@ public class FriendsBBSManager extends BaseBBSManager
 			final StringTokenizer st = new StringTokenizer(command, ";");
 			st.nextToken();
 			final String action = st.nextToken();
-			
 			if (action.equals("select"))
 			{
 				activeChar.selectBlock((st.hasMoreTokens()) ? Integer.parseInt(st.nextToken()) : 0);
@@ -237,7 +232,6 @@ public class FriendsBBSManager extends BaseBBSManager
 		// Retrieve activeChar's friendlist and selected
 		final List<Integer> list = activeChar.getFriendList();
 		final List<Integer> slist = activeChar.getSelectedFriendList();
-		
 		final StringBuilder sb = new StringBuilder();
 		
 		// Friendlist
@@ -278,7 +272,6 @@ public class FriendsBBSManager extends BaseBBSManager
 		
 		// Delete button.
 		content = content.replace("%deleteMSG%", (delMsg) ? FRIENDLIST_DELETE_BUTTON : "");
-		
 		separateAndSend(content, activeChar);
 	}
 	
@@ -293,7 +286,6 @@ public class FriendsBBSManager extends BaseBBSManager
 		// Retrieve activeChar's blocklist and selected
 		final List<Integer> list = activeChar.getBlockList().getBlockList();
 		final List<Integer> slist = activeChar.getSelectedBlocksList();
-		
 		final StringBuilder sb = new StringBuilder();
 		
 		// Blocklist
@@ -334,7 +326,6 @@ public class FriendsBBSManager extends BaseBBSManager
 		
 		// Delete button.
 		content = content.replace("%deleteMSG%", (delMsg) ? BLOCKLIST_DELETE_BUTTON : "");
-		
 		separateAndSend(content, activeChar);
 	}
 	
@@ -364,7 +355,6 @@ public class FriendsBBSManager extends BaseBBSManager
 		}
 		
 		content = content.replace("%list%", sb.toString());
-		
 		separateAndSend(content, activeChar);
 	}
 	

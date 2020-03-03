@@ -76,7 +76,6 @@ public class AdminFightCalculator implements IAdminCommandHandler
 	private void handleStart(String params, PlayerInstance activeChar)
 	{
 		final StringTokenizer st = new StringTokenizer(params);
-		
 		int lvl1 = 0;
 		int lvl2 = 0;
 		int mid1 = 0;
@@ -85,7 +84,6 @@ public class AdminFightCalculator implements IAdminCommandHandler
 		while (st.hasMoreTokens())
 		{
 			final String s = st.nextToken();
-			
 			if (s.equals("lvl1"))
 			{
 				lvl1 = Integer.parseInt(st.nextToken());
@@ -112,23 +110,19 @@ public class AdminFightCalculator implements IAdminCommandHandler
 		}
 		
 		NpcTemplate npc1 = null;
-		
 		if (mid1 != 0)
 		{
 			npc1 = NpcTable.getInstance().getTemplate(mid1);
 		}
 		
 		NpcTemplate npc2 = null;
-		
 		if (mid2 != 0)
 		{
 			npc2 = NpcTable.getInstance().getTemplate(mid2);
 		}
 		
 		final NpcHtmlMessage adminReply = new NpcHtmlMessage(5);
-		
 		final StringBuilder replyMSG = new StringBuilder();
-		
 		if ((npc1 != null) && (npc2 != null))
 		{
 			replyMSG.append("<html><title>Selected mobs to fight</title>");
@@ -150,7 +144,6 @@ public class AdminFightCalculator implements IAdminCommandHandler
 			replyMSG.append("<body><table>");
 			
 			final NpcTemplate[] npcs = NpcTable.getInstance().getAllOfLevel(lvl1);
-			
 			for (NpcTemplate n : npcs)
 			{
 				replyMSG.append("<tr><td><a action=\"bypass -h admin_fight_calculator lvl1 " + lvl1 + " lvl2 " + lvl2 + " mid1 " + n.getNpcId() + " mid2 " + mid2 + "\">" + n.getName() + "</a></td></tr>");
@@ -164,7 +157,6 @@ public class AdminFightCalculator implements IAdminCommandHandler
 			replyMSG.append("<body><table>");
 			
 			final NpcTemplate[] npcs = NpcTable.getInstance().getAllOfLevel(lvl2);
-			
 			for (NpcTemplate n : npcs)
 			{
 				replyMSG.append("<tr><td><a action=\"bypass -h admin_fight_calculator lvl1 " + lvl1 + " lvl2 " + lvl2 + " mid1 " + mid1 + " mid2 " + n.getNpcId() + "\">" + n.getName() + "</a></td></tr>");
@@ -193,10 +185,8 @@ public class AdminFightCalculator implements IAdminCommandHandler
 	private void handleShow(String params, PlayerInstance activeChar)
 	{
 		params = params.trim();
-		
 		Creature npc1 = null;
 		Creature npc2 = null;
-		
 		if (params.length() == 0)
 		{
 			npc1 = activeChar;
@@ -215,9 +205,7 @@ public class AdminFightCalculator implements IAdminCommandHandler
 			final StringTokenizer st = new StringTokenizer(params);
 			mid1 = Integer.parseInt(st.nextToken());
 			mid2 = Integer.parseInt(st.nextToken());
-			
 			npc1 = new MonsterInstance(IdFactory.getNextId(), NpcTable.getInstance().getTemplate(mid1));
-			
 			npc2 = new MonsterInstance(IdFactory.getNextId(), NpcTable.getInstance().getTemplate(mid2));
 		}
 		
@@ -243,7 +231,6 @@ public class AdminFightCalculator implements IAdminCommandHandler
 		// number of ATTACK per 100 seconds
 		sAtk1 = 100000 / sAtk1;
 		sAtk2 = 100000 / sAtk2;
-		
 		for (int i = 0; i < 10000; i++)
 		{
 			final boolean calcMiss1 = Formulas.calcHitMiss(npc1, npc2);
@@ -276,7 +263,6 @@ public class AdminFightCalculator implements IAdminCommandHandler
 			
 			final double npcPdef1 = npc1.getPDef(npc2);
 			pdef1 += npcPdef1;
-			
 			if (!calcMiss1)
 			{
 				npc1.setAttackingBodypart();
@@ -319,7 +305,6 @@ public class AdminFightCalculator implements IAdminCommandHandler
 			
 			final double npcPdef2 = npc2.getPDef(npc1);
 			pdef2 += npcPdef2;
-			
 			if (!calcMiss2)
 			{
 				npc2.setAttackingBodypart();
@@ -352,12 +337,9 @@ public class AdminFightCalculator implements IAdminCommandHandler
 		// HP restored per 100 seconds
 		final double maxHp1 = npc1.getMaxHp();
 		final int hp1 = (int) ((Formulas.calcHpRegen(npc1) * 100000) / Formulas.getRegeneratePeriod(npc1));
-		
 		final double maxHp2 = npc2.getMaxHp();
 		final int hp2 = (int) ((Formulas.calcHpRegen(npc2) * 100000) / Formulas.getRegeneratePeriod(npc2));
-		
 		final NpcHtmlMessage adminReply = new NpcHtmlMessage(5);
-		
 		final StringBuilder replyMSG = new StringBuilder();
 		replyMSG.append("<html><title>Selected mobs to fight</title>");
 		replyMSG.append("<body>");

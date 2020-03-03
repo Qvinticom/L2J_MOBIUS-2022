@@ -59,7 +59,6 @@ public class HennaData implements IXmlReader
 		
 		// First element is never read.
 		final Node n = doc.getFirstChild();
-		
 		for (Node node = n.getFirstChild(); node != null; node = node.getNextSibling())
 		{
 			if (!"henna".equalsIgnoreCase(node.getNodeName()))

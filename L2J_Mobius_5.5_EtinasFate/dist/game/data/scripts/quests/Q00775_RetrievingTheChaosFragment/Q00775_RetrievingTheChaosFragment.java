@@ -252,7 +252,6 @@ public class Q00775_RetrievingTheChaosFragment extends Quest
 	{
 		final QuestState qs = getQuestState(player, true);
 		String htmltext = getNoQuestMsg(player);
-		
 		switch (qs.getState())
 		{
 			case State.CREATED:

@@ -78,7 +78,6 @@ public class EffectPointInstance extends Npc
 		{
 			return null;
 		}
-		
 		return _owner.getParty();
 	}
 	

@@ -95,7 +95,6 @@ public class RequestMentorCancel implements IClientIncomingPacket
 					
 					// Notify to scripts
 					EventDispatcher.getInstance().notifyEventAsync(new OnPlayerMenteeLeft(mentor, player), player);
-					
 					mentor.getPlayerInstance().sendPacket(new SystemMessage(SystemMessageId.THE_MENTORING_RELATIONSHIP_WITH_S1_HAS_BEEN_CANCELED_THE_MENTOR_CANNOT_OBTAIN_ANOTHER_MENTEE_FOR_TWO_DAYS).addString(_name));
 				}
 			}

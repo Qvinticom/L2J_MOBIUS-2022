@@ -104,7 +104,6 @@ public class Q00421_LittleWingsBigAdventure extends Quest
 					if (getQuestItemsCount(player, DRAGONFLUTE_OF_WIND, DRAGONFLUTE_OF_STAR, DRAGONFLUTE_OF_TWILIGHT) == 1)
 					{
 						final ItemInstance flute = getFlute(player);
-						
 						if (flute.getEnchantLevel() < MIN_HACHLING_LVL)
 						{
 							htmltext = "30610-06.html";
@@ -127,7 +126,6 @@ public class Q00421_LittleWingsBigAdventure extends Quest
 			case "30747-04.html":
 			{
 				final Summon summon = player.getPet();
-				
 				if (summon == null)
 				{
 					htmltext = "30747-02.html";
@@ -145,7 +143,6 @@ public class Q00421_LittleWingsBigAdventure extends Quest
 			case "30747-05.html":
 			{
 				final Summon summon = player.getPet();
-				
 				if (summon == null)
 				{
 					htmltext = "30747-06.html";
@@ -247,7 +244,6 @@ public class Q00421_LittleWingsBigAdventure extends Quest
 					case 200:
 					{
 						final Summon summon = talker.getPet();
-						
 						if (summon == null)
 						{
 							htmltext = "30747-02.html";
@@ -293,7 +289,6 @@ public class Q00421_LittleWingsBigAdventure extends Quest
 						if (!hasQuestItems(talker, FAIRY_LEAF))
 						{
 							final Summon summon = talker.getPet();
-							
 							if (summon == null)
 							{
 								htmltext = "30747-12.html";
@@ -321,7 +316,6 @@ public class Q00421_LittleWingsBigAdventure extends Quest
 							else
 							{
 								final long fluteCount = getQuestItemsCount(talker, DRAGONFLUTE_OF_WIND, DRAGONFLUTE_OF_STAR, DRAGONFLUTE_OF_TWILIGHT);
-								
 								if (fluteCount > 1)
 								{
 									htmltext = "30747-17.html";
@@ -329,7 +323,6 @@ public class Q00421_LittleWingsBigAdventure extends Quest
 								else if (fluteCount == 1)
 								{
 									final ItemInstance flute = getFlute(talker);
-									
 									if (flute.getObjectId() == qs.getInt("fluteObjectId"))
 									{
 										// TODO what if the hatchling has items in his inventory?
@@ -393,7 +386,6 @@ public class Q00421_LittleWingsBigAdventure extends Quest
 					{
 						final int hits = qs.getInt("hits") + 1;
 						qs.set("hits", hits);
-						
 						if (hits < data.minHits)
 						{
 							if ((npc.getId() == TREE_OF_ABYSS) && (getRandom(100) < 2))
@@ -409,7 +401,6 @@ public class Q00421_LittleWingsBigAdventure extends Quest
 							qs.setMemoState(qs.getMemoState() + data.memoStateValue);
 							qs.unset("hits");
 							playSound(attacker, QuestSound.ITEMSOUND_QUEST_MIDDLE);
-							
 							if (qs.getMemoState() == 15)
 							{
 								qs.setCond(3);
@@ -450,7 +441,6 @@ public class Q00421_LittleWingsBigAdventure extends Quest
 			npc.setTarget(attacker);
 			npc.doCast(VICIOUS_POISON.getSkill());
 		}
-		
 		return super.onAttack(npc, attacker, damage, isSummon);
 	}
 	
@@ -463,7 +453,6 @@ public class Q00421_LittleWingsBigAdventure extends Quest
 			{
 				final Npc guardian = addSpawn(SOUL_OF_TREE_GUARDIAN, npc);
 				startQuestTimer("DESPAWN_GUARDIAN", 300000, guardian, null);
-				
 				if (i == 0)
 				{
 					npc.setTarget(killer);

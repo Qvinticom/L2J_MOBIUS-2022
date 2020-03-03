@@ -35,7 +35,6 @@ public class RequestSkillList implements IClientIncomingPacket
 	public void run(GameClient client)
 	{
 		final PlayerInstance cha = client.getPlayer();
-		
 		if (cha != null)
 		{
 			cha.sendSkillList();

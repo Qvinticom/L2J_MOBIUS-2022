@@ -51,7 +51,6 @@ public class Q10787_ASpyMission extends Quest
 		super(10787);
 		addStartNpc(SHUVANN);
 		addTalkId(SHUVANN, SUSPICIOUS_BOX);
-		
 		addCondRace(Race.ERTHEIA, "33867-00.html");
 		addCondLevel(MIN_LEVEL, MAX_LEVEL, "33867-01.htm");
 		addCondCompletedQuest(Q10786_ResidentProblemSolver.class.getSimpleName(), "33867-01.htm");
@@ -126,7 +125,6 @@ public class Q10787_ASpyMission extends Quest
 	{
 		final QuestState qs = getQuestState(player, true);
 		String htmltext = getNoQuestMsg(player);
-		
 		if (npc.getId() == SHUVANN)
 		{
 			switch (qs.getState())

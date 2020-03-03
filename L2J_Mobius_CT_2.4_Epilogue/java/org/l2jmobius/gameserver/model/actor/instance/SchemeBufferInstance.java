@@ -51,7 +51,6 @@ public class SchemeBufferInstance extends Npc
 		
 		final StringTokenizer st = new StringTokenizer(command, ";");
 		final String currentCommand = st.nextToken();
-		
 		if (currentCommand.startsWith("menu"))
 		{
 			final NpcHtmlMessage html = new NpcHtmlMessage(getObjectId());
@@ -98,7 +97,6 @@ public class SchemeBufferInstance extends Npc
 		{
 			final String schemeName = st.nextToken();
 			final int cost = Integer.parseInt(st.nextToken());
-			
 			Creature target = null;
 			if (st.hasMoreTokens())
 			{
@@ -133,12 +131,9 @@ public class SchemeBufferInstance extends Npc
 		{
 			final String groupType = st.nextToken();
 			final String schemeName = st.nextToken();
-			
 			final int skillId = Integer.parseInt(st.nextToken());
 			final int page = Integer.parseInt(st.nextToken());
-			
 			final List<Integer> skills = SchemeBufferTable.getInstance().getScheme(player.getObjectId(), schemeName);
-			
 			if (currentCommand.startsWith("skillselect") && !schemeName.equalsIgnoreCase("none"))
 			{
 				final Skill skill = SkillData.getInstance().getSkill(skillId, SkillData.getInstance().getMaxLevel(skillId));
@@ -219,7 +214,6 @@ public class SchemeBufferInstance extends Npc
 			{
 				final String schemeName = st.nextToken();
 				final Map<String, List<Integer>> schemes = SchemeBufferTable.getInstance().getPlayerSchemes(player.getObjectId());
-				
 				if ((schemes != null) && schemes.containsKey(schemeName))
 				{
 					schemes.remove(schemeName);
@@ -245,7 +239,6 @@ public class SchemeBufferInstance extends Npc
 		{
 			filename = npcId + "-" + value;
 		}
-		
 		return "data/html/mods/SchemeBuffer/" + filename + ".htm";
 	}
 	
@@ -256,7 +249,6 @@ public class SchemeBufferInstance extends Npc
 	private void showGiveBuffsWindow(PlayerInstance player)
 	{
 		final StringBuilder sb = new StringBuilder(200);
-		
 		final Map<String, List<Integer>> schemes = SchemeBufferTable.getInstance().getPlayerSchemes(player.getObjectId());
 		if ((schemes == null) || schemes.isEmpty())
 		{
@@ -294,7 +286,6 @@ public class SchemeBufferInstance extends Npc
 	{
 		final NpcHtmlMessage html = new NpcHtmlMessage(getObjectId());
 		final List<Integer> schemeSkills = SchemeBufferTable.getInstance().getScheme(player.getObjectId(), schemeName);
-		
 		html.setFile(player, getHtmlPath(getId(), 2));
 		html.replace("%schemename%", schemeName);
 		html.replace("%count%", getCountOf(schemeSkills, false) + " / " + player.getStat().getMaxBuffCount() + " buffs, " + getCountOf(schemeSkills, true) + " / " + Config.DANCES_MAX_AMOUNT + " dances/songs");
@@ -332,7 +323,6 @@ public class SchemeBufferInstance extends Npc
 		
 		final List<Integer> schemeSkills = SchemeBufferTable.getInstance().getScheme(player.getObjectId(), schemeName);
 		final StringBuilder sb = new StringBuilder(skills.size() * 150);
-		
 		int row = 0;
 		for (int skillId : skills)
 		{
@@ -354,7 +344,6 @@ public class SchemeBufferInstance extends Npc
 		
 		// Build page footer.
 		sb.append("<br><img src=\"L2UI.SquareGray\" width=277 height=1><table width=\"100%\" bgcolor=000000><tr>");
-		
 		if (page > 1)
 		{
 			sb.append("<td align=left width=70><a action=\"bypass -h npc_" + getObjectId() + "_editschemes;" + groupType + ";" + schemeName + ";" + (page - 1) + "\">Previous</a></td>");
@@ -365,7 +354,6 @@ public class SchemeBufferInstance extends Npc
 		}
 		
 		sb.append("<td align=center width=100>Page " + page + "</td>");
-		
 		if (page < max)
 		{
 			sb.append("<td align=right width=70><a action=\"bypass -h npc_" + getObjectId() + "_editschemes;" + groupType + ";" + schemeName + ";" + (page + 1) + "\">Next</a></td>");
@@ -376,7 +364,6 @@ public class SchemeBufferInstance extends Npc
 		}
 		
 		sb.append("</tr></table><img src=\"L2UI.SquareGray\" width=277 height=1>");
-		
 		return sb.toString();
 	}
 	

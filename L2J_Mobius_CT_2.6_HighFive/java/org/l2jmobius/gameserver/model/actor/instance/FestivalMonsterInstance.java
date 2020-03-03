@@ -86,7 +86,6 @@ public class FestivalMonsterInstance extends MonsterInstance
 	public void doItemDrop(Creature lastAttacker)
 	{
 		PlayerInstance killingChar = null;
-		
 		if (!lastAttacker.isPlayer())
 		{
 			return;
@@ -94,7 +93,6 @@ public class FestivalMonsterInstance extends MonsterInstance
 		
 		killingChar = (PlayerInstance) lastAttacker;
 		final Party associatedParty = killingChar.getParty();
-		
 		if (associatedParty == null)
 		{
 			return;
@@ -102,7 +100,6 @@ public class FestivalMonsterInstance extends MonsterInstance
 		
 		final PlayerInstance partyLeader = associatedParty.getLeader();
 		final ItemInstance addedOfferings = partyLeader.getInventory().addItem("Sign", SevenSignsFestival.FESTIVAL_OFFERING_ID, _bonusMultiplier, partyLeader, this);
-		
 		final InventoryUpdate iu = new InventoryUpdate();
 		if (addedOfferings.getCount() != _bonusMultiplier)
 		{

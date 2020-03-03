@@ -68,7 +68,6 @@ public class TopicBBSManager extends BaseBBSManager
 			
 			final Post p = new Post(player.getName(), player.getObjectId(), Calendar.getInstance().getTimeInMillis(), t.getID(), f.getID(), ar4);
 			PostBBSManager.getInstance().addPostByTopic(p, t);
-			
 			parseCmd("_bbsmemo", player);
 		}
 		else if (ar1.equals("del"))
@@ -108,7 +107,6 @@ public class TopicBBSManager extends BaseBBSManager
 		if (command.equals("_bbsmemo"))
 		{
 			CommunityBoard.getInstance().addBypass(player, "Memo Command", command);
-			
 			showTopics(player.getMemo(), player, 1, player.getMemo().getID());
 		}
 		else if (command.startsWith("_bbstopics;read"))
@@ -120,7 +118,6 @@ public class TopicBBSManager extends BaseBBSManager
 			st.nextToken();
 			
 			final int idf = Integer.parseInt(st.nextToken());
-			
 			String index = null;
 			if (st.hasMoreTokens())
 			{
@@ -146,7 +143,6 @@ public class TopicBBSManager extends BaseBBSManager
 			st.nextToken();
 			
 			final int idf = Integer.parseInt(st.nextToken());
-			
 			showNewTopic(ForumsBBSManager.getInstance().getForumByID(idf), player, idf);
 		}
 		else if (command.startsWith("_bbstopics;del"))
@@ -157,7 +153,6 @@ public class TopicBBSManager extends BaseBBSManager
 			
 			final int idf = Integer.parseInt(st.nextToken());
 			final int idt = Integer.parseInt(st.nextToken());
-			
 			final Forum f = ForumsBBSManager.getInstance().getForumByID(idf);
 			if (f == null)
 			{
@@ -209,7 +204,6 @@ public class TopicBBSManager extends BaseBBSManager
 		{
 			return 0;
 		}
-		
 		return i;
 	}
 	
@@ -272,7 +266,6 @@ public class TopicBBSManager extends BaseBBSManager
 	{
 		forum.vload();
 		final StringBuilder sb = new StringBuilder("<html><body><br><br><table border=0 width=610><tr><td width=10></td><td width=600 align=left><a action=\"bypass _bbshome\">HOME</a>&nbsp;>&nbsp;<a action=\"bypass _bbsmemo\">Memo Form</a></td></tr></table><img src=\"L2UI.squareblank\" width=\"1\" height=\"10\"><center><table border=0 cellspacing=0 cellpadding=2 bgcolor=888888 width=610><tr><td FIXWIDTH=5></td><td FIXWIDTH=415 align=center>&$413;</td><td FIXWIDTH=120 align=center></td><td FIXWIDTH=70 align=center>&$418;</td></tr></table>");
-		
 		final DateFormat dateFormat = DateFormat.getInstance();
 		for (int i = 0, j = getMaxID(forum) + 1; i < (12 * index); j--)
 		{
@@ -289,7 +282,6 @@ public class TopicBBSManager extends BaseBBSManager
 		}
 		
 		sb.append("<br><table width=610 cellspace=0 cellpadding=0><tr><td width=50><button value=\"&$422;\" action=\"bypass _bbsmemo\" back=\"l2ui_ch3.smallbutton2_down\" width=65 height=20 fore=\"l2ui_ch3.smallbutton2\"></td><td width=510 align=center><table border=0><tr>");
-		
 		if (index == 1)
 		{
 			sb.append("<td><button action=\"\" back=\"l2ui_ch3.prev1_down\" fore=\"l2ui_ch3.prev1\" width=16 height=16 ></td>");

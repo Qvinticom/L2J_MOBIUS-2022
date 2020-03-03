@@ -52,7 +52,6 @@ public class Augmentation
 			final int[] stats = new int[2];
 			stats[0] = 0x0000FFFF & augmentationId;
 			stats[1] = (augmentationId >> 16);
-			
 			for (int stat : stats)
 			{
 				final Options op = OptionData.getInstance().getOptions(stat);

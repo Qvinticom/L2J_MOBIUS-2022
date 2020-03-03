@@ -71,7 +71,6 @@ public class RequestDestroyItem extends GameClientPacket
 		}
 		
 		int count = _count;
-		
 		if (player.getPrivateStoreType() != 0)
 		{
 			player.sendPacket(SystemMessageId.WHILE_OPERATING_A_PRIVATE_STORE_OR_WORKSHOP_YOU_CANNOT_DISCARD_DESTROY_OR_TRADE_AN_ITEM);
@@ -94,7 +93,6 @@ public class RequestDestroyItem extends GameClientPacket
 		}
 		
 		final int itemId = itemToRemove.getItemId();
-		
 		if (itemToRemove.isWear() || !itemToRemove.isDestroyable() || CursedWeaponsManager.getInstance().isCursed(itemId))
 		{
 			player.sendPacket(SystemMessageId.THIS_ITEM_CANNOT_BE_DISCARDED);
@@ -153,7 +151,6 @@ public class RequestDestroyItem extends GameClientPacket
 		}
 		
 		final ItemInstance removedItem = player.getInventory().destroyItem("Destroy", _objectId, count, player, null);
-		
 		if (removedItem == null)
 		{
 			return;

@@ -32,7 +32,6 @@ public class UnsummonServitor implements IPlayerActionHandler
 	public void useAction(PlayerInstance player, ActionDataHolder data, boolean ctrlPressed, boolean shiftPressed)
 	{
 		boolean canUnsummon = true;
-		
 		if (player.hasServitors())
 		{
 			for (Summon s : player.getServitors().values())

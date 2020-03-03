@@ -73,7 +73,6 @@ public class Q00160_NerupasRequest extends Quest
 	{
 		final QuestState qs = getQuestState(player, true);
 		String htmltext = getNoQuestMsg(player);
-		
 		switch (qs.getState())
 		{
 			case State.COMPLETED:

@@ -67,7 +67,6 @@ public class DoppelgangerAI extends CreatureAI
 	{
 		final WorldObject target = getTarget();
 		final Creature attackTarget = (target != null) && target.isCreature() ? (Creature) target : null;
-		
 		if (checkTargetLostOrDead(attackTarget))
 		{
 			setTarget(null);
@@ -89,7 +88,6 @@ public class DoppelgangerAI extends CreatureAI
 		}
 		
 		final WorldObject target = _skill.getTarget(_actor, _forceUse, _dontMove, false);
-		
 		if (checkTargetLost(target))
 		{
 			setTarget(null);
@@ -244,7 +242,6 @@ public class DoppelgangerAI extends CreatureAI
 			setTarget(pawn);
 			_moveToPawnTimeout = GameTimeController.getInstance().getGameTicks();
 			_moveToPawnTimeout += 1000 / GameTimeController.MILLIS_IN_TICK;
-			
 			if (pawn == null)
 			{
 				return;
@@ -254,7 +251,6 @@ public class DoppelgangerAI extends CreatureAI
 			// _actor.moveToLocation(pawn.getX(), pawn.getY(), pawn.getZ(), offset);
 			final Location loc = new Location(pawn.getX() + Rnd.get(-offset, offset), pawn.getY() + Rnd.get(-offset, offset), pawn.getZ());
 			_actor.moveToLocation(loc.getX(), loc.getY(), loc.getZ(), 0);
-			
 			if (!_actor.isMoving())
 			{
 				clientActionFailed();

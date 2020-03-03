@@ -60,7 +60,6 @@ public class EchoCrystals extends Quest
 	{
 		String htmltext = "";
 		final QuestState st = player.getQuestState(getName());
-		
 		if ((st != null) && Util.isDigit(event))
 		{
 			final int score = Integer.parseInt(event);
@@ -70,7 +69,6 @@ public class EchoCrystals extends Quest
 				final String ok = SCORES.get(score).getOkMsg();
 				final String noadena = SCORES.get(score).getNoAdenaMsg();
 				final String noscore = SCORES.get(score).getNoScoreMsg();
-				
 				if (st.getQuestItemsCount(score) == 0)
 				{
 					htmltext = npc.getNpcId() + "-" + noscore + ".htm";
@@ -87,7 +85,6 @@ public class EchoCrystals extends Quest
 				}
 			}
 		}
-		
 		return htmltext;
 	}
 	

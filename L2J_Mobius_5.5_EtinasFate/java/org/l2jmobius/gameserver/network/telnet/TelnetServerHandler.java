@@ -62,7 +62,6 @@ public class TelnetServerHandler extends ChannelInboundHandlerAdapter
 	{
 		String ip = ctx.channel().remoteAddress().toString();
 		ip = ip.substring(1, ip.lastIndexOf(':')); // Trim out /127.0.0.1:14013
-		
 		if (!Config.TELNET_HOSTS.contains(ip))
 		{
 			final ChannelFuture future = ctx.write("Your ip: " + ip + " is not allowed to connect." + Config.EOL);
@@ -99,7 +98,6 @@ public class TelnetServerHandler extends ChannelInboundHandlerAdapter
 		// Generate and write a response.
 		String response = null;
 		boolean close = false;
-		
 		if (Boolean.FALSE.equals(ctx.channel().attr(AUTHORIZED).get()))
 		{
 			if (Config.TELNET_PASSWORD.equals(request))
@@ -128,7 +126,6 @@ public class TelnetServerHandler extends ChannelInboundHandlerAdapter
 			else
 			{
 				final Matcher m = COMMAND_ARGS_PATTERN.matcher(request);
-				
 				if (m.find())
 				{
 					final String command = m.group();
@@ -138,7 +135,6 @@ public class TelnetServerHandler extends ChannelInboundHandlerAdapter
 					while (m.find())
 					{
 						arg = m.group(1);
-						
 						if (arg == null)
 						{
 							arg = m.group(0);

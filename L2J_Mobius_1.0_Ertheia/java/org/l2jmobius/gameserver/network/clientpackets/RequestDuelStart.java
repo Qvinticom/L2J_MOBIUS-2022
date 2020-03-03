@@ -191,7 +191,6 @@ public class RequestDuelStart implements IClientIncomingPacket
 				{
 					player.onTransactionRequest(partyLeader);
 					partyLeader.sendPacket(new ExDuelAskStart(player.getName(), _partyDuel));
-					
 					SystemMessage msg = new SystemMessage(SystemMessageId.C1_S_PARTY_HAS_BEEN_CHALLENGED_TO_A_DUEL);
 					msg.addString(partyLeader.getName());
 					player.sendPacket(msg);
@@ -215,7 +214,6 @@ public class RequestDuelStart implements IClientIncomingPacket
 			{
 				player.onTransactionRequest(targetChar);
 				targetChar.sendPacket(new ExDuelAskStart(player.getName(), _partyDuel));
-				
 				SystemMessage msg = new SystemMessage(SystemMessageId.C1_HAS_BEEN_CHALLENGED_TO_A_DUEL);
 				msg.addString(targetChar.getName());
 				player.sendPacket(msg);

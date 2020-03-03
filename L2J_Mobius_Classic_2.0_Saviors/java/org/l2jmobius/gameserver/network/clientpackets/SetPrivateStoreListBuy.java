@@ -57,7 +57,6 @@ public class SetPrivateStoreListBuy implements IClientIncomingPacket
 		for (int i = 0; i < count; i++)
 		{
 			final int itemId = packet.readD();
-			
 			final Item template = ItemTable.getInstance().getTemplate(itemId);
 			if (template == null)
 			{
@@ -70,7 +69,6 @@ public class SetPrivateStoreListBuy implements IClientIncomingPacket
 			
 			final long cnt = packet.readQ();
 			final long price = packet.readQ();
-			
 			if ((itemId < 1) || (cnt < 1) || (price < 0))
 			{
 				_items = null;
@@ -88,7 +86,6 @@ public class SetPrivateStoreListBuy implements IClientIncomingPacket
 			final int defenceHoly = packet.readH();
 			final int defenceDark = packet.readH();
 			final int visualId = packet.readD();
-			
 			final EnsoulOption[] soulCrystalOptions = new EnsoulOption[packet.readC()];
 			for (int k = 0; k < soulCrystalOptions.length; k++)
 			{
@@ -178,7 +175,6 @@ public class SetPrivateStoreListBuy implements IClientIncomingPacket
 			}
 			
 			tradeList.addItemByItemId(i.getItem().getId(), i.getCount(), i.getPrice());
-			
 			totalCost += (i.getCount() * i.getPrice());
 			if (totalCost > MAX_ADENA)
 			{

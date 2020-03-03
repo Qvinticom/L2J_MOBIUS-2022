@@ -45,7 +45,6 @@ public class Self implements ITargetTypeHandler
 			{
 				creature.sendPacket(SystemMessageId.YOU_CANNOT_USE_SKILLS_THAT_MAY_HARM_OTHER_PLAYERS_IN_THIS_AREA);
 			}
-			
 			return null;
 		}
 		return creature;

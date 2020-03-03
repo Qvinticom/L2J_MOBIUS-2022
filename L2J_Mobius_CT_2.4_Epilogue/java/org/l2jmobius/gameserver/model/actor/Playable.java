@@ -122,7 +122,6 @@ public abstract class Playable extends Creature
 		getStatus().stopHpMpRegeneration();
 		
 		boolean deleteBuffs = true;
-		
 		if (isNoblesseBlessedAffected())
 		{
 			stopEffects(EffectType.NOBLESSE_BLESSING);
@@ -136,7 +135,6 @@ public abstract class Playable extends Creature
 		if (isPlayer())
 		{
 			final PlayerInstance player = getActingPlayer();
-			
 			if (player.hasCharmOfCourage())
 			{
 				if (player.isInSiege())
@@ -160,7 +158,6 @@ public abstract class Playable extends Creature
 		
 		// Notify Quest of Playable's death
 		final PlayerInstance actingPlayer = getActingPlayer();
-		
 		if (!actingPlayer.isNotifyQuestOfDeathEmpty())
 		{
 			for (QuestState qs : actingPlayer.getNotifyQuestOfDeath())
@@ -181,7 +178,6 @@ public abstract class Playable extends Creature
 		if (killer != null)
 		{
 			final PlayerInstance player = killer.getActingPlayer();
-			
 			if (player != null)
 			{
 				player.onKillUpdatePvPKarma(this);

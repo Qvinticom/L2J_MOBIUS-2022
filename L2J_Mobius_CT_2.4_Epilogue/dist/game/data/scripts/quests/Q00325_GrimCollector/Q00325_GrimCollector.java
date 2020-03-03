@@ -107,7 +107,6 @@ public class Q00325_GrimCollector extends Quest
 				else
 				{
 					takeItems(player, 1, SPINE, ARM_BONE, SKULL, RIB_BONE, THIGH_BONE);
-					
 					if (getRandom(5) < 4)
 					{
 						giveItems(player, COMPLETE_SKELETON, 1);
@@ -149,7 +148,6 @@ public class Q00325_GrimCollector extends Quest
 					if (totalCount > 0)
 					{
 						long sum = ((head * 30) + (heart * 20) + (liver * 20) + (skull * 100) + (rib * 40) + (spine * 14) + (arm * 14) + (thigh * 14));
-						
 						if (totalCount >= 10)
 						{
 							sum += 1629;
@@ -192,7 +190,6 @@ public class Q00325_GrimCollector extends Quest
 	public String onKill(Npc npc, PlayerInstance killer, boolean isSummon)
 	{
 		final QuestState qs = getQuestState(killer, false);
-		
 		if ((qs == null) || !qs.isStarted())
 		{
 			return super.onKill(npc, killer, isSummon);
@@ -220,7 +217,6 @@ public class Q00325_GrimCollector extends Quest
 	{
 		final QuestState qs = getQuestState(player, true);
 		String htmltext = getNoQuestMsg(player);
-		
 		switch (npc.getId())
 		{
 			case GUARD_CURTIZ:

@@ -122,7 +122,6 @@ public class Q00587_MoreAggressiveOperation extends Quest
 	{
 		final QuestState qs = getQuestState(player, true);
 		String htmltext = getNoQuestMsg(player);
-		
 		switch (qs.getState())
 		{
 			case State.CREATED:
@@ -173,11 +172,9 @@ public class Q00587_MoreAggressiveOperation extends Quest
 	public String onKill(Npc npc, PlayerInstance player, boolean isSummon)
 	{
 		final QuestState qs = getQuestState(player, false);
-		
 		if ((qs != null) && qs.isCond(1))
 		{
 			int killedAntelope = qs.getInt("killed_" + MOBS[0]);
-			
 			if (npc.getId() == CONTROL_GOLEM)
 			{
 				if (getRandom(100) < 50)

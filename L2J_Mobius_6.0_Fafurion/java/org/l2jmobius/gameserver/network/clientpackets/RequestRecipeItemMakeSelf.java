@@ -164,7 +164,6 @@ public class RequestRecipeItemMakeSelf implements IClientIncomingPacket
 		
 		final boolean success = player.tryLuck() || ((recipe.getSuccessRate() + offeringBonus) > Rnd.get(100));
 		final boolean craftingCritical = success && (player.getStat().getValue(Stat.CRAFTING_CRITICAL) > Rnd.get(100));
-		
 		if (success) // Successful craft.
 		{
 			if (craftingCritical)
@@ -182,7 +181,6 @@ public class RequestRecipeItemMakeSelf implements IClientIncomingPacket
 		
 		// Send craft window. Must be sent after crafting so it properly counts the items.
 		player.sendPacket(new RecipeItemMakeInfo(recipe.getId(), player, success, recipe.getMaxOffering()));
-		
 		player.setCrafting(false);
 	}
 }

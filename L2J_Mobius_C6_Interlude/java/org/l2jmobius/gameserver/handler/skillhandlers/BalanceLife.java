@@ -44,7 +44,6 @@ public class BalanceLife implements ISkillHandler
 		try
 		{
 			final ISkillHandler handler = SkillHandler.getInstance().getSkillHandler(SkillType.BUFF);
-			
 			if (handler != null)
 			{
 				handler.useSkill(creature, skill, targets);
@@ -55,7 +54,6 @@ public class BalanceLife implements ISkillHandler
 		}
 		
 		Creature target = null;
-		
 		PlayerInstance player = null;
 		if (creature instanceof PlayerInstance)
 		{
@@ -64,7 +62,6 @@ public class BalanceLife implements ISkillHandler
 		
 		double fullHP = 0;
 		double currentHPs = 0;
-		
 		for (WorldObject target2 : targets)
 		{
 			target = (Creature) target2;
@@ -99,11 +96,9 @@ public class BalanceLife implements ISkillHandler
 		}
 		
 		final double percentHP = currentHPs / fullHP;
-		
 		for (WorldObject target2 : targets)
 		{
 			target = (Creature) target2;
-			
 			if ((target == null) || target.isDead())
 			{
 				continue;
@@ -111,7 +106,6 @@ public class BalanceLife implements ISkillHandler
 			
 			final double newHP = target.getMaxHp() * percentHP;
 			final double totalHeal = newHP - target.getCurrentHp();
-			
 			target.setCurrentHp(newHP);
 			
 			if (totalHeal > 0)

@@ -152,7 +152,6 @@ public class MinionList
 		}
 		
 		final Long current = System.currentTimeMillis();
-		
 		if (_respawnTasks != null)
 		{
 			for (Entry<Long, Integer> entry : _respawnTasks.entrySet())
@@ -190,14 +189,11 @@ public class MinionList
 			int minionCount;
 			int minionId;
 			int minionsToSpawn;
-			
 			for (MinionData minion : minions)
 			{
 				minionCount = minion.getAmount();
 				minionId = minion.getMinionId();
-				
 				minionsToSpawn = minionCount - countSpawnedMinionsById(minionId);
-				
 				for (int i = 0; i < minionsToSpawn; i++)
 				{
 					spawnSingleMinion(minionId);
@@ -248,14 +244,12 @@ public class MinionList
 		final int newX = master.getX() + spawnConstant;
 		spawnConstant = Rnd.get(randSpawnLim);
 		randPlusMin = Rnd.get(2);
-		
 		if (randPlusMin == 1)
 		{
 			spawnConstant *= -1;
 		}
 		
 		final int newY = master.getY() + spawnConstant;
-		
 		monster.spawnMe(newX, newY, master.getZ());
 		
 		// Assist master

@@ -93,7 +93,6 @@ public class DoormanInstance extends NpcInstance
 		player.sendPacket(ActionFailed.STATIC_PACKET);
 		
 		final NpcHtmlMessage html = new NpcHtmlMessage(getObjectId());
-		
 		if (!isOwnerClan(player))
 		{
 			html.setFile(player, "data/html/doorman/" + getTemplate().getId() + "-no.htm");

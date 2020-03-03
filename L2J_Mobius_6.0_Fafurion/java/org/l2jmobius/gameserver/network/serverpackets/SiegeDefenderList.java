@@ -67,7 +67,6 @@ public class SiegeDefenderList implements IClientOutgoingPacket
 		packet.writeD(0x00); // Unknown
 		
 		final int size = _castle.getSiege().getDefenderWaitingClans().size() + _castle.getSiege().getDefenderClans().size() + (_castle.getOwner() != null ? 1 : 0);
-		
 		packet.writeD(size);
 		packet.writeD(size);
 		

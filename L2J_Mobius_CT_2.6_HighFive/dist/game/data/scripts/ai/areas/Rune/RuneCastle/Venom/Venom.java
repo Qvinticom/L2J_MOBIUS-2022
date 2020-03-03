@@ -278,7 +278,6 @@ public class Venom extends AbstractNpcAI
 			case VENOM:
 			{
 				_venom = npc;
-				
 				_loc = _venom.getLocation();
 				_venom.disableSkill(VENOM_TELEPORT.getSkill(), -1);
 				_venom.disableSkill(RANGE_TELEPORT.getSkill(), -1);

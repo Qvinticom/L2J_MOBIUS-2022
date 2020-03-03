@@ -131,7 +131,6 @@ public class Q10301_ShadowOfTerrorBlackishRedFog extends Quest
 	{
 		String htmltext = getNoQuestMsg(player);
 		final QuestState qs = getQuestState(player, true);
-		
 		boolean startQuest = false;
 		switch (qs.getState())
 		{
@@ -163,7 +162,6 @@ public class Q10301_ShadowOfTerrorBlackishRedFog extends Quest
 	{
 		final QuestState qs = getQuestState(player, true);
 		String htmltext = getNoQuestMsg(player);
-		
 		switch (qs.getState())
 		{
 			case State.STARTED:
@@ -246,7 +244,6 @@ public class Q10301_ShadowOfTerrorBlackishRedFog extends Quest
 		
 		final PlayerInstance player = event.getPlayer();
 		final QuestState qs = getQuestState(player, false);
-		
 		if ((qs == null) && (event.getOldLevel() < event.getNewLevel()) && canStartQuest(player))
 		{
 			player.sendPacket(new TutorialShowQuestionMark(getId(), 1));
@@ -265,7 +262,6 @@ public class Q10301_ShadowOfTerrorBlackishRedFog extends Quest
 		
 		final PlayerInstance player = event.getPlayer();
 		final QuestState qs = getQuestState(player, false);
-		
 		if ((qs == null) && canStartQuest(player) && !hasQuestItems(player, LADA_LETTER))
 		{
 			player.sendPacket(new TutorialShowQuestionMark(getId(), 1));

@@ -75,7 +75,6 @@ public class RequestSetAllyCrest implements IClientIncomingPacket
 		}
 		
 		final Clan leaderClan = ClanTable.getInstance().getClan(player.getAllyId());
-		
 		if ((player.getClanId() != leaderClan.getId()) || !player.isClanLeader())
 		{
 			player.sendPacket(SystemMessageId.THIS_FEATURE_IS_ONLY_AVAILABLE_TO_ALLIANCE_LEADERS);

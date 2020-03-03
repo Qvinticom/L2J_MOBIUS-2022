@@ -73,7 +73,6 @@ public class Q00275_DarkWingedSpies extends Quest
 	public String onKill(Npc npc, PlayerInstance killer, boolean isSummon)
 	{
 		final QuestState qs = getQuestState(killer, false);
-		
 		if ((qs != null) && qs.isCond(1) && Util.checkIfInRange(Config.ALT_PARTY_RANGE, npc, killer, true))
 		{
 			final long count = getQuestItemsCount(killer, DARKWING_BAT_FANG);
@@ -107,7 +106,6 @@ public class Q00275_DarkWingedSpies extends Quest
 				}
 			}
 		}
-		
 		return super.onKill(npc, killer, isSummon);
 	}
 	

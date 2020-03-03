@@ -52,7 +52,6 @@ public class ClanBoard implements IWriteBoardHandler
 		if (command.equals("_bbsclan"))
 		{
 			CommunityBoardHandler.getInstance().addBypass(player, "Clan", command);
-			
 			if ((player.getClan() == null) || (player.getClan().getLevel() < 2))
 			{
 				clanList(player, 1);
@@ -65,7 +64,6 @@ public class ClanBoard implements IWriteBoardHandler
 		else if (command.startsWith("_bbsclan_clanlist"))
 		{
 			CommunityBoardHandler.getInstance().addBypass(player, "Clan List", command);
-			
 			if (command.equals("_bbsclan_clanlist"))
 			{
 				clanList(player, 1);
@@ -86,7 +84,6 @@ public class ClanBoard implements IWriteBoardHandler
 		else if (command.startsWith("_bbsclan_clanhome"))
 		{
 			CommunityBoardHandler.getInstance().addBypass(player, "Clan Home", command);
-			
 			if (command.equals("_bbsclan_clanhome"))
 			{
 				clanHome(player);
@@ -107,13 +104,11 @@ public class ClanBoard implements IWriteBoardHandler
 		else if (command.startsWith("_bbsclan_clannotice_edit;"))
 		{
 			CommunityBoardHandler.getInstance().addBypass(player, "Clan Edit", command);
-			
 			clanNotice(player, player.getClanId());
 		}
 		else if (command.startsWith("_bbsclan_clannotice_enable"))
 		{
 			CommunityBoardHandler.getInstance().addBypass(player, "Clan Notice Enable", command);
-			
 			if (player.getClan() != null)
 			{
 				player.getClan().setNoticeEnabled(true);
@@ -123,7 +118,6 @@ public class ClanBoard implements IWriteBoardHandler
 		else if (command.startsWith("_bbsclan_clannotice_disable"))
 		{
 			CommunityBoardHandler.getInstance().addBypass(player, "Clan Notice Disable", command);
-			
 			if (player.getClan() != null)
 			{
 				player.getClan().setNoticeEnabled(false);
@@ -156,7 +150,6 @@ public class ClanBoard implements IWriteBoardHandler
 				if (player.isClanLeader())
 				{
 					html.append("<br><br><center><table width=610 border=0 cellspacing=0 cellpadding=0><tr><td fixwidth=610><font color=\"AAAAAA\">The Clan Notice function allows the clan leader to send messages through a pop-up window to clan members at login.</font> </td></tr><tr><td height=20></td></tr>");
-					
 					if (player.getClan().isNoticeEnabled())
 					{
 						html.append("<tr><td fixwidth=610> Clan Notice Function:&nbsp;&nbsp;&nbsp;on&nbsp;&nbsp;&nbsp;/&nbsp;&nbsp;&nbsp;<a action=\"bypass _bbsclan_clannotice_disable\">off</a>");
@@ -167,7 +160,6 @@ public class ClanBoard implements IWriteBoardHandler
 					}
 					
 					html.append("</td></tr></table><img src=\"L2UI.Squaregray\" width=\"610\" height=\"1\"><br> <br><table width=610 border=0 cellspacing=2 cellpadding=0><tr><td>Edit Notice: </td></tr><tr><td height=5></td></tr><tr><td><MultiEdit var =\"Content\" width=610 height=100></td></tr></table><br><table width=610 border=0 cellspacing=0 cellpadding=0><tr><td height=5></td></tr><tr><td align=center FIXWIDTH=65><button value=\"&$140;\" action=\"Write Notice Set _ Content Content Content\" back=\"l2ui_ch3.smallbutton2_down\" width=65 height=20 fore=\"l2ui_ch3.smallbutton2\" ></td><td align=center FIXWIDTH=45></td><td align=center FIXWIDTH=500></td></tr></table></center></body></html>");
-					
 					Util.sendCBHtml(player, html.toString(), player.getClan().getNotice());
 				}
 				else
@@ -196,7 +188,6 @@ public class ClanBoard implements IWriteBoardHandler
 		html.append("<html><body><br><br><center><br1><br1><table border=0 cellspacing=0 cellpadding=0><tr><td FIXWIDTH=15>&nbsp;</td><td width=610 height=30 align=left><a action=\"bypass _bbsclan_clanlist\"> CLAN COMMUNITY </a></td></tr></table><table border=0 cellspacing=0 cellpadding=0 width=610 bgcolor=434343><tr><td height=10></td></tr><tr><td fixWIDTH=5></td><td fixWIDTH=600><a action=\"bypass _bbsclan_clanhome;");
 		html.append(player.getClan() != null ? player.getClan().getId() : 0);
 		html.append("\">[GO TO MY CLAN]</a>&nbsp;&nbsp;</td><td fixWIDTH=5></td></tr><tr><td height=10></td></tr></table><br><table border=0 cellspacing=0 cellpadding=2 bgcolor=5A5A5A width=610><tr><td FIXWIDTH=5></td><td FIXWIDTH=200 align=center>CLAN NAME</td><td FIXWIDTH=200 align=center>CLAN LEADER</td><td FIXWIDTH=100 align=center>CLAN LEVEL</td><td FIXWIDTH=100 align=center>CLAN MEMBERS</td><td FIXWIDTH=5></td></tr></table><img src=\"L2UI.Squareblank\" width=\"1\" height=\"5\">");
-		
 		int i = 0;
 		for (Clan cl : ClanTable.getInstance().getClans())
 		{
@@ -222,7 +213,6 @@ public class ClanBoard implements IWriteBoardHandler
 		}
 		
 		html.append("<img src=\"L2UI.SquareBlank\" width=\"610\" height=\"2\"><table cellpadding=0 cellspacing=2 border=0><tr>");
-		
 		if (index == 1)
 		{
 			html.append("<td><button action=\"\" back=\"l2ui_ch3.prev1_down\" fore=\"l2ui_ch3.prev1\" width=16 height=16 ></td>");
@@ -310,12 +300,10 @@ public class ClanBoard implements IWriteBoardHandler
 		// the only Write bypass that comes to this handler is "Write Notice Set _ Content Content Content";
 		// arg1 = Set, arg2 = _
 		final Clan clan = player.getClan();
-		
 		if ((clan != null) && player.isClanLeader())
 		{
 			clan.setNotice(arg3);
 		}
-		
 		return true;
 	}
 }

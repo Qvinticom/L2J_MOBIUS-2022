@@ -115,10 +115,8 @@ public class PlayerStat extends PlayableStat
 		
 		final double baseExp = addToExp;
 		final double baseSp = addToSp;
-		
 		double bonusExp = 1.;
 		double bonusSp = 1.;
-		
 		if (useBonuses)
 		{
 			if (player.isFishing())
@@ -146,7 +144,6 @@ public class PlayerStat extends PlayableStat
 		
 		addToExp *= bonusExp;
 		addToSp *= bonusSp;
-		
 		double ratioTakenByPlayer = 0;
 		
 		// if this player has a pet and it is in his range he takes from the owner's Exp, give the pet Exp now
@@ -177,7 +174,6 @@ public class PlayerStat extends PlayableStat
 		final long finalSp = Math.round(addToSp);
 		final boolean expAdded = addExp(finalExp);
 		final boolean spAdded = addSp(finalSp);
-		
 		SystemMessage sm = null;
 		if (!expAdded && spAdded)
 		{
@@ -331,7 +327,6 @@ public class PlayerStat extends PlayableStat
 		{
 			return getActiveChar().getSubClasses().get(getActiveChar().getClassIndex()).getExp();
 		}
-		
 		return super.getExp();
 	}
 	
@@ -440,7 +435,6 @@ public class PlayerStat extends PlayableStat
 		{
 			return getActiveChar().getSubClasses().get(getActiveChar().getClassIndex()).getSp();
 		}
-		
 		return super.getSp();
 	}
 	
@@ -557,7 +551,6 @@ public class PlayerStat extends PlayableStat
 			if (points < 0) // vitality consumed
 			{
 				final int stat = (int) getValue(Stat.VITALITY_CONSUME_RATE, 1);
-				
 				if (stat == 0)
 				{
 					return;
@@ -608,7 +601,6 @@ public class PlayerStat extends PlayableStat
 		
 		// Bonus exp from skills
 		bonusExp = 1 + (getValue(Stat.BONUS_EXP, 0) / 100);
-		
 		if (vitality > 1.0)
 		{
 			bonus += (vitality - 1);
@@ -640,7 +632,6 @@ public class PlayerStat extends PlayableStat
 		
 		// Bonus sp from skills
 		bonusSp = 1 + (getValue(Stat.BONUS_SP, 0) / 100);
-		
 		if (vitality > 1.0)
 		{
 			bonus += (vitality - 1);

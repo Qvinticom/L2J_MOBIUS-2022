@@ -204,7 +204,6 @@ public class CavernOfThePirateCaptain extends AbstractInstance
 		final boolean isInCC = party.isInCommandChannel();
 		final List<PlayerInstance> members = (isInCC) ? party.getCommandChannel().getMembers() : party.getMembers();
 		final boolean isPartyLeader = (isInCC) ? party.getCommandChannel().isLeader(player) : party.isLeader(player);
-		
 		if (!isPartyLeader)
 		{
 			broadcastSystemMessage(player, null, SystemMessageId.ONLY_A_PARTY_LEADER_CAN_MAKE_THE_REQUEST_TO_ENTER, false);
@@ -244,7 +243,6 @@ public class CavernOfThePirateCaptain extends AbstractInstance
 	private void broadcastSystemMessage(PlayerInstance player, PlayerInstance member, SystemMessageId msgId, boolean toGroup)
 	{
 		final SystemMessage sm = new SystemMessage(msgId);
-		
 		if (toGroup)
 		{
 			sm.addPcName(member);
@@ -369,7 +367,6 @@ public class CavernOfThePirateCaptain extends AbstractInstance
 		if (world != null)
 		{
 			final boolean isBlue = npc.getVariables().getInt("isBlue", 0) == 1;
-			
 			if (npc.isScriptValue(0))
 			{
 				if (isBlue)
@@ -392,7 +389,6 @@ public class CavernOfThePirateCaptain extends AbstractInstance
 	private int getRoomByCandle(Npc npc)
 	{
 		final int candleId = npc.getVariables().getInt("candleId", 0);
-		
 		for (int i = 0; i < 15; i++)
 		{
 			if ((ROOM_DATA[i][3] == candleId) || (ROOM_DATA[i][4] == candleId))
@@ -442,7 +438,6 @@ public class CavernOfThePirateCaptain extends AbstractInstance
 	{
 		final List<Npc> candles = new ArrayList<>();
 		world.setParameter("zakenRoom", getRandom(1, 15));
-		
 		for (int i = 0; i < 36; i++)
 		{
 			final Npc candle = addSpawn(CANDLE, CANDLE_LOC[i], false, 0, false, world.getInstanceId());

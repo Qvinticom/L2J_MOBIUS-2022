@@ -42,7 +42,6 @@ public class Unlock implements ISkillHandler
 	public void useSkill(Creature creature, Skill skill, WorldObject[] targets)
 	{
 		final WorldObject[] targetList = skill.getTargetList(creature);
-		
 		if (targetList == null)
 		{
 			return;
@@ -51,7 +50,6 @@ public class Unlock implements ISkillHandler
 		for (WorldObject element : targetList)
 		{
 			final WorldObject target = element;
-			
 			final boolean success = Formulas.getInstance().calculateUnlockChance(skill);
 			if (target instanceof DoorInstance)
 			{
@@ -77,7 +75,6 @@ public class Unlock implements ISkillHandler
 			else if (target instanceof ChestInstance)
 			{
 				final ChestInstance chest = (ChestInstance) element;
-				
 				if ((chest.getCurrentHp() <= 0) || chest.isInteracted())
 				{
 					creature.sendPacket(ActionFailed.STATIC_PACKET);
@@ -87,7 +84,6 @@ public class Unlock implements ISkillHandler
 				int chestChance = 0;
 				int chestGroup = 0;
 				int chestTrapLimit = 0;
-				
 				if (chest.getLevel() > 60)
 				{
 					chestGroup = 4;

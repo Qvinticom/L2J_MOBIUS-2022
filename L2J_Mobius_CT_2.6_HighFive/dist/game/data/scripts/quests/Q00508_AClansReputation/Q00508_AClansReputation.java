@@ -174,7 +174,6 @@ public class Q00508_AClansReputation extends Quest
 		final QuestState qs = getQuestState(player, true);
 		final Clan clan = player.getClan();
 		String htmltext = getNoQuestMsg(player);
-		
 		switch (qs.getState())
 		{
 			case State.CREATED:
@@ -191,7 +190,6 @@ public class Q00508_AClansReputation extends Quest
 				}
 				
 				final int raid = qs.getInt("raid");
-				
 				if (REWARD_POINTS.containsKey(raid))
 				{
 					if (hasQuestItems(player, REWARD_POINTS.get(raid).get(1)))

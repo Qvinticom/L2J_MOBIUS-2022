@@ -88,7 +88,6 @@ public class Minigame extends AbstractNpcAI
 				takeItems(player, UNLIT_TORCHLIGHT, 1);
 				giveItems(player, TORCHLIGHT, 1);
 				npc.broadcastSay(ChatType.NPC_GENERAL, NpcStringId.THE_FURNACE_WILL_GO_OUT_WATCH_AND_SEE);
-				
 				room.getManager().setTarget(player);
 				room.setParticipant(player);
 				room.setStarted(true);
@@ -99,7 +98,6 @@ public class Minigame extends AbstractNpcAI
 				cancelQuestTimer("hurry_up", npc, null);
 				cancelQuestTimer("hurry_up2", npc, null);
 				cancelQuestTimer("expire", npc, null);
-				
 				startQuestTimer("hurry_up", 120000, npc, null);
 				startQuestTimer("expire", 190000, npc, null);
 				startQuestTimer("start", 1000, npc, null);
@@ -200,7 +198,6 @@ public class Minigame extends AbstractNpcAI
 		String htmltext = null;
 		final MinigameRoom room = getRoomByManager(npc);
 		final boolean miniGameStarted = room.getStarted();
-		
 		if (npc.getTarget() == null)
 		{
 			htmltext = miniGameStarted ? "32758-08.html" : "32758.html";
@@ -214,7 +211,6 @@ public class Minigame extends AbstractNpcAI
 			else
 			{
 				final int attemptNumber = room.getAttemptNumber();
-				
 				if (attemptNumber == 2)
 				{
 					htmltext = "32758-02.html";
@@ -229,7 +225,6 @@ public class Minigame extends AbstractNpcAI
 		{
 			htmltext = "32758-04.html";
 		}
-		
 		return htmltext;
 	}
 	
@@ -321,7 +316,6 @@ public class Minigame extends AbstractNpcAI
 		final Npc[] burners = new Npc[9];
 		Npc lastSpawn;
 		int potNumber = 0;
-		
 		for (Spawn spawn : SpawnTable.getInstance().getSpawns(BURNER))
 		{
 			lastSpawn = spawn.getLastSpawn();

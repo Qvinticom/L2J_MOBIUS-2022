@@ -82,7 +82,6 @@ public class PremiumManager
 		final long now = System.currentTimeMillis();
 		final long premiumExpiration = getPremiumExpiration(accountName);
 		player.setPremiumStatus(premiumExpiration > now);
-		
 		if (player.hasPremiumStatus())
 		{
 			startExpireTask(player, premiumExpiration - now);
@@ -183,7 +182,6 @@ public class PremiumManager
 		{
 			stopExpireTask(playerOnline);
 			startExpireTask(playerOnline, newPremiumExpiration - now);
-			
 			if (!playerOnline.hasPremiumStatus())
 			{
 				playerOnline.setPremiumStatus(true);

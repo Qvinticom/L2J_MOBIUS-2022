@@ -242,7 +242,6 @@ public class Q00674_ChangesInTheShadowOfTheMotherTree extends Quest
 	{
 		final QuestState qs = getQuestState(player, true);
 		String htmltext = getNoQuestMsg(player);
-		
 		switch (qs.getState())
 		{
 			case State.CREATED:
@@ -341,7 +340,6 @@ public class Q00674_ChangesInTheShadowOfTheMotherTree extends Quest
 					final int killedGhosts = qs.getInt("AncientGhosts") + 1;
 					qs.set("AncientGhosts", killedGhosts);
 					playSound(killer, QuestSound.ITEMSOUND_QUEST_ITEMGET);
-					
 					if (killedGhosts >= 200)
 					{
 						qs.setCond(5, true);
@@ -353,7 +351,6 @@ public class Q00674_ChangesInTheShadowOfTheMotherTree extends Quest
 					final int killedGhosts = qs.getInt("AncientGhosts") + 1;
 					qs.set("AncientGhosts", killedGhosts);
 					playSound(killer, QuestSound.ITEMSOUND_QUEST_ITEMGET);
-					
 					if (killedGhosts >= 400)
 					{
 						qs.setCond(6, true);
@@ -365,7 +362,6 @@ public class Q00674_ChangesInTheShadowOfTheMotherTree extends Quest
 					final int killedGhosts = qs.getInt("AncientGhosts") + 1;
 					qs.set("AncientGhosts", killedGhosts);
 					playSound(killer, QuestSound.ITEMSOUND_QUEST_ITEMGET);
-					
 					if (killedGhosts >= 600)
 					{
 						qs.setCond(7, true);

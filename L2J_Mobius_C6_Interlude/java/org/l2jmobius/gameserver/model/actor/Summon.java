@@ -90,7 +90,6 @@ public abstract class Summon extends Playable
 		getKnownList(); // init knownlist
 		getStat(); // init stats
 		getStatus(); // init status
-		
 		_showSummonAnimation = true;
 		_owner = owner;
 		_ai = new SummonAI(new AIAccessor());
@@ -110,7 +109,6 @@ public abstract class Summon extends Playable
 		{
 			setKnownList(new SummonKnownList(this));
 		}
-		
 		return (SummonKnownList) super.getKnownList();
 	}
 	
@@ -121,7 +119,6 @@ public abstract class Summon extends Playable
 		{
 			setStat(new SummonStat(this));
 		}
-		
 		return (SummonStat) super.getStat();
 	}
 	
@@ -132,7 +129,6 @@ public abstract class Summon extends Playable
 		{
 			setStatus(new SummonStatus(this));
 		}
-		
 		return (SummonStatus) super.getStatus();
 	}
 	
@@ -149,7 +145,6 @@ public abstract class Summon extends Playable
 				}
 			}
 		}
-		
 		return _ai;
 	}
 	
@@ -415,7 +410,6 @@ public abstract class Summon extends Playable
 			
 			getAI().stopFollow();
 			owner.sendPacket(new PetDelete(getObjectId(), 2));
-			
 			store();
 			
 			giveAllToOwner();
@@ -452,7 +446,6 @@ public abstract class Summon extends Playable
 	public void setFollowStatus(boolean value)
 	{
 		_follow = value;
-		
 		if (_follow)
 		{
 			getAI().setIntention(CtrlIntention.AI_INTENTION_FOLLOW, _owner);
@@ -791,7 +784,6 @@ public abstract class Summon extends Playable
 	{
 		final int petLevel = getLevel();
 		int skillLevel = petLevel / 10;
-		
 		if (skill.getSkillType() == SkillType.BUFF)
 		{
 			if (petLevel > 77)
@@ -826,7 +818,6 @@ public abstract class Summon extends Playable
 		}
 		
 		final Skill skillToCast = SkillTable.getInstance().getInfo(skill.getId(), skillLevel);
-		
 		if (skillToCast != null)
 		{
 			super.doCast(skillToCast);

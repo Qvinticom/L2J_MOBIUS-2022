@@ -61,9 +61,7 @@ public class CHSiegeManager
 			while (rs.next())
 			{
 				final int id = rs.getInt("clanHallId");
-				
 				final StatSet set = new StatSet();
-				
 				set.set("id", id);
 				set.set("name", rs.getString("name"));
 				set.set("ownerId", rs.getInt("ownerId"));
@@ -102,7 +100,6 @@ public class CHSiegeManager
 	public SiegableHall getNearbyClanHall(int x, int y, int maxDist)
 	{
 		ClanHallZone zone = null;
-		
 		for (Map.Entry<Integer, SiegableHall> ch : _siegableHalls.entrySet())
 		{
 			zone = ch.getValue().getZone();

@@ -109,7 +109,6 @@ public class Q10424_KekropusLetterBelosWhereabouts extends LetterQuest
 	{
 		String htmltext = getNoQuestMsg(player);
 		final QuestState qs = getQuestState(player, false);
-		
 		if (qs == null)
 		{
 			return htmltext;
@@ -136,7 +135,6 @@ public class Q10424_KekropusLetterBelosWhereabouts extends LetterQuest
 		{
 			final PlayerInstance player = creature.getActingPlayer();
 			final QuestState qs = getQuestState(player, false);
-			
 			if ((qs != null) && qs.isCond(2))
 			{
 				showOnScreenMsg(player, NpcStringId.KETRA_ORC_OUTPOST_IS_A_GOOD_HUNTING_ZONE_FOR_LV_76_OR_ABOVE, ExShowScreenMessage.TOP_CENTER, 6000);

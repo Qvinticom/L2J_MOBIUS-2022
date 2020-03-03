@@ -90,7 +90,6 @@ public class Q10306_TheCorruptedLeader extends Quest
 					giveItems(player, getRandomEntry(REWARD_CRYSTALS), 1);
 					qs.exitQuest(false, true);
 					htmltext = "32895-09.html";
-					
 				}
 				else
 				{
@@ -106,7 +105,6 @@ public class Q10306_TheCorruptedLeader extends Quest
 	{
 		final QuestState qs = getQuestState(player, true);
 		String htmltext = getNoQuestMsg(player);
-		
 		switch (qs.getState())
 		{
 			case State.CREATED:
@@ -139,7 +137,6 @@ public class Q10306_TheCorruptedLeader extends Quest
 	public String onKill(Npc npc, PlayerInstance player, boolean isSummon)
 	{
 		final QuestState qs = getQuestState(player, false);
-		
 		if ((qs != null) && (qs.isCond(1)))
 		{
 			qs.setCond(2, true);

@@ -87,7 +87,6 @@ public class AdminShutdown implements IAdminCommandHandler
 		{
 			serverAbort(activeChar);
 		}
-		
 		return true;
 	}
 	

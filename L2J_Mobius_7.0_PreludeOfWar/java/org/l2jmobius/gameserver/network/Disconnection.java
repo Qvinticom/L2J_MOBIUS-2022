@@ -131,7 +131,6 @@ public class Disconnection
 		{
 			LOGGER.warning(e.getMessage());
 		}
-		
 		return this;
 	}
 	
@@ -149,7 +148,6 @@ public class Disconnection
 		{
 			LOGGER.warning(e.getMessage());
 		}
-		
 		return this;
 	}
 	
@@ -159,7 +157,6 @@ public class Disconnection
 		{
 			_client.close(toLoginScreen);
 		}
-		
 		return this;
 	}
 	
@@ -169,7 +166,6 @@ public class Disconnection
 		{
 			_client.close(packet);
 		}
-		
 		return this;
 	}
 	

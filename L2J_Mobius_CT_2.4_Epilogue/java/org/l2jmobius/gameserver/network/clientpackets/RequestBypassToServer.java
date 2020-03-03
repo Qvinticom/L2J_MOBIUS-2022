@@ -148,7 +148,6 @@ public class RequestBypassToServer implements IClientIncomingPacket
 				if (Util.isDigit(id))
 				{
 					final WorldObject object = World.getInstance().findObject(Integer.parseInt(id));
-					
 					if ((object != null) && object.isNpc() && (endOfId > 0) && player.isInsideRadius2D(object, Npc.INTERACTION_DISTANCE))
 					{
 						((Npc) object).onBypassFeedback(player, _command.substring(endOfId + 1));
@@ -255,7 +254,6 @@ public class RequestBypassToServer implements IClientIncomingPacket
 		catch (Exception e)
 		{
 			LOGGER.log(Level.WARNING, "Exception processing bypass from player " + player.getName() + ": " + _command, e);
-			
 			if (player.isGM())
 			{
 				final StringBuilder sb = new StringBuilder(200);

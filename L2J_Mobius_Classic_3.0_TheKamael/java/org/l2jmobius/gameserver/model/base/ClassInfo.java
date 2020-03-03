@@ -91,7 +91,6 @@ public class ClassInfo
 		{
 			classClientId += 12817; // TODO: Find proper ids.
 		}
-		
 		return classClientId;
 	}
 	

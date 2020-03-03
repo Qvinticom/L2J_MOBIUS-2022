@@ -63,7 +63,6 @@ public class PcBody implements ITargetTypeHandler
 		}
 		
 		final Playable target = (Playable) selectedTarget;
-		
 		if (target.isDead())
 		{
 			if (skill.hasEffectType(EffectType.RESURRECTION))

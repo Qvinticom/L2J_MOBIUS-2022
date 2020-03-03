@@ -357,7 +357,6 @@ public class VarkaSilenosSupport extends Quest
 		{
 			testVarkaDemote(player);
 		}
-		
 		return null;
 	}
 	

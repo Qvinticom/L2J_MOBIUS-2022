@@ -68,7 +68,6 @@ public class RequestExEnchantSkill extends GameClientPacket
 		}
 		
 		final int npcid = trainer.getNpcId();
-		
 		if (!player.isInsideRadius(trainer, NpcInstance.INTERACTION_DISTANCE, false, false) && !player.isGM())
 		{
 			return;
@@ -90,7 +89,6 @@ public class RequestExEnchantSkill extends GameClientPacket
 		}
 		
 		final Skill skill = SkillTable.getInstance().getInfo(_skillId, _skillLvl);
-		
 		int counts = 0;
 		int requiredSp = 10000000;
 		int requiredExp = 100000;
@@ -98,11 +96,9 @@ public class RequestExEnchantSkill extends GameClientPacket
 		int baseLvl = 1;
 		
 		final EnchantSkillLearn[] skills = SkillTreeTable.getInstance().getAvailableEnchantSkills(player);
-		
 		for (EnchantSkillLearn s : skills)
 		{
 			final Skill sk = SkillTable.getInstance().getInfo(s.getId(), s.getLevel());
-			
 			if ((sk == null) || (sk != skill) || !sk.getCanLearn(player.getClassId()) || !sk.canTeachBy(npcid))
 			{
 				continue;
@@ -131,9 +127,7 @@ public class RequestExEnchantSkill extends GameClientPacket
 				if (Config.ES_SP_BOOK_NEEDED && ((_skillLvl == 101) || (_skillLvl == 141))) // only first lvl requires book
 				{
 					final int spbId = 6622;
-					
 					final ItemInstance spb = player.getInventory().getItemByItemId(spbId);
-					
 					if (spb == null)// Haven't spellbook
 					{
 						player.sendPacket(SystemMessageId.YOU_DO_NOT_HAVE_ALL_OF_THE_ITEMS_NEEDED_TO_ENCHANT_THAT_SKILL);
@@ -188,13 +182,11 @@ public class RequestExEnchantSkill extends GameClientPacket
 			player.sendPacket(sm);
 		}
 		trainer.showEnchantSkillList(player, player.getClassId());
-		
 		player.sendPacket(new UserInfo(player));
 		player.sendSkillList();
 		
 		// update all the shortcuts to this skill
 		final ShortCut[] allShortCuts = player.getAllShortCuts();
-		
 		for (ShortCut sc : allShortCuts)
 		{
 			if ((sc.getId() == _skillId) && (sc.getType() == ShortCut.TYPE_SKILL))

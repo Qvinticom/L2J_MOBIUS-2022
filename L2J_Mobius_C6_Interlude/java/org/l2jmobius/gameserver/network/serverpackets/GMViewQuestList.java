@@ -42,7 +42,6 @@ public class GMViewQuestList extends GameServerPacket
 		writeS(_player.getName());
 		
 		final List<Quest> questList = _player.getAllActiveQuests();
-		
 		writeH(questList.size()); // quest count
 		for (Quest q : questList)
 		{

@@ -79,7 +79,6 @@ public class DropProtection implements Runnable
 		
 		_isProtected = true;
 		_owner = creature;
-		
 		if (_owner == null)
 		{
 			throw new NullPointerException("Trying to protect dropped item to null owner");

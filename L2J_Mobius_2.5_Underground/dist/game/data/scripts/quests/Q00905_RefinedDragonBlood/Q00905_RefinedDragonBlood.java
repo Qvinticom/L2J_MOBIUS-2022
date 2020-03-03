@@ -90,7 +90,6 @@ public class Q00905_RefinedDragonBlood extends Quest
 			if (getQuestItemsCount(player, itemId) < DRAGON_BLOOD_COUNT)
 			{
 				giveItems(player, itemId, 1);
-				
 				if ((getQuestItemsCount(player, UNREFINED_RED_DRAGON_BLOOD) >= DRAGON_BLOOD_COUNT) && (getQuestItemsCount(player, UNREFINED_BLUE_DRAGON_BLOOD) >= DRAGON_BLOOD_COUNT))
 				{
 					qs.setCond(2, true);
@@ -163,7 +162,6 @@ public class Q00905_RefinedDragonBlood extends Quest
 	{
 		final QuestState qs = getQuestState(player, true);
 		String htmltext = getNoQuestMsg(player);
-		
 		switch (qs.getState())
 		{
 			case State.CREATED:

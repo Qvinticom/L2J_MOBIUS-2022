@@ -124,7 +124,6 @@ public class Q00582_WashBloodWithBlood extends Quest
 	{
 		final QuestState qs = getQuestState(player, true);
 		String htmltext = getNoQuestMsg(player);
-		
 		if (npc.getId() == START_NPC)
 		{
 			switch (qs.getState())

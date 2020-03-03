@@ -60,7 +60,6 @@ public class BeastSpiritShot implements IItemHandler
 		final boolean isBlessed = ((itemId == 6647) || (itemId == 20334)); // TODO: Unhardcode these!
 		final short shotConsumption = activeOwner.getSummon().getSpiritShotsPerHit();
 		final SkillHolder[] skills = item.getItem().getSkills();
-		
 		if (skills == null)
 		{
 			LOGGER.log(Level.WARNING, getClass().getSimpleName() + ": is missing skills!");
@@ -96,7 +95,6 @@ public class BeastSpiritShot implements IItemHandler
 		// Pet uses the power of spirit.
 		activeOwner.sendPacket(SystemMessageId.YOUR_SERVITOR_USES_SPIRITSHOT); // Epilogue system message shift.
 		activeOwner.getSummon().setChargedShot(isBlessed ? ShotType.BLESSED_SPIRITSHOTS : ShotType.SPIRITSHOTS, true);
-		
 		Broadcast.toSelfAndKnownPlayersInRadius(activeOwner, new MagicSkillUse(activeOwner.getSummon(), activeOwner.getSummon(), skills[0].getSkillId(), skills[0].getSkillLevel(), 0, 0), 600);
 		return true;
 	}

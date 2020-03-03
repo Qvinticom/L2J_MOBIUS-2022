@@ -41,7 +41,6 @@ public class RequestSaveKeyMapping implements IClientIncomingPacket
 	public boolean read(GameClient client, PacketReader packet)
 	{
 		int category = 0;
-		
 		packet.readD(); // Unknown
 		packet.readD(); // Unknown
 		final int _tabNum = packet.readD();

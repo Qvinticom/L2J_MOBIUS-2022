@@ -60,7 +60,6 @@ public class BeautyShopData implements IXmlReader
 		Node att;
 		Race race = null;
 		Sex sex = null;
-		
 		for (Node n = doc.getFirstChild(); n != null; n = n.getNextSibling())
 		{
 			if ("list".equalsIgnoreCase(n.getNodeName()))
@@ -86,7 +85,6 @@ public class BeautyShopData implements IXmlReader
 								}
 								
 								final BeautyData beautyData = new BeautyData();
-								
 								for (Node a = b.getFirstChild(); a != null; a = a.getNextSibling())
 								{
 									if ("hair".equalsIgnoreCase(a.getNodeName()))
@@ -99,7 +97,6 @@ public class BeautyShopData implements IXmlReader
 											set.set(att.getNodeName(), att.getNodeValue());
 										}
 										final BeautyItem hair = new BeautyItem(set);
-										
 										for (Node g = a.getFirstChild(); g != null; g = g.getNextSibling())
 										{
 											if ("color".equalsIgnoreCase(g.getNodeName()))

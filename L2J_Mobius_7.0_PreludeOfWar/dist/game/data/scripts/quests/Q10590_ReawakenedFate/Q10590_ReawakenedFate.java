@@ -81,7 +81,6 @@ public class Q10590_ReawakenedFate extends Quest
 	public String onAdvEvent(String event, Npc npc, PlayerInstance player)
 	{
 		final QuestState qs = getQuestState(player, false);
-		
 		if (qs == null)
 		{
 			return null;
@@ -185,7 +184,6 @@ public class Q10590_ReawakenedFate extends Quest
 	{
 		final QuestState qs = getQuestState(player, true);
 		String htmltext = getNoQuestMsg(player);
-		
 		switch (qs.getState())
 		{
 			case State.CREATED:
@@ -311,7 +309,6 @@ public class Q10590_ReawakenedFate extends Quest
 	public Set<NpcLogListHolder> getNpcLogList(PlayerInstance player)
 	{
 		final QuestState qs = getQuestState(player, false);
-		
 		if ((qs != null) && qs.isCond(2))
 		{
 			final Set<NpcLogListHolder> holder = new HashSet<>();

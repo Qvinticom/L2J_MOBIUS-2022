@@ -231,7 +231,6 @@ public class AttackableAI extends CreatureAI
 			{
 				final byte riftType = player.getParty().getDimensionalRift().getType();
 				final byte riftRoom = player.getParty().getDimensionalRift().getCurrentRoom();
-				
 				if ((me instanceof RiftInvaderInstance) && !DimensionalRiftManager.getInstance().getRoom(riftType, riftRoom).checkIfInZone(me.getX(), me.getY(), me.getZ()))
 				{
 					return false;
@@ -560,7 +559,6 @@ public class AttackableAI extends CreatureAI
 				if ((npc instanceof FestivalMonsterInstance) && target.isPlayer())
 				{
 					final PlayerInstance targetPlayer = (PlayerInstance) target;
-					
 					if (!(targetPlayer.isFestivalParticipant()))
 					{
 						return;
@@ -606,7 +604,6 @@ public class AttackableAI extends CreatureAI
 			{
 				// Get the hate level of the Attackable against this Creature target contained in _aggroList
 				final int aggro = npc.getHating(hated);
-				
 				if ((aggro + _globalAggro) > 0)
 				{
 					// Set the Creature movement type to run and send Server->Client packet ChangeMoveType to all others PlayerInstance
@@ -664,7 +661,6 @@ public class AttackableAI extends CreatureAI
 		{
 			final int offset;
 			final int minRadius = 30;
-			
 			if (npc.isRaidMinion())
 			{
 				offset = 500; // for Raids - need correction
@@ -714,7 +710,6 @@ public class AttackableAI extends CreatureAI
 			int y1 = 0;
 			int z1 = 0;
 			final int range = Config.MAX_DRIFT_RANGE;
-			
 			for (Skill sk : npc.getTemplate().getAISkills(AISkillScope.BUFF))
 			{
 				if (cast(sk))
@@ -726,7 +721,6 @@ public class AttackableAI extends CreatureAI
 			x1 = npc.getSpawn().getX();
 			y1 = npc.getSpawn().getY();
 			z1 = npc.getSpawn().getZ();
-			
 			if (!npc.isInsideRadius2D(x1, y1, 0, range))
 			{
 				npc.setReturningToSpawnPoint(true);
@@ -743,7 +737,6 @@ public class AttackableAI extends CreatureAI
 			
 			// Move the actor to Location (x,y,z) server side AND client side by sending Server->Client packet CharMoveToLocation (broadcast)
 			final Location moveLoc = _actor.isFlying() ? new Location(x1, y1, z1) : GeoEngine.getInstance().canMoveToTargetLoc(npc.getX(), npc.getY(), npc.getZ(), x1, y1, z1, npc.getInstanceId());
-			
 			moveTo(moveLoc.getX(), moveLoc.getY(), moveLoc.getZ());
 		}
 	}
@@ -894,7 +887,6 @@ public class AttackableAI extends CreatureAI
 							{
 								final byte riftType = originalAttackTarget.getParty().getDimensionalRift().getType();
 								final byte riftRoom = originalAttackTarget.getParty().getDimensionalRift().getCurrentRoom();
-								
 								if ((npc instanceof RiftInvaderInstance) && !DimensionalRiftManager.getInstance().getRoom(riftType, riftRoom).checkIfInZone(npc.getX(), npc.getY(), npc.getZ()))
 								{
 									continue;
@@ -922,7 +914,6 @@ public class AttackableAI extends CreatureAI
 		
 		// Initialize data
 		final int combinedCollision = collision + mostHate.getTemplate().getCollisionRadius();
-		
 		final List<Skill> aiSuicideSkills = npc.getTemplate().getAISkills(AISkillScope.SUICIDE);
 		if (!aiSuicideSkills.isEmpty() && ((int) ((npc.getCurrentHp() / npc.getMaxHp()) * 100) < 30))
 		{
@@ -948,7 +939,6 @@ public class AttackableAI extends CreatureAI
 					newX = Rnd.nextBoolean() ? mostHate.getX() + newX : mostHate.getX() - newX;
 					int newY = combinedCollision + Rnd.get(40);
 					newY = Rnd.nextBoolean() ? mostHate.getY() + newY : mostHate.getY() - newY;
-					
 					if (!npc.isInsideRadius2D(newX, newY, 0, collision))
 					{
 						final int newZ = npc.getZ() + 30;
@@ -970,7 +960,6 @@ public class AttackableAI extends CreatureAI
 				int posX = npc.getX();
 				int posY = npc.getY();
 				final int posZ = npc.getZ() + 30;
-				
 				if (originalAttackTarget.getX() < posX)
 				{
 					posX += 300;
@@ -1437,7 +1426,6 @@ public class AttackableAI extends CreatureAI
 			else if (canAOE(sk))
 			{
 				if (((sk.getTargetType() == TargetType.AURA) || (sk.getTargetType() == TargetType.BEHIND_AURA) || (sk.getTargetType() == TargetType.FRONT_AURA)) && GeoEngine.getInstance().canSeeTarget(caster, attackTarget))
-				
 				{
 					clientStopMoving(null);
 					caster.doCast(sk);
@@ -1881,7 +1869,6 @@ public class AttackableAI extends CreatureAI
 				double dist = 0;
 				double dist2 = 0;
 				int range = 0;
-				
 				for (Creature obj : actor.getAttackByList())
 				{
 					if ((obj == null) || obj.isDead() || !GeoEngine.getInstance().canSeeTarget(actor, obj) || (obj == getAttackTarget()))
@@ -2334,7 +2321,6 @@ public class AttackableAI extends CreatureAI
 		if (me.isMonster())
 		{
 			MonsterInstance master = (MonsterInstance) me;
-			
 			if (master.hasMinions())
 			{
 				master.getMinionList().onAssist(me, attacker);
@@ -2386,7 +2372,6 @@ public class AttackableAI extends CreatureAI
 		if (me.isMonster())
 		{
 			MonsterInstance master = (MonsterInstance) me;
-			
 			if (master.hasMinions())
 			{
 				master.getMinionList().onAssist(me, target);

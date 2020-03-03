@@ -54,7 +54,6 @@ public abstract class BaseGameServerRegister
 		boolean force = false;
 		boolean fallback = false;
 		BaseTask task = null;
-		
 		String arg;
 		for (int i = 0; i < args.length; i++)
 		{
@@ -77,7 +76,6 @@ public abstract class BaseGameServerRegister
 				interactive = false;
 				final int id = Integer.parseInt(args[++i]);
 				final String dir = args[++i];
-				
 				task = new RegisterTask(id, dir, force, fallback);
 			}
 			// --unregister <id> : Removes GameServer denoted by <id>
@@ -107,7 +105,6 @@ public abstract class BaseGameServerRegister
 			else if (arg.equals("-h") || arg.equals("--help"))
 			{
 				interactive = false;
-				
 				printHelp();
 			}
 		}
@@ -216,7 +213,6 @@ public abstract class BaseGameServerRegister
 	{
 		try (Connection con = DatabaseFactory.getConnection();
 			PreparedStatement ps = con.prepareStatement("DELETE FROM gameservers WHERE server_id = ?"))
-		
 		{
 			ps.setInt(1, id);
 			ps.executeUpdate();
@@ -372,7 +368,6 @@ public abstract class BaseGameServerRegister
 				if (_id < 0)
 				{
 					final int registeredId = registerFirstAvailable(_outDir);
-					
 					if (registeredId < 0)
 					{
 						System.out.println(_bundle.getString("noFreeId"));
@@ -399,7 +394,6 @@ public abstract class BaseGameServerRegister
 						{
 							System.out.println(_bundle.getString("fallingBack"));
 							final int registeredId = registerFirstAvailable(_outDir);
-							
 							if (registeredId < 0)
 							{
 								System.out.println(_bundle.getString("noFreeId"));
@@ -446,7 +440,6 @@ public abstract class BaseGameServerRegister
 		public UnregisterTask(int id)
 		{
 			_id = id;
-			
 		}
 		
 		@Override

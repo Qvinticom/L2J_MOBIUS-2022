@@ -29,7 +29,6 @@ public class HiddenPlace implements IAffectObjectHandler
 	public boolean checkAffectedObject(Creature creature, Creature target)
 	{
 		// TODO: What is this?
-		
 		return false;
 	}
 	

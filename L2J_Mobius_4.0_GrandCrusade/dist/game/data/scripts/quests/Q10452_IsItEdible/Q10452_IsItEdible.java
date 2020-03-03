@@ -94,7 +94,6 @@ public class Q10452_IsItEdible extends Quest
 	{
 		final QuestState qs = getQuestState(player, true);
 		String htmltext = getNoQuestMsg(player);
-		
 		if (qs.isCreated())
 		{
 			htmltext = "32743-01.htm";

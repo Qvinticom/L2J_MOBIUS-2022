@@ -112,7 +112,6 @@ public class EntrancePortalToCrystalCaverns extends AbstractNpcAI
 		if (event.equals("LOOP_TIMER"))
 		{
 			final int currentTemplateId = getCurrentInstanceTemplateId();
-			
 			World.getInstance().forEachVisibleObjectInRange(npc, PlayerInstance.class, 500, p -> updateTriggersForPlayer(player, currentTemplateId));
 		}
 	}

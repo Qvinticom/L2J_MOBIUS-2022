@@ -50,7 +50,6 @@ public class ChatGeneral implements IChatHandler
 			final StringTokenizer st = new StringTokenizer(text);
 			final IVoicedCommandHandler vch;
 			String command = "";
-			
 			if (st.countTokens() > 1)
 			{
 				command = st.nextToken().substring(1);

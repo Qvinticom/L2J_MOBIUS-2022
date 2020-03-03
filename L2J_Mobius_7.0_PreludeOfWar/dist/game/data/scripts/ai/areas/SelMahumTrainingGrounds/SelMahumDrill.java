@@ -286,7 +286,6 @@ public class SelMahumDrill extends AbstractNpcAI
 		}
 		
 		final int socialActionId = (npc.getVariables().getInt("SOCIAL_ACTION_ALT_BEHAVIOR") == 0) ? action.getSocialActionId() : action.getAltSocialActionId();
-		
 		if (socialActionId < 0)
 		{
 			return;

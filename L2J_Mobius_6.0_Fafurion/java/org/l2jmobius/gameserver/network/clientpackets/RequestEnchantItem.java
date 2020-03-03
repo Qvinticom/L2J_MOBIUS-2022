@@ -202,7 +202,6 @@ public class RequestEnchantItem implements IClientIncomingPacket
 						item.updateDatabase();
 					}
 					client.sendPacket(new EnchantResult(EnchantResult.SUCCESS, item));
-					
 					if (Config.LOG_ITEM_ENCHANTS)
 					{
 						if (item.getEnchantLevel() > 0)
@@ -269,7 +268,6 @@ public class RequestEnchantItem implements IClientIncomingPacket
 						// safe enchant - remain old value
 						client.sendPacket(SystemMessageId.ENCHANT_FAILED_THE_ENCHANT_VALUE_FOR_THE_CORRESPONDING_ITEM_WILL_BE_EXACTLY_RETAINED);
 						client.sendPacket(new EnchantResult(EnchantResult.SAFE_FAIL, item));
-						
 						if (Config.LOG_ITEM_ENCHANTS)
 						{
 							if (item.getEnchantLevel() > 0)
@@ -330,7 +328,6 @@ public class RequestEnchantItem implements IClientIncomingPacket
 							item.setEnchantLevel(0);
 							item.updateDatabase();
 							client.sendPacket(new EnchantResult(EnchantResult.BLESSED_FAIL, 0, 0));
-							
 							if (Config.LOG_ITEM_ENCHANTS)
 							{
 								if (item.getEnchantLevel() > 0)
@@ -370,7 +367,6 @@ public class RequestEnchantItem implements IClientIncomingPacket
 								Util.handleIllegalPlayerAction(player, "Unable to delete item on enchant failure from player " + player.getName() + ", possible cheater !", Config.DEFAULT_PUNISH);
 								player.removeRequest(request.getClass());
 								client.sendPacket(new EnchantResult(EnchantResult.ERROR, 0, 0));
-								
 								if (Config.LOG_ITEM_ENCHANTS)
 								{
 									if (item.getEnchantLevel() > 0)

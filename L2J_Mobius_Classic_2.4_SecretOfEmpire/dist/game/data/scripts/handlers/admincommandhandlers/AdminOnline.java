@@ -50,7 +50,6 @@ public class AdminOnline implements IAdminCommandHandler
 			int notPeace = 0;
 			int instanced = 0;
 			int combat = 0;
-			
 			for (PlayerInstance player : World.getInstance().getPlayers())
 			{
 				final String ip = player.getIPAddress();

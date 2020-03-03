@@ -59,10 +59,8 @@ public class AdminTest implements IAdminCommandHandler
 		else if (command.equals("admin_mcrit"))
 		{
 			final Creature target = (Creature) activeChar.getTarget();
-			
 			BuilderUtil.sendSysMessage(activeChar, "Activechar Mcrit " + activeChar.getMCriticalHit(null, null));
 			BuilderUtil.sendSysMessage(activeChar, "Activechar baseMCritRate " + activeChar.getTemplate().getBaseMCritRate());
-			
 			if (target != null)
 			{
 				BuilderUtil.sendSysMessage(activeChar, "Target Mcrit " + target.getMCriticalHit(null, null));
@@ -75,11 +73,9 @@ public class AdminTest implements IAdminCommandHandler
 			BuilderUtil.sendSysMessage(activeChar, "cast");
 			
 			final Skill skill = SkillTable.getInstance().getInfo(1085, 3);
-			
 			if (target != null)
 			{
 				BuilderUtil.sendSysMessage(activeChar, "target locked");
-				
 				for (int i = 0; i < 100;)
 				{
 					if (activeChar.isCastingNow())
@@ -101,7 +97,6 @@ public class AdminTest implements IAdminCommandHandler
 				st.nextToken();
 				
 				final int id = Integer.parseInt(st.nextToken());
-				
 				adminTestSkill(activeChar, id);
 			}
 			catch (NumberFormatException | NoSuchElementException e)
@@ -153,7 +148,6 @@ public class AdminTest implements IAdminCommandHandler
 	{
 		Creature creature;
 		final WorldObject target = activeChar.getTarget();
-		
 		if (!(target instanceof Creature))
 		{
 			creature = activeChar;
@@ -164,7 +158,6 @@ public class AdminTest implements IAdminCommandHandler
 		}
 		
 		creature.broadcastPacket(new MagicSkillUse(activeChar, creature, id, 1, 1, 1));
-		
 	}
 	
 	@Override

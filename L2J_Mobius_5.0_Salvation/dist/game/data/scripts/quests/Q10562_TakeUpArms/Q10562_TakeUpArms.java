@@ -58,7 +58,6 @@ public class Q10562_TakeUpArms extends Quest
 	public String onAdvEvent(String event, Npc npc, PlayerInstance player)
 	{
 		final QuestState qs = getQuestState(player, false);
-		
 		if (qs == null)
 		{
 			return null;
@@ -107,7 +106,6 @@ public class Q10562_TakeUpArms extends Quest
 	{
 		final QuestState qs = getQuestState(player, true);
 		String htmltext = getNoQuestMsg(player);
-		
 		switch (qs.getState())
 		{
 			case State.CREATED:

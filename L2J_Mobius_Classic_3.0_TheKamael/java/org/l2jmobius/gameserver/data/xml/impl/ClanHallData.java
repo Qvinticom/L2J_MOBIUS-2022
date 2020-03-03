@@ -67,7 +67,6 @@ public class ClanHallData implements IXmlReader
 		final List<Integer> npcs = new ArrayList<>();
 		final List<ClanHallTeleportHolder> teleports = new ArrayList<>();
 		final StatSet params = new StatSet();
-		
 		for (Node listNode = doc.getFirstChild(); listNode != null; listNode = listNode.getNextSibling())
 		{
 			if ("list".equals(listNode.getNodeName()))
@@ -80,7 +79,6 @@ public class ClanHallData implements IXmlReader
 						params.set("name", parseString(clanHallNode.getAttributes(), "name", "None"));
 						params.set("grade", parseEnum(clanHallNode.getAttributes(), ClanHallGrade.class, "grade", ClanHallGrade.GRADE_NONE));
 						params.set("type", parseEnum(clanHallNode.getAttributes(), ClanHallType.class, "type", ClanHallType.OTHER));
-						
 						for (Node tpNode = clanHallNode.getFirstChild(); tpNode != null; tpNode = tpNode.getNextSibling())
 						{
 							switch (tpNode.getNodeName())

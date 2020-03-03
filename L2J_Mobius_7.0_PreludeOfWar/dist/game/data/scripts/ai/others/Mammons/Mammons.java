@@ -87,7 +87,6 @@ public class Mammons extends AbstractNpcAI
 	public String onAdvEvent(String event, Npc npc, PlayerInstance player)
 	{
 		String htmltext = null;
-		
 		switch (event)
 		{
 			case "31126.html":
@@ -99,7 +98,6 @@ public class Mammons extends AbstractNpcAI
 			case "31126-06.html":
 			case "33739-01.html":
 			case "33739-02.html":
-			
 			{
 				htmltext = event;
 				break;
@@ -116,11 +114,9 @@ public class Mammons extends AbstractNpcAI
 				final Npc merchant = addSpawn(MAMMONS[1], MERCHANT_LOC[town]);
 				final Npc priest = addSpawn(MAMMONS[2], PRIEST_LOC[town]);
 				_mammons.addAll(Arrays.asList(blacksmith, merchant, priest));
-				
 				if (blacksmith != null)
 				{
 					blacksmith.broadcastSay(ChatType.NPC_GENERAL, getRandomEntry(RANDOM_SAY));
-					
 					if (Config.ANNOUNCE_MAMMON_SPAWN)
 					{
 						Broadcast.toAllOnlinePlayers("Mammon's has been spawned in Town of " + blacksmith.getCastle().getName() + ".", false);

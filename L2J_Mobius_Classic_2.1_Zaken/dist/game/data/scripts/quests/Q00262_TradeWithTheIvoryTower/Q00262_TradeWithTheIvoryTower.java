@@ -100,7 +100,6 @@ public class Q00262_TradeWithTheIvoryTower extends Quest
 	{
 		final QuestState qs = getQuestState(player, true);
 		String htmltext = getNoQuestMsg(player);
-		
 		switch (qs.getState())
 		{
 			case State.CREATED:

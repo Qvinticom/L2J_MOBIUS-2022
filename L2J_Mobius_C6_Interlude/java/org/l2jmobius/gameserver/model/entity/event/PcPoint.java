@@ -46,11 +46,9 @@ public class PcPoint implements Runnable
 			if (player.isOnline() && (player.getLevel() > Config.PCB_MIN_LEVEL) && !player.isInOfflineMode())
 			{
 				score = Rnd.get(Config.PCB_POINT_MIN, Config.PCB_POINT_MAX);
-				
 				if (Rnd.get(100) <= Config.PCB_CHANCE_DUAL_POINT)
 				{
 					score *= 2;
-					
 					player.addPcBangScore(score);
 					
 					final SystemMessage sm = new SystemMessage(SystemMessageId.DOUBLE_POINTS_YOU_ACQUIRED_S1_PC_BANG_POINT);

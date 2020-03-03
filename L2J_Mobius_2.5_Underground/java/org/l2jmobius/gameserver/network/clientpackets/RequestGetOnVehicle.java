@@ -74,7 +74,6 @@ public class RequestGetOnVehicle implements IClientIncomingPacket
 		player.setInVehiclePosition(_pos);
 		player.setVehicle(boat);
 		player.broadcastPacket(new GetOnVehicle(player.getObjectId(), boat.getObjectId(), _pos));
-		
 		player.setXYZ(boat.getX(), boat.getY(), boat.getZ());
 		player.setInsideZone(ZoneId.PEACE, true);
 		player.revalidateZone(true);

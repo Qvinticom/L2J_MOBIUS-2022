@@ -58,10 +58,8 @@ public class SkillList extends GameServerPacket
 		else
 		{
 			final Skill[] ns = new Skill[_skills.length + 1];
-			
 			boolean added = false;
 			int i = 0;
-			
 			for (Skill s : _skills)
 			{
 				if ((sk.id < s.id) && !added)

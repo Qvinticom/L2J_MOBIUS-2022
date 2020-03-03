@@ -40,7 +40,6 @@ public class PlayerTracert extends BaseRecievePacket
 		final String hop2 = readS();
 		final String hop3 = readS();
 		final String hop4 = readS();
-		
 		LoginController.getInstance().setAccountLastTracert(account, pcIp, hop1, hop2, hop3, hop4);
 	}
 }

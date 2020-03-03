@@ -100,7 +100,6 @@ public class Q273_InvadersOfTheHolyLand extends Quest
 			case State.STARTED:
 				final int red = st.getQuestItemsCount(RED_SOULSTONE);
 				final int black = st.getQuestItemsCount(BLACK_SOULSTONE);
-				
 				if ((red + black) == 0)
 				{
 					htmltext = "30566-04.htm";
@@ -117,11 +116,9 @@ public class Q273_InvadersOfTheHolyLand extends Quest
 					}
 					
 					final int reward = (black * 3) + (red * 10) + ((black >= 10) ? ((red >= 1) ? 1800 : 1500) : 0);
-					
 					st.takeItems(BLACK_SOULSTONE, -1);
 					st.takeItems(RED_SOULSTONE, -1);
 					st.rewardItems(57, reward);
-					
 					if (player.isNewbie() && (st.getInt("Reward") == 0))
 					{
 						st.giveItems(SOULSHOT_FOR_BEGINNERS, 6000);
@@ -145,7 +142,6 @@ public class Q273_InvadersOfTheHolyLand extends Quest
 		}
 		
 		final int npcId = npc.getNpcId();
-		
 		int probability = 77;
 		if (npcId == 20311)
 		{

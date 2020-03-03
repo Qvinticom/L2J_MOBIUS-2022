@@ -75,7 +75,6 @@ public class AlchemyData implements IXmlReader
 						}
 						
 						final AlchemyCraftData alchemyCraft = new AlchemyCraftData(set);
-						
 						for (Node c = d.getFirstChild(); c != null; c = c.getNextSibling())
 						{
 							if ("ingredients".equalsIgnoreCase(c.getNodeName()))
@@ -99,7 +98,6 @@ public class AlchemyData implements IXmlReader
 										final String type = b.getAttributes().getNamedItem("type").getNodeValue();
 										final int prodId = Integer.parseInt(b.getAttributes().getNamedItem("id").getNodeValue());
 										final int prodCount = Integer.parseInt(b.getAttributes().getNamedItem("count").getNodeValue());
-										
 										if (type.equalsIgnoreCase("ON_SUCCESS"))
 										{
 											alchemyCraft.setProductionSuccess(new ItemHolder(prodId, prodCount));

@@ -214,7 +214,6 @@ public class ServitorInstance extends Summon implements Runnable
 		}
 		
 		final Skill skillToCast = SkillData.getInstance().getSkill(skill.getId(), skillLevel);
-		
 		if (skillToCast != null)
 		{
 			super.doCast(skillToCast);
@@ -408,7 +407,6 @@ public class ServitorInstance extends Summon implements Runnable
 						while (rset.next())
 						{
 							final int effectCurTime = rset.getInt("remaining_time");
-							
 							final Skill skill = SkillData.getInstance().getSkill(rset.getInt("skill_id"), rset.getInt("skill_level"));
 							if (skill == null)
 							{
@@ -534,7 +532,6 @@ public class ServitorInstance extends Summon implements Runnable
 	{
 		final int usedtime = 5000;
 		_lifeTimeRemaining -= usedtime;
-		
 		if (isDead() || !isSpawned())
 		{
 			if (_summonLifeTask != null)

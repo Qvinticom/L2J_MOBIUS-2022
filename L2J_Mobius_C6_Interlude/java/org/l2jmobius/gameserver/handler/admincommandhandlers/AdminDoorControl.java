@@ -56,15 +56,12 @@ public class AdminDoorControl implements IAdminCommandHandler
 	public boolean useAdminCommand(String command, PlayerInstance activeChar)
 	{
 		final DoorData doorTable = DoorData.getInstance();
-		
 		WorldObject target2 = null;
-		
 		if (command.startsWith("admin_close "))
 		{
 			try
 			{
 				final int doorId = Integer.parseInt(command.substring(12));
-				
 				if (doorTable.getDoor(doorId) != null)
 				{
 					doorTable.getDoor(doorId).closeMe();
@@ -89,7 +86,6 @@ public class AdminDoorControl implements IAdminCommandHandler
 		else if (command.equals("admin_close"))
 		{
 			target2 = activeChar.getTarget();
-			
 			if (target2 instanceof DoorInstance)
 			{
 				((DoorInstance) target2).closeMe();
@@ -104,7 +100,6 @@ public class AdminDoorControl implements IAdminCommandHandler
 			try
 			{
 				final int doorId = Integer.parseInt(command.substring(11));
-				
 				if (doorTable.getDoor(doorId) != null)
 				{
 					doorTable.getDoor(doorId).openMe();
@@ -129,7 +124,6 @@ public class AdminDoorControl implements IAdminCommandHandler
 		else if (command.equals("admin_open"))
 		{
 			target2 = activeChar.getTarget();
-			
 			if (target2 instanceof DoorInstance)
 			{
 				((DoorInstance) target2).openMe();

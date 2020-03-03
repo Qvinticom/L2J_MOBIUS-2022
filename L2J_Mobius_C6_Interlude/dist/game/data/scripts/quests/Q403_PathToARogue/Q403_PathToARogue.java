@@ -232,11 +232,9 @@ public class Q403_PathToARogue extends Quest
 				if (st.getInt("cond") == 5)
 				{
 					final int randomItem = Rnd.get(STOLEN_JEWELRY, STOLEN_NECKLACE);
-					
 					if (!st.hasQuestItems(randomItem))
 					{
 						st.giveItems(randomItem, 1);
-						
 						if (st.hasQuestItems(STOLEN_JEWELRY, STOLEN_TOMES, STOLEN_RING, STOLEN_NECKLACE))
 						{
 							st.set("cond", "6");

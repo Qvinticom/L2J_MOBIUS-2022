@@ -259,7 +259,6 @@ public class Q10289_FadeToBlack extends Quest
 				final Party party = qs.getPlayer().getParty();
 				final int rnd = getRandom(party.getMemberCount());
 				int idx = 0;
-				
 				for (PlayerInstance member : party.getMembers())
 				{
 					// only one lucky player will get the good item, the rest will get the bad one
@@ -287,7 +286,6 @@ public class Q10289_FadeToBlack extends Quest
 	{
 		final QuestState qs = getQuestState(player, true);
 		String htmltext = getNoQuestMsg(player);
-		
 		if (qs.isCreated())
 		{
 			final QuestState q10288 = player.getQuestState(Q10288_SecretMission.class.getSimpleName());

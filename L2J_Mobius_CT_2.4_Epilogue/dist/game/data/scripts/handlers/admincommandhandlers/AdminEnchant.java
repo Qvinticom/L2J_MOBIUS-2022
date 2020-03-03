@@ -66,7 +66,6 @@ public class AdminEnchant implements IAdminCommandHandler
 		else
 		{
 			int armorType = -1;
-			
 			if (command.startsWith("admin_seteh"))
 			{
 				armorType = Inventory.PAPERDOLL_HEAD;

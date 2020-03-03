@@ -139,11 +139,9 @@ public class Nursery extends AbstractInstance
 	{
 		final Instance instance = npc.getInstanceWorld();
 		String htmltext = null;
-		
 		if (isInInstance(instance))
 		{
 			final StatSet npcVars = npc.getVariables();
-			
 			final int gameStage = npcVars.getInt("GAME_STAGE", 0);
 			switch (gameStage)
 			{
@@ -166,7 +164,6 @@ public class Nursery extends AbstractInstance
 			
 			final BuffInfo energyInfo = player.getEffectList().getFirstBuffInfoByAbnormalType(ENERGY_SKILL_1.getSkill().getAbnormalType());
 			final int energyLv = energyInfo == null ? 0 : energyInfo.getSkill().getAbnormalLvl();
-			
 			if ((energyLv > 0) && (gameStage == 1))
 			{
 				int addPoints = 0;
@@ -185,7 +182,6 @@ public class Nursery extends AbstractInstance
 				
 				npcVars.set("GAME_POINTS", npcVars.getInt("GAME_POINTS", 0) + addPoints);
 				showOnScreenMsg(instance, NpcStringId.SOLDIER_TIE_ABSORBED_REPRODUCTIVE_ENERGY_FROM_YOUR_BODY_AND_CONVERTED_S1_PIECES_OF_BIO_ENERGY, ExShowScreenMessage.TOP_CENTER, 3000, String.valueOf(addPoints));
-				
 				player.getEffectList().stopSkillEffects(true, ENERGY_SKILL_1.getSkill());
 				player.getEffectList().stopSkillEffects(true, ENERGY_SKILL_2.getSkill());
 				player.getEffectList().stopSkillEffects(true, ENERGY_SKILL_3.getSkill());
@@ -361,7 +357,6 @@ public class Nursery extends AbstractInstance
 			if ((getRandom(10) + 1) < 10)
 			{
 				int pointsCount = getRandom(6) + 3;
-				
 				if (killer.isInCategory(CategoryType.SIXTH_SIGEL_GROUP) || killer.isInCategory(CategoryType.SIXTH_EOLH_GROUP))
 				{
 					pointsCount += 6;
@@ -409,7 +404,6 @@ public class Nursery extends AbstractInstance
 				final StatSet managerVars = gameManager.getVariables();
 				final StatSet npcVars = npc.getVariables();
 				final int gamePoints = managerVars.getInt("GAME_POINTS", 0);
-				
 				if (gamePoints > 0)
 				{
 					int decreasePoints = 0;
@@ -426,7 +420,6 @@ public class Nursery extends AbstractInstance
 					showOnScreenMsg(instance, NpcStringId.MAGUEN_STOLE_S1_PIECES_OF_BIO_ENERGY_RESIDUE, ExShowScreenMessage.MIDDLE_CENTER, 4000, String.valueOf(decreasePoints));
 					npcVars.set("MAGUEN_STOLEN_COUNT", decreasePoints);
 					npcVars.set("MAGUEN_STATUS", 1);
-					
 					if (decreasePoints > 50)
 					{
 						if (getRandom(100) < 20)

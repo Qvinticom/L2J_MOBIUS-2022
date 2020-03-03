@@ -189,7 +189,6 @@ public class Q00643_RiseAndFallOfTheElrokiTribe extends Quest
 		}
 		
 		final int npcId = npc.getId();
-		
 		if (CommonUtil.contains(MOBS1, npcId))
 		{
 			final float chance = CHANCE_MOBS1 * Config.RATE_QUEST_DROP;
@@ -223,7 +222,6 @@ public class Q00643_RiseAndFallOfTheElrokiTribe extends Quest
 	{
 		final QuestState qs = getQuestState(player, true);
 		String htmltext = getNoQuestMsg(player);
-		
 		switch (qs.getState())
 		{
 			case State.CREATED:

@@ -52,12 +52,9 @@ public class Memusage implements ITelnetCommand
 		// unused memory in the allocation pool
 		final double used = allocated - cached; // really used memory
 		final double useable = max - used; // allocated, but non-used and non-allocated memory
-		
 		final StringBuilder sb = new StringBuilder();
-		
 		final DecimalFormat df = new DecimalFormat(" (0.0000'%')");
 		final DecimalFormat df2 = new DecimalFormat(" # 'KB'");
-		
 		sb.append("+----" + Config.EOL); // ...
 		sb.append("| Allowed Memory:" + df2.format(max) + Config.EOL);
 		sb.append("|    |= Allocated Memory:" + df2.format(allocated) + df.format((allocated / max) * 100) + Config.EOL);

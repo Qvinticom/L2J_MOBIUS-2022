@@ -44,10 +44,8 @@ public class ArmorSet
 		_gloves = gloves;
 		_feet = feet;
 		_skillId = skillId;
-		
 		_shield = shield;
 		_shieldSkillId = shieldSkillId;
-		
 		_enchant6Skill = enchant6skill;
 	}
 	
@@ -59,17 +57,14 @@ public class ArmorSet
 	public boolean containAll(PlayerInstance player)
 	{
 		final Inventory inv = player.getInventory();
-		
 		final ItemInstance legsItem = inv.getPaperdollItem(Inventory.PAPERDOLL_LEGS);
 		final ItemInstance headItem = inv.getPaperdollItem(Inventory.PAPERDOLL_HEAD);
 		final ItemInstance glovesItem = inv.getPaperdollItem(Inventory.PAPERDOLL_GLOVES);
 		final ItemInstance feetItem = inv.getPaperdollItem(Inventory.PAPERDOLL_FEET);
-		
 		int legs = 0;
 		int head = 0;
 		int gloves = 0;
 		int feet = 0;
-		
 		if (legsItem != null)
 		{
 			legs = legsItem.getItemId();
@@ -86,7 +81,6 @@ public class ArmorSet
 		{
 			feet = feetItem.getItemId();
 		}
-		
 		return containAll(_chest, legs, head, gloves, feet);
 	}
 	
@@ -112,7 +106,6 @@ public class ArmorSet
 		{
 			return false;
 		}
-		
 		return true;
 	}
 	
@@ -155,14 +148,11 @@ public class ArmorSet
 	public boolean containShield(PlayerInstance player)
 	{
 		final Inventory inv = player.getInventory();
-		
 		final ItemInstance shieldItem = inv.getPaperdollItem(Inventory.PAPERDOLL_LHAND);
-		
 		if ((shieldItem != null) && (shieldItem.getItemId() == _shield))
 		{
 			return true;
 		}
-		
 		return false;
 	}
 	
@@ -172,7 +162,6 @@ public class ArmorSet
 		{
 			return false;
 		}
-		
 		return _shield == shieldId;
 	}
 	
@@ -200,13 +189,11 @@ public class ArmorSet
 		}
 		
 		final Inventory inv = player.getInventory();
-		
 		final ItemInstance chestItem = inv.getPaperdollItem(Inventory.PAPERDOLL_CHEST);
 		final ItemInstance legsItem = inv.getPaperdollItem(Inventory.PAPERDOLL_LEGS);
 		final ItemInstance headItem = inv.getPaperdollItem(Inventory.PAPERDOLL_HEAD);
 		final ItemInstance glovesItem = inv.getPaperdollItem(Inventory.PAPERDOLL_GLOVES);
 		final ItemInstance feetItem = inv.getPaperdollItem(Inventory.PAPERDOLL_FEET);
-		
 		if (chestItem.getEnchantLevel() < 6)
 		{
 			return false;

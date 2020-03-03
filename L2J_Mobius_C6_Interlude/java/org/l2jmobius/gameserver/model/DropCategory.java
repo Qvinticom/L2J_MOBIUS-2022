@@ -114,7 +114,6 @@ public class DropCategory
 		for (DropData drop : drops)
 		{
 			sum += drop.getChance();
-			
 			if (sum > randomIndex) // drop this item and exit the function
 			{
 				drops.clear();
@@ -143,7 +142,6 @@ public class DropCategory
 		for (DropData drop : _drops)
 		{
 			sum += Math.min((drop.getChance() * (raid ? 1 : Config.RATE_DROP_ITEMS)), DropData.MAX_CHANCE);
-			
 			if (sum >= randomIndex)
 			{
 				return drop;

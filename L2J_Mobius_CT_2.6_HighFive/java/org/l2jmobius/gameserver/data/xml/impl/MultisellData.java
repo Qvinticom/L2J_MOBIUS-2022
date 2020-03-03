@@ -84,14 +84,12 @@ public class MultisellData implements IXmlReader
 			int entryId = 1;
 			Node att;
 			final ListContainer list = new ListContainer(id);
-			
 			for (Node n = doc.getFirstChild(); n != null; n = n.getNextSibling())
 			{
 				if ("list".equalsIgnoreCase(n.getNodeName()))
 				{
 					att = n.getAttributes().getNamedItem("applyTaxes");
 					list.setApplyTaxes((att != null) && Boolean.parseBoolean(att.getNodeValue()));
-					
 					att = n.getAttributes().getNamedItem("useRate");
 					if (att != null)
 					{
@@ -123,7 +121,6 @@ public class MultisellData implements IXmlReader
 					
 					att = n.getAttributes().getNamedItem("maintainEnchantment");
 					list.setMaintainEnchantment((att != null) && Boolean.parseBoolean(att.getNodeValue()));
-					
 					for (Node d = n.getFirstChild(); d != null; d = d.getNextSibling())
 					{
 						if ("item".equalsIgnoreCase(d.getNodeName()))
@@ -162,11 +159,9 @@ public class MultisellData implements IXmlReader
 	{
 		final Node first = n.getFirstChild();
 		final Entry entry = new Entry(entryId);
-		
 		NamedNodeMap attrs;
 		Node att;
 		StatSet set;
-		
 		for (n = first; n != null; n = n.getNextSibling())
 		{
 			if ("ingredient".equalsIgnoreCase(n.getNodeName()))
@@ -192,7 +187,6 @@ public class MultisellData implements IXmlReader
 				entry.addProduct(new Ingredient(set));
 			}
 		}
-		
 		return entry;
 	}
 	
@@ -272,7 +266,6 @@ public class MultisellData implements IXmlReader
 			index += PAGE_SIZE;
 		}
 		while (index < list.getEntries().size());
-		
 		player.setMultiSell(list);
 	}
 	
@@ -366,7 +359,6 @@ public class MultisellData implements IXmlReader
 		while (iter.hasNext())
 		{
 			list = iter.next();
-			
 			for (Entry ent : list.getEntries())
 			{
 				for (Ingredient ing : ent.getIngredients())

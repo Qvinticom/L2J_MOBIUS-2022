@@ -50,7 +50,6 @@ public class RequestPackageSend extends GameClientPacket
 	{
 		_objectID = readD();
 		_count = readD();
-		
 		if ((_count < 0) || (_count > 500))
 		{
 			_count = -1;
@@ -74,7 +73,6 @@ public class RequestPackageSend extends GameClientPacket
 		}
 		
 		final PlayerInstance player = getClient().getPlayer();
-		
 		if (player == null)
 		{
 			return;
@@ -86,7 +84,6 @@ public class RequestPackageSend extends GameClientPacket
 		}
 		
 		final PlayerInstance target = PlayerInstance.load(_objectID);
-		
 		if (player.getAccountChars().size() < 1)
 		{
 			return;
@@ -111,14 +108,12 @@ public class RequestPackageSend extends GameClientPacket
 		player.setActiveWarehouse(freight);
 		target.deleteMe();
 		final ItemContainer warehouse = player.getActiveWarehouse();
-		
 		if (warehouse == null)
 		{
 			return;
 		}
 		
 		final FolkInstance manager = player.getLastFolkNPC();
-		
 		if (((manager == null) || !player.isInsideRadius(manager, NpcInstance.INTERACTION_DISTANCE, false, false)) && !player.isGM())
 		{
 			return;
@@ -141,7 +136,6 @@ public class RequestPackageSend extends GameClientPacket
 		final int fee = _count * Config.ALT_GAME_FREIGHT_PRICE;
 		int currentAdena = player.getAdena();
 		int slots = 0;
-		
 		for (Item i : _items)
 		{
 			final int objectId = i.id;
@@ -215,7 +209,6 @@ public class RequestPackageSend extends GameClientPacket
 			}
 			
 			final ItemInstance oldItem = player.getInventory().getItemByObjectId(objectId);
-			
 			if (oldItem == null)
 			{
 				LOGGER.warning("Error depositing a warehouse object for char " + player.getName() + " (olditem == null)");
@@ -223,14 +216,12 @@ public class RequestPackageSend extends GameClientPacket
 			}
 			
 			final int itemId = oldItem.getItemId();
-			
 			if (((itemId >= 6611) && (itemId <= 6621)) || (itemId == 6842))
 			{
 				continue;
 			}
 			
 			final ItemInstance newItem = player.getInventory().transferItem("Warehouse", objectId, count, warehouse, player, player.getLastFolkNPC());
-			
 			if (newItem == null)
 			{
 				LOGGER.warning("Error depositing a warehouse object for char " + player.getName() + " (newitem == null)");

@@ -85,7 +85,6 @@ public class Q00151_CureForFever extends Quest
 	{
 		final QuestState qs = getQuestState(player, true);
 		String htmltext = getNoQuestMsg(player);
-		
 		switch (npc.getId())
 		{
 			case ELLIAS:

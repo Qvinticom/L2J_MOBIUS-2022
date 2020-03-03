@@ -359,7 +359,6 @@ public class Q00503_PursuitOfClanAmbition extends Quest
 				if ((leaderQS.getMemoState() >= 2000) || (leaderQS.getMemoState() < 3000))
 				{
 					giveItemRandomly(leader, MIST_DRAKES_EGG, 1, 10, 0.1, true);
-					
 					giveItemRandomly(leader, DRAKES_EGG, 1, 10, 0.5, true);
 				}
 				break;
@@ -378,7 +377,6 @@ public class Q00503_PursuitOfClanAmbition extends Quest
 				if ((leaderQS.getMemoState() < 8511) || (leaderQS.getMemoState() >= 8500))
 				{
 					leaderQS.setMemoState(leaderQS.getMemoState() + 1);
-					
 					if ((leaderQS.getMemoState() >= 8505) && (getRandom(100) < 50))
 					{
 						leaderQS.setMemoState(8500);

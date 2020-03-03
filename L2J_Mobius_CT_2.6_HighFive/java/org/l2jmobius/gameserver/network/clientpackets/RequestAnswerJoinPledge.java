@@ -80,7 +80,6 @@ public class RequestAnswerJoinPledge implements IClientIncomingPacket
 			if (clan.checkClanJoinCondition(requestor, player, requestPacket.getPledgeType()))
 			{
 				player.sendPacket(new JoinPledge(requestor.getClanId()));
-				
 				player.setPledgeType(requestPacket.getPledgeType());
 				if (requestPacket.getPledgeType() == Clan.SUBUNIT_ACADEMY)
 				{

@@ -58,7 +58,6 @@ public class Q00147_PathtoBecominganEliteMercenary extends Quest
 	{
 		final String htmltext = event;
 		final QuestState qs = getQuestState(player, false);
-		
 		if (qs == null)
 		{
 			return htmltext;
@@ -84,7 +83,6 @@ public class Q00147_PathtoBecominganEliteMercenary extends Quest
 	{
 		final QuestState qs = getQuestState(player, true);
 		String htmltext = getNoQuestMsg(player);
-		
 		switch (qs.getState())
 		{
 			case State.CREATED:

@@ -61,7 +61,6 @@ public class AdminReload implements IAdminCommandHandler
 			try
 			{
 				final String type = st.nextToken();
-				
 				if (type.equals("multisell"))
 				{
 					Multisell.getInstance().reload();

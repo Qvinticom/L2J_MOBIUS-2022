@@ -65,13 +65,10 @@ public class Blink extends AbstractEffect
 		final double course = Math.toRadians(info.getSkill().getFlyCourse());
 		final int x1 = (int) (Math.cos(Math.PI + radian + course) * radius);
 		final int y1 = (int) (Math.sin(Math.PI + radian + course) * radius);
-		
 		final int x = effected.getX() + x1;
 		final int y = effected.getY() + y1;
 		final int z = effected.getZ();
-		
 		final Location destination = GeoEngine.getInstance().canMoveToTargetLoc(effected.getX(), effected.getY(), effected.getZ(), x, y, z, effected.getInstanceId());
-		
 		effected.getAI().setIntention(CtrlIntention.AI_INTENTION_IDLE);
 		effected.broadcastPacket(new FlyToLocation(effected, destination, FlyType.DUMMY));
 		effected.abortAttack();

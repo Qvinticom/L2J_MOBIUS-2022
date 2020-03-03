@@ -116,7 +116,6 @@ public class SummonNpc extends AbstractEffect
 				int x = player.getX();
 				int y = player.getY();
 				int z = player.getZ();
-				
 				if (info.getSkill().getTargetType() == TargetType.GROUND)
 				{
 					final Location wordPosition = player.getActingPlayer().getCurrentSkillWorldPosition();

@@ -47,7 +47,6 @@ public class Q10774_LettersFromTheQueenCrumaTowerPart2 extends LetterQuest
 	{
 		super(10774);
 		addTalkId(SYLVAIN, ROMBEL);
-		
 		setIsErtheiaQuest(true);
 		setLevel(MIN_LEVEL, MAX_LEVEL);
 		setStartLocation(SOE_DION_TOWN, TELEPORT_LOC);

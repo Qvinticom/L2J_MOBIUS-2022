@@ -37,9 +37,7 @@ public class Util
 	public static String printData(byte[] data, int len)
 	{
 		final StringBuilder result = new StringBuilder();
-		
 		int counter = 0;
-		
 		for (int i = 0; i < len; i++)
 		{
 			if ((counter % 16) == 0)
@@ -52,7 +50,6 @@ public class Util
 			if (counter == 16)
 			{
 				result.append("   ");
-				
 				int charpoint = i - 15;
 				for (int a = 0; a < 16; a++)
 				{
@@ -103,12 +100,10 @@ public class Util
 	public static String fillHex(int data, int digits)
 	{
 		String number = Integer.toHexString(data);
-		
 		for (int i = number.length(); i < digits; i++)
 		{
 			number = "0" + number;
 		}
-		
 		return number;
 	}
 	

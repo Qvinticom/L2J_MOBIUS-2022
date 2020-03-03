@@ -45,7 +45,6 @@ public class Cerenas extends AbstractNpcAI
 	{
 		final QuestState qs = player.getQuestState(Q10369_NoblesseSoulTesting.class.getSimpleName());
 		String htmltext = null;
-		
 		if (event.equals("tiara"))
 		{
 			if ((qs != null) && qs.isCompleted())

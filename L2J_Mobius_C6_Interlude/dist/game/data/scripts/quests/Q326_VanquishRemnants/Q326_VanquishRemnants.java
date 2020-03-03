@@ -89,16 +89,13 @@ public class Q326_VanquishRemnants extends Quest
 				final int redBadges = st.getQuestItemsCount(RED_CROSS_BADGE);
 				final int blueBadges = st.getQuestItemsCount(BLUE_CROSS_BADGE);
 				final int blackBadges = st.getQuestItemsCount(BLACK_CROSS_BADGE);
-				
 				final int badgesSum = redBadges + blueBadges + blackBadges;
-				
 				if (badgesSum > 0)
 				{
 					st.takeItems(RED_CROSS_BADGE, -1);
 					st.takeItems(BLUE_CROSS_BADGE, -1);
 					st.takeItems(BLACK_CROSS_BADGE, -1);
 					st.rewardItems(57, ((redBadges * 46) + (blueBadges * 52) + (blackBadges * 58) + ((badgesSum >= 10) ? 4320 : 0)));
-					
 					if (badgesSum >= 100)
 					{
 						if (!st.hasQuestItems(BLACK_LION_MARK))

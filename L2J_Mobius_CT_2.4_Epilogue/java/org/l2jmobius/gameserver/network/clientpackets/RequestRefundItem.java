@@ -122,7 +122,6 @@ public class RequestRefundItem implements IClientIncomingPacket
 		
 		final ItemInstance[] refund = player.getRefund().getItems().toArray(new ItemInstance[0]);
 		final int[] objectIds = new int[_items.length];
-		
 		for (int i = 0; i < _items.length; i++)
 		{
 			final int idx = _items[i];

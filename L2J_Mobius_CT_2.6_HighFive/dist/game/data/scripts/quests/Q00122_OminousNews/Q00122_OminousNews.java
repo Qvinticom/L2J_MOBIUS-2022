@@ -72,7 +72,6 @@ public class Q00122_OminousNews extends Quest
 	{
 		final QuestState qs = getQuestState(player, true);
 		String htmltext = getNoQuestMsg(player);
-		
 		switch (npc.getId())
 		{
 			case MOIRA:

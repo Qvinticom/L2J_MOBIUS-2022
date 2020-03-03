@@ -61,7 +61,6 @@ public class ImprovedBabyPets extends AbstractNpcAI
 		if (player != null)
 		{
 			final Summon summon = player.getPet();
-			
 			if (summon == null)
 			{
 				cancelQuestTimer("HEAL", null, player);
@@ -73,11 +72,9 @@ public class ImprovedBabyPets extends AbstractNpcAI
 				final double mpPer = (player.getCurrentMp() / player.getMaxMp()) * 100;
 				final int healType = summon.getTemplate().getParameters().getInt("heal_type", 0);
 				final int skillLv = (int) Math.floor((summon.getLevel() / 5) - 11);
-				
 				if (healType == 1)
 				{
 					final int stepLv = CommonUtil.constrain(skillLv, 0, 3);
-					
 					if ((hpPer >= 30) && (hpPer < 70))
 					{
 						castHeal(summon, stepLv, 1);
@@ -102,7 +99,6 @@ public class ImprovedBabyPets extends AbstractNpcAI
 			else if (event.equals("BUFF") && !summon.isAffectedBySkill(PET_CONTROL) && !summon.isHungry())
 			{
 				final int buffStep = (int) CommonUtil.constrain(Math.floor((summon.getLevel() / 5) - 11), 0, 3);
-				
 				for (int i = 1; i <= (2 * (1 + buffStep)); i++)
 				{
 					if (castBuff(summon, buffStep, i))
@@ -135,13 +131,11 @@ public class ImprovedBabyPets extends AbstractNpcAI
 		final PlayerInstance owner = summon.getOwner();
 		final StatSet parameters = summon.getTemplate().getParameters();
 		final SkillHolder skill = parameters.getObject("step" + stepNumber + "_buff0" + buffNumber, SkillHolder.class);
-		
 		if ((skill != null) && (owner != null))
 		{
 			final boolean previousFollowStatus = summon.getFollowStatus();
 			final SkillHolder mergedSkill = parameters.getObject("step" + stepNumber + "_merged_buff0" + buffNumber, SkillHolder.class);
 			final int targetType = parameters.getInt("step" + stepNumber + "_buff_target0" + buffNumber, 0);
-			
 			if (!owner.hasAbnormalType(skill.getSkill().getAbnormalType()) && SkillCaster.checkUseConditions(summon, skill.getSkill()) && !owner.isDead())
 			{
 				if (mergedSkill != null)
@@ -161,7 +155,6 @@ public class ImprovedBabyPets extends AbstractNpcAI
 				{
 					summon.getAI().setIntention(CtrlIntention.AI_INTENTION_CAST, skill.getSkill(), (targetType == 1) ? summon : owner);
 					summon.sendPacket(new SystemMessage(SystemMessageId.YOUR_PET_USES_S1).addSkillName(skill.getSkill()));
-					
 					if (previousFollowStatus != summon.getFollowStatus())
 					{
 						summon.setFollowStatus(previousFollowStatus);
@@ -180,7 +173,6 @@ public class ImprovedBabyPets extends AbstractNpcAI
 		final StatSet parameters = summon.getTemplate().getParameters();
 		final SkillHolder skill = parameters.getObject("step" + stepNumber + "_heal0" + healNumber, SkillHolder.class);
 		final int targetType = parameters.getInt("step" + stepNumber + "_heal_target0" + healNumber, 0);
-		
 		if ((skill != null) && (owner != null) && SkillCaster.checkUseConditions(summon, skill.getSkill()) && !owner.isDead())
 		{
 			if (!previousFollowStatus && !summon.isInsideRadius3D(owner, skill.getSkill().getCastRange()))
@@ -194,7 +186,6 @@ public class ImprovedBabyPets extends AbstractNpcAI
 				{
 					summon.getAI().setIntention(CtrlIntention.AI_INTENTION_CAST, skill.getSkill(), (targetType == 1) ? summon : owner);
 					summon.sendPacket(new SystemMessage(SystemMessageId.YOUR_PET_USES_S1).addSkillName(skill.getSkill()));
-					
 					if (previousFollowStatus != summon.getFollowStatus())
 					{
 						summon.setFollowStatus(previousFollowStatus);

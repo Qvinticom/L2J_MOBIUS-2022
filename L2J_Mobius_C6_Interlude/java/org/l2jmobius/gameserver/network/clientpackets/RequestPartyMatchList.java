@@ -87,7 +87,6 @@ public class RequestPartyMatchList extends GameClientPacket
 		else
 		{
 			final int maxId = PartyMatchRoomList.getInstance().getMaxId();
-			
 			final PartyMatchRoom room = new PartyMatchRoom(maxId, _roomtitle, _loot, _lvlmin, _lvlmax, _membersmax, player);
 			
 			LOGGER.info("PartyMatchRoom #" + maxId + " created by " + player.getName());
@@ -95,7 +94,6 @@ public class RequestPartyMatchList extends GameClientPacket
 			// Remove from waiting list, and add to current room
 			PartyMatchWaitingList.getInstance().removePlayer(player);
 			PartyMatchRoomList.getInstance().addPartyMatchRoom(maxId, room);
-			
 			if (player.isInParty())
 			{
 				for (PlayerInstance ptmember : player.getParty().getPartyMembers())
@@ -117,7 +115,6 @@ public class RequestPartyMatchList extends GameClientPacket
 			
 			player.sendPacket(new PartyMatchDetail(room));
 			player.sendPacket(new ExPartyRoomMember(room, 1));
-			
 			player.sendPacket(SystemMessageId.A_PARTY_ROOM_HAS_BEEN_CREATED);
 			
 			player.setPartyRoom(maxId);

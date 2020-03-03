@@ -162,7 +162,6 @@ public class ClanHallAuction
 	public void finalizeAuctions()
 	{
 		final Optional<Bidder> potentialHighestBidder = getHighestBidder();
-		
 		if (potentialHighestBidder.isPresent())
 		{
 			final Bidder highestBidder = potentialHighestBidder.get();

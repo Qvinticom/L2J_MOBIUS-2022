@@ -38,7 +38,6 @@ public class ScriptEngine
 			{
 				Class.forName("org.l2jmobius.gameserver.script." + name);
 				// By now the static block with no function would have been executed if the shape was found. The shape is expected to have put its factory in the hashtable.
-				
 				s = parserFactories.get(name);
 				if (s == null) // If the shape factory is not there even now.
 				{

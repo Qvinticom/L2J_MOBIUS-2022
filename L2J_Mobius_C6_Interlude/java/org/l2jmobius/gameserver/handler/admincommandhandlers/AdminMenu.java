@@ -66,12 +66,10 @@ public class AdminMenu implements IAdminCommandHandler
 		else if (command.startsWith("admin_teleport_character_to_menu"))
 		{
 			final String[] data = command.split(" ");
-			
 			if (data.length == 5)
 			{
 				final String playerName = data[1];
 				final PlayerInstance player = World.getInstance().getPlayer(playerName);
-				
 				if (player != null)
 				{
 					teleportCharacter(player, Integer.parseInt(data[2]), Integer.parseInt(data[3]), Integer.parseInt(data[4]), activeChar, "Admin is teleporting you.");
@@ -102,7 +100,6 @@ public class AdminMenu implements IAdminCommandHandler
 			{
 				final String targetName = command.substring(24);
 				final PlayerInstance player = World.getInstance().getPlayer(targetName);
-				
 				if (player == null)
 				{
 					activeChar.sendPacket(SystemMessageId.INVALID_TARGET);
@@ -134,7 +131,6 @@ public class AdminMenu implements IAdminCommandHandler
 			{
 				final String targetName = command.substring(23);
 				final PlayerInstance player = World.getInstance().getPlayer(targetName);
-				
 				if (player == null)
 				{
 					activeChar.sendPacket(SystemMessageId.INVALID_TARGET);
@@ -146,12 +142,10 @@ public class AdminMenu implements IAdminCommandHandler
 				{
 					BuilderUtil.sendSysMessage(activeChar, "Player is not in a clan.");
 					teleportCharacter(player, x, y, z, activeChar, "Admin is teleporting you.");
-					
 					return true;
 				}
 				
 				final PlayerInstance[] members = clan.getOnlineMembers();
-				
 				for (PlayerInstance member : members)
 				{
 					teleportCharacter(member, x, y, z, activeChar, "Your clan is being teleported by an Admin.");
@@ -180,7 +174,6 @@ public class AdminMenu implements IAdminCommandHandler
 		else if (command.startsWith("admin_kick_menu"))
 		{
 			final StringTokenizer st = new StringTokenizer(command);
-			
 			if (st.countTokens() > 1)
 			{
 				st.nextToken();
@@ -202,13 +195,11 @@ public class AdminMenu implements IAdminCommandHandler
 		else if (command.startsWith("admin_ban_menu"))
 		{
 			final StringTokenizer st = new StringTokenizer(command);
-			
 			if (st.countTokens() > 1)
 			{
 				st.nextToken();
 				final String player = st.nextToken();
 				final PlayerInstance plyr = World.getInstance().getPlayer(player);
-				
 				if (plyr != null)
 				{
 					plyr.logout();
@@ -222,7 +213,6 @@ public class AdminMenu implements IAdminCommandHandler
 		else if (command.startsWith("admin_unban_menu"))
 		{
 			final StringTokenizer st = new StringTokenizer(command);
-			
 			if (st.countTokens() > 1)
 			{
 				st.nextToken();
@@ -251,7 +241,6 @@ public class AdminMenu implements IAdminCommandHandler
 		final WorldObject obj = activeChar.getTarget();
 		Creature target = (Creature) obj;
 		String filename = "main_menu.htm";
-		
 		if (player != null)
 		{
 			final PlayerInstance plyr = World.getInstance().getPlayer(player);
@@ -300,7 +289,6 @@ public class AdminMenu implements IAdminCommandHandler
 	private void teleportToCharacter(PlayerInstance activeChar, WorldObject target)
 	{
 		PlayerInstance player = null;
-		
 		if ((target != null) && (target instanceof PlayerInstance))
 		{
 			player = (PlayerInstance) target;
@@ -337,7 +325,6 @@ public class AdminMenu implements IAdminCommandHandler
 			final PreparedStatement statement = con.prepareStatement(stmt);
 			statement.setString(1, player);
 			final ResultSet result = statement.executeQuery();
-			
 			if (result.next())
 			{
 				final String accName = result.getString(1);

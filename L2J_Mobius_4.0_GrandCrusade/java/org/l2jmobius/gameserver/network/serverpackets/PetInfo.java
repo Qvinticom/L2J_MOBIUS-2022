@@ -72,7 +72,6 @@ public class PetInfo implements IClientOutgoingPacket
 			_statusMask |= 0x01; // Auto attackable status
 		}
 		_statusMask |= 0x02; // can be chatted with
-		
 		if (summon.isRunning())
 		{
 			_statusMask |= 0x04;

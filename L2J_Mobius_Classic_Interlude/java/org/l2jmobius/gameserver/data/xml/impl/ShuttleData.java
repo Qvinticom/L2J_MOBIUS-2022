@@ -112,7 +112,6 @@ public class ShuttleData implements IXmlReader
 									{
 										attrs = a.getAttributes();
 										final ShuttleStop stop = new ShuttleStop(parseInteger(attrs, "id"));
-										
 										for (Node z = a.getFirstChild(); z != null; z = z.getNextSibling())
 										{
 											if ("dimension".equalsIgnoreCase(z.getNodeName()))
@@ -186,7 +185,6 @@ public class ShuttleData implements IXmlReader
 				return shuttle;
 			}
 		}
-		
 		return null;
 	}
 	

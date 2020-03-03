@@ -182,7 +182,6 @@ public class Q00128_PailakaSongOfIceAndFire extends Quest
 	{
 		final QuestState qs = getQuestState(player, true);
 		String htmltext = getNoQuestMsg(player);
-		
 		switch (npc.getId())
 		{
 			case ADLER1:

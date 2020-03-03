@@ -504,7 +504,6 @@ public class Frintezza extends AbstractNpcAI
 		else if (event.equalsIgnoreCase("camera_1"))
 		{
 			GrandBossManager.getInstance().setBossStatus(FRINTEZZA, FIGHTING);
-			
 			_frintezzaDummy = addSpawn(29052, 174240, -89805, -5022, 16048, false, 0);
 			_frintezzaDummy.setInvul(true);
 			_frintezzaDummy.setImmobilized(true);
@@ -543,34 +542,28 @@ public class Frintezza extends AbstractNpcAI
 		else if (event.equalsIgnoreCase("camera_3"))
 		{
 			_zone.broadcastPacket(new SpecialCamera(_overheadDummy, 300, 90, -10, 6500, 7000, 0, 0, 1, 0, 0));
-			
 			_frintezza = (GrandBossInstance) addSpawn(FRINTEZZA, 174240, -89805, -5022, 16048, false, 0);
 			GrandBossManager.getInstance().addBoss(_frintezza);
 			_frintezza.setImmobilized(true);
 			_frintezza.setInvul(true);
 			_frintezza.disableAllSkills();
 			// _Zone.updateKnownList(frintezza);
-			
 			_demon2 = (MonsterInstance) addSpawn(29051, 175876, -88713, -5100, 28205, false, 0);
 			_demon2.setImmobilized(true);
 			_demon2.disableAllSkills();
 			// _Zone.updateKnownList(demon2);
-			
 			_demon3 = (MonsterInstance) addSpawn(29051, 172608, -88702, -5100, 64817, false, 0);
 			_demon3.setImmobilized(true);
 			_demon3.disableAllSkills();
 			// _Zone.updateKnownList(demon3);
-			
 			_demon1 = (MonsterInstance) addSpawn(29050, 175833, -87165, -5100, 35048, false, 0);
 			_demon1.setImmobilized(true);
 			_demon1.disableAllSkills();
 			// _Zone.updateKnownList(demon1);
-			
 			_demon4 = (MonsterInstance) addSpawn(29050, 172634, -87165, -5100, 57730, false, 0);
 			_demon4.setImmobilized(true);
 			_demon4.disableAllSkills();
 			// _Zone.updateKnownList(demon4);
-			
 			startQuestTimer("camera_4", 6500, _overheadDummy, null);
 		}
 		else if (event.equalsIgnoreCase("camera_4"))
@@ -614,7 +607,6 @@ public class Frintezza extends AbstractNpcAI
 		{
 			_zone.broadcastPacket(new SocialAction(_demon1.getObjectId(), 1));
 			_zone.broadcastPacket(new SocialAction(_demon4.getObjectId(), 1));
-			
 			for (Creature pc : _zone.getCharactersInside())
 			{
 				if (pc.isPlayer())
@@ -662,7 +654,6 @@ public class Frintezza extends AbstractNpcAI
 			_portraitDummy3.deleteMe();
 			_portraitDummy1 = null;
 			_portraitDummy3 = null;
-			
 			startQuestTimer("camera_12", 4500, _frintezza, null);
 		}
 		else if (event.equalsIgnoreCase("camera_12"))
@@ -700,14 +691,12 @@ public class Frintezza extends AbstractNpcAI
 		{
 			_zone.broadcastPacket(new SpecialCamera(_overheadDummy, 600, 180, -25, 0, 10000, 0, 0, 1, 0, 0));
 			_zone.broadcastPacket(new MagicSkillUse(_scarletDummy, _overheadDummy, 5004, 1, 5800, 0));
-			
 			_weakScarlet = (GrandBossInstance) addSpawn(29046, 174232, -88020, -5110, 16384, false, 0, true);
 			_weakScarlet.setInvul(true);
 			_weakScarlet.setImmobilized(true);
 			_weakScarlet.disableAllSkills();
 			// _Zone.updateKnownList(weakScarlet);
 			_activeScarlet = _weakScarlet;
-			
 			startQuestTimer("camera_19", 2400, _scarletDummy, null);
 			startQuestTimer("camera_19b", 5000, _scarletDummy, null);
 		}
@@ -736,27 +725,22 @@ public class Frintezza extends AbstractNpcAI
 			_portrait2.setImmobilized(true);
 			_portrait2.disableAllSkills();
 			// _Zone.updateKnownList(portrait2);
-			
 			_portrait3 = (MonsterInstance) addSpawn(29049, 172608, -88702, -5000, 64817, false, 0);
 			_portrait3.setImmobilized(true);
 			_portrait3.disableAllSkills();
 			// _Zone.updateKnownList(portrait3);
-			
 			_portrait1 = (MonsterInstance) addSpawn(29048, 175833, -87165, -5000, 35048, false, 0);
 			_portrait1.setImmobilized(true);
 			_portrait1.disableAllSkills();
 			// _Zone.updateKnownList(portrait1);
-			
 			_portrait4 = (MonsterInstance) addSpawn(29048, 172634, -87165, -5000, 57730, false, 0);
 			_portrait4.setImmobilized(true);
 			_portrait4.disableAllSkills();
 			// _Zone.updateKnownList(portrait4);
-			
 			_overheadDummy.deleteMe();
 			_scarletDummy.deleteMe();
 			_overheadDummy = null;
 			_scarletDummy = null;
-			
 			startQuestTimer("camera_23", 2000, _weakScarlet, null);
 			startQuestTimer("start_pc", 2000, _weakScarlet, null);
 			startQuestTimer("loc_check", 60000, _weakScarlet, null, true);
@@ -881,7 +865,6 @@ public class Frintezza extends AbstractNpcAI
 		else if (event.equalsIgnoreCase("morph_06"))
 		{
 			_zone.broadcastPacket(new SpecialCamera(_frintezza, 250, 120, 15, 0, 10000, 0, 0, 1, 0, 0));
-			
 			cancelQuestTimers("loc_check");
 			
 			_scarletX = _weakScarlet.getX();
@@ -897,7 +880,6 @@ public class Frintezza extends AbstractNpcAI
 			_weakScarlet.disableAllSkills();
 			_weakScarlet.setRHandId(7903);
 			// _Zone.updateKnownList(weakScarlet);
-			
 			startQuestTimer("morph_07", 7000, _frintezza, null);
 		}
 		else if (event.equalsIgnoreCase("morph_07"))
@@ -925,7 +907,6 @@ public class Frintezza extends AbstractNpcAI
 		{
 			_weakScarlet.doDie(_weakScarlet);
 			_zone.broadcastPacket(new SpecialCamera(_weakScarlet, 450, _angle, 14, 8000, 8000, 0, 0, 1, 0, 0));
-			
 			startQuestTimer("morph_12", 6250, _weakScarlet, null);
 			startQuestTimer("morph_13", 7200, _weakScarlet, null);
 		}
@@ -942,9 +923,7 @@ public class Frintezza extends AbstractNpcAI
 			_strongScarlet.disableAllSkills();
 			// _Zone.updateKnownList(strongScarlet);
 			_activeScarlet = _strongScarlet;
-			
 			_zone.broadcastPacket(new SpecialCamera(_strongScarlet, 450, _angle, 12, 500, 14000, 0, 0, 1, 0, 0));
-			
 			startQuestTimer("morph_14", 3000, _strongScarlet, null);
 			startQuestTimer("loc_check", 60000, _strongScarlet, null, true);
 		}
@@ -1115,7 +1094,6 @@ public class Frintezza extends AbstractNpcAI
 			{
 				_onMorph = 1;
 				_zone.broadcastPacket(new PlaySound(1, "BS01_D", 1, npc.getObjectId(), npc.getX(), npc.getY(), npc.getZ()));
-				
 				startQuestTimer("attack_stop", 0, _frintezza, null);
 				startQuestTimer("stop_pc", 0, npc, null);
 				startQuestTimer("stop_npc", 0, npc, null);
@@ -1172,7 +1150,6 @@ public class Frintezza extends AbstractNpcAI
 					_weakScarlet.doCast(skill);
 				}
 				startQuestTimer("skill02", _skill[i][2] + 5000 + Rnd.get(10000), npc, null);
-				
 				if (i == 5)
 				{
 					_abnormal = 1;
@@ -1202,7 +1179,6 @@ public class Frintezza extends AbstractNpcAI
 					_strongScarlet.doCast(skill);
 				}
 				startQuestTimer("skill03", _skill[i][2] + 5000 + Rnd.get(10000), npc, null);
-				
 				if (i == 10)
 				{
 					_abnormal = 1;
@@ -1254,7 +1230,6 @@ public class Frintezza extends AbstractNpcAI
 			startQuestTimer("close", 1000, npc, null);
 			startQuestTimer("room1_del", 1000, npc, null);
 			startQuestTimer("room2_del", 1000, npc, null);
-			
 			GrandBossManager.getInstance().setBossStatus(FRINTEZZA, DORMANT);
 		}
 		else if (event.equalsIgnoreCase("frintezza_despawn"))
@@ -1275,9 +1250,7 @@ public class Frintezza extends AbstractNpcAI
 				startQuestTimer("room2_del", 1000, npc, null);
 				startQuestTimer("room3_del", 1000, npc, null);
 				startQuestTimer("minions_despawn", 1000, npc, null);
-				
 				GrandBossManager.getInstance().setBossStatus(FRINTEZZA, DORMANT);
-				
 				cancelQuestTimers("frintezza_despawn");
 			}
 		}
@@ -1300,7 +1273,6 @@ public class Frintezza extends AbstractNpcAI
 				final Npc mob = addSpawn(npc.getId() + 2, npc.getX(), npc.getY(), npc.getZ(), npc.getHeading(), false, 0);
 				// mob.setIsRaidMinion(true);
 				_minions.add((Attackable) mob);
-				
 				startQuestTimer("action", 200, mob, null);
 				startQuestTimer("spawn_minion", 18000, npc, null);
 			}
@@ -1370,12 +1342,10 @@ public class Frintezza extends AbstractNpcAI
 					player.destroyItemByItemId("Quest", 8073, 1, player, true);
 					final CommandChannel cc = player.getParty().getCommandChannel();
 					GrandBossManager.getInstance().setBossStatus(FRINTEZZA, WAITING);
-					
 					startQuestTimer("close", 0, npc, null);
 					startQuestTimer("room1_spawn", 5000, npc, null);
 					startQuestTimer("room_final", 2100000, npc, null);
 					startQuestTimer("frintezza_despawn", 60000, npc, null, true);
-					
 					_lastAction = System.currentTimeMillis();
 					for (Party party : cc.getParties())
 					{
@@ -1436,10 +1406,8 @@ public class Frintezza extends AbstractNpcAI
 		if ((npc.getId() == SCARLET1) && (_secondMorph == 0) && (_thirdMorph == 0) && (_onMorph == 0) && (npc.getCurrentHp() < (npc.getMaxHp() * 0.75)) && (GrandBossManager.getInstance().getBossStatus(FRINTEZZA) == FIGHTING))
 		{
 			startQuestTimer("attack_stop", 0, _frintezza, null);
-			
 			_secondMorph = 1;
 			_onMorph = 1;
-			
 			startQuestTimer("stop_pc", 1000, npc, null);
 			startQuestTimer("stop_npc", 1000, npc, null);
 			startQuestTimer("morph_01", 1100, npc, null);
@@ -1447,10 +1415,8 @@ public class Frintezza extends AbstractNpcAI
 		else if ((npc.getId() == SCARLET1) && (_secondMorph == 1) && (_thirdMorph == 0) && (_onMorph == 0) && (npc.getCurrentHp() < (npc.getMaxHp() * 0.5)) && (GrandBossManager.getInstance().getBossStatus(FRINTEZZA) == FIGHTING))
 		{
 			startQuestTimer("attack_stop", 0, _frintezza, null);
-			
 			_thirdMorph = 1;
 			_onMorph = 1;
-			
 			startQuestTimer("stop_pc", 2000, npc, null);
 			startQuestTimer("stop_npc", 2000, npc, null);
 			startQuestTimer("morph_05a", 2000, npc, null);
@@ -1473,7 +1439,6 @@ public class Frintezza extends AbstractNpcAI
 				npc.doCast(skill);
 			}
 		}
-		
 		return super.onAttack(npc, attacker, damage, isSummon);
 	}
 	
@@ -1501,11 +1466,9 @@ public class Frintezza extends AbstractNpcAI
 			startQuestTimer("room3_del", 60000, npc, null);
 			startQuestTimer("minions_despawn", 60000, npc, null);
 			startQuestTimer("remove_players", 900000, npc, null);
-			
 			GrandBossManager.getInstance().setBossStatus(FRINTEZZA, DEAD);
 			long respawnTime = Config.FRINTEZZA_SPAWN_INTERVAL + getRandom(-Config.FRINTEZZA_SPAWN_RANDOM, Config.FRINTEZZA_SPAWN_RANDOM);
 			respawnTime *= 3600000;
-			
 			startQuestTimer("frintezza_unlock", respawnTime, npc, null);
 			// also save the respawn time so that the info is maintained past reboots
 			final StatSet info = GrandBossManager.getInstance().getStatSet(FRINTEZZA);
@@ -1519,7 +1482,6 @@ public class Frintezza extends AbstractNpcAI
 			{
 				startQuestTimer("room1_del", 100, npc, null);
 				startQuestTimer("room2_spawn", 100, npc, null);
-				
 				DoorData.getInstance().getDoor(25150042).openMe();
 				DoorData.getInstance().getDoor(25150043).openMe();
 				// DoorData.getInstance().getDoor(25150045).openMe();
@@ -1570,7 +1532,6 @@ public class Frintezza extends AbstractNpcAI
 			if (_killDarkChoirCaptain == 8)
 			{
 				startQuestTimer("room2_del", 100, npc, null);
-				
 				DoorData.getInstance().getDoor(25150045).openMe();
 				DoorData.getInstance().getDoor(25150046).openMe();
 				

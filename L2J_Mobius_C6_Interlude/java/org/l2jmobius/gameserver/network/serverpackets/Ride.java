@@ -30,7 +30,6 @@ public class Ride extends GameServerPacket
 		_id = id; // charobjectID
 		_bRide = action; // 1 for mount ; 2 for dismount
 		_rideClassID = rideClassId + 1000000; // npcID
-		
 		if ((rideClassId == 12526) || // wind strider
 			(rideClassId == 12527) || // star strider
 			(rideClassId == 12528)) // twilight strider

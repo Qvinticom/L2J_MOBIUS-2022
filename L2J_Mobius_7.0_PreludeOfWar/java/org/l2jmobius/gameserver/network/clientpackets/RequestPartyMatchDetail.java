@@ -55,7 +55,6 @@ public class RequestPartyMatchDetail implements IClientIncomingPacket
 		}
 		
 		final MatchingRoom room = _roomId > 0 ? MatchingRoomManager.getInstance().getPartyMathchingRoom(_roomId) : MatchingRoomManager.getInstance().getPartyMathchingRoom(_location, _level);
-		
 		if (room != null)
 		{
 			room.addMember(player);

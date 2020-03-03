@@ -83,7 +83,6 @@ public class Q00251_NoSecrets extends Quest
 		if ((qs != null) && qs.isStarted() && qs.isCond(1))
 		{
 			final int npcId = npc.getId();
-			
 			if (CommonUtil.contains(MOBS, npcId) && (getRandom(100) < 10) && (getQuestItemsCount(player, DIARY) < 10))
 			{
 				giveItems(player, DIARY, 1);
@@ -117,7 +116,6 @@ public class Q00251_NoSecrets extends Quest
 	{
 		final QuestState qs = getQuestState(player, true);
 		String htmltext = getNoQuestMsg(player);
-		
 		switch (qs.getState())
 		{
 			case State.CREATED:

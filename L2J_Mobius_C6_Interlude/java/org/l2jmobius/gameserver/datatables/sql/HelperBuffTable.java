@@ -64,7 +64,6 @@ public class HelperBuffTable
 		{
 			final PreparedStatement statement = con.prepareStatement("SELECT * FROM helper_buff_list");
 			final ResultSet helperbuffdata = statement.executeQuery();
-			
 			fillHelperBuffTable(helperbuffdata);
 			helperbuffdata.close();
 			statement.close();
@@ -86,7 +85,6 @@ public class HelperBuffTable
 		{
 			final StatSet helperBuffDat = new StatSet();
 			final int id = helperBuffData.getInt("id");
-			
 			helperBuffDat.set("id", id);
 			helperBuffDat.set("skillID", helperBuffData.getInt("skill_id"));
 			helperBuffDat.set("skillLevel", helperBuffData.getInt("skill_level"));

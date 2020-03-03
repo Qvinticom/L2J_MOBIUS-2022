@@ -98,7 +98,6 @@ public class Q601_WatchingEyes extends Quest
 				if (random < element[2])
 				{
 					st.rewardItems(57, element[1]);
-					
 					if (element[0] != 0)
 					{
 						st.giveItems(element[0], 5);

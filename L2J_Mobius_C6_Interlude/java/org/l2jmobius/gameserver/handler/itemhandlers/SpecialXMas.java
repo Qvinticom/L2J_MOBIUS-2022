@@ -43,7 +43,6 @@ public class SpecialXMas implements IItemHandler
 		
 		final PlayerInstance player = (PlayerInstance) playable;
 		final int itemId = item.getItemId();
-		
 		if (player.isParalyzed())
 		{
 			player.sendMessage("You Cannot Use This While You Are Paralyzed");

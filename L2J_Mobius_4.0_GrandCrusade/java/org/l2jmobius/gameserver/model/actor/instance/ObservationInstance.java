@@ -37,7 +37,6 @@ public class ObservationInstance extends Npc
 	public void showChatWindow(PlayerInstance player, int value)
 	{
 		String filename = null;
-		
 		if (isInsideRadius2D(-79884, 86529, 0, 50) || isInsideRadius2D(-78858, 111358, 0, 50) || isInsideRadius2D(-76973, 87136, 0, 50) || isInsideRadius2D(-75850, 111968, 0, 50))
 		{
 			if (value == 0)

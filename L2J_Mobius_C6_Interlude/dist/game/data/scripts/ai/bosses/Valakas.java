@@ -92,9 +92,7 @@ public class Valakas extends Quest
 		lastAttackTime = System.currentTimeMillis();
 		_Zone = GrandBossManager.getInstance().getZone(212852, -114842, -1632);
 		final StatSet info = GrandBossManager.getInstance().getStatSet(VALAKAS);
-		
 		final Integer status = GrandBossManager.getInstance().getBossStatus(VALAKAS);
-		
 		if (status == DEAD)
 		{
 			// load the unlock date and time for valakas from DB
@@ -121,7 +119,6 @@ public class Valakas extends Quest
 			final int loc_y = -114890;
 			final int loc_z = -1595;
 			final int heading = 0;
-			
 			final int hp = info.getInt("currentHP");
 			final int mp = info.getInt("currentMP");
 			final GrandBossInstance valakas = (GrandBossInstance) addSpawn(VALAKAS, loc_x, loc_y, loc_z, heading, false, 0);
@@ -175,9 +172,7 @@ public class Valakas extends Quest
 				}
 				
 				final Integer status = GrandBossManager.getInstance().getBossStatus(VALAKAS);
-				
 				temp = (System.currentTimeMillis() - lastAttackTime);
-				
 				if ((status == FIGHTING) && (temp > (Config.VALAKAS_DESPAWN_TIME * 60000))) // 15 mins by default
 				{
 					npc.getAI().setIntention(CtrlIntention.AI_INTENTION_IDLE);
@@ -337,7 +332,6 @@ public class Valakas extends Quest
 			final int loc_y = -114890;
 			final int loc_z = -1595;
 			final int heading = 0;
-			
 			final GrandBossInstance valakas = (GrandBossInstance) addSpawn(VALAKAS, loc_x, loc_y, loc_z, heading, false, 0);
 			GrandBossManager.getInstance().addBoss(valakas);
 			
@@ -426,7 +420,6 @@ public class Valakas extends Quest
 			}
 		}
 		int i1 = 0;
-		
 		if (attacker == c_quest2)
 		{
 			if (((damage * 1000) + 1000) > i_quest2)
@@ -596,7 +589,6 @@ public class Valakas extends Quest
 		npc.broadcastPacket(new SpecialCamera(npc.getObjectId(), 1700, 2000, 130, -1, 0));
 		npc.broadcastPacket(new PlaySound(1, "B03_D", npc));
 		startQuestTimer("1111", 500, npc, null);
-		
 		GrandBossManager.getInstance().setBossStatus(VALAKAS, DEAD);
 		
 		final long respawnTime = (Config.VALAKAS_RESP_FIRST + Rnd.get(Config.VALAKAS_RESP_SECOND)) * 3600000;
@@ -605,7 +597,6 @@ public class Valakas extends Quest
 		final StatSet info = GrandBossManager.getInstance().getStatSet(VALAKAS);
 		info.set("respawn_time", (System.currentTimeMillis() + respawnTime));
 		GrandBossManager.getInstance().setStatSet(VALAKAS, info);
-		
 		return super.onKill(npc, killer, isPet);
 	}
 	
@@ -909,7 +900,6 @@ public class Valakas extends Quest
 	public void callSkillAI(NpcInstance npc, Creature c2, Skill skill)
 	{
 		final QuestTimer timer = getQuestTimer("launch_random_skill", npc, null);
-		
 		if (npc == null)
 		{
 			if (timer != null)

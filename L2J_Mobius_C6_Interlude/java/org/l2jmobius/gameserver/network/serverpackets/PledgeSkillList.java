@@ -41,7 +41,6 @@ public class PledgeSkillList extends GameServerPacket
 	protected void writeImpl()
 	{
 		final Skill[] skills = _clan.getAllSkills();
-		
 		writeC(0xfe);
 		writeH(0x39);
 		writeD(skills.length);

@@ -110,7 +110,6 @@ public class GameStatusThread extends Thread
 		
 		// convert IP to String, and compare with list
 		final String clientStringIP = clientIP.getHostAddress();
-		
 		telnetOutput(1, "Connection from: " + clientStringIP);
 		
 		// read and loop thru list of IPs, compare with newIP
@@ -155,7 +154,6 @@ public class GameStatusThread extends Thread
 				}
 			}
 		}
-		
 		return result;
 	}
 	
@@ -164,10 +162,8 @@ public class GameStatusThread extends Thread
 		setPriority(Thread.MAX_PRIORITY);
 		_cSocket = client;
 		_uptime = uptime;
-		
 		_print = new PrintWriter(_cSocket.getOutputStream());
 		_read = new BufferedReader(new InputStreamReader(_cSocket.getInputStream()));
-		
 		if (isValidIP(client))
 		{
 			telnetOutput(1, client.getInetAddress().getHostAddress() + " accepted.");
@@ -299,10 +295,8 @@ public class GameStatusThread extends Thread
 					// the allocation pool
 					final double used = allocated - cached; // really used memory
 					final double useable = max - used; // allocated, but non-used and non-allocated memory
-					
 					final DecimalFormat df = new DecimalFormat(" (0.0000'%')");
 					final DecimalFormat df2 = new DecimalFormat(" # 'KB'");
-					
 					_print.println("+----"); // ...
 					_print.println("| Allowed Memory:" + df2.format(max));
 					_print.println("|    |= Allocated Memory:" + df2.format(allocated) + df.format((allocated / max) * 100));
@@ -370,7 +364,6 @@ public class GameStatusThread extends Thread
 				{
 					int igm = 0;
 					String gmList = "";
-					
 					for (String player : AdminData.getInstance().getAllGmNames(true))
 					{
 						gmList = gmList + ", " + player;
@@ -454,7 +447,6 @@ public class GameStatusThread extends Thread
 						final PlayerInstance player = World.getInstance().getPlayer(st.nextToken());
 						final int itemId = Integer.parseInt(st.nextToken());
 						final int amount = Integer.parseInt(st.nextToken());
-						
 						if (player != null)
 						{
 							final ItemInstance item = player.getInventory().addItem("Status-Give", itemId, amount, null, null);
@@ -575,7 +567,6 @@ public class GameStatusThread extends Thread
 						}
 						
 						boolean success = false;
-						
 						if ((player != null) && (itemType > 0))
 						{
 							success = setEnchant(player, enchant, itemType);
@@ -609,7 +600,6 @@ public class GameStatusThread extends Thread
 						{
 						}
 						// PlayerInstance playerObj = World.getInstance().getPlayer(player);
-						
 						if (playerObj != null)
 						{
 							playerObj.setPunishLevel(PlayerInstance.PunishLevel.JAIL, delay);
@@ -635,7 +625,6 @@ public class GameStatusThread extends Thread
 					{
 						final String playerName = st.nextToken();
 						final PlayerInstance playerObj = World.getInstance().getPlayer(playerName);
-						
 						if (playerObj != null)
 						{
 							playerObj.setPunishLevel(PlayerInstance.PunishLevel.NONE, 0);
@@ -662,7 +651,6 @@ public class GameStatusThread extends Thread
 					try
 					{
 						final String dbg = st.nextToken();
-						
 						if (dbg.equals("decay"))
 						{
 							_print.print(DecayTaskManager.getInstance().toString());
@@ -719,7 +707,6 @@ public class GameStatusThread extends Thread
 					try
 					{
 						final String type = st.nextToken();
-						
 						if (type.equals("multisell"))
 						{
 							_print.print("Reloading multisell... ");
@@ -806,7 +793,6 @@ public class GameStatusThread extends Thread
 									
 									TradeList list = null;
 									String content = "";
-									
 									if (player.getPrivateStoreType() == 1) // sell
 									{
 										list = player.getSellList();
@@ -916,7 +902,6 @@ public class GameStatusThread extends Thread
 			statement.setInt(4, PlayerInstance.PunishLevel.JAIL.value());
 			statement.setLong(5, delay * 60000);
 			statement.setString(6, name);
-			
 			statement.execute();
 			final int count = statement.getUpdateCount();
 			statement.close();
@@ -947,7 +932,6 @@ public class GameStatusThread extends Thread
 			statement.setInt(4, 0);
 			statement.setLong(5, 0);
 			statement.setString(6, name);
-			
 			statement.execute();
 			final int count = statement.getUpdateCount();
 			statement.close();
@@ -999,10 +983,8 @@ public class GameStatusThread extends Thread
 		int playerCount = 0;
 		int objectCount = 0;
 		final int max = LoginServerThread.getInstance().getMaxPlayer();
-		
 		playerCount = World.getAllPlayersCount();
 		objectCount = World.getInstance().getAllVisibleObjectsCount();
-		
 		int itemCount = 0;
 		int itemVoidCount = 0;
 		int monsterCount = 0;
@@ -1015,7 +997,6 @@ public class GameStatusThread extends Thread
 		int doorCount = 0;
 		int summonCount = 0;
 		int aiCount = 0;
-		
 		for (WorldObject obj : World.getInstance().getAllVisibleObjects())
 		{
 			if (obj == null)
@@ -1102,7 +1083,6 @@ public class GameStatusThread extends Thread
 	{
 		final Calendar cal = Calendar.getInstance();
 		final SimpleDateFormat sdf = new SimpleDateFormat("yyyy-MM-dd HH:mm:ss Z");
-		
 		final StringBuilder sb = new StringBuilder();
 		sb.append(sdf.format(cal.getTime()));
 		sb.append("\n\n");
@@ -1129,7 +1109,6 @@ public class GameStatusThread extends Thread
 		sb.append("\nCurrent Free Heap Size: " + (Runtime.getRuntime().freeMemory() / 1024 / 1024) + " mb");
 		sb.append("\nCurrent Heap Size: " + (Runtime.getRuntime().totalMemory() / 1024 / 1024) + " mb");
 		sb.append("\nMaximum Heap Size: " + (Runtime.getRuntime().maxMemory() / 1024 / 1024) + " mb");
-		
 		sb.append('\n');
 		sb.append("\n## Class Path Information ##\n");
 		final String cp = System.getProperty("java.class.path");

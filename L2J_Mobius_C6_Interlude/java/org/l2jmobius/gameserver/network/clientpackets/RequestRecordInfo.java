@@ -59,7 +59,6 @@ public class RequestRecordInfo extends GameClientPacket
 		
 		player.getKnownList().updateKnownObjects();
 		player.sendPacket(new UserInfo(player));
-		
 		for (WorldObject object : player.getKnownList().getKnownObjects().values())
 		{
 			if (object == null)
@@ -113,7 +112,6 @@ public class RequestRecordInfo extends GameClientPacket
 					if (player.equals(summon.getOwner()))
 					{
 						player.sendPacket(new PetInfo(summon));
-						
 						if (summon instanceof PetInstance)
 						{
 							player.sendPacket(new PetItemList((PetInstance) summon));
@@ -130,7 +128,6 @@ public class RequestRecordInfo extends GameClientPacket
 				else if (object instanceof PlayerInstance)
 				{
 					final PlayerInstance otherPlayer = (PlayerInstance) object;
-					
 					if (otherPlayer.isInBoat())
 					{
 						otherPlayer.getPosition().setWorldPosition(otherPlayer.getBoat().getLocation());

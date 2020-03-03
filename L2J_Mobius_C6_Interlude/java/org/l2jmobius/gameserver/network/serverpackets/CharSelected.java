@@ -76,7 +76,6 @@ public class CharSelected extends GameServerPacket
 		// writeD(0); //c3
 		// writeD(0); //c3
 		// writeD(0); //c3
-		
 		writeD(0x00); // c3 work
 		writeD(0x00); // c3 work
 		

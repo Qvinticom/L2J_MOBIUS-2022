@@ -55,7 +55,6 @@ public class Q10764_FreeSpirit extends Quest
 		addStartNpc(VORBOS);
 		addTalkId(VORBOS, TREE_SPIRIT, WIND_SPIRIT);
 		addSpawnId(LIBERATED_TREE_SPIRIT, LIBERATED_WIND_SPIRIT, SYLPH);
-		
 		addCondRace(Race.ERTHEIA, "33966-00.htm");
 		addCondMinLevel(MIN_LEVEL, "33966-00.htm");
 		addCondCompletedQuest(Q10763_TerrifyingChertuba.class.getSimpleName(), "33966-00.htm");
@@ -108,7 +107,6 @@ public class Q10764_FreeSpirit extends Quest
 	{
 		final QuestState qs = getQuestState(player, true);
 		String htmltext = getNoQuestMsg(player);
-		
 		if (npc.getId() == VORBOS)
 		{
 			switch (qs.getState())
@@ -133,7 +131,6 @@ public class Q10764_FreeSpirit extends Quest
 		else if (qs.isStarted() && qs.isCond(1))
 		{
 			final int npcId = (npc.getId() == WIND_SPIRIT) ? LIBERATED_WIND_SPIRIT : LIBERATED_TREE_SPIRIT;
-			
 			giveItems(player, LOOSENED_CHAIN, 1);
 			addSpawn(npcId, npc, false, 2500);
 			npc.deleteMe();

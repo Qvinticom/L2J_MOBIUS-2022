@@ -132,7 +132,6 @@ public abstract class Summon extends Playable
 		setShowSummonAnimation(false); // addVisibleObject created the info packets with summon animation
 		// if someone comes into range now, the animation shouldn't show any more
 		_restoreSummon = false;
-		
 		rechargeShots(true, true, false);
 		
 		// Notify to scripts
@@ -575,7 +574,6 @@ public abstract class Summon extends Playable
 		{
 			return null;
 		}
-		
 		return _owner.getParty();
 	}
 	
@@ -755,7 +753,6 @@ public abstract class Summon extends Playable
 			}
 			
 			final SystemMessage sm;
-			
 			if ((target.isHpBlocked() && !target.isNpc()) || (target.isPlayer() && target.isAffected(EffectFlag.DUELIST_FURY) && !_owner.isAffected(EffectFlag.FACEOFF)))
 			{
 				sm = new SystemMessage(SystemMessageId.THE_ATTACK_HAS_BEEN_BLOCKED);
@@ -1060,7 +1057,6 @@ public abstract class Summon extends Playable
 	{
 		ItemInstance item;
 		IItemHandler handler;
-		
 		if ((_owner.getAutoSoulShot() == null) || _owner.getAutoSoulShot().isEmpty())
 		{
 			return;
@@ -1069,7 +1065,6 @@ public abstract class Summon extends Playable
 		for (int itemId : _owner.getAutoSoulShot())
 		{
 			item = _owner.getInventory().getItemByItemId(itemId);
-			
 			if (item != null)
 			{
 				if (magic && (item.getItem().getDefaultAction() == ActionType.SUMMON_SPIRITSHOT))

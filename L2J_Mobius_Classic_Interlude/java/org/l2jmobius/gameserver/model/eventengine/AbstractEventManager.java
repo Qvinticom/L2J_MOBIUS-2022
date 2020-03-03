@@ -193,7 +193,6 @@ public abstract class AbstractEventManager<T extends AbstractEvent<?>>extends Ab
 	}
 	
 	/* ********************** */
-	
 	@RegisterEvent(EventType.ON_PLAYER_LOGOUT)
 	@RegisterType(ListenerRegisterType.GLOBAL)
 	public void OnPlayerLogout(OnPlayerLogout event)
@@ -225,7 +224,6 @@ public abstract class AbstractEventManager<T extends AbstractEvent<?>>extends Ab
 	}
 	
 	/* ********************** */
-	
 	@Override
 	public String getScriptName()
 	{

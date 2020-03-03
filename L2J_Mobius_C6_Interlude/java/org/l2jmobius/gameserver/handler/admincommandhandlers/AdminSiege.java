@@ -72,7 +72,6 @@ public class AdminSiege implements IAdminCommandHandler
 		// Get castle
 		Castle castle = null;
 		ClanHall clanhall = null;
-		
 		if (command.startsWith("admin_clanhall"))
 		{
 			clanhall = ClanHallManager.getInstance().getClanHallById(Integer.parseInt(st.nextToken()));
@@ -84,7 +83,6 @@ public class AdminSiege implements IAdminCommandHandler
 		
 		// Get castle
 		String val = "";
-		
 		if (st.hasMoreTokens())
 		{
 			val = st.nextToken();
@@ -99,7 +97,6 @@ public class AdminSiege implements IAdminCommandHandler
 		{
 			final WorldObject target = activeChar.getTarget();
 			PlayerInstance player = null;
-			
 			if (target instanceof PlayerInstance)
 			{
 				player = (PlayerInstance) target;
@@ -175,7 +172,6 @@ public class AdminSiege implements IAdminCommandHandler
 			else if (command.equalsIgnoreCase("admin_removecastle"))
 			{
 				final Clan clan = ClanTable.getInstance().getClan(castle.getOwnerId());
-				
 				if (clan != null)
 				{
 					castle.removeOwner(clan);
@@ -198,7 +194,6 @@ public class AdminSiege implements IAdminCommandHandler
 				else if (player.getClan().getHasHideout() == 0)
 				{
 					ClanHallManager.getInstance().setOwner(clanhall.getId(), player.getClan());
-					
 					if (AuctionManager.getInstance().getAuction(clanhall.getId()) != null)
 					{
 						AuctionManager.getInstance().getAuction(clanhall.getId()).deleteAuctionFromDB();
@@ -266,7 +261,6 @@ public class AdminSiege implements IAdminCommandHandler
 		final NpcHtmlMessage adminReply = new NpcHtmlMessage(5);
 		adminReply.setFile("data/html/admin/castles.htm");
 		StringBuilder cList = new StringBuilder();
-		
 		for (Castle castle : CastleManager.getInstance().getCastles())
 		{
 			if (castle != null)
@@ -286,7 +280,6 @@ public class AdminSiege implements IAdminCommandHandler
 		adminReply.replace("%castles%", cList.toString());
 		cList = new StringBuilder();
 		i = 0;
-		
 		for (ClanHall clanhall : ClanHallManager.getInstance().getClanHalls().values())
 		{
 			if (clanhall != null)
@@ -306,7 +299,6 @@ public class AdminSiege implements IAdminCommandHandler
 		adminReply.replace("%clanhalls%", cList.toString());
 		cList = new StringBuilder();
 		i = 0;
-		
 		for (ClanHall clanhall : ClanHallManager.getInstance().getFreeClanHalls().values())
 		{
 			if (clanhall != null)
@@ -341,7 +333,6 @@ public class AdminSiege implements IAdminCommandHandler
 		adminReply.replace("%clanhallName%", clanhall.getName());
 		adminReply.replace("%clanhallId%", String.valueOf(clanhall.getId()));
 		final Clan owner = ClanTable.getInstance().getClan(clanhall.getOwnerId());
-		
 		if (owner == null)
 		{
 			adminReply.replace("%clanhallOwner%", "None");

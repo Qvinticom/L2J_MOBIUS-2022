@@ -237,7 +237,6 @@ public class Q00675_WhatTheThreadOfThePastShows extends Quest
 	{
 		final QuestState qs = getQuestState(player, true);
 		String htmltext = getNoQuestMsg(player);
-		
 		switch (qs.getState())
 		{
 			case State.CREATED:

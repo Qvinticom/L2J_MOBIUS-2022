@@ -64,7 +64,6 @@ public class PhysicalAttack extends AbstractEffect
 		final Creature target = info.getEffected();
 		final Creature creature = info.getEffector();
 		final Skill skill = info.getSkill();
-		
 		if (creature.isAlikeDead())
 		{
 			return;
@@ -94,7 +93,6 @@ public class PhysicalAttack extends AbstractEffect
 		}
 		
 		damage = (int) Formulas.calcPhysDam(creature, target, skill, shld, false, ss);
-		
 		if (crit)
 		{
 			damage *= 2;

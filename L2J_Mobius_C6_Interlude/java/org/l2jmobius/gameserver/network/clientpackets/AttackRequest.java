@@ -62,7 +62,6 @@ public class AttackRequest extends GameClientPacket
 		
 		// avoid using expensive operations if not needed
 		final WorldObject target;
-		
 		if (player.getTargetId() == _objectId)
 		{
 			target = player.getTarget();

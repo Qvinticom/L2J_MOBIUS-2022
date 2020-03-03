@@ -638,7 +638,6 @@ public class CastleChamberlain extends AbstractNpcAI
 						final int level = Integer.parseInt(st.nextToken());
 						final int price = getTrapUpgradePrice(level);
 						final int currentLevel = castle.getTrapUpgradeLevel(trapIndex);
-						
 						if (currentLevel >= level)
 						{
 							final NpcHtmlMessage html = getHtmlPacket(player, npc, "chamberlain-19.html");
@@ -1140,7 +1139,6 @@ public class CastleChamberlain extends AbstractNpcAI
 				else if (isMyLord)
 				{
 					final int cloakId = npc.getCastle().getSide() == CastleSide.DARK ? LORD_CLOAK_OF_DARK : LORD_CLOAK_OF_LIGHT;
-					
 					if (hasQuestItems(player, cloakId))
 					{
 						htmltext = "chamberlain-03.html";

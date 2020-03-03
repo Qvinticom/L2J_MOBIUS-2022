@@ -90,7 +90,6 @@ public class SortedWareHouseWithdrawalList implements IClientOutgoingPacket
 	public SortedWareHouseWithdrawalList(PlayerInstance player, int type, WarehouseListType itemtype, byte sortorder)
 	{
 		_whType = type;
-		
 		_playerAdena = player.getAdena();
 		if (player.getActiveWarehouse() == null)
 		{
@@ -328,7 +327,6 @@ public class SortedWareHouseWithdrawalList implements IClientOutgoingPacket
 				{
 					final RecipeList rp1 = rd.getRecipeByItemId(o1.getItemId());
 					final RecipeList rp2 = rd.getRecipeByItemId(o2.getItemId());
-					
 					if (rp1 == null)
 					{
 						return (order == A2Z ? A2Z : Z2A);
@@ -340,7 +338,6 @@ public class SortedWareHouseWithdrawalList implements IClientOutgoingPacket
 					
 					final Integer i1 = rp1.getLevel();
 					final Integer i2 = rp2.getLevel();
-					
 					return (order == A2Z ? i1.compareTo(i2) : i2.compareTo(i1));
 				}
 				catch (Exception e)

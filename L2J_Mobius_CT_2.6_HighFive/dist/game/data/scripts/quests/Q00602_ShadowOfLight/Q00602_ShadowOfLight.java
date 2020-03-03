@@ -83,7 +83,6 @@ public class Q00602_ShadowOfLight extends Quest
 	public String onAdvEvent(String event, Npc npc, PlayerInstance player)
 	{
 		final QuestState qs = getQuestState(player, false);
-		
 		if (qs == null)
 		{
 			return null;
@@ -126,14 +125,12 @@ public class Q00602_ShadowOfLight extends Quest
 	public String onKill(Npc npc, PlayerInstance player, boolean isSummon)
 	{
 		final QuestState qs = getQuestState(player, false);
-		
 		if (qs == null)
 		{
 			return super.onKill(npc, player, isSummon);
 		}
 		
 		final int chance = (npc.getId() == MOBS[0]) ? 560 : 800;
-		
 		if (qs.isCond(1) && (getRandom(1000) < chance))
 		{
 			giveItems(player, EYE_OF_DARKNESS, 1);
@@ -154,7 +151,6 @@ public class Q00602_ShadowOfLight extends Quest
 	{
 		final QuestState qs = getQuestState(player, true);
 		String htmltext = getNoQuestMsg(player);
-		
 		switch (qs.getState())
 		{
 			case State.CREATED:

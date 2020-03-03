@@ -260,7 +260,6 @@ public class Q348_AnArrogantSearch extends Quest
 						else if (cond == 26)
 						{
 							final int count = st.getQuestItemsCount(BLOODED_FABRIC);
-							
 							if ((count + st.getQuestItemsCount(WHITE_FABRIC_ANGELS)) < 10)
 							{
 								htmltext = "30864-54.htm";
@@ -304,7 +303,6 @@ public class Q348_AnArrogantSearch extends Quest
 						else if (cond == 29)
 						{
 							final int count = st.getQuestItemsCount(BLOODED_FABRIC);
-							
 							if ((count + st.getQuestItemsCount(WHITE_FABRIC_ANGELS)) < 10)
 							{
 								htmltext = "30864-54.htm";
@@ -636,7 +634,6 @@ public class Q348_AnArrogantSearch extends Quest
 				npc.broadcastNpcSay("I have the key, do you wish to steal it?");
 				break;
 		}
-		
 		return null;
 	}
 	

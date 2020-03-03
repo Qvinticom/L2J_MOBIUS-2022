@@ -128,7 +128,6 @@ public class Q10385_RedThreadOfFate extends Quest
 			return null;
 		}
 		String htmltext = null;
-		
 		switch (event)
 		{
 			case "33491-02.htm":
@@ -410,11 +409,9 @@ public class Q10385_RedThreadOfFate extends Quest
 		final PlayerInstance player = event.getPlayer();
 		final QuestState qs = getQuestState(player, false);
 		final WorldObject target = player.getTarget();
-		
 		if ((target != null) && target.isNpc() && (target.getId() == LANYA))
 		{
 			final Npc npc = (Npc) player.getTarget();
-			
 			if (((qs != null) && (qs.isCond(3))) && (event.getSocialActionId() == SOCIAL_BOW) && (player.isInsideRadius3D(npc, 120)))
 			{
 				qs.setCond(4, true);
@@ -685,7 +682,6 @@ public class Q10385_RedThreadOfFate extends Quest
 	public String onKill(Npc npc, PlayerInstance killer, boolean isSummon)
 	{
 		final QuestState qs = getQuestState(killer, false);
-		
 		if ((qs != null) && qs.isCond(16))
 		{
 			qs.setCond(17, true);
@@ -700,7 +696,6 @@ public class Q10385_RedThreadOfFate extends Quest
 		{
 			final PlayerInstance player = creature.getActingPlayer();
 			final QuestState qs = getQuestState(player, false);
-			
 			if ((npc.getId() == INVISIBLE_ANGHEL_WATERFALL_NPC) && (qs != null) && qs.isCond(7))
 			{
 				showOnScreenMsg(player, NpcStringId.YOU_HAVE_REACHED_ANGHEL_WATERFALL_GO_INSIDE_THE_CAVE, ExShowScreenMessage.TOP_CENTER, 5000);
@@ -713,7 +708,6 @@ public class Q10385_RedThreadOfFate extends Quest
 	public String onSkillSee(Npc npc, PlayerInstance player, Skill skill, WorldObject[] targets, boolean isSummon)
 	{
 		final QuestState qs = getQuestState(player, false);
-		
 		if ((qs != null) && qs.isStarted() && CommonUtil.contains(targets, npc))
 		{
 			switch (npc.getId())
@@ -776,7 +770,6 @@ public class Q10385_RedThreadOfFate extends Quest
 	{
 		String htmltext = null;
 		final QuestState qs = getQuestState(player, false);
-		
 		if (qs != null)
 		{
 			switch (npc.getId())

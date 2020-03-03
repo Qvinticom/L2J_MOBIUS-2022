@@ -55,7 +55,6 @@ public class RequestRegistBeauty implements IClientIncomingPacket
 		final BeautyData beautyData = BeautyShopData.getInstance().getBeautyData(player.getRace(), player.getAppearance().getSexType());
 		int requiredAdena = 0;
 		int requiredBeautyShopTicket = 0;
-		
 		if (_hairId > 0)
 		{
 			final BeautyItem hair = beautyData.getHairList().get(_hairId);

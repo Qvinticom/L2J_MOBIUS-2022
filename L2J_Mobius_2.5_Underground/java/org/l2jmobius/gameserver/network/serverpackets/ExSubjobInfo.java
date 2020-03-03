@@ -41,10 +41,8 @@ public class ExSubjobInfo implements IClientOutgoingPacket
 		_currClassId = player.getClassId().getId();
 		_currRace = player.getRace().ordinal();
 		_type = type.ordinal();
-		
 		_subs = new ArrayList<>();
 		_subs.add(0, new SubInfo(player));
-		
 		for (SubClass sub : player.getSubClasses().values())
 		{
 			_subs.add(new SubInfo(sub));

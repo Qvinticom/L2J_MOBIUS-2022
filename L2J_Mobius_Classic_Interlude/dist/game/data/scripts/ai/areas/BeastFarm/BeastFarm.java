@@ -249,7 +249,6 @@ public class BeastFarm extends AbstractNpcAI
 		if (CommonUtil.contains(TAMED_BEASTS, nextNpcId))
 		{
 			final TamedBeastInstance nextNpc = new TamedBeastInstance(nextNpcId, player, food, npc.getX(), npc.getY(), npc.getZ(), true);
-			
 			final TamedBeast beast = TAMED_BEAST_DATA.get(getRandom(TAMED_BEAST_DATA.size()));
 			String name = beast.getName();
 			switch (nextNpcId)
@@ -298,7 +297,6 @@ public class BeastFarm extends AbstractNpcAI
 			nextNpc.setRunning();
 			nextNpc.addDamageHate(player, 0, 99999);
 			nextNpc.getAI().setIntention(CtrlIntention.AI_INTENTION_ATTACK, player);
-			
 			player.setTarget(nextNpc);
 		}
 	}

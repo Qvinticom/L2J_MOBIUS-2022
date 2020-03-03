@@ -195,7 +195,6 @@ public class Party extends AbstractPlayerGroup
 				// continue, take another member if this just logged off
 			}
 		}
-		
 		return null;
 	}
 	
@@ -240,7 +239,6 @@ public class Party extends AbstractPlayerGroup
 				break;
 			}
 		}
-		
 		return looter != null ? looter : player;
 	}
 	
@@ -559,7 +557,6 @@ public class Party extends AbstractPlayerGroup
 					final int p1 = _members.indexOf(player);
 					_members.set(0, player);
 					_members.set(p1, temp);
-					
 					SystemMessage msg = new SystemMessage(SystemMessageId.C1_HAS_BECOME_THE_PARTY_LEADER);
 					msg.addString(getLeader().getName());
 					broadcastPacket(msg);
@@ -617,7 +614,6 @@ public class Party extends AbstractPlayerGroup
 		
 		final PlayerInstance target = getActualLooter(player, item.getId(), false, player);
 		target.addItem("Party", item, player, true);
-		
 		if (item.getCount() <= 0)
 		{
 			return;
@@ -657,9 +653,7 @@ public class Party extends AbstractPlayerGroup
 		}
 		
 		final PlayerInstance looter = getActualLooter(player, itemId, spoil, target);
-		
 		looter.addItem(spoil ? "Sweeper Party" : "Party", itemId, itemCount, target, true);
-		
 		if (itemCount <= 0)
 		{
 			return;
@@ -742,10 +736,8 @@ public class Party extends AbstractPlayerGroup
 	public void distributeXpAndSp(double xpReward, double spReward, List<PlayerInstance> rewardedMembers, int topLvl, long partyDmg, Attackable target)
 	{
 		final List<PlayerInstance> validMembers = getValidMembers(rewardedMembers, topLvl);
-		
 		xpReward *= getExpBonus(validMembers.size());
 		spReward *= getSpBonus(validMembers.size());
-		
 		int sqLevelSum = 0;
 		for (PlayerInstance member : validMembers)
 		{
@@ -754,7 +746,6 @@ public class Party extends AbstractPlayerGroup
 		
 		final float vitalityPoints = (target.getVitalityPoints(partyDmg) * Config.RATE_PARTY_XP) / validMembers.size();
 		final boolean useVitalityRate = target.useVitalityRate();
-		
 		for (PlayerInstance member : rewardedMembers)
 		{
 			if (member.isDead())
@@ -767,14 +758,12 @@ public class Party extends AbstractPlayerGroup
 			{
 				// The servitor penalty
 				final float penalty = member.hasServitor() ? ((ServitorInstance) member.getSummon()).getExpMultiplier() : 1;
-				
 				final double sqLevel = member.getLevel() * member.getLevel();
 				final double preCalculation = (sqLevel / sqLevelSum) * penalty;
 				
 				// Add the XP/SP points to the requested party member
 				double addexp = Math.round(member.calcStat(Stat.EXPSP_RATE, xpReward * preCalculation, null, null));
 				final double addsp = member.calcStat(Stat.EXPSP_RATE, spReward * preCalculation, null, null);
-				
 				addexp = calculateExpSpPartyCutoff(member.getActingPlayer(), topLvl, addexp, addsp, useVitalityRate);
 				if (addexp > 0)
 				{
@@ -919,7 +908,6 @@ public class Party extends AbstractPlayerGroup
 		{
 			i = BONUS_EXP_SP.length - 1;
 		}
-		
 		return BONUS_EXP_SP[i];
 	}
 	
@@ -992,7 +980,6 @@ public class Party extends AbstractPlayerGroup
 		_changeRequestDistributionType = partyDistributionType;
 		_changeDistributionTypeAnswers = new HashSet<>();
 		_changeDistributionTypeRequestTask = ThreadPool.schedule(() -> finishLootRequest(false), PARTY_DISTRIBUTION_TYPE_REQUEST_TIMEOUT.toMillis());
-		
 		broadcastToPartyMembers(getLeader(), new ExAskModifyPartyLooting(getLeader().getName(), partyDistributionType));
 		
 		final SystemMessage sm = new SystemMessage(SystemMessageId.REQUESTING_APPROVAL_FOR_CHANGING_PARTY_LOOT_TO_S1);

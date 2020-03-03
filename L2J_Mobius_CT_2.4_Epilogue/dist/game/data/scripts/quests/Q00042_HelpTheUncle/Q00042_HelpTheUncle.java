@@ -122,7 +122,6 @@ public class Q00042_HelpTheUncle extends Quest
 	public String onKill(Npc npc, PlayerInstance player, boolean isSummon)
 	{
 		final QuestState qs = getQuestState(player, false);
-		
 		if ((qs != null) && qs.isCond(2))
 		{
 			giveItems(player, MAP_PIECE, 1);
@@ -143,7 +142,6 @@ public class Q00042_HelpTheUncle extends Quest
 	{
 		final QuestState qs = getQuestState(player, true);
 		String htmltext = getNoQuestMsg(player);
-		
 		switch (npc.getId())
 		{
 			case WATERS:

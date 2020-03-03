@@ -58,7 +58,6 @@ public class Q10739_SupplyAndDemand extends Quest
 		super(10739);
 		addStartNpc(EVNA);
 		addTalkId(EVNA, DENYA, PELU, CERI, SIVANTHE);
-		
 		addCondRace(Race.ERTHEIA, "");
 		addCondLevel(MIN_LEVEL, MAX_LEVEL, "33935-05.htm");
 		addCondCompletedQuest(Q10738_AnInnerBeauty.class.getSimpleName(), "33935-05.htm");
@@ -128,7 +127,6 @@ public class Q10739_SupplyAndDemand extends Quest
 	{
 		final QuestState qs = getQuestState(player, true);
 		String htmltext = getNoQuestMsg(player);
-		
 		switch (npc.getId())
 		{
 			case EVNA:

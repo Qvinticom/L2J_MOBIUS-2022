@@ -96,7 +96,6 @@ public class PetitionManager
 			}
 			_type = PetitionType.values()[petitionType];
 			_content = petitionText;
-			
 			_petitioner = petitioner;
 		}
 		
@@ -227,7 +226,6 @@ public class PetitionManager
 	public void clearCompletedPetitions()
 	{
 		final int numPetitions = _pendingPetitions.size();
-		
 		_completedPetitions.clear();
 		LOGGER.info("PetitionManager: Completed petition data cleared. " + numPetitions + " petition(s) removed.");
 	}
@@ -235,7 +233,6 @@ public class PetitionManager
 	public void clearPendingPetitions()
 	{
 		final int numPetitions = _pendingPetitions.size();
-		
 		_pendingPetitions.clear();
 		LOGGER.info("PetitionManager: Pending petition queue cleared. " + numPetitions + " petition(s) removed.");
 	}
@@ -248,7 +245,6 @@ public class PetitionManager
 		}
 		
 		final Petition currPetition = _pendingPetitions.get(petitionId);
-		
 		if (currPetition.getResponder() != null)
 		{
 			return false;
@@ -360,7 +356,6 @@ public class PetitionManager
 		}
 		
 		int petitionCount = 0;
-		
 		for (Petition currPetition : _pendingPetitions.values())
 		{
 			if (currPetition == null)
@@ -484,7 +479,6 @@ public class PetitionManager
 		}
 		
 		final Petition currPetition = _pendingPetitions.get(petitionId);
-		
 		if (currPetition.getResponder() != null)
 		{
 			return false;
@@ -497,7 +491,6 @@ public class PetitionManager
 	public boolean sendActivePetitionMessage(PlayerInstance player, String messageText)
 	{
 		CreatureSay cs;
-		
 		for (Petition currPetition : _pendingPetitions.values())
 		{
 			if (currPetition == null)
@@ -533,7 +526,6 @@ public class PetitionManager
 	{
 		final StringBuilder htmlContent = new StringBuilder("<html><body><center><font color=\"LEVEL\">Current Petitions</font><br><table width=\"300\">");
 		final SimpleDateFormat dateFormat = new SimpleDateFormat("dd MMM HH:mm z");
-		
 		if (_pendingPetitions.size() == 0)
 		{
 			htmlContent.append("<tr><td colspan=\"4\">There are no currently pending petitions.</td></tr>");
@@ -581,7 +573,6 @@ public class PetitionManager
 		// Notify all GMs that a new petition has been submitted.
 		final String msgContent = petitioner.getName() + " has submitted a new petition."; // (ID: " + newPetitionId + ").";
 		AdminData.broadcastToGMs(new CreatureSay(petitioner.getObjectId(), ChatType.HERO_VOICE, "Petition System", msgContent));
-		
 		return newPetitionId;
 	}
 	
@@ -600,7 +591,6 @@ public class PetitionManager
 		final Petition currPetition = _pendingPetitions.get(petitionId);
 		final StringBuilder htmlContent = new StringBuilder("<html><body>");
 		final SimpleDateFormat dateFormat = new SimpleDateFormat("EEE dd MMM HH:mm z");
-		
 		htmlContent.append("<center><br><font color=\"LEVEL\">Petition #" + currPetition.getId() + "</font><br1>");
 		htmlContent.append("<img src=\"L2UI.SquareGray\" width=\"200\" height=\"1\"></center><br>");
 		htmlContent.append("Submit Time: " + dateFormat.format(new Date(currPetition.getSubmitTime())) + "<br1>");

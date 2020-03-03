@@ -46,7 +46,6 @@ public class PartyClan implements ITargetTypeHandler
 		}
 		
 		final PlayerInstance player = creature.getActingPlayer();
-		
 		if (player == null)
 		{
 			return EMPTY_TARGET_LIST;
@@ -57,7 +56,6 @@ public class PartyClan implements ITargetTypeHandler
 		final int radius = skill.getAffectRange();
 		final boolean hasClan = player.getClan() != null;
 		final boolean hasParty = player.isInParty();
-		
 		if (Skill.addSummon(creature, player, radius, false))
 		{
 			targetList.add(player.getSummon());

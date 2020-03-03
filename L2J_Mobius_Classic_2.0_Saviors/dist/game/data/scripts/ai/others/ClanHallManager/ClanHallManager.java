@@ -103,7 +103,6 @@ public class ClanHallManager extends AbstractNpcAI
 		final String action = st.nextToken();
 		final ClanHall clanHall = npc.getClanHall();
 		String htmltext = null;
-		
 		if ((clanHall != null) && isOwningClan(player, npc))
 		{
 			switch (action)
@@ -316,7 +315,6 @@ public class ClanHallManager extends AbstractNpcAI
 									{
 										final int funcId = Integer.parseInt(st.nextToken());
 										final int funcLv = Integer.parseInt(st.nextToken());
-										
 										final ResidenceFunction oldFunc = clanHall.getFunction(funcId, funcLv);
 										if (oldFunc != null)
 										{
@@ -369,7 +367,6 @@ public class ClanHallManager extends AbstractNpcAI
 									if (st.countTokens() == 2)
 									{
 										final String act = st.nextToken();
-										
 										final ResidenceFunctionType funcType = ResidenceFunctionType.valueOf(st.nextToken());
 										if (funcType != null)
 										{
@@ -427,7 +424,6 @@ public class ClanHallManager extends AbstractNpcAI
 	{
 		String htmltext = null;
 		final ClanHall clanHall = npc.getClanHall();
-		
 		if (isOwningClan(player, npc))
 		{
 			if (clanHall.getCostFailDay() == 0)

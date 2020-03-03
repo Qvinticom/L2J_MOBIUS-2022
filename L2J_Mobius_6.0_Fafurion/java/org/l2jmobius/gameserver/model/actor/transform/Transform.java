@@ -130,7 +130,6 @@ public class Transform implements IIdentifiable
 		{
 			return ((Npc) creature).getTemplate().getSex() == Sex.FEMALE ? _femaleTemplate : _maleTemplate;
 		}
-		
 		return null;
 	}
 	
@@ -209,7 +208,6 @@ public class Transform implements IIdentifiable
 		{
 			return template.getCollisionHeight();
 		}
-		
 		return defaultCollisionHeight;
 	}
 	
@@ -220,7 +218,6 @@ public class Transform implements IIdentifiable
 		{
 			return template.getCollisionRadius();
 		}
-		
 		return defaultCollisionRadius;
 	}
 	
@@ -249,7 +246,6 @@ public class Transform implements IIdentifiable
 			
 			// Get player a bit higher so he doesn't drops underground after transformation happens
 			creature.setXYZ(creature.getX(), creature.getY(), (int) (creature.getZ() + getCollisionHeight(creature, 0)));
-			
 			if (creature.isPlayer())
 			{
 				if (_name != null)
@@ -363,7 +359,6 @@ public class Transform implements IIdentifiable
 			{
 				final PlayerInstance player = creature.getActingPlayer();
 				final boolean hasTransformSkills = player.hasTransformSkills();
-				
 				if (_name != null)
 				{
 					player.getAppearance().setVisibleName(null);
@@ -455,7 +450,6 @@ public class Transform implements IIdentifiable
 	{
 		final int defaultValue = player.getTemplate().getBaseDefBySlot(slot);
 		final TransformTemplate template = getTemplate(player);
-		
 		return template == null ? defaultValue : template.getDefense(slot, defaultValue);
 	}
 	

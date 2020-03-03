@@ -106,7 +106,6 @@ public class Q10320_LetsGoToTheCentralSquare extends Quest
 	{
 		final QuestState qs = getQuestState(player, true);
 		String htmltext = null;
-		
 		switch (qs.getState())
 		{
 			case State.CREATED:
@@ -134,7 +133,6 @@ public class Q10320_LetsGoToTheCentralSquare extends Quest
 		if (creature.isPlayer())
 		{
 			final PlayerInstance player = creature.getActingPlayer();
-			
 			if (player.getVariables().getBoolean(MOVIE_VAR, false))
 			{
 				if (player.getLevel() <= MAX_LEVEL)

@@ -56,7 +56,6 @@ public class JarClassLoader extends ClassLoader
 	private byte[] loadClassData(String name) throws IOException
 	{
 		byte[] classData = null;
-		
 		for (String jarFile : _jars)
 		{
 			boolean breakable = false;
@@ -71,14 +70,12 @@ public class JarClassLoader extends ClassLoader
 				
 				final String fileName = name.replace('.', '/') + ".class";
 				final ZipEntry entry = zipFile.getEntry(fileName);
-				
 				if (entry == null)
 				{
 					continue;
 				}
 				
 				classData = new byte[(int) entry.getSize()];
-				
 				is = zipFile.getInputStream(entry);
 				zipStream = new DataInputStream(is);
 				zipStream.readFully(classData, 0, (int) entry.getSize());

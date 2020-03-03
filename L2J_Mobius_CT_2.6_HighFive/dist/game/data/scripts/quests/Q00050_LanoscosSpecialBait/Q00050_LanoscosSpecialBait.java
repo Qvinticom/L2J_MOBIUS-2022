@@ -89,7 +89,6 @@ public class Q00050_LanoscosSpecialBait extends Quest
 		}
 		
 		final QuestState qs = getQuestState(partyMember, false);
-		
 		if (getQuestItemsCount(player, ESSENCE_OF_WIND) < 100)
 		{
 			final float chance = 33 * Config.RATE_QUEST_DROP;
@@ -103,7 +102,6 @@ public class Q00050_LanoscosSpecialBait extends Quest
 		if (getQuestItemsCount(player, ESSENCE_OF_WIND) >= 100)
 		{
 			qs.setCond(2, true);
-			
 		}
 		
 		return super.onKill(npc, player, isSummon);
@@ -114,7 +112,6 @@ public class Q00050_LanoscosSpecialBait extends Quest
 	{
 		final QuestState qs = getQuestState(player, true);
 		String htmltext = getNoQuestMsg(player);
-		
 		switch (qs.getState())
 		{
 			case State.COMPLETED:

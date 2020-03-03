@@ -144,7 +144,6 @@ public class AdventureGuildsman extends AbstractNpcAI
 	public String onAdvEvent(String event, Npc npc, PlayerInstance player)
 	{
 		String htmltext = null;
-		
 		switch (event)
 		{
 			case "pccafe_list":
@@ -348,7 +347,6 @@ public class AdventureGuildsman extends AbstractNpcAI
 			case "give_talismanR_by_class":
 			{
 				int multisellId = -1;
-				
 				for (Entry<CategoryType, Integer> entry : R_CLASS_TALISMAN.entrySet())
 				{
 					if (player.isInCategory(entry.getKey()))
@@ -367,7 +365,6 @@ public class AdventureGuildsman extends AbstractNpcAI
 			case "give_talismanR90_by_class":
 			{
 				int multisellId = -1;
-				
 				for (Entry<CategoryType, Integer> entry : R90_CLASS_TALISMAN.entrySet())
 				{
 					if (player.isInCategory(entry.getKey()))
@@ -405,7 +402,6 @@ public class AdventureGuildsman extends AbstractNpcAI
 			case "give_talismanR99_by_class":
 			{
 				int multisellId = -1;
-				
 				for (Entry<CategoryType, Integer> entry : R99_CLASS_TALISMAN.entrySet())
 				{
 					if (player.isInCategory(entry.getKey()))

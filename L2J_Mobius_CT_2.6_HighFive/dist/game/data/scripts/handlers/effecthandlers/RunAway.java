@@ -38,7 +38,6 @@ public class RunAway extends AbstractEffect
 		super(attachCond, applyCond, set, params);
 		
 		_power = params.getInt("power", 0);
-		
 		_time = params.getInt("time", 0);
 	}
 	
@@ -67,7 +66,6 @@ public class RunAway extends AbstractEffect
 		}
 		
 		((AttackableAI) info.getEffected().getAI()).setFearTime(_time);
-		
 		info.getEffected().getAI().notifyEvent(CtrlEvent.EVT_AFRAID, info.getEffector(), true);
 	}
 }

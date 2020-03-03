@@ -38,10 +38,8 @@ public class Book implements IItemHandler
 		
 		final PlayerInstance player = (PlayerInstance) playable;
 		final int itemId = item.getId();
-		
 		final String filename = "data/html/help/" + itemId + ".htm";
 		final String content = HtmCache.getInstance().getHtm(player, filename);
-		
 		if (content == null)
 		{
 			final NpcHtmlMessage html = new NpcHtmlMessage(0, item.getId());

@@ -106,7 +106,6 @@ public class Q10417_DaimonTheWhiteEyed extends Quest
 	{
 		final QuestState qs = getQuestState(player, true);
 		String htmltext = getNoQuestMsg(player);
-		
 		if (qs.getState() == State.CREATED)
 		{
 			if (npc.getId() == EYE_OF_ARGOS)
@@ -142,7 +141,6 @@ public class Q10417_DaimonTheWhiteEyed extends Quest
 	public String onKill(Npc npc, PlayerInstance killer, boolean isSummon)
 	{
 		final QuestState qs = getQuestState(killer, false);
-		
 		if ((qs != null) && qs.isCond(1))
 		{
 			qs.setCond(2, true);

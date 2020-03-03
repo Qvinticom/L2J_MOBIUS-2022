@@ -44,13 +44,11 @@ public class AdminPcCafePoints implements IAdminCommandHandler
 	{
 		final StringTokenizer st = new StringTokenizer(command, " ");
 		final String actualCommand = st.nextToken();
-		
 		if (actualCommand.equals("admin_pccafepoints"))
 		{
 			if (st.hasMoreTokens())
 			{
 				final String action = st.nextToken();
-				
 				final PlayerInstance target = getTarget(activeChar);
 				if ((target == null) || !st.hasMoreTokens())
 				{

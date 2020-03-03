@@ -113,7 +113,6 @@ public class Q10521_QueenNavarisLetterVarkaSilenosBarracks extends LetterQuest
 	{
 		final QuestState qs = getQuestState(player, true);
 		String htmltext = getNoQuestMsg(player);
-		
 		if (qs.isStarted())
 		{
 			if (npc.getId() == GREGORY)

@@ -99,7 +99,6 @@ public class CharInfo implements IClientOutgoingPacket
 		_heading = _player.getHeading();
 		_mAtkSpd = _player.getMAtkSpd();
 		_pAtkSpd = (int) _player.getPAtkSpd();
-		
 		_moveMultiplier = player.getMovementSpeedMultiplier();
 		_runSpd = (int) Math.round(player.getRunSpeed() / _moveMultiplier);
 		_walkSpd = (int) Math.round(player.getWalkSpeed() / _moveMultiplier);
@@ -108,7 +107,6 @@ public class CharInfo implements IClientOutgoingPacket
 		_flyRunSpd = player.isFlying() ? _runSpd : 0;
 		_flyWalkSpd = player.isFlying() ? _walkSpd : 0;
 		_gmSeeInvis = gmSeeInvis;
-		
 		_territoryId = TerritoryWarManager.getInstance().getRegisteredTerritoryId(player);
 		_isDisguised = TerritoryWarManager.getInstance().isDisguised(player.getObjectId());
 	}

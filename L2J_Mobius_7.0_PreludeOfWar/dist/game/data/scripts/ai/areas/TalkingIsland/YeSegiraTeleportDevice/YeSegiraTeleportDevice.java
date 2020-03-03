@@ -89,7 +89,6 @@ public class YeSegiraTeleportDevice extends AbstractNpcAI
 		if (LOCATIONS.containsKey(event))
 		{
 			player.teleToLocation(LOCATIONS.get(event), true);
-			
 			if (event.equals("observatory") && player.getVariables().getBoolean(MOVIE_VAR, false))
 			{
 				playMovie(player, Movie.SI_ILLUSION_03_QUE);

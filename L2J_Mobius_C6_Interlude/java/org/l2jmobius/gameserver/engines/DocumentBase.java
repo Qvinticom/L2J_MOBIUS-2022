@@ -257,7 +257,6 @@ public abstract class DocumentBase
 		if (attrs.getNamedItem("time") != null)
 		{
 			time = Integer.decode(getValue(attrs.getNamedItem("time").getNodeValue(), template));
-			
 			if (Config.ENABLE_MODIFY_SKILL_DURATION && Config.SKILL_DURATION_LIST.containsKey(((Skill) template).getId()))
 			{
 				if (((Skill) template).getLevel() < 100)
@@ -280,7 +279,6 @@ public abstract class DocumentBase
 		}
 		
 		boolean self = false;
-		
 		if ((attrs.getNamedItem("self") != null) && (Integer.decode(getValue(attrs.getNamedItem("self").getNodeValue(), template)) == 1))
 		{
 			self = true;
@@ -288,13 +286,10 @@ public abstract class DocumentBase
 		
 		final Lambda lambda = getLambda(n, template);
 		final Condition applayCond = parseCondition(n.getFirstChild(), template);
-		
 		int abnormal = 0;
-		
 		if (attrs.getNamedItem("abnormal") != null)
 		{
 			final String abn = attrs.getNamedItem("abnormal").getNodeValue();
-			
 			if (abn.equals("poison"))
 			{
 				abnormal = Creature.ABNORMAL_EFFECT_POISON;
@@ -322,7 +317,6 @@ public abstract class DocumentBase
 		}
 		
 		float stackOrder = 0;
-		
 		String stackType = "none";
 		if (attrs.getNamedItem("stackType") != null)
 		{
@@ -357,7 +351,6 @@ public abstract class DocumentBase
 		
 		final EffectTemplate lt = new EffectTemplate(attachCond, applayCond, name, lambda, count, time, abnormal, stackType, stackOrder, showIcon, type, effectPower);
 		parseTemplate(n, lt);
-		
 		if (template instanceof Item)
 		{
 			((Item) template).attach(lt);
@@ -375,10 +368,8 @@ public abstract class DocumentBase
 	protected void attachSkill(Node n, Object template, Condition attachCond)
 	{
 		final NamedNodeMap attrs = n.getAttributes();
-		
 		int id = 0;
 		int lvl = 1;
-		
 		if (attrs.getNamedItem("id") != null)
 		{
 			id = Integer.decode(getValue(attrs.getNamedItem("id").getNodeValue(), template));
@@ -390,7 +381,6 @@ public abstract class DocumentBase
 		}
 		
 		final Skill skill = SkillTable.getInstance().getInfo(id, lvl);
-		
 		if (attrs.getNamedItem("chance") != null)
 		{
 			if ((template instanceof Weapon) || (template instanceof Item))

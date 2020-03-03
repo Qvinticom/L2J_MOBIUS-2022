@@ -48,7 +48,6 @@ public class RequestVoteNew implements IClientIncomingPacket
 		}
 		
 		final WorldObject object = player.getTarget();
-		
 		if (!(object instanceof PlayerInstance))
 		{
 			if (object == null)
@@ -63,7 +62,6 @@ public class RequestVoteNew implements IClientIncomingPacket
 		}
 		
 		final PlayerInstance target = (PlayerInstance) object;
-		
 		if (target.getObjectId() != _targetId)
 		{
 			return;

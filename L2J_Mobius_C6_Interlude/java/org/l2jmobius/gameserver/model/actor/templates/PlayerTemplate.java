@@ -156,7 +156,6 @@ public class PlayerTemplate extends CreatureTemplate
 		{
 			return _classId.isMage() ? (female ? 280 : 250) : female ? 220 : 200;
 		}
-		
 		return 400;
 	}
 	

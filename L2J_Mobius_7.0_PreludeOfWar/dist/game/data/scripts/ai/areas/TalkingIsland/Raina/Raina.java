@@ -191,7 +191,6 @@ public class Raina extends AbstractNpcAI
 					final Set<ClassId> availSubs = getAvailableSubClasses(player);
 					final StringBuilder sb = new StringBuilder();
 					final NpcHtmlMessage html = getNpcHtmlMessage(player, npc, "subclassList.html");
-					
 					if ((availSubs == null) || availSubs.isEmpty())
 					{
 						break;
@@ -233,7 +232,6 @@ public class Raina extends AbstractNpcAI
 				{
 					final StringBuilder sb = new StringBuilder();
 					final NpcHtmlMessage html = getNpcHtmlMessage(player, npc, "subclassRemoveList.html");
-					
 					for (SubClass subClass : player.getSubClasses().values())
 					{
 						if (subClass != null)
@@ -309,7 +307,6 @@ public class Raina extends AbstractNpcAI
 				}
 				
 				final CategoryType cType = CategoryType.valueOf(event.replace("addDualClass_", ""));
-				
 				if (cType == null)
 				{
 					LOGGER.warning(getClass().getSimpleName() + ": Cannot parse CategoryType, event: " + event);
@@ -317,7 +314,6 @@ public class Raina extends AbstractNpcAI
 				
 				final StringBuilder sb = new StringBuilder();
 				final NpcHtmlMessage html = getNpcHtmlMessage(player, npc, "addDualClassErtheiaList.html");
-				
 				for (ClassId dualClasses : getDualClasses(player, cType))
 				{
 					if (dualClasses != null)
@@ -394,7 +390,6 @@ public class Raina extends AbstractNpcAI
 			case "reawaken_SIXTH_EOLH_GROUP":
 			{
 				final CategoryType cType = CategoryType.valueOf(event.replace("reawaken_", ""));
-				
 				if (cType == null)
 				{
 					LOGGER.warning(getClass().getSimpleName() + ": Cannot parse CategoryType, event: " + event);
@@ -402,7 +397,6 @@ public class Raina extends AbstractNpcAI
 				
 				final StringBuilder sb = new StringBuilder();
 				final NpcHtmlMessage html = getNpcHtmlMessage(player, npc, "reawakenClassList.html");
-				
 				for (ClassId dualClasses : getDualClasses(player, cType))
 				{
 					if (dualClasses != null)
@@ -469,7 +463,6 @@ public class Raina extends AbstractNpcAI
 				final int classId = event.getReply();
 				final StringBuilder sb = new StringBuilder();
 				final NpcHtmlMessage html = getNpcHtmlMessage(player, npc, "addConfirm.html");
-				
 				if (!isValidNewSubClass(player, classId))
 				{
 					return;
@@ -506,7 +499,6 @@ public class Raina extends AbstractNpcAI
 				final Set<ClassId> availSubs = getAvailableSubClasses(player);
 				final StringBuilder sb = new StringBuilder();
 				final NpcHtmlMessage html = getNpcHtmlMessage(player, npc, "removeSubclassList.html");
-				
 				if ((availSubs == null) || availSubs.isEmpty())
 				{
 					return;
@@ -662,9 +654,7 @@ public class Raina extends AbstractNpcAI
 		final int currentBaseId = player.getBaseClass();
 		final ClassId baseCID = ClassId.getClassId(currentBaseId);
 		final int baseClassId = (CategoryData.getInstance().isInCategory(CategoryType.FOURTH_CLASS_GROUP, baseCID.getId()) || CategoryData.getInstance().isInCategory(CategoryType.FIFTH_CLASS_GROUP, baseCID.getId()) || CategoryData.getInstance().isInCategory(CategoryType.SIXTH_CLASS_GROUP, baseCID.getId())) ? baseCID.getParent().getId() : currentBaseId;
-		
 		final Set<ClassId> availSubs = getSubclasses(player, baseClassId);
-		
 		if ((availSubs != null) && !availSubs.isEmpty())
 		{
 			for (ClassId pclass : availSubs)
@@ -672,11 +662,9 @@ public class Raina extends AbstractNpcAI
 				// scan for already used subclasses
 				final int availClassId = pclass.getId();
 				final ClassId cid = ClassId.getClassId(availClassId);
-				
 				for (SubClass subList : player.getSubClasses().values())
 				{
 					final ClassId subId = ClassId.getClassId(subList.getClassId());
-					
 					if (subId.equalsOrChildOf(cid))
 					{
 						availSubs.remove(cid);
@@ -708,7 +696,6 @@ public class Raina extends AbstractNpcAI
 		for (SubClass subList : player.getSubClasses().values())
 		{
 			subClassId = ClassId.getClassId(subList.getClassId());
-			
 			if (subClassId.equalsOrChildOf(cid))
 			{
 				return false;
@@ -722,7 +709,6 @@ public class Raina extends AbstractNpcAI
 		// we need 2nd occupation ID
 		final int baseClassId = (CategoryData.getInstance().isInCategory(CategoryType.FOURTH_CLASS_GROUP, baseCID.getId()) || CategoryData.getInstance().isInCategory(CategoryType.FIFTH_CLASS_GROUP, baseCID.getId()) || CategoryData.getInstance().isInCategory(CategoryType.SIXTH_CLASS_GROUP, baseCID.getId())) ? baseCID.getParent().getId() : currentBaseId;
 		final Set<ClassId> availSubs = getSubclasses(player, baseClassId);
-		
 		if ((availSubs == null) || availSubs.isEmpty())
 		{
 			return false;
@@ -743,7 +729,6 @@ public class Raina extends AbstractNpcAI
 	private boolean hasAllSubclassLeveled(PlayerInstance player)
 	{
 		boolean leveled = true;
-		
 		for (SubClass sub : player.getSubClasses().values())
 		{
 			if ((sub != null) && (sub.getLevel() < 75))
@@ -757,7 +742,6 @@ public class Raina extends AbstractNpcAI
 	public List<ClassId> getAvailableDualclasses(PlayerInstance player)
 	{
 		final List<ClassId> dualClasses = new ArrayList<>();
-		
 		for (ClassId ClassId : ClassId.values())
 		{
 			if ((ClassId.getRace() != Race.ERTHEIA) && CategoryData.getInstance().isInCategory(CategoryType.SIXTH_CLASS_GROUP, ClassId.getId()) && (ClassId.getId() != player.getClassId().getId()))
@@ -773,7 +757,6 @@ public class Raina extends AbstractNpcAI
 		final List<ClassId> tempList = new ArrayList<>();
 		final int baseClassId = player.getBaseClass();
 		final int dualClassId = player.getClassId().getId();
-		
 		for (ClassId temp : dualClassList)
 		{
 			if ((temp.getId() != baseClassId) && (temp.getId() != dualClassId) && ((cType == null) || CategoryData.getInstance().isInCategory(cType, temp.getId())))
@@ -788,7 +771,6 @@ public class Raina extends AbstractNpcAI
 	{
 		Set<ClassId> subclasses = null;
 		final ClassId pClass = ClassId.getClassId(classId);
-		
 		if (CategoryData.getInstance().isInCategory(CategoryType.THIRD_CLASS_GROUP, classId) || (CategoryData.getInstance().isInCategory(CategoryType.FOURTH_CLASS_GROUP, classId)))
 		{
 			subclasses = EnumSet.copyOf(mainSubclassSet);

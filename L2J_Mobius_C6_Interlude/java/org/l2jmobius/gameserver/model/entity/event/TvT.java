@@ -654,7 +654,6 @@ public class TvT implements EventTask
 		try
 		{
 			_npcSpawn = new Spawn(tmpl);
-			
 			_npcSpawn.setX(_npcX);
 			_npcSpawn.setY(_npcY);
 			_npcSpawn.setZ(_npcZ);
@@ -663,7 +662,6 @@ public class TvT implements EventTask
 			_npcSpawn.setRespawnDelay(1);
 			
 			SpawnTable.getInstance().addNewSpawn(_npcSpawn, false);
-			
 			_npcSpawn.init();
 			_npcSpawn.getLastSpawn().getStatus().setCurrentHp(999999999);
 			_npcSpawn.getLastSpawn().setTitle(_eventName);
@@ -671,7 +669,6 @@ public class TvT implements EventTask
 			_npcSpawn.getLastSpawn().isAggressive();
 			_npcSpawn.getLastSpawn().decayMe();
 			_npcSpawn.getLastSpawn().spawnMe(_npcSpawn.getLastSpawn().getX(), _npcSpawn.getLastSpawn().getY(), _npcSpawn.getLastSpawn().getZ());
-			
 			_npcSpawn.getLastSpawn().broadcastPacket(new MagicSkillUse(_npcSpawn.getLastSpawn(), _npcSpawn.getLastSpawn(), 1034, 1, 1, 1));
 		}
 		catch (Exception e)
@@ -716,7 +713,6 @@ public class TvT implements EventTask
 		}
 		Announcements.getInstance().criticalAnnounceToAll(_eventName + ": Recruiting levels: " + _minlvl + " to " + _maxlvl);
 		Announcements.getInstance().criticalAnnounceToAll(_eventName + ": Joinable in " + _joiningLocationName + ".");
-		
 		if (Config.TVT_COMMAND)
 		{
 			Announcements.getInstance().criticalAnnounceToAll(_eventName + ": Commands .tvtjoin .tvtleave .tvtinfo");
@@ -755,7 +751,6 @@ public class TvT implements EventTask
 		
 		_joining = false;
 		Announcements.getInstance().criticalAnnounceToAll(_eventName + ": Teleport to team spot in 20 seconds!");
-		
 		setUserData();
 		ThreadPool.schedule(() ->
 		{
@@ -771,7 +766,6 @@ public class TvT implements EventTask
 						if (Config.TVT_ON_START_UNSUMMON_PET && (player.getPet() != null))
 						{
 							final Summon summon = player.getPet();
-							
 							summon.stopAllEffects();
 							
 							if (summon instanceof PetInstance)
@@ -813,7 +807,6 @@ public class TvT implements EventTask
 		}
 		
 		_teleport = false;
-		
 		sit();
 		
 		if (Config.TVT_CLOSE_FORT_DOORS)
@@ -828,7 +821,6 @@ public class TvT implements EventTask
 		
 		Announcements.getInstance().criticalAnnounceToAll(_eventName + ": Started. Go to kill your enemies!");
 		_started = true;
-		
 		return true;
 	}
 	
@@ -843,9 +835,7 @@ public class TvT implements EventTask
 		_inProgress = false;
 		_aborted = false;
 		final long delay = _intervalBetweenMatches;
-		
 		Announcements.getInstance().criticalAnnounceToAll(_eventName + ": joining period will be avaible again in " + _intervalBetweenMatches + " minute(s)!");
-		
 		waiter(delay);
 		
 		try
@@ -888,7 +878,6 @@ public class TvT implements EventTask
 			{
 				final PlayerInstance bestKiller = findBestKiller(_players);
 				final PlayerInstance looser = findLooser(_players);
-				
 				if (_topKills != 0)
 				{
 					playKneelAnimation(_topTeam);
@@ -921,7 +910,6 @@ public class TvT implements EventTask
 						Announcements.getInstance().criticalAnnounceToAll(_eventName + ": The event finished with a TIE: " + _topKills + " kills by each team!");
 					}
 					rewardTeam(_topTeam, bestKiller, looser);
-					
 					if (Config.TVT_STATS_LOGGER)
 					{
 						LOGGER.info("**** " + _eventName + " ****");
@@ -947,7 +935,6 @@ public class TvT implements EventTask
 				else
 				{
 					Announcements.getInstance().criticalAnnounceToAll(_eventName + ": The event finished with a TIE: No team wins the match(nobody killed)!");
-					
 					if (Config.TVT_STATS_LOGGER)
 					{
 						LOGGER.info(_eventName + ": No team win the match(nobody killed).");
@@ -1016,7 +1003,6 @@ public class TvT implements EventTask
 	{
 		sit();
 		Announcements.getInstance().criticalAnnounceToAll(_eventName + ": Teleport back to participation NPC in 20 seconds!");
-		
 		ThreadPool.schedule(() ->
 		{
 			synchronized (_players)
@@ -1080,7 +1066,6 @@ public class TvT implements EventTask
 					if (startEvent() && !_aborted)
 					{
 						LOGGER.warning(_eventName + ": waiting.....minutes for event time " + _eventTime);
-						
 						waiter(_eventTime * 60 * 1000); // minutes for event time
 						finishEvent();
 						
@@ -1168,7 +1153,6 @@ public class TvT implements EventTask
 		while (((startWaiterTime + interval) > System.currentTimeMillis()) && !_aborted)
 		{
 			seconds--; // Here because we don't want to see two time announce at the same time
-			
 			if (_joining || _started || _teleport)
 			{
 				switch (seconds)
@@ -1343,9 +1327,7 @@ public class TvT implements EventTask
 		{
 			final List<PlayerInstance> playersShuffleTemp = new ArrayList<>();
 			int loopCount = 0;
-			
 			loopCount = _playersShuffle.size();
-			
 			for (int i = 0; i < loopCount; i++)
 			{
 				playersShuffleTemp.add(_playersShuffle.get(i));
@@ -1444,7 +1426,6 @@ public class TvT implements EventTask
 		{
 			boolean allTeamsEqual = true;
 			int countBefore = -1;
-			
 			for (int playersCount : _teamPlayersCount)
 			{
 				if (countBefore == -1)
@@ -1467,7 +1448,6 @@ public class TvT implements EventTask
 			}
 			
 			countBefore = Integer.MAX_VALUE;
-			
 			for (int teamPlayerCount : _teamPlayersCount)
 			{
 				if (teamPlayerCount < countBefore)
@@ -1477,7 +1457,6 @@ public class TvT implements EventTask
 			}
 			
 			final List<String> joinableTeams = new ArrayList<>();
-			
 			for (String team : _teams)
 			{
 				if (teamPlayersCount(team) == countBefore)
@@ -1648,7 +1627,6 @@ public class TvT implements EventTask
 		_joiningLocationName = "";
 		_savePlayers = new ArrayList<>();
 		_players = new ArrayList<>();
-		
 		_topTeam = "";
 		_teams = new ArrayList<>();
 		_savePlayerTeams = new ArrayList<>();
@@ -1659,14 +1637,12 @@ public class TvT implements EventTask
 		_teamsX = new ArrayList<>();
 		_teamsY = new ArrayList<>();
 		_teamsZ = new ArrayList<>();
-		
 		_joining = false;
 		_teleport = false;
 		_started = false;
 		_sitForced = false;
 		_aborted = false;
 		_inProgress = false;
-		
 		_npcId = 0;
 		_npcX = 0;
 		_npcY = 0;
@@ -1687,10 +1663,8 @@ public class TvT implements EventTask
 		{
 			PreparedStatement statement;
 			ResultSet rs;
-			
 			statement = con.prepareStatement("Select * from tvt");
 			rs = statement.executeQuery();
-			
 			int teams = 0;
 			
 			while (rs.next())
@@ -1758,7 +1732,6 @@ public class TvT implements EventTask
 		try (Connection con = DatabaseFactory.getConnection())
 		{
 			PreparedStatement statement;
-			
 			statement = con.prepareStatement("Delete from tvt");
 			statement.execute();
 			statement.close();
@@ -1792,7 +1765,6 @@ public class TvT implements EventTask
 			for (String teamName : _teams)
 			{
 				final int index = _teams.indexOf(teamName);
-				
 				if (index == -1)
 				{
 					con.close();
@@ -1805,7 +1777,6 @@ public class TvT implements EventTask
 				statement.setInt(4, _teamsY.get(index));
 				statement.setInt(5, _teamsZ.get(index));
 				statement.setInt(6, _teamColors.get(index));
-				
 				statement.execute();
 				statement.close();
 			}
@@ -1826,13 +1797,11 @@ public class TvT implements EventTask
 		try
 		{
 			final NpcHtmlMessage adminReply = new NpcHtmlMessage(5);
-			
 			final StringBuilder replyMSG = new StringBuilder("<html><title>" + _eventName + "</title><body>");
 			replyMSG.append("<center><img src=\"L2UI_CH3.herotower_deco\" width=256 height=32></center><br1>");
 			replyMSG.append("<center><font color=\"3366CC\">Current event:</font></center><br1>");
 			replyMSG.append("<center>Name:&nbsp;<font color=\"00FF00\">" + _eventName + "</font></center><br1>");
 			replyMSG.append("<center>Description:&nbsp;<font color=\"00FF00\">" + _eventDesc + "</font></center><br><br>");
-			
 			if (!_started && !_joining)
 			{
 				replyMSG.append("<center>Wait till the admin/gm start the participation.</center>");
@@ -1866,7 +1835,6 @@ public class TvT implements EventTask
 						}
 						
 						replyMSG.append("<center>Joined Players: <font color=\"00FF00\">" + _playersShuffle.size() + "</font></center><br>");
-						
 						replyMSG.append("<center><font color=\"3366CC\">Wait till event start or remove your participation!</font><center>");
 						replyMSG.append("<center><button value=\"Remove\" action=\"bypass -h npc_" + objectId + "_tvt_player_leave\" width=85 height=21 back=\"L2UI_ch3.Btn1_normalOn\" fore=\"L2UI_ch3.Btn1_normal\"></center>");
 					}
@@ -1876,11 +1844,9 @@ public class TvT implements EventTask
 						replyMSG.append("<center><td width=\"200\">Min lvl: <font color=\"00FF00\">" + _minlvl + "</font></center></td><br>");
 						replyMSG.append("<center><td width=\"200\">Max lvl: <font color=\"00FF00\">" + _maxlvl + "</font></center></td><br><br>");
 						replyMSG.append("<center><font color=\"3366CC\">Teams:</font></center><br>");
-						
 						if (Config.TVT_EVEN_TEAMS.equals("NO") || Config.TVT_EVEN_TEAMS.equals("BALANCE"))
 						{
 							replyMSG.append("<center><table border=\"0\">");
-							
 							for (String team : _teams)
 							{
 								replyMSG.append("<tr><td width=\"100\"><font color=\"LEVEL\">" + team + "</font>&nbsp;(" + teamPlayersCount(team) + " joined)</td>");
@@ -2048,14 +2014,11 @@ public class TvT implements EventTask
 		_playersShuffle = new ArrayList<>();
 		_savePlayers = new ArrayList<>();
 		_savePlayerTeams = new ArrayList<>();
-		
 		_teamPointsCount = new ArrayList<>();
 		_teamPlayersCount = new ArrayList<>();
-		
 		cleanLocalEventInfo();
 		
 		_inProgress = false;
-		
 		loadData();
 	}
 	
@@ -2124,7 +2087,6 @@ public class TvT implements EventTask
 			player.broadcastUserInfo();
 			
 			player.teleToLocation(_teamsX.get(_teams.indexOf(player._teamNameTvT)), _teamsY.get(_teams.indexOf(player._teamNameTvT)), _teamsZ.get(_teams.indexOf(player._teamNameTvT)));
-			
 			afterAddDisconnectedPlayerOperations(player);
 		}
 	}
@@ -2158,7 +2120,6 @@ public class TvT implements EventTask
 				final int playerToAddIndex = Rnd.get(_playersShuffle.size());
 				PlayerInstance player = null;
 				player = _playersShuffle.get(playerToAddIndex);
-				
 				_players.add(player);
 				_players.get(playersCount)._teamNameTvT = _teams.get(teamCount);
 				_savePlayers.add(_players.get(playersCount).getName());
@@ -2229,7 +2190,6 @@ public class TvT implements EventTask
 						
 						final NpcHtmlMessage nhm = new NpcHtmlMessage(5);
 						final StringBuilder replyMSG = new StringBuilder("");
-						
 						replyMSG.append("<html><body>");
 						replyMSG.append("<font color=\"FFFF00\">Your team wins the event. Look in your inventory for the reward.</font>");
 						replyMSG.append("</body></html>");
@@ -2257,7 +2217,6 @@ public class TvT implements EventTask
 						
 						final NpcHtmlMessage nhm = new NpcHtmlMessage(5);
 						final StringBuilder replyMSG = new StringBuilder("");
-						
 						replyMSG.append("<html><body>");
 						replyMSG.append("<font color=\"FFFF00\">Your team had a tie in the event. Look in your inventory for the reward.</font>");
 						replyMSG.append("</body></html>");
@@ -2410,7 +2369,6 @@ public class TvT implements EventTask
 	public static void setTeamPos(String teamName, int x, int y, int z)
 	{
 		final int index = _teams.indexOf(teamName);
-		
 		if (index == -1)
 		{
 			return;
@@ -2434,7 +2392,6 @@ public class TvT implements EventTask
 		}
 		
 		final int index = _teams.indexOf(teamName);
-		
 		if (index == -1)
 		{
 			return;
@@ -2451,12 +2408,10 @@ public class TvT implements EventTask
 	public static int teamPlayersCount(String teamName)
 	{
 		final int index = _teams.indexOf(teamName);
-		
 		if (index == -1)
 		{
 			return -1;
 		}
-		
 		return _teamPlayersCount.get(index);
 	}
 	
@@ -2468,7 +2423,6 @@ public class TvT implements EventTask
 	public static void setTeamPlayersCount(String teamName, int teamPlayersCount)
 	{
 		final int index = _teams.indexOf(teamName);
-		
 		if (index == -1)
 		{
 			return;
@@ -2537,7 +2491,6 @@ public class TvT implements EventTask
 		final long totalTime = actualTime + _intervalBetweenMatches;
 		final long interval = totalTime - actualTime;
 		final int seconds = (int) (interval / 1000);
-		
 		return seconds / 60;
 	}
 	
@@ -2590,12 +2543,10 @@ public class TvT implements EventTask
 	public static int teamKillsCount(String teamName)
 	{
 		final int index = _teams.indexOf(teamName);
-		
 		if (index == -1)
 		{
 			return -1;
 		}
-		
 		return _teamPointsCount.get(index);
 	}
 	
@@ -2607,7 +2558,6 @@ public class TvT implements EventTask
 	public static void setTeamKillsCount(String teamName, int teamKillsCount)
 	{
 		final int index = _teams.indexOf(teamName);
-		
 		if (index == -1)
 		{
 			return;

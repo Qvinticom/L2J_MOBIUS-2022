@@ -248,7 +248,6 @@ public class KartiaHelperElise extends AbstractNpcAI
 		if (creature.isPlayer() || (creature instanceof FriendlyNpcInstance))
 		{
 			final StatSet npcVars = npc.getVariables();
-			
 			if (creature.isPlayer())
 			{
 				npcVars.set("PLAYER_OBJECT", creature.getActingPlayer());

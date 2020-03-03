@@ -182,7 +182,6 @@ public class ClanHall
 			}
 			
 			final long currentTime = System.currentTimeMillis();
-			
 			if (_endDate > currentTime)
 			{
 				ThreadPool.schedule(new FunctionTask(), _endDate - currentTime);
@@ -209,7 +208,6 @@ public class ClanHall
 					{
 						int fee = _fee;
 						boolean newfc = true;
-						
 						if ((_endDate == 0) || (_endDate == -1))
 						{
 							if (_endDate == -1)
@@ -248,7 +246,6 @@ public class ClanHall
 			try (Connection con = DatabaseFactory.getConnection())
 			{
 				PreparedStatement statement;
-				
 				if (newFunction)
 				{
 					statement = con.prepareStatement("INSERT INTO clanhall_functions (hall_id, type, lvl, lease, rate, endTime) VALUES (?,?,?,?,?,?)");
@@ -303,11 +300,9 @@ public class ClanHall
 		_paid = paid;
 		loadDoor();
 		_functions = new HashMap<>();
-		
 		if (ownerId != 0)
 		{
 			_isFree = false;
-			
 			initialyzeTask(false);
 			loadFunctions();
 		}
@@ -418,7 +413,6 @@ public class ClanHall
 		for (int i = 0; i < getDoors().size(); i++)
 		{
 			final DoorInstance door = getDoors().get(i);
-			
 			if (door.getDoorId() == doorId)
 			{
 				return door;
@@ -462,7 +456,6 @@ public class ClanHall
 	{
 		_ownerId = 0;
 		_isFree = true;
-		
 		for (Map.Entry<Integer, ClanHallFunction> fc : _functions.entrySet())
 		{
 			removeFunction(fc.getKey());
@@ -523,12 +516,10 @@ public class ClanHall
 		for (int i = 0; i < getDoors().size(); i++)
 		{
 			DoorInstance door = getDoors().get(i);
-			
 			if (door.getCurrentHp() <= 0)
 			{
 				door.decayMe(); // Kill current if not killed already
 				door = DoorData.createDoor(_doorDefault.get(i));
-				
 				door.spawnMe(door.getX(), door.getY(), door.getZ());
 				getDoors().set(i, door);
 			}
@@ -731,7 +722,6 @@ public class ClanHall
 		try (Connection con = DatabaseFactory.getConnection())
 		{
 			PreparedStatement statement;
-			
 			statement = con.prepareStatement("UPDATE clanhall SET ownerId=?, paidUntil=?, paid=? WHERE id=?");
 			statement.setInt(1, _ownerId);
 			statement.setLong(2, _paidUntil);
@@ -753,7 +743,6 @@ public class ClanHall
 	private void initialyzeTask(boolean forced)
 	{
 		final long currentTime = System.currentTimeMillis();
-		
 		if (_paidUntil > currentTime)
 		{
 			ThreadPool.schedule(new FeeTask(), _paidUntil - currentTime);
@@ -791,7 +780,6 @@ public class ClanHall
 				}
 				
 				final Clan clan = ClanTable.getInstance().getClan(getOwnerId());
-				
 				if (ClanTable.getInstance().getClan(getOwnerId()).getWarehouse().getAdena() >= getLease())
 				{
 					if (_paidUntil != 0)

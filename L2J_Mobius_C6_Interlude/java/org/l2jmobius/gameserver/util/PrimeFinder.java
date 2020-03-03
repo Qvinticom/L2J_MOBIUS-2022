@@ -330,7 +330,6 @@ public class PrimeFinder
 	{ // initializer
 		// The above prime numbers are formatted for human readability.
 		// To find numbers fast, we sort them once and for all.
-		
 		Arrays.sort(PRIME_CAPACITIES);
 	}
 	

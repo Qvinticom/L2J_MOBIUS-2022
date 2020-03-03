@@ -87,7 +87,6 @@ public class CursedWeapon
 			{
 				// Remove from player
 				LOGGER.info(_name + " being removed online.");
-				
 				_player.abortAttack();
 				
 				_player.setKarma(_playerKarma);
@@ -115,7 +114,6 @@ public class CursedWeapon
 					PreparedStatement statement = con.prepareStatement("DELETE FROM items WHERE owner_id=? AND item_id=?");
 					statement.setInt(1, _playerId);
 					statement.setInt(2, _itemId);
-					
 					if (statement.executeUpdate() != 1)
 					{
 						LOGGER.warning("Error while deleting itemId " + _itemId + " from userId " + _playerId);
@@ -128,7 +126,6 @@ public class CursedWeapon
 					statement.setInt(1, _playerKarma);
 					statement.setInt(2, _playerPkKills);
 					statement.setInt(3, _playerId);
-					
 					if (statement.executeUpdate() != 1)
 					{
 						LOGGER.warning("Error while updating karma & pkkills for userId " + _playerId);
@@ -226,7 +223,6 @@ public class CursedWeapon
 			// RedSky and Earthquake
 			final ExRedSky rs = new ExRedSky(10);
 			final Earthquake eq = new Earthquake(player.getX(), player.getY(), player.getZ(), 14, 3);
-			
 			for (PlayerInstance aPlayer : World.getInstance().getAllPlayers())
 			{
 				aPlayer.sendPacket(rs);
@@ -272,7 +268,6 @@ public class CursedWeapon
 		_playerPkKills = 0;
 		_nbKills = 0;
 		_isDropped = true;
-		
 		CursedWeaponsManager.announce(sm);
 	}
 	
@@ -282,7 +277,6 @@ public class CursedWeapon
 	public void giveSkill()
 	{
 		int level = 1 + (_nbKills / _stageKills);
-		
 		if (level > _skillMaxLevel)
 		{
 			level = _skillMaxLevel;
@@ -311,7 +305,6 @@ public class CursedWeapon
 	public void reActivate()
 	{
 		_isActivated = true;
-		
 		if ((_endTime - System.currentTimeMillis()) <= 0)
 		{
 			endOfLife();
@@ -331,9 +324,7 @@ public class CursedWeapon
 			
 			// Start the Life Task
 			_endTime = System.currentTimeMillis() + (_duration * 60000);
-			
 			_removeTask = ThreadPool.scheduleAtFixedRate(new RemoveTask(), _durationLost * 12000, _durationLost * 12000);
-			
 			return true;
 		}
 		return false;
@@ -418,7 +409,6 @@ public class CursedWeapon
 		_player.broadcastUserInfo();
 		
 		_player.broadcastPacket(new SocialAction(_player.getObjectId(), 17));
-		
 		sm = new SystemMessage(SystemMessageId.THE_OWNER_OF_S2_HAS_APPEARED_IN_THE_S1_REGION);
 		sm.addZoneName(_player.getX(), _player.getY(), _player.getZ()); // Region Name
 		sm.addItemName(_item.getItemId());
@@ -543,7 +533,6 @@ public class CursedWeapon
 	public void setEndTime(long endTime)
 	{
 		_endTime = endTime;
-		
 	}
 	
 	public void setPlayer(PlayerInstance player)

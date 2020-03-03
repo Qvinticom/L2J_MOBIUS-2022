@@ -55,7 +55,6 @@ public class SummonItems implements IItemHandler
 		}
 		
 		final PlayerInstance player = (PlayerInstance) playable;
-		
 		if (!player.getFloodProtectors().getItemPetSummon().tryPerformAction("summon pet"))
 		{
 			playable.sendPacket(ActionFailed.STATIC_PACKET);
@@ -128,14 +127,12 @@ public class SummonItems implements IItemHandler
 		}
 		
 		final int npcID = sitem.getNpcId();
-		
 		if (npcID == 0)
 		{
 			return;
 		}
 		
 		final NpcTemplate npcTemplate = NpcTable.getInstance().getTemplate(npcID);
-		
 		if (npcTemplate == null)
 		{
 			return;
@@ -237,7 +234,6 @@ public class SummonItems implements IItemHandler
 			try
 			{
 				final SkillDat skilldat = _player.getCurrentSkill();
-				
 				if (!_player.isCastingNow() || ((skilldat != null) && (skilldat.getSkillId() != 2046)))
 				{
 					return;
@@ -252,7 +248,6 @@ public class SummonItems implements IItemHandler
 				}
 				
 				final PetInstance petSummon = PetInstance.spawnPet(_npcTemplate, _player, _item);
-				
 				if (petSummon == null)
 				{
 					return;

@@ -246,7 +246,6 @@ public class Q00024_InhabitantsOfTheForestOfTheDead extends Quest
 	public String onKill(Npc npc, PlayerInstance player, boolean isSummon)
 	{
 		final QuestState st = getQuestState(player, false);
-		
 		if ((st != null) && st.isCond(9) && (getRandom(100) < 10))
 		{
 			giveItems(player, SUSPICIOUS_TOTEM_DOLL, 1);
@@ -260,7 +259,6 @@ public class Q00024_InhabitantsOfTheForestOfTheDead extends Quest
 	{
 		final QuestState st = getQuestState(player, true);
 		String htmltext = getNoQuestMsg(player);
-		
 		switch (npc.getId())
 		{
 			case DORIAN:

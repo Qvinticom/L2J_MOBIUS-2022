@@ -126,7 +126,6 @@ public class GameServerThread extends Thread
 				}
 				
 				byte[] data = new byte[length - 2];
-				
 				int receivedBytes = 0;
 				int newBytes = 0;
 				
@@ -145,7 +144,6 @@ public class GameServerThread extends Thread
 				// decrypt if we have a key
 				data = _blowfish.decrypt(data);
 				checksumOk = NewCrypt.verifyChecksum(data);
-				
 				if (!checksumOk)
 				{
 					LOGGER.warning("Incorrect packet checksum, closing connection (LS)");
@@ -228,7 +226,6 @@ public class GameServerThread extends Thread
 	private void onGameServerAuth(byte[] data) throws IOException
 	{
 		handleRegProcess(new GameServerAuth(data));
-		
 		if (isAuthed())
 		{
 			final AuthResponse ar = new AuthResponse(_gsi.getId());
@@ -242,7 +239,6 @@ public class GameServerThread extends Thread
 		{
 			final PlayerInGame pig = new PlayerInGame(data);
 			final List<String> newAccounts = pig.getAccounts();
-			
 			for (String account : newAccounts)
 			{
 				_accountsOnGameServer.add(account);
@@ -288,7 +284,6 @@ public class GameServerThread extends Thread
 			final PlayerAuthRequest par = new PlayerAuthRequest(data);
 			PlayerAuthResponse authResponse;
 			final SessionKey key = LoginController.getInstance().getKeyForAccount(par.getAccount());
-			
 			if ((key != null) && key.equals(par.getKey()))
 			{
 				LoginController.getInstance().removeAuthedLoginClient(par.getAccount());
@@ -321,10 +316,8 @@ public class GameServerThread extends Thread
 	private void handleRegProcess(GameServerAuth gameServerAuth)
 	{
 		final GameServerTable gameServerTable = GameServerTable.getInstance();
-		
 		final int id = gameServerAuth.getDesiredID();
 		final byte[] hexId = gameServerAuth.getHexID();
-		
 		GameServerInfo gsi = gameServerTable.getRegisteredGameServerById(id);
 		// is there a gameserver registered with this id?
 		if (gsi != null)
@@ -350,7 +343,6 @@ public class GameServerThread extends Thread
 			if (Config.ACCEPT_NEW_GAMESERVER && gameServerAuth.acceptAlternateID())
 			{
 				gsi = new GameServerInfo(id, hexId, this);
-				
 				if (gameServerTable.registerWithFirstAvaliableId(gsi))
 				{
 					attachGameServerInfo(gsi, gameServerAuth);
@@ -371,7 +363,6 @@ public class GameServerThread extends Thread
 		if (Config.ACCEPT_NEW_GAMESERVER)
 		{
 			gsi = new GameServerInfo(id, hexId, this);
-			
 			if (gameServerTable.register(id, gsi))
 			{
 				attachGameServerInfo(gsi, gameServerAuth);
@@ -509,7 +500,6 @@ public class GameServerThread extends Thread
 	{
 		final String oldInternal = _gsi.getInternalHost();
 		final String oldExternal = _gsi.getExternalHost();
-		
 		_gsi.setExternalHost(gameExternalHost);
 		_gsi.setInternalIp(gameInternalHost);
 		
@@ -546,7 +536,6 @@ public class GameServerThread extends Thread
 		}
 		
 		LOGGER.info("Updated Gameserver [" + getServerId() + "] " + GameServerTable.getInstance().getServerNameById(getServerId()) + " IP's:");
-		
 		if ((oldInternal == null) || !oldInternal.equalsIgnoreCase(gameInternalHost))
 		{
 			LOGGER.info("InternalIP: " + gameInternalHost);
@@ -567,7 +556,6 @@ public class GameServerThread extends Thread
 		{
 			return false;
 		}
-		
 		return _gsi.isAuthed();
 	}
 	
@@ -595,7 +583,6 @@ public class GameServerThread extends Thread
 		{
 			return _gsi.getId();
 		}
-		
 		return -1;
 	}
 }

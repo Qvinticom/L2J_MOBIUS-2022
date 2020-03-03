@@ -87,7 +87,6 @@ public class Q10345_DayOfDestinyDwarfsFate extends ThirdClassTransferQuest
 	{
 		String htmltext = getNoQuestMsg(player);
 		final QuestState qs = getQuestState(player, true);
-		
 		if (npc.getId() == FERRIS)
 		{
 			if (qs.getState() == State.CREATED)

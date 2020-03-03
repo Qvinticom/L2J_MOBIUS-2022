@@ -69,12 +69,9 @@ public abstract class ZoneType extends ListenersContainer
 	protected ZoneType(int id)
 	{
 		_id = id;
-		
 		_minLvl = 0;
 		_maxLvl = 0xFF;
-		
 		_classType = 0;
-		
 		_race = null;
 		_class = null;
 		_allowStore = true;
@@ -125,7 +122,6 @@ public abstract class ZoneType extends ListenersContainer
 			else
 			{
 				final int[] temp = new int[_race.length + 1];
-				
 				int i = 0;
 				for (; i < _race.length; i++)
 				{
@@ -133,7 +129,6 @@ public abstract class ZoneType extends ListenersContainer
 				}
 				
 				temp[i] = Integer.parseInt(value);
-				
 				_race = temp;
 			}
 		}
@@ -149,7 +144,6 @@ public abstract class ZoneType extends ListenersContainer
 			else
 			{
 				final int[] temp = new int[_class.length + 1];
-				
 				int i = 0;
 				for (; i < _class.length; i++)
 				{
@@ -157,7 +151,6 @@ public abstract class ZoneType extends ListenersContainer
 				}
 				
 				temp[i] = Integer.parseInt(value);
-				
 				_class = temp;
 			}
 		}
@@ -253,7 +246,6 @@ public abstract class ZoneType extends ListenersContainer
 			if (_race != null)
 			{
 				boolean ok = false;
-				
 				for (int element : _race)
 				{
 					if (creature.getRace().ordinal() == element)
@@ -273,7 +265,6 @@ public abstract class ZoneType extends ListenersContainer
 			if (_class != null)
 			{
 				boolean ok = false;
-				
 				for (int _clas : _class)
 				{
 					if (((PlayerInstance) creature).getClassId().getId() == _clas)
@@ -519,7 +510,6 @@ public abstract class ZoneType extends ListenersContainer
 				players.add(ch.getActingPlayer());
 			}
 		}
-		
 		return players;
 	}
 	
@@ -607,7 +597,6 @@ public abstract class ZoneType extends ListenersContainer
 		{
 			return _enabledInInstance.getOrDefault(instanceId, _enabled);
 		}
-		
 		return _enabled;
 	}
 	

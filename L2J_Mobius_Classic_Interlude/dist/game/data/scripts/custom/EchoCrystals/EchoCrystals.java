@@ -101,7 +101,6 @@ public class EchoCrystals extends AbstractNpcAI
 	public String onAdvEvent(String event, Npc npc, PlayerInstance player)
 	{
 		String htmltext = "";
-		
 		if (Util.isDigit(event))
 		{
 			final int score = Integer.parseInt(event);
@@ -111,7 +110,6 @@ public class EchoCrystals extends AbstractNpcAI
 				final String ok = SCORES.get(score).getOkMsg();
 				final String noadena = SCORES.get(score).getNoAdenaMsg();
 				final String noscore = SCORES.get(score).getNoScoreMsg();
-				
 				if (!hasQuestItems(player, score))
 				{
 					htmltext = npc.getId() + "-" + noscore + ".htm";
@@ -128,11 +126,6 @@ public class EchoCrystals extends AbstractNpcAI
 				}
 			}
 		}
-		else
-		{
-			return htmltext;
-		}
-		
 		return htmltext;
 	}
 	

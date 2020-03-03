@@ -74,7 +74,6 @@ public class RequestRestartPoint implements IClientIncomingPacket
 	public void run(GameClient client)
 	{
 		final PlayerInstance player = client.getPlayer();
-		
 		if (player == null)
 		{
 			return;
@@ -145,7 +144,6 @@ public class RequestRestartPoint implements IClientIncomingPacket
 				}
 				loc = MapRegionManager.getInstance().getTeleToLocation(player, TeleportWhereType.CLANHALL);
 				final ClanHall residense = ClanHallData.getInstance().getClanHallByClan(player.getClan());
-				
 				if ((residense != null) && (residense.hasFunction(ResidenceFunctionType.EXP_RESTORE)))
 				{
 					player.restoreExp(residense.getFunction(ResidenceFunctionType.EXP_RESTORE).getValue());
@@ -222,7 +220,6 @@ public class RequestRestartPoint implements IClientIncomingPacket
 				SiegeClan siegeClan = null;
 				final Castle castle = CastleManager.getInstance().getCastle(player);
 				final Fort fort = FortManager.getInstance().getFort(player);
-				
 				if ((castle != null) && castle.getSiege().isInProgress())
 				{
 					siegeClan = castle.getSiege().getAttackerClan(player.getClan());

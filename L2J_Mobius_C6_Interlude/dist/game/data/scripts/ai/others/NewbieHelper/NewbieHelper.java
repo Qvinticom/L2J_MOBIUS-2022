@@ -183,7 +183,6 @@ public class NewbieHelper extends Quest
 		
 		final int ex = qs2.getInt("Ex");
 		final int classId = qs1.getPlayer().getClassId().getId();
-		
 		if (event.equalsIgnoreCase("TimerEx_NewbieHelper"))
 		{
 			if (ex == 0)
@@ -266,7 +265,6 @@ public class NewbieHelper extends Quest
 		final int level = player.getLevel();
 		final boolean isMage = player.isMageClass();
 		final boolean isOrcMage = player.getClassId().getId() == 49;
-		
 		int npcType = 0;
 		int raceId = 0;
 		int item = 0;

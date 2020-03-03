@@ -44,7 +44,6 @@ public class TradeStart extends GameServerPacket
 		writeC(0x1E);
 		writeD(_player.getActiveTradeList().getPartner().getObjectId());
 		// writeD((_activeChar != null || _activeChar.getTransactionRequester() != null)? _activeChar.getTransactionRequester().getObjectId() : 0);
-		
 		writeH(_itemList.length);
 		for (ItemInstance item : _itemList)// int i = 0; i < count; i++)
 		{

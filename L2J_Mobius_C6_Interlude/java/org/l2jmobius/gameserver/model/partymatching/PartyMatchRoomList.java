@@ -92,7 +92,6 @@ public class PartyMatchRoomList
 				}
 			}
 		}
-		
 		return null;
 	}
 	
@@ -108,7 +107,6 @@ public class PartyMatchRoomList
 				}
 			}
 		}
-		
 		return -1;
 	}
 	

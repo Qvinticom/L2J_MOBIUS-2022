@@ -378,7 +378,6 @@ public class WorldRegion
 				final NpcInstance target = (NpcInstance) obj;
 				target.deleteMe();
 				final Spawn spawn = target.getSpawn();
-				
 				if (spawn != null)
 				{
 					spawn.stopRespawn();
@@ -406,7 +405,6 @@ public class WorldRegion
 			final int down = y - range;
 			final int left = x + range;
 			final int right = x - range;
-			
 			for (ZoneType e : _zoneManager.getZones())
 			{
 				if (e instanceof PeaceZone)

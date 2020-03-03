@@ -152,7 +152,6 @@ public abstract class AbstractScript extends ManagedScript
 			{
 				final RegisterEvent listener = method.getAnnotation(RegisterEvent.class);
 				final RegisterType regType = method.getAnnotation(RegisterType.class);
-				
 				final ListenerRegisterType type = regType.value();
 				final EventType eventType = listener.value();
 				if (method.getParameterCount() != 1)
@@ -1864,7 +1863,6 @@ public abstract class AbstractScript extends ManagedScript
 					offset *= -1;
 				}
 				x += offset;
-				
 				offset = Rnd.get(50, 100);
 				if (Rnd.nextBoolean())
 				{
@@ -2387,7 +2385,6 @@ public abstract class AbstractScript extends ManagedScript
 	public static boolean giveItemRandomly(PlayerInstance player, Npc npc, int itemId, long minAmount, long maxAmount, long limit, double dropChance, boolean playSound)
 	{
 		final long currentCount = getQuestItemsCount(player, itemId);
-		
 		if ((limit > 0) && (currentCount >= limit))
 		{
 			return true;

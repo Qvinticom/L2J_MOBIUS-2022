@@ -156,7 +156,6 @@ public class ChanceSkillList extends ConcurrentHashMap<Skill, ChanceCondition>
 				
 				final ISkillHandler handler = SkillHandler.getInstance().getSkillHandler(skill.getSkillType());
 				final WorldObject[] targets = skill.getTargetList(_owner, false, target);
-				
 				_owner.broadcastPacket(new MagicSkillLaunched(_owner, skill.getDisplayId(), skill.getLevel(), targets));
 				_owner.broadcastPacket(new MagicSkillUse(_owner, (Creature) targets[0], skill.getDisplayId(), skill.getLevel(), 0, 0));
 				

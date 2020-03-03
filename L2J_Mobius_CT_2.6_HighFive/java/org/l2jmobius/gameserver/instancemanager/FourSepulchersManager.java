@@ -175,12 +175,10 @@ public class FourSepulchersManager
 		_changeEntryTimeTask = null;
 		_changeWarmUpTimeTask = null;
 		_changeAttackTimeTask = null;
-		
 		_inEntryTime = false;
 		_inWarmUpTime = false;
 		_inAttackTime = false;
 		_inCoolDownTime = false;
-		
 		_firstTimeRun = true;
 		initFixedInfo();
 		loadMysteriousBox();
@@ -269,7 +267,6 @@ public class FourSepulchersManager
 	protected void spawnManagers()
 	{
 		_managers = new CopyOnWriteArrayList<>();
-		
 		for (int npcId = 31921; npcId <= 31924; npcId++)
 		{
 			try
@@ -467,7 +464,6 @@ public class FourSepulchersManager
 				while (rs1.next())
 				{
 					final int keyNpcId = rs1.getInt("key_npc_id");
-					
 					ps2.setInt(1, keyNpcId);
 					ps2.setInt(2, 1);
 					try (ResultSet rs2 = ps2.executeQuery())
@@ -512,7 +508,6 @@ public class FourSepulchersManager
 				while (rs1.next())
 				{
 					final int keyNpcId = rs1.getInt("key_npc_id");
-					
 					ps2.setInt(1, keyNpcId);
 					ps2.setInt(2, 2);
 					try (ResultSet rset2 = ps2.executeQuery())
@@ -559,7 +554,6 @@ public class FourSepulchersManager
 				while (rs1.next())
 				{
 					final int keyNpcId = rs1.getInt("key_npc_id");
-					
 					ps2.setInt(1, keyNpcId);
 					ps2.setInt(2, 5);
 					try (ResultSet rset2 = ps2.executeQuery())
@@ -608,7 +602,6 @@ public class FourSepulchersManager
 				while (rs1.next())
 				{
 					final int keyNpcId = rs1.getInt("key_npc_id");
-					
 					ps2.setInt(1, keyNpcId);
 					ps2.setInt(2, 6);
 					try (ResultSet rs2 = ps2.executeQuery())
@@ -944,7 +937,6 @@ public class FourSepulchersManager
 		}
 		
 		showHtmlFile(player, npcId + "-OK.htm", npc, null);
-		
 		entry(npcId, player);
 	}
 	
@@ -953,7 +945,6 @@ public class FourSepulchersManager
 		final int[] loc = _startHallSpawns.get(npcId);
 		int driftx;
 		int drifty;
-		
 		if (Config.FS_PARTY_MEMBER_COUNT > 1)
 		{
 			final List<PlayerInstance> members = new LinkedList<>();
@@ -1070,7 +1061,6 @@ public class FourSepulchersManager
 		
 		boolean spawnKeyBoxMob = false;
 		boolean spawnedKeyBoxMob = false;
-		
 		for (Spawn spawnDat : monsterList)
 		{
 			if (spawnedKeyBoxMob)
@@ -1100,7 +1090,6 @@ public class FourSepulchersManager
 			}
 			
 			SepulcherMonsterInstance mob = null;
-			
 			if (spawnKeyBoxMob)
 			{
 				try
@@ -1488,9 +1477,7 @@ public class FourSepulchersManager
 			}
 			
 			min = minuteSelect(min);
-			
 			NpcStringId msg = NpcStringId.MINUTE_S_HAVE_PASSED;
-			
 			if (min == 90)
 			{
 				msg = NpcStringId.GAME_OVER_THE_TELEPORT_WILL_APPEAR_MOMENTARILY;

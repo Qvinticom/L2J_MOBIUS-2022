@@ -239,7 +239,6 @@ public class SpawnTable implements IXmlReader
 								}
 								
 								spawnInfo.set("fileName", f.getPath());
-								
 								_spanwCount += addSpawn(spawnInfo, map);
 							}
 						}

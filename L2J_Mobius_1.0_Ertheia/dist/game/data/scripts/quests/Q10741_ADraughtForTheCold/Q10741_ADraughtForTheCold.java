@@ -51,7 +51,6 @@ public class Q10741_ADraughtForTheCold extends Quest
 		addStartNpc(SIVANTHE);
 		addTalkId(SIVANTHE, LEIRA);
 		addKillId(HONEY_BEE, KIKU, ROBUST_HONEY_BEE);
-		
 		addCondRace(Race.ERTHEIA, "");
 		addCondLevel(MIN_LEVEL, MAX_LEVEL, "33951-00.htm");
 		registerQuestItems(EMPTY_HONEY_JAR, SWEET_HONEY, NUTRITIOUS_MEAT);
@@ -102,7 +101,6 @@ public class Q10741_ADraughtForTheCold extends Quest
 	{
 		final QuestState qs = getQuestState(player, true);
 		String htmltext = getNoQuestMsg(player);
-		
 		switch (npc.getId())
 		{
 			case SIVANTHE:

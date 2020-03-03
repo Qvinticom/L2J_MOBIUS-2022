@@ -90,7 +90,6 @@ public class Q00777_SlayDarkLordTiat extends Quest
 	{
 		final QuestState qs = getQuestState(player, true);
 		String htmltext = getNoQuestMsg(player);
-		
 		if (npc.getId() == ALLENOS)
 		{
 			switch (qs.getState())

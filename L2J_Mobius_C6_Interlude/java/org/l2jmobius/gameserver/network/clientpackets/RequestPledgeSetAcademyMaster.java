@@ -45,7 +45,6 @@ public class RequestPledgeSetAcademyMaster extends GameClientPacket
 	{
 		final PlayerInstance player = getClient().getPlayer();
 		final Clan clan = player.getClan();
-		
 		if (clan == null)
 		{
 			return;
@@ -59,7 +58,6 @@ public class RequestPledgeSetAcademyMaster extends GameClientPacket
 		
 		final ClanMember currentMember = clan.getClanMember(_currPlayerName);
 		final ClanMember targetMember = clan.getClanMember(_targetPlayerName);
-		
 		if ((currentMember == null) || (targetMember == null))
 		{
 			return;
@@ -67,7 +65,6 @@ public class RequestPledgeSetAcademyMaster extends GameClientPacket
 		
 		ClanMember apprenticeMember;
 		ClanMember sponsorMember;
-		
 		if (currentMember.getPledgeType() == Clan.SUBUNIT_ACADEMY)
 		{
 			apprenticeMember = currentMember;
@@ -81,9 +78,7 @@ public class RequestPledgeSetAcademyMaster extends GameClientPacket
 		
 		final PlayerInstance apprentice = apprenticeMember.getPlayerInstance();
 		final PlayerInstance sponsor = sponsorMember.getPlayerInstance();
-		
 		SystemMessage sm = null;
-		
 		if (_set == 0)
 		{
 			// test: do we get the current sponsor & apprentice from this packet or no?
@@ -109,7 +104,6 @@ public class RequestPledgeSetAcademyMaster extends GameClientPacket
 			
 			apprenticeMember.saveApprenticeAndSponsor(0, 0);
 			sponsorMember.saveApprenticeAndSponsor(0, 0);
-			
 			sm = new SystemMessage(SystemMessageId.S2_CLAN_MEMBER_S1_S_APPRENTICE_HAS_BEEN_REMOVED);
 		}
 		else
@@ -143,7 +137,6 @@ public class RequestPledgeSetAcademyMaster extends GameClientPacket
 			// saving to database even if online, since both must match
 			apprenticeMember.saveApprenticeAndSponsor(0, sponsorMember.getObjectId());
 			sponsorMember.saveApprenticeAndSponsor(apprenticeMember.getObjectId(), 0);
-			
 			sm = new SystemMessage(SystemMessageId.S2_HAS_BEEN_DESIGNATED_AS_THE_APPRENTICE_OF_CLAN_MEMBER_S1);
 		}
 		sm.addString(sponsorMember.getName());

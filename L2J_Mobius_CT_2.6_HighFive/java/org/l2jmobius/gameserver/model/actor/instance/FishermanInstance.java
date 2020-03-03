@@ -49,7 +49,6 @@ public class FishermanInstance extends MerchantInstance
 	public String getHtmlPath(int npcId, int value)
 	{
 		String pom = "";
-		
 		if (value == 0)
 		{
 			pom = Integer.toString(npcId);
@@ -58,7 +57,6 @@ public class FishermanInstance extends MerchantInstance
 		{
 			pom = npcId + "-" + value;
 		}
-		
 		return "data/html/fisherman/" + pom + ".htm";
 	}
 	
@@ -108,13 +106,10 @@ public class FishermanInstance extends MerchantInstance
 	{
 		final List<SkillLearn> skills = SkillTreeData.getInstance().getAvailableFishingSkills(player);
 		final AcquireSkillList asl = new AcquireSkillList(AcquireSkillType.FISHING);
-		
 		int count = 0;
-		
 		for (SkillLearn s : skills)
 		{
 			final Skill sk = SkillData.getInstance().getSkill(s.getSkillId(), s.getSkillLevel());
-			
 			if (sk == null)
 			{
 				continue;

@@ -34,7 +34,6 @@ public class RecipeShopManageList implements IClientOutgoingPacket
 	{
 		_seller = seller;
 		_isDwarven = isDwarven;
-		
 		if (_isDwarven && _seller.hasDwarvenCraft())
 		{
 			_recipes = _seller.getDwarvenRecipeBook();

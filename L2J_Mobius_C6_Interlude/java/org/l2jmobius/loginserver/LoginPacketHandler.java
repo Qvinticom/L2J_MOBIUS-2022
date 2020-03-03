@@ -40,7 +40,6 @@ public class LoginPacketHandler implements IPacketHandler<LoginClient>
 	public ReceivablePacket<LoginClient> handlePacket(ByteBuffer buf, LoginClient client)
 	{
 		final int opcode = buf.get() & 0xFF;
-		
 		ReceivablePacket<LoginClient> packet = null;
 		final LoginClientState state = client.getState();
 		
@@ -87,7 +86,6 @@ public class LoginPacketHandler implements IPacketHandler<LoginClient>
 				break;
 			}
 		}
-		
 		return packet;
 	}
 	

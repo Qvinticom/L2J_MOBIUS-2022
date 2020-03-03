@@ -81,7 +81,6 @@ public class Q00148_PathtoBecominganExaltedMercenary extends Quest
 	{
 		final QuestState qs = getQuestState(player, true);
 		String htmltext = getNoQuestMsg(player);
-		
 		switch (qs.getState())
 		{
 			case State.CREATED:

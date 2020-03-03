@@ -479,7 +479,6 @@ public class EffectList
 			stopEffects(i -> i.isAbnormalType(type), true, true);
 			return true;
 		}
-		
 		return false;
 	}
 	
@@ -495,7 +494,6 @@ public class EffectList
 			stopEffects(i -> types.contains(i.getSkill().getAbnormalType()), true, true);
 			return true;
 		}
-		
 		return false;
 	}
 	
@@ -585,7 +583,6 @@ public class EffectList
 				}
 			}
 		}
-		
 		return false;
 	}
 	
@@ -734,7 +731,6 @@ public class EffectList
 			
 			// Decrease specific buff count
 			increaseDecreaseCount(info, false);
-			
 			info.getSkill().applyEffectScope(EffectScope.END, info, true, false);
 		}
 	}
@@ -977,7 +973,6 @@ public class EffectList
 			final Optional<AbnormalStatusUpdate> asu = (_owner.isPlayer() && !partyOnly) ? Optional.of(new AbnormalStatusUpdate()) : Optional.empty();
 			final Optional<PartySpelled> ps = ((party != null) || _owner.isSummon()) ? Optional.of(new PartySpelled(_owner)) : Optional.empty();
 			final Optional<ExOlympiadSpelledInfo> os = (player.isInOlympiadMode() && player.isOlympiadStart()) ? Optional.of(new ExOlympiadSpelledInfo(player)) : Optional.empty();
-			
 			if (!_actives.isEmpty())
 			{
 				//@formatter:off

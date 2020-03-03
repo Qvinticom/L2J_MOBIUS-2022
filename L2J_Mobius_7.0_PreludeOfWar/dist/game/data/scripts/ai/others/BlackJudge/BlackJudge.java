@@ -41,7 +41,6 @@ public class BlackJudge extends AbstractNpcAI
 	public String onAdvEvent(String event, Npc npc, PlayerInstance player)
 	{
 		String htmltext = null;
-		
 		if (event.equals("weakenBreath"))
 		{
 			if (player.getShilensBreathDebuffLevel() >= 3)

@@ -174,7 +174,6 @@ public class Util
 		}
 		final char[] arr = str.toCharArray();
 		final char c = arr[0];
-		
 		if (Character.isLetter(c))
 		{
 			arr[0] = Character.toUpperCase(c);
@@ -235,7 +234,6 @@ public class Util
 		{
 			return true; // not limited
 		}
-		
 		return calculateDistance(obj1, obj2, includeZAxis, false) <= range;
 	}
 	

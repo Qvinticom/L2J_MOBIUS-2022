@@ -90,7 +90,6 @@ public class Q10324_FindingMagisterGallint extends Quest
 	{
 		final QuestState qs = getQuestState(player, true);
 		String htmltext = null;
-		
 		switch (qs.getState())
 		{
 			case State.CREATED:

@@ -65,7 +65,6 @@ public class Loto implements IBypassHandler
 			}
 		}
 		showLotoWindow(player, (Npc) target, val);
-		
 		return false;
 	}
 	
@@ -94,7 +93,6 @@ public class Loto implements IBypassHandler
 		String filename;
 		SystemMessage sm;
 		final NpcHtmlMessage html = new NpcHtmlMessage(npc.getObjectId());
-		
 		if (value == 0) // 0 - first buy lottery ticket window
 		{
 			filename = (npc.getHtmlPath(npcId, 1, player));
@@ -117,7 +115,6 @@ public class Loto implements IBypassHandler
 			
 			filename = (npc.getHtmlPath(npcId, 5, player));
 			html.setFile(player, filename);
-			
 			int count = 0;
 			int found = 0;
 			// counting buttons and unsetting button if found
@@ -192,7 +189,6 @@ public class Loto implements IBypassHandler
 			final int lotonumber = Lottery.getInstance().getId();
 			int enchant = 0;
 			int type2 = 0;
-			
 			for (int i = 0; i < 5; i++)
 			{
 				if (player.getLoto(i) == 0)
@@ -231,7 +227,6 @@ public class Loto implements IBypassHandler
 			item.setEnchantLevel(enchant);
 			item.setCustomType2(type2);
 			player.getInventory().addItem("Loto", item, player, npc);
-			
 			filename = (npc.getHtmlPath(npcId, 6, player));
 			html.setFile(player, filename);
 		}
@@ -312,7 +307,6 @@ public class Loto implements IBypassHandler
 				return;
 			}
 			final long[] check = Lottery.getInstance().checkTicket(item);
-			
 			sm = new SystemMessage(SystemMessageId.S1_HAS_DISAPPEARED);
 			sm.addItemName(4442);
 			player.sendPacket(sm);

@@ -253,7 +253,6 @@ public class Attackable extends Npc
 		if (isMonster())
 		{
 			MonsterInstance master = (MonsterInstance) this;
-			
 			if (master.hasMinions())
 			{
 				master.getMinionList().onAssist(this, attacker);
@@ -343,7 +342,6 @@ public class Attackable extends Npc
 			
 			// NOTE: Concurrent-safe map is used because while iterating to verify all conditions sometimes an entry must be removed.
 			final Map<PlayerInstance, DamageDoneInfo> rewards = new ConcurrentHashMap<>();
-			
 			PlayerInstance maxDealer = null;
 			long maxDamage = 0;
 			long totalDamage = 0;
@@ -389,7 +387,6 @@ public class Attackable extends Npc
 				broadcastPacket(new SystemMessage(SystemMessageId.CONGRATULATIONS_YOUR_RAID_WAS_SUCCESSFUL));
 				final int raidbossPoints = (int) (getTemplate().getRaidPoints() * Config.RATE_RAIDBOSS_POINTS);
 				final Party party = player.getParty();
-				
 				if (party != null)
 				{
 					final CommandChannel command = party.getCommandChannel();
@@ -404,7 +401,6 @@ public class Attackable extends Npc
 						final int points = Math.max(raidbossPoints / members.size(), 1);
 						p.increaseRaidbossPoints(points);
 						p.sendPacket(new SystemMessage(SystemMessageId.YOU_HAVE_EARNED_S1_RAID_POINT_S).addInt(points));
-						
 						if (p.getNobleLevel() > 0)
 						{
 							Hero.getInstance().setRBkilled(p.getObjectId(), getId());
@@ -460,7 +456,6 @@ public class Attackable extends Npc
 					if (summon.isPresent())
 					{
 						penalty = ((ServitorInstance) summon.get()).getExpMultiplier();
-						
 					}
 					
 					// If there's NO party in progress
@@ -476,7 +471,6 @@ public class Attackable extends Npc
 							final double[] expSp = calculateExpAndSp(attacker.getLevel(), damage, totalDamage);
 							double exp = expSp[0];
 							double sp = expSp[1];
-							
 							if (Config.CHAMPION_ENABLE && _champion)
 							{
 								exp *= Config.CHAMPION_REWARDS_EXP_SP;
@@ -499,7 +493,6 @@ public class Attackable extends Npc
 							{
 								exp = attacker.getStat().getValue(Stat.EXPSP_RATE, exp) * Config.EXP_AMOUNT_MULTIPLIERS.getOrDefault(attacker.getClassId(), 1f);
 								sp = attacker.getStat().getValue(Stat.EXPSP_RATE, sp) * Config.SP_AMOUNT_MULTIPLIERS.getOrDefault(attacker.getClassId(), 1f);
-								
 								attacker.addExpAndSp(exp, sp, useVitalityRate());
 								if (exp > 0)
 								{
@@ -589,7 +582,6 @@ public class Attackable extends Npc
 						final double[] expSp = calculateExpAndSp(partyLvl, partyDmg, totalDamage);
 						double exp = expSp[0];
 						double sp = expSp[1];
-						
 						if (Config.CHAMPION_ENABLE && _champion)
 						{
 							exp *= Config.CHAMPION_REWARDS_EXP_SP;
@@ -662,7 +654,6 @@ public class Attackable extends Npc
 				
 				// Calculate the amount of hate this attackable receives from this attack.
 				double hateValue = (damage * 100) / (getLevel() + 7);
-				
 				if (skill == null)
 				{
 					hateValue *= attacker.getStat().getValue(Stat.HATE_ATTACK, 1);
@@ -1018,9 +1009,7 @@ public class Attackable extends Npc
 		}
 		
 		CursedWeaponsManager.getInstance().checkDrop(this, player);
-		
 		npcTemplate.getExtendDrop().stream().map(ExtendDropData.getInstance()::getExtendDropById).filter(Objects::nonNull).forEach(e -> e.reward(player, this));
-		
 		if (isSpoiled() && !_plundered)
 		{
 			_sweepItems.set(npcTemplate.calculateDrops(DropType.SPOIL, this, player));
@@ -1295,12 +1284,10 @@ public class Attackable extends Npc
 		final int levelDiff = charLevel - getLevel();
 		double xp = 0;
 		double sp = 0;
-		
 		if ((levelDiff < 11) && (levelDiff > -11))
 		{
 			xp = Math.max(0, (getExpReward() * damage) / totalDamage);
 			sp = Math.max(0, (getSpReward() * damage) / totalDamage);
-			
 			if ((charLevel > 84) && (levelDiff <= -3))
 			{
 				double mul;
@@ -1356,7 +1343,6 @@ public class Attackable extends Npc
 				sp *= mul;
 			}
 		}
-		
 		return new double[]
 		{
 			xp,
@@ -1507,7 +1493,6 @@ public class Attackable extends Npc
 		if ((_seed != null) && (_seederObjId == seeder.getObjectId()))
 		{
 			_seeded = true;
-			
 			int count = 1;
 			for (int skillId : getTemplate().getSkills().keySet())
 			{

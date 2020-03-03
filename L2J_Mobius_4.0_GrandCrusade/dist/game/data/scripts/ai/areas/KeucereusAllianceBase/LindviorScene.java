@@ -87,7 +87,6 @@ public class LindviorScene extends AbstractNpcAI
 				final Npc lindviorCamera = SpawnTable.getInstance().getAnySpawn(LINDVIOR_CAMERA).getLastSpawn();
 				final Npc tomaris = SpawnTable.getInstance().getAnySpawn(TOMARIS).getLastSpawn();
 				final Npc artius = SpawnTable.getInstance().getAnySpawn(ARTIUS).getLastSpawn();
-				
 				startQuestTimer("tomaris_shout1", 1000, tomaris, null);
 				startQuestTimer("artius_shout", 60000, artius, null);
 				startQuestTimer("tomaris_shout2", 90000, tomaris, null);

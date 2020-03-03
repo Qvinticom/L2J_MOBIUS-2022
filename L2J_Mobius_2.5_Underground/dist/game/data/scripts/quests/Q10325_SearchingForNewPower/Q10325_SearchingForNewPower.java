@@ -65,7 +65,6 @@ public class Q10325_SearchingForNewPower extends Quest
 		}
 		
 		String htmltext = null;
-		
 		if (event.equals("check_race"))
 		{
 			switch (player.getRace())
@@ -132,7 +131,6 @@ public class Q10325_SearchingForNewPower extends Quest
 	{
 		final QuestState qs = getQuestState(player, true);
 		String htmltext = getNoQuestMsg(player);
-		
 		switch (qs.getState())
 		{
 			case State.CREATED:

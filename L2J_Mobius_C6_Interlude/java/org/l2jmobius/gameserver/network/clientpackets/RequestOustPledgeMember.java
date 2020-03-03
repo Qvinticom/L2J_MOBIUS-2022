@@ -66,9 +66,7 @@ public class RequestOustPledgeMember extends GameClientPacket
 		}
 		
 		final Clan clan = player.getClan();
-		
 		final ClanMember member = clan.getClanMember(_target);
-		
 		if (member == null)
 		{
 			LOGGER.info("Target (" + _target + ") is not member of the clan");

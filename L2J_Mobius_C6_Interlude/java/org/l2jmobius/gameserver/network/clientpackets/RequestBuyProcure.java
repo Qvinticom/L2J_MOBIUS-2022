@@ -48,7 +48,6 @@ public class RequestBuyProcure extends GameClientPacket
 	{
 		_listId = readD();
 		_count = readD();
-		
 		if (_count > 500) // protect server
 		{
 			_count = 0;
@@ -68,7 +67,6 @@ public class RequestBuyProcure extends GameClientPacket
 			final int itemId = readD();
 			_items[(i * 2) + 0] = itemId;
 			final long cnt = readD();
-			
 			if ((cnt > Integer.MAX_VALUE) || (cnt < 1))
 			{
 				_count = 0;
@@ -111,7 +109,6 @@ public class RequestBuyProcure extends GameClientPacket
 		// Check for buylist validity and calculates summary values
 		int slots = 0;
 		int weight = 0;
-		
 		if (!(player.getTarget() instanceof ManorManagerInstance))
 		{
 			return;
@@ -123,7 +120,6 @@ public class RequestBuyProcure extends GameClientPacket
 			final int itemId = _items[(i * 2) + 0];
 			final int count = _items[(i * 2) + 1];
 			final int price = 0;
-			
 			if (count > Integer.MAX_VALUE)
 			{
 				Util.handleIllegalPlayerAction(player, "Warning!! Character " + player.getName() + " of account " + player.getAccountName() + " tried to purchase over " + Integer.MAX_VALUE + " items at the same time.", Config.DEFAULT_PUNISH);
@@ -133,7 +129,6 @@ public class RequestBuyProcure extends GameClientPacket
 			
 			final Item template = ItemTable.getInstance().getTemplate(ManorSeedData.getInstance().getRewardItem(itemId, manor.getCastle().getCrop(itemId, CastleManorManager.PERIOD_CURRENT).getReward()));
 			weight += count * template.getWeight();
-			
 			if (!template.isStackable())
 			{
 				slots += count;
@@ -159,27 +154,22 @@ public class RequestBuyProcure extends GameClientPacket
 		// Proceed the purchase
 		final InventoryUpdate playerIU = new InventoryUpdate();
 		_procureList = manor.getCastle().getCropProcure(CastleManorManager.PERIOD_CURRENT);
-		
 		for (int i = 0; i < _count; i++)
 		{
 			final int itemId = _items[(i * 2) + 0];
 			int count = _items[(i * 2) + 1];
-			
 			if (count < 0)
 			{
 				count = 0;
 			}
 			
 			final int rewardItemId = ManorSeedData.getInstance().getRewardItem(itemId, manor.getCastle().getCrop(itemId, CastleManorManager.PERIOD_CURRENT).getReward());
-			
 			int rewardItemCount = 1; // Manor.getInstance().getRewardAmount(itemId, manor.getCastle().getCropReward(itemId));
-			
 			rewardItemCount = count / rewardItemCount;
 			
 			// Add item to Inventory and adjust update packet
 			final ItemInstance item = player.getInventory().addItem("Manor", rewardItemId, rewardItemCount, player, manor);
 			final ItemInstance iteme = player.getInventory().destroyItemByItemId("Manor", itemId, count, player, manor);
-			
 			if ((item == null) || (iteme == null))
 			{
 				continue;

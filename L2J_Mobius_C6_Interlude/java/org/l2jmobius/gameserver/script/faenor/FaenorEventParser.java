@@ -84,7 +84,6 @@ public class FaenorEventParser extends FaenorParser
 		{
 			final String type = attribute(sysMsg, "Type");
 			final String[] message = attribute(sysMsg, "Msg").split(Config.EOL);
-			
 			if (type.equalsIgnoreCase("OnJoin"))
 			{
 				_bridge.onPlayerLogin(message, _eventDates);
@@ -114,7 +113,6 @@ public class FaenorEventParser extends FaenorParser
 			final int[] items = IntList.parse(attribute(drop, "Items"));
 			final int[] count = IntList.parse(attribute(drop, "Count"));
 			final double chance = getPercent(attribute(drop, "Chance"));
-			
 			_bridge.addEventDrop(items, count, chance, _eventDates);
 		}
 		catch (Exception e)

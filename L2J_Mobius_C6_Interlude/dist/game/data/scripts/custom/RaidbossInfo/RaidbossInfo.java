@@ -150,7 +150,6 @@ public class RaidbossInfo extends Quest
 		if (Util.isDigit(event))
 		{
 			final int rbid = Integer.parseInt(event);
-			
 			if (RADARS.containsKey(rbid))
 			{
 				final Location loc = RADARS.get(rbid);

@@ -64,7 +64,6 @@ public class Q00136_MoreThanMeetsTheEye extends Quest
 		addStartNpc(HARDIN);
 		addTalkId(HARDIN, ERRICKIN, CLAYTON);
 		addKillId(GHOST1, GHOST2, GHOST3, GLASS_JAGUAR, MIRROR);
-		
 		registerQuestItems(ECTOPLASM, STABILIZED_ECTOPLASM, ORDER, GLASS_JAGUAR_CRYSTAL, BOOK_OF_SEAL);
 	}
 	
@@ -170,7 +169,6 @@ public class Q00136_MoreThanMeetsTheEye extends Quest
 		{
 			final int count = ((npcId == MIRROR) && ((getQuestItemsCount(killer, ECTOPLASM) + 2) < ECTOPLASM_COUNT)) ? 2 : 1;
 			final int index = npcId - GHOST1;
-			
 			if ((getRandom(1000) < CHANCES[index]) && ((getQuestItemsCount(killer, ECTOPLASM) + count) < ECTOPLASM_COUNT))
 			{
 				giveItems(killer, ECTOPLASM, 1);
@@ -189,7 +187,6 @@ public class Q00136_MoreThanMeetsTheEye extends Quest
 	{
 		final QuestState qs = getQuestState(player, true);
 		String htmltext = getNoQuestMsg(player);
-		
 		switch (npc.getId())
 		{
 			case HARDIN:

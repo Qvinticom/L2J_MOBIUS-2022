@@ -53,7 +53,6 @@ public class TelnetStatusThread extends Thread
 			try
 			{
 				final Socket connection = statusServerSocket.accept();
-				
 				if (Config.SERVER_MODE == ServerMode.GAME)
 				{
 					final GameStatusThread gst = new GameStatusThread(connection, _uptime, _statusPw);
@@ -112,7 +111,6 @@ public class TelnetStatusThread extends Thread
 		
 		_statusPort = Integer.parseInt(telnetSettings.getProperty("StatusPort", "12345"));
 		_statusPw = telnetSettings.getProperty("StatusPW");
-		
 		if ((Config.SERVER_MODE == ServerMode.GAME) || (Config.SERVER_MODE == ServerMode.LOGIN))
 		{
 			if (_statusPw == null)
@@ -136,7 +134,6 @@ public class TelnetStatusThread extends Thread
 		final String upperChar = "QWERTYUIOPASDFGHJKLZXCVBNM";
 		final String digits = "1234567890";
 		final StringBuilder password = new StringBuilder(length);
-		
 		for (int i = 0; i < length; i++)
 		{
 			final int charSet = Rnd.get(3);

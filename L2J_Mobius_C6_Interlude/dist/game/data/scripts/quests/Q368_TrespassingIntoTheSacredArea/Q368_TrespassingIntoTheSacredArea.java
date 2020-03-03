@@ -105,7 +105,6 @@ public class Q368_TrespassingIntoTheSacredArea extends Quest
 				else
 				{
 					final int reward = (250 * fangs) + (fangs > 10 ? 5730 : 2000);
-					
 					htmltext = "30926-04.htm";
 					st.takeItems(5881, -1);
 					st.rewardItems(57, reward);

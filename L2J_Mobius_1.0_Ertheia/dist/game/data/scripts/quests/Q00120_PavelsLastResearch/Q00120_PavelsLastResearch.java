@@ -1466,7 +1466,6 @@ public class Q00120_PavelsLastResearch extends Quest
 				break;
 			}
 		}
-		
 		return html;
 	}
 	

@@ -85,7 +85,6 @@ public class WalkerRouteData implements IXmlReader
 						route.setDelay(set.getInt("delay"));
 						route.setRunning(set.getBoolean("run"));
 						route.setChatText(set.getString("chat", null));
-						
 						points.add(route);
 					}
 					_routes.put(Integer.parseInt(node.getAttributes().getNamedItem("npcId").getNodeValue()), points);

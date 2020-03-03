@@ -325,7 +325,6 @@ public class Q00501_ProofOfClanAlliance extends Quest
 		final QuestState qs = getQuestState(player, true);
 		final QuestState lqs = getLeaderQuestState(player, getName());
 		String htmltext = getNoQuestMsg(player);
-		
 		switch (npc.getId())
 		{
 			case SIR_KRISTOF_RODEMAI:

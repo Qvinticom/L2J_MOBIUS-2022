@@ -62,7 +62,6 @@ public class SpawnTable
 		try (Connection con = DatabaseFactory.getConnection())
 		{
 			PreparedStatement statement;
-			
 			if (Config.DELETE_GMSPAWN_ON_CUSTOM)
 			{
 				statement = con.prepareStatement("SELECT id, count, npc_templateid, locx, locy, locz, heading, respawn_delay, loc_id, periodOfDay FROM spawnlist where id NOT in ( select id from custom_notspawned where isCustom = false ) ORDER BY id");
@@ -73,7 +72,6 @@ public class SpawnTable
 			}
 			
 			final ResultSet rset = statement.executeQuery();
-			
 			Spawn spawnDat;
 			NpcTemplate template1;
 			
@@ -110,7 +108,6 @@ public class SpawnTable
 						spawnDat.setRespawnDelay(rset.getInt("respawn_delay"));
 						
 						final int loc_id = rset.getInt("loc_id");
-						
 						spawnDat.setLocation(loc_id);
 						
 						switch (rset.getInt("periodOfDay"))
@@ -167,7 +164,6 @@ public class SpawnTable
 			try (Connection con = DatabaseFactory.getConnection())
 			{
 				final PreparedStatement statement;
-				
 				if (Config.DELETE_GMSPAWN_ON_CUSTOM)
 				{
 					statement = con.prepareStatement("SELECT id, count, npc_templateid, locx, locy, locz, heading, respawn_delay, loc_id, periodOfDay FROM custom_spawnlist where id NOT in ( select id from custom_notspawned where isCustom = false ) ORDER BY id");
@@ -178,14 +174,12 @@ public class SpawnTable
 				}
 				
 				final ResultSet rset = statement.executeQuery();
-				
 				Spawn spawnDat;
 				NpcTemplate template1;
 				
 				while (rset.next())
 				{
 					template1 = NpcTable.getInstance().getTemplate(rset.getInt("npc_templateid"));
-					
 					if (template1 != null)
 					{
 						if (template1.getType().equalsIgnoreCase("SiegeGuard"))
@@ -212,7 +206,6 @@ public class SpawnTable
 							spawnDat.setRespawnDelay(rset.getInt("respawn_delay"));
 							
 							final int loc_id = rset.getInt("loc_id");
-							
 							spawnDat.setLocation(loc_id);
 							
 							switch (rset.getInt("periodOfDay"))

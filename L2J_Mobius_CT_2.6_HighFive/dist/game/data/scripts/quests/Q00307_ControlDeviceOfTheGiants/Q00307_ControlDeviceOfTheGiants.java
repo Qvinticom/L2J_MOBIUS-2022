@@ -163,7 +163,6 @@ public class Q00307_ControlDeviceOfTheGiants extends Quest
 					for (PlayerInstance pl : player.getParty().getMembers())
 					{
 						final QuestState qst = getQuestState(pl, false);
-						
 						if ((qst != null) && qst.isCond(1))
 						{
 							qst.setCond(2, true);
@@ -182,7 +181,6 @@ public class Q00307_ControlDeviceOfTheGiants extends Quest
 	{
 		final QuestState qs = getQuestState(player, true);
 		String htmltext = getNoQuestMsg(player);
-		
 		switch (qs.getState())
 		{
 			case State.CREATED:

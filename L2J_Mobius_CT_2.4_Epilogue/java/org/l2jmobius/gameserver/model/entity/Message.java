@@ -155,7 +155,6 @@ public class Message
 	public static PreparedStatement getStatement(Message msg, Connection con) throws SQLException
 	{
 		final PreparedStatement stmt = con.prepareStatement("INSERT INTO messages (messageId, senderId, receiverId, subject, content, expiration, reqAdena, hasAttachments, isUnread, isDeletedBySender, isDeletedByReceiver, sendBySystem, isReturned) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)");
-		
 		stmt.setInt(1, msg._messageId);
 		stmt.setInt(2, msg._senderId);
 		stmt.setInt(3, msg._receiverId);
@@ -169,7 +168,6 @@ public class Message
 		stmt.setString(11, String.valueOf(msg._deletedByReceiver));
 		stmt.setString(12, String.valueOf(msg._sendBySystem));
 		stmt.setString(13, String.valueOf(msg._returned));
-		
 		return stmt;
 	}
 	

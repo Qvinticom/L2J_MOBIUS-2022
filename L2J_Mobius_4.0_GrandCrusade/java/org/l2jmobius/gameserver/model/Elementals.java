@@ -122,28 +122,24 @@ public class Elementals
 		earthStone(EARTH, 9548, ElementalItemType.Stone, 0),
 		divineStone(HOLY, 9551, ElementalItemType.Stone, 0),
 		darkStone(DARK, 9550, ElementalItemType.Stone, 0),
-		
 		fireRoughtore(FIRE, 10521, ElementalItemType.Stone, 0),
 		waterRoughtore(WATER, 10522, ElementalItemType.Stone, 0),
 		windRoughtore(WIND, 10524, ElementalItemType.Stone, 0),
 		earthRoughtore(EARTH, 10523, ElementalItemType.Stone, 0),
 		divineRoughtore(HOLY, 10526, ElementalItemType.Stone, 0),
 		darkRoughtore(DARK, 10525, ElementalItemType.Stone, 0),
-		
 		fireCrystal(FIRE, 9552, ElementalItemType.Crystal, 0),
 		waterCrystal(WATER, 9553, ElementalItemType.Crystal, 0),
 		windCrystal(WIND, 9555, ElementalItemType.Crystal, 0),
 		earthCrystal(EARTH, 9554, ElementalItemType.Crystal, 0),
 		divineCrystal(HOLY, 9557, ElementalItemType.Crystal, 0),
 		darkCrystal(DARK, 9556, ElementalItemType.Crystal, 0),
-		
 		fireJewel(FIRE, 9558, ElementalItemType.Jewel, 0),
 		waterJewel(WATER, 9559, ElementalItemType.Jewel, 0),
 		windJewel(WIND, 9561, ElementalItemType.Jewel, 0),
 		earthJewel(EARTH, 9560, ElementalItemType.Jewel, 0),
 		divineJewel(HOLY, 9563, ElementalItemType.Jewel, 0),
 		darkJewel(DARK, 9562, ElementalItemType.Jewel, 0),
-		
 		fireEnergy(FIRE, 9564, ElementalItemType.Energy, 0),
 		waterEnergy(WATER, 9565, ElementalItemType.Energy, 0),
 		windEnergy(WIND, 9567, ElementalItemType.Energy, 0),

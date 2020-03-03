@@ -71,11 +71,9 @@ public class ClanHallManager
 			while (rs.next())
 			{
 				final StatSet set = new StatSet();
-				
 				id = rs.getInt("id");
 				ownerId = rs.getInt("ownerId");
 				lease = rs.getInt("lease");
-				
 				set.set("id", id);
 				set.set("name", rs.getString("name"));
 				set.set("ownerId", ownerId);
@@ -226,7 +224,6 @@ public class ClanHallManager
 	public AuctionableHall getNearbyClanHall(int x, int y, int maxDist)
 	{
 		ClanHallZone zone = null;
-		
 		for (Map.Entry<Integer, AuctionableHall> ch : _clanHall.entrySet())
 		{
 			zone = ch.getValue().getZone();

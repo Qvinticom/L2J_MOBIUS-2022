@@ -1,3 +1,4 @@
+
 /*
  * This file is part of the L2J Mobius project.
  * 
@@ -65,7 +66,6 @@ public class SkillHandler
 	private SkillHandler()
 	{
 		_datatable = new HashMap<>();
-		
 		registerSkillHandler(new BalanceLife());
 		registerSkillHandler(new BeastFeed());
 		registerSkillHandler(new Blow());
@@ -107,7 +107,6 @@ public class SkillHandler
 	public void registerSkillHandler(ISkillHandler handler)
 	{
 		final SkillType[] types = handler.getSkillIds();
-		
 		for (SkillType t : types)
 		{
 			_datatable.put(t, handler);

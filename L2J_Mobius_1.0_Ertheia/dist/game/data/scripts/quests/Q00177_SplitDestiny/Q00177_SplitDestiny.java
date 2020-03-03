@@ -85,7 +85,6 @@ public class Q00177_SplitDestiny extends Quest
 		}
 		
 		String htmltext = null;
-		
 		switch (event)
 		{
 			case "33344-14.htm":
@@ -182,7 +181,6 @@ public class Q00177_SplitDestiny extends Quest
 	{
 		final QuestState qs = getQuestState(player, true);
 		String htmltext = getNoQuestMsg(player);
-		
 		if (npc.getId() == HADEL)
 		{
 			if (qs.isStarted())
@@ -315,7 +313,6 @@ public class Q00177_SplitDestiny extends Quest
 	public String onKill(Npc npc, PlayerInstance killer, boolean isSummon)
 	{
 		final QuestState qs = getQuestState(killer, false);
-		
 		if ((qs != null) && (killer.getClassIndex() == qs.getInt(VAR_SUB_INDEX)))
 		{
 			switch (qs.getCond())

@@ -283,7 +283,6 @@ public abstract class Inventory extends ItemContainer
 			if (item.getEnchantLevel() >= 4)
 			{
 				enchant4Skill = it.getEnchant4Skill();
-				
 				if (enchant4Skill != null)
 				{
 					player.removeSkill(enchant4Skill, false, enchant4Skill.isPassive());
@@ -294,7 +293,6 @@ public abstract class Inventory extends ItemContainer
 			item.clearEnchantStats();
 			
 			final SkillHolder[] skills = it.getSkills();
-			
 			if (skills != null)
 			{
 				for (SkillHolder skillInfo : skills)
@@ -305,7 +303,6 @@ public abstract class Inventory extends ItemContainer
 					}
 					
 					itemSkill = skillInfo.getSkill();
-					
 					if (itemSkill != null)
 					{
 						player.removeSkill(itemSkill, false, itemSkill.isPassive());
@@ -334,11 +331,9 @@ public abstract class Inventory extends ItemContainer
 						}
 						
 						itemSkill = sk.getSkill();
-						
 						if (itemSkill != null)
 						{
 							player.addSkill(itemSkill, false);
-							
 							if (itemSkill.isActive())
 							{
 								if (!player.hasSkillReuse(itemSkill.getReuseHashCode()))
@@ -385,7 +380,6 @@ public abstract class Inventory extends ItemContainer
 			}
 			
 			final PlayerInstance player = (PlayerInstance) inventory.getOwner();
-			
 			Skill enchant4Skill;
 			Skill itemSkill;
 			final Item it = item.getItem();
@@ -404,7 +398,6 @@ public abstract class Inventory extends ItemContainer
 			if (item.getEnchantLevel() >= 4)
 			{
 				enchant4Skill = it.getEnchant4Skill();
-				
 				if (enchant4Skill != null)
 				{
 					player.addSkill(enchant4Skill, false);
@@ -415,7 +408,6 @@ public abstract class Inventory extends ItemContainer
 			item.applyEnchantStats();
 			
 			final SkillHolder[] skills = it.getSkills();
-			
 			if (skills != null)
 			{
 				for (SkillHolder skillInfo : skills)
@@ -426,12 +418,10 @@ public abstract class Inventory extends ItemContainer
 					}
 					
 					itemSkill = skillInfo.getSkill();
-					
 					if (itemSkill != null)
 					{
 						itemSkill.setReferenceItemId(item.getId());
 						player.addSkill(itemSkill, false);
-						
 						if (itemSkill.isActive())
 						{
 							if (!player.hasSkillReuse(itemSkill.getReuseHashCode()))
@@ -487,7 +477,6 @@ public abstract class Inventory extends ItemContainer
 			
 			// Checks if player is wearing a chest item
 			final ItemInstance chestItem = inventory.getPaperdollItem(PAPERDOLL_CHEST);
-			
 			if (chestItem == null)
 			{
 				return;
@@ -508,7 +497,6 @@ public abstract class Inventory extends ItemContainer
 				{
 					Skill itemSkill;
 					final List<SkillHolder> skills = armorSet.getSkills();
-					
 					if (skills != null)
 					{
 						for (SkillHolder holder : skills)
@@ -517,7 +505,6 @@ public abstract class Inventory extends ItemContainer
 							if (itemSkill != null)
 							{
 								player.addSkill(itemSkill, false);
-								
 								if (itemSkill.isActive())
 								{
 									if (!player.hasSkillReuse(itemSkill.getReuseHashCode()))
@@ -609,13 +596,11 @@ public abstract class Inventory extends ItemContainer
 			}
 			
 			final PlayerInstance player = (PlayerInstance) inventory.getOwner();
-			
 			boolean remove = false;
 			Skill itemSkill;
 			List<SkillHolder> skills = null;
 			List<SkillHolder> shieldSkill = null; // shield skill
 			List<SkillHolder> skillId6 = null; // enchant +6 skill
-			
 			if (slot == PAPERDOLL_CHEST)
 			{
 				if (!ArmorSetData.getInstance().isArmorSet(item.getId()))
@@ -749,7 +734,6 @@ public abstract class Inventory extends ItemContainer
 	{
 		_paperdoll = new ItemInstance[PAPERDOLL_TOTALSLOTS];
 		_paperdollListeners = new ArrayList<>();
-		
 		if (this instanceof PlayerInventory)
 		{
 			addPaperdollListener(ArmorSetListener.getInstance());
@@ -1486,7 +1470,6 @@ public abstract class Inventory extends ItemContainer
 			}
 			
 			final PlayerInstance player = (PlayerInstance) getOwner();
-			
 			if (!player.canOverrideCond(PlayerCondOverride.ITEM_CONDITIONS) && !player.isHero() && item.isHeroItem())
 			{
 				return;
@@ -1707,7 +1690,6 @@ public abstract class Inventory extends ItemContainer
 	protected void refreshWeight()
 	{
 		long weight = 0;
-		
 		for (ItemInstance item : _items)
 		{
 			if ((item != null) && (item.getItem() != null))
@@ -1739,7 +1721,6 @@ public abstract class Inventory extends ItemContainer
 		}
 		
 		ItemInstance arrow = null;
-		
 		for (ItemInstance item : getItems())
 		{
 			if (item.isEtcItem() && (item.getItem().getCrystalTypePlus() == bow.getCrystalTypePlus()) && (item.getEtcItem().getItemType() == EtcItemType.ARROW))
@@ -1761,7 +1742,6 @@ public abstract class Inventory extends ItemContainer
 	public ItemInstance findBoltForCrossBow(Item crossbow)
 	{
 		ItemInstance bolt = null;
-		
 		for (ItemInstance item : getItems())
 		{
 			if (item.isEtcItem() && (item.getItem().getCrystalTypePlus() == crossbow.getCrystalTypePlus()) && (item.getEtcItem().getItemType() == EtcItemType.BOLT))
@@ -1801,7 +1781,6 @@ public abstract class Inventory extends ItemContainer
 					if (getOwner().isPlayer())
 					{
 						final PlayerInstance player = (PlayerInstance) getOwner();
-						
 						if (!player.canOverrideCond(PlayerCondOverride.ITEM_CONDITIONS) && !player.isHero() && item.isHeroItem())
 						{
 							item.setItemLocation(ItemLocation.INVENTORY);
@@ -1877,7 +1856,6 @@ public abstract class Inventory extends ItemContainer
 	public void reloadEquippedItems()
 	{
 		int slot;
-		
 		for (ItemInstance item : _paperdoll)
 		{
 			if (item == null)
@@ -1886,7 +1864,6 @@ public abstract class Inventory extends ItemContainer
 			}
 			
 			slot = item.getLocationSlot();
-			
 			for (PaperdollListener listener : _paperdollListeners)
 			{
 				if (listener == null)

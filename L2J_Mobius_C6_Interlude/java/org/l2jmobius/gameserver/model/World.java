@@ -594,7 +594,6 @@ public class World
 				
 				final int x1 = wo.getX();
 				final int y1 = wo.getY();
-				
 				final double dx = x1 - x;
 				final double dy = y1 - y;
 				
@@ -659,11 +658,9 @@ public class World
 				final int x1 = wo.getX();
 				final int y1 = wo.getY();
 				final int z1 = wo.getZ();
-				
 				final long dx = x1 - x;
 				final long dy = y1 - y;
 				final long dz = z1 - z;
-				
 				if (((dx * dx) + (dy * dy) + (dz * dz)) < sqRadius)
 				{
 					result.add(wo);
@@ -776,9 +773,7 @@ public class World
 	private void initRegions()
 	{
 		LOGGER.info("World: Setting up World Regions");
-		
 		_worldRegions = new WorldRegion[REGIONS_X + 1][REGIONS_Y + 1];
-		
 		for (int x = 0; x <= REGIONS_X; x++)
 		{
 			for (int y = 0; y <= REGIONS_Y; y++)
@@ -818,7 +813,6 @@ public class World
 	public synchronized void deleteVisibleNpcSpawns()
 	{
 		LOGGER.info("Deleting all visible NPCs.");
-		
 		for (int i = 0; i <= REGIONS_X; i++)
 		{
 			for (int j = 0; j <= REGIONS_Y; j++)

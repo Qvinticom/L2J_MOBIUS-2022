@@ -73,7 +73,6 @@ public class RequestConfirmRefinerItem extends AbstractRefinePacket
 		final LifeStone ls = getLifeStone(refinerItemId);
 		final int gemStoneId = getGemStoneId(grade);
 		final int gemStoneCount = getGemStoneCount(grade, ls.getGrade());
-		
 		player.sendPacket(new ExPutIntensiveResultForVariationMake(_refinerItemObjId, refinerItemId, gemStoneId, gemStoneCount));
 	}
 }

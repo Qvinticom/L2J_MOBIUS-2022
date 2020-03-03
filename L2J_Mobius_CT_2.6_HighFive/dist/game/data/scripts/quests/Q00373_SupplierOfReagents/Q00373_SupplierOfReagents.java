@@ -427,7 +427,6 @@ public class Q00373_SupplierOfReagents extends Quest
 	{
 		final QuestState qs = getQuestState(talker, true);
 		String htmltext = getNoQuestMsg(talker);
-		
 		if (qs.isCreated())
 		{
 			if (talker.getLevel() < MIN_LVL)
@@ -450,7 +449,6 @@ public class Q00373_SupplierOfReagents extends Quest
 				htmltext = "31149-01.html";
 			}
 		}
-		
 		return htmltext;
 	}
 	

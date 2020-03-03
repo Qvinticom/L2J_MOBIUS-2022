@@ -95,7 +95,6 @@ public class RecipeController
 		
 		final List<RecipeList> dwarfRecipes = Arrays.asList(manufacturer.getDwarvenRecipeBook());
 		final List<RecipeList> commonRecipes = Arrays.asList(manufacturer.getCommonRecipeBook());
-		
 		if (!dwarfRecipes.contains(recipeList) && !commonRecipes.contains(recipeList))
 		{
 			Util.handleIllegalPlayerAction(player, "Warning!! Character " + player.getName() + " of account " + player.getAccountName() + " sent a false recipe id.", Config.DEFAULT_PUNISH);
@@ -103,7 +102,6 @@ public class RecipeController
 		}
 		
 		RecipeItemMaker maker;
-		
 		if (Config.ALT_GAME_CREATION && ((maker = _activeMakers.get(manufacturer)) != null)) // check if busy
 		{
 			player.sendMessage("Manufacturer is busy, please try later.");
@@ -134,7 +132,6 @@ public class RecipeController
 		}
 		
 		final RecipeList recipeList = getValidRecipeList(player, recipeListId);
-		
 		if (recipeList == null)
 		{
 			return;
@@ -142,7 +139,6 @@ public class RecipeController
 		
 		final List<RecipeList> dwarfRecipes = Arrays.asList(player.getDwarvenRecipeBook());
 		final List<RecipeList> commonRecipes = Arrays.asList(player.getCommonRecipeBook());
-		
 		if (!dwarfRecipes.contains(recipeList) && !commonRecipes.contains(recipeList))
 		{
 			Util.handleIllegalPlayerAction(player, "Warning!! Character " + player.getName() + " of account " + player.getAccountName() + " sent a false recipe id.", Config.DEFAULT_PUNISH);
@@ -194,12 +190,10 @@ public class RecipeController
 			_player = pPlayer;
 			_target = pTarget;
 			_recipeList = pRecipeList;
-			
 			_isValid = false;
 			_skillId = _recipeList.isDwarvenRecipe() ? Skill.SKILL_CREATE_DWARVEN : Skill.SKILL_CREATE_COMMON;
 			_skillLevel = _player.getSkillLevel(_skillId);
 			_skill = _player.getKnownSkill(_skillId);
-			
 			_player.setCrafting(true);
 			
 			if (_player.isAlikeDead())
@@ -300,7 +294,6 @@ public class RecipeController
 			// determine number of creation passes needed
 			// can "equip" skillLevel items each pass
 			_creationPasses = (_totalItems / _skillLevel) + ((_totalItems % _skillLevel) != 0 ? 1 : 0);
-			
 			if (Config.ALT_GAME_CREATION && (_creationPasses != 0))
 			{
 				_manaRequired /= _creationPasses; // checks to validateMp() will only need portion of mp for one pass
@@ -377,7 +370,6 @@ public class RecipeController
 					
 					// FIXME: please fix this packet to show crafting animation (somebody)
 					_player.broadcastPacket(new MagicSkillUse(_player, _skillId, _skillLevel, _delay, 0));
-					
 					_player.sendPacket(new SetupGauge(0, _delay));
 					ThreadPool.schedule(this, 100 + _delay);
 				}
@@ -419,7 +411,6 @@ public class RecipeController
 			{
 				// attempt to pay for item
 				final ItemInstance adenatransfer = _target.transferItem("PayManufacture", _target.getInventory().getAdenaInstance().getObjectId(), _price, _player.getInventory(), _player);
-				
 				if (adenatransfer == null)
 				{
 					_target.sendPacket(SystemMessageId.YOU_DO_NOT_HAVE_ENOUGH_ADENA);
@@ -491,9 +482,7 @@ public class RecipeController
 			while ((numItems > 0) && !_items.isEmpty())
 			{
 				final TempItem item = _items.get(0);
-				
 				int count = item.getQuantity();
-				
 				if (count >= numItems)
 				{
 					count = numItems;
@@ -510,7 +499,6 @@ public class RecipeController
 				}
 				
 				numItems -= count;
-				
 				if (_target == _player)
 				{
 					// you equipped ...
@@ -552,11 +540,9 @@ public class RecipeController
 			final RecipeInstance[] recipes = _recipeList.getRecipes();
 			final Inventory inv = _target.getInventory();
 			final List<TempItem> materials = new ArrayList<>();
-			
 			for (RecipeInstance recipe : recipes)
 			{
 				final int quantity = _recipeList.isConsumable() ? (int) (recipe.getQuantity() * Config.RATE_CONSUMABLE_COST) : recipe.getQuantity();
-				
 				if (quantity > 0)
 				{
 					final ItemInstance item = inv.getItemByItemId(recipe.getItemId());
@@ -652,7 +638,6 @@ public class RecipeController
 		{
 			final int itemId = _recipeList.getItemId();
 			final int itemCount = _recipeList.getCount();
-			
 			final ItemInstance createdItem = _target.getInventory().addItem("Manufacture", itemId, itemCount, _target, _player);
 			
 			// inform customer of earned item
@@ -687,7 +672,6 @@ public class RecipeController
 				
 				// exp -= materialsRefPrice;
 				// mat. ref. price is not accurate so other method is better
-				
 				if (exp < 0)
 				{
 					exp = 0;
@@ -706,7 +690,6 @@ public class RecipeController
 				// slower crafting -> more XP, faster crafting -> less XP
 				// you can use ALT_GAME_CREATION_XP_RATE/SP to
 				// modify XP/SP gained (default = 1)
-				
 				_player.addExpAndSp((int) _player.calcStat(Stat.EXPSP_RATE, exp * Config.ALT_GAME_CREATION_XP_RATE * Config.ALT_GAME_CREATION_SPEED, null, null), (int) _player.calcStat(Stat.EXPSP_RATE, sp * Config.ALT_GAME_CREATION_SP_RATE * Config.ALT_GAME_CREATION_SPEED, null, null));
 			}
 			updateMakeInfo(true); // success

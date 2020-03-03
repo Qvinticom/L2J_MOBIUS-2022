@@ -151,7 +151,6 @@ public class AdminFortSiege implements IAdminCommandHandler
 		
 		final Collection<Fort> forts = FortManager.getInstance().getForts();
 		final StringBuilder cList = new StringBuilder(forts.size() * 100);
-		
 		for (Fort fort : forts)
 		{
 			if (fort != null)

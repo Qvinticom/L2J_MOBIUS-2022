@@ -118,7 +118,6 @@ public class Harvesting extends AbstractEffect
 	{
 		final int levelPlayer = player.getLevel();
 		final int levelTarget = target.getLevel();
-		
 		int diff = (levelPlayer - levelTarget);
 		if (diff < 0)
 		{

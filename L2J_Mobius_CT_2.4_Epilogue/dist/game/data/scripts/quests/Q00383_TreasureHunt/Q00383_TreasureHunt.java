@@ -142,10 +142,8 @@ public class Q00383_TreasureHunt extends Quest
 						takeItems(player, THIEF_KEY, 1);
 						qs.exitQuest(true, true);
 						htmltext = event;
-						
 						int bonus = 0;
 						int random = getRandom(100);
-						
 						if (random < 5)
 						{
 							rewardItems(player, MITHRIL_GLOVES);
@@ -168,7 +166,6 @@ public class Q00383_TreasureHunt extends Quest
 						}
 						
 						random = getRandom(1000);
-						
 						if (random < 25)
 						{
 							rewardItems(player, DYE_S1C3_C);
@@ -223,7 +220,6 @@ public class Q00383_TreasureHunt extends Quest
 						}
 						
 						random = getRandom(100);
-						
 						if (random < 4)
 						{
 							rewardItems(player, EMERALD);
@@ -258,7 +254,6 @@ public class Q00383_TreasureHunt extends Quest
 						}
 						
 						random = getRandom(100);
-						
 						if (random < 20)
 						{
 							rewardItems(player, MUSICAL_SCORE_THEME_OF_LOVE);

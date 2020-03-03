@@ -151,7 +151,6 @@ public class Q00133_ThatsBloodyHot extends Quest
 	{
 		final QuestState st = getQuestState(player, true);
 		String htmltext = getNoQuestMsg(player);
-		
 		switch (st.getState())
 		{
 			case State.COMPLETED:

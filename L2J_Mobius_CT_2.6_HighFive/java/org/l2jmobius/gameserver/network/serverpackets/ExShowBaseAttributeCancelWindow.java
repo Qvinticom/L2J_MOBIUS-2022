@@ -93,7 +93,6 @@ public class ExShowBaseAttributeCancelWindow implements IClientOutgoingPacket
 				break;
 			}
 		}
-		
 		return _price;
 	}
 }

@@ -69,17 +69,13 @@ public class SoDController extends AirShipController
 		_shipSpawnX = -247702;
 		_shipSpawnY = 253631;
 		_shipSpawnZ = 4359;
-		
 		_oustLoc = new Location(-247746, 251079, 4328);
-		
 		_locationId = LOCATION;
 		_arrivalPath = ARRIVAL;
 		_departPath = DEPART;
 		_teleportsTable = TELEPORTS;
 		_fuelTable = FUEL;
-		
 		_movie = Movie.LAND_DISTRUCTION_A;
-		
 		validityCheck();
 	}
 }

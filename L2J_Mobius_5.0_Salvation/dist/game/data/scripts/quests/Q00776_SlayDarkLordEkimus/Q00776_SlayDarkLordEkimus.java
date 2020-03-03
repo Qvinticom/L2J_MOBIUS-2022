@@ -89,7 +89,6 @@ public class Q00776_SlayDarkLordEkimus extends Quest
 	{
 		final QuestState qs = getQuestState(player, true);
 		String htmltext = getNoQuestMsg(player);
-		
 		if (npc.getId() == TEPIOS)
 		{
 			switch (qs.getState())

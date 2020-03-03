@@ -49,7 +49,6 @@ public class Ruine extends AbstractNpcAI
 	public String onAdvEvent(String event, Npc npc, PlayerInstance player)
 	{
 		String htmltext = null;
-		
 		switch (event)
 		{
 			case "cod_aden_officer001.htm":

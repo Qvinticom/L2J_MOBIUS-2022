@@ -66,7 +66,6 @@ public class PunishmentTask implements Runnable
 		_reason = reason;
 		_punishedBy = punishedBy;
 		_isStored = isStored;
-		
 		startPunishment();
 	}
 	

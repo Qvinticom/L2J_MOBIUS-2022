@@ -124,7 +124,6 @@ public class Q11037_WhyAreTheRatelHere extends Quest
 	{
 		final QuestState qs = getQuestState(player, true);
 		String htmltext = getNoQuestMsg(player);
-		
 		switch (qs.getState())
 		{
 			case State.CREATED:

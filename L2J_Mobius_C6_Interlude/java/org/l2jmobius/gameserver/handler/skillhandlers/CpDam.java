@@ -51,7 +51,6 @@ public class CpDam implements ISkillHandler
 		final boolean bss = creature.checkBss();
 		final boolean sps = creature.checkSps();
 		final boolean ss = creature.checkSs();
-		
 		for (WorldObject target2 : targets)
 		{
 			if (target2 == null)
@@ -60,7 +59,6 @@ public class CpDam implements ISkillHandler
 			}
 			
 			final Creature target = (Creature) target2;
-			
 			if ((creature instanceof PlayerInstance) && (target instanceof PlayerInstance) && target.isAlikeDead() && target.isFakeDeath())
 			{
 				target.stopFakeDeath(null);

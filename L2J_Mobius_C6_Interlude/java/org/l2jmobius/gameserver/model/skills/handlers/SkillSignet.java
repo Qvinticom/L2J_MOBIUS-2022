@@ -57,7 +57,6 @@ public class SkillSignet extends Skill
 		int x = caster.getX();
 		int y = caster.getY();
 		int z = caster.getZ();
-		
 		if ((caster instanceof PlayerInstance) && (getTargetType() == Skill.SkillTargetType.TARGET_GROUND))
 		{
 			final Location wordPosition = ((PlayerInstance) caster).getCurrentSkillWorldPosition();
@@ -69,7 +68,6 @@ public class SkillSignet extends Skill
 			}
 		}
 		getEffects(caster, effectPoint, false, false, false);
-		
 		effectPoint.setInvul(true);
 		effectPoint.spawnMe(x, y, z);
 	}

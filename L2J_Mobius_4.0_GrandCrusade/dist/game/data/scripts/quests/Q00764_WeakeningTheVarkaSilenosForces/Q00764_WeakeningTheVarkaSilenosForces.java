@@ -240,7 +240,6 @@ public class Q00764_WeakeningTheVarkaSilenosForces extends Quest
 	public String onKill(Npc npc, PlayerInstance killer, boolean isSummon)
 	{
 		final QuestState qs = getQuestState(killer, false);
-		
 		if ((qs != null) && qs.isCond(1) && (giveItemRandomly(killer, npc, BADGE_SOLDIER, 1, 50, 0.15, true)))
 		{
 			qs.setCond(2, true);

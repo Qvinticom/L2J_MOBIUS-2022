@@ -101,7 +101,6 @@ public class Q642_APowerfulPrimevalCreature extends Quest
 			if ((st.getQuestItemsCount(DINOSAUR_TISSUE) >= 150) && st.hasQuestItems(DINOSAUR_EGG))
 			{
 				htmltext = "32105-07.htm";
-				
 				st.takeItems(DINOSAUR_TISSUE, 150);
 				st.takeItems(DINOSAUR_EGG, 1);
 				st.rewardItems(57, 44000);
@@ -154,7 +153,6 @@ public class Q642_APowerfulPrimevalCreature extends Quest
 			if (Rnd.get(100) < 1)
 			{
 				st.giveItems(DINOSAUR_EGG, 1);
-				
 				if (st.getQuestItemsCount(DINOSAUR_TISSUE) >= 150)
 				{
 					st.playSound(QuestState.SOUND_MIDDLE);
@@ -168,7 +166,6 @@ public class Q642_APowerfulPrimevalCreature extends Quest
 		else if (Rnd.get(100) < 33)
 		{
 			st.rewardItems(DINOSAUR_TISSUE, 1);
-			
 			if ((st.getQuestItemsCount(DINOSAUR_TISSUE) >= 150) && st.hasQuestItems(DINOSAUR_EGG))
 			{
 				st.playSound(QuestState.SOUND_MIDDLE);

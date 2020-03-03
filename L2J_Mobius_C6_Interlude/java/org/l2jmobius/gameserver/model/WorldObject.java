@@ -249,7 +249,6 @@ public abstract class WorldObject
 		// this can synchronize on others instances, so it's out of synchronized, to avoid deadlocks
 		// Add the WorldObject spawn in the world as a visible object
 		World.getInstance().addVisibleObject(this, getPosition().getWorldRegion(), null);
-		
 		onSpawn();
 	}
 	
@@ -259,7 +258,6 @@ public abstract class WorldObject
 		{
 			// Set the x,y,z position of the WorldObject spawn and update its _worldregion
 			_visible = true;
-			
 			if (x > World.MAP_MAX_X)
 			{
 				x = World.MAP_MAX_X - 5000;
@@ -299,7 +297,6 @@ public abstract class WorldObject
 		// this can synchronize on others instances, so it's out of synchronized, to avoid deadlocks
 		// Add the WorldObject spawn in the world as a visible object
 		World.getInstance().addVisibleObject(this, region, null);
-		
 		onSpawn();
 	}
 	
@@ -332,7 +329,6 @@ public abstract class WorldObject
 	public void setVisible(boolean value)
 	{
 		_visible = value;
-		
 		if (!_visible)
 		{
 			getPosition().setWorldRegion(null);
@@ -345,7 +341,6 @@ public abstract class WorldObject
 		{
 			_knownList = new WorldObjectKnownList(this);
 		}
-		
 		return _knownList;
 	}
 	
@@ -375,7 +370,6 @@ public abstract class WorldObject
 		{
 			_poly = new ObjectPoly(this);
 		}
-		
 		return _poly;
 	}
 	

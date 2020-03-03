@@ -39,7 +39,6 @@ public class RecipeShopManageList implements IClientOutgoingPacket
 		_seller = seller;
 		_isDwarven = isDwarven;
 		_recipes = (isDwarven && (_seller.getCreateItemLevel() > 0)) ? _seller.getDwarvenRecipeBook() : _seller.getCommonRecipeBook();
-		
 		if (_seller.hasManufactureShop())
 		{
 			_manufacture = new ArrayList<>();

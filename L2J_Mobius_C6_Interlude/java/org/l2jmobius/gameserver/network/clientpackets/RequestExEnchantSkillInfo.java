@@ -86,7 +86,6 @@ public class RequestExEnchantSkillInfo extends GameClientPacket
 		}
 		
 		final EnchantSkillLearn[] skills = SkillTreeTable.getInstance().getAvailableEnchantSkills(player);
-		
 		for (EnchantSkillLearn s : skills)
 		{
 			if ((s.getId() == _skillId) && (s.getLevel() == _skillLvl))
@@ -105,7 +104,6 @@ public class RequestExEnchantSkillInfo extends GameClientPacket
 		final int requiredExp = SkillTreeTable.getInstance().getSkillExpCost(player, skill);
 		final byte rate = SkillTreeTable.getInstance().getSkillRate(player, skill);
 		final ExEnchantSkillInfo asi = new ExEnchantSkillInfo(skill.getId(), skill.getLevel(), requiredSp, requiredExp, rate);
-		
 		if (Config.ES_SP_BOOK_NEEDED && ((skill.getLevel() == 101) || (skill.getLevel() == 141))) // only first lvl requires book
 		{
 			final int spbId = 6622;

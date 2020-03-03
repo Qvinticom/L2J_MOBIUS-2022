@@ -198,7 +198,6 @@ public class Repair implements IVoicedCommandHandler, ICustomByPassHandler
 			statement = con.prepareStatement("SELECT obj_Id FROM characters WHERE char_name=?");
 			statement.setString(1, charName);
 			final ResultSet rset = statement.executeQuery();
-			
 			int objId = 0;
 			if (rset.next())
 			{
@@ -258,7 +257,6 @@ public class Repair implements IVoicedCommandHandler, ICustomByPassHandler
 	public void handleCommand(String command, PlayerInstance activeChar, String repairChar)
 	{
 		final CommandEnum comm = CommandEnum.valueOf(command);
-		
 		if (comm == null)
 		{
 			return;

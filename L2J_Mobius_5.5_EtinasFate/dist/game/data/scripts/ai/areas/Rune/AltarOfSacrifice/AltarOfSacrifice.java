@@ -65,7 +65,6 @@ public class AltarOfSacrifice extends AbstractNpcAI
 			sendMessage(_giggle, NpcStringId.IT_JUST_GOES_TO_SHOW_HOW_IMPORTANT_AND_DIFFICULT_IT_IS_TO_ACTIVATE_THE_SEAL_DEVICE, 109000); // It just goes to show how important and difficult it is to activate the Seal Device!
 			sendMessage(_immerial, NpcStringId.THIS_HAS_BEEN_TOO_TAXING_ON_US_ALL, 119000); // This has been too taxing on us all.
 			sendMessage(_immerial, NpcStringId.WE_NEED_A_NEW_SOUL_THAT_CAN_MAINTAIN_THE_SEAL, 126000); // We need a new soul that can maintain the seal.
-			
 			startQuestTimer("msg_text", 135000, npc, null);
 			_jenas_guard.setScriptValue(0);
 		}

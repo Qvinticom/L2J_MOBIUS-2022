@@ -50,11 +50,9 @@ public class StakatoNestTeleporter extends AbstractNpcAI
 	public String onAdvEvent(String event, Npc npc, PlayerInstance player)
 	{
 		final int index = Integer.parseInt(event) - 1;
-		
 		if (LOCS.length > index)
 		{
 			final Location loc = LOCS[index];
-			
 			if (player.getParty() != null)
 			{
 				for (PlayerInstance partyMember : player.getParty().getMembers())

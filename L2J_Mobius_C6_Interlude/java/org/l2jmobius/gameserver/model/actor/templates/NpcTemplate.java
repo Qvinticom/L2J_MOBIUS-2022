@@ -184,7 +184,6 @@ public class NpcTemplate extends CreatureTemplate
 		{
 			return _teachInfo.contains(classId.getParent());
 		}
-		
 		return _teachInfo.contains(classId);
 	}
 	
@@ -240,7 +239,6 @@ public class NpcTemplate extends CreatureTemplate
 		{
 			return 1;
 		}
-		
 		return _vulnerabilities.get(id);
 	}
 	

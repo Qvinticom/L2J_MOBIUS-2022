@@ -65,7 +65,6 @@ public class Q10383_FergasonsOffer extends Quest
 	{
 		String htmltext = null;
 		final QuestState qs = getQuestState(player, false);
-		
 		if (qs == null)
 		{
 			return getNoQuestMsg(player);
@@ -110,7 +109,6 @@ public class Q10383_FergasonsOffer extends Quest
 	{
 		final QuestState qs = getQuestState(player, true);
 		String htmltext = getNoQuestMsg(player);
-		
 		switch (npc.getId())
 		{
 			case SIZRAK:

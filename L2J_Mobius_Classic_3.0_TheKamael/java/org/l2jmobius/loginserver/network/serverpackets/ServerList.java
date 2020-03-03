@@ -154,7 +154,6 @@ public class ServerList implements IOutgoingPacket
 				packet.writeC(_charsOnServers.getOrDefault(server._serverId, 0));
 			}
 		}
-		
 		return true;
 	}
 }

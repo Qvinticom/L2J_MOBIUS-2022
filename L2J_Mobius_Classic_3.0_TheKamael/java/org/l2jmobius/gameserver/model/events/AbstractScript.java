@@ -222,7 +222,6 @@ public abstract class AbstractScript extends ManagedScript implements IEventTime
 			{
 				final RegisterEvent listener = method.getAnnotation(RegisterEvent.class);
 				final RegisterType regType = method.getAnnotation(RegisterType.class);
-				
 				final ListenerRegisterType type = regType.value();
 				final EventType eventType = listener.value();
 				if (method.getParameterCount() != 1)
@@ -2174,7 +2173,6 @@ public abstract class AbstractScript extends ManagedScript implements IEventTime
 		try
 		{
 			final Spawn spawn = new Spawn(npcId);
-			
 			if ((x == 0) && (y == 0))
 			{
 				LOGGER.severe("addSpawn(): invalid spawn coordinates for NPC #" + npcId + "!");
@@ -2189,7 +2187,6 @@ public abstract class AbstractScript extends ManagedScript implements IEventTime
 					offset *= -1;
 				}
 				x += offset;
-				
 				offset = Rnd.get(50, 100);
 				if (Rnd.nextBoolean())
 				{
@@ -2738,7 +2735,6 @@ public abstract class AbstractScript extends ManagedScript implements IEventTime
 		}
 		
 		final long currentCount = getQuestItemsCount(player, itemId);
-		
 		if ((limit > 0) && (currentCount >= limit))
 		{
 			return true;

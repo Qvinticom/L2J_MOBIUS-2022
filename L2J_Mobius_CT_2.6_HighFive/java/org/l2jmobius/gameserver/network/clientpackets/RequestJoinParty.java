@@ -50,7 +50,6 @@ public class RequestJoinParty implements IClientIncomingPacket
 	{
 		final PlayerInstance requestor = client.getPlayer();
 		final PlayerInstance target = World.getInstance().getPlayer(_name);
-		
 		if (requestor == null)
 		{
 			return;

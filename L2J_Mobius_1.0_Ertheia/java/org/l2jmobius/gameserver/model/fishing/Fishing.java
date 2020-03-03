@@ -246,7 +246,6 @@ public class Fishing
 		
 		final long fishingTime = Math.max(Rnd.get(baitData.getTimeMin(), baitData.getTimeMax()) - rodData.getReduceFishingTime(), 1000);
 		final long fishingWaitTime = Rnd.get(baitData.getWaitMin(), baitData.getWaitMax());
-		
 		_reelInTask = ThreadPool.schedule(() ->
 		{
 			_player.getFishing().reelInWithReward();
@@ -449,7 +448,6 @@ public class Fishing
 		//
 		// return Integer.MIN_VALUE;
 		// }
-		
 		if (GeoEngine.getInstance().hasGeo(baitX, baitY))
 		{
 			if (GeoEngine.getInstance().getHeight(baitX, baitY, baitZ) > baitZ)

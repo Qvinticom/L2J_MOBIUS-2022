@@ -87,7 +87,6 @@ public class RequestRejectPostAttachment implements IClientIncomingPacket
 		}
 		
 		MailManager.getInstance().sendMessage(new Message(msg));
-		
 		client.sendPacket(SystemMessageId.MAIL_SUCCESSFULLY_RETURNED);
 		client.sendPacket(new ExChangePostState(true, _msgId, Message.REJECTED));
 		

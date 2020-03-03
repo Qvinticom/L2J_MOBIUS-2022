@@ -34,7 +34,6 @@ public class ItemList extends AbstractItemPacket
 	{
 		_player = player;
 		_showWindow = showWindow;
-		
 		for (ItemInstance item : player.getInventory().getItems())
 		{
 			if (!item.isQuestItem())

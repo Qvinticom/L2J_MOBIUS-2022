@@ -81,7 +81,6 @@ public class MinionList
 		{
 			minionCount = minion.getCount();
 			minionId = minion.getId();
-			
 			minionsToSpawn = minionCount - countSpawnedMinionsById(minionId);
 			if (minionsToSpawn > 0)
 			{
@@ -194,7 +193,6 @@ public class MinionList
 	{
 		final int offset = 200;
 		final int minRadius = (int) _master.getCollisionRadius() + 30;
-		
 		for (MonsterInstance minion : _spawnedMinions)
 		{
 			if ((minion != null) && !minion.isDead() && !minion.isMovementDisabled())
@@ -284,7 +282,6 @@ public class MinionList
 		{
 			return null;
 		}
-		
 		return initializeNpcInstance(master, new MonsterInstance(minionTemplate));
 	}
 	
@@ -307,7 +304,6 @@ public class MinionList
 		// Init the position of the Minion and add it in the world as a visible object
 		final int offset = 200;
 		final int minRadius = (int) master.getCollisionRadius() + 30;
-		
 		int newX = Rnd.get(minRadius * 2, offset * 2); // x
 		int newY = Rnd.get(newX, offset * 2); // distance
 		newY = (int) Math.sqrt((newY * newY) - (newX * newX)); // y
@@ -329,7 +325,6 @@ public class MinionList
 		}
 		
 		minion.spawnMe(newX, newY, master.getZ());
-		
 		return minion;
 	}
 	

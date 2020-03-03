@@ -181,7 +181,6 @@ public abstract class ThirdClassTransferQuest extends Quest
 					{
 						giveItems(player, RACE_TAGS.get(player.getRace()), 1);
 						qs.set("vanguard", vanguard | bit);
-						
 						if (getQuestItemsCount(player, RACE_TAGS.get(player.getRace())) == 4)
 						{
 							qs.setCond(3, true);
@@ -226,7 +225,6 @@ public abstract class ThirdClassTransferQuest extends Quest
 				if (newClassId != null)
 				{
 					final ClassId currentClassId = player.getClassId();
-					
 					if (!newClassId.childOf(currentClassId))
 					{
 						break;
@@ -261,7 +259,6 @@ public abstract class ThirdClassTransferQuest extends Quest
 	{
 		String htmltext = getNoQuestMsg(player);
 		final QuestState qs = getQuestState(player, true);
-		
 		if (qs.getState() == State.STARTED)
 		{
 			switch (npc.getId())
@@ -357,7 +354,6 @@ public abstract class ThirdClassTransferQuest extends Quest
 		final PlayerInstance player = event.getPlayer();
 		final int oldLevel = event.getOldLevel();
 		final int newLevel = event.getNewLevel();
-		
 		if ((oldLevel < newLevel) && (newLevel == _minLevel) && (player.getRace() == _race) && (player.isInCategory(CategoryType.THIRD_CLASS_GROUP)))
 		{
 			player.sendPacket(new TutorialShowQuestionMark(getId()));
@@ -374,7 +370,6 @@ public abstract class ThirdClassTransferQuest extends Quest
 		}
 		
 		final PlayerInstance player = event.getPlayer();
-		
 		if ((player.getLevel() >= _minLevel) && (player.getRace() == _race) && (player.isInCategory(CategoryType.THIRD_CLASS_GROUP)))
 		{
 			if (getQuestState(player, true).isCreated())

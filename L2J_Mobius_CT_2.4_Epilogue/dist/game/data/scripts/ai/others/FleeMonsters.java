@@ -69,7 +69,6 @@ public class FleeMonsters extends AbstractNpcAI
 		final int posX = (int) (npc.getX() + (FLEE_DISTANCE * Math.cos(radians)));
 		final int posY = (int) (npc.getY() + (FLEE_DISTANCE * Math.sin(radians)));
 		final int posZ = npc.getZ();
-		
 		final Location destination = GeoEngine.getInstance().canMoveToTargetLoc(npc.getX(), npc.getY(), npc.getZ(), posX, posY, posZ, attacker.getInstanceId());
 		npc.getAI().setIntention(CtrlIntention.AI_INTENTION_MOVE_TO, destination);
 		return super.onAttack(npc, attacker, damage, isSummon);

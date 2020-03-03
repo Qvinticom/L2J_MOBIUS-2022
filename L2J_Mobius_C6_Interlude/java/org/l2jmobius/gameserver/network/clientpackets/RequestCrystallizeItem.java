@@ -52,7 +52,6 @@ public class RequestCrystallizeItem extends GameClientPacket
 	protected void runImpl()
 	{
 		final PlayerInstance player = getClient().getPlayer();
-		
 		if (player == null)
 		{
 			LOGGER.warning("RequestCrystalizeItem: activeChar was null");
@@ -98,7 +97,6 @@ public class RequestCrystallizeItem extends GameClientPacket
 			}
 			
 			final int itemId = item.getItemId();
-			
 			if (((itemId >= 6611) && (itemId <= 6621)) || (itemId == 6842))
 			{
 				return;
@@ -170,7 +168,6 @@ public class RequestCrystallizeItem extends GameClientPacket
 			
 			final ItemInstance[] unequiped = player.getInventory().unEquipItemInSlotAndRecord(itemToRemove.getEquipSlot());
 			final InventoryUpdate iu = new InventoryUpdate();
-			
 			for (ItemInstance element : unequiped)
 			{
 				iu.addModifiedItem(element);
@@ -191,7 +188,6 @@ public class RequestCrystallizeItem extends GameClientPacket
 		final int crystalId = itemToRemove.getItem().getCrystalItemId();
 		final int crystalAmount = itemToRemove.getCrystalCount();
 		final ItemInstance createditem = player.getInventory().addItem("Crystalize", crystalId, crystalAmount, player, itemToRemove);
-		
 		final SystemMessage sm = new SystemMessage(SystemMessageId.YOU_HAVE_EARNED_S2_S1_S);
 		sm.addItemName(crystalId);
 		sm.addNumber(crystalAmount);

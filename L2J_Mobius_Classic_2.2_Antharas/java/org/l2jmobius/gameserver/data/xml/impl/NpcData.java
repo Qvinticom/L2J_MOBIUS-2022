@@ -74,7 +74,6 @@ public class NpcData implements IXmlReader
 		
 		parseDatapackDirectory("data/stats/npcs", false);
 		LOGGER.info(getClass().getSimpleName() + ": Loaded " + _npcs.size() + " NPCs.");
-		
 		if (Config.CUSTOM_NPC_DATA)
 		{
 			final int npcCount = _npcs.size();

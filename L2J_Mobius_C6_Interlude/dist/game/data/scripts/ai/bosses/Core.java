@@ -229,7 +229,6 @@ public class Core extends Quest
 			npc.broadcastPacket(new CreatureSay(npc.getObjectId(), ChatType.GENERAL, name, "System is being shut down..."));
 			npc.broadcastPacket(new CreatureSay(npc.getObjectId(), ChatType.GENERAL, name, "......"));
 			_firstAttacked = false;
-			
 			addSpawn(31842, 16502, 110165, -6394, 0, false, 900000);
 			addSpawn(31842, 18948, 110166, -6397, 0, false, 900000);
 			GrandBossManager.getInstance().setBossStatus(CORE, DEAD);

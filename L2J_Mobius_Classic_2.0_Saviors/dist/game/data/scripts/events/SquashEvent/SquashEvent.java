@@ -389,7 +389,7 @@ public class SquashEvent extends LongTimeEvent
 		{ 12779, Mold_Lubricant, 50 },
 		{ 12779, Silver_Mold, 50 },
 		{ 12779, Varnish_of_Purity, 50 },
-
+		
 		// Royal Ripe Squash
 		{ 13016, Class_Buff_Scroll_1st, 70 },
 		{ 13016, Angel_Cat_Blessing_Chest, 60 },
@@ -529,7 +529,6 @@ public class SquashEvent extends LongTimeEvent
 				npc.setInvul(true);
 			}
 		}
-		
 		return super.onAttack(npc, attacker, damage, isPet);
 	}
 	

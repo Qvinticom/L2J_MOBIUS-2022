@@ -156,7 +156,6 @@ public class Q10395_NotATraitor extends Quest
 			final int killedMonsters = qs.getInt("killedMonsters") + 1;
 			qs.set("killedMonsters", killedMonsters);
 			playSound(killer, QuestSound.ITEMSOUND_QUEST_ITEMGET);
-			
 			if (killedMonsters == 100)
 			{
 				qs.setCond(2, true);

@@ -53,7 +53,6 @@ public class GamePacketHandler implements IPacketHandler<GameClient>, IClientFac
 		
 		final int opcode = buf.get() & 0xFF;
 		int opcode2 = -1;
-		
 		if ((opcode == 0xd0) && (buf.remaining() >= 2))
 		{
 			opcode2 = buf.getShort() & 0xffff;

@@ -220,9 +220,7 @@ public class RequestAcquireSkill implements IClientIncomingPacket
 					clan.addNewSkill(skill);
 					
 					clan.broadcastToOnlineMembers(new PledgeSkillList(clan));
-					
 					player.sendPacket(new AcquireSkillDone());
-					
 					VillageMasterInstance.showPledgeSkillList(player);
 				}
 				else
@@ -285,7 +283,6 @@ public class RequestAcquireSkill implements IClientIncomingPacket
 				clan.addNewSkill(skill, _subType);
 				clan.broadcastToOnlineMembers(new PledgeSkillList(clan));
 				player.sendPacket(new AcquireSkillDone());
-				
 				showSubUnitSkillList(player);
 				break;
 			}
@@ -385,12 +382,10 @@ public class RequestAcquireSkill implements IClientIncomingPacket
 				if (checkPlayerSkill(player, trainer, s))
 				{
 					giveSkill(player, trainer, skill);
-					
 					player.sendPacket(new AcquireSkillDone());
 					player.sendPacket(new ExAlchemySkillList(player));
 					
 					final List<SkillLearn> alchemySkills = SkillTreeData.getInstance().getAvailableAlchemySkills(player);
-					
 					if (alchemySkills.isEmpty())
 					{
 						player.sendPacket(SystemMessageId.THERE_ARE_NO_OTHER_SKILLS_TO_LEARN);
@@ -418,7 +413,6 @@ public class RequestAcquireSkill implements IClientIncomingPacket
 				}
 				
 				int count = 0;
-				
 				for (String varName : REVELATION_VAR_NAMES)
 				{
 					if (player.getVariables().getInt(varName, 0) > 0)
@@ -437,9 +431,7 @@ public class RequestAcquireSkill implements IClientIncomingPacket
 				if (checkPlayerSkill(player, trainer, s))
 				{
 					final String varName = count == 0 ? REVELATION_VAR_NAMES[0] : REVELATION_VAR_NAMES[1];
-					
 					player.getVariables().set(varName, skill.getId());
-					
 					giveSkill(player, trainer, skill);
 				}
 				
@@ -471,7 +463,6 @@ public class RequestAcquireSkill implements IClientIncomingPacket
 				}
 				
 				int count = 0;
-				
 				for (String varName : DUALCLASS_REVELATION_VAR_NAMES)
 				{
 					if (player.getVariables().getInt(varName, 0) > 0)
@@ -490,9 +481,7 @@ public class RequestAcquireSkill implements IClientIncomingPacket
 				if (checkPlayerSkill(player, trainer, s))
 				{
 					final String varName = count == 0 ? DUALCLASS_REVELATION_VAR_NAMES[0] : DUALCLASS_REVELATION_VAR_NAMES[1];
-					
 					player.getVariables().set(varName, skill.getId());
-					
 					giveSkill(player, trainer, skill);
 				}
 				
@@ -518,7 +507,6 @@ public class RequestAcquireSkill implements IClientIncomingPacket
 	public static void showSubUnitSkillList(PlayerInstance player)
 	{
 		final List<SkillLearn> skills = SkillTreeData.getInstance().getAvailableSubPledgeSkills(player.getClan());
-		
 		if (skills.isEmpty())
 		{
 			player.sendPacket(SystemMessageId.THERE_ARE_NO_OTHER_SKILLS_TO_LEARN);
@@ -700,7 +688,6 @@ public class RequestAcquireSkill implements IClientIncomingPacket
 		player.sendPacket(sm);
 		
 		player.addSkill(skill, store);
-		
 		player.sendItemList(false);
 		player.sendPacket(new ShortCutInit(player));
 		player.sendPacket(new ExBasicActionList(ExBasicActionList.DEFAULT_ACTION_LIST));

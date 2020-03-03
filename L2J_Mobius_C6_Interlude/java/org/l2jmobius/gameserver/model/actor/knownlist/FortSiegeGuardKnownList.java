@@ -48,7 +48,6 @@ public class FortSiegeGuardKnownList extends AttackableKnownList
 		if ((getActiveChar().getFort() != null) && getActiveChar().getFort().getSiege().isInProgress())
 		{
 			PlayerInstance player = null;
-			
 			if (object instanceof PlayerInstance)
 			{
 				player = (PlayerInstance) object;

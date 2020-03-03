@@ -96,7 +96,6 @@ public class SpawnData implements IXmlReader
 		}
 		
 		LOGGER.info(getClass().getSimpleName() + ": Initializing spawns...");
-		
 		if (Config.THREADS_FOR_LOADING)
 		{
 			final Collection<ScheduledFuture<?>> jobs = ConcurrentHashMap.newKeySet();
@@ -215,7 +214,6 @@ public class SpawnData implements IXmlReader
 			final String name = parseString(territoryNode.getAttributes(), "name", file.getName() + "_" + (spawnTemplate.getTerritories().size() + 1));
 			final int minZ = parseInteger(territoryNode.getAttributes(), "minZ");
 			final int maxZ = parseInteger(territoryNode.getAttributes(), "maxZ");
-			
 			final List<Integer> xNodes = new ArrayList<>();
 			final List<Integer> yNodes = new ArrayList<>();
 			forEach(territoryNode, "node", node ->

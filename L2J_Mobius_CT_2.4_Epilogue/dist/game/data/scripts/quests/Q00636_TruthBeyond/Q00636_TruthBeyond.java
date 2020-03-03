@@ -82,7 +82,6 @@ public class Q00636_TruthBeyond extends Quest
 	public String onTalk(Npc npc, PlayerInstance player)
 	{
 		final QuestState qs = getQuestState(player, true);
-		
 		if (npc.getId() == ELIYAH)
 		{
 			if (hasQuestItems(player, VISITOR_MARK) || hasQuestItems(player, FADED_MARK) || hasQuestItems(player, MARK))

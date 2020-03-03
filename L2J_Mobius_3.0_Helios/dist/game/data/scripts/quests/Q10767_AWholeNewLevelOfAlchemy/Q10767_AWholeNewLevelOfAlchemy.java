@@ -105,7 +105,6 @@ public class Q10767_AWholeNewLevelOfAlchemy extends Quest
 	{
 		final QuestState qs = getQuestState(player, true);
 		String htmltext = null;
-		
 		switch (qs.getState())
 		{
 			case State.CREATED:

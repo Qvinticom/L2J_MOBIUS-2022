@@ -80,7 +80,6 @@ public class MagicalAttackMp extends AbstractEffect
 	{
 		final Creature target = info.getEffected();
 		final Creature creature = info.getEffector();
-		
 		if (creature.isAlikeDead())
 		{
 			return;
@@ -92,7 +91,6 @@ public class MagicalAttackMp extends AbstractEffect
 		final boolean mcrit = Formulas.calcMCrit(creature.getMCriticalHit(target, info.getSkill()));
 		final double damage = Formulas.calcManaDam(creature, target, info.getSkill(), shld, sps, bss, mcrit);
 		final double mp = (damage > target.getCurrentMp() ? target.getCurrentMp() : damage);
-		
 		if (damage > 0)
 		{
 			target.stopEffectsOnDamage(true);

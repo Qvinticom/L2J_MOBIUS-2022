@@ -56,7 +56,6 @@ public class RequestExTryToPutEnchantSupportItem implements IClientIncomingPacke
 			final ItemInstance item = player.getInventory().getItemByObjectId(_enchantObjectId);
 			final ItemInstance scroll = player.getInventory().getItemByObjectId(player.getActiveEnchantItemId());
 			final ItemInstance support = player.getInventory().getItemByObjectId(_supportObjectId);
-			
 			if ((item == null) || (scroll == null) || (support == null))
 			{
 				// message may be custom
@@ -67,7 +66,6 @@ public class RequestExTryToPutEnchantSupportItem implements IClientIncomingPacke
 			
 			final EnchantScroll scrollTemplate = EnchantItemData.getInstance().getEnchantScroll(scroll);
 			final EnchantSupportItem supportTemplate = EnchantItemData.getInstance().getSupportItem(support);
-			
 			if ((scrollTemplate == null) || (supportTemplate == null) || !scrollTemplate.isValid(item, supportTemplate))
 			{
 				// message may be custom

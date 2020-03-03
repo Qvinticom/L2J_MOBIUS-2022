@@ -46,7 +46,6 @@ public class DeluxeKey implements ISkillHandler
 		}
 		
 		final WorldObject[] targetList = skill.getTargetList(creature);
-		
 		if (targetList == null)
 		{
 			return;

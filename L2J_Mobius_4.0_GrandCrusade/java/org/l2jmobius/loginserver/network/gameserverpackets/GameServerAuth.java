@@ -89,10 +89,8 @@ public class GameServerAuth extends BaseRecievePacket
 	private boolean handleRegProcess()
 	{
 		final GameServerTable gameServerTable = GameServerTable.getInstance();
-		
 		final int id = _desiredId;
 		final byte[] hexId = _hexId;
-		
 		GameServerInfo gsi = gameServerTable.getRegisteredGameServerById(id);
 		// is there a gameserver registered with this id?
 		if (gsi != null)
@@ -161,7 +159,6 @@ public class GameServerAuth extends BaseRecievePacket
 				return false;
 			}
 		}
-		
 		return true;
 	}
 }

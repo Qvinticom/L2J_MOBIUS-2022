@@ -55,13 +55,11 @@ public class AirShipManager
 		npcDat.set("npcId", 9);
 		npcDat.set("level", 0);
 		npcDat.set("jClass", "boat");
-		
 		npcDat.set("baseShldDef", 0);
 		npcDat.set("baseShldRate", 0);
 		npcDat.set("baseAccCombat", 38);
 		npcDat.set("baseEvasRate", 38);
 		npcDat.set("baseCritRate", 38);
-		
 		npcDat.set("collisionRadius", 0);
 		npcDat.set("collisionHeight", 0);
 		npcDat.set("sex", "male");
@@ -88,14 +86,12 @@ public class AirShipManager
 		npcDat.set("basePDef", 100);
 		npcDat.set("baseMDef", 100);
 		_airShipTemplate = new CreatureTemplate(npcDat);
-		
 		load();
 	}
 	
 	public AirShipInstance getNewAirShip(int x, int y, int z, int heading)
 	{
 		final AirShipInstance airShip = new AirShipInstance(_airShipTemplate);
-		
 		airShip.setHeading(heading);
 		airShip.setXYZInvisible(x, y, z);
 		airShip.spawnMe();

@@ -68,7 +68,6 @@ public class SiegeDefenderList extends GameServerPacket
 		if (size > 0)
 		{
 			Clan clan;
-			
 			writeD(size);
 			writeD(size);
 			// Listing the Lord and the approved clans

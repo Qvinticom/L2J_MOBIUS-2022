@@ -79,7 +79,6 @@ public class Slaves extends AbstractNpcAI
 					slave.abortAttack();
 					slave.abortCast();
 					slave.broadcastSay(ChatType.NPC_GENERAL, NpcStringId.THANK_YOU_FOR_SAVING_ME_FROM_THE_CLUTCHES_OF_EVIL);
-					
 					if ((HellboundEngine.getInstance().getLevel() >= 1) && (HellboundEngine.getInstance().getLevel() <= 2))
 					{
 						HellboundEngine.getInstance().updateTrust(TRUST_REWARD, false);

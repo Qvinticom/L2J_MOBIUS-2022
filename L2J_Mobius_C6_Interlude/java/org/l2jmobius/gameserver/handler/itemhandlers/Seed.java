@@ -316,7 +316,6 @@ public class Seed implements IItemHandler
 		
 		final PlayerInstance player = (PlayerInstance) playable;
 		final WorldObject target = player.getTarget();
-		
 		if (!(target instanceof NpcInstance))
 		{
 			player.sendPacket(SystemMessageId.INVALID_TARGET);
@@ -332,7 +331,6 @@ public class Seed implements IItemHandler
 		}
 		
 		final MonsterInstance monster = (MonsterInstance) target;
-		
 		if (monster.isDead())
 		{
 			player.sendPacket(SystemMessageId.INVALID_TARGET);
@@ -347,7 +345,6 @@ public class Seed implements IItemHandler
 		}
 		
 		_seedId = item.getItemId();
-		
 		if (areaValid(MapRegionData.getInstance().getAreaCastle(player)))
 		{
 			// TODO: get right skill level

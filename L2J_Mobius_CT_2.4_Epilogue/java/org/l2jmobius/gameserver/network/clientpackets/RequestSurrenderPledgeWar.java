@@ -50,7 +50,6 @@ public class RequestSurrenderPledgeWar implements IClientIncomingPacket
 			return;
 		}
 		final Clan clan = ClanTable.getInstance().getClanByName(_pledgeName);
-		
 		if (clan == null)
 		{
 			player.sendMessage("No such clan.");
@@ -59,7 +58,6 @@ public class RequestSurrenderPledgeWar implements IClientIncomingPacket
 		}
 		
 		LOGGER.info("RequestSurrenderPledgeWar by " + client.getPlayer().getClan().getName() + " with " + _pledgeName);
-		
 		if (!playerClan.isAtWarWith(clan.getId()))
 		{
 			player.sendMessage("You aren't at war with this clan.");

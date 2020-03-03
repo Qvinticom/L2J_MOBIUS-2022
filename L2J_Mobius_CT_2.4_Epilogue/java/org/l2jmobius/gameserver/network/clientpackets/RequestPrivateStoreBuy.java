@@ -51,13 +51,11 @@ public class RequestPrivateStoreBuy implements IClientIncomingPacket
 			return false;
 		}
 		_items = new HashSet<>();
-		
 		for (int i = 0; i < count; i++)
 		{
 			final int objectId = packet.readD();
 			final long cnt = packet.readQ();
 			final long price = packet.readQ();
-			
 			if ((objectId < 1) || (cnt < 1) || (price < 0))
 			{
 				_items = null;

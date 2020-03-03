@@ -64,7 +64,6 @@ public class AutoSpawn
 	{
 		_registeredSpawns = new HashMap<>();
 		_runningSpawns = new HashMap<>();
-		
 		restoreSpawnData();
 	}
 	
@@ -93,7 +92,6 @@ public class AutoSpawn
 			{
 				// Register random spawn group, set various options on the created spawn instance.
 				final AutoSpawnInstance spawnInst = registerSpawn(rs.getInt("npcId"), rs.getInt("initialDelay"), rs.getInt("respawnDelay"), rs.getInt("despawnDelay"));
-				
 				spawnInst.setSpawnCount(rs.getInt("count"));
 				spawnInst.setBroadcast(rs.getBoolean("broadcastSpawn"));
 				spawnInst.setRandomSpawn(rs.getBoolean("randomSpawn"));
@@ -149,7 +147,6 @@ public class AutoSpawn
 		}
 		
 		final AutoSpawnInstance newSpawn = new AutoSpawnInstance(npcId, initialDelay, respawnDelay, despawnDelay);
-		
 		if (spawnPoints != null)
 		{
 			for (int[] spawnPoint : spawnPoints)
@@ -249,15 +246,12 @@ public class AutoSpawn
 		}
 		
 		final int objectId = spawnInst._objectId;
-		
 		if (isSpawnRegistered(objectId))
 		{
 			ScheduledFuture<?> spawnTask = null;
-			
 			if (isActive)
 			{
 				final AutoSpawner rs = new AutoSpawner(objectId);
-				
 				if (spawnInst._desDelay > 0)
 				{
 					spawnTask = ThreadPool.scheduleAtFixedRate(rs, spawnInst._initDelay, spawnInst._resDelay);
@@ -339,7 +333,6 @@ public class AutoSpawn
 				return task.getDelay(TimeUnit.MILLISECONDS);
 			}
 		}
-		
 		return -1;
 	}
 	
@@ -376,7 +369,6 @@ public class AutoSpawn
 	public Map<Integer, AutoSpawnInstance> getAutoSpawnInstances(int npcId)
 	{
 		final Map<Integer, AutoSpawnInstance> spawnInstList = new HashMap<>();
-		
 		Collection<AutoSpawnInstance> instances;
 		synchronized (_registeredSpawns)
 		{
@@ -446,7 +438,6 @@ public class AutoSpawn
 				{
 					// Retrieve the required spawn instance for this spawn task.
 					spawnInst = _registeredSpawns.get(_objectId);
-					
 				}
 				
 				// If the spawn is not scheduled to be active, cancel the spawn task.
@@ -489,7 +480,6 @@ public class AutoSpawn
 				
 				// Fetch the template for this NPC ID and create a new spawn.
 				final NpcTemplate npcTemp = NpcTable.getInstance().getTemplate(spawnInst.getNpcId());
-				
 				if (npcTemp == null)
 				{
 					LOGGER.warning("Couldnt find NPC id" + spawnInst.getNpcId() + " Try to update your DP");
@@ -497,7 +487,6 @@ public class AutoSpawn
 				}
 				
 				final Spawn newSpawn = new Spawn(npcTemp);
-				
 				newSpawn.setX(x);
 				newSpawn.setY(y);
 				newSpawn.setZ(z);
@@ -517,7 +506,6 @@ public class AutoSpawn
 				// Add the new spawn information to the spawn table, but do not store it.
 				SpawnTable.getInstance().addNewSpawn(newSpawn, false);
 				NpcInstance npcInst = null;
-				
 				if (spawnInst._spawnCount == 1)
 				{
 					npcInst = newSpawn.doSpawn();
@@ -718,19 +706,16 @@ public class AutoSpawn
 				ret = new NpcInstance[_npcList.size()];
 				_npcList.toArray(ret);
 			}
-			
 			return ret;
 		}
 		
 		public Spawn[] getSpawns()
 		{
 			final List<Spawn> npcSpawns = new ArrayList<>();
-			
 			for (NpcInstance npcInst : _npcList)
 			{
 				npcSpawns.add(npcInst.getSpawn());
 			}
-			
 			return npcSpawns.toArray(new Spawn[npcSpawns.size()]);
 		}
 		
@@ -775,7 +760,6 @@ public class AutoSpawn
 			{
 				return false;
 			}
-			
 			return addSpawnLocation(spawnLoc[0], spawnLoc[1], spawnLoc[2], -1);
 		}
 		

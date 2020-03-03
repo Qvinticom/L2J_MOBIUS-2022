@@ -229,7 +229,6 @@ public class Q00638_SeekersOfTheHolyGrail extends Quest
 	{
 		final QuestState qs = getQuestState(player, true);
 		String htmltext = getNoQuestMsg(player);
-		
 		if (qs.isCreated())
 		{
 			htmltext = ((player.getLevel() >= MIN_LVL) ? "31328-01.htm" : "31328-02.htm");

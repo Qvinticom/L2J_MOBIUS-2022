@@ -54,7 +54,6 @@ public class Q00174_SupplyCheck extends Quest
 		super(174);
 		addStartNpc(MARCELA);
 		addTalkId(MARCELA, BENIS, NIKA);
-		
 		registerQuestItems(WAREHOUSE_MANIFEST, GROCERY_STORE_MANIFEST);
 	}
 	
@@ -80,7 +79,6 @@ public class Q00174_SupplyCheck extends Quest
 	{
 		final QuestState qs = getQuestState(player, true);
 		String htmltext = getNoQuestMsg(player);
-		
 		switch (npc.getId())
 		{
 			case MARCELA:

@@ -224,7 +224,6 @@ public class AdminCreateItem implements IAdminCommandHandler
 		if (num > 20)
 		{
 			final Item template = ItemTable.getInstance().getTemplate(id);
-			
 			if ((template != null) && !template.isStackable())
 			{
 				BuilderUtil.sendSysMessage(activeChar, "This item does not stack - Creation aborted.");

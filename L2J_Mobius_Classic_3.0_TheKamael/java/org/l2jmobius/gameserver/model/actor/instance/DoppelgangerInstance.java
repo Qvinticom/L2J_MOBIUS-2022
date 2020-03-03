@@ -144,7 +144,6 @@ public class DoppelgangerInstance extends Npc
 			}
 			
 			final SystemMessage sm;
-			
 			if ((target.isHpBlocked() && !target.isNpc()) || (target.isPlayer() && target.isAffected(EffectFlag.DUELIST_FURY) && !getActingPlayer().isAffected(EffectFlag.FACEOFF)))
 			{
 				sm = new SystemMessage(SystemMessageId.THE_ATTACK_HAS_BEEN_BLOCKED);

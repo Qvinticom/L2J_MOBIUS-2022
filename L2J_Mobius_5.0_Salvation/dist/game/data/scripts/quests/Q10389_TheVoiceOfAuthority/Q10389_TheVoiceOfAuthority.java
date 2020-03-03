@@ -70,7 +70,6 @@ public class Q10389_TheVoiceOfAuthority extends Quest
 	{
 		String htmltext = event;
 		final QuestState qs = getQuestState(player, false);
-		
 		if (qs == null)
 		{
 			return getNoQuestMsg(player);
@@ -101,7 +100,6 @@ public class Q10389_TheVoiceOfAuthority extends Quest
 	{
 		final QuestState qs = getQuestState(player, true);
 		String htmltext = getNoQuestMsg(player);
-		
 		switch (qs.getState())
 		{
 			case State.COMPLETED:

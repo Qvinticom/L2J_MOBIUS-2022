@@ -123,7 +123,6 @@ public class Q10812_FacingSadness extends Quest
 		}
 		
 		String htmltext = null;
-		
 		switch (event)
 		{
 			case "31620-02.htm":
@@ -175,7 +174,6 @@ public class Q10812_FacingSadness extends Quest
 	{
 		final QuestState qs = getQuestState(player, true);
 		String htmltext = getNoQuestMsg(player);
-		
 		switch (qs.getState())
 		{
 			case State.CREATED:
@@ -226,7 +224,6 @@ public class Q10812_FacingSadness extends Quest
 		{
 			giveItems(player, PROOF_OF_DISPOSAL, 1);
 			playSound(player, QuestSound.ITEMSOUND_QUEST_ITEMGET);
-			
 			if (getQuestItemsCount(player, PROOF_OF_DISPOSAL) >= 8000)
 			{
 				qs.setCond(2, true);

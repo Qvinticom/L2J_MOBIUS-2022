@@ -91,7 +91,6 @@ public class ItemChanceHolder extends ItemHolder
 	public static ItemChanceHolder getRandomHolder(List<ItemChanceHolder> holders)
 	{
 		double itemRandom = 100 * Rnd.nextDouble();
-		
 		for (ItemChanceHolder holder : holders)
 		{
 			// Any mathmatical expression including NaN will result in either NaN or 0 of converted to something other than double.

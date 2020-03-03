@@ -63,7 +63,6 @@ public class DailyMissionData implements IXmlReader
 		forEach(doc, "list", listNode -> forEach(listNode, "reward", rewardNode ->
 		{
 			final StatSet set = new StatSet(parseAttributes(rewardNode));
-			
 			final List<ItemHolder> items = new ArrayList<>(1);
 			forEach(rewardNode, "items", itemsNode -> forEach(itemsNode, "item", itemNode ->
 			{

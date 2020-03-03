@@ -39,7 +39,6 @@ public class PetNameTable
 		{
 			final PreparedStatement statement = con.prepareStatement("SELECT name FROM pets p, items i WHERE p.item_obj_id = i.object_id AND name=? AND i.item_id IN (?)");
 			statement.setString(1, name);
-			
 			String cond = "";
 			for (int it : PetDataTable.getPetItemsAsNpc(petNpcId))
 			{
@@ -66,7 +65,6 @@ public class PetNameTable
 	public boolean isValidPetName(String name)
 	{
 		boolean result = true;
-		
 		if (!isAlphaNumeric(name))
 		{
 			return result;
@@ -84,7 +82,6 @@ public class PetNameTable
 		}
 		
 		final Matcher regexp = pattern.matcher(name);
-		
 		if (!regexp.matches())
 		{
 			result = false;
@@ -105,7 +102,6 @@ public class PetNameTable
 				break;
 			}
 		}
-		
 		return result;
 	}
 	

@@ -41,7 +41,6 @@ public class AdminLevel implements IAdminCommandHandler
 		final WorldObject targetChar = activeChar.getTarget();
 		final StringTokenizer st = new StringTokenizer(command, " ");
 		final String actualCommand = st.nextToken(); // Get actual command
-		
 		String val = "";
 		if (st.countTokens() >= 1)
 		{

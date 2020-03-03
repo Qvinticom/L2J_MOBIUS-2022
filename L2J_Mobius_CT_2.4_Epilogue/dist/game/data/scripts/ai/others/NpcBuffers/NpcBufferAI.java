@@ -125,7 +125,6 @@ public class NpcBufferAI implements Runnable
 		if (target.isPlayable())
 		{
 			final PlayerInstance targetPlayer = target.getActingPlayer();
-			
 			if (player == targetPlayer)
 			{
 				return true;
@@ -185,7 +184,6 @@ public class NpcBufferAI implements Runnable
 		if (target.isPlayable())
 		{
 			final PlayerInstance targetPlayer = target.getActingPlayer();
-			
 			if (!isFriendly(player, targetPlayer))
 			{
 				if (targetPlayer.getPvpFlag() != 0)

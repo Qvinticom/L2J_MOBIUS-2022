@@ -49,7 +49,6 @@ public class Q00695_DefendTheHallOfSuffering extends Quest
 	public String onAdvEvent(String event, Npc npc, PlayerInstance player)
 	{
 		final String htmltext = event;
-		
 		final QuestState qs = player.getQuestState(getName());
 		if (qs == null)
 		{
@@ -70,7 +69,6 @@ public class Q00695_DefendTheHallOfSuffering extends Quest
 	{
 		final QuestState qs = getQuestState(player, true);
 		String htmltext = getNoQuestMsg(player);
-		
 		switch (qs.getState())
 		{
 			case State.CREATED:
@@ -105,7 +103,6 @@ public class Q00695_DefendTheHallOfSuffering extends Quest
 					case TEPIOS2:
 					{
 						final InstanceWorld world = InstanceManager.getInstance().getPlayerWorld(player);
-						
 						if ((world != null) && (world.getTemplateId() == TEMPLATE_ID))
 						{
 							final int tag = world.getParameters().getInt("tag", -1);
@@ -248,10 +245,8 @@ public class Q00695_DefendTheHallOfSuffering extends Quest
 	private void finishInstance(PlayerInstance player)
 	{
 		final InstanceWorld world = InstanceManager.getInstance().getPlayerWorld(player);
-		
 		final Calendar reenter = Calendar.getInstance();
 		reenter.set(Calendar.MINUTE, 30);
-		
 		if (reenter.get(Calendar.HOUR_OF_DAY) >= 6)
 		{
 			reenter.add(Calendar.DATE, 1);

@@ -48,7 +48,6 @@ public class AdminGmSpeed implements IAdminCommandHandler
 	{
 		final StringTokenizer st = new StringTokenizer(command);
 		final String cmd = st.nextToken();
-		
 		if (cmd.equals("admin_gmspeed"))
 		{
 			if (!st.hasMoreTokens())

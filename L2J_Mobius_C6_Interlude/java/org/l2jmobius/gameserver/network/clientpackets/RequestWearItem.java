@@ -87,7 +87,6 @@ public class RequestWearItem extends GameClientPacket
 		_unknow = readD();
 		_listId = readD(); // List of ItemID to Wear
 		_count = readD(); // Number of Item to Wear
-		
 		if (_count < 0)
 		{
 			_count = 0;
@@ -190,11 +189,9 @@ public class RequestWearItem extends GameClientPacket
 		// Check for buylist validity and calculates summary values
 		int slots = 0;
 		int weight = 0;
-		
 		for (int i = 0; i < _count; i++)
 		{
 			final int itemId = _items[i];
-			
 			if (!list.containsItemId(itemId))
 			{
 				Util.handleIllegalPlayerAction(player, "Warning!! Character " + player.getName() + " of account " + player.getAccountName() + " sent a false BuyList list_id.", Config.DEFAULT_PUNISH);
@@ -239,7 +236,6 @@ public class RequestWearItem extends GameClientPacket
 		for (int i = 0; i < _count; i++)
 		{
 			final int itemId = _items[i];
-			
 			if (!list.containsItemId(itemId))
 			{
 				Util.handleIllegalPlayerAction(player, "Warning!! Character " + player.getName() + " of account " + player.getAccountName() + " sent a false BuyList list_id.", Config.DEFAULT_PUNISH);

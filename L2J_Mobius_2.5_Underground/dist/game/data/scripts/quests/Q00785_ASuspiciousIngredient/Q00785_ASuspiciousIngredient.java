@@ -219,7 +219,6 @@ public class Q00785_ASuspiciousIngredient extends Quest
 	{
 		final QuestState qs = getQuestState(player, true);
 		String htmltext = getNoQuestMsg(player);
-		
 		if (npc.getId() == MYSTERIUS_WIZARD)
 		{
 			switch (qs.getState())
@@ -264,7 +263,6 @@ public class Q00785_ASuspiciousIngredient extends Quest
 	public String onKill(Npc npc, PlayerInstance killer, boolean isSummon)
 	{
 		final QuestState qs = getQuestState(killer, false);
-		
 		if ((qs != null) && (qs.isCond(1)))
 		{
 			if (giveItemRandomly(killer, npc, MONSTER_FLESH, 1, 50, 0.15, true))

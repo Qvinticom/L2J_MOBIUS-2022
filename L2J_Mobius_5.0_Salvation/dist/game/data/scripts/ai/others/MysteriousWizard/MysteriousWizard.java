@@ -52,7 +52,6 @@ public class MysteriousWizard extends AbstractNpcAI
 		String htmltext = null;
 		final QuestState qs = player.getQuestState(Q10751_WindsOfFateEncounters.class.getSimpleName());
 		final Instance world = npc.getInstanceWorld();
-		
 		if (isFotDInstance(world))
 		{
 			htmltext = "33980.html";

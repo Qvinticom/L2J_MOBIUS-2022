@@ -95,7 +95,6 @@ public class CrystalCavernsCoralGarden extends AbstractInstance
 				case "FAIL_TIMER":
 				{
 					final Spawn spawn = npc.getSpawn();
-					
 					if (!npcVars.getBoolean("NPC_FOLLOWING", true))
 					{
 						WalkingManager.getInstance().cancelMoving(npc);
@@ -172,7 +171,6 @@ public class CrystalCavernsCoralGarden extends AbstractInstance
 				
 				final int random = getRandom(100);
 				int bossId = -1;
-				
 				if (random < 55)
 				{
 					bossId = MICHAELA_NORMAL;

@@ -68,7 +68,6 @@ public class IPv4Filter implements IAcceptFilter, Runnable
 	{
 		final InetAddress addr = sc.socket().getInetAddress();
 		final int h = hash(addr.getAddress());
-		
 		final long current = System.currentTimeMillis();
 		Flood f;
 		synchronized (_ipFloodMap)
@@ -86,7 +85,6 @@ public class IPv4Filter implements IAcceptFilter, Runnable
 			if ((f.lastAccess + 1000) > current)
 			{
 				f.lastAccess = current;
-				
 				if (f.trys >= 3)
 				{
 					f.trys = -1;

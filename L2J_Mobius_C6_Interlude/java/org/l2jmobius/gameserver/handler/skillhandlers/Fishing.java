@@ -96,7 +96,6 @@ public class Fishing implements ISkillHandler
 		
 		player.setLure(lure);
 		ItemInstance lure2 = player.getInventory().getPaperdollItem(Inventory.PAPERDOLL_LHAND);
-		
 		if ((lure2 == null) || (lure2.getCount() < 1)) // Not enough bait.
 		{
 			player.sendPacket(SystemMessageId.YOU_DO_NOT_HAVE_ENOUGH_BAIT);

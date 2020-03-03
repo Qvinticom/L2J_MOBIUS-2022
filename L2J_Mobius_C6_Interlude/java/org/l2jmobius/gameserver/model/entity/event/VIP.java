@@ -174,7 +174,6 @@ public class VIP
 			_endX = rset.getInt("endx");
 			_endY = rset.getInt("endy");
 			_endZ = rset.getInt("endz");
-			
 			rset.close();
 			statement.close();
 		}
@@ -192,7 +191,6 @@ public class VIP
 			_startX = rset.getInt("startx");
 			_startY = rset.getInt("starty");
 			_startZ = rset.getInt("startz");
-			
 			rset.close();
 			statement.close();
 		}
@@ -261,14 +259,12 @@ public class VIP
 		try
 		{
 			SpawnTable.getInstance().addNewSpawn(_endSpawn, false);
-			
 			_endSpawn.init();
 			_endSpawn.getLastSpawn().setCurrentHp(999999999);
 			_endSpawn.getLastSpawn().setTitle("VIP Event Manager");
 			_endSpawn.getLastSpawn().isAggressive();
 			_endSpawn.getLastSpawn().decayMe();
 			_endSpawn.getLastSpawn().spawnMe(_endSpawn.getLastSpawn().getX(), _endSpawn.getLastSpawn().getY(), _endSpawn.getLastSpawn().getZ());
-			
 			_endSpawn.getLastSpawn().broadcastPacket(new MagicSkillUse(_endSpawn.getLastSpawn(), _endSpawn.getLastSpawn(), 1034, 1, 1, 1));
 		}
 		catch (Exception e)
@@ -282,14 +278,12 @@ public class VIP
 		try
 		{
 			SpawnTable.getInstance().addNewSpawn(_joinSpawn, false);
-			
 			_joinSpawn.init();
 			_joinSpawn.getLastSpawn().setCurrentHp(999999999);
 			_joinSpawn.getLastSpawn().setTitle("VIP Event Manager");
 			_joinSpawn.getLastSpawn().isAggressive();
 			_joinSpawn.getLastSpawn().decayMe();
 			_joinSpawn.getLastSpawn().spawnMe(_joinSpawn.getLastSpawn().getX(), _joinSpawn.getLastSpawn().getY(), _joinSpawn.getLastSpawn().getZ());
-			
 			_joinSpawn.getLastSpawn().broadcastPacket(new MagicSkillUse(_joinSpawn.getLastSpawn(), _joinSpawn.getLastSpawn(), 1034, 1, 1, 1));
 		}
 		catch (Exception e)
@@ -363,7 +357,6 @@ public class VIP
 	{
 		Announcements.getInstance().criticalAnnounceToAll("Registration for the VIP event involving " + _teamName + " has ended.");
 		Announcements.getInstance().criticalAnnounceToAll("Players will be teleported to their locations in 20 seconds.");
-		
 		ThreadPool.schedule(() ->
 		{
 			teleportPlayers();
@@ -436,12 +429,10 @@ public class VIP
 		try
 		{
 			final NpcHtmlMessage adminReply = new NpcHtmlMessage(5);
-			
 			final StringBuilder replyMSG = new StringBuilder("<html><head><body>");
 			replyMSG.append("VIP (End NPC)<br><br>");
 			replyMSG.append("Current event...<br1>");
 			replyMSG.append("Team:&nbsp;<font color=\"FFFFFF\">" + _teamName + "</font><br><br>");
-			
 			if (!_started)
 			{
 				replyMSG.append("<center>Please wait until the admin/gm starts the joining period.</center>");
@@ -490,7 +481,6 @@ public class VIP
 			if (player != null)
 			{
 				final PlayerInventory inv = player.getInventory();
-				
 				if (ItemTable.getInstance().createDummyItem(_notVipReward).isStackable())
 				{
 					inv.addItem("VIP Event: ", _notVipReward, _notVipRewardAmount, player, null);
@@ -504,7 +494,6 @@ public class VIP
 				}
 				
 				SystemMessage sm;
-				
 				if (_notVipRewardAmount > 1)
 				{
 					sm = new SystemMessage(SystemMessageId.YOU_HAVE_EARNED_S2_S1_S);
@@ -525,9 +514,7 @@ public class VIP
 				
 				final NpcHtmlMessage nhm = new NpcHtmlMessage(5);
 				final StringBuilder replyMSG = new StringBuilder("");
-				
 				replyMSG.append("<html><head><body>Your team has won the event. Your inventory now contains your reward.</body></html>");
-				
 				nhm.setHtml(replyMSG.toString());
 				player.sendPacket(nhm);
 			}
@@ -541,7 +528,6 @@ public class VIP
 			if ((player != null) && !player._isTheVIP)
 			{
 				final PlayerInventory inv = player.getInventory();
-				
 				if (ItemTable.getInstance().createDummyItem(_vipReward).isStackable())
 				{
 					inv.addItem("VIP Event: ", _vipReward, _vipRewardAmount, player, null);
@@ -555,7 +541,6 @@ public class VIP
 				}
 				
 				SystemMessage sm;
-				
 				if (_vipRewardAmount > 1)
 				{
 					sm = new SystemMessage(SystemMessageId.YOU_HAVE_EARNED_S2_S1_S);
@@ -576,16 +561,13 @@ public class VIP
 				
 				final NpcHtmlMessage nhm = new NpcHtmlMessage(5);
 				final StringBuilder replyMSG = new StringBuilder("");
-				
 				replyMSG.append("<html><head><body>Your team has won the event. Your inventory now contains your reward.</body></html>");
-				
 				nhm.setHtml(replyMSG.toString());
 				player.sendPacket(nhm);
 			}
 			else if ((player != null) && player._isTheVIP)
 			{
 				final PlayerInventory inv = player.getInventory();
-				
 				if (ItemTable.getInstance().createDummyItem(_theVipReward).isStackable())
 				{
 					inv.addItem("VIP Event: ", _theVipReward, _theVipRewardAmount, player, null);
@@ -599,7 +581,6 @@ public class VIP
 				}
 				
 				SystemMessage sm;
-				
 				if (_theVipRewardAmount > 1)
 				{
 					sm = new SystemMessage(SystemMessageId.YOU_HAVE_EARNED_S2_S1_S);
@@ -620,9 +601,7 @@ public class VIP
 				
 				final NpcHtmlMessage nhm = new NpcHtmlMessage(5);
 				final StringBuilder replyMSG = new StringBuilder("");
-				
 				replyMSG.append("<html><head><body>You team have won the event. Your inventory now contains your reward.</body></html>");
-				
 				nhm.setHtml(replyMSG.toString());
 				player.sendPacket(nhm);
 			}
@@ -632,7 +611,6 @@ public class VIP
 	public static void teleportFinish()
 	{
 		Announcements.getInstance().criticalAnnounceToAll("Teleporting VIP players back to the Registration area in 20 seconds.");
-		
 		ThreadPool.schedule(() ->
 		{
 			for (PlayerInstance player1 : _playersVIP)
@@ -662,7 +640,6 @@ public class VIP
 		_started = _joining = _sitForced = false;
 		_inProgress = false;
 		_teamName = _joinArea = "";
-		
 		for (PlayerInstance player : _playersVIP)
 		{
 			player.getAppearance().setNameColor(player._originalNameColourVIP);
@@ -806,12 +783,10 @@ public class VIP
 		try
 		{
 			final NpcHtmlMessage adminReply = new NpcHtmlMessage(5);
-			
 			final StringBuilder replyMSG = new StringBuilder("<html><head><body>");
 			replyMSG.append("VIP (Join NPC)<br><br>");
 			replyMSG.append("Current event...<br1>");
 			replyMSG.append("	... Team:&nbsp;<font color=\"FFFFFF\">" + _teamName + "</font><br><br>");
-			
 			if (!_joining && !_started)
 			{
 				replyMSG.append("<center>Please wait until the admin/gm starts the joining period.</center>");

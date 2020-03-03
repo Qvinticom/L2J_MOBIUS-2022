@@ -62,7 +62,6 @@ final class EffectConfuseMob extends Effect
 		final List<Creature> targetList = new ArrayList<>();
 		
 		// Getting the possible targets
-		
 		for (WorldObject obj : getEffected().getKnownList().getKnownObjects().values())
 		{
 			if (obj == null)
@@ -88,7 +87,6 @@ final class EffectConfuseMob extends Effect
 		// Attacking the target
 		getEffected().setTarget(target);
 		getEffected().getAI().setIntention(CtrlIntention.AI_INTENTION_ATTACK, target);
-		
 		return true;
 	}
 }

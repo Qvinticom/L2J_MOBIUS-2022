@@ -44,7 +44,6 @@ public class ExRaidBossSpawnInfo implements IClientOutgoingPacket
 		{
 			packet.writeD(id);
 		}
-		
 		return true;
 	}
 }

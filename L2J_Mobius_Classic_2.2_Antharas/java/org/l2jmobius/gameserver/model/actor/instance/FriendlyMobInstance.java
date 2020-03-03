@@ -40,7 +40,6 @@ public class FriendlyMobInstance extends Attackable
 		{
 			return ((PlayerInstance) attacker).getReputation() < 0;
 		}
-		
 		return super.isAutoAttackable(attacker);
 	}
 	

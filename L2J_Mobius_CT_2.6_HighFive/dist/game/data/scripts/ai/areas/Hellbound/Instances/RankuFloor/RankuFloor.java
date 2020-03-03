@@ -60,7 +60,6 @@ public class RankuFloor extends AbstractInstance
 	public String onTalk(Npc npc, PlayerInstance player)
 	{
 		String htmltext = null;
-		
 		if (npc.getId() == GK_9)
 		{
 			if (!player.canOverrideCond(PlayerCondOverride.INSTANCE_CONDITIONS))
@@ -115,7 +114,6 @@ public class RankuFloor extends AbstractInstance
 		}
 		
 		final Party party = player.getParty();
-		
 		if ((party == null) || !party.isLeader(player))
 		{
 			player.sendPacket(SystemMessageId.ONLY_A_PARTY_LEADER_CAN_MAKE_THE_REQUEST_TO_ENTER);

@@ -368,7 +368,6 @@ public class TrapInstance extends Npc
 		
 		// Notify to scripts
 		EventDispatcher.getInstance().notifyEventAsync(new OnTrapAction(this, detector, TrapAction.TRAP_DETECTED), this);
-		
 		if (detector.isPlayable())
 		{
 			sendInfo(detector.getActingPlayer());
@@ -397,7 +396,6 @@ public class TrapInstance extends Npc
 		setTarget(target);
 		
 		EventDispatcher.getInstance().notifyEventAsync(new OnTrapAction(this, target, TrapAction.TRAP_TRIGGERED), this);
-		
 		ThreadPool.schedule(new TrapTriggerTask(this), 500);
 	}
 	

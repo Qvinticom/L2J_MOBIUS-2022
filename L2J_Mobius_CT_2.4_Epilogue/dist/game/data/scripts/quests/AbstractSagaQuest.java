@@ -570,7 +570,6 @@ public abstract class AbstractSagaQuest extends Quest
 					player.setLastQuestNpcObject(npc.getObjectId());
 					final int tab = st.getInt("Tab");
 					final int quest0 = st.getInt("Quest0");
-					
 					if (st == st2)
 					{
 						if (tab == 1)

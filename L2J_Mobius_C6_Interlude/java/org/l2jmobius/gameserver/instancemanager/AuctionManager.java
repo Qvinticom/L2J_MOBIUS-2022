@@ -114,7 +114,6 @@ public class AuctionManager
 	public static final AuctionManager getInstance()
 	{
 		return SingletonHolder.INSTANCE;
-		
 	}
 	
 	public AuctionManager()
@@ -160,14 +159,12 @@ public class AuctionManager
 		{
 			return _auctions.get(index);
 		}
-		
 		return null;
 	}
 	
 	public int getAuctionIndex(int auctionId)
 	{
 		Auction auction;
-		
 		for (int i = 0; i < _auctions.size(); i++)
 		{
 			auction = _auctions.get(i);
@@ -176,7 +173,6 @@ public class AuctionManager
 				return i;
 			}
 		}
-		
 		return -1;
 	}
 	
@@ -192,7 +188,6 @@ public class AuctionManager
 	public void initNPC(int id)
 	{
 		int i = 0;
-		
 		for (i = 0; i < ItemInitDataId.length; i++)
 		{
 			if (ItemInitDataId[i] == id)

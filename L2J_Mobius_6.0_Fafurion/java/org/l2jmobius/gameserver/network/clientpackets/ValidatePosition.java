@@ -60,7 +60,6 @@ public class ValidatePosition implements IClientIncomingPacket
 		final int realX = player.getX();
 		final int realY = player.getY();
 		int realZ = player.getZ();
-		
 		if ((_x == 0) && (_y == 0) && (realX != 0))
 		{
 			return;
@@ -70,7 +69,6 @@ public class ValidatePosition implements IClientIncomingPacket
 		int dy;
 		int dz;
 		double diffSq;
-		
 		if (player.isInBoat())
 		{
 			if (Config.COORD_SYNCHRONIZE == 2)

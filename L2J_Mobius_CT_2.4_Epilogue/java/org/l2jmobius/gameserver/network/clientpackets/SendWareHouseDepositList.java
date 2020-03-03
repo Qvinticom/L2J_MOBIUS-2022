@@ -95,7 +95,6 @@ public class SendWareHouseDepositList implements IClientIncomingPacket
 			return;
 		}
 		final boolean isPrivate = warehouse instanceof PlayerWarehouse;
-		
 		final Npc manager = player.getLastFolkNPC();
 		if (((manager == null) || !manager.isWarehouse() || !manager.canInteract(player)) && !player.isGM())
 		{
@@ -124,7 +123,6 @@ public class SendWareHouseDepositList implements IClientIncomingPacket
 		final long fee = _items.size() * 30;
 		long currentAdena = player.getAdena();
 		int slots = 0;
-		
 		for (ItemHolder i : _items)
 		{
 			final ItemInstance item = player.checkItemManipulation(i.getId(), i.getCount(), "deposit");

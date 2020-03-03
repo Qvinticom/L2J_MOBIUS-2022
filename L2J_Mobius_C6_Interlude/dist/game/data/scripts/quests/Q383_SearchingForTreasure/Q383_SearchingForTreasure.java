@@ -100,7 +100,6 @@ public class Q383_SearchingForTreasure extends Quest
 				
 				// Adena reward.
 				int i1 = 0;
-				
 				int i0 = Rnd.get(100);
 				if (i0 < 5)
 				{
@@ -234,7 +233,6 @@ public class Q383_SearchingForTreasure extends Quest
 				}
 				
 				st.rewardItems(57, i1);
-				
 				st.playSound(QuestState.SOUND_FINISH);
 				st.exitQuest(true);
 			}

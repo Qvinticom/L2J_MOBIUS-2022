@@ -123,7 +123,6 @@ public class Q00334_TheWishingPotion extends Quest
 	{
 		final QuestState qs = getQuestState(player, true);
 		final String htmltext = getNoQuestMsg(player);
-		
 		switch (npc.getId())
 		{
 			case TORAI:
@@ -418,7 +417,6 @@ public class Q00334_TheWishingPotion extends Quest
 			case ALCHEMIST_MATILD:
 			{
 				final QuestState qs = getQuestState(player, false);
-				
 				if (event.equals("QUEST_ACCEPTED"))
 				{
 					playSound(player, QuestSound.ITEMSOUND_QUEST_ACCEPT);
@@ -1030,7 +1028,6 @@ public class Q00334_TheWishingPotion extends Quest
 	{
 		final QuestState qs = player.getQuestState(getName());
 		final List<QuestState> candidates = new ArrayList<>();
-		
 		if ((qs != null) && qs.isStarted())
 		{
 			candidates.add(qs);

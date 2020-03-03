@@ -43,7 +43,6 @@ public class ChangeWaitType2 extends GameClientPacket
 		}
 		
 		final WorldObject target = player.getTarget();
-		
 		if (getClient() != null)
 		{
 			if (player.isOutOfControl())

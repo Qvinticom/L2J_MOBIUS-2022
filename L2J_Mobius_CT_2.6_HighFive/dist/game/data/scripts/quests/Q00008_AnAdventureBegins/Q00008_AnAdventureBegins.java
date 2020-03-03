@@ -102,7 +102,6 @@ public class Q00008_AnAdventureBegins extends Quest
 	{
 		final QuestState qs = getQuestState(player, true);
 		String htmltext = getNoQuestMsg(player);
-		
 		switch (npc.getId())
 		{
 			case JASMINE:

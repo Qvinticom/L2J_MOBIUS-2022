@@ -29,7 +29,6 @@ public class BlowFishKeygen
 	static
 	{
 		// init the GS encryption keys on class load
-		
 		for (int i = 0; i < CRYPT_KEYS_SIZE; i++)
 		{
 			// randomize the 8 first bytes

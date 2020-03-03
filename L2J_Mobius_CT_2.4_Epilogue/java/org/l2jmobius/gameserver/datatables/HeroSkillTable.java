@@ -64,7 +64,6 @@ public class HeroSkillTable
 				return true;
 			}
 		}
-		
 		return false;
 	}
 	

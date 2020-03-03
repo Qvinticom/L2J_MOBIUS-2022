@@ -145,7 +145,6 @@ public class EnterWorld implements IClientIncomingPacket
 		}
 		
 		LoginServerThread.getInstance().sendClientTracert(player.getAccountName(), adress);
-		
 		client.setClientTracert(tracert);
 		
 		// Restore to instanced area if enabled
@@ -172,7 +171,6 @@ public class EnterWorld implements IClientIncomingPacket
 				if (Config.GM_STARTUP_BUILDER_HIDE && AdminData.getInstance().hasAccess("admin_hide", player.getAccessLevel()))
 				{
 					BuilderUtil.setHiding(player, true);
-					
 					BuilderUtil.sendSysMessage(player, "hide is default for builder.");
 					BuilderUtil.sendSysMessage(player, "FriendAddOff is default for builder.");
 					BuilderUtil.sendSysMessage(player, "whisperoff is default for builder.");
@@ -235,13 +233,11 @@ public class EnterWorld implements IClientIncomingPacket
 		if (player.getClan() != null)
 		{
 			player.sendPacket(new PledgeSkillList(player.getClan()));
-			
 			notifyClanMembers(player);
 			
 			notifySponsorOrApprentice(player);
 			
 			final AuctionableHall clanHall = ClanHallManager.getInstance().getClanHallByOwner(player.getClan());
-			
 			if (clanHall != null)
 			{
 				if (!clanHall.getPaid())
@@ -384,7 +380,6 @@ public class EnterWorld implements IClientIncomingPacket
 		
 		// Send Dye Information
 		player.sendPacket(new HennaInfo(player));
-		
 		Quest.playerEnter(player);
 		
 		// Faction System
@@ -414,7 +409,6 @@ public class EnterWorld implements IClientIncomingPacket
 		}
 		
 		player.sendPacket(new QuestList(player));
-		
 		if (Config.PLAYER_SPAWN_PROTECTION > 0)
 		{
 			player.setSpawnProtection(true);
@@ -422,7 +416,6 @@ public class EnterWorld implements IClientIncomingPacket
 		
 		player.spawnMe(player.getX(), player.getY(), player.getZ());
 		// player.sendPacket(new ExRotation(player.getObjectId(), player.getHeading()));
-		
 		player.getInventory().applyItemSkills();
 		
 		if (GameEvent.isParticipant(player))
@@ -448,9 +441,7 @@ public class EnterWorld implements IClientIncomingPacket
 		
 		// Expand Skill
 		player.sendPacket(new ExStorageMaxCount(player));
-		
 		client.sendPacket(new FriendList(player));
-		
 		SystemMessage sm = new SystemMessage(SystemMessageId.YOUR_FRIEND_S1_JUST_LOGGED_IN);
 		sm.addString(player.getName());
 		for (int id : player.getFriendList())
@@ -504,7 +495,6 @@ public class EnterWorld implements IClientIncomingPacket
 		player.onPlayerEnter();
 		
 		client.sendPacket(new SkillCoolTime(player));
-		
 		for (ItemInstance i : player.getInventory().getItems())
 		{
 			if (i.isTimeLimitedItem())
@@ -634,7 +624,6 @@ public class EnterWorld implements IClientIncomingPacket
 	private void engage(PlayerInstance player)
 	{
 		final int chaId = player.getObjectId();
-		
 		for (Couple cl : CoupleManager.getInstance().getCouples())
 		{
 			if ((cl.getPlayer1Id() == chaId) || (cl.getPlayer2Id() == chaId))

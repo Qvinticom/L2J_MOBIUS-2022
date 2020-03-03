@@ -133,7 +133,6 @@ public class Q00823_DisappearedRaceNewFairy extends Quest
 	{
 		final QuestState qs = getQuestState(player, true);
 		String htmltext = getNoQuestMsg(player);
-		
 		switch (qs.getState())
 		{
 			case State.COMPLETED:

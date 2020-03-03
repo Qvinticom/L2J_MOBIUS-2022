@@ -358,7 +358,6 @@ public class KetraOrcSupport extends Quest
 		{
 			testKetraDemote(player);
 		}
-		
 		return null;
 	}
 	

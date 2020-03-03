@@ -148,7 +148,6 @@ public class OfflineShop implements IVoicedCommandHandler
 			}
 			
 			player.sendMessage("Your private store has succesfully been flagged as an offline shop and will remain active for ever.");
-			
 			player.logout();
 			
 			return true;

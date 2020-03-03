@@ -52,7 +52,6 @@ public class CanUntransformSkillCondition implements ISkillCondition
 			player.sendPacket(SystemMessageId.YOU_ARE_TOO_HIGH_TO_PERFORM_THIS_ACTION_PLEASE_LOWER_YOUR_ALTITUDE_AND_TRY_AGAIN); // TODO: check if message is retail like.
 			canUntransform = false;
 		}
-		
 		return canUntransform;
 	}
 }

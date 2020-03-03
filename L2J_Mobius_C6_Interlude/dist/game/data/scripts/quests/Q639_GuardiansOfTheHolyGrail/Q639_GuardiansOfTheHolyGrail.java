@@ -91,7 +91,6 @@ public class Q639_GuardiansOfTheHolyGrail extends Quest
 		else if (event.equals("31350-08.htm"))
 		{
 			final int count = st.getQuestItemsCount(SCRIPTURE);
-			
 			st.takeItems(SCRIPTURE, -1);
 			st.rewardItems(57, (1625 * count) + ((count >= 10) ? 33940 : 0));
 		}

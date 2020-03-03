@@ -48,7 +48,6 @@ public class AdminTerritoryWar implements IAdminCommandHandler
 	{
 		final StringTokenizer st = new StringTokenizer(command);
 		command = st.nextToken();
-		
 		if (command.equals("admin_territory_war"))
 		{
 			showMainPage(activeChar);

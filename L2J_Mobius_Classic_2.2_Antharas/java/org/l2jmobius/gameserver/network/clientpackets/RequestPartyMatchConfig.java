@@ -46,7 +46,6 @@ public class RequestPartyMatchConfig implements IClientIncomingPacket
 	public void run(GameClient client)
 	{
 		final PlayerInstance player = client.getPlayer();
-		
 		if (player == null)
 		{
 			return;
@@ -54,7 +53,6 @@ public class RequestPartyMatchConfig implements IClientIncomingPacket
 		
 		final Party party = player.getParty();
 		final CommandChannel cc = party == null ? null : party.getCommandChannel();
-		
 		if ((party != null) && (cc != null) && (cc.getLeader() == player))
 		{
 			if (player.getMatchingRoom() == null)

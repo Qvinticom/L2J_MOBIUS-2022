@@ -42,7 +42,6 @@ public class TrainerInstance extends FolkInstance
 		{
 			pom = npcId + "-" + value;
 		}
-		
 		return "data/html/trainer/" + pom + ".htm";
 	}
 }

@@ -55,14 +55,12 @@ public class RequestFriendList implements IClientIncomingPacket
 		{
 			// int friendId = rset.getInt("friendId");
 			final String friendName = CharNameTable.getInstance().getNameById(id);
-			
 			if (friendName == null)
 			{
 				continue;
 			}
 			
 			friend = World.getInstance().getPlayer(friendName);
-			
 			if ((friend == null) || !friend.isOnline())
 			{
 				// (Currently: Offline)

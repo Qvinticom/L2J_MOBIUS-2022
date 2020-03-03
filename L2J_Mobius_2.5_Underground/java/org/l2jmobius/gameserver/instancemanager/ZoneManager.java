@@ -117,7 +117,6 @@ public class ZoneManager implements IXmlReader
 			}
 		}
 		LOGGER.info(getClass().getSimpleName() + " " + _zoneRegions.length + " by " + _zoneRegions[0].length + " Zone Region Grid set up.");
-		
 		load();
 	}
 	
@@ -186,7 +185,6 @@ public class ZoneManager implements IXmlReader
 		String zoneType;
 		String zoneShape;
 		final List<int[]> rs = new ArrayList<>();
-		
 		for (Node n = doc.getFirstChild(); n != null; n = n.getNextSibling())
 		{
 			if ("list".equalsIgnoreCase(n.getNodeName()))
@@ -203,7 +201,6 @@ public class ZoneManager implements IXmlReader
 					if ("zone".equalsIgnoreCase(d.getNodeName()))
 					{
 						attrs = d.getAttributes();
-						
 						attribute = attrs.getNamedItem("type");
 						if (attribute != null)
 						{
@@ -252,7 +249,6 @@ public class ZoneManager implements IXmlReader
 						
 						minZ = parseInteger(attrs, "minZ");
 						maxZ = parseInteger(attrs, "maxZ");
-						
 						zoneType = parseString(attrs, "type");
 						zoneShape = parseString(attrs, "shape");
 						
@@ -374,7 +370,6 @@ public class ZoneManager implements IXmlReader
 								attrs = cd.getAttributes();
 								final String name = attrs.getNamedItem("name").getNodeValue();
 								final String val = attrs.getNamedItem("val").getNodeValue();
-								
 								temp.setParameter(name, val);
 							}
 							else if ("spawn".equalsIgnoreCase(cd.getNodeName()) && (temp instanceof ZoneRespawn))
@@ -391,7 +386,6 @@ public class ZoneManager implements IXmlReader
 								attrs = cd.getAttributes();
 								final String race = attrs.getNamedItem("name").getNodeValue();
 								final String point = attrs.getNamedItem("point").getNodeValue();
-								
 								((RespawnZone) temp).addRaceRespawnPoint(race, point);
 							}
 						}
@@ -418,7 +412,6 @@ public class ZoneManager implements IXmlReader
 								final int bx = ((x + 1) - OFFSET_X) << SHIFT_BY;
 								final int ay = (y - OFFSET_Y) << SHIFT_BY;
 								final int by = ((y + 1) - OFFSET_Y) << SHIFT_BY;
-								
 								if (temp.getZone().intersectsRectangle(ax, bx, ay, by))
 								{
 									_zoneRegions[x][y].getZones().put(temp.getId(), temp);
@@ -716,7 +709,6 @@ public class ZoneManager implements IXmlReader
 				temp.add(territory);
 			}
 		}
-		
 		return temp;
 	}
 	

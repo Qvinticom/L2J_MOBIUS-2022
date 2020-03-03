@@ -535,7 +535,6 @@ public class Q337_AudienceWithTheLandDragon extends Quest
 		}
 		
 		final int npcId = npc.getNpcId();
-		
 		for (int[] npcInfo : DROP_ON_ATTACK)
 		{
 			if (npcInfo[0] != npcId)

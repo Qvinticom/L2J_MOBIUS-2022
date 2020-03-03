@@ -47,11 +47,9 @@ public class RequestExOustFromMpccRoom implements IClientIncomingPacket
 		}
 		
 		final MatchingRoom room = player.getMatchingRoom();
-		
 		if ((room != null) && (room.getLeader() == player) && (room.getRoomType() == MatchingRoomType.COMMAND_CHANNEL))
 		{
 			final PlayerInstance target = World.getInstance().getPlayer(_objectId);
-			
 			if (target != null)
 			{
 				room.deleteMember(target, true);

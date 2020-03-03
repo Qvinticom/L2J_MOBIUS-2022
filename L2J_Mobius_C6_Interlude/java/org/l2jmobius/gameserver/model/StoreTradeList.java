@@ -48,7 +48,6 @@ public class StoreTradeList
 	public void setNpcId(String id)
 	{
 		_npcId = id;
-		
 		if (id.equals("gm"))
 		{
 			_gm = true;
@@ -74,7 +73,6 @@ public class StoreTradeList
 		for (int i = 0; i < _items.size(); i++)
 		{
 			final ItemInstance item = _items.get(i);
-			
 			if (item.getItemId() == itemID)
 			{
 				if (price < (item.getReferencePrice() / 2))
@@ -92,7 +90,6 @@ public class StoreTradeList
 		for (int i = 0; i < _items.size(); i++)
 		{
 			final ItemInstance item = _items.get(i);
-			
 			if (item.getItemId() == itemID)
 			{
 				if (item.getCount() < count)
@@ -110,7 +107,6 @@ public class StoreTradeList
 		for (int i = 0; i < _items.size(); i++)
 		{
 			final ItemInstance item = _items.get(i);
-			
 			if (item.getCountDecrease() && (item.getTime() == time))
 			{
 				item.restoreInitCount();
@@ -176,7 +172,6 @@ public class StoreTradeList
 		for (int i = 0; i < _items.size(); i++)
 		{
 			final ItemInstance item = _items.get(i);
-			
 			if (item.getItemId() == itemId)
 			{
 				return item.getPriceToSell();
@@ -190,7 +185,6 @@ public class StoreTradeList
 		for (int i = 0; i < _items.size(); i++)
 		{
 			final ItemInstance item = _items.get(i);
-			
 			if (item.getItemId() == itemId)
 			{
 				return item.getCountDecrease();
@@ -208,7 +202,6 @@ public class StoreTradeList
 				return true;
 			}
 		}
-		
 		return false;
 	}
 	
@@ -217,7 +210,6 @@ public class StoreTradeList
 		for (int i = 0; i < _items.size(); i++)
 		{
 			final ItemInstance item = _items.get(i);
-			
 			if (item.getObjectId() == objectId)
 			{
 				return item;
@@ -239,11 +231,9 @@ public class StoreTradeList
 	public void removeItem(int objId, int count)
 	{
 		ItemInstance temp;
-		
 		for (int y = 0; y < _items.size(); y++)
 		{
 			temp = _items.get(y);
-			
 			if (temp.getObjectId() == objId)
 			{
 				if (count == temp.getCount())
@@ -258,20 +248,16 @@ public class StoreTradeList
 	public boolean contains(int objId)
 	{
 		boolean bool = false;
-		
 		ItemInstance temp;
-		
 		for (int y = 0; y < _items.size(); y++)
 		{
 			temp = _items.get(y);
-			
 			if (temp.getObjectId() == objId)
 			{
 				bool = true;
 				break;
 			}
 		}
-		
 		return bool;
 	}
 	
@@ -287,7 +273,6 @@ public class StoreTradeList
 		{
 			temp = list.get(count);
 			temp2 = playersInv.getItemByItemId(temp.getItemId());
-			
 			if (temp2 == null)
 			{
 				list.remove(count);
@@ -307,13 +292,11 @@ public class StoreTradeList
 		final Inventory playersInv = player.getInventory();
 		TradeItem temp;
 		ItemInstance temp2;
-		
 		int count = 0;
 		while (count != list.size())
 		{
 			temp = list.get(count);
 			temp2 = playersInv.getItemByObjectId(temp.getObjectId());
-			
 			if (temp2 == null)
 			{
 				list.remove(count);

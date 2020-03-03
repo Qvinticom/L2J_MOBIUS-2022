@@ -47,7 +47,6 @@ public class RequestReceivedPostList implements IClientIncomingPacket
 		// player.sendPacket(SystemMessageId.CANT_USE_MAIL_OUTSIDE_PEACE_ZONE);
 		// return;
 		// }
-		
 		player.sendPacket(new ExShowReceivedPostList(player.getObjectId()));
 	}
 }

@@ -47,7 +47,6 @@ public class RequestSentPostList implements IClientIncomingPacket
 		// player.sendPacket(SystemMessageId.YOU_CANNOT_RECEIVE_OR_SEND_MAIL_WITH_ATTACHED_ITEMS_IN_NON_PEACE_ZONE_REGIONS);
 		// return;
 		// }
-		
 		client.sendPacket(new ExShowSentPostList(player.getObjectId()));
 	}
 }

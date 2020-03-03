@@ -53,7 +53,6 @@ public class SiegeGuardKnownList extends AttackableKnownList
 		if ((getActiveChar().getCastle() != null) && getActiveChar().getCastle().getSiege().isInProgress())
 		{
 			PlayerInstance player = null;
-			
 			if (object instanceof PlayerInstance)
 			{
 				player = (PlayerInstance) object;

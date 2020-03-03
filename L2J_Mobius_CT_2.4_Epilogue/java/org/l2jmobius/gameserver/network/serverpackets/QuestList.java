@@ -70,7 +70,6 @@ public class QuestList implements IClientOutgoingPacket
 		 */
 		
 		final List<Quest> quests = _player.getAllActiveQuests();
-		
 		OutgoingPackets.QUEST_LIST.writeId(packet);
 		packet.writeH(quests.size());
 		for (Quest q : quests)

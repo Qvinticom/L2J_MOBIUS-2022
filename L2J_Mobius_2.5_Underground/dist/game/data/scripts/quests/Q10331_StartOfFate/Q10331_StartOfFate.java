@@ -365,7 +365,6 @@ public class Q10331_StartOfFate extends Quest
 	{
 		final QuestState qs = getQuestState(player, true);
 		String htmltext = getNoQuestMsg(player);
-		
 		switch (qs.getState())
 		{
 			case State.CREATED:
@@ -795,7 +794,6 @@ public class Q10331_StartOfFate extends Quest
 		final QuestState qs = getQuestState(player, false);
 		final int oldLevel = event.getOldLevel();
 		final int newLevel = event.getNewLevel();
-		
 		if ((qs == null) && (oldLevel < newLevel) && (newLevel == MIN_LEVEL) && (player.getRace() != Race.ERTHEIA) && (player.isInCategory(CategoryType.FIRST_CLASS_GROUP)))
 		{
 			player.sendPacket(new TutorialShowQuestionMark(getId()));
@@ -813,7 +811,6 @@ public class Q10331_StartOfFate extends Quest
 		
 		final PlayerInstance player = event.getPlayer();
 		final QuestState qs = getQuestState(player, false);
-		
 		if ((qs == null) && (player.getRace() != Race.ERTHEIA) && (player.getLevel() >= MIN_LEVEL) && (player.isInCategory(CategoryType.FIRST_CLASS_GROUP)))
 		{
 			player.sendPacket(new TutorialShowQuestionMark(getId()));

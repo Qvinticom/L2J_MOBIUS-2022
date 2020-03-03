@@ -65,7 +65,6 @@ public class PlayerStatsHolder
 		INT = actor.getINT();
 		WIT = actor.getWIT();
 		MEN = actor.getMEN();
-		
 		CUR_HP = (int) actor.getCurrentHp();
 		MAX_HP = actor.getMaxHp();
 		CUR_MP = (int) actor.getCurrentMp();
@@ -73,7 +72,6 @@ public class PlayerStatsHolder
 		SP = actor.getSp();
 		CUR_LOAD = actor.getCurrentLoad();
 		MAX_LOAD = actor.getMaxLoad();
-		
 		P_ATK = actor.getPAtk(null);
 		ATK_SPD = actor.getPAtkSpd();
 		P_DEF = actor.getPDef(null);
@@ -81,7 +79,6 @@ public class PlayerStatsHolder
 		ACCURACY = actor.getAccuracy();
 		CRITICAL = actor.getCriticalHit(null, null);
 		M_ATK = actor.getMAtk(null, null);
-		
 		CAST_SPD = actor.getMAtkSpd();
 		M_DEF = actor.getMDef(null, null);
 		PVP_FLAG = actor.getPvpFlag();

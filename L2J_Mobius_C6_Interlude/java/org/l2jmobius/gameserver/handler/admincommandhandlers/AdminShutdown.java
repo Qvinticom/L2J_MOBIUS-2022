@@ -53,9 +53,7 @@ public class AdminShutdown implements IAdminCommandHandler
 	public boolean useAdminCommand(String command, PlayerInstance activeChar)
 	{
 		final StringTokenizer st = new StringTokenizer(command);
-		
 		final CommandEnum comm = CommandEnum.valueOf(st.nextToken());
-		
 		if (comm == null)
 		{
 			return false;
@@ -131,11 +129,9 @@ public class AdminShutdown implements IAdminCommandHandler
 	private void sendHtmlForm(PlayerInstance activeChar)
 	{
 		final NpcHtmlMessage adminReply = new NpcHtmlMessage(5);
-		
 		final int t = GameTimeController.getInstance().getGameTime();
 		final int h = t / 60;
 		final int m = t % 60;
-		
 		final SimpleDateFormat format = new SimpleDateFormat("h:mm");
 		final Calendar cal = Calendar.getInstance();
 		cal.set(Calendar.HOUR_OF_DAY, h);

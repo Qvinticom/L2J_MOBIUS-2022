@@ -39,7 +39,6 @@ public class OpResurrectionSkillCondition implements ISkillCondition
 	public boolean canUse(Creature caster, Skill skill, WorldObject target)
 	{
 		boolean canResurrect = true;
-		
 		if (target == caster)
 		{
 			return canResurrect;

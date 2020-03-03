@@ -41,13 +41,11 @@ public class FuncEnchant extends Func
 		final ItemInstance item = (ItemInstance) funcOwner;
 		final int cristall = item.getItem().getCrystalType();
 		final Enum<?> itemType = item.getItemType();
-		
 		if (cristall == Item.CRYSTAL_NONE)
 		{
 			return;
 		}
 		int enchant = item.getEnchantLevel();
-		
 		int overenchant = 0;
 		if (enchant > 3)
 		{

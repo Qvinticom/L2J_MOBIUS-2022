@@ -51,7 +51,6 @@ public class LinePointIterator3D
 		_sx = srcX < dstX ? 1 : -1;
 		_sy = srcY < dstY ? 1 : -1;
 		_sz = srcZ < dstZ ? 1 : -1;
-		
 		if ((_dx >= _dy) && (_dx >= _dz))
 		{
 			_error = _error2 = _dx / 2;
@@ -80,7 +79,6 @@ public class LinePointIterator3D
 			if (_srcX != _dstX)
 			{
 				_srcX += _sx;
-				
 				_error += _dy;
 				if (_error >= _dx)
 				{
@@ -103,7 +101,6 @@ public class LinePointIterator3D
 			if (_srcY != _dstY)
 			{
 				_srcY += _sy;
-				
 				_error += _dx;
 				if (_error >= _dy)
 				{
@@ -124,7 +121,6 @@ public class LinePointIterator3D
 		else if (_srcZ != _dstZ)
 		{
 			_srcZ += _sz;
-			
 			_error += _dx;
 			if (_error >= _dz)
 			{

@@ -70,7 +70,6 @@ public class ClanHallManager
 			String location;
 			long paidUntil = 0;
 			boolean paid = false;
-			
 			PreparedStatement statement;
 			ResultSet rs;
 			statement = con.prepareStatement("SELECT * FROM clanhall ORDER BY id");
@@ -147,7 +146,6 @@ public class ClanHallManager
 		{
 			return null;
 		}
-		
 		return _allClanHalls.get(location);
 	}
 	
@@ -207,14 +205,12 @@ public class ClanHallManager
 		{
 			return _freeClanHall.get(clanHallId);
 		}
-		
 		return null;
 	}
 	
 	public ClanHall getNearbyClanHall(int x, int y, int maxDist)
 	{
 		ClanHallZone zone = null;
-		
 		for (Map.Entry<Integer, ClanHall> ch : _clanHall.entrySet())
 		{
 			zone = ch.getValue().getZone();

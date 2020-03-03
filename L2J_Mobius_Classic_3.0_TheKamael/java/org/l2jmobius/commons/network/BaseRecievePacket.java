@@ -80,7 +80,6 @@ public abstract class BaseRecievePacket
 		{
 			LOGGER.warning(getClass().getSimpleName() + ": " + e.getMessage());
 		}
-		
 		return result;
 	}
 	

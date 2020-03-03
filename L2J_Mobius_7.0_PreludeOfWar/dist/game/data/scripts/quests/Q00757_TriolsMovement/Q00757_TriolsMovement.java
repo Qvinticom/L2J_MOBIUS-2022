@@ -140,7 +140,6 @@ public class Q00757_TriolsMovement extends Quest
 	{
 		final QuestState qs = getQuestState(player, true);
 		String htmltext = getNoQuestMsg(player);
-		
 		if (npc.getId() == RADZEN)
 		{
 			switch (qs.getState())

@@ -42,7 +42,6 @@ public class RequestExSetPledgeCrestLarge extends GameClientPacket
 	protected void readImpl()
 	{
 		_size = readD();
-		
 		if (_size > 2176)
 		{
 			return;
@@ -59,7 +58,6 @@ public class RequestExSetPledgeCrestLarge extends GameClientPacket
 	protected void runImpl()
 	{
 		final PlayerInstance player = getClient().getPlayer();
-		
 		if (player == null)
 		{
 			return;
@@ -77,7 +75,6 @@ public class RequestExSetPledgeCrestLarge extends GameClientPacket
 			
 			clan.setHasCrestLarge(false);
 			player.sendMessage("The insignia has been removed.");
-			
 			for (PlayerInstance member : clan.getOnlineMembers())
 			{
 				member.broadcastUserInfo();
@@ -101,9 +98,7 @@ public class RequestExSetPledgeCrestLarge extends GameClientPacket
 			}
 			
 			final CrestCache crestCache = CrestCache.getInstance();
-			
 			final int newId = IdFactory.getNextId();
-			
 			if (!crestCache.savePledgeCrestLarge(newId, _data))
 			{
 				LOGGER.warning("Error loading large crest of clan:" + clan.getName());

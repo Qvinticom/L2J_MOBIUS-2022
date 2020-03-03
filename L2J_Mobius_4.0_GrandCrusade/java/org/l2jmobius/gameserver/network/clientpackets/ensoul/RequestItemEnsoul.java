@@ -237,7 +237,6 @@ public class RequestItemEnsoul implements IClientIncomingPacket
 			item.applySpecialAbilities();
 		}
 		player.sendPacket(new ExEnsoulResult(success, item));
-		
 		item.updateDatabase(true);
 	}
 	

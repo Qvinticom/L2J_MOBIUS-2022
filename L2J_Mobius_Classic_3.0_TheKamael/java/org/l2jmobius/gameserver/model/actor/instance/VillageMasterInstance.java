@@ -116,7 +116,6 @@ public class VillageMasterInstance extends NpcInstance
 		{
 			return true;
 		}
-		
 		return super.isAutoAttackable(attacker);
 	}
 	
@@ -124,7 +123,6 @@ public class VillageMasterInstance extends NpcInstance
 	public String getHtmlPath(int npcId, int value, PlayerInstance player)
 	{
 		String pom = "";
-		
 		if (value == 0)
 		{
 			pom = Integer.toString(npcId);
@@ -133,7 +131,6 @@ public class VillageMasterInstance extends NpcInstance
 		{
 			pom = npcId + "-" + value;
 		}
-		
 		return "data/html/villagemaster/" + pom + ".htm";
 	}
 	
@@ -142,10 +139,8 @@ public class VillageMasterInstance extends NpcInstance
 	{
 		final String[] commandStr = command.split(" ");
 		final String actualCommand = commandStr[0]; // Get actual command
-		
 		String cmdParams = "";
 		String cmdParams2 = "";
-		
 		if (commandStr.length >= 2)
 		{
 			cmdParams = commandStr[1];
@@ -379,7 +374,6 @@ public class VillageMasterInstance extends NpcInstance
 			try
 			{
 				cmdChoice = Integer.parseInt(command.substring(9, 10).trim());
-				
 				int endIndex = command.indexOf(' ', 11);
 				if (endIndex == -1)
 				{
@@ -491,11 +485,9 @@ public class VillageMasterInstance extends NpcInstance
 						html.setFile(player, "data/html/villagemaster/SubClass_ModifyCustom.htm");
 						final StringBuilder content3 = new StringBuilder(200);
 						int classIndex = 1;
-						
 						for (Iterator<SubClass> subList = iterSubClasses(player); subList.hasNext();)
 						{
 							final SubClass subClass = subList.next();
-							
 							content3.append("Sub-class " + classIndex++ + "<br><a action=\"bypass -h npc_%objectId%_Subclass 6 " + subClass.getClassIndex() + "\">" + ClassListData.getInstance().getClass(subClass.getClassId()).getClientCode() + "</a><br>");
 						}
 						html.replace("%list%", content3.toString());
@@ -543,7 +535,6 @@ public class VillageMasterInstance extends NpcInstance
 					}
 					
 					boolean allowAddition = true;
-					
 					if (player.getTotalSubClasses() >= Config.MAX_SUBCLASS)
 					{
 						allowAddition = false;
@@ -586,7 +577,6 @@ public class VillageMasterInstance extends NpcInstance
 						player.setActiveClass(player.getTotalSubClasses());
 						
 						html.setFile(player, "data/html/villagemaster/SubClass_AddOk.htm");
-						
 						player.sendPacket(SystemMessageId.THE_NEW_SUBCLASS_HAS_BEEN_ADDED); // Subclass added.
 					}
 					else
@@ -699,7 +689,6 @@ public class VillageMasterInstance extends NpcInstance
 						
 						html.setFile(player, "data/html/villagemaster/SubClass_ModifyOk.htm");
 						html.replace("%name%", ClassListData.getInstance().getClass(paramTwo).getClientCode());
-						
 						player.sendPacket(SystemMessageId.THE_NEW_SUBCLASS_HAS_BEEN_ADDED); // Subclass added.
 					}
 					else
@@ -708,7 +697,6 @@ public class VillageMasterInstance extends NpcInstance
 						 * This isn't good! modifySubClass() removed subclass from memory we must update _classIndex! Else IndexOutOfBoundsException can turn up some place down the line along with other seemingly unrelated problems.
 						 */
 						player.setActiveClass(0); // Also updates _classIndex plus switching _classid to baseclass.
-						
 						player.sendMessage("The sub class could not be added, you have been reverted to your base class.");
 						return;
 					}
@@ -729,7 +717,6 @@ public class VillageMasterInstance extends NpcInstance
 		{
 			return "data/html/villagemaster/SubClass.htm";
 		}
-		
 		return "data/html/villagemaster/SubClass_NoOther.htm";
 	}
 	
@@ -790,7 +777,6 @@ public class VillageMasterInstance extends NpcInstance
 		 * two Kamael subclasses
 		 */
 		final Set<ClassId> availSubs = getSubclasses(player, baseClassId);
-		
 		if ((availSubs != null) && !availSubs.isEmpty())
 		{
 			for (Iterator<ClassId> availSub = availSubs.iterator(); availSub.hasNext();)
@@ -813,7 +799,6 @@ public class VillageMasterInstance extends NpcInstance
 				{
 					prevSubClass = subList.next();
 					subClassId = ClassId.getClassId(prevSubClass.getClassId());
-					
 					if (subClassId.equalsOrChildOf(cid))
 					{
 						availSub.remove();
@@ -830,7 +815,6 @@ public class VillageMasterInstance extends NpcInstance
 	{
 		Set<ClassId> subclasses = null;
 		final ClassId pClass = ClassId.getClassId(classId);
-		
 		if (CategoryData.getInstance().isInCategory(CategoryType.THIRD_CLASS_GROUP, classId) || (CategoryData.getInstance().isInCategory(CategoryType.FOURTH_CLASS_GROUP, classId)))
 		{
 			subclasses = EnumSet.copyOf(mainSubclassSet);
@@ -933,7 +917,6 @@ public class VillageMasterInstance extends NpcInstance
 		{
 			sub = subList.next();
 			subClassId = ClassId.getClassId(sub.getClassId());
-			
 			if (subClassId.equalsOrChildOf(cid))
 			{
 				return false;
@@ -1004,7 +987,6 @@ public class VillageMasterInstance extends NpcInstance
 		{
 			return true;
 		}
-		
 		return checkVillageMasterRace(pclass) && checkVillageMasterTeachType(pclass);
 	}
 	
@@ -1158,7 +1140,6 @@ public class VillageMasterInstance extends NpcInstance
 		}
 		
 		final int leaderId = pledgeType != Clan.SUBUNIT_ACADEMY ? clan.getClanMember(leaderName).getObjectId() : 0;
-		
 		if (clan.createSubPledge(player, pledgeType, leaderId, clanName) == null)
 		{
 			return;
@@ -1208,7 +1189,6 @@ public class VillageMasterInstance extends NpcInstance
 		
 		final Clan clan = player.getClan();
 		final SubPledge subPledge = player.getClan().getSubPledge(pledgeType);
-		
 		if (subPledge == null)
 		{
 			player.sendMessage("Pledge don't exists.");
@@ -1251,7 +1231,6 @@ public class VillageMasterInstance extends NpcInstance
 		
 		final Clan clan = player.getClan();
 		final SubPledge subPledge = player.getClan().getSubPledge(clanName);
-		
 		if ((null == subPledge) || (subPledge.getId() == Clan.SUBUNIT_ACADEMY))
 		{
 			player.sendPacket(SystemMessageId.CLAN_NAME_IS_INVALID);
@@ -1306,7 +1285,6 @@ public class VillageMasterInstance extends NpcInstance
 		}
 		
 		final List<SkillLearn> skills = SkillTreeData.getInstance().getAvailablePledgeSkills(player.getClan());
-		
 		if (skills.isEmpty())
 		{
 			if (player.getClan().getLevel() < 8)

@@ -60,7 +60,6 @@ public class ConditionSiegeZone extends Condition
 		final Creature target = _self ? effector : effected;
 		final Castle castle = CastleManager.getInstance().getCastle(target);
 		final Fort fort = FortManager.getInstance().getFort(target);
-		
 		if ((castle == null) && (fort == null))
 		{
 			return (_value & COND_NOT_ZONE) != 0;
@@ -87,7 +86,6 @@ public class ConditionSiegeZone extends Condition
 		}
 		
 		final PlayerInstance player = (PlayerInstance) creature;
-		
 		if (((castle == null) || (castle.getResidenceId() <= 0)))
 		{
 			if ((value & COND_NOT_ZONE) != 0)
@@ -133,7 +131,6 @@ public class ConditionSiegeZone extends Condition
 		}
 		
 		final PlayerInstance player = (PlayerInstance) creature;
-		
 		if (((fort == null) || (fort.getResidenceId() <= 0)))
 		{
 			if ((value & COND_NOT_ZONE) != 0)

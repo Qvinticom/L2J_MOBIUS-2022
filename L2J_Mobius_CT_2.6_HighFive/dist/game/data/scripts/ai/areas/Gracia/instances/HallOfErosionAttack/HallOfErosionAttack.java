@@ -308,7 +308,6 @@ public class HallOfErosionAttack extends AbstractNpcAI
 	protected void enterInstance(PlayerInstance player, int[] coords)
 	{
 		InstanceWorld world = InstanceManager.getInstance().getPlayerWorld(player);
-		
 		if (world != null)
 		{
 			if (!(world instanceof HEAWorld))
@@ -327,7 +326,6 @@ public class HallOfErosionAttack extends AbstractNpcAI
 			((HEAWorld) world).startTime = System.currentTimeMillis();
 			InstanceManager.getInstance().addWorld(world);
 			LOGGER.info("Hall Of Erosion Attack started " + INSTANCEID + " Instance: " + world.getInstanceId() + " created by player: " + player.getName());
-			
 			if (player.isInParty())
 			{
 				for (PlayerInstance partyMember : player.getParty().isInCommandChannel() ? player.getParty().getCommandChannel().getMembers() : player.getParty().getMembers())
@@ -408,7 +406,6 @@ public class HallOfErosionAttack extends AbstractNpcAI
 		if (tmpworld instanceof HEAWorld)
 		{
 			final HEAWorld world = (HEAWorld) tmpworld;
-			
 			if (event.startsWith("warp"))
 			{
 				Npc victim = null;
@@ -454,7 +451,6 @@ public class HallOfErosionAttack extends AbstractNpcAI
 		if (tmpworld instanceof HEAWorld)
 		{
 			final HEAWorld world = (HEAWorld) tmpworld;
-			
 			if (npc.getId() == 18668)
 			{
 				for (int i = 0; i < Rnd.get(1, 4); i++)
@@ -598,7 +594,6 @@ public class HallOfErosionAttack extends AbstractNpcAI
 		{
 			final Calendar reenter = Calendar.getInstance();
 			reenter.set(Calendar.MINUTE, 30);
-			
 			if (reenter.get(Calendar.HOUR_OF_DAY) >= 6)
 			{
 				reenter.add(Calendar.DATE, 1);

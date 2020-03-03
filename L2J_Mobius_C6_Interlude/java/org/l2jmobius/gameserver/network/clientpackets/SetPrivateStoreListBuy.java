@@ -34,7 +34,6 @@ public class SetPrivateStoreListBuy extends GameClientPacket
 	protected void readImpl()
 	{
 		_count = readD();
-		
 		if ((_count <= 0) || ((_count * 12) > _buf.remaining()) || (_count > Config.MAX_ITEM_IN_PACKET))
 		{
 			_count = 0;
@@ -42,7 +41,6 @@ public class SetPrivateStoreListBuy extends GameClientPacket
 		}
 		
 		_items = new int[_count * 4];
-		
 		for (int x = 0; x < _count; x++)
 		{
 			final int itemId = readD();
@@ -51,7 +49,6 @@ public class SetPrivateStoreListBuy extends GameClientPacket
 			// readH(); // it's the enchant value, but the interlude client has a bug, so it dnt send back the correct enchant value
 			readH(); // TODO analyse this
 			final long cnt = readD();
-			
 			if ((cnt > Integer.MAX_VALUE) || (cnt < 0))
 			{
 				_count = 0;
@@ -114,10 +111,8 @@ public class SetPrivateStoreListBuy extends GameClientPacket
 			final int count = _items[(i * 4) + 1];
 			final int price = _items[(i * 4) + 2];
 			final int enchant = _items[(i * 4) + 3];
-			
 			tradeList.addItemByItemId(itemId, count, price, enchant);
 			cost += count * price;
-			
 			if (cost > Integer.MAX_VALUE)
 			{
 				player.sendPacket(SystemMessageId.YOU_HAVE_EXCEEDED_THE_QUANTITY_THAT_CAN_BE_INPUTTED);

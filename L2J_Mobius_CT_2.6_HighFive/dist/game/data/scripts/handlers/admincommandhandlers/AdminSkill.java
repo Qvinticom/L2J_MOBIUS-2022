@@ -244,7 +244,6 @@ public class AdminSkill implements IAdminCommandHandler
 		
 		final PlayerInstance player = target.getActingPlayer();
 		final Clan clan = player.getClan();
-		
 		if (clan == null)
 		{
 			activeChar.sendPacket(SystemMessageId.THE_TARGET_MUST_BE_A_CLAN_MEMBER);
@@ -291,7 +290,6 @@ public class AdminSkill implements IAdminCommandHandler
 		
 		final PlayerInstance player = target.getActingPlayer();
 		final Skill[] skills = player.getAllSkills().toArray(new Skill[player.getAllSkills().size()]);
-		
 		final int maxSkillsPerPage = 10;
 		int maxPages = skills.length / maxSkillsPerPage;
 		if (skills.length > (maxSkillsPerPage * maxPages))
@@ -314,7 +312,6 @@ public class AdminSkill implements IAdminCommandHandler
 		final NpcHtmlMessage adminReply = new NpcHtmlMessage();
 		final StringBuilder replyMSG = new StringBuilder(500 + (maxPages * 50) + (((skillsEnd - skillsStart) + 1) * 50));
 		replyMSG.append("<html><body><table width=260><tr><td width=40><button value=\"Main\" action=\"bypass -h admin_admin\" width=40 height=15 back=\"L2UI_ct1.button_df\" fore=\"L2UI_ct1.button_df\"></td><td width=180><center>Character Selection Menu</center></td><td width=40><button value=\"Back\" action=\"bypass -h admin_show_skills\" width=40 height=15 back=\"L2UI_ct1.button_df\" fore=\"L2UI_ct1.button_df\"></td></tr></table><br><br><center>Editing <font color=\"LEVEL\">" + player.getName() + "</font></center><br><table width=270><tr><td>Lv: " + player.getLevel() + " " + ClassListData.getInstance().getClass(player.getClassId()).getClientCode() + "</td></tr></table><br><table width=270><tr><td>Note: Dont forget that modifying players skills can</td></tr><tr><td>ruin the game...</td></tr></table><br><center>Click on the skill you wish to remove:</center><br><center><table width=270><tr>");
-		
 		for (int x = 0; x < maxPages; x++)
 		{
 			final int pagenr = x + 1;
@@ -322,7 +319,6 @@ public class AdminSkill implements IAdminCommandHandler
 		}
 		
 		replyMSG.append("</tr></table></center><br><table width=270><tr><td width=80>Name:</td><td width=60>Level:</td><td width=40>Id:</td></tr>");
-		
 		for (int i = skillsStart; i < skillsEnd; i++)
 		{
 			replyMSG.append("<tr><td width=80><a action=\"bypass -h admin_remove_skill " + skills[i].getId() + "\">" + skills[i].getName() + "</a></td><td width=60>" + skills[i].getLevel() + "</td><td width=40>" + skills[i].getId() + "</td></tr>");
@@ -559,7 +555,6 @@ public class AdminSkill implements IAdminCommandHandler
 		clan.broadcastToOnlineMembers(sm);
 		clan.addNewSkill(skill);
 		BuilderUtil.sendSysMessage(activeChar, "You gave the Clan Skill: " + skillname + " to the clan " + clan.getName() + ".");
-		
 		clan.broadcastToOnlineMembers(new PledgeSkillList(clan));
 		for (PlayerInstance member : clan.getOnlineMembers(0))
 		{

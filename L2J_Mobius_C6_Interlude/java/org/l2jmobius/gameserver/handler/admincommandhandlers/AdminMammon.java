@@ -55,7 +55,6 @@ public class AdminMammon implements IAdminCommandHandler
 		
 		final AutoSpawnInstance blackSpawnInst = AutoSpawn.getInstance().getAutoSpawnInstance(SevenSigns.MAMMON_BLACKSMITH_ID, false);
 		final AutoSpawnInstance merchSpawnInst = AutoSpawn.getInstance().getAutoSpawnInstance(SevenSigns.MAMMON_MERCHANT_ID, false);
-		
 		if (command.startsWith("admin_mammon_find"))
 		{
 			try
@@ -85,7 +84,6 @@ public class AdminMammon implements IAdminCommandHandler
 					final int y1 = blackInst[0].getY();
 					final int z1 = blackInst[0].getZ();
 					BuilderUtil.sendSysMessage(activeChar, "Blacksmith of Mammon: " + x1 + " " + y1 + " " + z1);
-					
 					if (teleportIndex == 1)
 					{
 						activeChar.teleToLocation(x1, y1, z1, true);
@@ -100,15 +98,12 @@ public class AdminMammon implements IAdminCommandHandler
 			if (merchSpawnInst != null)
 			{
 				final NpcInstance[] merchInst = merchSpawnInst.getNPCInstanceList();
-				
 				if (merchInst.length > 0)
 				{
 					final int x2 = merchInst[0].getX();
 					final int y2 = merchInst[0].getY();
 					final int z2 = merchInst[0].getZ();
-					
 					BuilderUtil.sendSysMessage(activeChar, "Merchant of Mammon: " + x2 + " " + y2 + " " + z2);
-					
 					if (teleportIndex == 2)
 					{
 						activeChar.teleToLocation(x2, y2, z2, true);
@@ -158,7 +153,6 @@ public class AdminMammon implements IAdminCommandHandler
 				final String[] params = command.split(" ");
 				final Pattern pattern = Pattern.compile("[0-9]*");
 				final Matcher regexp = pattern.matcher(params[1]);
-				
 				if (regexp.matches())
 				{
 					npcId = Integer.parseInt(params[1]);

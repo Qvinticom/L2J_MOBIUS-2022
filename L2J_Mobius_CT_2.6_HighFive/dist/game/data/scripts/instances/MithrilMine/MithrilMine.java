@@ -152,7 +152,6 @@ public class MithrilMine extends AbstractInstance
 	public String onKill(Npc npc, PlayerInstance player, boolean isSummon)
 	{
 		final InstanceWorld world = InstanceManager.getInstance().getWorld(npc);
-		
 		if (npc.getId() == KEGOR)
 		{
 			npc.broadcastSay(ChatType.NPC_GENERAL, NpcStringId.HOW_COULD_I_FALL_IN_A_PLACE_LIKE_THIS);

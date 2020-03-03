@@ -68,7 +68,6 @@ public class RequestOustPledgeMember implements IClientIncomingPacket
 		}
 		
 		final Clan clan = player.getClan();
-		
 		final ClanMember member = clan.getClanMember(_target);
 		if (member == null)
 		{
@@ -94,7 +93,6 @@ public class RequestOustPledgeMember implements IClientIncomingPacket
 		
 		// Remove the Player From the Member list
 		clan.broadcastToOnlineMembers(new PledgeShowMemberListDelete(_target));
-		
 		if (member.isOnline())
 		{
 			final PlayerInstance target = member.getPlayerInstance();

@@ -78,14 +78,11 @@ public class TradeListTable
 				final PreparedStatement statement = con.prepareStatement("SELECT item_id, price, shop_id, order, count, time, currentCount FROM " + (custom ? "custom_merchant_buylists" : "merchant_buylists") + " WHERE shop_id=? ORDER BY order ASC");
 				statement.setString(1, String.valueOf(rset1.getInt("shop_id")));
 				final ResultSet rset = statement.executeQuery();
-				
 				final StoreTradeList buylist = new StoreTradeList(rset1.getInt("shop_id"));
-				
 				buylist.setNpcId(rset1.getString("npc_id"));
 				int itemId = 0;
 				int itemCount = 0;
 				int price = 0;
-				
 				if (!buylist.isGm() && (NpcTable.getInstance().getTemplate(rset1.getInt("npc_id")) == null))
 				{
 					LOGGER.warning("TradeListTable: Merchant id " + rset1.getString("npc_id") + " with buylist " + buylist.getListId() + " does not exist.");
@@ -100,9 +97,7 @@ public class TradeListTable
 						final int count = rset.getInt("count");
 						final int currentCount = rset.getInt("currentCount");
 						final int time = rset.getInt("time");
-						
 						final ItemInstance buyItem = ItemTable.getInstance().createDummyItem(itemId);
-						
 						if (buyItem == null)
 						{
 							continue;
@@ -214,7 +209,6 @@ public class TradeListTable
 		{
 			return _lists.get(listId);
 		}
-		
 		return null;
 	}
 	
@@ -250,7 +244,6 @@ public class TradeListTable
 		try (Connection con = DatabaseFactory.getConnection())
 		{
 			PreparedStatement statement;
-			
 			for (StoreTradeList list : _lists.values())
 			{
 				if (list == null)
@@ -259,7 +252,6 @@ public class TradeListTable
 				}
 				
 				listId = list.getListId();
-				
 				for (ItemInstance Item : list.getItems())
 				{
 					if (Item.getCount() < Item.getInitCount()) // needed?

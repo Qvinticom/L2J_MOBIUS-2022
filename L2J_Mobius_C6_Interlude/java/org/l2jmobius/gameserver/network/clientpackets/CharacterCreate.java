@@ -124,7 +124,6 @@ public class CharacterCreate extends GameClientPacket
 			
 			final int objectId = IdFactory.getNextId();
 			newChar = PlayerInstance.create(objectId, template, getClient().getAccountName(), _name, _hairStyle, _hairColor, _face, _sex != 0);
-			
 			newChar.setCurrentHp(newChar.getMaxHp()); // L2Off like
 			// newChar.setCurrentCp(template.baseCpMax);
 			newChar.setCurrentCp(0); // L2Off like
@@ -248,7 +247,6 @@ public class CharacterCreate extends GameClientPacket
 		newChar.registerShortCut(new ShortCut(0, 0, 3, 2, -1)); // Attack
 		newChar.registerShortCut(new ShortCut(3, 0, 3, 5, -1)); // Take
 		newChar.registerShortCut(new ShortCut(10, 0, 3, 0, -1)); // Sit
-		
 		for (ItemHolder item : template.getItems())
 		{
 			final ItemInstance itemInstance = newChar.getInventory().addItem("Init", item.getId(), (int) item.getCount(), newChar, null);
@@ -266,7 +264,6 @@ public class CharacterCreate extends GameClientPacket
 		for (SkillLearn startSkill : SkillTreeTable.getInstance().getAvailableSkills(newChar, newChar.getClassId()))
 		{
 			newChar.addSkill(SkillTable.getInstance().getInfo(startSkill.getId(), startSkill.getLevel()), true);
-			
 			if ((startSkill.getId() == 1001) || (startSkill.getId() == 1177))
 			{
 				newChar.registerShortCut(new ShortCut(1, 0, 2, startSkill.getId(), 1));

@@ -59,7 +59,6 @@ public class Q00452_FindingtheLostSoldiers extends Quest
 		}
 		
 		String htmltext = event;
-		
 		if (npc.getId() == JAKAN)
 		{
 			if (event.equals("32773-3.htm"))
@@ -92,7 +91,6 @@ public class Q00452_FindingtheLostSoldiers extends Quest
 	{
 		final QuestState qs = getQuestState(player, true);
 		String htmltext = getNoQuestMsg(player);
-		
 		if (npc.getId() == JAKAN)
 		{
 			switch (qs.getState())

@@ -55,7 +55,6 @@ public class RequestExEnchantSkillInfo implements IClientIncomingPacket
 		}
 		
 		final PlayerInstance player = client.getPlayer();
-		
 		if (player == null)
 		{
 			return;

@@ -263,7 +263,6 @@ public abstract class Effect
 		{
 			return 0;
 		}
-		
 		return (Math.abs((_count - _totalCount) + 1) * _period) + getTime() + 1;
 	}
 	
@@ -326,7 +325,6 @@ public abstract class Effect
 		stopEffectTask();
 		_currentTask = new EffectTask(duration, -1);
 		_currentFuture = ThreadPool.schedule(_currentTask, duration);
-		
 		if (_state == EffectState.ACTING)
 		{
 			// To avoid possible NPE caused by player crash
@@ -346,7 +344,6 @@ public abstract class Effect
 		stopEffectTask();
 		_currentTask = new EffectTask(delay, rate);
 		_currentFuture = ThreadPool.scheduleAtFixedRate(_currentTask, delay, rate);
-		
 		if (_state == EffectState.ACTING)
 		{
 			_effected.addEffect(this);
@@ -576,7 +573,6 @@ public abstract class Effect
 	{
 		final EffectTask task = _currentTask;
 		final ScheduledFuture<?> future = _currentFuture;
-		
 		if ((task == null) || (future == null))
 		{
 			return;
@@ -617,7 +613,6 @@ public abstract class Effect
 	{
 		final EffectTask task = _currentTask;
 		final ScheduledFuture<?> future = _currentFuture;
-		
 		if ((task == null) || (future == null))
 		{
 			return;
@@ -635,7 +630,6 @@ public abstract class Effect
 	{
 		final EffectTask task = _currentTask;
 		final ScheduledFuture<?> future = _currentFuture;
-		
 		if ((task == null) || (future == null))
 		{
 			return;

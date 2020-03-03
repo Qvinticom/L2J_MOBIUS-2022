@@ -149,7 +149,6 @@ public class MultiSellChoose implements IClientIncomingPacket
 				}
 				
 				final PlayerInventory inv = player.getInventory();
-				
 				int slots = 0;
 				int weight = 0;
 				for (Ingredient e : entry.getProducts())
@@ -278,7 +277,6 @@ public class MultiSellChoose implements IClientIncomingPacket
 						// player.setMultiSell(null);
 						// return;
 						// }
-						
 						if (Config.ALT_BLACKSMITH_USE_RECIPES || !e.getMaintainIngredient())
 						{
 							// if it's a stackable item, just reduce the amount from the first (only) instance that is found in the inventory
@@ -359,7 +357,6 @@ public class MultiSellChoose implements IClientIncomingPacket
 									for (int i = 1; i <= (e.getItemCount() * _amount); i++)
 									{
 										final List<ItemInstance> inventoryContents = inv.getAllItemsByItemId(e.getItemId(), false);
-										
 										itemToTake = inventoryContents.get(0);
 										// get item with the LOWEST enchantment level from the inventory...
 										// +0 is lowest by default...
@@ -430,7 +427,6 @@ public class MultiSellChoose implements IClientIncomingPacket
 						}
 						// msg part
 						SystemMessage sm;
-						
 						if ((e.getItemCount() * _amount) > 1)
 						{
 							sm = new SystemMessage(SystemMessageId.YOU_HAVE_EARNED_S2_S1_S);

@@ -83,7 +83,6 @@ public abstract class ClanHallSiegeEngine extends Quest implements Siegable
 	{
 		super(-1);
 		_log = Logger.getLogger(getClass().getName());
-		
 		_hall = CHSiegeManager.getInstance().getSiegableHall(hallId);
 		_hall.setSiege(this);
 		
@@ -223,7 +222,6 @@ public abstract class ClanHallSiegeEngine extends Quest implements Siegable
 		{
 			return false;
 		}
-		
 		return _attackers.containsKey(clan.getId());
 	}
 	
@@ -368,7 +366,6 @@ public abstract class ClanHallSiegeEngine extends Quest implements Siegable
 		finalMsg.addString(_hall.getName());
 		Broadcast.toAllOnlinePlayers(finalMsg);
 		_missionAccomplished = false;
-		
 		_hall.updateSiegeZone(false);
 		_hall.updateNextSiege();
 		_hall.spawnDoor(false);
@@ -406,7 +403,6 @@ public abstract class ClanHallSiegeEngine extends Quest implements Siegable
 		
 		_siegeTask = ThreadPool.schedule(new PrepareOwner(), _hall.getNextSiegeTime() - System.currentTimeMillis() - 3600000);
 		LOGGER.config("Siege of " + _hall.getName() + " scheduled for " + _hall.getSiegeDate().getTime() + ".");
-		
 		_hall.updateSiegeStatus(SiegeStatus.REGISTERING);
 		unSpawnSiegeGuards();
 	}

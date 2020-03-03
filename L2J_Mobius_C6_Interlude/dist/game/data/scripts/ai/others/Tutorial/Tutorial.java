@@ -174,7 +174,6 @@ public class Tutorial extends Quest
 		
 		final int classId = player.getClassId().getId();
 		final int ex = qs.getInt("Ex");
-		
 		if (event.startsWith("UC"))
 		{
 			if ((player.getLevel() < 6) && (qs.getInt("onlyone") == 0))

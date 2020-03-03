@@ -68,7 +68,6 @@ public class OfflineTradeTable
 			con.setAutoCommit(false); // avoid halfway done
 			stm = con.prepareStatement(SAVE_OFFLINE_STATUS);
 			final PreparedStatement stmItems = con.prepareStatement(SAVE_ITEMS);
-			
 			for (PlayerInstance pc : World.getInstance().getAllPlayers())
 			{
 				try
@@ -321,7 +320,6 @@ public class OfflineTradeTable
 			con.setAutoCommit(false); // avoid halfway done
 			stm = con.prepareStatement(SAVE_OFFLINE_STATUS);
 			final PreparedStatement stmItems = con.prepareStatement(SAVE_ITEMS);
-			
 			boolean save = true;
 			
 			try

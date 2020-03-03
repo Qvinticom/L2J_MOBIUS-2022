@@ -127,7 +127,6 @@ public class QuestManager
 		{
 			_quests = new HashMap<>();
 		}
-		
 		return _quests;
 	}
 	

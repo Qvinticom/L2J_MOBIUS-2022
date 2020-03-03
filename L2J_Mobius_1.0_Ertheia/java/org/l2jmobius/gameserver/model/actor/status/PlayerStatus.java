@@ -126,11 +126,9 @@ public class PlayerStatus extends PlayableStatus
 		int fullValue = (int) value;
 		int tDmg = 0;
 		int mpDam = 0;
-		
 		if ((attacker != null) && (attacker != getActiveChar()))
 		{
 			final PlayerInstance attackerPlayer = attacker.getActingPlayer();
-			
 			if (attackerPlayer != null)
 			{
 				if (attackerPlayer.isGM() && !attackerPlayer.getAccessLevel().canGiveDamage())
@@ -174,7 +172,6 @@ public class PlayerStatus extends PlayableStatus
 			}
 			
 			mpDam = ((int) value * (int) getActiveChar().getStat().getValue(Stat.MANA_SHIELD_PERCENT, 0)) / 100;
-			
 			if (mpDam > 0)
 			{
 				mpDam = (int) (value - mpDam);
@@ -199,7 +196,6 @@ public class PlayerStatus extends PlayableStatus
 			if ((caster != null) && (getActiveChar().getParty() != null) && Util.checkIfInRange(1000, getActiveChar(), caster, true) && !caster.isDead() && (getActiveChar() != caster) && getActiveChar().getParty().getMembers().contains(caster))
 			{
 				int transferDmg = 0;
-				
 				transferDmg = ((int) value * (int) getActiveChar().getStat().getValue(Stat.TRANSFER_DAMAGE_TO_PLAYER, 0)) / 100;
 				transferDmg = Math.min((int) caster.getCurrentHp() - 1, transferDmg);
 				if (transferDmg > 0)

@@ -115,7 +115,6 @@ public class NevitsHerald extends AbstractNpcAI
 	public String onKill(Npc npc, PlayerInstance killer, boolean isSummon)
 	{
 		ExShowScreenMessage message = null;
-		
 		if (npc.getId() == VALAKAS)
 		{
 			message = new ExShowScreenMessage(NpcStringId.THE_EVIL_FIRE_DRAGON_VALAKAS_HAS_BEEN_DEFEATED, 2, 10000);

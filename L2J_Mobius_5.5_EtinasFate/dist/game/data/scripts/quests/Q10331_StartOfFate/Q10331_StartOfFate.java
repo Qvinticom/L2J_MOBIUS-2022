@@ -120,7 +120,6 @@ public class Q10331_StartOfFate extends Quest
 				{
 					final ClassId newClassId = ClassId.getClassId(Integer.parseInt(event.replace("classChange;", "")));
 					final ClassId currentClassId = player.getClassId();
-					
 					if (!newClassId.childOf(currentClassId) || ((qs.getCond() < 3) && (qs.getCond() > 8)))
 					{
 						Util.handleIllegalPlayerAction(player, "Player " + player.getName() + " tried to cheat the 1st class transfer!", Config.DEFAULT_PUNISH);
@@ -254,7 +253,6 @@ public class Q10331_StartOfFate extends Quest
 	{
 		final QuestState qs = getQuestState(player, true);
 		String htmltext = getNoQuestMsg(player);
-		
 		switch (qs.getState())
 		{
 			case State.CREATED:
@@ -536,7 +534,6 @@ public class Q10331_StartOfFate extends Quest
 		final QuestState qs = getQuestState(player, false);
 		final int oldLevel = event.getOldLevel();
 		final int newLevel = event.getNewLevel();
-		
 		if ((qs == null) && (oldLevel < newLevel) && (newLevel == MIN_LEVEL) && (player.getRace() != Race.ERTHEIA) && (player.isInCategory(CategoryType.FIRST_CLASS_GROUP)))
 		{
 			player.sendPacket(new TutorialShowQuestionMark(getId(), 1));
@@ -555,7 +552,6 @@ public class Q10331_StartOfFate extends Quest
 		
 		final PlayerInstance player = event.getPlayer();
 		final QuestState qs = getQuestState(player, false);
-		
 		if ((qs == null) && (player.getRace() != Race.ERTHEIA) && (player.getLevel() >= MIN_LEVEL) && (player.isInCategory(CategoryType.FIRST_CLASS_GROUP)))
 		{
 			player.sendPacket(new TutorialShowQuestionMark(getId(), 1));

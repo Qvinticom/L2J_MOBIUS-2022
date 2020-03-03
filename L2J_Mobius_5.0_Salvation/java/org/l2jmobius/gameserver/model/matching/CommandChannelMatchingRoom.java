@@ -113,7 +113,6 @@ public class CommandChannelMatchingRoom extends MatchingRoom
 		}
 		
 		final Party playerParty = player.getParty();
-		
 		if (playerParty == null)
 		{
 			return MatchingMemberType.WAITING_PLAYER_NO_PARTY;

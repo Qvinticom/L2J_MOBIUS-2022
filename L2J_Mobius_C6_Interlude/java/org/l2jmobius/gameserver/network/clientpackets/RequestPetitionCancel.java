@@ -32,7 +32,6 @@ import org.l2jmobius.gameserver.network.serverpackets.SystemMessage;
 public class RequestPetitionCancel extends GameClientPacket
 {
 	// private int _unknown;
-	
 	@Override
 	protected void readImpl()
 	{
@@ -64,7 +63,6 @@ public class RequestPetitionCancel extends GameClientPacket
 			if (PetitionManager.getInstance().cancelActivePetition(player))
 			{
 				final int numRemaining = Config.MAX_PETITIONS_PER_PLAYER - PetitionManager.getInstance().getPlayerTotalPetitionCount(player);
-				
 				final SystemMessage sm = new SystemMessage(SystemMessageId.THE_PETITION_WAS_CANCELED_YOU_MAY_SUBMIT_S1_MORE_PETITION_S_TODAY);
 				sm.addString(String.valueOf(numRemaining));
 				player.sendPacket(sm);

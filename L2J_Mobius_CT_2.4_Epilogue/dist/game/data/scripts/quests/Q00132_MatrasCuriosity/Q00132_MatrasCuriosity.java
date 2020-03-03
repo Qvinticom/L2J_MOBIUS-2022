@@ -61,7 +61,6 @@ public class Q00132_MatrasCuriosity extends Quest
 		}
 		
 		String htmltext = event;
-		
 		if (event.equalsIgnoreCase("32245-03.htm") && (player.getLevel() >= 76) && !qs.isCompleted())
 		{
 			if (qs.isCreated())
@@ -143,7 +142,6 @@ public class Q00132_MatrasCuriosity extends Quest
 	{
 		final QuestState qs = getQuestState(player, true);
 		String htmltext = getNoQuestMsg(player);
-		
 		if (qs.isCreated())
 		{
 			htmltext = (player.getLevel() >= 76) ? "32245-01.htm" : "32245-02.htm";

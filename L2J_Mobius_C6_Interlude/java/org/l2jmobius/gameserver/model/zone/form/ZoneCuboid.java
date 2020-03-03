@@ -165,7 +165,6 @@ public class ZoneCuboid extends ZoneForm
 		
 		double test;
 		double shortestDist = Math.pow(_x1 - x, 2) + Math.pow(_y1 - y, 2);
-		
 		test = Math.pow(_x1 - x, 2) + Math.pow(_y2 - y, 2);
 		if (test < shortestDist)
 		{

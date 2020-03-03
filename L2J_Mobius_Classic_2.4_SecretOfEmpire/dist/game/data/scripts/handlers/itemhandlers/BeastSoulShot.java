@@ -71,7 +71,6 @@ public class BeastSoulShot implements IItemHandler
 		final long shotCount = item.getCount();
 		final List<ItemSkillHolder> skills = item.getItem().getSkills(ItemSkillType.NORMAL);
 		short shotConsumption = 0;
-		
 		if ((pet != null) && !pet.isChargedShot(ShotType.SOULSHOTS))
 		{
 			shotConsumption += pet.getSoulShotsPerHit();

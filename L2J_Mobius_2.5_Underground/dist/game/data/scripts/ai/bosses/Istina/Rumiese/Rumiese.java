@@ -43,7 +43,6 @@ public class Rumiese extends AbstractNpcAI
 	public String onAdvEvent(String event, Npc npc, PlayerInstance player)
 	{
 		String htmltext = null;
-		
 		switch (event)
 		{
 			case "33151-01.html":

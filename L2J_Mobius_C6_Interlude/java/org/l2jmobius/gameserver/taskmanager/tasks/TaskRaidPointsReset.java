@@ -48,7 +48,6 @@ public class TaskRaidPointsReset extends Task
 	{
 		String playerName = "";
 		final Calendar cal = Calendar.getInstance();
-		
 		if (cal.get(Calendar.DAY_OF_WEEK) == Calendar.MONDAY)
 		{
 			// reward clan reputation points

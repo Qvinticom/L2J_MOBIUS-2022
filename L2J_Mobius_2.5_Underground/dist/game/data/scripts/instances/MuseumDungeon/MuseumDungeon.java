@@ -229,7 +229,6 @@ public class MuseumDungeon extends AbstractInstance
 	public void onCreatureKill(OnCreatureDeath event)
 	{
 		final Npc npc = (Npc) event.getTarget();
-		
 		final Instance world = npc.getInstanceWorld();
 		if (world != null)
 		{

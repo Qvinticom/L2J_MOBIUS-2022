@@ -51,14 +51,12 @@ public class RequestExEnchantSkillInfoDetail implements IClientIncomingPacket
 		}
 		
 		final PlayerInstance player = client.getPlayer();
-		
 		if (player == null)
 		{
 			return;
 		}
 		
 		int reqSkillLvl = -2;
-		
 		if ((_type == 0) || (_type == 1))
 		{
 			reqSkillLvl = _skillLvl - 1; // enchant

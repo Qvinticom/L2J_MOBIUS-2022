@@ -49,7 +49,6 @@ public class PlayerHelp implements IBypassHandler
 			
 			final StringTokenizer st = new StringTokenizer(path);
 			final String[] cmd = st.nextToken().split("#");
-			
 			final NpcHtmlMessage html;
 			if (cmd.length > 1)
 			{

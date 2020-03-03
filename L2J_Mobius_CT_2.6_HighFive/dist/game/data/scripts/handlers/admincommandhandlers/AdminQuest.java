@@ -67,7 +67,6 @@ public class AdminQuest implements IAdminCommandHandler
 		{
 			final StringTokenizer st = new StringTokenizer(command);
 			st.nextToken(); // skip command token
-			
 			if (!st.hasMoreTokens())
 			{
 				BuilderUtil.sendSysMessage(activeChar, "Usage: //quest_reload <questName> or <questId>");
@@ -94,7 +93,6 @@ public class AdminQuest implements IAdminCommandHandler
 		{
 			final StringTokenizer st = new StringTokenizer(command);
 			st.nextToken(); // skip command token
-			
 			if (!st.hasMoreTokens())
 			{
 				BuilderUtil.sendSysMessage(activeChar, "Usage: //script_load path/to/script.java");
@@ -117,7 +115,6 @@ public class AdminQuest implements IAdminCommandHandler
 		{
 			final StringTokenizer st = new StringTokenizer(command);
 			st.nextToken(); // skip command token
-			
 			if (!st.hasMoreTokens())
 			{
 				BuilderUtil.sendSysMessage(activeChar, "Usage: //script_load path/to/script.java");

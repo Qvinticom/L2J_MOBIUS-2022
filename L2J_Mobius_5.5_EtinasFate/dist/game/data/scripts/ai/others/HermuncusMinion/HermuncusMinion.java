@@ -94,7 +94,6 @@ public class HermuncusMinion extends AbstractNpcAI
 		String htmltext = null;
 		final StringTokenizer st = new StringTokenizer(event, " ");
 		event = st.nextToken();
-		
 		if (event.equals("teleportList"))
 		{
 			if (!player.isInCategory(CategoryType.SIXTH_CLASS_GROUP))
@@ -126,7 +125,6 @@ public class HermuncusMinion extends AbstractNpcAI
 		else if (event.equals("teleport") && st.hasMoreTokens())
 		{
 			final int locId = Integer.parseInt(st.nextToken());
-			
 			if (player.getAdena() < 150000)
 			{
 				player.sendPacket(SystemMessageId.YOU_DO_NOT_HAVE_ENOUGH_ADENA);

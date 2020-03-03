@@ -170,7 +170,6 @@ public class Q00255_Tutorial extends Quest
 	public String onAdvEvent(String event, Npc npc, PlayerInstance player)
 	{
 		final QuestState qs = getQuestState(player, false);
-		
 		if (Config.DISABLE_TUTORIAL)
 		{
 			return "";
@@ -185,7 +184,6 @@ public class Q00255_Tutorial extends Quest
 		
 		final int classId = player.getClassId().getId();
 		final int Ex = qs.getInt("Ex");
-		
 		if (event.startsWith("UC"))
 		{
 			if ((player.getLevel() < 6) && (qs.getInt("onlyone") == 0))

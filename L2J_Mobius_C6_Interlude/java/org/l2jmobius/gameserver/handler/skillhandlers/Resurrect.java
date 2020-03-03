@@ -50,7 +50,6 @@ public class Resurrect implements ISkillHandler
 		Creature target = null;
 		PlayerInstance targetPlayer;
 		final List<Creature> targetToRes = new ArrayList<>();
-		
 		for (WorldObject target2 : targets)
 		{
 			if (target2 == null)

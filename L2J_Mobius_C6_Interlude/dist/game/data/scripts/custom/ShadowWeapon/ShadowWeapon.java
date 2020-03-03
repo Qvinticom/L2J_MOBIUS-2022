@@ -56,7 +56,6 @@ public class ShadowWeapon extends Quest
 		
 		final boolean hasD = st.hasQuestItems(D_COUPON);
 		final boolean hasC = st.hasQuestItems(C_COUPON);
-		
 		if (hasD || hasC)
 		{
 			// let's assume character had both c & d-grade coupons, we'll confirm later

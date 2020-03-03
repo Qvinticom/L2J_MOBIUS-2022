@@ -161,7 +161,6 @@ public abstract class FlagWar extends ClanHallSiegeEngine
 	{
 		String html = event;
 		final Clan clan = player.getClan();
-		
 		if (event.startsWith("register_clan")) // Register the clan for the siege
 		{
 			if (!_hall.isRegistering())
@@ -350,7 +349,6 @@ public abstract class FlagWar extends ClanHallSiegeEngine
 				}
 			}
 		}
-		
 		return html;
 	}
 	
@@ -627,7 +625,6 @@ public abstract class FlagWar extends ClanHallSiegeEngine
 				index = clanId == _hall.getOwnerId() ? 5 : 6;
 			}
 			final Location loc = FLAG_COORDS[index];
-			
 			data.flagInstance = new Spawn(data.flag);
 			data.flagInstance.setLocation(loc);
 			data.flagInstance.setRespawnDelay(10000);
@@ -662,7 +659,6 @@ public abstract class FlagWar extends ClanHallSiegeEngine
 	private void registerClan(Clan clan)
 	{
 		final int clanId = clan.getId();
-		
 		final SiegeClan sc = new SiegeClan(clanId, SiegeClanType.ATTACKER);
 		getAttackers().put(clanId, sc);
 		
@@ -692,7 +688,6 @@ public abstract class FlagWar extends ClanHallSiegeEngine
 	private final void removeParticipant(int clanId, boolean teleport)
 	{
 		final ClanData dat = _data.remove(clanId);
-		
 		if (dat != null)
 		{
 			// Destroy clan flag
@@ -761,7 +756,6 @@ public abstract class FlagWar extends ClanHallSiegeEngine
 			while (rset.next())
 			{
 				final int clanId = rset.getInt("clan_id");
-				
 				if (ClanTable.getInstance().getClan(clanId) == null)
 				{
 					LOGGER.warning(getName() + ": Loaded an unexistent clan as attacker! Clan ID: " + clanId);
@@ -771,7 +765,6 @@ public abstract class FlagWar extends ClanHallSiegeEngine
 				final ClanData data = new ClanData();
 				data.flag = rset.getInt("flag");
 				data.npc = rset.getInt("npc");
-				
 				_data.put(clanId, data);
 				loadAttackerMembers(clanId);
 			}

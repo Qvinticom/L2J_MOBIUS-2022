@@ -73,7 +73,6 @@ public class Q00153_DeliverGoods extends Quest
 	{
 		final QuestState qs = getQuestState(player, true);
 		String htmltext = getNoQuestMsg(player);
-		
 		if (npc.getId() == ARNOLD_ID)
 		{
 			switch (qs.getState())

@@ -54,7 +54,6 @@ public class Q10772_ReportsFromCrumaTowerPart1 extends Quest
 		super(10772);
 		addStartNpc(JANSSEN);
 		addTalkId(JANSSEN, MAGIC_OWL);
-		
 		addCondRace(Race.ERTHEIA, "30484-00.htm");
 		addCondMinLevel(MIN_LEVEL, "30484-00.htm");
 		addCondCompletedQuest(Q10771_VolatilePower.class.getSimpleName(), "30484-00.htm");
@@ -130,7 +129,6 @@ public class Q10772_ReportsFromCrumaTowerPart1 extends Quest
 	{
 		final QuestState qs = getQuestState(player, true);
 		String htmltext = getNoQuestMsg(player);
-		
 		if (npc.getId() == JANSSEN)
 		{
 			switch (qs.getState())

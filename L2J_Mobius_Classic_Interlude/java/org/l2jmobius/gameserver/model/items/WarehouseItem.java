@@ -84,7 +84,6 @@ public class WarehouseItem
 		_augmentation = item.getAugmentation();
 		_mana = item.getMana();
 		_time = item.isTimeLimitedItem() ? (int) (item.getRemainingTime() / 1000) : -1;
-		
 		_elemAtkType = item.getAttackAttributeType().getClientId();
 		_elemAtkPower = item.getAttackAttributePower();
 		for (AttributeType type : AttributeType.ATTRIBUTE_TYPES)

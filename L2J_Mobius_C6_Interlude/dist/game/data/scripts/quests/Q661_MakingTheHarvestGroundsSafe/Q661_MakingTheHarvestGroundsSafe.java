@@ -74,9 +74,7 @@ public class Q661_MakingTheHarvestGroundsSafe extends Quest
 			final int item2 = st.getQuestItemsCount(CLOUDY_GEM);
 			final int item3 = st.getQuestItemsCount(TALON_OF_YOUNG_ARANEID);
 			int sum = 0;
-			
 			sum = (item1 * 57) + (item2 * 56) + (item3 * 60);
-			
 			if ((item1 + item2 + item3) >= 10)
 			{
 				sum += 2871;

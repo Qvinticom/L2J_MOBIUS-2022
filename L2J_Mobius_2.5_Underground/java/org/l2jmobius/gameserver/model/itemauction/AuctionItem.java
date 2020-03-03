@@ -41,7 +41,6 @@ public class AuctionItem
 		_auctionItemId = auctionItemId;
 		_auctionLength = auctionLength;
 		_auctionInitBid = auctionInitBid;
-		
 		_itemId = itemId;
 		_itemCount = itemCount;
 		_itemExtra = itemExtra;

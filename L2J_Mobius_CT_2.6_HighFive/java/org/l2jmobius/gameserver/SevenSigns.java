@@ -198,7 +198,6 @@ public class SevenSigns
 		final int numDays = (int) Math.floor((countDown - numHours) / 24);
 		
 		LOGGER.info("SevenSigns: Next period begins in " + numDays + " days, " + numHours + " hours and " + numMins + " mins.");
-		
 	}
 	
 	private boolean isNextPeriodChangeInPast()
@@ -247,7 +246,6 @@ public class SevenSigns
 		final List<AutoSpawnInstance> oratorSpawns = AutoSpawnHandler.getInstance().getAutoSpawnInstances(ORATOR_NPC_ID);
 		final List<AutoSpawnInstance> preacherSpawns = AutoSpawnHandler.getInstance().getAutoSpawnInstances(PREACHER_NPC_ID);
 		final List<AutoSpawnInstance> marketeerSpawns = AutoSpawnHandler.getInstance().getAutoSpawnInstances(MAMMON_MARKETEER_ID);
-		
 		if (isSealValidationPeriod() || isCompResultsPeriod())
 		{
 			for (AutoSpawnInstance spawnInst : marketeerSpawns)
@@ -286,7 +284,6 @@ public class SevenSigns
 			else
 			{
 				AutoSpawnHandler.getInstance().setSpawnActive(blacksmithSpawn, false);
-				
 				for (AutoSpawnInstance spawnInst : oratorSpawns)
 				{
 					AutoSpawnHandler.getInstance().setSpawnActive(spawnInst, false);
@@ -410,7 +407,6 @@ public class SevenSigns
 		long contrib = blueCount * BLUE_CONTRIB_POINTS;
 		contrib += greenCount * GREEN_CONTRIB_POINTS;
 		contrib += redCount * RED_CONTRIB_POINTS;
-		
 		return contrib;
 	}
 	
@@ -419,7 +415,6 @@ public class SevenSigns
 		long reward = blueCount * SEAL_STONE_BLUE_VALUE;
 		reward += greenCount * SEAL_STONE_GREEN_VALUE;
 		reward += redCount * SEAL_STONE_RED_VALUE;
-		
 		return reward;
 	}
 	
@@ -436,7 +431,6 @@ public class SevenSigns
 				return "dusk";
 			}
 		}
-		
 		return "No Cabal";
 	}
 	
@@ -453,7 +447,6 @@ public class SevenSigns
 				return "Revolutionaries of Dusk";
 			}
 		}
-		
 		return "No Cabal";
 	}
 	
@@ -479,7 +472,6 @@ public class SevenSigns
 				break;
 			}
 		}
-		
 		return sealName;
 	}
 	
@@ -670,7 +662,6 @@ public class SevenSigns
 				return Math.round((float) (_duskStoneScore / ((float) totalStoneScore == 0 ? 1 : totalStoneScore)) * 500) + _duskFestivalScore;
 			}
 		}
-		
 		return 0;
 	}
 	
@@ -691,7 +682,6 @@ public class SevenSigns
 				return _duskStoneScore;
 			}
 		}
-		
 		return 0;
 	}
 	
@@ -712,7 +702,6 @@ public class SevenSigns
 				return _duskFestivalScore;
 			}
 		}
-		
 		return 0;
 	}
 	
@@ -757,7 +746,6 @@ public class SevenSigns
 	{
 		int cabalMembers = 0;
 		final String cabalName = getCabalShortName(cabal);
-		
 		for (StatSet sevenDat : _signsPlayerData.values())
 		{
 			if (sevenDat.getString("cabal").equals(cabalName))
@@ -765,7 +753,6 @@ public class SevenSigns
 				cabalMembers++;
 			}
 		}
-		
 		return cabalMembers;
 	}
 	
@@ -781,7 +768,6 @@ public class SevenSigns
 		stoneCount += currPlayer.getInt("red_stones");
 		stoneCount += currPlayer.getInt("green_stones");
 		stoneCount += currPlayer.getInt("blue_stones");
-		
 		return stoneCount;
 	}
 	
@@ -792,7 +778,6 @@ public class SevenSigns
 		{
 			return 0;
 		}
-		
 		return currPlayer.getInt("contribution_score");
 	}
 	
@@ -803,7 +788,6 @@ public class SevenSigns
 		{
 			return 0;
 		}
-		
 		return currPlayer.getInt("ancient_adena_amount");
 	}
 	
@@ -814,7 +798,6 @@ public class SevenSigns
 		{
 			return SEAL_NULL;
 		}
-		
 		return currPlayer.getInt("seal");
 	}
 	
@@ -856,7 +839,6 @@ public class SevenSigns
 				while (rs.next())
 				{
 					charObjId = rs.getInt("charId");
-					
 					sevenDat = new StatSet();
 					sevenDat.set("charId", charObjId);
 					sevenDat.set("cabal", rs.getString("cabal"));
@@ -878,12 +860,10 @@ public class SevenSigns
 					_currentCycle = rs.getInt("current_cycle");
 					_activePeriod = rs.getInt("active_period");
 					_previousWinner = rs.getInt("previous_winner");
-					
 					_dawnStoneScore = rs.getDouble("dawn_stone_score");
 					_dawnFestivalScore = rs.getInt("dawn_festival_score");
 					_duskStoneScore = rs.getDouble("dusk_stone_score");
 					_duskFestivalScore = rs.getInt("dusk_festival_score");
-					
 					_signsSealOwners.put(SEAL_AVARICE, rs.getInt("avarice_owner"));
 					_signsSealOwners.put(SEAL_GNOSIS, rs.getInt("gnosis_owner"));
 					_signsSealOwners.put(SEAL_STRIFE, rs.getInt("strife_owner"));
@@ -984,7 +964,6 @@ public class SevenSigns
 			ps.setInt(15, _signsDuskSealTotals.get(SEAL_GNOSIS));
 			ps.setInt(16, _signsDuskSealTotals.get(SEAL_STRIFE));
 			ps.setInt(17, SevenSignsFestival.getInstance().getCurrentFestivalCycle());
-			
 			for (int i = 0; i < SevenSignsFestival.FESTIVAL_COUNT; i++)
 			{
 				ps.setInt(18 + i, SevenSignsFestival.getInstance().getAccumulatedBonus(i));
@@ -1026,14 +1005,12 @@ public class SevenSigns
 	public int setPlayerInfo(int objectId, int chosenCabal, int chosenSeal)
 	{
 		StatSet currPlayerData = _signsPlayerData.get(objectId);
-		
 		if (currPlayerData != null)
 		{
 			// If the seal validation period has passed,
 			// cabal information was removed and so "re-register" player
 			currPlayerData.set("cabal", getCabalShortName(chosenCabal));
 			currPlayerData.set("seal", chosenSeal);
-			
 			_signsPlayerData.put(objectId, currPlayerData);
 		}
 		else
@@ -1047,7 +1024,6 @@ public class SevenSigns
 			currPlayerData.set("blue_stones", 0);
 			currPlayerData.set("ancient_adena_amount", 0);
 			currPlayerData.set("contribution_score", 0);
-			
 			_signsPlayerData.put(objectId, currPlayerData);
 			
 			// Update data in database, as we have a new player signing up.
@@ -1094,12 +1070,10 @@ public class SevenSigns
 	{
 		final StatSet currPlayer = _signsPlayerData.get(objectId);
 		final int rewardAmount = currPlayer.getInt("ancient_adena_amount");
-		
 		currPlayer.set("red_stones", 0);
 		currPlayer.set("green_stones", 0);
 		currPlayer.set("blue_stones", 0);
 		currPlayer.set("ancient_adena_amount", 0);
-		
 		if (removeReward)
 		{
 			_signsPlayerData.put(objectId, currPlayer);
@@ -1109,7 +1083,6 @@ public class SevenSigns
 				saveSevenSignsStatus();
 			}
 		}
-		
 		return rewardAmount;
 	}
 	
@@ -1126,11 +1099,9 @@ public class SevenSigns
 	public long addPlayerStoneContrib(int objectId, long blueCount, long greenCount, long redCount)
 	{
 		final StatSet currPlayer = _signsPlayerData.get(objectId);
-		
 		final long contribScore = calcContributionScore(blueCount, greenCount, redCount);
 		final long totalAncientAdena = currPlayer.getLong("ancient_adena_amount") + calcAncientAdenaReward(blueCount, greenCount, redCount);
 		final long totalContribScore = currPlayer.getLong("contribution_score") + contribScore;
-		
 		if (totalContribScore > Config.ALT_MAXIMUM_PLAYER_CONTRIB)
 		{
 			return -1;
@@ -1187,7 +1158,6 @@ public class SevenSigns
 		else
 		{
 			_dawnFestivalScore += amount;
-			
 			if (_duskFestivalScore >= amount)
 			{
 				_duskFestivalScore -= amount;
@@ -1493,7 +1463,6 @@ public class SevenSigns
 		for (PlayerInstance player : World.getInstance().getPlayers())
 		{
 			final StatSet currPlayer = _signsPlayerData.get(player.getObjectId());
-			
 			if (isSealValidationPeriod() || isCompResultsPeriod())
 			{
 				if (!player.isGM() && player.isIn7sDungeon() && ((currPlayer == null) || !currPlayer.getString("cabal").equals(compWinner)))
@@ -1612,12 +1581,10 @@ public class SevenSigns
 			teleLosingCabalFromDungeons(getCabalShortName(getCabalHighestScore()));
 			
 			final SSQInfo ss = new SSQInfo();
-			
 			Broadcast.toAllOnlinePlayers(ss);
 			spawnSevenSignsNPC();
 			
 			LOGGER.info("SevenSigns: The " + getCurrentPeriodName() + " period has begun!");
-			
 			setCalendarForNextPeriodChange();
 			
 			final SevenSignsPeriodChange sspc = new SevenSignsPeriodChange();
@@ -1728,7 +1695,6 @@ public class SevenSigns
 			player.sendPacket(SystemMessageId.DUE_TO_THE_AFFECTS_OF_THE_SEAL_OF_STRIFE_IT_IS_NOT_POSSIBLE_TO_SUMMON_AT_THIS_TIME);
 			return true;
 		}
-		
 		return false;
 	}
 	

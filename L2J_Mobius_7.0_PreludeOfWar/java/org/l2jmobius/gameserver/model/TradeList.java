@@ -524,7 +524,6 @@ public class TradeList
 	private int countItemsSlots(PlayerInstance partner)
 	{
 		int slots = 0;
-		
 		for (TradeItem item : _items)
 		{
 			if (item == null)
@@ -545,7 +544,6 @@ public class TradeList
 				slots++;
 			}
 		}
-		
 		return slots;
 	}
 	
@@ -555,7 +553,6 @@ public class TradeList
 	private int calcItemsWeight()
 	{
 		long weight = 0;
-		
 		for (TradeItem item : _items)
 		{
 			if (item == null)
@@ -569,7 +566,6 @@ public class TradeList
 			}
 			weight += item.getCount() * template.getWeight();
 		}
-		
 		return (int) Math.min(weight, Integer.MAX_VALUE);
 	}
 	
@@ -657,11 +653,9 @@ public class TradeList
 		
 		final PlayerInventory ownerInventory = _owner.getInventory();
 		final PlayerInventory playerInventory = player.getInventory();
-		
 		for (ItemRequest item : items)
 		{
 			boolean found = false;
-			
 			for (TradeItem ti : _items)
 			{
 				if (ti.getObjectId() == item.getObjectId())
@@ -753,7 +747,6 @@ public class TradeList
 		// Prepare inventory update packets
 		final InventoryUpdate ownerIU = new InventoryUpdate();
 		final InventoryUpdate playerIU = new InventoryUpdate();
-		
 		final ItemInstance adenaItem = playerInventory.getAdenaInstance();
 		if (!playerInventory.reduceAdena("PrivateStore", totalPrice, player, _owner))
 		{
@@ -763,7 +756,6 @@ public class TradeList
 		playerIU.addItem(adenaItem);
 		ownerInventory.addAdena("PrivateStore", totalPrice, _owner, player);
 		// ownerIU.addItem(ownerInventory.getAdenaInstance());
-		
 		boolean ok = true;
 		
 		// Transfer items
@@ -869,16 +861,13 @@ public class TradeList
 		// Prepare inventory update packet
 		final InventoryUpdate ownerIU = new InventoryUpdate();
 		final InventoryUpdate playerIU = new InventoryUpdate();
-		
 		long totalPrice = 0;
 		
 		final TradeItem[] sellerItems = _items.toArray(new TradeItem[0]);
-		
 		for (ItemRequest item : requestedItems)
 		{
 			// searching item in tradelist using itemId
 			boolean found = false;
-			
 			for (TradeItem ti : sellerItems)
 			{
 				if (ti.getItem().getId() == item.getItemId())

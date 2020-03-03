@@ -79,7 +79,6 @@ public class Q00241_PossessorOfAPreciousSoul1 extends Quest
 		
 		addStartNpc(TALIEN);
 		addTalkId(TALIEN, GABRIELLE, GILMORE, KANTABILON, STEDMIEL, VIRGIL, OGMAR, RAHORAKTI, KASSANDRA, CARADINE, NOEL);
-		
 		addKillId(BARAHAM, MALRUK_SUCCUBUS, MALRUK_SUCCUBUS_TUREN, SPLINTER_STAKATO, SPLINTER_STAKATO_WALKER, SPLINTER_STAKATO_SOLDIER, SPLINTER_STAKATO_DRONE1, SPLINTER_STAKATO_DRONE2);
 	}
 	
@@ -209,7 +208,6 @@ public class Q00241_PossessorOfAPreciousSoul1 extends Quest
 	{
 		final QuestState st = getQuestState(player, true);
 		String htmltext = getNoQuestMsg(player);
-		
 		switch (st.getState())
 		{
 			case State.CREATED:

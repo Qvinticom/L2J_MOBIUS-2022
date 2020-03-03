@@ -174,13 +174,11 @@ public class AdminBuffs implements IAdminCommandHandler
 	public void showBuffs(PlayerInstance player, PlayerInstance activeChar)
 	{
 		final StringBuilder html = new StringBuilder();
-		
 		html.append("<html><center><font color=\"LEVEL\">Effects of " + player.getName() + "</font><center><br>");
 		html.append("<table>");
 		html.append("<tr><td width=200>Skill</td><td width=70>Action</td></tr>");
 		
 		final Effect[] effects = player.getAllEffects();
-		
 		for (Effect e : effects)
 		{
 			if (e != null)
@@ -202,11 +200,9 @@ public class AdminBuffs implements IAdminCommandHandler
 	private void removeBuff(PlayerInstance remover, String playername, int SkillId)
 	{
 		final PlayerInstance player = World.getInstance().getPlayer(playername);
-		
 		if ((player != null) && (SkillId > 0))
 		{
 			final Effect[] effects = player.getAllEffects();
-			
 			for (Effect e : effects)
 			{
 				if ((e != null) && (e.getSkill().getId() == SkillId))
@@ -222,7 +218,6 @@ public class AdminBuffs implements IAdminCommandHandler
 	private void removeAllBuffs(PlayerInstance remover, String playername)
 	{
 		final PlayerInstance player = World.getInstance().getPlayer(playername);
-		
 		if (player != null)
 		{
 			player.stopAllEffects();

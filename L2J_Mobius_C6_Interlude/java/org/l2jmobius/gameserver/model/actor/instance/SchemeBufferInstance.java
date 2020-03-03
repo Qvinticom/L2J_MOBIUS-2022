@@ -48,7 +48,6 @@ public class SchemeBufferInstance extends FolkInstance
 		
 		final StringTokenizer st = new StringTokenizer(command, ";");
 		final String currentCommand = st.nextToken();
-		
 		if (currentCommand.startsWith("menu"))
 		{
 			final NpcHtmlMessage html = new NpcHtmlMessage(getObjectId());
@@ -95,7 +94,6 @@ public class SchemeBufferInstance extends FolkInstance
 		{
 			final String schemeName = st.nextToken();
 			final int cost = Integer.parseInt(st.nextToken());
-			
 			Creature target = null;
 			if (st.hasMoreTokens())
 			{
@@ -130,12 +128,9 @@ public class SchemeBufferInstance extends FolkInstance
 		{
 			final String groupType = st.nextToken();
 			final String schemeName = st.nextToken();
-			
 			final int skillId = Integer.parseInt(st.nextToken());
 			final int page = Integer.parseInt(st.nextToken());
-			
 			final List<Integer> skills = SchemeBufferTable.getInstance().getScheme(player.getObjectId(), schemeName);
-			
 			if (currentCommand.startsWith("skillselect") && !schemeName.equalsIgnoreCase("none"))
 			{
 				if (skills.size() < player.getMaxBuffCount())
@@ -201,7 +196,6 @@ public class SchemeBufferInstance extends FolkInstance
 			{
 				final String schemeName = st.nextToken();
 				final Map<String, List<Integer>> schemes = SchemeBufferTable.getInstance().getPlayerSchemes(player.getObjectId());
-				
 				if ((schemes != null) && schemes.containsKey(schemeName))
 				{
 					schemes.remove(schemeName);
@@ -229,7 +223,6 @@ public class SchemeBufferInstance extends FolkInstance
 		{
 			filename = npcId + "-" + value;
 		}
-		
 		return "data/html/mods/SchemeBuffer/" + filename + ".htm";
 	}
 	
@@ -240,7 +233,6 @@ public class SchemeBufferInstance extends FolkInstance
 	private void showGiveBuffsWindow(PlayerInstance player)
 	{
 		final StringBuilder sb = new StringBuilder(200);
-		
 		final Map<String, List<Integer>> schemes = SchemeBufferTable.getInstance().getPlayerSchemes(player.getObjectId());
 		if ((schemes == null) || schemes.isEmpty())
 		{
@@ -278,7 +270,6 @@ public class SchemeBufferInstance extends FolkInstance
 	{
 		final NpcHtmlMessage html = new NpcHtmlMessage(getObjectId());
 		final List<Integer> schemeSkills = SchemeBufferTable.getInstance().getScheme(player.getObjectId(), schemeName);
-		
 		html.setFile(getHtmlPath(getNpcId(), 2));
 		html.replace("%schemename%", schemeName);
 		html.replace("%count%", schemeSkills.size() + " / " + player.getMaxBuffCount());
@@ -316,12 +307,10 @@ public class SchemeBufferInstance extends FolkInstance
 		
 		final List<Integer> schemeSkills = SchemeBufferTable.getInstance().getScheme(player.getObjectId(), schemeName);
 		final StringBuilder sb = new StringBuilder(skills.size() * 150);
-		
 		int row = 0;
 		for (int skillId : skills)
 		{
 			sb.append(((row % 2) == 0 ? "<table width=\"280\" bgcolor=\"000000\"><tr>" : "<table width=\"280\"><tr>"));
-			
 			if (skillId < 100)
 			{
 				if (schemeSkills.contains(skillId))
@@ -362,7 +351,6 @@ public class SchemeBufferInstance extends FolkInstance
 		
 		// Build page footer.
 		sb.append("<br><img src=\"L2UI.SquareGray\" width=277 height=1><table width=\"100%\" bgcolor=000000><tr>");
-		
 		if (page > 1)
 		{
 			sb.append("<td align=left width=70><a action=\"bypass -h npc_" + getObjectId() + "_editschemes;" + groupType + ";" + schemeName + ";" + (page - 1) + "\">Previous</a></td>");
@@ -373,7 +361,6 @@ public class SchemeBufferInstance extends FolkInstance
 		}
 		
 		sb.append("<td align=center width=100>Page " + page + "</td>");
-		
 		if (page < max)
 		{
 			sb.append("<td align=right width=70><a action=\"bypass -h npc_" + getObjectId() + "_editschemes;" + groupType + ";" + schemeName + ";" + (page + 1) + "\">Next</a></td>");
@@ -384,7 +371,6 @@ public class SchemeBufferInstance extends FolkInstance
 		}
 		
 		sb.append("</tr></table><img src=\"L2UI.SquareGray\" width=277 height=1>");
-		
 		return sb.toString();
 	}
 	

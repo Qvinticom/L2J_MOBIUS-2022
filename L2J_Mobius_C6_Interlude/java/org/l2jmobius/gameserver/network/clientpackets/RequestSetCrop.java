@@ -39,7 +39,6 @@ public class RequestSetCrop extends GameClientPacket
 	{
 		_manorId = readD();
 		_size = readD();
-		
 		if (((_size * 13) > _buf.remaining()) || (_size > 500) || (_size < 1))
 		{
 			_size = 0;
@@ -47,7 +46,6 @@ public class RequestSetCrop extends GameClientPacket
 		}
 		
 		_items = new int[_size * 4];
-		
 		for (int i = 0; i < _size; i++)
 		{
 			final int itemId = readD();
@@ -76,7 +74,6 @@ public class RequestSetCrop extends GameClientPacket
 			final int sales = _items[(i * 4) + 1];
 			final int price = _items[(i * 4) + 2];
 			final int type = _items[(i * 4) + 3];
-			
 			if (id > 0)
 			{
 				final CropProcure s = CastleManorManager.getInstance().getNewCropProcure(id, sales, type, price, sales);
@@ -85,7 +82,6 @@ public class RequestSetCrop extends GameClientPacket
 		}
 		
 		CastleManager.getInstance().getCastleById(_manorId).setCropProcure(crops, CastleManorManager.PERIOD_NEXT);
-		
 		if (Config.ALT_MANOR_SAVE_ALL_ACTIONS)
 		{
 			CastleManager.getInstance().getCastleById(_manorId).saveCropData(CastleManorManager.PERIOD_NEXT);

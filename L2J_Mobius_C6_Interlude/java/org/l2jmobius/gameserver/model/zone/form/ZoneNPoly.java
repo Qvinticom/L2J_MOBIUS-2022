@@ -112,7 +112,6 @@ public class ZoneNPoly extends ZoneForm
 	{
 		double test;
 		double shortestDist = Math.pow(_x[0] - x, 2) + Math.pow(_y[0] - y, 2);
-		
 		for (int i = 1; i < _y.length; i++)
 		{
 			test = Math.pow(_x[i] - x, 2) + Math.pow(_y[i] - y, 2);
@@ -121,7 +120,6 @@ public class ZoneNPoly extends ZoneForm
 				shortestDist = test;
 			}
 		}
-		
 		return Math.sqrt(shortestDist);
 	}
 	

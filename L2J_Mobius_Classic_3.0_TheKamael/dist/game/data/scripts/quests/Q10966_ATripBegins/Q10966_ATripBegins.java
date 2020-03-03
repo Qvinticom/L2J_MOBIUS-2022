@@ -137,7 +137,6 @@ public class Q10966_ATripBegins extends Quest
 		if ((qs != null) && qs.isCond(2))
 		{
 			final int killCount = qs.getInt(KILL_COUNT_VAR) + 1;
-			
 			if (killCount < 300)
 			{
 				qs.set(KILL_COUNT_VAR, killCount);

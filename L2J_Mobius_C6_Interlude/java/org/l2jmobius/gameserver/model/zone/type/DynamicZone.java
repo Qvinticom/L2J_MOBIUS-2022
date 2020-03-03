@@ -94,7 +94,6 @@ public class DynamicZone extends ZoneType
 		
 		_task.cancel(false);
 		_task = null;
-		
 		_region.removeZone(this);
 		
 		for (Creature member : getCharactersInside())

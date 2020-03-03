@@ -92,7 +92,6 @@ public class AdminCursedWeapons implements IAdminCommandHandler
 				for (CursedWeapon cw : cwm.getCursedWeapons())
 				{
 					final int itemId = cw.getItemId();
-					
 					replyMSG.append("<table width=270><tr><td>Name:</td><td>");
 					replyMSG.append(cw.getName());
 					replyMSG.append("</td></tr>");

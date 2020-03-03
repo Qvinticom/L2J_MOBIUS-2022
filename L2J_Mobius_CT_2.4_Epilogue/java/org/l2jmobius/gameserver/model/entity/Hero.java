@@ -124,13 +124,11 @@ public class Hero
 				hero.set(COUNT, rset.getInt(COUNT));
 				hero.set(PLAYED, rset.getInt(PLAYED));
 				hero.set(CLAIMED, Boolean.parseBoolean(rset.getString(CLAIMED)));
-				
 				loadFights(charId);
 				loadDiary(charId);
 				loadMessage(charId);
 				
 				processHeros(ps, charId, hero);
-				
 				HEROES.put(charId, hero);
 			}
 			
@@ -143,9 +141,7 @@ public class Hero
 				hero.set(COUNT, rset2.getInt(COUNT));
 				hero.set(PLAYED, rset2.getInt(PLAYED));
 				hero.set(CLAIMED, Boolean.parseBoolean(rset2.getString(CLAIMED)));
-				
 				processHeros(ps, charId, hero);
-				
 				COMPLETE_HEROS.put(charId, hero);
 			}
 		}
@@ -234,14 +230,11 @@ public class Hero
 				while (rset.next())
 				{
 					final StatSet diaryEntry = new StatSet();
-					
 					final long time = rset.getLong("time");
 					final int action = rset.getInt("action");
 					final int param = rset.getInt("param");
-					
 					final String date = (new SimpleDateFormat("yyyy-MM-dd HH")).format(new Date(time));
 					diaryEntry.set("date", date);
-					
 					if (action == ACTION_RAID_KILLED)
 					{
 						final NpcTemplate template = NpcData.getInstance().getTemplate(param);
@@ -318,7 +311,6 @@ public class Hero
 					start = rset.getLong("start");
 					time = rset.getLong("time");
 					classed = rset.getInt("classed");
-					
 					if (charId == charOneId)
 					{
 						final String name = CharNameTable.getInstance().getNameById(charTwoId);
@@ -328,11 +320,9 @@ public class Hero
 							final StatSet fight = new StatSet();
 							fight.set("oponent", name);
 							fight.set("oponentclass", cls);
-							
 							fight.set("time", calcFightTime(time));
 							final String date = (new SimpleDateFormat("yyyy-MM-dd HH:mm")).format(new Date(start));
 							fight.set("start", date);
-							
 							fight.set("classed", classed);
 							if (winner == 1)
 							{
@@ -364,11 +354,9 @@ public class Hero
 							final StatSet fight = new StatSet();
 							fight.set("oponent", name);
 							fight.set("oponentclass", cls);
-							
 							fight.set("time", calcFightTime(time));
 							final String date = (new SimpleDateFormat("yyyy-MM-dd HH:mm")).format(new Date(start));
 							fight.set("start", date);
-							
 							fight.set("classed", classed);
 							if (winner == 1)
 							{
@@ -397,7 +385,6 @@ public class Hero
 			heroCountData.set("victory", victories);
 			heroCountData.set("draw", draws);
 			heroCountData.set("loss", losses);
-			
 			HERO_COUNTS.put(charId, heroCountData);
 			HERO_FIGHTS.put(charId, fights);
 			
@@ -437,7 +424,6 @@ public class Hero
 	public void showHeroDiary(PlayerInstance player, int heroclass, int charid, int page)
 	{
 		final int perpage = 10;
-		
 		final List<StatSet> mainList = HERO_DIARY.get(charid);
 		if (mainList != null)
 		{
@@ -533,7 +519,6 @@ public class Hero
 			{
 				fightReply.setHtml(htmContent);
 				fightReply.replace("%heroname%", CharNameTable.getInstance().getNameById(charid));
-				
 				if (!heroFights.isEmpty())
 				{
 					final StatSet heroCount = HERO_COUNTS.get(charid);
@@ -603,7 +588,6 @@ public class Hero
 				fightReply.replace("%win%", String.valueOf(win));
 				fightReply.replace("%draw%", String.valueOf(draw));
 				fightReply.replace("%loos%", String.valueOf(loss));
-				
 				player.sendPacket(fightReply);
 			}
 		}
@@ -662,7 +646,6 @@ public class Hero
 		for (StatSet hero : newHeroes)
 		{
 			final int charId = hero.getInt(Olympiad.CHAR_ID);
-			
 			if (COMPLETE_HEROS.containsKey(charId))
 			{
 				final StatSet oldHero = COMPLETE_HEROS.get(charId);
@@ -728,17 +711,14 @@ public class Hero
 								{
 									final int clanId = rset.getInt("clanid");
 									final int allyId = rset.getInt("allyId");
-									
 									String clanName = "";
 									String allyName = "";
 									int clanCrest = 0;
 									int allyCrest = 0;
-									
 									if (clanId > 0)
 									{
 										clanName = ClanTable.getInstance().getClan(clanId).getName();
 										clanCrest = ClanTable.getInstance().getClan(clanId).getCrestId();
-										
 										if (allyId > 0)
 										{
 											allyName = ClanTable.getInstance().getClan(clanId).getAllyName();

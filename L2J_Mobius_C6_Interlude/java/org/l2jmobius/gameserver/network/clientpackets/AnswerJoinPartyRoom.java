@@ -80,7 +80,6 @@ public class AnswerJoinPartyRoom extends GameClientPacket
 				
 				player.sendPacket(new PartyMatchDetail(room));
 				player.sendPacket(new ExPartyRoomMember(room, 0));
-				
 				for (PlayerInstance member : room.getPartyMembers())
 				{
 					if (member == null)

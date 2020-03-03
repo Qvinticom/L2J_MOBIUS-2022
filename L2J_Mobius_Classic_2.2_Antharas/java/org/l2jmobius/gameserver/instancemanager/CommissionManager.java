@@ -376,7 +376,6 @@ public class CommissionManager
 		{
 			final long saleFee = (long) Math.max(MIN_REGISTRATION_AND_SALE_FEE, (totalPrice * SALE_FEE_PER_DAY) * commissionItem.getDurationInDays());
 			final Message mail = new Message(itemInstance.getOwnerId(), itemInstance, MailType.COMMISSION_ITEM_SOLD);
-			
 			final Mail attachement = mail.createAttachments();
 			attachement.addItem("Commission Item Sold", Inventory.ADENA_ID, totalPrice - saleFee, player, null);
 			MailManager.getInstance().sendMessage(mail);

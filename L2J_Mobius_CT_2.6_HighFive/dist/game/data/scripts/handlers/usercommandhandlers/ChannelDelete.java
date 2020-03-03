@@ -44,9 +44,7 @@ public class ChannelDelete implements IUserCommandHandler
 		if (player.isInParty() && player.getParty().isLeader(player) && player.getParty().isInCommandChannel() && player.getParty().getCommandChannel().getLeader().equals(player))
 		{
 			final CommandChannel channel = player.getParty().getCommandChannel();
-			
 			channel.broadcastPacket(new SystemMessage(SystemMessageId.THE_COMMAND_CHANNEL_HAS_BEEN_DISBANDED));
-			
 			channel.disbandChannel();
 			return true;
 		}

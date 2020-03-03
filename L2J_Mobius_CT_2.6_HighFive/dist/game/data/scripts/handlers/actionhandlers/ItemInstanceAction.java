@@ -31,7 +31,6 @@ public class ItemInstanceAction implements IActionHandler
 		// this causes the validate position handler to do the pickup if the location is reached.
 		// mercenary tickets can only be picked up by the castle owner.
 		final int castleId = MercTicketManager.getInstance().getTicketCastleId(target.getId());
-		
 		if ((castleId > 0) && (!player.isCastleLord(castleId) || player.isInParty()))
 		{
 			if (player.isInParty())

@@ -57,7 +57,6 @@ public class RequestCrystallizeItem implements IClientIncomingPacket
 	public void run(GameClient client)
 	{
 		final PlayerInstance player = client.getPlayer();
-		
 		if (player == null)
 		{
 			LOGGER.finer("RequestCrystalizeItem: activeChar was null");
@@ -69,7 +68,6 @@ public class RequestCrystallizeItem implements IClientIncomingPacket
 		// player.sendMessage("You are crystallizing too fast.");
 		// return;
 		// }
-		
 		if (_count <= 0)
 		{
 			Util.handleIllegalPlayerAction(player, "[RequestCrystallizeItem] count <= 0! ban! oid: " + _objectId + " owner: " + player.getName(), Config.DEFAULT_PUNISH);
@@ -228,7 +226,6 @@ public class RequestCrystallizeItem implements IClientIncomingPacket
 		
 		// remove from inventory
 		final ItemInstance removedItem = player.getInventory().destroyItem("Crystalize", _objectId, _count, player, null);
-		
 		final InventoryUpdate iu = new InventoryUpdate();
 		iu.addRemovedItem(removedItem);
 		player.sendInventoryUpdate(iu);
@@ -240,7 +237,6 @@ public class RequestCrystallizeItem implements IClientIncomingPacket
 			{
 				// add crystals
 				final ItemInstance createdItem = player.getInventory().addItem("Crystalize", holder.getId(), holder.getCount(), player, player);
-				
 				sm = new SystemMessage(SystemMessageId.YOU_HAVE_EARNED_S2_S1_S);
 				sm.addItemName(createdItem);
 				sm.addLong(holder.getCount());

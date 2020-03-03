@@ -128,7 +128,6 @@ public class GameEvent
 			{
 				final String htmContent;
 				final NpcHtmlMessage html = new NpcHtmlMessage(Integer.parseInt(objectid));
-				
 				if (_registeredPlayers.contains(player))
 				{
 					htmContent = HtmCache.getInstance().getHtm(player, "data/html/mods/EventEngine/Participating.htm");
@@ -170,7 +169,6 @@ public class GameEvent
 			spawn.setHeading(target.getHeading());
 			spawn.stopRespawn();
 			SpawnTable.getInstance().addNewSpawn(spawn, false);
-			
 			spawn.init();
 			spawn.getLastSpawn().setCurrentHp(999999999);
 			spawn.getLastSpawn().setTitle(_eventName);
@@ -178,7 +176,6 @@ public class GameEvent
 			spawn.getLastSpawn().setInvul(true);
 			// spawn.getLastSpawn().decayMe();
 			// spawn.getLastSpawn().spawnMe(spawn.getLastSpawn().getX(), spawn.getLastSpawn().getY(), spawn.getLastSpawn().getZ());
-			
 			spawn.getLastSpawn().broadcastPacket(new MagicSkillUse(spawn.getLastSpawn(), spawn.getLastSpawn(), 1034, 1, 1, 1));
 			
 			// _npcs.add(spawn.getLastSpawn());
@@ -364,7 +361,6 @@ public class GameEvent
 			unspawnEventNpcs();
 			_registeredPlayers.clear();
 			// _npcs.clear();
-			
 			if (NpcData.getInstance().getTemplate(_npcId) == null)
 			{
 				return "Cannot start event, invalid npc id.";
@@ -540,7 +536,6 @@ public class GameEvent
 	private static Map<PlayerInstance, Integer> sortByValue(Map<PlayerInstance, Integer> unsortMap)
 	{
 		final List<Entry<PlayerInstance, Integer>> list = new LinkedList<>(unsortMap.entrySet());
-		
 		list.sort(Comparator.comparing(Entry::getValue));
 		
 		final Map<PlayerInstance, Integer> sortedMap = new LinkedHashMap<>();

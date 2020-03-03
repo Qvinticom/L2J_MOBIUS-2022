@@ -75,7 +75,6 @@ public class TradeItem
 		_soulCrystalOptions = item.getSpecialAbilities();
 		_soulCrystalSpecialOptions = item.getAdditionalSpecialAbilities();
 		_visualId = item.getVisualId();
-		
 		if (item.getAugmentation() != null)
 		{
 			_augmentationOption1 = item.getAugmentation().getOption1Id();

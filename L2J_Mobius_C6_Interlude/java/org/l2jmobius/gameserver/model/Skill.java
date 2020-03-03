@@ -269,7 +269,6 @@ public abstract class Skill
 			try
 			{
 				final Constructor<? extends Skill> c = _class.getConstructor(StatSet.class);
-				
 				return c.newInstance(set);
 			}
 			catch (Exception e)
@@ -516,10 +515,8 @@ public abstract class Skill
 	{
 		_id = set.getInt("skill_id", 0);
 		_level = set.getInt("level", 1);
-		
 		_advancedFlag = set.getBoolean("advancedFlag", false);
 		_advancedMultiplier = set.getInt("advancedMultiplier", 1);
-		
 		_displayId = set.getInt("displayId", _id);
 		_name = set.getString("name");
 		_operateType = set.getEnum("operateType", SkillOpType.class);
@@ -539,18 +536,14 @@ public abstract class Skill
 		_summonTotalLifeTime = set.getInt("summonTotalLifeTime", 1200000); // 20 minutes default
 		_summonTimeLostIdle = set.getInt("summonTimeLostIdle", 0);
 		_summonTimeLostActive = set.getInt("summonTimeLostActive", 0);
-		
 		_castRange = set.getInt("castRange", 0);
 		_effectRange = set.getInt("effectRange", -1);
-		
 		_hitTime = set.getInt("hitTime", 0);
 		_coolTime = set.getInt("coolTime", 0);
 		// _skillInterruptTime = set.getInteger("hitTime", _hitTime / 2);
 		_reuseDelay = set.getInt("reuseDelay", 0);
 		_buffDuration = set.getInt("buffDuration", 0);
-		
 		_skillRadius = set.getInt("skillRadius", 80);
-		
 		_targetType = set.getEnum("target", SkillTargetType.class);
 		_power = set.getFloat("power", 0.f);
 		_effectPoints = set.getInt("effectPoints", 0);
@@ -561,23 +554,19 @@ public abstract class Skill
 		_magicLevel = set.getInt("magicLvl", SkillTreeTable.getInstance().getMinSkillLevel(_id, _level));
 		_levelDepend = set.getInt("lvlDepend", 0);
 		_stat = set.getEnum("stat", Stat.class, null);
-		
 		_skillType = set.getEnum("skillType", SkillType.class);
 		_effectType = set.getEnum("effectType", SkillType.class, null);
 		_effectPower = set.getInt("effectPower", 0);
 		_effectId = set.getInt("effectId", 0);
 		_effectLvl = set.getInt("effectLevel", 0);
-		
 		_element = set.getInt("element", 0);
 		_saveVs = set.getEnum("saveVs", BaseStat.class, null);
-		
 		_condition = set.getInt("condition", 0);
 		_conditionValue = set.getInt("conditionValue", 0);
 		_overhit = set.getBoolean("overHit", false);
 		_isSuicideAttack = set.getBoolean("isSuicideAttack", false);
 		_weaponsAllowed = set.getInt("weaponsAllowed", 0);
 		_armorsAllowed = set.getInt("armorsAllowed", 0);
-		
 		_addCrossLearn = set.getInt("addCrossLearn", 1000);
 		_mulCrossLearn = set.getFloat("mulCrossLearn", 2.f);
 		_mulCrossLearnRace = set.getFloat("mulCrossLearnRace", 2.f);
@@ -587,33 +576,25 @@ public abstract class Skill
 		_numCharges = set.getInt("num_charges", 0);
 		_triggeredId = set.getInt("triggeredId", 0);
 		_triggeredLevel = set.getInt("triggeredLevel", 0);
-		
 		_bestowed = set.getBoolean("bestowed", false);
-		
 		_targetConsume = set.getInt("targetConsumeCount", 0);
 		_targetConsumeId = set.getInt("targetConsumeId", 0);
-		
 		if (_operateType == SkillOpType.OP_CHANCE)
 		{
 			_chanceCondition = ChanceCondition.parse(set);
 		}
 		
 		_isHeroSkill = HeroSkillTable.isHeroSkill(_id);
-		
 		_baseCritRate = set.getInt("baseCritRate", (_skillType == SkillType.PDAM) || (_skillType == SkillType.BLOW) ? 0 : -1);
 		_lethalEffect1 = set.getInt("lethal1", 0);
 		_lethalEffect2 = set.getInt("lethal2", 0);
-		
 		_directHpDmg = set.getBoolean("dmgDirectlyToHp", false);
 		_isDance = set.getBoolean("isDance", false);
 		_nextDanceCost = set.getInt("nextDanceCost", 0);
 		_sSBoost = set.getFloat("SSBoost", 0.f);
 		_aggroPoints = set.getInt("aggroPoints", 0);
-		
 		_pvpMulti = set.getFloat("pvpMulti", 1.f);
-		
 		_nextActionIsAttack = set.getBoolean("nextActionAttack", false);
-		
 		_minChance = set.getInt("minChance", 1);
 		_maxChance = set.getInt("maxChance", 99);
 		
@@ -665,7 +646,6 @@ public abstract class Skill
 		}
 		
 		_singleEffect = set.getBoolean("singleEffect", false);
-		
 		_isDebuff = set.getBoolean("isDebuff", false);
 	}
 	
@@ -698,7 +678,6 @@ public abstract class Skill
 				typeDebuff = true;
 			}
 		}
-		
 		return _isDebuff || typeDebuff;
 	}
 	
@@ -1363,7 +1342,6 @@ public abstract class Skill
 	public boolean checkCondition(Creature creature, WorldObject target, boolean itemOrWeapon)
 	{
 		Condition preCondition = _preCondition;
-		
 		if (itemOrWeapon)
 		{
 			preCondition = _itemPreCondition;
@@ -1408,7 +1386,6 @@ public abstract class Skill
 		{
 			target = (Creature) objTarget;
 		}
-		
 		return getTargetList(creature, onlyFirst, target);
 	}
 	
@@ -1444,7 +1421,6 @@ public abstract class Skill
 		}
 		
 		final List<Creature> targetList = new ArrayList<>();
-		
 		if (_ispotion)
 		{
 			return new Creature[]
@@ -2799,7 +2775,6 @@ public abstract class Skill
 	public WorldObject getFirstOfTargetList(Creature creature)
 	{
 		WorldObject[] targets;
-		
 		targets = getTargetList(creature, true);
 		if ((targets == null) || (targets.length == 0))
 		{
@@ -2821,14 +2796,12 @@ public abstract class Skill
 		}
 		
 		final List<Func> funcs = new ArrayList<>();
-		
 		for (FuncTemplate t : _funcTemplates)
 		{
 			final Env env = new Env();
 			env.player = creature;
 			env.skill = this;
 			final Func f = t.getFunc(env, this); // skill is owner
-			
 			if (f != null)
 			{
 				funcs.add(f);
@@ -2875,9 +2848,7 @@ public abstract class Skill
 		}
 		
 		final List<Effect> effects = new ArrayList<>();
-		
 		boolean skillMastery = false;
-		
 		if (!isToggle() && Formulas.getInstance().calcSkillMastery(effector))
 		{
 			skillMastery = true;
@@ -2888,7 +2859,6 @@ public abstract class Skill
 		env.target = effected;
 		env.skill = this;
 		env.skillMastery = skillMastery;
-		
 		for (EffectTemplate et : _effectTemplates)
 		{
 			boolean success = true;
@@ -2929,12 +2899,10 @@ public abstract class Skill
 		}
 		
 		final List<Effect> effects = new ArrayList<>();
-		
 		final Env env = new Env();
 		env.player = effector;
 		env.target = effector;
 		env.skill = this;
-		
 		for (EffectTemplate et : _effectTemplatesSelf)
 		{
 			final Effect e = et.getEffect(env);
@@ -3078,7 +3046,6 @@ public abstract class Skill
 		{
 			final PlayerInstance targetChar = (PlayerInstance) target;
 			final PlayerInstance activeCh = (PlayerInstance) creature;
-			
 			if (activeCh.isInOlympiadMode() && activeCh.isOlympiadStart() && targetChar.isInOlympiadMode() && targetChar.isOlympiadStart())
 			{
 				return false;

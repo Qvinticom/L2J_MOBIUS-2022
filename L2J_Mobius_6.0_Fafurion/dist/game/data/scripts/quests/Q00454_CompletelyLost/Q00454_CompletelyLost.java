@@ -421,7 +421,6 @@ public class Q00454_CompletelyLost extends Quest
 	{
 		final QuestState qs = getQuestState(player, true);
 		String htmltext = getNoQuestMsg(player);
-		
 		switch (qs.getState())
 		{
 			case State.COMPLETED:
@@ -763,7 +762,6 @@ public class Q00454_CompletelyLost extends Quest
 		npc.getAI().setIntention(CtrlIntention.AI_INTENTION_IDLE);
 		npc.getAI().setIntention(CtrlIntention.AI_INTENTION_ACTIVE);
 		startQuestTimer("SAY_TIMER1", 2000, npc, null);
-		
 		return new TerminateReturn(true, false, false);
 	}
 	

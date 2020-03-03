@@ -128,7 +128,6 @@ public class Q10326_RespectYourElders extends Quest
 					{
 						final int failCount = npc.getVariables().getInt("FAIL_COUNT", 0);
 						npc.getVariables().set("FAIL_COUNT", failCount + 1);
-						
 						if (failCount >= 30)
 						{
 							npc.deleteMe();
@@ -136,7 +135,6 @@ public class Q10326_RespectYourElders extends Quest
 						}
 						
 						startQuestTimer("CHECK_PLAYER", 2000, npc, owner);
-						
 						if (getRandom(100) < 10)
 						{
 							npc.broadcastSay(ChatType.NPC_GENERAL, NpcStringId.COME_ON_CREEK);
@@ -173,7 +171,6 @@ public class Q10326_RespectYourElders extends Quest
 	{
 		npc.broadcastSay(ChatType.NPC_GENERAL, NpcStringId.COME_ON_CREEK);
 		final PlayerInstance owner = npc.getVariables().getObject("OWNER", PlayerInstance.class);
-		
 		if (owner != null)
 		{
 			startQuestTimer("CHECK_PLAYER", 2000, npc, owner);
@@ -187,7 +184,6 @@ public class Q10326_RespectYourElders extends Quest
 	{
 		final QuestState qs = getQuestState(player, true);
 		String htmltext = getNoQuestMsg(player);
-		
 		switch (qs.getState())
 		{
 			case State.CREATED:

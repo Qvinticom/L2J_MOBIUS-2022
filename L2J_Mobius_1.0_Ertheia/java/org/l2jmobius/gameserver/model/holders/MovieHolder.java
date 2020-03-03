@@ -36,7 +36,6 @@ public class MovieHolder
 	{
 		_players = players;
 		_movie = movie;
-		
 		_players.forEach(p -> p.playMovie(this));
 	}
 	

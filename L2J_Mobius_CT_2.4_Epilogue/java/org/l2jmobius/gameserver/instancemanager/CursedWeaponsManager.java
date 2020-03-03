@@ -70,7 +70,6 @@ public class CursedWeaponsManager
 	private void init()
 	{
 		_cursedWeapons = new HashMap<>();
-		
 		if (!Config.ALLOW_CURSED_WEAPONS)
 		{
 			return;
@@ -114,9 +113,7 @@ public class CursedWeaponsManager
 							final int id = Integer.parseInt(attrs.getNamedItem("id").getNodeValue());
 							final int skillId = Integer.parseInt(attrs.getNamedItem("skillId").getNodeValue());
 							final String name = attrs.getNamedItem("name").getNodeValue();
-							
 							final CursedWeapon cw = new CursedWeapon(id, skillId, name);
-							
 							int val;
 							for (Node cd = d.getFirstChild(); cd != null; cd = cd.getNextSibling())
 							{

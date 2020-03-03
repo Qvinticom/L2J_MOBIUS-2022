@@ -51,7 +51,6 @@ public class RequestRestart implements IClientIncomingPacket
 	public void run(GameClient client)
 	{
 		final PlayerInstance player = client.getPlayer();
-		
 		if (player == null)
 		{
 			return;
@@ -101,7 +100,6 @@ public class RequestRestart implements IClientIncomingPacket
 			}
 			
 			final Party playerParty = player.getParty();
-			
 			if (playerParty != null)
 			{
 				player.getParty().broadcastString(player.getName() + " has been removed from the upcoming festival.");
@@ -126,7 +124,6 @@ public class RequestRestart implements IClientIncomingPacket
 		player.removeFromBossZone();
 		
 		LOGGER_ACCOUNTING.info("Logged out, " + client);
-		
 		if (!OfflineTradeUtil.enteredOfflineMode(player))
 		{
 			Disconnection.of(client, player).storeMe().deleteMe();

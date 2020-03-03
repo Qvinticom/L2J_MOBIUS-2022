@@ -199,7 +199,6 @@ public class CeremonyOfChaosManager extends AbstractEventManager<CeremonyOfChaos
 		final List<PlayerInstance> players = getRegisteredPlayers().stream().sorted(Comparator.comparingInt(PlayerInstance::getLevel)).collect(Collectors.toList());
 		final int maxPlayers = getMaxPlayersInArena();
 		final List<Integer> templates = getVariables().getList(INSTANCE_TEMPLATES_KEY, Integer.class);
-		
 		for (PlayerInstance player : players)
 		{
 			if (player.isOnline() && canRegister(player, true))
@@ -297,9 +296,7 @@ public class CeremonyOfChaosManager extends AbstractEventManager<CeremonyOfChaos
 		boolean canRegister = true;
 		
 		final Clan clan = player.getClan();
-		
 		SystemMessageId sm = null;
-		
 		if (player.getLevel() < 85)
 		{
 			sm = SystemMessageId.ONLY_CHARACTERS_LEVEL_85_OR_ABOVE_MAY_PARTICIPATE_IN_THE_TOURNAMENT;
@@ -381,7 +378,6 @@ public class CeremonyOfChaosManager extends AbstractEventManager<CeremonyOfChaos
 		}
 		
 		// TODO : One player can take part in 16 matches per day.
-		
 		if ((sm != null) && sendMessage)
 		{
 			player.sendPacket(sm);

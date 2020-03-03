@@ -37,17 +37,13 @@ public class WildBeastReserve extends FlagWar
 		FLAG_GREEN = 35609; // Blue flag
 		FLAG_BLUE = 35610; // Green flag
 		FLAG_PURPLE = 35611; // Black flag
-		
 		ALLY_1 = 35618;
 		ALLY_2 = 35619;
 		ALLY_3 = 35620;
 		ALLY_4 = 35621;
 		ALLY_5 = 35622;
-		
 		TELEPORT_1 = 35612;
-		
 		MESSENGER = 35627;
-		
 		FLAG_COORDS[0] = new Location(56963, -92211, -1303, 60611);
 		FLAG_COORDS[1] = new Location(58090, -91641, -1303, 47274);
 		FLAG_COORDS[2] = new Location(58908, -92556, -1303, 34450);
@@ -55,15 +51,12 @@ public class WildBeastReserve extends FlagWar
 		FLAG_COORDS[4] = new Location(57152, -93360, -1303, 8400);
 		FLAG_COORDS[5] = new Location(59116, -93251, -1302, 31000);
 		FLAG_COORDS[6] = new Location(56432, -92864, -1303, 64000);
-		
 		OUTTER_DOORS_TO_OPEN[0] = 21150003;
 		OUTTER_DOORS_TO_OPEN[1] = 21150004;
-		
 		INNER_DOORS_TO_OPEN[0] = 21150001;
 		INNER_DOORS_TO_OPEN[1] = 21150002;
 		
 		final Collection<ResidenceHallTeleportZone> zoneList = ZoneManager.getInstance().getAllZones(ResidenceHallTeleportZone.class);
-		
 		for (ResidenceHallTeleportZone teleZone : zoneList)
 		{
 			if (teleZone.getResidenceId() != BEAST_FARM)
@@ -72,7 +65,6 @@ public class WildBeastReserve extends FlagWar
 			}
 			
 			final int id = teleZone.getResidenceZoneId();
-			
 			if ((id < 0) || (id >= 6))
 			{
 				continue;
@@ -123,7 +115,6 @@ public class WildBeastReserve extends FlagWar
 				break;
 			}
 		}
-		
 		return result;
 	}
 	
@@ -160,7 +151,6 @@ public class WildBeastReserve extends FlagWar
 				break;
 			}
 		}
-		
 		return result;
 	}
 	

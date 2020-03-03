@@ -64,7 +64,6 @@ public class NpcInstance extends Npc
 		if (npcId == 32611) // Tolonis (Officer)
 		{
 			final List<SkillLearn> skills = SkillTreeData.getInstance().getAvailableCollectSkills(player);
-			
 			if (skills.isEmpty()) // No more skills to learn, come back when you level.
 			{
 				final int minLevel = SkillTreeData.getInstance().getMinLevelForNewSkill(player, SkillTreeData.getInstance().getCollectSkillTree());

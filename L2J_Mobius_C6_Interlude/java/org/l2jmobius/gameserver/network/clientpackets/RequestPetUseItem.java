@@ -44,7 +44,6 @@ public class RequestPetUseItem extends GameClientPacket
 	protected void runImpl()
 	{
 		final PlayerInstance player = getClient().getPlayer();
-		
 		if (player == null)
 		{
 			return;
@@ -56,14 +55,12 @@ public class RequestPetUseItem extends GameClientPacket
 		}
 		
 		final PetInstance pet = (PetInstance) player.getPet();
-		
 		if (pet == null)
 		{
 			return;
 		}
 		
 		final ItemInstance item = pet.getInventory().getItemByObjectId(_objectId);
-		
 		if (item == null)
 		{
 			return;
@@ -75,7 +72,6 @@ public class RequestPetUseItem extends GameClientPacket
 		}
 		
 		final int itemId = item.getItemId();
-		
 		if (player.isAlikeDead() || pet.isDead())
 		{
 			final SystemMessage sm = new SystemMessage(SystemMessageId.S1_CANNOT_BE_USED_DUE_TO_UNSUITABLE_TERMS);
@@ -153,7 +149,6 @@ public class RequestPetUseItem extends GameClientPacket
 		}
 		
 		final IItemHandler handler = ItemHandler.getInstance().getItemHandler(item.getItemId());
-		
 		if (handler != null)
 		{
 			useItem(pet, item, player);
@@ -178,7 +173,6 @@ public class RequestPetUseItem extends GameClientPacket
 			}
 			
 			player.sendPacket(new PetItemList(pet));
-			
 			player.sendPacket(new PetInfo(pet));
 			// The PetInfo packet wipes the PartySpelled (list of active spells' icons). Re-add them
 			pet.updateEffectIcons(true);
@@ -187,7 +181,6 @@ public class RequestPetUseItem extends GameClientPacket
 		{
 			// LOGGER.finest("item not equipable id:"+ item.getItemId());
 			final IItemHandler handler = ItemHandler.getInstance().getItemHandler(item.getItemId());
-			
 			if (handler == null)
 			{
 				LOGGER.warning("no itemhandler registered for itemId:" + item.getItemId());

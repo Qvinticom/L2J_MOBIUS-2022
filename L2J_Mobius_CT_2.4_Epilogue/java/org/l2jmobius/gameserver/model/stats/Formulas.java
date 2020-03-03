@@ -1577,7 +1577,6 @@ public class Formulas
 		}
 		
 		final int val = (int) actor.getStat().calcStat(Stat.SKILL_CRITICAL, 0, null, null);
-		
 		if (val == 0)
 		{
 			return false;
@@ -1634,7 +1633,6 @@ public class Formulas
 		}
 		
 		int defenceAttribute = target.getDefenseElementValue(attacker.getAttackElement());
-		
 		if (attackAttribute <= defenceAttribute)
 		{
 			return 1;
@@ -1642,7 +1640,6 @@ public class Formulas
 		
 		double attackAttributeMod = 0;
 		double defenceAttributeMod = 0;
-		
 		if (attackAttribute >= 450)
 		{
 			if (defenceAttribute >= 450)
@@ -1761,20 +1758,13 @@ public class Formulas
 		
 		attackAttribute += 100;
 		attackAttribute *= attackAttribute;
-		
 		attackAttributeMod *= (attackAttribute / 144.0);
-		
 		defenceAttribute += 100;
 		defenceAttribute *= defenceAttribute;
-		
 		defenceAttributeMod *= (defenceAttribute / 169.0);
-		
 		double attributeModDiff = attackAttributeMod - defenceAttributeMod;
-		
 		attributeModDiff = Util.constrain(attributeModDiff, min, max);
-		
 		double result = (attributeModDiff / 100.0) + 1;
-		
 		if (attacker.isPlayable() && target.isPlayable() && (result < 1.0))
 		{
 			result = 1.0;
@@ -1811,7 +1801,6 @@ public class Formulas
 			counterdmg *= calcWeaponTraitBonus(attacker, target);
 			counterdmg *= calcGeneralTraitBonus(attacker, target, skill.getTraitType(), false);
 			counterdmg *= calcAttributeBonus(attacker, target, skill);
-			
 			attacker.reduceCurrentHp(counterdmg, target, skill);
 			if (crit) // TODO: It counters multiple times depending on how much effects skill has not on critical, but gotta be verified first!
 			{
@@ -1862,7 +1851,6 @@ public class Formulas
 		final double baseRate = blowChance * dexMod * sideMod;
 		// Apply blow rates
 		final double rate = creature.calcStat(Stat.BLOW_RATE, baseRate, target, null);
-		
 		return Rnd.get(100) < rate;
 	}
 	
@@ -2019,11 +2007,9 @@ public class Formulas
 	public static int calculateKarmaGain(int pkCount, boolean isSummon)
 	{
 		int result = 43200;
-		
 		if (isSummon)
 		{
 			result = (int) ((((pkCount * 0.375) + 1) * 60) * 4) - 150;
-			
 			if (result > 10800)
 			{
 				return 10800;

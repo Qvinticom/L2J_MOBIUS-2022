@@ -62,7 +62,6 @@ public class KartiaSupportTroop extends AbstractNpcAI
 			if (!monsterList.isEmpty())
 			{
 				final MonsterInstance monster = monsterList.get(getRandom(monsterList.size()));
-				
 				if (monster.isTargetable() && GeoEngine.getInstance().canSeeTarget(npc, monster))
 				{
 					addAttackDesire(npc, monster);

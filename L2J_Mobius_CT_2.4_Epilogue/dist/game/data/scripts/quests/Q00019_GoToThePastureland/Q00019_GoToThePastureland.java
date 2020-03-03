@@ -82,7 +82,6 @@ public class Q00019_GoToThePastureland extends Quest
 	{
 		final QuestState st = getQuestState(player, true);
 		String htmltext = getNoQuestMsg(player);
-		
 		switch (st.getState())
 		{
 			case State.CREATED:

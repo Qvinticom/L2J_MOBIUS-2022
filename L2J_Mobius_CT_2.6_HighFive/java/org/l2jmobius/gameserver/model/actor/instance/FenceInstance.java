@@ -50,13 +50,10 @@ public class FenceInstance extends WorldObject
 		_xMax = x + (width / 2);
 		_yMin = y - (length / 2);
 		_yMax = y + (length / 2);
-		
 		_name = name;
 		_width = width;
 		_length = length;
-		
 		_state = state;
-		
 		if (height > 1)
 		{
 			_heightFences = new int[height - 1];
@@ -89,7 +86,6 @@ public class FenceInstance extends WorldObject
 	public void sendInfo(PlayerInstance player)
 	{
 		player.sendPacket(new ExColosseumFenceInfo(this));
-		
 		if (_heightFences != null)
 		{
 			for (int objId : _heightFences)
@@ -132,7 +128,6 @@ public class FenceInstance extends WorldObject
 	public void setState(FenceState type)
 	{
 		_state = type;
-		
 		broadcastInfo();
 	}
 	

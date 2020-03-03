@@ -37,7 +37,6 @@ public class AnswerTradeRequest extends GameClientPacket
 	protected void runImpl()
 	{
 		final PlayerInstance player = getClient().getPlayer();
-		
 		if (player == null)
 		{
 			return;
@@ -51,7 +50,6 @@ public class AnswerTradeRequest extends GameClientPacket
 		}
 		
 		final PlayerInstance partner = player.getActiveRequester();
-		
 		if ((partner == null) || (World.getInstance().findObject(partner.getObjectId()) == null))
 		{
 			// Trade partner not found, cancel trade

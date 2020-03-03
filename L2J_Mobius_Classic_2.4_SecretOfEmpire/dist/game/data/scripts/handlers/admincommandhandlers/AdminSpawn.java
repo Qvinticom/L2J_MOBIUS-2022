@@ -321,7 +321,6 @@ public class AdminSpawn implements IAdminCommandHandler
 				final String id = st.nextToken();
 				int respawnTime = 60;
 				int mobCount = 1;
-				
 				if (st.hasMoreTokens())
 				{
 					mobCount = Integer.parseInt(st.nextToken());
@@ -569,7 +568,6 @@ public class AdminSpawn implements IAdminCommandHandler
 		}
 		
 		final NpcTemplate template1 = NpcData.getInstance().getTemplate(id);
-		
 		if (!Config.FAKE_PLAYERS_ENABLED && template1.isFakePlayer())
 		{
 			activeChar.sendPacket(SystemMessageId.YOUR_TARGET_CANNOT_BE_FOUND);

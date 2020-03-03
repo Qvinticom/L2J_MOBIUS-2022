@@ -163,7 +163,6 @@ public class Q00336_CoinsOfMagic extends Quest
 	{
 		final QuestState qs = getQuestState(player, true);
 		final String htmltext = getNoQuestMsg(player);
-		
 		switch (npc.getId())
 		{
 			case PANO:
@@ -274,7 +273,6 @@ public class Q00336_CoinsOfMagic extends Quest
 		}
 		
 		final String htmltext = null;
-		
 		if (event.equals("QUEST_ACCEPTED"))
 		{
 			playSound(player, QuestSound.ITEMSOUND_QUEST_ACCEPT);
@@ -1740,7 +1738,6 @@ public class Q00336_CoinsOfMagic extends Quest
 			int i4 = qs.getInt(FLAG) / 4;
 			final int i5 = i4 / 4;
 			i4 = i4 % 4;
-			
 			if (i0 == i3)
 			{
 				qs.set(PARAM_3, qs.getInt(PARAM_3) + 1);
@@ -1778,7 +1775,6 @@ public class Q00336_CoinsOfMagic extends Quest
 	{
 		final QuestState qs = getQuestState(player, false);
 		final List<QuestState> candidates = new ArrayList<>();
-		
 		if ((qs != null) && qs.isStarted() && (qs.getMemoState() == memoState))
 		{
 			candidates.add(qs);

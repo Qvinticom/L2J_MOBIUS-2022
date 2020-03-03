@@ -96,11 +96,9 @@ public class AdminBuffs implements IAdminCommandHandler
 			try
 			{
 				final StringTokenizer st = new StringTokenizer(command, " ");
-				
 				st.nextToken();
 				final int objectId = Integer.parseInt(st.nextToken());
 				final int skillId = Integer.parseInt(st.nextToken());
-				
 				removeBuff(activeChar, objectId, skillId);
 				return true;
 			}
@@ -136,9 +134,7 @@ public class AdminBuffs implements IAdminCommandHandler
 			try
 			{
 				final int radius = Integer.parseInt(val);
-				
 				World.getInstance().forEachVisibleObjectInRange(activeChar, PlayerInstance.class, radius, Creature::stopAllEffects);
-				
 				BuilderUtil.sendSysMessage(activeChar, "All effects canceled within radius " + radius);
 				return true;
 			}
@@ -152,7 +148,6 @@ public class AdminBuffs implements IAdminCommandHandler
 		{
 			final StringTokenizer st = new StringTokenizer(command, " ");
 			command = st.nextToken();
-			
 			Creature creature = null;
 			if (st.hasMoreTokens())
 			{
@@ -344,7 +339,6 @@ public class AdminBuffs implements IAdminCommandHandler
 		html.append("</html>");
 		// Send the packet
 		activeChar.sendPacket(new NpcHtmlMessage(html.toString()));
-		
 		if (Config.GMAUDIT)
 		{
 			GMAudit.auditGMAction(activeChar.getName() + " [" + activeChar.getObjectId() + "]", "getbuffs", target.getName() + " (" + target.getObjectId() + ")", "");

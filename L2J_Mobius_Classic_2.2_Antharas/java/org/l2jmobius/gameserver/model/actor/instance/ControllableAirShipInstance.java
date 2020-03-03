@@ -76,7 +76,6 @@ public class ControllableAirShipInstance extends AirShipInstance
 		{
 			return false;
 		}
-		
 		return (player.getClanId() == _ownerId) || (player.getObjectId() == _ownerId);
 	}
 	

@@ -201,7 +201,6 @@ public class SiegeGuardManager
 				statement.setInt(2, 0);
 			}
 			final ResultSet rs = statement.executeQuery();
-			
 			Spawn spawn1;
 			NpcTemplate template1;
 			

@@ -78,7 +78,6 @@ public class SkillCreateItem extends Skill
 		final ItemInstance item = new ItemInstance(IdFactory.getNextId(), itemId);
 		item.setCount(count);
 		player.getInventory().addItem("Skill", item, player, player);
-		
 		if (count > 1)
 		{
 			final SystemMessage smsg = new SystemMessage(SystemMessageId.YOU_HAVE_EARNED_S2_S1_S);

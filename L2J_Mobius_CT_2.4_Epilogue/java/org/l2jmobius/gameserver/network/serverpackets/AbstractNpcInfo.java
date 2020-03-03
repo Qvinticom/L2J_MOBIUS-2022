@@ -357,7 +357,6 @@ public abstract class AbstractNpcInfo implements IClientOutgoingPacket
 			_summon = cha;
 			_value = value;
 			_form = cha.getFormId();
-			
 			_isAttackable = cha.isAutoAttackable(attacker);
 			_rhand = cha.getWeapon();
 			_lhand = 0;

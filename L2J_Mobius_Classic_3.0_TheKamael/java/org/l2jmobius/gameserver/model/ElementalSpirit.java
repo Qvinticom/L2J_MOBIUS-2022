@@ -141,7 +141,6 @@ public class ElementalSpirit
 		_data.setExperience(0);
 		_template = ElementalSpiritData.getInstance().getSpirit(_data.getType(), _data.getStage());
 		EventDispatcher.getInstance().notifyEventAsync(new OnElementalSpiritUpgrade(_owner, this), _owner);
-		
 	}
 	
 	public void resetCharacteristics()

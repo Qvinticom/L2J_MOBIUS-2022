@@ -54,7 +54,6 @@ public class Q10777_ReportsFromCrumaTowerPart2 extends Quest
 		super(10777);
 		addStartNpc(BELKADHI);
 		addTalkId(BELKADHI, MAGIC_OWL);
-		
 		addCondRace(Race.ERTHEIA, "30485-00.htm");
 		addCondMinLevel(MIN_LEVEL, "30485-00.htm");
 		addCondCompletedQuest(Q10776_TheWrathOfTheGiants.class.getSimpleName(), "30485-00.htm");
@@ -132,7 +131,6 @@ public class Q10777_ReportsFromCrumaTowerPart2 extends Quest
 	{
 		final QuestState qs = getQuestState(player, true);
 		String htmltext = getNoQuestMsg(player);
-		
 		if (npc.getId() == BELKADHI)
 		{
 			switch (qs.getState())

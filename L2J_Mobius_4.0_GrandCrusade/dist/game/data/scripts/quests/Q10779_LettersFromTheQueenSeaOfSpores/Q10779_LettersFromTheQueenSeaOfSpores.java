@@ -47,7 +47,6 @@ public class Q10779_LettersFromTheQueenSeaOfSpores extends LetterQuest
 	{
 		super(10779);
 		addTalkId(HOLINT, ANDY);
-		
 		setIsErtheiaQuest(true);
 		setLevel(MIN_LEVEL, MAX_LEVEL);
 		setStartLocation(SOE_OREN, TELEPORT_LOC);

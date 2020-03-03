@@ -208,7 +208,6 @@ public class Party extends AbstractPlayerGroup
 				// continue, take another member if this just logged off
 			}
 		}
-		
 		return null;
 	}
 	
@@ -253,7 +252,6 @@ public class Party extends AbstractPlayerGroup
 				break;
 			}
 		}
-		
 		return looter != null ? looter : player;
 	}
 	
@@ -435,7 +433,6 @@ public class Party extends AbstractPlayerGroup
 	public void addTacticalSign(PlayerInstance player, int tacticalSignId, Creature target)
 	{
 		final Creature tacticalTarget = getTacticalSigns().get(tacticalSignId);
-		
 		if (tacticalTarget == null)
 		{
 			// if the new sign is applied to an existing target, remove the old sign from map
@@ -670,7 +667,6 @@ public class Party extends AbstractPlayerGroup
 					final int p1 = _members.indexOf(player);
 					_members.set(0, player);
 					_members.set(p1, temp);
-					
 					SystemMessage msg = new SystemMessage(SystemMessageId.C1_HAS_BECOME_THE_PARTY_LEADER);
 					msg.addString(getLeader().getName());
 					broadcastPacket(msg);
@@ -760,7 +756,6 @@ public class Party extends AbstractPlayerGroup
 		}
 		
 		final PlayerInstance looter = getActualLooter(player, itemId, spoil, target);
-		
 		looter.addItem(spoil ? "Sweeper Party" : "Party", itemId, itemCount, target, true);
 		
 		// Send messages to other party members about reward
@@ -840,10 +835,8 @@ public class Party extends AbstractPlayerGroup
 	public void distributeXpAndSp(double xpReward, double spReward, List<PlayerInstance> rewardedMembers, int topLvl, Attackable target)
 	{
 		final List<PlayerInstance> validMembers = getValidMembers(rewardedMembers, topLvl);
-		
 		xpReward *= getExpBonus(validMembers.size(), target.getInstanceWorld());
 		spReward *= getSpBonus(validMembers.size(), target.getInstanceWorld());
-		
 		int sqLevelSum = 0;
 		for (PlayerInstance member : validMembers)
 		{
@@ -875,7 +868,6 @@ public class Party extends AbstractPlayerGroup
 				// Add the XP/SP points to the requested party member
 				double exp = member.getStat().getValue(Stat.EXPSP_RATE, xpReward * preCalculation);
 				final double sp = member.getStat().getValue(Stat.EXPSP_RATE, spReward * preCalculation);
-				
 				exp = calculateExpSpPartyCutoff(member.getActingPlayer(), topLvl, exp, sp, target.useVitalityRate());
 				if (exp > 0)
 				{
@@ -894,7 +886,6 @@ public class Party extends AbstractPlayerGroup
 	{
 		addExp *= Config.EXP_AMOUNT_MULTIPLIERS.getOrDefault(player.getClassId(), 1f);
 		addSp *= Config.SP_AMOUNT_MULTIPLIERS.getOrDefault(player.getClassId(), 1f);
-		
 		double xp = addExp;
 		double sp = addSp;
 		if (Config.PARTY_XP_CUTOFF_METHOD.equalsIgnoreCase("highfive"))
@@ -1026,7 +1017,6 @@ public class Party extends AbstractPlayerGroup
 		{
 			i = BONUS_EXP_SP.length - 1;
 		}
-		
 		return BONUS_EXP_SP[i];
 	}
 	
@@ -1086,7 +1076,6 @@ public class Party extends AbstractPlayerGroup
 		_changeRequestDistributionType = partyDistributionType;
 		_changeDistributionTypeAnswers = new HashSet<>();
 		_changeDistributionTypeRequestTask = ThreadPool.schedule(() -> finishLootRequest(false), PARTY_DISTRIBUTION_TYPE_REQUEST_TIMEOUT.toMillis());
-		
 		broadcastToPartyMembers(getLeader(), new ExAskModifyPartyLooting(getLeader().getName(), partyDistributionType));
 		
 		final SystemMessage sm = new SystemMessage(SystemMessageId.REQUESTING_APPROVAL_FOR_CHANGING_PARTY_LOOT_TO_S1);

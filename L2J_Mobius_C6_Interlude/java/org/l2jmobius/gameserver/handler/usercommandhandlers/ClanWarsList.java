@@ -49,7 +49,6 @@ public class ClanWarsList implements IUserCommandHandler
 		}
 		
 		final Clan clan = player.getClan();
-		
 		if (clan == null)
 		{
 			player.sendMessage("You are not in a clan.");
@@ -60,7 +59,6 @@ public class ClanWarsList implements IUserCommandHandler
 		try (Connection con = DatabaseFactory.getConnection())
 		{
 			PreparedStatement statement;
-			
 			if (id == 88) // Attack List
 			{
 				player.sendPacket(SystemMessageId.CLANS_YOU_VE_DECLARED_WAR_ON);
@@ -89,7 +87,6 @@ public class ClanWarsList implements IUserCommandHandler
 			{
 				final String clanName = rset.getString("clan_name");
 				final int ally_id = rset.getInt("ally_id");
-				
 				if (ally_id > 0) // Target With Ally
 				{
 					sm = new SystemMessage(SystemMessageId.S1_S2_ALLIANCE);

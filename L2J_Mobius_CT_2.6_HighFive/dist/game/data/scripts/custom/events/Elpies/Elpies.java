@@ -96,9 +96,7 @@ public class Elpies extends Event
 		EVENT_ACTIVE = true;
 		
 		final EventLocation randomLoc = getRandomEntry(EventLocation.values());
-		
 		final long despawnDelay = EVENT_DURATION_MINUTES * 60000;
-		
 		for (int i = 0; i < ELPY_AMOUNT; i++)
 		{
 			_elpies.add(addSpawn(ELPY, randomLoc.getRandomX(), randomLoc.getRandomY(), randomLoc.getZ(), 0, true, despawnDelay));
@@ -108,7 +106,6 @@ public class Elpies extends Event
 		Broadcast.toAllOnlinePlayers("Elpy invasion in " + randomLoc.getName());
 		Broadcast.toAllOnlinePlayers("Help us exterminate them!");
 		Broadcast.toAllOnlinePlayers("You have " + EVENT_DURATION_MINUTES + " minutes!");
-		
 		_eventTask = ThreadPool.schedule(() ->
 		{
 			Broadcast.toAllOnlinePlayers("Time is up!");
@@ -126,7 +123,6 @@ public class Elpies extends Event
 		}
 		
 		EVENT_ACTIVE = false;
-		
 		if (_eventTask != null)
 		{
 			_eventTask.cancel(true);
@@ -153,14 +149,12 @@ public class Elpies extends Event
 			
 			dropItem(npc, killer, DROPLIST_CONSUMABLES);
 			dropItem(npc, killer, DROPLIST_CRYSTALS);
-			
 			if (_elpies.isEmpty())
 			{
 				Broadcast.toAllOnlinePlayers("All elpies have been killed!");
 				eventStop();
 			}
 		}
-		
 		return super.onKill(npc, killer, isSummon);
 	}
 	
@@ -221,7 +215,6 @@ public class Elpies extends Event
 	private void dropItem(Npc mob, PlayerInstance player, int[][] droplist)
 	{
 		final int chance = getRandom(100);
-		
 		for (int[] drop : droplist)
 		{
 			if (chance >= drop[1])

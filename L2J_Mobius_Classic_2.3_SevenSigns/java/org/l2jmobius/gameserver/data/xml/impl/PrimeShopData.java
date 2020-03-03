@@ -99,7 +99,6 @@ public class PrimeShopData implements IXmlReader
 									
 									final int itemId = parseInteger(attrs, "itemId");
 									final int count = parseInteger(attrs, "count");
-									
 									final Item item = ItemTable.getInstance().getTemplate(itemId);
 									if (item == null)
 									{
@@ -122,7 +121,6 @@ public class PrimeShopData implements IXmlReader
 	public void showProductInfo(PlayerInstance player, int brId)
 	{
 		final PrimeShopGroup item = _primeItems.get(brId);
-		
 		if ((player == null) || (item == null))
 		{
 			return;

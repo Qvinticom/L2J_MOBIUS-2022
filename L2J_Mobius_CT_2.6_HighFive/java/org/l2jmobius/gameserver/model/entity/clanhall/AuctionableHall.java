@@ -49,7 +49,6 @@ public class AuctionableHall extends ClanHall
 		_grade = set.getInt("grade");
 		_paid = set.getBoolean("paid");
 		_lease = set.getInt("lease");
-		
 		if (getOwnerId() != 0)
 		{
 			_isFree = false;
@@ -142,7 +141,6 @@ public class AuctionableHall extends ClanHall
 			try
 			{
 				final long _time = System.currentTimeMillis();
-				
 				if (isFree())
 				{
 					return;

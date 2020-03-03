@@ -43,7 +43,6 @@ public class ExEnchantSkillInfoDetail implements IClientOutgoingPacket
 		_skillId = skillId;
 		_skillLvl = skillLvl;
 		_skillSubLvl = skillSubLvl;
-		
 		_enchantSkillHolder = EnchantSkillGroupsData.getInstance().getEnchantSkillHolder(skillSubLvl % 1000);
 	}
 	

@@ -125,7 +125,6 @@ public class RequestProcureCropList implements IClientIncomingPacket
 			
 			final Item template = ItemTable.getInstance().getTemplate(i.getRewardId());
 			weight += (i.getCount() * template.getWeight());
-			
 			if (!template.isStackable())
 			{
 				slots += i.getCount();
@@ -190,7 +189,6 @@ public class RequestProcureCropList implements IClientIncomingPacket
 				continue;
 			}
 			player.addItem("Manor", i.getRewardId(), rewardItemCount, manager, true);
-			
 			if (Config.ALT_MANOR_SAVE_ALL_ACTIONS)
 			{
 				updateList.add(cp);

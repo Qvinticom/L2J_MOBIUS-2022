@@ -510,7 +510,6 @@ public class AdminZones extends AbstractNpcAI implements IAdminCommandHandler
 		final PageResult result = HtmlUtil.createPage(holder.getNodes(), page, 20, i ->
 		{
 			return "<td align=center><button action=\"bypass -h admin_zones list " + i + "\" value=\"" + (i + 1) + "\" width=30 height=22 back=\"L2UI_CT1.Button_DF_Down\" fore=\"L2UI_CT1.Button_DF\"></td>";
-			
 		}, loc ->
 		{
 			final StringBuilder sb = new StringBuilder();

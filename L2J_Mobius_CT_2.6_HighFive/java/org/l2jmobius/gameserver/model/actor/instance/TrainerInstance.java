@@ -43,7 +43,6 @@ public class TrainerInstance extends NpcInstance
 		{
 			pom = npcId + "-" + value;
 		}
-		
 		return "data/html/trainer/" + pom + ".htm";
 	}
 }

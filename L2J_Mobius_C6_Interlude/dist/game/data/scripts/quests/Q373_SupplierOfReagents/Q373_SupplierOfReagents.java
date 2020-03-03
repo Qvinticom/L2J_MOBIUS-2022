@@ -343,7 +343,6 @@ public class Q373_SupplierOfReagents extends Quest
 		{
 			final int regent = st.getInt(INGREDIENT);
 			final int catalyst = st.getInt(CATALYST);
-			
 			for (int[] formula : FORMULAS)
 			{
 				if ((formula[1] != regent) || (formula[2] != catalyst))

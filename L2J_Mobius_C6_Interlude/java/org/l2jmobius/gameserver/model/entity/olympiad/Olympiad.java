@@ -265,7 +265,6 @@ public class Olympiad
 				statData.set(COMP_LOST, rset.getInt(COMP_LOST));
 				statData.set(COMP_DRAWN, rset.getInt(COMP_DRAWN));
 				statData.set("to_save", false);
-				
 				_nobles.put(charId, statData);
 			}
 			
@@ -294,7 +293,6 @@ public class Olympiad
 				statData.set(COMP_LOST, rset.getInt(COMP_LOST));
 				statData.set(COMP_DRAWN, rset.getInt(COMP_DRAWN));
 				statData.set("to_save", false);
-				
 				_oldnobles.put(charId, statData);
 			}
 			
@@ -329,7 +327,6 @@ public class Olympiad
 			}
 			
 			LOGGER.info("Olympiad System: " + Math.round(milliToEnd / 60000) + " minutes until period ends");
-			
 			if (_period == 0)
 			{
 				milliToEnd = getMillisToWeekChange();
@@ -350,7 +347,6 @@ public class Olympiad
 		
 		_nonClassBasedRegisters = new ArrayList<>();
 		_classBasedRegisters = new HashMap<>();
-		
 		_compStart = Calendar.getInstance();
 		if (Config.ALT_OLY_USE_CUSTOM_PERIOD_SETTINGS)
 		{
@@ -385,14 +381,12 @@ public class Olympiad
 		_compStart.set(Calendar.HOUR_OF_DAY, COMP_START);
 		_compStart.set(Calendar.MINUTE, COMP_MIN);
 		_compEnd = _compStart.getTimeInMillis() + COMP_PERIOD;
-		
 		if (_scheduledOlympiadEnd != null)
 		{
 			_scheduledOlympiadEnd.cancel(true);
 		}
 		
 		_scheduledOlympiadEnd = ThreadPool.schedule(new OlympiadEndTask(), getMillisToOlympiadEnd());
-		
 		updateCompStatus();
 	}
 	
@@ -406,7 +400,6 @@ public class Olympiad
 			
 			Announcements.getInstance().announceToAll(sm);
 			Announcements.getInstance().announceToAll("Olympiad Validation Period has began");
-			
 			if (_scheduledWeeklyTask != null)
 			{
 				_scheduledWeeklyTask.cancel(true);
@@ -424,7 +417,6 @@ public class Olympiad
 			
 			final Calendar validationEnd = Calendar.getInstance();
 			_validationEnd = validationEnd.getTimeInMillis() + VALIDATION_PERIOD;
-			
 			_scheduledValdationTask = ThreadPool.schedule(new ValidationEndTask(), getMillisToValidationEnd());
 		}
 	}
@@ -446,7 +438,6 @@ public class Olympiad
 	public boolean registerNoble(PlayerInstance noble, boolean classBased)
 	{
 		SystemMessage sm;
-		
 		if (!_inCompPeriod)
 		{
 			sm = new SystemMessage(SystemMessageId.THE_GRAND_OLYMPIAD_GAMES_ARE_NOT_CURRENTLY_IN_PROGRESS);
@@ -517,7 +508,6 @@ public class Olympiad
 		}
 		
 		/** End Olympiad Restrictions */
-		
 		if (_classBasedRegisters.containsKey(noble.getClassId().getId()))
 		{
 			final List<PlayerInstance> classed = _classBasedRegisters.get(noble.getClassId().getId());
@@ -550,7 +540,6 @@ public class Olympiad
 			statDat.set(COMP_LOST, 0);
 			statDat.set(COMP_DRAWN, 0);
 			statDat.set("to_save", true);
-			
 			_nobles.put(noble.getObjectId(), statDat);
 		}
 		
@@ -631,7 +620,6 @@ public class Olympiad
 	protected static List<Integer> hasEnoughRegisteredClassed()
 	{
 		final List<Integer> result = new ArrayList<>();
-		
 		for (Integer classList : getRegisteredClassBased().keySet())
 		{
 			if (getRegisteredClassBased().get(classList).size() >= Config.ALT_OLY_CLASSED)
@@ -661,7 +649,6 @@ public class Olympiad
 	public boolean isRegistered(PlayerInstance noble)
 	{
 		boolean result = false;
-		
 		if ((_nonClassBasedRegisters != null) && _nonClassBasedRegisters.contains(noble))
 		{
 			result = true;
@@ -674,14 +661,12 @@ public class Olympiad
 				result = true;
 			}
 		}
-		
 		return result;
 	}
 	
 	public boolean unRegisterNoble(PlayerInstance noble)
 	{
 		SystemMessage sm;
-		
 		if (!_inCompPeriod)
 		{
 			sm = new SystemMessage(SystemMessageId.THE_GRAND_OLYMPIAD_GAMES_ARE_NOT_CURRENTLY_IN_PROGRESS);
@@ -744,7 +729,6 @@ public class Olympiad
 		}
 		
 		final List<PlayerInstance> classed = _classBasedRegisters.get(player.getClassId().getId());
-		
 		if (_nonClassBasedRegisters.contains(player))
 		{
 			_nonClassBasedRegisters.remove(player);
@@ -771,7 +755,6 @@ public class Olympiad
 		synchronized (this)
 		{
 			final long milliToStart = getMillisToCompBegin();
-			
 			final double numSecs = (milliToStart / 1000) % 60;
 			double countDown = ((milliToStart / 1000) - numSecs) / 60;
 			final int numMins = (int) Math.floor(countDown % 60);
@@ -793,7 +776,6 @@ public class Olympiad
 			
 			_inCompPeriod = true;
 			final OlympiadManager om = OlympiadManager.getInstance();
-			
 			Announcements.getInstance().announceToAll(new SystemMessage(SystemMessageId.SHARPEN_YOUR_SWORDS_TIGHTEN_THE_STITCHINGS_IN_YOUR_ARMOR_AND_MAKE_HASTE_TO_A_GRAND_OLYMPIAD_MANAGER_BATTLES_IN_THE_GRAND_OLYMPIAD_GAMES_ARE_NOW_TAKING_PLACE));
 			LOGGER.info("Olympiad System: Olympiad Game Started");
 			
@@ -913,7 +895,6 @@ public class Olympiad
 	private long setNewCompBegin()
 	{
 		_compStart = Calendar.getInstance();
-		
 		int currentDay = _compStart.get(Calendar.DAY_OF_WEEK);
 		_compStart.set(Calendar.HOUR_OF_DAY, COMP_START);
 		_compStart.set(Calendar.MINUTE, COMP_MIN);
@@ -964,7 +945,6 @@ public class Olympiad
 		_compEnd = _compStart.getTimeInMillis() + COMP_PERIOD;
 		
 		LOGGER.info("Olympiad System: New Schedule @ " + _compStart.getTime());
-		
 		return (_compStart.getTimeInMillis() - Calendar.getInstance().getTimeInMillis());
 	}
 	
@@ -1097,14 +1077,12 @@ public class Olympiad
 	public int[] getWaitingList()
 	{
 		final int[] array = new int[2];
-		
 		if (!_inCompPeriod)
 		{
 			return null;
 		}
 		
 		int classCount = 0;
-		
 		if (!_classBasedRegisters.isEmpty())
 		{
 			for (List<PlayerInstance> classed : _classBasedRegisters.values())
@@ -1115,7 +1093,6 @@ public class Olympiad
 		
 		array[0] = classCount;
 		array[1] = _nonClassBasedRegisters.size();
-		
 		return array;
 	}
 	
@@ -1125,7 +1102,6 @@ public class Olympiad
 	protected synchronized void saveNobleData()
 	{
 		Connection con = null;
-		
 		if ((_nobles == null) || _nobles.isEmpty())
 		{
 			return;
@@ -1135,12 +1111,10 @@ public class Olympiad
 		{
 			con = DatabaseFactory.getConnection();
 			PreparedStatement statement;
-			
 			for (Entry<Integer, StatSet> entry : _nobles.entrySet())
 			{
 				final Integer nobleId = entry.getKey();
 				final StatSet nobleInfo = entry.getValue();
-				
 				if (nobleInfo == null)
 				{
 					continue;
@@ -1155,7 +1129,6 @@ public class Olympiad
 				final int compLost = nobleInfo.getInt(COMP_LOST);
 				final int compDrawn = nobleInfo.getInt(COMP_DRAWN);
 				final boolean toSave = nobleInfo.getBoolean("to_save");
-				
 				if (toSave)
 				{
 					statement = con.prepareStatement(OLYMPIAD_SAVE_NOBLES);
@@ -1203,7 +1176,6 @@ public class Olympiad
 		try (Connection con = DatabaseFactory.getConnection())
 		{
 			final StatSet nobleInfo = _oldnobles.get(nobleId);
-			
 			if (nobleInfo == null)
 			{
 				return;
@@ -1215,7 +1187,6 @@ public class Olympiad
 			final int compWon = nobleInfo.getInt(COMP_WON);
 			final int compLost = nobleInfo.getInt(COMP_LOST);
 			final int compDrawn = nobleInfo.getInt(COMP_DRAWN);
-			
 			statement = con.prepareStatement(OLYMPIAD_UPDATE_OLD_NOBLES);
 			statement.setInt(1, points);
 			statement.setInt(2, compDone);
@@ -1244,7 +1215,6 @@ public class Olympiad
 		try
 		{
 			fos = new FileOutputStream(new File("./" + OLYMPIAD_DATA_FILE));
-			
 			olympiadProperties.setProperty("CurrentCycle", String.valueOf(_currentCycle));
 			olympiadProperties.setProperty("Period", String.valueOf(_period));
 			olympiadProperties.setProperty("OlympiadEnd", String.valueOf(_olympiadEnd));
@@ -1256,12 +1226,10 @@ public class Olympiad
 			gc.setTimeInMillis(_nextWeeklyChange);
 			
 			olympiadProperties.setProperty("NextWeeklyChange_DateFormat", DateFormat.getDateTimeInstance().format(gc.getTime()));
-			
 			gc.clear();
 			gc.setTimeInMillis(_olympiadEnd);
 			
 			olympiadProperties.setProperty("OlympiadEnd_DateFormat", DateFormat.getDateTimeInstance().format(gc.getTime()));
-			
 			olympiadProperties.store(fos, "Olympiad Properties");
 		}
 		catch (Exception e)
@@ -1314,7 +1282,6 @@ public class Olympiad
 			{
 				final Integer nobleId = entry.getKey();
 				final StatSet nobleInfo = entry.getValue();
-				
 				if (nobleInfo == null)
 				{
 					continue;
@@ -1325,13 +1292,11 @@ public class Olympiad
 				final String charName = nobleInfo.getString(CHAR_NAME);
 				final int points = nobleInfo.getInt(POINTS);
 				final int compDone = nobleInfo.getInt(COMP_DONE);
-				
 				logResult(charName, "", Double.valueOf(charId), Double.valueOf(classId), compDone, points, "noble-charId-classId-compdone-points", 0, "");
 			}
 		}
 		
 		_heroesToBe = new ArrayList<>();
-		
 		PreparedStatement statement = null;
 		ResultSet rset = null;
 		try (Connection con = DatabaseFactory.getConnection())
@@ -1349,7 +1314,6 @@ public class Olympiad
 					hero.set(CLASS_ID, HERO_ID);
 					hero.set(CHAR_ID, rset.getInt(CHAR_ID));
 					hero.set(CHAR_NAME, rset.getString(CHAR_NAME));
-					
 					logResult(hero.getString(CHAR_NAME), "", hero.getDouble(CHAR_ID), hero.getDouble(CLASS_ID), 0, 0, "awarded hero", 0, "");
 					_heroesToBe.add(hero);
 				}
@@ -1365,7 +1329,6 @@ public class Olympiad
 	public List<String> getClassLeaderBoard(int classId)
 	{
 		final List<String> names = new ArrayList<>();
-		
 		PreparedStatement statement = null;
 		ResultSet rset = null;
 		try (Connection con = DatabaseFactory.getConnection())
@@ -1407,12 +1370,10 @@ public class Olympiad
 		for (StatSet hero : _heroesToBe)
 		{
 			final int charId = hero.getInt(CHAR_ID);
-			
 			final StatSet noble = _nobles.get(charId);
 			int currentPoints = noble.getInt(POINTS);
 			currentPoints += Config.ALT_OLY_HERO_POINTS;
 			noble.set(POINTS, currentPoints);
-			
 			updateNobleStats(charId, noble);
 		}
 	}
@@ -1439,9 +1400,7 @@ public class Olympiad
 			
 			noble.set(POINTS, 0);
 			updateNobleStats(objId, noble);
-			
 			points *= Config.ALT_OLY_GP_PER_POINT;
-			
 			return points;
 		}
 		
@@ -1463,16 +1422,13 @@ public class Olympiad
 		
 		noble.set(POINTS, 0);
 		updateOldNobleStats(objId, noble);
-		
 		points *= Config.ALT_OLY_GP_PER_POINT;
-		
 		return points;
 	}
 	
 	public boolean isRegisteredInComp(PlayerInstance player)
 	{
 		boolean result = isRegistered(player);
-		
 		if (_inCompPeriod)
 		{
 			for (OlympiadGame game : OlympiadManager.getInstance().getOlympiadGames().values())
@@ -1484,7 +1440,6 @@ public class Olympiad
 				}
 			}
 		}
-		
 		return result;
 	}
 	
@@ -1597,7 +1552,6 @@ public class Olympiad
 		try
 		{
 			final File file = new File("log/olympiad.csv");
-			
 			boolean writeHead = false;
 			if (!file.exists())
 			{
@@ -1605,7 +1559,6 @@ public class Olympiad
 			}
 			
 			save = new FileWriter(file, true);
-			
 			if (writeHead)
 			{
 				final String header = "Date,Player1,Player2,Player1 HP,Player2 HP,Player1 Damage,Player2 Damage,Result,Points,Classed\r\n";
@@ -1731,7 +1684,6 @@ public class Olympiad
 		}
 		
 		_olympiadEnd = currentTime.getTimeInMillis();
-		
 		scheduleWeeklyChange();
 	}
 	

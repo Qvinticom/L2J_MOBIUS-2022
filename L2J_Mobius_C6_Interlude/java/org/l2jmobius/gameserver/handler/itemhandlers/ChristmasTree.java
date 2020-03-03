@@ -46,7 +46,6 @@ public class ChristmasTree implements IItemHandler
 	public void useItem(Playable playable, ItemInstance item)
 	{
 		final PlayerInstance player = (PlayerInstance) playable;
-		
 		NpcTemplate template1 = null;
 		
 		final int itemId = item.getItemId();
@@ -78,9 +77,7 @@ public class ChristmasTree implements IItemHandler
 			spawn.setY(target.getY());
 			spawn.setZ(target.getZ());
 			final NpcInstance result = spawn.doSpawn();
-			
 			player.destroyItem("Consume", item.getObjectId(), 1, null, false);
-			
 			ThreadPool.schedule(new DeSpawn(result), 3600000);
 		}
 		catch (Exception e)

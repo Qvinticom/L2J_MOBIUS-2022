@@ -69,7 +69,6 @@ public class FriendlyMobKnownList extends AttackableKnownList
 		{
 			final Creature temp = (Creature) object;
 			getActiveChar().getAI().notifyEvent(CtrlEvent.EVT_FORGET_OBJECT, object);
-			
 			if (getActiveChar().getTarget() == temp)
 			{
 				getActiveChar().setTarget(null);

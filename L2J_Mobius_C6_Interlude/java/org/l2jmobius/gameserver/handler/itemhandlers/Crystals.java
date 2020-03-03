@@ -53,7 +53,6 @@ public class Crystals implements IItemHandler
 	{
 		PlayerInstance player;
 		// boolean res = false;
-		
 		if (playable instanceof PlayerInstance)
 		{
 			player = (PlayerInstance) playable;

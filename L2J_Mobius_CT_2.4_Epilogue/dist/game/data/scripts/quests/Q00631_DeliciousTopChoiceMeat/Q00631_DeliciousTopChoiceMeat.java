@@ -142,7 +142,6 @@ public class Q00631_DeliciousTopChoiceMeat extends Quest
 				
 				final int[] reward = REWARDS[Integer.parseInt(event)];
 				rewardItems(player, reward[0], reward[1]);
-				
 				playSound(player, QuestSound.ITEMSOUND_QUEST_FINISH);
 				st.exitQuest(true);
 			}
@@ -161,7 +160,6 @@ public class Q00631_DeliciousTopChoiceMeat extends Quest
 	{
 		final QuestState st = getQuestState(player, true);
 		String htmltext = getNoQuestMsg(player);
-		
 		switch (st.getState())
 		{
 			case State.CREATED:
@@ -188,7 +186,6 @@ public class Q00631_DeliciousTopChoiceMeat extends Quest
 				}
 				break;
 		}
-		
 		return htmltext;
 	}
 	

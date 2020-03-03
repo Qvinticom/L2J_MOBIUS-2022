@@ -80,7 +80,6 @@ public class Q235_MimirsElixir extends Quest
 		else if (event.equals("30721-16.htm") && st.hasQuestItems(MIMIR_ELIXIR))
 		{
 			player.broadcastPacket(new MagicSkillUse(player, player, 4339, 1, 1, 1));
-			
 			st.takeItems(MAGISTER_MIXING_STONE, -1);
 			st.takeItems(MIMIR_ELIXIR, -1);
 			st.takeItems(STAR_OF_DESTINY, -1);

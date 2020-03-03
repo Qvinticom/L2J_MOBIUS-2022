@@ -263,7 +263,6 @@ public class DarkCloudMansion extends AbstractInstance
 				return false;
 			}
 		}
-		
 		return true;
 	}
 	
@@ -298,7 +297,6 @@ public class DarkCloudMansion extends AbstractInstance
 		world.setStatus(0);
 		final DMCRoom startRoom = new DMCRoom();
 		DMCNpc thisNpc;
-		
 		thisNpc = new DMCNpc();
 		thisNpc.npc = addSpawn(BM[0], 146817, 180335, -6117, 0, false, 0, false, world.getInstanceId());
 		startRoom.npcList.add(thisNpc);
@@ -322,7 +320,6 @@ public class DarkCloudMansion extends AbstractInstance
 		final DMCRoom hall = new DMCRoom();
 		DMCNpc thisNpc;
 		world.getParameters().remove("Hall"); // remove room instance to avoid adding mob every time
-		
 		thisNpc = new DMCNpc();
 		thisNpc.npc = addSpawn(BM[1], 147217, 180112, -6117, 0, false, 0, false, world.getInstanceId());
 		if (noRndWalk)
@@ -401,7 +398,6 @@ public class DarkCloudMansion extends AbstractInstance
 	{
 		final DMCRoom firstRoom = new DMCRoom();
 		DMCNpc thisNpc;
-		
 		thisNpc = new DMCNpc();
 		thisNpc.npc = addSpawn(HG[1], 147842, 179837, -6117, 0, false, 0, false, world.getInstanceId());
 		if (noRndWalk)
@@ -460,7 +456,6 @@ public class DarkCloudMansion extends AbstractInstance
 		}
 		
 		final int i = getRandom(MonolithOrder.length);
-		
 		thisNpc = new DMCNpc();
 		thisNpc.npc = addSpawn(BSM, 147800, 181150, -6117, 0, false, 0, false, world.getInstanceId());
 		thisNpc.order = MonolithOrder[i][0];
@@ -603,7 +598,6 @@ public class DarkCloudMansion extends AbstractInstance
 		final int[] temp = new int[7];
 		final int[][] templist = new int[7][5];
 		int xx = 0;
-		
 		for (int i = 0; i < 7; i++)
 		{
 			temp[i] = getRandom(ColumnRows.length);
@@ -653,13 +647,10 @@ public class DarkCloudMansion extends AbstractInstance
 	{
 		final DMCRoom fifthRoom = new DMCRoom();
 		DMCNpc thisNpc;
-		
 		int idx = 0;
 		final int[] temp = Beleths[getRandom(Beleths.length)];
-		
 		fifthRoom.reset = 0;
 		fifthRoom.founded = 0;
-		
 		for (int x = 148720; x < 149175; x += 65)
 		{
 			thisNpc = new DMCNpc();
@@ -697,7 +688,6 @@ public class DarkCloudMansion extends AbstractInstance
 				cont = false;
 			}
 		}
-		
 		return cont;
 	}
 	
@@ -712,7 +702,6 @@ public class DarkCloudMansion extends AbstractInstance
 		final int mobId = GolemSpawn[i][0];
 		final int x = GolemSpawn[i][1];
 		final int y = GolemSpawn[i][2];
-		
 		npc.golem = addSpawn(mobId, x, y, -6117, 0, false, 0, false, world.getInstanceId());
 		if (noRndWalk)
 		{
@@ -754,7 +743,6 @@ public class DarkCloudMansion extends AbstractInstance
 	protected void checkBelethSample(InstanceWorld world, Npc npc, PlayerInstance player)
 	{
 		final DMCRoom fifthRoom = world.getParameters().getObject("FifthRoom", DMCRoom.class);
-		
 		for (DMCNpc mob : fifthRoom.npcList)
 		{
 			if (mob.npc == npc)
@@ -788,7 +776,6 @@ public class DarkCloudMansion extends AbstractInstance
 	{
 		int decayedSamples = 0;
 		final DMCRoom fifthRoom = world.getParameters().getObject("FifthRoom", DMCRoom.class);
-		
 		for (DMCNpc mob : fifthRoom.npcList)
 		{
 			if (mob.npc == npc)
@@ -837,7 +824,6 @@ public class DarkCloudMansion extends AbstractInstance
 	protected boolean allStonesDone(InstanceWorld world)
 	{
 		final DMCRoom secondRoom = world.getParameters().getObject("SecondRoom", DMCRoom.class);
-		
 		for (DMCNpc mob : secondRoom.npcList)
 		{
 			if (mob.isDead)
@@ -846,14 +832,12 @@ public class DarkCloudMansion extends AbstractInstance
 			}
 			return false;
 		}
-		
 		return true;
 	}
 	
 	protected void removeMonoliths(InstanceWorld world)
 	{
 		final DMCRoom secondRoom = world.getParameters().getObject("SecondRoom", DMCRoom.class);
-		
 		for (DMCNpc mob : secondRoom.npcList)
 		{
 			mob.npc.decayMe();
@@ -863,7 +847,6 @@ public class DarkCloudMansion extends AbstractInstance
 	protected void chkShadowColumn(InstanceWorld world, Npc npc)
 	{
 		final DMCRoom forthRoom = world.getParameters().getObject("ForthRoom", DMCRoom.class);
-		
 		for (DMCNpc mob : forthRoom.npcList)
 		{
 			if (mob.npc == npc)
@@ -1046,7 +1029,6 @@ public class DarkCloudMansion extends AbstractInstance
 				checkBelethSample(world, npc, attacker);
 			}
 		}
-		
 		return super.onAttack(npc, attacker, damage, isSummon);
 	}
 	

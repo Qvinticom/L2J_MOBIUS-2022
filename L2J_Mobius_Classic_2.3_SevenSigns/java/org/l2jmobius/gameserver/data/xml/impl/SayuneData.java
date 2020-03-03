@@ -83,7 +83,6 @@ public class SayuneData implements IXmlReader
 				final int x = parseInteger(attrs, "x");
 				final int y = parseInteger(attrs, "y");
 				final int z = parseInteger(attrs, "z");
-				
 				parseEntries(lastEntry.addInnerEntry(new SayuneEntry("selector".equals(d.getNodeName()), id, x, y, z)), d);
 			}
 		}

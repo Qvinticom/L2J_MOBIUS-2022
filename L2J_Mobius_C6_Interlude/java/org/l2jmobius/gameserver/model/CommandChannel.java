@@ -92,7 +92,6 @@ public class CommandChannel
 		
 		_parties.remove(party);
 		_channelLvl = 0;
-		
 		for (Party pty : _parties)
 		{
 			if (pty.getLevel() > _channelLvl)
@@ -103,7 +102,6 @@ public class CommandChannel
 		
 		party.setCommandChannel(null);
 		party.broadcastToPartyMembers(new ExCloseMPCC());
-		
 		if (_parties.size() < 2)
 		{
 			broadcastToChannelMembers(new SystemMessage(SystemMessageId.THE_COMMAND_CHANNEL_HAS_BEEN_DISBANDED));
@@ -135,7 +133,6 @@ public class CommandChannel
 	public int getMemberCount()
 	{
 		int count = 0;
-		
 		for (Party party : _parties)
 		{
 			if (party != null)
@@ -196,7 +193,6 @@ public class CommandChannel
 		{
 			members.addAll(party.getPartyMembers());
 		}
-		
 		return members;
 	}
 	

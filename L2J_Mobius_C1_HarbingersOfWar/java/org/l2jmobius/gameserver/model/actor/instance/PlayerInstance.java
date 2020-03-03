@@ -953,7 +953,6 @@ public class PlayerInstance extends Creature
 			karmaLost = 1;
 		}
 		karmaLost *= Config.KARMA_LOST_MULTIPLIER;
-		
 		if (_karma > karmaLost)
 		{
 			setKarma(_karma - (int) karmaLost);
@@ -972,7 +971,6 @@ public class PlayerInstance extends Creature
 	{
 		int newKarma = Config.KARMA_MIN_KARMA;
 		final int pkLevel = getLevel();
-		
 		final int pkPKCount = getPkKills();
 		int pkCountMulti = 0;
 		if (pkPKCount > 0)
@@ -988,7 +986,6 @@ public class PlayerInstance extends Creature
 			pkCountMulti = 1;
 		}
 		newKarma *= pkCountMulti;
-		
 		int lvlDiffMulti = 0;
 		if (pkLevel > level)
 		{
@@ -1003,7 +1000,6 @@ public class PlayerInstance extends Creature
 			lvlDiffMulti = 1;
 		}
 		newKarma *= lvlDiffMulti;
-		
 		if (newKarma < Config.KARMA_MIN_KARMA)
 		{
 			newKarma = Config.KARMA_MIN_KARMA;
@@ -1471,7 +1467,6 @@ public class PlayerInstance extends Creature
 	{
 		Creature target = null;
 		target = getTarget() instanceof Creature ? (Creature) getTarget() : this;
-		
 		if ((skill.getTargetType() == Skill.TARGET_SELF) || (skill.getTargetType() == Skill.TARGET_PARTY))
 		{
 			target = this;

@@ -59,11 +59,9 @@ public class AdminCursedWeapons implements IAdminCommandHandler
 		if (command.equalsIgnoreCase("admin_cw_info"))
 		{
 			BuilderUtil.sendSysMessage(activeChar, "====== Cursed Weapons: ======");
-			
 			for (CursedWeapon cw : cursedWeaponsManager.getCursedWeapons())
 			{
 				BuilderUtil.sendSysMessage(activeChar, "> " + cw.getName() + " (" + cw.getItemId() + ")");
-				
 				if (cw.isActivated())
 				{
 					final PlayerInstance pl = cw.getPlayer();
@@ -96,7 +94,6 @@ public class AdminCursedWeapons implements IAdminCommandHandler
 			{
 				final int itemId = cw.getItemId();
 				replyMSG.append("<table width=270><tr><td>Name:</td><td>" + cw.getName() + "</td></tr>");
-				
 				if (cw.isActivated())
 				{
 					final PlayerInstance pl = cw.getPlayer();
@@ -221,7 +218,6 @@ public class AdminCursedWeapons implements IAdminCommandHandler
 			else
 			{
 				parameter = parameter.replace('_', ' ');
-				
 				for (CursedWeapon cwp : cursedWeaponsManager.getCursedWeapons())
 				{
 					if (cwp.getName().toLowerCase().contains(parameter.toLowerCase()))

@@ -421,7 +421,6 @@ public class UseItem extends GameClientPacket
 			ItemInstance[] items = null;
 			final boolean isEquiped = item.isEquipped();
 			SystemMessage sm = null;
-			
 			if (item.getItem().getType2() == Item.TYPE2_WEAPON)
 			{
 				// if used item is a weapon
@@ -616,7 +615,6 @@ public class UseItem extends GameClientPacket
 				}
 				
 				items = player.getInventory().equipItemAndRecord(item);
-				
 				if (item.getItem() instanceof Weapon)
 				{
 					// charge Soulshot/Spiritshot like L2OFF

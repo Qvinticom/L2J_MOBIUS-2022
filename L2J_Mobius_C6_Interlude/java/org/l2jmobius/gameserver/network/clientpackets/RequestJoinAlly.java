@@ -37,7 +37,6 @@ public class RequestJoinAlly extends GameClientPacket
 	protected void runImpl()
 	{
 		final PlayerInstance player = getClient().getPlayer();
-		
 		if (player == null)
 		{
 			return;
@@ -57,7 +56,6 @@ public class RequestJoinAlly extends GameClientPacket
 		
 		final PlayerInstance target = (PlayerInstance) World.getInstance().findObject(_id);
 		final Clan clan = player.getClan();
-		
 		if (!clan.checkAllyJoinCondition(player, target))
 		{
 			return;

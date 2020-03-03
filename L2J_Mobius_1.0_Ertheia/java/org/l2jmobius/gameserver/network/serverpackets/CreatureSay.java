@@ -52,7 +52,6 @@ public class CreatureSay implements IClientOutgoingPacket
 		_senderName = name;
 		_chatType = chatType;
 		_text = text;
-		
 		if (receiver != null)
 		{
 			if (receiver.getFriendList().contains(sender.getObjectId()))

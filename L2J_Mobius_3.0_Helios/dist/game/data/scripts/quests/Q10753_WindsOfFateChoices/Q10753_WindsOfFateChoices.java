@@ -405,7 +405,6 @@ public class Q10753_WindsOfFateChoices extends Quest
 	{
 		final QuestState qs = getQuestState(player, true);
 		String htmltext = getNoQuestMsg(player);
-		
 		switch (qs.getState())
 		{
 			case State.CREATED:
@@ -748,7 +747,6 @@ public class Q10753_WindsOfFateChoices extends Quest
 		final String command = event.getCommand();
 		final PlayerInstance player = event.getPlayer();
 		final QuestState qs = getQuestState(player, false);
-		
 		if (qs == null)
 		{
 			if (command.equals("Q10753_teleport"))
@@ -807,7 +805,6 @@ public class Q10753_WindsOfFateChoices extends Quest
 		final QuestState qs = getQuestState(player, false);
 		final int oldLevel = event.getOldLevel();
 		final int newLevel = event.getNewLevel();
-		
 		if ((qs == null) && (player.getRace() == Race.ERTHEIA) && (oldLevel < newLevel) && (newLevel >= MIN_LEVEL) && (player.isInCategory(CategoryType.FOURTH_CLASS_GROUP)))
 		{
 			if (player.isMageClass())
@@ -834,7 +831,6 @@ public class Q10753_WindsOfFateChoices extends Quest
 		
 		final PlayerInstance player = event.getPlayer();
 		final QuestState qs = getQuestState(player, false);
-		
 		if ((qs == null) && (player.getRace() == Race.ERTHEIA) && (player.getLevel() >= MIN_LEVEL) && (player.isInCategory(CategoryType.FOURTH_CLASS_GROUP)))
 		{
 			if (player.isMageClass())

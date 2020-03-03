@@ -112,7 +112,6 @@ public class SubClassSkills extends AbstractNpcAI
 			for (Skill s : certSkills)
 			{
 				Util.handleIllegalPlayerAction(player, "Player " + player.getName() + " has cert skill on subclass :" + s.getName() + "(" + s.getId() + "/" + s.getLevel() + "), class:" + ClassListData.getInstance().getClass(player.getClassId()).getClassName(), IllegalActionPunishmentType.NONE);
-				
 				if (Config.SKILL_CHECK_REMOVE)
 				{
 					player.removeSkill(s);
@@ -164,7 +163,6 @@ public class SubClassSkills extends AbstractNpcAI
 					try
 					{
 						id = Integer.parseInt(qValue.replace(";", ""));
-						
 						Skill skill = null;
 						if (certSkills != null)
 						{

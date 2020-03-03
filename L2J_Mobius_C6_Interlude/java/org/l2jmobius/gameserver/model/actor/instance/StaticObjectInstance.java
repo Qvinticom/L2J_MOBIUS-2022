@@ -157,7 +157,6 @@ public class StaticObjectInstance extends WorldObject
 					final String filename = "data/html/signboard.htm";
 					final String content = HtmCache.getInstance().getHtm(filename);
 					final NpcHtmlMessage html = new NpcHtmlMessage(getObjectId());
-					
 					if (content == null)
 					{
 						html.setHtml("<html><body>Signboard is missing:<br>" + filename + "</body></html>");

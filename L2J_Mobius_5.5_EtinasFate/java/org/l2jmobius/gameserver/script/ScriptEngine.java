@@ -38,7 +38,6 @@ public class ScriptEngine
 				// have been executed if the shape was found.
 				// the shape is expected to have put its factory
 				// in the hashtable.
-				
 				s = PARSER_FACTORIES.get(name);
 				if (s == null) // if the shape factory is not there even now
 				{

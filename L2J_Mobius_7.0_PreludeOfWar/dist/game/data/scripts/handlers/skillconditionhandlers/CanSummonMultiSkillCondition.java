@@ -49,7 +49,6 @@ public class CanSummonMultiSkillCondition implements ISkillCondition
 		boolean canSummon = true;
 		
 		final int servitorSize = player.getServitors().size();
-		
 		if ((servitorSize == 1) && (player.getSummonPoints() == 0))
 		{
 			canSummon = false;

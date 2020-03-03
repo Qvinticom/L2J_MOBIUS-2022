@@ -158,7 +158,6 @@ public class RequestCommissionList implements IClientIncomingPacket
 		}
 		
 		filter = filter.and(i -> _query.isEmpty() || i.getName().toLowerCase().contains(_query.toLowerCase()));
-		
 		CommissionManager.getInstance().showAuctions(player, filter);
 	}
 }

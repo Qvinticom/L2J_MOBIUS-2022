@@ -100,7 +100,6 @@ public class ScriptPackage
 		}
 		
 		String out = "Package Name: " + _name + "\n";
-		
 		if (!_scriptFiles.isEmpty())
 		{
 			out += "Xml Script Files...\n";

@@ -46,7 +46,6 @@ public class ElmoredenServantsGhost extends AbstractNpcAI
 	public String onAdvEvent(String event, Npc npc, PlayerInstance player)
 	{
 		String htmltext = null;
-		
 		if (event.equals("teleport1") || event.equals("teleport2"))
 		{
 			if (!hasAtLeastOneQuestItem(player, USED_GRAVE_PASS, ANTIQUE_BROOCH))

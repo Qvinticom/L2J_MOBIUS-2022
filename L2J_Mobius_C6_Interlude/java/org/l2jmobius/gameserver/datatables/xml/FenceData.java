@@ -112,7 +112,6 @@ public class FenceData
 		final int length = Integer.parseInt(attrs.getNamedItem("length").getNodeValue());
 		final int height = Integer.parseInt(attrs.getNamedItem("height").getNodeValue());
 		final FenceState state = FenceState.valueOf(attrs.getNamedItem("state").getNodeValue());
-		
 		spawnFence(x, y, z, name, width, length, height, state);
 	}
 	
@@ -238,7 +237,6 @@ public class FenceData
 		
 		final double xi = (((x3 - x4) * ((x1 * y2) - (y1 * x2))) - ((x1 - x2) * ((x3 * y4) - (y3 * x4)))) / d;
 		final double yi = (((y3 - y4) * ((x1 * y2) - (y1 * x2))) - ((y1 - y2) * ((x3 * y4) - (y3 * x4)))) / d;
-		
 		return new double[]
 		{
 			xi,

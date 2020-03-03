@@ -357,13 +357,10 @@ public class RequestEnchantItem extends GameClientPacket
 		
 		// SystemMessage sm = SystemMessageId.ENCHANT_SCROLL_CANCELLED);
 		// player.sendPacket(sm);
-		
 		SystemMessage sm;
-		
 		int chance = 0;
 		int maxEnchantLevel = 0;
 		int minEnchantLevel = 0;
-		
 		if (item.getItem().getType2() == Item.TYPE2_WEAPON)
 		{
 			if (blessedScroll)
@@ -412,7 +409,6 @@ public class RequestEnchantItem extends GameClientPacket
 			}
 			else
 			{ // normal scrolls
-				
 				for (int normalweaponscroll : NORMAL_WEAPON_SCROLLS)
 				{
 					if (scroll.getItemId() == normalweaponscroll)
@@ -474,7 +470,6 @@ public class RequestEnchantItem extends GameClientPacket
 			}
 			else
 			{ // normal scrolls
-				
 				for (int normalarmorscroll : NORMAL_ARMOR_SCROLLS)
 				{
 					if (scroll.getItemId() == normalarmorscroll)
@@ -583,7 +578,6 @@ public class RequestEnchantItem extends GameClientPacket
 		}
 		
 		int rndValue = Rnd.get(100);
-		
 		if (Config.ENABLE_DWARF_ENCHANT_BONUS && (player.getRace() == Race.DWARF) && (player.getLevel() >= Config.DWARF_ENCHANT_MIN_LEVEL))
 		{
 			rndValue -= Config.DWARF_ENCHANT_BONUS;
@@ -672,7 +666,6 @@ public class RequestEnchantItem extends GameClientPacket
 						}
 						
 						final ItemInstance[] unequiped = player.getInventory().unEquipItemInSlotAndRecord(item.getEquipSlot());
-						
 						final InventoryUpdate iu = new InventoryUpdate();
 						for (ItemInstance element : unequiped)
 						{
@@ -696,7 +689,6 @@ public class RequestEnchantItem extends GameClientPacket
 					}
 					
 					final ItemInstance crystals = player.getInventory().addItem("Enchant", crystalId, count, player, destroyItem);
-					
 					sm = new SystemMessage(SystemMessageId.YOU_HAVE_EARNED_S2_S1_S);
 					sm.addItemName(crystals.getItemId());
 					sm.addNumber(count);

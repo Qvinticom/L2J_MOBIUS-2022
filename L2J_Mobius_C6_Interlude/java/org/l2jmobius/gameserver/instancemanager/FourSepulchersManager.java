@@ -288,12 +288,10 @@ public class FourSepulchersManager extends GrandBossManager
 		_changeEntryTimeTask = null;
 		_changeWarmUpTimeTask = null;
 		_changeAttackTimeTask = null;
-		
 		_inEntryTime = false;
 		_inWarmUpTime = false;
 		_inAttackTime = false;
 		_inCoolDownTime = false;
-		
 		_firstTimeRun = true;
 		initFixedInfo();
 		loadMysteriousBox();
@@ -390,7 +388,6 @@ public class FourSepulchersManager extends GrandBossManager
 	protected void spawnManagers()
 	{
 		_managers = new ArrayList<>();
-		
 		int i = 31921;
 		for (Spawn spawnDat; i <= 31924; i++)
 		{
@@ -406,7 +403,6 @@ public class FourSepulchersManager extends GrandBossManager
 			try
 			{
 				spawnDat = new Spawn(template1);
-				
 				spawnDat.setAmount(1);
 				spawnDat.setRespawnDelay(60);
 				switch (i)
@@ -556,7 +552,6 @@ public class FourSepulchersManager extends GrandBossManager
 			final PreparedStatement statement = con.prepareStatement("SELECT id, count, npc_templateid, locx, locy, locz, heading, respawn_delay, key_npc_id FROM four_sepulchers_spawnlist Where spawntype = ? ORDER BY id");
 			statement.setInt(1, 0);
 			final ResultSet rset = statement.executeQuery();
-			
 			Spawn spawnDat;
 			NpcTemplate template1;
 			
@@ -596,7 +591,6 @@ public class FourSepulchersManager extends GrandBossManager
 	{
 		Spawn spawnDat;
 		NpcTemplate template;
-		
 		for (Entry<Integer, Integer> entry : _keyBoxNpc.entrySet())
 		{
 			final int id = entry.getValue();
@@ -639,15 +633,12 @@ public class FourSepulchersManager extends GrandBossManager
 			while (rset1.next())
 			{
 				final int keyNpcId = rset1.getInt("key_npc_id");
-				
 				final PreparedStatement statement2 = con.prepareStatement("SELECT id, count, npc_templateid, locx, locy, locz, heading, respawn_delay, key_npc_id FROM four_sepulchers_spawnlist Where key_npc_id = ? and spawntype = ? ORDER BY id");
 				statement2.setInt(1, keyNpcId);
 				statement2.setInt(2, 1);
 				final ResultSet rset2 = statement2.executeQuery();
-				
 				Spawn spawnDat;
 				NpcTemplate template1;
-				
 				_physicalSpawns = new ArrayList<>();
 				
 				while (rset2.next())
@@ -698,15 +689,12 @@ public class FourSepulchersManager extends GrandBossManager
 			while (rset1.next())
 			{
 				final int keyNpcId = rset1.getInt("key_npc_id");
-				
 				final PreparedStatement statement2 = con.prepareStatement("SELECT id, count, npc_templateid, locx, locy, locz, heading, respawn_delay, key_npc_id FROM four_sepulchers_spawnlist Where key_npc_id = ? and spawntype = ? ORDER BY id");
 				statement2.setInt(1, keyNpcId);
 				statement2.setInt(2, 2);
 				final ResultSet rset2 = statement2.executeQuery();
-				
 				Spawn spawnDat;
 				NpcTemplate template1;
-				
 				_magicalSpawns = new ArrayList<>();
 				
 				while (rset2.next())
@@ -758,15 +746,12 @@ public class FourSepulchersManager extends GrandBossManager
 			while (rset1.next())
 			{
 				final int keyNpcId = rset1.getInt("key_npc_id");
-				
 				final PreparedStatement statement2 = con.prepareStatement("SELECT id, count, npc_templateid, locx, locy, locz, heading, respawn_delay, key_npc_id FROM four_sepulchers_spawnlist Where key_npc_id = ? and spawntype = ? ORDER BY id");
 				statement2.setInt(1, keyNpcId);
 				statement2.setInt(2, 5);
 				final ResultSet rset2 = statement2.executeQuery();
-				
 				Spawn spawnDat;
 				NpcTemplate template1;
-				
 				_dukeFinalSpawns = new ArrayList<>();
 				
 				while (rset2.next())
@@ -818,15 +803,12 @@ public class FourSepulchersManager extends GrandBossManager
 			while (rset1.next())
 			{
 				final int keyNpcId = rset1.getInt("key_npc_id");
-				
 				final PreparedStatement statement2 = con.prepareStatement("SELECT id, count, npc_templateid, locx, locy, locz, heading, respawn_delay, key_npc_id FROM four_sepulchers_spawnlist Where key_npc_id = ? and spawntype = ? ORDER BY id");
 				statement2.setInt(1, keyNpcId);
 				statement2.setInt(2, 6);
 				final ResultSet rset2 = statement2.executeQuery();
-				
 				Spawn spawnDat;
 				NpcTemplate template1;
-				
 				_emperorsGraveSpawns = new ArrayList<>();
 				
 				while (rset2.next())
@@ -878,7 +860,6 @@ public class FourSepulchersManager extends GrandBossManager
 		
 		Spawn spawnDat;
 		NpcTemplate template;
-		
 		_shadowSpawns.clear();
 		
 		for (int i = 0; i <= 3; i++)
@@ -914,7 +895,6 @@ public class FourSepulchersManager extends GrandBossManager
 	{
 		Spawn spawnDat;
 		NpcTemplate template;
-		
 		for (Entry<Integer, Integer> entry : _victim.entrySet())
 		{
 			final int id = entry.getValue();
@@ -1080,7 +1060,6 @@ public class FourSepulchersManager extends GrandBossManager
 		}
 		
 		showHtmlFile(player, npcId + "-OK.htm", npc, null);
-		
 		entry(npcId, player);
 	}
 	
@@ -1089,7 +1068,6 @@ public class FourSepulchersManager extends GrandBossManager
 		final int[] location = _startHallSpawns.get(npcId);
 		int driftX;
 		int driftY;
-		
 		if (Config.FS_PARTY_MEMBER_COUNT > 1)
 		{
 			final List<PlayerInstance> members = new ArrayList<>();
@@ -1213,7 +1191,6 @@ public class FourSepulchersManager extends GrandBossManager
 		List<Spawn> monsterList;
 		final List<SepulcherMonsterInstance> mobs = new ArrayList<>();
 		Spawn keyBoxMobSpawn;
-		
 		if (Rnd.nextBoolean())
 		{
 			monsterList = _physicalMonsters.get(npcId);
@@ -1227,7 +1204,6 @@ public class FourSepulchersManager extends GrandBossManager
 		{
 			boolean spawnKeyBoxMob = false;
 			boolean spawnedKeyBoxMob = false;
-			
 			for (Spawn spawnDat : monsterList)
 			{
 				if (spawnedKeyBoxMob)
@@ -1257,7 +1233,6 @@ public class FourSepulchersManager extends GrandBossManager
 				}
 				
 				SepulcherMonsterInstance mob = null;
-				
 				if (spawnKeyBoxMob)
 				{
 					try
@@ -1340,7 +1315,6 @@ public class FourSepulchersManager extends GrandBossManager
 	public synchronized boolean isViscountMobsAnnihilated(int npcId)
 	{
 		final List<SepulcherMonsterInstance> mobs = _viscountMobs.get(npcId);
-		
 		if (mobs == null)
 		{
 			return true;
@@ -1360,7 +1334,6 @@ public class FourSepulchersManager extends GrandBossManager
 	public synchronized boolean isDukeMobsAnnihilated(int npcId)
 	{
 		final List<SepulcherMonsterInstance> mobs = _dukeMobs.get(npcId);
-		
 		if (mobs == null)
 		{
 			return true;
@@ -1385,7 +1358,6 @@ public class FourSepulchersManager extends GrandBossManager
 		}
 		
 		final Spawn spawnDat = _keyBoxSpawns.get(activeChar.getNpcId());
-		
 		if (spawnDat != null)
 		{
 			spawnDat.setAmount(1);
@@ -1407,7 +1379,6 @@ public class FourSepulchersManager extends GrandBossManager
 		}
 		
 		final Spawn spawnDat = _executionerSpawns.get(activeChar.getNpcId());
-		
 		if (spawnDat != null)
 		{
 			spawnDat.setAmount(1);
@@ -1434,7 +1405,6 @@ public class FourSepulchersManager extends GrandBossManager
 		}
 		
 		final List<Spawn> monsterList = _dukeFinalMobs.get(npcId);
-		
 		if (monsterList != null)
 		{
 			for (Spawn spawnDat : monsterList)
@@ -1460,7 +1430,6 @@ public class FourSepulchersManager extends GrandBossManager
 		}
 		
 		final List<Spawn> monsterList = _emperorsGraveNpcs.get(npcId);
-		
 		if (monsterList != null)
 		{
 			for (Spawn spawnDat : monsterList)
@@ -1483,7 +1452,6 @@ public class FourSepulchersManager extends GrandBossManager
 		};
 		
 		Spawn spawnDat;
-		
 		for (int i = 0; i <= 3; i++)
 		{
 			final int keyNpcId = gateKeeper[i];
@@ -1700,7 +1668,6 @@ public class FourSepulchersManager extends GrandBossManager
 		{
 			final String msg1 = "You may now enter the Sepulcher";
 			final String msg2 = "If you place your hand on the stone statue in front of each sepulcher, you will be able to enter";
-			
 			for (Spawn temp : _managers)
 			{
 				if (temp == null)
@@ -1755,7 +1722,6 @@ public class FourSepulchersManager extends GrandBossManager
 			_inWarmUpTime = false;
 			_inAttackTime = false;
 			_inCoolDownTime = false;
-			
 			long interval = 0;
 			// if this is first launch - search time when entry time will be ended: counting difference between time when entry time ends and current time and then launching change time task
 			if (_firstTimeRun)
@@ -1787,7 +1753,6 @@ public class FourSepulchersManager extends GrandBossManager
 			_inWarmUpTime = false;
 			_inAttackTime = false;
 			_inCoolDownTime = false;
-			
 			long interval = 0;
 			// searching time when warmup time will be ended: counting difference between time when warmup time ends and current time and then launching change time task
 			if (_firstTimeRun)
@@ -1799,7 +1764,6 @@ public class FourSepulchersManager extends GrandBossManager
 				interval = Config.FS_TIME_WARMUP * 60000;
 			}
 			_changeAttackTimeTask = ThreadPool.schedule(new ChangeAttackTime(), interval);
-			
 			if (_changeWarmUpTimeTask != null)
 			{
 				_changeWarmUpTimeTask.cancel(true);
@@ -1817,7 +1781,6 @@ public class FourSepulchersManager extends GrandBossManager
 			_inWarmUpTime = false;
 			_inAttackTime = true;
 			_inCoolDownTime = false;
-			
 			locationShadowSpawns();
 			
 			spawnMysteriousBox(31921);
@@ -1860,7 +1823,6 @@ public class FourSepulchersManager extends GrandBossManager
 				interval = Config.FS_TIME_ATTACK * 60000;
 			}
 			_changeCoolDownTimeTask = ThreadPool.schedule(new ChangeCoolDownTime(), interval);
-			
 			if (_changeAttackTimeTask != null)
 			{
 				_changeAttackTimeTask.cancel(true);
@@ -1878,7 +1840,6 @@ public class FourSepulchersManager extends GrandBossManager
 			_inWarmUpTime = false;
 			_inAttackTime = false;
 			_inCoolDownTime = true;
-			
 			clean();
 			
 			final Calendar time = Calendar.getInstance();
@@ -1895,7 +1856,6 @@ public class FourSepulchersManager extends GrandBossManager
 			
 			final long interval = time.getTimeInMillis() - Calendar.getInstance().getTimeInMillis();
 			_changeEntryTimeTask = ThreadPool.schedule(new ChangeEntryTime(), interval);
-			
 			if (_changeCoolDownTimeTask != null)
 			{
 				_changeCoolDownTimeTask.cancel(true);

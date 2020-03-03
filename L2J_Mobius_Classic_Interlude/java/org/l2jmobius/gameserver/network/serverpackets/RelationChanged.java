@@ -68,7 +68,6 @@ public class RelationChanged implements IClientOutgoingPacket
 	public RelationChanged(Playable activeChar, int relation, boolean autoattackable)
 	{
 		_mask |= SEND_ONE;
-		
 		_singled = new Relation();
 		_singled._objId = activeChar.getObjectId();
 		_singled._relation = relation;

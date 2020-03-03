@@ -50,12 +50,9 @@ public class DBConfigGUI extends JFrame
 	JTextField _dbUser;
 	JPasswordField _dbPass;
 	JTextField _dbDbse;
-	
 	String _db;
 	String _dir;
-	
 	Preferences _prop;
-	
 	boolean _isVisible = true;
 	
 	public DBConfigGUI(String db, String dir)
@@ -75,14 +72,12 @@ public class DBConfigGUI extends JFrame
 		
 		// Show SplashScreen.
 		new SplashScreen("..\\images\\splash.png", 5000, this);
-		
 		_db = db;
 		_dir = dir;
 		
 		final int width = 260;
 		final int height = 220;
 		final Dimension resolution = Toolkit.getDefaultToolkit().getScreenSize();
-		
 		setDefaultCloseOperation(WindowConstants.EXIT_ON_CLOSE);
 		setBounds((resolution.width - width) / 2, (resolution.height - height) / 2, width, height);
 		setResizable(false);
@@ -166,7 +161,6 @@ public class DBConfigGUI extends JFrame
 						"Exit"
 					};
 					final int n = JOptionPane.showOptionDialog(null, "Install login server database?", "Select an option", JOptionPane.YES_NO_CANCEL_OPTION, JOptionPane.QUESTION_MESSAGE, null, options, options[1]);
-					
 					if ((n == 1) || (n == -1))
 					{
 						System.exit(0);
@@ -180,7 +174,6 @@ public class DBConfigGUI extends JFrame
 						"Exit"
 					};
 					final int n = JOptionPane.showOptionDialog(null, "Install game server database?", "Select an option", JOptionPane.YES_NO_CANCEL_OPTION, JOptionPane.QUESTION_MESSAGE, null, options, options[1]);
-					
 					if ((n == 1) || (n == -1))
 					{
 						System.exit(0);
@@ -201,7 +194,6 @@ public class DBConfigGUI extends JFrame
 		add(btnConnect);
 		
 		SpringUtilities.makeCompactGrid(getContentPane(), 6, 2, 5, 5, 5, 5);
-		
 		pack();
 	}
 	

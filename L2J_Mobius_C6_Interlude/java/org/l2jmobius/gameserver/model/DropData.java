@@ -162,7 +162,6 @@ public class DropData
 		{
 			out += " QuestID: " + _questID + " StateID's: " + Arrays.toString(_stateID);
 		}
-		
 		return out;
 	}
 	

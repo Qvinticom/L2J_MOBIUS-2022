@@ -95,7 +95,6 @@ public abstract class Vehicle extends Creature
 	{
 		_runState = 0;
 		_currentPath = path;
-		
 		if ((_currentPath != null) && (_currentPath.length > 0))
 		{
 			final VehiclePathPoint point = _currentPath[0];
@@ -118,7 +117,6 @@ public abstract class Vehicle extends Creature
 	public boolean moveToNextRoutePoint()
 	{
 		_move = null;
-		
 		if (_currentPath != null)
 		{
 			_runState++;
@@ -160,7 +158,6 @@ public abstract class Vehicle extends Creature
 						
 						m._moveStartTime = GameTimeController.getInstance().getGameTicks();
 						_move = m;
-						
 						GameTimeController.getInstance().registerMovingObject(this);
 						return true;
 					}
@@ -322,7 +319,6 @@ public abstract class Vehicle extends Creature
 	public boolean updatePosition()
 	{
 		final boolean result = super.updatePosition();
-		
 		for (PlayerInstance player : _passengers)
 		{
 			if ((player != null) && (player.getVehicle() == this))
@@ -331,7 +327,6 @@ public abstract class Vehicle extends Creature
 				player.revalidateZone(false);
 			}
 		}
-		
 		return result;
 	}
 	

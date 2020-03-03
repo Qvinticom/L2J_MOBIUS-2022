@@ -115,7 +115,6 @@ public class ZoneCylinder extends ZoneForm
 		{
 			return 0; // If you are inside the zone distance to zone is 0.
 		}
-		
 		return Math.sqrt((Math.pow(_x - x, 2) + Math.pow(_y - y, 2))) - _rad;
 	}
 	

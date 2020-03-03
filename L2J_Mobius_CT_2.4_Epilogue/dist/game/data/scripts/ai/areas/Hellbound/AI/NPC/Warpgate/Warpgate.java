@@ -95,7 +95,6 @@ public class Warpgate extends AbstractNpcAI
 		if (creature.isPlayer())
 		{
 			final PlayerInstance player = creature.getActingPlayer();
-			
 			if (!canEnter(player) && !player.canOverrideCond(PlayerCondOverride.ZONE_CONDITIONS) && !player.isOnEvent())
 			{
 				startQuestTimer("TELEPORT", 1000, null, player);
@@ -122,7 +121,6 @@ public class Warpgate extends AbstractNpcAI
 		
 		final QuestState qs1 = player.getQuestState(Q00130_PathToHellbound.class.getSimpleName());
 		final QuestState qs2 = player.getQuestState(Q00133_ThatsBloodyHot.class.getSimpleName());
-		
 		return (((qs1 != null) && qs1.isCompleted()) || ((qs2 != null) && qs2.isCompleted()));
 	}
 }

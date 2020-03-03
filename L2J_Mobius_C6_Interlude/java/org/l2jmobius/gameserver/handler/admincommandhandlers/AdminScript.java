@@ -51,7 +51,6 @@ public class AdminScript implements IAdminCommandHandler
 			try
 			{
 				file = new File(SCRIPT_FOLDER, line);
-				
 				if (file.isFile())
 				{
 					// try
@@ -72,7 +71,6 @@ public class AdminScript implements IAdminCommandHandler
 			{
 			}
 		}
-		
 		return true;
 	}
 	

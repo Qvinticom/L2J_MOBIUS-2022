@@ -60,7 +60,6 @@ public class VillageMasterInstance extends NpcInstance
 		{
 			return true;
 		}
-		
 		return super.isAutoAttackable(attacker);
 	}
 	
@@ -68,7 +67,6 @@ public class VillageMasterInstance extends NpcInstance
 	public String getHtmlPath(int npcId, int value, PlayerInstance player)
 	{
 		String pom = "";
-		
 		if (value == 0)
 		{
 			pom = Integer.toString(npcId);
@@ -77,7 +75,6 @@ public class VillageMasterInstance extends NpcInstance
 		{
 			pom = npcId + "-" + value;
 		}
-		
 		return "data/html/villagemaster/" + pom + ".htm";
 	}
 	
@@ -86,10 +83,8 @@ public class VillageMasterInstance extends NpcInstance
 	{
 		final String[] commandStr = command.split(" ");
 		final String actualCommand = commandStr[0]; // Get actual command
-		
 		String cmdParams = "";
 		String cmdParams2 = "";
-		
 		if (commandStr.length >= 2)
 		{
 			cmdParams = commandStr[1];

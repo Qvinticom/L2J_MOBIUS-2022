@@ -48,7 +48,6 @@ public class GmViewQuestInfo implements IClientOutgoingPacket
 		for (Quest quest : _questList)
 		{
 			final QuestState qs = _player.getQuestState(quest.getName());
-			
 			packet.writeD(quest.getId());
 			packet.writeD(qs == null ? 0 : qs.getCond());
 		}

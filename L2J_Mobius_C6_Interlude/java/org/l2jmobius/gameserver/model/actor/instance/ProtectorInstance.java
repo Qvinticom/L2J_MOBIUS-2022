@@ -59,7 +59,6 @@ public class ProtectorInstance extends NpcInstance
 					handleCast(player, Config.PROTECTOR_SKILLID, Config.PROTECTOR_SKILLLEVEL);
 				}
 				final Summon activePet = player.getPet();
-				
 				if (activePet == null)
 				{
 					continue;
@@ -82,14 +81,12 @@ public class ProtectorInstance extends NpcInstance
 			}
 			
 			final Skill skill = SkillTable.getInstance().getInfo(skillId, skillLevel);
-			
 			if (player.getFirstEffect(skill) == null)
 			{
 				final int objId = _caster.getObjectId();
 				skill.getEffects(_caster, player, false, false, false);
 				broadcastPacket(new MagicSkillUse(_caster, player, skillId, skillLevel, Config.PROTECTOR_SKILLTIME, 0));
 				broadcastPacket(new CreatureSay(objId, ChatType.GENERAL, getName(), Config.PROTECTOR_MESSAGE));
-				
 				return true;
 			}
 			
@@ -111,7 +108,6 @@ public class ProtectorInstance extends NpcInstance
 				skill.getEffects(_caster, player, false, false, false);
 				broadcastPacket(new MagicSkillUse(_caster, player, skillId, skillLevel, Config.PROTECTOR_SKILLTIME, 0));
 				broadcastPacket(new CreatureSay(objId, ChatType.GENERAL, getName(), Config.PROTECTOR_MESSAGE));
-				
 				return true;
 			}
 			

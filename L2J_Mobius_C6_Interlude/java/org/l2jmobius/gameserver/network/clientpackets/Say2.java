@@ -176,7 +176,6 @@ public class Say2 extends GameClientPacket
 			final int actor = saymode.getObjectId();
 			_type = 0;
 			final Collection<WorldObject> list = saymode.getKnownList().getKnownObjects().values();
-			
 			final CreatureSay cs = new CreatureSay(actor, chatType, name, _text);
 			for (WorldObject obj : list)
 			{
@@ -552,7 +551,6 @@ public class Say2 extends GameClientPacket
 		if (Config.USE_SAY_FILTER)
 		{
 			String filteredText = _text.toLowerCase();
-			
 			for (String pattern : Config.FILTER_LIST)
 			{
 				filteredText = filteredText.replaceAll("(?i)" + pattern, Config.CHAT_FILTER_CHARS);

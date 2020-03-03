@@ -87,7 +87,6 @@ public class Q10344_DayOfDestinyOrcsFate extends ThirdClassTransferQuest
 	{
 		String htmltext = getNoQuestMsg(player);
 		final QuestState qs = getQuestState(player, true);
-		
 		if (npc.getId() == LADANZA)
 		{
 			if (qs.getState() == State.CREATED)

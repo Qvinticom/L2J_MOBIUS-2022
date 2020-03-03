@@ -76,7 +76,6 @@ public class RaidbossInfo extends AbstractNpcAI
 		{
 			htmltext = null;
 			final int bossId = Integer.parseInt(event);
-			
 			if (RAIDS.contains(bossId))
 			{
 				final Spawn spawn = SpawnTable.getInstance().getAnySpawn(bossId);

@@ -79,7 +79,6 @@ public class Q00756_TopQualityPetra extends Quest
 	{
 		final QuestState qs = getQuestState(player, true);
 		String htmltext = getNoQuestMsg(player);
-		
 		boolean startQuest = false;
 		switch (qs.getState())
 		{
@@ -121,7 +120,6 @@ public class Q00756_TopQualityPetra extends Quest
 	{
 		final QuestState qs = getQuestState(player, true);
 		String htmltext; // = getNoQuestMsg(player);
-		
 		if (qs.isCond(1) && hasQuestItems(player, TOP_QUALITY_PETRA))
 		{
 			htmltext = "sofa_aku_q0756_01.html";

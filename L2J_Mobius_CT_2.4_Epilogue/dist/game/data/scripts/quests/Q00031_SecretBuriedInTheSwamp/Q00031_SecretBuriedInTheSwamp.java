@@ -127,7 +127,6 @@ public class Q00031_SecretBuriedInTheSwamp extends Quest
 	{
 		final QuestState qs = getQuestState(player, true);
 		String htmltext = getNoQuestMsg(player);
-		
 		switch (npc.getId())
 		{
 			case ABERCROMBIE:

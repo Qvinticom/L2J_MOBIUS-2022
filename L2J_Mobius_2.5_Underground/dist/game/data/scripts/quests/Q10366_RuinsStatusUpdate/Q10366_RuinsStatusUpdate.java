@@ -64,7 +64,6 @@ public class Q10366_RuinsStatusUpdate extends Quest
 		}
 		
 		String htmltext = null;
-		
 		switch (event)
 		{
 			case "check_race":
@@ -162,7 +161,6 @@ public class Q10366_RuinsStatusUpdate extends Quest
 	{
 		final QuestState qs = getQuestState(player, true);
 		String htmltext = getNoQuestMsg(player);
-		
 		switch (qs.getState())
 		{
 			case State.CREATED:

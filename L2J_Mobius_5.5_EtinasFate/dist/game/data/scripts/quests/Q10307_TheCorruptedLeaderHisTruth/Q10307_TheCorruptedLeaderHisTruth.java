@@ -109,7 +109,6 @@ public class Q10307_TheCorruptedLeaderHisTruth extends Quest
 	{
 		final QuestState qs = getQuestState(player, true);
 		String htmltext = getNoQuestMsg(player);
-		
 		switch (npc.getId())
 		{
 			case NAOMI_KASHERON:

@@ -45,7 +45,6 @@ public class LinePointIterator
 		_dy = Math.abs((long) dstY - srcY);
 		_sx = srcX < dstX ? 1 : -1;
 		_sy = srcY < dstY ? 1 : -1;
-		
 		if (_dx >= _dy)
 		{
 			_error = _dx / 2;
@@ -70,21 +69,18 @@ public class LinePointIterator
 			if (_srcX != _dstX)
 			{
 				_srcX += _sx;
-				
 				_error += _dy;
 				if (_error >= _dx)
 				{
 					_srcY += _sy;
 					_error -= _dx;
 				}
-				
 				return true;
 			}
 		}
 		else if (_srcY != _dstY)
 		{
 			_srcY += _sy;
-			
 			_error += _dx;
 			if (_error >= _dy)
 			{

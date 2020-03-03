@@ -41,7 +41,6 @@ public class ConditionPlayerHasSummon extends Condition
 		{
 			return false;
 		}
-		
 		return _hasSummon == player.hasSummon();
 	}
 }

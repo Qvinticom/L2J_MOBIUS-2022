@@ -31,7 +31,6 @@ public class SSQInfo implements IClientOutgoingPacket
 	public SSQInfo()
 	{
 		final int compWinner = SevenSigns.getInstance().getCabalHighestScore();
-		
 		if (SevenSigns.getInstance().isSealValidationPeriod())
 		{
 			if (compWinner == SevenSigns.CABAL_DAWN)

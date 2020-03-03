@@ -69,7 +69,6 @@ public class Q00694_BreakThroughTheHallOfSuffering extends Quest
 	{
 		final QuestState qs = getQuestState(player, true);
 		String htmltext = getNoQuestMsg(player);
-		
 		switch (qs.getState())
 		{
 			case State.CREATED:
@@ -279,10 +278,8 @@ public class Q00694_BreakThroughTheHallOfSuffering extends Quest
 	private void finishInstance(PlayerInstance player)
 	{
 		final InstanceWorld world = InstanceManager.getInstance().getPlayerWorld(player);
-		
 		final Calendar reenter = Calendar.getInstance();
 		reenter.set(Calendar.MINUTE, 30);
-		
 		if (reenter.get(Calendar.HOUR_OF_DAY) >= 6)
 		{
 			reenter.add(Calendar.DATE, 1);

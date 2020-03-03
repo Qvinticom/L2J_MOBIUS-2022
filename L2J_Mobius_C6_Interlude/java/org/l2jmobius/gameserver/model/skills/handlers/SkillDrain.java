@@ -52,7 +52,6 @@ public class SkillDrain extends Skill
 		
 		final boolean sps = creature.checkSps();
 		final boolean bss = creature.checkBss();
-		
 		for (WorldObject target2 : targets)
 		{
 			final Creature target = (Creature) target2;
@@ -69,11 +68,9 @@ public class SkillDrain extends Skill
 			
 			final boolean mcrit = Formulas.calcMCrit(creature.getMCriticalHit(target, this));
 			final int damage = (int) Formulas.calcMagicDam(creature, target, this, sps, bss, mcrit);
-			
 			int drain = 0;
 			final int currentCp = (int) target.getStatus().getCurrentCp();
 			final int currentHp = (int) target.getStatus().getCurrentHp();
-			
 			if (currentCp > 0)
 			{
 				if (damage < currentCp)
@@ -96,7 +93,6 @@ public class SkillDrain extends Skill
 			
 			final double hpAdd = _absorbAbs + (_absorbPart * drain);
 			final double hp = (creature.getCurrentHp() + hpAdd) > creature.getMaxHp() ? creature.getMaxHp() : creature.getCurrentHp() + hpAdd;
-			
 			creature.setCurrentHp(hp);
 			
 			final StatusUpdate suhp = new StatusUpdate(creature.getObjectId());
@@ -114,7 +110,6 @@ public class SkillDrain extends Skill
 				}
 				
 				creature.sendDamageMessage(target, damage, mcrit, false, false);
-				
 				if (hasEffects() && (getTargetType() != SkillTargetType.TARGET_CORPSE_MOB))
 				{
 					if (target.reflectSkill(this))
@@ -187,7 +182,6 @@ public class SkillDrain extends Skill
 			final double hpAdd = _absorbAbs + (_absorbPart * damage);
 			final PlayerInstance owner = activeCubic.getOwner();
 			final double hp = ((owner.getCurrentHp() + hpAdd) > owner.getMaxHp() ? owner.getMaxHp() : (owner.getCurrentHp() + hpAdd));
-			
 			owner.setCurrentHp(hp);
 			
 			final StatusUpdate suhp = new StatusUpdate(owner.getObjectId());

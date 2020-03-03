@@ -52,7 +52,6 @@ public class HelperBuffHolder
 		_upperLevel = set.getInt("upperLevel");
 		_skillID = set.getInt("skillID");
 		_skillLevel = set.getInt("skillLevel");
-		
 		if ("false".equals(set.getString("isMagicClass")))
 		{
 			_isMagicClass = false;

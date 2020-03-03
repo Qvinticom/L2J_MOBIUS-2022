@@ -70,7 +70,6 @@ public class DocumentEngine
 	public Collection<Item> loadItems()
 	{
 		final Collection<Item> list = ConcurrentHashMap.newKeySet();
-		
 		if (Config.THREADS_FOR_LOADING)
 		{
 			final Collection<ScheduledFuture<?>> jobs = ConcurrentHashMap.newKeySet();
@@ -103,7 +102,6 @@ public class DocumentEngine
 				list.addAll(document.getItemList());
 			}
 		}
-		
 		return list;
 	}
 	

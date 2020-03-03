@@ -125,7 +125,6 @@ public class AvantGarde extends AbstractNpcAI
 	public static void showTransformSkillList(PlayerInstance player)
 	{
 		final List<SkillLearn> skills = SkillTreeData.getInstance().getAvailableTransformSkills(player);
-		
 		if (skills.isEmpty())
 		{
 			final int minlevel = SkillTreeData.getInstance().getMinLevelForNewSkill(player, SkillTreeData.getInstance().getTransformSkillTree());

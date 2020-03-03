@@ -64,7 +64,6 @@ public class MobGroupTable
 				return mobGroup;
 			}
 		}
-		
 		return null;
 	}
 	

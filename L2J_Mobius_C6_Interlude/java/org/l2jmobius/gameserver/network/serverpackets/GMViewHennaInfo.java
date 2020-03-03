@@ -29,7 +29,6 @@ public class GMViewHennaInfo extends GameServerPacket
 	{
 		_player = player;
 		_count = 0;
-		
 		for (int i = 0; i < 3; i++)
 		{
 			final Henna h = _player.getHenna(i + 1);

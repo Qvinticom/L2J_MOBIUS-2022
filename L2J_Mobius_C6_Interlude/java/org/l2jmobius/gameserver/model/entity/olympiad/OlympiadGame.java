@@ -97,7 +97,6 @@ class OlympiadGame
 		_playerTwoDisconnected = false;
 		_type = type;
 		_stadiumPort = OlympiadManager.STADIUMS[id].getCoordinates();
-		
 		if (list != null)
 		{
 			_players = list;
@@ -330,7 +329,6 @@ class OlympiadGame
 	{
 		final boolean _playerOneCrash = ((_playerOne == null) || _playerOneDisconnected);
 		final boolean _playerTwoCrash = ((_playerTwo == null) || _playerTwoDisconnected);
-		
 		if (_playerOneCrash || _playerTwoCrash || _aborted)
 		{
 			_playerOne = null;
@@ -353,7 +351,6 @@ class OlympiadGame
 			
 			_playerOne.sendMessage("One player on this match is on Observer mode! Match aborted!");
 			_playerTwo.sendMessage("One player on this match is on Observer mode! Match aborted!");
-			
 			_aborted = true;
 			return false;
 		}
@@ -363,11 +360,9 @@ class OlympiadGame
 			x1 = _playerOne.getX();
 			y1 = _playerOne.getY();
 			z1 = _playerOne.getZ();
-			
 			x2 = _playerTwo.getX();
 			y2 = _playerTwo.getY();
 			z2 = _playerTwo.getZ();
-			
 			if (_playerOne.isSitting())
 			{
 				_playerOne.standUp();
@@ -404,7 +399,6 @@ class OlympiadGame
 			
 			_playerOne.sendPacket(new ExOlympiadMode(2, _playerOne));
 			_playerTwo.sendPacket(new ExOlympiadMode(2, _playerTwo));
-			
 			_playerOne.setInOlympiadMode(true);
 			_playerOne.setOlympiadStart(false);
 			_playerOne.setOlympiadSide(1);
@@ -618,10 +612,8 @@ class OlympiadGame
 		
 		final boolean _pOneCrash = ((_playerOne == null) || _playerOneDisconnected);
 		final boolean _pTwoCrash = ((_playerTwo == null) || _playerTwoDisconnected);
-		
 		int div;
 		int gpReward;
-		
 		String classed;
 		switch (_type)
 		{
@@ -643,7 +635,6 @@ class OlympiadGame
 		
 		final StatSet playerOneStat = Olympiad.getNobleStats(_playerOne.getObjectId());
 		final StatSet playerTwoStat = Olympiad.getNobleStats(_playerTwo.getObjectId());
-		
 		final int playerOnePlayed = playerOneStat.getInt(COMP_DONE);
 		final int playerTwoPlayed = playerTwoStat.getInt(COMP_DONE);
 		final int playerOneWon = playerOneStat.getInt(COMP_WON);
@@ -652,7 +643,6 @@ class OlympiadGame
 		final int playerTwoLost = playerTwoStat.getInt(COMP_LOST);
 		final int playerOneDrawn = playerOneStat.getInt(COMP_DRAWN);
 		final int playerTwoDrawn = playerTwoStat.getInt(COMP_DRAWN);
-		
 		final int playerOnePoints = playerOneStat.getInt(POINTS);
 		final int playerTwoPoints = playerTwoStat.getInt(POINTS);
 		final int pointDiff = Math.min(playerOnePoints, playerTwoPoints) / div;
@@ -669,7 +659,6 @@ class OlympiadGame
 				sm.addString(_playerOneName);
 				sm.addNumber(lostPoints);
 				broadcastMessage(sm, false);
-				
 				Olympiad.logResult(_playerOneName, _playerTwoName, 0D, 0D, 0, 0, _playerOneName + " default", lostPoints, classed);
 			}
 			if (_playerTwoDefaulted)
@@ -681,7 +670,6 @@ class OlympiadGame
 				sm.addString(_playerTwoName);
 				sm.addNumber(lostPoints);
 				broadcastMessage(sm, false);
-				
 				Olympiad.logResult(_playerOneName, _playerTwoName, 0D, 0D, 0, 0, _playerTwoName + " default", lostPoints, classed);
 			}
 			return;
@@ -696,9 +684,7 @@ class OlympiadGame
 				{
 					playerOneStat.set(POINTS, playerOnePoints - pointDiff);
 					playerOneStat.set(COMP_LOST, playerOneLost + 1);
-					
 					Olympiad.logResult(_playerOneName, _playerTwoName, 0D, 0D, 0, 0, _playerOneName + " crash", pointDiff, classed);
-					
 					playerTwoStat.set(POINTS, playerTwoPoints + pointDiff);
 					playerTwoStat.set(COMP_WON, playerTwoWon + 1);
 					
@@ -721,9 +707,7 @@ class OlympiadGame
 				{
 					playerTwoStat.set(POINTS, playerTwoPoints - pointDiff);
 					playerTwoStat.set(COMP_LOST, playerTwoLost + 1);
-					
 					Olympiad.logResult(_playerOneName, _playerTwoName, 0D, 0D, 0, 0, _playerTwoName + " crash", pointDiff, classed);
-					
 					playerOneStat.set(POINTS, playerOnePoints + pointDiff);
 					playerOneStat.set(COMP_WON, playerOneWon + 1);
 					
@@ -746,10 +730,8 @@ class OlympiadGame
 				{
 					playerOneStat.set(POINTS, playerOnePoints - pointDiff);
 					playerOneStat.set(COMP_LOST, playerOneLost + 1);
-					
 					playerTwoStat.set(POINTS, playerTwoPoints - pointDiff);
 					playerTwoStat.set(COMP_LOST, playerTwoLost + 1);
-					
 					Olympiad.logResult(_playerOneName, _playerTwoName, 0D, 0D, 0, 0, "both crash", pointDiff, classed);
 				}
 				catch (Exception e)
@@ -759,10 +741,8 @@ class OlympiadGame
 			}
 			playerOneStat.set(COMP_DONE, playerOnePlayed + 1);
 			playerTwoStat.set(COMP_DONE, playerTwoPlayed + 1);
-			
 			Olympiad.updateNobleStats(_playerOne.getObjectId(), playerOneStat);
 			Olympiad.updateNobleStats(_playerTwo.getObjectId(), playerTwoStat);
-			
 			return;
 		}
 		
@@ -781,9 +761,7 @@ class OlympiadGame
 		SystemMessage sm1 = new SystemMessage(SystemMessageId.CONGRATULATIONS_S1_YOU_WIN_THE_MATCH);
 		SystemMessage sm2 = new SystemMessage(SystemMessageId.S1_HAS_EARNED_S2_POINTS_IN_THE_GRAND_OLYMPIAD_GAMES);
 		SystemMessage sm3 = new SystemMessage(SystemMessageId.S1_HAS_LOST_S2_POINTS_IN_THE_GRAND_OLYMPIAD_GAMES);
-		
 		String winner = "draw";
-		
 		if ((_playerOne == null) && (_playerTwo == null))
 		{
 			playerOneStat.set(COMP_DRAWN, playerOneDrawn + 1);
@@ -797,7 +775,6 @@ class OlympiadGame
 			playerTwoStat.set(POINTS, playerTwoPoints - pointDiff);
 			playerOneStat.set(COMP_WON, playerOneWon + 1);
 			playerTwoStat.set(COMP_LOST, playerTwoLost + 1);
-			
 			sm1.addString(_playerOneName);
 			broadcastMessage(sm1, true);
 			sm2.addString(_playerOneName);
@@ -831,7 +808,6 @@ class OlympiadGame
 			playerOneStat.set(POINTS, playerOnePoints - pointDiff);
 			playerTwoStat.set(COMP_WON, playerTwoWon + 1);
 			playerOneStat.set(COMP_LOST, playerOneLost + 1);
-			
 			sm1.addString(_playerTwoName);
 			broadcastMessage(sm1, true);
 			sm2.addString(_playerTwoName);
@@ -881,12 +857,9 @@ class OlympiadGame
 		
 		playerOneStat.set(COMP_DONE, playerOnePlayed + 1);
 		playerTwoStat.set(COMP_DONE, playerTwoPlayed + 1);
-		
 		Olympiad.updateNobleStats(_playerOne.getObjectId(), playerOneStat);
 		Olympiad.updateNobleStats(_playerTwo.getObjectId(), playerTwoStat);
-		
 		Olympiad.logResult(_playerOneName, _playerTwoName, playerOneHp, playerTwoHp, _damageP1, _damageP2, winner, pointDiff, classed);
-		
 		for (int i = 15; i > 5; i -= 5)
 		{
 			sm1 = new SystemMessage(SystemMessageId.YOU_WILL_BE_MOVED_BACK_TO_TOWN_IN_S1_SECOND_S);
@@ -923,7 +896,6 @@ class OlympiadGame
 		}
 		
 		broadcastMessage(new SystemMessage(SystemMessageId.THE_MATCH_HAS_STARTED_FIGHT), true);
-		
 		for (PlayerInstance player : _players)
 		{
 			try
@@ -966,7 +938,6 @@ class OlympiadGame
 	protected PlayerInstance[] getPlayers()
 	{
 		final PlayerInstance[] players = new PlayerInstance[2];
-		
 		if ((_playerOne == null) || (_playerTwo == null))
 		{
 			return null;
@@ -974,7 +945,6 @@ class OlympiadGame
 		
 		players[0] = _playerOne;
 		players[1] = _playerTwo;
-		
 		return players;
 	}
 	
@@ -1065,7 +1035,6 @@ class OlympiadGameTask implements Runnable
 			LOGGER.info("[OLYMPIAD DEBUG] Player " + player.getName() + "is in Observer mode!");
 			return true;
 		}
-		
 		return false;
 	}
 	
@@ -1099,7 +1068,6 @@ class OlympiadGameTask implements Runnable
 		
 		// Put the status back to 2 (fighting mode on olympiad)
 		player.sendPacket(new ExOlympiadMode(2, player));
-		
 		player.broadcastUserInfo();
 		
 		LOGGER.info("[OLYMPIAD DEBUG] Player " + player.getName() + "was on observer mode! Status restored!");
@@ -1124,7 +1092,6 @@ class OlympiadGameTask implements Runnable
 			}
 			final PlayerInstance otherPlayer = _game._players.get(i ^ 1);
 			SystemMessage sm = null;
-			
 			if ((player == null) || !player.isOnline())
 			{
 				defaulted = true;

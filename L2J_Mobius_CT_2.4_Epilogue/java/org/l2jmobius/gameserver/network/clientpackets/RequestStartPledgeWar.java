@@ -95,7 +95,6 @@ public class RequestStartPledgeWar implements IClientIncomingPacket
 		}
 		
 		ClanTable.getInstance().storeClanWars(player.getClanId(), clan.getId());
-		
 		for (PlayerInstance member : playerClan.getOnlineMembers(0))
 		{
 			member.broadcastUserInfo();

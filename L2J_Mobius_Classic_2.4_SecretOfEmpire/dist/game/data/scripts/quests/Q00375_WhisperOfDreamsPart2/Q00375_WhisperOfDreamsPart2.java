@@ -140,7 +140,6 @@ public class Q00375_WhisperOfDreamsPart2 extends Quest
 	{
 		final QuestState qs = getQuestState(player, true);
 		String htmltext = getNoQuestMsg(player);
-		
 		switch (qs.getState())
 		{
 			case State.CREATED:
@@ -170,7 +169,6 @@ public class Q00375_WhisperOfDreamsPart2 extends Quest
 			}
 		}
 		return htmltext;
-		
 	}
 	
 	@Override

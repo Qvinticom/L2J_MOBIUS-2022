@@ -238,22 +238,16 @@ public class NpcViewMod implements IBypassHandler
 		
 		html.replace("%atktype%", CommonUtil.capitalizeFirst(npc.getAttackType().name().toLowerCase()));
 		html.replace("%atkrange%", npc.getStat().getPhysicalAttackRange());
-		
 		html.replace("%patk%", npc.getPAtk());
 		html.replace("%pdef%", npc.getPDef());
-		
 		html.replace("%matk%", npc.getMAtk());
 		html.replace("%mdef%", npc.getMDef());
-		
 		html.replace("%atkspd%", npc.getPAtkSpd());
 		html.replace("%castspd%", npc.getMAtkSpd());
-		
 		html.replace("%critrate%", npc.getStat().getCriticalHit());
 		html.replace("%evasion%", npc.getEvasionRate());
-		
 		html.replace("%accuracy%", npc.getStat().getAccuracy());
 		html.replace("%speed%", (int) npc.getStat().getMoveSpeed());
-		
 		html.replace("%attributeatktype%", npc.getStat().getAttackElement().name());
 		html.replace("%attributeatkvalue%", npc.getStat().getAttackElementValue(npc.getStat().getAttackElement()));
 		html.replace("%attributefire%", npc.getStat().getDefenseElementValue(AttributeType.FIRE));
@@ -262,9 +256,7 @@ public class NpcViewMod implements IBypassHandler
 		html.replace("%attributeearth%", npc.getStat().getDefenseElementValue(AttributeType.EARTH));
 		html.replace("%attributedark%", npc.getStat().getDefenseElementValue(AttributeType.DARK));
 		html.replace("%attributeholy%", npc.getStat().getDefenseElementValue(AttributeType.HOLY));
-		
 		html.replace("%dropListButtons%", getDropListButtons(npc));
-		
 		player.sendPacket(html);
 	}
 	
@@ -274,7 +266,6 @@ public class NpcViewMod implements IBypassHandler
 		html.setFile(player, "data/html/mods/NpcView/Skills.htm");
 		
 		final StringBuilder sb = new StringBuilder();
-		
 		npc.getSkills().values().forEach(s ->
 		{
 			sb.append("<table width=277 height=32 cellspacing=0 background=\"L2UI_CT1.Windows.Windows_DF_TooltipBG\">");
@@ -296,7 +287,6 @@ public class NpcViewMod implements IBypassHandler
 		html.replace("%skills%", sb.toString());
 		html.replace("%npc_name%", npc.getName());
 		html.replace("%npcId%", npc.getId());
-		
 		player.sendPacket(html);
 	}
 	
@@ -306,7 +296,6 @@ public class NpcViewMod implements IBypassHandler
 		html.setFile(player, "data/html/mods/NpcView/AggroList.htm");
 		
 		final StringBuilder sb = new StringBuilder();
-		
 		if (npc.isAttackable())
 		{
 			((Attackable) npc).getAggroList().values().forEach(a ->
@@ -328,7 +317,6 @@ public class NpcViewMod implements IBypassHandler
 		html.replace("%npc_name%", npc.getName());
 		html.replace("%npcId%", npc.getId());
 		html.replace("%objid%", npc.getObjectId());
-		
 		player.sendPacket(html);
 	}
 	
@@ -386,7 +374,6 @@ public class NpcViewMod implements IBypassHandler
 		}
 		
 		final int start = page > 0 ? page * DROP_LIST_ITEMS_PER_PAGE : 0;
-		
 		int end = (page * DROP_LIST_ITEMS_PER_PAGE) + DROP_LIST_ITEMS_PER_PAGE;
 		if (end > dropList.size())
 		{
@@ -395,7 +382,6 @@ public class NpcViewMod implements IBypassHandler
 		
 		final DecimalFormat amountFormat = new DecimalFormat("#,###");
 		final DecimalFormat chanceFormat = new DecimalFormat("0.00##");
-		
 		int leftHeight = 0;
 		int rightHeight = 0;
 		final double dropAmountEffectBonus = player.getStat().getValue(Stat.BONUS_DROP_AMOUNT, 1);
@@ -407,7 +393,6 @@ public class NpcViewMod implements IBypassHandler
 		for (int i = start; i < end; i++)
 		{
 			final StringBuilder sb = new StringBuilder();
-			
 			final int height = 64;
 			final DropHolder dropItem = dropList.get(i);
 			final Item item = ItemTable.getInstance().getTemplate(dropItem.getItemId());
@@ -536,7 +521,6 @@ public class NpcViewMod implements IBypassHandler
 			sb.append("<td width=247 align=center>");
 			sb.append(chanceFormat.format(Math.min(dropItem.getChance() * rateChance, 100)));
 			sb.append("%</td></tr></table></td></tr><tr><td width=32></td><td width=300>&nbsp;</td></tr></table>");
-			
 			if ((sb.length() + rightSb.length() + leftSb.length()) < 16000) // limit of 32766?
 			{
 				if (leftHeight >= (rightHeight + height))

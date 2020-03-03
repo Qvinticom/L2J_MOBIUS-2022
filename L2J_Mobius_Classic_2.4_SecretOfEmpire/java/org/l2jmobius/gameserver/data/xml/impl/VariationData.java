@@ -82,7 +82,6 @@ public class VariationData implements IXmlReader
 					final String weaponTypeString = parseString(groupNode.getAttributes(), "weaponType").toUpperCase();
 					final VariationWeaponType weaponType = VariationWeaponType.valueOf(weaponTypeString);
 					final int order = parseInteger(groupNode.getAttributes(), "order");
-					
 					final List<OptionDataCategory> sets = new ArrayList<>();
 					forEach(groupNode, "optionCategory", categoryNode ->
 					{

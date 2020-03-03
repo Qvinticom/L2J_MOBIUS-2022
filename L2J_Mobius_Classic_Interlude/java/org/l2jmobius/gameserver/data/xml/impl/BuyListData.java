@@ -119,7 +119,6 @@ public class BuyListData implements IXmlReader
 						case "item":
 						{
 							final NamedNodeMap attrs = node.getAttributes();
-							
 							final int itemId = parseInteger(attrs, "id");
 							final Item item = ItemTable.getInstance().getTemplate(itemId);
 							if (item != null)

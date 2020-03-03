@@ -118,7 +118,6 @@ public class Q10800_ReconnaissanceAtDragonValley extends Quest
 	{
 		final QuestState qs = getQuestState(player, true);
 		String htmltext = getNoQuestMsg(player);
-		
 		switch (qs.getState())
 		{
 			case State.CREATED:

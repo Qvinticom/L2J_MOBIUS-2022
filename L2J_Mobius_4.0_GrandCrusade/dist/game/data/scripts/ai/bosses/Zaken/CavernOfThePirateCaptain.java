@@ -140,14 +140,12 @@ public class CavernOfThePirateCaptain extends AbstractInstance
 	{
 		final List<Npc> candles = new ArrayList<>();
 		final int zakenRoom = getRandom(1, 15);
-		
 		for (int i = 0; i < 36; i++)
 		{
 			final Npc candle = addSpawn(CANDLE, CANDLE_LOC[i], false, 0, false, instance.getId());
 			candle.getVariables().set("candleId", i + 1);
 			candles.add(candle);
 		}
-		
 		for (int i = 3; i < 7; i++)
 		{
 			candles.get(ROOM_DATA[zakenRoom - 1][i] - 1).getVariables().set("isBlue", 1);

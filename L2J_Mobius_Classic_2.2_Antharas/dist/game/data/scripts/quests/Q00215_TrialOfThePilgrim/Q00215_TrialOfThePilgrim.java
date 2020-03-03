@@ -423,7 +423,6 @@ public class Q00215_TrialOfThePilgrim extends Quest
 							takeItems(player, BOOK_OF_DARKNESS, 1);
 						}
 						htmltext = "30612-01.html";
-						
 					}
 					else if (memoState == 17)
 					{

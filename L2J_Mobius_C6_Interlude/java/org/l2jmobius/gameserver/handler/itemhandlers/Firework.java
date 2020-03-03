@@ -46,7 +46,6 @@ public class Firework implements IItemHandler
 		
 		final PlayerInstance player = (PlayerInstance) playable;
 		final int itemId = item.getItemId();
-		
 		if (!player.getFloodProtectors().getFirework().tryPerformAction("firework"))
 		{
 			final SystemMessage sm = new SystemMessage(SystemMessageId.S1_CANNOT_BE_USED_DUE_TO_UNSUITABLE_TERMS);

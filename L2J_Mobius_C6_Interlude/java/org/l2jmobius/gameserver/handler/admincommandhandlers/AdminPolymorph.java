@@ -54,7 +54,6 @@ public class AdminPolymorph implements IAdminCommandHandler
 			{
 				st.nextToken();
 				final String p1 = st.nextToken();
-				
 				if (st.hasMoreTokens())
 				{
 					final String p2 = st.nextToken();

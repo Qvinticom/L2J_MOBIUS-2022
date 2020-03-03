@@ -113,7 +113,6 @@ public class AdminEventEngine implements IAdminCommandHandler
 				try
 				{
 					final NpcHtmlMessage adminReply = new NpcHtmlMessage(0, 1);
-					
 					final DataInputStream in = new DataInputStream(new BufferedInputStream(new FileInputStream(Config.DATAPACK_ROOT + "/data/events/" + eventName)));
 					final BufferedReader inbr = new BufferedReader(new InputStreamReader(in));
 					adminReply.setFile(null, "data/html/mods/EventEngine/Participation.htm");
@@ -195,7 +194,6 @@ public class AdminEventEngine implements IAdminCommandHandler
 				}
 				
 				st = new StringTokenizer(temp, "-");
-				
 				Integer i = 1;
 				
 				while (st.hasMoreElements())
@@ -215,7 +213,6 @@ public class AdminEventEngine implements IAdminCommandHandler
 				activeChar.broadcastPacket(snd);
 				
 				final NpcHtmlMessage adminReply = new NpcHtmlMessage(0, 1);
-				
 				final String replyMSG = "<html><title>[ L2J EVENT ENGINE ]</title><body><br><center>The event <font color=\"LEVEL\">" + GameEvent._eventName + "</font> has been announced, now you can type //event_panel to see the event panel control</center><br></body></html>";
 				adminReply.setHtml(replyMSG);
 				activeChar.sendPacket(adminReply);
@@ -236,7 +233,6 @@ public class AdminEventEngine implements IAdminCommandHandler
 				while (st.hasMoreElements()) // Every next ST should be a team number
 				{
 					final int teamId = Integer.parseInt(st.nextToken());
-					
 					for (PlayerInstance player : GameEvent._teams.get(teamId))
 					{
 						player.setTitle(GameEvent._teamNames.get(teamId));
@@ -360,7 +356,6 @@ public class AdminEventEngine implements IAdminCommandHandler
 				
 				final String[] n = st.nextToken().split("\\*");
 				final int itemId = Integer.parseInt(st.nextToken());
-				
 				for (int teamId : teamIds)
 				{
 					rewardTeam(activeChar, teamId, Integer.parseInt(n[0]), itemId, n.length == 2 ? n[1] : "");
@@ -428,7 +423,6 @@ public class AdminEventEngine implements IAdminCommandHandler
 	private void showMainPage(PlayerInstance activeChar)
 	{
 		final NpcHtmlMessage adminReply = new NpcHtmlMessage(0, 1);
-		
 		final String replyMSG = "<html><title>[ L2J EVENT ENGINE ]</title><body><br><center><button value=\"Create NEW event \" action=\"bypass -h admin_event_new\" width=150 height=32 back=\"L2UI_ct1.button_df\" fore=\"L2UI_ct1.button_df\"><center><br><font color=LEVEL>Stored Events:</font><br></center>" + showStoredEvents() + "</body></html>";
 		adminReply.setHtml(replyMSG);
 		activeChar.sendPacket(adminReply);
@@ -437,10 +431,8 @@ public class AdminEventEngine implements IAdminCommandHandler
 	private void showNewEventPage(PlayerInstance activeChar)
 	{
 		final NpcHtmlMessage adminReply = new NpcHtmlMessage(0, 1);
-		
 		final StringBuilder replyMSG = new StringBuilder(512);
 		replyMSG.append("<html><title>[ L2J EVENT ENGINE ]</title><body><br><br><center><font color=LEVEL>Event name:</font><br>");
-		
 		if (tempName.isEmpty())
 		{
 			replyMSG.append("You can also use //event_name text to insert a new title");
@@ -452,7 +444,6 @@ public class AdminEventEngine implements IAdminCommandHandler
 		}
 		
 		replyMSG.append("<br><br><font color=LEVEL>Event description:</font><br></center>");
-		
 		if (tempBuffer.isEmpty())
 		{
 			replyMSG.append("You can also use //add text to add text or //delete_buffer to remove the text.");
@@ -464,7 +455,6 @@ public class AdminEventEngine implements IAdminCommandHandler
 		
 		replyMSG.append("<center><multiedit var=\"txt\" width=270 height=100> <button value=\"Add text\" action=\"bypass -h admin_add $txt\" width=120 height=20 back=\"L2UI_ct1.button_df\" fore=\"L2UI_ct1.button_df\">");
 		replyMSG.append("<button value=\"Remove text\" action=\"bypass -h admin_delete_buffer\" width=120 height=20 back=\"L2UI_ct1.button_df\" fore=\"L2UI_ct1.button_df\">");
-		
 		if (!(tempName.isEmpty() && tempBuffer.isEmpty()))
 		{
 			replyMSG.append("<br><button value=\"Store Event Data\" action=\"bypass -h admin_event_store\" width=160 height=32 back=\"L2UI_ct1.button_df\" fore=\"L2UI_ct1.button_df\">");
@@ -480,7 +470,6 @@ public class AdminEventEngine implements IAdminCommandHandler
 	{
 		final NpcHtmlMessage adminReply = new NpcHtmlMessage(0, 1);
 		final StringBuilder sb = new StringBuilder();
-		
 		sb.append("<html><body><title>[ L2J EVENT ENGINE ]</title><br><center> Current event: <font color=\"LEVEL\">");
 		sb.append(GameEvent._eventName);
 		sb.append("</font></center><br>INFO: To start an event, you must first set the number of teams, then type their names in the boxes and finally type the NPC ID that will be the event manager (can be any existing npc) next to the \"Announce Event!\" button.<br><table width=100%>");
@@ -527,7 +516,6 @@ public class AdminEventEngine implements IAdminCommandHandler
 		}
 		
 		sb.append("<tr><td>&nbsp;</td></tr><tr><td><button value=\"Teleport\" action=\"bypass -h admin_event_control_teleport $team_number\" width=100 height=20 back=\"L2UI_ct1.button_df\" fore=\"L2UI_ct1.button_df\"></td><td><font color=\"LEVEL\">Teleports the specified team to your position</font></td></tr><tr><td>&nbsp;</td></tr><tr><td><button value=\"Sit/Stand\" action=\"bypass -h admin_event_control_sit $team_number\" width=100 height=20 back=\"L2UI_ct1.button_df\" fore=\"L2UI_ct1.button_df\"></td><td><font color=\"LEVEL\">Sits/Stands up the team</font></td></tr><tr><td>&nbsp;</td></tr><tr><td><button value=\"Kill\" action=\"bypass -h admin_event_control_kill $team_number\" width=100 height=20 back=\"L2UI_ct1.button_df\" fore=\"L2UI_ct1.button_df\"></td><td><font color=\"LEVEL\">Finish with the life of all the players in the selected team</font></td></tr><tr><td>&nbsp;</td></tr><tr><td><button value=\"Resurrect\" action=\"bypass -h admin_event_control_res $team_number\" width=100 height=20 back=\"L2UI_ct1.button_df\" fore=\"L2UI_ct1.button_df\"></td><td><font color=\"LEVEL\">Resurrect Team's members</font></td></tr><tr><td>&nbsp;</td></tr><tr><td><table cellspacing=-1><tr><td><button value=\"Transform*\" action=\"bypass -h admin_event_control_transform $team_number $transf_id\" width=100 height=20 back=\"L2UI_ct1.button_df\" fore=\"L2UI_ct1.button_df\"></td></tr><tr><td><edit var=\"transf_id\" width=98 height=15></td></tr></table></td><td><font color=\"LEVEL\">Transforms the team into the transformation with the ID specified. Multiple IDs result in randomly chosen one for each player.</font></td></tr><tr><td>&nbsp;</td></tr><tr><td><button value=\"UnTransform\" action=\"bypass -h admin_event_control_untransform $team_number\" width=100 height=20 back=\"L2UI_ct1.button_df\" fore=\"L2UI_ct1.button_df\"></td><td><font color=\"LEVEL\">Untransforms the team</font></td></tr><tr><td>&nbsp;</td></tr><tr><td><table cellspacing=-1><tr><td><button value=\"Give Item\" action=\"bypass -h admin_event_control_prize $team_number $n $id\" width=100 height=20 back=\"L2UI_ct1.button_df\" fore=\"L2UI_ct1.button_df\"></td></tr></table><table><tr><td width=32>Num</td><td><edit var=\"n\" width=60 height=15></td></tr><tr><td>ID</td><td><edit var=\"id\" width=60 height=15></td></tr></table></td><td><font color=\"LEVEL\">Give the specified item id to every single member of the team, you can put 5*level, 5*kills or 5 in the number field for example</font></td></tr><tr><td>&nbsp;</td></tr><tr><td><table cellspacing=-1><tr><td><button value=\"Kick Player\" action=\"bypass -h admin_event_control_kick $player_name\" width=100 height=20 back=\"L2UI_ct1.button_df\" fore=\"L2UI_ct1.button_df\"></td></tr><tr><td><edit var=\"player_name\" width=98 height=15></td></tr></table></td><td><font color=\"LEVEL\">Kicks the specified player(s) from the event. Blank field kicks target.</font></td></tr><tr><td>&nbsp;</td></tr><tr><td><button value=\"End!\" action=\"bypass -h admin_event_control_finish\" width=100 height=20 back=\"L2UI_ct1.button_df\" fore=\"L2UI_ct1.button_df\"></td><td><font color=\"LEVEL\">Will finish the event teleporting back all the players</font></td></tr><tr><td>&nbsp;</td></tr></table></td></tr></table></body></html>");
-		
 		adminReply.setHtml(sb.toString());
 		activeChar.sendPacket(adminReply);
 	}

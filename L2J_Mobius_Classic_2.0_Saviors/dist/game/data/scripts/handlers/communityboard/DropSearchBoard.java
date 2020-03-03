@@ -197,7 +197,6 @@ public class DropSearchBoard implements IParseBoardHandler
 					else
 					{
 						final Item item = ItemTable.getInstance().getTemplate(cbDropHolder.itemId);
-						
 						if (Config.RATE_DROP_CHANCE_BY_ID.get(cbDropHolder.itemId) != null)
 						{
 							rateChance *= Config.RATE_DROP_CHANCE_BY_ID.get(cbDropHolder.itemId);

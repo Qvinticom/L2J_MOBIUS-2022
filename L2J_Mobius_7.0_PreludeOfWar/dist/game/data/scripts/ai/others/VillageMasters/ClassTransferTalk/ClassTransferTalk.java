@@ -90,7 +90,6 @@ public class ClassTransferTalk extends AbstractNpcAI
 	public String onAdvEvent(String event, Npc npc, PlayerInstance player)
 	{
 		String htmltext = null;
-		
 		switch (event)
 		{
 			case "30289-01.html":

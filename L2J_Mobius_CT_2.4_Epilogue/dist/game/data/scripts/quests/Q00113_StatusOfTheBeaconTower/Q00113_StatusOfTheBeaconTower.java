@@ -48,7 +48,6 @@ public class Q00113_StatusOfTheBeaconTower extends Quest
 	public String onAdvEvent(String event, Npc npc, PlayerInstance player)
 	{
 		final QuestState qs = getQuestState(player, false);
-		
 		if (qs == null)
 		{
 			return null;
@@ -92,7 +91,6 @@ public class Q00113_StatusOfTheBeaconTower extends Quest
 	{
 		final QuestState qs = getQuestState(player, true);
 		String htmltext = getNoQuestMsg(player);
-		
 		switch (npc.getId())
 		{
 			case MOIRA:

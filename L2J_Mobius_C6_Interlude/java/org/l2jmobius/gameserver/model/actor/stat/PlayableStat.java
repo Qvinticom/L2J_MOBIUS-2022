@@ -43,9 +43,7 @@ public class PlayableStat extends CreatureStat
 		}
 		
 		setExp(getExp() + value);
-		
 		byte level = 1;
-		
 		for (level = 1; level <= ExperienceData.getInstance().getMaxLevel(); level++)
 		{
 			if (getExp() >= getExpForLevel(level))
@@ -72,9 +70,7 @@ public class PlayableStat extends CreatureStat
 		}
 		
 		setExp(getExp() - value);
-		
 		byte level = 0;
-		
 		for (level = 1; level <= ExperienceData.getInstance().getMaxLevel(); level++)
 		{
 			if (getExp() >= getExpForLevel(level))
@@ -98,7 +94,6 @@ public class PlayableStat extends CreatureStat
 	{
 		boolean expAdded = false;
 		boolean spAdded = false;
-		
 		if (addToExp >= 0)
 		{
 			expAdded = addExp(addToExp);
@@ -116,7 +111,6 @@ public class PlayableStat extends CreatureStat
 	{
 		boolean expRemoved = false;
 		boolean spRemoved = false;
-		
 		if (removeExp > 0)
 		{
 			expRemoved = removeExp(removeExp);
@@ -174,7 +168,6 @@ public class PlayableStat extends CreatureStat
 		}
 		
 		final int currentSp = getSp();
-		
 		if (currentSp == Integer.MAX_VALUE)
 		{
 			return false;
@@ -186,21 +179,18 @@ public class PlayableStat extends CreatureStat
 		}
 		
 		setSp(currentSp + value);
-		
 		return true;
 	}
 	
 	public boolean removeSp(int value)
 	{
 		final int currentSp = getSp();
-		
 		if (currentSp < value)
 		{
 			value = currentSp;
 		}
 		
 		setSp(getSp() - value);
-		
 		return true;
 	}
 	

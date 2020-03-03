@@ -222,13 +222,11 @@ public class TradeList
 	public TradeItem[] getAvailableItems(PlayerInventory inventory)
 	{
 		final List<TradeItem> list = new ArrayList<>();
-		
 		for (TradeItem item : _items)
 		{
 			item = new TradeItem(item, item.getCount(), item.getPrice());
 			list.add(inventory.adjustAvailableItem(item, list));
 		}
-		
 		return list.toArray(new TradeItem[list.size()]);
 	}
 	
@@ -262,7 +260,6 @@ public class TradeList
 				}
 			}
 		}
-		
 		return new TradeItem(item, item.getCount(), item.getReferencePrice());
 	}
 	
@@ -338,7 +335,6 @@ public class TradeList
 		}
 		
 		final WorldObject o = World.getInstance().findObject(objectId);
-		
 		if (!(o instanceof ItemInstance))
 		{
 			Util.handleIllegalPlayerAction(_owner, "Player " + _owner.getName() + " Attempt to add invalid item to TradeList! ", Config.DEFAULT_PUNISH);
@@ -354,7 +350,6 @@ public class TradeList
 		}
 		
 		final ItemInstance item = (ItemInstance) o;
-		
 		if (!item.isTradeable() || (item.getItemType() == EtcItemType.QUEST))
 		{
 			return null;
@@ -504,7 +499,6 @@ public class TradeList
 		for (TradeItem titem : _items)
 		{
 			final ItemInstance item = _owner.getInventory().getItemByObjectId(titem.getObjectId());
-			
 			if ((item == null) || (titem.getCount() < 1))
 			{
 				removeItem(titem.getObjectId(), -1, -1);
@@ -636,7 +630,6 @@ public class TradeList
 		for (TradeItem titem : _items)
 		{
 			final ItemInstance item = _owner.checkItemManipulation(titem.getObjectId(), titem.getCount(), "transfer");
-			
 			if ((item == null) || (titem.getCount() < 1))
 			{
 				return false;
@@ -705,7 +698,6 @@ public class TradeList
 	public int countItemsSlots(PlayerInstance partner)
 	{
 		int slots = 0;
-		
 		for (TradeItem item : _items)
 		{
 			if (item == null)
@@ -739,7 +731,6 @@ public class TradeList
 	public int calcItemsWeight()
 	{
 		int weight = 0;
-		
 		for (TradeItem item : _items)
 		{
 			if (item == null)
@@ -849,7 +840,6 @@ public class TradeList
 		
 		int slots = 0;
 		int weight = 0;
-		
 		for (ItemRequest item : items)
 		{
 			if (item == null)
@@ -869,7 +859,6 @@ public class TradeList
 				if (ti.getObjectId() == item.getObjectId())
 				{
 					found = true;
-					
 					if (ti.getPrice() != item.getPrice())
 					{
 						return false;
@@ -915,7 +904,6 @@ public class TradeList
 		// Prepare inventory update packets
 		final InventoryUpdate ownerIU = new InventoryUpdate();
 		final InventoryUpdate playerIU = new InventoryUpdate();
-		
 		if (Config.SELL_BY_ITEM)
 		{
 			// Transfer Item
@@ -927,7 +915,6 @@ public class TradeList
 			}
 			
 			final ItemInstance item = playerInventory.getItemByItemId(Config.SELL_ITEM);
-			
 			if (item == null)
 			{
 				LOGGER.info("Buyer Medals are null");
@@ -1266,7 +1253,6 @@ public class TradeList
 			}
 			
 			final ItemInstance item = ownerInventory.getItemByItemId(Config.SELL_ITEM);
-			
 			if (item == null)
 			{
 				lock();

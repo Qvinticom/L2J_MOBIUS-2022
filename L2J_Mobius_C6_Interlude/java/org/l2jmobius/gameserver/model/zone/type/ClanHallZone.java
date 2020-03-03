@@ -67,7 +67,6 @@ public class ClanHallZone extends ZoneRespawn
 			creature.setInsideZone(ZoneId.CLAN_HALL, true);
 			
 			final ClanHall clanHall = ClanHallManager.getInstance().getClanHallById(_clanHallId);
-			
 			if (clanHall == null)
 			{
 				return;

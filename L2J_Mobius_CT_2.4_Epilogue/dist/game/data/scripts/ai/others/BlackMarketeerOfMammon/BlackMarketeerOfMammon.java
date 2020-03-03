@@ -91,7 +91,6 @@ public class BlackMarketeerOfMammon extends AbstractNpcAI
 				htmltext = "31092-02.html";
 			}
 		}
-		
 		return htmltext;
 	}
 	
@@ -106,7 +105,6 @@ public class BlackMarketeerOfMammon extends AbstractNpcAI
 		maxtTime.set(Calendar.HOUR_OF_DAY, 23);
 		maxtTime.set(Calendar.MINUTE, 59);
 		maxtTime.set(Calendar.SECOND, 59);
-		
 		return (currentTime.compareTo(minTime) >= 0) && (currentTime.compareTo(maxtTime) <= 0);
 	}
 	

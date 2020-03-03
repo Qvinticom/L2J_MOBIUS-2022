@@ -146,7 +146,6 @@ public class IceQueensCastle extends AbstractInstance
 		{
 			npc.setScriptValue(1);
 			npc.broadcastSay(ChatType.NPC_GENERAL, NpcStringId.S1_MAY_THE_PROTECTION_OF_THE_GODS_BE_UPON_YOU, creature.getName());
-			
 			World.getInstance().forEachVisibleObject(npc, Npc.class, mob ->
 			{
 				if ((mob.getId() == ARCHERY_KNIGHT) && !mob.isDead() && !mob.isDecayed())

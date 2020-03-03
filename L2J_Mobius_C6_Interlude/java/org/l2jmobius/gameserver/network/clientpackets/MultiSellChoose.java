@@ -96,7 +96,6 @@ public class MultiSellChoose extends GameClientPacket
 		}
 		
 		final MultiSellListContainer list = Multisell.getInstance().getList(_listId);
-		
 		final int selectedList = player.getMultiSellId();
 		if ((list == null) || (list.getListId() != _listId) || (selectedList != _listId))
 		{
@@ -138,7 +137,6 @@ public class MultiSellChoose extends GameClientPacket
 		// are possessed by the player
 		final List<MultiSellIngredient> ingredientsList = new ArrayList<>();
 		boolean newIng = true;
-		
 		for (MultiSellIngredient e : entry.getIngredients())
 		{
 			newIng = true;
@@ -237,7 +235,6 @@ public class MultiSellChoose extends GameClientPacket
 		ingredientsList.clear();
 		final List<Augmentation> augmentation = new ArrayList<>();
 		/** All ok, remove items and add final product */
-		
 		for (MultiSellIngredient e : entry.getIngredients())
 		{
 			if ((e.getItemId() != 65336) && (e.getItemId() != 65436))
@@ -321,7 +318,6 @@ public class MultiSellChoose extends GameClientPacket
 						for (int i = 1; i <= (e.getItemCount() * _amount); i++)
 						{
 							final ItemInstance[] inventoryContents = inv.getAllItemsByItemId(e.getItemId());
-							
 							itemToTake = inventoryContents[0];
 							// get item with the LOWEST enchantment level from the inventory...
 							// +0 is lowest by default...
@@ -393,7 +389,6 @@ public class MultiSellChoose extends GameClientPacket
 			}
 			// Msg part
 			SystemMessage sm;
-			
 			if ((e.getItemCount() * _amount) > 1)
 			{
 				sm = new SystemMessage(SystemMessageId.YOU_HAVE_EARNED_S2_S1_S);
@@ -447,16 +442,13 @@ public class MultiSellChoose extends GameClientPacket
 		newEntry.setEntryId(templateEntry.getEntryId());
 		int totalAdenaCount = 0;
 		boolean hasIngredient = false;
-		
 		for (MultiSellIngredient ing : templateEntry.getIngredients())
 		{
 			// Load the ingredient from the template
 			final MultiSellIngredient newIngredient = new MultiSellIngredient(ing);
-			
 			if ((newIngredient.getItemId() == 57) && newIngredient.isTaxIngredient())
 			{
 				double taxRate = 0.0;
-				
 				if (applyTaxes && (merchant != null) && merchant.isInTown())
 				{
 					taxRate = merchant.getCastle().getTaxRate();
@@ -496,13 +488,11 @@ public class MultiSellChoose extends GameClientPacket
 		{
 			// Load the ingredient from the template
 			final MultiSellIngredient newIngredient = new MultiSellIngredient(ing);
-			
 			if (maintainEnchantment && hasIngredient)
 			{
 				// If it is an armor/weapon, modify the enchantment level appropriately
 				// (note, if maintain enchantment is "false" this modification will result to a +0)
 				final Item tempItem = ItemTable.getInstance().createDummyItem(newIngredient.getItemId()).getItem();
-				
 				if ((tempItem instanceof Armor) || (tempItem instanceof Weapon))
 				{
 					if ((enchantLevel == 0) && maintainEnchantment)

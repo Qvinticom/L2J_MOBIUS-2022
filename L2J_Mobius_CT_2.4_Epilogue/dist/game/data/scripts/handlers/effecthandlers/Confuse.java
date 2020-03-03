@@ -80,7 +80,6 @@ public class Confuse extends AbstractEffect
 		
 		final List<Creature> targetList = new ArrayList<>();
 		// Getting the possible targets
-		
 		World.getInstance().forEachVisibleObject(info.getEffected(), Creature.class, targetList::add);
 		
 		// if there is no target, exit function

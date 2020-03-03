@@ -67,10 +67,8 @@ public class VillageMasterInstance extends FolkInstance
 	{
 		final String[] commandStr = command.split(" ");
 		final String actualCommand = commandStr[0]; // Get actual command
-		
 		String cmdParams = "";
 		String cmdParams2 = "";
-		
 		if (commandStr.length >= 2)
 		{
 			cmdParams = commandStr[1];
@@ -225,14 +223,12 @@ public class VillageMasterInstance extends FolkInstance
 			final StringBuilder content = new StringBuilder("<html><body>");
 			final NpcHtmlMessage html = new NpcHtmlMessage(getObjectId());
 			Set<PlayerClass> subsAvailable;
-			
 			int paramOne = 0;
 			int paramTwo = 0;
 			
 			try
 			{
 				int endIndex = command.length();
-				
 				if (command.length() > 13)
 				{
 					endIndex = 13;
@@ -548,7 +544,6 @@ public class VillageMasterInstance extends FolkInstance
 	public String getHtmlPath(int npcId, int value)
 	{
 		String pom = "";
-		
 		if (value == 0)
 		{
 			pom = "" + npcId;
@@ -557,7 +552,6 @@ public class VillageMasterInstance extends FolkInstance
 		{
 			pom = npcId + "-" + value;
 		}
-		
 		return "data/html/villagemaster/" + pom + ".htm";
 	}
 	
@@ -645,7 +639,6 @@ public class VillageMasterInstance extends FolkInstance
 			return;
 		}
 		final Clan clan = player.getClan();
-		
 		clan.setDissolvingExpiryTime(0);
 		clan.updateClanInDB();
 	}
@@ -846,7 +839,6 @@ public class VillageMasterInstance extends FolkInstance
 		
 		final Clan clan = player.getClan();
 		final SubPledge subPledge = player.getClan().getSubPledge(pledgeType);
-		
 		if (subPledge == null)
 		{
 			player.sendMessage("Pledge don't exists.");
@@ -925,7 +917,6 @@ public class VillageMasterInstance extends FolkInstance
 		subPledge.setLeaderName(leaderName);
 		clan.updateSubPledgeInDB(subPledge.getId());
 		final ClanMember leaderSubPledge = clan.getClanMember(leaderName);
-		
 		if (leaderSubPledge.getPlayerInstance() != null)
 		{
 			leaderSubPledge.getPlayerInstance().setPledgeClass(leaderSubPledge.calculatePledgeClass(leaderSubPledge.getPlayerInstance()));
@@ -946,7 +937,6 @@ public class VillageMasterInstance extends FolkInstance
 	private final Set<PlayerClass> getAvailableSubClasses(PlayerInstance player)
 	{
 		int charClassId = player.getBaseClass();
-		
 		if (charClassId >= 88)
 		{
 			charClassId = player.getClassId().getParent().ordinal();
@@ -954,7 +944,6 @@ public class VillageMasterInstance extends FolkInstance
 		
 		final Race npcRace = getVillageMasterRace();
 		final ClassType npcTeachType = getVillageMasterTeachType();
-		
 		final PlayerClass currClass = PlayerClass.values()[charClassId];
 		
 		/**
@@ -1024,7 +1013,6 @@ public class VillageMasterInstance extends FolkInstance
 		final PledgeSkillLearn[] skills = SkillTreeTable.getInstance().getAvailablePledgeSkills(player);
 		final AquireSkillList asl = new AquireSkillList(AquireSkillList.skillType.Clan);
 		int counts = 0;
-		
 		for (PledgeSkillLearn s : skills)
 		{
 			final int cost = s.getRepCost();
@@ -1036,7 +1024,6 @@ public class VillageMasterInstance extends FolkInstance
 		if (counts == 0)
 		{
 			final NpcHtmlMessage html = new NpcHtmlMessage(1);
-			
 			if (player.getClan().getLevel() < 8)
 			{
 				final SystemMessage sm = new SystemMessage(SystemMessageId.YOU_DO_NOT_HAVE_ANY_FURTHER_SKILLS_TO_LEARN_COME_BACK_WHEN_YOU_HAVE_REACHED_LEVEL_S1);
@@ -1070,7 +1057,6 @@ public class VillageMasterInstance extends FolkInstance
 	{
 		String classNameStr = className.toString();
 		final char[] charArray = classNameStr.toCharArray();
-		
 		for (int i = 1; i < charArray.length; i++)
 		{
 			if (Character.isUpperCase(charArray[i]))
@@ -1078,7 +1064,6 @@ public class VillageMasterInstance extends FolkInstance
 				classNameStr = classNameStr.substring(0, i) + " " + classNameStr.substring(i);
 			}
 		}
-		
 		return classNameStr;
 	}
 	
@@ -1089,7 +1074,6 @@ public class VillageMasterInstance extends FolkInstance
 	private final Race getVillageMasterRace()
 	{
 		final String npcClass = getTemplate().getStatSet().getString("jClass").toLowerCase();
-		
 		if (npcClass.contains("human"))
 		{
 			return Race.HUMAN;
@@ -1120,7 +1104,6 @@ public class VillageMasterInstance extends FolkInstance
 	private final ClassType getVillageMasterTeachType()
 	{
 		final String npcClass = getTemplate().getStatSet().getString("jClass");
-		
 		if (npcClass.contains("sanctuary") || npcClass.contains("clergyman"))
 		{
 			return ClassType.Priest;

@@ -110,7 +110,6 @@ public class Q10419_KekropusLetterKampfsWhereabouts extends LetterQuest
 	{
 		String htmltext = getNoQuestMsg(player);
 		final QuestState qs = getQuestState(player, false);
-		
 		if (qs == null)
 		{
 			return htmltext;
@@ -137,7 +136,6 @@ public class Q10419_KekropusLetterKampfsWhereabouts extends LetterQuest
 		{
 			final PlayerInstance player = creature.getActingPlayer();
 			final QuestState qs = getQuestState(player, false);
-			
 			if ((qs != null) && qs.isCond(3))
 			{
 				showOnScreenMsg(player, NpcStringId.VARKA_SILENOS_BARRACKS_IS_A_GOOD_HUNTING_ZONE_FOR_LV_76_OR_ABOVE, ExShowScreenMessage.TOP_CENTER, 6000);

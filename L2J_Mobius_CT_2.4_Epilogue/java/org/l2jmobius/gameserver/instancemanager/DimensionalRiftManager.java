@@ -95,7 +95,6 @@ public class DimensionalRiftManager
 				final int yT = rs.getInt("yT");
 				final int zT = rs.getInt("zT");
 				final boolean isBossRoom = rs.getByte("boss") > 0;
-				
 				if (!_rooms.containsKey(type))
 				{
 					_rooms.put(type, new HashMap<>(9));
@@ -111,7 +110,6 @@ public class DimensionalRiftManager
 		
 		final int typeSize = _rooms.keySet().size();
 		int roomSize = 0;
-		
 		for (Map<Byte, DimensionalRiftRoom> room : _rooms.values())
 		{
 			roomSize += room.keySet().size();
@@ -147,7 +145,6 @@ public class DimensionalRiftManager
 			int z;
 			int delay;
 			int count;
-			
 			for (Node rift = doc.getFirstChild(); rift != null; rift = rift.getNextSibling())
 			{
 				if ("rift".equalsIgnoreCase(rift.getNodeName()))
@@ -158,14 +155,12 @@ public class DimensionalRiftManager
 						{
 							attrs = area.getAttributes();
 							type = Byte.parseByte(attrs.getNamedItem("type").getNodeValue());
-							
 							for (Node room = area.getFirstChild(); room != null; room = room.getNextSibling())
 							{
 								if ("room".equalsIgnoreCase(room.getNodeName()))
 								{
 									attrs = room.getAttributes();
 									roomId = Byte.parseByte(attrs.getNamedItem("id").getNodeValue());
-									
 									for (Node spawn = room.getFirstChild(); spawn != null; spawn = spawn.getNextSibling())
 									{
 										if ("spawn".equalsIgnoreCase(spawn.getNodeName()))
@@ -174,7 +169,6 @@ public class DimensionalRiftManager
 											mobId = Integer.parseInt(attrs.getNamedItem("mobId").getNodeValue());
 											delay = Integer.parseInt(attrs.getNamedItem("delay").getNodeValue());
 											count = Integer.parseInt(attrs.getNamedItem("count").getNodeValue());
-											
 											if (!_rooms.containsKey(type))
 											{
 												LOGGER.warning("Type " + type + " not found!");
@@ -190,7 +184,6 @@ public class DimensionalRiftManager
 												x = riftRoom.getRandomX();
 												y = riftRoom.getRandomY();
 												z = riftRoom.getTeleportCoorinates().getZ();
-												
 												if (_rooms.containsKey(type) && _rooms.get(type).containsKey(roomId))
 												{
 													final Spawn spawnDat = new Spawn(mobId);
@@ -315,7 +308,6 @@ public class DimensionalRiftManager
 		for (PlayerInstance p : player.getParty().getMembers())
 		{
 			i = p.getInventory().getItemByItemId(DIMENSIONAL_FRAGMENT_ITEM_ID);
-			
 			if (i == null)
 			{
 				canPass = false;

@@ -46,7 +46,6 @@ public class SquarePB implements IAffectScopeHandler
 		final int squareWidth = skill.getFanRange()[3];
 		final int radius = (int) Math.sqrt((squareLength * squareLength) + (squareWidth * squareWidth));
 		final int affectLimit = skill.getAffectLimit();
-		
 		final int rectX = creature.getX();
 		final int rectY = creature.getY() - (squareWidth / 2);
 		final double heading = Math.toRadians(squareStartAngle + Util.convertHeadingToDegree(creature.getHeading()));

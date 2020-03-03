@@ -186,7 +186,6 @@ public class DBDumper
 								}
 								fws.print(")");
 								isFirst = false;
-								
 								if ((cnt % 100) == 99)
 								{
 									fws.println(";");

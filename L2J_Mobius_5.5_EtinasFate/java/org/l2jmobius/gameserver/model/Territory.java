@@ -104,7 +104,6 @@ public class Territory
 	{
 		final double dy1 = p1._y - y;
 		final double dy2 = p2._y - y;
-		
 		if (Math.abs(Math.signum(dy1) - Math.signum(dy2)) <= 1e-6)
 		{
 			return false;
@@ -112,7 +111,6 @@ public class Territory
 		
 		final double dx1 = p1._x - x;
 		final double dx2 = p2._x - x;
-		
 		if ((dx1 >= 0) && (dx2 >= 0))
 		{
 			return true;
@@ -124,7 +122,6 @@ public class Territory
 		}
 		
 		final double dx0 = (dy1 * (p1._x - p2._x)) / (p1._y - p2._y);
-		
 		return dx0 <= dx1;
 	}
 	
@@ -135,13 +132,11 @@ public class Territory
 		{
 			final Point p1 = _points.get(i > 0 ? i - 1 : _points.size() - 1);
 			final Point p2 = _points.get(i);
-			
 			if (isIntersect(x, y, p1, p2))
 			{
 				intersectCount++;
 			}
 		}
-		
 		return (intersectCount % 2) == 1;
 	}
 	

@@ -110,9 +110,7 @@ public class Baium extends Quest
 		addTalkId(ANGELIC_VORTEX);
 		_zone = GrandBossManager.getInstance().getZone(113100, 14500, 10077);
 		final StatSet info = GrandBossManager.getInstance().getStatSet(LIVE_BAIUM);
-		
 		final Integer status = GrandBossManager.getInstance().getBossStatus(LIVE_BAIUM);
-		
 		if (status == DEAD)
 		{
 			// load the unlock date and time for baium from DB
@@ -129,7 +127,6 @@ public class Baium extends Quest
 				// the time has already expired while the server was offline. Delete the saved time and
 				// immediately spawn the stone-baium. Also the state need not be changed from ASLEEP
 				addSpawn(STONE_BAIUM, 116033, 17447, 10104, 40188, false, 0);
-				
 				if (Config.ANNOUNCE_TO_ALL_SPAWN_RB)
 				{
 					Announcements.getInstance().announceToAll("Raid boss Baium Stone spawned in world.");
@@ -205,9 +202,7 @@ public class Baium extends Quest
 				npc.broadcastPacket(new Earthquake(npc.getX(), npc.getY(), npc.getZ(), 40, 5));
 				// start monitoring baium's inactivity
 				_lastAttackVsBaiumTime = System.currentTimeMillis();
-				
 				startQuestTimer("baium_despawn", 60000, npc, null, true);
-				
 				if (player != null)
 				{
 					player.reduceCurrentHp(99999999, player);
@@ -299,7 +294,6 @@ public class Baium extends Quest
 		}
 		
 		final Integer status = GrandBossManager.getInstance().getBossStatus(LIVE_BAIUM);
-		
 		if ((npcId == STONE_BAIUM) && (status == ASLEEP))
 		{
 			if (Config.ALLOW_DIRECT_TP_TO_BOSS_ROOM || _zone.isPlayerAllowed(player))
@@ -416,7 +410,6 @@ public class Baium extends Quest
 	public String onKill(NpcInstance npc, PlayerInstance killer, boolean isPet)
 	{
 		npc.broadcastPacket(new PlaySound(1, "BS01_D", npc));
-		
 		cancelQuestTimer("baium_despawn", npc, null);
 		// spawn the "Teleportation Cubic" for 15 minutes (to allow players to exit the lair)
 		addSpawn(29055, 115203, 16620, 10078, 0, false, 900000); // //should we teleport everyone out if the cubic despawns??
@@ -428,7 +421,6 @@ public class Baium extends Quest
 		final StatSet info = GrandBossManager.getInstance().getStatSet(LIVE_BAIUM);
 		info.set("respawn_time", System.currentTimeMillis() + respawnTime);
 		GrandBossManager.getInstance().setStatSet(LIVE_BAIUM, info);
-		
 		for (NpcInstance minion : _minions)
 		{
 			if (minion != null)

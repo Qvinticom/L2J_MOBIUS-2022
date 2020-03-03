@@ -38,7 +38,6 @@ public class TradeStart extends AbstractItemPacket
 		_player = player;
 		_partner = player.getActiveTradeList().getPartner();
 		_itemList = _player.getInventory().getAvailableItems(true, (_player.canOverrideCond(PlayerCondOverride.ITEM_CONDITIONS) && Config.GM_TRADE_RESTRICTED_ITEMS), false);
-		
 		if (_partner != null)
 		{
 			if (player.getFriendList().contains(_partner.getObjectId()))

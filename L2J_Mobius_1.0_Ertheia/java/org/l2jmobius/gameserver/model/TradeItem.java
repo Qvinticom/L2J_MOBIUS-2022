@@ -68,7 +68,6 @@ public class TradeItem
 		}
 		_enchantOptions = item.getEnchantOptions();
 		_visualId = item.getVisualId();
-		
 		if (item.getAugmentation() != null)
 		{
 			_augmentationOption1 = item.getAugmentation().getOption1Id();

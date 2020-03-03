@@ -78,7 +78,6 @@ public class SiegeClan
 		{
 			more = false;
 			n = getFlag().size();
-			
 			if (n > 0)
 			{
 				for (int i = 0; i < n; i++)
@@ -117,7 +116,6 @@ public class SiegeClan
 		{
 			_flag = new ArrayList<>();
 		}
-		
 		return _flag;
 	}
 	

@@ -116,13 +116,11 @@ public class TalkingIslandPast extends AbstractInstance
 	{
 		final Creature creature = event.getSeen();
 		final Npc npc = (Npc) event.getSeer();
-		
 		if (creature.isPlayer())
 		{
 			final Instance instance = creature.getInstanceWorld();
 			final PlayerInstance player = creature.getActingPlayer();
 			final QuestState qs = player.getQuestState(Q10385_RedThreadOfFate.class.getSimpleName());
-			
 			if ((instance != null) && (npc.getId() == INVISIBLE_TI_NPC) && (qs != null) && qs.isCond(21) && qs.isMemoState(1))
 			{
 				final Location loc = npc.isInsideRadius2D(TI_LOC_1, 1000) ? TI_LOC_1 : TI_LOC_2;

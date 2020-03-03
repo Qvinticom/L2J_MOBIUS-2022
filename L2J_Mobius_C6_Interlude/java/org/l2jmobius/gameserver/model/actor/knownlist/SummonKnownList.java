@@ -39,7 +39,6 @@ public class SummonKnownList extends PlayableKnownList
 		{
 			return 6000;
 		}
-		
 		return 3000;
 	}
 	

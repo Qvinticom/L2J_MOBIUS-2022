@@ -72,7 +72,6 @@ public class GuardInstance extends Attackable
 	{
 		super(objectId, template);
 		getKnownList(); // init knownlist
-		
 		ThreadPool.scheduleAtFixedRate(new ReturnTask(), RETURN_INTERVAL, RETURN_INTERVAL + Rnd.get(60000));
 	}
 	

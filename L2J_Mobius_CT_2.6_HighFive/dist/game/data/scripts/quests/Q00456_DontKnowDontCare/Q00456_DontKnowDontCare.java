@@ -150,7 +150,6 @@ public class Q00456_DontKnowDontCare extends Quest
 	{
 		final QuestState qs = getQuestState(player, false);
 		final Set<Integer> allowedPlayers = allowedPlayerMap.get(npc.getObjectId());
-		
 		if ((qs == null) || !qs.isCond(1) || (allowedPlayers == null) || !allowedPlayers.contains(player.getObjectId()))
 		{
 			return npc.getId() + "-02.html";
@@ -158,7 +157,6 @@ public class Q00456_DontKnowDontCare extends Quest
 		
 		final int essence = MONSTER_ESSENCES.get(npc.getId());
 		final String htmltext;
-		
 		if (hasQuestItems(player, essence))
 		{
 			htmltext = npc.getId() + "-03.html";
@@ -167,7 +165,6 @@ public class Q00456_DontKnowDontCare extends Quest
 		{
 			giveItems(player, essence, 1);
 			htmltext = npc.getId() + "-01.html";
-			
 			if (hasQuestItems(player, getRegisteredItemIds()))
 			{
 				qs.setCond(2, true);
@@ -186,7 +183,6 @@ public class Q00456_DontKnowDontCare extends Quest
 	{
 		final QuestState qs = getQuestState(player, true);
 		String htmltext = getNoQuestMsg(player);
-		
 		if (CommonUtil.contains(SEPARATED_SOUL, npc.getId()))
 		{
 			switch (qs.getState())
@@ -238,7 +234,6 @@ public class Q00456_DontKnowDontCare extends Quest
 	{
 		final QuestState qs = getQuestState(player, false);
 		String htmltext = null;
-		
 		switch (event)
 		{
 			case "32864-04.htm":
@@ -267,7 +262,6 @@ public class Q00456_DontKnowDontCare extends Quest
 				break;
 			}
 		}
-		
 		return htmltext;
 	}
 	
@@ -281,14 +275,12 @@ public class Q00456_DontKnowDontCare extends Quest
 		}
 		
 		final CommandChannel cc = killer.getParty().getCommandChannel();
-		
 		if (cc.getMemberCount() < MIN_PLAYERS)
 		{
 			return super.onKill(npc, killer, isSummon);
 		}
 		
 		final Set<Integer> allowedPlayers = new HashSet<>();
-		
 		for (AggroInfo aggro : ((Attackable) npc).getAggroList().values())
 		{
 			if ((aggro.getAttacker() == null) || !aggro.getAttacker().isPlayer())
@@ -297,7 +289,6 @@ public class Q00456_DontKnowDontCare extends Quest
 			}
 			
 			final PlayerInstance attacker = aggro.getAttacker().getActingPlayer();
-			
 			if (attacker.isInParty() //
 				&& attacker.getParty().isInCommandChannel() //
 				&& attacker.getParty().getCommandChannel().equals(cc) // only players from the same cc are allowed
@@ -323,7 +314,6 @@ public class Q00456_DontKnowDontCare extends Quest
 		final int chance = getRandom(10000);
 		final int reward;
 		int count = 1;
-		
 		if (chance < 170)
 		{
 			reward = getRandomEntry(ARMOR);

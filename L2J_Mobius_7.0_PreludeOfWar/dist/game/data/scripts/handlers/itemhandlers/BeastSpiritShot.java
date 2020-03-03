@@ -70,9 +70,7 @@ public class BeastSpiritShot implements IItemHandler
 		final int itemId = item.getId();
 		final boolean isBlessed = ((itemId == 6647) || (itemId == 20334)); // TODO: Unhardcode these!
 		final List<ItemSkillHolder> skills = item.getItem().getSkills(ItemSkillType.NORMAL);
-		
 		final ShotType shotType = isBlessed ? ShotType.BLESSED_SPIRITSHOTS : ShotType.SPIRITSHOTS;
-		
 		short shotConsumption = 0;
 		if ((pet != null) && !pet.isChargedShot(shotType))
 		{

@@ -98,7 +98,6 @@ public class RequestExEnchantSkillSafe implements IClientIncomingPacket
 		
 		final int costMultiplier = EnchantSkillGroupsData.SAFE_ENCHANT_COST_MULTIPLIER;
 		final int reqItemId = EnchantSkillGroupsData.SAFE_ENCHANT_BOOK;
-		
 		final EnchantSkillLearn s = EnchantSkillGroupsData.getInstance().getSkillEnchantmentBySkillId(_skillId);
 		if (s == null)
 		{
@@ -114,7 +113,6 @@ public class RequestExEnchantSkillSafe implements IClientIncomingPacket
 		final int requiredSp = esd.getSpCost() * costMultiplier;
 		final int requireditems = esd.getAdenaCost() * costMultiplier;
 		final int rate = esd.getRate(player);
-		
 		if (player.getSp() >= requiredSp)
 		{
 			// No config option for safe enchant book consume
@@ -133,9 +131,7 @@ public class RequestExEnchantSkillSafe implements IClientIncomingPacket
 			
 			boolean check = player.getStat().removeExpAndSp(0, requiredSp, false);
 			check &= player.destroyItem("Consume", spb.getObjectId(), 1, player, true);
-			
 			check &= player.destroyItemByItemId("Consume", Inventory.ADENA_ID, requireditems, player, true);
-			
 			if (!check)
 			{
 				player.sendPacket(SystemMessageId.YOU_DO_NOT_HAVE_ALL_OF_THE_ITEMS_NEEDED_TO_ENCHANT_THAT_SKILL);
@@ -151,7 +147,6 @@ public class RequestExEnchantSkillSafe implements IClientIncomingPacket
 				}
 				
 				player.addSkill(skill, true);
-				
 				player.sendPacket(ExEnchantSkillResult.valueOf(true));
 				
 				final SystemMessage sm = new SystemMessage(SystemMessageId.SKILL_ENCHANT_WAS_SUCCESSFUL_S1_HAS_BEEN_ENCHANTED);

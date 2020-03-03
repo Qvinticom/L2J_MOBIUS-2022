@@ -90,7 +90,6 @@ public class GrandBossTeleporters extends Quest
 	{
 		final int npcId = npc.getNpcId();
 		String htmltext = null;
-		
 		if (npcId == 13001) // heart of warding
 		{
 			if (antharasAI() != null)
@@ -231,7 +230,6 @@ public class GrandBossTeleporters extends Quest
 			final int y = -57720 + Rnd.get(500);
 			player.teleToLocation(x, y, -2976);
 		}
-		
 		return htmltext;
 	}
 	

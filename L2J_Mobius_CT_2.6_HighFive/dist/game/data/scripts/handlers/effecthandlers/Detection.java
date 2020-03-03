@@ -50,7 +50,6 @@ public class Detection extends AbstractEffect
 		
 		final PlayerInstance player = info.getEffector().getActingPlayer();
 		final PlayerInstance target = info.getEffected().getActingPlayer();
-		
 		if (target.isInvisible())
 		{
 			if (player.isInPartyWith(target))

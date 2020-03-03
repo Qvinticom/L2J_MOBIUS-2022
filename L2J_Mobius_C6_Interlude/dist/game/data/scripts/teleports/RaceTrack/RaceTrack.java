@@ -59,7 +59,6 @@ public class RaceTrack extends Quest
 	public String onTalk(NpcInstance npc, PlayerInstance player)
 	{
 		final QuestState st = player.getQuestState(getName());
-		
 		if (RETURN_LOCATIONS.containsKey(npc.getNpcId()))
 		{
 			player.teleToLocation(12661, 181687, -3560);
@@ -72,7 +71,6 @@ public class RaceTrack extends Quest
 			player.teleToLocation(loc.getX(), loc.getY(), loc.getZ());
 			st.exitQuest(true);
 		}
-		
 		return null;
 	}
 	

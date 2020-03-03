@@ -70,7 +70,6 @@ public class CastleData implements IXmlReader
 						for (Node tpNode = castleNode.getFirstChild(); tpNode != null; tpNode = tpNode.getNextSibling())
 						{
 							final List<CastleSpawnHolder> spawns = new ArrayList<>();
-							
 							if ("spawns".equals(tpNode.getNodeName()))
 							{
 								for (Node npcNode = tpNode.getFirstChild(); npcNode != null; npcNode = npcNode.getNextSibling())
@@ -84,7 +83,6 @@ public class CastleData implements IXmlReader
 										final int y = parseInteger(np, "y");
 										final int z = parseInteger(np, "z");
 										final int heading = parseInteger(np, "heading");
-										
 										spawns.add(new CastleSpawnHolder(npcId, side, x, y, z, heading));
 									}
 								}
@@ -93,7 +91,6 @@ public class CastleData implements IXmlReader
 							else if ("siegeGuards".equals(tpNode.getNodeName()))
 							{
 								final List<SiegeGuardHolder> guards = new ArrayList<>();
-								
 								for (Node npcNode = tpNode.getFirstChild(); npcNode != null; npcNode = npcNode.getNextSibling())
 								{
 									if ("guard".equals(npcNode.getNodeName()))
@@ -104,7 +101,6 @@ public class CastleData implements IXmlReader
 										final boolean stationary = parseBoolean(np, "stationary", false);
 										final int npcId = parseInteger(np, "npcId");
 										final int npcMaxAmount = parseInteger(np, "npcMaxAmount");
-										
 										guards.add(new SiegeGuardHolder(castleId, itemId, type, stationary, npcId, npcMaxAmount));
 									}
 								}

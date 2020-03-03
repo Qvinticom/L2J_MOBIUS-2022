@@ -84,7 +84,6 @@ public class TrapRemove extends AbstractEffect
 		
 		// Notify to scripts
 		EventDispatcher.getInstance().notifyEventAsync(new OnTrapAction(trap, info.getEffector(), TrapAction.TRAP_DISARMED), trap);
-		
 		trap.unSummon();
 		if (info.getEffector().isPlayer())
 		{

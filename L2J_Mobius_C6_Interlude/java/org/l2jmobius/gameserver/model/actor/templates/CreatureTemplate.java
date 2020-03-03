@@ -153,7 +153,6 @@ public class CreatureTemplate
 		_baseHolyVuln = set.getInt("baseHolyVuln", 1);
 		_baseDarkVuln = set.getInt("baseDarkVuln", 1);
 		_baseCritVuln = set.getInt("baseCritVuln", 1);
-		
 		_isUndead = set.getInt("isUndead", 0) == 1;
 		
 		// C4 Stats

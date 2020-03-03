@@ -173,7 +173,6 @@ public class LoginServerThread extends Thread
 					lengthLo = in.read();
 					lengthHi = in.read();
 					length = (lengthHi * 256) + lengthLo;
-					
 					if (lengthHi < 0)
 					{
 						LOGGER.finer(getClass().getSimpleName() + ": Login terminated the connection.");
@@ -181,7 +180,6 @@ public class LoginServerThread extends Thread
 					}
 					
 					final byte[] incoming = new byte[length - 2];
-					
 					int receivedBytes = 0;
 					int newBytes = 0;
 					int left = length - 2;
@@ -201,7 +199,6 @@ public class LoginServerThread extends Thread
 					// decrypt if we have a key
 					_blowfish.decrypt(incoming, 0, incoming.length);
 					checksumOk = NewCrypt.verifyChecksum(incoming);
-					
 					if (!checksumOk)
 					{
 						LOGGER.warning(getClass().getSimpleName() + ": Incorrect packet checksum, ignoring packet (LS)");

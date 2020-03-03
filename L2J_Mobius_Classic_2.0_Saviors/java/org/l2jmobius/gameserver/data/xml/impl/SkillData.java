@@ -188,12 +188,9 @@ public class SkillData implements IXmlReader
 	public List<Skill> getSiegeSkills(boolean addNoble, boolean hasCastle)
 	{
 		final List<Skill> temp = new LinkedList<>();
-		
 		temp.add(_skills.get(getSkillHashCode(CommonSkill.IMPRIT_OF_LIGHT.getId(), 1)));
 		temp.add(_skills.get(getSkillHashCode(CommonSkill.IMPRIT_OF_DARKNESS.getId(), 1)));
-		
 		temp.add(_skills.get(getSkillHashCode(247, 1))); // Build Headquarters
-		
 		if (addNoble)
 		{
 			temp.add(_skills.get(getSkillHashCode(326, 1))); // Build Advanced Headquarters
@@ -243,7 +240,6 @@ public class SkillData implements IXmlReader
 						final Map<Integer, Set<Integer>> levels = new HashMap<>();
 						final Map<Integer, Map<Integer, StatSet>> skillInfo = new HashMap<>();
 						final StatSet generalSkillInfo = skillInfo.computeIfAbsent(-1, k -> new HashMap<>()).computeIfAbsent(-1, k -> new StatSet());
-						
 						parseAttributes(attributes, "", generalSkillInfo);
 						
 						final Map<String, Map<Integer, Map<Integer, Object>>> variableValues = new HashMap<>();
@@ -309,7 +305,6 @@ public class SkillData implements IXmlReader
 						
 						final int fromLevel = generalSkillInfo.getInt(".fromLevel", 1);
 						final int toLevel = generalSkillInfo.getInt(".toLevel", 0);
-						
 						for (int i = fromLevel; i <= toLevel; i++)
 						{
 							levels.computeIfAbsent(i, k -> new HashSet<>()).add(0);

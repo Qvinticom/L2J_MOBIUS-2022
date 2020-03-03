@@ -44,7 +44,6 @@ public class Manadam implements ISkillHandler
 	public void useSkill(Creature creature, Skill skill, WorldObject[] targets)
 	{
 		Creature target = null;
-		
 		if (creature.isAlikeDead())
 		{
 			return;
@@ -52,11 +51,9 @@ public class Manadam implements ISkillHandler
 		
 		final boolean sps = creature.checkSps();
 		final boolean bss = creature.checkBss();
-		
 		for (WorldObject target2 : targets)
 		{
 			target = (Creature) target2;
-			
 			if (target.reflectSkill(skill))
 			{
 				target = creature;
@@ -75,7 +72,6 @@ public class Manadam implements ISkillHandler
 			else
 			{
 				final double damage = Formulas.getInstance().calcManaDam(creature, target, skill, sps, bss);
-				
 				final double mp = (damage > target.getCurrentMp() ? target.getCurrentMp() : damage);
 				target.reduceCurrentMp(mp);
 				

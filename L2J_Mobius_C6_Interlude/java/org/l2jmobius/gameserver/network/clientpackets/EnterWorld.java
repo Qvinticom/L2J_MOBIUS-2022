@@ -127,7 +127,6 @@ public class EnterWorld extends GameClientPacket
 		
 		// Register in flood protector
 		// FloodProtector.getInstance().registerNewPlayer(player.getObjectId());
-		
 		if (!player.isGM() && !player.isDonator() && Config.CHECK_NAME_ON_LOGIN && ((player.getName().length() < 3) || (player.getName().length() > 16) || !Util.isAlphaNumeric(player.getName()) || !isValidName(player.getName())))
 		{
 			LOGGER.warning("Charname: " + player.getName() + " is invalid. EnterWorld failed.");
@@ -140,7 +139,6 @@ public class EnterWorld extends GameClientPacket
 		
 		player.setRunning(); // running is default
 		player.standUp(); // standing is default
-		
 		player.broadcastKarma(); // include UserInfo
 		
 		// Engage and notify Partner
@@ -154,7 +152,6 @@ public class EnterWorld extends GameClientPacket
 		
 		Quest.playerEnter(player);
 		player.sendPacket(new QuestList(player));
-		
 		if (Config.ENABLE_COMMUNITY_BOARD)
 		{
 			// Unread mails make a popup appears.
@@ -184,7 +181,6 @@ public class EnterWorld extends GameClientPacket
 		player.spawnMe(player.getX(), player.getY(), player.getZ());
 		// Mobius: Set player heading.
 		// player.sendPacket(new StopRotation(player, player.getHeading(), 10000000));
-		
 		if (SevenSigns.getInstance().isSealValidationPeriod())
 		{
 			sendPacket(new SignsSky());
@@ -199,7 +195,6 @@ public class EnterWorld extends GameClientPacket
 		player.sendPacket(new EtcStatusUpdate(player));
 		
 		final Effect[] effects = player.getAllEffects();
-		
 		if (effects != null)
 		{
 			for (Effect e : effects)
@@ -278,7 +273,6 @@ public class EnterWorld extends GameClientPacket
 		
 		// Expand Skill
 		player.sendPacket(new ExStorageMaxCount(player));
-		
 		player.getMacroses().sendUpdate();
 		
 		// Send packets info
@@ -313,7 +307,6 @@ public class EnterWorld extends GameClientPacket
 		
 		// Send user info again .. just like the real client
 		// sendPacket(ui);
-		
 		if ((player.getClanId() != 0) && (player.getClan() != null))
 		{
 			sendPacket(new PledgeShowMemberListAll(player.getClan(), player));
@@ -373,7 +366,6 @@ public class EnterWorld extends GameClientPacket
 		if (player.getClan() != null)
 		{
 			player.sendPacket(new PledgeSkillList(player.getClan()));
-			
 			for (Siege siege : SiegeManager.getInstance().getSieges())
 			{
 				if (!siege.isInProgress())
@@ -414,7 +406,6 @@ public class EnterWorld extends GameClientPacket
 			
 			// Add message at connexion if clanHall not paid. Possibly this is custom...
 			final ClanHall clanHall = ClanHallManager.getInstance().getClanHallByOwner(player.getClan());
-			
 			if ((clanHall != null) && !clanHall.getPaid())
 			{
 				player.sendPacket(SystemMessageId.PAYMENT_FOR_YOUR_CLAN_HALL_HAS_NOT_BEEN_MADE_PLEASE_MAKE_PAYMENT_TO_YOUR_CLAN_WAREHOUSE_BY_S1_TOMORROW);
@@ -758,7 +749,6 @@ public class EnterWorld extends GameClientPacket
 	{
 		final long now = Calendar.getInstance().getTimeInMillis();
 		final long endDay = player.getAioEndTime();
-		
 		if (now > endDay)
 		{
 			player.setAio(false);
@@ -789,7 +779,6 @@ public class EnterWorld extends GameClientPacket
 	private void engage(PlayerInstance player)
 	{
 		final int _chaid = player.getObjectId();
-		
 		for (Wedding cl : CoupleManager.getInstance().getCouples())
 		{
 			if ((cl.getPlayer1Id() == _chaid) || (cl.getPlayer2Id() == _chaid))
@@ -819,7 +808,6 @@ public class EnterWorld extends GameClientPacket
 		if (player.getPartnerId() != 0)
 		{
 			PlayerInstance partner = null;
-			
 			if (World.getInstance().findObject(player.getPartnerId()) instanceof PlayerInstance)
 			{
 				partner = (PlayerInstance) World.getInstance().findObject(player.getPartnerId());
@@ -875,7 +863,6 @@ public class EnterWorld extends GameClientPacket
 	private void setPledgeClass(PlayerInstance player)
 	{
 		int pledgeClass = 0;
-		
 		if (player.getClan() != null)
 		{
 			pledgeClass = player.getClan().getClanMember(player.getObjectId()).calculatePledgeClass(player);

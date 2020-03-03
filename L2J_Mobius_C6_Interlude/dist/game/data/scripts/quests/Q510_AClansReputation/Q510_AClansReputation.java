@@ -115,7 +115,6 @@ public class Q510_AClansReputation extends Quest
 						clan.setReputationScore(clan.getReputationScore() + reward, true);
 						player.sendPacket(SystemMessage.getSystemMessage(SystemMessageId.YOU_HAVE_SUCCESSFULLY_COMPLETED_A_CLAN_QUEST_S1_POINTS_HAVE_BEEN_ADDED_TO_YOUR_CLAN_S_REPUTATION_SCORE).addNumber(reward));
 						clan.broadcastToOnlineMembers(new PledgeShowInfoUpdate(clan));
-						
 						htmltext = "31331-7.htm";
 					}
 					else

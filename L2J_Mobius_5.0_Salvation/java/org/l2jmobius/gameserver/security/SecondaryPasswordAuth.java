@@ -83,7 +83,6 @@ public class SecondaryPasswordAuth
 				{
 					var = rs.getString("var");
 					value = rs.getString("value");
-					
 					if (var.equals(VAR_PWD))
 					{
 						_password = value;
@@ -198,7 +197,6 @@ public class SecondaryPasswordAuth
 	public boolean checkPassword(String password, boolean skipAuth)
 	{
 		password = cryptPassword(password);
-		
 		if (!password.equals(_password))
 		{
 			_wrongAttempts++;

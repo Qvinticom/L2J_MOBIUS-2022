@@ -75,7 +75,6 @@ public class Q10339_FightingTheForgotten extends Quest
 		}
 		
 		String htmltext = null;
-		
 		switch (event)
 		{
 			case "32975-02.htm":
@@ -110,7 +109,6 @@ public class Q10339_FightingTheForgotten extends Quest
 	{
 		final QuestState qs = getQuestState(player, true);
 		String htmltext = getNoQuestMsg(player);
-		
 		switch (qs.getState())
 		{
 			case State.CREATED:
@@ -162,7 +160,6 @@ public class Q10339_FightingTheForgotten extends Quest
 				break;
 			}
 		}
-		
 		return htmltext;
 	}
 	

@@ -43,7 +43,6 @@ public class GMViewSkillInfo implements IClientOutgoingPacket
 		packet.writeD(_skills.size());
 		
 		final boolean isDisabled = (_player.getClan() != null) && (_player.getClan().getReputationScore() < 0);
-		
 		for (Skill skill : _skills)
 		{
 			packet.writeD(skill.isPassive() ? 1 : 0);

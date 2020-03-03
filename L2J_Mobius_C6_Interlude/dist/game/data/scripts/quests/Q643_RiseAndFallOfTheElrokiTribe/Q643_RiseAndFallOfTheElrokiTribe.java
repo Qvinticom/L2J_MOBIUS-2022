@@ -63,7 +63,6 @@ public class Q643_RiseAndFallOfTheElrokiTribe extends Quest
 		else if (event.equals("32106-07.htm"))
 		{
 			final int count = st.getQuestItemsCount(BONES);
-			
 			st.takeItems(BONES, count);
 			st.rewardItems(57, count * 1374);
 		}

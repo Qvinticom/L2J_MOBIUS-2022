@@ -53,9 +53,7 @@ public class TransformTemplate
 	{
 		_collisionRadius = set.contains("radius") ? set.getDouble("radius") : null;
 		_collisionHeight = set.contains("height") ? set.getDouble("height") : null;
-		
 		_baseAttackType = set.getEnum("attackType", WeaponType.class, null);
-		
 		if (set.contains("range"))
 		{
 			addStats(Stat.PHYSICAL_ATTACK_RANGE, set.getDouble("range", 0));

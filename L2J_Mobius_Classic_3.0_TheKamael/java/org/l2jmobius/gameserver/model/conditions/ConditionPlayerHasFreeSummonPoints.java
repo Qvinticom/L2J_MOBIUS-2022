@@ -45,7 +45,6 @@ public class ConditionPlayerHasFreeSummonPoints extends Condition
 		}
 		
 		boolean canSummon = true;
-		
 		if ((_summonPoints == 0) && player.hasServitors())
 		{
 			player.sendPacket(SystemMessageId.YOU_CANNOT_USE_THE_S1_SKILL_DUE_TO_INSUFFICIENT_SUMMON_POINTS);

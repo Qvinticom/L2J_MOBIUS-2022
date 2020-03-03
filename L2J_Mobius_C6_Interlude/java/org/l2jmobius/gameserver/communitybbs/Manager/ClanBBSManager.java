@@ -137,7 +137,6 @@ public class ClanBBSManager extends BaseBBSManager
 			
 			// Retrieve clans members, and store them under a String.
 			final StringBuilder membersList = new StringBuilder();
-			
 			for (ClanMember player : clan.getMembers())
 			{
 				if (player != null)
@@ -236,7 +235,6 @@ public class ClanBBSManager extends BaseBBSManager
 		
 		// Player got a clan, show the associated header.
 		final StringBuilder sb = new StringBuilder();
-		
 		final Clan playerClan = activeChar.getClan();
 		if (playerClan != null)
 		{
@@ -244,7 +242,6 @@ public class ClanBBSManager extends BaseBBSManager
 		}
 		
 		content = content.replace("%homebar%", sb.toString());
-		
 		if (index < 1)
 		{
 			index = 1;

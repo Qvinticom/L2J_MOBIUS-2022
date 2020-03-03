@@ -115,7 +115,6 @@ public class Q10379_AnUninvitedGuest extends Quest
 	{
 		final QuestState qs = getQuestState(player, true);
 		String htmltext = getNoQuestMsg(player);
-		
 		if (qs.isCreated())
 		{
 			htmltext = "warden_endrigo_q10379_01.htm";
@@ -135,7 +134,6 @@ public class Q10379_AnUninvitedGuest extends Quest
 		{
 			htmltext = "warden_endrigo_q10379_03.html";
 		}
-		
 		return htmltext;
 	}
 	

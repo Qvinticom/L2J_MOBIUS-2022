@@ -67,7 +67,6 @@ public class OptionData implements IXmlReader
 					{
 						final int id = parseInteger(d.getAttributes(), "id");
 						final Options op = new Options(id);
-						
 						for (Node cd = d.getFirstChild(); cd != null; cd = cd.getNextSibling())
 						{
 							switch (cd.getNodeName())

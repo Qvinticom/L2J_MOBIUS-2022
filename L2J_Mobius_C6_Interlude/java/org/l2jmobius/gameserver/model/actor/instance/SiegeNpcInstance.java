@@ -51,7 +51,6 @@ public class SiegeNpcInstance extends FolkInstance
 			
 			// Send a Server->Client packet MyTargetSelected to the PlayerInstance player
 			player.sendPacket(new MyTargetSelected(getObjectId(), 0));
-			
 			player.sendPacket(new ValidateLocation(this));
 		}
 		else if (!canInteract(player)) // Calculate the distance between the PlayerInstance and the NpcInstance

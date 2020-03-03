@@ -86,7 +86,6 @@ public class hitConditionBonus
 		factory.setIgnoringComments(true);
 		final File file = new File(Config.DATAPACK_ROOT, "data/stats/hitConditionBonus.xml");
 		Document doc = null;
-		
 		if (file.exists())
 		{
 			try

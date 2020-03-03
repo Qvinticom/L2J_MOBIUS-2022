@@ -61,7 +61,6 @@ public class AdminVIPEngine implements IAdminCommandHandler
 			
 			String[] params;
 			params = command.split(" ");
-			
 			if (params.length != 2)
 			{
 				BuilderUtil.sendSysMessage(activeChar, "Wrong usage: //vip_setteam <team>");
@@ -92,7 +91,6 @@ public class AdminVIPEngine implements IAdminCommandHandler
 			
 			String[] params;
 			params = command.split(" ");
-			
 			if (params.length != 2)
 			{
 				BuilderUtil.sendSysMessage(activeChar, "Wrong usage: //vip_settime <time>");
@@ -112,7 +110,6 @@ public class AdminVIPEngine implements IAdminCommandHandler
 			
 			String[] params;
 			params = command.split(" ");
-			
 			if (params.length != 2)
 			{
 				BuilderUtil.sendSysMessage(activeChar, "Wrong usage: //vip_endnpc <npc>");
@@ -132,7 +129,6 @@ public class AdminVIPEngine implements IAdminCommandHandler
 			
 			String[] params;
 			params = command.split(" ");
-			
 			if (params.length != 2)
 			{
 				BuilderUtil.sendSysMessage(activeChar, "Wrong usage: //vip_joinnpc <npc>");
@@ -152,7 +148,6 @@ public class AdminVIPEngine implements IAdminCommandHandler
 			
 			String[] params;
 			params = command.split(" ");
-			
 			if (params.length != 2)
 			{
 				BuilderUtil.sendSysMessage(activeChar, "Wrong usage: //vip_setdelay <time>");
@@ -176,7 +171,6 @@ public class AdminVIPEngine implements IAdminCommandHandler
 			
 			String[] params;
 			params = command.split(" ");
-			
 			if (params.length != 4)
 			{
 				BuilderUtil.sendSysMessage(activeChar, "Wrong usage: //vip_joinlocxyz <x> <y> <z>");
@@ -196,7 +190,6 @@ public class AdminVIPEngine implements IAdminCommandHandler
 			
 			String[] params;
 			params = command.split(" ");
-			
 			if (params.length != 2)
 			{
 				BuilderUtil.sendSysMessage(activeChar, "Wrong usage: //vip_joinnpc <npc>");
@@ -216,7 +209,6 @@ public class AdminVIPEngine implements IAdminCommandHandler
 			
 			String[] params;
 			params = command.split(" ");
-			
 			if (params.length != 2)
 			{
 				BuilderUtil.sendSysMessage(activeChar, "Wrong usage: //vip_setarea <Area>");
@@ -235,7 +227,6 @@ public class AdminVIPEngine implements IAdminCommandHandler
 			
 			String[] params;
 			params = command.split(" ");
-			
 			if (params.length != 2)
 			{
 				BuilderUtil.sendSysMessage(activeChar, "Wrong usage: //vip_vipreward <id>");
@@ -255,7 +246,6 @@ public class AdminVIPEngine implements IAdminCommandHandler
 			
 			String[] params;
 			params = command.split(" ");
-			
 			if (params.length != 2)
 			{
 				BuilderUtil.sendSysMessage(activeChar, "Wrong usage: //vip_viprewardamount <amount>");
@@ -275,7 +265,6 @@ public class AdminVIPEngine implements IAdminCommandHandler
 			
 			String[] params;
 			params = command.split(" ");
-			
 			if (params.length != 2)
 			{
 				BuilderUtil.sendSysMessage(activeChar, "Wrong usage: //vip_notvipreward <id>");
@@ -295,7 +284,6 @@ public class AdminVIPEngine implements IAdminCommandHandler
 			
 			String[] params;
 			params = command.split(" ");
-			
 			if (params.length != 2)
 			{
 				BuilderUtil.sendSysMessage(activeChar, "Wrong usage: //vip_notviprewardamount <amount>");
@@ -315,7 +303,6 @@ public class AdminVIPEngine implements IAdminCommandHandler
 			
 			String[] params;
 			params = command.split(" ");
-			
 			if (params.length != 2)
 			{
 				BuilderUtil.sendSysMessage(activeChar, "Wrong usage: //vip_thevipreward <id>");
@@ -335,7 +322,6 @@ public class AdminVIPEngine implements IAdminCommandHandler
 			
 			String[] params;
 			params = command.split(" ");
-			
 			if (params.length != 2)
 			{
 				BuilderUtil.sendSysMessage(activeChar, "Wrong usage: //vip_theviprewardamount <amount>");
@@ -359,10 +345,8 @@ public class AdminVIPEngine implements IAdminCommandHandler
 	{
 		final NpcHtmlMessage adminReply = new NpcHtmlMessage(5);
 		final StringBuilder replyMSG = new StringBuilder("<html><body>");
-		
 		replyMSG.append("<center><font color=\"LEVEL\">[VIP Engine]</font></center><br><br><br>");
 		replyMSG.append("<table><tr><td><edit var=\"input1\" width=\"50\"></td><td><edit var=\"input2\" width=\"50\"></td><td><edit var=\"input3\" width\"50\"></td></tr></table>");
-		
 		replyMSG.append("<table border=\"0\"><tr>");
 		replyMSG.append("<td width=\"100\"><button value=\"Set Team\" action=\"bypass -h admin_vip_setteam $input1\" width=90 height=15 back=\"sek.cbui94\" fore=\"sek.cbui92\"></td>");
 		replyMSG.append("<td width=\"100\"><button value=\"Random Team\" action=\"bypass -h admin_vip_randomteam\" width=90 height=15 back=\"sek.cbui94\" fore=\"sek.cbui92\"></td>");
@@ -383,11 +367,9 @@ public class AdminVIPEngine implements IAdminCommandHandler
 		replyMSG.append("</tr></table><br><table><tr>");
 		replyMSG.append("<td width=\"100\"><button value=\"VIP Reward\" action=\"bypass -h admin_vip_vipreward $input1\" width=90 height=15 back=\"sek.cbui94\" fore=\"sek.cbui92\"></td>");
 		replyMSG.append("<td width=\"100\"><button value=\"VIP Reward Am\" action=\"bypass -h admin_vip_viprewardamount $input1\" width=90 height=15 back=\"sek.cbui94\" fore=\"sek.cbui92\"></td>");
-		
 		replyMSG.append("</tr></table><br><table><tr>");
 		replyMSG.append("<td width=\"100\"><button value=\"Not VIP Reward\" action=\"bypass -h admin_vip_notvipreward $input1\" width=130 height=15 back=\"sek.cbui94\" fore=\"sek.cbui92\"></td>");
 		replyMSG.append("<td width=\"100\"><button value=\"Not VIP Reward Am\" action=\"bypass -h admin_vip_notviprewardamount $input1\" width=130 height=15 back=\"sek.cbui94\" fore=\"sek.cbui92\"></td>");
-		
 		replyMSG.append("</tr></table><br><table><tr>");
 		replyMSG.append("<td width=\"100\"><button value=\"The VIP Reward\" action=\"bypass -h admin_vip_thevipreward $input1\" width=130 height=15 back=\"sek.cbui94\" fore=\"sek.cbui92\"></td>");
 		replyMSG.append("<td width=\"100\"><button value=\"The VIP Reward Am\" action=\"bypass -h admin_vip_theviprewardamount $input1\" width=130 height=15 back=\"sek.cbui94\" fore=\"sek.cbui92\"></td>");
@@ -409,7 +391,6 @@ public class AdminVIPEngine implements IAdminCommandHandler
 		replyMSG.append("VIP Team Reward:&nbsp;<font color=\"FFFFFF\">" + VIP.getItemName(VIP._vipReward, activeChar) + " (" + VIP._vipRewardAmount + ")</font><br1>");
 		replyMSG.append("Not VIP Team Reward:&nbsp;<font color=\"FFFFFF\">" + VIP.getItemName(VIP._notVipReward, activeChar) + " (" + VIP._notVipRewardAmount + ")</font><br1>");
 		replyMSG.append("VIP Reward:&nbsp;<font color=\"FFFFFF\">" + VIP.getItemName(VIP._theVipReward, activeChar) + " (" + VIP._theVipRewardAmount + ")</font><br>");
-		
 		replyMSG.append("</body></html>");
 		adminReply.setHtml(replyMSG.toString());
 		activeChar.sendPacket(adminReply);

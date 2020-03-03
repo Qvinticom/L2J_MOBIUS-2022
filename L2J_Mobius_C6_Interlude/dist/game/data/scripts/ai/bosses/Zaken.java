@@ -232,7 +232,6 @@ public class Zaken extends Quest
 	public String onAdvEvent(String event, NpcInstance npc, PlayerInstance player)
 	{
 		final Integer status = GrandBossManager.getInstance().getBossStatus(ZAKEN);
-		
 		if (((status == DEAD) && (event == null)) || !event.equals("zaken_unlock"))
 		{
 			return super.onAdvEvent(event, npc, player);
@@ -666,7 +665,6 @@ public class Zaken extends Quest
 				int i1 = Rnd.get(15);
 				player.teleToLocation(X_COORDS[i1] + Rnd.get(650), Y_COORDS[i1] + Rnd.get(650), Z_COORDS[i1]);
 				((Attackable) npc).stopHating(player);
-				
 				if ((c_quest0 != null) && (_quest0 > 0) && (c_quest0 != player) && (c_quest0.getZ() > (player.getZ() - 100)) && (c_quest0.getZ() < (player.getZ() + 100)))
 				{
 					if ((((c_quest0.getX() - player.getX()) * (c_quest0.getX() - player.getX())) + ((c_quest0.getY() - player.getY()) * (c_quest0.getY() - player.getY()))) > (250 * 250))
@@ -853,13 +851,10 @@ public class Zaken extends Quest
 	public String onKill(NpcInstance npc, PlayerInstance killer, boolean isPet)
 	{
 		final int npcId = npc.getNpcId();
-		
 		final Integer status = GrandBossManager.getInstance().getBossStatus(ZAKEN);
-		
 		if (npcId == ZAKEN)
 		{
 			npc.broadcastPacket(new PlaySound(1, "BS02_D", npc));
-			
 			GrandBossManager.getInstance().setBossStatus(ZAKEN, DEAD);
 			// time is 36hour +/- 17hour
 			final long respawnTime = (Config.ZAKEN_RESP_FIRST + Rnd.get(Config.ZAKEN_RESP_SECOND)) * 3600000;

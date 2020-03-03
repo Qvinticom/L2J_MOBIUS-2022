@@ -63,7 +63,6 @@ public class ClanShopData implements IXmlReader
 			final int count = set.getInt("count");
 			final long adena = set.getLong("adena");
 			final int fame = set.getInt("fame");
-			
 			final Item item = ItemTable.getInstance().getTemplate(itemId);
 			if (item == null)
 			{

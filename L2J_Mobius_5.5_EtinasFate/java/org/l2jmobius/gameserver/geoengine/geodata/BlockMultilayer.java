@@ -71,7 +71,6 @@ public class BlockMultilayer extends ABlock
 		{
 			// get layer count for this cell
 			final byte layers = format != GeoFormat.L2OFF ? bb.get() : (byte) bb.getShort();
-			
 			if ((layers <= 0) || (layers > MAX_LAYERS))
 			{
 				throw new RuntimeException("Invalid layer count for MultilayerBlock");

@@ -87,7 +87,6 @@ public class AdminCommandHandler implements IHandler<IAdminCommandHandler, Strin
 		
 		final String command = fullCommand.split(" ")[0];
 		final String commandNoPrefix = command.substring(6);
-		
 		final IAdminCommandHandler handler = getHandler(command);
 		if (handler == null)
 		{
@@ -135,7 +134,6 @@ public class AdminCommandHandler implements IHandler<IAdminCommandHandler, Strin
 				finally
 				{
 					final long runtime = System.currentTimeMillis() - begin;
-					
 					if (runtime < 5000)
 					{
 						return;

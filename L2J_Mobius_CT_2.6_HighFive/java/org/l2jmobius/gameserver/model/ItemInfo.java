@@ -129,7 +129,6 @@ public class ItemInfo
 		_mana = item.getMana();
 		_time = item.isTimeLimitedItem() ? (int) (item.getRemainingTime() / 1000) : -9999;
 		_location = item.getLocationSlot();
-		
 		_elemAtkType = item.getAttackElementType();
 		_elemAtkPower = item.getAttackElementPower();
 		for (byte i = 0; i < 6; i++)
@@ -180,9 +179,7 @@ public class ItemInfo
 		// Get shadow item mana
 		_mana = -1;
 		_time = -9999;
-		
 		_location = item.getLocationSlot();
-		
 		_elemAtkType = item.getAttackElementType();
 		_elemAtkPower = item.getAttackElementPower();
 		for (byte i = 0; i < 6; i++)

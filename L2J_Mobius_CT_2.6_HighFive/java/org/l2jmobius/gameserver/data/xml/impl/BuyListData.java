@@ -108,7 +108,6 @@ public class BuyListData implements IXmlReader
 		try
 		{
 			final int buyListId = Integer.parseInt(f.getName().replaceAll(".xml", ""));
-			
 			for (Node node = doc.getFirstChild(); node != null; node = node.getNextSibling())
 			{
 				if ("list".equalsIgnoreCase(node.getNodeName()))

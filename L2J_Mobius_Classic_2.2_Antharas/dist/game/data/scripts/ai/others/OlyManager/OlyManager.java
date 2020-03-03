@@ -71,7 +71,6 @@ public class OlyManager extends AbstractNpcAI implements IBypassHandler
 	public String onAdvEvent(String event, Npc npc, PlayerInstance player)
 	{
 		String htmltext = null;
-		
 		switch (event)
 		{
 			case "OlyManager-info.html":
@@ -233,7 +232,6 @@ public class OlyManager extends AbstractNpcAI implements IBypassHandler
 				final int classId = Integer.parseInt(event.replace("rank_", ""));
 				final List<String> names = Olympiad.getInstance().getClassLeaderBoard(classId);
 				htmltext = getHtm(player, "OlyManager-rankDetail.html");
-				
 				int index = 1;
 				for (String name : names)
 				{
@@ -260,7 +258,6 @@ public class OlyManager extends AbstractNpcAI implements IBypassHandler
 	public String onFirstTalk(Npc npc, PlayerInstance player)
 	{
 		String htmltext = null;
-		
 		if (!player.isCursedWeaponEquipped())
 		{
 			htmltext = (!player.isInCategory(CategoryType.THIRD_CLASS_GROUP) && !player.isInCategory(CategoryType.FOURTH_CLASS_GROUP)) || (player.getLevel() < 55) ? "OlyManager-noNoble.html" : "OlyManager-noble.html";
@@ -278,7 +275,6 @@ public class OlyManager extends AbstractNpcAI implements IBypassHandler
 		try
 		{
 			final Npc olymanager = player.getLastFolkNPC();
-			
 			if (command.startsWith(BYPASSES[0])) // list
 			{
 				if (!Olympiad.getInstance().inCompPeriod())

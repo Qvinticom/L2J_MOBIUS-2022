@@ -73,7 +73,6 @@ public class SummonInstance extends Summon
 		}
 		_timeRemaining = _totalLifeTime;
 		lastShowntimeRemaining = _totalLifeTime;
-		
 		if (_itemConsumeId == 0)
 		{
 			_nextItemConsumeTime = -1; // do not consume

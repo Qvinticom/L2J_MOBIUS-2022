@@ -67,7 +67,6 @@ public class ItemSkillsTemplate implements IItemHandler
 		
 		boolean hasConsumeSkill = false;
 		boolean successfulUse = false;
-		
 		for (SkillHolder skillInfo : skills)
 		{
 			if (skillInfo == null)
@@ -76,7 +75,6 @@ public class ItemSkillsTemplate implements IItemHandler
 			}
 			
 			final Skill itemSkill = skillInfo.getSkill();
-			
 			if (itemSkill != null)
 			{
 				if (itemSkill.hasEffectType(EffectType.EXTRACT_ITEM) && (playable.getActingPlayer() != null) && !playable.getActingPlayer().isInventoryUnder80(false))

@@ -59,7 +59,6 @@ public class Spoil implements ISkillHandler
 			}
 			
 			final MonsterInstance target = (MonsterInstance) target1;
-			
 			if (target.isSpoil())
 			{
 				creature.sendPacket(new SystemMessage(SystemMessageId.IT_HAS_ALREADY_BEEN_SPOILED));
@@ -70,7 +69,6 @@ public class Spoil implements ISkillHandler
 			if (!target.isDead())
 			{
 				spoil = Formulas.calcMagicSuccess(creature, (Creature) target1, skill);
-				
 				if (spoil)
 				{
 					target.setSpoil(true);

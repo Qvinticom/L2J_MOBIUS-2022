@@ -67,12 +67,10 @@ public class AncientArcanCity extends AbstractNpcAI
 		if (event.equals("CHANGE_STATE"))
 		{
 			isCeremonyRunning = !isCeremonyRunning;
-			
 			for (PlayerInstance temp : BROADCAST_ZONE.getPlayersInside())
 			{
 				temp.sendPacket(new OnEventTrigger(262001, !isCeremonyRunning));
 				temp.sendPacket(new OnEventTrigger(262003, isCeremonyRunning));
-				
 				if (isCeremonyRunning)
 				{
 					showOnScreenMsg(temp, NpcStringId.THE_INCREASED_GRASP_OF_DARK_ENERGY_CAUSES_THE_GROUND_TO_SHAKE, ExShowScreenMessage.TOP_CENTER, 5000, true);
@@ -103,7 +101,6 @@ public class AncientArcanCity extends AbstractNpcAI
 		if (creature.isPlayer())
 		{
 			final PlayerInstance player = creature.getActingPlayer();
-			
 			if (zone.getId() == TELEPORT_ZONE.getId())
 			{
 				// final QuestState qs = creature.getActingPlayer().getQuestState(Q10301_ShadowOfTerrorBlackishRedFog.class.getSimpleName());
@@ -124,7 +121,6 @@ public class AncientArcanCity extends AbstractNpcAI
 			{
 				player.sendPacket(new OnEventTrigger(262001, !isCeremonyRunning));
 				player.sendPacket(new OnEventTrigger(262003, isCeremonyRunning));
-				
 				if (player.getVariables().getBoolean("ANCIENT_ARCAN_CITY_SCENE", true))
 				{
 					player.getVariables().set("ANCIENT_ARCAN_CITY_SCENE", false);
@@ -146,7 +142,6 @@ public class AncientArcanCity extends AbstractNpcAI
 	// {
 	// _templates.remove(template);
 	// }
-	
 	@Override
 	public void onSpawnNpc(SpawnTemplate template, SpawnGroup group, Npc npc)
 	{

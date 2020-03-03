@@ -59,7 +59,6 @@ public class Q00481_ShadowHelper extends Quest
 		21037, // Ossiud
 		21038, // Liangma
 		21040, // Soldier of Darkness
-	
 	};
 	// Misc
 	private static final int MIN_LEVEL = 38;
@@ -112,7 +111,6 @@ public class Q00481_ShadowHelper extends Quest
 	{
 		final QuestState qs = getQuestState(player, true);
 		String htmltext = getNoQuestMsg(player);
-		
 		switch (qs.getState())
 		{
 			case State.COMPLETED:

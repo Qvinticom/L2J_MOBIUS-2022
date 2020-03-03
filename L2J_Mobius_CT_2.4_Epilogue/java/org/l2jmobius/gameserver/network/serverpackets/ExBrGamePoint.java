@@ -32,7 +32,6 @@ public class ExBrGamePoint implements IClientOutgoingPacket
 	public ExBrGamePoint(PlayerInstance player)
 	{
 		_playerObj = player.getObjectId();
-		
 		if (Config.PRIME_SHOP_ITEM_ID == -1)
 		{
 			_points = player.getGamePoints();

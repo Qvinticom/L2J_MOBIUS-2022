@@ -39,7 +39,6 @@ public class PreparedEntry extends Entry
 		
 		ItemInfo info = null;
 		long adenaAmount = 0;
-		
 		_ingredients = new ArrayList<>(template.getIngredients().size());
 		for (Ingredient ing : template.getIngredients())
 		{

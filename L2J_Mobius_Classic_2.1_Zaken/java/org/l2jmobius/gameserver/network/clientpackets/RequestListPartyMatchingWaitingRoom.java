@@ -43,7 +43,6 @@ public class RequestListPartyMatchingWaitingRoom implements IClientIncomingPacke
 		_minLevel = packet.readD();
 		_maxLevel = packet.readD();
 		final int size = packet.readD();
-		
 		if ((size > 0) && (size < 128))
 		{
 			_classId = new LinkedList<>();

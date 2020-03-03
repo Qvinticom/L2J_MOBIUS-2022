@@ -284,7 +284,6 @@ public class Q616_MagicalPowerOfFire_Part2 extends Quest
 			
 			return true;
 		}
-		
 		return false;
 	}
 	

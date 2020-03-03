@@ -61,7 +61,6 @@ public class AdminPathNode implements IAdminCommandHandler
 		{
 			return false;
 		}
-		
 		return true;
 	}
 	

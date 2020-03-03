@@ -87,7 +87,6 @@ public class Q10346_DayOfDestinyKamaelsFate extends ThirdClassTransferQuest
 	{
 		String htmltext = getNoQuestMsg(player);
 		final QuestState qs = getQuestState(player, true);
-		
 		if (npc.getId() == BROME)
 		{
 			if (qs.getState() == State.CREATED)

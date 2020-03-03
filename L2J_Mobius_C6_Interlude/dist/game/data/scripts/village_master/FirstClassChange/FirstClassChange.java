@@ -124,16 +124,13 @@ public class FirstClassChange extends Quest
 		}
 		
 		String suffix = "";
-		
 		if (Classes.containsKey(event))
 		{
 			// 0 = newClass, 1 = reqClass, 2 = reqRace, 3 = no/no, 4 = no/ok, 5 = ok/no, 6 = ok/ok, 7 = reqItem, 8 = deniedClass
 			final int[] array = Classes.get(event);
-			
 			if ((player.getClassId().getId() == array[1]) && (player.getRace().ordinal() == array[2]))
 			{
 				final boolean gotItem = st.hasQuestItems(array[7]);
-				
 				if (player.getLevel() < 20)
 				{
 					suffix = "-" + ((gotItem) ? array[4] : array[3]);
@@ -143,7 +140,6 @@ public class FirstClassChange extends Quest
 					if (gotItem)
 					{
 						suffix = "-" + array[6];
-						
 						st.takeItems(array[7], 1);
 						st.giveItems(SHADOW_WEAPON_COUPON_DGRADE, 15);
 						st.playSound(QuestState.SOUND_FANFARE);

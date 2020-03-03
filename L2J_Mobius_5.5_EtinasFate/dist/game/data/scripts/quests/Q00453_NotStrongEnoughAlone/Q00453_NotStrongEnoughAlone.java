@@ -95,7 +95,6 @@ public class Q00453_NotStrongEnoughAlone extends Quest
 		}
 		
 		int npcId = npc.getId();
-		
 		if (Util.checkIfInRange(Config.ALT_PARTY_RANGE, npc, player, false))
 		{
 			if (CommonUtil.contains(MONSTER1, npcId) && qs.isCond(2))

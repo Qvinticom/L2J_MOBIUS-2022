@@ -81,10 +81,8 @@ public class EnergyAttack extends AbstractEffect
 		
 		final Creature target = info.getEffected();
 		final Skill skill = info.getSkill();
-		
 		double attack = attacker.getPAtk(target);
 		double defence = target.getPDef(attacker);
-		
 		if (!_ignoreShieldDefence)
 		{
 			final byte shield = Formulas.calcShldUse(attacker, target, skill, true);
@@ -109,14 +107,11 @@ public class EnergyAttack extends AbstractEffect
 		
 		double damage = 1;
 		boolean critical = false;
-		
 		if (defence != -1)
 		{
 			final double damageMultiplier = Formulas.calcWeaponTraitBonus(attacker, target) * Formulas.calcAttributeBonus(attacker, target, skill) * Formulas.calcGeneralTraitBonus(attacker, target, skill.getTraitType(), true);
-			
 			final boolean ss = info.getSkill().useSoulShot() && attacker.isChargedShot(ShotType.SOULSHOTS);
 			final double ssBoost = ss ? 2 : 1.0;
-			
 			double weaponTypeBoost;
 			final Weapon weapon = attacker.getActiveWeaponItem();
 			if ((weapon != null) && ((weapon.getItemType() == WeaponType.BOW) || (weapon.getItemType() == WeaponType.CROSSBOW)))
@@ -131,12 +126,10 @@ public class EnergyAttack extends AbstractEffect
 			// charge count should be the count before casting the skill but since its reduced before calling effects
 			// we add skill consume charges to current charges
 			final double energyChargesBoost = (((attacker.getCharges() + skill.getChargeConsume()) - 1) * 0.2) + 1;
-			
 			attack += _power;
 			attack *= ssBoost;
 			attack *= energyChargesBoost;
 			attack *= weaponTypeBoost;
-			
 			if (target.isPlayer())
 			{
 				defence *= target.getStat().calcStat(Stat.PVP_PHYS_SKILL_DEF, 1.0);

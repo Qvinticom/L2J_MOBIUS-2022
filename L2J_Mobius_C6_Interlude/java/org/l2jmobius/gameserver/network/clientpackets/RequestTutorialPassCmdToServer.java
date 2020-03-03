@@ -33,7 +33,6 @@ public class RequestTutorialPassCmdToServer extends GameClientPacket
 	protected void runImpl()
 	{
 		final PlayerInstance player = getClient().getPlayer();
-		
 		if (player == null)
 		{
 			return;

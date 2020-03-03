@@ -166,7 +166,6 @@ public class Q00246_PossessorOfAPreciousSoul3 extends Quest
 						if (hasQuestItems(partyMember, EVERGREEN))
 						{
 							st.setCond(3, true);
-							
 						}
 						else
 						{

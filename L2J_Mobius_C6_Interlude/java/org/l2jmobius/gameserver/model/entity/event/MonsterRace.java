@@ -190,7 +190,6 @@ public class MonsterRace
 					
 					_state = RaceState.ACCEPTING_BETS;
 					_packet = new MonRaceInfo(CODES[0][0], CODES[0][1], getMonsters(), getSpeeds());
-					
 					Broadcast.toAllPlayersInZoneType(DerbyTrackZone.class, _packet, SystemMessage.getSystemMessage(SystemMessageId.TICKETS_ARE_NOW_AVAILABLE_FOR_MONSTER_RACE_S1).addNumber(_raceNumber));
 					break;
 				}
@@ -242,7 +241,6 @@ public class MonsterRace
 				case 900: // 15 min
 				{
 					_state = RaceState.WAITING;
-					
 					calculateOdds();
 					
 					Broadcast.toAllPlayersInZoneType(DerbyTrackZone.class, SystemMessage.getSystemMessage(SystemMessageId.NOW_SELLING_TICKETS_FOR_MONSTER_RACE_S1).addNumber(_raceNumber), SystemMessage.getSystemMessage(SystemMessageId.TICKETS_SALES_ARE_CLOSED_FOR_MONSTER_RACE_S1_ODDS_ARE_POSTED).addNumber(_raceNumber));
@@ -279,14 +277,12 @@ public class MonsterRace
 				{
 					_state = RaceState.STARTING_RACE;
 					_packet = new MonRaceInfo(CODES[1][0], CODES[1][1], getMonsters(), getSpeeds());
-					
 					Broadcast.toAllPlayersInZoneType(DerbyTrackZone.class, SystemMessage.getSystemMessage(SystemMessageId.THEY_RE_OFF), SOUND_1, SOUND_2, _packet);
 					break;
 				}
 				case 1085: // 18 min 5 sec
 				{
 					_packet = new MonRaceInfo(CODES[2][0], CODES[2][1], getMonsters(), getSpeeds());
-					
 					Broadcast.toAllPlayersInZoneType(DerbyTrackZone.class, _packet);
 					break;
 				}
@@ -299,7 +295,6 @@ public class MonsterRace
 					info.setFirst(getFirstPlace());
 					info.setSecond(getSecondPlace());
 					info.setOddRate(_odds.get(getFirstPlace() - 1));
-					
 					saveHistory(info);
 					clearBets();
 					
@@ -348,7 +343,6 @@ public class MonsterRace
 		int total = 0;
 		_first[1] = 0;
 		_second[1] = 0;
-		
 		for (int i = 0; i < 8; i++)
 		{
 			total = 0;
@@ -504,7 +498,6 @@ public class MonsterRace
 	public void setBetOnLane(int lane, long amount, boolean saveOnDb)
 	{
 		final long sum = (_betsPerLane.containsKey(lane)) ? _betsPerLane.get(lane) + amount : amount;
-		
 		_betsPerLane.put(lane, sum);
 		
 		if (saveOnDb)

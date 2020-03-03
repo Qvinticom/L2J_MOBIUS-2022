@@ -84,7 +84,6 @@ public class InstanceManager implements IXmlReader
 	// --------------------------------------------------------------------
 	// Instance data loader
 	// --------------------------------------------------------------------
-	
 	@Override
 	public void load()
 	{

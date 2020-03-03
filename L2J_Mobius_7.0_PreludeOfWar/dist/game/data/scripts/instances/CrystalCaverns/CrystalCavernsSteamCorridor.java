@@ -225,7 +225,6 @@ public class CrystalCavernsSteamCorridor extends AbstractInstance
 		if (isInInstance(instance))
 		{
 			final StatSet npcParams = receiver.getParameters();
-			
 			if (eventName.equals(String.valueOf(24220005 + npcParams.getInt("Terri_ID", 0))))
 			{
 				receiver.setTargetable(true);
@@ -278,7 +277,6 @@ public class CrystalCavernsSteamCorridor extends AbstractInstance
 					if (npcParams.getInt("last_checker", 0) == 1)
 					{
 						currentKillCount = instance.getParameters().increaseInt("KILL_COUNT", 0, 1);
-						
 						if (currentKillCount >= killTarget)
 						{
 							final ZoneType zone = ZoneManager.getInstance().getZoneByName(npc.getParameters().getString("AreaTeleName"), TeleportZone.class);
@@ -325,7 +323,6 @@ public class CrystalCavernsSteamCorridor extends AbstractInstance
 									{
 										final int random = getRandom(100);
 										int bossId = -1;
-										
 										if (random < 55)
 										{
 											bossId = KECHI_NORMAL;
@@ -374,7 +371,6 @@ public class CrystalCavernsSteamCorridor extends AbstractInstance
 		final Creature creature = event.getSeen();
 		final Npc npc = (Npc) event.getSeer();
 		final Instance instance = npc.getInstanceWorld();
-		
 		if (isInInstance(instance) && creature.isPlayer())
 		{
 			final StatSet npcParams = npc.getParameters();
@@ -387,7 +383,6 @@ public class CrystalCavernsSteamCorridor extends AbstractInstance
 					{
 						npc.setScriptValue(1);
 						npc.broadcastEvent(String.valueOf(24220005 + npcParams.getInt("Terri_ID", 0)), 2000, null);
-						
 						for (int i = 0; i < getRandom(5); i++)
 						{
 							final Npc trap = addSpawn(((npcParams.getInt("MobType", 0) == 0) ? TRAP_1 : TRAP_2), npc, true, 0, false, instance.getId());

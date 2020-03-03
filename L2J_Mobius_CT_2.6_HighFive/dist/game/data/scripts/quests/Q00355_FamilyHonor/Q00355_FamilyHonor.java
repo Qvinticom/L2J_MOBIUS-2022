@@ -114,7 +114,6 @@ public class Q00355_FamilyHonor extends Quest
 			case "30181-06.html":
 			{
 				final long galfredoRomersBustCount = getQuestItemsCount(player, GALFREDO_ROMERS_BUST);
-				
 				if (galfredoRomersBustCount < 1)
 				{
 					htmltext = event;
@@ -136,7 +135,6 @@ public class Q00355_FamilyHonor extends Quest
 			case "30181-10.html":
 			{
 				final long galfredoRomersBustCount = getQuestItemsCount(player, GALFREDO_ROMERS_BUST);
-				
 				if (galfredoRomersBustCount > 0)
 				{
 					giveAdena(player, galfredoRomersBustCount * 120, true);
@@ -150,7 +148,6 @@ public class Q00355_FamilyHonor extends Quest
 			case "30929-03.html":
 			{
 				final int random = getRandom(100);
-				
 				if (hasQuestItems(player, SCULPTOR_BERONA))
 				{
 					if (random < 2)
@@ -194,7 +191,6 @@ public class Q00355_FamilyHonor extends Quest
 	public String onKill(Npc npc, PlayerInstance killer, boolean isSummon)
 	{
 		final QuestState qs = getQuestState(killer, false);
-		
 		if ((qs == null) || !Util.checkIfInRange(Config.ALT_PARTY_RANGE, npc, killer, true))
 		{
 			return null;
@@ -202,7 +198,6 @@ public class Q00355_FamilyHonor extends Quest
 		
 		final DropInfo info = MOBS.get(npc.getId());
 		final int random = getRandom(1000);
-		
 		if (random < info.getFirstChance())
 		{
 			giveItemRandomly(killer, npc, GALFREDO_ROMERS_BUST, 1, 0, 1.0, true);

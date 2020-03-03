@@ -143,10 +143,8 @@ public class BlockInstance extends MonsterInstance
 		
 		final int timeLeft = (int) ((eng.getStarterTime() - System.currentTimeMillis()) / 1000);
 		final boolean isRed = eng.getHolder().getRedPlayers().contains(player);
-		
 		final ExCubeGameChangePoints changePoints = new ExCubeGameChangePoints(timeLeft, eng.getBluePoints(), eng.getRedPoints());
 		final ExCubeGameExtendedChangePoints secretPoints = new ExCubeGameExtendedChangePoints(timeLeft, eng.getBluePoints(), eng.getRedPoints(), isRed, player, eng.getPlayerPoints(player, isRed));
-		
 		eng.getHolder().broadCastPacketToTeam(changePoints);
 		eng.getHolder().broadCastPacketToTeam(secretPoints);
 	}
@@ -157,9 +155,7 @@ public class BlockInstance extends MonsterInstance
 		final int x = getX() + Rnd.get(50);
 		final int y = getY() + Rnd.get(50);
 		final int z = getZ();
-		
 		drop.dropMe(this, x, y, z);
-		
 		eng.addNewDrop(drop);
 	}
 }

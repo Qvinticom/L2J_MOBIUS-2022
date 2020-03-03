@@ -48,7 +48,6 @@ public class CastleTeleporterInstance extends NpcInstance
 	{
 		final StringTokenizer st = new StringTokenizer(command, " ");
 		final String actualCommand = st.nextToken(); // Get actual command
-		
 		if (actualCommand.equalsIgnoreCase("tele"))
 		{
 			int delay;

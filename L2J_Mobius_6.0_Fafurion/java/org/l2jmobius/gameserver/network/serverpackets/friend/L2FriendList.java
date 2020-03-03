@@ -62,7 +62,6 @@ public class L2FriendList implements IClientOutgoingPacket
 			boolean online = false;
 			int level = 0;
 			int classId = 0;
-			
 			if (player1 != null)
 			{
 				online = true;

@@ -39,11 +39,9 @@ public class Clan implements ITargetTypeHandler
 	public WorldObject[] getTargetList(Skill skill, Creature creature, boolean onlyFirst, Creature target)
 	{
 		final List<Creature> targetList = new ArrayList<>();
-		
 		if (creature.isPlayable())
 		{
 			final PlayerInstance player = creature.getActingPlayer();
-			
 			if (player == null)
 			{
 				return EMPTY_TARGET_LIST;
@@ -69,7 +67,6 @@ public class Clan implements ITargetTypeHandler
 			
 			final int radius = skill.getAffectRange();
 			final org.l2jmobius.gameserver.model.clan.Clan clan = player.getClan();
-			
 			if (Skill.addSummon(creature, player, radius, false))
 			{
 				targetList.add(player.getSummon());
@@ -81,7 +78,6 @@ public class Clan implements ITargetTypeHandler
 				for (ClanMember member : clan.getMembers())
 				{
 					obj = member.getPlayerInstance();
-					
 					if ((obj == null) || (obj == player))
 					{
 						continue;

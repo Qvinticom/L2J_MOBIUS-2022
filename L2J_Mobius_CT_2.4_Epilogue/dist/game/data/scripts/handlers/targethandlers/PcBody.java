@@ -74,7 +74,6 @@ public class PcBody implements ITargetTypeHandler
 			if ((player != null) && ((targetPlayer != null) || (targetPet != null)))
 			{
 				boolean condGood = true;
-				
 				if (skill.hasEffectType(EffectType.RESURRECTION) && (targetPlayer != null))
 				{
 					// check target is not in a active siege zone

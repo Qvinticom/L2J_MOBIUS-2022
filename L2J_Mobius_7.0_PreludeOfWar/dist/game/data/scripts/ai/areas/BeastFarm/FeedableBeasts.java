@@ -186,7 +186,6 @@ public class FeedableBeasts extends AbstractNpcAI
 		final int[][] Kookabura_1_Crystal_2 = {{ 21465, 21467 }};
 		final int[][] Kookabura_2_1 = {{ 21468, 21824}, { TRAINED_KOOKABURRA1, TRAINED_KOOKABURRA2 }};
 		final int[][] Kookabura_2_2 = {{ 21469, 21825}, { TRAINED_KOOKABURRA1, TRAINED_KOOKABURRA2 }};
-		
 		final int[][] Buffalo_0_Gold = {{ 21471, 21472, 21473, 21474 }};
 		final int[][] Buffalo_0_Crystal = {{ 21475, 21476, 21477, 21478 }};
 		final int[][] Buffalo_1_Gold_1 = {{ 21479, 21481 }};
@@ -195,7 +194,6 @@ public class FeedableBeasts extends AbstractNpcAI
 		final int[][] Buffalo_1_Crystal_2 = {{ 21484, 21486 }};
 		final int[][] Buffalo_2_1 = {{ 21487, 21826}, {TRAINED_BUFFALO1, TRAINED_BUFFALO2 }};
 		final int[][] Buffalo_2_2 = {{ 21488, 21827}, {TRAINED_BUFFALO1, TRAINED_BUFFALO2 }};
-		
 		final int[][] Cougar_0_Gold = {{ 21490, 21491, 21492, 21493 }};
 		final int[][] Cougar_0_Crystal = {{ 21494, 21495, 21496, 21497 }};
 		final int[][] Cougar_1_Gold_1 = {{ 21498, 21500 }};
@@ -451,7 +449,6 @@ public class FeedableBeasts extends AbstractNpcAI
 			// if not trained, the newly spawned mob will automatically be aggro against its feeder
 			// (what happened to "never bite the hand that feeds you" anyway?!)
 			final Attackable nextNpc = (Attackable) addSpawn(nextNpcId, npc);
-			
 			if (MAD_COW_POLYMORPH.containsKey(nextNpcId))
 			{
 				startQuestTimer("polymorph Mad Cow", 10000, nextNpc, player);

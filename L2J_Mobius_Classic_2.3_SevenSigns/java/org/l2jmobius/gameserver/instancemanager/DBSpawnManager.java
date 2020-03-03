@@ -165,7 +165,6 @@ public class DBSpawnManager
 			info.set("currentHP", npc.getCurrentHp());
 			info.set("currentMP", npc.getCurrentMp());
 			info.set("respawnTime", 0);
-			
 			_storedInfo.put(npcId, info);
 			_npcs.put(npcId, npc);
 			LOGGER.info(getClass().getSimpleName() + ": Spawning NPC " + npc.getName());
@@ -195,15 +194,12 @@ public class DBSpawnManager
 			final int respawnMaxDelay = (int) (npc.getSpawn().getRespawnMaxDelay() * Config.RAID_MAX_RESPAWN_MULTIPLIER);
 			final int respawnDelay = Rnd.get(respawnMinDelay, respawnMaxDelay);
 			final long respawnTime = System.currentTimeMillis() + respawnDelay;
-			
 			info.set("currentHP", npc.getMaxHp());
 			info.set("currentMP", npc.getMaxMp());
 			info.set("respawnTime", respawnTime);
-			
 			if (!_schedules.containsKey(npc.getId()) && ((respawnMinDelay > 0) || (respawnMaxDelay > 0)))
 			{
 				LOGGER.info(getClass().getSimpleName() + ": Updated " + npc.getName() + " respawn time to " + Util.formatDate(new Date(respawnTime), "dd.MM.yyyy HH:mm"));
-				
 				_schedules.put(npc.getId(), ThreadPool.schedule(() -> scheduleSpawn(npc.getId()), respawnDelay));
 				updateDb();
 			}
@@ -240,9 +236,7 @@ public class DBSpawnManager
 		
 		final int npcId = spawn.getId();
 		final long time = System.currentTimeMillis();
-		
 		SpawnTable.getInstance().addNewSpawn(spawn, false);
-		
 		if ((respawnTime == 0) || (time > respawnTime))
 		{
 			final Npc npc = spawn.doSpawn();
@@ -258,7 +252,6 @@ public class DBSpawnManager
 				info.set("currentHP", currentHP);
 				info.set("currentMP", currentMP);
 				info.set("respawnTime", 0);
-				
 				_storedInfo.put(npcId, info);
 			}
 		}
@@ -320,7 +313,6 @@ public class DBSpawnManager
 		info.set("currentHP", npc.getMaxHp());
 		info.set("currentMP", npc.getMaxMp());
 		info.set("respawnTime", 0);
-		
 		_npcs.put(npcId, npc);
 		_storedInfo.put(npcId, info);
 		
@@ -364,7 +356,6 @@ public class DBSpawnManager
 		}
 		
 		final int npcId = spawn.getId();
-		
 		_spawns.remove(npcId);
 		_npcs.remove(npcId);
 		_storedInfo.remove(npcId);
@@ -533,7 +524,6 @@ public class DBSpawnManager
 		info.set("currentHP", npc.getCurrentHp());
 		info.set("currentMP", npc.getCurrentMp());
 		info.set("respawnTime", 0);
-		
 		npc.setDBStatus(RaidBossStatus.ALIVE);
 		
 		_storedInfo.put(npc.getId(), info);

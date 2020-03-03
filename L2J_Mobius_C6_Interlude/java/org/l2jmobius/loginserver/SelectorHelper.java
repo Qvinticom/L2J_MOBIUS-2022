@@ -54,7 +54,6 @@ public class SelectorHelper implements IMMOExecutor<LoginClient>, IClientFactory
 	{
 		final LoginClient client = new LoginClient(con);
 		client.sendPacket(new Init(client));
-		
 		return client;
 	}
 	
@@ -62,7 +61,6 @@ public class SelectorHelper implements IMMOExecutor<LoginClient>, IClientFactory
 	public boolean accept(SocketChannel sc)
 	{
 		// return !LoginController.getInstance().isBannedAddress(sc.socket().getInetAddress());
-		
 		return _ipv4filter.accept(sc) && !LoginController.getInstance().isBannedAddress(sc.socket().getInetAddress());
 	}
 }

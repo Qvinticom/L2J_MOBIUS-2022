@@ -61,7 +61,6 @@ public class Lottery
 		_isSellingTickets = false;
 		_isStarted = false;
 		_enddate = System.currentTimeMillis();
-		
 		if (Config.ALLOW_LOTTERY)
 		{
 			(new startLottery()).run();
@@ -132,7 +131,6 @@ public class Lottery
 				if (rset.next())
 				{
 					_number = rset.getInt("idnr");
-					
 					if (rset.getInt("finished") == 1)
 					{
 						_number++;
@@ -142,7 +140,6 @@ public class Lottery
 					{
 						_prize = rset.getLong("prize");
 						_enddate = rset.getLong("enddate");
-						
 						if (_enddate <= (System.currentTimeMillis() + (2 * MINUTE)))
 						{
 							(new finishLottery()).run();
@@ -153,7 +150,6 @@ public class Lottery
 						{
 							_isStarted = true;
 							ThreadPool.schedule(new finishLottery(), _enddate - System.currentTimeMillis());
-							
 							if (_enddate > (System.currentTimeMillis() + (12 * MINUTE)))
 							{
 								_isSellingTickets = true;
@@ -171,13 +167,11 @@ public class Lottery
 			
 			_isSellingTickets = true;
 			_isStarted = true;
-			
 			Broadcast.toAllOnlinePlayers("Lottery tickets are now available for Lucky Lottery #" + _number + ".");
 			final Calendar finishtime = Calendar.getInstance();
 			finishtime.setTimeInMillis(_enddate);
 			finishtime.set(Calendar.MINUTE, 0);
 			finishtime.set(Calendar.SECOND, 0);
-			
 			if (finishtime.get(Calendar.DAY_OF_WEEK) == Calendar.SUNDAY)
 			{
 				finishtime.set(Calendar.HOUR_OF_DAY, 19);
@@ -222,7 +216,6 @@ public class Lottery
 		public void run()
 		{
 			_isSellingTickets = false;
-			
 			Broadcast.toAllOnlinePlayers(new SystemMessage(SystemMessageId.LOTTERY_TICKET_SALES_HAVE_BEEN_TEMPORARILY_SUSPENDED));
 		}
 	}
@@ -239,7 +232,6 @@ public class Lottery
 		{
 			final int[] luckynums = new int[5];
 			int luckynum = 0;
-			
 			for (int i = 0; i < 5; i++)
 			{
 				boolean found = true;
@@ -248,7 +240,6 @@ public class Lottery
 				{
 					luckynum = Rnd.get(20) + 1;
 					found = false;
-					
 					for (int j = 0; j < i; j++)
 					{
 						if (luckynums[j] == luckynum)
@@ -263,7 +254,6 @@ public class Lottery
 			
 			int enchant = 0;
 			int type2 = 0;
-			
 			for (int i = 0; i < 5; i++)
 			{
 				if (luckynums[i] < 17)
@@ -291,25 +281,21 @@ public class Lottery
 					{
 						int curenchant = rset.getInt("enchant_level") & enchant;
 						int curtype2 = rset.getInt("custom_type2") & type2;
-						
 						if ((curenchant == 0) && (curtype2 == 0))
 						{
 							continue;
 						}
 						
 						int count = 0;
-						
 						for (int i = 1; i <= 16; i++)
 						{
 							final int val = curenchant / 2;
-							
 							if (val != Math.round((double) curenchant / 2))
 							{
 								count++;
 							}
 							
 							final int val2 = curtype2 / 2;
-							
 							if (val2 != ((double) curtype2 / 2))
 							{
 								count++;
@@ -347,7 +333,6 @@ public class Lottery
 			long prize1 = 0;
 			long prize2 = 0;
 			long prize3 = 0;
-			
 			if (count1 > 0)
 			{
 				prize1 = (long) (((_prize - prize4) * Config.ALT_LOTTERY_5_NUMBER_RATE) / count1);
@@ -462,14 +447,12 @@ public class Lottery
 				{
 					int curenchant = rs.getInt("number1") & enchant;
 					int curtype2 = rs.getInt("number2") & type2;
-					
 					if ((curenchant == 0) && (curtype2 == 0))
 					{
 						return res;
 					}
 					
 					int count = 0;
-					
 					for (int i = 1; i <= 16; i++)
 					{
 						final int val = curenchant / 2;

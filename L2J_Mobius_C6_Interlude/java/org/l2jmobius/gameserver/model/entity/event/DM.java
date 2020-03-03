@@ -649,7 +649,6 @@ public class DM implements EventTask
 		try
 		{
 			_npcSpawn = new Spawn(tmpl);
-			
 			_npcSpawn.setX(_npcX);
 			_npcSpawn.setY(_npcY);
 			_npcSpawn.setZ(_npcZ);
@@ -658,7 +657,6 @@ public class DM implements EventTask
 			_npcSpawn.setRespawnDelay(1);
 			
 			SpawnTable.getInstance().addNewSpawn(_npcSpawn, false);
-			
 			_npcSpawn.init();
 			_npcSpawn.getLastSpawn().getStatus().setCurrentHp(999999999);
 			_npcSpawn.getLastSpawn().setTitle(_eventName);
@@ -666,7 +664,6 @@ public class DM implements EventTask
 			_npcSpawn.getLastSpawn().isAggressive();
 			_npcSpawn.getLastSpawn().decayMe();
 			_npcSpawn.getLastSpawn().spawnMe(_npcSpawn.getLastSpawn().getX(), _npcSpawn.getLastSpawn().getY(), _npcSpawn.getLastSpawn().getZ());
-			
 			_npcSpawn.getLastSpawn().broadcastPacket(new MagicSkillUse(_npcSpawn.getLastSpawn(), _npcSpawn.getLastSpawn(), 1034, 1, 1, 1));
 		}
 		catch (Exception e)
@@ -711,14 +708,12 @@ public class DM implements EventTask
 		}
 		Announcements.getInstance().criticalAnnounceToAll(_eventName + ": Recruiting levels: " + _minlvl + " to " + _maxlvl);
 		Announcements.getInstance().criticalAnnounceToAll(_eventName + ": Joinable in " + _joiningLocationName);
-		
 		if (Config.DM_COMMAND)
 		{
 			Announcements.getInstance().criticalAnnounceToAll(_eventName + ": Commands .dmjoin .dmleave .dminfo");
 		}
 		
 		Announcements.getInstance().criticalAnnounceToAll(_eventName + ": FULL BUFF Event: be ready with your buffs, they won't be deleted!!!");
-		
 		return true;
 	}
 	
@@ -755,7 +750,6 @@ public class DM implements EventTask
 		
 		_joining = false;
 		Announcements.getInstance().criticalAnnounceToAll(_eventName + ": Teleport to team spot in 20 seconds!");
-		
 		setUserData();
 		ThreadPool.schedule(() ->
 		{
@@ -824,7 +818,6 @@ public class DM implements EventTask
 		}
 		
 		_teleport = false;
-		
 		sit();
 		removeParties();
 		
@@ -832,7 +825,6 @@ public class DM implements EventTask
 		
 		Announcements.getInstance().criticalAnnounceToAll(_eventName + ": Started. Go to kill your enemies!");
 		_started = true;
-		
 		return true;
 	}
 	
@@ -872,9 +864,7 @@ public class DM implements EventTask
 		_inProgress = false;
 		_aborted = false;
 		final long delay = _intervalBetweenMatches;
-		
 		Announcements.getInstance().criticalAnnounceToAll(_eventName + ": joining period will be avaible again in " + _intervalBetweenMatches + " minute(s)!");
-		
 		waiter(delay);
 		
 		try
@@ -1000,7 +990,6 @@ public class DM implements EventTask
 		sit();
 		
 		Announcements.getInstance().criticalAnnounceToAll(_eventName + ": Teleport back to participation NPC in 20 seconds!");
-		
 		removeUserData();
 		ThreadPool.schedule(() ->
 		{
@@ -1065,7 +1054,6 @@ public class DM implements EventTask
 				if (startEvent() && !_aborted)
 				{
 					LOGGER.warning(_eventName + ": waiting.....minutes for event time " + _eventTime);
-					
 					waiter(_eventTime * 60 * 1000); // minutes for event time
 					finishEvent();
 					
@@ -1144,7 +1132,6 @@ public class DM implements EventTask
 		while (((startWaiterTime + interval) > System.currentTimeMillis()) && !_aborted)
 		{
 			seconds--; // Here because we don't want to see two time announce at the same time
-			
 			if (_joining || _started || _teleport)
 			{
 				switch (seconds)
@@ -1282,7 +1269,6 @@ public class DM implements EventTask
 				}
 				
 				final List<PlayerInstance> toBeRemoved = new ArrayList<>();
-				
 				for (PlayerInstance player : _players)
 				{
 					if (player == null)
@@ -1307,7 +1293,6 @@ public class DM implements EventTask
 						player._originalKarmaDM = 0;
 						player._countDMkills = 0;
 						player._inEventDM = false;
-						
 						toBeRemoved.add(player);
 						
 						player.sendMessage("Your participation in the DeathMatch event has been removed.");
@@ -1377,7 +1362,6 @@ public class DM implements EventTask
 				for (String characterName : playerBoxes)
 				{
 					final PlayerInstance player = World.getInstance().getPlayer(characterName);
-					
 					if ((player != null) && player._inEventDM)
 					{
 						eventPlayer.sendMessage("You already participated in event with another char!");
@@ -1434,7 +1418,6 @@ public class DM implements EventTask
 				player.getAppearance().setNameColor(_playerColors);
 				player.setKarma(0);
 				player.setTitle("Kills: " + player._countDMkills);
-				
 				if (player.isMounted() && player.setMountType(0))
 				{
 					if (player.isFlying())
@@ -1497,7 +1480,6 @@ public class DM implements EventTask
 		synchronized (_players)
 		{
 			LOGGER.info("Total Players : " + _players.size());
-			
 			for (PlayerInstance player : _players)
 			{
 				if (player != null)
@@ -1553,7 +1535,6 @@ public class DM implements EventTask
 		_sitForced = false;
 		_aborted = false;
 		_inProgress = false;
-		
 		_npcId = 0;
 		_npcX = 0;
 		_npcY = 0;
@@ -1578,7 +1559,6 @@ public class DM implements EventTask
 		{
 			PreparedStatement statement;
 			ResultSet rs;
-			
 			statement = con.prepareStatement("Select * from dm");
 			rs = statement.executeQuery();
 			
@@ -1622,7 +1602,6 @@ public class DM implements EventTask
 		try (Connection con = DatabaseFactory.getConnection())
 		{
 			PreparedStatement statement;
-			
 			statement = con.prepareStatement("Delete from dm");
 			statement.execute();
 			statement.close();
@@ -1668,7 +1647,6 @@ public class DM implements EventTask
 		try
 		{
 			final NpcHtmlMessage adminReply = new NpcHtmlMessage(5);
-			
 			final StringBuilder replyMSG = new StringBuilder("<html><title>" + _eventName + "</title><body>");
 			replyMSG.append("<center><img src=\"L2UI_CH3.herotower_deco\" width=256 height=32></center><br1>");
 			replyMSG.append("<center><font color=\"3366CC\">Current event:</font></center><br1>");
@@ -1700,7 +1678,6 @@ public class DM implements EventTask
 					if (_players.contains(eventPlayer))
 					{
 						replyMSG.append("<center><font color=\"3366CC\">You participated already!</font></center><br><br>");
-						
 						replyMSG.append("<center>Joined Players: <font color=\"00FF00\">" + _players.size() + "</font></center><br>");
 						replyMSG.append("<table border=\"0\"><tr>");
 						replyMSG.append("<td width=\"200\">Wait till event start or</td>");
@@ -1845,11 +1822,9 @@ public class DM implements EventTask
 		_topKills = 0;
 		_savePlayers = new ArrayList<>();
 		_topPlayers = new ArrayList<>();
-		
 		cleanLocalEventInfo();
 		
 		_inProgress = false;
-		
 		loadData();
 	}
 	
@@ -1943,9 +1918,7 @@ public class DM implements EventTask
 			
 			final NpcHtmlMessage nhm = new NpcHtmlMessage(5);
 			final StringBuilder replyMSG = new StringBuilder("");
-			
 			replyMSG.append("<html><body>You won the event. Look in your inventory for the reward.</body></html>");
-			
 			nhm.setHtml(replyMSG.toString());
 			_topPlayer.sendPacket(nhm);
 			
@@ -2047,7 +2020,6 @@ public class DM implements EventTask
 		final long totalTime = actualTime + _intervalBetweenMatches;
 		final long interval = totalTime - actualTime;
 		final int seconds = (int) (interval / 1000);
-		
 		return seconds / 60;
 	}
 	

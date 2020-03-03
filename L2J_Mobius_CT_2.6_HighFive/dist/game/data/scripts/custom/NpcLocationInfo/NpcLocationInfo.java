@@ -271,12 +271,10 @@ public class NpcLocationInfo extends AbstractNpcAI
 	public String onAdvEvent(String event, Npc npc, PlayerInstance player)
 	{
 		String htmltext = event;
-		
 		if (Util.isDigit(event))
 		{
 			htmltext = null;
 			final int npcId = Integer.parseInt(event);
-			
 			if (CommonUtil.contains(NPCRADAR, npcId))
 			{
 				int x = 0;
@@ -302,12 +300,10 @@ public class NpcLocationInfo extends AbstractNpcAI
 		String htmltext = getNoQuestMsg(player);
 		final int npcId = npc.getId();
 		getQuestState(player, true);
-		
 		if (CommonUtil.contains(NPC, npcId))
 		{
 			htmltext = npcId + ".htm";
 		}
-		
 		return htmltext;
 	}
 	

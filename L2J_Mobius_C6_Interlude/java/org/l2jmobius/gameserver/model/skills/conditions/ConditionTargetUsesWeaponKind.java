@@ -40,7 +40,6 @@ public class ConditionTargetUsesWeaponKind extends Condition
 		}
 		
 		final Weapon item = env.target.getActiveWeaponItem();
-		
 		if (item == null)
 		{
 			return false;

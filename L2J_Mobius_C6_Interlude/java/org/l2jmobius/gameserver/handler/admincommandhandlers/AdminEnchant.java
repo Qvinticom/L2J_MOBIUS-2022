@@ -65,7 +65,6 @@ public class AdminEnchant implements IAdminCommandHandler
 		else
 		{
 			int armorType = -1;
-			
 			if (command.startsWith("admin_seteh"))
 			{
 				armorType = Inventory.PAPERDOLL_HEAD;
@@ -166,7 +165,6 @@ public class AdminEnchant implements IAdminCommandHandler
 		}
 		
 		PlayerInstance player = null;
-		
 		if (target instanceof PlayerInstance)
 		{
 			player = (PlayerInstance) target;
@@ -179,12 +177,10 @@ public class AdminEnchant implements IAdminCommandHandler
 		
 		// now we need to find the equipped weapon of the targeted character...
 		int curEnchant = 0; // display purposes only
-		
 		ItemInstance itemInstance = null;
 		
 		// only attempt to enchant if there is a weapon equipped
 		ItemInstance parmorInstance = player.getInventory().getPaperdollItem(armorType);
-		
 		if ((parmorInstance != null) && (parmorInstance.getEquipSlot() == armorType))
 		{
 			itemInstance = parmorInstance;
@@ -193,7 +189,6 @@ public class AdminEnchant implements IAdminCommandHandler
 		{
 			// for bows and double handed weapons
 			parmorInstance = player.getInventory().getPaperdollItem(Inventory.PAPERDOLL_LRHAND);
-			
 			if ((parmorInstance != null) && (parmorInstance.getEquipSlot() == Inventory.PAPERDOLL_LRHAND))
 			{
 				itemInstance = parmorInstance;
@@ -206,7 +201,6 @@ public class AdminEnchant implements IAdminCommandHandler
 			 * Protection against Corrupt GMs This protection will ban both GM and Edited char if a GM tries to enchant a NON GM player above the value specified in the file: other.ini (GMOverEnchant = XX)
 			 */
 			curEnchant = itemInstance.getEnchantLevel();
-			
 			if ((Config.GM_OVER_ENCHANT != 0) && (ench >= Config.GM_OVER_ENCHANT) && !player.isGM())
 			{
 				player.sendMessage("A GM tried to overenchant you. You will both be banned.");

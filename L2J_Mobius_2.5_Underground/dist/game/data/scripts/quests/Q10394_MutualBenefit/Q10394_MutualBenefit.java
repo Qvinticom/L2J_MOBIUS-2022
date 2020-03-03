@@ -136,7 +136,6 @@ public class Q10394_MutualBenefit extends Quest
 	public String onKill(Npc npc, PlayerInstance killer, boolean isSummon)
 	{
 		final QuestState qs = getQuestState(killer, false);
-		
 		if ((qs != null) && qs.isStarted() && qs.isCond(1))
 		{
 			int killedGargoyle = qs.getInt("killed_" + GARGOYLE);

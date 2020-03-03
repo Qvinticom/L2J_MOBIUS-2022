@@ -541,7 +541,6 @@ public class TullyWorkshop extends AbstractNpcAI
 	{
 		final ClassId classId = player.getClassId();
 		final int npcId = npc.getId();
-		
 		if (TULLY_DOORLIST.containsKey(npcId))
 		{
 			if (classId.equalsOrChildOf(ClassId.MAESTRO))
@@ -698,7 +697,6 @@ public class TullyWorkshop extends AbstractNpcAI
 	public String onAdvEvent(String event, Npc npc, PlayerInstance player)
 	{
 		String htmltext = event;
-		
 		if (event.equalsIgnoreCase("disable_zone"))
 		{
 			final ZoneType dmgZone = ZoneManager.getInstance().getZoneById(200011);
@@ -801,7 +799,6 @@ public class TullyWorkshop extends AbstractNpcAI
 		if (event.equalsIgnoreCase("enter") && (npcId == DORIAN))
 		{
 			final Party party = player.getParty();
-			
 			if ((party != null) && (party.getLeaderObjectId() == player.getObjectId()))
 			{
 				for (PlayerInstance partyMember : party.getMembers())
@@ -817,7 +814,6 @@ public class TullyWorkshop extends AbstractNpcAI
 					partyMember.teleToLocation(-13400, 272827, -15300, true);
 				}
 				htmltext = null;
-				
 			}
 			else
 			{
@@ -876,7 +872,6 @@ public class TullyWorkshop extends AbstractNpcAI
 			{
 				final int i0 = talkedContraptions.contains(npc.getObjectId()) ? 0 : 1;
 				final int i1 = player.getClassId().equalsOrChildOf(ClassId.MAESTRO) ? 6 : 3;
-				
 				if (getRandom(1000) < ((i1 - i0) * 100))
 				{
 					talkedContraptions.add(npc.getObjectId());
@@ -1007,7 +1002,6 @@ public class TullyWorkshop extends AbstractNpcAI
 				allowAgentSpawn_7th = true;
 				npc.deleteMe();
 				spawnedAgent = null;
-				
 				for (MonsterInstance monster : spawnedFollowers)
 				{
 					if ((monster != null) && !monster.isDead())
@@ -1072,7 +1066,6 @@ public class TullyWorkshop extends AbstractNpcAI
 			htmltext = null;
 			final int tpId = Integer.parseInt(event.substring(10));
 			final Party party = player.getParty();
-			
 			if (party != null)
 			{
 				if (!party.isLeader(player))
@@ -1119,7 +1112,6 @@ public class TullyWorkshop extends AbstractNpcAI
 			final MonsterInstance victim1 = spawnedFollowers.get(1); // TEMENIR
 			final MonsterInstance victim2 = spawnedFollowers.get(0); // KIRETCENAH
 			final MonsterInstance actor = spawnedFollowers.get(2); // DRAXIUS
-			
 			if ((actor != null) && !actor.isDead())
 			{
 				final double transferringHp = actor.getMaxHp() * 0.0001;
@@ -1141,7 +1133,6 @@ public class TullyWorkshop extends AbstractNpcAI
 		{
 			final MonsterInstance victim = npcId == TEMENIR ? spawnedFollowers.get(1) : spawnedFollowers.get(2);
 			final MonsterInstance actor = spawnedFollowers.get(0);
-			
 			if ((actor != null) && (victim != null) && !actor.isDead() && !victim.isDead() && (getRandom(1000) > 333))
 			{
 				actor.clearAggroList();
@@ -1170,7 +1161,6 @@ public class TullyWorkshop extends AbstractNpcAI
 			{
 				is7thFloorAttackBegan = true;
 				startQuestTimer("end_7th_floor_attack", 1200000, null, null);
-				
 				if (spawnedAgent != null)
 				{
 					spawnedAgent.deleteMe();
@@ -1186,7 +1176,6 @@ public class TullyWorkshop extends AbstractNpcAI
 	public String onKill(Npc npc, PlayerInstance killer, boolean isSummon)
 	{
 		final int npcId = npc.getId();
-		
 		if ((npcId == TULLY) && npc.isInsideRadius2D(-12557, 273901, -9000, 1000))
 		{
 			for (int[] i : POST_MORTEM_SPAWNLIST)
@@ -1313,7 +1302,6 @@ public class TullyWorkshop extends AbstractNpcAI
 		else if ((npcId >= SERVANT_FIRST) && (npcId <= SERVANT_LAST))
 		{
 			final int[] roomData = getRoomData(npc);
-			
 			if ((roomData[0] >= 0) && (roomData[1] >= 0) && allowAgentSpawn)
 			{
 				allowServantSpawn = true;
@@ -1419,7 +1407,6 @@ public class TullyWorkshop extends AbstractNpcAI
 	{
 		final int npcId = npc.getId();
 		final int skillId = skill.getId();
-		
 		if ((npcId == AGENT) && (skillId == 5526))
 		{
 			player.teleToLocation(21935, 243923, 11088, true); // to the roof
@@ -1485,7 +1472,6 @@ public class TullyWorkshop extends AbstractNpcAI
 	{
 		killedFollowersCount = 0;
 		is7thFloorAttackBegan = false;
-		
 		for (int[] data : SPAWNLIST_7TH_FLOOR)
 		{
 			final MonsterInstance monster = (MonsterInstance) addSpawn(data[0], data[1], data[2], data[3], data[4], false, 0, false);

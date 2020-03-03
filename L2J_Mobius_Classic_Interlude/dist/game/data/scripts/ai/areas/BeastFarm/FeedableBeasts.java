@@ -444,7 +444,6 @@ public class FeedableBeasts extends AbstractNpcAI
 			// if not trained, the newly spawned mob will automatically be aggro against its feeder
 			// (what happened to "never bite the hand that feeds you" anyway?!)
 			final Attackable nextNpc = (Attackable) addSpawn(nextNpcId, npc);
-			
 			if (MAD_COW_POLYMORPH.containsKey(nextNpcId))
 			{
 				startQuestTimer("polymorph Mad Cow", 10000, nextNpc, player);

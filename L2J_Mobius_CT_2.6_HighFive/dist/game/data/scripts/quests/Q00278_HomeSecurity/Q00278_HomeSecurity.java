@@ -74,7 +74,6 @@ public class Q00278_HomeSecurity extends Quest
 			case "31537-07.html":
 			{
 				final int i0 = getRandom(100);
-				
 				if (i0 < 10)
 				{
 					giveItems(player, 960, 1);
@@ -172,7 +171,6 @@ public class Q00278_HomeSecurity extends Quest
 	{
 		final QuestState qs = getQuestState(player, true);
 		String htmltext = getNoQuestMsg(player);
-		
 		if (qs.isCreated())
 		{
 			htmltext = "31537-01.htm";

@@ -180,7 +180,6 @@ public class AdminEffects implements IAdminCommandHandler
 			final Creature target = (Creature) activeChar.getTarget();
 			target.setInvisible(!target.isInvisible());
 			BuilderUtil.sendSysMessage(activeChar, "You've made " + target.getName() + " " + (target.isInvisible() ? "invisible" : "visible") + ".");
-			
 			if (target.isPlayer())
 			{
 				((PlayerInstance) target).broadcastUserInfo();
@@ -382,7 +381,6 @@ public class AdminEffects implements IAdminCommandHandler
 					radius = Integer.parseInt(st.nextToken());
 				}
 				final Team team = Team.valueOf(val.toUpperCase());
-				
 				World.getInstance().forEachVisibleObjectInRange(activeChar, PlayerInstance.class, radius, player -> player.setTeam(team));
 			}
 			catch (Exception e)
@@ -544,7 +542,6 @@ public class AdminEffects implements IAdminCommandHandler
 				
 				final NpcHtmlMessage html = new NpcHtmlMessage(0, 1);
 				html.setFile(activeChar, "data/html/admin/ave_abnormal.htm");
-				
 				if (result.getPages() > 0)
 				{
 					html.replace("%pages%", "<table width=280 cellspacing=0><tr>" + result.getPagerTemplate() + "</tr></table>");
@@ -720,7 +717,6 @@ public class AdminEffects implements IAdminCommandHandler
 	private void adminAtmosphere(String type, String state, int duration, PlayerInstance activeChar)
 	{
 		IClientOutgoingPacket packet = null;
-		
 		if (type.equals("sky"))
 		{
 			if (state.equals("night"))

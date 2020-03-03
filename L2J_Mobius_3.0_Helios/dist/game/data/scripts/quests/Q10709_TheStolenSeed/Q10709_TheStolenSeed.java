@@ -61,7 +61,6 @@ public class Q10709_TheStolenSeed extends Quest
 	public String onAdvEvent(String event, Npc npc, PlayerInstance player)
 	{
 		final QuestState qs = getQuestState(player, false);
-		
 		if (event.equals("action"))
 		{
 			if ((qs != null) && (qs.isCond(1)) && (getQuestItemsCount(player, MEMORY_FRAGMENT) >= 1))
@@ -78,7 +77,6 @@ public class Q10709_TheStolenSeed extends Quest
 				// Attack + invul
 				akum.reduceCurrentHp(1, embryo, null);
 				embryo.reduceCurrentHp(1, akum, null); // TODO: Find better way for attack
-				
 				embryo.setInvul(true);
 				akum.setInvul(true);
 				
@@ -199,7 +197,6 @@ public class Q10709_TheStolenSeed extends Quest
 	public String onKill(Npc npc, PlayerInstance killer, boolean isSummon)
 	{
 		final QuestState qs = getQuestState(killer, false);
-		
 		if ((qs != null) && qs.isStarted() && qs.isCond(2))
 		{
 			qs.setCond(0);

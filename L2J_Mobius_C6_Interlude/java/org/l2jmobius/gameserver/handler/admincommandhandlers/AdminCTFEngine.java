@@ -623,7 +623,6 @@ public class AdminCTFEngine implements IAdminCommandHandler
 	{
 		final NpcHtmlMessage adminReply = new NpcHtmlMessage(5);
 		final StringBuilder replyMSG = new StringBuilder("<html><body>");
-		
 		replyMSG.append("<center><font color=\"LEVEL\">[CTF Engine]</font></center><br><br><br>");
 		replyMSG.append("<table><tr><td><edit var=\"input1\" width=\"125\"></td><td><edit var=\"input2\" width=\"125\"></td></tr></table>");
 		replyMSG.append("<table border=\"0\"><tr>");
@@ -663,7 +662,6 @@ public class AdminCTFEngine implements IAdminCommandHandler
 	{
 		final NpcHtmlMessage adminReply = new NpcHtmlMessage(5);
 		final StringBuilder replyMSG = new StringBuilder("<html><body>");
-		
 		replyMSG.append("<center><font color=\"LEVEL\">[CTF Engine]</font></center><br><br><br>");
 		replyMSG.append("<table border=\"0\"><tr>");
 		replyMSG.append("<td width=\"100\"><button value=\"Join\" action=\"bypass -h admin_ctf_join\" width=90 height=15 back=\"sek.cbui94\" fore=\"sek.cbui92\"></td>");
@@ -692,9 +690,7 @@ public class AdminCTFEngine implements IAdminCommandHandler
 	{
 		final NpcHtmlMessage adminReply = new NpcHtmlMessage(5);
 		final StringBuilder replyMSG = new StringBuilder("<html><body>");
-		
 		replyMSG.append("<center><font color=\"LEVEL\">[CTF Engine]</font></center><br><br><br>");
-		
 		replyMSG.append("<table><tr>");
 		if (!CTF.isInProgress())
 		{
@@ -709,7 +705,6 @@ public class AdminCTFEngine implements IAdminCommandHandler
 		replyMSG.append("Joining location name:&nbsp;<font color=\"00FF00\">" + CTF.getJoiningLocationName() + "</font><br1>");
 		
 		final Location npcLoc = CTF.getNpcLocation();
-		
 		replyMSG.append("Joining NPC ID:&nbsp;<font color=\"00FF00\">" + CTF.getNpcId() + " on pos " + npcLoc.getX() + "," + npcLoc.getY() + "," + npcLoc.getZ() + "</font><br1>");
 		replyMSG.append("<button value=\"Tele->NPC\" action=\"bypass -h admin_ctf_tele_npc\" width=90 height=15 back=\"sek.cbui94\" fore=\"sek.cbui92\"><br>");
 		replyMSG.append("Reward ID:&nbsp;<font color=\"00FF00\">" + CTF.getRewardId() + "</font><br1>");
@@ -733,11 +728,9 @@ public class AdminCTFEngine implements IAdminCommandHandler
 			replyMSG.append("<font color=\"LEVEL\">Current teams:</font><br1>");
 		}
 		replyMSG.append("<center><table border=\"0\">");
-		
 		for (String team : CTF._teams)
 		{
 			replyMSG.append("<tr><td width=\"100\">Name: <font color=\"FF0000\">" + team + "</font>");
-			
 			if (Config.CTF_EVEN_TEAMS.equals("NO") || Config.CTF_EVEN_TEAMS.equals("BALANCE"))
 			{
 				replyMSG.append("&nbsp;(" + CTF.teamPlayersCount(team) + " joined)");
@@ -757,7 +750,6 @@ public class AdminCTFEngine implements IAdminCommandHandler
 				c = "0" + c;
 			}
 			replyMSG.append("Color: <font color=\"00FF00\">0x" + c.toUpperCase() + "</font><font color=\"" + c + "\"> =) </font>");
-			
 			replyMSG.append("</td></tr><tr><td>");
 			replyMSG.append("<button value=\"Tele->Team\" action=\"bypass -h admin_ctf_tele_team " + team + "\" width=90 height=15 back=\"sek.cbui94\" fore=\"sek.cbui92\">");
 			replyMSG.append("</td></tr><tr><td>");

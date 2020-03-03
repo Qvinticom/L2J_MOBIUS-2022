@@ -33,7 +33,6 @@ public class UnsummonPet implements IPlayerActionHandler
 	public void useAction(PlayerInstance player, ActionDataHolder data, boolean ctrlPressed, boolean shiftPressed)
 	{
 		final Summon pet = player.getPet();
-		
 		if (pet == null)
 		{
 			player.sendPacket(SystemMessageId.YOU_DO_NOT_HAVE_A_PET);

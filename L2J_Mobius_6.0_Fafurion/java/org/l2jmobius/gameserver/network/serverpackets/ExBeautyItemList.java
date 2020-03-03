@@ -44,7 +44,6 @@ public class ExBeautyItemList implements IClientOutgoingPacket
 	public ExBeautyItemList(PlayerInstance player)
 	{
 		_beautyData = BeautyShopData.getInstance().getBeautyData(player.getRace(), player.getAppearance().getSexType());
-		
 		for (BeautyItem hair : _beautyData.getHairList().values())
 		{
 			final List<BeautyItem> colors = new ArrayList<>();

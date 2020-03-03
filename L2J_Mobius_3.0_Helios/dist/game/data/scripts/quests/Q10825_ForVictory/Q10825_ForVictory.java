@@ -118,7 +118,6 @@ public class Q10825_ForVictory extends Quest
 	{
 		final QuestState qs = getQuestState(player, true);
 		String htmltext = getNoQuestMsg(player);
-		
 		switch (qs.getState())
 		{
 			case State.CREATED:
@@ -152,7 +151,6 @@ public class Q10825_ForVictory extends Quest
 		if (player != null)
 		{
 			final QuestState qs = getQuestState(player, false);
-			
 			if ((qs != null) && qs.isCond(1))
 			{
 				giveItems(player, MARK_OF_VALOR, 1);

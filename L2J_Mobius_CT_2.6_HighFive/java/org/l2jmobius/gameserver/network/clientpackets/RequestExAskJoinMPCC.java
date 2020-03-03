@@ -169,7 +169,6 @@ public class RequestExAskJoinMPCC implements IClientIncomingPacket
 			sm.addString(requestor.getName());
 			targetLeader.sendPacket(sm);
 			targetLeader.sendPacket(new ExAskJoinMPCC(requestor.getName()));
-			
 			requestor.sendMessage("You invited " + targetLeader.getName() + " to your Command Channel.");
 		}
 		else

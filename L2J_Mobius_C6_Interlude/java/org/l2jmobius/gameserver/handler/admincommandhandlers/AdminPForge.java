@@ -65,9 +65,7 @@ public class AdminPForge implements IAdminCommandHandler
 				final StringTokenizer st = new StringTokenizer(command);
 				st.nextToken();
 				String format = st.nextToken();
-				
 				boolean broadcast = false;
-				
 				if (format.equalsIgnoreCase("broadcast"))
 				{
 					format = st.nextToken();
@@ -78,7 +76,6 @@ public class AdminPForge implements IAdminCommandHandler
 				for (int i = 0; i < format.length(); i++)
 				{
 					String val = st.nextToken();
-					
 					if (val.equalsIgnoreCase("$objid"))
 					{
 						val = String.valueOf(activeChar.getObjectId());
@@ -174,7 +171,6 @@ public class AdminPForge implements IAdminCommandHandler
 		adminReply.setFile("data/html/admin/pforge2.htm");
 		adminReply.replace("%format%", format);
 		StringBuilder replyMSG = new StringBuilder();
-		
 		for (int i = 0; i < format.length(); i++)
 		{
 			replyMSG.append(format.charAt(i) + " : <edit var=\"v" + i + "\" width=100><br1>");
@@ -182,7 +178,6 @@ public class AdminPForge implements IAdminCommandHandler
 		
 		adminReply.replace("%valueditors%", replyMSG.toString());
 		replyMSG = new StringBuilder();
-		
 		for (int i = 0; i < format.length(); i++)
 		{
 			replyMSG.append(" \\$v" + i);

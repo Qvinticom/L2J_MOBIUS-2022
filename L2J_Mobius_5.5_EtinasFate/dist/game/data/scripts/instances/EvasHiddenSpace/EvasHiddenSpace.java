@@ -48,15 +48,12 @@ public class EvasHiddenSpace extends AbstractInstance
 	public String onAdvEvent(String event, Npc npc, PlayerInstance player)
 	{
 		String htmltext = null;
-		
 		final QuestState qs = player.getQuestState(Q10369_NoblesseSoulTesting.class.getSimpleName());
-		
 		if (event.equals("enterInstance"))
 		{
 			if ((qs != null) && qs.isStarted())
 			{
 				enterInstance(player, npc, TEMPLATE_ID);
-				
 				if (qs.isCond(14))
 				{
 					qs.setCond(15);

@@ -56,7 +56,6 @@ public class RequestGMCommand implements IClientIncomingPacket
 		}
 		
 		final PlayerInstance player = World.getInstance().getPlayer(_targetName);
-		
 		final Clan clan = ClanTable.getInstance().getClanByName(_targetName);
 		
 		// player name was incorrect?

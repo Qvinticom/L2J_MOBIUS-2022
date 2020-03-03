@@ -49,7 +49,6 @@ public class RequestDuelAnswerStart extends GameClientPacket
 		}
 		
 		final PlayerInstance requestor = player.getActiveRequester();
-		
 		if (requestor == null)
 		{
 			return;

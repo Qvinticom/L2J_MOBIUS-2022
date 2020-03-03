@@ -43,7 +43,6 @@ public class MyBirthday implements IUserCommandHandler
 		}
 		
 		final Calendar date = player.getCreateDate();
-		
 		final SystemMessage sm = new SystemMessage(SystemMessageId.C1_S_BIRTHDAY_IS_S3_S4_S2);
 		sm.addPcName(player);
 		sm.addString(Integer.toString(date.get(Calendar.YEAR)));

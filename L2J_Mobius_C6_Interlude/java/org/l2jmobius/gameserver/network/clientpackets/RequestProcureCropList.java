@@ -64,7 +64,6 @@ public class RequestProcureCropList extends GameClientPacket
 			final int manorId = readD();
 			_items[(i * 4) + 2] = manorId;
 			long count = readD();
-			
 			if (count > Integer.MAX_VALUE)
 			{
 				count = Integer.MAX_VALUE;
@@ -84,7 +83,6 @@ public class RequestProcureCropList extends GameClientPacket
 		}
 		
 		WorldObject target = player.getTarget();
-		
 		if (!(target instanceof ManorManagerInstance))
 		{
 			target = player.getLastFolkNPC();
@@ -102,19 +100,16 @@ public class RequestProcureCropList extends GameClientPacket
 		}
 		
 		final ManorManagerInstance manorManager = (ManorManagerInstance) target;
-		
 		final int currentManorId = manorManager.getCastle().getCastleId();
 		
 		// Calculate summary values
 		int slots = 0;
 		int weight = 0;
-		
 		for (int i = 0; i < _size; i++)
 		{
 			final int itemId = _items[(i * 4) + 1];
 			final int manorId = _items[(i * 4) + 2];
 			final int count = _items[(i * 4) + 3];
-			
 			if ((itemId == 0) || (manorId == 0) || (count == 0))
 			{
 				continue;
@@ -138,7 +133,6 @@ public class RequestProcureCropList extends GameClientPacket
 				final int rewardItemId = ManorSeedData.getInstance().getRewardItem(itemId, crop.getReward());
 				final Item template = ItemTable.getInstance().getTemplate(rewardItemId);
 				weight += count * template.getWeight();
-				
 				if (!template.isStackable())
 				{
 					slots += count;
@@ -167,14 +161,12 @@ public class RequestProcureCropList extends GameClientPacket
 		
 		// Proceed the purchase
 		final InventoryUpdate playerIU = new InventoryUpdate();
-		
 		for (int i = 0; i < _size; i++)
 		{
 			final int objId = _items[(i * 4) + 0];
 			final int cropId = _items[(i * 4) + 1];
 			final int manorId = _items[(i * 4) + 2];
 			final int count = _items[(i * 4) + 3];
-			
 			if ((objId == 0) || (cropId == 0) || (manorId == 0) || (count == 0))
 			{
 				continue;
@@ -203,7 +195,6 @@ public class RequestProcureCropList extends GameClientPacket
 			int fee = 0; // fee for selling to other manors
 			
 			final int rewardItem = ManorSeedData.getInstance().getRewardItem(cropId, crop.getReward());
-			
 			if (count > crop.getAmount())
 			{
 				continue;
@@ -211,7 +202,6 @@ public class RequestProcureCropList extends GameClientPacket
 			
 			final int sellPrice = count * ManorSeedData.getInstance().getCropBasicPrice(cropId);
 			final int rewardPrice = ItemTable.getInstance().getTemplate(rewardItem).getReferencePrice();
-			
 			if (rewardPrice == 0)
 			{
 				continue;
@@ -267,7 +257,6 @@ public class RequestProcureCropList extends GameClientPacket
 				}
 				
 				crop.setAmount(crop.getAmount() - count);
-				
 				if (Config.ALT_MANOR_SAVE_ALL_ACTIONS)
 				{
 					CastleManager.getInstance().getCastleById(manorId).updateCrop(crop.getId(), crop.getAmount(), CastleManorManager.PERIOD_CURRENT);

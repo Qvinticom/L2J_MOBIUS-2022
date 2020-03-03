@@ -44,7 +44,6 @@ public class MercTicket implements IItemHandler
 		final PlayerInstance player = (PlayerInstance) playable;
 		final Castle castle = CastleManager.getInstance().getCastle(player);
 		int castleId = -1;
-		
 		if (castle != null)
 		{
 			castleId = castle.getCastleId();

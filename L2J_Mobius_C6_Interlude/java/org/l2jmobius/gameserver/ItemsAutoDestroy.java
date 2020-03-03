@@ -52,7 +52,6 @@ public class ItemsAutoDestroy
 		}
 		
 		final long curtime = System.currentTimeMillis();
-		
 		for (ItemInstance item : _items)
 		{
 			if ((item == null) || (item.getDropTime() == 0) || (item.getItemLocation() != ItemInstance.ItemLocation.VOID))

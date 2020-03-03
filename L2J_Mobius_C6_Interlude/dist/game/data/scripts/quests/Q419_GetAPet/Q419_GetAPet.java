@@ -155,7 +155,6 @@ public class Q419_GetAPet extends Quest
 		if (event.equals("task"))
 		{
 			final int race = player.getRace().ordinal();
-			
 			htmltext = "30731-0" + (race + 4) + ".htm";
 			st.setState(State.STARTED);
 			st.set("cond", "1");
@@ -295,7 +294,6 @@ public class Q419_GetAPet extends Quest
 		}
 		
 		final int[] drop = DROPLIST.get(npc.getNpcId());
-		
 		if (st.hasQuestItems(drop[0] - 5))
 		{
 			st.dropItems(drop[0], 1, 50, drop[1]);
@@ -312,11 +310,9 @@ public class Q419_GetAPet extends Quest
 			final String[] questions = st.getString("quiz").split(" ");
 			final int index = Rnd.get(questions.length - 1);
 			final String question = questions[index];
-			
 			if (questions.length > (10 - answers))
 			{
 				questions[index] = questions[questions.length - 1];
-				
 				st.set("quiz", String.join(" ", Arrays.copyOf(questions, questions.length - 1)));
 			}
 			return "30731-" + question + ".htm";

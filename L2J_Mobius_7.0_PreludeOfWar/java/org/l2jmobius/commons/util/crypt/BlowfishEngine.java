@@ -1153,7 +1153,6 @@ public class BlowfishEngine
 			xr ^= func(xl) ^ P[15];
 			xl ^= func(xr) ^ P[16];
 			xr ^= P[17];
-			
 			table[s] = xr;
 			table[s + 1] = xl;
 			xr = xl; // end of cycle swap
@@ -1295,7 +1294,6 @@ public class BlowfishEngine
 	{
 		int xl = bytesTo32bits(src, srcIndex);
 		int xr = bytesTo32bits(src, srcIndex + 4);
-		
 		xl ^= P[0];
 		xr ^= func(xl) ^ P[1];
 		xl ^= func(xr) ^ P[2];
@@ -1314,7 +1312,6 @@ public class BlowfishEngine
 		xr ^= func(xl) ^ P[15];
 		xl ^= func(xr) ^ P[16];
 		xr ^= P[17];
-		
 		bits32ToBytes(xr, dst, dstIndex);
 		bits32ToBytes(xl, dst, dstIndex + 4);
 	}
@@ -1405,7 +1402,6 @@ public class BlowfishEngine
 	{
 		int xl = bytesTo32bits(src, srcIndex);
 		int xr = bytesTo32bits(src, srcIndex + 4);
-		
 		xl ^= P[17];
 		xr ^= func(xl) ^ P[16];
 		xl ^= func(xr) ^ P[15];
@@ -1424,7 +1420,6 @@ public class BlowfishEngine
 		xr ^= func(xl) ^ P[2];
 		xl ^= func(xr) ^ P[1];
 		xr ^= P[0];
-		
 		bits32ToBytes(xr, dst, dstIndex);
 		bits32ToBytes(xl, dst, dstIndex + 4);
 	}

@@ -162,7 +162,6 @@ public abstract class LetterQuest extends Quest
 	{
 		final PlayerInstance player = event.getPlayer();
 		final QuestState qs = getQuestState(player, false);
-		
 		if (event.getCommand().equals(getTeleportCommand()))
 		{
 			if ((qs != null) && qs.isCond(1) && hasQuestItems(player, _startSOE))
@@ -217,7 +216,6 @@ public abstract class LetterQuest extends Quest
 		
 		final PlayerInstance player = event.getPlayer();
 		final QuestState qs = getQuestState(player, false);
-		
 		if ((qs == null) && (event.getOldLevel() < event.getNewLevel()) && canStartQuest(player))
 		{
 			player.sendPacket(new TutorialShowQuestionMark(getId()));
@@ -237,7 +235,6 @@ public abstract class LetterQuest extends Quest
 		
 		final PlayerInstance player = event.getPlayer();
 		final QuestState qs = getQuestState(player, false);
-		
 		if ((qs == null) && canStartQuest(player))
 		{
 			player.sendPacket(new TutorialShowQuestionMark(getId()));
@@ -250,7 +247,6 @@ public abstract class LetterQuest extends Quest
 	public void onQuestAborted(PlayerInstance player)
 	{
 		final QuestState qs = getQuestState(player, true);
-		
 		qs.startQuest();
 		player.sendPacket(SystemMessageId.THIS_QUEST_CANNOT_BE_DELETED);
 	}

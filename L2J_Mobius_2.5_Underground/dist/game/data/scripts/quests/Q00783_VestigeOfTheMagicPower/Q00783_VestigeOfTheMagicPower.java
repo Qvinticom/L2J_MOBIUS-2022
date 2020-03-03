@@ -141,7 +141,6 @@ public class Q00783_VestigeOfTheMagicPower extends Quest
 	{
 		final QuestState qs = getQuestState(player, true);
 		String htmltext = getNoQuestMsg(player);
-		
 		if (npc.getId() == LEONA_BLACKBIRD)
 		{
 			switch (qs.getState())

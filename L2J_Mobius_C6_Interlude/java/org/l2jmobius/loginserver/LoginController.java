@@ -131,10 +131,8 @@ public class LoginController
 	private LoginController() throws GeneralSecurityException
 	{
 		_hackProtection = new HashMap<>();
-		
 		_keyPairs = new ScrambledKeyPair[10];
 		KeyPairGenerator keygen = null;
-		
 		keygen = KeyPairGenerator.getInstance("RSA");
 		final RSAKeyGenParameterSpec spec = new RSAKeyGenParameterSpec(1024, RSAKeyGenParameterSpec.F4);
 		keygen.initialize(spec);
@@ -146,7 +144,6 @@ public class LoginController
 		}
 		
 		LOGGER.info("Cached 10 KeyPairs for RSA communication");
-		
 		testCipher((RSAPrivateKey) _keyPairs[0]._pair.getPrivate());
 		
 		// Store keys for blowfish communication
@@ -178,7 +175,6 @@ public class LoginController
 	private void generateBlowFishKeys()
 	{
 		_blowfishKeys = new byte[BLOWFISH_KEYS][16];
-		
 		for (int i = 0; i < BLOWFISH_KEYS; i++)
 		{
 			for (int j = 0; j < _blowfishKeys[i].length; j++)
@@ -238,7 +234,6 @@ public class LoginController
 	public SessionKey assignSessionKeyToClient(String account, LoginClient client)
 	{
 		SessionKey key;
-		
 		key = new SessionKey(Rnd.nextInt(), Rnd.nextInt(), Rnd.nextInt(), Rnd.nextInt());
 		_loginServerClients.put(account, client);
 		return key;
@@ -282,7 +277,6 @@ public class LoginController
 		{
 			// login was successful, verify presence on Gameservers
 			ret = AuthLoginResult.ALREADY_ON_GS;
-			
 			if (!isAccountInAnyGameServer(account))
 			{
 				// account isnt on any GS verify LS itself
@@ -381,58 +375,48 @@ public class LoginController
 	public SessionKey getKeyForAccount(String account)
 	{
 		final LoginClient client = _loginServerClients.get(account);
-		
 		if (client != null)
 		{
 			return client.getSessionKey();
 		}
-		
 		return null;
 	}
 	
 	public int getOnlinePlayerCount(int serverId)
 	{
 		final GameServerInfo gsi = GameServerTable.getInstance().getRegisteredGameServerById(serverId);
-		
 		if ((gsi != null) && gsi.isAuthed())
 		{
 			return gsi.getCurrentPlayerCount();
 		}
-		
 		return 0;
 	}
 	
 	public boolean isAccountInAnyGameServer(String account)
 	{
 		final Collection<GameServerInfo> serverList = GameServerTable.getInstance().getRegisteredGameServers().values();
-		
 		for (GameServerInfo gsi : serverList)
 		{
 			final GameServerThread gst = gsi.getGameServerThread();
-			
 			if ((gst != null) && gst.hasAccountOnGameServer(account))
 			{
 				return true;
 			}
 		}
-		
 		return false;
 	}
 	
 	public GameServerInfo getAccountOnGameServer(String account)
 	{
 		final Collection<GameServerInfo> serverList = GameServerTable.getInstance().getRegisteredGameServers().values();
-		
 		for (GameServerInfo gsi : serverList)
 		{
 			final GameServerThread gst = gsi.getGameServerThread();
-			
 			if ((gst != null) && gst.hasAccountOnGameServer(account))
 			{
 				return gsi;
 			}
 		}
-		
 		return null;
 	}
 	
@@ -440,7 +424,6 @@ public class LoginController
 	{
 		int total = 0;
 		final Collection<GameServerInfo> serverList = GameServerTable.getInstance().getRegisteredGameServers().values();
-		
 		for (GameServerInfo gsi : serverList)
 		{
 			if (gsi.isAuthed())
@@ -448,19 +431,16 @@ public class LoginController
 				total += gsi.getCurrentPlayerCount();
 			}
 		}
-		
 		return total;
 	}
 	
 	public int getMaxAllowedOnlinePlayers(int id)
 	{
 		final GameServerInfo gsi = GameServerTable.getInstance().getRegisteredGameServerById(id);
-		
 		if (gsi != null)
 		{
 			return gsi.getMaxPlayers();
 		}
-		
 		return 0;
 	}
 	
@@ -522,11 +502,9 @@ public class LoginController
 			final PreparedStatement statement = con.prepareStatement("SELECT accessLevel FROM accounts WHERE login=?");
 			statement.setString(1, user);
 			final ResultSet rset = statement.executeQuery();
-			
 			if (rset.next())
 			{
 				final int accessLevel = rset.getInt(1);
-				
 				if (accessLevel >= 100)
 				{
 					ok = true;
@@ -578,21 +556,17 @@ public class LoginController
 			final MessageDigest md = MessageDigest.getInstance("SHA");
 			final byte[] raw = password.getBytes(StandardCharsets.UTF_8);
 			final byte[] hash = md.digest(raw);
-			
 			byte[] expected = null;
 			int access = 0;
 			int lastServer = 1;
-			
 			PreparedStatement statement = con.prepareStatement("SELECT password, accessLevel, lastServer FROM accounts WHERE login=?");
 			statement.setString(1, user);
 			ResultSet rset = statement.executeQuery();
-			
 			if (rset.next())
 			{
 				expected = Base64.getDecoder().decode(rset.getString("password"));
 				access = rset.getInt("accessLevel");
 				lastServer = rset.getInt("lastServer");
-				
 				if (lastServer <= 0)
 				{
 					lastServer = 1; // minServerId is 1 in Interlude
@@ -673,7 +647,6 @@ public class LoginController
 		if (!ok)
 		{
 			final FailedLoginAttempt failedAttempt = _hackProtection.get(address);
-			
 			int failedCount;
 			if (failedAttempt == null)
 			{
@@ -709,11 +682,9 @@ public class LoginController
 			final PreparedStatement statement = con.prepareStatement("SELECT accessLevel FROM accounts WHERE login=?");
 			statement.setString(1, user);
 			final ResultSet rset = statement.executeQuery();
-			
 			if (rset.next())
 			{
 				final int accessLevel = rset.getInt(1);
-				
 				if (accessLevel < 0)
 				{
 					ok = true;

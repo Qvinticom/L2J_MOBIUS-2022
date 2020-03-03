@@ -48,7 +48,6 @@ public class AdminElement implements IAdminCommandHandler
 	public boolean useAdminCommand(String command, PlayerInstance activeChar)
 	{
 		int armorType = -1;
-		
 		if (command.startsWith("admin_setlh"))
 		{
 			armorType = Inventory.PAPERDOLL_HEAD;
@@ -83,7 +82,6 @@ public class AdminElement implements IAdminCommandHandler
 			try
 			{
 				final String[] args = command.split(" ");
-				
 				final AttributeType type = AttributeType.findByName(args[1]);
 				final int value = Integer.parseInt(args[2]);
 				if ((type == null) || (value < 0) || (value > 450))

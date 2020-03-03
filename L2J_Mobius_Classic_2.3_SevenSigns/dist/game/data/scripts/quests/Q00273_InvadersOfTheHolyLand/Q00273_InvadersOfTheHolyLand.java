@@ -113,7 +113,6 @@ public class Q00273_InvadersOfTheHolyLand extends Quest
 	{
 		final QuestState qs = getQuestState(player, true);
 		String htmltext = null;
-		
 		switch (qs.getState())
 		{
 			case State.CREATED:

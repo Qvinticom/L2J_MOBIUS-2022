@@ -115,7 +115,6 @@ public class RequestBuyItem implements IClientIncomingPacket
 		
 		double castleTaxRate = 0;
 		double baseTaxRate = 0;
-		
 		if ((merchant == null) && !player.isGM() && (_listId != CUSTOM_CB_SELL_LIST))
 		{
 			client.sendPacket(ActionFailed.STATIC_PACKET);

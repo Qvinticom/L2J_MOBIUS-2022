@@ -39,14 +39,12 @@ public class RequestAnswerJoinPledge extends GameClientPacket
 	protected void runImpl()
 	{
 		final PlayerInstance player = getClient().getPlayer();
-		
 		if (player == null)
 		{
 			return;
 		}
 		
 		final PlayerInstance requestor = player.getRequest().getPartner();
-		
 		if (requestor == null)
 		{
 			return;
@@ -74,7 +72,6 @@ public class RequestAnswerJoinPledge extends GameClientPacket
 			if ((clan != null) && clan.checkClanJoinCondition(requestor, player, requestPacket.getPledgeType()))
 			{
 				player.sendPacket(new JoinPledge(requestor.getClanId()));
-				
 				player.setPledgeType(requestPacket.getPledgeType());
 				
 				if (requestPacket.getPledgeType() == Clan.SUBUNIT_ACADEMY)

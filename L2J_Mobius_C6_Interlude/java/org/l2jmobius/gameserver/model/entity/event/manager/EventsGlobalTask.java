@@ -50,7 +50,6 @@ public class EventsGlobalTask implements Runnable
 		{
 			instance = new EventsGlobalTask();
 		}
-		
 		return instance;
 	}
 	
@@ -64,7 +63,6 @@ public class EventsGlobalTask implements Runnable
 		
 		List<EventTask> savedTasksForTime = timeToTasks.get(event.getEventStartTime());
 		List<EventTask> savedTasksForId = eventIdToTasks.get(event.getEventIdentifier());
-		
 		if (savedTasksForTime != null)
 		{
 			if (!savedTasksForTime.contains(event))
@@ -143,7 +141,6 @@ public class EventsGlobalTask implements Runnable
 		
 		final List<EventTask> oldTasksForId = eventIdToTasks.get(event.getEventIdentifier());
 		final List<EventTask> oldTasksForTime = timeToTasks.get(event.getEventStartTime());
-		
 		if (oldTasksForId != null)
 		{
 			oldTasksForId.remove(event);
@@ -169,10 +166,8 @@ public class EventsGlobalTask implements Runnable
 		
 		final int hour = calendar.get(Calendar.HOUR_OF_DAY);
 		final int min = calendar.get(Calendar.MINUTE);
-		
 		String hourStr = "";
 		String minStr = "";
-		
 		if (hour < 10)
 		{
 			hourStr = "0" + hour;

@@ -116,7 +116,6 @@ public class Q00510_AClansPrestige extends Quest
 		final QuestState qs = getQuestState(player, true);
 		final Clan clan = player.getClan();
 		String htmltext = getNoQuestMsg(player);
-		
 		switch (qs.getState())
 		{
 			case State.CREATED:

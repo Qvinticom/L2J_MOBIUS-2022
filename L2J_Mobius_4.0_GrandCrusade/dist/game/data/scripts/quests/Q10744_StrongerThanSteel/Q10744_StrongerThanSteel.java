@@ -47,7 +47,6 @@ public class Q10744_StrongerThanSteel extends Quest
 		addStartNpc(MILONE);
 		addTalkId(MILONE, DOLKIN);
 		addKillId(TREANT, LEAFIE);
-		
 		addCondRace(Race.ERTHEIA, "");
 		addCondLevel(MIN_LEVEL, MAX_LEVEL, "33953-00.htm");
 		registerQuestItems(TREANT_LEAF, LEAFIE_LEAF);
@@ -96,7 +95,6 @@ public class Q10744_StrongerThanSteel extends Quest
 	{
 		final QuestState qs = getQuestState(player, true);
 		String htmltext = getNoQuestMsg(player);
-		
 		if (qs.isCompleted())
 		{
 			htmltext = getAlreadyCompletedMsg(player);
@@ -145,7 +143,6 @@ public class Q10744_StrongerThanSteel extends Quest
 	public String onKill(Npc npc, PlayerInstance killer, boolean isSummon)
 	{
 		final QuestState qs = getQuestState(killer, false);
-		
 		if ((qs != null) && qs.isCond(2))
 		{
 			if (npc.getId() == TREANT)

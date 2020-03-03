@@ -624,16 +624,13 @@ public class AdminEditChar implements IAdminCommandHandler
 				st.nextToken();
 				
 				final boolean changeCreateExpiryTime = st.nextToken().equalsIgnoreCase("create");
-				
 				final String playerName = st.nextToken();
 				PlayerInstance player = null;
 				player = World.getInstance().getPlayer(playerName);
-				
 				if (player == null)
 				{
 					final Connection con = DatabaseFactory.getConnection();
 					final PreparedStatement ps = con.prepareStatement("UPDATE characters SET " + (changeCreateExpiryTime ? "clan_create_expiry_time" : "clan_join_expiry_time") + " WHERE char_name=? LIMIT 1");
-					
 					ps.setString(1, playerName);
 					ps.execute();
 				}
@@ -1020,7 +1017,6 @@ public class AdminEditChar implements IAdminCommandHandler
 				return false;
 			}
 			final String statName = st.nextToken();
-			
 			Stat stat = null;
 			for (Stat stats : Stat.values())
 			{
@@ -1109,7 +1105,6 @@ public class AdminEditChar implements IAdminCommandHandler
 	private void gatherCharacterInfo(PlayerInstance activeChar, PlayerInstance player, String filename)
 	{
 		String ip = "N/A";
-		
 		if (player == null)
 		{
 			BuilderUtil.sendSysMessage(activeChar, "Player is null.");
@@ -1239,7 +1234,6 @@ public class AdminEditChar implements IAdminCommandHandler
 		adminReply.setFile(activeChar, "data/html/admin/charfind.htm");
 		
 		final StringBuilder replyMSG = new StringBuilder(1000);
-		
 		final List<PlayerInstance> players = new ArrayList<>(World.getInstance().getPlayers());
 		players.sort(Comparator.comparingLong(PlayerInstance::getUptime));
 		for (PlayerInstance player : players)
@@ -1266,7 +1260,6 @@ public class AdminEditChar implements IAdminCommandHandler
 		adminReply.replace("%results%", replyMSG.toString());
 		
 		final String replyMSG2;
-		
 		if (CharactersFound == 0)
 		{
 			replyMSG2 = "s. Please try again.";
@@ -1297,7 +1290,6 @@ public class AdminEditChar implements IAdminCommandHandler
 	private void findCharactersPerIp(PlayerInstance activeChar, String ipAdress)
 	{
 		boolean findDisconnected = false;
-		
 		if (ipAdress.equals("disconnected"))
 		{
 			findDisconnected = true;
@@ -1365,7 +1357,6 @@ public class AdminEditChar implements IAdminCommandHandler
 		adminReply.replace("%results%", replyMSG.toString());
 		
 		final String replyMSG2;
-		
 		if (charactersFound == 0)
 		{
 			replyMSG2 = "s. Maybe they got d/c? :)";
@@ -1423,7 +1414,6 @@ public class AdminEditChar implements IAdminCommandHandler
 		String ip = "0.0.0.0";
 		GameClient client;
 		final Map<String, Integer> dualboxIPs = new HashMap<>();
-		
 		final List<PlayerInstance> players = new ArrayList<>(World.getInstance().getPlayers());
 		players.sort(Comparator.comparingLong(PlayerInstance::getUptime));
 		for (PlayerInstance player : players)
@@ -1477,7 +1467,6 @@ public class AdminEditChar implements IAdminCommandHandler
 		final Map<IpPack, List<PlayerInstance>> ipMap = new HashMap<>();
 		GameClient client;
 		final Map<IpPack, Integer> dualboxIPs = new HashMap<>();
-		
 		final List<PlayerInstance> players = new ArrayList<>(World.getInstance().getPlayers());
 		players.sort(Comparator.comparingLong(PlayerInstance::getUptime));
 		for (PlayerInstance player : players)

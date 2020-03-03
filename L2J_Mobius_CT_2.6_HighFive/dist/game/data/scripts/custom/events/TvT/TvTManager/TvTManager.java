@@ -144,7 +144,6 @@ public class TvTManager extends AbstractNpcAI implements IVoicedCommandHandler
 			htmltext = htmltext.replace("%team2name%", Config.TVT_EVENT_TEAM_2_NAME);
 			htmltext = htmltext.replace("%team2playercount%", String.valueOf(teamsPlayerCounts[1]));
 			htmltext = htmltext.replace("%playercount%", String.valueOf(teamsPlayerCounts[0] + teamsPlayerCounts[1]));
-			
 			if (!isParticipant)
 			{
 				htmltext = htmltext.replace("%fee%", TvTEvent.getParticipationFee());

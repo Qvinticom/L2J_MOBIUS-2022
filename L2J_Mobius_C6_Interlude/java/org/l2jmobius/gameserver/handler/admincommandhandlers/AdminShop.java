@@ -58,7 +58,6 @@ public class AdminShop implements IAdminCommandHandler
 		{
 			AdminHelpPage.showHelpPage(activeChar, "gmshops.htm");
 		}
-		
 		return true;
 	}
 	
@@ -82,7 +81,6 @@ public class AdminShop implements IAdminCommandHandler
 		}
 		
 		final StoreTradeList list = TradeController.getInstance().getBuyList(val);
-		
 		if (list != null)
 		{
 			activeChar.sendPacket(new BuyList(list, activeChar.getAdena()));

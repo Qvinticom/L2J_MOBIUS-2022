@@ -72,7 +72,6 @@ public class TeleportToTarget extends AbstractEffect
 		final int px = target.getX();
 		final int py = target.getY();
 		double ph = Util.convertHeadingToDegree(target.getHeading());
-		
 		ph += 180;
 		if (ph > 360)
 		{
@@ -83,9 +82,7 @@ public class TeleportToTarget extends AbstractEffect
 		final int x = (int) (px + (25 * Math.cos(ph)));
 		final int y = (int) (py + (25 * Math.sin(ph)));
 		final int z = target.getZ();
-		
 		final Location loc = GeoEngine.getInstance().canMoveToTargetLoc(creature.getX(), creature.getY(), creature.getZ(), x, y, z, creature.getInstanceId());
-		
 		creature.getAI().setIntention(CtrlIntention.AI_INTENTION_IDLE);
 		creature.broadcastPacket(new FlyToLocation(creature, loc.getX(), loc.getY(), loc.getZ(), FlyType.DUMMY));
 		creature.abortAttack();

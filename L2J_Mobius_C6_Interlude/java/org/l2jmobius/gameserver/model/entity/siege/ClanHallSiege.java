@@ -42,7 +42,6 @@ public abstract class ClanHallSiege
 			final PreparedStatement statement = con.prepareStatement("SELECT siege_data FROM clanhall_siege WHERE id=?");
 			statement.setInt(1, clanHallId);
 			final ResultSet rs = statement.executeQuery();
-			
 			if (rs.next())
 			{
 				res = rs.getLong("siege_data");
@@ -69,7 +68,6 @@ public abstract class ClanHallSiege
 			tmpDate.set(Calendar.HOUR_OF_DAY, hour);
 			tmpDate.set(Calendar.MINUTE, 0);
 			tmpDate.set(Calendar.SECOND, 0);
-			
 			setSiegeDate(tmpDate);
 			try (Connection con = DatabaseFactory.getConnection())
 			{

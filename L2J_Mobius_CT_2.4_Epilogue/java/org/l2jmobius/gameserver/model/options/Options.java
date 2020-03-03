@@ -206,9 +206,7 @@ public class Options
 	private final void addSkill(PlayerInstance player, Skill skill)
 	{
 		boolean updateTimeStamp = false;
-		
 		player.addSkill(skill, false);
-		
 		if (skill.isActive())
 		{
 			final long remainingTime = player.getSkillRemainingReuseTime(skill.getReuseHashCode());

@@ -65,7 +65,6 @@ public class AdminEnchant implements IAdminCommandHandler
 		else
 		{
 			int armorType = -1;
-			
 			if (command.startsWith("admin_seteh"))
 			{
 				armorType = Inventory.PAPERDOLL_HEAD;
@@ -172,7 +171,6 @@ public class AdminEnchant implements IAdminCommandHandler
 		// get the target
 		
 		final PlayerInstance player = activeChar.getTarget() != null ? activeChar.getTarget().getActingPlayer() : activeChar;
-		
 		if (player == null)
 		{
 			activeChar.sendPacket(SystemMessageId.INVALID_TARGET);

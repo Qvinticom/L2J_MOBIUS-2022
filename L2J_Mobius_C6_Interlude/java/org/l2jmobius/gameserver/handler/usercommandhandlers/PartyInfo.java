@@ -49,7 +49,6 @@ public class PartyInfo implements IUserCommandHandler
 		final int memberCount = playerParty.getMemberCount();
 		final int lootDistribution = playerParty.getLootDistribution();
 		final String partyLeader = playerParty.getPartyMembers().get(0).getName();
-		
 		player.sendPacket(SystemMessageId.PARTY_INFORMATION);
 		
 		switch (lootDistribution)

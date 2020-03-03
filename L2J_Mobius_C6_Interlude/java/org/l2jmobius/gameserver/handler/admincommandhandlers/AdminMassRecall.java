@@ -46,9 +46,7 @@ public class AdminMassRecall implements IAdminCommandHandler
 			try
 			{
 				final String val = command.substring(17).trim();
-				
 				final Clan clan = ClanTable.getInstance().getClanByName(val);
-				
 				if (clan == null)
 				{
 					BuilderUtil.sendSysMessage(activeChar, "This clan doesn't exists.");
@@ -56,7 +54,6 @@ public class AdminMassRecall implements IAdminCommandHandler
 				}
 				
 				final PlayerInstance[] m = clan.getOnlineMembers();
-				
 				for (PlayerInstance element : m)
 				{
 					Teleport(element, activeChar.getX(), activeChar.getY(), activeChar.getZ(), "Admin is teleporting you");
@@ -73,7 +70,6 @@ public class AdminMassRecall implements IAdminCommandHandler
 			{
 				final String val = command.substring(17).trim();
 				final Clan clan = ClanTable.getInstance().getClanByName(val);
-				
 				if (clan == null)
 				{
 					BuilderUtil.sendSysMessage(activeChar, "This clan doesn't exists.");
@@ -81,11 +77,9 @@ public class AdminMassRecall implements IAdminCommandHandler
 				}
 				
 				final int ally = clan.getAllyId();
-				
 				if (ally == 0)
 				{
 					final PlayerInstance[] m = clan.getOnlineMembers();
-					
 					for (PlayerInstance element : m)
 					{
 						Teleport(element, activeChar.getX(), activeChar.getY(), activeChar.getZ(), "Admin is teleporting you");
@@ -98,7 +92,6 @@ public class AdminMassRecall implements IAdminCommandHandler
 						if (aclan.getAllyId() == ally)
 						{
 							final PlayerInstance[] m = aclan.getOnlineMembers();
-							
 							for (PlayerInstance element : m)
 							{
 								Teleport(element, activeChar.getX(), activeChar.getY(), activeChar.getZ(), "Admin is teleporting you");
@@ -118,7 +111,6 @@ public class AdminMassRecall implements IAdminCommandHandler
 			{
 				final String val = command.substring(18).trim();
 				final PlayerInstance player = World.getInstance().getPlayer(val);
-				
 				if (player == null)
 				{
 					BuilderUtil.sendSysMessage(activeChar, "Target error.");
@@ -132,7 +124,6 @@ public class AdminMassRecall implements IAdminCommandHandler
 				}
 				
 				final Party p = player.getParty();
-				
 				for (PlayerInstance ppl : p.getPartyMembers())
 				{
 					Teleport(ppl, activeChar.getX(), activeChar.getY(), activeChar.getZ(), "Admin is teleporting you");

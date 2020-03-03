@@ -175,7 +175,6 @@ public class Options
 				{
 					effect.continuousInstant(info.getEffector(), info.getEffected(), info.getSkill(), info.getItem());
 					effect.pump(player, info.getSkill());
-					
 					if (effect.canStart(info.getEffector(), info.getEffected(), info.getSkill()))
 					{
 						info.addEffect(effect);
@@ -254,9 +253,7 @@ public class Options
 	private void addSkill(PlayerInstance player, Skill skill)
 	{
 		boolean updateTimeStamp = false;
-		
 		player.addSkill(skill, false);
-		
 		if (skill.isActive())
 		{
 			final long remainingTime = player.getSkillRemainingReuseTime(skill.getReuseHashCode());

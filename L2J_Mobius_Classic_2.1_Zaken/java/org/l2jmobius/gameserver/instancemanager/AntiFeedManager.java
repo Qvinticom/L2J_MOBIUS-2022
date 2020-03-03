@@ -157,7 +157,6 @@ public class AntiFeedManager
 		
 		final Integer addrHash = client.getConnectionAddress().hashCode();
 		final AtomicInteger connectionCount = event.computeIfAbsent(addrHash, k -> new AtomicInteger());
-		
 		if (!Config.DUALBOX_COUNT_OFFLINE_TRADERS)
 		{
 			final String address = client.getConnectionAddress().getHostAddress();
@@ -209,7 +208,6 @@ public class AntiFeedManager
 		}
 		
 		final Integer addrHash = client.getConnectionAddress().hashCode();
-		
 		return event.computeIfPresent(addrHash, (k, v) ->
 		{
 			if ((v == null) || (v.decrementAndGet() == 0))

@@ -251,7 +251,6 @@ public class Clan implements IIdentifiable, INamable
 		
 		// Notify to scripts
 		EventDispatcher.getInstance().notifyEventAsync(new OnPlayerClanLeaderChange(exMember, member, this));
-		
 		if (exLeader != null)
 		{
 			if (exLeader.isFlying())
@@ -381,7 +380,6 @@ public class Clan implements IIdentifiable, INamable
 		player.setPledgeClass(ClanMember.calculatePledgeClass(player));
 		player.sendPacket(new PledgeShowMemberListUpdate(player));
 		player.sendPacket(new PledgeSkillList(this));
-		
 		addSkillEffects(player);
 		
 		// Notify to scripts
@@ -656,7 +654,6 @@ public class Clan implements IIdentifiable, INamable
 				break;
 			}
 		}
-		
 		return limit;
 	}
 	
@@ -1110,7 +1107,6 @@ public class Clan implements IIdentifiable, INamable
 					setNewLeaderId(clanData.getInt("new_leader_id"), false);
 					
 					final int leaderId = (clanData.getInt("leader_id"));
-					
 					ps.clearParameters();
 					
 					try (PreparedStatement select = con.prepareStatement("SELECT char_name,level,classid,charId,title,power_grade,subpledge,apprentice,sponsor,sex,race FROM characters WHERE clanid=?"))
@@ -1255,7 +1251,6 @@ public class Clan implements IIdentifiable, INamable
 					final Skill skill = SkillData.getInstance().getSkill(id, level);
 					// Add the Skill object to the Clan _skills
 					final int subType = rset.getInt("sub_pledge_id");
-					
 					if (subType == -2)
 					{
 						_skills.put(skill.getId(), skill);
@@ -1294,7 +1289,6 @@ public class Clan implements IIdentifiable, INamable
 		{
 			return new Skill[0];
 		}
-		
 		return _skills.values().toArray(new Skill[_skills.values().size()]);
 	}
 	
@@ -1314,13 +1308,11 @@ public class Clan implements IIdentifiable, INamable
 	public Skill addSkill(Skill newSkill)
 	{
 		Skill oldSkill = null;
-		
 		if (newSkill != null)
 		{
 			// Replace oldSkill by newSkill or Add the newSkill
 			oldSkill = _skills.put(newSkill.getId(), newSkill);
 		}
-		
 		return oldSkill;
 	}
 	
@@ -1838,7 +1830,6 @@ public class Clan implements IIdentifiable, INamable
 		{
 			return new SubPledge[0];
 		}
-		
 		return _subPledges.values().toArray(new SubPledge[_subPledges.values().size()]);
 	}
 	
@@ -2172,7 +2163,6 @@ public class Clan implements IIdentifiable, INamable
 	public void setAuctionBiddedAt(int id, boolean storeInDb)
 	{
 		_auctionBiddedAt = id;
-		
 		if (storeInDb)
 		{
 			try (Connection con = DatabaseFactory.getConnection();

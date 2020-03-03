@@ -90,9 +90,7 @@ public class EnemyCharge extends AbstractEffect
 		final int x = curX + (int) ((distance - offset) * cos);
 		final int y = curY + (int) ((distance - offset) * sin);
 		final int z = info.getEffected().getZ();
-		
 		final Location destination = GeoEngine.getInstance().canMoveToTargetLoc(info.getEffector().getX(), info.getEffector().getY(), info.getEffector().getZ(), x, y, z, info.getEffector().getInstanceId());
-		
 		info.getEffector().broadcastPacket(new FlyToLocation(info.getEffector(), destination, FlyType.CHARGE));
 		
 		// maybe is need force set X,Y,Z

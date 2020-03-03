@@ -387,7 +387,6 @@ public class Q00115_TheOtherSideOfTruth extends Quest
 	{
 		final QuestState qs = getQuestState(player, true);
 		String htmltext = getNoQuestMsg(player);
-		
 		switch (qs.getState())
 		{
 			case State.COMPLETED:

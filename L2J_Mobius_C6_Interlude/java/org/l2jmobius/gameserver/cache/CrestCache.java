@@ -56,16 +56,13 @@ public class CrestCache
 	public void reload()
 	{
 		final FileFilter filter = new BmpFilter();
-		
 		final File dir = new File(Config.DATAPACK_ROOT, "data/crests/");
-		
 		final File[] files = dir.listFiles(filter);
 		byte[] content;
 		synchronized (this)
 		{
 			_loadedFiles = 0;
 			_bytesBuffLen = 0;
-			
 			_cachePledge.clear();
 			_cachePledgeLarge.clear();
 			_cacheAlly.clear();
@@ -125,9 +122,7 @@ public class CrestCache
 	public void convertOldPedgeFiles()
 	{
 		final File dir = new File(Config.DATAPACK_ROOT, "data/crests/");
-		
 		final File[] files = dir.listFiles(new OldPledgeFilter());
-		
 		if (files == null)
 		{
 			LOGGER.info("No old crest files found in \"data/crests/\"!!! May be you deleted them?");
@@ -257,7 +252,6 @@ public class CrestCache
 	{
 		boolean output = false;
 		final File crestFile = new File(Config.DATAPACK_ROOT, "data/crests/Crest_" + newId + ".bmp");
-		
 		FileOutputStream out = null;
 		try
 		{
@@ -285,7 +279,6 @@ public class CrestCache
 				}
 			}
 		}
-		
 		return output;
 	}
 	
@@ -320,7 +313,6 @@ public class CrestCache
 				}
 			}
 		}
-		
 		return output;
 	}
 	
@@ -355,7 +347,6 @@ public class CrestCache
 				}
 			}
 		}
-		
 		return output;
 	}
 	

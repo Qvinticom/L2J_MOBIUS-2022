@@ -73,10 +73,8 @@ public class TeleporterInstance extends FolkInstance
 		}
 		
 		final int condition = validateCondition(player);
-		
 		final StringTokenizer st = new StringTokenizer(command, " ");
 		final String actualCommand = st.nextToken(); // Get actual command
-		
 		if (actualCommand.equalsIgnoreCase("goto"))
 		{
 			final int npcId = getTemplate().getNpcId();
@@ -168,7 +166,6 @@ public class TeleporterInstance extends FolkInstance
 		{
 			pom = npcId + "-" + value;
 		}
-		
 		return "data/html/teleporter/" + pom + ".htm";
 	}
 	
@@ -262,7 +259,6 @@ public class TeleporterInstance extends FolkInstance
 			{
 				// Chars level XX can't enter in Cruma Tower. Retail: level 56 and above
 				final int maxlvl = Config.CRUMA_TOWER_LEVEL_RESTRICT;
-				
 				final String filename = "data/html/teleporter/30483-biglvl.htm";
 				final NpcHtmlMessage html = new NpcHtmlMessage(getObjectId());
 				html.setFile(filename);
@@ -315,7 +311,6 @@ public class TeleporterInstance extends FolkInstance
 				return COND_OWNER; // Owner
 			}
 		}
-		
 		return COND_ALL_FALSE;
 	}
 }

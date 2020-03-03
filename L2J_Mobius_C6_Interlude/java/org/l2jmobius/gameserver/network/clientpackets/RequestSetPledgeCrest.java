@@ -52,7 +52,6 @@ public class RequestSetPledgeCrest extends GameClientPacket
 	protected void runImpl()
 	{
 		final PlayerInstance player = getClient().getPlayer();
-		
 		if (player == null)
 		{
 			return;
@@ -106,9 +105,7 @@ public class RequestSetPledgeCrest extends GameClientPacket
 			}
 			
 			final CrestCache crestCache = CrestCache.getInstance();
-			
 			final int newId = IdFactory.getNextId();
-			
 			if (clan.hasCrest())
 			{
 				crestCache.removePledgeCrest(newId);

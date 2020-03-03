@@ -159,7 +159,6 @@ public class Q00999_T1Tutorial extends Quest
 		}
 		
 		final int Ex = qs.getInt("Ex");
-		
 		if (event.equalsIgnoreCase("TimerEx_NewbieHelper"))
 		{
 			if (Ex == 0)
@@ -258,7 +257,6 @@ public class Q00999_T1Tutorial extends Quest
 		}
 		
 		String htmltext = "";
-		
 		QuestState st = player.getQuestState(getName());
 		if (st == null)
 		{
@@ -276,7 +274,6 @@ public class Q00999_T1Tutorial extends Quest
 		final int Ex = qs.getInt("Ex");
 		final int step = st.getInt("step");
 		final Talk talk = Talks.get(npc.getId());
-		
 		if (((player.getLevel() >= 10) || (onlyone != 0)) && (talk._npcType == 1))
 		{
 			htmltext = "30575-05.htm";
@@ -407,7 +404,6 @@ public class Q00999_T1Tutorial extends Quest
 		}
 		
 		final int Ex = qs.getInt("Ex");
-		
 		if (Ex <= 1)
 		{
 			st.playTutorialVoice("tutorial_voice_011");

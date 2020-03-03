@@ -303,7 +303,6 @@ public class Q10390_KekropusLetter extends Quest
 		{
 			final PlayerInstance player = creature.getActingPlayer();
 			final QuestState qs = getQuestState(player, false);
-			
 			if ((qs != null) && qs.isCond(4))
 			{
 				showOnScreenMsg(player, NpcStringId.ALLIGATOR_ISLAND_IS_A_GOOD_HUNTING_ZONE_FOR_LV_40_OR_ABOVE, ExShowScreenMessage.TOP_CENTER, 6000);

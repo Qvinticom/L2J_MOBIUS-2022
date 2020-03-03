@@ -51,14 +51,12 @@ public class DBInstallerConsole implements DBOutputInterface
 				final String dbPass = scn.nextLine();
 				System.out.printf("%s (%s): ", "Database", prop.get("dbDbse_" + db, db));
 				String dbDbse = scn.nextLine();
-				
 				dbHost = dbHost.isEmpty() ? prop.get("dbHost_" + db, "localhost") : dbHost;
 				dbPort = dbPort.isEmpty() ? prop.get("dbPort_" + db, "3306") : dbPort;
 				dbUser = dbUser.isEmpty() ? prop.get("dbUser_" + db, "root") : dbUser;
 				dbDbse = dbDbse.isEmpty() ? prop.get("dbDbse_" + db, db) : dbDbse;
 				
 				final MySqlConnect connector = new MySqlConnect(dbHost, dbPort, dbUser, dbPass, dbDbse, true);
-				
 				_con = connector.getConnection();
 			}
 			
@@ -108,9 +106,7 @@ public class DBInstallerConsole implements DBOutputInterface
 		}
 		
 		final MySqlConnect connector = new MySqlConnect(host, port, user, pass, database, true);
-		
 		_con = connector.getConnection();
-		
 		if ((mode != null) && ("c".equalsIgnoreCase(mode) || "u".equalsIgnoreCase(mode)))
 		{
 			final RunTasks rt = new RunTasks(this, database, dir);

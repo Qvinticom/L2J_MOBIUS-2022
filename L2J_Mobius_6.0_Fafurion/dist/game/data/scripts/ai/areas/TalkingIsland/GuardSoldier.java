@@ -44,7 +44,6 @@ public class GuardSoldier extends AbstractNpcAI
 		{
 			npc.broadcastSocialAction(3);
 			npc.broadcastSay(ChatType.NPC_GENERAL, NpcStringId.LADY_YOU_MUST_GO_IN, 1000);
-			
 		}
 		else if (event.equals("SOCIAL_ACTION") && (npc != null))
 		{

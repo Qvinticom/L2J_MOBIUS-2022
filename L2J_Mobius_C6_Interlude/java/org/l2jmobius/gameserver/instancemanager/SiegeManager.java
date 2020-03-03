@@ -210,11 +210,9 @@ public class SiegeManager
 			// Siege spawns settings
 			_controlTowerSpawnList = new HashMap<>();
 			_artefactSpawnList = new HashMap<>();
-			
 			for (Castle castle : CastleManager.getInstance().getCastles())
 			{
 				final List<SiegeSpawn> controlTowersSpawns = new ArrayList<>();
-				
 				for (int i = 1; i < 0xFF; i++)
 				{
 					final String spawnParams = siegeSettings.getProperty(castle.getName() + "ControlTower" + i, "");
@@ -232,7 +230,6 @@ public class SiegeManager
 						final int z = Integer.parseInt(st.nextToken());
 						final int npc_id = Integer.parseInt(st.nextToken());
 						final int hp = Integer.parseInt(st.nextToken());
-						
 						controlTowersSpawns.add(new SiegeSpawn(castle.getCastleId(), x, y, z, 0, npc_id, hp));
 					}
 					catch (Exception e)
@@ -242,7 +239,6 @@ public class SiegeManager
 				}
 				
 				final List<SiegeSpawn> artefactSpawns = new ArrayList<>();
-				
 				for (int i = 1; i < 0xFF; i++)
 				{
 					final String spawnParams = siegeSettings.getProperty(castle.getName() + "Artefact" + i, "");
@@ -260,7 +256,6 @@ public class SiegeManager
 						final int z = Integer.parseInt(st.nextToken());
 						final int heading = Integer.parseInt(st.nextToken());
 						final int npc_id = Integer.parseInt(st.nextToken());
-						
 						artefactSpawns.add(new SiegeSpawn(castle.getCastleId(), x, y, z, heading, npc_id));
 					}
 					catch (Exception e)

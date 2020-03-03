@@ -42,7 +42,6 @@ public class RequestConfirmCancelItem extends GameClientPacket
 	{
 		final PlayerInstance player = getClient().getPlayer();
 		final ItemInstance item = (ItemInstance) World.getInstance().findObject(_itemId);
-		
 		if ((player == null) || (item == null))
 		{
 			return;

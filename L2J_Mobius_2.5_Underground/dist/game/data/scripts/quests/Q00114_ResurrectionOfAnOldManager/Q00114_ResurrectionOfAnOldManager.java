@@ -67,7 +67,6 @@ public class Q00114_ResurrectionOfAnOldManager extends Quest
 	public String onAdvEvent(String event, Npc npc, PlayerInstance player)
 	{
 		final QuestState qs = getQuestState(player, false);
-		
 		if (qs == null)
 		{
 			return null;
@@ -395,7 +394,6 @@ public class Q00114_ResurrectionOfAnOldManager extends Quest
 	public String onKill(Npc npc, PlayerInstance player, boolean isSummon)
 	{
 		final QuestState qs = getQuestState(player, false);
-		
 		if ((qs != null) && qs.isCond(10) && (qs.getInt("spawned") == 1))
 		{
 			npc.broadcastPacket(new NpcSay(npc.getObjectId(), ChatType.NPC_GENERAL, npc.getId(), NpcStringId.THIS_ENEMY_IS_FAR_TOO_POWERFUL_FOR_ME_TO_FIGHT_I_MUST_WITHDRAW));
@@ -429,7 +427,6 @@ public class Q00114_ResurrectionOfAnOldManager extends Quest
 		final QuestState qs = getQuestState(player, true);
 		final int talk = qs.getInt("talk");
 		String htmltext = getNoQuestMsg(player);
-		
 		switch (npc.getId())
 		{
 			case YUMI:
@@ -755,7 +752,6 @@ public class Q00114_ResurrectionOfAnOldManager extends Quest
 				break;
 			}
 		}
-		
 		return htmltext;
 	}
 }

@@ -94,9 +94,7 @@ public class CursedWeaponsManager implements IXmlReader
 						final int id = Integer.parseInt(attrs.getNamedItem("id").getNodeValue());
 						final int skillId = Integer.parseInt(attrs.getNamedItem("skillId").getNodeValue());
 						final String name = attrs.getNamedItem("name").getNodeValue();
-						
 						final CursedWeapon cw = new CursedWeapon(id, skillId, name);
-						
 						int val;
 						for (Node cd = d.getFirstChild(); cd != null; cd = cd.getNextSibling())
 						{
@@ -276,21 +274,18 @@ public class CursedWeaponsManager implements IXmlReader
 	public void drop(int itemId, Creature killer)
 	{
 		final CursedWeapon cw = _cursedWeapons.get(itemId);
-		
 		cw.dropIt(killer);
 	}
 	
 	public void increaseKills(int itemId)
 	{
 		final CursedWeapon cw = _cursedWeapons.get(itemId);
-		
 		cw.increaseKills();
 	}
 	
 	public int getLevel(int itemId)
 	{
 		final CursedWeapon cw = _cursedWeapons.get(itemId);
-		
 		return cw.getLevel();
 	}
 	

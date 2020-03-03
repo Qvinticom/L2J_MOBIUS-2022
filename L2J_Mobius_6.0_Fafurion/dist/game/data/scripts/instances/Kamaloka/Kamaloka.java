@@ -437,7 +437,6 @@ public class Kamaloka extends AbstractInstance
 		final int level = LEVEL[index];
 		// and client name
 		final String instanceName = InstanceManager.getInstance().getInstanceName(TEMPLATE_IDS[index]);
-		
 		Map<Integer, Long> instanceTimes;
 		// for each party member
 		for (PlayerInstance partyMember : party.getMembers())
@@ -583,7 +582,6 @@ public class Kamaloka extends AbstractInstance
 		{
 			final List<Spawn> firstRoom = new ArrayList<>(spawns.length - 1);
 			final int shaman = getRandom(spawns.length); // random position for shaman
-			
 			for (int i = 0; i < spawns.length; i++)
 			{
 				if (i == shaman)
@@ -667,7 +665,6 @@ public class Kamaloka extends AbstractInstance
 	public String onTalk(Npc npc, PlayerInstance player)
 	{
 		final int npcId = npc.getId();
-		
 		if (npcId == TELEPORTER)
 		{
 			final Instance world = npc.getInstanceWorld();
@@ -696,7 +693,6 @@ public class Kamaloka extends AbstractInstance
 		{
 			return npcId + ".htm";
 		}
-		
 		return null;
 	}
 	
@@ -804,7 +800,6 @@ public class Kamaloka extends AbstractInstance
 			if ((world.getParameters().getInt("miniBoss", 0) != 0) && (world.getParameters().getInt("miniBoss", 0) == objectId))
 			{
 				world.setParameter("miniBoss", 0);
-				
 				if (world.getParameters().getObject("boss", Npc.class) != null)
 				{
 					final int skillId = MINIBOSS[world.getParameters().getInt("index")][4];

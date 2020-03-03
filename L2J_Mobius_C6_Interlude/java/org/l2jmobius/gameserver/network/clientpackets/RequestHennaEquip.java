@@ -61,7 +61,6 @@ public class RequestHennaEquip extends GameClientPacket
 		
 		final ItemInstance ownedDyes = player.getInventory().getItemByItemId(henna.getDyeId());
 		final int count = (ownedDyes == null) ? 0 : ownedDyes.getCount();
-		
 		if (count < Henna.getRequiredDyeAmount())
 		{
 			player.sendPacket(SystemMessageId.THE_SYMBOL_CANNOT_BE_DRAWN);

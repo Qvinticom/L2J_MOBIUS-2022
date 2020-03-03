@@ -89,10 +89,8 @@ public class OlympiadGameManager implements Runnable
 		if (Olympiad.getInstance().inCompPeriod())
 		{
 			AbstractOlympiadGame newGame;
-			
 			List<Set<Integer>> readyClassed = OlympiadManager.getInstance().hasEnoughRegisteredClassed();
 			boolean readyNonClassed = OlympiadManager.getInstance().hasEnoughRegisteredNonClassed();
-			
 			if ((readyClassed != null) || readyNonClassed)
 			{
 				// reset delay broadcast
@@ -212,7 +210,6 @@ public class OlympiadGameManager implements Runnable
 		{
 			return null;
 		}
-		
 		return _tasks.get(id).getTask();
 	}
 	

@@ -40,7 +40,6 @@ public class Q00697_DefendTheHallOfErosion extends Quest
 	public String onAdvEvent(String event, Npc npc, PlayerInstance player)
 	{
 		final String htmltext = event;
-		
 		final QuestState qs = player.getQuestState(getName());
 		if (qs == null)
 		{
@@ -59,7 +58,6 @@ public class Q00697_DefendTheHallOfErosion extends Quest
 	{
 		final QuestState qs = getQuestState(player, true);
 		String htmltext = getNoQuestMsg(player);
-		
 		switch (qs.getState())
 		{
 			case State.CREATED:

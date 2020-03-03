@@ -147,7 +147,6 @@ public class ContactList
 	public void remove(String name)
 	{
 		final int contactId = CharNameTable.getInstance().getIdByName(name);
-		
 		if (!_contacts.contains(name))
 		{
 			_player.sendPacket(SystemMessageId.THE_NAME_IS_NOT_CURRENTLY_REGISTERED);

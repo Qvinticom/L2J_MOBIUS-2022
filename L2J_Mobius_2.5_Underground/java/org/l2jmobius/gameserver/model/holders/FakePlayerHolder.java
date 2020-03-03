@@ -55,14 +55,11 @@ public class FakePlayerHolder
 	public FakePlayerHolder(StatSet set)
 	{
 		_classId = set.getInt("classId", 182);
-		
 		_hair = set.getInt("hair", 1);
 		_hairColor = set.getInt("hairColor", 1);
 		_face = set.getInt("face", 1);
-		
 		_nameColor = set.getInt("nameColor", 0xFFFFFF);
 		_titleColor = set.getInt("titleColor", 0xECF9A2);
-		
 		_equipHead = set.getInt("equipHead", 0);
 		_equipRHand = set.getInt("equipRHand", 0); // or dual hand
 		_equipLHand = set.getInt("equipLHand", 0);
@@ -74,15 +71,12 @@ public class FakePlayerHolder
 		_equipHair = set.getInt("equipHair", 0);
 		_equipHair2 = set.getInt("equipHair2", 0);
 		_agathionId = set.getInt("agathionId", 0);
-		
 		_weaponEnchantLevel = set.getInt("weaponEnchantLevel", 0);
 		_armorEnchantLevel = set.getInt("armorEnchantLevel", 0);
-		
 		_fishing = set.getBoolean("fishing", false);
 		_baitLocationX = set.getInt("baitLocationX", 0);
 		_baitLocationY = set.getInt("baitLocationY", 0);
 		_baitLocationZ = set.getInt("baitLocationZ", 0);
-		
 		_recommends = set.getInt("recommends", 0);
 		_nobleLevel = set.getInt("nobleLevel", 0);
 		_hero = set.getBoolean("hero", false);

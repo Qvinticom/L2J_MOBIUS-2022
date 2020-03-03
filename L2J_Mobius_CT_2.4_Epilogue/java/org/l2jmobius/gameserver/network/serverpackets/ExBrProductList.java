@@ -39,7 +39,6 @@ public class ExBrProductList implements IClientOutgoingPacket
 		for (PrimeShopProductHolder product : _itemList)
 		{
 			final int category = product.getCategory();
-			
 			packet.writeD(product.getProductId()); // product id
 			packet.writeH(category); // category id
 			packet.writeD(product.getPrice()); // points

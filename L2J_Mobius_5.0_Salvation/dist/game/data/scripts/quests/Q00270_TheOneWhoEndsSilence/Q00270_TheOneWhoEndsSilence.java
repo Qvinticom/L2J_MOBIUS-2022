@@ -154,7 +154,6 @@ public class Q00270_TheOneWhoEndsSilence extends Quest
 						giveItems(player, 10397 + getRandom(9), 1);
 					}
 					rewardScroll(player, 2);
-					
 					takeItems(player, TATTERED_MONK_CLOTHES, 200);
 					playSound(player, QuestSound.ITEMSOUND_QUEST_MIDDLE);
 					htmltext = "32757-09.html";
@@ -172,7 +171,6 @@ public class Q00270_TheOneWhoEndsSilence extends Quest
 					giveItems(player, 10373 + getRandom(9), 1);
 					giveItems(player, 10397 + getRandom(9), 1);
 					rewardScroll(player, 3);
-					
 					takeItems(player, TATTERED_MONK_CLOTHES, 300);
 					playSound(player, QuestSound.ITEMSOUND_QUEST_MIDDLE);
 					htmltext = "32757-09.html";
@@ -190,7 +188,6 @@ public class Q00270_TheOneWhoEndsSilence extends Quest
 					giveItems(player, 10373 + getRandom(9), 1);
 					giveItems(player, 10397 + getRandom(9), 1);
 					rewardScroll(player, 3);
-					
 					if (getRandom(10) < 5)
 					{
 						if (getRandom(1000) < 438)
@@ -224,7 +221,6 @@ public class Q00270_TheOneWhoEndsSilence extends Quest
 					giveItems(player, 10373 + getRandom(9), 1);
 					giveItems(player, 10397 + getRandom(9), 1);
 					rewardScroll(player, 3);
-					
 					if (getRandom(1000) < 549)
 					{
 						giveItems(player, 10373 + getRandom(9), 1);
@@ -338,7 +334,6 @@ public class Q00270_TheOneWhoEndsSilence extends Quest
 	{
 		final QuestState qs = getQuestState(player, true);
 		String htmltext = getNoQuestMsg(player);
-		
 		switch (qs.getState())
 		{
 			case State.CREATED:

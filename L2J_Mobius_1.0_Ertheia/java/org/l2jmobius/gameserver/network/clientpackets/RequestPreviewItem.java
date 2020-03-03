@@ -85,7 +85,6 @@ public class RequestPreviewItem implements IClientIncomingPacket
 		_unk = packet.readD();
 		_listId = packet.readD();
 		_count = packet.readD();
-		
 		if (_count < 0)
 		{
 			_count = 0;
@@ -166,11 +165,9 @@ public class RequestPreviewItem implements IClientIncomingPacket
 		
 		long totalPrice = 0;
 		final Map<Integer, Integer> itemList = new HashMap<>();
-		
 		for (int i = 0; i < _count; i++)
 		{
 			final int itemId = _items[i];
-			
 			final Product product = buyList.getProductByItemId(itemId);
 			if (product == null)
 			{

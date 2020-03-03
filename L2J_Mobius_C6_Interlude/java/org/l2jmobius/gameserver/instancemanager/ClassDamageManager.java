@@ -59,9 +59,7 @@ public class ClassDamageManager
 			{
 				final String keyString = (String) key;
 				final String[] classAndType = keyString.split("__");
-				
 				String className = classAndType[0].replace("_", " ");
-				
 				if (className.equals("Eva s Saint"))
 				{
 					className = "Eva's Saint";
@@ -69,7 +67,6 @@ public class ClassDamageManager
 				
 				final String type = classAndType[1];
 				final Integer classId = PlayerTemplateData.getInstance().getClassIdByName(className);
-				
 				ID_TO_NAME.put(classId, className);
 				NAME_TO_ID.put(className, classId);
 				
@@ -187,7 +184,6 @@ public class ClassDamageManager
 		}
 		
 		double attackerMulti = 1;
-		
 		if (attacked.isMageClass())
 		{
 			attackerMulti = getClassDamageToMage(attacker.getClassId().getId());
@@ -198,7 +194,6 @@ public class ClassDamageManager
 		}
 		
 		double attackedMulti = 1;
-		
 		if (attacker.isMageClass())
 		{
 			attackedMulti = getClassDamageByMage(attacked.getClassId().getId());
@@ -209,7 +204,6 @@ public class ClassDamageManager
 		}
 		
 		final double output = attackerMulti * attackedMulti;
-		
 		if (Config.ENABLE_CLASS_DAMAGE_LOGGER)
 		{
 			LOGGER.info("ClassDamageManager -");

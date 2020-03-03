@@ -79,7 +79,6 @@ public class RequestGiveItemToPet extends GameClientPacket
 		}
 		
 		final ItemInstance item = player.getInventory().getItemByObjectId(_objectId);
-		
 		if (item == null)
 		{
 			return;
@@ -97,7 +96,6 @@ public class RequestGiveItemToPet extends GameClientPacket
 		}
 		
 		final PetInstance pet = (PetInstance) player.getPet();
-		
 		if (pet.isDead())
 		{
 			player.sendPacket(SystemMessageId.YOUR_PET_IS_MOTIONLESS_AND_ANY_ATTEMPT_YOU_MAKE_TO_GIVE_IT_SOMETHING_GOES_UNRECOGNIZED);

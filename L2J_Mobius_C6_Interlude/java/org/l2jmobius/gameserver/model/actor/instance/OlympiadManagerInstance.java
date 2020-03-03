@@ -161,7 +161,6 @@ public class OlympiadManagerInstance extends FolkInstance
 		else if (command.startsWith("Olympiad"))
 		{
 			final int val = Integer.parseInt(command.substring(9, 10));
-			
 			final NpcHtmlMessage reply = new NpcHtmlMessage(getObjectId());
 			final StringBuilder replyMSG = new StringBuilder("<html><body>");
 			
@@ -248,10 +247,8 @@ public class OlympiadManagerInstance extends FolkInstance
 	private void showChatWindow(PlayerInstance player, int value, String suffix)
 	{
 		String filename = Olympiad.OLYMPIAD_HTML_PATH;
-		
 		filename += "noble_desc" + value;
 		filename += (suffix != null) ? suffix + ".htm" : ".htm";
-		
 		if (filename.equals(Olympiad.OLYMPIAD_HTML_PATH + "noble_desc0.htm"))
 		{
 			filename = Olympiad.OLYMPIAD_HTML_PATH + "noble_main.htm";

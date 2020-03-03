@@ -112,12 +112,10 @@ public class FortressOfResistance
 		{
 			setCalendarForNextCaprture();
 			final long milliToCapture = getMilliToCapture();
-			
 			final RunMessengerSpawn rms = new RunMessengerSpawn();
 			ThreadPool.schedule(rms, milliToCapture);
 			
 			final long total_millis = System.currentTimeMillis() + milliToCapture;
-			
 			final GregorianCalendar cal = (GregorianCalendar) Calendar.getInstance();
 			cal.setTimeInMillis(total_millis);
 			final String next_ch_siege_date = new SimpleDateFormat("yyyy/MM/dd HH:mm").format(cal.getTimeInMillis());
@@ -128,7 +126,6 @@ public class FortressOfResistance
 	private void setCalendarForNextCaprture()
 	{
 		int daysToChange = getDaysToCapture();
-		
 		if (daysToChange == 7)
 		{
 			if (_capturetime.get(Calendar.HOUR_OF_DAY) < HOUR)
@@ -153,12 +150,10 @@ public class FortressOfResistance
 	private int getDaysToCapture()
 	{
 		final int numDays = _capturetime.get(Calendar.DAY_OF_WEEK) - START_DAY;
-		
 		if (numDays < 0)
 		{
 			return 0 - numDays;
 		}
-		
 		return 7 - numDays;
 	}
 	
@@ -166,7 +161,6 @@ public class FortressOfResistance
 	{
 		final long currTimeMillis = System.currentTimeMillis();
 		final long captureTimeMillis = _capturetime.getTimeInMillis();
-		
 		return captureTimeMillis - currTimeMillis;
 	}
 	
@@ -188,12 +182,10 @@ public class FortressOfResistance
 		
 		Announce("Capture registration of Partisan Hideout has begun!");
 		Announce("Now its open for 1 hours!");
-		
 		NpcInstance result = null;
 		try
 		{
 			final NpcTemplate template = NpcTable.getInstance().getTemplate(MESSENGER_ID);
-			
 			final Spawn spawn = new Spawn(template);
 			spawn.setX(50335);
 			spawn.setY(111275);
@@ -231,7 +223,6 @@ public class FortressOfResistance
 		try
 		{
 			final NpcTemplate template = NpcTable.getInstance().getTemplate(BOSS_ID);
-			
 			final Spawn spawn = new Spawn(template);
 			spawn.setX(44525);
 			spawn.setY(108867);
@@ -247,7 +238,6 @@ public class FortressOfResistance
 		LOGGER.info("Fortress of Resistanse: Boss spawned!");
 		Announce("Capture of Partisan Hideout has begun!");
 		Announce("You have one hour to kill Nurka!");
-		
 		_nurka = ThreadPool.schedule(new DeSpawnTimer(result), 3600000); // 60 * 60 * 1000
 		_announce = ThreadPool.schedule(new AnnounceInfo("No one can`t kill Nurka! Partisan Hideout set free until next week!"), 3600000);
 	}
@@ -346,7 +336,6 @@ public class FortressOfResistance
 		try (Connection con = DatabaseFactory.getConnection())
 		{
 			PreparedStatement statement;
-			
 			statement = con.prepareStatement("UPDATE clanhall SET paidUntil=?, paid=? WHERE id=?");
 			statement.setLong(1, System.currentTimeMillis() + 59760000);
 			statement.setInt(2, 1);

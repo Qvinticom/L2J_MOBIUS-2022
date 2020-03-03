@@ -127,12 +127,10 @@ public class RequestExEnchantItemAttribute implements IClientIncomingPacket
 			elementToAdd = Elementals.getOppositeElement(elementToAdd);
 		}
 		final byte opositeElement = Elementals.getOppositeElement(elementToAdd);
-		
 		final Elementals oldElement = item.getElemental(elementToAdd);
 		final int elementValue = oldElement == null ? 0 : oldElement.getValue();
 		final int limit = getLimit(item, stoneId);
 		int powerToAdd = getPowerToAdd(stoneId, elementValue, item);
-		
 		if ((item.isWeapon() && (oldElement != null) && (oldElement.getElement() != elementToAdd) && (oldElement.getElement() != -2)) || (item.isArmor() && (item.getElemental(elementToAdd) == null) && (item.getElementals() != null) && (item.getElementals().length >= 3)))
 		{
 			player.sendPacket(SystemMessageId.ANOTHER_ELEMENTAL_POWER_HAS_ALREADY_BEEN_ADDED_THIS_ELEMENTAL_POWER_CANNOT_BE_ADDED);
@@ -203,7 +201,6 @@ public class RequestExEnchantItemAttribute implements IClientIncomingPacket
 		if (success)
 		{
 			final byte realElement = item.isArmor() ? opositeElement : elementToAdd;
-			
 			SystemMessage sm;
 			if (item.getEnchantLevel() == 0)
 			{

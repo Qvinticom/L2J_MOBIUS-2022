@@ -234,7 +234,6 @@ public class AttackableAI extends CreatureAI
 				{
 					final Location loc = npc.getSpawn();
 					final int range = Config.MAX_DRIFT_RANGE;
-					
 					if (!npc.isInsideRadius3D(loc, range + range))
 					{
 						intention = AI_INTENTION_ACTIVE;
@@ -473,7 +472,6 @@ public class AttackableAI extends CreatureAI
 			{
 				// Get the hate level of the Attackable against this Creature target contained in _aggroList
 				final int aggro = npc.getHating(hated);
-				
 				if ((aggro + _globalAggro) > 0)
 				{
 					// Set the Creature movement type to run and send Server->Client packet ChangeMoveType to all others PlayerInstance
@@ -516,7 +514,6 @@ public class AttackableAI extends CreatureAI
 		{
 			final int offset;
 			final int minRadius = 30;
-			
 			if (npc.isRaidMinion())
 			{
 				offset = 500; // for Raids - need correction
@@ -580,7 +577,6 @@ public class AttackableAI extends CreatureAI
 			int y1 = 0;
 			int z1 = 0;
 			final int range = Config.MAX_DRIFT_RANGE;
-			
 			for (Skill sk : npc.getTemplate().getAISkills(AISkillScope.BUFF))
 			{
 				target = skillTargetReconsider(sk, true);
@@ -595,7 +591,6 @@ public class AttackableAI extends CreatureAI
 			x1 = npc.getSpawn().getX();
 			y1 = npc.getSpawn().getY();
 			z1 = npc.getSpawn().getZ();
-			
 			if (!npc.isInsideRadius2D(x1, y1, 0, range))
 			{
 				npc.setReturningToSpawnPoint(true);
@@ -612,7 +607,6 @@ public class AttackableAI extends CreatureAI
 			
 			// Move the actor to Location (x,y,z) server side AND client side by sending Server->Client packet CharMoveToLocation (broadcast)
 			final Location moveLoc = _actor.isFlying() ? new Location(x1, y1, z1) : GeoEngine.getInstance().canMoveToTargetLoc(npc.getX(), npc.getY(), npc.getZ(), x1, y1, z1, npc.getInstanceWorld());
-			
 			moveTo(moveLoc.getX(), moveLoc.getY(), moveLoc.getZ());
 		}
 	}
@@ -768,7 +762,6 @@ public class AttackableAI extends CreatureAI
 		}
 		
 		final int combinedCollision = collision + target.getTemplate().getCollisionRadius();
-		
 		final List<Skill> aiSuicideSkills = npc.getTemplate().getAISkills(AISkillScope.SUICIDE);
 		if (!aiSuicideSkills.isEmpty() && ((int) ((npc.getCurrentHp() / npc.getMaxHp()) * 100) < 30) && npc.hasSkillChance())
 		{
@@ -831,7 +824,6 @@ public class AttackableAI extends CreatureAI
 				int posX = npc.getX();
 				int posY = npc.getY();
 				final int posZ = npc.getZ() + 30;
-				
 				if (target.getX() < posX)
 				{
 					posX += 300;
@@ -1139,7 +1131,6 @@ public class AttackableAI extends CreatureAI
 		
 		// Check current target first.
 		final int range = insideCastRange ? skill.getCastRange() + getActiveChar().getTemplate().getCollisionRadius() : 2000; // TODO need some forget range
-		
 		Stream<Creature> stream;
 		if (isBad)
 		{
@@ -1169,13 +1160,11 @@ public class AttackableAI extends CreatureAI
 		
 		// Return any target.
 		return stream.findFirst().orElse(null);
-		
 	}
 	
 	private Creature targetReconsider(boolean randomTarget)
 	{
 		final Attackable npc = getActiveChar();
-		
 		if (randomTarget)
 		{
 			Stream<Creature> stream = npc.getAggroList().values().stream().map(AggroInfo::getAttacker).filter(this::checkTarget);
@@ -1185,7 +1174,6 @@ public class AttackableAI extends CreatureAI
 			{
 				stream = Stream.concat(stream, World.getInstance().getVisibleObjectsInRange(npc, Creature.class, npc.getAggroRange(), this::checkTarget).stream());
 			}
-			
 			return stream.findAny().orElse(null);
 		}
 		
@@ -1296,7 +1284,6 @@ public class AttackableAI extends CreatureAI
 		if (me.isMonster())
 		{
 			MonsterInstance master = (MonsterInstance) me;
-			
 			if (master.hasMinions())
 			{
 				master.getMinionList().onAssist(me, attacker);
@@ -1350,7 +1337,6 @@ public class AttackableAI extends CreatureAI
 			if (me.isMonster())
 			{
 				MonsterInstance master = (MonsterInstance) me;
-				
 				if (master.hasMinions())
 				{
 					master.getMinionList().onAssist(me, target);

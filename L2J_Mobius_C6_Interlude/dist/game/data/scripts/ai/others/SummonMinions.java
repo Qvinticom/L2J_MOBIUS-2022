@@ -253,7 +253,6 @@ public class SummonMinions extends Quest
 		{
 			_attackersList.get(npcObjId).clear();
 		}
-		
 		return super.onAttack(npc, attacker, damage, isPet);
 	}
 	

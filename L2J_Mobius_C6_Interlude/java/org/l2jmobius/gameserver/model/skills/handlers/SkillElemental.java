@@ -36,7 +36,6 @@ public class SkillElemental extends Skill
 		_seeds[0] = set.getInt("seed1", 0);
 		_seeds[1] = set.getInt("seed2", 0);
 		_seeds[2] = set.getInt("seed3", 0);
-		
 		if (set.getInt("seed_any", 0) == 1)
 		{
 			_seedAny = true;
@@ -57,7 +56,6 @@ public class SkillElemental extends Skill
 		
 		final boolean sps = creature.checkSps();
 		final boolean bss = creature.checkBss();
-		
 		for (WorldObject target2 : targets)
 		{
 			final Creature target = (Creature) target2;
@@ -105,9 +103,7 @@ public class SkillElemental extends Skill
 			}
 			
 			final boolean mcrit = Formulas.calcMCrit(creature.getMCriticalHit(target, this));
-			
 			final int damage = (int) Formulas.calcMagicDam(creature, target, this, sps, bss, mcrit);
-			
 			if (damage > 0)
 			{
 				target.reduceCurrentHp(damage, creature);
@@ -120,7 +116,6 @@ public class SkillElemental extends Skill
 				}
 				
 				creature.sendDamageMessage(target, damage, false, false, false);
-				
 			}
 			
 			// activate attacked effects, if any

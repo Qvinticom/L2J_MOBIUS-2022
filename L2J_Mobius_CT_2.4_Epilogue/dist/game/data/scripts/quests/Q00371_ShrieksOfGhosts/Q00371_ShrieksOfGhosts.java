@@ -105,7 +105,6 @@ public class Q00371_ShrieksOfGhosts extends Quest
 			case "30867-05.html":
 			{
 				final long ancientAshUrnCount = getQuestItemsCount(player, ANCIENT_ASH_URN);
-				
 				if (ancientAshUrnCount < 1)
 				{
 					htmltext = event;
@@ -147,7 +146,6 @@ public class Q00371_ShrieksOfGhosts extends Quest
 				else
 				{
 					final int random = getRandom(100);
-					
 					if (random < 2)
 					{
 						giveItems(player, ANCIENT_PORCELAIN_EXCELLENT, 1);
@@ -185,7 +183,6 @@ public class Q00371_ShrieksOfGhosts extends Quest
 	public String onKill(Npc npc, PlayerInstance killer, boolean isSummon)
 	{
 		final QuestState qs = getQuestState(killer, false);
-		
 		if ((qs == null) || !Util.checkIfInRange(Config.ALT_PARTY_RANGE, npc, killer, true))
 		{
 			return null;
@@ -193,7 +190,6 @@ public class Q00371_ShrieksOfGhosts extends Quest
 		
 		final DropInfo info = MOBS.get(npc.getId());
 		final int random = getRandom(1000);
-		
 		if (random < info.getFirstChance())
 		{
 			giveItemRandomly(qs.getPlayer(), npc, ANCIENT_ASH_URN, 1, 0, 1.0, true);

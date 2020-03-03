@@ -60,7 +60,6 @@ public class PlayableStat extends CreatureStat
 		
 		final int oldLevel = getLevel();
 		setExp(getExp() + value);
-		
 		byte minimumLevel = 1;
 		if (getActiveChar().isPet())
 		{
@@ -69,7 +68,6 @@ public class PlayableStat extends CreatureStat
 		}
 		
 		byte level = minimumLevel; // minimum level
-		
 		for (byte tmp = level; tmp <= getMaxLevel(); tmp++)
 		{
 			if (getExp() >= getExpForLevel(tmp))
@@ -110,7 +108,6 @@ public class PlayableStat extends CreatureStat
 		}
 		
 		setExp(getExp() - value);
-		
 		byte minimumLevel = 1;
 		if (getActiveChar().isPet())
 		{
@@ -118,7 +115,6 @@ public class PlayableStat extends CreatureStat
 			minimumLevel = (byte) PetDataTable.getInstance().getPetMinLevel(((PetInstance) getActiveChar()).getTemplate().getId());
 		}
 		byte level = minimumLevel;
-		
 		for (byte tmp = level; tmp <= getMaxLevel(); tmp++)
 		{
 			if (getExp() >= getExpForLevel(tmp))
@@ -147,7 +143,6 @@ public class PlayableStat extends CreatureStat
 		{
 			spRemoved = removeSp(removeSp);
 		}
-		
 		return expRemoved || spRemoved;
 	}
 	

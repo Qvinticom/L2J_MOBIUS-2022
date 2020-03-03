@@ -693,7 +693,6 @@ public abstract class Item
 			return _emptyEffectSet;
 		}
 		final List<Effect> effects = new ArrayList<>();
-		
 		for (Skill skill : _skills)
 		{
 			if (!skill.checkCondition(caster, target, true))

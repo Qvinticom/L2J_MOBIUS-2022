@@ -106,7 +106,6 @@ public class GrandBossManager
 			}
 			
 			LOGGER.info("GrandBossManager: Loaded " + _storedInfo.size() + " Instances");
-			
 			rset.close();
 			statement.close();
 		}
@@ -391,7 +390,6 @@ public class GrandBossManager
 		{
 			final GrandBossInstance boss = _bosses.get(bossId);
 			final StatSet info = _storedInfo.get(bossId);
-			
 			if (statusOnly || (boss == null) || (info == null))
 			{
 				statement = con.prepareStatement(UPDATE_GRAND_BOSS_DATA2);

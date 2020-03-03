@@ -53,7 +53,6 @@ public class ConditionPlayerCanResurrect extends Condition
 			return false;
 		}
 		boolean canResurrect = true;
-		
 		if (effected.isPlayer())
 		{
 			final PlayerInstance player = effected.getActingPlayer();

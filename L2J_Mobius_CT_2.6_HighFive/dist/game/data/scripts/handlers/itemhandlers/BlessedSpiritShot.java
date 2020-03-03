@@ -45,9 +45,7 @@ public class BlessedSpiritShot implements IItemHandler
 		final ItemInstance weaponInst = player.getActiveWeaponInstance();
 		final Weapon weaponItem = player.getActiveWeaponItem();
 		final SkillHolder[] skills = item.getItem().getSkills();
-		
 		final int itemId = item.getId();
-		
 		if (skills == null)
 		{
 			LOGGER.log(Level.WARNING, getClass().getSimpleName() + ": is missing skills!");
@@ -72,7 +70,6 @@ public class BlessedSpiritShot implements IItemHandler
 		
 		// Check for correct grade
 		final boolean gradeCheck = item.isEtcItem() && (item.getEtcItem().getDefaultAction() == ActionType.SPIRITSHOT) && (weaponInst.getItem().getCrystalTypePlus() == item.getItem().getCrystalTypePlus());
-		
 		if (!gradeCheck)
 		{
 			if (!player.getAutoSoulShot().contains(itemId))
@@ -96,7 +93,6 @@ public class BlessedSpiritShot implements IItemHandler
 		// Send message to client
 		player.sendPacket(SystemMessageId.YOUR_SPIRITSHOT_HAS_BEEN_ENABLED);
 		player.setChargedShot(ShotType.BLESSED_SPIRITSHOTS, true);
-		
 		Broadcast.toSelfAndKnownPlayersInRadius(player, new MagicSkillUse(player, player, skills[0].getSkillId(), skills[0].getSkillLevel(), 0, 0), 600);
 		return true;
 	}

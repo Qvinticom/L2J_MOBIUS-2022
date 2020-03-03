@@ -127,7 +127,6 @@ public class Q10425_TheKetraOrcSupporters extends Quest
 	{
 		final QuestState qs = getQuestState(player, true);
 		String htmltext = null;
-		
 		switch (qs.getState())
 		{
 			case State.CREATED:
@@ -153,14 +152,12 @@ public class Q10425_TheKetraOrcSupporters extends Quest
 	public String onKill(Npc npc, PlayerInstance killer, boolean isSummon)
 	{
 		final QuestState qs = getQuestState(killer, false);
-		
 		if ((qs != null) && qs.isCond(1))
 		{
 			if ((npc.getId() == EMBRYO_SHOOTER) || (npc.getId() == EMBRYO_WIZARD))
 			{
 				int shooterCount = qs.getInt("KillCount_" + EMBRYO_SHOOTER);
 				int wizardCount = qs.getInt("KillCount_" + EMBRYO_WIZARD);
-				
 				if (npc.getId() == EMBRYO_SHOOTER)
 				{
 					if (shooterCount < 50)

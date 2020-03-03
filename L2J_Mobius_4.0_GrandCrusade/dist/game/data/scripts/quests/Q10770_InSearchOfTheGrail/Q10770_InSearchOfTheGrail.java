@@ -114,7 +114,6 @@ public class Q10770_InSearchOfTheGrail extends Quest
 	{
 		final QuestState qs = getQuestState(player, true);
 		String htmltext = getNoQuestMsg(player);
-		
 		if (npc.getId() == LORAIN)
 		{
 			switch (qs.getState())

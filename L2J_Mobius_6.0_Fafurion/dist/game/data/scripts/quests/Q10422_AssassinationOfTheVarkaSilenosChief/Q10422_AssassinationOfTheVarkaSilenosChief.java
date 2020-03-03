@@ -108,7 +108,6 @@ public class Q10422_AssassinationOfTheVarkaSilenosChief extends Quest
 	{
 		final QuestState qs = getQuestState(player, true);
 		String htmltext = getNoQuestMsg(player);
-		
 		if (npc.getId() == HANSEN)
 		{
 			if (qs.getState() == State.CREATED)
@@ -134,7 +133,6 @@ public class Q10422_AssassinationOfTheVarkaSilenosChief extends Quest
 	public String onKill(Npc npc, PlayerInstance killer, boolean isSummon)
 	{
 		final QuestState qs = getQuestState(killer, false);
-		
 		if ((qs != null) && qs.isCond(1))
 		{
 			qs.setCond(2, true);

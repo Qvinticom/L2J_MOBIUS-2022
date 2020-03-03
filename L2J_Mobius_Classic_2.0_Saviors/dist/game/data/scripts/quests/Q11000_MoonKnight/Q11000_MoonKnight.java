@@ -459,7 +459,6 @@ public class Q11000_MoonKnight extends Quest
 		
 		final PlayerInstance player = event.getPlayer();
 		final QuestState qs = getQuestState(player, false);
-		
 		if ((qs == null) && (event.getOldLevel() < event.getNewLevel()) && canStartQuest(player))
 		{
 			player.sendPacket(new TutorialShowQuestionMark(QUESTION_MARK_ID, 1));
@@ -478,7 +477,6 @@ public class Q11000_MoonKnight extends Quest
 		
 		final PlayerInstance player = event.getPlayer();
 		final QuestState qs = getQuestState(player, false);
-		
 		if ((qs == null) && canStartQuest(player))
 		{
 			player.sendPacket(new TutorialShowQuestionMark(QUESTION_MARK_ID, 1));

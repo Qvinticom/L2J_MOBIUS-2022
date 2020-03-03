@@ -41,7 +41,6 @@ public class LocationReturn extends TerminateReturn
 	{
 		super(terminate, false, false);
 		_overrideLocation = overrideLocation;
-		
 		if (targetLocation != null)
 		{
 			setX(targetLocation.getX());

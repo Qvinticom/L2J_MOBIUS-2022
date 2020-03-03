@@ -54,12 +54,10 @@ public class SetPrivateStoreListBuy implements IClientIncomingPacket
 		for (int i = 0; i < count; i++)
 		{
 			final int itemId = packet.readD();
-			
 			packet.readD(); // TODO analyse this
 			
 			final long cnt = packet.readQ();
 			final long price = packet.readQ();
-			
 			if ((itemId < 1) || (cnt < 1) || (price < 0))
 			{
 				_items = null;

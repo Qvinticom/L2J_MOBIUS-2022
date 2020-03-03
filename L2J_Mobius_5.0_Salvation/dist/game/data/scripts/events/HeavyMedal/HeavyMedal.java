@@ -63,7 +63,6 @@ public class HeavyMedal extends LongTimeEvent
 	{
 		String htmltext = event;
 		int level = checkLevel(player);
-		
 		if (event.equalsIgnoreCase("game"))
 		{
 			htmltext = getQuestItemsCount(player, GLITTERING_MEDAL) < MEDALS[level] ? "31229-no.htm" : "31229-game.htm";
@@ -77,7 +76,6 @@ public class HeavyMedal extends LongTimeEvent
 			else
 			{
 				takeItems(player, GLITTERING_MEDAL, MEDALS[level]);
-				
 				if (getRandom(100) > WIN_CHANCE)
 				{
 					level = 0;

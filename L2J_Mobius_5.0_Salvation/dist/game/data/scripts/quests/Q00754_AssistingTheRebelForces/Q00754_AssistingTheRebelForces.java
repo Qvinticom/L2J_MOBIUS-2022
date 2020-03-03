@@ -79,7 +79,6 @@ public class Q00754_AssistingTheRebelForces extends Quest
 	{
 		final QuestState qs = getQuestState(player, true);
 		String htmltext = getNoQuestMsg(player);
-		
 		switch (npc.getId())
 		{
 			case SIZRAK:
@@ -91,7 +90,6 @@ public class Q00754_AssistingTheRebelForces extends Quest
 				else if (qs.isCond(0))
 				{
 					htmltext = "sofa_sizraku_q0754_03.html";
-					
 				}
 				else if (qs.isCond(1))
 				{

@@ -84,10 +84,8 @@ public class ConfirmMenteeAdd implements IClientIncomingPacket
 				
 				// Notify to scripts
 				EventDispatcher.getInstance().notifyEventAsync(new OnPlayerMenteeAdd(mentor, mentee), mentor);
-				
 				mentor.sendPacket(new SystemMessage(SystemMessageId.FROM_NOW_ON_S1_WILL_BE_YOUR_MENTEE).addString(mentee.getName()));
 				mentor.sendPacket(new ExMentorList(mentor));
-				
 				mentee.sendPacket(new SystemMessage(SystemMessageId.FROM_NOW_ON_S1_WILL_BE_YOUR_MENTOR).addString(mentor.getName()));
 				mentee.sendPacket(new ExMentorList(mentee));
 			}

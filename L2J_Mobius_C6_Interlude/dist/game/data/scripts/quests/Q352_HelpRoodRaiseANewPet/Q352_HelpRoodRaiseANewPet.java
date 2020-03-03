@@ -85,7 +85,6 @@ public class Q352_HelpRoodRaiseANewPet extends Quest
 			case State.STARTED:
 				final int eggs1 = st.getQuestItemsCount(LIENRIK_EGG_1);
 				final int eggs2 = st.getQuestItemsCount(LIENRIK_EGG_2);
-				
 				if ((eggs1 + eggs2) == 0)
 				{
 					htmltext = "31067-05.htm";
@@ -97,7 +96,6 @@ public class Q352_HelpRoodRaiseANewPet extends Quest
 					{
 						htmltext = "31067-06.htm";
 						reward += eggs1 * 34;
-						
 						st.takeItems(LIENRIK_EGG_1, -1);
 						st.rewardItems(57, reward);
 					}
@@ -105,7 +103,6 @@ public class Q352_HelpRoodRaiseANewPet extends Quest
 					{
 						htmltext = "31067-08.htm";
 						reward += eggs2 * 1025;
-						
 						st.takeItems(LIENRIK_EGG_2, -1);
 						st.rewardItems(57, reward);
 					}
@@ -113,7 +110,6 @@ public class Q352_HelpRoodRaiseANewPet extends Quest
 					{
 						htmltext = "31067-08.htm";
 						reward += (eggs1 * 34) + (eggs2 * 1025) + 2000;
-						
 						st.takeItems(LIENRIK_EGG_1, -1);
 						st.takeItems(LIENRIK_EGG_2, -1);
 						st.rewardItems(57, reward);
@@ -137,7 +133,6 @@ public class Q352_HelpRoodRaiseANewPet extends Quest
 		final int npcId = npc.getNpcId();
 		final int random = Rnd.get(100);
 		final int chance = ((npcId == 20786) || (npcId == 21644)) ? 44 : 58;
-		
 		if (random < chance)
 		{
 			st.dropItemsAlways(LIENRIK_EGG_1, 1, 0);

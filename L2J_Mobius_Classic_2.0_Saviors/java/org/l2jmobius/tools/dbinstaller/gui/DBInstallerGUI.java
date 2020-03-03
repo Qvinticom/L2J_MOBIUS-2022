@@ -62,7 +62,6 @@ public class DBInstallerGUI extends JFrame implements DBOutputInterface
 		final int width = 480;
 		final int height = 360;
 		final Dimension resolution = Toolkit.getDefaultToolkit().getScreenSize();
-		
 		setDefaultCloseOperation(WindowConstants.EXIT_ON_CLOSE);
 		setBounds((resolution.width - width) / 2, (resolution.height - height) / 2, width, height);
 		setResizable(false);
@@ -70,15 +69,12 @@ public class DBInstallerGUI extends JFrame implements DBOutputInterface
 		_progBar = new JProgressBar();
 		_progBar.setIndeterminate(true);
 		add(_progBar, BorderLayout.PAGE_START);
-		
 		_progArea = new JTextArea();
 		final JScrollPane scrollPane = new JScrollPane(_progArea);
-		
 		_progArea.setEditable(false);
 		appendToProgressArea("Connected");
 		
 		add(scrollPane, BorderLayout.CENTER);
-		
 		getContentPane().setPreferredSize(new Dimension(width, height));
 		pack();
 	}

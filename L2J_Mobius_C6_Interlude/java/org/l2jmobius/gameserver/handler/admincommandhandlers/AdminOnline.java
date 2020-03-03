@@ -50,7 +50,6 @@ public class AdminOnline implements IAdminCommandHandler
 			int notPeace = 0;
 			// int instanced = 0;
 			int combat = 0;
-			
 			for (PlayerInstance player : World.getInstance().getAllPlayers())
 			{
 				if (player.getClient() != null)
@@ -86,7 +85,6 @@ public class AdminOnline implements IAdminCommandHandler
 				// {
 				// instanced++;
 				// }
-				
 				if (AttackStanceTaskManager.getInstance().hasAttackStanceTask(player) || (player.getPvpFlag() > 0) || player.isInsideZone(ZoneId.PVP) || player.isInsideZone(ZoneId.SIEGE))
 				{
 					combat++;

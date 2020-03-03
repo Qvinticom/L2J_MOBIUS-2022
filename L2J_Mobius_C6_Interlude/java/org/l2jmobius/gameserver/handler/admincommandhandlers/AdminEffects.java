@@ -170,7 +170,6 @@ public class AdminEffects implements IAdminCommandHandler
 			try
 			{
 				final WorldObject target = activeChar.getTarget();
-				
 				if (activeChar.getSayMode() != null)
 				{
 					activeChar.setSayMode(null);
@@ -308,7 +307,6 @@ public class AdminEffects implements IAdminCommandHandler
 			{
 				final WorldObject target = activeChar.getTarget();
 				Creature creature = null;
-				
 				if (target instanceof Creature)
 				{
 					creature = (Creature) target;
@@ -325,7 +323,6 @@ public class AdminEffects implements IAdminCommandHandler
 			{
 				final WorldObject target = activeChar.getTarget();
 				Creature creature = null;
-				
 				if (target instanceof Creature)
 				{
 					creature = (Creature) target;
@@ -341,10 +338,8 @@ public class AdminEffects implements IAdminCommandHandler
 			try
 			{
 				final String id = st.nextToken();
-				
 				activeChar.getPoly().setPolyInfo("npc", id);
 				activeChar.teleToLocation(activeChar.getX(), activeChar.getY(), activeChar.getZ(), false);
-				
 				activeChar.broadcastPacket(new CharInfo(activeChar));
 				activeChar.sendPacket(new UserInfo(activeChar));
 			}
@@ -359,7 +354,6 @@ public class AdminEffects implements IAdminCommandHandler
 				activeChar.getPoly().setPolyInfo(null, "1");
 				activeChar.decayMe();
 				activeChar.spawnMe(activeChar.getX(), activeChar.getY(), activeChar.getZ());
-				
 				activeChar.broadcastPacket(new CharInfo(activeChar));
 				activeChar.sendPacket(new UserInfo(activeChar));
 			}
@@ -386,9 +380,7 @@ public class AdminEffects implements IAdminCommandHandler
 			try
 			{
 				final String val = st.nextToken();
-				
 				final int teamVal = Integer.parseInt(val);
-				
 				for (PlayerInstance player : activeChar.getKnownList().getKnownPlayers().values())
 				{
 					if (activeChar.isInsideRadius(player, 400, false, true))
@@ -411,12 +403,9 @@ public class AdminEffects implements IAdminCommandHandler
 		else if (command.startsWith("admin_setteam"))
 		{
 			final String val = command.substring(14);
-			
 			final int teamVal = Integer.parseInt(val);
-			
 			final WorldObject target = activeChar.getTarget();
 			PlayerInstance player = null;
-			
 			if (target instanceof PlayerInstance)
 			{
 				player = (PlayerInstance) target;
@@ -441,17 +430,13 @@ public class AdminEffects implements IAdminCommandHandler
 			{
 				String target = null;
 				WorldObject obj = activeChar.getTarget();
-				
 				if (st.countTokens() == 2)
 				{
 					final int social = Integer.parseInt(st.nextToken());
-					
 					target = st.nextToken();
-					
 					if (target != null)
 					{
 						final PlayerInstance player = World.getInstance().getPlayer(target);
-						
 						if (player != null)
 						{
 							if (performSocial(social, player, activeChar))
@@ -464,7 +449,6 @@ public class AdminEffects implements IAdminCommandHandler
 							try
 							{
 								final int radius = Integer.parseInt(target);
-								
 								for (WorldObject object : activeChar.getKnownList().getKnownObjects().values())
 								{
 									if (activeChar.isInsideRadius(object, radius, false, false))
@@ -485,7 +469,6 @@ public class AdminEffects implements IAdminCommandHandler
 				else if (st.countTokens() == 1)
 				{
 					final int social = Integer.parseInt(st.nextToken());
-					
 					if (obj == null)
 					{
 						obj = activeChar;
@@ -515,7 +498,6 @@ public class AdminEffects implements IAdminCommandHandler
 			{
 				final WorldObject target = activeChar.getTarget();
 				Creature creature = null;
-				
 				if (target instanceof Creature)
 				{
 					creature = (Creature) target;
@@ -533,19 +515,14 @@ public class AdminEffects implements IAdminCommandHandler
 			{
 				String target = null;
 				WorldObject obj = activeChar.getTarget();
-				
 				if (st.countTokens() == 2)
 				{
 					final String parm = st.nextToken();
-					
 					final int abnormal = Integer.decode("0x" + parm);
-					
 					target = st.nextToken();
-					
 					if (target != null)
 					{
 						final PlayerInstance player = World.getInstance().getPlayer(target);
-						
 						if (player != null)
 						{
 							if (performAbnormal(abnormal, player))
@@ -562,7 +539,6 @@ public class AdminEffects implements IAdminCommandHandler
 							try
 							{
 								final int radius = Integer.parseInt(target);
-								
 								for (WorldObject object : activeChar.getKnownList().getKnownObjects().values())
 								{
 									if (activeChar.isInsideRadius(object, radius, false, false))
@@ -583,7 +559,6 @@ public class AdminEffects implements IAdminCommandHandler
 				else if (st.countTokens() == 1)
 				{
 					final int abnormal = Integer.decode("0x" + st.nextToken());
-					
 					if (obj == null)
 					{
 						obj = activeChar;
@@ -612,11 +587,9 @@ public class AdminEffects implements IAdminCommandHandler
 			try
 			{
 				WorldObject obj = activeChar.getTarget();
-				
 				int level = 1;
 				int hittime = 1;
 				final int skill = Integer.parseInt(st.nextToken());
-				
 				if (st.hasMoreTokens())
 				{
 					level = Integer.parseInt(st.nextToken());
@@ -639,10 +612,8 @@ public class AdminEffects implements IAdminCommandHandler
 				else
 				{
 					final Creature target = (Creature) obj;
-					
 					target.broadcastPacket(new MagicSkillUse(target, activeChar, skill, level, hittime, 0));
 					BuilderUtil.sendSysMessage(activeChar, obj.getName() + " performs MSU " + skill + "/" + level + " by your request.");
-					
 				}
 			}
 			catch (Exception e)
@@ -669,7 +640,6 @@ public class AdminEffects implements IAdminCommandHandler
 		if (target instanceof Creature)
 		{
 			final Creature creature = (Creature) target;
-			
 			if ((creature.getAbnormalEffect() & action) == action)
 			{
 				creature.stopAbnormalEffect(action);
@@ -678,7 +648,6 @@ public class AdminEffects implements IAdminCommandHandler
 			{
 				creature.startAbnormalEffect(action);
 			}
-			
 			return true;
 		}
 		return false;
@@ -797,7 +766,6 @@ public class AdminEffects implements IAdminCommandHandler
 	private void showMainPage(PlayerInstance activeChar, String command)
 	{
 		String filename = "effects_menu";
-		
 		if (command.contains("menu_main"))
 		{
 			filename = "main_menu";

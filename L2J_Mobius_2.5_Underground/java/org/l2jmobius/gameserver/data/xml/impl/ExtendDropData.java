@@ -63,7 +63,6 @@ public class ExtendDropData implements IXmlReader
 		forEach(doc, "list", listNode -> forEach(listNode, "drop", dropNode ->
 		{
 			final StatSet set = new StatSet(parseAttributes(dropNode));
-			
 			final List<ExtendDropItemHolder> items = new ArrayList<>(1);
 			forEach(dropNode, "items", itemsNode -> forEach(itemsNode, "item", itemNode ->
 			{
@@ -101,7 +100,6 @@ public class ExtendDropData implements IXmlReader
 				systemMessages.put(amount, systemMessageId);
 			}));
 			set.set("systemMessages", systemMessages);
-			
 			_extendDrop.put(set.getInt("id"), new ExtendDropDataHolder(set));
 		}));
 	}

@@ -102,7 +102,6 @@ public class RaidBossPointsManager
 	{
 		final Map<Integer, Integer> tmpPoint = _list.get(ownerId);
 		int totalPoints = 0;
-		
 		if ((tmpPoint == null) || tmpPoint.isEmpty())
 		{
 			return 0;

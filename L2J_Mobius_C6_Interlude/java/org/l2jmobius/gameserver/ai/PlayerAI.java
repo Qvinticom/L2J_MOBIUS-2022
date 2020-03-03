@@ -106,7 +106,6 @@ public class PlayerAI extends CreatureAI
 	{
 		// forget interupted actions after offensive skill
 		final Skill skill = getSkill();
-		
 		if ((skill != null) && skill.isOffensive())
 		{
 			getInterruptedIntentions().clear();
@@ -171,7 +170,6 @@ public class PlayerAI extends CreatureAI
 	{
 		_clientMovingToPawnOffset = 0;
 		_clientMoving = false;
-		
 		super.clientNotifyDead();
 	}
 	
@@ -203,7 +201,6 @@ public class PlayerAI extends CreatureAI
 		final Creature target = getCastTarget();
 		final Skill skill = getSkill();
 		// if (Config.DEBUG) LOGGER.warning("PlayerAI: thinkCast -> Start");
-		
 		if (checkTargetLost(target))
 		{
 			if (skill.isOffensive() && (getAttackTarget() != null))
@@ -225,7 +222,6 @@ public class PlayerAI extends CreatureAI
 		}
 		
 		final WorldObject oldTarget = _actor.getTarget();
-		
 		if (oldTarget != null)
 		{
 			// Replace the current target by the cast target

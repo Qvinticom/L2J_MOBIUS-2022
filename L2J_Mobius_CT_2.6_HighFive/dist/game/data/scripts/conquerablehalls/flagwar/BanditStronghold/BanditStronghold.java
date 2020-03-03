@@ -37,23 +37,17 @@ public class BanditStronghold extends FlagWar
 		FLAG_GREEN = 35425;
 		FLAG_BLUE = 35426;
 		FLAG_PURPLE = 35427;
-		
 		ALLY_1 = 35428;
 		ALLY_2 = 35429;
 		ALLY_3 = 35430;
 		ALLY_4 = 35431;
 		ALLY_5 = 35432;
-		
 		TELEPORT_1 = 35560;
-		
 		MESSENGER = 35437;
-		
 		OUTTER_DOORS_TO_OPEN[0] = 22170001;
 		OUTTER_DOORS_TO_OPEN[1] = 22170002;
-		
 		INNER_DOORS_TO_OPEN[0] = 22170003;
 		INNER_DOORS_TO_OPEN[1] = 22170004;
-		
 		FLAG_COORDS[0] = new Location(83699, -17468, -1774, 19048);
 		FLAG_COORDS[1] = new Location(82053, -17060, -1784, 5432);
 		FLAG_COORDS[2] = new Location(82142, -15528, -1799, 58792);
@@ -63,7 +57,6 @@ public class BanditStronghold extends FlagWar
 		FLAG_COORDS[6] = new Location(84375, -17060, -1860, 27712);
 		
 		final Collection<ResidenceHallTeleportZone> zoneList = ZoneManager.getInstance().getAllZones(ResidenceHallTeleportZone.class);
-		
 		for (ResidenceHallTeleportZone teleZone : zoneList)
 		{
 			if (teleZone.getResidenceId() != BANDIT_STRONGHOLD)
@@ -72,7 +65,6 @@ public class BanditStronghold extends FlagWar
 			}
 			
 			final int id = teleZone.getResidenceZoneId();
-			
 			if ((id < 0) || (id >= 6))
 			{
 				continue;
@@ -123,7 +115,6 @@ public class BanditStronghold extends FlagWar
 				break;
 			}
 		}
-		
 		return result;
 	}
 	
@@ -160,7 +151,6 @@ public class BanditStronghold extends FlagWar
 				break;
 			}
 		}
-		
 		return result;
 	}
 	

@@ -122,7 +122,6 @@ public class Q153_DeliverGoods extends Quest
 							htmltext = "30002-01.htm";
 							st.takeItems(HEAVY_WOOD_BOX, 1);
 							st.giveItems(JACKSON_RECEIPT, 1);
-							
 							if (st.hasQuestItems(SILVIA_RECEIPT, RANT_RECEIPT))
 							{
 								st.set("cond", "2");
@@ -146,7 +145,6 @@ public class Q153_DeliverGoods extends Quest
 							st.takeItems(CLOTH_BUNDLE, 1);
 							st.giveItems(SILVIA_RECEIPT, 1);
 							st.giveItems(SOULSHOT_NO_GRADE, 3);
-							
 							if (st.hasQuestItems(JACKSON_RECEIPT, RANT_RECEIPT))
 							{
 								st.set("cond", "2");
@@ -169,7 +167,6 @@ public class Q153_DeliverGoods extends Quest
 							htmltext = "30054-01.htm";
 							st.takeItems(CLAY_POT, 1);
 							st.giveItems(RANT_RECEIPT, 1);
-							
 							if (st.hasQuestItems(JACKSON_RECEIPT, SILVIA_RECEIPT))
 							{
 								st.set("cond", "2");

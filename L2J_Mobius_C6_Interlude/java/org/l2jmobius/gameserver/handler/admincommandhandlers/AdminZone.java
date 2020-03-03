@@ -46,7 +46,6 @@ public class AdminZone implements IAdminCommandHandler
 		
 		StringTokenizer st = new StringTokenizer(command, " ");
 		String actualCommand = st.nextToken(); // Get actual command
-		
 		if (actualCommand.equalsIgnoreCase("admin_zone_check"))
 		{
 			showHtml(activeChar);
@@ -91,7 +90,6 @@ public class AdminZone implements IAdminCommandHandler
 		final int y = activeChar.getY();
 		final int rx = ((x - World.MAP_MIN_X) >> 15) + World.TILE_X_MIN;
 		final int ry = ((y - World.MAP_MIN_Y) >> 15) + World.TILE_Y_MIN;
-		
 		final NpcHtmlMessage html = new NpcHtmlMessage(0);
 		html.setFile("data/html/admin/zone.htm");
 		
@@ -99,7 +97,6 @@ public class AdminZone implements IAdminCommandHandler
 		html.replace("%GEOREGION%", rx + "_" + ry);
 		html.replace("%CLOSESTTOWN%", MapRegionData.getInstance().getClosestTownName(activeChar));
 		html.replace("%CURRENTLOC%", x + ", " + y + ", " + activeChar.getZ());
-		
 		html.replace("%PVP%", (activeChar.isInsideZone(ZoneId.PVP) ? "<font color=\"LEVEL\">YES</font>" : "NO"));
 		html.replace("%PEACE%", (activeChar.isInsideZone(ZoneId.PEACE) ? "<font color=\"LEVEL\">YES</font>" : "NO"));
 		html.replace("%SIEGE%", (activeChar.isInsideZone(ZoneId.SIEGE) ? "<font color=\"LEVEL\">YES</font>" : "NO"));

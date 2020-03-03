@@ -77,7 +77,6 @@ public class TradeController
 		_lists = new HashMap<>();
 		_listsTaskItem = new HashMap<>();
 		final File buylistData = new File(Config.DATAPACK_ROOT, "data/buylists.csv");
-		
 		if (buylistData.exists())
 		{
 			LOGGER.warning("Do, please, remove buylists from data folder and use SQL buylist instead");
@@ -159,20 +158,17 @@ public class TradeController
 			try (Connection con = DatabaseFactory.getConnection())
 			{
 				final PreparedStatement statement1 = con.prepareStatement("SELECT * FROM merchant_shopids");
-				
 				final ResultSet rset1 = statement1.executeQuery();
 				
 				while (rset1.next())
 				{
 					final PreparedStatement statement = con.prepareStatement("SELECT * FROM merchant_buylists WHERE shop_id=? ORDER BY `order` ASC");
-					
 					statement.setString(1, String.valueOf(rset1.getInt("shop_id")));
 					final ResultSet rset = statement.executeQuery();
 					if (rset.next())
 					{
 						limitedItem = false;
 						final StoreTradeList buy1 = new StoreTradeList(rset1.getInt("shop_id"));
-						
 						int itemId = rset.getInt("item_id");
 						int price = rset.getInt("price");
 						int count = rset.getInt("count");
@@ -180,7 +176,6 @@ public class TradeController
 						int time = rset.getInt("time");
 						
 						final ItemInstance item = ItemTable.getInstance().createDummyItem(itemId);
-						
 						if (item == null)
 						{
 							rset.close();
@@ -226,7 +221,6 @@ public class TradeController
 								time = rset.getInt("time");
 								currentCount = rset.getInt("currentCount");
 								final ItemInstance item2 = ItemTable.getInstance().createDummyItem(itemId);
-								
 								if (item2 == null)
 								{
 									continue;
@@ -292,7 +286,6 @@ public class TradeController
 					int time = 0;
 					long savetimer = 0;
 					final long currentMillis = System.currentTimeMillis();
-					
 					final PreparedStatement statement2 = con.prepareStatement("SELECT DISTINCT time, savetimer FROM merchant_buylists WHERE time <> 0 ORDER BY time");
 					final ResultSet rset2 = statement2.executeQuery();
 					
@@ -331,18 +324,14 @@ public class TradeController
 				try (Connection con = DatabaseFactory.getConnection())
 				{
 					final int initialSize = _lists.size();
-					
 					final PreparedStatement statement1 = con.prepareStatement("SELECT * FROM custom_merchant_shopids");
-					
 					final ResultSet rset1 = statement1.executeQuery();
 					
 					while (rset1.next())
 					{
 						final PreparedStatement statement = con.prepareStatement("SELECT * FROM custom_merchant_buylists WHERE shop_id=? ORDER BY `order` ASC");
-						
 						statement.setString(1, String.valueOf(rset1.getInt("shop_id")));
 						final ResultSet rset = statement.executeQuery();
-						
 						if (rset.next())
 						{
 							limitedItem = false;
@@ -459,7 +448,6 @@ public class TradeController
 						int time = 0;
 						long savetimer = 0;
 						final long currentMillis = System.currentTimeMillis();
-						
 						final PreparedStatement statement2 = con.prepareStatement("SELECT DISTINCT time, savetimer FROM custom_merchant_buylists WHERE time <> 0 ORDER BY time");
 						final ResultSet rset2 = statement2.executeQuery();
 						
@@ -499,14 +487,12 @@ public class TradeController
 		{
 			return _lists.get(listId);
 		}
-		
 		return _listsTaskItem.get(listId);
 	}
 	
 	public List<StoreTradeList> getBuyListByNpcId(int npcId)
 	{
 		final List<StoreTradeList> lists = new ArrayList<>();
-		
 		for (StoreTradeList list : _lists.values())
 		{
 			if (list.getNpcId().startsWith("gm"))
@@ -567,7 +553,6 @@ public class TradeController
 	public void dataCountStore()
 	{
 		int listId;
-		
 		if (_listsTaskItem == null)
 		{
 			return;
@@ -584,7 +569,6 @@ public class TradeController
 				}
 				
 				listId = list.getListId();
-				
 				for (ItemInstance Item : list.getItems())
 				{
 					if (Item.getCount() < Item.getInitCount()) // needed?

@@ -53,7 +53,6 @@ public abstract class ZoneForm
 	{
 		final int s1 = sameSide(ax1, ay1, ax2, ay2, bx1, by1, bx2, by2);
 		final int s2 = sameSide(bx1, by1, bx2, by2, ax1, ay1, ax2, ay1);
-		
 		return (s1 <= 0) && (s2 <= 0);
 	}
 	
@@ -71,7 +70,6 @@ public abstract class ZoneForm
 		// Cross product of the vector from the endpoint of the line to the point
 		final double c1 = (dx * dy1) - (dy * dx1);
 		final double c2 = (dx * dy2) - (dy * dx2);
-		
 		if ((c1 != 0) && (c2 != 0))
 		{
 			sameSide = (c1 < 0) != (c2 < 0) ? -1 : 1;
@@ -84,7 +82,6 @@ public abstract class ZoneForm
 		{
 			sameSide = !isBetween(x0, x1, px0) && !isBetween(x0, x1, px1) ? 1 : 0;
 		}
-		
 		return sameSide;
 	}
 	
@@ -98,7 +95,6 @@ public abstract class ZoneForm
 		final ItemInstance item = new ItemInstance(IdFactory.getNextId(), 57);
 		item.setCount(id);
 		item.spawnMe(x, y, z + 5);
-		
 		ZoneData.getInstance().addDebugItem(item);
 	}
 }

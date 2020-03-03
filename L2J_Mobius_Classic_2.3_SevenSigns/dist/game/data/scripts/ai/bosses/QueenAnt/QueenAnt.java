@@ -279,7 +279,6 @@ public class QueenAnt extends AbstractNpcAI
 				break;
 			}
 		}
-		
 		return super.onSpawn(npc);
 	}
 	

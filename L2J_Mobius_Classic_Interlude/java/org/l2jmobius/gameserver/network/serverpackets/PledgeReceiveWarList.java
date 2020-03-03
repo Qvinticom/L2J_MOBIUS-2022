@@ -49,7 +49,6 @@ public class PledgeReceiveWarList implements IClientOutgoingPacket
 		for (ClanWar clanWar : _clanList)
 		{
 			final Clan clan = clanWar.getOpposingClan(_clan);
-			
 			if (clan == null)
 			{
 				continue;

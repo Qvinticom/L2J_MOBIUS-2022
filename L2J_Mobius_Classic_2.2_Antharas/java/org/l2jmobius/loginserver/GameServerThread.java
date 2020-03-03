@@ -89,7 +89,6 @@ public class GameServerThread extends Thread
 				lengthLo = _in.read();
 				lengthHi = _in.read();
 				length = (lengthHi * 256) + lengthLo;
-				
 				if ((lengthHi < 0) || _connection.isClosed())
 				{
 					LOGGER.finer("LoginServerThread: Login terminated the connection.");
@@ -97,7 +96,6 @@ public class GameServerThread extends Thread
 				}
 				
 				final byte[] data = new byte[length - 2];
-				
 				int receivedBytes = 0;
 				int newBytes = 0;
 				int left = length - 2;
@@ -269,7 +267,6 @@ public class GameServerThread extends Thread
 	public void setGameHosts(String[] hosts)
 	{
 		LOGGER.info("Updated Gameserver [" + getServerId() + "] " + GameServerTable.getInstance().getServerNameById(getServerId()) + " IP's:");
-		
 		_gsi.clearServerAddresses();
 		for (int i = 0; i < hosts.length; i += 2)
 		{

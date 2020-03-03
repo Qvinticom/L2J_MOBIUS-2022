@@ -121,7 +121,6 @@ public class Q10963_ExploringTheAntNest extends Quest
 		if ((qs != null) && qs.isCond(1))
 		{
 			final int killCount = qs.getInt(KILL_COUNT_VAR) + 1;
-			
 			if (killCount < 500)
 			{
 				qs.set(KILL_COUNT_VAR, killCount);
@@ -148,7 +147,6 @@ public class Q10963_ExploringTheAntNest extends Quest
 			holder.add(new NpcLogListHolder(NpcStringId.DEFEAT_THE_MONSTERS_IN_THE_ANT_NEST.getId(), true, qs.getInt(KILL_COUNT_VAR)));
 			return holder;
 		}
-		
 		return super.getNpcLogList(player);
 	}
 	
@@ -182,7 +180,6 @@ public class Q10963_ExploringTheAntNest extends Quest
 				htmltext = getAlreadyCompletedMsg(player);
 			}
 		}
-		
 		return htmltext;
 	}
 }

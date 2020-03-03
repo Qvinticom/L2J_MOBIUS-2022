@@ -44,7 +44,6 @@ public class RequestRefineCancel extends GameClientPacket
 	{
 		final PlayerInstance player = getClient().getPlayer();
 		final ItemInstance targetItem = (ItemInstance) World.getInstance().findObject(_targetItemObjId);
-		
 		if (player == null)
 		{
 			return;

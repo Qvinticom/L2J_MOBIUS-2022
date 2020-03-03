@@ -65,7 +65,6 @@ public class RequestChangePetName extends GameClientPacket
 		else if ((_name.length() < 3) || (_name.length() > 16))
 		{
 			player.sendMessage("Your pet's name can be up to 16 characters.");
-			
 			return;
 		}
 		else if (!PetNameTable.getInstance().isValidPetName(_name))
@@ -84,7 +83,6 @@ public class RequestChangePetName extends GameClientPacket
 		if (pet instanceof PetInstance)
 		{
 			final ItemInstance controlItem = pet.getOwner().getInventory().getItemByObjectId(pet.getControlItemId());
-			
 			if (controlItem != null)
 			{
 				controlItem.setCustomType2(1);

@@ -80,7 +80,6 @@ public class Forum
 	{
 		_forumName = name;
 		_forumId = ForumsBBSManager.getInstance().getANewID();
-		
 		_forumType = type;
 		_forumPost = 0;
 		_forumPerm = perm;
@@ -100,15 +99,12 @@ public class Forum
 			final PreparedStatement statement = con.prepareStatement("SELECT * FROM forums WHERE forum_id=?");
 			statement.setInt(1, _forumId);
 			final ResultSet result = statement.executeQuery();
-			
 			if (result.next())
 			{
 				_forumName = result.getString("forum_name");
-				
 				_forumPost = result.getInt("forum_post");
 				_forumType = result.getInt("forum_type");
 				_forumPerm = result.getInt("forum_perm");
-				
 				_ownerID = result.getInt("forum_owner_id");
 			}
 			result.close();
@@ -128,7 +124,6 @@ public class Forum
 			while (result.next())
 			{
 				final Topic t = new Topic(Topic.ConstructorType.RESTORE, result.getInt("topic_id"), result.getInt("topic_forum_id"), result.getString("topic_name"), result.getLong("topic_date"), result.getString("topic_ownername"), result.getInt("topic_ownerid"), result.getInt("topic_type"), result.getInt("topic_reply"));
-				
 				_topic.put(t.getID(), t);
 				if (t.getID() > TopicBBSManager.getInstance().getMaxID(this))
 				{

@@ -89,7 +89,6 @@ public class SpringUtilities
 		for (int i = 1; i < max; i++)
 		{
 			final SpringLayout.Constraints cons = layout.getConstraints(parent.getComponent(i));
-			
 			maxWidthSpring = Spring.max(maxWidthSpring, cons.getWidth());
 			maxHeightSpring = Spring.max(maxHeightSpring, cons.getHeight());
 		}
@@ -99,7 +98,6 @@ public class SpringUtilities
 		for (int i = 0; i < max; i++)
 		{
 			final SpringLayout.Constraints cons = layout.getConstraints(parent.getComponent(i));
-			
 			cons.setWidth(maxWidthSpring);
 			cons.setHeight(maxHeightSpring);
 		}

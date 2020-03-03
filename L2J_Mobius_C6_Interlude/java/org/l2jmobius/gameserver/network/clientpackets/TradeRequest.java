@@ -61,7 +61,6 @@ public class TradeRequest extends GameClientPacket
 		}
 		
 		final PlayerInstance partner = (PlayerInstance) target;
-		
 		if (partner.isInOlympiadMode() || player.isInOlympiadMode())
 		{
 			player.sendMessage("You or your target can't request trade in Olympiad mode.");

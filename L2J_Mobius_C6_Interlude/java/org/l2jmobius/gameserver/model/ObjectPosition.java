@@ -69,12 +69,10 @@ public class ObjectPosition
 		catch (Exception e)
 		{
 			LOGGER.warning("Object Id at bad coords: (x: " + getWorldPosition().getX() + ", y: " + getWorldPosition().getY() + ", z: " + getWorldPosition().getZ() + ").");
-			
 			if (_activeObject instanceof PlayerInstance)
 			{
 				((PlayerInstance) _activeObject).teleToLocation(0, 0, 0, false);
 				((PlayerInstance) _activeObject).sendMessage("Error with your coords, Please ask a GM for help!");
-				
 			}
 			else if (_activeObject instanceof Creature)
 			{
@@ -241,7 +239,6 @@ public class ObjectPosition
 		{
 			_worldPosition = new Location(0, 0, 0);
 		}
-		
 		return _worldPosition;
 	}
 	

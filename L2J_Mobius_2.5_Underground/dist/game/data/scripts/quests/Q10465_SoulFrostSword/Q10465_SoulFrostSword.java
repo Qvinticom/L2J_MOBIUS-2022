@@ -104,7 +104,6 @@ public class Q10465_SoulFrostSword extends Quest
 		final QuestState qs = getQuestState(player, true);
 		final ItemInstance wpn = player.getInventory().getPaperdollItem(Inventory.PAPERDOLL_RHAND);
 		String htmltext = getNoQuestMsg(player);
-		
 		if (qs.isCreated())
 		{
 			htmltext = "30471-01.htm";
@@ -139,7 +138,6 @@ public class Q10465_SoulFrostSword extends Quest
 		{
 			htmltext = getAlreadyCompletedMsg(player);
 		}
-		
 		return htmltext;
 	}
 }

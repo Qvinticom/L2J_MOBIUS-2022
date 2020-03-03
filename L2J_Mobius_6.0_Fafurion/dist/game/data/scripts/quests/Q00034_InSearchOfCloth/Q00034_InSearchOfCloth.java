@@ -153,7 +153,6 @@ public class Q00034_InSearchOfCloth extends Quest
 	{
 		final QuestState st = getQuestState(player, false);
 		final PlayerInstance member = getRandomPartyMember(player, 4);
-		
 		if ((st != null) && (st.isCond(4)) && (member != null) && getRandomBoolean())
 		{
 			giveItems(member, SPINNERET, 1);

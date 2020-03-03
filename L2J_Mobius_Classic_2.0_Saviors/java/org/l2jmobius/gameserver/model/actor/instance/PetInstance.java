@@ -103,7 +103,6 @@ public class PetInstance extends Summon
 		{
 			_leveldata = PetDataTable.getInstance().getPetLevelData(getTemplate().getId(), getStat().getLevel());
 		}
-		
 		return _leveldata;
 	}
 	
@@ -113,7 +112,6 @@ public class PetInstance extends Summon
 		{
 			_data = PetDataTable.getInstance().getPetData(getTemplate().getId());
 		}
-		
 		return _data;
 	}
 	
@@ -223,7 +221,6 @@ public class PetInstance extends Summon
 			return null; // owner has a pet listed in world
 		}
 		final PetData data = PetDataTable.getInstance().getPetData(template.getId());
-		
 		final PetInstance pet = restore(control, template, owner);
 		// add the pet instance to world
 		if (pet != null)
@@ -264,9 +261,7 @@ public class PetInstance extends Summon
 		setInstanceType(InstanceType.PetInstance);
 		
 		_controlObjectId = control.getObjectId();
-		
 		getStat().setLevel((byte) Math.max(level, PetDataTable.getInstance().getPetMinLevel(template.getId())));
-		
 		_inventory = new PetInventory(this);
 		_inventory.restore();
 		
@@ -352,7 +347,6 @@ public class PetInstance extends Summon
 		{
 			return null;
 		}
-		
 		return (Weapon) weapon.getItem();
 	}
 	
@@ -389,14 +383,12 @@ public class PetInstance extends Summon
 	public boolean destroyItem(String process, int objectId, long count, WorldObject reference, boolean sendMessage)
 	{
 		final ItemInstance item = _inventory.destroyItem(process, objectId, count, getOwner(), reference);
-		
 		if (item == null)
 		{
 			if (sendMessage)
 			{
 				sendPacket(SystemMessageId.INCORRECT_ITEM_COUNT_2);
 			}
-			
 			return false;
 		}
 		
@@ -437,7 +429,6 @@ public class PetInstance extends Summon
 	public boolean destroyItemByItemId(String process, int itemId, long count, WorldObject reference, boolean sendMessage)
 	{
 		final ItemInstance item = _inventory.destroyItemByItemId(process, itemId, count, getOwner(), reference);
-		
 		if (item == null)
 		{
 			if (sendMessage)
@@ -482,7 +473,6 @@ public class PetInstance extends Summon
 		
 		getAI().setIntention(CtrlIntention.AI_INTENTION_IDLE);
 		broadcastPacket(new StopMove(this));
-		
 		if (!object.isItem())
 		{
 			// dont try to pickup anything that is not an item :)
@@ -706,7 +696,6 @@ public class PetInstance extends Summon
 		final ItemInstance oldItem = _inventory.getItemByObjectId(objectId);
 		final ItemInstance playerOldItem = target.getItemByItemId(oldItem.getId());
 		final ItemInstance newItem = _inventory.transferItem(process, objectId, count, target, actor, reference);
-		
 		if (newItem == null)
 		{
 			return null;
@@ -813,7 +802,6 @@ public class PetInstance extends Summon
 	public void dropItemHere(ItemInstance dropit, boolean protect)
 	{
 		dropit = _inventory.dropItem("Drop", dropit.getObjectId(), dropit.getCount(), getOwner(), this);
-		
 		if (dropit != null)
 		{
 			if (protect)
@@ -854,7 +842,6 @@ public class PetInstance extends Summon
 				}
 				
 				pet = new PetInstance(template, owner, control, rset.getByte("level"));
-				
 				pet._respawned = true;
 				pet.setName(rset.getString("name"));
 				
@@ -953,7 +940,6 @@ public class PetInstance extends Summon
 			statement.executeUpdate();
 			
 			_respawned = true;
-			
 			if (_restoreSummon)
 			{
 				CharSummonTable.getInstance().getPets().put(getOwner().getObjectId(), getControlObjectId());
@@ -1074,7 +1060,6 @@ public class PetInstance extends Summon
 					while (rset.next())
 					{
 						final int effectCurTime = rset.getInt("remaining_time");
-						
 						final Skill skill = SkillData.getInstance().getSkill(rset.getInt("skill_id"), rset.getInt("skill_level"));
 						if (skill == null)
 						{
@@ -1123,7 +1108,6 @@ public class PetInstance extends Summon
 	public synchronized void startFeed()
 	{
 		// stop feeding task if its active
-		
 		stopFeed();
 		if (!isDead() && (getOwner().getPet() == this))
 		{
@@ -1257,7 +1241,6 @@ public class PetInstance extends Summon
 	public void updateRefOwner(PlayerInstance owner)
 	{
 		final int oldOwnerId = getOwner().getObjectId();
-		
 		setOwner(owner);
 		World.getInstance().removePet(oldOwnerId);
 		World.getInstance().addPet(oldOwnerId, this);

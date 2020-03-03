@@ -48,7 +48,6 @@ public class OlympiadStadiaManager
 				return temp;
 			}
 		}
-		
 		return null;
 	}
 	
@@ -64,7 +63,6 @@ public class OlympiadStadiaManager
 				}
 			}
 		}
-		
 		return null;
 	}
 	

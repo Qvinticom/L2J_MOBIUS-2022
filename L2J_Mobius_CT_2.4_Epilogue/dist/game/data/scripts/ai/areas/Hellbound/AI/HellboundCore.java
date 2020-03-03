@@ -71,7 +71,6 @@ public class HellboundCore extends AbstractNpcAI
 		{
 			startQuestTimer("cast", 10000, npc, null);
 		}
-		
 		return super.onSpawn(npc);
 	}
 }

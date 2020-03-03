@@ -56,7 +56,6 @@ public class SummonStatus extends PlayableStatus
 			if ((caster != null) && Util.checkIfInRange(1000, getActiveChar(), caster, true) && !caster.isDead() && getActiveChar().getParty().getMembers().contains(caster))
 			{
 				int transferDmg = Math.min((int) caster.getCurrentHp() - 1, ((int) value * (int) getActiveChar().getStat().calcStat(Stat.TRANSFER_DAMAGE_TO_PLAYER, 0, null, null)) / 100);
-				
 				if (transferDmg > 0)
 				{
 					int membersInRange = 0;
@@ -90,7 +89,6 @@ public class SummonStatus extends PlayableStatus
 		else if ((caster != null) && (caster == getActiveChar().getOwner()) && Util.checkIfInRange(1000, getActiveChar(), caster, true) && !caster.isDead()) // when no party, transfer only to owner (caster)
 		{
 			int transferDmg = Math.min((int) caster.getCurrentHp() - 1, ((int) value * (int) getActiveChar().getStat().calcStat(Stat.TRANSFER_DAMAGE_TO_PLAYER, 0, null, null)) / 100);
-			
 			if (transferDmg > 0)
 			{
 				if (attacker.isPlayable() && (caster.getCurrentCp() > 0))

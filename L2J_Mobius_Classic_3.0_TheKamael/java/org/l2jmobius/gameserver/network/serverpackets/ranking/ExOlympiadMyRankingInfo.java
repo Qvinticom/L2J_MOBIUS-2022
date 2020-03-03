@@ -61,7 +61,6 @@ public class ExOlympiadMyRankingInfo implements IClientOutgoingPacket
 		int year = calendar.get(Calendar.YEAR);
 		// Add one to month {0 - 11}
 		int month = calendar.get(Calendar.MONTH) + 1;
-		
 		if (Olympiad.getInstance().getCurrentCycle() > 1)
 		{
 			if (month == 1)

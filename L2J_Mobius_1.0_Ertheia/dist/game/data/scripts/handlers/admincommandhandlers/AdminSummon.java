@@ -65,7 +65,6 @@ public class AdminSummon implements IAdminCommandHandler
 		else
 		{
 			subCommand = "admin_spawn_once";
-			
 			BuilderUtil.sendSysMessage(activeChar, "This is only a temporary spawn.  The mob(s) will NOT respawn.");
 			id -= 1000000;
 		}

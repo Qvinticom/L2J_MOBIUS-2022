@@ -91,7 +91,6 @@ public class MercManagerInstance extends FolkInstance
 		{
 			final StringTokenizer st = new StringTokenizer(command, " ");
 			final String actualCommand = st.nextToken(); // Get actual command
-			
 			String val = "";
 			if (st.countTokens() >= 1)
 			{
@@ -163,7 +162,6 @@ public class MercManagerInstance extends FolkInstance
 				return COND_OWNER;
 			}
 		}
-		
 		return COND_ALL_FALSE;
 	}
 }

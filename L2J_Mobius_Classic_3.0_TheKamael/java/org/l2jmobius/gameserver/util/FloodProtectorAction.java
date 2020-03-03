@@ -86,7 +86,6 @@ public class FloodProtectorAction
 	public boolean tryPerformAction(String command)
 	{
 		final int curTick = GameTimeController.getInstance().getGameTicks();
-		
 		if ((_client.getPlayer() != null) && _client.getPlayer().canOverrideCond(PlayerCondOverride.FLOOD_CONDITIONS))
 		{
 			return true;
@@ -105,7 +104,6 @@ public class FloodProtectorAction
 			if (!_punishmentInProgress && (_config.PUNISHMENT_LIMIT > 0) && (_count.get() >= _config.PUNISHMENT_LIMIT) && (_config.PUNISHMENT_TYPE != null))
 			{
 				_punishmentInProgress = true;
-				
 				if ("kick".equals(_config.PUNISHMENT_TYPE))
 				{
 					kickPlayer();

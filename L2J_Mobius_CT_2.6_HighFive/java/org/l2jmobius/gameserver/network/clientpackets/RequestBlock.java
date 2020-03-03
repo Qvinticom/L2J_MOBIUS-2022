@@ -38,7 +38,6 @@ public class RequestBlock implements IClientIncomingPacket
 	public boolean read(GameClient client, PacketReader packet)
 	{
 		_type = packet.readD(); // 0x00 - block, 0x01 - unblock, 0x03 - allblock, 0x04 - allunblock
-		
 		if ((_type == BLOCK) || (_type == UNBLOCK))
 		{
 			_name = packet.readS();
@@ -52,7 +51,6 @@ public class RequestBlock implements IClientIncomingPacket
 		final PlayerInstance player = client.getPlayer();
 		final int targetId = CharNameTable.getInstance().getIdByName(_name);
 		final int targetAL = CharNameTable.getInstance().getAccessLevelById(targetId);
-		
 		if (player == null)
 		{
 			return;

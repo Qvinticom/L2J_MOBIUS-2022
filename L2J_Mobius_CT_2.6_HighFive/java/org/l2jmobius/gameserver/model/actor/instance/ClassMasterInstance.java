@@ -53,7 +53,6 @@ public class ClassMasterInstance extends MerchantInstance
 	public String getHtmlPath(int npcId, int value)
 	{
 		String pom = "";
-		
 		if (value == 0)
 		{
 			pom = Integer.toString(npcId);
@@ -62,7 +61,6 @@ public class ClassMasterInstance extends MerchantInstance
 		{
 			pom = npcId + "-" + value;
 		}
-		
 		return "data/html/classmaster/" + pom + ".htm";
 	}
 	
@@ -84,7 +82,6 @@ public class ClassMasterInstance extends MerchantInstance
 		else if (command.startsWith("change_class"))
 		{
 			final int val = Integer.parseInt(command.substring(13));
-			
 			if (checkAndChangeClass(player, val))
 			{
 				final NpcHtmlMessage html = new NpcHtmlMessage(getObjectId());
@@ -192,7 +189,6 @@ public class ClassMasterInstance extends MerchantInstance
 	private void showHtmlMenu(PlayerInstance player, int objectId, int level)
 	{
 		final NpcHtmlMessage html = new NpcHtmlMessage(objectId);
-		
 		if (!Config.ALLOW_CLASS_MASTERS)
 		{
 			html.setFile(player, "data/html/classmaster/disabled.htm");

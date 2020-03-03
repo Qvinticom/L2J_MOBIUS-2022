@@ -133,7 +133,6 @@ public class Q00644_GraveRobberAnnihilation extends Quest
 	{
 		final QuestState qs = getQuestState(player, true);
 		String htmltext = getNoQuestMsg(player);
-		
 		switch (qs.getState())
 		{
 			case State.CREATED:

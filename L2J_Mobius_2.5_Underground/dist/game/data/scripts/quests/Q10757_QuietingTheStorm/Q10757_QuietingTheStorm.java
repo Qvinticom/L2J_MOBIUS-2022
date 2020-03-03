@@ -53,7 +53,6 @@ public class Q10757_QuietingTheStorm extends Quest
 		addStartNpc(PIO);
 		addTalkId(PIO);
 		addKillId(VORTEX, GIANT_WINDIMA, IMMENSE_WINDIMA);
-		
 		addCondRace(Race.ERTHEIA, "33963-00.htm");
 		addCondMinLevel(MIN_LEVEL, "33963-00.htm");
 		addCondCompletedQuest(Q10756_AnInterdimensionalDraft.class.getSimpleName(), "33963-00.htm");
@@ -106,7 +105,6 @@ public class Q10757_QuietingTheStorm extends Quest
 	{
 		final QuestState qs = getQuestState(player, true);
 		String htmltext = getNoQuestMsg(player);
-		
 		switch (qs.getState())
 		{
 			case State.CREATED:

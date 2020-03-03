@@ -1184,7 +1184,6 @@ public class BlowfishEngine
 		for (int s = 0; s < size; s += 2)
 		{
 			xl ^= P[0];
-			
 			for (int i = 1; i < ROUNDS; i += 2)
 			{
 				xr ^= func(xl) ^ P[i];
@@ -1254,7 +1253,6 @@ public class BlowfishEngine
 		int xl = bytesTo32bits(src, srcIndex);
 		int xr = bytesTo32bits(src, srcIndex + 4);
 		xl ^= P[0];
-		
 		for (int i = 1; i < ROUNDS; i += 2)
 		{
 			xr ^= func(xl) ^ P[i];
@@ -1278,7 +1276,6 @@ public class BlowfishEngine
 		int xl = bytesTo32bits(src, srcIndex);
 		int xr = bytesTo32bits(src, srcIndex + 4);
 		xl ^= P[ROUNDS + 1];
-		
 		for (int i = ROUNDS; i > 0; i -= 2)
 		{
 			xr ^= func(xl) ^ P[i];

@@ -38,7 +38,6 @@ public class RequestExOustFromMPCC extends GameClientPacket
 	{
 		final PlayerInstance target = World.getInstance().getPlayer(_name);
 		final PlayerInstance player = getClient().getPlayer();
-		
 		if ((target != null) && target.isInParty() && player.isInParty() && player.getParty().isInCommandChannel() && target.getParty().isInCommandChannel() && player.getParty().getCommandChannel().getChannelLeader().equals(player))
 		{
 			target.getParty().getCommandChannel().removeParty(target.getParty());

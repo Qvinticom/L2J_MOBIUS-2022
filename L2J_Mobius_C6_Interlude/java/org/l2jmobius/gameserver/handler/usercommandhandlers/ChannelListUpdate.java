@@ -50,7 +50,6 @@ public class ChannelListUpdate implements IUserCommandHandler
 		}
 		
 		final CommandChannel channel = player.getParty().getCommandChannel();
-		
 		player.sendPacket(new ExMultiPartyCommandChannelInfo(channel));
 		return true;
 	}

@@ -92,7 +92,6 @@ public class AdminSkill implements IAdminCommandHandler
 			try
 			{
 				final String val = command.substring(15);
-				
 				if ((activeChar == activeChar.getTarget()) || activeChar.getAccessLevel().isGm())
 				{
 					adminAddSkill(activeChar, val);
@@ -108,9 +107,7 @@ public class AdminSkill implements IAdminCommandHandler
 			try
 			{
 				final String id = command.substring(19);
-				
 				final int idval = Integer.parseInt(id);
-				
 				if ((activeChar == activeChar.getTarget()) || activeChar.getAccessLevel().isGm())
 				{
 					adminRemoveSkill(activeChar, idval);
@@ -145,7 +142,6 @@ public class AdminSkill implements IAdminCommandHandler
 			if (activeChar.getTarget() instanceof PlayerInstance)
 			{
 				final PlayerInstance player = (PlayerInstance) activeChar.getTarget();
-				
 				for (Skill skill : player.getAllSkills())
 				{
 					player.removeSkill(skill);
@@ -161,7 +157,6 @@ public class AdminSkill implements IAdminCommandHandler
 			try
 			{
 				final String[] val = command.split(" ");
-				
 				if ((activeChar == activeChar.getTarget()) || activeChar.getAccessLevel().isGm())
 				{
 					adminAddClanSkill(activeChar, Integer.parseInt(val[1]), Integer.parseInt(val[2]));
@@ -183,7 +178,6 @@ public class AdminSkill implements IAdminCommandHandler
 	{
 		final WorldObject target = activeChar.getTarget();
 		PlayerInstance player = null;
-		
 		if (target instanceof PlayerInstance)
 		{
 			player = (PlayerInstance) target;
@@ -197,7 +191,6 @@ public class AdminSkill implements IAdminCommandHandler
 		boolean countUnlearnable = true;
 		int unLearnable = 0;
 		int skillCounter = 0;
-		
 		SkillLearn[] skills = SkillTreeTable.getInstance().getAvailableSkills(player, player.getClassId());
 		
 		while (skills.length > unLearnable)
@@ -205,7 +198,6 @@ public class AdminSkill implements IAdminCommandHandler
 			for (SkillLearn s : skills)
 			{
 				final Skill sk = SkillTable.getInstance().getInfo(s.getId(), s.getLevel());
-				
 				if ((sk == null) || !sk.getCanLearn(player.getClassId()))
 				{
 					if (countUnlearnable)
@@ -245,7 +237,6 @@ public class AdminSkill implements IAdminCommandHandler
 		// TODO: Externalize HTML
 		final WorldObject target = activeChar.getTarget();
 		PlayerInstance player = null;
-		
 		if (target instanceof PlayerInstance)
 		{
 			player = (PlayerInstance) target;
@@ -257,10 +248,8 @@ public class AdminSkill implements IAdminCommandHandler
 		}
 		
 		final Skill[] skills = player.getAllSkills();
-		
 		final int maxSkillsPerPage = 10;
 		int maxPages = skills.length / maxSkillsPerPage;
-		
 		if (skills.length > (maxSkillsPerPage * maxPages))
 		{
 			maxPages++;
@@ -273,7 +262,6 @@ public class AdminSkill implements IAdminCommandHandler
 		
 		final int SkillsStart = maxSkillsPerPage * page;
 		int skillsEnd = skills.length;
-		
 		if ((skillsEnd - SkillsStart) > maxSkillsPerPage)
 		{
 			skillsEnd = SkillsStart + maxSkillsPerPage;
@@ -294,7 +282,6 @@ public class AdminSkill implements IAdminCommandHandler
 		replyMSG.append("<br><center>Click on the skill you wish to remove:</center>");
 		replyMSG.append("<br>");
 		String pages = "<center><table width=270><tr>";
-		
 		for (int x = 0; x < maxPages; x++)
 		{
 			final int pagenr = x + 1;
@@ -305,7 +292,6 @@ public class AdminSkill implements IAdminCommandHandler
 		replyMSG.append(pages);
 		replyMSG.append("<br><table width=270>");
 		replyMSG.append("<tr><td width=80>Name:</td><td width=60>Level:</td><td width=40>Id:</td></tr>");
-		
 		for (int i = SkillsStart; i < skillsEnd; i++)
 		{
 			replyMSG.append("<tr><td width=80><a action=\"bypass -h admin_remove_skill " + skills[i].getId() + "\">" + skills[i].getName() + "</a></td><td width=60>" + skills[i].getLevel() + "</td><td width=40>" + skills[i].getId() + "</td></tr>");
@@ -328,7 +314,6 @@ public class AdminSkill implements IAdminCommandHandler
 	{
 		final WorldObject target = activeChar.getTarget();
 		PlayerInstance player = null;
-		
 		if (target instanceof PlayerInstance)
 		{
 			player = (PlayerInstance) target;
@@ -351,7 +336,6 @@ public class AdminSkill implements IAdminCommandHandler
 	{
 		final WorldObject target = activeChar.getTarget();
 		PlayerInstance player = null;
-		
 		if (target instanceof PlayerInstance)
 		{
 			player = (PlayerInstance) target;
@@ -370,7 +354,6 @@ public class AdminSkill implements IAdminCommandHandler
 		{
 			final Skill[] skills = player.getAllSkills();
 			adminSkills = activeChar.getAllSkills();
-			
 			for (Skill adminSkill : adminSkills)
 			{
 				activeChar.removeSkill(adminSkill);
@@ -392,7 +375,6 @@ public class AdminSkill implements IAdminCommandHandler
 	{
 		final WorldObject target = activeChar.getTarget();
 		PlayerInstance player = null;
-		
 		if (target instanceof PlayerInstance)
 		{
 			player = (PlayerInstance) target;
@@ -410,7 +392,6 @@ public class AdminSkill implements IAdminCommandHandler
 		else
 		{
 			final Skill[] skills = player.getAllSkills();
-			
 			for (Skill skill : skills)
 			{
 				player.removeSkill(skill);
@@ -443,7 +424,6 @@ public class AdminSkill implements IAdminCommandHandler
 	{
 		final WorldObject target = activeChar.getTarget();
 		PlayerInstance player = null;
-		
 		if (target instanceof PlayerInstance)
 		{
 			if ((target == activeChar) || (activeChar.getAccessLevel().getLevel() > 70))
@@ -465,7 +445,6 @@ public class AdminSkill implements IAdminCommandHandler
 		}
 		
 		final StringTokenizer st = new StringTokenizer(value);
-		
 		if (st.countTokens() != 2)
 		{
 			showMainPage(activeChar);
@@ -478,10 +457,8 @@ public class AdminSkill implements IAdminCommandHandler
 			{
 				final String id = st.nextToken();
 				final String level = st.nextToken();
-				
 				final int idval = Integer.parseInt(id);
 				final int levelval = Integer.parseInt(level);
-				
 				skill = SkillTable.getInstance().getInfo(idval, levelval);
 			}
 			catch (Exception e)
@@ -510,7 +487,6 @@ public class AdminSkill implements IAdminCommandHandler
 	{
 		final WorldObject target = activeChar.getTarget();
 		PlayerInstance player = null;
-		
 		if (target instanceof PlayerInstance)
 		{
 			player = (PlayerInstance) target;
@@ -522,7 +498,6 @@ public class AdminSkill implements IAdminCommandHandler
 		}
 		
 		final Skill skill = SkillTable.getInstance().getInfo(idval, player.getSkillLevel(idval));
-		
 		if (skill != null)
 		{
 			final String skillname = skill.getName();
@@ -545,7 +520,6 @@ public class AdminSkill implements IAdminCommandHandler
 	{
 		final WorldObject target = activeChar.getTarget();
 		PlayerInstance player = null;
-		
 		if (target instanceof PlayerInstance)
 		{
 			player = (PlayerInstance) target;
@@ -584,9 +558,7 @@ public class AdminSkill implements IAdminCommandHandler
 			player.getClan().broadcastToOnlineMembers(sm);
 			player.getClan().addNewSkill(skill);
 			BuilderUtil.sendSysMessage(activeChar, "You gave the Clan Skill: " + skillname + " to the clan " + player.getClan().getName() + ".");
-			
 			activeChar.getClan().broadcastToOnlineMembers(new PledgeSkillList(activeChar.getClan()));
-			
 			for (PlayerInstance member : activeChar.getClan().getOnlineMembers())
 			{
 				member.sendSkillList();

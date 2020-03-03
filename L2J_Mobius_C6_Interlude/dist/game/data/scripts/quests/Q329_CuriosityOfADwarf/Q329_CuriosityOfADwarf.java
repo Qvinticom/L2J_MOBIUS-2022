@@ -83,7 +83,6 @@ public class Q329_CuriosityOfADwarf extends Quest
 			case State.STARTED:
 				final int golem = st.getQuestItemsCount(GOLEM_HEARTSTONE);
 				final int broken = st.getQuestItemsCount(BROKEN_HEARTSTONE);
-				
 				if ((golem + broken) == 0)
 				{
 					htmltext = "30437-04.htm";

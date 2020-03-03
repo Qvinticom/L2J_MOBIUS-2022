@@ -64,7 +64,6 @@ public class HealPercent extends AbstractEffect
 		double amount = 0;
 		final double power = _power;
 		final boolean full = (power == 100.0);
-		
 		amount = full ? target.getMaxHp() : (target.getMaxHp() * power) / 100.0;
 		// Prevents overheal and negative amount
 		amount = Math.max(Math.min(amount, target.getMaxRecoverableHp() - target.getCurrentHp()), 0);

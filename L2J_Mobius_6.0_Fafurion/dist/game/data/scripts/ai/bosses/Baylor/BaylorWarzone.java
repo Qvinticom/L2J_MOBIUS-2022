@@ -291,7 +291,6 @@ public class BaylorWarzone extends AbstractInstance
 	{
 		final Npc npc = (Npc) event.getTarget();
 		final Instance world = npc.getInstanceWorld();
-		
 		if (isInInstance(world))
 		{
 			if (world.getAliveNpcs(BAYLOR).isEmpty())
@@ -310,7 +309,6 @@ public class BaylorWarzone extends AbstractInstance
 		final Creature creature = event.getSeen();
 		final Npc npc = (Npc) event.getSeer();
 		final Instance world = npc.getInstanceWorld();
-		
 		if (isInInstance(world) && creature.isPlayer() && npc.isScriptValue(0))
 		{
 			npc.setScriptValue(1);

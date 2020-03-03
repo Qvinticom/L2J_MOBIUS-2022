@@ -45,7 +45,6 @@ public class UserCommandHandler
 	private UserCommandHandler()
 	{
 		_datatable = new HashMap<>();
-		
 		registerUserCommandHandler(new ChannelDelete());
 		registerUserCommandHandler(new ChannelLeave());
 		registerUserCommandHandler(new ChannelListUpdate());
@@ -59,7 +58,6 @@ public class UserCommandHandler
 		registerUserCommandHandler(new PartyInfo());
 		registerUserCommandHandler(new SiegeStatus());
 		registerUserCommandHandler(new Time());
-		
 		if (Config.OFFLINE_TRADE_ENABLE && Config.OFFLINE_COMMAND1)
 		{
 			registerUserCommandHandler(new OfflineShop());

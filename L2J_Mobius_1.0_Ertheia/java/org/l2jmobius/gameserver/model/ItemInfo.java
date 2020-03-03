@@ -136,7 +136,6 @@ public class ItemInfo
 		_time = item.isTimeLimitedItem() ? (int) (item.getRemainingTime() / 1000) : -9999;
 		_available = item.isAvailable();
 		_location = item.getLocationSlot();
-		
 		_elemAtkType = item.getAttackAttributeType().getClientId();
 		_elemAtkPower = item.getAttackAttributePower();
 		for (AttributeType type : AttributeType.ATTRIBUTE_TYPES)
@@ -193,9 +192,7 @@ public class ItemInfo
 		// Get shadow item mana
 		_mana = -1;
 		_time = -9999;
-		
 		_location = item.getLocationSlot();
-		
 		_elemAtkType = item.getAttackElementType();
 		_elemAtkPower = item.getAttackElementPower();
 		for (byte i = 0; i < 6; i++)
@@ -242,7 +239,6 @@ public class ItemInfo
 		// Get shadow item mana
 		_mana = -1;
 		_time = -9999;
-		
 		_location = 0;
 	}
 	
@@ -279,7 +275,6 @@ public class ItemInfo
 		_mana = item.getMana();
 		_time = item.getTime();
 		_location = item.getLocationSlot();
-		
 		_elemAtkType = item.getAttackElementType();
 		_elemAtkPower = item.getAttackElementPower();
 		for (byte i = 0; i < 6; i++)

@@ -70,7 +70,6 @@ public class FishData implements IXmlReader
 					if ("fish".equalsIgnoreCase(d.getNodeName()))
 					{
 						final NamedNodeMap attrs = d.getAttributes();
-						
 						final StatSet set = new StatSet();
 						for (int i = 0; i < attrs.getLength(); i++)
 						{

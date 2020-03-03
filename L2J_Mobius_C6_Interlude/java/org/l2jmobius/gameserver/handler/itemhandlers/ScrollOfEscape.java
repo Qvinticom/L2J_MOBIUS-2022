@@ -90,7 +90,6 @@ public class ScrollOfEscape implements IItemHandler
 		}
 		
 		final PlayerInstance player = (PlayerInstance) playable;
-		
 		if (checkConditions(player))
 		{
 			return;
@@ -171,13 +170,11 @@ public class ScrollOfEscape implements IItemHandler
 		// SoE Animation section
 		// Check if this is a blessed scroll, if it is then shorten the cast time.
 		final int itemId = item.getItemId();
-		
 		final SystemMessage sm3 = new SystemMessage(SystemMessageId.USE_S1);
 		sm3.addItemName(itemId);
 		player.sendPacket(sm3);
 		
 		final int escapeSkill = (itemId == 1538) || (itemId == 5858) || (itemId == 5859) || (itemId == 3958) || (itemId == 10130) ? 2036 : 2013;
-		
 		if (!player.destroyItem("Consume", item.getObjectId(), 1, null, false))
 		{
 			return;

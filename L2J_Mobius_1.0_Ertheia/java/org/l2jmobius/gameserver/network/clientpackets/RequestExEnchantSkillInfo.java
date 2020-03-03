@@ -53,7 +53,6 @@ public class RequestExEnchantSkillInfo implements IClientIncomingPacket
 			_skillLvl = client.getPlayer().getKnownSkill(_skillId).getLevel();
 			_skillSubLvl = SkillEnchantConverter.levelToUnderground(level);
 		}
-		
 		return true;
 	}
 	
@@ -66,7 +65,6 @@ public class RequestExEnchantSkillInfo implements IClientIncomingPacket
 		}
 		
 		final PlayerInstance player = client.getPlayer();
-		
 		if (player == null)
 		{
 			return;

@@ -87,7 +87,6 @@ public class Q10343_DayOfDestinyDarkElfsFate extends ThirdClassTransferQuest
 	{
 		String htmltext = getNoQuestMsg(player);
 		final QuestState qs = getQuestState(player, true);
-		
 		if (npc.getId() == OLTRAN)
 		{
 			if (qs.getState() == State.CREATED)

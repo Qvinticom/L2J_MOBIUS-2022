@@ -75,7 +75,6 @@ public class Q688_DefeatTheElrokianRaiders extends Quest
 		else if (event.equals("32105-06.htm"))
 		{
 			final int count = st.getQuestItemsCount(DINOSAUR_FANG_NECKLACE);
-			
 			st.takeItems(DINOSAUR_FANG_NECKLACE, -1);
 			st.rewardItems(57, count * 3000);
 		}

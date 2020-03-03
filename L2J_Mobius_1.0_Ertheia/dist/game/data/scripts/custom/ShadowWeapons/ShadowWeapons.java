@@ -54,7 +54,6 @@ public class ShadowWeapons extends AbstractNpcAI
 		String htmltext;
 		final boolean hasD = hasQuestItems(player, 8869); // Shadow Item Exchange Coupon (D-Grade)
 		final boolean hasC = hasQuestItems(player, 8870); // Shadow Item Exchange Coupon (C-Grade)
-		
 		if (hasD || hasC)
 		{
 			if (!hasD)

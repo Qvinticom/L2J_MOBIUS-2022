@@ -289,7 +289,6 @@ public class Q660_AidingTheFloranVillage extends Quest
 		final int eyes = st.getQuestItemsCount(WATCHING_EYES);
 		final int scale = st.getQuestItemsCount(LIZARDMEN_SCALE);
 		final int shard = st.getQuestItemsCount(GOLEM_SHARD);
-		
 		if ((eyes + scale + shard) < numberToVerify)
 		{
 			return false;
@@ -302,7 +301,6 @@ public class Q660_AidingTheFloranVillage extends Quest
 		else
 		{
 			int currentNumber = numberToVerify - eyes;
-			
 			st.takeItems(WATCHING_EYES, -1);
 			if (scale >= currentNumber)
 			{

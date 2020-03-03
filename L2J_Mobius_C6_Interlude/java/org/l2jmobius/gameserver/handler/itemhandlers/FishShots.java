@@ -64,7 +64,6 @@ public class FishShots implements IItemHandler
 		final PlayerInstance player = (PlayerInstance) playable;
 		final ItemInstance weaponInst = player.getActiveWeaponInstance();
 		final Weapon weaponItem = player.getActiveWeaponItem();
-		
 		if ((weaponInst == null) || (weaponItem.getItemType() != WeaponType.ROD))
 		{
 			return;
@@ -79,7 +78,6 @@ public class FishShots implements IItemHandler
 		final int FishshotId = item.getItemId();
 		final int grade = weaponItem.getCrystalType();
 		final int count = item.getCount();
-		
 		if (((grade == Item.CRYSTAL_NONE) && (FishshotId != 6535)) || ((grade == Item.CRYSTAL_D) && (FishshotId != 6536)) || ((grade == Item.CRYSTAL_C) && (FishshotId != 6537)) || ((grade == Item.CRYSTAL_B) && (FishshotId != 6538)) || ((grade == Item.CRYSTAL_A) && (FishshotId != 6539)) || ((grade == Item.CRYSTAL_S) && (FishshotId != 6540)))
 		{
 			// 1479 - This fishing shot is not fit for the fishing pole crystal.

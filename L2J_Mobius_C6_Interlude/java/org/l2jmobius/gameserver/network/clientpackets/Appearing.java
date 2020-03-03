@@ -34,7 +34,6 @@ public class Appearing extends GameClientPacket
 	protected void runImpl()
 	{
 		final PlayerInstance player = getClient().getPlayer();
-		
 		if ((player == null) || !player.isOnline())
 		{
 			sendPacket(ActionFailed.STATIC_PACKET);

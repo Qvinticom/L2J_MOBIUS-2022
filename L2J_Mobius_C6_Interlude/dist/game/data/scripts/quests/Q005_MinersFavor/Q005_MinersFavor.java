@@ -74,7 +74,6 @@ public class Q005_MinersFavor extends Quest
 		{
 			st.takeItems(BOLTERS_SMELLY_SOCKS, 1);
 			st.giveItems(MINERS_PICK, 1);
-			
 			if (st.hasQuestItems(MINING_BOOTS, BOOMBOOM_POWDER, REDSTONE_BEER))
 			{
 				st.set("cond", "2");
@@ -133,7 +132,6 @@ public class Q005_MinersFavor extends Quest
 						{
 							htmltext = "30517-01.htm";
 							st.giveItems(BOOMBOOM_POWDER, 1);
-							
 							if (st.hasQuestItems(MINING_BOOTS, MINERS_PICK, REDSTONE_BEER))
 							{
 								st.set("cond", "2");
@@ -155,7 +153,6 @@ public class Q005_MinersFavor extends Quest
 						{
 							htmltext = "30518-01.htm";
 							st.giveItems(MINING_BOOTS, 1);
-							
 							if (st.hasQuestItems(MINERS_PICK, BOOMBOOM_POWDER, REDSTONE_BEER))
 							{
 								st.set("cond", "2");
@@ -177,7 +174,6 @@ public class Q005_MinersFavor extends Quest
 						{
 							htmltext = "30520-01.htm";
 							st.giveItems(REDSTONE_BEER, 1);
-							
 							if (st.hasQuestItems(MINING_BOOTS, MINERS_PICK, BOOMBOOM_POWDER))
 							{
 								st.set("cond", "2");

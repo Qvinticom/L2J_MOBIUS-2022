@@ -35,7 +35,6 @@ public class Unlockable implements ITargetTypeHandler
 		{
 			return EMPTY_TARGET_LIST;
 		}
-		
 		return new Creature[]
 		{
 			target

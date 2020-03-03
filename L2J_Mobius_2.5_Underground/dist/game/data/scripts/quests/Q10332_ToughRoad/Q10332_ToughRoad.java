@@ -60,7 +60,6 @@ public class Q10332_ToughRoad extends Quest
 	public String onAdvEvent(String event, Npc npc, PlayerInstance player)
 	{
 		final QuestState qs = getQuestState(player, false);
-		
 		if (qs == null)
 		{
 			if (event.equals("SCREEN_MSG"))
@@ -104,7 +103,6 @@ public class Q10332_ToughRoad extends Quest
 	{
 		String htmltext = getNoQuestMsg(player);
 		final QuestState qs = getQuestState(player, true);
-		
 		if (npc.getId() == KAKAI)
 		{
 			switch (qs.getState())
@@ -148,7 +146,6 @@ public class Q10332_ToughRoad extends Quest
 			final PlayerInstance player = creature.getActingPlayer();
 			final QuestState qs = getQuestState(player, false);
 			final QuestState st10331 = player.getQuestState(Q10331_StartOfFate.class.getSimpleName());
-			
 			if (((qs == null) || qs.isCreated()) && (player.getLevel() >= MIN_LEVEL) && (player.getLevel() <= MAX_LEVEL) && (st10331 != null) && st10331.isCompleted() && !player.getVariables().getBoolean(MOVIE_VAR, false))
 			{
 				player.getVariables().set(MOVIE_VAR, true);

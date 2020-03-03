@@ -256,7 +256,6 @@ public class OlympiadManagerLink implements IBypassHandler
 				
 				final NpcHtmlMessage html = new NpcHtmlMessage(target.getObjectId());
 				final String[] params = command.split(" ");
-				
 				if (!Util.isDigit(params[1]))
 				{
 					LOGGER.warning("Olympiad Buffer Warning: npcId = " + target.getId() + " has invalid buffGroup set in the bypass for the buff selected: " + params[1]);
@@ -307,7 +306,6 @@ public class OlympiadManagerLink implements IBypassHandler
 			else if (command.toLowerCase().startsWith("olympiad"))
 			{
 				final int val = Integer.parseInt(command.substring(9, 10));
-				
 				final NpcHtmlMessage reply = new NpcHtmlMessage(target.getObjectId());
 				
 				switch (val)

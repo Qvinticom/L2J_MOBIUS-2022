@@ -109,7 +109,6 @@ public class MithrilMine extends AbstractInstance
 			}
 		}
 		return super.onAdvEvent(event, npc, player);
-		
 	}
 	
 	@Override

@@ -232,7 +232,6 @@ public class StringUtil
 	public static void append(StringBuilder sbString, String... strings)
 	{
 		sbString.ensureCapacity(sbString.length() + getLength(strings));
-		
 		for (String string : strings)
 		{
 			sbString.append(string);

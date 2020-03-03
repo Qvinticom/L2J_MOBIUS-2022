@@ -83,7 +83,6 @@ public class Hero
 			PreparedStatement statement2 = null;
 			ResultSet rset = null;
 			ResultSet rset2 = null;
-			
 			statement = con.prepareStatement(GET_HEROES);
 			rset = statement.executeQuery();
 			while (rset.next())
@@ -132,9 +131,7 @@ public class Hero
 			{
 				final StatSet hero = new StatSet();
 				final int charId = rset.getInt(Olympiad.CHAR_ID);
-				
 				final String charName = rset.getString(Olympiad.CHAR_NAME);
-				
 				hero.set(Olympiad.CHAR_NAME, charName);
 				hero.set(Olympiad.CLASS_ID, rset.getInt(Olympiad.CLASS_ID));
 				hero.set(COUNT, rset.getInt(COUNT));

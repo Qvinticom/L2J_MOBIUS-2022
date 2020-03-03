@@ -47,14 +47,10 @@ public abstract class ZoneType
 	protected ZoneType(int id)
 	{
 		_id = id;
-		
 		_checkAffected = false;
-		
 		_minLvl = 0;
 		_maxLvl = 0xFF;
-		
 		_classType = 0;
-		
 		_race = null;
 		_class = null;
 	}
@@ -182,7 +178,6 @@ public abstract class ZoneType
 			if (_race != null)
 			{
 				boolean ok = false;
-				
 				for (int element : _race)
 				{
 					if (((PlayerInstance) creature).getRace().ordinal() == element)
@@ -202,7 +197,6 @@ public abstract class ZoneType
 			if (_class != null)
 			{
 				boolean ok = false;
-				
 				for (int clas : _class)
 				{
 					if (((PlayerInstance) creature).getClassId().ordinal() == clas)
@@ -322,7 +316,6 @@ public abstract class ZoneType
 		{
 			return _characterList.containsKey(creature.getObjectId()) || isInsideZone(creature.getX(), creature.getY(), creature.getZ());
 		}
-		
 		return false;
 	}
 	

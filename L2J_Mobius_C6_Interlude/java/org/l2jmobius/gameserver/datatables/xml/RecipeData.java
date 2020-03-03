@@ -58,7 +58,6 @@ public class RecipeData extends RecipeController implements IXmlReader
 		try
 		{
 			List<RecipeInstance> recipePartList = new ArrayList<>();
-			
 			Node n = doc.getFirstChild();
 			for (Node d = n.getFirstChild(); d != null; d = d.getNextSibling())
 			{
@@ -66,7 +65,6 @@ public class RecipeData extends RecipeController implements IXmlReader
 				{
 					recipePartList.clear();
 					NamedNodeMap attrs = d.getAttributes();
-					
 					Node att = attrs.getNamedItem("id");
 					if (att == null)
 					{
@@ -74,7 +72,6 @@ public class RecipeData extends RecipeController implements IXmlReader
 						continue;
 					}
 					int id = Integer.parseInt(att.getNodeValue());
-					
 					att = attrs.getNamedItem("name");
 					if (att == null)
 					{
@@ -82,7 +79,6 @@ public class RecipeData extends RecipeController implements IXmlReader
 						continue;
 					}
 					String recipeName = att.getNodeValue();
-					
 					int recipeId = -1;
 					int level = -1;
 					boolean isDwarvenRecipe = true;
@@ -90,7 +86,6 @@ public class RecipeData extends RecipeController implements IXmlReader
 					int successRate = -1;
 					int prodId = -1;
 					int count = -1;
-					
 					for (Node c = d.getFirstChild(); c != null; c = c.getNextSibling())
 					{
 						if ("recipe".equalsIgnoreCase(c.getNodeName()))

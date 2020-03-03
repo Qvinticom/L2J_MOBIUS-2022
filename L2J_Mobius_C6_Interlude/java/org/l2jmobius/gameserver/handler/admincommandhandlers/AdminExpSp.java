@@ -49,7 +49,6 @@ public class AdminExpSp implements IAdminCommandHandler
 			try
 			{
 				final String val = command.substring(16);
-				
 				if (!adminAddExpSp(activeChar, val))
 				{
 					BuilderUtil.sendSysMessage(activeChar, "Usage: //add_exp_sp exp sp");
@@ -66,7 +65,6 @@ public class AdminExpSp implements IAdminCommandHandler
 			try
 			{
 				final String val = command.substring(19);
-				
 				if (!adminRemoveExpSP(activeChar, val))
 				{
 					BuilderUtil.sendSysMessage(activeChar, "Usage: //remove_exp_sp exp sp");
@@ -94,7 +92,6 @@ public class AdminExpSp implements IAdminCommandHandler
 	{
 		final WorldObject target = activeChar.getTarget();
 		PlayerInstance player = null;
-		
 		if (target instanceof PlayerInstance)
 		{
 			player = (PlayerInstance) target;
@@ -119,7 +116,6 @@ public class AdminExpSp implements IAdminCommandHandler
 	{
 		final WorldObject target = activeChar.getTarget();
 		PlayerInstance player = null;
-		
 		if (target instanceof PlayerInstance)
 		{
 			player = (PlayerInstance) target;
@@ -131,7 +127,6 @@ public class AdminExpSp implements IAdminCommandHandler
 		}
 		
 		final StringTokenizer st = new StringTokenizer(expSp);
-		
 		if (st.countTokens() != 2)
 		{
 			return false;
@@ -139,7 +134,6 @@ public class AdminExpSp implements IAdminCommandHandler
 		
 		final String exp = st.nextToken();
 		final String sp = st.nextToken();
-		
 		long expval = 0;
 		int spval = 0;
 		
@@ -169,7 +163,6 @@ public class AdminExpSp implements IAdminCommandHandler
 	{
 		final WorldObject target = activeChar.getTarget();
 		PlayerInstance player = null;
-		
 		if (target instanceof PlayerInstance)
 		{
 			player = (PlayerInstance) target;
@@ -181,7 +174,6 @@ public class AdminExpSp implements IAdminCommandHandler
 		}
 		
 		final StringTokenizer st = new StringTokenizer(expSp);
-		
 		if (st.countTokens() != 2)
 		{
 			return false;
@@ -189,7 +181,6 @@ public class AdminExpSp implements IAdminCommandHandler
 		
 		final String exp = st.nextToken();
 		final String sp = st.nextToken();
-		
 		long expval = 0;
 		int spval = 0;
 		

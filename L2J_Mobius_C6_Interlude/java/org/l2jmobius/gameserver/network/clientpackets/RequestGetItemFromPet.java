@@ -48,7 +48,6 @@ public class RequestGetItemFromPet extends GameClientPacket
 	protected void runImpl()
 	{
 		final PlayerInstance player = getClient().getPlayer();
-		
 		if ((player == null) || (player.getPet() == null) || !(player.getPet() instanceof PetInstance))
 		{
 			return;
@@ -61,7 +60,6 @@ public class RequestGetItemFromPet extends GameClientPacket
 		}
 		
 		final PetInstance pet = (PetInstance) player.getPet();
-		
 		if (player.getActiveEnchantItem() != null)
 		{
 			Util.handleIllegalPlayerAction(player, "Player " + player.getName() + " Tried To Use Enchant Exploit , And Got Banned!", IllegalPlayerAction.PUNISH_KICKBAN);

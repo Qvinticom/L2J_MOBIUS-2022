@@ -62,12 +62,10 @@ public class CustomNpcInstance
 		// RightHand=11, LeftHand=12, Gloves=13, Chest=14, Legs=15, Feet=16, Hair1=17, Hair2=18
 		// HairStyle=19, HairColor=20, Face=21
 		// NameColor=22, TitleColor=23
-		
 		_boolean = new boolean[4]; // pvp=0 , noble=1, hero=2, isFemaleSex=3
 		
 		// load the Pc Morph Data
 		final CustomNpcInstanceManager.customInfo ci = CustomNpcInstanceManager.getInstance().getCustomData(_npcInstance.getSpawn().getId(), _npcInstance.getNpcId());
-		
 		if (ci == null)
 		{
 			_npcInstance.setCustomNpcInstance(null);

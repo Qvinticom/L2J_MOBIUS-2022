@@ -89,7 +89,6 @@ public class Minigame extends AbstractNpcAI
 				giveItems(player, TORCHLIGHT, 1);
 				// Removed with Etina's Fate.
 				// npc.broadcastSay(ChatType.NPC_GENERAL, NpcStringId.I_LL_START_THE_FURNACE_MECHANISM_WATCH_FOR_THE_PATTERN);
-				
 				room.getManager().setTarget(player);
 				room.setParticipant(player);
 				room.setStarted(true);
@@ -100,7 +99,6 @@ public class Minigame extends AbstractNpcAI
 				cancelQuestTimer("hurry_up", npc, null);
 				cancelQuestTimer("hurry_up2", npc, null);
 				cancelQuestTimer("expire", npc, null);
-				
 				startQuestTimer("hurry_up", 120000, npc, null);
 				startQuestTimer("expire", 190000, npc, null);
 				startQuestTimer("start", 1000, npc, null);
@@ -208,7 +206,6 @@ public class Minigame extends AbstractNpcAI
 		String htmltext = null;
 		final MinigameRoom room = getRoomByManager(npc);
 		final boolean miniGameStarted = room.getStarted();
-		
 		if (npc.getTarget() == null)
 		{
 			htmltext = (miniGameStarted ? "32758-08.html" : "32758.html");
@@ -222,7 +219,6 @@ public class Minigame extends AbstractNpcAI
 			else
 			{
 				final int attemptNumber = room.getAttemptNumber();
-				
 				if (attemptNumber == 2)
 				{
 					htmltext = "32758-02.html";
@@ -237,7 +233,6 @@ public class Minigame extends AbstractNpcAI
 		{
 			htmltext = "32758-04.html";
 		}
-		
 		return htmltext;
 	}
 	
@@ -330,7 +325,6 @@ public class Minigame extends AbstractNpcAI
 		final Npc[] burners = new Npc[9];
 		Npc lastSpawn;
 		int potNumber = 0;
-		
 		for (Spawn spawn : SpawnTable.getInstance().getSpawns(BURNER))
 		{
 			lastSpawn = spawn.getLastSpawn();

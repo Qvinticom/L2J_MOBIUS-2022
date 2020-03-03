@@ -46,7 +46,6 @@ public class RequestJoinAlly implements IClientIncomingPacket
 		}
 		
 		final PlayerInstance target = World.getInstance().getPlayer(_objectId);
-		
 		if (target == null)
 		{
 			player.sendPacket(SystemMessageId.YOU_HAVE_INVITED_THE_WRONG_TARGET);
@@ -54,7 +53,6 @@ public class RequestJoinAlly implements IClientIncomingPacket
 		}
 		
 		final Clan clan = player.getClan();
-		
 		if (clan == null)
 		{
 			player.sendPacket(SystemMessageId.YOU_ARE_NOT_A_CLAN_MEMBER_AND_CANNOT_PERFORM_THIS_ACTION);

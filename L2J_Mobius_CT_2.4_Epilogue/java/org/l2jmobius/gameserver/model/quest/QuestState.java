@@ -72,7 +72,6 @@ public class QuestState
 		_questName = quest.getName();
 		_player = player;
 		_state = state;
-		
 		player.setQuestState(this);
 	}
 	
@@ -375,7 +374,6 @@ public class QuestState
 		{
 			return null;
 		}
-		
 		return _vars.get(var);
 	}
 	
@@ -473,7 +471,6 @@ public class QuestState
 			return;
 		}
 		set("cond", String.valueOf(value));
-		
 		if (playQuestMiddle)
 		{
 			_player.sendPacket(QuestSound.ITEMSOUND_QUEST_MIDDLE.getPacket());

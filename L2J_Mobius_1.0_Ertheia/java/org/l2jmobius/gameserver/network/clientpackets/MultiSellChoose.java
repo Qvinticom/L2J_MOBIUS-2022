@@ -213,7 +213,6 @@ public class MultiSellChoose implements IClientIncomingPacket
 				}
 				
 				weight += totalCount * template.getWeight();
-				
 				if (!inventory.validateWeight(weight))
 				{
 					player.sendPacket(SystemMessageId.YOU_HAVE_EXCEEDED_THE_WEIGHT_LIMIT);
@@ -610,7 +609,6 @@ public class MultiSellChoose implements IClientIncomingPacket
 			player.sendPacket(sm);
 			return false;
 		}
-		
 		return true;
 	}
 }

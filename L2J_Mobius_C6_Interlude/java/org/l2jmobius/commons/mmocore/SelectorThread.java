@@ -104,7 +104,6 @@ public class SelectorThread<T extends MMOClient<?>>extends Thread
 		selectable.configureBlocking(false);
 		
 		final ServerSocket ss = selectable.socket();
-		
 		if (address != null)
 		{
 			ss.bind(new InetSocketAddress(address, tcpPort));
@@ -141,10 +140,8 @@ public class SelectorThread<T extends MMOClient<?>>extends Thread
 	public void run()
 	{
 		int selectedKeysCount = 0;
-		
 		SelectionKey key;
 		MMOConnection<T> con;
-		
 		Iterator<SelectionKey> selectedKeys;
 		
 		while (!_shutdown)
@@ -310,7 +307,6 @@ public class SelectorThread<T extends MMOClient<?>>extends Thread
 			buf.flip();
 			
 			final T client = con.getClient();
-			
 			for (int i = 0; i < MAX_READ_PER_PASS; i++)
 			{
 				if (!tryReadPacket(key, client, buf, con))
@@ -446,20 +442,17 @@ public class SelectorThread<T extends MMOClient<?>>extends Thread
 	private final void parseClientPacket(int pos, ByteBuffer buf, int dataSize, T client)
 	{
 		final boolean ret = client.decrypt(buf, dataSize);
-		
 		if (ret && buf.hasRemaining())
 		{
 			// apply limit
 			final int limit = buf.limit();
 			buf.limit(pos + dataSize);
 			final ReceivablePacket<T> cp = _packetHandler.handlePacket(buf, client);
-			
 			if (cp != null)
 			{
 				cp._buf = buf;
 				cp._sbuf = STRING_BUFFER;
 				cp._client = client;
-				
 				if (cp.read())
 				{
 					_executor.execute(cp);

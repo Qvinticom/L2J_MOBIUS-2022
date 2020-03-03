@@ -66,7 +66,6 @@ public class AdventurerInstance extends FolkInstance
 		{
 			final int bossLevel = Integer.parseInt(command.substring(9).trim());
 			String filename = "data/html/adventurer_guildsman/raid_info/info.htm";
-			
 			if (bossLevel != 0)
 			{
 				filename = "data/html/adventurer_guildsman/raid_info/level" + bossLevel + ".htm";
@@ -88,7 +87,6 @@ public class AdventurerInstance extends FolkInstance
 	public String getHtmlPath(int npcId, int value)
 	{
 		String pom = "";
-		
 		if (value == 0)
 		{
 			pom = "" + npcId;
@@ -97,7 +95,6 @@ public class AdventurerInstance extends FolkInstance
 		{
 			pom = npcId + "-" + value;
 		}
-		
 		return "data/html/adventurer_guildsman/" + pom + ".htm";
 	}
 	

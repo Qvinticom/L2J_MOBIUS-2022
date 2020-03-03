@@ -93,7 +93,6 @@ public class Castle
 	public Castle(int castleId)
 	{
 		_castleId = castleId;
-		
 		if ((_castleId == 7) || (castleId == 9))
 		{
 			_nbArtifact = 2;
@@ -109,7 +108,6 @@ public class Castle
 		if (_engrave.size() == _nbArtifact)
 		{
 			boolean rst = true;
-			
 			for (int id : _engrave.values())
 			{
 				if (id != clan.getClanId())
@@ -151,7 +149,6 @@ public class Castle
 			if (rune != null)
 			{
 				final int runeTax = (int) (amount * rune.getTaxRate());
-				
 				if (rune.getOwnerId() > 0)
 				{
 					rune.addToTreasury(runeTax);
@@ -163,11 +160,9 @@ public class Castle
 		if (!_name.equalsIgnoreCase("aden") && !_name.equalsIgnoreCase("Rune") && !_name.equalsIgnoreCase("Schuttgart") && !_name.equalsIgnoreCase("Goddard")) // If current castle instance is not Aden, Rune, Goddard or Schuttgart.
 		{
 			final Castle aden = CastleManager.getInstance().getCastle("aden");
-			
 			if (aden != null)
 			{
 				final int adenTax = (int) (amount * aden.getTaxRate()); // Find out what Aden gets from the current castle instance's income
-				
 				if (aden.getOwnerId() > 0)
 				{
 					aden.addToTreasury(adenTax); // Only bother to really add the tax to the treasury if not npc owned
@@ -195,7 +190,6 @@ public class Castle
 		if (amount < 0)
 		{
 			amount *= -1;
-			
 			if (_treasury < amount)
 			{
 				return false;
@@ -325,7 +319,6 @@ public class Castle
 		if ((_ownerId > 0) && ((clan == null) || (clan.getClanId() != _ownerId)))
 		{
 			final Clan oldOwner = ClanTable.getInstance().getClan(getOwnerId()); // Try to find clan instance
-			
 			if (oldOwner != null)
 			{
 				if (_formerOwner == null)
@@ -345,7 +338,6 @@ public class Castle
 		}
 		
 		updateOwnerInDB(clan); // Update in database
-		
 		if (getSiege().isInProgress())
 		{
 			getSiege().midVictory(); // Mid victory phase of siege
@@ -359,7 +351,6 @@ public class Castle
 		if (clan != null)
 		{
 			_formerOwner = clan;
-			
 			if (Config.REMOVE_CASTLE_CIRCLETS)
 			{
 				CastleManager.getInstance().removeCirclet(_formerOwner, getCastleId());
@@ -455,7 +446,6 @@ public class Castle
 			{
 				door.decayMe(); // Kill current if not killed already
 				door = DoorData.createDoor(_doorDefault.get(i));
-				
 				if (isDoorWeak)
 				{
 					door.setCurrentHpDirect(door.getMaxHp() / 2);
@@ -488,7 +478,6 @@ public class Castle
 		if (door.getDoorId() == doorId)
 		{
 			door.setCurrentHpDirect(door.getMaxHp() + hp);
-			
 			saveDoorUpgrade(doorId, hp, pDef, mDef);
 		}
 	}
@@ -499,7 +488,6 @@ public class Castle
 		{
 			PreparedStatement statement;
 			ResultSet rs;
-			
 			statement = con.prepareStatement("Select * from castle where id = ?");
 			statement.setInt(1, _castleId);
 			rs = statement.executeQuery();
@@ -508,7 +496,6 @@ public class Castle
 			{
 				_name = rs.getString("name");
 				// _OwnerId = rs.getInt("ownerId");
-				
 				_siegeDate = Calendar.getInstance();
 				_siegeDate.setTimeInMillis(rs.getLong("siegeDate"));
 				
@@ -532,9 +519,7 @@ public class Castle
 			statement.close();
 			statement = null;
 			rs = null;
-			
 			_taxRate = _taxPercent / 100.0;
-			
 			statement = con.prepareStatement("Select clan_id from clan_data where hasCastle = ?");
 			statement.setInt(1, _castleId);
 			rs = statement.executeQuery();
@@ -723,7 +708,6 @@ public class Castle
 		for (int i = 0; i < _doors.size(); i++)
 		{
 			final DoorInstance door = _doors.get(i);
-			
 			if (door.getDoorId() == doorId)
 			{
 				return door;
@@ -756,7 +740,6 @@ public class Castle
 				this
 			});
 		}
-		
 		return _siege;
 	}
 	
@@ -852,7 +835,6 @@ public class Castle
 	{
 		List<CropProcure> procure;
 		List<SeedProduction> production;
-		
 		if (period == CastleManorManager.PERIOD_CURRENT)
 		{
 			procure = _procure;
@@ -865,7 +847,6 @@ public class Castle
 		}
 		
 		int total = 0;
-		
 		if (production != null)
 		{
 			for (SeedProduction seed : production)
@@ -893,17 +874,14 @@ public class Castle
 		{
 			statement = con.prepareStatement(CASTLE_MANOR_DELETE_PRODUCTION);
 			statement.setInt(1, _castleId);
-			
 			statement.execute();
 			statement.close();
 			
 			if (_production != null)
 			{
 				int count = 0;
-				
 				String query = "INSERT INTO castle_manor_production VALUES ";
 				final String[] values = new String[_production.size()];
-				
 				for (SeedProduction s : _production)
 				{
 					values[count] = "(" + _castleId + "," + s.getId() + "," + s.getCanProduce() + "," + s.getStartProduce() + "," + s.getPrice() + "," + CastleManorManager.PERIOD_CURRENT + ")";
@@ -926,10 +904,8 @@ public class Castle
 			if (_productionNext != null)
 			{
 				int count = 0;
-				
 				String query = "INSERT INTO castle_manor_production VALUES ";
 				final String[] values = new String[_productionNext.size()];
-				
 				for (SeedProduction s : _productionNext)
 				{
 					values[count] = "(" + _castleId + "," + s.getId() + "," + s.getCanProduce() + "," + s.getStartProduce() + "," + s.getPrice() + "," + CastleManorManager.PERIOD_NEXT + ")";
@@ -939,7 +915,6 @@ public class Castle
 				if (values.length > 0)
 				{
 					query += values[0];
-					
 					for (int i = 1; i < values.length; i++)
 					{
 						query += "," + values[i];
@@ -971,14 +946,11 @@ public class Castle
 			
 			List<SeedProduction> prod = null;
 			prod = getSeedProduction(period);
-			
 			if (prod != null)
 			{
 				int count = 0;
-				
 				String query = "INSERT INTO castle_manor_production VALUES ";
 				final String[] values = new String[prod.size()];
-				
 				for (SeedProduction s : prod)
 				{
 					values[count] = "(" + _castleId + "," + s.getId() + "," + s.getCanProduce() + "," + s.getStartProduce() + "," + s.getPrice() + "," + period + ")";
@@ -1017,10 +989,8 @@ public class Castle
 			if (_procure != null)
 			{
 				int count = 0;
-				
 				String query = "INSERT INTO castle_manor_procure VALUES ";
 				final String[] values = new String[_procure.size()];
-				
 				for (CropProcure cp : _procure)
 				{
 					values[count] = "(" + _castleId + "," + cp.getId() + "," + cp.getAmount() + "," + cp.getStartAmount() + "," + cp.getPrice() + "," + cp.getReward() + "," + CastleManorManager.PERIOD_CURRENT + ")";
@@ -1030,7 +1000,6 @@ public class Castle
 				if (values.length > 0)
 				{
 					query += values[0];
-					
 					for (int i = 1; i < values.length; i++)
 					{
 						query += "," + values[i];
@@ -1045,10 +1014,8 @@ public class Castle
 			if (_procureNext != null)
 			{
 				int count = 0;
-				
 				String query = "INSERT INTO castle_manor_procure VALUES ";
 				final String[] values = new String[_procureNext.size()];
-				
 				for (CropProcure cp : _procureNext)
 				{
 					values[count] = "(" + _castleId + "," + cp.getId() + "," + cp.getAmount() + "," + cp.getStartAmount() + "," + cp.getPrice() + "," + cp.getReward() + "," + CastleManorManager.PERIOD_NEXT + ")";
@@ -1088,14 +1055,11 @@ public class Castle
 			
 			List<CropProcure> proc = null;
 			proc = getCropProcure(period);
-			
 			if (proc != null)
 			{
 				int count = 0;
-				
 				String query = "INSERT INTO castle_manor_procure VALUES ";
 				final String[] values = new String[proc.size()];
-				
 				for (CropProcure cp : proc)
 				{
 					values[count] = "(" + _castleId + "," + cp.getId() + "," + cp.getAmount() + "," + cp.getStartAmount() + "," + cp.getPrice() + "," + cp.getReward() + "," + period + ")";
@@ -1105,7 +1069,6 @@ public class Castle
 				if (values.length > 0)
 				{
 					query += values[0];
-					
 					for (int i = 1; i < values.length; i++)
 					{
 						query += "," + values[i];
@@ -1181,7 +1144,6 @@ public class Castle
 				_formerOwner.setReputationScore(_formerOwner.getReputationScore() - 1000, true);
 				
 				final Clan owner = ClanTable.getInstance().getClan(getOwnerId());
-				
 				if (owner != null)
 				{
 					owner.setReputationScore(owner.getReputationScore() + Math.min(1000, maxreward), true);
@@ -1198,7 +1160,6 @@ public class Castle
 		else
 		{
 			final Clan owner = ClanTable.getInstance().getClan(getOwnerId());
-			
 			if (owner != null)
 			{
 				owner.setReputationScore(owner.getReputationScore() + 1000, true);
@@ -1259,7 +1220,6 @@ public class Castle
 		{
 			return _siege.isInProgress();
 		}
-		
 		return false;
 	}
 }

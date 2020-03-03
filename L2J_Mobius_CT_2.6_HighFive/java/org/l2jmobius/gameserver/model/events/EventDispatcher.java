@@ -240,7 +240,6 @@ public class EventDispatcher
 				LOGGER.log(Level.WARNING, getClass().getSimpleName() + ": Exception during notification of event: " + event.getClass().getSimpleName() + " listener: " + listener.getClass().getSimpleName(), e);
 			}
 		}
-		
 		return callback;
 	}
 	

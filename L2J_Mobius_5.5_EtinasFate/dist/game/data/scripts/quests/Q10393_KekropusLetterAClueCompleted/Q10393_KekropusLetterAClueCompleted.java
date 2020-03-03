@@ -106,7 +106,6 @@ public class Q10393_KekropusLetterAClueCompleted extends LetterQuest
 	{
 		String htmltext = getNoQuestMsg(player);
 		final QuestState qs = getQuestState(player, false);
-		
 		if (qs == null)
 		{
 			return htmltext;
@@ -133,7 +132,6 @@ public class Q10393_KekropusLetterAClueCompleted extends LetterQuest
 		{
 			final PlayerInstance player = creature.getActingPlayer();
 			final QuestState qs = getQuestState(player, false);
-			
 			if ((qs != null) && qs.isCond(3))
 			{
 				showOnScreenMsg(player, NpcStringId.OUTLAW_FOREST_IS_A_GOOD_HUNTING_ZONE_FOR_LV_46_OR_ABOVE, ExShowScreenMessage.TOP_CENTER, 6000);

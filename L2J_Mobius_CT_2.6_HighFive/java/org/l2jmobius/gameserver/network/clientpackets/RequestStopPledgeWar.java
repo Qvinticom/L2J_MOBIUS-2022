@@ -53,7 +53,6 @@ public class RequestStopPledgeWar implements IClientIncomingPacket
 		}
 		
 		final Clan clan = ClanTable.getInstance().getClanByName(_pledgeName);
-		
 		if (clan == null)
 		{
 			player.sendMessage("No such clan.");
@@ -93,7 +92,6 @@ public class RequestStopPledgeWar implements IClientIncomingPacket
 		// player.sendPacket(sm);
 		// return;
 		// }
-		
 		for (ClanMember member : playerClan.getMembers())
 		{
 			if ((member == null) || (member.getPlayerInstance() == null))
@@ -108,7 +106,6 @@ public class RequestStopPledgeWar implements IClientIncomingPacket
 		}
 		
 		ClanTable.getInstance().deleteClanWars(playerClan.getId(), clan.getId());
-		
 		for (PlayerInstance member : playerClan.getOnlineMembers(0))
 		{
 			member.broadcastUserInfo();

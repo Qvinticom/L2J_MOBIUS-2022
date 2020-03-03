@@ -107,7 +107,6 @@ public class ClanMasteryData implements IXmlReader
 			final int clanReputation = set.getInt("clanReputation");
 			final int previousMastery = set.getInt("previousMastery", 0);
 			final int previousMasteryAlt = set.getInt("previousMasteryAlt", 0);
-			
 			_clanMasteryData.put(id, new ClanMasteryHolder(id, skill1, skill2, skill3, skill4, clanLevel, clanReputation, previousMastery, previousMasteryAlt));
 		}));
 	}

@@ -70,7 +70,6 @@ public class TaskManager
 	{
 		int id;
 		long lastActivation;
-		
 		Task task;
 		TaskTypes type;
 		String[] params;
@@ -207,14 +206,12 @@ public class TaskManager
 			while (rset.next())
 			{
 				final Task task = _tasks.get(rset.getString("task").trim().toLowerCase().hashCode());
-				
 				if (task == null)
 				{
 					continue;
 				}
 				
 				final TaskTypes type = TaskTypes.valueOf(rset.getString("type"));
-				
 				if (type != TYPE_NONE)
 				{
 					final ExecutedTask current = new ExecutedTask(task, type, rset);
@@ -237,7 +234,6 @@ public class TaskManager
 	private boolean launchTask(ExecutedTask task)
 	{
 		final TaskTypes type = task.getType();
-		
 		if (type == TYPE_STARTUP)
 		{
 			task.run();
@@ -253,7 +249,6 @@ public class TaskManager
 		{
 			final long delay = Long.parseLong(task.getParams()[0]);
 			final long interval = Long.parseLong(task.getParams()[1]);
-			
 			task.scheduled = ThreadPool.scheduleAtFixedRate(task, delay, interval);
 			return true;
 		}
@@ -287,7 +282,6 @@ public class TaskManager
 		{
 			final long interval = Long.parseLong(task.getParams()[0]) * 86400000;
 			final String[] hour = task.getParams()[1].split(":");
-			
 			if (hour.length != 3)
 			{
 				LOGGER.warning("Task " + task.getId() + " has incorrect parameters");
@@ -311,14 +305,12 @@ public class TaskManager
 			}
 			
 			long delay = min.getTimeInMillis() - System.currentTimeMillis();
-			
 			if (check.after(min) || (delay < 0))
 			{
 				delay += interval;
 			}
 			
 			task.scheduled = ThreadPool.scheduleAtFixedRate(task, delay, interval);
-			
 			return true;
 		}
 		
@@ -339,7 +331,6 @@ public class TaskManager
 			PreparedStatement statement = con.prepareStatement(SQL_STATEMENTS[2]);
 			statement.setString(1, task);
 			final ResultSet rset = statement.executeQuery();
-			
 			if (!rset.next())
 			{
 				statement = con.prepareStatement(SQL_STATEMENTS[3]);
@@ -393,7 +384,6 @@ public class TaskManager
 		{
 			LOGGER.warning("cannot add the task:  " + e.getMessage());
 		}
-		
 		return output;
 	}
 	

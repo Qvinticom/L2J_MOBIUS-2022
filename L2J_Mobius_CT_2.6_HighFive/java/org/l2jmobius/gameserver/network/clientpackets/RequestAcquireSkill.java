@@ -209,9 +209,7 @@ public class RequestAcquireSkill implements IClientIncomingPacket
 					clan.addNewSkill(skill);
 					
 					clan.broadcastToOnlineMembers(new PledgeSkillList(clan));
-					
 					player.sendPacket(new AcquireSkillDone());
-					
 					VillageMasterInstance.showPledgeSkillList(player);
 				}
 				else
@@ -274,7 +272,6 @@ public class RequestAcquireSkill implements IClientIncomingPacket
 				clan.addNewSkill(skill, _subType);
 				clan.broadcastToOnlineMembers(new PledgeSkillList(clan));
 				player.sendPacket(new AcquireSkillDone());
-				
 				showSubUnitSkillList(player);
 				break;
 			}
@@ -386,7 +383,6 @@ public class RequestAcquireSkill implements IClientIncomingPacket
 		final List<SkillLearn> skills = SkillTreeData.getInstance().getAvailableSubPledgeSkills(player.getClan());
 		final AcquireSkillList asl = new AcquireSkillList(AcquireSkillType.SUBPLEDGE);
 		int count = 0;
-		
 		for (SkillLearn s : skills)
 		{
 			if (SkillData.getInstance().getSkill(s.getSkillId(), s.getSkillLevel()) != null)
@@ -513,7 +509,6 @@ public class RequestAcquireSkill implements IClientIncomingPacket
 		player.sendPacket(sm);
 		
 		player.sendPacket(new AcquireSkillDone());
-		
 		player.addSkill(skill, true);
 		player.sendSkillList();
 		

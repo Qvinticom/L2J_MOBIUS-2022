@@ -538,7 +538,6 @@ public class RainbowSpringsChateau extends ClanHallSiegeEngine
 			}
 			
 			final String passage = split[1];
-			
 			if (!isValidPassage(passage))
 			{
 				return null;
@@ -547,7 +546,6 @@ public class RainbowSpringsChateau extends ClanHallSiegeEngine
 			if (_usedTextPassages.containsKey(passage))
 			{
 				final ArrayList<Clan> list = _usedTextPassages.get(passage);
-				
 				if (list.contains(clan))
 				{
 					html = "yeti_passage_used.htm";
@@ -594,7 +592,6 @@ public class RainbowSpringsChateau extends ClanHallSiegeEngine
 		// html = "yeti_cannot_exchange.htm";
 		// }
 		// }
-		
 		return html;
 	}
 	
@@ -614,7 +611,6 @@ public class RainbowSpringsChateau extends ClanHallSiegeEngine
 		
 		final int npcId = npc.getId();
 		final int index = _acceptedClans.indexOf(clan);
-		
 		if (npcId == CHEST)
 		{
 			shoutRandomText(npc);
@@ -643,7 +639,6 @@ public class RainbowSpringsChateau extends ClanHallSiegeEngine
 		}
 		
 		final WorldObject target = player.getTarget();
-		
 		if (!(target instanceof Npc))
 		{
 			return null;
@@ -750,9 +745,7 @@ public class RainbowSpringsChateau extends ClanHallSiegeEngine
 		{
 			final Spawn oldSpawn = _gourds[(iterator - 1) - i];
 			final Spawn curSpawn = tempArray[i];
-			
 			_gourds[(iterator - 1) - i] = curSpawn;
-			
 			curSpawn.getLastSpawn().teleToLocation(oldSpawn.getLocation());
 		}
 	}
@@ -796,7 +789,6 @@ public class RainbowSpringsChateau extends ClanHallSiegeEngine
 	private void shoutRandomText(Npc npc)
 	{
 		final int length = _textPassages.length;
-		
 		if (_usedTextPassages.size() >= length)
 		{
 			return;
@@ -804,7 +796,6 @@ public class RainbowSpringsChateau extends ClanHallSiegeEngine
 		
 		final int randomPos = getRandom(length);
 		final String message = _textPassages[randomPos];
-		
 		if (_usedTextPassages.containsKey(message))
 		{
 			shoutRandomText(npc);
@@ -897,7 +888,6 @@ public class RainbowSpringsChateau extends ClanHallSiegeEngine
 		final int day = c.get(Calendar.DAY_OF_MONTH);
 		final int hour = c.get(Calendar.HOUR);
 		final int mins = c.get(Calendar.MINUTE);
-		
 		_registrationEnds = year + "-" + month + "-" + day + " " + hour + (mins < 10 ? ":0" : ":") + mins;
 	}
 	

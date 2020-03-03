@@ -170,7 +170,6 @@ public class Q038_DragonFangs extends Quest
 			if (st.getQuestItemsCount(TOOTH_OF_DRAGON) >= 50)
 			{
 				final int position = Rnd.get(REWARD.length);
-				
 				htmltext = "30034-06.htm";
 				st.takeItems(TOOTH_OF_DRAGON, 50);
 				st.giveItems(REWARD[position][0], 1);

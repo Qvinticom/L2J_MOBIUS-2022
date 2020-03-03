@@ -37,7 +37,6 @@ public class GetOnVehicle extends GameServerPacket
 		_x = x;
 		_y = y;
 		_z = z;
-		
 		_player.setBoat(_boat);
 	}
 	

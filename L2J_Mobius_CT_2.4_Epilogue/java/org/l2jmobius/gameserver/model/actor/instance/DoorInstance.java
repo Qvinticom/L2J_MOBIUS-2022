@@ -87,7 +87,6 @@ public class DoorInstance extends Creature
 		_open = template.isOpenByDefault();
 		_isAttackableDoor = template.isAttackable();
 		_isTargetable = template.isTargetable();
-		
 		if (getGroupName() != null)
 		{
 			DoorData.addDoorGroup(getGroupName(), getId());
@@ -130,7 +129,6 @@ public class DoorInstance extends Creature
 	public DoorTemplate getTemplate()
 	{
 		return (DoorTemplate) super.getTemplate();
-		
 	}
 	
 	@Override
@@ -344,7 +342,6 @@ public class DoorInstance extends Creature
 		}
 		
 		final PlayerInstance actingPlayer = attacker.getActingPlayer();
-		
 		if ((_clanHall != null) && _clanHall.isSiegableHall())
 		{
 			final SiegableHall hall = (SiegableHall) _clanHall;
@@ -358,7 +355,6 @@ public class DoorInstance extends Creature
 		final boolean isCastle = ((getCastle() != null) && (getCastle().getResidenceId() > 0) && getCastle().getZone().isActive());
 		final boolean isFort = ((getFort() != null) && (getFort().getResidenceId() > 0) && getFort().getZone().isActive());
 		final int activeSiegeId = (getFort() != null ? getFort().getResidenceId() : (getCastle() != null ? getCastle().getResidenceId() : 0));
-		
 		if (TerritoryWarManager.getInstance().isTWInProgress())
 		{
 			return !TerritoryWarManager.getInstance().isAllyField(actingPlayer, activeSiegeId);
@@ -625,7 +621,6 @@ public class DoorInstance extends Creature
 		final boolean isFort = ((getFort() != null) && (getFort().getResidenceId() > 0) && getFort().getSiege().isInProgress());
 		final boolean isCastle = ((getCastle() != null) && (getCastle().getResidenceId() > 0) && getCastle().getSiege().isInProgress());
 		final boolean isHall = ((_clanHall != null) && _clanHall.isSiegableHall() && ((SiegableHall) _clanHall).isInSiege());
-		
 		if (isFort || isCastle || isHall)
 		{
 			broadcastPacket(new SystemMessage(SystemMessageId.THE_CASTLE_GATE_HAS_BEEN_DESTROYED));

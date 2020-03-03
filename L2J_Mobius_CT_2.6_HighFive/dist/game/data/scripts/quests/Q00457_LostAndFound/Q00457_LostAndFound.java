@@ -193,7 +193,6 @@ public class Q00457_LostAndFound extends Quest
 	public String onKill(Npc npc, PlayerInstance player, boolean isSummon)
 	{
 		final QuestState qs = getQuestState(player, true);
-		
 		if ((getRandom(100) < CHANCE_SPAWN) && qs.isNowAvailable() && (player.getLevel() >= MIN_LV))
 		{
 			addSpawn(GUMIEL, npc);

@@ -126,7 +126,6 @@ public class Q360_PlunderTheirSupplies extends Quest
 				else
 				{
 					final int reward = 6000 + (supplyItems * 100) + (st.getQuestItemsCount(RECIPE_OF_SUPPLY) * 6000);
-					
 					htmltext = "30873-5.htm";
 					st.takeItems(SUPPLY_ITEM, -1);
 					st.takeItems(RECIPE_OF_SUPPLY, -1);
@@ -148,7 +147,6 @@ public class Q360_PlunderTheirSupplies extends Quest
 		}
 		
 		st.dropMultipleItems(DROPLIST[(npc.getNpcId() == 20666) ? 0 : 1]);
-		
 		if (st.getQuestItemsCount(SUSPICIOUS_DOCUMENT) == 5)
 		{
 			st.takeItems(SUSPICIOUS_DOCUMENT, 5);

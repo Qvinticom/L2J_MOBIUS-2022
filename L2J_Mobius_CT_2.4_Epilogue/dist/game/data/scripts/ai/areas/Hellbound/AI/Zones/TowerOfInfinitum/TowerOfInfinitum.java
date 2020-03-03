@@ -105,7 +105,6 @@ public class TowerOfInfinitum extends AbstractNpcAI
 	{
 		String htmltext = event;
 		final int npcId = npc.getId();
-		
 		if (event.equalsIgnoreCase("enter") && (npcId == JERIAN))
 		{
 			if (HellboundEngine.getInstance().getLevel() >= 11)
@@ -140,7 +139,6 @@ public class TowerOfInfinitum extends AbstractNpcAI
 		{
 			final int direction = event.equalsIgnoreCase("up") ? 0 : 1;
 			final Party party = player.getParty();
-			
 			if (party == null)
 			{
 				htmltext = "gk-noparty.htm";

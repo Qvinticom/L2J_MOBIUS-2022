@@ -54,7 +54,6 @@ public class Q00474_WaitingForTheSummer extends Quest
 		addStartNpc(ADVENTURER);
 		addTalkId(ADVENTURER, VISHOTSKY);
 		addKillId(LOST_BUFFALO, FROST_BUFFALO, URSUS_CUB, URSUS, LOST_YETI, FROST_YETI);
-		
 		addCondLevel(MIN_LEVEL, MAX_LEVEL, "");
 		registerQuestItems(BUFFALO_MEAT, URSUS_MEAT, YETI_MEAT);
 	}
@@ -94,7 +93,6 @@ public class Q00474_WaitingForTheSummer extends Quest
 	{
 		final QuestState qs = getQuestState(player, true);
 		String htmltext = getNoQuestMsg(player);
-		
 		if (npc.getId() == ADVENTURER)
 		{
 			switch (qs.getState())

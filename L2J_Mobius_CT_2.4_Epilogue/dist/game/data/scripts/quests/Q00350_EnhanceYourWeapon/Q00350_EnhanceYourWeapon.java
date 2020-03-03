@@ -181,7 +181,6 @@ public class Q00350_EnhanceYourWeapon extends Quest
 		{
 			levelSoulCrystals((Attackable) npc, killer);
 		}
-		
 		return null;
 	}
 	
@@ -219,7 +218,6 @@ public class Q00350_EnhanceYourWeapon extends Quest
 	{
 		final QuestState qs = getQuestState(player, true);
 		String htmltext = getNoQuestMsg(player);
-		
 		if (qs.getState() == State.CREATED)
 		{
 			qs.set("cond", "0");
@@ -401,7 +399,6 @@ public class Q00350_EnhanceYourWeapon extends Quest
 		}
 		// Init some useful vars
 		final LevelingInfo mainlvlInfo = NPC_LEVELING_INFO.get(mob.getId()).get(maxSCLevel);
-		
 		if (mainlvlInfo == null)
 		{
 			/* throw new NullPointerException("Target: "+mob+ " player: "+killer+" level: "+maxSCLevel); */
@@ -539,7 +536,6 @@ public class Q00350_EnhanceYourWeapon extends Quest
 									continue;
 								}
 								final int itemId = Integer.parseInt(attrs.getNamedItem("itemId").getNodeValue());
-								
 								att = attrs.getNamedItem("level");
 								if (att == null)
 								{
@@ -547,7 +543,6 @@ public class Q00350_EnhanceYourWeapon extends Quest
 									continue;
 								}
 								final int level = Integer.parseInt(attrs.getNamedItem("level").getNodeValue());
-								
 								att = attrs.getNamedItem("leveledItemId");
 								if (att == null)
 								{
@@ -555,7 +550,6 @@ public class Q00350_EnhanceYourWeapon extends Quest
 									continue;
 								}
 								final int leveledItemId = Integer.parseInt(attrs.getNamedItem("leveledItemId").getNodeValue());
-								
 								SOUL_CRYSTALS.put(itemId, new SoulCrystal(level, itemId, leveledItemId));
 							}
 						}
@@ -581,11 +575,9 @@ public class Q00350_EnhanceYourWeapon extends Quest
 									boolean isSkillNeeded = false;
 									int chance = 5;
 									AbsorbCrystalType absorbType = AbsorbCrystalType.LAST_HIT;
-									
 									if ("detail".equalsIgnoreCase(cd.getNodeName()))
 									{
 										attrs = cd.getAttributes();
-										
 										att = attrs.getNamedItem("absorbType");
 										if (att != null)
 										{

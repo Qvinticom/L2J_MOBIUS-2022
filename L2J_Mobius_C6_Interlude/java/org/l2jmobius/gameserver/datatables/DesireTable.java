@@ -76,7 +76,6 @@ public class DesireTable
 		public Desires(DesireType... desireList)
 		{
 			_desireTable = new EnumMap<>(DesireType.class);
-			
 			for (DesireType desire : desireList)
 			{
 				_desireTable.put(desire, new DesireValue());
@@ -91,7 +90,6 @@ public class DesireTable
 		public void addValue(DesireType type, float value)
 		{
 			final DesireValue temp = getDesireValue(type);
-			
 			if (temp != null)
 			{
 				temp.addValue(value);
@@ -128,12 +126,10 @@ public class DesireTable
 	public float getDesireValue(WorldObject object, DesireType type)
 	{
 		final Desires desireList = _objectDesireTable.get(object);
-		
 		if (desireList == null)
 		{
 			return 0f;
 		}
-		
 		return desireList.getDesireValue(type).getValue();
 	}
 	
@@ -145,7 +141,6 @@ public class DesireTable
 	public void addDesireValue(WorldObject object, DesireType type, float value)
 	{
 		final Desires desireList = _objectDesireTable.get(object);
-		
 		if (desireList != null)
 		{
 			desireList.addValue(type, value);
@@ -165,7 +160,6 @@ public class DesireTable
 	public void createDesire(WorldObject object, DesireType type)
 	{
 		final Desires desireList = _objectDesireTable.get(object);
-		
 		if (desireList != null)
 		{
 			desireList.createDesire(type);
@@ -175,7 +169,6 @@ public class DesireTable
 	public void deleteDesire(WorldObject object, DesireType type)
 	{
 		final Desires desireList = _objectDesireTable.get(object);
-		
 		if (desireList != null)
 		{
 			desireList.deleteDesire(type);

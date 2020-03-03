@@ -250,7 +250,6 @@ public class ItemTable
 	public ItemInstance createDummyItem(int itemId)
 	{
 		final Item item = getTemplate(itemId);
-		
 		if (item == null)
 		{
 			return null;

@@ -39,7 +39,6 @@ public class RequestFriendList implements IClientIncomingPacket
 	public void run(GameClient client)
 	{
 		final PlayerInstance player = client.getPlayer();
-		
 		if (player == null)
 		{
 			return;
@@ -55,14 +54,12 @@ public class RequestFriendList implements IClientIncomingPacket
 		{
 			// int friendId = rset.getInt("friendId");
 			final String friendName = CharNameTable.getInstance().getNameById(id);
-			
 			if (friendName == null)
 			{
 				continue;
 			}
 			
 			friend = World.getInstance().getPlayer(friendName);
-			
 			if ((friend == null) || !friend.isOnline())
 			{
 				// (Currently: Offline)

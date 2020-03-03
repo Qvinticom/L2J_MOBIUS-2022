@@ -1007,7 +1007,6 @@ public class ClanHallManagerInstance extends FolkInstance
 		if (_clanHallId < 0)
 		{
 			final ClanHall temp = ClanHallManager.getInstance().getNearbyClanHall(getX(), getY(), 500);
-			
 			if (temp != null)
 			{
 				_clanHallId = temp.getId();
@@ -1079,7 +1078,6 @@ public class ClanHallManagerInstance extends FolkInstance
 	private void showBuyWindow(PlayerInstance player, int value)
 	{
 		double taxRate = 0;
-		
 		if (isInTown())
 		{
 			taxRate = getCastle().getTaxRate();
@@ -1088,7 +1086,6 @@ public class ClanHallManagerInstance extends FolkInstance
 		player.tempInvetoryDisable();
 		
 		final StoreTradeList list = TradeController.getInstance().getBuyList(value);
-		
 		if ((list != null) && list.getNpcId().equals(String.valueOf(getNpcId())))
 		{
 			player.sendPacket(new BuyList(list, player.getAdena(), taxRate));

@@ -164,7 +164,6 @@ public class SepulcherNpcInstance extends NpcInstance
 				{
 					// Send a Server->Client packet SocialAction to the all PlayerInstance on the _knownPlayer of the NpcInstance to display a social action of the NpcInstance on their client
 					broadcastPacket(new SocialAction(getObjectId(), Rnd.get(8)));
-					
 					doAction(player);
 				}
 			}
@@ -268,7 +267,6 @@ public class SepulcherNpcInstance extends NpcInstance
 		{
 			pom = npcId + "-" + value;
 		}
-		
 		return HTML_FILE_PATH + pom + ".htm";
 	}
 	

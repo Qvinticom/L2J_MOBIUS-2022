@@ -44,7 +44,6 @@ public class EffectMpConsumePerLevel extends Effect
 		
 		final double base = calc();
 		final double consume = ((getEffected().getLevel() - 1) / 7.5) * base * getPeriod();
-		
 		if (consume > getEffected().getCurrentMp())
 		{
 			getEffected().sendPacket(SystemMessage.getSystemMessage(SystemMessageId.YOUR_SKILL_WAS_REMOVED_DUE_TO_A_LACK_OF_MP));

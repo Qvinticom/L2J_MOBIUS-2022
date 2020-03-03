@@ -174,7 +174,6 @@ public class MoveBackwardToLocation implements IClientIncomingPacket
 		// sort of incompatibility fix.
 		// Validate position packets sends head level.
 		_targetZ += player.getTemplate().getCollisionHeight();
-		
 		if (!player.isCursorKeyMovementActive() && (player.isInFrontOf(new Location(_targetX, _targetY, _targetZ)) || player.isOnSideOf(new Location(_originX, _originY, _originZ))))
 		{
 			player.setCursorKeyMovementActive(true);

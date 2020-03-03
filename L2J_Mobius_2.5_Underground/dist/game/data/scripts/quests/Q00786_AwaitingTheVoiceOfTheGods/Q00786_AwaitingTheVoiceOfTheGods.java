@@ -199,7 +199,6 @@ public class Q00786_AwaitingTheVoiceOfTheGods extends Quest
 	{
 		final QuestState qs = getQuestState(player, true);
 		String htmltext = getNoQuestMsg(player);
-		
 		if (npc.getId() == HERMIT)
 		{
 			switch (qs.getState())
@@ -244,7 +243,6 @@ public class Q00786_AwaitingTheVoiceOfTheGods extends Quest
 	public String onKill(Npc npc, PlayerInstance killer, boolean isSummon)
 	{
 		final QuestState qs = getQuestState(killer, false);
-		
 		if ((qs != null) && (qs.isCond(1)))
 		{
 			if (giveItemRandomly(killer, npc, EYE_OF_DARKNESS, 1, 50, 0.15, true))

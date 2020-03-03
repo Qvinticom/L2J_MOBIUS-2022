@@ -111,7 +111,6 @@ public class RequestRestartPoint extends GameClientPacket
 				Location loc = null;
 				Castle castle = null;
 				Fort fort = null;
-				
 				if (_player.isInJail())
 				{
 					_requestedPointType = 27;

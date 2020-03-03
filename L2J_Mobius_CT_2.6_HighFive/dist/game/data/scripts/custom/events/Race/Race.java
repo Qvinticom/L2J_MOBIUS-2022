@@ -137,9 +137,7 @@ public class Race extends Event
 		
 		// Schedule Event end
 		_eventTask = ThreadPool.schedule(this::StartRace, REGISTER_TIME * 60 * 1000);
-		
 		return true;
-		
 	}
 	
 	protected void StartRace()
@@ -220,7 +218,6 @@ public class Race extends Event
 		_npcs.clear();
 		// Announce event end
 		Broadcast.toAllOnlinePlayers("* Race Event finished *");
-		
 		return true;
 	}
 	
@@ -323,7 +320,6 @@ public class Race extends Event
 	public String onFirstTalk(Npc npc, PlayerInstance player)
 	{
 		getQuestState(player, true);
-		
 		if (npc.getId() == START_NPC)
 		{
 			if (_isRaceStarted)

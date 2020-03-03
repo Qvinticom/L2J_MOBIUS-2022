@@ -44,7 +44,6 @@ public class RequestPledgeRecruitApplyInfo implements IClientIncomingPacket
 		}
 		
 		final ClanEntryStatus status;
-		
 		if ((player.getClan() != null) && player.isClanLeader() && ClanEntryManager.getInstance().isClanRegistred(player.getClanId()))
 		{
 			status = ClanEntryStatus.ORDERED;

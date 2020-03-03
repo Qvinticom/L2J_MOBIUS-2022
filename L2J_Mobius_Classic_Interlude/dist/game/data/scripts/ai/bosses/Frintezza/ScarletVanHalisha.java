@@ -162,7 +162,6 @@ public class ScarletVanHalisha extends AbstractNpcAI
 				}
 			}
 		}
-		
 		return SkillData.getInstance().getSkill(FRINTEZZA_DAEMON_ATTACK, 1);
 	}
 	

@@ -147,7 +147,6 @@ public class MentorGuide extends AbstractNpcAI implements IXmlReader
 	public String onAdvEvent(String event, Npc npc, PlayerInstance player)
 	{
 		String htmltext = event;
-		
 		if (event.equalsIgnoreCase("exchange"))
 		{
 			if (hasQuestItems(player, MENTEE_CERT) && (player.getLevel() >= MAX_LEVEL) && player.isAwakenedClass())
@@ -227,7 +226,6 @@ public class MentorGuide extends AbstractNpcAI implements IXmlReader
 	public void OnPlayerMenteeStatus(OnPlayerMenteeStatus event)
 	{
 		final PlayerInstance player = event.getMentee();
-		
 		if (event.isMenteeOnline())
 		{
 			final Mentee mentor = MentorManager.getInstance().getMentor(player.getObjectId());
@@ -294,12 +292,10 @@ public class MentorGuide extends AbstractNpcAI implements IXmlReader
 	public void OnPlayerMentorStatus(OnPlayerMentorStatus event)
 	{
 		final PlayerInstance player = event.getMentor();
-		
 		if (event.isMentorOnline())
 		{
 			// stop buffs removal task
 			cancelQuestTimer("REMOVE_BUFFS " + player.getObjectId(), null, null);
-			
 			MentorManager.getInstance().getMentees(player.getObjectId()).stream().filter(Objects::nonNull).filter(Mentee::isOnline).forEach(mentee ->
 			{
 				//@formatter:off
@@ -353,7 +349,6 @@ public class MentorGuide extends AbstractNpcAI implements IXmlReader
 	public void onProfessionChange(OnPlayerProfessionChange event)
 	{
 		final PlayerInstance player = event.getPlayer();
-		
 		if (player.isMentor())
 		{
 			// Give mentor's buffs only if he didn't had them.
@@ -388,7 +383,6 @@ public class MentorGuide extends AbstractNpcAI implements IXmlReader
 		}
 		
 		checkLevelForReward(player); // Checking level to send a mail if is necessary
-		
 		if (player.getLevel() > MAX_LEVEL)
 		{
 			handleGraduateMentee(player);
@@ -434,7 +428,6 @@ public class MentorGuide extends AbstractNpcAI implements IXmlReader
 		final Mentee mentee = event.getMentee();
 		final PlayerInstance mentor = event.getMentor();
 		final PlayerInstance player = mentee.getPlayerInstance();
-		
 		if (player != null)
 		{
 			// Remove the mentee skills
@@ -486,11 +479,9 @@ public class MentorGuide extends AbstractNpcAI implements IXmlReader
 		{
 			MentorManager.getInstance().setPenalty(mentor.getObjectId(), Config.MENTOR_PENALTY_FOR_MENTEE_COMPLETE);
 			MentorManager.getInstance().deleteMentor(mentor.getObjectId(), player.getObjectId());
-			
 			if (mentor.isOnline())
 			{
 				mentor.sendPacket(new SystemMessage(SystemMessageId.S1_HAS_AWAKENED_AND_THE_MENTOR_MENTEE_RELATIONSHIP_HAS_ENDED_THE_MENTOR_CANNOT_OBTAIN_ANOTHER_MENTEE_FOR_ONE_DAY_AFTER_THE_MENTEE_S_GRADUATION).addPcName(player));
-				
 				if (MentorManager.getInstance().isAllMenteesOffline(mentor.getObjectId(), player.getObjectId()))
 				{
 					MentorManager.getInstance().cancelAllMentoringBuffs(mentor.getPlayerInstance());
@@ -503,9 +494,7 @@ public class MentorGuide extends AbstractNpcAI implements IXmlReader
 			
 			// Clear mentee status
 			player.sendPacket(new ExMentorList(player));
-			
 			player.sendPacket(new SystemMessage(SystemMessageId.YOUR_MENTOR_MENTEE_RELATIONSHIP_WITH_YOUR_MENTOR_S1_HAS_ENDED_AS_YOU_ARE_AN_AWAKENED_CHARACTER_OF_LV_85_OR_ABOVE_YOU_CAN_NO_LONGER_BE_PAIRED_WITH_A_MENTOR).addPcName(player));
-			
 			sendMail(player.getObjectId(), MENTEE_GRADUATE_TITLE, MENTEE_GRADUATE_BODY, MENTEE_CERT, 1);
 		}
 	}

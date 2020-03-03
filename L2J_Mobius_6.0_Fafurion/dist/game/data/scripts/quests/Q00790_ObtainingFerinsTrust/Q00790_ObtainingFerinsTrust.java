@@ -243,7 +243,6 @@ public class Q00790_ObtainingFerinsTrust extends Quest
 	{
 		final QuestState qs = getQuestState(player, true);
 		String htmltext = getNoQuestMsg(player);
-		
 		switch (qs.getState())
 		{
 			case State.CREATED:

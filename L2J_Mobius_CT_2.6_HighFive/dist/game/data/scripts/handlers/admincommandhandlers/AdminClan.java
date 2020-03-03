@@ -144,7 +144,6 @@ public class AdminClan implements IAdminCommandHandler
 						break;
 					}
 					final int clanId = Integer.parseInt(token);
-					
 					final Clan clan = ClanTable.getInstance().getClan(clanId);
 					if (clan == null)
 					{

@@ -109,7 +109,6 @@ public class Q10538_GiantsEvolution extends Quest
 	{
 		final QuestState qs = getQuestState(player, true);
 		String htmltext = getNoQuestMsg(player);
-		
 		if (npc.getId() == RETBACH)
 		{
 			switch (qs.getState())

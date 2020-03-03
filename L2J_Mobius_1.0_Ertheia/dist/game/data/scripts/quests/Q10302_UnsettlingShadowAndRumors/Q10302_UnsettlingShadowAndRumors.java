@@ -46,7 +46,6 @@ public class Q10302_UnsettlingShadowAndRumors extends Quest
 		super(10302);
 		addStartNpc(KANTARUBIS);
 		addTalkId(KANTARUBIS, IZAEL, CAS, MR_KAY, KITT);
-		
 		addCondMinLevel(MIN_LEVEL, "32898-10.html");
 		addCondCompletedQuest(Q10301_ShadowOfTerrorBlackishRedFog.class.getSimpleName(), "32898-10.html");
 	}
@@ -148,7 +147,6 @@ public class Q10302_UnsettlingShadowAndRumors extends Quest
 	{
 		final QuestState qs = getQuestState(player, true);
 		String htmltext = getNoQuestMsg(player);
-		
 		switch (qs.getState())
 		{
 			case State.CREATED:

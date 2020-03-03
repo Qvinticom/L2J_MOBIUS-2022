@@ -63,7 +63,6 @@ public class ClanHallDoorManager extends AbstractNpcAI
 		final String action = st.nextToken();
 		final ClanHall clanHall = npc.getClanHall();
 		String htmltext = null;
-		
 		if (clanHall != null)
 		{
 			switch (action)

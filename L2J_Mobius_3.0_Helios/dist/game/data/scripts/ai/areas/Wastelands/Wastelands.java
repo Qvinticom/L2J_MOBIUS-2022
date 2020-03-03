@@ -96,7 +96,6 @@ public class Wastelands extends AbstractNpcAI
 			{
 				npc.broadcastSocialAction(4);
 				npc.broadcastSay(ChatType.NPC_GENERAL, GUARD_SHOUT[getRandom(2)], 1000);
-				
 				World.getInstance().getVisibleObjectsInRange(npc, Npc.class, 500).stream().filter(n -> n.getId() == GUARD).forEach(guard -> startQuestTimer("SOCIAL_ACTION", getRandom(2500, 3500), guard, null));
 				break;
 			}
@@ -306,15 +305,12 @@ public class Wastelands extends AbstractNpcAI
 			{
 				sakum.getVariables().set("GUARD_COUNT", COMMANDO_CAPTAIN_SAKUM_LOC.length);
 				sakum.getVariables().set("GUARD_CAPTAIN", false);
-				
 				for (Location loc : COMMANDO_CAPTAIN_SAKUM_LOC)
 				{
 					final Attackable commander = (Attackable) addSpawn(COMMANDO_CAPTAIN, loc);
 					commander.broadcastSay(ChatType.NPC_GENERAL, NpcStringId.HOW_DARE_YOU_ATTACK);
-					
 					commander.reduceCurrentHp(1, sakum, null); // TODO: Find better way for attack
 					sakum.reduceCurrentHp(1, commander, null);
-					
 					notifyEvent("START_ATTACK", commander, null);
 				}
 			}
@@ -322,14 +318,11 @@ public class Wastelands extends AbstractNpcAI
 			{
 				sakum.getVariables().set("GUARD_COUNT", COMMANDO_SAKUM_LOC.length);
 				sakum.getVariables().set("GUARD_CAPTAIN", true);
-				
 				for (Location loc : COMMANDO_SAKUM_LOC)
 				{
 					final Attackable commander = (Attackable) addSpawn(COMMANDO, loc);
-					
 					commander.reduceCurrentHp(1, sakum, null); // TODO: Find better way for attack
 					sakum.reduceCurrentHp(1, commander, null);
-					
 					notifyEvent("START_ATTACK", commander, null);
 				}
 			}

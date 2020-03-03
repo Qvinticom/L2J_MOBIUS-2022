@@ -37,7 +37,6 @@ public class BoatKnownList extends CreatureKnownList
 		{
 			return 0;
 		}
-		
 		return 8000;
 	}
 	
@@ -48,7 +47,6 @@ public class BoatKnownList extends CreatureKnownList
 		{
 			return 0;
 		}
-		
 		return 4000;
 	}
 }

@@ -58,7 +58,6 @@ public class ConditionPlayerCheckAbnormal extends Condition
 		{
 			return effector.getEffectList().hasAbnormalType(_type);
 		}
-		
 		return effector.getEffectList().hasAbnormalType(_type, info -> _level >= info.getSkill().getAbnormalLvl());
 	}
 }

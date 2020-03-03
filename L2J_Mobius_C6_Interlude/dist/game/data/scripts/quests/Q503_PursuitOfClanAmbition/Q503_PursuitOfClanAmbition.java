@@ -707,7 +707,6 @@ public class Q503_PursuitOfClanAmbition extends Quest
 				attacker.teleToLocation(185462, 20342, -3250);
 			}
 		}
-		
 		return super.onAttack(npc, attacker, damage, isPet);
 	}
 }

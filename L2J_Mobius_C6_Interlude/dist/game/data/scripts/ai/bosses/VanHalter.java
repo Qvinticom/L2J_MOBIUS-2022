@@ -879,7 +879,6 @@ public class VanHalter extends Quest
 		if (loop)
 		{
 			_isLocked = false;
-			
 			if (_closeDoorOfAltarTask != null)
 			{
 				_closeDoorOfAltarTask.cancel(false);
@@ -1015,7 +1014,6 @@ public class VanHalter extends Quest
 			_timeUpTask.cancel(false);
 		}
 		_timeUpTask = null;
-		
 		_movieTask = ThreadPool.schedule(new Movie(1), Config.HPH_APPTIMEOFHALTER);
 	}
 	
@@ -1030,7 +1028,6 @@ public class VanHalter extends Quest
 		
 		final Map<Integer, PlayerInstance> targets = new HashMap<>();
 		int i = 0;
-		
 		for (PlayerInstance pc : _vanHalter.getKnownList().getKnownPlayers().values())
 		{
 			i++;
@@ -1142,7 +1139,6 @@ public class VanHalter extends Quest
 	protected void addBleeding()
 	{
 		final Skill bleed = SkillTable.getInstance().getInfo(4615, 12);
-		
 		for (NpcInstance tr : _triolRevelation)
 		{
 			if (!tr.getKnownList().getKnownPlayersInRadius(tr.getAggroRange()).iterator().hasNext() || tr.isDead())
@@ -1151,7 +1147,6 @@ public class VanHalter extends Quest
 			}
 			
 			final List<PlayerInstance> bpc = new ArrayList<>();
-			
 			for (PlayerInstance pc : tr.getKnownList().getKnownPlayersInRadius(tr.getAggroRange()))
 			{
 				if (pc.getFirstEffect(bleed) == null)
@@ -1273,7 +1268,6 @@ public class VanHalter extends Quest
 		}
 		
 		final Integer status = GrandBossManager.getInstance().getBossStatus(29062);
-		
 		if (status != INTERVAL)
 		{
 			final long interval = Rnd.get(Config.HPH_FIXINTERVALOFHALTER, Config.HPH_FIXINTERVALOFHALTER + Config.HPH_RANDOMINTERVALOFHALTER)/* * 3600000 */;

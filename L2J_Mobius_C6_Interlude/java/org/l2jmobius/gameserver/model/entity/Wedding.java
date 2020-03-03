@@ -49,7 +49,6 @@ public class Wedding
 		{
 			PreparedStatement statement;
 			ResultSet rs;
-			
 			statement = con.prepareStatement("Select * from mods_wedding where id = ?");
 			statement.setInt(1, _Id);
 			rs = statement.executeQuery();
@@ -59,7 +58,6 @@ public class Wedding
 				_player1Id = rs.getInt("player1Id");
 				_player2Id = rs.getInt("player2Id");
 				_maried = rs.getBoolean("married");
-				
 				_affiancedDate = Calendar.getInstance();
 				_affiancedDate.setTimeInMillis(rs.getLong("affianceDate"));
 				
@@ -81,10 +79,8 @@ public class Wedding
 	{
 		final int _tempPlayer1Id = player1.getObjectId();
 		final int _tempPlayer2Id = player2.getObjectId();
-		
 		_player1Id = _tempPlayer1Id;
 		_player2Id = _tempPlayer2Id;
-		
 		_affiancedDate = Calendar.getInstance();
 		_affiancedDate.setTimeInMillis(Calendar.getInstance().getTimeInMillis());
 		
@@ -94,9 +90,7 @@ public class Wedding
 		try (Connection con = DatabaseFactory.getConnection())
 		{
 			PreparedStatement statement;
-			
 			_Id = IdFactory.getNextId();
-			
 			statement = con.prepareStatement("INSERT INTO mods_wedding (id, player1Id, player2Id, married, affianceDate, weddingDate) VALUES (?, ?, ?, ?, ?, ?)");
 			statement.setInt(1, _Id);
 			statement.setInt(2, _player1Id);
@@ -121,12 +115,9 @@ public class Wedding
 		try (Connection con = DatabaseFactory.getConnection())
 		{
 			PreparedStatement statement;
-			
 			statement = con.prepareStatement("UPDATE mods_wedding set married = ?, weddingDate = ?, coupleType = ? where id = ?");
 			statement.setBoolean(1, true);
-			
 			_weddingDate = Calendar.getInstance();
-			
 			statement.setLong(2, _weddingDate.getTimeInMillis());
 			statement.setInt(3, _type);
 			statement.setInt(4, _Id);
@@ -146,7 +137,6 @@ public class Wedding
 		try (Connection con = DatabaseFactory.getConnection())
 		{
 			PreparedStatement statement;
-			
 			statement = con.prepareStatement("DELETE FROM mods_wedding WHERE id=?");
 			statement.setInt(1, _Id);
 			statement.execute();

@@ -144,7 +144,6 @@ public class NpcTemplate extends CreatureTemplate implements IIdentifiable
 		_usingServerSideTitle = set.getBoolean("usingServerSideTitle", false);
 		setRace(set.getEnum("race", Race.class, Race.NONE));
 		_sex = set.getEnum("sex", Sex.class, Sex.ETC);
-		
 		_chestId = set.getInt("chestId", 0);
 		if ((_chestId > 0) && (ItemTable.getInstance().getTemplate(_chestId) == null))
 		{
@@ -162,11 +161,9 @@ public class NpcTemplate extends CreatureTemplate implements IIdentifiable
 		}
 		
 		_weaponEnchant = set.getInt("weaponEnchant", 0);
-		
 		_exp = set.getDouble("exp", 0);
 		_sp = set.getDouble("sp", 0);
 		_raidPoints = set.getDouble("raidPoints", 0);
-		
 		_unique = set.getBoolean("unique", false);
 		_attackable = set.getBoolean("attackable", true);
 		_targetable = set.getBoolean("targetable", true);
@@ -186,37 +183,28 @@ public class NpcTemplate extends CreatureTemplate implements IIdentifiable
 		_canBeSown = set.getBoolean("canBeSown", false);
 		_canBeCrt = set.getBoolean("exCrtEffect", true);
 		_isDeathPenalty = set.getBoolean("isDeathPenalty", false);
-		
 		_corpseTime = set.getInt("corpseTime", Config.DEFAULT_CORPSE_TIME);
-		
 		_aiType = set.getEnum("aiType", AIType.class, AIType.FIGHTER);
 		_aggroRange = set.getInt("aggroRange", 0);
 		_clanHelpRange = set.getInt("clanHelpRange", 0);
 		_dodge = set.getInt("dodge", 0);
 		_isChaos = set.getBoolean("isChaos", false);
 		_isAggressive = set.getBoolean("isAggressive", false);
-		
 		_soulShot = set.getInt("soulShot", 0);
 		_spiritShot = set.getInt("spiritShot", 0);
 		_soulShotChance = set.getInt("shotShotChance", 0);
 		_spiritShotChance = set.getInt("spiritShotChance", 0);
-		
 		_minSkillChance = set.getInt("minSkillChance", 7);
 		_maxSkillChance = set.getInt("maxSkillChance", 15);
-		
 		_hitTimeFactor = set.getInt("hitTime", 100) / 100d;
 		_hitTimeFactorSkill = set.getInt("hitTimeSkill", 100) / 100d;
-		
 		_collisionRadiusGrown = set.getDouble("collisionRadiusGrown", 0);
 		_collisionHeightGrown = set.getDouble("collisionHeightGrown", 0);
-		
 		_mpRewardValue = set.getInt("mpRewardValue", 0);
 		_mpRewardType = set.getEnum("mpRewardType", MpRewardType.class, MpRewardType.DIFF);
 		_mpRewardTicks = set.getInt("mpRewardTicks", 0);
 		_mpRewardAffectType = set.getEnum("mpRewardAffectType", MpRewardAffectType.class, MpRewardAffectType.SOLO);
-		
 		_extendDrop = set.getList("extendDrop", Integer.class);
-		
 		if (Config.ENABLE_NPC_STAT_MULTIPLIERS) // Custom NPC Stat Multipliers
 		{
 			switch (_type)
@@ -603,7 +591,6 @@ public class NpcTemplate extends CreatureTemplate implements IIdentifiable
 	{
 		// Using local variable for the sake of reloading since it can be turned to null.
 		final Set<Integer> clans = _clans;
-		
 		if (clans == null)
 		{
 			return false;
@@ -640,7 +627,6 @@ public class NpcTemplate extends CreatureTemplate implements IIdentifiable
 	{
 		// Using local variable for the sake of reloading since it can be turned to null.
 		final Set<Integer> clanSet = _clans;
-		
 		if ((clanSet == null) || (clans == null))
 		{
 			return false;

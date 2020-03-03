@@ -86,7 +86,6 @@ public class CabaleBufferInstance extends NpcInstance
 			
 			final int winningCabal = SevenSigns.getInstance().getCabalHighestScore();
 			int losingCabal = SevenSigns.CABAL_NULL;
-			
 			if (winningCabal == SevenSigns.CABAL_DAWN)
 			{
 				losingCabal = SevenSigns.CABAL_DUSK;
@@ -111,7 +110,6 @@ public class CabaleBufferInstance extends NpcInstance
 			for (PlayerInstance player : getKnownList().getKnownPlayers().values())
 			{
 				final int playerCabal = SevenSigns.getInstance().getPlayerCabal(player);
-				
 				if ((playerCabal == winningCabal) && (playerCabal != SevenSigns.CABAL_NULL) && (_caster.getNpcId() == SevenSigns.ORATOR_NPC_ID))
 				{
 					if (!player.isMageClass())
@@ -155,7 +153,6 @@ public class CabaleBufferInstance extends NpcInstance
 		private boolean handleCast(PlayerInstance player, int skillId)
 		{
 			final int skillLevel = player.getLevel() > 40 ? 1 : 2;
-			
 			if (player.isDead() || !player.isVisible() || !isInsideRadius(player, getDistanceToWatchObject(player), false, false))
 			{
 				return false;

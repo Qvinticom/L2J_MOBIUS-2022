@@ -45,7 +45,6 @@ public class PetDataTable
 		{
 			final PreparedStatement statement = con.prepareStatement("SELECT typeID, level, expMax, hpMax, mpMax, patk, pdef, matk, mdef, acc, evasion, crit, speed, atk_speed, cast_speed, feedMax, feedbattle, feednormal, loadMax, hpregen, mpregen, owner_exp_taken FROM pets_stats");
 			final ResultSet rset = statement.executeQuery();
-			
 			int petId;
 			int petLevel;
 			
@@ -56,7 +55,6 @@ public class PetDataTable
 				
 				// build the petdata for this level
 				final PetData petData = new PetData();
-				
 				petData.setPetID(petId);
 				petData.setPetLevel(petLevel);
 				petData.setPetMaxExp(rset.getInt("expMax"));
@@ -102,7 +100,6 @@ public class PetDataTable
 	public void addPetData(PetData petData)
 	{
 		final Map<Integer, PetData> h = _petTable.get(petData.getPetID());
-		
 		if (h == null)
 		{
 			final Map<Integer, PetData> statTable = new HashMap<>();

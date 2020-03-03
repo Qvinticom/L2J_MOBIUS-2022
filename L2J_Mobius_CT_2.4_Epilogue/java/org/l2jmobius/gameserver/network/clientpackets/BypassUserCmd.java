@@ -46,7 +46,6 @@ public class BypassUserCmd implements IClientIncomingPacket
 		}
 		
 		final IUserCommandHandler handler = UserCommandHandler.getInstance().getHandler(_command);
-		
 		if (handler == null)
 		{
 			if (player.isGM())

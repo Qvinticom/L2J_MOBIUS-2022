@@ -132,7 +132,6 @@ public class PlayerStat extends PlayableStat
 		
 		final double baseExp = addToExp;
 		final double baseSp = addToSp;
-		
 		double bonusExp = 1.;
 		double bonusSp = 1.;
 		
@@ -160,7 +159,6 @@ public class PlayerStat extends PlayableStat
 		
 		addToExp *= bonusExp;
 		addToSp *= bonusSp;
-		
 		double ratioTakenByPlayer = 0;
 		
 		// if this player has a pet and it is in his range he takes from the owner's Exp, give the pet Exp now
@@ -190,7 +188,6 @@ public class PlayerStat extends PlayableStat
 		final long finalSp = Math.round(addToSp);
 		final boolean expAdded = addExp(finalExp);
 		final boolean spAdded = addSp(finalSp);
-		
 		SystemMessage sm = null;
 		if (!expAdded && spAdded)
 		{
@@ -375,7 +372,6 @@ public class PlayerStat extends PlayableStat
 		{
 			return getActiveChar().getSubClasses().get(getActiveChar().getClassIndex()).getExp();
 		}
-		
 		return super.getExp();
 	}
 	
@@ -470,7 +466,6 @@ public class PlayerStat extends PlayableStat
 		{
 			return getActiveChar().getSubClasses().get(getActiveChar().getClassIndex()).getLevel();
 		}
-		
 		return super.getLevel();
 	}
 	
@@ -530,7 +525,6 @@ public class PlayerStat extends PlayableStat
 				getActiveChar().getStatus().setCurrentHp(getActiveChar().getStatus().getCurrentHp()); // trigger start of regeneration
 			}
 		}
-		
 		return val;
 	}
 	
@@ -539,7 +533,6 @@ public class PlayerStat extends PlayableStat
 	{
 		// Get the Max MP (base+modifier) of the PlayerInstance
 		final int val = (getActiveChar() == null) ? 1 : (int) calcStat(Stat.MAX_MP, getActiveChar().getTemplate().getBaseMpMax(getActiveChar().getLevel()));
-		
 		if (val != _oldMaxMp)
 		{
 			_oldMaxMp = val;
@@ -550,7 +543,6 @@ public class PlayerStat extends PlayableStat
 				getActiveChar().getStatus().setCurrentMp(getActiveChar().getStatus().getCurrentMp()); // trigger start of regeneration
 			}
 		}
-		
 		return val;
 	}
 	
@@ -561,7 +553,6 @@ public class PlayerStat extends PlayableStat
 		{
 			return getActiveChar().getSubClasses().get(getActiveChar().getClassIndex()).getSp();
 		}
-		
 		return super.getSp();
 	}
 	
@@ -671,19 +662,16 @@ public class PlayerStat extends PlayableStat
 	public double getPAtkSpd()
 	{
 		final double val = super.getPAtkSpd();
-		
 		if ((val > Config.MAX_PATK_SPEED) && !getActiveChar().canOverrideCond(PlayerCondOverride.MAX_STATS_VALUE))
 		{
 			return Config.MAX_PATK_SPEED;
 		}
-		
 		return val;
 	}
 	
 	private void updateVitalityLevel(boolean quiet)
 	{
 		final byte level;
-		
 		if (_vitalityPoints <= VITALITY_LEVELS[0])
 		{
 			level = 0;
@@ -769,7 +757,6 @@ public class PlayerStat extends PlayableStat
 			if (points < 0) // vitality consumed
 			{
 				int stat = (int) calcStat(Stat.VITALITY_CONSUME_RATE, 1, getActiveChar(), null);
-				
 				if (getActiveChar().getNevitSystem().isAdventBlessingActive())
 				{
 					stat = -10; // increase Vitality During Blessing
@@ -818,7 +805,6 @@ public class PlayerStat extends PlayableStat
 	public double getVitalityMultiplier()
 	{
 		double vitality = 1.0;
-		
 		if (Config.ENABLE_VITALITY)
 		{
 			switch (getVitalityLevel())
@@ -845,7 +831,6 @@ public class PlayerStat extends PlayableStat
 				}
 			}
 		}
-		
 		return vitality;
 	}
 	
@@ -880,7 +865,6 @@ public class PlayerStat extends PlayableStat
 		
 		// Bonus exp from skills
 		bonusExp = 1 + (calcStat(Stat.BONUS_EXP, 0, null, null) / 100);
-		
 		if (vitality > 1.0)
 		{
 			bonus += (vitality - 1);
@@ -927,7 +911,6 @@ public class PlayerStat extends PlayableStat
 		
 		// Bonus sp from skills
 		bonusSp = 1 + (calcStat(Stat.BONUS_SP, 0, null, null) / 100);
-		
 		if (vitality > 1.0)
 		{
 			bonus += (vitality - 1);

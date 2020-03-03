@@ -34,7 +34,6 @@ public class GroupSpawn extends Spawn
 	{
 		super(mobTemplate);
 		_template = mobTemplate;
-		
 		setAmount(1);
 	}
 	
@@ -50,7 +49,6 @@ public class GroupSpawn extends Spawn
 			int newlocx = 0;
 			int newlocy = 0;
 			int newlocz = 0;
-			
 			if ((getX() == 0) && (getY() == 0))
 			{
 				if (getLocationId() == 0)
@@ -67,9 +65,7 @@ public class GroupSpawn extends Spawn
 			
 			final Npc mob = new ControllableMobInstance(_template);
 			mob.setCurrentHpMp(mob.getMaxHp(), mob.getMaxMp());
-			
 			mob.setHeading(getHeading() == -1 ? Rnd.get(61794) : getHeading());
-			
 			mob.setSpawn(this);
 			mob.spawnMe(newlocx, newlocy, newlocz);
 			return mob;

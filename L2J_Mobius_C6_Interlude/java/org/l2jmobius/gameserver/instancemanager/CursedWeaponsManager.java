@@ -110,7 +110,6 @@ public class CursedWeaponsManager
 			}
 			
 			final Document doc = factory.newDocumentBuilder().parse(file);
-			
 			for (Node n = doc.getFirstChild(); n != null; n = n.getNextSibling())
 			{
 				if ("list".equalsIgnoreCase(n.getNodeName()))
@@ -123,9 +122,7 @@ public class CursedWeaponsManager
 							final int id = Integer.parseInt(attrs.getNamedItem("id").getNodeValue());
 							final int skillId = Integer.parseInt(attrs.getNamedItem("skillId").getNodeValue());
 							final String name = attrs.getNamedItem("name").getNodeValue();
-							
 							final CursedWeapon cw = new CursedWeapon(id, skillId, name);
-							
 							int val;
 							for (Node cd = d.getFirstChild(); cd != null; cd = cd.getNextSibling())
 							{
@@ -179,7 +176,6 @@ public class CursedWeaponsManager
 		{
 			final PreparedStatement statement = con.prepareStatement("SELECT itemId, playerId, playerKarma, playerPkKills, nbKills, endTime FROM cursed_weapons");
 			final ResultSet rset = statement.executeQuery();
-			
 			if (rset.next())
 			{
 				final int itemId = rset.getInt("itemId");
@@ -188,7 +184,6 @@ public class CursedWeaponsManager
 				final int playerPkKills = rset.getInt("playerPkKills");
 				final int nbKills = rset.getInt("nbKills");
 				final long endTime = rset.getLong("endTime");
-				
 				final CursedWeapon cw = _cursedWeapons.get(itemId);
 				cw.setPlayerId(playerId);
 				cw.setPlayerKarma(playerKarma);
@@ -237,7 +232,6 @@ public class CursedWeaponsManager
 					statement = con.prepareStatement("SELECT owner_id FROM items WHERE item_id=?");
 					statement.setInt(1, itemId);
 					rset = statement.executeQuery();
-					
 					if (rset.next())
 					{
 						// A player has the cursed weapon in his inventory ...
@@ -320,7 +314,6 @@ public class CursedWeaponsManager
 			// erase the newly obtained cursed weapon
 			cw.setPlayer(player); // NECESSARY in order to find which inventory the weapon is in!
 			cw.endOfLife(); // expire the weapon and clean up.
-			
 		}
 		else
 		{
@@ -331,21 +324,18 @@ public class CursedWeaponsManager
 	public void drop(int itemId, Creature killer)
 	{
 		final CursedWeapon cw = _cursedWeapons.get(itemId);
-		
 		cw.dropIt(killer);
 	}
 	
 	public void increaseKills(int itemId)
 	{
 		final CursedWeapon cw = _cursedWeapons.get(itemId);
-		
 		cw.increaseKills();
 	}
 	
 	public int getLevel(int itemId)
 	{
 		final CursedWeapon cw = _cursedWeapons.get(itemId);
-		
 		return cw.getLevel();
 	}
 	

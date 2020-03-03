@@ -59,7 +59,6 @@ public class GiveRecommendation extends AbstractEffect
 		if (target != null)
 		{
 			int recommendationsGiven = _amount;
-			
 			if ((target.getRecomHave() + _amount) >= 255)
 			{
 				recommendationsGiven = 255 - target.getRecomHave();

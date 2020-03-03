@@ -331,7 +331,6 @@ public class DoormanInstance extends FolkInstance
 				return COND_FORT_OWNER;
 			}
 		}
-		
 		return COND_ALL_FALSE;
 	}
 }

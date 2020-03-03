@@ -47,13 +47,10 @@ public class ExElementalSpiritSetTalent implements IClientIncomingPacket
 		
 		packet.readC(); // attack id
 		_attackPoints = (byte) packet.readC();
-		
 		packet.readC(); // defense id
 		_defensePoints = (byte) packet.readC();
-		
 		packet.readC(); // crit rate id
 		_critRate = (byte) packet.readC();
-		
 		packet.readC(); // crit damage id
 		_critDamage = (byte) packet.readC();
 		return true;

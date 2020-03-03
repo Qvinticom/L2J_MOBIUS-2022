@@ -134,7 +134,6 @@ public class RaidBossPointsManager
 		}
 		tmpPoint = _list.get(ownerId);
 		int totalPoints = 0;
-		
 		if ((tmpPoint == null) || tmpPoint.isEmpty())
 		{
 			return 0;
@@ -174,7 +173,6 @@ public class RaidBossPointsManager
 		final Map<Integer, Integer> tmpRanking = new HashMap<>();
 		final Map<Integer, Integer> tmpPoints = new HashMap<>();
 		int totalPoints;
-		
 		for (int ownerId : _list.keySet())
 		{
 			totalPoints = getPointsByOwnerId(ownerId);
@@ -184,9 +182,7 @@ public class RaidBossPointsManager
 			}
 		}
 		final ArrayList<Entry<Integer, Integer>> list = new ArrayList<>(tmpPoints.entrySet());
-		
 		Collections.sort(list, _comparator);
-		
 		int ranking = 1;
 		for (Entry<Integer, Integer> entry : list)
 		{
@@ -205,7 +201,6 @@ public class RaidBossPointsManager
 		final Map<Integer, Integer> tmpRanking = new HashMap<>();
 		final Map<Integer, Integer> tmpPoints = new HashMap<>();
 		int totalPoints;
-		
 		for (int ownerId : _list.keySet())
 		{
 			totalPoints = getPointsByOwnerId(ownerId);
@@ -215,15 +210,12 @@ public class RaidBossPointsManager
 			}
 		}
 		final ArrayList<Entry<Integer, Integer>> list = new ArrayList<>(tmpPoints.entrySet());
-		
 		Collections.sort(list, _comparator);
-		
 		int ranking = 1;
 		for (Entry<Integer, Integer> entry : list)
 		{
 			tmpRanking.put(entry.getKey(), ranking++);
 		}
-		
 		return tmpRanking;
 	}
 }

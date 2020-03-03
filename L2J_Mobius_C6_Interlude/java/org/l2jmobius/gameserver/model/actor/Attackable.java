@@ -479,7 +479,6 @@ public class Attackable extends NpcInstance
 		if (this instanceof MonsterInstance)
 		{
 			MonsterInstance master = (MonsterInstance) this;
-			
 			if (this instanceof MinionInstance)
 			{
 				master = ((MinionInstance) this).getLeader();
@@ -626,9 +625,7 @@ public class Attackable extends NpcInstance
 			
 			PlayerInstance maxDealer = null;
 			long maxDamage = 0;
-			
 			long damage;
-			
 			Creature attacker;
 			Creature ddealer;
 			
@@ -694,7 +691,6 @@ public class Attackable extends NpcInstance
 			
 			// Manage drop of Special Events created by GM for a defined period
 			doEventDrop((maxDealer != null) && maxDealer.isOnline() ? maxDealer : lastAttacker);
-			
 			if (!_mustGiveExpSp)
 			{
 				return;
@@ -712,7 +708,6 @@ public class Attackable extends NpcInstance
 				float penalty;
 				RewardInfo reward2;
 				int[] tmp;
-				
 				for (RewardInfo reward : rewards.values())
 				{
 					if (reward == null)
@@ -766,12 +761,10 @@ public class Attackable extends NpcInstance
 							// mob = 24, atk = 28, diff = 4 (some xp)
 							// mob = 24, atk = 50, diff = 26 (no xp)
 							levelDiff = attacker.getLevel() - getLevel();
-							
 							tmp = calculateExpAndSp(levelDiff, damage);
 							exp = tmp[0];
 							exp *= 1 - penalty;
 							sp = tmp[1];
-							
 							if (Config.CHAMPION_ENABLE && isChampion())
 							{
 								exp *= Config.CHAMPION_REWARDS;
@@ -877,7 +870,6 @@ public class Attackable extends NpcInstance
 							if (summon instanceof PetInstance)
 							{
 								reward2 = rewards.get(summon);
-								
 								if (reward2 != null) // Pets are only added if they have done damage
 								{
 									if (Util.checkIfInRange(Config.ALT_PARTY_RANGE, this, summon, true))
@@ -915,7 +907,6 @@ public class Attackable extends NpcInstance
 						tmp = calculateExpAndSp(levelDiff, partyDmg);
 						exp = tmp[0];
 						sp = tmp[1];
-						
 						if (Config.CHAMPION_ENABLE && isChampion())
 						{
 							exp *= Config.CHAMPION_REWARDS;
@@ -1026,7 +1017,6 @@ public class Attackable extends NpcInstance
 				if ((attacker instanceof PlayerInstance) || (attacker instanceof Summon))
 				{
 					final PlayerInstance player = attacker instanceof PlayerInstance ? (PlayerInstance) attacker : ((Summon) attacker).getOwner();
-					
 					for (Quest quest : getTemplate().getEventQuests(EventType.ON_ATTACK))
 					{
 						quest.notifyAttack(this, player, damage, attacker instanceof Summon);
@@ -1048,13 +1038,11 @@ public class Attackable extends NpcInstance
 			stopHating(target);
 			setTarget(null);
 			getAI().setIntention(CtrlIntention.AI_INTENTION_IDLE, null, null);
-			
 			return;
 		}
 		if (target == null) // whole aggrolist
 		{
 			final Creature mostHated = getMostHated();
-			
 			if (mostHated == null) // makes target passive for a moment more
 			{
 				((AttackableAI) getAI()).setGlobalAggro(-25);
@@ -1088,7 +1076,6 @@ public class Attackable extends NpcInstance
 		}
 		
 		ai._hate -= amount;
-		
 		if ((ai._hate <= 0) && (getMostHated() == null))
 		{
 			((AttackableAI) getAI()).setGlobalAggro(-25);
@@ -1111,7 +1098,6 @@ public class Attackable extends NpcInstance
 		}
 		
 		final AggroInfo ai = _aggroList.get(target);
-		
 		if (ai == null)
 		{
 			return;
@@ -1133,7 +1119,6 @@ public class Attackable extends NpcInstance
 		}
 		
 		Creature mostHated = null;
-		
 		int maxHate = 0;
 		
 		// While iterating over This Map Removing Object is Not Allowed
@@ -1187,7 +1172,6 @@ public class Attackable extends NpcInstance
 		}
 		
 		final AggroInfo ai = _aggroList.get(target);
-		
 		if (ai == null)
 		{
 			return 0;
@@ -1298,13 +1282,11 @@ public class Attackable extends NpcInstance
 		}
 		
 		int deepBlueDrop = 1;
-		
 		if (Config.DEEPBLUE_DROP_RULES && (levelModifier > 0))
 		{
 			// We should multiply by the server's drop rate, so we always get a low chance of drop for deep blue mobs.
 			// NOTE: This is valid only for adena drops! Others drops will still obey server's rate
 			deepBlueDrop = 3;
-			
 			if (drop.getItemId() == 57)
 			{
 				deepBlueDrop *= isRaid() ? 1 : Config.RATE_DROP_ITEMS;
@@ -1340,7 +1322,6 @@ public class Attackable extends NpcInstance
 			else
 			{
 				dropChance *= Config.RATE_DROP_ADENA;
-				
 				if (lastAttacker.isDonator())
 				{
 					dropChance *= Config.DONATOR_ADENA_RATE;
@@ -1364,7 +1345,6 @@ public class Attackable extends NpcInstance
 			else
 			{
 				dropChance *= Config.RATE_DROP_SPOIL;
-				
 				if (lastAttacker.isDonator())
 				{
 					dropChance *= Config.DONATOR_SPOIL_RATE;
@@ -1386,7 +1366,6 @@ public class Attackable extends NpcInstance
 		else
 		{
 			dropChance *= Config.RATE_DROP_ITEMS;
-			
 			if (lastAttacker.isDonator())
 			{
 				dropChance *= Config.DONATOR_DROP_RATE;
@@ -1416,7 +1395,6 @@ public class Attackable extends NpcInstance
 		if ((dropChance > DropData.MAX_CHANCE) && !Config.PRECISE_DROP_CALCULATION)
 		{
 			final int multiplier = (int) dropChance / DropData.MAX_CHANCE;
-			
 			if (minCount < maxCount)
 			{
 				itemCount += Rnd.get(minCount * multiplier, maxCount * multiplier);
@@ -1492,7 +1470,6 @@ public class Attackable extends NpcInstance
 		{
 			// it's not adena-->check if drop is quest or is an epic jewel
 			boolean doDrop = false;
-			
 			for (DropData dd : categoryDrops.getAllDrops())
 			{
 				// quest_drop,ant queen,orfen,core,frintezza,baium,antharas,valakas,zaken, seal Stones, life stones
@@ -1514,9 +1491,7 @@ public class Attackable extends NpcInstance
 		// for everything else, use the total "categoryDropChance"
 		final int basecategoryDropChance = categoryDrops.getCategoryChance();
 		int categoryDropChance = basecategoryDropChance;
-		
 		int deepBlueDrop = 1;
-		
 		if (Config.DEEPBLUE_DROP_RULES && (levelModifier > 0))
 		{
 			// We should multiply by the server's drop rate, so we always get a low chance of drop for deep blue mobs.
@@ -1568,7 +1543,6 @@ public class Attackable extends NpcInstance
 		if (Rnd.get(DropData.MAX_CHANCE) < categoryDropChance)
 		{
 			final DropData drop = categoryDrops.dropOne(isRaid());
-			
 			if (drop == null)
 			{
 				return null;
@@ -1585,7 +1559,6 @@ public class Attackable extends NpcInstance
 			// chance to give a 4th time.
 			// At least 1 item will be dropped for sure. So the chance will be adjusted to 100%
 			// if smaller.
-			
 			long dropChance = 0;
 			
 			switch (drop.getItemId())
@@ -1709,7 +1682,6 @@ public class Attackable extends NpcInstance
 			if ((dropChance > DropData.MAX_CHANCE) && !Config.PRECISE_DROP_CALCULATION)
 			{
 				final long multiplier = dropChance / DropData.MAX_CHANCE;
-				
 				if (min < max)
 				{
 					itemCount += Rnd.get(min * multiplier, max * multiplier);
@@ -1827,7 +1799,6 @@ public class Attackable extends NpcInstance
 	public void doItemDrop(NpcTemplate npcTemplate, Creature lastAttacker)
 	{
 		PlayerInstance player = null;
-		
 		if (lastAttacker instanceof PlayerInstance)
 		{
 			player = (PlayerInstance) lastAttacker;
@@ -2326,7 +2297,6 @@ public class Attackable extends NpcInstance
 	public void doEventDrop(Creature lastAttacker)
 	{
 		PlayerInstance player = null;
-		
 		if (lastAttacker instanceof PlayerInstance)
 		{
 			player = (PlayerInstance) lastAttacker;
@@ -2352,11 +2322,9 @@ public class Attackable extends NpcInstance
 			if (Rnd.get(DropData.MAX_CHANCE) < drop.chance)
 			{
 				final RewardItem item = new RewardItem(drop.items[Rnd.get(drop.items.length)], Rnd.get(drop.min, drop.max));
-				
 				if (Config.AUTO_LOOT)
 				{
 					final Item itemTemplate = ItemTable.getInstance().getTemplate(item.getItemId());
-					
 					if (!player.getInventory().validateCapacity(itemTemplate))
 					{
 						DropItem(player, item);
@@ -2384,9 +2352,7 @@ public class Attackable extends NpcInstance
 	public ItemInstance DropItem(PlayerInstance mainDamageDealer, RewardItem item)
 	{
 		final int randDropLim = 70;
-		
 		ItemInstance ditem = null;
-		
 		for (int i = 0; i < item.getCount(); i++)
 		{
 			// Randomize drop position
@@ -2479,9 +2445,7 @@ public class Attackable extends NpcInstance
 	public synchronized RewardItem[] takeSweep()
 	{
 		final RewardItem[] sweep = _sweepItems;
-		
 		_sweepItems = null;
-		
 		return sweep;
 	}
 	
@@ -2493,9 +2457,7 @@ public class Attackable extends NpcInstance
 	public synchronized RewardItem[] takeHarvest()
 	{
 		final RewardItem[] harvest = _harvestItems;
-		
 		_harvestItems = null;
-		
 		return harvest;
 	}
 	
@@ -2520,7 +2482,6 @@ public class Attackable extends NpcInstance
 		// Calculate the over-hit damage
 		// Ex: mob had 10 HP left, over-hit skill did 50 damage total, over-hit damage is 40
 		final double overhitDmg = (getCurrentHp() - damage) * -1;
-		
 		if (overhitDmg < 0)
 		{
 			// we didn't killed the mob with the over-hit strike. (it wasn't really an over-hit strike)
@@ -2528,7 +2489,6 @@ public class Attackable extends NpcInstance
 			overhitEnabled(false);
 			_overhitDamage = 0;
 			_overhitAttacker = null;
-			
 			return;
 		}
 		
@@ -2574,7 +2534,6 @@ public class Attackable extends NpcInstance
 	public void absorbSoul()
 	{
 		_absorbed = true;
-		
 	}
 	
 	/**
@@ -2666,9 +2625,7 @@ public class Attackable extends NpcInstance
 		boolean isSuccess = true;
 		boolean doLevelup = true;
 		final boolean isBossMob = maxAbsorbLevel > 10;
-		
 		final NpcTemplate.AbsorbCrystalType absorbType = getTemplate().getAbsorbType();
-		
 		final PlayerInstance killer = attacker instanceof Summon ? ((Summon) attacker).getOwner() : (PlayerInstance) attacker;
 		
 		// If this mob is a boss, then skip some checkings
@@ -2717,9 +2674,7 @@ public class Attackable extends NpcInstance
 		// 2- Everything is correct, but it failed. Nothing happens. (57.5%)
 		// 3- Everything is correct, but it failed. The crystal scatters. A sound event is played. (10%)
 		// 4- Everything is correct, the crystal level up. A sound event is played. (32.5%)
-		
 		List<PlayerInstance> players = new ArrayList<>();
-		
 		if ((absorbType == NpcTemplate.AbsorbCrystalType.FULL_PARTY) && killer.isInParty())
 		{
 			players = killer.getParty().getPartyMembers();
@@ -2806,9 +2761,7 @@ public class Attackable extends NpcInstance
 							catch (NumberFormatException nfe)
 							{
 								LOGGER.warning("An attempt to identify a soul crystal failed, verify the names have not changed in etcitem table. " + nfe);
-								
 								player.sendMessage("There has been an error handling your soul crystal. Please notify your server admin.");
-								
 								isSuccess = false;
 								break;
 							}
@@ -2950,21 +2903,18 @@ public class Attackable extends NpcInstance
 	{
 		double xp;
 		double sp;
-		
 		if (diff < -5)
 		{
 			diff = -5; // makes possible to use ALT_GAME_EXPONENT configuration
 		}
 		
 		xp = (getExpReward() * damage) / getMaxHp();
-		
 		if (Config.ALT_GAME_EXPONENT_XP != 0)
 		{
 			xp *= Math.pow(2., -diff / Config.ALT_GAME_EXPONENT_XP);
 		}
 		
 		sp = (getSpReward() * damage) / getMaxHp();
-		
 		if (Config.ALT_GAME_EXPONENT_SP != 0)
 		{
 			sp *= Math.pow(2., -diff / Config.ALT_GAME_EXPONENT_SP);
@@ -3014,7 +2964,6 @@ public class Attackable extends NpcInstance
 		
 		// Return the rounded ammount of exp points to be added to the player's normal exp reward
 		final long bonusOverhit = Math.round(overhitExp);
-		
 		return bonusOverhit;
 	}
 	
@@ -3105,7 +3054,6 @@ public class Attackable extends NpcInstance
 		_seeded = true;
 		_seedType = id;
 		int count = 1;
-		
 		for (int skillId : getTemplate().getSkills().keySet())
 		{
 			switch (skillId)
@@ -3162,9 +3110,7 @@ public class Attackable extends NpcInstance
 		}
 		
 		final List<RewardItem> harvested = new ArrayList<>();
-		
 		harvested.add(new RewardItem(ManorSeedData.getInstance().getCropType(_seedType), (int) (count * Config.RATE_DROP_MANOR)));
-		
 		_harvestItems = harvested.toArray(new RewardItem[harvested.size()]);
 	}
 	

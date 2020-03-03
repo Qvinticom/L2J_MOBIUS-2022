@@ -40,7 +40,6 @@ public class ListPartyWaiting implements IClientOutgoingPacket
 	public ListPartyWaiting(PartyMatchingRoomLevelType type, int location, int page, int requestorLevel)
 	{
 		final List<MatchingRoom> rooms = MatchingRoomManager.getInstance().getPartyMathchingRooms(location, type, requestorLevel);
-		
 		_size = rooms.size();
 		final int startIndex = (page - 1) * NUM_PER_PAGE;
 		int chunkSize = _size - startIndex;

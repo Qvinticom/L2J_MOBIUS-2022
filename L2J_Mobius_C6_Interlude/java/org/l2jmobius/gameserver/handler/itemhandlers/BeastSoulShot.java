@@ -52,7 +52,6 @@ public class BeastSoulShot implements IItemHandler
 		}
 		
 		PlayerInstance activeOwner = null;
-		
 		if (playable instanceof Summon)
 		{
 			activeOwner = ((Summon) playable).getOwner();
@@ -71,7 +70,6 @@ public class BeastSoulShot implements IItemHandler
 		}
 		
 		final Summon activePet = activeOwner.getPet();
-		
 		if (activePet == null)
 		{
 			activeOwner.sendPacket(SystemMessageId.PETS_AND_SERVITORS_ARE_NOT_AVAILABLE_AT_THIS_TIME);
@@ -86,15 +84,12 @@ public class BeastSoulShot implements IItemHandler
 		
 		final int itemId = 6645;
 		int shotConsumption = 1;
-		
 		ItemInstance weaponInst = null;
 		Weapon weaponItem = null;
-		
 		if ((activePet instanceof PetInstance) && !(activePet instanceof BabyPetInstance))
 		{
 			weaponInst = ((PetInstance) activePet).getActiveWeaponInstance();
 			weaponItem = ((PetInstance) activePet).getActiveWeaponItem();
-			
 			if (weaponInst == null)
 			{
 				activeOwner.sendPacket(SystemMessageId.CANNOT_USE_SOULSHOTS);
@@ -109,7 +104,6 @@ public class BeastSoulShot implements IItemHandler
 			
 			final int shotCount = item.getCount();
 			shotConsumption = weaponItem.getSoulShotCount();
-			
 			if (shotConsumption == 0)
 			{
 				activeOwner.sendPacket(SystemMessageId.CANNOT_USE_SOULSHOTS);

@@ -258,7 +258,6 @@ public class BalokWarzone extends AbstractInstance
 	public String onKill(Npc npc, PlayerInstance player, boolean isPet)
 	{
 		final Instance world = npc.getInstanceWorld();
-		
 		if (npc == _balok)
 		{
 			if (world.getAliveNpcs(BALOK).isEmpty())

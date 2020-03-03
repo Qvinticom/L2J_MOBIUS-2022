@@ -49,7 +49,6 @@ public class RequestDivideAdenaStart implements IClientIncomingPacket
 		}
 		
 		final Party party = player.getParty();
-		
 		if (party == null)
 		{
 			player.sendPacket(SystemMessageId.YOU_CANNOT_PROCEED_AS_YOU_ARE_NOT_IN_AN_ALLIANCE_OR_PARTY);
@@ -57,7 +56,6 @@ public class RequestDivideAdenaStart implements IClientIncomingPacket
 		}
 		
 		final CommandChannel commandChannel = party.getCommandChannel();
-		
 		if ((commandChannel != null) && !commandChannel.isLeader(player))
 		{
 			player.sendPacket(SystemMessageId.YOU_CANNOT_PROCEED_AS_YOU_ARE_NOT_AN_ALLIANCE_LEADER_OR_PARTY_LEADER);
@@ -70,7 +68,6 @@ public class RequestDivideAdenaStart implements IClientIncomingPacket
 		}
 		
 		final List<PlayerInstance> targets = commandChannel != null ? commandChannel.getMembers() : party.getMembers();
-		
 		if (player.getAdena() < targets.size())
 		{
 			player.sendPacket(SystemMessageId.YOU_CANNOT_PROCEED_AS_THERE_IS_INSUFFICIENT_ADENA);
@@ -84,7 +81,6 @@ public class RequestDivideAdenaStart implements IClientIncomingPacket
 		}
 		
 		final int adenaObjectId = player.getInventory().getAdenaInstance().getObjectId();
-		
 		targets.forEach(t ->
 		{
 			t.sendPacket(SystemMessageId.ADENA_DISTRIBUTION_HAS_STARTED);

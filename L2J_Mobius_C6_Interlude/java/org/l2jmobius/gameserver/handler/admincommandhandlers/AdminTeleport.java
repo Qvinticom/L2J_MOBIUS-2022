@@ -495,7 +495,6 @@ public class AdminTeleport implements IAdminCommandHandler
 	{
 		final WorldObject target = activeChar.getTarget();
 		PlayerInstance player = null;
-		
 		if (target instanceof PlayerInstance)
 		{
 			player = (PlayerInstance) target;
@@ -529,7 +528,6 @@ public class AdminTeleport implements IAdminCommandHandler
 	private void teleportToCharacter(PlayerInstance activeChar, WorldObject target)
 	{
 		PlayerInstance player = null;
-		
 		if (target instanceof PlayerInstance)
 		{
 			player = (PlayerInstance) target;
@@ -549,10 +547,8 @@ public class AdminTeleport implements IAdminCommandHandler
 			final int x = player.getX();
 			final int y = player.getY();
 			final int z = player.getZ();
-			
 			activeChar.getAI().setIntention(CtrlIntention.AI_INTENTION_IDLE);
 			activeChar.teleToLocation(x, y, z, true);
-			
 			BuilderUtil.sendSysMessage(activeChar, "You have teleported to character " + player.getName() + ".");
 		}
 	}
@@ -587,7 +583,6 @@ public class AdminTeleport implements IAdminCommandHandler
 			}
 			
 			final int respawnTime = spawn.getRespawnDelay() / 1000;
-			
 			target.deleteMe();
 			spawn.stopRespawn();
 			

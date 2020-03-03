@@ -142,7 +142,6 @@ public class Q00463_IMustBeaGenius extends Quest
 				{
 					final int rnd = getRandom(REWARD.length);
 					final String str = (REWARD[rnd][2] < 10) ? "0" + REWARD[rnd][2] : String.valueOf(REWARD[rnd][2]);
-					
 					addExpAndSp(player, REWARD[rnd][0], REWARD[rnd][1]);
 					qs.exitQuest(QuestType.DAILY, true);
 					htmltext = "32069-" + str + ".html";
@@ -175,7 +174,6 @@ public class Q00463_IMustBeaGenius extends Quest
 		{
 			boolean msg = false;
 			final int number = MOBS.get(npc.getId()).getSpecialChance() == qs.getInt("chance") ? getRandom(100) + 1 : MOBS.get(npc.getId()).getCount();
-			
 			if (number > 0)
 			{
 				giveItems(player, CORPSE_LOG, number);
@@ -211,7 +209,6 @@ public class Q00463_IMustBeaGenius extends Quest
 	{
 		final QuestState qs = getQuestState(player, true);
 		String htmltext = getNoQuestMsg(player);
-		
 		switch (qs.getState())
 		{
 			case State.COMPLETED:

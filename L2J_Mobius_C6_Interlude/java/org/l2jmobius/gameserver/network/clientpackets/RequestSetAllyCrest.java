@@ -72,16 +72,13 @@ public class RequestSetAllyCrest extends GameClientPacket
 		if (player.getAllyId() != 0)
 		{
 			final Clan leaderclan = ClanTable.getInstance().getClan(player.getAllyId());
-			
 			if ((player.getClanId() != leaderclan.getClanId()) || !player.isClanLeader())
 			{
 				return;
 			}
 			
 			final CrestCache crestCache = CrestCache.getInstance();
-			
 			final int newId = IdFactory.getNextId();
-			
 			if (!crestCache.saveAllyCrest(newId, _data))
 			{
 				LOGGER.warning("Error loading crest of ally:" + leaderclan.getAllyName());

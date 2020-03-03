@@ -218,7 +218,6 @@ public class Q00021_HiddenTruth extends Quest
 	{
 		QuestState qs = getQuestState(player, true);
 		String htmltext = getNoQuestMsg(player);
-		
 		switch (npc.getId())
 		{
 			case MYSTERIOUS_WIZARD:

@@ -67,7 +67,6 @@ public class ServerStatus extends ClientBasePacket
 		if (gsi != null)
 		{
 			final int size = readD();
-			
 			for (int i = 0; i < size; i++)
 			{
 				final int type = readD();

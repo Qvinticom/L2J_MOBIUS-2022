@@ -67,7 +67,6 @@ public class SiegeDefenderList implements IClientOutgoingPacket
 		if (size > 0)
 		{
 			Clan clan;
-			
 			packet.writeD(size);
 			packet.writeD(size);
 			// Listing the Lord and the approved clans

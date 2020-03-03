@@ -29,7 +29,6 @@ public class SignsSky extends GameServerPacket
 	public SignsSky()
 	{
 		final int compWinner = SevenSigns.getInstance().getCabalHighestScore();
-		
 		if (SevenSigns.getInstance().isSealValidationPeriod())
 		{
 			if (compWinner == SevenSigns.CABAL_DAWN)

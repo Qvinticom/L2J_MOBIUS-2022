@@ -49,7 +49,6 @@ public class SummonAI extends CreatureAI
 	protected void onIntentionActive()
 	{
 		final Summon summon = (Summon) _actor;
-		
 		if (summon.getFollowStatus())
 		{
 			setIntention(AI_INTENTION_FOLLOW, summon.getOwner());
@@ -63,7 +62,6 @@ public class SummonAI extends CreatureAI
 	private void thinkAttack()
 	{
 		final Summon summon = (Summon) _actor;
-		
 		WorldObject target = null;
 		target = summon.getTarget();
 		
@@ -91,7 +89,6 @@ public class SummonAI extends CreatureAI
 	private void thinkCast()
 	{
 		final Summon summon = (Summon) _actor;
-		
 		final Creature target = getCastTarget();
 		if (checkTargetLost(target))
 		{
@@ -118,7 +115,6 @@ public class SummonAI extends CreatureAI
 		}
 		
 		final WorldObject target = getTarget();
-		
 		if (checkTargetLost(target))
 		{
 			return;
@@ -141,7 +137,6 @@ public class SummonAI extends CreatureAI
 		}
 		
 		final WorldObject target = getTarget();
-		
 		if (checkTargetLost(target))
 		{
 			return;
@@ -198,7 +193,6 @@ public class SummonAI extends CreatureAI
 		final Summon summon = (Summon) _actor;
 		WorldObject target = null;
 		target = summon.getTarget();
-		
 		if (target == null)
 		{
 			return;

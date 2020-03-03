@@ -37,7 +37,6 @@ public class Single implements IAffectScopeHandler
 	public void forEachAffected(Creature creature, WorldObject target, Skill skill, Consumer<? super WorldObject> action)
 	{
 		final IAffectObjectHandler affectObject = AffectObjectHandler.getInstance().getHandler(skill.getAffectObject());
-		
 		if (target.isCreature())
 		{
 			if (skill.getTargetType() == TargetType.GROUND)

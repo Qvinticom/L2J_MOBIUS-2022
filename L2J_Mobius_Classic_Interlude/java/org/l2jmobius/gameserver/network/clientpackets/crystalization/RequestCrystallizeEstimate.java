@@ -64,7 +64,6 @@ public class RequestCrystallizeEstimate implements IClientIncomingPacket
 		// player.sendMessage("You are crystallizing too fast.");
 		// return;
 		// }
-		
 		if (_count <= 0)
 		{
 			Util.handleIllegalPlayerAction(player, "[RequestCrystallizeItem] count <= 0! ban! oid: " + _objectId + " owner: " + player.getName(), Config.DEFAULT_PUNISH);

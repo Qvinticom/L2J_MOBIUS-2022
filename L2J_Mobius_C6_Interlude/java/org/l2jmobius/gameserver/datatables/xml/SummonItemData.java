@@ -51,7 +51,6 @@ public class SummonItemData implements IXmlReader
 	{
 		// First element is never read.
 		final Node n = doc.getFirstChild();
-		
 		for (Node node = n.getFirstChild(); node != null; node = node.getNextSibling())
 		{
 			if (!"item".equalsIgnoreCase(node.getNodeName()))
@@ -60,11 +59,9 @@ public class SummonItemData implements IXmlReader
 			}
 			
 			final NamedNodeMap attrs = node.getAttributes();
-			
 			final int itemId = Integer.valueOf(attrs.getNamedItem("id").getNodeValue());
 			final int npcId = Integer.valueOf(attrs.getNamedItem("npcId").getNodeValue());
 			final byte summonType = Byte.valueOf(attrs.getNamedItem("summonType").getNodeValue());
-			
 			_items.put(itemId, new SummonItem(itemId, npcId, summonType));
 		}
 	}

@@ -50,7 +50,6 @@ public class Q10388_ConspiracyBehindDoor extends Quest
 	{
 		final String htmltext = event;
 		final QuestState qs = getQuestState(player, false);
-		
 		if (qs == null)
 		{
 			return getNoQuestMsg(player);

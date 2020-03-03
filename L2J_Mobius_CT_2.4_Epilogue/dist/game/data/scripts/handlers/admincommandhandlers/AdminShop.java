@@ -84,7 +84,6 @@ public class AdminShop implements IAdminCommandHandler
 		}
 		
 		final BuyListHolder buyList = BuyListData.getInstance().getBuyList(val);
-		
 		if (buyList != null)
 		{
 			activeChar.sendPacket(new BuyList(buyList, activeChar.getAdena(), 0));

@@ -100,7 +100,6 @@ public class Config
 		
 		// Load rates config file (if exists)
 		final PropertiesParser ratesSettings = new PropertiesParser(RATES_CONFIG_FILE);
-		
 		RATE_XP = ratesSettings.getFloat("RateXp", 1);
 		RATE_SP = ratesSettings.getFloat("RateSp", 1);
 		RATE_DROP = ratesSettings.getFloat("RateDrop", 1);
@@ -108,7 +107,6 @@ public class Config
 		
 		// Load karma config file (if exists)
 		final PropertiesParser karmaSettings = new PropertiesParser(KARMA_CONFIG_FILE);
-		
 		KARMA_MIN_KARMA = karmaSettings.getInt("KarmaMin", 240);
 		KARMA_MAX_KARMA = karmaSettings.getInt("KarmaMax", 10000);
 		KARMA_LOST_MULTIPLIER = karmaSettings.getFloat("KarmaLostMultiplier", 1);
@@ -117,13 +115,11 @@ public class Config
 		
 		// Load threadpool config file (if exists)
 		final PropertiesParser threadpoolSettings = new PropertiesParser(THREADPOOL_CONFIG_FILE);
-		
 		SCHEDULED_THREAD_POOL_COUNT = threadpoolSettings.getInt("ScheduledThreadPoolCount", 40);
 		INSTANT_THREAD_POOL_COUNT = threadpoolSettings.getInt("InstantThreadPoolCount", 20);
 		
 		// Load NPC config file (if exists)
 		final PropertiesParser npcSettings = new PropertiesParser(NPC_CONFIG_FILE);
-		
 		SHOW_NPC_LVL = npcSettings.getBoolean("ShowNpcLevel", false);
 		SHOW_NPC_AGGRESSION = npcSettings.getBoolean("ShowNpcAggression", false);
 	}

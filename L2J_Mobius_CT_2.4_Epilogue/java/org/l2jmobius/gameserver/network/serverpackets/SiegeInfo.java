@@ -71,7 +71,6 @@ public class SiegeInfo implements IClientOutgoingPacket
 			packet.writeD(_castle.getResidenceId());
 			
 			final int ownerId = _castle.getOwnerId();
-			
 			packet.writeD(((ownerId == _player.getClanId()) && (_player.isClanLeader())) ? 0x01 : 0x00);
 			packet.writeD(ownerId);
 			if (ownerId > 0)
@@ -104,7 +103,6 @@ public class SiegeInfo implements IClientOutgoingPacket
 				cal.setTimeInMillis(_castle.getSiegeDate().getTimeInMillis());
 				cal.set(Calendar.MINUTE, 0);
 				cal.set(Calendar.SECOND, 0);
-				
 				packet.writeD(0x00);
 				packet.writeD(Config.SIEGE_HOUR_LIST.size());
 				for (int hour : Config.SIEGE_HOUR_LIST)
@@ -124,7 +122,6 @@ public class SiegeInfo implements IClientOutgoingPacket
 			packet.writeD(_hall.getId());
 			
 			final int ownerId = _hall.getOwnerId();
-			
 			packet.writeD(((ownerId == _player.getClanId()) && (_player.isClanLeader())) ? 0x01 : 0x00);
 			packet.writeD(ownerId);
 			if (ownerId > 0)

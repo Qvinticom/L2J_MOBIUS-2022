@@ -73,7 +73,6 @@ public class WorldObjectKnownList
 		{
 			return false;
 		}
-		
 		return (_activeObject == object) || getKnownObjects().containsKey(object.getObjectId());
 	}
 	
@@ -89,7 +88,6 @@ public class WorldObjectKnownList
 		{
 			return false;
 		}
-		
 		return getKnownObjects().remove(object.getObjectId()) != null;
 	}
 	

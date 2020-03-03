@@ -179,7 +179,6 @@ public class Q00422_RepentYourSins extends Quest
 								takeItems(player, PENITENTS_MANACLES, -1);
 							}
 							htmltext = "30981-15.html";
-							
 							player.setPkKills(0);
 							qs.exitQuest(true, true);
 						}
@@ -191,7 +190,6 @@ public class Q00422_RepentYourSins extends Quest
 								takeItems(player, PENITENTS_MANACLES, -1);
 							}
 							htmltext = "30981-16.html";
-							
 							player.setPkKills(player.getPkKills() - i0);
 							qs.setMemoStateEx(1, 0);
 						}

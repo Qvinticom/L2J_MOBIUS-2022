@@ -51,7 +51,6 @@ public class RequestPrivateStoreSell implements IClientIncomingPacket
 			return false;
 		}
 		_items = new ItemRequest[count];
-		
 		for (int i = 0; i < count; i++)
 		{
 			final int objectId = packet.readD();
@@ -60,7 +59,6 @@ public class RequestPrivateStoreSell implements IClientIncomingPacket
 			packet.readH(); // TODO analyse this
 			final long cnt = packet.readQ();
 			final long price = packet.readQ();
-			
 			if ((objectId < 1) || (itemId < 1) || (cnt < 1) || (price < 0))
 			{
 				_items = null;

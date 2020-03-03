@@ -133,7 +133,6 @@ public class Q10598_WithAllYourMight extends Quest
 	{
 		final QuestState qs = getQuestState(player, true);
 		String htmltext = getNoQuestMsg(player);
-		
 		switch (qs.getState())
 		{
 			case State.CREATED:
@@ -207,7 +206,6 @@ public class Q10598_WithAllYourMight extends Quest
 		{
 			giveItems(player, LITHRAS_CONSIDERATION, 1);
 			playSound(player, QuestSound.ITEMSOUND_QUEST_ITEMGET);
-			
 			if (getQuestItemsCount(player, LITHRAS_CONSIDERATION) >= 2000)
 			{
 				qs.setCond(3, true);

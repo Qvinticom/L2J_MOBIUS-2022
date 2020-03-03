@@ -56,7 +56,6 @@ public class HuntingGroundsTeleport extends AbstractNpcAI
 	{
 		final SevenSigns ss = SevenSigns.getInstance();
 		final int playerCabal = ss.getPlayerCabal(player.getObjectId());
-		
 		if (playerCabal == SevenSigns.CABAL_NULL)
 		{
 			return CommonUtil.contains(DAWN_NPCS, npc.getId()) ? "dawn_tele-no.htm" : "dusk_tele-no.htm";

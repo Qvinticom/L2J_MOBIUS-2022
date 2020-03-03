@@ -234,7 +234,6 @@ public class Q00737_ASwordHiddenInASmile extends Quest
 	{
 		final QuestState qs = getQuestState(player, true);
 		String htmltext = getNoQuestMsg(player);
-		
 		switch (qs.getState())
 		{
 			case State.CREATED:

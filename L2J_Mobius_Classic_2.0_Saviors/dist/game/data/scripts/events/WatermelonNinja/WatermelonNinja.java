@@ -387,7 +387,7 @@ public class WatermelonNinja extends LongTimeEvent
 		{ 13276, Mold_Lubricant, 50 },
 		{ 13276, Silver_Mold, 50 },
 		{ 13276, Varnish_of_Purity, 50 },
-
+		
 		// Rain Honey Watermelon
 		{ 13277, Class_Buff_Scroll_1st, 70 },
 		{ 13277, Angel_Cat_Blessing_Chest, 60 },
@@ -527,7 +527,6 @@ public class WatermelonNinja extends LongTimeEvent
 				npc.setInvul(true);
 			}
 		}
-		
 		return super.onAttack(npc, attacker, damage, isPet);
 	}
 	

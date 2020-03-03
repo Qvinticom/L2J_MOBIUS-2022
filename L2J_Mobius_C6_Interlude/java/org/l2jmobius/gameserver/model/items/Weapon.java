@@ -330,7 +330,6 @@ public class Weapon extends Item
 			return _emptyEffectSet;
 		}
 		final List<Effect> effects = new ArrayList<>();
-		
 		for (Skill skill : _skillsOnCrit)
 		{
 			if (target.isRaid() && ((skill.getSkillType() == SkillType.CONFUSION) || (skill.getSkillType() == SkillType.MUTE) || (skill.getSkillType() == SkillType.PARALYZE) || (skill.getSkillType() == SkillType.ROOT)))
@@ -411,7 +410,6 @@ public class Weapon extends Item
 			{
 				// Get the skill handler corresponding to the skill type
 				final ISkillHandler handler = SkillHandler.getInstance().getSkillHandler(skill.getSkillType());
-				
 				final Creature[] targets = new Creature[1];
 				targets[0] = target;
 				

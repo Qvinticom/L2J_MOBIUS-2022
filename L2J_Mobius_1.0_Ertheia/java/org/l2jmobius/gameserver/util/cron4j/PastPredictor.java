@@ -260,7 +260,6 @@ public class PastPredictor
 						dayOfMonth = c.get(Calendar.DAY_OF_MONTH);
 						month = c.get(Calendar.MONTH);
 						year = c.get(Calendar.YEAR);
-						
 					}
 					while ((month != oldMonth) || (dayOfMonth != oldDayOfMonth) || (year != oldYear));
 					// Take another spin!

@@ -126,7 +126,6 @@ public class Quarry extends AbstractNpcAI
 				}
 			}
 		}
-		
 		return htmltext;
 	}
 	

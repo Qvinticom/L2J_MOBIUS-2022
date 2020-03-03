@@ -141,7 +141,6 @@ public class RecoBonus
 		{
 			final int lvl = player.getLevel() / 10;
 			final int exp = (Math.min(100, player.getRecomHave()) - 1) / 10;
-			
 			return _recoBonus[lvl][exp];
 		}
 		return 0;

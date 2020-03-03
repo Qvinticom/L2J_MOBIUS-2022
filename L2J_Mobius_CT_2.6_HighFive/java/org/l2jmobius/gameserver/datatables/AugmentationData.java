@@ -242,7 +242,6 @@ public class AugmentationData
 				}
 				
 				final Document doc = factory.newDocumentBuilder().parse(file);
-				
 				for (Node n = doc.getFirstChild(); n != null; n = n.getNextSibling())
 				{
 					if ("list".equalsIgnoreCase(n.getNodeName()))
@@ -256,7 +255,6 @@ public class AugmentationData
 								final int augmentationId = Integer.parseInt(attrs.getNamedItem("id").getNodeValue());
 								int skillLvL = 0;
 								String type = "blue";
-								
 								for (Node cd = d.getFirstChild(); cd != null; cd = cd.getNextSibling())
 								{
 									if ("skillId".equalsIgnoreCase(cd.getNodeName()))
@@ -286,7 +284,6 @@ public class AugmentationData
 									continue;
 								}
 								final int k = (augmentationId - BLUE_START) / SKILLS_BLOCKSIZE;
-								
 								if (type.equalsIgnoreCase("blue"))
 								{
 									_blueSkills.get(k).add(augmentationId);
@@ -342,7 +339,6 @@ public class AugmentationData
 				int aCategoryChance = 0;
 				int aAugmentId = 0;
 				float aAugmentChance = 0;
-				
 				for (Node l = aDoc.getFirstChild(); l != null; l = l.getNextSibling())
 				{
 					if (l.getNodeName().equals("list"))
@@ -355,7 +351,6 @@ public class AugmentationData
 							if (n.getNodeName().equals("weapon"))
 							{
 								aNodeAttributes = n.getAttributes();
-								
 								aWeaponType = aNodeAttributes.getNamedItem("type").getNodeValue();
 								
 								// System.out.println("Now showing Augmentations for " + aWeaponType + " Weapons.");
@@ -364,23 +359,18 @@ public class AugmentationData
 									if (c.getNodeName().equals("stone"))
 									{
 										aNodeAttributes = c.getAttributes();
-										
 										aStoneId = Integer.parseInt(aNodeAttributes.getNamedItem("id").getNodeValue());
-										
 										for (Node v = c.getFirstChild(); v != null; v = v.getNextSibling())
 										{
 											if (v.getNodeName().equals("variation"))
 											{
 												aNodeAttributes = v.getAttributes();
-												
 												aVariationId = Integer.parseInt(aNodeAttributes.getNamedItem("id").getNodeValue());
-												
 												for (Node j = v.getFirstChild(); j != null; j = j.getNextSibling())
 												{
 													if (j.getNodeName().equals("category"))
 													{
 														aNodeAttributes = j.getAttributes();
-														
 														aCategoryChance = Integer.parseInt(aNodeAttributes.getNamedItem("probability").getNodeValue());
 														
 														// System.out.println("Stone Id: " + aStoneId + ", Variation Id: " + aVariationId + ", Category Chances: " + aCategoryChance);
@@ -389,10 +379,8 @@ public class AugmentationData
 															if (e.getNodeName().equals("augment"))
 															{
 																aNodeAttributes = e.getAttributes();
-																
 																aAugmentId = Integer.parseInt(aNodeAttributes.getNamedItem("id").getNodeValue());
 																aAugmentChance = Float.parseFloat(aNodeAttributes.getNamedItem("chance").getNodeValue());
-																
 																_augmentationChances.add(new AugmentationChance(aWeaponType, aStoneId, aVariationId, aCategoryChance, aAugmentId, aAugmentChance));
 															}
 														}
@@ -439,7 +427,6 @@ public class AugmentationData
 				int aCategoryChance = 0;
 				int aAugmentId = 0;
 				float aAugmentChance = 0;
-				
 				for (Node l = aDoc.getFirstChild(); l != null; l = l.getNextSibling())
 				{
 					if (l.getNodeName().equals("list"))
@@ -450,42 +437,32 @@ public class AugmentationData
 							if (n.getNodeName().equals("weapon"))
 							{
 								aNodeAttributes = n.getAttributes();
-								
 								aWeaponType = aNodeAttributes.getNamedItem("type").getNodeValue();
-								
 								for (Node c = n.getFirstChild(); c != null; c = c.getNextSibling())
 								{
 									if (c.getNodeName().equals("stone"))
 									{
 										aNodeAttributes = c.getAttributes();
-										
 										aStoneId = Integer.parseInt(aNodeAttributes.getNamedItem("id").getNodeValue());
-										
 										for (Node v = c.getFirstChild(); v != null; v = v.getNextSibling())
 										{
 											if (v.getNodeName().equals("variation"))
 											{
 												aNodeAttributes = v.getAttributes();
-												
 												aVariationId = Integer.parseInt(aNodeAttributes.getNamedItem("id").getNodeValue());
-												
 												for (Node j = v.getFirstChild(); j != null; j = j.getNextSibling())
 												{
 													if (j.getNodeName().equals("category"))
 													{
 														aNodeAttributes = j.getAttributes();
-														
 														aCategoryChance = Integer.parseInt(aNodeAttributes.getNamedItem("probability").getNodeValue());
-														
 														for (Node e = j.getFirstChild(); e != null; e = e.getNextSibling())
 														{
 															if (e.getNodeName().equals("augment"))
 															{
 																aNodeAttributes = e.getAttributes();
-																
 																aAugmentId = Integer.parseInt(aNodeAttributes.getNamedItem("id").getNodeValue());
 																aAugmentChance = Float.parseFloat(aNodeAttributes.getNamedItem("chance").getNodeValue());
-																
 																_augmentationChancesAcc.add(new augmentationChanceAcc(aWeaponType, aStoneId, aVariationId, aCategoryChance, aAugmentId, aAugmentChance));
 															}
 														}
@@ -624,7 +601,6 @@ public class AugmentationData
 				
 				r = Rnd.get(10000);
 				s = 10000;
-				
 				for (AugmentationChance ac : selectedChances34final)
 				{
 					if (s > r)
@@ -882,7 +858,6 @@ public class AugmentationData
 			final int temp = Rnd.get(2, 3);
 			final int colorOffset = (resultColor * (10 * STAT_SUBBLOCKSIZE)) + (temp * STAT_BLOCKSIZE) + 1;
 			offset = (lifeStoneLevel * STAT_SUBBLOCKSIZE) + colorOffset;
-			
 			stat34 = Rnd.get(offset, (offset + STAT_SUBBLOCKSIZE) - 1);
 			if (generateGlow && (lifeStoneGrade >= 2))
 			{
@@ -905,7 +880,6 @@ public class AugmentationData
 			}
 		}
 		stat12 = Rnd.get(offset, (offset + STAT_SUBBLOCKSIZE) - 1);
-		
 		return new Augmentation(((stat34 << 16) + stat12));
 	}
 	
@@ -976,7 +950,6 @@ public class AugmentationData
 					stat34 = ac.getAugmentId();
 				}
 			}
-			
 			return new Augmentation(((stat34 << 16) + stat12));
 		}
 		lifeStoneLevel = Math.min(lifeStoneLevel, 9);
@@ -1033,7 +1006,6 @@ public class AugmentationData
 		
 		// stat12 has stats only
 		stat12 = base + skillsLength + (ACC_STAT_SUBBLOCKSIZE * resultColor) + stat12;
-		
 		return new Augmentation(((stat34 << 16) + stat12));
 	}
 	

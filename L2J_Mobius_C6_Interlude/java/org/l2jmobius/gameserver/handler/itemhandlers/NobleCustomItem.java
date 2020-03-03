@@ -41,7 +41,6 @@ public class NobleCustomItem implements IItemHandler
 			}
 			
 			final PlayerInstance player = (PlayerInstance) playable;
-			
 			if (player.isInOlympiadMode())
 			{
 				player.sendMessage("This Item Cannot Be Used On Olympiad Games.");

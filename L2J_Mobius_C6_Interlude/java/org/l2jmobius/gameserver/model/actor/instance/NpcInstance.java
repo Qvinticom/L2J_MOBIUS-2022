@@ -271,7 +271,6 @@ public class NpcInstance extends Creature
 		{
 			setKnownList(new NpcKnownList(this));
 		}
-		
 		return (NpcKnownList) super.getKnownList();
 	}
 	
@@ -282,7 +281,6 @@ public class NpcInstance extends Creature
 		{
 			setStat(new NpcStat(this));
 		}
-		
 		return (NpcStat) super.getStat();
 	}
 	
@@ -293,7 +291,6 @@ public class NpcInstance extends Creature
 		{
 			setStatus(new NpcStatus(this));
 		}
-		
 		return (NpcStatus) super.getStatus();
 	}
 	
@@ -592,8 +589,6 @@ public class NpcInstance extends Creature
 			player.sendPacket(ActionFailed.STATIC_PACKET);
 			return false;
 		}
-		// TODO: More checks...
-		
 		return true;
 	}
 	
@@ -852,7 +847,6 @@ public class NpcInstance extends Creature
 			final NpcHtmlMessage html = new NpcHtmlMessage(0);
 			final StringBuilder html1 = new StringBuilder("<html><body><center><font color=\"LEVEL\">NPC Information</font></center>");
 			final String className = getClass().getSimpleName();
-			
 			html1.append("<center><table><tr>");
 			html1.append("<td><button value=\"Kill\" action=\"bypass -h admin_kill\" width=65 height=19 back=\"L2UI_ch3.smallbutton2_over\" fore=\"L2UI_ch3.smallbutton2\"></td>");
 			html1.append("<td><button value=\"Delete\" action=\"bypass -h admin_delete\" width=65 height=19 back=\"L2UI_ch3.smallbutton2_over\" fore=\"L2UI_ch3.smallbutton2\"></td></tr>");
@@ -862,7 +856,6 @@ public class NpcInstance extends Creature
 			html1.append("</table></center><br>");
 			
 			html1.append("Instance Type: " + className + "<br1>Faction: " + getTemplate().getFactionId() + "<br1>Location ID: " + (_spawn != null ? _spawn.getLocation() : 0) + "<br1>");
-			
 			if (this instanceof ControllableMobInstance)
 			{
 				html1.append("Mob Group: " + MobGroupTable.getInstance().getGroupForMob((ControllableMobInstance) this).getGroupId() + "<br>");
@@ -921,7 +914,6 @@ public class NpcInstance extends Creature
 			
 			final NpcHtmlMessage html = new NpcHtmlMessage(0);
 			final StringBuilder html1 = new StringBuilder("<html><body>");
-			
 			html1.append("<br><center><font color=\"LEVEL\">[Combat Stats]</font></center>");
 			html1.append("<table border=0 width=\"100%\">");
 			html1.append("<tr><td>Max.HP</td><td>" + (int) (getMaxHp() / getStat().calcStat(Stat.MAX_HP, 1, this, null)) + "*" + (int) getStat().calcStat(Stat.MAX_HP, 1, this, null) + "</td><td>Max.MP</td><td>" + getMaxMp() + "</td></tr>");
@@ -942,7 +934,6 @@ public class NpcInstance extends Creature
 			html1.append("<br><center><font color=\"LEVEL\">[Drop Info]</font><br>");
 			html1.append("Rates legend: <font color=\"ff0000\">50%+</font> <font color=\"00ff00\">30%+</font> <font color=\"0000ff\">less than 30%</font>");
 			html1.append("<table border=0 width=\"100%\">");
-			
 			for (DropCategory cat : getTemplate().getDropData())
 			{
 				final List<DropData> drops = cat.getAllDrops();
@@ -956,7 +947,6 @@ public class NpcInstance extends Creature
 						}
 						
 						final String name = ItemTable.getInstance().getTemplate(drop.getItemId()).getName();
-						
 						if (drop.getChance() >= 600000)
 						{
 							html1.append("<tr><td><font color=\"ff0000\">" + name + "</font></td><td>" + (drop.isQuestDrop() ? "Quest" : cat.isSweep() ? "Sweep" : "Drop") + "</td></tr>");
@@ -1383,7 +1373,6 @@ public class NpcInstance extends Creature
 			try
 			{
 				final Spawn spawn = SpawnTable.getInstance().getTemplate(Integer.parseInt(command.substring(12).trim()));
-				
 				if (spawn != null)
 				{
 					player.sendPacket(new RadarControl(0, 1, spawn.getX(), spawn.getY(), spawn.getZ()));
@@ -1587,7 +1576,6 @@ public class NpcInstance extends Creature
 	{
 		// Get the weapon identifier equiped in the right hand of the NpcInstance
 		final int weaponId = getTemplate().getRhand();
-		
 		if (weaponId < 1)
 		{
 			return null;
@@ -1595,7 +1583,6 @@ public class NpcInstance extends Creature
 		
 		// Get the weapon item equiped in the right hand of the NpcInstance
 		final Item item = ItemTable.getInstance().getTemplate(getTemplate().getRhand());
-		
 		if (!(item instanceof Weapon))
 		{
 			return null;
@@ -1657,7 +1644,6 @@ public class NpcInstance extends Creature
 	{
 		// Get the weapon identifier equiped in the right hand of the NpcInstance
 		final int weaponId = getTemplate().getLhand();
-		
 		if (weaponId < 1)
 		{
 			return null;
@@ -1665,7 +1651,6 @@ public class NpcInstance extends Creature
 		
 		// Get the weapon item equiped in the right hand of the NpcInstance
 		final Item item = ItemTable.getInstance().getTemplate(getTemplate().getLhand());
-		
 		if (!(item instanceof Weapon))
 		{
 			return null;
@@ -1709,7 +1694,6 @@ public class NpcInstance extends Creature
 	public String getHtmlPath(int npcId, int value)
 	{
 		String pom = "";
-		
 		if (value == 0)
 		{
 			pom = "" + npcId;
@@ -1720,7 +1704,6 @@ public class NpcInstance extends Creature
 		}
 		
 		final String temp = "data/html/default/" + pom + ".htm";
-		
 		if (!Config.LAZY_CACHE)
 		{
 			// If not running lazy cache the file must be in the cache or it doesnt exist
@@ -1751,9 +1734,7 @@ public class NpcInstance extends Creature
 	private void showQuestChooseWindow(PlayerInstance player, Quest[] quests)
 	{
 		final StringBuilder sb = new StringBuilder();
-		
 		sb.append("<html><body><title>Talk about:</title><br>");
-		
 		String state;
 		for (Quest q : quests)
 		{
@@ -1763,7 +1744,6 @@ public class NpcInstance extends Creature
 			}
 			
 			sb.append("<a action=\"bypass -h npc_").append(getObjectId()).append("_Quest ").append(q.getName()).append("\">[");
-			
 			state = "";
 			final QuestState qs = player.getQuestState(q.getName());
 			if (qs != null)
@@ -1801,7 +1781,6 @@ public class NpcInstance extends Creature
 	public void showQuestWindow(PlayerInstance player, String questId)
 	{
 		String content = null;
-		
 		Quest q = null;
 		if (!Config.ALT_DEV_NO_QUESTS)
 		{
@@ -1810,7 +1789,6 @@ public class NpcInstance extends Creature
 		
 		// Get the state of the selected quest
 		QuestState qs = player.getQuestState(questId);
-		
 		if (q == null)
 		{
 			// No quests found
@@ -1880,7 +1858,6 @@ public class NpcInstance extends Creature
 	{
 		// collect awaiting quests and start points
 		final List<Quest> options = new ArrayList<>();
-		
 		final List<QuestState> awaits = player.getQuestsForTalk(getTemplate().getNpcId());
 		final List<Quest> starts = getTemplate().getEventQuests(EventType.QUEST_START);
 		
@@ -1956,7 +1933,6 @@ public class NpcInstance extends Creature
 		String filename;
 		SystemMessage sm;
 		final NpcHtmlMessage html = new NpcHtmlMessage(getObjectId());
-		
 		if (value == 0) // 0 - first buy lottery ticket window
 		{
 			filename = getHtmlPath(npcId, 1);
@@ -2054,7 +2030,6 @@ public class NpcInstance extends Creature
 			final int lotonumber = Lottery.getInstance().getId();
 			int enchant = 0;
 			int type2 = 0;
-			
 			for (int i = 0; i < 5; i++)
 			{
 				if (player.getLoto(i) == 0)
@@ -2176,7 +2151,6 @@ public class NpcInstance extends Creature
 				return;
 			}
 			final int[] check = Lottery.getInstance().checkTicket(item);
-			
 			sm = new SystemMessage(SystemMessageId.S2_S1_HAS_DISAPPEARED);
 			sm.addItemName(4442);
 			player.sendPacket(sm);
@@ -2307,7 +2281,6 @@ public class NpcInstance extends Creature
 			if ((helperBuffItem.isMagicClassBuff() == player.isMageClass()) && (playerLevel >= helperBuffItem.getLowerLevel()) && (playerLevel <= helperBuffItem.getUpperLevel()))
 			{
 				skill = SkillTable.getInstance().getInfo(helperBuffItem.getSkillID(), helperBuffItem.getSkillLevel());
-				
 				if (skill.getSkillType() == SkillType.SUMMON)
 				{
 					player.doCast(skill);
@@ -2339,7 +2312,6 @@ public class NpcInstance extends Creature
 	private boolean showPkDenyChatWindow(PlayerInstance player, String type)
 	{
 		final String html = HtmCache.getInstance().getHtm("data/html/" + type + "/" + getNpcId() + "-pk.htm");
-		
 		if (html != null)
 		{
 			final NpcHtmlMessage pkDenyMsg = new NpcHtmlMessage(getObjectId());
@@ -2348,7 +2320,6 @@ public class NpcInstance extends Creature
 			player.sendPacket(ActionFailed.STATIC_PACKET);
 			return true;
 		}
-		
 		return false;
 	}
 	

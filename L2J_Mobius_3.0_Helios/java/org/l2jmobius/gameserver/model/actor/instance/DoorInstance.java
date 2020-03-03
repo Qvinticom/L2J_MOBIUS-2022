@@ -307,7 +307,6 @@ public class DoorInstance extends Creature
 		// Attackable only during siege by everyone (not owner)
 		final boolean isCastle = ((getCastle() != null) && (getCastle().getResidenceId() > 0) && getCastle().getZone().isActive());
 		final boolean isFort = ((getFort() != null) && (getFort().getResidenceId() > 0) && getFort().getZone().isActive());
-		
 		if (isFort)
 		{
 			final Clan clan = actingPlayer.getClan();
@@ -577,7 +576,6 @@ public class DoorInstance extends Creature
 		
 		final boolean isFort = ((getFort() != null) && (getFort().getResidenceId() > 0) && getFort().getSiege().isInProgress());
 		final boolean isCastle = ((getCastle() != null) && (getCastle().getResidenceId() > 0) && getCastle().getSiege().isInProgress());
-		
 		if (isFort || isCastle)
 		{
 			broadcastPacket(new SystemMessage(SystemMessageId.THE_CASTLE_GATE_HAS_BEEN_DESTROYED));

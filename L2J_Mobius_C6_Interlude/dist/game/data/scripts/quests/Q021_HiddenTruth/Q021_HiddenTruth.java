@@ -104,30 +104,25 @@ public class Q021_HiddenTruth extends Quest
 		{
 			_page.getAI().setIntention(CtrlIntention.AI_INTENTION_MOVE_TO, PAGE_LOCS[0]);
 			_page.broadcastNpcSay("Follow me...");
-			
 			startQuestTimer("2", 5000, _page, player, false);
 			return null;
 		}
 		else if (event.equals("2"))
 		{
 			_page.getAI().setIntention(CtrlIntention.AI_INTENTION_MOVE_TO, PAGE_LOCS[1]);
-			
 			startQuestTimer("3", 12000, _page, player, false);
 			return null;
 		}
 		else if (event.equals("3"))
 		{
 			_page.getAI().setIntention(CtrlIntention.AI_INTENTION_MOVE_TO, PAGE_LOCS[2]);
-			
 			startQuestTimer("4", 18000, _page, player, false);
 			return null;
 		}
 		else if (event.equals("4"))
 		{
 			st.set("end_walk", "1");
-			
 			_page.broadcastNpcSay("Please check this bookcase, " + player.getName() + ".");
-			
 			startQuestTimer("5", 47000, _page, player, false);
 			return null;
 		}
@@ -150,14 +145,12 @@ public class Q021_HiddenTruth extends Quest
 		{
 			_duke.deleteMe();
 			_duke = null;
-			
 			return null;
 		}
 		else if (event.equals("pageDespawn"))
 		{
 			_page.deleteMe();
 			_page = null;
-			
 			return null;
 		}
 		
@@ -244,7 +237,6 @@ public class Q021_HiddenTruth extends Quest
 						if (((cond == 3) && (st.getInt("end_walk") == 1)) || (cond == 4))
 						{
 							htmltext = "31526-01.htm";
-							
 							st.set("cond", "5");
 							st.playSound(QuestState.SOUND_MIDDLE);
 							
@@ -252,7 +244,6 @@ public class Q021_HiddenTruth extends Quest
 							{
 								cancelQuestTimer("5", _page, player);
 								cancelQuestTimer("pageDespawn", _page, player);
-								
 								_page.deleteMe();
 								_page = null;
 							}
@@ -260,7 +251,6 @@ public class Q021_HiddenTruth extends Quest
 							if (_duke != null)
 							{
 								cancelQuestTimer("dukeDespawn", _duke, player);
-								
 								_duke.deleteMe();
 								_duke = null;
 							}
@@ -348,7 +338,6 @@ public class Q021_HiddenTruth extends Quest
 		{
 			_duke = addSpawn(VON_HELLMAN_DUKE, 51432, -54570, -3136, 0, false, 0);
 			_duke.broadcastNpcSay("Who awoke me?");
-			
 			startQuestTimer("dukeDespawn", 300000, _duke, player, false);
 		}
 	}
@@ -359,7 +348,6 @@ public class Q021_HiddenTruth extends Quest
 		{
 			_page = addSpawn(VON_HELLMAN_PAGE, 51608, -54520, -3168, 0, false, 0);
 			_page.broadcastNpcSay("My master has instructed me to be your guide, " + player.getName() + ".");
-			
 			startQuestTimer("1", 4000, _page, player, false);
 			startQuestTimer("pageDespawn", 90000, _page, player, false);
 		}

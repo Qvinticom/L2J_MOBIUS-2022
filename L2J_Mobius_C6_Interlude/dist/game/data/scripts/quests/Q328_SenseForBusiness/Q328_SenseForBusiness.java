@@ -102,9 +102,7 @@ public class Q328_SenseForBusiness extends Quest
 				final int carcasses = st.getQuestItemsCount(MONSTER_EYE_CARCASS);
 				final int lenses = st.getQuestItemsCount(MONSTER_EYE_LENS);
 				final int gizzards = st.getQuestItemsCount(BASILISK_GIZZARD);
-				
 				final int all = carcasses + lenses + gizzards;
-				
 				if (all == 0)
 				{
 					htmltext = "30436-04.htm";
@@ -134,7 +132,6 @@ public class Q328_SenseForBusiness extends Quest
 		
 		final int npcId = npc.getNpcId();
 		final int chance = CHANCES.get(npcId);
-		
 		if (npcId < 20069)
 		{
 			final int rnd = Rnd.get(100);

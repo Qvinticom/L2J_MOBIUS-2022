@@ -175,7 +175,6 @@ public class Q00289_NoMoreSoupForYou extends Quest
 		}
 		final int b = getRandom(18);
 		final int c = getRandom(7);
-		
 		if (npc.getId() == STAN)
 		{
 			if (event.equalsIgnoreCase("30200-03.htm"))
@@ -236,7 +235,6 @@ public class Q00289_NoMoreSoupForYou extends Quest
 	{
 		final QuestState qs = getQuestState(player, true);
 		String htmltext = getNoQuestMsg(player);
-		
 		if (npc.getId() == STAN)
 		{
 			switch (qs.getState())

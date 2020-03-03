@@ -40,7 +40,6 @@ public class ConditionTargetCheckCrtEffect extends Condition
 		{
 			return ((Npc) effected).getTemplate().canBeCrt() == _isCrtEffect;
 		}
-		
 		return true;
 	}
 }

@@ -114,7 +114,6 @@ public class GameClient extends ChannelInboundHandler<GameClient>
 	public void channelInactive(ChannelHandlerContext ctx)
 	{
 		LOGGER_ACCOUNTING.finer("Client Disconnected: " + ctx.channel());
-		
 		LoginServerThread.getInstance().sendLogout(getAccountName());
 		
 		if ((_player == null) || !_player.isInOfflineMode())
@@ -214,7 +213,6 @@ public class GameClient extends ChannelInboundHandler<GameClient>
 	public void setAccountName(String activeChar)
 	{
 		_accountName = activeChar;
-		
 		if (SecondaryAuthData.getInstance().isEnabled())
 		{
 			_secondaryAuth = new SecondaryPasswordAuth(this);

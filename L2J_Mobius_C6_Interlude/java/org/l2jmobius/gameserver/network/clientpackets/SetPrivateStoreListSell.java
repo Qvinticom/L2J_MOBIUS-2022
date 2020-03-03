@@ -37,7 +37,6 @@ public class SetPrivateStoreListSell extends GameClientPacket
 	{
 		_packageSale = readD() == 1;
 		_count = readD();
-		
 		if ((_count <= 0) || ((_count * 12) > _buf.remaining()) || (_count > Config.MAX_ITEM_IN_PACKET))
 		{
 			_count = 0;
@@ -45,13 +44,11 @@ public class SetPrivateStoreListSell extends GameClientPacket
 		}
 		
 		_items = new int[_count * 3];
-		
 		for (int x = 0; x < _count; x++)
 		{
 			final int objectId = readD();
 			_items[(x * 3) + 0] = objectId;
 			final long cnt = readD();
-			
 			if ((cnt > Integer.MAX_VALUE) || (cnt < 0))
 			{
 				_count = 0;
@@ -114,7 +111,6 @@ public class SetPrivateStoreListSell extends GameClientPacket
 			final int objectId = _items[(i * 3) + 0];
 			final int count = _items[(i * 3) + 1];
 			final int price = _items[(i * 3) + 2];
-			
 			if (price <= 0)
 			{
 				final String msgErr = "[SetPrivateStoreListSell] player " + getClient().getPlayer().getName() + " tried an overflow exploit (use PHX), ban this player!";

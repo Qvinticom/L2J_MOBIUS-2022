@@ -111,7 +111,6 @@ public class Servitors extends AbstractNpcAI
 			final ServitorInstance target = (ServitorInstance) event.getTarget();
 			final PlayerInstance master = target.getOwner();
 			final QuestState qs = master.getQuestState(Q00230_TestOfTheSummoner.class.getSimpleName());
-			
 			if ((qs != null) && hasQuestItems(master, CRYSTAL_OF_INPROGRESS_3RD))
 			{
 				final Npc killer = (Npc) event.getAttacker();

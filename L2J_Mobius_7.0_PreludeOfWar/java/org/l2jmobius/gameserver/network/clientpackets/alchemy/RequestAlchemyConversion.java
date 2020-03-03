@@ -43,8 +43,8 @@ public class RequestAlchemyConversion implements IClientIncomingPacket
 	private int _craftTimes;
 	private int _skillId;
 	private int _skillLevel;
-	// private final Set<ItemHolder> _ingredients = new HashSet<>();
 	
+	// private final Set<ItemHolder> _ingredients = new HashSet<>();
 	@Override
 	public boolean read(GameClient client, PacketReader packet)
 	{

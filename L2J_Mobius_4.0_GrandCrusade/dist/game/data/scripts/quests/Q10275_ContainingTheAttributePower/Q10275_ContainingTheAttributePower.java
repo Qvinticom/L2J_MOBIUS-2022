@@ -190,7 +190,6 @@ public class Q10275_ContainingTheAttributePower extends Quest
 			}
 		}
 		return null;
-		
 	}
 	
 	@Override

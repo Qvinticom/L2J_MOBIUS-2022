@@ -49,7 +49,6 @@ public class MerchantInstance extends FolkInstance
 	public String getHtmlPath(int npcId, int value)
 	{
 		String pom = "";
-		
 		if (value == 0)
 		{
 			pom = "" + npcId;
@@ -58,7 +57,6 @@ public class MerchantInstance extends FolkInstance
 		{
 			pom = npcId + "-" + value;
 		}
-		
 		return "data/html/merchant/" + pom + ".htm";
 	}
 	
@@ -71,7 +69,6 @@ public class MerchantInstance extends FolkInstance
 	{
 		player.tempInvetoryDisable();
 		final StoreTradeList list = TradeController.getInstance().getBuyList(value);
-		
 		if (list != null)
 		{
 			player.sendPacket(new WearList(list, player.getAdena(), player.getExpertiseIndex()));
@@ -91,7 +88,6 @@ public class MerchantInstance extends FolkInstance
 	private void showBuyWindow(PlayerInstance player, int value)
 	{
 		double taxRate = 0;
-		
 		if (isInTown())
 		{
 			taxRate = getCastle().getTaxRate();
@@ -128,7 +124,6 @@ public class MerchantInstance extends FolkInstance
 	{
 		final StringTokenizer st = new StringTokenizer(command, " ");
 		final String actualCommand = st.nextToken(); // Get actual command
-		
 		if (actualCommand.equalsIgnoreCase("Buy"))
 		{
 			if (st.countTokens() < 1)
@@ -271,7 +266,6 @@ public class MerchantInstance extends FolkInstance
 		
 		price *= cost[value - 1];
 		final int time = ridetime[value - 1];
-		
 		if (!player.reduceAdena("Rent", (int) price, player.getLastFolkNPC(), true))
 		{
 			return;
@@ -298,7 +292,6 @@ public class MerchantInstance extends FolkInstance
 			player.setTarget(this);
 			
 			player.sendPacket(new MyTargetSelected(getObjectId(), player.getLevel() - getLevel()));
-			
 			if (isAutoAttackable(player))
 			{
 				final StatusUpdate su = new StatusUpdate(getObjectId());

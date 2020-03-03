@@ -452,7 +452,6 @@ public class Q00327_RecoverTheFarmland extends Quest
 				break;
 			}
 		}
-		
 		return html;
 	}
 }

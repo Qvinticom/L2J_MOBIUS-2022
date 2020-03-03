@@ -136,7 +136,6 @@ public class Q402_PathToAHumanKnight extends Quest
 		else if (event.equals("30417-13.htm") || event.equals("30417-14.htm"))
 		{
 			final int coinCount = st.getQuestItemsCount(COIN_OF_LORDS_1) + st.getQuestItemsCount(COIN_OF_LORDS_2) + st.getQuestItemsCount(COIN_OF_LORDS_3) + st.getQuestItemsCount(COIN_OF_LORDS_4) + st.getQuestItemsCount(COIN_OF_LORDS_5) + st.getQuestItemsCount(COIN_OF_LORDS_6);
-			
 			st.takeItems(COIN_OF_LORDS_1, -1);
 			st.takeItems(COIN_OF_LORDS_2, -1);
 			st.takeItems(COIN_OF_LORDS_3, -1);

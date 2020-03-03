@@ -114,7 +114,6 @@ public class MailBBSManager extends BaseBBSManager
 	public void parseCmd(String command, PlayerInstance activeChar)
 	{
 		CommunityBoard.getInstance().addBypass(activeChar, "Mail Command", command);
-		
 		if (command.equals("_bbsmail") || command.equals("_maillist_0_1_0_"))
 		{
 			showMailList(activeChar, 1, MailType.INBOX);
@@ -124,13 +123,11 @@ public class MailBBSManager extends BaseBBSManager
 			final StringTokenizer st = new StringTokenizer(command, ";");
 			st.nextToken();
 			final String action = st.nextToken();
-			
 			if (action.equals("inbox") || action.equals("sentbox") || action.equals("archive") || action.equals("temparchive"))
 			{
 				final int page = (st.hasMoreTokens()) ? Integer.parseInt(st.nextToken()) : 1;
 				final String sType = (st.hasMoreTokens()) ? st.nextToken() : "";
 				final String search = (st.hasMoreTokens()) ? st.nextToken() : "";
-				
 				showMailList(activeChar, page, Enum.valueOf(MailType.class, action.toUpperCase()), sType, search);
 			}
 			else if (action.equals("crea"))
@@ -140,7 +137,6 @@ public class MailBBSManager extends BaseBBSManager
 			else if (action.equals("view"))
 			{
 				final int letterId = (st.hasMoreTokens()) ? Integer.parseInt(st.nextToken()) : -1;
-				
 				final Mail letter = getLetter(activeChar, letterId);
 				if (letter == null)
 				{
@@ -158,7 +154,6 @@ public class MailBBSManager extends BaseBBSManager
 			else if (action.equals("reply"))
 			{
 				final int letterId = (st.hasMoreTokens()) ? Integer.parseInt(st.nextToken()) : -1;
-				
 				final Mail letter = getLetter(activeChar, letterId);
 				if (letter == null)
 				{
@@ -172,7 +167,6 @@ public class MailBBSManager extends BaseBBSManager
 			else if (action.equals("del"))
 			{
 				final int letterId = (st.hasMoreTokens()) ? Integer.parseInt(st.nextToken()) : -1;
-				
 				final Mail letter = getLetter(activeChar, letterId);
 				if (letter != null)
 				{
@@ -184,7 +178,6 @@ public class MailBBSManager extends BaseBBSManager
 			else if (action.equals("store"))
 			{
 				final int letterId = (st.hasMoreTokens()) ? Integer.parseInt(st.nextToken()) : -1;
-				
 				final Mail letter = getLetter(activeChar, letterId);
 				if (letter != null)
 				{
@@ -330,7 +323,6 @@ public class MailBBSManager extends BaseBBSManager
 			letters = new ArrayList<>();
 			
 			final boolean byTitle = sType.equalsIgnoreCase("title");
-			
 			for (Mail letter : getPlayerMails(activeChar.getObjectId()))
 			{
 				if (byTitle && letter.subject.toLowerCase().contains(search.toLowerCase()))
@@ -354,7 +346,6 @@ public class MailBBSManager extends BaseBBSManager
 		
 		final int countMails = getCountLetters(activeChar.getObjectId(), type, sType, search);
 		final int maxpage = getMaxPageId(countMails);
-		
 		if (page > maxpage)
 		{
 			page = maxpage;
@@ -370,7 +361,6 @@ public class MailBBSManager extends BaseBBSManager
 		int maxIndex = 0;
 		maxIndex = (page == 1 ? page * 9 : (page * 10) - 1);
 		minIndex = maxIndex - 9;
-		
 		String content = HtmCache.getInstance().getHtm(CB_PATH + "mail/mail.htm");
 		content = content.replace("%inbox%", Integer.toString(getCountLetters(activeChar.getObjectId(), MailType.INBOX, "", "")));
 		content = content.replace("%sentbox%", Integer.toString(getCountLetters(activeChar.getObjectId(), MailType.SENTBOX, "", "")));
@@ -396,14 +386,12 @@ public class MailBBSManager extends BaseBBSManager
 				}
 				
 				StringUtil.append(sb, "<table width=610><tr><td width=5></td><td width=150>", getCharName(letter.senderId), "</td><td width=300><a action=\"bypass _bbsmail;view;", letter.letterId, "\">");
-				
 				if (letter.unread)
 				{
 					sb.append("<font color=\"LEVEL\">");
 				}
 				
 				sb.append(abbreviate(letter.subject, 51));
-				
 				if (letter.unread)
 				{
 					sb.append("</font>");
@@ -419,9 +407,7 @@ public class MailBBSManager extends BaseBBSManager
 		sb.setLength(0);
 		
 		final String fullSearch = (!sType.equals("") && !search.equals("")) ? ";" + sType + ";" + search : "";
-		
 		StringUtil.append(sb, "<td><table><tr><td></td></tr><tr><td><button action=\"bypass _bbsmail;", type, ";", (page == 1 ? page : page - 1), fullSearch, "\" back=\"l2ui_ch3.prev1_down\" fore=\"l2ui_ch3.prev1\" width=16 height=16></td></tr></table></td>");
-		
 		int i = 0;
 		if (maxpage > 21)
 		{
@@ -492,9 +478,7 @@ public class MailBBSManager extends BaseBBSManager
 			}
 		}
 		StringUtil.append(sb, "<td><table><tr><td></td></tr><tr><td><button action=\"bypass _bbsmail;", type, ";", (page == maxpage ? page : page + 1), fullSearch, "\" back=\"l2ui_ch3.next1_down\" fore=\"l2ui_ch3.next1\" width=16 height=16 ></td></tr></table></td>");
-		
 		content = content.replace("%maillistlength%", sb.toString());
-		
 		separateAndSend(content, activeChar);
 	}
 	
@@ -510,7 +494,6 @@ public class MailBBSManager extends BaseBBSManager
 		
 		final String link = letter.location.getBypass() + "&nbsp;&gt;&nbsp;" + letter.subject;
 		content = content.replace("%maillink%", link);
-		
 		content = content.replace("%writer%", getCharName(letter.senderId));
 		content = content.replace("%sentDate%", letter.sentDateString);
 		content = content.replace("%receiver%", letter.recipientNames);
@@ -533,7 +516,6 @@ public class MailBBSManager extends BaseBBSManager
 		
 		final String link = letter.location.getBypass() + "&nbsp;&gt;&nbsp;<a action=\"bypass _bbsmail;view;" + letter.letterId + "\">" + letter.subject + "</a>&nbsp;&gt;&nbsp;";
 		content = content.replace("%maillink%", link);
-		
 		content = content.replace("%recipients%", letter.senderId == activeChar.getObjectId() ? letter.recipientNames : getCharName(letter.senderId));
 		content = content.replace("%letterId%", letter.letterId + "");
 		send1001(content, activeChar);
@@ -576,9 +558,7 @@ public class MailBBSManager extends BaseBBSManager
 		{
 			// Get the current time under timestamp format.
 			final Timestamp time = new Timestamp(currentDate);
-			
 			PreparedStatement statement = null;
-			
 			for (String recipientName : recipientNames)
 			{
 				// Recipient is an invalid player, or is the sender.
@@ -590,7 +570,6 @@ public class MailBBSManager extends BaseBBSManager
 				}
 				
 				final PlayerInstance recipientPlayer = World.getInstance().getPlayer(recipientId);
-				
 				if (!activeChar.isGM())
 				{
 					// Sender is a regular player, while recipient is a GM.
@@ -621,7 +600,6 @@ public class MailBBSManager extends BaseBBSManager
 				}
 				
 				final int id = getNewMailId();
-				
 				if (statement == null)
 				{
 					statement = con.prepareStatement(INSERT_NEW_MAIL);
@@ -649,7 +627,6 @@ public class MailBBSManager extends BaseBBSManager
 				letter.sentDateString = new SimpleDateFormat("yyyy-MM-dd HH:mm").format(letter.sentDate);
 				letter.unread = true;
 				getPlayerMails(recipientId).add(0, letter);
-				
 				if (recipientPlayer != null)
 				{
 					recipientPlayer.sendPacket(SystemMessageId.YOU_VE_GOT_MAIL);
@@ -662,7 +639,6 @@ public class MailBBSManager extends BaseBBSManager
 			if (statement != null)
 			{
 				final int id = getNewMailId();
-				
 				statement.setInt(1, activeChar.getObjectId());
 				statement.setInt(2, id);
 				statement.setString(4, "sentbox");
@@ -682,7 +658,6 @@ public class MailBBSManager extends BaseBBSManager
 				letter.sentDateString = new SimpleDateFormat("yyyy-MM-dd HH:mm").format(letter.sentDate);
 				letter.unread = false;
 				getPlayerMails(activeChar.getObjectId()).add(0, letter);
-				
 				activeChar.sendPacket(SystemMessageId.YOU_VE_SENT_MAIL);
 			}
 		}
@@ -839,7 +814,6 @@ public class MailBBSManager extends BaseBBSManager
 	{
 		final int page = activeChar.getMailPosition() % 1000;
 		final int type = activeChar.getMailPosition() / 1000;
-		
 		showMailList(activeChar, page, MailType.VALUES[type]);
 	}
 	

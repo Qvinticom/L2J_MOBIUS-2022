@@ -107,7 +107,6 @@ public class BanditStrongholdSiege extends ClanHallSiege
 		anonce("Take place at the siege of his headquarters.", 1);
 		ThreadPool.schedule(new startFirstStep(), 5 * 60000);
 		_midTimer = ThreadPool.schedule(new midSiegeStep(), 25 * 60000);
-		
 		_siegeEndDate = Calendar.getInstance();
 		_siegeEndDate.add(Calendar.MINUTE, 60);
 		_endSiegeTask.schedule(1000);

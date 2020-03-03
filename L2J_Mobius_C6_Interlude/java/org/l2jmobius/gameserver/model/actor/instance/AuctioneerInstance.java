@@ -105,7 +105,6 @@ public class AuctioneerInstance extends FolkInstance
 		{
 			final StringTokenizer st = new StringTokenizer(command, " ");
 			final String actualCommand = st.nextToken(); // Get actual command
-			
 			String val = "";
 			if (st.countTokens() >= 1)
 			{
@@ -189,7 +188,6 @@ public class AuctioneerInstance extends FolkInstance
 					final int auctionId = Integer.parseInt(val);
 					final String filename = "data/html/auction/AgitAuctionInfo.htm";
 					final Auction a = AuctionManager.getInstance().getAuction(auctionId);
-					
 					final NpcHtmlMessage html = new NpcHtmlMessage(1);
 					html.setFile(filename);
 					if (a != null)
@@ -279,7 +277,6 @@ public class AuctioneerInstance extends FolkInstance
 				try
 				{
 					final String filename = "data/html/auction/AgitBid1.htm";
-					
 					int minimumBid = AuctionManager.getInstance().getAuction(Integer.parseInt(val)).getHighestBidderMaxBid();
 					if (minimumBid == 0)
 					{
@@ -309,7 +306,6 @@ public class AuctioneerInstance extends FolkInstance
 				int start;
 				int i = 1;
 				final double npage = Math.ceil((float) auctions.size() / limit);
-				
 				if (val.equals(""))
 				{
 					start = 1;
@@ -347,7 +343,6 @@ public class AuctioneerInstance extends FolkInstance
 				}
 				items += "</table>";
 				final String filename = "data/html/auction/AgitAuctionList.htm";
-				
 				final NpcHtmlMessage html = new NpcHtmlMessage(1);
 				html.setFile(filename);
 				html.replace("%AGIT_LINK_BACK%", "bypass -h npc_" + getObjectId() + "_start");
@@ -359,7 +354,6 @@ public class AuctioneerInstance extends FolkInstance
 			else if (actualCommand.equalsIgnoreCase("bidlist"))
 			{
 				int auctionId = 0;
-				
 				if (val.equals(""))
 				{
 					if (player.getClan().getAuctionBiddedAt() <= 0)
@@ -375,13 +369,11 @@ public class AuctioneerInstance extends FolkInstance
 				
 				String biders = "";
 				final Map<Integer, Bidder> bidders = AuctionManager.getInstance().getAuction(auctionId).getBidders();
-				
 				for (Bidder b : bidders.values())
 				{
 					biders += "<tr><td>" + b.getClanName() + "</td><td>" + b.getName() + "</td><td>" + b.getTimeBid().get(Calendar.YEAR) + "/" + (b.getTimeBid().get(Calendar.MONTH) + 1) + "/" + b.getTimeBid().get(Calendar.DATE) + "</td><td>" + b.getBid() + "</td></tr>";
 				}
 				final String filename = "data/html/auction/AgitBidderList.htm";
-				
 				final NpcHtmlMessage html = new NpcHtmlMessage(1);
 				html.setFile(filename);
 				html.replace("%AGIT_LIST%", biders);
@@ -622,7 +614,6 @@ public class AuctioneerInstance extends FolkInstance
 		String filename; // = "data/html/auction/auction-no.htm";
 		
 		final int condition = validateCondition(player);
-		
 		if (condition == COND_BUSY_BECAUSE_OF_SIEGE)
 		{
 			filename = "data/html/auction/auction-busy.htm"; // Busy because of siege
@@ -701,7 +692,6 @@ public class AuctioneerInstance extends FolkInstance
 				break;
 			}
 		}
-		
 		return nearestTown;
 	}
 }

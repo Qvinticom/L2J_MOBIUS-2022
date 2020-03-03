@@ -112,7 +112,6 @@ public class Q00751_LiberatingTheSpirits extends Quest
 	{
 		final QuestState qs = getQuestState(player, true);
 		String htmltext = getNoQuestMsg(player);
-		
 		if (npc.getId() == RODERIK)
 		{
 			switch (qs.getState())

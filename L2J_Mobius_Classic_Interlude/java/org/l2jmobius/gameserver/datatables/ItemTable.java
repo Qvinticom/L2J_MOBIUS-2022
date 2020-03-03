@@ -191,7 +191,6 @@ public class ItemTable
 		{
 			return null;
 		}
-		
 		return _allTemplates[id];
 	}
 	
@@ -211,7 +210,6 @@ public class ItemTable
 	{
 		// Create and Init the ItemInstance corresponding to the Item Identifier
 		final ItemInstance item = new ItemInstance(IdFactory.getNextId(), itemId);
-		
 		if (process.equalsIgnoreCase("loot") && !Config.AUTO_LOOT_ITEM_IDS.contains(itemId))
 		{
 			ScheduledFuture<?> itemLootShedule;

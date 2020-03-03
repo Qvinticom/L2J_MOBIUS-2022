@@ -69,7 +69,6 @@ public class PetNameTable
 	public boolean isValidPetName(String name)
 	{
 		boolean result = true;
-		
 		if (!isAlphaNumeric(name))
 		{
 			return result;

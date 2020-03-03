@@ -73,7 +73,6 @@ public class AlchemistManager extends AbstractNpcAI
 				if (player.getRace() == Race.ERTHEIA)
 				{
 					final List<SkillLearn> alchemySkills = SkillTreeData.getInstance().getAvailableAlchemySkills(player);
-					
 					if (alchemySkills.isEmpty())
 					{
 						player.sendPacket(SystemMessageId.THERE_ARE_NO_OTHER_SKILLS_TO_LEARN);

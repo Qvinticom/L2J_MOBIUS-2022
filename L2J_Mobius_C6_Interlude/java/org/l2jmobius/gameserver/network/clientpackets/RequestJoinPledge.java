@@ -38,7 +38,6 @@ public class RequestJoinPledge extends GameClientPacket
 	protected void runImpl()
 	{
 		final PlayerInstance player = getClient().getPlayer();
-		
 		if (player == null)
 		{
 			return;
@@ -52,7 +51,6 @@ public class RequestJoinPledge extends GameClientPacket
 		
 		final PlayerInstance target = (PlayerInstance) World.getInstance().findObject(_target);
 		final Clan clan = player.getClan();
-		
 		if (!clan.checkClanJoinCondition(player, target, _pledgeType))
 		{
 			return;

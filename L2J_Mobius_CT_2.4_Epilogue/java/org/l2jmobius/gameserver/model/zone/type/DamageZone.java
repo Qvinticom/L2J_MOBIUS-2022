@@ -58,7 +58,6 @@ public class DamageZone extends ZoneType
 		// no castle by default
 		_castleId = 0;
 		_castle = null;
-		
 		setTargetType(InstanceType.Playable); // default only playabale
 		AbstractZoneSettings settings = ZoneManager.getSettings(getName());
 		if (settings == null)
@@ -151,7 +150,6 @@ public class DamageZone extends ZoneType
 		{
 			_castle = CastleManager.getInstance().getCastleById(_castleId);
 		}
-		
 		return _castle;
 	}
 	
@@ -175,7 +173,6 @@ public class DamageZone extends ZoneType
 			}
 			
 			boolean siege = false;
-			
 			if (_castle != null)
 			{
 				siege = _castle.getSiege().isInProgress();
@@ -202,7 +199,6 @@ public class DamageZone extends ZoneType
 					}
 					
 					final double multiplier = 1 + (temp.calcStat(Stat.DAMAGE_ZONE_VULN, 0, null, null) / 100);
-					
 					if (getHPDamagePerSecond() != 0)
 					{
 						temp.reduceCurrentHp(_dmgZone.getHPDamagePerSecond() * multiplier, temp, null);

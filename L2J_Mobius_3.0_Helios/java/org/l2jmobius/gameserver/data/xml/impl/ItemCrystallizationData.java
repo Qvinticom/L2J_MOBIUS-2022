@@ -146,12 +146,10 @@ public class ItemCrystallizationData implements IXmlReader
 		}
 		
 		final List<ItemChanceHolder> rewards = new ArrayList<>();
-		
 		for (ItemChanceHolder reward : crystallizeRewards)
 		{
 			double chance = reward.getChance() * item.getCrystalCount();
 			long count = reward.getCount();
-			
 			if (chance > 100.)
 			{
 				final double countMul = Math.ceil(chance / 100.);
@@ -168,7 +166,6 @@ public class ItemCrystallizationData implements IXmlReader
 	private void generateCrystallizationData()
 	{
 		final int previousCount = _items.size();
-		
 		for (Item item : ItemTable.getInstance().getAllItems())
 		{
 			// Check if the data has not been generated.

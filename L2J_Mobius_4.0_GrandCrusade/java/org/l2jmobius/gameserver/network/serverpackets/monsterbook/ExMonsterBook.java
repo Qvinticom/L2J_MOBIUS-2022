@@ -37,7 +37,6 @@ public class ExMonsterBook implements IClientOutgoingPacket
 	public ExMonsterBook(PlayerInstance player)
 	{
 		_player = player;
-		
 		for (MonsterBookCardHolder card : MonsterBookData.getInstance().getMonsterBookCards())
 		{
 			if (player.getMonsterBookKillCount(card.getId()) > 0)

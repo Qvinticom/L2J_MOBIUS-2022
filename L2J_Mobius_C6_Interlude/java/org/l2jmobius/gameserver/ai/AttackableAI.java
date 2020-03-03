@@ -208,7 +208,6 @@ public class AttackableAI extends CreatureAI
 			{
 				final byte riftType = target.getParty().getDimensionalRift().getType();
 				final byte riftRoom = target.getParty().getDimensionalRift().getCurrentRoom();
-				
 				if ((me instanceof RiftInvaderInstance) && !DimensionalRiftManager.getInstance().getRoom(riftType, riftRoom).checkIfInZone(me.getX(), me.getY(), me.getZ()))
 				{
 					return false;
@@ -448,7 +447,6 @@ public class AttackableAI extends CreatureAI
 					if (!target.isAlikeDead() && !npc.isInsideRadius(obj, npc.getAggroRange(), true, false))
 					{
 						final PlayerInstance targetPlayer = obj instanceof PlayerInstance ? (PlayerInstance) obj : ((Summon) obj).getOwner();
-						
 						for (Quest quest : npc.getTemplate().getEventQuests(EventType.ON_AGGRO_RANGE_ENTER))
 						{
 							quest.notifyAggroRangeEnter(npc, targetPlayer, obj instanceof Summon);
@@ -553,7 +551,6 @@ public class AttackableAI extends CreatureAI
 				int x1;
 				int y1;
 				int z1;
-				
 				x1 = (((MinionInstance) _actor).getLeader().getX() + Rnd.get((offset - 30) * 2)) - (offset - 30);
 				y1 = (((MinionInstance) _actor).getLeader().getY() + Rnd.get((offset - 30) * 2)) - (offset - 30);
 				z1 = ((MinionInstance) _actor).getLeader().getZ();
@@ -585,7 +582,6 @@ public class AttackableAI extends CreatureAI
 				
 				// Calculate the distance between the current position of the Creature and the target (x,y)
 				final double distance2 = _actor.getPlanDistanceSq(x1, y1);
-				
 				if (distance2 > (Config.MAX_DRIFT_RANGE * Config.MAX_DRIFT_RANGE))
 				{
 					npc.setReturningToSpawnPoint(true);
@@ -725,7 +721,6 @@ public class AttackableAI extends CreatureAI
 				{
 					final NpcInstance npc = (NpcInstance) obj;
 					final String factionId = ((NpcInstance) _actor).getFactionId();
-					
 					if (!factionId.equalsIgnoreCase(npc.getFactionId()) || (npc.getFactionRange() == 0))
 					{
 						continue;
@@ -742,7 +737,6 @@ public class AttackableAI extends CreatureAI
 								{
 									final byte riftType = originalAttackTarget.getParty().getDimensionalRift().getType();
 									final byte riftRoom = originalAttackTarget.getParty().getDimensionalRift().getCurrentRoom();
-									
 									if ((_actor instanceof RiftInvaderInstance) && !DimensionalRiftManager.getInstance().getRoom(riftType, riftRoom).checkIfInZone(npc.getX(), npc.getY(), npc.getZ()))
 									{
 										continue;
@@ -853,7 +847,6 @@ public class AttackableAI extends CreatureAI
 					int posY = _actor.getY();
 					final int posZ = _actor.getZ();
 					final double distance = Math.sqrt(distance2); // This way, we only do the sqrt if we need it
-					
 					int signx = -1;
 					int signy = -1;
 					if (_actor.getX() > originalAttackTarget.getX())
@@ -896,7 +889,6 @@ public class AttackableAI extends CreatureAI
 		}
 		// We should calculate new distance cuz mob can have changed the target
 		dist2 = _actor.getPlanDistanceSq(hated.getX(), hated.getY());
-		
 		if (hated.isMoving())
 		{
 			range += 50;
@@ -911,7 +903,6 @@ public class AttackableAI extends CreatureAI
 				for (Skill sk : skills)
 				{
 					final int castRange = sk.getCastRange();
-					
 					boolean inRange = false;
 					if ((dist2 >= ((castRange * castRange) / 9.0)) && (dist2 <= (castRange * castRange)) && (castRange > 70))
 					{
@@ -923,7 +914,6 @@ public class AttackableAI extends CreatureAI
 						if ((sk.getSkillType() == Skill.SkillType.BUFF) || (sk.getSkillType() == Skill.SkillType.HEAL))
 						{
 							boolean useSkillSelf = true;
-							
 							if ((sk.getSkillType() == Skill.SkillType.HEAL) && (_actor.getCurrentHp() > (int) (_actor.getMaxHp() / 1.5)))
 							{
 								useSkillSelf = false;
@@ -933,11 +923,9 @@ public class AttackableAI extends CreatureAI
 							if (sk.getSkillType() == Skill.SkillType.BUFF)
 							{
 								final Effect[] effects = _actor.getAllEffects();
-								
 								for (int i = 0; (effects != null) && (i < effects.length); i++)
 								{
 									final Effect effect = effects[i];
-									
 									if (effect.getSkill() == sk)
 									{
 										useSkillSelf = false;
@@ -952,7 +940,6 @@ public class AttackableAI extends CreatureAI
 						}
 						
 						final WorldObject oldTarget = _actor.getTarget();
-						
 						clientStopMoving(null);
 						
 						_accessor.doCast(sk);
@@ -973,7 +960,6 @@ public class AttackableAI extends CreatureAI
 			}
 			
 			moveToPawn(originalAttackTarget, range);
-			
 			return;
 		}
 		// Else, if this is close enough to attack
@@ -983,7 +969,6 @@ public class AttackableAI extends CreatureAI
 		if (!_actor.isMuted() /* && _rnd.nextInt(100) <= 5 */)
 		{
 			boolean useSkillSelf = true;
-			
 			for (Skill sk : skills)
 			{
 				if (/* sk.getCastRange() >= dist && sk.getCastRange() <= 70 && */!sk.isPassive() && (_actor.getCurrentMp() >= _actor.getStat().getMpConsume(sk)) && !_actor.isSkillDisabled(sk) && ((Rnd.get(100) <= 8) || ((_actor instanceof PenaltyMonsterInstance) && (Rnd.get(100) <= 20))))
@@ -991,7 +976,6 @@ public class AttackableAI extends CreatureAI
 					if ((sk.getSkillType() == Skill.SkillType.BUFF) || (sk.getSkillType() == Skill.SkillType.HEAL))
 					{
 						useSkillSelf = true;
-						
 						if ((sk.getSkillType() == Skill.SkillType.HEAL) && (_actor.getCurrentHp() > (int) (_actor.getMaxHp() / 1.5)))
 						{
 							useSkillSelf = false;
@@ -1001,11 +985,9 @@ public class AttackableAI extends CreatureAI
 						if (sk.getSkillType() == Skill.SkillType.BUFF)
 						{
 							final Effect[] effects = _actor.getAllEffects();
-							
 							for (int i = 0; (effects != null) && (i < effects.length); i++)
 							{
 								final Effect effect = effects[i];
-								
 								if (effect.getSkill() == sk)
 								{
 									useSkillSelf = false;
@@ -1025,7 +1007,6 @@ public class AttackableAI extends CreatureAI
 					}
 					
 					final WorldObject oldTarget = _actor.getTarget();
-					
 					clientStopMoving(null);
 					_accessor.doCast(sk);
 					_actor.setTarget(oldTarget);

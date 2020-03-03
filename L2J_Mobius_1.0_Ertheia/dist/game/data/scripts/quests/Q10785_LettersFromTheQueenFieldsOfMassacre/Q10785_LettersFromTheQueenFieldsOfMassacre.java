@@ -48,7 +48,6 @@ public class Q10785_LettersFromTheQueenFieldsOfMassacre extends LetterQuest
 	{
 		super(10785);
 		addTalkId(ORVEN, SHUVANN);
-		
 		setIsErtheiaQuest(true);
 		setLevel(MIN_LEVEL, MAX_LEVEL);
 		setStartLocation(SOE_ADEN, TELEPORT_LOC);

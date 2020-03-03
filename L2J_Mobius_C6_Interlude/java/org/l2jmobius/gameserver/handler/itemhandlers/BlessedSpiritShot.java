@@ -65,9 +65,7 @@ public class BlessedSpiritShot implements IItemHandler
 		final PlayerInstance player = (PlayerInstance) playable;
 		final ItemInstance weaponInst = player.getActiveWeaponInstance();
 		final Weapon weaponItem = player.getActiveWeaponItem();
-		
 		final int itemId = item.getItemId();
-		
 		if (player.isInOlympiadMode())
 		{
 			final SystemMessage sm = new SystemMessage(SystemMessageId.YOU_CANNOT_USE_THAT_ITEM_IN_A_GRAND_OLYMPIAD_GAMES_MATCH);

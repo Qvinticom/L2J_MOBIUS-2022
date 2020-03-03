@@ -46,7 +46,6 @@ public class DuelManager
 		{
 			_currentDuelId = 1;
 		}
-		
 		return _currentDuelId;
 	}
 	
@@ -197,7 +196,6 @@ public class DuelManager
 			return;
 		}
 		final Duel duel = getDuel(player.getDuelId());
-		
 		if (duel == null)
 		{
 			return;

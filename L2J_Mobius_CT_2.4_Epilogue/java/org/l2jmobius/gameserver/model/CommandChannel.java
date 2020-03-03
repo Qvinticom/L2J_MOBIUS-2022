@@ -68,7 +68,6 @@ public class CommandChannel extends AbstractPlayerGroup
 		}
 		// Update the CCinfo for existing players
 		broadcastPacket(new ExMPCCPartyInfoUpdate(party, 1));
-		
 		_parties.add(party);
 		if (party.getLevel() > _channelLvl)
 		{

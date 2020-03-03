@@ -96,7 +96,6 @@ public class FloodProtectorAction
 		if (!config.ALTERNATIVE_METHOD)
 		{
 			final int curTick = GameTimeController.getGameTicks();
-			
 			if ((curTick < _nextGameTick) || _punishmentInProgress)
 			{
 				if (config.LOG_FLOODING && !_logged)
@@ -110,7 +109,6 @@ public class FloodProtectorAction
 				if (!_punishmentInProgress && (config.PUNISHMENT_LIMIT > 0) && (_count.get() >= config.PUNISHMENT_LIMIT) && (config.PUNISHMENT_TYPE != null))
 				{
 					_punishmentInProgress = true;
-					
 					if ("kick".equals(config.PUNISHMENT_TYPE))
 					{
 						kickPlayer();
@@ -159,7 +157,6 @@ public class FloodProtectorAction
 		}
 		
 		final int curTick = GameTimeController.getGameTicks();
-		
 		if ((curTick < _nextGameTick) || _punishmentInProgress)
 		{
 			if (config.LOG_FLOODING && !_logged)
@@ -180,7 +177,6 @@ public class FloodProtectorAction
 			if (!_punishmentInProgress && (config.PUNISHMENT_LIMIT > 0) && (count >= config.PUNISHMENT_LIMIT) && (config.PUNISHMENT_TYPE != null))
 			{
 				_punishmentInProgress = true;
-				
 				if ("kick".equals(config.PUNISHMENT_TYPE))
 				{
 					kickPlayer();
@@ -248,7 +244,6 @@ public class FloodProtectorAction
 		if (client.getPlayer() != null)
 		{
 			final PlayerInstance player = client.getPlayer();
-			
 			long newChatBanTime = 60000; // 1 minute
 			if (player.getPunishLevel() == PunishLevel.CHAT)
 			{
@@ -276,7 +271,6 @@ public class FloodProtectorAction
 			client.getPlayer().setPunishLevel(PunishLevel.ACC, config.PUNISHMENT_TIME);
 			
 			LOGGER(client.getPlayer().getName() + " banned for flooding");
-			
 			client.getPlayer().logout();
 		}
 		else

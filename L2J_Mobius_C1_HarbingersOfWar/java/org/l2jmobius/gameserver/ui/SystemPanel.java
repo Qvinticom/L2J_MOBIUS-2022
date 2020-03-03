@@ -133,7 +133,6 @@ public class SystemPanel extends JPanel
 		final long minutes = TimeUnit.MILLISECONDS.toMinutes(millis);
 		millis -= TimeUnit.MINUTES.toMillis(minutes);
 		final long seconds = TimeUnit.MILLISECONDS.toSeconds(millis);
-		
 		return (days + "d " + hours + "h " + minutes + "m " + seconds + "s");
 	}
 }

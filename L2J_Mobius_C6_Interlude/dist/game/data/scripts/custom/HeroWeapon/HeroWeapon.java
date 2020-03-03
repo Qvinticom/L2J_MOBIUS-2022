@@ -105,7 +105,6 @@ public class HeroWeapon extends Quest
 				return true;
 			}
 		}
-		
 		return false;
 	}
 	

@@ -54,7 +54,6 @@ public class RequestJoinDominionWar implements IClientIncomingPacket
 		}
 		final Clan clan = player.getClan();
 		final int castleId = _territoryId - 80;
-		
 		if (TerritoryWarManager.getInstance().isRegistrationOver())
 		{
 			player.sendPacket(SystemMessageId.IT_IS_NOT_A_TERRITORY_WAR_REGISTRATION_PERIOD_SO_A_REQUEST_CANNOT_BE_MADE_AT_THIS_TIME);

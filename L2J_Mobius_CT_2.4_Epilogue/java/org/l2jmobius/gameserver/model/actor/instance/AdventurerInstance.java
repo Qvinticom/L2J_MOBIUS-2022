@@ -35,7 +35,6 @@ public class AdventurerInstance extends NpcInstance
 	public String getHtmlPath(int npcId, int value)
 	{
 		String pom = "";
-		
 		if (value == 0)
 		{
 			pom = Integer.toString(npcId);
@@ -44,7 +43,6 @@ public class AdventurerInstance extends NpcInstance
 		{
 			pom = npcId + "-" + value;
 		}
-		
 		return "data/html/adventurer_guildsman/" + pom + ".htm";
 	}
 }

@@ -203,7 +203,6 @@ public class FishingChampionshipManager
 		{
 			return _winPlayersName.get(par - 1);
 		}
-		
 		return "None";
 	}
 	
@@ -213,7 +212,6 @@ public class FishingChampionshipManager
 		{
 			return _playersName.get(par - 1);
 		}
-		
 		return "None";
 	}
 	
@@ -223,7 +221,6 @@ public class FishingChampionshipManager
 		{
 			return _winFishLength.get(par - 1);
 		}
-		
 		return "0";
 	}
 	
@@ -233,7 +230,6 @@ public class FishingChampionshipManager
 		{
 			return _fishLength.get(par - 1);
 		}
-		
 		return "0";
 	}
 	
@@ -306,7 +302,6 @@ public class FishingChampionshipManager
 	public void showMidResult(PlayerInstance pl)
 	{
 		final NpcHtmlMessage html = new NpcHtmlMessage(0);
-		
 		if (_needRefresh)
 		{
 			html.setFile("data/html/fisherman/championship/fish_event003.htm");
@@ -399,13 +394,11 @@ public class FishingChampionshipManager
 	private synchronized void refreshResult()
 	{
 		_needRefresh = false;
-		
 		_playersName.clear();
 		_fishLength.clear();
 		
 		Fisher fisher1;
 		Fisher fisher2;
-		
 		for (int x = 0; x <= (_tmpPlayers.size() - 1); x++)
 		{
 			for (int y = 0; y <= (_tmpPlayers.size() - 2); y++)
@@ -434,7 +427,6 @@ public class FishingChampionshipManager
 		
 		Fisher fisher1;
 		Fisher fisher2;
-		
 		for (int x = 0; x <= (_winPlayers.size() - 1); x++)
 		{
 			for (int y = 0; y <= (_winPlayers.size() - 2); y++)

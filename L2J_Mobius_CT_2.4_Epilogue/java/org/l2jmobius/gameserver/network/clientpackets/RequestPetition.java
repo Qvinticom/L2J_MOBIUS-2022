@@ -87,7 +87,6 @@ public class RequestPetition implements IClientIncomingPacket
 		}
 		
 		final int totalPetitions = PetitionManager.getInstance().getPlayerTotalPetitionCount(player) + 1;
-		
 		if (totalPetitions > Config.MAX_PETITIONS_PER_PLAYER)
 		{
 			final SystemMessage sm = new SystemMessage(SystemMessageId.WE_HAVE_RECEIVED_S1_PETITIONS_FROM_YOU_TODAY_AND_THAT_IS_THE_MAXIMUM_THAT_YOU_CAN_SUBMIT_IN_ONE_DAY_YOU_CANNOT_SUBMIT_ANY_MORE_PETITIONS);
@@ -103,7 +102,6 @@ public class RequestPetition implements IClientIncomingPacket
 		}
 		
 		final int petitionId = PetitionManager.getInstance().submitPetition(player, _content, _type);
-		
 		SystemMessage sm = new SystemMessage(SystemMessageId.YOUR_PETITION_APPLICATION_HAS_BEEN_ACCEPTED_N_RECEIPT_NO_IS_S1);
 		sm.addInt(petitionId);
 		player.sendPacket(sm);

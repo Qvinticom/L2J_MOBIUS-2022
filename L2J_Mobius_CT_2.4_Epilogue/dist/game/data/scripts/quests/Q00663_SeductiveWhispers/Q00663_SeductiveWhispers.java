@@ -219,7 +219,6 @@ public class Q00663_SeductiveWhispers extends Quest
 	{
 		final QuestState qs = getQuestState(player, false);
 		String htmltext = getNoQuestMsg(player);
-		
 		switch (event)
 		{
 			case "30846-01a.htm":
@@ -752,7 +751,6 @@ public class Q00663_SeductiveWhispers extends Quest
 			if (Util.checkIfInRange(Config.ALT_PARTY_RANGE, npc, rewardedPlayer, false))
 			{
 				final int rnd = getRandom(1000);
-				
 				if (npc.getId() == SPITEFUL_SOUL_LEADER)
 				{
 					if (rnd <= SPITEFUL_SOUL_LEADER_CHANCE)

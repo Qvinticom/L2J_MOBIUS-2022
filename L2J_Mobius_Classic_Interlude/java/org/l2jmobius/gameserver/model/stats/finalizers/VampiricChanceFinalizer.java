@@ -34,7 +34,6 @@ public class VampiricChanceFinalizer implements IStatFunction
 		
 		final double amount = creature.getStat().getValue(Stat.ABSORB_DAMAGE_PERCENT, 0) * 100;
 		final double vampiricSum = creature.getStat().getVampiricSum();
-		
 		return amount > 0 ? Stat.defaultValue(creature, stat, Math.min(1.0, vampiricSum / amount / 100)) : 0;
 	}
 }

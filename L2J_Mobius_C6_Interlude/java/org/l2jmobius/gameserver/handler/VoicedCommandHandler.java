@@ -40,7 +40,6 @@ public class VoicedCommandHandler
 	private VoicedCommandHandler()
 	{
 		_datatable = new HashMap<>();
-		
 		if (Config.BANKING_SYSTEM_ENABLED)
 		{
 			registerVoicedCommandHandler(new BankingCmd());

@@ -44,7 +44,6 @@ public class RequestPledgeDraftListApply implements IClientIncomingPacket
 	public void run(GameClient client)
 	{
 		final PlayerInstance player = client.getPlayer();
-		
 		if ((player == null) || (player.getClan() != null))
 		{
 			return;
@@ -69,7 +68,6 @@ public class RequestPledgeDraftListApply implements IClientIncomingPacket
 			case 1: // add
 			{
 				final PledgeWaitingInfo pledgeDraftList = new PledgeWaitingInfo(player.getObjectId(), player.getLevel(), _karma, player.getClassId().getId(), player.getName());
-				
 				if (ClanEntryManager.getInstance().addToWaitingList(player.getObjectId(), pledgeDraftList))
 				{
 					client.sendPacket(SystemMessageId.ENTERED_INTO_WAITING_LIST_NAME_IS_AUTOMATICALLY_DELETED_AFTER_30_DAYS_IF_DELETE_FROM_WAITING_LIST_IS_USED_YOU_CANNOT_ENTER_NAMES_INTO_THE_WAITING_LIST_FOR_5_MIN);

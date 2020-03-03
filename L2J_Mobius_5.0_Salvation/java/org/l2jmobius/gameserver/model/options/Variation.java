@@ -54,7 +54,6 @@ public class Variation
 			LOGGER.warning("Null effect: " + type + ", " + order);
 			return null;
 		}
-		
 		return effects[order].getRandomEffect();
 	}
 }

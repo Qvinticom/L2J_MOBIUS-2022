@@ -33,7 +33,6 @@ public class IPSubnet
 			_addr = InetAddress.getByName(input.substring(0, idx)).getAddress();
 			_mask = getMask(Integer.parseInt(input.substring(idx + 1)), _addr.length);
 			_isIPv4 = _addr.length == 4;
-			
 			if (!applyMask(_addr))
 			{
 				throw new UnknownHostException(input);
@@ -88,7 +87,6 @@ public class IPSubnet
 				}
 			}
 		}
-		
 		return true;
 	}
 	

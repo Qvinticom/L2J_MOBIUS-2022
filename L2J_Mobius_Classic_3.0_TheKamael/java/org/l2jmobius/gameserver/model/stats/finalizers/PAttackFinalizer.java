@@ -37,7 +37,6 @@ public class PAttackFinalizer implements IStatFunction
 		
 		double baseValue = calcWeaponBaseValue(creature, stat);
 		baseValue += calcEnchantedItemBonus(creature, stat);
-		
 		if (creature.isPlayer())
 		{
 			// Enchanted chest bonus
@@ -63,7 +62,6 @@ public class PAttackFinalizer implements IStatFunction
 		{
 			return (3 * Math.max(enchantLevel - 3, 0)) + (3 * Math.max(enchantLevel - 6, 0));
 		}
-		
 		return (2 * Math.max(enchantLevel - 3, 0)) + (2 * Math.max(enchantLevel - 6, 0));
 	}
 }

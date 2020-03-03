@@ -150,7 +150,6 @@ public class Siege
 			try
 			{
 				final long timeRemaining = _siegeEndDate.getTimeInMillis() - Calendar.getInstance().getTimeInMillis();
-				
 				if (timeRemaining > 3600000)
 				{
 					// Prepare task for 1 hr left.
@@ -219,7 +218,6 @@ public class Siege
 			try
 			{
 				final long timeRemaining = getSiegeDate().getTimeInMillis() - Calendar.getInstance().getTimeInMillis();
-				
 				if (timeRemaining > 86400000)
 				{
 					// Prepare task for 24 before siege start to end registration
@@ -295,7 +293,6 @@ public class Siege
 	{
 		_castle = castle;
 		_siegeGuardManager = new SiegeGuardManager(getCastle());
-		
 		startAutoTask();
 	}
 	
@@ -316,7 +313,6 @@ public class Siege
 			}
 			
 			LOGGER.info("[SIEGE] The siege of " + getCastle().getName() + " has finished! " + fmt.format(new Date(System.currentTimeMillis())));
-			
 			if (getCastle().getOwnerId() <= 0)
 			{
 				announceToPlayer("The siege of " + getCastle().getName() + " has ended in a draw.", false);
@@ -338,7 +334,6 @@ public class Siege
 			
 			// Flag so that siege instance can be started
 			_isInProgress = false;
-			
 			updatePlayerSiegeStateFlags(true);
 			
 			// Save castle specific data
@@ -489,13 +484,11 @@ public class Siege
 				if (allyId != 0)
 				{
 					final Clan[] clanList = ClanTable.getInstance().getClans();
-					
 					for (Clan clan : clanList)
 					{
 						if (clan.getAllyId() == allyId)
 						{
 							final SiegeClan sc = getAttackerClan(clan.getClanId());
-							
 							if (sc != null)
 							{
 								removeAttacker(sc);
@@ -526,7 +519,6 @@ public class Siege
 				// Each new siege midvictory CT are completely respawned.
 				_controlTowerCount = 0;
 				_controlTowerMaxCount = 0;
-				
 				spawnControlTower(getCastle().getCastleId());
 				updatePlayerSiegeStateFlags(false);
 			}
@@ -571,7 +563,6 @@ public class Siege
 			
 			// Teleport to the closest town
 			teleportPlayer(TeleportWhoType.Attacker, TeleportWhereType.TOWN);
-			
 			_controlTowerCount = 0;
 			_controlTowerMaxCount = 0;
 			
@@ -592,7 +583,6 @@ public class Siege
 			
 			// Reset respawn delay
 			_defenderRespawnDelayPenalty = 0;
-			
 			getCastle().getZone().updateZoneStatusForCharactersInside();
 			
 			// Schedule a task to prepare auto siege end
@@ -601,7 +591,6 @@ public class Siege
 			
 			// Prepare auto end task
 			ThreadPool.schedule(new ScheduleEndSiegeTask(getCastle()), 1000);
-			
 			announceToPlayer("The siege of " + getCastle().getName() + " has started!", false);
 			final PlaySound sound = new PlaySound("systemmsg_e.17");
 			for (PlayerInstance player : World.getInstance().getAllPlayers())
@@ -641,11 +630,9 @@ public class Siege
 	public void updatePlayerSiegeStateFlags(boolean clear)
 	{
 		Clan clan;
-		
 		for (SiegeClan siegeclan : getAttackerClans())
 		{
 			clan = ClanTable.getInstance().getClan(siegeclan.getClanId());
-			
 			for (PlayerInstance member : clan.getOnlineMembers())
 			{
 				if (clear)
@@ -658,7 +645,6 @@ public class Siege
 				}
 				
 				member.sendPacket(new UserInfo(member));
-				
 				for (PlayerInstance player : member.getKnownList().getKnownPlayers().values())
 				{
 					player.sendPacket(new RelationChanged(member, member.getRelation(player), member.isAutoAttackable(player)));
@@ -668,7 +654,6 @@ public class Siege
 		for (SiegeClan siegeclan : getDefenderClans())
 		{
 			clan = ClanTable.getInstance().getClan(siegeclan.getClanId());
-			
 			for (PlayerInstance member : clan.getOnlineMembers())
 			{
 				if (clear)
@@ -681,7 +666,6 @@ public class Siege
 				}
 				
 				member.sendPacket(new UserInfo(member));
-				
 				for (PlayerInstance player : member.getKnownList().getKnownPlayers().values())
 				{
 					player.sendPacket(new RelationChanged(member, member.getRelation(player), member.isAutoAttackable(player)));
@@ -823,11 +807,9 @@ public class Siege
 	{
 		final List<PlayerInstance> players = new ArrayList<>();
 		Clan clan;
-		
 		for (SiegeClan siegeclan : getAttackerClans())
 		{
 			clan = ClanTable.getInstance().getClan(siegeclan.getClanId());
-			
 			for (PlayerInstance player : clan.getOnlineMembers())
 			{
 				if (checkIfInZone(player.getX(), player.getY(), player.getZ()))
@@ -836,7 +818,6 @@ public class Siege
 				}
 			}
 		}
-		
 		return players;
 	}
 	
@@ -848,11 +829,9 @@ public class Siege
 	{
 		final List<PlayerInstance> players = new ArrayList<>();
 		Clan clan;
-		
 		for (SiegeClan siegeclan : getDefenderClans())
 		{
 			clan = ClanTable.getInstance().getClan(siegeclan.getClanId());
-			
 			if (clan.getClanId() == getCastle().getOwnerId())
 			{
 				continue;
@@ -887,11 +866,9 @@ public class Siege
 	{
 		final List<PlayerInstance> players = new ArrayList<>();
 		Clan clan;
-		
 		for (SiegeClan siegeclan : getDefenderClans())
 		{
 			clan = ClanTable.getInstance().getClan(siegeclan.getClanId());
-			
 			if (clan.getClanId() != getCastle().getOwnerId())
 			{
 				continue;
@@ -916,7 +893,6 @@ public class Siege
 	public List<PlayerInstance> getSpectatorsInZone()
 	{
 		final List<PlayerInstance> players = new ArrayList<>();
-		
 		for (PlayerInstance player : World.getInstance().getAllPlayers())
 		{
 			// quick check from player states, which don't include siege number however
@@ -1012,7 +988,6 @@ public class Siege
 		}
 		
 		int allyId = 0;
-		
 		if (getCastle().getOwnerId() != 0)
 		{
 			allyId = ClanTable.getInstance().getClan(getCastle().getOwnerId()).getAllyId();
@@ -1124,7 +1099,6 @@ public class Siege
 		correctSiegeDateTime();
 		
 		LOGGER.info("Siege of " + getCastle().getName() + ": " + getCastle().getSiegeDate().getTime());
-		
 		loadSiegeClan();
 		
 		// Schedule registration end
@@ -1276,7 +1250,6 @@ public class Siege
 		{
 			return true;
 		}
-		
 		return false;
 	}
 	
@@ -1317,7 +1290,6 @@ public class Siege
 	private void correctSiegeDateTime()
 	{
 		boolean corrected = false;
-		
 		if (getCastle().getSiegeDate().getTimeInMillis() < Calendar.getInstance().getTimeInMillis())
 		{
 			// Since siege has past reschedule it to the next one (14 days)
@@ -1339,7 +1311,6 @@ public class Siege
 		}
 		
 		getCastle().getSiegeDate().set(Calendar.MINUTE, 0);
-		
 		if (corrected)
 		{
 			saveSiegeDate();
@@ -1363,17 +1334,14 @@ public class Siege
 			
 			PreparedStatement statement = null;
 			ResultSet rs = null;
-			
 			statement = con.prepareStatement("SELECT clan_id,type FROM siege_clans where castle_id=?");
 			statement.setInt(1, getCastle().getCastleId());
 			rs = statement.executeQuery();
-			
 			int typeId;
 			
 			while (rs.next())
 			{
 				typeId = rs.getInt("type");
-				
 				if (typeId == 0)
 				{
 					addDefender(rs.getInt("clan_id"));
@@ -1517,7 +1485,6 @@ public class Siege
 		try (Connection con = DatabaseFactory.getConnection())
 		{
 			PreparedStatement statement;
-			
 			if (!isUpdateRegistration)
 			{
 				statement = con.prepareStatement("INSERT INTO siege_clans (clan_id,castle_id,type,castle_owner) values (?,?,?,0)");
@@ -1588,12 +1555,10 @@ public class Siege
 		for (SiegeSpawn _sp : SiegeManager.getInstance().getArtefactSpawnList(id))
 		{
 			ArtefactInstance art;
-			
 			art = new ArtefactInstance(IdFactory.getNextId(), NpcTable.getInstance().getTemplate(_sp.getNpcId()));
 			art.setCurrentHpMp(art.getMaxHp(), art.getMaxMp());
 			art.setHeading(_sp.getLocation().getHeading());
 			art.spawnMe(_sp.getLocation().getX(), _sp.getLocation().getY(), _sp.getLocation().getZ() + 50);
-			
 			_artifacts.add(art);
 		}
 	}
@@ -1615,11 +1580,8 @@ public class Siege
 			ControlTowerInstance ct;
 			
 			final NpcTemplate template = NpcTable.getInstance().getTemplate(_sp.getNpcId());
-			
 			template.getStatSet().set("baseHpMax", _sp.getHp());
-			
 			ct = new ControlTowerInstance(IdFactory.getNextId(), template);
-			
 			ct.setCurrentHpMp(ct.getMaxHp(), ct.getMaxMp());
 			ct.spawnMe(_sp.getLocation().getX(), _sp.getLocation().getY(), _sp.getLocation().getZ() + 20);
 			_controlTowerCount++;
@@ -1641,13 +1603,11 @@ public class Siege
 		if (!getSiegeGuardManager().getSiegeGuardSpawn().isEmpty() && !_controlTowers.isEmpty())
 		{
 			ControlTowerInstance closestCt;
-			
 			double distance;
 			double x;
 			double y;
 			double z;
 			double distanceClosest = 0;
-			
 			for (Spawn spawn : getSiegeGuardManager().getSiegeGuardSpawn())
 			{
 				if (spawn == null)
@@ -1657,7 +1617,6 @@ public class Siege
 				
 				closestCt = null;
 				distanceClosest = 0;
-				
 				for (ControlTowerInstance ct : _controlTowers)
 				{
 					if (ct == null)
@@ -1668,9 +1627,7 @@ public class Siege
 					x = spawn.getX() - ct.getX();
 					y = spawn.getY() - ct.getY();
 					z = spawn.getZ() - ct.getZ();
-					
 					distance = (x * x) + (y * y) + (z * z);
-					
 					if ((closestCt == null) || (distance < distanceClosest))
 					{
 						closestCt = ct;
@@ -1697,7 +1654,6 @@ public class Siege
 		{
 			return null;
 		}
-		
 		return getAttackerClan(clan.getClanId());
 	}
 	
@@ -1715,7 +1671,6 @@ public class Siege
 				return sc;
 			}
 		}
-		
 		return null;
 	}
 	
@@ -1729,7 +1684,6 @@ public class Siege
 		{
 			return _attackerClans;
 		}
-		
 		return _defenderClans;
 	}
 	
@@ -1752,7 +1706,6 @@ public class Siege
 		{
 			return null;
 		}
-		
 		return _castle[0];
 	}
 	
@@ -1767,7 +1720,6 @@ public class Siege
 		{
 			return null;
 		}
-		
 		return getDefenderClan(clan.getClanId());
 	}
 	
@@ -1785,7 +1737,6 @@ public class Siege
 				return sc;
 			}
 		}
-		
 		return null;
 	}
 	
@@ -1799,7 +1750,6 @@ public class Siege
 		{
 			return _defenderClans;
 		}
-		
 		return _attackerClans;
 	}
 	
@@ -1814,7 +1764,6 @@ public class Siege
 		{
 			return null;
 		}
-		
 		return getDefenderWaitingClan(clan.getClanId());
 	}
 	
@@ -1832,7 +1781,6 @@ public class Siege
 				return sc;
 			}
 		}
-		
 		return null;
 	}
 	
@@ -1909,7 +1857,6 @@ public class Siege
 		{
 			_siegeGuardManager = new SiegeGuardManager(getCastle());
 		}
-		
 		return _siegeGuardManager;
 	}
 }

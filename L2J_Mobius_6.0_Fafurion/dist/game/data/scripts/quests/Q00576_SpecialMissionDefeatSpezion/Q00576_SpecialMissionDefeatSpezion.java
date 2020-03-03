@@ -93,7 +93,6 @@ public class Q00576_SpecialMissionDefeatSpezion extends Quest
 	{
 		final QuestState qs = getQuestState(player, true);
 		String htmltext = getNoQuestMsg(player);
-		
 		switch (qs.getState())
 		{
 			case State.CREATED:

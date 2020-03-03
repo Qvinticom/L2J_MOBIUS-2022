@@ -120,7 +120,6 @@ public class Q00352_HelpRoodRaiseANewPet extends Quest
 	public String onKill(Npc npc, PlayerInstance killer, boolean isSummon)
 	{
 		final QuestState qs = getQuestState(killer, false);
-		
 		if ((qs == null) || !Util.checkIfInRange(Config.ALT_PARTY_RANGE, npc, killer, true))
 		{
 			return null;
@@ -128,7 +127,6 @@ public class Q00352_HelpRoodRaiseANewPet extends Quest
 		
 		final DropInfo info = MOBS.get(npc.getId());
 		final int random = getRandom(100);
-		
 		if (random < info.getFirstChance())
 		{
 			giveItemRandomly(killer, npc, LIENRIK_EGG1, 1, 0, 1.0, true);
@@ -153,7 +151,6 @@ public class Q00352_HelpRoodRaiseANewPet extends Quest
 		{
 			final long LienrikEgg1Count = getQuestItemsCount(player, LIENRIK_EGG1);
 			final long LienrikEgg2Count = getQuestItemsCount(player, LIENRIK_EGG2);
-			
 			if ((LienrikEgg1Count == 0) && (LienrikEgg2Count == 0))
 			{
 				htmltext = "31067-06.html";

@@ -456,7 +456,6 @@ public abstract class Creature extends WorldObject implements ISkillsHolder, IDe
 			transform(transform, addSkills);
 			return true;
 		}
-		
 		return false;
 	}
 	
@@ -646,7 +645,6 @@ public abstract class Creature extends WorldObject implements ISkillsHolder, IDe
 	{
 		final double currentHp = _status.getCurrentHp();
 		final double maxHp = _stat.getMaxHp();
-		
 		if ((currentHp <= 1.0) || (maxHp < MAX_HP_BAR_PX))
 		{
 			return true;
@@ -663,7 +661,6 @@ public abstract class Creature extends WorldObject implements ISkillsHolder, IDe
 			{
 				final double doubleMulti = currentHp / _hpUpdateInterval;
 				int intMulti = (int) doubleMulti;
-				
 				_hpUpdateDecCheck = _hpUpdateInterval * (doubleMulti < intMulti ? intMulti-- : intMulti);
 				_hpUpdateIncCheck = _hpUpdateDecCheck + _hpUpdateInterval;
 			}
@@ -704,7 +701,6 @@ public abstract class Creature extends WorldObject implements ISkillsHolder, IDe
 		// MP
 		computeStatusUpdate(su, StatusUpdateType.MAX_MP);
 		computeStatusUpdate(su, StatusUpdateType.CUR_MP);
-		
 		broadcastPacket(su);
 	}
 	
@@ -938,7 +934,6 @@ public abstract class Creature extends WorldObject implements ISkillsHolder, IDe
 			// Get the active weapon item corresponding to the active weapon instance (always equipped in the right hand)
 			final Weapon weaponItem = getActiveWeaponItem();
 			final WeaponType weaponType = getAttackType();
-			
 			if (getActingPlayer() != null)
 			{
 				if (getActingPlayer().inObserverMode())
@@ -1597,7 +1592,6 @@ public abstract class Creature extends WorldObject implements ISkillsHolder, IDe
 		}
 		EventDispatcher.getInstance().notifyEvent(new OnCreatureDeath(killer, this), this);
 		EventDispatcher.getInstance().notifyEvent(new OnCreatureKilled(killer, this), killer);
-		
 		abortAttack();
 		abortCast();
 		
@@ -1719,7 +1713,6 @@ public abstract class Creature extends WorldObject implements ISkillsHolder, IDe
 			
 			// Start broadcast status
 			broadcastPacket(new Revive(this));
-			
 			ZoneManager.getInstance().getRegion(this).onRevive(this);
 		}
 		else
@@ -2743,12 +2736,10 @@ public abstract class Creature extends WorldObject implements ISkillsHolder, IDe
 	public int getXdestination()
 	{
 		final MoveData m = _move;
-		
 		if (m != null)
 		{
 			return m._xDestination;
 		}
-		
 		return getX();
 	}
 	
@@ -2758,12 +2749,10 @@ public abstract class Creature extends WorldObject implements ISkillsHolder, IDe
 	public int getYdestination()
 	{
 		final MoveData m = _move;
-		
 		if (m != null)
 		{
 			return m._yDestination;
 		}
-		
 		return getY();
 	}
 	
@@ -2773,12 +2762,10 @@ public abstract class Creature extends WorldObject implements ISkillsHolder, IDe
 	public int getZdestination()
 	{
 		final MoveData m = _move;
-		
 		if (m != null)
 		{
 			return m._zDestination;
 		}
-		
 		return getZ();
 	}
 	
@@ -2904,7 +2891,6 @@ public abstract class Creature extends WorldObject implements ISkillsHolder, IDe
 			}
 			return true;
 		}
-		
 		return false;
 	}
 	
@@ -2926,7 +2912,6 @@ public abstract class Creature extends WorldObject implements ISkillsHolder, IDe
 	{
 		// Get movement data
 		final MoveData m = _move;
-		
 		if (m == null)
 		{
 			return true;
@@ -2957,7 +2942,6 @@ public abstract class Creature extends WorldObject implements ISkillsHolder, IDe
 		final int xPrev = getX();
 		final int yPrev = getY();
 		final int zPrev = getZ(); // the z coordinate may be modified by coordinate synchronizations
-		
 		double dx;
 		double dy;
 		double dz;
@@ -2976,7 +2960,6 @@ public abstract class Creature extends WorldObject implements ISkillsHolder, IDe
 		
 		// Z coordinate will follow client values
 		dz = m._zDestination - zPrev;
-		
 		if (isPlayer() && !_isFlying)
 		{
 			final double distance = Math.hypot(dx, dy);
@@ -3028,7 +3011,6 @@ public abstract class Creature extends WorldObject implements ISkillsHolder, IDe
 		}
 		
 		// if (Config.DEVELOPER) LOGGER.warning("Move Ticks:" + (gameTicks - m._moveTimestamp) + ", distPassed:" + distPassed + ", distFraction:" + distFraction);
-		
 		if (distFraction > 1)
 		{
 			// Set the position of the Creature to the destination
@@ -3049,7 +3031,6 @@ public abstract class Creature extends WorldObject implements ISkillsHolder, IDe
 		
 		// Send a Server->Client packet MoveToLocation to the actor and all known PlayerInstance.
 		broadcastPacket(new MoveToLocation(this));
-		
 		if (distFraction > 1)
 		{
 			ThreadPool.execute(() -> getAI().notifyEvent(CtrlEvent.EVT_ARRIVED));
@@ -3225,7 +3206,6 @@ public abstract class Creature extends WorldObject implements ISkillsHolder, IDe
 		double dy = (y - curY);
 		double dz = (z - curZ);
 		double distance = Math.hypot(dx, dy);
-		
 		if (!_cursorKeyMovementActive && (distance > 200))
 		{
 			return;
@@ -3288,7 +3268,6 @@ public abstract class Creature extends WorldObject implements ISkillsHolder, IDe
 			// Calculate movement angles needed
 			sin = dy / distance;
 			cos = dx / distance;
-			
 			distance -= (offset - 5); // due to rounding error, we have to move a bit closer to be in range
 			
 			// Calculate the new destination with offset included
@@ -3308,7 +3287,6 @@ public abstract class Creature extends WorldObject implements ISkillsHolder, IDe
 		// GEODATA MOVEMENT CHECKS AND PATHFINDING
 		m.onGeodataPathIndex = -1; // Initialize not on geodata path
 		m.disregardingGeodata = false;
-		
 		if (!_isFlying && !isInWater && !isVehicle() && !_cursorKeyMovement)
 		{
 			final boolean isInVehicle = isPlayer() && (getActingPlayer().getVehicle() != null);
@@ -3326,7 +3304,6 @@ public abstract class Creature extends WorldObject implements ISkillsHolder, IDe
 				final int originalZ = z;
 				final int gtx = (originalX - World.MAP_MIN_X) >> 4;
 				final int gty = (originalY - World.MAP_MIN_Y) >> 4;
-				
 				if (isOnGeodataPath())
 				{
 					try
@@ -3380,11 +3357,9 @@ public abstract class Creature extends WorldObject implements ISkillsHolder, IDe
 						m.geoPathGty = gty;
 						m.geoPathAccurateTx = originalX;
 						m.geoPathAccurateTy = originalY;
-						
 						x = m.geoPath.get(m.onGeodataPathIndex).getX();
 						y = m.geoPath.get(m.onGeodataPathIndex).getY();
 						z = m.geoPath.get(m.onGeodataPathIndex).getZ();
-						
 						dx = x - curX;
 						dy = y - curY;
 						dz = z - curZ;
@@ -3491,7 +3466,6 @@ public abstract class Creature extends WorldObject implements ISkillsHolder, IDe
 		m.geoPathGty = md.geoPathGty;
 		m.geoPathAccurateTx = md.geoPathAccurateTx;
 		m.geoPathAccurateTy = md.geoPathAccurateTy;
-		
 		if (md.onGeodataPathIndex == (md.geoPath.size() - 2))
 		{
 			m._xDestination = md.geoPathAccurateTx;
@@ -3515,9 +3489,7 @@ public abstract class Creature extends WorldObject implements ISkillsHolder, IDe
 		// Calculate the number of ticks between the current position and the destination
 		// One tick added for rounding reasons
 		final int ticksToMove = 1 + (int) ((GameTimeController.TICKS_PER_SECOND * distance) / speed);
-		
 		m._heading = 0; // initial value for coordinate sync
-		
 		m._moveStartTime = GameTimeController.getInstance().getGameTicks();
 		
 		// Set the Creature _move object to MoveData object
@@ -3538,14 +3510,12 @@ public abstract class Creature extends WorldObject implements ISkillsHolder, IDe
 		
 		// Send a Server->Client packet CharMoveToLocation to the actor and all PlayerInstance in its _knownPlayers
 		broadcastPacket(new MoveToLocation(this));
-		
 		return true;
 	}
 	
 	public boolean validateMovementHeading(int heading)
 	{
 		final MoveData m = _move;
-		
 		if (m == null)
 		{
 			return true;
@@ -3717,7 +3687,6 @@ public abstract class Creature extends WorldObject implements ISkillsHolder, IDe
 		// First dual attack is the first hit only.
 		final Hit hit = attack.getHits().get(0);
 		final Creature target = ((Creature) hit.getTarget());
-		
 		if ((target == null) || target.isDead() || !isInSurroundingRegion(target))
 		{
 			getAI().notifyEvent(CtrlEvent.EVT_CANCEL);
@@ -3773,7 +3742,6 @@ public abstract class Creature extends WorldObject implements ISkillsHolder, IDe
 		// Notify to scripts when the attack has been done.
 		EventDispatcher.getInstance().notifyEvent(new OnCreatureAttack(this, target, null), this);
 		EventDispatcher.getInstance().notifyEvent(new OnCreatureAttacked(this, target, null), target);
-		
 		if (_triggerSkills != null)
 		{
 			for (OptionsSkillHolder holder : _triggerSkills.values())
@@ -4062,7 +4030,6 @@ public abstract class Creature extends WorldObject implements ISkillsHolder, IDe
 				_stat.recalculateStats(true);
 			}
 		}
-		
 		return oldSkill;
 	}
 	
@@ -4930,7 +4897,6 @@ public abstract class Creature extends WorldObject implements ISkillsHolder, IDe
 				return true;
 			}
 		}
-		
 		return false;
 	}
 	
@@ -5060,7 +5026,6 @@ public abstract class Creature extends WorldObject implements ISkillsHolder, IDe
 		{
 			filter = filter.and(additionalFilter);
 		}
-		
 		return _skillCasters.values().stream().filter(filter).collect(Collectors.toList());
 	}
 	
@@ -5071,7 +5036,6 @@ public abstract class Creature extends WorldObject implements ISkillsHolder, IDe
 		{
 			filter = filter.and(additionalFilter);
 		}
-		
 		return _skillCasters.values().stream().filter(filter).findAny().orElse(null);
 	}
 	
@@ -5378,7 +5342,6 @@ public abstract class Creature extends WorldObject implements ISkillsHolder, IDe
 				}
 			}
 		}
-		
 		return _basicPropertyResists.computeIfAbsent(basicProperty, k -> new BasicPropertyResist());
 	}
 	

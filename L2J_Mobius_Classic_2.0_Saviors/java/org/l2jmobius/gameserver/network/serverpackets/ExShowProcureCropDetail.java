@@ -37,7 +37,6 @@ public class ExShowProcureCropDetail implements IClientOutgoingPacket
 	public ExShowProcureCropDetail(int cropId)
 	{
 		_cropId = cropId;
-		
 		for (Castle c : CastleManager.getInstance().getCastles())
 		{
 			final CropProcure cropItem = CastleManorManager.getInstance().getCropProcure(c.getResidenceId(), cropId, false);

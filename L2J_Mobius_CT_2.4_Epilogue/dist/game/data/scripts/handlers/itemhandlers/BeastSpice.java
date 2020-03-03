@@ -39,7 +39,6 @@ public class BeastSpice implements IItemHandler
 		
 		final PlayerInstance activeChar = playable.getActingPlayer();
 		final SkillHolder[] skills = item.getItem().getSkills();
-		
 		if (skills == null)
 		{
 			LOGGER.log(Level.WARNING, getClass().getSimpleName() + ": is missing skills!");

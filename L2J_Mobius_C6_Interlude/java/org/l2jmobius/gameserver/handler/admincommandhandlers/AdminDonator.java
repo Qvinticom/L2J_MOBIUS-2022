@@ -49,12 +49,10 @@ public class AdminDonator implements IAdminCommandHandler
 		if (command.startsWith("admin_setdonator"))
 		{
 			final WorldObject target = activeChar.getTarget();
-			
 			if (target instanceof PlayerInstance)
 			{
 				final PlayerInstance targetPlayer = (PlayerInstance) target;
 				final boolean newDonator = !targetPlayer.isDonator();
-				
 				if (newDonator)
 				{
 					targetPlayer.setDonator(true);
@@ -77,7 +75,6 @@ public class AdminDonator implements IAdminCommandHandler
 			{
 				BuilderUtil.sendSysMessage(activeChar, "Impossible to set a non Player Target as Donator.");
 				LOGGER.info("GM: " + activeChar.getName() + " is trying to set a non Player Target as Donator.");
-				
 				return false;
 			}
 		}
@@ -90,7 +87,6 @@ public class AdminDonator implements IAdminCommandHandler
 		{
 			player.sendMessage(gm.getName() + " has granted Donator Status for you!");
 			gm.sendMessage("You've granted Donator Status for " + player.getName());
-			
 			if (announce)
 			{
 				Announcements.getInstance().announceToAll(player.getName() + " has received Donator Status!");
@@ -105,7 +101,6 @@ public class AdminDonator implements IAdminCommandHandler
 		{
 			player.sendMessage(gm.getName() + " has revoked Donator Status from you!");
 			gm.sendMessage("You've revoked Donator Status from " + player.getName());
-			
 			if (announce)
 			{
 				Announcements.getInstance().announceToAll(player.getName() + " has lost Donator Status!");

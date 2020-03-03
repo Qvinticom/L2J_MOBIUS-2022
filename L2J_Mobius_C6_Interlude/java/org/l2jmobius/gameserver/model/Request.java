@@ -127,7 +127,6 @@ public class Request
 	{
 		_isRequestor = isRequestor;
 		_isAnswerer = !isRequestor;
-		
 		ThreadPool.schedule(this::clear, REQUEST_TIMEOUT * 1000);
 	}
 	

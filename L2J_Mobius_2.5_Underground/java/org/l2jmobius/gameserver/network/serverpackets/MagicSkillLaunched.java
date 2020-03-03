@@ -44,7 +44,6 @@ public class MagicSkillLaunched implements IClientOutgoingPacket
 		_skillId = skillId;
 		_skillLevel = skillLevel;
 		_castingType = castingType;
-		
 		if (targets == null)
 		{
 			targets = Collections.singletonList(creature);

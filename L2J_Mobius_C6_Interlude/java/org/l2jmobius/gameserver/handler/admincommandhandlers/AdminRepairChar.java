@@ -56,7 +56,6 @@ public class AdminRepairChar implements IAdminCommandHandler
 	private void handleRepair(String command)
 	{
 		final String[] parts = command.split(" ");
-		
 		if (parts.length != 2)
 		{
 			return;
@@ -73,9 +72,7 @@ public class AdminRepairChar implements IAdminCommandHandler
 			statement = con.prepareStatement("SELECT obj_id FROM characters where char_name=?");
 			statement.setString(1, parts[1]);
 			final ResultSet rset = statement.executeQuery();
-			
 			int objId = 0;
-			
 			if (rset.next())
 			{
 				objId = rset.getInt(1);

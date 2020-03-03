@@ -81,7 +81,6 @@ public class RequestExMagicSkillUseGround implements IClientIncomingPacket
 			// normally magicskilluse packet turns char client side but for these skills, it doesn't (even with correct target)
 			player.setHeading(Util.calculateHeadingFrom(player.getX(), player.getY(), _x, _y));
 			Broadcast.toKnownPlayers(player, new ValidateLocation(player));
-			
 			player.useMagic(skill, null, _ctrlPressed, _shiftPressed);
 		}
 		else

@@ -239,7 +239,6 @@ public class Q00482_RecertificationOfValue extends Quest
 	{
 		String htmltext = getNoQuestMsg(player);
 		final QuestState qs = getQuestState(player, false);
-		
 		if (qs == null)
 		{
 			return htmltext;
@@ -308,13 +307,11 @@ public class Q00482_RecertificationOfValue extends Quest
 		if ((qs != null) && qs.isCond(1))
 		{
 			final int npcId = npc.getId();
-			
 			final String variable = String.valueOf(npcId); // i3
 			final int currentValue = qs.getInt(variable);
 			if (currentValue < 10)
 			{
 				qs.set(variable, String.valueOf(currentValue + 1)); // IncreaseNPCLogByID
-				
 				if (currentValue >= 10)
 				{
 					qs.setCond(3, true);

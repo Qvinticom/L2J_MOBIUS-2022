@@ -67,7 +67,6 @@ public class SiegeAttackerList implements IClientOutgoingPacket
 		if (size > 0)
 		{
 			Clan clan;
-			
 			packet.writeD(size);
 			packet.writeD(size);
 			for (SiegeClan siegeclan : _castle.getSiege().getAttackerClans())

@@ -69,7 +69,6 @@ public class RequestPledgeWaitingUserAccept implements IClientIncomingPacket
 				
 				// player.setPowerGrade(9); // academy
 				target.setPowerGrade(5); // New member starts at 5, not confirmed.
-				
 				clan.addClanMember(target);
 				target.setClanPrivileges(target.getClan().getRankPrivs(target.getPowerGrade()));
 				target.sendPacket(SystemMessageId.ENTERED_THE_CLAN);

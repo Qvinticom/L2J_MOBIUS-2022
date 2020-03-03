@@ -69,7 +69,6 @@ public class DragonVortex extends AbstractNpcAI
 			takeItems(player, LARGE_DRAGON_BONE, 1);
 			final int random = getRandom(100);
 			int raid = 0;
-			
 			if (random < 3)
 			{
 				raid = RAIDS[6]; // Muscle Bomber

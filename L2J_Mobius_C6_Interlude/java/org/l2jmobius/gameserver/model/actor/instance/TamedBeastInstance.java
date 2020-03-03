@@ -242,7 +242,6 @@ public class TamedBeastInstance extends FeedableBeastInstance
 			setTitle(owner.getName());
 			// broadcast the new title
 			broadcastPacket(new NpcInfo(this, owner));
-			
 			owner.setTrainedBeast(this);
 			
 			// always and automatically follow the owner.
@@ -411,7 +410,6 @@ public class TamedBeastInstance extends FeedableBeastInstance
 			// ids further, except by carrying an additional variable just for these two lines...
 			// Find which food item needs to be consumed.
 			ItemInstance item = null;
-			
 			if (foodTypeSkillId == 2188)
 			{
 				item = owner.getInventory().getItemByItemId(6643);

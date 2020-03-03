@@ -71,7 +71,6 @@ public class Q00121_PavelTheGiant extends Quest
 	{
 		final QuestState qs = getQuestState(player, true);
 		String htmltext = getNoQuestMsg(player);
-		
 		switch (npc.getId())
 		{
 			case NEWYEAR:

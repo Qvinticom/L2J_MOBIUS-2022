@@ -53,7 +53,6 @@ public class RequestBlock implements IClientIncomingPacket
 		final PlayerInstance player = client.getPlayer();
 		final int targetId = CharNameTable.getInstance().getIdByName(_name);
 		final int targetAL = CharNameTable.getInstance().getAccessLevelById(targetId);
-		
 		if (player == null)
 		{
 			return;

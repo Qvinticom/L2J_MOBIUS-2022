@@ -130,11 +130,9 @@ public class RequestStartPledgeWar implements IClientIncomingPacket
 		}
 		
 		final ClanWar newClanWar = new ClanWar(clanDeclaringWar, clanDeclaredWar);
-		
 		ClanTable.getInstance().storeClanWars(newClanWar);
 		
 		clanDeclaringWar.getMembers().stream().filter(Objects::nonNull).filter(ClanMember::isOnline).forEach(p -> p.getPlayerInstance().broadcastUserInfo(UserInfoType.CLAN));
-		
 		clanDeclaredWar.getMembers().stream().filter(Objects::nonNull).filter(ClanMember::isOnline).forEach(p -> p.getPlayerInstance().broadcastUserInfo(UserInfoType.CLAN));
 	}
 }

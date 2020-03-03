@@ -128,7 +128,6 @@ public class PostBBSManager extends BaseBBSManager
 		final Post p = getGPosttByTopic(topic);
 		final Locale locale = Locale.getDefault();
 		final DateFormat dateFormat = DateFormat.getDateInstance(DateFormat.FULL, locale);
-		
 		String mes = p.getCPost(0).postTxt.replace(">", "&gt;");
 		mes = mes.replace("<", "&lt;");
 		
@@ -143,7 +142,6 @@ public class PostBBSManager extends BaseBBSManager
 		final int idf = Integer.parseInt(st.nextToken());
 		final int idt = Integer.parseInt(st.nextToken());
 		final int idp = Integer.parseInt(st.nextToken());
-		
 		final Forum f = ForumsBBSManager.getInstance().getForumByID(idf);
 		if (f == null)
 		{

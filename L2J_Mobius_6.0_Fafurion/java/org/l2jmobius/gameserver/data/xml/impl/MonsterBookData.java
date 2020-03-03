@@ -63,13 +63,10 @@ public class MonsterBookData implements IXmlReader
 					if ("card".equalsIgnoreCase(d.getNodeName()))
 					{
 						final NamedNodeMap attrs = d.getAttributes();
-						
 						final int itemId = parseInteger(attrs, "id");
 						final int monster = parseInteger(attrs, "monster");
 						final String faction = parseString(attrs, "faction");
-						
 						final MonsterBookCardHolder card = new MonsterBookCardHolder(itemId, monster, Faction.valueOf(faction));
-						
 						if (NpcData.getInstance().getTemplate(monster) == null)
 						{
 							LOGGER.severe(getClass().getSimpleName() + ": Could not find NPC template with id " + monster + ".");
@@ -80,12 +77,10 @@ public class MonsterBookData implements IXmlReader
 							if ("rewards".equalsIgnoreCase(b.getNodeName()))
 							{
 								final NamedNodeMap rewardAttrs = b.getAttributes();
-								
 								final int kills = parseInteger(rewardAttrs, "kills");
 								final Long exp = parseLong(rewardAttrs, "exp");
 								final int sp = parseInteger(rewardAttrs, "sp");
 								final int points = parseInteger(rewardAttrs, "points");
-								
 								card.addReward(new MonsterBookRewardHolder(kills, exp, sp, points));
 							}
 						}

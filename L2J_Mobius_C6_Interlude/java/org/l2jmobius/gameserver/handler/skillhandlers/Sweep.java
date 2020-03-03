@@ -51,7 +51,6 @@ public class Sweep implements ISkillHandler
 		final PlayerInstance player = (PlayerInstance) creature;
 		final InventoryUpdate iu = Config.FORCE_INVENTORY_UPDATE ? null : new InventoryUpdate();
 		boolean send = false;
-		
 		for (WorldObject target1 : targets)
 		{
 			if (!(target1 instanceof Attackable))
@@ -91,9 +90,7 @@ public class Sweep implements ISkillHandler
 							iu.addItem(item);
 						}
 						send = true;
-						
 						SystemMessage smsg;
-						
 						if (ritem.getCount() > 1)
 						{
 							smsg = new SystemMessage(SystemMessageId.YOU_HAVE_EARNED_S2_S1_S); // earned $s2$s1

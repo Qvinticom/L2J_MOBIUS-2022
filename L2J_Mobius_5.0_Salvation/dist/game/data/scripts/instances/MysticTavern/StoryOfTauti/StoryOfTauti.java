@@ -760,7 +760,6 @@ public class StoryOfTauti extends AbstractInstance
 			}
 		}
 		return super.onEnterZone(creature, zone);
-		
 	}
 	
 	@Override
@@ -921,7 +920,6 @@ public class StoryOfTauti extends AbstractInstance
 		final BuffInfo info = character.getEffectList().getBuffInfoBySkillId(diseaseId);
 		final int skillLevel = (info == null) ? 1 : (info.getSkill().getLevel() < 3) ? info.getSkill().getLevel() + 1 : 3;
 		final Skill skill = SkillData.getInstance().getSkill(diseaseId, skillLevel);
-		
 		if ((skill != null) && SkillCaster.checkUseConditions(npc, skill))
 		{
 			npc.doCast(skill);

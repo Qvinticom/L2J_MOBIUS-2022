@@ -330,14 +330,12 @@ public class ClanMember
 	public int calculatePledgeClass(PlayerInstance player)
 	{
 		int pledgeClass = 0;
-		
 		if (player == null)
 		{
 			return pledgeClass;
 		}
 		
 		final Clan clan = player.getClan();
-		
 		if (clan != null)
 		{
 			switch (player.getClan().getLevel())

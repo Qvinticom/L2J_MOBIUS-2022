@@ -69,7 +69,6 @@ public class SkillList implements IBypassHandler
 					}
 					
 					String text = "<html><body><center>Skill learning:</center><br>";
-					
 					if (!ownClass)
 					{
 						final String charType = player.getClassId().isMage() ? "fighter" : "mage";

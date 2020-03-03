@@ -65,7 +65,6 @@ public class Tores extends AbstractNpcAI
 				if ((player.getLevel() > 39) && (player.getLevel() < 45))
 				{
 					player.teleToLocation(loc, true);
-					
 				}
 				else
 				{
@@ -79,7 +78,6 @@ public class Tores extends AbstractNpcAI
 				if ((player.getLevel() > 44) && (player.getLevel() < 50))
 				{
 					player.teleToLocation(loc, true);
-					
 				}
 				else
 				{

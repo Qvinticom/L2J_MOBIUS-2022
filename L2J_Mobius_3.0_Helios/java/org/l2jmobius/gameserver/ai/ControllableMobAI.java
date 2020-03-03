@@ -60,14 +60,12 @@ public class ControllableMobAI extends AttackableAI
 	protected void thinkFollow()
 	{
 		final Attackable me = (Attackable) _actor;
-		
 		if (!Util.checkIfInRange(MobGroupTable.FOLLOW_RANGE, me, getForcedTarget(), true))
 		{
 			final int signX = Rnd.nextBoolean() ? -1 : 1;
 			final int signY = Rnd.nextBoolean() ? -1 : 1;
 			final int randX = Rnd.get(MobGroupTable.FOLLOW_RANGE);
 			final int randY = Rnd.get(MobGroupTable.FOLLOW_RANGE);
-			
 			moveTo(getForcedTarget().getX() + (signX * randX), getForcedTarget().getY() + (signY * randY), getForcedTarget().getZ());
 		}
 	}
@@ -154,7 +152,6 @@ public class ControllableMobAI extends AttackableAI
 		{
 			int maxRange = 0;
 			// check distant skills
-			
 			for (Skill sk : _actor.getAllSkills())
 			{
 				if (Util.checkIfInRange(sk.getCastRange(), _actor, target, true) && !_actor.isSkillDisabled(sk) && (_actor.getCurrentMp() > _actor.getStat().getMpConsume(sk)))
@@ -196,14 +193,12 @@ public class ControllableMobAI extends AttackableAI
 		final double dist2 = _actor.calculateDistanceSq2D(target);
 		final int range = _actor.getPhysicalAttackRange() + _actor.getTemplate().getCollisionRadius() + target.getTemplate().getCollisionRadius();
 		int maxRange = range;
-		
 		if (!_actor.isMuted() && (dist2 > ((range + 20) * (range + 20))))
 		{
 			// check distant skills
 			for (Skill sk : _actor.getAllSkills())
 			{
 				final int castRange = sk.getCastRange();
-				
 				if (((castRange * castRange) >= dist2) && !_actor.isSkillDisabled(sk) && (_actor.getCurrentMp() > _actor.getStat().getMpConsume(sk)))
 				{
 					_actor.doCast(sk);
@@ -236,14 +231,12 @@ public class ControllableMobAI extends AttackableAI
 		final double dist2 = _actor.calculateDistanceSq2D(getForcedTarget());
 		final int range = _actor.getPhysicalAttackRange() + _actor.getTemplate().getCollisionRadius() + getForcedTarget().getTemplate().getCollisionRadius();
 		int maxRange = range;
-		
 		if (!_actor.isMuted() && (dist2 > ((range + 20) * (range + 20))))
 		{
 			// check distant skills
 			for (Skill sk : _actor.getAllSkills())
 			{
 				final int castRange = sk.getCastRange();
-				
 				if (((castRange * castRange) >= dist2) && !_actor.isSkillDisabled(sk) && (_actor.getCurrentMp() > _actor.getStat().getMpConsume(sk)))
 				{
 					_actor.doCast(sk);
@@ -303,14 +296,12 @@ public class ControllableMobAI extends AttackableAI
 			final double dist2 = _actor.calculateDistanceSq2D(target);
 			final int range = _actor.getPhysicalAttackRange() + _actor.getTemplate().getCollisionRadius() + target.getTemplate().getCollisionRadius();
 			int maxRange = range;
-			
 			if (!_actor.isMuted() && (dist2 > ((range + 20) * (range + 20))))
 			{
 				// check distant skills
 				for (Skill sk : _actor.getAllSkills())
 				{
 					final int castRange = sk.getCastRange();
-					
 					if (((castRange * castRange) >= dist2) && !_actor.isSkillDisabled(sk) && (_actor.getCurrentMp() > _actor.getStat().getMpConsume(sk)))
 					{
 						_actor.doCast(sk);
@@ -326,7 +317,6 @@ public class ControllableMobAI extends AttackableAI
 			
 			// Force mobs to attack anybody if confused.
 			Creature hated;
-			
 			if (_actor.isConfused())
 			{
 				hated = findNextRndTarget();
@@ -352,7 +342,6 @@ public class ControllableMobAI extends AttackableAI
 				for (Skill sk : _actor.getAllSkills())
 				{
 					final int castRange = sk.getCastRange();
-					
 					if (((castRange * castRange) >= dist2) && !_actor.isSkillDisabled(sk) && (_actor.getCurrentMp() < _actor.getStat().getMpConsume(sk)))
 					{
 						_actor.doCast(sk);
@@ -369,7 +358,6 @@ public class ControllableMobAI extends AttackableAI
 	protected void thinkActive()
 	{
 		Creature hated;
-		
 		if (_actor.isConfused())
 		{
 			hated = findNextRndTarget();
@@ -394,7 +382,6 @@ public class ControllableMobAI extends AttackableAI
 			return false;
 		}
 		final Attackable me = (Attackable) _actor;
-		
 		if (target.isNpc() || target.isDoor())
 		{
 			return false;

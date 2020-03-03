@@ -99,7 +99,6 @@ public class Q10519_ControllingYourTemper extends Quest
 	{
 		final QuestState qs = getQuestState(player, true);
 		String htmltext = getNoQuestMsg(player);
-		
 		if (npc.getId() == START_NPC)
 		{
 			switch (qs.getState())

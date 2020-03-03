@@ -41,7 +41,6 @@ public class ToIVortex extends Quest
 	{
 		String htmltext = "";
 		final QuestState st = player.getQuestState(getName());
-		
 		if (event.equalsIgnoreCase("blue"))
 		{
 			if (st.hasQuestItems(BLUE_STONE))
@@ -90,7 +89,6 @@ public class ToIVortex extends Quest
 		{
 			st = newQuestState(player);
 		}
-		
 		return npc.getNpcId() + ".htm";
 	}
 	

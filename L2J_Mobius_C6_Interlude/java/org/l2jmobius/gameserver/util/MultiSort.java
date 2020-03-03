@@ -98,7 +98,6 @@ public class MultiSort
 		}
 		
 		int totalValue = 0;
-		
 		for (int currValue : getValues())
 		{
 			totalValue += 1 / currValue;
@@ -113,7 +112,6 @@ public class MultiSort
 		{
 			return new ArrayList<>();
 		}
-		
 		return _keyList;
 	}
 	
@@ -138,7 +136,6 @@ public class MultiSort
 		{
 			return -1;
 		}
-		
 		return getTotalValue() / getValues().size();
 	}
 	
@@ -150,10 +147,8 @@ public class MultiSort
 		}
 		
 		final List<Double> tempValList = new ArrayList<>();
-		
 		final int meanValue = getMean();
 		final int numValues = getValues().size();
-		
 		for (int value : getValues())
 		{
 			final double adjValue = Math.pow(value - meanValue, 2);
@@ -161,7 +156,6 @@ public class MultiSort
 		}
 		
 		double totalValue = 0;
-		
 		for (double storedVal : tempValList)
 		{
 			totalValue += storedVal;
@@ -178,7 +172,6 @@ public class MultiSort
 		}
 		
 		int totalValue = 0;
-		
 		for (int currValue : getValues())
 		{
 			totalValue += currValue;
@@ -193,7 +186,6 @@ public class MultiSort
 		{
 			return new ArrayList<>();
 		}
-		
 		return _valueList;
 	}
 	
@@ -223,7 +215,6 @@ public class MultiSort
 			Collections.sort(getValues());
 			
 			int lastValue = 0;
-			
 			if (!_isSortDescending)
 			{
 				// If there are no keys, just return the ascendingly sorted values.
@@ -250,7 +241,6 @@ public class MultiSort
 					for (int j = 0; j < getKeys().size(); j++)
 					{
 						final Object currKey = getKeys().get(j);
-						
 						if (getValues().get(j) == currValue)
 						{
 							newKeyList.add(currKey);
@@ -272,18 +262,15 @@ public class MultiSort
 				for (int i = 0; i < getValues().size(); i++)
 				{
 					final int currValue = getValues().get(i);
-					
 					if (currValue == lastValue)
 					{
 						continue;
 					}
 					
 					lastValue = currValue;
-					
 					for (int j = 0; j < getKeys().size(); j++)
 					{
 						final Object currKey = getKeys().get(j);
-						
 						if (getValues().get(j) == currValue)
 						{
 							newKeyList.add(currKey);

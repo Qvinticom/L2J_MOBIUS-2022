@@ -75,7 +75,6 @@ public class ClassInfo
 		{
 			classClientId += 1438;
 		}
-		
 		return classClientId;
 	}
 	

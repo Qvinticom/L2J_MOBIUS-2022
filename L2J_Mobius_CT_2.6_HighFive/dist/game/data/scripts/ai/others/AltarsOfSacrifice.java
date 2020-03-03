@@ -61,7 +61,6 @@ public class AltarsOfSacrifice extends AbstractNpcAI
 			final double angleRadians = Rnd.nextDouble() * 2 * Math.PI;
 			final int spawnX = (int) (radius * Math.cos(angleRadians)) + _middlePoint.getX();
 			final int spawnY = (int) (radius * Math.sin(angleRadians)) + _middlePoint.getY();
-			
 			spawn.setXYZ(spawnX, spawnY, GeoEngine.getInstance().getHeight(spawnX, spawnY, _middlePoint.getZ()));
 			spawn.stopRespawn();
 			_spawnedBoss = spawn.doSpawn(false);
@@ -258,12 +257,10 @@ public class AltarsOfSacrifice extends AbstractNpcAI
 	public boolean unload(boolean removeFromList)
 	{
 		LOGGER.info(getClass().getSimpleName() + ": Unloading altars due to script unloading.");
-		
 		for (Altar altar : _altars)
 		{
 			altar.unload();
 		}
-		
 		return super.unload(removeFromList);
 	}
 	
@@ -301,7 +298,6 @@ public class AltarsOfSacrifice extends AbstractNpcAI
 				startQuestTimer(makeSpawnBossEvt(altarIndex), ALTAR_STATE_CHANGE_DELAY, null, null);
 			}
 		}
-		
 		return null;
 	}
 }

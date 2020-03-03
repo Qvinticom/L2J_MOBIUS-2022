@@ -45,7 +45,6 @@ public class RequestSellItem extends GameClientPacket
 	{
 		_listId = readD();
 		_count = readD();
-		
 		if ((_count <= 0) || ((_count * 12) > _buf.remaining()) || (_count > Config.MAX_ITEM_IN_PACKET))
 		{
 			_count = 0;
@@ -53,7 +52,6 @@ public class RequestSellItem extends GameClientPacket
 		}
 		
 		_items = new int[_count * 3];
-		
 		for (int i = 0; i < _count; i++)
 		{
 			final int objectId = readD();
@@ -61,7 +59,6 @@ public class RequestSellItem extends GameClientPacket
 			final int itemId = readD();
 			_items[(i * 3) + 1] = itemId;
 			final long cnt = readD();
-			
 			if ((cnt > Integer.MAX_VALUE) || (cnt <= 0))
 			{
 				_count = 0;
@@ -75,7 +72,6 @@ public class RequestSellItem extends GameClientPacket
 	protected void runImpl()
 	{
 		final PlayerInstance player = getClient().getPlayer();
-		
 		if (player == null)
 		{
 			return;

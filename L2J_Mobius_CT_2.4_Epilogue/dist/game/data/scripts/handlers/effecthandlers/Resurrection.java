@@ -57,7 +57,6 @@ public class Resurrection extends AbstractEffect
 	{
 		final Creature target = info.getEffected();
 		final Creature creature = info.getEffector();
-		
 		if (creature.isPlayer())
 		{
 			if (target.getActingPlayer() != null)

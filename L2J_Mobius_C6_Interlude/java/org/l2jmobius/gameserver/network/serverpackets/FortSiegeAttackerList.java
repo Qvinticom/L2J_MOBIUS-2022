@@ -70,7 +70,6 @@ public class FortSiegeAttackerList extends GameServerPacket
 		if (size > 0)
 		{
 			Clan clan;
-			
 			writeD(size);
 			writeD(size);
 			for (SiegeClan siegeclan : _fort.getSiege().getAttackerClans())

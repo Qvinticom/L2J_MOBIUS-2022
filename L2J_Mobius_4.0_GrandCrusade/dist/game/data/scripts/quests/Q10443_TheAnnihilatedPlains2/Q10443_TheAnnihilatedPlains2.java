@@ -98,7 +98,6 @@ public class Q10443_TheAnnihilatedPlains2 extends Quest
 	{
 		final QuestState qs = getQuestState(player, true);
 		String htmltext = getNoQuestMsg(player);
-		
 		switch (qs.getState())
 		{
 			case State.CREATED:

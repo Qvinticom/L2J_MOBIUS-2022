@@ -106,7 +106,6 @@ public class TimeAmountInterpreter
 				textBuilder.append(String.valueOf(num)).append(' ');
 				final String unit = activeUnit.name().toLowerCase(Locale.ENGLISH);
 				textBuilder.append(unit, 0, num == 1 ? unit.length() - 1 : unit.length());
-				
 				timeAmount -= timeUnit.convert(num, activeUnit);
 			}
 			

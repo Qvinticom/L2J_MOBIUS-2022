@@ -31,7 +31,6 @@ public class ShortCutInit extends GameServerPacket
 	public ShortCutInit(PlayerInstance player)
 	{
 		_player = player;
-		
 		if (_player == null)
 		{
 			return;

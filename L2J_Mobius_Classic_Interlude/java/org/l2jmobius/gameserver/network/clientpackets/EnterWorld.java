@@ -152,7 +152,6 @@ public class EnterWorld implements IClientIncomingPacket
 		}
 		
 		LoginServerThread.getInstance().sendClientTracert(player.getAccountName(), adress);
-		
 		client.setClientTracert(tracert);
 		
 		player.broadcastUserInfo();
@@ -179,7 +178,6 @@ public class EnterWorld implements IClientIncomingPacket
 				if (Config.GM_STARTUP_BUILDER_HIDE && AdminData.getInstance().hasAccess("admin_hide", player.getAccessLevel()))
 				{
 					BuilderUtil.setHiding(player, true);
-					
 					BuilderUtil.sendSysMessage(player, "hide is default for builder.");
 					BuilderUtil.sendSysMessage(player, "FriendAddOff is default for builder.");
 					BuilderUtil.sendSysMessage(player, "whisperoff is default for builder.");
@@ -408,7 +406,6 @@ public class EnterWorld implements IClientIncomingPacket
 		
 		// Send Quest List
 		player.sendPacket(new QuestList(player));
-		
 		if (Config.PLAYER_SPAWN_PROTECTION > 0)
 		{
 			player.setSpawnProtection(true);
@@ -416,7 +413,6 @@ public class EnterWorld implements IClientIncomingPacket
 		
 		player.spawnMe(player.getX(), player.getY(), player.getZ());
 		player.sendPacket(new ExRotation(player.getObjectId(), player.getHeading()));
-		
 		player.getInventory().applyItemSkills();
 		
 		if (GameEvent.isParticipant(player))
@@ -446,7 +442,6 @@ public class EnterWorld implements IClientIncomingPacket
 		
 		// Friend list
 		client.sendPacket(new L2FriendList(player));
-		
 		SystemMessage sm = new SystemMessage(SystemMessageId.YOUR_FRIEND_S1_JUST_LOGGED_IN);
 		sm.addString(player.getName());
 		for (int id : player.getFriendList())
@@ -500,7 +495,6 @@ public class EnterWorld implements IClientIncomingPacket
 		
 		client.sendPacket(new SkillCoolTime(player));
 		client.sendPacket(new ExVoteSystemInfo(player));
-		
 		for (ItemInstance item : player.getInventory().getItems())
 		{
 			if (item.isTimeLimitedItem())
@@ -614,7 +608,6 @@ public class EnterWorld implements IClientIncomingPacket
 		// {
 		// player.sendPacket(new ExWorldChatCnt(player));
 		// }
-		
 		player.sendPacket(new ExConnectedTimeAndGettableReward(player));
 		player.sendPacket(new ExOneDayReceiveRewardList(player, true));
 		

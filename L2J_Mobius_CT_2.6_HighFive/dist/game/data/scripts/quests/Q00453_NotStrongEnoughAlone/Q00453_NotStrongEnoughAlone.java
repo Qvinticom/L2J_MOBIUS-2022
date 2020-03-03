@@ -111,18 +111,15 @@ public class Q00453_NotStrongEnoughAlone extends Quest
 	private void increaseKill(PlayerInstance player, Npc npc)
 	{
 		final QuestState qs = getQuestState(player, false);
-		
 		if (qs == null)
 		{
 			return;
 		}
 		
 		int npcId = npc.getId();
-		
 		if (Util.checkIfInRange(Config.ALT_PARTY_RANGE, npc, player, false))
 		{
 			final ExQuestNpcLogList log = new ExQuestNpcLogList(getId());
-			
 			if (CommonUtil.contains(MONSTER1, npcId) && qs.isCond(2))
 			{
 				if (npcId == MONSTER1[4])
@@ -150,7 +147,6 @@ public class Q00453_NotStrongEnoughAlone extends Quest
 				}
 				
 				checkProgress(qs, 15, MONSTER1[0], MONSTER1[1], MONSTER1[2], MONSTER1[3]);
-				
 				log.addNpc(MONSTER1[0], qs.getInt(String.valueOf(MONSTER1[0])));
 				log.addNpc(MONSTER1[1], qs.getInt(String.valueOf(MONSTER1[1])));
 				log.addNpc(MONSTER1[2], qs.getInt(String.valueOf(MONSTER1[2])));
@@ -179,7 +175,6 @@ public class Q00453_NotStrongEnoughAlone extends Quest
 				}
 				
 				checkProgress(qs, 20, MONSTER2[0], MONSTER2[1], MONSTER2[2]);
-				
 				log.addNpc(MONSTER2[0], qs.getInt(String.valueOf(MONSTER2[0])));
 				log.addNpc(MONSTER2[1], qs.getInt(String.valueOf(MONSTER2[1])));
 				log.addNpc(MONSTER2[2], qs.getInt(String.valueOf(MONSTER2[2])));
@@ -207,7 +202,6 @@ public class Q00453_NotStrongEnoughAlone extends Quest
 				}
 				
 				checkProgress(qs, 20, MONSTER3[0], MONSTER3[1], MONSTER3[2]);
-				
 				log.addNpc(MONSTER3[0], qs.getInt(String.valueOf(MONSTER3[0])));
 				log.addNpc(MONSTER3[1], qs.getInt(String.valueOf(MONSTER3[1])));
 				log.addNpc(MONSTER3[2], qs.getInt(String.valueOf(MONSTER3[2])));
@@ -221,7 +215,6 @@ public class Q00453_NotStrongEnoughAlone extends Quest
 	{
 		final String htmltext = event;
 		final QuestState qs = getQuestState(player, false);
-		
 		if (qs == null)
 		{
 			return htmltext;
@@ -269,7 +262,6 @@ public class Q00453_NotStrongEnoughAlone extends Quest
 		final QuestState qs = getQuestState(player, true);
 		final QuestState prev = player.getQuestState(Q10282_ToTheSeedOfAnnihilation.class.getSimpleName());
 		String htmltext = getNoQuestMsg(player);
-		
 		switch (qs.getState())
 		{
 			case State.CREATED:

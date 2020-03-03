@@ -44,7 +44,6 @@ public class RequestJoinParty extends GameClientPacket
 	{
 		final PlayerInstance requestor = getClient().getPlayer();
 		final PlayerInstance target = World.getInstance().getPlayer(_name);
-		
 		if (requestor == null)
 		{
 			return;
@@ -189,11 +188,9 @@ public class RequestJoinParty extends GameClientPacket
 	private void createNewParty(PlayerInstance target, PlayerInstance requestor)
 	{
 		SystemMessage msg;
-		
 		if (!target.isProcessingRequest())
 		{
 			requestor.setParty(new Party(requestor, _itemDistribution));
-			
 			requestor.onTransactionRequest(target);
 			target.sendPacket(new AskJoinParty(requestor.getName(), _itemDistribution));
 			requestor.getParty().setPendingInvitation(true);

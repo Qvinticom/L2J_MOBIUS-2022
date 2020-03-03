@@ -44,7 +44,6 @@ public class TimedHuntingZoneList implements IClientOutgoingPacket
 		
 		final long currentTime = System.currentTimeMillis();
 		long endTime;
-		
 		packet.writeD(1); // zone count
 		
 		// Ancient Pirates' Tomb

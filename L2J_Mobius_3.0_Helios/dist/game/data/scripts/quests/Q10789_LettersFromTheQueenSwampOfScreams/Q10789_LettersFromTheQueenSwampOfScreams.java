@@ -48,7 +48,6 @@ public class Q10789_LettersFromTheQueenSwampOfScreams extends LetterQuest
 	{
 		super(10789);
 		addTalkId(INNOCENTIN, DOKARA);
-		
 		setIsErtheiaQuest(true);
 		setLevel(MIN_LEVEL, MAX_LEVEL);
 		setStartQuestSound("Npcdialog1.serenia_quest_9");

@@ -183,7 +183,6 @@ public class Npc extends Creature
 		// initialize the "current" collisions
 		_currentCollisionHeight = getTemplate().getfCollisionHeight();
 		_currentCollisionRadius = getTemplate().getfCollisionRadius();
-		
 		setFlying(template.isFlying());
 		initStatusUpdateCache();
 	}
@@ -458,8 +457,6 @@ public class Npc extends Creature
 			player.sendPacket(ActionFailed.STATIC_PACKET);
 			return false;
 		}
-		// TODO: More checks...
-		
 		return true;
 	}
 	
@@ -655,7 +652,6 @@ public class Npc extends Creature
 	public String getHtmlPath(int npcId, int value, PlayerInstance player)
 	{
 		String pom = "";
-		
 		if (value == 0)
 		{
 			pom = Integer.toString(npcId);
@@ -666,7 +662,6 @@ public class Npc extends Creature
 		}
 		
 		final String temp = "data/html/default/" + pom + ".htm";
-		
 		if (!Config.LAZY_CACHE)
 		{
 			// If not running lazy cache the file must be in the cache or it doesnt exist
@@ -765,7 +760,6 @@ public class Npc extends Creature
 		}
 		
 		final int npcId = getTemplate().getId();
-		
 		String filename;
 		switch (npcId)
 		{
@@ -900,7 +894,6 @@ public class Npc extends Creature
 		
 		final Weapon weapon = (killer != null) ? killer.getActiveWeaponItem() : null;
 		_killingBlowWeaponId = (weapon != null) ? weapon.getId() : 0;
-		
 		if (_isFakePlayer && (killer != null) && killer.isPlayable())
 		{
 			final PlayerInstance player = killer.getActingPlayer();
@@ -1033,7 +1026,6 @@ public class Npc extends Creature
 		_killingBlowWeaponId = 0;
 		_isRandomAnimationEnabled = getTemplate().isRandomAnimationEnabled();
 		_isRandomWalkingEnabled = !WalkingManager.getInstance().isTargeted(this) && getTemplate().isRandomWalkEnabled();
-		
 		if (isTeleporting())
 		{
 			EventDispatcher.getInstance().notifyEventAsync(new OnNpcTeleport(this), this);
@@ -1516,7 +1508,6 @@ public class Npc extends Creature
 		
 		final int radius = Rnd.get(radiusMin, radiusMax);
 		final double angle = Rnd.nextDouble() * 2 * Math.PI;
-		
 		return new Location((int) (getX() + (radius * Math.cos(angle))), (int) (getY() + (radius * Math.sin(angle))), getZ());
 	}
 	
@@ -1536,7 +1527,6 @@ public class Npc extends Creature
 			final int newX = (getX() + Rnd.get((RANDOM_ITEM_DROP_LIMIT * 2) + 1)) - RANDOM_ITEM_DROP_LIMIT;
 			final int newY = (getY() + Rnd.get((RANDOM_ITEM_DROP_LIMIT * 2) + 1)) - RANDOM_ITEM_DROP_LIMIT;
 			final int newZ = getZ() + 20;
-			
 			if (ItemTable.getInstance().getTemplate(itemId) == null)
 			{
 				LOGGER.severe("Item doesn't exist so cannot be dropped. Item ID: " + itemId + " Quest: " + getName());

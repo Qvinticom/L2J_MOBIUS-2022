@@ -43,7 +43,6 @@ public class AdminTvTEvent implements IAdminCommandHandler
 		if (command.equals("admin_tvt_add"))
 		{
 			final WorldObject target = activeChar.getTarget();
-			
 			if ((target == null) || !target.isPlayer())
 			{
 				BuilderUtil.sendSysMessage(activeChar, "You should select a player!");
@@ -55,7 +54,6 @@ public class AdminTvTEvent implements IAdminCommandHandler
 		else if (command.equals("admin_tvt_remove"))
 		{
 			final WorldObject target = activeChar.getTarget();
-			
 			if ((target == null) || !target.isPlayer())
 			{
 				BuilderUtil.sendSysMessage(activeChar, "You should select a player!");

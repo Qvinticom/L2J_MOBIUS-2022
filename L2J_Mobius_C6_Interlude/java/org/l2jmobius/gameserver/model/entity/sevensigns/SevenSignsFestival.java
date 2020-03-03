@@ -3145,20 +3145,15 @@ public class SevenSignsFestival implements SpawnListener
 	public SevenSignsFestival()
 	{
 		_accumulatedBonuses = new ArrayList<>();
-		
 		_dawnFestivalParticipants = new HashMap<>();
 		_dawnPreviousParticipants = new HashMap<>();
 		_dawnFestivalScores = new HashMap<>();
-		
 		_duskFestivalParticipants = new HashMap<>();
 		_duskPreviousParticipants = new HashMap<>();
 		_duskFestivalScores = new HashMap<>();
-		
 		_festivalData = new HashMap<>();
-		
 		restoreFestivalData();
 		ThreadPool.scheduleAtFixedRate(new RestoreStatus(), 7200000, 10800000);
-		
 		if (SevenSigns.getInstance().isSealValidationPeriod())
 		{
 			LOGGER.info("SevenSignsFestival: Initialization bypassed due to Seal Validation in effect.");
@@ -3206,7 +3201,6 @@ public class SevenSignsFestival implements SpawnListener
 				break;
 			}
 		}
-		
 		return festivalName;
 	}
 	
@@ -3242,7 +3236,6 @@ public class SevenSignsFestival implements SpawnListener
 				break;
 			}
 		}
-		
 		return maxLevel;
 	}
 	
@@ -3282,7 +3275,6 @@ public class SevenSignsFestival implements SpawnListener
 		{
 			startFestivalManager();
 		}
-		
 		return _managerScheduledTask;
 	}
 	
@@ -3314,7 +3306,6 @@ public class SevenSignsFestival implements SpawnListener
 				final int festivalCycle = rset.getInt("cycle");
 				int festivalId = rset.getInt("festivalId");
 				final String cabal = rset.getString("cabal");
-				
 				final StatSet festivalDat = new StatSet();
 				festivalDat.set("festivalId", festivalId);
 				festivalDat.set("cabal", cabal);
@@ -3322,14 +3313,12 @@ public class SevenSignsFestival implements SpawnListener
 				festivalDat.set("date", rset.getString("date"));
 				festivalDat.set("score", rset.getInt("score"));
 				festivalDat.set("members", rset.getString("members"));
-				
 				if (cabal.equals("dawn"))
 				{
 					festivalId += FESTIVAL_COUNT;
 				}
 				
 				Map<Integer, StatSet> tempData = _festivalData.get(festivalCycle);
-				
 				if (tempData == null)
 				{
 					tempData = new HashMap<>();
@@ -3344,23 +3333,19 @@ public class SevenSignsFestival implements SpawnListener
 			
 			rset = null;
 			statement = null;
-			
 			String query = "SELECT festival_cycle, ";
-			
 			for (int i = 0; i < (FESTIVAL_COUNT - 1); i++)
 			{
 				query += "accumulated_bonus" + i + ", ";
 			}
 			query += "accumulated_bonus" + (FESTIVAL_COUNT - 1) + " ";
 			query += "FROM seven_signs_status WHERE id=0";
-			
 			statement = con.prepareStatement(query);
 			rset = statement.executeQuery();
 			
 			while (rset.next())
 			{
 				_festivalCycle = rset.getInt("festival_cycle");
-				
 				for (int i = 0; i < FESTIVAL_COUNT; i++)
 				{
 					_accumulatedBonuses.add(i, rset.getInt("accumulated_bonus" + i));
@@ -3385,7 +3370,6 @@ public class SevenSignsFestival implements SpawnListener
 		try (Connection con = DatabaseFactory.getConnection())
 		{
 			PreparedStatement statement = null;
-			
 			for (Map<Integer, StatSet> currCycleData : _festivalData.values())
 			{
 				for (StatSet festivalDat : currCycleData.values())
@@ -3572,11 +3556,9 @@ public class SevenSignsFestival implements SpawnListener
 		
 		// Set up a new data set for the current cycle of festivals
 		final Map<Integer, StatSet> newData = new HashMap<>();
-		
 		for (int i = 0; i < (FESTIVAL_COUNT * 2); i++)
 		{
 			int festivalId = i;
-			
 			if (i >= FESTIVAL_COUNT)
 			{
 				festivalId -= FESTIVAL_COUNT;
@@ -3589,7 +3571,6 @@ public class SevenSignsFestival implements SpawnListener
 			tempStats.set("date", "0");
 			tempStats.set("score", 0);
 			tempStats.set("members", "");
-			
 			if (i >= FESTIVAL_COUNT)
 			{
 				tempStats.set("cabal", SevenSigns.getCabalShortName(SevenSigns.CABAL_DAWN));
@@ -3613,7 +3594,6 @@ public class SevenSignsFestival implements SpawnListener
 			try
 			{
 				final ItemInstance bloodOfferings = onlinePlayer.getInventory().getItemByItemId(FESTIVAL_OFFERING_ID);
-				
 				if (bloodOfferings != null)
 				{
 					onlinePlayer.destroyItem("SevenSigns", bloodOfferings, null, false);
@@ -3733,19 +3713,16 @@ public class SevenSignsFestival implements SpawnListener
 			{
 				playerFestivalInfo[0] = SevenSigns.CABAL_DAWN;
 				playerFestivalInfo[1] = festivalId;
-				
 				return playerFestivalInfo;
 			}
 			
 			festivalId++;
 			
 			participants = _duskFestivalParticipants.get(festivalId);
-			
 			if ((participants != null) && participants.contains(player))
 			{
 				playerFestivalInfo[0] = SevenSigns.CABAL_DUSK;
 				playerFestivalInfo[1] = festivalId;
-				
 				return playerFestivalInfo;
 			}
 			
@@ -3804,7 +3781,6 @@ public class SevenSignsFestival implements SpawnListener
 		{
 			return _dawnFestivalParticipants.get(festivalId);
 		}
-		
 		return _duskFestivalParticipants.get(festivalId);
 	}
 	
@@ -3820,7 +3796,6 @@ public class SevenSignsFestival implements SpawnListener
 		{
 			return _dawnPreviousParticipants.get(festivalId);
 		}
-		
 		return _duskPreviousParticipants.get(festivalId);
 	}
 	
@@ -3833,7 +3808,6 @@ public class SevenSignsFestival implements SpawnListener
 	public void setParticipants(int oracle, int festivalId, Party festivalParty)
 	{
 		List<PlayerInstance> participants = new ArrayList<>();
-		
 		if (festivalParty != null)
 		{
 			participants = festivalParty.getPartyMembers();
@@ -3864,13 +3838,11 @@ public class SevenSignsFestival implements SpawnListener
 		final int[] playerFestInfo = getFestivalForPlayer(player);
 		final int oracle = playerFestInfo[0];
 		final int festivalId = playerFestInfo[1];
-		
 		if (festivalId > -1)
 		{
 			if (_festivalInitialized)
 			{
 				final DarknessFestival festivalInst = _managerInstance.getFestivalInstance(oracle, festivalId);
-				
 				if (festivalParty == null)
 				{
 					for (PlayerInstance partyMember : getParticipants(oracle, festivalId))
@@ -3900,7 +3872,6 @@ public class SevenSignsFestival implements SpawnListener
 		{
 			return _dawnFestivalScores.get(festivalId);
 		}
-		
 		return _duskFestivalScores.get(festivalId);
 	}
 	
@@ -3924,7 +3895,6 @@ public class SevenSignsFestival implements SpawnListener
 	public StatSet getHighestScoreData(int oracle, int festivalId)
 	{
 		int offsetId = festivalId;
-		
 		if (oracle == SevenSigns.CABAL_DAWN)
 		{
 			offsetId += 5;
@@ -3932,7 +3902,6 @@ public class SevenSignsFestival implements SpawnListener
 		
 		// Attempt to retrieve existing score data (if found), otherwise create a new blank data set and display a console warning.
 		StatSet currData = null;
-		
 		if ((_festivalData != null) && (_festivalData.get(_signsCycle) != null))
 		{
 			currData = _festivalData.get(_signsCycle).get(offsetId);
@@ -3956,14 +3925,12 @@ public class SevenSignsFestival implements SpawnListener
 	{
 		StatSet result = null;
 		int highestScore = 0;
-		
 		for (Map<Integer, StatSet> currCycleData : _festivalData.values())
 		{
 			for (StatSet currFestData : currCycleData.values())
 			{
 				final int currFestID = currFestData.getInt("festivalId");
 				final int festivalScore = currFestData.getInt("score");
-				
 				if (currFestID != festivalId)
 				{
 					continue;
@@ -3994,22 +3961,18 @@ public class SevenSignsFestival implements SpawnListener
 		
 		final int currDawnHighScore = getHighestScore(SevenSigns.CABAL_DAWN, festivalId);
 		final int currDuskHighScore = getHighestScore(SevenSigns.CABAL_DUSK, festivalId);
-		
 		int thisCabalHighScore = 0;
 		int otherCabalHighScore = 0;
-		
 		if (oracle == SevenSigns.CABAL_DAWN)
 		{
 			thisCabalHighScore = currDawnHighScore;
 			otherCabalHighScore = currDuskHighScore;
-			
 			_dawnFestivalScores.put(festivalId, offeringScore);
 		}
 		else
 		{
 			thisCabalHighScore = currDuskHighScore;
 			otherCabalHighScore = currDawnHighScore;
-			
 			_duskFestivalScores.put(festivalId, offeringScore);
 		}
 		
@@ -4080,12 +4043,10 @@ public class SevenSignsFestival implements SpawnListener
 	public int getTotalAccumulatedBonus()
 	{
 		int totalAccumBonus = 0;
-		
 		for (int accumBonus : _accumulatedBonuses)
 		{
 			totalAccumBonus += accumBonus;
 		}
-		
 		return totalAccumBonus;
 	}
 	
@@ -4132,7 +4093,6 @@ public class SevenSignsFestival implements SpawnListener
 		int playerBonus = 0;
 		final String playerName = player.getName();
 		final int playerCabal = SevenSigns.getInstance().getPlayerCabal(player);
-		
 		if (playerCabal != SevenSigns.getInstance().getCabalHighestScore())
 		{
 			return 0;
@@ -4147,7 +4107,6 @@ public class SevenSignsFestival implements SpawnListener
 					final int festivalId = festivalData.getInt("festivalId");
 					final int numPartyMembers = festivalData.getString("members").split(",").length;
 					final int totalAccumBonus = _accumulatedBonuses.get(festivalId);
-					
 					playerBonus = totalAccumBonus / numPartyMembers;
 					_accumulatedBonuses.set(festivalId, totalAccumBonus - playerBonus);
 					break;
@@ -4185,7 +4144,6 @@ public class SevenSignsFestival implements SpawnListener
 	public boolean increaseChallenge(int oracle, int festivalId)
 	{
 		final DarknessFestival festivalInst = _managerInstance.getFestivalInstance(oracle, festivalId);
-		
 		return festivalInst.increaseChallenge();
 	}
 	
@@ -4305,7 +4263,6 @@ public class SevenSignsFestival implements SpawnListener
 			
 			// Prevent future signups while festival is in progress.
 			_festivalInitialized = true;
-			
 			setNextFestivalStart(Config.ALT_FESTIVAL_CYCLE_LENGTH);
 			sendMessageToAll("Festival Guide", "The main event is now starting.");
 			
@@ -4341,7 +4298,6 @@ public class SevenSignsFestival implements SpawnListener
 			}
 			
 			elapsedTime += Config.ALT_FESTIVAL_FIRST_SWARM - Config.ALT_FESTIVAL_FIRST_SPAWN;
-			
 			for (DarknessFestival festivalInst : _festivalInstances.values())
 			{
 				festivalInst.moveMonstersToCenter();
@@ -4424,7 +4380,6 @@ public class SevenSignsFestival implements SpawnListener
 			
 			// Allow signups for the next festival cycle.
 			_festivalInitialized = false;
-			
 			sendMessageToAll("Festival Witch", "That will do! I'll move you to the outside soon.");
 		}
 		
@@ -4474,7 +4429,6 @@ public class SevenSignsFestival implements SpawnListener
 			_levelRange = levelRange;
 			_originalLocations = new HashMap<>();
 			_npcInsts = new ArrayList<>();
-			
 			if (cabal == SevenSigns.CABAL_DAWN)
 			{
 				_participants = _dawnFestivalParticipants.get(levelRange);
@@ -4514,7 +4468,6 @@ public class SevenSignsFestival implements SpawnListener
 						// Randomize the spawn point around the specific centerpoint for each player.
 						int x = _startLocation._x;
 						int y = _startLocation._y;
-						
 						if (Rnd.nextBoolean())
 						{
 							x += Rnd.get(FESTIVAL_MAX_OFFSET_X);
@@ -4552,7 +4505,6 @@ public class SevenSignsFestival implements SpawnListener
 			try
 			{
 				final Spawn npcSpawn = new Spawn(witchTemplate);
-				
 				npcSpawn.setX(_witchSpawn._x);
 				npcSpawn.setY(_witchSpawn._y);
 				npcSpawn.setZ(_witchSpawn._z);
@@ -4605,7 +4557,6 @@ public class SevenSignsFestival implements SpawnListener
 				
 				// Only move monsters that are idle or doing their usual functions.
 				final CtrlIntention currIntention = festivalMob.getAI().getIntention();
-				
 				if ((currIntention != CtrlIntention.AI_INTENTION_IDLE) && (currIntention != CtrlIntention.AI_INTENTION_ACTIVE))
 				{
 					continue;
@@ -4627,7 +4578,6 @@ public class SevenSignsFestival implements SpawnListener
 				}
 				
 				final Location moveTo = new Location(x, y, _startLocation._z, Rnd.get(65536));
-				
 				festivalMob.setRunning();
 				festivalMob.getAI().setIntention(CtrlIntention.AI_INTENTION_MOVE_TO, moveTo);
 			}
@@ -4686,7 +4636,6 @@ public class SevenSignsFestival implements SpawnListener
 				try
 				{
 					final Spawn npcSpawn = new Spawn(npcTemplate);
-					
 					npcSpawn.setX(currSpawn._x);
 					npcSpawn.setY(currSpawn._y);
 					npcSpawn.setZ(currSpawn._z);
@@ -4826,7 +4775,6 @@ public class SevenSignsFestival implements SpawnListener
 			try
 			{
 				final FestivalSpawn origPosition = _originalLocations.get(participant);
-				
 				if (isRemoving)
 				{
 					_originalLocations.remove(participant);
@@ -4874,7 +4822,6 @@ public class SevenSignsFestival implements SpawnListener
 			
 			// Generate a random heading if no positive one given.
 			_heading = heading < 0 ? Rnd.get(65536) : heading;
-			
 			_npcId = -1;
 		}
 		
@@ -4887,9 +4834,7 @@ public class SevenSignsFestival implements SpawnListener
 			_x = spawnData[0];
 			_y = spawnData[1];
 			_z = spawnData[2];
-			
 			_heading = spawnData[3] < 0 ? Rnd.get(65536) : spawnData[3];
-			
 			if (spawnData.length > 4)
 			{
 				_npcId = spawnData[4];

@@ -43,7 +43,6 @@ public class MultiSellList extends GameServerPacket
 	protected void writeImpl()
 	{
 		// [ddddd] [dchh] [hdhdh] [hhdh]
-		
 		writeC(0xd0);
 		writeD(_listId); // list id
 		writeD(_page); // page

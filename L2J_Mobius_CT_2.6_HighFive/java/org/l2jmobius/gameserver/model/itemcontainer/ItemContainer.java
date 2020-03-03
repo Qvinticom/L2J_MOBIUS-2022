@@ -202,7 +202,6 @@ public abstract class ItemContainer
 	public long getInventoryItemCount(int itemId, int enchantLevel, boolean includeEquipped)
 	{
 		long count = 0;
-		
 		for (ItemInstance item : _items)
 		{
 			if ((item.getId() == itemId) && ((item.getEnchantLevel() == enchantLevel) || (enchantLevel < 0)) && (includeEquipped || !item.isEquipped()))
@@ -490,7 +489,6 @@ public abstract class ItemContainer
 				}
 				
 				ItemTable.getInstance().destroyItem(process, item, actor, reference);
-				
 				item.updateDatabase();
 			}
 			refreshWeight();

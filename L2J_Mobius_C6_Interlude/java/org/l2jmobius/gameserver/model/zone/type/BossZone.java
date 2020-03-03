@@ -97,11 +97,9 @@ public class BossZone extends ZoneType
 		}
 		
 		creature.setInsideZone(ZoneId.BOSS, true);
-		
 		if (creature instanceof PlayerInstance)
 		{
 			final PlayerInstance player = (PlayerInstance) creature;
-			
 			if (player.isGM() || Config.ALLOW_DIRECT_TP_TO_BOSS_ROOM)
 			{
 				player.sendMessage("You entered " + _zoneName);
@@ -114,11 +112,9 @@ public class BossZone extends ZoneType
 				final ItemInstance visitorsMark = player.getInventory().getItemByItemId(8064);
 				final ItemInstance fadedVisitorsMark = player.getInventory().getItemByItemId(8065);
 				final ItemInstance pagansMark = player.getInventory().getItemByItemId(8067);
-				
 				final long mark1 = visitorsMark == null ? 0 : visitorsMark.getCount();
 				final long mark2 = fadedVisitorsMark == null ? 0 : fadedVisitorsMark.getCount();
 				final long mark3 = pagansMark == null ? 0 : pagansMark.getCount();
-				
 				if ((mark1 != 0) || (mark2 != 0) || (mark3 != 0))
 				{
 					return;
@@ -141,7 +137,6 @@ public class BossZone extends ZoneType
 				if (expirationTime == null) // legal null expirationTime entries
 				{
 					final long serverStartTime = GameServer.dateTimeServerStarted.getTimeInMillis();
-					
 					if (serverStartTime > (System.currentTimeMillis() - _timeInvade))
 					{
 						return;
@@ -195,12 +190,10 @@ public class BossZone extends ZoneType
 		}
 		
 		creature.setInsideZone(ZoneId.BOSS, false);
-		
 		if (creature instanceof PlayerInstance)
 		{
 			// Thread.dumpStack();
 			final PlayerInstance player = (PlayerInstance) creature;
-			
 			if (player.isGM())
 			{
 				player.sendMessage("You left " + _zoneName);

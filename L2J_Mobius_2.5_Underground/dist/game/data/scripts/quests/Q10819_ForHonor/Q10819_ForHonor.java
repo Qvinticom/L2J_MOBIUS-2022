@@ -120,7 +120,6 @@ public class Q10819_ForHonor extends Quest
 	{
 		final QuestState qs = getQuestState(player, true);
 		String htmltext = getNoQuestMsg(player);
-		
 		switch (qs.getState())
 		{
 			case State.CREATED:
@@ -154,12 +153,10 @@ public class Q10819_ForHonor extends Quest
 		if (player != null)
 		{
 			final QuestState qs = getQuestState(player, false);
-			
 			if ((qs != null) && qs.isCond(1))
 			{
 				giveItems(player, PROOF_OF_BATTLE, 1);
 				playSound(player, QuestSound.ITEMSOUND_QUEST_ITEMGET);
-				
 				if (getQuestItemsCount(player, PROOF_OF_BATTLE) >= 100)
 				{
 					qs.setCond(2, true);

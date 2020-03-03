@@ -95,7 +95,6 @@ public class SummonAI extends PlayableAI implements Runnable
 	{
 		final WorldObject target = getTarget();
 		final Creature attackTarget = (target != null) && target.isCreature() ? (Creature) target : null;
-		
 		if (checkTargetLostOrDead(attackTarget))
 		{
 			setTarget(null);
@@ -286,13 +285,11 @@ public class SummonAI extends PlayableAI implements Runnable
 		if (_startAvoid)
 		{
 			_startAvoid = false;
-			
 			if (!_clientMoving && !_actor.isDead() && !_actor.isMovementDisabled() && (_actor.getMoveSpeed() > 0))
 			{
 				final int ownerX = ((Summon) _actor).getOwner().getX();
 				final int ownerY = ((Summon) _actor).getOwner().getY();
 				final double angle = Math.toRadians(Rnd.get(-90, 90)) + Math.atan2(ownerY - _actor.getY(), ownerX - _actor.getX());
-				
 				final int targetX = ownerX + (int) (AVOID_RADIUS * Math.cos(angle));
 				final int targetY = ownerY + (int) (AVOID_RADIUS * Math.sin(angle));
 				if (GeoEngine.getInstance().canMoveToTarget(_actor.getX(), _actor.getY(), _actor.getZ(), targetX, targetY, _actor.getZ(), _actor.getInstanceWorld()))

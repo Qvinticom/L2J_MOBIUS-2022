@@ -112,7 +112,6 @@ public class DailyTaskManager extends AbstractEventManager<AbstractEvent<?>>
 		for (PlayerInstance player : World.getInstance().getPlayers())
 		{
 			player.setVitalityPoints(PlayerStat.MAX_VITALITY_POINTS, false);
-			
 			for (SubClass subclass : player.getSubClasses().values())
 			{
 				subclass.setVitalityPoints(PlayerStat.MAX_VITALITY_POINTS);

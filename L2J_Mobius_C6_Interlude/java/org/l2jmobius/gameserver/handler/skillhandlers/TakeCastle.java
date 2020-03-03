@@ -48,7 +48,6 @@ public class TakeCastle implements ISkillHandler
 		}
 		
 		final PlayerInstance player = (PlayerInstance) creature;
-		
 		if ((player.getClan() == null) || (player.getClan().getLeaderId() != player.getObjectId()))
 		{
 			return;
@@ -56,7 +55,6 @@ public class TakeCastle implements ISkillHandler
 		
 		final Castle castle = CastleManager.getInstance().getCastle(player);
 		final Fort fort = FortManager.getInstance().getFort(player);
-		
 		if ((castle != null) && (fort == null))
 		{
 			if (!checkIfOkToCastSealOfRule(player, castle, true))
@@ -110,7 +108,6 @@ public class TakeCastle implements ISkillHandler
 	{
 		final Castle castle = CastleManager.getInstance().getCastle(creature);
 		final Fort fort = FortManager.getInstance().getFort(creature);
-		
 		if ((fort != null) && (castle == null))
 		{
 			return checkIfOkToCastFlagDisplay(creature, fort, isCheckOnly);

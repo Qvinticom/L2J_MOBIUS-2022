@@ -37,7 +37,6 @@ public class ChangeWaitType implements IClientOutgoingPacket
 	{
 		_objectId = creature.getObjectId();
 		_moveType = newMoveType;
-		
 		_x = creature.getX();
 		_y = creature.getY();
 		_z = creature.getZ();

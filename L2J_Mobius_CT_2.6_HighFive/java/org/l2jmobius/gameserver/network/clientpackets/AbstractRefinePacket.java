@@ -447,7 +447,6 @@ public abstract class AbstractRefinePacket implements IClientIncomingPacket
 		{
 			return false;
 		}
-		
 		return true;
 	}
 	

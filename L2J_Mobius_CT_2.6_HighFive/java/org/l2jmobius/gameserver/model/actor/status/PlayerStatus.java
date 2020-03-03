@@ -104,11 +104,9 @@ public class PlayerStatus extends PlayableStatus
 		int fullValue = (int) value;
 		int tDmg = 0;
 		int mpDam = 0;
-		
 		if ((attacker != null) && (attacker != getActiveChar()))
 		{
 			final PlayerInstance attackerPlayer = attacker.getActingPlayer();
-			
 			if (attackerPlayer != null)
 			{
 				if (attackerPlayer.isGM() && !attackerPlayer.getAccessLevel().canGiveDamage())
@@ -152,7 +150,6 @@ public class PlayerStatus extends PlayableStatus
 			}
 			
 			mpDam = ((int) value * (int) getActiveChar().getStat().calcStat(Stat.MANA_SHIELD_PERCENT, 0, null, null)) / 100;
-			
 			if (mpDam > 0)
 			{
 				mpDam = (int) (value - mpDam);
@@ -177,7 +174,6 @@ public class PlayerStatus extends PlayableStatus
 			if ((caster != null) && (getActiveChar().getParty() != null) && Util.checkIfInRange(1000, getActiveChar(), caster, true) && !caster.isDead() && (getActiveChar() != caster) && getActiveChar().getParty().getMembers().contains(caster))
 			{
 				int transferDmg = Math.min((int) caster.getCurrentHp() - 1, ((int) value * (int) getActiveChar().getStat().calcStat(Stat.TRANSFER_DAMAGE_TO_PLAYER, 0, null, null)) / 100);
-				
 				if (transferDmg > 0)
 				{
 					int membersInRange = 0;
@@ -318,7 +314,6 @@ public class PlayerStatus extends PlayableStatus
 	public boolean setCurrentHp(double newHp, boolean broadcastPacket)
 	{
 		final boolean result = super.setCurrentHp(newHp, broadcastPacket);
-		
 		if (!Config.DISABLE_TUTORIAL && (getCurrentHp() <= (getActiveChar().getStat().getMaxHp() * .3)))
 		{
 			final QuestState qs = getActiveChar().getQuestState("Q00255_Tutorial");
@@ -327,7 +322,6 @@ public class PlayerStatus extends PlayableStatus
 				qs.getQuest().notifyEvent("CE45", null, getActiveChar());
 			}
 		}
-		
 		return result;
 	}
 	

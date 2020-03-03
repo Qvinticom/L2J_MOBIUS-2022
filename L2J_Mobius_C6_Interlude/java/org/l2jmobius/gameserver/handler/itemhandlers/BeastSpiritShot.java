@@ -53,7 +53,6 @@ public class BeastSpiritShot implements IItemHandler
 		}
 		
 		PlayerInstance activeOwner = null;
-		
 		if (playable instanceof Summon)
 		{
 			activeOwner = ((Summon) playable).getOwner();
@@ -86,15 +85,12 @@ public class BeastSpiritShot implements IItemHandler
 		final int itemId = item.getItemId();
 		final boolean isBlessed = itemId == 6647;
 		int shotConsumption = 1;
-		
 		ItemInstance weaponInst = null;
 		Weapon weaponItem = null;
-		
 		if ((activePet instanceof PetInstance) && !(activePet instanceof BabyPetInstance))
 		{
 			weaponInst = ((PetInstance) activePet).getActiveWeaponInstance();
 			weaponItem = ((PetInstance) activePet).getActiveWeaponItem();
-			
 			if (weaponInst == null)
 			{
 				activeOwner.sendPacket(SystemMessageId.YOU_MAY_NOT_USE_SPIRITSHOTS);
@@ -109,7 +105,6 @@ public class BeastSpiritShot implements IItemHandler
 			
 			final int shotCount = item.getCount();
 			shotConsumption = weaponItem.getSpiritShotCount();
-			
 			if (shotConsumption == 0)
 			{
 				activeOwner.sendPacket(SystemMessageId.YOU_MAY_NOT_USE_SPIRITSHOTS);

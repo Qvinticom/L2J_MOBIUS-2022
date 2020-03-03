@@ -164,7 +164,6 @@ public class Q00660_AidingTheFloranVillage extends Quest
 				else
 				{
 					tradeItems(player, 100, itemCount1, itemCount2, itemCount3);
-					
 					if (getRandom(99) > 50)
 					{
 						giveItems(player, SCROLL_ENCHANT_ARMOR_D_GRADE, 1);
@@ -192,7 +191,6 @@ public class Q00660_AidingTheFloranVillage extends Quest
 				else
 				{
 					tradeItems(player, 200, itemCount1, itemCount2, itemCount3);
-					
 					if (getRandom(100) >= 50)
 					{
 						if (getRandom(2) == 0)
@@ -227,7 +225,6 @@ public class Q00660_AidingTheFloranVillage extends Quest
 				else
 				{
 					tradeItems(player, 500, itemCount1, itemCount2, itemCount3);
-					
 					if (getRandom(100) >= 50)
 					{
 						giveItems(player, SCROLL_ENCHANT_ARMOR_D_GRADE, 1);
@@ -295,7 +292,6 @@ public class Q00660_AidingTheFloranVillage extends Quest
 	{
 		final QuestState qs = getQuestState(player, true);
 		String htmltext = getNoQuestMsg(player);
-		
 		if (qs.isCreated())
 		{
 			switch (npc.getId())

@@ -232,7 +232,6 @@ public class PlayerAI extends PlayableAI
 	{
 		_clientMovingToPawnOffset = 0;
 		_clientMoving = false;
-		
 		super.clientNotifyDead();
 	}
 	

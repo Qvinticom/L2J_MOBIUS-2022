@@ -45,17 +45,13 @@ public class FriendsBoard implements IParseBoardHandler
 		if (command.equals("_friendlist"))
 		{
 			CommunityBoardHandler.getInstance().addBypass(player, "Friends List", command);
-			
 			final String html = HtmCache.getInstance().getHtm(player, "data/html/CommunityBoard/friends_list.html");
-			
 			CommunityBoardHandler.separateAndSend(html, player);
 		}
 		else if (command.equals("_friendblocklist"))
 		{
 			CommunityBoardHandler.getInstance().addBypass(player, "Ignore list", command);
-			
 			final String html = HtmCache.getInstance().getHtm(player, "data/html/CommunityBoard/friends_block_list.html");
-			
 			CommunityBoardHandler.separateAndSend(html, player);
 		}
 		return true;

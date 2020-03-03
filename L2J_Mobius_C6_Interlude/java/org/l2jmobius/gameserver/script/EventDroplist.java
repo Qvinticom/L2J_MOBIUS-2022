@@ -67,13 +67,11 @@ public class EventDroplist
 	public void addGlobalDrop(int[] items, int[] count, int chance, DateRange range)
 	{
 		final DateDrop date = new DateDrop();
-		
 		date.dateRange = range;
 		date.items = items;
 		date.min = count[0];
 		date.max = count[1];
 		date.chance = chance;
-		
 		_allNpcDateDrops.add(date);
 	}
 	

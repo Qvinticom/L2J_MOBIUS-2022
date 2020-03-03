@@ -419,23 +419,17 @@ public class Kelbim extends AbstractNpcAI
 	public String onKill(Npc npc, PlayerInstance killer, boolean isPet)
 	{
 		_bossStage = 7;
-		
 		addSpawn(TELEPORT_DEVICE, -54331, 58331, -264, 16292, false, 1800000);
-		
 		notifyEvent("cancel_timers", null, null);
-		
 		closeDoor(DOOR1, 0);
 		closeDoor(DOOR2, 0);
-		
 		GrandBossManager.getInstance().setBossStatus(KELBIM, DEAD);
 		final long respawnTime = (Config.KELBIM_SPAWN_INTERVAL + getRandom(-Config.KELBIM_SPAWN_RANDOM, Config.KELBIM_SPAWN_RANDOM)) * 3600000;
 		final StatSet info = GrandBossManager.getInstance().getStatSet(KELBIM);
 		info.set("respawn_time", System.currentTimeMillis() + respawnTime);
 		GrandBossManager.getInstance().setStatSet(KELBIM, info);
-		
 		startQuestTimer("unlock_kelbim", respawnTime, null, null);
 		startQuestTimer("end_kelbim", 1800000, null, null);
-		
 		return super.onKill(npc, killer, isPet);
 	}
 	

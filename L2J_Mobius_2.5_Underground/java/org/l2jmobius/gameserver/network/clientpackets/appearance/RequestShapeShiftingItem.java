@@ -61,7 +61,6 @@ public class RequestShapeShiftingItem implements IClientIncomingPacket
 		}
 		
 		final ShapeShiftingItemRequest request = player.getRequest(ShapeShiftingItemRequest.class);
-		
 		if (player.isInStoreMode() || player.isCrafting() || player.isProcessingRequest() || player.isProcessingTransaction() || (request == null))
 		{
 			client.sendPacket(ExShapeShiftingResult.CLOSE);
@@ -72,7 +71,6 @@ public class RequestShapeShiftingItem implements IClientIncomingPacket
 		final PlayerInventory inventory = player.getInventory();
 		final ItemInstance targetItem = inventory.getItemByObjectId(_targetItemObjId);
 		ItemInstance stone = request.getAppearanceStone();
-		
 		if ((targetItem == null) || (stone == null))
 		{
 			client.sendPacket(ExShapeShiftingResult.CLOSE);
@@ -125,7 +123,6 @@ public class RequestShapeShiftingItem implements IClientIncomingPacket
 		}
 		
 		final ItemInstance extractItem = request.getAppearanceExtractItem();
-		
 		int extracItemId = 0;
 		if ((appearanceStone.getType() != AppearanceType.RESTORE) && (appearanceStone.getType() != AppearanceType.FIXED))
 		{

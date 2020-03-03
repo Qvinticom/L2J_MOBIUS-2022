@@ -152,7 +152,6 @@ public class Sailren extends AbstractNpcAI
 				sailren.setInvul(true);
 				sailren.setImmobilized(true);
 				zone.broadcastPacket(new SpecialCamera(movieNpc, 60, 110, 30, 4000, 1500, 20000, 0, 65, 1, 0, 0));
-				
 				startQuestTimer("ATTACK", 24600, sailren, null);
 				startQuestTimer("ANIMATION", 2000, movieNpc, null);
 				startQuestTimer("CAMERA_1", 4100, movieNpc, null);

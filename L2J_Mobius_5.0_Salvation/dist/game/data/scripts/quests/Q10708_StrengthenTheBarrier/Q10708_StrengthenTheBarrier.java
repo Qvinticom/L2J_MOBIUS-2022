@@ -55,7 +55,6 @@ public class Q10708_StrengthenTheBarrier extends Quest
 	public String onAdvEvent(String event, Npc npc, PlayerInstance player)
 	{
 		final QuestState qs = getQuestState(player, false);
-		
 		if (event.equals("activateKey"))
 		{
 			if ((qs != null) && qs.isCond(1))

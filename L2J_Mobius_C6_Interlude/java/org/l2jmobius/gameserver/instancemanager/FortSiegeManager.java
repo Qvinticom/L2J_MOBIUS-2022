@@ -191,16 +191,13 @@ public class FortSiegeManager
 			// Siege spawns settings
 			_commanderSpawnList = new HashMap<>();
 			_flagList = new HashMap<>();
-			
 			for (Fort fort : FortManager.getInstance().getForts())
 			{
 				final List<SiegeSpawn> commanderSpawns = new ArrayList<>();
 				final List<SiegeSpawn> flagSpawns = new ArrayList<>();
-				
 				for (int i = 1; i < 5; i++)
 				{
 					final String _spawnParams = siegeSettings.getProperty(fort.getName() + "Commander" + i, "");
-					
 					if (_spawnParams.length() == 0)
 					{
 						break;
@@ -215,7 +212,6 @@ public class FortSiegeManager
 						final int z = Integer.parseInt(st.nextToken());
 						final int heading = Integer.parseInt(st.nextToken());
 						final int npc_id = Integer.parseInt(st.nextToken());
-						
 						commanderSpawns.add(new SiegeSpawn(fort.getFortId(), x, y, z, heading, npc_id));
 					}
 					catch (Exception e)
@@ -229,7 +225,6 @@ public class FortSiegeManager
 				for (int i = 1; i < 4; i++)
 				{
 					final String _spawnParams = siegeSettings.getProperty(fort.getName() + "Flag" + i, "");
-					
 					if (_spawnParams.length() == 0)
 					{
 						break;
@@ -243,7 +238,6 @@ public class FortSiegeManager
 						final int y = Integer.parseInt(st.nextToken());
 						final int z = Integer.parseInt(st.nextToken());
 						final int flag_id = Integer.parseInt(st.nextToken());
-						
 						flagSpawns.add(new SiegeSpawn(fort.getFortId(), x, y, z, 0, flag_id));
 					}
 					catch (Exception e)
@@ -441,7 +435,6 @@ public class FortSiegeManager
 				return true;
 			}
 		}
-		
 		return false;
 	}
 	

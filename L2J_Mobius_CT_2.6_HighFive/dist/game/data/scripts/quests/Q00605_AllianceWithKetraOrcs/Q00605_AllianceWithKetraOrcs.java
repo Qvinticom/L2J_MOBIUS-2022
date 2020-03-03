@@ -306,7 +306,6 @@ public class Q00605_AllianceWithKetraOrcs extends Quest
 	{
 		final QuestState qs = getQuestState(player, true);
 		String htmltext = getNoQuestMsg(player);
-		
 		switch (qs.getState())
 		{
 			case State.CREATED:

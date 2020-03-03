@@ -226,7 +226,6 @@ public class NpcLocationInfo extends Quest
 		{
 			htmltext = null;
 			final int npcId = Integer.parseInt(event);
-			
 			if (Util.contains(RADARS, npcId))
 			{
 				for (Spawn spawn : SpawnTable.getInstance().getSpawnTable().values())

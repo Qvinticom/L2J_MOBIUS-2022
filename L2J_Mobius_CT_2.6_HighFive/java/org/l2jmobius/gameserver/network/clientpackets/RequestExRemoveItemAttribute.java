@@ -52,7 +52,6 @@ public class RequestExRemoveItemAttribute implements IClientIncomingPacket
 		}
 		
 		final ItemInstance targetItem = player.getInventory().getItemByObjectId(_objectId);
-		
 		if (targetItem == null)
 		{
 			return;
@@ -162,7 +161,6 @@ public class RequestExRemoveItemAttribute implements IClientIncomingPacket
 				break;
 			}
 		}
-		
 		return _price;
 	}
 }

@@ -95,7 +95,6 @@ public class CharInfo implements IClientOutgoingPacket
 		_heading = _player.getHeading();
 		_mAtkSpd = _player.getMAtkSpd();
 		_pAtkSpd = (int) _player.getPAtkSpd();
-		
 		_moveMultiplier = player.getMovementSpeedMultiplier();
 		_runSpd = (int) Math.round(player.getRunSpeed() / _moveMultiplier);
 		_walkSpd = (int) Math.round(player.getWalkSpeed() / _moveMultiplier);

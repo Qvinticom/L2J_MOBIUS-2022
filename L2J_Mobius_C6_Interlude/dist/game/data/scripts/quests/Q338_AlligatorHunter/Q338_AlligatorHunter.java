@@ -58,7 +58,6 @@ public class Q338_AlligatorHunter extends Quest
 		else if (event.equals("30892-05.htm"))
 		{
 			final int pelts = st.getQuestItemsCount(ALLIGATOR_PELT);
-			
 			int reward = pelts * 60;
 			if (pelts > 10)
 			{

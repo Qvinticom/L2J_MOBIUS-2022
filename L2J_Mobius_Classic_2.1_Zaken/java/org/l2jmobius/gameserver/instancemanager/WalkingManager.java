@@ -97,7 +97,6 @@ public class WalkingManager implements IXmlReader
 				final String routeName = parseString(d.getAttributes(), "name");
 				final boolean repeat = parseBoolean(d.getAttributes(), "repeat");
 				final String repeatStyle = d.getAttributes().getNamedItem("repeatStyle").getNodeValue().toLowerCase();
-				
 				final byte repeatType;
 				switch (repeatStyle)
 				{
@@ -141,7 +140,6 @@ public class WalkingManager implements IXmlReader
 						final boolean run = parseBoolean(attrs, "run");
 						NpcStringId npcString = null;
 						String chatString = null;
-						
 						Node node = attrs.getNamedItem("string");
 						if (node != null)
 						{
@@ -185,7 +183,6 @@ public class WalkingManager implements IXmlReader
 							final int x = Integer.parseInt(attrs.getNamedItem("spawnX").getNodeValue());
 							final int y = Integer.parseInt(attrs.getNamedItem("spawnY").getNodeValue());
 							final int z = Integer.parseInt(attrs.getNamedItem("spawnZ").getNodeValue());
-							
 							if (NpcData.getInstance().getTemplate(npcId) != null)
 							{
 								final NpcRoutesHolder holder = _routesToAttach.containsKey(npcId) ? _routesToAttach.get(npcId) : new NpcRoutesHolder();
@@ -392,14 +389,12 @@ public class WalkingManager implements IXmlReader
 	public void stopMoving(Npc npc, boolean suspend, boolean stoppedByAttack)
 	{
 		final MonsterInstance monster = npc.isMonster() ? ((MonsterInstance) npc).getLeader() == null ? (MonsterInstance) npc : ((MonsterInstance) npc).getLeader() : null;
-		
 		if (((monster != null) && !isRegistered(monster)) || !isRegistered(npc))
 		{
 			return;
 		}
 		
 		final WalkInfo walk = monster != null ? _activeRoutes.get(monster.getObjectId()) : _activeRoutes.get(npc.getObjectId());
-		
 		walk.setSuspended(suspend);
 		walk.setStoppedByAttack(stoppedByAttack);
 		
@@ -444,7 +439,6 @@ public class WalkingManager implements IXmlReader
 		
 		walk.calculateNextNode(npc);
 		walk.setBlocked(true); // prevents to be ran from walk check task, if there is delay in this node.
-		
 		if (node.getNpcString() != null)
 		{
 			npc.broadcastSay(ChatType.NPC_GENERAL, node.getNpcString());

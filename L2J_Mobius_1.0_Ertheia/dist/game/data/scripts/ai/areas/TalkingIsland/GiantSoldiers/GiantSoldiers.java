@@ -60,7 +60,6 @@ public class GiantSoldiers extends AbstractNpcAI
 		}
 		
 		String htmltext = null;
-		
 		switch (event)
 		{
 			case "CHAT_MESSAGE_1A":

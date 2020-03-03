@@ -107,7 +107,6 @@ public class TvTEvent
 		try
 		{
 			_npcSpawn = new Spawn(Config.TVT_EVENT_PARTICIPATION_NPC_ID);
-			
 			_npcSpawn.setXYZ(Config.TVT_EVENT_PARTICIPATION_NPC_COORDINATES[0], Config.TVT_EVENT_PARTICIPATION_NPC_COORDINATES[1], Config.TVT_EVENT_PARTICIPATION_NPC_COORDINATES[2]);
 			_npcSpawn.setAmount(1);
 			_npcSpawn.setHeading(Config.TVT_EVENT_PARTICIPATION_NPC_COORDINATES[3]);
@@ -360,7 +359,6 @@ public class TvTEvent
 				if (ItemTable.getInstance().getTemplate(reward[0]).isStackable())
 				{
 					inv.addItem("TvT Event", reward[0], reward[1], playerInstance, playerInstance);
-					
 					if (reward[1] > 1)
 					{
 						systemMessage = new SystemMessage(SystemMessageId.YOU_HAVE_EARNED_S2_S1_S);
@@ -389,7 +387,6 @@ public class TvTEvent
 			
 			final StatusUpdate statusUpdate = new StatusUpdate(playerInstance);
 			final NpcHtmlMessage npcHtmlMessage = new NpcHtmlMessage();
-			
 			statusUpdate.addAttribute(StatusUpdate.CUR_LOAD, playerInstance.getCurrentLoad());
 			npcHtmlMessage.setHtml(HtmCache.getInstance().getHtm(playerInstance, HTML_PATH + "Reward.html"));
 			playerInstance.sendPacket(statusUpdate);
@@ -498,7 +495,6 @@ public class TvTEvent
 			}
 			return true;
 		}
-		
 		return false;
 	}
 	
@@ -521,12 +517,10 @@ public class TvTEvent
 	{
 		final int itemId = Config.TVT_EVENT_PARTICIPATION_FEE[0];
 		final int itemNum = Config.TVT_EVENT_PARTICIPATION_FEE[1];
-		
 		if ((itemId == 0) || (itemNum == 0))
 		{
 			return "-";
 		}
-		
 		return itemNum + " " + ItemTable.getInstance().getTemplate(itemId).getName();
 	}
 	
@@ -633,7 +627,6 @@ public class TvTEvent
 		}
 		
 		final byte teamId = getParticipantTeamId(playerInstance.getObjectId());
-		
 		if (teamId == -1)
 		{
 			return;
@@ -677,7 +670,6 @@ public class TvTEvent
 		
 		final byte playerTeamId = getParticipantTeamId(playerInstance.getObjectId());
 		final byte targetedPlayerTeamId = getParticipantTeamId(targetedPlayerObjectId);
-		
 		if (((playerTeamId != -1) && (targetedPlayerTeamId == -1)) || ((playerTeamId == -1) && (targetedPlayerTeamId != -1)))
 		{
 			return false;
@@ -786,25 +778,21 @@ public class TvTEvent
 		}
 		
 		final byte killedTeamId = getParticipantTeamId(killedPlayerInstance.getObjectId());
-		
 		if (killedTeamId == -1)
 		{
 			return;
 		}
 		
 		new TvTEventTeleporter(killedPlayerInstance, _teams[killedTeamId].getCoordinates(), false, false);
-		
 		if (killerCharacter == null)
 		{
 			return;
 		}
 		
 		PlayerInstance killerPlayerInstance = null;
-		
 		if (killerCharacter.isPet() || killerCharacter.isServitor())
 		{
 			killerPlayerInstance = ((Summon) killerCharacter).getOwner();
-			
 			if (killerPlayerInstance == null)
 			{
 				return;
@@ -820,11 +808,9 @@ public class TvTEvent
 		}
 		
 		final byte killerTeamId = getParticipantTeamId(killerPlayerInstance.getObjectId());
-		
 		if ((killerTeamId != -1) && (killedTeamId != -1) && (killerTeamId != killedTeamId))
 		{
 			final TvTEventTeam killerTeam = _teams[killerTeamId];
-			
 			killerTeam.increasePoints();
 			
 			final CreatureSay cs = new CreatureSay(killerPlayerInstance, ChatType.WHISPER, killerPlayerInstance.getName(), "I have killed " + killedPlayerInstance.getName() + "!");
@@ -941,7 +927,6 @@ public class TvTEvent
 		{
 			isInactive = _state == EventState.INACTIVE;
 		}
-		
 		return isInactive;
 	}
 	
@@ -958,7 +943,6 @@ public class TvTEvent
 		{
 			isInactivating = _state == EventState.INACTIVATING;
 		}
-		
 		return isInactivating;
 	}
 	
@@ -975,7 +959,6 @@ public class TvTEvent
 		{
 			isParticipating = _state == EventState.PARTICIPATING;
 		}
-		
 		return isParticipating;
 	}
 	
@@ -992,7 +975,6 @@ public class TvTEvent
 		{
 			isStarting = _state == EventState.STARTING;
 		}
-		
 		return isStarting;
 	}
 	
@@ -1009,7 +991,6 @@ public class TvTEvent
 		{
 			isStarted = _state == EventState.STARTED;
 		}
-		
 		return isStarted;
 	}
 	
@@ -1026,7 +1007,6 @@ public class TvTEvent
 		{
 			isRewarding = _state == EventState.REWARDING;
 		}
-		
 		return isRewarding;
 	}
 	

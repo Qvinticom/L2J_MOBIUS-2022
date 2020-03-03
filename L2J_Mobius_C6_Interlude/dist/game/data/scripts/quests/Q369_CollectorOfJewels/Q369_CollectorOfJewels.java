@@ -137,7 +137,6 @@ public class Q369_CollectorOfJewels extends Quest
 				final int cond = st.getInt("cond");
 				final int flare = st.getQuestItemsCount(FLARE_SHARD);
 				final int freezing = st.getQuestItemsCount(FREEZING_SHARD);
-				
 				if (cond == 1)
 				{
 					htmltext = "30376-04.htm";
@@ -187,7 +186,6 @@ public class Q369_CollectorOfJewels extends Quest
 		
 		final int cond = st.getInt("cond");
 		final int[] drop = DROPLIST.get(npc.getNpcId());
-		
 		if (cond == 1)
 		{
 			if (st.dropItems(drop[0], 1, 50, drop[1]) && (st.getQuestItemsCount((drop[0] == FLARE_SHARD) ? FREEZING_SHARD : FLARE_SHARD) >= 50))

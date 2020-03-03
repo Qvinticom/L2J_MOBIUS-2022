@@ -131,16 +131,13 @@ public class NpcTemplate extends CreatureTemplate implements IIdentifiable
 		_usingServerSideTitle = set.getBoolean("usingServerSideTitle", false);
 		setRace(set.getEnum("race", Race.class, Race.NONE));
 		_sex = set.getEnum("sex", Sex.class, Sex.ETC);
-		
 		_chestId = set.getInt("chestId", 0);
 		_rhandId = set.getInt("rhandId", 0);
 		_lhandId = set.getInt("lhandId", 0);
 		_weaponEnchant = set.getInt("weaponEnchant", 0);
-		
 		_exp = set.getDouble("exp", 0);
 		_sp = set.getDouble("sp", 0);
 		_raidPoints = set.getDouble("raidPoints", 0);
-		
 		_unique = set.getBoolean("unique", false);
 		_attackable = set.getBoolean("attackable", true);
 		_targetable = set.getBoolean("targetable", true);
@@ -158,9 +155,7 @@ public class NpcTemplate extends CreatureTemplate implements IIdentifiable
 		_passableDoor = set.getBoolean("passableDoor", false);
 		_hasSummoner = set.getBoolean("hasSummoner", false);
 		_canBeSown = set.getBoolean("canBeSown", false);
-		
 		_corpseTime = set.getInt("corpseTime", Config.DEFAULT_CORPSE_TIME);
-		
 		_aiType = set.getEnum("aiType", AIType.class, AIType.FIGHTER);
 		
 		// L2J aggro range tempfix
@@ -178,18 +173,14 @@ public class NpcTemplate extends CreatureTemplate implements IIdentifiable
 		_dodge = set.getInt("dodge", 0);
 		_isChaos = set.getBoolean("isChaos", false);
 		_isAggressive = set.getBoolean("isAggressive", true);
-		
 		_soulShot = set.getInt("soulShot", 0);
 		_spiritShot = set.getInt("spiritShot", 0);
 		_soulShotChance = set.getInt("shotShotChance", 0);
 		_spiritShotChance = set.getInt("spiritShotChance", 0);
-		
 		_minSkillChance = set.getInt("minSkillChance", 7);
 		_maxSkillChance = set.getInt("maxSkillChance", 15);
-		
 		_collisionRadiusGrown = set.getDouble("collisionRadiusGrown", 0);
 		_collisionHeightGrown = set.getDouble("collisionHeightGrown", 0);
-		
 		if (Config.ENABLE_NPC_STAT_MULTIPLIERS) // Custom NPC Stat Multipliers
 		{
 			switch (_type)
@@ -536,7 +527,6 @@ public class NpcTemplate extends CreatureTemplate implements IIdentifiable
 	{
 		// Using local variable for the sake of reloading since it can be turned to null.
 		final Set<Integer> clans = _clans;
-		
 		if (clans == null)
 		{
 			return false;
@@ -573,7 +563,6 @@ public class NpcTemplate extends CreatureTemplate implements IIdentifiable
 	{
 		// Using local variable for the sake of reloading since it can be turned to null.
 		final Set<Integer> clanSet = _clans;
-		
 		if ((clanSet == null) || (clans == null))
 		{
 			return false;

@@ -130,7 +130,6 @@ public class Q10575_LetsGoFishing extends Quest
 	{
 		final QuestState qs = getQuestState(player, true);
 		String htmltext = getNoQuestMsg(player);
-		
 		switch (qs.getState())
 		{
 			case State.CREATED:
@@ -162,7 +161,6 @@ public class Q10575_LetsGoFishing extends Quest
 		{
 			int count = qs.getInt(COUNT_VAR);
 			qs.set(COUNT_VAR, ++count);
-			
 			if (count >= 5)
 			{
 				qs.setCond(3, true);

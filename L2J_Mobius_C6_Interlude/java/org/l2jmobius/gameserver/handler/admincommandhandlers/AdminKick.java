@@ -38,7 +38,6 @@ public class AdminKick implements IAdminCommandHandler
 		if (command.startsWith("admin_kick"))
 		{
 			final StringTokenizer st = new StringTokenizer(command);
-			
 			if (activeChar.getTarget() != null)
 			{
 				BuilderUtil.sendSysMessage(activeChar, "Type //kick name");
@@ -50,7 +49,6 @@ public class AdminKick implements IAdminCommandHandler
 				
 				final String player = st.nextToken();
 				final PlayerInstance plyr = World.getInstance().getPlayer(player);
-				
 				if (plyr != null)
 				{
 					plyr.logout(true);
@@ -68,7 +66,6 @@ public class AdminKick implements IAdminCommandHandler
 		if (command.startsWith("admin_kick_non_gm"))
 		{
 			int counter = 0;
-			
 			for (PlayerInstance player : World.getInstance().getAllPlayers())
 			{
 				if (!player.isGM())

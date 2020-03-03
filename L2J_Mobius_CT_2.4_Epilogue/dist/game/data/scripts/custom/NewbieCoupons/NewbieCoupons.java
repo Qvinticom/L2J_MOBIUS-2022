@@ -150,7 +150,6 @@ public class NewbieCoupons extends AbstractNpcAI
 	public String onTalk(Npc npc, PlayerInstance player)
 	{
 		getQuestState(player, true);
-		
 		return "30598.htm";
 	}
 	

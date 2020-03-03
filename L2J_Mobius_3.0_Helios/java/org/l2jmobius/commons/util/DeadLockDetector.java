@@ -56,7 +56,6 @@ public class DeadLockDetector extends Thread
 			try
 			{
 				final long[] ids = tmx.findDeadlockedThreads();
-				
 				if (ids != null)
 				{
 					deadlock = true;

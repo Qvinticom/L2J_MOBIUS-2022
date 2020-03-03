@@ -242,7 +242,6 @@ public class AdminAdmin implements IAdminCommandHandler
 	{
 		int mode = 0;
 		String filename = null;
-		
 		if ((command != null) && (command.length() > 11))
 		{
 			final String mode_s = command.substring(11);

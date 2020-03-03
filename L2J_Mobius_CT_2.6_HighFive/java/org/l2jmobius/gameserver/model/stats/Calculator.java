@@ -77,7 +77,6 @@ public class Calculator
 		
 		final AbstractFunction[] funcs1 = c1._functions;
 		final AbstractFunction[] funcs2 = c2._functions;
-		
 		if (funcs1 == funcs2)
 		{
 			return true;
@@ -101,7 +100,6 @@ public class Calculator
 			}
 		}
 		return true;
-		
 	}
 	
 	/**
@@ -121,17 +119,14 @@ public class Calculator
 	{
 		final AbstractFunction[] funcs = _functions;
 		final AbstractFunction[] tmp = new AbstractFunction[funcs.length + 1];
-		
 		final int order = function.getOrder();
 		int i;
-		
 		for (i = 0; (i < funcs.length) && (order >= funcs[i].getOrder()); i++)
 		{
 			tmp[i] = funcs[i];
 		}
 		
 		tmp[i] = function;
-		
 		for (; i < funcs.length; i++)
 		{
 			tmp[i + 1] = funcs[i];
@@ -148,9 +143,7 @@ public class Calculator
 	{
 		final AbstractFunction[] funcs = _functions;
 		final AbstractFunction[] tmp = new AbstractFunction[funcs.length - 1];
-		
 		int i;
-		
 		for (i = 0; (i < (funcs.length - 1)) && (function != funcs[i]); i++)
 		{
 			tmp[i] = funcs[i];

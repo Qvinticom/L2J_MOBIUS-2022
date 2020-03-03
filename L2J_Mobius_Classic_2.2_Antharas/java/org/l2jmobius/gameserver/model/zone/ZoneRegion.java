@@ -57,7 +57,6 @@ public class ZoneRegion
 	{
 		// do NOT update the world region while the character is still in the process of teleporting
 		// Once the teleport is COMPLETED, revalidation occurs safely, at that time.
-		
 		if (creature.isTeleporting())
 		{
 			return;
@@ -84,7 +83,6 @@ public class ZoneRegion
 		final int down = y - range;
 		final int left = x + range;
 		final int right = x - range;
-		
 		for (ZoneType e : _zones.values())
 		{
 			if (e instanceof PeaceZone)

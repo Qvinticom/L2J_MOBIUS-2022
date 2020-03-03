@@ -106,12 +106,10 @@ public class Weapon extends Item
 		final String[] reducedMpConsume = set.getString("reduced_mp_consume", "").split(",");
 		_reducedMpConsumeChance = (reducedMpConsume.length == 2) ? Integer.parseInt(reducedMpConsume[0]) : 0;
 		_reducedMpConsume = (reducedMpConsume.length == 2) ? Integer.parseInt(reducedMpConsume[1]) : 0;
-		
 		String skill = set.getString("enchant4_skill", null);
 		if (skill != null)
 		{
 			final String[] info = skill.split("-");
-			
 			if ((info != null) && (info.length == 2))
 			{
 				int id = 0;

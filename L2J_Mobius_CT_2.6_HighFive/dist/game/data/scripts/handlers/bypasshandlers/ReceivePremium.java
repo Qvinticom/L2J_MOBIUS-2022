@@ -44,7 +44,6 @@ public class ReceivePremium implements IBypassHandler
 		}
 		
 		player.sendPacket(new ExGetPremiumItemList(player));
-		
 		return true;
 	}
 	

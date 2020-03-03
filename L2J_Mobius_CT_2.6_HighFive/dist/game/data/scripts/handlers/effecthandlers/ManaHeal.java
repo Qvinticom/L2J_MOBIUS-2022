@@ -56,7 +56,6 @@ public class ManaHeal extends AbstractEffect
 		}
 		
 		double amount = _power;
-		
 		if (!info.getSkill().isStatic())
 		{
 			amount = target.calcStat(Stat.MANA_CHARGE, amount, null, null);

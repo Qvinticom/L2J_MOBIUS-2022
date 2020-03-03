@@ -127,7 +127,6 @@ public class KartiaHelperAdolph extends AbstractNpcAI
 					if (!monsterList.isEmpty())
 					{
 						final MonsterInstance monster = monsterList.get(getRandom(monsterList.size()));
-						
 						if (monster.isTargetable() && GeoEngine.getInstance().canSeeTarget(npc, monster) && !CommonUtil.contains(MIRRORS, monster.getId()) && !CommonUtil.contains(KARTIA_FRIENDS, monster.getId()))
 						{
 							addAttackDesire(npc, monster);
@@ -168,7 +167,6 @@ public class KartiaHelperAdolph extends AbstractNpcAI
 			final SkillHolder lowHpSkill = instParams.getSkillHolder("adolphUltimate");
 			final int numberOfActiveSkills = 5;
 			final int randomSkill = getRandom(numberOfActiveSkills + 1);
-			
 			if ((lowHpSkill != null) && (npc.getCurrentHpPercent() < 50))
 			{
 				// NPC has low HP Skill and HP is < 50% HP

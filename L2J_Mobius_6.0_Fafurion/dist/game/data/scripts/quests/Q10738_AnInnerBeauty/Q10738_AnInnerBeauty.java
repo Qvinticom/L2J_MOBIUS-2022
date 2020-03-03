@@ -44,7 +44,6 @@ public class Q10738_AnInnerBeauty extends Quest
 		super(10738);
 		addStartNpc(GRAKON);
 		addTalkId(GRAKON, EVNA);
-		
 		addCondRace(Race.ERTHEIA, "");
 		addCondLevel(MIN_LEVEL, MAX_LEVEL, "33947-00.htm");
 		addCondCompletedQuest(Q10737_GrakonsWarehouse.class.getSimpleName(), "33947-00.htm");
@@ -99,7 +98,6 @@ public class Q10738_AnInnerBeauty extends Quest
 	{
 		final QuestState qs = getQuestState(player, true);
 		String htmltext = getNoQuestMsg(player);
-		
 		if (qs.isCompleted())
 		{
 			htmltext = getAlreadyCompletedMsg(player);

@@ -162,7 +162,6 @@ public class Q00702_ATrapForRevenge extends Quest
 		{
 			final int i0 = getRandom(1000);
 			final int i1 = getRandom(1000);
-			
 			if ((i0 >= 500) && (i1 >= 600))
 			{
 				giveAdena(player, getRandom(49917) + 125000, false);
@@ -379,7 +378,6 @@ public class Q00702_ATrapForRevenge extends Quest
 	{
 		final QuestState qs = getQuestState(player, true);
 		String htmltext = getNoQuestMsg(player);
-		
 		if (npc.getId() == PLENOS)
 		{
 			switch (qs.getState())

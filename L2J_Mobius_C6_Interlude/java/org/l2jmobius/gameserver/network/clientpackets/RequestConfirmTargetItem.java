@@ -42,7 +42,6 @@ public class RequestConfirmTargetItem extends GameClientPacket
 	{
 		final PlayerInstance player = getClient().getPlayer();
 		final ItemInstance item = (ItemInstance) World.getInstance().findObject(_itemObjId);
-		
 		if (item == null)
 		{
 			return;
@@ -57,7 +56,6 @@ public class RequestConfirmTargetItem extends GameClientPacket
 		// check if the item is augmentable
 		final int itemGrade = item.getItem().getItemGrade();
 		final int itemType = item.getItem().getType2();
-		
 		if (item.isAugmented())
 		{
 			player.sendPacket(SystemMessageId.ONCE_AN_ITEM_IS_AUGMENTED_IT_CANNOT_BE_AUGMENTED_AGAIN);

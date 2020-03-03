@@ -85,7 +85,6 @@ public class AdminFence implements IAdminCommandHandler
 				{
 					final int objId = Integer.parseInt(st.nextToken());
 					final int fenceTypeOrdinal = Integer.parseInt(st.nextToken());
-					
 					if ((fenceTypeOrdinal < 0) || (fenceTypeOrdinal >= FenceState.values().length))
 					{
 						BuilderUtil.sendSysMessage(activeChar, "Specified FenceType is out of range. Only 0-" + (FenceState.values().length - 1) + " are permitted.");
@@ -214,7 +213,6 @@ public class AdminFence implements IAdminCommandHandler
 		html.setFile("data/html/admin/fences.htm");
 		html.replace("%pages%", result.getPagerTemplate().toString());
 		html.replace("%announcements%", result.getBodyTemplate().toString());
-		
 		if (result.getPages() > 0)
 		{
 			html.replace("%pages%", "<table width=280 cellspacing=0><tr>" + result.getPagerTemplate() + "</tr></table>");

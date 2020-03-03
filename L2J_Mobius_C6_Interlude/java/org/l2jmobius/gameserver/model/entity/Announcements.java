@@ -58,7 +58,6 @@ public class Announcements
 	{
 		_announcements.clear();
 		final File file = new File(Config.DATAPACK_ROOT, "data/announcements.txt");
-		
 		if (file.exists())
 		{
 			readFromDisk(file);
@@ -81,7 +80,6 @@ public class Announcements
 			final DateRange validDateRange = (DateRange) entry.get(0);
 			final String[] msg = (String[]) entry.get(1);
 			final Date currentDate = new Date();
-			
 			if (!validDateRange.isValid() || validDateRange.isWithinRange(currentDate))
 			{
 				final SystemMessage sm = new SystemMessage(SystemMessageId.S1_S2);
@@ -108,7 +106,6 @@ public class Announcements
 		final NpcHtmlMessage adminReply = new NpcHtmlMessage(5);
 		adminReply.setHtml(content);
 		final StringBuilder replyMSG = new StringBuilder("<br>");
-		
 		for (int i = 0; i < _announcements.size(); i++)
 		{
 			replyMSG.append("<table width=260><tr><td width=220>" + _announcements.get(i) + "</td><td width=40>");
@@ -138,7 +135,6 @@ public class Announcements
 		try
 		{
 			int i = 0;
-			
 			String line = null;
 			reader = new FileReader(file);
 			lnr = new LineNumberReader(reader);

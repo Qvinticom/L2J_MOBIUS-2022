@@ -37,7 +37,6 @@ public class BuyListSeed implements IClientOutgoingPacket
 	{
 		_money = currentMoney;
 		_manorId = castleId;
-		
 		for (SeedProduction s : CastleManorManager.getInstance().getSeedProduction(castleId, false))
 		{
 			if ((s.getAmount() > 0) && (s.getPrice() > 0))

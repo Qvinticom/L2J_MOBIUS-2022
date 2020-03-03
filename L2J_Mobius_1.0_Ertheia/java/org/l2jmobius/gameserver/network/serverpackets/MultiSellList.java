@@ -67,7 +67,6 @@ public class MultiSellList extends AbstractItemPacket
 		{
 			final ItemInfo itemEnchantment = _list.getItemEnchantment(_index);
 			final MultisellEntryHolder entry = _list.getEntries().get(_index++);
-			
 			packet.writeD(_index); // Entry ID. Start from 1.
 			packet.writeC(entry.isStackable() ? 1 : 0);
 			
@@ -83,7 +82,6 @@ public class MultiSellList extends AbstractItemPacket
 			{
 				final Item template = ItemTable.getInstance().getTemplate(product.getId());
 				final ItemInfo displayItemEnchantment = (_list.isMaintainEnchantment() && (itemEnchantment != null) && (template != null) && template.getClass().equals(itemEnchantment.getItem().getClass())) ? itemEnchantment : null;
-				
 				packet.writeD(product.getId());
 				if (template != null)
 				{
@@ -106,7 +104,6 @@ public class MultiSellList extends AbstractItemPacket
 			{
 				final Item template = ItemTable.getInstance().getTemplate(ingredient.getId());
 				final ItemInfo displayItemEnchantment = ((itemEnchantment != null) && (itemEnchantment.getItem().getId() == ingredient.getId())) ? itemEnchantment : null;
-				
 				packet.writeD(ingredient.getId());
 				packet.writeH(template != null ? template.getType2() : 65535);
 				packet.writeQ(_list.getIngredientCount(ingredient));

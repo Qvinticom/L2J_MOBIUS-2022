@@ -39,7 +39,6 @@ public class WaterTask implements Runnable
 		if (_player != null)
 		{
 			double reduceHp = _player.getMaxHp() / 100.0;
-			
 			if (reduceHp < 1)
 			{
 				reduceHp = 1;

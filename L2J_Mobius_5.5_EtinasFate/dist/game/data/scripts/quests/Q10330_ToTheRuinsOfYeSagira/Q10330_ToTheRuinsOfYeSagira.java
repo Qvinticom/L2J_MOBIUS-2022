@@ -125,7 +125,6 @@ public class Q10330_ToTheRuinsOfYeSagira extends Quest
 	{
 		final QuestState qs = getQuestState(player, true);
 		String htmltext = null;
-		
 		switch (qs.getState())
 		{
 			case State.CREATED:

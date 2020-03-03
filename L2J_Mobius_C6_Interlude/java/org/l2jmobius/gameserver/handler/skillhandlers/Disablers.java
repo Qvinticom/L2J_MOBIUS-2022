@@ -79,11 +79,9 @@ public class Disablers implements ISkillHandler
 	public void useSkill(Creature creature, Skill skill, WorldObject[] targets)
 	{
 		final SkillType type = skill.getSkillType();
-		
 		final boolean bss = creature.checkBss();
 		final boolean sps = creature.checkSps();
 		final boolean ss = creature.checkSs();
-		
 		for (WorldObject target2 : targets)
 		{
 			// Get a target

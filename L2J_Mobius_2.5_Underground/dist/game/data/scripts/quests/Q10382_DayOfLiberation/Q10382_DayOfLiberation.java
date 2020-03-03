@@ -82,7 +82,6 @@ public class Q10382_DayOfLiberation extends Quest
 	{
 		final QuestState qs = getQuestState(player, true);
 		String htmltext = getNoQuestMsg(player);
-		
 		if (qs.isCreated())
 		{
 			htmltext = "sofa_sizraku_q10382_01.htm";
@@ -102,7 +101,6 @@ public class Q10382_DayOfLiberation extends Quest
 		{
 			htmltext = "sofa_sizraku_q10382_06.html";
 		}
-		
 		return htmltext;
 	}
 	

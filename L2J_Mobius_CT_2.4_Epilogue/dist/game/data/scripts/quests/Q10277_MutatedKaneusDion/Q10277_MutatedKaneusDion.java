@@ -116,7 +116,6 @@ public class Q10277_MutatedKaneusDion extends Quest
 	{
 		final QuestState qs = getQuestState(player, true);
 		String htmltext = getNoQuestMsg(player);
-		
 		switch (npc.getId())
 		{
 			case LUKAS:

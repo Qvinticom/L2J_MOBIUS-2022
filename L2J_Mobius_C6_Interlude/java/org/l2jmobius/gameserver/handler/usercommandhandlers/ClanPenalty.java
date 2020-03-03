@@ -45,12 +45,10 @@ public class ClanPenalty implements IUserCommandHandler
 		
 		final SimpleDateFormat format = new SimpleDateFormat("yyyy-MM-dd");
 		final StringBuilder htmlContent = new StringBuilder("<html><body>");
-		
 		htmlContent.append("<center><table width=270 border=0 bgcolor=111111>");
 		htmlContent.append("<tr><td width=170>Penalty</td>");
 		htmlContent.append("<td width=100 align=center>Expiration Date</td></tr>");
 		htmlContent.append("</table><table width=270 border=0><tr>");
-		
 		if (player.getClanJoinExpiryTime() > System.currentTimeMillis())
 		{
 			htmlContent.append("<td width=170>Unable to join a clan.</td>");

@@ -43,7 +43,6 @@ public class MOSKey implements IItemHandler
 	public void useItem(Playable playable, ItemInstance item)
 	{
 		final int itemId = item.getItemId();
-		
 		if (!(playable instanceof PlayerInstance))
 		{
 			return;
@@ -51,7 +50,6 @@ public class MOSKey implements IItemHandler
 		
 		final PlayerInstance player = (PlayerInstance) playable;
 		final WorldObject target = player.getTarget();
-		
 		if (!(target instanceof DoorInstance))
 		{
 			player.sendPacket(SystemMessageId.INVALID_TARGET);
@@ -59,7 +57,6 @@ public class MOSKey implements IItemHandler
 			return;
 		}
 		final DoorInstance door = (DoorInstance) target;
-		
 		if (!player.isInsideRadius(door, INTERACTION_DISTANCE, false, false))
 		{
 			player.sendMessage("Door is to far.");

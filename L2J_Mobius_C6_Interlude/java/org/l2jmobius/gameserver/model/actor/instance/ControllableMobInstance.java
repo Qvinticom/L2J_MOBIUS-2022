@@ -104,7 +104,6 @@ public class ControllableMobInstance extends MonsterInstance
 		}
 		
 		i = getCurrentHp() - i;
-		
 		if (i < 0)
 		{
 			i = 0;

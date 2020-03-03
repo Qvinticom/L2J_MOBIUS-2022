@@ -109,11 +109,9 @@ public class FriendlyNpcAI extends AttackableAI
 		}
 		
 		final int collision = npc.getTemplate().getCollisionRadius();
-		
 		setTarget(originalAttackTarget);
 		
 		final int combinedCollision = collision + originalAttackTarget.getTemplate().getCollisionRadius();
-		
 		if (!npc.isMovementDisabled() && (Rnd.get(100) <= 3))
 		{
 			for (Attackable nearby : World.getInstance().getVisibleObjects(npc, Attackable.class))
@@ -160,7 +158,6 @@ public class FriendlyNpcAI extends AttackableAI
 				int posX = npc.getX();
 				int posY = npc.getY();
 				final int posZ = npc.getZ() + 30;
-				
 				if (originalAttackTarget.getX() < posX)
 				{
 					posX += 300;

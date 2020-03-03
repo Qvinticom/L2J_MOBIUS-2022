@@ -81,7 +81,6 @@ class NpcBufferAI implements Runnable
 		}
 		
 		final PlayerInstance player = _npc.getSummoner().getActingPlayer();
-		
 		final Skill skill = getSkill(player);
 		if (skill == null)
 		{

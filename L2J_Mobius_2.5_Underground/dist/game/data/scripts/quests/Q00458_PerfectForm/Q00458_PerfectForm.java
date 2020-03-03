@@ -276,7 +276,6 @@ public class Q00458_PerfectForm extends Quest
 				log.addNpc(18886, qs.getInt("18886"));
 				log.addNpc(18893, qs.getInt("18893"));
 				log.addNpc(18900, qs.getInt("18900"));
-				
 				player.sendPacket(log);
 			}
 		}

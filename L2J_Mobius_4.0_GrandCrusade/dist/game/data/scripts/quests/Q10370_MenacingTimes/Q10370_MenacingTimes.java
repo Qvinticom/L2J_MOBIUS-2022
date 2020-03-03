@@ -145,7 +145,6 @@ public class Q10370_MenacingTimes extends Quest
 	{
 		final QuestState qs = getQuestState(player, true);
 		String htmltext = getNoQuestMsg(player);
-		
 		switch (qs.getState())
 		{
 			case State.CREATED:
@@ -289,7 +288,6 @@ public class Q10370_MenacingTimes extends Quest
 	public String onKill(Npc npc, PlayerInstance killer, boolean isSummon)
 	{
 		final QuestState qs = getQuestState(killer, false);
-		
 		if ((qs != null) && (qs.isCond(3)))
 		{
 			if (giveItemRandomly(killer, npc, REMNANT_ASHES, 1, 30, 0.15, true))

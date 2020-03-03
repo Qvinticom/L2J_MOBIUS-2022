@@ -73,7 +73,6 @@ public class RequestPartyMatchConfig extends GameClientPacket
 			
 			player.sendPacket(new PartyMatchDetail(room));
 			player.sendPacket(new ExPartyRoomMember(room, 2));
-			
 			player.setPartyRoom(room.getId());
 			player.broadcastUserInfo();
 		}

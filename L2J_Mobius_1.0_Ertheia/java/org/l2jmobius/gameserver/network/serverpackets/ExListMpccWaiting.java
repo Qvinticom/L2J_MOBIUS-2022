@@ -36,7 +36,6 @@ public class ExListMpccWaiting implements IClientOutgoingPacket
 	public ExListMpccWaiting(int page, int location, int level)
 	{
 		final List<MatchingRoom> rooms = MatchingRoomManager.getInstance().getCCMathchingRooms(location, level);
-		
 		_size = rooms.size();
 		final int startIndex = (page - 1) * NUM_PER_PAGE;
 		int chunkSize = _size - startIndex;

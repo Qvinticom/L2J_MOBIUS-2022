@@ -84,15 +84,12 @@ public class DoorTemplate extends CreatureTemplate implements IIdentifiable
 		_showHp = set.getBoolean("hp_showable", true);
 		_isWall = set.getBoolean("is_wall", false);
 		_groupName = set.getString("group", null);
-		
 		_childDoorId = set.getInt("child_id_event", -1);
 		// true if door is opening
 		String masterevent = set.getString("master_close_event", "act_nothing");
 		_masterDoorClose = (byte) (masterevent.equals("act_open") ? 1 : masterevent.equals("act_close") ? -1 : 0);
-		
 		masterevent = set.getString("master_open_event", "act_nothing");
 		_masterDoorOpen = (byte) (masterevent.equals("act_open") ? 1 : masterevent.equals("act_close") ? -1 : 0);
-		
 		_isTargetable = set.getBoolean("targetable", true);
 		_default_status = set.getString("default_status", "close").equals("open");
 		_closeTime = set.getInt("close_time", -1);

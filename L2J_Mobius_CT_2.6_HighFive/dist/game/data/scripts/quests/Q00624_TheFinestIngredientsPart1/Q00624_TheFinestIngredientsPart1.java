@@ -131,7 +131,6 @@ public class Q00624_TheFinestIngredientsPart1 extends Quest
 	{
 		final QuestState qs = getQuestState(player, true);
 		String htmltext = getNoQuestMsg(player);
-		
 		switch (qs.getState())
 		{
 			case State.CREATED:

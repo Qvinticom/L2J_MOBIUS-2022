@@ -45,7 +45,6 @@ public class Lykus extends AbstractNpcAI
 	public String onAdvEvent(String event, Npc npc, PlayerInstance player)
 	{
 		String htmltext = null;
-		
 		switch (event)
 		{
 			case "33521-01.html":
@@ -65,7 +64,6 @@ public class Lykus extends AbstractNpcAI
 				if (event.startsWith("trade"))
 				{
 					final int count = (int) (event.equals("trade1") ? 1 : getQuestItemsCount(player, OLD_SHIELD));
-					
 					if (!hasAtLeastOneQuestItem(player, OLD_SHIELD))
 					{
 						htmltext = "33521-11.html";

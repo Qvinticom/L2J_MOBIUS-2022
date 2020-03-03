@@ -54,7 +54,6 @@ public class Q10745_TheSecretIngredients extends Quest
 		addStartNpc(DOLKIN);
 		addTalkId(DOLKIN, KARLA);
 		addKillId(KARAPHON, KEEN_HONEYBEE, KEEN_GROWLER);
-		
 		addCondRace(Race.ERTHEIA, "");
 		addCondLevel(MIN_LEVEL, MAX_LEVEL, "33954-00.htm");
 		registerQuestItems(SECRET_INGREDIENTS.getId(), DOLKIN_REPORT.getId());

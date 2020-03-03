@@ -74,7 +74,6 @@ public class Q10707_FlamesOfSorrow extends Quest
 	public String onAdvEvent(String event, Npc npc, PlayerInstance player)
 	{
 		final QuestState qs = getQuestState(player, false);
-		
 		if (qs == null)
 		{
 			return null;
@@ -155,14 +154,12 @@ public class Q10707_FlamesOfSorrow extends Quest
 	public String onKill(Npc npc, PlayerInstance player, boolean isSummon)
 	{
 		final QuestState qs = getQuestState(player, false);
-		
 		if ((qs != null) && qs.isStarted() && (qs.getCond() < 4) && (getRandom(100) < 75))
 		{
 			final Npc spirit = addSpawn(SPIRIT, npc, false, 5000);
 			spirit.broadcastSay(ChatType.NPC_GENERAL, NpcStringId.THANK_YOU_DELIVER_THIS_MARK_OF_GRATITUDE_TO_LEO);
 			qs.setCond(3, false);
 			giveItems(player, MARK, 1, true);
-			
 			if (getQuestItemsCount(player, MARK) >= 10)
 			{
 				qs.setCond(4, true);

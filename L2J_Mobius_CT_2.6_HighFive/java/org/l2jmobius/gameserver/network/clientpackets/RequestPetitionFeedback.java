@@ -51,7 +51,6 @@ public class RequestPetitionFeedback implements IClientIncomingPacket
 	public void run(GameClient client)
 	{
 		final PlayerInstance player = client.getPlayer();
-		
 		if ((player == null) || (player.getLastPetitionGmName() == null))
 		{
 			return;

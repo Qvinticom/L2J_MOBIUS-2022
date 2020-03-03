@@ -107,7 +107,6 @@ public class Q00010_IntoTheWorld extends Quest
 	{
 		final QuestState qs = getQuestState(player, true);
 		String htmltext = getNoQuestMsg(player);
-		
 		switch (npc.getId())
 		{
 			case BALANKI:

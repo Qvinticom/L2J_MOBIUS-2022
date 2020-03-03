@@ -34,14 +34,12 @@ public class RequestRecipeShopListSet extends GameClientPacket
 	protected void readImpl()
 	{
 		_count = readD();
-		
 		if ((_count < 0) || ((_count * 8) > _buf.remaining()) || (_count > Config.MAX_ITEM_IN_PACKET))
 		{
 			_count = 0;
 		}
 		
 		_items = new int[_count * 2];
-		
 		for (int x = 0; x < _count; x++)
 		{
 			final int recipeID = readD();
@@ -90,7 +88,6 @@ public class RequestRecipeShopListSet extends GameClientPacket
 		else
 		{
 			final ManufactureList createList = new ManufactureList();
-			
 			for (int x = 0; x < _count; x++)
 			{
 				final int recipeID = _items[(x * 2) + 0];

@@ -82,7 +82,6 @@ public class CharacterBirthday extends AbstractNpcAI
 		String htmltext = "";
 		final QuestState st = getQuestState(player, false);
 		htmltext = event;
-		
 		if (event.equalsIgnoreCase("despawn_npc"))
 		{
 			npc.doDie(player);
@@ -120,7 +119,6 @@ public class CharacterBirthday extends AbstractNpcAI
 				
 				// Update for next year
 				st.set("Birthday", String.valueOf(now.get(Calendar.YEAR) + 1));
-				
 				htmltext = "32600-ok.htm";
 			}
 		}
@@ -136,7 +134,6 @@ public class CharacterBirthday extends AbstractNpcAI
 		}
 		
 		final QuestState st = getQuestState(player, true);
-		
 		if ((st != null) && (player.checkBirthDay() == 0))
 		{
 			player.sendPacket(new PlaySound(1, "HB01", 0, 0, 0, 0, 0));

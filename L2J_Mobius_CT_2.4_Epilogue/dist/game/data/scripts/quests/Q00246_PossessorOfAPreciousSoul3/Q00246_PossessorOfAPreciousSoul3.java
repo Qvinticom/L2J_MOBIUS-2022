@@ -58,7 +58,6 @@ public class Q00246_PossessorOfAPreciousSoul3 extends Quest
 		
 		addStartNpc(CARADINE);
 		addTalkId(CARADINE, OSSIAN, LADD);
-		
 		addKillId(PILGRIM_OF_SPLENDOR, JUDGE_OF_SPLENDOR, BARAKIEL);
 	}
 	
@@ -133,7 +132,6 @@ public class Q00246_PossessorOfAPreciousSoul3 extends Quest
 	{
 		final QuestState st = getQuestState(player, true);
 		String htmltext = getNoQuestMsg(player);
-		
 		switch (st.getState())
 		{
 			case State.CREATED:
@@ -278,11 +276,9 @@ public class Q00246_PossessorOfAPreciousSoul3 extends Quest
 			if (Rnd.get(10) < 2)
 			{
 				final int neklaceOrRing = (npcId == PILGRIM_OF_SPLENDOR) ? WATERBINDER : EVERGREEN;
-				
 				if ((st != null) && !hasQuestItems(player, neklaceOrRing))
 				{
 					giveItems(player, neklaceOrRing, 1);
-					
 					if (!hasQuestItems(player, (npcId == PILGRIM_OF_SPLENDOR) ? EVERGREEN : WATERBINDER))
 					{
 						playSound(player, QuestSound.ITEMSOUND_QUEST_ITEMGET);

@@ -99,15 +99,12 @@ public class Continuous implements ISkillHandler
 		}
 		
 		final Skill skill = skill2;
-		
 		final boolean bss = creature.checkBss();
 		final boolean sps = creature.checkSps();
 		final boolean ss = creature.checkSs();
-		
 		for (WorldObject target2 : targets)
 		{
 			Creature target = (Creature) target2;
-			
 			if (target == null)
 			{
 				continue;
@@ -184,7 +181,6 @@ public class Continuous implements ISkillHandler
 			if (skill.isOffensive())
 			{
 				final boolean acted = Formulas.getInstance().calcSkillSuccess(creature, target, skill, ss, sps, bss);
-				
 				if (!acted)
 				{
 					creature.sendPacket(new SystemMessage(SystemMessageId.YOUR_ATTACK_HAS_FAILED));

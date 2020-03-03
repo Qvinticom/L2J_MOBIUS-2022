@@ -633,23 +633,18 @@ public class Castle extends AbstractResidence
 				{
 					setName(rs.getString("name"));
 					// _OwnerId = rs.getInt("ownerId");
-					
 					_siegeDate = Calendar.getInstance();
 					_siegeDate.setTimeInMillis(rs.getLong("siegeDate"));
 					_siegeTimeRegistrationEndDate = Calendar.getInstance();
 					_siegeTimeRegistrationEndDate.setTimeInMillis(rs.getLong("regTimeEnd"));
 					_isTimeRegistrationOver = rs.getBoolean("regTimeOver");
-					
 					_taxPercent = rs.getInt("taxPercent");
 					_treasury = rs.getLong("treasury");
-					
 					_showNpcCrest = rs.getBoolean("showNpcCrest");
-					
 					_ticketBuyCount = rs.getInt("ticketBuyCount");
 				}
 			}
 			_taxRate = _taxPercent / 100.0;
-			
 			ps2.setInt(1, getResidenceId());
 			try (ResultSet rs = ps2.executeQuery())
 			{

@@ -97,7 +97,6 @@ public class RequestExEnchantSkillRouteChange implements IClientIncomingPacket
 		}
 		
 		final int reqItemId = EnchantSkillGroupsData.CHANGE_ENCHANT_BOOK;
-		
 		final EnchantSkillLearn s = EnchantSkillGroupsData.getInstance().getSkillEnchantmentBySkillId(_skillId);
 		if (s == null)
 		{
@@ -118,10 +117,8 @@ public class RequestExEnchantSkillRouteChange implements IClientIncomingPacket
 			return;
 		}
 		final EnchantSkillHolder esd = s.getEnchantSkillHolder(_skillLvl);
-		
 		final int requiredSp = esd.getSpCost();
 		final int requireditems = esd.getAdenaCost();
-		
 		if (player.getSp() >= requiredSp)
 		{
 			// only first lvl requires book
@@ -147,7 +144,6 @@ public class RequestExEnchantSkillRouteChange implements IClientIncomingPacket
 			}
 			
 			check &= player.destroyItemByItemId("Consume", Inventory.ADENA_ID, requireditems, player, true);
-			
 			if (!check)
 			{
 				player.sendPacket(SystemMessageId.YOU_DO_NOT_HAVE_ALL_OF_THE_ITEMS_NEEDED_TO_ENCHANT_THAT_SKILL);
@@ -162,7 +158,6 @@ public class RequestExEnchantSkillRouteChange implements IClientIncomingPacket
 			}
 			
 			skill = SkillData.getInstance().getSkill(_skillId, _skillLvl);
-			
 			if (skill != null)
 			{
 				if (Config.LOG_SKILL_ENCHANTS)
@@ -176,7 +171,6 @@ public class RequestExEnchantSkillRouteChange implements IClientIncomingPacket
 			
 			player.sendPacket(new UserInfo(player));
 			player.sendPacket(new ExBrExtraUserInfo(player));
-			
 			if (levelPenalty == 0)
 			{
 				final SystemMessage sm = new SystemMessage(SystemMessageId.ENCHANT_SKILL_ROUTE_CHANGE_WAS_SUCCESSFUL_LV_OF_ENCHANT_SKILL_S1_WILL_REMAIN);

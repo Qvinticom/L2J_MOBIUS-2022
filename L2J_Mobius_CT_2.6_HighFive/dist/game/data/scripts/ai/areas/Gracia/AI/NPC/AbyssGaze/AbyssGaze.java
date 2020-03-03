@@ -39,7 +39,6 @@ public class AbyssGaze extends AbstractNpcAI
 	public String onAdvEvent(String event, Npc npc, PlayerInstance player)
 	{
 		String htmltext = event;
-		
 		QuestState qs = player.getQuestState(getName());
 		if (qs == null)
 		{

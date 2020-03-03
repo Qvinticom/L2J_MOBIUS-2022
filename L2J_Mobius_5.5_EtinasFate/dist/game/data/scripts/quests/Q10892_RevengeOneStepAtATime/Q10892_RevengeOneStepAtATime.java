@@ -123,7 +123,6 @@ public class Q10892_RevengeOneStepAtATime extends Quest
 	{
 		final QuestState qs = getQuestState(player, true);
 		String htmltext = getNoQuestMsg(player);
-		
 		switch (qs.getState())
 		{
 			case State.CREATED:
@@ -170,7 +169,6 @@ public class Q10892_RevengeOneStepAtATime extends Quest
 		{
 			int killedMonsters = qs.getInt("killed_" + MONSTERS[0]);
 			int killedGuardian = qs.getInt("killed_" + GUARDIAN[0]);
-			
 			if (CommonUtil.contains(MONSTERS, npc.getId()))
 			{
 				if (killedMonsters < 1000)

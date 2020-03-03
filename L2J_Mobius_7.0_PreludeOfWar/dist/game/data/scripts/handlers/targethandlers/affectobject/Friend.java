@@ -39,7 +39,6 @@ public class Friend implements IAffectObjectHandler
 		
 		final PlayerInstance player = creature.getActingPlayer();
 		final PlayerInstance targetPlayer = target.getActingPlayer();
-		
 		if (player != null)
 		{
 			if (targetPlayer != null)

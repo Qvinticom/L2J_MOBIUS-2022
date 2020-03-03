@@ -52,7 +52,6 @@ public class BlacksmithInstance extends FolkInstance
 		{
 			pom = npcId + "-" + value;
 		}
-		
 		return "data/html/blacksmith/" + pom + ".htm";
 	}
 }

@@ -100,7 +100,6 @@ public class HtmCache
 	{
 		final FileFilter filter = new HtmFilter();
 		final File[] files = dir.listFiles(filter);
-		
 		for (File file : files)
 		{
 			if (!file.isDirectory())
@@ -117,9 +116,7 @@ public class HtmCache
 	public String loadFile(File file)
 	{
 		final HtmFilter filter = new HtmFilter();
-		
 		String content = null;
-		
 		if (file.exists() && filter.accept(file) && !file.isDirectory())
 		{
 			FileInputStream fis = null;
@@ -130,7 +127,6 @@ public class HtmCache
 				bis = new BufferedInputStream(fis);
 				final int bytes = bis.available();
 				final byte[] raw = new byte[bytes];
-				
 				bis.read(raw);
 				
 				content = new String(raw, StandardCharsets.UTF_8);
@@ -139,14 +135,12 @@ public class HtmCache
 				
 				final String relpath = Util.getRelativePath(Config.DATAPACK_ROOT, file);
 				final int hashcode = relpath.hashCode();
-				
 				if (Config.CHECK_HTML_ENCODING && !StandardCharsets.US_ASCII.newEncoder().canEncode(content))
 				{
 					LOGGER.warning("HTML encoding check: File " + relpath + " contains non ASCII content.");
 				}
 				
 				final String oldContent = _cache.get(hashcode);
-				
 				if (oldContent == null)
 				{
 					_bytesBuffLen += bytes;
@@ -197,25 +191,21 @@ public class HtmCache
 	public String getHtmForce(String path)
 	{
 		String content = getHtm(path);
-		
 		if (content == null)
 		{
 			content = "<html><body>My text is missing:<br>" + path + "</body></html>";
 			LOGGER.warning("Cache[HTML]: Missing HTML page: " + path);
 		}
-		
 		return content;
 	}
 	
 	public String getHtm(String path)
 	{
 		String content = _cache.get(path.hashCode());
-		
 		if (Config.LAZY_CACHE && (content == null))
 		{
 			content = loadFile(new File(Config.DATAPACK_ROOT, path));
 		}
-		
 		return content;
 	}
 	

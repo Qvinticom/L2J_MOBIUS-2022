@@ -232,30 +232,25 @@ public class AdminTvTEngine implements IAdminCommandHandler
 		else if (command.startsWith("admin_tvt_team_add "))
 		{
 			final String teamName = command.substring(19);
-			
 			TvT.addTeam(teamName);
 			showMainPage(activeChar);
 		}
 		else if (command.startsWith("admin_tvt_team_remove "))
 		{
 			final String teamName = command.substring(22);
-			
 			TvT.removeTeam(teamName);
 			showMainPage(activeChar);
 		}
 		else if (command.startsWith("admin_tvt_team_pos "))
 		{
 			final String teamName = command.substring(19);
-			
 			TvT.setTeamPos(teamName, activeChar);
 			showMainPage(activeChar);
 		}
 		else if (command.startsWith("admin_tvt_team_color "))
 		{
 			String[] params;
-			
 			params = command.split(" ");
-			
 			if (params.length != 3)
 			{
 				BuilderUtil.sendSysMessage(activeChar, "Wrong usege: //tvt_team_color <colorHex> <teamName>");
@@ -372,7 +367,6 @@ public class AdminTvTEngine implements IAdminCommandHandler
 	{
 		final NpcHtmlMessage adminReply = new NpcHtmlMessage(5);
 		final StringBuilder replyMSG = new StringBuilder("<html><title>Team vs Team</title><body>");
-		
 		replyMSG.append("<center><font color=\"LEVEL\">[TvT Engine]</font></center><br><br><br>");
 		replyMSG.append("<table><tr><td><edit var=\"input1\" width=\"125\"></td><td><edit var=\"input2\" width=\"125\"></td></tr></table>");
 		replyMSG.append("<table border=\"0\"><tr>");
@@ -427,7 +421,6 @@ public class AdminTvTEngine implements IAdminCommandHandler
 		replyMSG.append("Joining location name:&nbsp;<font color=\"00FF00\">" + TvT.getJoiningLocationName() + "</font><br1>");
 		
 		final Location npcLoc = TvT.getNpcLocation();
-		
 		replyMSG.append("Joining NPC ID:&nbsp;<font color=\"00FF00\">" + TvT.getNpcId() + " on pos " + npcLoc.getX() + "," + npcLoc.getY() + "," + npcLoc.getZ() + "</font><br1>");
 		replyMSG.append("Reward ID:&nbsp;<font color=\"00FF00\">" + TvT.getRewardId() + "</font><br1>");
 		replyMSG.append("Reward Amount:&nbsp;<font color=\"00FF00\">" + TvT.getRewardAmount() + "</font><br><br>");
@@ -440,11 +433,9 @@ public class AdminTvTEngine implements IAdminCommandHandler
 		replyMSG.append("Interval Time:&nbsp;<font color=\"00FF00\">" + TvT.getIntervalBetweenMatches() + "</font><br><br>");
 		replyMSG.append("Current teams:<br1>");
 		replyMSG.append("<center><table border=\"0\">");
-		
 		for (String team : TvT._teams)
 		{
 			replyMSG.append("<tr><td width=\"100\"><font color=\"LEVEL\">" + team + "</font>");
-			
 			if (Config.TVT_EVEN_TEAMS.equals("NO") || Config.TVT_EVEN_TEAMS.equals("BALANCE"))
 			{
 				replyMSG.append("&nbsp;(" + TvT.teamPlayersCount(team) + " joined)");

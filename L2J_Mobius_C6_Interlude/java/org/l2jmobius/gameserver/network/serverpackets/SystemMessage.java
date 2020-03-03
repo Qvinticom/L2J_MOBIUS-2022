@@ -127,7 +127,6 @@ public class SystemMessage extends GameServerPacket
 		for (int i = 0; i < _types.size(); i++)
 		{
 			final int t = _types.get(i).intValue();
-			
 			writeD(t);
 			
 			switch (t)

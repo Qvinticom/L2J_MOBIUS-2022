@@ -74,7 +74,6 @@ public class Dinford extends AbstractNpcAI
 		final Npc npc = event.getNpc();
 		final int ask = event.getAsk();
 		final int reply = event.getReply();
-		
 		if (ask == -303)
 		{
 			if (reply == 2178)

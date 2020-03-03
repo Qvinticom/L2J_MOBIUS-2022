@@ -42,7 +42,6 @@ public class RequestWithDrawalParty extends GameClientPacket
 		}
 		
 		final Party party = player.getParty();
-		
 		if (party != null)
 		{
 			if (party.isInDimensionalRift() && !party.getDimensionalRift().getRevivedAtWaitingRoom().contains(player))
@@ -61,7 +60,6 @@ public class RequestWithDrawalParty extends GameClientPacket
 						player.sendPacket(new PartyMatchDetail(room));
 						player.sendPacket(new ExPartyRoomMember(room, 0));
 						player.sendPacket(new ExClosePartyRoom());
-						
 						room.deleteMember(player);
 					}
 					player.setPartyRoom(0);

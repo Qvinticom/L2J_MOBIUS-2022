@@ -413,7 +413,6 @@ public class IceFairySirra extends Quest
 	public String getHtmlPath(int value)
 	{
 		String pom = "";
-		
 		pom = "32029-" + value;
 		if (value == 0)
 		{
@@ -421,7 +420,6 @@ public class IceFairySirra extends Quest
 		}
 		
 		final String temp = "data/html/default/" + pom + ".htm";
-		
 		if (!Config.LAZY_CACHE)
 		{
 			// If not running lazy cache the file must be in the cache or it doesnt exist

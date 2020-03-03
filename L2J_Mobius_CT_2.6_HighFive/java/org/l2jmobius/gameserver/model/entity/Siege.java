@@ -242,7 +242,6 @@ public class Siege implements Siegable
 	{
 		_castle = castle;
 		_siegeGuardManager = new SiegeGuardManager(getCastle());
-		
 		startAutoTask();
 	}
 	
@@ -255,7 +254,6 @@ public class Siege implements Siegable
 			sm.addCastleId(getCastle().getResidenceId());
 			Broadcast.toAllOnlinePlayers(sm);
 			Broadcast.toAllOnlinePlayers(new PlaySound("systemmsg_e.18"));
-			
 			if (getCastle().getOwnerId() > 0)
 			{
 				final Clan clan = ClanTable.getInstance().getClan(getCastle().getOwnerId());
@@ -447,7 +445,6 @@ public class Siege implements Siegable
 				}
 				teleportPlayer(SiegeTeleportWhoType.Attacker, TeleportWhereType.SIEGEFLAG); // Teleport to the second closest town
 				teleportPlayer(SiegeTeleportWhoType.Spectator, TeleportWhereType.TOWN); // Teleport to the second closest town
-				
 				removeDefenderFlags(); // Removes defenders' flags
 				getCastle().removeUpgrade(); // Remove all castle upgrade
 				getCastle().spawnDoor(true); // Respawn door to castle but make them weaker (50% hp)
@@ -473,7 +470,6 @@ public class Siege implements Siegable
 		if (!_isInProgress)
 		{
 			_firstOwnerClanId = getCastle().getOwnerId();
-			
 			if (getAttackerClans().isEmpty())
 			{
 				SystemMessage sm;
@@ -495,7 +491,6 @@ public class Siege implements Siegable
 			
 			_isNormalSide = true; // Atk is now atk
 			_isInProgress = true; // Flag so that same siege instance cannot be started again
-			
 			loadSiegeClan(); // Load siege clan from db
 			updatePlayerSiegeStateFlags(false);
 			teleportPlayer(SiegeTeleportWhoType.NotOwner, TeleportWhereType.TOWN); // Teleport to the closest town
@@ -636,7 +631,6 @@ public class Siege implements Siegable
 				}
 				member.sendPacket(new UserInfo(member));
 				member.sendPacket(new ExBrExtraUserInfo(member));
-				
 				World.getInstance().forEachVisibleObject(member, PlayerInstance.class, player ->
 				{
 					if (!member.isVisibleFor(player))
@@ -823,7 +817,6 @@ public class Siege implements Siegable
 	public List<PlayerInstance> getSpectatorsInZone()
 	{
 		final List<PlayerInstance> players = new ArrayList<>();
-		
 		for (PlayerInstance player : getCastle().getZone().getPlayersInside())
 		{
 			if (player == null)
@@ -1017,7 +1010,6 @@ public class Siege implements Siegable
 		correctSiegeDateTime();
 		
 		LOGGER.info("Siege of " + getCastle().getName() + ": " + getCastle().getSiegeDate().getTime());
-		
 		loadSiegeClan();
 		
 		// Schedule siege auto start
@@ -1174,7 +1166,6 @@ public class Siege implements Siegable
 		{
 			return true;
 		}
-		
 		return false;
 	}
 	
@@ -1216,7 +1207,6 @@ public class Siege implements Siegable
 	public void correctSiegeDateTime()
 	{
 		boolean corrected = false;
-		
 		if (getCastle().getSiegeDate().getTimeInMillis() < Calendar.getInstance().getTimeInMillis())
 		{
 			// Since siege has past reschedule it to the next one
@@ -1525,7 +1515,6 @@ public class Siege implements Siegable
 			
 			ControlTowerInstance closestCt = null;
 			double distanceClosest = Integer.MAX_VALUE;
-			
 			for (ControlTowerInstance ct : _controlTowers)
 			{
 				if (ct == null)
@@ -1534,7 +1523,6 @@ public class Siege implements Siegable
 				}
 				
 				final double distance = ct.calculateDistanceSq3D(spawn);
-				
 				if (distance < distanceClosest)
 				{
 					closestCt = ct;

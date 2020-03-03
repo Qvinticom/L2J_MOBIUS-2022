@@ -85,7 +85,6 @@ public class RequestExEnchantSkill implements IClientIncomingPacket
 		// {
 		// return;
 		// }
-		
 		if (!player.isAllowedToEnchantSkills())
 		{
 			return;

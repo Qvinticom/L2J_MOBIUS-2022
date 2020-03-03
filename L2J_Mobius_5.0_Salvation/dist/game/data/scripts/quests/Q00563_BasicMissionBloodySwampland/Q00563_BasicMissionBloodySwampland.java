@@ -55,7 +55,6 @@ public class Q00563_BasicMissionBloodySwampland extends Quest
 	public String onAdvEvent(String event, Npc npc, PlayerInstance player)
 	{
 		final QuestState qs = getQuestState(player, false);
-		
 		if (qs == null)
 		{
 			return null;
@@ -81,7 +80,6 @@ public class Q00563_BasicMissionBloodySwampland extends Quest
 			{
 				final StringBuilder str = new StringBuilder("00");
 				checkQuestCompleted(player, str); // Initialize the array with all quests completed
-				
 				if (str.indexOf("11") != -1) // verify if all quests completed
 				{
 					giveItems(player, SCROLL_OF_ESCAPE_BLOODY_SWAMPLAND, 1);
@@ -105,7 +103,6 @@ public class Q00563_BasicMissionBloodySwampland extends Quest
 	{
 		final QuestState qs = getQuestState(player, true);
 		String htmltext = getNoQuestMsg(player);
-		
 		switch (qs.getState())
 		{
 			case State.CREATED:
@@ -136,7 +133,6 @@ public class Q00563_BasicMissionBloodySwampland extends Quest
 						{
 							final StringBuilder str = new StringBuilder("00");
 							checkQuestCompleted(player, str); // Initialize the array with all quests completed
-							
 							if (str.indexOf("11") != -1) // verify if all quests completed
 							{
 								qs.setCond(3, true);

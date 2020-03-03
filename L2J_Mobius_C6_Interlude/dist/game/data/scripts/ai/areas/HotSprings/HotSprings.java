@@ -93,7 +93,6 @@ public class HotSprings extends Quest
 		final Effect info = creature.getFirstEffect(diseaseId);
 		final int skillLevel = (info == null) ? 1 : (info.getSkill().getLevel() < 10) ? info.getSkill().getLevel() + 1 : 10;
 		final Skill skill = SkillTable.getInstance().getInfo(diseaseId, skillLevel);
-		
 		if ((skill != null) && !npc.isCastingNow() && !npc.isSkillDisabled(skill))
 		{
 			npc.setTarget(creature);

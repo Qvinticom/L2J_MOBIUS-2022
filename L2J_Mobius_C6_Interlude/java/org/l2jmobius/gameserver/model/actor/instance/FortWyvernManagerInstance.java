@@ -52,7 +52,6 @@ public class FortWyvernManagerInstance extends NpcInstance
 			
 			int petItemId = 0;
 			ItemInstance petItem = null;
-			
 			if (player.getPet() == null)
 			{
 				if (player.isMounted())
@@ -114,7 +113,6 @@ public class FortWyvernManagerInstance extends NpcInstance
 				
 				player.addSkill(SkillTable.getInstance().getInfo(4289, 1));
 				player.sendMessage("The Wyvern has been summoned successfully!");
-				
 			}
 			else
 			{
@@ -163,7 +161,6 @@ public class FortWyvernManagerInstance extends NpcInstance
 		String filename = "data/html/fortress/wyvernmanager-no.htm";
 		
 		final int condition = validateCondition(player);
-		
 		if ((condition > COND_ALL_FALSE) && (condition == COND_OWNER))
 		{
 			filename = "data/html/fortress/wyvernmanager.htm";

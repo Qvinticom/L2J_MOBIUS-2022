@@ -71,7 +71,6 @@ public class EffectChameleonRest extends Effect
 	{
 		final Creature effected = getEffected();
 		boolean retval = true;
-		
 		if (effected.isDead())
 		{
 			retval = false;
@@ -89,7 +88,6 @@ public class EffectChameleonRest extends Effect
 		}
 		
 		final double manaDam = calc();
-		
 		if (manaDam > effected.getStatus().getCurrentMp())
 		{
 			effected.sendPacket(new SystemMessage(SystemMessageId.YOUR_SKILL_WAS_REMOVED_DUE_TO_A_LACK_OF_MP));

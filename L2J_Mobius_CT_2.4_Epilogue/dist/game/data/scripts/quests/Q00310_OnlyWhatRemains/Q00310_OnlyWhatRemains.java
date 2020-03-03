@@ -77,7 +77,6 @@ public class Q00310_OnlyWhatRemains extends Quest
 	public String onAdvEvent(String event, Npc npc, PlayerInstance player)
 	{
 		final QuestState qs = getQuestState(player, false);
-		
 		if (qs == null)
 		{
 			return null;
@@ -117,7 +116,6 @@ public class Q00310_OnlyWhatRemains extends Quest
 	public String onKill(Npc npc, PlayerInstance player, boolean isSummon)
 	{
 		final PlayerInstance partyMember = getRandomPartyMember(player, 1);
-		
 		if (partyMember == null)
 		{
 			return super.onKill(npc, player, isSummon);
@@ -136,7 +134,6 @@ public class Q00310_OnlyWhatRemains extends Quest
 	{
 		final QuestState qs = getQuestState(player, true);
 		String htmltext = getNoQuestMsg(player);
-		
 		switch (qs.getState())
 		{
 			case State.CREATED:

@@ -75,7 +75,6 @@ public final class Q00708_PathToBecomingALordGludio extends Quest
 	{
 		String htmltext = event;
 		final QuestState qs = player.getQuestState(getName());
-		
 		final Castle castle = CastleManager.getInstance().getCastleById(GLUDIO_CASTLE);
 		if (castle.getOwner() == null)
 		{

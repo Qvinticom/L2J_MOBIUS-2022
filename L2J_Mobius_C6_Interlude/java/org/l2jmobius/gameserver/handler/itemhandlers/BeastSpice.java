@@ -43,7 +43,6 @@ public class BeastSpice implements IItemHandler
 		}
 		
 		final PlayerInstance player = (PlayerInstance) playable;
-		
 		if (!(player.getTarget() instanceof FeedableBeastInstance))
 		{
 			player.sendPacket(SystemMessageId.THAT_IS_THE_INCORRECT_TARGET);

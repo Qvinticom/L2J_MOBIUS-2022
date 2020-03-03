@@ -231,13 +231,11 @@ public class Skill implements IIdentifiable
 		_itemConsumeId = set.getInt("itemConsumeId", 0);
 		_famePointConsume = set.getInt("famePointConsume", 0);
 		_clanRepConsume = set.getInt("clanRepConsume", 0);
-		
 		_castRange = set.getInt("castRange", -1);
 		_effectRange = set.getInt("effectRange", -1);
 		_abnormalLvl = set.getInt("abnormalLvl", 0);
 		_abnormalType = set.getEnum("abnormalType", AbnormalType.class, AbnormalType.NONE);
 		_subordinationAbnormalType = set.getEnum("subordinationAbnormalType", AbnormalType.class, AbnormalType.NONE);
-		
 		int abnormalTime = set.getInt("abnormalTime", 0);
 		if (Config.ENABLE_MODIFY_SKILL_DURATION && Config.SKILL_DURATION_LIST.containsKey(_id))
 		{
@@ -254,15 +252,12 @@ public class Skill implements IIdentifiable
 		_abnormalTime = abnormalTime;
 		_isAbnormalInstant = set.getBoolean("abnormalInstant", false);
 		parseAbnormalVisualEffect(set.getString("abnormalVisualEffect", null));
-		
 		_stayAfterDeath = set.getBoolean("stayAfterDeath", false);
-		
 		_hitTime = set.getInt("hitTime", 0);
 		_hitCancelTime = set.getDouble("hitCancelTime", 0);
 		_coolTime = set.getInt("coolTime", 0);
 		_isDebuff = set.getBoolean("isDebuff", false);
 		_isRecoveryHerb = set.getBoolean("isRecoveryHerb", false);
-		
 		if (Config.ENABLE_MODIFY_SKILL_REUSE && Config.SKILL_REUSE_LIST.containsKey(_id))
 		{
 			_reuseDelay = Config.SKILL_REUSE_LIST.get(_id);
@@ -274,7 +269,6 @@ public class Skill implements IIdentifiable
 		
 		_reuseDelayGroup = set.getInt("reuseDelayGroup", -1);
 		_reuseHashCode = SkillData.getSkillHashCode(_reuseDelayGroup > 0 ? _reuseDelayGroup : _id, _level, _subLevel);
-		
 		_targetType = set.getEnum("targetType", TargetType.class, TargetType.SELF);
 		_affectScope = set.getEnum("affectScope", AffectScope.class, AffectScope.SINGLE);
 		_affectObject = set.getEnum("affectObject", AffectObject.class, AffectObject.ALL);
@@ -341,54 +335,36 @@ public class Skill implements IIdentifiable
 		_activateRate = set.getInt("activateRate", -1);
 		_minChance = set.getInt("minChance", Config.MIN_ABNORMAL_STATE_SUCCESS_RATE);
 		_maxChance = set.getInt("maxChance", Config.MAX_ABNORMAL_STATE_SUCCESS_RATE);
-		
 		_nextAction = set.getEnum("nextAction", NextActionType.class, NextActionType.NONE);
-		
 		_removedOnAnyActionExceptMove = set.getBoolean("removedOnAnyActionExceptMove", false);
 		_removedOnDamage = set.getBoolean("removedOnDamage", false);
 		_removedOnUnequipWeapon = set.getBoolean("removedOnUnequipWeapon", false);
-		
 		_blockedInOlympiad = set.getBoolean("blockedInOlympiad", false);
-		
 		_attributeType = set.getEnum("attributeType", AttributeType.class, AttributeType.NONE);
 		_attributeValue = set.getInt("attributeValue", 0);
-		
 		_basicProperty = set.getEnum("basicProperty", BasicProperty.class, BasicProperty.NONE);
-		
 		_isSuicideAttack = set.getBoolean("isSuicideAttack", false);
-		
 		_minPledgeClass = set.getInt("minPledgeClass", 0);
-		
 		_soulMaxConsume = set.getInt("soulMaxConsumeCount", 0);
 		_chargeConsume = set.getInt("chargeConsume", 0);
-		
 		_isTriggeredSkill = set.getBoolean("isTriggeredSkill", false);
 		_effectPoint = set.getInt("effectPoint", 0);
-		
 		_canBeDispelled = set.getBoolean("canBeDispelled", true);
-		
 		_excludedFromCheck = set.getBoolean("excludedFromCheck", false);
 		_withoutAction = set.getBoolean("withoutAction", false);
-		
 		_icon = set.getString("icon", "icon.skill0000");
-		
 		_channelingSkillId = set.getInt("channelingSkillId", 0);
 		_channelingTickInterval = (long) set.getFloat("channelingTickInterval", 2000f) * 1000;
 		_channelingStart = (long) (set.getFloat("channelingStart", 0f) * 1000);
-		
 		_isMentoring = set.getBoolean("isMentoring", false);
-		
 		_doubleCastSkill = set.getInt("doubleCastSkill", 0);
-		
 		_canDoubleCast = set.getBoolean("canDoubleCast", false);
 		_canCastWhileDisabled = set.getBoolean("canCastWhileDisabled", false);
 		_isSharedWithSummon = set.getBoolean("isSharedWithSummon", true);
-		
 		_isNecessaryToggle = set.getBoolean("isNecessaryToggle", false);
 		_deleteAbnormalOnLeave = set.getBoolean("deleteAbnormalOnLeave", false);
 		_irreplacableBuff = set.getBoolean("irreplacableBuff", false);
 		_blockActionUseSkill = set.getBoolean("blockActionUseSkill", false);
-		
 		_toggleGroupId = set.getInt("toggleGroupId", -1);
 		_attachToggleGroupId = set.getInt("attachToggleGroupId", -1);
 		_attachSkills = set.getList("attachSkillList", StatSet.class, Collections.emptyList()).stream().map(AttachSkillHolder::fromStatSet).collect(Collectors.toList());
@@ -910,7 +886,6 @@ public class Skill implements IIdentifiable
 		{
 			return (_affectLimit[0] + Rnd.get(_affectLimit[1]));
 		}
-		
 		return 0;
 	}
 	
@@ -1339,7 +1314,6 @@ public class Skill implements IIdentifiable
 			
 			final EffectScope pvpOrPveEffectScope = effector.isPlayable() && effected.isAttackable() ? EffectScope.PVE : effector.isPlayable() && effected.isPlayable() ? EffectScope.PVP : null;
 			applyEffectScope(pvpOrPveEffectScope, info, instant, addContinuousEffects);
-			
 			if (addContinuousEffects)
 			{
 				// Aura skills reset the abnormal time.
@@ -1379,7 +1353,6 @@ public class Skill implements IIdentifiable
 			}
 			
 			applyEffectScope(EffectScope.SELF, info, instant, addContinuousEffects);
-			
 			if (addContinuousEffects)
 			{
 				// Aura skills reset the abnormal time.

@@ -197,7 +197,6 @@ public class Auction
 		{
 			PreparedStatement statement;
 			ResultSet rs;
-			
 			statement = con.prepareStatement("Select * from auction where id = ?");
 			statement.setInt(1, _id);
 			rs = statement.executeQuery();
@@ -236,7 +235,6 @@ public class Auction
 		{
 			PreparedStatement statement;
 			ResultSet rs;
-			
 			statement = con.prepareStatement("SELECT bidderId, bidderName, maxBid, clan_name, time_bid FROM auction_bid WHERE auctionId = ? ORDER BY maxBid DESC");
 			statement.setInt(1, _id);
 			rs = statement.executeQuery();
@@ -268,7 +266,6 @@ public class Auction
 	{
 		final long currentTime = System.currentTimeMillis();
 		long taskDelay = 0;
-		
 		if (_endDate <= currentTime)
 		{
 			_endDate = currentTime + (7 * 24 * 60 * 60 * 1000);
@@ -320,7 +317,6 @@ public class Auction
 	public synchronized void setBid(PlayerInstance bidder, int bid)
 	{
 		int requiredAdena = bid;
-		
 		if (_highestBidderName.equals(bidder.getClan().getLeaderName()))
 		{
 			requiredAdena = bid - _highestBidderMaxBid;
@@ -354,7 +350,6 @@ public class Auction
 		// avoid overflow on return
 		final long limit = MAX_ADENA - ClanTable.getInstance().getClanByName(clan).getWarehouse().getAdena();
 		quantity = (int) Math.min(quantity, limit);
-		
 		ClanTable.getInstance().getClanByName(clan).getWarehouse().addItem("Outbidded", ADENA_ID, quantity, null, null);
 	}
 	
@@ -385,7 +380,6 @@ public class Auction
 		try (Connection con = DatabaseFactory.getConnection())
 		{
 			PreparedStatement statement;
-			
 			if (_bidders.get(bidder.getClanId()) != null)
 			{
 				statement = con.prepareStatement("UPDATE auction_bid SET bidderId=?, bidderName=?, maxBid=?, time_bid=? WHERE auctionId=? AND bidderId=?");
@@ -419,7 +413,6 @@ public class Auction
 			_highestBidderId = bidder.getClanId();
 			_highestBidderMaxBid = bid;
 			_highestBidderName = bidder.getClan().getLeaderName();
-			
 			if (_bidders.get(_highestBidderId) == null)
 			{
 				_bidders.put(_highestBidderId, new Bidder(_highestBidderName, bidder.getClan().getName(), bid, Calendar.getInstance().getTimeInMillis()));
@@ -446,7 +439,6 @@ public class Auction
 		try (Connection con = DatabaseFactory.getConnection())
 		{
 			PreparedStatement statement;
-			
 			statement = con.prepareStatement("DELETE FROM auction_bid WHERE auctionId=?");
 			statement.setInt(1, _id);
 			statement.execute();
@@ -546,7 +538,6 @@ public class Auction
 		try (Connection con = DatabaseFactory.getConnection())
 		{
 			PreparedStatement statement;
-			
 			statement = con.prepareStatement("DELETE FROM auction_bid WHERE auctionId=? AND bidderId=?");
 			statement.setInt(1, _id);
 			statement.setInt(2, bidder);

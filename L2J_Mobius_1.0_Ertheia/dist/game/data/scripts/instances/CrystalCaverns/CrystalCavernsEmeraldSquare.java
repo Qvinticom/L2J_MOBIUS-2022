@@ -110,7 +110,6 @@ public class CrystalCavernsEmeraldSquare extends AbstractInstance
 				case "SUPPORT_SPAWN_TIMER":
 				{
 					final int supportVal = npcVars.getInt("SUPPORT_VALUE", 0);
-					
 					if (supportVal > 3)
 					{
 						return;
@@ -229,7 +228,6 @@ public class CrystalCavernsEmeraldSquare extends AbstractInstance
 				{
 					npc.setDisplayEffect(4);
 					showOnScreenMsg(instance, NpcStringId.SUCCESSFUL_DESTRUCTION_OF_STRONGHOLD_S1, ExShowScreenMessage.MIDDLE_CENTER, 4000, String.valueOf(npc.getParameters().getInt("base_id", -1)));
-					
 					World.getInstance().forEachVisibleObjectInRange(npc, MonsterInstance.class, 400, monster ->
 					{
 						if ((monster.getId() == STRONGHOLD_PROTECTOR) || (monster.getId() == SQUARE_INTRUDER) || (monster.getId() == SQUARE_ATTACKER))
@@ -305,7 +303,6 @@ public class CrystalCavernsEmeraldSquare extends AbstractInstance
 					if ((baseId == 8) || (baseId == 9))
 					{
 						instance.getParameters().increaseInt("MAIN_TARGETS_KILLED", 0, 1);
-						
 						if (instance.getParameters().getInt("MAIN_TARGETS_KILLED", 0) == 2)
 						{
 							showOnScreenMsg(instance, NpcStringId.SUCCESSFUL_DESTRUCTION_OF_STRONGHOLD_ENTRY_ACCESSED, ExShowScreenMessage.MIDDLE_CENTER, 4000);
@@ -314,7 +311,6 @@ public class CrystalCavernsEmeraldSquare extends AbstractInstance
 							
 							final int random = getRandom(100);
 							int bossId = -1;
-							
 							if (random < 55)
 							{
 								bossId = VERIDAN_NORMAL;
@@ -367,14 +363,12 @@ public class CrystalCavernsEmeraldSquare extends AbstractInstance
 				{
 					final StatSet npcParams = npc.getParameters();
 					final int baseId = npcParams.getInt("base_id", -1);
-					
 					if (baseId != 1)
 					{
 						npc.setTargetable(false);
 					}
 					
 					getTimers().addTimer("HP_REGEN_TIMER", 10000, npc, null);
-					
 					if (baseId > 0)
 					{
 						getTimers().addTimer("SUPPORT_SPAWN_TIMER", (baseId * 60) * 1000, npc, null);
@@ -392,7 +386,6 @@ public class CrystalCavernsEmeraldSquare extends AbstractInstance
 		final Creature creature = event.getSeen();
 		final Npc npc = (Npc) event.getSeer();
 		final Instance world = npc.getInstanceWorld();
-		
 		if ((world != null) && creature.isPlayer() && npc.isScriptValue(0))
 		{
 			npc.setScriptValue(1);

@@ -137,7 +137,6 @@ public class FortSiegeManager
 		// Siege spawns settings
 		_commanderSpawnList = new ConcurrentHashMap<>();
 		_flagList = new ConcurrentHashMap<>();
-		
 		for (Fort fort : FortManager.getInstance().getForts())
 		{
 			final List<FortSiegeSpawn> commanderSpawns = new CopyOnWriteArrayList<>();
@@ -158,7 +157,6 @@ public class FortSiegeManager
 					final int z = Integer.parseInt(st.nextToken());
 					final int heading = Integer.parseInt(st.nextToken());
 					final int npc_id = Integer.parseInt(st.nextToken());
-					
 					commanderSpawns.add(new FortSiegeSpawn(fort.getResidenceId(), x, y, z, heading, npc_id, i));
 				}
 				catch (Exception e)
@@ -184,7 +182,6 @@ public class FortSiegeManager
 					final int y = Integer.parseInt(st.nextToken());
 					final int z = Integer.parseInt(st.nextToken());
 					final int flag_id = Integer.parseInt(st.nextToken());
-					
 					flagSpawns.add(new CombatFlag(fort.getResidenceId(), x, y, z, 0, flag_id));
 				}
 				catch (Exception e)
@@ -285,7 +282,6 @@ public class FortSiegeManager
 		}
 		
 		final Fort fort = FortManager.getInstance().getFort(player);
-		
 		final List<CombatFlag> fcf = _flagList.get(fort.getResidenceId());
 		for (CombatFlag cf : fcf)
 		{

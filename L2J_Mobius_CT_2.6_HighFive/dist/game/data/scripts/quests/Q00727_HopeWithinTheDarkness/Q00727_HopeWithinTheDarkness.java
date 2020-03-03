@@ -228,7 +228,6 @@ public class Q00727_HopeWithinTheDarkness extends Quest
 					{
 						cancelQuestTimer("check_for_foes", _npc, null);
 						cancelQuestTimer("buff", _npc, null);
-						
 						if (!_npc.isDead())
 						{
 							_npc.doDie(null);
@@ -302,7 +301,6 @@ public class Q00727_HopeWithinTheDarkness extends Quest
 		if (tmpworld instanceof CAUWorld)
 		{
 			final CAUWorld world = (CAUWorld) tmpworld;
-			
 			if (world.underAttack)
 			{
 				return "Victim-02.html";
@@ -316,7 +314,6 @@ public class Q00727_HopeWithinTheDarkness extends Quest
 				return "Victim-01.html";
 			}
 		}
-		
 		return null;
 	}
 	
@@ -325,17 +322,14 @@ public class Q00727_HopeWithinTheDarkness extends Quest
 	{
 		String htmltext = Quest.getNoQuestMsg(player);
 		final QuestState qs = getQuestState(player, true);
-		
 		if ((npc.getId() >= NPC_KNIGHT) && (npc.getId() <= NPC_WARRIOR))
 		{
 			final InstanceWorld tmpworld = InstanceManager.getInstance().getWorld(player);
 			if (tmpworld instanceof CAUWorld)
 			{
 				final CAUWorld world = (CAUWorld) tmpworld;
-				
 				world.removeAllowed(player);
 				final Instance inst = InstanceManager.getInstance().getInstance(world.getInstanceId());
-				
 				final Location loc = inst.getExitLoc();
 				teleportPlayer(player, loc, 0);
 				return null;
@@ -400,7 +394,6 @@ public class Q00727_HopeWithinTheDarkness extends Quest
 			{
 				npc.broadcastPacket(new NpcSay(npc.getObjectId(), ChatType.NPC_GENERAL, npc.getId(), STRINGID_INJURED[0]));
 			}
-			
 			return null;
 		}
 		
@@ -457,7 +450,6 @@ public class Q00727_HopeWithinTheDarkness extends Quest
 			{
 				world.allMonstersDead = true;
 				final Instance inst = InstanceManager.getInstance().getInstance(tmpworld.getInstanceId());
-				
 				if (inst != null)
 				{
 					for (Npc _npc : inst.getNpcs())
@@ -493,7 +485,6 @@ public class Q00727_HopeWithinTheDarkness extends Quest
 		{
 			startQuestTimer("buff", 120000, npc, null);
 			startQuestTimer("check_for_foes", 120000, npc, null);
-			
 			if (npc.getId() == NPC_KNIGHT)
 			{
 				npc.broadcastPacket(new NpcSay(npc.getObjectId(), ChatType.NPC_GENERAL, npc.getId(), STRINGID_WELCOME));
@@ -503,7 +494,6 @@ public class Q00727_HopeWithinTheDarkness extends Quest
 		{
 			npc.broadcastPacket(new NpcSay(npc.getObjectId(), ChatType.NPC_GENERAL, npc.getId(), STRINGID_BOSS_SPAWN[Arrays.binarySearch(BOSSES, npc.getId())]));
 		}
-		
 		return null;
 	}
 	
@@ -517,7 +507,6 @@ public class Q00727_HopeWithinTheDarkness extends Quest
 		final Castle castle = npc.getCastle();
 		final CastleDungeon dungeon = CASTLE_DUNGEONS.get(npc.getId());
 		boolean haveContract = false;
-		
 		if ((player == null) || (castle == null) || (dungeon == null))
 		{
 			return "CastleWarden-03.html";
@@ -561,7 +550,6 @@ public class Q00727_HopeWithinTheDarkness extends Quest
 		}
 		
 		final Party party = player.getParty();
-		
 		if (party == null)
 		{
 			return "CastleWarden-09.html";
@@ -763,14 +751,12 @@ public class Q00727_HopeWithinTheDarkness extends Quest
 					_world.underAttack = false;
 					
 					final Instance inst = InstanceManager.getInstance().getInstance(_world.getInstanceId());
-					
 					for (Npc _npc : inst.getNpcs())
 					{
 						if ((_npc != null) && ((_npc.getId() >= NPC_KNIGHT) && (_npc.getId() <= NPC_WARRIOR)))
 						{
 							cancelQuestTimer("check_for_foes", _npc, null);
 							cancelQuestTimer("buff", _npc, null);
-							
 							if (_npc.getId() == NPC_KNIGHT)
 							{
 								_npc.broadcastPacket(new NpcSay(_npc.getObjectId(), ChatType.SHOUT, _npc.getId(), STRINGID_WIN));
@@ -781,7 +767,6 @@ public class Q00727_HopeWithinTheDarkness extends Quest
 					if (_player != null)
 					{
 						final Party party = _player.getParty();
-						
 						if (party == null)
 						{
 							rewardPlayer(_player);

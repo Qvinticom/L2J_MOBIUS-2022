@@ -98,7 +98,6 @@ public class MonsterInstance extends Attackable
 		{
 			return false;
 		}
-		
 		return !isEventMob;
 	}
 	

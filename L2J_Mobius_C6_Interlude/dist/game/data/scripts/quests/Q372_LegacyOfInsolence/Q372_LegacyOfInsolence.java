@@ -393,7 +393,6 @@ public class Q372_LegacyOfInsolence extends Quest
 		}
 		
 		final int npcId = npc.getNpcId();
-		
 		for (int i = 0; i < MONSTERS_DROPS[0].length; i++)
 		{
 			if (MONSTERS_DROPS[0][i] == npcId)
@@ -428,7 +427,6 @@ public class Q372_LegacyOfInsolence extends Quest
 		// Retrieve array with rewards.
 		final int[][] rewards = REWARDS_MATRICE[rewardType];
 		final int chance = Rnd.get(100);
-		
 		for (int[] reward : rewards)
 		{
 			if (chance < reward[0])

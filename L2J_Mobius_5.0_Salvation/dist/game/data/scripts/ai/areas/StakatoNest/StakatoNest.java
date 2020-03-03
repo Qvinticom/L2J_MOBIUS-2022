@@ -98,7 +98,6 @@ public class StakatoNest extends AbstractNpcAI
 			if (follower != null)
 			{
 				final double _hp = follower.getCurrentHp();
-				
 				if (_hp > (follower.getMaxHp() * 0.3))
 				{
 					mob.abortAttack();

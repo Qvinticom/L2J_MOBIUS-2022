@@ -57,7 +57,6 @@ public class ExEnchantSkillInfo implements IClientOutgoingPacket
 				}
 				
 				final int skillLvL = (_lvl % 100);
-				
 				for (int route : enchantLearn.getAllRoutes())
 				{
 					if (((route * 100) + skillLvL) == _lvl)

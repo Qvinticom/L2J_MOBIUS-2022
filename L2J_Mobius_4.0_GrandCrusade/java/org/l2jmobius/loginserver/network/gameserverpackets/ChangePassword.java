@@ -72,7 +72,6 @@ public class ChangePassword extends BaseRecievePacket
 			try
 			{
 				final MessageDigest md = MessageDigest.getInstance("SHA");
-				
 				final byte[] raw = md.digest(curpass.getBytes(StandardCharsets.UTF_8));
 				final String curpassEnc = Base64.getEncoder().encodeToString(raw);
 				String pass = null;

@@ -197,7 +197,6 @@ public class Q00117_TheOceanOfDistantStars extends Quest
 	public String onKill(Npc npc, PlayerInstance killer, boolean isSummon)
 	{
 		final QuestState qs = getRandomPartyMemberState(killer, 7, 3, npc);
-		
 		if ((qs == null) || !Util.checkIfInRange(1500, npc, killer, true))
 		{
 			return null;

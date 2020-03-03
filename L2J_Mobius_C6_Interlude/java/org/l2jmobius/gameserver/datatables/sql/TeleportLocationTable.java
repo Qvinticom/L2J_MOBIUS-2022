@@ -54,14 +54,12 @@ public class TeleportLocationTable
 			while (rset.next())
 			{
 				teleport = new TeleportLocation();
-				
 				teleport.setTeleId(rset.getInt("id"));
 				teleport.setX(rset.getInt("loc_x"));
 				teleport.setY(rset.getInt("loc_y"));
 				teleport.setZ(rset.getInt("loc_z"));
 				teleport.setPrice(rset.getInt("price"));
 				teleport.setForNoble(rset.getInt("fornoble") == 1);
-				
 				_teleports.put(teleport.getTeleId(), teleport);
 			}
 			
@@ -82,7 +80,6 @@ public class TeleportLocationTable
 				final PreparedStatement statement = con.prepareStatement("SELECT Description, id, loc_x, loc_y, loc_z, price, fornoble FROM custom_teleport");
 				final ResultSet rset = statement.executeQuery();
 				TeleportLocation teleport;
-				
 				int cTeleCount = _teleports.size();
 				
 				while (rset.next())
@@ -101,7 +98,6 @@ public class TeleportLocationTable
 				rset.close();
 				
 				cTeleCount = _teleports.size() - cTeleCount;
-				
 				if (cTeleCount > 0)
 				{
 					LOGGER.info("TeleportLocationTable: Loaded " + cTeleCount + " Custom Teleport Location Templates.");

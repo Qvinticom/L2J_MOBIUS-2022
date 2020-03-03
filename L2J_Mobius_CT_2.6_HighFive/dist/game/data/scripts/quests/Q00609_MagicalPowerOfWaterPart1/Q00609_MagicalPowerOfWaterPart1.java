@@ -161,7 +161,6 @@ public class Q00609_MagicalPowerOfWaterPart1 extends Quest
 	{
 		final QuestState qs = getQuestState(player, true);
 		String htmltext = getNoQuestMsg(player);
-		
 		switch (npc.getId())
 		{
 			case WAHKAN:

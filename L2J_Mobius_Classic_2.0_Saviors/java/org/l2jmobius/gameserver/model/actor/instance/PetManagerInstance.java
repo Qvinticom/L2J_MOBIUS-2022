@@ -33,7 +33,6 @@ public class PetManagerInstance extends MerchantInstance
 	public String getHtmlPath(int npcId, int value, PlayerInstance player)
 	{
 		String pom = "";
-		
 		if (value == 0)
 		{
 			pom = Integer.toString(npcId);
@@ -42,7 +41,6 @@ public class PetManagerInstance extends MerchantInstance
 		{
 			pom = npcId + "-" + value;
 		}
-		
 		return "data/html/petmanager/" + pom + ".htm";
 	}
 	

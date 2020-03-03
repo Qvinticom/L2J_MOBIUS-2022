@@ -36,7 +36,6 @@ public class RequestShortCutReg extends GameClientPacket
 		final int slot = readD();
 		_id = readD();
 		_unk = readD();
-		
 		_slot = slot % 12;
 		_page = slot / 12;
 	}

@@ -310,7 +310,6 @@ public class ServitorInstance extends Summon implements Runnable
 						while (rs.next())
 						{
 							final int effectCurTime = rs.getInt("remaining_time");
-							
 							final Skill skill = SkillData.getInstance().getSkill(rs.getInt("skill_id"), rs.getInt("skill_level"));
 							if (skill == null)
 							{
@@ -401,7 +400,6 @@ public class ServitorInstance extends Summon implements Runnable
 	{
 		final int usedtime = 5000;
 		_lifeTimeRemaining -= usedtime;
-		
 		if (isDead() || !isSpawned())
 		{
 			if (_summonLifeTask != null)

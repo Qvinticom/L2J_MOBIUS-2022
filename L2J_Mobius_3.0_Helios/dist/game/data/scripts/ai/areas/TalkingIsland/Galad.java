@@ -44,7 +44,6 @@ public class Galad extends AbstractNpcAI
 		{
 			npc.broadcastSocialAction(3);
 			npc.broadcastSay(ChatType.NPC_GENERAL, NpcStringId.OCCASIONALLY_RARE_JEWELS_OF_GIANTS_ARE_DISCOVERED_IN_THE_BEACH, 1000);
-			
 		}
 		return super.onAdvEvent(event, npc, player);
 	}

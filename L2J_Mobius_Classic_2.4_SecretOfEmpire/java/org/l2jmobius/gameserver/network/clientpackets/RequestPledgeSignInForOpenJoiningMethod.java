@@ -66,7 +66,6 @@ public class RequestPledgeSignInForOpenJoiningMethod implements IClientIncomingP
 				
 				// player.setPowerGrade(9); // academy
 				player.setPowerGrade(5); // New member starts at 5, not confirmed.
-				
 				clan.addClanMember(player);
 				player.setClanPrivileges(player.getClan().getRankPrivs(player.getPowerGrade()));
 				player.sendPacket(SystemMessageId.ENTERED_THE_CLAN);

@@ -45,7 +45,6 @@ public class AdminMammon implements IAdminCommandHandler
 		int teleportIndex = -1;
 		final AutoSpawnInstance blackSpawnInst = AutoSpawnHandler.getInstance().getAutoSpawnInstance(SevenSigns.MAMMON_BLACKSMITH_ID, false);
 		final AutoSpawnInstance merchSpawnInst = AutoSpawnHandler.getInstance().getAutoSpawnInstance(SevenSigns.MAMMON_MERCHANT_ID, false);
-		
 		if (command.startsWith("admin_mammon_find"))
 		{
 			try

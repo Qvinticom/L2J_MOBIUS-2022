@@ -208,7 +208,6 @@ public class Potions implements IItemHandler
 		{
 			PlayerInstance activeChar;
 			activeChar = (PlayerInstance) playable;
-			
 			if (activeChar._inEventTvT && TvT.isStarted() && !Config.TVT_ALLOW_POTIONS)
 			{
 				activeChar.sendPacket(ActionFailed.STATIC_PACKET);
@@ -742,7 +741,6 @@ public class Potions implements IItemHandler
 	private boolean isEffectReplaceable(Playable activeChar, Enum<EffectType> effectType, int itemId)
 	{
 		final Effect[] effects = activeChar.getAllEffects();
-		
 		if (effects == null)
 		{
 			return true;
@@ -773,7 +771,6 @@ public class Potions implements IItemHandler
 		if (player instanceof PlayerInstance)
 		{
 			final PlayerInstance activeChar = player.getActingPlayer();
-			
 			if (activeChar.isCastingNow() && (magicId > 2277) && (magicId < 2285))
 			{
 				_herbstask += 100;
@@ -810,7 +807,6 @@ public class Potions implements IItemHandler
 								activeChar.sendMessage("CP Potion is not available at this time: being prepared for reuse.");
 							}
 						}
-						
 						return false;
 					}
 					
@@ -884,7 +880,6 @@ public class Potions implements IItemHandler
 				if (playable instanceof PlayerInstance)
 				{
 					final PlayerInstance activeChar = (PlayerInstance) playable;
-					
 					if (activeChar.getInventory().getInventoryItemCount(potion, 0) > 0)
 					{
 						final ItemInstance item = activeChar.getInventory().getItemByItemId(potion);
@@ -894,7 +889,6 @@ public class Potions implements IItemHandler
 				else if (playable instanceof Summon)
 				{
 					final Summon activeChar = (Summon) playable;
-					
 					if (activeChar.getInventory().getInventoryItemCount(potion, 0) > 0)
 					{
 						final ItemInstance item = activeChar.getInventory().getItemByItemId(potion);
@@ -969,7 +963,6 @@ public class Potions implements IItemHandler
 		Herb_of_Casting_Spd(8609, 2283, 1),
 		Herb_of_Critical_Attack(8610, 2284, 1),
 		Herb_of_Speed(8611, 2285, 1),
-		
 		Herb_of_Warrior(8612, new Integer[]
 		{
 			2280,

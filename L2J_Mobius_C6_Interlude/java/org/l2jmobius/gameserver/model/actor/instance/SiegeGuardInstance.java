@@ -55,7 +55,6 @@ public class SiegeGuardInstance extends Attackable
 		{
 			setKnownList(new SiegeGuardKnownList(this));
 		}
-		
 		return (SiegeGuardKnownList) super.getKnownList();
 	}
 	

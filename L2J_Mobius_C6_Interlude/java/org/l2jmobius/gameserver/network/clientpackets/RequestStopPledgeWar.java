@@ -88,7 +88,6 @@ public class RequestStopPledgeWar extends GameClientPacket
 		// player.sendPacket(sm);
 		// return;
 		// }
-		
 		ClanTable.getInstance().deleteClanWars(playerClan.getClanId(), clan.getClanId());
 		for (PlayerInstance cha : World.getInstance().getAllPlayers())
 		{

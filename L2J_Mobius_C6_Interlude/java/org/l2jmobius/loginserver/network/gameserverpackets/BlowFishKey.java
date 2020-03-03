@@ -40,7 +40,6 @@ public class BlowFishKey extends ClientBasePacket
 	{
 		super(decrypt);
 		final int size = readD();
-		
 		final byte[] tempKey = readB(size);
 		
 		try
@@ -54,7 +53,6 @@ public class BlowFishKey extends ClientBasePacket
 			// there are nulls before the key we must remove them
 			int i = 0;
 			final int len = tempDecryptKey.length;
-			
 			for (; i < len; i++)
 			{
 				if (tempDecryptKey[i] != 0)

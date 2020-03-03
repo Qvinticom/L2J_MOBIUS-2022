@@ -60,16 +60,12 @@ public class TeleporterInstance extends Npc
 		player.sendPacket(ActionFailed.STATIC_PACKET);
 		
 		final int condition = validateCondition(player);
-		
 		final StringTokenizer st = new StringTokenizer(command, " ");
 		final String actualCommand = st.nextToken(); // Get actual command
-		
 		if (player.isAffectedBySkill(6201) || player.isAffectedBySkill(6202) || player.isAffectedBySkill(6203))
 		{
 			final NpcHtmlMessage html = new NpcHtmlMessage(getObjectId());
-			
 			final String filename = "data/html/teleporter/epictransformed.htm";
-			
 			html.setFile(player, filename);
 			html.replace("%objectId%", String.valueOf(getObjectId()));
 			html.replace("%npcname%", getName());
@@ -169,7 +165,6 @@ public class TeleporterInstance extends Npc
 		{
 			pom = npcId + "-" + value;
 		}
-		
 		return "data/html/teleporter/" + pom + ".htm";
 	}
 	
@@ -181,7 +176,6 @@ public class TeleporterInstance extends Npc
 		}
 		
 		final NpcHtmlMessage html = new NpcHtmlMessage(getObjectId());
-		
 		String filename = "data/html/teleporter/free/" + getTemplate().getId() + ".htm";
 		if (!HtmCache.getInstance().isLoadable(filename))
 		{
@@ -202,7 +196,6 @@ public class TeleporterInstance extends Npc
 		}
 		
 		final NpcHtmlMessage html = new NpcHtmlMessage(getObjectId());
-		
 		String filename = "data/html/teleporter/half/" + getId() + ".htm";
 		if (!HtmCache.getInstance().isLoadable(filename))
 		{
@@ -333,7 +326,6 @@ public class TeleporterInstance extends Npc
 				return COND_OWNER; // Owner
 			}
 		}
-		
 		return COND_ALL_FALSE;
 	}
 }

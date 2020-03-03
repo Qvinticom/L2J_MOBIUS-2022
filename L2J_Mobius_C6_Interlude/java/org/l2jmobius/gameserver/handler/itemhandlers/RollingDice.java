@@ -50,7 +50,6 @@ public class RollingDice implements IItemHandler
 		
 		final PlayerInstance player = (PlayerInstance) playable;
 		final int itemId = item.getItemId();
-		
 		if (!player.getFloodProtectors().getRollDice().tryPerformAction("RollDice"))
 		{
 			final SystemMessage sm = new SystemMessage(SystemMessageId.S1_CANNOT_BE_USED_DUE_TO_UNSUITABLE_TERMS);
@@ -84,7 +83,6 @@ public class RollingDice implements IItemHandler
 			final int y = player.getY() + y1;
 			final int z = player.getZ();
 			final Location destination = GeoEngine.getInstance().canMoveToTargetLoc(player.getX(), player.getY(), player.getZ(), x, y, z, player.getInstanceId());
-			
 			Broadcast.toSelfAndKnownPlayers(player, new Dice(player.getObjectId(), item.getItemId(), number, destination.getX(), destination.getY(), destination.getZ()));
 			
 			final SystemMessage sm = new SystemMessage(SystemMessageId.S1_HAS_ROLLED_S2);

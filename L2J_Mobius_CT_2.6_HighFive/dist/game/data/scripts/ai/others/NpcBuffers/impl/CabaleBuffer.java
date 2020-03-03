@@ -126,7 +126,6 @@ public class CabaleBuffer extends AbstractNpcAI
 			
 			final int winningCabal = SevenSigns.getInstance().getCabalHighestScore();
 			int losingCabal = SevenSigns.CABAL_NULL;
-			
 			if (winningCabal == SevenSigns.CABAL_DAWN)
 			{
 				losingCabal = SevenSigns.CABAL_DUSK;
@@ -144,7 +143,6 @@ public class CabaleBuffer extends AbstractNpcAI
 				}
 				
 				final int playerCabal = SevenSigns.getInstance().getPlayerCabal(player.getObjectId());
-				
 				if ((playerCabal == winningCabal) && (playerCabal != SevenSigns.CABAL_NULL) && (_npc.getId() == SevenSigns.ORATOR_NPC_ID))
 				{
 					if (!player.isMageClass())
@@ -254,7 +252,6 @@ public class CabaleBuffer extends AbstractNpcAI
 			if (level == 0)
 			{
 				doCast = true;
-				
 			}
 			else if ((level == 1) && (getRandom(100) < 5))
 			{

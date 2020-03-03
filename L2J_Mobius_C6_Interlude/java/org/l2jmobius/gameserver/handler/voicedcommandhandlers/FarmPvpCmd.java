@@ -40,7 +40,6 @@ public class FarmPvpCmd implements IVoicedCommandHandler
 		int placey;
 		int placez;
 		String message;
-		
 		if (command.equalsIgnoreCase("farm1") && Config.ALLOW_FARM1_COMMAND)
 		{
 			placex = Config.FARM1_X;
@@ -118,7 +117,6 @@ public class FarmPvpCmd implements IVoicedCommandHandler
 		activeChar.setImmobilized(true);
 		
 		ThreadPool.schedule(new teleportTask(activeChar, placex, placey, placez, message), 15000);
-		
 		return true;
 	}
 	

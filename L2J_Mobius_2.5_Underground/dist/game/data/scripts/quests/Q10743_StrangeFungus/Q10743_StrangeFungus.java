@@ -58,7 +58,6 @@ public class Q10743_StrangeFungus extends Quest
 		addStartNpc(LEIRA);
 		addTalkId(LEIRA, MILONE);
 		addKillId(GROWLER, ROBUST_GROWLER, EVOLVED_GROWLER);
-		
 		addCondRace(Race.ERTHEIA, "");
 		addCondLevel(MIN_LEVEL, MAX_LEVEL, "33952-00.htm");
 		registerQuestItems(PECULIAR_MUSHROOM_SPORE);
@@ -111,7 +110,6 @@ public class Q10743_StrangeFungus extends Quest
 	{
 		final QuestState qs = getQuestState(player, true);
 		String htmltext = getNoQuestMsg(player);
-		
 		switch (npc.getId())
 		{
 			case LEIRA:
@@ -145,7 +143,6 @@ public class Q10743_StrangeFungus extends Quest
 				break;
 			}
 		}
-		
 		return htmltext;
 	}
 	

@@ -301,7 +301,6 @@ public class SepulcherMonsterInstance extends MonsterInstance
 			_onDeadEventTask.cancel(true);
 			_onDeadEventTask = null;
 		}
-		
 		return super.deleteMe();
 	}
 	
@@ -336,7 +335,6 @@ public class SepulcherMonsterInstance extends MonsterInstance
 		}
 		
 		final PlayerInstance player = killer.getActingPlayer();
-		
 		if (player == null)
 		{
 			return;

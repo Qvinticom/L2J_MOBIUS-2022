@@ -36,7 +36,6 @@ public class WaterZone extends ZoneType
 	protected void onEnter(Creature creature)
 	{
 		creature.setInsideZone(ZoneId.WATER, true);
-		
 		if (creature instanceof PlayerInstance)
 		{
 			((PlayerInstance) creature).broadcastUserInfo();

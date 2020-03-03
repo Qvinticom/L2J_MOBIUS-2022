@@ -96,7 +96,6 @@ public class CursedWeapon implements INamable
 			{
 				// Remove from player
 				LOGGER.info(_name + " being removed online.");
-				
 				_player.abortAttack();
 				
 				_player.setReputation(_playerReputation);
@@ -253,7 +252,6 @@ public class CursedWeapon implements INamable
 	private void dropIt(Attackable attackable, PlayerInstance player, Creature killer, boolean fromMonster)
 	{
 		_isActivated = false;
-		
 		if (fromMonster)
 		{
 			_item = attackable.dropItem(player, _itemId, 1);
@@ -388,10 +386,8 @@ public class CursedWeapon implements INamable
 			// Start the Life Task
 			_endTime = System.currentTimeMillis() + (_duration * 60000);
 			_removeTask = ThreadPool.scheduleAtFixedRate(new RemoveTask(), _durationLost * 12000, _durationLost * 12000);
-			
 			return true;
 		}
-		
 		return false;
 	}
 	
@@ -459,7 +455,6 @@ public class CursedWeapon implements INamable
 		_player.broadcastUserInfo();
 		
 		_player.broadcastPacket(new SocialAction(_player.getObjectId(), 17));
-		
 		sm = new SystemMessage(SystemMessageId.THE_OWNER_OF_S2_APPEARED_IN_S1_LOCATION_THERE_ARE_ADENA_IN_THE_TREASURE_CHEST_S2_S3_NOW_S4_LATER_THE_LAST_OWNER_OF_THE_ITEM_WILL_RECEIVE_THE_ADENA_AT_23_59);
 		sm.addZoneName(_player.getX(), _player.getY(), _player.getZ()); // Region Name
 		sm.addItemName(_item);
@@ -524,7 +519,6 @@ public class CursedWeapon implements INamable
 		{
 			_player.setPkKills(_nbKills);
 			_player.sendPacket(new UserInfo(_player));
-			
 			if (((_nbKills % _stageKills) == 0) && (_nbKills <= (_stageKills * (_skillMaxLevel - 1))))
 			{
 				giveSkill();

@@ -41,7 +41,6 @@ public class ConditionPlayerCanTakeCastle extends Condition
 		}
 		
 		final PlayerInstance player = effector.getActingPlayer();
-		
 		if (player.isAlikeDead() || player.isCursedWeaponEquipped() || !player.isClanLeader())
 		{
 			return false;

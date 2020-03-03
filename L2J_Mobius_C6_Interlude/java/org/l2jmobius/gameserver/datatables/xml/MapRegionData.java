@@ -73,7 +73,6 @@ public class MapRegionData implements IXmlReader
 		{
 			int id = 0;
 			final StatSet set = new StatSet();
-			
 			final Node n = doc.getFirstChild();
 			for (Node node = n.getFirstChild(); node != null; node = node.getNextSibling())
 			{
@@ -142,7 +141,6 @@ public class MapRegionData implements IXmlReader
 		Castle castle = null;
 		Fort fort = null;
 		ClanHall clanhall = null;
-		
 		if (player.getClan() != null)
 		{
 			// If teleport to clan hall

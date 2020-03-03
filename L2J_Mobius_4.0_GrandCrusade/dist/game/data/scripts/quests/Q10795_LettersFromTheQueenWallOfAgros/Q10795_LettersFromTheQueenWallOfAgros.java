@@ -32,7 +32,6 @@ public class Q10795_LettersFromTheQueenWallOfAgros extends LetterQuest
 	{
 		super(10795);
 		addTalkId(GREGORY, HERMIT);
-		
 		setIsErtheiaQuest(true);
 		setLevel(MIN_LEVEL, MAX_LEVEL);
 		setStartLocation(SOE_GODDARD, TELEPORT_LOC);

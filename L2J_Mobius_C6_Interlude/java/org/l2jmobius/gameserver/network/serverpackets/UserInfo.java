@@ -42,14 +42,12 @@ public class UserInfo extends GameServerPacket
 	public UserInfo(PlayerInstance player)
 	{
 		_player = player;
-		
 		_moveMultiplier = _player.getMovementSpeedMultiplier();
 		_runSpd = (int) (_player.getRunSpeed() / _moveMultiplier);
 		_walkSpd = (int) (_player.getWalkSpeed() / _moveMultiplier);
 		_swimRunSpd = _flRunSpd = _flyRunSpd = _runSpd;
 		_swimWalkSpd = _flWalkSpd = _flyWalkSpd = _walkSpd;
 		_relation = _player.isClanLeader() ? 0x40 : 0;
-		
 		if (_player.getSiegeState() == 1)
 		{
 			_relation |= 0x180;
@@ -172,7 +170,6 @@ public class UserInfo extends GameServerPacket
 		writeH(0x00);
 		writeH(0x00);
 		// end of c6 new h's
-		
 		writeD(_player.getPAtk(null));
 		writeD(_player.getPAtkSpd());
 		writeD(_player.getPDef(null));

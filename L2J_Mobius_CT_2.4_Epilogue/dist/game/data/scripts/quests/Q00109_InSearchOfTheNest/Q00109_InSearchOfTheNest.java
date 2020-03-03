@@ -87,7 +87,6 @@ public class Q00109_InSearchOfTheNest extends Quest
 	{
 		final QuestState qs = getQuestState(player, true);
 		String htmltext = getNoQuestMsg(player);
-		
 		switch (npc.getId())
 		{
 			case PIERCE:

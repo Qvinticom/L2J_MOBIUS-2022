@@ -60,7 +60,6 @@ public class CrystalCarol implements IItemHandler
 		
 		final PlayerInstance player = (PlayerInstance) playable;
 		final int itemId = item.getItemId();
-		
 		if (itemId == 5562) // crystal_carol_01
 		{
 			player.broadcastPacket(new MagicSkillUse(playable, player, 2140, 1, 1, 0));

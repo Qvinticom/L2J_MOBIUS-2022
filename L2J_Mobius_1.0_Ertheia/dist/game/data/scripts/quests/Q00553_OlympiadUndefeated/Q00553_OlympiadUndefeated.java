@@ -58,7 +58,6 @@ public class Q00553_OlympiadUndefeated extends Quest
 			return getNoQuestMsg(player);
 		}
 		String htmltext = event;
-		
 		if (event.equalsIgnoreCase("31688-03.html"))
 		{
 			qs.startQuest();
@@ -66,7 +65,6 @@ public class Q00553_OlympiadUndefeated extends Quest
 		else if (event.equalsIgnoreCase("31688-04.html"))
 		{
 			final long count = getQuestItemsCount(player, WIN_CONF_2) + getQuestItemsCount(player, WIN_CONF_5);
-			
 			if (count > 0)
 			{
 				giveItems(player, OLY_CHEST, count);
@@ -155,7 +153,6 @@ public class Q00553_OlympiadUndefeated extends Quest
 	{
 		String htmltext = getNoQuestMsg(player);
 		final QuestState qs = getQuestState(player, true);
-		
 		if ((player.getLevel() < 75) || !player.isNoble())
 		{
 			htmltext = "31688-00.htm";

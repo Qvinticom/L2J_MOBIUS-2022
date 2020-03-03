@@ -50,7 +50,6 @@ public class RequestConfirmGemStone extends GameClientPacket
 		final ItemInstance targetItem = (ItemInstance) World.getInstance().findObject(_targetItemObjId);
 		final ItemInstance refinerItem = (ItemInstance) World.getInstance().findObject(_refinerItemObjId);
 		final ItemInstance gemstoneItem = (ItemInstance) World.getInstance().findObject(_gemstoneItemObjId);
-		
 		if ((targetItem == null) || (refinerItem == null) || (gemstoneItem == null))
 		{
 			return;
@@ -58,7 +57,6 @@ public class RequestConfirmGemStone extends GameClientPacket
 		
 		// Make sure the item is a gemstone
 		final int gemstoneItemId = gemstoneItem.getItem().getItemId();
-		
 		if ((gemstoneItemId != 2130) && (gemstoneItemId != 2131))
 		{
 			player.sendPacket(SystemMessageId.THIS_IS_NOT_A_SUITABLE_ITEM);

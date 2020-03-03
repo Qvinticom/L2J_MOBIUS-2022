@@ -83,7 +83,6 @@ public class Scrolls implements IItemHandler
 	public void useItem(Playable playable, ItemInstance item)
 	{
 		PlayerInstance player;
-		
 		if (playable instanceof PlayerInstance)
 		{
 			player = (PlayerInstance) playable;
@@ -110,7 +109,6 @@ public class Scrolls implements IItemHandler
 		}
 		
 		final int itemId = item.getItemId();
-		
 		if ((itemId >= 8594) && (itemId <= 8599)) // Scrolls of recovery XML: 2286
 		{
 			if (player.getKarma() > 0)

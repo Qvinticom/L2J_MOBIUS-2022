@@ -64,11 +64,9 @@ public class PetSkillData implements IXmlReader
 					if ("skill".equalsIgnoreCase(d.getNodeName()))
 					{
 						final NamedNodeMap attrs = d.getAttributes();
-						
 						final int npcId = parseInteger(attrs, "npcId");
 						final int skillId = parseInteger(attrs, "skillId");
 						final int skillLvl = parseInteger(attrs, "skillLvl");
-						
 						Map<Long, SkillHolder> skillTree = _skillTrees.get(npcId);
 						if (skillTree == null)
 						{

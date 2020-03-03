@@ -124,7 +124,6 @@ public class Q022_TragedyInVonHellmannForest extends Quest
 				st.set("cond", "7");
 				st.playSound(QuestState.SOUND_MIDDLE);
 				st.takeItems(LOST_SKULL_OF_ELF, 1);
-				
 				_ghostOfPriestInstance = addSpawn(GHOST_OF_PRIEST, 38418, -49894, -1104, 0, false, 120000);
 				_ghostOfPriestInstance.broadcastNpcSay("Did you call me, " + player.getName() + "?");
 				startQuestTimer("ghost_cleanup", 118000, null, player, false);
@@ -459,7 +458,6 @@ public class Q022_TragedyInVonHellmannForest extends Quest
 		else
 		{
 			cancelQuestTimer("attack_timer", null, player);
-			
 			_soulOfWellInstance = null;
 		}
 		

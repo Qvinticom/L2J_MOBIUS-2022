@@ -41,7 +41,6 @@ public class AllyDismiss extends GameClientPacket
 		}
 		
 		final PlayerInstance player = getClient().getPlayer();
-		
 		if (player == null)
 		{
 			return;
@@ -54,7 +53,6 @@ public class AllyDismiss extends GameClientPacket
 		}
 		
 		final Clan leaderClan = player.getClan();
-		
 		if (leaderClan.getAllyId() == 0)
 		{
 			player.sendPacket(SystemMessageId.YOU_ARE_NOT_CURRENTLY_ALLIED_WITH_ANY_CLANS);
@@ -68,7 +66,6 @@ public class AllyDismiss extends GameClientPacket
 		}
 		
 		final Clan clan = ClanTable.getInstance().getClanByName(_clanName);
-		
 		if (clan == null)
 		{
 			player.sendPacket(SystemMessageId.THAT_CLAN_DOES_NOT_EXIST);
@@ -88,9 +85,7 @@ public class AllyDismiss extends GameClientPacket
 		}
 		
 		final long currentTime = System.currentTimeMillis();
-		
 		leaderClan.setAllyPenaltyExpiryTime(currentTime + (Config.ALT_ACCEPT_CLAN_DAYS_WHEN_DISMISSED * 86400000), Clan.PENALTY_TYPE_DISMISS_CLAN); // 24*60*60*1000 = 86400000
-		
 		leaderClan.updateClanInDB();
 		
 		clan.setAllyId(0);

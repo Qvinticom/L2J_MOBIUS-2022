@@ -88,7 +88,6 @@ public class Q10311_PeacefulDaysAreOver extends Quest
 	{
 		final QuestState qs = getQuestState(player, true);
 		String htmltext = getNoQuestMsg(player);
-		
 		switch (npc.getId())
 		{
 			case SELINA:

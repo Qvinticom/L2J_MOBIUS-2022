@@ -43,7 +43,6 @@ final class EffectImobilePetBuff extends Effect
 	public void onStart()
 	{
 		_pet = null;
-		
 		if ((getEffected() instanceof Summon) && (getEffector() instanceof PlayerInstance) && (((Summon) getEffected()).getOwner() == getEffector()))
 		{
 			_pet = (Summon) getEffected();

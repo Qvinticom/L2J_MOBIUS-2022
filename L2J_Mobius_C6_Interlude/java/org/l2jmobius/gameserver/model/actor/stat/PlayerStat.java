@@ -67,7 +67,6 @@ public class PlayerStat extends PlayableStat
 		if (!player.isCursedWeaponEquiped() && (player.getKarma() > 0) && (player.isGM() || !player.isInsideZone(ZoneId.PVP)))
 		{
 			final int karmaLost = player.calculateKarmaLost(value);
-			
 			if (karmaLost > 0)
 			{
 				player.setKarma(player.getKarma() - karmaLost);
@@ -106,7 +105,6 @@ public class PlayerStat extends PlayableStat
 		}
 		
 		// if this player has a pet that takes from the owner's Exp, give the pet Exp now
-		
 		if (player.getPet() instanceof PetInstance)
 		{
 			final PetInstance pet = (PetInstance) player.getPet();
@@ -172,7 +170,6 @@ public class PlayerStat extends PlayableStat
 		}
 		
 		final boolean levelIncreased = super.addLevel(value);
-		
 		if (Config.ALLOW_CLASS_MASTERS && Config.ALLOW_REMOTE_CLASS_MASTERS)
 		{
 			final ClassMasterInstance masterInstance = ClassMasterInstance.getInstance();
@@ -206,7 +203,6 @@ public class PlayerStat extends PlayableStat
 			}
 			
 			final QuestState qs = getActiveChar().getQuestState("Tutorial");
-			
 			if ((qs != null) && (qs.getQuest() != null))
 			{
 				qs.getQuest().notifyEvent("CE40", null, getActiveChar());
@@ -227,7 +223,6 @@ public class PlayerStat extends PlayableStat
 		}
 		
 		getActiveChar().rewardSkills(); // Give Expertise skill of this level
-		
 		if (getActiveChar().getClan() != null)
 		{
 			getActiveChar().getClan().updateClanMember(getActiveChar());
@@ -364,13 +359,11 @@ public class PlayerStat extends PlayableStat
 	public int getMaxCp()
 	{
 		final int val = super.getMaxCp();
-		
 		if (val != _oldMaxCp)
 		{
 			_oldMaxCp = val;
 			
 			final PlayerInstance player = getActiveChar();
-			
 			if (player.getStatus().getCurrentCp() != val)
 			{
 				player.getStatus().setCurrentCp(getActiveChar().getStatus().getCurrentCp());
@@ -384,7 +377,6 @@ public class PlayerStat extends PlayableStat
 	{
 		// Get the Max HP (base+modifier) of the PlayerInstance
 		final int val = super.getMaxHp();
-		
 		if (val != _oldMaxHp)
 		{
 			_oldMaxHp = val;
@@ -397,7 +389,6 @@ public class PlayerStat extends PlayableStat
 				player.getStatus().setCurrentHp(player.getStatus().getCurrentHp()); // trigger start of regeneration
 			}
 		}
-		
 		return val;
 	}
 	
@@ -406,7 +397,6 @@ public class PlayerStat extends PlayableStat
 	{
 		// Get the Max MP (base+modifier) of the PlayerInstance
 		final int val = super.getMaxMp();
-		
 		if (val != _oldMaxMp)
 		{
 			_oldMaxMp = val;
@@ -419,7 +409,6 @@ public class PlayerStat extends PlayableStat
 				player.getStatus().setCurrentMp(player.getStatus().getCurrentMp()); // trigger start of regeneration
 			}
 		}
-		
 		return val;
 	}
 	

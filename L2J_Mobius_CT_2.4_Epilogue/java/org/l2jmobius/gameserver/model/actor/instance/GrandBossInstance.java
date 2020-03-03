@@ -63,7 +63,6 @@ public class GrandBossInstance extends MonsterInstance
 		if ((killer != null) && (killer.getActingPlayer() != null))
 		{
 			final PlayerInstance player = killer.getActingPlayer();
-			
 			broadcastPacket(new SystemMessage(SystemMessageId.CONGRATULATIONS_YOUR_RAID_WAS_SUCCESSFUL));
 			if (player.getParty() != null)
 			{

@@ -411,7 +411,6 @@ public class Q333_HuntOfTheBlackLion extends Quest
 			final boolean cargo2 = st.hasQuestItems(CARGO_BOX_2);
 			final boolean cargo3 = st.hasQuestItems(CARGO_BOX_3);
 			final boolean cargo4 = st.hasQuestItems(CARGO_BOX_4);
-			
 			if ((cargo1 || cargo2 || cargo3 || cargo4) && (player.getAdena() > 649))
 			{
 				st.takeItems(ADENA, 650);
@@ -714,7 +713,6 @@ public class Q333_HuntOfTheBlackLion extends Quest
 			final boolean cargo2 = st.hasQuestItems(CARGO_BOX_2);
 			final boolean cargo3 = st.hasQuestItems(CARGO_BOX_3);
 			final boolean cargo4 = st.hasQuestItems(CARGO_BOX_4);
-			
 			if (cargo1 || cargo2 || cargo3 || cargo4)
 			{
 				if (cargo1)

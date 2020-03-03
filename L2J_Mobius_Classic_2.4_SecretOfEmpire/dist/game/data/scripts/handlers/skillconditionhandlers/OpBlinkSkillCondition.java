@@ -65,11 +65,9 @@ public class OpBlinkSkillCondition implements ISkillCondition
 		final double course = Math.toRadians(_angle);
 		final int x1 = (int) (Math.cos(Math.PI + radian + course) * _range);
 		final int y1 = (int) (Math.sin(Math.PI + radian + course) * _range);
-		
 		final int x = caster.getX() + x1;
 		final int y = caster.getY() + y1;
 		final int z = caster.getZ();
-		
 		return GeoEngine.getInstance().canMoveToTarget(caster.getX(), caster.getY(), caster.getZ(), x, y, z, caster.getInstanceWorld());
 	}
 }

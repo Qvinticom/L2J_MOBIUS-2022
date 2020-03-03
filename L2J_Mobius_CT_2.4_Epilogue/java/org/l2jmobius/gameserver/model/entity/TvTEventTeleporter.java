@@ -44,7 +44,6 @@ public class TvTEventTeleporter implements Runnable
 		_playerInstance = playerInstance;
 		_coordinates = coordinates;
 		_adminRemove = adminRemove;
-		
 		ThreadPool.schedule(this, fastSchedule ? 0 : (TvTEvent.isStarted() ? Config.TVT_EVENT_RESPAWN_TELEPORT_DELAY : Config.TVT_EVENT_START_LEAVE_TELEPORT_DELAY) * 1000);
 	}
 	
@@ -65,7 +64,6 @@ public class TvTEventTeleporter implements Runnable
 		}
 		
 		final Summon summon = _playerInstance.getSummon();
-		
 		if (summon != null)
 		{
 			summon.unSummon(_playerInstance);
@@ -101,7 +99,6 @@ public class TvTEventTeleporter implements Runnable
 		_playerInstance.doRevive();
 		
 		_playerInstance.teleToLocation((_coordinates[0] + Rnd.get(101)) - 50, (_coordinates[1] + Rnd.get(101)) - 50, _coordinates[2], false);
-		
 		if (TvTEvent.isStarted() && !_adminRemove)
 		{
 			final int teamId = TvTEvent.getParticipantTeamId(_playerInstance.getObjectId()) + 1;

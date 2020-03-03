@@ -99,7 +99,6 @@ public class EnchantSkillGroupsData implements IXmlReader
 							{
 								attrs = b.getAttributes();
 								final StatSet set = new StatSet();
-								
 								for (int i = 0; i < attrs.getLength(); i++)
 								{
 									final Node att = attrs.item(i);
@@ -133,7 +132,6 @@ public class EnchantSkillGroupsData implements IXmlReader
 		if (_enchantSkillGroups.containsKey(group))
 		{
 			enchantableSkill.addNewEnchantRoute(route, group);
-			
 			return _enchantSkillGroups.get(group).getEnchantGroupDetails().size();
 		}
 		LOGGER.log(Level.SEVERE, getClass().getSimpleName() + ": Error while loading generating enchant skill id: " + skillId + "; route: " + route + "; missing group: " + group);

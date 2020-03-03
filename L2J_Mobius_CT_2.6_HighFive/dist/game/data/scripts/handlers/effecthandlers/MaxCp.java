@@ -56,7 +56,6 @@ public class MaxCp extends AbstractEffect
 			}
 		}
 		_heal = params.getBoolean("heal", false);
-		
 		if (params.isEmpty())
 		{
 			LOGGER.warning(getClass().getSimpleName() + ": must have parameters.");

@@ -61,7 +61,6 @@ public class RequestSurrenderPledgeWar extends GameClientPacket
 		}
 		
 		LOGGER.info("RequestSurrenderPledgeWar by " + getClient().getPlayer().getClan().getName() + " with " + _pledgeName);
-		
 		if (!playerclan.isAtWarWith(clan.getClanId()))
 		{
 			player.sendMessage("You aren't at war with this clan.");

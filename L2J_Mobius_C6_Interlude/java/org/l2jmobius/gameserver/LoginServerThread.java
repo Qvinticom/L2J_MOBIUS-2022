@@ -135,7 +135,6 @@ public class LoginServerThread extends Thread
 				LOGGER.info("Connecting to login on " + _hostname + ":" + _port);
 				_loginSocket = new Socket(_hostname, _port);
 				_in = _loginSocket.getInputStream();
-				
 				if (_out != null)
 				{
 					synchronized (_out) // avoids tow threads writing in the mean time
@@ -156,7 +155,6 @@ public class LoginServerThread extends Thread
 					lengthLo = _in.read();
 					lengthHi = _in.read();
 					length = (lengthHi * 256) + lengthLo;
-					
 					if (lengthHi < 0)
 					{
 						LOGGER.info("LoginServerThread: Login terminated the connection.");
@@ -166,7 +164,6 @@ public class LoginServerThread extends Thread
 					final byte[] incoming = new byte[length];
 					incoming[0] = (byte) lengthLo;
 					incoming[1] = (byte) lengthHi;
-					
 					int receivedBytes = 0;
 					int newBytes = 0;
 					while ((newBytes != -1) && (receivedBytes < (length - 2)))
@@ -186,7 +183,6 @@ public class LoginServerThread extends Thread
 					// decrypt if we have a key
 					decrypt = _blowfish.decrypt(decrypt);
 					checksumOk = NewCrypt.verifyChecksum(decrypt);
-					
 					if (!checksumOk)
 					{
 						LOGGER.warning("Incorrect packet checksum, ignoring packet (LS)");
@@ -442,7 +438,6 @@ public class LoginServerThread extends Thread
 	public boolean addGameServerLogin(String account, GameClient client)
 	{
 		final GameClient savedClient = _accountsInGameServer.get(account);
-		
 		if (savedClient != null)
 		{
 			if (savedClient.isDetached())
@@ -509,7 +504,6 @@ public class LoginServerThread extends Thread
 		data = _blowfish.crypt(data);
 		
 		final int len = data.length + 2;
-		
 		if ((_out != null) && !_loginSocket.isClosed() && _loginSocket.isConnected())
 		{
 			synchronized (_out) // avoids tow threads writing in the mean time

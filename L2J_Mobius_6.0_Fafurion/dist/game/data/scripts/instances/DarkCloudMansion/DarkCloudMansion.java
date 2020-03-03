@@ -193,7 +193,6 @@ public class DarkCloudMansion extends AbstractInstance
 							npc.setScriptValue(-1);
 							npc.doCast(INCARNATION.getSkill());
 							world.setParameter("current", ++current);
-							
 							if (current == 6)
 							{
 								world.setStatus(5);
@@ -325,7 +324,6 @@ public class DarkCloudMansion extends AbstractInstance
 					{
 						world.setStatus(4);
 						world.openCloseDoor(ROOM_B_DOOR, true);
-						
 						int current = 0;
 						final List<Npc> desks = world.spawnGroup("roomB");
 						while (!desks.isEmpty())
@@ -411,10 +409,8 @@ public class DarkCloudMansion extends AbstractInstance
 				{
 					final int found = params.getInt("found", 0) + 1;
 					world.setParameter("found", found);
-					
 					npc.setScriptValue(-1);
 					npc.broadcastSay(ChatType.NPC_GENERAL, getRandomEntry(SUCCESS_CHAT));
-					
 					if (found != 3)
 					{
 						startQuestTimer("DELETE_ONE", 1500, npc, null);
@@ -430,7 +426,6 @@ public class DarkCloudMansion extends AbstractInstance
 				{
 					world.setParameter("blocked", true);
 					world.setParameter("found", 0);
-					
 					npc.broadcastSay(ChatType.NPC_GENERAL, getRandomEntry(FAIL_CHAT));
 					npc.setScriptValue(-1);
 					startQuestTimer("CHAT", 4000, npc, null);

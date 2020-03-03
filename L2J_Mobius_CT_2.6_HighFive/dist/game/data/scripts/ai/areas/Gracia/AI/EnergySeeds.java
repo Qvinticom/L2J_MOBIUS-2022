@@ -93,7 +93,7 @@ public class EnergySeeds extends AbstractNpcAI
 	};
 	private static final Location SOI_EXIT_POINT = new Location(-183285, 205996, -12896);
 	private static final Location SOD_EXIT_POINT = new Location(-248717, 250260, 4337);
-
+	
 	private static final int SOD_ZONE = 60009;
 	private static final int SOI_ZONE = 60010;
 	

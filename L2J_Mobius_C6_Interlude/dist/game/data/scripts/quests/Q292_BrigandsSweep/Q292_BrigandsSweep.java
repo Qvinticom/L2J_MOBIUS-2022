@@ -116,11 +116,8 @@ public class Q292_BrigandsSweep extends Quest
 						final int goblinPendants = st.getQuestItemsCount(GOBLIN_PENDANT);
 						final int goblinLordPendants = st.getQuestItemsCount(GOBLIN_LORD_PENDANT);
 						final int suspiciousMemos = st.getQuestItemsCount(SUSPICIOUS_MEMO);
-						
 						final int countAll = goblinNecklaces + goblinPendants + goblinLordPendants;
-						
 						final boolean hasContract = st.hasQuestItems(SUSPICIOUS_CONTRACT);
-						
 						if (countAll == 0)
 						{
 							htmltext = "30532-04.htm";
@@ -150,7 +147,6 @@ public class Q292_BrigandsSweep extends Quest
 							st.takeItems(GOBLIN_NECKLACE, -1);
 							st.takeItems(GOBLIN_PENDANT, -1);
 							st.takeItems(GOBLIN_LORD_PENDANT, -1);
-							
 							if (hasContract)
 							{
 								st.set("cond", "1");
@@ -191,7 +187,6 @@ public class Q292_BrigandsSweep extends Quest
 		}
 		
 		final int chance = Rnd.get(10);
-		
 		if (chance > 5)
 		{
 			switch (npc.getNpcId())

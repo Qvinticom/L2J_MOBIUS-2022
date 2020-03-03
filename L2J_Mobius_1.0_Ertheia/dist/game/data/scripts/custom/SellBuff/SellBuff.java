@@ -75,7 +75,6 @@ public class SellBuff implements IVoicedCommandHandler, IBypassHandler
 		String cmd = "";
 		final StringBuilder params = new StringBuilder();
 		final StringTokenizer st = new StringTokenizer(command, " ");
-		
 		if (st.hasMoreTokens())
 		{
 			cmd = st.nextToken();
@@ -183,10 +182,8 @@ public class SellBuff implements IVoicedCommandHandler, IBypassHandler
 				if (!player.isSellingBuffs() && (params != null) && !params.isEmpty())
 				{
 					final StringTokenizer st = new StringTokenizer(params, " ");
-					
 					int skillId = -1;
 					int price = -1;
-					
 					if (st.hasMoreTokens())
 					{
 						skillId = Integer.parseInt(st.nextToken());
@@ -231,9 +228,7 @@ public class SellBuff implements IVoicedCommandHandler, IBypassHandler
 				if (!player.isSellingBuffs() && (params != null) && !params.isEmpty())
 				{
 					final StringTokenizer st = new StringTokenizer(params, " ");
-					
 					int skillId = -1;
-					
 					if (st.hasMoreTokens())
 					{
 						skillId = Integer.parseInt(st.nextToken());
@@ -264,10 +259,8 @@ public class SellBuff implements IVoicedCommandHandler, IBypassHandler
 				if (!player.isSellingBuffs() && (params != null) && !params.isEmpty())
 				{
 					final StringTokenizer st = new StringTokenizer(params, " ");
-					
 					int skillId = -1;
 					long price = -1;
-					
 					if (st.hasMoreTokens())
 					{
 						skillId = Integer.parseInt(st.nextToken());
@@ -325,7 +318,6 @@ public class SellBuff implements IVoicedCommandHandler, IBypassHandler
 				if ((params != null) && !params.isEmpty())
 				{
 					final StringTokenizer st = new StringTokenizer(params, " ");
-					
 					int objId = -1;
 					int index = 0;
 					if (st.hasMoreTokens())
@@ -359,7 +351,6 @@ public class SellBuff implements IVoicedCommandHandler, IBypassHandler
 					int objId = -1;
 					int skillId = -1;
 					int index = 0;
-					
 					if (st.hasMoreTokens())
 					{
 						objId = Integer.parseInt(st.nextToken());

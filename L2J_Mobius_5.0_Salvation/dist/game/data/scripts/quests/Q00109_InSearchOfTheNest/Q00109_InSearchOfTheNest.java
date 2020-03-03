@@ -56,7 +56,6 @@ public class Q00109_InSearchOfTheNest extends Quest
 		}
 		
 		final String htmltext = null;
-		
 		switch (event)
 		{
 			case "31553-02.html":

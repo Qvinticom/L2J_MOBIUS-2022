@@ -124,7 +124,6 @@ public class RequestStartPledgeWar extends GameClientPacket
 		// leader.setTransactionRequester(player);
 		// player.setTransactionRequester(leader);
 		// leader.sendPacket(new StartPledgeWar(_clan.getName(),player.getName()));
-		
 		ClanTable.getInstance().storeClanWars(player.getClanId(), clan.getClanId());
 		for (PlayerInstance cha : World.getInstance().getAllPlayers())
 		{

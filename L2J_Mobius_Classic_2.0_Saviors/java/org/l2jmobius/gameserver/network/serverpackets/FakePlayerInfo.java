@@ -172,7 +172,6 @@ public class FakePlayerInfo implements IClientOutgoingPacket
 		
 		packet.writeH(0x00); // getCubics().size()
 		// getCubics().keySet().forEach(packet::writeH);
-		
 		packet.writeC(0x00);
 		
 		packet.writeC(_npc.isInsideZone(ZoneId.WATER) ? 1 : 0);

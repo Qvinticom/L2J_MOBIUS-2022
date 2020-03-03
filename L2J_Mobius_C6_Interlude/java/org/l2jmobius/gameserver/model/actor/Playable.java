@@ -251,7 +251,6 @@ public abstract class Playable extends Creature
 		setNoblesseBlessed(false);
 		updateAbnormalEffect();
 		_lastNoblessEffect = null;
-		
 	}
 	
 	private Effect _lastProtectionBlessingEffect = null;

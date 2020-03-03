@@ -150,7 +150,6 @@ public class Q00783_VestigeOfTheMagicPower extends Quest
 			}
 		}
 		return htmltext;
-		
 	}
 	
 	@Override
@@ -158,7 +157,6 @@ public class Q00783_VestigeOfTheMagicPower extends Quest
 	{
 		final QuestState qs = getQuestState(player, true);
 		String htmltext = getNoQuestMsg(player);
-		
 		if (npc.getId() == LEONA_BLACKBIRD)
 		{
 			switch (qs.getState())
@@ -218,7 +216,6 @@ public class Q00783_VestigeOfTheMagicPower extends Quest
 		{
 			final Party party = killer.getParty();
 			final List<PlayerInstance> partyMember = party.getMembers();
-			
 			for (PlayerInstance singleMember : partyMember)
 			{
 				final QuestState qsPartyMember = getQuestState(singleMember, false);
@@ -259,7 +256,6 @@ public class Q00783_VestigeOfTheMagicPower extends Quest
 				}
 			}
 		}
-		
 		return super.onKill(npc, killer, isSummon);
 	}
 }

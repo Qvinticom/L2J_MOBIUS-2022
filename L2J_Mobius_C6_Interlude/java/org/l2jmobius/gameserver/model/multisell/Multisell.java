@@ -93,7 +93,6 @@ public class Multisell
 	{
 		final MultiSellListContainer listTemplate = getInstance().getList(listId);
 		MultiSellListContainer list = new MultiSellListContainer();
-		
 		if (listTemplate == null)
 		{
 			return list;
@@ -110,7 +109,6 @@ public class Multisell
 			}
 			
 			ItemInstance[] items;
-			
 			if (listTemplate.getMaintainEnchantment())
 			{
 				items = player.getInventory().getUniqueItemsByEnchantLevel(false, false, false, true);
@@ -172,9 +170,7 @@ public class Multisell
 	{
 		final MultiSellEntry newEntry = new MultiSellEntry();
 		newEntry.setEntryId((templateEntry.getEntryId() * 100000) + enchantLevel);
-		
 		int adenaAmount = 0;
-		
 		for (MultiSellIngredient ing : templateEntry.getIngredients())
 		{
 			// load the ingredient from the template
@@ -219,12 +215,10 @@ public class Multisell
 		{
 			// load the ingredient from the template
 			final MultiSellIngredient newIngredient = new MultiSellIngredient(ing);
-			
 			if (maintainEnchantment)
 			{
 				// if it is an armor/weapon, modify the enchantment level appropriately (note, if maintain enchantment is "false" this modification will result to a +0)
 				final Item tempItem = ItemTable.getInstance().createDummyItem(ing.getItemId()).getItem();
-				
 				if ((tempItem instanceof Armor) || (tempItem instanceof Weapon))
 				{
 					newIngredient.setEnchantmentLevel(enchantLevel);
@@ -241,9 +235,7 @@ public class Multisell
 	{
 		final MultiSellListContainer list = generateMultiSell(listId, inventoryOnly, player, taxRate);
 		MultiSellListContainer temp = new MultiSellListContainer();
-		
 		int page = 1;
-		
 		temp.setListId(list.getListId());
 		
 		for (MultiSellEntry e : list.getEntries())
@@ -267,7 +259,6 @@ public class Multisell
 	private void hashFiles(String dirname, List<File> hash)
 	{
 		final File dir = new File(Config.DATAPACK_ROOT, "data/" + dirname);
-		
 		if (!dir.exists())
 		{
 			LOGGER.warning("Dir " + dir.getAbsolutePath() + " not exists");
@@ -275,7 +266,6 @@ public class Multisell
 		}
 		
 		final File[] files = dir.listFiles();
-		
 		for (File f : files)
 		{
 			if (f.getName().endsWith(".xml"))
@@ -288,12 +278,10 @@ public class Multisell
 	private void parse()
 	{
 		Document doc = null;
-		
 		int id = 0;
 		
 		final List<File> files = new ArrayList<>();
 		hashFiles("multisell", files);
-		
 		for (File f : files)
 		{
 			id = Integer.parseInt(f.getName().replaceAll(".xml", ""));
@@ -327,14 +315,12 @@ public class Multisell
 	protected MultiSellListContainer parseDocument(Document doc)
 	{
 		final MultiSellListContainer list = new MultiSellListContainer();
-		
 		for (Node n = doc.getFirstChild(); n != null; n = n.getNextSibling())
 		{
 			if ("list".equalsIgnoreCase(n.getNodeName()))
 			{
 				Node attribute;
 				attribute = n.getAttributes().getNamedItem("applyTaxes");
-				
 				if (attribute == null)
 				{
 					list.setApplyTaxes(false);
@@ -345,7 +331,6 @@ public class Multisell
 				}
 				
 				attribute = n.getAttributes().getNamedItem("maintainEnchantment");
-				
 				if (attribute == null)
 				{
 					list.setMaintainEnchantment(false);
@@ -377,10 +362,8 @@ public class Multisell
 	protected MultiSellEntry parseEntry(Node n)
 	{
 		final int entryId = Integer.parseInt(n.getAttributes().getNamedItem("id").getNodeValue());
-		
 		final Node first = n.getFirstChild();
 		final MultiSellEntry entry = new MultiSellEntry();
-		
 		for (n = first; n != null; n = n.getNextSibling())
 		{
 			if ("ingredient".equalsIgnoreCase(n.getNodeName()))
@@ -389,19 +372,15 @@ public class Multisell
 				
 				final int id = Integer.parseInt(n.getAttributes().getNamedItem("id").getNodeValue());
 				final int count = Integer.parseInt(n.getAttributes().getNamedItem("count").getNodeValue());
-				
 				boolean isTaxIngredient = false;
 				boolean mantainIngredient = false;
-				
 				attribute = n.getAttributes().getNamedItem("isTaxIngredient");
-				
 				if (attribute != null)
 				{
 					isTaxIngredient = Boolean.parseBoolean(attribute.getNodeValue());
 				}
 				
 				attribute = n.getAttributes().getNamedItem("mantainIngredient");
-				
 				if (attribute != null)
 				{
 					mantainIngredient = Boolean.parseBoolean(attribute.getNodeValue());
@@ -414,7 +393,6 @@ public class Multisell
 			{
 				final int id = Integer.parseInt(n.getAttributes().getNamedItem("id").getNodeValue());
 				final int count = Integer.parseInt(n.getAttributes().getNamedItem("count").getNodeValue());
-				
 				if (ItemTable.getInstance().getTemplate(id) == null)
 				{
 					LOGGER.warning("Multisell: Item " + id + " does not exist.");

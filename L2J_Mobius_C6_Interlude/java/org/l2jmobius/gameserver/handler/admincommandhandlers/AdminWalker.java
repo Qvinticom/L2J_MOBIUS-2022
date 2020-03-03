@@ -53,7 +53,6 @@ public class AdminWalker implements IAdminCommandHandler
 		try
 		{
 			final String[] parts = command.split(" ");
-			
 			if (command.startsWith("admin_walker_menu"))
 			{
 				mainMenu(activeChar);
@@ -68,7 +67,6 @@ public class AdminWalker implements IAdminCommandHandler
 					{
 						PreparedStatement statement = con.prepareStatement("SELECT `route_id` FROM `walker_routes` WHERE `npc_id` = " + _npcid + ";");
 						final ResultSet rset = statement.executeQuery();
-						
 						if (rset.next())
 						{
 							BuilderUtil.sendSysMessage(activeChar, "Such NPC already was, we add routes");
@@ -78,7 +76,6 @@ public class AdminWalker implements IAdminCommandHandler
 						{
 							statement = con.prepareStatement("SELECT MAX(`route_id`) AS max FROM `walker_routes`;");
 							final ResultSet rset1 = statement.executeQuery();
-							
 							if (rset1.next())
 							{
 								_routeid = rset1.getInt("max") + 1;
@@ -149,7 +146,6 @@ public class AdminWalker implements IAdminCommandHandler
 		try (Connection con = DatabaseFactory.getConnection())
 		{
 			PreparedStatement statement;
-			
 			if (_text.isEmpty())
 			{
 				statement = con.prepareStatement("INSERT INTO `lineage`.`walker_routes` (`route_id` ,`npc_id` ,`move_point` ,`chatText` ,`move_x` ,`move_y` ,`move_z` ,`delay` ,`running` )VALUES (?, ?, ?, NULL, ?, ?, ?, ?, ?);");
@@ -208,7 +204,6 @@ public class AdminWalker implements IAdminCommandHandler
 		sb.append("Is chosen NPCID: " + _npcid + "<br>");
 		sb.append("Number of the current point: " + _point + "<br>");
 		sb.append("Number of the current route: " + _routeid + "<br>");
-		
 		if (_mode == 1)
 		{
 			sb.append("Mode: Run<br>");

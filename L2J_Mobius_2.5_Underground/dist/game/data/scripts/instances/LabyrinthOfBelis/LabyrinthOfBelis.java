@@ -127,7 +127,6 @@ public class LabyrinthOfBelis extends AbstractInstance
 						{
 							world.setStatus(4);
 							world.openCloseDoor(DOOR_ID_ROOM_2_2, true);
-							
 							npc.setScriptValue(1);
 							npc.getAI().startFollow(player);
 							
@@ -150,11 +149,9 @@ public class LabyrinthOfBelis extends AbstractInstance
 							npc.broadcastSay(ChatType.NPC_GENERAL, NpcStringId.DON_T_COME_BACK_HERE);
 							npc.setTarget(generator);
 							npc.getAI().setIntention(CtrlIntention.AI_INTENTION_MOVE_TO, INFILTRATION_OFFICER_ROOM_3_INSIDE);
-							
 							getTimers().addTimer("GENERATOR_EFFECT", 300, generator, null);
 							getTimers().addRepeatingTimer("MESSAGE", 7000, npc, null);
 							getTimers().addRepeatingTimer("ATTACKERS", 12500, npc, player);
-							
 							((Attackable) npc).addDamageHate(generator, 0, 9999); // TODO: Find better way for attack
 							npc.reduceCurrentHp(1, generator, null);
 						}
@@ -496,7 +493,6 @@ public class LabyrinthOfBelis extends AbstractInstance
 							getTimers().cancelTimer("ATTACKERS", npc, player);
 						}
 						world.setParameter("counter", counter);
-						
 						showOnScreenMsg(player, (getRandomBoolean() ? NpcStringId.IF_TERAIN_DIES_THE_MISSION_WILL_FAIL : NpcStringId.BEHIND_YOU_THE_ENEMY_IS_AMBUSHING_YOU), ExShowScreenMessage.TOP_CENTER, 4500);
 						final Attackable mob = (Attackable) addSpawn((getRandomBoolean() ? OPERATIVE : HANDYMAN), SPAWN_ATTACKERS, false, 0, true, world.getId());
 						mob.setRunning();

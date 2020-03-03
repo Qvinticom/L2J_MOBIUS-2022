@@ -41,7 +41,6 @@ public class Ground implements ITargetTypeHandler
 		final PlayerInstance player = (PlayerInstance) creature;
 		final int maxTargets = skill.getAffectLimit();
 		final boolean srcInArena = (creature.isInsideZone(ZoneId.PVP) && !creature.isInsideZone(ZoneId.SIEGE));
-		
 		World.getInstance().forEachVisibleObject(creature, Creature.class, character ->
 		{
 			if ((character != null) && character.isInsideRadius2D(player.getCurrentSkillWorldPosition(), skill.getAffectRange()))

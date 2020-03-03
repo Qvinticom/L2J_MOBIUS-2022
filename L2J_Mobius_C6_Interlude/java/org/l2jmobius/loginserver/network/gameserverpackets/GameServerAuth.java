@@ -52,7 +52,6 @@ public class GameServerAuth extends ClientBasePacket
 		_maxPlayers = readD();
 		
 		final int size = readD();
-		
 		_hexId = readB(size);
 	}
 	

@@ -61,7 +61,6 @@ public class CoupleManager
 		{
 			PreparedStatement statement;
 			ResultSet rs;
-			
 			statement = con.prepareStatement("Select id from mods_wedding order by id");
 			rs = statement.executeQuery();
 			
@@ -97,7 +96,6 @@ public class CoupleManager
 		{
 			final int playerId1 = player1.getObjectId();
 			final int playerId2 = player2.getObjectId();
-			
 			final Wedding wedding = new Wedding(player1, player2);
 			_couples.add(wedding);
 			player1.setPartnerId(playerId2);
@@ -111,7 +109,6 @@ public class CoupleManager
 	{
 		final int index = getCoupleIndex(coupleId);
 		final Wedding wedding = _couples.get(index);
-		
 		if (wedding != null)
 		{
 			final PlayerInstance player1 = (PlayerInstance) World.getInstance().findObject(wedding.getPlayer1Id());

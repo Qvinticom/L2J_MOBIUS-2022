@@ -100,7 +100,6 @@ public class Q00386_StolenDignity extends Quest
 	{
 		final QuestState qs = getQuestState(player, true);
 		final String htmltext = getNoQuestMsg(player);
-		
 		if (npc.getId() == WAREHOUSE_KEEPER_ROMP)
 		{
 			if (qs.isCreated())
@@ -267,7 +266,6 @@ public class Q00386_StolenDignity extends Quest
 		{
 			selectBingoNumber(qs, num);
 			i3 = getBingoSelectCount(qs);
-			
 			if (i3 == 2)
 			{
 				html = getHtm(player, "30843-14.html");
@@ -757,7 +755,6 @@ public class Q00386_StolenDignity extends Quest
 	{
 		final QuestState qs = getQuestState(player, false);
 		final List<QuestState> candidates = new ArrayList<>();
-		
 		if ((qs != null) && qs.isStarted())
 		{
 			candidates.add(qs);

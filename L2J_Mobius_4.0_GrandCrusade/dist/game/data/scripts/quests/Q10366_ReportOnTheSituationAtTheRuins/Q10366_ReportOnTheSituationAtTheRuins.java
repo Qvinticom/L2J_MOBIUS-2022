@@ -104,7 +104,6 @@ public class Q10366_ReportOnTheSituationAtTheRuins extends Quest
 	{
 		final QuestState qs = getQuestState(player, true);
 		String htmltext = null;
-		
 		switch (qs.getState())
 		{
 			case State.CREATED:

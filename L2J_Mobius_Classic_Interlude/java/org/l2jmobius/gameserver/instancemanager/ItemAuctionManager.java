@@ -95,7 +95,6 @@ public class ItemAuctionManager implements IXmlReader
 						{
 							final NamedNodeMap nab = nb.getAttributes();
 							final int instanceId = Integer.parseInt(nab.getNamedItem("id").getNodeValue());
-							
 							if (_managerInstances.containsKey(instanceId))
 							{
 								throw new Exception("Dublicated instanceId " + instanceId);

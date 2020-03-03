@@ -436,7 +436,6 @@ public class CrystalCaverns extends AbstractInstance
 		// {22308, 145093, 152502, -12165, 31841},
 		// {22308, 146158, 152776, -12165, 30810},
 		// {22308, 146116, 152976, -12133, 32571}
-	
 	};
 	private static int[][] STEAM2_SPAWNS =
 	{
@@ -654,7 +653,6 @@ public class CrystalCaverns extends AbstractInstance
 		final double dz = effector.getZ() - curZ;
 		final double distance = Math.sqrt((dx * dx) + (dy * dy));
 		int offset = Math.min((int) distance + 300, 1400);
-		
 		double cos;
 		double sin;
 		
@@ -678,9 +676,7 @@ public class CrystalCaverns extends AbstractInstance
 		final int _x = effector.getX() - (int) (offset * cos);
 		final int _y = effector.getY() - (int) (offset * sin);
 		final int _z = effected.getZ();
-		
 		final Location destination = GeoEngine.getInstance().canMoveToTargetLoc(effected.getX(), effected.getY(), effected.getZ(), _x, _y, _z, effected.getInstanceId());
-		
 		effected.broadcastPacket(new FlyToLocation(effected, destination, FlyType.THROW_UP));
 		
 		// maybe is need force set X,Y,Z
@@ -776,7 +772,6 @@ public class CrystalCaverns extends AbstractInstance
 		
 		world.keyKeepers.add(addSpawn(GATEKEEPER_LOHAN, 148206, 149486, -12140, 32308, false, 0, false, world.getInstanceId()));
 		world.keyKeepers.add(addSpawn(GATEKEEPER_PROVO, 148203, 151093, -12140, 31100, false, 0, false, world.getInstanceId()));
-		
 		for (int[] spawn : FIRST_SPAWNS)
 		{
 			addSpawn(spawn[0], spawn[1], spawn[2], spawn[3], spawn[4], false, 0, false, world.getInstanceId());
@@ -976,7 +971,6 @@ public class CrystalCaverns extends AbstractInstance
 			if (tmpworld instanceof CCWorld)
 			{
 				final CCWorld world = (CCWorld) tmpworld;
-				
 				if (((world._dragonClawStart + DRAGONCLAWTIME) <= System.currentTimeMillis()) || (world._dragonClawNeed <= 0))
 				{
 					world._dragonClawStart = System.currentTimeMillis();
@@ -1064,7 +1058,6 @@ public class CrystalCaverns extends AbstractInstance
 			final int maxHp = npc.getMaxHp();
 			final double nowHp = npc.getStatus().getCurrentHp();
 			final int rand = getRandom(1000);
-			
 			if ((nowHp < (maxHp * 0.4)) && (rand < 5))
 			{
 				final Party party = attacker.getParty();
@@ -1302,7 +1295,6 @@ public class CrystalCaverns extends AbstractInstance
 					final int maxHp = npc.getMaxHp();
 					final double nowHp = npc.getStatus().getCurrentHp();
 					final int rand = getRandom(100);
-					
 					if ((nowHp < (maxHp * 0.2)) && (world._raidStatus < 3) && !npc.isAffectedBySkill(5224) && !npc.isAffectedBySkill(5225))
 					{
 						if ((nowHp < (maxHp * 0.15)) && (world._raidStatus == 2))
@@ -1459,7 +1451,6 @@ public class CrystalCaverns extends AbstractInstance
 	private void giveRewards(PlayerInstance player, int instanceId, int bossCry, boolean isBaylor)
 	{
 		final int num = Math.max((int) Config.RATE_DEATH_DROP_CHANCE_MULTIPLIER, 1);
-		
 		final Party party = player.getParty();
 		if (party != null)
 		{

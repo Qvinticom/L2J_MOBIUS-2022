@@ -140,7 +140,6 @@ public class PaulinasSupportBox implements IItemHandler
 		final PlayerInstance player = playable.getActingPlayer();
 		final Race race = player.getRace();
 		final ClassId classId = player.getClassId();
-		
 		if (!player.isInventoryUnder80(false))
 		{
 			player.sendPacket(SystemMessageId.YOU_HAVE_EXCEEDED_THE_ITEM_OWNERSHIP_LIMIT_AND_YOU_CANNOT_TAKE_THE_ITEM_CHECK_ITEM_OWNERSHIP_TIME_LIMITS_FOR_THE_INVENTORY_PLEASE);
@@ -218,7 +217,6 @@ public class PaulinasSupportBox implements IItemHandler
 					case KAMAEL:
 					{
 						player.addItem(getClass().getSimpleName(), BOX_D_LIGHT, 1, player, true);
-						
 						if (CategoryData.getInstance().isInCategory(CategoryType.KAMAEL_FEMALE_MAIN_OCCUPATION, classId.getId()))
 						{
 							player.addItem(getClass().getSimpleName(), WEAPON_CROSSBOW_D, 1, player, true);
@@ -329,7 +327,6 @@ public class PaulinasSupportBox implements IItemHandler
 					case KAMAEL:
 					{
 						player.addItem(getClass().getSimpleName(), BOX_C_LIGHT, 1, player, true);
-						
 						if (CategoryData.getInstance().isInCategory(CategoryType.DIVISION_WIZARD, classId.getId()))
 						{
 							player.addItem(getClass().getSimpleName(), WEAPON_RAPIER_C, 1, player, true);
@@ -438,14 +435,12 @@ public class PaulinasSupportBox implements IItemHandler
 						{
 							player.addItem(getClass().getSimpleName(), BOX_A_HEAVY, 1, player, true);
 							player.addItem(getClass().getSimpleName(), WEAPON_GSWORD_A, 1, player, true);
-							
 						}
 						break;
 					}
 					case KAMAEL:
 					{
 						player.addItem(getClass().getSimpleName(), BOX_A_LIGHT, 1, player, true);
-						
 						if (CategoryData.getInstance().isInCategory(CategoryType.DIVISION_WIZARD, classId.getId()))
 						{
 							player.addItem(getClass().getSimpleName(), WEAPON_RAPIER_A, 1, player, true);
@@ -560,7 +555,6 @@ public class PaulinasSupportBox implements IItemHandler
 					case KAMAEL:
 					{
 						player.addItem(getClass().getSimpleName(), BOX_S_LIGHT, 1, player, true);
-						
 						if (CategoryData.getInstance().isInCategory(CategoryType.DIVISION_WIZARD, classId.getId()))
 						{
 							player.addItem(getClass().getSimpleName(), WEAPON_RAPIER_S, 1, player, true);

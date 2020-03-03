@@ -47,7 +47,6 @@ public class Q10792_LettersFromTheQueenForestOfTheDead extends LetterQuest
 	{
 		super(10792);
 		addTalkId(INNOCENTIN, HATUBA);
-		
 		setIsErtheiaQuest(true);
 		setLevel(MIN_LEVEL, MAX_LEVEL);
 		setStartLocation(SOE_RUNE, TELEPORT_LOC);

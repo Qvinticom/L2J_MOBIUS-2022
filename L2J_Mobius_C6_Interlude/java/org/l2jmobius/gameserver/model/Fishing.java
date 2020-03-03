@@ -89,7 +89,6 @@ public class Fishing implements Runnable
 		_time = fish.getCombatTime() / 1000;
 		_isUpperGrade = isUpperGrade;
 		_lureId = lureId;
-		
 		if (isUpperGrade)
 		{
 			_deceptiveMode = Rnd.get(100) >= 90 ? 1 : 0;
@@ -102,7 +101,6 @@ public class Fishing implements Runnable
 		}
 		
 		_mode = Rnd.get(100) >= 80 ? 1 : 0;
-		
 		_fisher.broadcastPacket(new ExFishingStartCombat(_fisher, _time, _fishMaxHp, _mode, _lureType, _deceptiveMode));
 		_fisher.sendPacket(new PlaySound(1, "SF_S_01"));
 		
@@ -196,7 +194,6 @@ public class Fishing implements Runnable
 			{
 				_stop = 1;
 				int check = Rnd.get(100);
-				
 				if (check >= 70)
 				{
 					_mode = _mode == 0 ? 1 : 0;
@@ -292,7 +289,6 @@ public class Fishing implements Runnable
 	public void usePomping(int dmg, int pen)
 	{
 		_anim = 1;
-		
 		if (Rnd.get(100) > 90)
 		{
 			_fisher.sendPacket(SystemMessageId.THE_FISH_HAS_RESISTED_YOUR_ATTEMPT_TO_BRING_IT_IN);

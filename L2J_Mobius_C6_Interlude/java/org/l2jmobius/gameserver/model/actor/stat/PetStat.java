@@ -58,7 +58,6 @@ public class PetStat extends SummonStat
 		
 		final SystemMessage sm = new SystemMessage(SystemMessageId.YOUR_PET_GAINED_S1_EXPERIENCE_POINTS);
 		sm.addNumber((int) addToExp);
-		
 		getActiveChar().getOwner().sendPacket(sm);
 		
 		return true;
@@ -163,7 +162,6 @@ public class PetStat extends SummonStat
 	{
 		double attack = getActiveChar().getPetData().getPetMAtk();
 		final Stat stat = skill == null ? null : skill.getStat();
-		
 		if (stat != null)
 		{
 			switch (stat)
@@ -253,7 +251,6 @@ public class PetStat extends SummonStat
 	public int getMDef(Creature target, Skill skill)
 	{
 		final double defence = getActiveChar().getPetData().getPetMDef();
-		
 		return (int) calcStat(Stat.MAGIC_DEFENCE, defence, target, skill);
 	}
 	

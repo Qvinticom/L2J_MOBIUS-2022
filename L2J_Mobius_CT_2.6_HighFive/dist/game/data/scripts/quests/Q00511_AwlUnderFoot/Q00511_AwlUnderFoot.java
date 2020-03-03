@@ -327,7 +327,6 @@ public class Q00511_AwlUnderFoot extends Quest
 			return enterInstance(player, tele, _fortDungeons.get(npc.getId()), checkFortCondition(player, npc, true));
 		}
 		final QuestState qs = getQuestState(player, true);
-		
 		if (event.equalsIgnoreCase("FortressWarden-10.htm"))
 		{
 			if (qs.isCond(0))
@@ -408,7 +407,6 @@ public class Q00511_AwlUnderFoot extends Quest
 		final QuestState qs = getQuestState(player, true);
 		final String ret = checkFortCondition(player, npc, false);
 		String htmltext = getNoQuestMsg(player);
-		
 		if (ret != null)
 		{
 			return ret;

@@ -104,7 +104,6 @@ public class Wedding extends AbstractNpcAI
 					partner.setMarryRequest(true);
 					
 					sendHtml(partner, "Ask.html", "%player%", player.getName());
-					
 					htmltext = getHtm(player, "Requested.html");
 					htmltext = htmltext.replace("%player%", partner.getName());
 				}
@@ -151,7 +150,6 @@ public class Wedding extends AbstractNpcAI
 					}
 					
 					Broadcast.toAllOnlinePlayers("Congratulations to " + player.getName() + " and " + partner.getName() + "! They have been married.");
-					
 					htmltext = sendHtml(partner, "Accepted.html", null, null);
 				}
 				break;
@@ -165,7 +163,6 @@ public class Wedding extends AbstractNpcAI
 				
 				player.sendMessage("You declined your partner's marriage request.");
 				partner.sendMessage("Your partner declined your marriage request.");
-				
 				htmltext = sendHtml(partner, "Declined.html", null, null);
 				break;
 			}

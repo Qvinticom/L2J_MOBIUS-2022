@@ -32,7 +32,6 @@ public class NewCharacter extends GameClientPacket
 	protected void runImpl()
 	{
 		final CharTemplates ct = new CharTemplates();
-		
 		PlayerTemplate template = PlayerTemplateData.getInstance().getTemplate(0);
 		ct.addChar(template);
 		

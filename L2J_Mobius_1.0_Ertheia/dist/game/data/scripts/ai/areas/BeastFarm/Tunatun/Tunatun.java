@@ -45,7 +45,6 @@ public class Tunatun extends AbstractNpcAI
 	public String onAdvEvent(String event, Npc npc, PlayerInstance player)
 	{
 		String htmltext = getNoQuestMsg(player);
-		
 		switch (event)
 		{
 			case "31537-04.html":

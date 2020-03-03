@@ -54,14 +54,12 @@ public class RequestPledgeRecruitBoardAccess implements IClientIncomingPacket
 	public void run(GameClient client)
 	{
 		final PlayerInstance player = client.getPlayer();
-		
 		if (player == null)
 		{
 			return;
 		}
 		
 		final Clan clan = player.getClan();
-		
 		if (clan == null)
 		{
 			player.sendPacket(SystemMessageId.ONLY_THE_CLAN_LEADER_OR_SOMEONE_WITH_RANK_MANAGEMENT_AUTHORITY_MAY_REGISTER_THE_CLAN);

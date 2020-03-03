@@ -133,7 +133,6 @@ public class Q10417_DaimonTheWhiteEyed extends Quest
 	{
 		final QuestState qs = getQuestState(player, true);
 		String htmltext = getNoQuestMsg(player);
-		
 		if (qs.getState() == State.CREATED)
 		{
 			if (npc.getId() == EYE_OF_ARGOS)

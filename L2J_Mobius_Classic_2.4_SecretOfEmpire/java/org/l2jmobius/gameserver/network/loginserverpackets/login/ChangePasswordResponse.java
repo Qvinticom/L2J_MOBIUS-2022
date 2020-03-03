@@ -28,9 +28,7 @@ public class ChangePasswordResponse extends BaseRecievePacket
 		// boolean isSuccessful = readC() > 0;
 		final String character = readS();
 		final String msgToSend = readS();
-		
 		final PlayerInstance player = World.getInstance().getPlayer(character);
-		
 		if (player != null)
 		{
 			player.sendMessage(msgToSend);

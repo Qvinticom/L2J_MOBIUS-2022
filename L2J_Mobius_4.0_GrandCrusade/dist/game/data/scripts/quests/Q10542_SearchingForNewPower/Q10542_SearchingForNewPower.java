@@ -126,7 +126,6 @@ public class Q10542_SearchingForNewPower extends Quest
 	{
 		final QuestState qs = getQuestState(player, true);
 		String htmltext = getNoQuestMsg(player);
-		
 		switch (qs.getState())
 		{
 			case State.CREATED:
@@ -171,7 +170,6 @@ public class Q10542_SearchingForNewPower extends Quest
 						qs.setCond(3, true);
 						player.sendPacket(new TutorialShowHtml(npc.getObjectId(), "..\\L2text\\QT_004_skill_01.htm", TutorialShowHtml.LARGE_WINDOW));
 						htmltext = "33004-01.html";
-						
 						NpcStringId npcStringId = null;
 						switch (player.getClassId())
 						{

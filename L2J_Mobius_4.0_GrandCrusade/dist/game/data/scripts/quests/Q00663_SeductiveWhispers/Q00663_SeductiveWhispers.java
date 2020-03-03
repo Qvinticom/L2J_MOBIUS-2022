@@ -150,7 +150,6 @@ public class Q00663_SeductiveWhispers extends Quest
 				break;
 			}
 		}
-		
 		return htmltext;
 	}
 	
@@ -293,7 +292,6 @@ public class Q00663_SeductiveWhispers extends Quest
 		boolean isNpcWin = false;
 		String htmltext;
 		final String table = getHtm(player, "table.html");
-		
 		if (isPlayerTurn)
 		{
 			if ((playerCard != null) && isWinner(playerCard, npcCard, true))
@@ -341,7 +339,6 @@ public class Q00663_SeductiveWhispers extends Quest
 		htmltext = htmltext.replace("%player_name%", player.getName());
 		htmltext = htmltext.replace("%player_card%", playerCard.toString());
 		htmltext = npcCard == null ? htmltext.replace("%npc_card%", "No such card") : htmltext.replace("%npc_card%", npcCard.toString());
-		
 		if (isPlayerWin)
 		{
 			reset(false);

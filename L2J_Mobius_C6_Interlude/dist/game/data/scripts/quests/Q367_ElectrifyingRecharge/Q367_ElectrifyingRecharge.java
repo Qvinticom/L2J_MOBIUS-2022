@@ -178,10 +178,8 @@ public class Q367_ElectrifyingRecharge extends Quest
 			if (st.hasQuestItems(LORAIN_LAMP))
 			{
 				final int randomItem = Rnd.get(5876, 5880);
-				
 				st.takeItems(LORAIN_LAMP, 1);
 				st.giveItems(randomItem, 1);
-				
 				if (randomItem == 5879)
 				{
 					st.set("cond", "2");

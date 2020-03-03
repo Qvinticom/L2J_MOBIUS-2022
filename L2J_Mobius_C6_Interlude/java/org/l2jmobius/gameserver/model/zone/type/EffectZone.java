@@ -261,7 +261,6 @@ public class EffectZone extends ZoneType
 							for (Entry<Integer, Integer> e : _skills.entrySet())
 							{
 								final Skill skill = getSkill(e.getKey(), e.getValue());
-								
 								if (skill == null)
 								{
 									LOGGER.warning("ATTENTION: Skill " + e.getKey() + " cannot be loaded.. Verify Skill definition into data/stats/skill folder...");

@@ -49,7 +49,6 @@ public class RequestJoinAlly implements IClientIncomingPacket
 		}
 		
 		final PlayerInstance ob = World.getInstance().getPlayer(_id);
-		
 		if (ob == null)
 		{
 			player.sendPacket(SystemMessageId.YOU_HAVE_INVITED_THE_WRONG_TARGET);

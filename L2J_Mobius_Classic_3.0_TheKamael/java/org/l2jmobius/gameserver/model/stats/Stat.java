@@ -328,7 +328,6 @@ public enum Stat
 	Stat(String xmlString, IStatFunction valueFinalizer)
 	{
 		this(xmlString, valueFinalizer, MathUtil::add, MathUtil::mul, 0, 1);
-		
 	}
 	
 	Stat(String xmlString, IStatFunction valueFinalizer, DoubleBinaryOperator addFunction, DoubleBinaryOperator mulFunction, double resetAddValue, double resetMulValue)

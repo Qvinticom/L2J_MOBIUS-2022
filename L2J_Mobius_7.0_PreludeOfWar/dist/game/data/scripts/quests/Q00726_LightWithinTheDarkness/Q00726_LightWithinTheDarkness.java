@@ -103,7 +103,6 @@ public class Q00726_LightWithinTheDarkness extends Quest
 	{
 		final QuestState qs = getQuestState(player, true);
 		String htmltext = getNoQuestMsg(player);
-		
 		if (qs.isCreated())
 		{
 			final Fort fort = npc.getFort();

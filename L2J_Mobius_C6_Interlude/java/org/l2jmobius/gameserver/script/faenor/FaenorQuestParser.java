@@ -37,7 +37,6 @@ public class FaenorQuestParser extends FaenorParser
 	public void parseScript(Node questNode, ScriptContext context)
 	{
 		final String questID = attribute(questNode, "ID");
-		
 		for (Node node = questNode.getFirstChild(); node != null; node = node.getNextSibling())
 		{
 			if (isNodeName(node, "DROPLIST"))

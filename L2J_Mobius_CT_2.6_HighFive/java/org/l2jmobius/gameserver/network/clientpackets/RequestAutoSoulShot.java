@@ -101,7 +101,6 @@ public class RequestAutoSoulShot implements IClientIncomingPacket
 							
 							player.rechargeShots(true, true);
 							player.getSummon().rechargeShots(true, true);
-							
 						}
 						else
 						{

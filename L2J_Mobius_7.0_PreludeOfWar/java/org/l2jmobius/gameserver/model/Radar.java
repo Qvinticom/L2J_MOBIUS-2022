@@ -39,7 +39,6 @@ public class Radar
 	public void addMarker(int x, int y, int z)
 	{
 		final RadarMarker newMarker = new RadarMarker(x, y, z);
-		
 		_markers.add(newMarker);
 		_player.sendPacket(new RadarControl(2, 2, x, y, z));
 		_player.sendPacket(new RadarControl(0, 1, x, y, z));

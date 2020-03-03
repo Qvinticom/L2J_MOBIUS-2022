@@ -73,10 +73,8 @@ public class Augmentation
 		{
 			_active = false;
 			final List<AugmentationData.AugStat> as = AugmentationData.getInstance().getAugStatsById(augmentationId);
-			
 			_stats = new Stat[as.size()];
 			_values = new float[as.size()];
-			
 			int i = 0;
 			for (AugmentationData.AugStat aStat : as)
 			{
@@ -123,7 +121,6 @@ public class Augmentation
 			final PreparedStatement statement = con.prepareStatement("INSERT INTO augmentations (item_id,attributes,skill,level) VALUES (?,?,?,?)");
 			statement.setInt(1, _item.getObjectId());
 			statement.setInt(2, _effectsId);
-			
 			if (_skill != null)
 			{
 				statement.setInt(3, _skill.getId());
@@ -226,11 +223,9 @@ public class Augmentation
 			{
 				// Iterate through all effects currently on the character.
 				final Effect[] effects = player.getAllEffects();
-				
 				for (Effect currenteffect : effects)
 				{
 					final Skill effectSkill = currenteffect.getSkill();
-					
 					if (effectSkill.getId() == _skill.getId())
 					{
 						player.sendMessage("You feel the power of " + effectSkill.getName() + " leaving yourself.");

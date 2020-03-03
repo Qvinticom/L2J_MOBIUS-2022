@@ -52,7 +52,6 @@ public class StaticDamage extends AbstractEffect
 		
 		info.getEffected().reduceCurrentHp(_power, info.getEffector(), info.getSkill());
 		info.getEffected().notifyDamageReceived(_power, info.getEffector(), info.getSkill(), false, false);
-		
 		if (info.getEffector().isPlayer())
 		{
 			info.getEffector().sendDamageMessage(info.getEffected(), _power, false, false, false);

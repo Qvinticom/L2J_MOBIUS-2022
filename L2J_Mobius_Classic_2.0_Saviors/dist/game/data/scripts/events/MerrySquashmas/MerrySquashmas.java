@@ -390,7 +390,7 @@ public class MerrySquashmas extends LongTimeEvent
 		{ 13404, Mold_Lubricant, 50 },
 		{ 13404, Silver_Mold, 50 },
 		{ 13404, Varnish_of_Purity, 50 },
-
+		
 		// Snowy Large Rotten Squash
 		{ 13405, Class_Buff_Scroll_1st, 70 },
 		{ 13405, Angel_Cat_Blessing_Chest, 60 },
@@ -530,7 +530,6 @@ public class MerrySquashmas extends LongTimeEvent
 				npc.setInvul(true);
 			}
 		}
-		
 		return super.onAttack(npc, attacker, damage, isPet);
 	}
 	

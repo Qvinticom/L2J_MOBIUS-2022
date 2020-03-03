@@ -79,7 +79,6 @@ public class HandysBlockCheckerEvent extends AbstractNpcAI
 			final int countBlue = holder.getBlueTeamSize();
 			final int countRed = holder.getRedTeamSize();
 			final int minMembers = Config.MIN_BLOCK_CHECKER_TEAM_MEMBERS;
-			
 			if ((countBlue >= minMembers) && (countRed >= minMembers))
 			{
 				holder.updateEvent();

@@ -85,7 +85,6 @@ public class NewbieTravelToken extends Quest
 			final int x = data.get(event)[0];
 			final int y = data.get(event)[1];
 			final int z = data.get(event)[2];
-			
 			if (st.getQuestItemsCount(TOKEN) != 0)
 			{
 				st.takeItems(TOKEN, 1);
@@ -106,7 +105,6 @@ public class NewbieTravelToken extends Quest
 		String htmltext = "";
 		final QuestState st = player.getQuestState(getName());
 		final int npcId = npc.getNpcId();
-		
 		if (player.getLevel() >= 20)
 		{
 			htmltext = "wronglevel.htm";
@@ -116,7 +114,6 @@ public class NewbieTravelToken extends Quest
 		{
 			htmltext = npcId + ".htm";
 		}
-		
 		return htmltext;
 	}
 	

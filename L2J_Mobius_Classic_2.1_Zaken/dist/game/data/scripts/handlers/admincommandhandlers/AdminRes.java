@@ -57,7 +57,6 @@ public class AdminRes implements IAdminCommandHandler
 		{
 			handleNonPlayerRes(activeChar);
 		}
-		
 		return true;
 	}
 	
@@ -75,12 +74,10 @@ public class AdminRes implements IAdminCommandHandler
 	private void handleRes(PlayerInstance activeChar, String resParam)
 	{
 		WorldObject obj = activeChar.getTarget();
-		
 		if (resParam != null)
 		{
 			// Check if a player name was specified as a param.
 			final PlayerInstance plyr = World.getInstance().getPlayer(resParam);
-			
 			if (plyr != null)
 			{
 				obj = plyr;
@@ -91,9 +88,7 @@ public class AdminRes implements IAdminCommandHandler
 				try
 				{
 					final int radius = Integer.parseInt(resParam);
-					
 					World.getInstance().forEachVisibleObjectInRange(activeChar, PlayerInstance.class, radius, this::doResurrect);
-					
 					BuilderUtil.sendSysMessage(activeChar, "Resurrected all players within a " + radius + " unit radius.");
 					return;
 				}
@@ -131,11 +126,9 @@ public class AdminRes implements IAdminCommandHandler
 		try
 		{
 			int radius = 0;
-			
 			if (!radiusStr.isEmpty())
 			{
 				radius = Integer.parseInt(radiusStr);
-				
 				World.getInstance().forEachVisibleObjectInRange(activeChar, Creature.class, radius, knownChar ->
 				{
 					if (!knownChar.isPlayer() && !(knownChar instanceof ControllableMobInstance))

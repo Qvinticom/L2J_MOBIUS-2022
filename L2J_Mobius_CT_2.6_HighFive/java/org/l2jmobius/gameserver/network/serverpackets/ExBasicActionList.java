@@ -71,7 +71,6 @@ public class ExBasicActionList implements IClientOutgoingPacket
 		final int count3 = 16; // 5000 <-> (5000 + count3 - 1)
 		DEFAULT_ACTION_LIST = new int[count1 + count2 + count3];
 		int i;
-		
 		for (i = count1; i-- > 0;)
 		{
 			DEFAULT_ACTION_LIST[i] = i;

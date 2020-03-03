@@ -363,13 +363,11 @@ public class CubicInstance
 			{
 				final PlayerInstance playerA = DuelManager.getInstance().getDuel(_owner.getDuelId()).getPlayerA();
 				final PlayerInstance playerB = DuelManager.getInstance().getDuel(_owner.getDuelId()).getPlayerB();
-				
 				if (DuelManager.getInstance().getDuel(_owner.getDuelId()).isPartyDuel())
 				{
 					final Party partyA = playerA.getParty();
 					final Party partyB = playerB.getParty();
 					Party partyEnemy = null;
-					
 					if (partyA != null)
 					{
 						if (partyA.getPartyMembers().contains(_owner))
@@ -482,7 +480,6 @@ public class CubicInstance
 				
 				// get target in pvp or in siege
 				PlayerInstance enemy = null;
-				
 				if (((_owner.getPvpFlag() > 0) && !_owner.isInsideZone(ZoneId.PEACE)) || _owner.isInsideZone(ZoneId.PVP))
 				{
 					if (!((Creature) ownerTarget).isDead() && (ownerTarget instanceof PlayerInstance))
@@ -493,7 +490,6 @@ public class CubicInstance
 					if (enemy != null)
 					{
 						boolean targetIt = true;
-						
 						if (_owner.getParty() != null)
 						{
 							if (_owner.getParty().getPartyMembers().contains(enemy))
@@ -602,11 +598,9 @@ public class CubicInstance
 				// Smart Cubic debuff cancel is 100%
 				boolean useCubicCure = false;
 				Skill skill = null;
-				
 				if ((_id >= SMART_CUBIC_EVATEMPLAR) && (_id <= SMART_CUBIC_SPECTRALMASTER))
 				{
 					final Effect[] effects = owner.getAllEffects();
-					
 					for (Effect e : effects)
 					{
 						if ((e != null) && e.getSkill().isOffensive())
@@ -644,7 +638,6 @@ public class CubicInstance
 						}
 						
 						final Creature target = _target;
-						
 						if ((target != null) && (!target.isDead()))
 						{
 							owner.broadcastPacket(new MagicSkillUse(owner, target, skill.getId(), skill.getLevel(), 0, 0));
@@ -770,7 +763,6 @@ public class CubicInstance
 				}
 				
 				activeCubic.getOwner().sendDamageMessage(target, damage, mcrit, false, false);
-				
 				if (skill.hasEffects())
 				{
 					// activate attacked effects, if any
@@ -934,11 +926,9 @@ public class CubicInstance
 		int z;
 		// temporary range check until real behavior of cubics is known/coded
 		final int range = MAX_MAGIC_RANGE;
-		
 		x = (owner.getX() - target.getX());
 		y = (owner.getY() - target.getY());
 		z = (owner.getZ() - target.getZ());
-		
 		return (((x * x) + (y * y) + (z * z)) <= (range * range));
 	}
 	

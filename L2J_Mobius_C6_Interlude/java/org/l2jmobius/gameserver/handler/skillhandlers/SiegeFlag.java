@@ -80,7 +80,6 @@ public class SiegeFlag implements ISkillHandler
 		{
 			// Spawn a new flag
 			final SiegeFlagInstance flag = new SiegeFlagInstance(player, IdFactory.getNextId(), NpcTable.getInstance().getTemplate(35062));
-			
 			if (skill.isAdvancedFlag())
 			{
 				flag.setAdvanceFlag(true);
@@ -91,7 +90,6 @@ public class SiegeFlag implements ISkillHandler
 			flag.setCurrentHpMp(flag.getMaxHp(), flag.getMaxMp());
 			flag.setHeading(player.getHeading());
 			flag.spawnMe(player.getX(), player.getY(), player.getZ() + 50);
-			
 			if (castle != null)
 			{
 				castle.getSiege().getFlag(player.getClan()).add(flag);

@@ -194,7 +194,6 @@ public class Q11025_PathOfDestinyProving extends Quest
 	{
 		final QuestState qs = getQuestState(player, true);
 		String htmltext = getNoQuestMsg(player);
-		
 		switch (qs.getState())
 		{
 			case State.CREATED:
@@ -332,7 +331,6 @@ public class Q11025_PathOfDestinyProving extends Quest
 		if ((qs != null) && qs.isCompleted())
 		{
 			player.getVariables().set(R_GRADE_ITEMS_REWARDED_VAR, true);
-			
 			giveItems(player, SS_R, 3000);
 			giveItems(player, BSS_R, 2000);
 			

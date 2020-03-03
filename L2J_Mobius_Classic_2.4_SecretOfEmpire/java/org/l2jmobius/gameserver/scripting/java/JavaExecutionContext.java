@@ -172,13 +172,11 @@ public class JavaExecutionContext extends JavaScriptingEngine
 			}
 			
 			final ClassLoader parentClassLoader = determineScriptParentClassloader();
-			
 			final Map<Path, Throwable> executionFailures = new HashMap<>();
 			final Iterable<ScriptingOutputFileObject> compiledClasses = fileManager.getCompiledClasses();
 			for (Path sourcePath : sourcePaths)
 			{
 				boolean found = false;
-				
 				for (ScriptingOutputFileObject compiledClass : compiledClasses)
 				{
 					final Path compiledSourcePath = compiledClass.getSourcePath();

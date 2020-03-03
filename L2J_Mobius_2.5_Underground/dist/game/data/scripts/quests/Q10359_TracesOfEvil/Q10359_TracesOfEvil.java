@@ -580,7 +580,6 @@ public class Q10359_TracesOfEvil extends Quest
 	public String onKill(Npc npc, PlayerInstance killer, boolean isSummon)
 	{
 		final QuestState qs = getQuestState(killer, false);
-		
 		if ((qs != null) && qs.isStarted() && qs.isCond(2))
 		{
 			if (getRandom(100) < 40)

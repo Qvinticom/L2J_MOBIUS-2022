@@ -158,7 +158,6 @@ public class Rabbits extends Event
 		
 		// Announce event end
 		Broadcast.toAllOnlinePlayers("Rabbits Event: Event has finished.");
-		
 		return true;
 	}
 	

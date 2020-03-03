@@ -674,7 +674,6 @@ public class StatSet implements IParserAdvUtils
 		{
 			return null;
 		}
-		
 		return (A) obj;
 	}
 	
@@ -686,7 +685,6 @@ public class StatSet implements IParserAdvUtils
 		{
 			return defaultValue;
 		}
-		
 		return (A) obj;
 	}
 	
@@ -697,7 +695,6 @@ public class StatSet implements IParserAdvUtils
 		{
 			return null;
 		}
-		
 		return (SkillHolder) obj;
 	}
 	
@@ -719,7 +716,6 @@ public class StatSet implements IParserAdvUtils
 		{
 			return Collections.emptyList();
 		}
-		
 		return (List<MinionHolder>) obj;
 	}
 	

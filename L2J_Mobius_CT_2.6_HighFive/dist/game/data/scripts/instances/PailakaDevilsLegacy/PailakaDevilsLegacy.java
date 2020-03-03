@@ -101,7 +101,6 @@ public class PailakaDevilsLegacy extends AbstractInstance
 	{
 		final InstanceWorld world = InstanceManager.getInstance().getWorld(npc);
 		String htmltext = null;
-		
 		if (event.equals("enter"))
 		{
 			final QuestState qs = player.getQuestState(Q00129_PailakaDevilsLegacy.class.getSimpleName());

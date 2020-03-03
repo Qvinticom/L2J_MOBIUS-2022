@@ -192,7 +192,6 @@ public class Q10824_ConfrontingTheGreatestDanger extends Quest
 	{
 		final QuestState qs = getQuestState(player, true);
 		String htmltext = getNoQuestMsg(player);
-		
 		switch (qs.getState())
 		{
 			case State.CREATED:
@@ -251,7 +250,6 @@ public class Q10824_ConfrontingTheGreatestDanger extends Quest
 		{
 			giveItems(player, PROOF_OF_PREPARATION, 1);
 			playSound(player, QuestSound.ITEMSOUND_QUEST_ITEMGET);
-			
 			if (getQuestItemsCount(player, PROOF_OF_PREPARATION) >= 20000)
 			{
 				qs.setCond(4, true);
@@ -261,7 +259,6 @@ public class Q10824_ConfrontingTheGreatestDanger extends Quest
 		{
 			giveItems(player, MARK_OF_ADVANCE, 1);
 			playSound(player, QuestSound.ITEMSOUND_QUEST_ITEMGET);
-			
 			if (getQuestItemsCount(player, MARK_OF_ADVANCE) >= 3)
 			{
 				qs.setCond(2, true);

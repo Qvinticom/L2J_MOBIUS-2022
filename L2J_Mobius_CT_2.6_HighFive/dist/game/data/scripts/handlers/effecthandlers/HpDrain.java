@@ -69,11 +69,9 @@ public class HpDrain extends AbstractEffect
 		final boolean mcrit = Formulas.calcMCrit(creature.getMCriticalHit(target, info.getSkill()));
 		final byte shld = Formulas.calcShldUse(creature, target, info.getSkill());
 		final int damage = (int) Formulas.calcMagicDam(creature, target, info.getSkill(), shld, sps, bss, mcrit);
-		
 		int drain = 0;
 		final int cp = (int) target.getCurrentCp();
 		final int hp = (int) target.getCurrentHp();
-		
 		if (cp > 0)
 		{
 			drain = (damage < cp) ? 0 : (damage - cp);

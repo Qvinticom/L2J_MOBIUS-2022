@@ -245,7 +245,6 @@ public class CastleManorManager
 				
 				castle.setCropProcure(procure, PERIOD_CURRENT);
 				castle.setCropProcure(procureNext, PERIOD_NEXT);
-				
 				if (!procure.isEmpty() || !procureNext.isEmpty() || !production.isEmpty() || !productionNext.isEmpty())
 				{
 					LOGGER.info(castle.getName() + ": Data loaded");
@@ -319,7 +318,6 @@ public class CastleManorManager
 				if (crop.getStartAmount() > crop.getAmount())
 				{
 					int count = crop.getStartAmount() - crop.getAmount();
-					
 					count = (count * 90) / 100;
 					if ((count < 1) && (Rnd.get(99) < 90))
 					{
@@ -341,7 +339,6 @@ public class CastleManorManager
 			
 			c.setSeedProduction(c.getSeedProduction(PERIOD_NEXT), PERIOD_CURRENT);
 			c.setCropProcure(c.getCropProcure(PERIOD_NEXT), PERIOD_CURRENT);
-			
 			int manorCost = c.getManorCost(PERIOD_CURRENT);
 			if (c.getTreasury() < manorCost)
 			{
@@ -401,7 +398,6 @@ public class CastleManorManager
 			if (c.getOwnerId() > 0)
 			{
 				int manorCost = c.getManorCost(PERIOD_NEXT);
-				
 				if (c.getTreasury() < manorCost)
 				{
 					c.setSeedProduction(getNewSeedsList(c.getCastleId()), PERIOD_NEXT);
@@ -500,7 +496,6 @@ public class CastleManorManager
 		{
 			final int H = Calendar.getInstance().get(Calendar.HOUR_OF_DAY);
 			final int M = Calendar.getInstance().get(Calendar.MINUTE);
-			
 			if (APPROVE == 1) // 06:00 - 20:00
 			{
 				if ((H < NEXT_PERIOD_APPROVE) || (H > MANOR_REFRESH) || ((H == MANOR_REFRESH) && (M >= MANOR_REFRESH_MIN)))

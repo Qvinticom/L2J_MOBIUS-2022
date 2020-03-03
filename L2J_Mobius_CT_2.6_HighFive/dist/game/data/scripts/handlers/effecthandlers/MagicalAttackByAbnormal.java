@@ -56,7 +56,6 @@ public class MagicalAttackByAbnormal extends AbstractEffect
 	{
 		final Creature target = info.getEffected();
 		final Creature creature = info.getEffector();
-		
 		if (creature.isAlikeDead())
 		{
 			return;
@@ -75,7 +74,6 @@ public class MagicalAttackByAbnormal extends AbstractEffect
 		
 		// each buff increase +30%
 		damage *= (((target.getBuffCount() * 0.3) + 1.3) / 4);
-		
 		if (damage > 0)
 		{
 			// Manage attack or cast break of the target (calculating rate, sending message...)

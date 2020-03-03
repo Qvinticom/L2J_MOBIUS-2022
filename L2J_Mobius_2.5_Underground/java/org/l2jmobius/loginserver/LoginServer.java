@@ -151,7 +151,6 @@ public class LoginServer
 						parts = line.split("\\s+"); // durations might be aligned via multiple spaces
 						final String address = parts[0];
 						long duration = 0;
-						
 						if (parts.length > 1)
 						{
 							try

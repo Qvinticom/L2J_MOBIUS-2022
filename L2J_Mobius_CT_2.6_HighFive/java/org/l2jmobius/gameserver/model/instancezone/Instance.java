@@ -271,7 +271,6 @@ public class Instance
 			newdoor.setInstanceId(_id);
 			newdoor.setCurrentHp(newdoor.getMaxHp());
 			newdoor.spawnMe(newdoor.getTemplate().getX(), newdoor.getTemplate().getY(), newdoor.getTemplate().getZ());
-			
 			_doors.put(doorId, newdoor);
 		}
 	}
@@ -427,7 +426,6 @@ public class Instance
 				try
 				{
 					final Spawn spawnDat = new Spawn(set.getInt("npcId"));
-					
 					spawnDat.setXYZ(set.getInt("x"), set.getInt("y"), set.getInt("z"));
 					spawnDat.setAmount(1);
 					spawnDat.setHeading(set.getInt("heading"));
@@ -454,7 +452,6 @@ public class Instance
 				}
 			}
 		}
-		
 		return spawnedNpcs;
 	}
 	
@@ -469,7 +466,6 @@ public class Instance
 			factory.setValidating(false);
 			factory.setIgnoringComments(true);
 			doc = factory.newDocumentBuilder().parse(xml);
-			
 			for (Node n = doc.getFirstChild(); n != null; n = n.getNextSibling())
 			{
 				if ("instance".equalsIgnoreCase(n.getNodeName()))
@@ -700,14 +696,12 @@ public class Instance
 						DayOfWeek day = null;
 						int hour = -1;
 						int minute = -1;
-						
 						if ("reset".equalsIgnoreCase(d.getNodeName()))
 						{
 							a = d.getAttributes().getNamedItem("time");
 							if (a != null)
 							{
 								time = Long.parseLong(a.getNodeValue());
-								
 								if (time > 0)
 								{
 									_resetData.add(new InstanceReenterTimeHolder(time));
@@ -769,7 +763,6 @@ public class Instance
 		CreatureSay cs = null;
 		int timeLeft;
 		int interval;
-		
 		if (_players.isEmpty() && (_emptyDestroyTime == 0))
 		{
 			remaining = 0;

@@ -59,7 +59,6 @@ public class AdminFortSiege implements IAdminCommandHandler
 		
 		// Get fort
 		Fort fort = null;
-		
 		if (st.hasMoreTokens())
 		{
 			fort = FortManager.getInstance().getFort(st.nextToken());
@@ -74,7 +73,6 @@ public class AdminFortSiege implements IAdminCommandHandler
 		{
 			final WorldObject target = activeChar.getTarget();
 			PlayerInstance player = null;
-			
 			if (target instanceof PlayerInstance)
 			{
 				player = (PlayerInstance) target;
@@ -134,7 +132,6 @@ public class AdminFortSiege implements IAdminCommandHandler
 			else if (command.equalsIgnoreCase("admin_removefort"))
 			{
 				final Clan clan = ClanTable.getInstance().getClan(fort.getOwnerId());
-				
 				if (clan != null)
 				{
 					fort.removeOwner(clan);
@@ -166,7 +163,6 @@ public class AdminFortSiege implements IAdminCommandHandler
 		final NpcHtmlMessage adminReply = new NpcHtmlMessage(5);
 		adminReply.setFile("data/html/admin/forts.htm");
 		final StringBuilder cList = new StringBuilder();
-		
 		for (Fort fort : FortManager.getInstance().getForts())
 		{
 			if (fort != null)

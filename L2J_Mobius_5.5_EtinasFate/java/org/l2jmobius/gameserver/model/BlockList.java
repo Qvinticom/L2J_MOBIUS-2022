@@ -171,7 +171,6 @@ public class BlockList
 		}
 		
 		final String charName = CharNameTable.getInstance().getNameById(targetId);
-		
 		if (listOwner.getFriendList().contains(targetId))
 		{
 			listOwner.sendPacket(SystemMessageId.THIS_PLAYER_IS_ALREADY_REGISTERED_ON_YOUR_FRIENDS_LIST);
@@ -191,7 +190,6 @@ public class BlockList
 		listOwner.sendPacket(sm);
 		
 		final PlayerInstance player = World.getInstance().getPlayer(targetId);
-		
 		if (player != null)
 		{
 			sm = new SystemMessage(SystemMessageId.C1_HAS_PLACED_YOU_ON_HIS_HER_IGNORE_LIST);
@@ -210,7 +208,6 @@ public class BlockList
 		SystemMessage sm;
 		
 		final String charName = CharNameTable.getInstance().getNameById(targetId);
-		
 		if (!listOwner.getBlockList().getBlockList().contains(targetId))
 		{
 			sm = new SystemMessage(SystemMessageId.THAT_IS_AN_INCORRECT_TARGET);

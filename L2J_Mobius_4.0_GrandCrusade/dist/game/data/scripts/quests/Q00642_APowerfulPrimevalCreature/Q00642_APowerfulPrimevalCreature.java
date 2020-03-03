@@ -123,14 +123,12 @@ public class Q00642_APowerfulPrimevalCreature extends Quest
 	public String onKill(Npc npc, PlayerInstance killer, boolean isSummon)
 	{
 		final QuestState qs = getRandomPartyMemberState(killer, -1, 3, npc);
-		
 		if (qs == null)
 		{
 			return null;
 		}
 		
 		final int npcId = npc.getId();
-		
 		if (MOBS_TISSUE.containsKey(npcId))
 		{
 			giveItemRandomly(qs.getPlayer(), npc, DINOSAUR_TISSUE, 1, 0, MOBS_TISSUE.get(npcId), true);
@@ -147,7 +145,6 @@ public class Q00642_APowerfulPrimevalCreature extends Quest
 	{
 		final QuestState qs = getQuestState(player, true);
 		String htmltext = getNoQuestMsg(player);
-		
 		if (qs.isCreated())
 		{
 			htmltext = player.getLevel() < MIN_LEVEL ? "32105-01.htm" : "32105-02.htm";

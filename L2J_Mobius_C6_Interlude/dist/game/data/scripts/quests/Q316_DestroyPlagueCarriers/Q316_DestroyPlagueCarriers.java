@@ -101,7 +101,6 @@ public class Q316_DestroyPlagueCarriers extends Quest
 			case State.STARTED:
 				final int ratFangs = st.getQuestItemsCount(WERERAT_FANG);
 				final int varoolFangs = st.getQuestItemsCount(VAROOL_FOULCLAW_FANG);
-				
 				if ((ratFangs + varoolFangs) == 0)
 				{
 					htmltext = "30155-05.htm";

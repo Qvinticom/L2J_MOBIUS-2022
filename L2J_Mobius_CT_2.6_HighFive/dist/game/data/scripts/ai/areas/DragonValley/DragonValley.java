@@ -51,7 +51,6 @@ public class DragonValley extends AbstractNpcAI
 		22826, // Scorpion Bones
 		22823, // Drakos Assassin
 		22828, // Parasitic Leech
-	
 	};
 	private static final int[] SPOIL_REACT_MONSTER =
 	{
@@ -143,7 +142,6 @@ public class DragonValley extends AbstractNpcAI
 		if (event.equals("SELF_DESTRUCTION") && (npc != null) && !npc.isDead())
 		{
 			final Playable playable = npc.getVariables().getObject("playable", Playable.class);
-			
 			if ((playable != null) && (npc.calculateDistance3D(playable) < 250))
 			{
 				npc.disableCoreAI(true);
@@ -225,7 +223,6 @@ public class DragonValley extends AbstractNpcAI
 	{
 		double points = 0;
 		int moraleBoostLv = 0;
-		
 		if (player.isInParty() && (player.getParty().getMemberCount() >= MIN_MEMBERS) && (npc != null))
 		{
 			for (PlayerInstance member : player.getParty().getMembers())

@@ -75,7 +75,6 @@ public class Q10815_StepUp extends Quest
 		}
 		
 		String htmltext = null;
-		
 		switch (event)
 		{
 			case "30868-02.htm":
@@ -121,7 +120,6 @@ public class Q10815_StepUp extends Quest
 	{
 		final QuestState qs = getQuestState(player, true);
 		String htmltext = getNoQuestMsg(player);
-		
 		switch (qs.getState())
 		{
 			case State.CREATED:
@@ -156,7 +154,6 @@ public class Q10815_StepUp extends Quest
 	{
 		final PlayerInstance player = event.getPlayer();
 		final QuestState qs = getQuestState(player, false);
-		
 		final Instant now = Instant.now();
 		if (!REUSE.isEmpty())
 		{
@@ -166,7 +163,6 @@ public class Q10815_StepUp extends Quest
 		if ((qs != null) && qs.isCond(1))
 		{
 			int chatCount = qs.getInt("chat");
-			
 			if (event.getChatType() == ChatType.WORLD)
 			{
 				if (Config.WORLD_CHAT_INTERVAL.getSeconds() > 0)

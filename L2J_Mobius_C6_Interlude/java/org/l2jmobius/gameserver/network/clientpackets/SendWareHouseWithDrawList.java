@@ -44,7 +44,6 @@ public class SendWareHouseWithDrawList extends GameClientPacket
 	protected void readImpl()
 	{
 		_count = readD();
-		
 		if ((_count < 0) || ((_count * 8) > _buf.remaining()) || (_count > Config.MAX_ITEM_IN_PACKET))
 		{
 			_count = 0;
@@ -52,13 +51,11 @@ public class SendWareHouseWithDrawList extends GameClientPacket
 		}
 		
 		_items = new int[_count * 2];
-		
 		for (int i = 0; i < _count; i++)
 		{
 			final int objectId = readD();
 			_items[(i * 2) + 0] = objectId;
 			final long cnt = readD();
-			
 			if ((cnt > Integer.MAX_VALUE) || (cnt < 0))
 			{
 				_count = 0;
@@ -133,7 +130,6 @@ public class SendWareHouseWithDrawList extends GameClientPacket
 		
 		int weight = 0;
 		int slots = 0;
-		
 		for (int i = 0; i < _count; i++)
 		{
 			final int objectId = _items[(i * 2) + 0];
@@ -185,7 +181,6 @@ public class SendWareHouseWithDrawList extends GameClientPacket
 		{
 			final int objectId = _items[(i * 2) + 0];
 			final int count = _items[(i * 2) + 1];
-			
 			final ItemInstance oldItem = warehouse.getItemByObjectId(objectId);
 			if ((oldItem == null) || (oldItem.getCount() < count))
 			{

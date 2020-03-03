@@ -215,7 +215,6 @@ public class Q107_MercilessPunishment extends Quest
 		}
 		
 		final int cond = st.getInt("cond");
-		
 		if (cond == 2)
 		{
 			st.set("cond", "3");

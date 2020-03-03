@@ -132,7 +132,6 @@ public class Q10423_EmbryoStrongholdRaid extends Quest
 	{
 		final QuestState qs = getQuestState(player, true);
 		String htmltext = getNoQuestMsg(player);
-		
 		switch (qs.getState())
 		{
 			case State.CREATED:
@@ -165,11 +164,9 @@ public class Q10423_EmbryoStrongholdRaid extends Quest
 	public String onKill(Npc npc, PlayerInstance player, boolean isSummon)
 	{
 		final QuestState qs = getQuestState(player, false);
-		
 		if ((qs != null) && qs.isCond(1))
 		{
 			int killedEmbryo = qs.getInt("killed_" + MOBS[0]);
-			
 			if (CommonUtil.contains(MOBS, npc.getId()))
 			{
 				if (killedEmbryo < 30)

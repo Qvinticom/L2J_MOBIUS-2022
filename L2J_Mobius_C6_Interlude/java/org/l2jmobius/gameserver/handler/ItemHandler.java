@@ -1,3 +1,4 @@
+
 /*
  * This file is part of the L2J Mobius project.
  * 
@@ -81,7 +82,6 @@ public class ItemHandler
 	private ItemHandler()
 	{
 		_datatable = new HashMap<>();
-		
 		registerItemHandler(new BeastSoulShot());
 		registerItemHandler(new BeastSpice());
 		registerItemHandler(new BeastSpiritShot());

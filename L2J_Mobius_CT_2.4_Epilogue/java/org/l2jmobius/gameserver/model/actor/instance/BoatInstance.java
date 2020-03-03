@@ -65,7 +65,6 @@ public class BoatInstance extends Vehicle
 		{
 			broadcastPacket(new VehicleDeparture(this));
 		}
-		
 		return result;
 	}
 	

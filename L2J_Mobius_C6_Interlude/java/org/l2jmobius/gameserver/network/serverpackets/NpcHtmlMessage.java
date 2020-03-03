@@ -206,7 +206,6 @@ public class NpcHtmlMessage extends GameServerPacket
 	public boolean setFile(String path)
 	{
 		final String content = HtmCache.getInstance().getHtm(path);
-		
 		if (content == null)
 		{
 			setHtml("<html><body>My Text is missing:<br>" + path + "</body></html>");
@@ -266,7 +265,6 @@ public class NpcHtmlMessage extends GameServerPacket
 		{
 			int start = _html.indexOf("bypass -h", i);
 			final int finish = _html.indexOf("\"", start);
-			
 			if ((start < 0) || (finish < 0))
 			{
 				break;
@@ -304,7 +302,6 @@ public class NpcHtmlMessage extends GameServerPacket
 		{
 			final int start = _html.indexOf("link", i);
 			final int finish = _html.indexOf("\"", start);
-			
 			if ((start < 0) || (finish < 0))
 			{
 				break;

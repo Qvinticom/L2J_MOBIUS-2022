@@ -78,7 +78,6 @@ public class RequestVoteNew implements IClientIncomingPacket
 		}
 		
 		final PlayerInstance target = (PlayerInstance) object;
-		
 		if (target.getObjectId() != _targetId)
 		{
 			return;

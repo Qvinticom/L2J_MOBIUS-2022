@@ -230,7 +230,6 @@ public class CreatureStat
 		{
 			return (int) getValue(Stat.MAGIC_ATTACK_RANGE, skill.getCastRange());
 		}
-		
 		return _creature.getTemplate().getBaseAttackRange();
 	}
 	
@@ -475,7 +474,6 @@ public class CreatureStat
 		{
 			mpConsume += _creature.getDanceCount() * nextDanceMpCost;
 		}
-		
 		return (int) (mpConsume * getMpConsumeTypeValue(skill.getMagicType()));
 	}
 	
@@ -489,7 +487,6 @@ public class CreatureStat
 		{
 			return 1;
 		}
-		
 		return skill.getMpInitialConsume();
 	}
 	
@@ -515,7 +512,6 @@ public class CreatureStat
 		};
 		
 		AttributeType returnVal = AttributeType.NONE;
-		
 		for (byte x = 0; x < stats.length; x++)
 		{
 			if (stats[x] > tempVal)
@@ -893,7 +889,6 @@ public class CreatureStat
 		// Copy old data before wiping it out
 		final Map<Stat, Double> adds = !broadcast ? Collections.emptyMap() : new EnumMap<>(_statsAdd);
 		final Map<Stat, Double> muls = !broadcast ? Collections.emptyMap() : new EnumMap<>(_statsMul);
-		
 		_lock.writeLock().lock();
 		try
 		{
@@ -930,7 +925,6 @@ public class CreatureStat
 			// Merge with additional stats
 			_additionalAdd.stream().filter(holder -> holder.verifyCondition(_creature)).forEach(holder -> mergeAdd(holder.getStat(), holder.getValue()));
 			_additionalMul.stream().filter(holder -> holder.verifyCondition(_creature)).forEach(holder -> mergeMul(holder.getStat(), holder.getValue()));
-			
 			_attackSpeedMultiplier = Formulas.calcAtkSpdMultiplier(_creature);
 			_mAttackSpeedMultiplier = Formulas.calcMAtkSpdMultiplier(_creature);
 		}

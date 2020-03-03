@@ -116,7 +116,6 @@ public class DefenderInstance extends Attackable
 		
 		_fort = FortManager.getInstance().getFort(getX(), getY(), getZ());
 		_castle = CastleManager.getInstance().getCastle(getX(), getY(), getZ());
-		
 		if ((_fort == null) && (_castle == null))
 		{
 			LOGGER.warning("DefenderInstance spawned outside of Fortress or Castle zone!" + this);

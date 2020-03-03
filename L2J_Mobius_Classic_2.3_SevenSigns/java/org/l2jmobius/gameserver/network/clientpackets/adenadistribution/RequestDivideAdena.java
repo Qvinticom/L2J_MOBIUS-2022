@@ -56,7 +56,6 @@ public class RequestDivideAdena implements IClientIncomingPacket
 		}
 		
 		final AdenaDistributionRequest request = player.getRequest(AdenaDistributionRequest.class);
-		
 		if (request == null)
 		{
 			return;
@@ -73,7 +72,6 @@ public class RequestDivideAdena implements IClientIncomingPacket
 		}
 		
 		final Party party = player.getParty();
-		
 		if (party == null)
 		{
 			player.sendPacket(SystemMessageId.YOU_CANNOT_PROCEED_AS_YOU_ARE_NOT_IN_AN_ALLIANCE_OR_PARTY);
@@ -82,7 +80,6 @@ public class RequestDivideAdena implements IClientIncomingPacket
 		}
 		
 		final CommandChannel commandChannel = party.getCommandChannel();
-		
 		if ((commandChannel != null) && !commandChannel.isLeader(player))
 		{
 			player.sendPacket(SystemMessageId.YOU_CANNOT_PROCEED_AS_YOU_ARE_NOT_AN_ALLIANCE_LEADER_OR_PARTY_LEADER);
@@ -97,7 +94,6 @@ public class RequestDivideAdena implements IClientIncomingPacket
 		}
 		
 		final List<PlayerInstance> targets = commandChannel != null ? commandChannel.getMembers() : party.getMembers();
-		
 		if (player.getAdena() < targets.size())
 		{
 			player.sendPacket(SystemMessageId.YOU_DO_NOT_HAVE_ENOUGH_ADENA_2);

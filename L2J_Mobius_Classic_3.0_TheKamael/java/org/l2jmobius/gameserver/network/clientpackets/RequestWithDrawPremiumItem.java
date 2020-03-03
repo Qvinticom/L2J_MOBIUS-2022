@@ -47,7 +47,6 @@ public class RequestWithDrawPremiumItem implements IClientIncomingPacket
 	public void run(GameClient client)
 	{
 		final PlayerInstance player = client.getPlayer();
-		
 		if (player == null)
 		{
 			return;
@@ -88,9 +87,7 @@ public class RequestWithDrawPremiumItem implements IClientIncomingPacket
 		}
 		
 		final long itemsLeft = (item.getCount() - _itemCount);
-		
 		player.addItem("PremiumItem", item.getItemId(), _itemCount, player.getTarget(), true);
-		
 		if (itemsLeft > 0)
 		{
 			item.updateCount(itemsLeft);

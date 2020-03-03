@@ -50,11 +50,9 @@ public class CompSpiritShotPacks implements IItemHandler
 			return;
 		}
 		final PlayerInstance player = (PlayerInstance) playable;
-		
 		final int itemId = item.getItemId();
 		int itemToCreateId;
 		int amount;
-		
 		if (itemId < 5200) // Normal Compressed Package of SpiritShots
 		{
 			itemToCreateId = itemId - 2631; // Gives id of matching item for this pack

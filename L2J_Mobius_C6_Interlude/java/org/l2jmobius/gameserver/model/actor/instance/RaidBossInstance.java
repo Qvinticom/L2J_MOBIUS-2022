@@ -69,7 +69,6 @@ public class RaidBossInstance extends MonsterInstance
 		}
 		
 		PlayerInstance player = null;
-		
 		if (killer instanceof PlayerInstance)
 		{
 			player = (PlayerInstance) killer;
@@ -96,7 +95,6 @@ public class RaidBossInstance extends MonsterInstance
 		}
 		
 		RaidBossSpawnManager.getInstance().updateStatus(this, true);
-		
 		return true;
 	}
 	
@@ -111,7 +109,6 @@ public class RaidBossInstance extends MonsterInstance
 		{
 			// teleport raid boss home if it's too far from home location
 			final Spawn bossSpawn = getSpawn();
-			
 			int rbLockRange = Config.RBLOCKRAGE;
 			if (Config.RBS_SPECIFIC_LOCK_RAGE.get(bossSpawn.getNpcId()) != null)
 			{

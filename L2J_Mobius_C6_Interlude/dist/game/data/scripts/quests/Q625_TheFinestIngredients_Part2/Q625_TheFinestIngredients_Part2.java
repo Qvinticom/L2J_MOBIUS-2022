@@ -288,7 +288,6 @@ public class Q625_TheFinestIngredients_Part2 extends Quest
 			
 			return true;
 		}
-		
 		return false;
 	}
 	

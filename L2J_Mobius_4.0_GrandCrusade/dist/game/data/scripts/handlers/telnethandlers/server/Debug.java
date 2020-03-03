@@ -112,7 +112,6 @@ public class Debug implements ITelnetCommand
 			{
 				final Calendar cal = Calendar.getInstance();
 				final SimpleDateFormat sdf = new SimpleDateFormat("yyyy-MM-dd HH:mm:ss Z");
-				
 				final StringBuilder sb = new StringBuilder();
 				sb.append(sdf.format(cal.getTime()));
 				sb.append("\r\nServer");
@@ -140,7 +139,6 @@ public class Debug implements ITelnetCommand
 				sb.append("\r\nCurrent Free Heap Size: " + (Runtime.getRuntime().freeMemory() / 1024 / 1024) + " mb");
 				sb.append("\r\nCurrent Heap Size: " + (Runtime.getRuntime().totalMemory() / 1024 / 1024) + " mb");
 				sb.append("\r\nMaximum Heap Size: " + (Runtime.getRuntime().maxMemory() / 1024 / 1024) + " mb");
-				
 				sb.append("\r\n");
 				sb.append("\r\n## Class Path Information ##\r\n");
 				final String cp = System.getProperty("java.class.path");
@@ -154,10 +152,8 @@ public class Debug implements ITelnetCommand
 				sb.append("\r\n");
 				sb.append("## Threads Information ##\r\n");
 				final Map<Thread, StackTraceElement[]> allThread = Thread.getAllStackTraces();
-				
 				final List<Entry<Thread, StackTraceElement[]>> entries = new ArrayList<>(allThread.entrySet());
 				Collections.sort(entries, (e1, e2) -> e1.getKey().getName().compareTo(e2.getKey().getName()));
-				
 				for (Entry<Thread, StackTraceElement[]> entry : entries)
 				{
 					final StackTraceElement[] stes = entry.getValue();
@@ -256,10 +252,8 @@ public class Debug implements ITelnetCommand
 		int playerCount = 0;
 		int objectCount = 0;
 		final int max = LoginServerThread.getInstance().getMaxPlayer();
-		
 		playerCount = World.getInstance().getPlayers().size();
 		objectCount = World.getInstance().getVisibleObjectsCount();
-		
 		int itemCount = 0;
 		int itemVoidCount = 0;
 		int monsterCount = 0;
@@ -272,7 +266,6 @@ public class Debug implements ITelnetCommand
 		int doorCount = 0;
 		int summonCount = 0;
 		int aiCount = 0;
-		
 		for (WorldObject obj : World.getInstance().getVisibleObjects())
 		{
 			if (obj == null)

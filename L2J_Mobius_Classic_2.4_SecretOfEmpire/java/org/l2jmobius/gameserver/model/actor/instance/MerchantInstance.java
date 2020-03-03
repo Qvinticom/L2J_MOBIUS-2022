@@ -44,7 +44,6 @@ public class MerchantInstance extends NpcInstance
 		{
 			return true;
 		}
-		
 		return super.isAutoAttackable(attacker);
 	}
 	

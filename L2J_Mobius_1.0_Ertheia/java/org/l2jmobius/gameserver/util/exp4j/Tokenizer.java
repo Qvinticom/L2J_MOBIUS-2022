@@ -117,7 +117,6 @@ public class Tokenizer
 				return lastToken;
 			}
 			return parseFunctionOrVariable();
-			
 		}
 		throw new IllegalArgumentException("Unable to parse char '" + ch + "' (Code:" + (int) ch + ") at [" + pos + "]");
 	}

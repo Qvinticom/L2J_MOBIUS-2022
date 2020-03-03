@@ -204,7 +204,6 @@ public class LastImperialTomb extends AbstractInstance
 			case "FRINTEZZA_INTRO_2":
 			{
 				final Instance world = player.getInstanceWorld();
-				
 				final Npc frintezzaDummy = addSpawn(DUMMY, -87784, -155083, -9087, 16048, false, 0, false, world.getId());
 				world.setParameter("frintezzaDummy", frintezzaDummy);
 				
@@ -221,7 +220,6 @@ public class LastImperialTomb extends AbstractInstance
 				
 				final Npc scarletDummy = addSpawn(DUMMY2, -87784, -153298, -9175, 16384, false, 0, false, world.getId());
 				world.setParameter("scarletDummy", scarletDummy);
-				
 				disablePlayers(world);
 				
 				// broadcastPacket(world, new SpecialCamera(overheadDummy, 0, 75, -89, 0, 100, 0, 0, 1, 0, 0));
@@ -243,7 +241,6 @@ public class LastImperialTomb extends AbstractInstance
 					demons.add(demon);
 				}
 				world.setParameter("demons", demons);
-				
 				startQuestTimer("FRINTEZZA_INTRO_3", 6500, null, player, false);
 				break;
 			}
@@ -507,7 +504,6 @@ public class LastImperialTomb extends AbstractInstance
 				broadcastPacket(world, new SocialAction(frintezza.getObjectId(), 4));
 				broadcastPacket(world, new SpecialCamera(frintezza, 250, 120, 15, 0, 1000, 0, 0, 1, 0, 0));
 				broadcastPacket(world, new SpecialCamera(frintezza, 250, 120, 15, 0, 10000, 0, 0, 1, 0, 0));
-				
 				startQuestTimer("SCARLET_SECOND_MORPH_CAMERA_2", 7000, npc, null, false);
 				break;
 			}

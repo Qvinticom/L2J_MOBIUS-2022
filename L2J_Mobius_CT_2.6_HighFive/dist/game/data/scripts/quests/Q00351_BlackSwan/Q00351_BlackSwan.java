@@ -96,7 +96,6 @@ public class Q00351_BlackSwan extends Quest
 			case "30969-02.html":
 			{
 				final long lizardFangCount = getQuestItemsCount(player, LIZARD_FANG);
-				
 				if (lizardFangCount == 0)
 				{
 					htmltext = event;
@@ -113,7 +112,6 @@ public class Q00351_BlackSwan extends Quest
 			case "30969-05.html":
 			{
 				final long barrelOfLeagueCount = getQuestItemsCount(player, BARREL_OF_LEAGUE);
-				
 				if (barrelOfLeagueCount == 0)
 				{
 					htmltext = event;
@@ -147,7 +145,6 @@ public class Q00351_BlackSwan extends Quest
 	public String onKill(Npc npc, PlayerInstance killer, boolean isSummon)
 	{
 		final QuestState qs = getRandomPartyMemberState(killer, -1, 3, npc);
-		
 		if ((qs == null) || !Util.checkIfInRange(Config.ALT_PARTY_RANGE, npc, killer, true))
 		{
 			return null;
@@ -157,7 +154,6 @@ public class Q00351_BlackSwan extends Quest
 		if (random < 10)
 		{
 			giveItemRandomly(qs.getPlayer(), npc, LIZARD_FANG, 1, 0, 1.0, true);
-			
 			if (getRandom(20) == 0)
 			{
 				giveItemRandomly(qs.getPlayer(), npc, BARREL_OF_LEAGUE, 1, 0, 1.0, false);
@@ -166,7 +162,6 @@ public class Q00351_BlackSwan extends Quest
 		else if (random < 15)
 		{
 			giveItemRandomly(qs.getPlayer(), npc, LIZARD_FANG, 2, 0, 1.0, true);
-			
 			if (getRandom(20) == 0)
 			{
 				giveItemRandomly(qs.getPlayer(), npc, BARREL_OF_LEAGUE, 1, 0, 1.0, false);
@@ -186,7 +181,6 @@ public class Q00351_BlackSwan extends Quest
 		final QuestState qs = getQuestState(player, true);
 		final QuestState qs2 = player.getQuestState(Q00345_MethodToRaiseTheDead.class.getSimpleName());
 		String htmltext = getNoQuestMsg(player);
-		
 		switch (npc.getId())
 		{
 			case GOSTA:

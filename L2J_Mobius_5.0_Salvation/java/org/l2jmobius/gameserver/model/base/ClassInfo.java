@@ -87,7 +87,6 @@ public class ClassInfo
 		{
 			classClientId += 3121;
 		}
-		
 		return classClientId;
 	}
 	

@@ -208,7 +208,6 @@ public class Q104_SpiritOfMirrors extends Quest
 					{
 						st.takeItems(GALLINS_OAK_WAND, 1);
 						st.giveItems(WAND_SPIRITBOUND_1, 1);
-						
 						if (st.hasQuestItems(WAND_SPIRITBOUND_2, WAND_SPIRITBOUND_3))
 						{
 							st.set("cond", "3");
@@ -226,7 +225,6 @@ public class Q104_SpiritOfMirrors extends Quest
 					{
 						st.takeItems(GALLINS_OAK_WAND, 1);
 						st.giveItems(WAND_SPIRITBOUND_2, 1);
-						
 						if (st.hasQuestItems(WAND_SPIRITBOUND_1, WAND_SPIRITBOUND_3))
 						{
 							st.set("cond", "3");
@@ -244,7 +242,6 @@ public class Q104_SpiritOfMirrors extends Quest
 					{
 						st.takeItems(GALLINS_OAK_WAND, 1);
 						st.giveItems(WAND_SPIRITBOUND_3, 1);
-						
 						if (st.hasQuestItems(WAND_SPIRITBOUND_1, WAND_SPIRITBOUND_2))
 						{
 							st.set("cond", "3");

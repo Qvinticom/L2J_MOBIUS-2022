@@ -43,7 +43,6 @@ public class PetInstanceAction implements IActionHandler
 		}
 		
 		final boolean isOwner = player.getObjectId() == ((PetInstance) target).getOwner().getObjectId();
-		
 		if (isOwner && (player != ((PetInstance) target).getOwner()))
 		{
 			((PetInstance) target).updateRefOwner(player);

@@ -58,7 +58,6 @@ public class TerritoryTable
 			while (rset.next())
 			{
 				final int terr = rset.getInt("loc_id");
-				
 				if (_territory.get(terr) == null)
 				{
 					final Territory t = new Territory();

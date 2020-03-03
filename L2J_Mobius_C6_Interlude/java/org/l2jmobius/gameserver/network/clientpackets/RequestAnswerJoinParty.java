@@ -59,7 +59,6 @@ public class RequestAnswerJoinParty extends GameClientPacket
 		}
 		
 		requestor.sendPacket(new JoinParty(_response));
-		
 		if (_response == 1)
 		{
 			if (requestor.isInParty() && (requestor.getParty().getMemberCount() >= 9))

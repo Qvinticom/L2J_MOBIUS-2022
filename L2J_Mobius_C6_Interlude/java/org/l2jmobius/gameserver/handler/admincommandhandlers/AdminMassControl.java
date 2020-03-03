@@ -49,7 +49,6 @@ public class AdminMassControl implements IAdminCommandHandler
 				if (st.nextToken().equalsIgnoreCase("kill"))
 				{
 					int counter = 0;
-					
 					for (PlayerInstance player : World.getInstance().getAllPlayers())
 					{
 						if (!player.isGM())
@@ -64,7 +63,6 @@ public class AdminMassControl implements IAdminCommandHandler
 				else if (st.nextToken().equalsIgnoreCase("ress"))
 				{
 					int counter = 0;
-					
 					for (PlayerInstance player : World.getInstance().getAllPlayers())
 					{
 						if (!player.isGM() && player.isDead())
@@ -80,7 +78,6 @@ public class AdminMassControl implements IAdminCommandHandler
 			{
 			}
 		}
-		
 		return true;
 	}
 	

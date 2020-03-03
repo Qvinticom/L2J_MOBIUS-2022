@@ -168,7 +168,6 @@ public class SkillChannelizer implements Runnable
 				return;
 			}
 			channelized = targetList;
-			
 			for (Creature creature : channelized)
 			{
 				if (!Util.checkIfInRange(skill.getEffectRange(), _channelizer, creature, true))
@@ -190,7 +189,6 @@ public class SkillChannelizer implements Runnable
 					}
 					
 					final BuffInfo info = creature.getEffectList().getBuffInfoBySkillId(skill.getChannelingSkillId());
-					
 					if ((info == null) || (info.getSkill().getLevel() < skillLevel))
 					{
 						final Skill channeledSkill = SkillData.getInstance().getSkill(skill.getChannelingSkillId(), skillLevel);

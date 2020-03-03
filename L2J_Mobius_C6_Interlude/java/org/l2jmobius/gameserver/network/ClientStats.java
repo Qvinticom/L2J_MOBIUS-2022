@@ -87,7 +87,6 @@ public class ClientStats
 		{
 			_queueOverflowDetected = false;
 		}
-		
 		return countPacket();
 	}
 	

@@ -161,7 +161,6 @@ public class Party
 	private PlayerInstance getCheckedRandomMember(int itemId, Creature target)
 	{
 		final List<PlayerInstance> availableMembers = new ArrayList<>();
-		
 		for (PlayerInstance member : _members)
 		{
 			if (member.getInventory().validateCapacityByItemId(itemId) && Util.checkIfInRange(Config.ALT_PARTY_RANGE, target, member, true))
@@ -353,7 +352,6 @@ public class Party
 		
 		// sends new member party window for all members
 		player.sendPacket(new PartySmallWindowAll(player, this));
-		
 		SystemMessage msg = new SystemMessage(SystemMessageId.YOU_HAVE_JOINED_S1_S_PARTY);
 		msg.addString(getLeader().getName());
 		player.sendPacket(msg);
@@ -405,7 +403,6 @@ public class Party
 	public void removePartyMember(String name)
 	{
 		final PlayerInstance player = getPlayerByName(name);
-		
 		if (player != null)
 		{
 			removePartyMember(player);
@@ -451,7 +448,6 @@ public class Party
 			player.setParty(null);
 			
 			broadcastToPartyMembers(new PartySmallWindowDelete(player));
-			
 			if (isInDimensionalRift())
 			{
 				_dr.partyMemberExited(player);
@@ -514,7 +510,6 @@ public class Party
 	public void changePartyLeader(String name)
 	{
 		final PlayerInstance player = getPlayerByName(name);
-		
 		if ((player != null) && !player.isInDuel())
 		{
 			if (_members.contains(player))
@@ -531,7 +526,6 @@ public class Party
 					temp = getLeader();
 					_members.set(0, _members.get(p1));
 					_members.set(p1, temp);
-					
 					SystemMessage msg = new SystemMessage(SystemMessageId.S1_HAS_BECOME_THE_PARTY_LEADER);
 					msg.addString(getLeader().getName());
 					broadcastToPartyMembers(msg);
@@ -632,7 +626,6 @@ public class Party
 		}
 		
 		final PlayerInstance looter = getActualLooter(player, item.getItemId(), spoil, target);
-		
 		looter.addItem(spoil ? "Sweep" : "Party", item.getItemId(), item.getCount(), player, true);
 		
 		// Send messages to other aprty members about reward
@@ -683,7 +676,6 @@ public class Party
 		
 		// Now we can actually distribute the adena reward (Total adena split by the number of party members that are in range and must be rewarded)
 		final int count = adena / rewarded.size();
-		
 		for (PlayerInstance member : rewarded)
 		{
 			member.addAdena("Party", count, player, true);
@@ -711,16 +703,12 @@ public class Party
 	{
 		SummonInstance summon = null;
 		final List<Playable> validMembers = getValidMembers(rewardedMembers, topLvl);
-		
 		float penalty;
 		double sqLevel;
 		double preCalculation;
-		
 		xpReward *= getExpBonus(validMembers.size());
 		spReward *= getSpBonus(validMembers.size());
-		
 		double sqLevelSum = 0;
-		
 		for (Playable character : validMembers)
 		{
 			sqLevelSum += character.getLevel() * character.getLevel();
@@ -792,7 +780,6 @@ public class Party
 	public void recalculatePartyLevel()
 	{
 		int newLevel = 0;
-		
 		for (PlayerInstance member : _members)
 		{
 			if (member == null)
@@ -829,7 +816,6 @@ public class Party
 		else if (Config.PARTY_XP_CUTOFF_METHOD.equalsIgnoreCase("percentage"))
 		{
 			int sqLevelSum = 0;
-			
 			for (Playable member : members)
 			{
 				sqLevelSum += member.getLevel() * member.getLevel();
@@ -838,7 +824,6 @@ public class Party
 			for (Playable member : members)
 			{
 				final int sqLevel = member.getLevel() * member.getLevel();
-				
 				if ((sqLevel * 100) >= (sqLevelSum * Config.PARTY_XP_CUTOFF_PERCENT))
 				{
 					validMembers.add(member);
@@ -849,14 +834,12 @@ public class Party
 		else if (Config.PARTY_XP_CUTOFF_METHOD.equalsIgnoreCase("auto"))
 		{
 			int sqLevelSum = 0;
-			
 			for (Playable member : members)
 			{
 				sqLevelSum += member.getLevel() * member.getLevel();
 			}
 			
 			int i = members.size() - 1;
-			
 			if (i < 1)
 			{
 				return members;
@@ -870,7 +853,6 @@ public class Party
 			for (Playable member : members)
 			{
 				final int sqLevel = member.getLevel() * member.getLevel();
-				
 				if (sqLevel >= (sqLevelSum * (1 - (1 / ((1 + BONUS_EXP_SP[i]) - BONUS_EXP_SP[i - 1])))))
 				{
 					validMembers.add(member);
@@ -883,7 +865,6 @@ public class Party
 	private double getBaseExpSpBonus(int membersCount)
 	{
 		int i = membersCount - 1;
-		
 		if (i < 1)
 		{
 			return 1;

@@ -83,7 +83,6 @@ public class Q10290_LandDragonConqueror extends Quest
 			if (Util.checkIfInRange(8000, npc, p, false))
 			{
 				final QuestState qs = getQuestState(p, false);
-				
 				if ((qs != null) && qs.isCond(1) && hasQuestItems(player, SHABBY_NECKLACE))
 				{
 					takeItems(player, SHABBY_NECKLACE, -1);

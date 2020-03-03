@@ -48,7 +48,6 @@ public class ExtractableItems implements IItemHandler
 		}
 		final PlayerInstance player = (PlayerInstance) playable;
 		final int itemId = item.getItemId();
-		
 		final ExtractableItem extractable = ExtractableItemData.getInstance().getExtractableItem(itemId);
 		if (extractable == null)
 		{
@@ -57,7 +56,6 @@ public class ExtractableItems implements IItemHandler
 		
 		// Destroy item first.
 		player.destroyItemByItemId("Extract", itemId, 1, player.getTarget(), true);
-		
 		int createItemId = 0;
 		int createAmount = 0;
 		float chanceFrom = 0;

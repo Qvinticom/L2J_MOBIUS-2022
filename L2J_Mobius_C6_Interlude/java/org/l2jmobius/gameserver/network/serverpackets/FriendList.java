@@ -48,12 +48,10 @@ public class FriendList extends GameServerPacket
 	public FriendList(PlayerInstance player)
 	{
 		_info = new ArrayList<>(player.getFriendList().size());
-		
 		for (int objId : player.getFriendList())
 		{
 			final String name = CharNameTable.getInstance().getPlayerName(objId);
 			final PlayerInstance player1 = World.getInstance().getPlayer(objId);
-			
 			_info.add(new FriendInfo(objId, name, ((player1 != null) && player1.isOnline())));
 		}
 	}

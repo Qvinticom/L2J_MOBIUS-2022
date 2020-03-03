@@ -164,7 +164,6 @@ public class Q10431_TheSealOfPunishmentDenOfEvil extends Quest
 	{
 		final QuestState qs = getQuestState(player, true);
 		String htmltext = getNoQuestMsg(player);
-		
 		switch (npc.getId())
 		{
 			case JOKEL:
@@ -176,7 +175,6 @@ public class Q10431_TheSealOfPunishmentDenOfEvil extends Quest
 				else if (qs.isCond(1))
 				{
 					htmltext = "33868-05.html";
-					
 				}
 				else if (qs.isCompleted())
 				{

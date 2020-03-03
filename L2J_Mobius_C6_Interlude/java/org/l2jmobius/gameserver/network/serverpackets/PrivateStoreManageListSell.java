@@ -39,7 +39,6 @@ public class PrivateStoreManageListSell extends GameServerPacket
 	public PrivateStoreManageListSell(PlayerInstance player)
 	{
 		_player = player;
-		
 		if (Config.SELL_BY_ITEM)
 		{
 			_playerAdena = _player.getItemCount(Config.SELL_ITEM, -1);

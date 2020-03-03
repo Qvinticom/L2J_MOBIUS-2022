@@ -37,7 +37,6 @@ public class Bypass implements IItemHandler
 		}
 		final PlayerInstance player = (PlayerInstance) playable;
 		final int itemId = item.getId();
-		
 		final String filename = "data/html/item/" + itemId + ".htm";
 		final String content = HtmCache.getInstance().getHtm(player, filename);
 		final NpcHtmlMessage html = new NpcHtmlMessage(0, item.getId());

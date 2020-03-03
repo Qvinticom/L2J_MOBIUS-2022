@@ -70,7 +70,6 @@ public class RequestWithdrawPartyRoom implements IClientIncomingPacket
 			
 			player.setPartyRoom(0);
 			// _activeChar.setPartyMatching(0);
-			
 			player.sendPacket(new ExClosePartyRoom());
 			player.sendPacket(SystemMessageId.YOU_HAVE_EXITED_THE_PARTY_ROOM);
 		}

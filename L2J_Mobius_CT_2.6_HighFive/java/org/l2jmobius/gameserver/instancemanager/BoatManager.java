@@ -61,7 +61,6 @@ public class BoatManager
 		npcDat.set("npcId", boatId);
 		npcDat.set("level", 0);
 		npcDat.set("jClass", "boat");
-		
 		npcDat.set("baseShldDef", 0);
 		npcDat.set("baseShldRate", 0);
 		npcDat.set("baseAccCombat", 38);

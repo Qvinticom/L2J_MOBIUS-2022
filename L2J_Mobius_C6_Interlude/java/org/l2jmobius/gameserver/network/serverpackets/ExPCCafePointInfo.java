@@ -41,7 +41,6 @@ public class ExPCCafePointInfo extends GameServerPacket
 	{
 		_player = user;
 		_addPoint = modify;
-		
 		if (add)
 		{
 			_periodType = 1;

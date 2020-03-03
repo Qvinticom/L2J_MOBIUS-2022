@@ -186,7 +186,6 @@ public class Q11027_PathOfDestinyOvercome extends Quest
 	{
 		final QuestState qs = getQuestState(player, true);
 		String htmltext = getNoQuestMsg(player);
-		
 		switch (qs.getState())
 		{
 			case State.CREATED:

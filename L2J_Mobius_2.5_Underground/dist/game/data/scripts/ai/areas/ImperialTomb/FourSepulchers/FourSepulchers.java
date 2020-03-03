@@ -478,7 +478,6 @@ public class FourSepulchers extends AbstractNpcAI implements IXmlReader
 	private void tryEnter(Npc npc, PlayerInstance player)
 	{
 		final int npcId = npc.getId();
-		
 		if (!ZoneManager.getInstance().getZoneById(MANAGER_ZONES.get(npcId)).getPlayersInside().isEmpty())
 		{
 			showHtmlFile(player, npcId + "-FULL.htm", npc, null);

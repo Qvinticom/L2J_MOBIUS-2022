@@ -176,7 +176,6 @@ public class Q00500_BrothersBoundInChains extends Quest
 				break;
 			}
 		}
-		
 		return htmltext;
 	}
 	

@@ -82,7 +82,6 @@ public class Q00601_WatchingEyes extends Quest
 	public String onAdvEvent(String event, Npc npc, PlayerInstance player)
 	{
 		final QuestState qs = getQuestState(player, false);
-		
 		if (qs == null)
 		{
 			return null;
@@ -125,7 +124,6 @@ public class Q00601_WatchingEyes extends Quest
 	public String onKill(Npc npc, PlayerInstance player, boolean isSummon)
 	{
 		final QuestState qs = getQuestState(player, false);
-		
 		if ((qs != null) && qs.isCond(1) && (getRandom(1000) < MOBS.get(npc.getId())))
 		{
 			giveItems(player, PROOF_OF_AVENGER, 1);
@@ -146,7 +144,6 @@ public class Q00601_WatchingEyes extends Quest
 	{
 		final QuestState qs = getQuestState(player, true);
 		String htmltext = getNoQuestMsg(player);
-		
 		switch (qs.getState())
 		{
 			case State.CREATED:

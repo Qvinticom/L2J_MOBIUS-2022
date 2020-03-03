@@ -133,7 +133,6 @@ public class TersisHerald extends AbstractNpcAI
 		}
 		
 		World.getInstance().getPlayers().stream().forEach(p -> showOnScreenMsg(p, npcStringId, 2, 10000, true));
-		
 		if (!SPAWNED_NPCS.isEmpty())
 		{
 			getTimers().cancelTimers("DESPAWN_NPCS");

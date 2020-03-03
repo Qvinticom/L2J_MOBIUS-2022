@@ -249,7 +249,6 @@ public class QuestLink implements IBypassHandler
 		
 		// Get the state of the selected quest
 		final QuestState qs = player.getQuestState(questId);
-		
 		if (q != null)
 		{
 			if (((q.getId() >= 1) && (q.getId() < 20000)) && ((player.getWeightPenalty() >= 3) || !player.isInventoryUnder90(true)))

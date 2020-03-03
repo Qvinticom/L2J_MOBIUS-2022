@@ -66,7 +66,6 @@ public class RecipeHolder implements IIdentifiable
 		_isCommonRecipe = set.getBoolean("isCommonRecipe");
 		_maxOfferingBonus = set.getDouble("maxOfferingBonus", Math.max(0, 100 - _successRate));
 		_maxOffering = set.getLong("maxOffering", 0);
-		
 		_materials = Collections.unmodifiableList(ingredients);
 		_productGroup = Collections.unmodifiableList(productGroup);
 		_npcFee = Collections.unmodifiableList(npcFee);
@@ -222,7 +221,6 @@ public class RecipeHolder implements IIdentifiable
 						}
 					}
 				}
-				
 				return false;
 			}
 		}
@@ -248,7 +246,6 @@ public class RecipeHolder implements IIdentifiable
 					sm.addLong(ingredient.getCount() - count);
 					player.sendPacket(sm);
 				}
-				
 				return false;
 			}
 		}

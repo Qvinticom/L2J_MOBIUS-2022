@@ -58,7 +58,6 @@ public class Heal implements ISkillHandler
 		try
 		{
 			final ISkillHandler handler = SkillHandler.getInstance().getSkillHandler(SkillType.BUFF);
-			
 			if (handler != null)
 			{
 				handler.useSkill(creature, skill, targets);
@@ -69,11 +68,9 @@ public class Heal implements ISkillHandler
 		}
 		
 		Creature target = null;
-		
 		for (WorldObject target2 : targets)
 		{
 			target = (Creature) target2;
-			
 			if ((target == null) || target.isDead() || target.isInvul())
 			{
 				continue;
@@ -118,7 +115,6 @@ public class Heal implements ISkillHandler
 			}
 			
 			double hp = skill.getPower();
-			
 			if (skill.getSkillType() == SkillType.HEAL_PERCENT)
 			{
 				hp = (target.getMaxHp() * hp) / 100.0;

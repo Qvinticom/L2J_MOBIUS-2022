@@ -60,7 +60,6 @@ public class Q00561_BasicMissionHarnakUndergroundRuins extends Quest
 	public String onAdvEvent(String event, Npc npc, PlayerInstance player)
 	{
 		final QuestState qs = getQuestState(player, false);
-		
 		if (qs == null)
 		{
 			return null;
@@ -135,7 +134,6 @@ public class Q00561_BasicMissionHarnakUndergroundRuins extends Quest
 	{
 		final QuestState qs = getQuestState(player, true);
 		String htmltext = getNoQuestMsg(player);
-		
 		switch (qs.getState())
 		{
 			case State.CREATED:
@@ -203,7 +201,6 @@ public class Q00561_BasicMissionHarnakUndergroundRuins extends Quest
 				break;
 			}
 			case State.COMPLETED:
-			
 			{
 				if (qs.isNowAvailable())
 				{

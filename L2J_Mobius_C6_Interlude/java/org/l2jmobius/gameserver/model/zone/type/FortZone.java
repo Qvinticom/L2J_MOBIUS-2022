@@ -70,7 +70,6 @@ public class FortZone extends ZoneRespawn
 		{
 			creature.setInsideZone(ZoneId.PVP, true);
 			creature.setInsideZone(ZoneId.SIEGE, true);
-			
 			if (creature instanceof PlayerInstance)
 			{
 				((PlayerInstance) creature).sendPacket(SystemMessageId.YOU_HAVE_ENTERED_A_COMBAT_ZONE);
@@ -85,7 +84,6 @@ public class FortZone extends ZoneRespawn
 		{
 			creature.setInsideZone(ZoneId.PVP, false);
 			creature.setInsideZone(ZoneId.SIEGE, false);
-			
 			if (creature instanceof PlayerInstance)
 			{
 				((PlayerInstance) creature).sendPacket(SystemMessageId.YOU_HAVE_LEFT_A_COMBAT_ZONE);
@@ -136,7 +134,6 @@ public class FortZone extends ZoneRespawn
 				{
 					creature.setInsideZone(ZoneId.PVP, false);
 					creature.setInsideZone(ZoneId.SIEGE, false);
-					
 					if (creature instanceof PlayerInstance)
 					{
 						((PlayerInstance) creature).sendPacket(SystemMessageId.YOU_HAVE_LEFT_A_COMBAT_ZONE);

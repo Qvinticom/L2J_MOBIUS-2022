@@ -123,7 +123,6 @@ public class Q166_MassOfDarkness extends Quest
 						{
 							htmltext = "30135-01.htm";
 							st.giveItems(CEREMONIAL_DAGGER, 1);
-							
 							if (st.hasQuestItems(DREVIANT_WINE, GARMIEL_SCRIPTURE))
 							{
 								st.set("cond", "2");
@@ -145,7 +144,6 @@ public class Q166_MassOfDarkness extends Quest
 						{
 							htmltext = "30139-01.htm";
 							st.giveItems(DREVIANT_WINE, 1);
-							
 							if (st.hasQuestItems(CEREMONIAL_DAGGER, GARMIEL_SCRIPTURE))
 							{
 								st.set("cond", "2");
@@ -167,7 +165,6 @@ public class Q166_MassOfDarkness extends Quest
 						{
 							htmltext = "30143-01.htm";
 							st.giveItems(GARMIEL_SCRIPTURE, 1);
-							
 							if (st.hasQuestItems(CEREMONIAL_DAGGER, DREVIANT_WINE))
 							{
 								st.set("cond", "2");

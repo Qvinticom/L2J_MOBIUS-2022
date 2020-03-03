@@ -105,7 +105,6 @@ public class HellboundPointData implements IXmlReader
 			final int maxHbLvl = Integer.parseInt(att.getNodeValue());
 			att = attrs.getNamedItem("lowestTrustLimit");
 			final int lowestTrustLimit = (att == null) ? 0 : Integer.parseInt(att.getNodeValue());
-			
 			_pointsInfo.put(npcId, new int[]
 			{
 				points,

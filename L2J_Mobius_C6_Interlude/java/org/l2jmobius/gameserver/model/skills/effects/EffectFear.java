@@ -106,7 +106,6 @@ final class EffectFear extends Effect
 		int posX = getEffected().getX();
 		int posY = getEffected().getY();
 		final int posZ = getEffected().getZ();
-		
 		int signx = -1;
 		int signy = -1;
 		if (getEffected().getX() > getEffector().getX())
@@ -123,7 +122,6 @@ final class EffectFear extends Effect
 		final Location destiny = GeoEngine.getInstance().canMoveToTargetLoc(getEffected().getX(), getEffected().getY(), getEffected().getZ(), posX, posY, posZ, getEffected().getInstanceId());
 		getEffected().setRunning();
 		getEffected().getAI().setIntention(CtrlIntention.AI_INTENTION_MOVE_TO, new Location(destiny.getX(), destiny.getY(), destiny.getZ(), 0));
-		
 		return true;
 	}
 }

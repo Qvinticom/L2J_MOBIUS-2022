@@ -171,7 +171,6 @@ public class Q10965_DeathMysteries extends Quest
 			holder.add(new NpcLogListHolder(NpcStringId.DEFEAT_THE_MONSTERS_IN_THE_DEATH_PASS.getId(), true, qs.getInt(KILL_COUNT_VAR)));
 			return holder;
 		}
-		
 		return super.getNpcLogList(player);
 	}
 	
@@ -217,7 +216,6 @@ public class Q10965_DeathMysteries extends Quest
 				htmltext = getAlreadyCompletedMsg(player);
 			}
 		}
-		
 		return htmltext;
 	}
 }

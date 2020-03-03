@@ -106,7 +106,6 @@ public class FaenorInterface implements EngineInterface
 		else
 		{
 			int maxCategory = -1;
-			
 			if (npc.getDropData() != null)
 			{
 				for (DropCategory cat : npc.getDropData())

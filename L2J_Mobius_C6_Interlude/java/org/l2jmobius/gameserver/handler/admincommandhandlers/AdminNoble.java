@@ -48,13 +48,10 @@ public class AdminNoble implements IAdminCommandHandler
 		if (command.startsWith("admin_setnoble"))
 		{
 			final WorldObject target = activeChar.getTarget();
-			
 			if (target instanceof PlayerInstance)
 			{
 				final PlayerInstance targetPlayer = (PlayerInstance) target;
-				
 				final boolean newNoble = !targetPlayer.isNoble();
-				
 				if (newNoble)
 				{
 					targetPlayer.setNoble(true);
@@ -75,7 +72,6 @@ public class AdminNoble implements IAdminCommandHandler
 			{
 				BuilderUtil.sendSysMessage(activeChar, "Impossible to set a non Player Target as noble.");
 				LOGGER.info("GM: " + activeChar.getName() + " is trying to set a non Player Target as noble.");
-				
 				return false;
 			}
 		}
@@ -89,7 +85,6 @@ public class AdminNoble implements IAdminCommandHandler
 		{
 			player.sendMessage(gm.getName() + " has granted Noble Status from you!");
 			gm.sendMessage("You've granted Noble Status from " + player.getName());
-			
 			if (notifyGmList)
 			{
 				AdminData.broadcastMessageToGMs("Warn: " + gm.getName() + " has set " + player.getName() + " as Noble !");
@@ -99,7 +94,6 @@ public class AdminNoble implements IAdminCommandHandler
 		{
 			player.sendMessage(gm.getName() + " has revoked Noble Status for you!");
 			gm.sendMessage("You've revoked Noble Status for " + player.getName());
-			
 			if (notifyGmList)
 			{
 				AdminData.broadcastMessageToGMs("Warn: " + gm.getName() + " has removed Noble Status of player" + player.getName());

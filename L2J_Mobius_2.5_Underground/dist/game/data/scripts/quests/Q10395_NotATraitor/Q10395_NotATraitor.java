@@ -151,13 +151,11 @@ public class Q10395_NotATraitor extends Quest
 	public String onKill(Npc npc, PlayerInstance killer, boolean isSummon)
 	{
 		final QuestState qs = getQuestState(killer, false);
-		
 		if ((qs != null) && qs.isStarted() && qs.isCond(1) && (getRandom(100) < 75))
 		{
 			final int killedMonsters = qs.getInt("killedMonsters") + 1;
 			qs.set("killedMonsters", killedMonsters);
 			playSound(killer, QuestSound.ITEMSOUND_QUEST_ITEMGET);
-			
 			if (killedMonsters == 50)
 			{
 				qs.setCond(2, true);

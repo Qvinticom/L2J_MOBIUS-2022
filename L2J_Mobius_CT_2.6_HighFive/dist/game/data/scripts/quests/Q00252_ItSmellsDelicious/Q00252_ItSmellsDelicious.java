@@ -132,7 +132,6 @@ public class Q00252_ItSmellsDelicious extends Quest
 	{
 		final QuestState qs = getQuestState(player, true);
 		String htmltext = getNoQuestMsg(player);
-		
 		if (qs.isCreated())
 		{
 			htmltext = ((player.getLevel() >= 82) ? "30200-01.htm" : "30200-02.htm");

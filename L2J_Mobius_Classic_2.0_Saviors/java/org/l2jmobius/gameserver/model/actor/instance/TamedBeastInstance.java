@@ -262,12 +262,10 @@ public class TamedBeastInstance extends FeedableBeastInstance
 			// broadcast the new title
 			setShowSummonAnimation(true);
 			broadcastPacket(new NpcInfo(this));
-			
 			owner.addTrainedBeast(this);
 			
 			// always and automatically follow the owner.
 			getAI().startFollow(_owner, 100);
-			
 			if (!_isFreyaBeast)
 			{
 				// instead of calculating this value each time, let's get this now and pass it on
@@ -424,7 +422,6 @@ public class TamedBeastInstance extends FeedableBeastInstance
 		{
 			final int foodTypeSkillId = _tamedBeast.getFoodType();
 			final PlayerInstance owner = _tamedBeast.getOwner();
-			
 			ItemInstance item = null;
 			if (_tamedBeast._isFreyaBeast)
 			{
@@ -477,7 +474,6 @@ public class TamedBeastInstance extends FeedableBeastInstance
 				// There are too many conflicting reports about whether distance from home should be taken into consideration. Disabled for now.
 				// if (_tamedBeast.isTooFarFromHome())
 				// _tamedBeast.setRemainingTime(-1);
-				
 				if (_tamedBeast.getRemainingTime() <= 0)
 				{
 					_tamedBeast.deleteMe();

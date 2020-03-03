@@ -42,7 +42,6 @@ public class RequestSiegeDefenderList extends GameClientPacket
 		if (_castleId < 100)
 		{
 			final Castle castle = CastleManager.getInstance().getCastleById(_castleId);
-			
 			if (castle == null)
 			{
 				return;
@@ -53,7 +52,6 @@ public class RequestSiegeDefenderList extends GameClientPacket
 		else
 		{
 			final Fort fort = FortManager.getInstance().getFortById(_castleId);
-			
 			if (fort == null)
 			{
 				return;

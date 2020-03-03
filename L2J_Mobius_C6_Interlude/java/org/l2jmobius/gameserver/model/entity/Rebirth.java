@@ -92,7 +92,6 @@ public class Rebirth
 			final boolean isMage = player.getBaseTemplate().getClassId().isMage();
 			// Returns the skill based on next Birth and if isMage.
 			final Skill skill = getRebirthSkill((currBirth + 1), isMage);
-			
 			String icon = "" + skill.getId(); // Returns the skill's id.
 			
 			// Incase the skill is only 3 digits.
@@ -136,7 +135,6 @@ public class Rebirth
 		final int currBirth = getRebirthLevel(player);
 		int itemNeeded = 0;
 		int itemAmount = 0;
-		
 		if (currBirth >= Config.REBIRTH_MAX)
 		{
 			player.sendMessage("You are currently at your maximum rebirth count!");
@@ -181,9 +179,7 @@ public class Rebirth
 		{
 			final double hp = player.getCurrentHp();
 			final double cp = player.getCurrentCp();
-			
 			int maxLevel = ExperienceData.getInstance().getMaxLevel();
-			
 			if (player.isSubClassActive())
 			{
 				maxLevel = Config.MAX_SUBCLASS_LEVEL;
@@ -206,10 +202,8 @@ public class Rebirth
 			player.broadcastUserInfo();
 			
 			final byte lvl = Byte.parseByte(returnToLevel + "");
-			
 			final long pXp = player.getStat().getExp();
 			final long tXp = ExperienceData.getInstance().getExpForLevel(lvl);
-			
 			if (pXp > tXp)
 			{
 				player.getStat().removeExpAndSp(pXp - tXp, 0);
@@ -283,7 +277,6 @@ public class Rebirth
 	{
 		final String itemName = ItemTable.getInstance().getTemplate(itemId).getName();
 		final ItemInstance itemNeeded = player.getInventory().getItemByItemId(itemId);
-		
 		if ((itemNeeded == null) || (itemNeeded.getCount() < itemAmount))
 		{
 			player.sendMessage("You need atleast " + itemAmount + "  [ " + itemName + " ] to request a Rebirth!");
@@ -293,7 +286,6 @@ public class Rebirth
 		// Player has the required items, so we're going to take them!
 		player.getInventory().destroyItemByItemId("Rebirth Engine", itemId, itemAmount, player, null);
 		player.sendMessage("Removed " + itemAmount + " " + itemName + " from your inventory!");
-		
 		return true;
 	}
 	
@@ -335,12 +327,10 @@ public class Rebirth
 	public int getRebirthLevel(PlayerInstance player)
 	{
 		final int playerId = player.getObjectId();
-		
 		if (_playersRebirthInfo.get(playerId) == null)
 		{
 			loadRebirthInfo(player);
 		}
-		
 		return _playersRebirthInfo.get(playerId);
 	}
 	
@@ -447,7 +437,6 @@ public class Rebirth
 		try (Connection con = DatabaseFactory.getConnection())
 		{
 			final int playerId = player.getObjectId();
-			
 			final PreparedStatement statement = con.prepareStatement("UPDATE `rebirth_manager` SET rebirthCount = ? WHERE playerId = ?");
 			statement.setInt(1, newRebirthCount);
 			statement.setInt(2, playerId);

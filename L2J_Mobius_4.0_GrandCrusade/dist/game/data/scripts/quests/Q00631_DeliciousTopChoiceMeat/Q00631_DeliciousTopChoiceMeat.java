@@ -194,7 +194,6 @@ public class Q00631_DeliciousTopChoiceMeat extends Quest
 	{
 		final QuestState qs = getQuestState(player, true);
 		String htmltext = getNoQuestMsg(player);
-		
 		if (qs.isCreated())
 		{
 			htmltext = "31537-01.htm";

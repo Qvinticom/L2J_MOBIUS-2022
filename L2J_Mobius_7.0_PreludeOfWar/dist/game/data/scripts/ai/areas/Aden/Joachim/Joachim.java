@@ -114,7 +114,6 @@ public class Joachim extends AbstractNpcAI
 				
 				final StringBuilder sb = new StringBuilder();
 				final NpcHtmlMessage html = getNpcHtmlMessage(player, npc, "34513-06.html");
-				
 				for (ClassId dualClasses : getDualClasses(player, cType))
 				{
 					if (dualClasses != null)

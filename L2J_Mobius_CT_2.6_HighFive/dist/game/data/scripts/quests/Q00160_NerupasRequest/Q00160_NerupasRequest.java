@@ -73,7 +73,6 @@ public class Q00160_NerupasRequest extends Quest
 	{
 		final QuestState qs = getQuestState(player, true);
 		String htmltext = getNoQuestMsg(player);
-		
 		switch (qs.getState())
 		{
 			case State.COMPLETED:
@@ -174,7 +173,6 @@ public class Q00160_NerupasRequest extends Quest
 							}
 							qs.setCond(4, true);
 							htmltext = "30152-01.html";
-							
 						}
 						else if (hasQuestItems(player, NIGHTSHADE_LEAF))
 						{

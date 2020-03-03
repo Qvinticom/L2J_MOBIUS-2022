@@ -67,7 +67,6 @@ public class Q00250_WatchWhatYouEat extends Quest
 	{
 		String htmltext = event;
 		final QuestState qs = getQuestState(player, false);
-		
 		if (qs == null)
 		{
 			return htmltext;
@@ -100,7 +99,6 @@ public class Q00250_WatchWhatYouEat extends Quest
 		{
 			return "32743-20.html";
 		}
-		
 		return null;
 	}
 	
@@ -135,7 +133,6 @@ public class Q00250_WatchWhatYouEat extends Quest
 	{
 		final QuestState qs = getQuestState(player, true);
 		String htmltext = getNoQuestMsg(player);
-		
 		if (npc.getId() == SALLY)
 		{
 			switch (qs.getState())

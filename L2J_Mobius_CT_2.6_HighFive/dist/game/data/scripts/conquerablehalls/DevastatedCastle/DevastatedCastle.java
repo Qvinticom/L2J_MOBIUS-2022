@@ -106,7 +106,6 @@ public class DevastatedCastle extends ClanHallSiegeEngine
 		}
 		
 		_missionAccomplished = true;
-		
 		cancelSiegeTask();
 		endSiege();
 		

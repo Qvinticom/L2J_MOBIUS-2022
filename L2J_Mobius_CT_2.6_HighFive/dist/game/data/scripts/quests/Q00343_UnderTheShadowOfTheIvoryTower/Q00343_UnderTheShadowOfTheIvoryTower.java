@@ -127,7 +127,6 @@ public class Q00343_UnderTheShadowOfTheIvoryTower extends Quest
 				else
 				{
 					final int chance = getRandom(1000);
-					
 					if (chance <= 119)
 					{
 						giveItems(player, SCROLL_ENCHANT_WEAPON_D_GRADE, 1);
@@ -205,7 +204,6 @@ public class Q00343_UnderTheShadowOfTheIvoryTower extends Quest
 				{
 					final int i0 = getRandom(100);
 					final int i1 = getRandom(3);
-					
 					if ((i0 < 20) && (i1 == 0))
 					{
 						qs.setMemoStateEx(1, qs.getMemoStateEx(1) + 4);

@@ -39,7 +39,6 @@ public class ArenaZone extends ZoneRespawn
 	{
 		creature.setInsideZone(ZoneId.PVP, true);
 		creature.setInsideZone(ZoneId.NO_SUMMON_FRIEND, true);
-		
 		if (creature instanceof PlayerInstance)
 		{
 			((PlayerInstance) creature).sendPacket(SystemMessageId.YOU_HAVE_ENTERED_A_COMBAT_ZONE);
@@ -51,7 +50,6 @@ public class ArenaZone extends ZoneRespawn
 	{
 		creature.setInsideZone(ZoneId.PVP, false);
 		creature.setInsideZone(ZoneId.NO_SUMMON_FRIEND, false);
-		
 		if (creature instanceof PlayerInstance)
 		{
 			((PlayerInstance) creature).sendPacket(SystemMessageId.YOU_HAVE_LEFT_A_COMBAT_ZONE);

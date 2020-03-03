@@ -139,7 +139,6 @@ public class CastleManager
 				return temp;
 			}
 		}
-		
 		return null;
 	}
 	
@@ -188,7 +187,6 @@ public class CastleManager
 				return temp;
 			}
 		}
-		
 		return null;
 	}
 	
@@ -198,7 +196,6 @@ public class CastleManager
 		{
 			return null;
 		}
-		
 		return getCastle(activeObject.getX(), activeObject.getY(), activeObject.getZ());
 	}
 	
@@ -285,7 +282,6 @@ public class CastleManager
 		{
 			return _castleCirclets[castleId];
 		}
-		
 		return 0;
 	}
 	
@@ -308,7 +304,6 @@ public class CastleManager
 		
 		final PlayerInstance player = member.getPlayerInstance();
 		final int circletId = getCircletByCastleId(castleId);
-		
 		if (circletId != 0)
 		{
 			// online-player circlet removal
@@ -319,7 +314,6 @@ public class CastleManager
 					if (player.isClanLeader())
 					{
 						final ItemInstance crown = player.getInventory().getItemByItemId(6841);
-						
 						if (crown != null)
 						{
 							if (crown.isEquipped())

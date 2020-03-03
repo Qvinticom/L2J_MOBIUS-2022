@@ -117,7 +117,6 @@ public class Q00761_AssistingTheGoldenRamArmy extends Quest
 				if (qs.isCond(2))
 				{
 					final long itemCount = getQuestItemsCount(player, TALON);
-					
 					for (int[] data : REWARD)
 					{
 						if (itemCount >= data[0])
@@ -144,7 +143,6 @@ public class Q00761_AssistingTheGoldenRamArmy extends Quest
 	{
 		final QuestState qs = getQuestState(player, true);
 		String htmltext = getNoQuestMsg(player);
-		
 		switch (qs.getState())
 		{
 			case State.CREATED:
@@ -178,14 +176,12 @@ public class Q00761_AssistingTheGoldenRamArmy extends Quest
 	public String onKill(Npc npc, PlayerInstance killer, boolean isSummon)
 	{
 		final QuestState qs = getQuestState(killer, false);
-		
 		if ((qs != null) && (qs.isCond(1) || qs.isCond(2)) && (getRandom(100) < 15))
 		{
 			if (getQuestItemsCount(killer, SHELL) < 50)
 			{
 				giveItems(killer, SHELL, 1);
 				playSound(killer, QuestSound.ITEMSOUND_QUEST_ITEMGET);
-				
 				if (getQuestItemsCount(killer, SHELL) >= 50)
 				{
 					qs.setCond(2, true);

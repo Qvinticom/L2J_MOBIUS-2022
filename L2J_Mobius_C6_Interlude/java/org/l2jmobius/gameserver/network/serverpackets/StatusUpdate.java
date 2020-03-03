@@ -179,7 +179,6 @@ public class StatusUpdate extends GameServerPacket
 			for (int i = 0; i < _attributes.size(); i++)
 			{
 				final Attribute temp = _attributes.get(i);
-				
 				writeD(temp.id);
 				writeD(temp.value);
 			}

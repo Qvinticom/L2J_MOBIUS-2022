@@ -43,7 +43,6 @@ public class WareHouseWithdrawalList extends GameServerPacket
 	{
 		_player = player;
 		_whType = type;
-		
 		_playerAdena = _player.getAdena();
 		if (_player.getActiveWarehouse() == null)
 		{

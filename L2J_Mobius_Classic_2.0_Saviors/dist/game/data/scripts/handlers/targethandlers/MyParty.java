@@ -47,7 +47,6 @@ public class MyParty implements ITargetTypeHandler
 				return selectedTarget;
 			}
 		}
-		
 		return creature;
 	}
 }

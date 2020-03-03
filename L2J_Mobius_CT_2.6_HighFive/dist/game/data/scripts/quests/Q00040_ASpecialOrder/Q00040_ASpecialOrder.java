@@ -134,7 +134,6 @@ public class Q00040_ASpecialOrder extends Quest
 	{
 		final QuestState qs = getQuestState(player, true);
 		String htmltext = getNoQuestMsg(player);
-		
 		switch (npc.getId())
 		{
 			case HELVETIA:

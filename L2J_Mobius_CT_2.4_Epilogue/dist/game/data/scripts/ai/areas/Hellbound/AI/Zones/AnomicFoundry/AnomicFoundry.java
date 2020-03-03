@@ -128,7 +128,6 @@ public class AnomicFoundry extends AbstractNpcAI
 			requestHelp(npc, player, 500, LESSER_EVIL);
 			requestHelp(npc, player, 500, GREATER_EVIL);
 		}
-		
 		return super.onAggroRangeEnter(npc, player, isSummon);
 	}
 	
@@ -141,7 +140,6 @@ public class AnomicFoundry extends AbstractNpcAI
 			npc.broadcastSay(ChatType.NPC_GENERAL, NpcStringId.ENEMY_INVASION_HURRY_UP);
 			cancelQuestTimer("return_laborer", npc, null);
 			startQuestTimer("return_laborer", 60000, npc, null);
-			
 			if (respawnTime > respawnMin)
 			{
 				respawnTime -= 5000;
@@ -191,7 +189,6 @@ public class AnomicFoundry extends AbstractNpcAI
 			}
 			_atkIndex.remove(npc.getObjectId());
 		}
-		
 		return super.onKill(npc, killer, isSummon);
 	}
 	
@@ -238,7 +235,6 @@ public class AnomicFoundry extends AbstractNpcAI
 		final int coordX = npc.getSpawn().getX();
 		final int coordY = npc.getSpawn().getY();
 		final int npcId = npc.getId();
-		
 		for (int i = 0; i < 5; i++)
 		{
 			if ((SPAWNS[i][0] == npcId) && (SPAWNS[i][1] == coordX) && (SPAWNS[i][2] == coordY))

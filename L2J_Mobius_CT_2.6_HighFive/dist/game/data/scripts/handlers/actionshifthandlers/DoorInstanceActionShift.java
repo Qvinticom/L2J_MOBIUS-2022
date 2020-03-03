@@ -42,16 +42,13 @@ public class DoorInstanceActionShift implements IActionShiftHandler
 			html.replace("%hpmax%", String.valueOf(door.getMaxHp()));
 			html.replace("%objid%", String.valueOf(target.getObjectId()));
 			html.replace("%doorid%", String.valueOf(door.getId()));
-			
 			html.replace("%minx%", String.valueOf(door.getX(0)));
 			html.replace("%miny%", String.valueOf(door.getY(0)));
 			html.replace("%minz%", String.valueOf(door.getZMin()));
-			
 			html.replace("%maxx%", String.valueOf(door.getX(2)));
 			html.replace("%maxy%", String.valueOf(door.getY(2)));
 			html.replace("%maxz%", String.valueOf(door.getZMax()));
 			html.replace("%unlock%", door.isOpenableBySkill() ? "<font color=00FF00>YES<font>" : "<font color=FF0000>NO</font>");
-			
 			player.sendPacket(html);
 		}
 		return true;

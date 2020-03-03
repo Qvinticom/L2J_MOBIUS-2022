@@ -82,7 +82,6 @@ public class SiegeFlagInstance extends NpcInstance
 		{
 			sc.removeFlag(this);
 		}
-		
 		return true;
 	}
 	

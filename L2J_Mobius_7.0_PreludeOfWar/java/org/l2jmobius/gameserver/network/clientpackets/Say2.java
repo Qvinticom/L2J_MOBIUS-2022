@@ -260,7 +260,6 @@ public class Say2 implements IClientIncomingPacket
 			}
 			final int id = Integer.parseInt(result.toString());
 			final ItemInstance item = owner.getInventory().getItemByObjectId(id);
-			
 			if (item == null)
 			{
 				LOGGER.info(client + " trying publish item which doesnt own! ID:" + id);

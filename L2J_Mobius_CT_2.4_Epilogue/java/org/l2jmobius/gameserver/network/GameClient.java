@@ -106,7 +106,6 @@ public class GameClient extends ChannelInboundHandler<GameClient>
 	public void channelInactive(ChannelHandlerContext ctx)
 	{
 		LOGGER_ACCOUNTING.finer("Client Disconnected: " + ctx.channel());
-		
 		LoginServerThread.getInstance().sendLogout(getAccountName());
 		
 		if ((_player == null) || !_player.isInOfflineMode())
@@ -292,7 +291,6 @@ public class GameClient extends ChannelInboundHandler<GameClient>
 	public byte markToDeleteChar(int characterSlot)
 	{
 		final int objectId = getObjectIdForSlot(characterSlot);
-		
 		if (objectId < 0)
 		{
 			return -1;
@@ -309,7 +307,6 @@ public class GameClient extends ChannelInboundHandler<GameClient>
 				if (clanId != 0)
 				{
 					final Clan clan = ClanTable.getInstance().getClan(clanId);
-					
 					if (clan == null)
 					{
 						answer = 0; // jeezes!
@@ -573,7 +570,6 @@ public class GameClient extends ChannelInboundHandler<GameClient>
 			// prevent some values for each login
 			player.setRunning(); // running is default
 			player.standUp(); // standing is default
-			
 			player.refreshOverloaded();
 			player.refreshExpertisePenalty();
 		}

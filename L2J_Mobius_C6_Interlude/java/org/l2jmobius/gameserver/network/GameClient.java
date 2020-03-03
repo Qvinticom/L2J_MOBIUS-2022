@@ -245,7 +245,6 @@ public class GameClient extends MMOClient<MMOConnection<GameClient>> implements 
 	public byte markToDeleteChar(int charslot)
 	{
 		final int objid = getObjectIdForSlot(charslot);
-		
 		if (objid < 0)
 		{
 			return -1;
@@ -258,17 +257,13 @@ public class GameClient extends MMOClient<MMOConnection<GameClient>> implements 
 			PreparedStatement statement = con.prepareStatement("SELECT clanId from characters WHERE obj_Id=?");
 			statement.setInt(1, objid);
 			final ResultSet rs = statement.executeQuery();
-			
 			rs.next();
 			
 			final int clanId = rs.getInt(1);
-			
 			answer = 0;
-			
 			if (clanId != 0)
 			{
 				final Clan clan = ClanTable.getInstance().getClan(clanId);
-				
 				if (clan == null)
 				{
 					answer = 0; // jeezes!
@@ -319,7 +314,6 @@ public class GameClient extends MMOClient<MMOConnection<GameClient>> implements 
 	{
 		// have to make sure active character must be nulled
 		final int objid = getObjectIdForSlot(charslot);
-		
 		if (objid < 0)
 		{
 			return;
@@ -485,7 +479,6 @@ public class GameClient extends MMOClient<MMOConnection<GameClient>> implements 
 		for (CharSelectInfoPackage c : chars)
 		{
 			final int objectId = c.getObjectId();
-			
 			_charSlotMapping.add(objectId);
 		}
 	}
@@ -507,7 +500,6 @@ public class GameClient extends MMOClient<MMOConnection<GameClient>> implements 
 		}
 		
 		final Integer objectId = _charSlotMapping.get(charslot);
-		
 		return objectId.intValue();
 	}
 	
@@ -525,7 +517,6 @@ public class GameClient extends MMOClient<MMOConnection<GameClient>> implements 
 		try
 		{
 			ThreadPool.execute(new DisconnectTask());
-			
 		}
 		catch (RejectedExecutionException e)
 		{
@@ -624,7 +615,6 @@ public class GameClient extends MMOClient<MMOConnection<GameClient>> implements 
 					if (player.atEvent)
 					{
 						final EventData data = new EventData(player.eventX, player.eventY, player.eventZ, player.eventKarma, player.eventPvpKills, player.eventPkKills, player.eventTitle, player.kills, player.eventSitForced);
-						
 						GameEvent.connectionLossData.put(player.getName(), data);
 					}
 					else if (player._inEventCTF)
@@ -696,7 +686,6 @@ public class GameClient extends MMOClient<MMOConnection<GameClient>> implements 
 					if (player.atEvent)
 					{
 						final EventData data = new EventData(player.eventX, player.eventY, player.eventZ, player.eventKarma, player.eventPvpKills, player.eventPkKills, player.eventTitle, player.kills, player.eventSitForced);
-						
 						GameEvent.connectionLossData.put(player.getName(), data);
 					}
 					else if (player._inEventCTF)

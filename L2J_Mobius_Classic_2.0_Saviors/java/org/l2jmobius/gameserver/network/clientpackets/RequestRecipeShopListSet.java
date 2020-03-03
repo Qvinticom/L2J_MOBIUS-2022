@@ -102,7 +102,6 @@ public class RequestRecipeShopListSet implements IClientIncomingPacket
 		
 		final List<RecipeList> dwarfRecipes = Arrays.asList(player.getDwarvenRecipeBook());
 		final List<RecipeList> commonRecipes = Arrays.asList(player.getCommonRecipeBook());
-		
 		player.getManufactureItems().clear();
 		
 		for (ManufactureItem i : _items)

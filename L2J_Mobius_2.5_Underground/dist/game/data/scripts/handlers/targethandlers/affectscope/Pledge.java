@@ -42,7 +42,6 @@ public class Pledge implements IAffectScopeHandler
 		final IAffectObjectHandler affectObject = AffectObjectHandler.getInstance().getHandler(skill.getAffectObject());
 		final int affectRange = skill.getAffectRange();
 		final int affectLimit = skill.getAffectLimit();
-		
 		if (target.isPlayable())
 		{
 			final Playable playable = (Playable) target;

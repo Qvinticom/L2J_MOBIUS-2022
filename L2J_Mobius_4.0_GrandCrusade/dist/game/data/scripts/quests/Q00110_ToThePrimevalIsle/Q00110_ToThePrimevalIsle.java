@@ -55,7 +55,6 @@ public class Q00110_ToThePrimevalIsle extends Quest
 		}
 		
 		String htmltext = null;
-		
 		switch (event)
 		{
 			case "31338-03.htm":

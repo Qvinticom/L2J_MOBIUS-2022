@@ -82,7 +82,6 @@ public class Q10291_FireDragonDestroyer extends Quest
 			if (Util.checkIfInRange(8000, npc, p, false))
 			{
 				final QuestState qs = getQuestState(p, false);
-				
 				if ((qs != null) && qs.isCond(1) && hasQuestItems(player, POOR_NECKLACE))
 				{
 					takeItems(player, POOR_NECKLACE, -1);
@@ -110,7 +109,6 @@ public class Q10291_FireDragonDestroyer extends Quest
 	{
 		final QuestState qs = getQuestState(player, true);
 		String htmltext = getNoQuestMsg(player);
-		
 		switch (qs.getState())
 		{
 			case State.CREATED:
@@ -155,7 +153,6 @@ public class Q10291_FireDragonDestroyer extends Quest
 				break;
 			}
 		}
-		
 		return htmltext;
 	}
 }

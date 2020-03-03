@@ -61,7 +61,6 @@ public class BabyPets extends AbstractNpcAI
 		if (event.equals("HEAL") && (player != null))
 		{
 			final Summon summon = player.getPet();
-			
 			if (summon != null)
 			{
 				if (getRandom(100) <= 25)
@@ -105,12 +104,10 @@ public class BabyPets extends AbstractNpcAI
 	{
 		final boolean previousFollowStatus = summon.getFollowStatus();
 		final PlayerInstance owner = summon.getOwner();
-		
 		if (!owner.isDead() && (((owner.getCurrentHp() / owner.getMaxHp()) * 100) < maxHpPer) && !summon.isHungry() && SkillCaster.checkUseConditions(summon, skill.getSkill()))
 		{
 			summon.getAI().setIntention(CtrlIntention.AI_INTENTION_CAST, skill.getSkill(), owner);
 			summon.sendPacket(new SystemMessage(SystemMessageId.YOUR_PET_USES_S1).addSkillName(skill.getSkill()));
-			
 			if (previousFollowStatus != summon.getFollowStatus())
 			{
 				summon.setFollowStatus(previousFollowStatus);

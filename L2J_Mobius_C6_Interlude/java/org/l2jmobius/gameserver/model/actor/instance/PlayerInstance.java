@@ -1311,7 +1311,6 @@ public class PlayerInstance extends Playable
 		}
 		
 		_kicked = kicked;
-		
 		closeNetConnection();
 	}
 	
@@ -1493,7 +1492,6 @@ public class PlayerInstance extends Playable
 	public List<Quest> getAllActiveQuests()
 	{
 		final List<Quest> quests = new ArrayList<>();
-		
 		for (QuestState qs : _quests.values())
 		{
 			if (qs != null)
@@ -1671,7 +1669,6 @@ public class PlayerInstance extends Playable
 	{
 		final String path = "data/scripts/quests/" + questId + "/" + stateId + ".htm";
 		final String content = HtmCache.getInstance().getHtm(path);
-		
 		if (content != null)
 		{
 			final NpcHtmlMessage npcReply = new NpcHtmlMessage(5);
@@ -2198,7 +2195,6 @@ public class PlayerInstance extends Playable
 		// Source http://l2p.bravehost.com/weightlimit.html (May 2007)
 		
 		final int con = getCON();
-		
 		if (con < 1)
 		{
 			return 31000;
@@ -2278,7 +2274,6 @@ public class PlayerInstance extends Playable
 			{
 				final long weightproc = (long) (((getCurrentLoad() - calcStat(Stat.WEIGHT_PENALTY, 1, this, null)) * 1000) / maxLoad);
 				int newWeightPenalty;
-				
 				if (weightproc < 500)
 				{
 					newWeightPenalty = 0;
@@ -2336,7 +2331,6 @@ public class PlayerInstance extends Playable
 		boolean heavyMastery = false;
 		boolean lightMastery = false;
 		boolean robeMastery = false;
-		
 		for (Skill skill : getAllSkills())
 		{
 			if (skill.getName().contains("Heavy Armor Mastery"))
@@ -2408,7 +2402,6 @@ public class PlayerInstance extends Playable
 		if (_masteryPenalty != newMasteryPenalty)
 		{
 			final int penalties = _masteryWeapPenalty + _expertisePenalty + newMasteryPenalty;
-			
 			if (penalties > 0)
 			{
 				super.addSkill(SkillTable.getInstance().getInfo(4267, 1)); // level used to be newPenalty
@@ -2451,7 +2444,6 @@ public class PlayerInstance extends Playable
 		boolean poleMastery = false;
 		boolean swordMastery = false;
 		boolean twoHandMastery = false;
-		
 		for (Skill skill : getAllSkills())
 		{
 			if (skill.getName().contains("Sword Blunt Mastery"))
@@ -2505,7 +2497,6 @@ public class PlayerInstance extends Playable
 		}
 		
 		int newMasteryPenalty = 0;
-		
 		if (!bowMastery && !bluntMastery && !daggerMastery && !fistMastery && !dualMastery && !poleMastery && !swordMastery && !twoHandMastery)
 		{
 			// not completed 1st class transfer or not acquired yet the mastery skills
@@ -2601,7 +2592,6 @@ public class PlayerInstance extends Playable
 		if (_masteryWeapPenalty != newMasteryPenalty)
 		{
 			final int penalties = _masteryPenalty + _expertisePenalty + newMasteryPenalty;
-			
 			if (penalties > 0)
 			{
 				super.addSkill(SkillTable.getInstance().getInfo(4267, 1)); // level used to be newPenalty
@@ -2630,7 +2620,6 @@ public class PlayerInstance extends Playable
 		int intensityW = 0; // Default value
 		int intensityA = 5; // Default value.
 		int intensity = 0; // Level of grade penalty.
-		
 		for (ItemInstance item : getInventory().getItems())
 		{
 			if ((item != null) && item.isEquipped()) // Checks if items equipped
@@ -2674,7 +2663,6 @@ public class PlayerInstance extends Playable
 			}
 			
 			_expertisePenalty = intensity;
-			
 			if (penalties > 0)
 			{
 				super.addSkill(SkillTable.getInstance().getInfo(4267, intensity));
@@ -2922,7 +2910,6 @@ public class PlayerInstance extends Playable
 			final Item temp = ItemTable.getInstance().getTemplate(247);
 			weaponItem = (Weapon) temp;
 		}
-		
 		return weaponItem;
 	}
 	
@@ -3008,9 +2995,7 @@ public class PlayerInstance extends Playable
 		
 		// This function gets called on login, so not such a bad place to check weight
 		refreshOverloaded(); // Update the overloaded status of the PlayerInstance
-		
 		refreshExpertisePenalty(); // Update the expertise status of the PlayerInstance
-		
 		refreshMasteryPenality();
 		
 		refreshMasteryWeapPenality();
@@ -3185,7 +3170,6 @@ public class PlayerInstance extends Playable
 		{
 			return _clan.getCrestId();
 		}
-		
 		return 0;
 	}
 	
@@ -3199,7 +3183,6 @@ public class PlayerInstance extends Playable
 		{
 			return _clan.getCrestLargeId();
 		}
-		
 		return 0;
 	}
 	
@@ -3590,7 +3573,6 @@ public class PlayerInstance extends Playable
 		if (count > 0)
 		{
 			_inventory.addAncientAdena(process, count, this, reference);
-			
 			if (!Config.FORCE_INVENTORY_UPDATE)
 			{
 				final InventoryUpdate iu = new InventoryUpdate();
@@ -3620,7 +3602,6 @@ public class PlayerInstance extends Playable
 			{
 				sendPacket(SystemMessageId.YOU_DO_NOT_HAVE_ENOUGH_ADENA);
 			}
-			
 			return false;
 		}
 		
@@ -3628,7 +3609,6 @@ public class PlayerInstance extends Playable
 		{
 			final ItemInstance ancientAdenaItem = _inventory.getAncientAdenaInstance();
 			_inventory.reduceAncientAdena(process, count, this, reference);
-			
 			if (!Config.FORCE_INVENTORY_UPDATE)
 			{
 				final InventoryUpdate iu = new InventoryUpdate();
@@ -3792,7 +3772,6 @@ public class PlayerInstance extends Playable
 				{
 					final ItemInstance herb = new ItemInstance(getObjectId(), itemId);
 					final IItemHandler handler = ItemHandler.getInstance().getItemHandler(herb.getItemId());
-					
 					if (handler == null)
 					{
 						LOGGER.warning("No item handler registered for Herb - item ID " + herb.getItemId() + ".");
@@ -3800,7 +3779,6 @@ public class PlayerInstance extends Playable
 					else
 					{
 						handler.useItem(this, herb);
-						
 						if (_herbstask >= 100)
 						{
 							_herbstask -= 100;
@@ -3859,14 +3837,12 @@ public class PlayerInstance extends Playable
 	public boolean destroyItem(String process, ItemInstance item, WorldObject reference, boolean sendMessage)
 	{
 		item = _inventory.destroyItem(process, item, this, reference);
-		
 		if (item == null)
 		{
 			if (sendMessage)
 			{
 				sendPacket(SystemMessageId.INCORRECT_ITEM_COUNT_2);
 			}
-			
 			return false;
 		}
 		
@@ -3921,14 +3897,12 @@ public class PlayerInstance extends Playable
 	public boolean destroyItem(String process, int objectId, int count, WorldObject reference, boolean sendMessage)
 	{
 		final ItemInstance item = _inventory.getItemByObjectId(objectId);
-		
 		if ((item == null) || (item.getCount() < count) || (_inventory.destroyItem(process, objectId, count, this, reference) == null))
 		{
 			if (sendMessage)
 			{
 				sendPacket(SystemMessageId.INCORRECT_ITEM_COUNT_2);
 			}
-			
 			return false;
 		}
 		
@@ -3982,7 +3956,6 @@ public class PlayerInstance extends Playable
 	public boolean destroyItemWithoutTrace(String process, int objectId, int count, WorldObject reference, boolean sendMessage)
 	{
 		final ItemInstance item = _inventory.getItemByObjectId(objectId);
-		
 		if ((item == null) || (item.getCount() < count))
 		{
 			if (sendMessage)
@@ -4056,14 +4029,12 @@ public class PlayerInstance extends Playable
 	public boolean destroyItemByItemId(String process, int itemId, int count, WorldObject reference, boolean sendMessage)
 	{
 		final ItemInstance item = _inventory.getItemByItemId(itemId);
-		
 		if ((item == null) || (item.getCount() < count) || (_inventory.destroyItemByItemId(process, itemId, count, this, reference) == null))
 		{
 			if (sendMessage)
 			{
 				sendPacket(SystemMessageId.INCORRECT_ITEM_COUNT_2);
 			}
-			
 			return false;
 		}
 		
@@ -4203,7 +4174,6 @@ public class PlayerInstance extends Playable
 		if (target instanceof PlayerInventory)
 		{
 			final PlayerInstance targetPlayer = ((PlayerInventory) target).getOwner();
-			
 			if (!Config.FORCE_INVENTORY_UPDATE)
 			{
 				final InventoryUpdate playerIU = new InventoryUpdate();
@@ -4275,7 +4245,6 @@ public class PlayerInstance extends Playable
 		}
 		
 		item.dropMe(this, (getClientX() + Rnd.get(50)) - 25, (getClientY() + Rnd.get(50)) - 25, getClientZ() + 20);
-		
 		if (Config.DESTROY_DROPPED_PLAYER_ITEM && !Config.LIST_PROTECTED_ITEMS.contains(item.getItemId()))
 		{
 			if (Config.AUTODESTROY_ITEM_AFTER > 0) // autodestroy enabled
@@ -4369,7 +4338,6 @@ public class PlayerInstance extends Playable
 		}
 		
 		item.dropMe(this, x, y, z);
-		
 		if ((Config.AUTODESTROY_ITEM_AFTER > 0) && Config.DESTROY_DROPPED_PLAYER_ITEM && !Config.LIST_PROTECTED_ITEMS.contains(item.getItemId()) && ((item.isEquipable() && Config.DESTROY_EQUIPABLE_PLAYER_ITEM) || !item.isEquipable()))
 		{
 			ItemsAutoDestroy.getInstance().addItem(item);
@@ -4432,7 +4400,6 @@ public class PlayerInstance extends Playable
 		}
 		
 		final ItemInstance item = getInventory().getItemByObjectId(objectId);
-		
 		if ((item == null) || (item.getOwnerId() != getObjectId()))
 		{
 			LOGGER.warning(getObjectId() + ": player tried to " + action + " item he is not owner of");
@@ -4483,7 +4450,6 @@ public class PlayerInstance extends Playable
 		}
 		
 		_protectEndTime = protect ? GameTimeController.getGameTicks() + (Config.PLAYER_SPAWN_PROTECTION * GameTimeController.TICKS_PER_SECOND) : 0;
-		
 		if (protect)
 		{
 			ThreadPool.schedule(new TeleportProtectionFinalizer(this), (Config.PLAYER_SPAWN_PROTECTION - 1) * 1000);
@@ -4497,7 +4463,6 @@ public class PlayerInstance extends Playable
 	public void setTeleportProtection(boolean protect)
 	{
 		_teleportProtectEndTime = protect ? GameTimeController.getGameTicks() + (Config.PLAYER_TELEPORT_PROTECTION * GameTimeController.TICKS_PER_SECOND) : 0;
-		
 		if (protect)
 		{
 			ThreadPool.schedule(new TeleportProtectionFinalizer(this), (Config.PLAYER_TELEPORT_PROTECTION - 1) * 1000);
@@ -4683,7 +4648,6 @@ public class PlayerInstance extends Playable
 				if (Config.ALLOW_CHAR_KILL_PROTECT)
 				{
 					final Siege siege = SiegeManager.getInstance().getSiege(player);
-					
 					if ((siege != null) && siege.isInProgress())
 					{
 						if ((player.getLevel() > 20) && (((Creature) player.getTarget()).getLevel() < 20))
@@ -4786,7 +4750,6 @@ public class PlayerInstance extends Playable
 	public void onActionShift(PlayerInstance player)
 	{
 		final Weapon currentWeapon = player.getActiveWeaponItem();
-		
 		if (player.isGM())
 		{
 			if (this != player.getTarget())
@@ -4870,7 +4833,6 @@ public class PlayerInstance extends Playable
 					if (Config.ALLOW_CHAR_KILL_PROTECT)
 					{
 						final Siege siege = SiegeManager.getInstance().getSiege(player);
-						
 						if ((siege != null) && siege.isInProgress())
 						{
 							if ((player.getLevel() > 20) && (((Creature) player.getTarget()).getLevel() < 20))
@@ -5086,7 +5048,6 @@ public class PlayerInstance extends Playable
 	private boolean needCpUpdate(int barPixels)
 	{
 		final double currentCp = getCurrentCp();
-		
 		if ((currentCp <= 1.0) || (getMaxCp() < barPixels))
 		{
 			return true;
@@ -5103,7 +5064,6 @@ public class PlayerInstance extends Playable
 			{
 				final double doubleMulti = currentCp / _cpUpdateInterval;
 				int intMulti = (int) doubleMulti;
-				
 				_cpUpdateDecCheck = _cpUpdateInterval * (doubleMulti < intMulti ? intMulti-- : intMulti);
 				_cpUpdateIncCheck = _cpUpdateDecCheck + _cpUpdateInterval;
 			}
@@ -5122,7 +5082,6 @@ public class PlayerInstance extends Playable
 	private boolean needMpUpdate(int barPixels)
 	{
 		final double currentMp = getCurrentMp();
-		
 		if ((currentMp <= 1.0) || (getMaxMp() < barPixels))
 		{
 			return true;
@@ -5139,7 +5098,6 @@ public class PlayerInstance extends Playable
 			{
 				final double doubleMulti = currentMp / _mpUpdateInterval;
 				int intMulti = (int) doubleMulti;
-				
 				_mpUpdateDecCheck = _mpUpdateInterval * (doubleMulti < intMulti ? intMulti-- : intMulti);
 				_mpUpdateIncCheck = _mpUpdateDecCheck + _mpUpdateInterval;
 			}
@@ -5652,7 +5610,6 @@ public class PlayerInstance extends Playable
 			{
 				final byte riftType = getParty().getDimensionalRift().getType();
 				final byte riftRoom = getParty().getDimensionalRift().getCurrentRoom();
-				
 				if ((newTarget != null) && !DimensionalRiftManager.getInstance().getRoom(riftType, riftRoom).checkIfInZone(newTarget.getX(), newTarget.getY(), newTarget.getZ()))
 				{
 					newTarget = null;
@@ -5717,12 +5674,10 @@ public class PlayerInstance extends Playable
 	public Weapon getActiveWeaponItem()
 	{
 		final ItemInstance weapon = getActiveWeaponInstance();
-		
 		if (weapon == null)
 		{
 			return getFistsWeaponItem();
 		}
-		
 		return (Weapon) weapon.getItem();
 	}
 	
@@ -5751,12 +5706,10 @@ public class PlayerInstance extends Playable
 	public Armor getActiveChestArmorItem()
 	{
 		final ItemInstance armor = getChestArmorInstance();
-		
 		if (armor == null)
 		{
 			return null;
 		}
-		
 		return (Armor) armor.getItem();
 	}
 	
@@ -5767,12 +5720,10 @@ public class PlayerInstance extends Playable
 	public Armor getActiveLegsArmorItem()
 	{
 		final ItemInstance legs = getLegsArmorInstance();
-		
 		if (legs == null)
 		{
 			return null;
 		}
-		
 		return (Armor) legs.getItem();
 	}
 	
@@ -5784,7 +5735,6 @@ public class PlayerInstance extends Playable
 	{
 		final ItemInstance legs = getLegsArmorInstance();
 		final ItemInstance armor = getChestArmorInstance();
-		
 		if ((armor != null) && (legs != null) && ((ArmorType) legs.getItemType() == ArmorType.HEAVY) && ((ArmorType) armor.getItemType() == ArmorType.HEAVY))
 		{
 			return true;
@@ -5804,7 +5754,6 @@ public class PlayerInstance extends Playable
 	{
 		final ItemInstance legs = getLegsArmorInstance();
 		final ItemInstance armor = getChestArmorInstance();
-		
 		if ((armor != null) && (legs != null) && ((ArmorType) legs.getItemType() == ArmorType.LIGHT) && ((ArmorType) armor.getItemType() == ArmorType.LIGHT))
 		{
 			return true;
@@ -5824,7 +5773,6 @@ public class PlayerInstance extends Playable
 	{
 		final ItemInstance legs = getLegsArmorInstance();
 		final ItemInstance armor = getChestArmorInstance();
-		
 		if ((armor != null) && (legs != null) && ((ArmorType) legs.getItemType() == ArmorType.MAGIC) && ((ArmorType) armor.getItemType() == ArmorType.MAGIC))
 		{
 			return true;
@@ -6038,14 +5986,12 @@ public class PlayerInstance extends Playable
 	public Weapon getSecondaryWeaponItem()
 	{
 		final ItemInstance weapon = getSecondaryWeaponInstance();
-		
 		if (weapon == null)
 		{
 			return getFistsWeaponItem();
 		}
 		
 		final Item item = weapon.getItem();
-		
 		if (item instanceof Weapon)
 		{
 			return (Weapon) item;
@@ -6186,7 +6132,6 @@ public class PlayerInstance extends Playable
 							final Item reward = ItemTable.getInstance().getTemplate(Config.DM_KILL_REWARD_ID);
 							pk.getInventory().addItem("DM Kill Reward", Config.DM_KILL_REWARD_ID, Config.DM_KILL_REWARD_AMOUNT, this, null);
 							pk.sendMessage("You have earned " + Config.DM_KILL_REWARD_AMOUNT + " item(s) of ID " + reward.getName() + ".");
-							
 						}
 						
 						sendMessage("You will be revived and teleported to spot in 20 seconds!");
@@ -6218,7 +6163,6 @@ public class PlayerInstance extends Playable
 						Announcements.getInstance().announceToAll("VIP Killed by non-event character. VIP going back to initial spawn.");
 						doRevive();
 						teleToLocation(VIP._startX, VIP._startY, VIP._startZ);
-						
 					}
 					else if (_isTheVIP && pk._inEventVIP)
 					{
@@ -6254,7 +6198,6 @@ public class PlayerInstance extends Playable
 			else if ((pk == null) || !pk.isCursedWeaponEquiped())
 			{
 				onDieDropItem(killer); // Check if any item should be dropped
-				
 				if ((!isInsideZone(ZoneId.PVP) || isInsideZone(ZoneId.SIEGE)))
 				{
 					if ((pk != null) && (pk.getClan() != null) && (getClan() != null) && !isAcademyMember() && !pk.isAcademyMember() && _clan.isAtWarWith(pk.getClanId()) && pk.getClan().isAtWarWith(_clan.getClanId()))
@@ -6325,7 +6268,6 @@ public class PlayerInstance extends Playable
 		
 		// Refresh focus force like L2OFF
 		sendPacket(new EtcStatusUpdate(this));
-		
 		return true;
 	}
 	
@@ -6363,13 +6305,11 @@ public class PlayerInstance extends Playable
 			boolean isKarmaDrop = false;
 			final boolean isKillerNpc = killer instanceof NpcInstance;
 			final int pkLimit = Config.KARMA_PK_LIMIT;
-			
 			int dropEquip = 0;
 			int dropEquipWeapon = 0;
 			int dropItem = 0;
 			int dropLimit = 0;
 			int dropPercent = 0;
-			
 			if ((getKarma() > 0) && (getPkKills() >= pkLimit))
 			{
 				isKarmaDrop = true;
@@ -6490,7 +6430,6 @@ public class PlayerInstance extends Playable
 		}
 		
 		PlayerInstance targetPlayer = null;
-		
 		if (target instanceof PlayerInstance)
 		{
 			targetPlayer = (PlayerInstance) target;
@@ -6668,7 +6607,6 @@ public class PlayerInstance extends Playable
 			{
 				final String ip1 = _client.getConnection().getInetAddress().getHostAddress();
 				final String ip2 = targetPlayer.getClient().getConnection().getInetAddress().getHostAddress();
-				
 				if (ip1.equals(ip2))
 				{
 					sendMessage("Farm is punishable with Ban! Gm informed.");
@@ -6698,9 +6636,7 @@ public class PlayerInstance extends Playable
 					{
 						final int item = Config.PVP_REWARD_ID;
 						final Item reward = ItemTable.getInstance().getTemplate(item);
-						
 						final int amount = Config.PVP_REWARD_AMOUNT;
-						
 						getInventory().addItem("Winning PvP", Config.PVP_REWARD_ID, Config.PVP_REWARD_AMOUNT, this, null);
 						sendMessage("You have earned " + amount + " item(s) of " + reward.getName() + ".");
 					}
@@ -6775,7 +6711,6 @@ public class PlayerInstance extends Playable
 		{
 			setHeroAura(true);
 			Announcements.getInstance().criticalAnnounceToAll(getName() + " becames War Legend with " + Config.KILLS_TO_GET_WAR_LEGEND_AURA + " PvP!!");
-			
 		}
 		
 		if (Config.PVPEXPSP_SYSTEM)
@@ -7026,10 +6961,8 @@ public class PlayerInstance extends Playable
 		final int baseKarma = Config.KARMA_MIN_KARMA;
 		int newKarma = baseKarma;
 		final int karmaLimit = Config.KARMA_MAX_KARMA;
-		
 		final int pkLVL = getLevel();
 		final int pkPKCount = getPkKills();
-		
 		int lvlDiffMulti = 0;
 		int pkCountMulti = 0;
 		
@@ -7132,10 +7065,8 @@ public class PlayerInstance extends Playable
 		// this (with defaults) results in a level 1 losing about ~2 karma per death, and a lvl 70 loses about 11760 karma per death...
 		// You lose karma as long as you were not in a pvp zone and you did not kill urself.
 		// NOTE: exp for death (if delevel is allowed) is based on the players level
-		
 		long expGained = Math.abs(exp);
 		expGained /= Config.KARMA_XP_DIVIDER;
-		
 		int karmaLost = 0;
 		if (expGained > Integer.MAX_VALUE)
 		{
@@ -7174,7 +7105,6 @@ public class PlayerInstance extends Playable
 		}
 		
 		setPvpFlagLasts(System.currentTimeMillis() + Config.PVP_NORMAL_TIME);
-		
 		if (getPvpFlag() == 0)
 		{
 			startPvPFlag();
@@ -7188,7 +7118,6 @@ public class PlayerInstance extends Playable
 	public void updatePvPStatus(Creature target)
 	{
 		PlayerInstance targetPlayer = null;
-		
 		if (target instanceof PlayerInstance)
 		{
 			targetPlayer = (PlayerInstance) target;
@@ -7264,7 +7193,6 @@ public class PlayerInstance extends Playable
 		
 		// The death steal you some Exp
 		double percentLost = 4.0; // standart 4% (lvl>20)
-		
 		if (getLevel() < 20)
 		{
 			percentLost = 10.0;
@@ -7562,7 +7490,6 @@ public class PlayerInstance extends Playable
 		
 		_activeTradeList.lock();
 		_activeTradeList = null;
-		
 		sendPacket(new SendTradeDone(0));
 		final SystemMessage msg = new SystemMessage(SystemMessageId.S1_HAS_CANCELED_THE_TRADE);
 		msg.addString(partner.getName());
@@ -7673,7 +7600,6 @@ public class PlayerInstance extends Playable
 	public void setPrivateStoreType(int type)
 	{
 		_privatestore = type;
-		
 		if ((_privatestore == STORE_PRIVATE_NONE) && ((_client == null) || isInOfflineMode()))
 		{
 			store();
@@ -7827,7 +7753,6 @@ public class PlayerInstance extends Playable
 		{
 			// Get the ItemInstance of the arrows needed for this bow
 			_arrowItem = getInventory().findArrowForBow(getActiveWeaponItem());
-			
 			if (_arrowItem != null)
 			{
 				// Equip arrows needed in left hand
@@ -7842,7 +7767,6 @@ public class PlayerInstance extends Playable
 			// Get the ItemInstance of arrows equiped in left hand
 			_arrowItem = getInventory().getPaperdollItem(Inventory.PAPERDOLL_LHAND);
 		}
-		
 		return _arrowItem != null;
 	}
 	
@@ -8261,7 +8185,6 @@ public class PlayerInstance extends Playable
 		for (PlayerInstance player : getKnownList().getKnownPlayers().values())
 		{
 			player.sendPacket(new RelationChanged(this, getRelation(player), isAutoAttackable(player)));
-			
 			if (getPet() != null)
 			{
 				getPet().broadcastPacket(new NpcInfo(getPet(), null));
@@ -8284,7 +8207,6 @@ public class PlayerInstance extends Playable
 			}
 			
 			player.sendPacket(new RelationChanged(this, getRelation(player), isAutoAttackable(player)));
-			
 			if (getPet() != null)
 			{
 				getPet().broadcastPacket(new NpcInfo(getPet(), null));
@@ -8376,7 +8298,6 @@ public class PlayerInstance extends Playable
 		try (Connection con = DatabaseFactory.getConnection())
 		{
 			final PreparedStatement statement = con.prepareStatement("UPDATE characters SET first_log=? WHERE obj_id=?");
-			
 			int fl;
 			if (getFirstLog())
 			{
@@ -8466,12 +8387,10 @@ public class PlayerInstance extends Playable
 			statement.setInt(55, isNoble() ? 1 : 0);
 			statement.setLong(56, 0);
 			statement.setLong(57, System.currentTimeMillis());
-			
 			statement.setString(58, StringToHex(Integer.toHexString(getAppearance().getNameColor()).toUpperCase()));
 			statement.setString(59, StringToHex(Integer.toHexString(getAppearance().getTitleColor()).toUpperCase()));
 			statement.setInt(60, isAio() ? 1 : 0);
 			statement.setLong(61, 0);
-			
 			statement.executeUpdate();
 			statement.close();
 			
@@ -8481,7 +8400,6 @@ public class PlayerInstance extends Playable
 		{
 			LOGGER.warning("Could not insert char data " + e);
 		}
-		
 		return output;
 	}
 	
@@ -8517,11 +8435,9 @@ public class PlayerInstance extends Playable
 				final boolean female = rset.getInt("sex") != 0;
 				final PlayerTemplate template = PlayerTemplateData.getInstance().getTemplate(activeClassId);
 				final PlayerAppearance app = new PlayerAppearance(rset.getByte("face"), rset.getByte("hairColor"), rset.getByte("hairStyle"), female);
-				
 				player = new PlayerInstance(objectId, template, rset.getString("account_name"), app);
 				player.setName(rset.getString("char_name"));
 				player._lastAccess = rset.getLong("lastAccess");
-				
 				player.getStat().setExp(rset.getLong("exp"));
 				player.setExpBeforeDeath(rset.getLong("expBeforeDeath"));
 				player.getStat().setLevel(rset.getByte("level"));
@@ -8540,7 +8456,6 @@ public class PlayerInstance extends Playable
 				player.setClanJoinExpiryTime(rset.getLong("clan_join_expiry_time"));
 				player.setFirstLog(rset.getInt("first_log"));
 				player.pcBangPoint = rset.getInt("pc_point");
-				
 				if (player.getClanJoinExpiryTime() < System.currentTimeMillis())
 				{
 					player.setClanJoinExpiryTime(0);
@@ -8594,7 +8509,6 @@ public class PlayerInstance extends Playable
 				
 				// Check recs
 				player.checkRecom(rset.getInt("rec_have"), rset.getInt("rec_left"));
-				
 				player._classIndex = 0;
 				try
 				{
@@ -8632,7 +8546,6 @@ public class PlayerInstance extends Playable
 				player.setSponsor(rset.getInt("sponsor"));
 				player.setLvlJoinedAcademy(rset.getInt("lvl_joined_academy"));
 				player.setIn7sDungeon(rset.getInt("isin7sdungeon") == 1);
-				
 				player.setPunishLevel(rset.getInt("punish_level"));
 				if (player.getPunishLevel() != PunishLevel.NONE)
 				{
@@ -8757,7 +8670,6 @@ public class PlayerInstance extends Playable
 				setMail(ForumsBBSManager.getInstance().getForumByName("MailRoot").getChildByName(getName()));
 			}
 		}
-		
 		return _forumMail;
 	}
 	
@@ -8786,7 +8698,6 @@ public class PlayerInstance extends Playable
 				setMemo(ForumsBBSManager.getInstance().getForumByName("MemoRoot").getChildByName(_accountName));
 			}
 		}
-		
 		return _forumMemo;
 	}
 	
@@ -8893,12 +8804,10 @@ public class PlayerInstance extends Playable
 			final PreparedStatement statement = con.prepareStatement("SELECT id, type FROM character_recipebook WHERE char_id=?");
 			statement.setInt(1, getObjectId());
 			final ResultSet rset = statement.executeQuery();
-			
 			RecipeList recipe;
 			while (rset.next())
 			{
 				recipe = RecipeData.getInstance().getRecipe(rset.getInt("id"));
-				
 				if (rset.getInt("type") == 1)
 				{
 					registerDwarvenRecipeList(recipe);
@@ -9044,7 +8953,6 @@ public class PlayerInstance extends Playable
 			final int level = getStat().getLevel();
 			final int sp = getStat().getSp();
 			_classIndex = currentClassIndex;
-			
 			PreparedStatement statement;
 			
 			// Update base class
@@ -9080,12 +8988,10 @@ public class PlayerInstance extends Playable
 			statement.setInt(29, getClanId());
 			statement.setInt(30, getMaxLoad());
 			statement.setInt(31, getRace().ordinal());
-			
 			statement.setInt(32, getClassId().getId());
 			statement.setLong(33, getDeleteTimer());
 			statement.setString(34, getTitle());
 			statement.setInt(35, getAccessLevel().getLevel());
-			
 			if (_isInOfflineMode || isOnline()) // in offline mode or online
 			{
 				statement.setInt(36, 1);
@@ -9099,9 +9005,7 @@ public class PlayerInstance extends Playable
 			statement.setInt(38, getClanPrivileges());
 			statement.setInt(39, getWantsPeace());
 			statement.setInt(40, getBaseClass());
-			
 			long totalOnlineTime = _onlineTime;
-			
 			if (_onlineBeginTime > 0)
 			{
 				totalOnlineTime += (System.currentTimeMillis() - _onlineBeginTime) / 1000;
@@ -9124,15 +9028,11 @@ public class PlayerInstance extends Playable
 			statement.setString(55, getName());
 			statement.setLong(56, getDeathPenaltyBuffLevel());
 			statement.setInt(57, getPcBangScore());
-			
 			statement.setString(58, StringToHex(Integer.toHexString(_originalNameColorOffline).toUpperCase()));
 			statement.setString(59, StringToHex(Integer.toHexString(getAppearance().getTitleColor()).toUpperCase()));
-			
 			statement.setInt(60, isAio() ? 1 : 0);
 			statement.setLong(61, getAioEndTime());
-			
 			statement.setInt(62, getObjectId());
-			
 			statement.execute();
 			statement.close();
 		}
@@ -9150,7 +9050,6 @@ public class PlayerInstance extends Playable
 		try (Connection con = DatabaseFactory.getConnection())
 		{
 			PreparedStatement statement;
-			
 			if (getTotalSubClasses() > 0)
 			{
 				for (SubClass subClass : getSubClasses().values())
@@ -9162,7 +9061,6 @@ public class PlayerInstance extends Playable
 					statement.setInt(4, subClass.getClassId());
 					statement.setInt(5, getObjectId());
 					statement.setInt(6, subClass.getClassIndex());
-					
 					statement.execute();
 					statement.close();
 				}
@@ -9194,15 +9092,12 @@ public class PlayerInstance extends Playable
 			// Store all effect data along with calulated remaining reuse delays for matching skills. 'restore_type'= 0.
 			final Effect[] effects = getAllEffects();
 			statement = con.prepareStatement(ADD_SKILL_SAVE);
-			
 			int buffIndex = 0;
 			final List<Integer> storedSkills = new ArrayList<>();
 			final long currentTime = System.currentTimeMillis();
-			
 			for (Effect effect : effects)
 			{
 				final int skillId = effect.getSkill().getId();
-				
 				if (storedSkills.contains(skillId))
 				{
 					continue;
@@ -9304,7 +9199,6 @@ public class PlayerInstance extends Playable
 		}
 		
 		_learningSkill = false;
-		
 		return oldSkill;
 	}
 	
@@ -9360,7 +9254,6 @@ public class PlayerInstance extends Playable
 		try (Connection con = DatabaseFactory.getConnection())
 		{
 			PreparedStatement statement;
-			
 			if (oldSkill != null)
 			{
 				statement = con.prepareStatement(DELETE_SKILL_FROM_CHAR);
@@ -9377,7 +9270,6 @@ public class PlayerInstance extends Playable
 		}
 		
 		final ShortCut[] allShortCuts = getAllShortCuts();
-		
 		for (ShortCut sc : allShortCuts)
 		{
 			if ((sc != null) && (skill != null) && (sc.getId() == skill.getId()) && (sc.getType() == ShortCut.TYPE_SKILL))
@@ -9400,7 +9292,6 @@ public class PlayerInstance extends Playable
 	private void storeSkill(Skill newSkill, Skill oldSkill, int newClassIndex)
 	{
 		int classIndex = _classIndex;
-		
 		if (newClassIndex > -1)
 		{
 			classIndex = newClassIndex;
@@ -9451,7 +9342,6 @@ public class PlayerInstance extends Playable
 			{
 				final int skillid = skill.getId();
 				// int skilllevel = skill.getLevel();
-				
 				foundskill = false;
 				// loop through all skills in players skilltree
 				for (SkillLearn temp : skillTree)
@@ -9570,7 +9460,6 @@ public class PlayerInstance extends Playable
 				{
 					final int id = rset.getInt("skill_id");
 					final int level = rset.getInt("skill_level");
-					
 					if (id > 9000)
 					{
 						continue; // fake skills for base stats
@@ -9597,7 +9486,6 @@ public class PlayerInstance extends Playable
 				{
 					final int id = rset.getInt("skill_id");
 					final int level = rset.getInt("skill_level");
-					
 					if (id > 9000)
 					{
 						continue; // fake skills for base stats
@@ -9663,9 +9551,7 @@ public class PlayerInstance extends Playable
 				if (activateEffects)
 				{
 					final Skill skill = SkillTable.getInstance().getInfo(skillId, skillLvl);
-					
 					skill.getEffects(this, this, false, false, false);
-					
 					for (Effect effect : getAllEffects())
 					{
 						if (effect.getSkill().getId() == skillId)
@@ -9705,7 +9591,6 @@ public class PlayerInstance extends Playable
 				final int skillLvl = rset.getInt("skill_level");
 				final long reuseDelay = rset.getLong("reuse_delay");
 				final long systime = rset.getLong("systime");
-				
 				final long remainingTime = systime - currentTime;
 				if (remainingTime > 0)
 				{
@@ -9772,7 +9657,6 @@ public class PlayerInstance extends Playable
 			statement.setInt(1, getObjectId());
 			statement.setInt(2, getClassIndex());
 			ResultSet rset = statement.executeQuery();
-			
 			for (int i = 0; i < 3; i++)
 			{
 				_henna[i] = null;
@@ -9781,7 +9665,6 @@ public class PlayerInstance extends Playable
 			while (rset.next())
 			{
 				int slot = rset.getInt("slot");
-				
 				if ((slot < 1) || (slot > 3))
 				{
 					continue;
@@ -9866,11 +9749,9 @@ public class PlayerInstance extends Playable
 		try (Connection con = DatabaseFactory.getConnection())
 		{
 			PreparedStatement statement = con.prepareStatement(DELETE_CHAR_HENNA);
-			
 			statement.setInt(1, getObjectId());
 			statement.setInt(2, slot + 1);
 			statement.setInt(3, getClassIndex());
-			
 			statement.execute();
 			statement.close();
 		}
@@ -9887,7 +9768,6 @@ public class PlayerInstance extends Playable
 		
 		// Send UserInfo packet to this Player
 		sendPacket(new UserInfo(this));
-		
 		reduceAdena("Henna", henna.getPrice() / 5, this, false);
 		
 		// Add the recovered dyes to the player's inventory and notify them.
@@ -9914,12 +9794,10 @@ public class PlayerInstance extends Playable
 				try (Connection con = DatabaseFactory.getConnection())
 				{
 					PreparedStatement statement = con.prepareStatement(ADD_CHAR_HENNA);
-					
 					statement.setInt(1, getObjectId());
 					statement.setInt(2, henna.getSymbolId());
 					statement.setInt(3, i + 1);
 					statement.setInt(4, getClassIndex());
-					
 					statement.execute();
 					statement.close();
 				}
@@ -9947,7 +9825,6 @@ public class PlayerInstance extends Playable
 		_hennaMEN = 0;
 		_hennaWIT = 0;
 		_hennaDEX = 0;
-		
 		for (int i = 0; i < 3; i++)
 		{
 			if (_henna[i] == null)
@@ -10004,7 +9881,6 @@ public class PlayerInstance extends Playable
 		{
 			return null;
 		}
-		
 		return _henna[slot - 1];
 	}
 	
@@ -10333,7 +10209,6 @@ public class PlayerInstance extends Playable
 			}
 			
 			TOGGLE_USE = System.currentTimeMillis();
-			
 			if (effect != null)
 			{
 				// fake death exception
@@ -10415,7 +10290,6 @@ public class PlayerInstance extends Playable
 		// This is used mainly to save & queue the button presses, since Creature has
 		// _lastSkillCast which could otherwise replace it
 		setCurrentSkill(skill, forceUse, dontMove);
-		
 		if (getQueuedSkill() != null)
 		{
 			setQueuedSkill(null, false, false);
@@ -10614,7 +10488,6 @@ public class PlayerInstance extends Playable
 			
 			effect.numCharges -= skill.getNumCharges();
 			sendPacket(new EtcStatusUpdate(this));
-			
 			if (effect.numCharges == 0)
 			{
 				effect.exit(false);
@@ -10685,7 +10558,6 @@ public class PlayerInstance extends Playable
 			
 			// Check if a Forced ATTACK is in progress on non-attackable target
 			if (!target.isAutoAttackable(this) && (!forceUse && ((skill.getId() != 3261) && (skill.getId() != 3260) && (skill.getId() != 3262))) && (!_inEventTvT || !TvT.isStarted()) && (!_inEventDM || !DM.hasStarted()) && (!_inEventCTF || !CTF.isStarted()) && (!_inEventVIP || !VIP._started) && (sklTargetType != SkillTargetType.TARGET_AURA) && (sklTargetType != SkillTargetType.TARGET_CLAN) && (sklTargetType != SkillTargetType.TARGET_ALLY) && (sklTargetType != SkillTargetType.TARGET_PARTY) && (sklTargetType != SkillTargetType.TARGET_SELF) && (sklTargetType != SkillTargetType.TARGET_GROUND))
-			
 			{
 				// Send a Server->Client packet ActionFailed to the PlayerInstance
 				sendPacket(ActionFailed.STATIC_PACKET);
@@ -10752,7 +10624,6 @@ public class PlayerInstance extends Playable
 		if ((sklType == SkillType.SWEEP) && (target instanceof Attackable))
 		{
 			final int spoilerId = ((Attackable) target).getSpoiledBy();
-			
 			if (((Attackable) target).isDead())
 			{
 				if (!((Attackable) target).isSpoil())
@@ -11019,7 +10890,6 @@ public class PlayerInstance extends Playable
 		{
 			return true;
 		}
-		
 		return false;
 	}
 	
@@ -11105,7 +10975,6 @@ public class PlayerInstance extends Playable
 	public void tempInvetoryDisable()
 	{
 		_inventoryDisable = true;
-		
 		ThreadPool.schedule(new InventoryEnable(), 1500);
 	}
 	
@@ -11220,12 +11089,10 @@ public class PlayerInstance extends Playable
 	public int getEnchantEffect()
 	{
 		final ItemInstance wpn = getActiveWeaponInstance();
-		
 		if (wpn == null)
 		{
 			return 0;
 		}
-		
 		return Math.min(127, wpn.getEnchantLevel());
 	}
 	
@@ -11323,7 +11190,6 @@ public class PlayerInstance extends Playable
 	{
 		ItemInstance item;
 		IItemHandler handler;
-		
 		if ((_activeSoulShots == null) || (_activeSoulShots.size() == 0))
 		{
 			return;
@@ -11420,7 +11286,6 @@ public class PlayerInstance extends Playable
 		public void run()
 		{
 			double reduceHp = getMaxHp() / 100.0;
-			
 			if (reduceHp < 1)
 			{
 				reduceHp = 1;
@@ -11642,7 +11507,6 @@ public class PlayerInstance extends Playable
 		}
 		
 		_olympiadGameId = id;
-		
 		if (isSitting())
 		{
 			standUp();
@@ -11699,7 +11563,6 @@ public class PlayerInstance extends Playable
 		teleToLocation(_obsX, _obsY, _obsZ, false);
 		_observerMode = false;
 		sendPacket(new ObservationReturn(this));
-		
 		if (!_wasInvisible)
 		{
 			broadcastUserInfo();
@@ -11724,7 +11587,6 @@ public class PlayerInstance extends Playable
 		Olympiad.removeSpectator(_olympiadGameId, this);
 		_olympiadGameId = -1;
 		_observerMode = false;
-		
 		if (!_wasInvisible)
 		{
 			broadcastUserInfo();
@@ -12316,7 +12178,6 @@ public class PlayerInstance extends Playable
 			}
 		}
 		_noble = value;
-		
 		sendSkillList();
 	}
 	
@@ -12606,21 +12467,18 @@ public class PlayerInstance extends Playable
 			
 			final ClassId subTemplate = ClassId.getClassId(classId);
 			final Collection<SkillLearn> skillTree = SkillTreeTable.getInstance().getAllowedSkills(subTemplate);
-			
 			if (skillTree == null)
 			{
 				return true;
 			}
 			
 			final Map<Integer, Skill> prevSkillList = new HashMap<>();
-			
 			for (SkillLearn skillInfo : skillTree)
 			{
 				if (skillInfo.getMinLevel() <= 40)
 				{
 					final Skill prevSkill = prevSkillList.get(skillInfo.getId());
 					final Skill newSkill = SkillTable.getInstance().getInfo(skillInfo.getId(), skillInfo.getLevel());
-					
 					if ((newSkill == null) || ((prevSkill != null) && (prevSkill.getLevel() > newSkill.getLevel())))
 					{
 						continue;
@@ -12815,7 +12673,6 @@ public class PlayerInstance extends Playable
 			}
 		}
 		_classIndex = classIndex;
-		
 		if (isInParty())
 		{
 			getParty().recalculatePartyLevel();
@@ -12923,7 +12780,6 @@ public class PlayerInstance extends Playable
 		
 		// if player has quest 422: Repent Your Sins, remove it
 		final QuestState st = getQuestState("422_RepentYourSins");
-		
 		if (st != null)
 		{
 			st.exitQuest(true);
@@ -12936,7 +12792,6 @@ public class PlayerInstance extends Playable
 		
 		restoreHenna();
 		sendPacket(new HennaInfo(this));
-		
 		if (getCurrentHp() > getMaxHp())
 		{
 			setCurrentHp(getMaxHp());
@@ -12977,7 +12832,6 @@ public class PlayerInstance extends Playable
 		
 		broadcastPacket(new SocialAction(getObjectId(), 15));
 		sendPacket(new SkillCoolTime(this));
-		
 		if (getClan() != null)
 		{
 			getClan().broadcastToOnlineMembers(new PledgeShowMemberListUpdate(this));
@@ -13093,7 +12947,6 @@ public class PlayerInstance extends Playable
 		if (!isDead() && (_taskWater == null))
 		{
 			final int timeinwater = 86000;
-			
 			sendPacket(new SetupGauge(2, timeinwater));
 			_taskWater = ThreadPool.scheduleAtFixedRate(new WaterTask(), timeinwater, 1000);
 		}
@@ -13176,7 +13029,6 @@ public class PlayerInstance extends Playable
 		decayMe();
 		spawnMe();
 		broadcastUserInfo();
-		
 	}
 	
 	/**
@@ -13200,10 +13052,8 @@ public class PlayerInstance extends Playable
 		check.add(Calendar.DAY_OF_MONTH, 1);
 		
 		final Calendar min = Calendar.getInstance();
-		
 		_recomHave = recsHave;
 		_recomLeft = recsLeft;
-		
 		if ((getStat().getLevel() < 10) || check.after(min))
 		{
 			return;
@@ -13274,7 +13124,6 @@ public class PlayerInstance extends Playable
 		sendPacket(new EtcStatusUpdate(this));
 		_reviveRequested = 0;
 		_revivePower = 0;
-		
 		if (isInParty() && getParty().isInDimensionalRift() && !DimensionalRiftManager.getInstance().checkIfInPeaceZone(getX(), getY(), getZ()))
 		{
 			getParty().getDimensionalRift().memberRessurected(this);
@@ -13500,7 +13349,6 @@ public class PlayerInstance extends Playable
 		
 		// Get movement data
 		final MoveData m = _move;
-		
 		if (_move == null)
 		{
 			return true;
@@ -13529,7 +13377,6 @@ public class PlayerInstance extends Playable
 		final double dz = m._zDestination - getZ();
 		final int distPassed = ((int) getStat().getMoveSpeed() * (gameTicks - m._moveTimestamp)) / GameTimeController.TICKS_PER_SECOND;
 		final double distFraction = distPassed / Math.sqrt((dx * dx) + (dy * dy) + (dz * dz));
-		
 		if (distFraction > 1)
 		{
 			// Set the position of the Creature to the destination
@@ -13543,7 +13390,6 @@ public class PlayerInstance extends Playable
 		
 		// Set the timer of last position update to now
 		m._moveTimestamp = gameTicks;
-		
 		revalidateZone(false);
 		
 		return distFraction > 1;
@@ -13593,7 +13439,6 @@ public class PlayerInstance extends Playable
 		final double dx = x - _lastClientPosition.getX();
 		final double dy = y - _lastClientPosition.getY();
 		final double dz = z - _lastClientPosition.getZ();
-		
 		return (int) Math.sqrt((dx * dx) + (dy * dy) + (dz * dz));
 	}
 	
@@ -13646,7 +13491,6 @@ public class PlayerInstance extends Playable
 		final double dx = x - _lastServerPosition.getX();
 		final double dy = y - _lastServerPosition.getY();
 		final double dz = z - _lastServerPosition.getZ();
-		
 		return (int) Math.sqrt((dx * dx) + (dy * dy) + (dz * dz));
 	}
 	
@@ -13798,7 +13642,6 @@ public class PlayerInstance extends Playable
 		}
 		
 		final PlayerInstance targetChar = (PlayerInstance) target;
-		
 		if (targetChar.isAlikeDead())
 		{
 			return false;
@@ -13982,7 +13825,6 @@ public class PlayerInstance extends Playable
 	public boolean validateItemManipulationByItemId(int itemId, String action)
 	{
 		final ItemInstance item = getInventory().getItemByItemId(itemId);
-		
 		if ((item == null) || (item.getOwnerId() != getObjectId()))
 		{
 			LOGGER.warning(getObjectId() + ": player tried to " + action + " item he is not owner of");
@@ -14018,7 +13860,6 @@ public class PlayerInstance extends Playable
 	public boolean validateItemManipulation(int objectId, String action)
 	{
 		final ItemInstance item = getInventory().getItemByObjectId(objectId);
-		
 		if ((item == null) || (item.getOwnerId() != getObjectId()))
 		{
 			LOGGER.warning(getObjectId() + ": player tried to " + action + " item he is not owner of");
@@ -14455,7 +14296,6 @@ public class PlayerInstance extends Playable
 		// Remove WorldObject object from _allObjects of World
 		World.getInstance().removeObject(this);
 		World.getInstance().removeFromAllPlayers(this); // force remove in case of crash during teleport
-		
 		stopAutoSaveTask();
 	}
 	
@@ -14493,7 +14333,6 @@ public class PlayerInstance extends Playable
 			_shortBuffTask = null;
 		}
 		_shortBuffTask = ThreadPool.schedule(new ShortBuffTask(this), 15000);
-		
 		sendPacket(new ShortBuffStatusUpdate(magicId, level, time));
 	}
 	
@@ -14532,7 +14371,6 @@ public class PlayerInstance extends Playable
 			final PreparedStatement statement = con.prepareStatement("SELECT friend_id FROM character_friends WHERE char_id = ? AND relation = 0");
 			statement.setInt(1, getObjectId());
 			final ResultSet rset = statement.executeQuery();
-			
 			int friendId;
 			while (rset.next())
 			{
@@ -14562,7 +14400,6 @@ public class PlayerInstance extends Playable
 			if (friend != null)
 			{
 				friend.sendPacket(new FriendList(friend));
-				
 				if (login)
 				{
 					friend.sendPacket(SystemMessage.getSystemMessage(SystemMessageId.S1_FRIEND_HAS_LOGGED_IN).addString(getName()));
@@ -14643,7 +14480,6 @@ public class PlayerInstance extends Playable
 			int checkDelay = 0;
 			boolean isNoob = false;
 			boolean isUpperGrade = false;
-			
 			if (_lure != null)
 			{
 				final int lureid = _lure.getItemId();
@@ -14963,7 +14799,6 @@ public class PlayerInstance extends Playable
 		}
 		int randomlvl;
 		final int check = Rnd.get(100);
-		
 		if (check <= 50)
 		{
 			randomlvl = skilllvl;
@@ -14984,7 +14819,6 @@ public class PlayerInstance extends Playable
 				randomlvl = 27;
 			}
 		}
-		
 		return randomlvl;
 	}
 	
@@ -15075,7 +14909,6 @@ public class PlayerInstance extends Playable
 			ivlim = Config.INVENTORY_MAXIMUM_NO_DWARF;
 		}
 		ivlim += (int) getStat().calcStat(Stat.INV_LIM, 0, null, null);
-		
 		return ivlim;
 	}
 	
@@ -15091,7 +14924,6 @@ public class PlayerInstance extends Playable
 			whlim = Config.WAREHOUSE_SLOTS_NO_DWARF;
 		}
 		whlim += (int) getStat().calcStat(Stat.WH_LIM, 0, null, null);
-		
 		return whlim;
 	}
 	
@@ -15108,7 +14940,6 @@ public class PlayerInstance extends Playable
 			pslim = Config.MAX_PVTSTORE_SLOTS_OTHER;
 		}
 		pslim += (int) getStat().calcStat(Stat.P_SELL_LIM, 0, null, null);
-		
 		return pslim;
 	}
 	
@@ -15124,7 +14955,6 @@ public class PlayerInstance extends Playable
 			pblim = Config.MAX_PVTSTORE_SLOTS_OTHER;
 		}
 		pblim += (int) getStat().calcStat(Stat.P_BUY_LIM, 0, null, null);
-		
 		return pblim;
 	}
 	
@@ -15318,7 +15148,6 @@ public class PlayerInstance extends Playable
 		if (getDeathPenaltyBuffLevel() != 0)
 		{
 			final Skill skill = SkillTable.getInstance().getInfo(5076, getDeathPenaltyBuffLevel());
-			
 			if (skill != null)
 			{
 				removeSkill(skill, true);
@@ -15346,7 +15175,6 @@ public class PlayerInstance extends Playable
 		}
 		
 		final Skill skill = SkillTable.getInstance().getInfo(5076, getDeathPenaltyBuffLevel());
-		
 		if (skill != null)
 		{
 			removeSkill(skill, true);
@@ -15431,7 +15259,6 @@ public class PlayerInstance extends Playable
 	public void restoreDeathPenaltyBuffLevel()
 	{
 		final Skill skill = SkillTable.getInstance().getInfo(5076, getDeathPenaltyBuffLevel());
-		
 		if (skill != null)
 		{
 			removeSkill(skill, true);
@@ -16101,7 +15928,6 @@ public class PlayerInstance extends Playable
 		boolean output = true;
 		int boxCount = 0;
 		final List<String> activeBoxes = new ArrayList<>();
-		
 		if ((_client != null) && (_client.getConnection() != null) && !_client.getConnection().isClosed() && (_client.getConnection().getInetAddress() != null))
 		{
 			final String thisip = _client.getConnection().getInetAddress().getHostAddress();
@@ -16149,7 +15975,6 @@ public class PlayerInstance extends Playable
 			final String thisip = _client.getConnection().getInetAddress().getHostAddress();
 			final Collection<PlayerInstance> allPlayers = World.getInstance().getAllPlayers();
 			final PlayerInstance[] players = allPlayers.toArray(new PlayerInstance[allPlayers.size()]);
-			
 			for (PlayerInstance player : players)
 			{
 				if ((player != null) && player.isOnline() && (player.getClient() != null) && (player.getClient().getConnection() != null) && !player.getClient().getConnection().isClosed() && !player.getName().equals(getName()))
@@ -16191,7 +16016,6 @@ public class PlayerInstance extends Playable
 	public void setAio(boolean value)
 	{
 		_isAio = value;
-		
 	}
 	
 	/**
@@ -16381,9 +16205,7 @@ public class PlayerInstance extends Playable
 		
 		// Prevent falling under ground.
 		sendPacket(new ValidateLocation(this));
-		
 		_fallingTimestamp = System.currentTimeMillis() + FALLING_VALIDATION_DELAY;
-		
 		return false;
 	}
 	
@@ -16410,7 +16232,6 @@ public class PlayerInstance extends Playable
 		final double dx = (x - _lastPartyPosition.getX());
 		final double dy = (y - _lastPartyPosition.getY());
 		final double dz = (z - _lastPartyPosition.getZ());
-		
 		return (int) Math.sqrt((dx * dx) + (dy * dy) + (dz * dz));
 	}
 	
@@ -16594,7 +16415,6 @@ public class PlayerInstance extends Playable
 	{
 		final long delayInMilliseconds = delayInMinutes * 60000;
 		setPunishLevel(state, delayInMilliseconds);
-		
 	}
 	
 	/**

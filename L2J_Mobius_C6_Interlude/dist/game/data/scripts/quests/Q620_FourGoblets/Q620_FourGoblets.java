@@ -143,7 +143,6 @@ public class Q620_FourGoblets extends Quest
 			if (st.hasQuestItems(SEALED_BOX))
 			{
 				st.takeItems(SEALED_BOX, 1);
-				
 				if (!calculateBoxReward(st))
 				{
 					htmltext = (Rnd.nextBoolean()) ? "31454-09.htm" : "31454-10.htm";
@@ -193,7 +192,6 @@ public class Q620_FourGoblets extends Quest
 			if (st.hasQuestItems(SEALED_BOX))
 			{
 				st.takeItems(SEALED_BOX, 1);
-				
 				if (!calculateBoxReward(st))
 				{
 					htmltext = (Rnd.nextBoolean()) ? "31919-04.htm" : "31919-05.htm";
@@ -236,7 +234,6 @@ public class Q620_FourGoblets extends Quest
 		final int npcId = npc.getNpcId();
 		final int id = st.getState();
 		final int cond = st.getInt("cond");
-		
 		if (id == State.CREATED)
 		{
 			st.set("cond", "0");
@@ -272,7 +269,6 @@ public class Q620_FourGoblets extends Quest
 		{
 			// Possibilities : 0 = nothing, 1 = seal boxes only, 2 = relics only, 3 = both, 4/5/6/7 = "4 goblets" versions of 0/1/2/3.
 			int index = 0;
-			
 			if (st.hasQuestItems(GOBLET_OF_ALECTIA, GOBLET_OF_TISHAS, GOBLET_OF_MEKARA, GOBLET_OF_MORIGUL))
 			{
 				index = 4;
@@ -280,7 +276,6 @@ public class Q620_FourGoblets extends Quest
 			
 			final boolean gotSealBoxes = st.hasQuestItems(SEALED_BOX);
 			final boolean gotEnoughRelics = st.getQuestItemsCount(RELIC) >= 1000;
-			
 			if (gotSealBoxes && gotEnoughRelics)
 			{
 				index += 3;
@@ -326,7 +321,6 @@ public class Q620_FourGoblets extends Quest
 	{
 		boolean reward = false;
 		final int rnd = Rnd.get(5);
-		
 		if (rnd == 0)
 		{
 			st.giveItems(57, 10000);
@@ -338,7 +332,6 @@ public class Q620_FourGoblets extends Quest
 			{
 				reward = true;
 				final int i = Rnd.get(1000);
-				
 				if (i < 43)
 				{
 					st.giveItems(1884, 42);
@@ -385,7 +378,6 @@ public class Q620_FourGoblets extends Quest
 			{
 				reward = true;
 				final int i = Rnd.get(1000);
-				
 				if (i < 335)
 				{
 					st.giveItems(1888, 1);
@@ -422,7 +414,6 @@ public class Q620_FourGoblets extends Quest
 			{
 				reward = true;
 				final int i = Rnd.get(1000);
-				
 				if (i < 148)
 				{
 					st.giveItems(1878, 8);
@@ -469,7 +460,6 @@ public class Q620_FourGoblets extends Quest
 			{
 				reward = true;
 				final int i = Rnd.get(1000);
-				
 				if (i < 350)
 				{
 					st.giveItems(1887, 1);
@@ -506,7 +496,6 @@ public class Q620_FourGoblets extends Quest
 			{
 				reward = true;
 				final int i = Rnd.get(1000);
-				
 				if (i < 223)
 				{
 					st.giveItems(730, 1);
@@ -525,7 +514,6 @@ public class Q620_FourGoblets extends Quest
 			{
 				reward = true;
 				final int i = Rnd.get(1000);
-				
 				if (i < 202)
 				{
 					st.giveItems(729, 1);
@@ -546,7 +534,6 @@ public class Q620_FourGoblets extends Quest
 			{
 				reward = true;
 				final int i = Rnd.get(1000);
-				
 				if (i < 88)
 				{
 					st.giveItems(6698, 1);
@@ -621,7 +608,6 @@ public class Q620_FourGoblets extends Quest
 			{
 				reward = true;
 				final int i = Rnd.get(1000);
-				
 				if (i < 100)
 				{
 					st.giveItems(6688, 1);

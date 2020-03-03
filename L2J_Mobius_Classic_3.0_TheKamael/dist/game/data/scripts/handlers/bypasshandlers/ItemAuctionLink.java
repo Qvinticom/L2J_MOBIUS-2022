@@ -84,7 +84,6 @@ public class ItemAuctionLink implements IBypassHandler
 				
 				final ItemAuction currentAuction = au.getCurrentAuction();
 				final ItemAuction nextAuction = au.getNextAuction();
-				
 				if (currentAuction == null)
 				{
 					player.sendPacket(SystemMessageId.IT_IS_NOT_AN_AUCTION_PERIOD);

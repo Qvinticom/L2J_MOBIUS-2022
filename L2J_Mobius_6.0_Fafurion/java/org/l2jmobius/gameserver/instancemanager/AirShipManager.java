@@ -55,20 +55,17 @@ public class AirShipManager
 		npcDat.set("npcId", 9);
 		npcDat.set("level", 0);
 		npcDat.set("jClass", "boat");
-		
 		npcDat.set("baseSTR", 0);
 		npcDat.set("baseCON", 0);
 		npcDat.set("baseDEX", 0);
 		npcDat.set("baseINT", 0);
 		npcDat.set("baseWIT", 0);
 		npcDat.set("baseMEN", 0);
-		
 		npcDat.set("baseShldDef", 0);
 		npcDat.set("baseShldRate", 0);
 		npcDat.set("baseAccCombat", 38);
 		npcDat.set("baseEvasRate", 38);
 		npcDat.set("baseCritRate", 38);
-		
 		npcDat.set("collision_radius", 0);
 		npcDat.set("collision_height", 0);
 		npcDat.set("sex", "male");
@@ -95,14 +92,12 @@ public class AirShipManager
 		npcDat.set("basePDef", 100);
 		npcDat.set("baseMDef", 100);
 		_airShipTemplate = new CreatureTemplate(npcDat);
-		
 		load();
 	}
 	
 	public AirShipInstance getNewAirShip(int x, int y, int z, int heading)
 	{
 		final AirShipInstance airShip = new AirShipInstance(_airShipTemplate);
-		
 		airShip.setHeading(heading);
 		airShip.setXYZInvisible(x, y, z);
 		airShip.spawnMe();
@@ -166,7 +161,6 @@ public class AirShipManager
 		{
 			final StatSet info = new StatSet();
 			info.set("fuel", 600);
-			
 			_airShipsInfo.put(ownerId, info);
 			
 			try (Connection con = DatabaseFactory.getConnection();

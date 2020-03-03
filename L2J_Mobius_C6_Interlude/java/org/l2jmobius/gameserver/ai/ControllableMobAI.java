@@ -60,14 +60,12 @@ public class ControllableMobAI extends AttackableAI
 	protected void thinkFollow()
 	{
 		final Attackable me = (Attackable) _actor;
-		
 		if (!Util.checkIfInRange(MobGroupTable.FOLLOW_RANGE, me, getForcedTarget(), true))
 		{
 			final int signX = Rnd.nextBoolean() ? -1 : 1;
 			final int signY = Rnd.nextBoolean() ? -1 : 1;
 			final int randX = Rnd.get(MobGroupTable.FOLLOW_RANGE);
 			final int randY = Rnd.get(MobGroupTable.FOLLOW_RANGE);
-			
 			moveTo(getForcedTarget().getX() + (signX * randX), getForcedTarget().getY() + (signY * randY), getForcedTarget().getZ());
 		}
 	}
@@ -148,7 +146,6 @@ public class ControllableMobAI extends AttackableAI
 		}
 		
 		((Attackable) _actor).setTarget(getAttackTarget());
-		
 		if (!_actor.isMuted())
 		{
 			// check distant skills
@@ -195,7 +192,6 @@ public class ControllableMobAI extends AttackableAI
 		final double dist2 = _actor.getPlanDistanceSq(target.getX(), target.getY());
 		final int range = _actor.getPhysicalAttackRange() + _actor.getTemplate().getCollisionRadius() + target.getTemplate().getCollisionRadius();
 		int maxRange = range;
-		
 		if (!_actor.isMuted() && (dist2 > ((range + 20) * (range + 20))))
 		{
 			// check distant skills
@@ -233,14 +229,12 @@ public class ControllableMobAI extends AttackableAI
 		final double dist2 = _actor.getPlanDistanceSq(getForcedTarget().getX(), getForcedTarget().getY());
 		final int range = _actor.getPhysicalAttackRange() + _actor.getTemplate().getCollisionRadius() + getForcedTarget().getTemplate().getCollisionRadius();
 		int maxRange = range;
-		
 		if (!_actor.isMuted() && (dist2 > ((range + 20) * (range + 20))))
 		{
 			// check distant skills
 			for (Skill sk : skills)
 			{
 				final int castRange = sk.getCastRange();
-				
 				if (((castRange * castRange) >= dist2) && !_actor.isSkillDisabled(sk) && (_actor.getCurrentMp() > _actor.getStat().getMpConsume(sk)))
 				{
 					_accessor.doCast(sk);
@@ -285,7 +279,6 @@ public class ControllableMobAI extends AttackableAI
 					
 					final NpcInstance npc = (NpcInstance) obj;
 					final String factionId = ((NpcInstance) _actor).getFactionId();
-					
 					if (!factionId.equalsIgnoreCase(npc.getFactionId()))
 					{
 						continue;
@@ -303,7 +296,6 @@ public class ControllableMobAI extends AttackableAI
 			final double dist2 = _actor.getPlanDistanceSq(getAttackTarget().getX(), getAttackTarget().getY());
 			final int range = _actor.getPhysicalAttackRange() + _actor.getTemplate().getCollisionRadius() + getAttackTarget().getTemplate().getCollisionRadius();
 			int maxRange = range;
-			
 			if (!_actor.isMuted() && (dist2 > ((range + 20) * (range + 20))))
 			{
 				// check distant skills
@@ -348,7 +340,6 @@ public class ControllableMobAI extends AttackableAI
 				for (Skill sk : skills)
 				{
 					final int castRange = sk.getCastRange();
-					
 					if (((castRange * castRange) >= dist2) && !_actor.isSkillDisabled(sk) && (_actor.getCurrentMp() < _actor.getStat().getMpConsume(sk)))
 					{
 						_accessor.doCast(sk);
@@ -364,7 +355,6 @@ public class ControllableMobAI extends AttackableAI
 	{
 		setAttackTarget(findNextRndTarget());
 		Creature hated;
-		
 		if (_actor.isConfused())
 		{
 			hated = findNextRndTarget();
@@ -389,7 +379,6 @@ public class ControllableMobAI extends AttackableAI
 		}
 		
 		final Attackable me = (Attackable) _actor;
-		
 		if ((target instanceof FolkInstance) || (target instanceof DoorInstance))
 		{
 			return false;
@@ -423,9 +412,7 @@ public class ControllableMobAI extends AttackableAI
 	private Creature findNextRndTarget()
 	{
 		final int aggroRange = ((Attackable) _actor).getAggroRange();
-		
 		final Attackable npc = (Attackable) _actor;
-		
 		int npcX;
 		int npcY;
 		int targetX;
@@ -433,9 +420,7 @@ public class ControllableMobAI extends AttackableAI
 		double dy;
 		double dx;
 		final double dblAggroRange = aggroRange * aggroRange;
-		
 		final List<Creature> potentialTarget = new ArrayList<>();
-		
 		for (WorldObject obj : npc.getKnownList().getKnownObjects().values())
 		{
 			if (!(obj instanceof Creature))
@@ -447,17 +432,14 @@ public class ControllableMobAI extends AttackableAI
 			npcY = npc.getY();
 			targetX = obj.getX();
 			targetY = obj.getY();
-			
 			dx = npcX - targetX;
 			dy = npcY - targetY;
-			
 			if (((dx * dx) + (dy * dy)) > dblAggroRange)
 			{
 				continue;
 			}
 			
 			final Creature target = (Creature) obj;
-			
 			if (autoAttackCondition(target))
 			{
 				potentialTarget.add(target);
@@ -471,7 +453,6 @@ public class ControllableMobAI extends AttackableAI
 		
 		// we choose a random target
 		final int choice = Rnd.get(potentialTarget.size());
-		
 		return potentialTarget.get(choice);
 	}
 	

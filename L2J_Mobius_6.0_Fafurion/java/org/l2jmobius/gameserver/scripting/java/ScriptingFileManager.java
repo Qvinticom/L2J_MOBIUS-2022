@@ -174,7 +174,6 @@ final class ScriptingFileManager implements StandardJavaFileManager
 	public void setLocation(Location location, Iterable<? extends File> path) throws IOException
 	{
 		_wrapped.setLocation(location, path);
-		
 	}
 	
 	@Override

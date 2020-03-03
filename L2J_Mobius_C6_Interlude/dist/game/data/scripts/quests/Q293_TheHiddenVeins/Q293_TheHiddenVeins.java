@@ -123,7 +123,6 @@ public class Q293_TheHiddenVeins extends Quest
 					case FILAUR:
 						final int chrysoliteOres = st.getQuestItemsCount(CHRYSOLITE_ORE);
 						final int hiddenVeinMaps = st.getQuestItemsCount(HIDDEN_VEIN_MAP);
-						
 						if ((chrysoliteOres + hiddenVeinMaps) == 0)
 						{
 							htmltext = "30535-04.htm";
@@ -147,11 +146,9 @@ public class Q293_TheHiddenVeins extends Quest
 							}
 							
 							final int reward = (chrysoliteOres * 5) + (hiddenVeinMaps * 500) + ((chrysoliteOres >= 10) ? 2000 : 0);
-							
 							st.takeItems(CHRYSOLITE_ORE, -1);
 							st.takeItems(HIDDEN_VEIN_MAP, -1);
 							st.rewardItems(57, reward);
-							
 							if (player.isNewbie() && (st.getInt("Reward") == 0))
 							{
 								st.giveItems(SOULSHOT_FOR_BEGINNERS, 6000);
@@ -181,7 +178,6 @@ public class Q293_TheHiddenVeins extends Quest
 		}
 		
 		final int chance = Rnd.get(100);
-		
 		if (chance > 50)
 		{
 			st.dropItemsAlways(CHRYSOLITE_ORE, 1, 0);

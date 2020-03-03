@@ -68,7 +68,6 @@ public class ItemSkillsTemplate implements IItemHandler
 		}
 		
 		boolean hasConsumeSkill = false;
-		
 		for (SkillHolder skillInfo : skills)
 		{
 			if (skillInfo == null)
@@ -77,7 +76,6 @@ public class ItemSkillsTemplate implements IItemHandler
 			}
 			
 			final Skill itemSkill = skillInfo.getSkill();
-			
 			if (itemSkill != null)
 			{
 				if (itemSkill.getItemConsumeId() > 0)

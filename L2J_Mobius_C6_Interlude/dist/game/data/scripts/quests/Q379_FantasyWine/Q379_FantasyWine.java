@@ -116,7 +116,6 @@ public class Q379_FantasyWine extends Quest
 			case State.STARTED:
 				final int leaf = st.getQuestItemsCount(LEAF);
 				final int stone = st.getQuestItemsCount(STONE);
-				
 				if ((leaf == 80) && (stone == 100))
 				{
 					htmltext = "30074-5.htm";

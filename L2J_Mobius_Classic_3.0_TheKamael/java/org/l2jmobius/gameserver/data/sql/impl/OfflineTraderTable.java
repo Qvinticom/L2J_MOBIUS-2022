@@ -65,7 +65,6 @@ public class OfflineTraderTable
 			stm1.execute();
 			stm2.execute();
 			con.setAutoCommit(false); // avoid halfway done
-			
 			for (PlayerInstance pc : World.getInstance().getPlayers())
 			{
 				try
@@ -193,14 +192,12 @@ public class OfflineTraderTable
 				
 				final int typeId = rs.getInt("type");
 				boolean isSellBuff = false;
-				
 				if (typeId == PrivateStoreType.SELL_BUFFS.getId())
 				{
 					isSellBuff = true;
 				}
 				
 				final PrivateStoreType type = isSellBuff ? PrivateStoreType.PACKAGE_SELL : PrivateStoreType.findById(typeId);
-				
 				if (type == null)
 				{
 					LOGGER.warning(getClass().getSimpleName() + ": PrivateStoreType with id " + rs.getInt("type") + " could not be found.");
@@ -311,7 +308,6 @@ public class OfflineTraderTable
 			}
 			
 			LOGGER.info(getClass().getSimpleName() + ": Loaded " + nTraders + " offline traders.");
-			
 			if (!Config.STORE_OFFLINE_TRADE_IN_REALTIME)
 			{
 				try (Statement stm1 = con.createStatement())
@@ -336,7 +332,6 @@ public class OfflineTraderTable
 			PreparedStatement stm4 = con.prepareStatement(SAVE_OFFLINE_STATUS))
 		{
 			String title = null;
-			
 			stm1.setInt(1, trader.getObjectId()); // Char Id
 			stm1.execute();
 			stm1.close();

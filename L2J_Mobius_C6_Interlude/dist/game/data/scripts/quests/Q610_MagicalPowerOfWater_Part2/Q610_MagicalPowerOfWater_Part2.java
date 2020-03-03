@@ -274,7 +274,6 @@ public class Q610_MagicalPowerOfWater_Part2 extends Quest
 			
 			return true;
 		}
-		
 		return false;
 	}
 	

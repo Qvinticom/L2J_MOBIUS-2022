@@ -592,7 +592,6 @@ public class CreatureAI extends AbstractAI
 	{
 		// Stop the actor auto-attack client side by sending Server->Client packet AutoAttackStop (broadcast)
 		_actor.broadcastPacket(new AutoAttackStop(_actor.getObjectId()));
-		
 		if (AttackStanceTaskManager.getInstance().hasAttackStanceTask(_actor))
 		{
 			AttackStanceTaskManager.getInstance().removeAttackStanceTask(_actor);
@@ -624,7 +623,6 @@ public class CreatureAI extends AbstractAI
 	{
 		// Stop the actor auto-attack client side by sending Server->Client packet AutoAttackStop (broadcast)
 		_actor.broadcastPacket(new AutoAttackStop(_actor.getObjectId()));
-		
 		if (AttackStanceTaskManager.getInstance().hasAttackStanceTask(_actor))
 		{
 			AttackStanceTaskManager.getInstance().removeAttackStanceTask(_actor);
@@ -1145,7 +1143,6 @@ public class CreatureAI extends AbstractAI
 		if (target instanceof PlayerInstance)
 		{
 			final PlayerInstance target2 = (PlayerInstance) target; // convert object to chara
-			
 			if (target2.isFakeDeath())
 			{
 				target2.stopFakeDeath(null);

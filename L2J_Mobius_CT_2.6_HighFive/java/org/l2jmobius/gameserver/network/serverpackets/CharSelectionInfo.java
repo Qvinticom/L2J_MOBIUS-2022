@@ -99,7 +99,6 @@ public class CharSelectionInfo implements IClientOutgoingPacket
 		for (int i = 0; i < size; i++)
 		{
 			final CharSelectInfoPackage charInfoPackage = _characterPackages[i];
-			
 			packet.writeS(charInfoPackage.getName()); // Character name
 			packet.writeD(charInfoPackage.getObjectId()); // Character ID
 			packet.writeS(_loginName); // Account name
@@ -272,7 +271,6 @@ public class CharSelectionInfo implements IClientOutgoingPacket
 		
 		final int baseClassId = chardata.getInt("base_class");
 		final int activeClassId = chardata.getInt("classid");
-		
 		charInfopackage.setX(chardata.getInt("x"));
 		charInfopackage.setY(chardata.getInt("y"));
 		charInfopackage.setZ(chardata.getInt("z"));

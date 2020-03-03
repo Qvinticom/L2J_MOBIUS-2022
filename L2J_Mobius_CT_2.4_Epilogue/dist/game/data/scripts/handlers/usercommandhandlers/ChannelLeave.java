@@ -61,7 +61,6 @@ public class ChannelLeave implements IUserCommandHandler
 			return true;
 		}
 		return false;
-		
 	}
 	
 	@Override

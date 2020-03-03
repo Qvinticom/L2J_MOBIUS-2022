@@ -489,7 +489,6 @@ public class Quest extends ManagedScript
 		{
 			return showError(attacker, e);
 		}
-		
 		return showResult(attacker, res);
 	}
 	
@@ -505,7 +504,6 @@ public class Quest extends ManagedScript
 		{
 			return showError(qs.getPlayer(), e);
 		}
-		
 		return showResult(qs.getPlayer(), res);
 	}
 	
@@ -521,7 +519,6 @@ public class Quest extends ManagedScript
 		{
 			return showError(player, e);
 		}
-		
 		return showResult(player, res);
 	}
 	
@@ -537,7 +534,6 @@ public class Quest extends ManagedScript
 		{
 			return showError(killer, e);
 		}
-		
 		return showResult(killer, res);
 	}
 	
@@ -598,7 +594,6 @@ public class Quest extends ManagedScript
 		{
 			return showError(caster, e);
 		}
-		
 		return showResult(caster, res);
 	}
 	
@@ -685,7 +680,6 @@ public class Quest extends ManagedScript
 		// if not overriden by a subclass, then default to the returned value of the simpler (and older) onEvent override
 		// if the player has a state, use it as parameter in the next call, else return null
 		final QuestState qs = player.getQuestState(getName());
-		
 		if (qs != null)
 		{
 			return onEvent(event, qs);
@@ -794,7 +788,6 @@ public class Quest extends ManagedScript
 		if (object instanceof PlayerInstance)
 		{
 			final PlayerInstance player = (PlayerInstance) object;
-			
 			if (res.endsWith(".htm"))
 			{
 				showHtmlFile(player, res);
@@ -1009,7 +1002,6 @@ public class Quest extends ManagedScript
 			{
 				t.addQuestEvent(eventType, this);
 			}
-			
 			return t;
 		}
 		catch (Exception e)
@@ -1039,7 +1031,6 @@ public class Quest extends ManagedScript
 			
 			final PreparedStatement invalidQuestData = con.prepareStatement("DELETE FROM character_quests WHERE char_id=? and name=?");
 			final PreparedStatement invalidQuestDataVar = con.prepareStatement("delete FROM character_quests WHERE char_id=? and name=? and var=?");
-			
 			statement = con.prepareStatement("SELECT name,value FROM character_quests WHERE char_id=? AND var=?");
 			statement.setInt(1, player.getObjectId());
 			statement.setString(2, "<state>");
@@ -1053,7 +1044,6 @@ public class Quest extends ManagedScript
 				
 				// Search quest associated with the ID
 				final Quest q = QuestManager.getInstance().getQuest(questId);
-				
 				if (q == null)
 				{
 					if (Config.AUTODELETE_INVALID_QUEST_DATA)
@@ -1089,7 +1079,6 @@ public class Quest extends ManagedScript
 				
 				// Get the QuestState saved in the loop before
 				final QuestState qs = player.getQuestState(questId);
-				
 				if (qs == null)
 				{
 					if (Config.AUTODELETE_INVALID_QUEST_DATA)
@@ -1349,7 +1338,6 @@ public class Quest extends ManagedScript
 		}
 		
 		final Party party = player.getParty();
-		
 		return party.getPartyMembers().get(Rnd.get(party.getPartyMembers().size()));
 	}
 	
@@ -1582,7 +1570,6 @@ public class Quest extends ManagedScript
 		for (PlayerInstance partyMember : party.getPartyMembers())
 		{
 			temp = partyMember.getQuestState(getName());
-			
 			if ((temp != null) && (temp.getState() == state) && partyMember.isInsideRadius(target, Config.ALT_PARTY_RANGE, true, false))
 			{
 				candidates.add(partyMember);
@@ -1645,7 +1632,6 @@ public class Quest extends ManagedScript
 		{
 			return HtmCache.getInstance().getHtmForce("data/scripts/quests/" + getName() + "/" + fileName);
 		}
-		
 		return HtmCache.getInstance().getHtmForce("data/scripts/" + getDescr() + "/" + getName() + "/" + fileName);
 	}
 	
@@ -1707,7 +1693,6 @@ public class Quest extends ManagedScript
 			}
 			_questTimers.clear();
 		}
-		
 		return QuestManager.getInstance().removeQuest(this);
 	}
 	
@@ -1812,14 +1797,12 @@ public class Quest extends ManagedScript
 		try (Connection con = DatabaseFactory.getConnection())
 		{
 			final PreparedStatement stm = con.prepareStatement("INSERT INTO character_quests (char_id,name,var,value) VALUES (?,?,?,?)");
-			
 			for (Integer charId : objectsId)
 			{
 				stm.setInt(1, charId.intValue());
 				stm.setString(2, getName());
 				stm.setString(3, "<state>");
 				stm.setString(4, "1");
-				
 				stm.executeUpdate();
 			}
 			
@@ -1838,10 +1821,8 @@ public class Quest extends ManagedScript
 		try (Connection con = DatabaseFactory.getConnection())
 		{
 			final PreparedStatement stm = con.prepareStatement("DELETE FROM character_quests WHERE name = ? and char_id IN (SELECT obj_Id FROM characters WHERE clanid = ? AND online = 0)");
-			
 			stm.setString(1, getName());
 			stm.setInt(2, clanId);
-			
 			stm.executeUpdate();
 			
 			stm.close();

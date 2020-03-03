@@ -539,7 +539,6 @@ public class Frintezza extends Quest
 		else if (event.equals("camera_1"))
 		{
 			GrandBossManager.getInstance().setBossStatus(FRINTEZZA, FIGHTING);
-			
 			_frintezzaDummy = addSpawn(29052, 174240, -89805, -5022, 16048, false, 0);
 			_frintezzaDummy.setInvul(true);
 			_frintezzaDummy.setImmobilized(true);
@@ -549,7 +548,6 @@ public class Frintezza extends Quest
 			_overheadDummy.setImmobilized(true);
 			_overheadDummy.setCollisionHeight(600);
 			_zone.broadcastPacket(new NpcInfo(_overheadDummy, null));
-			
 			_portraitDummy1 = addSpawn(29052, 172450, -87890, -5100, 16048, false, 0);
 			_portraitDummy1.setImmobilized(true);
 			_portraitDummy1.setInvul(true);
@@ -578,7 +576,6 @@ public class Frintezza extends Quest
 		else if (event.equals("camera_3"))
 		{
 			_zone.broadcastPacket(new SpecialCamera(_overheadDummy.getObjectId(), 300, 90, -10, 6500, 7000));
-			
 			_frintezza = (GrandBossInstance) addSpawn(FRINTEZZA, 174240, -89805, -5022, 16048, false, 0);
 			GrandBossManager.getInstance().addBoss(_frintezza);
 			_frintezza.setImmobilized(true);
@@ -649,7 +646,6 @@ public class Frintezza extends Quest
 		{
 			_zone.broadcastPacket(new SocialAction(_demon1.getObjectId(), 1));
 			_zone.broadcastPacket(new SocialAction(_demon4.getObjectId(), 1));
-			
 			for (Creature pc : _zone.getCharactersInside())
 			{
 				if (pc instanceof PlayerInstance)
@@ -697,7 +693,6 @@ public class Frintezza extends Quest
 			_portraitDummy3.deleteMe();
 			_portraitDummy1 = null;
 			_portraitDummy3 = null;
-			
 			startQuestTimer("camera_12", 4500, _frintezza, null);
 		}
 		else if (event.equals("camera_12"))
@@ -735,7 +730,6 @@ public class Frintezza extends Quest
 		{
 			_zone.broadcastPacket(new SpecialCamera(_overheadDummy.getObjectId(), 600, 180, -25, 0, 10000));
 			_zone.broadcastPacket(new MagicSkillUse(_scarletDummy, _overheadDummy, 5004, 1, 5800, 0));
-			
 			_weakScarlet = (GrandBossInstance) addSpawn(SCARLET1, 174232, -88020, -5110, 16384, false, 0);
 			_weakScarlet.setInvul(true);
 			_weakScarlet.setImmobilized(true);
@@ -794,7 +788,6 @@ public class Frintezza extends Quest
 			_scarletDummy.deleteMe();
 			_overheadDummy = null;
 			_scarletDummy = null;
-			
 			startQuestTimer("camera_23", 2000, _weakScarlet, null);
 			startQuestTimer("start_pc", 2000, _weakScarlet, null);
 			// startQuestTimer("loc_check", 60000, weakScarlet, null, true);
@@ -918,7 +911,6 @@ public class Frintezza extends Quest
 			_zone.broadcastPacket(new SpecialCamera(_frintezza.getObjectId(), 250, 120, 15, 0, 10000));
 			
 			// cancelQuestTimer("loc_check");
-			
 			_scarletX = _weakScarlet.getX();
 			_scarletY = _weakScarlet.getY();
 			_scarletZ = _weakScarlet.getZ();
@@ -960,7 +952,6 @@ public class Frintezza extends Quest
 		{
 			_weakScarlet.doDie(_weakScarlet);
 			_zone.broadcastPacket(new SpecialCamera(_weakScarlet.getObjectId(), 450, _angle, 14, 8000, 8000));
-			
 			startQuestTimer("morph_12", 6250, _weakScarlet, null);
 			startQuestTimer("morph_13", 7200, _weakScarlet, null);
 		}
@@ -977,9 +968,7 @@ public class Frintezza extends Quest
 			_strongScarlet.disableAllSkills();
 			_zone.updateKnownList(_strongScarlet);
 			_activeScarlet = _strongScarlet;
-			
 			_zone.broadcastPacket(new SpecialCamera(_strongScarlet.getObjectId(), 450, _angle, 12, 500, 14000));
-			
 			startQuestTimer("morph_14", 3000, _strongScarlet, null);
 			// startQuestTimer("loc_check", 60000, strongScarlet, null, true);
 		}
@@ -1082,7 +1071,6 @@ public class Frintezza extends Quest
 				
 				// Like L2OFF the skill name is printed on screen
 				_zone.broadcastPacket(new ExShowScreenMessage(songName, 6000));
-				
 				if ((_onSong == 1) && (_thirdMorph == 1) && (_strongScarlet.getCurrentHp() < (_strongScarlet.getMaxHp() * 0.6)) && (Rnd.get(100) < 80))
 				{
 					_zone.broadcastPacket(new MagicSkillUse(_frintezza, _frintezza, 5007, 1, 32000, 0));
@@ -1161,7 +1149,6 @@ public class Frintezza extends Quest
 			
 			// Like L2OFF the skill name is printed on screen
 			_zone.broadcastPacket(new ExShowScreenMessage(songName, 6000));
-			
 			if ((_onSong == 1) || (_onSong == 2) || (_onSong == 3))
 			{
 				/*
@@ -1222,7 +1209,6 @@ public class Frintezza extends Quest
 			cancelQuestTimer("skill03", npc, null);
 			cancelQuestTimer("songs_play", npc, null);
 			cancelQuestTimer("songs_effect", npc, null);
-			
 			if (_frintezza != null)
 			{
 				_zone.broadcastPacket(new MagicSkillCanceld(_frintezza.getObjectId()));
@@ -1234,7 +1220,6 @@ public class Frintezza extends Quest
 			{
 				_onMorph = 1;
 				_zone.broadcastPacket(new PlaySound(1, "BS01_D", npc));
-				
 				startQuestTimer("attack_stop", 0, _frintezza, null);
 				startQuestTimer("stop_pc", 0, npc, null);
 				startQuestTimer("stop_npc", 0, npc, null);
@@ -1291,7 +1276,6 @@ public class Frintezza extends Quest
 					_weakScarlet.doCast(skill);
 				}
 				startQuestTimer("skill02", _skill[i][2] + 5000 + Rnd.get(10000), npc, null);
-				
 				if (i == 5)
 				{
 					_abnormal = 1;
@@ -1321,7 +1305,6 @@ public class Frintezza extends Quest
 					_strongScarlet.doCast(skill);
 				}
 				startQuestTimer("skill03", _skill[i][2] + 5000 + Rnd.get(10000), npc, null);
-				
 				if (i == 10)
 				{
 					_abnormal = 1;
@@ -1373,7 +1356,6 @@ public class Frintezza extends Quest
 			startQuestTimer("close", 1000, npc, null);
 			startQuestTimer("room1_del", 1000, npc, null);
 			startQuestTimer("room2_del", 1000, npc, null);
-			
 			GrandBossManager.getInstance().setBossStatus(FRINTEZZA, DORMANT);
 		}
 		else if (event.equals("frintezza_despawn"))
@@ -1394,9 +1376,7 @@ public class Frintezza extends Quest
 				startQuestTimer("room2_del", 1000, npc, null);
 				startQuestTimer("room3_del", 1000, npc, null);
 				startQuestTimer("minions_despawn", 1000, npc, null);
-				
 				GrandBossManager.getInstance().setBossStatus(FRINTEZZA, DORMANT);
-				
 				cancelQuestTimer("frintezza_despawn", null, null);
 			}
 		}
@@ -1459,7 +1439,6 @@ public class Frintezza extends Quest
 		String htmltext = "";
 		
 		final Integer status = GrandBossManager.getInstance().getBossStatus(FRINTEZZA);
-		
 		if (status == DEAD)
 		{
 			htmltext = "<html><body>There is nothing beyond the Magic Force Field. Come back later.<br>(You may not enter because Frintezza is not inside the Imperial Tomb.)</body></html>";
@@ -1467,7 +1446,6 @@ public class Frintezza extends Quest
 		else if (status == DORMANT)
 		{
 			boolean partyCheckSuccess = true;
-			
 			if (!Config.BYPASS_FRINTEZZA_PARTIES_CHECK)
 			{
 				if ((!player.isInParty() || !player.getParty().isLeader(player)) || (player.getParty().getCommandChannel() == null) || (player.getParty().getCommandChannel().getChannelLeader() != player))
@@ -1492,20 +1470,16 @@ public class Frintezza extends Quest
 				{
 					player.destroyItemByItemId("Quest", 8073, 1, player, true);
 					GrandBossManager.getInstance().setBossStatus(FRINTEZZA, WAITING);
-					
 					startQuestTimer("close", 0, npc, null);
 					startQuestTimer("room1_spawn", 5000, npc, null);
 					startQuestTimer("room_final", 2100000, null, null);
 					startQuestTimer("frintezza_despawn", 60000, null, null, true);
-					
 					_lastAction = System.currentTimeMillis();
-					
 					if (Config.BYPASS_FRINTEZZA_PARTIES_CHECK)
 					{
 						if (player.getParty() != null)
 						{
 							final CommandChannel cc = player.getParty().getCommandChannel();
-							
 							if (cc != null)
 							{
 								// teleport all parties into CC
@@ -1554,7 +1528,6 @@ public class Frintezza extends Quest
 							{ // teleport just actual party
 								
 								final Party party = player.getParty();
-								
 								for (PlayerInstance member : party.getPartyMembers())
 								{
 									if ((member == null) || (member.getLevel() < 74))
@@ -1600,7 +1573,6 @@ public class Frintezza extends Quest
 					else
 					{
 						final CommandChannel cc = player.getParty().getCommandChannel();
-						
 						for (Party party : cc.getParties())
 						{
 							if (party == null)
@@ -1664,14 +1636,11 @@ public class Frintezza extends Quest
 		}
 		
 		final Integer status = GrandBossManager.getInstance().getBossStatus(FRINTEZZA);
-		
 		if ((npc.getNpcId() == SCARLET1) && (_secondMorph == 0) && (_thirdMorph == 0) && (_onMorph == 0) && (npc.getCurrentHp() < (npc.getMaxHp() * 0.75)) && (status == FIGHTING))
 		{
 			startQuestTimer("attack_stop", 0, _frintezza, null);
-			
 			_secondMorph = 1;
 			_onMorph = 1;
-			
 			startQuestTimer("stop_pc", 1000, npc, null);
 			startQuestTimer("stop_npc", 1000, npc, null);
 			startQuestTimer("morph_01", 1100, npc, null);
@@ -1679,10 +1648,8 @@ public class Frintezza extends Quest
 		else if ((npc.getNpcId() == SCARLET1) && (_secondMorph == 1) && (_thirdMorph == 0) && (_onMorph == 0) && (npc.getCurrentHp() < (npc.getMaxHp() * 0.5)) && (status == FIGHTING))
 		{
 			startQuestTimer("attack_stop", 0, _frintezza, null);
-			
 			_thirdMorph = 1;
 			_onMorph = 1;
-			
 			startQuestTimer("stop_pc", 2000, npc, null);
 			startQuestTimer("stop_npc", 2000, npc, null);
 			startQuestTimer("morph_05a", 2000, npc, null);
@@ -1713,7 +1680,6 @@ public class Frintezza extends Quest
 	public String onKill(NpcInstance npc, PlayerInstance killer, boolean isPet)
 	{
 		final Integer status = GrandBossManager.getInstance().getBossStatus(FRINTEZZA);
-		
 		if (npc.getNpcId() == FRINTEZZA)
 		{
 			return null;
@@ -1735,7 +1701,6 @@ public class Frintezza extends Quest
 			startQuestTimer("room3_del", 60000, npc, null);
 			startQuestTimer("minions_despawn", 60000, npc, null);
 			startQuestTimer("remove_players", 900000, npc, null);
-			
 			GrandBossManager.getInstance().setBossStatus(FRINTEZZA, DEAD);
 			final long respawnTime = (Config.FRINTEZZA_RESP_FIRST + Rnd.get(Config.FRINTEZZA_RESP_SECOND)) * 3600000;
 			startQuestTimer("frintezza_unlock", respawnTime, npc, null);
@@ -1758,7 +1723,6 @@ public class Frintezza extends Quest
 			{
 				startQuestTimer("room1_del", 100, npc, null);
 				startQuestTimer("room2_spawn", 100, npc, null);
-				
 				DoorData.getInstance().getDoor(25150042).openMe();
 				DoorData.getInstance().getDoor(25150043).openMe();
 			}
@@ -1811,7 +1775,6 @@ public class Frintezza extends Quest
 			if (_killDarkChoirCaptain == 8)
 			{
 				startQuestTimer("room2_del", 100, npc, null);
-				
 				DoorData.getInstance().getDoor(25150045).openMe();
 				DoorData.getInstance().getDoor(25150046).openMe();
 				

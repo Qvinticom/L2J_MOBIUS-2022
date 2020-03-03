@@ -59,7 +59,6 @@ public class Blow implements ISkillHandler
 		final boolean bss = creature.checkBss();
 		final boolean sps = creature.checkSps();
 		final boolean ss = creature.checkSs();
-		
 		Formulas.getInstance();
 		
 		for (Creature target : (Creature[]) targets)
@@ -71,9 +70,7 @@ public class Blow implements ISkillHandler
 			
 			// Check firstly if target dodges skill
 			final boolean skillIsEvaded = Formulas.calcPhysicalSkillEvasion(target, skill);
-			
 			byte successChance = 0;
-			
 			if (skill.getName().equals("Backstab"))
 			{
 				if (creature.isBehindTarget())
@@ -103,7 +100,6 @@ public class Blow implements ISkillHandler
 			}
 			
 			boolean success = true;
-			
 			if ((skill.getCondition() & Skill.COND_CRIT) != 0)
 			{
 				success = (success && Formulas.getInstance().calcBlow(creature, target, successChance));
@@ -153,7 +149,6 @@ public class Blow implements ISkillHandler
 				}
 				
 				double damage = Formulas.calcBlowDamage(creature, target, skill, shld, crit, soul);
-				
 				if (skill.getDmgDirectlyToHP() && (target instanceof PlayerInstance))
 				{
 					// no vegeange implementation
@@ -249,7 +244,6 @@ public class Blow implements ISkillHandler
 				if (creature instanceof PlayerInstance)
 				{
 					final PlayerInstance activePlayer = (PlayerInstance) creature;
-					
 					activePlayer.sendDamageMessage(target, (int) damage, false, true, false);
 					if (activePlayer.isInOlympiadMode() && (target instanceof PlayerInstance) && ((PlayerInstance) target).isInOlympiadMode() && (((PlayerInstance) target).getOlympiadGameId() == activePlayer.getOlympiadGameId()))
 					{

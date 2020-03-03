@@ -57,7 +57,6 @@ public class SummonAgathion extends AbstractEffect
 		}
 		
 		final PlayerInstance player = info.getEffected().getActingPlayer();
-		
 		player.setAgathionId(_npcId);
 		player.broadcastUserInfo();
 	}

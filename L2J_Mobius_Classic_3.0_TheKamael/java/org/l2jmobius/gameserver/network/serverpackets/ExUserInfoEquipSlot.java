@@ -50,7 +50,6 @@ public class ExUserInfoEquipSlot extends AbstractMaskPacket<InventorySlot>
 	public ExUserInfoEquipSlot(PlayerInstance player, boolean addAll)
 	{
 		_player = player;
-		
 		if (addAll)
 		{
 			addComponentType(InventorySlot.values());

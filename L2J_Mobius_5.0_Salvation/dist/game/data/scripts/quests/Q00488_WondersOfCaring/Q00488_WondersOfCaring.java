@@ -64,7 +64,6 @@ public class Q00488_WondersOfCaring extends Quest
 	public String onAdvEvent(String event, Npc npc, PlayerInstance player)
 	{
 		final QuestState qs = getQuestState(player, false);
-		
 		if (qs == null)
 		{
 			return null;
@@ -151,7 +150,6 @@ public class Q00488_WondersOfCaring extends Quest
 	public String onKill(Npc npc, PlayerInstance killer, boolean isSummon)
 	{
 		final QuestState qs = getQuestState(killer, false);
-		
 		if ((qs != null) && qs.isCond(1))
 		{
 			if (giveItemRandomly(killer, BOX, 1, 50, 0.4, true))

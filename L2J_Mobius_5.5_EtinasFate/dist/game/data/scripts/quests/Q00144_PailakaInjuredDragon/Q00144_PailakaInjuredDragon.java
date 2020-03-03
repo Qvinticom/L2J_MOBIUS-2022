@@ -232,7 +232,6 @@ public class Q00144_PailakaInjuredDragon extends Quest
 			}
 		}
 		return htmltext;
-		
 	}
 	
 	@Override
@@ -240,7 +239,6 @@ public class Q00144_PailakaInjuredDragon extends Quest
 	{
 		final QuestState qs = getQuestState(player, true);
 		String htmltext = null;
-		
 		switch (qs.getState())
 		{
 			case State.CREATED:
@@ -283,7 +281,6 @@ public class Q00144_PailakaInjuredDragon extends Quest
 				break;
 			}
 		}
-		
 		return htmltext;
 	}
 	

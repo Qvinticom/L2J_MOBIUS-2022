@@ -337,7 +337,6 @@ public class FortSiegeGuardAI extends CreatureAI implements Runnable
 			{
 				// Get the hate level of the Attackable against this Creature target contained in _aggroList
 				final int aggro = npc.getHating(hated);
-				
 				if ((aggro + _globalAggro) > 0)
 				{
 					// Set the Creature movement type to run and send Server->Client packet ChangeMoveType to all others PlayerInstance
@@ -408,7 +407,6 @@ public class FortSiegeGuardAI extends CreatureAI implements Runnable
 			
 			// Set the AI Intention to AI_INTENTION_ACTIVE
 			setIntention(AI_INTENTION_ACTIVE, null, null);
-			
 			_actor.setWalking();
 			return;
 		}
@@ -534,7 +532,6 @@ public class FortSiegeGuardAI extends CreatureAI implements Runnable
 			}
 			
 			final NpcInstance npc = (NpcInstance) creature;
-			
 			if (!faction_id.equalsIgnoreCase(npc.getFactionId()))
 			{
 				continue;
@@ -650,7 +647,6 @@ public class FortSiegeGuardAI extends CreatureAI implements Runnable
 			for (Skill sk : skills)
 			{
 				final int castRange = sk.getCastRange();
-				
 				if ((dist2 <= (castRange * castRange)) && (castRange > 70) && !_actor.isSkillDisabled(sk) && (_actor.getCurrentMp() >= _actor.getStat().getMpConsume(sk)) && !sk.isPassive())
 				{
 					final WorldObject oldTarget = _actor.getTarget();
@@ -789,7 +785,6 @@ public class FortSiegeGuardAI extends CreatureAI implements Runnable
 				for (Skill sk : skills)
 				{
 					final int castRange = sk.getCastRange();
-					
 					if (((castRange * castRange) >= dist2) && !sk.isPassive() && (_actor.getCurrentMp() >= _actor.getStat().getMpConsume(sk)) && !_actor.isSkillDisabled(sk))
 					{
 						final WorldObject oldTarget = _actor.getTarget();
@@ -930,7 +925,6 @@ public class FortSiegeGuardAI extends CreatureAI implements Runnable
 			return;
 		}
 		final Attackable me = (Attackable) _actor;
-		
 		if (target != null)
 		{
 			// Add the target to the actor _aggroList or update hate if already present
@@ -938,7 +932,6 @@ public class FortSiegeGuardAI extends CreatureAI implements Runnable
 			
 			// Get the hate of the actor against the target
 			aggro = me.getHating(target);
-			
 			if (aggro <= 0)
 			{
 				if (me.getMostHated() == null)

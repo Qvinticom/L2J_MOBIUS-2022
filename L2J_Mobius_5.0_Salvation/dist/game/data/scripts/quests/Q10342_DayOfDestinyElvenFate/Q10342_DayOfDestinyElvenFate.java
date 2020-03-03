@@ -87,7 +87,6 @@ public class Q10342_DayOfDestinyElvenFate extends ThirdClassTransferQuest
 	{
 		String htmltext = getNoQuestMsg(player);
 		final QuestState qs = getQuestState(player, true);
-		
 		if (npc.getId() == WINONIN)
 		{
 			if (qs.getState() == State.CREATED)

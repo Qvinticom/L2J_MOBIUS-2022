@@ -84,7 +84,6 @@ public class Die implements IClientOutgoingPacket
 		{
 			boolean isInCastleDefense = false;
 			boolean isInFortDefense = false;
-			
 			SiegeClan siegeClan = null;
 			final Castle castle = CastleManager.getInstance().getCastle(_creature);
 			final Fort fort = FortManager.getInstance().getFort(_creature);

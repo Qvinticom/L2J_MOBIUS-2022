@@ -55,7 +55,6 @@ public class EffectSignetAntiSummon extends Effect
 			return true; // do nothing first time
 		}
 		final int mpConsume = getSkill().getMpConsume();
-		
 		for (Creature creature : _actor.getKnownList().getKnownCharactersInRadius(getSkill().getSkillRadius()))
 		{
 			if (creature == null)

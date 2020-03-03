@@ -53,7 +53,6 @@ public class RequestExTryToPutShapeShiftingTargetItem implements IClientIncoming
 		}
 		
 		final ShapeShiftingItemRequest request = player.getRequest(ShapeShiftingItemRequest.class);
-		
 		if (player.isInStoreMode() || player.isCrafting() || player.isProcessingRequest() || player.isProcessingTransaction() || (request == null))
 		{
 			client.sendPacket(ExPutShapeShiftingTargetItemResult.FAILED);
@@ -64,7 +63,6 @@ public class RequestExTryToPutShapeShiftingTargetItem implements IClientIncoming
 		final PlayerInventory inventory = player.getInventory();
 		final ItemInstance targetItem = inventory.getItemByObjectId(_targetItemObjId);
 		ItemInstance stone = request.getAppearanceStone();
-		
 		if ((targetItem == null) || (stone == null))
 		{
 			client.sendPacket(ExPutShapeShiftingTargetItemResult.FAILED);

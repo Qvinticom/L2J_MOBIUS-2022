@@ -117,9 +117,7 @@ public class AdminFightCalculator implements IAdminCommandHandler
 		}
 		
 		final NpcHtmlMessage adminReply = new NpcHtmlMessage();
-		
 		final String replyMSG;
-		
 		if ((npc1 != null) && (npc2 != null))
 		{
 			replyMSG = "<html><title>Selected mobs to fight</title><body><table><tr><td>First</td><td>Second</td></tr><tr><td>level " + lvl1 + "</td><td>level " + lvl2 + "</td></tr><tr><td>id " + npc1.getId() + "</td><td>id " + npc2.getId() + "</td></tr><tr><td>" + npc1.getName() + "</td><td>" + npc2.getName() + "</td></tr></table><center><br><br><br><button value=\"OK\" action=\"bypass -h admin_fight_calculator_show " + npc1.getId() + " " + npc2.getId() + "\"  width=100 height=15 back=\"L2UI_ct1.button_df\" fore=\"L2UI_ct1.button_df\"></center></body></html>";
@@ -129,7 +127,6 @@ public class AdminFightCalculator implements IAdminCommandHandler
 			final List<NpcTemplate> npcs = NpcData.getInstance().getAllOfLevel(lvl1);
 			final StringBuilder sb = new StringBuilder(50 + (npcs.size() * 200));
 			sb.append("<html><title>Select first mob to fight</title><body><table>");
-			
 			for (NpcTemplate n : npcs)
 			{
 				sb.append("<tr><td><a action=\"bypass -h admin_fight_calculator lvl1 " + lvl1 + " lvl2 " + lvl2 + " mid1 " + n.getId() + " mid2 " + mid2 + "\">" + n.getName() + "</a></td></tr>");
@@ -143,7 +140,6 @@ public class AdminFightCalculator implements IAdminCommandHandler
 			final List<NpcTemplate> npcs = NpcData.getInstance().getAllOfLevel(lvl2);
 			final StringBuilder sb = new StringBuilder(50 + (npcs.size() * 200));
 			sb.append("<html><title>Select second mob to fight</title><body><table>");
-			
 			for (NpcTemplate n : npcs)
 			{
 				sb.append("<tr><td><a action=\"bypass -h admin_fight_calculator lvl1 " + lvl1 + " lvl2 " + lvl2 + " mid1 " + mid1 + " mid2 " + n.getId() + "\">" + n.getName() + "</a></td></tr>");
@@ -164,7 +160,6 @@ public class AdminFightCalculator implements IAdminCommandHandler
 	private void handleShow(String params, PlayerInstance activeChar)
 	{
 		params = params.trim();
-		
 		Creature npc1 = null;
 		Creature npc2 = null;
 		if (params.isEmpty())
@@ -184,7 +179,6 @@ public class AdminFightCalculator implements IAdminCommandHandler
 			final StringTokenizer st = new StringTokenizer(params);
 			mid1 = Integer.parseInt(st.nextToken());
 			mid2 = Integer.parseInt(st.nextToken());
-			
 			npc1 = new MonsterInstance(NpcData.getInstance().getTemplate(mid1));
 			npc2 = new MonsterInstance(NpcData.getInstance().getTemplate(mid2));
 		}
@@ -208,7 +202,6 @@ public class AdminFightCalculator implements IAdminCommandHandler
 		// number of ATTACK per 100 seconds
 		sAtk1 = 100000 / sAtk1;
 		sAtk2 = 100000 / sAtk2;
-		
 		for (int i = 0; i < 10000; i++)
 		{
 			final boolean calcMiss1 = Formulas.calcHitMiss(npc1, npc2);
@@ -233,7 +226,6 @@ public class AdminFightCalculator implements IAdminCommandHandler
 			
 			final double npcPdef1 = npc1.getPDef(npc2);
 			pdef1 += npcPdef1;
-			
 			if (!calcMiss1)
 			{
 				final double calcDmg1 = Formulas.calcPhysDam(npc1, npc2, null, calcShld1, calcCrit1, false);
@@ -266,7 +258,6 @@ public class AdminFightCalculator implements IAdminCommandHandler
 			
 			final double npcPdef2 = npc2.getPDef(npc1);
 			pdef2 += npcPdef2;
-			
 			if (!calcMiss2)
 			{
 				final double calcDmg2 = Formulas.calcPhysDam(npc2, npc1, null, calcShld2, calcCrit2, false);
@@ -294,15 +285,11 @@ public class AdminFightCalculator implements IAdminCommandHandler
 		// HP restored per 100 seconds
 		final double maxHp1 = npc1.getMaxHp();
 		final int hp1 = (int) ((Formulas.calcHpRegen(npc1) * 100000) / Formulas.getRegeneratePeriod(npc1));
-		
 		final double maxHp2 = npc2.getMaxHp();
 		final int hp2 = (int) ((Formulas.calcHpRegen(npc2) * 100000) / Formulas.getRegeneratePeriod(npc2));
-		
 		final NpcHtmlMessage adminReply = new NpcHtmlMessage();
-		
 		final StringBuilder replyMSG = new StringBuilder(1000);
 		replyMSG.append("<html><title>Selected mobs to fight</title><body><table>");
-		
 		if (params.isEmpty())
 		{
 			replyMSG.append("<tr><td width=140>Parameter</td><td width=70>me</td><td width=70>target</td></tr>");
@@ -313,7 +300,6 @@ public class AdminFightCalculator implements IAdminCommandHandler
 		}
 		
 		replyMSG.append("<tr><td>miss</td><td>" + miss1 + "%</td><td>" + miss2 + "%</td></tr><tr><td>shld</td><td>" + shld2 + "%</td><td>" + shld1 + "%</td></tr><tr><td>crit</td><td>" + crit1 + "%</td><td>" + crit2 + "%</td></tr><tr><td>pAtk / pDef</td><td>" + (int) patk1 + " / " + (int) pdef1 + "</td><td>" + (int) patk2 + " / " + (int) pdef2 + "</td></tr><tr><td>made hits</td><td>" + sAtk1 + "</td><td>" + sAtk2 + "</td></tr><tr><td>dmg per hit</td><td>" + (int) dmg1 + "</td><td>" + (int) dmg2 + "</td></tr><tr><td>got dmg</td><td>" + tdmg2 + "</td><td>" + tdmg1 + "</td></tr><tr><td>got regen</td><td>" + hp1 + "</td><td>" + hp2 + "</td></tr><tr><td>had HP</td><td>" + (int) maxHp1 + "</td><td>" + (int) maxHp2 + "</td></tr><tr><td>die</td>");
-		
 		if ((tdmg2 - hp1) > 1)
 		{
 			replyMSG.append("<td>" + ((int) ((100 * maxHp1) / (tdmg2 - hp1))) + " sec</td>");

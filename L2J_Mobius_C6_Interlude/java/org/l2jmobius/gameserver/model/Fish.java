@@ -79,7 +79,6 @@ public class Fish
 		{
 			return -1;
 		}
-		
 		return _type;
 	}
 	

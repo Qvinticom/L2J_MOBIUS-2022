@@ -73,7 +73,6 @@ public class RequestBRBuyProduct implements IClientIncomingPacket
 		{
 			final int price = (item.getPrice() * _count);
 			final int paymentId = validatePaymentId(item, price);
-			
 			if (paymentId < 0)
 			{
 				player.sendPacket(new ExBRBuyProduct(ExBrProductReplyType.LACK_OF_POINT));
@@ -171,7 +170,6 @@ public class RequestBRBuyProduct implements IClientIncomingPacket
 		
 		final int weight = item.getWeight() * count;
 		final long slots = item.getCount() * count;
-		
 		if (player.getInventory().validateWeight(weight))
 		{
 			if (!player.getInventory().validateCapacity(slots))
@@ -206,7 +204,6 @@ public class RequestBRBuyProduct implements IClientIncomingPacket
 				return HERO_COINS;
 			}
 		}
-		
 		return -1;
 	}
 }

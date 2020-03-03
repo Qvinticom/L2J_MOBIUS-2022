@@ -79,7 +79,6 @@ public class Q00647_InfluxOfMachines extends Quest
 	{
 		final QuestState st = getQuestState(player, true);
 		String htmltext = getNoQuestMsg(player);
-		
 		switch (st.getState())
 		{
 			case State.CREATED:
@@ -98,7 +97,6 @@ public class Q00647_InfluxOfMachines extends Quest
 				}
 				break;
 		}
-		
 		return htmltext;
 	}
 	

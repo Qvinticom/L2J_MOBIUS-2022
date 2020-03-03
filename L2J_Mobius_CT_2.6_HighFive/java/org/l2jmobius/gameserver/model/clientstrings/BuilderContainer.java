@@ -43,7 +43,6 @@ final class BuilderContainer extends Builder
 		final int buildersLength = _builders.length;
 		final int paramsLength = params.length;
 		final String[] builds = new String[buildersLength];
-		
 		Builder builder;
 		String build;
 		int i;

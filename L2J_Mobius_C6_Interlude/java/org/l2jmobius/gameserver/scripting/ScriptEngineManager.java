@@ -116,7 +116,6 @@ public class ScriptEngineManager implements IXmlReader
 							}
 						}
 					}
-					
 					return super.visitFile(file, attrs);
 				}
 			});

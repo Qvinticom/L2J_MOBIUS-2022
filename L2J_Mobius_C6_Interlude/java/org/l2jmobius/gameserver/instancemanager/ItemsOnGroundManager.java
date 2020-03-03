@@ -58,7 +58,6 @@ public class ItemsOnGroundManager
 		}
 		
 		LOGGER.info("Initializing ItemsOnGroundManager");
-		
 		_items.clear();
 		load();
 		
@@ -244,7 +243,6 @@ public class ItemsOnGroundManager
 					statement.setInt(5, item.getX());
 					statement.setInt(6, item.getY());
 					statement.setInt(7, item.getZ());
-					
 					if (item.isProtected())
 					{
 						statement.setLong(8, -1); // item will be protected

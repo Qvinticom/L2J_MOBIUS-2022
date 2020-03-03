@@ -76,7 +76,6 @@ public class Q00129_PailakaDevilsLegacy extends Quest
 	{
 		final QuestState qs = getQuestState(player, false);
 		String htmltext = null;
-		
 		if (qs == null)
 		{
 			return getNoQuestMsg(player);
@@ -136,7 +135,6 @@ public class Q00129_PailakaDevilsLegacy extends Quest
 	{
 		final QuestState qs = getQuestState(player, true);
 		String htmltext = getNoQuestMsg(player);
-		
 		switch (npc.getId())
 		{
 			case SURVIVOR:
@@ -259,7 +257,6 @@ public class Q00129_PailakaDevilsLegacy extends Quest
 	public String onKill(Npc npc, PlayerInstance player, boolean isSummon)
 	{
 		final QuestState qs = getQuestState(player, false);
-		
 		if ((qs != null) && qs.isStarted())
 		{
 			switch (npc.getId())

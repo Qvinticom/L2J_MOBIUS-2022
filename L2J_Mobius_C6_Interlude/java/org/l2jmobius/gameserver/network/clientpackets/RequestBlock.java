@@ -40,7 +40,6 @@ public class RequestBlock extends GameClientPacket
 	protected void readImpl()
 	{
 		_type = readD(); // 0x00 - block, 0x01 - unblock, 0x03 - allblock, 0x04 - allunblock
-		
 		if ((_type == BLOCK) || (_type == UNBLOCK))
 		{
 			_name = readS();
@@ -51,7 +50,6 @@ public class RequestBlock extends GameClientPacket
 	protected void runImpl()
 	{
 		final PlayerInstance player = getClient().getPlayer();
-		
 		if (player == null)
 		{
 			return;

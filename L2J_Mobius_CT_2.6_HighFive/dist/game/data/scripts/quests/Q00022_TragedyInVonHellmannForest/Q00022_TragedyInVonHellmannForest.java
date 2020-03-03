@@ -333,7 +333,6 @@ public class Q00022_TragedyInVonHellmannForest extends Quest
 	public String onAttack(Npc npc, PlayerInstance attacker, int damage, boolean isSummon)
 	{
 		final QuestState qs = getQuestState(attacker, false);
-		
 		if ((qs != null) && qs.isCond(10) && hasQuestItems(attacker, JEWEL_OF_ADVENTURER_1))
 		{
 			if (qs.isMemoState(10))
@@ -369,7 +368,6 @@ public class Q00022_TragedyInVonHellmannForest extends Quest
 				}
 			}
 		}
-		
 		return super.onKill(npc, killer, isSummon);
 	}
 	

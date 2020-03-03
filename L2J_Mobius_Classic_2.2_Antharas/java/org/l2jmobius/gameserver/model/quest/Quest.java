@@ -1532,7 +1532,6 @@ public class Quest extends AbstractScript implements IIdentifiable
 			PreparedStatement ps1 = con.prepareStatement("SELECT name, value FROM character_quests WHERE charId = ? AND var = ?"))
 		{
 			// Get list of quests owned by the player from database
-			
 			ps1.setInt(1, player.getObjectId());
 			ps1.setString(2, "<state>");
 			try (ResultSet rs = ps1.executeQuery())
@@ -2522,11 +2521,9 @@ public class Quest extends AbstractScript implements IIdentifiable
 		else
 		{
 			int highestRoll = 0;
-			
 			for (PlayerInstance member : party.getMembers())
 			{
 				final int rnd = getRandom(1000);
-				
 				if ((rnd > highestRoll) && checkPartyMember(member, npc))
 				{
 					highestRoll = rnd;

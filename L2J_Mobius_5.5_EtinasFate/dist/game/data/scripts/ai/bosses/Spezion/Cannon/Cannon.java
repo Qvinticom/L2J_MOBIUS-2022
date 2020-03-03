@@ -76,7 +76,6 @@ public class Cannon extends AbstractNpcAI
 	public String onAdvEvent(String event, Npc npc, PlayerInstance player)
 	{
 		String htmltext = null;
-		
 		switch (event)
 		{
 			case "useCannonBall":
@@ -171,7 +170,6 @@ public class Cannon extends AbstractNpcAI
 		if (skill.getId() == PRESENT_SKILL.getSkillId())
 		{
 			final StatSet npcParams = npc.getParameters();
-			
 			npc.broadcastPacket(new Earthquake(npc, 10, 5));
 			npc.broadcastPacket(new OnEventTrigger(npcParams.getInt("TRIGGER_ID"), true));
 			final Npc light = addSpawn(INVISIBLE_NPC, npcParams.getInt("LIGHT_ZONE_POS_X"), npcParams.getInt("LIGHT_ZONE_POS_Y"), npcParams.getInt("LIGHT_ZONE_POS_Z"), 0, false, 10000);

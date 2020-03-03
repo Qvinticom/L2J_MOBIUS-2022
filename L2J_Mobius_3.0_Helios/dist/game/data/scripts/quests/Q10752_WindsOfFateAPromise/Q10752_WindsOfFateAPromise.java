@@ -81,7 +81,6 @@ public class Q10752_WindsOfFateAPromise extends Quest
 		super(10752);
 		addStartNpc(KATALIN, AYANTHE);
 		addTalkId(KATALIN, AYANTHE, KARLA, SIEGMUND, LOMBERT, MYSTERIOUS_WIZARD, GHOST_OF_VON_HELLMAN, TOMBSTONE, BROKEN_BOOKSHELF);
-		
 		addCondRace(Race.ERTHEIA, "");
 		addCondInCategory(CategoryType.THIRD_CLASS_GROUP, "");
 		registerQuestItems(NAVARI_MARK, PROPHECY_MACHINE_FRAGMENT, KAIN_PROPHECY_MACHINE_FRAGMENT);
@@ -192,7 +191,6 @@ public class Q10752_WindsOfFateAPromise extends Quest
 					takeItems(player, NAVARI_MARK, -1);
 					takeItems(player, PROPHECY_MACHINE_FRAGMENT, -1);
 					takeItems(player, KAIN_PROPHECY_MACHINE_FRAGMENT, -1);
-					
 					if (player.isMageClass())
 					{
 						qs.setCond(10, true);
@@ -260,7 +258,6 @@ public class Q10752_WindsOfFateAPromise extends Quest
 		final QuestState qs = getQuestState(player, true);
 		final QuestState qs1 = player.getQuestState(Q10751_WindsOfFateEncounters.class.getSimpleName());
 		String htmltext = getNoQuestMsg(player);
-		
 		switch (qs.getState())
 		{
 			case State.CREATED:
@@ -486,7 +483,6 @@ public class Q10752_WindsOfFateAPromise extends Quest
 		final String command = event.getCommand();
 		final PlayerInstance player = event.getPlayer();
 		final QuestState qs = getQuestState(player, false);
-		
 		if (qs == null)
 		{
 			if (command.equals("Q10752_teleport"))
@@ -545,7 +541,6 @@ public class Q10752_WindsOfFateAPromise extends Quest
 		final QuestState qs = getQuestState(player, false);
 		final int oldLevel = event.getOldLevel();
 		final int newLevel = event.getNewLevel();
-		
 		if ((qs == null) && (player.getRace() == Race.ERTHEIA) && (oldLevel < newLevel) && (newLevel >= MIN_LEVEL) && (player.isInCategory(CategoryType.THIRD_CLASS_GROUP)))
 		{
 			if (player.isMageClass())
@@ -571,7 +566,6 @@ public class Q10752_WindsOfFateAPromise extends Quest
 		
 		final PlayerInstance player = event.getPlayer();
 		final QuestState qs = getQuestState(player, false);
-		
 		if ((qs == null) && (player.getRace() == Race.ERTHEIA) && (player.getLevel() >= MIN_LEVEL) && (player.isInCategory(CategoryType.THIRD_CLASS_GROUP)))
 		{
 			if (player.isMageClass())

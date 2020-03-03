@@ -78,7 +78,6 @@ public class Q10453_StoppingTheWindDragon extends Quest
 	{
 		final QuestState qs = getQuestState(player, true);
 		String htmltext = getNoQuestMsg(player);
-		
 		if (qs.isCreated())
 		{
 			htmltext = "adens_wizard_jenna_q10453_1.htm";
@@ -98,7 +97,6 @@ public class Q10453_StoppingTheWindDragon extends Quest
 		{
 			htmltext = "adens_wizard_jenna_q10453_6.html";
 		}
-		
 		return htmltext;
 	}
 	

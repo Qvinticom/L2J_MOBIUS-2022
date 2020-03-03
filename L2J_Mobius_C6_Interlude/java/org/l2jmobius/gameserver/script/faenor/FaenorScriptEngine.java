@@ -66,7 +66,6 @@ public class FaenorScriptEngine extends ScriptEngine
 	{
 		final Node node = script.getDocument().getFirstChild();
 		final String parserClass = "faenor.Faenor" + node.getNodeName() + "Parser";
-		
 		Parser parser = null;
 		try
 		{

@@ -160,7 +160,6 @@ public class AdminTeleport implements IAdminCommandHandler
 			try
 			{
 				final String val = command.substring(25);
-				
 				teleportCharacter(activeChar, val);
 			}
 			catch (StringIndexOutOfBoundsException e)
@@ -191,7 +190,6 @@ public class AdminTeleport implements IAdminCommandHandler
 				final int x = (int) Float.parseFloat(st.nextToken());
 				final int y = (int) Float.parseFloat(st.nextToken());
 				final int z = st.hasMoreTokens() ? ((int) Float.parseFloat(st.nextToken())) : GeoEngine.getInstance().getHeight(x, y, 10000);
-				
 				activeChar.teleToLocation(x, y, z);
 			}
 			catch (Exception e)
@@ -368,7 +366,6 @@ public class AdminTeleport implements IAdminCommandHandler
 			final int x = Integer.parseInt(st.nextToken());
 			final int y = Integer.parseInt(st.nextToken());
 			final int z = Integer.parseInt(st.nextToken());
-			
 			activeChar.getAI().setIntention(CtrlIntention.AI_INTENTION_IDLE);
 			activeChar.teleToLocation(x, y, z, null);
 			BuilderUtil.sendSysMessage(activeChar, "You have been teleported to " + coords);
@@ -398,7 +395,6 @@ public class AdminTeleport implements IAdminCommandHandler
 			return;
 		}
 		final NpcHtmlMessage adminReply = new NpcHtmlMessage(0, 1);
-		
 		final String replyMSG = "<html><title>Teleport Character</title><body>The character you will teleport is " + player.getName() + ".<br>Co-ordinate x<edit var=\"char_cord_x\" width=110>Co-ordinate y<edit var=\"char_cord_y\" width=110>Co-ordinate z<edit var=\"char_cord_z\" width=110><button value=\"Teleport\" action=\"bypass -h admin_teleport_character $char_cord_x $char_cord_y $char_cord_z\" width=60 height=15 back=\"L2UI_ct1.button_df\" fore=\"L2UI_ct1.button_df\"><button value=\"Teleport near you\" action=\"bypass -h admin_teleport_character " + activeChar.getX() + " " + activeChar.getY() + " " + activeChar.getZ() + "\" width=115 height=15 back=\"L2UI_ct1.button_df\" fore=\"L2UI_ct1.button_df\"><center><button value=\"Back\" action=\"bypass -h admin_current_player\" width=40 height=15 back=\"L2UI_ct1.button_df\" fore=\"L2UI_ct1.button_df\"></center></body></html>";
 		adminReply.setHtml(replyMSG);
 		activeChar.sendPacket(adminReply);
@@ -522,7 +518,6 @@ public class AdminTeleport implements IAdminCommandHandler
 		if ((obj instanceof Npc) && !((Npc) obj).isMinion() && !(obj instanceof RaidBossInstance) && !(obj instanceof GrandBossInstance))
 		{
 			final Npc target = (Npc) obj;
-			
 			final int monsterTemplate = target.getTemplate().getId();
 			final NpcTemplate template1 = NpcData.getInstance().getTemplate(monsterTemplate);
 			if (template1 == null)
@@ -540,7 +535,6 @@ public class AdminTeleport implements IAdminCommandHandler
 				return;
 			}
 			final int respawnTime = spawn.getRespawnDelay() / 1000;
-			
 			target.deleteMe();
 			spawn.stopRespawn();
 			SpawnTable.getInstance().deleteSpawn(spawn, true);

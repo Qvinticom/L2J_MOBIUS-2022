@@ -172,11 +172,9 @@ public class Maguen extends AbstractNpcAI
 		final BuffInfo bInfo = player.getEffectList().getFirstBuffInfoByAbnormalType(B_PLASMA1.getSkill().getAbnormalType());
 		final BuffInfo cInfo = player.getEffectList().getFirstBuffInfoByAbnormalType(C_PLASMA1.getSkill().getAbnormalType());
 		final BuffInfo rInfo = player.getEffectList().getFirstBuffInfoByAbnormalType(R_PLASMA1.getSkill().getAbnormalType());
-		
 		final int b = bInfo == null ? 0 : bInfo.getSkill().getAbnormalLvl();
 		final int c = cInfo == null ? 0 : cInfo.getSkill().getAbnormalLvl();
 		final int r = rInfo == null ? 0 : rInfo.getSkill().getAbnormalLvl();
-		
 		if ((b == 3) && (c == 0) && (r == 0))
 		{
 			showOnScreenMsg(player, NpcStringId.ENOUGH_MAGUEN_PLASMA_BISTAKON_HAVE_GATHERED, 2, 4000);
@@ -264,11 +262,9 @@ public class Maguen extends AbstractNpcAI
 			final BuffInfo i1Info = caster.getEffectList().getFirstBuffInfoByAbnormalType(B_PLASMA1.getSkill().getAbnormalType());
 			final BuffInfo i2Info = caster.getEffectList().getFirstBuffInfoByAbnormalType(C_PLASMA1.getSkill().getAbnormalType());
 			final BuffInfo i3Info = caster.getEffectList().getFirstBuffInfoByAbnormalType(R_PLASMA1.getSkill().getAbnormalType());
-			
 			final int i1 = i1Info == null ? 0 : i1Info.getSkill().getAbnormalLvl();
 			final int i2 = i2Info == null ? 0 : i2Info.getSkill().getAbnormalLvl();
 			final int i3 = i3Info == null ? 0 : i3Info.getSkill().getAbnormalLvl();
-			
 			caster.getEffectList().stopEffects(B_PLASMA1.getSkill().getAbnormalType());
 			caster.getEffectList().stopEffects(C_PLASMA1.getSkill().getAbnormalType());
 			caster.getEffectList().stopEffects(R_PLASMA1.getSkill().getAbnormalType());
@@ -277,7 +273,6 @@ public class Maguen extends AbstractNpcAI
 			cancelQuestTimer("THIRD_TIMER", npc, caster);
 			cancelQuestTimer("FORTH_TIMER", npc, caster);
 			npc.getVariables().set("BLOCKED_SKILLSEE", 1);
-			
 			SkillHolder skillToCast = null;
 			switch (npc.getVariables().getInt("NPC_EFFECT"))
 			{
@@ -365,7 +360,6 @@ public class Maguen extends AbstractNpcAI
 		{
 			final PlayerInstance partyMember = getRandomPartyMember(killer);
 			final int i0 = 10 + (10 * killer.getParty().getMemberCount());
-			
 			if ((getRandom(1000) < i0) && (npc.calculateDistance3D(killer) < 2000) && (npc.calculateDistance3D(partyMember) < 2000))
 			{
 				notifyEvent("SPAWN_MAGUEN", npc, partyMember);

@@ -103,7 +103,6 @@ public class CastleChamberlainInstance extends FolkInstance
 		
 		final StringTokenizer st = new StringTokenizer(command, " ");
 		final String actualCommand = st.nextToken(); // Get actual command
-		
 		final int condition = validateCondition(player);
 		if (condition <= COND_ALL_FALSE)
 		{
@@ -442,7 +441,6 @@ public class CastleChamberlainInstance extends FolkInstance
 					final int ask = Integer.parseInt(str.nextToken().split("=")[1]);
 					final int state = Integer.parseInt(str.nextToken().split("=")[1]);
 					final int time = Integer.parseInt(str.nextToken().split("=")[1]);
-					
 					int castleId;
 					if (state == -1)
 					{

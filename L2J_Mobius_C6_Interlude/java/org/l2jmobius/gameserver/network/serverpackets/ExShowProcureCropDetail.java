@@ -38,7 +38,6 @@ public class ExShowProcureCropDetail extends GameServerPacket
 	{
 		_cropId = cropId;
 		_castleCrops = new HashMap<>();
-		
 		for (Castle c : CastleManager.getInstance().getCastles())
 		{
 			final CropProcure cropItem = c.getCrop(_cropId, CastleManorManager.PERIOD_CURRENT);

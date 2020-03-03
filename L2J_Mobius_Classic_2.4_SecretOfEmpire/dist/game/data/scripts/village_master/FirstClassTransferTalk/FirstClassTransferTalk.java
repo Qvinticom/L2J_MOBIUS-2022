@@ -62,7 +62,6 @@ public class FirstClassTransferTalk extends AbstractNpcAI
 	public String onTalk(Npc npc, PlayerInstance player)
 	{
 		String htmltext = npc.getId() + "_";
-		
 		if (MASTERS.get(npc.getId()) != player.getRace())
 		{
 			return htmltext += "no.html";

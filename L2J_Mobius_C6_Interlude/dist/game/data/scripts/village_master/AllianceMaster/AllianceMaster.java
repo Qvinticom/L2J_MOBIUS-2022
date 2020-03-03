@@ -37,7 +37,6 @@ public class AllianceMaster extends Quest
 		{
 			return "9001-04.htm";
 		}
-		
 		return event;
 	}
 	

@@ -38,7 +38,6 @@ public class RequestPetGetItem extends GameClientPacket
 	{
 		final World world = World.getInstance();
 		final ItemInstance item = (ItemInstance) world.findObject(_objectId);
-		
 		if ((item == null) || (getClient().getPlayer() == null))
 		{
 			return;
@@ -51,7 +50,6 @@ public class RequestPetGetItem extends GameClientPacket
 		}
 		
 		final PetInstance pet = (PetInstance) getClient().getPlayer().getPet();
-		
 		if ((pet == null) || pet.isDead() || pet.isOutOfControl())
 		{
 			sendPacket(ActionFailed.STATIC_PACKET);

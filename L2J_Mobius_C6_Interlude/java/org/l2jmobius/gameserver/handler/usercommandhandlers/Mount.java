@@ -46,7 +46,6 @@ public class Mount implements IUserCommandHandler
 		}
 		
 		final Summon pet = player.getPet();
-		
 		if ((pet != null) && pet.isMountable() && !player.isMounted())
 		{
 			if (player.isDead())

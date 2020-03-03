@@ -188,7 +188,6 @@ public class Q00464_Oath extends Quest
 	{
 		final QuestState qs = getQuestState(player, true);
 		String htmltext = getNoQuestMsg(player);
-		
 		boolean startQuest = false;
 		switch (qs.getState())
 		{
@@ -241,7 +240,6 @@ public class Q00464_Oath extends Quest
 		{
 			npc.dropItem(killer, STRONGBOX, 1);
 		}
-		
 		return super.onKill(npc, killer, isSummon);
 	}
 	
@@ -250,11 +248,9 @@ public class Q00464_Oath extends Quest
 	{
 		final QuestState qs = getQuestState(player, true);
 		String htmltext = getNoQuestMsg(player);
-		
 		if (qs.isStarted())
 		{
 			final int npcId = npc.getId();
-			
 			if (npcId == NPC[0][0])
 			{
 				switch (qs.getCond())

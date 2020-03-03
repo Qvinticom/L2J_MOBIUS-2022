@@ -113,7 +113,6 @@ public class Q00637_ThroughOnceMore extends Quest
 	public String onTalk(Npc npc, PlayerInstance player)
 	{
 		final QuestState qs = getQuestState(player, true);
-		
 		final byte id = qs.getState();
 		if (id == State.CREATED)
 		{

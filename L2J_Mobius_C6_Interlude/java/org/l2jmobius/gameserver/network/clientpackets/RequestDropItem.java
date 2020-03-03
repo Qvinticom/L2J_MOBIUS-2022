@@ -202,7 +202,6 @@ public class RequestDropItem extends GameClientPacket
 			for (ItemInstance element : unequiped)
 			{
 				player.checkSSMatch(null, element);
-				
 				iu.addModifiedItem(element);
 			}
 			player.sendPacket(iu);

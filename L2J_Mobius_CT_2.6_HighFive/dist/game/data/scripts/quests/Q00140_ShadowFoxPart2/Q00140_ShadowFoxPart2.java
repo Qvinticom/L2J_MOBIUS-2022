@@ -169,7 +169,6 @@ public class Q00140_ShadowFoxPart2 extends Quest
 	{
 		final QuestState qs = getQuestState(player, true);
 		String htmltext = getNoQuestMsg(player);
-		
 		switch (npc.getId())
 		{
 			case KLUCK:

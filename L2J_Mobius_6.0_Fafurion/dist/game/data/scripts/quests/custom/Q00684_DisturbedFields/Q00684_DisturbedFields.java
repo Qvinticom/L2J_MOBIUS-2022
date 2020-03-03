@@ -112,7 +112,6 @@ public class Q00684_DisturbedFields extends Quest
 	{
 		final QuestState qs = getQuestState(player, true);
 		String htmltext = getNoQuestMsg(player);
-		
 		if (npc.getId() == START_NPC_1)
 		{
 			switch (qs.getState())
@@ -200,7 +199,6 @@ public class Q00684_DisturbedFields extends Quest
 			if (killCount <= REQUIRED_KILL_COUNT)
 			{
 				qs.set(KILL_COUNT_VAR, killCount);
-				
 				if (killCount >= REQUIRED_KILL_COUNT)
 				{
 					qs.setCond(FINISH_COND, true);
@@ -212,7 +210,6 @@ public class Q00684_DisturbedFields extends Quest
 				}
 			}
 		}
-		
 		return super.onKill(npc, killer, isSummon);
 	}
 	

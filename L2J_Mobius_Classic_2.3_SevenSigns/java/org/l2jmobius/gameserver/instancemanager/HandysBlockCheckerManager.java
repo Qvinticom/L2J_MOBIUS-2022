@@ -74,7 +74,6 @@ public class HandysBlockCheckerManager
 	{
 		final int newVotes = _arenaVotes.get(arena) + 1;
 		final ArenaParticipantsHolder holder = _arenaPlayers[arena];
-		
 		if ((newVotes > (holder.getAllPlayers().size() / 2)) && !holder.getEvent().isStarted())
 		{
 			clearArenaVotes(arena);
@@ -152,7 +151,6 @@ public class HandysBlockCheckerManager
 		synchronized (holder)
 		{
 			boolean isRed;
-			
 			for (int i = 0; i < 4; i++)
 			{
 				if (_arenaPlayers[i].getAllPlayers().contains(player))
@@ -192,7 +190,6 @@ public class HandysBlockCheckerManager
 			// KrateiCubeManager.getInstance().removeParticipant(player);
 			// player.sendPacket(SystemMessageId.APPLICANTS_FOR_THE_OLYMPIAD_UNDERGROUND_COLISEUM_OR_KRATEI_S_CUBE_MATCHES_CANNOT_REGISTER));
 			// }
-			
 			if (_registrationPenalty.contains(player.getObjectId()))
 			{
 				player.sendPacket(SystemMessageId.YOU_MUST_WAIT_10_SECONDS_BEFORE_ATTEMPTING_TO_REGISTER_AGAIN);
@@ -226,7 +223,6 @@ public class HandysBlockCheckerManager
 		synchronized (holder)
 		{
 			final boolean isRed = team == 0;
-			
 			holder.removePlayer(player, team);
 			holder.broadCastPacketToTeam(new ExCubeGameRemovePlayer(player, isRed));
 			
@@ -254,7 +250,6 @@ public class HandysBlockCheckerManager
 		synchronized (holder)
 		{
 			final boolean isFromRed = holder.getRedPlayers().contains(player);
-			
 			if (isFromRed && (holder.getBlueTeamSize() == 6))
 			{
 				player.sendMessage("The team is full");
@@ -268,7 +263,6 @@ public class HandysBlockCheckerManager
 			
 			final int futureTeam = isFromRed ? 1 : 0;
 			holder.addPlayer(player, futureTeam);
-			
 			if (isFromRed)
 			{
 				holder.removePlayer(player, 0);
@@ -339,7 +333,6 @@ public class HandysBlockCheckerManager
 			
 			// Remove the event items
 			final PlayerInventory inv = player.getInventory();
-			
 			if (inv.getItemByItemId(13787) != null)
 			{
 				final long count = inv.getInventoryItemCount(13787, 0);

@@ -47,7 +47,6 @@ public class EvasHiddenSpace extends AbstractInstance
 	public String onAdvEvent(String event, Npc npc, PlayerInstance player)
 	{
 		String htmltext = null;
-		
 		if (event.equals("enterInstance"))
 		{
 			enterInstance(player, npc, TEMPLATE_ID);
@@ -68,7 +67,6 @@ public class EvasHiddenSpace extends AbstractInstance
 					case "inter_quest_10591_NPC33686":
 					{
 						final QuestState qs = player.getQuestState(Q10591_NobleMaterial.class.getSimpleName());
-						
 						if ((qs != null) && qs.isCond(6))
 						{
 							qs.setCond(7, true);

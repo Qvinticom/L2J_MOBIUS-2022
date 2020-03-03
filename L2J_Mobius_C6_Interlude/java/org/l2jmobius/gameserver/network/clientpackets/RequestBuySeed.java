@@ -49,7 +49,6 @@ public class RequestBuySeed extends GameClientPacket
 	{
 		_manorId = readD();
 		_count = readD();
-		
 		if ((_count > 500) || ((_count * 8) < _buf.remaining()) || (_count < 1)) // check values
 		{
 			_count = 0;
@@ -57,13 +56,11 @@ public class RequestBuySeed extends GameClientPacket
 		}
 		
 		_items = new int[_count * 2];
-		
 		for (int i = 0; i < _count; i++)
 		{
 			final int itemId = readD();
 			_items[(i * 2) + 0] = itemId;
 			final long cnt = readD();
-			
 			if ((cnt > Integer.MAX_VALUE) || (cnt < 1))
 			{
 				_count = 0;
@@ -99,7 +96,6 @@ public class RequestBuySeed extends GameClientPacket
 		}
 		
 		WorldObject target = player.getTarget();
-		
 		if (!(target instanceof ManorManagerInstance))
 		{
 			target = player.getLastFolkNPC();
@@ -111,7 +107,6 @@ public class RequestBuySeed extends GameClientPacket
 		}
 		
 		final Castle castle = CastleManager.getInstance().getCastleById(_manorId);
-		
 		for (int i = 0; i < _count; i++)
 		{
 			final int seedId = _items[(i * 2) + 0];
@@ -122,7 +117,6 @@ public class RequestBuySeed extends GameClientPacket
 			final SeedProduction seed = castle.getSeed(seedId, CastleManorManager.PERIOD_CURRENT);
 			price = seed.getPrice();
 			residual = seed.getCanProduce();
-			
 			if (price <= 0)
 			{
 				return;
@@ -181,7 +175,6 @@ public class RequestBuySeed extends GameClientPacket
 		{
 			final int seedId = _items[(i * 2) + 0];
 			int count = _items[(i * 2) + 1];
-			
 			if (count < 0)
 			{
 				count = 0;
@@ -197,7 +190,6 @@ public class RequestBuySeed extends GameClientPacket
 			
 			// Add item to Inventory and adjust update packet
 			final ItemInstance item = player.getInventory().addItem("Buy", seedId, count, player, target);
-			
 			if (item.getCount() > count)
 			{
 				playerIU.addModifiedItem(item);

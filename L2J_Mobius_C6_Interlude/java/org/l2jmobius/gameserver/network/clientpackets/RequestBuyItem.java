@@ -69,7 +69,6 @@ public class RequestBuyItem extends GameClientPacket
 			final int itemId = readD();
 			_items[(i * 2) + 0] = itemId;
 			final long cnt = readD();
-			
 			if ((cnt > Integer.MAX_VALUE) || (cnt < 0))
 			{
 				_count = 0;
@@ -112,7 +111,6 @@ public class RequestBuyItem extends GameClientPacket
 		
 		boolean ok = true;
 		String htmlFolder = "";
-		
 		if (target != null)
 		{
 			if (target instanceof MerchantInstance)
@@ -146,7 +144,6 @@ public class RequestBuyItem extends GameClientPacket
 		}
 		
 		NpcInstance merchant = null;
-		
 		if (ok)
 		{
 			merchant = (NpcInstance) target;
@@ -158,11 +155,9 @@ public class RequestBuyItem extends GameClientPacket
 		}
 		
 		StoreTradeList list = null;
-		
 		if (merchant != null)
 		{
 			final List<StoreTradeList> lists = TradeController.getInstance().getBuyListByNpcId(merchant.getNpcId());
-			
 			if (!player.isGM())
 			{
 				if (lists == null)
@@ -195,7 +190,6 @@ public class RequestBuyItem extends GameClientPacket
 		}
 		
 		_listId = list.getListId();
-		
 		if ((_listId > 1000000) && (merchant != null) && (merchant.getTemplate().getNpcId() != (_listId - 1000000)))
 		{
 			sendPacket(ActionFailed.STATIC_PACKET);
@@ -209,7 +203,6 @@ public class RequestBuyItem extends GameClientPacket
 		}
 		
 		double taxRate = 0;
-		
 		if ((merchant != null) && merchant.isInTown())
 		{
 			taxRate = merchant.getCastle().getTaxRate();
@@ -226,7 +219,6 @@ public class RequestBuyItem extends GameClientPacket
 			final int itemId = _items[(i * 2) + 0];
 			final int count = _items[(i * 2) + 1];
 			int price = -1;
-			
 			if (!list.containsItemId(itemId))
 			{
 				Util.handleIllegalPlayerAction(player, "Warning!! Character " + player.getName() + " of account " + player.getAccountName() + " sent a false BuyList list_id.", Config.DEFAULT_PUNISH);
@@ -234,7 +226,6 @@ public class RequestBuyItem extends GameClientPacket
 			}
 			
 			final Item template = ItemTable.getInstance().getTemplate(itemId);
-			
 			if (template == null)
 			{
 				continue;
@@ -252,7 +243,6 @@ public class RequestBuyItem extends GameClientPacket
 			{
 				// list = TradeController.getInstance().getBuyList(_listId);
 				price = list.getPriceForItemId(itemId);
-				
 				if ((itemId >= 3960) && (itemId <= 4026))
 				{
 					price *= Config.RATE_SIEGE_GUARDS_PRICE;
@@ -324,7 +314,6 @@ public class RequestBuyItem extends GameClientPacket
 		{
 			final int itemId = _items[(i * 2) + 0];
 			int count = _items[(i * 2) + 1];
-			
 			if (count < 0)
 			{
 				count = 0;
@@ -348,7 +337,6 @@ public class RequestBuyItem extends GameClientPacket
 		if (merchant != null)
 		{
 			final String html = HtmCache.getInstance().getHtm("data/html/" + htmlFolder + "/" + merchant.getNpcId() + "-bought.htm");
-			
 			if (html != null)
 			{
 				final NpcHtmlMessage boughtMsg = new NpcHtmlMessage(merchant.getObjectId());

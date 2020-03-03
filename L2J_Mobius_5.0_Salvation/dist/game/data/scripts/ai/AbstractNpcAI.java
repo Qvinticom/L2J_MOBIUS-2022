@@ -108,7 +108,6 @@ public abstract class AbstractNpcAI extends Quest
 			final int x = npcAround.getLocation().getX() + (int) (Math.cos(Math.PI + radian + course) * nRadius);
 			final int y = npcAround.getLocation().getY() + (int) (Math.sin(Math.PI + radian + course) * nRadius);
 			final int z = npcAround.getLocation().getZ();
-			
 			npc.getAI().moveTo(new Location(x, y, z));
 		});
 	}

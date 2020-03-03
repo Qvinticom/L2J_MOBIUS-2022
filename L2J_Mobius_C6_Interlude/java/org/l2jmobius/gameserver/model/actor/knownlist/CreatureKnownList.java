@@ -133,7 +133,6 @@ public class CreatureKnownList extends WorldObjectKnownList
 	public Collection<Creature> getKnownCharacters()
 	{
 		final List<Creature> result = new ArrayList<>();
-		
 		for (WorldObject obj : getKnownObjects().values())
 		{
 			if (obj instanceof Creature)
@@ -141,14 +140,12 @@ public class CreatureKnownList extends WorldObjectKnownList
 				result.add((Creature) obj);
 			}
 		}
-		
 		return result;
 	}
 	
 	public Collection<Creature> getKnownCharactersInRadius(long radius)
 	{
 		final List<Creature> result = new ArrayList<>();
-		
 		for (WorldObject obj : getKnownObjects().values())
 		{
 			if (obj instanceof PlayerInstance)
@@ -173,7 +170,6 @@ public class CreatureKnownList extends WorldObjectKnownList
 				}
 			}
 		}
-		
 		return result;
 	}
 	
@@ -183,7 +179,6 @@ public class CreatureKnownList extends WorldObjectKnownList
 		{
 			_knownPlayers = new ConcurrentHashMap<>();
 		}
-		
 		return _knownPlayers;
 	}
 	
@@ -193,14 +188,12 @@ public class CreatureKnownList extends WorldObjectKnownList
 		{
 			_knownRelations = new ConcurrentHashMap<>();
 		}
-		
 		return _knownRelations;
 	}
 	
 	public Collection<PlayerInstance> getKnownPlayersInRadius(long radius)
 	{
 		final List<PlayerInstance> result = new ArrayList<>();
-		
 		for (PlayerInstance player : getKnownPlayers().values())
 		{
 			if (Util.checkIfInRange((int) radius, getActiveChar(), player, true))
@@ -208,7 +201,6 @@ public class CreatureKnownList extends WorldObjectKnownList
 				result.add(player);
 			}
 		}
-		
 		return result;
 	}
 }

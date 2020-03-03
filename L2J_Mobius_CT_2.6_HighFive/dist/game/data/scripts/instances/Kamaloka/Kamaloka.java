@@ -457,7 +457,6 @@ public class Kamaloka extends AbstractInstance
 		final int level = LEVEL[index];
 		// and client name
 		final String instanceName = InstanceManager.getInstance().getInstanceIdName(TEMPLATE_IDS[index]);
-		
 		Map<Integer, Long> instanceTimes;
 		// for each party member
 		for (PlayerInstance partyMember : party.getMembers())
@@ -521,7 +520,6 @@ public class Kamaloka extends AbstractInstance
 		};
 		
 		ch.getEffectList().forEach(removeBuffs, false);
-		
 		if (ch.hasSummon())
 		{
 			ch.getSummon().getEffectList().forEach(removeBuffs, false);
@@ -668,7 +666,6 @@ public class Kamaloka extends AbstractInstance
 		{
 			world.firstRoom = new ArrayList<>(spawns.length - 1);
 			final int shaman = getRandom(spawns.length); // random position for shaman
-			
 			for (int i = 0; i < spawns.length; i++)
 			{
 				if (i == shaman)
@@ -696,7 +693,6 @@ public class Kamaloka extends AbstractInstance
 		if (npcs != null)
 		{
 			world.secondRoom = new ArrayList<>(spawns.length);
-			
 			for (int[] spawn : spawns)
 			{
 				npc = addSpawn(npcs[0], spawn[0], spawn[1], spawn[2], 0, false, 0, false, world.getInstanceId());
@@ -752,7 +748,6 @@ public class Kamaloka extends AbstractInstance
 	public String onTalk(Npc npc, PlayerInstance player)
 	{
 		final int npcId = npc.getId();
-		
 		if (npcId == TELEPORTER)
 		{
 			final Party party = player.getParty();
@@ -779,7 +774,6 @@ public class Kamaloka extends AbstractInstance
 		{
 			return npcId + ".htm";
 		}
-		
 		return null;
 	}
 	
@@ -823,7 +817,6 @@ public class Kamaloka extends AbstractInstance
 				}
 				world.firstRoom.clear();
 				world.firstRoom = null;
-				
 				if (world.boss != null)
 				{
 					final int skillId = FIRST_ROOM[world.index][2];
@@ -837,7 +830,6 @@ public class Kamaloka extends AbstractInstance
 						}
 					}
 				}
-				
 				return super.onKill(npc, player, isSummon);
 			}
 			
@@ -863,7 +855,6 @@ public class Kamaloka extends AbstractInstance
 				{
 					world.secondRoom.clear();
 					world.secondRoom = null;
-					
 					if (world.boss != null)
 					{
 						final int skillId = SECOND_ROOM[world.index][1];
@@ -886,7 +877,6 @@ public class Kamaloka extends AbstractInstance
 			if ((world.miniBoss != 0) && (world.miniBoss == objectId))
 			{
 				world.miniBoss = 0;
-				
 				if (world.boss != null)
 				{
 					final int skillId = MINIBOSS[world.index][4];

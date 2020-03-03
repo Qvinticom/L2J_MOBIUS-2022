@@ -56,7 +56,6 @@ public class Couple
 					_player1Id = rs.getInt("player1Id");
 					_player2Id = rs.getInt("player2Id");
 					_maried = rs.getBoolean("married");
-					
 					_affiancedDate = Calendar.getInstance();
 					_affiancedDate.setTimeInMillis(rs.getLong("affianceDate"));
 					
@@ -75,10 +74,8 @@ public class Couple
 	{
 		final int _tempPlayer1Id = player1.getObjectId();
 		final int _tempPlayer2Id = player2.getObjectId();
-		
 		_player1Id = _tempPlayer1Id;
 		_player2Id = _tempPlayer2Id;
-		
 		_affiancedDate = Calendar.getInstance();
 		_affiancedDate.setTimeInMillis(Calendar.getInstance().getTimeInMillis());
 		

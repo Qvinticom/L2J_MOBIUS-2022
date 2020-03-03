@@ -102,7 +102,6 @@ public class Alexandria extends AbstractNpcAI
 					{
 						giveItems(player, agathion);
 						htmltext = "30098-03.html";
-						
 						if (agathion instanceof AdditionalQuestItemHolder)
 						{
 							giveItems(player, ((AdditionalQuestItemHolder) agathion).getAdditionalId(), 1);

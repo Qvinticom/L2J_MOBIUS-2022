@@ -87,9 +87,7 @@ public class Duel
 		_playerA = playerA;
 		_playerB = playerB;
 		_partyDuel = partyDuel == 1;
-		
 		_duelEndTime = Calendar.getInstance();
-		
 		if (_partyDuel)
 		{
 			_duelEndTime.add(Calendar.SECOND, 300);
@@ -100,7 +98,6 @@ public class Duel
 		}
 		
 		_playerConditions = new HashMap<>();
-		
 		setFinished(false);
 		
 		if (_partyDuel)
@@ -148,7 +145,6 @@ public class Duel
 			_mp = _player.getCurrentMp();
 			_cp = _player.getCurrentCp();
 			_paDuel = partyDuel;
-			
 			if (_paDuel)
 			{
 				_x = _player.getX();
@@ -260,7 +256,6 @@ public class Duel
 			try
 			{
 				final DuelResultEnum status = _duel.checkEndDuelCondition();
-				
 				if (status == DuelResultEnum.Canceled)
 				{
 					// do not schedule duel end if it was interrupted
@@ -305,7 +300,6 @@ public class Duel
 			{
 				// start/continue countdown
 				final int count = _duel.countdown();
-				
 				if (!_partyDuel || (count == 4))
 				{
 					// Save player Conditions
@@ -433,7 +427,6 @@ public class Duel
 				_playerA.sendMessage(engagedInPvP);
 				_playerB.sendMessage(engagedInPvP);
 			}
-			
 			return true;
 		}
 		
@@ -477,7 +470,6 @@ public class Duel
 			// Send duel Start packets
 			final ExDuelReady ready = new ExDuelReady(1);
 			final ExDuelStart start = new ExDuelStart(1);
-			
 			broadcastToTeam1(ready);
 			broadcastToTeam2(ready);
 			broadcastToTeam1(start);
@@ -494,7 +486,6 @@ public class Duel
 			// Send duel Start packets
 			final ExDuelReady ready = new ExDuelReady(0);
 			final ExDuelStart start = new ExDuelStart(0);
-			
 			broadcastToTeam1(ready);
 			broadcastToTeam2(ready);
 			broadcastToTeam1(start);
@@ -665,7 +656,6 @@ public class Duel
 		}
 		
 		int offset = 0;
-		
 		for (PlayerInstance temp : _playerA.getParty().getPartyMembers())
 		{
 			temp.teleToLocation((x + offset) - 180, y - 150, z);
@@ -673,7 +663,6 @@ public class Duel
 		}
 		
 		offset = 0;
-		
 		for (PlayerInstance temp : _playerB.getParty().getPartyMembers())
 		{
 			temp.teleToLocation((x + offset) - 180, y + 150, z);
@@ -782,7 +771,6 @@ public class Duel
 	public void playKneelAnimation()
 	{
 		final PlayerInstance looser = getLooser();
-		
 		if (looser == null)
 		{
 			return;
@@ -1023,7 +1011,6 @@ public class Duel
 			if (_playerA.getParty().getPartyMembers().contains(player))
 			{
 				_surrenderRequest = 1;
-				
 				for (PlayerInstance temp : _playerA.getParty().getPartyMembers())
 				{
 					temp.setDuelState(DUELSTATE_DEAD);
@@ -1037,7 +1024,6 @@ public class Duel
 			else if (_playerB.getParty().getPartyMembers().contains(player))
 			{
 				_surrenderRequest = 2;
-				
 				for (PlayerInstance temp : _playerB.getParty().getPartyMembers())
 				{
 					temp.setDuelState(DUELSTATE_DEAD);
@@ -1075,7 +1061,6 @@ public class Duel
 		if (_partyDuel)
 		{
 			boolean teamdefeated = true;
-			
 			for (PlayerInstance temp : player.getParty().getPartyMembers())
 			{
 				if (temp.getDuelState() == DUELSTATE_DUELLING)
@@ -1088,7 +1073,6 @@ public class Duel
 			if (teamdefeated)
 			{
 				PlayerInstance winner = _playerA;
-				
 				if (_playerA.getParty().getPartyMembers().contains(player))
 				{
 					winner = _playerB;
@@ -1135,7 +1119,6 @@ public class Duel
 		if ((player == _playerA) || (player == _playerB))
 		{
 			final PlayerCondition e = _playerConditions.remove(player.getObjectId());
-			
 			if (e != null)
 			{
 				e.teleportBack();
@@ -1154,7 +1137,6 @@ public class Duel
 		else // teleport the player back & delete his PlayerCondition record
 		{
 			final PlayerCondition e = _playerConditions.remove(player.getObjectId());
-			
 			if (e != null)
 			{
 				e.teleportBack();

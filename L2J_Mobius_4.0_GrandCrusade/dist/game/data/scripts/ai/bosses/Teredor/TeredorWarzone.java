@@ -143,7 +143,6 @@ public class TeredorWarzone extends AbstractInstance
 				case "TEREDOR_LAIR_CHECK":
 				{
 					final Location spawnLoc = npc.getSpawn();
-					
 					if (((spawnLoc.getX() - npc.getX()) > 1000) || ((spawnLoc.getX() - npc.getX()) < -2000))
 					{
 						showOnScreenMsg(instance, NpcStringId.TEREDOR_SUMMONS_SUBORDINATE_BECAUSE_YOU_MOVED_OUT_OF_TEREDOR_S_AREA, ExShowScreenMessage.TOP_CENTER, 4000);
@@ -188,7 +187,6 @@ public class TeredorWarzone extends AbstractInstance
 	public String onAdvEvent(String event, Npc npc, PlayerInstance player)
 	{
 		String htmltext = null;
-		
 		switch (event)
 		{
 			case "enterInstance":
@@ -200,7 +198,6 @@ public class TeredorWarzone extends AbstractInstance
 			{
 				final Instance playerInstance = getPlayerInstance(player);
 				final Party playerParty = player.getParty();
-				
 				if ((playerInstance != null) && (playerInstance.getTemplateId() == TEMPLATE_ID))
 				{
 					enterInstance(player, npc, TEMPLATE_ID);
@@ -289,7 +286,6 @@ public class TeredorWarzone extends AbstractInstance
 		final Creature creature = event.getSeen();
 		final Npc npc = (Npc) event.getSeer();
 		final Instance instance = npc.getInstanceWorld();
-		
 		if (isInInstance(instance))
 		{
 			final StatSet npcParams = npc.getParameters();
@@ -475,7 +471,6 @@ public class TeredorWarzone extends AbstractInstance
 					final StatSet npcVars = npc.getVariables();
 					final int hpPer = npc.getCurrentHpPercent();
 					int teredorStatus = npcVars.getInt("TEREDOR_STATUS", 1);
-					
 					if ((npc.calculateDistance3D(attacker) > 450) && (getRandom(100) < 5))
 					{
 						addSkillCastDesire(npc, attacker, TEREDOR_POISON_SKILL, 23);

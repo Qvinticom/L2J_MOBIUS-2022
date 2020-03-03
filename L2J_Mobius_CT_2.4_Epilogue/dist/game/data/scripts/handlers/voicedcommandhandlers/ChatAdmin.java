@@ -133,7 +133,6 @@ public class ChatAdmin implements IVoicedCommandHandler
 				if (st.hasMoreTokens())
 				{
 					final String name = st.nextToken();
-					
 					final int objId = CharNameTable.getInstance().getIdByName(name);
 					if (objId > 0)
 					{

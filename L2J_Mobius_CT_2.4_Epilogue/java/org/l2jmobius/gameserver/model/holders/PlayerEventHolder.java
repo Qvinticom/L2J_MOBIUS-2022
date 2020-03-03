@@ -66,7 +66,6 @@ public class PlayerEventHolder
 		_pvpKills = player.getPvpKills();
 		_pkKills = player.getPkKills();
 		_karma = player.getKarma();
-		
 		_sitForced = sitForced;
 	}
 	

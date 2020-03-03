@@ -49,7 +49,6 @@ public class SummonFriend implements ISkillHandler
 		}
 		
 		final PlayerInstance activePlayer = (PlayerInstance) creature;
-		
 		if (!PlayerInstance.checkSummonerStatus(activePlayer))
 		{
 			return;
@@ -125,7 +124,6 @@ public class SummonFriend implements ISkillHandler
 				if (target instanceof PlayerInstance)
 				{
 					final PlayerInstance targetChar = (PlayerInstance) target;
-					
 					if (!PlayerInstance.checkSummonTargetStatus(targetChar, activePlayer))
 					{
 						continue;

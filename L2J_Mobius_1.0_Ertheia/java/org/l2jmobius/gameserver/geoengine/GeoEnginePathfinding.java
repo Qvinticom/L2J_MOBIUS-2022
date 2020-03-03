@@ -42,7 +42,6 @@ final class GeoEnginePathfinding extends GeoEngine
 		
 		final String[] array = Config.PATHFIND_BUFFERS.split(";");
 		_buffers = new BufferHolder[array.length];
-		
 		int count = 0;
 		for (int i = 0; i < array.length; i++)
 		{
@@ -99,7 +98,6 @@ final class GeoEnginePathfinding extends GeoEngine
 		try
 		{
 			final Node result = buffer.findPath(gox, goy, goz, gtx, gty, gtz);
-			
 			if (result == null)
 			{
 				return null;
@@ -259,7 +257,6 @@ final class GeoEnginePathfinding extends GeoEngine
 		{
 			_size = size;
 			_buffer = new ArrayList<>(count);
-			
 			for (int i = 0; i < count; i++)
 			{
 				_buffer.add(new NodeBuffer(size));

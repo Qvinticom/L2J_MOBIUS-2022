@@ -41,7 +41,6 @@ public class Summon implements ITargetTypeHandler
 		{
 			return creature.getActingPlayer().getAnyServitor();
 		}
-		
 		return creature.getPet();
 	}
 }

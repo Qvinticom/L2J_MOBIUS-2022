@@ -67,7 +67,6 @@ public class SiegeAttackerList extends GameServerPacket
 		if (size > 0)
 		{
 			Clan clan;
-			
 			writeD(size);
 			writeD(size);
 			for (SiegeClan siegeclan : _castle.getSiege().getAttackerClans())

@@ -44,7 +44,6 @@ public class TomaJunior extends AbstractNpcAI
 		{
 			npc.broadcastSocialAction(3);
 			npc.broadcastSay(ChatType.NPC_GENERAL, NpcStringId.THE_BEACH_WHERE_RELICS_OF_GIANTS_HAD_FALLEN_HAS_NOW_BECOME_CLEAN, 1000);
-			
 		}
 		else if (event.equals("SOCIAL_ACTION") && (npc != null))
 		{

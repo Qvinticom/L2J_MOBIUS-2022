@@ -163,7 +163,6 @@ public class FestivalGuideInstance extends FolkInstance
 		if (command.startsWith("FestivalDesc"))
 		{
 			final int val = Integer.parseInt(command.substring(13));
-			
 			showChatWindow(player, val, null, true);
 		}
 		else if (command.startsWith("Festival"))
@@ -251,7 +250,6 @@ public class FestivalGuideInstance extends FolkInstance
 					
 					SevenSignsFestival.getInstance().setParticipants(_festivalOracle, _festivalType, playerParty);
 					SevenSignsFestival.getInstance().addAccumulatedBonus(_festivalType, stoneType, stonesNeeded);
-					
 					showChatWindow(player, 2, "e", false);
 					break;
 				}
@@ -506,7 +504,6 @@ public class FestivalGuideInstance extends FolkInstance
 			final int duskScore = SevenSignsFestival.getInstance().getHighestScore(SevenSigns.CABAL_DUSK, i);
 			final String festivalName = SevenSignsFestival.getFestivalName(i);
 			String winningCabal = "Children of Dusk";
-			
 			if (dawnScore > duskScore)
 			{
 				winningCabal = "Children of Dawn";
@@ -535,10 +532,8 @@ public class FestivalGuideInstance extends FolkInstance
 		{
 			final int accumScore = SevenSignsFestival.getInstance().getAccumulatedBonus(i);
 			final String festivalName = SevenSignsFestival.getFestivalName(i);
-			
 			tableHtml.append("<tr><td align=\"center\" width=\"150\">" + festivalName + "</td><td align=\"center\" width=\"150\">" + accumScore + "</td></tr>");
 		}
-		
 		return tableHtml.toString();
 	}
 	
@@ -551,7 +546,6 @@ public class FestivalGuideInstance extends FolkInstance
 	{
 		final long numMillis = Long.parseLong(milliFromEpoch);
 		final Calendar calCalc = Calendar.getInstance();
-		
 		calCalc.setTimeInMillis(numMillis);
 		
 		return calCalc.get(Calendar.YEAR) + "/" + calCalc.get(Calendar.MONTH) + "/" + calCalc.get(Calendar.DAY_OF_MONTH);

@@ -291,7 +291,6 @@ public class CubicInstance implements IIdentifiable
 			if (TvTEvent.isStarted() && TvTEvent.isPlayerParticipant(_owner.getObjectId()))
 			{
 				final TvTEventTeam enemyTeam = TvTEvent.getParticipantEnemyTeam(_owner.getObjectId());
-				
 				if (ownerTarget.getActingPlayer() != null)
 				{
 					final PlayerInstance target = ownerTarget.getActingPlayer();
@@ -307,13 +306,11 @@ public class CubicInstance implements IIdentifiable
 			{
 				final PlayerInstance playerA = DuelManager.getInstance().getDuel(_owner.getDuelId()).getPlayerA();
 				final PlayerInstance playerB = DuelManager.getInstance().getDuel(_owner.getDuelId()).getPlayerB();
-				
 				if (DuelManager.getInstance().getDuel(_owner.getDuelId()).isPartyDuel())
 				{
 					final Party partyA = playerA.getParty();
 					final Party partyB = playerB.getParty();
 					Party partyEnemy = null;
-					
 					if (partyA != null)
 					{
 						if (partyA.getMembers().contains(_owner))
@@ -410,7 +407,6 @@ public class CubicInstance implements IIdentifiable
 				
 				// get target in pvp or in siege
 				PlayerInstance enemy = null;
-				
 				if (((_owner.getPvpFlag() > 0) && !_owner.isInsideZone(ZoneId.PEACE)) || _owner.isInsideZone(ZoneId.PVP))
 				{
 					if (!((Creature) ownerTarget).isDead())
@@ -421,7 +417,6 @@ public class CubicInstance implements IIdentifiable
 					if (enemy != null)
 					{
 						boolean targetIt = true;
-						
 						if (_owner.getParty() != null)
 						{
 							if (_owner.getParty().getMembers().contains(enemy))
@@ -534,7 +529,6 @@ public class CubicInstance implements IIdentifiable
 			final boolean mcrit = Formulas.calcMCrit(_owner.getMCriticalHit(target, skill));
 			final byte shld = Formulas.calcShldUse(_owner, target, skill);
 			int damage = (int) Formulas.calcMagicDam(this, target, skill, mcrit, shld);
-			
 			if (damage > 0)
 			{
 				// Manage attack or cast break of the target (calculating rate, sending message...)
@@ -569,14 +563,12 @@ public class CubicInstance implements IIdentifiable
 			
 			final boolean mcrit = Formulas.calcMCrit(_owner.getMCriticalHit(target, skill));
 			final byte shld = Formulas.calcShldUse(_owner, target, skill);
-			
 			final int damage = (int) Formulas.calcMagicDam(this, target, skill, mcrit, shld);
 			
 			// TODO: Unhardcode fixed value
 			final double hpAdd = (0.4 * damage);
 			final PlayerInstance owner = _owner;
 			final double hp = ((owner.getCurrentHp() + hpAdd) > owner.getMaxHp() ? owner.getMaxHp() : (owner.getCurrentHp() + hpAdd));
-			
 			owner.setCurrentHp(hp);
 			
 			// Check to see if we should damage the target
@@ -605,7 +597,6 @@ public class CubicInstance implements IIdentifiable
 			}
 			
 			final byte shld = Formulas.calcShldUse(_owner, target, skill);
-			
 			if (skill.hasEffectType(EffectType.STUN, EffectType.PARALYZE, EffectType.ROOT) && Formulas.calcCubicSkillSuccess(this, target, skill, shld))
 			{
 				// Apply effects
@@ -648,11 +639,9 @@ public class CubicInstance implements IIdentifiable
 		int z;
 		// temporary range check until real behavior of cubics is known/coded
 		final int range = MAX_MAGIC_RANGE;
-		
 		x = (owner.getX() - target.getX());
 		y = (owner.getY() - target.getY());
 		z = (owner.getZ() - target.getZ());
-		
 		return (((x * x) + (y * y) + (z * z)) <= (range * range));
 	}
 	

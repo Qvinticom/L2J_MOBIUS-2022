@@ -383,7 +383,6 @@ public class TowerOfNaia extends AbstractNpcAI
 	public String onFirstTalk(Npc npc, PlayerInstance player)
 	{
 		final int npcId = npc.getId();
-		
 		if (npcId == CONTROLLER)
 		{
 			if (_lock == null)
@@ -463,11 +462,9 @@ public class TowerOfNaia extends AbstractNpcAI
 		}
 		
 		final int npcId = npc.getId();
-		
 		if (event.equalsIgnoreCase("despawn_spore") && !npc.isDead() && (_challengeState == STATE_SPORE_CHALLENGE_IN_PROGRESS))
 		{
 			htmltext = null;
-			
 			_sporeSpawn.remove(npc);
 			npc.deleteMe();
 			
@@ -540,7 +537,6 @@ public class TowerOfNaia extends AbstractNpcAI
 		{
 			htmltext = null;
 			final Party party = player.getParty();
-			
 			if (party != null)
 			{
 				removeForeigners(npcId, party);
@@ -561,7 +557,6 @@ public class TowerOfNaia extends AbstractNpcAI
 		if ((_lock != null) && (npc.getObjectId() == _lock.getObjectId()))
 		{
 			final int remaindedHpPercent = (int) ((npc.getCurrentHp() * 100) / npc.getMaxHp());
-			
 			if ((remaindedHpPercent <= _counter) && (_controller != null))
 			{
 				if (_counter == 50)
@@ -585,7 +580,6 @@ public class TowerOfNaia extends AbstractNpcAI
 	public String onKill(Npc npc, PlayerInstance killer, boolean isSummon)
 	{
 		final int npcId = npc.getId();
-		
 		if (npcId == LOCK)
 		{
 			_lock = null;
@@ -596,7 +590,6 @@ public class TowerOfNaia extends AbstractNpcAI
 		else if (Arrays.binarySearch(TOWER_MONSTERS, npcId) >= 0)
 		{
 			int managerId = 0;
-			
 			for (ZoneType zone : ZoneManager.getInstance().getZones(npc.getX(), npc.getY(), npc.getZ()))
 			{
 				if (ZONES.containsValue(zone.getId()))
@@ -650,7 +643,6 @@ public class TowerOfNaia extends AbstractNpcAI
 			{
 				_despawnedSporesCount.decrementAndGet();
 				final int sporeGroup = getSporeGroup(npcId);
-				
 				if (sporeGroup >= 0)
 				{
 					if ((npcId == SPORE_FIRE) || (npcId == SPORE_WIND))
@@ -700,7 +692,6 @@ public class TowerOfNaia extends AbstractNpcAI
 						_despawnedSporesCount.set(0);
 						_winIndex = Arrays.binarySearch(ELEMENTS, npcId);
 						final int[] coord = SPORES_MERGE_POSITION[_winIndex];
-						
 						for (Npc spore : _sporeSpawn)
 						{
 							if ((spore != null) && !spore.isDead())
@@ -721,7 +712,6 @@ public class TowerOfNaia extends AbstractNpcAI
 	public String onSpawn(Npc npc)
 	{
 		final int npcId = npc.getId();
-		
 		if (npcId == MUTATED_ELPY)
 		{
 			DoorData.getInstance().getDoor(18250025).openMe();

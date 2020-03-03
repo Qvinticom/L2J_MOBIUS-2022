@@ -164,7 +164,6 @@ public class Q00135_TempleExecutor extends Quest
 	{
 		final QuestState qs = getQuestState(player, true);
 		String htmltext = getNoQuestMsg(player);
-		
 		switch (npc.getId())
 		{
 			case SHEGFIELD:

@@ -49,7 +49,6 @@ public class Katenar extends AbstractNpcAI
 	{
 		final Npc npc0 = npc.getVariables().getObject("npc0", Npc.class);
 		final String htmltext = null;
-		
 		switch (event)
 		{
 			case "CREATED_50":

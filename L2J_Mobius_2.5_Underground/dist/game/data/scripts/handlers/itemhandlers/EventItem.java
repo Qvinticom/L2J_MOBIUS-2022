@@ -43,7 +43,6 @@ public class EventItem implements IItemHandler
 		boolean used = false;
 		
 		final PlayerInstance player = playable.getActingPlayer();
-		
 		final int itemId = item.getId();
 		switch (itemId)
 		{
@@ -88,7 +87,6 @@ public class EventItem implements IItemHandler
 		}
 		
 		final BlockInstance block = (BlockInstance) castor.getTarget();
-		
 		final ArenaParticipantsHolder holder = HandysBlockCheckerManager.getInstance().getHolder(blockCheckerArena);
 		if (holder != null)
 		{

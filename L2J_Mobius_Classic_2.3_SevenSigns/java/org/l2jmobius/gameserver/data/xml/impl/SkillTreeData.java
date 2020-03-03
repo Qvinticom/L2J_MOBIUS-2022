@@ -130,7 +130,6 @@ public class SkillTreeData implements IXmlReader
 	public void load()
 	{
 		_loading = true;
-		
 		_classSkillTrees.clear();
 		_collectSkillTree.clear();
 		_fishingSkillTree.clear();
@@ -189,7 +188,6 @@ public class SkillTreeData implements IXmlReader
 						final Map<Long, SkillLearn> transferSkillTree = new HashMap<>();
 						final Map<Long, SkillLearn> raceSkillTree = new HashMap<>();
 						final Map<Long, SkillLearn> revelationSkillTree = new HashMap<>();
-						
 						type = d.getAttributes().getNamedItem("type").getNodeValue();
 						attr = d.getAttributes().getNamedItem("classId");
 						if (attr != null)
@@ -240,7 +238,6 @@ public class SkillTreeData implements IXmlReader
 								
 								// test if skill exists
 								SkillData.getInstance().getSkill(skillLearn.getSkillId(), skillLearn.getSkillLevel());
-								
 								for (Node b = c.getFirstChild(); b != null; b = b.getNextSibling())
 								{
 									attrs = b.getAttributes();
@@ -655,7 +652,6 @@ public class SkillTreeData implements IXmlReader
 	{
 		final List<SkillLearn> result = new LinkedList<>();
 		final Map<Long, SkillLearn> skills = getCompleteClassSkillTree(classId);
-		
 		if (skills.isEmpty())
 		{
 			// The Skill Tree for this class is undefined.
@@ -664,11 +660,9 @@ public class SkillTreeData implements IXmlReader
 		}
 		
 		final boolean isAwaken = player.isInCategory(CategoryType.SIXTH_CLASS_GROUP) && ((player.getRace() != Race.ERTHEIA) || player.isDualClassActive());
-		
 		for (Entry<Long, SkillLearn> entry : skills.entrySet())
 		{
 			final SkillLearn skill = entry.getValue();
-			
 			if (((skill.getSkillId() == CommonSkill.DIVINE_INSPIRATION.getId()) && (!Config.AUTO_LEARN_DIVINE_INSPIRATION && includeAutoGet) && !player.isGM()) || (!includeAutoGet && skill.isAutoGet()) || (!includeByFs && skill.isLearnedByFS()) || isRemoveSkill(classId, skill.getSkillId()))
 			{
 				continue;
@@ -799,7 +793,6 @@ public class SkillTreeData implements IXmlReader
 			
 			final int maxLvl = SkillData.getInstance().getMaxLevel(skill.getSkillId());
 			final long hashCode = SkillData.getSkillHashCode(skill.getSkillId(), maxLvl);
-			
 			if (skill.isAutoGet() && (player.getLevel() >= skill.getGetLevel()))
 			{
 				final Skill oldSkill = player.getKnownSkill(skill.getSkillId());
@@ -865,11 +858,9 @@ public class SkillTreeData implements IXmlReader
 	{
 		final List<SkillLearn> result = new ArrayList<>();
 		final Map<Long, SkillLearn> revelationSkills = _revelationSkillTree.get(type);
-		
 		for (SkillLearn skill : revelationSkills.values())
 		{
 			final Skill oldSkill = player.getSkills().get(skill.getSkillId());
-			
 			if (oldSkill == null)
 			{
 				result.add(skill);
@@ -886,13 +877,11 @@ public class SkillTreeData implements IXmlReader
 	public List<SkillLearn> getAvailableAlchemySkills(PlayerInstance player)
 	{
 		final List<SkillLearn> result = new ArrayList<>();
-		
 		for (SkillLearn skill : _alchemySkillTree.values())
 		{
 			if (skill.isLearnedByNpc() && (player.getLevel() >= skill.getGetLevel()))
 			{
 				final Skill oldSkill = player.getSkills().get(skill.getSkillId());
-				
 				if (oldSkill != null)
 				{
 					if (oldSkill.getLevel() == (skill.getSkillLevel() - 1))
@@ -944,7 +933,6 @@ public class SkillTreeData implements IXmlReader
 	{
 		final List<SkillLearn> result = new ArrayList<>();
 		final ClassId classId = player.getClassId();
-		
 		if (!_transferSkillTrees.containsKey(classId))
 		{
 			return result;
@@ -999,7 +987,6 @@ public class SkillTreeData implements IXmlReader
 	public List<SkillLearn> getAvailablePledgeSkills(Clan clan)
 	{
 		final List<SkillLearn> result = new ArrayList<>();
-		
 		for (SkillLearn skill : _pledgeSkillTree.values())
 		{
 			if (!skill.isResidencialSkill() && (clan.getLevel() >= skill.getGetLevel()))
@@ -1415,7 +1402,6 @@ public class SkillTreeData implements IXmlReader
 			return result;
 		}
 		final int minLevelForNewSkill = getMinLevelForNewSkill(player, completeClassSkillTree);
-		
 		if (minLevelForNewSkill > 0)
 		{
 			for (SkillLearn skill : completeClassSkillTree.values())
@@ -1454,7 +1440,6 @@ public class SkillTreeData implements IXmlReader
 		{
 			final int maxLvl = SkillData.getInstance().getMaxLevel(skill.getId());
 			final long hashCode = SkillData.getSkillHashCode(skill.getId(), maxLvl);
-			
 			if (!isCurrentClassSkillNoParent(player.getClassId(), hashCode) && !isRemoveSkill(player.getClassId(), skill.getId()) && !isAwakenSaveSkill(player.getClassId(), skill.getId()) && !isAlchemySkill(skill.getId(), skill.getLevel()))
 			{
 				// Do not remove equipped item skills.
@@ -1686,7 +1671,6 @@ public class SkillTreeData implements IXmlReader
 		
 		final int maxLvl = SkillData.getInstance().getMaxLevel(skill.getId());
 		final long hashCode = SkillData.getSkillHashCode(skill.getId(), Math.min(skill.getLevel(), maxLvl));
-		
 		if (Arrays.binarySearch(_skillsByClassIdHashCodes.get(player.getClassId().getId()), hashCode) >= 0)
 		{
 			return true;

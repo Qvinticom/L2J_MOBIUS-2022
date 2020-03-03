@@ -52,7 +52,6 @@ public class AreaSummon implements ITargetTypeHandler
 		
 		final boolean srcInArena = (creature.isInsideZone(ZoneId.PVP) && !creature.isInsideZone(ZoneId.SIEGE));
 		final int maxTargets = skill.getAffectLimit();
-		
 		World.getInstance().forEachVisibleObjectInRange(target, Creature.class, skill.getAffectRange(), obj ->
 		{
 			if (obj == creature)

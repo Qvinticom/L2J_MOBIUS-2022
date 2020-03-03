@@ -256,7 +256,6 @@ public class Q00123_TheLeaderAndTheFollower extends Quest
 		final QuestState qs = getQuestState(player, true);
 		final QuestState q118 = player.getQuestState(Q00118_ToLeadAndBeLed.class.getSimpleName());
 		String htmltext = getNoQuestMsg(player);
-		
 		switch (qs.getState())
 		{
 			case State.CREATED:

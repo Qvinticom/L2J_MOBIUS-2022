@@ -75,7 +75,6 @@ public class Die extends GameServerPacket
 		// 6d 03 00 00 00 - to siege HQ
 		// sweepable
 		// 6d 04 00 00 00 - FIXED
-		
 		writeD(_canTeleport ? 0x01 : 0); // 6d 00 00 00 00 - to nearest village
 		
 		if (_canTeleport && (_clan != null))
@@ -84,7 +83,6 @@ public class Die extends GameServerPacket
 			Boolean isInDefense = false;
 			final Castle castle = CastleManager.getInstance().getCastle(_creature);
 			final Fort fort = FortManager.getInstance().getFort(_creature);
-			
 			if ((castle != null) && castle.getSiege().isInProgress())
 			{
 				// siege in progress

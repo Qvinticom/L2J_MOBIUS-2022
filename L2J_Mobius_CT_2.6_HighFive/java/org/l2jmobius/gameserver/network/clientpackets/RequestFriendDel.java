@@ -56,7 +56,6 @@ public class RequestFriendDel implements IClientIncomingPacket
 		}
 		
 		final int id = CharNameTable.getInstance().getIdByName(_name);
-		
 		if (id == -1)
 		{
 			sm = new SystemMessage(SystemMessageId.C1_IS_NOT_ON_YOUR_FRIEND_LIST);

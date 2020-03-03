@@ -163,7 +163,6 @@ public class Q10589_WhereFatesIntersect extends Quest
 	{
 		final QuestState qs = getQuestState(player, true);
 		String htmltext = getNoQuestMsg(player);
-		
 		switch (qs.getState())
 		{
 			case State.CREATED:
@@ -251,7 +250,6 @@ public class Q10589_WhereFatesIntersect extends Quest
 		{
 			final PlayerInstance player = qs.getPlayer();
 			giveItemRandomly(player, npc, MONSTER_DROP, 1, REQUIRED_DROP_COUNT, 1, true);
-			
 			if ((getQuestItemsCount(player, MONSTER_DROP) >= REQUIRED_DROP_COUNT) && (player.getLevel() >= 95))
 			{
 				qs.setCond(FINISH_COND, true);
@@ -267,7 +265,6 @@ public class Q10589_WhereFatesIntersect extends Quest
 	public Set<NpcLogListHolder> getNpcLogList(PlayerInstance player)
 	{
 		final QuestState qs = getQuestState(player, false);
-		
 		if ((qs != null) && qs.isCond(KILLING_COND))
 		{
 			final Set<NpcLogListHolder> holder = new HashSet<>();

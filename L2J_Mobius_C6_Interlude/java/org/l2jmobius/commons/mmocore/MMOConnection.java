@@ -66,7 +66,6 @@ public class MMOConnection<T extends MMOClient<?>>
 		_writableByteChannel = socket.getChannel();
 		_port = socket.getPort();
 		_selectionKey = key;
-		
 		_sendQueue = new NioNetStackList<>();
 	}
 	
@@ -83,7 +82,6 @@ public class MMOConnection<T extends MMOClient<?>>
 	public void sendPacket(SendablePacket<T> sp)
 	{
 		sp._client = _client;
-		
 		if (_pendingClose)
 		{
 			return;
@@ -152,7 +150,6 @@ public class MMOConnection<T extends MMOClient<?>>
 			final int remaining = temp.remaining();
 			_primaryWriteBuffer.flip();
 			final int limit = _primaryWriteBuffer.limit();
-			
 			if (remaining >= _primaryWriteBuffer.remaining())
 			{
 				temp.put(_primaryWriteBuffer);
@@ -257,7 +254,6 @@ public class MMOConnection<T extends MMOClient<?>>
 		{
 			_selectorThread.recycleBuffer(_primaryWriteBuffer);
 			_primaryWriteBuffer = null;
-			
 			if (_secondaryWriteBuffer != null)
 			{
 				_selectorThread.recycleBuffer(_secondaryWriteBuffer);

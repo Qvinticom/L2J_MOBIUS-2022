@@ -80,7 +80,6 @@ public class Q10305_UnstoppableFutileEfforts extends Quest
 			case "NOTIFY_Q10305":
 			{
 				int killedCocoon = qs.getMemoStateEx(LARGE_COCOON);
-				
 				killedCocoon++;
 				if (killedCocoon < 5)
 				{
@@ -118,7 +117,6 @@ public class Q10305_UnstoppableFutileEfforts extends Quest
 	{
 		final QuestState qs = getQuestState(player, true);
 		String htmltext = getNoQuestMsg(player);
-		
 		switch (qs.getState())
 		{
 			case State.CREATED:

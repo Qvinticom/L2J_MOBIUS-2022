@@ -61,7 +61,6 @@ public class FortressOfTheDead extends AbstractInstance
 	public String onAdvEvent(String event, Npc npc, PlayerInstance player)
 	{
 		String htmltext = null;
-		
 		if (event.equals("enterInstance"))
 		{
 			enterInstance(player, npc, TEMPLATE_ID);
@@ -115,7 +114,6 @@ public class FortressOfTheDead extends AbstractInstance
 					case "endCinematic":
 					{
 						final QuestState qs = player.getQuestState(Q11026_PathOfDestinyConviction.class.getSimpleName());
-						
 						if ((qs != null) && qs.isCond(3))
 						{
 							qs.setCond(4, true);
@@ -137,7 +135,6 @@ public class FortressOfTheDead extends AbstractInstance
 	public String onKill(Npc npc, PlayerInstance player, boolean isSummon)
 	{
 		final Instance world = npc.getInstanceWorld();
-		
 		if (isInInstance(world))
 		{
 			if (npc.getId() == VAMPIRIC_SOLDIER)

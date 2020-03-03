@@ -103,7 +103,6 @@ public abstract class ServerBasePacket
 	{
 		// if (this instanceof Init)
 		// writeD(0x00); //reserve for XOR initial key
-		
 		writeD(0x00); // reserve for checksum
 		
 		final int padding = _bao.size() % 8;
@@ -114,7 +113,6 @@ public abstract class ServerBasePacket
 				writeC(0x00);
 			}
 		}
-		
 		return _bao.toByteArray();
 	}
 	

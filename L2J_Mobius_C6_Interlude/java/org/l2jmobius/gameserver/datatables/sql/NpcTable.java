@@ -98,7 +98,6 @@ public class NpcTable
 			{
 				final int mobId = npcskills.getInt("npcid");
 				npcDat = _npcs.get(mobId);
-				
 				if (npcDat == null)
 				{
 					continue;
@@ -106,7 +105,6 @@ public class NpcTable
 				
 				final int skillId = npcskills.getInt("skillid");
 				final int level = npcskills.getInt("level");
-				
 				if ((npcDat.getRace() == null) && (skillId == 4416))
 				{
 					npcDat.setRace(level);
@@ -114,7 +112,6 @@ public class NpcTable
 				}
 				
 				npcSkill = SkillTable.getInstance().getInfo(skillId, level);
-				
 				if (npcSkill == null)
 				{
 					continue;
@@ -137,15 +134,12 @@ public class NpcTable
 			{
 				final PreparedStatement statement = con.prepareStatement("SELECT * FROM custom_droplist ORDER BY mobId, chance DESC");
 				final ResultSet dropData = statement.executeQuery();
-				
 				int cCount = 0;
 				
 				while (dropData.next())
 				{
 					final int mobId = dropData.getInt("mobId");
-					
 					final NpcTemplate npcDat = _npcs.get(mobId);
-					
 					if (npcDat == null)
 					{
 						LOGGER.warning("NPCTable: CUSTOM DROPLIST No npc correlating with id: " + mobId);
@@ -159,7 +153,6 @@ public class NpcTable
 					dropDat.setChance(dropData.getInt("chance"));
 					
 					final int category = dropData.getInt("category");
-					
 					npcDat.addDropData(dropDat, category);
 					cCount++;
 				}
@@ -183,9 +176,7 @@ public class NpcTable
 			while (dropData.next())
 			{
 				final int mobId = dropData.getInt("mobId");
-				
 				npcDat = _npcs.get(mobId);
-				
 				if (npcDat == null)
 				{
 					LOGGER.info("NPCTable: No npc correlating with id: " + mobId);
@@ -193,14 +184,12 @@ public class NpcTable
 				}
 				
 				dropDat = new DropData();
-				
 				dropDat.setItemId(dropData.getInt("itemId"));
 				dropDat.setMinDrop(dropData.getInt("min"));
 				dropDat.setMaxDrop(dropData.getInt("max"));
 				dropDat.setChance(dropData.getInt("chance"));
 				
 				final int category = dropData.getInt("category");
-				
 				npcDat.addDropData(dropDat, category);
 			}
 			
@@ -221,7 +210,6 @@ public class NpcTable
 			{
 				final int npcId = learndata.getInt("npc_id");
 				final int cId = learndata.getInt("class_id");
-				
 				final NpcTemplate npc = getTemplate(npcId);
 				if (npc == null)
 				{
@@ -258,7 +246,6 @@ public class NpcTable
 			while (minionData.next())
 			{
 				final int raidId = minionData.getInt("boss_id");
-				
 				npcDat = _npcs.get(raidId);
 				minionDat = new MinionData();
 				minionDat.setMinionId(minionData.getInt("minion_id"));
@@ -285,9 +272,7 @@ public class NpcTable
 		while (npcData.next())
 		{
 			final StatSet npcDat = new StatSet();
-			
 			final int id = npcData.getInt("id");
-			
 			npcDat.set("npcId", id);
 			npcDat.set("idTemplate", npcData.getInt("idTemplate"));
 			
@@ -381,11 +366,9 @@ public class NpcTable
 			
 			npcDat.set("level", level);
 			npcDat.set("jClass", npcData.getString("class"));
-			
 			npcDat.set("baseShldDef", 0);
 			npcDat.set("baseShldRate", 0);
 			npcDat.set("baseCritRate", 4);
-			
 			npcDat.set("name", npcData.getString("name"));
 			npcDat.set("serverSideName", npcData.getBoolean("serverSideName"));
 			npcDat.set("title", npcData.getString("title"));
@@ -398,7 +381,6 @@ public class NpcTable
 			
 			// BOSS POWER CHANGES
 			double multiValue = 1;
-			
 			if (diff >= 15) // means that there is level customization
 			{
 				multiValue = multiValue * (diff / 10);
@@ -495,7 +477,6 @@ public class NpcTable
 			npcDat.set("basePDef", npcData.getInt("pdef") * multiValue);
 			npcDat.set("baseMAtk", npcData.getInt("matk") * multiValue);
 			npcDat.set("baseMDef", npcData.getInt("mdef") * multiValue);
-			
 			npcDat.set("aggroRange", npcData.getInt("aggro"));
 			npcDat.set("rhand", npcData.getInt("rhand"));
 			npcDat.set("lhand", npcData.getInt("lhand"));
@@ -510,14 +491,10 @@ public class NpcTable
 			npcDat.safeSet("baseINT", npcData.getInt("int"), 0, BaseStat.MAX_STAT_VALUE, "Loading npc template id: " + npcData.getInt("idTemplate"));
 			npcDat.safeSet("baseWIT", npcData.getInt("wit"), 0, BaseStat.MAX_STAT_VALUE, "Loading npc template id: " + npcData.getInt("idTemplate"));
 			npcDat.safeSet("baseMEN", npcData.getInt("men"), 0, BaseStat.MAX_STAT_VALUE, "Loading npc template id: " + npcData.getInt("idTemplate"));
-			
 			npcDat.set("baseCpMax", 0);
-			
 			npcDat.set("factionId", npcData.getString("faction_id"));
 			npcDat.set("factionRange", npcData.getInt("faction_range"));
-			
 			npcDat.set("isUndead", npcData.getString("isUndead"));
-			
 			npcDat.set("absorb_level", npcData.getString("absorb_level"));
 			npcDat.set("absorb_type", npcData.getString("absorb_type"));
 			
@@ -525,7 +502,6 @@ public class NpcTable
 			template.addVulnerability(Stat.BOW_WPN_VULN, 1);
 			template.addVulnerability(Stat.BLUNT_WPN_VULN, 1);
 			template.addVulnerability(Stat.DAGGER_WPN_VULN, 1);
-			
 			_npcs.put(id, template);
 		}
 		
@@ -539,20 +515,16 @@ public class NpcTable
 			// save a copy of the old data
 			final NpcTemplate old = getTemplate(id);
 			final Map<Integer, Skill> skills = new HashMap<>();
-			
 			skills.putAll(old.getSkills());
 			
 			final List<DropCategory> categories = new ArrayList<>();
-			
 			if (old.getDropData() != null)
 			{
 				categories.addAll(old.getDropData());
 			}
 			
 			final List<ClassId> classIds = old.getTeachInfo();
-			
 			final List<MinionData> minions = new ArrayList<>();
-			
 			if (old.getMinionData() != null)
 			{
 				minions.addAll(old.getMinionData());
@@ -579,7 +551,6 @@ public class NpcTable
 			
 			// restore additional data from saved copy
 			final NpcTemplate created = getTemplate(id);
-			
 			for (Skill skill : skills.values())
 			{
 				created.addSkill(skill);
@@ -611,16 +582,13 @@ public class NpcTable
 		try (Connection con = DatabaseFactory.getConnection())
 		{
 			final Map<String, Object> set = npc.getSet();
-			
 			String name = "";
 			String values = "";
 			
 			final NpcTemplate old = getTemplate(npc.getInt("npcId"));
-			
 			for (Object obj : set.keySet())
 			{
 				name = (String) obj;
-				
 				if (!name.equalsIgnoreCase("npcId"))
 				{
 					if (values != "")
@@ -675,14 +643,12 @@ public class NpcTable
 				return npcTemplate;
 			}
 		}
-		
 		return null;
 	}
 	
 	public NpcTemplate[] getAllOfLevel(int lvl)
 	{
 		final List<NpcTemplate> list = new ArrayList<>();
-		
 		for (NpcTemplate t : _npcs.values())
 		{
 			if (t.getLevel() == lvl)
@@ -690,14 +656,12 @@ public class NpcTable
 				list.add(t);
 			}
 		}
-		
 		return list.toArray(new NpcTemplate[list.size()]);
 	}
 	
 	public NpcTemplate[] getAllMonstersOfLevel(int lvl)
 	{
 		final List<NpcTemplate> list = new ArrayList<>();
-		
 		for (NpcTemplate t : _npcs.values())
 		{
 			if ((t.getLevel() == lvl) && "Monster".equals(t.getType()))
@@ -705,14 +669,12 @@ public class NpcTable
 				list.add(t);
 			}
 		}
-		
 		return list.toArray(new NpcTemplate[list.size()]);
 	}
 	
 	public NpcTemplate[] getAllNpcStartingWith(String letter)
 	{
 		final List<NpcTemplate> list = new ArrayList<>();
-		
 		for (NpcTemplate t : _npcs.values())
 		{
 			if (t.getName().startsWith(letter) && "Npc".equals(t.getType()))
@@ -720,7 +682,6 @@ public class NpcTable
 				list.add(t);
 			}
 		}
-		
 		return list.toArray(new NpcTemplate[list.size()]);
 	}
 	

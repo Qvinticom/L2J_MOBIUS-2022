@@ -93,7 +93,6 @@ public class Q10315_ToThePrisonOfDarkness extends Quest
 		final QuestState qs1 = player.getQuestState(Q10307_TheCorruptedLeaderHisTruth.class.getSimpleName());
 		final QuestState qs2 = player.getQuestState(Q10311_PeacefulDaysAreOver.class.getSimpleName());
 		String htmltext = getNoQuestMsg(player);
-		
 		switch (qs.getState())
 		{
 			case State.CREATED:

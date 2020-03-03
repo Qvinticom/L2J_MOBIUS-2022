@@ -52,7 +52,6 @@ public class BlackMarketeerOfMammon extends AbstractNpcAI
 		{
 			final StringTokenizer st = new StringTokenizer(event, " ");
 			event = st.nextToken();
-			
 			if (!st.hasMoreElements())
 			{
 				return "31092-02.html";
@@ -66,7 +65,6 @@ public class BlackMarketeerOfMammon extends AbstractNpcAI
 			
 			final long count = Integer.parseInt(value);
 			final long AAcount = player.getAncientAdena();
-			
 			if (count < 1)
 			{
 				return "31092-02.html";
@@ -75,7 +73,6 @@ public class BlackMarketeerOfMammon extends AbstractNpcAI
 			if (count > AAcount)
 			{
 				return "31092-03.html";
-				
 			}
 			takeItems(player, Inventory.ANCIENT_ADENA_ID, count);
 			giveAdena(player, count, false);

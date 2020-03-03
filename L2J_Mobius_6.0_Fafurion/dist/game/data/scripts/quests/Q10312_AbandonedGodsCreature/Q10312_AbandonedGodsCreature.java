@@ -114,7 +114,6 @@ public class Q10312_AbandonedGodsCreature extends Quest
 	{
 		final QuestState qs = getQuestState(player, true);
 		String htmltext = getNoQuestMsg(player);
-		
 		if (qs.isCreated())
 		{
 			htmltext = "33031-01.htm";

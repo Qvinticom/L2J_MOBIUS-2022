@@ -232,12 +232,10 @@ public class Skill implements IIdentifiable
 		_hpConsume = set.getInt("hpConsume", 0);
 		_itemConsumeCount = set.getInt("itemConsumeCount", 0);
 		_itemConsumeId = set.getInt("itemConsumeId", 0);
-		
 		_castRange = set.getInt("castRange", -1);
 		_effectRange = set.getInt("effectRange", -1);
 		_abnormalLvl = set.getInt("abnormalLvl", 0);
 		_abnormalType = set.getEnum("abnormalType", AbnormalType.class, AbnormalType.NONE);
-		
 		int abnormalTime = set.getInt("abnormalTime", 0);
 		if (Config.ENABLE_MODIFY_SKILL_DURATION && Config.SKILL_DURATION_LIST.containsKey(_id))
 		{
@@ -254,19 +252,15 @@ public class Skill implements IIdentifiable
 		_abnormalTime = abnormalTime;
 		_isAbnormalInstant = set.getBoolean("abnormalInstant", false);
 		parseAbnormalVisualEffect(set.getString("abnormalVisualEffect", null));
-		
 		_attribute = set.getString("attribute", "");
-		
 		_stayAfterDeath = set.getBoolean("stayAfterDeath", false);
 		_stayOnSubclassChange = set.getBoolean("stayOnSubclassChange", true);
-		
 		_hitTime = set.getInt("hitTime", 0);
 		_coolTime = set.getInt("coolTime", 0);
 		_isDebuff = set.getBoolean("isDebuff", false);
 		_isRecoveryHerb = set.getBoolean("isRecoveryHerb", false);
 		_feed = set.getInt("feed", 0);
 		_reuseHashCode = SkillData.getSkillHashCode(_id, _level);
-		
 		if (Config.ENABLE_MODIFY_SKILL_REUSE && Config.SKILL_REUSE_LIST.containsKey(_id))
 		{
 			_reuseDelay = Config.SKILL_REUSE_LIST.get(_id);
@@ -303,44 +297,31 @@ public class Skill implements IIdentifiable
 		_minChance = set.getInt("minChance", Config.MIN_ABNORMAL_STATE_SUCCESS_RATE);
 		_maxChance = set.getInt("maxChance", Config.MAX_ABNORMAL_STATE_SUCCESS_RATE);
 		_ignoreShield = set.getBoolean("ignoreShld", false);
-		
 		_nextActionIsAttack = set.getBoolean("nextActionAttack", false);
-		
 		_removedOnAnyActionExceptMove = set.getBoolean("removedOnAnyActionExceptMove", false);
 		_removedOnDamage = set.getBoolean("removedOnDamage", false);
-		
 		_blockedInOlympiad = set.getBoolean("blockedInOlympiad", false);
-		
 		_element = set.getByte("element", (byte) -1);
 		_elementPower = set.getInt("elementPower", 0);
-		
 		_basicProperty = set.getEnum("basicProperty", BaseStat.class, BaseStat.NONE);
-		
 		_overhit = set.getBoolean("overHit", false);
 		_isSuicideAttack = set.getBoolean("isSuicideAttack", false);
-		
 		_minPledgeClass = set.getInt("minPledgeClass", 0);
 		_chargeConsume = set.getInt("chargeConsume", 0);
-		
 		_soulMaxConsume = set.getInt("soulMaxConsumeCount", 0);
 		_blowChance = set.getInt("blowChance", 0);
-		
 		_isHeroSkill = SkillTreeData.getInstance().isHeroSkill(_id, _level);
 		_isGMSkill = SkillTreeData.getInstance().isGMSkill(_id, _level);
 		_isSevenSigns = (_id > 4360) && (_id < 4367);
 		_isClanSkill = SkillTreeData.getInstance().isClanSkill(_id, _level);
-		
 		_baseCritRate = set.getInt("baseCritRate", 0);
 		_directHpDmg = set.getBoolean("dmgDirectlyToHp", false);
 		_isTriggeredSkill = set.getBoolean("isTriggeredSkill", false);
 		_effectPoint = set.getInt("effectPoint", 0);
-		
 		_flyType = set.getEnum("flyType", FlyType.class, null);
 		_flyRadius = set.getInt("flyRadius", 0);
 		_flyCourse = set.getFloat("flyCourse", 0);
-		
 		_canBeDispeled = set.getBoolean("canBeDispeled", true);
-		
 		_excludedFromCheck = set.getBoolean("excludedFromCheck", false);
 		_simultaneousCast = set.getBoolean("simultaneousCast", false);
 		
@@ -356,11 +337,9 @@ public class Skill implements IIdentifiable
 		}
 		
 		_icon = set.getString("icon", "icon.skill0000");
-		
 		_channelingSkillId = set.getInt("channelingSkillId", 0);
 		_channelingTickInterval = set.getInt("channelingTickInterval", 2) * 1000;
 		_channelingTickInitialDelay = set.getInt("channelingTickInitialDelay", _channelingTickInterval / 1000) * 1000;
-		
 		_isPvPOnly = set.getBoolean("isPvPOnly", false);
 	}
 	
@@ -1034,7 +1013,6 @@ public class Skill implements IIdentifiable
 		{
 			target = (Creature) objTarget;
 		}
-		
 		return getTargetList(creature, onlyFirst, target);
 	}
 	
@@ -1354,9 +1332,7 @@ public class Skill implements IIdentifiable
 			
 			final EffectScope pvpOrPveEffectScope = effector.isPlayable() && effected.isAttackable() ? EffectScope.PVE : effector.isPlayable() && effected.isPlayable() ? EffectScope.PVP : null;
 			applyEffectScope(pvpOrPveEffectScope, info, instant, addContinuousEffects);
-			
 			applyEffectScope(EffectScope.CHANNELING, info, instant, addContinuousEffects);
-			
 			if (addContinuousEffects)
 			{
 				effected.getEffectList().add(info);
@@ -1482,7 +1458,6 @@ public class Skill implements IIdentifiable
 						
 						final EffectScope pvpOrPveEffectScope = caster.isPlayable() && target.isAttackable() ? EffectScope.PVE : caster.isPlayable() && target.isPlayable() ? EffectScope.PVP : null;
 						applyEffectScope(pvpOrPveEffectScope, info, true, false);
-						
 						applyEffectScope(EffectScope.CHANNELING, info, true, false);
 					}
 					else

@@ -124,7 +124,6 @@ public class Monastery extends Quest
 				for (Object obj : characters)
 				{
 					final Playable target = (Playable) (obj instanceof PlayerInstance ? obj : ((Summon) obj).getOwner());
-					
 					if ((target.getActiveWeaponInstance() == null) || ((target instanceof PlayerInstance) && ((PlayerInstance) target).isSilentMoving()) || ((target instanceof Summon) && ((Summon) target).getOwner().isSilentMoving()))
 					{
 						continue;

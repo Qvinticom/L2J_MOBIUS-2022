@@ -74,7 +74,6 @@ public class ObservationInstance extends FolkInstance
 			final int x = Integer.parseInt(st.nextToken()); // X location
 			final int y = Integer.parseInt(st.nextToken()); // Y location
 			final int z = Integer.parseInt(st.nextToken()); // Z location
-			
 			if (SiegeManager.getInstance().getSiege(x, y, z) != null)
 			{
 				doObserve(player, command);
@@ -106,7 +105,6 @@ public class ObservationInstance extends FolkInstance
 		{
 			pom = npcId + "-" + value;
 		}
-		
 		return "data/html/observation/" + pom + ".htm";
 	}
 	
@@ -123,7 +121,6 @@ public class ObservationInstance extends FolkInstance
 		final int y = Integer.parseInt(st.nextToken());
 		final int z = Integer.parseInt(st.nextToken());
 		final int cost = Integer.parseInt(st.nextToken());
-		
 		if (player.reduceAdena("Broadcast", cost, this, true))
 		{
 			// enter mode

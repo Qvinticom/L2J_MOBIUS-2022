@@ -48,12 +48,10 @@ public class AdminKill implements IAdminCommandHandler
 		{
 			final StringTokenizer st = new StringTokenizer(command, " ");
 			st.nextToken(); // skip command
-			
 			if (st.hasMoreTokens())
 			{
 				final String firstParam = st.nextToken();
 				final PlayerInstance plyr = World.getInstance().getPlayer(firstParam);
-				
 				if (plyr != null)
 				{
 					if (st.hasMoreTokens())
@@ -61,7 +59,6 @@ public class AdminKill implements IAdminCommandHandler
 						try
 						{
 							final int radius = Integer.parseInt(st.nextToken());
-							
 							for (Creature knownChar : plyr.getKnownList().getKnownCharactersInRadius(radius))
 							{
 								if ((knownChar == null) || (knownChar instanceof ControllableMobInstance) || knownChar.equals(activeChar))
@@ -73,7 +70,6 @@ public class AdminKill implements IAdminCommandHandler
 							}
 							
 							BuilderUtil.sendSysMessage(activeChar, "Killed all characters within a " + radius + " unit radius.");
-							
 							return true;
 						}
 						catch (NumberFormatException e)
@@ -89,7 +85,6 @@ public class AdminKill implements IAdminCommandHandler
 					try
 					{
 						final int radius = Integer.parseInt(firstParam);
-						
 						for (Creature knownChar : activeChar.getKnownList().getKnownCharactersInRadius(radius))
 						{
 							if ((knownChar == null) || (knownChar instanceof ControllableMobInstance) || knownChar.equals(activeChar))
@@ -101,7 +96,6 @@ public class AdminKill implements IAdminCommandHandler
 						}
 						
 						BuilderUtil.sendSysMessage(activeChar, "Killed all characters within a " + radius + " unit radius.");
-						
 						return true;
 					}
 					catch (NumberFormatException e)
@@ -114,7 +108,6 @@ public class AdminKill implements IAdminCommandHandler
 			else
 			{
 				final WorldObject obj = activeChar.getTarget();
-				
 				if ((obj == null) || (obj instanceof ControllableMobInstance) || !(obj instanceof Creature))
 				{
 					activeChar.sendPacket(SystemMessageId.INVALID_TARGET);

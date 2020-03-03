@@ -53,7 +53,6 @@ public class PetitionManager
 	public void clearCompletedPetitions()
 	{
 		final int numPetitions = _pendingPetitions.size();
-		
 		_completedPetitions.clear();
 		LOGGER.info(getClass().getSimpleName() + ": Completed petition data cleared. " + numPetitions + " petitions removed.");
 	}
@@ -61,7 +60,6 @@ public class PetitionManager
 	public void clearPendingPetitions()
 	{
 		final int numPetitions = _pendingPetitions.size();
-		
 		_pendingPetitions.clear();
 		LOGGER.info(getClass().getSimpleName() + ": Pending petition queue cleared. " + numPetitions + " petitions removed.");
 	}
@@ -74,7 +72,6 @@ public class PetitionManager
 		}
 		
 		final Petition currPetition = _pendingPetitions.get(petitionId);
-		
 		if (currPetition.getResponder() != null)
 		{
 			return false;
@@ -189,7 +186,6 @@ public class PetitionManager
 		}
 		
 		int petitionCount = 0;
-		
 		for (Petition currPetition : _pendingPetitions.values())
 		{
 			if (currPetition == null)
@@ -258,7 +254,6 @@ public class PetitionManager
 				}
 			}
 		}
-		
 		return false;
 	}
 	
@@ -301,7 +296,6 @@ public class PetitionManager
 		}
 		
 		final Petition currPetition = _pendingPetitions.get(petitionId);
-		
 		if (currPetition.getResponder() != null)
 		{
 			return false;
@@ -315,9 +309,7 @@ public class PetitionManager
 	{
 		// if (!isPlayerInConsultation(player))
 		// return false;
-		
 		CreatureSay cs;
-		
 		for (Petition currPetition : _pendingPetitions.values())
 		{
 			if (currPetition == null)
@@ -355,7 +347,6 @@ public class PetitionManager
 		htmlContent.append("<html><body><center><table width=270><tr><td width=45><button value=\"Main\" action=\"bypass -h admin_admin\" width=45 height=21 back=\"L2UI_ct1.button_df\" fore=\"L2UI_ct1.button_df\"></td><td width=180><center>Petition Menu</center></td><td width=45><button value=\"Back\" action=\"bypass -h admin_admin7\" width=45 height=21 back=\"L2UI_ct1.button_df\" fore=\"L2UI_ct1.button_df\"></td></tr></table><br><table width=\"270\"><tr><td><table width=\"270\"><tr><td><button value=\"Reset\" action=\"bypass -h admin_reset_petitions\" width=\"80\" height=\"21\" back=\"L2UI_ct1.button_df\" fore=\"L2UI_ct1.button_df\"></td><td align=right><button value=\"Refresh\" action=\"bypass -h admin_view_petitions\" width=\"80\" height=\"21\" back=\"L2UI_ct1.button_df\" fore=\"L2UI_ct1.button_df\"></td></tr></table><br></td></tr>");
 		
 		final SimpleDateFormat dateFormat = new SimpleDateFormat("yyyy-MM-dd HH:mm");
-		
 		if (_pendingPetitions.isEmpty())
 		{
 			htmlContent.append("<tr><td>There are no currently pending petitions.</td></tr>");
@@ -412,7 +403,6 @@ public class PetitionManager
 		// Notify all GMs that a new petition has been submitted.
 		final String msgContent = petitioner.getName() + " has submitted a new petition."; // (ID: " + newPetitionId + ").";
 		AdminData.getInstance().broadcastToGMs(new CreatureSay(petitioner, ChatType.HERO_VOICE, "Petition System", msgContent));
-		
 		return newPetitionId;
 	}
 	
@@ -425,7 +415,6 @@ public class PetitionManager
 		
 		final Petition currPetition = _pendingPetitions.get(petitionId);
 		final SimpleDateFormat dateFormat = new SimpleDateFormat("yyyy-MM-dd HH:mm");
-		
 		final NpcHtmlMessage html = new NpcHtmlMessage();
 		html.setFile(player, "data/html/admin/petition.htm");
 		html.replace("%petition%", String.valueOf(currPetition.getId()));
@@ -434,7 +423,6 @@ public class PetitionManager
 		html.replace("%petitioner%", currPetition.getPetitioner().getName());
 		html.replace("%online%", currPetition.getPetitioner().isOnline() ? "00FF00" : "999999");
 		html.replace("%text%", currPetition.getContent());
-		
 		player.sendPacket(html);
 	}
 	

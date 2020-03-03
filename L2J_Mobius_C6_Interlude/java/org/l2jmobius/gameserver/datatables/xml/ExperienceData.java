@@ -72,10 +72,8 @@ public class ExperienceData
 		
 		final Node table = doc.getFirstChild();
 		final NamedNodeMap tableAttr = table.getAttributes();
-		
 		MAX_LEVEL = (byte) (Byte.parseByte(tableAttr.getNamedItem("maxLevel").getNodeValue()) + 1);
 		MAX_PET_LEVEL = (byte) (Byte.parseByte(tableAttr.getNamedItem("maxPetLevel").getNodeValue()) + 1);
-		
 		_expTable.clear();
 		
 		NamedNodeMap attrs;

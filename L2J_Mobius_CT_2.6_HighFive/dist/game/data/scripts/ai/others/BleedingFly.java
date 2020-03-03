@@ -102,7 +102,6 @@ public class BleedingFly extends AbstractNpcAI
 				addSkillCastDesire(npc, npc, SUMMON_PARASITE_LEECH, 99999);
 				addSpawn(PARASITIC_LEECH, npc.getX() + getRandom(150), npc.getY() + getRandom(150), npc.getZ(), npc.getHeading(), false, 0);
 				addSpawn(PARASITIC_LEECH, npc.getX() + getRandom(150), npc.getY() + getRandom(150), npc.getZ(), npc.getHeading(), false, 0);
-				
 				if (npc.getVariables().getBoolean(MID_HP_FLAG, false))
 				{
 					startQuestTimer(TIMER_MID_HP, 140000, npc, null);
@@ -116,7 +115,6 @@ public class BleedingFly extends AbstractNpcAI
 			addSkillCastDesire(npc, npc, NPC_ACUMEN_LVL_3, 99999);
 			addSpawn(PARASITIC_LEECH, npc.getX() + getRandom(150), npc.getY() + getRandom(150), npc.getZ(), npc.getHeading(), false, 0);
 			addSpawn(PARASITIC_LEECH, npc.getX() + getRandom(150), npc.getY() + getRandom(150), npc.getZ(), npc.getHeading(), false, 0);
-			
 			if (npc.getVariables().getBoolean(LOW_HP_FLAG, false))
 			{
 				startQuestTimer(TIMER_LOW_HP, 80000, npc, null);

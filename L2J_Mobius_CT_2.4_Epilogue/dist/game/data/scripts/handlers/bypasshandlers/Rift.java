@@ -57,7 +57,6 @@ public class Rift implements IBypassHandler
 		else
 		{
 			final boolean inRift = player.isInParty() && player.getParty().isInDimensionalRift();
-			
 			if (command.toLowerCase().startsWith(COMMANDS[1])) // ChangeRiftRoom
 			{
 				if (inRift)

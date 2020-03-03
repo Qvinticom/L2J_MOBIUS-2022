@@ -36,7 +36,6 @@ public class RequestPledgeInfo extends GameClientPacket
 	{
 		final PlayerInstance player = getClient().getPlayer();
 		final Clan clan = ClanTable.getInstance().getClan(clanId);
-		
 		if (player == null)
 		{
 			return;

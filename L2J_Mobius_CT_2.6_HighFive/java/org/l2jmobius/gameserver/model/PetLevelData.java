@@ -224,7 +224,6 @@ public class PetLevelData
 				return _fastFlySpeedOnRide;
 			}
 		}
-		
 		return 0;
 	}
 }

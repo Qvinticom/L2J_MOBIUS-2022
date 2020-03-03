@@ -165,7 +165,6 @@ public class AdminOlympiad implements IAdminCommandHandler
 						final int oldpoints = Olympiad.getInstance().getNoblePoints(player);
 						final int points = Math.max(oldpoints - val, 0);
 						playerStat.set(Olympiad.POINTS, points);
-						
 						BuilderUtil.sendSysMessage(activeChar, "Player " + player.getName() + " now has " + points + " Olympiad points.");
 					}
 					else

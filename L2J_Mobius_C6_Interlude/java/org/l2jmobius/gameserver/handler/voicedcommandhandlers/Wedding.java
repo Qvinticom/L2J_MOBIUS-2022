@@ -87,7 +87,6 @@ public class Wedding implements IVoicedCommandHandler
 		final int partnerId = activeChar.getPartnerId();
 		final int coupleId = activeChar.getCoupleId();
 		int adenaAmount = 0;
-		
 		if (activeChar.isMarried())
 		{
 			activeChar.sendMessage("You are now divorced.");
@@ -101,7 +100,6 @@ public class Wedding implements IVoicedCommandHandler
 		
 		PlayerInstance partner;
 		partner = (PlayerInstance) World.getInstance().findObject(partnerId);
-		
 		if (partner != null)
 		{
 			partner.setPartnerId(0);
@@ -147,14 +145,12 @@ public class Wedding implements IVoicedCommandHandler
 		if (activeChar.getPartnerId() != 0)
 		{
 			activeChar.sendMessage("You are already engaged.");
-			
 			if (Config.WEDDING_PUNISH_INFIDELITY)
 			{
 				activeChar.startAbnormalEffect((short) 0x2000); // give player a Big Head
 				// lets recycle the sevensigns debuffs
 				int skillId;
 				int skillLevel = 1;
-				
 				if (activeChar.getLevel() > 40)
 				{
 					skillLevel = 2;
@@ -378,10 +374,8 @@ public class Wedding implements IVoicedCommandHandler
 		}
 		
 		final int teleportTimer = Config.WEDDING_TELEPORT_DURATION * 1000;
-		
 		activeChar.sendMessage("After " + (teleportTimer / 60000) + " min. you will be teleported to your fiance.");
 		activeChar.getInventory().reduceAdena("Wedding", Config.WEDDING_TELEPORT_PRICE, activeChar, null);
-		
 		activeChar.getAI().setIntention(CtrlIntention.AI_INTENTION_IDLE);
 		// SoE Animation section
 		activeChar.setTarget(activeChar);
@@ -395,7 +389,6 @@ public class Wedding implements IVoicedCommandHandler
 		// continue execution later
 		activeChar.setSkillCast(ThreadPool.schedule(ef, teleportTimer));
 		activeChar.setSkillCastEndTime(10 + GameTimeController.getGameTicks() + (teleportTimer / GameTimeController.MILLIS_IN_TICK));
-		
 		return true;
 	}
 	

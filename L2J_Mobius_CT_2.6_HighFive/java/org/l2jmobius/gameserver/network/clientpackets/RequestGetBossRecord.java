@@ -55,7 +55,6 @@ public class RequestGetBossRecord implements IClientIncomingPacket
 		
 		final int points = RaidBossPointsManager.getInstance().getPointsByOwnerId(player.getObjectId());
 		final int ranking = RaidBossPointsManager.getInstance().calculateRanking(player.getObjectId());
-		
 		final Map<Integer, Integer> list = RaidBossPointsManager.getInstance().getList(player);
 		
 		// trigger packet

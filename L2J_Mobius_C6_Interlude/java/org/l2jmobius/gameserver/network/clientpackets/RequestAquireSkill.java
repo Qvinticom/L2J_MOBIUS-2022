@@ -63,21 +63,18 @@ public class RequestAquireSkill extends GameClientPacket
 	protected void runImpl()
 	{
 		final PlayerInstance player = getClient().getPlayer();
-		
 		if (player == null)
 		{
 			return;
 		}
 		
 		final FolkInstance trainer = player.getLastFolkNPC();
-		
 		if (trainer == null)
 		{
 			return;
 		}
 		
 		final int npcid = trainer.getNpcId();
-		
 		if (!player.isInsideRadius(trainer, NpcInstance.INTERACTION_DISTANCE, false, false) && !player.isGM())
 		{
 			return;
@@ -95,14 +92,11 @@ public class RequestAquireSkill extends GameClientPacket
 		}
 		
 		final Skill skill = SkillTable.getInstance().getInfo(_id, _level);
-		
 		int counts = 0;
 		int requiredSp = 10000000;
-		
 		if (_skillType == 0)
 		{
 			final SkillLearn[] skills = SkillTreeTable.getInstance().getAvailableSkills(player, player.getSkillLearningClassId());
-			
 			for (SkillLearn s : skills)
 			{
 				final Skill sk = SkillTable.getInstance().getInfo(s.getId(), s.getLevel());
@@ -138,7 +132,6 @@ public class RequestAquireSkill extends GameClientPacket
 				if (spbId > -1)
 				{
 					final ItemInstance spb = player.getInventory().getItemByItemId(spbId);
-					
 					if (spb == null)
 					{
 						// Haven't spellbook
@@ -162,11 +155,9 @@ public class RequestAquireSkill extends GameClientPacket
 			int costcount = 0;
 			// Skill Learn bug Fix
 			final SkillLearn[] skillsc = SkillTreeTable.getInstance().getAvailableSkills(player);
-			
 			for (SkillLearn s : skillsc)
 			{
 				final Skill sk = SkillTable.getInstance().getInfo(s.getId(), s.getLevel());
-				
 				if ((sk == null) || (sk != skill))
 				{
 					continue;
@@ -218,11 +209,9 @@ public class RequestAquireSkill extends GameClientPacket
 			int repCost = 100000000;
 			// Skill Learn bug Fix
 			final PledgeSkillLearn[] skills = SkillTreeTable.getInstance().getAvailablePledgeSkills(player);
-			
 			for (PledgeSkillLearn s : skills)
 			{
 				final Skill sk = SkillTable.getInstance().getInfo(s.getId(), s.getLevel());
-				
 				if ((sk == null) || (sk != skill))
 				{
 					continue;
@@ -273,7 +262,6 @@ public class RequestAquireSkill extends GameClientPacket
 			player.sendPacket(sm);
 			
 			player.getClan().broadcastToOnlineMembers(new PledgeSkillList(player.getClan()));
-			
 			for (PlayerInstance member : player.getClan().getOnlineMembers())
 			{
 				member.sendSkillList();
@@ -311,7 +299,6 @@ public class RequestAquireSkill extends GameClientPacket
 		if (_level > 1)
 		{
 			final ShortCut[] allShortCuts = player.getAllShortCuts();
-			
 			for (ShortCut sc : allShortCuts)
 			{
 				if ((sc.getId() == _id) && (sc.getType() == ShortCut.TYPE_SKILL))

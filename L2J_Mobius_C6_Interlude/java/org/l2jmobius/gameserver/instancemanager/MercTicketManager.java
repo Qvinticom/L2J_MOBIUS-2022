@@ -679,10 +679,8 @@ public class MercTicketManager
 		{
 			PreparedStatement statement;
 			ResultSet rs;
-			
 			statement = con.prepareStatement("SELECT * FROM castle_siege_guards Where isHired = 1");
 			rs = statement.executeQuery();
-			
 			int npcId;
 			int itemId;
 			int x;
@@ -822,7 +820,6 @@ public class MercTicketManager
 		final int y = player.getY();
 		final int z = player.getZ();
 		final int heading = player.getHeading();
-		
 		final Castle castle = CastleManager.getInstance().getCastle(player);
 		if (castle == null)
 		{
@@ -863,7 +860,6 @@ public class MercTicketManager
 			npc.setCurrentHpMp(npc.getMaxHp(), npc.getMaxMp());
 			npc.setDecayed(false);
 			npc.spawnMe(x, y, (z + 20));
-			
 			if ((messages != null) && (messages.length > 0))
 			{
 				AutoChatHandler.getInstance().registerChat(npc, messages, chatDelay);
@@ -921,7 +917,6 @@ public class MercTicketManager
 		}
 		// find the castle where this item is
 		final Castle castle = CastleManager.getInstance().getCastleById(getTicketCastleId(itemId));
-		
 		if ((npcId > 0) && (castle != null))
 		{
 			new SiegeGuardManager(castle).removeMerc(npcId, item.getX(), item.getY(), item.getZ());

@@ -51,7 +51,6 @@ public abstract class MatchingRoom implements IIdentifiable
 		_maxLvl = maxlvl;
 		_maxCount = maxmem;
 		_leader = leader;
-		
 		addMember(_leader);
 		onRoomCreation(leader);
 	}
@@ -68,7 +67,6 @@ public abstract class MatchingRoom implements IIdentifiable
 				}
 			}
 		}
-		
 		return _members;
 	}
 	
@@ -90,7 +88,6 @@ public abstract class MatchingRoom implements IIdentifiable
 	public void deleteMember(PlayerInstance player, boolean kicked)
 	{
 		boolean leaderChanged = false;
-		
 		if (player == _leader)
 		{
 			if (getMembers().isEmpty())

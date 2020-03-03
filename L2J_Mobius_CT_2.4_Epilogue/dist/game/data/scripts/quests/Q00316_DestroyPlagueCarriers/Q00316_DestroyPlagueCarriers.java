@@ -133,7 +133,6 @@ public class Q00316_DestroyPlagueCarriers extends Quest
 	{
 		final QuestState qs = getQuestState(player, true);
 		String htmltext = getNoQuestMsg(player);
-		
 		if (qs.isCreated())
 		{
 			if (player.getRace() != Race.ELF)

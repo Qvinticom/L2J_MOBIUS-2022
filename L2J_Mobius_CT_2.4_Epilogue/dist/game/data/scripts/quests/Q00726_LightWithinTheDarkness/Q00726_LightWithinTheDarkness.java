@@ -130,7 +130,6 @@ public class Q00726_LightWithinTheDarkness extends Quest
 		}
 		
 		final String htmltext = event;
-		
 		if (event.equalsIgnoreCase("FortWarden-04.htm"))
 		{
 			qs.set("kanadis", "0");
@@ -161,7 +160,6 @@ public class Q00726_LightWithinTheDarkness extends Quest
 		final QuestState qs2 = player.getQuestState(Q00727_HopeWithinTheDarkness.class.getSimpleName());
 		final String ret = checkFortCondition(player, npc, false);
 		String htmltext = getNoQuestMsg(player);
-		
 		if (ret != null)
 		{
 			return ret;
@@ -217,7 +215,6 @@ public class Q00726_LightWithinTheDarkness extends Quest
 		if (tmpworld instanceof PAWORLD)
 		{
 			final PAWORLD world = (PAWORLD) tmpworld;
-			
 			for (PlayerInstance partymember : party.getMembers())
 			{
 				final QuestState qs = partymember.getQuestState(getName());
@@ -272,7 +269,6 @@ public class Q00726_LightWithinTheDarkness extends Quest
 		dungeon.setReEnterTime(System.currentTimeMillis() + 14400000);
 		InstanceManager.getInstance().addWorld(world);
 		ThreadPool.schedule(new spawnNpcs((PAWORLD) world), 10000);
-		
 		for (PlayerInstance partyMember : party.getMembers())
 		{
 			teleportPlayer(partyMember, coords, world.getInstanceId());

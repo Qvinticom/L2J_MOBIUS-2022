@@ -102,7 +102,6 @@ public class MultisellData implements IXmlReader
 						final List<ItemChanceHolder> ingredients = new ArrayList<>(1);
 						final List<ItemChanceHolder> products = new ArrayList<>(1);
 						final MultisellEntryHolder entry = new MultisellEntryHolder(ingredients, products);
-						
 						for (Node d = itemNode.getFirstChild(); d != null; d = d.getNextSibling())
 						{
 							if ("ingredient".equalsIgnoreCase(d.getNodeName()))
@@ -112,7 +111,6 @@ public class MultisellData implements IXmlReader
 								final byte enchantmentLevel = parseByte(d.getAttributes(), "enchantmentLevel", (byte) 0);
 								final Boolean maintainIngredient = parseBoolean(d.getAttributes(), "maintainIngredient", false);
 								final ItemChanceHolder ingredient = new ItemChanceHolder(id, 0, count, enchantmentLevel, maintainIngredient);
-								
 								if (itemExists(ingredient))
 								{
 									ingredients.add(ingredient);
@@ -197,7 +195,6 @@ public class MultisellData implements IXmlReader
 				
 				set.set("listId", listId);
 				set.set("entries", entries);
-				
 				_multisells.put(listId, new MultisellListHolder(set));
 			});
 		}
@@ -277,7 +274,6 @@ public class MultisellData implements IXmlReader
 			index += PAGE_SIZE;
 		}
 		while (index < list.getEntries().size());
-		
 		player.setMultiSell(list);
 	}
 	

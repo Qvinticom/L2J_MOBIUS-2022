@@ -207,7 +207,6 @@ public abstract class ClanHall
 		_desc = set.getString("desc");
 		_location = set.getString("location");
 		_functions = new ConcurrentHashMap<>();
-		
 		if (_ownerId <= 0)
 		{
 			return;

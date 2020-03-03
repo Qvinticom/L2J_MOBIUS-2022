@@ -121,7 +121,6 @@ public class IceQueensCastleBattle extends AbstractInstance
 		new Location(114024, -112278, -11210),
 		new Location(113865, -112435, -11210),
 		new Location(113865, -112276, -11210),
-	
 	};
 	private static final Location[] STATUES_LOC =
 	{
@@ -307,7 +306,6 @@ public class IceQueensCastleBattle extends AbstractInstance
 						world.setParameter("canSpawnMobs", true);
 						notifyEvent("START_SPAWN", controller, null);
 						manageScreenMsg(world, NpcStringId.BEGIN_STAGE_2);
-						
 						if (params.getBoolean("isHardCore", false))
 						{
 							startQuestTimer("STAGE_2_FAILED", 360000, controller, null);
@@ -336,7 +334,6 @@ public class IceQueensCastleBattle extends AbstractInstance
 						
 						final RaidBossInstance glakias = (RaidBossInstance) addSpawn((isHardMode ? GLAKIAS_HARD : GLAKIAS_EASY), GLAKIAS_SPAWN, false, 0, true, world.getInstanceId());
 						startQuestTimer("LEADER_DELAY", 5000, glakias, null);
-						
 						if (isHardMode)
 						{
 							startQuestTimer("SHOW_GLAKIAS_TIMER", 3000, controller, null);
@@ -385,7 +382,6 @@ public class IceQueensCastleBattle extends AbstractInstance
 						startQuestTimer("START_MOVE", 10000, controller, null);
 						startQuestTimer("CAST_BLIZZARD", 50000, controller, null);
 						manageScreenMsg(world, NpcStringId.BEGIN_STAGE_3);
-						
 						if (isHardMode)
 						{
 							frey.doCast(FREYA_ANGER.getSkill());
@@ -435,7 +431,6 @@ public class IceQueensCastleBattle extends AbstractInstance
 						
 						final int time = (isHardMode ? getRandom(35, 40) : getRandom(55, 60)) * 1000;
 						startQuestTimer("CAST_BLIZZARD", time, controller, null);
-						
 						for (Npc minion : world.getNpcs(BREATH, GLACIER, KNIGHT_EASY, KNIGHT_HARD))
 						{
 							if ((minion != null) && !minion.isDead() && !minion.isInCombat())
@@ -575,7 +570,6 @@ public class IceQueensCastleBattle extends AbstractInstance
 					case "BLIZZARD":
 					{
 						npc.getVariables().set("SUICIDE_COUNT", npc.getVariables().getInt("SUICIDE_COUNT") + 1);
-						
 						if (npc.getVariables().getInt("SUICIDE_ON") == 0)
 						{
 							if (npc.getVariables().getInt("SUICIDE_COUNT") == 2)
@@ -796,7 +790,6 @@ public class IceQueensCastleBattle extends AbstractInstance
 						
 						final Creature mostHated = ((Attackable) npc).getMostHated();
 						final boolean canReachMostHated = (mostHated != null) && !mostHated.isDead() && (npc.calculateDistance3D(mostHated) <= 800);
-						
 						if (getRandom(10000) < 3333)
 						{
 							if (getRandomBoolean())
@@ -880,7 +873,6 @@ public class IceQueensCastleBattle extends AbstractInstance
 					
 					final Creature mostHated = ((Attackable) npc).getMostHated();
 					final boolean canReachMostHated = (mostHated != null) && !mostHated.isDead() && (npc.calculateDistance3D(mostHated) <= 800);
-					
 					if (getRandom(10000) < 3333)
 					{
 						if (getRandomBoolean())
@@ -991,7 +983,6 @@ public class IceQueensCastleBattle extends AbstractInstance
 					{
 						final Creature mostHated = ((Attackable) npc).getMostHated();
 						final boolean canReachMostHated = (mostHated != null) && !mostHated.isDead() && (npc.calculateDistance3D(mostHated) < 1000);
-						
 						if (npc.getVariables().getInt("TIMER_ON") == 0)
 						{
 							npc.getVariables().set("TIMER_ON", 1);
@@ -1151,7 +1142,6 @@ public class IceQueensCastleBattle extends AbstractInstance
 					final Npc spawnedBy = npc.getVariables().getObject("SPAWNED_NPC", Npc.class);
 					final NpcVariables var = controller.getVariables();
 					int knightCount = var.getInt("KNIGHT_COUNT");
-					
 					if ((var.getInt("FREYA_MOVE") == 0) && world.isStatus(1))
 					{
 						var.set("FREYA_MOVE", 1);
@@ -1168,7 +1158,6 @@ public class IceQueensCastleBattle extends AbstractInstance
 					{
 						knightCount++;
 						var.set("KNIGHT_COUNT", knightCount);
-						
 						if (knightCount == 10)
 						{
 							notifyEvent("STAGE_2_MOVIE", controller, null);
@@ -1255,7 +1244,6 @@ public class IceQueensCastleBattle extends AbstractInstance
 	{
 		final Party party = player.getParty();
 		final CommandChannel channel = party != null ? party.getCommandChannel() : null;
-		
 		if (player.canOverrideCond(PlayerCondOverride.INSTANCE_CONDITIONS))
 		{
 			return true;

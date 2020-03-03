@@ -49,7 +49,6 @@ public class NevitSystem implements IUniqueId
 	public NevitSystem(PlayerInstance player)
 	{
 		_player = player;
-		
 		if (Config.NEVIT_ENABLED)
 		{
 			player.addListener(new ConsumerEventListener(player, EventType.ON_PLAYER_LOGIN, (OnPlayerLogin event) -> onPlayerLogin(event), this));
@@ -75,12 +74,10 @@ public class NevitSystem implements IUniqueId
 		// Send Packets
 		_player.sendPacket(new ExNevitAdventPointInfoPacket(getAdventPoints()));
 		_player.sendPacket(new ExNevitAdventTimeChange(getAdventTime(), true));
-		
 		startNevitEffect(_player.getVariables().getInt("nevit_b", 0));
 		
 		// Set percent
 		final int percent = calcPercent(_player.getVariables().getInt("hunting_points", 0));
-		
 		if ((percent >= 45) && (percent < 50))
 		{
 			_player.sendPacket(SystemMessageId.YOU_ARE_STARTING_TO_FEEL_THE_EFFECTS_OF_NEVIT_S_ADVENT_BLESSING);

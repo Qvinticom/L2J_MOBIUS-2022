@@ -87,7 +87,6 @@ public class WeddingManagerInstance extends NpcInstance
 	{
 		final String filename = "data/html/mods/Wedding_start.htm";
 		final String replace = String.valueOf(Config.WEDDING_PRICE);
-		
 		final NpcHtmlMessage html = new NpcHtmlMessage(1);
 		html.setFile(filename);
 		html.replace("%objectId%", String.valueOf(getObjectId()));
@@ -195,7 +194,6 @@ public class WeddingManagerInstance extends NpcInstance
 				player.sendPacket(msu);
 				player.broadcastPacket(msu);
 				player.useMagic(skill, false, false);
-				
 				msu = new MagicSkillUse(ptarget, ptarget, 2025, 1, 1, 0);
 				ptarget.sendPacket(msu);
 				ptarget.broadcastPacket(msu);
@@ -268,7 +266,6 @@ public class WeddingManagerInstance extends NpcInstance
 			{
 				final Inventory inv3 = player.getInventory();
 				final ItemInstance item3 = inv3.getPaperdollItem(10);
-				
 				if (null == item3)
 				{
 					player.setWearingFormalWear(false);

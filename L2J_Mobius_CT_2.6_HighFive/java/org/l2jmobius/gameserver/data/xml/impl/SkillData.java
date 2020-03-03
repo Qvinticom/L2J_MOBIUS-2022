@@ -147,7 +147,6 @@ public class SkillData
 		int i = 0;
 		temp[i++] = _skills.get(getSkillHashCode(246, 1));
 		temp[i++] = _skills.get(getSkillHashCode(247, 1));
-		
 		if (addNoble)
 		{
 			temp[i++] = _skills.get(getSkillHashCode(326, 1));

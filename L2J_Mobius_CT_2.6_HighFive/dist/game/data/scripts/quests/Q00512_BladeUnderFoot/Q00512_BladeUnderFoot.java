@@ -102,7 +102,6 @@ public class Q00512_BladeUnderFoot extends Quest
 		{
 			final int playerCount = player.getParty().getMemberCount();
 			int itemCount = RAID_BOSSES.get(npc.getId()).getSecondChance();
-			
 			if (playerCount > 0)
 			{
 				itemCount /= playerCount;

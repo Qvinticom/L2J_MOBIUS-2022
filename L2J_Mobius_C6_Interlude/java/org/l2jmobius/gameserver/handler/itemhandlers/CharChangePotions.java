@@ -53,9 +53,7 @@ public class CharChangePotions implements IItemHandler
 	public void useItem(Playable playable, ItemInstance item)
 	{
 		final int itemId = item.getItemId();
-		
 		PlayerInstance player;
-		
 		if (playable instanceof PlayerInstance)
 		{
 			player = (PlayerInstance) playable;

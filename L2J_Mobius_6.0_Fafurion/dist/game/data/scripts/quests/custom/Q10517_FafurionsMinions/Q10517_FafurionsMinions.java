@@ -125,7 +125,6 @@ public class Q10517_FafurionsMinions extends Quest
 	{
 		final QuestState qs = getQuestState(player, true);
 		String htmltext = getNoQuestMsg(player);
-		
 		if (npc.getId() == START_NPC)
 		{
 			switch (qs.getState())

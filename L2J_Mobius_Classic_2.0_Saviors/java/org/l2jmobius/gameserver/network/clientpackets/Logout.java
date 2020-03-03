@@ -55,7 +55,6 @@ public class Logout implements IClientIncomingPacket
 		}
 		
 		LOGGER_ACCOUNTING.info("Logged out, " + client);
-		
 		if (!OfflineTradeUtil.enteredOfflineMode(player))
 		{
 			Disconnection.of(client, player).defaultSequence(false);

@@ -77,7 +77,6 @@ public class RequestAquireSkillInfo extends GameClientPacket
 			}
 			
 			final SkillLearn[] skills = SkillTreeTable.getInstance().getAvailableSkills(player, player.getSkillLearningClassId());
-			
 			for (SkillLearn s : skills)
 			{
 				if ((s.getId() == _id) && (s.getLevel() == _level))
@@ -94,7 +93,6 @@ public class RequestAquireSkillInfo extends GameClientPacket
 			
 			final int requiredSp = SkillTreeTable.getInstance().getSkillCost(player, skill);
 			final AquireSkillInfo asi = new AquireSkillInfo(skill.getId(), skill.getLevel(), requiredSp, 0);
-			
 			int spbId = -1;
 			if (Config.DIVINE_SP_BOOK_NEEDED && (skill.getId() == Skill.SKILL_DIVINE_INSPIRATION))
 			{
@@ -117,7 +115,6 @@ public class RequestAquireSkillInfo extends GameClientPacket
 			int requiredRep = 0;
 			int itemId = 0;
 			final PledgeSkillLearn[] skills = SkillTreeTable.getInstance().getAvailablePledgeSkills(player);
-			
 			for (PledgeSkillLearn s : skills)
 			{
 				if ((s.getId() == _id) && (s.getLevel() == _level))
@@ -149,11 +146,9 @@ public class RequestAquireSkillInfo extends GameClientPacket
 			int spcost = 0;
 			
 			final SkillLearn[] skillsc = SkillTreeTable.getInstance().getAvailableSkills(player);
-			
 			for (SkillLearn s : skillsc)
 			{
 				final Skill sk = SkillTable.getInstance().getInfo(s.getId(), s.getLevel());
-				
 				if ((sk == null) || (sk != skill))
 				{
 					continue;

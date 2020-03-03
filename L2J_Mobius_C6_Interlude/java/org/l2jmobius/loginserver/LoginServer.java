@@ -162,7 +162,6 @@ public class LoginServer
 			_selectorThread.openServerSocket(bindAddress, Config.PORT_LOGIN);
 			_selectorThread.start();
 			LOGGER.info("Login Server ready on " + (bindAddress == null ? "*" : bindAddress.getHostAddress()) + ":" + Config.PORT_LOGIN);
-			
 		}
 		catch (IOException e)
 		{

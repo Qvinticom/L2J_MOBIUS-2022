@@ -46,7 +46,6 @@ public class Mdam implements ISkillHandler
 		
 		final boolean bss = creature.checkBss();
 		final boolean sps = creature.checkSps();
-		
 		for (WorldObject target2 : targets)
 		{
 			if (target2 == null)
@@ -55,7 +54,6 @@ public class Mdam implements ISkillHandler
 			}
 			
 			final Creature target = (Creature) target2;
-			
 			if ((creature instanceof PlayerInstance) && (target instanceof PlayerInstance) && target.isAlikeDead() && target.isFakeDeath())
 			{
 				target.stopFakeDeath(null);
@@ -70,7 +68,6 @@ public class Mdam implements ISkillHandler
 			}
 			
 			final boolean mcrit = Formulas.calcMCrit(creature.getMCriticalHit(target, skill));
-			
 			final int damage = (int) Formulas.calcMagicDam(creature, target, skill, sps, bss, mcrit);
 			
 			// Why are we trying to reduce the current target HP here?
@@ -78,7 +75,6 @@ public class Mdam implements ISkillHandler
 			// It doesn't seem to make sense for me. I'm moving this line inside the "if" condition, right after the effects processing...
 			// [changed by nexus - 2006-08-15]
 			// target.reduceCurrentHp(damage, activeChar);
-			
 			if (damage > 0)
 			{
 				// Manage attack or cast break of the target (calculating rate, sending message...)
@@ -89,7 +85,6 @@ public class Mdam implements ISkillHandler
 				}
 				
 				creature.sendDamageMessage(target, damage, mcrit, false, false);
-				
 				if (skill.hasEffects())
 				{
 					if (target.reflectSkill(skill))

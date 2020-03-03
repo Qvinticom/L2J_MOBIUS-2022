@@ -69,7 +69,6 @@ public class CreatureStat
 		}
 		
 		final int id = stat.ordinal();
-		
 		final Calculator c = _creature.getCalculators()[id];
 		
 		// If no Func object found, no modifier is applied
@@ -128,7 +127,6 @@ public class CreatureStat
 		{
 			return 0;
 		}
-		
 		return (int) (calcStat(Stat.ACCURACY_COMBAT, 0, null, null) / _creature.getWeaponExpertisePenalty());
 	}
 	
@@ -151,7 +149,6 @@ public class CreatureStat
 		{
 			return 1;
 		}
-		
 		return (float) ((1.1 * getPAtkSpd()) / _creature.getTemplate().getBasePAtkSpd());
 	}
 	
@@ -165,7 +162,6 @@ public class CreatureStat
 		{
 			return 1;
 		}
-		
 		return (int) calcStat(Stat.STAT_CON, _creature.getTemplate().getBaseCON(), null, null);
 	}
 	
@@ -194,7 +190,6 @@ public class CreatureStat
 		}
 		
 		int criticalHit = (int) ((calcStat(Stat.CRITICAL_RATE, _creature.getTemplate().getBaseCritRate(), target, skill) * 10.0) + 0.5);
-		
 		criticalHit /= 10;
 		
 		// Set a cap of Critical Hit at 500
@@ -216,7 +211,6 @@ public class CreatureStat
 		{
 			return 1;
 		}
-		
 		return (int) calcStat(Stat.STAT_DEX, _creature.getTemplate().getBaseDEX(), null, null);
 	}
 	
@@ -231,7 +225,6 @@ public class CreatureStat
 		{
 			return 1;
 		}
-		
 		return (int) (calcStat(Stat.EVASION_RATE, 0, target, null) / _creature.getArmourExpertisePenalty());
 	}
 	
@@ -263,7 +256,6 @@ public class CreatureStat
 		{
 			return 1;
 		}
-		
 		return (int) calcStat(Stat.STAT_INT, _creature.getTemplate().getBaseINT(), null, null);
 	}
 	
@@ -315,7 +307,6 @@ public class CreatureStat
 		{
 			return 1;
 		}
-		
 		return (int) calcStat(Stat.MAX_CP, _creature.getTemplate().getBaseCpMax(), null, null);
 	}
 	
@@ -329,7 +320,6 @@ public class CreatureStat
 		{
 			return 1;
 		}
-		
 		return (int) calcStat(Stat.MAX_HP, _creature.getTemplate().getBaseHpMax(), null, null);
 	}
 	
@@ -343,7 +333,6 @@ public class CreatureStat
 		{
 			return 1;
 		}
-		
 		return (int) calcStat(Stat.MAX_MP, _creature.getTemplate().getBaseMpMax(), null, null);
 	}
 	
@@ -366,7 +355,6 @@ public class CreatureStat
 		}
 		
 		float bonusAtk = 1;
-		
 		if (Config.CHAMPION_ENABLE && _creature.isChampion())
 		{
 			bonusAtk = Config.CHAMPION_ATK;
@@ -376,7 +364,6 @@ public class CreatureStat
 		
 		// Get the skill type to calculate its effect in function of base stats of the Creature target.
 		final Stat stat = skill == null ? null : skill.getStat();
-		
 		if (stat != null)
 		{
 			switch (stat)
@@ -476,16 +463,13 @@ public class CreatureStat
 		}
 		
 		float bonusSpdAtk = 1;
-		
 		if (Config.CHAMPION_ENABLE && _creature.isChampion())
 		{
 			bonusSpdAtk = Config.CHAMPION_SPD_ATK;
 		}
 		
 		double val = calcStat(Stat.MAGIC_ATTACK_SPEED, _creature.getTemplate().getBaseMAtkSpd() * bonusSpdAtk, null, null);
-		
 		val /= _creature.getArmourExpertisePenalty();
-		
 		if ((val > Config.MAX_MATK_SPEED) && (_creature instanceof PlayerInstance))
 		{
 			val = Config.MAX_MATK_SPEED;
@@ -508,7 +492,6 @@ public class CreatureStat
 		}
 		
 		double mrate = calcStat(Stat.MCRITICAL_RATE, (_creature.getTemplate().getBaseMCritRate()) * Config.MCRIT_RATE_MUL, target, skill);
-		
 		if (mrate > Config.MAX_MCRIT_RATE)
 		{
 			mrate = Config.MAX_MCRIT_RATE;
@@ -557,7 +540,6 @@ public class CreatureStat
 		{
 			return 1;
 		}
-		
 		return (int) calcStat(Stat.STAT_MEN, _creature.getTemplate().getBaseMEN(), null, null);
 	}
 	
@@ -571,7 +553,6 @@ public class CreatureStat
 		{
 			return 1;
 		}
-		
 		return Math.max(1, getRunSpeed() / _creature.getTemplate().getBaseRunSpd());
 	}
 	
@@ -610,7 +591,6 @@ public class CreatureStat
 		{
 			return 1;
 		}
-		
 		return calcStat(Stat.MAGIC_REUSE_RATE, _creature.getTemplate().getBaseMReuseRate(), null, skill);
 	}
 	
@@ -625,7 +605,6 @@ public class CreatureStat
 		{
 			return 1;
 		}
-		
 		return calcStat(Stat.P_REUSE, _creature.getTemplate().getBaseMReuseRate(), null, skill);
 	}
 	
@@ -642,7 +621,6 @@ public class CreatureStat
 		}
 		
 		float bonusAtk = 1;
-		
 		if (Config.CHAMPION_ENABLE && _creature.isChampion())
 		{
 			bonusAtk = Config.CHAMPION_ATK;
@@ -723,16 +701,13 @@ public class CreatureStat
 		}
 		
 		float bonusAtk = 1;
-		
 		if (Config.CHAMPION_ENABLE && _creature.isChampion())
 		{
 			bonusAtk = Config.CHAMPION_SPD_ATK;
 		}
 		
 		double val = calcStat(Stat.POWER_ATTACK_SPEED, _creature.getTemplate().getBasePAtkSpd() * bonusAtk, null, null);
-		
 		val /= _creature.getArmourExpertisePenalty();
-		
 		if ((val > Config.MAX_PATK_SPEED) && (_creature instanceof PlayerInstance))
 		{
 			val = Config.MAX_PATK_SPEED;
@@ -945,7 +920,6 @@ public class CreatureStat
 		{
 			return 1;
 		}
-		
 		return (int) calcStat(Stat.STAT_STR, _creature.getTemplate().getBaseSTR(), null, null);
 	}
 	
@@ -977,7 +951,6 @@ public class CreatureStat
 		{
 			return 1;
 		}
-		
 		return (int) calcStat(Stat.STAT_WIT, _creature.getTemplate().getBaseWIT(), null, null);
 	}
 	
@@ -994,7 +967,6 @@ public class CreatureStat
 		}
 		
 		int mpconsume = skill.getMpConsume();
-		
 		if (skill.isDance() && (_creature != null) && (_creature.getDanceCount() > 0))
 		{
 			mpconsume += _creature.getDanceCount() * skill.getNextDanceMpCost();
@@ -1014,7 +986,6 @@ public class CreatureStat
 		{
 			return 1;
 		}
-		
 		return (int) calcStat(Stat.MP_CONSUME, skill.getMpInitialConsume(), null, skill);
 	}
 	

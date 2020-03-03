@@ -113,12 +113,10 @@ public class CeremonyOfChaosEvent extends AbstractEvent<CeremonyOfChaosMember>
 	{
 		final ExCuriousHouseMemberList membersList = new ExCuriousHouseMemberList(_id, CeremonyOfChaosManager.getInstance().getMaxPlayersInArena(), getMembers().values());
 		final NpcHtmlMessage msg = new NpcHtmlMessage(0);
-		
 		int index = 0;
 		for (CeremonyOfChaosMember member : getMembers().values())
 		{
 			final PlayerInstance player = member.getPlayer();
-			
 			if (player.inObserverMode())
 			{
 				player.leaveObserverMode();
@@ -247,7 +245,6 @@ public class CeremonyOfChaosEvent extends AbstractEvent<CeremonyOfChaosMember>
 		final StatSet params = new StatSet();
 		params.set("time", 60);
 		getTimers().addTimer("match_start_countdown", params, 100, null, null);
-		
 		getTimers().addTimer("teleport_message1", 10000, null, null);
 		getTimers().addTimer("teleport_message2", 14000, null, null);
 		getTimers().addTimer("teleport_message3", 18000, null, null);
@@ -397,7 +394,6 @@ public class CeremonyOfChaosEvent extends AbstractEvent<CeremonyOfChaosMember>
 				
 				// Send result
 				player.sendPacket(new ExCuriousHouseResult(member.getResultType(), this));
-				
 				members.add(member);
 			}
 		}
@@ -405,7 +401,6 @@ public class CeremonyOfChaosEvent extends AbstractEvent<CeremonyOfChaosMember>
 		final StatSet params = new StatSet();
 		params.set("time", 30);
 		getTimers().addTimer("match_end_countdown", params, 30 * 1000, null, null);
-		
 		EventDispatcher.getInstance().notifyEvent(new OnCeremonyOfChaosMatchResult(winners, members));
 	}
 	
@@ -532,7 +527,6 @@ public class CeremonyOfChaosEvent extends AbstractEvent<CeremonyOfChaosMember>
 			case "match_start_countdown":
 			{
 				final int time = params.getInt("time", 0);
-				
 				final SystemMessage countdown = new SystemMessage(SystemMessageId.THE_MATCH_WILL_START_IN_S1_SECOND_S);
 				countdown.addByte(time);
 				broadcastPacket(countdown);
@@ -595,12 +589,9 @@ public class CeremonyOfChaosEvent extends AbstractEvent<CeremonyOfChaosMember>
 		{
 			final PlayerInstance attackerPlayer = event.getAttacker().getActingPlayer();
 			final PlayerInstance targetPlayer = event.getTarget().getActingPlayer();
-			
 			final CeremonyOfChaosMember attackerMember = getMembers().get(attackerPlayer.getObjectId());
 			final CeremonyOfChaosMember targetMember = getMembers().get(targetPlayer.getObjectId());
-			
 			final DeleteObject deleteObject = new DeleteObject(targetPlayer);
-			
 			if ((attackerMember != null) && (targetMember != null))
 			{
 				attackerMember.incrementScore();

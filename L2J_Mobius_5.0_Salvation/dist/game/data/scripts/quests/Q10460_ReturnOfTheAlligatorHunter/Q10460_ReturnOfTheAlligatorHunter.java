@@ -136,7 +136,6 @@ public class Q10460_ReturnOfTheAlligatorHunter extends Quest
 	public String onKill(Npc npc, PlayerInstance killer, boolean isSummon)
 	{
 		final QuestState qs = getQuestState(killer, false);
-		
 		if ((qs != null) && qs.isStarted() && qs.isCond(1))
 		{
 			int itemId = 0;
@@ -160,7 +159,6 @@ public class Q10460_ReturnOfTheAlligatorHunter extends Quest
 			}
 			
 			giveItemRandomly(killer, npc, itemId, 1, 2, itemCount, 1, true);
-			
 			if (getQuestItemsCount(killer, BEJEWELED_LEATHER, BLUE_LEATHER, LEATHER) == 60)
 			{
 				qs.setCond(2);

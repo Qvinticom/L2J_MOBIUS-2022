@@ -73,7 +73,6 @@ public class MagicalAttack extends AbstractEffect
 		final boolean mcrit = Formulas.calcMCrit(creature.getMCriticalHit(target, info.getSkill()));
 		final byte shld = Formulas.calcShldUse(creature, target, info.getSkill());
 		final int damage = (int) Formulas.calcMagicDam(creature, target, info.getSkill(), shld, sps, bss, mcrit);
-		
 		if (damage > 0)
 		{
 			// Manage attack or cast break of the target (calculating rate, sending message...)

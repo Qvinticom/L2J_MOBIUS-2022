@@ -90,7 +90,6 @@ public class HomeBoard implements IParseBoardHandler
 				break;
 			}
 		}
-		
 		return commandCheck && (player.isCastingNow() || player.isInCombat() || player.isInDuel() || player.isInOlympiadMode() || player.isInsideZone(ZoneId.SIEGE) || player.isInsideZone(ZoneId.PVP));
 	};
 	
@@ -127,7 +126,6 @@ public class HomeBoard implements IParseBoardHandler
 		{
 			final String customPath = Config.CUSTOM_CB_ENABLED ? "Custom/" : "";
 			CommunityBoardHandler.getInstance().addBypass(player, "Home", command);
-			
 			returnHtml = HtmCache.getInstance().getHtm(player, "data/html/CommunityBoard/" + customPath + "home.html");
 			if (!Config.CUSTOM_CB_ENABLED)
 			{

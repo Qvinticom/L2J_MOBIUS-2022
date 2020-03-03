@@ -96,7 +96,6 @@ public class Weapon extends Item
 		final String[] reducedMpConsume = set.getString("reduced_mp_consume", "").split(",");
 		_reducedMpConsumeChance = (reducedMpConsume.length == 2) ? Integer.parseInt(reducedMpConsume[0]) : 0;
 		_reducedMpConsume = (reducedMpConsume.length == 2) ? Integer.parseInt(reducedMpConsume[1]) : 0;
-		
 		_changeWeaponId = set.getInt("change_weaponId", 0);
 		_isForceEquip = set.getBoolean("isForceEquip", false);
 		_isAttackWeapon = set.getBoolean("isAttackWeapon", true);

@@ -282,7 +282,6 @@ public class ChristmasManager
 		player.sendMessage("Started!!!! This will take a 2-3 hours (in order to reduce system lags to a minimum), please be patient... The process is working in the background and will spawn npcs, give presents and messages at a fixed rate.");
 		
 		// Tasks:
-		
 		spawnTrees();
 		
 		startFestiveMessagesAtFixedRate();
@@ -316,7 +315,6 @@ public class ChristmasManager
 		}
 		
 		ThreadPool.execute(new DeleteSpawns());
-		
 		endFestiveMessagesAtFixedRate();
 		isManagerInit--;
 		
@@ -404,7 +402,6 @@ public class ChristmasManager
 				isManagerInit++;
 				
 				final SpawnSantaNPCs ssNPCs = new SpawnSantaNPCs(FIRST);
-				
 				_task = ThreadPool.schedule(ssNPCs, 300);
 				ssNPCs.setTask(_task);
 				
@@ -413,7 +410,6 @@ public class ChristmasManager
 			
 			_iterator++;
 			final GetTreePos gtp = new GetTreePos(_iterator);
-			
 			_task = ThreadPool.schedule(gtp, 300);
 			gtp.setTask(_task);
 		}
@@ -453,7 +449,6 @@ public class ChristmasManager
 			
 			objectQueue.clear();
 			objectQueue = null;
-			
 			isManagerInit = isManagerInit - 2;
 			checkIfOkToAnnounce();
 		}
@@ -472,7 +467,6 @@ public class ChristmasManager
 		{
 			final NpcTemplate template1 = NpcTable.getInstance().getTemplate(id);
 			final Spawn spawn = new Spawn(template1);
-			
 			spawn.setId(IdFactory.getNextId());
 			
 			spawn.setX(x);
@@ -603,11 +597,9 @@ public class ChristmasManager
 					else if (rand.nextInt(100) < 50)
 					{
 						final int itemId = getSantaRandomPresent();
-						
 						final ItemInstance item = ItemTable.getInstance().createItem("Christmas Event", itemId, 1, pc);
 						pc.getInventory().addItem("Christmas Event", item.getItemId(), 1, pc, pc);
 						final String itemName = ItemTable.getInstance().getTemplate(itemId).getName();
-						
 						SystemMessage sm;
 						sm = new SystemMessage(SystemMessageId.YOU_HAVE_EARNED_S1);
 						sm.addString(itemName + " from Santa's Present Bag...");
@@ -695,7 +687,6 @@ public class ChristmasManager
 			
 			_iterator++;
 			final SpawnSantaNPCs ssNPCs = new SpawnSantaNPCs(_iterator);
-			
 			_task = ThreadPool.schedule(ssNPCs, 300);
 			ssNPCs.setTask(_task);
 		}
@@ -725,7 +716,6 @@ public class ChristmasManager
 		{
 			Announcements.getInstance().announceToAll("Christmas Event has ended... Hope you enjoyed the festivities.");
 			LOGGER.info("ChristmasManager:Terminated ChristmasManager.");
-			
 			isManagerInit = -1;
 		}
 	}

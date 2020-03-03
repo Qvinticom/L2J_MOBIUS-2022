@@ -140,7 +140,6 @@ public class Q10529_IvoryTowersResearchFloatingSeaJournal extends Quest
 	{
 		final QuestState qs = getQuestState(player, true);
 		String htmltext = getNoQuestMsg(player);
-		
 		if (npc.getId() == START_NPC)
 		{
 			switch (qs.getState())

@@ -65,7 +65,6 @@ public class PetStat extends SummonStat
 		}
 		
 		final boolean levelIncreased = super.addLevel(value);
-		
 		getActiveChar().broadcastStatusUpdate();
 		if (levelIncreased)
 		{

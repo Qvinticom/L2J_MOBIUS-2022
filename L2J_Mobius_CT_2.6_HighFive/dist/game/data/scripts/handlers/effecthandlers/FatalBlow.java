@@ -62,7 +62,6 @@ public class FatalBlow extends AbstractEffect
 		final Creature target = info.getEffected();
 		final Creature creature = info.getEffector();
 		final Skill skill = info.getSkill();
-		
 		if (creature.isAlikeDead())
 		{
 			return;

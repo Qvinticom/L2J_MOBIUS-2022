@@ -151,7 +151,6 @@ public class Q00632_NecromancersRequest extends Quest
 			else
 			{
 				giveItemRandomly(player, npc, VAMPIRES_HEART, 1, 0, HEART_MONSTERS.get(npc.getId()), true);
-				
 				if (getQuestItemsCount(player, VAMPIRES_HEART) >= REQUIRED_ITEM_COUNT)
 				{
 					qs.setCond(2);
@@ -167,7 +166,6 @@ public class Q00632_NecromancersRequest extends Quest
 	{
 		final QuestState qs = getQuestState(player, true);
 		String htmltext = getNoQuestMsg(player);
-		
 		if (qs.isCreated())
 		{
 			htmltext = player.getLevel() >= MIN_LEVEL ? "31522-101.htm" : "31522-103.htm";

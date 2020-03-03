@@ -40,7 +40,6 @@ public class PlayerAuthRequest extends ClientBasePacket
 		final int playKey2 = readD();
 		final int loginKey1 = readD();
 		final int loginKey2 = readD();
-		
 		_sessionKey = new SessionKey(loginKey1, loginKey2, playKey1, playKey2);
 	}
 	

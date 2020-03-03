@@ -37,7 +37,6 @@ public class MagicSkillLaunched extends GameServerPacket
 		_objectId = creature.getObjectId();
 		_skillId = skillId;
 		_skillLevel = skillLevel;
-		
 		if (targets != null)
 		{
 			_numberOfTargets = targets.length;

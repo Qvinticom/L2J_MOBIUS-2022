@@ -60,7 +60,6 @@ public class ExEnchantSkillInfoDetail implements IClientOutgoingPacket
 			packet.writeD(_enchantSkillHolder.getRequiredBook(_type).getId());
 			packet.writeD((int) _enchantSkillHolder.getRequiredBook(_type).getCount());
 		}
-		
 		return _enchantSkillHolder != null;
 	}
 }

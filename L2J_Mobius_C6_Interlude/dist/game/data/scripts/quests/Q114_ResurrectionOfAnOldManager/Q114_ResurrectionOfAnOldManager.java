@@ -89,7 +89,6 @@ public class Q114_ResurrectionOfAnOldManager extends Quest
 		else if (event.equals("32041-10.htm"))
 		{
 			final int choice = st.getInt("choice");
-			
 			if (choice == 1)
 			{
 				htmltext = "32041-10.htm";
@@ -160,7 +159,6 @@ public class Q114_ResurrectionOfAnOldManager extends Quest
 		{
 			final int talk = st.getInt("talk");
 			final int talk1 = st.getInt("talk1");
-			
 			if ((talk == 1) && (talk1 == 1))
 			{
 				htmltext = "32047-04.htm";
@@ -233,7 +231,6 @@ public class Q114_ResurrectionOfAnOldManager extends Quest
 				golem.broadcastNpcSay("You, " + player.getName() + ", you attacked Wendy. Prepare to die!");
 				((Attackable) golem).addDamageHate(player, 0, 999);
 				golem.getAI().setIntention(CtrlIntention.AI_INTENTION_ATTACK, player);
-				
 				st.set("golemSpawned", "1");
 				startQuestTimer("golemDespawn", 900000, golem, player, false);
 			}
@@ -270,7 +267,6 @@ public class Q114_ResurrectionOfAnOldManager extends Quest
 		else if (event.equals("32047-33.htm"))
 		{
 			final int cond = st.getInt("cond");
-			
 			if (cond == 7)
 			{
 				st.set("cond", "8");
@@ -451,7 +447,6 @@ public class Q114_ResurrectionOfAnOldManager extends Quest
 						else if (cond == 6)
 						{
 							final int choice = st.getInt("choice");
-							
 							if (choice == 1)
 							{
 								if (talk == 0)
@@ -618,7 +613,6 @@ public class Q114_ResurrectionOfAnOldManager extends Quest
 		}
 		
 		npc.broadcastNpcSay("This enemy is far too powerful for me to fight. I must withdraw!");
-		
 		st.set("cond", "11");
 		st.unset("golemSpawned");
 		st.playSound(QuestState.SOUND_MIDDLE);

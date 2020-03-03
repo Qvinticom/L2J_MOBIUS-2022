@@ -75,7 +75,6 @@ public class Q00497_IncarnationOfGreedZellakaSolo extends Quest
 	{
 		final QuestState qs = getQuestState(player, true);
 		String htmltext = getNoQuestMsg(player);
-		
 		switch (qs.getState())
 		{
 			case State.CREATED:

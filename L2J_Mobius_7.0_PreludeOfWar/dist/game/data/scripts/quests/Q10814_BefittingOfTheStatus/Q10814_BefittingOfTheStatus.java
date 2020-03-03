@@ -84,7 +84,6 @@ public class Q10814_BefittingOfTheStatus extends Quest
 		}
 		
 		String htmltext = null;
-		
 		switch (event)
 		{
 			case "30097-02.htm":
@@ -139,7 +138,6 @@ public class Q10814_BefittingOfTheStatus extends Quest
 							for (int i = 1; i < 5; i++)
 							{
 								final int slotValue = qs.getMemoStateEx(i);
-								
 								if (slotValue != 0)
 								{
 									continue;
@@ -148,7 +146,6 @@ public class Q10814_BefittingOfTheStatus extends Quest
 								break;
 							}
 							takeItems(player, itemId, 1);
-							
 							if (qs.getCond() < 6)
 							{
 								qs.setCond(qs.getCond() + 1);
@@ -249,7 +246,6 @@ public class Q10814_BefittingOfTheStatus extends Quest
 				}
 				
 				final List<Integer> itemList = Arrays.asList(qs.getMemoStateEx(1), qs.getMemoStateEx(2), qs.getMemoStateEx(3), qs.getMemoStateEx(4), qs.getMemoStateEx(5));
-				
 				for (int itemId : HATS)
 				{
 					if (!itemList.contains(itemId))
@@ -286,7 +282,6 @@ public class Q10814_BefittingOfTheStatus extends Quest
 	{
 		final QuestState qs = getQuestState(player, true);
 		String htmltext = getNoQuestMsg(player);
-		
 		switch (qs.getState())
 		{
 			case State.CREATED:

@@ -65,7 +65,6 @@ public class Q10269_ToTheSeedOfDestruction extends Quest
 	{
 		final QuestState qs = getQuestState(player, true);
 		String htmltext = getNoQuestMsg(player);
-		
 		switch (npc.getId())
 		{
 			case KEUCEREUS:

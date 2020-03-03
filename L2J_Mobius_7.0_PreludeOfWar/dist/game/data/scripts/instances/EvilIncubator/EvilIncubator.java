@@ -197,7 +197,6 @@ public class EvilIncubator extends AbstractInstance
 			return super.onAdvEvent(event, npc, player);
 		}
 		String htmltext = null;
-		
 		if (event.equals("enterInstance"))
 		{
 			enterInstance(player, npc, TEMPLATE_ID);
@@ -228,7 +227,6 @@ public class EvilIncubator extends AbstractInstance
 							helperCount++;
 							world.setParameter("HELPER_COUNT", helperCount);
 							npc.teleToLocation(helperCount == 1 ? BATTLE_LOC_2 : BATTLE_LOC_3);
-							
 							if (helperCount == 2)
 							{
 								st.setCond(7, true);
@@ -286,7 +284,6 @@ public class EvilIncubator extends AbstractInstance
 	{
 		String htmltext = getNoQuestMsg(player);
 		final QuestState st = getQuestState(player);
-		
 		if ((st == null) || !st.isStarted())
 		{
 			return super.onTalk(npc, player);
@@ -368,7 +365,6 @@ public class EvilIncubator extends AbstractInstance
 	{
 		String htmltext = null;
 		final QuestState st = getQuestState(player);
-		
 		if ((st == null) || !st.isStarted())
 		{
 			return htmltext;
@@ -413,12 +409,10 @@ public class EvilIncubator extends AbstractInstance
 	public void onCreatureKill(OnCreatureDeath event)
 	{
 		final Npc npc = (Npc) event.getTarget();
-		
 		final Instance world = npc.getInstanceWorld();
 		if (world != null)
 		{
 			final int waveId = world.getParameters().getInt("WORLD_WAVE", 1);
-			
 			if (CommonUtil.contains(BOSSES, npc.getId()))
 			{
 				final QuestState st = getQuestState(world.getFirstPlayer());
@@ -511,7 +505,6 @@ public class EvilIncubator extends AbstractInstance
 	private void managerWorldAttack(Instance world, List<Npc> spawnedNpcs)
 	{
 		final List<FriendlyNpcInstance> helperList = World.getInstance().getVisibleObjects(world.getFirstPlayer(), FriendlyNpcInstance.class);
-		
 		if ((spawnedNpcs != null) && !spawnedNpcs.isEmpty())
 		{
 			for (Npc npc : spawnedNpcs)
@@ -519,7 +512,6 @@ public class EvilIncubator extends AbstractInstance
 				if (!helperList.isEmpty())
 				{
 					final FriendlyNpcInstance helper = helperList.get(getRandom(helperList.size()));
-					
 					if (CommonUtil.contains(HELPERS, helper.getId()))
 					{
 						npc.reduceCurrentHp(1, helper, null);

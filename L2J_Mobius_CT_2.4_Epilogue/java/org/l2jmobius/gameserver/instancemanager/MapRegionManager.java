@@ -76,7 +76,6 @@ public class MapRegionManager implements IXmlReader
 		int locId;
 		int castle;
 		int bbs;
-		
 		for (Node n = doc.getFirstChild(); n != null; n = n.getNextSibling())
 		{
 			if ("list".equalsIgnoreCase(n.getNodeName()))
@@ -101,7 +100,6 @@ public class MapRegionManager implements IXmlReader
 								final int spawnX = parseInteger(attrs, "X");
 								final int spawnY = parseInteger(attrs, "Y");
 								final int spawnZ = parseInteger(attrs, "Z");
-								
 								if (parseBoolean(attrs, "isOther", false))
 								{
 									region.addOtherSpawn(spawnX, spawnY, spawnZ);
@@ -232,15 +230,12 @@ public class MapRegionManager implements IXmlReader
 	public Location getTeleToLocation(Creature creature, TeleportWhereType teleportWhere)
 	{
 		Location loc;
-		
 		if (creature.isPlayer())
 		{
 			final PlayerInstance player = creature.getActingPlayer();
-			
 			Castle castle = null;
 			Fort fort = null;
 			ClanHall clanhall = null;
-			
 			if ((player.getClan() != null) && !player.isFlyingMounted() && !player.isFlying()) // flying players in gracia cant use teleports to aden continent
 			{
 				// If teleport to clan hall
@@ -454,7 +449,6 @@ public class MapRegionManager implements IXmlReader
 		{
 			final PlayerInstance player = (PlayerInstance) creature;
 			final MapRegion region = REGIONS.get(point);
-			
 			if (region.getBannedRace().containsKey(player.getRace()))
 			{
 				getRestartRegion(player, region.getBannedRace().get(player.getRace()));

@@ -72,7 +72,6 @@ public class AcquireSkillList implements IClientOutgoingPacket
 			}
 			
 			final List<Skill> skillRem = skill.getRemoveSkills().stream().map(_player::getKnownSkill).filter(Objects::nonNull).collect(Collectors.toList());
-			
 			packet.writeC(skillRem.size());
 			for (Skill skillRemove : skillRem)
 			{

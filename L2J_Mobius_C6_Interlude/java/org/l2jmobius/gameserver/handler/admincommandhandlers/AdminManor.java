@@ -124,7 +124,6 @@ public class AdminManor implements IAdminCommandHandler
 				break;
 			}
 		}
-		
 		return true;
 	}
 	
@@ -138,7 +137,6 @@ public class AdminManor implements IAdminCommandHandler
 	{
 		final NpcHtmlMessage adminReply = new NpcHtmlMessage(5);
 		final StringBuilder replyMSG = new StringBuilder("<html><body>");
-		
 		replyMSG.append("<center><font color=\"LEVEL\"> [Manor System] </font></center><br>");
 		replyMSG.append("<table width=\"100%\"><tr><td>");
 		replyMSG.append("Disabled: " + (CastleManorManager.getInstance().isDisabled() ? "yes" : "no") + "</td><td>");
@@ -152,7 +150,6 @@ public class AdminManor implements IAdminCommandHandler
 		replyMSG.append("</table></center>");
 		replyMSG.append("<br><center>Castle Information:<table width=\"100%\">");
 		replyMSG.append("<tr><td></td><td>Current Period</td><td>Next Period</td></tr>");
-		
 		for (Castle c : CastleManager.getInstance().getCastles())
 		{
 			replyMSG.append("<tr><td>" + c.getName() + "</td><td>" + c.getManorCost(CastleManorManager.PERIOD_CURRENT) + "a</td><td>" + c.getManorCost(CastleManorManager.PERIOD_NEXT) + "a</td></tr>");

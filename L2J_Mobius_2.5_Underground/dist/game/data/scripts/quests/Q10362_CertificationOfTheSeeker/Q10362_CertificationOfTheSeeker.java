@@ -107,12 +107,10 @@ public class Q10362_CertificationOfTheSeeker extends Quest
 	public String onKill(Npc npc, PlayerInstance killer, boolean isSummon)
 	{
 		final QuestState qs = getQuestState(killer, false);
-		
 		if ((qs != null) && qs.isCond(1))
 		{
 			int killedStalker = qs.getMemoStateEx(STALKER);
 			int killedCrawler = qs.getMemoStateEx(CRAWLER);
-			
 			if (npc.getId() == STALKER)
 			{
 				killedStalker++;
@@ -145,7 +143,6 @@ public class Q10362_CertificationOfTheSeeker extends Quest
 	{
 		final QuestState qs = getQuestState(player, true);
 		String htmltext = getNoQuestMsg(player);
-		
 		switch (qs.getState())
 		{
 			case State.CREATED:

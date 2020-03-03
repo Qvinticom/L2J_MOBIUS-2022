@@ -38,7 +38,6 @@ public class RequestPledgePowerGradeList extends GameClientPacket
 	{
 		final PlayerInstance player = getClient().getPlayer();
 		final Clan clan = player.getClan();
-		
 		if (clan != null)
 		{
 			final RankPrivs[] privs = clan.getAllRankPrivs();

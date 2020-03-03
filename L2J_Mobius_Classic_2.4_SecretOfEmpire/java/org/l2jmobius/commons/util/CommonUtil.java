@@ -542,7 +542,6 @@ public class CommonUtil
 		}
 		final char[] arr = str.toCharArray();
 		final char c = arr[0];
-		
 		if (Character.isLetter(c))
 		{
 			arr[0] = Character.toUpperCase(c);

@@ -104,7 +104,6 @@ public class Q00345_MethodToRaiseTheDead extends Quest
 			case "30971-03.html":
 			{
 				final long uselessBonePiecesCount = getQuestItemsCount(player, USELESS_BONE_PIECES);
-				
 				if (uselessBonePiecesCount > 0)
 				{
 					giveAdena(player, uselessBonePiecesCount * 104, true);
@@ -116,7 +115,6 @@ public class Q00345_MethodToRaiseTheDead extends Quest
 			case "30973-02.html":
 			{
 				final int memoStateEx = qs.getMemoStateEx(1);
-				
 				if (memoStateEx == 1)
 				{
 					htmltext = event;
@@ -196,7 +194,6 @@ public class Q00345_MethodToRaiseTheDead extends Quest
 	public String onKill(Npc npc, PlayerInstance killer, boolean isSummon)
 	{
 		final QuestState qs = getRandomPartyMemberState(killer, 1, 3, npc);
-		
 		if ((qs == null) || !Util.checkIfInRange(Config.ALT_PARTY_RANGE, npc, killer, true))
 		{
 			return null;
@@ -322,7 +319,6 @@ public class Q00345_MethodToRaiseTheDead extends Quest
 						{
 							final int memoStateEx = qs.getMemoStateEx(1);
 							final long uselessBonePiecesCount = getQuestItemsCount(player, USELESS_BONE_PIECES);
-							
 							if ((memoStateEx == 1) || (memoStateEx == 2))
 							{
 								giveItems(player, BILL_OF_IASON_HEINE, 3);
@@ -368,7 +364,6 @@ public class Q00345_MethodToRaiseTheDead extends Quest
 							qs.setMemoState(7);
 							
 							final int random = getRandom(100);
-							
 							if (random <= 39)
 							{
 								qs.setMemoStateEx(1, 1);
@@ -388,7 +383,6 @@ public class Q00345_MethodToRaiseTheDead extends Quest
 						case 7:
 						{
 							final int memoStateEx = qs.getMemoStateEx(1);
-							
 							if (memoStateEx == 1)
 							{
 								htmltext = "30973-08.html";

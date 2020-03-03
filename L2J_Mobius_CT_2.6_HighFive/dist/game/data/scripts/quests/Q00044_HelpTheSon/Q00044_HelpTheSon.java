@@ -144,7 +144,6 @@ public class Q00044_HelpTheSon extends Quest
 	{
 		final QuestState qs = getQuestState(player, true);
 		String htmltext = getNoQuestMsg(player);
-		
 		switch (npc.getId())
 		{
 			case LUNDY:

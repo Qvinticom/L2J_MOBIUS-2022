@@ -71,7 +71,6 @@ public class Q00249_PoisonedPlainsOfTheLizardmen extends Quest
 	{
 		final QuestState qs = getQuestState(player, true);
 		String htmltext = getNoQuestMsg(player);
-		
 		if (npc.getId() == MOUEN)
 		{
 			switch (qs.getState())

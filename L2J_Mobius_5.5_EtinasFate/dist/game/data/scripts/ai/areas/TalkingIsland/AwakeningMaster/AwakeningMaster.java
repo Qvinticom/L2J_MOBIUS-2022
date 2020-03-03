@@ -262,7 +262,6 @@ public class AwakeningMaster extends AbstractNpcAI
 	public void OnPlayerChangeToAwakenedClass(OnPlayerChangeToAwakenedClass event)
 	{
 		final PlayerInstance player = event.getPlayer();
-		
 		if (player.isSubClassActive() && !player.isDualClassActive())
 		{
 			return;
@@ -339,7 +338,6 @@ public class AwakeningMaster extends AbstractNpcAI
 			}
 		}
 		giveItems(player, player.isDualClassActive() ? CHAOS_POMANDER_DUAL_CLASS : CHAOS_POMANDER, 2);
-		
 		SkillTreeData.getInstance().cleanSkillUponAwakening(player);
 		for (SkillLearn skill : SkillTreeData.getInstance().getRaceSkillTree(player.getRace()))
 		{

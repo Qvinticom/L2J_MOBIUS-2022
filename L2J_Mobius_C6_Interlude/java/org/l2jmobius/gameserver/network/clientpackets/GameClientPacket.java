@@ -42,7 +42,6 @@ public abstract class GameClientPacket extends ReceivablePacket<GameClient>
 		catch (Exception e)
 		{
 			LOGGER.severe("Client: " + getClient() + " - Failed reading: " + getType() + " ; " + e.getMessage() + " " + e);
-			
 			if (e instanceof BufferUnderflowException)
 			{
 				getClient().onBufferUnderflow();
@@ -70,7 +69,6 @@ public abstract class GameClientPacket extends ReceivablePacket<GameClient>
 		catch (Throwable t)
 		{
 			LOGGER.severe("Client: " + getClient() + " - Failed reading: " + getType() + " ; " + t.getMessage() + " " + t);
-			
 			if (this instanceof EnterWorld)
 			{
 				getClient().closeNow();

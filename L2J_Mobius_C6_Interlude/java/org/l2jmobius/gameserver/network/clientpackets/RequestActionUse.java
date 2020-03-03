@@ -81,7 +81,6 @@ public class RequestActionUse extends GameClientPacket
 	protected void runImpl()
 	{
 		final PlayerInstance player = getClient().getPlayer();
-		
 		if (player == null)
 		{
 			return;
@@ -670,7 +669,6 @@ public class RequestActionUse extends GameClientPacket
 		}
 		
 		final Summon activeSummon = player.getPet();
-		
 		if (player.getPrivateStoreType() != 0)
 		{
 			player.sendMessage("Cannot use skills while trading");
@@ -695,7 +693,6 @@ public class RequestActionUse extends GameClientPacket
 			activeSummon.setTarget(target);
 			
 			boolean force = _ctrlPressed;
-			
 			if ((target instanceof Creature) && activeSummon.isInsideZone(ZoneId.PVP) && ((Creature) target).isInsideZone(ZoneId.PVP))
 			{
 				force = true;

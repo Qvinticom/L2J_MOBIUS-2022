@@ -56,7 +56,6 @@ public class PostBBSManager extends BaseBBSManager
 			
 			final int idf = Integer.parseInt(st.nextToken());
 			final int idp = Integer.parseInt(st.nextToken());
-			
 			String index = null;
 			if (st.hasMoreTokens())
 			{
@@ -84,7 +83,6 @@ public class PostBBSManager extends BaseBBSManager
 			final int idf = Integer.parseInt(st.nextToken());
 			final int idt = Integer.parseInt(st.nextToken());
 			final int idp = Integer.parseInt(st.nextToken());
-			
 			showEditPost((TopicBBSManager.getInstance().getTopicByID(idt)), ForumsBBSManager.getInstance().getForumByID(idf), player, idp);
 		}
 		else
@@ -100,7 +98,6 @@ public class PostBBSManager extends BaseBBSManager
 		final int idf = Integer.parseInt(st.nextToken());
 		final int idt = Integer.parseInt(st.nextToken());
 		final int idp = Integer.parseInt(st.nextToken());
-		
 		final Forum forum = ForumsBBSManager.getInstance().getForumByID(idf);
 		if (forum == null)
 		{
@@ -202,7 +199,6 @@ public class PostBBSManager extends BaseBBSManager
 		final Post p = getPostByTopic(topic);
 		final Locale locale = Locale.getDefault();
 		final DateFormat dateFormat = DateFormat.getDateInstance(DateFormat.FULL, locale);
-		
 		String mes = p.getCPost(0).postTxt.replace(">", "&gt;");
 		mes = mes.replace("<", "&lt;");
 		mes = mes.replace("\n", "<br1>");

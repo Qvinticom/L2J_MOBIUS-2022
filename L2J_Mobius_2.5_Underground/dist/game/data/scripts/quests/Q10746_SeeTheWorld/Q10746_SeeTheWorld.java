@@ -51,7 +51,6 @@ public class Q10746_SeeTheWorld extends Quest
 		super(10746);
 		addStartNpc(KARLA);
 		addTalkId(KARLA, ASTIEL, LEVIAN);
-		
 		addCondRace(Race.ERTHEIA, "");
 		addCondLevel(MIN_LEVEL, MAX_LEVEL, "33933-00.htm");
 	}
@@ -94,7 +93,6 @@ public class Q10746_SeeTheWorld extends Quest
 	{
 		final QuestState qs = getQuestState(player, true);
 		String htmltext = getNoQuestMsg(player);
-		
 		switch (npc.getId())
 		{
 			case KARLA:

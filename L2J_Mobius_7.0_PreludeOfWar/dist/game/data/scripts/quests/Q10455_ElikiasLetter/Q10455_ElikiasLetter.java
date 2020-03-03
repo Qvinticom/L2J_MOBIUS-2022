@@ -103,7 +103,6 @@ public class Q10455_ElikiasLetter extends Quest
 	{
 		final QuestState qs = getQuestState(player, true);
 		String htmltext = getNoQuestMsg(player);
-		
 		switch (npc.getId())
 		{
 			case ELRIKIA_VERDURE_ELDER:

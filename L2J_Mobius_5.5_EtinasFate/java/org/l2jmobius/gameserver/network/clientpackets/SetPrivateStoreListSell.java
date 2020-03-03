@@ -59,7 +59,6 @@ public class SetPrivateStoreListSell implements IClientIncomingPacket
 			final int itemId = packet.readD();
 			final long cnt = packet.readQ();
 			final long price = packet.readQ();
-			
 			if ((itemId < 1) || (cnt < 1) || (price < 0))
 			{
 				_items = null;

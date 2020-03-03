@@ -96,7 +96,6 @@ public class AdminInstance implements IAdminCommandHandler
 			{
 				final int templateId = CommonUtil.parseNextInt(st, 0);
 				final InstanceTemplate template = InstanceManager.getInstance().getInstanceTemplate(templateId);
-				
 				if (template != null)
 				{
 					final String enterGroup = st.hasMoreTokens() ? st.nextToken() : "Alone";
@@ -213,7 +212,6 @@ public class AdminInstance implements IAdminCommandHandler
 			html.replace("%emptyDuration%", TimeUnit.MILLISECONDS.toMinutes(template.getEmptyDestroyTime()) + " minutes");
 			html.replace("%ejectDuration%", template.getEjectTime() + " minutes");
 			html.replace("%removeBuff%", template.isRemoveBuffEnabled());
-			
 			sb.append("<table border=0 cellpadding=2 cellspacing=0 bgcolor=\"363636\">");
 			sb.append("<tr>");
 			sb.append("<td fixwidth=\"83\"><font color=\"LEVEL\">Instance ID</font></td>");
@@ -291,11 +289,9 @@ public class AdminInstance implements IAdminCommandHandler
 	{
 		final int page = parser.getInt("page", 0);
 		final int templateId = parser.getInt("id", 0);
-		
 		if (templateId > 0)
 		{
 			sendTemplateDetails(player, templateId);
-			
 		}
 		else
 		{

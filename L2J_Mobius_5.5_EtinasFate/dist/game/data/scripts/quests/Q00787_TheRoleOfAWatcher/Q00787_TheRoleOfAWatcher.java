@@ -194,7 +194,6 @@ public class Q00787_TheRoleOfAWatcher extends Quest
 	{
 		final QuestState qs = getQuestState(player, true);
 		String htmltext = getNoQuestMsg(player);
-		
 		if (npc.getId() == NAMO)
 		{
 			switch (qs.getState())

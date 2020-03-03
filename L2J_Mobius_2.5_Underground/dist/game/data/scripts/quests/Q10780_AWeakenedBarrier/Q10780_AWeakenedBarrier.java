@@ -111,7 +111,6 @@ public class Q10780_AWeakenedBarrier extends Quest
 	{
 		final QuestState qs = getQuestState(player, true);
 		String htmltext = getNoQuestMsg(player);
-		
 		if (npc.getId() == ANDY)
 		{
 			switch (qs.getState())

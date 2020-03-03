@@ -86,7 +86,6 @@ public class RequestPartyMatchList implements IClientIncomingPacket
 		else
 		{
 			final int maxid = PartyMatchRoomList.getInstance().getMaxId();
-			
 			final PartyMatchRoom room = new PartyMatchRoom(maxid, _roomtitle, _loot, _lvlmin, _lvlmax, _membersmax, player);
 			
 			LOGGER.info("PartyMatchRoom #" + maxid + " created by " + player.getName());
@@ -94,7 +93,6 @@ public class RequestPartyMatchList implements IClientIncomingPacket
 			PartyMatchWaitingList.getInstance().removePlayer(player);
 			
 			PartyMatchRoomList.getInstance().addPartyMatchRoom(maxid, room);
-			
 			if (player.isInParty())
 			{
 				for (PlayerInstance ptmember : player.getParty().getMembers())
@@ -110,13 +108,11 @@ public class RequestPartyMatchList implements IClientIncomingPacket
 					
 					ptmember.setPartyRoom(maxid);
 					// ptmember.setPartyMatching(1);
-					
 					room.addMember(ptmember);
 				}
 			}
 			player.sendPacket(new PartyMatchDetail(room));
 			player.sendPacket(new ExPartyRoomMember(room, 1));
-			
 			player.sendPacket(SystemMessageId.YOU_HAVE_CREATED_A_PARTY_ROOM);
 			
 			player.setPartyRoom(maxid);

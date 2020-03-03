@@ -77,7 +77,6 @@ public class RequestDestroyItem implements IClientIncomingPacket
 		}
 		
 		long count = _count;
-		
 		if (player.isProcessingTransaction() || (player.getPrivateStoreType() != PrivateStoreType.NONE))
 		{
 			player.sendPacket(SystemMessageId.WHILE_OPERATING_A_PRIVATE_STORE_OR_WORKSHOP_YOU_CANNOT_DISCARD_DESTROY_OR_TRADE_AN_ITEM);
@@ -107,7 +106,6 @@ public class RequestDestroyItem implements IClientIncomingPacket
 		}
 		
 		final int itemId = itemToRemove.getId();
-		
 		if (!Config.DESTROY_ALL_ITEMS && ((!player.canOverrideCond(PlayerCondOverride.DESTROY_ALL_ITEMS) && !itemToRemove.isDestroyable()) || CursedWeaponsManager.getInstance().isCursed(itemId)))
 		{
 			if (itemToRemove.isHeroItem())
@@ -178,7 +176,6 @@ public class RequestDestroyItem implements IClientIncomingPacket
 			}
 			
 			final ItemInstance[] unequiped = player.getInventory().unEquipItemInSlotAndRecord(itemToRemove.getLocationSlot());
-			
 			final InventoryUpdate iu = new InventoryUpdate();
 			for (ItemInstance itm : unequiped)
 			{
@@ -188,7 +185,6 @@ public class RequestDestroyItem implements IClientIncomingPacket
 		}
 		
 		final ItemInstance removedItem = player.getInventory().destroyItem("Destroy", itemToRemove, count, player, null);
-		
 		if (removedItem == null)
 		{
 			return;

@@ -121,7 +121,6 @@ public class Q00659_IdRatherBeCollectingFairyBreath extends Quest
 	{
 		final QuestState qs = getQuestState(player, true);
 		String htmltext = getNoQuestMsg(player);
-		
 		if (qs.isCreated())
 		{
 			htmltext = ((player.getLevel() >= MIN_LEVEL) ? "30634-01.htm" : "30634-03.html");

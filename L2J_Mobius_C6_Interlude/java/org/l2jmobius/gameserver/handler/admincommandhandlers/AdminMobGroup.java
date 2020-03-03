@@ -140,14 +140,12 @@ public class AdminMobGroup implements IAdminCommandHandler
 		}
 		
 		showMainPage(activeChar, command);
-		
 		return true;
 	}
 	
 	private void showMainPage(PlayerInstance activeChar, String command)
 	{
 		String filename = "mobgroup.htm";
-		
 		if (command.contains("mobinst"))
 		{
 			filename = "mobgrouphelp.htm";
@@ -171,7 +169,6 @@ public class AdminMobGroup implements IAdminCommandHandler
 		}
 		
 		final MobGroup group = MobGroupTable.getInstance().getGroup(groupId);
-		
 		if (group == null)
 		{
 			BuilderUtil.sendSysMessage(activeChar, "Invalid group specified.");
@@ -196,7 +193,6 @@ public class AdminMobGroup implements IAdminCommandHandler
 		}
 		
 		final MobGroup group = MobGroupTable.getInstance().getGroup(groupId);
-		
 		if (group == null)
 		{
 			BuilderUtil.sendSysMessage(activeChar, "Invalid group specified.");
@@ -221,7 +217,6 @@ public class AdminMobGroup implements IAdminCommandHandler
 		}
 		
 		final MobGroup group = MobGroupTable.getInstance().getGroup(groupId);
-		
 		if (group == null)
 		{
 			BuilderUtil.sendSysMessage(activeChar, "Invalid group specified.");
@@ -246,7 +241,6 @@ public class AdminMobGroup implements IAdminCommandHandler
 		}
 		
 		final MobGroup group = MobGroupTable.getInstance().getGroup(groupId);
-		
 		if (group == null)
 		{
 			BuilderUtil.sendSysMessage(activeChar, "Invalid group specified.");
@@ -271,7 +265,6 @@ public class AdminMobGroup implements IAdminCommandHandler
 		}
 		
 		final MobGroup group = MobGroupTable.getInstance().getGroup(groupId);
-		
 		if (group == null)
 		{
 			BuilderUtil.sendSysMessage(activeChar, "Invalid group specified.");
@@ -290,7 +283,6 @@ public class AdminMobGroup implements IAdminCommandHandler
 		try
 		{
 			final String[] cmdParams = command.split(" ");
-			
 			groupId = Integer.parseInt(cmdParams[1]);
 			templateId = Integer.parseInt(cmdParams[2]);
 			mobCount = Integer.parseInt(cmdParams[3]);
@@ -308,7 +300,6 @@ public class AdminMobGroup implements IAdminCommandHandler
 		}
 		
 		final NpcTemplate template = NpcTable.getInstance().getTemplate(templateId);
-		
 		if (template == null)
 		{
 			BuilderUtil.sendSysMessage(activeChar, "Invalid NPC ID specified.");
@@ -317,7 +308,6 @@ public class AdminMobGroup implements IAdminCommandHandler
 		
 		final MobGroup group = new MobGroup(groupId, template, mobCount);
 		MobGroupTable.getInstance().addGroup(groupId, group);
-		
 		BuilderUtil.sendSysMessage(activeChar, "Mob group " + groupId + " created.");
 	}
 	
@@ -336,7 +326,6 @@ public class AdminMobGroup implements IAdminCommandHandler
 		}
 		
 		final MobGroup group = MobGroupTable.getInstance().getGroup(groupId);
-		
 		if (group == null)
 		{
 			BuilderUtil.sendSysMessage(activeChar, "Invalid group specified.");
@@ -385,7 +374,6 @@ public class AdminMobGroup implements IAdminCommandHandler
 		}
 		
 		final MobGroup group = MobGroupTable.getInstance().getGroup(groupId);
-		
 		if (group == null)
 		{
 			BuilderUtil.sendSysMessage(activeChar, "Invalid group specified.");
@@ -421,7 +409,6 @@ public class AdminMobGroup implements IAdminCommandHandler
 		}
 		
 		final MobGroup group = MobGroupTable.getInstance().getGroup(groupId);
-		
 		if (group == null)
 		{
 			BuilderUtil.sendSysMessage(activeChar, "Invalid group specified.");
@@ -449,7 +436,6 @@ public class AdminMobGroup implements IAdminCommandHandler
 		}
 		
 		final MobGroup group = MobGroupTable.getInstance().getGroup(groupId);
-		
 		if (group == null)
 		{
 			BuilderUtil.sendSysMessage(activeChar, "Invalid group specified.");
@@ -475,7 +461,6 @@ public class AdminMobGroup implements IAdminCommandHandler
 		}
 		
 		final MobGroup group = MobGroupTable.getInstance().getGroup(groupId);
-		
 		if (group == null)
 		{
 			BuilderUtil.sendSysMessage(activeChar, "Invalid group specified.");
@@ -488,7 +473,6 @@ public class AdminMobGroup implements IAdminCommandHandler
 	private void noMove(String command, PlayerInstance activeChar)
 	{
 		int groupId;
-		
 		String enabled;
 		
 		try
@@ -503,7 +487,6 @@ public class AdminMobGroup implements IAdminCommandHandler
 		}
 		
 		final MobGroup group = MobGroupTable.getInstance().getGroup(groupId);
-		
 		if (group == null)
 		{
 			BuilderUtil.sendSysMessage(activeChar, "Invalid group specified.");
@@ -547,7 +530,6 @@ public class AdminMobGroup implements IAdminCommandHandler
 		}
 		
 		final MobGroup group = MobGroupTable.getInstance().getGroup(groupId);
-		
 		if (group == null)
 		{
 			BuilderUtil.sendSysMessage(activeChar, "Invalid group specified.");
@@ -555,7 +537,6 @@ public class AdminMobGroup implements IAdminCommandHandler
 		}
 		
 		final MobGroup othGroup = MobGroupTable.getInstance().getGroup(othGroupId);
-		
 		if (othGroup == null)
 		{
 			BuilderUtil.sendSysMessage(activeChar, "Incorrect target group.");
@@ -568,7 +549,6 @@ public class AdminMobGroup implements IAdminCommandHandler
 	private void invul(String command, PlayerInstance activeChar)
 	{
 		int groupId;
-		
 		String enabled;
 		
 		try
@@ -583,7 +563,6 @@ public class AdminMobGroup implements IAdminCommandHandler
 		}
 		
 		final MobGroup group = MobGroupTable.getInstance().getGroup(groupId);
-		
 		if (group == null)
 		{
 			BuilderUtil.sendSysMessage(activeChar, "Invalid group specified.");
@@ -614,7 +593,6 @@ public class AdminMobGroup implements IAdminCommandHandler
 		{
 			groupId = Integer.parseInt(command.split(" ")[1]);
 			targetPlayerStr = command.split(" ")[2];
-			
 			if (targetPlayerStr != null)
 			{
 				targetPlayer = World.getInstance().getPlayer(targetPlayerStr);
@@ -632,7 +610,6 @@ public class AdminMobGroup implements IAdminCommandHandler
 		}
 		
 		final MobGroup group = MobGroupTable.getInstance().getGroup(groupId);
-		
 		if (group == null)
 		{
 			BuilderUtil.sendSysMessage(activeChar, "Invalid group specified.");
@@ -645,9 +622,7 @@ public class AdminMobGroup implements IAdminCommandHandler
 	private void showGroupList(PlayerInstance activeChar)
 	{
 		final MobGroup[] mobGroupList = MobGroupTable.getInstance().getGroups();
-		
 		BuilderUtil.sendSysMessage(activeChar, "======= <Mob Groups> =======");
-		
 		for (MobGroup mobGroup : mobGroupList)
 		{
 			activeChar.sendMessage(mobGroup.getGroupId() + ": " + mobGroup.getActiveMobCount() + " alive out of " + mobGroup.getMaxMobCount() + " of NPC ID " + mobGroup.getTemplate().getNpcId() + " (" + mobGroup.getStatus() + ")");

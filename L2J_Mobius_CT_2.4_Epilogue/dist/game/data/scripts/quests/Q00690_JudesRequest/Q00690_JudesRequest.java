@@ -75,7 +75,6 @@ public class Q00690_JudesRequest extends Quest
 	{
 		String htmltext = event;
 		final QuestState qs = getQuestState(player, false);
-		
 		if (qs == null)
 		{
 			return getNoQuestMsg(player);
@@ -144,7 +143,6 @@ public class Q00690_JudesRequest extends Quest
 		chance *= Config.RATE_QUEST_DROP;
 		// Normalize
 		chance %= 1000;
-		
 		if (getRandom(1000) <= chance)
 		{
 			giveItems(player, EVIL_WEAPON, Math.max(chance / 1000, 1));
@@ -158,7 +156,6 @@ public class Q00690_JudesRequest extends Quest
 	{
 		final QuestState qs = getQuestState(player, true);
 		String htmltext = getNoQuestMsg(player);
-		
 		switch (qs.getState())
 		{
 			case State.CREATED:

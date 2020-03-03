@@ -48,7 +48,6 @@ public class AdminKill implements IAdminCommandHandler
 		{
 			final StringTokenizer st = new StringTokenizer(command, " ");
 			st.nextToken(); // skip command
-			
 			if (st.hasMoreTokens())
 			{
 				final String firstParam = st.nextToken();
@@ -86,7 +85,6 @@ public class AdminKill implements IAdminCommandHandler
 					try
 					{
 						final int radius = Integer.parseInt(firstParam);
-						
 						World.getInstance().forEachVisibleObjectInRange(activeChar, Creature.class, radius, wo ->
 						{
 							if ((wo instanceof ControllableMobInstance) || (wo == activeChar))
@@ -146,7 +144,6 @@ public class AdminKill implements IAdminCommandHandler
 			}
 			
 			target.reduceCurrentHp(target.getMaxHp() + 1, activeChar, null);
-			
 			if (targetIsInvul)
 			{
 				target.setInvul(true);

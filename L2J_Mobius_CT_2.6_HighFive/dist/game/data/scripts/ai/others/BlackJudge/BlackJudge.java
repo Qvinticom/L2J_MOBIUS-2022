@@ -64,7 +64,6 @@ public class BlackJudge extends AbstractNpcAI
 				if (player.getDeathPenaltyBuffLevel() > 0)
 				{
 					final int cost = COSTS[level];
-					
 					if (player.getAdena() >= cost)
 					{
 						takeItems(player, Inventory.ADENA_ID, cost);

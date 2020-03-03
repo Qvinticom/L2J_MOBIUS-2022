@@ -50,7 +50,6 @@ public class RequestExRemoveItemAttribute implements IClientIncomingPacket
 		}
 		
 		final ItemInstance targetItem = player.getInventory().getItemByObjectId(_objectId);
-		
 		if (targetItem == null)
 		{
 			return;
@@ -79,7 +78,6 @@ public class RequestExRemoveItemAttribute implements IClientIncomingPacket
 			
 			// Retail message.
 			player.sendMessage(targetItem.getName() + "'s elemental power was removed.");
-			
 			player.sendPacket(new ExShowBaseAttributeCancelWindow(player));
 		}
 		else
@@ -129,7 +127,6 @@ public class RequestExRemoveItemAttribute implements IClientIncomingPacket
 				break;
 			}
 		}
-		
 		return _price;
 	}
 }

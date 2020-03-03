@@ -43,7 +43,6 @@ public class AdminQuest implements IAdminCommandHandler
 		if (command.startsWith("admin_quest_reload"))
 		{
 			final String[] parts = command.split(" ");
-			
 			if (parts.length < 2)
 			{
 				BuilderUtil.sendSysMessage(activeChar, "Syntax: //quest_reload <questFolder>.<questSubFolders...>.questName> or //quest_reload <id>");
@@ -54,7 +53,6 @@ public class AdminQuest implements IAdminCommandHandler
 				try
 				{
 					final int questId = Integer.parseInt(parts[1]);
-					
 					if (QuestManager.getInstance().reload(questId))
 					{
 						BuilderUtil.sendSysMessage(activeChar, "Quest Reloaded Successfully.");
@@ -77,7 +75,6 @@ public class AdminQuest implements IAdminCommandHandler
 				}
 			}
 		}
-		
 		return true;
 	}
 	

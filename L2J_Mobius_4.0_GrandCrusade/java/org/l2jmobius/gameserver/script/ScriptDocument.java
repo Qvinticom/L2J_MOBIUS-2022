@@ -47,7 +47,6 @@ public class ScriptDocument
 		{
 			final DocumentBuilder builder = factory.newDocumentBuilder();
 			_document = builder.parse(input);
-			
 		}
 		catch (SAXException sxe)
 		{

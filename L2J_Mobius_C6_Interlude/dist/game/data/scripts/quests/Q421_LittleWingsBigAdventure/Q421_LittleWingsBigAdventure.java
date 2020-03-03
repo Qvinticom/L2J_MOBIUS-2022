@@ -277,11 +277,9 @@ public class Q421_LittleWingsBigAdventure extends Quest
 			{
 				final int idMask = (int) Math.pow(2, (npc.getNpcId() - 27182) - 1);
 				final int iCond = st.getInt("iCond");
-				
 				if ((iCond | idMask) != iCond)
 				{
 					st.set("iCond", String.valueOf(iCond | idMask));
-					
 					npc.broadcastNpcSay("Give me a Fairy Leaf...!");
 					st.takeItems(FAIRY_LEAF, 1);
 					npc.broadcastNpcSay("Leave now, before you incur the wrath of the guardian ghost...");
@@ -322,7 +320,6 @@ public class Q421_LittleWingsBigAdventure extends Quest
 		for (int i = 0; i < 20; i++)
 		{
 			final Attackable newNpc = (Attackable) addSpawn(27189, npc.getX(), npc.getY(), npc.getZ(), Rnd.get(65536), true, 300000);
-			
 			newNpc.setRunning();
 			newNpc.addDamageHate(originalKiller, 0, 999);
 			newNpc.getAI().setIntention(CtrlIntention.AI_INTENTION_ATTACK, originalKiller);

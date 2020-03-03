@@ -39,7 +39,6 @@ public class AdminGm implements IAdminCommandHandler
 		{
 			handleGm(activeChar);
 		}
-		
 		return true;
 	}
 	

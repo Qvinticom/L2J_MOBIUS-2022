@@ -285,7 +285,6 @@ public class MercTicketManager
 			final double dx = x - item.getX();
 			final double dy = y - item.getY();
 			final double dz = z - item.getZ();
-			
 			if (((dx * dx) + (dy * dy) + (dz * dz)) < (25 * 25))
 			{
 				return true;
@@ -307,7 +306,6 @@ public class MercTicketManager
 		final int y = player.getY();
 		final int z = player.getZ();
 		final int heading = player.getHeading();
-		
 		final Castle castle = CastleManager.getInstance().getCastle(player);
 		if (castle == null)
 		{
@@ -392,7 +390,6 @@ public class MercTicketManager
 		}
 		// find the castle where this item is
 		final Castle castle = CastleManager.getInstance().getCastleById(getTicketCastleId(itemId));
-		
 		if ((npcId > 0) && (castle != null))
 		{
 			(new SiegeGuardManager(castle)).removeMerc(npcId, item.getX(), item.getY(), item.getZ());

@@ -149,7 +149,6 @@ public class ClanTable
 				return clan;
 			}
 		}
-		
 		return null;
 	}
 	
@@ -167,7 +166,6 @@ public class ClanTable
 		}
 		
 		LOGGER.info("{" + player.getObjectId() + "}({" + player.getName() + "}) requested a clan creation.");
-		
 		if (10 > player.getLevel())
 		{
 			player.sendPacket(SystemMessageId.YOU_DO_NOT_MEET_THE_CRITERIA_IR_ORDER_TO_CREATE_A_CLAN);
@@ -262,7 +260,6 @@ public class ClanTable
 	public synchronized void destroyClan(int clanId)
 	{
 		final Clan clan = getClan(clanId);
-		
 		if (clan == null)
 		{
 			return;
@@ -290,7 +287,6 @@ public class ClanTable
 		clan.broadcastToOnlineMembers(new SystemMessage(SystemMessageId.CLAN_HAS_DISPERSED));
 		
 		final int castleId = clan.getHasCastle();
-		
 		if (castleId == 0)
 		{
 			for (Siege siege : SiegeManager.getInstance().getSieges())
@@ -300,7 +296,6 @@ public class ClanTable
 		}
 		
 		final int fortId = clan.getHasFort();
-		
 		if (fortId == 0)
 		{
 			for (FortSiege siege : FortSiegeManager.getInstance().getSieges())
@@ -310,7 +305,6 @@ public class ClanTable
 		}
 		
 		final ClanMember leaderMember = clan.getLeader();
-		
 		if (leaderMember == null)
 		{
 			clan.getWarehouse().destroyAllItems("ClanRemove", null, null);
@@ -432,7 +426,6 @@ public class ClanTable
 	{
 		final Clan clan1 = getInstance().getClan(clanId1);
 		final Clan clan2 = getInstance().getClan(clanId2);
-		
 		clan1.setEnemyClan(clan2);
 		clan2.setAttackerClan(clan1);
 		clan1.broadcastClanStatus();
@@ -466,7 +459,6 @@ public class ClanTable
 	{
 		final Clan clan1 = getInstance().getClan(clanId1);
 		final Clan clan2 = getInstance().getClan(clanId2);
-		
 		clan1.deleteEnemyClan(clan2);
 		clan2.deleteAttackerClan(clan1);
 		clan1.broadcastClanStatus();
@@ -497,7 +489,6 @@ public class ClanTable
 	public void checkSurrender(Clan clan1, Clan clan2)
 	{
 		int count = 0;
-		
 		for (ClanMember player : clan1.getMembers())
 		{
 			if ((player != null) && (player.getPlayerInstance().getWantsPeace() == 1))

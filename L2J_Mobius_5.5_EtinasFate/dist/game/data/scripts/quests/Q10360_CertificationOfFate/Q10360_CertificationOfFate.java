@@ -229,7 +229,6 @@ public class Q10360_CertificationOfFate extends Quest
 					
 					final ClassId newClassId = ClassId.getClassId(Integer.parseInt(event.replace("classChange;", "")));
 					final ClassId currentClassId = player.getClassId();
-					
 					if (currentClassId.childOf(newClassId) || (qs.getCond() < 8))
 					{
 						Util.handleIllegalPlayerAction(player, "Player " + player.getName() + " tried to cheat the 2nd class transfer!", Config.DEFAULT_PUNISH);
@@ -261,7 +260,6 @@ public class Q10360_CertificationOfFate extends Quest
 	{
 		String htmltext = null;
 		final QuestState qs = getQuestState(player, true);
-		
 		if ((qs == null) || qs.isCompleted())
 		{
 			npc.showChatWindow(player);
@@ -289,7 +287,6 @@ public class Q10360_CertificationOfFate extends Quest
 	{
 		String htmltext = getNoQuestMsg(player);
 		final QuestState qs = getQuestState(player, true);
-		
 		if ((player.getRace() == Race.ERTHEIA) || (player.getLevel() < MIN_LEVEL))
 		{
 			return htmltext;
@@ -417,7 +414,6 @@ public class Q10360_CertificationOfFate extends Quest
 	public String onKill(Npc npc, PlayerInstance killer, boolean isSummon)
 	{
 		final QuestState qs = getQuestState(killer, false);
-		
 		if ((qs != null) && qs.isStarted())
 		{
 			switch (npc.getId())
@@ -529,11 +525,9 @@ public class Q10360_CertificationOfFate extends Quest
 		final PlayerInstance player = event.getPlayer();
 		final int oldLevel = event.getOldLevel();
 		final int newLevel = event.getNewLevel();
-		
 		if ((oldLevel < newLevel) && (newLevel == MIN_LEVEL) && (player.getRace() != Race.ERTHEIA) && (player.isInCategory(CategoryType.SECOND_CLASS_GROUP)))
 		{
 			player.sendPacket(new TutorialShowQuestionMark(getId(), 1));
-			
 		}
 	}
 	
@@ -542,7 +536,6 @@ public class Q10360_CertificationOfFate extends Quest
 	public void OnPlayerLogin(OnPlayerLogin event)
 	{
 		final PlayerInstance player = event.getPlayer();
-		
 		if ((player.getLevel() >= MIN_LEVEL) && (player.getRace() != Race.ERTHEIA) && (player.isInCategory(CategoryType.SECOND_CLASS_GROUP)))
 		{
 			final QuestState qs = getQuestState(player, true);

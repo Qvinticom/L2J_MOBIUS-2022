@@ -57,7 +57,6 @@ public class Sow extends AbstractEffect
 		
 		final PlayerInstance player = info.getEffector().getActingPlayer();
 		final MonsterInstance target = (MonsterInstance) info.getEffected();
-		
 		if (target.isDead() || (!target.getTemplate().canBeSown()) || target.isSeeded() || (target.getSeederId() != player.getObjectId()))
 		{
 			return;

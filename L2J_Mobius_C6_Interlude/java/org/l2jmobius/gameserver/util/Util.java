@@ -100,7 +100,6 @@ public class Util
 	{
 		final double dx = (double) x1 - x2;
 		final double dy = (double) y1 - y2;
-		
 		if (includeZAxis)
 		{
 			final double dz = z1 - z2;
@@ -127,12 +126,10 @@ public class Util
 	public static String capitalizeFirst(String str)
 	{
 		str = str.trim();
-		
 		if ((str.length() > 0) && Character.isLetter(str.charAt(0)))
 		{
 			return str.substring(0, 1).toUpperCase() + str.substring(1);
 		}
-		
 		return str;
 	}
 	
@@ -149,7 +146,6 @@ public class Util
 		
 		// Capitalize the first letter in the given string!
 		charArray[0] = Character.toUpperCase(charArray[0]);
-		
 		for (int i = 0; i < charArray.length; i++)
 		{
 			if (Character.isWhitespace(charArray[i]))
@@ -158,7 +154,6 @@ public class Util
 			}
 			result += Character.toString(charArray[i]);
 		}
-		
 		return result;
 	}
 	
@@ -185,16 +180,13 @@ public class Util
 		
 		final double dx = obj1.getX() - obj2.getX();
 		final double dy = obj1.getY() - obj2.getY();
-		
 		if (includeZAxis)
 		{
 			final double dz = obj1.getZ() - obj2.getZ();
 			final double d = (dx * dx) + (dy * dy) + (dz * dz);
-			
 			return d <= ((range * range) + (2 * range * rad) + (rad * rad));
 		}
 		final double d = (dx * dx) + (dy * dy);
-		
 		return d <= ((range * range) + (2 * range * rad) + (rad * rad));
 	}
 	
@@ -261,7 +253,6 @@ public class Util
 		}
 		
 		final float exponent = (float) Math.pow(10, numPlaces);
-		
 		return Math.round(value * exponent) / exponent;
 	}
 	

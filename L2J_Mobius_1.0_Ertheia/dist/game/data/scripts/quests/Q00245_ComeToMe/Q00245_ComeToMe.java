@@ -117,7 +117,6 @@ public class Q00245_ComeToMe extends Quest
 	{
 		final QuestState qs = getQuestState(player, true);
 		String htmltext = getNoQuestMsg(player);
-		
 		if (npc.getId() == FERRIS)
 		{
 			switch (qs.getState())
@@ -215,7 +214,6 @@ public class Q00245_ComeToMe extends Quest
 	public String onKill(Npc npc, PlayerInstance killer, boolean isSummon)
 	{
 		final QuestState qs = getQuestState(killer, true);
-		
 		if ((npc == null) || (qs == null))
 		{
 			return super.onKill(npc, killer, isSummon);

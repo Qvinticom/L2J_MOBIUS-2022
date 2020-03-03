@@ -308,7 +308,6 @@ public class SeedOfAnnihilation extends AbstractNpcAI
 			for (int i = 0; i < _regionsData.length; i++)
 			{
 				_regionsData[i].activeBuff = ZONE_BUFFS_LIST[buffsNow][i];
-				
 				for (Npc af : _regionsData[i].af_npcs)
 				{
 					af.setDisplayEffect(_regionsData[i].activeBuff);

@@ -118,7 +118,6 @@ public class Q00026_TiredOfWaiting extends Quest
 	{
 		final QuestState qs = getQuestState(player, true);
 		String htmltext = getNoQuestMsg(player);
-		
 		switch (npc.getId())
 		{
 			case ISAEL_SILVERSHADOW:

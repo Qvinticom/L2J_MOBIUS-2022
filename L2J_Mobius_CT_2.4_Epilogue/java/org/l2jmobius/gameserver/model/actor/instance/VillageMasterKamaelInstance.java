@@ -40,7 +40,6 @@ public class VillageMasterKamaelInstance extends VillageMasterInstance
 		{
 			return "data/html/villagemaster/SubClass.htm";
 		}
-		
 		return "data/html/villagemaster/SubClass_NoKamael.htm";
 	}
 	
@@ -81,7 +80,6 @@ public class VillageMasterKamaelInstance extends VillageMasterInstance
 		{
 			return false;
 		}
-		
 		return pClass.getRace() == Race.KAMAEL;
 	}
 }

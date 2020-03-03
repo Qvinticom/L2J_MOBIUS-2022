@@ -119,7 +119,6 @@ public class Q10410_EmbryoInTheSwampOfScreams extends Quest
 	{
 		final QuestState qs = getQuestState(player, true);
 		String htmltext = null;
-		
 		switch (qs.getState())
 		{
 			case State.CREATED:
@@ -145,7 +144,6 @@ public class Q10410_EmbryoInTheSwampOfScreams extends Quest
 	public String onKill(Npc npc, PlayerInstance killer, boolean isSummon)
 	{
 		final QuestState qs = getQuestState(killer, false);
-		
 		if ((qs != null) && qs.isCond(1))
 		{
 			if (npc.getId() == EMBRYO)

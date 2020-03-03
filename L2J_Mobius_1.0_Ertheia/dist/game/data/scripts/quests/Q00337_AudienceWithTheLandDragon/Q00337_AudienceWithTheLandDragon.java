@@ -172,7 +172,6 @@ public class Q00337_AudienceWithTheLandDragon extends Quest
 	{
 		final QuestState qs = getQuestState(player, true);
 		String htmltext = getNoQuestMsg(player);
-		
 		switch (npc.getId())
 		{
 			case GABRIELLE:
@@ -490,7 +489,6 @@ public class Q00337_AudienceWithTheLandDragon extends Quest
 			if (npcInfo[0] == npcId)
 			{
 				final double percentHp = ((npc.getCurrentHp() + damage) * 100.0D) / npc.getMaxHp();
-				
 				if (percentHp < 33.0D)
 				{
 					final int itemId = npcInfo[3];

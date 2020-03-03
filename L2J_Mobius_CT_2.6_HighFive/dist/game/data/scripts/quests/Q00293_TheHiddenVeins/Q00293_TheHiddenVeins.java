@@ -131,7 +131,6 @@ public class Q00293_TheHiddenVeins extends Quest
 	{
 		final QuestState qs = getQuestState(player, true);
 		String htmltext = getNoQuestMsg(player);
-		
 		switch (npc.getId())
 		{
 			case FILAUR:

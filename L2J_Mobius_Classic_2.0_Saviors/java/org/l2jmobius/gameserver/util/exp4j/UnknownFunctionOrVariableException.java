@@ -23,12 +23,10 @@ public class UnknownFunctionOrVariableException extends IllegalArgumentException
 	{
 		final int len = expression.length();
 		int end = (position + length) - 1;
-		
 		if (len < end)
 		{
 			end = len;
 		}
-		
 		return expression.substring(position, end);
 	}
 	

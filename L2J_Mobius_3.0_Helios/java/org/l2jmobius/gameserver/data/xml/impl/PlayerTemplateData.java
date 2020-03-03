@@ -70,7 +70,6 @@ public class PlayerTemplateData implements IXmlReader
 	{
 		NamedNodeMap attrs;
 		int classId = 0;
-		
 		for (Node n = doc.getFirstChild(); n != null; n = n.getNextSibling())
 		{
 			if ("list".equalsIgnoreCase(n.getNodeName()))
@@ -86,7 +85,6 @@ public class PlayerTemplateData implements IXmlReader
 						final StatSet set = new StatSet();
 						set.set("classId", classId);
 						final List<Location> creationPoints = new ArrayList<>();
-						
 						for (Node nd = d.getFirstChild(); nd != null; nd = nd.getNextSibling())
 						{
 							// Skip odd nodes
@@ -146,7 +144,6 @@ public class PlayerTemplateData implements IXmlReader
 						// calculate total pdef and mdef from parts
 						set.set("basePDef", (set.getInt("basePDefchest", 0) + set.getInt("basePDeflegs", 0) + set.getInt("basePDefhead", 0) + set.getInt("basePDeffeet", 0) + set.getInt("basePDefgloves", 0) + set.getInt("basePDefunderwear", 0) + set.getInt("basePDefcloak", 0) + set.getInt("basePDefhair", 0)));
 						set.set("baseMDef", (set.getInt("baseMDefrear", 0) + set.getInt("baseMDeflear", 0) + set.getInt("baseMDefrfinger", 0) + set.getInt("baseMDefrfinger", 0) + set.getInt("baseMDefneck", 0)));
-						
 						_playerTemplates.put(ClassId.getClassId(classId), new PlayerTemplate(set, creationPoints));
 					}
 					else if ("lvlUpgainData".equalsIgnoreCase(d.getNodeName()))

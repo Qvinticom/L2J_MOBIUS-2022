@@ -44,11 +44,9 @@ public class ExRankingCharRankers implements IClientOutgoingPacket
 	public ExRankingCharRankers(PlayerInstance player, int group, int scope, int race)
 	{
 		_player = player;
-		
 		_group = group;
 		_scope = scope;
 		_race = race;
-		
 		_playerList = RankManager.getInstance().getRankList();
 		_snapshotList = RankManager.getInstance().getSnapshotList();
 	}
@@ -71,13 +69,11 @@ public class ExRankingCharRankers implements IClientOutgoingPacket
 					if (_scope == 0) // all
 					{
 						final int count = _playerList.size() > 150 ? 150 : _playerList.size();
-						
 						packet.writeD(count);
 						
 						for (Integer id : _playerList.keySet())
 						{
 							final StatSet player = _playerList.get(id);
-							
 							packet.writeString(player.getString("name"));
 							packet.writeString(player.getString("clanName"));
 							packet.writeD(player.getInt("level"));
@@ -89,7 +85,6 @@ public class ExRankingCharRankers implements IClientOutgoingPacket
 								for (Integer id2 : _snapshotList.keySet())
 								{
 									final StatSet snapshot = _snapshotList.get(id2);
-									
 									if (player.getInt("charId") == snapshot.getInt("charId"))
 									{
 										packet.writeD(id2); // server rank snapshot
@@ -110,7 +105,6 @@ public class ExRankingCharRankers implements IClientOutgoingPacket
 						for (Integer id : _playerList.keySet())
 						{
 							final StatSet player = _playerList.get(id);
-							
 							if (player.getInt("charId") == _player.getObjectId())
 							{
 								found = true;
@@ -127,7 +121,6 @@ public class ExRankingCharRankers implements IClientOutgoingPacket
 								for (int id2 = first; id2 <= last; id2++)
 								{
 									final StatSet plr = _playerList.get(id2);
-									
 									packet.writeString(plr.getString("name"));
 									packet.writeString(plr.getString("clanName"));
 									packet.writeD(plr.getInt("level"));
@@ -162,7 +155,6 @@ public class ExRankingCharRankers implements IClientOutgoingPacket
 					if (_scope == 0) // all
 					{
 						int count = 0;
-						
 						for (int i = 1; i <= _playerList.size(); i++)
 						{
 							final StatSet player = _playerList.get(i);
@@ -177,7 +169,6 @@ public class ExRankingCharRankers implements IClientOutgoingPacket
 						for (Integer id : _playerList.keySet())
 						{
 							final StatSet player = _playerList.get(id);
-							
 							if (_race == player.getInt("race"))
 							{
 								packet.writeString(player.getString("name"));
@@ -193,7 +184,6 @@ public class ExRankingCharRankers implements IClientOutgoingPacket
 									for (Integer id2 : _snapshotList.keySet())
 									{
 										final StatSet snapshot = _snapshotList.get(id2);
-										
 										if (_race == snapshot.getInt("race"))
 										{
 											snapshotRaceList.put(j, _snapshotList.get(id2));
@@ -203,7 +193,6 @@ public class ExRankingCharRankers implements IClientOutgoingPacket
 									for (Integer id2 : snapshotRaceList.keySet())
 									{
 										final StatSet snapshot = snapshotRaceList.get(id2);
-										
 										if (player.getInt("charId") == snapshot.getInt("charId"))
 										{
 											packet.writeD(id2); // server rank snapshot
@@ -229,7 +218,6 @@ public class ExRankingCharRankers implements IClientOutgoingPacket
 						for (Integer id : _playerList.keySet())
 						{
 							final StatSet set = _playerList.get(id);
-							
 							if (_player.getRace().ordinal() == set.getInt("race"))
 							{
 								raceList.put(i, _playerList.get(id));
@@ -240,7 +228,6 @@ public class ExRankingCharRankers implements IClientOutgoingPacket
 						for (Integer id : raceList.keySet())
 						{
 							final StatSet player = raceList.get(id);
-							
 							if (player.getInt("charId") == _player.getObjectId())
 							{
 								found = true;
@@ -257,7 +244,6 @@ public class ExRankingCharRankers implements IClientOutgoingPacket
 								for (int id2 = first; id2 <= last; id2++)
 								{
 									final StatSet plr = raceList.get(id2);
-									
 									packet.writeString(plr.getString("name"));
 									packet.writeString(plr.getString("clanName"));
 									packet.writeD(plr.getInt("level"));
@@ -285,7 +271,6 @@ public class ExRankingCharRankers implements IClientOutgoingPacket
 						for (Integer id : _playerList.keySet())
 						{
 							final StatSet set = _playerList.get(id);
-							
 							if (_player.getClan().getName() == set.getString("clanName"))
 							{
 								clanList.put(i, _playerList.get(id));
@@ -298,7 +283,6 @@ public class ExRankingCharRankers implements IClientOutgoingPacket
 						for (Integer id : clanList.keySet())
 						{
 							final StatSet player = clanList.get(id);
-							
 							packet.writeString(player.getString("name"));
 							packet.writeString(player.getString("clanName"));
 							packet.writeD(player.getInt("level"));
@@ -310,7 +294,6 @@ public class ExRankingCharRankers implements IClientOutgoingPacket
 								for (Integer id2 : _snapshotList.keySet())
 								{
 									final StatSet snapshot = _snapshotList.get(id2);
-									
 									if (player.getInt("charId") == snapshot.getInt("charId"))
 									{
 										packet.writeD(id2); // server rank snapshot
@@ -369,7 +352,6 @@ public class ExRankingCharRankers implements IClientOutgoingPacket
 									for (Integer id2 : _snapshotList.keySet())
 									{
 										final StatSet snapshot = _snapshotList.get(id2);
-										
 										if (player.getInt("charId") == snapshot.getInt("charId"))
 										{
 											packet.writeD(id2); // server rank snapshot
@@ -407,7 +389,6 @@ public class ExRankingCharRankers implements IClientOutgoingPacket
 							for (Integer id : _snapshotList.keySet())
 							{
 								final StatSet snapshot = _snapshotList.get(id);
-								
 								if (_player.getObjectId() == snapshot.getInt("charId"))
 								{
 									packet.writeD(id); // server rank snapshot

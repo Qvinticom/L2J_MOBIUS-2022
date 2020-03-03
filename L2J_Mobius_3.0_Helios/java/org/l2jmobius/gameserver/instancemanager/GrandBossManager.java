@@ -206,7 +206,6 @@ public class GrandBossManager implements IStorable
 		{
 			final GrandBossInstance boss = _bosses.get(bossId);
 			final StatSet info = _storedInfo.get(bossId);
-			
 			if (statusOnly || (boss == null) || (info == null))
 			{
 				try (PreparedStatement ps = con.prepareStatement(UPDATE_GRAND_BOSS_DATA2))

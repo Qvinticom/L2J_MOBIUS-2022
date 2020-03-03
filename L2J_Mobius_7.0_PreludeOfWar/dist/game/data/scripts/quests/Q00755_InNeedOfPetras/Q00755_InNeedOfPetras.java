@@ -88,7 +88,6 @@ public class Q00755_InNeedOfPetras extends Quest
 	{
 		final QuestState qs = getQuestState(player, true);
 		String htmltext = getNoQuestMsg(player);
-		
 		if (qs.isCreated())
 		{
 			htmltext = "sofa_aku_q0755_01.htm";
@@ -113,7 +112,6 @@ public class Q00755_InNeedOfPetras extends Quest
 		{
 			htmltext = "sofa_aku_q0755_06.html";
 		}
-		
 		return htmltext;
 	}
 	

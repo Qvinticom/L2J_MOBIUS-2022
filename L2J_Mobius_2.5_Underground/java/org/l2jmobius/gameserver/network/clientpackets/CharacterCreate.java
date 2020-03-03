@@ -125,7 +125,6 @@ public class CharacterCreate implements IClientIncomingPacket
 		if ((_face > 2) || (_face < 0))
 		{
 			LOGGER.warning("Character Creation Failure: Character face " + _face + " is invalid. Possible client hack. " + client);
-			
 			client.sendPacket(new CharCreateFail(CharCreateFail.REASON_CREATION_FAILED));
 			return;
 		}
@@ -133,7 +132,6 @@ public class CharacterCreate implements IClientIncomingPacket
 		if ((_hairStyle < 0) || ((_sex == 0) && (_hairStyle > 4)) || ((_sex != 0) && (_hairStyle > 6)))
 		{
 			LOGGER.warning("Character Creation Failure: Character hair style " + _hairStyle + " is invalid. Possible client hack. " + client);
-			
 			client.sendPacket(new CharCreateFail(CharCreateFail.REASON_CREATION_FAILED));
 			return;
 		}
@@ -141,7 +139,6 @@ public class CharacterCreate implements IClientIncomingPacket
 		if ((_hairColor > 3) || (_hairColor < 0))
 		{
 			LOGGER.warning("Character Creation Failure: Character hair color " + _hairColor + " is invalid. Possible client hack. " + client);
-			
 			client.sendPacket(new CharCreateFail(CharCreateFail.REASON_CREATION_FAILED));
 			return;
 		}
@@ -247,7 +244,6 @@ public class CharacterCreate implements IClientIncomingPacket
 		newChar.setCurrentHp(newChar.getMaxHp());
 		newChar.setCurrentMp(newChar.getMaxMp());
 		// newChar.setMaxLoad(template.getBaseLoad());
-		
 		client.sendPacket(CharCreateOk.STATIC_PACKET);
 		
 		initNewChar(client, newChar);
@@ -270,7 +266,6 @@ public class CharacterCreate implements IClientIncomingPacket
 		}
 		
 		final PlayerTemplate template = newChar.getTemplate();
-		
 		if (Config.CUSTOM_STARTING_LOC)
 		{
 			final Location createLoc = new Location(Config.CUSTOM_STARTING_LOC_X, Config.CUSTOM_STARTING_LOC_Y, Config.CUSTOM_STARTING_LOC_Z);
@@ -328,7 +323,6 @@ public class CharacterCreate implements IClientIncomingPacket
 		InitialShortcutData.getInstance().registerAllShortcuts(newChar);
 		
 		EventDispatcher.getInstance().notifyEvent(new OnPlayerCreate(newChar, newChar.getObjectId(), newChar.getName(), client), Containers.Players());
-		
 		newChar.setOnlineStatus(true, false);
 		if (Config.SHOW_GOD_VIDEO_INTRO)
 		{

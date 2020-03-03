@@ -104,10 +104,8 @@ public class Util
 		final int randomX = Rnd.get(minRange, maxRange);
 		final int randomY = Rnd.get(minRange, maxRange);
 		final double rndAngle = Math.toRadians(Rnd.get(360));
-		
 		final int newX = (int) (loc.getX() + (randomX * Math.cos(rndAngle)));
 		final int newY = (int) (loc.getY() + (randomY * Math.sin(rndAngle)));
-		
 		return new Location(newX, newY, loc.getZ());
 	}
 	
@@ -222,7 +220,6 @@ public class Util
 		{
 			return true; // not limited
 		}
-		
 		return calculateDistance(obj1, obj2, includeZAxis, false) <= range;
 	}
 	

@@ -59,14 +59,11 @@ public class SkillSummon extends Skill
 		_npcId = set.getInt("npcId", 0); // default for undescribed skills
 		_expPenalty = set.getFloat("expPenalty", 0.f);
 		_isCubic = set.getBoolean("isCubic", false);
-		
 		_activationtime = set.getInt("activationtime", 8);
 		_activationchance = set.getInt("activationchance", 30);
-		
 		_summonTotalLifeTime = set.getInt("summonTotalLifeTime", 1200000); // 20 minutes default
 		_summonTimeLostIdle = set.getInt("summonTimeLostIdle", 0);
 		_summonTimeLostActive = set.getInt("summonTimeLostActive", 0);
-		
 		_itemConsumeOT = set.getInt("itemConsumeCountOT", 0);
 		_itemConsumeIdOT = set.getInt("itemConsumeIdOT", 0);
 		_itemConsumeTime = set.getInt("itemConsumeTime", 0);
@@ -78,7 +75,6 @@ public class SkillSummon extends Skill
 		if (creature instanceof PlayerInstance)
 		{
 			final PlayerInstance player = (PlayerInstance) creature;
-			
 			if (_isCubic)
 			{
 				if (getTargetType() != Skill.SkillTargetType.TARGET_SELF)

@@ -39,7 +39,6 @@ public class RequestSetSeed extends GameClientPacket
 	{
 		_manorId = readD();
 		_size = readD();
-		
 		if (((_size * 12) > _buf.remaining()) || (_size > 500) || (_size < 1))
 		{
 			_size = 0;
@@ -47,7 +46,6 @@ public class RequestSetSeed extends GameClientPacket
 		}
 		
 		_items = new int[_size * 3];
-		
 		for (int i = 0; i < _size; i++)
 		{
 			final int itemId = readD();
@@ -68,7 +66,6 @@ public class RequestSetSeed extends GameClientPacket
 		}
 		
 		final List<SeedProduction> seeds = new ArrayList<>();
-		
 		for (int i = 0; i < _size; i++)
 		{
 			final int id = _items[(i * 3) + 0];
@@ -82,7 +79,6 @@ public class RequestSetSeed extends GameClientPacket
 		}
 		
 		CastleManager.getInstance().getCastleById(_manorId).setSeedProduction(seeds, CastleManorManager.PERIOD_NEXT);
-		
 		if (Config.ALT_MANOR_SAVE_ALL_ACTIONS)
 		{
 			CastleManager.getInstance().getCastleById(_manorId).saveSeedData(CastleManorManager.PERIOD_NEXT);

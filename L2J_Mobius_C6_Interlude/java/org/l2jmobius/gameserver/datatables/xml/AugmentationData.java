@@ -76,13 +76,11 @@ public class AugmentationData
 	public void load()
 	{
 		LOGGER.info("Initializing AugmentationData.");
-		
 		_augmentationStats = new ArrayList[4];
 		_augmentationStats[0] = new ArrayList<>();
 		_augmentationStats[1] = new ArrayList<>();
 		_augmentationStats[2] = new ArrayList<>();
 		_augmentationStats[3] = new ArrayList<>();
-		
 		_blueSkills = new HashMap<>();
 		_purpleSkills = new HashMap<>();
 		_redSkills = new HashMap<>();
@@ -110,7 +108,6 @@ public class AugmentationData
 			}
 			
 			final Document doc = factory.newDocumentBuilder().parse(file);
-			
 			for (Node n = doc.getFirstChild(); n != null; n = n.getNextSibling())
 			{
 				if ("list".equalsIgnoreCase(n.getNodeName()))
@@ -124,7 +121,6 @@ public class AugmentationData
 							final int augmentationId = Integer.parseInt(attrs.getNamedItem("id").getNodeValue());
 							String type = "blue";
 							int skillLvL = 0;
-							
 							for (Node cd = d.getFirstChild(); cd != null; cd = cd.getNextSibling())
 							{
 								if ("skillId".equalsIgnoreCase(cd.getNodeName()))
@@ -199,14 +195,12 @@ public class AugmentationData
 				factory.setIgnoringComments(true);
 				
 				final File file = new File(Config.DATAPACK_ROOT + "/data/stats/augmentation/augmentation_stats" + i + ".xml");
-				
 				if (!file.exists())
 				{
 					return;
 				}
 				
 				final Document doc = factory.newDocumentBuilder().parse(file);
-				
 				for (Node n = doc.getFirstChild(); n != null; n = n.getNextSibling())
 				{
 					if ("list".equalsIgnoreCase(n.getNodeName()))
@@ -217,17 +211,14 @@ public class AugmentationData
 							{
 								NamedNodeMap attrs = d.getAttributes();
 								final String statName = attrs.getNamedItem("name").getNodeValue();
-								
 								float[] soloValues = null;
 								float[] combinedValues = null;
-								
 								for (Node cd = d.getFirstChild(); cd != null; cd = cd.getNextSibling())
 								{
 									if ("table".equalsIgnoreCase(cd.getNodeName()))
 									{
 										attrs = cd.getAttributes();
 										final String tableName = attrs.getNamedItem("name").getNodeValue();
-										
 										final StringTokenizer data = new StringTokenizer(cd.getFirstChild().getNodeValue());
 										final List<Float> array = new ArrayList<>();
 										
@@ -240,7 +231,6 @@ public class AugmentationData
 										{
 											soloValues = new float[array.size()];
 											int x = 0;
-											
 											for (float value : array)
 											{
 												soloValues[x++] = value;
@@ -250,7 +240,6 @@ public class AugmentationData
 										{
 											combinedValues = new float[array.size()];
 											int x = 0;
-											
 											for (float value : array)
 											{
 												combinedValues[x++] = value;
@@ -352,7 +341,6 @@ public class AugmentationData
 		if ((stat34 == 0) && !generateSkill)
 		{
 			resultColor = Rnd.get(0, 100);
-			
 			if (resultColor <= ((15 * lifeStoneGrade) + 40))
 			{
 				resultColor = 1;
@@ -365,7 +353,6 @@ public class AugmentationData
 		else
 		{
 			resultColor = Rnd.get(0, 100);
-			
 			if ((resultColor <= ((10 * lifeStoneGrade) + 5)) || (stat34 != 0))
 			{
 				resultColor = 3;
@@ -382,15 +369,12 @@ public class AugmentationData
 		
 		// is neither a skill nor basestat used for stat34? then generate a normal stat
 		int stat12 = 0;
-		
 		if ((stat34 == 0) && !generateSkill)
 		{
 			final int temp = Rnd.get(2, 3);
 			final int colorOffset = (resultColor * 10 * STAT_SUBBLOCKSIZE) + (temp * STAT_BLOCKSIZE) + 1;
 			int offset = ((lifeStoneLevel - 1) * STAT_SUBBLOCKSIZE) + colorOffset;
-			
 			stat34 = Rnd.get(offset, (offset + STAT_SUBBLOCKSIZE) - 1);
-			
 			if (generateGlow && (lifeStoneGrade >= 2))
 			{
 				offset = ((lifeStoneLevel - 1) * STAT_SUBBLOCKSIZE) + ((temp - 2) * STAT_BLOCKSIZE) + (lifeStoneGrade * 10 * STAT_SUBBLOCKSIZE) + 1;
@@ -404,7 +388,6 @@ public class AugmentationData
 		else
 		{
 			int offset;
-			
 			if (!generateGlow)
 			{
 				offset = ((lifeStoneLevel - 1) * STAT_SUBBLOCKSIZE) + (Rnd.get(0, 1) * STAT_BLOCKSIZE) + 1;
@@ -492,7 +475,6 @@ public class AugmentationData
 		final int[] stats = new int[2];
 		stats[0] = 0x0000FFFF & augmentationId;
 		stats[1] = augmentationId >> 16;
-		
 		for (int i = 0; i < 2; i++)
 		{
 			// its a stat
@@ -522,7 +504,6 @@ public class AugmentationData
 				else // twin stat
 				{
 					stats[i] -= 13; // rescale to 0 (if first of first combined block)
-					
 					int x = 12; // next combi block has 12 stats
 					int rescales = 0; // number of rescales done
 					
@@ -607,7 +588,6 @@ public class AugmentationData
 			{
 				return SkillTable.getInstance().getInfo(_skillId, _maxSkillLevel);
 			}
-			
 			return SkillTable.getInstance().getInfo(_skillId, level);
 		}
 		
@@ -650,7 +630,6 @@ public class AugmentationData
 			{
 				return _singleValues[_singleSize - 1];
 			}
-			
 			return _singleValues[i];
 		}
 		
@@ -660,7 +639,6 @@ public class AugmentationData
 			{
 				return _combinedValues[_combinedSize - 1];
 			}
-			
 			return _combinedValues[i];
 		}
 		

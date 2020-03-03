@@ -45,7 +45,6 @@ public class DrainSoul implements ISkillHandler
 		}
 		
 		final WorldObject[] targetList = skill.getTargetList(creature);
-		
 		if (targetList == null)
 		{
 			return;

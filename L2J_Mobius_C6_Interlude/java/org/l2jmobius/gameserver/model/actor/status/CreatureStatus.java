@@ -206,7 +206,6 @@ public class CreatureStatus
 			}
 			
 			value = _currentHp - value; // Get diff of Hp vs value
-			
 			if (value <= 0)
 			{
 				// is the dieing one a duelist? if so change his duel state to dead
@@ -265,7 +264,6 @@ public class CreatureStatus
 	public void reduceMp(double value)
 	{
 		value = _currentMp - value;
-		
 		if (value < 0)
 		{
 			value = 0;
@@ -397,7 +395,6 @@ public class CreatureStatus
 		{
 			// Get the Max CP of the Creature
 			final int maxCp = _creature.getStat().getMaxCp();
-			
 			if (newCp < 0)
 			{
 				newCp = 0;
@@ -491,7 +488,6 @@ public class CreatureStatus
 		{
 			// Get the Max HP of the Creature
 			final double maxHp = _creature.getStat().getMaxHp();
-			
 			if ((newHp >= maxHp) && !direct)
 			{
 				// Set the RegenActive flag to false
@@ -510,7 +506,6 @@ public class CreatureStatus
 				// Set the RegenActive flag to true
 				_currentHp = newHp;
 				_flagsRegenActive |= REGEN_FLAG_HP;
-				
 				if (!_creature.isDead())
 				{
 					_creature.setKilledAlready(false);
@@ -579,7 +574,6 @@ public class CreatureStatus
 		{
 			// Get the Max MP of the Creature
 			final int maxMp = _creature.getStat().getMaxMp();
-			
 			if ((newMp >= maxMp) && !direct)
 			{
 				// Set the RegenActive flag to false
@@ -626,7 +620,6 @@ public class CreatureStatus
 		{
 			_StatusListener = new CopyOnWriteArraySet<>();
 		}
-		
 		return _StatusListener;
 	}
 	

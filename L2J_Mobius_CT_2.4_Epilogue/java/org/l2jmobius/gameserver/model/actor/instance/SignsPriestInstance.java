@@ -58,16 +58,12 @@ public class SignsPriestInstance extends Npc
 		else if (command.startsWith("SevenSigns"))
 		{
 			SystemMessage sm;
-			
 			String path;
-			
 			int cabal = SevenSigns.CABAL_NULL;
 			int stoneType = 0;
 			
 			final long ancientAdenaAmount = player.getAncientAdena();
-			
 			int val = Integer.parseInt(command.substring(11, 12).trim());
-			
 			if (command.length() > 12)
 			{
 				val = Integer.parseInt(command.substring(11, 13).trim());
@@ -117,7 +113,6 @@ public class SignsPriestInstance extends Npc
 						break;
 					}
 					player.getInventory().addItem("SevenSigns", SevenSigns.RECORD_SEVEN_SIGNS_ID, 1, player, this);
-					
 					sm = new SystemMessage(SystemMessageId.YOU_HAVE_EARNED_S1);
 					sm.addItemName(SevenSigns.RECORD_SEVEN_SIGNS_ID);
 					player.sendPacket(sm);
@@ -135,7 +130,6 @@ public class SignsPriestInstance extends Npc
 				case 33: // "I want to participate" request
 				{
 					final int oldCabal = SevenSigns.getInstance().getPlayerCabal(player.getObjectId());
-					
 					if (oldCabal != SevenSigns.CABAL_NULL)
 					{
 						if (this instanceof DawnPriestInstance)
@@ -210,7 +204,6 @@ public class SignsPriestInstance extends Npc
 				case 4: // Join a Cabal - SevenSigns 4 [0]1 x
 				{
 					final int newSeal = Integer.parseInt(command.substring(15));
-					
 					if (player.getClassId().level() >= 1)
 					{
 						// even if in htmls is said that ally can have castle too, but its not
@@ -223,7 +216,6 @@ public class SignsPriestInstance extends Npc
 						if (Config.ALT_GAME_CASTLE_DAWN && (cabal == SevenSigns.CABAL_DAWN))
 						{
 							boolean allowJoinDawn = false;
-							
 							if ((player.getClan() != null) && (player.getClan().getCastleId() > 0))
 							{
 								allowJoinDawn = true;
@@ -245,7 +237,6 @@ public class SignsPriestInstance extends Npc
 						}
 					}
 					SevenSigns.getInstance().setPlayerInfo(player.getObjectId(), cabal, newSeal);
-					
 					if (cabal == SevenSigns.CABAL_DAWN)
 					{
 						player.sendPacket(SystemMessageId.YOU_WILL_PARTICIPATE_IN_THE_SEVEN_SIGNS_AS_A_MEMBER_OF_THE_LORDS_OF_DAWN); // Joined Dawn
@@ -307,20 +298,15 @@ public class SignsPriestInstance extends Npc
 				case 21:
 				{
 					final int contribStoneId = Integer.parseInt(command.substring(14, 18));
-					
 					final ItemInstance contribBlueStones = player.getInventory().getItemByItemId(SevenSigns.SEAL_STONE_BLUE_ID);
 					final ItemInstance contribGreenStones = player.getInventory().getItemByItemId(SevenSigns.SEAL_STONE_GREEN_ID);
 					final ItemInstance contribRedStones = player.getInventory().getItemByItemId(SevenSigns.SEAL_STONE_RED_ID);
-					
 					final long contribBlueStoneCount = contribBlueStones == null ? 0 : contribBlueStones.getCount();
 					final long contribGreenStoneCount = contribGreenStones == null ? 0 : contribGreenStones.getCount();
 					final long contribRedStoneCount = contribRedStones == null ? 0 : contribRedStones.getCount();
-					
 					long score = SevenSigns.getInstance().getPlayerContribScore(player.getObjectId());
 					long contributionCount = 0;
-					
 					boolean contribStonesFound = false;
-					
 					long redContrib = 0;
 					long greenContrib = 0;
 					long blueContrib = 0;
@@ -434,14 +420,11 @@ public class SignsPriestInstance extends Npc
 					final ItemInstance blueStones = player.getInventory().getItemByItemId(SevenSigns.SEAL_STONE_BLUE_ID);
 					final ItemInstance greenStones = player.getInventory().getItemByItemId(SevenSigns.SEAL_STONE_GREEN_ID);
 					final ItemInstance redStones = player.getInventory().getItemByItemId(SevenSigns.SEAL_STONE_RED_ID);
-					
 					final long blueStoneCount = blueStones == null ? 0 : blueStones.getCount();
 					final long greenStoneCount = greenStones == null ? 0 : greenStones.getCount();
 					final long redStoneCount = redStones == null ? 0 : redStones.getCount();
-					
 					long contribScore = SevenSigns.getInstance().getPlayerContribScore(player.getObjectId());
 					boolean stonesFound = false;
-					
 					if (contribScore == Config.ALT_MAXIMUM_PLAYER_CONTRIB)
 					{
 						player.sendPacket(SystemMessageId.CONTRIBUTION_LEVEL_HAS_EXCEEDED_THE_LIMIT_YOU_MAY_NOT_CONTINUE);
@@ -451,10 +434,8 @@ public class SignsPriestInstance extends Npc
 						long redContribCount = 0;
 						long greenContribCount = 0;
 						long blueContribCount = 0;
-						
 						String contribStoneColor = null;
 						String stoneColorContr = null;
-						
 						long stoneCountContr = 0;
 						int stoneIdContr = 0;
 						
@@ -573,7 +554,6 @@ public class SignsPriestInstance extends Npc
 						}
 						
 						String contentContr = HtmCache.getInstance().getHtm(player, path);
-						
 						if (contentContr != null)
 						{
 							contentContr = contentContr.replace("%contribStoneColor%", contribStoneColor);
@@ -625,7 +605,6 @@ public class SignsPriestInstance extends Npc
 					
 					player.reduceAncientAdena("SevenSigns", ancientAdenaConvert, this, true);
 					player.addAdena("SevenSigns", ancientAdenaConvert, this, true);
-					
 					showChatWindow(player, SevenSigns.SEVEN_SIGNS_HTML_PATH + "blkmrkt_5.htm");
 					break;
 				}
@@ -633,11 +612,9 @@ public class SignsPriestInstance extends Npc
 				{
 					final int playerCabal = SevenSigns.getInstance().getPlayerCabal(player.getObjectId());
 					final int winningCabal = SevenSigns.getInstance().getCabalHighestScore();
-					
 					if (SevenSigns.getInstance().isSealValidationPeriod() && (playerCabal == winningCabal))
 					{
 						final int ancientAdenaReward = SevenSigns.getInstance().getAncientAdenaReward(player.getObjectId(), true);
-						
 						if (ancientAdenaReward < 3)
 						{
 							if (this instanceof DawnPriestInstance)
@@ -652,7 +629,6 @@ public class SignsPriestInstance extends Npc
 						}
 						
 						player.addAncientAdena("SevenSigns", ancientAdenaReward, this, true);
-						
 						if (this instanceof DawnPriestInstance)
 						{
 							showChatWindow(player, 9, "dawn_a", false);
@@ -670,11 +646,9 @@ public class SignsPriestInstance extends Npc
 					{
 						final String portInfo = command.substring(14).trim();
 						final StringTokenizer st = new StringTokenizer(portInfo);
-						
 						final int x = Integer.parseInt(st.nextToken());
 						final int y = Integer.parseInt(st.nextToken());
 						final int z = Integer.parseInt(st.nextToken());
-						
 						final long ancientAdenaCost = Long.parseLong(st.nextToken());
 						if ((ancientAdenaCost > 0) && !player.reduceAncientAdena("SevenSigns", ancientAdenaCost, this, true))
 						{
@@ -704,11 +678,9 @@ public class SignsPriestInstance extends Npc
 				case 17: // Exchange Seal Stones for Ancient Adena (Type Choice) - SevenSigns 17 x
 				{
 					stoneType = Integer.parseInt(command.substring(14));
-					
 					int stoneId = 0;
 					long stoneCount = 0;
 					int stoneValue = 0;
-					
 					String stoneColor = null;
 					
 					switch (stoneType)
@@ -739,14 +711,11 @@ public class SignsPriestInstance extends Npc
 							final ItemInstance blueStonesAll = player.getInventory().getItemByItemId(SevenSigns.SEAL_STONE_BLUE_ID);
 							final ItemInstance greenStonesAll = player.getInventory().getItemByItemId(SevenSigns.SEAL_STONE_GREEN_ID);
 							final ItemInstance redStonesAll = player.getInventory().getItemByItemId(SevenSigns.SEAL_STONE_RED_ID);
-							
 							final long blueStoneCountAll = blueStonesAll == null ? 0 : blueStonesAll.getCount();
 							final long greenStoneCountAll = greenStonesAll == null ? 0 : greenStonesAll.getCount();
 							final long redStoneCountAll = redStonesAll == null ? 0 : redStonesAll.getCount();
 							long ancientAdenaRewardAll = 0;
-							
 							ancientAdenaRewardAll = SevenSigns.calcAncientAdenaReward(blueStoneCountAll, greenStoneCountAll, redStoneCountAll);
-							
 							if (ancientAdenaRewardAll == 0)
 							{
 								if (this instanceof DawnPriestInstance)
@@ -774,7 +743,6 @@ public class SignsPriestInstance extends Npc
 							}
 							
 							player.addAncientAdena("SevenSigns", ancientAdenaRewardAll, this, true);
-							
 							if (this instanceof DawnPriestInstance)
 							{
 								showChatWindow(player, 18, "dawn", false);
@@ -788,7 +756,6 @@ public class SignsPriestInstance extends Npc
 					}
 					
 					final ItemInstance stoneInstance = player.getInventory().getItemByItemId(stoneId);
-					
 					if (stoneInstance != null)
 					{
 						stoneCount = stoneInstance.getCount();
@@ -804,7 +771,6 @@ public class SignsPriestInstance extends Npc
 					}
 					
 					String content = HtmCache.getInstance().getHtm(player, path);
-					
 					if (content != null)
 					{
 						content = content.replace("%stoneColor%", stoneColor);
@@ -846,12 +812,10 @@ public class SignsPriestInstance extends Npc
 					}
 					
 					final ItemInstance convertItem = player.getInventory().getItemByItemId(convertStoneId);
-					
 					if (convertItem != null)
 					{
 						long ancientAdenaReward = 0;
 						final long totalCount = convertItem.getCount();
-						
 						if ((convertCount <= totalCount) && (convertCount > 0))
 						{
 							switch (convertStoneId)
@@ -876,7 +840,6 @@ public class SignsPriestInstance extends Npc
 							if (player.destroyItemByItemId("SevenSigns", convertStoneId, convertCount, this, true))
 							{
 								player.addAncientAdena("SevenSigns", ancientAdenaReward, this, true);
-								
 								if (this instanceof DawnPriestInstance)
 								{
 									showChatWindow(player, 18, "dawn", false);
@@ -917,9 +880,7 @@ public class SignsPriestInstance extends Npc
 				case 19: // Seal Information (for when joining a cabal)
 				{
 					final int chosenSeal = Integer.parseInt(command.substring(16));
-					
 					final String fileSuffix = SevenSigns.getSealName(chosenSeal, true) + "_" + SevenSigns.getCabalShortName(cabal);
-					
 					showChatWindow(player, val, fileSuffix, false);
 					break;
 				}
@@ -938,7 +899,6 @@ public class SignsPriestInstance extends Npc
 					for (int i = 1; i < 4; i++)
 					{
 						final int sealOwner = SevenSigns.getInstance().getSealOwner(i);
-						
 						if (sealOwner != SevenSigns.CABAL_NULL)
 						{
 							contentBuffer.append("[" + SevenSigns.getSealName(i, false) + ": " + SevenSigns.getCabalName(sealOwner) + "]<br>");
@@ -972,10 +932,8 @@ public class SignsPriestInstance extends Npc
 	private void showChatWindow(PlayerInstance player, int value, String suffix, boolean isDescription)
 	{
 		String filename = SevenSigns.SEVEN_SIGNS_HTML_PATH;
-		
 		filename += (isDescription) ? "desc_" + value : "signs_" + value;
 		filename += (suffix != null) ? "_" + suffix + ".htm" : ".htm";
-		
 		showChatWindow(player, filename);
 	}
 }

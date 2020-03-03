@@ -97,7 +97,6 @@ public class RequestExTryEnchantArtifact implements IClientIncomingPacket
 		}
 		
 		final int enchantLevel = targetItem.getEnchantLevel();
-		
 		int needCount = 0;
 		if (enchantLevel <= 6)
 		{

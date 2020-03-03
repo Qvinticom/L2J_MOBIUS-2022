@@ -69,7 +69,6 @@ public class TriggerSkillByAttack extends AbstractEffect
 		_targetType = params.getEnum("targetType", TargetType.class, TargetType.SELF);
 		_attackerType = params.getEnum("attackerType", InstanceType.class, InstanceType.Creature);
 		_isCritical = params.getBoolean("isCritical", false);
-		
 		if (params.getString("allowWeapons").equalsIgnoreCase("ALL"))
 		{
 			_allowWeapons = 0;
@@ -124,7 +123,6 @@ public class TriggerSkillByAttack extends AbstractEffect
 		
 		final Skill triggerSkill = _skill.getSkill();
 		final WorldObject[] targets = targetHandler.getTargetList(triggerSkill, event.getAttacker(), false, event.getTarget());
-		
 		for (WorldObject triggerTarget : targets)
 		{
 			if ((triggerTarget == null) || !triggerTarget.isCreature())

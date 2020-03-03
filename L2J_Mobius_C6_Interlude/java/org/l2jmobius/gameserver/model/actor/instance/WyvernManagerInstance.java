@@ -176,7 +176,6 @@ public class WyvernManagerInstance extends CastleChamberlainInstance
 		if (_clanHallId < 0)
 		{
 			final ClanHall temp = ClanHallManager.getInstance().getNearbyClanHall(getX(), getY(), 500);
-			
 			if (temp != null)
 			{
 				_clanHallId = temp.getId();
@@ -213,7 +212,6 @@ public class WyvernManagerInstance extends CastleChamberlainInstance
 				return COND_OWNER; // Owner
 			}
 		}
-		
 		return COND_ALL_FALSE;
 	}
 }

@@ -63,7 +63,6 @@ public class PhysicalAttackHpLink extends AbstractEffect
 		final Creature target = info.getEffected();
 		final Creature creature = info.getEffector();
 		final Skill skill = info.getSkill();
-		
 		if (creature.isAlikeDead())
 		{
 			return;
@@ -88,7 +87,6 @@ public class PhysicalAttackHpLink extends AbstractEffect
 		int damage = 0;
 		final boolean ss = skill.isPhysical() && creature.isChargedShot(ShotType.SOULSHOTS);
 		damage = (int) Formulas.calcPhysDam(creature, target, skill, shld, false, ss);
-		
 		if (damage > 0)
 		{
 			creature.sendDamageMessage(target, damage, false, crit, false);

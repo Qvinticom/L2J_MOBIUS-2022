@@ -152,7 +152,6 @@ public class CastleManager implements InstanceListManager
 		{
 			return _castleCirclets[castleId];
 		}
-		
 		return 0;
 	}
 	
@@ -173,7 +172,6 @@ public class CastleManager implements InstanceListManager
 		}
 		final PlayerInstance player = member.getPlayerInstance();
 		final int circletId = getCircletByCastleId(castleId);
-		
 		if (circletId != 0)
 		{
 			// online-player circlet removal

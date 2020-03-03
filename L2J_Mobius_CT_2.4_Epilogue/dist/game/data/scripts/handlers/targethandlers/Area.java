@@ -46,7 +46,6 @@ public class Area implements ITargetTypeHandler
 		
 		final Creature origin;
 		final boolean srcInArena = (creature.isInsideZone(ZoneId.PVP) && !creature.isInsideZone(ZoneId.SIEGE));
-		
 		if (skill.getCastRange() >= 0)
 		{
 			if (!Skill.checkForAreaOffensiveSkills(creature, target, skill, srcInArena))

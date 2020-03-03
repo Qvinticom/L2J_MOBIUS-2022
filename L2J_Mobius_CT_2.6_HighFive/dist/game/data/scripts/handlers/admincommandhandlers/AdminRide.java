@@ -107,7 +107,6 @@ public class AdminRide implements IAdminCommandHandler
 			}
 			
 			player.mount(petRideId, 0, false);
-			
 			return false;
 		}
 		else if (command.startsWith("admin_unride"))
@@ -132,7 +131,6 @@ public class AdminRide implements IAdminCommandHandler
 	private PlayerInstance getRideTarget(PlayerInstance activeChar)
 	{
 		PlayerInstance player = null;
-		
 		if ((activeChar.getTarget() == null) || (activeChar.getTarget().getObjectId() == activeChar.getObjectId()) || !activeChar.getTarget().isPlayer())
 		{
 			player = activeChar;
@@ -141,7 +139,6 @@ public class AdminRide implements IAdminCommandHandler
 		{
 			player = (PlayerInstance) activeChar.getTarget();
 		}
-		
 		return player;
 	}
 	

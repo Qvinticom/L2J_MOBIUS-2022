@@ -47,7 +47,6 @@ public class Q10755_LettersFromTheQueenWindyHill extends LetterQuest
 	{
 		super(10755);
 		addTalkId(LEVIAN, PIO);
-		
 		setIsErtheiaQuest(true);
 		setLevel(MIN_LEVEL, MAX_LEVEL);
 		setStartLocation(SOE_GLUDIN_VILLAGE, TELEPORT_LOC);
@@ -102,7 +101,6 @@ public class Q10755_LettersFromTheQueenWindyHill extends LetterQuest
 	{
 		final QuestState qs = getQuestState(player, false);
 		String htmltext = getNoQuestMsg(player);
-		
 		if (qs == null)
 		{
 			return htmltext;

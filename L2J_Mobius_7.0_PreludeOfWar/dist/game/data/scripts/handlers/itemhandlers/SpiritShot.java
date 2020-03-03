@@ -96,7 +96,6 @@ public class SpiritShot implements IItemHandler
 		else
 		{
 			skills.forEach(holder -> Broadcast.toSelfAndKnownPlayersInRadius(player, new MagicSkillUse(player, player, holder.getSkillId(), holder.getSkillLevel(), 0, 0), 600));
-			
 		}
 		return true;
 	}

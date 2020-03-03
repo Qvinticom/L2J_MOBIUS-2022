@@ -54,7 +54,6 @@ public class RequestEx2ndPasswordReq implements IClientIncomingPacket
 		
 		final SecondaryPasswordAuth spa = client.getSecondaryAuth();
 		boolean exVal = false;
-		
 		if ((_changePass == 0) && !spa.passwordExist())
 		{
 			exVal = spa.savePassword(_password);

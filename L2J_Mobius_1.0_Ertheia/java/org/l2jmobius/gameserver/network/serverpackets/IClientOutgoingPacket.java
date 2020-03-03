@@ -66,7 +66,6 @@ public interface IClientOutgoingPacket extends IOutgoingPacket
 		Inventory.PAPERDOLL_BROOCH_JEWEL4,
 		Inventory.PAPERDOLL_BROOCH_JEWEL5,
 		Inventory.PAPERDOLL_BROOCH_JEWEL6
-	
 	};
 	
 	int[] PAPERDOLL_ORDER_AUGMENT = new int[]

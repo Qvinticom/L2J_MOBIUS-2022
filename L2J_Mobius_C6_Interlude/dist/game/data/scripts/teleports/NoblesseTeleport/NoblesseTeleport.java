@@ -37,7 +37,6 @@ public class NoblesseTeleport extends Quest
 		{
 			return "noble.htm";
 		}
-		
 		return "nobleteleporter-no.htm";
 	}
 	

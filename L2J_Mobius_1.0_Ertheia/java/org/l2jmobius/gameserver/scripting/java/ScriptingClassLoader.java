@@ -49,7 +49,6 @@ public class ScriptingClassLoader extends ClassLoader
 				return defineClass(name, classBytes, 0, classBytes.length);
 			}
 		}
-		
 		return super.findClass(name);
 	}
 }

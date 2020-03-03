@@ -125,7 +125,6 @@ public class RequestPostAttachment implements IClientIncomingPacket
 		
 		int weight = 0;
 		int slots = 0;
-		
 		for (ItemInstance item : attachments.getItems())
 		{
 			if (item == null)

@@ -71,11 +71,9 @@ public class AdminHeal implements IAdminCommandHandler
 	private void handleRes(PlayerInstance activeChar, String player)
 	{
 		WorldObject obj = activeChar.getTarget();
-		
 		if (player != null)
 		{
 			final PlayerInstance plyr = World.getInstance().getPlayer(player);
-			
 			if (plyr != null)
 			{
 				obj = plyr;
@@ -91,7 +89,6 @@ public class AdminHeal implements IAdminCommandHandler
 						{
 							final Creature creature = (Creature) object;
 							creature.setCurrentHpMp(creature.getMaxHp(), creature.getMaxMp());
-							
 							if (object instanceof PlayerInstance)
 							{
 								creature.setCurrentCp(creature.getMaxCp());
@@ -116,7 +113,6 @@ public class AdminHeal implements IAdminCommandHandler
 		{
 			final Creature target = (Creature) obj;
 			target.setCurrentHpMp(target.getMaxHp(), target.getMaxMp());
-			
 			if (target instanceof PlayerInstance)
 			{
 				target.setCurrentCp(target.getMaxCp());

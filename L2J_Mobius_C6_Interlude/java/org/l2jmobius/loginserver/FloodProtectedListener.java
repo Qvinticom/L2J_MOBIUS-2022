@@ -41,7 +41,6 @@ public abstract class FloodProtectedListener extends Thread
 	{
 		_port = port;
 		_listenIp = listenIp;
-		
 		if (_listenIp.equals("*"))
 		{
 			_serverSocket = new ServerSocket(_port);
@@ -65,7 +64,6 @@ public abstract class FloodProtectedListener extends Thread
 				if (Config.FLOOD_PROTECTION)
 				{
 					ForeignConnection fConnection = _floodProtection.get(connection.getInetAddress().getHostAddress());
-					
 					if (fConnection != null)
 					{
 						fConnection.connectionNumber += 1;
@@ -75,7 +73,6 @@ public abstract class FloodProtectedListener extends Thread
 							connection.close();
 							
 							fConnection.connectionNumber -= 1;
-							
 							if (!fConnection.isFlooding)
 							{
 								LOGGER.warning("Potential Flood from " + connection.getInetAddress().getHostAddress());
@@ -156,11 +153,9 @@ public abstract class FloodProtectedListener extends Thread
 		}
 		
 		final ForeignConnection fConnection = _floodProtection.get(ip);
-		
 		if (fConnection != null)
 		{
 			fConnection.connectionNumber -= 1;
-			
 			if (fConnection.connectionNumber == 0)
 			{
 				_floodProtection.remove(ip);

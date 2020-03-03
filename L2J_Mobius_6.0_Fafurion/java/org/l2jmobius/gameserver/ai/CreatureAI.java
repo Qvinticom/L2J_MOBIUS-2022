@@ -258,7 +258,6 @@ public class CreatureAI extends AbstractAI
 				
 				// Launch the Think Event
 				notifyEvent(CtrlEvent.EVT_THINK, null);
-				
 			}
 			else
 			{
@@ -890,17 +889,13 @@ public class CreatureAI extends AbstractAI
 			
 			final double dx = worldPosition.getX() - x;
 			final double dy = worldPosition.getY() - y;
-			
 			double dist = Math.hypot(dx, dy);
 			
 			final double sin = dy / dist;
 			final double cos = dx / dist;
-			
 			dist -= offset - 5;
-			
 			x += (int) (dist * cos);
 			y += (int) (dist * sin);
-			
 			moveTo(x, y, worldPosition.getZ());
 			return true;
 		}
@@ -1186,7 +1181,6 @@ public class CreatureAI extends AbstractAI
 				}
 				final int castRange = sk.getCastRange();
 				boolean hasLongRangeDamageSkill = false;
-				
 				if (sk.isContinuous())
 				{
 					if (!sk.isDebuff())

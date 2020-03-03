@@ -44,7 +44,6 @@ public class Sirra extends AbstractNpcAI
 	public String onFirstTalk(Npc npc, PlayerInstance player)
 	{
 		final InstanceWorld world = InstanceManager.getInstance().getWorld(npc);
-		
 		if ((world != null) && (world.getTemplateId() == FREYA_INSTID))
 		{
 			return (world.isStatus(0)) ? "32762-easy.html" : "32762-easyfight.html";

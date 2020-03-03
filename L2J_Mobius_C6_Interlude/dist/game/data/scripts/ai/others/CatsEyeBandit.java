@@ -64,7 +64,6 @@ public class CatsEyeBandit extends Quest
 		{
 			npc.broadcastPacket(new CreatureSay(npc.getObjectId(), ChatType.GENERAL, npc.getName(), "I must do something about this shameful incident..."));
 		}
-		
 		return super.onKill(npc, killer, isPet);
 	}
 	

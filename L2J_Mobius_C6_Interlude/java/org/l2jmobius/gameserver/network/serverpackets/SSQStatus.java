@@ -43,7 +43,6 @@ public class SSQStatus extends GameServerPacket
 		final int winningCabal = SevenSigns.getInstance().getCabalHighestScore();
 		final int totalDawnMembers = SevenSigns.getInstance().getTotalMembers(SevenSigns.CABAL_DAWN);
 		final int totalDuskMembers = SevenSigns.getInstance().getTotalMembers(SevenSigns.CABAL_DUSK);
-		
 		writeC(0xf5);
 		
 		writeC(_page);
@@ -107,10 +106,8 @@ public class SSQStatus extends GameServerPacket
 				
 				final double dawnStoneScore = SevenSigns.getInstance().getCurrentStoneScore(SevenSigns.CABAL_DAWN);
 				final int dawnFestivalScore = SevenSigns.getInstance().getCurrentFestivalScore(SevenSigns.CABAL_DAWN);
-				
 				final double duskStoneScore = SevenSigns.getInstance().getCurrentStoneScore(SevenSigns.CABAL_DUSK);
 				final int duskFestivalScore = SevenSigns.getInstance().getCurrentFestivalScore(SevenSigns.CABAL_DUSK);
-				
 				final double totalStoneScore = duskStoneScore + dawnStoneScore;
 				
 				/*
@@ -118,7 +115,6 @@ public class SSQStatus extends GameServerPacket
 				 */
 				int duskStoneScoreProp = 0;
 				int dawnStoneScoreProp = 0;
-				
 				if (totalStoneScore != 0)
 				{
 					duskStoneScoreProp = Math.round(((float) duskStoneScore / (float) totalStoneScore) * 500);
@@ -127,9 +123,7 @@ public class SSQStatus extends GameServerPacket
 				
 				final int duskTotalScore = SevenSigns.getInstance().getCurrentScore(SevenSigns.CABAL_DUSK);
 				final int dawnTotalScore = SevenSigns.getInstance().getCurrentScore(SevenSigns.CABAL_DAWN);
-				
 				final int totalOverallScore = duskTotalScore + dawnTotalScore;
-				
 				if (totalOverallScore != 0)
 				{
 					dawnPercent = Math.round(((float) dawnTotalScore / totalOverallScore) * 100);
@@ -207,7 +201,6 @@ public class SSQStatus extends GameServerPacket
 				{
 					final int dawnProportion = SevenSigns.getInstance().getSealProportion(i, SevenSigns.CABAL_DAWN);
 					final int duskProportion = SevenSigns.getInstance().getSealProportion(i, SevenSigns.CABAL_DUSK);
-					
 					writeC(i);
 					writeC(SevenSigns.getInstance().getSealOwner(i));
 					if (totalDuskMembers == 0)

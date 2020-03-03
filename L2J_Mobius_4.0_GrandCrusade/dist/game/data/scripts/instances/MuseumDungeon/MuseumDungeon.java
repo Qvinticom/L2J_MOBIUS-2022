@@ -117,7 +117,6 @@ public class MuseumDungeon extends AbstractInstance
 				{
 					getTimers().addTimer("TOYRON_FOLLOW", 1500, toyron, player);
 					toyron.broadcastSay(ChatType.NPC_GENERAL, NpcStringId.WHEN_DID_THEY_GET_IN_HERE);
-					
 					if (instance.getNpcs(THIEF).isEmpty())
 					{
 						instance.spawnGroup("thiefs").forEach(Npc::setRunning);
@@ -215,7 +214,6 @@ public class MuseumDungeon extends AbstractInstance
 		if (isInInstance(instance))
 		{
 			final Npc toyron = instance.getNpc(TOYRON);
-			
 			final QuestState qs = player.getQuestState(Q10542_SearchingForNewPower.class.getSimpleName());
 			if ((qs == null) || qs.isCond(4) || qs.isCond(5))
 			{
@@ -249,7 +247,6 @@ public class MuseumDungeon extends AbstractInstance
 		final Creature creature = event.getAttacker();
 		final Npc npc = (Npc) event.getTarget();
 		final Instance instance = npc.getInstanceWorld();
-		
 		if (isInInstance(instance) && !creature.isPlayer() && npc.isScriptValue(1))
 		{
 			getTimers().addTimer("THIEF_DIE", 500, npc, null);
@@ -297,7 +294,6 @@ public class MuseumDungeon extends AbstractInstance
 		if (isInInstance(instance))
 		{
 			final Attackable toyron = (Attackable) instance.getNpc(TOYRON);
-			
 			final PlayerInstance player = instance.getFirstPlayer();
 			final QuestState qs = player.getQuestState(Q10542_SearchingForNewPower.class.getSimpleName());
 			if ((qs != null) && qs.isCond(4))

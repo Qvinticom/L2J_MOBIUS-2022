@@ -106,7 +106,6 @@ public class Sow implements ISkillHandler
 			}
 			// Consuming used seed
 			_player.destroyItem("Consume", item.getObjectId(), 1, null, false);
-			
 			SystemMessage sm = null;
 			if (calcSuccess())
 			{
@@ -180,7 +179,6 @@ public class Sow implements ISkillHandler
 		}
 		
 		final int rate = Rnd.get(99);
-		
 		return (rate < basicSuccess);
 	}
 	

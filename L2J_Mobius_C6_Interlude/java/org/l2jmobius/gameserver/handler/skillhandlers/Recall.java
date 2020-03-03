@@ -47,7 +47,6 @@ public class Recall implements ISkillHandler
 			if (creature instanceof PlayerInstance)
 			{
 				final PlayerInstance instance = (PlayerInstance) creature;
-				
 				if (instance.isInOlympiadMode())
 				{
 					creature.sendPacket(new SystemMessage(SystemMessageId.YOU_CANNOT_USE_THAT_ITEM_IN_A_GRAND_OLYMPIAD_GAMES_MATCH));
@@ -82,11 +81,9 @@ public class Recall implements ISkillHandler
 				}
 				
 				final Creature target = (Creature) target1;
-				
 				if (target instanceof PlayerInstance)
 				{
 					final PlayerInstance targetChar = (PlayerInstance) target;
-					
 					if (targetChar.isFestivalParticipant())
 					{
 						targetChar.sendPacket(SystemMessage.sendString("You can't use escape skill in a festival."));

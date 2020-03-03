@@ -305,7 +305,6 @@ public class Auction
 		// avoid overflow on return
 		final long limit = MAX_ADENA - cwh.getAdena();
 		quantity = Math.min(quantity, limit);
-		
 		cwh.addItem("Outbidded", ADENA_ID, quantity, null, null);
 	}
 	

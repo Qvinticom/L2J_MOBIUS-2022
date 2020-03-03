@@ -244,7 +244,6 @@ public class FestivalGuideInstance extends Npc
 			final int duskScore = SevenSignsFestival.getInstance().getHighestScore(SevenSigns.CABAL_DUSK, i);
 			final String festivalName = SevenSignsFestival.getFestivalName(i);
 			String winningCabal = "Children of Dusk";
-			
 			if (dawnScore > duskScore)
 			{
 				winningCabal = "Children of Dawn";
@@ -269,10 +268,8 @@ public class FestivalGuideInstance extends Npc
 		{
 			final int accumScore = SevenSignsFestival.getInstance().getAccumulatedBonus(i);
 			final String festivalName = SevenSignsFestival.getFestivalName(i);
-			
 			tableHtml.append("<tr><td align=\"center\" width=\"150\">" + festivalName + "</td><td align=\"center\" width=\"150\">" + accumScore + "</td></tr>");
 		}
-		
 		return tableHtml.toString();
 	}
 }

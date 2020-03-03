@@ -200,7 +200,6 @@ public class Q10990_PoisonExtraction extends Quest
 		if ((qs != null) && qs.isCond(1))
 		{
 			final int killCount = qs.getInt(KILL_COUNT_VAR) + 1;
-			
 			if (killer.isGM())
 			{
 				qs.setCond(2, true);

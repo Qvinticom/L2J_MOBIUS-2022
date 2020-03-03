@@ -116,7 +116,6 @@ public class Q10278_MutatedKaneusHeine extends Quest
 	{
 		final QuestState qs = getQuestState(player, true);
 		String htmltext = getNoQuestMsg(player);
-		
 		switch (npc.getId())
 		{
 			case GOSTA:

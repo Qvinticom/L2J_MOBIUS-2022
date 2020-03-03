@@ -42,7 +42,6 @@ public class CrownTable
 			_crownList.add(8182); // Rune
 			_crownList.add(8183); // Schuttgart
 		}
-		
 		return _crownList;
 	}
 	

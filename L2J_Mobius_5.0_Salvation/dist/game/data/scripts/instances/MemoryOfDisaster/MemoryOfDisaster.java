@@ -366,7 +366,6 @@ public class MemoryOfDisaster extends AbstractInstance
 		final Creature creature = event.getSeen();
 		final Npc npc = (Npc) event.getSeer();
 		final Instance world = npc.getInstanceWorld();
-		
 		if (isInInstance(world))
 		{
 			if (creature.isNpc())

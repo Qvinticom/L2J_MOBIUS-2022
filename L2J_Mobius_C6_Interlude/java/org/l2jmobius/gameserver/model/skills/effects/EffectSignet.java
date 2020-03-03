@@ -67,7 +67,6 @@ public class EffectSignet extends Effect
 		}
 		final int mpConsume = _skill.getMpConsume();
 		final PlayerInstance caster = (PlayerInstance) getEffector();
-		
 		if (mpConsume > getEffector().getStatus().getCurrentMp())
 		{
 			getEffector().sendPacket(new SystemMessage(SystemMessageId.YOUR_SKILL_WAS_REMOVED_DUE_TO_A_LACK_OF_MP));

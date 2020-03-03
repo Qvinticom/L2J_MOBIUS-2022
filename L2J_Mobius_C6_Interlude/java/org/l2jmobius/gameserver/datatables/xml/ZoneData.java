@@ -83,7 +83,6 @@ public class ZoneData
 	protected ZoneData()
 	{
 		LOGGER.info(getClass().getSimpleName() + ": Loading zones...");
-		
 		load();
 	}
 	
@@ -367,7 +366,6 @@ public class ZoneData
 							}
 							
 							int[][] coords = rs.toArray(new int[rs.size()][]);
-							
 							if ((coords == null) || (coords.length == 0))
 							{
 								LOGGER.warning(getClass().getSimpleName() + ": missing data for zone: " + zoneId + " on file: " + f.getName());
@@ -442,7 +440,6 @@ public class ZoneData
 								attrs = cd.getAttributes();
 								String name = attrs.getNamedItem("name").getNodeValue();
 								String val = attrs.getNamedItem("val").getNodeValue();
-								
 								temp.setParameter(name, val);
 							}
 							else if ("spawn".equalsIgnoreCase(cd.getNodeName()) && (temp instanceof ZoneRespawn))
@@ -451,7 +448,6 @@ public class ZoneData
 								int spawnX = Integer.parseInt(attrs.getNamedItem("X").getNodeValue());
 								int spawnY = Integer.parseInt(attrs.getNamedItem("Y").getNodeValue());
 								int spawnZ = Integer.parseInt(attrs.getNamedItem("Z").getNodeValue());
-								
 								Node val = attrs.getNamedItem("isChaotic");
 								if ((val != null) && Boolean.parseBoolean(val.getNodeValue()))
 								{
@@ -586,7 +582,6 @@ public class ZoneData
 		{
 			return null;
 		}
-		
 		return getZone(object.getX(), object.getY(), object.getZ(), type);
 	}
 	

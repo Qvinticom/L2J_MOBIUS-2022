@@ -77,15 +77,12 @@ public class GameEvent
 		// this will return top N players sorted by kills, first element in the array will be the one with more kills
 		final String[] killers = new String[n];
 		String playerTemp = "";
-		
 		int kills = 0;
 		
 		final LinkedList<String> killersTemp = new LinkedList<>();
-		
 		for (int k = 0; k < n; k++)
 		{
 			kills = 0;
-			
 			for (int i = 1; i <= teamsNumber; i++)
 			{
 				final LinkedList<String> temp = players.get(i);
@@ -121,7 +118,6 @@ public class GameEvent
 				try
 				{
 					final PlayerInstance player = World.getInstance().getPlayer(it.next());
-					
 					if (player.kills.size() > kills)
 					{
 						kills = player.kills.size();
@@ -151,7 +147,6 @@ public class GameEvent
 		try
 		{
 			final NpcHtmlMessage adminReply = new NpcHtmlMessage(5);
-			
 			fis = new FileInputStream("data/events/" + eventName);
 			buff = new BufferedInputStream(fis);
 			in = new DataInputStream(buff);
@@ -160,9 +155,7 @@ public class GameEvent
 			
 			final StringBuilder replyMSG = new StringBuilder("<html><body>");
 			replyMSG.append("<center><font color=\"LEVEL\">" + eventName + "</font><font color=\"FF0000\"> bY " + inbr.readLine() + "</font></center><br>");
-			
 			replyMSG.append("<br>" + inbr.readLine());
-			
 			if (participatingPlayers.contains(player.getName()))
 			{
 				replyMSG.append("<br><center>You are already in the event players list !!</center></body></html>");
@@ -250,7 +243,6 @@ public class GameEvent
 		try
 		{
 			final Spawn spawn = new Spawn(template1);
-			
 			spawn.setX(target.getX() + 50);
 			spawn.setY(target.getY() + 50);
 			spawn.setZ(target.getZ());
@@ -259,7 +251,6 @@ public class GameEvent
 			spawn.setRespawnDelay(1);
 			
 			SpawnTable.getInstance().addNewSpawn(spawn, false);
-			
 			spawn.init();
 			spawn.getLastSpawn().getStatus().setCurrentHp(999999999);
 			spawn.getLastSpawn().setName("event inscriptor");
@@ -268,9 +259,7 @@ public class GameEvent
 			spawn.getLastSpawn().isAggressive();
 			spawn.getLastSpawn().decayMe();
 			spawn.getLastSpawn().spawnMe(spawn.getLastSpawn().getX(), spawn.getLastSpawn().getY(), spawn.getLastSpawn().getZ());
-			
 			spawn.getLastSpawn().broadcastPacket(new MagicSkillUse(spawn.getLastSpawn(), spawn.getLastSpawn(), 1034, 1, 1, 1));
-			
 			npcs.add(String.valueOf(spawn.getLastSpawn().getObjectId()));
 		}
 		catch (Exception e)
@@ -293,13 +282,11 @@ public class GameEvent
 		for (int k = 0; k < teamsNumber; k++)
 		{
 			final Iterator<String> it = players.get(k + 1).iterator();
-			
 			boolean temp = false;
 			
 			while (it.hasNext())
 			{
 				temp = player.getName().equalsIgnoreCase(it.next());
-				
 				if (temp)
 				{
 					return true;

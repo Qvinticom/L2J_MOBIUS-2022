@@ -46,7 +46,6 @@ public class Q00173_ToTheIsleOfSouls extends Quest
 		super(173);
 		addStartNpc(GALLADUCCI);
 		addTalkId(GALLADUCCI, GENTLER);
-		
 		registerQuestItems(GALLADUCCIS_ORDER, MAGIC_SWORD_HILT);
 	}
 	
@@ -96,7 +95,6 @@ public class Q00173_ToTheIsleOfSouls extends Quest
 	{
 		final QuestState st = getQuestState(player, true);
 		String htmltext = getNoQuestMsg(player);
-		
 		switch (npc.getId())
 		{
 			case GALLADUCCI:

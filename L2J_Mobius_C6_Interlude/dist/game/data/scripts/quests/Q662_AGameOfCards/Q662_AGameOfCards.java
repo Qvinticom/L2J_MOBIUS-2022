@@ -149,7 +149,6 @@ public class Q662_AGameOfCards extends Quest
 		{
 			final int state = st.getInt("state");
 			final int stateEx = st.getInt("stateEx");
-			
 			if ((state == 0) && (stateEx == 0) && (st.getQuestItemsCount(RED_GEM) >= 50))
 			{
 				htmltext = "30845-05.htm";
@@ -164,7 +163,6 @@ public class Q662_AGameOfCards extends Quest
 		{
 			final int state = st.getInt("state");
 			final int stateEx = st.getInt("stateEx");
-			
 			if ((state == 0) && (stateEx == 0) && (st.getQuestItemsCount(RED_GEM) >= 50))
 			{
 				int i1 = Rnd.get(70) + 1;
@@ -172,7 +170,6 @@ public class Q662_AGameOfCards extends Quest
 				int i3 = Rnd.get(70) + 1;
 				int i4 = Rnd.get(70) + 1;
 				int i5 = Rnd.get(70) + 1;
-				
 				if (i1 >= 57)
 				{
 					i1 = i1 - 56;
@@ -260,7 +257,6 @@ public class Q662_AGameOfCards extends Quest
 				
 				st.set("state", String.valueOf((i4 * 1000000) + (i3 * 10000) + (i2 * 100) + i1));
 				st.set("stateEx", String.valueOf(i5));
-				
 				st.takeItems(RED_GEM, 50);
 			}
 		}
@@ -268,7 +264,6 @@ public class Q662_AGameOfCards extends Quest
 		{
 			final int state = st.getInt("state");
 			final int stateEx = st.getInt("stateEx");
-			
 			int i0;
 			int i1;
 			int i2;
@@ -278,7 +273,6 @@ public class Q662_AGameOfCards extends Quest
 			int i6;
 			int i8;
 			int i9;
-			
 			i0 = state;
 			i1 = stateEx;
 			i5 = i1 % 100;
@@ -287,7 +281,6 @@ public class Q662_AGameOfCards extends Quest
 			i2 = (i0 % 10000) / 100;
 			i3 = (i0 % 1000000) / 10000;
 			i4 = (i0 % 100000000) / 1000000;
-			
 			if (event.equals("First"))
 			{
 				if ((i9 % 2) < 1)
@@ -333,7 +326,6 @@ public class Q662_AGameOfCards extends Quest
 			{
 				i6 = 0;
 				i8 = 0;
-				
 				if ((i1 >= 1) && (i1 <= 14) && (i2 >= 1) && (i2 <= 14) && (i3 >= 1) && (i3 <= 14) && (i4 >= 1) && (i4 <= 14) && (i5 >= 1) && (i5 <= 14))
 				{
 					if (i1 == i2)
@@ -546,7 +538,6 @@ public class Q662_AGameOfCards extends Quest
 			case State.STARTED:
 				final int state = st.getInt("state");
 				final int stateEx = st.getInt("stateEx");
-				
 				if ((state == 0) && (stateEx == 0))
 				{
 					htmltext = (st.getQuestItemsCount(RED_GEM) < 50) ? "30845-04.htm" : "30845-05.htm";
@@ -560,7 +551,6 @@ public class Q662_AGameOfCards extends Quest
 					int i4;
 					int i5;
 					int i9;
-					
 					i0 = state;
 					i1 = stateEx;
 					i5 = i1 % 100;
@@ -569,7 +559,6 @@ public class Q662_AGameOfCards extends Quest
 					i2 = (i0 % 10000) / 100;
 					i3 = (i0 % 1000000) / 10000;
 					i4 = (i0 % 100000000) / 1000000;
-					
 					htmltext = getHtmlText("30845-11a.htm");
 					htmltext = htmltext.replace("%FontColor1%", ((i9 % 2) < 1) ? "ffff00" : "ff6f6f").replace("%Cell1%", ((i9 % 2) < 1) ? CARDS.get(0) : CARDS.get(i1));
 					htmltext = htmltext.replace("%FontColor2%", ((i9 % 4) < 2) ? "ffff00" : "ff6f6f").replace("%Cell2%", ((i9 % 4) < 2) ? CARDS.get(0) : CARDS.get(i2));
@@ -599,7 +588,6 @@ public class Q662_AGameOfCards extends Quest
 	private void giveReward(QuestState st, int item, int count)
 	{
 		final Item template = ItemTable.getInstance().getTemplate(item);
-		
 		if (template.isStackable())
 		{
 			st.giveItems(item, count);

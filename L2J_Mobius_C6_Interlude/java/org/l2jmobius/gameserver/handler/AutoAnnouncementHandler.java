@@ -82,12 +82,10 @@ public class AutoAnnouncementHandler
 	public void listAutoAnnouncements(PlayerInstance player)
 	{
 		final NpcHtmlMessage adminReply = new NpcHtmlMessage(5);
-		
 		final StringBuilder replyMSG = new StringBuilder("<html><body>");
 		replyMSG.append("<table width=260><tr>");
 		replyMSG.append("<td width=40></td>");
 		replyMSG.append("<button value=\"Main\" action=\"bypass -h admin_admin\" width=50 height=15 back=\"L2UI_ct1.button_df\" fore=\"L2UI_ct1.button_df\"><br>");
-		
 		replyMSG.append("<td width=180><center>Auto Announcement Menu</center></td>");
 		replyMSG.append("<td width=40></td>");
 		replyMSG.append("</tr></table>");
@@ -160,7 +158,6 @@ public class AutoAnnouncementHandler
 			statement.setInt(1, nextId);
 			statement.setString(2, announcementTexts);
 			statement.setLong(3, announcementDelay);
-			
 			statement.executeUpdate();
 			
 			statement.close();
@@ -169,14 +166,12 @@ public class AutoAnnouncementHandler
 		{
 			LOGGER.warning("System: Could Not Insert Auto Announcment into DataBase: Reason: Duplicate Id");
 		}
-		
 		return registerAnnouncement(nextId, announcementTexts, announcementDelay);
 	}
 	
 	public int nextAutoAnnouncmentId()
 	{
 		int nextId = 0;
-		
 		PreparedStatement statement = null;
 		ResultSet rs = null;
 		
@@ -214,7 +209,6 @@ public class AutoAnnouncementHandler
 	private final AutoAnnouncementInstance registerAnnouncement(int id, String announcementTexts, long chatDelay)
 	{
 		AutoAnnouncementInstance announcementInst = null;
-		
 		if (chatDelay < 0)
 		{
 			chatDelay = DEFAULT_ANNOUNCEMENT_DELAY;
@@ -262,7 +256,6 @@ public class AutoAnnouncementHandler
 		{
 			LOGGER.warning("Could not Delete Auto Announcement in Database, Reason: " + e);
 		}
-		
 		return removeAnnouncement(announcementInst);
 	}
 	
@@ -330,7 +323,6 @@ public class AutoAnnouncementHandler
 			_defaultId = id;
 			_defaultTexts = announcementTexts;
 			_defaultDelay = announcementDelay * 1000;
-			
 			setActive(true);
 		}
 		
@@ -409,7 +401,6 @@ public class AutoAnnouncementHandler
 			}
 			
 			_isActive = activeValue;
-			
 			if (_isActive)
 			{
 				final AutoAnnouncementRunner acr = new AutoAnnouncementRunner(_defaultId);
@@ -440,11 +431,8 @@ public class AutoAnnouncementHandler
 			public synchronized void run()
 			{
 				final AutoAnnouncementInstance announcementInst = _registeredAnnouncements.get(id);
-				
 				String text;
-				
 				text = announcementInst.getDefaultTexts();
-				
 				if (text == null)
 				{
 					return;

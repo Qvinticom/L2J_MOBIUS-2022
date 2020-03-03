@@ -166,7 +166,6 @@ public class PrisonOfDarkness extends AbstractInstance
 	public String onFirstTalk(Npc npc, PlayerInstance player)
 	{
 		final Instance instance = npc.getInstanceWorld();
-		
 		if (isInInstance(instance) && (npc.getId() == JOSEPHINA))
 		{
 			return npc.isScriptValue(0) ? "32956-01.html" : "32956-02.html";
@@ -184,7 +183,6 @@ public class PrisonOfDarkness extends AbstractInstance
 		else
 		{
 			final Instance instance = npc.getInstanceWorld();
-			
 			if (isInInstance(instance))
 			{
 				final StatSet npcVars = npc.getVariables();
@@ -197,11 +195,9 @@ public class PrisonOfDarkness extends AbstractInstance
 						{
 							npcVars.set("CAN_REGISTRED_PLAYER_" + player.getObjectId(), false);
 							npcVars.increaseInt("PLAYERS_REGISTRED", 0, 1);
-							
 							if (npcVars.getInt("PLAYERS_REGISTRED", 0) >= instance.getParameters().getInt("PLAYERS_COUNT", 0))
 							{
 								npcVars.set("CAN_TELEPORT", false);
-								
 							}
 							return "32947-01.html";
 						}
@@ -357,7 +353,6 @@ public class PrisonOfDarkness extends AbstractInstance
 		final Creature creature = event.getSeen();
 		final Npc npc = (Npc) event.getSeer();
 		final Instance instance = npc.getInstanceWorld();
-		
 		if (isInInstance(instance) && (npc.getId() == EXIT_PORTAL))
 		{
 			final StatSet npcVars = npc.getVariables();

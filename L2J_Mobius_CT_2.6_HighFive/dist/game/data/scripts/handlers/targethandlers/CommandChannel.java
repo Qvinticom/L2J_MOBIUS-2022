@@ -47,7 +47,6 @@ public class CommandChannel implements ITargetTypeHandler
 		final int radius = skill.getAffectRange();
 		final Party party = player.getParty();
 		final boolean hasChannel = (party != null) && party.isInCommandChannel();
-		
 		if (Skill.addSummon(creature, player, radius, false))
 		{
 			targetList.add(player.getSummon());
@@ -62,7 +61,6 @@ public class CommandChannel implements ITargetTypeHandler
 		// Get all visible objects in a spherical area near the Creature
 		final int maxTargets = skill.getAffectLimit();
 		final List<PlayerInstance> members = hasChannel ? party.getCommandChannel().getMembers() : party.getMembers();
-		
 		for (PlayerInstance member : members)
 		{
 			if (creature == member)

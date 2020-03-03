@@ -66,12 +66,9 @@ public class SchemeBufferTable
 			while (rs.next())
 			{
 				final int objectId = rs.getInt("object_id");
-				
 				final String schemeName = rs.getString("scheme_name");
 				final String[] skills = rs.getString("skills").split(",");
-				
 				final ArrayList<Integer> schemeList = new ArrayList<>();
-				
 				for (String skill : skills)
 				{
 					// Don't feed the skills list if the list is empty.
@@ -100,9 +97,7 @@ public class SchemeBufferTable
 			final DocumentBuilderFactory dbf = DocumentBuilderFactory.newInstance();
 			final DocumentBuilder db = dbf.newDocumentBuilder();
 			final Document doc = db.parse(new File("./data/SchemeBufferSkills.xml"));
-			
 			final Node n = doc.getFirstChild();
-			
 			for (Node d = n.getFirstChild(); d != null; d = d.getNextSibling())
 			{
 				if (!d.getNodeName().equalsIgnoreCase("category"))
@@ -111,7 +106,6 @@ public class SchemeBufferTable
 				}
 				
 				final String category = d.getAttributes().getNamedItem("type").getNodeValue();
-				
 				for (Node c = d.getFirstChild(); c != null; c = c.getNextSibling())
 				{
 					if (!c.getNodeName().equalsIgnoreCase("buff"))
@@ -121,7 +115,6 @@ public class SchemeBufferTable
 					
 					final NamedNodeMap attrs = c.getAttributes();
 					final int skillId = Integer.parseInt(attrs.getNamedItem("id").getNodeValue());
-					
 					_availableBuffs.put(skillId, new BuffSkillHolder(skillId, Integer.parseInt(attrs.getNamedItem("price").getNodeValue()), category, attrs.getNamedItem("desc").getNodeValue()));
 				}
 			}
@@ -212,7 +205,6 @@ public class SchemeBufferTable
 		{
 			return Collections.emptyList();
 		}
-		
 		return _schemesTable.get(playerId).get(schemeName);
 	}
 	

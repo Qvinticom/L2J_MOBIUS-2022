@@ -99,7 +99,6 @@ public class OlympiadManagerInstance extends Npc
 					int classed = 0;
 					int nonClassed = 0;
 					final int[] array = Olympiad.getInstance().getWaitingList();
-					
 					if (array != null)
 					{
 						classed = array[0];
@@ -197,7 +196,6 @@ public class OlympiadManagerInstance extends Npc
 		{
 			final NpcHtmlMessage html = new NpcHtmlMessage(getObjectId());
 			final String[] params = command.split(" ");
-			
 			if (!Util.isDigit(params[1]))
 			{
 				LOGGER.warning("Olympiad Buffer Warning: npcId = " + this + " has invalid buffGroup set in the bypass for the buff selected: " + params[1]);
@@ -219,7 +217,6 @@ public class OlympiadManagerInstance extends Npc
 				if (skill != null)
 				{
 					int buffCount = player.getOlympiadBuffCount();
-					
 					broadcastPacket(new MagicSkillUse(this, player, skill.getId(), skill.getLevel(), 0, 0));
 					skill.applyEffects(player, player);
 					player.setOlympiadBuffCount(--buffCount);
@@ -243,7 +240,6 @@ public class OlympiadManagerInstance extends Npc
 		else if (command.startsWith("Olympiad"))
 		{
 			final int val = Integer.parseInt(command.substring(9, 10));
-			
 			final NpcHtmlMessage reply = new NpcHtmlMessage(getObjectId());
 			
 			switch (val)
@@ -252,7 +248,6 @@ public class OlympiadManagerInstance extends Npc
 				{
 					final Map<Integer, String> matches = Olympiad.getInstance().getMatchList();
 					reply.setFile(player, Olympiad.OLYMPIAD_HTML_PATH + "olympiad_observe1.htm");
-					
 					for (int i = 0; i < Olympiad.getStadiumCount(); i++)
 					{
 						final int arenaID = i + 1;
@@ -272,7 +267,6 @@ public class OlympiadManagerInstance extends Npc
 					{
 						final List<String> names = Olympiad.getInstance().getClassLeaderBoard(classId);
 						reply.setFile(player, Olympiad.OLYMPIAD_HTML_PATH + "olympiad_ranking.htm");
-						
 						int index = 1;
 						for (String name : names)
 						{
@@ -322,10 +316,8 @@ public class OlympiadManagerInstance extends Npc
 	public void showChatWindow(PlayerInstance player, int value, String suffix)
 	{
 		String filename = Olympiad.OLYMPIAD_HTML_PATH;
-		
 		filename += "noble_desc" + value;
 		filename += (suffix != null) ? suffix + ".htm" : ".htm";
-		
 		if (filename.equals(Olympiad.OLYMPIAD_HTML_PATH + "noble_desc0.htm"))
 		{
 			filename = Olympiad.OLYMPIAD_HTML_PATH + "noble_main.htm";

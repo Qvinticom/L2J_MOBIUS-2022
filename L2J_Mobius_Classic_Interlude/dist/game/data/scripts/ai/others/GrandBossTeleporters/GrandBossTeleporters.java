@@ -66,7 +66,6 @@ public class GrandBossTeleporters extends AbstractNpcAI
 	{
 		String htmltext = "";
 		final QuestState qs = getQuestState(player, false);
-		
 		if (hasQuestItems(player, VACUALITE_FLOATING_STONE))
 		{
 			player.teleToLocation(ENTER_HALL_OF_FLAMES);
@@ -92,7 +91,6 @@ public class GrandBossTeleporters extends AbstractNpcAI
 				if (valakasAI() != null)
 				{
 					final int status = GrandBossManager.getInstance().getBossStatus(29028);
-					
 					if ((status == 0) || (status == 1))
 					{
 						if (playerCount >= 200)
@@ -103,7 +101,6 @@ public class GrandBossTeleporters extends AbstractNpcAI
 						{
 							qs.unset("allowEnter");
 							player.teleToLocation(TELEPORT_INTO_VALAKAS_LAIR.getX() + getRandom(600), TELEPORT_INTO_VALAKAS_LAIR.getY() + getRandom(600), TELEPORT_INTO_VALAKAS_LAIR.getZ());
-							
 							playerCount++;
 							
 							if (status == 0)

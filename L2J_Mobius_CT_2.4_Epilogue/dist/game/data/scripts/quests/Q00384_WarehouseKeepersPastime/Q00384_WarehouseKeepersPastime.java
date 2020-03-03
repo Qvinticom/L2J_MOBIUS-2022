@@ -102,7 +102,6 @@ public class Q00384_WarehouseKeepersPastime extends Quest
 	{
 		final QuestState qs = getQuestState(player, true);
 		final String htmltext = getNoQuestMsg(player);
-		
 		switch (npc.getId())
 		{
 			case CLIFF:
@@ -344,7 +343,6 @@ public class Q00384_WarehouseKeepersPastime extends Quest
 		{
 			selectBingoNumber(qs, num);
 			i3 = getBingoSelectCount(qs);
-			
 			if (i3 == 2)
 			{
 				html = getHtm(player, npcId + "-14.html");
@@ -476,7 +474,6 @@ public class Q00384_WarehouseKeepersPastime extends Quest
 			else if (qs.getMemoState() == 20)
 			{
 				final int random = getRandom(100);
-				
 				if (random < 50)
 				{
 					giveItems(player, AQUASTONE_RING, 1);
@@ -500,7 +497,6 @@ public class Q00384_WarehouseKeepersPastime extends Quest
 			if (qs.getMemoState() == 10)
 			{
 				final int random = getRandom(100);
-				
 				if (random < 50)
 				{
 					giveItems(player, MOLD_HARDENER, 1);
@@ -521,7 +517,6 @@ public class Q00384_WarehouseKeepersPastime extends Quest
 			else if (qs.getMemoState() == 20)
 			{
 				final int random = getRandom(100);
-				
 				if (random < 50)
 				{
 					giveItems(player, SCRL_OF_ENCH_WP_C, 1);
@@ -889,7 +884,6 @@ public class Q00384_WarehouseKeepersPastime extends Quest
 	{
 		final QuestState qs = getQuestState(player, false);
 		final List<QuestState> candidates = new ArrayList<>();
-		
 		if ((qs != null) && qs.isStarted())
 		{
 			candidates.add(qs);

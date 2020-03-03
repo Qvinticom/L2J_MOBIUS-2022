@@ -79,17 +79,13 @@ public class KeucereusNorthController extends AirShipController
 		_shipSpawnX = -184145;
 		_shipSpawnY = 242373;
 		_shipSpawnZ = 3000;
-		
 		_oustLoc = new Location(-183900, 239384, 1320);
-		
 		_locationId = LOCATION;
 		_arrivalPath = ARRIVAL;
 		_departPath = DEPART;
 		_teleportsTable = TELEPORTS;
 		_fuelTable = FUEL;
-		
 		_movie = Movie.LAND_KSERTH_B;
-		
 		validityCheck();
 	}
 	

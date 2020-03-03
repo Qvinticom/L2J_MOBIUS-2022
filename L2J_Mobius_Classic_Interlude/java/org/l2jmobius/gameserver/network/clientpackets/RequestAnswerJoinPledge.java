@@ -95,7 +95,6 @@ public class RequestAnswerJoinPledge implements IClientIncomingPacket
 				}
 				
 				player.sendPacket(new JoinPledge(requestor.getClanId()));
-				
 				player.setPledgeType(pledgeType);
 				if (pledgeType == Clan.SUBUNIT_ACADEMY)
 				{

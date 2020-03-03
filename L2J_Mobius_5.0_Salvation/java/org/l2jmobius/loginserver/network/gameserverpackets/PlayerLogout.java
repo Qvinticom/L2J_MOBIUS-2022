@@ -36,7 +36,6 @@ public class PlayerLogout extends BaseRecievePacket
 	{
 		super(decrypt);
 		final String account = readS();
-		
 		server.removeAccountOnGameServer(account);
 	}
 }

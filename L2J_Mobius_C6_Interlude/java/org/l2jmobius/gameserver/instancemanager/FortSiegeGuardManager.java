@@ -203,7 +203,6 @@ public class FortSiegeGuardManager
 			final PreparedStatement statement = con.prepareStatement("SELECT * FROM fort_siege_guards Where fortId = ? ");
 			statement.setInt(1, _fort.getFortId());
 			final ResultSet rs = statement.executeQuery();
-			
 			Spawn spawn1;
 			NpcTemplate template1;
 			

@@ -77,12 +77,10 @@ public class NpcInstance extends Npc
 		{
 			final List<SkillLearn> skills = SkillTreeData.getInstance().getAvailableCollectSkills(player);
 			final AcquireSkillList asl = new AcquireSkillList(AcquireSkillType.COLLECT);
-			
 			int counts = 0;
 			for (SkillLearn s : skills)
 			{
 				final Skill sk = SkillData.getInstance().getSkill(s.getSkillId(), s.getSkillLevel());
-				
 				if (sk != null)
 				{
 					counts++;

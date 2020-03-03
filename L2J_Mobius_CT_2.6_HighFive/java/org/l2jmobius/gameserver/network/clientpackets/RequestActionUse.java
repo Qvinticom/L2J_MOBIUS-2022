@@ -1161,7 +1161,6 @@ public class RequestActionUse implements IClientIncomingPacket
 		{
 			summon.setTarget(target);
 			summon.useMagic(skill, _ctrlPressed, _shiftPressed);
-			
 			if (skill.getId() == SWITCH_STANCE_ID)
 			{
 				summon.switchMode();

@@ -123,7 +123,6 @@ public class Q00763_ADauntingTask extends Quest
 				if (qs.isCond(2))
 				{
 					final long itemCount = getQuestItemsCount(player, MALICE);
-					
 					for (int[] data : REWARD)
 					{
 						if (itemCount >= data[0])
@@ -150,7 +149,6 @@ public class Q00763_ADauntingTask extends Quest
 	{
 		final QuestState qs = getQuestState(player, true);
 		String htmltext = getNoQuestMsg(player);
-		
 		switch (qs.getState())
 		{
 			case State.CREATED:
@@ -184,14 +182,12 @@ public class Q00763_ADauntingTask extends Quest
 	public String onKill(Npc npc, PlayerInstance killer, boolean isSummon)
 	{
 		final QuestState qs = getQuestState(killer, false);
-		
 		if ((qs != null) && (qs.isCond(1) || qs.isCond(2)) && (getRandom(100) < 15))
 		{
 			if (getQuestItemsCount(killer, EYE) < 50)
 			{
 				giveItems(killer, EYE, 1);
 				playSound(killer, QuestSound.ITEMSOUND_QUEST_ITEMGET);
-				
 				if (getQuestItemsCount(killer, EYE) >= 50)
 				{
 					qs.setCond(2, true);

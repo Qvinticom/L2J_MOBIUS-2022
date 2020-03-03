@@ -61,7 +61,6 @@ public class ExtractableItemData implements IXmlReader
 			float totalChance;
 			float chance;
 			final StatSet set = new StatSet();
-			
 			final Node n = doc.getFirstChild();
 			for (Node node = n.getFirstChild(); node != null; node = node.getNextSibling())
 			{
@@ -84,7 +83,6 @@ public class ExtractableItemData implements IXmlReader
 							amount = set.getInt("quantity");
 							chance = set.getFloat("chance");
 							extractables.add(new ExtractableProductItem(production, amount, chance));
-							
 							totalChance = 0;
 							for (ExtractableProductItem extractable : extractables)
 							{

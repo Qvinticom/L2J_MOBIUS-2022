@@ -178,7 +178,6 @@ public class WarehouseInstance extends FolkInstance
 		else // One or more chars other than this player for this account
 		{
 			final Map<Integer, String> chars = player.getAccountChars();
-			
 			if (chars.size() < 1)
 			{
 				player.sendPacket(ActionFailed.STATIC_PACKET);

@@ -88,7 +88,6 @@ public class SevenSignsRBs extends AbstractInstance
 					final Party party = player.getParty();
 					final boolean isInCC = party.isInCommandChannel();
 					final List<PlayerInstance> members = (isInCC) ? party.getCommandChannel().getMembers() : party.getMembers();
-					
 					if (members.size() > (MAX_PLAYERS_IN_ZONE - ANAKIM_ZONE.getPlayersInside().size()))
 					{
 						player.sendMessage("Lilith Sanctum reached 300 players. You cannot enter now.");
@@ -127,7 +126,6 @@ public class SevenSignsRBs extends AbstractInstance
 					final Party party = player.getParty();
 					final boolean isInCC = party.isInCommandChannel();
 					final List<PlayerInstance> members = (isInCC) ? party.getCommandChannel().getMembers() : party.getMembers();
-					
 					if (members.size() > (MAX_PLAYERS_IN_ZONE - LILITH_ZONE.getPlayersInside().size()))
 					{
 						player.sendMessage("Lilith Sanctum reached 300 players. You cannot enter now.");

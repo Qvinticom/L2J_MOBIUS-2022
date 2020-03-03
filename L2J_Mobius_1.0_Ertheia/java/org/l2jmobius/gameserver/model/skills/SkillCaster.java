@@ -110,7 +110,6 @@ public class SkillCaster implements Runnable
 		_skill = skill;
 		_item = item;
 		_castingType = castingType;
-		
 		calcSkillTiming(caster, skill);
 	}
 	
@@ -231,7 +230,6 @@ public class SkillCaster implements Runnable
 	{
 		final Creature caster = _caster.get();
 		final WorldObject target = _target.get();
-		
 		if ((caster == null) || (target == null))
 		{
 			return false;
@@ -402,7 +400,6 @@ public class SkillCaster implements Runnable
 	{
 		final Creature caster = _caster.get();
 		final WorldObject target = _target.get();
-		
 		if ((caster == null) || (target == null))
 		{
 			return false;
@@ -438,7 +435,6 @@ public class SkillCaster implements Runnable
 	{
 		final Creature caster = _caster.get();
 		final WorldObject target = _target.get();
-		
 		if ((caster == null) || (target == null))
 		{
 			return false;
@@ -523,7 +519,6 @@ public class SkillCaster implements Runnable
 		
 		// On each repeat recharge shots before cast.
 		caster.rechargeShots(_skill.useSoulShot(), _skill.useSpiritShot(), false);
-		
 		return true;
 	}
 	
@@ -608,7 +603,6 @@ public class SkillCaster implements Runnable
 						{
 							// Update pvpflag.
 							player.updatePvPStatus((Creature) obj);
-							
 							if (obj.isSummon())
 							{
 								((Summon) obj).updateAndBroadcastStatus(1);
@@ -819,7 +813,6 @@ public class SkillCaster implements Runnable
 				}
 				
 				final WorldObject[] targets = skill.getTargetsAffected(creature, target).toArray(new WorldObject[0]);
-				
 				if (!skill.isNotBroadcastable())
 				{
 					creature.broadcastPacket(new MagicSkillUse(creature, target, skill.getDisplayId(), skill.getLevel(), 0, 0));
@@ -1138,7 +1131,6 @@ public class SkillCaster implements Runnable
 		}
 		
 		final Location destination = creature.isFlying() ? new Location(x, y, z) : GeoEngine.getInstance().canMoveToTargetLoc(creature.getX(), creature.getY(), creature.getZ(), x, y, z, creature.getInstanceWorld());
-		
 		creature.getAI().setIntention(CtrlIntention.AI_INTENTION_IDLE);
 		creature.broadcastPacket(new FlyToLocation(creature, destination, flyType, 0, 0, 333));
 		creature.setXYZ(destination);

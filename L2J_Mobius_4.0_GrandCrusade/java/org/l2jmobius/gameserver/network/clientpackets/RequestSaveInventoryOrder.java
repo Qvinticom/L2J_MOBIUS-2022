@@ -73,7 +73,6 @@ public class RequestSaveInventoryOrder implements IClientIncomingPacket
 	private static class InventoryOrder
 	{
 		int order;
-		
 		int objectID;
 		
 		public InventoryOrder(int id, int ord)

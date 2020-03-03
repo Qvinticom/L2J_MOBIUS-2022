@@ -120,7 +120,6 @@ public class Q00011_SecretMeetingWithKetraOrcs extends Quest
 					if (qs.isCond(1))
 					{
 						htmltext = "31256-01.html";
-						
 					}
 					else if (qs.isCond(2))
 					{

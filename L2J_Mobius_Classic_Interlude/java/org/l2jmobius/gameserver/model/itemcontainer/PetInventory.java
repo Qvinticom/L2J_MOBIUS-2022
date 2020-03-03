@@ -66,12 +66,10 @@ public class PetInventory extends Inventory
 	public boolean validateCapacity(ItemInstance item)
 	{
 		int slots = 0;
-		
 		if (!(item.isStackable() && (getItemByItemId(item.getId()) != null)) && !item.getItem().hasExImmediateEffect())
 		{
 			slots++;
 		}
-		
 		return validateCapacity(slots);
 	}
 	

@@ -220,7 +220,6 @@ public class ResidenceOfQueenNebula extends AbstractInstance
 				break;
 			}
 		}
-		
 		return super.onKill(npc, player, isSummon);
 	}
 	

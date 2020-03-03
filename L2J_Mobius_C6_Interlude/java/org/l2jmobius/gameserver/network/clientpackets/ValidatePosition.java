@@ -54,7 +54,6 @@ public class ValidatePosition extends GameClientPacket
 		final int realX = player.getX();
 		final int realY = player.getY();
 		int realZ = player.getZ();
-		
 		if ((_x == 0) && (_y == 0) && (realX != 0))
 		{
 			return;
@@ -64,7 +63,6 @@ public class ValidatePosition extends GameClientPacket
 		int dy;
 		int dz;
 		double diffSq;
-		
 		if (player.isInBoat())
 		{
 			if (Config.COORD_SYNCHRONIZE == 2)
@@ -98,7 +96,6 @@ public class ValidatePosition extends GameClientPacket
 		// player.setLastPartyPosition(_x, _y, _z);
 		// party.broadcastToPartyMembers(player, new PartyMemberPosition(player));
 		// }
-		
 		if (player.isFlying() || player.isInsideZone(ZoneId.WATER))
 		{
 			player.setXYZ(realX, realY, _z);

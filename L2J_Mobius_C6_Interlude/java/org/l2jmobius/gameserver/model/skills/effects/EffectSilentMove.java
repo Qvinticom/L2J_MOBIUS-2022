@@ -76,7 +76,6 @@ final class EffectSilentMove extends Effect
 		}
 		
 		final double manaDam = calc();
-		
 		if (manaDam > getEffected().getCurrentMp())
 		{
 			getEffected().sendPacket(new SystemMessage(SystemMessageId.YOUR_SKILL_WAS_REMOVED_DUE_TO_A_LACK_OF_MP));

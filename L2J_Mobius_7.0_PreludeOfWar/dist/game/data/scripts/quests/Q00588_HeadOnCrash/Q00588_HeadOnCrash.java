@@ -89,7 +89,6 @@ public class Q00588_HeadOnCrash extends Quest
 	{
 		final QuestState qs = getQuestState(player, true);
 		String htmltext = getNoQuestMsg(player);
-		
 		if (npc.getId() == BERNA)
 		{
 			switch (qs.getState())

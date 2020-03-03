@@ -163,7 +163,6 @@ public class AdminCHSiege implements IAdminCommandHandler
 							c.set(Calendar.HOUR_OF_DAY, h);
 							c.set(Calendar.MINUTE, min);
 							c.set(Calendar.SECOND, 0);
-							
 							if (c.getTimeInMillis() > System.currentTimeMillis())
 							{
 								activeChar.sendMessage(hall.getName() + " siege: " + c.getTime());
@@ -339,7 +338,6 @@ public class AdminCHSiege implements IAdminCommandHandler
 		}
 		
 		final SiegableHall hall = CHSiegeManager.getInstance().getSiegableHall(ch);
-		
 		if (hall == null)
 		{
 			gm.sendMessage("Couldnt find the clan hall.");

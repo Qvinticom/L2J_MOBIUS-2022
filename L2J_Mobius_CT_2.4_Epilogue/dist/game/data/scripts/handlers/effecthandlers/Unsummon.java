@@ -69,7 +69,6 @@ public class Unsummon extends AbstractEffect
 		if (summon != null)
 		{
 			final PlayerInstance summonOwner = summon.getOwner();
-			
 			summon.abortAttack();
 			summon.abortCast();
 			summon.stopAllEffects();

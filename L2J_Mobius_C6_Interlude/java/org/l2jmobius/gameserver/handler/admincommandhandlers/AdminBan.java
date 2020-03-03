@@ -63,12 +63,10 @@ public class AdminBan implements IAdminCommandHandler
 		String player = "";
 		int duration = -1;
 		PlayerInstance targetPlayer = null;
-		
 		if (st.hasMoreTokens())
 		{
 			player = st.nextToken();
 			targetPlayer = World.getInstance().getPlayer(player);
-			
 			if (st.hasMoreTokens())
 			{
 				try
@@ -101,7 +99,6 @@ public class AdminBan implements IAdminCommandHandler
 		else if (command.startsWith("admin_ban_acc"))
 		{
 			// May need to check usage in admin_ban_menu as well.
-			
 			if ((targetPlayer == null) && player.equals(""))
 			{
 				BuilderUtil.sendSysMessage(activeChar, "Usage: //ban_acc <account_name> (if none, target char's account gets banned)");
@@ -145,7 +142,6 @@ public class AdminBan implements IAdminCommandHandler
 					return false;
 				}
 				String banLengthStr = "";
-				
 				targetPlayer.setPunishLevel(PlayerInstance.PunishLevel.CHAT, duration);
 				if (duration > 0)
 				{
@@ -194,7 +190,6 @@ public class AdminBan implements IAdminCommandHandler
 		else if (command.startsWith("admin_unban_acc"))
 		{
 			// Need to check admin_unban_menu command as well in AdminMenu.java handler.
-			
 			if (targetPlayer != null)
 			{
 				activeChar.sendMessage(targetPlayer.getName() + " is currently online so must not be banned.");
@@ -242,7 +237,6 @@ public class AdminBan implements IAdminCommandHandler
 				targetPlayer.setPunishLevel(PlayerInstance.PunishLevel.JAIL, duration);
 				BuilderUtil.sendSysMessage(activeChar, "Character " + targetPlayer.getName() + " jailed for " + (duration > 0 ? duration + " minutes." : "ever!"));
 				auditAction(command, activeChar, targetPlayer.getName());
-				
 				if (targetPlayer.getParty() != null)
 				{
 					targetPlayer.getParty().removePartyMember(targetPlayer);
@@ -284,7 +278,6 @@ public class AdminBan implements IAdminCommandHandler
 		}
 		
 		final String[] command = fullCommand.split(" ");
-		
 		GMAudit.auditGMAction(activeChar.getName() + " [" + activeChar.getObjectId() + "]", command[0], (target.equals("") ? "no-target" : target), (command.length > 2 ? command[2] : ""));
 	}
 	
@@ -309,7 +302,6 @@ public class AdminBan implements IAdminCommandHandler
 			statement.setInt(1, level);
 			statement.setLong(2, value);
 			statement.setString(3, name);
-			
 			statement.execute();
 			final int count = statement.getUpdateCount();
 			statement.close();
@@ -344,7 +336,6 @@ public class AdminBan implements IAdminCommandHandler
 			statement.setInt(4, PlayerInstance.PunishLevel.JAIL.value());
 			statement.setLong(5, (delay > 0 ? delay * 60000 : 0));
 			statement.setString(6, name);
-			
 			statement.execute();
 			final int count = statement.getUpdateCount();
 			statement.close();
@@ -396,7 +387,6 @@ public class AdminBan implements IAdminCommandHandler
 	private boolean changeCharAccessLevel(PlayerInstance targetPlayer, String player, PlayerInstance activeChar, int lvl)
 	{
 		boolean output = false;
-		
 		if (targetPlayer != null)
 		{
 			targetPlayer.setAccessLevel(lvl);
@@ -422,7 +412,6 @@ public class AdminBan implements IAdminCommandHandler
 			targetPlayer.deleteMe();
 			
 			BuilderUtil.sendSysMessage(activeChar, "The character " + targetPlayer.getName() + " has now been banned.");
-			
 			output = true;
 		}
 		else

@@ -29,7 +29,6 @@ public class HennaInfo extends GameServerPacket
 	{
 		_player = player;
 		_count = 0;
-		
 		for (int i = 0; i < 3; i++)
 		{
 			Henna henna = _player.getHenna(i + 1);

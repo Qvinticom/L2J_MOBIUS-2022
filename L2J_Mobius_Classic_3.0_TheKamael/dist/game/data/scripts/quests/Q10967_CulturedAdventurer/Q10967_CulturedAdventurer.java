@@ -139,7 +139,6 @@ public class Q10967_CulturedAdventurer extends Quest
 				htmltext = getAlreadyCompletedMsg(player);
 			}
 		}
-		
 		return htmltext;
 	}
 	
@@ -150,7 +149,6 @@ public class Q10967_CulturedAdventurer extends Quest
 		if ((qs != null) && qs.isCond(1))
 		{
 			final int killCount = qs.getInt(KILL_COUNT_VAR) + 1;
-			
 			if (killer.isGM())
 			{
 				qs.setCond(2, true);
@@ -183,7 +181,6 @@ public class Q10967_CulturedAdventurer extends Quest
 			holder.add(new NpcLogListHolder(NpcStringId.DEFEAT_THE_MONSTERS_IN_THE_ABANDONED_CAMP.getId(), true, qs.getInt(KILL_COUNT_VAR)));
 			return holder;
 		}
-		
 		return super.getNpcLogList(player);
 	}
 	

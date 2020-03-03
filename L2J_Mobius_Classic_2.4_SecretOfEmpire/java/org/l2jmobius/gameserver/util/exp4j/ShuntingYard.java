@@ -39,7 +39,6 @@ public class ShuntingYard
 	{
 		final Stack<Token> stack = new Stack<>();
 		final List<Token> output = new ArrayList<>();
-		
 		final Tokenizer tokenizer = new Tokenizer(expression, userFunctions, userOperators, variableNames, implicitMultiplication);
 		while (tokenizer.hasNext())
 		{

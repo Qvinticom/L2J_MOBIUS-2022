@@ -57,7 +57,6 @@ public class DoorData implements IXmlReader
 		try
 		{
 			final StatSet set = new StatSet();
-			
 			final Node n = doc.getFirstChild();
 			for (Node node = n.getFirstChild(); node != null; node = node.getNextSibling())
 			{
@@ -108,7 +107,6 @@ public class DoorData implements IXmlReader
 		final int mDef = set.getInt("mDef");
 		final boolean unlockable = set.getBoolean("unlockable", false);
 		final boolean isOpen = set.getBoolean("isOpen", false);
-		
 		if (xMin > xMax)
 		{
 			LOGGER.warning("Error in door data, ID:" + id);
@@ -138,14 +136,12 @@ public class DoorData implements IXmlReader
 		npcDat.set("npcId", id);
 		npcDat.set("level", 0);
 		npcDat.set("jClass", "door");
-		
 		npcDat.set("baseSTR", 0);
 		npcDat.set("baseCON", 0);
 		npcDat.set("baseDEX", 0);
 		npcDat.set("baseINT", 0);
 		npcDat.set("baseWIT", 0);
 		npcDat.set("baseMEN", 0);
-		
 		npcDat.set("baseShldDef", 0);
 		npcDat.set("baseShldRate", 0);
 		npcDat.set("baseAccCombat", 38);
@@ -193,7 +189,6 @@ public class DoorData implements IXmlReader
 		door.setCurrentHpMp(door.getMaxHp(), door.getMaxMp());
 		door.setOpen(isOpen);
 		door.setXYZInvisible(x, y, z);
-		
 		return door;
 	}
 	
@@ -285,24 +280,19 @@ public class DoorData implements IXmlReader
 						final int px2 = doorInst.getXMax();
 						final int py2 = doorInst.getYMax();
 						final int pz2 = doorInst.getZMax();
-						
 						final int l = tx - x;
 						final int m = ty - y;
 						final int n = tz - z;
-						
 						final int dk = ((doorInst.getA() * l) + (doorInst.getB() * m) + (doorInst.getC() * n));
-						
 						if (dk == 0)
 						{
 							continue; // Parallel
 						}
 						
 						final float p = (float) ((doorInst.getA() * x) + (doorInst.getB() * y) + (doorInst.getC() * z) + doorInst.getD()) / dk;
-						
 						final int fx = (int) (x - (l * p));
 						final int fy = (int) (y - (m * p));
 						final int fz = (int) (z - (n * p));
-						
 						if (((Math.min(x, tx) <= fx) && (fx <= Math.max(x, tx))) && ((Math.min(y, ty) <= fy) && (fy <= Math.max(y, ty))) && ((Math.min(z, tz) <= fz) && (fz <= Math.max(z, tz))))
 						{
 							if ((((fx >= px1) && (fx <= px2)) || ((fx >= px2) && (fx <= px1))) && (((fy >= py1) && (fy <= py2)) || ((fy >= py2) && (fy <= py1))) && (((fz >= pz1) && (fz <= pz2)) || ((fz >= pz2) && (fz <= pz1))))

@@ -56,7 +56,6 @@ public class SinEater extends AbstractNpcAI
 			{
 				final int random = getRandom(100);
 				final Summon summon = player.getSummon();
-				
 				if (random < 20)
 				{
 					broadcastSummonSay(summon, NpcStringId.YAWWWWN_IT_S_SO_BORING_HERE_WE_SHOULD_GO_AND_FIND_SOME_ACTION);
@@ -90,7 +89,6 @@ public class SinEater extends AbstractNpcAI
 	{
 		final int random = getRandom(100);
 		final Summon summon = (Summon) event.getTarget();
-		
 		if (random < 30)
 		{
 			broadcastSummonSay(summon, NpcStringId.OH_THIS_IS_JUST_GREAT_WHAT_ARE_YOU_GOING_TO_DO_NOW);
@@ -114,7 +112,6 @@ public class SinEater extends AbstractNpcAI
 		{
 			final int random = getRandom(100);
 			final Summon summon = (Summon) event.getTarget();
-			
 			if (random < 35)
 			{
 				broadcastSummonSay(summon, NpcStringId.OH_THAT_SMARTS);
@@ -143,7 +140,6 @@ public class SinEater extends AbstractNpcAI
 		if (getRandom(100) < 10)
 		{
 			final int random = getRandom(100);
-			
 			if (random < 25)
 			{
 				broadcastSummonSay(summon, NpcStringId.USING_A_SPECIAL_SKILL_HERE_COULD_TRIGGER_A_BLOODBATH);

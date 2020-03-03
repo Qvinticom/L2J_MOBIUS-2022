@@ -114,7 +114,6 @@ public class FestivalMonsterInstance extends MonsterInstance
 		
 		final PlayerInstance partyLeader = associatedParty.getPartyMembers().get(0);
 		final ItemInstance addedOfferings = partyLeader.getInventory().addItem("Sign", SevenSignsFestival.FESTIVAL_OFFERING_ID, _bonusMultiplier, partyLeader, this);
-		
 		final InventoryUpdate iu = new InventoryUpdate();
 		if (addedOfferings.getCount() != _bonusMultiplier)
 		{

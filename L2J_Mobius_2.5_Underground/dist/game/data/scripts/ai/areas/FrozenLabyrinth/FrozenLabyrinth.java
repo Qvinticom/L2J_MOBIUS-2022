@@ -50,7 +50,6 @@ public class FrozenLabyrinth extends AbstractNpcAI
 			{
 				final int x = diff < 60 ? npc.getX() + diff : npc.getX();
 				final int y = diff >= 60 ? npc.getY() + (diff - 40) : npc.getY();
-				
 				final Npc monster = addSpawn(spawnId, x, y, npc.getZ(), npc.getHeading(), false, 0);
 				addAttackPlayerDesire(monster, attacker);
 				diff += 20;

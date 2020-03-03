@@ -211,7 +211,6 @@ public class RequestExRemoveItemAttribute implements IClientIncomingPacket
 				break;
 			}
 		}
-		
 		return _price;
 	}
 }

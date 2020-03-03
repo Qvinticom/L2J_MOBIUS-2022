@@ -58,14 +58,12 @@ public class TaskBirthday extends Task
 	{
 		final Calendar lastExecDate = Calendar.getInstance();
 		final long lastActivation = task.getLastActivation();
-		
 		if (lastActivation > 0)
 		{
 			lastExecDate.setTimeInMillis(lastActivation);
 		}
 		
 		final String rangeDate = "[" + Util.getDateString(lastExecDate.getTime()) + "] - [" + Util.getDateString(TODAY.getTime()) + "]";
-		
 		for (; !TODAY.before(lastExecDate); lastExecDate.add(Calendar.DATE, 1))
 		{
 			checkBirthday(lastExecDate.get(Calendar.YEAR), lastExecDate.get(Calendar.MONTH), lastExecDate.get(Calendar.DATE));
@@ -95,7 +93,6 @@ public class TaskBirthday extends Task
 					}
 					
 					String text = Config.ALT_BIRTHDAY_MAIL_TEXT;
-					
 					if (text.contains("$c1"))
 					{
 						text = text.replace("$c1", CharNameTable.getInstance().getNameById(playerId));
@@ -106,10 +103,8 @@ public class TaskBirthday extends Task
 					}
 					
 					final Message msg = new Message(playerId, Config.ALT_BIRTHDAY_MAIL_SUBJECT, text, MailType.BIRTHDAY);
-					
 					final Mail attachments = msg.createAttachments();
 					attachments.addItem("Birthday", Config.ALT_BIRTHDAY_GIFT, 1, null, null);
-					
 					MailManager.getInstance().sendMessage(msg);
 					_count++;
 				}

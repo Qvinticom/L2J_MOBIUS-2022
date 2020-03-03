@@ -66,7 +66,6 @@ public class FolkInstance extends NpcInstance
 	public void showSkillList(PlayerInstance player, ClassId classId)
 	{
 		final int npcId = getTemplate().getNpcId();
-		
 		if (_classesToTeach == null)
 		{
 			if (player.isGM())
@@ -100,11 +99,9 @@ public class FolkInstance extends NpcInstance
 		final SkillLearn[] skills = SkillTreeTable.getInstance().getAvailableSkills(player, classId);
 		final AquireSkillList asl = new AquireSkillList(AquireSkillList.skillType.Usual);
 		int counts = 0;
-		
 		for (SkillLearn s : skills)
 		{
 			final Skill sk = SkillTable.getInstance().getInfo(s.getId(), s.getLevel());
-			
 			if ((sk == null) || !sk.getCanLearn(player.getClassId()) || !sk.canTeachBy(npcId))
 			{
 				continue;
@@ -146,7 +143,6 @@ public class FolkInstance extends NpcInstance
 	public void showEnchantSkillList(PlayerInstance player, ClassId classId)
 	{
 		final int npcId = getTemplate().getNpcId();
-		
 		if (_classesToTeach == null)
 		{
 			if (player.isGM())
@@ -191,7 +187,6 @@ public class FolkInstance extends NpcInstance
 		final EnchantSkillLearn[] skills = SkillTreeTable.getInstance().getAvailableEnchantSkills(player);
 		final ExEnchantSkillList esl = new ExEnchantSkillList();
 		int counts = 0;
-		
 		for (EnchantSkillLearn s : skills)
 		{
 			final Skill sk = SkillTable.getInstance().getInfo(s.getId(), s.getLevel());
@@ -207,7 +202,6 @@ public class FolkInstance extends NpcInstance
 			player.sendPacket(SystemMessageId.THERE_IS_NO_SKILL_THAT_ENABLES_ENCHANT);
 			final NpcHtmlMessage html = new NpcHtmlMessage(getObjectId());
 			final int level = player.getLevel();
-			
 			if (level < 74)
 			{
 				final SystemMessage sm = new SystemMessage(SystemMessageId.YOU_DO_NOT_HAVE_ANY_FURTHER_SKILLS_TO_LEARN_COME_BACK_WHEN_YOU_HAVE_REACHED_LEVEL_S1);
@@ -240,7 +234,6 @@ public class FolkInstance extends NpcInstance
 			if (Config.ALT_GAME_SKILL_LEARN)
 			{
 				final String id = command.substring(9).trim();
-				
 				if (id.length() != 0)
 				{
 					player.setSkillLearningClassId(ClassId.getClassId(Integer.parseInt(id)));
@@ -249,7 +242,6 @@ public class FolkInstance extends NpcInstance
 				else
 				{
 					boolean ownClass = false;
-					
 					for (ClassId cid : _classesToTeach)
 					{
 						if (cid.equalsOrChildOf(player.getClassId()))
@@ -260,7 +252,6 @@ public class FolkInstance extends NpcInstance
 					}
 					
 					String text = "<html><body><center>Skill learning:</center><br>";
-					
 					if (!ownClass)
 					{
 						final String mages = player.getClassId().isMage() ? "fighters" : "mages";
@@ -299,7 +290,6 @@ public class FolkInstance extends NpcInstance
 					}
 					
 					text += "</body></html>";
-					
 					insertObjectIdAndShowChatWindow(player, text);
 					player.sendPacket(ActionFailed.STATIC_PACKET);
 				}

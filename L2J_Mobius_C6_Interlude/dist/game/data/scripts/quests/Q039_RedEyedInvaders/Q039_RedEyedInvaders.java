@@ -208,7 +208,6 @@ public class Q039_RedEyedInvaders extends Quest
 	public String onKill(NpcInstance npc, PlayerInstance player, boolean isPet)
 	{
 		final int npcId = npc.getNpcId();
-		
 		PlayerInstance partyMember = getRandomPartyMember(player, npc, "2");
 		if ((partyMember != null) && (npcId != ARANEID))
 		{
@@ -231,7 +230,6 @@ public class Q039_RedEyedInvaders extends Quest
 			{
 				final QuestState st = partyMember.getQuestState(getName());
 				final int[] list = SECOND_DP.get(npcId);
-				
 				if (st.dropItems(list[0], 1, 30, list[2]) && (st.getQuestItemsCount(list[1]) == 30))
 				{
 					st.set("cond", "5");

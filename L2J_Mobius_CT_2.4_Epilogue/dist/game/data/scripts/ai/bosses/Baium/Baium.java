@@ -317,7 +317,6 @@ public class Baium extends AbstractNpcAI
 				{
 					final Attackable mob = (Attackable) npc;
 					final Creature mostHated = mob.getMostHated();
-					
 					if ((_baium == null) || _baium.isDead())
 					{
 						mob.deleteMe();
@@ -482,7 +481,6 @@ public class Baium extends AbstractNpcAI
 	public String onAttack(Npc npc, PlayerInstance attacker, int damage, boolean isSummon, Skill skill)
 	{
 		_lastAttack = System.currentTimeMillis();
-		
 		if (npc.getId() == BAIUM)
 		{
 			if ((attacker.getMountType() == MountType.STRIDER) && !attacker.isAffectedBySkill(ANTI_STRIDER.getSkillId()) && !npc.isSkillDisabled(ANTI_STRIDER.getSkill()))
@@ -517,7 +515,6 @@ public class Baium extends AbstractNpcAI
 		{
 			final Attackable mob = (Attackable) npc;
 			final Creature mostHated = mob.getMostHated();
-			
 			if ((getRandom(100) < 10) && mob.checkDoCastConditions(SPEAR_ATTACK.getSkill()))
 			{
 				if ((mostHated != null) && (npc.calculateDistance3D(mostHated) < 1000) && zone.isCharacterInZone(mostHated))
@@ -598,7 +595,6 @@ public class Baium extends AbstractNpcAI
 	public String onSpellFinished(Npc npc, PlayerInstance player, Skill skill)
 	{
 		startQuestTimer("MANAGE_SKILLS", 1000, npc, null);
-		
 		if (!zone.isCharacterInZone(npc) && (_baium != null))
 		{
 			_baium.teleToLocation(BAIUM_LOC);

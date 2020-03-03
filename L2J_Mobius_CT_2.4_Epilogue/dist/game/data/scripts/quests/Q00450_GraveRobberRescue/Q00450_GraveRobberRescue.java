@@ -58,7 +58,6 @@ public class Q00450_GraveRobberRescue extends Quest
 	public String onAdvEvent(String event, Npc npc, PlayerInstance player)
 	{
 		final QuestState qs = getQuestState(player, false);
-		
 		if (qs == null)
 		{
 			return null;
@@ -99,7 +98,6 @@ public class Q00450_GraveRobberRescue extends Quest
 	{
 		final QuestState qs = getQuestState(player, true);
 		String htmltext = getNoQuestMsg(player);
-		
 		if (npc.getId() == KANEMIKA)
 		{
 			switch (qs.getState())
@@ -150,7 +148,6 @@ public class Q00450_GraveRobberRescue extends Quest
 				npc.setBusy(true);
 				
 				startQuestTimer("despawn", 3000, npc, player);
-				
 				if (getQuestItemsCount(player, EVIDENCE_OF_MIGRATION) == 10)
 				{
 					qs.setCond(2, true);

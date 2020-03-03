@@ -96,7 +96,6 @@ public class MacroList
 	public void deleteMacro(int id)
 	{
 		final Macro toRemove = _macroses.get(id);
-		
 		if (toRemove != null)
 		{
 			deleteMacroFromDb(toRemove);
@@ -105,7 +104,6 @@ public class MacroList
 		_macroses.remove(id);
 		
 		final ShortCut[] allShortCuts = _owner.getAllShortCuts();
-		
 		for (ShortCut sc : allShortCuts)
 		{
 			if ((sc.getId() == id) && (sc.getType() == ShortCut.TYPE_MACRO))
@@ -122,7 +120,6 @@ public class MacroList
 		_revision++;
 		
 		final Macro[] all = getAllMacroses();
-		
 		if (all.length == 0)
 		{
 			_owner.sendPacket(new SendMacroList(_revision, all.length, null));
@@ -149,11 +146,9 @@ public class MacroList
 			statement.setString(6, macro.acronym);
 			
 			final StringBuilder sb = new StringBuilder();
-			
 			for (MacroCmd cmd : macro.commands)
 			{
 				final StringBuilder cmdSb = new StringBuilder();
-				
 				cmdSb.append(cmd.type).append(',');
 				cmdSb.append(cmd.d1).append(',');
 				cmdSb.append(cmd.d2);
@@ -218,7 +213,6 @@ public class MacroList
 			{
 				final int id = rset.getInt("id");
 				final int icon = rset.getInt("icon");
-				
 				final String name = rset.getString("name");
 				final String descr = rset.getString("descr");
 				final String acronym = rset.getString("acronym");
@@ -228,7 +222,6 @@ public class MacroList
 				while (st1.hasMoreTokens())
 				{
 					final StringTokenizer st = new StringTokenizer(st1.nextToken(), ",");
-					
 					if (st.countTokens() < 3)
 					{
 						continue;
@@ -237,9 +230,7 @@ public class MacroList
 					final int type = Integer.parseInt(st.nextToken());
 					final int d1 = Integer.parseInt(st.nextToken());
 					final int d2 = Integer.parseInt(st.nextToken());
-					
 					String cmd = "";
-					
 					if (st.hasMoreTokens())
 					{
 						cmd = st.nextToken();

@@ -59,14 +59,12 @@ public class Q10811_ExaltedOneWhoFacesTheLimit extends Quest
 	public String onAdvEvent(String event, Npc npc, PlayerInstance player)
 	{
 		final QuestState qs = getQuestState(player, false);
-		
 		if (qs == null)
 		{
 			return null;
 		}
 		
 		String htmltext = null;
-		
 		switch (event)
 		{
 			case "33383-03.html":
@@ -114,7 +112,6 @@ public class Q10811_ExaltedOneWhoFacesTheLimit extends Quest
 	{
 		final QuestState qs = getQuestState(player, true);
 		String htmltext = getNoQuestMsg(player);
-		
 		switch (qs.getState())
 		{
 			case State.CREATED:

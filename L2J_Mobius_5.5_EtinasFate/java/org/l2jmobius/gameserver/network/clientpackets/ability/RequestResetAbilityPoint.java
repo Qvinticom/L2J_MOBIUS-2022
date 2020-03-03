@@ -89,7 +89,6 @@ public class RequestResetAbilityPoint implements IClientIncomingPacket
 			return;
 		}
 		player.setSp(player.getSp() - Config.ABILITY_POINTS_RESET_SP);
-		
 		for (SkillLearn sk : SkillTreeData.getInstance().getAbilitySkillTree().values())
 		{
 			final Skill skill = player.getKnownSkill(sk.getSkillId());

@@ -218,7 +218,6 @@ public class Q10776_TheWrathOfTheGiants extends Quest
 			}
 		}
 		return htmltext;
-		
 	}
 	
 	@Override

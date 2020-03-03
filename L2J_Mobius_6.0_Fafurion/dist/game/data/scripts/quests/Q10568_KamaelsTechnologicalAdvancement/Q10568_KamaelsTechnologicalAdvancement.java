@@ -106,7 +106,6 @@ public class Q10568_KamaelsTechnologicalAdvancement extends Quest
 	{
 		final QuestState qs = getQuestState(player, true);
 		String htmltext = getNoQuestMsg(player);
-		
 		switch (qs.getState())
 		{
 			case State.CREATED:
@@ -149,7 +148,6 @@ public class Q10568_KamaelsTechnologicalAdvancement extends Quest
 			final int killedGhosts = qs.getInt("AncientGhosts") + 1;
 			qs.set("AncientGhosts", killedGhosts);
 			playSound(killer, QuestSound.ITEMSOUND_QUEST_ITEMGET);
-			
 			if (killedGhosts >= 10)
 			{
 				qs.setCond(2, true);

@@ -44,7 +44,6 @@ public class WareHouseDepositList extends GameServerPacket
 		_whType = type;
 		_playerAdena = _player.getAdena();
 		_items = new ArrayList<>();
-		
 		for (ItemInstance temp : _player.getInventory().getAvailableItems(true))
 		{
 			_items.add(temp);

@@ -347,7 +347,6 @@ public class KartiasLabyrinth extends AbstractInstance
 			final SkillHolder poison = npc.getParameters().getSkillHolder("poison_skill");
 			poison.getSkill().applyEffects(npc, npc);
 			PRISONER_HOLD.getSkill().applyEffects(npc, npc);
-			
 		});
 		
 		if (!isSoloKartia(instance))
@@ -360,7 +359,6 @@ public class KartiasLabyrinth extends AbstractInstance
 	{
 		final Npc npc = (Npc) event.getTarget();
 		final Instance instance = npc.getInstanceWorld();
-		
 		if (instance != null)
 		{
 			final StatSet param = instance.getParameters();
@@ -396,7 +394,6 @@ public class KartiasLabyrinth extends AbstractInstance
 	{
 		final Npc npc = (Npc) event.getTarget();
 		final Instance instance = npc.getInstanceWorld();
-		
 		if (instance != null)
 		{
 			if (isSoloKartia(instance))
@@ -566,7 +563,6 @@ public class KartiasLabyrinth extends AbstractInstance
 		final int room = param.getInt("ROOM", 1);
 		final int stage = param.getInt("STAGE", 1);
 		final int wave = param.getInt("WAVE", 1);
-		
 		if (room == 1)
 		{
 			switch (stage)
@@ -662,7 +658,6 @@ public class KartiasLabyrinth extends AbstractInstance
 							if (isSoloKartia(instance))
 							{
 								param.set("WAVE", 4);
-								
 								getTimers().addTimer("PRISONERS_ESCAPE", 5000, n -> instance.getAliveNpcs(PRISONERS).forEach(prisoner ->
 								{
 									param.set("SURVIVOR_COUNT", param.getInt("SURVIVOR_COUNT", 0) + 1);
@@ -747,7 +742,6 @@ public class KartiasLabyrinth extends AbstractInstance
 							param.set("STAGE", 1);
 							param.set("WAVE", 1);
 							param.set("CONTINUE_AFTER_KILL", true);
-							
 							getTimers().addTimer("PRISONERS_ESCAPE", 5000, n -> instance.getAliveNpcs(PRISONERS).forEach(prisoner ->
 							{
 								param.set("SURVIVOR_COUNT", param.getInt("SURVIVOR_COUNT", 0) + 1);
@@ -885,7 +879,6 @@ public class KartiasLabyrinth extends AbstractInstance
 		final Creature creature = event.getSeen();
 		final Npc npc = (Npc) event.getSeer();
 		final Instance world = npc.getInstanceWorld();
-		
 		if ((world != null) && (creature.isPlayer() || creature.getInstanceType().isType(InstanceType.FriendlyNpcInstance)) && npc.isScriptValue(1))
 		{
 			final double distance = npc.calculateDistance2D(creature);

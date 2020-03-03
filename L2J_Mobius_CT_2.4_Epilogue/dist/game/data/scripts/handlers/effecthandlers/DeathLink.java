@@ -56,7 +56,6 @@ public class DeathLink extends AbstractEffect
 	{
 		final Creature target = info.getEffected();
 		final Creature creature = info.getEffector();
-		
 		if (creature.isAlikeDead())
 		{
 			return;
@@ -64,7 +63,6 @@ public class DeathLink extends AbstractEffect
 		
 		final boolean sps = info.getSkill().useSpiritShot() && creature.isChargedShot(ShotType.SPIRITSHOTS);
 		final boolean bss = info.getSkill().useSpiritShot() && creature.isChargedShot(ShotType.BLESSED_SPIRITSHOTS);
-		
 		if (target.isPlayer() && target.getActingPlayer().isFakeDeath() && Config.FAKE_DEATH_DAMAGE_STAND)
 		{
 			target.stopFakeDeath(true);
@@ -73,7 +71,6 @@ public class DeathLink extends AbstractEffect
 		final boolean mcrit = Formulas.calcMCrit(creature.getMCriticalHit(target, info.getSkill()));
 		final byte shld = Formulas.calcShldUse(creature, target, info.getSkill());
 		final int damage = (int) Formulas.calcMagicDam(creature, target, info.getSkill(), shld, sps, bss, mcrit);
-		
 		if (damage > 0)
 		{
 			// Manage attack or cast break of the target (calculating rate, sending message...)

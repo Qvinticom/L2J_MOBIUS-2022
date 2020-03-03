@@ -76,7 +76,6 @@ public class FortManager
 		{
 			PreparedStatement statement;
 			ResultSet rs;
-			
 			statement = con.prepareStatement("Select id from fort order by id");
 			rs = statement.executeQuery();
 			

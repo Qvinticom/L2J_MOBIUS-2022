@@ -52,7 +52,6 @@ public class Q10771_VolatilePower extends Quest
 		addStartNpc(JANSSEN);
 		addFirstTalkId(HIDDEN_CRUSHER);
 		addTalkId(JANSSEN, HIDDEN_CRUSHER);
-		
 		addCondRace(Race.ERTHEIA, "30484-00.htm");
 		addCondMinLevel(MIN_LEVEL, "30484-00.htm");
 		addCondCompletedQuest(Q10770_InSearchOfTheGrail.class.getSimpleName(), "30484-00.htm");
@@ -112,7 +111,6 @@ public class Q10771_VolatilePower extends Quest
 	{
 		final QuestState qs = getQuestState(player, true);
 		String htmltext = getNoQuestMsg(player);
-		
 		if (npc.getId() == JANSSEN)
 		{
 			switch (qs.getState())
@@ -157,7 +155,6 @@ public class Q10771_VolatilePower extends Quest
 				takeItems(player, SHINING_MYSTERIOUS_FRAGMENT, reduceCount);
 				giveItems(player, NORMAL_FRAGMENT_DUST, reduceCount);
 				getTimers().addTimer("DESTROY_COUNT", 2000, npc, player);
-				
 				if (getQuestItemsCount(player, NORMAL_FRAGMENT_DUST) >= 20)
 				{
 					qs.setCond(3, true); // Looks like cond 2 is skipped.

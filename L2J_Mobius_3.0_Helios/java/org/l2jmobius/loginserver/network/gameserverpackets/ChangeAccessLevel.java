@@ -38,7 +38,6 @@ public class ChangeAccessLevel extends BaseRecievePacket
 		super(decrypt);
 		final int level = readD();
 		final String account = readS();
-		
 		LoginController.getInstance().setAccountAccessLevel(account, level);
 		LOGGER.info("Changed " + account + " access level to " + level);
 	}

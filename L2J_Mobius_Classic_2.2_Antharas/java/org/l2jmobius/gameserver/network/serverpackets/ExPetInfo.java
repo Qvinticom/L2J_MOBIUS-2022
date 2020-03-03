@@ -63,7 +63,6 @@ public class ExPetInfo extends AbstractMaskPacket<NpcInfoType>
 		_title = (summon.getOwner() != null) && summon.getOwner().isOnline() ? summon.getOwner().getName() : "";
 		_value = value;
 		_abnormalVisualEffects = summon.getEffectList().getCurrentAbnormalVisualEffects();
-		
 		if (summon.getTemplate().getDisplayId() != summon.getTemplate().getId())
 		{
 			_masks[2] |= 0x10;
@@ -71,7 +70,6 @@ public class ExPetInfo extends AbstractMaskPacket<NpcInfoType>
 		}
 		
 		addComponentType(NpcInfoType.ATTACKABLE, NpcInfoType.UNKNOWN1, NpcInfoType.TITLE, NpcInfoType.ID, NpcInfoType.POSITION, NpcInfoType.ALIVE, NpcInfoType.RUNNING, NpcInfoType.PVP_FLAG);
-		
 		if (summon.getHeading() > 0)
 		{
 			addComponentType(NpcInfoType.HEADING);
@@ -159,7 +157,6 @@ public class ExPetInfo extends AbstractMaskPacket<NpcInfoType>
 			_clanLargeCrest = summon.getOwner().getAppearance().getVisibleClanLargeCrestId();
 			_allyCrest = summon.getOwner().getAppearance().getVisibleAllyId();
 			_allyId = summon.getOwner().getAppearance().getVisibleAllyCrestId();
-			
 			addComponentType(NpcInfoType.CLAN);
 		}
 		
@@ -180,7 +177,6 @@ public class ExPetInfo extends AbstractMaskPacket<NpcInfoType>
 		}
 		
 		_statusMask |= 0x08;
-		
 		if (_statusMask != 0)
 		{
 			addComponentType(NpcInfoType.VISUAL_STATE);

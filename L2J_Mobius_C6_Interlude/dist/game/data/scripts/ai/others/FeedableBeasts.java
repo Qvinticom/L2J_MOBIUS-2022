@@ -142,7 +142,6 @@ public class FeedableBeasts extends Quest
 			{
 				return _spiceToMob.get(spice)[mobType][classType];
 			}
-			
 			return null;
 		}
 		
@@ -183,7 +182,6 @@ public class FeedableBeasts extends Quest
 		final int[][] Kookabura_1_Crystal_2 = {{ 21465, 21467 }};
 		final int[][] Kookabura_2_1 = {{ 21468, 21824}, { 16017, 16018 }};
 		final int[][] Kookabura_2_2 = {{ 21469, 21825}, { 16017, 16018 }};
-		
 		final int[][] Buffalo_0_Gold = {{ 21471, 21472, 21473, 21474 }};
 		final int[][] Buffalo_0_Crystal = {{ 21475, 21476, 21477, 21478 }};
 		final int[][] Buffalo_1_Gold_1 = {{ 21479, 21481 }};
@@ -192,7 +190,6 @@ public class FeedableBeasts extends Quest
 		final int[][] Buffalo_1_Crystal_2 = {{ 21484, 21486 }};
 		final int[][] Buffalo_2_1 = {{ 21487,21826}, {16013, 16014 }};
 		final int[][] Buffalo_2_2 = {{ 21488,21827}, {16013, 16014 }};
-		
 		final int[][] Cougar_0_Gold = {{ 21490, 21491, 21492, 21493 }};
 		final int[][] Cougar_0_Crystal = {{ 21494,21495, 21496, 21497 }};
 		final int[][] Cougar_1_Gold_1 = {{ 21498, 21500 }};
@@ -402,7 +399,6 @@ public class FeedableBeasts extends Quest
 			
 			final NpcTemplate template = NpcTable.getInstance().getTemplate(nextNpcId);
 			final TamedBeastInstance nextNpc = new TamedBeastInstance(IdFactory.getNextId(), template, player, food, npc.getX(), npc.getY(), npc.getZ());
-			
 			nextNpc.setRunning();
 			
 			// If player has Q020 going, give quest item
@@ -425,7 +421,6 @@ public class FeedableBeasts extends Quest
 			// If not trained, the newly spawned mob will automatically be aggro against its feeder
 			// (what happened to "never bite the hand that feeds you" anyway?!)
 			final Attackable nextNpc = (Attackable) addSpawn(nextNpcId, npc);
-			
 			if (MAD_COW_POLYMORPH.containsKey(nextNpcId))
 			{
 				startQuestTimer("polymorph Mad Cow", 10000, nextNpc, player, false);
@@ -484,7 +479,6 @@ public class FeedableBeasts extends Quest
 		// First gather some values on local variables
 		final int objectId = npc.getObjectId();
 		int growthLevel = 3; // if a mob is in FEEDABLE_BEASTS but not in GROWTH_CAPABLE_MOBS, then it's at max growth (3)
-		
 		if (GROWTH_CAPABLE_MONSTERS.containsKey(npcId))
 		{
 			growthLevel = GROWTH_CAPABLE_MONSTERS.get(npcId).getGrowthLevel();

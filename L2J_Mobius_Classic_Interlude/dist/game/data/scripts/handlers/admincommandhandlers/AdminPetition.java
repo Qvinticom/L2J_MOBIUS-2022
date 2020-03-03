@@ -109,9 +109,7 @@ public class AdminPetition implements IAdminCommandHandler
 					return false;
 				}
 				final PlayerInstance targetPlayer = (PlayerInstance) targetChar;
-				
 				final String val = command.substring(15);
-				
 				petitionId = PetitionManager.getInstance().submitPetition(targetPlayer, val, 9);
 				PetitionManager.getInstance().acceptPetition(activeChar, petitionId);
 			}

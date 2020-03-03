@@ -211,12 +211,10 @@ public class StringUtil
 	{
 		final int length = getLength(strings);
 		final StringBuilder sbString = new StringBuilder(sizeHint > length ? sizeHint : length);
-		
 		for (String string : strings)
 		{
 			sbString.append(string);
 		}
-		
 		return sbString;
 	}
 	
@@ -229,7 +227,6 @@ public class StringUtil
 	public static void append(StringBuilder sbString, String... strings)
 	{
 		sbString.ensureCapacity(sbString.length() + getLength(strings));
-		
 		for (String string : strings)
 		{
 			sbString.append(string);
@@ -257,7 +254,6 @@ public class StringUtil
 	private static int getLength(String[] strings)
 	{
 		int length = 0;
-		
 		for (String string : strings)
 		{
 			if (string == null)
@@ -269,7 +265,6 @@ public class StringUtil
 				length += string.length();
 			}
 		}
-		
 		return length;
 	}
 	

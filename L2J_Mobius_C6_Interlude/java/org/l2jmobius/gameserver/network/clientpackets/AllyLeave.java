@@ -32,7 +32,6 @@ public class AllyLeave extends GameClientPacket
 	protected void runImpl()
 	{
 		final PlayerInstance player = getClient().getPlayer();
-		
 		if (player == null)
 		{
 			return;
@@ -51,7 +50,6 @@ public class AllyLeave extends GameClientPacket
 		}
 		
 		final Clan clan = player.getClan();
-		
 		if (clan.getAllyId() == 0)
 		{
 			player.sendPacket(SystemMessageId.YOU_ARE_NOT_CURRENTLY_ALLIED_WITH_ANY_CLANS);
@@ -65,7 +63,6 @@ public class AllyLeave extends GameClientPacket
 		}
 		
 		final long currentTime = System.currentTimeMillis();
-		
 		clan.setAllyId(0);
 		clan.setAllyName(null);
 		clan.setAllyPenaltyExpiryTime(currentTime + (Config.ALT_ALLY_JOIN_DAYS_WHEN_LEAVED * 86400000), Clan.PENALTY_TYPE_CLAN_LEAVED); // 24*60*60*1000 = 86400000

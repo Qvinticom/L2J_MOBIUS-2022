@@ -121,7 +121,6 @@ public class Q00581_ThePurificationRitual extends Quest
 	{
 		final QuestState qs = getQuestState(player, true);
 		String htmltext = getNoQuestMsg(player);
-		
 		if (npc.getId() == START_NPC)
 		{
 			switch (qs.getState())

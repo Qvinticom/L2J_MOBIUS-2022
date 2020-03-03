@@ -48,7 +48,6 @@ public class AdminCastle implements IAdminCommandHandler
 	{
 		final StringTokenizer st = new StringTokenizer(command, " ");
 		final String actualCommand = st.nextToken();
-		
 		if (actualCommand.equals("admin_castlemanage"))
 		{
 			if (st.hasMoreTokens())
@@ -235,7 +234,6 @@ public class AdminCastle implements IAdminCommandHandler
 	private void showCastleMenu(PlayerInstance player, int castleId)
 	{
 		final Castle castle = CastleManager.getInstance().getCastleById(castleId);
-		
 		if (castle != null)
 		{
 			final Clan ownerClan = castle.getOwner();

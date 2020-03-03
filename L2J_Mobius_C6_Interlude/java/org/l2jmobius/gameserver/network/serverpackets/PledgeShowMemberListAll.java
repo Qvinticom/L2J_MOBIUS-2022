@@ -73,7 +73,6 @@ public class PledgeShowMemberListAll extends GameServerPacket
 	void writePledge(int mainOrSubpledge)
 	{
 		final int TOP = ClanTable.getInstance().getTopRate(_clan.getClanId());
-		
 		writeC(0x53);
 		
 		writeD(mainOrSubpledge); // c5 main clan 0 or any subpledge 1?

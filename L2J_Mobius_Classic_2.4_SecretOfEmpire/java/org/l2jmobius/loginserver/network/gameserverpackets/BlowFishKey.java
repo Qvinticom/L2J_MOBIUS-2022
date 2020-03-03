@@ -61,7 +61,6 @@ public class BlowFishKey extends BaseRecievePacket
 			}
 			final byte[] key = new byte[len - i];
 			System.arraycopy(tempDecryptKey, i, key, 0, len - i);
-			
 			server.SetBlowFish(new NewCrypt(key));
 			server.setLoginConnectionState(GameServerState.BF_CONNECTED);
 		}

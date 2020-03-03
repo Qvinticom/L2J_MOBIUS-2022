@@ -296,7 +296,6 @@ public class Q384_WarehouseKeepersPastime extends Quest
 			{
 				// Stores the final String.
 				st.set("playerArray", playerArray.concat(number));
-				
 				htmltext = fillBoard(st, getHtmlText(npcId + "-" + String.valueOf(11 + (2 * (playerArray.length() + 1))) + ".htm"));
 			}
 		}
@@ -323,7 +322,6 @@ public class Q384_WarehouseKeepersPastime extends Quest
 				
 				// test for all line combination
 				int winningLines = 0;
-				
 				for (int[] map : INDEX_MAP)
 				{
 					// test line combination
@@ -439,12 +437,10 @@ public class Q384_WarehouseKeepersPastime extends Quest
 	{
 		final String[] playerArray = st.getString("playerArray").split("");
 		final String[] board = st.getString("board").split("");
-		
 		for (int i = 1; i < 10; i++)
 		{
 			htmltext = htmltext.replace("<?Cell" + i + "?>", (Util.contains(playerArray, board[i])) ? board[i] : "?");
 		}
-		
 		return htmltext;
 	}
 }

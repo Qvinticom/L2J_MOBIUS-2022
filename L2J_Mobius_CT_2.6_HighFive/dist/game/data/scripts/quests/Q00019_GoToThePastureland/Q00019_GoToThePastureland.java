@@ -49,7 +49,6 @@ public class Q00019_GoToThePastureland extends Quest
 	{
 		String htmltext = event;
 		final QuestState qs = getQuestState(player, false);
-		
 		if (qs == null)
 		{
 			return getNoQuestMsg(player);
@@ -89,7 +88,6 @@ public class Q00019_GoToThePastureland extends Quest
 	{
 		final QuestState qs = getQuestState(player, true);
 		String htmltext = getNoQuestMsg(player);
-		
 		if (npc.getId() == VLADIMIR)
 		{
 			switch (qs.getState())

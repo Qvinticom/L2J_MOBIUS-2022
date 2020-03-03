@@ -60,7 +60,6 @@ public class Q00451_LuciensAltar extends Quest
 	public String onAdvEvent(String event, Npc npc, PlayerInstance player)
 	{
 		final QuestState qs = getQuestState(player, false);
-		
 		if (qs == null)
 		{
 			return null;
@@ -137,7 +136,6 @@ public class Q00451_LuciensAltar extends Quest
 				takeItems(player, REPLENISHED_BEAD, 1);
 				giveItems(player, DISCHARGED_BEAD, 1);
 				playSound(player, QuestSound.ITEMSOUND_QUEST_ITEMGET);
-				
 				if (getQuestItemsCount(player, DISCHARGED_BEAD) >= 5)
 				{
 					qs.setCond(2, true);

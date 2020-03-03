@@ -198,7 +198,6 @@ public class Q10275_ContainingTheAttributePower extends Quest
 	{
 		final QuestState qs = getQuestState(player, true);
 		String htmltext = getNoQuestMsg(player);
-		
 		switch (npc.getId())
 		{
 			case HOLLY:

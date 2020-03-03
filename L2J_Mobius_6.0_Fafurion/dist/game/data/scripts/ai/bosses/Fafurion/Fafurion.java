@@ -204,7 +204,6 @@ public class Fafurion extends AbstractNpcAI
 		info.set("respawn_time", System.currentTimeMillis() + respawnTime);
 		GrandBossManager.getInstance().setStatSet(FAFURION_GRANDBOSS_ID, info);
 		startQuestTimer("unlock_fafurion", respawnTime, null, null);
-		
 		return super.onKill(npc, killer, isSummon);
 	}
 	

@@ -162,7 +162,6 @@ public class Q10329_BackupSeekers extends Quest
 					{
 						final int failCount = npc.getVariables().getInt("FAIL_COUNT", 0);
 						npc.getVariables().set("FAIL_COUNT", failCount + 1);
-						
 						if (failCount >= 30)
 						{
 							npc.deleteMe();
@@ -170,7 +169,6 @@ public class Q10329_BackupSeekers extends Quest
 						}
 						
 						startQuestTimer("CHECK_PLAYER", 1200, npc, owner);
-						
 						if (getRandom(100) < 10)
 						{
 							npc.broadcastSay(ChatType.NPC_GENERAL, NpcStringId.HEY_KID_HURRY_UP_AND_FOLLOW_ME);
@@ -230,7 +228,6 @@ public class Q10329_BackupSeekers extends Quest
 	public void onMoveFinished(Npc npc)
 	{
 		final PlayerInstance owner = npc.getSummoner().getActingPlayer();
-		
 		if (owner != null)
 		{
 			npc.setHeading(Util.calculateHeadingFrom(npc, owner));
@@ -245,7 +242,6 @@ public class Q10329_BackupSeekers extends Quest
 	{
 		final QuestState qs = getQuestState(player, true);
 		String htmltext = getNoQuestMsg(player);
-		
 		switch (qs.getState())
 		{
 			case State.CREATED:

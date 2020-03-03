@@ -37,7 +37,6 @@ public class PrivateStoreListSell extends GameServerPacket
 	{
 		_player = player;
 		_storePlayer = storePlayer;
-		
 		if (Config.SELL_BY_ITEM)
 		{
 			_player.sendPacket(new CreatureSay(0, ChatType.PARTYROOM_COMMANDER, "", "ATTENTION: Store System is not based on Adena, be careful!"));

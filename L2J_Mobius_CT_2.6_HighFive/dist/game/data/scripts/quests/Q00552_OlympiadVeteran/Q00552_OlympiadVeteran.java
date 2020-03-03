@@ -57,7 +57,6 @@ public class Q00552_OlympiadVeteran extends Quest
 			return getNoQuestMsg(player);
 		}
 		String htmltext = event;
-		
 		if (event.equalsIgnoreCase("31688-03.html"))
 		{
 			qs.startQuest();
@@ -65,7 +64,6 @@ public class Q00552_OlympiadVeteran extends Quest
 		else if (event.equalsIgnoreCase("31688-04.html"))
 		{
 			final long count = getQuestItemsCount(player, TEAM_EVENT_CERTIFICATE) + getQuestItemsCount(player, CLASS_FREE_BATTLE_CERTIFICATE) + getQuestItemsCount(player, CLASS_BATTLE_CERTIFICATE);
-			
 			if (count > 0)
 			{
 				giveItems(player, OLY_CHEST, count);
@@ -183,7 +181,6 @@ public class Q00552_OlympiadVeteran extends Quest
 	{
 		final QuestState qs = getQuestState(player, true);
 		String htmltext = getNoQuestMsg(player);
-		
 		if ((player.getLevel() < 75) || !player.isNoble())
 		{
 			htmltext = "31688-00.htm";
@@ -207,7 +204,6 @@ public class Q00552_OlympiadVeteran extends Quest
 		else if (qs.isStarted())
 		{
 			final long count = getQuestItemsCount(player, TEAM_EVENT_CERTIFICATE) + getQuestItemsCount(player, CLASS_FREE_BATTLE_CERTIFICATE) + getQuestItemsCount(player, CLASS_BATTLE_CERTIFICATE);
-			
 			if (count == 3)
 			{
 				htmltext = "31688-04.html";

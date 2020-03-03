@@ -120,7 +120,6 @@ public class Q00368_TrespassingIntoTheHolyGround extends Quest
 	{
 		final QuestState qs = getQuestState(player, true);
 		String htmltext = getNoQuestMsg(player);
-		
 		if (qs.isCreated())
 		{
 			htmltext = ((player.getLevel() >= MIN_LEVEL) ? "30926-01.htm" : "30926-03.html");

@@ -70,7 +70,6 @@ public class FortLogisticsInstance extends MerchantInstance
 		
 		final StringTokenizer st = new StringTokenizer(command, " ");
 		final String actualCommand = st.nextToken(); // Get actual command
-		
 		final boolean isMyLord = player.isClanLeader() && (player.getClan().getFortId() == (getFort() != null ? getFort().getResidenceId() : -1));
 		final NpcHtmlMessage html = new NpcHtmlMessage(getObjectId());
 		if (actualCommand.equalsIgnoreCase("rewards"))
@@ -151,7 +150,6 @@ public class FortLogisticsInstance extends MerchantInstance
 						box.setCurrentMp(box.getMaxMp());
 						box.setHeading(0);
 						box.spawnMe(getX() - 23, getY() + 41, getZ());
-						
 						getFort().setSupplyLvL(0);
 						getFort().saveFortVariables();
 						
@@ -187,7 +185,6 @@ public class FortLogisticsInstance extends MerchantInstance
 		player.sendPacket(ActionFailed.STATIC_PACKET);
 		
 		String filename;
-		
 		if (value == 0)
 		{
 			filename = "data/html/fortress/logistics.htm";
@@ -216,7 +213,6 @@ public class FortLogisticsInstance extends MerchantInstance
 	public String getHtmlPath(int npcId, int value, PlayerInstance player)
 	{
 		String pom = "";
-		
 		if (value == 0)
 		{
 			pom = "logistics";
@@ -225,7 +221,6 @@ public class FortLogisticsInstance extends MerchantInstance
 		{
 			pom = "logistics-" + value;
 		}
-		
 		return "data/html/fortress/" + pom + ".htm";
 	}
 	

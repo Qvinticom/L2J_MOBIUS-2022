@@ -158,39 +158,33 @@ public class Beleth extends AbstractNpcAI
 				_camera2 = addSpawn(29121, new Location(16323, 210741, -9357));
 				_camera3 = addSpawn(29122, new Location(16323, 213170, -9357));
 				_camera4 = addSpawn(29123, new Location(16323, 214917, -9356));
-				
 				ZONE.broadcastPacket(new PlaySound(1, "BS07_A", 1, _camera1.getObjectId(), _camera1.getX(), _camera1.getY(), _camera1.getZ()));
 				ZONE.broadcastPacket(new SpecialCamera(_camera1, 400, 75, -25, 0, 2500, 0, 0, 1, 0, 0));
 				ZONE.broadcastPacket(new SpecialCamera(_camera1, 400, 75, -25, 0, 2500, 0, 0, 1, 0, 0));
-				
 				startQuestTimer("SPAWN2", 300, null, null);
 				break;
 			}
 			case "SPAWN2":
 			{
 				ZONE.broadcastPacket(new SpecialCamera(_camera1, 1800, -45, -45, 5000, 5000, 0, 0, 1, 0, 0));
-				
 				startQuestTimer("SPAWN3", 4900, null, null);
 				break;
 			}
 			case "SPAWN3":
 			{
 				ZONE.broadcastPacket(new SpecialCamera(_camera1, 2500, -120, -45, 5000, 5000, 0, 0, 1, 0, 0));
-				
 				startQuestTimer("SPAWN4", 4900, null, null);
 				break;
 			}
 			case "SPAWN4":
 			{
 				ZONE.broadcastPacket(new SpecialCamera(_camera2, 2200, 130, 0, 0, 1500, -20, 15, 1, 0, 0));
-				
 				startQuestTimer("SPAWN5", 1400, null, null);
 				break;
 			}
 			case "SPAWN5":
 			{
 				ZONE.broadcastPacket(new SpecialCamera(_camera2, 2300, 100, 0, 2000, 4500, 0, 10, 1, 0, 0));
-				
 				startQuestTimer("SPAWN6", 2500, null, null);
 				break;
 			}
@@ -201,7 +195,6 @@ public class Beleth extends AbstractNpcAI
 				
 				ZONE.broadcastPacket(new StaticObject(door, false));
 				ZONE.broadcastPacket(new DoorStatusUpdate(door));
-				
 				startQuestTimer("SPAWN7", 1700, null, null);
 				break;
 			}
@@ -209,23 +202,19 @@ public class Beleth extends AbstractNpcAI
 			{
 				ZONE.broadcastPacket(new SpecialCamera(_camera4, 1500, 210, 0, 0, 1500, 0, 0, 1, 0, 0));
 				ZONE.broadcastPacket(new SpecialCamera(_camera4, 900, 255, 0, 5000, 6500, 0, 10, 1, 0, 0));
-				
 				startQuestTimer("SPAWN8", 6000, null, null);
 				break;
 			}
 			case "SPAWN8":
 			{
 				_whirpool = addSpawn(WHIRPOOL, new Location(16323, 214917, -9356));
-				
 				ZONE.broadcastPacket(new SpecialCamera(_camera4, 900, 255, 0, 0, 1500, 0, 10, 1, 0, 0));
-				
 				startQuestTimer("SPAWN9", 1000, null, null);
 				break;
 			}
 			case "SPAWN9":
 			{
 				ZONE.broadcastPacket(new SpecialCamera(_camera4, 1000, 255, 0, 7000, 17000, 0, 25, 1, 0, 0));
-				
 				startQuestTimer("SPAWN10", 3000, null, null);
 				break;
 			}
@@ -242,7 +231,6 @@ public class Beleth extends AbstractNpcAI
 			case "SPAWN11":
 			{
 				ZONE.broadcastPacket(new SocialAction(_beleth.getObjectId(), 1));
-				
 				for (int i = 0; i < 6; i++)
 				{
 					final int x = (int) ((150 * Math.cos(i * 1.046666667)) + 16323);
@@ -260,14 +248,12 @@ public class Beleth extends AbstractNpcAI
 			case "SPAWN12":
 			{
 				ZONE.broadcastPacket(new SpecialCamera(_beleth, 0, 270, -5, 0, 4000, 0, 0, 1, 0, 0));
-				
 				startQuestTimer("SPAWN13", 3500, null, null);
 				break;
 			}
 			case "SPAWN13":
 			{
 				ZONE.broadcastPacket(new SpecialCamera(_beleth, 800, 270, 10, 3000, 6000, 0, 0, 1, 0, 0));
-				
 				startQuestTimer("SPAWN14", 5000, null, null);
 				break;
 			}
@@ -275,14 +261,12 @@ public class Beleth extends AbstractNpcAI
 			{
 				ZONE.broadcastPacket(new SpecialCamera(_camera3, 100, 270, 15, 0, 5000, 0, 0, 1, 0, 0));
 				ZONE.broadcastPacket(new SpecialCamera(_camera3, 100, 270, 15, 0, 5000, 0, 0, 1, 0, 0));
-				
 				startQuestTimer("SPAWN15", 100, null, null);
 				break;
 			}
 			case "SPAWN15":
 			{
 				ZONE.broadcastPacket(new SpecialCamera(_camera3, 100, 270, 15, 3000, 6000, 0, 5, 1, 0, 0));
-				
 				startQuestTimer("SPAWN16", 1400, null, null);
 				break;
 			}
@@ -296,21 +280,18 @@ public class Beleth extends AbstractNpcAI
 			case "SPAWN17":
 			{
 				ZONE.broadcastPacket(new MagicSkillUse(_beleth, _beleth, 5532, 1, 2000, 0));
-				
 				startQuestTimer("SPAWN18", 2000, null, null);
 				break;
 			}
 			case "SPAWN18":
 			{
 				ZONE.broadcastPacket(new SpecialCamera(_camera3, 700, 270, 20, 1500, 8000, 0, 0, 1, 0, 0));
-				
 				startQuestTimer("SPAWN19", 6900, null, null);
 				break;
 			}
 			case "SPAWN19":
 			{
 				ZONE.broadcastPacket(new SpecialCamera(_camera3, 40, 260, 0, 0, 4000, 0, 0, 1, 0, 0));
-				
 				for (Npc fakeBeleth : _minions)
 				{
 					fakeBeleth.spawnMe();
@@ -325,28 +306,24 @@ public class Beleth extends AbstractNpcAI
 			case "SPAWN20":
 			{
 				ZONE.broadcastPacket(new SpecialCamera(_camera3, 40, 280, 0, 0, 4000, 5, 0, 1, 0, 0));
-				
 				startQuestTimer("SPAWN21", 3000, null, null);
 				break;
 			}
 			case "SPAWN21":
 			{
 				ZONE.broadcastPacket(new SpecialCamera(_camera3, 5, 250, 5, 0, 13000, 20, 15, 1, 0, 0));
-				
 				startQuestTimer("SPAWN22", 1000, null, null);
 				break;
 			}
 			case "SPAWN22":
 			{
 				ZONE.broadcastPacket(new SocialAction(_beleth.getObjectId(), 3));
-				
 				startQuestTimer("SPAWN23", 4000, null, null);
 				break;
 			}
 			case "SPAWN23":
 			{
 				ZONE.broadcastPacket(new MagicSkillUse(_beleth, _beleth, 5533, 1, 2000, 0));
-				
 				startQuestTimer("SPAWN24", 6800, null, null);
 				break;
 			}
@@ -354,7 +331,6 @@ public class Beleth extends AbstractNpcAI
 			{
 				_beleth.deleteMe();
 				_beleth = null;
-				
 				for (Npc fakeBeleth : _minions)
 				{
 					fakeBeleth.deleteMe();
@@ -374,9 +350,7 @@ public class Beleth extends AbstractNpcAI
 				}
 				
 				_lastAttack = System.currentTimeMillis();
-				
 				startQuestTimer("CHECK_ATTACK", 60000, null, null);
-				
 				startQuestTimer("SPAWN25", 60000, null, null);
 				break;
 			}
@@ -391,7 +365,6 @@ public class Beleth extends AbstractNpcAI
 					
 					final int x = (int) ((650 * Math.cos(i * 0.39)) + 16323);
 					final int y = (int) ((650 * Math.sin(i * 0.39)) + 213170);
-					
 					npc = addSpawn(FAKE_BELETH, new Location(x, y, -9357, 49152));
 					_minions.add(npc);
 					
@@ -408,7 +381,6 @@ public class Beleth extends AbstractNpcAI
 				{
 					xm[i] = (int) ((1700 * Math.cos((i * 1.57) + 0.78)) + 16323);
 					ym[i] = (int) ((1700 * Math.sin((i * 1.57) + 0.78)) + 213170);
-					
 					npc = addSpawn(FAKE_BELETH, new Location(xm[i], ym[i], -9357, 49152));
 					npc.setImmobilized(true);
 					
@@ -460,7 +432,6 @@ public class Beleth extends AbstractNpcAI
 				xm[15] = (xm[7] + xm[0]) / 2;
 				ym[15] = (ym[7] + ym[0]) / 2;
 				_minions.add(addSpawn(FAKE_BELETH, new Location(xm[15], ym[15], -9357, 49152)));
-				
 				_allowedObjId = getRandomEntry(_minions).getObjectId();
 				break;
 			}
@@ -476,26 +447,22 @@ public class Beleth extends AbstractNpcAI
 				
 				_camera1 = addSpawn(29122, new Location(16323, 213170, -9357));
 				_camera1.broadcastPacket(new PlaySound(1, "BS07_D", 1, _camera1.getObjectId(), _camera1.getX(), _camera1.getY(), _camera1.getZ()));
-				
 				ZONE.broadcastPacket(new SpecialCamera(_camera1, 400, 290, 25, 0, 10000, 0, 0, 1, 0, 0));
 				ZONE.broadcastPacket(new SpecialCamera(_camera1, 400, 290, 25, 0, 10000, 0, 0, 1, 0, 0));
 				ZONE.broadcastPacket(new SpecialCamera(_camera1, 400, 110, 25, 4000, 10000, 0, 0, 1, 0, 0));
 				ZONE.broadcastPacket(new SocialAction(_beleth.getObjectId(), 5));
-				
 				startQuestTimer("SPAWN27", 4000, null, null);
 				break;
 			}
 			case "SPAWN27":
 			{
 				ZONE.broadcastPacket(new SpecialCamera(_camera1, 400, 295, 25, 4000, 5000, 0, 0, 1, 0, 0));
-				
 				startQuestTimer("SPAWN28", 4500, null, null);
 				break;
 			}
 			case "SPAWN28":
 			{
 				ZONE.broadcastPacket(new SpecialCamera(_camera1, 400, 295, 10, 4000, 11000, 0, 25, 1, 0, 0));
-				
 				startQuestTimer("SPAWN29", 9000, null, null);
 				break;
 			}
@@ -503,7 +470,6 @@ public class Beleth extends AbstractNpcAI
 			{
 				ZONE.broadcastPacket(new SpecialCamera(_camera1, 250, 90, 25, 0, 1000, 0, 0, 1, 0, 0));
 				ZONE.broadcastPacket(new SpecialCamera(_camera1, 250, 90, 25, 0, 10000, 0, 0, 1, 0, 0));
-				
 				startQuestTimer("SPAWN30", 2000, null, null);
 				break;
 			}
@@ -513,7 +479,6 @@ public class Beleth extends AbstractNpcAI
 				_beleth.deleteMe();
 				
 				_camera2 = addSpawn(29121, new Location(14056, 213170, -9357));
-				
 				startQuestTimer("SPAWN31", 3500, null, null);
 				break;
 			}
@@ -527,7 +492,6 @@ public class Beleth extends AbstractNpcAI
 				
 				ZONE.broadcastPacket(new StaticObject(door2, false));
 				ZONE.broadcastPacket(new DoorStatusUpdate(door2));
-				
 				DoorData.getInstance().getDoor(DOOR3).openMe();
 				
 				_camera1.deleteMe();
@@ -602,7 +566,6 @@ public class Beleth extends AbstractNpcAI
 			npc.setTarget(player);
 			npc.doCast(HORN_OF_RISING.getSkill());
 		}
-		
 		return null;
 	}
 	
@@ -672,7 +635,6 @@ public class Beleth extends AbstractNpcAI
 		{
 			npc.getSpawn().setRespawnDelay(0);
 		}
-		
 		return null;
 	}
 	
@@ -683,16 +645,13 @@ public class Beleth extends AbstractNpcAI
 		if ((_killer != null) && (player.getObjectId() == _killer.getObjectId()))
 		{
 			_killer = null;
-			
 			giveItems(player, RING);
-			
 			html = "32470a.htm";
 		}
 		else
 		{
 			html = "32470b.htm";
 		}
-		
 		return HtmCache.getInstance().getHtm(player, "data/html/default/" + html);
 	}
 	
@@ -746,7 +705,6 @@ public class Beleth extends AbstractNpcAI
 		if (npc.getId() == REAL_BELETH)
 		{
 			cancelQuestTimer("CHECK_ATTACK", null, null);
-			
 			setBelethKiller(killer);
 			GrandBossManager.getInstance().setBossStatus(REAL_BELETH, DEAD);
 			final long respawnTime = (Config.BELETH_SPAWN_INTERVAL + getRandom(-Config.BELETH_SPAWN_RANDOM, Config.BELETH_SPAWN_RANDOM)) * 3600000;
@@ -754,7 +712,6 @@ public class Beleth extends AbstractNpcAI
 			info.set("respawn_time", System.currentTimeMillis() + respawnTime);
 			GrandBossManager.getInstance().setStatSet(REAL_BELETH, info);
 			startQuestTimer("BELETH_UNLOCK", respawnTime, null, null);
-			
 			deleteAll();
 			npc.deleteMe();
 			
@@ -775,7 +732,6 @@ public class Beleth extends AbstractNpcAI
 			_priest.decayMe();
 			
 			_stone = addSpawn(STONE_COFFIN, new Location(12470, 215607, -9381, 49152));
-			
 			startQuestTimer("SPAWN26", 1000, null, null);
 		}
 		else if (npc.getObjectId() == _allowedObjId)

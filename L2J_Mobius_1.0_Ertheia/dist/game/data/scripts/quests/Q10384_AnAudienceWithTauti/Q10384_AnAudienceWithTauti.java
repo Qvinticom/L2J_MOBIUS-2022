@@ -49,7 +49,6 @@ public class Q10384_AnAudienceWithTauti extends Quest
 		registerQuestItems(TAUTIS_FRAGMENT);
 		addCondMinLevel(MIN_LEVEL, "maestro_ferguson_q10384_05.html");
 		addCondCompletedQuest(Q10383_FergasonsOffer.class.getSimpleName(), "maestro_ferguson_q10384_06.html");
-		
 	}
 	
 	@Override
@@ -57,7 +56,6 @@ public class Q10384_AnAudienceWithTauti extends Quest
 	{
 		final String htmltext = event;
 		final QuestState qs = getQuestState(player, false);
-		
 		if (qs == null)
 		{
 			return getNoQuestMsg(player);
@@ -92,7 +90,6 @@ public class Q10384_AnAudienceWithTauti extends Quest
 	{
 		final QuestState qs = getQuestState(player, true);
 		String htmltext = getNoQuestMsg(player);
-		
 		switch (npc.getId())
 		{
 			case FERGASON:

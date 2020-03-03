@@ -1080,7 +1080,6 @@ public class Fort extends AbstractResidence
 			return;
 		}
 		_isSuspiciousMerchantSpawned = true;
-		
 		for (Spawn spawnDat : _siegeNpcs)
 		{
 			spawnDat.doSpawn();
@@ -1095,7 +1094,6 @@ public class Fort extends AbstractResidence
 			return;
 		}
 		_isSuspiciousMerchantSpawned = false;
-		
 		for (Spawn spawnDat : _siegeNpcs)
 		{
 			spawnDat.stopRespawn();

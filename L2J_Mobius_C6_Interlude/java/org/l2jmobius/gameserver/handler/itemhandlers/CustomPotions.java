@@ -49,7 +49,6 @@ public class CustomPotions implements IItemHandler
 	{
 		PlayerInstance player;
 		boolean res = false;
-		
 		if (playable instanceof PlayerInstance)
 		{
 			player = (PlayerInstance) playable;
@@ -76,7 +75,6 @@ public class CustomPotions implements IItemHandler
 		}
 		
 		final int itemId = item.getItemId();
-		
 		if ((itemId >= 9720) && (itemId <= 9731))
 		{
 			res = usePotion(player, itemId, 1);

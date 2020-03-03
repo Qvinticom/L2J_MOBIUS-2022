@@ -188,7 +188,6 @@ public class Message
 		_messageType = mailType;
 		_returned = false;
 		_reqAdena = 0;
-		
 		if (mailType == MailType.COMMISSION_ITEM_SOLD)
 		{
 			_hasAttachments = false;
@@ -216,7 +215,6 @@ public class Message
 	public static PreparedStatement getStatement(Message msg, Connection con) throws SQLException
 	{
 		final PreparedStatement stmt = con.prepareStatement("INSERT INTO messages (messageId, senderId, receiverId, subject, content, expiration, reqAdena, hasAttachments, isUnread, isDeletedBySender, isDeletedByReceiver, sendBySystem, isReturned, itemId, enchantLvl, elementals) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)");
-		
 		stmt.setInt(1, msg._messageId);
 		stmt.setInt(2, msg._senderId);
 		stmt.setInt(3, msg._receiverId);
@@ -233,7 +231,6 @@ public class Message
 		stmt.setInt(14, msg._itemId);
 		stmt.setInt(15, msg._enchantLvl);
 		stmt.setString(16, msg._elementals[0] + ";" + msg._elementals[1] + ";" + msg._elementals[2] + ";" + msg._elementals[3] + ";" + msg._elementals[4] + ";" + msg._elementals[5]);
-		
 		return stmt;
 	}
 	

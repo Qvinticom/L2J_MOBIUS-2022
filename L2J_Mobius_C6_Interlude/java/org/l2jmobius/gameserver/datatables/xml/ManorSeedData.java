@@ -64,7 +64,6 @@ public class ManorSeedData implements IXmlReader
 		
 		// First element is never read.
 		final Node n = doc.getFirstChild();
-		
 		for (Node node = n.getFirstChild(); node != null; node = node.getNextSibling())
 		{
 			if ("seed".equalsIgnoreCase(node.getNodeName()))

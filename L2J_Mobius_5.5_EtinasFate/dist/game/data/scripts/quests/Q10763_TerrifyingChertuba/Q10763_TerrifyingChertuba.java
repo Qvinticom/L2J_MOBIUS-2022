@@ -47,7 +47,6 @@ public class Q10763_TerrifyingChertuba extends Quest
 		addStartNpc(VORBOS);
 		addTalkId(VORBOS);
 		addKillId(CHERTUBA_ILLUSION, CHERTUBA_MIRAGE);
-		
 		addCondRace(Race.ERTHEIA, "33966-00.htm");
 		addCondMinLevel(MIN_LEVEL, "33966-00.htm");
 		addCondCompletedQuest(Q10762_MarionetteSpirit.class.getSimpleName(), "33966-00.htm");
@@ -98,7 +97,6 @@ public class Q10763_TerrifyingChertuba extends Quest
 	{
 		final QuestState qs = getQuestState(player, true);
 		String htmltext = getNoQuestMsg(player);
-		
 		switch (qs.getState())
 		{
 			case State.CREATED:

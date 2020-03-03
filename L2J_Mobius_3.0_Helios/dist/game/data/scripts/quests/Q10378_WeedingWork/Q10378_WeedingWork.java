@@ -100,7 +100,6 @@ public class Q10378_WeedingWork extends Quest
 	{
 		final QuestState qs = getQuestState(player, true);
 		String htmltext = getNoQuestMsg(player);
-		
 		if (qs.isCreated())
 		{
 			htmltext = "33697-01.htm";

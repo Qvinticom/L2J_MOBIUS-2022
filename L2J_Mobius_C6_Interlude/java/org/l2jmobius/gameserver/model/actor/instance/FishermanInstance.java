@@ -46,7 +46,6 @@ public class FishermanInstance extends FolkInstance
 	public String getHtmlPath(int npcId, int value)
 	{
 		String pom = "";
-		
 		if (value == 0)
 		{
 			pom = "" + npcId;
@@ -55,7 +54,6 @@ public class FishermanInstance extends FolkInstance
 		{
 			pom = npcId + "-" + value;
 		}
-		
 		return "data/html/fisherman/" + pom + ".htm";
 	}
 	
@@ -68,7 +66,6 @@ public class FishermanInstance extends FolkInstance
 		}
 		player.tempInvetoryDisable();
 		final StoreTradeList list = TradeController.getInstance().getBuyList(value);
-		
 		if ((list != null) && list.getNpcId().equals(String.valueOf(getNpcId())))
 		{
 			player.sendPacket(new BuyList(list, player.getAdena(), taxRate));
@@ -128,7 +125,6 @@ public class FishermanInstance extends FolkInstance
 		
 		final StringTokenizer st = new StringTokenizer(command, " ");
 		final String command2 = st.nextToken();
-		
 		if (command2.equalsIgnoreCase("Buy"))
 		{
 			if (st.countTokens() < 1)
@@ -153,13 +149,10 @@ public class FishermanInstance extends FolkInstance
 	{
 		final SkillLearn[] skills = SkillTreeTable.getInstance().getAvailableSkills(player);
 		final AquireSkillList asl = new AquireSkillList(AquireSkillList.skillType.Fishing);
-		
 		int counts = 0;
-		
 		for (SkillLearn s : skills)
 		{
 			final Skill sk = SkillTable.getInstance().getInfo(s.getId(), s.getLevel());
-			
 			if (sk == null)
 			{
 				continue;
@@ -173,7 +166,6 @@ public class FishermanInstance extends FolkInstance
 		{
 			final NpcHtmlMessage html = new NpcHtmlMessage(getObjectId());
 			final int minlevel = SkillTreeTable.getInstance().getMinLevelForNewSkill(player);
-			
 			if (minlevel > 0)
 			{
 				// No more skills to learn, come back when you level.

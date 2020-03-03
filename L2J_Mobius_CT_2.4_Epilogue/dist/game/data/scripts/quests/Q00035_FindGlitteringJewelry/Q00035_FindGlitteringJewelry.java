@@ -137,7 +137,6 @@ public class Q00035_FindGlitteringJewelry extends Quest
 	{
 		final QuestState qs = getQuestState(player, true);
 		String htmltext = getNoQuestMsg(player);
-		
 		switch (npc.getId())
 		{
 			case ELLIE:

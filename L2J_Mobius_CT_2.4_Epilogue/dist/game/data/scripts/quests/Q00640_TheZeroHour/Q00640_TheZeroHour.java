@@ -286,7 +286,6 @@ public class Q00640_TheZeroHour extends Quest
 		
 		giveItems(partyMember, FANG_OF_STAKATO, (long) Config.RATE_QUEST_DROP);
 		playSound(partyMember, QuestSound.ITEMSOUND_QUEST_ITEMGET);
-		
 		return super.onKill(npc, killer, isSummon);
 	}
 }

@@ -54,7 +54,6 @@ public class AdminServerInfo implements IAdminCommandHandler
 			final Runtime runTime = Runtime.getRuntime();
 			final int mb = 1024 * 1024;
 			html.setHtml(HtmCache.getInstance().getHtm(activeChar, "data/html/admin/serverinfo.htm"));
-			
 			html.replace("%os_name%", System.getProperty("os.name"));
 			html.replace("%os_ver%", System.getProperty("os.version"));
 			html.replace("%slots%", getPlayersCount("ALL") + "/" + Config.MAXIMUM_ONLINE_USERS);
@@ -123,7 +122,6 @@ public class AdminServerInfo implements IAdminCommandHandler
 			case "ALL_REAL":
 			{
 				final Set<String> realPlayers = new HashSet<>();
-				
 				for (PlayerInstance onlinePlayer : World.getInstance().getPlayers())
 				{
 					if ((onlinePlayer != null) && (onlinePlayer.getClient() != null) && !onlinePlayer.getClient().isDetached())

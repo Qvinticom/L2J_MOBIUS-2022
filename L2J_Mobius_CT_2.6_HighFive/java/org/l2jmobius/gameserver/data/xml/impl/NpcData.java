@@ -71,7 +71,6 @@ public class NpcData implements IXmlReader
 		
 		parseDatapackDirectory("data/stats/npcs", false);
 		LOGGER.info(getClass().getSimpleName() + ": Loaded " + _npcs.size() + " NPCs.");
-		
 		if (Config.CUSTOM_NPC_DATA)
 		{
 			final int npcCount = _npcs.size();
@@ -522,7 +521,6 @@ public class NpcData implements IXmlReader
 						}
 						
 						template.setParameters(parameters != null ? new StatSet(Collections.unmodifiableMap(parameters)) : StatSet.EMPTY_STATSET);
-						
 						if (skills != null)
 						{
 							Map<AISkillScope, List<Skill>> aiSkillLists = null;

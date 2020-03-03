@@ -154,7 +154,6 @@ public class Q00062_PathOfTheTrooper extends Quest
 	{
 		final QuestState qs = getQuestState(player, true);
 		String htmltext = getNoQuestMsg(player);
-		
 		if (qs.isCreated())
 		{
 			if (npc.getId() == MASTER_GWAIN)

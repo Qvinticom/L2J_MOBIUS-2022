@@ -51,11 +51,9 @@ public class AdminChangeAccessLevel implements IAdminCommandHandler
 		}
 		
 		final String[] parts = command.split(" ");
-		
 		if (parts.length == 2)
 		{
 			final int lvl = Integer.parseInt(parts[1]);
-			
 			if (activeChar.getTarget() instanceof PlayerInstance)
 			{
 				((PlayerInstance) activeChar.getTarget()).setAccessLevel(lvl);
@@ -65,9 +63,7 @@ public class AdminChangeAccessLevel implements IAdminCommandHandler
 		else if (parts.length == 3)
 		{
 			final int lvl = Integer.parseInt(parts[2]);
-			
 			final PlayerInstance player = World.getInstance().getPlayer(parts[1]);
-			
 			if (player != null)
 			{
 				player.setAccessLevel(lvl);

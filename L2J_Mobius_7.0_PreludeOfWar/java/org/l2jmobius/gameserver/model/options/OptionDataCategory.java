@@ -52,7 +52,6 @@ public class OptionDataCategory
 			}
 		}
 		while (result == null);
-		
 		return result;
 	}
 	

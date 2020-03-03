@@ -39,7 +39,6 @@ public class AuctionItem
 		_auctionItemId = auctionItemId;
 		_auctionLength = auctionLength;
 		_auctionInitBid = auctionInitBid;
-		
 		_itemId = itemId;
 		_itemCount = itemCount;
 		_itemExtra = itemExtra;
@@ -78,7 +77,6 @@ public class AuctionItem
 	public ItemInstance createNewItemInstance()
 	{
 		final ItemInstance item = ItemTable.getInstance().createItem("ItemAuction", _itemId, _itemCount, null, null);
-		
 		item.setEnchantLevel(item.getDefaultEnchantLevel());
 		
 		final int augmentationId = _itemExtra.getInt("augmentation_id", 0);
@@ -86,7 +84,6 @@ public class AuctionItem
 		{
 			item.setAugmentation(new Augmentation(augmentationId));
 		}
-		
 		return item;
 	}
 }

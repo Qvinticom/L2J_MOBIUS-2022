@@ -115,7 +115,6 @@ public class Q00381_LetsBecomeARoyalMember extends Quest
 				{
 					final boolean hasAlbum = hasQuestItems(talker, COIN_ALBUM);
 					final boolean hasCoin = hasQuestItems(talker, KAILS_COIN);
-					
 					if (hasAlbum && hasCoin)
 					{
 						takeItems(talker, 1, KAILS_COIN, COIN_ALBUM);

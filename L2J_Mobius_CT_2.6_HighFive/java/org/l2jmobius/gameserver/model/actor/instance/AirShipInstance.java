@@ -114,7 +114,6 @@ public class AirShipInstance extends Vehicle
 		{
 			broadcastPacket(new ExMoveToLocationAirShip(this));
 		}
-		
 		return result;
 	}
 	

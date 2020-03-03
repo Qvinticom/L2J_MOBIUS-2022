@@ -70,7 +70,6 @@ public class RequestDropItem implements IClientIncomingPacket
 		}
 		
 		final ItemInstance item = player.getInventory().getItemByObjectId(_objectId);
-		
 		if ((item == null) || (_count == 0) || !player.validateItemManipulation(_objectId, "drop") || (!Config.ALLOW_DISCARDITEM && !player.canOverrideCond(PlayerCondOverride.DROP_ALL_ITEMS)) || (!item.isDropable() && !(player.canOverrideCond(PlayerCondOverride.DROP_ALL_ITEMS) && Config.GM_TRADE_RESTRICTED_ITEMS)) || ((item.getItemType() == EtcItemType.PET_COLLAR) && player.havePetInvItems()) || player.isInsideZone(ZoneId.NO_ITEM_DROP))
 		{
 			player.sendPacket(SystemMessageId.THIS_ITEM_CANNOT_BE_DESTROYED);
@@ -175,7 +174,6 @@ public class RequestDropItem implements IClientIncomingPacket
 		final ItemInstance dropedItem = player.dropItem("Drop", _objectId, _count, _x, _y, _z, null, false, false);
 		
 		// player.broadcastUserInfo();
-		
 		if (player.isGM())
 		{
 			final String target = (player.getTarget() != null ? player.getTarget().getName() : "no-target");

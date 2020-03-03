@@ -81,7 +81,6 @@ public class Calculator
 		
 		final Func[] funcs1 = c1._functions;
 		final Func[] funcs2 = c2._functions;
-		
 		if (funcs1 == funcs2)
 		{
 			return true;
@@ -123,10 +122,8 @@ public class Calculator
 	{
 		final Func[] funcs = _functions;
 		final Func[] tmp = new Func[funcs.length + 1];
-		
 		final int order = f.order;
 		int i;
-		
 		for (i = 0; (i < funcs.length) && (order >= funcs[i].order); i++)
 		{
 			tmp[i] = funcs[i];
@@ -172,7 +169,6 @@ public class Calculator
 	{
 		final Func[] funcs = _functions;
 		final List<Stat> modifiedStats = new ArrayList<>();
-		
 		for (Func func : funcs)
 		{
 			if (func.funcOwner == owner)
@@ -191,7 +187,6 @@ public class Calculator
 	public void calc(Env env)
 	{
 		final Func[] funcs = _functions;
-		
 		for (Func func : funcs)
 		{
 			func.calc(env);

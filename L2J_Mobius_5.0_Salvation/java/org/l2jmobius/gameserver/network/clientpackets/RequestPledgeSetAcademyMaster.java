@@ -82,7 +82,6 @@ public class RequestPledgeSetAcademyMaster implements IClientIncomingPacket
 		
 		final PlayerInstance apprentice = apprenticeMember.getPlayerInstance();
 		final PlayerInstance sponsor = sponsorMember.getPlayerInstance();
-		
 		SystemMessage sm = null;
 		if (_set == 0)
 		{
@@ -107,7 +106,6 @@ public class RequestPledgeSetAcademyMaster implements IClientIncomingPacket
 			
 			apprenticeMember.saveApprenticeAndSponsor(0, 0);
 			sponsorMember.saveApprenticeAndSponsor(0, 0);
-			
 			sm = new SystemMessage(SystemMessageId.S2_CLAN_MEMBER_C1_S_APPRENTICE_HAS_BEEN_REMOVED);
 		}
 		else
@@ -139,7 +137,6 @@ public class RequestPledgeSetAcademyMaster implements IClientIncomingPacket
 			// saving to database even if online, since both must match
 			apprenticeMember.saveApprenticeAndSponsor(0, sponsorMember.getObjectId());
 			sponsorMember.saveApprenticeAndSponsor(apprenticeMember.getObjectId(), 0);
-			
 			sm = new SystemMessage(SystemMessageId.S2_HAS_BEEN_DESIGNATED_AS_THE_APPRENTICE_OF_CLAN_MEMBER_S1);
 		}
 		sm.addString(sponsorMember.getName());

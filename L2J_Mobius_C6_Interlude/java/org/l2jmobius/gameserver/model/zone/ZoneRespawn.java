@@ -72,7 +72,6 @@ public abstract class ZoneRespawn extends ZoneType
 		{
 			return _chaoticSpawnLocs.get(Rnd.get(_chaoticSpawnLocs.size()));
 		}
-		
 		return getSpawnLoc();
 	}
 }

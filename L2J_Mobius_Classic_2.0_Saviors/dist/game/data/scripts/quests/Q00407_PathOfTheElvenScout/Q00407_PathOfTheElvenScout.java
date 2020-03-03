@@ -135,7 +135,6 @@ public class Q00407_PathOfTheElvenScout extends Quest
 	public String onAttack(Npc npc, PlayerInstance attacker, int damage, boolean isSummon)
 	{
 		final QuestState qs = getQuestState(attacker, false);
-		
 		if ((qs != null) && qs.isStarted())
 		{
 			npc.setScriptValue(attacker.getObjectId());
@@ -168,7 +167,6 @@ public class Q00407_PathOfTheElvenScout extends Quest
 				final boolean has2ndLetter = hasQuestItems(qs.getPlayer(), PRIASS_2ND_TORN_LETTER);
 				final boolean has3rdLetter = hasQuestItems(qs.getPlayer(), PRIASS_3ND_TORN_LETTER);
 				final boolean has4thLetter = hasQuestItems(qs.getPlayer(), PRIASS_4ND_TORN_LETTER);
-				
 				if (!(has1stLetter && has2ndLetter && has3rdLetter && has4thLetter))
 				{
 					if (!has1stLetter)
@@ -196,7 +194,6 @@ public class Q00407_PathOfTheElvenScout extends Quest
 	private void giveLetterAndCheckState(int letterId, QuestState qs)
 	{
 		giveItems(qs.getPlayer(), letterId, 1);
-		
 		if (getQuestItemsCount(qs.getPlayer(), PRIASS_1ND_TORN_LETTER, PRIASS_2ND_TORN_LETTER, PRIASS_3ND_TORN_LETTER, PRIASS_4ND_TORN_LETTER) >= 4)
 		{
 			qs.setCond(3, true);

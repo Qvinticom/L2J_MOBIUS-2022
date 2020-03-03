@@ -54,7 +54,6 @@ public class MerchantInstance extends NpcInstance
 	public String getHtmlPath(int npcId, int value)
 	{
 		String pom = "";
-		
 		if (value == 0)
 		{
 			pom = Integer.toString(npcId);
@@ -63,7 +62,6 @@ public class MerchantInstance extends NpcInstance
 		{
 			pom = npcId + "-" + value;
 		}
-		
 		return "data/html/merchant/" + pom + ".htm";
 	}
 	
@@ -98,7 +96,6 @@ public class MerchantInstance extends NpcInstance
 		}
 		
 		final double taxRate = (applyTax) ? _mpc.getTotalTaxRate() : 0;
-		
 		player.setInventoryBlockingStatus(true);
 		
 		player.sendPacket(new BuyList(buyList, player.getAdena(), taxRate));

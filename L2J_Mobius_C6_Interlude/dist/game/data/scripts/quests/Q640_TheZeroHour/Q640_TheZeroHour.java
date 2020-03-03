@@ -126,7 +126,6 @@ public class Q640_TheZeroHour extends Quest
 		else if (Util.isDigit(event))
 		{
 			final int[] reward = REWARDS[Integer.parseInt(event)];
-			
 			if (st.getQuestItemsCount(FANG_OF_STAKATO) >= reward[0])
 			{
 				htmltext = "31554-09.htm";

@@ -59,9 +59,7 @@ public class Harvest implements ISkillHandler
 		_player = (PlayerInstance) creature;
 		
 		final WorldObject[] targetList = skill.getTargetList(creature);
-		
 		final InventoryUpdate iu = Config.FORCE_INVENTORY_UPDATE ? null : new InventoryUpdate();
-		
 		if (targetList == null)
 		{
 			return;
@@ -75,7 +73,6 @@ public class Harvest implements ISkillHandler
 			}
 			
 			_target = (MonsterInstance) aTargetList;
-			
 			if (_player != _target.getSeeder())
 			{
 				_player.sendPacket(new SystemMessage(SystemMessageId.YOU_ARE_NOT_AUTHORIZED_TO_HARVEST));
@@ -156,7 +153,6 @@ public class Harvest implements ISkillHandler
 		int basicSuccess = 100;
 		final int levelPlayer = _player.getLevel();
 		final int levelTarget = _target.getLevel();
-		
 		int diff = (levelPlayer - levelTarget);
 		if (diff < 0)
 		{

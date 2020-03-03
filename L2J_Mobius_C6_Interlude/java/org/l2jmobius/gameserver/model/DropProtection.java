@@ -98,7 +98,6 @@ public class DropProtection implements Runnable
 		unprotect();
 		
 		_isProtected = true;
-		
 		_owner = player;
 		if (_owner == null)
 		{

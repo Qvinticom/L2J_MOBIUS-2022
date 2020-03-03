@@ -77,7 +77,6 @@ public class Book implements IItemHandler
 		
 		final PlayerInstance player = (PlayerInstance) playable;
 		final int itemId = item.getItemId();
-		
 		final String filename = "data/html/help/" + itemId + ".htm";
 		final String content = HtmCache.getInstance().getHtm(filename);
 		

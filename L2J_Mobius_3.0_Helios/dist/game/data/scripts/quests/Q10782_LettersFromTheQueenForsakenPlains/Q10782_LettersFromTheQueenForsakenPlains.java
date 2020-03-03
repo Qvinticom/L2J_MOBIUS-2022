@@ -48,7 +48,6 @@ public class Q10782_LettersFromTheQueenForsakenPlains extends LetterQuest
 	{
 		super(10782);
 		addTalkId(ORVEN, NOVAIN);
-		
 		setIsErtheiaQuest(true);
 		setLevel(MIN_LEVEL, MAX_LEVEL);
 		setStartLocation(SOE_ADEN, TELEPORT_LOC);

@@ -61,7 +61,6 @@ public class SignsPriestInstance extends FolkInstance
 			final ItemInstance ancientAdena = player.getInventory().getItemByItemId(SevenSigns.ANCIENT_ADENA_ID);
 			final int ancientAdenaAmount = ancientAdena == null ? 0 : ancientAdena.getCount();
 			int val = Integer.parseInt(command.substring(11, 12).trim());
-			
 			if (command.length() > 12)
 			{
 				val = Integer.parseInt(command.substring(11, 13).trim());
@@ -310,7 +309,6 @@ public class SignsPriestInstance extends FolkInstance
 					}
 					
 					contribScore = SevenSigns.getInstance().addPlayerStoneContrib(player, blueContribCount, greenContribCount, redContribCount);
-					
 					sm = new SystemMessage(SystemMessageId.YOUR_CONTRIBUTION_SCORE_IS_INCREASED_BY_S1);
 					sm.addNumber(contribScore);
 					player.sendPacket(sm);
@@ -434,7 +432,6 @@ public class SignsPriestInstance extends FolkInstance
 					}
 					
 					final ItemInstance stoneInstance = player.getInventory().getItemByItemId(stoneId);
-					
 					if (stoneInstance != null)
 					{
 						stoneCount = stoneInstance.getCount();
@@ -442,7 +439,6 @@ public class SignsPriestInstance extends FolkInstance
 					
 					path = SevenSigns.SEVEN_SIGNS_HTML_PATH + "signs_17.htm";
 					content = HtmCache.getInstance().getHtm(path);
-					
 					if (content != null)
 					{
 						content = content.replace("%stoneColor%", stoneColor);
@@ -589,7 +585,6 @@ public class SignsPriestInstance extends FolkInstance
 			{
 				// Check if another clan in the same alliance owns a castle, by traversing the list of clans and act accordingly.
 				final Clan[] clanList = ClanTable.getInstance().getClans();
-				
 				for (Clan clan : clanList)
 				{
 					if ((clan.getAllyId() == allyId) && (clan.getHasCastle() > 0))
@@ -606,10 +601,8 @@ public class SignsPriestInstance extends FolkInstance
 	private void showChatWindow(PlayerInstance player, int value, String suffix, boolean isDescription)
 	{
 		String filename = SevenSigns.SEVEN_SIGNS_HTML_PATH;
-		
 		filename += isDescription ? "desc_" + value : "signs_" + value;
 		filename += suffix != null ? "_" + suffix + ".htm" : ".htm";
-		
 		showChatWindow(player, filename);
 	}
 }

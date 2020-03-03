@@ -39,7 +39,6 @@ public class TeleportBookmark implements IItemHandler
 		}
 		
 		final PlayerInstance player = playable.getActingPlayer();
-		
 		if (player.getBookmarkSlot() >= 9)
 		{
 			player.sendPacket(SystemMessageId.YOUR_NUMBER_OF_MY_TELEPORTS_SLOTS_HAS_REACHED_ITS_MAXIMUM_LIMIT);
@@ -47,7 +46,6 @@ public class TeleportBookmark implements IItemHandler
 		}
 		
 		player.destroyItem("Consume", item.getObjectId(), 1, null, false);
-		
 		player.setBookmarkSlot(player.getBookmarkSlot() + 3);
 		player.sendPacket(SystemMessageId.THE_NUMBER_OF_MY_TELEPORTS_SLOTS_HAS_BEEN_INCREASED);
 		

@@ -62,7 +62,6 @@ public class TrainingCamp extends AbstractNpcAI
 	public String onAdvEvent(String event, Npc npc, PlayerInstance player)
 	{
 		String htmltext = null;
-		
 		if (!Config.TRAINING_CAMP_ENABLE || !checkConditions(player))
 		{
 			return htmltext;

@@ -40,10 +40,8 @@ public class OlympiadManagerInstance extends Npc
 	public void showChatWindow(PlayerInstance player, int value, String suffix)
 	{
 		String filename = Olympiad.OLYMPIAD_HTML_PATH;
-		
 		filename += "noble_desc" + value;
 		filename += (suffix != null) ? suffix + ".htm" : ".htm";
-		
 		if (filename.equals(Olympiad.OLYMPIAD_HTML_PATH + "noble_desc0.htm"))
 		{
 			filename = Olympiad.OLYMPIAD_HTML_PATH + "noble_main.htm";

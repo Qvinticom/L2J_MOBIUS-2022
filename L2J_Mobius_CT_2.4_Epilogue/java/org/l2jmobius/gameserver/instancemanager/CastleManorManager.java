@@ -86,7 +86,6 @@ public class CastleManorManager implements IXmlReader, IStorable
 			final int hour = currentTime.get(Calendar.HOUR_OF_DAY);
 			final int min = currentTime.get(Calendar.MINUTE);
 			final int maintenanceMin = Config.ALT_MANOR_REFRESH_MIN + Config.ALT_MANOR_MAINTENANCE_MIN;
-			
 			if (((hour >= Config.ALT_MANOR_REFRESH_TIME) && (min >= maintenanceMin)) || (hour < Config.ALT_MANOR_APPROVE_TIME) || ((hour == Config.ALT_MANOR_APPROVE_TIME) && (min <= Config.ALT_MANOR_APPROVE_MIN)))
 			{
 				_mode = ManorMode.MODIFIABLE;
@@ -140,7 +139,6 @@ public class CastleManorManager implements IXmlReader, IStorable
 							{
 								set = new StatSet();
 								set.set("castleId", castleId);
-								
 								attrs = c.getAttributes();
 								for (int i = 0; i < attrs.getLength(); i++)
 								{
@@ -325,7 +323,6 @@ public class CastleManorManager implements IXmlReader, IStorable
 					// Change next period to current and prepare next period data
 					final List<SeedProduction> nextProduction = _productionNext.get(castleId);
 					final List<CropProcure> nextProcure = _procureNext.get(castleId);
-					
 					_production.put(castleId, nextProduction);
 					_procure.put(castleId, nextProcure);
 					
@@ -377,7 +374,6 @@ public class CastleManorManager implements IXmlReader, IStorable
 			case MODIFIABLE:
 			{
 				_mode = ManorMode.APPROVED;
-				
 				for (Castle castle : CastleManager.getInstance().getCastles())
 				{
 					final Clan owner = castle.getOwner();
@@ -578,7 +574,6 @@ public class CastleManorManager implements IXmlReader, IStorable
 	{
 		final List<CropProcure> procure = getCropProcure(castleId, nextPeriod);
 		final List<SeedProduction> production = getSeedProduction(castleId, nextPeriod);
-		
 		long total = 0;
 		for (SeedProduction seed : production)
 		{

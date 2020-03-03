@@ -44,9 +44,7 @@ public class ZombieGatekeepers extends Quest
 	public String onAttack(NpcInstance npc, PlayerInstance attacker, int damage, boolean isPet)
 	{
 		final int npcObjId = npc.getObjectId();
-		
 		final Creature target = isPet ? attacker.getPet() : attacker;
-		
 		if (_attackersList.get(npcObjId) == null)
 		{
 			final List<Creature> player = new ArrayList<>();
@@ -57,7 +55,6 @@ public class ZombieGatekeepers extends Quest
 		{
 			_attackersList.get(npcObjId).add(target);
 		}
-		
 		return super.onAttack(npc, attacker, damage, isPet);
 	}
 	
@@ -65,17 +62,13 @@ public class ZombieGatekeepers extends Quest
 	public String onAggroRangeEnter(NpcInstance npc, PlayerInstance player, boolean isPet)
 	{
 		final int npcObjId = npc.getObjectId();
-		
 		final Creature target = isPet ? player.getPet() : player;
-		
 		final ItemInstance visitorsMark = player.getInventory().getItemByItemId(8064);
 		final ItemInstance fadedVisitorsMark = player.getInventory().getItemByItemId(8065);
 		final ItemInstance pagansMark = player.getInventory().getItemByItemId(8067);
-		
 		final long mark1 = visitorsMark == null ? 0 : visitorsMark.getCount();
 		final long mark2 = fadedVisitorsMark == null ? 0 : fadedVisitorsMark.getCount();
 		final long mark3 = pagansMark == null ? 0 : pagansMark.getCount();
-		
 		if ((mark1 == 0) && (mark2 == 0) && (mark3 == 0))
 		{
 			((Attackable) npc).addDamageHate(target, 0, 999);
@@ -90,7 +83,6 @@ public class ZombieGatekeepers extends Quest
 			((Attackable) npc).addDamageHate(target, 0, 999);
 			npc.getAI().setIntention(CtrlIntention.AI_INTENTION_ATTACK, target);
 		}
-		
 		return super.onAggroRangeEnter(npc, player, isPet);
 	}
 	
@@ -102,7 +94,6 @@ public class ZombieGatekeepers extends Quest
 		{
 			_attackersList.get(npcObjId).clear();
 		}
-		
 		return super.onKill(npc, killer, isPet);
 	}
 	

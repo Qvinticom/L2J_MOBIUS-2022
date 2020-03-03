@@ -42,7 +42,6 @@ public class EffectGrow extends Effect
 			final NpcInstance npc = (NpcInstance) getEffected();
 			npc.setCollisionHeight((int) (npc.getCollisionHeight() * 1.24));
 			npc.setCollisionRadius((int) (npc.getCollisionRadius() * 1.19));
-			
 			getEffected().startAbnormalEffect(Creature.ABNORMAL_EFFECT_GROW);
 		}
 	}

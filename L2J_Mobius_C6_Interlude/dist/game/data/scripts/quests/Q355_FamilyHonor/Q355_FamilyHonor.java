@@ -210,7 +210,6 @@ public class Q355_FamilyHonor extends Quest
 		
 		final int[] chances = CHANCES.get(npc.getNpcId());
 		final int random = Rnd.get(100);
-		
 		if (random < chances[1])
 		{
 			st.dropItemsAlways((random < chances[0]) ? GALIBREDO_BUST : WORK_OF_BERONA, 1, 0);

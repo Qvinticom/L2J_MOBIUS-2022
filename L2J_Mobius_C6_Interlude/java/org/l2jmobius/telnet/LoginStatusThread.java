@@ -75,7 +75,6 @@ public class LoginStatusThread extends Thread
 		
 		// convert IP to String, and compare with list
 		final String clientStringIP = clientIP.getHostAddress();
-		
 		telnetOutput(1, "Connection from: " + clientStringIP);
 		
 		// read and loop thru list of IPs, compare with newIP
@@ -120,17 +119,14 @@ public class LoginStatusThread extends Thread
 				}
 			}
 		}
-		
 		return result;
 	}
 	
 	public LoginStatusThread(Socket client, int uptime, String statusPW) throws IOException
 	{
 		_cSocket = client;
-		
 		_print = new PrintWriter(_cSocket.getOutputStream());
 		_read = new BufferedReader(new InputStreamReader(_cSocket.getInputStream()));
-		
 		if (isValidIP(client))
 		{
 			telnetOutput(1, client.getInetAddress().getHostAddress() + " accepted.");

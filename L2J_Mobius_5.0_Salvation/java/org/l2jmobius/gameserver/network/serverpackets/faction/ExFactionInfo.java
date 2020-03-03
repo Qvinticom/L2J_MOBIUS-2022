@@ -51,7 +51,6 @@ public class ExFactionInfo implements IClientOutgoingPacket
 			packet.writeH(_player.getFactionLevel(faction));
 			packet.writeE(_player.getFactionProgress(faction));
 		}
-		
 		return true;
 	}
 }

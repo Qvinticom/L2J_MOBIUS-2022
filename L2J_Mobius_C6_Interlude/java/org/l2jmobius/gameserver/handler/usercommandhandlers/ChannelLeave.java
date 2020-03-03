@@ -56,7 +56,6 @@ public class ChannelLeave implements IUserCommandHandler
 				
 				party.getLeader().sendPacket(SystemMessageId.YOU_HAVE_QUIT_THE_COMMAND_CHANNEL);
 				channel.broadcastToChannelMembers(new SystemMessage(SystemMessageId.S1_S_PARTY_HAS_LEFT_THE_COMMAND_CHANNEL).addString(party.getLeader().getName()));
-				
 				return true;
 			}
 		}

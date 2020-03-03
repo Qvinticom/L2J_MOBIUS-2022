@@ -47,14 +47,12 @@ public class DungeonGatekeeperInstance extends Npc
 		
 		final StringTokenizer st = new StringTokenizer(command, " ");
 		final String actualCommand = st.nextToken(); // Get actual command
-		
 		String filename = SevenSigns.SEVEN_SIGNS_HTML_PATH;
 		final int sealAvariceOwner = SevenSigns.getInstance().getSealOwner(SevenSigns.SEAL_AVARICE);
 		final int sealGnosisOwner = SevenSigns.getInstance().getSealOwner(SevenSigns.SEAL_GNOSIS);
 		final int playerCabal = SevenSigns.getInstance().getPlayerCabal(player.getObjectId());
 		final boolean isSealValidationPeriod = SevenSigns.getInstance().isSealValidationPeriod();
 		final int compWinner = SevenSigns.getInstance().getCabalHighestScore();
-		
 		if (actualCommand.startsWith("necro"))
 		{
 			boolean canPort = true;
@@ -192,7 +190,6 @@ public class DungeonGatekeeperInstance extends Npc
 		{
 			pom = npcId + "-" + value;
 		}
-		
 		return "data/html/teleporter/" + pom + ".htm";
 	}
 }

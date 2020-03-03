@@ -99,7 +99,6 @@ public class Q004_LongliveThePaagrioLord extends Quest
 			case State.STARTED:
 				final int cond = st.getInt("cond");
 				final int npcId = npc.getNpcId();
-				
 				if (npcId == 30578)
 				{
 					if (cond == 1)
@@ -130,7 +129,6 @@ public class Q004_LongliveThePaagrioLord extends Quest
 					{
 						st.giveItems(i, 1);
 						htmltext = npcId + "-01.htm";
-						
 						int count = 0;
 						for (int item : NPC_GIFTS.values())
 						{

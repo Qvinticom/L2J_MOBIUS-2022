@@ -165,7 +165,6 @@ public class Q633_InTheForgottenVillage extends Quest
 	public String onKill(NpcInstance npc, PlayerInstance player, boolean isPet)
 	{
 		final int npcId = npc.getNpcId();
-		
 		if (UNDEADS.containsKey(npcId))
 		{
 			final PlayerInstance partyMember = getRandomPartyMemberState(player, npc, State.STARTED);

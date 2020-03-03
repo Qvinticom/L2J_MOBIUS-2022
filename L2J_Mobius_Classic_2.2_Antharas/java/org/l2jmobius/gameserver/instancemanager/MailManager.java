@@ -64,14 +64,12 @@ public class MailManager
 			while (rs.next())
 			{
 				final Message msg = new Message(rs);
-				
 				final int msgId = msg.getId();
 				_messages.put(msgId, msg);
 				
 				count++;
 				
 				final long expiration = msg.getExpiration();
-				
 				if (expiration < System.currentTimeMillis())
 				{
 					ThreadPool.schedule(new MessageDeletionTask(msgId), 10000);

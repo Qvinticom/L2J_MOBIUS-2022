@@ -66,12 +66,10 @@ public class CastleZone extends ZoneRespawn
 	protected void onEnter(Creature creature)
 	{
 		creature.setInsideZone(ZoneId.CASTLE, true);
-		
 		if (_castle.getSiege().isInProgress())
 		{
 			creature.setInsideZone(ZoneId.PVP, true);
 			creature.setInsideZone(ZoneId.SIEGE, true);
-			
 			if (creature instanceof PlayerInstance)
 			{
 				((PlayerInstance) creature).sendPacket(SystemMessageId.YOU_HAVE_ENTERED_A_COMBAT_ZONE);
@@ -83,12 +81,10 @@ public class CastleZone extends ZoneRespawn
 	protected void onExit(Creature creature)
 	{
 		creature.setInsideZone(ZoneId.CASTLE, false);
-		
 		if (_castle.getSiege().isInProgress())
 		{
 			creature.setInsideZone(ZoneId.PVP, false);
 			creature.setInsideZone(ZoneId.SIEGE, false);
-			
 			if (creature instanceof PlayerInstance)
 			{
 				((PlayerInstance) creature).sendPacket(SystemMessageId.YOU_HAVE_LEFT_A_COMBAT_ZONE);
@@ -139,7 +135,6 @@ public class CastleZone extends ZoneRespawn
 				{
 					creature.setInsideZone(ZoneId.PVP, false);
 					creature.setInsideZone(ZoneId.SIEGE, false);
-					
 					if (creature instanceof PlayerInstance)
 					{
 						((PlayerInstance) creature).sendPacket(SystemMessageId.YOU_HAVE_LEFT_A_COMBAT_ZONE);

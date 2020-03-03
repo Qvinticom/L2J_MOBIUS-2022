@@ -165,7 +165,6 @@ public class Parade extends AbstractNpcAI
 		{
 			dd += 86400;
 		}
-		
 		return (dd * 1000) / 6;
 	}
 	

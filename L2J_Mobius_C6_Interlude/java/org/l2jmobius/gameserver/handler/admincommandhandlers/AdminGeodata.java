@@ -49,7 +49,6 @@ public class AdminGeodata implements IAdminCommandHandler
 			final int worldZ = activeChar.getZ();
 			final int geoX = GeoEngine.getGeoX(worldX);
 			final int geoY = GeoEngine.getGeoY(worldY);
-			
 			if (GeoEngine.getInstance().hasGeoPos(geoX, geoY))
 			{
 				BuilderUtil.sendSysMessage(activeChar, "WorldX: " + worldX + ", WorldY: " + worldY + ", WorldZ: " + worldZ + ", GeoX: " + geoX + ", GeoY: " + geoY + ", GeoZ: " + GeoEngine.getInstance().getHeightNearest(geoX, geoY, worldZ));
@@ -66,7 +65,6 @@ public class AdminGeodata implements IAdminCommandHandler
 			final int worldZ = activeChar.getZ();
 			final int geoX = GeoEngine.getGeoX(worldX);
 			final int geoY = GeoEngine.getGeoY(worldY);
-			
 			if (GeoEngine.getInstance().hasGeoPos(geoX, geoY))
 			{
 				BuilderUtil.sendSysMessage(activeChar, "WorldX: " + worldX + ", WorldY: " + worldY + ", WorldZ: " + worldZ + ", GeoX: " + geoX + ", GeoY: " + geoY + ", GeoZ: " + GeoEngine.getInstance().getHeightNearest(worldX, worldY, worldZ));
@@ -128,7 +126,6 @@ public class AdminGeodata implements IAdminCommandHandler
 		{
 			return false;
 		}
-		
 		return true;
 	}
 	

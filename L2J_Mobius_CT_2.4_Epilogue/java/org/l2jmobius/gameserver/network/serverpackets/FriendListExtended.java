@@ -63,11 +63,9 @@ public class FriendListExtended implements IClientOutgoingPacket
 		{
 			final String name = CharNameTable.getInstance().getNameById(objId);
 			final PlayerInstance player1 = World.getInstance().getPlayer(objId);
-			
 			boolean online = false;
 			int classid = 0;
 			int level = 0;
-			
 			if (player1 == null)
 			{
 				try (Connection con = DatabaseFactory.getConnection();
@@ -96,7 +94,6 @@ public class FriendListExtended implements IClientOutgoingPacket
 			
 			classid = player1.getClassId().getId();
 			level = player1.getLevel();
-			
 			_info.add(new FriendInfo(objId, name, online, classid, level));
 		}
 	}

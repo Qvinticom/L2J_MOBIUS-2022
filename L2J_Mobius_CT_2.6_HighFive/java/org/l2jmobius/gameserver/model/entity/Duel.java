@@ -84,7 +84,6 @@ public class Duel
 		_playerA = playerA;
 		_playerB = playerB;
 		_partyDuel = partyDuel == 1;
-		
 		if (_partyDuel)
 		{
 			for (PlayerInstance member : _playerA.getParty().getMembers())
@@ -104,7 +103,6 @@ public class Duel
 		
 		_duelEndTime = Calendar.getInstance();
 		_duelEndTime.add(Calendar.SECOND, _partyDuel ? PARTY_DUEL_DURATION : PLAYER_DUEL_DURATION);
-		
 		setFinished(false);
 		
 		if (_partyDuel)
@@ -141,7 +139,6 @@ public class Duel
 			_mp = _player.getCurrentMp();
 			_cp = _player.getCurrentCp();
 			_paDuel = partyDuel;
-			
 			if (_paDuel)
 			{
 				_x = _player.getX();
@@ -261,7 +258,6 @@ public class Duel
 			{
 				// start/continue countdown
 				final int count = _duel.countdown();
-				
 				if (count == 4)
 				{
 					// Save player conditions before teleporting players
@@ -470,7 +466,6 @@ public class Duel
 			
 			broadcastToTeam1(new ExDuelUpdateUserInfo(_playerB));
 			broadcastToTeam2(new ExDuelUpdateUserInfo(_playerA));
-			
 			_playerA.broadcastUserInfo();
 			_playerB.broadcastUserInfo();
 		}
@@ -739,7 +734,6 @@ public class Duel
 	public void playKneelAnimation()
 	{
 		final PlayerInstance looser = getLooser();
-		
 		if (looser == null)
 		{
 			return;
@@ -837,7 +831,6 @@ public class Duel
 				// TODO: is there no other message for a canceled duel?
 				// send SystemMessage
 				sm = new SystemMessage(SystemMessageId.THE_DUEL_HAS_ENDED_IN_A_TIE);
-				
 				broadcastToTeam1(sm);
 				broadcastToTeam2(sm);
 				break;
@@ -849,7 +842,6 @@ public class Duel
 				restorePlayerConditions(false);
 				// send SystemMessage
 				sm = new SystemMessage(SystemMessageId.THE_DUEL_HAS_ENDED_IN_A_TIE);
-				
 				broadcastToTeam1(sm);
 				broadcastToTeam2(sm);
 				break;

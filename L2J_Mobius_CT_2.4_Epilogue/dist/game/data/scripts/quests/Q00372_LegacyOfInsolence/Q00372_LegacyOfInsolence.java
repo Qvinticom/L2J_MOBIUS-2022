@@ -129,7 +129,6 @@ public class Q00372_LegacyOfInsolence extends Quest
 	{
 		final QuestState qs = getQuestState(player, false);
 		final int chance = getRandom(100);
-		
 		if (qs == null)
 		{
 			return super.onAdvEvent(event, npc, player);
@@ -188,7 +187,6 @@ public class Q00372_LegacyOfInsolence extends Quest
 					takeItems(player, BLUEPRINT_TOWER_OF_INSOLENCE_11TH_FLOOR, 1);
 					takeItems(player, BLUEPRINT_TOWER_OF_INSOLENCE_12TH_FLOOR, 1);
 					takeItems(player, BLUEPRINT_TOWER_OF_INSOLENCE_13TH_FLOOR, 1);
-					
 					if (chance < 10)
 					{
 						giveItems(player, SEALED_DARK_CRYSTAL_BOOTS_LINING, 1);
@@ -253,7 +251,6 @@ public class Q00372_LegacyOfInsolence extends Quest
 					takeItems(player, BLUEPRINT_TOWER_OF_INSOLENCE_11TH_FLOOR, 1);
 					takeItems(player, BLUEPRINT_TOWER_OF_INSOLENCE_12TH_FLOOR, 1);
 					takeItems(player, BLUEPRINT_TOWER_OF_INSOLENCE_13TH_FLOOR, 1);
-					
 					if (chance < 10)
 					{
 						giveItems(player, SEALED_TALLUM_BOOTS_LINING, 1);
@@ -318,7 +315,6 @@ public class Q00372_LegacyOfInsolence extends Quest
 					takeItems(player, BLUEPRINT_TOWER_OF_INSOLENCE_11TH_FLOOR, 1);
 					takeItems(player, BLUEPRINT_TOWER_OF_INSOLENCE_12TH_FLOOR, 1);
 					takeItems(player, BLUEPRINT_TOWER_OF_INSOLENCE_13TH_FLOOR, 1);
-					
 					if (chance < 17)
 					{
 						giveItems(player, SEALED_BOOTS_OF_NIGHTMARE_LINING, 1);
@@ -383,7 +379,6 @@ public class Q00372_LegacyOfInsolence extends Quest
 					takeItems(player, BLUEPRINT_TOWER_OF_INSOLENCE_11TH_FLOOR, 1);
 					takeItems(player, BLUEPRINT_TOWER_OF_INSOLENCE_12TH_FLOOR, 1);
 					takeItems(player, BLUEPRINT_TOWER_OF_INSOLENCE_13TH_FLOOR, 1);
-					
 					if (chance < 17)
 					{
 						giveItems(player, SEALED_MAJESTIC_BOOTS_LINING, 1);
@@ -543,7 +538,6 @@ public class Q00372_LegacyOfInsolence extends Quest
 						takeItems(player, IMPERIAL_GENEALOGY_3, 1);
 						takeItems(player, IMPERIAL_GENEALOGY_4, 1);
 						takeItems(player, IMPERIAL_GENEALOGY_5, 1);
-						
 						if (chance < 30)
 						{
 							giveItems(player, SEALED_DARK_CRYSTAL_BOOTS_LINING, 1);
@@ -587,7 +581,6 @@ public class Q00372_LegacyOfInsolence extends Quest
 						takeItems(player, REVELATION_OF_THE_SEALS_CHAPTER_OF_AWEKENING, 1);
 						takeItems(player, REVELATION_OF_THE_SEALS_CHAPTER_OF_CALAMITY, 1);
 						takeItems(player, REVELATION_OF_THE_SEALS_CHAPTER_OF_DESCENT, 1);
-						
 						if (chance < 31)
 						{
 							giveItems(player, SEALED_MAJESTIC_BOOTS_LINING, 1);
@@ -627,7 +620,6 @@ public class Q00372_LegacyOfInsolence extends Quest
 						takeItems(player, ANCIENT_EPIC_CHAPTER_3, 1);
 						takeItems(player, ANCIENT_EPIC_CHAPTER_4, 1);
 						takeItems(player, ANCIENT_EPIC_CHAPTER_5, 1);
-						
 						if (chance < 30)
 						{
 							giveItems(player, SEALED_TALLUM_BOOTS_LINING, 1);
@@ -671,7 +663,6 @@ public class Q00372_LegacyOfInsolence extends Quest
 						takeItems(player, REVELATION_OF_THE_SEALS_CHAPTER_OF_AWEKENING, 1);
 						takeItems(player, REVELATION_OF_THE_SEALS_CHAPTER_OF_CALAMITY, 1);
 						takeItems(player, REVELATION_OF_THE_SEALS_CHAPTER_OF_DESCENT, 1);
-						
 						if (chance < 31)
 						{
 							giveItems(player, SEALED_BOOTS_OF_NIGHTMARE_LINING, 1);

@@ -124,7 +124,6 @@ public class ClassMaster extends AbstractNpcAI implements IXmlReader
 						
 						_spawnClassMasters = parseBoolean(attrs, "spawnClassMasters", true);
 						_showPopupWindow = parseBoolean(attrs, "showPopupWindow", false);
-						
 						for (Node c = cm.getFirstChild(); c != null; c = c.getNextSibling())
 						{
 							attrs = c.getAttributes();
@@ -166,7 +165,6 @@ public class ClassMaster extends AbstractNpcAI implements IXmlReader
 											{
 												final int itemId = parseInteger(attrs, "id");
 												final int count = parseInteger(attrs, "count", 1);
-												
 												rewardedItems.add(new ItemHolder(itemId, count));
 											}
 											else if ("setNoble".equals(r.getNodeName()))
@@ -188,7 +186,6 @@ public class ClassMaster extends AbstractNpcAI implements IXmlReader
 											{
 												final int itemId = parseInteger(attrs, "id");
 												final int count = parseInteger(attrs, "count", 1);
-												
 												requiredItems.add(new ItemHolder(itemId, count));
 											}
 										}
@@ -894,7 +891,6 @@ public class ClassMaster extends AbstractNpcAI implements IXmlReader
 	public void onPlayerPressTutorialMark(OnPlayerPressTutorialMark event)
 	{
 		final PlayerInstance player = event.getPlayer();
-		
 		if (!_showPopupWindow || (event.getMarkId() != 1)) // mark id was 1001 - used 1 for tutorial text
 		{
 			return;
@@ -961,7 +957,6 @@ public class ClassMaster extends AbstractNpcAI implements IXmlReader
 	private String getClassChangeOptions(PlayerInstance player, int selectedClassId)
 	{
 		final StringBuilder sb = new StringBuilder();
-		
 		for (int i = 0; i < _classChangeData.size(); i++)
 		{
 			final ClassChangeData option = getClassChangeData(i);
@@ -1004,7 +999,6 @@ public class ClassMaster extends AbstractNpcAI implements IXmlReader
 			else
 			{
 				option.getItemsRewarded().forEach(ih -> sb.append("<tr><td><font color=\"LEVEL\">" + ih.getCount() + "</font></td><td>" + ItemTable.getInstance().getTemplate(ih.getId()).getName() + "</td><td width=30></td></tr>"));
-				
 				if (option.isRewardNoblesse())
 				{
 					sb.append("<tr><td><font color=\"LEVEL\">Noblesse status.</font></td></tr>");
@@ -1059,7 +1053,6 @@ public class ClassMaster extends AbstractNpcAI implements IXmlReader
 					}
 				}
 			}
-			
 			return false;
 		}
 		
@@ -1111,7 +1104,6 @@ public class ClassMaster extends AbstractNpcAI implements IXmlReader
 		{
 			showOptions = _classChangeData.stream().filter(ccd -> !ccd.getItemsRewarded().isEmpty()).filter(ccd -> ccd.isInCategory(player)).count() > 1; // Check if there is more than 1 reward to chose.
 		}
-		
 		return showOptions;
 	}
 	
@@ -1121,7 +1113,6 @@ public class ClassMaster extends AbstractNpcAI implements IXmlReader
 		{
 			return _classChangeData.get(index);
 		}
-		
 		return null;
 	}
 	

@@ -80,7 +80,6 @@ public class RequestEnchantItem implements IClientIncomingPacket
 		final ItemInstance item = player.getInventory().getItemByObjectId(_objectId);
 		ItemInstance scroll = player.getInventory().getItemByObjectId(player.getActiveEnchantItemId());
 		ItemInstance support = player.getInventory().getItemByObjectId(player.getActiveEnchantSupportItemId());
-		
 		if ((item == null) || (scroll == null))
 		{
 			player.setActiveEnchantItemId(PlayerInstance.ID_NONE);
@@ -184,7 +183,6 @@ public class RequestEnchantItem implements IClientIncomingPacket
 						item.updateDatabase();
 					}
 					player.sendPacket(new EnchantResult(0, 0, 0));
-					
 					if (Config.LOG_ITEM_ENCHANTS)
 					{
 						if (item.getEnchantLevel() > 0)
@@ -245,7 +243,6 @@ public class RequestEnchantItem implements IClientIncomingPacket
 						// safe enchant - remain old value
 						player.sendPacket(SystemMessageId.ENCHANT_FAILED_THE_ENCHANT_LEVEL_FOR_THE_CORRESPONDING_ITEM_WILL_BE_EXACTLY_RETAINED);
 						player.sendPacket(new EnchantResult(5, 0, 0));
-						
 						if (Config.LOG_ITEM_ENCHANTS)
 						{
 							if (item.getEnchantLevel() > 0)
@@ -306,7 +303,6 @@ public class RequestEnchantItem implements IClientIncomingPacket
 							item.setEnchantLevel(0);
 							item.updateDatabase();
 							player.sendPacket(new EnchantResult(3, 0, 0));
-							
 							if (Config.LOG_ITEM_ENCHANTS)
 							{
 								if (item.getEnchantLevel() > 0)
@@ -339,7 +335,6 @@ public class RequestEnchantItem implements IClientIncomingPacket
 								Util.handleIllegalPlayerAction(player, "Unable to delete item on enchant failure from player " + player.getName() + ", possible cheater !", Config.DEFAULT_PUNISH);
 								player.setActiveEnchantItemId(PlayerInstance.ID_NONE);
 								player.sendPacket(new EnchantResult(2, 0, 0));
-								
 								if (Config.LOG_ITEM_ENCHANTS)
 								{
 									if (item.getEnchantLevel() > 0)

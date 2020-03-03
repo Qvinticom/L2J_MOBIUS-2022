@@ -466,7 +466,6 @@ public class Q10295_SevenSignsSolinasTomb extends Quest
 	{
 		final QuestState qs = getQuestState(player, true);
 		String htmltext = getNoQuestMsg(player);
-		
 		switch (qs.getState())
 		{
 			case State.CREATED:
@@ -574,7 +573,6 @@ public class Q10295_SevenSignsSolinasTomb extends Quest
 				break;
 			}
 		}
-		
 		return super.onKill(npc, player, isSummon);
 	}
 }

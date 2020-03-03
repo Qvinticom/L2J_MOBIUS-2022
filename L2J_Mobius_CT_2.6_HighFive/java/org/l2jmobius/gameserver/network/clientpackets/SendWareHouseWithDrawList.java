@@ -128,7 +128,6 @@ public class SendWareHouseWithDrawList implements IClientIncomingPacket
 		
 		int weight = 0;
 		int slots = 0;
-		
 		for (ItemHolder i : _items)
 		{
 			// Calculate needed slots

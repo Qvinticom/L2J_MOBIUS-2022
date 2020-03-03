@@ -181,7 +181,6 @@ public class RequestRecipeShopMakeItem implements IClientIncomingPacket
 		{
 			// Attempt to pay the required manufacturing price by the manufacturer.
 			final ItemInstance paidAdena = player.transferItem("PayManufacture", player.getInventory().getAdenaInstance().getObjectId(), manufactureRecipeCost, manufacturer.getInventory(), manufacturer);
-			
 			if (paidAdena == null)
 			{
 				player.sendPacket(SystemMessageId.YOU_DO_NOT_HAVE_ENOUGH_ADENA);
@@ -208,7 +207,6 @@ public class RequestRecipeShopMakeItem implements IClientIncomingPacket
 		
 		final boolean success = player.tryLuck() || ((recipe.getSuccessRate() + offeringBonus) > Rnd.get(100));
 		final boolean craftingCritical = success && (player.getStat().getValue(Stat.CRAFTING_CRITICAL) > Rnd.get(100));
-		
 		final ItemHolder craftedItem = recipe.doCraft(player, manufacturer, success, craftingCritical, true);
 		if (success)
 		{
@@ -264,7 +262,6 @@ public class RequestRecipeShopMakeItem implements IClientIncomingPacket
 		
 		// Show manufacturing window.
 		player.sendPacket(new RecipeShopItemInfo(manufacturer, recipe.getId(), success, _manufacturePrice, recipe.getMaxOffering()));
-		
 		manufacturer.setCrafting(false);
 	}
 }

@@ -93,7 +93,6 @@ public class FortSiege
 			try
 			{
 				final long timeRemaining = _siegeEndDate.getTimeInMillis() - Calendar.getInstance().getTimeInMillis();
-				
 				if (timeRemaining > 3600000)
 				{
 					ThreadPool.schedule(new ScheduleEndSiegeTask(_fortInst), timeRemaining - 3600000); // Prepare task for 1 hr left.
@@ -179,9 +178,7 @@ public class FortSiege
 				else if ((timeRemaining <= 600000) && (timeRemaining > 300000))
 				{
 					announceToPlayer("The registration term for " + getFort().getName() + " has ended.", false);
-					
 					_isRegistrationOver = true;
-					
 					clearSiegeWaitingClan();
 					
 					// Prepare task for 5 minute left.
@@ -247,7 +244,6 @@ public class FortSiege
 		if (_isInProgress)
 		{
 			announceToPlayer("The siege of " + getFort().getName() + " has finished!", false);
-			
 			if (getFort().getOwnerId() <= 0)
 			{
 				announceToPlayer("The siege of " + getFort().getName() + " has ended in a draw.", false);
@@ -268,7 +264,6 @@ public class FortSiege
 			
 			// Flag so that siege instance can be started
 			_isInProgress = false;
-			
 			updatePlayerSiegeStateFlags(true);
 			
 			// Save fort specific data
@@ -281,7 +276,6 @@ public class FortSiege
 			removeCommander();
 			
 			_siegeGuardManager.unspawnSiegeGuard(); // Remove all spawned siege guard from this fort
-			
 			if (getFort().getOwnerId() > 0)
 			{
 				_siegeGuardManager.removeMercs();
@@ -426,14 +420,12 @@ public class FortSiege
 			
 			// Reset respawn delay
 			_defenderRespawnDelayPenalty = 0;
-			
 			getFort().getZone().updateZoneStatusForCharactersInside();
 			
 			// Schedule a task to prepare auto siege end
 			_siegeEndDate = Calendar.getInstance();
 			_siegeEndDate.add(Calendar.MINUTE, FortSiegeManager.getInstance().getSiegeLength());
 			ThreadPool.schedule(new ScheduleEndSiegeTask(getFort()), 1000); // Prepare auto end task
-			
 			announceToPlayer("The siege of " + getFort().getName() + " has started!", false);
 			saveFortSiege();
 			FortSiegeManager.getInstance().addSiege(this);
@@ -483,7 +475,6 @@ public class FortSiege
 				}
 				
 				member.sendPacket(new UserInfo(member));
-				
 				for (PlayerInstance player : member.getKnownList().getKnownPlayers().values())
 				{
 					player.sendPacket(new RelationChanged(member, member.getRelation(player), member.isAutoAttackable(player)));
@@ -506,7 +497,6 @@ public class FortSiege
 				}
 				
 				member.sendPacket(new UserInfo(member));
-				
 				for (PlayerInstance player : member.getKnownList().getKnownPlayers().values())
 				{
 					player.sendPacket(new RelationChanged(member, member.getRelation(player), member.isAutoAttackable(player)));
@@ -649,11 +639,9 @@ public class FortSiege
 	{
 		final List<PlayerInstance> players = new ArrayList<>();
 		Clan clan;
-		
 		for (SiegeClan siegeclan : getAttackerClans())
 		{
 			clan = ClanTable.getInstance().getClan(siegeclan.getClanId());
-			
 			for (PlayerInstance player : clan.getOnlineMembers())
 			{
 				if (checkIfInZone(player.getX(), player.getY(), player.getZ()))
@@ -662,7 +650,6 @@ public class FortSiege
 				}
 			}
 		}
-		
 		return players;
 	}
 	
@@ -674,11 +661,9 @@ public class FortSiege
 	{
 		final List<PlayerInstance> players = new ArrayList<>();
 		Clan clan;
-		
 		for (SiegeClan siegeclan : getDefenderClans())
 		{
 			clan = ClanTable.getInstance().getClan(siegeclan.getClanId());
-			
 			if (clan.getClanId() == getFort().getOwnerId())
 			{
 				continue;
@@ -713,11 +698,9 @@ public class FortSiege
 	{
 		final List<PlayerInstance> players = new ArrayList<>();
 		Clan clan;
-		
 		for (SiegeClan siegeclan : getDefenderClans())
 		{
 			clan = ClanTable.getInstance().getClan(siegeclan.getClanId());
-			
 			if (clan.getClanId() != getFort().getOwnerId())
 			{
 				continue;
@@ -742,7 +725,6 @@ public class FortSiege
 	public List<PlayerInstance> getSpectatorsInZone()
 	{
 		final List<PlayerInstance> players = new ArrayList<>();
-		
 		for (PlayerInstance player : World.getInstance().getAllPlayers())
 		{
 			// quick check from player states, which don't include siege number however
@@ -838,7 +820,6 @@ public class FortSiege
 		}
 		
 		int allyId = 0;
-		
 		if (getFort().getOwnerId() != 0)
 		{
 			allyId = ClanTable.getInstance().getClan(getFort().getOwnerId()).getAllyId();
@@ -910,7 +891,6 @@ public class FortSiege
 		try (Connection con = DatabaseFactory.getConnection())
 		{
 			PreparedStatement statement;
-			
 			if (clanId != 0)
 			{
 				statement = con.prepareStatement("DELETE FROM fortsiege_clans WHERE fort_id=? and clan_id=?");
@@ -921,7 +901,6 @@ public class FortSiege
 			}
 			
 			statement.setInt(1, getFort().getFortId());
-			
 			if (clanId != 0)
 			{
 				statement.setInt(2, clanId);
@@ -1142,7 +1121,6 @@ public class FortSiege
 		{
 			return true;
 		}
-		
 		return false;
 	}
 	
@@ -1174,17 +1152,14 @@ public class FortSiege
 			
 			PreparedStatement statement = null;
 			ResultSet rs = null;
-			
 			statement = con.prepareStatement("SELECT clan_id,type FROM fortsiege_clans where fort_id=?");
 			statement.setInt(1, getFort().getFortId());
 			rs = statement.executeQuery();
-			
 			int typeId;
 			
 			while (rs.next())
 			{
 				typeId = rs.getInt("type");
-				
 				if (typeId == 0)
 				{
 					addDefender(rs.getInt("clan_id"));
@@ -1355,12 +1330,10 @@ public class FortSiege
 		for (SiegeSpawn _sp : FortSiegeManager.getInstance().getCommanderSpawnList(id))
 		{
 			CommanderInstance commander;
-			
 			commander = new CommanderInstance(IdFactory.getNextId(), NpcTable.getInstance().getTemplate(_sp.getNpcId()));
 			commander.setCurrentHpMp(commander.getMaxHp(), commander.getMaxMp());
 			commander.setHeading(_sp.getLocation().getHeading());
 			commander.spawnMe(_sp.getLocation().getX(), _sp.getLocation().getY(), _sp.getLocation().getZ() + 50);
-			
 			_commanders.add(commander);
 		}
 	}
@@ -1379,12 +1352,10 @@ public class FortSiege
 		for (SiegeSpawn _sp : FortSiegeManager.getInstance().getFlagList(id))
 		{
 			ArtefactInstance combatflag;
-			
 			combatflag = new ArtefactInstance(IdFactory.getNextId(), NpcTable.getInstance().getTemplate(_sp.getNpcId()));
 			combatflag.setCurrentHpMp(combatflag.getMaxHp(), combatflag.getMaxMp());
 			combatflag.setHeading(_sp.getLocation().getHeading());
 			combatflag.spawnMe(_sp.getLocation().getX(), _sp.getLocation().getY(), _sp.getLocation().getZ() + 10);
-			
 			_combatflag.add(combatflag);
 		}
 	}
@@ -1428,7 +1399,6 @@ public class FortSiege
 		{
 			return null;
 		}
-		
 		return getAttackerClan(clan.getClanId());
 	}
 	
@@ -1446,7 +1416,6 @@ public class FortSiege
 				return sc;
 			}
 		}
-		
 		return null;
 	}
 	
@@ -1460,7 +1429,6 @@ public class FortSiege
 		{
 			return _attackerClans;
 		}
-		
 		return _defenderClans;
 	}
 	
@@ -1483,7 +1451,6 @@ public class FortSiege
 		{
 			return null;
 		}
-		
 		return _fort[0];
 	}
 	
@@ -1498,7 +1465,6 @@ public class FortSiege
 		{
 			return null;
 		}
-		
 		return getDefenderClan(clan.getClanId());
 	}
 	
@@ -1516,7 +1482,6 @@ public class FortSiege
 				return sc;
 			}
 		}
-		
 		return null;
 	}
 	
@@ -1530,7 +1495,6 @@ public class FortSiege
 		{
 			return _defenderClans;
 		}
-		
 		return _attackerClans;
 	}
 	
@@ -1545,7 +1509,6 @@ public class FortSiege
 		{
 			return null;
 		}
-		
 		return getDefenderWaitingClan(clan.getClanId());
 	}
 	
@@ -1563,7 +1526,6 @@ public class FortSiege
 				return sc;
 			}
 		}
-		
 		return null;
 	}
 	
@@ -1645,7 +1607,6 @@ public class FortSiege
 				return sc.getFlag();
 			}
 		}
-		
 		return null;
 	}
 	
@@ -1659,7 +1620,6 @@ public class FortSiege
 		{
 			_siegeGuardManager = new FortSiegeGuardManager(getFort());
 		}
-		
 		return _siegeGuardManager;
 	}
 }

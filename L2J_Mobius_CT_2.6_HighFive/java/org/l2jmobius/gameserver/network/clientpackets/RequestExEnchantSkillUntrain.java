@@ -107,7 +107,6 @@ public class RequestExEnchantSkillUntrain implements IClientIncomingPacket
 		}
 		
 		final int reqItemId = EnchantSkillGroupsData.UNTRAIN_ENCHANT_BOOK;
-		
 		final int beforeUntrainSkillLevel = player.getSkillLevel(_skillId);
 		if (((beforeUntrainSkillLevel - 1) != _skillLvl) && (((beforeUntrainSkillLevel % 100) != 1) || (_skillLvl != s.getBaseLevel())))
 		{
@@ -115,10 +114,8 @@ public class RequestExEnchantSkillUntrain implements IClientIncomingPacket
 		}
 		
 		final EnchantSkillHolder esd = s.getEnchantSkillHolder(beforeUntrainSkillLevel);
-		
 		final int requiredSp = esd.getSpCost();
 		final int requireditems = esd.getAdenaCost();
-		
 		final ItemInstance spb = player.getInventory().getItemByItemId(reqItemId);
 		// does not have spellbook
 		if (Config.ES_SP_BOOK_NEEDED && (spb == null))
@@ -140,7 +137,6 @@ public class RequestExEnchantSkillUntrain implements IClientIncomingPacket
 		}
 		
 		check &= player.destroyItemByItemId("Consume", Inventory.ADENA_ID, requireditems, player, true);
-		
 		if (!check)
 		{
 			player.sendPacket(SystemMessageId.YOU_DO_NOT_HAVE_ALL_OF_THE_ITEMS_NEEDED_TO_ENCHANT_THAT_SKILL);
@@ -148,7 +144,6 @@ public class RequestExEnchantSkillUntrain implements IClientIncomingPacket
 		}
 		
 		player.getStat().addSp((int) (requiredSp * 0.8));
-		
 		if (Config.LOG_SKILL_ENCHANTS)
 		{
 			LOGGER_ENCHANT.log(Level.INFO, "Untrain:" + player.getName() + " [" + player.getObjectId() + "] Account:" + player.getAccountName() + " IP:" + player.getIPAddress() + ", Skill:" + skill + ", SPB:" + spb);
@@ -159,7 +154,6 @@ public class RequestExEnchantSkillUntrain implements IClientIncomingPacket
 		
 		player.sendPacket(new UserInfo(player));
 		player.sendPacket(new ExBrExtraUserInfo(player));
-		
 		if (_skillLvl > 100)
 		{
 			final SystemMessage sm = new SystemMessage(SystemMessageId.UNTRAIN_OF_ENCHANT_SKILL_WAS_SUCCESSFUL_CURRENT_LEVEL_OF_ENCHANT_SKILL_S1_HAS_BEEN_DECREASED_BY_1);

@@ -79,7 +79,6 @@ public class RequestSurrenderPledgeWar implements IClientIncomingPacket
 		}
 		
 		final ClanWar clanWar = myClan.getWarWith(targetClan.getId());
-		
 		if (clanWar == null)
 		{
 			final SystemMessage sm = new SystemMessage(SystemMessageId.YOU_HAVE_NOT_DECLARED_A_CLAN_WAR_AGAINST_THE_CLAN_S1);

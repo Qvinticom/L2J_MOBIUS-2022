@@ -90,7 +90,6 @@ public class Q00212_TrialOfDuty extends Quest
 	{
 		final QuestState qs = getQuestState(player, false);
 		String html = null;
-		
 		if (qs == null)
 		{
 			return html;
@@ -137,7 +136,6 @@ public class Q00212_TrialOfDuty extends Quest
 	public String onKill(Npc npc, PlayerInstance killer, boolean isSummon)
 	{
 		final QuestState qs = getQuestState(killer, false);
-		
 		if ((qs == null) || !Util.checkIfInRange(Config.ALT_PARTY_RANGE, killer, npc, true))
 		{
 			return super.onKill(npc, killer, isSummon);
@@ -151,7 +149,6 @@ public class Q00212_TrialOfDuty extends Quest
 				if (qs.isMemoState(2))
 				{
 					final int flag = qs.getInt("flag");
-					
 					if (getRandom(100) < (flag * 10))
 					{
 						addSpawn(SPIRIT_OF_SIR_HEROD, npc);
@@ -169,7 +166,6 @@ public class Q00212_TrialOfDuty extends Quest
 				if (qs.isMemoState(2))
 				{
 					final Weapon weapon = killer.getActiveWeaponItem();
-					
 					if ((weapon != null) && (weapon.getId() == OLD_KNIGHTS_SWORD))
 					{
 						giveItems(killer, KNIGHTS_TEAR, 1);
@@ -195,7 +191,6 @@ public class Q00212_TrialOfDuty extends Quest
 				if (qs.isMemoState(6))
 				{
 					final int flag = qs.getInt("flag");
-					
 					if (getRandom(100) < ((flag - 3) * 33))
 					{
 						addSpawn(SPIRIT_OF_SIR_TALIANUS, npc);
@@ -311,7 +306,6 @@ public class Q00212_TrialOfDuty extends Quest
 					case 1:
 					{
 						html = "30653-01.html";
-						
 						if (!hasQuestItems(talker, OLD_KNIGHTS_SWORD))
 						{
 							giveItems(talker, OLD_KNIGHTS_SWORD, 1);

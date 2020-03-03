@@ -107,11 +107,9 @@ public class Q274_SkirmishWithTheWerewolves extends Quest
 					htmltext = "30569-05.htm";
 					
 					final int amount = 3500 + (st.getQuestItemsCount(MARAKU_WOLFMEN_TOTEM) * 600);
-					
 					st.takeItems(MARAKU_WEREWOLF_HEAD, -1);
 					st.takeItems(MARAKU_WOLFMEN_TOTEM, -1);
 					st.rewardItems(57, amount);
-					
 					st.playSound(QuestState.SOUND_FINISH);
 					st.exitQuest(true);
 				}

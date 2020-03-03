@@ -46,7 +46,6 @@ public class RequestPrivateStoreSell implements IClientIncomingPacket
 			return false;
 		}
 		_items = new ItemRequest[itemsCount];
-		
 		for (int i = 0; i < itemsCount; i++)
 		{
 			final int slot = packet.readD();

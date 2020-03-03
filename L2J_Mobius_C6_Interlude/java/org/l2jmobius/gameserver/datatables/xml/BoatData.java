@@ -68,7 +68,6 @@ public class BoatData implements IXmlReader
 		{
 			final StatSet set = new StatSet();
 			final Map<Integer, List<BoatPoint>> paths = new HashMap<>();
-			
 			final Node n = doc.getFirstChild();
 			for (Node node = n.getFirstChild(); node != null; node = node.getNextSibling())
 			{
@@ -156,7 +155,6 @@ public class BoatData implements IXmlReader
 						point.y = set.getInt("y");
 						point.z = set.getInt("z");
 						point.time = set.getInt("time");
-						
 						points.add(point);
 					}
 					paths.put(Integer.parseInt(node.getAttributes().getNamedItem("id").getNodeValue()), points);

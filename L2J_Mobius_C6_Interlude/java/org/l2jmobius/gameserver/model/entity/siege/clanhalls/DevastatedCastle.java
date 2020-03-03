@@ -126,12 +126,10 @@ public class DevastatedCastle
 		{
 			setCalendarForNextSiege();
 			final long milliToSiege = getMilliToSiege();
-			
 			final RunMessengerSpawn rms = new RunMessengerSpawn();
 			ThreadPool.schedule(rms, milliToSiege);
 			
 			final long total_millis = System.currentTimeMillis() + milliToSiege;
-			
 			final GregorianCalendar cal = (GregorianCalendar) Calendar.getInstance();
 			cal.setTimeInMillis(total_millis);
 			final String next_ch_siege_date = new SimpleDateFormat("yyyy/MM/dd HH:mm").format(cal.getTimeInMillis());
@@ -142,7 +140,6 @@ public class DevastatedCastle
 	private void setCalendarForNextSiege()
 	{
 		int daysToChange = getDaysToSiege();
-		
 		if (daysToChange == 7)
 		{
 			if (_siegetime.get(Calendar.HOUR_OF_DAY) < HOUR)
@@ -167,12 +164,10 @@ public class DevastatedCastle
 	private int getDaysToSiege()
 	{
 		final int numDays = _siegetime.get(Calendar.DAY_OF_WEEK) - START_DAY;
-		
 		if (numDays < 0)
 		{
 			return 0 - numDays;
 		}
-		
 		return 7 - numDays;
 	}
 	
@@ -180,7 +175,6 @@ public class DevastatedCastle
 	{
 		final long currTimeMillis = System.currentTimeMillis();
 		final long siegeTimeMillis = _siegetime.getTimeInMillis();
-		
 		return siegeTimeMillis - currTimeMillis;
 	}
 	
@@ -202,12 +196,10 @@ public class DevastatedCastle
 		
 		Announce("Siege registration of Devastated castle has begun!");
 		Announce("Now its open for 2 hours!");
-		
 		NpcInstance result = null;
 		try
 		{
 			final NpcTemplate template = NpcTable.getInstance().getTemplate(MESSENGER_ID);
-			
 			final Spawn spawn = new Spawn(template);
 			spawn.setX(179040);
 			spawn.setY(-13717);
@@ -222,7 +214,6 @@ public class DevastatedCastle
 		
 		final RunSiege rs = new RunSiege();
 		ThreadPool.schedule(rs, 14400000); // 4 * 60 * 60 * 1000
-		
 		ThreadPool.schedule(new DeSpawnTimer(result), 7200000); // 2 * 60 * 60 * 1000
 		ThreadPool.schedule(new AnnounceInfo("Siege registration of Devastated castle is over!"), 7200000);
 		ThreadPool.schedule(new AnnounceInfo("2 hours until siege begin."), 7200000);
@@ -282,7 +273,6 @@ public class DevastatedCastle
 			spawn.stopRespawn();
 			result = spawn.doSpawn();
 			_gustav = ThreadPool.schedule(new DeSpawnTimer(result), 3600000); // 60 * 60 * 1000
-			
 			template = NpcTable.getInstance().getTemplate(BOSS1_ID);
 			spawn = new Spawn(template);
 			spawn.setX(178306);
@@ -291,7 +281,6 @@ public class DevastatedCastle
 			spawn.stopRespawn();
 			_minion1 = spawn.doSpawn();
 			_dietrich = ThreadPool.schedule(new DeSpawnTimer(_minion1), 3600000); // 60 * 60 * 1000
-			
 			template = NpcTable.getInstance().getTemplate(BOSS2_ID);
 			spawn = new Spawn(template);
 			spawn.setX(178304);
@@ -300,7 +289,6 @@ public class DevastatedCastle
 			spawn.stopRespawn();
 			_minion2 = spawn.doSpawn();
 			_mikhail = ThreadPool.schedule(new DeSpawnTimer(_minion2), 3600000); // 60 * 60 * 1000
-			
 			spawnMonsters();
 		}
 		catch (Exception e)
@@ -853,7 +841,6 @@ public class DevastatedCastle
 		try (Connection con = DatabaseFactory.getConnection())
 		{
 			PreparedStatement statement;
-			
 			statement = con.prepareStatement("UPDATE clanhall SET paidUntil=?, paid=? WHERE id=?");
 			statement.setLong(1, System.currentTimeMillis() + 59760000);
 			statement.setInt(2, 1);

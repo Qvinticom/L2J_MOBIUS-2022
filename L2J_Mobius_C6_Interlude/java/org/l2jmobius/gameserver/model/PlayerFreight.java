@@ -63,7 +63,6 @@ public class PlayerFreight extends ItemContainer
 	public int getSize()
 	{
 		int size = 0;
-		
 		for (ItemInstance item : _items)
 		{
 			if ((item.getEquipSlot() == 0) || (_activeLocationId == 0) || (item.getEquipSlot() == _activeLocationId))
@@ -82,7 +81,6 @@ public class PlayerFreight extends ItemContainer
 	public ItemInstance[] getItems()
 	{
 		final List<ItemInstance> list = new ArrayList<>();
-		
 		for (ItemInstance item : _items)
 		{
 			if ((item.getEquipSlot() == 0) || (item.getEquipSlot() == _activeLocationId))
@@ -90,7 +88,6 @@ public class PlayerFreight extends ItemContainer
 				list.add(item);
 			}
 		}
-		
 		return list.toArray(new ItemInstance[list.size()]);
 	}
 	
@@ -109,7 +106,6 @@ public class PlayerFreight extends ItemContainer
 				return item;
 			}
 		}
-		
 		return null;
 	}
 	

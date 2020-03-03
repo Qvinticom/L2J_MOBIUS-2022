@@ -131,7 +131,6 @@ public class FloodProtectors
 		_manufacture = new FloodProtectorAction(client, Config.FLOOD_PROTECTOR_MANUFACTURE);
 		_manor = new FloodProtectorAction(client, Config.FLOOD_PROTECTOR_MANOR);
 		_characterSelect = new FloodProtectorAction(client, Config.FLOOD_PROTECTOR_CHARACTER_SELECT);
-		
 		_unknownPackets = new FloodProtectorAction(client, Config.FLOOD_PROTECTOR_UNKNOWN_PACKETS);
 		_partyInvitation = new FloodProtectorAction(client, Config.FLOOD_PROTECTOR_PARTY_INVITATION);
 		_sayAction = new FloodProtectorAction(client, Config.FLOOD_PROTECTOR_SAY_ACTION);

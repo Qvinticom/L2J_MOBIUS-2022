@@ -223,7 +223,6 @@ public class AirShipGludioGracia extends AbstractNpcAI implements Runnable
 		{
 			_ship.addPassenger(player);
 		}
-		
 		return null;
 	}
 	

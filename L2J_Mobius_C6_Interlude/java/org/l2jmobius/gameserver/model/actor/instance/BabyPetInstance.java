@@ -41,7 +41,6 @@ public class BabyPetInstance extends PetInstance
 		// look through the skills that this template has and find the weak and strong heal.
 		Skill skill1 = null;
 		Skill skill2 = null;
-		
 		for (Skill skill : getTemplate().getSkills().values())
 		{
 			// just in case, also allow cp heal and mp recharges to be considered here...you never know ;)

@@ -168,7 +168,6 @@ public class Q00772_PurifyingSouls extends Quest
 	public String onKill(Npc npc, PlayerInstance killer, boolean isSummon)
 	{
 		final QuestState qs = getRandomPartyMemberState(killer, -1, 3, npc);
-		
 		if ((qs != null) && qs.isCond(1) && (giveItemRandomly(killer, npc, SOUL_OF_DARKNESS, 1, 50, 0.1, true)))
 		{
 			qs.setCond(2, true);

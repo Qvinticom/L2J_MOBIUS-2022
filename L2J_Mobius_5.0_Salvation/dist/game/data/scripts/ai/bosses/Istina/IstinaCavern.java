@@ -169,7 +169,6 @@ public class IstinaCavern extends AbstractInstance
 					{
 						final SkillHolder death1 = npcParams.getSkillHolder("Istina_Death_Skill01");
 						final SkillHolder death2 = npcParams.getSkillHolder("Istina_Death_Skill02");
-						
 						if (mostHated.isInCategory(CategoryType.TANKER_GROUP))
 						{
 							addSkillCastDesire(npc, mostHated, (mostHated.isAffectedBySkill(death1) ? death2 : death1), 23);
@@ -187,7 +186,6 @@ public class IstinaCavern extends AbstractInstance
 					final SkillHolder death1 = npcParams.getSkillHolder("Istina_Death_Skill01");
 					final SkillHolder death2 = npcParams.getSkillHolder("Istina_Death_Skill02");
 					final Creature mostHated = ((Attackable) npc).getMostHated();
-					
 					if ((mostHated != null) && npc.isInsideRadius2D(mostHated, 15000) && mostHated.isInCategory(CategoryType.TANKER_GROUP) && mostHated.isAffectedBySkill(death1))
 					{
 						addSkillCastDesire(npc, mostHated, death2, 23);
@@ -266,7 +264,6 @@ public class IstinaCavern extends AbstractInstance
 					{
 						final int countDown = npcVars.getInt("COUNT_DOWN", 30);
 						final int charged = getChargedPercent(npcVars.getInt("SCORE_VAL", 0), isExtremeMode(instance));
-						
 						if (countDown == 0)
 						{
 							npcVars.set("COUNTING_ENABLED", false);
@@ -370,7 +367,6 @@ public class IstinaCavern extends AbstractInstance
 		if ((skill != null) && isInInstance(instance))
 		{
 			final int skillId = skill.getId();
-			
 			if (npc.getId() == INVISIBLE_NPC)
 			{
 				if (skillId == ERUPTION_1.getSkillId())
@@ -381,7 +377,6 @@ public class IstinaCavern extends AbstractInstance
 				else if (skillId == ERUPTION_2.getSkillId())
 				{
 					getTimers().addTimer("NPC_DELETE", 2000, event -> npc.deleteMe());
-					
 					if (isExtremeMode(instance) && (getRandom(100) < 30))
 					{
 						addAttackPlayerDesire(addSpawn(EXTREME_MINION, npc, false, 0, false, instance.getId()), npc.getVariables().getObject("ERUPTION_TARGET", PlayerInstance.class), 23);
@@ -391,7 +386,6 @@ public class IstinaCavern extends AbstractInstance
 			else
 			{
 				final StatSet npcParams = npc.getParameters();
-				
 				if (skillId == npcParams.getSkillHolder("Istina_Death_Skill01").getSkillId())
 				{
 					showOnScreenMsg(player, NpcStringId.ISTINA_S_MARK_SHINES_ABOVE_THE_HEAD, ExShowScreenMessage.TOP_CENTER, 4000);
@@ -441,17 +435,14 @@ public class IstinaCavern extends AbstractInstance
 		{
 			final StatSet npcVars = npc.getVariables();
 			final int stage = npcVars.getInt("ISTINA_STAGE", -1);
-			
 			if (npc.getId() == BALLISTA)
 			{
 				if (npcVars.getBoolean("COUNTING_ENABLED", false))
 				{
 					final int score = npcVars.getInt("SCORE_VAL", 0);
-					
 					if (getChargedPercent(score, isExtremeMode(instance)) < 100)
 					{
 						int addScore = damage;
-						
 						if (skill != null)
 						{
 							if (skill.getEffectPoint() < 0)
@@ -660,7 +651,6 @@ public class IstinaCavern extends AbstractInstance
 		PlayerInstance maxDealer = null;
 		long maxDamage = 0;
 		int totalDamage = 0;
-		
 		for (AggroInfo info : ((Attackable) npc).getAggroList().values())
 		{
 			if (info == null)

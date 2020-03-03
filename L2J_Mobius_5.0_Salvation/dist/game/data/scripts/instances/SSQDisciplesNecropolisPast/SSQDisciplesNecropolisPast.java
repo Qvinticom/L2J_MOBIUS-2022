@@ -187,7 +187,6 @@ public class SSQDisciplesNecropolisPast extends AbstractInstance
 				{
 					final List<Npc> anakimGroup = world.getNpcs(ANAKIM_GROUP);
 					final List<Npc> lilithGroup = world.getNpcs(LILITH_GROUP);
-					
 					for (Npc caster : anakimGroup)
 					{
 						if ((caster != null) && !caster.isCastingNow(SkillCaster::isAnyNormalType))

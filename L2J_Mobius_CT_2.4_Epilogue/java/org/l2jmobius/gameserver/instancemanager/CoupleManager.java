@@ -82,7 +82,6 @@ public class CoupleManager
 		
 		final int player1id = player1.getObjectId();
 		final int player2id = player2.getObjectId();
-		
 		final Couple couple = new Couple(player1, player2);
 		_couples.add(couple);
 		player1.setPartnerId(player2id);

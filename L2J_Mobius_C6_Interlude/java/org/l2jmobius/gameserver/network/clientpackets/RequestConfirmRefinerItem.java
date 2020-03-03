@@ -49,7 +49,6 @@ public class RequestConfirmRefinerItem extends GameClientPacket
 		final PlayerInstance player = getClient().getPlayer();
 		final ItemInstance targetItem = (ItemInstance) World.getInstance().findObject(_targetItemObjId);
 		final ItemInstance refinerItem = (ItemInstance) World.getInstance().findObject(_refinerItemObjId);
-		
 		if ((targetItem == null) || (refinerItem == null))
 		{
 			return;

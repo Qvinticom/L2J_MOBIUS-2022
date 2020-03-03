@@ -77,7 +77,6 @@ public class SwampZone extends ZoneType
 		{
 			_castle = CastleManager.getInstance().getCastleById(_castleId);
 		}
-		
 		return _castle;
 	}
 	

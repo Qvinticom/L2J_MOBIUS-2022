@@ -71,7 +71,6 @@ public class RequestLuckyGamePlay implements IClientIncomingPacket
 		}
 		
 		final int index = _type == LuckyGameType.LUXURY ? 102 : 2; // move to event config
-		
 		final LuckyGameDataHolder holder = LuckyGameData.getInstance().getLuckyGameDataByIndex(index);
 		if (holder == null)
 		{
@@ -93,7 +92,6 @@ public class RequestLuckyGamePlay implements IClientIncomingPacket
 		{
 			final double chance = 100 * Rnd.nextDouble();
 			double totalChance = 0;
-			
 			for (ItemChanceHolder item : holder.getCommonReward())
 			{
 				totalChance += item.getChance();
@@ -109,7 +107,6 @@ public class RequestLuckyGamePlay implements IClientIncomingPacket
 				final List<ItemChanceHolder> modifyReward = holder.getModifyReward();
 				final double chanceModify = 100 * Rnd.nextDouble();
 				totalChance = 0;
-				
 				for (ItemChanceHolder item : modifyReward)
 				{
 					totalChance += item.getChance();

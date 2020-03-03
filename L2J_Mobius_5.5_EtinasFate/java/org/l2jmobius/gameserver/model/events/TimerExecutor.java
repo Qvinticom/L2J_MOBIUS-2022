@@ -189,7 +189,6 @@ public class TimerExecutor<T>
 		{
 			return false;
 		}
-		
 		return timers.stream().anyMatch(holder -> holder.isEqual(event, npc, player));
 	}
 	

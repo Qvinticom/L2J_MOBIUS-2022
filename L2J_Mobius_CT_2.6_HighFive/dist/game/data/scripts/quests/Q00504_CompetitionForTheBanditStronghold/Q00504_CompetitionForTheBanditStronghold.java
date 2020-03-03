@@ -107,7 +107,6 @@ public class Q00504_CompetitionForTheBanditStronghold extends Quest
 		final QuestState qs = getQuestState(player, true);
 		final Clan clan = player.getClan();
 		String htmltext = getNoQuestMsg(player);
-		
 		if (!BANDIT_STRONGHOLD.isWaitingBattle())
 		{
 			htmltext = getHtm(player, "35437-09.html");

@@ -125,7 +125,6 @@ public class ClanHallDoormanInstance extends DoormanInstance
 		player.sendPacket(ActionFailed.STATIC_PACKET);
 		
 		final NpcHtmlMessage html = new NpcHtmlMessage(getObjectId());
-		
 		if (getClanHall() != null)
 		{
 			final Clan owner = ClanTable.getInstance().getClan(getClanHall().getOwnerId());

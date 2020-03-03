@@ -75,7 +75,6 @@ public class BlockList
 			final PreparedStatement statement = con.prepareStatement("SELECT friend_id FROM character_friends WHERE char_id = ? AND relation = 1");
 			statement.setInt(1, objId);
 			final ResultSet rset = statement.executeQuery();
-			
 			int friendId;
 			while (rset.next())
 			{
@@ -103,7 +102,6 @@ public class BlockList
 		try (Connection con = DatabaseFactory.getConnection())
 		{
 			PreparedStatement statement;
-			
 			if (state)
 			{
 				statement = con.prepareStatement("INSERT INTO character_friends (char_id, friend_id, relation) VALUES (?, ?, 1)");
@@ -170,7 +168,6 @@ public class BlockList
 		}
 		
 		final String charName = CharNameTable.getInstance().getPlayerName(targetId);
-		
 		if (listOwner.getFriendList().contains(targetId))
 		{
 			final SystemMessage sm = SystemMessage.getSystemMessage(SystemMessageId.THIS_PLAYER_IS_ALREADY_REGISTERED_IN_YOUR_FRIENDS_LIST);
@@ -192,7 +189,6 @@ public class BlockList
 		listOwner.sendPacket(sm);
 		
 		final PlayerInstance player = World.getInstance().getPlayer(targetId);
-		
 		if (player != null)
 		{
 			sm = SystemMessage.getSystemMessage(SystemMessageId.S1_HAS_PLACED_YOU_ON_HIS_HER_IGNORE_LIST);
@@ -210,7 +206,6 @@ public class BlockList
 		
 		SystemMessage sm;
 		final String charName = CharNameTable.getInstance().getPlayerName(targetId);
-		
 		if (!listOwner.getBlockList().getBlockList().contains(targetId))
 		{
 			sm = SystemMessage.getSystemMessage(SystemMessageId.THAT_IS_THE_INCORRECT_TARGET);
@@ -261,7 +256,6 @@ public class BlockList
 	public static boolean isInBlockList(int ownerId, int targetId)
 	{
 		final PlayerInstance player = World.getInstance().getPlayer(ownerId);
-		
 		if (player != null)
 		{
 			return isBlocked(player, targetId);

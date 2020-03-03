@@ -77,7 +77,6 @@ public class Fishing extends AbstractEffect
 		}
 		
 		final PlayerInstance player = creature.getActingPlayer();
-		
 		if (!Config.ALLOW_FISHING && !player.canOverrideCond(PlayerCondOverride.SKILL_CONDITIONS))
 		{
 			player.sendMessage("Fishing is disabled!");
@@ -237,7 +236,6 @@ public class Fishing extends AbstractEffect
 		
 		// always use water zone, fishing zone high z is high in the air...
 		final int baitZ = waterZone.getWaterZ();
-		
 		if (!GeoEngine.getInstance().canSeeTarget(player, new Location(baitX, baitY, baitZ)))
 		{
 			return Integer.MIN_VALUE;

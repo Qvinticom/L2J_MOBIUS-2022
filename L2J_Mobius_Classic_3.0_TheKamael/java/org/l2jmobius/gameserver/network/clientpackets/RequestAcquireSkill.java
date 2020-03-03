@@ -211,9 +211,7 @@ public class RequestAcquireSkill implements IClientIncomingPacket
 					clan.addNewSkill(skill);
 					
 					clan.broadcastToOnlineMembers(new PledgeSkillList(clan));
-					
 					player.sendPacket(new AcquireSkillDone());
-					
 					VillageMasterInstance.showPledgeSkillList(player);
 				}
 				else
@@ -276,7 +274,6 @@ public class RequestAcquireSkill implements IClientIncomingPacket
 				clan.addNewSkill(skill, _subType);
 				clan.broadcastToOnlineMembers(new PledgeSkillList(clan));
 				player.sendPacket(new AcquireSkillDone());
-				
 				showSubUnitSkillList(player);
 				break;
 			}
@@ -376,12 +373,10 @@ public class RequestAcquireSkill implements IClientIncomingPacket
 				if (checkPlayerSkill(player, trainer, s))
 				{
 					giveSkill(player, trainer, skill);
-					
 					player.sendPacket(new AcquireSkillDone());
 					player.sendPacket(new ExAlchemySkillList(player));
 					
 					final List<SkillLearn> alchemySkills = SkillTreeData.getInstance().getAvailableAlchemySkills(player);
-					
 					if (alchemySkills.isEmpty())
 					{
 						player.sendPacket(SystemMessageId.THERE_ARE_NO_OTHER_SKILLS_TO_LEARN);
@@ -431,7 +426,6 @@ public class RequestAcquireSkill implements IClientIncomingPacket
 	public static void showSubUnitSkillList(PlayerInstance player)
 	{
 		final List<SkillLearn> skills = SkillTreeData.getInstance().getAvailableSubPledgeSkills(player.getClan());
-		
 		if (skills.isEmpty())
 		{
 			player.sendPacket(SystemMessageId.THERE_ARE_NO_OTHER_SKILLS_TO_LEARN);
@@ -616,7 +610,6 @@ public class RequestAcquireSkill implements IClientIncomingPacket
 		player.sendPacket(sm);
 		
 		player.addSkill(skill, store);
-		
 		player.sendItemList();
 		player.sendPacket(new ShortCutInit(player));
 		player.sendPacket(new ExBasicActionList(ExBasicActionList.DEFAULT_ACTION_LIST));

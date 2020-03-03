@@ -170,7 +170,6 @@ public class AdminPForge implements IAdminCommandHandler
 				}
 			}
 		}
-		
 		return true;
 	}
 	
@@ -185,7 +184,6 @@ public class AdminPForge implements IAdminCommandHandler
 				return true;
 			}
 		}
-		
 		return false;
 	}
 	
@@ -234,9 +232,7 @@ public class AdminPForge implements IAdminCommandHandler
 		}
 		
 		valuesHtml = valuesHtml.replace("%opcodes%", sendBypass);
-		
 		String editorsHtml = "";
-		
 		if (format == null)
 		{
 			valuesHtml = valuesHtml.replace("%format%", "");
@@ -248,12 +244,10 @@ public class AdminPForge implements IAdminCommandHandler
 			sendBypass += " " + format;
 			
 			final String editorTemplate = HtmCache.getInstance().getHtm(activeChar, "data/html/admin/pforge/inc/editor.htm");
-			
 			if (editorTemplate != null)
 			{
 				final StringBuilder singleCharSequence = new StringBuilder(1);
 				singleCharSequence.append(' ');
-				
 				for (int chIdx = 0; chIdx < format.length(); ++chIdx)
 				{
 					final char ch = format.charAt(chIdx);
@@ -286,7 +280,6 @@ public class AdminPForge implements IAdminCommandHandler
 			{
 				final StringTokenizer st = new StringTokenizer(command);
 				st.nextToken(); // skip command token
-				
 				if (!st.hasMoreTokens())
 				{
 					showValuesUsage(activeChar);
@@ -327,7 +320,6 @@ public class AdminPForge implements IAdminCommandHandler
 			{
 				final StringTokenizer st = new StringTokenizer(command);
 				st.nextToken(); // skip command token
-				
 				if (!st.hasMoreTokens())
 				{
 					showSendUsage(activeChar, null, null);

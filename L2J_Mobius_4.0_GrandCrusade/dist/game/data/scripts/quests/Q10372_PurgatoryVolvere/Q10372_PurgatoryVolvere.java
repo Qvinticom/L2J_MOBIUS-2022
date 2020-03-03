@@ -113,7 +113,6 @@ public class Q10372_PurgatoryVolvere extends Quest
 	{
 		final QuestState qs = getQuestState(player, true);
 		String htmltext = getNoQuestMsg(player);
-		
 		switch (qs.getState())
 		{
 			case State.COMPLETED:
@@ -173,7 +172,6 @@ public class Q10372_PurgatoryVolvere extends Quest
 	public String onKill(Npc npc, PlayerInstance killer, boolean isSummon)
 	{
 		final QuestState qs = getQuestState(killer, false);
-		
 		if ((qs != null) && (qs.isCond(1)))
 		{
 			if (giveItemRandomly(killer, npc, SUCCUBUS_ESENCE, 1, 10, 0.2, true))

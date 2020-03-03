@@ -664,7 +664,6 @@ public class CTF implements EventTask
 		{
 			return false;
 		}
-		
 		return true;
 	}
 	
@@ -690,7 +689,6 @@ public class CTF implements EventTask
 		try
 		{
 			_npcSpawn = new Spawn(tmpl);
-			
 			_npcSpawn.setX(_npcX);
 			_npcSpawn.setY(_npcY);
 			_npcSpawn.setZ(_npcZ);
@@ -699,7 +697,6 @@ public class CTF implements EventTask
 			_npcSpawn.setRespawnDelay(1);
 			
 			SpawnTable.getInstance().addNewSpawn(_npcSpawn, false);
-			
 			_npcSpawn.init();
 			_npcSpawn.getLastSpawn().getStatus().setCurrentHp(999999999);
 			_npcSpawn.getLastSpawn().setTitle(_eventName);
@@ -707,7 +704,6 @@ public class CTF implements EventTask
 			_npcSpawn.getLastSpawn().isAggressive();
 			_npcSpawn.getLastSpawn().decayMe();
 			_npcSpawn.getLastSpawn().spawnMe(_npcSpawn.getLastSpawn().getX(), _npcSpawn.getLastSpawn().getY(), _npcSpawn.getLastSpawn().getZ());
-			
 			_npcSpawn.getLastSpawn().broadcastPacket(new MagicSkillUse(_npcSpawn.getLastSpawn(), _npcSpawn.getLastSpawn(), 1034, 1, 1, 1));
 		}
 		catch (Exception e)
@@ -752,7 +748,6 @@ public class CTF implements EventTask
 		}
 		Announcements.getInstance().criticalAnnounceToAll(_eventName + ": Recruiting levels: " + _minlvl + " to " + _maxlvl);
 		Announcements.getInstance().criticalAnnounceToAll(_eventName + ": Joinable in " + _joiningLocationName + ".");
-		
 		if (Config.CTF_COMMAND)
 		{
 			Announcements.getInstance().criticalAnnounceToAll(_eventName + ": Commands .ctfjoin .ctfleave .ctfinfo!");
@@ -803,7 +798,6 @@ public class CTF implements EventTask
 		
 		_joining = false;
 		Announcements.getInstance().criticalAnnounceToAll(_eventName + ": Teleport to team spot in 20 seconds!");
-		
 		setUserData();
 		ThreadPool.schedule(() ->
 		{
@@ -885,14 +879,12 @@ public class CTF implements EventTask
 		}
 		
 		_teleport = false;
-		
 		sit();
 		
 		afterStartOperations();
 		
 		Announcements.getInstance().criticalAnnounceToAll(_eventName + ": Started. Go Capture the Flags!");
 		_started = true;
-		
 		return true;
 	}
 	
@@ -925,9 +917,7 @@ public class CTF implements EventTask
 		_inProgress = false;
 		_aborted = false;
 		final long delay = _intervalBetweenMatches;
-		
 		Announcements.getInstance().criticalAnnounceToAll(_eventName + ": joining period will be avaible again in " + _intervalBetweenMatches + " minute(s)!");
-		
 		waiter(delay);
 		
 		try
@@ -1007,7 +997,6 @@ public class CTF implements EventTask
 			else
 			{
 				Announcements.getInstance().criticalAnnounceToAll(_eventName + ": The event finished with a TIE: No team wins the match(nobody took flags)!");
-				
 				if (Config.CTF_STATS_LOGGER)
 				{
 					LOGGER.info(_eventName + ": No team win the match(nobody took flags).");
@@ -1078,7 +1067,6 @@ public class CTF implements EventTask
 	{
 		sit();
 		Announcements.getInstance().criticalAnnounceToAll(_eventName + ": Teleport back to participation NPC in 20 seconds!");
-		
 		ThreadPool.schedule(() ->
 		{
 			synchronized (_players)
@@ -1142,7 +1130,6 @@ public class CTF implements EventTask
 					if (startEvent() && !_aborted)
 					{
 						LOGGER.warning(_eventName + ": waiting.....minutes for event time " + _eventTime);
-						
 						waiter(_eventTime * 60 * 1000); // minutes for event time
 						finishEvent();
 						
@@ -1232,7 +1219,6 @@ public class CTF implements EventTask
 		while (((startWaiterTime + interval) > System.currentTimeMillis()) && !_aborted)
 		{
 			seconds--; // Here because we don't want to see two time announce at the same time
-			
 			if (_joining || _started || _teleport)
 			{
 				switch (seconds)
@@ -1407,9 +1393,7 @@ public class CTF implements EventTask
 		{
 			final List<PlayerInstance> playersShuffleTemp = new ArrayList<>();
 			int loopCount = 0;
-			
 			loopCount = _playersShuffle.size();
-			
 			for (int i = 0; i < loopCount; i++)
 			{
 				playersShuffleTemp.add(_playersShuffle.get(i));
@@ -1463,7 +1447,6 @@ public class CTF implements EventTask
 		if ((eventPlayer._activeBoxes > 1) && !Config.ALLOW_DUALBOX_EVENT)
 		{
 			final List<String> playerBoxes = eventPlayer._activeBoxeCharacters;
-			
 			if ((playerBoxes != null) && (playerBoxes.size() > 1))
 			{
 				for (String characterName : playerBoxes)
@@ -1515,7 +1498,6 @@ public class CTF implements EventTask
 		{
 			boolean allTeamsEqual = true;
 			int countBefore = -1;
-			
 			for (int playersCount : _teamPlayersCount)
 			{
 				if (countBefore == -1)
@@ -1538,7 +1520,6 @@ public class CTF implements EventTask
 			}
 			
 			countBefore = Integer.MAX_VALUE;
-			
 			for (int teamPlayerCount : _teamPlayersCount)
 			{
 				if (teamPlayerCount < countBefore)
@@ -1548,7 +1529,6 @@ public class CTF implements EventTask
 			}
 			
 			final List<String> joinableTeams = new ArrayList<>();
-			
 			for (String team : _teams)
 			{
 				if (teamPlayersCount(team) == countBefore)
@@ -1743,7 +1723,6 @@ public class CTF implements EventTask
 		_teamsX = new ArrayList<>();
 		_teamsY = new ArrayList<>();
 		_teamsZ = new ArrayList<>();
-		
 		_throneSpawns = new ArrayList<>();
 		_flagSpawns = new ArrayList<>();
 		_flagsTaken = new ArrayList<>();
@@ -1751,14 +1730,12 @@ public class CTF implements EventTask
 		_flagsX = new ArrayList<>();
 		_flagsY = new ArrayList<>();
 		_flagsZ = new ArrayList<>();
-		
 		_joining = false;
 		_teleport = false;
 		_started = false;
 		_sitForced = false;
 		_aborted = false;
 		_inProgress = false;
-		
 		_npcId = 0;
 		_npcX = 0;
 		_npcY = 0;
@@ -1779,10 +1756,8 @@ public class CTF implements EventTask
 		{
 			PreparedStatement statement;
 			ResultSet rs;
-			
 			statement = con.prepareStatement("Select * from ctf");
 			rs = statement.executeQuery();
-			
 			int teams = 0;
 			
 			while (rs.next())
@@ -1831,7 +1806,6 @@ public class CTF implements EventTask
 					_teamsY.set(index, rs.getInt("teamY"));
 					_teamsZ.set(index, rs.getInt("teamZ"));
 					_teamColors.set(index, rs.getInt("teamColor"));
-					
 					_flagsX.add(0);
 					_flagsY.add(0);
 					_flagsZ.add(0);
@@ -1860,7 +1834,6 @@ public class CTF implements EventTask
 		try (Connection con = DatabaseFactory.getConnection())
 		{
 			PreparedStatement statement;
-			
 			statement = con.prepareStatement("Delete from ctf");
 			statement.execute();
 			statement.close();
@@ -1894,7 +1867,6 @@ public class CTF implements EventTask
 			for (String teamName : _teams)
 			{
 				final int index = _teams.indexOf(teamName);
-				
 				if (index == -1)
 				{
 					return;
@@ -1906,11 +1878,9 @@ public class CTF implements EventTask
 				statement.setInt(4, _teamsY.get(index));
 				statement.setInt(5, _teamsZ.get(index));
 				statement.setInt(6, _teamColors.get(index));
-				
 				statement.setInt(7, _flagsX.get(index));
 				statement.setInt(8, _flagsY.get(index));
 				statement.setInt(9, _flagsZ.get(index));
-				
 				statement.execute();
 				statement.close();
 			}
@@ -1931,13 +1901,11 @@ public class CTF implements EventTask
 		try
 		{
 			final NpcHtmlMessage adminReply = new NpcHtmlMessage(5);
-			
 			final StringBuilder replyMSG = new StringBuilder("<html><title>" + _eventName + "</title><body>");
 			replyMSG.append("<center><img src=\"L2UI_CH3.herotower_deco\" width=256 height=32></center><br1>");
 			replyMSG.append("<center><font color=\"3366CC\">Current event:</font></center><br1>");
 			replyMSG.append("<center>Name:&nbsp;<font color=\"00FF00\">" + _eventName + "</font></center><br1>");
 			replyMSG.append("<center>Description:&nbsp;<font color=\"00FF00\">" + _eventDesc + "</font></center><br><br>");
-			
 			if (!_started && !_joining)
 			{
 				replyMSG.append("<center>Wait till the admin/gm start the participation.</center>");
@@ -1971,7 +1939,6 @@ public class CTF implements EventTask
 						}
 						
 						replyMSG.append("<center>Joined Players: <font color=\"00FF00\">" + _playersShuffle.size() + "</font></center><br>");
-						
 						replyMSG.append("<center><font color=\"3366CC\">Wait till event start or remove your participation!</font><center>");
 						replyMSG.append("<center><button value=\"Remove\" action=\"bypass -h npc_" + objectId + "_ctf_player_leave\" width=85 height=21 back=\"L2UI_ch3.Btn1_normalOn\" fore=\"L2UI_ch3.Btn1_normal\"></center>");
 					}
@@ -1981,11 +1948,9 @@ public class CTF implements EventTask
 						replyMSG.append("<center><td width=\"200\">Min lvl: <font color=\"00FF00\">" + _minlvl + "</font></center></td><br>");
 						replyMSG.append("<center><td width=\"200\">Max lvl: <font color=\"00FF00\">" + _maxlvl + "</font></center></td><br><br>");
 						replyMSG.append("<center><font color=\"3366CC\">Teams:</font></center><br>");
-						
 						if (Config.CTF_EVEN_TEAMS.equals("NO") || Config.CTF_EVEN_TEAMS.equals("BALANCE"))
 						{
 							replyMSG.append("<center><table border=\"0\">");
-							
 							for (String team : _teams)
 							{
 								replyMSG.append("<tr><td width=\"100\"><font color=\"LEVEL\">" + team + "</font>&nbsp;(" + teamPlayersCount(team) + " joined)</td>");
@@ -2157,14 +2122,11 @@ public class CTF implements EventTask
 		_playersShuffle = new ArrayList<>();
 		_savePlayers = new ArrayList<>();
 		_savePlayerTeams = new ArrayList<>();
-		
 		_teamPointsCount = new ArrayList<>();
 		_teamPlayersCount = new ArrayList<>();
-		
 		cleanLocalEventInfo();
 		
 		_inProgress = false;
-		
 		loadData();
 	}
 	
@@ -2238,7 +2200,6 @@ public class CTF implements EventTask
 			
 			final int offset = Config.CTF_SPAWN_OFFSET;
 			player.teleToLocation(_teamsX.get(_teams.indexOf(player._teamNameCTF)) + Rnd.get(offset), _teamsY.get(_teams.indexOf(player._teamNameCTF)) + Rnd.get(offset), _teamsZ.get(_teams.indexOf(player._teamNameCTF)));
-			
 			afterAddDisconnectedPlayerOperations(player);
 		}
 	}
@@ -2274,7 +2235,6 @@ public class CTF implements EventTask
 				final int playerToAddIndex = Rnd.get(_playersShuffle.size());
 				PlayerInstance player = null;
 				player = _playersShuffle.get(playerToAddIndex);
-				
 				_players.add(player);
 				_players.get(playersCount)._teamNameCTF = _teams.get(teamCount);
 				_savePlayers.add(_players.get(playersCount).getName());
@@ -2338,7 +2298,6 @@ public class CTF implements EventTask
 						
 						final NpcHtmlMessage nhm = new NpcHtmlMessage(5);
 						final StringBuilder replyMSG = new StringBuilder("");
-						
 						replyMSG.append("<html><body>");
 						replyMSG.append("<font color=\"FFFF00\">Your team wins the event. Look in your inventory for the reward.</font>");
 						replyMSG.append("</body></html>");
@@ -2366,7 +2325,6 @@ public class CTF implements EventTask
 						
 						final NpcHtmlMessage nhm = new NpcHtmlMessage(5);
 						final StringBuilder replyMSG = new StringBuilder("");
-						
 						replyMSG.append("<html><body>");
 						replyMSG.append("<font color=\"FFFF00\">Your team had a tie in the event. Look in your inventory for the reward.</font>");
 						replyMSG.append("</body></html>");
@@ -2464,7 +2422,6 @@ public class CTF implements EventTask
 		}
 		
 		final int index = _teams.indexOf(teamName);
-		
 		if (index == -1)
 		{
 			return;
@@ -2488,7 +2445,6 @@ public class CTF implements EventTask
 	private static void removeTeamEventItems(String teamName)
 	{
 		final int index = _teams.indexOf(teamName);
-		
 		_flagSpawns.remove(index);
 		_flagsTaken.remove(index);
 		_flagIds.remove(index);
@@ -2505,7 +2461,6 @@ public class CTF implements EventTask
 	public static void setTeamPos(String teamName, PlayerInstance player)
 	{
 		final int index = _teams.indexOf(teamName);
-		
 		if (index == -1)
 		{
 			return;
@@ -2526,7 +2481,6 @@ public class CTF implements EventTask
 	public static void setTeamPos(String teamName, int x, int y, int z)
 	{
 		final int index = _teams.indexOf(teamName);
-		
 		if (index == -1)
 		{
 			return;
@@ -2550,7 +2504,6 @@ public class CTF implements EventTask
 		}
 		
 		final int index = _teams.indexOf(teamName);
-		
 		if (index == -1)
 		{
 			return;
@@ -2567,12 +2520,10 @@ public class CTF implements EventTask
 	public static int teamPlayersCount(String teamName)
 	{
 		final int index = _teams.indexOf(teamName);
-		
 		if (index == -1)
 		{
 			return -1;
 		}
-		
 		return _teamPlayersCount.get(index);
 	}
 	
@@ -2584,7 +2535,6 @@ public class CTF implements EventTask
 	public static void setTeamPlayersCount(String teamName, int teamPlayersCount)
 	{
 		final int index = _teams.indexOf(teamName);
-		
 		if (index == -1)
 		{
 			return;
@@ -2653,7 +2603,6 @@ public class CTF implements EventTask
 		final long totalTime = actualTime + _intervalBetweenMatches;
 		final long interval = totalTime - actualTime;
 		final int seconds = (int) (interval / 1000);
-		
 		return seconds / 60;
 	}
 	
@@ -2706,12 +2655,10 @@ public class CTF implements EventTask
 	public static int teamPointsCount(String teamName)
 	{
 		final int index = _teams.indexOf(teamName);
-		
 		if (index == -1)
 		{
 			return -1;
 		}
-		
 		return _teamPointsCount.get(index);
 	}
 	
@@ -2723,7 +2670,6 @@ public class CTF implements EventTask
 	public static void setTeamPointsCount(String teamName, int teamPointCount)
 	{
 		final int index = _teams.indexOf(teamName);
-		
 		if (index == -1)
 		{
 			return;
@@ -2772,7 +2718,6 @@ public class CTF implements EventTask
 		try
 		{
 			final NpcHtmlMessage adminReply = new NpcHtmlMessage(5);
-			
 			final StringBuilder replyMSG = new StringBuilder("<html><head><body><center>");
 			replyMSG.append("CTF Flag<br><br>");
 			replyMSG.append("<font color=\"00FF00\">" + teamName + "'s Flag</font><br1>");
@@ -3067,7 +3012,6 @@ public class CTF implements EventTask
 	private static void unspawnFlag(String teamName)
 	{
 		final int index = _teams.indexOf(teamName);
-		
 		_flagSpawns.get(index).getLastSpawn().deleteMe();
 		_flagSpawns.get(index).stopRespawn();
 		SpawnTable.getInstance().deleteSpawn(_flagSpawns.get(index), true);
@@ -3085,7 +3029,6 @@ public class CTF implements EventTask
 		try
 		{
 			_flagSpawns.set(index, new Spawn(tmpl));
-			
 			_flagSpawns.get(index).setX(_flagsX.get(index));
 			_flagSpawns.get(index).setY(_flagsY.get(index));
 			_flagSpawns.get(index).setZ(_flagsZ.get(index));
@@ -3094,7 +3037,6 @@ public class CTF implements EventTask
 			_flagSpawns.get(index).setRespawnDelay(1);
 			
 			SpawnTable.getInstance().addNewSpawn(_flagSpawns.get(index), false);
-			
 			_flagSpawns.get(index).init();
 			_flagSpawns.get(index).getLastSpawn().getStatus().setCurrentHp(999999999);
 			_flagSpawns.get(index).getLastSpawn().setTitle(teamName + "'s Flag");

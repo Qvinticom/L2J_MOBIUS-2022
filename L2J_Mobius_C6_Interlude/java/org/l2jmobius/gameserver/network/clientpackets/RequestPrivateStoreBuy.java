@@ -52,7 +52,6 @@ public class RequestPrivateStoreBuy extends GameClientPacket
 		}
 		
 		_items = new ItemRequest[_count];
-		
 		for (int i = 0; i < _count; i++)
 		{
 			final int objectId = readD();
@@ -62,7 +61,6 @@ public class RequestPrivateStoreBuy extends GameClientPacket
 				count = Integer.MAX_VALUE;
 			}
 			final int price = readD();
-			
 			_items[i] = new ItemRequest(objectId, (int) count, price);
 		}
 	}
@@ -102,7 +100,6 @@ public class RequestPrivateStoreBuy extends GameClientPacket
 		}
 		
 		final TradeList storeList = storePlayer.getSellList();
-		
 		if (storeList == null)
 		{
 			return;
@@ -127,7 +124,6 @@ public class RequestPrivateStoreBuy extends GameClientPacket
 			}
 			
 			final TradeItem sellersItem = storeList.getItem(ir.getObjectId());
-			
 			if (sellersItem == null)
 			{
 				final String msgErr = "[RequestPrivateStoreBuy] player " + getClient().getPlayer().getName() + " tried to buy an item not sold in a private store (buy), ban this player!";

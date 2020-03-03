@@ -220,7 +220,6 @@ public class QuestLink implements IBypassHandler
 		
 		// Get the state of the selected quest
 		final QuestState qs = player.getQuestState(questId);
-		
 		if (q != null)
 		{
 			if (((q.getId() >= 1) && (q.getId() < 20000)) && ((player.getWeightPenalty() >= 3) || !player.isInventoryUnder90(true)))
@@ -263,7 +262,6 @@ public class QuestLink implements IBypassHandler
 	{
 		// Create a QuestState table that will contain all QuestState to modify
 		final List<QuestState> states = new ArrayList<>();
-		
 		final NpcTemplate template = NpcData.getInstance().getTemplate(npcId);
 		if (template == null)
 		{

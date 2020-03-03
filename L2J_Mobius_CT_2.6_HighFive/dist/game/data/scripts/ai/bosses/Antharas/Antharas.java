@@ -614,7 +614,6 @@ public class Antharas extends AbstractNpcAI
 	public String onAttack(Npc npc, PlayerInstance attacker, int damage, boolean isSummon, Skill skill)
 	{
 		_lastAttack = System.currentTimeMillis();
-		
 		if (npc.getId() == BOMBER)
 		{
 			if (npc.calculateDistance3D(attacker) < 230)
@@ -879,7 +878,6 @@ public class Antharas extends AbstractNpcAI
 			
 			final double distance_c2 = npc.calculateDistance3D(c2);
 			final double direction_c2 = npc.calculateDirectionTo(c2);
-			
 			SkillHolder skillToCast = null;
 			boolean castOnTarget = false;
 			if (npc.getCurrentHp() < (npc.getMaxHp() * 0.25))

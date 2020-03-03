@@ -52,7 +52,6 @@ public class ArenaManager
 				}
 			}
 		}
-		
 		return null;
 	}
 	
@@ -68,7 +67,6 @@ public class ArenaManager
 				}
 			}
 		}
-		
 		return null;
 	}
 	

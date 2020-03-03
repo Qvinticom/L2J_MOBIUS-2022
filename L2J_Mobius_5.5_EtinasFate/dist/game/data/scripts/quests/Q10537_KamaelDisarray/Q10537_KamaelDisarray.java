@@ -179,7 +179,6 @@ public class Q10537_KamaelDisarray extends Quest
 	{
 		String htmltext = getNoQuestMsg(player);
 		final QuestState qs = getQuestState(player, true);
-		
 		if (npc.getId() == KRENAHT)
 		{
 			switch (qs.getState())
@@ -291,7 +290,6 @@ public class Q10537_KamaelDisarray extends Quest
 	// }
 	// return super.onSeeCreature(npc, creature, isSummon);
 	// }
-	
 	@Override
 	public String onSkillSee(Npc npc, PlayerInstance caster, Skill skill, WorldObject[] targets, boolean isSummon)
 	{
@@ -325,7 +323,6 @@ public class Q10537_KamaelDisarray extends Quest
 			final int killedGhosts = qs.getInt("AncientGhosts") + 1;
 			qs.set("AncientGhosts", killedGhosts);
 			playSound(killer, QuestSound.ITEMSOUND_QUEST_ITEMGET);
-			
 			if (killedGhosts >= 30)
 			{
 				qs.setCond(3, true);

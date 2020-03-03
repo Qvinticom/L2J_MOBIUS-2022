@@ -91,7 +91,6 @@ public class QuestState
 		_questName = quest.getName();
 		_player = player;
 		_state = state;
-		
 		player.setQuestState(this);
 	}
 	
@@ -415,7 +414,6 @@ public class QuestState
 		{
 			return null;
 		}
-		
 		return _vars.get(var);
 	}
 	
@@ -430,7 +428,6 @@ public class QuestState
 		{
 			return "";
 		}
-		
 		return _vars.get(var);
 	}
 	
@@ -442,7 +439,6 @@ public class QuestState
 	public int getInt(String var)
 	{
 		int varint = 0;
-		
 		String value = "";
 		if ((_vars != null) && ((value = _vars.get(var)) != null))
 		{
@@ -453,14 +449,12 @@ public class QuestState
 			catch (Exception e)
 			{
 				LOGGER.info(_player.getName() + ": variable " + var + " isn't an integer: returned value will be " + varint + e);
-				
 				if (Config.AUTODELETE_INVALID_QUEST_DATA)
 				{
 					exitQuest(true);
 				}
 			}
 		}
-		
 		return varint;
 	}
 	
@@ -486,7 +480,6 @@ public class QuestState
 	public int getQuestItemsCount(int itemId)
 	{
 		int count = 0;
-		
 		if ((_player != null) && (_player.getInventory() != null) && (_player.getInventory().getItems() != null))
 		{
 			for (ItemInstance item : _player.getInventory().getItems())
@@ -497,7 +490,6 @@ public class QuestState
 				}
 			}
 		}
-		
 		return count;
 	}
 	
@@ -575,7 +567,6 @@ public class QuestState
 		// Set quantity of item
 		// Add items to player's inventory
 		final ItemInstance item = _player.getInventory().addItem("Quest", itemId, count, _player, _player.getTarget());
-		
 		if (item == null)
 		{
 			return;
@@ -627,7 +618,6 @@ public class QuestState
 	{
 		// Get object item from player's inventory list
 		final ItemInstance item = _player.getInventory().getItemByItemId(itemId);
-		
 		if (item == null)
 		{
 			return;
@@ -809,7 +799,6 @@ public class QuestState
 			}
 			
 			final int count = info[1];
-			
 			int dropChance = info[3];
 			int amount = 0;
 			
@@ -919,7 +908,6 @@ public class QuestState
 		dropChance *= Config.RATE_DROP_QUEST / (_player.getParty() != null ? _player.getParty().getMemberCount() : 1);
 		
 		final int currentCount = getQuestItemsCount(itemId);
-		
 		if ((neededCount > 0) && (currentCount >= neededCount))
 		{
 			return true;
@@ -979,7 +967,6 @@ public class QuestState
 			
 			// Give the item to Player
 			_player.addItem("Quest", itemId, itemCount, _player.getTarget(), true);
-			
 			if (sound)
 			{
 				playSound((currentCount + itemCount) < neededCount ? "Itemsound.quest_itemget" : "Itemsound.quest_middle");

@@ -173,7 +173,6 @@ public class Q00134_TempleMissionary extends Quest
 	{
 		final QuestState qs = getQuestState(player, true);
 		String htmltext = getNoQuestMsg(player);
-		
 		switch (npc.getId())
 		{
 			case GLYVKA:

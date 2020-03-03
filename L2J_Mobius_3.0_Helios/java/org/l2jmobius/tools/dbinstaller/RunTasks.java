@@ -45,10 +45,8 @@ public class RunTasks extends Thread
 	{
 		new DBDumper(_frame, _db);
 		final ScriptExecutor exec = new ScriptExecutor(_frame);
-		
 		_frame.appendToProgressArea("Installing Database Content...");
 		exec.execSqlBatch(new File(_sqlDir));
-		
 		_frame.appendToProgressArea("Database Installation Complete!");
 		
 		try

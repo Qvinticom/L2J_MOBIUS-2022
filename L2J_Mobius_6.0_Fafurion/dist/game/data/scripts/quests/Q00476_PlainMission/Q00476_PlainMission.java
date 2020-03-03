@@ -82,7 +82,6 @@ public class Q00476_PlainMission extends Quest
 	public String onAdvEvent(String event, Npc npc, PlayerInstance player)
 	{
 		final QuestState qs = getQuestState(player, false);
-		
 		if (qs == null)
 		{
 			return null;
@@ -169,14 +168,12 @@ public class Q00476_PlainMission extends Quest
 	public String onKill(Npc npc, PlayerInstance killer, boolean isSummon)
 	{
 		final QuestState qs = getQuestState(killer, false);
-		
 		if ((qs != null) && qs.isCond(1))
 		{
 			int killedAntelope = qs.getInt("killed_" + ANTELOPE[0]);
 			int killedBandersnatch = qs.getInt("killed_" + BANDERSNATCH[0]);
 			int killedBuffalo = qs.getInt("killed_" + BUFFALO[0]);
 			int killedGrendel = qs.getInt("killed_" + GRENDEL[0]);
-			
 			if (CommonUtil.contains(ANTELOPE, npc.getId()))
 			{
 				if (killedAntelope < 45)

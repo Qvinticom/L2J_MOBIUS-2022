@@ -42,7 +42,6 @@ public class AreaFriendly implements ITargetTypeHandler
 	{
 		final List<Creature> targetList = new ArrayList<>();
 		final PlayerInstance player = creature.getActingPlayer();
-		
 		if (!checkTarget(player, target) && (skill.getCastRange() >= 0))
 		{
 			player.sendPacket(SystemMessageId.THAT_IS_AN_INCORRECT_TARGET);
@@ -65,7 +64,6 @@ public class AreaFriendly implements ITargetTypeHandler
 			};
 		}
 		targetList.add(target); // Add target to target list
-		
 		if (target != null)
 		{
 			final int maxTargets = skill.getAffectLimit();
@@ -107,7 +105,6 @@ public class AreaFriendly implements ITargetTypeHandler
 		if (target.isPlayable())
 		{
 			final PlayerInstance targetPlayer = target.getActingPlayer();
-			
 			if (player == targetPlayer)
 			{
 				return true;

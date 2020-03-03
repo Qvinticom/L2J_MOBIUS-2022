@@ -100,7 +100,6 @@ public class AdminPunishment implements IAdminCommandHandler
 							String key = st.hasMoreTokens() ? st.nextToken() : null;
 							final String af = st.hasMoreTokens() ? st.nextToken() : null;
 							final String name = key;
-							
 							if ((key == null) || (af == null))
 							{
 								BuilderUtil.sendSysMessage(activeChar, "Not enough data specified!");
@@ -129,7 +128,6 @@ public class AdminPunishment implements IAdminCommandHandler
 									{
 										final long expiration = PunishmentManager.getInstance().getPunishmentExpiration(key, affect, type);
 										String expire = "never";
-										
 										if (expiration > 0)
 										{
 											// Synchronize date formatter since its not thread safe.
@@ -221,7 +219,6 @@ public class AdminPunishment implements IAdminCommandHandler
 				}
 				
 				final String name = key;
-				
 				if ((key == null) || (af == null) || (t == null) || (exp == null) || (reason == null))
 				{
 					BuilderUtil.sendSysMessage(activeChar, "Please fill all the fields!");
@@ -294,7 +291,6 @@ public class AdminPunishment implements IAdminCommandHandler
 				final String af = st.hasMoreTokens() ? st.nextToken() : null;
 				final String t = st.hasMoreTokens() ? st.nextToken() : null;
 				final String name = key;
-				
 				if ((key == null) || (af == null) || (t == null))
 				{
 					BuilderUtil.sendSysMessage(activeChar, "Not enough data specified!");

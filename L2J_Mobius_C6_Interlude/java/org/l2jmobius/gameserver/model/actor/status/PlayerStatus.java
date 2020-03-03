@@ -90,7 +90,6 @@ public class PlayerStatus extends PlayableStatus
 		}
 		
 		int fullValue = (int) value;
-		
 		if ((attacker != null) && (attacker != getActiveChar()))
 		{
 			// Check and calculate transfered damage

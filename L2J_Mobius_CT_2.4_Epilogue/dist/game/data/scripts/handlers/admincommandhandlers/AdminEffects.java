@@ -164,7 +164,6 @@ public class AdminEffects implements IAdminCommandHandler
 			final Creature target = (Creature) activeChar.getTarget();
 			target.setInvisible(!target.isInvisible());
 			BuilderUtil.sendSysMessage(activeChar, "You've made " + target.getName() + " " + (target.isInvisible() ? "invisible" : "visible") + ".");
-			
 			if (target.isPlayer())
 			{
 				((PlayerInstance) target).broadcastUserInfo();
@@ -368,7 +367,6 @@ public class AdminEffects implements IAdminCommandHandler
 					radius = Integer.parseInt(st.nextToken());
 				}
 				final Team team = Team.valueOf(val.toUpperCase());
-				
 				World.getInstance().forEachVisibleObjectInRange(activeChar, PlayerInstance.class, radius, player -> player.setTeam(team));
 			}
 			catch (Exception e)
@@ -641,7 +639,6 @@ public class AdminEffects implements IAdminCommandHandler
 	private void adminAtmosphere(String type, String state, int duration, PlayerInstance activeChar)
 	{
 		IClientOutgoingPacket packet = null;
-		
 		if (type.equals("signsky"))
 		{
 			if (state.equals("dawn"))

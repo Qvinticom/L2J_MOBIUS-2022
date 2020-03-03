@@ -85,7 +85,6 @@ public class FortressOfTheDead extends ClanHallSiegeEngine
 		synchronized (this)
 		{
 			final Clan clan = attacker.getClan();
-			
 			if ((clan != null) && checkIsAttacker(clan))
 			{
 				final int id = clan.getId();
@@ -113,7 +112,6 @@ public class FortressOfTheDead extends ClanHallSiegeEngine
 		}
 		
 		final int npcId = npc.getId();
-		
 		if ((npcId == ALFRED) || (npcId == GISELLE))
 		{
 			npc.broadcastSay(ChatType.NPC_SHOUT, NpcStringId.AARGH_IF_I_DIE_THEN_THE_MAGIC_FORCE_FIELD_OF_BLOOD_WILL);
@@ -154,7 +152,6 @@ public class FortressOfTheDead extends ClanHallSiegeEngine
 	{
 		// Siege must start at night
 		final int hoursLeft = (GameTimeController.getInstance().getGameTime() / 60) % 24;
-		
 		if ((hoursLeft < 0) || (hoursLeft > 6))
 		{
 			cancelSiegeTask();

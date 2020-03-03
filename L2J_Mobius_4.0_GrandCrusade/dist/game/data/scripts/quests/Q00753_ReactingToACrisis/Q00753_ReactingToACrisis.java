@@ -113,7 +113,6 @@ public class Q00753_ReactingToACrisis extends Quest
 	{
 		final QuestState qs = getQuestState(player, true);
 		String htmltext = getNoQuestMsg(player);
-		
 		if (npc.getId() == BERNA)
 		{
 			switch (qs.getState())
@@ -196,7 +195,6 @@ public class Q00753_ReactingToACrisis extends Quest
 			takeItems(killer, VERNAS_VACCINE, -1);
 			qs.setCond(2, true);
 		}
-		
 		return super.onKill(npc, killer, isSummon);
 	}
 }

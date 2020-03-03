@@ -142,7 +142,6 @@ public class Escape implements IUserCommandHandler
 		// continue execution later
 		player.setSkillCast(ThreadPool.schedule(ef, unstuckTimer));
 		player.setSkillCastEndTime(10 + GameTimeController.getGameTicks() + (unstuckTimer / GameTimeController.MILLIS_IN_TICK));
-		
 		return true;
 	}
 	

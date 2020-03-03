@@ -121,7 +121,6 @@ public class Instance implements IIdentifiable, INamable
 		
 		// initialize instance spawns
 		_spawns.stream().filter(SpawnTemplate::isSpawningByDefault).forEach(spawnTemplate -> spawnTemplate.spawnAll(this));
-		
 		if (!isDynamic())
 		{
 			// Notify DP scripts

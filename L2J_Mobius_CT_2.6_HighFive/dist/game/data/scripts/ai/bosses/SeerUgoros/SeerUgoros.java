@@ -312,7 +312,6 @@ public class SeerUgoros extends AbstractNpcAI
 				else if (Rnd.get(10) < 6)
 				{
 					_weed = null;
-					
 					for (Attackable attackable : World.getInstance().getVisibleObjectsInRange(_ugoros, Attackable.class, 2000))
 					{
 						if (!attackable.isDead() && (attackable.getId() == WEED_ID))
@@ -338,7 +337,6 @@ public class SeerUgoros extends AbstractNpcAI
 			{
 				_state = ALIVE;
 				_attacker = null;
-				
 				if (_thinkTask != null)
 				{
 					_thinkTask.cancel(true);

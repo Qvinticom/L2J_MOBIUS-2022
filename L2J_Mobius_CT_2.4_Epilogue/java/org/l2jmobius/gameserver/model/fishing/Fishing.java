@@ -98,7 +98,6 @@ public class Fishing implements Runnable
 			lureType = isNoob ? 0 : 1;
 		}
 		_mode = (Rnd.get(100) >= 80) ? 1 : 0;
-		
 		_fisher.broadcastPacket(new ExFishingStartCombat(_fisher, _time, _fishMaxHp, _mode, lureType, _deceptiveMode));
 		_fisher.sendPacket(new PlaySound(1, "SF_S_01", 0, 0, 0, 0, 0));
 		// Succeeded in getting a bite

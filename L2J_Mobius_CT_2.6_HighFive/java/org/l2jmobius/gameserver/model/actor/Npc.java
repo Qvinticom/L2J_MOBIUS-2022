@@ -177,7 +177,6 @@ public class Npc extends Creature
 		// initialize the "current" collisions
 		_currentCollisionHeight = getTemplate().getfCollisionHeight();
 		_currentCollisionRadius = getTemplate().getfCollisionRadius();
-		
 		setFlying(template.isFlying());
 	}
 	
@@ -503,8 +502,6 @@ public class Npc extends Creature
 			player.sendPacket(ActionFailed.STATIC_PACKET);
 			return false;
 		}
-		// TODO: More checks...
-		
 		return true;
 	}
 	
@@ -546,7 +543,6 @@ public class Npc extends Creature
 		if (_castleIndex < 0)
 		{
 			final TownZone town = TownManager.getTown(getX(), getY(), getZ());
-			
 			if (town != null)
 			{
 				_castleIndex = CastleManager.getInstance().getCastleIndex(town.getTaxById());
@@ -599,12 +595,10 @@ public class Npc extends Creature
 	public Castle getCastle(long maxDistance)
 	{
 		final int index = CastleManager.getInstance().findNearestCastleIndex(this, maxDistance);
-		
 		if (index < 0)
 		{
 			return null;
 		}
-		
 		return CastleManager.getInstance().getCastles().get(index);
 	}
 	
@@ -644,12 +638,10 @@ public class Npc extends Creature
 	public Fort getFort(long maxDistance)
 	{
 		final int index = FortManager.getInstance().findNearestFortIndex(this, maxDistance);
-		
 		if (index < 0)
 		{
 			return null;
 		}
-		
 		return FortManager.getInstance().getForts().get(index);
 	}
 	
@@ -659,7 +651,6 @@ public class Npc extends Creature
 		{
 			getCastle();
 		}
-		
 		return _isInTown;
 	}
 	
@@ -719,7 +710,6 @@ public class Npc extends Creature
 	{
 		// Get the weapon identifier equipped in the right hand of the NpcInstance
 		final int weaponId = getTemplate().getRHandId();
-		
 		if (weaponId < 1)
 		{
 			return null;
@@ -727,7 +717,6 @@ public class Npc extends Creature
 		
 		// Get the weapon item equipped in the right hand of the NpcInstance
 		final Item item = ItemTable.getInstance().getTemplate(getTemplate().getRHandId());
-		
 		if (!(item instanceof Weapon))
 		{
 			return null;
@@ -760,7 +749,6 @@ public class Npc extends Creature
 		
 		// Get the weapon item equipped in the right hand of the NpcInstance
 		final Item item = ItemTable.getInstance().getTemplate(getTemplate().getLHandId());
-		
 		if (!(item instanceof Weapon))
 		{
 			return null;
@@ -795,7 +783,6 @@ public class Npc extends Creature
 	public String getHtmlPath(int npcId, int value)
 	{
 		String pom = "";
-		
 		if (value == 0)
 		{
 			pom = Integer.toString(npcId);
@@ -806,7 +793,6 @@ public class Npc extends Creature
 		}
 		
 		final String temp = "data/html/default/" + pom + ".htm";
-		
 		if (!Config.LAZY_CACHE)
 		{
 			// If not running lazy cache the file must be in the cache or it doesnt exist
@@ -1106,7 +1092,6 @@ public class Npc extends Creature
 		// Send a Server->Client NpcHtmlMessage containing the text of the NpcInstance to the PlayerInstance
 		final NpcHtmlMessage html = new NpcHtmlMessage(getObjectId());
 		html.setFile(player, filename);
-		
 		if (this instanceof MerchantInstance)
 		{
 			if (Config.LIST_PET_RENT_NPC.contains(npcId))
@@ -1188,7 +1173,6 @@ public class Npc extends Creature
 		
 		final Weapon weapon = (killer != null) ? killer.getActiveWeaponItem() : null;
 		_killingBlowWeaponId = (weapon != null) ? weapon.getId() : 0;
-		
 		if (_isFakePlayer && (killer != null) && killer.isPlayable())
 		{
 			final PlayerInstance player = killer.getActingPlayer();
@@ -1281,7 +1265,6 @@ public class Npc extends Creature
 		_killingBlowWeaponId = 0;
 		_isRandomAnimationEnabled = getTemplate().isRandomAnimationEnabled();
 		_isRandomWalkingEnabled = !WalkingManager.getInstance().isTargeted(this) && getTemplate().isRandomWalkEnabled();
-		
 		if (isTeleporting())
 		{
 			EventDispatcher.getInstance().notifyEventAsync(new OnNpcTeleport(this), this);
@@ -1488,7 +1471,6 @@ public class Npc extends Creature
 	{
 		final int npcId = getId();
 		String html = "";
-		
 		if (this instanceof WarehouseInstance)
 		{
 			html = HtmCache.getInstance().getHtm(player, "data/html/warehouse/" + npcId + "-noteach.htm");
@@ -1791,7 +1773,6 @@ public class Npc extends Creature
 		
 		final int radius = Rnd.get(radiusMin, radiusMax);
 		final double angle = Rnd.nextDouble() * 2 * Math.PI;
-		
 		return new Location((int) (getX() + (radius * Math.cos(angle))), (int) (getY() + (radius * Math.sin(angle))), getZ());
 	}
 	
@@ -1811,7 +1792,6 @@ public class Npc extends Creature
 			final int newX = (getX() + Rnd.get((RANDOM_ITEM_DROP_LIMIT * 2) + 1)) - RANDOM_ITEM_DROP_LIMIT;
 			final int newY = (getY() + Rnd.get((RANDOM_ITEM_DROP_LIMIT * 2) + 1)) - RANDOM_ITEM_DROP_LIMIT;
 			final int newZ = getZ() + 20;
-			
 			if (ItemTable.getInstance().getTemplate(itemId) == null)
 			{
 				LOGGER.log(Level.SEVERE, "Item doesn't exist so cannot be dropped. Item ID: " + itemId + " Quest: " + getName());

@@ -209,7 +209,6 @@ public class OctavisWarzone extends AbstractInstance
 				case "BEASTS_CHECK_HP":
 				{
 					final int hpPer = npc.getCurrentHpPercent();
-					
 					if ((hpPer < 50) && npc.isScriptValue(0))
 					{
 						npc.getStat().addFixedValue(Stat.REGENERATE_HP_RATE, 100d); // On original script 95000d was added, making Octavis targetable for two seconds.
@@ -283,7 +282,6 @@ public class OctavisWarzone extends AbstractInstance
 				{
 					final int moveX = npcParams.getInt("Move_to_X", 0);
 					final int moveY = npcParams.getInt("Move_to_Y", 0);
-					
 					if ((moveX != 0) && (moveY != 0))
 					{
 						npc.setRunning();
@@ -348,7 +346,6 @@ public class OctavisWarzone extends AbstractInstance
 		if (isInInstance(world))
 		{
 			final int hpPer = npc.getCurrentHpPercent();
-			
 			if (CommonUtil.contains(OCTAVIS_STAGE_1, npc.getId()))
 			{
 				if (hpPer >= 90)
@@ -379,7 +376,6 @@ public class OctavisWarzone extends AbstractInstance
 			else if (CommonUtil.contains(OCTAVIS_STAGE_2, npc.getId()))
 			{
 				final StatSet npcVars = npc.getVariables();
-				
 				if (npcVars.getBoolean("START_TIMERS", true))
 				{
 					npcVars.set("START_TIMERS", false);
@@ -506,7 +502,6 @@ public class OctavisWarzone extends AbstractInstance
 		final Creature creature = event.getSeen();
 		final Npc npc = (Npc) event.getSeer();
 		final Instance world = npc.getInstanceWorld();
-		
 		if (isInInstance(world) && creature.isPlayer() && npc.isScriptValue(0))
 		{
 			world.openCloseDoor(MAIN_DOOR_1, true);

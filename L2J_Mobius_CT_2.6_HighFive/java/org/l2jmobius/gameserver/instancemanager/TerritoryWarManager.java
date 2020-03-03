@@ -164,7 +164,6 @@ public class TerritoryWarManager implements Siegable
 			return true;
 		}
 		return false;
-		
 	}
 	
 	/**
@@ -842,7 +841,6 @@ public class TerritoryWarManager implements Siegable
 				final int castleId = rs.getInt("castleId");
 				final int fortId = rs.getInt("fortId");
 				final String ownedWardIds = rs.getString("OwnedWardIds");
-				
 				final Territory t = _territoryList.get(castleId);
 				if (t != null)
 				{
@@ -1037,7 +1035,6 @@ public class TerritoryWarManager implements Siegable
 			{
 				final Castle castle = CastleManager.getInstance().getCastleById(t.getCastleId());
 				final Fort fort = FortManager.getInstance().getFortById(t.getFortId());
-				
 				if (castle != null)
 				{
 					castle.spawnDoor();

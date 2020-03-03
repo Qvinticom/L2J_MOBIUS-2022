@@ -110,7 +110,6 @@ public class KartiaBoss extends AbstractNpcAI
 		final StatSet param = npc.getParameters();
 		final int kartiaLevel = param.getInt("cartia_level", 0);
 		final boolean isParty = param.getInt("party_type", 0) == 1;
-		
 		int fighter = 0;
 		int mage = 0;
 		switch (kartiaLevel)

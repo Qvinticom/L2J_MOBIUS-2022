@@ -60,7 +60,6 @@ public class BeastSoulShot implements IItemHandler
 		final short shotConsumption = activeOwner.getSummon().getSoulShotsPerHit();
 		final long shotCount = item.getCount();
 		final SkillHolder[] skills = item.getItem().getSkills();
-		
 		if (skills == null)
 		{
 			LOGGER.log(Level.WARNING, getClass().getSimpleName() + ": is missing skills!");
@@ -96,7 +95,6 @@ public class BeastSoulShot implements IItemHandler
 		// Pet uses the power of spirit.
 		activeOwner.sendPacket(SystemMessageId.YOUR_SERVITOR_USES_SPIRITSHOT); // Epilogue system message shift.
 		activeOwner.getSummon().setChargedShot(ShotType.SOULSHOTS, true);
-		
 		Broadcast.toSelfAndKnownPlayersInRadius(activeOwner, new MagicSkillUse(activeOwner.getSummon(), activeOwner.getSummon(), skills[0].getSkillId(), skills[0].getSkillLevel(), 0, 0), 600);
 		return true;
 	}

@@ -42,7 +42,6 @@ public class Craft implements ISkillHandler
 		}
 		
 		final PlayerInstance player = (PlayerInstance) creature;
-		
 		if (!player.getFloodProtectors().getManufacture().tryPerformAction("craft"))
 		{
 			player.sendMessage("You Cannot craft So Fast!");

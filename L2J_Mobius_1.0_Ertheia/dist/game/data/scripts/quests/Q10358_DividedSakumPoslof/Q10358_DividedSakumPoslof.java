@@ -159,14 +159,12 @@ public class Q10358_DividedSakumPoslof extends Quest
 	public String onKill(Npc npc, PlayerInstance killer, boolean isSummon)
 	{
 		final QuestState qs = getQuestState(killer, false);
-		
 		if ((qs != null) && qs.isStarted())
 		{
 			if (qs.isCond(1))
 			{
 				int killedZombies = qs.getInt("killed_" + ZOMBIE_WARRIOR);
 				int killedVeelans = qs.getInt("killed_" + VEELEAN);
-				
 				if (npc.getId() == ZOMBIE_WARRIOR)
 				{
 					if (killedZombies < 20)

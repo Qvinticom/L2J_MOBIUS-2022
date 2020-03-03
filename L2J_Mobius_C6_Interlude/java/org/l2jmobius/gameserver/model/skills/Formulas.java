@@ -73,7 +73,6 @@ public class Formulas
 		static Func getInstance(Stat stat)
 		{
 			final int pos = stat.ordinal();
-			
 			if (_instancies[pos] == null)
 			{
 				_instancies[pos] = new FuncAddLevel3(stat);
@@ -100,7 +99,6 @@ public class Formulas
 		static Func getInstance(Stat stat)
 		{
 			final int pos = stat.ordinal();
-			
 			if (_instancies[pos] == null)
 			{
 				_instancies[pos] = new FuncMultLevelMod(stat);
@@ -131,7 +129,6 @@ public class Formulas
 		static Func getInstance(Stat stat)
 		{
 			final int pos = stat.ordinal();
-			
 			if (_instancies[pos] == null)
 			{
 				_instancies[pos] = new FuncMultRegenResting(stat);
@@ -402,7 +399,6 @@ public class Formulas
 		public void calc(Env env)
 		{
 			final int level = env.player.getLevel();
-			
 			final Creature p = env.player;
 			if (p instanceof PetInstance)
 			{
@@ -857,7 +853,6 @@ public class Formulas
 		{
 			return HP_REGENERATE_PERIOD * 100; // 5 mins
 		}
-		
 		return HP_REGENERATE_PERIOD; // 3s
 	}
 	
@@ -875,7 +870,6 @@ public class Formulas
 	public Calculator[] getStdNPCCalculators()
 	{
 		final Calculator[] std = new Calculator[Stat.NUM_STATS];
-		
 		std[Stat.MAX_HP.ordinal()] = new Calculator();
 		std[Stat.MAX_HP.ordinal()].addFunc(FuncMaxHpMul.getInstance());
 		
@@ -1002,7 +996,6 @@ public class Formulas
 		double init = creature.getTemplate().getBaseHpReg();
 		double hpRegenMultiplier = creature.isRaid() ? Config.RAID_HP_REGEN_MULTIPLIER : Config.HP_REGEN_MULTIPLIER;
 		double hpRegenBonus = 0;
-		
 		if (Config.CHAMPION_ENABLE && creature.isChampion())
 		{
 			hpRegenMultiplier *= Config.CHAMPION_HP_REGEN;
@@ -1085,7 +1078,6 @@ public class Formulas
 		double init = creature.getTemplate().getBaseMpReg();
 		double mpRegenMultiplier = creature.isRaid() ? Config.RAID_MP_REGEN_MULTIPLIER : Config.MP_REGEN_MULTIPLIER;
 		double mpRegenBonus = 0;
-		
 		if (creature instanceof PlayerInstance)
 		{
 			final PlayerInstance player = (PlayerInstance) creature;
@@ -1155,7 +1147,6 @@ public class Formulas
 		double init = creature.getTemplate().getBaseHpReg();
 		double cpRegenMultiplier = Config.CP_REGEN_MULTIPLIER;
 		final double cpRegenBonus = 0;
-		
 		if (creature instanceof PlayerInstance)
 		{
 			final PlayerInstance player = (PlayerInstance) creature;
@@ -1262,7 +1253,6 @@ public class Formulas
 	{
 		double damage = attacker.getPAtk(target);
 		double defence = target.getPDef(attacker);
-		
 		if (ss)
 		{
 			damage *= 2.;
@@ -1278,7 +1268,6 @@ public class Formulas
 			// double cAtkMultiplied = (damage) + attacker.calcStat(Stats.CRITICAL_DAMAGE, damage, target, skill);
 			final double improvedDamageByCriticalVuln = target.calcStat(Stat.CRIT_VULN, damage, target, skill);
 			final double improvedDamageByCriticalVulnAndAdd = (attacker.calcStat(Stat.CRITICAL_DAMAGE_ADD, improvedDamageByCriticalVuln, target, skill));
-			
 			damage = improvedDamageByCriticalVulnAndAdd;
 			
 			final Effect vicious = attacker.getFirstEffect(312);
@@ -1532,7 +1521,6 @@ public class Formulas
 		}
 		
 		damage = (70 * damage) / defence;
-		
 		if (stat != null)
 		{
 			// get the vulnerability due to skills (buffs, passives, toggles, etc)
@@ -1767,7 +1755,6 @@ public class Formulas
 		
 		// apply ss bonus
 		mAtk *= ssModifier;
-		
 		double damage = ((91 * Math.sqrt(mAtk)) / mDef) * skill.getPower(attacker) * calcSkillVulnerability(target, skill);
 		
 		// In C5 summons make 10 % less dmg in PvP.
@@ -1937,7 +1924,6 @@ public class Formulas
 	public static final boolean calcLethalHit(Creature creature, Creature target, Skill skill)
 	{
 		final int chance = Rnd.get(1000);
-		
 		if ((target.isRaid() && Config.ALLOW_RAID_LETHAL) || (!target.isRaid() && !(target instanceof DoorInstance) && (!Config.ALLOW_LETHAL_PROTECTION_MOBS || !(target instanceof NpcInstance) || !(Config.LIST_LETHAL_PROTECTED_MOBS.contains(((NpcInstance) target).getNpcId())))))
 		{
 			if ((!target.isRaid() || Config.ALLOW_RAID_LETHAL) && !(target instanceof DoorInstance) && (!(target instanceof NpcInstance) || (((NpcInstance) target).getNpcId() != 35062)) && (!Config.ALLOW_LETHAL_PROTECTION_MOBS || !(target instanceof NpcInstance) || !(Config.LIST_LETHAL_PROTECTED_MOBS.contains(((NpcInstance) target).getNpcId()))))
@@ -1985,7 +1971,6 @@ public class Formulas
 				return false;
 			}
 		}
-		
 		return true;
 	}
 	
@@ -2006,7 +1991,6 @@ public class Formulas
 			return true;
 		}
 		double init = 0;
-		
 		if (Config.ALT_GAME_CANCEL_CAST && target.isCastingNow())
 		{
 			init = 15;
@@ -2109,10 +2093,8 @@ public class Formulas
 		int chance = (80 + (2 * (attacker.getAccuracy() - target.getEvasionRate(attacker)))) * 10;
 		// Get additional bonus from the conditions when you are attacking
 		chance *= hitConditionBonus.getConditionBonus(attacker, target);
-		
 		chance = Math.max(chance, 200);
 		chance = Math.min(chance, 980);
-		
 		return chance < Rnd.get(1000);
 	}
 	
@@ -2375,7 +2357,6 @@ public class Formulas
 		{
 			return 1;
 		}
-		
 		return 1 / saveVs.calcBonus(target);
 	}
 	
@@ -2422,9 +2403,7 @@ public class Formulas
 		if (skill.isMagic())
 		{
 			mAtkModifier = target.getMDef(attacker.getOwner(), skill);
-			
 			mAtkModifier = Math.pow(attacker.getMAtk() / mAtkModifier, 0.2);
-			
 			rate += (int) (mAtkModifier * 100) - 100;
 		}
 		
@@ -2442,7 +2421,6 @@ public class Formulas
 			else
 			{
 				final double x_factor = 1.3;
-				
 				resMod = res * x_factor;
 				if (resMod > 1)
 				{
@@ -2465,7 +2443,6 @@ public class Formulas
 		// lvl modifier.
 		final int deltamod = calcLvlDependModifier(attacker.getOwner(), target, skill);
 		rate += deltamod;
-		
 		if (rate > skill.getMaxChance())
 		{
 			rate = skill.getMaxChance();
@@ -2496,7 +2473,6 @@ public class Formulas
 		if (skill.isMagic())
 		{
 			mAtkModifier = target.getMDef(target, skill);
-			
 			if (bss)
 			{
 				ssModifier = 4;
@@ -2510,7 +2486,6 @@ public class Formulas
 		}
 		
 		final SkillType type = skill.getSkillType();
-		
 		if (target.isRaid() && ((type == SkillType.CONFUSION) || (type == SkillType.MUTE) || (type == SkillType.PARALYZE) || (type == SkillType.ROOT) || (type == SkillType.FEAR) || (type == SkillType.SLEEP) || (type == SkillType.STUN) || (type == SkillType.DEBUFF) || (type == SkillType.AGGDEBUFF)))
 		{
 			return false; // these skills should not work on RaidBoss
@@ -2544,7 +2519,6 @@ public class Formulas
 			else
 			{
 				final double x_factor = 1.3;
-				
 				resMod = res * x_factor;
 				if (resMod > 1)
 				{
@@ -2567,7 +2541,6 @@ public class Formulas
 		// lvl modifier.
 		final int deltamod = calcLvlDependModifier(attacker, target, skill);
 		rate += deltamod;
-		
 		if (rate > skill.getMaxChance())
 		{
 			rate = skill.getMaxChance();
@@ -2580,7 +2553,6 @@ public class Formulas
 		// physics configuration addons
 		final float physics_mult = getChanceMultiplier(skill);
 		rate *= physics_mult;
-		
 		if ((attacker instanceof PlayerInstance) && Config.SEND_SKILLS_CHANCE_TO_PLAYERS)
 		{
 			((PlayerInstance) attacker).sendMessage("Skill: " + skill.getName() + " Chance: " + rate + "%");
@@ -2639,7 +2611,6 @@ public class Formulas
 			}
 			
 			mAtkModifier = (14 * Math.sqrt(ssModifier * attacker.getMAtk(target, skill))) / mAtkModifier;
-			
 			rate = (int) (rate * mAtkModifier);
 		}
 		
@@ -2657,7 +2628,6 @@ public class Formulas
 			else
 			{
 				final double x_factor = 1.3;
-				
 				resMod = res * x_factor;
 				if (resMod > 1)
 				{
@@ -2680,7 +2650,6 @@ public class Formulas
 		// lvl modifier.
 		final int deltamod = calcLvlDependModifier(attacker, target, skill);
 		rate += deltamod;
-		
 		if (rate > skill.getMaxChance())
 		{
 			rate = skill.getMaxChance();
@@ -2693,7 +2662,6 @@ public class Formulas
 		// physics configuration addons
 		final float physics_mult = getChanceMultiplier(skill);
 		rate *= physics_mult;
-		
 		if ((attacker instanceof PlayerInstance) && Config.SEND_SKILLS_CHANCE_TO_PLAYERS)
 		{
 			((PlayerInstance) attacker).sendMessage("EffectType " + effect.effectType + " Chance: " + rate + "%");
@@ -2773,7 +2741,6 @@ public class Formulas
 				}
 			}
 		}
-		
 		return multiplier;
 	}
 	
@@ -2820,7 +2787,6 @@ public class Formulas
 	public static float getChanceMultiplier(Skill skill)
 	{
 		float multiplier = 1;
-		
 		if ((skill != null) && (skill.getSkillType() != null))
 		{
 			switch (skill.getSkillType())
@@ -2883,7 +2849,6 @@ public class Formulas
 				}
 			}
 		}
-		
 		return multiplier;
 	}
 	
@@ -2897,7 +2862,6 @@ public class Formulas
 	{
 		final double lvlDifference = target.getLevel() - (skill.getMagicLevel() > 0 ? skill.getMagicLevel() : attacker.getLevel());
 		final int rate = Math.round((float) (Math.pow(1.3, lvlDifference) * 100));
-		
 		return Rnd.get(10000) > rate;
 	}
 	
@@ -2952,7 +2916,6 @@ public class Formulas
 		double mAtk = attacker.getMAtk(target, skill);
 		final double mDef = target.getMDef(attacker, skill);
 		final double mp = target.getMaxMp();
-		
 		int ssModifier = 1;
 		// Add Bonus for Sps/SS
 		if ((attacker instanceof Summon) && !(attacker instanceof PetInstance))
@@ -2983,7 +2946,6 @@ public class Formulas
 		}
 		
 		mAtk *= ssModifier;
-		
 		double damage = (Math.sqrt(mAtk) * skill.getPower(attacker) * mp) / 97 / mDef;
 		damage *= calcSkillVulnerability(target, skill);
 		return damage;
@@ -2995,11 +2957,9 @@ public class Formulas
 		
 		// double modifier = WITbonus[casterWIT];
 		final double modifier = BaseStat.WIT.calcBonus(caster);
-		
 		if ((restorePercent != 100) && (restorePercent != 0))
 		{
 			restorePercent = baseRestorePercent * modifier;
-			
 			if ((restorePercent - baseRestorePercent) > 20.0)
 			{
 				restorePercent = baseRestorePercent + 20.0;
@@ -3024,7 +2984,6 @@ public class Formulas
 		{
 			return false;
 		}
-		
 		return Rnd.get(100) < target.calcStat(Stat.P_SKILL_EVASION, 0, null, skill);
 	}
 	
@@ -3036,7 +2995,6 @@ public class Formulas
 		}
 		
 		double val = actor.getStat().calcStat(Stat.SKILL_MASTERY, 0, null, null);
-		
 		if (actor instanceof PlayerInstance)
 		{
 			if (((PlayerInstance) actor).isMageClass())
@@ -3092,7 +3050,6 @@ public class Formulas
 		final boolean isPvP = (attacker instanceof Playable) && (target instanceof Playable);
 		double damage = attacker.getPAtk(target);
 		final double defence = target.getPDef(attacker);
-		
 		if (ss)
 		{
 			damage *= 2;

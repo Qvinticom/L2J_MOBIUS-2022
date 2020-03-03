@@ -55,7 +55,6 @@ public class Die implements IClientOutgoingPacket
 			final Clan clan = creature.getActingPlayer().getClan();
 			boolean isInCastleDefense = false;
 			boolean isInFortDefense = false;
-			
 			SiegeClan siegeClan = null;
 			final Castle castle = CastleManager.getInstance().getCastle(creature);
 			final Fort fort = FortManager.getInstance().getFort(creature);

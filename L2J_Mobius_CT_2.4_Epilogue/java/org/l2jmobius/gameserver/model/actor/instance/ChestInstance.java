@@ -74,7 +74,6 @@ public class ChestInstance extends MonsterInstance
 	public void doItemDrop(NpcTemplate npcTemplate, Creature lastAttacker)
 	{
 		int id = getTemplate().getId();
-		
 		if (!_specialDrop)
 		{
 			if ((id >= 18265) && (id <= 18286))
@@ -114,7 +113,6 @@ public class ChestInstance extends MonsterInstance
 	{
 		int trapSkillId = 0;
 		final int rnd = Rnd.get(120);
-		
 		if (getTemplate().getLevel() >= 61)
 		{
 			if (rnd >= 90)
@@ -218,7 +216,6 @@ public class ChestInstance extends MonsterInstance
 		}
 		
 		final Skill skill = SkillData.getInstance().getSkill(skillId, skillLevel);
-		
 		if (!player.isAffectedBySkill(skillId))
 		{
 			skill.applyEffects(this, player);

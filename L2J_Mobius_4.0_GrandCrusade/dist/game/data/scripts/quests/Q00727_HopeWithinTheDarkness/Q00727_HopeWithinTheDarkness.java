@@ -91,7 +91,6 @@ public class Q00727_HopeWithinTheDarkness extends Quest
 	{
 		final QuestState qs = getQuestState(player, true);
 		String htmltext = getNoQuestMsg(player);
-		
 		if (qs.isCreated())
 		{
 			final Castle castle = npc.getCastle();

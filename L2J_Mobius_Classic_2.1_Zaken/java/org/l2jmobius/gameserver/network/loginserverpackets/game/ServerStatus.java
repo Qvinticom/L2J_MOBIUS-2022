@@ -100,7 +100,6 @@ public class ServerStatus extends BaseSendablePacket
 			writeD(temp.id);
 			writeD(temp.value);
 		}
-		
 		return getBytes();
 	}
 }

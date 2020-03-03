@@ -81,7 +81,6 @@ public class EffectSignetMDam extends Effect
 		int x = getEffector().getX();
 		int y = getEffector().getY();
 		int z = getEffector().getZ();
-		
 		if ((getEffector() instanceof PlayerInstance) && (getSkill().getTargetType() == Skill.SkillTargetType.TARGET_GROUND))
 		{
 			final Location wordPosition = ((PlayerInstance) getEffector()).getCurrentSkillWorldPosition();
@@ -94,7 +93,6 @@ public class EffectSignetMDam extends Effect
 		}
 		effectPoint.setInvul(true);
 		effectPoint.spawnMe(x, y, z);
-		
 		_actor = effectPoint;
 	}
 	
@@ -108,12 +106,10 @@ public class EffectSignetMDam extends Effect
 		
 		final int mpConsume = getSkill().getMpConsume();
 		final PlayerInstance caster = (PlayerInstance) getEffector();
-		
 		sps = caster.checkSps();
 		bss = caster.checkBss();
 		
 		final List<Creature> targets = new ArrayList<>();
-		
 		for (Creature creature : _actor.getKnownList().getKnownCharactersInRadius(getSkill().getSkillRadius()))
 		{
 			if ((creature == null) || (creature == caster))
@@ -152,7 +148,6 @@ public class EffectSignetMDam extends Effect
 			{
 				final boolean mcrit = Formulas.calcMCrit(caster.getMCriticalHit(target, getSkill()));
 				final int mdam = (int) Formulas.calcMagicDam(caster, target, getSkill(), sps, bss, mcrit);
-				
 				if (target instanceof Summon)
 				{
 					target.broadcastStatusUpdate();

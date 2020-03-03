@@ -41,7 +41,6 @@ public class Q10317_OrbisWitch extends Quest
 		super(10317);
 		addStartNpc(OPERA);
 		addTalkId(OPERA, LYDIA);
-		
 		addCondMinLevel(MIN_LEVEL, "32946-09.html");
 		addCondCompletedQuest(Q10316_UndecayingMemoryOfThePast.class.getSimpleName(), "32946-09.html");
 	}
@@ -89,7 +88,6 @@ public class Q10317_OrbisWitch extends Quest
 	{
 		final QuestState qs = getQuestState(player, true);
 		String htmltext = getNoQuestMsg(player);
-		
 		switch (npc.getId())
 		{
 			case OPERA:

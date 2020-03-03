@@ -50,7 +50,6 @@ public class TeleportLocationTable
 			while (rs.next())
 			{
 				teleport = new TeleportLocation();
-				
 				teleport.setTeleId(rs.getInt("id"));
 				teleport.setLocX(rs.getInt("loc_x"));
 				teleport.setLocY(rs.getInt("loc_y"));

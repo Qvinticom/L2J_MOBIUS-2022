@@ -175,7 +175,6 @@ public class ServerList implements IOutgoingPacket
 		{
 			packet.writeC(0x00);
 		}
-		
 		return true;
 	}
 }

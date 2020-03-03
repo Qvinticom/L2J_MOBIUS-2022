@@ -240,7 +240,6 @@ public class PlayerKnownList extends PlayableKnownList
 				{
 					// Update the state of the Creature object client side by sending Server->Client packet MoveToPawn/CharMoveToLocation and AutoAttackStart to the PlayerInstance
 					final Creature obj = (Creature) object;
-					
 					final CreatureAI objAi = obj.getAI();
 					if (objAi != null)
 					{
@@ -249,7 +248,6 @@ public class PlayerKnownList extends PlayableKnownList
 				}
 			}
 		}, _packetSendDelay + Rnd.get(50)); // Add additional 0-49ms in case of overlapping tasks on heavy load.
-		
 		return true;
 	}
 	
@@ -267,7 +265,6 @@ public class PlayerKnownList extends PlayableKnownList
 		}
 		
 		final PlayerInstance activeChar = getActiveChar();
-		
 		PlayerInstance player = null;
 		if (object instanceof PlayerInstance)
 		{
@@ -309,7 +306,6 @@ public class PlayerKnownList extends PlayableKnownList
 	{
 		// When knownlist grows, the distance to forget should be at least the same as the previous watch range, or it becomes possible that extra charinfo packets are being sent (watch-forget-watch-forget).
 		final int knownlistSize = getKnownObjects().size();
-		
 		if (knownlistSize <= 25)
 		{
 			return 4200;
@@ -331,7 +327,6 @@ public class PlayerKnownList extends PlayableKnownList
 	public int getDistanceToWatchObject(WorldObject object)
 	{
 		final int knownlistSize = getKnownObjects().size();
-		
 		if (knownlistSize <= 25)
 		{
 			return 3500; // empty field

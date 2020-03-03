@@ -454,7 +454,6 @@ public abstract class Inventory extends ItemContainer
 			
 			// Apply skill, if weapon have "skills on unequip"
 			it.forEachSkill(ItemSkillType.ON_UNEQUIP, holder -> holder.getSkill().activateSkill(player, player));
-			
 			if (update)
 			{
 				player.sendSkillList();
@@ -600,7 +599,6 @@ public abstract class Inventory extends ItemContainer
 			
 			// Apply skill, if weapon have "skills on equip"
 			item.getItem().forEachSkill(ItemSkillType.ON_EQUIP, holder -> holder.getSkill().activateSkill(player, player));
-			
 			if (update)
 			{
 				player.sendSkillList();
@@ -940,7 +938,6 @@ public abstract class Inventory extends ItemContainer
 	{
 		_paperdoll = new ItemInstance[PAPERDOLL_TOTALSLOTS];
 		_paperdollListeners = new ArrayList<>();
-		
 		if (this instanceof PlayerInventory)
 		{
 			addPaperdollListener(ArmorSetListener.getInstance());
@@ -1612,7 +1609,6 @@ public abstract class Inventory extends ItemContainer
 	public ItemInstance unEquipItemInBodySlot(long slot)
 	{
 		int pdollSlot = -1;
-		
 		if (slot == Item.SLOT_L_EAR)
 		{
 			pdollSlot = PAPERDOLL_LEAR;
@@ -1990,7 +1986,6 @@ public abstract class Inventory extends ItemContainer
 	protected void refreshWeight()
 	{
 		long weight = 0;
-		
 		for (ItemInstance item : _items.values())
 		{
 			if ((item != null) && (item.getItem() != null))
@@ -2022,7 +2017,6 @@ public abstract class Inventory extends ItemContainer
 		}
 		
 		ItemInstance arrow = null;
-		
 		for (ItemInstance item : getItems())
 		{
 			if (item.isEtcItem() && (item.getItem().getCrystalTypePlus() == bow.getCrystalTypePlus()) && (item.getEtcItem().getItemType() == EtcItemType.ARROW))
@@ -2044,7 +2038,6 @@ public abstract class Inventory extends ItemContainer
 	public ItemInstance findBoltForCrossBow(Item crossbow)
 	{
 		ItemInstance bolt = null;
-		
 		for (ItemInstance item : getItems())
 		{
 			if (item.isEtcItem() && (item.getItem().getCrystalTypePlus() == crossbow.getCrystalTypePlus()) && (item.getEtcItem().getItemType() == EtcItemType.BOLT))
@@ -2080,7 +2073,6 @@ public abstract class Inventory extends ItemContainer
 						if (getOwner().isPlayer())
 						{
 							final PlayerInstance player = (PlayerInstance) getOwner();
-							
 							if (!player.canOverrideCond(PlayerCondOverride.ITEM_CONDITIONS) && !player.isHero() && item.isHeroItem())
 							{
 								item.setItemLocation(ItemLocation.INVENTORY);
@@ -2411,7 +2403,6 @@ public abstract class Inventory extends ItemContainer
 	public void reloadEquippedItems()
 	{
 		int slot;
-		
 		for (ItemInstance item : _paperdoll)
 		{
 			if (item == null)
@@ -2420,7 +2411,6 @@ public abstract class Inventory extends ItemContainer
 			}
 			
 			slot = item.getLocationSlot();
-			
 			for (PaperdollListener listener : _paperdollListeners)
 			{
 				if (listener == null)

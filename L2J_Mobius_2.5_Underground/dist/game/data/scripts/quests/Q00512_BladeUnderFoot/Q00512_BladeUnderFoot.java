@@ -100,7 +100,6 @@ public class Q00512_BladeUnderFoot extends Quest
 	{
 		final QuestState qs = getQuestState(player, true);
 		String htmltext; // = getNoQuestMsg(player);
-		
 		if (qs.isCreated())
 		{
 			final Castle castle = npc.getCastle();

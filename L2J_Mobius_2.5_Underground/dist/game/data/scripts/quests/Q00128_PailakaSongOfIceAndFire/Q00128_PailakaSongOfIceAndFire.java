@@ -360,7 +360,6 @@ public class Q00128_PailakaSongOfIceAndFire extends Quest
 		final PlayerInstance player = event.getPlayer();
 		final int oldLevel = event.getOldLevel();
 		final int newLevel = event.getNewLevel();
-		
 		if ((oldLevel < newLevel) && (newLevel == MIN_LEVEL))
 		{
 			player.sendPacket(new TutorialShowQuestionMark(getId()));

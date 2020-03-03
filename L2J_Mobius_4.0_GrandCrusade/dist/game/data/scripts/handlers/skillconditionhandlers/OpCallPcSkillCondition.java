@@ -57,7 +57,6 @@ public class OpCallPcSkillCondition implements ISkillCondition
 			player.sendPacket(SystemMessageId.YOU_CANNOT_USE_SUMMONING_OR_TELEPORTING_IN_THIS_AREA);
 			canCallPlayer = false;
 		}
-		
 		return canCallPlayer;
 	}
 }

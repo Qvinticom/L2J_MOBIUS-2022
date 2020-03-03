@@ -118,7 +118,6 @@ public class Q00061_LawEnforcement extends Quest
 						if (newClassId != null)
 						{
 							final ClassId currentClassId = player.getClassId();
-							
 							if (!newClassId.childOf(currentClassId))
 							{
 								Util.handleIllegalPlayerAction(player, "Player " + player.getName() + " tried to cheat class transfer for Judicator!", Config.DEFAULT_PUNISH);
@@ -146,7 +145,6 @@ public class Q00061_LawEnforcement extends Quest
 	{
 		final QuestState qs = getQuestState(player, true);
 		String htmltext = getNoQuestMsg(player);
-		
 		switch (qs.getState())
 		{
 			case State.CREATED:

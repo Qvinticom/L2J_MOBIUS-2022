@@ -72,47 +72,39 @@ public class Evolve
 		final int oldX = currentPet.getX();
 		final int oldY = currentPet.getY();
 		final int oldZ = currentPet.getZ();
-		
 		final PetData oldData = PetDataTable.getInstance().getPetDataByItemId(itemIdtake);
-		
 		if (oldData == null)
 		{
 			return false;
 		}
 		
 		final int oldnpcID = oldData.getNpcId();
-		
 		if ((currentPet.getStat().getLevel() < petminlvl) || (currentPet.getId() != oldnpcID))
 		{
 			return false;
 		}
 		
 		final PetData petData = PetDataTable.getInstance().getPetDataByItemId(itemIdgive);
-		
 		if (petData == null)
 		{
 			return false;
 		}
 		
 		final int npcID = petData.getNpcId();
-		
 		if (npcID == 0)
 		{
 			return false;
 		}
 		
 		final NpcTemplate npcTemplate = NpcData.getInstance().getTemplate(npcID);
-		
 		currentPet.unSummon(player);
 		
 		// deleting old pet item
 		currentPet.destroyControlItem(player, true);
-		
 		item = player.getInventory().addItem("Evolve", itemIdgive, 1, player, npc);
 		
 		// Summoning new pet
 		final PetInstance petSummon = PetInstance.spawnPet(npcTemplate, player, item);
-		
 		if (petSummon == null)
 		{
 			return false;
@@ -143,7 +135,6 @@ public class Evolve
 		item.setEnchantLevel(petSummon.getLevel());
 		
 		ThreadPool.schedule(new EvolveFinalizer(player, petSummon), 900);
-		
 		if (petSummon.getCurrentFed() <= 0)
 		{
 			ThreadPool.schedule(new EvolveFeedWait(player, petSummon), 60000);
@@ -212,7 +203,6 @@ public class Evolve
 		}
 		
 		final long _maxexp = petSummon.getStat().getExpForLevel(oldpetlvl);
-		
 		petSummon.getStat().addExp(_maxexp);
 		petSummon.setCurrentHp(petSummon.getMaxHp());
 		petSummon.setCurrentMp(petSummon.getMaxMp());
@@ -237,7 +227,6 @@ public class Evolve
 		player.broadcastUserInfo();
 		
 		ThreadPool.schedule(new EvolveFinalizer(player, petSummon), 900);
-		
 		if (petSummon.getCurrentFed() <= 0)
 		{
 			ThreadPool.schedule(new EvolveFeedWait(player, petSummon), 60000);

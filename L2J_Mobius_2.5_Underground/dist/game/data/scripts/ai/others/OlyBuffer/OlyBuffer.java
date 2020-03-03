@@ -57,7 +57,6 @@ public class OlyBuffer extends AbstractNpcAI
 	public String onFirstTalk(Npc npc, PlayerInstance player)
 	{
 		String htmltext = null;
-		
 		if (npc.isScriptValue(0))
 		{
 			htmltext = "olympiad_master001.htm";
@@ -69,7 +68,6 @@ public class OlyBuffer extends AbstractNpcAI
 	public String onAdvEvent(String event, Npc npc, PlayerInstance player)
 	{
 		String htmltext = null;
-		
 		switch (event)
 		{
 			case "guardian":
@@ -91,7 +89,6 @@ public class OlyBuffer extends AbstractNpcAI
 		npc.setScriptValue(1);
 		htmltext = "olympiad_master003.htm";
 		getTimers().addTimer("DELETE_ME", 5000, evnt -> npc.deleteMe());
-		
 		return htmltext;
 	}
 	

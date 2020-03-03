@@ -119,7 +119,6 @@ public class Q00367_ElectrifyingRecharge extends Quest
 			return super.onAttack(npc, attacker, damage, isSummon);
 		}
 		qs = getQuestState(luckyPlayer, false);
-		
 		if ((qs != null) && qs.isStarted() && !hasQuestItems(luckyPlayer, TITAN_LAMP5))
 		{
 			final int random = getRandom(37);

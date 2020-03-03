@@ -72,7 +72,6 @@ public class TownManager
 	public static boolean townHasCastleInSiege(int townId)
 	{
 		final int castleIndex = getTownCastle(townId);
-		
 		if (castleIndex > 0)
 		{
 			final Castle castle = CastleManager.getInstance().getCastles().get(CastleManager.getInstance().getCastleIndex(castleIndex));

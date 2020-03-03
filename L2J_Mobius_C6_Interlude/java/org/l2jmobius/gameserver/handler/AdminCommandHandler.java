@@ -101,7 +101,6 @@ public class AdminCommandHandler
 	private AdminCommandHandler()
 	{
 		_datatable = new HashMap<>();
-		
 		registerAdminCommandHandler(new AdminAdmin());
 		registerAdminCommandHandler(new AdminAio());
 		registerAdminCommandHandler(new AdminAnnouncements());
@@ -193,12 +192,10 @@ public class AdminCommandHandler
 	public IAdminCommandHandler getAdminCommandHandler(String adminCommand)
 	{
 		String command = adminCommand;
-		
 		if (adminCommand.indexOf(' ') != -1)
 		{
 			command = adminCommand.substring(0, adminCommand.indexOf(' '));
 		}
-		
 		return _datatable.get(command);
 	}
 	

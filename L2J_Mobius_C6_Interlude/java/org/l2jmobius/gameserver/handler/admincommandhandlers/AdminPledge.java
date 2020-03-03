@@ -63,9 +63,7 @@ public class AdminPledge implements IAdminCommandHandler
 	public boolean useAdminCommand(String command, PlayerInstance activeChar)
 	{
 		final StringTokenizer st = new StringTokenizer(command);
-		
 		final CommandEnum comm = CommandEnum.valueOf(st.nextToken());
-		
 		if (comm == null)
 		{
 			return false;

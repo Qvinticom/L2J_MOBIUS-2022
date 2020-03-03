@@ -251,11 +251,9 @@ public class Q246_PossessorOfAPreciousSoul extends Quest
 			if (Rnd.get(10) < 2)
 			{
 				final int neklaceOrRing = (npcId == PILGRIM_OF_SPLENDOR) ? WATERBINDER : EVERGREEN;
-				
 				if (!st.hasQuestItems(neklaceOrRing))
 				{
 					st.giveItems(neklaceOrRing, 1);
-					
 					if (!st.hasQuestItems((npcId == PILGRIM_OF_SPLENDOR) ? EVERGREEN : WATERBINDER))
 					{
 						st.playSound(QuestState.SOUND_ITEMGET);

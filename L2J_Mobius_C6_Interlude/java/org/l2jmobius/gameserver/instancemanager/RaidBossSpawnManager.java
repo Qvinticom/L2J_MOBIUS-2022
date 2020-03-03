@@ -129,7 +129,6 @@ public class RaidBossSpawnManager
 		public void run()
 		{
 			RaidBossInstance raidboss = null;
-			
 			if (bossId == 25328)
 			{
 				raidboss = DayNightSpawnManager.getInstance().handleBoss(_spawns.get(bossId));
@@ -147,7 +146,6 @@ public class RaidBossSpawnManager
 				info.set("currentHP", raidboss.getCurrentHp());
 				info.set("currentMP", raidboss.getCurrentMp());
 				info.set("respawnTime", 0);
-				
 				_storedInfo.put(bossId, info);
 				
 				AdminData.broadcastMessageToGMs("Spawning Raid Boss " + raidboss.getName() + ".");
@@ -189,14 +187,11 @@ public class RaidBossSpawnManager
 			final int RespawnMaxDelay = boss.getSpawn().getRespawnMaxDelay();
 			final long respawn_delay = Rnd.get((int) (RespawnMinDelay * 1000 * Config.RAID_MIN_RESPAWN_MULTIPLIER), (int) (RespawnMaxDelay * 1000 * Config.RAID_MAX_RESPAWN_MULTIPLIER));
 			final long respawnTime = Calendar.getInstance().getTimeInMillis() + respawn_delay;
-			
 			info.set("currentHP", boss.getMaxHp());
 			info.set("currentMP", boss.getMaxMp());
 			info.set("respawnTime", respawnTime);
-			
 			ScheduledFuture<?> futureSpawn;
 			futureSpawn = ThreadPool.schedule(new SpawnSchedule(boss.getNpcId()), respawn_delay);
-			
 			_schedules.put(boss.getNpcId(), futureSpawn);
 			
 			// To update immediately the database, used for website to show up RaidBoss status.
@@ -233,9 +228,7 @@ public class RaidBossSpawnManager
 		
 		final int bossId = spawnDat.getNpcId();
 		final long time = Calendar.getInstance().getTimeInMillis();
-		
 		SpawnTable.getInstance().addNewSpawn(spawnDat, false);
-		
 		if ((respawnTime == 0) || (time > respawnTime))
 		{
 			final RaidBossInstance raidboss = bossId == 25328 ? DayNightSpawnManager.getInstance().handleBoss(spawnDat) : (RaidBossInstance) spawnDat.doSpawn();
@@ -259,7 +252,6 @@ public class RaidBossSpawnManager
 				info.set("currentHP", currentHP);
 				info.set("currentMP", currentMP);
 				info.set("respawnTime", 0);
-				
 				_storedInfo.put(bossId, info);
 			}
 		}
@@ -267,9 +259,7 @@ public class RaidBossSpawnManager
 		{
 			ScheduledFuture<?> futureSpawn;
 			final long spawnTime = respawnTime - Calendar.getInstance().getTimeInMillis();
-			
 			futureSpawn = ThreadPool.schedule(new SpawnSchedule(bossId), spawnTime);
-			
 			_schedules.put(bossId, futureSpawn);
 		}
 		
@@ -367,7 +357,6 @@ public class RaidBossSpawnManager
 				}
 				
 				final RaidBossInstance boss = _bosses.get(bossId);
-				
 				if (boss == null)
 				{
 					continue;
@@ -379,7 +368,6 @@ public class RaidBossSpawnManager
 				}
 				
 				final StatSet info = _storedInfo.get(bossId);
-				
 				if (info == null)
 				{
 					continue;
@@ -414,7 +402,6 @@ public class RaidBossSpawnManager
 	public String[] getAllRaidBossStatus()
 	{
 		final String[] msg = new String[(_bosses == null) ? 0 : _bosses.size()];
-		
 		if (_bosses == null)
 		{
 			msg[0] = "None";
@@ -422,7 +409,6 @@ public class RaidBossSpawnManager
 		}
 		
 		int index = 0;
-		
 		for (RaidBossInstance boss : _bosses.values())
 		{
 			msg[index++] = boss.getName() + ": " + boss.getRaidStatus().name();
@@ -439,7 +425,6 @@ public class RaidBossSpawnManager
 	public String getRaidBossStatus(int bossId)
 	{
 		String msg = "RaidBoss Status..." + Config.EOL;
-		
 		if (_bosses == null)
 		{
 			return msg += "None";
@@ -448,7 +433,6 @@ public class RaidBossSpawnManager
 		if (_bosses.containsKey(bossId))
 		{
 			final RaidBossInstance boss = _bosses.get(bossId);
-			
 			msg += boss.getName() + ": " + boss.getRaidStatus().name();
 		}
 		
@@ -502,13 +486,11 @@ public class RaidBossSpawnManager
 		info.set("currentHP", raidboss.getCurrentHp());
 		info.set("currentMP", raidboss.getCurrentMp());
 		info.set("respawnTime", 0);
-		
 		raidboss.setRaidStatus(RaidBossStatus.ALIVE);
 		
 		_storedInfo.put(raidboss.getNpcId(), info);
 		
 		AdminData.broadcastMessageToGMs("Spawning Raid Boss " + raidboss.getName());
-		
 		_bosses.put(raidboss.getNpcId(), raidboss);
 	}
 	

@@ -51,7 +51,6 @@ public class StrSiegeAssault implements ISkillHandler
 		}
 		
 		final PlayerInstance player = (PlayerInstance) creature;
-		
 		if (!creature.isRiding())
 		{
 			return;
@@ -84,7 +83,6 @@ public class StrSiegeAssault implements ISkillHandler
 		try
 		{
 			final ItemInstance itemToTake = player.getInventory().getItemByItemId(skill.getItemConsumeId());
-			
 			if (!player.destroyItem("Consume", itemToTake.getObjectId(), skill.getItemConsume(), null, true))
 			{
 				return;
@@ -92,7 +90,6 @@ public class StrSiegeAssault implements ISkillHandler
 			
 			// damage calculation
 			int damage = 0;
-			
 			for (WorldObject target2 : targets)
 			{
 				if (target2 == null)
@@ -115,7 +112,6 @@ public class StrSiegeAssault implements ISkillHandler
 				final boolean shld = Formulas.calcShldUse(creature, target);
 				final boolean crit = Formulas.calcCrit(creature.getCriticalHit(target, skill));
 				final boolean soul = ((weapon != null) && (weapon.getChargedSoulshot() == ItemInstance.CHARGED_SOULSHOT) && (weapon.getItemType() != WeaponType.DAGGER));
-				
 				if (!crit && ((skill.getCondition() & Skill.COND_CRIT) != 0))
 				{
 					damage = 0;
@@ -164,7 +160,6 @@ public class StrSiegeAssault implements ISkillHandler
 	{
 		final Castle castle = CastleManager.getInstance().getCastle(creature);
 		final Fort fort = FortManager.getInstance().getFort(creature);
-		
 		if ((castle == null) && (fort == null))
 		{
 			return false;

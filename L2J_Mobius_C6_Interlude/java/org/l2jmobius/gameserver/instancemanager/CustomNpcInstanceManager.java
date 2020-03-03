@@ -267,7 +267,6 @@ public class CustomNpcInstanceManager
 		{
 			final PreparedStatement statement = con.prepareStatement("REPLACE INTO npc_to_pc_polymorph VALUES spawn,template,name,title,class_id,female,hair_style,hair_color,face,name_color,title_color, noble,hero,pvp,karma,wpn_enchant,right_hand,left_hand,gloves,chest,legs,feet,hair,hair2, pledge,cw_level,clan_id,ally_id,clan_crest,ally_crest,rnd_class,rnd_appearance,rnd_weapon,rnd_armor,max_rnd_enchant FROM npc_to_pc_polymorph");
 			final ResultSet rset = statement.executeQuery();
-			
 			statement.close();
 			
 			while (rset.next())

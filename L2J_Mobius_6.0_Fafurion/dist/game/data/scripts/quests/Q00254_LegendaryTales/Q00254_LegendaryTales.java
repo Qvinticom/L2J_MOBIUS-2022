@@ -139,7 +139,6 @@ public class Q00254_LegendaryTales extends Quest
 	{
 		String htmltext = getNoQuestMsg(player);
 		final QuestState qs = getQuestState(player, false);
-		
 		if (qs == null)
 		{
 			return htmltext;
@@ -244,17 +243,14 @@ public class Q00254_LegendaryTales extends Quest
 	public void actionForEachPlayer(PlayerInstance player, Npc npc, boolean isSummon)
 	{
 		final QuestState qs = player.getQuestState(Q00254_LegendaryTales.class.getSimpleName());
-		
 		if ((qs != null) && qs.isCond(1))
 		{
 			final int raids = qs.getInt("raids");
 			final Bosses boss = Bosses.valueOf(npc.getId());
-			
 			if (!checkMask(qs, boss))
 			{
 				qs.set("raids", raids | boss.getMask());
 				giveItems(player, LARGE_DRAGON_SKULL, 1);
-				
 				if (getQuestItemsCount(player, LARGE_DRAGON_SKULL) < 7)
 				{
 					playSound(player, QuestSound.ITEMSOUND_QUEST_ITEMGET);

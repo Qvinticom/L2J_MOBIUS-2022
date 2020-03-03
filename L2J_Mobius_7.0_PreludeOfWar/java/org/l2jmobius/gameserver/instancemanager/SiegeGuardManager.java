@@ -66,7 +66,6 @@ public class SiegeGuardManager
 				final int x = rs.getInt("x");
 				final int y = rs.getInt("y");
 				final int z = rs.getInt("z");
-				
 				final Castle castle = CastleManager.getInstance().getCastle(x, y, z);
 				if (castle == null)
 				{

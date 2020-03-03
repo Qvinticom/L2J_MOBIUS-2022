@@ -109,7 +109,6 @@ public class DimensionalRift
 					
 					_completedRooms.add(_choosenRoom);
 					_choosenRoom = -1;
-					
 					for (PlayerInstance p : _party.getPartyMembers())
 					{
 						if (!revivedInWaitingRoom.contains(p))
@@ -225,11 +224,9 @@ public class DimensionalRift
 		}
 		
 		_hasJumped = true;
-		
 		DimensionalRiftManager.getInstance().getRoom(_type, _choosenRoom).unspawn();
 		_completedRooms.add(_choosenRoom);
 		_choosenRoom = -1;
-		
 		for (PlayerInstance p : _party.getPartyMembers())
 		{
 			teleportToNextRoom(p);
@@ -274,7 +271,6 @@ public class DimensionalRift
 		checkBossRoom(_choosenRoom);
 		
 		final int[] coords = getRoomCoord(_choosenRoom);
-		
 		player.teleToLocation(coords[0], coords[1], coords[2]);
 	}
 	
@@ -286,7 +282,6 @@ public class DimensionalRift
 	public void killRift()
 	{
 		_completedRooms = null;
-		
 		if (_party != null)
 		{
 			_party.setDimensionalRift(null);
@@ -342,7 +337,6 @@ public class DimensionalRift
 	private long calcTimeToNextJump()
 	{
 		final int time = Rnd.get(Config.RIFT_AUTO_JUMPS_TIME_MIN, Config.RIFT_AUTO_JUMPS_TIME_MAX) * 1000;
-		
 		if (isBossRoom)
 		{
 			return (long) (time * Config.RIFT_BOSS_ROOM_TIME_MUTIPLY);

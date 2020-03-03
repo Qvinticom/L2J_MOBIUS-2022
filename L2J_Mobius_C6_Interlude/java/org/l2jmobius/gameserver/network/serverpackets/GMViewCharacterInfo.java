@@ -48,7 +48,6 @@ public class GMViewCharacterInfo extends GameServerPacket
 		final float moveMultiplier = _player.getMovementSpeedMultiplier();
 		final int _runSpd = (int) (_player.getRunSpeed() / moveMultiplier);
 		final int _walkSpd = (int) (_player.getWalkSpeed() / moveMultiplier);
-		
 		writeC(0x8f);
 		
 		writeD(_player.getX());
@@ -150,7 +149,6 @@ public class GMViewCharacterInfo extends GameServerPacket
 		writeH(0x00);
 		writeH(0x00);
 		// end of c6 new h's
-		
 		writeD(_player.getPAtk(null));
 		writeD(_player.getPAtkSpd());
 		writeD(_player.getPDef(null));

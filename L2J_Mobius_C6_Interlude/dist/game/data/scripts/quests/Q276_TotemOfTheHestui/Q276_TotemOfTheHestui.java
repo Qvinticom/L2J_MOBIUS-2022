@@ -130,7 +130,6 @@ public class Q276_TotemOfTheHestui extends Quest
 				case 20479:
 					final int count = st.getQuestItemsCount(KASHA_PARASITE);
 					final int random = Rnd.get(100);
-					
 					if ((count >= 79) || ((count >= 69) && (random <= 20)) || ((count >= 59) && (random <= 15)) || ((count >= 49) && (random <= 10)) || ((count >= 39) && (random < 2)))
 					{
 						addSpawn(27044, npc.getX(), npc.getY(), npc.getZ(), npc.getHeading(), true, 0);

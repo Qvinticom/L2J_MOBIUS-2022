@@ -87,7 +87,6 @@ public class Q10341_DayOfDestinyHumansFate extends ThirdClassTransferQuest
 	{
 		String htmltext = getNoQuestMsg(player);
 		final QuestState qs = getQuestState(player, true);
-		
 		if (npc.getId() == ORVEN)
 		{
 			if (qs.getState() == State.CREATED)

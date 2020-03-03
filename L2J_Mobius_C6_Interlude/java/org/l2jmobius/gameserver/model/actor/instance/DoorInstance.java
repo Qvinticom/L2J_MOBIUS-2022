@@ -208,7 +208,6 @@ public class DoorInstance extends Creature
 		{
 			setKnownList(new DoorKnownList(this));
 		}
-		
 		return (DoorKnownList) super.getKnownList();
 	}
 	
@@ -219,7 +218,6 @@ public class DoorInstance extends Creature
 		{
 			setStat(new DoorStat(this));
 		}
-		
 		return (DoorStat) super.getStat();
 	}
 	
@@ -230,7 +228,6 @@ public class DoorInstance extends Creature
 		{
 			setStatus(new DoorStatus(this));
 		}
-		
 		return (DoorStatus) super.getStatus();
 	}
 	
@@ -484,7 +481,6 @@ public class DoorInstance extends Creature
 		{
 			return 0;
 		}
-		
 		return 4000;
 	}
 	
@@ -533,7 +529,6 @@ public class DoorInstance extends Creature
 			
 			// Send a Server->Client packet MyTargetSelected to the PlayerInstance player
 			player.sendPacket(new MyTargetSelected(getObjectId(), 0));
-			
 			player.sendPacket(new DoorStatusUpdate(this));
 			
 			// Send a Server->Client packet ValidateLocation to correct the NpcInstance position and heading on the client
@@ -609,7 +604,6 @@ public class DoorInstance extends Creature
 			// ATTACK the mob without moving?
 			player.setTarget(this);
 			player.sendPacket(new MyTargetSelected(getObjectId(), player.getLevel()));
-			
 			if (isAutoAttackable(player))
 			{
 				player.sendPacket(new DoorStatusUpdate(this));
@@ -765,11 +759,9 @@ public class DoorInstance extends Creature
 		_rangeXMin = xMin;
 		_rangeYMin = yMin;
 		_rangeZMin = zMin;
-		
 		_rangeXMax = xMax;
 		_rangeYMax = yMax;
 		_rangeZMax = zMax;
-		
 		_A = (_rangeYMax * (_rangeZMax - _rangeZMin)) + (_rangeYMin * (_rangeZMin - _rangeZMax));
 		_B = (_rangeZMin * (_rangeXMax - _rangeXMin)) + (_rangeZMax * (_rangeXMin - _rangeXMax));
 		_C = (_rangeXMin * (_rangeYMax - _rangeYMin)) + (_rangeXMin * (_rangeYMin - _rangeYMax));
@@ -837,7 +829,6 @@ public class DoorInstance extends Creature
 	public Collection<SiegeGuardInstance> getKnownSiegeGuards()
 	{
 		final List<SiegeGuardInstance> result = new ArrayList<>();
-		
 		for (WorldObject obj : getKnownList().getKnownObjects().values())
 		{
 			if (obj instanceof SiegeGuardInstance)
@@ -845,7 +836,6 @@ public class DoorInstance extends Creature
 				result.add((SiegeGuardInstance) obj);
 			}
 		}
-		
 		return result;
 	}
 	
@@ -856,7 +846,6 @@ public class DoorInstance extends Creature
 	public Collection<FortSiegeGuardInstance> getKnownFortSiegeGuards()
 	{
 		final List<FortSiegeGuardInstance> result = new ArrayList<>();
-		
 		final Collection<WorldObject> objs = getKnownList().getKnownObjects().values();
 		{
 			for (WorldObject obj : objs)
@@ -893,7 +882,6 @@ public class DoorInstance extends Creature
 		
 		final boolean isFort = ((getFort() != null) && (getFort().getFortId() > 0) && getFort().getSiege().isInProgress());
 		final boolean isCastle = ((getCastle() != null) && (getCastle().getCastleId() > 0) && getCastle().getSiege().isInProgress());
-		
 		if (isFort || isCastle)
 		{
 			broadcastPacket(SystemMessage.sendString("The castle gate has been broken down."));

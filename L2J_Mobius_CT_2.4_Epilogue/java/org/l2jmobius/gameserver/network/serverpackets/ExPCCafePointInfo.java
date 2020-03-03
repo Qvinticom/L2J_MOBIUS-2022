@@ -49,7 +49,6 @@ public class ExPCCafePointInfo implements IClientOutgoingPacket
 		_remainTime = 42; // No idea why but retail sends 42..
 		_pointType = pointsToAdd < 0 ? 3 : 0; // When using points is 3
 		_time = time;
-		
 	}
 	
 	@Override

@@ -115,7 +115,6 @@ public class Q00326_VanquishRemnants extends Quest
 	{
 		final QuestState qs = getQuestState(player, true);
 		String htmltext = null;
-		
 		switch (qs.getState())
 		{
 			case State.CREATED:

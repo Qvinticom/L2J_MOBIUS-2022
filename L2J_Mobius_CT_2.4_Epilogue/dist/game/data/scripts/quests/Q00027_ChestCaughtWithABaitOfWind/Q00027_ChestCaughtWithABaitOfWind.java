@@ -94,7 +94,6 @@ public class Q00027_ChestCaughtWithABaitOfWind extends Quest
 	{
 		final QuestState st = getQuestState(player, true);
 		String htmltext = getNoQuestMsg(player);
-		
 		switch (st.getState())
 		{
 			case State.COMPLETED:

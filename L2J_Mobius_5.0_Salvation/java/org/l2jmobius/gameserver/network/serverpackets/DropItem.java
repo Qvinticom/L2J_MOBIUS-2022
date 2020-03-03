@@ -54,7 +54,6 @@ public class DropItem implements IClientOutgoingPacket
 		
 		packet.writeC(0x00);
 		// packet.writeD(0x01); if above C == true (1) then packet.readD()
-		
 		packet.writeC(_item.getEnchantLevel()); // Grand Crusade
 		packet.writeC(_item.getAugmentation() != null ? 1 : 0); // Grand Crusade
 		packet.writeC(_item.getSpecialAbilities().size()); // Grand Crusade

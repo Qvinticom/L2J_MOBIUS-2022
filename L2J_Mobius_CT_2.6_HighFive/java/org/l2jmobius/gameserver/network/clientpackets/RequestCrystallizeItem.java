@@ -53,7 +53,6 @@ public class RequestCrystallizeItem implements IClientIncomingPacket
 	public void run(GameClient client)
 	{
 		final PlayerInstance player = client.getPlayer();
-		
 		if (player == null)
 		{
 			LOGGER.fine("RequestCrystalizeItem: activeChar was null");
@@ -200,7 +199,6 @@ public class RequestCrystallizeItem implements IClientIncomingPacket
 		
 		// remove from inventory
 		final ItemInstance removedItem = player.getInventory().destroyItem("Crystalize", _objectId, _count, player, null);
-		
 		final InventoryUpdate iu = new InventoryUpdate();
 		iu.addRemovedItem(removedItem);
 		player.sendPacket(iu);
@@ -209,7 +207,6 @@ public class RequestCrystallizeItem implements IClientIncomingPacket
 		final int crystalId = itemToRemove.getItem().getCrystalItemId();
 		final int crystalAmount = itemToRemove.getCrystalCount();
 		final ItemInstance createditem = player.getInventory().addItem("Crystalize", crystalId, crystalAmount, player, player);
-		
 		sm = new SystemMessage(SystemMessageId.S1_HAS_BEEN_CRYSTALLIZED);
 		sm.addItemName(removedItem);
 		player.sendPacket(sm);

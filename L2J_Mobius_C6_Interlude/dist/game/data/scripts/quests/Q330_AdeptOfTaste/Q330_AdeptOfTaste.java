@@ -148,7 +148,6 @@ public class Q330_AdeptOfTaste extends Quest
 			st.takeItems(RED_MANDRAGORA_ROOT, -1);
 			st.takeItems(WHITE_MANDRAGORA_ROOT, -1);
 			st.giveItems(RED_MANDRAGORA_SAP, 1);
-			
 		}
 		else if (event.equals("30073-05.htm"))
 		{
@@ -201,7 +200,6 @@ public class Q330_AdeptOfTaste extends Quest
 								int dish;
 								
 								final int specialIngredientsNumber = st.getQuestItemsCount(WHITE_MANDRAGORA_SAP) + st.getQuestItemsCount(GOLDEN_HONEY) + st.getQuestItemsCount(BROWN_MOSS_BUNDLE);
-								
 								if (Rnd.nextBoolean())
 								{
 									htmltext = "30469-05t" + Integer.toString(specialIngredientsNumber + 2) + ".htm";
@@ -215,7 +213,6 @@ public class Q330_AdeptOfTaste extends Quest
 								
 								// Sound according dish.
 								st.playSound((dish == JONAS_STEAK_DISH_5) ? QuestState.SOUND_JACKPOT : QuestState.SOUND_ITEMGET);
-								
 								st.takeItems(INGREDIENT_LIST, 1);
 								st.takeItems(RED_MANDRAGORA_SAP, 1);
 								st.takeItems(WHITE_MANDRAGORA_SAP, 1);

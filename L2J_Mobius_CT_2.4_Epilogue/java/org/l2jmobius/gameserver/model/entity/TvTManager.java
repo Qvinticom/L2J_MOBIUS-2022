@@ -114,7 +114,6 @@ public class TvTManager
 		{
 			Broadcast.toAllOnlinePlayers("TvT Event: Event was cancelled.");
 			LOGGER.warning("TvTEventEngine[TvTManager.run()]: Error spawning event npc for participation.");
-			
 			scheduleEventStart();
 		}
 		else
@@ -136,7 +135,6 @@ public class TvTManager
 		{
 			Broadcast.toAllOnlinePlayers("TvT Event: Event cancelled due to lack of Participation.");
 			LOGGER.info("TvTEventEngine[TvTManager.run()]: Lack of registration, abort event.");
-			
 			scheduleEventStart();
 		}
 		else
@@ -190,7 +188,6 @@ public class TvTManager
 		public void run()
 		{
 			final int delay = (int) Math.round((_startTime - System.currentTimeMillis()) / 1000.0);
-			
 			if (delay > 0)
 			{
 				announce(delay);

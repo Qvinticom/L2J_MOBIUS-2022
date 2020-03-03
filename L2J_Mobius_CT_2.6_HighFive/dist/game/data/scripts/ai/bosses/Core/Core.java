@@ -84,7 +84,6 @@ public class Core extends AbstractNpcAI
 	private Core()
 	{
 		registerMobs(CORE, DEATH_KNIGHT, DOOM_WRAITH, SUSCEPTOR);
-		
 		_firstAttacked = false;
 		final StatSet info = GrandBossManager.getInstance().getStatSet(CORE);
 		if (GrandBossManager.getInstance().getBossStatus(CORE) == DEAD)
@@ -201,7 +200,6 @@ public class Core extends AbstractNpcAI
 			npc.broadcastPacket(new NpcSay(objId, ChatType.NPC_GENERAL, npc.getId(), NpcStringId.SYSTEM_IS_BEING_SHUT_DOWN));
 			npc.broadcastPacket(new NpcSay(objId, ChatType.NPC_GENERAL, npc.getId(), NpcStringId.EMPTY));
 			_firstAttacked = false;
-			
 			GrandBossManager.getInstance().setBossStatus(CORE, DEAD);
 			// Calculate Min and Max respawn times randomly.
 			final long respawnTime = (Config.CORE_SPAWN_INTERVAL + getRandom(-Config.CORE_SPAWN_RANDOM, Config.CORE_SPAWN_RANDOM)) * 3600000;

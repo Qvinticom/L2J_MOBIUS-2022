@@ -111,7 +111,6 @@ public class RequestNewEnchantTry implements IClientIncomingPacket
 			final boolean success = random <= combinationItem.getChance();
 			final CombinationItemReward rewardItem = combinationItem.getReward(success ? CombinationItemType.ON_SUCCESS : CombinationItemType.ON_FAILURE);
 			final ItemInstance item = player.addItem("Compound-Result", rewardItem.getId(), rewardItem.getCount(), null, true);
-			
 			if (success)
 			{
 				client.sendPacket(new ExEnchantSucess(item.getId()));

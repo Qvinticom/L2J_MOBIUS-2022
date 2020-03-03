@@ -36,7 +36,6 @@ public class SellList extends GameServerPacket
 	{
 		_player = player;
 		_money = _player.getAdena();
-		
 		for (ItemInstance item : _player.getInventory().getItems())
 		{
 			if ((item != null) && !item.isEquipped() && // Not equipped

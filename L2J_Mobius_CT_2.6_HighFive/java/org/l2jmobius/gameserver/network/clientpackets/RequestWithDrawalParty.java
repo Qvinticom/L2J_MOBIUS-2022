@@ -48,7 +48,6 @@ public class RequestWithDrawalParty implements IClientIncomingPacket
 		}
 		
 		final Party party = player.getParty();
-		
 		if (party != null)
 		{
 			if (party.isInDimensionalRift() && !party.getDimensionalRift().getRevivedAtWaitingRoom().contains(player))
@@ -58,7 +57,6 @@ public class RequestWithDrawalParty implements IClientIncomingPacket
 			else
 			{
 				party.removePartyMember(player, MessageType.LEFT);
-				
 				if (player.isInPartyMatchRoom())
 				{
 					final PartyMatchRoom room = PartyMatchRoomList.getInstance().getPlayerRoom(player);
@@ -67,7 +65,6 @@ public class RequestWithDrawalParty implements IClientIncomingPacket
 						player.sendPacket(new PartyMatchDetail(room));
 						player.sendPacket(new ExPartyRoomMember(room, 0));
 						player.sendPacket(new ExClosePartyRoom());
-						
 						room.deleteMember(player);
 					}
 					player.setPartyRoom(0);

@@ -34,7 +34,6 @@ public class Holy implements ITargetTypeHandler
 		{
 			return EMPTY_TARGET_LIST;
 		}
-		
 		return new WorldObject[]
 		{
 			target

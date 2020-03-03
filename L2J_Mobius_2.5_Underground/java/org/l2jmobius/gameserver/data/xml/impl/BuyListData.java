@@ -118,7 +118,6 @@ public class BuyListData implements IXmlReader
 						case "item":
 						{
 							final NamedNodeMap attrs = node.getAttributes();
-							
 							final int itemId = parseInteger(attrs, "id");
 							final Item item = ItemTable.getInstance().getTemplate(itemId);
 							if (item != null)
@@ -127,7 +126,6 @@ public class BuyListData implements IXmlReader
 								final long restockDelay = parseLong(attrs, "restock_delay", -1L);
 								final long count = parseLong(attrs, "count", -1L);
 								final int baseTax = parseInteger(attrs, "baseTax", defaultBaseTax);
-								
 								buyList.addProduct(new Product(buyListId, item, price, restockDelay, count, baseTax));
 							}
 							else

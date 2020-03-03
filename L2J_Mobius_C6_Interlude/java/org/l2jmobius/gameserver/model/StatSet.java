@@ -673,7 +673,6 @@ public class StatSet implements IParserAdvUtils
 		{
 			return null;
 		}
-		
 		return (A) obj;
 	}
 	
@@ -685,7 +684,6 @@ public class StatSet implements IParserAdvUtils
 		{
 			return defaultValue;
 		}
-		
 		return (A) obj;
 	}
 	
@@ -696,7 +694,6 @@ public class StatSet implements IParserAdvUtils
 		{
 			return null;
 		}
-		
 		return (SkillHolder) obj;
 	}
 	
@@ -887,7 +884,6 @@ public class StatSet implements IParserAdvUtils
 	public synchronized void safeSet(String name, int value, int min, int max, String reference)
 	{
 		assert ((min > max) || ((value >= min) && (value < max)));
-		
 		if ((min <= max) && ((value < min) || (value >= max)))
 		{
 			LOGGER.info("[StatSet][safeSet] Incorrect value: " + value + "for: " + name + "Ref: " + reference);

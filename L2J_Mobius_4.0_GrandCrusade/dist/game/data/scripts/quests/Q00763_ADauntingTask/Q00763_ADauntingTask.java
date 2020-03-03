@@ -133,7 +133,6 @@ public class Q00763_ADauntingTask extends Quest
 	{
 		final QuestState qs = getQuestState(player, true);
 		String htmltext = getNoQuestMsg(player);
-		
 		switch (qs.getState())
 		{
 			case State.CREATED:
@@ -188,7 +187,6 @@ public class Q00763_ADauntingTask extends Quest
 	public String onKill(Npc npc, PlayerInstance killer, boolean isSummon)
 	{
 		final QuestState qs = getQuestState(killer, false);
-		
 		if ((qs != null) && qs.isCond(2))
 		{
 			if (contains(MONSTERS_EYE, npc.getId()) && (getQuestItemsCount(killer, EYE.getId()) < 200))
@@ -210,7 +208,6 @@ public class Q00763_ADauntingTask extends Quest
 			}
 		}
 		return super.onKill(npc, killer, isSummon);
-		
 	}
 	
 	public static boolean contains(int[] arr, Integer item)

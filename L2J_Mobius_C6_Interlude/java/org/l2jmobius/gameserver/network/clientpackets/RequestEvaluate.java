@@ -72,7 +72,6 @@ public class RequestEvaluate extends GameClientPacket
 		}
 		
 		final PlayerInstance target = (PlayerInstance) player.getTarget();
-		
 		if (target.getRecomHave() >= Config.ALT_RECOMMENDATIONS_NUMBER)
 		{
 			sm = new SystemMessage(SystemMessageId.YOUR_SELECTED_TARGET_CAN_NO_LONGER_RECEIVE_A_RECOMMENDATION);

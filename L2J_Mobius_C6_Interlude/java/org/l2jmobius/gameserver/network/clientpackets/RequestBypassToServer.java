@@ -58,7 +58,6 @@ public class RequestBypassToServer extends GameClientPacket
 	protected void runImpl()
 	{
 		final PlayerInstance player = getClient().getPlayer();
-		
 		if (player == null)
 		{
 			return;
@@ -144,7 +143,6 @@ public class RequestBypassToServer extends GameClientPacket
 					else if (_command.substring(endOfId + 1).startsWith("tvt_player_join "))
 					{
 						final String teamName = _command.substring(endOfId + 1).substring(16);
-						
 						if (TvT.isJoining())
 						{
 							TvT.addPlayer(player, teamName);
@@ -264,7 +262,6 @@ public class RequestBypassToServer extends GameClientPacket
 			else if (_command.equals("Remove "))
 			{
 				final WorldObject object = player.getTarget();
-				
 				if (object instanceof NpcInstance)
 				{
 					((SymbolMakerInstance) object).onBypassFeedback(player, _command);

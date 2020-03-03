@@ -893,11 +893,9 @@ public class CreatureAI extends AbstractAI
 	protected void onEvtAfraid(Creature effector, boolean start)
 	{
 		final double radians = Math.toRadians(start ? Util.calculateAngleFrom(effector, _actor) : Util.convertHeadingToDegree(_actor.getHeading()));
-		
 		final int posX = (int) (_actor.getX() + (FEAR_RANGE * Math.cos(radians)));
 		final int posY = (int) (_actor.getY() + (FEAR_RANGE * Math.sin(radians)));
 		final int posZ = _actor.getZ();
-		
 		if (!_actor.isPet())
 		{
 			_actor.setRunning();
@@ -939,17 +937,13 @@ public class CreatureAI extends AbstractAI
 			
 			final double dx = worldPosition.getX() - x;
 			final double dy = worldPosition.getY() - y;
-			
 			double dist = Math.hypot(dx, dy);
 			
 			final double sin = dy / dist;
 			final double cos = dx / dist;
-			
 			dist -= offset - 5;
-			
 			x += (int) (dist * cos);
 			y += (int) (dist * sin);
-			
 			moveTo(x, y, worldPosition.getZ());
 			return true;
 		}
@@ -1225,7 +1219,6 @@ public class CreatureAI extends AbstractAI
 				}
 				final int castRange = sk.getCastRange();
 				boolean hasLongRangeDamageSkill = false;
-				
 				if (sk.isContinuous())
 				{
 					if (!sk.isDebuff())
@@ -1364,7 +1357,6 @@ public class CreatureAI extends AbstractAI
 			isArcher = false;
 			isFighter = false;
 			isCanceled = false;
-			
 			if (target.getMAtk(null, null) > (1.5 * target.getPAtk(null)))
 			{
 				isMage = true;

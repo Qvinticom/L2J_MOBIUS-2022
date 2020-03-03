@@ -52,7 +52,6 @@ public class Potion extends WorldObject
 				synchronized (_hpLock)
 				{
 					double nowHp = _creature.getCurrentHp();
-					
 					if (_duration == 0)
 					{
 						stopPotionHpRegeneration();
@@ -152,7 +151,6 @@ public class Potion extends WorldObject
 				synchronized (_mpLock)
 				{
 					double nowMp = _instance.getCurrentMp();
-					
 					if (_duration == 0)
 					{
 						stopPotionMpRegeneration();

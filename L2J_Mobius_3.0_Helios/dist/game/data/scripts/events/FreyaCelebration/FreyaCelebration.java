@@ -81,7 +81,6 @@ public class FreyaCelebration extends LongTimeEvent
 				final long currTime = System.currentTimeMillis();
 				final String value = player.getVariables().getString("FreyaCelebration");
 				final long reuseTime = value.equals("") ? 0 : Long.parseLong(value);
-				
 				if (currTime > reuseTime)
 				{
 					takeItems(player, Inventory.ADENA_ID, 1);

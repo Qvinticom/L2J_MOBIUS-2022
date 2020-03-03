@@ -44,7 +44,6 @@ public class RequestJoinSiege extends GameClientPacket
 	protected void runImpl()
 	{
 		final PlayerInstance player = getClient().getPlayer();
-		
 		if (player == null)
 		{
 			return;
@@ -58,7 +57,6 @@ public class RequestJoinSiege extends GameClientPacket
 		if (_castleId < 100)
 		{
 			final Castle castle = CastleManager.getInstance().getCastleById(_castleId);
-			
 			if (castle == null)
 			{
 				return;
@@ -91,7 +89,6 @@ public class RequestJoinSiege extends GameClientPacket
 		else
 		{
 			final Fort fort = FortManager.getInstance().getFortById(_castleId);
-			
 			if (fort == null)
 			{
 				return;

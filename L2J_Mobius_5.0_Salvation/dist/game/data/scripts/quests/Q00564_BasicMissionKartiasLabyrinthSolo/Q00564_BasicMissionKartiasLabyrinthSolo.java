@@ -55,7 +55,6 @@ public class Q00564_BasicMissionKartiasLabyrinthSolo extends Quest
 	public String onAdvEvent(String event, Npc npc, PlayerInstance player)
 	{
 		final QuestState qs = getQuestState(player, false);
-		
 		if (qs == null)
 		{
 			return null;
@@ -94,7 +93,6 @@ public class Q00564_BasicMissionKartiasLabyrinthSolo extends Quest
 			{
 				final StringBuilder str = new StringBuilder("000");
 				checkQuestCompleted(player, str); // Initialize the array with all quests completed
-				
 				if (str.indexOf("1") == -1) // verify if no quest completed
 				{
 					htmltext = "34413-07.html";
@@ -129,7 +127,6 @@ public class Q00564_BasicMissionKartiasLabyrinthSolo extends Quest
 	{
 		final QuestState qs = getQuestState(player, true);
 		String htmltext = getNoQuestMsg(player);
-		
 		switch (qs.getState())
 		{
 			case State.CREATED:
@@ -155,7 +152,6 @@ public class Q00564_BasicMissionKartiasLabyrinthSolo extends Quest
 						{
 							final StringBuilder str = new StringBuilder("000");
 							checkQuestCompleted(player, str); // Initialize the array with all quests completed
-							
 							if (str.indexOf("1") != -1) // verify if any quest completed
 							{
 								qs.setCond(4, true);

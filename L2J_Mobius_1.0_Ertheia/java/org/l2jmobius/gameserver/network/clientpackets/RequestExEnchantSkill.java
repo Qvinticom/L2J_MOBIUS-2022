@@ -69,7 +69,6 @@ public class RequestExEnchantSkill implements IClientIncomingPacket
 			_skillLvl = client.getPlayer().getKnownSkill(_skillId).getLevel();
 			_skillSubLvl = SkillEnchantConverter.levelToUnderground(level);
 		}
-		
 		return true;
 	}
 	
@@ -148,7 +147,6 @@ public class RequestExEnchantSkill implements IClientIncomingPacket
 		}
 		
 		final EnchantSkillHolder enchantSkillHolder = EnchantSkillGroupsData.getInstance().getEnchantSkillHolder(_skillSubLvl % 1000);
-		
 		if (_type != SkillEnchantType.UNTRAIN) // TODO: Fix properly
 		{
 			// Verify if player has all the ingredients

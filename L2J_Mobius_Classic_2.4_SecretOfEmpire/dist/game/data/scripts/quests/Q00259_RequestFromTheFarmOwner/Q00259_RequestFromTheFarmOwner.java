@@ -139,7 +139,6 @@ public class Q00259_RequestFromTheFarmOwner extends Quest
 	{
 		final QuestState qs = getQuestState(player, true);
 		String htmltext = getNoQuestMsg(player);
-		
 		switch (npc.getId())
 		{
 			case EDMOND:

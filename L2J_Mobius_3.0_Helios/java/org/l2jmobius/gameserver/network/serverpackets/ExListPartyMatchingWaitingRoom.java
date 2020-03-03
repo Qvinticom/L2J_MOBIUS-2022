@@ -42,7 +42,6 @@ public class ExListPartyMatchingWaitingRoom implements IClientOutgoingPacket
 	public ExListPartyMatchingWaitingRoom(int page, int minLevel, int maxLevel, List<ClassId> classIds, String query)
 	{
 		final List<PlayerInstance> players = MatchingRoomManager.getInstance().getPlayerInWaitingList(minLevel, maxLevel, classIds, query);
-		
 		_size = players.size();
 		final int startIndex = (page - 1) * NUM_PER_PAGE;
 		int chunkSize = _size - startIndex;

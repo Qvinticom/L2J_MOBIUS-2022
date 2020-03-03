@@ -47,7 +47,6 @@ public class AdminHelpPage implements IAdminCommandHandler
 				// case of empty filename
 			}
 		}
-		
 		return true;
 	}
 	

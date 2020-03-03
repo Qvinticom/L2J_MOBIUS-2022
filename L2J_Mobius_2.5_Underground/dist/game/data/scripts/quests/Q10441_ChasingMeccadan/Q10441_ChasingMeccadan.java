@@ -139,7 +139,6 @@ public class Q10441_ChasingMeccadan extends Quest
 	{
 		final QuestState qs = getQuestState(player, true);
 		String htmltext = getNoQuestMsg(player);
-		
 		switch (npc.getId())
 		{
 			case HELVETICA:
@@ -151,12 +150,10 @@ public class Q10441_ChasingMeccadan extends Quest
 				else if (qs.isCond(1))
 				{
 					htmltext = "32641-05.html";
-					
 				}
 				else if (qs.isCond(2))
 				{
 					htmltext = "32641-06.html";
-					
 				}
 				else if (qs.isCompleted())
 				{
@@ -173,12 +170,10 @@ public class Q10441_ChasingMeccadan extends Quest
 				else if (qs.isCond(1))
 				{
 					htmltext = "32643-05.html";
-					
 				}
 				else if (qs.isCond(3))
 				{
 					htmltext = "32643-06.html";
-					
 				}
 				else if (qs.isCompleted())
 				{

@@ -237,7 +237,6 @@ public class FortSiege implements Siegable
 	public FortSiege(Fort fort)
 	{
 		_fort = fort;
-		
 		checkAutoTask();
 		FortSiegeManager.getInstance().addSiege(this);
 	}
@@ -269,14 +268,11 @@ public class FortSiege implements Siegable
 			saveFortSiege(); // Save fort specific data
 			clearSiegeClan(); // Clear siege clan from db
 			removeCommanders(); // Remove commander from this fort
-			
 			_fort.spawnNpcCommanders(); // Spawn NPC commanders
 			unspawnSiegeGuard(); // Remove all spawned siege guard from this fort
 			_fort.resetDoors(); // Respawn door to fort
-			
 			ThreadPool.schedule(new ScheduleSuspiciousMerchantSpawn(), FortSiegeManager.getInstance().getSuspiciousMerchantRespawnDelay() * 60 * 1000); // Prepare 3hr task for suspicious merchant respawn
 			setSiegeDateTime(true); // store suspicious merchant spawn in DB
-			
 			if (_siegeEnd != null)
 			{
 				_siegeEnd.cancel(true);
@@ -314,18 +310,15 @@ public class FortSiege implements Siegable
 				_fort.despawnSuspiciousMerchant();
 			}
 			_siegeStartTask = null;
-			
 			if (_attackerClans.isEmpty())
 			{
 				return;
 			}
 			
 			_isInProgress = true; // Flag so that same siege instance cannot be started again
-			
 			loadSiegeClan(); // Load siege clan from db
 			updatePlayerSiegeStateFlags(false);
 			teleportPlayer(FortTeleportWhoType.Attacker, TeleportWhereType.TOWN); // Teleport to the closest town
-			
 			_fort.despawnNpcCommanders(); // Despawn NPC commanders
 			spawnCommanders(); // Spawn commanders
 			_fort.resetDoors(); // Spawn door
@@ -826,7 +819,6 @@ public class FortSiege implements Siegable
 		}
 		
 		final long delay = getFort().getSiegeDate().getTimeInMillis() - Calendar.getInstance().getTimeInMillis();
-		
 		if (delay < 0)
 		{
 			// siege time in past
@@ -1219,7 +1211,6 @@ public class FortSiege implements Siegable
 		{
 			return null;
 		}
-		
 		return getAttackerClan(clan.getId());
 	}
 	
@@ -1233,7 +1224,6 @@ public class FortSiege implements Siegable
 				return sc;
 			}
 		}
-		
 		return null;
 	}
 	
@@ -1270,7 +1260,6 @@ public class FortSiege implements Siegable
 				return sc.getFlag();
 			}
 		}
-		
 		return null;
 	}
 	

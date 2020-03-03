@@ -69,7 +69,6 @@ public class PartyMatchList extends GameServerPacket
 		
 		int count = 0;
 		final int size = _rooms.size();
-		
 		writeC(0x96);
 		if (size > 0)
 		{

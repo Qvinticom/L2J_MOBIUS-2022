@@ -79,7 +79,6 @@ public class RaceManagerInstance extends Npc
 			String search, replace;
 			
 			final NpcHtmlMessage html = new NpcHtmlMessage(getObjectId());
-			
 			if (val < 10)
 			{
 				html.setFile(player, getHtmlPath(getId(), 2));
@@ -113,7 +112,6 @@ public class RaceManagerInstance extends Npc
 				replace = MonsterRace.getInstance().getMonsters()[player.getRace(0) - 1].getTemplate().getName();
 				html.replace(search, replace);
 				search = "0adena";
-				
 				if (val == 10)
 				{
 					html.replace(search, "");
@@ -155,7 +153,6 @@ public class RaceManagerInstance extends Npc
 				
 				int ticket = player.getRace(0);
 				int priceId = player.getRace(1);
-				
 				if (!player.reduceAdena("Race", TICKET_PRICES[priceId - 1], this, true))
 				{
 					return;
@@ -163,13 +160,11 @@ public class RaceManagerInstance extends Npc
 				
 				player.setRace(0, 0);
 				player.setRace(1, 0);
-				
 				ItemInstance item = new ItemInstance(IdFactory.getNextId(), 4443);
 				item.setCount(1);
 				item.setEnchantLevel(MonsterRace.getInstance().getRaceNumber());
 				item.setCustomType1(ticket);
 				item.setCustomType2(TICKET_PRICES[priceId - 1] / 100);
-				
 				player.addItem("Race", item, player, false);
 				final SystemMessage msg = new SystemMessage(SystemMessageId.ACQUIRED_S1_S2);
 				msg.addInt(MonsterRace.getInstance().getRaceNumber());
@@ -200,7 +195,6 @@ public class RaceManagerInstance extends Npc
 			for (int i = 0; i < 8; i++)
 			{
 				final int n = i + 1;
-				
 				html.replace("Mob" + n, MonsterRace.getInstance().getMonsters()[i].getTemplate().getName());
 				
 				// Odd
@@ -221,7 +215,6 @@ public class RaceManagerInstance extends Npc
 			
 			final NpcHtmlMessage html = new NpcHtmlMessage(getObjectId());
 			html.setFile(player, getHtmlPath(getId(), 6));
-			
 			for (int i = 0; i < 8; i++)
 			{
 				int n = i + 1;

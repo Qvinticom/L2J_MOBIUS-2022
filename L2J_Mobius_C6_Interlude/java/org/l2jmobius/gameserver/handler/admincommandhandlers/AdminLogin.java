@@ -82,7 +82,6 @@ public class AdminLogin implements IAdminCommandHandler
 		else if (command.startsWith("admin_server_list_clock"))
 		{
 			final StringTokenizer st = new StringTokenizer(command);
-			
 			if (st.countTokens() > 1)
 			{
 				st.nextToken();

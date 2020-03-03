@@ -148,7 +148,6 @@ public class Q234_FatesWhisper extends Quest
 				if (st.hasQuestItems(itemId))
 				{
 					final int aGradeItemId = Integer.parseInt(event.replace("selectAGrade_", ""));
-					
 					htmltext = getHtmlText("31002-12.htm").replace("%weaponname%", ItemTable.getInstance().getTemplate(aGradeItemId).getName());
 					st.takeItems(itemId, 1);
 					st.giveItems(aGradeItemId, 1);
@@ -411,7 +410,6 @@ public class Q234_FatesWhisper extends Quest
 	public String onKill(NpcInstance npc, PlayerInstance player, boolean isPet)
 	{
 		addSpawn(CHEST_SPAWN.get(npc.getNpcId()), npc.getX(), npc.getY(), npc.getZ(), npc.getHeading(), true, 120000);
-		
 		return null;
 	}
 }

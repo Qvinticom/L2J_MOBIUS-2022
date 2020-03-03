@@ -130,7 +130,6 @@ public class Q00043_HelpTheSister extends Quest
 	public String onKill(Npc npc, PlayerInstance player, boolean isSummon)
 	{
 		final QuestState qs = getQuestState(player, false);
-		
 		if ((qs != null) && qs.isCond(2))
 		{
 			giveItems(player, MAP_PIECE, 1);

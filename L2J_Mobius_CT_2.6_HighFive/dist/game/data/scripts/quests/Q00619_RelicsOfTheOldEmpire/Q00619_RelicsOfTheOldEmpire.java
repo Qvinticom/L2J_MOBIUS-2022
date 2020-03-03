@@ -280,7 +280,6 @@ public class Q00619_RelicsOfTheOldEmpire extends Quest
 			{
 				final DropInfo info = MOBS.get(npcId);
 				final int itemCount;
-				
 				if (info.getDoubleItemChance() > 0)
 				{
 					itemCount = ((getRandom(100) < info.getDoubleItemChance()) ? 2 : 1);
@@ -291,7 +290,6 @@ public class Q00619_RelicsOfTheOldEmpire extends Quest
 				}
 				
 				giveItemRandomly(player, npc, BROKEN_RELIC_PART, itemCount, 0, info.getDropChance(), true);
-				
 				if (info.getDropEntrancePass())
 				{
 					giveItemRandomly(player, npc, ENTRANCE_PASS_TO_THE_SEPULCHER, 1, 0, 1.0 / 30, false);
@@ -306,7 +304,6 @@ public class Q00619_RelicsOfTheOldEmpire extends Quest
 	{
 		final QuestState qs = getQuestState(player, true);
 		String htmltext = getNoQuestMsg(player);
-		
 		if (qs.isCreated())
 		{
 			htmltext = ((player.getLevel() >= MIN_LEVEL) ? "31538-01.htm" : "31538-03.html");

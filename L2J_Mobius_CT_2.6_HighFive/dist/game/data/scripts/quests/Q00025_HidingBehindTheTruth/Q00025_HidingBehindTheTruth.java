@@ -290,7 +290,6 @@ public class Q00025_HidingBehindTheTruth extends Quest
 							startQuestTimer("SAY_TRIYOL", 500, triyol, player);
 							startQuestTimer("DESPAWN_TRIYOL", 120000, triyol, player);
 							triyol.getAI().setIntention(CtrlIntention.AI_INTENTION_ATTACK, player);
-							
 							htmltext = event;
 							qs.setCond(7);
 						}

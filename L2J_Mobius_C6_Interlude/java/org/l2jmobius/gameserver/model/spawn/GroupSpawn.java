@@ -37,7 +37,6 @@ public class GroupSpawn extends Spawn
 		super(mobTemplate);
 		_constructor = Class.forName("org.l2jmobius.gameserver.model.actor.instance.ControllableMobInstance").getConstructors()[0];
 		_template = mobTemplate;
-		
 		setAmount(1);
 	}
 	
@@ -58,18 +57,15 @@ public class GroupSpawn extends Spawn
 				_template
 			};
 			final Object tmp = _constructor.newInstance(parameters);
-			
 			if (!(tmp instanceof NpcInstance))
 			{
 				return null;
 			}
 			
 			mob = (NpcInstance) tmp;
-			
 			int newlocx;
 			int newlocy;
 			int newlocz;
-			
 			if ((getX() == 0) && (getY() == 0))
 			{
 				if (getLocation() == 0)
@@ -90,7 +86,6 @@ public class GroupSpawn extends Spawn
 			}
 			
 			mob.setCurrentHpMp(mob.getMaxHp(), mob.getMaxMp());
-			
 			if (getHeading() == -1)
 			{
 				mob.setHeading(Rnd.get(61794));
@@ -105,7 +100,6 @@ public class GroupSpawn extends Spawn
 			mob.onSpawn();
 			
 			return mob;
-			
 		}
 		catch (Exception e)
 		{

@@ -68,7 +68,6 @@ public class ServerList extends LoginServerPacket
 	{
 		_servers = new ArrayList<>();
 		_lastServer = client.getLastServer();
-		
 		for (GameServerInfo gsi : GameServerTable.getInstance().getRegisteredGameServers().values())
 		{
 			if ((gsi.getStatus() == ServerStatus.STATUS_GM_ONLY) && (client.getAccessLevel() >= 100))
@@ -108,9 +107,7 @@ public class ServerList extends LoginServerPacket
 			try
 			{
 				final InetAddress i4 = InetAddress.getByName(server._ip);
-				
 				final byte[] raw = i4.getAddress();
-				
 				writeC(raw[0] & 0xff);
 				writeC(raw[1] & 0xff);
 				writeC(raw[2] & 0xff);
@@ -133,7 +130,6 @@ public class ServerList extends LoginServerPacket
 			writeC(server._status == ServerStatus.STATUS_DOWN ? 0x00 : 0x01);
 			
 			int bits = 0;
-			
 			if (server._testServer)
 			{
 				bits |= 0x04;

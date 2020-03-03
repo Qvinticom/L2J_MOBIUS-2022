@@ -89,7 +89,6 @@ public class ExtractableItems implements IItemHandler
 					{
 						final int min = (int) (expi.getMin() * Config.RATE_EXTRACTABLE);
 						final int max = (int) (expi.getMax() * Config.RATE_EXTRACTABLE);
-						
 						int createItemAmount = (max == min) ? min : (Rnd.get((max - min) + 1) + min);
 						if (createItemAmount == 0)
 						{
@@ -152,7 +151,6 @@ public class ExtractableItems implements IItemHandler
 				{
 					final int min = (int) (expi.getMin() * Config.RATE_EXTRACTABLE);
 					final int max = (int) (expi.getMax() * Config.RATE_EXTRACTABLE);
-					
 					int createItemAmount = (max == min) ? min : (Rnd.get((max - min) + 1) + min);
 					if (createItemAmount == 0)
 					{

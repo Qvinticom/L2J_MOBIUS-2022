@@ -106,7 +106,6 @@ public class ManorManagerInstance extends MerchantInstance
 		player.tempInvetoryDisable();
 		
 		final StoreTradeList list = TradeController.getInstance().getBuyList(Integer.parseInt(value));
-		
 		if (list != null)
 		{
 			list.getItems().get(0).setCount(1);
@@ -144,7 +143,6 @@ public class ManorManagerInstance extends MerchantInstance
 			final int ask = Integer.parseInt(st.nextToken().split("=")[1]);
 			final int state = Integer.parseInt(st.nextToken().split("=")[1]);
 			final int time = Integer.parseInt(st.nextToken().split("=")[1]);
-			
 			int castleId;
 			if (state == -1)
 			{

@@ -52,7 +52,6 @@ public class RequestPledgeRecruitBoardSearch implements IClientIncomingPacket
 	public void run(GameClient client)
 	{
 		final PlayerInstance player = client.getPlayer();
-		
 		if (player == null)
 		{
 			return;

@@ -58,7 +58,6 @@ public class PlayerTemplateData implements IXmlReader
 		
 		// First element is never read.
 		final Node n = doc.getFirstChild();
-		
 		for (Node node = n.getFirstChild(); node != null; node = node.getNextSibling())
 		{
 			if (!"class".equalsIgnoreCase(node.getNodeName()))

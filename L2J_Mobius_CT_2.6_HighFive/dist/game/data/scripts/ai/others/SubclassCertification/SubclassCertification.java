@@ -226,7 +226,6 @@ public class SubclassCertification extends AbstractNpcAI
 		{
 			return 6;
 		}
-		
 		return -1;
 	}
 	
@@ -239,7 +238,6 @@ public class SubclassCertification extends AbstractNpcAI
 		
 		String htmltext;
 		final String var = variable + level + "-" + player.getClassIndex();
-		
 		if (player.getVariables().hasVariable(var) && !player.getVariables().getString(var).equals("0"))
 		{
 			htmltext = "AlreadyReceived.html";

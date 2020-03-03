@@ -236,7 +236,6 @@ public class TopicBBSManager extends BaseBBSManager
 		final StringBuilder html = new StringBuilder(2000);
 		html.append("<html><body><br><br><table border=0 width=610><tr><td width=10></td><td width=600 align=left><a action=\"bypass _bbshome\">HOME</a>&nbsp;>&nbsp;<a action=\"bypass _bbsmemo\">Memo Form</a></td></tr></table><img src=\"L2UI.squareblank\" width=\"1\" height=\"10\"><center><table border=0 cellspacing=0 cellpadding=2 bgcolor=888888 width=610><tr><td FIXWIDTH=5></td><td FIXWIDTH=415 align=center>&$413;</td><td FIXWIDTH=120 align=center></td><td FIXWIDTH=70 align=center>&$418;</td></tr></table>");
 		final DateFormat dateFormat = DateFormat.getInstance();
-		
 		for (int i = 0, j = getMaxID(forum) + 1; i < (12 * index); j--)
 		{
 			if (j < 0)
@@ -251,7 +250,6 @@ public class TopicBBSManager extends BaseBBSManager
 		}
 		
 		html.append("<br><table width=610 cellspace=0 cellpadding=0><tr><td width=50><button value=\"&$422;\" action=\"bypass _bbsmemo\" back=\"l2ui_ch3.smallbutton2_down\" width=65 height=20 fore=\"l2ui_ch3.smallbutton2\"></td><td width=510 align=center><table border=0><tr>");
-		
 		if (index == 1)
 		{
 			html.append("<td><button action=\"\" back=\"l2ui_ch3.prev1_down\" fore=\"l2ui_ch3.prev1\" width=16 height=16 ></td>");

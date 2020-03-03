@@ -152,7 +152,6 @@ public class RequestAlchemyTryMixCube implements IClientIncomingPacket
 		if (airStonesCount > 0)
 		{
 			final InventoryUpdate iu = new InventoryUpdate();
-			
 			long elcyumCrystals = 0;
 			
 			// Second loop for items deletion if we're still in the game

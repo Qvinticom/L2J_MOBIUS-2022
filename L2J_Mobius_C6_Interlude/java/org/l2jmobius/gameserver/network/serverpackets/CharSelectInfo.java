@@ -74,12 +74,10 @@ public class CharSelectInfo extends GameServerPacket
 	protected final void writeImpl()
 	{
 		final int size = _characterPackages.length;
-		
 		writeC(0x13);
 		writeD(size);
 		
 		long lastAccess = 0;
-		
 		if (_activeId == -1)
 		{
 			for (int i = 0; i < size; i++)
@@ -95,7 +93,6 @@ public class CharSelectInfo extends GameServerPacket
 		for (int i = 0; i < size; i++)
 		{
 			final CharSelectInfoPackage charInfoPackage = _characterPackages[i];
-			
 			writeS(charInfoPackage.getName());
 			writeD(charInfoPackage.getCharId());
 			writeS(_loginName);
@@ -185,7 +182,6 @@ public class CharSelectInfo extends GameServerPacket
 			final long deleteTime = charInfoPackage.getDeleteTimer();
 			final int accesslevels = charInfoPackage.getAccessLevel();
 			int deletedays = 0;
-			
 			if (deleteTime > 0)
 			{
 				deletedays = (int) ((deleteTime - System.currentTimeMillis()) / 1000);
@@ -255,7 +251,6 @@ public class CharSelectInfo extends GameServerPacket
 			statement.setInt(1, objectId);
 			statement.setInt(2, activeClassId);
 			final ResultSet charList = statement.executeQuery();
-			
 			if (charList.next())
 			{
 				charInfopackage.setExp(charList.getLong("exp"));
@@ -292,7 +287,6 @@ public class CharSelectInfo extends GameServerPacket
 		}
 		
 		final String name = chardata.getString("char_name");
-		
 		final CharSelectInfoPackage charInfopackage = new CharSelectInfoPackage(objectId, name);
 		charInfopackage.setLevel(chardata.getInt("level"));
 		charInfopackage.setMaxHp(chardata.getInt("maxhp"));
@@ -339,7 +333,6 @@ public class CharSelectInfo extends GameServerPacket
 				final PreparedStatement statement = con.prepareStatement("SELECT attributes FROM augmentations WHERE item_id=?");
 				statement.setInt(1, weaponObjId);
 				final ResultSet result = statement.executeQuery();
-				
 				if (result.next())
 				{
 					charInfopackage.setAugmentationId(result.getInt("attributes"));

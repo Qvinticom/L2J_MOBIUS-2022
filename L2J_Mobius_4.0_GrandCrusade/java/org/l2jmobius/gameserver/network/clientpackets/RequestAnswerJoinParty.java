@@ -69,7 +69,6 @@ public class RequestAnswerJoinParty implements IClientIncomingPacket
 		}
 		
 		requestor.sendPacket(new JoinParty(_response));
-		
 		if (_response == 1)
 		{
 			if (party.getMemberCount() >= Config.ALT_PARTY_MAX_MEMBERS)
@@ -89,7 +88,6 @@ public class RequestAnswerJoinParty implements IClientIncomingPacket
 			player.joinParty(party);
 			
 			final MatchingRoom requestorRoom = requestor.getMatchingRoom();
-			
 			if (requestorRoom != null)
 			{
 				requestorRoom.addMember(player);

@@ -47,7 +47,6 @@ public class ConditionPlayerCanSummonPet extends Condition
 		}
 		
 		boolean canSummon = true;
-		
 		if (Config.RESTORE_PET_ON_RECONNECT && CharSummonTable.getInstance().getPets().containsKey(player.getObjectId()))
 		{
 			player.sendPacket(SystemMessageId.YOU_MAY_NOT_SUMMON_MULTIPLE_PETS_AT_THE_SAME_TIME);

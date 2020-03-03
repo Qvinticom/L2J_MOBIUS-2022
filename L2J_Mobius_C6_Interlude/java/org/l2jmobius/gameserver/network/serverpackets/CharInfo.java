@@ -88,7 +88,6 @@ public class CharInfo extends GameServerPacket
 		if (_player.getPoly().isMorphed())
 		{
 			final NpcTemplate template = NpcTable.getInstance().getTemplate(_player.getPoly().getPolyId());
-			
 			if (template != null)
 			{
 				writeC(0x16);
@@ -130,7 +129,6 @@ public class CharInfo extends GameServerPacket
 				// {
 				// writeC(_player.getAppearance().getInvisible() ? 1 : 0); // invisible ?? 0=false 1=true 2=summoned (only works if model has a summon animation)
 				// }
-				
 				writeS(_player.getName());
 				
 				if (_player.getAppearance().isInvisible())
@@ -280,7 +278,6 @@ public class CharInfo extends GameServerPacket
 			// {
 			// writeC(_activeChar.getAppearance().getInvisible() ? 1 : 0); // invisible = 1 visible =0
 			// }
-			
 			writeC(_player.getMountType()); // 1 on strider 2 on wyvern 0 no mount
 			writeC(_player.getPrivateStoreType()); // 1 - sellshop
 			

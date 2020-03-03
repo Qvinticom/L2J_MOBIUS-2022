@@ -90,7 +90,6 @@ public class RecipeController
 		
 		final List<RecipeList> dwarfRecipes = Arrays.asList(manufacturer.getDwarvenRecipeBook());
 		final List<RecipeList> commonRecipes = Arrays.asList(manufacturer.getCommonRecipeBook());
-		
 		if (!dwarfRecipes.contains(recipeList) && !commonRecipes.contains(recipeList))
 		{
 			Util.handleIllegalPlayerAction(player, "Warning!! Character " + player.getName() + " of account " + player.getAccountName() + " sent a false recipe id.", Config.DEFAULT_PUNISH);
@@ -136,7 +135,6 @@ public class RecipeController
 		
 		final List<RecipeList> dwarfRecipes = Arrays.asList(player.getDwarvenRecipeBook());
 		final List<RecipeList> commonRecipes = Arrays.asList(player.getCommonRecipeBook());
-		
 		if (!dwarfRecipes.contains(recipeList) && !commonRecipes.contains(recipeList))
 		{
 			Util.handleIllegalPlayerAction(player, "Warning!! Character " + player.getName() + " of account " + player.getAccountName() + " sent a false recipe id.", Config.DEFAULT_PUNISH);
@@ -192,12 +190,10 @@ public class RecipeController
 			_player = pPlayer;
 			_target = pTarget;
 			_recipeList = pRecipeList;
-			
 			_isValid = false;
 			_skillId = _recipeList.isDwarvenRecipe() ? CommonSkill.CREATE_DWARVEN.getId() : CommonSkill.CREATE_COMMON.getId();
 			_skillLevel = _player.getSkillLevel(_skillId);
 			_skill = _player.getKnownSkill(_skillId);
-			
 			_player.setCrafting(true);
 			
 			if (_player.isAlikeDead())
@@ -341,7 +337,6 @@ public class RecipeController
 					return; // check stat use
 				}
 				updateCurMp(); // update craft window mp bar
-				
 				grabSomeItems(); // grab (equip) some more items with a nice msg to player
 				
 				// if still not empty, schedule another pass
@@ -351,7 +346,6 @@ public class RecipeController
 					
 					// FIXME: please fix this packet to show crafting animation (somebody)
 					_player.broadcastPacket(new MagicSkillUse(_player, _skillId, _skillLevel, _delay, 0));
-					
 					_player.sendPacket(new SetupGauge(_player.getObjectId(), 0, _delay));
 					ThreadPool.schedule(this, 100 + _delay);
 				}
@@ -465,7 +459,6 @@ public class RecipeController
 			while ((grabItems > 0) && !_items.isEmpty())
 			{
 				final TempItem item = _items.get(0);
-				
 				final int count = item.getQuantity() >= grabItems ? grabItems : item.getQuantity();
 				item.setQuantity(item.getQuantity() - count);
 				if (item.getQuantity() <= 0)
@@ -478,7 +471,6 @@ public class RecipeController
 				}
 				
 				grabItems -= count;
-				
 				if (_target == _player)
 				{
 					final SystemMessage sm = new SystemMessage(SystemMessageId.EQUIPPED_S1_S2);
@@ -497,7 +489,6 @@ public class RecipeController
 		private void calculateAltStatChange()
 		{
 			_itemGrab = _skillLevel;
-			
 			for (RecipeStatInstance altStatChange : _recipeList.getAltStatChange())
 			{
 				if (altStatChange.getType() == StatType.XP)
@@ -590,7 +581,6 @@ public class RecipeController
 			final Inventory inv = _target.getInventory();
 			final List<TempItem> materials = new ArrayList<>();
 			SystemMessage sm;
-			
 			for (RecipeInstance recipe : recipes)
 			{
 				if (recipe.getQuantity() > 0)
@@ -620,7 +610,6 @@ public class RecipeController
 				for (TempItem tmp : materials)
 				{
 					inv.destroyItemByItemId("Manufacture", tmp.getItemId(), tmp.getQuantity(), _target, _player);
-					
 					if (tmp.getQuantity() > 1)
 					{
 						sm = new SystemMessage(SystemMessageId.S2_S1_HAS_DISAPPEARED);

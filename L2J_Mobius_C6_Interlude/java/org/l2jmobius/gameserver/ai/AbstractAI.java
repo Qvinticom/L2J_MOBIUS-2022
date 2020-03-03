@@ -83,7 +83,6 @@ abstract class AbstractAI implements Ctrl
 				}
 				
 				final Creature follow = getFollowTarget();
-				
 				if (follow == null)
 				{
 					stopFollow();
@@ -785,7 +784,6 @@ abstract class AbstractAI implements Ctrl
 		if (_clientMoving)
 		{
 			final Creature follow = getFollowTarget();
-			
 			if ((_clientMovingToPawnOffset != 0) && (follow != null))
 			{
 				// Send a Server->Client packet MoveToPawn to the actor and all PlayerInstance in its _knownPlayers

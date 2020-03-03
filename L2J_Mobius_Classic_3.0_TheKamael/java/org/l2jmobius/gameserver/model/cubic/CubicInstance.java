@@ -65,7 +65,6 @@ public class CubicInstance
 			_skillUseTask.cancel(true);
 		}
 		_skillUseTask = null;
-		
 		if ((_expireTask != null) && !_expireTask.isDone())
 		{
 			_expireTask.cancel(true);
@@ -114,7 +113,6 @@ public class CubicInstance
 				return cubicSkill;
 			}
 		}
-		
 		return null;
 	}
 	
@@ -178,7 +176,6 @@ public class CubicInstance
 					else
 					{
 						stream = _owner.getServitorsAndPets().stream().filter(summon -> _template.validateConditions(this, _owner, summon) && cubicSkill.validateConditions(this, _owner, summon)).map(Creature.class::cast);
-						
 					}
 					
 					if (_template.validateConditions(this, _owner, _owner) && cubicSkill.validateConditions(this, _owner, _owner))
@@ -237,7 +234,6 @@ public class CubicInstance
 		{
 			_caster.broadcastPacket(new MagicSkillUse(_owner, target, skill.getDisplayId(), skill.getDisplayLevel(), skill.getHitTime(), skill.getReuseDelay()));
 			skill.activateSkill(this, target);
-			
 			_owner.addTimeStamp(skill, skill.getReuseDelay());
 		}
 	}

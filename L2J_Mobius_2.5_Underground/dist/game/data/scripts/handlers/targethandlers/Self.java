@@ -45,7 +45,6 @@ public class Self implements ITargetTypeHandler
 			{
 				creature.sendPacket(SystemMessageId.A_MALICIOUS_SKILL_CANNOT_BE_USED_IN_A_PEACE_ZONE);
 			}
-			
 			return null;
 		}
 		return creature;

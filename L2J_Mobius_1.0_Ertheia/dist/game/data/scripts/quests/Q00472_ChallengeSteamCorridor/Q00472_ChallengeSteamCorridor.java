@@ -82,7 +82,6 @@ public class Q00472_ChallengeSteamCorridor extends Quest
 	{
 		final QuestState qs = getQuestState(player, true);
 		String htmltext = getNoQuestMsg(player);
-		
 		if (qs.isCreated())
 		{
 			htmltext = "33044-01.htm";
@@ -102,7 +101,6 @@ public class Q00472_ChallengeSteamCorridor extends Quest
 		{
 			htmltext = "33044-08.html";
 		}
-		
 		return htmltext;
 	}
 	

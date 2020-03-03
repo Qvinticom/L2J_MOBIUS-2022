@@ -39,7 +39,6 @@ public class NextPrevPageHandler implements IPageHandler
 		
 		// Previous
 		sb.append(style.applyBypass(bypassFormatter.formatBypass(bypass, currentPage - 1), "<", currentPage <= 0));
-		
 		sb.append(style.applySeparator());
 		sb.append(String.format("<td align=\"center\">Page: %d/%d</td>", currentPage + 1, pages + 1));
 		sb.append(style.applySeparator());

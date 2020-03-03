@@ -372,7 +372,6 @@ class OlympiadManager implements Runnable
 		{
 			return null;
 		}
-		
 		return list.get(classList.get(Rnd.get(classList.size())));
 	}
 	
@@ -384,10 +383,8 @@ class OlympiadManager implements Runnable
 			return opponents;
 		}
 		final int loopCount = (list.size() / 2);
-		
 		int first;
 		int second;
-		
 		if (loopCount < 1)
 		{
 			return opponents;
@@ -415,19 +412,16 @@ class OlympiadManager implements Runnable
 			return false;
 		}
 		final int loopCount = list.size() >> 1;
-		
 		if (loopCount < 1)
 		{
 			return false;
 		}
 		return true;
-		
 	}
 	
 	protected Map<Integer, String> getAllTitles()
 	{
 		final Map<Integer, String> titles = new HashMap<>();
-		
 		for (OlympiadGame instance : _olympiadInstances.values())
 		{
 			if (!instance._gamestarted)

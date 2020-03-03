@@ -79,7 +79,6 @@ public class Broadcast
 				if ((mov instanceof CharInfo) && (creature instanceof PlayerInstance))
 				{
 					final int relation = ((PlayerInstance) creature).getRelation(player);
-					
 					if ((creature.getKnownList().getKnownRelations().get(player.getObjectId()) != null) && (creature.getKnownList().getKnownRelations().get(player.getObjectId()) != relation))
 					{
 						player.sendPacket(new RelationChanged((PlayerInstance) creature, relation, player.isAutoAttackable(creature)));

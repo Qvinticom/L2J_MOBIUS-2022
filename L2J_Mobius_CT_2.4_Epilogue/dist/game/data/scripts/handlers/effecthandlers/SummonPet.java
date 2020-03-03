@@ -66,7 +66,6 @@ public class SummonPet extends AbstractEffect
 		}
 		
 		final PlayerInstance player = info.getEffector().getActingPlayer();
-		
 		if ((player.hasSummon() || player.isMounted()))
 		{
 			player.sendPacket(SystemMessageId.YOU_ALREADY_HAVE_A_PET);
@@ -95,7 +94,6 @@ public class SummonPet extends AbstractEffect
 		
 		final NpcTemplate npcTemplate = NpcData.getInstance().getTemplate(petData.getNpcId());
 		final PetInstance pet = PetInstance.spawnPet(npcTemplate, player, item);
-		
 		pet.setShowSummonAnimation(true);
 		if (!pet.isRespawned())
 		{

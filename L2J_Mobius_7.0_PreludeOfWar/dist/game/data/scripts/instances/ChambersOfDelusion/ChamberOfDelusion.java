@@ -352,7 +352,6 @@ public class ChamberOfDelusion extends AbstractInstance
 	{
 		final StatSet params = world.getParameters();
 		final List<Location> locations = world.getEnterLocations();
-		
 		int newRoom = params.getInt("currentRoom", 0);
 		if (isBigChamber(world))
 		{

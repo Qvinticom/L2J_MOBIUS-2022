@@ -83,7 +83,6 @@ public class LoginClient extends ChannelInboundHandler<LoginClient>
 		_channel = ctx.channel();
 		_sessionId = Rnd.nextInt();
 		_connectionStartTime = System.currentTimeMillis();
-		
 		sendPacket(new Init(_scrambledPair.getScrambledModulus(), _blowfishKey.getEncoded(), _sessionId));
 	}
 	

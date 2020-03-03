@@ -191,7 +191,6 @@ public class Orfen extends Quest
 				break;
 			}
 		}
-		
 		return super.onAdvEvent(event, npc, player);
 	}
 	
@@ -226,7 +225,6 @@ public class Orfen extends Quest
 				_firstAttacked = true;
 			}
 		}
-		
 		return super.onAttack(npc, attacker, damage, isPet);
 	}
 	
@@ -236,7 +234,6 @@ public class Orfen extends Quest
 		if (npc.getNpcId() == ORFEN)
 		{
 			npc.broadcastPacket(new PlaySound(1, "BS02_D", npc));
-			
 			GrandBossManager.getInstance().setBossStatus(ORFEN, DEAD);
 			// time is 48hour +/- 20hour
 			final long respawnTime = (Config.ORFEN_RESP_FIRST + Rnd.get(Config.ORFEN_RESP_SECOND)) * 3600000;
@@ -247,7 +244,6 @@ public class Orfen extends Quest
 			info.set("respawn_time", System.currentTimeMillis() + respawnTime);
 			GrandBossManager.getInstance().setStatSet(ORFEN, info);
 		}
-		
 		return super.onKill(npc, killer, isPet);
 	}
 	

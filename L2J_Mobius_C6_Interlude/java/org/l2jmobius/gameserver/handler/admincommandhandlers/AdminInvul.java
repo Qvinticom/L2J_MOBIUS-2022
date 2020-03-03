@@ -51,7 +51,6 @@ public class AdminInvul implements IAdminCommandHandler
 		if (command.equals("admin_setinvul"))
 		{
 			final WorldObject target = activeChar.getTarget();
-			
 			if (target instanceof PlayerInstance)
 			{
 				handleInvul((PlayerInstance) target);

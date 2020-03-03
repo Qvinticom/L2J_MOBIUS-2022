@@ -66,14 +66,12 @@ public class Q10710_LifeEnergyRepository extends Quest
 	public String onAdvEvent(String event, Npc npc, PlayerInstance player)
 	{
 		final QuestState qs = getQuestState(player, false);
-		
 		if (event.equals("action"))
 		{
 			if ((qs != null) && qs.isCond(1))
 			{
 				qs.setCond(2, true);
 				giveItems(player, FRAGMENT, 1);
-				
 				for (Location loc : EMBRYO_LOC)
 				{
 					final Npc embryo = addSpawn(EMBRYO, loc, false, 120000);

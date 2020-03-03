@@ -178,7 +178,6 @@ public abstract class Item extends ListenersContainer implements IIdentifiable
 		_referencePrice = set.getInt("price", 0);
 		_crystalType = set.getEnum("crystal_type", CrystalType.class, CrystalType.NONE);
 		_crystalCount = set.getInt("crystal_count", 0);
-		
 		_stackable = set.getBoolean("is_stackable", false);
 		_sellable = set.getBoolean("is_sellable", true);
 		_dropable = set.getBoolean("is_dropable", true);
@@ -192,23 +191,19 @@ public abstract class Item extends ListenersContainer implements IIdentifiable
 		_allowSelfResurrection = set.getBoolean("allow_self_resurrection", false);
 		_isOlyRestricted = set.getBoolean("is_oly_restricted", false);
 		_forNpc = set.getBoolean("for_npc", false);
-		
 		_immediateEffect = set.getBoolean("immediate_effect", false);
 		_exImmediateEffect = set.getBoolean("ex_immediate_effect", false);
-		
 		_defaultAction = set.getEnum("default_action", ActionType.class, ActionType.NONE);
 		_useSkillDisTime = set.getInt("useSkillDisTime", 0);
 		_defaultEnchantLevel = set.getInt("enchanted", 0);
 		_reuseDelay = set.getInt("reuse_delay", 0);
 		_sharedReuseGroup = set.getInt("shared_reuse_group", 0);
-		
 		String skills = set.getString("item_skill", null);
 		if (skills != null)
 		{
 			final String[] skillsSplit = skills.split(";");
 			_skillHolder = new SkillHolder[skillsSplit.length];
 			int used = 0;
-			
 			for (String element : skillsSplit)
 			{
 				try
@@ -216,7 +211,6 @@ public abstract class Item extends ListenersContainer implements IIdentifiable
 					final String[] skillSplit = element.split("-");
 					final int id = Integer.parseInt(skillSplit[0]);
 					final int level = Integer.parseInt(skillSplit[1]);
-					
 					if (id == 0)
 					{
 						LOGGER.info("Ignoring item_skill(" + element + ") for item " + this + ". Skill id is 0!");

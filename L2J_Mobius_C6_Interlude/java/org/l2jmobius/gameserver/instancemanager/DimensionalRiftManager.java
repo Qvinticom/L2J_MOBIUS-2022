@@ -122,7 +122,6 @@ public class DimensionalRiftManager
 				final int yT = rs.getInt("yT");
 				final int zT = rs.getInt("zT");
 				final boolean isBossRoom = rs.getByte("boss") > 0;
-				
 				if (!_rooms.containsKey(type))
 				{
 					_rooms.put(type, new HashMap<Byte, DimensionalRiftRoom>());
@@ -141,7 +140,6 @@ public class DimensionalRiftManager
 		
 		final int typeSize = _rooms.keySet().size();
 		int roomSize = 0;
-		
 		for (Map<Byte, DimensionalRiftRoom> room : _rooms.values())
 		{
 			roomSize += room.keySet().size();
@@ -166,7 +164,6 @@ public class DimensionalRiftManager
 			}
 			
 			final Document doc = factory.newDocumentBuilder().parse(file);
-			
 			NamedNodeMap attrs;
 			byte type;
 			byte roomId;
@@ -178,7 +175,6 @@ public class DimensionalRiftManager
 			int count;
 			Spawn spawnDat;
 			NpcTemplate template;
-			
 			for (Node rift = doc.getFirstChild(); rift != null; rift = rift.getNextSibling())
 			{
 				if ("rift".equalsIgnoreCase(rift.getNodeName()))
@@ -189,14 +185,12 @@ public class DimensionalRiftManager
 						{
 							attrs = area.getAttributes();
 							type = Byte.parseByte(attrs.getNamedItem("type").getNodeValue());
-							
 							for (Node room = area.getFirstChild(); room != null; room = room.getNextSibling())
 							{
 								if ("room".equalsIgnoreCase(room.getNodeName()))
 								{
 									attrs = room.getAttributes();
 									roomId = Byte.parseByte(attrs.getNamedItem("id").getNodeValue());
-									
 									for (Node spawn = room.getFirstChild(); spawn != null; spawn = spawn.getNextSibling())
 									{
 										if ("spawn".equalsIgnoreCase(spawn.getNodeName()))
@@ -205,7 +199,6 @@ public class DimensionalRiftManager
 											mobId = Integer.parseInt(attrs.getNamedItem("mobId").getNodeValue());
 											delay = Integer.parseInt(attrs.getNamedItem("delay").getNodeValue());
 											count = Integer.parseInt(attrs.getNamedItem("count").getNodeValue());
-											
 											template = NpcTable.getInstance().getTemplate(mobId);
 											if (template == null)
 											{
@@ -226,7 +219,6 @@ public class DimensionalRiftManager
 												x = riftRoom.getRandomX();
 												y = riftRoom.getRandomY();
 												z = riftRoom.getTeleportCoords()[2];
-												
 												if ((template != null) && _rooms.containsKey(type) && _rooms.get(type).containsKey(roomId))
 												{
 													spawnDat = new Spawn(template);
@@ -347,7 +339,6 @@ public class DimensionalRiftManager
 		for (PlayerInstance p : player.getParty().getPartyMembers())
 		{
 			i = p.getInventory().getItemByItemId(DIMENSIONAL_FRAGMENT_ITEM_ID);
-			
 			if (i == null)
 			{
 				canPass = false;
@@ -382,7 +373,6 @@ public class DimensionalRiftManager
 			room = (byte) Rnd.get(1, 9);
 		}
 		while (!isRoomAvailable(type, room));
-		
 		new DimensionalRift(player.getParty(), type, room);
 	}
 	

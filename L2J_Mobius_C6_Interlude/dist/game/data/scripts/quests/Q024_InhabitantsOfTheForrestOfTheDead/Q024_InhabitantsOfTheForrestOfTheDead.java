@@ -273,7 +273,6 @@ public class Q024_InhabitantsOfTheForrestOfTheDead extends Quest
 				qs.takeItems(SILVER_CROSS, -1);
 				qs.giveItems(BROKEN_SILVER_CROSS, 1);
 				qs.set("cond", "4");
-				
 				for (PlayerInstance nearby : npc.getKnownList().getKnownPlayers().values())
 				{
 					nearby.sendPacket(new CreatureSay(npc.getObjectId(), ChatType.GENERAL, npc.getName(), "That sign!"));

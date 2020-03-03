@@ -91,7 +91,6 @@ public class FortManagerInstance extends MerchantInstance
 		{
 			final StringTokenizer st = new StringTokenizer(command, " ");
 			final String actualCommand = st.nextToken(); // Get actual command
-			
 			String val = "";
 			if (st.countTokens() >= 1)
 			{

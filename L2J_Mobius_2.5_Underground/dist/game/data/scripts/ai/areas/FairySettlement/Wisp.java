@@ -87,7 +87,6 @@ public class Wisp extends AbstractNpcAI
 	{
 		final Creature creature = event.getSeen();
 		final Npc npc = (Npc) event.getSeer();
-		
 		if (creature.isPlayer() || creature.isFakePlayer())
 		{
 			npc.setTarget(creature);

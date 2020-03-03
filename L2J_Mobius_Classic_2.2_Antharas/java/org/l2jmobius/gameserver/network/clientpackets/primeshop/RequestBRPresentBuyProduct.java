@@ -91,7 +91,6 @@ public class RequestBRPresentBuyProduct implements IClientIncomingPacket
 		{
 			final int price = (item.getPrice() * _count);
 			final int paymentId = validatePaymentId(item, price);
-			
 			if (paymentId < 0)
 			{
 				player.sendPacket(new ExBRBuyProduct(ExBrProductReplyType.LACK_OF_POINT));
@@ -122,7 +121,6 @@ public class RequestBRPresentBuyProduct implements IClientIncomingPacket
 			player.sendPacket(new ExBRGamePoint(player));
 			
 			final Message mail = new Message(receiverId, _mailTitle, _mailBody, MailType.PRIME_SHOP_GIFT);
-			
 			final Mail attachement = mail.createAttachments();
 			for (PrimeShopItem subItem : item.getItems())
 			{
@@ -193,7 +191,6 @@ public class RequestBRPresentBuyProduct implements IClientIncomingPacket
 		
 		final int weight = item.getWeight() * count;
 		final long slots = item.getCount() * count;
-		
 		if (player.getInventory().validateWeight(weight))
 		{
 			if (!player.getInventory().validateCapacity(slots))
@@ -228,7 +225,6 @@ public class RequestBRPresentBuyProduct implements IClientIncomingPacket
 				return HERO_COINS;
 			}
 		}
-		
 		return -1;
 	}
 }

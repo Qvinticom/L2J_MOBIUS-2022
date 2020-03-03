@@ -67,7 +67,6 @@ public class EnchantResult implements IClientOutgoingPacket
 		{
 			packet.writeH(option);
 		}
-		
 		return true;
 	}
 }

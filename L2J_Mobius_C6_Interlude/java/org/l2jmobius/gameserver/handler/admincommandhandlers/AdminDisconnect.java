@@ -53,7 +53,6 @@ public class AdminDisconnect implements IAdminCommandHandler
 	{
 		final WorldObject target = activeChar.getTarget();
 		PlayerInstance player = null;
-		
 		if (target instanceof PlayerInstance)
 		{
 			player = (PlayerInstance) target;
@@ -73,7 +72,6 @@ public class AdminDisconnect implements IAdminCommandHandler
 			
 			// Logout Character
 			player.sendPacket(new LeaveWorld());
-			
 			player.closeNetConnection();
 		}
 	}

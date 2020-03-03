@@ -227,7 +227,6 @@ public class Stage1 extends AbstractInstance implements IXmlReader
 								NamedNodeMap attrs = e.getAttributes();
 								final int npcId = parseInteger(attrs, "npcId");
 								final int flag = parseInteger(attrs, "flag");
-								
 								if (!_spawnList.containsKey(flag))
 								{
 									_spawnList.put(flag, new ArrayList<>());
@@ -246,7 +245,6 @@ public class Stage1 extends AbstractInstance implements IXmlReader
 										spw.z = parseInteger(attrs, "z");
 										spw.h = parseInteger(attrs, "heading");
 										spw.isNeededNextFlag = parseBoolean(attrs, "mustKill", false);
-										
 										if (spw.isNeededNextFlag)
 										{
 											killIds.add(npcId);
@@ -263,7 +261,6 @@ public class Stage1 extends AbstractInstance implements IXmlReader
 										spw.zone = parseInteger(attrs, "id");
 										spw.count = parseInteger(attrs, "count");
 										spw.isNeededNextFlag = parseBoolean(attrs, "mustKill", false);
-										
 										if (spw.isNeededNextFlag)
 										{
 											killIds.add(npcId);

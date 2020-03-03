@@ -40,7 +40,6 @@ public class DeadlockDetector implements Runnable
 		{
 			_instance = new DeadlockDetector();
 		}
-		
 		return _instance;
 	}
 	
@@ -53,14 +52,12 @@ public class DeadlockDetector implements Runnable
 	public void run()
 	{
 		final long[] ids = findDeadlockedThreadIDs();
-		
 		if (ids == null)
 		{
 			return;
 		}
 		
 		final List<Thread> deadlocked = new ArrayList<>();
-		
 		for (long id : ids)
 		{
 			if (_logged.add(id))
@@ -72,7 +69,6 @@ public class DeadlockDetector implements Runnable
 		if (!deadlocked.isEmpty())
 		{
 			Util.printSection("Deadlocked Thread(s)");
-			
 			for (Thread thread : deadlocked)
 			{
 				thread.getName();

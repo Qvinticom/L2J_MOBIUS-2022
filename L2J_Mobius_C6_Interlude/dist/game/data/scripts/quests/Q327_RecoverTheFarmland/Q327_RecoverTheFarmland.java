@@ -284,7 +284,6 @@ public class Q327_RecoverTheFarmland extends Quest
 		else if (event.equals("30034-07.htm"))
 		{
 			boolean isRewarded = false;
-			
 			for (int i = 1852; i < 1856; i++)
 			{
 				final int n = st.getQuestItemsCount(i);
@@ -404,7 +403,6 @@ public class Q327_RecoverTheFarmland extends Quest
 								
 								final int dogtag = st.getQuestItemsCount(TUREK_DOGTAG);
 								final int medallion = st.getQuestItemsCount(TUREK_MEDALLION);
-								
 								st.takeItems(TUREK_DOGTAG, -1);
 								st.takeItems(TUREK_MEDALLION, -1);
 								st.rewardItems(ADENA, (dogtag * 40) + (medallion * 50) + (((dogtag + medallion) >= 10) ? 619 : 0));

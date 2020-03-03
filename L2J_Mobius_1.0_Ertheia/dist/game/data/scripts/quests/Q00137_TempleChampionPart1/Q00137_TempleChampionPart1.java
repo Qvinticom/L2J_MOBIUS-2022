@@ -129,7 +129,6 @@ public class Q00137_TempleChampionPart1 extends Quest
 	{
 		String htmltext = getNoQuestMsg(player);
 		final QuestState qs = getQuestState(player, true);
-		
 		if (qs.isCompleted())
 		{
 			return getAlreadyCompletedMsg(player);

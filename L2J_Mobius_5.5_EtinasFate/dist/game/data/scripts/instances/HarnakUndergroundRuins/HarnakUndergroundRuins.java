@@ -490,10 +490,8 @@ public class HarnakUndergroundRuins extends AbstractInstance
 			case "whisper_to_player":
 			{
 				showOnScreenMsg(player, NpcStringId.I_HERMUNCUS_GIVE_MY_POWER_TO_THOSE_WHO_FIGHT_FOR_ME, ExShowScreenMessage.TOP_CENTER, 5000);
-				
 				npc.broadcastSay(ChatType.WHISPER, NpcStringId.RECEIVE_THIS_POWER_FORM_THE_ANCIENT_GIANT);
 				npc.broadcastSay(ChatType.WHISPER, NpcStringId.USE_THIS_NEW_POWER_WHEN_THE_TIME_IS_RIGHT);
-				
 				startQuestTimer("message4", 3000, npc, player);
 			}
 		}

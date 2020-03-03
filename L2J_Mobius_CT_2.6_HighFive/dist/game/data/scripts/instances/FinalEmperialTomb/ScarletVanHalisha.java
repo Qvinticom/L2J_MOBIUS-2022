@@ -158,7 +158,6 @@ public class ScarletVanHalisha extends AbstractNpcAI
 				}
 			}
 		}
-		
 		return SkillData.getInstance().getSkill(5014, 1);
 	}
 	

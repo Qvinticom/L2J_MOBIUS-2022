@@ -67,7 +67,6 @@ public class Pdam implements ISkillHandler
 			result.add(wo);
 			
 			final Creature target = (Creature) wo;
-			
 			if (target.vengeanceSkill(skill))
 			{
 				result.add(creature);
@@ -77,7 +76,6 @@ public class Pdam implements ISkillHandler
 		final boolean bss = creature.checkBss();
 		final boolean sps = creature.checkSps();
 		final boolean ss = creature.checkSs();
-		
 		for (WorldObject target2 : result)
 		{
 			if (target2 == null)
@@ -88,7 +86,6 @@ public class Pdam implements ISkillHandler
 			final Creature target = (Creature) target2;
 			final Formulas f = Formulas.getInstance();
 			final ItemInstance weapon = creature.getActiveWeaponInstance();
-			
 			if ((creature instanceof PlayerInstance) && (target instanceof PlayerInstance) && target.isAlikeDead() && target.isFakeDeath())
 			{
 				target.stopFakeDeath(null);

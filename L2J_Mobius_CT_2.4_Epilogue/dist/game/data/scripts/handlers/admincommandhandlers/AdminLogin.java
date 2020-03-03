@@ -88,7 +88,6 @@ public class AdminLogin implements IAdminCommandHandler
 			{
 				st.nextToken();
 				final String[] modes = new String[tokens - 1];
-				
 				for (int i = 0; i < (tokens - 1); i++)
 				{
 					modes[i] = st.nextToken().trim();
@@ -182,7 +181,6 @@ public class AdminLogin implements IAdminCommandHandler
 		for (int i = 0; i < 7; i++)
 		{
 			final int currentType = serverType & (int) Math.pow(2, i);
-			
 			if (currentType > 0)
 			{
 				if (!nameType.isEmpty())

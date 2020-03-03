@@ -43,7 +43,6 @@ public class RequestExOustFromMPCC implements IClientIncomingPacket
 	{
 		final PlayerInstance target = World.getInstance().getPlayer(_name);
 		final PlayerInstance player = client.getPlayer();
-		
 		if ((target != null) && target.isInParty() && player.isInParty() && player.getParty().isInCommandChannel() && target.getParty().isInCommandChannel() && player.getParty().getCommandChannel().getLeader().equals(player) && player.getParty().getCommandChannel().equals(target.getParty().getCommandChannel()))
 		{
 			if (player.equals(target))

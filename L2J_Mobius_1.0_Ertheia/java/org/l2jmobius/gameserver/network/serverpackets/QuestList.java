@@ -33,7 +33,6 @@ public class QuestList implements IClientOutgoingPacket
 	{
 		_activeQuests = new LinkedList<>();
 		_oneTimeQuestMask = new byte[128];
-		
 		for (QuestState qs : player.getAllQuestStates())
 		{
 			final int questId = qs.getQuest().getId();

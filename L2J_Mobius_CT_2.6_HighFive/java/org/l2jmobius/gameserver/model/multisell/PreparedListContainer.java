@@ -62,7 +62,6 @@ public class PreparedListContainer extends ListContainer
 			}
 			
 			_entries = new LinkedList<>();
-			
 			for (Entry entry : template.getEntries())
 			{
 				if (!entry.getIngredients().isEmpty())

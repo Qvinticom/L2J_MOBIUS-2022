@@ -59,7 +59,6 @@ public class AdminData implements IXmlReader
 		_accessLevels.clear();
 		parseDatapackFile("config/AccessLevels.xml");
 		LOGGER.info(getClass().getSimpleName() + ": Loaded " + _accessLevels.size() + " access levels.");
-		
 		_adminCommandAccessRights.clear();
 		parseDatapackFile("config/AdminCommands.xml");
 		LOGGER.info(getClass().getSimpleName() + ": Loaded " + _adminCommandAccessRights.size() + " access commands.");
@@ -85,7 +84,6 @@ public class AdminData implements IXmlReader
 		boolean useNameColor = true;
 		boolean useTitleColor = false;
 		boolean canDisableGmStatus = true;
-		
 		for (Node n = doc.getFirstChild(); n != null; n = n.getNextSibling())
 		{
 			if ("list".equalsIgnoreCase(n.getNodeName()))
@@ -95,10 +93,8 @@ public class AdminData implements IXmlReader
 					if ("access".equals(d.getNodeName()))
 					{
 						set = new StatSet(parseAttributes(d));
-						
 						accessLevel = set.getInt("level");
 						name = set.getString("name");
-						
 						if (accessLevel < 0)
 						{
 							LOGGER.info(getClass().getSimpleName() + ": Access level with name " + name + " is using banned access level state(below 0). Ignoring it...");
@@ -149,17 +145,14 @@ public class AdminData implements IXmlReader
 						giveDamage = set.getBoolean("giveDamage");
 						takeAggro = set.getBoolean("takeAggro");
 						gainExp = set.getBoolean("gainExp");
-						
 						useNameColor = set.getBoolean("useNameColor");
 						useTitleColor = set.getBoolean("useTitleColor");
 						canDisableGmStatus = set.getBoolean("canDisableGmStatus");
-						
 						_accessLevels.put(accessLevel, new AccessLevel(accessLevel, name, nameColor, titleColor, isGm, allowPeaceAttack, allowFixedRes, allowTransaction, allowAltG, giveDamage, takeAggro, gainExp, useNameColor, useTitleColor, canDisableGmStatus));
 					}
 					else if ("admin".equals(d.getNodeName()))
 					{
 						set = new StatSet(parseAttributes(d));
-						
 						command = set.getString("command");
 						accessLevel = set.getInt("accessLevel");
 						_adminCommandAccessRights.put(command, accessLevel);
@@ -322,7 +315,6 @@ public class AdminData implements IXmlReader
 		if (isGmOnline(player.isGM()))
 		{
 			player.sendPacket(new SystemMessage(SystemMessageId.GM_LIST));
-			
 			for (String name : getAllGmNames(player.isGM()))
 			{
 				final SystemMessage sm = new SystemMessage(SystemMessageId.GM_S1);

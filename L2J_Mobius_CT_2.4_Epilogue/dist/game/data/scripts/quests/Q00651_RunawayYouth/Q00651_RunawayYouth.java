@@ -76,7 +76,6 @@ public class Q00651_RunawayYouth extends Quest
 	{
 		final QuestState qs = getQuestState(player, true);
 		String htmltext = getNoQuestMsg(player);
-		
 		switch (npc.getId())
 		{
 			case IVAN:

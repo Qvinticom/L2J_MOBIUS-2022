@@ -176,7 +176,6 @@ public class Q10365_SeekerEscort extends Quest
 					{
 						final int failCount = npc.getVariables().getInt("FAIL_COUNT", 0) + 1;
 						npc.getVariables().set("FAIL_COUNT", failCount);
-						
 						if (failCount >= 50)
 						{
 							// Use maybe something else than memostate to check if npc is spawned?!
@@ -186,7 +185,6 @@ public class Q10365_SeekerEscort extends Quest
 							break;
 						}
 						startQuestTimer("CHECK_PLAYER", 1000, npc, owner);
-						
 						if (getRandom(100) < 10)
 						{
 							npc.broadcastSay(ChatType.NPC_GENERAL, NpcStringId.RUFF_RUFF_RRRRRR);
@@ -252,7 +250,6 @@ public class Q10365_SeekerEscort extends Quest
 	public void onMoveFinished(Npc npc)
 	{
 		final PlayerInstance owner = npc.getSummoner().getActingPlayer();
-		
 		if (owner != null)
 		{
 			showOnScreenMsg(owner, NpcStringId.CATCH_UP_TO_KING_HE_S_WAITING, ExShowScreenMessage.TOP_CENTER, 4500);
@@ -267,7 +264,6 @@ public class Q10365_SeekerEscort extends Quest
 	{
 		final QuestState qs = getQuestState(player, true);
 		String htmltext = getNoQuestMsg(player);
-		
 		switch (qs.getState())
 		{
 			case State.CREATED:

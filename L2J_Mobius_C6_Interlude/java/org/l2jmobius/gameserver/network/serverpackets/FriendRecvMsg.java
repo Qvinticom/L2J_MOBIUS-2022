@@ -30,7 +30,6 @@ public class FriendRecvMsg extends GameServerPacket
 	{
 		_sender = sender;
 		_receiver = reciever;
-		
 		_message = message;
 	}
 	

@@ -40,7 +40,6 @@ public class AdminTarget implements IAdminCommandHandler
 		{
 			handleTarget(command, activeChar);
 		}
-		
 		return true;
 	}
 	
@@ -56,7 +55,6 @@ public class AdminTarget implements IAdminCommandHandler
 		{
 			final String targetName = command.substring(13);
 			final WorldObject obj = World.getInstance().getPlayer(targetName);
-			
 			if (obj instanceof PlayerInstance)
 			{
 				obj.onAction(activeChar);

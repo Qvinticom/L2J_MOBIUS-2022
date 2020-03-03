@@ -127,7 +127,6 @@ public class AdminScan implements IAdminCommandHandler
 		final String name = parser.getString("name", null);
 		final int radius = parser.getInt("radius", parser.getInt("range", DEFAULT_RADIUS));
 		final int page = parser.getInt("page", 0);
-		
 		final Predicate<Npc> condition;
 		if (id > 0)
 		{
@@ -151,7 +150,6 @@ public class AdminScan implements IAdminCommandHandler
 		final String name = parser.getString("name", null);
 		final int radius = parser.getInt("radius", parser.getInt("range", DEFAULT_RADIUS));
 		final BypassBuilder builder = new BypassBuilder(bypass);
-		
 		if (id > 0)
 		{
 			builder.addParam("id", id);
@@ -186,7 +184,6 @@ public class AdminScan implements IAdminCommandHandler
 			final String npcName = character.getName();
 			builder.addParam("page", page);
 			builder.addParam("objectId", character.getObjectId());
-			
 			sb.append("<tr>");
 			sb.append("<td width=\"45\">").append(character.getId()).append("</td>");
 			sb.append("<td><a action=\"bypass -h admin_move_to ").append(character.getX()).append(SPACE).append(character.getY()).append(SPACE).append(character.getZ()).append("\">").append(npcName.isEmpty() ? "No name NPC" : npcName).append("</a></td>");

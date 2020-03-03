@@ -80,7 +80,6 @@ public class AuraFriendly implements ITargetTypeHandler
 		if (target.isPlayable())
 		{
 			final PlayerInstance targetPlayer = target.getActingPlayer();
-			
 			if (player.isInDuelWith(target))
 			{
 				return false;

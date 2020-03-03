@@ -60,7 +60,6 @@ public class CrownManager
 		
 		final Clan playerClan = player.getClan();
 		ClanMember playerClanLeader;
-		
 		if (playerClan != null)
 		{
 			playerClanLeader = player.getClan().getLeader();
@@ -73,7 +72,6 @@ public class CrownManager
 		if (playerClan != null)
 		{
 			final Castle playerCastle = CastleManager.getInstance().getCastleByOwner(playerClan);
-			
 			if (playerCastle != null)
 			{
 				crownId = CrownTable.getCrownId(playerCastle.getCastleId());
@@ -102,7 +100,6 @@ public class CrownManager
 		
 		boolean alreadyFoundCirclet = false;
 		boolean alreadyFoundCrown = false;
-		
 		for (ItemInstance item : player.getInventory().getItems())
 		{
 			if (CrownTable.getCrownList().contains(item.getItemId()))

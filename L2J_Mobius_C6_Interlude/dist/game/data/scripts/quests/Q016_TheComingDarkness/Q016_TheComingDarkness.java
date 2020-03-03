@@ -146,7 +146,6 @@ public class Q016_TheComingDarkness extends Quest
 					case EVIL_ALTAR_4:
 					case EVIL_ALTAR_5:
 						final int condAltar = npcId - 31511;
-						
 						if (cond == condAltar)
 						{
 							if (st.hasQuestItems(CRYSTAL_OF_SEAL))

@@ -47,7 +47,6 @@ public class PcCafePointsManager
 		}
 		
 		int points = (int) (exp * 0.0001 * Config.PC_CAFE_POINT_RATE);
-		
 		if (Config.PC_CAFE_RANDOM_POINT)
 		{
 			points = Rnd.get(points / 2, points);

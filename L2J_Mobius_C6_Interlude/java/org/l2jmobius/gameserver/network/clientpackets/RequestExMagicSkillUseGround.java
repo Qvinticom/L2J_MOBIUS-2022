@@ -65,7 +65,6 @@ public class RequestExMagicSkillUseGround extends GameClientPacket
 		
 		// Get the Skill template corresponding to the skillID received from the client
 		final Skill skill = SkillTable.getInstance().getInfo(_skillId, level);
-		
 		if (skill != null)
 		{
 			player.setCurrentSkillWorldPosition(new Location(_x, _y, _z));
@@ -76,7 +75,6 @@ public class RequestExMagicSkillUseGround extends GameClientPacket
 			// TODO: Send a valide position and broadcast the new heading.
 			// Putting a simple Validelocation chars can go up of wall spamming on position and clicking on a SIGNET
 			// player.broadcastPacket(new ValidateLocation(activeChar));
-			
 			player.useMagic(skill, _ctrlPressed, _shiftPressed);
 		}
 		else

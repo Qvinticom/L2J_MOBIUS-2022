@@ -92,7 +92,6 @@ public class QueenAnt extends Quest
 		_zone = GrandBossManager.getInstance().getZone(-21610, 181594, -5734);
 		
 		final StatSet info = GrandBossManager.getInstance().getStatSet(QUEEN);
-		
 		final Integer status = GrandBossManager.getInstance().getBossStatus(QUEEN);
 		
 		switch (status)
@@ -341,7 +340,6 @@ public class QueenAnt extends Quest
 				LOGGER.info("QUEEN: Not defined event: " + event + "!");
 			}
 		}
-		
 		return super.onAdvEvent(event, npc, player);
 	}
 	
@@ -361,13 +359,10 @@ public class QueenAnt extends Quest
 	public String onKill(NpcInstance npc, PlayerInstance killer, boolean isPet)
 	{
 		final int npcId = npc.getNpcId();
-		
 		final Integer status = GrandBossManager.getInstance().getBossStatus(QUEEN);
-		
 		if (npcId == QUEEN)
 		{
 			npc.broadcastPacket(new PlaySound(1, "BS02_D", npc));
-			
 			GrandBossManager.getInstance().setBossStatus(QUEEN, DEAD);
 			// time is 36hour +/- 17hour
 			final long respawnTime = (Config.QA_RESP_FIRST + Rnd.get(Config.QA_RESP_SECOND)) * 3600000;
@@ -383,7 +378,6 @@ public class QueenAnt extends Quest
 			final StatSet info = GrandBossManager.getInstance().getStatSet(QUEEN);
 			info.set("respawn_time", System.currentTimeMillis() + respawnTime);
 			GrandBossManager.getInstance().setStatSet(QUEEN, info);
-			
 			startQuestTimer("DESPAWN_MINIONS", 10000, null, null);
 		}
 		else if ((status == LIVE) && ((npcId == ROYAL) || (npcId == NURSE)))

@@ -55,11 +55,9 @@ public class AdminVitality implements IAdminCommandHandler
 		
 		final StringTokenizer st = new StringTokenizer(command, " ");
 		final String cmd = st.nextToken();
-		
 		if ((activeChar.getTarget() != null) && activeChar.getTarget().isPlayer())
 		{
 			final PlayerInstance target = (PlayerInstance) activeChar.getTarget();
-			
 			if (cmd.equals("admin_set_vitality"))
 			{
 				try

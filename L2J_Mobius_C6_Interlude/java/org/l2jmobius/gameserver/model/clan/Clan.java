@@ -369,14 +369,12 @@ public class Clan
 				return temp;
 			}
 		}
-		
 		return null;
 	}
 	
 	public void removeClanMember(String name, long clanJoinExpiryTime)
 	{
 		final ClanMember exMember = _members.remove(name);
-		
 		if (exMember == null)
 		{
 			LOGGER.warning("Member " + name + " not found in clan while trying to remove");
@@ -384,7 +382,6 @@ public class Clan
 		}
 		
 		final int leadssubpledge = getLeaderSubPledge(name);
-		
 		if (leadssubpledge != 0)
 		{
 			// Sub-unit leader withdraws, position becomes vacant and leader should appoint new via NPC
@@ -395,7 +392,6 @@ public class Clan
 		if (exMember.getApprentice() != 0)
 		{
 			final ClanMember apprentice = getClanMember(exMember.getApprentice());
-			
 			if (apprentice != null)
 			{
 				if (apprentice.getPlayerInstance() != null)
@@ -414,7 +410,6 @@ public class Clan
 		if (exMember.getSponsor() != 0)
 		{
 			final ClanMember sponsor = getClanMember(exMember.getSponsor());
-			
 			if (sponsor != null)
 			{
 				if (sponsor.getPlayerInstance() != null)
@@ -431,7 +426,6 @@ public class Clan
 		}
 		
 		exMember.saveApprenticeAndSponsor(0, 0);
-		
 		if (Config.REMOVE_CASTLE_CIRCLETS)
 		{
 			CastleManager.getInstance().removeCirclet(exMember, getHasCastle());
@@ -440,7 +434,6 @@ public class Clan
 		if (exMember.isOnline())
 		{
 			final PlayerInstance player = exMember.getPlayerInstance();
-			
 			player.setTitle("");
 			player.setApprentice(0);
 			player.setSponsor(0);
@@ -478,7 +471,6 @@ public class Clan
 	public Integer[] getOfflineMembersIds()
 	{
 		final List<Integer> list = new ArrayList<>();
-		
 		for (ClanMember temp : _members.values())
 		{
 			if ((temp != null) && !temp.isOnline())
@@ -486,7 +478,6 @@ public class Clan
 				list.add(temp.getObjectId());
 			}
 		}
-		
 		return list.toArray(new Integer[list.size()]);
 	}
 	
@@ -498,7 +489,6 @@ public class Clan
 	public int getSubPledgeMembersCount(int subpl)
 	{
 		int result = 0;
-		
 		for (ClanMember temp : _members.values())
 		{
 			if (temp.getPledgeType() == subpl)
@@ -506,7 +496,6 @@ public class Clan
 				result++;
 			}
 		}
-		
 		return result;
 	}
 	
@@ -573,14 +562,12 @@ public class Clan
 				break;
 			}
 		}
-		
 		return limit;
 	}
 	
 	public PlayerInstance[] getOnlineMembers()
 	{
 		final List<PlayerInstance> result = new ArrayList<>();
-		
 		for (ClanMember temp : _members.values())
 		{
 			try
@@ -595,7 +582,6 @@ public class Clan
 				LOGGER.warning(e.toString());
 			}
 		}
-		
 		return result.toArray(new PlayerInstance[result.size()]);
 	}
 	
@@ -690,7 +676,6 @@ public class Clan
 	public void setLevel(int level)
 	{
 		_level = level;
-		
 		if (Config.ENABLE_COMMUNITY_BOARD && (_level >= 2) && (_forum == null))
 		{
 			final Forum forum = ForumsBBSManager.getInstance().getForumByName("ClanRoot");
@@ -794,7 +779,6 @@ public class Clan
 			final PreparedStatement statement = con.prepareStatement("SELECT clan_name,clan_level,hasCastle,ally_id,ally_name,leader_id,crest_id,crest_large_id,ally_crest_id,reputation_score,auction_bid_at,ally_penalty_expiry_time,ally_penalty_type,char_penalty_expiry_time,dissolving_expiry_time FROM clan_data where clan_id=?");
 			statement.setInt(1, _clanId);
 			final ResultSet clanData = statement.executeQuery();
-			
 			if (clanData.next())
 			{
 				setName(clanData.getString("clan_name"));
@@ -803,7 +787,6 @@ public class Clan
 				setAllyId(clanData.getInt("ally_id"));
 				setAllyName(clanData.getString("ally_name"));
 				setAllyPenaltyExpiryTime(clanData.getLong("ally_penalty_expiry_time"), clanData.getInt("ally_penalty_type"));
-				
 				if (_allyPenaltyExpiryTime < System.currentTimeMillis())
 				{
 					setAllyPenaltyExpiryTime(0, 0);
@@ -837,7 +820,6 @@ public class Clan
 				setAuctionBiddedAt(clanData.getInt("auction_bid_at"), false);
 				
 				final int leaderId = clanData.getInt("leader_id");
-				
 				final PreparedStatement statement2 = con.prepareStatement("SELECT char_name,level,classid,obj_Id,title,power_grade,subpledge,apprentice,sponsor FROM characters WHERE clanid=?");
 				statement2.setInt(1, _clanId);
 				final ResultSet clanMembers = statement2.executeQuery();
@@ -845,7 +827,6 @@ public class Clan
 				while (clanMembers.next())
 				{
 					member = new ClanMember(this, clanMembers.getString("char_name"), clanMembers.getInt("level"), clanMembers.getInt("classid"), clanMembers.getInt("obj_id"), clanMembers.getInt("subpledge"), clanMembers.getInt("power_grade"), clanMembers.getString("title"));
-					
 					if (member.getObjectId() == leaderId)
 					{
 						setLeader(member);
@@ -1013,13 +994,11 @@ public class Clan
 	public Skill addSkill(Skill newSkill)
 	{
 		Skill oldSkill = null;
-		
 		if (newSkill != null)
 		{
 			// Replace oldSkill by newSkill or Add the newSkill
 			oldSkill = _skills.put(newSkill.getId(), newSkill);
 		}
-		
 		return oldSkill;
 	}
 	
@@ -1031,7 +1010,6 @@ public class Clan
 	public Skill addNewSkill(Skill newSkill)
 	{
 		Skill oldSkill = null;
-		
 		if (newSkill != null)
 		{
 			// Replace oldSkill by newSkill or Add the newSkill
@@ -1396,7 +1374,6 @@ public class Clan
 			while (rset.next())
 			{
 				final int id = rset.getInt("sub_pledge_id");
-				
 				final String name = rset.getString("name");
 				final String leaderName = rset.getString("leader_name");
 				// Create a SubPledge object for each record
@@ -1453,7 +1430,6 @@ public class Clan
 	{
 		SubPledge subPledge = null;
 		pledgeType = getAvailablePledgeTypes(pledgeType);
-		
 		if (pledgeType == 0)
 		{
 			if (pledgeType == SUBUNIT_ACADEMY)
@@ -1487,7 +1463,6 @@ public class Clan
 			statement.setInt(1, _clanId);
 			statement.setInt(2, pledgeType);
 			statement.setString(3, subPledgeName);
-			
 			if (pledgeType != -1)
 			{
 				statement.setString(4, leaderName);
@@ -1515,7 +1490,6 @@ public class Clan
 		
 		broadcastToOnlineMembers(new PledgeShowInfoUpdate(_leader.getClan()));
 		broadcastToOnlineMembers(new PledgeReceiveSubPledgeCreated(subPledge));
-		
 		return subPledge;
 	}
 	
@@ -1571,7 +1545,6 @@ public class Clan
 			statement.setString(2, getSubPledge(pledgeType).getName());
 			statement.setInt(3, _clanId);
 			statement.setInt(4, pledgeType);
-			
 			statement.execute();
 			statement.close();
 		}
@@ -1611,7 +1584,6 @@ public class Clan
 	public void initializePrivs()
 	{
 		RankPrivs privs;
-		
 		for (int i = 1; i < 10; i++)
 		{
 			privs = new RankPrivs(i, 0, CP_NOTHING);
@@ -1688,7 +1660,6 @@ public class Clan
 	public int getLeaderSubPledge(String name)
 	{
 		int id = 0;
-		
 		for (SubPledge sp : _subPledges.values())
 		{
 			if (sp.getLeaderName() == null)
@@ -1710,7 +1681,6 @@ public class Clan
 		{
 			broadcastToOnlineMembers(new SystemMessage(SystemMessageId.SINCE_THE_CLAN_REPUTATION_SCORE_HAS_DROPPED_TO_0_OR_LOWER_YOUR_CLAN_SKILL_S_WILL_BE_DE_ACTIVATED));
 			final Skill[] skills = getAllSkills();
-			
 			for (ClanMember member : _members.values())
 			{
 				if (member.isOnline() && (member.getPlayerInstance() != null))
@@ -1726,7 +1696,6 @@ public class Clan
 		{
 			broadcastToOnlineMembers(new SystemMessage(SystemMessageId.CLAN_SKILLS_WILL_NOW_BE_ACTIVATED_SINCE_THE_CLAN_S_REPUTATION_SCORE_IS_0_OR_HIGHER));
 			final Skill[] skills = getAllSkills();
-			
 			for (ClanMember member : _members.values())
 			{
 				if (member.isOnline() && (member.getPlayerInstance() != null))
@@ -1743,7 +1712,6 @@ public class Clan
 		}
 		
 		_reputationScore = value;
-		
 		if (_reputationScore > 100000000)
 		{
 			_reputationScore = 100000000;
@@ -1782,7 +1750,6 @@ public class Clan
 	public void setAuctionBiddedAt(int id, boolean storeInDb)
 	{
 		_auctionBiddedAt = id;
-		
 		if (storeInDb)
 		{
 			try (Connection con = DatabaseFactory.getConnection())
@@ -1936,7 +1903,6 @@ public class Clan
 		}
 		
 		final Clan targetClan = target.getClan();
-		
 		if (target.getAllyId() != 0)
 		{
 			final SystemMessage sm = new SystemMessage(SystemMessageId.S1_CLAN_IS_ALREADY_A_MEMBER_OF_S2_ALLIANCE);
@@ -1976,7 +1942,6 @@ public class Clan
 		}
 		
 		int numOfClansInAlly = 0;
-		
 		for (Clan clan : ClanTable.getInstance().getClans())
 		{
 			if (clan.getAllyId() == player.getAllyId())
@@ -2079,7 +2044,6 @@ public class Clan
 		}
 		
 		final Matcher match = pattern.matcher(allyName);
-		
 		if (!match.matches())
 		{
 			player.sendPacket(SystemMessageId.INCORRECT_ALLIANCE_NAME_PLEASE_TRY_AGAIN);
@@ -2132,7 +2096,6 @@ public class Clan
 		broadcastToOnlineAllyMembers(new SystemMessage(SystemMessageId.THE_ALLIANCE_HAS_BEEN_DISSOLVED));
 		
 		final long currentTime = System.currentTimeMillis();
-		
 		for (Clan clan : ClanTable.getInstance().getClans())
 		{
 			if ((clan.getAllyId() == getAllyId()) && (clan.getClanId() != getClanId()))
@@ -2302,7 +2265,6 @@ public class Clan
 		player.sendPacket(su);
 		
 		player.sendPacket(new ItemList(player, false));
-		
 		changeLevel(_level + 1);
 	}
 	
@@ -2326,7 +2288,6 @@ public class Clan
 		if (_leader.isOnline())
 		{
 			final PlayerInstance leader = _leader.getPlayerInstance();
-			
 			if (3 < level)
 			{
 				SiegeManager.getInstance().addSiegeSkills(leader);

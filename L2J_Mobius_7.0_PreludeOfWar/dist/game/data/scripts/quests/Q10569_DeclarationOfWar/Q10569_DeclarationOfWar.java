@@ -151,7 +151,6 @@ public class Q10569_DeclarationOfWar extends Quest
 	{
 		final QuestState qs = getQuestState(player, true);
 		String htmltext = getNoQuestMsg(player);
-		
 		switch (qs.getState())
 		{
 			case State.CREATED:
@@ -241,7 +240,6 @@ public class Q10569_DeclarationOfWar extends Quest
 					{
 						qs.set("AncientGhosts", killedGhosts);
 						playSound(killer, QuestSound.ITEMSOUND_QUEST_ITEMGET);
-						
 						if (killedGhosts >= 1000)
 						{
 							qs.setCond(3, true);
@@ -256,7 +254,6 @@ public class Q10569_DeclarationOfWar extends Quest
 					{
 						qs.set("AncientGhosts", killedGhosts);
 						playSound(killer, QuestSound.ITEMSOUND_QUEST_ITEMGET);
-						
 						if (killedGhosts >= 20)
 						{
 							qs.setCond(7, true);

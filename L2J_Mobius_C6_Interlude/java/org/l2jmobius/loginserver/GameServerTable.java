@@ -67,10 +67,8 @@ public class GameServerTable
 	{
 		loadServerNames();
 		LOGGER.info("Loaded " + _serverNames.size() + " server names");
-		
 		loadRegisteredGameServers();
 		LOGGER.info("Loaded " + _gameServerTable.size() + " registered Game Servers");
-		
 		loadRSAKeys();
 		LOGGER.info("Cached " + _keyPairs.length + " RSA keys for Game Server communication.");
 	}
@@ -102,17 +100,14 @@ public class GameServerTable
 			final DocumentBuilderFactory dbf = DocumentBuilderFactory.newInstance();
 			final DocumentBuilder db = dbf.newDocumentBuilder();
 			final Document doc = db.parse(new File(Config.SERVER_NAME_FILE));
-			
 			final Node n = doc.getFirstChild();
 			for (Node d = n.getFirstChild(); d != null; d = d.getNextSibling())
 			{
 				if (d.getNodeName().equalsIgnoreCase("server"))
 				{
 					final NamedNodeMap attrs = d.getAttributes();
-					
 					final int id = Integer.parseInt(attrs.getNamedItem("id").getNodeValue());
 					final String name = attrs.getNamedItem("name").getNodeValue();
-					
 					_serverNames.put(id, name);
 				}
 			}
@@ -248,7 +243,6 @@ public class GameServerTable
 		{
 			return "null";
 		}
-		
 		return new BigInteger(hex).toString(16);
 	}
 	
@@ -351,7 +345,6 @@ public class GameServerTable
 			{
 				return 0;
 			}
-			
 			return _gst.getPlayerCount();
 		}
 		

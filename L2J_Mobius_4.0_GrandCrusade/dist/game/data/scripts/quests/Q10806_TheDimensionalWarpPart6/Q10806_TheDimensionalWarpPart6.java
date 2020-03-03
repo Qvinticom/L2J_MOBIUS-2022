@@ -106,7 +106,6 @@ public class Q10806_TheDimensionalWarpPart6 extends Quest
 	{
 		final QuestState qs = getQuestState(player, true);
 		String htmltext = getNoQuestMsg(player);
-		
 		switch (qs.getState())
 		{
 			case State.CREATED:

@@ -70,7 +70,6 @@ public class UserInfo extends AbstractMaskPacket<UserInfoType>
 		if (!player.isSubclassLocked()) // Changing class.
 		{
 			_player = player;
-			
 			_relation = calculateRelation(player);
 			_moveMultiplier = player.getMovementSpeedMultiplier();
 			_runSpd = (int) Math.round(player.getRunSpeed() / _moveMultiplier);
@@ -81,7 +80,6 @@ public class UserInfo extends AbstractMaskPacket<UserInfoType>
 			_flyWalkSpd = player.isFlying() ? _walkSpd : 0;
 			_enchantLevel = player.getInventory().getWeaponEnchant();
 			_armorEnchant = player.getInventory().getArmorMinEnchant();
-			
 			_title = player.getTitle();
 			if (player.isGM() && player.isInvisible())
 			{
@@ -392,7 +390,6 @@ public class UserInfo extends AbstractMaskPacket<UserInfoType>
 		int relation = 0;
 		final Party party = player.getParty();
 		final Clan clan = player.getClan();
-		
 		if (party != null)
 		{
 			relation |= 0x08; // Party member

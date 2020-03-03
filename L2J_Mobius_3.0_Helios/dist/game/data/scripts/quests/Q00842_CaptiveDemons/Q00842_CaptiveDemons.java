@@ -192,7 +192,6 @@ public class Q00842_CaptiveDemons extends Quest
 	{
 		final QuestState qs = getQuestState(player, true);
 		String htmltext = getNoQuestMsg(player);
-		
 		switch (qs.getState())
 		{
 			case State.CREATED:
@@ -263,7 +262,6 @@ public class Q00842_CaptiveDemons extends Quest
 					final int killedGhosts = qs.getInt("AncientGhosts") + 1;
 					qs.set("AncientGhosts", killedGhosts);
 					playSound(killer, QuestSound.ITEMSOUND_QUEST_ITEMGET);
-					
 					if (killedGhosts >= 200)
 					{
 						qs.setCond(4, true);
@@ -275,7 +273,6 @@ public class Q00842_CaptiveDemons extends Quest
 					final int killedGhosts = qs.getInt("AncientGhosts") + 1;
 					qs.set("AncientGhosts", killedGhosts);
 					playSound(killer, QuestSound.ITEMSOUND_QUEST_ITEMGET);
-					
 					if (killedGhosts >= 400)
 					{
 						qs.setCond(5, true);

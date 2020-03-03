@@ -75,7 +75,6 @@ public class Q10338_SeizeYourDestiny extends Quest
 		}
 		
 		String htmltext = null;
-		
 		switch (event)
 		{
 			case "TELEPORT":
@@ -140,7 +139,6 @@ public class Q10338_SeizeYourDestiny extends Quest
 	{
 		final QuestState qs = getQuestState(player, true);
 		String htmltext = getNoQuestMsg(player);
-		
 		switch (npc.getId())
 		{
 			case CELLPHINE:

@@ -110,7 +110,6 @@ public class Q10380_TheExecutionersExecution extends Quest
 	{
 		final QuestState qs = getQuestState(player, true);
 		String htmltext = getNoQuestMsg(player);
-		
 		if (qs.isCreated())
 		{
 			htmltext = "warden_endrigo_q10380_01.htm";
@@ -130,7 +129,6 @@ public class Q10380_TheExecutionersExecution extends Quest
 		{
 			htmltext = "warden_endrigo_q10380_03.html";
 		}
-		
 		return htmltext;
 	}
 	

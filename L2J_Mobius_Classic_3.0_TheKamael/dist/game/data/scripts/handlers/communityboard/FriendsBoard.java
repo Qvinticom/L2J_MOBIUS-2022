@@ -47,7 +47,6 @@ public class FriendsBoard implements IParseBoardHandler
 			CommunityBoardHandler.getInstance().addBypass(player, "Friends List", command);
 			
 			final String html = HtmCache.getInstance().getHtm(player, "data/html/CommunityBoard/friends_list.html");
-			
 			CommunityBoardHandler.separateAndSend(html, player);
 		}
 		else if (command.equals("_friendblocklist"))
@@ -55,7 +54,6 @@ public class FriendsBoard implements IParseBoardHandler
 			CommunityBoardHandler.getInstance().addBypass(player, "Ignore list", command);
 			
 			final String html = HtmCache.getInstance().getHtm(player, "data/html/CommunityBoard/friends_block_list.html");
-			
 			CommunityBoardHandler.separateAndSend(html, player);
 		}
 		return true;

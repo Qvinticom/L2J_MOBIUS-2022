@@ -175,7 +175,6 @@ public class Expression
 			errors.add("Too many operands");
 		}
 		return errors.isEmpty() ? ValidationResult.SUCCESS : new ValidationResult(false, errors);
-		
 	}
 	
 	public ValidationResult validate()

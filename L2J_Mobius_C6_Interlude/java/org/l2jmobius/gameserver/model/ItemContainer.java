@@ -97,7 +97,6 @@ public abstract class ItemContainer
 				return item;
 			}
 		}
-		
 		return null;
 	}
 	
@@ -117,7 +116,6 @@ public abstract class ItemContainer
 				return item;
 			}
 		}
-		
 		return null;
 	}
 	
@@ -153,7 +151,6 @@ public abstract class ItemContainer
 	public int getInventoryItemCount(int itemId, int enchantLevel)
 	{
 		int count = 0;
-		
 		for (ItemInstance item : _items)
 		{
 			if ((item != null) && (item.getItemId() == itemId) && ((item.getEnchantLevel() == enchantLevel) || (enchantLevel < 0)))
@@ -168,7 +165,6 @@ public abstract class ItemContainer
 				}
 			}
 		}
-		
 		return count;
 	}
 	
@@ -268,7 +264,6 @@ public abstract class ItemContainer
 			for (int i = 0; i < count; i++)
 			{
 				final Item template = ItemTable.getInstance().getTemplate(itemId);
-				
 				if (template == null)
 				{
 					LOGGER.warning((actor != null ? "[" + actor.getName() + "] " : "") + "Invalid ItemId requested: " + itemId);
@@ -454,7 +449,6 @@ public abstract class ItemContainer
 			
 			removeItem(item);
 			ItemTable.getInstance().destroyItem(process, item, actor, reference);
-			
 			item.updateDatabase();
 			
 			if (item.isVarkaKetraAllyQuestItem())
@@ -480,7 +474,6 @@ public abstract class ItemContainer
 	public ItemInstance destroyItem(String process, int objectId, int count, PlayerInstance actor, WorldObject reference)
 	{
 		final ItemInstance item = getItemByObjectId(objectId);
-		
 		if (item == null)
 		{
 			return null;
@@ -516,7 +509,6 @@ public abstract class ItemContainer
 	public ItemInstance destroyItemByItemId(String process, int itemId, int count, PlayerInstance actor, WorldObject reference)
 	{
 		final ItemInstance item = getItemByItemId(itemId);
-		
 		if (item == null)
 		{
 			return null;
@@ -564,7 +556,6 @@ public abstract class ItemContainer
 	public int getAdena()
 	{
 		int count = 0;
-		
 		for (ItemInstance item : _items)
 		{
 			if (item.getItemId() == 57)
@@ -573,7 +564,6 @@ public abstract class ItemContainer
 				return count;
 			}
 		}
-		
 		return count;
 	}
 	
@@ -636,7 +626,6 @@ public abstract class ItemContainer
 		if (getOwner() != null)
 		{
 			final List<ItemInstance> items = _items;
-			
 			if (items != null)
 			{
 				for (ItemInstance item : items)
@@ -664,15 +653,12 @@ public abstract class ItemContainer
 			statement.setInt(1, ownerid);
 			statement.setString(2, baseLocation);
 			final ResultSet inv = statement.executeQuery();
-			
 			ItemInstance item;
 			
 			while (inv.next())
 			{
 				final int objectId = inv.getInt(1);
-				
 				item = ItemInstance.restoreFromDb(objectId);
-				
 				if (item == null)
 				{
 					continue;

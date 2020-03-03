@@ -133,7 +133,6 @@ public class Q275_DarkWingedSpies extends Quest
 				{
 					// Spawn of Varangka Tracker on the npc position.
 					addSpawn(VARANGKA_TRACKER, npc.getX(), npc.getY(), npc.getZ(), npc.getHeading(), true, 0);
-					
 					st.giveItems(VARANGKA_PARASITE, 1);
 				}
 				break;
@@ -142,7 +141,6 @@ public class Q275_DarkWingedSpies extends Quest
 				if (st.hasQuestItems(VARANGKA_PARASITE))
 				{
 					st.takeItems(VARANGKA_PARASITE, -1);
-					
 					if (st.dropItemsAlways(DARKWING_BAT_FANG, 5, 70))
 					{
 						st.set("cond", "2");

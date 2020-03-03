@@ -98,7 +98,6 @@ public class PlayerInventory extends Inventory
 	public ItemInstance[] getUniqueItems(boolean allowAdena, boolean allowAncientAdena, boolean onlyAvailable, boolean allowEquipped)
 	{
 		final List<ItemInstance> list = new ArrayList<>();
-		
 		for (ItemInstance item : _items)
 		{
 			if (!allowAdena && (item.getItemId() == 57))
@@ -111,7 +110,6 @@ public class PlayerInventory extends Inventory
 			}
 			
 			boolean isDuplicate = false;
-			
 			for (ItemInstance litem : list)
 			{
 				if ((litem.getItemId() == item.getItemId()) && item.isStackable()) // to duplicate more not stackable item
@@ -144,7 +142,6 @@ public class PlayerInventory extends Inventory
 	public ItemInstance[] getUniqueItemsByEnchantLevel(boolean allowAdena, boolean allowAncientAdena, boolean onlyAvailable, boolean allowEquipped)
 	{
 		final List<ItemInstance> list = new ArrayList<>();
-		
 		for (ItemInstance item : _items)
 		{
 			if (!allowAdena && (item.getItemId() == 57))
@@ -157,7 +154,6 @@ public class PlayerInventory extends Inventory
 			}
 			
 			boolean isDuplicate = false;
-			
 			for (ItemInstance litem : list)
 			{
 				if ((litem.getItemId() == item.getItemId()) && (litem.getEnchantLevel() == item.getEnchantLevel()))
@@ -184,7 +180,6 @@ public class PlayerInventory extends Inventory
 	public ItemInstance[] getAllItemsByItemId(int itemId)
 	{
 		final List<ItemInstance> list = new ArrayList<>();
-		
 		for (ItemInstance item : _items)
 		{
 			if (item.getItemId() == itemId)
@@ -192,7 +187,6 @@ public class PlayerInventory extends Inventory
 				list.add(item);
 			}
 		}
-		
 		return list.toArray(new ItemInstance[list.size()]);
 	}
 	
@@ -205,7 +199,6 @@ public class PlayerInventory extends Inventory
 	public ItemInstance[] getAllItemsByItemId(int itemId, int enchantment)
 	{
 		final List<ItemInstance> list = new ArrayList<>();
-		
 		for (ItemInstance item : _items)
 		{
 			if ((item.getItemId() == itemId) && (item.getEnchantLevel() == enchantment))
@@ -213,7 +206,6 @@ public class PlayerInventory extends Inventory
 				list.add(item);
 			}
 		}
-		
 		return list.toArray(new ItemInstance[list.size()]);
 	}
 	
@@ -225,7 +217,6 @@ public class PlayerInventory extends Inventory
 	public ItemInstance[] getAvailableItems(boolean allowAdena)
 	{
 		final List<ItemInstance> list = new ArrayList<>();
-		
 		for (ItemInstance item : _items)
 		{
 			if ((item != null) && item.isAvailable(_owner, allowAdena, false))
@@ -233,7 +224,6 @@ public class PlayerInventory extends Inventory
 				list.add(item);
 			}
 		}
-		
 		return list.toArray(new ItemInstance[list.size()]);
 	}
 	
@@ -244,7 +234,6 @@ public class PlayerInventory extends Inventory
 	public ItemInstance[] getAugmentedItems()
 	{
 		final List<ItemInstance> list = new ArrayList<>();
-		
 		for (ItemInstance item : _items)
 		{
 			if ((item != null) && item.isAugmented())
@@ -252,7 +241,6 @@ public class PlayerInventory extends Inventory
 				list.add(item);
 			}
 		}
-		
 		return list.toArray(new ItemInstance[list.size()]);
 	}
 	
@@ -264,7 +252,6 @@ public class PlayerInventory extends Inventory
 	public TradeItem[] getAvailableItems(TradeList tradeList)
 	{
 		final List<TradeItem> list = new ArrayList<>();
-		
 		for (ItemInstance item : _items)
 		{
 			if (item.isAvailable(_owner, false, false))
@@ -276,7 +263,6 @@ public class PlayerInventory extends Inventory
 				}
 			}
 		}
-		
 		return list.toArray(new TradeItem[list.size()]);
 	}
 	
@@ -304,7 +290,6 @@ public class PlayerInventory extends Inventory
 					{
 						item.setCurCount(item.getCount());
 					}
-					
 					return item;
 				}
 			}
@@ -413,7 +398,6 @@ public class PlayerInventory extends Inventory
 	public ItemInstance addItem(String process, ItemInstance item, PlayerInstance actor, WorldObject reference)
 	{
 		item = super.addItem(process, item, actor, reference);
-		
 		if ((item != null) && (item.getItemId() == ADENA_ID) && !item.equals(_adena))
 		{
 			_adena = item;
@@ -440,7 +424,6 @@ public class PlayerInventory extends Inventory
 	public ItemInstance addItem(String process, int itemId, int count, PlayerInstance actor, WorldObject reference)
 	{
 		final ItemInstance item = super.addItem(process, itemId, count, actor, reference);
-		
 		if ((item != null) && (item.getItemId() == ADENA_ID) && !item.equals(_adena))
 		{
 			_adena = item;
@@ -467,7 +450,6 @@ public class PlayerInventory extends Inventory
 	public ItemInstance transferItem(String process, int objectId, int count, ItemContainer target, PlayerInstance actor, WorldObject reference)
 	{
 		final ItemInstance item = super.transferItem(process, objectId, count, target, actor, reference);
-		
 		if ((_adena != null) && ((_adena.getCount() <= 0) || (_adena.getOwnerId() != getOwnerId())))
 		{
 			_adena = null;
@@ -493,7 +475,6 @@ public class PlayerInventory extends Inventory
 	public ItemInstance destroyItem(String process, ItemInstance item, PlayerInstance actor, WorldObject reference)
 	{
 		item = super.destroyItem(process, item, actor, reference);
-		
 		if ((_adena != null) && (_adena.getCount() <= 0))
 		{
 			_adena = null;
@@ -520,7 +501,6 @@ public class PlayerInventory extends Inventory
 	public ItemInstance destroyItem(String process, int objectId, int count, PlayerInstance actor, WorldObject reference)
 	{
 		final ItemInstance item = super.destroyItem(process, objectId, count, actor, reference);
-		
 		if ((_adena != null) && (_adena.getCount() <= 0))
 		{
 			_adena = null;
@@ -547,7 +527,6 @@ public class PlayerInventory extends Inventory
 	public ItemInstance destroyItemByItemId(String process, int itemId, int count, PlayerInstance actor, WorldObject reference)
 	{
 		final ItemInstance item = super.destroyItemByItemId(process, itemId, count, actor, reference);
-		
 		if ((_adena != null) && (_adena.getCount() <= 0))
 		{
 			_adena = null;
@@ -573,7 +552,6 @@ public class PlayerInventory extends Inventory
 	public ItemInstance dropItem(String process, ItemInstance item, PlayerInstance actor, WorldObject reference)
 	{
 		item = super.dropItem(process, item, actor, reference);
-		
 		if ((_adena != null) && ((_adena.getCount() <= 0) || (_adena.getOwnerId() != getOwnerId())))
 		{
 			_adena = null;
@@ -600,7 +578,6 @@ public class PlayerInventory extends Inventory
 	public ItemInstance dropItem(String process, int objectId, int count, PlayerInstance actor, WorldObject reference)
 	{
 		final ItemInstance item = super.dropItem(process, objectId, count, actor, reference);
-		
 		if ((_adena != null) && ((_adena.getCount() <= 0) || (_adena.getOwnerId() != getOwnerId())))
 		{
 			_adena = null;
@@ -693,19 +670,16 @@ public class PlayerInventory extends Inventory
 	public boolean validateCapacity(ItemInstance item)
 	{
 		int slots = 0;
-		
 		if ((!item.isStackable() || (getItemByItemId(item.getItemId()) == null)) && (item.getItemType() != EtcItemType.HERB))
 		{
 			slots++;
 		}
-		
 		return validateCapacity(slots);
 	}
 	
 	public boolean validateCapacity(List<ItemInstance> items)
 	{
 		int slots = 0;
-		
 		for (ItemInstance item : items)
 		{
 			if ((!item.isStackable() || (getItemByItemId(item.getItemId()) == null)))
@@ -713,7 +687,6 @@ public class PlayerInventory extends Inventory
 				slots++;
 			}
 		}
-		
 		return validateCapacity(slots);
 	}
 	

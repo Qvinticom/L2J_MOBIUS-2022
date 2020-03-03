@@ -88,7 +88,6 @@ public class Spawn
 	{
 		// Set the _template of the Spawn
 		_template = mobTemplate;
-		
 		if (_template == null)
 		{
 			return;
@@ -96,7 +95,6 @@ public class Spawn
 		
 		// The Name of the NpcInstance type managed by this Spawn
 		String implementationName = _template.getType(); // implementing class name
-		
 		if (mobTemplate.getNpcId() == 30995)
 		{
 			implementationName = "RaceManager";
@@ -173,7 +171,6 @@ public class Spawn
 		{
 			return -1;
 		}
-		
 		return _template.getNpcId();
 	}
 	
@@ -339,7 +336,6 @@ public class Spawn
 			doSpawn();
 		}
 		_doRespawn = true;
-		
 		return _currentCount;
 	}
 	
@@ -416,7 +412,6 @@ public class Spawn
 			}
 			
 			npc = (NpcInstance) tmp;
-			
 			return initializeNpcInstance(npc);
 		}
 		catch (Exception e)
@@ -497,11 +492,9 @@ public class Spawn
 		
 		// Init other values of the NpcInstance (ex : from its CreatureTemplate for INT, STR, DEX...) and add it in the world as a visible object
 		npc.spawnMe(newlocx, newlocy, newlocz);
-		
 		notifyNpcSpawned(npc);
 		
 		_lastSpawn = npc;
-		
 		for (Quest quest : npc.getTemplate().getEventQuests(EventType.ON_SPAWN))
 		{
 			quest.notifySpawn(npc);

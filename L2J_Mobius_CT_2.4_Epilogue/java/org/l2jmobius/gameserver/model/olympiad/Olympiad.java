@@ -327,7 +327,6 @@ public class Olympiad extends ListenersContainer
 		}
 		
 		LOGGER.info("Olympiad System: Loaded " + NOBLES.size() + " Nobles");
-		
 	}
 	
 	public void loadNoblesRank()

@@ -49,7 +49,6 @@ public class ScrollOfResurrection implements IItemHandler
 		}
 		
 		final PlayerInstance player = (PlayerInstance) playable;
-		
 		if (player.isSitting())
 		{
 			player.sendPacket(SystemMessageId.YOU_CANNOT_MOVE_WHILE_SITTING);
@@ -72,7 +71,6 @@ public class ScrollOfResurrection implements IItemHandler
 		
 		// SoR Animation section
 		final Creature target = (Creature) player.getTarget();
-		
 		if ((target != null) && target.isDead())
 		{
 			PlayerInstance targetPlayer = null;
@@ -93,7 +91,6 @@ public class ScrollOfResurrection implements IItemHandler
 				
 				// check target is not in a active siege zone
 				Castle castle = null;
-				
 				if (targetPlayer != null)
 				{
 					castle = CastleManager.getInstance().getCastle(targetPlayer.getX(), targetPlayer.getY(), targetPlayer.getZ());

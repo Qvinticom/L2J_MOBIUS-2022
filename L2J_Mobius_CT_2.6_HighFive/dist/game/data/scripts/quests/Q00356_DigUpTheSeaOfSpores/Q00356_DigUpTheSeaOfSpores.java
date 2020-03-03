@@ -138,7 +138,6 @@ public class Q00356_DigUpTheSeaOfSpores extends Quest
 	public String onKill(Npc npc, PlayerInstance killer, boolean isSummon)
 	{
 		final QuestState qs = getQuestState(killer, false);
-		
 		if ((qs == null) || !Util.checkIfInRange(Config.ALT_PARTY_RANGE, npc, killer, true))
 		{
 			return null;
@@ -146,7 +145,6 @@ public class Q00356_DigUpTheSeaOfSpores extends Quest
 		
 		final int dropItem = ((npc.getId() == ROTTING_TREE) ? HERBIVOROUS_SPORE : CARNIVORE_SPORE);
 		final int otherItem = ((dropItem == HERBIVOROUS_SPORE) ? CARNIVORE_SPORE : HERBIVOROUS_SPORE);
-		
 		if (giveItemRandomly(qs.getPlayer(), npc, dropItem, 1, 50, MONSTER_DROP_CHANCES.get(npc.getId()), true))
 		{
 			if (getQuestItemsCount(killer, otherItem) >= 50)
@@ -174,7 +172,6 @@ public class Q00356_DigUpTheSeaOfSpores extends Quest
 		{
 			final boolean hasAllHerbSpores = (getQuestItemsCount(player, HERBIVOROUS_SPORE) >= 50);
 			final boolean hasAllCarnSpores = (getQuestItemsCount(player, CARNIVORE_SPORE) >= 50);
-			
 			if (hasAllHerbSpores && hasAllCarnSpores)
 			{
 				htmltext = "30717-13.html";

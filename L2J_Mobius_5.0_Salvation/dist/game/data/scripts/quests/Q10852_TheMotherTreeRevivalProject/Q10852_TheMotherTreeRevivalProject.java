@@ -175,7 +175,6 @@ public class Q10852_TheMotherTreeRevivalProject extends Quest
 	public String onKill(Npc npc, PlayerInstance killer, boolean isSummon)
 	{
 		final QuestState qs = getQuestState(killer, false);
-		
 		if ((qs != null) && qs.isCond(1))
 		{
 			int killedTulip = qs.getInt("killed_" + TULIP[0]);
@@ -183,7 +182,6 @@ public class Q10852_TheMotherTreeRevivalProject extends Quest
 			int killedLily = qs.getInt("killed_" + LILY[0]);
 			int killedRose = qs.getInt("killed_" + ROSE[0]);
 			int killedSentinel = qs.getInt("killed_" + NYMPH_SENTINEL);
-			
 			if (CommonUtil.contains(TULIP, npc.getId()))
 			{
 				if (killedTulip < 300)

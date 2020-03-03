@@ -1025,15 +1025,12 @@ public class ItemInstance extends WorldObject
 			PreparedStatement statement = con.prepareStatement("SELECT owner_id, object_id, item_id, count, enchant_level, loc, loc_data, price_sell, price_buy, custom_type1, custom_type2, mana_left FROM items WHERE object_id = ?");
 			statement.setInt(1, objectId);
 			ResultSet rs = statement.executeQuery();
-			
 			if (rs.next())
 			{
 				final int owner_id = rs.getInt("owner_id");
 				final int item_id = rs.getInt("item_id");
 				final int count = rs.getInt("count");
-				
 				final ItemLocation loc = ItemLocation.valueOf(rs.getString("loc"));
-				
 				final int loc_data = rs.getInt("loc_data");
 				final int enchant_level = rs.getInt("enchant_level");
 				final int custom_type1 = rs.getInt("custom_type1");
@@ -1041,9 +1038,7 @@ public class ItemInstance extends WorldObject
 				final int price_sell = rs.getInt("price_sell");
 				final int price_buy = rs.getInt("price_buy");
 				final int manaLeft = rs.getInt("mana_left");
-				
 				final Item item = ItemTable.getInstance().getTemplate(item_id);
-				
 				if (item == null)
 				{
 					LOGGER.warning("Item item_id=" + item_id + " not known, object_id=" + objectId);
@@ -1105,7 +1100,6 @@ public class ItemInstance extends WorldObject
 			statement = con.prepareStatement("SELECT attributes,skill,level FROM augmentations WHERE item_id=?");
 			statement.setInt(1, objectId);
 			rs = statement.executeQuery();
-			
 			if (rs.next())
 			{
 				inst._augmentation = new Augmentation(inst, rs.getInt("attributes"), rs.getInt("skill"), rs.getInt("level"), false);
@@ -1151,7 +1145,6 @@ public class ItemInstance extends WorldObject
 		if (Config.PATHFINDING && (dropper != null))
 		{
 			final Location dropDest = GeoEngine.getInstance().canMoveToTargetLoc(dropper.getX(), dropper.getY(), dropper.getZ(), x, y, z, dropper.getInstanceId());
-			
 			if ((dropDest != null) && (dropDest.getX() != 0) && (dropDest.getY() != 0))
 			{
 				x = dropDest.getX();
@@ -1176,7 +1169,6 @@ public class ItemInstance extends WorldObject
 		// this can synchronize on others instancies, so it's out of synchronized, to avoid deadlocks
 		// Add the ItemInstance dropped in the world as a visible object
 		World.getInstance().addVisibleObject(this, getPosition().getWorldRegion(), dropper);
-		
 		if (Config.SAVE_DROPPED_ITEM)
 		{
 			ItemsOnGroundManager.getInstance().save(this);
@@ -1248,7 +1240,6 @@ public class ItemInstance extends WorldObject
 			statement.setInt(10, _type1);
 			statement.setInt(11, _type2);
 			statement.setInt(12, _mana);
-			
 			statement.executeUpdate();
 			_existsInDb = true;
 			_storedInDb = true;

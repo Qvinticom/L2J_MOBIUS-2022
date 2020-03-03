@@ -55,7 +55,6 @@ public class AdminSuperHaste implements IAdminCommandHandler
 				{
 					final int val = Integer.parseInt(st.nextToken());
 					final boolean sendMessage = player.getFirstEffect(SUPER_HASTE_ID) != null;
-					
 					player.stopSkillEffects(SUPER_HASTE_ID);
 					
 					if ((val == 0) && sendMessage)
@@ -85,7 +84,6 @@ public class AdminSuperHaste implements IAdminCommandHandler
 				break;
 			}
 		}
-		
 		return true;
 	}
 	

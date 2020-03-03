@@ -102,14 +102,12 @@ public abstract class VoteSystem implements Runnable
 		this.allowReport = allowReport;
 		this.boxes = boxes;
 		this.rewards = rewards;
-		
 		ThreadPool.scheduleAtFixedRate(this, checkMins * 1000 * 60, checkMins * 1000 * 60);
 	}
 	
 	protected void reward()
 	{
 		final int currentVotes = getVotes();
-		
 		if (currentVotes == -1)
 		{
 			LOGGER.info("VoteSystem: There was a problem on getting server votes.");

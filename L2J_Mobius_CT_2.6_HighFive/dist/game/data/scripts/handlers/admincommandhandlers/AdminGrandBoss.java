@@ -86,7 +86,6 @@ public class AdminGrandBoss implements IAdminCommandHandler
 				if (st.hasMoreTokens())
 				{
 					final int grandBossId = Integer.parseInt(st.nextToken());
-					
 					if (grandBossId == ANTHARAS)
 					{
 						antharasAi().notifyEvent("SKIP_WAITING", null, activeChar);
@@ -301,7 +300,6 @@ public class AdminGrandBoss implements IAdminCommandHandler
 			
 			final StatSet info = GrandBossManager.getInstance().getStatSet(grandBossId);
 			final String bossRespawn = new SimpleDateFormat("yyyy-MM-dd HH:mm:ss").format(info.getLong("respawn_time"));
-			
 			final NpcHtmlMessage html = new NpcHtmlMessage(0, 1);
 			html.setHtml(HtmCache.getInstance().getHtm(activeChar, htmlPatch));
 			html.replace("%bossStatus%", text);

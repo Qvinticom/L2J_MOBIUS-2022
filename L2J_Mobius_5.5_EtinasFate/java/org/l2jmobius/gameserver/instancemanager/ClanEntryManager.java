@@ -186,7 +186,6 @@ public class ClanEntryManager
 		{
 			LOGGER.log(Level.WARNING, e.getMessage(), e);
 		}
-		
 		return (clanApplicantList != null) && (clanApplicantList.remove(playerId) != null);
 	}
 	

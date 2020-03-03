@@ -524,7 +524,6 @@ public class SkillTreeData implements IXmlReader
 	{
 		final List<SkillLearn> result = new ArrayList<>();
 		final Map<Integer, SkillLearn> skills = getCompleteClassSkillTree(classId);
-		
 		if (skills.isEmpty())
 		{
 			// The Skill Tree for this class is undefined.
@@ -751,7 +750,6 @@ public class SkillTreeData implements IXmlReader
 	public List<SkillLearn> getAvailablePledgeSkills(Clan clan)
 	{
 		final List<SkillLearn> result = new ArrayList<>();
-		
 		for (SkillLearn skill : _pledgeSkillTree.values())
 		{
 			if (!skill.isResidencialSkill() && (clan.getLevel() >= skill.getGetLevel()))
@@ -1268,7 +1266,6 @@ public class SkillTreeData implements IXmlReader
 		
 		final int maxLvl = SkillData.getInstance().getMaxLevel(skill.getId());
 		final int hashCode = SkillData.getSkillHashCode(skill.getId(), Math.min(skill.getLevel(), maxLvl));
-		
 		if (Arrays.binarySearch(_skillsByClassIdHashCodes.get(player.getClassId().getId()), hashCode) >= 0)
 		{
 			return true;

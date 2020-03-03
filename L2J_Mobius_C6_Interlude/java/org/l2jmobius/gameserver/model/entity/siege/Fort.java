@@ -158,7 +158,6 @@ public class Fort
 		}
 		
 		final DoorInstance door = getDoor(doorId);
-		
 		if (door != null)
 		{
 			if (open)
@@ -186,7 +185,6 @@ public class Fort
 		{
 			// Try to find clan instance
 			final Clan oldOwner = ClanTable.getInstance().getClan(getOwnerId());
-			
 			if (oldOwner != null)
 			{
 				if (_formerOwner == null)
@@ -201,7 +199,6 @@ public class Fort
 		}
 		
 		updateOwnerInDB(clan); // Update in database
-		
 		if (getSiege().isInProgress())
 		{
 			getSiege().midVictory(); // Mid victory phase of siege
@@ -217,7 +214,6 @@ public class Fort
 		if (clan != null)
 		{
 			_formerOwner = clan;
-			
 			clan.setHasFort(0);
 			Announcements.getInstance().announceToAll(clan.getName() + " has lost " + getName() + " fort");
 			clan.broadcastToOnlineMembers(new PledgeShowInfoUpdate(clan));
@@ -283,12 +279,10 @@ public class Fort
 		for (int i = 0; i < _doors.size(); i++)
 		{
 			DoorInstance door = _doors.get(i);
-			
 			if (door.getCurrentHp() >= 0)
 			{
 				door.decayMe(); // Kill current if not killed already
 				door = DoorData.createDoor(_doorDefault.get(i));
-				
 				if (isDoorWeak)
 				{
 					door.setCurrentHp(door.getMaxHp() / 2);
@@ -333,7 +327,6 @@ public class Fort
 		{
 			PreparedStatement statement;
 			ResultSet rs;
-			
 			statement = con.prepareStatement("Select * from fort where id = ?");
 			statement.setInt(1, _fortId);
 			rs = statement.executeQuery();
@@ -341,12 +334,10 @@ public class Fort
 			while (rs.next())
 			{
 				_name = rs.getString("name");
-				
 				_siegeDate = Calendar.getInstance();
 				_siegeDate.setTimeInMillis(rs.getLong("siegeDate"));
 				
 				_siegeDayOfWeek = rs.getInt("siegeDayOfWeek");
-				
 				if ((_siegeDayOfWeek < 1) || (_siegeDayOfWeek > 7))
 				{
 					_siegeDayOfWeek = 7;
@@ -497,7 +488,6 @@ public class Fort
 		try (Connection con = DatabaseFactory.getConnection())
 		{
 			PreparedStatement statement;
-			
 			statement = con.prepareStatement("UPDATE fort SET owner=? where id = ?");
 			statement.setInt(1, _ownerId);
 			statement.setInt(2, _fortId);
@@ -544,7 +534,6 @@ public class Fort
 		for (int i = 0; i < _doors.size(); i++)
 		{
 			final DoorInstance door = _doors.get(i);
-			
 			if (door.getDoorId() == doorId)
 			{
 				return door;
@@ -567,7 +556,6 @@ public class Fort
 				this
 			});
 		}
-		
 		return _siege;
 	}
 	
@@ -603,9 +591,7 @@ public class Fort
 			if (_formerOwner != ClanTable.getInstance().getClan(getOwnerId()))
 			{
 				final int maxreward = Math.max(0, _formerOwner.getReputationScore());
-				
 				final Clan owner = ClanTable.getInstance().getClan(getOwnerId());
-				
 				if (owner != null)
 				{
 					owner.setReputationScore(owner.getReputationScore() + Math.min(500, maxreward), true);

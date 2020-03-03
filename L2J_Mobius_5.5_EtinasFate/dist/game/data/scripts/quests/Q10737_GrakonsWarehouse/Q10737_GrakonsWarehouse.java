@@ -53,7 +53,6 @@ public class Q10737_GrakonsWarehouse extends Quest
 		super(10737);
 		addStartNpc(KATALIN, AYANTHE);
 		addTalkId(KATALIN, AYANTHE, GRAKON);
-		
 		addCondRace(Race.ERTHEIA, "");
 		registerQuestItems(APPRENTICE_SUPPORT_BOX.getId());
 	}
@@ -118,7 +117,6 @@ public class Q10737_GrakonsWarehouse extends Quest
 	{
 		final QuestState qs = getQuestState(player, true);
 		String htmltext = getNoQuestMsg(player);
-		
 		if (qs.isCompleted())
 		{
 			htmltext = getAlreadyCompletedMsg(player);

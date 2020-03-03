@@ -45,7 +45,6 @@ public class PaganKeys implements IItemHandler
 	public void useItem(Playable playable, ItemInstance item)
 	{
 		final int itemId = item.getItemId();
-		
 		if (!(playable instanceof PlayerInstance))
 		{
 			return;
@@ -53,7 +52,6 @@ public class PaganKeys implements IItemHandler
 		
 		final PlayerInstance player = (PlayerInstance) playable;
 		final WorldObject target = player.getTarget();
-		
 		if (!(target instanceof DoorInstance))
 		{
 			player.sendPacket(SystemMessageId.INVALID_TARGET);
@@ -61,7 +59,6 @@ public class PaganKeys implements IItemHandler
 			return;
 		}
 		final DoorInstance door = (DoorInstance) target;
-		
 		if (!player.isInsideRadius(door, INTERACTION_DISTANCE, false, false))
 		{
 			player.sendMessage("Too far.");
@@ -77,7 +74,6 @@ public class PaganKeys implements IItemHandler
 		}
 		
 		final int openChance = 35;
-		
 		if (!playable.destroyItem("Consume", item.getObjectId(), 1, null, false))
 		{
 			return;

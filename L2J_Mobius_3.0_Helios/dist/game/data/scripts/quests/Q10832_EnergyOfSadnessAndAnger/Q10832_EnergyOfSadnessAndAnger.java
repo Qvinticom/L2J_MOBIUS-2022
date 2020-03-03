@@ -119,7 +119,6 @@ public class Q10832_EnergyOfSadnessAndAnger extends Quest
 	{
 		final QuestState qs = getQuestState(player, true);
 		String htmltext = getNoQuestMsg(player);
-		
 		switch (qs.getState())
 		{
 			case State.CREATED:

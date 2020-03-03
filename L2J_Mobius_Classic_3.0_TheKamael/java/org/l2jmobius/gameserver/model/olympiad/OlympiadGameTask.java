@@ -463,7 +463,6 @@ public class OlympiadGameTask implements Runnable
 		{
 			LOGGER.log(Level.WARNING, e.getMessage(), e);
 		}
-		
 		return true;
 	}
 	

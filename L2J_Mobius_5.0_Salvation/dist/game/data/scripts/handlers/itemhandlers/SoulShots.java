@@ -66,7 +66,6 @@ public class SoulShots implements IItemHandler
 		}
 		
 		final boolean gradeCheck = item.isEtcItem() && (item.getEtcItem().getDefaultAction() == ActionType.SOULSHOT) && (weaponInst.getItem().getCrystalTypePlus() == item.getItem().getCrystalTypePlus());
-		
 		if (!gradeCheck)
 		{
 			if (!player.getAutoSoulShot().contains(itemId))

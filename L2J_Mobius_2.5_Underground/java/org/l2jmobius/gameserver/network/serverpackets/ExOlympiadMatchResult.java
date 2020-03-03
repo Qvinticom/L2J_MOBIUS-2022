@@ -39,7 +39,6 @@ public class ExOlympiadMatchResult implements IClientOutgoingPacket
 		_winTeam = winTeam;
 		_winnerList = winnerList;
 		_loserList = loserList;
-		
 		if (_winTeam == 2)
 		{
 			_loseTeam = 1;

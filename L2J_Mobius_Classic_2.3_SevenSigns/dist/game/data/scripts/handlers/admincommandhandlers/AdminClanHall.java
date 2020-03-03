@@ -55,7 +55,6 @@ public class AdminClanHall implements IAdminCommandHandler
 	{
 		final StringTokenizer st = new StringTokenizer(command, " ");
 		final String actualCommand = st.nextToken();
-		
 		if (actualCommand.equalsIgnoreCase("admin_clanhall"))
 		{
 			processBypass(activeChar, new BypassParser(command));
@@ -215,7 +214,6 @@ public class AdminClanHall implements IAdminCommandHandler
 			final String grade = clanHall.getGrade().toString().replace("GRADE_", "") + " Grade";
 			html.replace("%clanHallGrade%", grade);
 			html.replace("%clanHallSize%", clanHall.getGrade().getGradeValue());
-			
 			if (!clanHall.getFunctions().isEmpty())
 			{
 				sb.append("<table border=0 cellpadding=0 cellspacing=0 bgcolor=\"363636\">");
@@ -260,7 +258,6 @@ public class AdminClanHall implements IAdminCommandHandler
 		final int clanHallId = parser.getInt("id", 0);
 		final String action = parser.getString("action", null);
 		final String actionVal = parser.getString("actionVal", null);
-		
 		if ((clanHallId > 0) && (action != null))
 		{
 			doAction(player, clanHallId, action, actionVal);

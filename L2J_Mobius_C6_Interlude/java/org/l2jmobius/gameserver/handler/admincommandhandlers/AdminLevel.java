@@ -41,7 +41,6 @@ public class AdminLevel implements IAdminCommandHandler
 		final WorldObject targetChar = activeChar.getTarget();
 		final StringTokenizer st = new StringTokenizer(command, " ");
 		final String actualCommand = st.nextToken(); // Get actual command
-		
 		String val = "";
 		if (st.countTokens() >= 1)
 		{
@@ -73,10 +72,8 @@ public class AdminLevel implements IAdminCommandHandler
 				}
 				
 				final Playable targetPlayer = (Playable) targetChar;
-				
 				final byte lvl = Byte.parseByte(val);
 				int maxLevel = ExperienceData.getInstance().getMaxLevel();
-				
 				if ((targetChar instanceof PlayerInstance) && ((PlayerInstance) targetPlayer).isSubClassActive())
 				{
 					maxLevel = Config.MAX_SUBCLASS_LEVEL;
@@ -86,7 +83,6 @@ public class AdminLevel implements IAdminCommandHandler
 				{
 					final long pXp = targetPlayer.getStat().getExp();
 					final long tXp = ExperienceData.getInstance().getExpForLevel(lvl);
-					
 					if (pXp > tXp)
 					{
 						targetPlayer.getStat().removeExpAndSp(pXp - tXp, 0);

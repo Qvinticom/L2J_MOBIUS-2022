@@ -199,7 +199,6 @@ public class Q10333_DisappearedSakum extends Quest
 	public String onKill(Npc npc, PlayerInstance killer, boolean isSummon)
 	{
 		final QuestState qs = getQuestState(killer, false);
-		
 		if ((qs != null) && qs.isStarted() && qs.isCond(2))
 		{
 			int killedLizardmen = qs.getInt("killed_" + LIZARDMEN);

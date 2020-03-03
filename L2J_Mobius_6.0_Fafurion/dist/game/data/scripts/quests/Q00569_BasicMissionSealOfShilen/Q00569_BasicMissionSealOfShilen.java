@@ -101,7 +101,6 @@ public class Q00569_BasicMissionSealOfShilen extends Quest
 	{
 		final QuestState qs = getQuestState(player, true);
 		String htmltext = getNoQuestMsg(player);
-		
 		switch (qs.getState())
 		{
 			case State.CREATED:

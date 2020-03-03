@@ -44,7 +44,6 @@ public class DailyMissionDataHolder
 	public DailyMissionDataHolder(StatSet set)
 	{
 		final Function<DailyMissionDataHolder, AbstractDailyMissionHandler> handler = DailyMissionHandler.getInstance().getHandler(set.getString("handler"));
-		
 		_id = set.getInt("id");
 		_rewardId = set.getInt("reward_id", 0);
 		_requiredCompletions = set.getInt("requiredCompletion", 0);

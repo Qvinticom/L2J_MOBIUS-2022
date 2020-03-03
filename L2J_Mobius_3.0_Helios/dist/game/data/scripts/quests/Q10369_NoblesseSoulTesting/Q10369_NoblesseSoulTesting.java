@@ -135,7 +135,6 @@ public class Q10369_NoblesseSoulTesting extends Quest
 		}
 		
 		String htmltext = null;
-		
 		switch (event)
 		{
 			case "31281-02.htm":
@@ -443,7 +442,6 @@ public class Q10369_NoblesseSoulTesting extends Quest
 	{
 		final PlayerInstance partyMember = getRandomPartyMember(killer);
 		final QuestState qs = getQuestState(partyMember, false);
-		
 		if (canProgress(partyMember) && (qs != null) && qs.isStarted() && (partyMember.calculateDistance2D(npc) <= Config.ALT_PARTY_RANGE))
 		{
 			switch (qs.getCond())
@@ -462,7 +460,6 @@ public class Q10369_NoblesseSoulTesting extends Quest
 					if (CommonUtil.contains(HOT_SPRINGS, npc.getId()))
 					{
 						giveItems(partyMember, DURABLE_LEATHER, 1);
-						
 						if (getQuestItemsCount(killer, DURABLE_LEATHER) >= 10)
 						{
 							{
@@ -482,7 +479,6 @@ public class Q10369_NoblesseSoulTesting extends Quest
 					if (CommonUtil.contains(ISLE_OF_PRAYER, npc.getId()))
 					{
 						giveItems(partyMember, HARD_FOSSIL_CONTAINING_WATER_ENERGY, 1);
-						
 						if (getQuestItemsCount(killer, HARD_FOSSIL_CONTAINING_WATER_ENERGY) >= 10)
 						{
 							qs.setCond(13, true);
@@ -507,7 +503,6 @@ public class Q10369_NoblesseSoulTesting extends Quest
 		{
 			final PlayerInstance player = creature.getActingPlayer();
 			final QuestState qs = getQuestState(player, false);
-			
 			if ((qs != null) && qs.isStarted())
 			{
 				if (qs.isCond(6))
@@ -586,7 +581,6 @@ public class Q10369_NoblesseSoulTesting extends Quest
 					if (skill == EMPTY_WATER_SKILL.getSkill())
 					{
 						final QuestState qs = getQuestState(player, false);
-						
 						if ((qs != null) && qs.isStarted() && qs.isCond(6))
 						{
 							qs.setCond(7, true);
@@ -600,11 +594,9 @@ public class Q10369_NoblesseSoulTesting extends Quest
 					if ((skill == TROWEL_SKILL.getSkill()) && (CommonUtil.contains(targets, npc)))
 					{
 						final QuestState qs = getQuestState(player, false);
-						
 						if ((qs != null) && qs.isStarted() && qs.isCond(10))
 						{
 							giveItems(player, FIRE_ENERGY, 1);
-							
 							if (getQuestItemsCount(player, FIRE_ENERGY) >= 5)
 							{
 								qs.setCond(11, true);
@@ -624,12 +616,10 @@ public class Q10369_NoblesseSoulTesting extends Quest
 					if ((skill == HELPING_SEED_SKILL.getSkill()) && (CommonUtil.contains(targets, npc)))
 					{
 						final QuestState qs = getQuestState(player, false);
-						
 						if ((qs != null) && qs.isStarted() && qs.isCond(16))
 						{
 							qs.setCond(17, true);
 							giveItems(player, ASHES_OF_REMNANTS, 1);
-							
 							if (npc.isInsideRadius2D(HELPING_TREE_LOC_1, 2000))
 							{
 								addSpawn(HELPING_TREE, HELPING_TREE_LOC_1, false, 300000);
@@ -651,7 +641,6 @@ public class Q10369_NoblesseSoulTesting extends Quest
 	public String onFirstTalk(Npc npc, PlayerInstance player)
 	{
 		final QuestState qs = getQuestState(player, false);
-		
 		if ((qs != null) && qs.isStarted() && qs.isCond(10))
 		{
 			showOnScreenMsg(player, NpcStringId.CLICK_THE_FLAME_FLOWER_THEN_DOUBLE_CLICK_THE_TROWEL, ExShowScreenMessage.TOP_CENTER, 5000);

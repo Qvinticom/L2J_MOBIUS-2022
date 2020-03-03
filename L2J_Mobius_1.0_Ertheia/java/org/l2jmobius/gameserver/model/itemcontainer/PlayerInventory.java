@@ -155,7 +155,6 @@ public class PlayerInventory extends Inventory
 				list.add(item);
 			}
 		}
-		
 		return list;
 	}
 	
@@ -382,7 +381,6 @@ public class PlayerInventory extends Inventory
 	public ItemInstance addItem(String process, ItemInstance item, PlayerInstance actor, Object reference)
 	{
 		item = super.addItem(process, item, actor, reference);
-		
 		if (item != null)
 		{
 			if ((item.getId() == ADENA_ID) && !item.equals(_adena))
@@ -501,7 +499,6 @@ public class PlayerInventory extends Inventory
 	public ItemInstance transferItem(String process, int objectId, long count, ItemContainer target, PlayerInstance actor, Object reference)
 	{
 		final ItemInstance item = super.transferItem(process, objectId, count, target, actor, reference);
-		
 		if ((_adena != null) && ((_adena.getCount() <= 0) || (_adena.getOwnerId() != getOwnerId())))
 		{
 			_adena = null;
@@ -521,7 +518,6 @@ public class PlayerInventory extends Inventory
 	public ItemInstance detachItem(String process, ItemInstance item, long count, ItemLocation newLocation, PlayerInstance actor, Object reference)
 	{
 		item = super.detachItem(process, item, count, newLocation, actor, reference);
-		
 		if ((item != null) && (actor != null))
 		{
 			actor.sendItemList(false);
@@ -555,7 +551,6 @@ public class PlayerInventory extends Inventory
 	public ItemInstance destroyItem(String process, ItemInstance item, long count, PlayerInstance actor, Object reference)
 	{
 		item = super.destroyItem(process, item, count, actor, reference);
-		
 		if ((_adena != null) && (_adena.getCount() <= 0))
 		{
 			_adena = null;
@@ -618,7 +613,6 @@ public class PlayerInventory extends Inventory
 	public ItemInstance dropItem(String process, ItemInstance item, PlayerInstance actor, Object reference)
 	{
 		item = super.dropItem(process, item, actor, reference);
-		
 		if ((_adena != null) && ((_adena.getCount() <= 0) || (_adena.getOwnerId() != getOwnerId())))
 		{
 			_adena = null;
@@ -650,7 +644,6 @@ public class PlayerInventory extends Inventory
 	public ItemInstance dropItem(String process, int objectId, long count, PlayerInstance actor, Object reference)
 	{
 		final ItemInstance item = super.dropItem(process, objectId, count, actor, reference);
-		
 		if ((_adena != null) && ((_adena.getCount() <= 0) || (_adena.getOwnerId() != getOwnerId())))
 		{
 			_adena = null;
@@ -852,7 +845,6 @@ public class PlayerInventory extends Inventory
 	{
 		_blockMode = mode;
 		_blockItems = items;
-		
 		_owner.sendItemList(false);
 	}
 	
@@ -863,7 +855,6 @@ public class PlayerInventory extends Inventory
 	{
 		_blockMode = InventoryBlockType.NONE;
 		_blockItems = null;
-		
 		_owner.sendItemList(false);
 	}
 	
@@ -963,7 +954,6 @@ public class PlayerInventory extends Inventory
 		}
 		
 		final ItemInstance arrows = getPaperdollItem(Inventory.PAPERDOLL_LHAND);
-		
 		if ((arrows == null) || (arrows.getItemType() != type))
 		{
 			return;

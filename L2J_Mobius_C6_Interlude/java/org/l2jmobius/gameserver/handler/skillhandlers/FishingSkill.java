@@ -47,7 +47,6 @@ public class FishingSkill implements ISkillHandler
 		}
 		
 		final PlayerInstance player = (PlayerInstance) creature;
-		
 		final Fishing fish = player.getFishCombat();
 		if (fish == null)
 		{
@@ -75,7 +74,6 @@ public class FishingSkill implements ISkillHandler
 		
 		int ss = 1;
 		int pen = 0;
-		
 		if (weaponInst.getChargedFishshot())
 		{
 			ss = 2;

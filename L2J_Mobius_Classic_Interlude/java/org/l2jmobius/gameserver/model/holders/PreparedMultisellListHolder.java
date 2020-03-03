@@ -41,7 +41,6 @@ public class PreparedMultisellListHolder extends MultisellListHolder
 		super(list.getId(), list.isChanceMultisell(), list.isApplyTaxes(), list.isMaintainEnchantment(), list.getIngredientMultiplier(), list.getProductMultiplier(), list._entries, list._npcsAllowed);
 		
 		_inventoryOnly = inventoryOnly;
-		
 		if (npc != null)
 		{
 			_npcObjectId = npc.getObjectId();

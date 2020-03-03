@@ -560,7 +560,6 @@ public class Q00662_AGameOfCards extends Quest
 	{
 		final QuestState qs = getQuestState(player, true);
 		String htmltext = getNoQuestMsg(player);
-		
 		switch (qs.getState())
 		{
 			case State.CREATED:
@@ -585,7 +584,6 @@ public class Q00662_AGameOfCards extends Quest
 					final int i3 = (i0 % 1000000) / 10000;
 					final int i4 = (i0 % 100000000) / 1000000;
 					htmltext = getHtm(player, "30845-11a.html");
-					
 					if ((i9 % 2) < 1)
 					{
 						htmltext = htmltext.replace("FontColor1", "FFFF00");

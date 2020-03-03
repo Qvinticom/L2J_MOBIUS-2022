@@ -258,7 +258,6 @@ public class OracleTeleport extends Quest
 	{
 		String htmltext = "";
 		final QuestState st = player.getQuestState(getName());
-		
 		final int npcId = npc.getNpcId();
 		if (event.equalsIgnoreCase("Return"))
 		{
@@ -380,9 +379,7 @@ public class OracleTeleport extends Quest
 	{
 		String htmltext = "";
 		final QuestState st = player.getQuestState(getName());
-		
 		final int npcId = npc.getNpcId();
-		
 		if (Util.contains(TOWN_DAWN, npcId))
 		{
 			st.setState(State.STARTED);

@@ -48,7 +48,6 @@ public class RequestPrivateStoreSell extends GameClientPacket
 			_count = 0;
 		}
 		_items = new ItemRequest[_count];
-		
 		long priceTotal = 0;
 		for (int i = 0; i < _count; i++)
 		{
@@ -58,7 +57,6 @@ public class RequestPrivateStoreSell extends GameClientPacket
 			readH(); // TODO analyse this
 			final long count = readD();
 			final int price = readD();
-			
 			if ((count > Integer.MAX_VALUE) || (count < 0))
 			{
 				final String msgErr = "[RequestPrivateStoreSell] player " + getClient().getPlayer().getName() + " tried an overflow exploit, ban this player!";

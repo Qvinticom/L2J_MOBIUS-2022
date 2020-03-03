@@ -108,7 +108,6 @@ public abstract class Function
 		}
 		
 		final int size = name.length();
-		
 		if (size == 0)
 		{
 			return false;

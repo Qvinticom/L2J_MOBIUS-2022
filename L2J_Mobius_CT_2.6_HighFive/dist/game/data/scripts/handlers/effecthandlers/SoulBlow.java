@@ -63,7 +63,6 @@ public class SoulBlow extends AbstractEffect
 	{
 		final Creature target = info.getEffected();
 		final Creature creature = info.getEffector();
-		
 		if (creature.isAlikeDead())
 		{
 			return;

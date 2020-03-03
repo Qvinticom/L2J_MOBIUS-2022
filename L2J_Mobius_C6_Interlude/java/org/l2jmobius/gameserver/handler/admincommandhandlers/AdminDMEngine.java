@@ -254,7 +254,6 @@ public class AdminDMEngine implements IAdminCommandHandler
 	{
 		final NpcHtmlMessage adminReply = new NpcHtmlMessage(5);
 		final StringBuilder replyMSG = new StringBuilder("<html><body>");
-		
 		replyMSG.append("<center><font color=\"LEVEL\">[DeathMatch Engine]</font></center><br><br><br>");
 		replyMSG.append("<table><tr><td><edit var=\"input1\" width=\"125\"></td><td><edit var=\"input2\" width=\"125\"></td></tr></table>");
 		replyMSG.append("<table border=\"0\"><tr>");
@@ -297,7 +296,6 @@ public class AdminDMEngine implements IAdminCommandHandler
 		replyMSG.append("Joining location name:&nbsp;<font color=\"00FF00\">" + DM.getJoiningLocationName() + "</font><br1>");
 		
 		final Location npcLoc = DM.getNpcLocation();
-		
 		replyMSG.append("Joining NPC ID:&nbsp;<font color=\"00FF00\">" + DM.getNpcId() + " on pos " + npcLoc.getX() + "," + npcLoc.getY() + "," + npcLoc.getZ() + "</font><br1>");
 		replyMSG.append("Reward ID:&nbsp;<font color=\"00FF00\">" + DM.getRewardId() + "</font><br1>");
 		replyMSG.append("Reward Amount:&nbsp;<font color=\"00FF00\">" + DM.getRewardAmount() + "</font><br><br>");
@@ -306,10 +304,8 @@ public class AdminDMEngine implements IAdminCommandHandler
 		replyMSG.append("Death Match Color:&nbsp;<font color=\"00FF00\">" + DM.getPlayerColors() + "</font><br>");
 		
 		final Location playerLoc = DM.getPlayersSpawnLocation();
-		
 		replyMSG.append("Death Match Spawn Pos:&nbsp;<font color=\"00FF00\">" + playerLoc.getX() + "," + playerLoc.getY() + "," + playerLoc.getZ() + "</font><br><br>");
 		replyMSG.append("Current players:<br1>");
-		
 		if (!DM.hasStarted())
 		{
 			replyMSG.append("<br1>");

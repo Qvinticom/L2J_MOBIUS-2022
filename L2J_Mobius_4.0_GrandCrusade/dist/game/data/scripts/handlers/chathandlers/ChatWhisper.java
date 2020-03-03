@@ -84,7 +84,6 @@ public class ChatWhisper implements IChatHandler
 		}
 		
 		final PlayerInstance receiver = World.getInstance().getPlayer(target);
-		
 		if ((receiver != null) && !receiver.isSilenceMode(activeChar.getObjectId()))
 		{
 			if (Config.JAIL_DISABLE_CHAT && receiver.isJailed() && !activeChar.canOverrideCond(PlayerCondOverride.CHAT_CONDITIONS))

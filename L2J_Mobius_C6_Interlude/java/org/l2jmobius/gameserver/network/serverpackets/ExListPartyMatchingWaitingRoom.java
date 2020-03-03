@@ -90,7 +90,6 @@ public class ExListPartyMatchingWaitingRoom extends GameServerPacket
 		
 		int count = 0;
 		final int size = _members.size();
-		
 		writeD(1);
 		writeD(size);
 		while (size > count)

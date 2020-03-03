@@ -121,7 +121,6 @@ public class RequestExEnchantSkill implements IClientIncomingPacket
 			final boolean usesBook = (_skillLvl % 100) == 1; // 101, 201, 301 ...
 			final int reqItemId = EnchantSkillGroupsData.NORMAL_ENCHANT_BOOK;
 			final ItemInstance spb = player.getInventory().getItemByItemId(reqItemId);
-			
 			if (Config.ES_SP_BOOK_NEEDED && usesBook && (spb == null)) // Haven't spellbook
 			{
 				player.sendPacket(SystemMessageId.YOU_DO_NOT_HAVE_ALL_OF_THE_ITEMS_NEEDED_TO_ENCHANT_THAT_SKILL);

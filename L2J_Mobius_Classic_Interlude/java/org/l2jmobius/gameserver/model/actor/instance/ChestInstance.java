@@ -54,7 +54,6 @@ public class ChestInstance extends MonsterInstance
 	public void doItemDrop(NpcTemplate npcTemplate, Creature lastAttacker)
 	{
 		int id = getTemplate().getId();
-		
 		if (!_specialDrop)
 		{
 			if ((id >= 18265) && (id <= 18286))

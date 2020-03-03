@@ -91,7 +91,6 @@ public class RecipeController
 		
 		final List<RecipeList> dwarfRecipes = Arrays.asList(manufacturer.getDwarvenRecipeBook());
 		final List<RecipeList> commonRecipes = Arrays.asList(manufacturer.getCommonRecipeBook());
-		
 		if (!dwarfRecipes.contains(recipeList) && !commonRecipes.contains(recipeList))
 		{
 			Util.handleIllegalPlayerAction(player, "Warning!! Character " + player.getName() + " of account " + player.getAccountName() + " sent a false recipe id.", Config.DEFAULT_PUNISH);
@@ -137,7 +136,6 @@ public class RecipeController
 		
 		final List<RecipeList> dwarfRecipes = Arrays.asList(player.getDwarvenRecipeBook());
 		final List<RecipeList> commonRecipes = Arrays.asList(player.getCommonRecipeBook());
-		
 		if (!dwarfRecipes.contains(recipeList) && !commonRecipes.contains(recipeList))
 		{
 			Util.handleIllegalPlayerAction(player, "Warning!! Character " + player.getName() + " of account " + player.getAccountName() + " sent a false recipe id.", Config.DEFAULT_PUNISH);
@@ -193,12 +191,10 @@ public class RecipeController
 			_player = pPlayer;
 			_target = pTarget;
 			_recipeList = pRecipeList;
-			
 			_isValid = false;
 			_skillId = _recipeList.isDwarvenRecipe() ? CommonSkill.CREATE_DWARVEN.getId() : CommonSkill.CREATE_COMMON.getId();
 			_skillLevel = _player.getSkillLevel(_skillId);
 			_skill = _player.getKnownSkill(_skillId);
-			
 			_player.setCrafting(true);
 			
 			if (_player.isAlikeDead())
@@ -342,7 +338,6 @@ public class RecipeController
 					return; // check stat use
 				}
 				updateCurMp(); // update craft window mp bar
-				
 				grabSomeItems(); // grab (equip) some more items with a nice msg to player
 				
 				// if still not empty, schedule another pass
@@ -394,7 +389,6 @@ public class RecipeController
 			{
 				// attempt to pay for item
 				final ItemInstance adenatransfer = _target.transferItem("PayManufacture", _target.getInventory().getAdenaInstance().getObjectId(), _price, _player.getInventory(), _player);
-				
 				if (adenatransfer == null)
 				{
 					_target.sendPacket(SystemMessageId.YOU_DO_NOT_HAVE_ENOUGH_ADENA);
@@ -473,7 +467,6 @@ public class RecipeController
 			while ((grabItems > 0) && !_items.isEmpty())
 			{
 				final TempItem item = _items.get(0);
-				
 				int count = item.getQuantity();
 				if (count >= grabItems)
 				{
@@ -491,7 +484,6 @@ public class RecipeController
 				}
 				
 				grabItems -= count;
-				
 				if (_target == _player)
 				{
 					final SystemMessage sm = new SystemMessage(SystemMessageId.EQUIPPED_S1_S2); // you equipped ...
@@ -510,7 +502,6 @@ public class RecipeController
 		private void calculateAltStatChange()
 		{
 			_itemGrab = _skillLevel;
-			
 			for (RecipeStatInstance altStatChange : _recipeList.getAltStatChange())
 			{
 				if (altStatChange.getType() == StatType.XP)
@@ -603,7 +594,6 @@ public class RecipeController
 			final Inventory inv = _target.getInventory();
 			final List<TempItem> materials = new ArrayList<>();
 			SystemMessage sm;
-			
 			for (RecipeInstance recipe : recipes)
 			{
 				if (recipe.getQuantity() > 0)
@@ -633,7 +623,6 @@ public class RecipeController
 				for (TempItem tmp : materials)
 				{
 					inv.destroyItemByItemId("Manufacture", tmp.getItemId(), tmp.getQuantity(), _target, _player);
-					
 					if (tmp.getQuantity() > 1)
 					{
 						sm = new SystemMessage(SystemMessageId.S2_S1_S_DISAPPEARED);

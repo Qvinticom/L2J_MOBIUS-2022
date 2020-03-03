@@ -56,7 +56,6 @@ public class MagicalSoulAttack extends AbstractEffect
 	{
 		final Creature target = info.getEffected();
 		final Creature creature = info.getEffector();
-		
 		if (creature.isAlikeDead())
 		{
 			return;
@@ -72,7 +71,6 @@ public class MagicalSoulAttack extends AbstractEffect
 		final boolean mcrit = Formulas.calcMCrit(creature.getMCriticalHit(target, info.getSkill()));
 		final byte shld = Formulas.calcShldUse(creature, target, info.getSkill());
 		int damage = (int) Formulas.calcMagicDam(creature, target, info.getSkill(), shld, sps, bss, mcrit);
-		
 		if ((info.getSkill().getMaxSoulConsumeCount() > 0) && creature.isPlayer())
 		{
 			// Souls Formula (each soul increase +4%)

@@ -57,12 +57,10 @@ public class AdminVitality implements IAdminCommandHandler
 		
 		final StringTokenizer st = new StringTokenizer(command, " ");
 		final String cmd = st.nextToken();
-		
 		if ((activeChar.getTarget() != null) && activeChar.getTarget().isPlayer())
 		{
 			PlayerInstance target;
 			target = (PlayerInstance) activeChar.getTarget();
-			
 			if (cmd.equals("admin_set_vitality"))
 			{
 				try
@@ -120,7 +118,6 @@ public class AdminVitality implements IAdminCommandHandler
 			{
 				level = target.getVitalityLevel();
 				vitality = target.getVitalityPoints();
-				
 				BuilderUtil.sendSysMessage(activeChar, "Player vitality level: " + level);
 				BuilderUtil.sendSysMessage(activeChar, "Player vitality points: " + vitality);
 			}

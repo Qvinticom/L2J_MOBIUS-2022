@@ -105,7 +105,6 @@ public class EnchantSkillLearn
 		}
 		final int index = getEnchantIndex(level);
 		final EnchantSkillGroup group = EnchantSkillGroupsData.getInstance().getEnchantSkillGroupById(_enchantRoutes.get(enchantType));
-		
 		if (index < 0)
 		{
 			return group.getEnchantGroupDetails().get(0);

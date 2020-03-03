@@ -112,7 +112,6 @@ public class Q10775_InSearchOfAnAncientGiant extends Quest
 	{
 		final QuestState qs = getQuestState(player, true);
 		String htmltext = getNoQuestMsg(player);
-		
 		if (npc.getId() == ROMBEL)
 		{
 			switch (qs.getState())

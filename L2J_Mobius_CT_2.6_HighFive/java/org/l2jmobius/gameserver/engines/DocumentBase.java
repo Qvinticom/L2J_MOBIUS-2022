@@ -301,7 +301,6 @@ public abstract class DocumentBase
 		
 		final StatSet parameters = parseParameters(n.getFirstChild(), template);
 		final Condition applayCond = parseCondition(n.getFirstChild(), template);
-		
 		if (template instanceof IIdentifiable)
 		{
 			set.set("id", ((IIdentifiable) template).getId());

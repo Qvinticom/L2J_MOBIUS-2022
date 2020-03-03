@@ -128,7 +128,6 @@ public class CharacterCreate implements IClientIncomingPacket
 		if ((_face > 2) || (_face < 0))
 		{
 			LOGGER.warning("Character Creation Failure: Character face " + _face + " is invalid. Possible client hack. " + client);
-			
 			client.sendPacket(new CharCreateFail(CharCreateFail.REASON_CREATION_FAILED));
 			return;
 		}
@@ -136,7 +135,6 @@ public class CharacterCreate implements IClientIncomingPacket
 		if ((_hairStyle < 0) || ((_sex == 0) && (_hairStyle > 4)) || ((_sex != 0) && (_hairStyle > 6)))
 		{
 			LOGGER.warning("Character Creation Failure: Character hair style " + _hairStyle + " is invalid. Possible client hack. " + client);
-			
 			client.sendPacket(new CharCreateFail(CharCreateFail.REASON_CREATION_FAILED));
 			return;
 		}
@@ -144,7 +142,6 @@ public class CharacterCreate implements IClientIncomingPacket
 		if ((_hairColor > 3) || (_hairColor < 0))
 		{
 			LOGGER.warning("Character Creation Failure: Character hair color " + _hairColor + " is invalid. Possible client hack. " + client);
-			
 			client.sendPacket(new CharCreateFail(CharCreateFail.REASON_CREATION_FAILED));
 			return;
 		}
@@ -288,7 +285,6 @@ public class CharacterCreate implements IClientIncomingPacket
 		{
 			newChar.setExp(ExperienceData.getInstance().getExpForLevel(Config.BALTHUS_KNIGHTS_LEVEL));
 			newChar.getStat().setLevel((byte) Config.BALTHUS_KNIGHTS_LEVEL);
-			
 			if (Config.BALTHUS_KNIGHTS_REWARD_SKILLS)
 			{
 				newChar.giveAvailableSkills(Config.AUTO_LEARN_FS_SKILLS, true);
@@ -299,7 +295,6 @@ public class CharacterCreate implements IClientIncomingPacket
 		newChar.setCurrentHp(newChar.getMaxHp());
 		newChar.setCurrentMp(newChar.getMaxMp());
 		// newChar.setMaxLoad(template.getBaseLoad());
-		
 		client.sendPacket(CharCreateOk.STATIC_PACKET);
 		
 		World.getInstance().addObject(newChar);
@@ -387,7 +382,6 @@ public class CharacterCreate implements IClientIncomingPacket
 		InitialShortcutData.getInstance().registerAllShortcuts(newChar);
 		
 		EventDispatcher.getInstance().notifyEvent(new OnPlayerCreate(newChar, newChar.getObjectId(), newChar.getName(), client), Containers.Players());
-		
 		newChar.setOnlineStatus(true, false);
 		if (Config.SHOW_GOD_VIDEO_INTRO)
 		{

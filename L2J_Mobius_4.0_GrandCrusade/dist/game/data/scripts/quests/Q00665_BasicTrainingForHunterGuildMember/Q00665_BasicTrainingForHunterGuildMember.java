@@ -162,7 +162,6 @@ public class Q00665_BasicTrainingForHunterGuildMember extends Quest
 	{
 		final QuestState qs = getQuestState(player, true);
 		String htmltext = getNoQuestMsg(player);
-		
 		switch (qs.getState())
 		{
 			case State.CREATED:
@@ -232,7 +231,6 @@ public class Q00665_BasicTrainingForHunterGuildMember extends Quest
 					final int killedGhosts = qs.getInt("AncientGhosts") + 1;
 					qs.set("AncientGhosts", killedGhosts);
 					playSound(killer, QuestSound.ITEMSOUND_QUEST_ITEMGET);
-					
 					if (killedGhosts >= 1)
 					{
 						qs.setCond(4, true);
@@ -244,7 +242,6 @@ public class Q00665_BasicTrainingForHunterGuildMember extends Quest
 					final int killedGhosts = qs.getInt("AncientGhosts") + 1;
 					qs.set("AncientGhosts", killedGhosts);
 					playSound(killer, QuestSound.ITEMSOUND_QUEST_ITEMGET);
-					
 					if (killedGhosts >= 2)
 					{
 						qs.setCond(5, true);

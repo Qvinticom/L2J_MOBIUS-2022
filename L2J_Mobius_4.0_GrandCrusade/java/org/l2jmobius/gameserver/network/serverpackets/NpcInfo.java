@@ -72,7 +72,6 @@ public class NpcInfo extends AbstractMaskPacket<NpcInfoType>
 			}
 			_blockSize -= _npc.getName().length() * 2;
 			_blockSize += _localisation[0].length() * 2;
-			
 			if (!_localisation[1].equals(""))
 			{
 				if (!containsMask(NpcInfoType.TITLE))
@@ -97,9 +96,7 @@ public class NpcInfo extends AbstractMaskPacket<NpcInfoType>
 	{
 		_npc = npc;
 		_abnormalVisualEffects = npc.getEffectList().getCurrentAbnormalVisualEffects();
-		
 		addComponentType(NpcInfoType.ATTACKABLE, NpcInfoType.UNKNOWN1, NpcInfoType.ID, NpcInfoType.POSITION, NpcInfoType.ALIVE, NpcInfoType.RUNNING);
-		
 		if (npc.getHeading() > 0)
 		{
 			addComponentType(NpcInfoType.HEADING);
@@ -220,7 +217,6 @@ public class NpcInfo extends AbstractMaskPacket<NpcInfoType>
 				_clanLargeCrest = clan.getCrestLargeId();
 				_allyCrest = clan.getAllyCrestId();
 				_allyId = clan.getAllyId();
-				
 				addComponentType(NpcInfoType.CLAN);
 			}
 		}

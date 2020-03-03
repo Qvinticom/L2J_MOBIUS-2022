@@ -39,7 +39,6 @@ public class RequestSkillList extends GameClientPacket
 	protected void runImpl()
 	{
 		final PlayerInstance cha = getClient().getPlayer();
-		
 		if (cha == null)
 		{
 			return;

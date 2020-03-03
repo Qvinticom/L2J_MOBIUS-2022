@@ -137,7 +137,6 @@ public class Q00580_BeyondTheMemories extends Quest
 	{
 		final QuestState qs = getQuestState(player, true);
 		String htmltext = getNoQuestMsg(player);
-		
 		if (npc.getId() == START_NPC)
 		{
 			switch (qs.getState())
@@ -186,7 +185,6 @@ public class Q00580_BeyondTheMemories extends Quest
 			final int killedGhosts = qs.getInt("AncientGhosts") + 1;
 			qs.set("AncientGhosts", killedGhosts);
 			playSound(killer, QuestSound.ITEMSOUND_QUEST_ITEMGET);
-			
 			if (killedGhosts >= 200)
 			{
 				qs.setCond(FINISH_COND, true);

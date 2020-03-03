@@ -59,7 +59,6 @@ public class DrChaos extends AbstractNpcAI
 	{
 		addFirstTalkId(DOCTOR_CHAOS); // Different HTMs following actual humor.
 		addSpawnId(DOCTOR_CHAOS); // Timer activation at 30sec + paranoia activity.
-		
 		addKillId(CHAOS_GOLEM); // Message + despawn.
 		addAttackId(CHAOS_GOLEM); // Random messages when he attacks.
 		
@@ -91,7 +90,6 @@ public class DrChaos extends AbstractNpcAI
 			final int heading = info.getInt("heading");
 			final int hp = info.getInt("currentHP");
 			final int mp = info.getInt("currentMP");
-			
 			final GrandBossInstance golem = (GrandBossInstance) addSpawn(CHAOS_GOLEM, loc_x, loc_y, loc_z, heading, false, 0, false);
 			GrandBossManager.getInstance().addBoss(golem);
 			
@@ -198,11 +196,9 @@ public class DrChaos extends AbstractNpcAI
 	public String onFirstTalk(Npc npc, PlayerInstance player)
 	{
 		String htmltext = "";
-		
 		if (GrandBossManager.getInstance().getBossStatus(CHAOS_GOLEM) == NORMAL)
 		{
 			_pissedOffTimer -= 1 + Rnd.get(5); // remove 1-5 secs.
-			
 			if ((_pissedOffTimer > 20) && (_pissedOffTimer <= 30))
 			{
 				htmltext = "<html><body>Doctor Chaos:<br>What?! Who are you? How did you come here?<br>You really look suspicious... Aren't those filthy members of Black Anvil guild send you? No? Mhhhhh... I don't trust you!</body></html>";
@@ -220,7 +216,6 @@ public class DrChaos extends AbstractNpcAI
 				crazyMidgetBecomesAngry(npc);
 			}
 		}
-		
 		return htmltext;
 	}
 	
@@ -232,7 +227,6 @@ public class DrChaos extends AbstractNpcAI
 		
 		// Initialization of the paranoia.
 		startQuestTimer("paranoia_activity", 1000, npc, null, true);
-		
 		return null;
 	}
 	
@@ -244,7 +238,6 @@ public class DrChaos extends AbstractNpcAI
 		
 		// "lock" Dr. Chaos for regular RB time (36H fixed +- 24H random)
 		final long respawnTime = (36 + Rnd.get(-24, 24)) * 3600000;
-		
 		GrandBossManager.getInstance().setBossStatus(CHAOS_GOLEM, DEAD);
 		startQuestTimer("reset_drchaos", respawnTime, null, null, false);
 		
@@ -252,7 +245,6 @@ public class DrChaos extends AbstractNpcAI
 		final StatSet info = GrandBossManager.getInstance().getStatSet(CHAOS_GOLEM);
 		info.set("respawn_time", System.currentTimeMillis() + respawnTime);
 		GrandBossManager.getInstance().setStatSet(CHAOS_GOLEM, info);
-		
 		return null;
 	}
 	

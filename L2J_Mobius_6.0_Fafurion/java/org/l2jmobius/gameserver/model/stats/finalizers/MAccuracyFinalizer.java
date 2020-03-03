@@ -34,13 +34,11 @@ public class MAccuracyFinalizer implements IStatFunction
 		throwIfPresent(base);
 		
 		double baseValue = calcWeaponPlusBaseValue(creature, stat);
-		
 		if (creature.isPlayer())
 		{
 			// Enchanted gloves bonus
 			baseValue += calcEnchantBodyPart(creature, Item.SLOT_GLOVES);
 		}
-		
 		return Stat.defaultValue(creature, stat, baseValue + (Math.sqrt(creature.getWIT()) * 3) + (creature.getLevel() * 2));
 	}
 	
@@ -51,7 +49,6 @@ public class MAccuracyFinalizer implements IStatFunction
 		{
 			return (0.3 * Math.max(enchantLevel - 3, 0)) + (0.3 * Math.max(enchantLevel - 6, 0));
 		}
-		
 		return (0.2 * Math.max(enchantLevel - 3, 0)) + (0.2 * Math.max(enchantLevel - 6, 0));
 	}
 }

@@ -52,7 +52,6 @@ public class WareHouseWithdrawalList extends AbstractItemPacket
 		_sendType = sendType;
 		_player = player;
 		_whType = type;
-		
 		_playerAdena = _player.getAdena();
 		_invSize = player.getInventory().getSize();
 		if (_player.getActiveWarehouse() == null)
@@ -62,7 +61,6 @@ public class WareHouseWithdrawalList extends AbstractItemPacket
 		}
 		
 		_items = _player.getActiveWarehouse().getItems();
-		
 		for (ItemInstance item : _items)
 		{
 			if (item.isStackable())

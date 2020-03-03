@@ -77,7 +77,6 @@ public class RequestPartyMatchDetail extends GameClientPacket
 			
 			player.sendPacket(new PartyMatchDetail(room));
 			player.sendPacket(new ExPartyRoomMember(room, 0));
-			
 			for (PlayerInstance _member : room.getPartyMembers())
 			{
 				if (_member == null)

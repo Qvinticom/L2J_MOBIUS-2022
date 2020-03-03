@@ -140,11 +140,9 @@ public class AdminBuffs implements IAdminCommandHandler
 			try
 			{
 				final StringTokenizer st = new StringTokenizer(command, " ");
-				
 				st.nextToken();
 				final int objectId = Integer.parseInt(st.nextToken());
 				final int skillId = Integer.parseInt(st.nextToken());
-				
 				removeBuff(activeChar, objectId, skillId);
 				return true;
 			}
@@ -197,9 +195,7 @@ public class AdminBuffs implements IAdminCommandHandler
 			try
 			{
 				final int radius = Integer.parseInt(val);
-				
 				World.getInstance().forEachVisibleObjectInRange(activeChar, PlayerInstance.class, radius, Creature::stopAllEffects);
-				
 				BuilderUtil.sendSysMessage(activeChar, "All effects canceled within radius " + radius);
 				return true;
 			}
@@ -305,7 +301,6 @@ public class AdminBuffs implements IAdminCommandHandler
 		}
 		
 		final String pageLink = "bypass -h admin_getbuffs" + (passive ? "_ps " : " ") + target.getName();
-		
 		final PageResult result = PageBuilder.newBuilder(effects, 3, pageLink).currentPage(page).style(ButtonsStyle.INSTANCE).bodyHandler((pages, info, sb) ->
 		{
 			for (AbstractEffect effect : info.getEffects())
@@ -331,7 +326,6 @@ public class AdminBuffs implements IAdminCommandHandler
 		
 		final NpcHtmlMessage html = new NpcHtmlMessage(0, 1);
 		html.setFile(activeChar, "data/html/admin/getbuffs.htm");
-		
 		if (result.getPages() > 0)
 		{
 			html.replace("%pages%", "<table width=280 cellspacing=0><tr>" + result.getPagerTemplate() + "</tr></table>");
@@ -426,7 +420,6 @@ public class AdminBuffs implements IAdminCommandHandler
 			html.append("<html><table width=\"100%\"><tr><td width=45><button value=\"Main\" action=\"bypass -h admin_admin\" width=45 height=21 back=\"L2UI_ct1.button_df\" fore=\"L2UI_ct1.button_df\"></td><td width=180><center><font color=\"LEVEL\">Blocked effects of ");
 			html.append(target.getName());
 			html.append("</font></td><td width=45><button value=\"Back\" action=\"bypass -h admin_getbuffs" + (target.isPlayer() ? (" " + target.getName()) : "") + "\" width=45 height=21 back=\"L2UI_ct1.button_df\" fore=\"L2UI_ct1.button_df\"></td></tr></table><br>");
-			
 			if ((blockedAbnormals != null) && !blockedAbnormals.isEmpty())
 			{
 				html.append("<br>Blocked buff slots: ");
@@ -440,7 +433,6 @@ public class AdminBuffs implements IAdminCommandHandler
 			
 			// Send the packet
 			activeChar.sendPacket(new NpcHtmlMessage(0, 1, html.toString()));
-			
 			if (Config.GMAUDIT)
 			{
 				GMAudit.auditGMAction(activeChar.getName() + " [" + activeChar.getObjectId() + "]", "viewblockedeffects", target.getName() + " (" + Integer.toString(target.getObjectId()) + ")", "");

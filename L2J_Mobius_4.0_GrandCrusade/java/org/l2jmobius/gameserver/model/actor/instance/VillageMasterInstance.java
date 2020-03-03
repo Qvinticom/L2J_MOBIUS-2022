@@ -69,7 +69,6 @@ public class VillageMasterInstance extends NpcInstance
 		{
 			return true;
 		}
-		
 		return super.isAutoAttackable(attacker);
 	}
 	
@@ -77,7 +76,6 @@ public class VillageMasterInstance extends NpcInstance
 	public String getHtmlPath(int npcId, int value, PlayerInstance player)
 	{
 		String pom = "";
-		
 		if (value == 0)
 		{
 			pom = Integer.toString(npcId);
@@ -86,7 +84,6 @@ public class VillageMasterInstance extends NpcInstance
 		{
 			pom = npcId + "-" + value;
 		}
-		
 		return "data/html/villagemaster/" + pom + ".htm";
 	}
 	
@@ -95,10 +92,8 @@ public class VillageMasterInstance extends NpcInstance
 	{
 		final String[] commandStr = command.split(" ");
 		final String actualCommand = commandStr[0]; // Get actual command
-		
 		String cmdParams = "";
 		String cmdParams2 = "";
-		
 		if (commandStr.length >= 2)
 		{
 			cmdParams = commandStr[1];
@@ -441,7 +436,6 @@ public class VillageMasterInstance extends NpcInstance
 		}
 		
 		final int leaderId = pledgeType != Clan.SUBUNIT_ACADEMY ? clan.getClanMember(leaderName).getObjectId() : 0;
-		
 		if (clan.createSubPledge(player, pledgeType, leaderId, clanName) == null)
 		{
 			return;
@@ -491,7 +485,6 @@ public class VillageMasterInstance extends NpcInstance
 		
 		final Clan clan = player.getClan();
 		final SubPledge subPledge = player.getClan().getSubPledge(pledgeType);
-		
 		if (subPledge == null)
 		{
 			player.sendMessage("Pledge don't exists.");
@@ -534,7 +527,6 @@ public class VillageMasterInstance extends NpcInstance
 		
 		final Clan clan = player.getClan();
 		final SubPledge subPledge = player.getClan().getSubPledge(clanName);
-		
 		if ((null == subPledge) || (subPledge.getId() == Clan.SUBUNIT_ACADEMY))
 		{
 			player.sendPacket(SystemMessageId.CLAN_NAME_IS_INVALID);
@@ -589,7 +581,6 @@ public class VillageMasterInstance extends NpcInstance
 		}
 		
 		final List<SkillLearn> skills = SkillTreeData.getInstance().getAvailablePledgeSkills(player.getClan());
-		
 		if (skills.isEmpty())
 		{
 			if (player.getClan().getLevel() < 8)

@@ -121,11 +121,9 @@ public class ClassMasterInstance extends FolkInstance
 				final NpcHtmlMessage html = new NpcHtmlMessage(getObjectId());
 				final StringBuilder sb = new StringBuilder();
 				sb.append("<html><title>Class Manager</title><body><center><img src=L2Font-e.replay_logo-e width=258 height=60><br><br><br><img src=L2UI_CH3.herotower_deco width=256 height=32><br><br>");
-				
 				if (((level >= 20) && (jobLevel == 1) && Config.ALLOW_CLASS_MASTERS_FIRST_CLASS) || ((level >= 40) && (jobLevel == 2) && Config.ALLOW_CLASS_MASTERS_SECOND_CLASS) || ((level >= 76) && (jobLevel == 3) && Config.ALLOW_CLASS_MASTERS_THIRD_CLASS))
 				{
 					sb.append("<font color=AAAAAA>Please choose from the list of classes below...</font><br><br>");
-					
 					for (ClassId child : ClassId.values())
 					{
 						if (child.childOf(classId) && (child.level() == jobLevel))
@@ -238,7 +236,6 @@ public class ClassMasterInstance extends FolkInstance
 			final int level = player.getLevel();
 			int jobLevel = 0;
 			int newJobLevel = 0;
-			
 			player.setTarget(player);
 			
 			final int lvlnow = classId.level();
@@ -261,7 +258,6 @@ public class ClassMasterInstance extends FolkInstance
 				sb.append("<html><title>Class Manager</title><body><center><img src=L2Font-e.replay_logo-e width=258 height=60><br><br><br><img src=L2UI_CH3.herotower_deco width=256 height=32><br><br>");
 				sb.append("You have now become a <font color=\"LEVEL\">" + PlayerTemplateData.getInstance().getClassNameById(player.getClassId().getId()) + "</font>.");
 				sb.append("<br><img src=L2UI_CH3.herotower_deco width=256 height=32></center></body></html>");
-				
 				html.setHtml(sb.toString());
 				player.sendPacket(html);
 				return;
@@ -379,7 +375,6 @@ public class ClassMasterInstance extends FolkInstance
 			}
 			
 			changeClass(player, val);
-			
 			player.rewardSkills();
 			
 			// Check player skills
@@ -402,7 +397,6 @@ public class ClassMasterInstance extends FolkInstance
 			sb.append("<html><title>Class Manager</title><body><center><img src=L2Font-e.replay_logo-e width=258 height=60><br><br><br><img src=L2UI_CH3.herotower_deco width=256 height=32><br><br>");
 			sb.append("You have now become a <font color=\"LEVEL\">" + PlayerTemplateData.getInstance().getClassNameById(player.getClassId().getId()) + "</font>.");
 			sb.append("<br><img src=L2UI_CH3.herotower_deco width=256 height=32></center></body></html>");
-			
 			html.setHtml(sb.toString());
 			player.sendPacket(html);
 		}
@@ -453,14 +447,12 @@ public class ClassMasterInstance extends FolkInstance
 			for (int i = 0; i < 3; i++)
 			{
 				final ItemInstance collar = player.getInventory().getItemByItemId(hatchCollar[i]);
-				
 				if (collar != null)
 				{
 					// Unsummon the hatchling
 					player.getPet().unSummon(player);
 					player.destroyItem("ClassMaster", collar, player, true);
 					player.addItem("ClassMaster", striderCollar[i], 1, player, true);
-					
 					return;
 				}
 			}
@@ -681,7 +673,6 @@ public class ClassMasterInstance extends FolkInstance
 		else
 		{
 			ClassId classId = ClassId.getClassId(player.getActiveClass());
-			
 			if (classId.getParent() != null)
 			{
 				while (classId.level() == 0)

@@ -93,7 +93,6 @@ public class FortressSiegeManager extends AbstractNpcAI
 					final Clan clan = player.getClan();
 					final Fort fortress = npc.getFort();
 					final Castle castle = npc.getCastle();
-					
 					if (clan.getFortId() == fortress.getResidenceId())
 					{
 						final NpcHtmlMessage html = new NpcHtmlMessage(npc.getObjectId());
@@ -163,7 +162,6 @@ public class FortressSiegeManager extends AbstractNpcAI
 				{
 					final Clan clan = player.getClan();
 					final Fort fortress = npc.getFort();
-					
 					if (clan.getFortId() == fortress.getResidenceId())
 					{
 						final NpcHtmlMessage html = new NpcHtmlMessage(npc.getObjectId());

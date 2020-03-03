@@ -72,7 +72,6 @@ public class BlessedSpiritShot implements IItemHandler
 		
 		// Check for correct grade
 		final boolean gradeCheck = item.isEtcItem() && (item.getEtcItem().getDefaultAction() == ActionType.SPIRITSHOT) && (weaponInst.getItem().getCrystalTypePlus() == item.getItem().getCrystalTypePlus());
-		
 		if (!gradeCheck)
 		{
 			if (!player.getAutoSoulShot().contains(itemId))
@@ -110,7 +109,6 @@ public class BlessedSpiritShot implements IItemHandler
 		else
 		{
 			skills.forEach(holder -> Broadcast.toSelfAndKnownPlayersInRadius(player, new MagicSkillUse(player, player, holder.getSkillId(), holder.getSkillLevel(), 0, 0), 600));
-			
 		}
 		return true;
 	}

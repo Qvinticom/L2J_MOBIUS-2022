@@ -208,7 +208,6 @@ public class RequestSendPost implements IClientIncomingPacket
 		
 		final int level = CharNameTable.getInstance().getAccessLevelById(receiverId);
 		final AccessLevel accessLevel = AdminData.getInstance().getAccessLevel(level);
-		
 		if (accessLevel.isGm() && !player.getAccessLevel().isGm())
 		{
 			final SystemMessage sm = new SystemMessage(SystemMessageId.YOUR_MESSAGE_TO_C1_DID_NOT_REACH_ITS_RECIPIENT_YOU_CANNOT_SEND_MAIL_TO_THE_GM_STAFF);
@@ -262,7 +261,6 @@ public class RequestSendPost implements IClientIncomingPacket
 	{
 		long currentAdena = player.getAdena();
 		long fee = MESSAGE_FEE;
-		
 		if (_items != null)
 		{
 			for (AttachmentItem i : _items)
@@ -276,7 +274,6 @@ public class RequestSendPost implements IClientIncomingPacket
 				}
 				
 				fee += MESSAGE_FEE_PER_SLOT;
-				
 				if (item.getId() == ADENA_ID)
 				{
 					currentAdena -= i.getCount();
@@ -327,7 +324,6 @@ public class RequestSendPost implements IClientIncomingPacket
 				continue;
 			}
 			newItem.setItemLocation(newItem.getItemLocation(), msg.getId());
-			
 			if (playerIU != null)
 			{
 				if ((oldItem.getCount() > 0) && (oldItem != newItem))

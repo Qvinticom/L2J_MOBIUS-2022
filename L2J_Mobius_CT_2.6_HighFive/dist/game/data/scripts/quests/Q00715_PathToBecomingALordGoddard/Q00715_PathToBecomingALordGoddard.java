@@ -132,7 +132,6 @@ public final class Q00715_PathToBecomingALordGoddard extends Quest
 		}
 		
 		final PlayerInstance castleOwner = castle.getOwner().getLeader().getPlayerInstance();
-		
 		if (qs.isCond(0))
 		{
 			if (castleOwner == qs.getPlayer())

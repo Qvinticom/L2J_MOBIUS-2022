@@ -78,7 +78,6 @@ public class QuestSpawn
 		try
 		{
 			final NpcTemplate template = NpcTable.getInstance().getTemplate(npcId);
-			
 			if (template != null)
 			{
 				// Sometimes, even if the quest script specifies some xyz (for example npc.getX() etc) by the time the code reaches here, xyz have become 0! Also, a questdev might have purposely set xy to 0,0...however,
@@ -122,7 +121,6 @@ public class QuestSpawn
 				spawn.setZ(z + 20);
 				spawn.stopRespawn();
 				result = spawn.doSpawn();
-				
 				if (despawnDelay > 0)
 				{
 					ThreadPool.schedule(new DeSpawnScheduleTimerTask(result), despawnDelay);

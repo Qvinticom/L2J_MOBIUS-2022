@@ -110,7 +110,6 @@ public class PriestOfBlessing extends AbstractNpcAI
 			{
 				final String value = player.getVariables().getString("PriestOfBlessing_voice", "");
 				final long reuseTime = value.isEmpty() ? 0 : Long.parseLong(value);
-				
 				if (System.currentTimeMillis() > reuseTime)
 				{
 					takeItems(player, Inventory.ADENA_ID, PRICE_VOICE);
@@ -136,12 +135,10 @@ public class PriestOfBlessing extends AbstractNpcAI
 		{
 			final int index = getHGIndex(player.getLevel());
 			final int priceHourglass = PRICE_HOURGLASS[index];
-			
 			if (player.getAdena() >= priceHourglass)
 			{
 				final String value = player.getVariables().getString("PriestOfBlessing_hg_" + index, "");
 				final long reuseTime = value.isEmpty() ? 0 : Long.parseLong(value);
-				
 				if (System.currentTimeMillis() > reuseTime)
 				{
 					final int[] hg = HOURGLASSES[index];

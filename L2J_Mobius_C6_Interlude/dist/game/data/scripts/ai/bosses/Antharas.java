@@ -239,7 +239,6 @@ public class Antharas extends Quest
 		}
 		
 		Integer status = GrandBossManager.getInstance().getBossStatus(ANTHARASOLDID);
-		
 		if (FWA_OLDANTHARAS || (status == WAITING))
 		{
 			final StatSet info = GrandBossManager.getInstance().getStatSet(ANTHARASOLDID);
@@ -282,11 +281,8 @@ public class Antharas extends Quest
 		else
 		{
 			final Integer statusWeak = GrandBossManager.getInstance().getBossStatus(ANTHARASWEAKID);
-			
 			final Integer statusNormal = GrandBossManager.getInstance().getBossStatus(ANTHARASNORMALID);
-			
 			final Integer statusStrong = GrandBossManager.getInstance().getBossStatus(ANTHARASSTRONGID);
-			
 			int antharasId = 0;
 			if ((statusWeak == FIGHTING) || (statusWeak == DEAD))
 			{
@@ -957,7 +953,6 @@ public class Antharas extends Quest
 		if ((npc.getNpcId() == 29019) || (npc.getNpcId() == 29066) || (npc.getNpcId() == 29067) || (npc.getNpcId() == 29068))
 		{
 			npc.broadcastPacket(new PlaySound(1, "BS01_D", npc));
-			
 			_cubeSpawnTask = ThreadPool.schedule(new CubeSpawn(0), 10000);
 			GrandBossManager.getInstance().setBossStatus(npc.getNpcId(), DEAD);
 			final long respawnTime = (Config.ANTHARAS_RESP_FIRST + Rnd.get(Config.ANTHARAS_RESP_SECOND)) * 3600000;

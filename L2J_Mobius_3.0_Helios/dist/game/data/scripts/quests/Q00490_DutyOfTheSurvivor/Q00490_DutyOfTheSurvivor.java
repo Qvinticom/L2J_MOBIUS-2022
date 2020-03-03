@@ -45,7 +45,6 @@ public class Q00490_DutyOfTheSurvivor extends Quest
 		23165, // Plagueworm
 		23166, // Contaminated Rotten Root
 		23167, // Decayed Spore
-	
 	};
 	private static final int[] BLOOD_MONSTERS =
 	{
@@ -78,7 +77,6 @@ public class Q00490_DutyOfTheSurvivor extends Quest
 	public String onAdvEvent(String event, Npc npc, PlayerInstance player)
 	{
 		final QuestState qs = getQuestState(player, false);
-		
 		if (qs == null)
 		{
 			return null;
@@ -109,7 +107,6 @@ public class Q00490_DutyOfTheSurvivor extends Quest
 	{
 		String htmltext = getNoQuestMsg(player);
 		final QuestState qs = getQuestState(player, true);
-		
 		if (npc.getId() == VOLLODOS)
 		{
 			switch (qs.getState())

@@ -48,7 +48,6 @@ public class RequestCharacterNameCreatable implements IClientIncomingPacket
 	public void run(GameClient client)
 	{
 		final int charId = CharNameTable.getInstance().getIdByName(_name);
-		
 		int result;
 		if (!Util.isAlphaNumeric(_name) || !isValidName(_name))
 		{

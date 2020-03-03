@@ -79,7 +79,6 @@ public class SkillChargeDmg extends Skill
 		
 		double modifier = 0;
 		modifier = (effect.getLevel() - getNumCharges()) * 0.33;
-		
 		if ((getTargetType() != SkillTargetType.TARGET_AREA) && (getTargetType() != SkillTargetType.TARGET_MULTIFACE))
 		{
 			effect.numCharges -= getNumCharges();
@@ -96,12 +95,10 @@ public class SkillChargeDmg extends Skill
 		}
 		
 		final boolean ss = caster.checkSs();
-		
 		for (WorldObject target2 : targets)
 		{
 			final ItemInstance weapon = caster.getActiveWeaponInstance();
 			final Creature target = (Creature) target2;
-			
 			if (target.isAlikeDead())
 			{
 				continue;
@@ -115,7 +112,6 @@ public class SkillChargeDmg extends Skill
 			final boolean shld = Formulas.calcShldUse(caster, target);
 			final boolean soul = ((weapon != null) && (weapon.getChargedSoulshot() == ItemInstance.CHARGED_SOULSHOT) && (weapon.getItemType() != WeaponType.DAGGER));
 			boolean crit = false;
-			
 			if (getBaseCritRate() > 0)
 			{
 				crit = Formulas.calcCrit(getBaseCritRate() * 10 * BaseStat.STR.calcBonus(caster));

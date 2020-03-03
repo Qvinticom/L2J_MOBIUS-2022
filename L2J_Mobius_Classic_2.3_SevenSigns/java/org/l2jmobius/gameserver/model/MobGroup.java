@@ -67,7 +67,6 @@ public class MobGroup
 		{
 			_mobs = ConcurrentHashMap.newKeySet();
 		}
-		
 		return _mobs;
 	}
 	
@@ -146,12 +145,10 @@ public class MobGroup
 			for (int i = 0; i < _maxMobCount; i++)
 			{
 				final GroupSpawn spawn = new GroupSpawn(_npcTemplate);
-				
 				final int signX = Rnd.nextBoolean() ? -1 : 1;
 				final int signY = Rnd.nextBoolean() ? -1 : 1;
 				final int randX = Rnd.get(MobGroupTable.RANDOM_RANGE);
 				final int randY = Rnd.get(MobGroupTable.RANDOM_RANGE);
-				
 				spawn.setXYZ(x + (signX * randX), y + (signY * randY), z);
 				spawn.stopRespawn();
 				
@@ -187,7 +184,6 @@ public class MobGroup
 			{
 				final int x = player.getX() + Rnd.get(50);
 				final int y = player.getY() + Rnd.get(50);
-				
 				mobInst.teleToLocation(new Location(x, y, player.getZ()), true);
 				((ControllableMobAI) mobInst.getAI()).follow(player);
 			}
@@ -325,7 +321,6 @@ public class MobGroup
 			final int signY = Rnd.nextBoolean() ? -1 : 1;
 			final int randX = Rnd.get(MobGroupTable.RANDOM_RANGE);
 			final int randY = Rnd.get(MobGroupTable.RANDOM_RANGE);
-			
 			final ControllableMobAI ai = (ControllableMobAI) mobInst.getAI();
 			ai.move(creature.getX() + (signX * randX), creature.getY() + (signY * randY), creature.getZ());
 		}

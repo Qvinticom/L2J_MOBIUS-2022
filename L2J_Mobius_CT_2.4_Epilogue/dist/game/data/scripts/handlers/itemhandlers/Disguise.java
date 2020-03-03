@@ -38,7 +38,6 @@ public class Disguise implements IItemHandler
 		}
 		
 		final PlayerInstance player = playable.getActingPlayer();
-		
 		final int regId = TerritoryWarManager.getInstance().getRegisteredTerritoryId(player);
 		if ((regId > 0) && (regId == (item.getId() - 13596)))
 		{

@@ -39,7 +39,6 @@ public class RequestModifyBookMarkSlot implements IClientIncomingPacket
 		icon = packet.readD();
 		tag = packet.readS();
 		return true;
-		
 	}
 	
 	@Override

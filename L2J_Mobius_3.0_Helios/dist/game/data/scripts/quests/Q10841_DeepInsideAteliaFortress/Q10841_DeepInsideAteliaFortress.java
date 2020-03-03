@@ -95,7 +95,6 @@ public class Q10841_DeepInsideAteliaFortress extends Quest
 	{
 		final QuestState qs = getQuestState(player, true);
 		String htmltext = getNoQuestMsg(player);
-		
 		switch (qs.getState())
 		{
 			case State.CREATED:

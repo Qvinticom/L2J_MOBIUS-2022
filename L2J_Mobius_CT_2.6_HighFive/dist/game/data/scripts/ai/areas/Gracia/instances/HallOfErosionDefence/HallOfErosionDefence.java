@@ -328,7 +328,6 @@ public class HallOfErosionDefence extends AbstractNpcAI
 			((HEDWorld) world).startTime = System.currentTimeMillis();
 			InstanceManager.getInstance().addWorld(world);
 			LOGGER.info("Hall Of Erosion Defence started " + INSTANCEID + " Instance: " + world.getInstanceId() + " created by player: " + player.getName());
-			
 			if (player.isInParty())
 			{
 				for (PlayerInstance partyMember : player.getParty().isInCommandChannel() ? player.getParty().getCommandChannel().getMembers() : player.getParty().getMembers())
@@ -429,7 +428,6 @@ public class HallOfErosionDefence extends AbstractNpcAI
 		if (tmpworld instanceof HEDWorld)
 		{
 			final HEDWorld world = (HEDWorld) tmpworld;
-			
 			if (event.startsWith("warp"))
 			{
 				Npc victim = null;
@@ -475,7 +473,6 @@ public class HallOfErosionDefence extends AbstractNpcAI
 		if (tmpworld instanceof HEDWorld)
 		{
 			final HEDWorld world = (HEDWorld) tmpworld;
-			
 			if (npc.getId() == 18668)
 			{
 				for (int i = 0; i < Rnd.get(1, 4); i++)
@@ -553,7 +550,6 @@ public class HallOfErosionDefence extends AbstractNpcAI
 		if (tmpworld instanceof HEDWorld)
 		{
 			final HEDWorld world = (HEDWorld) tmpworld;
-			
 			seedKills++;
 			if (seedKills >= 1)
 			{
@@ -653,7 +649,6 @@ public class HallOfErosionDefence extends AbstractNpcAI
 			world.finishTask = null;
 		}
 		broadCastPacket(world, new ExShowScreenMessage(NpcStringId.YOU_HAVE_FAILED_AT_S1_S2_THE_INSTANCE_WILL_SHORTLY_EXPIRE, 2, 8000));
-		
 		conquestEnded = true;
 		final Instance inst = InstanceManager.getInstance().getInstance(world.getInstanceId());
 		if (inst != null)

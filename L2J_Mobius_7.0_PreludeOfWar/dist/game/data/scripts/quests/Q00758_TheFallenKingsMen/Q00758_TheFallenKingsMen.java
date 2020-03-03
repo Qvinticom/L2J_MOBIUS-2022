@@ -140,7 +140,6 @@ public class Q00758_TheFallenKingsMen extends Quest
 	{
 		final QuestState qs = getQuestState(player, true);
 		String htmltext = getNoQuestMsg(player);
-		
 		if (npc.getId() == INTENDANT)
 		{
 			switch (qs.getState())
