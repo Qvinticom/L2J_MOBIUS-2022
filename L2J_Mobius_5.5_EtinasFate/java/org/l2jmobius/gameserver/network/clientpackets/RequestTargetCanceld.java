@@ -23,16 +23,16 @@ import org.l2jmobius.gameserver.network.SystemMessageId;
 import org.l2jmobius.gameserver.network.serverpackets.TargetUnselected;
 
 /**
- * @version $Revision: 1.3.4.2 $ $Date: 2005/03/27 15:29:30 $
+ * @author Mobius
  */
 public class RequestTargetCanceld implements IClientIncomingPacket
 {
-	private int _unselect;
+	private boolean _targetLost;
 	
 	@Override
 	public boolean read(GameClient client, PacketReader packet)
 	{
-		_unselect = packet.readH();
+		_targetLost = packet.readH() != 0;
 		return true;
 	}
 	
@@ -51,20 +51,17 @@ public class RequestTargetCanceld implements IClientIncomingPacket
 			return;
 		}
 		
-		if (_unselect == 0)
+		if (player.isCastingNow())
 		{
-			// Try to abort cast, if that fails, then cancel target.
-			final boolean castAborted = player.abortCast();
-			if (!castAborted && (player.getTarget() != null))
-			{
-				player.setTarget(null);
-			}
+			player.abortAllSkillCasters();
 		}
-		else if (player.getTarget() != null)
+		
+		if (_targetLost)
 		{
 			player.setTarget(null);
 		}
-		else if (player.isInAirShip())
+		
+		if (player.isInAirShip())
 		{
 			player.broadcastPacket(new TargetUnselected(player));
 		}
