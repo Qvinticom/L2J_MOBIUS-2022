@@ -2886,7 +2886,7 @@ public class NpcInstance extends Creature
 	public void setSpawn(Spawn spawn)
 	{
 		_spawn = spawn;
-		// Does this Npc morph into a PcInstance?
+		// Does this Npc morph into a PlayerInstance?
 		if ((_spawn != null) && CustomNpcInstanceManager.getInstance().isCustomNpcInstance(_spawn.getId(), getNpcId()))
 		{
 			new CustomNpcInstance(this);

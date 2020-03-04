@@ -233,7 +233,7 @@ public class ItemInstance extends WorldObject
 	 * <font color=#FF0000><b><u>Caution</u>: This method DOESN'T REMOVE the object from _allObjects of World </b></font><br>
 	 * <br>
 	 * <b><u>Example of use</u>:</b><br>
-	 * <li>Do Pickup Item : PCInstance and Pet</li><br>
+	 * <li>Do Pickup Item : PlayerInstance and Pet</li><br>
 	 * @param creature Character that pick up the item
 	 */
 	public void pickupMe(Creature creature)

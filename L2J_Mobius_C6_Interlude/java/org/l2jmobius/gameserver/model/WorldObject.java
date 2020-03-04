@@ -160,7 +160,7 @@ public abstract class WorldObject
 	 * <li>_worldRegion != null <i>(WorldObject is visible at the beginning)</i></li><br>
 	 * <br>
 	 * <b><u>Example of use</u>:</b><br>
-	 * <li>Do Pickup Item : PCInstance and Pet</li><br>
+	 * <li>Do Pickup Item : PlayerInstance and Pet</li><br>
 	 * @param creature Player that pick up the item
 	 */
 	public void pickupMe(Creature creature) // NOTE: Should move this function into ItemInstance because it does not apply to Creature

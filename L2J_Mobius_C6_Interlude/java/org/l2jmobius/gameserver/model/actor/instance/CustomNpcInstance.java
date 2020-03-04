@@ -33,8 +33,8 @@ public class CustomNpcInstance
 	private String _name;
 	private String _title;
 	
-	private int[] _int; // PcInstance integer stats
-	private boolean _boolean[]; // PcInstance booolean stats
+	private int[] _int; // PlayerInstance integer stats
+	private boolean _boolean[]; // PlayerInstance booolean stats
 	private NpcInstance _npcInstance; // Reference to Npc with this stats
 	private ClassId _classId; // ClassId of this (N)Pc
 	
@@ -52,7 +52,7 @@ public class CustomNpcInstance
 	}
 	
 	/**
-	 * Initializes the semi PcInstance stats for this NpcInstance, making it appear as a PcInstance on all clients
+	 * Initializes the semi PlayerInstance stats for this NpcInstance, making it appear as a PlayerInstance on all clients
 	 */
 	private final void initialize()
 	{
@@ -480,7 +480,7 @@ public class CustomNpcInstance
 		}
 		
 		// Not really necessary but maybe called upon on wrong random settings:
-		// Initiate this PcInstance class id to the correct pcInstance class.
+		// Initiate this PlayerInstance class id to the correct PlayerInstance class.
 		final ClassId ids[] = ClassId.values();
 		if (ids != null)
 		{
