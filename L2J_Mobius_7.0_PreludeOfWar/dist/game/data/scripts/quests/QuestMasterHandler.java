@@ -65,11 +65,13 @@ import quests.Q00573_SpecialMissionProofOfStrengthFieldRaid.Q00573_SpecialMissio
 import quests.Q00574_SpecialMissionNornilsGarden.Q00574_SpecialMissionNornilsGarden;
 import quests.Q00576_SpecialMissionDefeatSpezion.Q00576_SpecialMissionDefeatSpezion;
 import quests.Q00577_BasicMissionSilentValley.Q00577_BasicMissionSilentValley;
+import quests.Q00578_BasicMissionCemetery.Q00578_BasicMissionCemetery;
 import quests.Q00580_BeyondTheMemories.Q00580_BeyondTheMemories;
 import quests.Q00587_MoreAggressiveOperation.Q00587_MoreAggressiveOperation;
 import quests.Q00588_HeadOnCrash.Q00588_HeadOnCrash;
 import quests.Q00589_ASecretChange.Q00589_ASecretChange;
 import quests.Q00590_ToEachTheirOwn.Q00590_ToEachTheirOwn;
+import quests.Q00593_BasicMissionPaganTemple.Q00593_BasicMissionPaganTemple;
 import quests.Q00600_KeyToTheRefiningProcess.Q00600_KeyToTheRefiningProcess;
 import quests.Q00618_IntoTheFlame.Q00618_IntoTheFlame;
 import quests.Q00620_FourGoblets.Q00620_FourGoblets;
@@ -256,11 +258,9 @@ import quests.custom.Q10529_IvoryTowersResearchFloatingSeaJournal.Q10529_IvoryTo
 import quests.custom.Q10533_OrfensAmbition.Q10533_OrfensAmbition;
 import quests.not_done.Q00282_ADayOfKindnessAndCaring;
 import quests.not_done.Q00504_CompetitionForTheBanditStronghold;
-import quests.not_done.Q00578_BasicMissionCemetery;
 import quests.not_done.Q00585_CantGoAgainstTheTime;
 import quests.not_done.Q00586_MutatedCreatures;
 import quests.not_done.Q00591_GreatAmbitions;
-import quests.not_done.Q00593_BasicMissionPaganTemple;
 import quests.not_done.Q00594_BasicMissionDimensionalRift;
 import quests.not_done.Q00595_SpecialMissionRaidersCrossroads;
 import quests.not_done.Q00596_SpecialMissionDefeatBaylor;
@@ -388,7 +388,7 @@ public class QuestMasterHandler
 		Q00574_SpecialMissionNornilsGarden.class,
 		Q00576_SpecialMissionDefeatSpezion.class,
 		Q00577_BasicMissionSilentValley.class,
-		Q00578_BasicMissionCemetery.class, // TODO: Not done.
+		Q00578_BasicMissionCemetery.class,
 		Q00580_BeyondTheMemories.class,
 		Q00585_CantGoAgainstTheTime.class, // TODO: Not done.
 		Q00586_MutatedCreatures.class, // TODO: Not done.
@@ -397,7 +397,7 @@ public class QuestMasterHandler
 		Q00589_ASecretChange.class,
 		Q00590_ToEachTheirOwn.class,
 		Q00591_GreatAmbitions.class, // TODO: Not done.
-		Q00593_BasicMissionPaganTemple.class, // TODO: Not done.
+		Q00593_BasicMissionPaganTemple.class,
 		Q00594_BasicMissionDimensionalRift.class, // TODO: Not done.
 		Q00595_SpecialMissionRaidersCrossroads.class, // TODO: Not done.
 		Q00596_SpecialMissionDefeatBaylor.class, // TODO: Not done.
