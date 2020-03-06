@@ -73,6 +73,7 @@ public class Q00348_AnArrogantSearch extends Quest
 			case "30864.htm":
 			case "30864-01.htm":
 			case "30864-02.htm":
+			case "30864-07a.htm":
 			{
 				htmltext = event;
 				break;
