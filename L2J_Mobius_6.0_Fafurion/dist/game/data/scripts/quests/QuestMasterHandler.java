@@ -144,6 +144,7 @@ import quests.Q00590_ToEachTheirOwn.Q00590_ToEachTheirOwn;
 import quests.Q00593_BasicMissionPaganTemple.Q00593_BasicMissionPaganTemple;
 import quests.Q00594_BasicMissionDimensionalRift.Q00594_BasicMissionDimensionalRift;
 import quests.Q00595_SpecialMissionRaidersCrossroads.Q00595_SpecialMissionRaidersCrossroads;
+import quests.Q00596_SpecialMissionDefeatBaylor.Q00596_SpecialMissionDefeatBaylor;
 import quests.Q00600_KeyToTheRefiningProcess.Q00600_KeyToTheRefiningProcess;
 import quests.Q00617_GatherTheFlames.Q00617_GatherTheFlames;
 import quests.Q00618_IntoTheFlame.Q00618_IntoTheFlame;
@@ -500,7 +501,6 @@ import quests.not_done.Q00579_BasicMissionBlazingSwamp;
 import quests.not_done.Q00585_CantGoAgainstTheTime;
 import quests.not_done.Q00586_MutatedCreatures;
 import quests.not_done.Q00591_GreatAmbitions;
-import quests.not_done.Q00596_SpecialMissionDefeatBaylor;
 import quests.not_done.Q00599_DemonsAndDimensionalEnergy;
 import quests.not_done.Q00655_AGrandPlanForTamingWildBeasts;
 import quests.not_done.Q00667_CoveringShilensEyes;
@@ -726,7 +726,7 @@ public class QuestMasterHandler
 		Q00593_BasicMissionPaganTemple.class,
 		Q00594_BasicMissionDimensionalRift.class,
 		Q00595_SpecialMissionRaidersCrossroads.class,
-		Q00596_SpecialMissionDefeatBaylor.class, // TODO: Not done.
+		Q00596_SpecialMissionDefeatBaylor.class,
 		Q00599_DemonsAndDimensionalEnergy.class, // TODO: Not done.
 		Q00600_KeyToTheRefiningProcess.class,
 		Q00617_GatherTheFlames.class,
