@@ -5412,42 +5412,82 @@
 		<variation mineralId="80130">
 			<optionGroup weaponType="warrior" order="0">
 				<optionCategory chance="100.0">
-					<optionRange from="33748" to="33799" chance="100" /> <!-- P. Ak. + 1% -> CHA + 1 -->
+					<optionRange from="33748" to="33760" chance="33.33" />
+					<optionRange from="33761" to="33791" chance="33.33" />
+					<optionRange from="33792" to="33799" chance="33.33" />
 				</optionCategory>
 			</optionGroup>
 			<optionGroup weaponType="warrior" order="1">
 				<optionCategory chance="55.0">
-					<optionRange from="33800" to="33824" chance="100" />
+					<optionRange from="33800" to="33806" chance="25" />
+					<optionRange from="33807" to="33813" chance="25" />
+					<optionRange from="33814" to="33818" chance="25" />
+					<optionRange from="33819" to="33824" chance="25" />
 				</optionCategory>
 				<optionCategory chance="35.0">
-					<optionRange from="33835" to="33873" chance="100" />
+					<optionRange from="33835" to="33840" chance="12.5" />
+					<optionRange from="33841" to="33846" chance="12.5" />
+					<optionRange from="33847" to="33851" chance="12.5" />
+					<optionRange from="33852" to="33856" chance="12.5" />
+					<optionRange from="33857" to="33861" chance="12.5" />
+					<optionRange from="33862" to="33866" chance="12.5" />
+					<optionRange from="33867" to="33870" chance="12.5" />
+					<optionRange from="33871" to="33873" chance="12.5" />
 				</optionCategory>
 				<optionCategory chance="7.0">
-					<optionRange from="33825" to="33834" chance="50" />
-					<optionRange from="33874" to="33879" chance="50" />
+					<optionRange from="33825" to="33830" chance="11.1111" />
+					<optionRange from="33831" to="33834" chance="11.1111" />
+					<optionRange from="33835" to="33838" chance="11.1111" />
+					<optionRange from="33839" to="33845" chance="11.1111" />
+					<optionRange from="33846" to="33850" chance="11.1111" />
+					<optionRange from="33851" to="33856" chance="11.1111" />
+					<optionRange from="33857" to="33863" chance="11.1111" />
+					<optionRange from="33864" to="33869" chance="11.1111" />
+					<optionRange from="33870" to="33879" chance="11.1111" />
 				</optionCategory>
 				<optionCategory chance="3.0">
-					<optionRange from="33880" to="33884" chance="100" />
+					<optionRange from="33880" to="33881" chance="50" />
+					<optionRange from="33882" to="33884" chance="50" />
 				</optionCategory>
 			</optionGroup>
 			<optionGroup weaponType="mage" order="0">
 				<optionCategory chance="100.0">
-					<optionRange from="33748" to="33799" chance="100" /> <!-- P. Ak. + 1% -> CHA + 1 -->
+					<optionRange from="33748" to="33760" chance="33.33" />
+					<optionRange from="33761" to="33791" chance="33.33" />
+					<optionRange from="33792" to="33799" chance="33.33" />
 				</optionCategory>
 			</optionGroup>
-			<optionGroup weaponType="warrior" order="1">
+			<optionGroup weaponType="mage" order="1">
 				<optionCategory chance="55.0">
-					<optionRange from="33800" to="33824" chance="100" />
+					<optionRange from="33800" to="33806" chance="25" />
+					<optionRange from="33807" to="33813" chance="25" />
+					<optionRange from="33814" to="33818" chance="25" />
+					<optionRange from="33819" to="33824" chance="25" />
 				</optionCategory>
 				<optionCategory chance="35.0">
-					<optionRange from="33835" to="33873" chance="100" />
+					<optionRange from="33835" to="33840" chance="12.5" />
+					<optionRange from="33841" to="33846" chance="12.5" />
+					<optionRange from="33847" to="33851" chance="12.5" />
+					<optionRange from="33852" to="33856" chance="12.5" />
+					<optionRange from="33857" to="33861" chance="12.5" />
+					<optionRange from="33862" to="33866" chance="12.5" />
+					<optionRange from="33867" to="33870" chance="12.5" />
+					<optionRange from="33871" to="33873" chance="12.5" />
 				</optionCategory>
 				<optionCategory chance="7.0">
-					<optionRange from="33825" to="33834" chance="50" />
-					<optionRange from="33874" to="33879" chance="50" />
+					<optionRange from="33825" to="33830" chance="11.1111" />
+					<optionRange from="33831" to="33834" chance="11.1111" />
+					<optionRange from="33835" to="33838" chance="11.1111" />
+					<optionRange from="33839" to="33845" chance="11.1111" />
+					<optionRange from="33846" to="33850" chance="11.1111" />
+					<optionRange from="33851" to="33856" chance="11.1111" />
+					<optionRange from="33857" to="33863" chance="11.1111" />
+					<optionRange from="33864" to="33869" chance="11.1111" />
+					<optionRange from="33870" to="33879" chance="11.1111" />
 				</optionCategory>
 				<optionCategory chance="3.0">
-					<optionRange from="33880" to="33884" chance="100" />
+					<optionRange from="33880" to="33881" chance="50" />
+					<optionRange from="33882" to="33884" chance="50" />
 				</optionCategory>
 			</optionGroup>
 		</variation>
