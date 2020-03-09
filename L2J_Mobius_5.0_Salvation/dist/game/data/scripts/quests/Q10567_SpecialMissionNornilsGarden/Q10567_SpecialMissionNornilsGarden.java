@@ -25,8 +25,8 @@ import org.l2jmobius.gameserver.model.quest.QuestState;
 import org.l2jmobius.gameserver.model.quest.State;
 
 /**
- * Special Mission: Nornil's Cave (568)
- * @URL https://l2wiki.com/Special_Mission:_Nornil%27s_Cave
+ * Special Mission: Nornil's Garden (10567)
+ * @URL https://l2wiki.com/Special_Mission:_Nornil%27s_Garden
  * @author Dmitri
  */
 public class Q10567_SpecialMissionNornilsGarden extends Quest
@@ -46,7 +46,7 @@ public class Q10567_SpecialMissionNornilsGarden extends Quest
 	
 	public Q10567_SpecialMissionNornilsGarden()
 	{
-		super(568);
+		super(10567);
 		addStartNpc(PENNY);
 		addTalkId(PENNY, HESET, TAPOY);
 		addCondLevel(MIN_LEVEL, MAX_LEVEL, "nolevel.html");
