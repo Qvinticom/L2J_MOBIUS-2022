@@ -164,6 +164,7 @@ import quests.Q10538_GiantsEvolution.Q10538_GiantsEvolution;
 import quests.Q10539_EnergySupplyCutoffPlan.Q10539_EnergySupplyCutoffPlan;
 import quests.Q10540_ThwartingMimirsPlan.Q10540_ThwartingMimirsPlan;
 import quests.Q10566_BestChoice.Q10566_BestChoice;
+import quests.Q10567_SpecialMissionNornilsGarden.Q10567_SpecialMissionNornilsGarden;
 import quests.Q10568_KamaelsTechnologicalAdvancement.Q10568_KamaelsTechnologicalAdvancement;
 import quests.Q10569_DeclarationOfWar.Q10569_DeclarationOfWar;
 import quests.Q10571_StrategicReconciliation.Q10571_StrategicReconciliation;
@@ -299,7 +300,6 @@ import quests.not_done.Q10457_KefensisIllusion;
 import quests.not_done.Q10514_NewPathToGlory;
 import quests.not_done.Q10515_NewWayForPride;
 import quests.not_done.Q10535_BlacksmithsSoul3;
-import quests.not_done.Q10567_SpecialMissionNornilsGarden;
 import quests.not_done.Q10570_HurrahForKamaelsIndependence;
 import quests.not_done.Q10572_ToExpelTheEmbryosForces;
 import quests.not_done.Q10594_FergasonsScheme;
@@ -534,7 +534,7 @@ public class QuestMasterHandler
 		Q10539_EnergySupplyCutoffPlan.class,
 		Q10540_ThwartingMimirsPlan.class,
 		Q10566_BestChoice.class,
-		Q10567_SpecialMissionNornilsGarden.class, // TODO: Not done.
+		Q10567_SpecialMissionNornilsGarden.class,
 		Q10568_KamaelsTechnologicalAdvancement.class,
 		Q10569_DeclarationOfWar.class,
 		Q10570_HurrahForKamaelsIndependence.class, // TODO: Not done.
