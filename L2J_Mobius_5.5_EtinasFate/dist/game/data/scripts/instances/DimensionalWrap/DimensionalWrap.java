@@ -617,7 +617,7 @@ public class DimensionalWrap extends AbstractInstance
 				if (world.getAliveNpcs(MONSTERS).isEmpty())
 				{
 					world.broadcastPacket(new ExShowScreenMessage(NpcStringId.THE_SURROUNDING_ENERGY_HAS_DISSIPATED, ExShowScreenMessage.TOP_CENTER, 5000, true));
-					world.broadcastPacket(new Earthquake(npc, 50, 5));
+					world.broadcastPacket(new Earthquake(player, 50, 5));
 					world.openCloseDoor(world.getTemplateParameters().getInt(world.getParameters().getInt("worldState", 0) + "_st_door"), true);
 					clean(world.getFirstPlayer());
 					if (world.getParameters().getInt("worldState", 0) < 35)
