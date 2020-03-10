@@ -407,7 +407,6 @@ public class SystemMessage implements IClientOutgoingPacket
 				{
 					params[i] = _params[i].getValue();
 				}
-				
 				packet.writeH(SystemMessageId.S1_2.getId());
 				packet.writeC(0x01);
 				packet.writeC(TYPE_TEXT);
@@ -420,7 +419,14 @@ public class SystemMessage implements IClientOutgoingPacket
 		packet.writeC(_params.length);
 		for (SMParam param : _params)
 		{
+			if (param == null)
+			{
+				LOGGER.warning("Found null parameter for SystemMessageId " + _smId);
+				continue;
+			}
+			
 			packet.writeC(param.getType());
+			
 			switch (param.getType())
 			{
 				case TYPE_ELEMENT_NAME:
