@@ -143,7 +143,7 @@ public class NpcTemplate extends CreatureTemplate implements IIdentifiable
 		_targetable = set.getBoolean("targetable", true);
 		_talkable = set.getBoolean("talkable", true);
 		_isQuestMonster = _title.contains("Quest");
-		_undying = set.getBoolean("undying", true);
+		_undying = set.getBoolean("undying", !_type.equals("Monster") && !_type.equals("RaidBoss") && !_type.equals("GrandBoss"));
 		_showName = set.getBoolean("showName", true);
 		_randomWalk = set.getBoolean("randomWalk", !_type.equals("Guard"));
 		_randomAnimation = set.getBoolean("randomAnimation", true);
