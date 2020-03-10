@@ -303,7 +303,6 @@ public class DimensionalWrap extends AbstractInstance
 					htmltext = "33975-05.html";
 					break;
 				}
-				
 				for (Npc n : world.getAliveNpcs())
 				{
 					if (n.getId() != EINSTER)
@@ -342,7 +341,6 @@ public class DimensionalWrap extends AbstractInstance
 					htmltext = "33975-05.html";
 					break;
 				}
-				
 				for (Npc n : world.getAliveNpcs())
 				{
 					if (n.getId() != EINSTER)
@@ -381,7 +379,6 @@ public class DimensionalWrap extends AbstractInstance
 					htmltext = "33975-05.html";
 					break;
 				}
-				
 				for (Npc n : world.getAliveNpcs())
 				{
 					if (n.getId() != EINSTER)
@@ -420,7 +417,6 @@ public class DimensionalWrap extends AbstractInstance
 					htmltext = "33975-05.html";
 					break;
 				}
-				
 				for (Npc n : world.getAliveNpcs())
 				{
 					if (n.getId() != EINSTER)
@@ -459,7 +455,6 @@ public class DimensionalWrap extends AbstractInstance
 					htmltext = "33975-05.html";
 					break;
 				}
-				
 				for (Npc n : world.getAliveNpcs())
 				{
 					if (n.getId() != EINSTER)
@@ -706,13 +701,13 @@ public class DimensionalWrap extends AbstractInstance
 			{
 				case SALAMANDRA_GENERATOR:
 				{
-					startQuestTimer("SALAMANDRA_SPAWN", 25000, null, world.getFirstPlayer(), true);
+					startQuestTimer("SALAMANDRA_SPAWN", 25000, npc, world.getFirstPlayer(), true);
 					startQuestTimer("CHANGE_LOCATION", 60000 - (world.getParameters().getInt("worldState", 0) * 1300), null, world.getFirstPlayer());
 					break;
 				}
 				case SALAMANDRA_GENERATOR_DUMMY:
 				{
-					startQuestTimer("SALAMANDRA_SPAWN_DUMMY", 20000, null, world.getFirstPlayer(), true);
+					startQuestTimer("SALAMANDRA_SPAWN_DUMMY", 20000, npc, world.getFirstPlayer(), true);
 					break;
 				}
 				case DEMINSIONAL_INVISIBLE_FRAGMENT:
@@ -758,8 +753,8 @@ public class DimensionalWrap extends AbstractInstance
 	protected void clean(PlayerInstance player)
 	{
 		cancelQuestTimer("SWITCH_STAGE", null, player);
-		cancelQuestTimer("SALAMANDRA_SPAWN", null, player);
-		cancelQuestTimer("SALAMANDRA_SPAWN_DUMMY", null, player);
+		// cancelQuestTimer("SALAMANDRA_SPAWN", null, player);
+		// cancelQuestTimer("SALAMANDRA_SPAWN_DUMMY", null, player);
 		cancelQuestTimer("CHANGE_LOCATION", null, player);
 		cancelQuestTimer("DEBUFF_TASK", null, player);
 	}
