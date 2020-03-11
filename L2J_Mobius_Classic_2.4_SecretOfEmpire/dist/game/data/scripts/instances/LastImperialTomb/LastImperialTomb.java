@@ -756,12 +756,20 @@ public class LastImperialTomb extends AbstractInstance
 		else if (CommonUtil.contains(DEMONS, npc.getId()))
 		{
 			final List<Npc> demons = world.getParameters().getList("demons", Npc.class);
-			demons.remove(npc);
+			if (demons != null)
+			{
+				demons.remove(npc);
+				world.setParameter("demons", demons);
+			}
 		}
 		else if (CommonUtil.contains(PORTRAITS, npc.getId()))
 		{
 			final Map<Npc, Integer> portraits = world.getParameters().getMap("portraits", Npc.class, Integer.class);
-			portraits.remove(npc);
+			if (portraits != null)
+			{
+				portraits.remove(npc);
+				world.setParameter("portraits", portraits);
+			}
 		}
 		else
 		{
