@@ -58,7 +58,6 @@ public class RequestSellItem implements IClientIncomingPacket
 		{
 			return false;
 		}
-		
 		_items = new ArrayList<>(size);
 		for (int i = 0; i < size; i++)
 		{

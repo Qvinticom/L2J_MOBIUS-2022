@@ -57,7 +57,6 @@ public class RequestSellItem implements IClientIncomingPacket
 		{
 			return false;
 		}
-		
 		_items = new ArrayList<>(size);
 		for (int i = 0; i < size; i++)
 		{
@@ -122,7 +121,7 @@ public class RequestSellItem implements IClientIncomingPacket
 			}
 		}
 		
-		if ((merchant == null) && !player.isGM())
+		if ((merchant == null) && !player.isGM() && (_listId != CUSTOM_CB_SELL_LIST))
 		{
 			client.sendPacket(ActionFailed.STATIC_PACKET);
 			return;
