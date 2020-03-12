@@ -1188,7 +1188,7 @@
 																	</xs:sequence>
 																</xs:complexType>
 															</xs:element>
-															<xs:element name="itemId" type="xs:unsignedShort" />
+															<xs:element name="itemId" type="xs:unsignedInt" />
 															<xs:element name="itemCount" type="xs:unsignedShort" />
 															<xs:element name="slots">
 																<xs:complexType mixed="true">
@@ -1434,8 +1434,6 @@
 																</xs:complexType>
 															</xs:element>
 															<xs:element name="blockedActions" type="xs:byte" />
-															<xs:element name="allowSkillAttack" type="xs:boolean" />
-															<xs:element name="allowNormalAttack" type="xs:boolean" />
 															<xs:element name="lifeTime" type="xs:unsignedShort" />
 															<xs:element name="delay" type="xs:unsignedShort" />
 															<xs:element name="abnormalType" type="xs:string" />
@@ -1460,6 +1458,23 @@
 															<xs:element name="zoneId" type="xs:unsignedByte" />
 															<xs:element name="time" type="xs:unsignedInt" />
 															<xs:element name="reputation" type="xs:unsignedByte" />
+															<xs:element name="allowSkillAttack" type="xs:boolean" />
+															<xs:element name="allowNormalAttack" type="xs:boolean" />
+															<xs:element name="damage">
+																<xs:complexType>
+																	<xs:sequence>
+																		<xs:element maxOccurs="unbounded" name="value">
+																			<xs:complexType>
+																				<xs:simpleContent>
+																					<xs:extension base="xs:unsignedShort">
+																						<xs:attribute name="level" type="xs:unsignedByte" use="required" />
+																					</xs:extension>
+																				</xs:simpleContent>
+																			</xs:complexType>
+																		</xs:element>
+																	</xs:sequence>
+																</xs:complexType>
+															</xs:element>
 														</xs:choice>
 													</xs:sequence>
 													<xs:attribute name="name" type="xs:string" use="required" />
@@ -1764,6 +1779,7 @@
 									</xs:complexType>
 								</xs:element>
 								<xs:element name="blockedInOlympiad" type="xs:boolean" />
+								<xs:element name="isTriggeredSkill" type="xs:boolean" />
 								<xs:element name="channelingSkillId" type="xs:unsignedShort" />
 								<xs:element name="mpPerChanneling" type="xs:unsignedByte" />
 								<xs:element name="channelingStart" type="xs:decimal" />
@@ -1839,6 +1855,8 @@
 														</xs:element>
 													</xs:sequence>
 													<xs:attribute name="name" type="xs:string" use="required" />
+													<xs:attribute name="fromLevel" type="xs:unsignedByte" use="optional" />
+													<xs:attribute name="toLevel" type="xs:unsignedByte" use="optional" />
 												</xs:complexType>
 											</xs:element>
 										</xs:sequence>
@@ -1969,7 +1987,6 @@
 								<xs:element name="isSharedWithSummon" type="xs:boolean" />
 								<xs:element name="halfKillRate" type="xs:unsignedByte" />
 								<xs:element name="reuseDelayType" type="xs:string" />
-								<xs:element name="isTriggeredSkill" type="xs:boolean" />
 								<xs:element name="stayAfterDeath" type="xs:string" />
 								<xs:element name="canCastWhileDisabled" type="xs:boolean" />
 								<xs:element name="minPledgeClass" type="xs:unsignedByte" />
