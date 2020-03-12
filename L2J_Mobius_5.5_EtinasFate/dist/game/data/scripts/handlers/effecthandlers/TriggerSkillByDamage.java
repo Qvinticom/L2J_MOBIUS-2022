@@ -44,6 +44,7 @@ public class TriggerSkillByDamage extends AbstractEffect
 	private final int _maxAttackerLevel;
 	private final int _minDamage;
 	private final int _chance;
+	private final int _hpPercent;
 	private final SkillHolder _skill;
 	private final TargetType _targetType;
 	private final InstanceType _attackerType;
@@ -54,6 +55,7 @@ public class TriggerSkillByDamage extends AbstractEffect
 		_maxAttackerLevel = params.getInt("maxAttackerLevel", 127);
 		_minDamage = params.getInt("minDamage", 1);
 		_chance = params.getInt("chance", 100);
+		_hpPercent = params.getInt("hpPercent", 100);
 		_skill = new SkillHolder(params.getInt("skillId"), params.getInt("skillLevel", 1));
 		_targetType = params.getEnum("targetType", TargetType.class, TargetType.SELF);
 		_attackerType = params.getEnum("attackerType", InstanceType.class, InstanceType.Creature);
@@ -72,6 +74,11 @@ public class TriggerSkillByDamage extends AbstractEffect
 		}
 		
 		if ((event.getAttacker().getLevel() < _minAttackerLevel) || (event.getAttacker().getLevel() > _maxAttackerLevel))
+		{
+			return;
+		}
+		
+		if (event.getAttacker().getCurrentHpPercent() > _hpPercent)
 		{
 			return;
 		}
