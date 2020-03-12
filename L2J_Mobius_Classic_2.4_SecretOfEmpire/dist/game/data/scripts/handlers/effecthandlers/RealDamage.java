@@ -22,6 +22,7 @@ import org.l2jmobius.gameserver.model.actor.Creature;
 import org.l2jmobius.gameserver.model.effects.AbstractEffect;
 import org.l2jmobius.gameserver.model.items.instance.ItemInstance;
 import org.l2jmobius.gameserver.model.skills.Skill;
+import org.l2jmobius.gameserver.model.stats.Stat;
 
 /**
  * @author Sdw
@@ -50,10 +51,13 @@ public class RealDamage extends AbstractEffect
 			return;
 		}
 		
-		effected.reduceCurrentHp(_power, effector, skill, false, false, false, false);
+		// Calculate resistance.
+		final double damage = _power - (_power * (Math.min(effected.getStat().getValue(Stat.REAL_DAMAGE_RESIST, 1), 1.8) - 1));
+		
+		effected.reduceCurrentHp(damage, effector, skill, false, false, false, false);
 		if (effector.isPlayer())
 		{
-			effector.sendDamageMessage(effected, skill, (int) _power, 0, false, false);
+			effector.sendDamageMessage(effected, skill, (int) damage, 0, false, false);
 		}
 	}
 }
