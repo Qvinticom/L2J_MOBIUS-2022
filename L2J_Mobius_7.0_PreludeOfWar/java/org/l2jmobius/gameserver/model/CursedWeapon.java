@@ -277,21 +277,23 @@ public class CursedWeapon implements INamable
 			// _player.getInventory().getItemByItemId(_itemId).dropMe(_player, _player.getX(), _player.getY(), _player.getZ());
 		}
 		_isDropped = true;
-		final SystemMessage sm = new SystemMessage(SystemMessageId.S2_WAS_DROPPED_IN_S1_LOCATION_THERE_ARE_ADENA_IN_THE_TREASURE_CHEST_S2_S3_NOW_S4_LATER_THE_LAST_OWNER_OF_THE_ITEM_WILL_RECEIVE_THE_ADENA_AT_23_59);
-		if (player != null)
-		{
-			sm.addZoneName(player.getX(), player.getY(), player.getZ()); // Region Name
-		}
-		else if (_player != null)
-		{
-			sm.addZoneName(_player.getX(), _player.getY(), _player.getZ()); // Region Name
-		}
-		else
-		{
-			sm.addZoneName(killer.getX(), killer.getY(), killer.getZ()); // Region Name
-		}
-		sm.addItemName(_itemId);
-		CursedWeaponsManager.announce(sm); // in the Hot Spring region
+		
+		// SystemMessage changed with Prelude of War update.
+		// final SystemMessage sm = new SystemMessage(SystemMessageId.S2_WAS_DROPPED_IN_S1_LOCATION_THERE_ARE_ADENA_IN_THE_TREASURE_CHEST_S2_S3_NOW_S4_LATER_THE_LAST_OWNER_OF_THE_ITEM_WILL_RECEIVE_THE_ADENA_AT_23_59);
+		// if (player != null)
+		// {
+		// sm.addZoneName(player.getX(), player.getY(), player.getZ()); // Region Name
+		// }
+		// else if (_player != null)
+		// {
+		// sm.addZoneName(_player.getX(), _player.getY(), _player.getZ()); // Region Name
+		// }
+		// else
+		// {
+		// sm.addZoneName(killer.getX(), killer.getY(), killer.getZ()); // Region Name
+		// }
+		// sm.addItemName(_itemId);
+		// CursedWeaponsManager.announce(sm); // in the Hot Spring region
 	}
 	
 	public void cursedOnLogin()
@@ -299,17 +301,18 @@ public class CursedWeapon implements INamable
 		doTransform();
 		giveSkill();
 		
-		final SystemMessage msg = new SystemMessage(SystemMessageId.THE_OWNER_OF_S2_IS_IN_S1_LOCATION_THERE_ARE_ADENA_IN_THE_TREASURE_CHEST_S2_S3_NOW_S4_LATER_THE_LAST_OWNER_OF_THE_ITEM_WILL_RECEIVE_THE_ADENA_AT_23_59);
-		msg.addZoneName(_player.getX(), _player.getY(), _player.getZ());
-		msg.addItemName(_player.getCursedWeaponEquippedId());
-		CursedWeaponsManager.announce(msg);
+		// SystemMessage changed with Prelude of War update.
+		// final SystemMessage msg = new SystemMessage(SystemMessageId.THE_OWNER_OF_S2_IS_IN_S1_LOCATION_THERE_ARE_ADENA_IN_THE_TREASURE_CHEST_S2_S3_NOW_S4_LATER_THE_LAST_OWNER_OF_THE_ITEM_WILL_RECEIVE_THE_ADENA_AT_23_59);
+		// msg.addZoneName(_player.getX(), _player.getY(), _player.getZ());
+		// msg.addItemName(_player.getCursedWeaponEquippedId());
+		// CursedWeaponsManager.announce(msg);
 		
 		final CursedWeapon cw = CursedWeaponsManager.getInstance().getCursedWeapon(_player.getCursedWeaponEquippedId());
-		final SystemMessage msg2 = new SystemMessage(SystemMessageId.S1_HAS_S2_MINUTE_S_OF_USAGE_TIME_REMAINING_TYPE_CURSEDSWORD_TO_CHECK_OTHER_INFORMATION);
+		final SystemMessage msg = new SystemMessage(SystemMessageId.S1_HAS_S2_MINUTE_S_OF_USAGE_TIME_REMAINING_TYPE_CURSEDSWORD_TO_CHECK_OTHER_INFORMATION);
 		final int timeLeft = (int) (cw.getTimeLeft() / 60000);
-		msg2.addItemName(_player.getCursedWeaponEquippedId());
-		msg2.addInt(timeLeft);
-		_player.sendPacket(msg2);
+		msg.addItemName(_player.getCursedWeaponEquippedId());
+		msg.addInt(timeLeft);
+		_player.sendPacket(msg);
 	}
 	
 	/**
@@ -455,10 +458,12 @@ public class CursedWeapon implements INamable
 		_player.broadcastUserInfo();
 		
 		_player.broadcastPacket(new SocialAction(_player.getObjectId(), 17));
-		sm = new SystemMessage(SystemMessageId.THE_OWNER_OF_S2_APPEARED_IN_S1_LOCATION_THERE_ARE_ADENA_IN_THE_TREASURE_CHEST_S2_S3_NOW_S4_LATER_THE_LAST_OWNER_OF_THE_ITEM_WILL_RECEIVE_THE_ADENA_AT_23_59);
-		sm.addZoneName(_player.getX(), _player.getY(), _player.getZ()); // Region Name
-		sm.addItemName(_item);
-		CursedWeaponsManager.announce(sm);
+		
+		// SystemMessage changed with Prelude of War update.
+		// sm = new SystemMessage(SystemMessageId.THE_OWNER_OF_S2_APPEARED_IN_S1_LOCATION_THERE_ARE_ADENA_IN_THE_TREASURE_CHEST_S2_S3_NOW_S4_LATER_THE_LAST_OWNER_OF_THE_ITEM_WILL_RECEIVE_THE_ADENA_AT_23_59);
+		// sm.addZoneName(_player.getX(), _player.getY(), _player.getZ()); // Region Name
+		// sm.addItemName(_item);
+		// CursedWeaponsManager.announce(sm);
 	}
 	
 	public void saveData()
