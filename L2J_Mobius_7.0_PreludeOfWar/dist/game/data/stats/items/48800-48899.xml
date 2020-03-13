@@ -1172,7 +1172,7 @@
 	<item id="48899" name="Shilen's Soul Crystal - Stage 1" type="EtcItem">
 		<!-- A special Soul Crystal with Shilen's Soul. Can assign weapons one of the following soul crystal enhancement abilities: War, Revelation, Greed, Punishment, Awakening, Disaster, and Advent. Can be upgraded to the next stage by compounding with Shilen's Soul. If upgrade is successful, the power of the soul sealed into the Soul Crystal becomes stronger. -->
 		<set name="icon" val="icon.bm_ensoul_stone_shilen" />
-		<set name="default_action" val="SKILL_REDUCE" />
+		<set name="etcitem_type" val="ENSOUL_STONE" />
 		<set name="material" val="PAPER" />
 		<set name="weight" val="20" />
 		<set name="is_sellable" val="false" />
