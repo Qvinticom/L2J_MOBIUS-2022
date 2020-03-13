@@ -157,6 +157,7 @@ import quests.Q00581_ThePurificationRitual.Q00581_ThePurificationRitual;
 import quests.Q00582_WashBloodWithBlood.Q00582_WashBloodWithBlood;
 import quests.Q00583_MeaningOfSurvival.Q00583_MeaningOfSurvival;
 import quests.Q00584_NeverSayGoodBye.Q00584_NeverSayGoodBye;
+import quests.Q00585_CantGoAgainstTheTime.Q00585_CantGoAgainstTheTime;
 import quests.Q00587_MoreAggressiveOperation.Q00587_MoreAggressiveOperation;
 import quests.Q00588_HeadOnCrash.Q00588_HeadOnCrash;
 import quests.Q00617_GatherTheFlames.Q00617_GatherTheFlames;
@@ -521,7 +522,6 @@ import quests.Q10856_SuperionAppears.Q10856_SuperionAppears;
 import quests.Q10857_SecretTeleport.Q10857_SecretTeleport;
 import quests.not_done.Q00504_CompetitionForTheBanditStronghold;
 import quests.not_done.Q00575_SpecialMissionFortuna;
-import quests.not_done.Q00585_CantGoAgainstTheTime;
 import quests.not_done.Q00586_MutatedCreatures;
 import quests.not_done.Q00655_AGrandPlanForTamingWildBeasts;
 import quests.not_done.Q00667_CoveringShilensEyes;
@@ -750,7 +750,7 @@ public class QuestMasterHandler
 		Q00582_WashBloodWithBlood.class, // TODO: Not done.
 		Q00583_MeaningOfSurvival.class, // TODO: Not done.
 		Q00584_NeverSayGoodBye.class, // TODO: Not done.
-		Q00585_CantGoAgainstTheTime.class, // TODO: Not done.
+		Q00585_CantGoAgainstTheTime.class,
 		Q00586_MutatedCreatures.class, // TODO: Not done.
 		Q00587_MoreAggressiveOperation.class,
 		Q00588_HeadOnCrash.class,
