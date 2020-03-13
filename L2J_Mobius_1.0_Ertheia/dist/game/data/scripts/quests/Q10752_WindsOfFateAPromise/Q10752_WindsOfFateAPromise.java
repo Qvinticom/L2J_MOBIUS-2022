@@ -82,7 +82,7 @@ public class Q10752_WindsOfFateAPromise extends Quest
 		addStartNpc(KATALIN, AYANTHE);
 		addTalkId(KATALIN, AYANTHE, KARLA, SIEGMUND, LOMBERT, MYSTERIOUS_WIZARD, GHOST_OF_VON_HELLMAN, TOMBSTONE, BROKEN_BOOKSHELF);
 		addCondRace(Race.ERTHEIA, "");
-		addCondInCategory(CategoryType.THIRD_CLASS_GROUP, "");
+		addCondInCategory(CategoryType.ERTHEIA_THIRD_CLASS_GROUP, "");
 		registerQuestItems(NAVARI_MARK, PROPHECY_MACHINE_FRAGMENT, KAIN_PROPHECY_MACHINE_FRAGMENT);
 	}
 	
@@ -98,6 +98,8 @@ public class Q10752_WindsOfFateAPromise extends Quest
 		
 		switch (event)
 		{
+			case "33933-02.html":
+			case "33933-03.html":
 			case "33943-02.htm":
 			case "33943-03.htm":
 			case "33943-04.htm":
@@ -541,7 +543,7 @@ public class Q10752_WindsOfFateAPromise extends Quest
 		final QuestState qs = getQuestState(player, false);
 		final int oldLevel = event.getOldLevel();
 		final int newLevel = event.getNewLevel();
-		if ((qs == null) && (player.getRace() == Race.ERTHEIA) && (oldLevel < newLevel) && (newLevel >= MIN_LEVEL) && (player.isInCategory(CategoryType.THIRD_CLASS_GROUP)))
+		if ((qs == null) && (player.getRace() == Race.ERTHEIA) && (oldLevel < newLevel) && (newLevel >= MIN_LEVEL) && (player.isInCategory(CategoryType.ERTHEIA_THIRD_CLASS_GROUP)))
 		{
 			if (player.isMageClass())
 			{
@@ -566,7 +568,7 @@ public class Q10752_WindsOfFateAPromise extends Quest
 		
 		final PlayerInstance player = event.getPlayer();
 		final QuestState qs = getQuestState(player, false);
-		if ((qs == null) && (player.getRace() == Race.ERTHEIA) && (player.getLevel() >= MIN_LEVEL) && (player.isInCategory(CategoryType.THIRD_CLASS_GROUP)))
+		if ((qs == null) && (player.getRace() == Race.ERTHEIA) && (player.getLevel() >= MIN_LEVEL) && (player.isInCategory(CategoryType.ERTHEIA_THIRD_CLASS_GROUP)))
 		{
 			if (player.isMageClass())
 			{
