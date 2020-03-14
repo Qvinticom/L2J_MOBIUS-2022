@@ -8303,7 +8303,7 @@ public class PlayerInstance extends Playable
 		}
 		
 		// Check if all casting conditions are completed
-		if (!skill.checkCondition(this, target))
+		if (!skill.checkCondition(this, target, true))
 		{
 			sendPacket(ActionFailed.STATIC_PACKET);
 			
@@ -14040,7 +14040,7 @@ public class PlayerInstance extends Playable
 					removeAutoSkill(skillId);
 					continue;
 				}
-				if (!isAffectedBySkill(skillId) && !isInsideZone(ZoneId.PEACE) && !hasSkillReuse(skill.getReuseHashCode()))
+				if (!isAffectedBySkill(skillId) && !isInsideZone(ZoneId.PEACE) && !hasSkillReuse(skill.getReuseHashCode()) && skill.checkCondition(this, this, false))
 				{
 					doCast(skill);
 				}

@@ -923,7 +923,7 @@ public class EffectList
 		}
 		
 		// Check for passive skill conditions.
-		if (!skill.checkCondition(info.getEffector(), info.getEffected()))
+		if (!skill.checkCondition(info.getEffector(), info.getEffected(), true))
 		{
 			return;
 		}

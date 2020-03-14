@@ -680,7 +680,7 @@ public abstract class Summon extends Playable
 		}
 		
 		// Check if all casting conditions are completed
-		if (!skill.checkCondition(this, target))
+		if (!skill.checkCondition(this, target, true))
 		{
 			// Send a Server->Client packet ActionFailed to the PlayerInstance
 			sendPacket(ActionFailed.STATIC_PACKET);

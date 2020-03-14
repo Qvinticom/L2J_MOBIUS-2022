@@ -797,7 +797,7 @@ public class SkillCaster implements Runnable
 				return;
 			}
 			
-			if (skill.checkCondition(creature, target))
+			if (skill.checkCondition(creature, target, true))
 			{
 				if (creature.isSkillDisabled(skill))
 				{

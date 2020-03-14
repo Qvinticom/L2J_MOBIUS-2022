@@ -88,7 +88,7 @@ public class ItemSkillsTemplate implements IItemHandler
 					hasConsumeSkill = true;
 				}
 				
-				if (!itemSkill.hasEffectType(EffectType.SUMMON_PET) && !itemSkill.checkCondition(playable, playable.getTarget()))
+				if (!itemSkill.hasEffectType(EffectType.SUMMON_PET) && !itemSkill.checkCondition(playable, playable.getTarget(), true))
 				{
 					continue;
 				}

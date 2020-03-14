@@ -262,7 +262,7 @@ public class EffectZone extends ZoneType
 						for (Entry<Integer, Integer> e : _skills.entrySet())
 						{
 							final Skill skill = SkillData.getInstance().getSkill(e.getKey(), e.getValue());
-							if ((skill != null) && (_bypassConditions || skill.checkCondition(character, character)))
+							if ((skill != null) && (_bypassConditions || skill.checkCondition(character, character, true)))
 							{
 								if (character.getAffectedSkillLevel(skill.getId()) < skill.getLevel())
 								{

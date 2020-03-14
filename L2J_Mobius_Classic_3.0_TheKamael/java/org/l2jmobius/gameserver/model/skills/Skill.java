@@ -1042,7 +1042,7 @@ public class Skill implements IIdentifiable
 		return _effectPoint < 0;
 	}
 	
-	public boolean checkCondition(Creature creature, WorldObject object)
+	public boolean checkCondition(Creature creature, WorldObject object, boolean sendMessage)
 	{
 		if (creature.isFakePlayer() || (creature.canOverrideCond(PlayerCondOverride.SKILL_CONDITIONS) && !Config.GM_SKILL_RESTRICTION))
 		{
@@ -1059,7 +1059,7 @@ public class Skill implements IIdentifiable
 		
 		if (!checkConditions(SkillConditionScope.GENERAL, creature, object) || !checkConditions(SkillConditionScope.TARGET, creature, object))
 		{
-			if (!((creature == object) && isBad())) // Self targeted bad skills should not send a message.
+			if (sendMessage && !((creature == object) && isBad())) // Self targeted bad skills should not send a message.
 			{
 				final SystemMessage sm = new SystemMessage(SystemMessageId.S1_CANNOT_BE_USED_DUE_TO_UNSUITABLE_TERMS);
 				sm.addSkillName(_id);
