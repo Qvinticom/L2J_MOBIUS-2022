@@ -138,6 +138,7 @@ import quests.Q00582_WashBloodWithBlood.Q00582_WashBloodWithBlood;
 import quests.Q00583_MeaningOfSurvival.Q00583_MeaningOfSurvival;
 import quests.Q00584_NeverSayGoodBye.Q00584_NeverSayGoodBye;
 import quests.Q00585_CantGoAgainstTheTime.Q00585_CantGoAgainstTheTime;
+import quests.Q00586_MutatedCreatures.Q00586_MutatedCreatures;
 import quests.Q00587_MoreAggressiveOperation.Q00587_MoreAggressiveOperation;
 import quests.Q00588_HeadOnCrash.Q00588_HeadOnCrash;
 import quests.Q00589_ASecretChange.Q00589_ASecretChange;
@@ -500,7 +501,6 @@ import quests.custom.Q10529_IvoryTowersResearchFloatingSeaJournal.Q10529_IvoryTo
 import quests.custom.Q10533_OrfensAmbition.Q10533_OrfensAmbition;
 import quests.not_done.Q00504_CompetitionForTheBanditStronghold;
 import quests.not_done.Q00579_BasicMissionBlazingSwamp;
-import quests.not_done.Q00586_MutatedCreatures;
 import quests.not_done.Q00591_GreatAmbitions;
 import quests.not_done.Q00599_DemonsAndDimensionalEnergy;
 import quests.not_done.Q00655_AGrandPlanForTamingWildBeasts;
@@ -717,7 +717,7 @@ public class QuestMasterHandler
 		Q00583_MeaningOfSurvival.class,
 		Q00584_NeverSayGoodBye.class,
 		Q00585_CantGoAgainstTheTime.class,
-		Q00586_MutatedCreatures.class, // TODO: Not done.
+		Q00586_MutatedCreatures.class,
 		Q00587_MoreAggressiveOperation.class,
 		Q00588_HeadOnCrash.class,
 		Q00589_ASecretChange.class,

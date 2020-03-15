@@ -68,6 +68,7 @@ import quests.Q00577_BasicMissionSilentValley.Q00577_BasicMissionSilentValley;
 import quests.Q00578_BasicMissionCemetery.Q00578_BasicMissionCemetery;
 import quests.Q00580_BeyondTheMemories.Q00580_BeyondTheMemories;
 import quests.Q00585_CantGoAgainstTheTime.Q00585_CantGoAgainstTheTime;
+import quests.Q00586_MutatedCreatures.Q00586_MutatedCreatures;
 import quests.Q00587_MoreAggressiveOperation.Q00587_MoreAggressiveOperation;
 import quests.Q00588_HeadOnCrash.Q00588_HeadOnCrash;
 import quests.Q00589_ASecretChange.Q00589_ASecretChange;
@@ -263,7 +264,6 @@ import quests.custom.Q10529_IvoryTowersResearchFloatingSeaJournal.Q10529_IvoryTo
 import quests.custom.Q10533_OrfensAmbition.Q10533_OrfensAmbition;
 import quests.not_done.Q00282_ADayOfKindnessAndCaring;
 import quests.not_done.Q00504_CompetitionForTheBanditStronghold;
-import quests.not_done.Q00586_MutatedCreatures;
 import quests.not_done.Q00591_GreatAmbitions;
 import quests.not_done.Q00599_DemonsAndDimensionalEnergy;
 import quests.not_done.Q00655_AGrandPlanForTamingWildBeasts;
@@ -391,7 +391,7 @@ public class QuestMasterHandler
 		Q00578_BasicMissionCemetery.class,
 		Q00580_BeyondTheMemories.class,
 		Q00585_CantGoAgainstTheTime.class,
-		Q00586_MutatedCreatures.class, // TODO: Not done.
+		Q00586_MutatedCreatures.class,
 		Q00587_MoreAggressiveOperation.class,
 		Q00588_HeadOnCrash.class,
 		Q00589_ASecretChange.class,
