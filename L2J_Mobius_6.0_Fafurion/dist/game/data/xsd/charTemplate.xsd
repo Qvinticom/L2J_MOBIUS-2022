@@ -121,7 +121,7 @@
 				<xs:element name="lvlUpgainData" minOccurs="1" maxOccurs="1">
 					<xs:complexType>
 						<xs:sequence maxOccurs="1" minOccurs="1">
-							<xs:element name="level" maxOccurs="111" minOccurs="111">
+							<xs:element name="level" maxOccurs="120" minOccurs="120">
 								<xs:complexType>
 									<xs:sequence maxOccurs="1" minOccurs="1">
 										<xs:element type="xs:decimal" name="hp" minOccurs="1" maxOccurs="1" />
@@ -135,7 +135,7 @@
 										<xs:simpleType>
 											<xs:restriction base="xs:positiveInteger">
 												<xs:minInclusive value="1"></xs:minInclusive>
-												<xs:maxInclusive value="111"></xs:maxInclusive>
+												<xs:maxInclusive value="120"></xs:maxInclusive>
 											</xs:restriction>
 										</xs:simpleType>
 									</xs:attribute>
