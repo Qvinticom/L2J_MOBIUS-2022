@@ -242,7 +242,7 @@ public class ChamberOfProphecies extends AbstractInstance
 			case "ATTACK2":
 			{
 				final Instance world = player.getInstanceWorld();
-				if (!isInInstance(world))
+				if (!isInInstance(world) || (npc == null))
 				{
 					return null;
 				}
