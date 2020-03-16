@@ -78,12 +78,22 @@ public class TriggerSkillByDamage extends AbstractEffect
 			return;
 		}
 		
-		if (event.getAttacker().getCurrentHpPercent() > _hpPercent)
+		if (event.getDamage() < _minDamage)
 		{
 			return;
 		}
 		
-		if ((event.getDamage() < _minDamage) || ((_chance < 100) && (Rnd.get(100) > _chance)) || !event.getAttacker().getInstanceType().isType(_attackerType))
+		if ((_chance < 100) && (Rnd.get(100) > _chance))
+		{
+			return;
+		}
+		
+		if ((_hpPercent < 100) && (event.getAttacker().getCurrentHpPercent() > _hpPercent))
+		{
+			return;
+		}
+		
+		if (!event.getAttacker().getInstanceType().isType(_attackerType))
 		{
 			return;
 		}
