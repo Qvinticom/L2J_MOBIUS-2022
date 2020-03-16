@@ -459,7 +459,7 @@ public class Instance
 	{
 		// TODO: Cache templates.
 		Document doc = null;
-		final File xml = new File(Config.DATAPACK_ROOT, "data/instances/" + InstanceManager.getInstance().getInstanceTemplateFileName(templateId));
+		final File xml = new File(".\\data\\instances\\" + InstanceManager.getInstance().getInstanceTemplateFileName(templateId));
 		try
 		{
 			final DocumentBuilderFactory factory = DocumentBuilderFactory.newInstance();
