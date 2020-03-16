@@ -1659,7 +1659,6 @@ public class Formulas
 		{
 			final PlayerInstance attackerPlayer = attacker.getActingPlayer();
 			final ElementalType type = ElementalType.of(attackerPlayer.getActiveElementalSpiritType());
-			
 			if (ElementalType.NONE == type)
 			{
 				return 0;
@@ -1668,7 +1667,7 @@ public class Formulas
 			final double critRate = attackerPlayer.getElementalSpiritCritRate();
 			final boolean isCrit = Math.min(critRate * 10, 380) > Rnd.get(1000);
 			final double critDamage = attackerPlayer.getElementalSpiritCritDamage();
-			final double attack = (attackerPlayer.getActiveElementalSpiritAttack() - target.getElementalSpiritDefenseOf(type)) + Rnd.get(-2, 8);
+			final double attack = (attackerPlayer.getActiveElementalSpiritAttack() - target.getElementalSpiritDefenseOf(type)) + Rnd.get(-2, 6);
 			if (target.isPlayer())
 			{
 				return calcSpiritElementalPvPDamage(attack, critDamage, isCrit, baseDamage);
@@ -1684,9 +1683,9 @@ public class Formulas
 		double base = Math.abs(attack * 1.3);
 		if (isCrit)
 		{
-			base += Math.abs((attack * 1.223) + (((attack * 0.03) + 24) * critDamage) + Rnd.get(-5, 30));
+			base += Math.abs((attack * 1.223) + (((attack * 0.03) + 24) * critDamage) + Rnd.get(-5, 15));
 		}
-		return ((base * attack) + (baseDamage * 0.3)) / Math.log(baseDamage);
+		return ((base * attack) + (baseDamage * 0.3)) / Math.log(Math.max(baseDamage, 20));
 	}
 	
 	private static double calcSpiritElementalPvEDamage(ElementalType attackerType, ElementalType targetType, double attack, double critDamage, boolean isCrit, double baseDamage)
@@ -1711,9 +1710,9 @@ public class Formulas
 		
 		if (isCrit)
 		{
-			damage += Math.abs(((40 + ((9.2 + (attack * 0.048)) * critDamage)) * bonus) + Rnd.get(-10, 50));
+			damage += Math.abs(((40 + ((9.2 + (attack * 0.048)) * critDamage)) * bonus) + Rnd.get(-10, 30));
 		}
 		
-		return ((damage * attack) + (baseDamage * bonus)) / Math.log(baseDamage);
+		return ((damage + baseDamage) * bonus) / Math.log(20 + baseDamage + damage);
 	}
 }
