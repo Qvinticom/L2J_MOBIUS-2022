@@ -177,6 +177,7 @@ import quests.Q00763_ADauntingTask.Q00763_ADauntingTask;
 import quests.Q00764_WeakeningTheVarkaSilenosForces.Q00764_WeakeningTheVarkaSilenosForces;
 import quests.Q00765_WeakeningTheKetraOrcForces.Q00765_WeakeningTheKetraOrcForces;
 import quests.Q00772_PurifyingSouls.Q00772_PurifyingSouls;
+import quests.Q00774_DreamingOfPeace.Q00774_DreamingOfPeace;
 import quests.Q00775_RetrievingTheChaosFragment.Q00775_RetrievingTheChaosFragment;
 import quests.Q00776_SlayDarkLordEkimus.Q00776_SlayDarkLordEkimus;
 import quests.Q00777_SlayDarkLordTiat.Q00777_SlayDarkLordTiat;
@@ -492,7 +493,6 @@ import quests.not_done.Q00750_SevenFlowers;
 import quests.not_done.Q00759_TheDwarvenNightmareContinues;
 import quests.not_done.Q00766_10DayAdventure;
 import quests.not_done.Q00773_ToCalmTheFlood;
-import quests.not_done.Q00774_DreamingOfPeace;
 import quests.not_done.Q00780_UtilizeTheDarknessSeedOfInfinity;
 import quests.not_done.Q00781_UtilizeTheDarknessSeedOfAnnihilation;
 import quests.not_done.Q00782_UtilizeTheDarknessSeedOfHellfire;
@@ -708,7 +708,7 @@ public class QuestMasterHandler
 		Q00766_10DayAdventure.class, // TODO: Not done.
 		Q00772_PurifyingSouls.class,
 		Q00773_ToCalmTheFlood.class, // TODO: Not done.
-		Q00774_DreamingOfPeace.class, // TODO: Not done.
+		Q00774_DreamingOfPeace.class,
 		Q00775_RetrievingTheChaosFragment.class,
 		Q00776_SlayDarkLordEkimus.class,
 		Q00777_SlayDarkLordTiat.class,

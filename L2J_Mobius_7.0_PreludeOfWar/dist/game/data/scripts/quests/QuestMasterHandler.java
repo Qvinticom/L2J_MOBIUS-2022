@@ -77,6 +77,7 @@ import quests.Q00593_BasicMissionPaganTemple.Q00593_BasicMissionPaganTemple;
 import quests.Q00594_BasicMissionDimensionalRift.Q00594_BasicMissionDimensionalRift;
 import quests.Q00595_SpecialMissionRaidersCrossroads.Q00595_SpecialMissionRaidersCrossroads;
 import quests.Q00596_SpecialMissionDefeatBaylor.Q00596_SpecialMissionDefeatBaylor;
+import quests.Q00599_DemonsAndDimensionalEnergy.Q00599_DemonsAndDimensionalEnergy;
 import quests.Q00600_KeyToTheRefiningProcess.Q00600_KeyToTheRefiningProcess;
 import quests.Q00618_IntoTheFlame.Q00618_IntoTheFlame;
 import quests.Q00620_FourGoblets.Q00620_FourGoblets;
@@ -104,6 +105,7 @@ import quests.Q00756_TopQualityPetra.Q00756_TopQualityPetra;
 import quests.Q00757_TriolsMovement.Q00757_TriolsMovement;
 import quests.Q00758_TheFallenKingsMen.Q00758_TheFallenKingsMen;
 import quests.Q00760_BlockTheExit.Q00760_BlockTheExit;
+import quests.Q00774_DreamingOfPeace.Q00774_DreamingOfPeace;
 import quests.Q00775_RetrievingTheChaosFragment.Q00775_RetrievingTheChaosFragment;
 import quests.Q00776_SlayDarkLordEkimus.Q00776_SlayDarkLordEkimus;
 import quests.Q00777_SlayDarkLordTiat.Q00777_SlayDarkLordTiat;
@@ -265,12 +267,10 @@ import quests.custom.Q10533_OrfensAmbition.Q10533_OrfensAmbition;
 import quests.not_done.Q00282_ADayOfKindnessAndCaring;
 import quests.not_done.Q00504_CompetitionForTheBanditStronghold;
 import quests.not_done.Q00591_GreatAmbitions;
-import quests.not_done.Q00599_DemonsAndDimensionalEnergy;
 import quests.not_done.Q00655_AGrandPlanForTamingWildBeasts;
 import quests.not_done.Q00749_TiesWithTheGuardians;
 import quests.not_done.Q00759_TheDwarvenNightmareContinues;
 import quests.not_done.Q00773_ToCalmTheFlood;
-import quests.not_done.Q00774_DreamingOfPeace;
 import quests.not_done.Q00780_UtilizeTheDarknessSeedOfInfinity;
 import quests.not_done.Q00781_UtilizeTheDarknessSeedOfAnnihilation;
 import quests.not_done.Q00782_UtilizeTheDarknessSeedOfHellfire;
@@ -401,7 +401,7 @@ public class QuestMasterHandler
 		Q00594_BasicMissionDimensionalRift.class,
 		Q00595_SpecialMissionRaidersCrossroads.class,
 		Q00596_SpecialMissionDefeatBaylor.class,
-		Q00599_DemonsAndDimensionalEnergy.class, // TODO: Not done.
+		Q00599_DemonsAndDimensionalEnergy.class,
 		Q00600_KeyToTheRefiningProcess.class,
 		Q00618_IntoTheFlame.class,
 		Q00620_FourGoblets.class,
@@ -435,7 +435,7 @@ public class QuestMasterHandler
 		Q00759_TheDwarvenNightmareContinues.class, // TODO: Not done.
 		Q00760_BlockTheExit.class,
 		Q00773_ToCalmTheFlood.class, // TODO: Not done.
-		Q00774_DreamingOfPeace.class, // TODO: Not done.
+		Q00774_DreamingOfPeace.class,
 		Q00775_RetrievingTheChaosFragment.class,
 		Q00776_SlayDarkLordEkimus.class,
 		Q00777_SlayDarkLordTiat.class,

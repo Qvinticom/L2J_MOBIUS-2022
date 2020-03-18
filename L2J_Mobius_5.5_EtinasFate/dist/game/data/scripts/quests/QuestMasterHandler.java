@@ -142,6 +142,7 @@ import quests.Q00587_MoreAggressiveOperation.Q00587_MoreAggressiveOperation;
 import quests.Q00588_HeadOnCrash.Q00588_HeadOnCrash;
 import quests.Q00589_ASecretChange.Q00589_ASecretChange;
 import quests.Q00590_ToEachTheirOwn.Q00590_ToEachTheirOwn;
+import quests.Q00599_DemonsAndDimensionalEnergy.Q00599_DemonsAndDimensionalEnergy;
 import quests.Q00600_KeyToTheRefiningProcess.Q00600_KeyToTheRefiningProcess;
 import quests.Q00617_GatherTheFlames.Q00617_GatherTheFlames;
 import quests.Q00618_IntoTheFlame.Q00618_IntoTheFlame;
@@ -182,6 +183,7 @@ import quests.Q00762_AnOminousRequest.Q00762_AnOminousRequest;
 import quests.Q00763_ADauntingTask.Q00763_ADauntingTask;
 import quests.Q00764_WeakeningTheVarkaSilenosForces.Q00764_WeakeningTheVarkaSilenosForces;
 import quests.Q00765_WeakeningTheKetraOrcForces.Q00765_WeakeningTheKetraOrcForces;
+import quests.Q00774_DreamingOfPeace.Q00774_DreamingOfPeace;
 import quests.Q00775_RetrievingTheChaosFragment.Q00775_RetrievingTheChaosFragment;
 import quests.Q00776_SlayDarkLordEkimus.Q00776_SlayDarkLordEkimus;
 import quests.Q00777_SlayDarkLordTiat.Q00777_SlayDarkLordTiat;
@@ -481,7 +483,6 @@ import quests.not_done.Q00504_CompetitionForTheBanditStronghold;
 import quests.not_done.Q00529_RegularBarrierMaintenance;
 import quests.not_done.Q00575_SpecialMissionFortuna;
 import quests.not_done.Q00591_GreatAmbitions;
-import quests.not_done.Q00599_DemonsAndDimensionalEnergy;
 import quests.not_done.Q00655_AGrandPlanForTamingWildBeasts;
 import quests.not_done.Q00667_CoveringShilensEyes;
 import quests.not_done.Q00744_TheAlligatorHunterReturns;
@@ -492,7 +493,6 @@ import quests.not_done.Q00749_TiesWithTheGuardians;
 import quests.not_done.Q00750_SevenFlowers;
 import quests.not_done.Q00759_TheDwarvenNightmareContinues;
 import quests.not_done.Q00773_ToCalmTheFlood;
-import quests.not_done.Q00774_DreamingOfPeace;
 import quests.not_done.Q00780_UtilizeTheDarknessSeedOfInfinity;
 import quests.not_done.Q00781_UtilizeTheDarknessSeedOfAnnihilation;
 import quests.not_done.Q00782_UtilizeTheDarknessSeedOfHellfire;
@@ -702,7 +702,7 @@ public class QuestMasterHandler
 		Q00589_ASecretChange.class,
 		Q00590_ToEachTheirOwn.class,
 		Q00591_GreatAmbitions.class, // TODO: Not done.
-		Q00599_DemonsAndDimensionalEnergy.class, // TODO: Not done.
+		Q00599_DemonsAndDimensionalEnergy.class,
 		Q00600_KeyToTheRefiningProcess.class,
 		Q00617_GatherTheFlames.class,
 		Q00618_IntoTheFlame.class,
@@ -753,7 +753,7 @@ public class QuestMasterHandler
 		Q00764_WeakeningTheVarkaSilenosForces.class,
 		Q00765_WeakeningTheKetraOrcForces.class,
 		Q00773_ToCalmTheFlood.class, // TODO: Not done.
-		Q00774_DreamingOfPeace.class, // TODO: Not done.
+		Q00774_DreamingOfPeace.class,
 		Q00775_RetrievingTheChaosFragment.class,
 		Q00776_SlayDarkLordEkimus.class,
 		Q00777_SlayDarkLordTiat.class,
