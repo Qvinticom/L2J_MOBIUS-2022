@@ -152,6 +152,7 @@ import quests.Q10386_MysteriousJourney.Q10386_MysteriousJourney;
 import quests.Q10387_SoullessOne.Q10387_SoullessOne;
 import quests.Q10388_ConspiracyBehindDoor.Q10388_ConspiracyBehindDoor;
 import quests.Q10389_TheVoiceOfAuthority.Q10389_TheVoiceOfAuthority;
+import quests.Q10418_TheImmortalPirateKing.Q10418_TheImmortalPirateKing;
 import quests.Q10423_EmbryoStrongholdRaid.Q10423_EmbryoStrongholdRaid;
 import quests.Q10445_AnImpendingThreat.Q10445_AnImpendingThreat;
 import quests.Q10446_HitAndRun.Q10446_HitAndRun;
@@ -295,7 +296,6 @@ import quests.not_done.Q10298_WastelandQueen;
 import quests.not_done.Q10355_BlacksmithsSoul1;
 import quests.not_done.Q10356_BlacksmithsSoul2;
 import quests.not_done.Q10373_ExploringTheDimensionSealingTheDimension;
-import quests.not_done.Q10418_TheImmortalPirateKing;
 import quests.not_done.Q10457_KefensisIllusion;
 import quests.not_done.Q10514_NewPathToGlory;
 import quests.not_done.Q10515_NewWayForPride;
@@ -506,7 +506,7 @@ public class QuestMasterHandler
 		Q10387_SoullessOne.class,
 		Q10388_ConspiracyBehindDoor.class,
 		Q10389_TheVoiceOfAuthority.class,
-		Q10418_TheImmortalPirateKing.class, // TODO: Not done.
+		Q10418_TheImmortalPirateKing.class,
 		Q10423_EmbryoStrongholdRaid.class,
 		Q10445_AnImpendingThreat.class,
 		Q10446_HitAndRun.class,

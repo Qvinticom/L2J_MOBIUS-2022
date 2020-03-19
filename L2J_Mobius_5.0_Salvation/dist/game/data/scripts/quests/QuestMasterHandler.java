@@ -348,6 +348,7 @@ import quests.Q10414_KekropusLetterWithCourage.Q10414_KekropusLetterWithCourage;
 import quests.Q10415_KekropusLetterWithWisdom.Q10415_KekropusLetterWithWisdom;
 import quests.Q10416_InSearchOfTheEyeOfArgos.Q10416_InSearchOfTheEyeOfArgos;
 import quests.Q10417_DaimonTheWhiteEyed.Q10417_DaimonTheWhiteEyed;
+import quests.Q10418_TheImmortalPirateKing.Q10418_TheImmortalPirateKing;
 import quests.Q10419_KekropusLetterKampfsWhereabouts.Q10419_KekropusLetterKampfsWhereabouts;
 import quests.Q10420_TheVarkaSilenosSupporters.Q10420_TheVarkaSilenosSupporters;
 import quests.Q10421_AssassinationOfTheVarkaSilenosCommander.Q10421_AssassinationOfTheVarkaSilenosCommander;
@@ -560,7 +561,6 @@ import quests.not_done.Q10355_BlacksmithsSoul1;
 import quests.not_done.Q10356_BlacksmithsSoul2;
 import quests.not_done.Q10373_ExploringTheDimensionSealingTheDimension;
 import quests.not_done.Q10396_WitchOfSpores;
-import quests.not_done.Q10418_TheImmortalPirateKing;
 import quests.not_done.Q10457_KefensisIllusion;
 import quests.not_done.Q10506_DianasRequest;
 import quests.not_done.Q10535_BlacksmithsSoul3;
@@ -977,7 +977,7 @@ public class QuestMasterHandler
 		Q10415_KekropusLetterWithWisdom.class,
 		Q10416_InSearchOfTheEyeOfArgos.class,
 		Q10417_DaimonTheWhiteEyed.class,
-		Q10418_TheImmortalPirateKing.class, // TODO: Not done.
+		Q10418_TheImmortalPirateKing.class,
 		Q10419_KekropusLetterKampfsWhereabouts.class,
 		Q10420_TheVarkaSilenosSupporters.class,
 		Q10421_AssassinationOfTheVarkaSilenosCommander.class,
