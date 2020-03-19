@@ -16,6 +16,7 @@
  */
 package handlers.effecthandlers;
 
+import org.l2jmobius.Config;
 import org.l2jmobius.gameserver.enums.ShotType;
 import org.l2jmobius.gameserver.model.StatSet;
 import org.l2jmobius.gameserver.model.actor.Attackable;
@@ -81,9 +82,7 @@ public class EnergyAttack extends AbstractEffect
 		}
 		
 		final PlayerInstance attacker = effector.getActingPlayer();
-		
 		final int charge = Math.min(_chargeConsume, attacker.getCharges());
-		
 		if (!attacker.decreaseCharges(charge))
 		{
 			final SystemMessage sm = new SystemMessage(SystemMessageId.S1_CANNOT_BE_USED_DUE_TO_UNSUITABLE_TERMS);
@@ -98,7 +97,6 @@ public class EnergyAttack extends AbstractEffect
 		}
 		
 		double defence = effected.getPDef() * _pDefMod;
-		
 		if (!_ignoreShieldDefence)
 		{
 			final byte shield = Formulas.calcShldUse(attacker, effected);
@@ -152,8 +150,17 @@ public class EnergyAttack extends AbstractEffect
 			damage = baseMod * ssmod * critMod * weaponTraitMod * generalTraitMod * weaknessMod * attributeMod * energyChargesBoost * pvpPveMod;
 		}
 		
-		damage = Math.max(0, damage * effector.getStat().getValue(Stat.PHYSICAL_SKILL_POWER, 1));
+		double balanceMod = 1;
+		if (attacker.isPlayable())
+		{
+			balanceMod = effected.isPlayable() ? Config.PVP_ENERGY_SKILL_DAMAGE_MULTIPLIERS.getOrDefault(attacker.getActingPlayer().getClassId(), 1f) : Config.PVE_ENERGY_SKILL_DAMAGE_MULTIPLIERS.getOrDefault(attacker.getActingPlayer().getClassId(), 1f);
+		}
+		if (effected.isPlayable())
+		{
+			defence *= attacker.isPlayable() ? Config.PVP_ENERGY_SKILL_DEFENCE_MULTIPLIERS.getOrDefault(effected.getActingPlayer().getClassId(), 1f) : Config.PVE_ENERGY_SKILL_DEFENCE_MULTIPLIERS.getOrDefault(effected.getActingPlayer().getClassId(), 1f);
+		}
 		
+		damage = Math.max(0, damage * effector.getStat().getValue(Stat.PHYSICAL_SKILL_POWER, 1)) * balanceMod;
 		effector.doAttack(damage, effected, skill, false, false, critical, false);
 	}
 }

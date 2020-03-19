@@ -1100,6 +1100,10 @@ public class Config
 	public static Map<ClassId, Float> PVP_BLOW_SKILL_DAMAGE_MULTIPLIERS = new ConcurrentHashMap<>();
 	public static Map<ClassId, Float> PVE_BLOW_SKILL_DEFENCE_MULTIPLIERS = new ConcurrentHashMap<>();
 	public static Map<ClassId, Float> PVP_BLOW_SKILL_DEFENCE_MULTIPLIERS = new ConcurrentHashMap<>();
+	public static Map<ClassId, Float> PVE_ENERGY_SKILL_DAMAGE_MULTIPLIERS = new ConcurrentHashMap<>();
+	public static Map<ClassId, Float> PVP_ENERGY_SKILL_DAMAGE_MULTIPLIERS = new ConcurrentHashMap<>();
+	public static Map<ClassId, Float> PVE_ENERGY_SKILL_DEFENCE_MULTIPLIERS = new ConcurrentHashMap<>();
+	public static Map<ClassId, Float> PVP_ENERGY_SKILL_DEFENCE_MULTIPLIERS = new ConcurrentHashMap<>();
 	public static Map<ClassId, Float> PLAYER_HEALING_SKILL_MULTIPLIERS = new ConcurrentHashMap<>();
 	public static Map<ClassId, Float> SKILL_MASTERY_CHANCE_MULTIPLIERS = new ConcurrentHashMap<>();
 	public static Map<ClassId, Float> EXP_AMOUNT_MULTIPLIERS = new ConcurrentHashMap<>();
@@ -2860,6 +2864,62 @@ public class Config
 					{
 						final String id = classInfo[0].trim();
 						PVP_BLOW_SKILL_DEFENCE_MULTIPLIERS.put(Util.isDigit(id) ? ClassId.getClassId(Integer.parseInt(id)) : Enum.valueOf(ClassId.class, id), Float.parseFloat(classInfo[1].trim()));
+					}
+				}
+			}
+			final String[] pveEnergySkillDamageMultipliers = ClassBalance.getString("PveEnergySkillDamageMultipliers", "").trim().split(";");
+			PVE_ENERGY_SKILL_DAMAGE_MULTIPLIERS.clear();
+			if (pveEnergySkillDamageMultipliers.length > 0)
+			{
+				for (String info : pveEnergySkillDamageMultipliers)
+				{
+					final String[] classInfo = info.trim().split("[*]");
+					if (classInfo.length == 2)
+					{
+						final String id = classInfo[0].trim();
+						PVE_ENERGY_SKILL_DAMAGE_MULTIPLIERS.put(Util.isDigit(id) ? ClassId.getClassId(Integer.parseInt(id)) : Enum.valueOf(ClassId.class, id), Float.parseFloat(classInfo[1].trim()));
+					}
+				}
+			}
+			final String[] pvpEnergySkillDamageMultipliers = ClassBalance.getString("PvpEnergySkillDamageMultipliers", "").trim().split(";");
+			PVP_ENERGY_SKILL_DAMAGE_MULTIPLIERS.clear();
+			if (pvpEnergySkillDamageMultipliers.length > 0)
+			{
+				for (String info : pvpEnergySkillDamageMultipliers)
+				{
+					final String[] classInfo = info.trim().split("[*]");
+					if (classInfo.length == 2)
+					{
+						final String id = classInfo[0].trim();
+						PVP_ENERGY_SKILL_DAMAGE_MULTIPLIERS.put(Util.isDigit(id) ? ClassId.getClassId(Integer.parseInt(id)) : Enum.valueOf(ClassId.class, id), Float.parseFloat(classInfo[1].trim()));
+					}
+				}
+			}
+			final String[] pveEnergySkillDefenceMultipliers = ClassBalance.getString("PveEnergySkillDefenceMultipliers", "").trim().split(";");
+			PVE_ENERGY_SKILL_DEFENCE_MULTIPLIERS.clear();
+			if (pveEnergySkillDefenceMultipliers.length > 0)
+			{
+				for (String info : pveEnergySkillDefenceMultipliers)
+				{
+					final String[] classInfo = info.trim().split("[*]");
+					if (classInfo.length == 2)
+					{
+						final String id = classInfo[0].trim();
+						PVE_ENERGY_SKILL_DEFENCE_MULTIPLIERS.put(Util.isDigit(id) ? ClassId.getClassId(Integer.parseInt(id)) : Enum.valueOf(ClassId.class, id), Float.parseFloat(classInfo[1].trim()));
+					}
+				}
+			}
+			final String[] pvpEnergySkillDefenceMultipliers = ClassBalance.getString("PvpEnergySkillDefenceMultipliers", "").trim().split(";");
+			PVP_ENERGY_SKILL_DEFENCE_MULTIPLIERS.clear();
+			if (pvpEnergySkillDefenceMultipliers.length > 0)
+			{
+				for (String info : pvpEnergySkillDefenceMultipliers)
+				{
+					final String[] classInfo = info.trim().split("[*]");
+					if (classInfo.length == 2)
+					{
+						final String id = classInfo[0].trim();
+						PVP_ENERGY_SKILL_DEFENCE_MULTIPLIERS.put(Util.isDigit(id) ? ClassId.getClassId(Integer.parseInt(id)) : Enum.valueOf(ClassId.class, id), Float.parseFloat(classInfo[1].trim()));
 					}
 				}
 			}
