@@ -16,6 +16,7 @@
  */
 package org.l2jmobius.gameserver.network.clientpackets.autoplay;
 
+import org.l2jmobius.Config;
 import org.l2jmobius.commons.network.PacketReader;
 import org.l2jmobius.gameserver.model.Shortcut;
 import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
@@ -93,7 +94,7 @@ public class ExRequestActivateAutoShortcut implements IClientIncomingPacket
 		if (_room > 263)
 		{
 			// auto supply
-			if (item != null)
+			if (Config.ENABLE_AUTO_ITEM && (item != null))
 			{
 				player.addAutoSupplyItem(item.getId());
 			}
@@ -103,14 +104,14 @@ public class ExRequestActivateAutoShortcut implements IClientIncomingPacket
 			// auto potion
 			if ((page == 23) && (slot == 1))
 			{
-				if ((item != null) && item.isPotion())
+				if (Config.ENABLE_AUTO_POTION && (item != null) && item.isPotion())
 				{
 					player.addAutoPotionItem(item.getId());
 					return;
 				}
 			}
 			// auto skill
-			if (skill != null)
+			if (Config.ENABLE_AUTO_BUFF && (skill != null))
 			{
 				player.addAutoSkill(skill.getId());
 			}

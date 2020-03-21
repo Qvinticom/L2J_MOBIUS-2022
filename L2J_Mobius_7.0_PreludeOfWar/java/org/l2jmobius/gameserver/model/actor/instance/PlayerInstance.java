@@ -13915,6 +13915,12 @@ public class PlayerInstance extends Playable
 		
 		_autoPlayTask = ThreadPool.scheduleAtFixedRate(() ->
 		{
+			if (!Config.ENABLE_AUTO_PLAY)
+			{
+				stopAutoPlayTask();
+				return;
+			}
+			
 			// Skip thinking.
 			if ((getTarget() != null) && getTarget().isMonster() && (((MonsterInstance) getTarget()).getTarget() == this) && !((MonsterInstance) getTarget()).isAlikeDead())
 			{
@@ -14011,27 +14017,30 @@ public class PlayerInstance extends Playable
 				return;
 			}
 			
-			for (int itemId : _autoSupplyItems)
+			if (Config.ENABLE_AUTO_ITEM)
 			{
-				final ItemInstance item = _inventory.getItemByItemId(itemId);
-				if (item == null)
+				for (int itemId : _autoSupplyItems)
 				{
-					removeAutoSupplyItem(itemId);
-					continue;
-				}
-				final int reuseDelay = item.getReuseDelay();
-				if ((reuseDelay <= 0) || (getItemRemainingReuseTime(item.getObjectId()) <= 0))
-				{
-					final EtcItem etcItem = item.getEtcItem();
-					final IItemHandler handler = ItemHandler.getInstance().getHandler(etcItem);
-					if ((handler != null) && handler.useItem(this, item, false) && (reuseDelay > 0))
+					final ItemInstance item = _inventory.getItemByItemId(itemId);
+					if (item == null)
 					{
-						addTimeStampItem(item, reuseDelay);
+						removeAutoSupplyItem(itemId);
+						continue;
+					}
+					final int reuseDelay = item.getReuseDelay();
+					if ((reuseDelay <= 0) || (getItemRemainingReuseTime(item.getObjectId()) <= 0))
+					{
+						final EtcItem etcItem = item.getEtcItem();
+						final IItemHandler handler = ItemHandler.getInstance().getHandler(etcItem);
+						if ((handler != null) && handler.useItem(this, item, false) && (reuseDelay > 0))
+						{
+							addTimeStampItem(item, reuseDelay);
+						}
 					}
 				}
 			}
 			
-			if (getCurrentHpPercent() <= _autoPotionPercent)
+			if (Config.ENABLE_AUTO_POTION && (getCurrentHpPercent() <= _autoPotionPercent))
 			{
 				for (int itemId : _autoPotionItems)
 				{
@@ -14054,17 +14063,20 @@ public class PlayerInstance extends Playable
 				}
 			}
 			
-			for (int skillId : _autoSkills)
+			if (Config.ENABLE_AUTO_BUFF)
 			{
-				final Skill skill = getKnownSkill(skillId);
-				if (skill == null)
+				for (int skillId : _autoSkills)
 				{
-					removeAutoSkill(skillId);
-					continue;
-				}
-				if (!isAffectedBySkill(skillId) && !isInsideZone(ZoneId.PEACE) && !hasSkillReuse(skill.getReuseHashCode()) && skill.checkCondition(this, this, false))
-				{
-					doCast(skill);
+					final Skill skill = getKnownSkill(skillId);
+					if (skill == null)
+					{
+						removeAutoSkill(skillId);
+						continue;
+					}
+					if (!isAffectedBySkill(skillId) && !isInsideZone(ZoneId.PEACE) && !hasSkillReuse(skill.getReuseHashCode()) && skill.checkCondition(this, this, false))
+					{
+						doCast(skill);
+					}
 				}
 			}
 		}, 0, 1000);

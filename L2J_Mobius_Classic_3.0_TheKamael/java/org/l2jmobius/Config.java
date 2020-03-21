@@ -583,6 +583,10 @@ public class Config
 	public static String[] BOTREPORT_RESETPOINT_HOUR;
 	public static long BOTREPORT_REPORT_DELAY;
 	public static boolean BOTREPORT_ALLOW_REPORTS_FROM_SAME_CLAN_MEMBERS;
+	public static boolean ENABLE_AUTO_PLAY;
+	public static boolean ENABLE_AUTO_POTION;
+	public static boolean ENABLE_AUTO_BUFF;
+	public static boolean ENABLE_AUTO_ITEM;
 	
 	// --------------------------------------------------
 	// FloodProtector Settings
@@ -1917,6 +1921,7 @@ public class Config
 			GRIDS_ALWAYS_ON = General.getBoolean("GridsAlwaysOn", false);
 			GRID_NEIGHBOR_TURNON_TIME = General.getInt("GridNeighborTurnOnTime", 1);
 			GRID_NEIGHBOR_TURNOFF_TIME = General.getInt("GridNeighborTurnOffTime", 90);
+			ENABLE_FALLING_DAMAGE = General.getBoolean("EnableFallingDamage", true);
 			PEACE_ZONE_MODE = General.getInt("PeaceZoneMode", 0);
 			DEFAULT_GLOBAL_CHAT = General.getString("GlobalChat", "ON");
 			DEFAULT_TRADE_CHAT = General.getString("TradeChat", "ON");
@@ -2002,7 +2007,10 @@ public class Config
 			BOTREPORT_RESETPOINT_HOUR = General.getString("BotReportPointsResetHour", "00:00").split(":");
 			BOTREPORT_REPORT_DELAY = General.getInt("BotReportDelay", 30) * 60000;
 			BOTREPORT_ALLOW_REPORTS_FROM_SAME_CLAN_MEMBERS = General.getBoolean("AllowReportsFromSameClanMembers", false);
-			ENABLE_FALLING_DAMAGE = General.getBoolean("EnableFallingDamage", true);
+			ENABLE_AUTO_PLAY = General.getBoolean("EnableAutoPlay", true);
+			ENABLE_AUTO_POTION = General.getBoolean("EnableAutoPotion", true);
+			ENABLE_AUTO_BUFF = General.getBoolean("EnableAutoBuff", true);
+			ENABLE_AUTO_ITEM = General.getBoolean("EnableAutoItem", true);
 			
 			// Load FloodProtector config file
 			final PropertiesParser FloodProtectors = new PropertiesParser(FLOOD_PROTECTOR_CONFIG_FILE);

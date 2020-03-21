@@ -16,6 +16,7 @@
  */
 package org.l2jmobius.gameserver.network.clientpackets.autoplay;
 
+import org.l2jmobius.Config;
 import org.l2jmobius.commons.network.PacketReader;
 import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
 import org.l2jmobius.gameserver.network.GameClient;
@@ -59,6 +60,11 @@ public class ExAutoPlaySetting implements IClientIncomingPacket
 		
 		player.sendPacket(new ExAutoPlaySettingSend(_options, _active, _pickUp, _nextTargetMode, _longRange, _potionPercent, _respectfulHunting));
 		player.setAutoPotionPercent(_potionPercent);
+		
+		if (!Config.ENABLE_AUTO_PLAY)
+		{
+			return;
+		}
 		
 		if (_active)
 		{
