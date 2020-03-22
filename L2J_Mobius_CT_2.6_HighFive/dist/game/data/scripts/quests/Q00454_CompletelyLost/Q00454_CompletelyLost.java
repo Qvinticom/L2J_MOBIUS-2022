@@ -20,6 +20,7 @@ import org.l2jmobius.gameserver.ai.CtrlIntention;
 import org.l2jmobius.gameserver.enums.ChatType;
 import org.l2jmobius.gameserver.enums.QuestType;
 import org.l2jmobius.gameserver.model.Location;
+import org.l2jmobius.gameserver.model.World;
 import org.l2jmobius.gameserver.model.WorldObject;
 import org.l2jmobius.gameserver.model.actor.Creature;
 import org.l2jmobius.gameserver.model.actor.Npc;
@@ -41,7 +42,7 @@ import org.l2jmobius.gameserver.util.Util;
 
 /**
  * Completely Lost (454)
- * @author Zoey76
+ * @author Zoey76, Mobius
  */
 public class Q00454_CompletelyLost extends Quest
 {
@@ -57,7 +58,6 @@ public class Q00454_CompletelyLost extends Quest
 		super(454);
 		addStartNpc(INJURED_SOLDIER);
 		addTalkId(INJURED_SOLDIER, ERMIAN);
-		addSpawnId(ERMIAN);
 		addMoveFinishedId(INJURED_SOLDIER);
 		addSeeCreatureId(INJURED_SOLDIER);
 		addEventReceivedId(INJURED_SOLDIER);
@@ -68,15 +68,8 @@ public class Q00454_CompletelyLost extends Quest
 	{
 		switch (event)
 		{
-			case "QUEST_TIMER":
-			{
-				npc.broadcastEvent("SCE_IM_ERMIAN", 300, null);
-				startQuestTimer("QUEST_TIMER", 100, npc, null);
-				break;
-			}
 			case "SAY_TIMER1":
 			{
-				// TODO: npc.changeStatus(3);
 				broadcastNpcSay(npc, NpcStringId.GASP);
 				break;
 			}
@@ -193,7 +186,7 @@ public class Q00454_CompletelyLost extends Quest
 		{
 			case "32738-04.htm":
 			{
-				if (qs.isCreated() && qs.isNowAvailable() && (player.getLevel() >= MIN_LEVEL))
+				if (player.getLevel() >= MIN_LEVEL)
 				{
 					if (npc.getVariables().getInt("quest_escort", 0) == 0)
 					{
@@ -255,20 +248,17 @@ public class Q00454_CompletelyLost extends Quest
 					htmltext = "32738-06.html";
 					npc.sendScriptEvent("SCE_A_SEED_ESCORT_QUEST_START", npc, null);
 					final PlayerInstance leader = npc.getVariables().getObject("leader", PlayerInstance.class);
-					if (leader != null)
+					if ((leader != null) && leader.isInParty())
 					{
-						if (leader.isInParty())
+						for (PlayerInstance member : leader.getParty().getMembers())
 						{
-							for (PlayerInstance member : leader.getParty().getMembers())
+							if (member != null)
 							{
-								if (member != null)
+								final QuestState qsMember = getQuestState(member, false);
+								if ((qsMember != null) && qsMember.isMemoState(1) //
+									&& (npc.getVariables().getInt("partyId", 0) == leader.getParty().getLeaderObjectId()))
 								{
-									final QuestState qsMember = getQuestState(member, false);
-									if ((qsMember != null) && qsMember.isMemoState(1) //
-										&& (npc.getVariables().getInt("partyId", 0) == leader.getParty().getLeaderObjectId()))
-									{
-										qsMember.setMemoState(2);
-									}
+									qsMember.setMemoState(2);
 								}
 							}
 						}
@@ -288,48 +278,23 @@ public class Q00454_CompletelyLost extends Quest
 		return htmltext;
 	}
 	
-	@RegisterEvent(EventType.ON_CREATURE_ATTACKED)
-	@RegisterType(ListenerRegisterType.NPC)
-	@Id(INJURED_SOLDIER)
-	public TerminateReturn onAttacked(OnCreatureAttacked event)
-	{
-		final Npc npc = (Npc) event.getTarget();
-		// TODO: npc.changeStatus(2);
-		npc.getVariables().set("state", 1);
-		npc.getAI().setIntention(CtrlIntention.AI_INTENTION_IDLE);
-		npc.getAI().setIntention(CtrlIntention.AI_INTENTION_ACTIVE);
-		startQuestTimer("SAY_TIMER1", 2000, npc, null);
-		return new TerminateReturn(true, false, false);
-	}
-	
 	@Override
 	public String onEventReceived(String eventName, Npc sender, Npc receiver, WorldObject reference)
 	{
 		switch (eventName)
 		{
-			case "SCE_IM_ERMIAN":
-			{
-				if (receiver.getVariables().getInt("state", 0) == 2)
-				{
-					receiver.getVariables().set("state", 3);
-					receiver.getVariables().set("ermian", sender);
-					receiver.getAI().setIntention(CtrlIntention.AI_INTENTION_IDLE);
-					addMoveToDesire(receiver, MOVE_TO, 10000000);
-					receiver.sendScriptEvent("SCE_A_SEED_ESCORT_QUEST_SUCCESS", receiver, null);
-				}
-				break;
-			}
 			case "SCE_A_SEED_ESCORT_QUEST_START":
 			{
 				final PlayerInstance leader = receiver.getVariables().getObject("leader", PlayerInstance.class);
 				if (leader != null)
 				{
+					receiver.setTarget(leader);
 					receiver.getAI().setIntention(CtrlIntention.AI_INTENTION_FOLLOW, leader);
 				}
 				
 				startQuestTimer("CHECK_TIMER", 1000, receiver, null);
 				startQuestTimer("TIME_LIMIT1", 60000, receiver, null);
-				receiver.getVariables().set("state", 2);
+				receiver.setScriptValue(2);
 				receiver.getVariables().set("quest_escort", 99);
 				break;
 			}
@@ -415,29 +380,32 @@ public class Q00454_CompletelyLost extends Quest
 	@Override
 	public void onMoveFinished(Npc npc)
 	{
-		final Npc ermian = npc.getVariables().getObject("ermian", Npc.class);
-		if (ermian != null)
+		if (npc.isScriptValue(2))
 		{
-			npc.setHeading(Util.calculateHeadingFrom(npc, ermian));
-			startQuestTimer("SAY_TIMER2", 2000, npc, null);
+			for (Npc nearby : World.getInstance().getVisibleObjectsInRange(npc, Npc.class, 300))
+			{
+				if (nearby.getId() == ERMIAN)
+				{
+					npc.setScriptValue(3);
+					npc.getAI().setIntention(CtrlIntention.AI_INTENTION_IDLE);
+					addMoveToDesire(npc, MOVE_TO, 10000000);
+					npc.sendScriptEvent("SCE_A_SEED_ESCORT_QUEST_SUCCESS", npc, null);
+					npc.setHeading(Util.calculateHeadingFrom(npc, nearby));
+					startQuestTimer("SAY_TIMER2", 2000, npc, null);
+					break;
+				}
+			}
 		}
 	}
 	
 	@Override
 	public String onSeeCreature(Npc npc, Creature creature, boolean isSummon)
 	{
-		if (creature.isPlayer() && (npc.getVariables().getInt("state", 0) == 0))
+		if (creature.isPlayer() && npc.isScriptValue(0))
 		{
 			addAttackDesire(npc, creature.getActingPlayer(), 10);
 		}
 		return super.onSeeCreature(npc, creature, isSummon);
-	}
-	
-	@Override
-	public String onSpawn(Npc npc)
-	{
-		startQuestTimer("QUEST_TIMER", 1000, npc, null);
-		return super.onSpawn(npc);
 	}
 	
 	@Override
@@ -773,6 +741,19 @@ public class Q00454_CompletelyLost extends Quest
 			}
 		}
 		return htmltext;
+	}
+	
+	@RegisterEvent(EventType.ON_CREATURE_ATTACKED)
+	@RegisterType(ListenerRegisterType.NPC)
+	@Id(INJURED_SOLDIER)
+	public TerminateReturn onAttacked(OnCreatureAttacked event)
+	{
+		final Npc npc = (Npc) event.getTarget();
+		npc.setScriptValue(1);
+		npc.getAI().setIntention(CtrlIntention.AI_INTENTION_IDLE);
+		npc.getAI().setIntention(CtrlIntention.AI_INTENTION_ACTIVE);
+		startQuestTimer("SAY_TIMER1", 2000, npc, null);
+		return new TerminateReturn(true, false, false);
 	}
 	
 	/**
