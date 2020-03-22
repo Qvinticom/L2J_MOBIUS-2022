@@ -96,7 +96,7 @@ public class RecieveAdventurerBuffs extends AbstractNpcAI
 					}
 				}
 			}
-			startQuestTimer("AUTOBUFF" + npc.getObjectId(), 30000, npc, null);
+			startQuestTimer("AUTOBUFF", 30000, npc, null);
 		}
 		return super.onAdvEvent(event, npc, player);
 	}
@@ -104,7 +104,7 @@ public class RecieveAdventurerBuffs extends AbstractNpcAI
 	@Override
 	public String onSpawn(Npc npc)
 	{
-		startQuestTimer("AUTOBUFF" + npc.getObjectId(), 1000, npc, null);
+		startQuestTimer("AUTOBUFF", 1000, npc, null);
 		return super.onSpawn(npc);
 	}
 	

@@ -1054,7 +1054,7 @@ public abstract class Creature extends WorldObject implements ISkillsHolder, IDe
 				{
 					npc.setScriptValue(1); // in combat
 					broadcastInfo(); // update flag status
-					QuestManager.getInstance().getQuest("PvpFlaggingStopTask").notifyEvent("FLAG_CHECK" + npc.getObjectId(), npc, null);
+					QuestManager.getInstance().getQuest("PvpFlaggingStopTask").notifyEvent("FLAG_CHECK", npc, null);
 				}
 			}
 			
@@ -5762,7 +5762,7 @@ public abstract class Creature extends WorldObject implements ISkillsHolder, IDe
 							{
 								npc.setScriptValue(1); // in combat
 								npc.broadcastInfo(); // update flag status
-								QuestManager.getInstance().getQuest("PvpFlaggingStopTask").notifyEvent("FLAG_CHECK" + npc.getObjectId(), npc, null);
+								QuestManager.getInstance().getQuest("PvpFlaggingStopTask").notifyEvent("FLAG_CHECK", npc, null);
 							}
 						}
 					}

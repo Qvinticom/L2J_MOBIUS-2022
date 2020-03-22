@@ -36,33 +36,40 @@ public class PvpFlaggingStopTask extends AbstractNpcAI
 	@Override
 	public String onAdvEvent(String event, Npc npc, PlayerInstance player)
 	{
-		if ((npc == null) || npc.isDead())
+		if (npc == null)
 		{
 			return null;
 		}
+		if (npc.isDead())
+		{
+			cancelQuestTimer("FLAG_CHECK", npc, null);
+			cancelQuestTimer("FINISH_FLAG", npc, null);
+			cancelQuestTimer("REMOVE_FLAG", npc, null);
+			return null;
+		}
 		
-		if (event.startsWith("FLAG_CHECK"))
+		if (event.equals("FLAG_CHECK"))
 		{
 			final WorldObject target = npc.getTarget();
 			if ((target != null) && (target.isPlayable() || target.isFakePlayer()))
 			{
 				npc.setScriptValue(1); // in combat
-				cancelQuestTimer("FINISH_FLAG" + npc.getObjectId(), npc, null);
-				cancelQuestTimer("REMOVE_FLAG" + npc.getObjectId(), npc, null);
-				startQuestTimer("FINISH_FLAG" + npc.getObjectId(), Config.PVP_NORMAL_TIME - 20000, npc, null);
-				startQuestTimer("FLAG_CHECK" + npc.getObjectId(), 5000, npc, null);
+				cancelQuestTimer("FINISH_FLAG", npc, null);
+				cancelQuestTimer("REMOVE_FLAG", npc, null);
+				startQuestTimer("FINISH_FLAG", Config.PVP_NORMAL_TIME - 20000, npc, null);
+				startQuestTimer("FLAG_CHECK", 5000, npc, null);
 			}
 		}
-		else if (event.startsWith("FINISH_FLAG"))
+		else if (event.equals("FINISH_FLAG"))
 		{
 			if (npc.isScriptValue(1))
 			{
 				npc.setScriptValue(2); // blink status
 				npc.broadcastInfo(); // update flag status
-				startQuestTimer("REMOVE_FLAG" + npc.getObjectId(), 20000, npc, null);
+				startQuestTimer("REMOVE_FLAG", 20000, npc, null);
 			}
 		}
-		else if (event.startsWith("REMOVE_FLAG"))
+		else if (event.equals("REMOVE_FLAG"))
 		{
 			if (npc.isScriptValue(2))
 			{
