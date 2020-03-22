@@ -1266,8 +1266,9 @@
 			<value level="3">3</value>
 		</abnormalLvl>
 		<isMagic>3</isMagic>
-		<targetType>SELF</targetType>
-		<affectScope>SINGLE</affectScope>
+		<targetType>MY_PARTY</targetType>
+		<affectScope>PARTY</affectScope>
+		<affectObject>FRIEND</affectObject>
 		<effects>
 			<effect name="PAtk">
 				<amount>
