@@ -90,6 +90,7 @@ public class ChamberOfProphecies extends AbstractInstance
 				{
 					return null;
 				}
+				world.openCloseDoor(DOOR_4, false);
 				world.broadcastPacket(ExShowUsm.USM_Q015_E);
 				world.despawnGroup("q10753_16_instance_grail");
 				world.spawnGroup("q10753_16_instance_wizard");
