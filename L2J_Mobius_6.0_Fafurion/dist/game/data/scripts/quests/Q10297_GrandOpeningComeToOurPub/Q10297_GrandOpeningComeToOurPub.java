@@ -63,6 +63,7 @@ public class Q10297_GrandOpeningComeToOurPub extends Quest
 		{
 			case "34180-02.htm":
 			case "34182-02.html":
+			case "34182-03.html":
 			case "34183-02.html":
 			case "34183-03.html":
 			case "34184-02.html":
