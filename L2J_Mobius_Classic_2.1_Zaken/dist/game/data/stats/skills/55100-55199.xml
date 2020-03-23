@@ -35,28 +35,6 @@
 				</amount>
 				<mode>DIFF</mode>
 			</effect>
-			<effect name="ExpModify">
-				<amount>
-					<value fromLevel="1" toLevel="4">0</value>
-					<value level="5">5</value>
-					<value level="6">10</value>
-					<value level="7">15</value>
-					<value level="8">20</value>
-					<value level="9">30</value>
-					<value level="10">40</value>
-				</amount>
-			</effect>
-			<effect name="SpModify">
-				<amount>
-					<value fromLevel="1" toLevel="4">0</value>
-					<value level="5">5</value>
-					<value level="6">10</value>
-					<value level="7">15</value>
-					<value level="8">20</value>
-					<value level="9">30</value>
-					<value level="10">40</value>
-				</amount>
-			</effect>
 		</effects>
 	</skill>
 	<skill id="55102" toLevel="1" name="Water Dragon Pendant Basic Effect Lv. 2">
@@ -113,28 +91,6 @@
 				</amount>
 				<mode>DIFF</mode>
 			</effect>
-			<effect name="ExpModify">
-				<amount>
-					<value fromLevel="1" toLevel="4">0</value>
-					<value level="5">5</value>
-					<value level="6">10</value>
-					<value level="7">15</value>
-					<value level="8">20</value>
-					<value level="9">30</value>
-					<value level="10">40</value>
-				</amount>
-			</effect>
-			<effect name="SpModify">
-				<amount>
-					<value fromLevel="1" toLevel="4">0</value>
-					<value level="5">5</value>
-					<value level="6">10</value>
-					<value level="7">15</value>
-					<value level="8">20</value>
-					<value level="9">30</value>
-					<value level="10">40</value>
-				</amount>
-			</effect>
 		</effects>
 	</skill>
 	<skill id="55104" toLevel="1" name="Water Dragon Pendant Basic Effect Lv. 3">
@@ -152,7 +108,7 @@
 				<amount>62</amount>
 				<mode>DIFF</mode>
 			</effect>
-			<effect name="CriticalRate">
+			<effect name="MagicCriticalRate">
 				<amount>1</amount>
 				<mode>PER</mode>
 			</effect>
@@ -195,7 +151,7 @@
 				</amount>
 				<mode>DIFF</mode>
 			</effect>
-			<effect name="CriticalRate">
+			<effect name="MagicCriticalRate">
 				<amount>
 					<value level="1">2</value>
 					<value level="2">3</value>
@@ -209,28 +165,6 @@
 					<value level="10">12</value>
 				</amount>
 				<mode>PER</mode>
-			</effect>
-			<effect name="ExpModify">
-				<amount>
-					<value fromLevel="1" toLevel="4">0</value>
-					<value level="5">5</value>
-					<value level="6">10</value>
-					<value level="7">15</value>
-					<value level="8">20</value>
-					<value level="9">30</value>
-					<value level="10">40</value>
-				</amount>
-			</effect>
-			<effect name="SpModify">
-				<amount>
-					<value fromLevel="1" toLevel="4">0</value>
-					<value level="5">5</value>
-					<value level="6">10</value>
-					<value level="7">15</value>
-					<value level="8">20</value>
-					<value level="9">30</value>
-					<value level="10">40</value>
-				</amount>
 			</effect>
 		</effects>
 	</skill>
@@ -249,7 +183,7 @@
 				<amount>62</amount>
 				<mode>DIFF</mode>
 			</effect>
-			<effect name="CriticalRate">
+			<effect name="MagicCriticalRate">
 				<amount>1</amount>
 				<mode>PER</mode>
 			</effect>
@@ -296,7 +230,7 @@
 				</amount>
 				<mode>DIFF</mode>
 			</effect>
-			<effect name="CriticalRate">
+			<effect name="MagicCriticalRate">
 				<amount>
 					<value level="1">2</value>
 					<value level="2">3</value>
@@ -326,28 +260,6 @@
 				</amount>
 				<mode>PER</mode>
 			</effect>
-			<effect name="ExpModify">
-				<amount>
-					<value fromLevel="1" toLevel="4">0</value>
-					<value level="5">5</value>
-					<value level="6">10</value>
-					<value level="7">15</value>
-					<value level="8">20</value>
-					<value level="9">30</value>
-					<value level="10">40</value>
-				</amount>
-			</effect>
-			<effect name="SpModify">
-				<amount>
-					<value fromLevel="1" toLevel="4">0</value>
-					<value level="5">5</value>
-					<value level="6">10</value>
-					<value level="7">15</value>
-					<value level="8">20</value>
-					<value level="9">30</value>
-					<value level="10">40</value>
-				</amount>
-			</effect>
 		</effects>
 	</skill>
 	<skill id="55108" toLevel="1" name="Water Dragon Pendant Basic Effect Lv. 5">
@@ -365,7 +277,7 @@
 				<amount>62</amount>
 				<mode>DIFF</mode>
 			</effect>
-			<effect name="CriticalRate">
+			<effect name="MagicCriticalRate">
 				<amount>1</amount>
 				<mode>PER</mode>
 			</effect>
@@ -416,7 +328,7 @@
 				</amount>
 				<mode>DIFF</mode>
 			</effect>
-			<effect name="CriticalRate">
+			<effect name="MagicCriticalRate">
 				<amount>
 					<value level="1">2</value>
 					<value level="2">3</value>
@@ -461,28 +373,6 @@
 				</amount>
 				<mode>PER</mode>
 			</effect>
-			<effect name="ExpModify">
-				<amount>
-					<value fromLevel="1" toLevel="4">0</value>
-					<value level="5">5</value>
-					<value level="6">10</value>
-					<value level="7">15</value>
-					<value level="8">20</value>
-					<value level="9">30</value>
-					<value level="10">40</value>
-				</amount>
-			</effect>
-			<effect name="SpModify">
-				<amount>
-					<value fromLevel="1" toLevel="4">0</value>
-					<value level="5">5</value>
-					<value level="6">10</value>
-					<value level="7">15</value>
-					<value level="8">20</value>
-					<value level="9">30</value>
-					<value level="10">40</value>
-				</amount>
-			</effect>
 		</effects>
 	</skill>
 	<skill id="55110" toLevel="1" name="Wind Dragon Pendant Basic Effect Lv. 1">
@@ -519,28 +409,6 @@
 					<value level="10">156</value>
 				</amount>
 				<mode>DIFF</mode>
-			</effect>
-			<effect name="ExpModify">
-				<amount>
-					<value fromLevel="1" toLevel="4">0</value>
-					<value level="5">5</value>
-					<value level="6">10</value>
-					<value level="7">15</value>
-					<value level="8">20</value>
-					<value level="9">30</value>
-					<value level="10">40</value>
-				</amount>
-			</effect>
-			<effect name="SpModify">
-				<amount>
-					<value fromLevel="1" toLevel="4">0</value>
-					<value level="5">5</value>
-					<value level="6">10</value>
-					<value level="7">15</value>
-					<value level="8">20</value>
-					<value level="9">30</value>
-					<value level="10">40</value>
-				</amount>
 			</effect>
 		</effects>
 	</skill>
@@ -597,28 +465,6 @@
 					<value level="10">316</value>
 				</amount>
 				<mode>DIFF</mode>
-			</effect>
-			<effect name="ExpModify">
-				<amount>
-					<value fromLevel="1" toLevel="4">0</value>
-					<value level="5">5</value>
-					<value level="6">10</value>
-					<value level="7">15</value>
-					<value level="8">20</value>
-					<value level="9">30</value>
-					<value level="10">40</value>
-				</amount>
-			</effect>
-			<effect name="SpModify">
-				<amount>
-					<value fromLevel="1" toLevel="4">0</value>
-					<value level="5">5</value>
-					<value level="6">10</value>
-					<value level="7">15</value>
-					<value level="8">20</value>
-					<value level="9">30</value>
-					<value level="10">40</value>
-				</amount>
 			</effect>
 		</effects>
 	</skill>
@@ -714,28 +560,6 @@
 				</amount>
 				<mode>DIFF</mode>
 			</effect>
-			<effect name="ExpModify">
-				<amount>
-					<value fromLevel="1" toLevel="4">0</value>
-					<value level="5">5</value>
-					<value level="6">10</value>
-					<value level="7">15</value>
-					<value level="8">20</value>
-					<value level="9">30</value>
-					<value level="10">40</value>
-				</amount>
-			</effect>
-			<effect name="SpModify">
-				<amount>
-					<value fromLevel="1" toLevel="4">0</value>
-					<value level="5">5</value>
-					<value level="6">10</value>
-					<value level="7">15</value>
-					<value level="8">20</value>
-					<value level="9">30</value>
-					<value level="10">40</value>
-				</amount>
-			</effect>
 		</effects>
 	</skill>
 	<skill id="55116" toLevel="1" name="Wind Dragon Pendant Basic Effect Lv. 4">
@@ -760,6 +584,21 @@
 			<effect name="MpRegen">
 				<amount>0.5</amount>
 				<mode>DIFF</mode>
+			</effect>
+			<effect name="TriggerSkillByAttack">
+				<!-- Recover MP -->
+				<attackerType>Creature</attackerType>
+				<minAttackerLevel>1</minAttackerLevel>
+				<maxAttackerLevel>100</maxAttackerLevel>
+				<minDamage>1</minDamage>
+				<chance>1</chance>
+				<targetType>ENEMY</targetType>
+				<allowSkillAttack>true</allowSkillAttack>
+				<allowNormalAttack>false</allowNormalAttack>
+				<isCritical>false</isCritical>
+				<allowWeapons>ALL</allowWeapons>
+				<skillId>55153</skillId>
+				<skillLevel>1</skillLevel>
 			</effect>
 		</effects>
 	</skill>
@@ -830,27 +669,155 @@
 				</amount>
 				<mode>DIFF</mode>
 			</effect>
-			<effect name="ExpModify">
-				<amount>
-					<value fromLevel="1" toLevel="4">0</value>
-					<value level="5">5</value>
-					<value level="6">10</value>
-					<value level="7">15</value>
-					<value level="8">20</value>
-					<value level="9">30</value>
-					<value level="10">40</value>
-				</amount>
+			<effect name="TriggerSkillByAttack" fromLevel="1" toLevel="1">
+				<!-- Recover MP -->
+				<attackerType>Creature</attackerType>
+				<minAttackerLevel>1</minAttackerLevel>
+				<maxAttackerLevel>100</maxAttackerLevel>
+				<minDamage>1</minDamage>
+				<chance>2</chance>
+				<targetType>ENEMY</targetType>
+				<allowSkillAttack>true</allowSkillAttack>
+				<allowNormalAttack>false</allowNormalAttack>
+				<isCritical>false</isCritical>
+				<allowWeapons>ALL</allowWeapons>
+				<skillId>55153</skillId>
+				<skillLevel>1</skillLevel>
 			</effect>
-			<effect name="SpModify">
-				<amount>
-					<value fromLevel="1" toLevel="4">0</value>
-					<value level="5">5</value>
-					<value level="6">10</value>
-					<value level="7">15</value>
-					<value level="8">20</value>
-					<value level="9">30</value>
-					<value level="10">40</value>
-				</amount>
+			<effect name="TriggerSkillByAttack" fromLevel="2" toLevel="2">
+				<!-- Recover MP -->
+				<attackerType>Creature</attackerType>
+				<minAttackerLevel>1</minAttackerLevel>
+				<maxAttackerLevel>100</maxAttackerLevel>
+				<minDamage>1</minDamage>
+				<chance>4</chance>
+				<targetType>ENEMY</targetType>
+				<allowSkillAttack>true</allowSkillAttack>
+				<allowNormalAttack>false</allowNormalAttack>
+				<isCritical>false</isCritical>
+				<allowWeapons>ALL</allowWeapons>
+				<skillId>55153</skillId>
+				<skillLevel>1</skillLevel>
+			</effect>
+			<effect name="TriggerSkillByAttack" fromLevel="3" toLevel="3">
+				<!-- Recover MP -->
+				<attackerType>Creature</attackerType>
+				<minAttackerLevel>1</minAttackerLevel>
+				<maxAttackerLevel>100</maxAttackerLevel>
+				<minDamage>1</minDamage>
+				<chance>6</chance>
+				<targetType>ENEMY</targetType>
+				<allowSkillAttack>true</allowSkillAttack>
+				<allowNormalAttack>false</allowNormalAttack>
+				<isCritical>false</isCritical>
+				<allowWeapons>ALL</allowWeapons>
+				<skillId>55153</skillId>
+				<skillLevel>1</skillLevel>
+			</effect>
+			<effect name="TriggerSkillByAttack" fromLevel="4" toLevel="4">
+				<!-- Recover MP -->
+				<attackerType>Creature</attackerType>
+				<minAttackerLevel>1</minAttackerLevel>
+				<maxAttackerLevel>100</maxAttackerLevel>
+				<minDamage>1</minDamage>
+				<chance>8</chance>
+				<targetType>ENEMY</targetType>
+				<allowSkillAttack>true</allowSkillAttack>
+				<allowNormalAttack>false</allowNormalAttack>
+				<isCritical>false</isCritical>
+				<allowWeapons>ALL</allowWeapons>
+				<skillId>55153</skillId>
+				<skillLevel>1</skillLevel>
+			</effect>
+			<effect name="TriggerSkillByAttack" fromLevel="5" toLevel="5">
+				<!-- Recover MP -->
+				<attackerType>Creature</attackerType>
+				<minAttackerLevel>1</minAttackerLevel>
+				<maxAttackerLevel>100</maxAttackerLevel>
+				<minDamage>1</minDamage>
+				<chance>10</chance>
+				<targetType>ENEMY</targetType>
+				<allowSkillAttack>true</allowSkillAttack>
+				<allowNormalAttack>false</allowNormalAttack>
+				<isCritical>false</isCritical>
+				<allowWeapons>ALL</allowWeapons>
+				<skillId>55153</skillId>
+				<skillLevel>1</skillLevel>
+			</effect>
+			<effect name="TriggerSkillByAttack" fromLevel="6" toLevel="6">
+				<!-- Recover MP -->
+				<attackerType>Creature</attackerType>
+				<minAttackerLevel>1</minAttackerLevel>
+				<maxAttackerLevel>100</maxAttackerLevel>
+				<minDamage>1</minDamage>
+				<chance>12</chance>
+				<targetType>ENEMY</targetType>
+				<allowSkillAttack>true</allowSkillAttack>
+				<allowNormalAttack>false</allowNormalAttack>
+				<isCritical>false</isCritical>
+				<allowWeapons>ALL</allowWeapons>
+				<skillId>55153</skillId>
+				<skillLevel>1</skillLevel>
+			</effect>
+			<effect name="TriggerSkillByAttack" fromLevel="7" toLevel="7">
+				<!-- Recover MP -->
+				<attackerType>Creature</attackerType>
+				<minAttackerLevel>1</minAttackerLevel>
+				<maxAttackerLevel>100</maxAttackerLevel>
+				<minDamage>1</minDamage>
+				<chance>14</chance>
+				<targetType>ENEMY</targetType>
+				<allowSkillAttack>true</allowSkillAttack>
+				<allowNormalAttack>false</allowNormalAttack>
+				<isCritical>false</isCritical>
+				<allowWeapons>ALL</allowWeapons>
+				<skillId>55153</skillId>
+				<skillLevel>1</skillLevel>
+			</effect>
+			<effect name="TriggerSkillByAttack" fromLevel="8" toLevel="8">
+				<!-- Recover MP -->
+				<attackerType>Creature</attackerType>
+				<minAttackerLevel>1</minAttackerLevel>
+				<maxAttackerLevel>100</maxAttackerLevel>
+				<minDamage>1</minDamage>
+				<chance>16</chance>
+				<targetType>ENEMY</targetType>
+				<allowSkillAttack>true</allowSkillAttack>
+				<allowNormalAttack>false</allowNormalAttack>
+				<isCritical>false</isCritical>
+				<allowWeapons>ALL</allowWeapons>
+				<skillId>55153</skillId>
+				<skillLevel>1</skillLevel>
+			</effect>
+			<effect name="TriggerSkillByAttack" fromLevel="9" toLevel="9">
+				<!-- Recover MP -->
+				<attackerType>Creature</attackerType>
+				<minAttackerLevel>1</minAttackerLevel>
+				<maxAttackerLevel>100</maxAttackerLevel>
+				<minDamage>1</minDamage>
+				<chance>20</chance>
+				<targetType>ENEMY</targetType>
+				<allowSkillAttack>true</allowSkillAttack>
+				<allowNormalAttack>false</allowNormalAttack>
+				<isCritical>false</isCritical>
+				<allowWeapons>ALL</allowWeapons>
+				<skillId>55153</skillId>
+				<skillLevel>1</skillLevel>
+			</effect>
+			<effect name="TriggerSkillByAttack" fromLevel="10" toLevel="10">
+				<!-- Recover MP -->
+				<attackerType>Creature</attackerType>
+				<minAttackerLevel>1</minAttackerLevel>
+				<maxAttackerLevel>100</maxAttackerLevel>
+				<minDamage>1</minDamage>
+				<chance>24</chance>
+				<targetType>ENEMY</targetType>
+				<allowSkillAttack>true</allowSkillAttack>
+				<allowNormalAttack>false</allowNormalAttack>
+				<isCritical>false</isCritical>
+				<allowWeapons>ALL</allowWeapons>
+				<skillId>55153</skillId>
+				<skillLevel>1</skillLevel>
 			</effect>
 		</effects>
 	</skill>
@@ -878,8 +845,19 @@
 				<mode>DIFF</mode>
 			</effect>
 			<effect name="MagicMpCost">
-				<amount>3</amount>
+				<amount>-3</amount>
 				<mode>PER</mode>
+				<magicType>0</magicType>
+			</effect>
+			<effect name="MagicMpCost">
+				<amount>-3</amount>
+				<mode>PER</mode>
+				<magicType>1</magicType>
+			</effect>
+			<effect name="MagicMpCost">
+				<amount>-3</amount>
+				<mode>PER</mode>
+				<magicType>3</magicType>
 			</effect>
 		</effects>
 	</skill>
@@ -952,40 +930,201 @@
 			</effect>
 			<effect name="MagicMpCost">
 				<amount>
-					<value level="1">5</value>
-					<value level="2">7</value>
-					<value level="3">9</value>
-					<value level="4">11</value>
-					<value level="5">13</value>
-					<value level="6">15</value>
-					<value level="7">17</value>
-					<value level="8">20</value>
-					<value level="9">30</value>
-					<value level="10">40</value>
+					<value level="1">-5</value>
+					<value level="2">-7</value>
+					<value level="3">-9</value>
+					<value level="4">-11</value>
+					<value level="5">-13</value>
+					<value level="6">-15</value>
+					<value level="7">-17</value>
+					<value level="8">-20</value>
+					<value level="9">-30</value>
+					<value level="10">-40</value>
 				</amount>
 				<mode>PER</mode>
+				<magicType>0</magicType>
 			</effect>
-			<effect name="ExpModify">
+			<effect name="MagicMpCost">
 				<amount>
-					<value fromLevel="1" toLevel="4">0</value>
-					<value level="5">5</value>
-					<value level="6">10</value>
-					<value level="7">15</value>
-					<value level="8">20</value>
-					<value level="9">30</value>
-					<value level="10">40</value>
+					<value level="1">-5</value>
+					<value level="2">-7</value>
+					<value level="3">-9</value>
+					<value level="4">-11</value>
+					<value level="5">-13</value>
+					<value level="6">-15</value>
+					<value level="7">-17</value>
+					<value level="8">-20</value>
+					<value level="9">-30</value>
+					<value level="10">-40</value>
 				</amount>
+				<mode>PER</mode>
+				<magicType>1</magicType>
 			</effect>
-			<effect name="SpModify">
+			<effect name="MagicMpCost">
 				<amount>
-					<value fromLevel="1" toLevel="4">0</value>
-					<value level="5">5</value>
-					<value level="6">10</value>
-					<value level="7">15</value>
-					<value level="8">20</value>
-					<value level="9">30</value>
-					<value level="10">40</value>
+					<value level="1">-5</value>
+					<value level="2">-7</value>
+					<value level="3">-9</value>
+					<value level="4">-11</value>
+					<value level="5">-13</value>
+					<value level="6">-15</value>
+					<value level="7">-17</value>
+					<value level="8">-20</value>
+					<value level="9">-30</value>
+					<value level="10">-40</value>
 				</amount>
+				<mode>PER</mode>
+				<magicType>3</magicType>
+			</effect>
+			<effect name="TriggerSkillByAttack" fromLevel="1" toLevel="1">
+				<!-- Recover MP -->
+				<attackerType>Creature</attackerType>
+				<minAttackerLevel>1</minAttackerLevel>
+				<maxAttackerLevel>100</maxAttackerLevel>
+				<minDamage>1</minDamage>
+				<chance>2</chance>
+				<targetType>ENEMY</targetType>
+				<allowSkillAttack>true</allowSkillAttack>
+				<allowNormalAttack>false</allowNormalAttack>
+				<isCritical>false</isCritical>
+				<allowWeapons>ALL</allowWeapons>
+				<skillId>55153</skillId>
+				<skillLevel>1</skillLevel>
+			</effect>
+			<effect name="TriggerSkillByAttack" fromLevel="2" toLevel="2">
+				<!-- Recover MP -->
+				<attackerType>Creature</attackerType>
+				<minAttackerLevel>1</minAttackerLevel>
+				<maxAttackerLevel>100</maxAttackerLevel>
+				<minDamage>1</minDamage>
+				<chance>4</chance>
+				<targetType>ENEMY</targetType>
+				<allowSkillAttack>true</allowSkillAttack>
+				<allowNormalAttack>false</allowNormalAttack>
+				<isCritical>false</isCritical>
+				<allowWeapons>ALL</allowWeapons>
+				<skillId>55153</skillId>
+				<skillLevel>1</skillLevel>
+			</effect>
+			<effect name="TriggerSkillByAttack" fromLevel="3" toLevel="3">
+				<!-- Recover MP -->
+				<attackerType>Creature</attackerType>
+				<minAttackerLevel>1</minAttackerLevel>
+				<maxAttackerLevel>100</maxAttackerLevel>
+				<minDamage>1</minDamage>
+				<chance>6</chance>
+				<targetType>ENEMY</targetType>
+				<allowSkillAttack>true</allowSkillAttack>
+				<allowNormalAttack>false</allowNormalAttack>
+				<isCritical>false</isCritical>
+				<allowWeapons>ALL</allowWeapons>
+				<skillId>55153</skillId>
+				<skillLevel>1</skillLevel>
+			</effect>
+			<effect name="TriggerSkillByAttack" fromLevel="4" toLevel="4">
+				<!-- Recover MP -->
+				<attackerType>Creature</attackerType>
+				<minAttackerLevel>1</minAttackerLevel>
+				<maxAttackerLevel>100</maxAttackerLevel>
+				<minDamage>1</minDamage>
+				<chance>8</chance>
+				<targetType>ENEMY</targetType>
+				<allowSkillAttack>true</allowSkillAttack>
+				<allowNormalAttack>false</allowNormalAttack>
+				<isCritical>false</isCritical>
+				<allowWeapons>ALL</allowWeapons>
+				<skillId>55153</skillId>
+				<skillLevel>1</skillLevel>
+			</effect>
+			<effect name="TriggerSkillByAttack" fromLevel="5" toLevel="5">
+				<!-- Recover MP -->
+				<attackerType>Creature</attackerType>
+				<minAttackerLevel>1</minAttackerLevel>
+				<maxAttackerLevel>100</maxAttackerLevel>
+				<minDamage>1</minDamage>
+				<chance>10</chance>
+				<targetType>ENEMY</targetType>
+				<allowSkillAttack>true</allowSkillAttack>
+				<allowNormalAttack>false</allowNormalAttack>
+				<isCritical>false</isCritical>
+				<allowWeapons>ALL</allowWeapons>
+				<skillId>55153</skillId>
+				<skillLevel>1</skillLevel>
+			</effect>
+			<effect name="TriggerSkillByAttack" fromLevel="6" toLevel="6">
+				<!-- Recover MP -->
+				<attackerType>Creature</attackerType>
+				<minAttackerLevel>1</minAttackerLevel>
+				<maxAttackerLevel>100</maxAttackerLevel>
+				<minDamage>1</minDamage>
+				<chance>12</chance>
+				<targetType>ENEMY</targetType>
+				<allowSkillAttack>true</allowSkillAttack>
+				<allowNormalAttack>false</allowNormalAttack>
+				<isCritical>false</isCritical>
+				<allowWeapons>ALL</allowWeapons>
+				<skillId>55153</skillId>
+				<skillLevel>1</skillLevel>
+			</effect>
+			<effect name="TriggerSkillByAttack" fromLevel="7" toLevel="7">
+				<!-- Recover MP -->
+				<attackerType>Creature</attackerType>
+				<minAttackerLevel>1</minAttackerLevel>
+				<maxAttackerLevel>100</maxAttackerLevel>
+				<minDamage>1</minDamage>
+				<chance>14</chance>
+				<targetType>ENEMY</targetType>
+				<allowSkillAttack>true</allowSkillAttack>
+				<allowNormalAttack>false</allowNormalAttack>
+				<isCritical>false</isCritical>
+				<allowWeapons>ALL</allowWeapons>
+				<skillId>55153</skillId>
+				<skillLevel>1</skillLevel>
+			</effect>
+			<effect name="TriggerSkillByAttack" fromLevel="8" toLevel="8">
+				<!-- Recover MP -->
+				<attackerType>Creature</attackerType>
+				<minAttackerLevel>1</minAttackerLevel>
+				<maxAttackerLevel>100</maxAttackerLevel>
+				<minDamage>1</minDamage>
+				<chance>16</chance>
+				<targetType>ENEMY</targetType>
+				<allowSkillAttack>true</allowSkillAttack>
+				<allowNormalAttack>false</allowNormalAttack>
+				<isCritical>false</isCritical>
+				<allowWeapons>ALL</allowWeapons>
+				<skillId>55153</skillId>
+				<skillLevel>1</skillLevel>
+			</effect>
+			<effect name="TriggerSkillByAttack" fromLevel="9" toLevel="9">
+				<!-- Recover MP -->
+				<attackerType>Creature</attackerType>
+				<minAttackerLevel>1</minAttackerLevel>
+				<maxAttackerLevel>100</maxAttackerLevel>
+				<minDamage>1</minDamage>
+				<chance>20</chance>
+				<targetType>ENEMY</targetType>
+				<allowSkillAttack>true</allowSkillAttack>
+				<allowNormalAttack>false</allowNormalAttack>
+				<isCritical>false</isCritical>
+				<allowWeapons>ALL</allowWeapons>
+				<skillId>55153</skillId>
+				<skillLevel>1</skillLevel>
+			</effect>
+			<effect name="TriggerSkillByAttack" fromLevel="10" toLevel="10">
+				<!-- Recover MP -->
+				<attackerType>Creature</attackerType>
+				<minAttackerLevel>1</minAttackerLevel>
+				<maxAttackerLevel>100</maxAttackerLevel>
+				<minDamage>1</minDamage>
+				<chance>24</chance>
+				<targetType>ENEMY</targetType>
+				<allowSkillAttack>true</allowSkillAttack>
+				<allowNormalAttack>false</allowNormalAttack>
+				<isCritical>false</isCritical>
+				<allowWeapons>ALL</allowWeapons>
+				<skillId>55153</skillId>
+				<skillLevel>1</skillLevel>
 			</effect>
 		</effects>
 	</skill>
@@ -1027,28 +1166,6 @@
 					<value level="10">28</value>
 				</amount>
 				<mode>DIFF</mode>
-			</effect>
-			<effect name="ExpModify">
-				<amount>
-					<value fromLevel="1" toLevel="4">0</value>
-					<value level="5">5</value>
-					<value level="6">10</value>
-					<value level="7">15</value>
-					<value level="8">20</value>
-					<value level="9">30</value>
-					<value level="10">40</value>
-				</amount>
-			</effect>
-			<effect name="SpModify">
-				<amount>
-					<value fromLevel="1" toLevel="4">0</value>
-					<value level="5">5</value>
-					<value level="6">10</value>
-					<value level="7">15</value>
-					<value level="8">20</value>
-					<value level="9">30</value>
-					<value level="10">40</value>
-				</amount>
 			</effect>
 		</effects>
 	</skill>
@@ -1105,28 +1222,6 @@
 					<value level="10">71</value>
 				</amount>
 				<mode>DIFF</mode>
-			</effect>
-			<effect name="ExpModify">
-				<amount>
-					<value fromLevel="1" toLevel="4">0</value>
-					<value level="5">5</value>
-					<value level="6">10</value>
-					<value level="7">15</value>
-					<value level="8">20</value>
-					<value level="9">30</value>
-					<value level="10">40</value>
-				</amount>
-			</effect>
-			<effect name="SpModify">
-				<amount>
-					<value fromLevel="1" toLevel="4">0</value>
-					<value level="5">5</value>
-					<value level="6">10</value>
-					<value level="7">15</value>
-					<value level="8">20</value>
-					<value level="9">30</value>
-					<value level="10">40</value>
-				</amount>
 			</effect>
 		</effects>
 	</skill>
@@ -1202,28 +1297,6 @@
 					<value level="10">100</value>
 				</amount>
 				<mode>PER</mode>
-			</effect>
-			<effect name="ExpModify">
-				<amount>
-					<value fromLevel="1" toLevel="4">0</value>
-					<value level="5">5</value>
-					<value level="6">10</value>
-					<value level="7">15</value>
-					<value level="8">20</value>
-					<value level="9">30</value>
-					<value level="10">40</value>
-				</amount>
-			</effect>
-			<effect name="SpModify">
-				<amount>
-					<value fromLevel="1" toLevel="4">0</value>
-					<value level="5">5</value>
-					<value level="6">10</value>
-					<value level="7">15</value>
-					<value level="8">20</value>
-					<value level="9">30</value>
-					<value level="10">40</value>
-				</amount>
 			</effect>
 		</effects>
 	</skill>
@@ -1319,28 +1392,6 @@
 				</amount>
 				<mode>PER</mode>
 			</effect>
-			<effect name="ExpModify">
-				<amount>
-					<value fromLevel="1" toLevel="4">0</value>
-					<value level="5">5</value>
-					<value level="6">10</value>
-					<value level="7">15</value>
-					<value level="8">20</value>
-					<value level="9">30</value>
-					<value level="10">40</value>
-				</amount>
-			</effect>
-			<effect name="SpModify">
-				<amount>
-					<value fromLevel="1" toLevel="4">0</value>
-					<value level="5">5</value>
-					<value level="6">10</value>
-					<value level="7">15</value>
-					<value level="8">20</value>
-					<value level="9">30</value>
-					<value level="10">40</value>
-				</amount>
-			</effect>
 		</effects>
 	</skill>
 	<skill id="55129" toLevel="1" name="Earth Dragon Pendant Basic Effect Lv. 5">
@@ -1435,43 +1486,79 @@
 				</amount>
 				<mode>PER</mode>
 			</effect>
-			<effect name="ExpModify">
-				<amount>
-					<value fromLevel="1" toLevel="4">0</value>
-					<value level="5">5</value>
-					<value level="6">10</value>
-					<value level="7">15</value>
-					<value level="8">20</value>
-					<value level="9">30</value>
-					<value level="10">40</value>
-				</amount>
-			</effect>
-			<effect name="SpModify">
-				<amount>
-					<value fromLevel="1" toLevel="4">0</value>
-					<value level="5">5</value>
-					<value level="6">10</value>
-					<value level="7">15</value>
-					<value level="8">20</value>
-					<value level="9">30</value>
-					<value level="10">40</value>
-				</amount>
-			</effect>
 		</effects>
 	</skill>
 	<skill id="55131" toLevel="1" name="Earth Dragon Pendant Defensive Effect Lv. 5">
 		<!-- Creates a barrier that absorbs up to 202 damage within 5 seconds. Cooldown is 90 seconds. -->
 		<icon>BranchIcon.Icon.bm_pendant_pvp</icon>
-		<operateType>A1</operateType>
+		<operateType>A2</operateType>
 		<coolTime>500</coolTime>
-		<reuseDelay>90000</reuseDelay>
+		<reuseDelay>90000</reuseDelay>		
+		<hitTime>1000</hitTime>
+		<effectPoint>867</effectPoint>
+		<abnormalLvl>1</abnormalLvl>
+		<abnormalTime>5</abnormalTime>
+		<abnormalType>BARRIER</abnormalType>
+		<abnormalVisualEffect>ABSORB_SHIELD</abnormalVisualEffect>
+		<isMagic>4</isMagic> <!-- Item Skill -->
+		<magicLvl>80</magicLvl>
+		<basicProperty>NONE</basicProperty>
+		<magicCriticalRate>-5</magicCriticalRate>
+		<targetType>SELF</targetType>
+		<affectScope>SINGLE</affectScope>
+		<effects>
+			<effect name="AbsorbDamage">
+				<damage>
+					<value level="1">202</value>
+				</damage>
+			</effect>
+		</effects>
 	</skill>
 	<skill id="55132" toLevel="10" name="Earth Dragon Pendant Defensive Effect Lv. 5">
 		<!-- Creates a barrier that absorbs up to 302 damage within 6 seconds. Cooldown is 90 seconds. -->
 		<icon>BranchIcon.Icon.bm_pendant_pvp</icon>
-		<operateType>A1</operateType>
+		<operateType>A2</operateType>
 		<coolTime>500</coolTime>
-		<reuseDelay>90000</reuseDelay>
+		<reuseDelay>90000</reuseDelay>		
+		<hitTime>1000</hitTime>
+		<effectPoint>867</effectPoint>
+		<abnormalLvl>
+			<value level="1">1</value>
+			<value level="2">2</value>
+			<value level="3">3</value>
+			<value level="4">4</value>
+			<value level="5">5</value>
+			<value level="6">6</value>
+			<value level="7">7</value>
+			<value level="8">8</value>
+			<value level="9">9</value>
+			<value level="10">10</value>
+		</abnormalLvl>
+		<abnormalTime>5</abnormalTime>
+		<abnormalType>BARRIER</abnormalType>
+		<abnormalVisualEffect>ABSORB_SHIELD</abnormalVisualEffect>
+		<isMagic>4</isMagic> <!-- Item Skill -->
+		<magicLvl>80</magicLvl>
+		<basicProperty>NONE</basicProperty>
+		<magicCriticalRate>-5</magicCriticalRate>
+		<targetType>SELF</targetType>
+		<affectScope>SINGLE</affectScope>
+		<effects>
+			<effect name="AbsorbDamage">
+				<damage>
+					<value level="1">302</value>
+					<value level="2">406</value>
+					<value level="3">516</value>
+					<value level="4">782</value>
+					<value level="5">1059</value>
+					<value level="6">1348</value>
+					<value level="7">1649</value>
+					<value level="8">2045</value>
+					<value level="9">2457</value>
+					<value level="10">2883</value>
+				</damage>
+			</effect>
+		</effects>
 	</skill>
 	<skill id="55133" toLevel="6" name="Pendant Enchant Effect">
 		<!-- XP/SP gain +5%. -->
@@ -1581,7 +1668,20 @@
 	<skill id="55153" toLevel="20" name="Recover MP">
 		<!-- Increases M. Atk. by $s1. -->
 		<icon>icon.ensoul_big_m</icon>
-		<operateType>P</operateType>
+		<isMagic>2</isMagic> <!-- Static Skill -->
+		<magicLvl>1</magicLvl>
+		<operateType>A1</operateType>
+		<reuseDelay>2000</reuseDelay>
+		<magicCriticalRate>5</magicCriticalRate>
+		<hitCancelTime>0</hitCancelTime>
+		<targetType>SELF</targetType>
+		<affectScope>SINGLE</affectScope>
+		<effects>
+			<effect name="Mp">
+				<amount>12</amount>
+				<mode>DIFF</mode>
+			</effect>
+		</effects>
 	</skill>
 	<skill id="55154" toLevel="20" name="Atk. Spd.">
 		<!-- Increases M. Atk. by $s1. -->

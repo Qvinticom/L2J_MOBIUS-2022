@@ -1257,7 +1257,11 @@
 		<coolTime>500</coolTime>
 		<reuseDelay>60000</reuseDelay>
 		<effectPoint>867</effectPoint>
-		<abnormalLvl>1</abnormalLvl>
+		<abnormalLvl>
+			<value level="1">4</value>
+			<value level="2">6</value>
+			<value level="3">9</value>
+		</abnormalLvl>
 		<abnormalTime>10</abnormalTime>
 		<abnormalType>BARRIER</abnormalType>
 		<abnormalVisualEffect>ABSORB_SHIELD</abnormalVisualEffect>
