@@ -158,7 +158,7 @@ public class MysticTavern extends AbstractNpcAI
 					{
 						return "34200-not-available.html";
 					}
-					npc.setScriptValue(getRandom(availableInstances.size()));
+					player.getVariables().set("MysticTarvernRnd", getRandomEntry(availableInstances));
 					startQuestTimer("npcRoute", 3000, npc, player);
 				}
 				break;
@@ -326,7 +326,7 @@ public class MysticTavern extends AbstractNpcAI
 			}
 			case "enter_instance":
 			{
-				switch (npc.getScriptValue())
+				switch (player.getVariables().getInt("MysticTarvernRnd", 0))
 				{
 					case INSTANCE_FREYA:
 					{
@@ -344,7 +344,7 @@ public class MysticTavern extends AbstractNpcAI
 					// break;
 					// }
 				}
-				npc.setScriptValue(0);
+				player.getVariables().remove("MysticTarvernRnd");
 				break;
 			}
 		}
