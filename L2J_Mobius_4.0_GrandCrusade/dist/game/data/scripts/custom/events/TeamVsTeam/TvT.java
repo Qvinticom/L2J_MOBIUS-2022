@@ -20,6 +20,7 @@ import java.util.ArrayList;
 import java.util.Collections;
 import java.util.List;
 import java.util.Map;
+import java.util.Set;
 import java.util.concurrent.ConcurrentHashMap;
 
 import org.l2jmobius.gameserver.enums.CategoryType;
@@ -812,7 +813,7 @@ public class TvT extends Event
 		EVENT_ACTIVE = true;
 		
 		// Cancel timers. (In case event started immediately after another event was canceled.)
-		for (List<QuestTimer> timers : getQuestTimers().values())
+		for (Set<QuestTimer> timers : getQuestTimers().values())
 		{
 			for (QuestTimer timer : timers)
 			{
@@ -845,7 +846,7 @@ public class TvT extends Event
 		// Despawn event manager.
 		MANAGER_NPC_INSTANCE.deleteMe();
 		// Cancel timers.
-		for (List<QuestTimer> timers : getQuestTimers().values())
+		for (Set<QuestTimer> timers : getQuestTimers().values())
 		{
 			for (QuestTimer timer : timers)
 			{

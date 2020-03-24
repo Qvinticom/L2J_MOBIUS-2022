@@ -27,7 +27,8 @@ import java.util.Collections;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
-import java.util.concurrent.CopyOnWriteArrayList;
+import java.util.Set;
+import java.util.concurrent.ConcurrentHashMap;
 import java.util.logging.Level;
 import java.util.logging.Logger;
 import java.util.stream.Collectors;
@@ -67,7 +68,7 @@ public class Quest extends ManagedScript
 	/** Map containing events from String value of the event */
 	private static Map<String, Quest> _allEvents = new HashMap<>();
 	/** Map containing lists of timers from the name of the timer */
-	private final Map<String, List<QuestTimer>> _questTimers = new HashMap<>();
+	private final Map<String, Set<QuestTimer>> _questTimers = new HashMap<>();
 	
 	private final int _questId;
 	private final String _prefixPath; // used only for admin_quest_reload
@@ -333,7 +334,7 @@ public class Quest extends ManagedScript
 	 * Gets the quest timers.
 	 * @return the quest timers
 	 */
-	public Map<String, List<QuestTimer>> getQuestTimers()
+	public Map<String, Set<QuestTimer>> getQuestTimers()
 	{
 		return _questTimers;
 	}
@@ -349,9 +350,14 @@ public class Quest extends ManagedScript
 	 */
 	public void startQuestTimer(String name, long time, NpcInstance npc, PlayerInstance player, boolean repeating)
 	{
+		if (name == null)
+		{
+			return;
+		}
+		
 		synchronized (_questTimers)
 		{
-			final List<QuestTimer> timers = _questTimers.computeIfAbsent(name, k -> new CopyOnWriteArrayList<>());
+			final Set<QuestTimer> timers = _questTimers.getOrDefault(name, ConcurrentHashMap.newKeySet(1));
 			// If there exists a timer with this name, allow the timer only if the [npc, player] set is unique nulls act as wildcards.
 			if (getQuestTimer(name, npc, player) == null)
 			{
@@ -374,7 +380,7 @@ public class Quest extends ManagedScript
 			return null;
 		}
 		
-		final List<QuestTimer> timers = _questTimers.get(name);
+		final Set<QuestTimer> timers = _questTimers.get(name);
 		if ((timers == null) || timers.isEmpty())
 		{
 			return null;
@@ -402,7 +408,7 @@ public class Quest extends ManagedScript
 			return;
 		}
 		
-		final List<QuestTimer> timers = _questTimers.get(name);
+		final Set<QuestTimer> timers = _questTimers.get(name);
 		if ((timers == null) || timers.isEmpty())
 		{
 			return;
@@ -432,7 +438,7 @@ public class Quest extends ManagedScript
 			return;
 		}
 		
-		final List<QuestTimer> timers = _questTimers.get(name);
+		final Set<QuestTimer> timers = _questTimers.get(name);
 		if ((timers == null) || timers.isEmpty())
 		{
 			return;
@@ -460,7 +466,7 @@ public class Quest extends ManagedScript
 			return;
 		}
 		
-		final List<QuestTimer> timers = _questTimers.get(timer.toString());
+		final Set<QuestTimer> timers = _questTimers.get(timer.toString());
 		if (timers != null)
 		{
 			timers.remove(timer);
@@ -472,7 +478,6 @@ public class Quest extends ManagedScript
 	public boolean notifyAttack(NpcInstance npc, PlayerInstance attacker, int damage, boolean isPet)
 	{
 		String res = null;
-		
 		try
 		{
 			res = onAttack(npc, attacker, damage, isPet);
@@ -487,7 +492,6 @@ public class Quest extends ManagedScript
 	public boolean notifyDeath(Creature killer, Creature victim, QuestState qs)
 	{
 		String res = null;
-		
 		try
 		{
 			res = onDeath(killer, victim, qs);
@@ -502,7 +506,6 @@ public class Quest extends ManagedScript
 	public boolean notifyEvent(String event, NpcInstance npc, PlayerInstance player)
 	{
 		String res = null;
-		
 		try
 		{
 			res = onAdvEvent(event, npc, player);
@@ -517,7 +520,6 @@ public class Quest extends ManagedScript
 	public boolean notifyKill(NpcInstance npc, PlayerInstance killer, boolean isPet)
 	{
 		String res = null;
-		
 		try
 		{
 			res = onKill(npc, killer, isPet);
@@ -532,7 +534,6 @@ public class Quest extends ManagedScript
 	public boolean notifyTalk(NpcInstance npc, QuestState qs)
 	{
 		String res = null;
-		
 		try
 		{
 			res = onTalk(npc, qs.getPlayer());
@@ -551,7 +552,6 @@ public class Quest extends ManagedScript
 	public boolean notifyFirstTalk(NpcInstance npc, PlayerInstance player)
 	{
 		String res = null;
-		
 		try
 		{
 			res = onFirstTalk(npc, player);
@@ -577,7 +577,6 @@ public class Quest extends ManagedScript
 	public boolean notifySkillUse(NpcInstance npc, PlayerInstance caster, Skill skill)
 	{
 		String res = null;
-		
 		try
 		{
 			res = onSkillUse(npc, caster, skill);
@@ -620,7 +619,6 @@ public class Quest extends ManagedScript
 	public boolean notifyAggroRangeEnter(NpcInstance npc, PlayerInstance player, boolean isPet)
 	{
 		String res = null;
-		
 		try
 		{
 			res = onAggroRangeEnter(npc, player, isPet);
@@ -635,7 +633,6 @@ public class Quest extends ManagedScript
 	public boolean notifySpawn(NpcInstance npc)
 	{
 		String res = null;
-		
 		try
 		{
 			res = onSpawn(npc);
@@ -1663,7 +1660,7 @@ public class Quest extends ManagedScript
 		
 		// Cancel all pending timers before reloading.
 		// If timers ought to be restarted, the quest can take care of it with its code (example: save global data indicating what timer must be restarted).
-		for (List<QuestTimer> timers : _questTimers.values())
+		for (Set<QuestTimer> timers : _questTimers.values())
 		{
 			for (QuestTimer timer : timers)
 			{

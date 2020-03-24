@@ -27,7 +27,8 @@ import java.util.LinkedHashMap;
 import java.util.List;
 import java.util.Map;
 import java.util.Map.Entry;
-import java.util.concurrent.CopyOnWriteArrayList;
+import java.util.Set;
+import java.util.concurrent.ConcurrentHashMap;
 import java.util.function.Predicate;
 import java.util.logging.Level;
 
@@ -75,9 +76,9 @@ import org.l2jmobius.gameserver.util.Util;
 public class Quest extends AbstractScript implements IIdentifiable
 {
 	/** Map containing lists of timers from the name of the timer. */
-	private final Map<String, List<QuestTimer>> _questTimers = new HashMap<>();
+	private final Map<String, Set<QuestTimer>> _questTimers = new HashMap<>();
 	/** Map containing all the start conditions. */
-	private Map<Predicate<PlayerInstance>, String> _startCondition = null;
+	private final Map<Predicate<PlayerInstance>, String> _startCondition = new LinkedHashMap<>(1);
 	
 	private final int _questId;
 	protected boolean _onEnterWorld = false;
@@ -238,7 +239,7 @@ public class Quest extends AbstractScript implements IIdentifiable
 	 * Gets the quest timers.
 	 * @return the quest timers
 	 */
-	public Map<String, List<QuestTimer>> getQuestTimers()
+	public Map<String, Set<QuestTimer>> getQuestTimers()
 	{
 		return _questTimers;
 	}
@@ -254,9 +255,14 @@ public class Quest extends AbstractScript implements IIdentifiable
 	 */
 	public void startQuestTimer(String name, long time, Npc npc, PlayerInstance player, boolean repeating)
 	{
+		if (name == null)
+		{
+			return;
+		}
+		
 		synchronized (_questTimers)
 		{
-			final List<QuestTimer> timers = _questTimers.computeIfAbsent(name, k -> new CopyOnWriteArrayList<>());
+			final Set<QuestTimer> timers = _questTimers.getOrDefault(name, ConcurrentHashMap.newKeySet(1));
 			// If there exists a timer with this name, allow the timer only if the [npc, player] set is unique nulls act as wildcards.
 			if (getQuestTimer(name, npc, player) == null)
 			{
@@ -279,7 +285,7 @@ public class Quest extends AbstractScript implements IIdentifiable
 			return null;
 		}
 		
-		final List<QuestTimer> timers = _questTimers.get(name);
+		final Set<QuestTimer> timers = _questTimers.get(name);
 		if ((timers == null) || timers.isEmpty())
 		{
 			return null;
@@ -307,7 +313,7 @@ public class Quest extends AbstractScript implements IIdentifiable
 			return;
 		}
 		
-		final List<QuestTimer> timers = _questTimers.get(name);
+		final Set<QuestTimer> timers = _questTimers.get(name);
 		if ((timers == null) || timers.isEmpty())
 		{
 			return;
@@ -337,7 +343,7 @@ public class Quest extends AbstractScript implements IIdentifiable
 			return;
 		}
 		
-		final List<QuestTimer> timers = _questTimers.get(name);
+		final Set<QuestTimer> timers = _questTimers.get(name);
 		if ((timers == null) || timers.isEmpty())
 		{
 			return;
@@ -365,7 +371,7 @@ public class Quest extends AbstractScript implements IIdentifiable
 			return;
 		}
 		
-		final List<QuestTimer> timers = _questTimers.get(timer.toString());
+		final Set<QuestTimer> timers = _questTimers.get(timer.toString());
 		if (timers != null)
 		{
 			timers.remove(timer);
@@ -2541,7 +2547,7 @@ public class Quest extends AbstractScript implements IIdentifiable
 		
 		// Cancel all pending timers before reloading.
 		// If timers ought to be restarted, the quest can take care of it with its code (example: save global data indicating what timer must be restarted).
-		for (List<QuestTimer> timers : _questTimers.values())
+		for (Set<QuestTimer> timers : _questTimers.values())
 		{
 			for (QuestTimer timer : timers)
 			{
@@ -2597,13 +2603,6 @@ public class Quest extends AbstractScript implements IIdentifiable
 	 */
 	private Map<Predicate<PlayerInstance>, String> getStartConditions()
 	{
-		if (_startCondition == null)
-		{
-			synchronized (this)
-			{
-				_startCondition = new LinkedHashMap<>(1);
-			}
-		}
 		return _startCondition;
 	}
 	
@@ -2614,11 +2613,6 @@ public class Quest extends AbstractScript implements IIdentifiable
 	 */
 	public boolean canStartQuest(PlayerInstance player)
 	{
-		if (_startCondition == null)
-		{
-			return true;
-		}
-		
 		for (Predicate<PlayerInstance> cond : _startCondition.keySet())
 		{
 			if (!cond.test(player))
@@ -2636,11 +2630,6 @@ public class Quest extends AbstractScript implements IIdentifiable
 	 */
 	public String getStartConditionHtml(PlayerInstance player)
 	{
-		if (_startCondition == null)
-		{
-			return null;
-		}
-		
 		for (Entry<Predicate<PlayerInstance>, String> startRequirement : _startCondition.entrySet())
 		{
 			if (!startRequirement.getKey().test(player))
