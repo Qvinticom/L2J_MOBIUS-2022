@@ -5,8 +5,11 @@ Use mega downloader to download https://megadownloader.en.softonic.com/
 
 Client mirror 2: https://drive.google.com/uc?id=1yeYwrQEIcmAz5Ha1R05c3QgntRPy9y0V&export=download
 System: https://mega.nz/#!xolCkYjD!TpdBo8SwYpPYJN86H_r5AxZljTZAfyj-o2H9cfy2bNc
+
+JDK: http://www.mediafire.com/file/xox35mknec8f1q0/bellsoft-jdk14%252B36-windows-amd64.msi
+Eclipse: https://www.mediafire.com/file/d7z5px9po76v1e9/eclipse-java-2020-03-R-Java14-win32-x86_64.zip
 Geodata: https://www.mediafire.com/file/liyo9ibulkp3l9g/L2J_Mobius_Classic_2.3_SevenSigns_Geodata.zip
-JDK: https://www.mediafire.com/file/k25pt0umuf16uoh/openjdk-12.0.2_windows-x64_bin.zip
+
 
 Saviors: https://eu.4game.com/lineage2classic/play/saviors/
 -Classic packet compatibility

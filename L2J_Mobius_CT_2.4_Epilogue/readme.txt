@@ -2,8 +2,10 @@ L2J-Mobius Epilogue
 
 Client: https://drive.google.com/uc?id=0BxcFDPsm5786MHpWQmR5Ym96VXc&export=download
 System: https://mega.nz/#!ppkUFIJQ!oat-UGQsf2liToQu19nCljGO5BAUInwfzln-ERBBB28
+
+JDK: http://www.mediafire.com/file/xox35mknec8f1q0/bellsoft-jdk14%252B36-windows-amd64.msi
+Eclipse: https://www.mediafire.com/file/d7z5px9po76v1e9/eclipse-java-2020-03-R-Java14-win32-x86_64.zip
 Geodata: http://www.mediafire.com/file/j126h41s6jl9dyn/L2J_Mobius_CT_2.4_Epilogue_Geodata.zip
-JDK: https://www.mediafire.com/file/k25pt0umuf16uoh/openjdk-12.0.2_windows-x64_bin.zip
 
 What is done
 -Removed HighFive packets.

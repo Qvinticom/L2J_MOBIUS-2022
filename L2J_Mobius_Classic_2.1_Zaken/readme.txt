@@ -2,8 +2,10 @@ L2J-Mobius Classic Zaken
 
 Client: https://drive.google.com/uc?id=1_kioRKR5FTOmINAtUQe0KCxrvPzY18Nd&export=download
 System: https://mega.nz/#!os8HRShC!5JbEmWEugMyssgE-lWgBxJj_zC63gXX-ogBh-A3arX8
+
+JDK: http://www.mediafire.com/file/xox35mknec8f1q0/bellsoft-jdk14%252B36-windows-amd64.msi
+Eclipse: https://www.mediafire.com/file/d7z5px9po76v1e9/eclipse-java-2020-03-R-Java14-win32-x86_64.zip
 Geodata: http://www.mediafire.com/file/cqrcj73pntv82d8/L2J_Mobius_Classic_2.1_Zaken_Geodata.zip
-JDK: https://www.mediafire.com/file/k25pt0umuf16uoh/openjdk-12.0.2_windows-x64_bin.zip
 
 Saviors: https://eu.4game.com/lineage2classic/play/saviors/
 -Classic packet compatibility

@@ -4,8 +4,10 @@ Client: https://mega.nz/#F!BxkyzLBA!CIuE1GQOO1JMel7S7UxPfQ
 Use mega downloader to download https://megadownloader.en.softonic.com/
 
 System: https://mega.nz/#!s8lghARA!f7Hi1Yx5JWrNjT3kMRaGK_StI1Tnrxnhia8kaG8edSs
+
+JDK: http://www.mediafire.com/file/xox35mknec8f1q0/bellsoft-jdk14%252B36-windows-amd64.msi
+Eclipse: https://www.mediafire.com/file/d7z5px9po76v1e9/eclipse-java-2020-03-R-Java14-win32-x86_64.zip
 Geodata: http://www.mediafire.com/file/muge7mydml1en8t/L2J_Mobius_1.0_Ertheia_Geodata.zip
-JDK: https://www.mediafire.com/file/k25pt0umuf16uoh/openjdk-12.0.2_windows-x64_bin.zip
 
 
 Working features...

@@ -2,8 +2,10 @@ L2J-Mobius Etina's Fate
 
 Client: https://drive.google.com/uc?id=1L4hcPsh5T3TOf_LcePonnMeQvcDm9DDV&export=download
 System: https://mega.nz/#!B10W0QSR!xon-5i8Z8g5-VoJPTt16leYVIVV8GosQE_OSH1j7pnM
+
+JDK: http://www.mediafire.com/file/xox35mknec8f1q0/bellsoft-jdk14%252B36-windows-amd64.msi
+Eclipse: https://www.mediafire.com/file/d7z5px9po76v1e9/eclipse-java-2020-03-R-Java14-win32-x86_64.zip
 Geodata: http://www.mediafire.com/file/wdpw79qh4w780rg/L2J_Mobius_5.5_EtinasFate_Geodata.zip
-JDK: https://www.mediafire.com/file/k25pt0umuf16uoh/openjdk-12.0.2_windows-x64_bin.zip
 
 
 Working features...
