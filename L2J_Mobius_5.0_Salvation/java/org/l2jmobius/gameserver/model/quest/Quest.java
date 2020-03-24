@@ -318,6 +318,7 @@ public class Quest extends AbstractScript implements IIdentifiable
 				return timer;
 			}
 		}
+		
 		return null;
 	}
 	
@@ -332,23 +333,21 @@ public class Quest extends AbstractScript implements IIdentifiable
 			return;
 		}
 		
-		synchronized (_questTimers)
+		final List<QuestTimer> timers = _questTimers.get(name);
+		if ((timers == null) || timers.isEmpty())
 		{
-			final List<QuestTimer> timers = _questTimers.get(name);
-			if ((timers == null) || timers.isEmpty())
-			{
-				return;
-			}
-			
-			for (QuestTimer timer : timers)
-			{
-				if (timer != null)
-				{
-					timer.cancel();
-				}
-			}
-			timers.clear();
+			return;
 		}
+		
+		for (QuestTimer timer : timers)
+		{
+			if (timer != null)
+			{
+				timer.cancel();
+			}
+		}
+		
+		timers.clear();
 	}
 	
 	/**
@@ -364,22 +363,18 @@ public class Quest extends AbstractScript implements IIdentifiable
 			return;
 		}
 		
-		synchronized (_questTimers)
+		final List<QuestTimer> timers = _questTimers.get(name);
+		if ((timers == null) || timers.isEmpty())
 		{
-			final List<QuestTimer> timers = _questTimers.get(name);
-			if ((timers == null) || timers.isEmpty())
+			return;
+		}
+		
+		for (QuestTimer timer : timers)
+		{
+			if ((timer != null) && timer.equals(this, name, npc, player))
 			{
+				timer.cancel();
 				return;
-			}
-			
-			for (QuestTimer timer : timers)
-			{
-				if ((timer != null) && timer.equals(this, name, npc, player))
-				{
-					timer.cancel();
-					timers.remove(timer);
-					return;
-				}
 			}
 		}
 	}
@@ -396,13 +391,10 @@ public class Quest extends AbstractScript implements IIdentifiable
 			return;
 		}
 		
-		synchronized (_questTimers)
+		final List<QuestTimer> timers = _questTimers.get(timer.toString());
+		if (timers != null)
 		{
-			final List<QuestTimer> timers = _questTimers.get(timer.toString());
-			if (timers != null)
-			{
-				timers.remove(timer);
-			}
+			timers.remove(timer);
 		}
 	}
 	
@@ -2816,21 +2808,20 @@ public class Quest extends AbstractScript implements IIdentifiable
 	public boolean unload(boolean removeFromList)
 	{
 		onSave();
-		// cancel all pending timers before reloading.
-		// if timers ought to be restarted, the quest can take care of it
-		// with its code (example: save global data indicating what timer must be restarted).
-		synchronized (_questTimers)
+		
+		// Cancel all pending timers before reloading.
+		// If timers ought to be restarted, the quest can take care of it with its code (example: save global data indicating what timer must be restarted).
+		for (List<QuestTimer> timers : _questTimers.values())
 		{
-			for (List<QuestTimer> timers : _questTimers.values())
+			for (QuestTimer timer : timers)
 			{
-				for (QuestTimer timer : timers)
-				{
-					timer.cancel();
-				}
-				timers.clear();
+				timer.cancel();
 			}
-			_questTimers.clear();
+			
+			timers.clear();
 		}
+		
+		_questTimers.clear();
 		
 		if (removeFromList)
 		{
