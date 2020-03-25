@@ -248,9 +248,32 @@
 	<skill id="50134" toLevel="1" name="Rice Cake of Flaming Fighting Spirit">
 		<!-- For 3 min., Acquired XP/ SP +30%. Cooldown: 1 min. The effect remains after death. -->
 		<icon>icon.bm_rice_cake_i01</icon>
-		<operateType>A1</operateType>
+		<abnormalLvl>1</abnormalLvl>
+		<abnormalTime>1200</abnormalTime>
+		<abnormalType>VOTE</abnormalType>
+		<operateType>A2</operateType>
 		<isMagic>4</isMagic>
-		<reuseDelay>60000</reuseDelay>
+		<reuseDelay>600000</reuseDelay>
+		<magicCriticalRate>5</magicCriticalRate>
+		<magicLvl>1</magicLvl>
+		<stayAfterDeath>true</stayAfterDeath>
+		<targetType>SELF</targetType>
+		<affectScope>SINGLE</affectScope>
+		<passiveConditions>
+			<condition name="CheckLevel">
+				<minLevel>1</minLevel>
+				<maxLevel>85</maxLevel>
+				<affectType>CASTER</affectType>
+			</condition>
+		</passiveConditions>
+		<effects>
+			<effect name="ExpModify">
+				<amount>30</amount>
+			</effect>
+			<effect name="SpModify">
+				<amount>30</amount>
+			</effect>
+		</effects>
 	</skill>
 	<skill id="50135" toLevel="1" name="Einhasad�s Protection">
 		<!-- For 1 h., Acquired XP/ SP +100%. Cooldown: 1 min. The effect remains after death. -->

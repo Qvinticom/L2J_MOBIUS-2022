@@ -515,11 +515,16 @@
 		<!-- Acquired XP/ SP +30% for 20 min. The effect remains after death. Cooldown: 1 min. -->
 		<set name="icon" val="icon.bm_rice_cake_i01" />
 		<set name="default_action" val="SKILL_REDUCE" />
-		<set name="material" val="STEEL" />
+		<set name="material" val="PAPER" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_depositable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="handler" val="ItemSkills" />
+		<set name="immediate_effect" val="true" />
+		<skills>
+			<skill id="50134" level="1"/> <!-- Rice Cake of Flaming Fighting Spirit Event -->
+		</skills>
 	</item>
 	<item id="91841" name="Transformation Scroll: White Assassin" additionalName="Event" type="EtcItem">
 		<!-- Transforms into White Assassin for 20 minutes. The effect remains after death. White Assassin Transformation: Max HP/ MP +7%, P./ M. Accuracy +2, P./ M. Atk. +3%, P./ M. Def. +3%, Atk. Spd. +5%, M. Critical Rate +20, Speed +5. -->

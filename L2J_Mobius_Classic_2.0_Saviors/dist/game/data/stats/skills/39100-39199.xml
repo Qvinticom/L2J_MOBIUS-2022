@@ -84,11 +84,27 @@
 	</skill>
 	<skill id="39109" toLevel="1" name="Improved Scroll of Resurrection">
 		<icon>icon.etc_scroll_of_resurrection_i01</icon>
-		<operateType>A1</operateType>
 		<castRange>400</castRange>
-		<hitTime>1000</hitTime>
-		<coolTime>500</coolTime>
 		<effectPoint>1</effectPoint>
+		<effectRange>600</effectRange>
+		<hitTime>1000</hitTime>
+		<isMagic>2</isMagic> <!-- Static Skill -->
+		<itemConsumeCount>1</itemConsumeCount>
+		<itemConsumeId>49542</itemConsumeId> <!-- Improved Scroll of Resurrection -->
+		<magicLvl>1</magicLvl>
+		<operateType>A1</operateType>
+		<magicCriticalRate>5</magicCriticalRate>
+		<coolTime>500</coolTime>
+		<targetType>PC_BODY</targetType>
+		<affectScope>SINGLE</affectScope>
+		<conditions>
+			<condition name="OpResurrection" />
+		</conditions>
+		<effects>
+			<effect name="Resurrection">
+				<power>50</power>
+			</effect>
+		</effects>
 	</skill>
 	<skill id="39110" toLevel="1" name="Teleport Device - Entrance to Enchanted Valley">
 		<!-- Teleports to Entrance to Enchanted Valley. Cooldown - 60 minutes. -->
@@ -109,8 +125,33 @@
 	<skill id="39113" toLevel="1" name="Golden Necklace of Mermaid">
 		<!-- Increases XP/SP gain by 50% for 1 hours. Cooldown - 30 minutes. Effect remains after death. -->
 		<icon>icon.general_fuel_i00</icon>
-		<operateType>A1</operateType>
+		<abnormalLvl>1</abnormalLvl>
+		<abnormalTime>3600</abnormalTime>
+		<abnormalType>VOTE</abnormalType>
+		<itemConsumeCount>1</itemConsumeCount>
+		<itemConsumeId>49585</itemConsumeId>
+		<operateType>A2</operateType>
 		<isMagic>4</isMagic>
+		<magicCriticalRate>5</magicCriticalRate>
+		<magicLvl>1</magicLvl>
+		<stayAfterDeath>true</stayAfterDeath>
+		<targetType>SELF</targetType>
+		<affectScope>SINGLE</affectScope>
+		<passiveConditions>
+			<condition name="CheckLevel">
+				<minLevel>1</minLevel>
+				<maxLevel>85</maxLevel>
+				<affectType>CASTER</affectType>
+			</condition>
+		</passiveConditions>
+		<effects>
+			<effect name="ExpModify">
+				<amount>50</amount>
+			</effect>
+			<effect name="SpModify">
+				<amount>50</amount>
+			</effect>
+		</effects>
 	</skill>
 	<skill id="39114" toLevel="3" name="Refined Queen Ant's Ring">
 		<!-- Poison Chance and Resistance +20%, P/M Accuracy +3, P/M Attack +7%, P. Crit. Damage +10%, M. Crit. Damage +5%. -->
@@ -587,9 +628,32 @@
 	<skill id="39134" toLevel="1" name="Rice Cake of Flaming Fighting Spirit - Event">
 		<!-- Increases XP and SP gain by 30% for 20 minutes. Cooldown - 10 minutes. The effect does not disappear after character's death. -->
 		<icon>icon.bm_rice_cake_i01</icon>
-		<operateType>A1</operateType>
+		<abnormalLvl>1</abnormalLvl>
+		<abnormalTime>1200</abnormalTime>
+		<abnormalType>VOTE</abnormalType>
+		<operateType>A2</operateType>
 		<isMagic>4</isMagic>
 		<reuseDelay>600000</reuseDelay>
+		<magicCriticalRate>5</magicCriticalRate>
+		<magicLvl>1</magicLvl>
+		<stayAfterDeath>true</stayAfterDeath>
+		<targetType>SELF</targetType>
+		<affectScope>SINGLE</affectScope>
+		<passiveConditions>
+			<condition name="CheckLevel">
+				<minLevel>1</minLevel>
+				<maxLevel>85</maxLevel>
+				<affectType>CASTER</affectType>
+			</condition>
+		</passiveConditions>
+		<effects>
+			<effect name="ExpModify">
+				<amount>30</amount>
+			</effect>
+			<effect name="SpModify">
+				<amount>30</amount>
+			</effect>
+		</effects>
 	</skill>
 	<skill id="39135" toLevel="1" name="Chic Silver Chapeau - 30-day">
 		<!-- STR + 1, INT + 1. -->
@@ -866,7 +930,7 @@
 	</skill>
 	<skill id="39150" toLevel="1" name="Sayha's Holy Water">
 		<operateType>A1</operateType>
-		<reuseDelay>3600000</reuseDelay>
+		<reuseDelay>600000</reuseDelay>
 	</skill>
 	<skill id="39151" toLevel="1" name="Armor Supply Box (A-grade)">
 		<icon>icon.etc_treasure_box_i07</icon>
@@ -1440,17 +1504,168 @@
 	</skill>
 	<skill id="39174" toLevel="1" name="+8 Weapon Supply Box (B-grade)">
 		<icon>icon.etc_treasure_box_i07</icon>
+		<isMagic>2</isMagic> <!-- Static Skill -->
+		<itemConsumeCount>1</itemConsumeCount>
+		<itemConsumeId>49789</itemConsumeId>
+		<magicLvl>1</magicLvl>
 		<operateType>A1</operateType>
 		<hitTime>500</hitTime>
 		<coolTime>500</coolTime>
 		<reuseDelay>3000</reuseDelay>
+		<magicCriticalRate>5</magicCriticalRate>
+		<hitCancelTime>0</hitCancelTime>
+		<targetType>SELF</targetType>
+		<affectScope>SINGLE</affectScope>
+		<conditions>
+			<condition name="OpEncumbered">
+				<weightPercent>20</weightPercent>
+				<slotsPercent>10</slotsPercent>
+			</condition>
+		</conditions>
+		<effects>
+			<effect name="RestorationRandom">
+				<items>
+					<item chance="4.0">
+						<item id="175" count="1" minEnchant="8" maxEnchant="8" /> <!-- Art of Battle Axe -->
+					</item>
+					<item chance="4.0">
+						<item id="267" count="1" minEnchant="8" maxEnchant="8" /> <!-- Arthro Nail -->
+					</item>
+					<item chance="4.0">
+						<item id="268" count="1" minEnchant="8" maxEnchant="8" /> <!-- Bellion Cestus -->
+					</item>
+					<item chance="4.0">
+						<item id="287" count="1" minEnchant="8" maxEnchant="8" /> <!-- Bow of Peril -->
+					</item>
+					<item chance="4.0">
+						<item id="79" count="1" minEnchant="8" maxEnchant="8" /> <!-- Damascus -->
+					</item>
+					<item chance="4.0">
+						<item id="284" count="1" minEnchant="8" maxEnchant="8" /> <!-- Dark Elven Longbow -->
+					</item>
+					<item chance="4.0">
+						<item id="171" count="1" minEnchant="8" maxEnchant="8" /> <!-- Deadman's Glory -->
+					</item>
+					<item chance="4.0">
+						<item id="234" count="1" minEnchant="8" maxEnchant="8" /> <!-- Demon's Dagger -->
+					</item>
+					<item chance="4.0">
+						<item id="300" count="1" minEnchant="8" maxEnchant="8" /> <!-- Great Axe -->
+					</item>
+					<item chance="4.0">
+						<item id="78" count="1" minEnchant="8" maxEnchant="8" /> <!-- Great Sword -->
+					</item>
+					<item chance="4.0">
+						<item id="7883" count="1" minEnchant="8" maxEnchant="8" /> <!-- Guardian's Sword -->
+					</item>
+					<item chance="4.0">
+						<item id="91" count="1" minEnchant="8" maxEnchant="8" /> <!-- Heavy War Axe -->
+					</item>
+					<item chance="4.0">
+						<item id="7900" count="1" minEnchant="8" maxEnchant="8" /> <!-- Ice Storm Hammer -->
+					</item>
+					<item chance="4.0">
+						<item id="7893" count="1" minEnchant="8" maxEnchant="8" /> <!-- Kaim Vanul's Bones -->
+					</item>
+					<item chance="4.0">
+						<item id="142" count="1" minEnchant="8" maxEnchant="8" /> <!-- Keshanberk -->
+					</item>
+					<item chance="4.0">
+						<item id="229" count="1" minEnchant="8" maxEnchant="8" /> <!-- Kris -->
+					</item>
+					<item chance="4.0">
+						<item id="97" count="1" minEnchant="8" maxEnchant="8" /> <!-- Lance -->
+					</item>
+					<item chance="4.0">
+						<item id="264" count="1" minEnchant="8" maxEnchant="8" /> <!-- Pata -->
+					</item>
+					<item chance="4.0">
+						<item id="7892" count="1" minEnchant="8" maxEnchant="8" /> <!-- Spell Breaker -->
+					</item>
+					<item chance="4.0">
+						<item id="92" count="1" minEnchant="8" maxEnchant="8" /> <!-- Spirit's Staff -->
+					</item>
+					<item chance="4.0">
+						<item id="210" count="1" minEnchant="8" maxEnchant="8" /> <!-- Staff of Evil Spirits -->
+					</item>
+					<item chance="4.0">
+						<item id="7901" count="1" minEnchant="8" maxEnchant="8" /> <!-- Star Buster -->
+					</item>
+					<item chance="4.0">
+						<item id="148" count="1" minEnchant="8" maxEnchant="8" /> <!-- Sword of Valhalla -->
+					</item>
+					<item chance="4.0">
+						<item id="243" count="1" minEnchant="8" maxEnchant="8" /> <!-- Twilight Knife -->
+					</item>
+					<item chance="4.0">
+						<item id="7889" count="1" minEnchant="8" maxEnchant="8" /> <!-- Wizard's Tear -->
+					</item>
+				</items>
+			</effect>
+		</effects>
 	</skill>
 	<skill id="39175" toLevel="1" name="+16 Weapon Supply Box (C-grade)">
 		<icon>icon.etc_treasure_box_i07</icon>
+		<isMagic>2</isMagic> <!-- Static Skill -->
+		<itemConsumeCount>1</itemConsumeCount>
+		<itemConsumeId>49790</itemConsumeId>
+		<magicLvl>1</magicLvl>
 		<operateType>A1</operateType>
 		<hitTime>500</hitTime>
 		<coolTime>500</coolTime>
 		<reuseDelay>3000</reuseDelay>
+		<magicCriticalRate>5</magicCriticalRate>
+		<hitCancelTime>0</hitCancelTime>
+		<targetType>SELF</targetType>
+		<affectScope>SINGLE</affectScope>
+		<conditions>
+			<condition name="OpEncumbered">
+				<weightPercent>20</weightPercent>
+				<slotsPercent>10</slotsPercent>
+			</condition>
+		</conditions>
+		<effects>
+			<effect name="RestorationRandom">
+				<items>
+					<item chance="8.3">
+						<item id="242" count="1" minEnchant="16" maxEnchant="16" /> <!-- Soulfire Dirk -->
+					</item>
+					<item chance="8.3">
+						<item id="7887" count="1" minEnchant="16" maxEnchant="16" /> <!-- Mysterious Sword -->
+					</item>
+					<item chance="8.3">
+						<item id="72" count="1" minEnchant="16" maxEnchant="16" /> <!-- Stormbringer -->
+					</item>
+					<item chance="8.3">
+						<item id="71" count="1" minEnchant="16" maxEnchant="16" /> <!-- Flamberge -->
+					</item>
+					<item chance="8.3">
+						<item id="281" count="1" minEnchant="16" maxEnchant="16" /> <!-- Crystallized Ice Bow -->
+					</item>
+					<item chance="8.3">
+						<item id="193" count="1" minEnchant="16" maxEnchant="16" /> <!-- Stick of Faith -->
+					</item>
+					<item chance="8.3">
+						<item id="160" count="1" minEnchant="16" maxEnchant="16" /> <!-- Battle Axe -->
+					</item>
+					<item chance="8.3">
+						<item id="161" count="1" minEnchant="16" maxEnchant="16" /> <!-- Silver Axe -->
+					</item>
+					<item chance="8.3">
+						<item id="192" count="1" minEnchant="16" maxEnchant="16" /> <!-- Crystal Staff -->
+					</item>
+					<item chance="8.3">
+						<item id="194" count="1" minEnchant="16" maxEnchant="16" /> <!-- Heavy Doom Axe -->
+					</item>
+					<item chance="8.3">
+						<item id="302" count="1" minEnchant="16" maxEnchant="16" /> <!-- Body Slasher -->
+					</item>
+					<item chance="8.3">
+						<item id="263" count="1" minEnchant="16" maxEnchant="16" /> <!-- Chakram -->
+					</item>
+				</items>
+			</effect>
+		</effects>
 	</skill>
 	<skill id="39176" toLevel="1" name="Red Libra Supplies Lv. 1">
 		<icon>icon.event_mahum_coinbox</icon>

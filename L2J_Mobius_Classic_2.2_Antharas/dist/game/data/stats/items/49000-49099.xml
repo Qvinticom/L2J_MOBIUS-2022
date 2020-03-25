@@ -1165,11 +1165,12 @@
 		<set name="icon" val="icon.bm_rice_cake_i00" />
 		<set name="default_action" val="SKILL_REDUCE" />
 		<set name="material" val="PAPER" />
-		<set name="is_tradable" val="false" />
-		<set name="is_dropable" val="false" />
-		<set name="is_depositable" val="false" />
-		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="handler" val="ItemSkills" />
+		<set name="immediate_effect" val="true" />
+		<skills>
+			<skill id="32001" level="1"/> <!-- Rice Cake of Fighting Spirit Event -->
+		</skills>
 	</item>
 	<item id="49087" name="Improved Scroll of Escape" type="EtcItem">
 		<!-- Magic Scroll that relocates you to the nearest village. -->
