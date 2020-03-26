@@ -592,6 +592,10 @@ public class DimensionalWrap extends AbstractInstance
 			}
 			case "CHANGE_LOCATION":
 			{
+				if (player == null)
+				{
+					return null;
+				}
 				final Instance world = player.getInstanceWorld();
 				if (!isInInstance(world))
 				{
