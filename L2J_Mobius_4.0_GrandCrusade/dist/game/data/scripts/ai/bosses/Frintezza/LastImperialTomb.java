@@ -446,7 +446,7 @@ public class LastImperialTomb extends AbstractInstance
 				if (world != null)
 				{
 					final Map<Npc, Integer> portraits = world.getParameters().getMap("portraits", Npc.class, Integer.class);
-					if (!portraits.isEmpty())
+					if ((portraits != null) && !portraits.isEmpty())
 					{
 						final List<Npc> demons = world.getParameters().getList("demons", Npc.class);
 						for (int i : portraits.values())
