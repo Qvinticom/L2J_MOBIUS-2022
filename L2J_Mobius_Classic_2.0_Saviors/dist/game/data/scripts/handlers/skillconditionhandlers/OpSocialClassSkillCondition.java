@@ -19,6 +19,7 @@ package handlers.skillconditionhandlers;
 import org.l2jmobius.gameserver.model.StatSet;
 import org.l2jmobius.gameserver.model.WorldObject;
 import org.l2jmobius.gameserver.model.actor.Creature;
+import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
 import org.l2jmobius.gameserver.model.skills.ISkillCondition;
 import org.l2jmobius.gameserver.model.skills.Skill;
 
@@ -37,6 +38,18 @@ public class OpSocialClassSkillCondition implements ISkillCondition
 	@Override
 	public boolean canUse(Creature caster, Skill skill, WorldObject target)
 	{
-		return caster.isPlayer() && (caster.getActingPlayer().getPledgeClass() >= _socialClass);
+		final PlayerInstance player = caster.getActingPlayer();
+		if ((player == null) || (player.getClan() == null))
+		{
+			return false;
+		}
+		
+		final boolean isClanLeader = player.isClanLeader();
+		if ((_socialClass == -1) && !isClanLeader)
+		{
+			return false;
+		}
+		
+		return isClanLeader || (player.getPledgeClass() >= _socialClass);
 	}
 }

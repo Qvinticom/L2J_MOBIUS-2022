@@ -439,7 +439,7 @@
 														<xs:element minOccurs="0" maxOccurs="unbounded" name="npcId" type="xs:unsignedShort" />
 														<xs:element minOccurs="0" name="instanceId" type="xs:unsignedByte" />
 														<xs:element minOccurs="0" name="itemId" type="xs:unsignedShort" />
-														<xs:element minOccurs="0" name="socialClass" type="xs:unsignedByte" />
+														<xs:element minOccurs="0" name="socialClass" type="xs:int" />
 														<xs:element minOccurs="0" name="npcsIds">
 															<xs:complexType>
 																<xs:sequence>

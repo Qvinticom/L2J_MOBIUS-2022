@@ -219,6 +219,9 @@
 		<itemConsumeId>3031</itemConsumeId> <!-- Spirit Ore -->
 		<conditions>
 			<condition name="CanUseInBattlefield" />
+			<condition name="OpSocialClass">
+				<socialClass>-1</socialClass>
+			</condition>
 		</conditions>
 		<effects>
 			<effect name="HealPercent">
