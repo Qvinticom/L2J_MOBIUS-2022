@@ -97,6 +97,8 @@ public class RequestResetAbilityPoint implements IClientIncomingPacket
 				if (skill != null)
 				{
 					player.removeSkill(skill);
+					// TODO: Check if this needs to be moved to PlayerIstance removeSkill method.
+					player.getEffectList().stopSkillEffects(false, skill);
 				}
 			}
 			player.setAbilityPointsUsed(0);
