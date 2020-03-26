@@ -76,7 +76,7 @@ public class AdminCastle implements IAdminCommandHandler
 				else
 				{
 					final String action = st.nextToken();
-					final PlayerInstance target = checkTarget(activeChar) ? activeChar.getActingPlayer() : null;
+					final PlayerInstance target = checkTarget(activeChar) ? activeChar.getTarget().getActingPlayer() : null;
 					switch (action)
 					{
 						case "showRegWindow":
