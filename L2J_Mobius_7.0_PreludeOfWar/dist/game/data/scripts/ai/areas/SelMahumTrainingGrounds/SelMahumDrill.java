@@ -221,6 +221,10 @@ public class SelMahumDrill extends AbstractNpcAI
 				}
 				case "CHIEF_DIED":
 				{
+					if (!receiver.isAttackable())
+					{
+						return null;
+					}
 					if (CommonUtil.contains(MAHUM_SOLDIERS, receiver.getId()))
 					{
 						if (getRandom(4) < 1)
