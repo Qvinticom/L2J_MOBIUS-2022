@@ -343,6 +343,7 @@ import quests.Q10452_IsItEdible.Q10452_IsItEdible;
 import quests.Q10453_StoppingTheWindDragon.Q10453_StoppingTheWindDragon;
 import quests.Q10455_ElikiasLetter.Q10455_ElikiasLetter;
 import quests.Q10456_OperationRescue.Q10456_OperationRescue;
+import quests.Q10457_KefensisIllusion.Q10457_KefensisIllusion;
 import quests.Q10459_ASickAmbition.Q10459_ASickAmbition;
 import quests.Q10460_ReturnOfTheAlligatorHunter.Q10460_ReturnOfTheAlligatorHunter;
 import quests.Q10461_TappingThePowerWithin.Q10461_TappingThePowerWithin;
@@ -519,7 +520,6 @@ import quests.not_done.Q10298_WastelandQueen;
 import quests.not_done.Q10357_AltarOfBloodThatAwakensDestruction;
 import quests.not_done.Q10373_ExploringTheDimensionSealingTheDimension;
 import quests.not_done.Q10396_WitchOfSpores;
-import quests.not_done.Q10457_KefensisIllusion;
 import quests.not_done.Q10506_DianasRequest;
 import quests.not_done.Q10748_MysteriousSuggestion1;
 import quests.not_done.Q10749_MysteriousSuggestion2;
@@ -899,7 +899,7 @@ public class QuestMasterHandler
 		Q10453_StoppingTheWindDragon.class,
 		Q10455_ElikiasLetter.class,
 		Q10456_OperationRescue.class,
-		Q10457_KefensisIllusion.class, // TODO: Not done.
+		Q10457_KefensisIllusion.class,
 		Q10459_ASickAmbition.class,
 		Q10460_ReturnOfTheAlligatorHunter.class,
 		Q10461_TappingThePowerWithin.class,

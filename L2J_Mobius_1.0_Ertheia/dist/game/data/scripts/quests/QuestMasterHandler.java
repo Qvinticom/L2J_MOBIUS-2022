@@ -372,6 +372,7 @@ import quests.Q10450_ADarkAmbition.Q10450_ADarkAmbition;
 import quests.Q10452_IsItEdible.Q10452_IsItEdible;
 import quests.Q10453_StoppingTheWindDragon.Q10453_StoppingTheWindDragon;
 import quests.Q10455_ElikiasLetter.Q10455_ElikiasLetter;
+import quests.Q10457_KefensisIllusion.Q10457_KefensisIllusion;
 import quests.Q10459_ASickAmbition.Q10459_ASickAmbition;
 import quests.Q10460_ReturnOfTheAlligatorHunter.Q10460_ReturnOfTheAlligatorHunter;
 import quests.Q10461_TappingThePowerWithin.Q10461_TappingThePowerWithin;
@@ -469,7 +470,6 @@ import quests.not_done.Q00789_WaitingForPaagrio;
 import quests.not_done.Q10352_LegacyOfCrumaTower;
 import quests.not_done.Q10357_AltarOfBloodThatAwakensDestruction;
 import quests.not_done.Q10456_OperationRescue;
-import quests.not_done.Q10457_KefensisIllusion;
 import quests.not_done.Q10458_ToTheDesertQuarry;
 import quests.not_done.Q10463_TheSoulOfASword;
 import quests.not_done.Q10506_PaddysRequest;
@@ -873,7 +873,7 @@ public class QuestMasterHandler
 		Q10453_StoppingTheWindDragon.class,
 		Q10455_ElikiasLetter.class,
 		Q10456_OperationRescue.class, // TODO: Not done.
-		Q10457_KefensisIllusion.class, // TODO: Not done.
+		Q10457_KefensisIllusion.class,
 		Q10458_ToTheDesertQuarry.class, // TODO: Not done.
 		Q10459_ASickAmbition.class,
 		Q10460_ReturnOfTheAlligatorHunter.class,

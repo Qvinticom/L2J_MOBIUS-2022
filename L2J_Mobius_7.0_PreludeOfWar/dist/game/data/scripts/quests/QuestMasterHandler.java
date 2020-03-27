@@ -160,6 +160,7 @@ import quests.Q10447_TimingIsEverything.Q10447_TimingIsEverything;
 import quests.Q10450_ADarkAmbition.Q10450_ADarkAmbition;
 import quests.Q10454_FinalEmbryoApostle.Q10454_FinalEmbryoApostle;
 import quests.Q10455_ElikiasLetter.Q10455_ElikiasLetter;
+import quests.Q10457_KefensisIllusion.Q10457_KefensisIllusion;
 import quests.Q10459_ASickAmbition.Q10459_ASickAmbition;
 import quests.Q10501_ZakenEmbroideredSoulCloak.Q10501_ZakenEmbroideredSoulCloak;
 import quests.Q10502_FreyaEmbroideredSoulCloak.Q10502_FreyaEmbroideredSoulCloak;
@@ -227,6 +228,9 @@ import quests.Q10851_ElvenBotany.Q10851_ElvenBotany;
 import quests.Q10852_TheMotherTreeRevivalProject.Q10852_TheMotherTreeRevivalProject;
 import quests.Q10856_SuperionAppears.Q10856_SuperionAppears;
 import quests.Q10857_SecretTeleport.Q10857_SecretTeleport;
+import quests.Q10873_ExaltedReachingAnotherLevel.Q10873_ExaltedReachingAnotherLevel;
+import quests.Q10876_LeadersGrace.Q10876_LeadersGrace;
+import quests.Q10879_ExaltedGuideToPower.Q10879_ExaltedGuideToPower;
 import quests.Q10891_AtANewPlace.Q10891_AtANewPlace;
 import quests.Q10892_RevengeOneStepAtATime.Q10892_RevengeOneStepAtATime;
 import quests.Q10896_VisitTheAdventureGuild.Q10896_VisitTheAdventureGuild;
@@ -296,7 +300,6 @@ import quests.not_done.Q10298_WastelandQueen;
 import quests.not_done.Q10355_BlacksmithsSoul1;
 import quests.not_done.Q10356_BlacksmithsSoul2;
 import quests.not_done.Q10373_ExploringTheDimensionSealingTheDimension;
-import quests.not_done.Q10457_KefensisIllusion;
 import quests.not_done.Q10514_NewPathToGlory;
 import quests.not_done.Q10515_NewWayForPride;
 import quests.not_done.Q10535_BlacksmithsSoul3;
@@ -312,12 +315,9 @@ import quests.not_done.Q10845_BloodyBattleRescueTheSmiths;
 import quests.not_done.Q10848_TrialsBeforeTheBattle;
 import quests.not_done.Q10853_ToWeakenTheGiants;
 import quests.not_done.Q10854_ToSeizeTheFortress;
-import quests.not_done.Q10873_ExaltedReachingAnotherLevel;
 import quests.not_done.Q10874_AgainstTheNewEnemy;
 import quests.not_done.Q10875_ForReputation;
-import quests.not_done.Q10876_LeadersGrace;
 import quests.not_done.Q10877_BreakThroughCrisis;
-import quests.not_done.Q10879_ExaltedGuideToPower;
 import quests.not_done.Q10880_TheLastOneStanding;
 import quests.not_done.Q10881_ForThePride;
 import quests.not_done.Q10882_VictoryCollection;
@@ -514,7 +514,7 @@ public class QuestMasterHandler
 		Q10450_ADarkAmbition.class,
 		Q10454_FinalEmbryoApostle.class,
 		Q10455_ElikiasLetter.class,
-		Q10457_KefensisIllusion.class, // TODO: Not done.
+		Q10457_KefensisIllusion.class,
 		Q10459_ASickAmbition.class,
 		Q10501_ZakenEmbroideredSoulCloak.class,
 		Q10502_FreyaEmbroideredSoulCloak.class,
@@ -604,12 +604,12 @@ public class QuestMasterHandler
 		Q10854_ToSeizeTheFortress.class, // TODO: Not done.
 		Q10856_SuperionAppears.class,
 		Q10857_SecretTeleport.class,
-		Q10873_ExaltedReachingAnotherLevel.class, // TODO: Not done.
+		Q10873_ExaltedReachingAnotherLevel.class,
 		Q10874_AgainstTheNewEnemy.class, // TODO: Not done.
 		Q10875_ForReputation.class, // TODO: Not done.
-		Q10876_LeadersGrace.class, // TODO: Not done.
+		Q10876_LeadersGrace.class,
 		Q10877_BreakThroughCrisis.class, // TODO: Not done.
-		Q10879_ExaltedGuideToPower.class, // TODO: Not done.
+		Q10879_ExaltedGuideToPower.class,
 		Q10880_TheLastOneStanding.class, // TODO: Not done.
 		Q10881_ForThePride.class, // TODO: Not done.
 		Q10882_VictoryCollection.class, // TODO: Not done.
