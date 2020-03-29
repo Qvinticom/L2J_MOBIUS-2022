@@ -16,6 +16,9 @@
  */
 package handlers.effecthandlers;
 
+import java.util.Set;
+import java.util.concurrent.ConcurrentHashMap;
+
 import org.l2jmobius.gameserver.ai.CtrlEvent;
 import org.l2jmobius.gameserver.ai.CtrlIntention;
 import org.l2jmobius.gameserver.geoengine.GeoEngine;
@@ -23,7 +26,6 @@ import org.l2jmobius.gameserver.model.Location;
 import org.l2jmobius.gameserver.model.StatSet;
 import org.l2jmobius.gameserver.model.actor.Creature;
 import org.l2jmobius.gameserver.model.effects.AbstractEffect;
-import org.l2jmobius.gameserver.model.effects.EffectType;
 import org.l2jmobius.gameserver.model.items.instance.ItemInstance;
 import org.l2jmobius.gameserver.model.skills.Skill;
 import org.l2jmobius.gameserver.model.stats.Formulas;
@@ -44,6 +46,8 @@ public class KnockBack extends AbstractEffect
 	private final int _animationSpeed;
 	private final boolean _knockDown;
 	private final FlyType _type;
+	
+	private static final Set<Creature> ACTIVE_KNOCKBACKS = ConcurrentHashMap.newKeySet();
 	
 	public KnockBack(StatSet params)
 	{
@@ -68,12 +72,6 @@ public class KnockBack extends AbstractEffect
 	}
 	
 	@Override
-	public EffectType getEffectType()
-	{
-		return EffectType.KNOCK;
-	}
-	
-	@Override
 	public void instant(Creature effector, Creature effected, Skill skill, ItemInstance item)
 	{
 		if (!_knockDown)
@@ -94,6 +92,8 @@ public class KnockBack extends AbstractEffect
 	@Override
 	public void onExit(Creature effector, Creature effected, Skill skill)
 	{
+		ACTIVE_KNOCKBACKS.remove(effected);
+		
 		if (!effected.isPlayer())
 		{
 			effected.getAI().notifyEvent(CtrlEvent.EVT_THINK);
@@ -102,26 +102,31 @@ public class KnockBack extends AbstractEffect
 	
 	private void knockBack(Creature effector, Creature effected)
 	{
-		// Prevent knocking back raids and town NPCs.
-		if ((effected == null) || effected.isRaid() || (effected.isNpc() && !effected.isAttackable()))
+		if (!ACTIVE_KNOCKBACKS.contains(effected))
 		{
-			return;
+			ACTIVE_KNOCKBACKS.add(effected);
+			
+			// Prevent knocking back raids and town NPCs.
+			if ((effected == null) || effected.isRaid() || (effected.isNpc() && !effected.isAttackable()))
+			{
+				return;
+			}
+			
+			final double radians = Math.toRadians(Util.calculateAngleFrom(effector, effected));
+			final int x = (int) (effected.getX() + (_distance * Math.cos(radians)));
+			final int y = (int) (effected.getY() + (_distance * Math.sin(radians)));
+			final int z = effected.getZ();
+			final Location loc = GeoEngine.getInstance().canMoveToTargetLoc(effected.getX(), effected.getY(), effected.getZ(), x, y, z, effected.getInstanceWorld());
+			
+			effected.getAI().setIntention(CtrlIntention.AI_INTENTION_IDLE);
+			effected.broadcastPacket(new FlyToLocation(effected, loc, _type, _speed, _delay, _animationSpeed));
+			if (_knockDown)
+			{
+				effected.setHeading(Util.calculateHeadingFrom(effected, effector));
+			}
+			effected.setXYZ(loc);
+			effected.broadcastPacket(new ValidateLocation(effected));
+			effected.revalidateZone(true);
 		}
-		
-		final double radians = Math.toRadians(Util.calculateAngleFrom(effector, effected));
-		final int x = (int) (effected.getX() + (_distance * Math.cos(radians)));
-		final int y = (int) (effected.getY() + (_distance * Math.sin(radians)));
-		final int z = effected.getZ();
-		final Location loc = GeoEngine.getInstance().canMoveToTargetLoc(effected.getX(), effected.getY(), effected.getZ(), x, y, z, effected.getInstanceWorld());
-		
-		effected.getAI().setIntention(CtrlIntention.AI_INTENTION_IDLE);
-		effected.broadcastPacket(new FlyToLocation(effected, loc, _type, _speed, _delay, _animationSpeed));
-		if (_knockDown)
-		{
-			effected.setHeading(Util.calculateHeadingFrom(effected, effector));
-		}
-		effected.setXYZ(loc);
-		effected.broadcastPacket(new ValidateLocation(effected));
-		effected.revalidateZone(true);
 	}
 }
