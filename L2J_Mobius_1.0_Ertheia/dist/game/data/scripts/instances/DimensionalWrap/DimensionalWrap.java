@@ -509,6 +509,10 @@ public class DimensionalWrap extends AbstractInstance
 			}
 			case "START_STAGE":
 			{
+				if (player == null)
+				{
+					return null;
+				}
 				final Instance world = player.getInstanceWorld();
 				if (!isInInstance(world))
 				{
@@ -522,6 +526,10 @@ public class DimensionalWrap extends AbstractInstance
 			}
 			case "FIRST_SPAWN":
 			{
+				if (player == null)
+				{
+					return null;
+				}
 				final Instance world = player.getInstanceWorld();
 				if (!isInInstance(world))
 				{
@@ -608,6 +616,10 @@ public class DimensionalWrap extends AbstractInstance
 			}
 			case "SWITCH_STAGE":
 			{
+				if (player == null)
+				{
+					return null;
+				}
 				final Instance world = player.getInstanceWorld();
 				if (!isInInstance(world))
 				{
@@ -628,6 +640,10 @@ public class DimensionalWrap extends AbstractInstance
 			}
 			case "NEXT_STAGE":
 			{
+				if (player == null)
+				{
+					return null;
+				}
 				final Instance world = player.getInstanceWorld();
 				if (!isInInstance(world))
 				{
