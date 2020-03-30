@@ -31,11 +31,18 @@ import org.l2jmobius.gameserver.model.actor.Npc;
 public class RandomAnimationTaskManager
 {
 	private static final Map<Npc, Long> PENDING_ANIMATIONS = new ConcurrentHashMap<>();
+	private static boolean _working = false;
 	
 	public RandomAnimationTaskManager()
 	{
 		ThreadPool.scheduleAtFixedRate(() ->
 		{
+			if (_working)
+			{
+				return;
+			}
+			_working = true;
+			
 			final long time = System.currentTimeMillis();
 			for (Entry<Npc, Long> entry : PENDING_ANIMATIONS.entrySet())
 			{
@@ -49,6 +56,8 @@ public class RandomAnimationTaskManager
 					PENDING_ANIMATIONS.put(npc, time + (Rnd.get((npc.isAttackable() ? Config.MIN_MONSTER_ANIMATION : Config.MIN_NPC_ANIMATION), (npc.isAttackable() ? Config.MAX_MONSTER_ANIMATION : Config.MAX_NPC_ANIMATION)) * 1000));
 				}
 			}
+			
+			_working = false;
 		}, 0, 1000);
 	}
 	

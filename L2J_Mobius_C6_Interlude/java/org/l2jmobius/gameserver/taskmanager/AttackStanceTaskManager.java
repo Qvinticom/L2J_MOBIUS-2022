@@ -36,16 +36,13 @@ public class AttackStanceTaskManager
 {
 	protected static final Logger LOGGER = Logger.getLogger(AttackStanceTaskManager.class.getName());
 	
-	protected Map<Creature, Long> _attackStanceTasks = new ConcurrentHashMap<>();
+	protected static final Map<Creature, Long> _attackStanceTasks = new ConcurrentHashMap<>();
+	
+	public static final long COMBAT_TIME = 15000;
 	
 	private AttackStanceTaskManager()
 	{
 		ThreadPool.scheduleAtFixedRate(new FightModeScheduler(), 0, 1000);
-	}
-	
-	public static AttackStanceTaskManager getInstance()
-	{
-		return SingletonHolder.INSTANCE;
 	}
 	
 	public void addAttackStanceTask(Creature actor)
@@ -108,7 +105,7 @@ public class AttackStanceTaskManager
 						for (Entry<Creature, Long> entry : _attackStanceTasks.entrySet())
 						{
 							final Creature actor = entry.getKey();
-							if ((current - entry.getValue()) > 15000)
+							if ((current - entry.getValue()) > COMBAT_TIME)
 							{
 								actor.broadcastPacket(new AutoAttackStop(actor.getObjectId()));
 								if ((actor instanceof PlayerInstance) && (((PlayerInstance) actor).getPet() != null))
@@ -128,6 +125,15 @@ public class AttackStanceTaskManager
 				LOGGER.warning("Error in FightModeScheduler: " + e.getMessage());
 			}
 		}
+	}
+	
+	/**
+	 * Gets the single instance of AttackStanceTaskManager.
+	 * @return single instance of AttackStanceTaskManager
+	 */
+	public static AttackStanceTaskManager getInstance()
+	{
+		return SingletonHolder.INSTANCE;
 	}
 	
 	private static class SingletonHolder

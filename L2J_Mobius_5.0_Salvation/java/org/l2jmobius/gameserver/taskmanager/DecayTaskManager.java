@@ -32,11 +32,18 @@ import org.l2jmobius.gameserver.model.actor.templates.NpcTemplate;
 public class DecayTaskManager
 {
 	private static final Map<Creature, Long> DECAY_SCHEDULES = new ConcurrentHashMap<>();
+	private static boolean _working = false;
 	
 	public DecayTaskManager()
 	{
 		ThreadPool.scheduleAtFixedRate(() ->
 		{
+			if (_working)
+			{
+				return;
+			}
+			_working = true;
+			
 			final long time = System.currentTimeMillis();
 			for (Entry<Creature, Long> entry : DECAY_SCHEDULES.entrySet())
 			{
@@ -47,6 +54,8 @@ public class DecayTaskManager
 					creature.onDecay();
 				}
 			}
+			
+			_working = false;
 		}, 0, 1000);
 	}
 	

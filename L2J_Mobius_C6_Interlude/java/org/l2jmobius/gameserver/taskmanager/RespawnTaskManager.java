@@ -30,11 +30,18 @@ import org.l2jmobius.gameserver.model.spawn.Spawn;
 public class RespawnTaskManager
 {
 	private static final Map<NpcInstance, Long> PENDING_RESPAWNS = new ConcurrentHashMap<>();
+	private static boolean _working = false;
 	
 	public RespawnTaskManager()
 	{
 		ThreadPool.scheduleAtFixedRate(() ->
 		{
+			if (_working)
+			{
+				return;
+			}
+			_working = true;
+			
 			final long time = System.currentTimeMillis();
 			for (Entry<NpcInstance, Long> entry : PENDING_RESPAWNS.entrySet())
 			{
@@ -50,6 +57,8 @@ public class RespawnTaskManager
 					}
 				}
 			}
+			
+			_working = false;
 		}, 0, 1000);
 	}
 	

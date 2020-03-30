@@ -38,7 +38,7 @@ public class AttackStanceTaskManager
 	
 	protected static final Map<Creature, Long> _attackStanceTasks = new ConcurrentHashMap<>();
 	
-	public static final long COMBAT_TIME = 15_000;
+	public static final long COMBAT_TIME = 15000;
 	
 	/**
 	 * Instantiates a new attack stance task manager.
