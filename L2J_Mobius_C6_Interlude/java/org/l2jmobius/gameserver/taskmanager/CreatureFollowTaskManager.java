@@ -121,11 +121,13 @@ public class CreatureFollowTaskManager
 	
 	public void addNormalFollow(Creature creature, int range)
 	{
+		follow(creature, range);
 		NORMAL_FOLLOW_CREATURES.putIfAbsent(creature, range);
 	}
 	
 	public void addAttackFollow(Creature creature, int range)
 	{
+		follow(creature, range);
 		ATTACK_FOLLOW_CREATURES.putIfAbsent(creature, range);
 	}
 	
