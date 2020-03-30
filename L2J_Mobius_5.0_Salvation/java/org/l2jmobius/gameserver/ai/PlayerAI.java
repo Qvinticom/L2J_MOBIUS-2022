@@ -339,7 +339,7 @@ public class PlayerAI extends PlayableAI
 	}
 	
 	@Override
-	protected void onEvtThink()
+	public void onEvtThink()
 	{
 		if (_thinking && (getIntention() != AI_INTENTION_CAST))
 		{

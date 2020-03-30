@@ -63,6 +63,7 @@ import org.l2jmobius.gameserver.model.skills.AbnormalVisualEffect;
 import org.l2jmobius.gameserver.model.skills.Skill;
 import org.l2jmobius.gameserver.model.skills.targets.TargetType;
 import org.l2jmobius.gameserver.model.zone.ZoneId;
+import org.l2jmobius.gameserver.taskmanager.AttackableThinkTaskManager;
 import org.l2jmobius.gameserver.util.Util;
 
 /**
@@ -71,8 +72,6 @@ import org.l2jmobius.gameserver.util.Util;
  */
 public class AttackableAI extends CreatureAI
 {
-	// private static final Logger LOGGER = Logger.getLogger(AttackableAI.class.getName());
-	
 	/**
 	 * Fear task.
 	 * @author Zoey76
@@ -105,10 +104,7 @@ public class AttackableAI extends CreatureAI
 	
 	protected static final int FEAR_TICKS = 5;
 	private static final int RANDOM_WALK_RATE = 30; // confirmed
-	// private static final int MAX_DRIFT_RANGE = 300;
 	private static final int MAX_ATTACK_TIMEOUT = 1200; // int ticks, i.e. 2min
-	/** The Attackable AI task executed every 1s (call onEvtThink method). */
-	private Future<?> _aiTask;
 	/** The delay after which the attacked is stopped. */
 	private int _attackTimeout;
 	/** The Attackable aggro counter. */
@@ -316,21 +312,13 @@ public class AttackableAI extends CreatureAI
 	
 	public void startAITask()
 	{
-		// If not idle - create an AI task (schedule onEvtThink repeatedly)
-		if (_aiTask == null)
-		{
-			_aiTask = ThreadPool.scheduleAtFixedRate(this::onEvtThink, 1000, 1000);
-		}
+		AttackableThinkTaskManager.getInstance().add(getActiveChar());
 	}
 	
 	@Override
 	public void stopAITask()
 	{
-		if (_aiTask != null)
-		{
-			_aiTask.cancel(false);
-			_aiTask = null;
-		}
+		AttackableThinkTaskManager.getInstance().remove(getActiveChar());
 		super.stopAITask();
 	}
 	
@@ -2235,7 +2223,7 @@ public class AttackableAI extends CreatureAI
 	 * Manage AI thinking actions of a Attackable.
 	 */
 	@Override
-	protected void onEvtThink()
+	public void onEvtThink()
 	{
 		// Check if the actor can't use skills and if a thinking action isn't already in progress
 		if (_thinking || getActiveChar().isAllSkillsDisabled())

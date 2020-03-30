@@ -78,7 +78,7 @@ public class NpcWalkerAI extends CreatureAI implements Runnable
 	}
 	
 	@Override
-	protected void onEvtThink()
+	public void onEvtThink()
 	{
 		if (!Config.ALLOW_NPC_WALKERS)
 		{
@@ -104,7 +104,7 @@ public class NpcWalkerAI extends CreatureAI implements Runnable
 	@Override
 	protected void onEvtArrivedBlocked(Location location)
 	{
-		LOGGER.warning("NpcWalker ID: " + getActor().getNpcId() + ": Blocked at rote position [" + _currentPos + "], coords: " + location.getX() + ", " + location.getY() + ", " + location.getZ() + ". Teleporting to next point");
+		// LOGGER.warning("NpcWalker ID: " + getActor().getNpcId() + ": Blocked at rote position [" + _currentPos + "], coords: " + location.getX() + ", " + location.getY() + ", " + location.getZ() + ". Teleporting to next point");
 		
 		if (_route.size() <= _currentPos)
 		{
@@ -141,7 +141,7 @@ public class NpcWalkerAI extends CreatureAI implements Runnable
 				}
 				catch (ArrayIndexOutOfBoundsException e)
 				{
-					LOGGER.info("NpcWalkerInstance: Error, " + e);
+					// LOGGER.info("NpcWalkerInstance: Error, " + e);
 				}
 			}
 			

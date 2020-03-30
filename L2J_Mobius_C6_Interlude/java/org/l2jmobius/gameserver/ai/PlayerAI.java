@@ -292,7 +292,7 @@ public class PlayerAI extends CreatureAI
 	}
 	
 	@Override
-	protected void onEvtThink()
+	public void onEvtThink()
 	{
 		if (_thinking || _actor.isAllSkillsDisabled())
 		{

@@ -71,7 +71,7 @@ public class ControllableMobAI extends AttackableAI
 	}
 	
 	@Override
-	protected void onEvtThink()
+	public void onEvtThink()
 	{
 		if (_isThinking)
 		{

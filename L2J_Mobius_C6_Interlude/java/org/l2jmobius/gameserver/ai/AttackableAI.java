@@ -20,10 +20,7 @@ import static org.l2jmobius.gameserver.ai.CtrlIntention.AI_INTENTION_ACTIVE;
 import static org.l2jmobius.gameserver.ai.CtrlIntention.AI_INTENTION_ATTACK;
 import static org.l2jmobius.gameserver.ai.CtrlIntention.AI_INTENTION_IDLE;
 
-import java.util.concurrent.Future;
-
 import org.l2jmobius.Config;
-import org.l2jmobius.commons.concurrent.ThreadPool;
 import org.l2jmobius.commons.util.Rnd;
 import org.l2jmobius.gameserver.GameTimeController;
 import org.l2jmobius.gameserver.datatables.sql.TerritoryTable;
@@ -56,6 +53,7 @@ import org.l2jmobius.gameserver.model.items.type.WeaponType;
 import org.l2jmobius.gameserver.model.quest.EventType;
 import org.l2jmobius.gameserver.model.quest.Quest;
 import org.l2jmobius.gameserver.model.spawn.Spawn;
+import org.l2jmobius.gameserver.taskmanager.AttackableThinkTaskManager;
 
 /**
  * This class manages AI of Attackable.
@@ -65,11 +63,7 @@ public class AttackableAI extends CreatureAI
 	// protected static final Logger LOGGER = Logger.getLogger(AttackableAI.class);
 	
 	private static final int RANDOM_WALK_RATE = 30; // confirmed
-	// private static final int MAX_DRIFT_RANGE = 300;
 	private static final int MAX_ATTACK_TIMEOUT = 300; // int ticks, i.e. 30 seconds
-	
-	/** The Attackable AI task executed every 1s (call onEvtThink method) */
-	private Future<?> _aiTask;
 	
 	/** The delay after wich the attacked is stopped */
 	private int _attackTimeout;
@@ -129,7 +123,7 @@ public class AttackableAI extends CreatureAI
 			return false;
 		}
 		
-		final Attackable me = (Attackable) _actor;
+		final Attackable me = getActiveChar();
 		
 		// Check if the target isn't invulnerable
 		if (target.isInvul())
@@ -293,20 +287,12 @@ public class AttackableAI extends CreatureAI
 	
 	public synchronized void startAITask()
 	{
-		// If not idle - create an AI task (schedule onEvtThink repeatedly)
-		if (_aiTask == null)
-		{
-			_aiTask = ThreadPool.scheduleAtFixedRate(this::onEvtThink, 1000, 1000);
-		}
+		AttackableThinkTaskManager.getInstance().add(getActiveChar());
 	}
 	
 	public synchronized void stopAITask()
 	{
-		if (_aiTask != null)
-		{
-			_aiTask.cancel(false);
-			_aiTask = null;
-		}
+		AttackableThinkTaskManager.getInstance().remove(getActiveChar());
 	}
 	
 	@Override
@@ -331,7 +317,7 @@ public class AttackableAI extends CreatureAI
 			// Check if actor is not dead
 			if (!_actor.isAlikeDead())
 			{
-				final Attackable npc = (Attackable) _actor;
+				final Attackable npc = getActiveChar();
 				
 				// If its _knownPlayer isn't empty set the Intention to AI_INTENTION_ACTIVE
 				if (npc.getKnownList().getKnownPlayers().size() > 0)
@@ -387,7 +373,7 @@ public class AttackableAI extends CreatureAI
 	 */
 	private void thinkActive()
 	{
-		final Attackable npc = (Attackable) _actor;
+		final Attackable npc = getActiveChar();
 		
 		// Update every 1s the _globalAggro counter to come close to 0
 		if (_globalAggro != 0)
@@ -687,7 +673,7 @@ public class AttackableAI extends CreatureAI
 			// Stop hating this target after the attack timeout or if target is dead
 			if (originalAttackTarget != null)
 			{
-				((Attackable) _actor).stopHating(originalAttackTarget);
+				(getActiveChar()).stopHating(originalAttackTarget);
 			}
 			
 			// Set the AI Intention to AI_INTENTION_ACTIVE
@@ -860,7 +846,7 @@ public class AttackableAI extends CreatureAI
 		}
 		else
 		{
-			hated = ((Attackable) _actor).getMostHated();
+			hated = (getActiveChar()).getMostHated();
 		}
 		
 		if (hated == null)
@@ -1010,7 +996,7 @@ public class AttackableAI extends CreatureAI
 	 * Manage AI thinking actions of a Attackable.
 	 */
 	@Override
-	protected void onEvtThink()
+	public void onEvtThink()
 	{
 		// Check if the actor can't use skills and if a thinking action isn't already in progress
 		if (_thinking || _actor.isAllSkillsDisabled())
@@ -1062,7 +1048,7 @@ public class AttackableAI extends CreatureAI
 		}
 		
 		// Add the attacker to the _aggroList of the actor
-		((Attackable) _actor).addDamageHate(attacker, 0, 1);
+		(getActiveChar()).addDamageHate(attacker, 0, 1);
 		
 		// Set the Creature movement type to run and send Server->Client packet ChangeMoveType to all others PlayerInstance
 		if (!_actor.isRunning())
@@ -1077,7 +1063,7 @@ public class AttackableAI extends CreatureAI
 			{
 				setIntention(AI_INTENTION_ATTACK, attacker);
 			}
-			else if (((Attackable) _actor).getMostHated() != getAttackTarget())
+			else if ((getActiveChar()).getMostHated() != getAttackTarget())
 			{
 				setIntention(AI_INTENTION_ATTACK, attacker);
 			}
@@ -1098,7 +1084,7 @@ public class AttackableAI extends CreatureAI
 	@Override
 	protected void onEvtAggression(Creature target, int aggro)
 	{
-		final Attackable me = (Attackable) _actor;
+		final Attackable me = getActiveChar();
 		
 		// To avoid lag issue
 		if (me.isDead())
@@ -1139,5 +1125,10 @@ public class AttackableAI extends CreatureAI
 	public void setGlobalAggro(int value)
 	{
 		_globalAggro = value;
+	}
+	
+	public Attackable getActiveChar()
+	{
+		return (Attackable) _actor;
 	}
 }

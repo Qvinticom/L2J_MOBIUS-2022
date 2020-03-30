@@ -819,7 +819,7 @@ public class FortSiegeGuardAI extends CreatureAI implements Runnable
 	 * Manage AI thinking actions of a Attackable.
 	 */
 	@Override
-	protected void onEvtThink()
+	public void onEvtThink()
 	{
 		// if(getIntention() != AI_INTENTION_IDLE && (!_actor.isVisible() || !_actor.hasAI() || !_actor.isKnownPlayers()))
 		// setIntention(AI_INTENTION_IDLE);

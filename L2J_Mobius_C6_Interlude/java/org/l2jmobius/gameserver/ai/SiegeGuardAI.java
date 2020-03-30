@@ -629,7 +629,7 @@ public class SiegeGuardAI extends CreatureAI implements Runnable
 	 * Manage AI thinking actions of a Attackable.
 	 */
 	@Override
-	protected void onEvtThink()
+	public void onEvtThink()
 	{
 		// Check if the actor can't use skills and if a thinking action isn't already in progress
 		if (_thinking || _actor.isAllSkillsDisabled())

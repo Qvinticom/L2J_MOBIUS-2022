@@ -20,10 +20,6 @@ import static org.l2jmobius.gameserver.ai.CtrlIntention.AI_INTENTION_ATTACK;
 import static org.l2jmobius.gameserver.ai.CtrlIntention.AI_INTENTION_FOLLOW;
 import static org.l2jmobius.gameserver.ai.CtrlIntention.AI_INTENTION_IDLE;
 
-import java.util.concurrent.Future;
-import java.util.logging.Logger;
-
-import org.l2jmobius.commons.concurrent.ThreadPool;
 import org.l2jmobius.gameserver.GameTimeController;
 import org.l2jmobius.gameserver.model.Location;
 import org.l2jmobius.gameserver.model.Skill;
@@ -44,6 +40,7 @@ import org.l2jmobius.gameserver.network.serverpackets.MoveToPawn;
 import org.l2jmobius.gameserver.network.serverpackets.StopMove;
 import org.l2jmobius.gameserver.network.serverpackets.StopRotation;
 import org.l2jmobius.gameserver.taskmanager.AttackStanceTaskManager;
+import org.l2jmobius.gameserver.taskmanager.CreatureFollowTaskManager;
 
 /**
  * Mother class of all objects AI in the world.<br>
@@ -53,56 +50,6 @@ import org.l2jmobius.gameserver.taskmanager.AttackStanceTaskManager;
  */
 abstract class AbstractAI implements Ctrl
 {
-	protected static final Logger LOGGER = Logger.getLogger(AbstractAI.class.getName());
-	
-	class FollowTask implements Runnable
-	{
-		protected int _range = 60;
-		protected boolean newtask = true;
-		
-		public FollowTask()
-		{
-			// null
-		}
-		
-		public FollowTask(int range)
-		{
-			_range = range;
-		}
-		
-		@Override
-		public void run()
-		{
-			try
-			{
-				if (_followTask == null)
-				{
-					return;
-				}
-				
-				final Creature follow = getFollowTarget();
-				if (follow == null)
-				{
-					stopFollow();
-					return;
-				}
-				if (!_actor.isInsideRadius(follow, _range, true, false))
-				{
-					moveToPawn(follow, _range);
-				}
-				else if (newtask)
-				{
-					newtask = false;
-					_actor.broadcastPacket(new MoveToPawn(_actor, follow, _range));
-				}
-			}
-			catch (Throwable t)
-			{
-				LOGGER.warning(t.getMessage());
-			}
-		}
-	}
-	
 	/** The creature that this AI manages */
 	protected final Creature _actor;
 	
@@ -131,10 +78,6 @@ abstract class AbstractAI implements Ctrl
 	
 	/** Diferent internal state flags */
 	private int _moveToPawnTimeout;
-	
-	protected Future<?> _followTask = null;
-	private static final int FOLLOW_INTERVAL = 1000;
-	private static final int ATTACK_FOLLOW_INTERVAL = 500;
 	
 	/**
 	 * Constructor of AbstractAI.
@@ -770,15 +713,7 @@ abstract class AbstractAI implements Ctrl
 	 */
 	public synchronized void startFollow(Creature target)
 	{
-		if (_followTask != null)
-		{
-			_followTask.cancel(false);
-			_followTask = null;
-		}
-		
-		// Create and Launch an AI Follow Task to execute every 1s
-		_followTarget = target;
-		_followTask = ThreadPool.scheduleAtFixedRate(new FollowTask(), 5, FOLLOW_INTERVAL);
+		startFollow(target, -1);
 	}
 	
 	/**
@@ -788,14 +723,16 @@ abstract class AbstractAI implements Ctrl
 	 */
 	public synchronized void startFollow(Creature target, int range)
 	{
-		if (_followTask != null)
-		{
-			_followTask.cancel(false);
-			_followTask = null;
-		}
-		
+		stopFollow();
 		_followTarget = target;
-		_followTask = ThreadPool.scheduleAtFixedRate(new FollowTask(range), 5, ATTACK_FOLLOW_INTERVAL);
+		if (range == -1)
+		{
+			CreatureFollowTaskManager.getInstance().addNormalFollow(_actor, range);
+		}
+		else
+		{
+			CreatureFollowTaskManager.getInstance().addAttackFollow(_actor, range);
+		}
 	}
 	
 	/**
@@ -803,12 +740,7 @@ abstract class AbstractAI implements Ctrl
 	 */
 	public synchronized void stopFollow()
 	{
-		if (_followTask != null)
-		{
-			// Stop the Follow Task
-			_followTask.cancel(false);
-			_followTask = null;
-		}
+		CreatureFollowTaskManager.getInstance().remove(_actor);
 		_followTarget = null;
 	}
 	

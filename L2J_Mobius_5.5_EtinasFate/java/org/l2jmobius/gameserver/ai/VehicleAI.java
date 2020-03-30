@@ -112,7 +112,7 @@ public abstract class VehicleAI extends CreatureAI
 	}
 	
 	@Override
-	protected void moveToPawn(WorldObject pawn, int offset)
+	public void moveToPawn(WorldObject pawn, int offset)
 	{
 	}
 	

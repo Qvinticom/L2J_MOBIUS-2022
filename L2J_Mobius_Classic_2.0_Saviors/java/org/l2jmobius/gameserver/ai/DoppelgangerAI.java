@@ -119,7 +119,7 @@ public class DoppelgangerAI extends CreatureAI
 	}
 	
 	@Override
-	protected void onEvtThink()
+	public void onEvtThink()
 	{
 		if (_thinking || _actor.isCastingNow() || _actor.isAllSkillsDisabled())
 		{
@@ -203,7 +203,7 @@ public class DoppelgangerAI extends CreatureAI
 	}
 	
 	@Override
-	protected void moveToPawn(WorldObject pawn, int offset)
+	public void moveToPawn(WorldObject pawn, int offset)
 	{
 		// Check if actor can move
 		if (!_actor.isMovementDisabled() && (_actor.getMoveSpeed() > 0))

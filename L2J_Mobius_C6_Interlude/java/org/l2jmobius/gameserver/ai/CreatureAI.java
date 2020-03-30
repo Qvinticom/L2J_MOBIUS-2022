@@ -537,7 +537,7 @@ public class CreatureAI extends AbstractAI
 	 * Do nothing.
 	 */
 	@Override
-	protected void onEvtThink()
+	public void onEvtThink()
 	{
 		// do nothing
 	}
@@ -934,7 +934,7 @@ public class CreatureAI extends AbstractAI
 		// Get the distance between the current position of the Creature and the target (x,y)
 		if (target == null)
 		{
-			LOGGER.warning("maybeMoveToPawn: target == NULL!");
+			// LOGGER.warning("maybeMoveToPawn: target == NULL!");
 			return false;
 		}
 		

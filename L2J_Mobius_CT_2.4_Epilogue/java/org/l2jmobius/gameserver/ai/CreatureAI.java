@@ -428,7 +428,7 @@ public class CreatureAI extends AbstractAI
 		setTarget(object);
 		if ((object.getX() == 0) && (object.getY() == 0))
 		{
-			LOGGER.warning("Object in coords 0,0 - using a temporary fix");
+			// LOGGER.warning("Object in coords 0,0 - using a temporary fix");
 			object.setXYZ(getActor().getX(), getActor().getY(), getActor().getZ() + 5);
 		}
 		
@@ -479,7 +479,7 @@ public class CreatureAI extends AbstractAI
 	 * Do nothing.
 	 */
 	@Override
-	protected void onEvtThink()
+	public void onEvtThink()
 	{
 		// do nothing
 	}
@@ -932,7 +932,7 @@ public class CreatureAI extends AbstractAI
 	{
 		if (worldPosition == null)
 		{
-			LOGGER.warning("maybeMoveToPosition: worldPosition == NULL!");
+			// LOGGER.warning("maybeMoveToPosition: worldPosition == NULL!");
 			return false;
 		}
 		
@@ -1002,7 +1002,7 @@ public class CreatureAI extends AbstractAI
 		// Get the distance between the current position of the Creature and the target (x,y)
 		if (target == null)
 		{
-			LOGGER.warning("maybeMoveToPawn: target == NULL!");
+			// LOGGER.warning("maybeMoveToPawn: target == NULL!");
 			return false;
 		}
 		if (offset < 0)

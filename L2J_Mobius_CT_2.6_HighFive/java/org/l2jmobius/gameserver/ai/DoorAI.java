@@ -82,7 +82,7 @@ public class DoorAI extends CreatureAI
 	}
 	
 	@Override
-	protected void onEvtThink()
+	public void onEvtThink()
 	{
 	}
 	
