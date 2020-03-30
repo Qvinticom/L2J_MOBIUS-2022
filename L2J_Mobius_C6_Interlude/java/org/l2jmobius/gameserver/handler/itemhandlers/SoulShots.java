@@ -87,43 +87,35 @@ public class SoulShots implements IItemHandler
 			return;
 		}
 		
-		player.soulShotLock.lock();
-		try
+		// Check if Soulshot is already active
+		if (weaponInst.getChargedSoulshot() != ItemInstance.CHARGED_NONE)
 		{
-			// Check if Soulshot is already active
-			if (weaponInst.getChargedSoulshot() != ItemInstance.CHARGED_NONE)
-			{
-				return;
-			}
-			
-			// Consume Soulshots if player has enough of them
-			final int saSSCount = (int) player.getStat().calcStat(Stat.SOULSHOT_COUNT, 0, null, null);
-			final int SSCount = saSSCount == 0 ? weaponItem.getSoulShotCount() : saSSCount;
-			if (!Config.DONT_DESTROY_SS && !player.destroyItemWithoutTrace("Consume", item.getObjectId(), SSCount, null, false))
-			{
-				if (player.getAutoSoulShot().containsKey(itemId))
-				{
-					player.removeAutoSoulShot(itemId);
-					player.sendPacket(new ExAutoSoulShot(itemId, 0));
-					
-					final SystemMessage sm = new SystemMessage(SystemMessageId.THE_AUTOMATIC_USE_OF_S1_HAS_BEEN_DEACTIVATED);
-					sm.addString(item.getItem().getName());
-					player.sendPacket(sm);
-				}
-				else
-				{
-					player.sendPacket(SystemMessageId.YOU_DO_NOT_HAVE_ENOUGH_SOULSHOTS_FOR_THAT);
-				}
-				return;
-			}
-			
-			// Charge soulshot
-			weaponInst.setChargedSoulshot(ItemInstance.CHARGED_SOULSHOT);
+			return;
 		}
-		finally
+		
+		// Consume Soulshots if player has enough of them
+		final int saSSCount = (int) player.getStat().calcStat(Stat.SOULSHOT_COUNT, 0, null, null);
+		final int SSCount = saSSCount == 0 ? weaponItem.getSoulShotCount() : saSSCount;
+		if (!Config.DONT_DESTROY_SS && !player.destroyItemWithoutTrace("Consume", item.getObjectId(), SSCount, null, false))
 		{
-			player.soulShotLock.unlock();
+			if (player.getAutoSoulShot().containsKey(itemId))
+			{
+				player.removeAutoSoulShot(itemId);
+				player.sendPacket(new ExAutoSoulShot(itemId, 0));
+				
+				final SystemMessage sm = new SystemMessage(SystemMessageId.THE_AUTOMATIC_USE_OF_S1_HAS_BEEN_DEACTIVATED);
+				sm.addString(item.getItem().getName());
+				player.sendPacket(sm);
+			}
+			else
+			{
+				player.sendPacket(SystemMessageId.YOU_DO_NOT_HAVE_ENOUGH_SOULSHOTS_FOR_THAT);
+			}
+			return;
 		}
+		
+		// Charge soulshot
+		weaponInst.setChargedSoulshot(ItemInstance.CHARGED_SOULSHOT);
 		
 		// Send message to client
 		player.sendPacket(SystemMessageId.POWER_OF_THE_SPIRITS_ENABLED);

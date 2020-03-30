@@ -78,37 +78,30 @@ public class BlessedSoulShots implements IItemHandler
 			return false;
 		}
 		
-		player.soulShotLock.lock();
-		try
+		// Check if Soul shot is already active
+		if (player.isChargedShot(ShotType.BLESSED_SOULSHOTS))
 		{
-			// Check if Soul shot is already active
-			if (player.isChargedShot(ShotType.BLESSED_SOULSHOTS))
-			{
-				return false;
-			}
-			
-			// Consume Soul shots if player has enough of them
-			int ssCount = weaponItem.getSoulShotCount();
-			if ((weaponItem.getReducedSoulShot() > 0) && (Rnd.get(100) < weaponItem.getReducedSoulShotChance()))
-			{
-				ssCount = weaponItem.getReducedSoulShot();
-			}
-			
-			if (!player.destroyItemWithoutTrace("Consume", item.getObjectId(), ssCount, null, false))
-			{
-				if (!player.disableAutoShot(itemId))
-				{
-					player.sendPacket(SystemMessageId.YOU_DO_NOT_HAVE_ENOUGH_SOULSHOTS_FOR_THAT);
-				}
-				return false;
-			}
-			// Charge soul shot
-			player.chargeShot(ShotType.BLESSED_SOULSHOTS);
+			return false;
 		}
-		finally
+		
+		// Consume Soul shots if player has enough of them
+		int ssCount = weaponItem.getSoulShotCount();
+		if ((weaponItem.getReducedSoulShot() > 0) && (Rnd.get(100) < weaponItem.getReducedSoulShotChance()))
 		{
-			player.soulShotLock.unlock();
+			ssCount = weaponItem.getReducedSoulShot();
 		}
+		
+		if (!player.destroyItemWithoutTrace("Consume", item.getObjectId(), ssCount, null, false))
+		{
+			if (!player.disableAutoShot(itemId))
+			{
+				player.sendPacket(SystemMessageId.YOU_DO_NOT_HAVE_ENOUGH_SOULSHOTS_FOR_THAT);
+			}
+			return false;
+		}
+		
+		// Charge soul shot
+		player.chargeShot(ShotType.BLESSED_SOULSHOTS);
 		
 		// Send message to client
 		if (!player.getAutoSoulShot().contains(item.getId()))

@@ -40,7 +40,6 @@ import java.util.concurrent.Future;
 import java.util.concurrent.ScheduledFuture;
 import java.util.concurrent.TimeUnit;
 import java.util.concurrent.atomic.AtomicInteger;
-import java.util.concurrent.locks.ReentrantLock;
 import java.util.logging.Level;
 import java.util.stream.Collectors;
 
@@ -427,7 +426,7 @@ public class PlayerInstance extends Playable
 	private long _lastAccess;
 	private long _uptime;
 	
-	private final ReentrantLock _subclassLock = new ReentrantLock();
+	private boolean _subclassLock = false;
 	protected int _baseClass;
 	protected int _activeClass;
 	protected int _classIndex = 0;
@@ -708,8 +707,6 @@ public class PlayerInstance extends Playable
 	/** Active Brooch Jewels **/
 	private BroochJewel _activeRubyJewel = null;
 	private BroochJewel _activeShappireJewel = null;
-	
-	public ReentrantLock soulShotLock = new ReentrantLock();
 	
 	/** Event parameters */
 	private PlayerEventHolder eventStatus = null;
@@ -2357,10 +2354,11 @@ public class PlayerInstance extends Playable
 	 */
 	public void setClassId(int id)
 	{
-		if (!_subclassLock.tryLock())
+		if (_subclassLock)
 		{
 			return;
 		}
+		_subclassLock = true;
 		
 		try
 		{
@@ -2441,7 +2439,7 @@ public class PlayerInstance extends Playable
 		}
 		finally
 		{
-			_subclassLock.unlock();
+			_subclassLock = false;
 		}
 	}
 	
@@ -9459,10 +9457,11 @@ public class PlayerInstance extends Playable
 	 */
 	public boolean addSubClass(int classId, int classIndex, boolean isDualClass)
 	{
-		if (!_subclassLock.tryLock())
+		if (_subclassLock)
 		{
 			return false;
 		}
+		_subclassLock = true;
 		
 		try
 		{
@@ -9534,7 +9533,7 @@ public class PlayerInstance extends Playable
 		}
 		finally
 		{
-			_subclassLock.unlock();
+			_subclassLock = false;
 		}
 	}
 	
@@ -9549,10 +9548,11 @@ public class PlayerInstance extends Playable
 	 */
 	public boolean modifySubClass(int classIndex, int newClassId, boolean isDualClass)
 	{
-		if (!_subclassLock.tryLock())
+		if (_subclassLock)
 		{
 			return false;
 		}
+		_subclassLock = true;
 		
 		try
 		{
@@ -9628,7 +9628,7 @@ public class PlayerInstance extends Playable
 		}
 		finally
 		{
-			_subclassLock.unlock();
+			_subclassLock = false;
 		}
 		
 		return addSubClass(newClassId, classIndex, isDualClass);
@@ -9735,10 +9735,11 @@ public class PlayerInstance extends Playable
 	 */
 	public void setActiveClass(int classIndex)
 	{
-		if (!_subclassLock.tryLock())
+		if (_subclassLock)
 		{
 			return;
 		}
+		_subclassLock = true;
 		
 		try
 		{
@@ -9882,13 +9883,13 @@ public class PlayerInstance extends Playable
 		}
 		finally
 		{
-			_subclassLock.unlock();
+			_subclassLock = false;
 		}
 	}
 	
 	public boolean isSubclassLocked()
 	{
-		return _subclassLock.isLocked();
+		return _subclassLock;
 	}
 	
 	public void stopWarnUserTakeBreak()

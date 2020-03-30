@@ -409,7 +409,7 @@ public class PlayerInstance extends Playable
 	private long _lastAccess;
 	private long _uptime;
 	
-	private final ReentrantLock _subclassLock = new ReentrantLock();
+	private boolean _subclassLock = false;
 	protected int _baseClass;
 	protected int _activeClass;
 	protected int _classIndex = 0;
@@ -2353,10 +2353,11 @@ public class PlayerInstance extends Playable
 	 */
 	public void setClassId(int id)
 	{
-		if (!_subclassLock.tryLock())
+		if (_subclassLock)
 		{
 			return;
 		}
+		_subclassLock = true;
 		
 		try
 		{
@@ -2433,7 +2434,7 @@ public class PlayerInstance extends Playable
 		}
 		finally
 		{
-			_subclassLock.unlock();
+			_subclassLock = false;
 		}
 	}
 	
@@ -8334,7 +8335,7 @@ public class PlayerInstance extends Playable
 	
 	public boolean canLogout()
 	{
-		if (_subclassLock.isLocked())
+		if (_subclassLock)
 		{
 			LOGGER.warning("Player " + getName() + " tried to restart/logout during class change.");
 			return false;
@@ -10084,10 +10085,11 @@ public class PlayerInstance extends Playable
 	 */
 	public boolean addSubClass(int classId, int classIndex)
 	{
-		if (!_subclassLock.tryLock())
+		if (_subclassLock)
 		{
 			return false;
 		}
+		_subclassLock = true;
 		
 		try
 		{
@@ -10150,7 +10152,7 @@ public class PlayerInstance extends Playable
 		}
 		finally
 		{
-			_subclassLock.unlock();
+			_subclassLock = false;
 		}
 	}
 	
@@ -10164,10 +10166,11 @@ public class PlayerInstance extends Playable
 	 */
 	public boolean modifySubClass(int classIndex, int newClassId)
 	{
-		if (!_subclassLock.tryLock())
+		if (_subclassLock)
 		{
 			return false;
 		}
+		_subclassLock = true;
 		
 		try
 		{
@@ -10223,7 +10226,7 @@ public class PlayerInstance extends Playable
 		}
 		finally
 		{
-			_subclassLock.unlock();
+			_subclassLock = false;
 		}
 		
 		return addSubClass(newClassId, classIndex);
@@ -10284,10 +10287,11 @@ public class PlayerInstance extends Playable
 	 */
 	public void setActiveClass(int classIndex)
 	{
-		if (!_subclassLock.tryLock())
+		if (_subclassLock)
 		{
 			return;
 		}
+		_subclassLock = true;
 		
 		try
 		{
@@ -10436,13 +10440,13 @@ public class PlayerInstance extends Playable
 		}
 		finally
 		{
-			_subclassLock.unlock();
+			_subclassLock = false;
 		}
 	}
 	
 	public boolean isLocked()
 	{
-		return _subclassLock.isLocked();
+		return _subclassLock;
 	}
 	
 	public void stopWarnUserTakeBreak()
@@ -13175,7 +13179,7 @@ public class PlayerInstance extends Playable
 	
 	public boolean isAllowedToEnchantSkills()
 	{
-		if (_subclassLock.isLocked())
+		if (_subclassLock)
 		{
 			return false;
 		}

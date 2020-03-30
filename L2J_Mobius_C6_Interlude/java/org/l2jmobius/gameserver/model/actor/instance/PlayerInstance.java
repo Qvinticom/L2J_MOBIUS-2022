@@ -34,7 +34,6 @@ import java.util.concurrent.ConcurrentHashMap;
 import java.util.concurrent.Future;
 import java.util.concurrent.ScheduledFuture;
 import java.util.concurrent.TimeUnit;
-import java.util.concurrent.locks.ReentrantLock;
 
 import org.l2jmobius.Config;
 import org.l2jmobius.commons.concurrent.ThreadPool;
@@ -455,7 +454,6 @@ public class PlayerInstance extends Playable
 	protected boolean _inventoryDisable = false;
 	protected Map<Integer, CubicInstance> _cubics = new ConcurrentHashMap<>();
 	protected Map<Integer, Integer> _activeSoulShots = new ConcurrentHashMap<>();
-	public ReentrantLock soulShotLock = new ReentrantLock();
 	public Quest dialog = null;
 	private final int[] _loto = new int[5];
 	private final int[] _race = new int[2];
