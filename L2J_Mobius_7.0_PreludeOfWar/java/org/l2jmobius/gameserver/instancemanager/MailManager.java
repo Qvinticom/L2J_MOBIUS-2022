@@ -29,16 +29,15 @@ import java.util.concurrent.ConcurrentHashMap;
 import java.util.logging.Level;
 import java.util.logging.Logger;
 
-import org.l2jmobius.commons.concurrent.ThreadPool;
 import org.l2jmobius.commons.database.DatabaseFactory;
 import org.l2jmobius.gameserver.enums.MailType;
 import org.l2jmobius.gameserver.idfactory.IdFactory;
-import org.l2jmobius.gameserver.instancemanager.tasks.MessageDeletionTask;
 import org.l2jmobius.gameserver.model.World;
 import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
 import org.l2jmobius.gameserver.model.entity.Message;
 import org.l2jmobius.gameserver.network.serverpackets.ExNoticePostArrived;
 import org.l2jmobius.gameserver.network.serverpackets.ExUnReadMailCount;
+import org.l2jmobius.gameserver.taskmanager.MessageDeletionTaskManager;
 
 /**
  * @author Migi, DS
@@ -63,21 +62,11 @@ public class MailManager
 		{
 			while (rs.next())
 			{
+				count++;
 				final Message msg = new Message(rs);
 				final int msgId = msg.getId();
 				_messages.put(msgId, msg);
-				
-				count++;
-				
-				final long expiration = msg.getExpiration();
-				if (expiration < System.currentTimeMillis())
-				{
-					ThreadPool.schedule(new MessageDeletionTask(msgId), 10000);
-				}
-				else
-				{
-					ThreadPool.schedule(new MessageDeletionTask(msgId), expiration - System.currentTimeMillis());
-				}
+				MessageDeletionTaskManager.getInstance().add(msgId, msg.getExpiration());
 			}
 		}
 		catch (SQLException e)
@@ -207,7 +196,7 @@ public class MailManager
 			receiver.sendPacket(new ExUnReadMailCount(receiver));
 		}
 		
-		ThreadPool.schedule(new MessageDeletionTask(msg.getId()), msg.getExpiration() - System.currentTimeMillis());
+		MessageDeletionTaskManager.getInstance().add(msg.getId(), msg.getExpiration());
 	}
 	
 	public void markAsReadInDb(int msgId)

@@ -29,14 +29,13 @@ import java.util.concurrent.ConcurrentHashMap;
 import java.util.logging.Level;
 import java.util.logging.Logger;
 
-import org.l2jmobius.commons.concurrent.ThreadPool;
 import org.l2jmobius.commons.database.DatabaseFactory;
 import org.l2jmobius.gameserver.idfactory.IdFactory;
-import org.l2jmobius.gameserver.instancemanager.tasks.MessageDeletionTask;
 import org.l2jmobius.gameserver.model.World;
 import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
 import org.l2jmobius.gameserver.model.entity.Message;
 import org.l2jmobius.gameserver.network.serverpackets.ExNoticePostArrived;
+import org.l2jmobius.gameserver.taskmanager.MessageDeletionTaskManager;
 
 /**
  * @author Migi, DS
@@ -61,28 +60,18 @@ public class MailManager
 		{
 			while (rs.next())
 			{
+				count++;
 				final Message msg = new Message(rs);
 				final int msgId = msg.getId();
 				_messages.put(msgId, msg);
-				
-				count++;
-				
-				final long expiration = msg.getExpiration();
-				if (expiration < System.currentTimeMillis())
-				{
-					ThreadPool.schedule(new MessageDeletionTask(msgId), 10000);
-				}
-				else
-				{
-					ThreadPool.schedule(new MessageDeletionTask(msgId), expiration - System.currentTimeMillis());
-				}
+				MessageDeletionTaskManager.getInstance().add(msgId, msg.getExpiration());
 			}
 		}
 		catch (SQLException e)
 		{
-			LOGGER.log(Level.WARNING, getClass().getSimpleName() + ": Error loading from database:" + e.getMessage(), e);
+			LOGGER.log(Level.WARNING, getClass().getSimpleName() + ": Error loading from database:", e);
 		}
-		LOGGER.info(getClass().getSimpleName() + ": Successfully loaded " + count + " messages.");
+		LOGGER.info(getClass().getSimpleName() + ": Loaded " + count + " messages.");
 	}
 	
 	public Message getMessage(int msgId)
@@ -170,7 +159,7 @@ public class MailManager
 		}
 		catch (SQLException e)
 		{
-			LOGGER.log(Level.WARNING, getClass().getSimpleName() + ": Error saving message:" + e.getMessage(), e);
+			LOGGER.log(Level.WARNING, getClass().getSimpleName() + ": Error saving message:", e);
 		}
 		
 		final PlayerInstance receiver = World.getInstance().getPlayer(msg.getReceiverId());
@@ -179,7 +168,7 @@ public class MailManager
 			receiver.sendPacket(ExNoticePostArrived.valueOf(true));
 		}
 		
-		ThreadPool.schedule(new MessageDeletionTask(msg.getId()), msg.getExpiration() - System.currentTimeMillis());
+		MessageDeletionTaskManager.getInstance().add(msg.getId(), msg.getExpiration());
 	}
 	
 	public void markAsReadInDb(int msgId)
@@ -192,7 +181,7 @@ public class MailManager
 		}
 		catch (SQLException e)
 		{
-			LOGGER.log(Level.WARNING, getClass().getSimpleName() + ": Error marking as read message:" + e.getMessage(), e);
+			LOGGER.log(Level.WARNING, getClass().getSimpleName() + ": Error marking as read message:", e);
 		}
 	}
 	
@@ -206,7 +195,7 @@ public class MailManager
 		}
 		catch (SQLException e)
 		{
-			LOGGER.log(Level.WARNING, getClass().getSimpleName() + ": Error marking as deleted by sender message:" + e.getMessage(), e);
+			LOGGER.log(Level.WARNING, getClass().getSimpleName() + ": Error marking as deleted by sender message:", e);
 		}
 	}
 	
@@ -220,7 +209,7 @@ public class MailManager
 		}
 		catch (SQLException e)
 		{
-			LOGGER.log(Level.WARNING, getClass().getSimpleName() + ": Error marking as deleted by receiver message:" + e.getMessage(), e);
+			LOGGER.log(Level.WARNING, getClass().getSimpleName() + ": Error marking as deleted by receiver message:", e);
 		}
 	}
 	
@@ -234,7 +223,7 @@ public class MailManager
 		}
 		catch (SQLException e)
 		{
-			LOGGER.log(Level.WARNING, getClass().getSimpleName() + ": Error removing attachments in message:" + e.getMessage(), e);
+			LOGGER.log(Level.WARNING, getClass().getSimpleName() + ": Error removing attachments in message:", e);
 		}
 	}
 	
@@ -248,7 +237,7 @@ public class MailManager
 		}
 		catch (SQLException e)
 		{
-			LOGGER.log(Level.WARNING, getClass().getSimpleName() + ": Error deleting message:" + e.getMessage(), e);
+			LOGGER.log(Level.WARNING, getClass().getSimpleName() + ": Error deleting message:", e);
 		}
 		
 		_messages.remove(msgId);
