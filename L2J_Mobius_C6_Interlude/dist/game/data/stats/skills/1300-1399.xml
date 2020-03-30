@@ -502,8 +502,8 @@
 		<set name="castRange" val="-1"/>
 		<set name="itemConsumeId" val="1785"/> <!-- Soul Ore -->
 		<set name="itemConsumeCount" val="50"/>
-		<set name="create_item_id" val="5592"/> <!-- Greater CP Potion -->
-		<set name="create_item_count" val="20"/>
+		<set name="createItemId" val="5592"/> <!-- Greater CP Potion -->
+		<set name="createItemCount" val="20"/>
 		<set name="isMagic" val="true"/>
 	</skill>
 	<skill id="1325" levels="1" name="Fortune of Noblesse">
@@ -1955,9 +1955,9 @@
 		<set name="castRange" val="-1"/>
 		<set name="itemConsumeId" val="3031"/> <!-- Spirit Ore -->
 		<set name="itemConsumeCount" val="#spiritore"/>
-		<set name="create_item_id" val="2508"/> <!-- Cursed Bone -->
-		<set name="create_item_count" val="#cursed_bones"/>
-		<set name="random_count" val="4"/>
+		<set name="createItemId" val="2508"/> <!-- Cursed Bone -->
+		<set name="createItemCount" val="#cursed_bones"/>
+		<set name="createRandomCount" val="4"/>
 	</skill>
 	<skill id="1388" levels="3" name="Greater Might">
 		<!-- Temporarily increases your target's P. Atk. Consumes 1 Spirit Ore. Effect 1. -->

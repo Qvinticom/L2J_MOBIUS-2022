@@ -703,9 +703,9 @@
 		<set name="reuseDelay" val="1800000"/>
 		<set name="itemConsumeId" val="1461"/> <!-- Crystal: A-Grade -->
 		<set name="itemConsumeCount" val="1"/>
-		<set name="create_item_id" val="1344"/> <!-- Mithril Arrow -->
-		<set name="create_item_count" val="700"/>
-		<set name="random_count" val="4"/>
+		<set name="createItemId" val="1344"/> <!-- Mithril Arrow -->
+		<set name="createItemCount" val="700"/>
+		<set name="createRandomCount" val="4"/>
 	</skill>
 	<skill id="324" levels="1" name="Quiver of Arrow: Grade S">
 		<!-- Summons Summons 900-3600 Shining Arrows. Consumes 1 S-Grade Crystal. -->
@@ -718,9 +718,9 @@
 		<set name="reuseDelay" val="1800000"/>
 		<set name="itemConsumeId" val="1462"/> <!-- Crystal: S Grade -->
 		<set name="itemConsumeCount" val="1"/>
-		<set name="create_item_id" val="1345"/> <!-- Shining Arrow -->
-		<set name="create_item_count" val="900"/>
-		<set name="random_count" val="4"/>
+		<set name="createItemId" val="1345"/> <!-- Shining Arrow -->
+		<set name="createItemCount" val="900"/>
+		<set name="createRandomCount" val="4"/>
 	</skill>
 	<skill id="325" levels="1" name="Strider Siege Assault">
 		<!-- Strider's powerful attack on castle gate and wall. Can only be used while one is riding on a strider. Consumes 5 spirit ores. Power 15005. -->
