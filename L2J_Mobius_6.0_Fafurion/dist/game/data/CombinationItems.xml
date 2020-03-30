@@ -3044,17 +3044,17 @@
 		<reward id="27478" count="1" type="ON_SUCCESS" /> <!-- Tanzanite (Lv. 5) -->
 		<reward id="27477" count="1" type="ON_FAILURE" /> <!-- Tanzanite (Lv. 4) -->
 	</item>
-	<item one="28307" two="28307" chance="33">
-		<reward id="28304" count="1" type="ON_SUCCESS" />
-		<reward id="28307" count="1" type="ON_FAILURE" />
+	<item one="28307" two="28307" chance="33"> <!-- Shilen's Ring Fragment / Shilen's Ring Fragment -->
+		<reward id="28304" count="1" type="ON_SUCCESS" /> <!-- Shilen's Ring -->
+		<reward id="28307" count="1" type="ON_FAILURE" /> <!-- Shilen's Ring Fragment -->
 	</item>
-	<item one="28311" two="28311" chance="33">
-		<reward id="28308" count="1" type="ON_SUCCESS" />
-		<reward id="28311" count="1" type="ON_FAILURE" />
+	<item one="28311" two="28311" chance="33"> <!-- Shilen's Necklace Fragment / Shilen's Necklace Fragment -->
+		<reward id="28308" count="1" type="ON_SUCCESS" /> <!-- Shilen's Necklace -->
+		<reward id="28311" count="1" type="ON_FAILURE" /> <!-- Shilen's Necklace Fragment -->
 	</item>
-	<item one="28315" two="28315" chance="33">
-		<reward id="28312" count="1" type="ON_SUCCESS" />
-		<reward id="28315" count="1" type="ON_FAILURE" />
+	<item one="28315" two="28315" chance="33"> <!-- Shilen's Earring Fragment / Shilen's Earring Fragment -->
+		<reward id="28312" count="1" type="ON_SUCCESS" /> <!-- Shilen's Earring -->
+		<reward id="28315" count="1" type="ON_FAILURE" /><!-- Shilen's Earring Fragment -->
 	</item>
 	<item one="46448" two="46448" chance="25"> <!-- Kain's Soul Crystal - Stage 5 / Kain's Soul Crystal - Stage 5 -->
 		<reward id="46449" count="1" type="ON_SUCCESS" /> <!-- Kain's Soul Crystal - Stage 6 -->
@@ -3192,9 +3192,9 @@
 		<reward id="47700" count="1" type="ON_SUCCESS" /> <!-- Greater Blue Cat's Eye -->
 		<reward id="47700" count="1" type="ON_FAILURE" /> <!-- Greater Blue Cat's Eye -->
 	</item>
-	<item one="26480" two="26480" chance="33">
-		<reward id="47696" count="1" type="ON_SUCCESS" />
-		<reward id="47696" count="1" type="ON_FAILURE" />
+	<item one="26480" two="26480" chance="33"> <!-- Vital Stone (Lv. 5) / Vital Stone (Lv. 5) -->
+		<reward id="47696" count="1" type="ON_SUCCESS" /> <!-- Greater Vital Stone(Lv. 1) -->
+		<reward id="47696" count="1" type="ON_FAILURE" /> <!-- Greater Vital Stone(Lv. 1) -->
 	</item>
 	<item one="26485" two="26485" chance="100"> <!-- Garnet (Lv. 5) / Garnet (Lv. 5) -->
 		<reward id="28379" count="1" type="ON_SUCCESS" /> <!-- Greater Garnet -->
@@ -3416,5 +3416,245 @@
 	<item one="29065" two="29065" chance="40"> <!-- Sayha's Talisman Lv. 9 / Sayha's Talisman Lv. 9 -->
 		<reward id="29066" count="1" type="ON_SUCCESS" /> <!-- Sayha's Talisman Lv. 10 -->
 		<reward id="29065" count="1" type="ON_FAILURE" /> <!-- Sayha's Talisman Lv. 9 -->
-	</item>	
+	</item>
+	<item one="47693" two="48831" chance="40"> <!-- Greater Aquamarine Lv. 1 / Jewel Energy -->
+		<reward id="48791" count="1" type="ON_SUCCESS" /> <!-- Greater Aquamarine Lv. 2 -->
+		<reward id="47693" count="1" type="ON_FAILURE" /> <!-- Greater Aquamarine Lv. 1 -->
+	</item>
+	<item one="48791" two="48831" chance="30"> <!-- Greater Aquamarine Lv. 2 / Jewel Energy -->
+		<reward id="48791" count="1" type="ON_SUCCESS" /> <!-- Greater Aquamarine Lv. 3 -->
+		<reward id="47693" count="1" type="ON_FAILURE" /> <!-- Greater Aquamarine Lv. 1 -->
+	</item>
+	<item one="48792" two="48831" chance="15"> <!-- Greater Aquamarine Lv. 3 / Jewel Energy -->
+		<reward id="48791" count="1" type="ON_SUCCESS" /> <!-- Greater Aquamarine Lv. 4 -->
+		<reward id="47693" count="1" type="ON_FAILURE" /> <!-- Greater Aquamarine Lv. 1 -->
+	</item>
+	<item one="48793" two="48831" chance="10"> <!-- Greater Aquamarine Lv. 4 / Jewel Energy -->
+		<reward id="48794" count="1" type="ON_SUCCESS" /> <!-- Greater Aquamarine Lv. 5 -->
+		<reward id="47693" count="1" type="ON_FAILURE" /> <!-- Greater Aquamarine Lv. 1 -->
+	</item>
+	<item one="28377" two="48831" chance="40"> <!-- Greater Amethyst Lv. 1 / Jewel Energy -->
+		<reward id="29459" count="1" type="ON_SUCCESS" /> <!-- Greater Amethyst Lv. 2 -->
+		<reward id="28377" count="1" type="ON_FAILURE" /> <!-- Greater Amethyst Lv. 1 -->
+	</item>
+	<item one="29459" two="48831" chance="30"> <!-- Greater Amethyst Lv. 2 / Jewel Energy -->
+		<reward id="29460" count="1" type="ON_SUCCESS" /> <!-- Greater Amethyst Lv. 3 -->
+		<reward id="28377" count="1" type="ON_FAILURE" /> <!-- Greater Amethyst Lv. 1 -->
+	</item>
+	<item one="29460" two="48831" chance="15"> <!-- Greater Amethyst Lv. 3 / Jewel Energy -->
+		<reward id="29461" count="1" type="ON_SUCCESS" /> <!-- Greater Amethyst Lv. 4 -->
+		<reward id="28377" count="1" type="ON_FAILURE" /> <!-- Greater Amethyst Lv. 1 -->
+	</item>
+	<item one="29461" two="48831" chance="10"> <!-- Greater Amethyst Lv. 4 / Jewel Energy -->
+		<reward id="29462" count="1" type="ON_SUCCESS" /> <!-- Greater Amethyst Lv. 5 -->
+		<reward id="28377" count="1" type="ON_FAILURE" /> <!-- Greater Amethyst Lv. 1 -->
+	</item>
+	<item one="47700" two="48831" chance="40"> <!-- Greater Blue Cat's Eye Lv. 1 / Jewel Energy -->
+		<reward id="48819" count="1" type="ON_SUCCESS" /> <!-- Greater Blue Cat's Eye Lv. 2 -->
+		<reward id="47700" count="1" type="ON_FAILURE" /> <!-- Greater Blue Cat's Eye Lv. 1 -->
+	</item>
+	<item one="48819" two="48831" chance="30"> <!-- Greater Blue Cat's Eye Lv. 2 / Jewel Energy -->
+		<reward id="48820" count="1" type="ON_SUCCESS" /> <!-- Greater Blue Cat's Eye Lv. 3 -->
+		<reward id="47700" count="1" type="ON_FAILURE" /> <!-- Greater Blue Cat's Eye Lv. 1 -->
+	</item>
+	<item one="48820" two="48831" chance="15"> <!-- Greater Blue Cat's Eye Lv. 3 / Jewel Energy -->
+		<reward id="48821" count="1" type="ON_SUCCESS" /> <!-- Greater Blue Cat's Eye Lv. 4 -->
+		<reward id="47700" count="1" type="ON_FAILURE" /> <!-- Greater Blue Cat's Eye Lv. 1 -->
+	</item>
+	<item one="48821" two="48831" chance="10"> <!-- Greater Blue Cat's Eye Lv. 4 / Jewel Energy -->
+		<reward id="48822" count="1" type="ON_SUCCESS" /> <!-- Greater Blue Cat's Eye Lv. 5 -->
+		<reward id="47700" count="1" type="ON_FAILURE" /> <!-- Greater Blue Cat's Eye Lv. 1 -->
+	</item>
+	<item one="28376" two="48831" chance="40"> <!-- Greater Cat's Eye Lv. 1 / Jewel Energy -->
+		<reward id="29455" count="1" type="ON_SUCCESS" /> <!-- Greater Cat's Eye Lv. 2 -->
+		<reward id="28376" count="1" type="ON_FAILURE" /> <!-- Greater Cat's Eye Lv. 1 -->
+	</item>
+	<item one="29455" two="48831" chance="30"> <!-- Greater Cat's Eye Lv. 2 / Jewel Energy -->
+		<reward id="29456" count="1" type="ON_SUCCESS" /> <!-- Greater Cat's Eye Lv. 3 -->
+		<reward id="28376" count="1" type="ON_FAILURE" /> <!-- Greater Cat's Eye Lv. 1 -->
+	</item>
+	<item one="29456" two="48831" chance="15"> <!-- Greater Cat's Eye Lv. 3 / Jewel Energy -->
+		<reward id="29457" count="1" type="ON_SUCCESS" /> <!-- Greater Cat's Eye Lv. 4 -->
+		<reward id="28376" count="1" type="ON_FAILURE" /> <!-- Greater Cat's Eye Lv. 1 -->
+	</item>
+	<item one="29457" two="48831" chance="10"> <!-- Greater Cat's Eye Lv. 4 / Jewel Energy -->
+		<reward id="29458" count="1" type="ON_SUCCESS" /> <!-- Greater Cat's Eye Lv. 5 -->
+		<reward id="28376" count="1" type="ON_FAILURE" /> <!-- Greater Cat's Eye Lv. 1 -->
+	</item>
+	<item one="47694" two="48831" chance="40"> <!-- Greater Diamond Lv. 1 / Jewel Energy -->
+		<reward id="48795" count="1" type="ON_SUCCESS" /> <!-- Greater Diamond Lv. 2 -->
+		<reward id="47694" count="1" type="ON_FAILURE" /> <!-- Greater Diamond Lv. 1 -->
+	</item>
+	<item one="48795" two="48831" chance="30"> <!-- Greater Diamond Lv. 2 / Jewel Energy -->
+		<reward id="48796" count="1" type="ON_SUCCESS" /> <!-- Greater Diamond Lv. 3 -->
+		<reward id="47694" count="1" type="ON_FAILURE" /> <!-- Greater Diamond Lv. 1 -->
+	</item>
+	<item one="48796" two="48831" chance="15"> <!-- Greater Diamond Lv. 3 / Jewel Energy -->
+		<reward id="48797" count="1" type="ON_SUCCESS" /> <!-- Greater Diamond Lv. 4 -->
+		<reward id="47694" count="1" type="ON_FAILURE" /> <!-- Greater Diamond Lv. 1 -->
+	</item>
+	<item one="48797" two="48831" chance="10"> <!-- Greater Diamond Lv. 4 / Jewel Energy -->
+		<reward id="48798" count="1" type="ON_SUCCESS" /> <!-- Greater Diamond Lv. 5 -->
+		<reward id="47694" count="1" type="ON_FAILURE" /> <!-- Greater Diamond Lv. 1 -->
+	</item>
+	<item one="47692" two="48831" chance="40"> <!-- Greater Emerald Lv. 1 / Jewel Energy -->
+		<reward id="48787" count="1" type="ON_SUCCESS" /> <!-- Greater Emerald Lv. 2 -->
+		<reward id="47692" count="1" type="ON_FAILURE" /> <!-- Greater Emerald Lv. 1 -->
+	</item>
+	<item one="48787" two="48831" chance="30"> <!-- Greater Emerald Lv. 2 / Jewel Energy -->
+		<reward id="48788" count="1" type="ON_SUCCESS" /> <!-- Greater Emerald Lv. 3 -->
+		<reward id="47692" count="1" type="ON_FAILURE" /> <!-- Greater Emerald Lv. 1 -->
+	</item>
+	<item one="48788" two="48831" chance="15"> <!-- Greater Emerald Lv. 3 / Jewel Energy -->
+		<reward id="48789" count="1" type="ON_SUCCESS" /> <!-- Greater Emerald Lv. 4 -->
+		<reward id="47692" count="1" type="ON_FAILURE" /> <!-- Greater Emerald Lv. 1 -->
+	</item>
+	<item one="48789" two="48831" chance="10"> <!-- Greater Emerald Lv. 4 / Jewel Energy -->
+		<reward id="48790" count="1" type="ON_SUCCESS" /> <!-- Greater Emerald Lv. 5 -->
+		<reward id="47692" count="1" type="ON_FAILURE" /> <!-- Greater Emerald Lv. 1 -->
+	</item>
+	<item one="47697" two="48831" chance="40"> <!-- Greater Garnet Lv. 1 / Jewel Energy -->
+		<reward id="48807" count="1" type="ON_SUCCESS" /> <!-- Greater Garnet Lv. 2 -->
+		<reward id="47697" count="1" type="ON_FAILURE" /> <!-- Greater Garnet Lv. 1 -->
+	</item>
+	<item one="48807" two="48831" chance="30"> <!-- Greater Garnet Lv. 2 / Jewel Energy -->
+		<reward id="48808" count="1" type="ON_SUCCESS" /> <!-- Greater Garnet Lv. 3 -->
+		<reward id="47697" count="1" type="ON_FAILURE" /> <!-- Greater Garnet Lv. 1 -->
+	</item>
+	<item one="48808" two="48831" chance="15"> <!-- Greater Garnet Lv. 3 / Jewel Energy -->
+		<reward id="48809" count="1" type="ON_SUCCESS" /> <!-- Greater Garnet Lv. 4 -->
+		<reward id="47697" count="1" type="ON_FAILURE" /> <!-- Greater Garnet Lv. 1 -->
+	</item>
+	<item one="48809" two="48831" chance="10"> <!-- Greater Garnet Lv. 4 / Jewel Energy -->
+		<reward id="48810" count="1" type="ON_SUCCESS" /> <!-- Greater Garnet Lv. 5 -->
+		<reward id="47697" count="1" type="ON_FAILURE" /> <!-- Greater Garnet Lv. 1 -->
+	</item>
+	<item one="47690" two="48831" chance="40"> <!-- Greater Obsidian Lv. 1 / Jewel Energy -->
+		<reward id="48779" count="1" type="ON_SUCCESS" /> <!-- Greater Obsidian Lv. 2 -->
+		<reward id="47690" count="1" type="ON_FAILURE" /> <!-- Greater Obsidian Lv. 1 -->
+	</item>
+	<item one="48779" two="48831" chance="30"> <!-- Greater Obsidian Lv. 2 / Jewel Energy -->
+		<reward id="48780" count="1" type="ON_SUCCESS" /> <!-- Greater Obsidian Lv. 3 -->
+		<reward id="47690" count="1" type="ON_FAILURE" /> <!-- Greater Obsidian Lv. 1 -->
+	</item>
+	<item one="48780" two="48831" chance="15"> <!-- Greater Obsidian Lv. 3 / Jewel Energy -->
+		<reward id="48781" count="1" type="ON_SUCCESS" /> <!-- Greater Obsidian Lv. 4 -->
+		<reward id="47690" count="1" type="ON_FAILURE" /> <!-- Greater Obsidian Lv. 1 -->
+	</item>
+	<item one="48781" two="48831" chance="10"> <!-- Greater Obsidian Lv. 4 / Jewel Energy -->
+		<reward id="48782" count="1" type="ON_SUCCESS" /> <!-- Greater Obsidian Lv. 5 -->
+		<reward id="47690" count="1" type="ON_FAILURE" /> <!-- Greater Obsidian Lv. 1 -->
+	</item>
+	<item one="47691" two="48831" chance="40"> <!-- Greater Opal Lv. 1 / Jewel Energy -->
+		<reward id="48783" count="1" type="ON_SUCCESS" /> <!-- Greater Opal Lv. 2 -->
+		<reward id="47691" count="1" type="ON_FAILURE" /> <!-- Greater Opal Lv. 1 -->
+	</item>
+	<item one="48783" two="48831" chance="30"> <!-- Greater Opal Lv. 2 / Jewel Energy -->
+		<reward id="48784" count="1" type="ON_SUCCESS" /> <!-- Greater Opal Lv. 3 -->
+		<reward id="47691" count="1" type="ON_FAILURE" /> <!-- Greater Opal Lv. 1 -->
+	</item>
+	<item one="48784" two="48831" chance="15"> <!-- Greater Opal Lv. 3 / Jewel Energy -->
+		<reward id="48785" count="1" type="ON_SUCCESS" /> <!-- Greater Opal Lv. 4 -->
+		<reward id="47691" count="1" type="ON_FAILURE" /> <!-- Greater Opal Lv. 1 -->
+	</item>
+	<item one="48785" two="48831" chance="10"> <!-- Greater Opal Lv. 4 / Jewel Energy -->
+		<reward id="48786" count="1" type="ON_SUCCESS" /> <!-- Greater Opal Lv. 5 -->
+		<reward id="47691" count="1" type="ON_FAILURE" /> <!-- Greater Opal Lv. 1 -->
+	</item>
+	<item one="47695" two="48831" chance="40"> <!-- Greater Pearl Lv. 1 / Jewel Energy -->
+		<reward id="48799" count="1" type="ON_SUCCESS" /> <!-- Greater Pearl Lv. 2 -->
+		<reward id="47695" count="1" type="ON_FAILURE" /> <!-- Greater Pearl Lv. 1 -->
+	</item>
+	<item one="48799" two="48831" chance="30"> <!-- Greater Pearl Lv. 2 / Jewel Energy -->
+		<reward id="48800" count="1" type="ON_SUCCESS" /> <!-- Greater Pearl Lv. 3 -->
+		<reward id="47695" count="1" type="ON_FAILURE" /> <!-- Greater Pearl Lv. 1 -->
+	</item>
+	<item one="48800" two="48831" chance="15"> <!-- Greater Pearl Lv. 3 / Jewel Energy -->
+		<reward id="48801" count="1" type="ON_SUCCESS" /> <!-- Greater Pearl Lv. 4 -->
+		<reward id="47695" count="1" type="ON_FAILURE" /> <!-- Greater Pearl Lv. 1 -->
+	</item>
+	<item one="48801" two="48831" chance="10"> <!-- Greater Pearl Lv. 4 / Jewel Energy -->
+		<reward id="48802" count="1" type="ON_SUCCESS" /> <!-- Greater Pearl Lv. 5 -->
+		<reward id="47695" count="1" type="ON_FAILURE" /> <!-- Greater Pearl Lv. 1 -->
+	</item>
+	<item one="47699" two="48831" chance="40"> <!-- Greater Red Cat's Eye Lv. 1 / Jewel Energy -->
+		<reward id="48815" count="1" type="ON_SUCCESS" /> <!-- Greater Red Cat's Eye Lv. 2 -->
+		<reward id="47699" count="1" type="ON_FAILURE" /> <!-- Greater Red Cat's Eye Lv. 1 -->
+	</item>
+	<item one="48815" two="48831" chance="30"> <!-- Greater Red Cat's Eye Lv. 2 / Jewel Energy -->
+		<reward id="48816" count="1" type="ON_SUCCESS" /> <!-- Greater Red Cat's Eye Lv. 3 -->
+		<reward id="47699" count="1" type="ON_FAILURE" /> <!-- Greater Red Cat's Eye Lv. 1 -->
+	</item>
+	<item one="48816" two="48831" chance="15"> <!-- Greater Red Cat's Eye Lv. 3 / Jewel Energy -->
+		<reward id="48817" count="1" type="ON_SUCCESS" /> <!-- Greater Red Cat's Eye Lv. 4 -->
+		<reward id="47699" count="1" type="ON_FAILURE" /> <!-- Greater Red Cat's Eye Lv. 1 -->
+	</item>
+	<item one="48817" two="48831" chance="10"> <!-- Greater Red Cat's Eye Lv. 4 / Jewel Energy -->
+		<reward id="48818" count="1" type="ON_SUCCESS" /> <!-- Greater Red Cat's Eye Lv. 5 -->
+		<reward id="47699" count="1" type="ON_FAILURE" /> <!-- Greater Red Cat's Eye Lv. 1 -->
+	</item>
+	<item one="47688" two="48831" chance="40"> <!-- Greater Ruby Lv. 1 / Jewel Energy -->
+		<reward id="48771" count="1" type="ON_SUCCESS" /> <!-- Greater Ruby Lv. 2 -->
+		<reward id="47688" count="1" type="ON_FAILURE" /> <!-- Greater Ruby Lv. 1 -->
+	</item>
+	<item one="48771" two="48831" chance="30"> <!-- Greater Ruby Lv. 2 / Jewel Energy -->
+		<reward id="48772" count="1" type="ON_SUCCESS" /> <!-- Greater Ruby Lv. 3 -->
+		<reward id="47688" count="1" type="ON_FAILURE" /> <!-- Greater Ruby Lv. 1 -->
+	</item>
+	<item one="48772" two="48831" chance="15"> <!-- Greater Ruby Lv. 3 / Jewel Energy -->
+		<reward id="48773" count="1" type="ON_SUCCESS" /> <!-- Greater Ruby Lv. 4 -->
+		<reward id="47688" count="1" type="ON_FAILURE" /> <!-- Greater Ruby Lv. 1 -->
+	</item>
+	<item one="48773" two="48831" chance="10"> <!-- Greater Ruby Lv. 4 / Jewel Energy -->
+		<reward id="48774" count="1" type="ON_SUCCESS" /> <!-- Greater Ruby Lv. 5 -->
+		<reward id="47688" count="1" type="ON_FAILURE" /> <!-- Greater Ruby Lv. 1 -->
+	</item>
+	<item one="47689" two="48831" chance="40"> <!-- Greater Sapphire Lv. 1 / Jewel Energy -->
+		<reward id="48775" count="1" type="ON_SUCCESS" /> <!-- Greater Sapphire Lv. 2 -->
+		<reward id="47689" count="1" type="ON_FAILURE" /> <!-- Greater Sapphire Lv. 1 -->
+	</item>
+	<item one="48775" two="48831" chance="30"> <!-- Greater Sapphire Lv. 2 / Jewel Energy -->
+		<reward id="48776" count="1" type="ON_SUCCESS" /> <!-- Greater Sapphire Lv. 3 -->
+		<reward id="47689" count="1" type="ON_FAILURE" /> <!-- Greater Sapphire Lv. 1 -->
+	</item>
+	<item one="48776" two="48831" chance="15"> <!-- Greater Sapphire Lv. 3 / Jewel Energy -->
+		<reward id="48777" count="1" type="ON_SUCCESS" /> <!-- Greater Sapphire Lv. 4 -->
+		<reward id="47689" count="1" type="ON_FAILURE" /> <!-- Greater Sapphire Lv. 1 -->
+	</item>
+	<item one="48777" two="48831" chance="10"> <!-- Greater Sapphire Lv. 4 / Jewel Energy -->
+		<reward id="48778" count="1" type="ON_SUCCESS" /> <!-- Greater Sapphire Lv. 5 -->
+		<reward id="47689" count="1" type="ON_FAILURE" /> <!-- Greater Sapphire Lv. 1 -->
+	</item>
+	<item one="47698" two="48831" chance="40"> <!-- Greater Tanzanite Lv. 1 / Jewel Energy -->
+		<reward id="48811" count="1" type="ON_SUCCESS" /> <!-- Greater Tanzanite Lv. 2 -->
+		<reward id="47698" count="1" type="ON_FAILURE" /> <!-- Greater Tanzanite Lv. 1 -->
+	</item>
+	<item one="48811" two="48831" chance="30"> <!-- Greater Tanzanite Lv. 2 / Jewel Energy -->
+		<reward id="48812" count="1" type="ON_SUCCESS" /> <!-- Greater Tanzanite Lv. 3 -->
+		<reward id="47698" count="1" type="ON_FAILURE" /> <!-- Greater Tanzanite Lv. 1 -->
+	</item>
+	<item one="48812" two="48831" chance="15"> <!-- Greater Tanzanite Lv. 3 / Jewel Energy -->
+		<reward id="48813" count="1" type="ON_SUCCESS" /> <!-- Greater Tanzanite Lv. 4 -->
+		<reward id="47698" count="1" type="ON_FAILURE" /> <!-- Greater Tanzanite Lv. 1 -->
+	</item>
+	<item one="48813" two="48831" chance="10"> <!-- Greater Tanzanite Lv. 4 / Jewel Energy -->
+		<reward id="48814" count="1" type="ON_SUCCESS" /> <!-- Greater Tanzanite Lv. 5 -->
+		<reward id="47698" count="1" type="ON_FAILURE" /> <!-- Greater Tanzanite Lv. 1 -->
+	</item>
+	<item one="47696" two="48831" chance="40"> <!-- Greater Vital Stone Lv. 1 / Jewel Energy -->
+		<reward id="48803" count="1" type="ON_SUCCESS" /> <!-- Greater Vital Stone Lv. 2 -->
+		<reward id="47696" count="1" type="ON_FAILURE" /> <!-- Greater Vital Stone Lv. 1 -->
+	</item>
+	<item one="48803" two="48831" chance="30"> <!-- Greater Vital Stone Lv. 2 / Jewel Energy -->
+		<reward id="48804" count="1" type="ON_SUCCESS" /> <!-- Greater Vital Stone Lv. 3 -->
+		<reward id="47696" count="1" type="ON_FAILURE" /> <!-- Greater Vital Stone Lv. 1 -->
+	</item>
+	<item one="48804" two="48831" chance="15"> <!-- Greater Vital Stone Lv. 3 / Jewel Energy -->
+		<reward id="48805" count="1" type="ON_SUCCESS" /> <!-- Greater Vital Stone Lv. 4 -->
+		<reward id="47696" count="1" type="ON_FAILURE" /> <!-- Greater Vital Stone Lv. 1 -->
+	</item>
+	<item one="48805" two="48831" chance="10"> <!-- Greater Vital Stone Lv. 4 / Jewel Energy -->
+		<reward id="48806" count="1" type="ON_SUCCESS" /> <!-- Greater Vital Stone Lv. 5 -->
+		<reward id="47696" count="1" type="ON_FAILURE" /> <!-- Greater Vital Stone Lv. 1 -->
+	</item>
 </list>
