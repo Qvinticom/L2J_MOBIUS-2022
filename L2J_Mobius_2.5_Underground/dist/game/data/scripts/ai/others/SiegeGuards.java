@@ -93,6 +93,7 @@ public class SiegeGuards extends AbstractNpcAI
 	};
 	//@formatter:on
 	private static final Map<Integer, List<Npc>> RESIDENCE_GUARD_MAP = new HashMap<>();
+	private static final Map<Integer, Boolean> RESIDENCE_WORKING = new HashMap<>();
 	
 	public SiegeGuards()
 	{
@@ -111,6 +112,7 @@ public class SiegeGuards extends AbstractNpcAI
 		
 		// Start task for unknown residences.
 		RESIDENCE_GUARD_MAP.put(0, new CopyOnWriteArrayList<>());
+		RESIDENCE_WORKING.put(0, false);
 		ThreadPool.scheduleAtFixedRate(new AggroCheckTask(0), 0, 3000);
 		
 		// Start tasks for castles.
@@ -118,6 +120,7 @@ public class SiegeGuards extends AbstractNpcAI
 		{
 			final int residenceId = castle.getResidenceId();
 			RESIDENCE_GUARD_MAP.put(residenceId, new CopyOnWriteArrayList<>());
+			RESIDENCE_WORKING.put(residenceId, false);
 			ThreadPool.scheduleAtFixedRate(new AggroCheckTask(residenceId), residenceId * 100, 3000);
 		}
 		
@@ -126,6 +129,7 @@ public class SiegeGuards extends AbstractNpcAI
 		{
 			final int residenceId = fort.getResidenceId();
 			RESIDENCE_GUARD_MAP.put(residenceId, new CopyOnWriteArrayList<>());
+			RESIDENCE_WORKING.put(residenceId, false);
 			ThreadPool.scheduleAtFixedRate(new AggroCheckTask(residenceId), 900 + ((residenceId - 100) * 100), 3000);
 		}
 	}
@@ -142,6 +146,12 @@ public class SiegeGuards extends AbstractNpcAI
 		@Override
 		public void run()
 		{
+			if (RESIDENCE_WORKING.get(_residenceId))
+			{
+				return;
+			}
+			RESIDENCE_WORKING.put(_residenceId, true);
+			
 			final List<Npc> guards = RESIDENCE_GUARD_MAP.get(_residenceId);
 			for (Npc guard : guards)
 			{
@@ -185,6 +195,8 @@ public class SiegeGuards extends AbstractNpcAI
 					}
 				}
 			}
+			
+			RESIDENCE_WORKING.put(_residenceId, false);
 		}
 	}
 	
