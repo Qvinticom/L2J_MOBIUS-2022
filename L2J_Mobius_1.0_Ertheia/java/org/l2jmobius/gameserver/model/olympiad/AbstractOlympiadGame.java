@@ -203,6 +203,7 @@ public abstract class AbstractOlympiadGame
 			
 			// Remove Buffs
 			player.stopAllEffectsExceptThoseThatLastThroughDeath();
+			player.getEffectList().stopEffects(info -> info.getSkill().isBlockedInOlympiad(), true, true);
 			
 			// Remove Clan Skills
 			if (player.getClan() != null)
@@ -241,6 +242,7 @@ public abstract class AbstractOlympiadGame
 				player.getServitors().values().forEach(s ->
 				{
 					s.stopAllEffectsExceptThoseThatLastThroughDeath();
+					s.getEffectList().stopEffects(info -> info.getSkill().isBlockedInOlympiad(), true, true);
 					s.abortAttack();
 					s.abortCast();
 				});
@@ -308,6 +310,7 @@ public abstract class AbstractOlympiadGame
 			}
 			
 			player.stopAllEffectsExceptThoseThatLastThroughDeath();
+			player.getEffectList().stopEffects(info -> info.getSkill().isBlockedInOlympiad(), true, true);
 			player.clearSouls();
 			player.clearCharges();
 			if (player.getAgathionId() > 0)
@@ -322,6 +325,7 @@ public abstract class AbstractOlympiadGame
 				pet.abortCast();
 				pet.getAI().setIntention(CtrlIntention.AI_INTENTION_IDLE);
 				pet.stopAllEffectsExceptThoseThatLastThroughDeath();
+				pet.getEffectList().stopEffects(info -> info.getSkill().isBlockedInOlympiad(), true, true);
 			}
 			
 			player.getServitors().values().stream().filter(s -> !s.isDead()).forEach(s ->
@@ -331,6 +335,7 @@ public abstract class AbstractOlympiadGame
 				s.abortCast();
 				s.getAI().setIntention(CtrlIntention.AI_INTENTION_IDLE);
 				s.stopAllEffectsExceptThoseThatLastThroughDeath();
+				s.getEffectList().stopEffects(info -> info.getSkill().isBlockedInOlympiad(), true, true);
 			});
 			
 			player.setCurrentCp(player.getMaxCp());
