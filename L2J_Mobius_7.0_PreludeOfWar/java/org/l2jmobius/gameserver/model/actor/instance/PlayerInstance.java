@@ -253,6 +253,7 @@ import org.l2jmobius.gameserver.model.punishment.PunishmentTask;
 import org.l2jmobius.gameserver.model.punishment.PunishmentType;
 import org.l2jmobius.gameserver.model.quest.Quest;
 import org.l2jmobius.gameserver.model.quest.QuestState;
+import org.l2jmobius.gameserver.model.quest.QuestTimer;
 import org.l2jmobius.gameserver.model.skills.AbnormalType;
 import org.l2jmobius.gameserver.model.skills.BuffInfo;
 import org.l2jmobius.gameserver.model.skills.CommonSkill;
@@ -623,6 +624,8 @@ public class PlayerInstance extends Playable
 	
 	private MatchingRoom _matchingRoom;
 	
+	private ScheduledFuture<?> _taskWarnUserTakeBreak;
+	
 	// Clan related attributes
 	/** The Clan Identifier of the PlayerInstance */
 	private int _clanId;
@@ -786,7 +789,7 @@ public class PlayerInstance extends Playable
 	
 	private volatile long _lastItemAuctionInfoRequest = 0;
 	
-	private Future<?> _PvPRegTask;
+	private Future<?> _pvpRegTask;
 	
 	private long _pvpFlagLasts;
 	
@@ -816,29 +819,26 @@ public class PlayerInstance extends Playable
 	public void startPvPFlag()
 	{
 		updatePvPFlag(1);
-		
-		if (_PvPRegTask == null)
+		if (_pvpRegTask == null)
 		{
-			_PvPRegTask = ThreadPool.scheduleAtFixedRate(new PvPFlagTask(this), 1000, 1000);
+			_pvpRegTask = ThreadPool.scheduleAtFixedRate(new PvPFlagTask(this), 1000, 1000);
 		}
 	}
 	
 	public void stopPvpRegTask()
 	{
-		if (_PvPRegTask != null)
+		if (_pvpRegTask != null)
 		{
-			_PvPRegTask.cancel(true);
-			_PvPRegTask = null;
+			_pvpRegTask.cancel(true);
+			_pvpRegTask = null;
 		}
 	}
 	
 	public void stopPvPFlag()
 	{
 		stopPvpRegTask();
-		
 		updatePvPFlag(0);
-		
-		_PvPRegTask = null;
+		_pvpRegTask = null;
 	}
 	
 	// Monster Book variables
@@ -868,6 +868,8 @@ public class PlayerInstance extends Playable
 	private final Collection<Integer> _autoSkills = ConcurrentHashMap.newKeySet();
 	
 	private ScheduledFuture<?> _timedHuntingZoneFinishTask = null;
+	
+	private final List<QuestTimer> _questTimers = new ArrayList<>();
 	
 	// Selling buffs system
 	private boolean _isSellingBuffs = false;
@@ -8788,8 +8790,6 @@ public class PlayerInstance extends Playable
 		}
 	}
 	
-	private ScheduledFuture<?> _taskWarnUserTakeBreak;
-	
 	public EnumIntBitmask<ClanPrivilege> getClanPrivileges()
 	{
 		return _clanPrivileges;
@@ -10690,6 +10690,7 @@ public class PlayerInstance extends Playable
 		{
 			LOGGER.log(Level.SEVERE, "deleteMe()", e);
 		}
+		
 		// Stop the HP/MP/CP Regeneration task (scheduled tasks)
 		try
 		{
@@ -13682,6 +13683,128 @@ public class PlayerInstance extends Playable
 		return isInParty() ? (_party.isInCommandChannel() ? GroupType.COMMAND_CHANNEL : GroupType.PARTY) : GroupType.NONE;
 	}
 	
+	/**
+	 * Precautionary method to end all tasks upon disconnection.
+	 * @TODO: Rework stopAllTimers() method.
+	 */
+	public void stopAllTasks()
+	{
+		if ((_mountFeedTask != null) && !_mountFeedTask.isDone() && !_mountFeedTask.isCancelled())
+		{
+			_mountFeedTask.cancel(false);
+			_mountFeedTask = null;
+		}
+		if ((_dismountTask != null) && !_dismountTask.isDone() && !_dismountTask.isCancelled())
+		{
+			_dismountTask.cancel(false);
+			_dismountTask = null;
+		}
+		if ((_fameTask != null) && !_fameTask.isDone() && !_fameTask.isCancelled())
+		{
+			_fameTask.cancel(false);
+			_fameTask = null;
+		}
+		if ((_teleportWatchdog != null) && !_teleportWatchdog.isDone() && !_teleportWatchdog.isCancelled())
+		{
+			_teleportWatchdog.cancel(false);
+			_teleportWatchdog = null;
+		}
+		if ((_recoGiveTask != null) && !_recoGiveTask.isDone() && !_recoGiveTask.isCancelled())
+		{
+			_recoGiveTask.cancel(false);
+			_recoGiveTask = null;
+		}
+		if ((_chargeTask != null) && !_chargeTask.isDone() && !_chargeTask.isCancelled())
+		{
+			_chargeTask.cancel(false);
+			_chargeTask = null;
+		}
+		if ((_soulTask != null) && !_soulTask.isDone() && !_soulTask.isCancelled())
+		{
+			_soulTask.cancel(false);
+			_soulTask = null;
+		}
+		if ((_taskRentPet != null) && !_taskRentPet.isDone() && !_taskRentPet.isCancelled())
+		{
+			_taskRentPet.cancel(false);
+			_taskRentPet = null;
+		}
+		if ((_taskWater != null) && !_taskWater.isDone() && !_taskWater.isCancelled())
+		{
+			_taskWater.cancel(false);
+			_taskWater = null;
+		}
+		if ((_fallingDamageTask != null) && !_fallingDamageTask.isDone() && !_fallingDamageTask.isCancelled())
+		{
+			_fallingDamageTask.cancel(false);
+			_fallingDamageTask = null;
+		}
+		if ((_pvpRegTask != null) && !_pvpRegTask.isDone() && !_pvpRegTask.isCancelled())
+		{
+			_pvpRegTask.cancel(false);
+			_pvpRegTask = null;
+		}
+		if ((_autoSaveTask != null) && !_autoSaveTask.isDone() && !_autoSaveTask.isCancelled())
+		{
+			_autoSaveTask.cancel(false);
+			_autoSaveTask = null;
+		}
+		if ((_autoPlayTask != null) && !_autoPlayTask.isDone() && !_autoPlayTask.isCancelled())
+		{
+			_autoPlayTask.cancel(false);
+			_autoPlayTask = null;
+		}
+		if ((_autoUseTask != null) && !_autoUseTask.isDone() && !_autoUseTask.isCancelled())
+		{
+			_autoUseTask.cancel(false);
+			_autoUseTask = null;
+		}
+		if ((_timedHuntingZoneFinishTask != null) && !_timedHuntingZoneFinishTask.isDone() && !_timedHuntingZoneFinishTask.isCancelled())
+		{
+			_timedHuntingZoneFinishTask.cancel(false);
+			_timedHuntingZoneFinishTask = null;
+		}
+		if ((_taskWarnUserTakeBreak != null) && !_taskWarnUserTakeBreak.isDone() && !_taskWarnUserTakeBreak.isCancelled())
+		{
+			_taskWarnUserTakeBreak.cancel(false);
+			_taskWarnUserTakeBreak = null;
+		}
+		for (Entry<Integer, ScheduledFuture<?>> entry : _hennaRemoveSchedules.entrySet())
+		{
+			final ScheduledFuture<?> task = entry.getValue();
+			if ((task != null) && !task.isCancelled() && !task.isDone())
+			{
+				task.cancel(false);
+			}
+			_hennaRemoveSchedules.remove(entry.getKey());
+		}
+		
+		synchronized (_questTimers)
+		{
+			for (QuestTimer timer : _questTimers)
+			{
+				timer.cancel();
+			}
+			_questTimers.clear();
+		}
+	}
+	
+	public void addQuestTimer(QuestTimer questTimer)
+	{
+		synchronized (_questTimers)
+		{
+			_questTimers.add(questTimer);
+		}
+	}
+	
+	public void removeQuestTimer(QuestTimer questTimer)
+	{
+		synchronized (_questTimers)
+		{
+			_questTimers.remove(questTimer);
+		}
+	}
+	
 	public boolean isTrueHero()
 	{
 		return _trueHero;
@@ -13699,7 +13822,15 @@ public class PlayerInstance extends Playable
 	
 	public int getFactionLevel(Faction faction)
 	{
-		return 5;
+		final int currentPoints = getFactionPoints(faction);
+		for (int i = 0; i < faction.getLevelCount(); i++)
+		{
+			if (currentPoints <= faction.getPointsOfLevel(i))
+			{
+				return i;
+			}
+		}
+		return 0;
 	}
 	
 	public float getFactionProgress(Faction faction)

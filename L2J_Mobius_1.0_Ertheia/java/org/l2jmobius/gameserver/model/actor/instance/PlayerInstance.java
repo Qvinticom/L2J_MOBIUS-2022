@@ -248,6 +248,7 @@ import org.l2jmobius.gameserver.model.punishment.PunishmentTask;
 import org.l2jmobius.gameserver.model.punishment.PunishmentType;
 import org.l2jmobius.gameserver.model.quest.Quest;
 import org.l2jmobius.gameserver.model.quest.QuestState;
+import org.l2jmobius.gameserver.model.quest.QuestTimer;
 import org.l2jmobius.gameserver.model.skills.AbnormalType;
 import org.l2jmobius.gameserver.model.skills.BuffInfo;
 import org.l2jmobius.gameserver.model.skills.CommonSkill;
@@ -617,6 +618,8 @@ public class PlayerInstance extends Playable
 	
 	private MatchingRoom _matchingRoom;
 	
+	private ScheduledFuture<?> _taskWarnUserTakeBreak;
+	
 	// Clan related attributes
 	/** The Clan Identifier of the PlayerInstance */
 	private int _clanId;
@@ -780,7 +783,7 @@ public class PlayerInstance extends Playable
 	
 	private volatile long _lastItemAuctionInfoRequest = 0;
 	
-	private Future<?> _PvPRegTask;
+	private Future<?> _pvpRegTask;
 	
 	private long _pvpFlagLasts;
 	
@@ -810,29 +813,26 @@ public class PlayerInstance extends Playable
 	public void startPvPFlag()
 	{
 		updatePvPFlag(1);
-		
-		if (_PvPRegTask == null)
+		if (_pvpRegTask == null)
 		{
-			_PvPRegTask = ThreadPool.scheduleAtFixedRate(new PvPFlagTask(this), 1000, 1000);
+			_pvpRegTask = ThreadPool.scheduleAtFixedRate(new PvPFlagTask(this), 1000, 1000);
 		}
 	}
 	
 	public void stopPvpRegTask()
 	{
-		if (_PvPRegTask != null)
+		if (_pvpRegTask != null)
 		{
-			_PvPRegTask.cancel(true);
-			_PvPRegTask = null;
+			_pvpRegTask.cancel(true);
+			_pvpRegTask = null;
 		}
 	}
 	
 	public void stopPvPFlag()
 	{
 		stopPvpRegTask();
-		
 		updatePvPFlag(0);
-		
-		_PvPRegTask = null;
+		_pvpRegTask = null;
 	}
 	
 	// Training Camp
@@ -845,6 +845,8 @@ public class PlayerInstance extends Playable
 	private boolean _hasCharmOfCourage = false;
 	
 	private final Set<Integer> _whisperers = ConcurrentHashMap.newKeySet();
+	
+	private final List<QuestTimer> _questTimers = new ArrayList<>();
 	
 	// Selling buffs system
 	private boolean _isSellingBuffs = false;
@@ -1022,24 +1024,27 @@ public class PlayerInstance extends Playable
 				result |= RelationChanged.RELATION_ATTACKER;
 			}
 		}
-		if ((clan != null) && (targetClan != null) && (target.getPledgeType() != Clan.SUBUNIT_ACADEMY) && (getPledgeType() != Clan.SUBUNIT_ACADEMY))
+		if ((clan != null) && (targetClan != null))
 		{
-			final ClanWar war = clan.getWarWith(target.getClan().getId());
-			if (war != null)
+			if ((target.getPledgeType() != Clan.SUBUNIT_ACADEMY) && (getPledgeType() != Clan.SUBUNIT_ACADEMY))
 			{
-				switch (war.getState())
+				ClanWar war = clan.getWarWith(target.getClan().getId());
+				if (war != null)
 				{
-					case DECLARATION:
-					case BLOOD_DECLARATION:
+					switch (war.getState())
 					{
-						result |= RelationChanged.RELATION_DECLARED_WAR;
-						break;
-					}
-					case MUTUAL:
-					{
-						result |= RelationChanged.RELATION_DECLARED_WAR;
-						result |= RelationChanged.RELATION_MUTUAL_WAR;
-						break;
+						case DECLARATION:
+						case BLOOD_DECLARATION:
+						{
+							result |= RelationChanged.RELATION_DECLARED_WAR;
+							break;
+						}
+						case MUTUAL:
+						{
+							result |= RelationChanged.RELATION_DECLARED_WAR;
+							result |= RelationChanged.RELATION_MUTUAL_WAR;
+							break;
+						}
 					}
 				}
 			}
@@ -1640,7 +1645,7 @@ public class PlayerInstance extends Playable
 	
 	public boolean isRegisteredOnThisSiegeField(int value)
 	{
-		return (_siegeSide != value) && ((_siegeSide < 81) || (_siegeSide > 89));
+		return (_siegeSide == value) || ((_siegeSide >= 81) && (_siegeSide <= 89));
 	}
 	
 	public int getSiegeSide()
@@ -1671,12 +1676,8 @@ public class PlayerInstance extends Playable
 			{
 				return false;
 			}
-			if (castle.getOwner() == null)
-			{
-				return true;
-			}
 			
-			return false;
+			return castle.getOwner() == null;
 		}
 		
 		// Both are defenders, friends.
@@ -3276,14 +3277,10 @@ public class PlayerInstance extends Playable
 			{
 				CursedWeaponsManager.getInstance().activate(this, newitem);
 			}
-			// Combat Flag
-			else if (FortSiegeManager.getInstance().isCombat(item.getId()))
+			else if (FortSiegeManager.getInstance().isCombat(item.getId()) && FortSiegeManager.getInstance().activateCombatFlag(this, item))
 			{
-				if (FortSiegeManager.getInstance().activateCombatFlag(this, item))
-				{
-					final Fort fort = FortManager.getInstance().getFort(this);
-					fort.getSiege().announceToPlayer(new SystemMessage(SystemMessageId.C1_HAS_ACQUIRED_THE_FLAG), getName());
-				}
+				final Fort fort = FortManager.getInstance().getFort(this);
+				fort.getSiege().announceToPlayer(new SystemMessage(SystemMessageId.C1_HAS_ACQUIRED_THE_FLAG), getName());
 			}
 		}
 	}
@@ -4755,11 +4752,7 @@ public class PlayerInstance extends Playable
 		{
 			return true;
 		}
-		if ((armor != null) && ((_inventory.getPaperdollItem(Inventory.PAPERDOLL_CHEST).getItem().getBodyPart() == Item.SLOT_FULL_ARMOR) && (armor.getItemType() == ArmorType.HEAVY)))
-		{
-			return true;
-		}
-		return false;
+		return (armor != null) && ((_inventory.getPaperdollItem(Inventory.PAPERDOLL_CHEST).getItem().getBodyPart() == Item.SLOT_FULL_ARMOR) && (armor.getItemType() == ArmorType.HEAVY));
 	}
 	
 	public boolean isWearingLightArmor()
@@ -4770,11 +4763,7 @@ public class PlayerInstance extends Playable
 		{
 			return true;
 		}
-		if ((armor != null) && ((_inventory.getPaperdollItem(Inventory.PAPERDOLL_CHEST).getItem().getBodyPart() == Item.SLOT_FULL_ARMOR) && (armor.getItemType() == ArmorType.LIGHT)))
-		{
-			return true;
-		}
-		return false;
+		return (armor != null) && ((_inventory.getPaperdollItem(Inventory.PAPERDOLL_CHEST).getItem().getBodyPart() == Item.SLOT_FULL_ARMOR) && (armor.getItemType() == ArmorType.LIGHT));
 	}
 	
 	public boolean isWearingMagicArmor()
@@ -4785,11 +4774,7 @@ public class PlayerInstance extends Playable
 		{
 			return true;
 		}
-		if ((armor != null) && ((_inventory.getPaperdollItem(Inventory.PAPERDOLL_CHEST).getItem().getBodyPart() == Item.SLOT_FULL_ARMOR) && (armor.getItemType() == ArmorType.MAGIC)))
-		{
-			return true;
-		}
-		return false;
+		return (armor != null) && ((_inventory.getPaperdollItem(Inventory.PAPERDOLL_CHEST).getItem().getBodyPart() == Item.SLOT_FULL_ARMOR) && (armor.getItemType() == ArmorType.MAGIC));
 	}
 	
 	/**
@@ -6768,17 +6753,11 @@ public class PlayerInstance extends Playable
 		return _forumMail;
 	}
 	
-	/**
-	 * @param forum
-	 */
 	public void setMail(Forum forum)
 	{
 		_forumMail = forum;
 	}
 	
-	/**
-	 * @return
-	 */
 	public Forum getMemo()
 	{
 		if (_forumMemo == null)
@@ -6794,9 +6773,6 @@ public class PlayerInstance extends Playable
 		return _forumMemo;
 	}
 	
-	/**
-	 * @param forum
-	 */
 	public void setMemo(Forum forum)
 	{
 		_forumMemo = forum;
@@ -8134,7 +8110,11 @@ public class PlayerInstance extends Playable
 		// Check if the attacker is in olympia and olympia start
 		if (attacker.isPlayer() && attacker.getActingPlayer().isInOlympiadMode())
 		{
-			return _inOlympiadMode && _OlympiadStart && (((PlayerInstance) attacker).getOlympiadGameId() == getOlympiadGameId());
+			if (_inOlympiadMode && _OlympiadStart && (((PlayerInstance) attacker).getOlympiadGameId() == getOlympiadGameId()))
+			{
+				return true;
+			}
+			return false;
 		}
 		
 		if (_isOnCustomEvent && (getTeam() == attacker.getTeam()))
@@ -8220,10 +8200,13 @@ public class PlayerInstance extends Playable
 			}
 		}
 		
-		if ((attacker instanceof DefenderInstance) && (_clan != null))
+		if (attacker instanceof DefenderInstance)
 		{
-			final Siege siege = SiegeManager.getInstance().getSiege(this);
-			return ((siege != null) && siege.checkIsAttacker(_clan));
+			if (_clan != null)
+			{
+				final Siege siege = SiegeManager.getInstance().getSiege(this);
+				return ((siege != null) && siege.checkIsAttacker(_clan));
+			}
 		}
 		
 		if (attacker instanceof GuardInstance)
@@ -8842,8 +8825,6 @@ public class PlayerInstance extends Playable
 			}
 		}
 	}
-	
-	private ScheduledFuture<?> _taskWarnUserTakeBreak;
 	
 	public EnumIntBitmask<ClanPrivilege> getClanPrivileges()
 	{
@@ -10297,7 +10278,7 @@ public class PlayerInstance extends Playable
 			s.updateAndBroadcastStatus(0);
 		});
 		
-		// show movie if available
+		// Show movie if available
 		if (_movieHolder != null)
 		{
 			sendPacket(new ExStartScenePlayer(_movieHolder.getMovie()));
@@ -10746,6 +10727,7 @@ public class PlayerInstance extends Playable
 		{
 			LOGGER.log(Level.SEVERE, "deleteMe()", e);
 		}
+		
 		// Stop the HP/MP/CP Regeneration task (scheduled tasks)
 		try
 		{
@@ -11364,12 +11346,9 @@ public class PlayerInstance extends Playable
 			percent *= getStat().getValue(Stat.REDUCE_DEATH_PENALTY_BY_PVP, 1);
 		}
 		
-		if ((killer.isNpc() && ((Npc) killer).getTemplate().isDeathPenalty()) || (Rnd.get(1, 100) <= ((Config.DEATH_PENALTY_CHANCE) * percent)))
+		if (((killer.isNpc() && ((Npc) killer).getTemplate().isDeathPenalty()) || (Rnd.get(1, 100) <= ((Config.DEATH_PENALTY_CHANCE) * percent))) && (!killer.isPlayable() || (getReputation() < 0)))
 		{
-			if (!killer.isPlayable() || (getReputation() < 0))
-			{
-				increaseShilensBreathDebuff();
-			}
+			increaseShilensBreathDebuff();
 		}
 	}
 	
@@ -13679,9 +13658,6 @@ public class PlayerInstance extends Playable
 		sendPacket(new ExUserInfoInvenWeight(this));
 	}
 	
-	/**
-	 * @param open
-	 */
 	public void sendItemList(boolean open)
 	{
 		sendPacket(new ItemList(this, open));
@@ -13785,6 +13761,118 @@ public class PlayerInstance extends Playable
 	public GroupType getGroupType()
 	{
 		return isInParty() ? (_party.isInCommandChannel() ? GroupType.COMMAND_CHANNEL : GroupType.PARTY) : GroupType.NONE;
+	}
+	
+	/**
+	 * Precautionary method to end all tasks upon disconnection.
+	 * @TODO: Rework stopAllTimers() method.
+	 */
+	public void stopAllTasks()
+	{
+		if ((_mountFeedTask != null) && !_mountFeedTask.isDone() && !_mountFeedTask.isCancelled())
+		{
+			_mountFeedTask.cancel(false);
+			_mountFeedTask = null;
+		}
+		if ((_dismountTask != null) && !_dismountTask.isDone() && !_dismountTask.isCancelled())
+		{
+			_dismountTask.cancel(false);
+			_dismountTask = null;
+		}
+		if ((_fameTask != null) && !_fameTask.isDone() && !_fameTask.isCancelled())
+		{
+			_fameTask.cancel(false);
+			_fameTask = null;
+		}
+		if ((_teleportWatchdog != null) && !_teleportWatchdog.isDone() && !_teleportWatchdog.isCancelled())
+		{
+			_teleportWatchdog.cancel(false);
+			_teleportWatchdog = null;
+		}
+		if ((_recoGiveTask != null) && !_recoGiveTask.isDone() && !_recoGiveTask.isCancelled())
+		{
+			_recoGiveTask.cancel(false);
+			_recoGiveTask = null;
+		}
+		if ((_chargeTask != null) && !_chargeTask.isDone() && !_chargeTask.isCancelled())
+		{
+			_chargeTask.cancel(false);
+			_chargeTask = null;
+		}
+		if ((_soulTask != null) && !_soulTask.isDone() && !_soulTask.isCancelled())
+		{
+			_soulTask.cancel(false);
+			_soulTask = null;
+		}
+		if ((_taskRentPet != null) && !_taskRentPet.isDone() && !_taskRentPet.isCancelled())
+		{
+			_taskRentPet.cancel(false);
+			_taskRentPet = null;
+		}
+		if ((_taskWater != null) && !_taskWater.isDone() && !_taskWater.isCancelled())
+		{
+			_taskWater.cancel(false);
+			_taskWater = null;
+		}
+		if ((_fallingDamageTask != null) && !_fallingDamageTask.isDone() && !_fallingDamageTask.isCancelled())
+		{
+			_fallingDamageTask.cancel(false);
+			_fallingDamageTask = null;
+		}
+		if ((_pvpRegTask != null) && !_pvpRegTask.isDone() && !_pvpRegTask.isCancelled())
+		{
+			_pvpRegTask.cancel(false);
+			_pvpRegTask = null;
+		}
+		if ((_autoSaveTask != null) && !_autoSaveTask.isDone() && !_autoSaveTask.isCancelled())
+		{
+			_autoSaveTask.cancel(false);
+			_autoSaveTask = null;
+		}
+		if ((_taskWarnUserTakeBreak != null) && !_taskWarnUserTakeBreak.isDone() && !_taskWarnUserTakeBreak.isCancelled())
+		{
+			_taskWarnUserTakeBreak.cancel(false);
+			_taskWarnUserTakeBreak = null;
+		}
+		if ((_onlineTimeUpdateTask != null) && !_onlineTimeUpdateTask.isDone() && !_onlineTimeUpdateTask.isCancelled())
+		{
+			_onlineTimeUpdateTask.cancel(false);
+			_onlineTimeUpdateTask = null;
+		}
+		for (Entry<Integer, ScheduledFuture<?>> entry : _hennaRemoveSchedules.entrySet())
+		{
+			final ScheduledFuture<?> task = entry.getValue();
+			if ((task != null) && !task.isCancelled() && !task.isDone())
+			{
+				task.cancel(false);
+			}
+			_hennaRemoveSchedules.remove(entry.getKey());
+		}
+		
+		synchronized (_questTimers)
+		{
+			for (QuestTimer timer : _questTimers)
+			{
+				timer.cancel();
+			}
+			_questTimers.clear();
+		}
+	}
+	
+	public void addQuestTimer(QuestTimer questTimer)
+	{
+		synchronized (_questTimers)
+		{
+			_questTimers.add(questTimer);
+		}
+	}
+	
+	public void removeQuestTimer(QuestTimer questTimer)
+	{
+		synchronized (_questTimers)
+		{
+			_questTimers.remove(questTimer);
+		}
 	}
 	
 	public boolean isTrueHero()

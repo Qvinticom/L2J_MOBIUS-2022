@@ -83,6 +83,23 @@ public class Duel
 		_playerA = playerA;
 		_playerB = playerB;
 		_partyDuel = partyDuel == 1;
+		if (_partyDuel)
+		{
+			for (PlayerInstance member : _playerA.getParty().getMembers())
+			{
+				member.setStartingDuel();
+			}
+			for (PlayerInstance member : _playerB.getParty().getMembers())
+			{
+				member.setStartingDuel();
+			}
+		}
+		else
+		{
+			_playerA.setStartingDuel();
+			_playerB.setStartingDuel();
+		}
+		
 		_duelEndTime = Calendar.getInstance();
 		_duelEndTime.add(Calendar.SECOND, _partyDuel ? PARTY_DUEL_DURATION : PLAYER_DUEL_DURATION);
 		setFinished(false);

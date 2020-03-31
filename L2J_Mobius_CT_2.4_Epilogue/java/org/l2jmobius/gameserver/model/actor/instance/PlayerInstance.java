@@ -239,6 +239,7 @@ import org.l2jmobius.gameserver.model.punishment.PunishmentAffect;
 import org.l2jmobius.gameserver.model.punishment.PunishmentType;
 import org.l2jmobius.gameserver.model.quest.Quest;
 import org.l2jmobius.gameserver.model.quest.QuestState;
+import org.l2jmobius.gameserver.model.quest.QuestTimer;
 import org.l2jmobius.gameserver.model.skills.AbnormalType;
 import org.l2jmobius.gameserver.model.skills.BuffInfo;
 import org.l2jmobius.gameserver.model.skills.CommonSkill;
@@ -490,7 +491,7 @@ public class PlayerInstance extends Playable
 	private Vehicle _vehicle = null;
 	private Location _inVehiclePosition;
 	
-	public ScheduledFuture<?> _taskforfish;
+	public ScheduledFuture<?> _taskForFish;
 	private MountType _mountType = MountType.NONE;
 	private int _mountNpcId;
 	private int _mountLevel;
@@ -607,6 +608,8 @@ public class PlayerInstance extends Playable
 	// client radar
 	// TODO: This needs to be better integrated and saved/loaded
 	private final Radar _radar;
+	
+	private ScheduledFuture<?> _taskWarnUserTakeBreak;
 	
 	// Party matching
 	// private int _partymatching = 0;
@@ -792,7 +795,7 @@ public class PlayerInstance extends Playable
 	
 	private volatile long _lastItemAuctionInfoRequest = 0;
 	
-	private Future<?> _PvPRegTask;
+	private Future<?> _pvpRegTask;
 	
 	private long _pvpFlagLasts;
 	
@@ -860,30 +863,27 @@ public class PlayerInstance extends Playable
 	public void startPvPFlag()
 	{
 		updatePvPFlag(1);
-		
-		if (_PvPRegTask == null)
+		if (_pvpRegTask == null)
 		{
-			_PvPRegTask = ThreadPool.scheduleAtFixedRate(new PvPFlagTask(this), 1000, 1000);
+			_pvpRegTask = ThreadPool.scheduleAtFixedRate(new PvPFlagTask(this), 1000, 1000);
 		}
 	}
 	
 	public void stopPvpRegTask()
 	{
-		if (_PvPRegTask == null)
+		if (_pvpRegTask == null)
 		{
 			return;
 		}
-		_PvPRegTask.cancel(true);
-		_PvPRegTask = null;
+		_pvpRegTask.cancel(true);
+		_pvpRegTask = null;
 	}
 	
 	public void stopPvPFlag()
 	{
 		stopPvpRegTask();
-		
 		updatePvPFlag(0);
-		
-		_PvPRegTask = null;
+		_pvpRegTask = null;
 	}
 	
 	// Character UI
@@ -905,6 +905,8 @@ public class PlayerInstance extends Playable
 	private String _lastPetitionGmName = null;
 	
 	private boolean _hasCharmOfCourage = false;
+	
+	private final List<QuestTimer> _questTimers = new ArrayList<>();
 	
 	// Selling buffs system
 	private boolean _isSellingBuffs = false;
@@ -7111,9 +7113,6 @@ public class PlayerInstance extends Playable
 		return player;
 	}
 	
-	/**
-	 * @return
-	 */
 	public Forum getMail()
 	{
 		if (_forumMail == null)
@@ -7129,17 +7128,11 @@ public class PlayerInstance extends Playable
 		return _forumMail;
 	}
 	
-	/**
-	 * @param forum
-	 */
 	public void setMail(Forum forum)
 	{
 		_forumMail = forum;
 	}
 	
-	/**
-	 * @return
-	 */
 	public Forum getMemo()
 	{
 		if (_forumMemo == null)
@@ -7155,9 +7148,6 @@ public class PlayerInstance extends Playable
 		return _forumMemo;
 	}
 	
-	/**
-	 * @param forum
-	 */
 	public void setMemo(Forum forum)
 	{
 		_forumMemo = forum;
@@ -9460,8 +9450,6 @@ public class PlayerInstance extends Playable
 		_activeSoulShots.clear();
 	}
 	
-	private ScheduledFuture<?> _taskWarnUserTakeBreak;
-	
 	public EnumIntBitmask<ClanPrivilege> getClanPrivileges()
 	{
 		return _clanPrivileges;
@@ -11630,17 +11618,17 @@ public class PlayerInstance extends Playable
 	
 	public void stopLookingForFishTask()
 	{
-		if (_taskforfish == null)
+		if (_taskForFish == null)
 		{
 			return;
 		}
-		_taskforfish.cancel(false);
-		_taskforfish = null;
+		_taskForFish.cancel(false);
+		_taskForFish = null;
 	}
 	
 	public void startLookingForFishTask()
 	{
-		if (!isDead() && (_taskforfish == null))
+		if (!isDead() && (_taskForFish == null))
 		{
 			int checkDelay = 0;
 			boolean isNoob = false;
@@ -11663,7 +11651,7 @@ public class PlayerInstance extends Playable
 					checkDelay = _fish.getGutsCheckTime() * 66;
 				}
 			}
-			_taskforfish = ThreadPool.scheduleAtFixedRate(new LookingForFishTask(this, _fish.getStartCombatTime(), _fish.getFishGuts(), _fish.getFishGroup(), isNoob, isUpperGrade), 10000, checkDelay);
+			_taskForFish = ThreadPool.scheduleAtFixedRate(new LookingForFishTask(this, _fish.getStartCombatTime(), _fish.getFishGuts(), _fish.getFishGroup(), isNoob, isUpperGrade), 10000, checkDelay);
 		}
 	}
 	
@@ -14340,5 +14328,108 @@ public class PlayerInstance extends Playable
 	public void enableExpGain()
 	{
 		removeListenerIf(EventType.ON_PLAYABLE_EXP_CHANGED, listener -> listener.getOwner() == this);
+	}
+	
+	/**
+	 * Precautionary method to end all tasks upon disconnection.
+	 * @TODO: Rework stopAllTimers() method.
+	 */
+	public void stopAllTasks()
+	{
+		if ((_mountFeedTask != null) && !_mountFeedTask.isDone() && !_mountFeedTask.isCancelled())
+		{
+			_mountFeedTask.cancel(false);
+			_mountFeedTask = null;
+		}
+		if ((_dismountTask != null) && !_dismountTask.isDone() && !_dismountTask.isCancelled())
+		{
+			_dismountTask.cancel(false);
+			_dismountTask = null;
+		}
+		if ((_fameTask != null) && !_fameTask.isDone() && !_fameTask.isCancelled())
+		{
+			_fameTask.cancel(false);
+			_fameTask = null;
+		}
+		if ((_vitalityTask != null) && !_vitalityTask.isDone() && !_vitalityTask.isCancelled())
+		{
+			_vitalityTask.cancel(false);
+			_vitalityTask = null;
+		}
+		if ((_teleportWatchdog != null) && !_teleportWatchdog.isDone() && !_teleportWatchdog.isCancelled())
+		{
+			_teleportWatchdog.cancel(false);
+			_teleportWatchdog = null;
+		}
+		if ((_taskForFish != null) && !_taskForFish.isDone() && !_taskForFish.isCancelled())
+		{
+			_taskForFish.cancel(false);
+			_taskForFish = null;
+		}
+		if ((_chargeTask != null) && !_chargeTask.isDone() && !_chargeTask.isCancelled())
+		{
+			_chargeTask.cancel(false);
+			_chargeTask = null;
+		}
+		if ((_soulTask != null) && !_soulTask.isDone() && !_soulTask.isCancelled())
+		{
+			_soulTask.cancel(false);
+			_soulTask = null;
+		}
+		if ((_taskRentPet != null) && !_taskRentPet.isDone() && !_taskRentPet.isCancelled())
+		{
+			_taskRentPet.cancel(false);
+			_taskRentPet = null;
+		}
+		if ((_taskWater != null) && !_taskWater.isDone() && !_taskWater.isCancelled())
+		{
+			_taskWater.cancel(false);
+			_taskWater = null;
+		}
+		if ((_fallingDamageTask != null) && !_fallingDamageTask.isDone() && !_fallingDamageTask.isCancelled())
+		{
+			_fallingDamageTask.cancel(false);
+			_fallingDamageTask = null;
+		}
+		if ((_pvpRegTask != null) && !_pvpRegTask.isDone() && !_pvpRegTask.isCancelled())
+		{
+			_pvpRegTask.cancel(false);
+			_pvpRegTask = null;
+		}
+		if ((_autoSaveTask != null) && !_autoSaveTask.isDone() && !_autoSaveTask.isCancelled())
+		{
+			_autoSaveTask.cancel(false);
+			_autoSaveTask = null;
+		}
+		if ((_taskWarnUserTakeBreak != null) && !_taskWarnUserTakeBreak.isDone() && !_taskWarnUserTakeBreak.isCancelled())
+		{
+			_taskWarnUserTakeBreak.cancel(false);
+			_taskWarnUserTakeBreak = null;
+		}
+		
+		synchronized (_questTimers)
+		{
+			for (QuestTimer timer : _questTimers)
+			{
+				timer.cancel();
+			}
+			_questTimers.clear();
+		}
+	}
+	
+	public void addQuestTimer(QuestTimer questTimer)
+	{
+		synchronized (_questTimers)
+		{
+			_questTimers.add(questTimer);
+		}
+	}
+	
+	public void removeQuestTimer(QuestTimer questTimer)
+	{
+		synchronized (_questTimers)
+		{
+			_questTimers.remove(questTimer);
+		}
 	}
 }

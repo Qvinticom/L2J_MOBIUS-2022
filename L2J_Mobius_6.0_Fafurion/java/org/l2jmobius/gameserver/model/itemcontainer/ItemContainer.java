@@ -477,7 +477,7 @@ public abstract class ItemContainer
 				item.updateDatabase();
 				refreshWeight();
 				
-				item.deleteMe();
+				item.stopAllTasks();
 			}
 		}
 		return item;
@@ -590,7 +590,7 @@ public abstract class ItemContainer
 			for (ItemInstance item : _items.values())
 			{
 				item.updateDatabase(true);
-				item.deleteMe();
+				item.stopAllTasks();
 				World.getInstance().removeObject(item);
 			}
 		}

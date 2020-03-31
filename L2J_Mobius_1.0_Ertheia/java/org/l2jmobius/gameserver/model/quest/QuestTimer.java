@@ -47,6 +47,11 @@ public class QuestTimer
 		{
 			_scheduler = ThreadPool.schedule(new ScheduleTimerTask(), time); // Prepare auto end task
 		}
+		
+		if (player != null)
+		{
+			player.addQuestTimer(this);
+		}
 	}
 	
 	public void cancel()
@@ -55,6 +60,11 @@ public class QuestTimer
 		{
 			_scheduler.cancel(false);
 			_scheduler = null;
+		}
+		
+		if (_player != null)
+		{
+			_player.removeQuestTimer(this);
 		}
 		
 		_quest.removeQuestTimer(this);

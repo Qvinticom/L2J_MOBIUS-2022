@@ -91,6 +91,12 @@ public class Disconnection
 		_client = getClient(client, player);
 		_player = getActiveChar(client, player);
 		
+		// Stop player tasks.
+		if (_player != null)
+		{
+			_player.stopAllTasks();
+		}
+		
 		// Anti Feed
 		AntiFeedManager.getInstance().onDisconnect(_client);
 		

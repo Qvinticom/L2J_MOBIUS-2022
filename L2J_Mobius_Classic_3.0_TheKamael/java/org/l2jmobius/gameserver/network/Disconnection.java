@@ -94,9 +94,7 @@ public class Disconnection
 		// Stop player tasks.
 		if (_player != null)
 		{
-			_player.stopTimedHuntingZoneTask();
-			_player.stopAutoPlayTask();
-			_player.stopAutoUseTask();
+			_player.stopAllTasks();
 		}
 		
 		// Anti Feed

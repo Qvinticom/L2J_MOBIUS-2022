@@ -164,7 +164,7 @@ public class Mail extends ItemContainer
 		_items.forEach(item ->
 		{
 			item.updateDatabase(true);
-			item.deleteMe();
+			item.stopAllTasks();
 			World.getInstance().removeObject(item);
 		});
 		_items.clear();

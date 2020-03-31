@@ -155,7 +155,7 @@ public class ItemInstance extends WorldObject
 	
 	private Elementals[] _elementals = null;
 	
-	private ScheduledFuture<?> itemLootShedule = null;
+	private ScheduledFuture<?> _itemLootShedule = null;
 	private ScheduledFuture<?> _lifeTimeTask;
 	
 	private final DropProtection _dropProtection = new DropProtection();
@@ -1732,21 +1732,21 @@ public class ItemInstance extends WorldObject
 	
 	public void resetOwnerTimer()
 	{
-		if (itemLootShedule != null)
+		if (_itemLootShedule != null)
 		{
-			itemLootShedule.cancel(true);
-			itemLootShedule = null;
+			_itemLootShedule.cancel(true);
+			_itemLootShedule = null;
 		}
 	}
 	
 	public void setItemLootShedule(ScheduledFuture<?> sf)
 	{
-		itemLootShedule = sf;
+		_itemLootShedule = sf;
 	}
 	
 	public ScheduledFuture<?> getItemLootShedule()
 	{
-		return itemLootShedule;
+		return _itemLootShedule;
 	}
 	
 	public void setProtected(boolean isProtected)
@@ -2191,7 +2191,7 @@ public class ItemInstance extends WorldObject
 	{
 	}
 	
-	public void deleteMe()
+	public void stopAllTasks()
 	{
 		if ((_lifeTimeTask != null) && !_lifeTimeTask.isDone())
 		{
