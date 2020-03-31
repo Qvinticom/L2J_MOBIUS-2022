@@ -25,7 +25,6 @@ import java.util.logging.Logger;
 import org.l2jmobius.Config;
 import org.l2jmobius.commons.database.DatabaseFactory;
 import org.l2jmobius.gameserver.LoginServerThread;
-import org.l2jmobius.gameserver.instancemanager.PlayerCountManager;
 import org.l2jmobius.gameserver.model.ManufactureItem;
 import org.l2jmobius.gameserver.model.ManufactureList;
 import org.l2jmobius.gameserver.model.TradeList.TradeItem;
@@ -34,6 +33,7 @@ import org.l2jmobius.gameserver.model.actor.Creature;
 import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
 import org.l2jmobius.gameserver.network.GameClient;
 import org.l2jmobius.gameserver.network.GameClient.GameClientState;
+import org.l2jmobius.gameserver.ui.SystemPanel;
 
 /**
  * @author Shyla
@@ -275,7 +275,6 @@ public class OfflineTradeTable
 					player.setOnlineStatus(true);
 					player.restoreEffects();
 					player.broadcastUserInfo();
-					PlayerCountManager.getInstance().incOfflineTradeCount();
 					nTraders++;
 				}
 				catch (Exception e)
@@ -289,6 +288,7 @@ public class OfflineTradeTable
 			}
 			rs.close();
 			stm.close();
+			SystemPanel.OFFLINE_TRADE_COUNT = nTraders;
 			LOGGER.info("Loaded " + nTraders + " offline traders.");
 		}
 		catch (Exception e)

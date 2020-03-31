@@ -23,10 +23,10 @@ import java.util.Map;
 import java.util.concurrent.ConcurrentHashMap;
 import java.util.logging.Logger;
 
-import org.l2jmobius.gameserver.instancemanager.PlayerCountManager;
 import org.l2jmobius.gameserver.model.actor.Creature;
 import org.l2jmobius.gameserver.model.actor.instance.PetInstance;
 import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
+import org.l2jmobius.gameserver.ui.SystemPanel;
 
 /**
  * @version $Revision: 1.21.2.5.2.7 $ $Date: 2005/03/27 15:29:32 $
@@ -286,8 +286,6 @@ public class World
 	{
 		if (object instanceof PlayerInstance)
 		{
-			PlayerCountManager.getInstance().incConnectedCount();
-			
 			final PlayerInstance player = (PlayerInstance) object;
 			final PlayerInstance tmp = _allPlayers.get(player.getName().toLowerCase());
 			if ((tmp != null) && (tmp != player)) // just kick the player previous instance
@@ -446,10 +444,9 @@ public class World
 		// If selected WorldObject is a NcIntance, remove it from WorldObjectHashSet(PlayerInstance) _allPlayers of World
 		if (object instanceof PlayerInstance)
 		{
-			PlayerCountManager.getInstance().decConnectedCount();
 			if (object.getActingPlayer().isInOfflineMode())
 			{
-				PlayerCountManager.getInstance().decOfflineTradeCount();
+				SystemPanel.OFFLINE_TRADE_COUNT--;
 			}
 			
 			if (!((PlayerInstance) object).isTeleporting())

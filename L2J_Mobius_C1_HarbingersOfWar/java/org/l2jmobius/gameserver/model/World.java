@@ -23,7 +23,6 @@ import java.util.List;
 import java.util.Map;
 import java.util.concurrent.ConcurrentHashMap;
 
-import org.l2jmobius.gameserver.managers.PlayerCountManager;
 import org.l2jmobius.gameserver.model.actor.instance.ItemInstance;
 import org.l2jmobius.gameserver.model.actor.instance.PetInstance;
 import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
@@ -88,7 +87,6 @@ public class World
 				}
 				element.addKnownObject(object);
 			}
-			PlayerCountManager.getInstance().incConnectedCount();
 		}
 		else if ((_allPlayers.size() != 0) && !(object instanceof PetInstance) && !(object instanceof ItemInstance))
 		{
@@ -123,10 +121,6 @@ public class World
 		if (object instanceof PlayerInstance)
 		{
 			_allPlayers.remove(((PlayerInstance) object).getName().toLowerCase());
-			
-			// TODO: Make sure the normal way works.
-			// PlayerCountManager.getInstance().decConnectedCount();
-			PlayerCountManager.getInstance().setConnectedCount(_allPlayers.size());
 		}
 	}
 	

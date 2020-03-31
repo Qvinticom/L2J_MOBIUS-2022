@@ -31,7 +31,7 @@ import javax.swing.border.LineBorder;
 
 import org.l2jmobius.Config;
 import org.l2jmobius.gameserver.GameServer;
-import org.l2jmobius.gameserver.instancemanager.PlayerCountManager;
+import org.l2jmobius.gameserver.model.World;
 import org.l2jmobius.gameserver.util.Locator;
 
 /**
@@ -39,7 +39,10 @@ import org.l2jmobius.gameserver.util.Locator;
  */
 public class SystemPanel extends JPanel
 {
-	static final long START_TIME = System.currentTimeMillis();
+	private static final long START_TIME = System.currentTimeMillis();
+	
+	public static volatile int MAX_CONNECTED_COUNT = 0;
+	public static volatile int OFFLINE_TRADE_COUNT = 0;
 	
 	public SystemPanel()
 	{
@@ -128,9 +131,14 @@ public class SystemPanel extends JPanel
 			@Override
 			public void run()
 			{
-				lblConnected.setText("Connected: " + PlayerCountManager.getInstance().getConnectedCount());
-				lblMaxConnected.setText("Max connected: " + PlayerCountManager.getInstance().getMaxConnectedCount());
-				lblOfflineShops.setText("Offline trade: " + PlayerCountManager.getInstance().getOfflineTradeCount());
+				final int playerCount = World.getInstance().getAllPlayers().size();
+				if (MAX_CONNECTED_COUNT < playerCount)
+				{
+					MAX_CONNECTED_COUNT = playerCount;
+				}
+				lblConnected.setText("Connected: " + playerCount);
+				lblMaxConnected.setText("Max connected: " + MAX_CONNECTED_COUNT);
+				lblOfflineShops.setText("Offline trade: " + OFFLINE_TRADE_COUNT);
 				lblElapsedTime.setText("Elapsed: " + getDurationBreakdown(System.currentTimeMillis() - START_TIME));
 			}
 		}, 1000, 1000);

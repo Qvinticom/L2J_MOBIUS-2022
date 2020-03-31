@@ -83,7 +83,6 @@ import org.l2jmobius.gameserver.instancemanager.DuelManager;
 import org.l2jmobius.gameserver.instancemanager.FishingZoneManager;
 import org.l2jmobius.gameserver.instancemanager.FortSiegeManager;
 import org.l2jmobius.gameserver.instancemanager.ItemsOnGroundManager;
-import org.l2jmobius.gameserver.instancemanager.PlayerCountManager;
 import org.l2jmobius.gameserver.instancemanager.QuestManager;
 import org.l2jmobius.gameserver.instancemanager.SiegeManager;
 import org.l2jmobius.gameserver.model.AccessLevel;
@@ -226,6 +225,7 @@ import org.l2jmobius.gameserver.network.serverpackets.TradePressOwnOk;
 import org.l2jmobius.gameserver.network.serverpackets.TradeStart;
 import org.l2jmobius.gameserver.network.serverpackets.UserInfo;
 import org.l2jmobius.gameserver.network.serverpackets.ValidateLocation;
+import org.l2jmobius.gameserver.ui.SystemPanel;
 import org.l2jmobius.gameserver.util.Broadcast;
 import org.l2jmobius.gameserver.util.FloodProtectors;
 import org.l2jmobius.gameserver.util.IllegalPlayerAction;
@@ -7473,7 +7473,7 @@ public class PlayerInstance extends Playable
 			store();
 			if (Config.OFFLINE_DISCONNECT_FINISHED)
 			{
-				PlayerCountManager.getInstance().decOfflineTradeCount();
+				SystemPanel.OFFLINE_TRADE_COUNT--;
 				deleteMe();
 				
 				if (_client != null)

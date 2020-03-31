@@ -31,7 +31,6 @@ import org.l2jmobius.gameserver.ai.CreatureAI;
 import org.l2jmobius.gameserver.ai.CtrlEvent;
 import org.l2jmobius.gameserver.ai.CtrlIntention;
 import org.l2jmobius.gameserver.data.sql.impl.CharNameTable;
-import org.l2jmobius.gameserver.instancemanager.PlayerCountManager;
 import org.l2jmobius.gameserver.model.actor.Creature;
 import org.l2jmobius.gameserver.model.actor.Npc;
 import org.l2jmobius.gameserver.model.actor.Summon;
@@ -145,8 +144,6 @@ public class World
 		
 		if (object.isPlayer())
 		{
-			PlayerCountManager.getInstance().incConnectedCount();
-			
 			final PlayerInstance newPlayer = (PlayerInstance) object;
 			if (newPlayer.isTeleporting()) // TODO: Drop when we stop removing player from the world while teleporting.
 			{
@@ -183,8 +180,6 @@ public class World
 		_allObjects.remove(object.getObjectId());
 		if (object.isPlayer())
 		{
-			PlayerCountManager.getInstance().decConnectedCount();
-			
 			final PlayerInstance player = (PlayerInstance) object;
 			if (player.isTeleporting()) // TODO: Drop when we stop removing player from the world while teleporting.
 			{

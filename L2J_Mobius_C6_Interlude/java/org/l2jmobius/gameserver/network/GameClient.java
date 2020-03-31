@@ -41,7 +41,6 @@ import org.l2jmobius.gameserver.LoginServerThread.SessionKey;
 import org.l2jmobius.gameserver.datatables.OfflineTradeTable;
 import org.l2jmobius.gameserver.datatables.SkillTable;
 import org.l2jmobius.gameserver.datatables.sql.ClanTable;
-import org.l2jmobius.gameserver.instancemanager.PlayerCountManager;
 import org.l2jmobius.gameserver.model.CharSelectInfoPackage;
 import org.l2jmobius.gameserver.model.World;
 import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
@@ -56,6 +55,7 @@ import org.l2jmobius.gameserver.model.zone.ZoneId;
 import org.l2jmobius.gameserver.network.serverpackets.ActionFailed;
 import org.l2jmobius.gameserver.network.serverpackets.GameServerPacket;
 import org.l2jmobius.gameserver.network.serverpackets.ServerClose;
+import org.l2jmobius.gameserver.ui.SystemPanel;
 import org.l2jmobius.gameserver.util.EventData;
 import org.l2jmobius.gameserver.util.FloodProtectors;
 
@@ -752,7 +752,7 @@ public class GameClient extends MMOClient<MMOConnection<GameClient>> implements 
 							}
 							
 							OfflineTradeTable.storeOffliner(player);
-							PlayerCountManager.getInstance().incOfflineTradeCount();
+							SystemPanel.OFFLINE_TRADE_COUNT++;
 							return;
 						}
 					}

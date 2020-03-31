@@ -32,7 +32,6 @@ import javax.swing.border.LineBorder;
 
 import org.l2jmobius.Config;
 import org.l2jmobius.gameserver.GameServer;
-import org.l2jmobius.gameserver.managers.PlayerCountManager;
 import org.l2jmobius.gameserver.model.World;
 import org.l2jmobius.util.Locator;
 
@@ -41,7 +40,10 @@ import org.l2jmobius.util.Locator;
  */
 public class SystemPanel extends JPanel
 {
-	static final long START_TIME = System.currentTimeMillis();
+	private static final long START_TIME = System.currentTimeMillis();
+	
+	public static volatile int MAX_CONNECTED_COUNT = 0;
+	public static volatile int OFFLINE_TRADE_COUNT = 0;
 	
 	public SystemPanel()
 	{
@@ -117,8 +119,13 @@ public class SystemPanel extends JPanel
 			@Override
 			public void run()
 			{
-				lblConnected.setText("Connected: " + World.getInstance().getAllPlayers().size());
-				lblMaxConnected.setText("Max connected: " + PlayerCountManager.getInstance().getMaxConnectedCount());
+				final int playerCount = World.getInstance().getAllPlayers().size();
+				if (MAX_CONNECTED_COUNT < playerCount)
+				{
+					MAX_CONNECTED_COUNT = playerCount;
+				}
+				lblConnected.setText("Connected: " + playerCount);
+				lblMaxConnected.setText("Max connected: " + MAX_CONNECTED_COUNT);
 				lblElapsedTime.setText("Elapsed: " + getDurationBreakdown(System.currentTimeMillis() - START_TIME));
 			}
 		}, 1000, 1000);
