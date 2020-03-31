@@ -1143,7 +1143,7 @@ public class Castle extends AbstractResidence
 	public void giveResidentialSkills(PlayerInstance player)
 	{
 		super.giveResidentialSkills(player);
-		if (player.getPledgeClass() > 8) // Marquis
+		if ((player.getPledgeClass() == -1) || (player.getPledgeClass() == 100)) // Leader or Elite
 		{
 			player.addSkill(_castleSide == CastleSide.DARK ? CommonSkill.ABILITY_OF_DARKNESS.getSkill() : CommonSkill.ABILITY_OF_LIGHT.getSkill());
 		}
