@@ -16,6 +16,7 @@
  */
 package org.l2jmobius.gameserver.model.actor;
 
+import java.util.ArrayList;
 import java.util.List;
 import java.util.logging.Level;
 
@@ -78,6 +79,7 @@ import org.l2jmobius.gameserver.model.instancezone.Instance;
 import org.l2jmobius.gameserver.model.items.Weapon;
 import org.l2jmobius.gameserver.model.items.instance.ItemInstance;
 import org.l2jmobius.gameserver.model.olympiad.Olympiad;
+import org.l2jmobius.gameserver.model.quest.QuestTimer;
 import org.l2jmobius.gameserver.model.skills.Skill;
 import org.l2jmobius.gameserver.model.spawns.NpcSpawnTemplate;
 import org.l2jmobius.gameserver.model.stats.Formulas;
@@ -156,6 +158,8 @@ public class Npc extends Creature
 	
 	/** Contains information about local tax payments. */
 	private TaxZone _taxZone = null;
+	
+	private final List<QuestTimer> _questTimers = new ArrayList<>();
 	
 	/**
 	 * Constructor of NpcInstance (use Creature constructor).<br>
@@ -1148,6 +1152,9 @@ public class Npc extends Creature
 			instance.removeNpc(this);
 		}
 		
+		// Stop quest timers
+		stopQuestTimers();
+		
 		// Clear script value
 		_scriptValue = 0;
 	}
@@ -1865,5 +1872,33 @@ public class Npc extends Creature
 	public RaidBossStatus getDBStatus()
 	{
 		return _raidStatus;
+	}
+	
+	public void addQuestTimer(QuestTimer questTimer)
+	{
+		synchronized (_questTimers)
+		{
+			_questTimers.add(questTimer);
+		}
+	}
+	
+	public void removeQuestTimer(QuestTimer questTimer)
+	{
+		synchronized (_questTimers)
+		{
+			_questTimers.remove(questTimer);
+		}
+	}
+	
+	public void stopQuestTimers()
+	{
+		synchronized (_questTimers)
+		{
+			for (QuestTimer timer : _questTimers)
+			{
+				timer.cancel();
+			}
+			_questTimers.clear();
+		}
 	}
 }

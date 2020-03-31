@@ -48,6 +48,11 @@ public class QuestTimer
 			_scheduler = ThreadPool.schedule(new ScheduleTimerTask(), time); // Prepare auto end task
 		}
 		
+		if (npc != null)
+		{
+			npc.addQuestTimer(this);
+		}
+		
 		if (player != null)
 		{
 			player.addQuestTimer(this);
@@ -60,6 +65,11 @@ public class QuestTimer
 		{
 			_scheduler.cancel(false);
 			_scheduler = null;
+		}
+		
+		if (_npc != null)
+		{
+			_npc.removeQuestTimer(this);
 		}
 		
 		if (_player != null)

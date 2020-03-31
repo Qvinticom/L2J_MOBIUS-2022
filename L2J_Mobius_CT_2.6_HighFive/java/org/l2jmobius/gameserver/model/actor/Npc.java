@@ -16,6 +16,7 @@
  */
 package org.l2jmobius.gameserver.model.actor;
 
+import java.util.ArrayList;
 import java.util.Collection;
 import java.util.Collections;
 import java.util.List;
@@ -80,6 +81,7 @@ import org.l2jmobius.gameserver.model.items.Item;
 import org.l2jmobius.gameserver.model.items.Weapon;
 import org.l2jmobius.gameserver.model.items.instance.ItemInstance;
 import org.l2jmobius.gameserver.model.olympiad.Olympiad;
+import org.l2jmobius.gameserver.model.quest.QuestTimer;
 import org.l2jmobius.gameserver.model.skills.Skill;
 import org.l2jmobius.gameserver.model.stats.Formulas;
 import org.l2jmobius.gameserver.model.variables.NpcVariables;
@@ -156,6 +158,8 @@ public class Npc extends Creature
 	
 	/** Map of summoned NPCs by this NPC. */
 	private Map<Integer, Npc> _summonedNpcs = null;
+	
+	private final List<QuestTimer> _questTimers = new ArrayList<>();
 	
 	/**
 	 * Creates a NPC.
@@ -1323,6 +1327,9 @@ public class Npc extends Creature
 			((Npc) summoner).removeSummonedNpc(getObjectId());
 		}
 		
+		// Stop quest timers
+		stopQuestTimers();
+		
 		// Clear script value
 		_scriptValue = 0;
 	}
@@ -2051,5 +2058,33 @@ public class Npc extends Creature
 	public int getMinShopDistance()
 	{
 		return Config.SHOP_MIN_RANGE_FROM_NPC;
+	}
+	
+	public void addQuestTimer(QuestTimer questTimer)
+	{
+		synchronized (_questTimers)
+		{
+			_questTimers.add(questTimer);
+		}
+	}
+	
+	public void removeQuestTimer(QuestTimer questTimer)
+	{
+		synchronized (_questTimers)
+		{
+			_questTimers.remove(questTimer);
+		}
+	}
+	
+	public void stopQuestTimers()
+	{
+		synchronized (_questTimers)
+		{
+			for (QuestTimer timer : _questTimers)
+			{
+				timer.cancel();
+			}
+			_questTimers.clear();
+		}
 	}
 }
