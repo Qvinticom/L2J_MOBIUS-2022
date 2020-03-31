@@ -231,6 +231,7 @@ import quests.Q10857_SecretTeleport.Q10857_SecretTeleport;
 import quests.Q10873_ExaltedReachingAnotherLevel.Q10873_ExaltedReachingAnotherLevel;
 import quests.Q10876_LeadersGrace.Q10876_LeadersGrace;
 import quests.Q10879_ExaltedGuideToPower.Q10879_ExaltedGuideToPower;
+import quests.Q10880_TheLastOneStanding.Q10880_TheLastOneStanding;
 import quests.Q10891_AtANewPlace.Q10891_AtANewPlace;
 import quests.Q10892_RevengeOneStepAtATime.Q10892_RevengeOneStepAtATime;
 import quests.Q10896_VisitTheAdventureGuild.Q10896_VisitTheAdventureGuild;
@@ -318,7 +319,6 @@ import quests.not_done.Q10854_ToSeizeTheFortress;
 import quests.not_done.Q10874_AgainstTheNewEnemy;
 import quests.not_done.Q10875_ForReputation;
 import quests.not_done.Q10877_BreakThroughCrisis;
-import quests.not_done.Q10880_TheLastOneStanding;
 import quests.not_done.Q10881_ForThePride;
 import quests.not_done.Q10882_VictoryCollection;
 import quests.not_done.Q10883_ImmortalHonor;
@@ -610,7 +610,7 @@ public class QuestMasterHandler
 		Q10876_LeadersGrace.class,
 		Q10877_BreakThroughCrisis.class, // TODO: Not done.
 		Q10879_ExaltedGuideToPower.class,
-		Q10880_TheLastOneStanding.class, // TODO: Not done.
+		Q10880_TheLastOneStanding.class,
 		Q10881_ForThePride.class, // TODO: Not done.
 		Q10882_VictoryCollection.class, // TODO: Not done.
 		Q10883_ImmortalHonor.class, // TODO: Not done.
