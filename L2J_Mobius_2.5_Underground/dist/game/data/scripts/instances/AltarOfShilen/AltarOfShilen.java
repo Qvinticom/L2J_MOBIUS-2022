@@ -220,8 +220,12 @@ public class AltarOfShilen extends AbstractInstance
 							{
 								p.teleToLocation(SECOND_FLOOR, world.getTemplateId());
 							}
-							world.spawnGroup("second_floor");
 						});
+						if (!world.getParameters().getBoolean("second_floor_spawned", false))
+						{
+							world.setParameter("second_floor_spawned", true);
+							world.spawnGroup("second_floor");
+						}
 					}
 					break;
 				}
@@ -235,8 +239,12 @@ public class AltarOfShilen extends AbstractInstance
 							{
 								p.teleToLocation(THIRD_FLOOR, world.getTemplateId());
 							}
-							world.spawnGroup("thrid_floor");
 						});
+						if (!world.getParameters().getBoolean("third_floor_spawned", false))
+						{
+							world.setParameter("third_floor_spawned", true);
+							world.spawnGroup("third_floor");
+						}
 					}
 					break;
 				}
