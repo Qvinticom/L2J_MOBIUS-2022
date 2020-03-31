@@ -69,15 +69,18 @@ public class Hardin extends AbstractNpcAI
 		if (event.equals("list"))
 		{
 			final StringBuilder classes = new StringBuilder();
+			final ClassId playerBaseTemplate = player.getBaseTemplate().getClassId();
 			for (ClassId c : ClassId.values())
 			{
 				if ((((c.level() != 4) && (c.getRace() != Race.ERTHEIA)) //
 					|| (Config.HARDIN_ENABLE_ERTHEIAS && (c.getRace() == Race.ERTHEIA) && (c.level() != 3))) //
 					|| (!Config.HARDIN_ENABLE_ERTHEIAS && (c.getRace() == Race.ERTHEIA)) //
-					|| (c == player.getClassId()))
+					|| (c == player.getClassId()) //
+					|| (c == playerBaseTemplate))
 				{
 					continue;
 				}
+				
 				if (!player.isDualClassActive() || (player.isDualClassActive() && Config.HARDIN_ENABLE_DUALCLASS_CHECKS))
 				{
 					if (!Config.HARDIN_ENABLE_ALL_RACES && (c.getRace() != player.getClassId().getRace()))
