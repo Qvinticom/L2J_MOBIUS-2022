@@ -14411,7 +14411,7 @@ public class PlayerInstance extends Playable
 		{
 			for (QuestTimer timer : _questTimers)
 			{
-				timer.cancel();
+				timer.cancelTask();
 			}
 			_questTimers.clear();
 		}

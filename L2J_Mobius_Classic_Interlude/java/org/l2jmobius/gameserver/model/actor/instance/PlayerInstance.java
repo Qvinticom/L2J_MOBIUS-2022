@@ -213,6 +213,7 @@ import org.l2jmobius.gameserver.model.events.impl.creature.player.OnPlayerReputa
 import org.l2jmobius.gameserver.model.events.impl.creature.player.OnPlayerSubChange;
 import org.l2jmobius.gameserver.model.events.listeners.FunctionEventListener;
 import org.l2jmobius.gameserver.model.events.returns.TerminateReturn;
+import org.l2jmobius.gameserver.model.events.timers.TimerHolder;
 import org.l2jmobius.gameserver.model.fishing.Fishing;
 import org.l2jmobius.gameserver.model.holders.AttendanceInfoHolder;
 import org.l2jmobius.gameserver.model.holders.ItemHolder;
@@ -851,6 +852,7 @@ public class PlayerInstance extends Playable
 	private final Set<Integer> _whisperers = ConcurrentHashMap.newKeySet();
 	
 	private final List<QuestTimer> _questTimers = new ArrayList<>();
+	private final List<TimerHolder<?>> _timerHolders = new ArrayList<>();
 	
 	// Selling buffs system
 	private boolean _isSellingBuffs = false;
@@ -13698,9 +13700,18 @@ public class PlayerInstance extends Playable
 		{
 			for (QuestTimer timer : _questTimers)
 			{
-				timer.cancel();
+				timer.cancelTask();
 			}
 			_questTimers.clear();
+		}
+		
+		synchronized (_timerHolders)
+		{
+			for (TimerHolder<?> timer : _timerHolders)
+			{
+				timer.cancelTask();
+			}
+			_timerHolders.clear();
 		}
 	}
 	
@@ -13717,6 +13728,22 @@ public class PlayerInstance extends Playable
 		synchronized (_questTimers)
 		{
 			_questTimers.remove(questTimer);
+		}
+	}
+	
+	public void addTimerHolder(TimerHolder<?> timer)
+	{
+		synchronized (_timerHolders)
+		{
+			_timerHolders.add(timer);
+		}
+	}
+	
+	public void removeTimerHolder(TimerHolder<?> timer)
+	{
+		synchronized (_timerHolders)
+		{
+			_timerHolders.remove(timer);
 		}
 	}
 	

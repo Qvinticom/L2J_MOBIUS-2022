@@ -73,6 +73,7 @@ import org.l2jmobius.gameserver.model.events.impl.creature.npc.OnNpcSkillFinishe
 import org.l2jmobius.gameserver.model.events.impl.creature.npc.OnNpcSpawn;
 import org.l2jmobius.gameserver.model.events.impl.creature.npc.OnNpcTeleport;
 import org.l2jmobius.gameserver.model.events.returns.TerminateReturn;
+import org.l2jmobius.gameserver.model.events.timers.TimerHolder;
 import org.l2jmobius.gameserver.model.holders.ItemHolder;
 import org.l2jmobius.gameserver.model.instancezone.Instance;
 import org.l2jmobius.gameserver.model.items.Weapon;
@@ -159,6 +160,7 @@ public class Npc extends Creature
 	private TaxZone _taxZone = null;
 	
 	private final List<QuestTimer> _questTimers = new ArrayList<>();
+	private final List<TimerHolder<?>> _timerHolders = new ArrayList<>();
 	
 	/**
 	 * Constructor of NpcInstance (use Creature constructor).<br>
@@ -1140,8 +1142,9 @@ public class Npc extends Creature
 			instance.removeNpc(this);
 		}
 		
-		// Stop quest timers
+		// Stop all timers
 		stopQuestTimers();
+		stopTimerHolders();
 		
 		// Clear script value
 		_scriptValue = 0;
@@ -1884,9 +1887,37 @@ public class Npc extends Creature
 		{
 			for (QuestTimer timer : _questTimers)
 			{
-				timer.cancel();
+				timer.cancelTask();
 			}
 			_questTimers.clear();
+		}
+	}
+	
+	public void addTimerHolder(TimerHolder<?> timer)
+	{
+		synchronized (_timerHolders)
+		{
+			_timerHolders.add(timer);
+		}
+	}
+	
+	public void removeTimerHolder(TimerHolder<?> timer)
+	{
+		synchronized (_timerHolders)
+		{
+			_timerHolders.remove(timer);
+		}
+	}
+	
+	public void stopTimerHolders()
+	{
+		synchronized (_timerHolders)
+		{
+			for (TimerHolder<?> timer : _timerHolders)
+			{
+				timer.cancelTask();
+			}
+			_timerHolders.clear();
 		}
 	}
 }

@@ -21,7 +21,6 @@ import java.util.concurrent.ScheduledFuture;
 import java.util.concurrent.TimeUnit;
 
 import org.l2jmobius.commons.concurrent.ThreadPool;
-import org.l2jmobius.gameserver.instancemanager.TimersManager;
 import org.l2jmobius.gameserver.model.StatSet;
 import org.l2jmobius.gameserver.model.actor.Npc;
 import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
@@ -59,7 +58,16 @@ public class TimerHolder<T> implements Runnable
 		_cancelScript = cancelScript;
 		_postExecutor = postExecutor;
 		_task = isRepeating ? ThreadPool.scheduleAtFixedRate(this, _time, _time) : ThreadPool.schedule(this, _time);
-		TimersManager.getInstance().registerTimer(this);
+		
+		if (npc != null)
+		{
+			npc.addTimerHolder(this);
+		}
+		
+		if (player != null)
+		{
+			player.addTimerHolder(this);
+		}
 	}
 	
 	/**
@@ -103,28 +111,38 @@ public class TimerHolder<T> implements Runnable
 	}
 	
 	/**
-	 * @return {@code true} if timer for the given event, npc, player were stopped, {@code false} otherwise
+	 * Cancels this timer.
 	 */
-	public boolean cancelTimer()
+	public void cancelTimer()
 	{
-		// Make sure to unregister this timer even if the task is already completed (TimerExecutor#onTimerPostExecute calls this method).
 		if (_npc != null)
 		{
-			TimersManager.getInstance().unregisterTimer(_npc.getObjectId(), this);
+			_npc.removeTimerHolder(this);
 		}
+		
 		if (_player != null)
 		{
-			TimersManager.getInstance().unregisterTimer(_player.getObjectId(), this);
+			_player.removeTimerHolder(this);
 		}
 		
 		if ((_task == null) || _task.isCancelled() || _task.isDone())
 		{
-			return false;
+			return;
 		}
 		
 		_task.cancel(true);
 		_cancelScript.onTimerCancel(this);
-		return true;
+	}
+	
+	/**
+	 * Cancels task related to this quest timer.
+	 */
+	public void cancelTask()
+	{
+		if ((_task != null) && !_task.isDone() && !_task.isCancelled())
+		{
+			_task.cancel(false);
+		}
 	}
 	
 	/**

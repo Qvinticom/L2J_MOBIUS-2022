@@ -61,11 +61,7 @@ public class QuestTimer
 	
 	public void cancel()
 	{
-		if (_scheduler != null)
-		{
-			_scheduler.cancel(false);
-			_scheduler = null;
-		}
+		cancelTask();
 		
 		if (_npc != null)
 		{
@@ -76,7 +72,15 @@ public class QuestTimer
 		{
 			_player.removeQuestTimer(this);
 		}
-		
+	}
+	
+	public void cancelTask()
+	{
+		if ((_scheduler != null) && !_scheduler.isDone() && !_scheduler.isCancelled())
+		{
+			_scheduler.cancel(false);
+			_scheduler = null;
+		}
 		_quest.removeQuestTimer(this);
 	}
 	

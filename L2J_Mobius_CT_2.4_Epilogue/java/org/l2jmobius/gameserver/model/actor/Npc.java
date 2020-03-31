@@ -1327,7 +1327,7 @@ public class Npc extends Creature
 			((Npc) summoner).removeSummonedNpc(getObjectId());
 		}
 		
-		// Stop quest timers
+		// Stop all timers
 		stopQuestTimers();
 		
 		// Clear script value
@@ -2082,7 +2082,7 @@ public class Npc extends Creature
 		{
 			for (QuestTimer timer : _questTimers)
 			{
-				timer.cancel();
+				timer.cancelTask();
 			}
 			_questTimers.clear();
 		}

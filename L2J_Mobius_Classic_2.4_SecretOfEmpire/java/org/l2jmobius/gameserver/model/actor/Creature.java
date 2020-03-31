@@ -67,7 +67,6 @@ import org.l2jmobius.gameserver.geoengine.GeoEngine;
 import org.l2jmobius.gameserver.idfactory.IdFactory;
 import org.l2jmobius.gameserver.instancemanager.MapRegionManager;
 import org.l2jmobius.gameserver.instancemanager.QuestManager;
-import org.l2jmobius.gameserver.instancemanager.TimersManager;
 import org.l2jmobius.gameserver.instancemanager.ZoneManager;
 import org.l2jmobius.gameserver.model.AccessLevel;
 import org.l2jmobius.gameserver.model.CreatureContainer;
@@ -1680,9 +1679,6 @@ public abstract class Creature extends WorldObject implements ISkillsHolder, IDe
 		
 		// Remove all active, passive and option effects, do not broadcast changes.
 		_effectList.stopAllEffectsWithoutExclusions(false, false);
-		
-		// Cancel all timers related to this Creature
-		TimersManager.getInstance().cancelTimers(getObjectId());
 		
 		// Cancel the BuffFinishTask related to this creature.
 		cancelBuffFinishTask();
