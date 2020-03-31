@@ -30,7 +30,6 @@ import java.util.stream.Collectors;
 
 import org.l2jmobius.Config;
 import org.l2jmobius.commons.database.DatabaseFactory;
-import org.l2jmobius.gameserver.GameTimeController;
 import org.l2jmobius.gameserver.datatables.ItemTable;
 import org.l2jmobius.gameserver.enums.InventoryBlockType;
 import org.l2jmobius.gameserver.enums.ItemLocation;
@@ -968,14 +967,7 @@ public class PlayerInventory extends Inventory
 			return;
 		}
 		
-		if ((GameTimeController.getInstance().getGameTicks() % 10) == 0)
-		{
-			updateItemCount(null, arrows, -1, _owner, null);
-		}
-		else
-		{
-			updateItemCountNoDbUpdate(null, arrows, -1, _owner, null);
-		}
+		updateItemCountNoDbUpdate(null, arrows, -1, _owner, null);
 	}
 	
 	/**
