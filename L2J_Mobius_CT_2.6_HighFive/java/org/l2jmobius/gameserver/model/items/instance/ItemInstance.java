@@ -915,6 +915,8 @@ public class ItemInstance extends WorldObject
 		{
 			LOGGER.log(Level.SEVERE, "Could not update atributes for item: " + this + " from DB:", e);
 		}
+		
+		// Notify to scripts.
 		EventDispatcher.getInstance().notifyEventAsync(new OnPlayerAugment(getActingPlayer(), this, augmentation, true), getItem());
 		return true;
 	}

@@ -970,6 +970,8 @@ public class ItemInstance extends WorldObject
 		{
 			updateItemOptions();
 		}
+		
+		// Notify to scripts.
 		EventDispatcher.getInstance().notifyEventAsync(new OnPlayerAugment(getActingPlayer(), this, augmentation, true), getItem());
 		return true;
 	}

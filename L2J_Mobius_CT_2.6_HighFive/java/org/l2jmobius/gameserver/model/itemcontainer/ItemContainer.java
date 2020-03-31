@@ -29,7 +29,6 @@ import java.util.logging.Logger;
 
 import org.l2jmobius.Config;
 import org.l2jmobius.commons.database.DatabaseFactory;
-import org.l2jmobius.gameserver.GameTimeController;
 import org.l2jmobius.gameserver.datatables.ItemTable;
 import org.l2jmobius.gameserver.enums.ItemLocation;
 import org.l2jmobius.gameserver.model.World;
@@ -251,23 +250,8 @@ public abstract class ItemContainer
 			ItemTable.getInstance().destroyItem(process, item, actor, reference);
 			item.updateDatabase();
 			item = olditem;
-			
-			// Updates database
-			if ((item.getId() == Inventory.ADENA_ID) && (count < (10000 * Config.RATE_DROP_AMOUNT_BY_ID.getOrDefault(Inventory.ADENA_ID, 1f))))
-			{
-				// Small adena changes won't be saved to database all the time
-				if ((GameTimeController.getInstance().getGameTicks() % 5) == 0)
-				{
-					item.updateDatabase();
-				}
-			}
-			else
-			{
-				item.updateDatabase();
-			}
 		}
-		// If item hasn't be found in inventory, create new one
-		else
+		else // If item hasn't be found in inventory, create new one
 		{
 			item.setOwnerId(process, getOwnerId(), actor, reference);
 			item.setItemLocation(getBaseLocation());
@@ -275,9 +259,6 @@ public abstract class ItemContainer
 			
 			// Add item in inventory
 			addItem(item);
-			
-			// Updates database
-			item.updateDatabase();
 		}
 		
 		refreshWeight();
@@ -302,23 +283,8 @@ public abstract class ItemContainer
 		{
 			item.changeCount(process, count, actor, reference);
 			item.setLastChange(ItemInstance.MODIFIED);
-			// Updates database
-			// If Adena drop rate is not present it will be x1.
-			if ((itemId == Inventory.ADENA_ID) && (count < (10000 * Config.RATE_DROP_AMOUNT_BY_ID.getOrDefault(Inventory.ADENA_ID, 1f))))
-			{
-				// Small adena changes won't be saved to database all the time
-				if ((GameTimeController.getInstance().getGameTicks() % 5) == 0)
-				{
-					item.updateDatabase();
-				}
-			}
-			else
-			{
-				item.updateDatabase();
-			}
 		}
-		// If item hasn't be found in inventory, create new one
-		else
+		else // If item hasn't be found in inventory, create new one
 		{
 			for (int i = 0; i < count; i++)
 			{
@@ -337,8 +303,6 @@ public abstract class ItemContainer
 				
 				// Add item in inventory
 				addItem(item);
-				// Updates database
-				item.updateDatabase();
 				
 				// If stackable, end loop as entire count is included in 1 instance of item
 				if (template.isStackable() || !Config.MULTIPLE_ITEM_DROP)
@@ -374,8 +338,8 @@ public abstract class ItemContainer
 		{
 			return null;
 		}
-		ItemInstance targetitem = sourceitem.isStackable() ? target.getItemByItemId(sourceitem.getId()) : null;
 		
+		ItemInstance targetitem = sourceitem.isStackable() ? target.getItemByItemId(sourceitem.getId()) : null;
 		synchronized (sourceitem)
 		{
 			// check if this item still present in this container
@@ -403,8 +367,7 @@ public abstract class ItemContainer
 				{
 					sourceitem.changeCount(process, -count, actor, reference);
 				}
-				else
-				// Otherwise destroy old item
+				else // Otherwise destroy old item
 				{
 					removeItem(sourceitem);
 					ItemTable.getInstance().destroyItem(process, sourceitem, actor, reference);
@@ -414,8 +377,7 @@ public abstract class ItemContainer
 				{
 					targetitem.changeCount(process, count, actor, reference);
 				}
-				else
-				// Otherwise add new item
+				else // Otherwise add new item
 				{
 					targetitem = target.addItem(process, sourceitem.getId(), count, actor, reference);
 				}
@@ -468,12 +430,6 @@ public abstract class ItemContainer
 			{
 				item.changeCount(process, -count, actor, reference);
 				item.setLastChange(ItemInstance.MODIFIED);
-				
-				// don't update often for untraced items
-				if ((process != null) || ((GameTimeController.getInstance().getGameTicks() % 10) == 0))
-				{
-					item.updateDatabase();
-				}
 			}
 			else
 			{
