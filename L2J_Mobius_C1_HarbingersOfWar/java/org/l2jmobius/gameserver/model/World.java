@@ -29,6 +29,9 @@ import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
 
 public class World
 {
+	public static volatile int MAX_CONNECTED_COUNT = 0;
+	public static volatile int OFFLINE_TRADE_COUNT = 0;
+	
 	public static final int TILE_SIZE = 32768;
 	public static final int TILE_X_MIN = 11;
 	public static final int TILE_Y_MIN = 10;

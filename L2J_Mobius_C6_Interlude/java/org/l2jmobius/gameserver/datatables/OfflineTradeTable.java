@@ -24,7 +24,6 @@ import java.util.logging.Logger;
 
 import org.l2jmobius.Config;
 import org.l2jmobius.commons.database.DatabaseFactory;
-import org.l2jmobius.gameserver.GameServer;
 import org.l2jmobius.gameserver.LoginServerThread;
 import org.l2jmobius.gameserver.model.ManufactureItem;
 import org.l2jmobius.gameserver.model.ManufactureList;
@@ -288,7 +287,7 @@ public class OfflineTradeTable
 			}
 			rs.close();
 			stm.close();
-			GameServer.OFFLINE_TRADE_COUNT = nTraders;
+			World.OFFLINE_TRADE_COUNT = nTraders;
 			LOGGER.info("Loaded " + nTraders + " offline traders.");
 		}
 		catch (Exception e)

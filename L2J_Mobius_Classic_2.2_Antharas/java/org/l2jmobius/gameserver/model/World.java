@@ -45,6 +45,10 @@ import org.l2jmobius.gameserver.network.serverpackets.DeleteObject;
 public class World
 {
 	private static final Logger LOGGER = Logger.getLogger(World.class.getName());
+	
+	public static volatile int MAX_CONNECTED_COUNT = 0;
+	public static volatile int OFFLINE_TRADE_COUNT = 0;
+	
 	/** Gracia border Flying objects not allowed to the east of it. */
 	public static final int GRACIA_MAX_X = -166168;
 	public static final int GRACIA_MAX_Z = 6105;

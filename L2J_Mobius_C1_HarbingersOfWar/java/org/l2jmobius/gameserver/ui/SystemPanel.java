@@ -117,12 +117,12 @@ public class SystemPanel extends JPanel
 			public void run()
 			{
 				final int playerCount = World.getInstance().getAllPlayers().size();
-				if (GameServer.MAX_CONNECTED_COUNT < playerCount)
+				if (World.MAX_CONNECTED_COUNT < playerCount)
 				{
-					GameServer.MAX_CONNECTED_COUNT = playerCount;
+					World.MAX_CONNECTED_COUNT = playerCount;
 				}
 				lblConnected.setText("Connected: " + playerCount);
-				lblMaxConnected.setText("Max connected: " + GameServer.MAX_CONNECTED_COUNT);
+				lblMaxConnected.setText("Max connected: " + World.MAX_CONNECTED_COUNT);
 				lblElapsedTime.setText("Elapsed: " + getDurationBreakdown(System.currentTimeMillis() - START_TIME));
 			}
 		}, 1000, 1000);

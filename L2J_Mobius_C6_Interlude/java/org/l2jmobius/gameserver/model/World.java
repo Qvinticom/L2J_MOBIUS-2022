@@ -23,7 +23,6 @@ import java.util.Map;
 import java.util.concurrent.ConcurrentHashMap;
 import java.util.logging.Logger;
 
-import org.l2jmobius.gameserver.GameServer;
 import org.l2jmobius.gameserver.model.actor.Creature;
 import org.l2jmobius.gameserver.model.actor.instance.PetInstance;
 import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
@@ -34,6 +33,9 @@ import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
 public class World
 {
 	private static final Logger LOGGER = Logger.getLogger(World.class.getName());
+	
+	public static volatile int MAX_CONNECTED_COUNT = 0;
+	public static volatile int OFFLINE_TRADE_COUNT = 0;
 	
 	public static final int SHIFT_BY = 12;
 	
@@ -446,7 +448,7 @@ public class World
 		{
 			if (object.getActingPlayer().isInOfflineMode())
 			{
-				GameServer.OFFLINE_TRADE_COUNT--;
+				OFFLINE_TRADE_COUNT--;
 			}
 			
 			if (!((PlayerInstance) object).isTeleporting())

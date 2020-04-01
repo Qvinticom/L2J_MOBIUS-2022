@@ -19,8 +19,8 @@ package org.l2jmobius.gameserver.util;
 import java.util.logging.Logger;
 
 import org.l2jmobius.Config;
-import org.l2jmobius.gameserver.GameServer;
 import org.l2jmobius.gameserver.data.sql.impl.OfflineTraderTable;
+import org.l2jmobius.gameserver.model.World;
 import org.l2jmobius.gameserver.model.actor.Summon;
 import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
 import org.l2jmobius.gameserver.model.olympiad.OlympiadManager;
@@ -100,7 +100,7 @@ public class OfflineTradeUtil
 			return false;
 		}
 		
-		GameServer.OFFLINE_TRADE_COUNT++;
+		World.OFFLINE_TRADE_COUNT++;
 		
 		final GameClient client = player.getClient();
 		client.close(true);

@@ -46,7 +46,6 @@ import org.l2jmobius.Config;
 import org.l2jmobius.commons.concurrent.ThreadPool;
 import org.l2jmobius.commons.database.DatabaseFactory;
 import org.l2jmobius.commons.util.Rnd;
-import org.l2jmobius.gameserver.GameServer;
 import org.l2jmobius.gameserver.GameTimeController;
 import org.l2jmobius.gameserver.ItemsAutoDestroy;
 import org.l2jmobius.gameserver.LoginServerThread;
@@ -5947,7 +5946,7 @@ public class PlayerInstance extends Playable
 		if (Config.OFFLINE_DISCONNECT_FINISHED && (privateStoreType == PrivateStoreType.NONE) && ((_client == null) || _client.isDetached()))
 		{
 			Disconnection.of(this).storeMe().deleteMe();
-			GameServer.OFFLINE_TRADE_COUNT--;
+			World.OFFLINE_TRADE_COUNT--;
 		}
 	}
 	
