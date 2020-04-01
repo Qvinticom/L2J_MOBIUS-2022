@@ -658,7 +658,7 @@ public class Hero
 			if (COMPLETE_HEROS.containsKey(charId))
 			{
 				final StatSet oldHero = COMPLETE_HEROS.get(charId);
-				if (hero.getInt(LEGEND_COUNT) == 1)
+				if (hero.getInt(LEGEND_COUNT, 0) == 1)
 				{
 					final int count = oldHero.getInt(LEGEND_COUNT);
 					oldHero.set(LEGEND_COUNT, count + 1);
@@ -677,7 +677,7 @@ public class Hero
 				final StatSet newHero = new StatSet();
 				newHero.set(Olympiad.CHAR_NAME, hero.getString(Olympiad.CHAR_NAME));
 				newHero.set(Olympiad.CLASS_ID, hero.getInt(Olympiad.CLASS_ID));
-				if (hero.getInt(LEGEND_COUNT) == 1)
+				if (hero.getInt(LEGEND_COUNT, 0) == 1)
 				{
 					newHero.set(LEGEND_COUNT, 1);
 				}
