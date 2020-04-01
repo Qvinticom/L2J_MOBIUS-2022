@@ -73,10 +73,8 @@ public class Mail extends ItemContainer
 			{
 				continue;
 			}
-			
 			item.setItemLocation(getBaseLocation(), messageId);
 		}
-		
 		updateDatabase();
 	}
 	
@@ -104,6 +102,7 @@ public class Mail extends ItemContainer
 	{
 		super.addItem(item);
 		item.setItemLocation(getBaseLocation(), _messageId);
+		item.updateDatabase(true);
 	}
 	
 	@Override
