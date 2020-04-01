@@ -23,10 +23,10 @@ import java.util.Map;
 import java.util.concurrent.ConcurrentHashMap;
 import java.util.logging.Logger;
 
+import org.l2jmobius.gameserver.GameServer;
 import org.l2jmobius.gameserver.model.actor.Creature;
 import org.l2jmobius.gameserver.model.actor.instance.PetInstance;
 import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
-import org.l2jmobius.gameserver.ui.SystemPanel;
 
 /**
  * @version $Revision: 1.21.2.5.2.7 $ $Date: 2005/03/27 15:29:32 $
@@ -446,7 +446,7 @@ public class World
 		{
 			if (object.getActingPlayer().isInOfflineMode())
 			{
-				SystemPanel.OFFLINE_TRADE_COUNT--;
+				GameServer.OFFLINE_TRADE_COUNT--;
 			}
 			
 			if (!((PlayerInstance) object).isTeleporting())

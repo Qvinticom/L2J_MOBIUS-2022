@@ -165,6 +165,9 @@ public class GameServer
 {
 	private static final Logger LOGGER = Logger.getLogger(GameServer.class.getName());
 	
+	public static volatile int MAX_CONNECTED_COUNT = 0;
+	public static volatile int OFFLINE_TRADE_COUNT = 0;
+	
 	private final DeadLockDetector _deadDetectThread;
 	private static GameServer INSTANCE;
 	public static final Calendar dateTimeServerStarted = Calendar.getInstance();

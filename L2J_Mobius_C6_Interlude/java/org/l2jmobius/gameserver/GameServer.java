@@ -135,6 +135,9 @@ public class GameServer
 {
 	private static final Logger LOGGER = Logger.getLogger(GameServer.class.getName());
 	
+	public static volatile int MAX_CONNECTED_COUNT = 0;
+	public static volatile int OFFLINE_TRADE_COUNT = 0;
+	
 	private static SelectorThread<GameClient> _selectorThread;
 	private static LoginServerThread _loginThread;
 	private static GamePacketHandler _gamePacketHandler;

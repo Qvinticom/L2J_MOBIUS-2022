@@ -41,9 +41,6 @@ public class SystemPanel extends JPanel
 {
 	private static final long START_TIME = System.currentTimeMillis();
 	
-	public static volatile int MAX_CONNECTED_COUNT = 0;
-	public static volatile int OFFLINE_TRADE_COUNT = 0;
-	
 	public SystemPanel()
 	{
 		setBackground(Color.WHITE);
@@ -125,13 +122,13 @@ public class SystemPanel extends JPanel
 			public void run()
 			{
 				final int playerCount = World.getInstance().getPlayers().size();
-				if (MAX_CONNECTED_COUNT < playerCount)
+				if (GameServer.MAX_CONNECTED_COUNT < playerCount)
 				{
-					MAX_CONNECTED_COUNT = playerCount;
+					GameServer.MAX_CONNECTED_COUNT = playerCount;
 				}
 				lblConnected.setText("Connected: " + playerCount);
-				lblMaxConnected.setText("Max connected: " + MAX_CONNECTED_COUNT);
-				lblOfflineShops.setText("Offline trade: " + OFFLINE_TRADE_COUNT);
+				lblMaxConnected.setText("Max connected: " + GameServer.MAX_CONNECTED_COUNT);
+				lblOfflineShops.setText("Offline trade: " + GameServer.OFFLINE_TRADE_COUNT);
 				lblElapsedTime.setText("Elapsed: " + getDurationBreakdown(System.currentTimeMillis() - START_TIME));
 			}
 		}, 1000, 1000);

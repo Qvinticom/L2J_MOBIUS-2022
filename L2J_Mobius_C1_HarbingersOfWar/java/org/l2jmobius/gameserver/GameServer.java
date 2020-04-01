@@ -58,6 +58,10 @@ import org.l2jmobius.loginserver.LoginController;
 public class GameServer extends Thread
 {
 	static Logger _log = Logger.getLogger(GameServer.class.getName());
+	
+	public static volatile int MAX_CONNECTED_COUNT = 0;
+	public static volatile int OFFLINE_TRADE_COUNT = 0;
+	
 	private ServerSocket _serverSocket;
 	
 	private final ItemTable _itemTable;

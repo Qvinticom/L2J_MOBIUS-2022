@@ -19,12 +19,12 @@ package org.l2jmobius.gameserver.handler.admincommandhandlers;
 import java.util.ArrayList;
 import java.util.List;
 
+import org.l2jmobius.gameserver.GameServer;
 import org.l2jmobius.gameserver.handler.IAdminCommandHandler;
 import org.l2jmobius.gameserver.model.World;
 import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
 import org.l2jmobius.gameserver.model.zone.ZoneId;
 import org.l2jmobius.gameserver.taskmanager.AttackStanceTaskManager;
-import org.l2jmobius.gameserver.ui.SystemPanel;
 import org.l2jmobius.gameserver.util.BuilderUtil;
 
 /**
@@ -95,7 +95,7 @@ public class AdminOnline implements IAdminCommandHandler
 			BuilderUtil.sendSysMessage(activeChar, "Total count: " + total);
 			BuilderUtil.sendSysMessage(activeChar, "Total online: " + online);
 			BuilderUtil.sendSysMessage(activeChar, "Total offline: " + offline);
-			BuilderUtil.sendSysMessage(activeChar, "Max connected: " + SystemPanel.MAX_CONNECTED_COUNT);
+			BuilderUtil.sendSysMessage(activeChar, "Max connected: " + GameServer.MAX_CONNECTED_COUNT);
 			BuilderUtil.sendSysMessage(activeChar, "Unique IPs: " + ips.size());
 			BuilderUtil.sendSysMessage(activeChar, "In peace zone: " + peace);
 			BuilderUtil.sendSysMessage(activeChar, "Not in peace zone: " + notPeace);
