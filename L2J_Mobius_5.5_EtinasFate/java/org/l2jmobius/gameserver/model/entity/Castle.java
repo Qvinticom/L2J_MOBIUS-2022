@@ -1145,7 +1145,11 @@ public class Castle extends AbstractResidence
 		super.giveResidentialSkills(player);
 		if ((player.getPledgeClass() == -1) || (player.getPledgeClass() == 100)) // Leader or Elite
 		{
-			player.addSkill(_castleSide == CastleSide.DARK ? CommonSkill.ABILITY_OF_DARKNESS.getSkill() : CommonSkill.ABILITY_OF_LIGHT.getSkill());
+			player.addSkill(_castleSide == CastleSide.DARK ? CommonSkill.KNIGHT_OF_DARKNESS.getSkill() : CommonSkill.KNIGHT_OF_SPLENDOR.getSkill());
+		}
+		else // Non Elite members
+		{
+			player.addSkill(_castleSide == CastleSide.DARK ? CommonSkill.PROTECTION_OF_DARKNESS.getSkill() : CommonSkill.PROTECTION_OF_LIGHT.getSkill());
 		}
 	}
 	
@@ -1153,8 +1157,10 @@ public class Castle extends AbstractResidence
 	public void removeResidentialSkills(PlayerInstance player)
 	{
 		super.removeResidentialSkills(player);
-		player.removeSkill(CommonSkill.ABILITY_OF_DARKNESS.getId());
-		player.removeSkill(CommonSkill.ABILITY_OF_LIGHT.getId());
+		player.removeSkill(CommonSkill.KNIGHT_OF_SPLENDOR.getId());
+		player.removeSkill(CommonSkill.PROTECTION_OF_LIGHT.getId());
+		player.removeSkill(CommonSkill.KNIGHT_OF_DARKNESS.getId());
+		player.removeSkill(CommonSkill.PROTECTION_OF_DARKNESS.getId());
 	}
 	
 	public void spawnSideNpcs()

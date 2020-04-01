@@ -176,41 +176,159 @@
 		<!-- A title given to the clan leader and elite clan members who completed the Imprint of Light successfully. It increases damage dealt by 10% in PvP and increases P. Def. and M. Def. by 500. -->
 		<icon>icon.skill32115</icon>
 		<operateType>P</operateType>
+		<effects>
+			<effect name="PvpPhysicalAttackDamageBonus">
+				<amount>10</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="PvpMagicalSkillDamageBonus">
+				<amount>10</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="PvpPhysicalSkillDamageBonus">
+				<amount>10</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="PhysicalDefence">
+				<amount>500</amount>
+				<mode>DIFF</mode>
+			</effect>
+			<effect name="MagicalDefence">
+				<amount>500</amount>
+				<mode>DIFF</mode>
+			</effect>
+		</effects>
 	</skill>
 	<skill id="32118" toLevel="1" name="Knight of Light">
 		<!-- A title given to the clan leader and elite clan members who completed the Imprint of Light successfully. It increases damage dealt by 10% in PvP. -->
 		<icon>icon.skill32116</icon>
 		<operateType>P</operateType>
+		<effects>
+			<effect name="PvpPhysicalAttackDamageBonus">
+				<amount>10</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="PvpMagicalSkillDamageBonus">
+				<amount>10</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="PvpPhysicalSkillDamageBonus">
+				<amount>10</amount>
+				<mode>PER</mode>
+			</effect>
+		</effects>
 	</skill>
 	<skill id="32119" toLevel="1" name="Protection of Light">
 		<!-- An ability given to the clan leader who completed the Imprint of Light successfully. It decreases damage received by 5% in PvP. -->
 		<icon>icon.skill32117</icon>
 		<operateType>P</operateType>
+		<effects>
+			<effect name="DamageByAttack">
+				<amount>-5</amount>
+				<type>PK</type>
+			</effect>
+		</effects>
 	</skill>
 	<skill id="32120" toLevel="1" name="Knight of Darkness">
 		<!-- A title given to the clan leader and elite clan members who completed the Imprint of Darkness successfully. In PvP, it increases damage dealt by 10% and strengthens Skill Power by 3%. -->
 		<icon>icon.skill32118</icon>
 		<operateType>P</operateType>
+		<effects>
+			<effect name="PvpPhysicalAttackDamageBonus">
+				<amount>10</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="PvpMagicalSkillDamageBonus">
+				<amount>10</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="PvpPhysicalSkillDamageBonus">
+				<amount>10</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="MagicalSkillPower">
+				<amount>3</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="PhysicalSkillPower">
+				<amount>3</amount>
+				<mode>PER</mode>
+			</effect>
+		</effects>
 	</skill>
 	<skill id="32121" toLevel="1" name="Dark Knight">
 		<!-- A title given to the clan leader and elite clan members who completed the Imprint of Darkness successfully. It increases damage dealt by 10% in PvP. -->
 		<icon>icon.skill32119</icon>
 		<operateType>P</operateType>
+		<effects>
+			<effect name="PvpPhysicalAttackDamageBonus">
+				<amount>10</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="PvpMagicalSkillDamageBonus">
+				<amount>10</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="PvpPhysicalSkillDamageBonus">
+				<amount>10</amount>
+				<mode>PER</mode>
+			</effect>
+		</effects>
 	</skill>
 	<skill id="32122" toLevel="1" name="Protection of Darkness">
 		<!-- An ability given to the clan leader who completed the Imprint of Darkness successfully. It decreases damage received by 5% in PvP. -->
 		<icon>icon.skill32120</icon>
 		<operateType>P</operateType>
+		<effects>
+			<effect name="DamageByAttack">
+				<amount>-5</amount>
+				<type>PK</type>
+			</effect>
+		</effects>
 	</skill>
 	<skill id="32123" toLevel="1" name="Residence Guard">
 		<!-- An ability given to the clan leader who owns a border fortress. In PvP, it decreases damage received by 3% and increases XP and SP gain by 3%. -->
 		<icon>icon.skill32121</icon>
 		<operateType>P</operateType>
+		<passiveConditions>
+			<condition name="OpSocialClass">
+				<socialClass>-1</socialClass>
+			</condition>
+		</passiveConditions>
+		<effects>
+			<effect name="DamageByAttack">
+				<amount>-3</amount>
+				<type>PK</type>
+			</effect>
+			<effect name="ExpModify">
+				<amount>3</amount>
+			</effect>
+			<effect name="SpModify">
+				<amount>3</amount>
+			</effect>
+		</effects>
 	</skill>
 	<skill id="32124" toLevel="1" name="Residence Dominion">
 		<!-- An ability given to the clan leader who owns a territory fortress. In PvP, it decreases damage received by 2% and increases XP and SP gain by 2%. -->
 		<icon>icon.skill32121</icon>
 		<operateType>P</operateType>
+		<passiveConditions>
+			<condition name="OpSocialClass">
+				<socialClass>-1</socialClass>
+			</condition>
+		</passiveConditions>
+		<effects>
+			<effect name="DamageByAttack">
+				<amount>-2</amount>
+				<type>PK</type>
+			</effect>
+			<effect name="ExpModify">
+				<amount>2</amount>
+			</effect>
+			<effect name="SpModify">
+				<amount>2</amount>
+			</effect>
+		</effects>
 	</skill>
 	<skill id="32125" toLevel="1" name="Snow Spray">
 		<!-- Instantly reduces Speed by 80%. -->

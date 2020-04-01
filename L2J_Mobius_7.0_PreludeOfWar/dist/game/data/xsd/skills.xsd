@@ -2373,6 +2373,7 @@
 																</xs:sequence>
 															</xs:complexType>
 														</xs:element>
+														<xs:element minOccurs="0" name="socialClass" type="xs:int" />
 													</xs:sequence>
 													<xs:attribute name="name" type="xs:string" use="required" />
 												</xs:complexType>
