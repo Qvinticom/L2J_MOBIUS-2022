@@ -49,6 +49,9 @@ public class Joachim extends AbstractNpcAI
 {
 	// NPC
 	private static final int JOACHIM = 34513;
+	// Items
+	private static final int CHAOS_POMANDER_DUAL_CLASS = 0;
+	private static final int PAULINAS_RGRADE_EQUIPMENT_SET = 0;
 	// Misc
 	private static final List<ClassId> DUAL_CLASS_LIST = new ArrayList<>();
 	static
@@ -202,6 +205,10 @@ public class Joachim extends AbstractNpcAI
 					player.sendPacket(new AcquireSkillList(player));
 					player.sendSkillList();
 					player.broadcastUserInfo();
+					
+					// Item rewards
+					player.addItem("subclass", CHAOS_POMANDER_DUAL_CLASS, 2, player, true);
+					player.addItem("subclass", PAULINAS_RGRADE_EQUIPMENT_SET, 1, player, true);
 				}
 				break;
 			}
