@@ -50,8 +50,8 @@ public class Joachim extends AbstractNpcAI
 	// NPC
 	private static final int JOACHIM = 34513;
 	// Items
-	private static final int CHAOS_POMANDER_DUAL_CLASS = 0;
-	private static final int PAULINAS_RGRADE_EQUIPMENT_SET = 0;
+	private static final int CHAOS_POMANDER_DUAL_CLASS = 37375;
+	private static final int PAULINAS_RGRADE_EQUIPMENT_SET = 46919;
 	// Misc
 	private static final List<ClassId> DUAL_CLASS_LIST = new ArrayList<>();
 	static
