@@ -137,7 +137,7 @@ public class RequestExEnchantSkill implements IClientIncomingPacket
 			}
 			else if ((skill.getSubLevel() + 1) != _skillSubLvl)
 			{
-				LOGGER.log(Level.WARNING, getClass().getSimpleName() + ": Client: " + client + " send incorrect sub level: " + _skillSubLvl + " expected: " + skill.getSubLevel() + 1);
+				LOGGER.log(Level.WARNING, getClass().getSimpleName() + ": Client: " + client + " send incorrect sub level: " + _skillSubLvl + " expected: " + (skill.getSubLevel() + 1));
 				return;
 			}
 		}
