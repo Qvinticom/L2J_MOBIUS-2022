@@ -49,6 +49,8 @@ public class TriggerSkillByAttack extends AbstractEffect
 	private final InstanceType _attackerType;
 	private int _allowWeapons;
 	private final boolean _isCritical;
+	private final boolean _allowNormalAttack;
+	private final boolean _allowSkillAttack;
 	
 	/**
 	 * @param attachCond
@@ -62,14 +64,17 @@ public class TriggerSkillByAttack extends AbstractEffect
 		super(attachCond, applyCond, set, params);
 		
 		_minAttackerLevel = params.getInt("minAttackerLevel", 1);
-		_maxAttackerLevel = params.getInt("maxAttackerLevel", 100);
+		_maxAttackerLevel = params.getInt("maxAttackerLevel", 127);
 		_minDamage = params.getInt("minDamage", 1);
 		_chance = params.getInt("chance", 100);
 		_skill = new SkillHolder(params.getInt("skillId"), params.getInt("skillLevel", 1));
 		_targetType = params.getEnum("targetType", TargetType.class, TargetType.SELF);
 		_attackerType = params.getEnum("attackerType", InstanceType.class, InstanceType.Creature);
 		_isCritical = params.getBoolean("isCritical", false);
-		if (params.getString("allowWeapons").equalsIgnoreCase("ALL"))
+		_allowNormalAttack = params.getBoolean("allowNormalAttack", true);
+		_allowSkillAttack = params.getBoolean("allowSkillAttack", false);
+		
+		if (params.getString("allowWeapons", "ALL").equalsIgnoreCase("ALL"))
 		{
 			_allowWeapons = 0;
 		}
@@ -82,13 +87,14 @@ public class TriggerSkillByAttack extends AbstractEffect
 		}
 	}
 	
-	public void onAttackEvent(OnCreatureDamageDealt event)
+	private void onAttackEvent(OnCreatureDamageDealt event)
 	{
-		if (event.isDamageOverTime() || (_chance == 0) || ((_skill.getSkillId() == 0) || (_skill.getSkillLevel() == 0)))
+		if (event.isDamageOverTime() || (_chance == 0) || ((_skill.getSkillId() == 0) || (_skill.getSkillLevel() == 0)) || (!_allowNormalAttack && !_allowSkillAttack))
 		{
 			return;
 		}
 		
+		// Check if there is dependancy on critical.
 		if (_isCritical != event.isCritical())
 		{
 			return;
@@ -98,6 +104,18 @@ public class TriggerSkillByAttack extends AbstractEffect
 		if (targetHandler == null)
 		{
 			LOGGER.warning("Handler for target type: " + _targetType + " does not exist.");
+			return;
+		}
+		
+		// When no skill attacks are allowed.
+		if (!_allowSkillAttack && (event.getSkill() != null))
+		{
+			return;
+		}
+		
+		// When no normal attacks are allowed.
+		if (!_allowNormalAttack && (event.getSkill() == null))
+		{
 			return;
 		}
 		
