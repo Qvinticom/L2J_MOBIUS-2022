@@ -50,14 +50,10 @@ public class TriggerSkillByAttack extends AbstractEffect
 	private final TargetType _targetType;
 	private final InstanceType _attackerType;
 	private int _allowWeapons;
-	private final Boolean _isCritical;
+	private final boolean _isCritical;
 	private final boolean _allowNormalAttack;
 	private final boolean _allowSkillAttack;
 	private final boolean _allowReflect;
-	
-	/**
-	 * @param params
-	 */
 	
 	public TriggerSkillByAttack(StatSet params)
 	{
@@ -68,7 +64,7 @@ public class TriggerSkillByAttack extends AbstractEffect
 		_skill = new SkillHolder(params.getInt("skillId"), params.getInt("skillLevel", 1));
 		_targetType = params.getEnum("targetType", TargetType.class, TargetType.SELF);
 		_attackerType = params.getEnum("attackerType", InstanceType.class, InstanceType.Creature);
-		_isCritical = params.getObject("isCritical", Boolean.class);
+		_isCritical = params.getBoolean("isCritical", false);
 		_allowNormalAttack = params.getBoolean("allowNormalAttack", true);
 		_allowSkillAttack = params.getBoolean("allowSkillAttack", false);
 		_allowReflect = params.getBoolean("allowReflect", false);
@@ -94,7 +90,7 @@ public class TriggerSkillByAttack extends AbstractEffect
 		}
 		
 		// Check if there is dependancy on critical.
-		if ((_isCritical != null) && (_isCritical != event.isCritical()))
+		if (_isCritical != event.isCritical())
 		{
 			return;
 		}
