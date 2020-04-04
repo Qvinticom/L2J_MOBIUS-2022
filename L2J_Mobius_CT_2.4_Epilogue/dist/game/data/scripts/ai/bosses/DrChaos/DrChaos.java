@@ -120,12 +120,12 @@ public class DrChaos extends AbstractNpcAI
 		{
 			if ((npc.getId() == CHAOS_GOLEM) && ((_lastAttackVsGolem + 1800000) < System.currentTimeMillis()))
 			{
+				final Npc chaos = addSpawn(DOCTOR_CHAOS, 96320, -110912, -3328, 8191, false, 0, false); // spawn Dr. Chaos
+				GrandBossManager.getInstance().setBossStatus(CHAOS_GOLEM, NORMAL); // mark Dr. Chaos is not crazy any more
+				cancelQuestTimer("golem_despawn", chaos, null);
+				
 				// Despawn the war golem.
 				npc.deleteMe();
-				
-				addSpawn(DOCTOR_CHAOS, 96320, -110912, -3328, 8191, false, 0, false); // spawn Dr. Chaos
-				GrandBossManager.getInstance().setBossStatus(CHAOS_GOLEM, NORMAL); // mark Dr. Chaos is not crazy any more
-				cancelQuestTimer("golem_despawn", npc, null);
 			}
 		}
 		else if (event.equalsIgnoreCase("1"))
@@ -148,20 +148,19 @@ public class DrChaos extends AbstractNpcAI
 		}
 		else if (event.equalsIgnoreCase("5"))
 		{
-			// Delete Dr. Chaos && spawn the war golem.
-			npc.deleteMe();
 			final GrandBossInstance golem = (GrandBossInstance) addSpawn(CHAOS_GOLEM, 96080, -110822, -3343, 0, false, 0, false);
 			GrandBossManager.getInstance().addBoss(golem);
 			
-			// The "npc" variable attribution is now for the golem.
-			npc = golem;
-			npc.broadcastPacket(new SpecialCamera(npc, 30, 200, 20, 6000, 700, 8000, 0, 0, 0, 0, 0));
-			npc.broadcastPacket(new SocialAction(npc.getObjectId(), 1));
-			npc.broadcastPacket(new PlaySound(1, "Rm03_A", 0, 0, 0, 0, 0));
+			golem.broadcastPacket(new SpecialCamera(npc, 30, 200, 20, 6000, 700, 8000, 0, 0, 0, 0, 0));
+			golem.broadcastPacket(new SocialAction(npc.getObjectId(), 1));
+			golem.broadcastPacket(new PlaySound(1, "Rm03_A", 0, 0, 0, 0, 0));
 			
 			// start monitoring Dr. Chaos's inactivity
 			_lastAttackVsGolem = System.currentTimeMillis();
-			startQuestTimer("golem_despawn", 60000, npc, null, true);
+			startQuestTimer("golem_despawn", 60000, golem, null, true);
+			
+			// Delete Dr. Chaos after spawned the war golem.
+			npc.deleteMe();
 		}
 		// Check every sec if someone is in range, if found, launch one task to decrease the timer.
 		else if (event.equalsIgnoreCase("paranoia_activity") && (GrandBossManager.getInstance().getBossStatus(CHAOS_GOLEM) == NORMAL))

@@ -168,8 +168,8 @@ public class Natives extends AbstractNpcAI
 			else if (event.equalsIgnoreCase("delete_me"))
 			{
 				npc.setBusy(false); // TODO: Does it really need?
-				npc.deleteMe();
 				npc.getSpawn().decreaseCount(npc);
+				npc.deleteMe();
 			}
 		}
 		return htmltext;

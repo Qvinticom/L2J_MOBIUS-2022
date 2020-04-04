@@ -204,7 +204,6 @@ public class Baium extends AbstractNpcAI
 			{
 				if (getStatus() == ALIVE)
 				{
-					npc.deleteMe();
 					setStatus(IN_FIGHT);
 					_baium = (GrandBossInstance) addSpawn(BAIUM, BAIUM_LOC, false, 0);
 					_baium.disableCoreAI(true);
@@ -213,6 +212,7 @@ public class Baium extends AbstractNpcAI
 					startQuestTimer("WAKEUP_ACTION", 50, _baium, null);
 					startQuestTimer("MANAGE_EARTHQUAKE", 2000, _baium, player);
 					startQuestTimer("CHECK_ATTACK", 60000, _baium, null);
+					npc.deleteMe();
 				}
 				break;
 			}

@@ -83,7 +83,6 @@ public class LastImperialTomb extends AbstractInstance
 		18337,
 		18338,
 		18339
-	
 	};
 	// Items
 	private static final int FIRST_SCARLET_WEAPON = 8204;
@@ -485,7 +484,7 @@ public class LastImperialTomb extends AbstractInstance
 			}
 			case "SCARLET_SECOND_MORPH":
 			{
-				final Instance world = npc.getInstanceWorld();
+				final Instance world = player.getInstanceWorld();
 				disablePlayers(world);
 				final Npc activeScarlet = world.getParameters().getObject("activeScarlet", Npc.class);
 				activeScarlet.abortAttack();
@@ -494,39 +493,39 @@ public class LastImperialTomb extends AbstractInstance
 				activeScarlet.setImmobilized(true);
 				activeScarlet.disableAllSkills();
 				playRandomSong(world);
-				startQuestTimer("SCARLET_SECOND_MORPH_CAMERA_1", 2000, npc, null, false);
+				startQuestTimer("SCARLET_SECOND_MORPH_CAMERA_1", 2000, null, player, false);
 				break;
 			}
 			case "SCARLET_SECOND_MORPH_CAMERA_1":
 			{
-				final Instance world = npc.getInstanceWorld();
+				final Instance world = player.getInstanceWorld();
 				final Npc frintezza = world.getParameters().getObject("frintezza", Npc.class);
 				broadcastPacket(world, new SocialAction(frintezza.getObjectId(), 4));
 				broadcastPacket(world, new SpecialCamera(frintezza, 250, 120, 15, 0, 1000, 0, 0, 1, 0, 0));
 				broadcastPacket(world, new SpecialCamera(frintezza, 250, 120, 15, 0, 10000, 0, 0, 1, 0, 0));
-				startQuestTimer("SCARLET_SECOND_MORPH_CAMERA_2", 7000, npc, null, false);
+				startQuestTimer("SCARLET_SECOND_MORPH_CAMERA_2", 7000, null, player, false);
 				break;
 			}
 			case "SCARLET_SECOND_MORPH_CAMERA_2":
 			{
-				final Instance world = npc.getInstanceWorld();
+				final Instance world = player.getInstanceWorld();
 				final Npc frintezza = world.getParameters().getObject("frintezza", Npc.class);
 				broadcastPacket(world, new MagicSkillUse(frintezza, frintezza, 5006, 1, 34000, 0));
 				broadcastPacket(world, new SpecialCamera(frintezza, 500, 70, 15, 3000, 10000, 0, 0, 1, 0, 0));
-				startQuestTimer("SCARLET_SECOND_MORPH_CAMERA_3", 3000, npc, null, false);
+				startQuestTimer("SCARLET_SECOND_MORPH_CAMERA_3", 3000, null, player, false);
 				break;
 			}
 			case "SCARLET_SECOND_MORPH_CAMERA_3":
 			{
-				final Instance world = npc.getInstanceWorld();
+				final Instance world = player.getInstanceWorld();
 				final Npc frintezza = world.getParameters().getObject("frintezza", Npc.class);
 				broadcastPacket(world, new SpecialCamera(frintezza, 2500, 90, 12, 6000, 10000, 0, 0, 1, 0, 0));
-				startQuestTimer("SCARLET_SECOND_MORPH_CAMERA_4", 3000, npc, null, false);
+				startQuestTimer("SCARLET_SECOND_MORPH_CAMERA_4", 3000, null, player, false);
 				break;
 			}
 			case "SCARLET_SECOND_MORPH_CAMERA_4":
 			{
-				final Instance world = npc.getInstanceWorld();
+				final Instance world = player.getInstanceWorld();
 				final Npc activeScarlet = world.getParameters().getObject("activeScarlet", Npc.class);
 				final Location scarletLocation = activeScarlet.getLocation();
 				int newHeading = 0;
@@ -542,30 +541,30 @@ public class LastImperialTomb extends AbstractInstance
 				world.setParameter("newHeading", newHeading);
 				broadcastPacket(world, new SpecialCamera(activeScarlet, 250, newHeading, 12, 0, 1000, 0, 0, 1, 0, 0));
 				broadcastPacket(world, new SpecialCamera(activeScarlet, 250, newHeading, 12, 0, 10000, 0, 0, 1, 0, 0));
-				startQuestTimer("SCARLET_SECOND_MORPH_CAMERA_5", 500, npc, null, false);
+				startQuestTimer("SCARLET_SECOND_MORPH_CAMERA_5", 500, null, player, false);
 				break;
 			}
 			case "SCARLET_SECOND_MORPH_CAMERA_5":
 			{
-				final Instance world = npc.getInstanceWorld();
+				final Instance world = player.getInstanceWorld();
 				final Npc activeScarlet = world.getParameters().getObject("activeScarlet", Npc.class);
 				final int newHeading = world.getParameters().getInt("newHeading");
 				activeScarlet.doDie(activeScarlet);
 				broadcastPacket(world, new SpecialCamera(activeScarlet, 450, newHeading, 14, 8000, 8000, 0, 0, 1, 0, 0));
-				startQuestTimer("SCARLET_SECOND_MORPH_CAMERA_6", 6250, npc, null, false);
-				startQuestTimer("SCARLET_SECOND_MORPH_CAMERA_7", 7200, npc, null, false);
+				startQuestTimer("SCARLET_SECOND_MORPH_CAMERA_6", 6250, null, player, false);
+				startQuestTimer("SCARLET_SECOND_MORPH_CAMERA_7", 7200, null, player, false);
 				break;
 			}
 			case "SCARLET_SECOND_MORPH_CAMERA_6":
 			{
-				final Instance world = npc.getInstanceWorld();
+				final Instance world = player.getInstanceWorld();
 				final Npc activeScarlet = world.getParameters().getObject("activeScarlet", Npc.class);
 				activeScarlet.deleteMe();
 				break;
 			}
 			case "SCARLET_SECOND_MORPH_CAMERA_7":
 			{
-				final Instance world = npc.getInstanceWorld();
+				final Instance world = player.getInstanceWorld();
 				final int newHeading = world.getParameters().getInt("newHeading");
 				final Location scarletLocation = world.getParameters().getLocation("scarletLocation");
 				final Npc activeScarlet = addSpawn(SCARLET2, scarletLocation, false, 0, false, world.getId());
@@ -575,24 +574,22 @@ public class LastImperialTomb extends AbstractInstance
 				activeScarlet.setImmobilized(true);
 				activeScarlet.disableAllSkills();
 				broadcastPacket(world, new SpecialCamera(activeScarlet, 450, newHeading, 12, 500, 14000, 0, 0, 1, 0, 0));
-				startQuestTimer("SCARLET_SECOND_MORPH_CAMERA_8", 8100, npc, null, false);
+				startQuestTimer("SCARLET_SECOND_MORPH_CAMERA_8", 8100, activeScarlet, null, false);
 				break;
 			}
 			case "SCARLET_SECOND_MORPH_CAMERA_8":
 			{
 				final Instance world = npc.getInstanceWorld();
-				final Npc activeScarlet = world.getParameters().getObject("activeScarlet", Npc.class);
-				broadcastPacket(world, new SocialAction(activeScarlet.getObjectId(), 2));
+				broadcastPacket(world, new SocialAction(npc.getObjectId(), 2));
 				startQuestTimer("SCARLET_SECOND_MORPH_CAMERA_9", 9000, npc, null, false);
 				break;
 			}
 			case "SCARLET_SECOND_MORPH_CAMERA_9":
 			{
 				final Instance world = npc.getInstanceWorld();
-				final Npc activeScarlet = world.getParameters().getObject("activeScarlet", Npc.class);
-				activeScarlet.setInvul(false);
-				activeScarlet.setImmobilized(false);
-				activeScarlet.enableAllSkills();
+				npc.setInvul(false);
+				npc.setImmobilized(false);
+				npc.enableAllSkills();
 				enablePlayers(world);
 				break;
 			}
@@ -704,7 +701,7 @@ public class LastImperialTomb extends AbstractInstance
 			if (npc.isScriptValue(1) && (npc.getCurrentHp() < (npc.getMaxHp() * 0.20)))
 			{
 				npc.setScriptValue(2);
-				startQuestTimer("SCARLET_SECOND_MORPH", 1000, npc, null, false);
+				startQuestTimer("SCARLET_SECOND_MORPH", 1000, null, attacker, false);
 			}
 		}
 		if (skill != null)

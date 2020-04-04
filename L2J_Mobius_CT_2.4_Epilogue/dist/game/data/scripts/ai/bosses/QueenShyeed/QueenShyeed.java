@@ -58,8 +58,8 @@ public class QueenShyeed extends AbstractNpcAI
 			{
 				if (!npc.isDead())
 				{
-					npc.deleteMe();
 					startRespawn();
+					npc.deleteMe();
 				}
 				break;
 			}

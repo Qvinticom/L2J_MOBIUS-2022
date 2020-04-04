@@ -168,9 +168,9 @@ public class Alarm extends AbstractNpcAI
 						{
 							npc0.getVariables().set("SPAWNED", false);
 						}
-						npc.deleteMe();
 						setMemoState(player, ART_OF_PERSUASION_ID, 4);
 						htmltext = "32367-184_09.html";
+						npc.deleteMe();
 					}
 					else
 					{
@@ -186,9 +186,9 @@ public class Alarm extends AbstractNpcAI
 						{
 							npc0.getVariables().set("SPAWNED", false);
 						}
-						npc.deleteMe();
 						setMemoState(player, NIKOLAS_COOPERATION_ID, 4);
 						htmltext = "32367-185_09.html";
+						npc.deleteMe();
 					}
 					else
 					{

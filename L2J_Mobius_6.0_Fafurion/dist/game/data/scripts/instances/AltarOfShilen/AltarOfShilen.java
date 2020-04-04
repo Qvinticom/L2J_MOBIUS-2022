@@ -259,8 +259,8 @@ public class AltarOfShilen extends AbstractInstance
 						}
 						world.setStatus(7);
 						onStatusChanged(world);
-						npc.deleteMe();
 						cancelQuestTimer("check_player", npc, null);
+						npc.deleteMe();
 					}
 					break;
 				}

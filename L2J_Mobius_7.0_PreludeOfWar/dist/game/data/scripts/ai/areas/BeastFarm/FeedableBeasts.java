@@ -474,8 +474,7 @@ public class FeedableBeasts extends AbstractNpcAI
 				{
 					_feedInfo.remove(npc.getObjectId());
 				}
-				// despawn the mad cow
-				npc.deleteMe();
+
 				// spawn the new mob
 				final Attackable nextNpc = (Attackable) addSpawn(MAD_COW_POLYMORPH.get(npc.getId()), npc);
 				
@@ -484,6 +483,9 @@ public class FeedableBeasts extends AbstractNpcAI
 				nextNpc.setRunning();
 				nextNpc.addDamageHate(player, 0, 99999);
 				nextNpc.getAI().setIntention(CtrlIntention.AI_INTENTION_ATTACK, player);
+				
+				// despawn the mad cow
+				npc.deleteMe();
 			}
 		}
 		return super.onAdvEvent(event, npc, player);

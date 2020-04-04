@@ -749,8 +749,8 @@ public class TullyWorkshop extends AbstractNpcAI
 		{
 			if ((npc.getAI().getIntention() != CtrlIntention.AI_INTENTION_ATTACK) && (npc.getAI().getIntention() != CtrlIntention.AI_INTENTION_CAST) && (npc.getCurrentHp() == npc.getMaxHp()))
 			{
-				npc.deleteMe();
 				allowServantSpawn = true;
+				npc.deleteMe();
 			}
 			else
 			{
@@ -759,9 +759,9 @@ public class TullyWorkshop extends AbstractNpcAI
 		}
 		else if (event.equalsIgnoreCase("despawn_agent"))
 		{
-			npc.deleteMe();
 			allowServantSpawn = true;
 			allowAgentSpawn = true;
+			npc.deleteMe();
 		}
 		else if (event.equalsIgnoreCase("despawn_agent_7"))
 		{
@@ -787,8 +787,8 @@ public class TullyWorkshop extends AbstractNpcAI
 				}
 			});
 			
-			npc.deleteMe();
 			startQuestTimer("start_7th_floor_spawn", 120000, null, null);
+			npc.deleteMe();
 		}
 		
 		if (player == null)
@@ -1000,7 +1000,6 @@ public class TullyWorkshop extends AbstractNpcAI
 			else if (event.equalsIgnoreCase("refuse") && !allowAgentSpawn_7th)
 			{
 				allowAgentSpawn_7th = true;
-				npc.deleteMe();
 				spawnedAgent = null;
 				for (MonsterInstance monster : spawnedFollowers)
 				{
@@ -1026,6 +1025,8 @@ public class TullyWorkshop extends AbstractNpcAI
 					is7thFloorAttackBegan = true;
 					startQuestTimer("end_7th_floor_attack", 1200000, null, null);
 				}
+				
+				npc.deleteMe();
 			}
 		}
 		else if (event.equalsIgnoreCase("teleport") && (npcId == DWARVEN_GHOST))

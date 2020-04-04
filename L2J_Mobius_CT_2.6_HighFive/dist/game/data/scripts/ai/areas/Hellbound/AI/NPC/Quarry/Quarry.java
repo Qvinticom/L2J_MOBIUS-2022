@@ -120,9 +120,9 @@ public class Quarry extends AbstractNpcAI
 						}
 					}
 					npc.setAutoAttackable(false);
-					npc.deleteMe();
 					npc.getSpawn().decreaseCount(npc);
 					HellboundEngine.getInstance().updateTrust(TRUST, true);
+					npc.deleteMe();
 				}
 			}
 		}

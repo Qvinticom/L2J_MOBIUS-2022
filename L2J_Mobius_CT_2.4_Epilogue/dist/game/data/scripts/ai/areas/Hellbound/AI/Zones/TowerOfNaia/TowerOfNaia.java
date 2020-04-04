@@ -466,7 +466,6 @@ public class TowerOfNaia extends AbstractNpcAI
 		{
 			htmltext = null;
 			_sporeSpawn.remove(npc);
-			npc.deleteMe();
 			
 			if (npcId == SPORE_BASIC)
 			{
@@ -488,6 +487,8 @@ public class TowerOfNaia extends AbstractNpcAI
 					startQuestTimer("despawn_total", 60000, null, null);
 				}
 			}
+			
+			npc.deleteMe();
 		}
 		else if (event.equalsIgnoreCase("18492-05.htm"))
 		{

@@ -219,9 +219,9 @@ public class StakatoNest extends AbstractNpcAI
 		if (npcId > 0)
 		{
 			npc.getSpawn().decreaseCount(npc);
-			npc.deleteMe();
 			final Npc spawned = addSpawn(npcId, npc.getX(), npc.getY(), npc.getZ(), npc.getHeading(), false, 0, true);
 			addAttackDesire(spawned, player);
+			npc.deleteMe();
 		}
 		return super.onAdvEvent(event, npc, player);
 	}
