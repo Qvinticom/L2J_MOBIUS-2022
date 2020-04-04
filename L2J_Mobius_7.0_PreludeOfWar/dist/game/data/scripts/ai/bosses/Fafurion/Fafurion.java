@@ -20,12 +20,15 @@ import java.util.List;
 
 import org.l2jmobius.Config;
 import org.l2jmobius.gameserver.instancemanager.GrandBossManager;
+import org.l2jmobius.gameserver.instancemanager.ZoneManager;
 import org.l2jmobius.gameserver.model.Location;
 import org.l2jmobius.gameserver.model.Party;
 import org.l2jmobius.gameserver.model.StatSet;
 import org.l2jmobius.gameserver.model.World;
+import org.l2jmobius.gameserver.model.actor.Creature;
 import org.l2jmobius.gameserver.model.actor.Npc;
 import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
+import org.l2jmobius.gameserver.model.zone.type.NoRestartZone;
 import org.l2jmobius.gameserver.network.NpcStringId;
 import org.l2jmobius.gameserver.network.serverpackets.ExShowScreenMessage;
 
@@ -43,8 +46,11 @@ public class Fafurion extends AbstractNpcAI
 	// Item
 	private static final int FONDUS_STONE = 80322;
 	// Locations
+	private static final Location ENTER_NPC_LOC = new Location(190856, 257112, -3328);
 	private static final Location RAID_ENTER_LOC = new Location(180059, 212896, -14727);
 	private static final Location FAFURION_SPAWN_LOC = new Location(180712, 210664, -14823, 22146);
+	// Zone
+	private static final NoRestartZone zone = ZoneManager.getInstance().getZoneById(85002, NoRestartZone.class); // Fafurion Nest zone
 	// Status
 	private static final int ALIVE = 0;
 	private static final int WAITING = 1;
@@ -59,24 +65,24 @@ public class Fafurion extends AbstractNpcAI
 		addTalkId(HEART_OF_TSUNAMI);
 		addFirstTalkId(HEART_OF_TSUNAMI);
 		addKillId(FAFURION_FINAL_FORM);
-		// Unlock
 		final StatSet info = GrandBossManager.getInstance().getStatSet(FAFURION_GRANDBOSS_ID);
-		final int status = GrandBossManager.getInstance().getBossStatus(FAFURION_GRANDBOSS_ID);
-		if (status == DEAD)
+		final long respawnTime = info.getLong("respawn_time");
+		// Unlock
+		if (getStatus() == DEAD)
 		{
-			final long time = info.getLong("respawn_time") - System.currentTimeMillis();
+			final long time = respawnTime - System.currentTimeMillis();
 			if (time > 0)
 			{
 				startQuestTimer("unlock_fafurion", time, null, null);
 			}
 			else
 			{
-				GrandBossManager.getInstance().setBossStatus(FAFURION_GRANDBOSS_ID, ALIVE);
+				setStatus(ALIVE);
 			}
 		}
-		else if (status != ALIVE)
+		else if (getStatus() != ALIVE)
 		{
-			GrandBossManager.getInstance().setBossStatus(FAFURION_GRANDBOSS_ID, ALIVE);
+			setStatus(ALIVE);
 		}
 	}
 	
@@ -88,7 +94,7 @@ public class Fafurion extends AbstractNpcAI
 		{
 			case "unlock_fafurion":
 			{
-				GrandBossManager.getInstance().setBossStatus(FAFURION_GRANDBOSS_ID, ALIVE);
+				setStatus(ALIVE);
 				break;
 			}
 			case "warning":
@@ -105,38 +111,103 @@ public class Fafurion extends AbstractNpcAI
 			}
 			case "beginning":
 			{
-				if (GrandBossManager.getInstance().getBossStatus(FAFURION_GRANDBOSS_ID) == WAITING)
+				if (getStatus() == WAITING)
 				{
-					GrandBossManager.getInstance().setBossStatus(FAFURION_GRANDBOSS_ID, FIGHTING);
+					setStatus(FIGHTING);
 					final Npc bossInstance = addSpawn(FAFURION_FINAL_FORM, FAFURION_SPAWN_LOC.getX(), FAFURION_SPAWN_LOC.getY(), FAFURION_SPAWN_LOC.getZ(), FAFURION_SPAWN_LOC.getHeading(), false, 0, false);
 					startQuestTimer("resetRaid", RAID_DURATION * 60 * 60 * 1000, bossInstance, null);
 				}
 				break;
 			}
+			case "SKIP_WAITING":
+			{
+				if (getStatus() == WAITING)
+				{
+					cancelQuestTimer("warning", null, null);
+					cancelQuestTimer("beginning", null, null);
+					notifyEvent("beginning", null, null);
+					player.sendMessage(getClass().getSimpleName() + ": Skipping waiting time ...");
+				}
+				else
+				{
+					player.sendMessage(getClass().getSimpleName() + ": You can't skip waiting time right now!");
+				}
+				break;
+			}
+			case "RESPAWN_FAFURION":
+			{
+				if (getStatus() == DEAD)
+				{
+					setRespawn(0);
+					cancelQuestTimer("unlock_fafurion", null, null);
+					notifyEvent("unlock_fafurion", null, null);
+					player.sendMessage(getClass().getSimpleName() + ": Fafurion has been respawned.");
+				}
+				else
+				{
+					player.sendMessage(getClass().getSimpleName() + ": You can't respawn Fafurion while he is alive!");
+				}
+				break;
+			}
+			case "ABORT_FIGHT":
+			{
+				if (getStatus() == FIGHTING)
+				{
+					setStatus(ALIVE);
+					cancelQuestTimer("resetRaid", npc, null);
+					for (Creature creature : zone.getCharactersInside())
+					{
+						if (creature != null)
+						{
+							if (creature.isNpc())
+							{
+								if (creature.getId() == FAFURION_FINAL_FORM)
+								{
+									creature.teleToLocation(FAFURION_SPAWN_LOC);
+								}
+								else
+								{
+									creature.deleteMe();
+								}
+							}
+							else if (creature.isPlayer() && !creature.isGM())
+							{
+								creature.teleToLocation(ENTER_NPC_LOC);
+							}
+						}
+					}
+					player.sendMessage(getClass().getSimpleName() + ": Fight has been aborted!");
+				}
+				else
+				{
+					player.sendMessage(getClass().getSimpleName() + ": You can't abort fight right now!");
+				}
+				break;
+			}
 			case "resetRaid":
 			{
-				final int status = GrandBossManager.getInstance().getBossStatus(FAFURION_GRANDBOSS_ID);
-				if ((status > ALIVE) && (status < DEAD))
+				if ((getStatus() > ALIVE) && (getStatus() < DEAD))
 				{
 					for (PlayerInstance plr : World.getInstance().getVisibleObjectsInRange(npc, PlayerInstance.class, 5000))
 					{
 						plr.sendPacket(new ExShowScreenMessage(NpcStringId.EXCEEDED_THE_FAFURION_S_NEST_RAID_TIME_LIMIT, ExShowScreenMessage.TOP_CENTER, 10000, true));
 					}
-					GrandBossManager.getInstance().setBossStatus(FAFURION_GRANDBOSS_ID, ALIVE);
+					setStatus(ALIVE);
+					setRespawn(0);
 					npc.deleteMe();
+					
 				}
 				break;
 			}
 			case "enter_area":
 			{
-				final int status = GrandBossManager.getInstance().getBossStatus(FAFURION_GRANDBOSS_ID);
 				if (player.isGM())
 				{
 					player.teleToLocation(RAID_ENTER_LOC, true);
 				}
 				else
 				{
-					if (((status > ALIVE) && (status < DEAD)) || (status == DEAD))
+					if (((getStatus() > ALIVE) && (getStatus() < DEAD)) || (getStatus() == DEAD))
 					{
 						return "34488-02.html";
 					}
@@ -178,9 +249,9 @@ public class Fafurion extends AbstractNpcAI
 						}
 					}
 				}
-				if (status == ALIVE)
+				if (getStatus() == ALIVE)
 				{
-					GrandBossManager.getInstance().setBossStatus(FAFURION_GRANDBOSS_ID, WAITING);
+					setStatus(WAITING);
 					startQuestTimer("beginning", Config.FAFURION_WAIT_TIME * 60000, null, null);
 					startQuestTimer("warning", Config.FAFURION_WAIT_TIME > 0 ? (Config.FAFURION_WAIT_TIME * 60000) - 30000 : 0, null, player);
 				}
@@ -198,13 +269,26 @@ public class Fafurion extends AbstractNpcAI
 			player.sendPacket(new ExShowScreenMessage(NpcStringId.HONORED_WARRIORS_HAVE_DEFEATED_THE_WATER_DRAGON_FAFURION, ExShowScreenMessage.TOP_CENTER, 10000, true));
 		}
 		
-		GrandBossManager.getInstance().setBossStatus(FAFURION_GRANDBOSS_ID, DEAD);
+		setStatus(DEAD);
 		final long respawnTime = (Config.FAFURION_SPAWN_INTERVAL + getRandom(-Config.FAFURION_SPAWN_RANDOM, Config.FAFURION_SPAWN_RANDOM)) * 3600000;
-		final StatSet info = GrandBossManager.getInstance().getStatSet(FAFURION_GRANDBOSS_ID);
-		info.set("respawn_time", System.currentTimeMillis() + respawnTime);
-		GrandBossManager.getInstance().setStatSet(FAFURION_GRANDBOSS_ID, info);
 		startQuestTimer("unlock_fafurion", respawnTime, null, null);
+		setRespawn(respawnTime);
 		return super.onKill(npc, killer, isSummon);
+	}
+	
+	private int getStatus()
+	{
+		return GrandBossManager.getInstance().getBossStatus(FAFURION_GRANDBOSS_ID);
+	}
+	
+	private void setStatus(int status)
+	{
+		GrandBossManager.getInstance().setBossStatus(FAFURION_GRANDBOSS_ID, status);
+	}
+	
+	private void setRespawn(long respawnTime)
+	{
+		GrandBossManager.getInstance().getStatSet(FAFURION_GRANDBOSS_ID).set("respawn_time", System.currentTimeMillis() + respawnTime);
 	}
 	
 	@Override
