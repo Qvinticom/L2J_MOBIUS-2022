@@ -123,9 +123,11 @@ public class TautiWarzone extends AbstractInstance
 			}
 			case "SPAWN_AXE":
 			{
-				final Npc axe = addSpawn(npc.getId() == TAUTI_EXTREME ? TAUTI_EXTREME_AXE : TAUTI_COMMON_AXE, npc, false, 0, false, npc.getInstanceId());
+				final Instance world = player.getInstanceWorld();
+				final Npc axe = addSpawn(world.getTemplateId() == EXTREME_TEMPLATE_ID ? TAUTI_EXTREME_AXE : TAUTI_COMMON_AXE, world.getParameters().getObject("AXE_LOCATION", Location.class), false, 0, false, world.getId());
 				axe.setRandomWalking(false);
 				axe.setImmobilized(true);
+				world.getParameters().remove("AXE_LOCATION");
 				break;
 			}
 			case "WORLD_STATUS_CHECK":
@@ -204,8 +206,9 @@ public class TautiWarzone extends AbstractInstance
 		if (world.isStatus(5) && (npc.getCurrentHp() < (npc.getMaxHp() * 0.15)))
 		{
 			world.setStatus(6);
+			world.setParameter("AXE_LOCATION", npc.getLocation());
 			npc.deleteMe();
-			startQuestTimer("SPAWN_AXE", 15000, npc, null, false);
+			startQuestTimer("SPAWN_AXE", 15000, null, attacker, false);
 			playMovie(world.getPlayers(), Movie.SC_TAUTI_PHASE);
 		}
 		if (world.isStatus(4))
