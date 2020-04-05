@@ -54,7 +54,7 @@ public class RealDamage extends AbstractEffect
 		// Calculate resistance.
 		final double damage = _power - (_power * (Math.min(effected.getStat().getValue(Stat.REAL_DAMAGE_RESIST, 1), 1.8) - 1));
 		
-		effected.reduceCurrentHp(damage, effector, skill, false, false, false, false);
+		effected.reduceCurrentHp(damage, effector, skill, false, true, false, false);
 		if (effector.isPlayer())
 		{
 			effector.sendDamageMessage(effected, skill, (int) damage, 0, false, false);
