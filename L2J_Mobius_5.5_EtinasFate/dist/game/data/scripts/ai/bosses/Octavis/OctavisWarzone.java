@@ -154,187 +154,254 @@ public class OctavisWarzone extends AbstractInstance
 	@Override
 	public void onTimerEvent(String event, StatSet params, Npc npc, PlayerInstance player)
 	{
-		final Instance world = npc.getInstanceWorld();
-		if (isInInstance(world))
+		switch (event)
 		{
-			final StatSet npcVars = npc.getVariables();
-			final StatSet npcParams = npc.getParameters();
-			
-			switch (event)
+			case "SECOND_DOOR_OPEN":
 			{
-				case "SECOND_DOOR_OPEN":
+				final Instance world = npc.getInstanceWorld();
+				if (!isInInstance(world))
 				{
-					world.openCloseDoor(MAIN_DOOR_2, true);
-					break;
+					return;
 				}
-				case "CLOSE_DOORS":
+				world.openCloseDoor(MAIN_DOOR_2, true);
+				break;
+			}
+			case "CLOSE_DOORS":
+			{
+				final Instance world = npc.getInstanceWorld();
+				if (!isInInstance(world))
 				{
-					world.openCloseDoor(MAIN_DOOR_2, false);
-					world.openCloseDoor(MAIN_DOOR_1, false);
-					world.setParameter("TELEPORT_ACTIVE", true);
-					npc.teleToLocation(BATTLE_LOC);
-					playMovie(world, Movie.SC_OCTABIS_OPENING);
-					getTimers().addTimer("START_STAGE_1", 26500, npc, null);
-					break;
+					return;
 				}
-				case "START_STAGE_1":
+				world.openCloseDoor(MAIN_DOOR_2, false);
+				world.openCloseDoor(MAIN_DOOR_1, false);
+				world.setParameter("TELEPORT_ACTIVE", true);
+				npc.teleToLocation(BATTLE_LOC);
+				playMovie(world, Movie.SC_OCTABIS_OPENING);
+				getTimers().addTimer("START_STAGE_1", 26500, npc, null);
+				break;
+			}
+			case "START_STAGE_1":
+			{
+				final Instance world = npc.getInstanceWorld();
+				if (!isInInstance(world))
 				{
-					world.spawnGroup("STAGE_1");
-					world.getAliveNpcs(BEASTS).forEach(beasts ->
+					return;
+				}
+				world.spawnGroup("STAGE_1");
+				world.getAliveNpcs(BEASTS).forEach(beasts ->
+				{
+					beasts.disableCoreAI(true);
+					beasts.setUndying(true);
+					((Attackable) beasts).setCanReturnToSpawnPoint(false);
+					final Npc octavis = addSpawn((!isExtremeMode(world) ? OCTAVIS_STAGE_1[0] : OCTAVIS_STAGE_1[1]), OCTAVIS_SPAWN_LOC, false, 0, false, world.getId());
+					octavis.disableCoreAI(true);
+					octavis.setRunning();
+					octavis.sendChannelingEffect(beasts, 1);
+					octavis.setTargetable(false);
+					((Attackable) octavis).setCanReturnToSpawnPoint(false);
+					getTimers().addRepeatingTimer("FOLLOW_BEASTS", 500, octavis, null);
+					getTimers().addRepeatingTimer("BEASTS_CHECK_HP", 5000, beasts, null);
+					WalkingManager.getInstance().startMoving(beasts, "octabis_superpoint");
+				});
+				break;
+			}
+			case "FOLLOW_BEASTS":
+			{
+				final Instance world = npc.getInstanceWorld();
+				if (!isInInstance(world))
+				{
+					return;
+				}
+				world.getAliveNpcs(BEASTS).forEach(beasts ->
+				{
+					addMoveToDesire(npc, beasts.getLocation(), 23);
+					npc.sendChannelingEffect(beasts, 1);
+				});
+				break;
+			}
+			case "BEASTS_CHECK_HP":
+			{
+				final Instance world = npc.getInstanceWorld();
+				if (!isInInstance(world))
+				{
+					return;
+				}
+				
+				final int hpPer = npc.getCurrentHpPercent();
+				if ((hpPer < 50) && npc.isScriptValue(0))
+				{
+					npc.getStat().addFixedValue(Stat.REGENERATE_HP_RATE, 100d); // On original script 95000d was added, making Octavis targetable for two seconds.
+					npc.setScriptValue(1);
+				}
+				else if ((hpPer > 90) && npc.isScriptValue(1))
+				{
+					npc.getStat().addFixedValue(Stat.REGENERATE_HP_RATE, 0d);
+					npc.setScriptValue(0);
+				}
+				
+				final Npc octavis = world.getAliveNpcs(OCTAVIS_STAGE_1).stream().findAny().orElse(null);
+				if (octavis != null)
+				{
+					octavis.setTargetable(hpPer < 50);
+				}
+				break;
+			}
+			case "END_STAGE_1":
+			{
+				final Instance world = player.getInstanceWorld();
+				if (!isInInstance(world))
+				{
+					return;
+				}
+				playMovie(world, Movie.SC_OCTABIS_PHASECH_A);
+				getTimers().addTimer("START_STAGE_2", 12000, null, player);
+				break;
+			}
+			case "START_STAGE_2":
+			{
+				final Instance world = player.getInstanceWorld();
+				if (!isInInstance(world))
+				{
+					return;
+				}
+				world.spawnGroup("STAGE_2").forEach(octavis -> ((Attackable) octavis).setCanReturnToSpawnPoint(false));
+				break;
+			}
+			case "END_STAGE_2":
+			{
+				final Instance world = player.getInstanceWorld();
+				if (!isInInstance(world))
+				{
+					return;
+				}
+				playMovie(world, Movie.SC_OCTABIS_PHASECH_B);
+				getTimers().addTimer("START_STAGE_3", 15000, null, player);
+				break;
+			}
+			case "START_STAGE_3":
+			{
+				final Instance world = player.getInstanceWorld();
+				if (!isInInstance(world))
+				{
+					return;
+				}
+				world.spawnGroup("STAGE_3").forEach(octavis -> ((Attackable) octavis).setCanReturnToSpawnPoint(false));
+				break;
+			}
+			case "END_STAGE_3":
+			{
+				final Instance world = player.getInstanceWorld();
+				if (!isInInstance(world))
+				{
+					return;
+				}
+				playMovie(world, Movie.SC_OCTABIS_ENDING);
+				getTimers().addTimer("USM_SCENE_TIMER", 40000, null, player);
+				break;
+			}
+			case "USM_SCENE_TIMER":
+			{
+				final Instance world = player.getInstanceWorld();
+				if (!isInInstance(world))
+				{
+					return;
+				}
+				world.broadcastPacket(ExShowUsm.OCTAVIS_INSTANCE_END);
+				break;
+			}
+			case "GLADIATOR_START_SPAWN":
+			{
+				final Instance world = npc.getInstanceWorld();
+				if (!isInInstance(world))
+				{
+					return;
+				}
+				final StatSet npcVars = npc.getVariables();
+				final int spawnIndex = npcVars.getInt("SPAWN_INDEX", 1);
+				if (spawnIndex < 7)
+				{
+					if (isExtremeMode(world))
 					{
-						beasts.disableCoreAI(true);
-						beasts.setUndying(true);
-						((Attackable) beasts).setCanReturnToSpawnPoint(false);
-						final Npc octavis = addSpawn((!isExtremeMode(world) ? OCTAVIS_STAGE_1[0] : OCTAVIS_STAGE_1[1]), OCTAVIS_SPAWN_LOC, false, 0, false, world.getId());
-						octavis.disableCoreAI(true);
-						octavis.setRunning();
-						octavis.sendChannelingEffect(beasts, 1);
-						octavis.setTargetable(false);
-						((Attackable) octavis).setCanReturnToSpawnPoint(false);
-						getTimers().addRepeatingTimer("FOLLOW_BEASTS", 500, octavis, null);
-						getTimers().addRepeatingTimer("BEASTS_CHECK_HP", 5000, beasts, null);
-						WalkingManager.getInstance().startMoving(beasts, "octabis_superpoint");
-					});
-					break;
-				}
-				case "FOLLOW_BEASTS":
-				{
-					world.getAliveNpcs(BEASTS).forEach(beasts ->
-					{
-						addMoveToDesire(npc, beasts.getLocation(), 23);
-						npc.sendChannelingEffect(beasts, 1);
-					});
-					break;
-				}
-				case "BEASTS_CHECK_HP":
-				{
-					final int hpPer = npc.getCurrentHpPercent();
-					if ((hpPer < 50) && npc.isScriptValue(0))
-					{
-						npc.getStat().addFixedValue(Stat.REGENERATE_HP_RATE, 100d); // On original script 95000d was added, making Octavis targetable for two seconds.
-						npc.setScriptValue(1);
+						world.spawnGroup("magmeld4_2621_gro" + spawnIndex + "m1");
 					}
-					else if ((hpPer > 90) && npc.isScriptValue(1))
+					else
 					{
-						npc.getStat().addFixedValue(Stat.REGENERATE_HP_RATE, 0d);
-						npc.setScriptValue(0);
+						world.spawnGroup("magmeld4_2621_gmo" + spawnIndex + "m1");
 					}
-					
-					final Npc octavis = world.getAliveNpcs(OCTAVIS_STAGE_1).stream().findAny().orElse(null);
-					if (octavis != null)
+					npcVars.set("SPAWN_INDEX", spawnIndex + 1);
+					getTimers().addTimer("GLADIATOR_START_SPAWN", 3000, npc, null);
+				}
+				break;
+			}
+			case "GLADIATOR_MOVING":
+			{
+				final Instance world = npc.getInstanceWorld();
+				if (!isInInstance(world))
+				{
+					return;
+				}
+				final StatSet npcParams = npc.getParameters();
+				final int moveX = npcParams.getInt("Move_to_X", 0);
+				final int moveY = npcParams.getInt("Move_to_Y", 0);
+				if ((moveX != 0) && (moveY != 0))
+				{
+					npc.setRunning();
+					addMoveToDesire(npc, new Location(moveX, moveY, -10008), 23);
+				}
+				break;
+			}
+			case "BEASTS_MINIONS_SPAWN":
+			{
+				final Instance world = npc.getInstanceWorld();
+				if (!isInInstance(world))
+				{
+					return;
+				}
+				
+				for (int i = 0; i < getRandom(10); i++)
+				{
+					final Npc beast = addSpawn((!isExtremeMode(world) ? BEASTS_MINIONS[0] : BEASTS_MINIONS[1]), getRandomEntry(BEASTS_MINIONS_LOC), false, 0, false, world.getId());
+					beast.setRunning();
+					((Attackable) beast).setCanReturnToSpawnPoint(false);
+					addMoveToDesire(beast, Util.getRandomPosition(BEASTS_RANDOM_POINT, 500, 500), 23);
+				}
+				
+				getTimers().addTimer("BEASTS_MINIONS_SPAWN", 30000 + (getRandom(10) * 1000), npc, null);
+				break;
+			}
+			case "MINION_CALL":
+			{
+				final PlayerInstance mostHated = ((Attackable) npc).getMostHated().getActingPlayer();
+				if ((mostHated != null) && (mostHated.calculateDistance3D(npc) < 5000))
+				{
+					World.getInstance().getVisibleObjectsInRange(npc, Attackable.class, 4000, obj -> CommonUtil.contains(BEASTS_MINIONS, obj.getId()) || CommonUtil.contains(GLADIATORS, obj.getId())).forEach(minion -> addAttackPlayerDesire(minion, mostHated, 23));
+				}
+				getTimers().addTimer("MINION_CALL", 5000 + (getRandom(5) * 1000), npc, null);
+				break;
+			}
+			case "ATTACK_TIMER":
+			{
+				final Creature mostHated = ((Attackable) npc).getMostHated();
+				if ((mostHated != null) && mostHated.isPlayable() && (npc.calculateDistance2D(mostHated) < 1000))
+				{
+					final int random = getRandom(5);
+					if (random < 3)
 					{
-						octavis.setTargetable(hpPer < 50);
+						addSkillCastDesire(npc, mostHated, STAGE_2_SKILL_1, 23);
 					}
-					break;
-				}
-				case "END_STAGE_1":
-				{
-					playMovie(world, Movie.SC_OCTABIS_PHASECH_A);
-					getTimers().addTimer("START_STAGE_2", 12000, npc, null);
-					break;
-				}
-				case "START_STAGE_2":
-				{
-					world.spawnGroup("STAGE_2").forEach(octavis -> ((Attackable) octavis).setCanReturnToSpawnPoint(false));
-					break;
-				}
-				case "END_STAGE_2":
-				{
-					playMovie(world, Movie.SC_OCTABIS_PHASECH_B);
-					getTimers().addTimer("START_STAGE_3", 15000, npc, null);
-					break;
-				}
-				case "START_STAGE_3":
-				{
-					world.spawnGroup("STAGE_3").forEach(octavis -> ((Attackable) octavis).setCanReturnToSpawnPoint(false));
-					break;
-				}
-				case "END_STAGE_3":
-				{
-					playMovie(world, Movie.SC_OCTABIS_ENDING);
-					getTimers().addTimer("USM_SCENE_TIMER", 40000, npc, null);
-					break;
-				}
-				case "USM_SCENE_TIMER":
-				{
-					world.broadcastPacket(ExShowUsm.OCTAVIS_INSTANCE_END);
-					break;
-				}
-				case "GLADIATOR_START_SPAWN":
-				{
-					final int spawnIndex = npcVars.getInt("SPAWN_INDEX", 1);
-					if (spawnIndex < 7)
+					else if (random < 5)
 					{
-						if (isExtremeMode(world))
-						{
-							world.spawnGroup("magmeld4_2621_gro" + spawnIndex + "m1");
-						}
-						else
-						{
-							world.spawnGroup("magmeld4_2621_gmo" + spawnIndex + "m1");
-						}
-						npcVars.set("SPAWN_INDEX", spawnIndex + 1);
-						getTimers().addTimer("GLADIATOR_START_SPAWN", 3000, npc, null);
+						addSkillCastDesire(npc, mostHated, STAGE_2_SKILL_2, 23);
 					}
-					break;
 				}
-				case "GLADIATOR_MOVING":
-				{
-					final int moveX = npcParams.getInt("Move_to_X", 0);
-					final int moveY = npcParams.getInt("Move_to_Y", 0);
-					if ((moveX != 0) && (moveY != 0))
-					{
-						npc.setRunning();
-						addMoveToDesire(npc, new Location(moveX, moveY, -10008), 23);
-					}
-					break;
-				}
-				case "BEASTS_MINIONS_SPAWN":
-				{
-					for (int i = 0; i < getRandom(10); i++)
-					{
-						final Npc beast = addSpawn((!isExtremeMode(world) ? BEASTS_MINIONS[0] : BEASTS_MINIONS[1]), getRandomEntry(BEASTS_MINIONS_LOC), false, 0, false, world.getId());
-						beast.setRunning();
-						((Attackable) beast).setCanReturnToSpawnPoint(false);
-						addMoveToDesire(beast, Util.getRandomPosition(BEASTS_RANDOM_POINT, 500, 500), 23);
-					}
-					
-					getTimers().addTimer("BEASTS_MINIONS_SPAWN", 30000 + (getRandom(10) * 1000), npc, null);
-					break;
-				}
-				case "MINION_CALL":
-				{
-					final PlayerInstance mostHated = ((Attackable) npc).getMostHated().getActingPlayer();
-					if ((mostHated != null) && (mostHated.calculateDistance3D(npc) < 5000))
-					{
-						World.getInstance().getVisibleObjectsInRange(npc, Attackable.class, 4000, obj -> CommonUtil.contains(BEASTS_MINIONS, obj.getId()) || CommonUtil.contains(GLADIATORS, obj.getId())).forEach(minion -> addAttackPlayerDesire(minion, mostHated, 23));
-					}
-					getTimers().addTimer("MINION_CALL", 5000 + (getRandom(5) * 1000), npc, null);
-					break;
-				}
-				case "ATTACK_TIMER":
-				{
-					final Creature mostHated = ((Attackable) npc).getMostHated();
-					if ((mostHated != null) && mostHated.isPlayable() && (npc.calculateDistance2D(mostHated) < 1000))
-					{
-						final int random = getRandom(5);
-						if (random < 3)
-						{
-							addSkillCastDesire(npc, mostHated, STAGE_2_SKILL_1, 23);
-						}
-						else if (random < 5)
-						{
-							addSkillCastDesire(npc, mostHated, STAGE_2_SKILL_2, 23);
-						}
-					}
-					getTimers().addTimer("ATTACK_TIMER", getRandom(7, 9) * 1000, npc, null);
-					break;
-				}
-				case "MEDUSA_SKILL_TIMER":
-				{
-					addSkillCastDesire(npc, npc, STAGE_2_SKILL_3, 23);
-					break;
-				}
+				getTimers().addTimer("ATTACK_TIMER", getRandom(7, 9) * 1000, npc, null);
+				break;
+			}
+			case "MEDUSA_SKILL_TIMER":
+			{
+				addSkillCastDesire(npc, npc, STAGE_2_SKILL_3, 23);
+				break;
 			}
 		}
 	}
@@ -423,7 +490,7 @@ public class OctavisWarzone extends AbstractInstance
 					beast.teleToLocation(new Location(-113360, -244676, -15536)); // Don't even ask, it's pure hack. - St3eT 2k16
 					beast.deleteMe();
 				});
-				getTimers().addTimer("END_STAGE_1", 1000, npc, null);
+				getTimers().addTimer("END_STAGE_1", 1000, null, killer);
 			}
 			else if (CommonUtil.contains(OCTAVIS_STAGE_2, npc.getId()))
 			{
@@ -440,12 +507,12 @@ public class OctavisWarzone extends AbstractInstance
 				{
 					world.despawnGroup(isExtremeMode(world) ? ("magmeld4_2621_gro" + i + "m1") : ("magmeld4_2621_gmo" + i + "m1"));
 				}
-				getTimers().addTimer("END_STAGE_2", 3000, npc, null);
+				getTimers().addTimer("END_STAGE_2", 3000, null, killer);
 			}
 			else if (CommonUtil.contains(OCTAVIS_STAGE_3, npc.getId()))
 			{
 				world.finishInstance();
-				getTimers().addTimer("END_STAGE_3", 2000, npc, null);
+				getTimers().addTimer("END_STAGE_3", 2000, null, killer);
 			}
 		}
 		return super.onKill(npc, killer, isSummon);
@@ -497,17 +564,17 @@ public class OctavisWarzone extends AbstractInstance
 		return super.onSpellFinished(npc, player, skill);
 	}
 	
-	public void onCreatureSee(OnCreatureSee event)
+	private void onCreatureSee(OnCreatureSee event)
 	{
 		final Creature creature = event.getSeen();
 		final Npc npc = (Npc) event.getSeer();
 		final Instance world = npc.getInstanceWorld();
 		if (isInInstance(world) && creature.isPlayer() && npc.isScriptValue(0))
 		{
+			npc.setScriptValue(1);
 			world.openCloseDoor(MAIN_DOOR_1, true);
 			getTimers().addTimer("SECOND_DOOR_OPEN", 3000, npc, null);
 			getTimers().addTimer("CLOSE_DOORS", 60000, npc, null);
-			npc.setScriptValue(1);
 		}
 	}
 	
