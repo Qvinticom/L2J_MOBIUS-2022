@@ -75,7 +75,7 @@ public class AdminGrandBoss implements IAdminCommandHandler
 				else
 				{
 					final NpcHtmlMessage html = new NpcHtmlMessage(0, 1);
-					html.setHtml(HtmCache.getInstance().getHtm(activeChar, "data/html/admin/grandboss.htm"));
+					html.setHtml(HtmCache.getInstance().getHtm(activeChar, "data/html/admin/grandboss/grandboss.htm"));
 					activeChar.sendPacket(html);
 				}
 				break;
@@ -216,33 +216,33 @@ public class AdminGrandBoss implements IAdminCommandHandler
 				case ANTHARAS:
 				{
 					bossZone = ZoneManager.getInstance().getZoneById(ANTHARAS_ZONE, NoRestartZone.class);
-					htmlPatch = "data/html/admin/grandboss_antharas.htm";
+					htmlPatch = "data/html/admin/grandboss/grandboss_antharas.htm";
 					break;
 				}
 				case VALAKAS:
 				{
-					htmlPatch = "data/html/admin/grandboss_valakas.htm";
+					htmlPatch = "data/html/admin/grandboss/grandboss_valakas.htm";
 					break;
 				}
 				case BAIUM:
 				{
 					bossZone = ZoneManager.getInstance().getZoneById(BAIUM_ZONE, NoRestartZone.class);
-					htmlPatch = "data/html/admin/grandboss_baium.htm";
+					htmlPatch = "data/html/admin/grandboss/grandboss_baium.htm";
 					break;
 				}
 				case QUEENANT:
 				{
-					htmlPatch = "data/html/admin/grandboss_queenant.htm";
+					htmlPatch = "data/html/admin/grandboss/grandboss_queenant.htm";
 					break;
 				}
 				case ORFEN:
 				{
-					htmlPatch = "data/html/admin/grandboss_orfen.htm";
+					htmlPatch = "data/html/admin/grandboss/grandboss_orfen.htm";
 					break;
 				}
 				case CORE:
 				{
-					htmlPatch = "data/html/admin/grandboss_core.htm";
+					htmlPatch = "data/html/admin/grandboss/grandboss_core.htm";
 					break;
 				}
 			}
