@@ -8,6 +8,7 @@
 		<abnormalType>PD_DOWN</abnormalType>
 		<activateRate>70</activateRate>
 		<basicProperty>PHYSICAL</basicProperty>
+		<lvlBonusRate>20</lvlBonusRate>
 		<castRange>40</castRange>
 		<coolTime>500</coolTime>
 		<effectPoint>
@@ -149,7 +150,6 @@
 			<condition name="EquipWeapon">
 				<weaponType>
 					<item>DUAL</item>
-					<item>DUALBLUNT</item>
 				</weaponType>
 			</condition>
 		</conditions>
@@ -198,7 +198,6 @@
 					<value level="40">2627</value>
 				</power>
 				<ignoreShieldDefence>true</ignoreShieldDefence>
-				<criticalChance>15</criticalChance>
 				<overHit>true</overHit>
 			</effect>
 			<effect name="PhysicalDefence">
@@ -523,14 +522,11 @@
 			<condition name="EquipWeapon">
 				<weaponType>
 					<item>DUAL</item>
-					<item>DUALBLUNT</item>
 				</weaponType>
 			</condition>
 		</conditions>
 		<effects>
 			<effect name="EnergyAttack">
-				<chargeConsume>3</chargeConsume>
-				<criticalChance>15</criticalChance>
 				<power>
 					<value level="1">918</value>
 					<value level="2">971</value>
@@ -568,6 +564,8 @@
 					<value level="34">3283</value>
 				</power>
 				<overHit>true</overHit>
+				<chargeConsume>3</chargeConsume>
+				<criticalChance>15</criticalChance>
 			</effect>
 		</effects>
 	</skill>
@@ -581,6 +579,8 @@
 		<abnormalVisualEffect>STUN</abnormalVisualEffect>
 		<activateRate>35</activateRate>
 		<basicProperty>PHYSICAL</basicProperty>
+		<isDebuff>true</isDebuff>
+		<lvlBonusRate>20</lvlBonusRate>
 		<effectPoint>
 			<value level="1">-183</value>
 			<value level="2">-188</value>
@@ -710,7 +710,6 @@
 			<value level="40">124</value>
 		</mpConsume>
 		<operateType>A2</operateType>
-		<isDebuff>true</isDebuff>
 		<coolTime>500</coolTime>
 		<reuseDelay>3000</reuseDelay>
 		<magicCriticalRate>5</magicCriticalRate>
@@ -723,14 +722,11 @@
 					<item>DUAL</item>
 					<item>SWORD</item>
 					<item>BLUNT</item>
-					<item>DUALBLUNT</item>
 				</weaponType>
 			</condition>
 		</conditions>
 		<effects>
 			<effect name="EnergyAttack">
-				<chargeConsume>2</chargeConsume>
-				<criticalChance>15</criticalChance>
 				<power>
 					<value level="1">369</value>
 					<value level="2">392</value>
@@ -774,8 +770,12 @@
 					<value level="40">1876</value>
 				</power>
 				<overHit>true</overHit>
+				<chargeConsume>2</chargeConsume>
+				<criticalChance>15</criticalChance>
 			</effect>
-			<effect name="BlockActions" />
+			<effect name="BlockActions">
+				<allowedSkills>35016;35045;18103</allowedSkills>
+			</effect>
 		</effects>
 	</skill>
 	<skill id="7" toLevel="31" name="Sonic Storm">
@@ -895,55 +895,51 @@
 		<conditions>
 			<condition name="EquipWeapon">
 				<weaponType>
-					<item>DUAL</item>
 					<item>SWORD</item>
 					<item>BLUNT</item>
-					<item>DUALBLUNT</item>
+					<item>POLE</item>
+					<item>DUALFIST</item>
+					<item>DUAL</item>
 				</weaponType>
 			</condition>
 		</conditions>
 		<effects>
 			<effect name="EnergyAttack">
 				<power>
-					<value level="1">141</value>
-					<value level="2">148</value>
-					<value level="3">156</value>
-					<value level="4">165</value>
-					<value level="5">172</value>
-					<value level="6">180</value>
-					<value level="7">189</value>
-					<value level="8">198</value>
-					<value level="9">208</value>
-					<value level="10">218</value>
-					<value level="11">228</value>
-					<value level="12">237</value>
-					<value level="13">248</value>
-					<value level="14">258</value>
-					<value level="15">269</value>
-					<value level="16">280</value>
-					<value level="17">291</value>
-					<value level="18">301</value>
-					<value level="19">313</value>
-					<value level="20">325</value>
-					<value level="21">335</value>
-					<value level="22">347</value>
-					<value level="23">358</value>
-					<value level="24">370</value>
-					<value level="25">382</value>
-					<value level="26">392</value>
-					<value level="27">405</value>
-					<value level="28">416</value>
-					<value level="29">427</value>
-					<value level="30">451</value>
-					<value level="31">473</value>
+					<value level="1">155</value>
+					<value level="2">163</value>
+					<value level="3">172</value>
+					<value level="4">181</value>
+					<value level="5">190</value>
+					<value level="6">199</value>
+					<value level="7">209</value>
+					<value level="8">219</value>
+					<value level="9">229</value>
+					<value level="10">240</value>
+					<value level="11">251</value>
+					<value level="12">262</value>
+					<value level="13">273</value>
+					<value level="14">284</value>
+					<value level="15">296</value>
+					<value level="16">308</value>
+					<value level="17">320</value>
+					<value level="18">332</value>
+					<value level="19">344</value>
+					<value level="20">357</value>
+					<value level="21">369</value>
+					<value level="22">382</value>
+					<value level="23">394</value>
+					<value level="24">407</value>
+					<value level="25">420</value>
+					<value level="26">432</value>
+					<value level="27">445</value>
+					<value level="28">457</value>
+					<value level="29">470</value>
+					<value level="30">482</value>
+					<value level="31">495</value>
 				</power>
 				<overHit>true</overHit>
-				<criticalChance>
-					<value fromLevel="1" toLevel="31">15</value>
-				</criticalChance>
-				<pDefMod>
-					<value fromLevel="1" toLevel="31">1</value>
-				</pDefMod>
+				<criticalChance>15</criticalChance>
 			</effect>
 		</effects>
 	</skill>
@@ -972,7 +968,6 @@
 			<condition name="EquipWeapon">
 				<weaponType>
 					<item>DUAL</item>
-					<item>DUALBLUNT</item>
 					<item>SWORD</item>
 					<item>BLUNT</item>
 				</weaponType>
@@ -1054,8 +1049,8 @@
 		<effectRange>400</effectRange>
 		<fanRange>0;0;200;180</fanRange>
 		<hitTime>720</hitTime>
-		<itemConsumeCount>3</itemConsumeCount>
-		<itemConsumeId>5589</itemConsumeId> <!-- Energy Stone -->
+		<itemConsumeCount>2</itemConsumeCount>
+		<itemConsumeId>5589</itemConsumeId> <!-- Momentum Stone -->
 		<magicLvl>
 			<value level="1">41</value>
 			<value level="2">42</value>
@@ -1147,7 +1142,6 @@
 					<item>DUAL</item>
 					<item>SWORD</item>
 					<item>BLUNT</item>
-					<item>DUALBLUNT</item>
 				</weaponType>
 			</condition>
 		</conditions>
@@ -1192,6 +1186,7 @@
 					<value level="36">465</value>
 					<value level="37">469</value>
 				</power>
+				<chargeConsume>3</chargeConsume>
 				<overHit>true</overHit>
 				<criticalChance>15</criticalChance>
 			</effect>
@@ -1434,8 +1429,6 @@
 		<effects>
 			<effect name="Summon">
 				<npcId>14737</npcId> <!-- Siege Golem -->
-				<consumeItemId>2131</consumeItemId> <!-- Gemstone (C-grade) -->
-				<consumeItemCount>40</consumeItemCount>
 			</effect>
 		</effects>
 	</skill>
@@ -1864,7 +1857,7 @@
 		<fanRange>0;0;200;180</fanRange>
 		<hitTime>783</hitTime>
 		<itemConsumeCount>2</itemConsumeCount>
-		<itemConsumeId>5589</itemConsumeId> <!-- Energy Stone -->
+		<itemConsumeId>5589</itemConsumeId> <!-- Momentum Stone -->
 		<magicLvl>
 			<value level="1">41</value>
 			<value level="2">42</value>
@@ -1998,6 +1991,7 @@
 					<value level="36">543</value>
 					<value level="37">548</value>
 				</power>
+				<chargeConsume>1</chargeConsume>
 				<overHit>true</overHit>
 				<criticalChance>15</criticalChance>
 			</effect>
@@ -2630,12 +2624,12 @@
 		<itemConsumeCount>
 			<value level="1">7</value>
 			<value level="2">11</value>
-			<value level="3">3</value>
+			<value level="3">1</value>
 			<value level="4">1</value>
-			<value level="5">3</value>
+			<value level="5">2</value>
 			<value level="6">2</value>
-			<value level="7">4</value>
-			<value level="8">3</value>
+			<value level="7">3</value>
+			<value level="8">4</value>
 			<value level="9">5</value>
 			<value level="10">7</value>
 		</itemConsumeCount>
@@ -2697,20 +2691,6 @@
 					<value level="9">14671</value>
 					<value level="10">14672</value>
 				</npcId>
-				<item>consumeItemId</item>
-				<consumeItemCount>
-					<value level="1">4</value>
-					<value level="2">4</value>
-					<value level="3">1</value>
-					<value level="4">2</value>
-					<value level="5">2</value>
-					<value level="6">3</value>
-					<value level="7">3</value>
-					<value level="8">4</value>
-					<value level="9">4</value>
-					<value level="10">5</value>
-				</consumeItemCount>
-				<expMultiplier>0.85</expMultiplier>
 			</effect>
 		</effects>
 	</skill>
@@ -3152,6 +3132,32 @@
 		</conditions>
 		<effects>
 			<effect name="PhysicalAttack">
+				<power>
+					<value level="1">34</value>
+					<value level="2">38</value>
+					<value level="3">41</value>
+					<value level="4">54</value>
+					<value level="5">59</value>
+					<value level="6">64</value>
+					<value level="7">83</value>
+					<value level="8">91</value>
+					<value level="9">98</value>
+					<value level="10">125</value>
+					<value level="11">136</value>
+					<value level="12">147</value>
+					<value level="13">171</value>
+					<value level="14">185</value>
+					<value level="15">199</value>
+					<value level="16">231</value>
+					<value level="17">248</value>
+					<value level="18">267</value>
+					<value level="19">307</value>
+					<value level="20">328</value>
+					<value level="21">351</value>
+					<value level="22">401</value>
+					<value level="23">428</value>
+					<value level="24">456</value>
+				</power>
 				<overHit>true</overHit>
 			</effect>
 		</effects>
@@ -3306,43 +3312,43 @@
 		<effects>
 			<effect name="Backstab">
 				<power>
-					<value level="1">1107</value>
-					<value level="2">1176</value>
-					<value level="3">1249</value>
-					<value level="4">1325</value>
-					<value level="5">1405</value>
-					<value level="6">1488</value>
-					<value level="7">1574</value>
-					<value level="8">1664</value>
-					<value level="9">1757</value>
-					<value level="10">1853</value>
-					<value level="11">1953</value>
-					<value level="12">2057</value>
-					<value level="13">2164</value>
-					<value level="14">2274</value>
-					<value level="15">2388</value>
-					<value level="16">2505</value>
-					<value level="17">2625</value>
-					<value level="18">2748</value>
-					<value level="19">2875</value>
-					<value level="20">3004</value>
-					<value level="21">3136</value>
-					<value level="22">3271</value>
-					<value level="23">3408</value>
-					<value level="24">3548</value>
-					<value level="25">3690</value>
-					<value level="26">3834</value>
-					<value level="27">3980</value>
-					<value level="28">4127</value>
-					<value level="29">4275</value>
-					<value level="30">4425</value>
-					<value level="31">4575</value>
-					<value level="32">4726</value>
-					<value level="33">4878</value>
-					<value level="34">5029</value>
-					<value level="35">5180</value>
-					<value level="36">5330</value>
-					<value level="37">5479</value>
+					<value level="1">1273</value>
+					<value level="2">1352</value>
+					<value level="3">1436</value>
+					<value level="4">1524</value>
+					<value level="5">1616</value>
+					<value level="6">1711</value>
+					<value level="7">1810</value>
+					<value level="8">1914</value>
+					<value level="9">2021</value>
+					<value level="10">2131</value>
+					<value level="11">2246</value>
+					<value level="12">2366</value>
+					<value level="13">2489</value>
+					<value level="14">2615</value>
+					<value level="15">2746</value>
+					<value level="16">2881</value>
+					<value level="17">3019</value>
+					<value level="18">3160</value>
+					<value level="19">3306</value>
+					<value level="20">3455</value>
+					<value level="21">3606</value>
+					<value level="22">3762</value>
+					<value level="23">3919</value>
+					<value level="24">4080</value>
+					<value level="25">4244</value>
+					<value level="26">4409</value>
+					<value level="27">4577</value>
+					<value level="28">4746</value>
+					<value level="29">4916</value>
+					<value level="30">5089</value>
+					<value level="31">5261</value>
+					<value level="32">5435</value>
+					<value level="33">5610</value>
+					<value level="34">5783</value>
+					<value level="35">5957</value>
+					<value level="36">6130</value>
+					<value level="37">6301</value>
 					<value level="38">6317</value>
 					<value level="39">6332</value>
 					<value level="40">6498</value>
@@ -3615,52 +3621,51 @@
 		<conditions>
 			<condition name="EquipWeapon">
 				<weaponType>
+					<item>SWORD</item>
+					<item>BLUNT</item>
+					<item>POLE</item>
 					<item>DUALFIST</item>
+					<item>DUAL</item>
 				</weaponType>
 			</condition>
 		</conditions>
 		<effects>
 			<effect name="EnergyAttack">
 				<power>
-					<value level="1">141</value>
-					<value level="2">148</value>
-					<value level="3">156</value>
-					<value level="4">165</value>
-					<value level="5">172</value>
-					<value level="6">180</value>
-					<value level="7">189</value>
-					<value level="8">198</value>
-					<value level="9">208</value>
-					<value level="10">218</value>
-					<value level="11">228</value>
-					<value level="12">237</value>
-					<value level="13">248</value>
-					<value level="14">258</value>
-					<value level="15">269</value>
-					<value level="16">280</value>
-					<value level="17">291</value>
-					<value level="18">301</value>
-					<value level="19">313</value>
-					<value level="20">325</value>
-					<value level="21">335</value>
-					<value level="22">347</value>
-					<value level="23">358</value>
-					<value level="24">370</value>
-					<value level="25">382</value>
-					<value level="26">392</value>
-					<value level="27">405</value>
-					<value level="28">416</value>
-					<value level="29">427</value>
-					<value level="30">451</value>
-					<value level="31">473</value>
+					<value level="1">181</value>
+					<value level="2">190</value>
+					<value level="3">200</value>
+					<value level="4">211</value>
+					<value level="5">222</value>
+					<value level="6">233</value>
+					<value level="7">244</value>
+					<value level="8">256</value>
+					<value level="9">268</value>
+					<value level="10">280</value>
+					<value level="11">293</value>
+					<value level="12">305</value>
+					<value level="13">318</value>
+					<value level="14">332</value>
+					<value level="15">345</value>
+					<value level="16">359</value>
+					<value level="17">373</value>
+					<value level="18">387</value>
+					<value level="19">402</value>
+					<value level="20">416</value>
+					<value level="21">431</value>
+					<value level="22">445</value>
+					<value level="23">460</value>
+					<value level="24">475</value>
+					<value level="25">489</value>
+					<value level="26">504</value>
+					<value level="27">519</value>
+					<value level="28">533</value>
+					<value level="29">548</value>
+					<value level="30">563</value>
+					<value level="31">578</value>
 				</power>
 				<overHit>true</overHit>
-				<criticalChance>
-					<value fromLevel="1" toLevel="31">15</value>
-				</criticalChance>
-				<pDefMod>
-					<value fromLevel="1" toLevel="31">1</value>
-				</pDefMod>
+				<criticalChance>15</criticalChance>
 			</effect>
 		</effects>
 	</skill>
@@ -3855,7 +3860,6 @@
 					<value level="40">2813</value>
 				</power>
 				<ignoreShieldDefence>true</ignoreShieldDefence>
-				<criticalChance>15</criticalChance>
 				<overHit>true</overHit>
 			</effect>
 		</effects>
@@ -4035,8 +4039,8 @@
 			<value level="13">52</value>
 			<value level="14">53</value>
 			<value level="15">55</value>
-			<value level="16">75</value>
-			<value level="17">79</value>
+			<value level="16">61</value>
+			<value level="17">64</value>
 		</mpConsume>
 		<mpInitialConsume>
 			<value level="1">7</value>
@@ -4097,9 +4101,7 @@
 		<abnormalTime>7</abnormalTime>
 		<abnormalType>STUN</abnormalType>
 		<abnormalVisualEffect>STUN</abnormalVisualEffect>
-		<activateRate>
-			<value fromLevel="1" toLevel="40">50</value>
-		</activateRate>
+		<activateRate>50</activateRate>
 		<affectLimit>6-12</affectLimit>
 		<affectRange>150</affectRange>
 		<basicProperty>PHYSICAL</basicProperty>
@@ -4287,18 +4289,16 @@
 					<value level="35">1969</value>
 					<value level="36">2026</value>
 					<value level="37">2082</value>
-					<value level="38">2140</value>
-					<value level="39">2200</value>
-					<value level="40">2260</value>
+					<value level="38">2191</value>
+					<value level="39">2244</value>
+					<value level="40">2296</value>
 				</power>
 				<ignoreShieldDefence>true</ignoreShieldDefence>
-				<criticalChance>
-					<value fromLevel="1" toLevel="40">15</value>
-				</criticalChance>
+				<criticalChance>15</criticalChance>
 				<overHit>true</overHit>
 			</effect>
 			<effect name="BlockActions">
-				<allowedSkills>35016</allowedSkills>
+				<allowedSkills>35016;35045;18103</allowedSkills>
 			</effect>
 		</effects>
 	</skill>
@@ -4712,9 +4712,7 @@
 		<operateType>A1</operateType>
 		<coolTime>500</coolTime>
 		<reuseDelay>4000</reuseDelay>
-		<!-- charge values -->
 		<magicCriticalRate>5</magicCriticalRate>
-		<chargeConsume>1</chargeConsume>
 		<targetType>ENEMY</targetType>
 		<affectScope>SINGLE</affectScope>
 		<conditions>
@@ -5588,7 +5586,6 @@
 					<value level="32">2334</value>
 					<value level="33">2396</value>
 					<value level="34">2458</value>
-					<value fromLevel="33" toLevel="34" fromSubLevel="1001" toSubLevel="1030">{base + base / 100 * subIndex}</value>
 				</power>
 			</effect>
 		</effects>
@@ -5772,9 +5769,9 @@
 			<value level="51">40</value>
 			<value level="52">41</value>
 			<value level="53">41</value>
-			<value level="54">53</value>
-			<value level="55">55</value>
-			<value level="56">57</value>
+			<value level="54">42</value>
+			<value level="55">44</value>
+			<value level="56">46</value>
 		</mpConsume>
 		<mpInitialConsume>
 			<value level="1">3</value>
@@ -5970,7 +5967,7 @@
 		<affectScope>SINGLE</affectScope>
 		<effects>
 			<effect name="AttackTrait">
-				<BUG_WEAKNESS>30</BUG_WEAKNESS>
+				<BUG_WEAKNESS>5</BUG_WEAKNESS>
 			</effect>
 		</effects>
 	</skill>
@@ -6127,16 +6124,13 @@
 		<affectScope>SINGLE</affectScope>
 		<effects>
 			<effect name="AttackTrait">
-				<BEAST_WEAKNESS>30</BEAST_WEAKNESS>
+				<BEAST_WEAKNESS>5</BEAST_WEAKNESS>
 			</effect>
 		</effects>
 	</skill>
 	<skill id="81" toLevel="3" name="Punch of Doom">
 		<!-- Inflicts great damage on the enemy with iron-fist. Requires a fist weapon. Ignores Shield Defense. Over-hit. Critical. Power $s1. -->
 		<icon>icon.skill0081</icon>
-		<abnormalLvl>1</abnormalLvl>
-		<abnormalType>STUN</abnormalType>
-		<abnormalVisualEffect>STUN</abnormalVisualEffect>
 		<castRange>40</castRange>
 		<coolTime>500</coolTime>
 		<effectPoint>
@@ -6329,7 +6323,6 @@
 			<condition name="EquipWeapon">
 				<weaponType>
 					<item>DUAL</item>
-					<item>DUALBLUNT</item>
 				</weaponType>
 			</condition>
 		</conditions>
@@ -6414,7 +6407,7 @@
 		<affectScope>SINGLE</affectScope>
 		<effects>
 			<effect name="AttackTrait">
-				<ANIMAL_WEAKNESS>30</ANIMAL_WEAKNESS>
+				<ANIMAL_WEAKNESS>5</ANIMAL_WEAKNESS>
 			</effect>
 		</effects>
 	</skill>
@@ -6436,7 +6429,7 @@
 		<affectScope>SINGLE</affectScope>
 		<effects>
 			<effect name="AttackTrait">
-				<DRAGON_WEAKNESS>30</DRAGON_WEAKNESS>
+				<DRAGON_WEAKNESS>5</DRAGON_WEAKNESS>
 			</effect>
 		</effects>
 	</skill>
@@ -6681,7 +6674,7 @@
 		</conditions>
 		<effects>
 			<effect name="BlockActions">
-				<allowedSkills>35016</allowedSkills>
+				<allowedSkills>35016;35045;18103</allowedSkills>
 			</effect>
 		</effects>
 	</skill>
@@ -6697,10 +6690,7 @@
 			<value level="6">6</value>
 			<value level="7">7</value>
 		</abnormalLvl>
-		<abnormalTime>
-			<value fromLevel="1" toLevel="7">600</value>
-			<value fromLevel="6" toLevel="7" fromSubLevel="1001" toSubLevel="1030">{base + subIndex * 30}</value>
-		</abnormalTime>
+		<abnormalTime>600</abnormalTime>
 		<abnormalType>PA_UP_SPECIAL</abnormalType>
 		<effectPoint>235</effectPoint>
 		<hitTime>1500</hitTime>
@@ -6731,20 +6721,23 @@
 		<conditions>
 			<condition name="EquipWeapon">
 				<weaponType>
-					<item>DUAL</item>
-					<item>POLE</item>
 					<item>SWORD</item>
 					<item>BLUNT</item>
+					<item>POLE</item>
 					<item>DUALFIST</item>
-					<item>DUALBLUNT</item>
+					<item>DUAL</item>
 				</weaponType>
 			</condition>
 		</conditions>
 		<effects>
+			<effect name="PAtk">
+				<amount>20</amount>
+				<mode>PER</mode>
+			</effect>
 			<effect name="TwoHandedSwordBonus">
 				<pAtkAmount>
-					<value level="1">0</value>
-					<value level="2">2</value>
+					<value level="1">3</value>
+					<value level="2">5</value>
 					<value level="3">3</value>
 					<value level="4">4</value>
 					<value level="5">5</value>
@@ -6752,11 +6745,13 @@
 					<value level="7">15</value>
 				</pAtkAmount>
 				<pAtkMode>PER</pAtkMode>
+				<accuracyAmount>3</accuracyAmount>
+				<accuracyMode>DIFF</accuracyMode>
 			</effect>
 			<effect name="TwoHandedBluntBonus">
 				<pAtkAmount>
-					<value level="1">0</value>
-					<value level="2">2</value>
+					<value level="1">3</value>
+					<value level="2">5</value>
 					<value level="3">3</value>
 					<value level="4">4</value>
 					<value level="5">5</value>
@@ -6764,31 +6759,23 @@
 					<value level="7">15</value>
 				</pAtkAmount>
 				<pAtkMode>PER</pAtkMode>
+				<accuracyAmount>3</accuracyAmount>
+				<accuracyMode>DIFF</accuracyMode>
 			</effect>
 			<effect name="PAtk">
-				<amount>15</amount>
-				<mode>PER</mode>
-				<weaponType>
-					<item>POLE</item>
-				</weaponType>
-			</effect>
-			<effect name="PAtk">
-				<amount>10</amount>
-				<mode>PER</mode>
-				<weaponType>
-					<item>SWORD</item>
-					<item>BLUNT</item>
-					<item>POLE</item>
-					<item>FIST</item>
-					<item>DUAL</item>
-					<item>DUALBLUNT</item>
-				</weaponType>
-			</effect>
-			<effect name="PhysicalAttackSpeed" fromLevel="6" toLevel="7" fromSubLevel="2001" toSubLevel="2030">
 				<amount>
-					<value fromLevel="6" toLevel="7" fromSubLevel="2001" toSubLevel="2030">{0.6 + 0.4 * subIndex}</value>
+					<value level="1">3</value>
+					<value level="2">5</value>
+					<value level="3">3</value>
+					<value level="4">4</value>
+					<value level="5">5</value>
+					<value level="6">10</value>
+					<value level="7">15</value>
 				</amount>
 				<mode>PER</mode>
+				<weaponType>
+					<item>POLE</item>
+				</weaponType>
 			</effect>
 		</effects>
 	</skill>
@@ -7152,7 +7139,7 @@
 					<value level="3">1194</value>
 					<value level="4">1373</value>
 					<value level="5">1554</value>
-					<value level="6">1726</value> <!-- Guessed -->
+					<value level="6">1737</value>
 				</power>
 				<overHit>true</overHit>
 				<criticalChance>10</criticalChance>

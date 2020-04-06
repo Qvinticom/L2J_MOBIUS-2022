@@ -620,7 +620,7 @@
 															</xs:element>
 															<xs:element name="item" type="xs:string" />
 															<xs:element name="expMultiplier" type="xs:decimal" />
-															<xs:element name="allowedSkills" type="xs:unsignedShort" />
+															<xs:element name="allowedSkills" type="xs:string" />
 															<xs:element name="ticks" type="xs:unsignedByte" />
 															<xs:element name="percentage">
 																<xs:complexType mixed="true">
