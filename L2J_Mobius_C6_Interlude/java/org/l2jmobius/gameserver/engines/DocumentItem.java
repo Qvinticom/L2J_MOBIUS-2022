@@ -176,6 +176,7 @@ final class DocumentItem extends DocumentBase
 		
 		if (className.equals("Weapon"))
 		{
+			int bodypart = _slots.get(_currentItem.set.getString("bodypart"));
 			_currentItem.type = _weaponTypes.get(_currentItem.set.getString("weapon_type"));
 			
 			// lets see if this is a shield
@@ -218,14 +219,16 @@ final class DocumentItem extends DocumentBase
 					}
 				}
 				
-				_currentItem.set.set("bodypart", Item.SLOT_R_HAND);
+				bodypart = Item.SLOT_R_HAND;
 			}
+			
+			_currentItem.set.set("bodypart", bodypart);
 		}
 		else if (className.equals("Armor"))
 		{
 			_currentItem.type = _armorTypes.get(_currentItem.set.getString("armor_type"));
 			
-			final int bodypart = _slots.get(_currentItem.set.getString("bodypart"));
+			int bodypart = _slots.get(_currentItem.set.getString("bodypart"));
 			if ((bodypart == Item.SLOT_NECK) || (bodypart == Item.SLOT_HAIR) || (bodypart == Item.SLOT_FACE) || (bodypart == Item.SLOT_DHAIR) || ((bodypart & Item.SLOT_L_EAR) != 0) || ((bodypart & Item.SLOT_L_FINGER) != 0))
 			{
 				_currentItem.set.set("type1", Item.TYPE1_WEAPON_RING_EARRING_NECKLACE);
@@ -265,8 +268,10 @@ final class DocumentItem extends DocumentBase
 					}
 				}
 				
-				_currentItem.set.set("bodypart", Item.SLOT_CHEST);
+				bodypart = Item.SLOT_CHEST;
 			}
+			
+			_currentItem.set.set("bodypart", bodypart);
 		}
 		else
 		{

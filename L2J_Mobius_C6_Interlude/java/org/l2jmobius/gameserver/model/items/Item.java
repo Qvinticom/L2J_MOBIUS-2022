@@ -170,6 +170,7 @@ public abstract class Item
 		_weight = set.getInt("weight", 0);
 		_crystallizable = set.getBoolean("crystallizable", false);
 		_stackable = set.getBoolean("stackable", false);
+		
 		switch (set.getString("crystal_type", ""))
 		{
 			case "d":
@@ -203,133 +204,9 @@ public abstract class Item
 				break;
 			}
 		}
-		_duration = set.getInt("duration", -1);
-		switch (set.getString("bodypart", ""))
-		{
-			case "chest":
-			{
-				_bodyPart = SLOT_CHEST;
-				break;
-			}
-			case "fullarmor":
-			{
-				_bodyPart = SLOT_FULL_ARMOR;
-				break;
-			}
-			case "head":
-			{
-				_bodyPart = SLOT_HEAD;
-				break;
-			}
-			case "hair":
-			{
-				_bodyPart = SLOT_HAIR;
-				break;
-			}
-			case "face":
-			{
-				_bodyPart = SLOT_FACE;
-				break;
-			}
-			case "dhair":
-			{
-				_bodyPart = SLOT_DHAIR;
-				break;
-			}
-			case "underwear":
-			{
-				_bodyPart = SLOT_UNDERWEAR;
-				break;
-			}
-			case "back":
-			{
-				_bodyPart = SLOT_BACK;
-				break;
-			}
-			case "neck":
-			{
-				_bodyPart = SLOT_NECK;
-				break;
-			}
-			case "legs":
-			{
-				_bodyPart = SLOT_LEGS;
-				break;
-			}
-			case "feet":
-			{
-				_bodyPart = SLOT_FEET;
-				break;
-			}
-			case "gloves":
-			{
-				_bodyPart = SLOT_GLOVES;
-				break;
-			}
-			case "chest,legs":
-			{
-				_bodyPart = SLOT_CHEST | SLOT_LEGS;
-				break;
-			}
-			case "rhand":
-			{
-				_bodyPart = SLOT_R_HAND;
-				break;
-			}
-			case "lhand":
-			{
-				_bodyPart = SLOT_L_HAND;
-				break;
-			}
-			case "lrhand":
-			{
-				_bodyPart = SLOT_LR_HAND;
-				break;
-			}
-			case "rear,lear":
-			{
-				_bodyPart = SLOT_R_EAR | SLOT_L_EAR;
-				break;
-			}
-			case "rfinger,lfinger":
-			{
-				_bodyPart = SLOT_R_FINGER | SLOT_L_FINGER;
-				break;
-			}
-			case "wolf":
-			{
-				_bodyPart = SLOT_WOLF;
-				break;
-			}
-			case "hatchling":
-			{
-				_bodyPart = SLOT_HATCHLING;
-				break;
-			}
-			case "strider":
-			{
-				_bodyPart = SLOT_STRIDER;
-				break;
-			}
-			case "babypet":
-			{
-				_bodyPart = SLOT_BABYPET;
-				break;
-			}
-			default: // "none"
-			{
-				if (_name.contains(" Arrow") || _name.contains(" Lure")) // Tempfix for invisible equipped consumables.
-				{
-					_bodyPart = Item.SLOT_L_HAND; // TODO: Should be done on XML.
-				}
-				else
-				{
-					_bodyPart = SLOT_NONE;
-				}
-				break;
-			}
-		}
 		
+		_duration = set.getInt("duration", -1);
+		_bodyPart = set.getInt("bodypart", SLOT_NONE);
 		_referencePrice = set.getInt("price", 0);
 		_crystalCount = set.getInt("crystal_count", 0);
 		_sellable = set.getBoolean("sellable", true);
