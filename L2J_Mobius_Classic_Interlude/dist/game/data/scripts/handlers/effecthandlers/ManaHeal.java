@@ -73,8 +73,10 @@ public class ManaHeal extends AbstractEffect
 		amount = Math.max(Math.min(amount, effected.getMaxRecoverableMp() - effected.getCurrentMp()), 0);
 		if (amount != 0)
 		{
+			effected.setCurrentMp(effected.getCurrentMp() + amount);
 			effected.broadcastStatusUpdate(effector);
 		}
+		
 		SystemMessage sm;
 		if (effector.getObjectId() != effected.getObjectId())
 		{
