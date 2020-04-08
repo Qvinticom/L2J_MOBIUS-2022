@@ -710,6 +710,7 @@ public class SortedWareHouseWithdrawalList implements IClientOutgoingPacket
 	public boolean write(PacketWriter packet)
 	{
 		OutgoingPackets.WAREHOUSE_WITHDRAW_LIST.writeId(packet);
+		
 		/*
 		 * 0x01-Private Warehouse 0x02-Clan Warehouse 0x03-Castle Warehouse 0x04-Warehouse
 		 */
@@ -719,38 +720,41 @@ public class SortedWareHouseWithdrawalList implements IClientOutgoingPacket
 		
 		for (WarehouseItem item : _objects)
 		{
+			packet.writeH(item.getItem().getType1());
 			packet.writeD(item.getObjectId());
-			packet.writeD(item.getItem().getDisplayId());
-			packet.writeD(item.getLocationSlot());
+			packet.writeD(item.getItemId());
 			packet.writeQ(item.getCount());
 			packet.writeH(item.getItem().getType2());
 			packet.writeH(item.getCustomType1());
-			packet.writeH(0x00); // Can't be equipped in WH
 			packet.writeD(item.getItem().getBodyPart());
 			packet.writeH(item.getEnchantLevel());
+			packet.writeH(0x00);
 			packet.writeH(item.getCustomType2());
+			packet.writeD(item.getObjectId());
 			if (item.isAugmented())
 			{
-				packet.writeD(item.getAugmentationId());
+				packet.writeD(0x0000FFFF & item.getAugmentationId());
+				packet.writeD(item.getAugmentationId() >> 16);
 			}
 			else
 			{
-				packet.writeD(0x00);
+				packet.writeQ(0x00);
 			}
-			packet.writeD(item.getMana());
-			packet.writeD(item.getTime());
+			
 			packet.writeH(item.getAttackElementType());
 			packet.writeH(item.getAttackElementPower());
 			for (byte i = 0; i < 6; i++)
 			{
 				packet.writeH(item.getElementDefAttr(i));
 			}
-			// Enchant Effects
+			
+			packet.writeD(item.getMana());
+			packet.writeD(item.getTime());
+			
 			for (int op : item.getEnchantOptions())
 			{
 				packet.writeH(op);
 			}
-			packet.writeD(item.getObjectId());
 		}
 		return true;
 	}
