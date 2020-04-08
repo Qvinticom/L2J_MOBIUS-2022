@@ -131,7 +131,7 @@ public class Hardin extends AbstractNpcAI
 			// Take item
 			takeItems(player, player.isDualClassActive() ? CHAOS_ESSENCE_DUAL_CLASS : CHAOS_ESSENCE, 1);
 			// Give item
-			giveItems(player, player.isDualClassActive() ? CHAOS_POMANDER_DUAL_CLASS : CHAOS_POMANDER, 1);
+			giveItems(player, player.isDualClassActive() ? CHAOS_POMANDER_DUAL_CLASS : CHAOS_POMANDER, 2);
 			// Save original ClassId
 			if (!player.isDualClassActive() && (player.getOriginalClass() == null))
 			{
