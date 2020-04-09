@@ -49,9 +49,9 @@
 			<value level="43">72</value>
 			<value level="44">73</value>
 			<value level="45">74</value>
-			<value level="46">74</value> <!-- FIXME: AUTO GENERATED LEVEL -->
-			<value level="47">74</value> <!-- FIXME: AUTO GENERATED LEVEL -->
-			<value level="48">74</value> <!-- FIXME: AUTO GENERATED LEVEL -->
+			<value level="46">76</value>
+			<value level="47">78</value>
+			<value level="48">79</value>
 		</magicLvl>
 		<operateType>P</operateType>
 		<magicCriticalRate>5</magicCriticalRate>
@@ -124,13 +124,125 @@
 					<value level="43">122.1</value>
 					<value level="44">125.7</value>
 					<value level="45">129.3</value>
-					<value level="46">129.3</value> <!-- FIXME: AUTO GENERATED LEVEL -->
-					<value level="47">129.3</value> <!-- FIXME: AUTO GENERATED LEVEL -->
-					<value level="48">129.3</value> <!-- FIXME: AUTO GENERATED LEVEL -->
+					<value level="46">132</value>
+					<value level="47">135</value>
+					<value level="48">138</value>
 				</amount>
 				<mode>DIFF</mode>
 				<weaponType>
 					<item>SWORD</item>
+					<item>BLUNT</item>
+				</weaponType>
+			</effect>
+			<effect name="PAtk">
+				<amount>
+					<value level="1">2.7</value>
+					<value level="2">5.3</value>
+					<value level="3">8</value>
+					<value level="4">10.7</value>
+					<value level="5">13.3</value>
+					<value level="6">16</value>
+					<value level="7">18.7</value>
+					<value level="8">21.3</value>
+					<value level="9">24</value>
+					<value level="10">26.7</value>
+					<value level="11">29.3</value>
+					<value level="12">32</value>
+					<value level="13">34.7</value>
+					<value level="14">37.3</value>
+					<value level="15">40</value>
+					<value level="16">42.7</value>
+					<value level="17">45.3</value>
+					<value level="18">48</value>
+					<value level="19">50.7</value>
+					<value level="20">53.3</value>
+					<value level="21">56</value>
+					<value level="22">58.7</value>
+					<value level="23">61.3</value>
+					<value level="24">64</value>
+					<value level="25">66.7</value>
+					<value level="26">69.3</value>
+					<value level="27">72</value>
+					<value level="28">74.7</value>
+					<value level="29">77.3</value>
+					<value level="30">80</value>
+					<value level="31">82.7</value>
+					<value level="32">85.3</value>
+					<value level="33">88</value>
+					<value level="34">90.7</value>
+					<value level="35">93.3</value>
+					<value level="36">96</value>
+					<value level="37">98.7</value>
+					<value level="38">101.3</value>
+					<value level="39">104</value>
+					<value level="40">106.7</value>
+					<value level="41">109.3</value>
+					<value level="42">112</value>
+					<value level="43">114.7</value>
+					<value level="44">117.3</value>
+					<value level="45">120</value>
+					<value level="46">123</value>
+					<value level="47">126</value>
+					<value level="48">129</value>
+				</amount>
+				<mode>DIFF</mode>
+				<weaponType>
+					<item>SWORD</item>
+				</weaponType>
+			</effect>
+			<effect name="PAtk">
+				<amount>
+					<value level="1">3</value>
+					<value level="2">5.9</value>
+					<value level="3">8.9</value>
+					<value level="4">11.8</value>
+					<value level="5">14.8</value>
+					<value level="6">17.7</value>
+					<value level="7">20.7</value>
+					<value level="8">23.6</value>
+					<value level="9">26.6</value>
+					<value level="10">29.6</value>
+					<value level="11">32.5</value>
+					<value level="12">35.5</value>
+					<value level="13">38.4</value>
+					<value level="14">41.4</value>
+					<value level="15">44.3</value>
+					<value level="16">47.3</value>
+					<value level="17">50.2</value>
+					<value level="18">53.2</value>
+					<value level="19">56.2</value>
+					<value level="20">59.1</value>
+					<value level="21">62.1</value>
+					<value level="22">65</value>
+					<value level="23">68</value>
+					<value level="24">70.9</value>
+					<value level="25">73.9</value>
+					<value level="26">76.8</value>
+					<value level="27">79.8</value>
+					<value level="28">82.8</value>
+					<value level="29">85.7</value>
+					<value level="30">88.7</value>
+					<value level="31">91.6</value>
+					<value level="32">94.6</value>
+					<value level="33">97.5</value>
+					<value level="34">100.5</value>
+					<value level="35">103.4</value>
+					<value level="36">106.4</value>
+					<value level="37">109.4</value>
+					<value level="38">112.3</value>
+					<value level="39">115.3</value>
+					<value level="40">118.2</value>
+					<value level="41">121.2</value>
+					<value level="42">124.1</value>
+					<value level="43">127.1</value>
+					<value level="44">130</value>
+					<value level="45">133</value>
+					<value level="46">136</value>
+					<value level="47">139</value>
+					<value level="48">141</value>
+				</amount>
+				<mode>DIFF</mode>
+				<weaponType>
 					<item>BLUNT</item>
 				</weaponType>
 			</effect>
@@ -320,19 +432,6 @@
 		<operateType>P</operateType>
 		<magicCriticalRate>5</magicCriticalRate>
 		<effects>
-			<effect name="TriggerSkillByAttack" fromLevel="9" toLevel="48">
-				<!-- Dagger Mastery -->
-				<attackerType>Creature</attackerType>
-				<minAttackerLevel>1</minAttackerLevel>
-				<maxAttackerLevel>100</maxAttackerLevel>
-				<minDamage>1</minDamage>
-				<chance>33</chance>
-				<targetType>SELF</targetType>
-				<isCritical>true</isCritical>
-				<allowWeapons>DAGGER,DUALDAGGER</allowWeapons>
-				<skillId>5603</skillId> <!-- Dagger Mastery -->
-				<skillLevel>1</skillLevel>
-			</effect>
 			<effect name="PAtk">
 				<amount>
 					<value level="1">3.6</value>
@@ -503,6 +602,32 @@
 				<weaponType>
 					<item>DUALFIST</item>
 				</weaponType>
+			</effect>
+			<effect name="TriggerSkillByAttack" fromLevel="11" toLevel="48">
+				<!-- Slow -->
+				<attackerType>Creature</attackerType>
+				<minAttackerLevel>1</minAttackerLevel>
+				<maxAttackerLevel>100</maxAttackerLevel>
+				<minDamage>1</minDamage>
+				<chance>10</chance>
+				<targetType>TARGET</targetType>
+				<isCritical>false</isCritical>
+				<allowWeapons>DUALFIST</allowWeapons>
+				<skillId>1612</skillId>
+				<skillLevel>1</skillLevel>
+			</effect>
+			<effect name="TriggerSkillByAttack" fromLevel="11" toLevel="48">
+				<!-- Slow -->
+				<attackerType>Creature</attackerType>
+				<minAttackerLevel>1</minAttackerLevel>
+				<maxAttackerLevel>100</maxAttackerLevel>
+				<minDamage>1</minDamage>
+				<chance>20</chance>
+				<targetType>TARGET</targetType>
+				<isCritical>true</isCritical>
+				<allowWeapons>DUALFIST</allowWeapons>
+				<skillId>1612</skillId>
+				<skillLevel>1</skillLevel>
 			</effect>
 		</effects>
 	</skill>
@@ -900,9 +1025,9 @@
 					<value level="43">72</value>
 					<value level="44">74.2</value>
 					<value level="45">76.4</value>
-					<value level="46">132</value>
-					<value level="47">135</value>
-					<value level="48">138</value>
+					<value level="46">81</value>
+					<value level="47">82</value>
+					<value level="48">83</value>
 				</amount>
 				<mode>DIFF</mode>
 				<weaponType>
@@ -930,7 +1055,7 @@
 				<chance>100</chance>
 			</effect>
 			<effect name="Speed">
-				<amount>-40</amount>
+				<amount>-20</amount>
 				<mode>PER</mode>
 			</effect>
 		</effects>
@@ -949,7 +1074,7 @@
 				<ticks>2</ticks>
 			</effect>
 			<effect name="PhysicalAttackSpeed">
-				<amount>25</amount>
+				<amount>15</amount>
 				<mode>PER</mode>
 			</effect>
 		</effects>
@@ -1477,13 +1602,9 @@
 					<value level="48">77.4</value>
 					<value level="49">79.4</value>
 					<value level="50">81.3</value>
-					<value level="51">81.3</value> <!-- FIXME: AUTO GENERATED LEVEL -->
-					<value level="52">81.3</value> <!-- FIXME: AUTO GENERATED LEVEL -->
-					<value level="53">81.3</value> <!-- FIXME: AUTO GENERATED LEVEL -->
-					<!-- Classic 2.0 confirmed -->
-					<value level="51">69</value>
-					<value level="52">72</value>
-					<value level="53">75</value>
+					<value level="51">85</value>
+					<value level="52">87</value>
+					<value level="53">89</value>
 				</amount>
 				<mode>DIFF</mode>
 				<armorType>
@@ -1542,9 +1663,9 @@
 					<value level="48">6</value>
 					<value level="49">6</value>
 					<value level="50">6</value>
-					<value level="51">7</value>
-					<value level="52">7</value>
-					<value level="53">7</value>
+					<value level="51">6</value>
+					<value level="52">6</value>
+					<value level="53">6</value>
 				</amount>
 				<mode>DIFF</mode>
 				<armorType>
@@ -1709,122 +1830,61 @@
 		<effects>
 			<effect name="PhysicalDefence">
 				<amount>
-					<value level="1">17.7</value>
-					<value level="2">19.1</value>
-					<value level="3">20.5</value>
-					<value level="4">23.5</value>
-					<value level="5">25</value>
-					<value level="6">26.7</value>
-					<value level="7">30</value>
-					<value level="8">31.8</value>
-					<value level="9">33.6</value>
-					<value level="10">37.4</value>
-					<value level="11">39.3</value>
-					<value level="12">41.3</value>
-					<value level="13">45.6</value>
-					<value level="14">47.7</value>
-					<value level="15">50</value>
-					<value level="16">54.6</value>
-					<value level="17">57.1</value>
-					<value level="18">59.5</value>
-					<value level="19">62.1</value>
-					<value level="20">64.6</value>
-					<value level="21">67.3</value>
-					<value level="22">70</value>
-					<value level="23">72.7</value>
-					<value level="24">75.5</value>
-					<value level="25">78.4</value>
-					<value level="26">81.3</value>
-					<value level="27">84.3</value>
-					<value level="28">87.3</value>
-					<value level="29">90.4</value>
-					<value level="30">93.5</value>
-					<value level="31">96.7</value>
-					<value level="32">99.9</value>
-					<value level="33">103.2</value>
-					<value level="34">106.5</value>
-					<value level="35">109.9</value>
-					<value level="36">113.3</value>
-					<value level="37">116.8</value>
-					<value level="38">120.3</value>
-					<value level="39">123.8</value>
-					<value level="40">127.4</value>
-					<value level="41">131</value>
-					<value level="42">134.7</value>
-					<value level="43">138.4</value>
-					<value level="44">142.1</value>
-					<value level="45">145.8</value>
-					<value level="46">149.6</value>
-					<value level="47">153.4</value>
-					<value level="48">157.2</value>
-					<value level="49">161</value>
-					<value level="50">164.9</value>
-					<value level="51">168.7</value>
-					<value level="52">172.6</value>
-					<value level="53">83</value>
+					<value level="1">1.9</value>
+					<value level="2">3.3</value>
+					<value level="3">4.8</value>
+					<value level="4">6.4</value>
+					<value level="5">8.1</value>
+					<value level="6">8.9</value>
+					<value level="7">9.8</value>
+					<value level="8">11.7</value>
+					<value level="9">12.7</value>
+					<value level="10">13.7</value>
+					<value level="11">15.8</value>
+					<value level="12">16.9</value>
+					<value level="13">18</value>
+					<value level="14">20.4</value>
+					<value level="15">21.6</value>
+					<value level="16">22.8</value>
+					<value level="17">24.1</value>
+					<value level="18">25.4</value>
+					<value level="19">26.7</value>
+					<value level="20">28</value>
+					<value level="21">29.4</value>
+					<value level="22">30.8</value>
+					<value level="23">32.2</value>
+					<value level="24">33.7</value>
+					<value level="25">35.2</value>
+					<value level="26">36.7</value>
+					<value level="27">38.2</value>
+					<value level="28">39.8</value>
+					<value level="29">41.4</value>
+					<value level="30">43</value>
+					<value level="31">44.6</value>
+					<value level="32">46.3</value>
+					<value level="33">48</value>
+					<value level="34">49.7</value>
+					<value level="35">51.4</value>
+					<value level="36">53.2</value>
+					<value level="37">55</value>
+					<value level="38">56.7</value>
+					<value level="39">58.6</value>
+					<value level="40">60.4</value>
+					<value level="41">62.2</value>
+					<value level="42">64.1</value>
+					<value level="43">66</value>
+					<value level="44">67.8</value>
+					<value level="45">69.7</value>
+					<value level="46">71.6</value>
+					<value level="47">73.6</value>
+					<value level="48">75.5</value>
+					<value level="49">77.4</value>
+					<value level="50">79.3</value>
+					<value level="51">83</value>
+					<value level="52">85</value>
+					<value level="53">87</value>
 				</amount>
 				<mode>DIFF</mode>
-				<armorType>
-					<item>HEAVY</item>
-				</armorType>
-			</effect>
-			<effect name="DefenceCriticalDamage">
-				<amount>
-					<value level="1">-15</value>
-					<value level="2">-15</value>
-					<value level="3">-15</value>
-					<value level="4">-15</value>
-					<value level="5">-15</value>
-					<value level="6">-15</value>
-					<value level="7">-15</value>
-					<value level="8">-15</value>
-					<value level="9">-15</value>
-					<value level="10">-15</value>
-					<value level="11">-15</value>
-					<value level="12">-15</value>
-					<value level="13">-15</value>
-					<value level="14">-15</value>
-					<value level="15">-15</value>
-					<value level="16">-25</value>
-					<value level="17">-25</value>
-					<value level="18">-25</value>
-					<value level="19">-25</value>
-					<value level="20">-25</value>
-					<value level="21">-25</value>
-					<value level="22">-25</value>
-					<value level="23">-25</value>
-					<value level="24">-25</value>
-					<value level="25">-25</value>
-					<value level="26">-25</value>
-					<value level="27">-25</value>
-					<value level="28">-25</value>
-					<value level="29">-25</value>
-					<value level="30">-25</value>
-					<value level="31">-25</value>
-					<value level="32">-25</value>
-					<value level="33">-25</value>
-					<value level="34">-25</value>
-					<value level="35">-25</value>
-					<value level="36">-25</value>
-					<value level="37">-35</value>
-					<value level="38">-35</value>
-					<value level="39">-35</value>
-					<value level="40">-35</value>
-					<value level="41">-35</value>
-					<value level="42">-35</value>
-					<value level="43">-35</value>
-					<value level="44">-35</value>
-					<value level="45">-35</value>
-					<value level="46">-35</value>
-					<value level="47">-35</value>
-					<value level="48">-35</value>
-					<value level="49">-35</value>
-					<value level="50">-35</value>
-					<value level="51">-35</value>
-					<value level="52">-35</value>
-					<value level="53">-35</value>
-				</amount>
-				<mode>PER</mode>
 				<armorType>
 					<item>HEAVY</item>
 				</armorType>
@@ -1948,13 +2008,9 @@
 					<value level="50">164.9</value>
 					<value level="51">168.7</value>
 					<value level="52">172.6</value>
-					<value level="53">172.6</value> <!-- FIXME: AUTO GENERATED LEVEL -->
-					<value level="54">172.6</value> <!-- FIXME: AUTO GENERATED LEVEL -->
-					<value level="55">172.6</value> <!-- FIXME: AUTO GENERATED LEVEL -->
-					<!-- Confirmed Saviors -->
-					<value level="53">83</value>
-					<value level="54">85</value>
-					<value level="55">87</value>
+					<value level="53">181</value>
+					<value level="54">184</value>
+					<value level="55">187</value>
 				</amount>
 				<mode>DIFF</mode>
 				<armorType>
@@ -2082,9 +2138,9 @@
 					<value level="45">62.3</value>
 					<value level="46">63.9</value>
 					<value level="47">65.6</value>
-					<value level="48">85</value>
-					<value level="49">87</value>
-					<value level="50">89</value>
+					<value level="48">69</value>
+					<value level="49">72</value>
+					<value level="50">75</value>
 				</amount>
 				<mode>DIFF</mode>
 				<armorType>
@@ -2140,10 +2196,6 @@
 					<value level="45">7</value>
 					<value level="46">7</value>
 					<value level="47">7</value>
-					<value level="48">7</value> <!-- FIXME: AUTO GENERATED LEVEL -->
-					<value level="49">7</value> <!-- FIXME: AUTO GENERATED LEVEL -->
-					<value level="50">7</value> <!-- FIXME: AUTO GENERATED LEVEL -->
-					<!-- Confirmed Saviors -->
 					<value level="48">7</value>
 					<value level="49">7</value>
 					<value level="50">7</value>
@@ -2222,50 +2274,50 @@
 		<effects>
 			<effect name="PhysicalDefence">
 				<amount>
-					<value level="1">7.2</value>
-					<value level="2">8.6</value>
-					<value level="3">11</value>
-					<value level="4">12.7</value>
-					<value level="5">15.4</value>
-					<value level="6">17.4</value>
-					<value level="7">20.5</value>
-					<value level="8">22.7</value>
-					<value level="9">24.9</value>
-					<value level="10">27.5</value>
-					<value level="11">30</value>
-					<value level="12">35.8</value>
-					<value level="13">47.3</value>
-					<value level="14">49</value>
-					<value level="15">50.7</value>
-					<value level="16">54.2</value>
-					<value level="17">56.1</value>
-					<value level="18">57.9</value>
-					<value level="19">61.8</value>
-					<value level="20">63.7</value>
-					<value level="21">65.7</value>
-					<value level="22">69.9</value>
-					<value level="23">72</value>
-					<value level="24">74.2</value>
-					<value level="25">78.6</value>
-					<value level="26">80.9</value>
-					<value level="27">83.2</value>
-					<value level="28">85.5</value>
-					<value level="29">87.8</value>
-					<value level="30">90.2</value>
-					<value level="31">92.6</value>
-					<value level="32">95.1</value>
-					<value level="33">97.6</value>
-					<value level="34">100.1</value>
-					<value level="35">102.6</value>
-					<value level="36">105.1</value>
-					<value level="37">107.7</value>
-					<value level="38">110.3</value>
-					<value level="39">112.9</value>
-					<value level="40">115.5</value>
-					<value level="41">118.1</value>
-					<value level="42">120.8</value>
-					<value level="43">123.4</value>
-					<value level="44">126.1</value>
+					<value level="1">1.7</value>
+					<value level="2">2.7</value>
+					<value level="3">4.3</value>
+					<value level="4">5.4</value>
+					<value level="5">7.2</value>
+					<value level="6">8.5</value>
+					<value level="7">10.6</value>
+					<value level="8">12.1</value>
+					<value level="9">14.5</value>
+					<value level="10">15.3</value>
+					<value level="11">16.2</value>
+					<value level="12">17.9</value>
+					<value level="13">18.8</value>
+					<value level="14">19.8</value>
+					<value level="15">21.7</value>
+					<value level="16">22.7</value>
+					<value level="17">23.7</value>
+					<value level="18">25.8</value>
+					<value level="19">26.8</value>
+					<value level="20">27.9</value>
+					<value level="21">30.1</value>
+					<value level="22">31.2</value>
+					<value level="23">32.4</value>
+					<value level="24">33.5</value>
+					<value level="25">34.7</value>
+					<value level="26">35.9</value>
+					<value level="27">37.1</value>
+					<value level="28">38.4</value>
+					<value level="29">39.6</value>
+					<value level="30">40.8</value>
+					<value level="31">42.1</value>
+					<value level="32">43.4</value>
+					<value level="33">44.7</value>
+					<value level="34">45.9</value>
+					<value level="35">47.3</value>
+					<value level="36">48.6</value>
+					<value level="37">49.9</value>
+					<value level="38">51.2</value>
+					<value level="39">52.5</value>
+					<value level="40">53.9</value>
+					<value level="41">55.2</value>
+					<value level="42">58</value>
+					<value level="43">61</value>
+					<value level="44">64</value>
 				</amount>
 				<mode>DIFF</mode>
 				<armorType>
@@ -2319,9 +2371,9 @@
 			<value level="39">72</value>
 			<value level="40">73</value>
 			<value level="41">74</value>
-			<value level="42">74</value> <!-- FIXME: AUTO GENERATED LEVEL -->
-			<value level="43">74</value> <!-- FIXME: AUTO GENERATED LEVEL -->
-			<value level="44">74</value> <!-- FIXME: AUTO GENERATED LEVEL -->
+			<value level="42">75</value>
+			<value level="43">76</value>
+			<value level="44">78</value>
 		</magicLvl>
 		<operateType>P</operateType>
 		<magicCriticalRate>5</magicCriticalRate>
@@ -2369,9 +2421,9 @@
 					<value level="39">83.4</value>
 					<value level="40">85.4</value>
 					<value level="41">87.4</value>
-					<value level="42">87.4</value> <!-- FIXME: AUTO GENERATED LEVEL -->
-					<value level="43">87.4</value> <!-- FIXME: AUTO GENERATED LEVEL -->
-					<value level="44">87.4</value> <!-- FIXME: AUTO GENERATED LEVEL -->
+					<value level="42">90</value>
+					<value level="43">93</value>
+					<value level="44">96</value>
 				</amount>
 				<mode>DIFF</mode>
 				<armorType>
@@ -2425,9 +2477,9 @@
 			<value level="39">72</value>
 			<value level="40">73</value>
 			<value level="41">74</value>
-			<value level="42">74</value> <!-- FIXME: AUTO GENERATED LEVEL -->
-			<value level="43">74</value> <!-- FIXME: AUTO GENERATED LEVEL -->
-			<value level="44">74</value> <!-- FIXME: AUTO GENERATED LEVEL -->
+			<value level="42">76</value>
+			<value level="43">77</value>
+			<value level="44">78</value>
 		</magicLvl>
 		<operateType>P</operateType>
 		<magicCriticalRate>5</magicCriticalRate>
@@ -2475,9 +2527,9 @@
 					<value level="39">66.4</value>
 					<value level="40">68</value>
 					<value level="41">69.6</value>
-					<value level="42">69.6</value> <!-- FIXME: AUTO GENERATED LEVEL -->
-					<value level="43">69.6</value> <!-- FIXME: AUTO GENERATED LEVEL -->
-					<value level="44">69.6</value> <!-- FIXME: AUTO GENERATED LEVEL -->
+					<value level="42">73</value>
+					<value level="43">76</value>
+					<value level="44">79</value>
 				</amount>
 				<mode>DIFF</mode>
 				<armorType>
@@ -2527,8 +2579,8 @@
 			<value level="4">61</value>
 			<value level="5">76</value>
 			<value level="6">80</value>
-			<value level="7">84</value>
-			<value level="8">85</value>
+			<value level="7">85</value>
+			<value level="8">90</value>
 			<value level="9">95</value>
 			<value level="10">99</value>
 		</magicLvl>
@@ -2771,10 +2823,6 @@
 				<amount>45</amount>
 				<mode>PER</mode>
 			</effect>
-			<effect name="MAtk">
-				<amount>17</amount>
-				<mode>PER</mode>
-			</effect>
 			<effect name="PAtk">
 				<amount>
 					<value level="1">1.5</value>
@@ -2939,23 +2987,16 @@
 			<value level="40">72</value>
 			<value level="41">73</value>
 			<value level="42">74</value>
-			<value level="43">74</value> <!-- FIXME: AUTO GENERATED LEVEL -->
-			<value level="44">74</value> <!-- FIXME: AUTO GENERATED LEVEL -->
-			<value level="45">74</value> <!-- FIXME: AUTO GENERATED LEVEL -->
+			<value level="43">75</value>
+			<value level="44">76</value>
+			<value level="45">77</value>
 		</magicLvl>
 		<operateType>P</operateType>
 		<magicCriticalRate>5</magicCriticalRate>
 		<effects>
-			<effect name="MpVampiricAttack">
-				<amount>10</amount>
-			</effect>
-			<effect name="PAtk">
-				<amount>45</amount>
-				<mode>PER</mode>
-			</effect>
-			<effect name="MAtk">
-				<amount>17</amount>
-				<mode>PER</mode>
+			<effect name="MpVampiricAttack" fromLevel="43" toLevel="45"> <!-- This is the retail chance and amount. -->
+				<amount>5</amount>
+				<chance>50</chance>
 			</effect>
 			<effect name="PAtk">
 				<amount>
@@ -3001,9 +3042,9 @@
 					<value level="40">75.1</value>
 					<value level="41">77.2</value>
 					<value level="42">79.4</value>
-					<value level="43">79.4</value> <!-- FIXME: AUTO GENERATED LEVEL -->
-					<value level="44">79.4</value> <!-- FIXME: AUTO GENERATED LEVEL -->
-					<value level="45">79.4</value> <!-- FIXME: AUTO GENERATED LEVEL -->
+					<value level="43">83</value>
+					<value level="44">86</value>
+					<value level="45">89</value>
 				</amount>
 				<mode>DIFF</mode>
 			</effect>
@@ -3051,9 +3092,9 @@
 					<value level="40">93.8</value>
 					<value level="41">96.5</value>
 					<value level="42">99.3</value>
-					<value level="43">99.3</value> <!-- FIXME: AUTO GENERATED LEVEL -->
-					<value level="44">99.3</value> <!-- FIXME: AUTO GENERATED LEVEL -->
-					<value level="45">99.3</value> <!-- FIXME: AUTO GENERATED LEVEL -->
+					<value level="43">105</value>
+					<value level="44">108</value>
+					<value level="45">111</value>
 				</amount>
 				<mode>DIFF</mode>
 			</effect>
@@ -3072,6 +3113,10 @@
 					<item>BOW</item>
 					<item>POLE</item>
 				</weaponType>
+			</effect>
+			<effect name="PAtk">
+				<amount>45</amount>
+				<mode>PER</mode>
 			</effect>
 		</effects>
 	</skill>
@@ -3124,9 +3169,9 @@
 			<value level="43">72</value>
 			<value level="44">73</value>
 			<value level="45">74</value>
-			<value level="46">74</value> <!-- FIXME: AUTO GENERATED LEVEL -->
-			<value level="47">74</value> <!-- FIXME: AUTO GENERATED LEVEL -->
-			<value level="48">74</value> <!-- FIXME: AUTO GENERATED LEVEL -->
+			<value level="46">76</value>
+			<value level="47">77</value>
+			<value level="48">78</value>
 		</magicLvl>
 		<operateType>P</operateType>
 		<magicCriticalRate>5</magicCriticalRate>
@@ -3178,9 +3223,9 @@
 					<value level="43">123.4</value>
 					<value level="44">126.1</value>
 					<value level="45">128.8</value>
-					<value level="46">128.8</value> <!-- FIXME: AUTO GENERATED LEVEL -->
-					<value level="47">128.8</value> <!-- FIXME: AUTO GENERATED LEVEL -->
-					<value level="48">128.8</value> <!-- FIXME: AUTO GENERATED LEVEL -->
+					<value level="46">134</value>
+					<value level="47">137</value>
+					<value level="48">140</value>
 				</amount>
 				<mode>DIFF</mode>
 				<armorType>
@@ -3238,9 +3283,9 @@
 			<value level="43">72</value>
 			<value level="44">73</value>
 			<value level="45">74</value>
-			<value level="46">74</value> <!-- FIXME: AUTO GENERATED LEVEL -->
-			<value level="47">74</value> <!-- FIXME: AUTO GENERATED LEVEL -->
-			<value level="48">74</value> <!-- FIXME: AUTO GENERATED LEVEL -->
+			<value level="46">76</value>
+			<value level="47">77</value>
+			<value level="48">78</value>
 		</magicLvl>
 		<operateType>P</operateType>
 		<magicCriticalRate>5</magicCriticalRate>
@@ -3292,9 +3337,9 @@
 					<value level="43">113.3</value>
 					<value level="44">115.8</value>
 					<value level="45">118.2</value>
-					<value level="46">118.2</value> <!-- FIXME: AUTO GENERATED LEVEL -->
-					<value level="47">118.2</value> <!-- FIXME: AUTO GENERATED LEVEL -->
-					<value level="48">118.2</value> <!-- FIXME: AUTO GENERATED LEVEL -->
+					<value level="46">123</value>
+					<value level="47">126</value>
+					<value level="48">129</value>
 				</amount>
 				<mode>DIFF</mode>
 				<armorType>
@@ -3371,9 +3416,9 @@
 			<value level="41">72</value>
 			<value level="42">73</value>
 			<value level="43">74</value>
-			<value level="44">74</value> <!-- FIXME: AUTO GENERATED LEVEL -->
-			<value level="45">74</value> <!-- FIXME: AUTO GENERATED LEVEL -->
-			<value level="46">74</value> <!-- FIXME: AUTO GENERATED LEVEL -->
+			<value level="44">76</value>
+			<value level="45">77</value>
+			<value level="46">78</value>
 		</magicLvl>
 		<operateType>P</operateType>
 		<magicCriticalRate>5</magicCriticalRate>
@@ -3423,9 +3468,9 @@
 					<value level="41">89.4</value>
 					<value level="42">91.3</value>
 					<value level="43">93.3</value>
-					<value level="44">93.3</value> <!-- FIXME: AUTO GENERATED LEVEL -->
-					<value level="45">93.3</value> <!-- FIXME: AUTO GENERATED LEVEL -->
-					<value level="46">93.3</value> <!-- FIXME: AUTO GENERATED LEVEL -->
+					<value level="44">97.68</value>
+					<value level="45">99.42</value>
+					<value level="46">101.16</value>
 				</amount>
 				<mode>DIFF</mode>
 				<armorType>
@@ -3730,9 +3775,9 @@
 					<value level="43">122.1</value>
 					<value level="44">125.7</value>
 					<value level="45">129.3</value>
-					<value level="46">132</value>
-					<value level="47">135</value>
-					<value level="48">138</value>
+					<value level="46">132.9</value>
+					<value level="47">136.5</value>
+					<value level="48">140.1</value>
 				</amount>
 				<mode>DIFF</mode>
 				<weaponType>
@@ -3779,9 +3824,9 @@
 			<value level="31">72</value>
 			<value level="32">73</value>
 			<value level="33">74</value>
-			<value level="34">74</value> <!-- FIXME: AUTO GENERATED LEVEL -->
-			<value level="35">74</value> <!-- FIXME: AUTO GENERATED LEVEL -->
-			<value level="36">74</value> <!-- FIXME: AUTO GENERATED LEVEL -->
+			<value level="34">76</value>
+			<value level="35">77</value>
+			<value level="36">78</value>
 		</magicLvl>
 		<operateType>P</operateType>
 		<magicCriticalRate>5</magicCriticalRate>
@@ -3821,9 +3866,9 @@
 					<value level="31">43.7</value>
 					<value level="32">44.8</value>
 					<value level="33">46</value>
-					<value level="34">46</value> <!-- FIXME: AUTO GENERATED LEVEL -->
-					<value level="35">46</value> <!-- FIXME: AUTO GENERATED LEVEL -->
-					<value level="36">46</value> <!-- FIXME: AUTO GENERATED LEVEL -->
+					<value level="34">47</value>
+					<value level="35">49</value>
+					<value level="36">51</value>
 				</amount>
 				<mode>DIFF</mode>
 				<armorType>
@@ -4157,10 +4202,11 @@
 					<value level="40">2609</value>
 				</power>
 				<ignoreShieldDefence>true</ignoreShieldDefence>
-				<criticalChance>15</criticalChance>
 				<overHit>true</overHit>
 			</effect>
-			<effect name="BlockActions" />
+			<effect name="BlockActions">
+				<allowedSkills>35016;35045;18103</allowedSkills>
+			</effect>
 		</effects>
 	</skill>
 	<skill id="261" toLevel="25" name="Triple Sonic Slash">
@@ -4260,21 +4306,18 @@
 		<conditions>
 			<condition name="EquipWeapon">
 				<weaponType>
-					<item>DUAL</item>
+					<item>SWORD</item>
+					<item>BLUNT</item>
+					<item>POLE</item>
+					<item>DUALFIST</item>
 					<item>DUALBLUNT</item>
+					<item>DUAL</item>
 				</weaponType>
 			</condition>
 		</conditions>
 		<effects>
 			<effect name="EnergyAttack">
-				<chargeConsume>4</chargeConsume>
-				<criticalChance>
-					<value fromLevel="1" toLevel="25">15</value>
-				</criticalChance>
-				<pDefMod>
-					<value fromLevel="1" toLevel="25">1</value>
-				</pDefMod>
-				<overHit>true</overHit>
+				<chargeConsume>3</chargeConsume>
 				<power>
 					<value level="1">1948</value>
 					<value level="2">2042</value>
@@ -4298,11 +4341,10 @@
 					<value level="20">4029</value>
 					<value level="21">4146</value>
 					<value level="22">4262</value>
-					<value level="23">4299</value>
-					<value level="24">4415</value>
-					<value level="25">4645</value>
+					<value level="23">4377</value>
+					<value level="24">4491</value>
+					<value level="25">4604</value>
 				</power>
-				<ignoreShieldDefence>true</ignoreShieldDefence>
 			</effect>
 		</effects>
 	</skill>
@@ -4629,49 +4671,49 @@
 		<effects>
 			<effect name="FatalBlow">
 				<power>
-					<value level="1">1107</value>
-					<value level="2">1176</value>
-					<value level="3">1249</value>
-					<value level="4">1325</value>
-					<value level="5">1405</value>
-					<value level="6">1488</value>
-					<value level="7">1574</value>
-					<value level="8">1664</value>
-					<value level="9">1757</value>
-					<value level="10">1853</value>
-					<value level="11">1953</value>
-					<value level="12">2057</value>
-					<value level="13">2164</value>
-					<value level="14">2274</value>
-					<value level="15">2388</value>
-					<value level="16">2505</value>
-					<value level="17">2625</value>
-					<value level="18">2748</value>
-					<value level="19">2875</value>
-					<value level="20">3004</value>
-					<value level="21">3136</value>
-					<value level="22">3271</value>
-					<value level="23">3408</value>
-					<value level="24">3548</value>
-					<value level="25">3690</value>
-					<value level="26">3834</value>
-					<value level="27">3980</value>
-					<value level="28">4127</value>
-					<value level="29">4275</value>
-					<value level="30">4425</value>
-					<value level="31">4575</value>
-					<value level="32">4726</value>
-					<value level="33">4878</value>
-					<value level="34">5029</value>
-					<value level="35">5180</value>
-					<value level="36">5330</value>
-					<value level="37">5479</value>
+					<value level="1">1218</value>
+					<value level="2">1294</value>
+					<value level="3">1374</value>
+					<value level="4">1458</value>
+					<value level="5">1546</value>
+					<value level="6">1637</value>
+					<value level="7">1731</value>
+					<value level="8">1830</value>
+					<value level="9">1933</value>
+					<value level="10">2038</value>
+					<value level="11">2148</value>
+					<value level="12">2263</value>
+					<value level="13">2380</value>
+					<value level="14">2501</value>
+					<value level="15">2627</value>
+					<value level="16">2756</value>
+					<value level="17">2888</value>
+					<value level="18">3023</value>
+					<value level="19">3163</value>
+					<value level="20">3304</value>
+					<value level="21">3450</value>
+					<value level="22">3598</value>
+					<value level="23">3749</value>
+					<value level="24">3903</value>
+					<value level="25">4059</value>
+					<value level="26">4217</value>
+					<value level="27">4378</value>
+					<value level="28">4540</value>
+					<value level="29">4703</value>
+					<value level="30">4868</value>
+					<value level="31">5033</value>
+					<value level="32">5199</value>
+					<value level="33">5366</value>
+					<value level="34">5532</value>
+					<value level="35">5698</value>
+					<value level="36">5863</value>
+					<value level="37">6027</value>
 					<value level="38">6090</value>
 					<value level="39">6152</value>
 					<value level="40">6215</value>
 				</power>
-				<overHit>true</overHit>
 				<chanceBoost>300</chanceBoost>
+				<overHit>true</overHit>
 			</effect>
 		</effects>
 	</skill>
@@ -4722,7 +4764,7 @@
 		<affectObject>FRIEND</affectObject>
 		<effects>
 			<effect name="HpRegen">
-				<amount>20</amount>
+				<amount>25</amount>
 				<mode>PER</mode>
 			</effect>
 		</effects>
@@ -4880,7 +4922,6 @@
 			<condition name="EquipWeapon">
 				<weaponType>
 					<item>DUAL</item>
-					<item>DUALBLUNT</item>
 				</weaponType>
 			</condition>
 		</conditions>
@@ -4914,7 +4955,6 @@
 			<condition name="EquipWeapon">
 				<weaponType>
 					<item>DUAL</item>
-					<item>DUALBLUNT</item>
 				</weaponType>
 			</condition>
 		</conditions>
@@ -4948,7 +4988,6 @@
 			<condition name="EquipWeapon">
 				<weaponType>
 					<item>DUAL</item>
-					<item>DUALBLUNT</item>
 				</weaponType>
 			</condition>
 		</conditions>
@@ -4982,7 +5021,6 @@
 			<condition name="EquipWeapon">
 				<weaponType>
 					<item>DUAL</item>
-					<item>DUALBLUNT</item>
 				</weaponType>
 			</condition>
 		</conditions>
@@ -5016,7 +5054,6 @@
 			<condition name="EquipWeapon">
 				<weaponType>
 					<item>DUAL</item>
-					<item>DUALBLUNT</item>
 				</weaponType>
 			</condition>
 		</conditions>
@@ -5050,7 +5087,6 @@
 			<condition name="EquipWeapon">
 				<weaponType>
 					<item>DUAL</item>
-					<item>DUALBLUNT</item>
 				</weaponType>
 			</condition>
 		</conditions>
@@ -5089,7 +5125,6 @@
 			<condition name="EquipWeapon">
 				<weaponType>
 					<item>DUAL</item>
-					<item>DUALBLUNT</item>
 				</weaponType>
 			</condition>
 		</conditions>
@@ -5167,10 +5202,8 @@
 		<abnormalTime>5</abnormalTime>
 		<abnormalType>PARALYZE</abnormalType>
 		<abnormalVisualEffect>PARALYZE</abnormalVisualEffect>
-		<activateRate>
-			<value fromLevel="1" toLevel="6">40</value>
-		</activateRate>
-		<basicProperty>MAGIC</basicProperty>
+		<activateRate>40</activateRate>
+		<basicProperty>PHYSICAL</basicProperty>
 		<castRange>400</castRange>
 		<coolTime>500</coolTime>
 		<effectPoint>
@@ -5184,7 +5217,7 @@
 		<effectRange>900</effectRange>
 		<hitTime>1500</hitTime>
 		<isDebuff>true</isDebuff>
-		<isMagic>1</isMagic> <!-- Magic Skill -->
+		<isMagic>0</isMagic>
 		<lvlBonusRate>20</lvlBonusRate>
 		<magicLvl>
 			<value level="1">58</value>
@@ -5217,14 +5250,11 @@
 					<value level="3">3990</value>
 					<value level="4">4553</value>
 					<value level="5">5114</value>
-					<value level="6">5131</value>
+					<value level="6">5334</value>
 				</power>
 			</effect>
 			<effect name="BlockActions">
-				<allowedSkills>35016</allowedSkills>
-			</effect>
-			<effect name="DefenceTrait">
-				<PARALYZE>100</PARALYZE>
+				<allowedSkills>35016;35045;18103</allowedSkills>
 			</effect>
 		</effects>
 	</skill>
@@ -5421,7 +5451,6 @@
 					<value level="40">2627</value>
 				</power>
 				<ignoreShieldDefence>true</ignoreShieldDefence>
-				<criticalChance>15</criticalChance>
 				<overHit>true</overHit>
 			</effect>
 		</effects>
@@ -5708,10 +5737,11 @@
 					<value level="40">2609</value>
 				</power>
 				<ignoreShieldDefence>true</ignoreShieldDefence>
-				<criticalChance>15</criticalChance>
 				<overHit>true</overHit>
 			</effect>
-			<effect name="BlockActions" />
+			<effect name="BlockActions">
+				<allowedSkills>35016;35045;18103</allowedSkills>
+			</effect>
 		</effects>
 	</skill>
 	<skill id="282" toLevel="1" name="Puma Spirit Totem">
@@ -5765,10 +5795,10 @@
 		<isMagic>1</isMagic> <!-- Magic Skill -->
 		<itemConsumeCount>
 			<value level="1">1</value>
-			<value level="2">3</value>
-			<value level="3">3</value>
-			<value level="4">2</value>
-			<value level="5">4</value>
+			<value level="2">2</value>
+			<value level="3">2</value>
+			<value level="4">3</value>
+			<value level="5">3</value>
 			<value level="6">4</value>
 			<value level="7">4</value>
 			<value level="8">7</value>
@@ -5824,18 +5854,6 @@
 					<value level="7">14805</value>
 					<value level="8">14806</value>
 				</npcId>
-				<consumeItemId>1459</consumeItemId> <!-- Crystal (C-grade) -->
-				<consumeItemCount>
-					<value level="1">1</value>
-					<value level="2">1</value>
-					<value level="3">2</value>
-					<value level="4">3</value>
-					<value level="5">4</value>
-					<value level="6">4</value>
-					<value level="7">4</value>
-					<value level="8">7</value>
-				</consumeItemCount>
-				<expMultiplier>0.85</expMultiplier>
 			</effect>
 		</effects>
 	</skill>
@@ -5997,8 +6015,6 @@
 		<effects>
 			<effect name="EnergyAttack">
 				<chargeConsume>2</chargeConsume>
-				<criticalChance>15</criticalChance>
-				<overHit>true</overHit>
 				<power>
 					<value level="1">501</value>
 					<value level="2">535</value>
@@ -6045,6 +6061,8 @@
 					<value level="43">3283</value>
 				</power>
 				<ignoreShieldDefence>true</ignoreShieldDefence>
+				<criticalChance>15</criticalChance>
+				<overHit>true</overHit>
 			</effect>
 		</effects>
 	</skill>
@@ -6079,9 +6097,9 @@
 			<value level="25">70</value>
 			<value level="26">72</value>
 			<value level="27">74</value>
-			<value level="28">74</value> <!-- FIXME: AUTO GENERATED LEVEL -->
-			<value level="29">74</value> <!-- FIXME: AUTO GENERATED LEVEL -->
-			<value level="30">74</value> <!-- FIXME: AUTO GENERATED LEVEL -->
+			<value level="28">76</value>
+			<value level="29">77</value>
+			<value level="30">78</value>
 		</magicLvl>
 		<operateType>P</operateType>
 		<magicCriticalRate>5</magicCriticalRate>
@@ -6115,9 +6133,9 @@
 					<value level="25">78</value>
 					<value level="26">79</value>
 					<value level="27">81</value>
-					<value level="28">81</value> <!-- FIXME: AUTO GENERATED LEVEL -->
-					<value level="29">81</value> <!-- FIXME: AUTO GENERATED LEVEL -->
-					<value level="30">81</value> <!-- FIXME: AUTO GENERATED LEVEL -->
+					<value level="28">83</value>
+					<value level="29">84</value>
+					<value level="30">86</value>
 				</amount>
 				<mode>DIFF</mode>
 			</effect>
@@ -6244,6 +6262,14 @@
 					<value level="3">80</value>
 				</PARALYZE>
 			</effect>
+			<effect name="ResistDispelByCategory">
+				<amount>
+					<value level="1">-40</value>
+					<value level="2">-60</value>
+					<value level="3">-80</value>
+				</amount>
+				<slot>BUFF</slot>
+			</effect>
 		</effects>
 	</skill>
 	<skill id="288" toLevel="4" name="Guard Stance">
@@ -6345,8 +6371,8 @@
 			<value level="13">68</value>
 			<value level="14">70</value>
 			<value level="15">70</value>
-			<value level="16">98</value>
-			<value level="17">100</value>
+			<value level="16">79</value>
+			<value level="17">81</value>
 		</mpConsume>
 		<mpInitialConsume>
 			<value level="1">10</value>
@@ -6510,22 +6536,22 @@
 					<item>DUALFIST</item>
 				</weaponType>
 			</effect>
-			<effect name="PAtk" fromLevel="6" toLevel="9">
+			<effect name="PAtk">
 				<amount>10</amount>
 				<mode>PER</mode>
 				<hpPercent>60</hpPercent>
 			</effect>
-			<effect name="CriticalRate" fromLevel="6" toLevel="9">
+			<effect name="CriticalRate">
 				<amount>100</amount>
 				<mode>DIFF</mode>
 				<hpPercent>60</hpPercent>
 			</effect>
-			<effect name="PAtk" fromLevel="6" toLevel="9">
+			<effect name="PAtk">
 				<amount>30</amount>
 				<mode>PER</mode>
 				<hpPercent>30</hpPercent>
 			</effect>
-			<effect name="CriticalRate" fromLevel="6" toLevel="9">
+			<effect name="CriticalRate">
 				<amount>300</amount>
 				<mode>DIFF</mode>
 				<hpPercent>30</hpPercent>
@@ -6706,20 +6732,6 @@
 					<item>DUAL</item>
 				</weaponType>
 			</effect>
-			<effect name="PvpPhysicalAttackDamageBonus">
-				<amount>
-					<value level="1">5</value>
-					<value level="2">10</value>
-				</amount>
-				<mode>PER</mode>
-			</effect>
-			<effect name="PvpPhysicalSkillDamageBonus">
-				<amount>
-					<value level="1">5</value>
-					<value level="2">10</value>
-				</amount>
-				<mode>PER</mode>
-			</effect>
 		</effects>
 	</skill>
 	<skill id="298" toLevel="1" name="Rabbit Spirit Totem">
@@ -6784,6 +6796,7 @@
 		<mpInitialConsume>530</mpInitialConsume>
 		<operateType>A1</operateType>
 		<reuseDelay>5000</reuseDelay>
+		<staticReuse>true</staticReuse>
 		<magicCriticalRate>5</magicCriticalRate>
 		<targetType>SELF</targetType>
 		<affectScope>SINGLE</affectScope>
@@ -6793,9 +6806,8 @@
 		</conditions>
 		<effects>
 			<effect name="Summon">
-				<npcId>14768</npcId> <!-- Wild Hog Cannon -->
-				<consumeItemId>2132</consumeItemId> <!-- Gemstone (B-grade) -->
-				<consumeItemCount>20</consumeItemCount>
+				<npcId>14768</npcId>
+				<lifeTime>1200</lifeTime>
 			</effect>
 		</effects>
 	</skill>

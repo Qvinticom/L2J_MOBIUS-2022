@@ -33,8 +33,8 @@
 		<isDebuff>true</isDebuff>
 		<lvlBonusRate>20</lvlBonusRate>
 		<magicLvl>
-			<value level="1">20</value>
-			<value level="2">20</value>
+			<value level="1">18</value>
+			<value level="2">19</value>
 			<value level="3">20</value>
 			<value level="4">22</value>
 			<value level="5">23</value>
@@ -101,7 +101,9 @@
 				</power>
 				<overHit>true</overHit>
 			</effect>
-			<effect name="BlockActions" />
+			<effect name="BlockActions">
+				<allowedSkills>35016;35045;18103</allowedSkills>
+			</effect>
 		</effects>
 	</skill>
 	<skill id="101" toLevel="48" name="Stun Shot">
@@ -336,7 +338,9 @@
 				</power>
 				<overHit>true</overHit>
 			</effect>
-			<effect name="BlockActions" />
+			<effect name="BlockActions">
+				<allowedSkills>35016;35045;18103</allowedSkills>
+			</effect>
 			<effect name="TargetCancel">
 				<chance>40</chance>
 			</effect>
@@ -432,8 +436,8 @@
 			<value level="14">26</value>
 			<value level="15">27</value>
 			<value level="16">28</value>
-			<value level="17">39</value>
-			<value level="18">42</value>
+			<value level="17">31</value>
+			<value level="18">34</value>
 		</mpConsume>
 		<mpInitialConsume>
 			<value level="1">4</value>
@@ -573,7 +577,7 @@
 		<affectScope>SINGLE</affectScope>
 		<effects>
 			<effect name="AttackTrait">
-				<PLANT_WEAKNESS>30</PLANT_WEAKNESS>
+				<PLANT_WEAKNESS>5</PLANT_WEAKNESS>
 			</effect>
 		</effects>
 	</skill>
@@ -674,8 +678,8 @@
 			<value level="22">51</value>
 			<value level="23">53</value>
 			<value level="24">55</value>
-			<value level="25">75</value>
-			<value level="26">79</value>
+			<value level="25">61</value>
+			<value level="26">64</value>
 		</mpConsume>
 		<mpInitialConsume>
 			<value level="1">6</value>
@@ -1060,12 +1064,6 @@
 					<value level="3">32</value>
 					<value level="4">40</value>
 				</BOW>
-				<CROSSBOW>
-					<value level="1">8</value>
-					<value level="2">12</value>
-					<value level="3">16</value>
-					<value level="4">20</value>
-				</CROSSBOW>
 			</effect>
 		</effects>
 	</skill>
@@ -1185,8 +1183,8 @@
 			<value level="15">26</value>
 			<value level="16">27</value>
 			<value level="17">28</value>
-			<value level="18">39</value>
-			<value level="19">42</value>
+			<value level="18">31</value>
+			<value level="19">34</value>
 		</mpConsume>
 		<mpInitialConsume>
 			<value level="1">3</value>
@@ -1440,7 +1438,9 @@
 				</power>
 				<overHit>true</overHit>
 			</effect>
-			<effect name="BlockActions" />
+			<effect name="BlockActions">
+				<allowedSkills>35016;35045;18103</allowedSkills>
+			</effect>
 		</effects>
 	</skill>
 	<skill id="121" toLevel="6" name="Battle Roar">
@@ -1854,7 +1854,7 @@
 		<affectScope>SINGLE</affectScope>
 		<effects>
 			<effect name="Speed">
-				<amount>-15</amount>
+				<amount>-20</amount>
 				<mode>PER</mode>
 			</effect>
 			<effect name="PhysicalAttackSpeed">
@@ -1984,10 +1984,10 @@
 			<value level="3">52</value>
 			<value level="4">64</value>
 			<value level="5">74</value>
-			<value level="6">79</value>
-			<value level="7">90</value> <!-- L2Wiki is not updated yet -->
-			<value level="8">95</value> <!-- L2Wiki is not updated yet -->
-			<value level="9">99</value> <!-- L2Wiki is not updated yet -->
+			<value level="6">85</value>
+			<value level="7">90</value>
+			<value level="8">95</value>
+			<value level="9">99</value>
 		</magicLvl>
 		<mpConsume>
 			<value level="1">16</value>
@@ -1996,9 +1996,9 @@
 			<value level="4">26</value>
 			<value level="5">28</value>
 			<value level="6">30</value>
-			<value level="7">35</value> <!-- L2Wiki is not updated yet -->
-			<value level="8">40</value> <!-- L2Wiki is not updated yet -->
-			<value level="9">45</value> <!-- L2Wiki is not updated yet -->
+			<value level="7">35</value>
+			<value level="8">40</value>
+			<value level="9">45</value>
 		</mpConsume>
 		<operateType>A2</operateType>
 		<reuseDelay>300000</reuseDelay>
@@ -2008,7 +2008,10 @@
 		<affectScope>SINGLE</affectScope>
 		<conditions>
 			<condition name="RemainHpPer">
-				<amount>90</amount>
+				<amount>
+					<value fromLevel="1" toLevel="5">60</value>
+					<value fromLevel="6" toLevel="9">90</value>
+				</amount>
 				<percentType>LESS</percentType>
 				<affectType>CASTER</affectType>
 			</condition>
@@ -2041,40 +2044,6 @@
 					<value level="9">-90</value>
 				</amount>
 				<slot>DEBUFF</slot>
-			</effect>
-			<effect name="Heal" fromLevel="8" toLevel="9" fromSubLevel="2001" toSubLevel="2030">
-				<power>
-					<value fromLevel="8" toLevel="9" fromSubLevel="2001" toSubLevel="2001">1936</value>
-					<value fromLevel="8" toLevel="9" fromSubLevel="2002" toSubLevel="2002">2072</value>
-					<value fromLevel="8" toLevel="9" fromSubLevel="2003" toSubLevel="2003">2207</value>
-					<value fromLevel="8" toLevel="9" fromSubLevel="2004" toSubLevel="2004">2342</value>
-					<value fromLevel="8" toLevel="9" fromSubLevel="2005" toSubLevel="2005">2477</value>
-					<value fromLevel="8" toLevel="9" fromSubLevel="2006" toSubLevel="2006">2612</value>
-					<value fromLevel="8" toLevel="9" fromSubLevel="2007" toSubLevel="2007">2747</value>
-					<value fromLevel="8" toLevel="9" fromSubLevel="2008" toSubLevel="2008">2882</value>
-					<value fromLevel="8" toLevel="9" fromSubLevel="2009" toSubLevel="2009">3017</value>
-					<value fromLevel="8" toLevel="9" fromSubLevel="2010" toSubLevel="2010">3152</value>
-					<value fromLevel="8" toLevel="9" fromSubLevel="2011" toSubLevel="2011">3288</value>
-					<value fromLevel="8" toLevel="9" fromSubLevel="2012" toSubLevel="2012">3423</value>
-					<value fromLevel="8" toLevel="9" fromSubLevel="2013" toSubLevel="2013">3558</value>
-					<value fromLevel="8" toLevel="9" fromSubLevel="2014" toSubLevel="2014">3693</value>
-					<value fromLevel="8" toLevel="9" fromSubLevel="2015" toSubLevel="2015">3828</value>
-					<value fromLevel="8" toLevel="9" fromSubLevel="2016" toSubLevel="2016">3964</value>
-					<value fromLevel="8" toLevel="9" fromSubLevel="2017" toSubLevel="2017">4099</value>
-					<value fromLevel="8" toLevel="9" fromSubLevel="2018" toSubLevel="2018">4234</value>
-					<value fromLevel="8" toLevel="9" fromSubLevel="2019" toSubLevel="2019">4369</value>
-					<value fromLevel="8" toLevel="9" fromSubLevel="2020" toSubLevel="2020">4504</value>
-					<value fromLevel="8" toLevel="9" fromSubLevel="2021" toSubLevel="2021">4594</value>
-					<value fromLevel="8" toLevel="9" fromSubLevel="2022" toSubLevel="2022">4684</value>
-					<value fromLevel="8" toLevel="9" fromSubLevel="2023" toSubLevel="2023">4774</value>
-					<value fromLevel="8" toLevel="9" fromSubLevel="2024" toSubLevel="2024">4864</value>
-					<value fromLevel="8" toLevel="9" fromSubLevel="2025" toSubLevel="2025">4955</value>
-					<value fromLevel="8" toLevel="9" fromSubLevel="2026" toSubLevel="2026">5044</value>
-					<value fromLevel="8" toLevel="9" fromSubLevel="2027" toSubLevel="2027">5135</value>
-					<value fromLevel="8" toLevel="9" fromSubLevel="2028" toSubLevel="2028">5224</value>
-					<value fromLevel="8" toLevel="9" fromSubLevel="2029" toSubLevel="2029">5315</value>
-					<value fromLevel="8" toLevel="9" fromSubLevel="2030" toSubLevel="2030">5405</value>
-				</power>
 			</effect>
 		</effects>
 	</skill>
@@ -2713,7 +2682,7 @@
 		<effects>
 			<effect name="StatByMoveType">
 				<stat>REGENERATE_HP_RATE</stat>
-				<type>RUNNING</type>
+				<type>SITTING</type>
 				<value>
 					<value level="1">1.9</value>
 					<value level="2">2.7</value>
@@ -2727,7 +2696,7 @@
 			</effect>
 			<effect name="StatByMoveType">
 				<stat>REGENERATE_MP_RATE</stat>
-				<type>RUNNING</type>
+				<type>SITTING</type>
 				<value>
 					<value level="1">1.9</value>
 					<value level="2">2.1</value>
@@ -2778,10 +2747,10 @@
 				<amount>
 					<value level="1">0</value>
 					<value level="2">0</value>
-					<value level="3">10</value>
-					<value level="4">10</value>
+					<value level="3">81</value>
+					<value level="4">131</value>
 				</amount>
-				<mode>PER</mode>
+				<mode>DIFF</mode>
 				<armorType>
 					<item>HEAVY</item>
 				</armorType>
@@ -3023,10 +2992,10 @@
 			<value level="3">55</value>
 			<value level="4">64</value>
 			<value level="5">74</value>
-			<value level="6">79</value>
-			<value level="7">90</value> <!-- L2Wiki is not updated yet -->
-			<value level="8">95</value> <!-- L2Wiki is not updated yet -->
-			<value level="9">99</value> <!-- L2Wiki is not updated yet -->
+			<value level="6">85</value>
+			<value level="7">90</value>
+			<value level="8">95</value>
+			<value level="9">99</value>
 		</magicLvl>
 		<mpConsume>
 			<value level="1">14</value>
@@ -3035,9 +3004,9 @@
 			<value level="4">31</value>
 			<value level="5">36</value>
 			<value level="6">40</value>
-			<value level="7">43</value> <!-- L2Wiki is not updated yet -->
-			<value level="8">45</value> <!-- L2Wiki is not updated yet -->
-			<value level="9">47</value> <!-- L2Wiki is not updated yet -->
+			<value level="7">43</value>
+			<value level="8">45</value>
+			<value level="9">47</value>
 		</mpConsume>
 		<operateType>A2</operateType>
 		<reuseDelay>300000</reuseDelay>
@@ -3047,7 +3016,10 @@
 		<affectScope>SINGLE</affectScope>
 		<conditions>
 			<condition name="RemainHpPer">
-				<amount>90</amount>
+				<amount>
+					<value fromLevel="1" toLevel="5">60</value>
+					<value fromLevel="6" toLevel="9">90</value>
+				</amount>
 				<percentType>LESS</percentType>
 				<affectType>CASTER</affectType>
 			</condition>
@@ -3093,7 +3065,7 @@
 					<value level="8">18</value>
 					<value level="9">20</value>
 				</amount>
-				<mode>PER</mode>
+				<mode>DIFF</mode>
 			</effect>
 			<effect name="CriticalDamage">
 				<amount>
@@ -3121,7 +3093,7 @@
 					<value level="8">18</value>
 					<value level="9">20</value>
 				</amount>
-				<mode>PER</mode>
+				<mode>DIFF</mode>
 			</effect>
 			<effect name="TwoHandedSwordBonus">
 				<pAtkAmount>10</pAtkAmount>
@@ -3168,40 +3140,6 @@
 				<amount>300</amount>
 				<mode>DIFF</mode>
 				<hpPercent>30</hpPercent>
-			</effect>
-			<effect name="Heal" fromLevel="8" toLevel="9" fromSubLevel="2001" toSubLevel="2030">
-				<power>
-					<value fromLevel="8" toLevel="9" fromSubLevel="2001" toSubLevel="2001">1936</value>
-					<value fromLevel="8" toLevel="9" fromSubLevel="2002" toSubLevel="2002">2072</value>
-					<value fromLevel="8" toLevel="9" fromSubLevel="2003" toSubLevel="2003">2207</value>
-					<value fromLevel="8" toLevel="9" fromSubLevel="2004" toSubLevel="2004">2342</value>
-					<value fromLevel="8" toLevel="9" fromSubLevel="2005" toSubLevel="2005">2477</value>
-					<value fromLevel="8" toLevel="9" fromSubLevel="2006" toSubLevel="2006">2612</value>
-					<value fromLevel="8" toLevel="9" fromSubLevel="2007" toSubLevel="2007">2747</value>
-					<value fromLevel="8" toLevel="9" fromSubLevel="2008" toSubLevel="2008">2882</value>
-					<value fromLevel="8" toLevel="9" fromSubLevel="2009" toSubLevel="2009">3017</value>
-					<value fromLevel="8" toLevel="9" fromSubLevel="2010" toSubLevel="2010">3152</value>
-					<value fromLevel="8" toLevel="9" fromSubLevel="2011" toSubLevel="2011">3288</value>
-					<value fromLevel="8" toLevel="9" fromSubLevel="2012" toSubLevel="2012">3423</value>
-					<value fromLevel="8" toLevel="9" fromSubLevel="2013" toSubLevel="2013">3558</value>
-					<value fromLevel="8" toLevel="9" fromSubLevel="2014" toSubLevel="2014">3693</value>
-					<value fromLevel="8" toLevel="9" fromSubLevel="2015" toSubLevel="2015">3828</value>
-					<value fromLevel="8" toLevel="9" fromSubLevel="2016" toSubLevel="2016">3964</value>
-					<value fromLevel="8" toLevel="9" fromSubLevel="2017" toSubLevel="2017">4099</value>
-					<value fromLevel="8" toLevel="9" fromSubLevel="2018" toSubLevel="2018">4234</value>
-					<value fromLevel="8" toLevel="9" fromSubLevel="2019" toSubLevel="2019">4369</value>
-					<value fromLevel="8" toLevel="9" fromSubLevel="2020" toSubLevel="2020">4504</value>
-					<value fromLevel="8" toLevel="9" fromSubLevel="2021" toSubLevel="2021">4594</value>
-					<value fromLevel="8" toLevel="9" fromSubLevel="2022" toSubLevel="2022">4684</value>
-					<value fromLevel="8" toLevel="9" fromSubLevel="2023" toSubLevel="2023">4774</value>
-					<value fromLevel="8" toLevel="9" fromSubLevel="2024" toSubLevel="2024">4864</value>
-					<value fromLevel="8" toLevel="9" fromSubLevel="2025" toSubLevel="2025">4955</value>
-					<value fromLevel="8" toLevel="9" fromSubLevel="2026" toSubLevel="2026">5044</value>
-					<value fromLevel="8" toLevel="9" fromSubLevel="2027" toSubLevel="2027">5135</value>
-					<value fromLevel="8" toLevel="9" fromSubLevel="2028" toSubLevel="2028">5224</value>
-					<value fromLevel="8" toLevel="9" fromSubLevel="2029" toSubLevel="2029">5315</value>
-					<value fromLevel="8" toLevel="9" fromSubLevel="2030" toSubLevel="2030">5405</value>
-				</power>
 			</effect>
 		</effects>
 	</skill>
@@ -3381,14 +3319,14 @@
 			<value level="35">73</value>
 			<value level="36">74</value>
 			<value level="37">75</value>
-			<value level="38">83</value>
-			<value level="39">84</value>
-			<value level="40">85</value>
-			<value level="41">87</value>
-			<value level="42">88</value>
-			<value level="43">89</value>
-			<value level="44">90</value>
-			<value level="45">91</value>
+			<value level="38">76</value>
+			<value level="39">77</value>
+			<value level="40">78</value>
+			<value level="41">79</value>
+			<value level="42">80</value>
+			<value level="43">81</value>
+			<value level="44">82</value>
+			<value level="45">83</value>
 		</mpConsume>
 		<nextAction>ATTACK</nextAction>
 		<operateType>A1</operateType>
@@ -3454,7 +3392,6 @@
 					<value level="45">4004</value>
 				</power>
 				<ignoreShieldDefence>true</ignoreShieldDefence>
-				<criticalChance>15</criticalChance>
 				<overHit>true</overHit>
 			</effect>
 		</effects>

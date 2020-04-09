@@ -101,7 +101,9 @@
 				</power>
 				<overHit>true</overHit>
 			</effect>
-			<effect name="BlockActions" />
+			<effect name="BlockActions">
+				<allowedSkills>35016;35045;18103</allowedSkills>
+			</effect>
 		</effects>
 	</skill>
 	<skill id="101" toLevel="43" name="Stun Shot">
@@ -316,7 +318,9 @@
 				</power>
 				<overHit>true</overHit>
 			</effect>
-			<effect name="BlockActions" />
+			<effect name="BlockActions">
+				<allowedSkills>35016;35045;18103</allowedSkills>
+			</effect>
 			<effect name="TargetCancel">
 				<chance>40</chance>
 			</effect>
@@ -412,8 +416,8 @@
 			<value level="14">26</value>
 			<value level="15">27</value>
 			<value level="16">28</value>
-			<value level="17">39</value>
-			<value level="18">42</value>
+			<value level="17">31</value>
+			<value level="18">34</value>
 		</mpConsume>
 		<mpInitialConsume>
 			<value level="1">4</value>
@@ -553,7 +557,7 @@
 		<affectScope>SINGLE</affectScope>
 		<effects>
 			<effect name="AttackTrait">
-				<PLANT_WEAKNESS>30</PLANT_WEAKNESS>
+				<PLANT_WEAKNESS>5</PLANT_WEAKNESS>
 			</effect>
 		</effects>
 	</skill>
@@ -654,8 +658,8 @@
 			<value level="22">51</value>
 			<value level="23">53</value>
 			<value level="24">55</value>
-			<value level="25">75</value>
-			<value level="26">79</value>
+			<value level="25">61</value>
+			<value level="26">64</value>
 		</mpConsume>
 		<mpInitialConsume>
 			<value level="1">6</value>
@@ -1040,12 +1044,6 @@
 					<value level="3">32</value>
 					<value level="4">40</value>
 				</BOW>
-				<CROSSBOW>
-					<value level="1">8</value>
-					<value level="2">12</value>
-					<value level="3">16</value>
-					<value level="4">20</value>
-				</CROSSBOW>
 			</effect>
 		</effects>
 	</skill>
@@ -1165,8 +1163,8 @@
 			<value level="15">26</value>
 			<value level="16">27</value>
 			<value level="17">28</value>
-			<value level="18">39</value>
-			<value level="19">42</value>
+			<value level="18">31</value>
+			<value level="19">34</value>
 		</mpConsume>
 		<mpInitialConsume>
 			<value level="1">3</value>
@@ -1420,7 +1418,9 @@
 				</power>
 				<overHit>true</overHit>
 			</effect>
-			<effect name="BlockActions" />
+			<effect name="BlockActions">
+				<allowedSkills>35016;35045;18103</allowedSkills>
+			</effect>
 		</effects>
 	</skill>
 	<skill id="121" toLevel="6" name="Battle Roar">
@@ -1678,8 +1678,8 @@
 			<value level="12">26</value>
 			<value level="13">27</value>
 			<value level="14">28</value>
-			<value level="15">39</value>
-			<value level="16">42</value>
+			<value level="15">31</value>
+			<value level="16">34</value>
 		</mpConsume>
 		<mpInitialConsume>
 			<value level="1">4</value>
@@ -1920,11 +1920,7 @@
 			<value level="8">8</value>
 			<value level="9">9</value>
 		</abnormalLvl>
-		<abnormalTime>
-			<value fromLevel="1" toLevel="9">60</value>
-			<value fromLevel="8" toLevel="9" fromSubLevel="1001" toSubLevel="1010">{base + subIndex}</value>
-			<value fromLevel="8" toLevel="9" fromSubLevel="1011" toSubLevel="1030">{base + 10 + 0.5 * subIndex}</value>
-		</abnormalTime>
+		<abnormalTime>60</abnormalTime>
 		<abnormalType>PINCH</abnormalType>
 		<effectPoint>
 			<value level="1">341</value>
@@ -2004,40 +2000,6 @@
 					<value level="9">-90</value>
 				</amount>
 				<slot>DEBUFF</slot>
-			</effect>
-			<effect name="Heal" fromLevel="8" toLevel="9" fromSubLevel="2001" toSubLevel="2030">
-				<power>
-					<value fromLevel="8" toLevel="9" fromSubLevel="2001" toSubLevel="2001">1936</value>
-					<value fromLevel="8" toLevel="9" fromSubLevel="2002" toSubLevel="2002">2072</value>
-					<value fromLevel="8" toLevel="9" fromSubLevel="2003" toSubLevel="2003">2207</value>
-					<value fromLevel="8" toLevel="9" fromSubLevel="2004" toSubLevel="2004">2342</value>
-					<value fromLevel="8" toLevel="9" fromSubLevel="2005" toSubLevel="2005">2477</value>
-					<value fromLevel="8" toLevel="9" fromSubLevel="2006" toSubLevel="2006">2612</value>
-					<value fromLevel="8" toLevel="9" fromSubLevel="2007" toSubLevel="2007">2747</value>
-					<value fromLevel="8" toLevel="9" fromSubLevel="2008" toSubLevel="2008">2882</value>
-					<value fromLevel="8" toLevel="9" fromSubLevel="2009" toSubLevel="2009">3017</value>
-					<value fromLevel="8" toLevel="9" fromSubLevel="2010" toSubLevel="2010">3152</value>
-					<value fromLevel="8" toLevel="9" fromSubLevel="2011" toSubLevel="2011">3288</value>
-					<value fromLevel="8" toLevel="9" fromSubLevel="2012" toSubLevel="2012">3423</value>
-					<value fromLevel="8" toLevel="9" fromSubLevel="2013" toSubLevel="2013">3558</value>
-					<value fromLevel="8" toLevel="9" fromSubLevel="2014" toSubLevel="2014">3693</value>
-					<value fromLevel="8" toLevel="9" fromSubLevel="2015" toSubLevel="2015">3828</value>
-					<value fromLevel="8" toLevel="9" fromSubLevel="2016" toSubLevel="2016">3964</value>
-					<value fromLevel="8" toLevel="9" fromSubLevel="2017" toSubLevel="2017">4099</value>
-					<value fromLevel="8" toLevel="9" fromSubLevel="2018" toSubLevel="2018">4234</value>
-					<value fromLevel="8" toLevel="9" fromSubLevel="2019" toSubLevel="2019">4369</value>
-					<value fromLevel="8" toLevel="9" fromSubLevel="2020" toSubLevel="2020">4504</value>
-					<value fromLevel="8" toLevel="9" fromSubLevel="2021" toSubLevel="2021">4594</value>
-					<value fromLevel="8" toLevel="9" fromSubLevel="2022" toSubLevel="2022">4684</value>
-					<value fromLevel="8" toLevel="9" fromSubLevel="2023" toSubLevel="2023">4774</value>
-					<value fromLevel="8" toLevel="9" fromSubLevel="2024" toSubLevel="2024">4864</value>
-					<value fromLevel="8" toLevel="9" fromSubLevel="2025" toSubLevel="2025">4955</value>
-					<value fromLevel="8" toLevel="9" fromSubLevel="2026" toSubLevel="2026">5044</value>
-					<value fromLevel="8" toLevel="9" fromSubLevel="2027" toSubLevel="2027">5135</value>
-					<value fromLevel="8" toLevel="9" fromSubLevel="2028" toSubLevel="2028">5224</value>
-					<value fromLevel="8" toLevel="9" fromSubLevel="2029" toSubLevel="2029">5315</value>
-					<value fromLevel="8" toLevel="9" fromSubLevel="2030" toSubLevel="2030">5405</value>
-				</power>
 			</effect>
 		</effects>
 	</skill>
@@ -2588,7 +2550,7 @@
 		<effects>
 			<effect name="StatByMoveType">
 				<stat>REGENERATE_HP_RATE</stat>
-				<type>RUNNING</type>
+				<type>SITTING</type>
 				<value>
 					<value level="1">1.9</value>
 					<value level="2">2.7</value>
@@ -2602,7 +2564,7 @@
 			</effect>
 			<effect name="StatByMoveType">
 				<stat>REGENERATE_MP_RATE</stat>
-				<type>RUNNING</type>
+				<type>SITTING</type>
 				<value>
 					<value level="1">1.9</value>
 					<value level="2">2.1</value>
@@ -2653,10 +2615,10 @@
 				<amount>
 					<value level="1">0</value>
 					<value level="2">0</value>
-					<value level="3">10</value>
-					<value level="4">10</value>
+					<value level="3">81</value>
+					<value level="4">131</value>
 				</amount>
-				<mode>PER</mode>
+				<mode>DIFF</mode>
 				<armorType>
 					<item>HEAVY</item>
 				</armorType>
@@ -2878,11 +2840,7 @@
 			<value level="8">8</value>
 			<value level="9">9</value>
 		</abnormalLvl>
-		<abnormalTime>
-			<value fromLevel="1" toLevel="9">60</value>
-			<value fromLevel="8" toLevel="9" fromSubLevel="1001" toSubLevel="1010">{base + subIndex}</value>
-			<value fromLevel="8" toLevel="9" fromSubLevel="1011" toSubLevel="1030">{base + 10 + 0.5 * subIndex}</value>
-		</abnormalTime>
+		<abnormalTime>60</abnormalTime>
 		<abnormalType>PINCH</abnormalType>
 		<effectPoint>
 			<value level="1">303</value>
@@ -2975,7 +2933,7 @@
 					<value level="8">18</value>
 					<value level="9">20</value>
 				</amount>
-				<mode>PER</mode>
+				<mode>DIFF</mode>
 			</effect>
 			<effect name="CriticalDamage">
 				<amount>
@@ -3003,7 +2961,7 @@
 					<value level="8">18</value>
 					<value level="9">20</value>
 				</amount>
-				<mode>PER</mode>
+				<mode>DIFF</mode>
 			</effect>
 			<effect name="TwoHandedSwordBonus">
 				<pAtkAmount>10</pAtkAmount>
@@ -3050,40 +3008,6 @@
 				<amount>300</amount>
 				<mode>DIFF</mode>
 				<hpPercent>30</hpPercent>
-			</effect>
-			<effect name="Heal" fromLevel="8" toLevel="9" fromSubLevel="2001" toSubLevel="2030">
-				<power>
-					<value fromLevel="8" toLevel="9" fromSubLevel="2001" toSubLevel="2001">1936</value>
-					<value fromLevel="8" toLevel="9" fromSubLevel="2002" toSubLevel="2002">2072</value>
-					<value fromLevel="8" toLevel="9" fromSubLevel="2003" toSubLevel="2003">2207</value>
-					<value fromLevel="8" toLevel="9" fromSubLevel="2004" toSubLevel="2004">2342</value>
-					<value fromLevel="8" toLevel="9" fromSubLevel="2005" toSubLevel="2005">2477</value>
-					<value fromLevel="8" toLevel="9" fromSubLevel="2006" toSubLevel="2006">2612</value>
-					<value fromLevel="8" toLevel="9" fromSubLevel="2007" toSubLevel="2007">2747</value>
-					<value fromLevel="8" toLevel="9" fromSubLevel="2008" toSubLevel="2008">2882</value>
-					<value fromLevel="8" toLevel="9" fromSubLevel="2009" toSubLevel="2009">3017</value>
-					<value fromLevel="8" toLevel="9" fromSubLevel="2010" toSubLevel="2010">3152</value>
-					<value fromLevel="8" toLevel="9" fromSubLevel="2011" toSubLevel="2011">3288</value>
-					<value fromLevel="8" toLevel="9" fromSubLevel="2012" toSubLevel="2012">3423</value>
-					<value fromLevel="8" toLevel="9" fromSubLevel="2013" toSubLevel="2013">3558</value>
-					<value fromLevel="8" toLevel="9" fromSubLevel="2014" toSubLevel="2014">3693</value>
-					<value fromLevel="8" toLevel="9" fromSubLevel="2015" toSubLevel="2015">3828</value>
-					<value fromLevel="8" toLevel="9" fromSubLevel="2016" toSubLevel="2016">3964</value>
-					<value fromLevel="8" toLevel="9" fromSubLevel="2017" toSubLevel="2017">4099</value>
-					<value fromLevel="8" toLevel="9" fromSubLevel="2018" toSubLevel="2018">4234</value>
-					<value fromLevel="8" toLevel="9" fromSubLevel="2019" toSubLevel="2019">4369</value>
-					<value fromLevel="8" toLevel="9" fromSubLevel="2020" toSubLevel="2020">4504</value>
-					<value fromLevel="8" toLevel="9" fromSubLevel="2021" toSubLevel="2021">4594</value>
-					<value fromLevel="8" toLevel="9" fromSubLevel="2022" toSubLevel="2022">4684</value>
-					<value fromLevel="8" toLevel="9" fromSubLevel="2023" toSubLevel="2023">4774</value>
-					<value fromLevel="8" toLevel="9" fromSubLevel="2024" toSubLevel="2024">4864</value>
-					<value fromLevel="8" toLevel="9" fromSubLevel="2025" toSubLevel="2025">4955</value>
-					<value fromLevel="8" toLevel="9" fromSubLevel="2026" toSubLevel="2026">5044</value>
-					<value fromLevel="8" toLevel="9" fromSubLevel="2027" toSubLevel="2027">5135</value>
-					<value fromLevel="8" toLevel="9" fromSubLevel="2028" toSubLevel="2028">5224</value>
-					<value fromLevel="8" toLevel="9" fromSubLevel="2029" toSubLevel="2029">5315</value>
-					<value fromLevel="8" toLevel="9" fromSubLevel="2030" toSubLevel="2030">5405</value>
-				</power>
 			</effect>
 		</effects>
 	</skill>
@@ -3262,49 +3186,48 @@
 		<effects>
 			<effect name="PhysicalAttack">
 				<power>
-					<value level="1">738</value>
-					<value level="2">784</value>
-					<value level="3">833</value>
-					<value level="4">884</value>
-					<value level="5">937</value>
-					<value level="6">992</value>
-					<value level="7">1049</value>
-					<value level="8">1109</value>
-					<value level="9">1171</value>
-					<value level="10">1236</value>
-					<value level="11">1302</value>
-					<value level="12">1371</value>
-					<value level="13">1443</value>
-					<value level="14">1516</value>
-					<value level="15">1592</value>
-					<value level="16">1670</value>
-					<value level="17">1750</value>
-					<value level="18">1832</value>
-					<value level="19">1917</value>
-					<value level="20">2003</value>
-					<value level="21">2091</value>
-					<value level="22">2181</value>
-					<value level="23">2272</value>
-					<value level="24">2366</value>
-					<value level="25">2460</value>
-					<value level="26">2556</value>
-					<value level="27">2653</value>
-					<value level="28">2751</value>
-					<value level="29">2850</value>
-					<value level="30">2950</value>
-					<value level="31">3050</value>
-					<value level="32">3151</value>
-					<value level="33">3252</value>
-					<value level="34">3353</value>
-					<value level="35">3453</value>
-					<value level="36">3553</value>
-					<value level="37">3653</value>
+					<value level="1">369</value>
+					<value level="2">392</value>
+					<value level="3">417</value>
+					<value level="4">442</value>
+					<value level="5">469</value>
+					<value level="6">496</value>
+					<value level="7">525</value>
+					<value level="8">555</value>
+					<value level="9">586</value>
+					<value level="10">618</value>
+					<value level="11">651</value>
+					<value level="12">686</value>
+					<value level="13">722</value>
+					<value level="14">758</value>
+					<value level="15">796</value>
+					<value level="16">835</value>
+					<value level="17">875</value>
+					<value level="18">916</value>
+					<value level="19">959</value>
+					<value level="20">1002</value>
+					<value level="21">1046</value>
+					<value level="22">1091</value>
+					<value level="23">1136</value>
+					<value level="24">1183</value>
+					<value level="25">1230</value>
+					<value level="26">1278</value>
+					<value level="27">1327</value>
+					<value level="28">1376</value>
+					<value level="29">1425</value>
+					<value level="30">1475</value>
+					<value level="31">1525</value>
+					<value level="32">1576</value>
+					<value level="33">1626</value>
+					<value level="34">1677</value>
+					<value level="35">1727</value>
+					<value level="36">1777</value>
+					<value level="37">1827</value>
 					<value level="38">3692</value>
 					<value level="39">3731</value>
 					<value level="40">3770</value>
 				</power>
 				<ignoreShieldDefence>true</ignoreShieldDefence>
-				<criticalChance>15</criticalChance>
 				<overHit>true</overHit>
 			</effect>
 		</effects>

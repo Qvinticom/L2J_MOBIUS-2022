@@ -43,7 +43,8 @@
 					<value level="4">14705</value>
 					<value level="5">14706</value>
 				</npcId>
-				<consumeItemId>1458</consumeItemId> <!-- Crystal (D-grade) -->
+				<lifeTime>1200</lifeTime>
+				<consumeItemId>1458</consumeItemId>
 				<consumeItemCount>5</consumeItemCount>
 				<expMultiplier>0.7</expMultiplier>
 			</effect>
@@ -325,7 +326,6 @@
 			<condition name="EquipWeapon">
 				<weaponType>
 					<item>DUAL</item>
-					<item>DUALBLUNT</item>
 				</weaponType>
 			</condition>
 		</conditions>
@@ -393,7 +393,6 @@
 			<condition name="EquipWeapon">
 				<weaponType>
 					<item>DUAL</item>
-					<item>DUALBLUNT</item>
 				</weaponType>
 			</condition>
 		</conditions>
@@ -874,9 +873,9 @@
 					<value level="1">3</value>
 					<value level="2">4</value>
 					<value level="3">5</value>
-					<value level="4">7</value>
-					<value level="5">8</value>
-					<value level="6">8</value> <!-- FIXME: AUTO GENERATED LEVEL -->
+					<value level="4">6</value>
+					<value level="5">7</value>
+					<value level="6">8</value>
 				</amount>
 				<mode>PER</mode>
 				<weaponType>
@@ -1351,7 +1350,7 @@
 		<targetType>NONE</targetType>
 		<effects>
 			<effect name="ManaDamOverTime">
-				<power>50</power>
+				<power>1</power>
 				<ticks>5</ticks>
 			</effect>
 			<effect name="DefenceTrait">
@@ -1532,12 +1531,12 @@
 		<targetType>ENEMY_NOT</targetType>
 		<affectScope>SINGLE</affectScope>
 		<effects>
+			<effect name="HealPercent">
+				<power>30</power>
+			</effect>
 			<effect name="HealOverTime">
 				<power>30</power>
 				<ticks>5</ticks>
-			</effect>
-			<effect name="HealPercent">
-				<power>30</power>
 			</effect>
 			<effect name="HealEffect">
 				<amount>10</amount>
@@ -1559,6 +1558,7 @@
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>120</abnormalTime>
 		<abnormalType>TOUCH_OF_DEATH</abnormalType>
+		<abnormalVisualEffect>REVENGE_AURA</abnormalVisualEffect>
 		<activateRate>80</activateRate>
 		<basicProperty>PHYSICAL</basicProperty>
 		<castRange>40</castRange>
@@ -1568,6 +1568,8 @@
 		<hpConsume>669</hpConsume>
 		<isDebuff>true</isDebuff>
 		<lvlBonusRate>20</lvlBonusRate>
+		<attributeType>DARK</attributeType>
+		<attributeValue>20</attributeValue>
 		<magicLvl>78</magicLvl>
 		<nextAction>ATTACK</nextAction>
 		<operateType>A2</operateType>
@@ -1582,6 +1584,10 @@
 				<rate>25</rate>
 				<max>3</max>
 			</effect>
+			<effect name="Cp">
+				<amount>-50</amount>
+				<mode>PER</mode>
+			</effect>
 			<effect name="MaxCp">
 				<amount>-50</amount>
 				<mode>PER</mode>
@@ -1593,10 +1599,6 @@
 			<effect name="ResistAbnormalByCategory">
 				<amount>10</amount>
 				<slot>DEBUFF</slot>
-			</effect>
-			<effect name="Cp">
-				<amount>-50</amount>
-				<mode>PER</mode>
 			</effect>
 		</effects>
 	</skill>
@@ -1610,7 +1612,6 @@
 		<magicLvl>76</magicLvl>
 		<mpConsume>168</mpConsume>
 		<operateType>A1</operateType>
-		<coolTime>500</coolTime>
 		<reuseDelay>8000</reuseDelay>
 		<magicCriticalRate>5</magicCriticalRate>
 		<trait>DEATH</trait>
@@ -1689,7 +1690,7 @@
 			<value level="2">-360</value>
 			<value level="3">-380</value>
 			<value level="4">-400</value>
-			<value level="5">-420</value>
+			<value level="5">-692</value>
 			<value level="6">-696</value>
 			<value level="7">-700</value>
 			<value level="8">-704</value>
@@ -1704,15 +1705,15 @@
 			<value level="1">76</value>
 			<value level="2">78</value>
 			<value level="3">80</value>
-			<value level="4">82</value>
-			<value level="5">84</value>
-			<value level="6">84</value> <!-- FIXME: AUTO GENERATED LEVEL -->
-			<value level="7">84</value> <!-- FIXME: AUTO GENERATED LEVEL -->
-			<value level="8">84</value> <!-- FIXME: AUTO GENERATED LEVEL -->
-			<value level="9">84</value> <!-- FIXME: AUTO GENERATED LEVEL -->
-			<value level="10">84</value> <!-- FIXME: AUTO GENERATED LEVEL -->
-			<value level="11">84</value> <!-- FIXME: AUTO GENERATED LEVEL -->
-			<value level="12">84</value> <!-- FIXME: AUTO GENERATED LEVEL -->
+			<value level="4">80</value>
+			<value level="5">80</value>
+			<value level="6">80</value>
+			<value level="7">80</value>
+			<value level="8">80</value>
+			<value level="9">80</value>
+			<value level="10">80</value>
+			<value level="11">80</value>
+			<value level="12">80</value>
 		</magicLvl>
 		<mpConsume>
 			<value level="1">50</value>
@@ -1722,7 +1723,7 @@
 			<value level="5">58</value>
 		</mpConsume>
 		<nextAction>ATTACK</nextAction>
-		<operateType>A1</operateType>
+		<operateType>A2</operateType>
 		<magicCriticalRate>5</magicCriticalRate>
 		<isDebuff>true</isDebuff>
 		<targetType>ENEMY</targetType>
@@ -1731,7 +1732,6 @@
 			<condition name="EquipWeapon">
 				<weaponType>
 					<item>SWORD</item>
-					<item>POLE</item>
 					<item>BLUNT</item>
 					<item>DUALFIST</item>
 					<item>DUAL</item>
@@ -1745,22 +1745,18 @@
 					<value level="2">205</value>
 					<value level="3">215</value>
 					<value level="4">225</value>
-					<value level="5">235</value>
-					<value level="6">235</value> <!-- FIXME: AUTO GENERATED LEVEL -->
-					<value level="7">235</value> <!-- FIXME: AUTO GENERATED LEVEL -->
-					<value level="8">235</value> <!-- FIXME: AUTO GENERATED LEVEL -->
-					<value level="9">235</value> <!-- FIXME: AUTO GENERATED LEVEL -->
-					<value level="10">235</value> <!-- FIXME: AUTO GENERATED LEVEL -->
-					<value level="11">235</value> <!-- FIXME: AUTO GENERATED LEVEL -->
-					<value level="12">235</value> <!-- FIXME: AUTO GENERATED LEVEL -->
+					<value level="5">551</value>
+					<value level="6">565</value>
+					<value level="7">598</value>
+					<value level="8">630</value>
+					<value level="9">662</value>
+					<value level="10">693</value>
+					<value level="11">725</value>
+					<value level="12">757</value>
 				</power>
-				<overHit>true</overHit>
-				<criticalChance>10</criticalChance>
 			</effect>
-			<effect name="PhysicalDefence" fromLevel="1" toLevel="12">
-				<amount>
-					<value fromLevel="1" toLevel="5">-23</value>
-				</amount>
+			<effect name="PhysicalDefence">
+				<amount>-23</amount>
 				<mode>PER</mode>
 			</effect>
 		</effects>
@@ -1779,7 +1775,7 @@
 			<value level="2">-360</value>
 			<value level="3">-380</value>
 			<value level="4">-400</value>
-			<value level="5">-420</value>
+			<value level="5">-692</value>
 			<value level="6">-696</value>
 			<value level="7">-700</value>
 			<value level="8">-704</value>
@@ -1788,6 +1784,12 @@
 			<value level="11">-709</value>
 			<value level="12">-709</value>
 		</effectPoint>
+		<abnormalLvl>4</abnormalLvl>
+		<abnormalTime>20</abnormalTime>
+		<abnormalType>PD_DOWN</abnormalType>
+		<activateRate>80</activateRate>
+		<basicProperty>PHYSICAL</basicProperty>
+		<lvlBonusRate>30</lvlBonusRate>
 		<effectRange>1100</effectRange>
 		<hitTime>1200</hitTime>
 		<magicCriticalRate>5</magicCriticalRate>
@@ -1795,25 +1797,23 @@
 			<value level="1">76</value>
 			<value level="2">78</value>
 			<value level="3">80</value>
-			<value level="4">82</value>
-			<value level="5">84</value>
-			<value level="6">84</value> <!-- FIXME: AUTO GENERATED LEVEL -->
-			<value level="7">84</value> <!-- FIXME: AUTO GENERATED LEVEL -->
-			<value level="8">84</value> <!-- FIXME: AUTO GENERATED LEVEL -->
-			<value level="9">84</value> <!-- FIXME: AUTO GENERATED LEVEL -->
-			<value level="10">84</value> <!-- FIXME: AUTO GENERATED LEVEL -->
-			<value level="11">84</value> <!-- FIXME: AUTO GENERATED LEVEL -->
-			<value level="12">84</value> <!-- FIXME: AUTO GENERATED LEVEL -->
+			<value level="4">80</value>
+			<value level="5">80</value>
+			<value level="6">80</value>
+			<value level="7">80</value>
+			<value level="8">80</value>
+			<value level="9">80</value>
+			<value level="10">80</value>
+			<value level="11">80</value>
+			<value level="12">80</value>
 		</magicLvl>
 		<mpConsume>
 			<value level="1">50</value>
 			<value level="2">55</value>
 			<value level="3">56</value>
-			<value level="4">57</value>
-			<value level="5">58</value>
 		</mpConsume>
 		<nextAction>ATTACK</nextAction>
-		<operateType>A1</operateType>
+		<operateType>A2</operateType>
 		<isDebuff>true</isDebuff>
 		<coolTime>300</coolTime>
 		<targetType>ENEMY</targetType>
@@ -1836,20 +1836,18 @@
 					<value level="2">205</value>
 					<value level="3">215</value>
 					<value level="4">225</value>
-					<value level="5">235</value>
-					<value level="6">235</value> <!-- FIXME: AUTO GENERATED LEVEL -->
-					<value level="7">235</value> <!-- FIXME: AUTO GENERATED LEVEL -->
-					<value level="8">235</value> <!-- FIXME: AUTO GENERATED LEVEL -->
-					<value level="9">235</value> <!-- FIXME: AUTO GENERATED LEVEL -->
-					<value level="10">235</value> <!-- FIXME: AUTO GENERATED LEVEL -->
-					<value level="11">235</value> <!-- FIXME: AUTO GENERATED LEVEL -->
-					<value level="12">235</value> <!-- FIXME: AUTO GENERATED LEVEL -->
+					<value level="5">551</value>
+					<value level="6">565</value>
+					<value level="7">598</value>
+					<value level="8">630</value>
+					<value level="9">662</value>
+					<value level="10">693</value>
+					<value level="11">725</value>
+					<value level="12">757</value>
 				</power>
 			</effect>
-			<effect name="PhysicalDefence" fromLevel="1" toLevel="12">
-				<amount>
-					<value fromLevel="1" toLevel="5">-23</value>
-				</amount>
+			<effect name="PhysicalDefence">
+				<amount>-23</amount>
 				<mode>PER</mode>
 			</effect>
 		</effects>
@@ -1962,12 +1960,17 @@
 			<effect name="MagicMpCost">
 				<amount>-5</amount>
 				<mode>PER</mode>
+				<magicType>0</magicType>
+			</effect>
+			<effect name="MagicMpCost">
+				<amount>-5</amount>
+				<mode>PER</mode>
 				<magicType>1</magicType>
 			</effect>
 			<effect name="MagicMpCost">
 				<amount>-5</amount>
 				<mode>PER</mode>
-				<magicType>0</magicType>
+				<magicType>3</magicType>
 			</effect>
 			<effect name="Reuse">
 				<amount>-20</amount>
@@ -2086,7 +2089,9 @@
 			<effect name="TargetCancel">
 				<chance>80</chance>
 			</effect>
-			<effect name="BlockActions" />
+			<effect name="BlockActions">
+				<allowedSkills>35016;35045;18103</allowedSkills>
+			</effect>
 		</effects>
 	</skill>
 	<skill id="353" toLevel="1" name="Shield Slam">
@@ -2187,6 +2192,10 @@
 			</condition>
 		</conditions>
 		<effects>
+			<effect name="CriticalRate">
+				<amount>-20</amount>
+				<mode>PER</mode>
+			</effect>
 			<effect name="CriticalDamagePosition">
 				<amount>-30</amount>
 				<mode>PER</mode>
@@ -2199,10 +2208,6 @@
 			</effect>
 			<effect name="FatalBlowRate">
 				<amount>40</amount>
-				<mode>PER</mode>
-			</effect>
-			<effect name="CriticalRate">
-				<amount>-20</amount>
 				<mode>PER</mode>
 			</effect>
 		</effects>
@@ -2231,6 +2236,10 @@
 			</condition>
 		</conditions>
 		<effects>
+			<effect name="FatalBlowRate">
+				<amount>20</amount>
+				<mode>PER</mode>
+			</effect>
 			<effect name="CriticalRatePositionBonus">
 				<amount>-30</amount>
 				<mode>PER</mode>
@@ -2330,7 +2339,9 @@
 			<effect name="DeleteHateOfMe">
 				<chance>80</chance>
 			</effect>
-			<effect name="BlockActions" />
+			<effect name="BlockActions">
+				<allowedSkills>35016;35045;18103</allowedSkills>
+			</effect>
 		</effects>
 	</skill>
 	<skill id="359" toLevel="1" name="Eye of Hunter">
@@ -2447,7 +2458,9 @@
 			</power>
 				<ignoreShieldDefence>true</ignoreShieldDefence>
 			</effect>
-			<effect name="BlockActions" />
+			<effect name="BlockActions">
+				<allowedSkills>35016;35045;18103</allowedSkills>
+			</effect>
 			<effect name="MagicalDefence">
 				<amount>-30</amount>
 				<mode>PER</mode>
@@ -2468,7 +2481,7 @@
 		<activateRate>40</activateRate>
 		<basicProperty>PHYSICAL</basicProperty>
 		<castRange>40</castRange>
-		<coolTime>500</coolTime>
+		<coolTime>100</coolTime>
 		<effectPoint>-507</effectPoint>
 		<effectRange>400</effectRange>
 		<hitTime>1900</hitTime>
@@ -2487,8 +2500,8 @@
 		<conditions>
 			<condition name="EquipWeapon">
 				<weaponType>
-					<item>BLUNT</item>
 					<item>SWORD</item>
+					<item>BLUNT</item>
 				</weaponType>
 			</condition>
 		</conditions>
@@ -2499,7 +2512,9 @@
 				<criticalChance>20</criticalChance>
 				<overHit>true</overHit>
 			</effect>
-			<effect name="BlockActions" />
+			<effect name="BlockActions">
+				<allowedSkills>35016;35045;18103</allowedSkills>
+			</effect>
 			<effect name="MagicalDefence">
 				<amount>-30</amount>
 				<mode>PER</mode>
@@ -2665,7 +2680,7 @@
 				<chance>100</chance>
 				<targetType>MY_PARTY</targetType>
 				<isCritical>true</isCritical>
-				<allowWeapons>SWORD,BLUNT</allowWeapons>
+				<allowWeapons>ALL</allowWeapons>
 				<skillId>7097</skillId> <!-- Cancel Shadow Move -->
 				<skillLevel>1</skillLevel>
 			</effect>
@@ -2680,7 +2695,7 @@
 				<skillId>7097</skillId> <!-- Cancel Shadow Move -->
 				<skillLevel>1</skillLevel>
 				<isCritical>false</isCritical>
-				<allowWeapons>SWORD,BLUNT</allowWeapons>
+				<allowWeapons>ALL</allowWeapons>
 			</effect>
 			<effect name="Speed">
 				<amount>-50</amount>
@@ -2724,7 +2739,7 @@
 		</conditions>
 		<effects>
 			<effect name="BlockActions">
-				<allowedSkills>35016</allowedSkills>
+				<allowedSkills>35016;35045;18103</allowedSkills>
 			</effect>
 			<effect name="DamageBlock">
 				<type>BLOCK_HP</type>
@@ -2737,9 +2752,6 @@
 			<effect name="HpRegen">
 				<amount>-100</amount>
 				<mode>PER</mode>
-			</effect>
-			<effect name="DefenceTrait">
-				<TURN_STONE>100</TURN_STONE>
 			</effect>
 		</effects>
 	</skill>
@@ -2783,7 +2795,7 @@
 				<mode>DIFF</mode>
 			</effect>
 			<effect name="ResistDispelByCategory">
-				<amount>-80</amount>
+				<amount>-50</amount>
 				<slot>BUFF</slot>
 			</effect>
 			<effect name="Speed">
@@ -3303,7 +3315,7 @@
 					<value level="1">3</value>
 					<value level="2">6</value>
 					<value level="3">10</value>
-					<value level="4">15</value>
+					<value level="4">4</value>
 					<value level="5">5</value>
 				</amount>
 			</effect>
@@ -3325,15 +3337,16 @@
 		<abnormalLvl>3</abnormalLvl>
 		<abnormalTime>30</abnormalTime>
 		<abnormalType>HERO_BUFF</abnormalType>
+		<abnormalVisualEffect>ULTIMATE_DEFENCE</abnormalVisualEffect>
 		<blockedInOlympiad>true</blockedInOlympiad>
 		<effectPoint>676</effectPoint>
 		<hitTime>1000</hitTime>
 		<itemConsumeCount>40</itemConsumeCount>
-		<itemConsumeId>3031</itemConsumeId> <!-- Spirit Ore -->
+		<itemConsumeId>1785</itemConsumeId> <!-- Soulstone -->
 		<magicLvl>-1</magicLvl>
 		<mpConsume>72</mpConsume>
 		<operateType>A2</operateType>
-		<reuseDelay>3600000</reuseDelay>
+		<reuseDelay>900000</reuseDelay>
 		<staticReuse>true</staticReuse>
 		<basicProperty>NONE</basicProperty>
 		<magicCriticalRate>5</magicCriticalRate>
@@ -3365,15 +3378,16 @@
 		<abnormalLvl>2</abnormalLvl>
 		<abnormalTime>120</abnormalTime>
 		<abnormalType>HERO_BUFF</abnormalType>
+		<abnormalVisualEffect>AURA_DEBUFF</abnormalVisualEffect>
 		<blockedInOlympiad>true</blockedInOlympiad>
 		<effectPoint>676</effectPoint>
 		<hitTime>1000</hitTime>
 		<itemConsumeCount>40</itemConsumeCount>
-		<itemConsumeId>3031</itemConsumeId> <!-- Spirit Ore -->
+		<itemConsumeId>1785</itemConsumeId> <!-- Soulstone -->
 		<magicLvl>-1</magicLvl>
 		<mpConsume>72</mpConsume>
 		<operateType>A2</operateType>
-		<reuseDelay>3600000</reuseDelay>
+		<reuseDelay>900000</reuseDelay>
 		<staticReuse>true</staticReuse>
 		<basicProperty>NONE</basicProperty>
 		<magicCriticalRate>5</magicCriticalRate>
