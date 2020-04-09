@@ -675,6 +675,7 @@
 		<!-- Regenerates 10% of the user's original HP and increases the user's Max HP by 10% for 10 minutes. -->
 		<table name="#abnormalLvls">1 2 3 4 5 6</table>
 		<table name="#power">10 15 20 25 30 35</table>
+		<table name="#amount">10 15 20 25 30 35</table>
 		<table name="#effectPoints">268 379 467 549 597 635</table>
 		<table name="#magicLvl">28 40 49 58 64 70</table>
 		<table name="#mpConsume">13 18 22 27 30 33</table>
@@ -699,15 +700,21 @@
 			<effect name="MaxHp">
 				<param power="#power" />
 				<param type="PER" />
-				<param heal="true" />
+				<param heal="false" />				
+			</effect>
+			<effect name="HealPercent">
+				<param power="#amount" />
 			</effect>
 		</for>
 		<enchant2for>
 			<effect name="MaxHp">
 				<param power="35" />
 				<param type="PER" />
-				<param heal="true" />
+				<param heal="false" />
 				<add stat="pAtk" val="#ench2pAtk" />
+			</effect>
+			<effect name="HealPercent">
+				<param power="35" />
 			</effect>
 		</enchant2for>
 	</skill>
