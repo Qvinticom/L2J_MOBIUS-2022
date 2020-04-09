@@ -27,7 +27,7 @@ import org.l2jmobius.gameserver.model.quest.State;
 import quests.Q00109_InSearchOfTheNest.Q00109_InSearchOfTheNest;
 
 /**
- * The Zero Hour (640)<br>
+ * The Zero Hour (640)
  * @author Sacrifice
  */
 public class Q00640_TheZeroHour extends Quest
@@ -36,21 +36,23 @@ public class Q00640_TheZeroHour extends Quest
 	private static final int KAHMAN = 31554;
 	private static final int[] MONSTERS_TO_HUNT =
 	{
-		22617, // Spiked Stakato
-		22618, // Spiked Stakato Worker
-		22619, // Spiked Stakato Guard
-		22620, // Female Spiked Stakato
-		22621, // Male Spiked Stakato
-		22622, // Male Spiked Stakato
-		22623, // Spiked Stakato Sorcerer
-		22625, // Cannibalistic Stakato Leader
-		22626, // Cannibalistic Stakato Leader
-		22627, // Spiked Stakato Soldier
-		22628, // Spiked Stakato Drone
-		22629, // Spiked Stakato Captain
-		22630, // Spike Stakato Nurse
-		22631, // Spike Stakato Nurse
-		22633 // Spiked Stakato Shaman
+		22105,
+		22106,
+		22107,
+		22108,
+		22109,
+		22110,
+		22111,
+		22112,
+		22113,
+		22114,
+		22115,
+		22116,
+		22117,
+		22118,
+		22119,
+		22120,
+		22121,
 	};
 	// Item
 	private static final int FANG_OF_STAKATO = 8085;
