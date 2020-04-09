@@ -217,6 +217,7 @@ import quests.Q00790_ObtainingFerinsTrust.Q00790_ObtainingFerinsTrust;
 import quests.Q00816_PlansToRepairTheStronghold.Q00816_PlansToRepairTheStronghold;
 import quests.Q00817_BlackAteliaResearch.Q00817_BlackAteliaResearch;
 import quests.Q00823_DisappearedRaceNewFairy.Q00823_DisappearedRaceNewFairy;
+import quests.Q00824_AttackTheCommandPost.Q00824_AttackTheCommandPost;
 import quests.Q00826_InSearchOfTheSecretWeapon.Q00826_InSearchOfTheSecretWeapon;
 import quests.Q00827_EinhasadsOrder.Q00827_EinhasadsOrder;
 import quests.Q00828_EvasBlessing.Q00828_EvasBlessing;
@@ -510,7 +511,6 @@ import quests.not_done.Q00780_UtilizeTheDarknessSeedOfInfinity;
 import quests.not_done.Q00781_UtilizeTheDarknessSeedOfAnnihilation;
 import quests.not_done.Q00782_UtilizeTheDarknessSeedOfHellfire;
 import quests.not_done.Q00789_WaitingForPaagrio;
-import quests.not_done.Q00824_AttackTheCommandPost;
 import quests.not_done.Q10352_LegacyOfCrumaTower;
 import quests.not_done.Q10357_AltarOfBloodThatAwakensDestruction;
 import quests.not_done.Q10456_OperationRescue;
@@ -756,7 +756,7 @@ public class QuestMasterHandler
 		Q00816_PlansToRepairTheStronghold.class,
 		Q00817_BlackAteliaResearch.class,
 		Q00823_DisappearedRaceNewFairy.class,
-		Q00824_AttackTheCommandPost.class, // TODO: Not done.
+		Q00824_AttackTheCommandPost.class,
 		Q00826_InSearchOfTheSecretWeapon.class,
 		Q00827_EinhasadsOrder.class,
 		Q00828_EvasBlessing.class,

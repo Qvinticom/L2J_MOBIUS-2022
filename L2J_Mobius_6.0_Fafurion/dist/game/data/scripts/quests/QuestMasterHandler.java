@@ -202,6 +202,7 @@ import quests.Q00792_TheSuperionGiants.Q00792_TheSuperionGiants;
 import quests.Q00816_PlansToRepairTheStronghold.Q00816_PlansToRepairTheStronghold;
 import quests.Q00817_BlackAteliaResearch.Q00817_BlackAteliaResearch;
 import quests.Q00823_DisappearedRaceNewFairy.Q00823_DisappearedRaceNewFairy;
+import quests.Q00824_AttackTheCommandPost.Q00824_AttackTheCommandPost;
 import quests.Q00826_InSearchOfTheSecretWeapon.Q00826_InSearchOfTheSecretWeapon;
 import quests.Q00827_EinhasadsOrder.Q00827_EinhasadsOrder;
 import quests.Q00828_EvasBlessing.Q00828_EvasBlessing;
@@ -222,9 +223,11 @@ import quests.Q00923_ShinedustExtraction.Q00923_ShinedustExtraction;
 import quests.Q00924_GiantOfTheRestorationRoom.Q00924_GiantOfTheRestorationRoom;
 import quests.Q00926_30DaySearchOperation.Q00926_30DaySearchOperation;
 import quests.Q00928_100DaySubjugationOperation.Q00928_100DaySubjugationOperation;
+import quests.Q00930_DisparagingThePhantoms.Q00930_DisparagingThePhantoms;
 import quests.Q00931_MemoriesOfTheWind.Q00931_MemoriesOfTheWind;
 import quests.Q00932_SayhasEnergy.Q00932_SayhasEnergy;
 import quests.Q00937_ToReviveTheFishingGuild.Q00937_ToReviveTheFishingGuild;
+import quests.Q00985_AdventureGuildsSpecialRequestLv1.Q00985_AdventureGuildsSpecialRequestLv1;
 import quests.Q10282_ToTheSeedOfAnnihilation.Q10282_ToTheSeedOfAnnihilation;
 import quests.Q10283_RequestOfIceMerchant.Q10283_RequestOfIceMerchant;
 import quests.Q10284_AcquisitionOfDivineSword.Q10284_AcquisitionOfDivineSword;
@@ -524,7 +527,6 @@ import quests.not_done.Q00780_UtilizeTheDarknessSeedOfInfinity;
 import quests.not_done.Q00781_UtilizeTheDarknessSeedOfAnnihilation;
 import quests.not_done.Q00782_UtilizeTheDarknessSeedOfHellfire;
 import quests.not_done.Q00789_WaitingForPaagrio;
-import quests.not_done.Q00824_AttackTheCommandPost;
 import quests.not_done.Q00836_RequestFromTheBlackbirdClan;
 import quests.not_done.Q00837_RequestFromTheGiantTrackers;
 import quests.not_done.Q00838_RequestFromTheMotherTreeGuardians;
@@ -534,8 +536,6 @@ import quests.not_done.Q00841_ContaminationContainment;
 import quests.not_done.Q00843_GiantEvolutionControl;
 import quests.not_done.Q00846_BuildingUpStrength;
 import quests.not_done.Q00929_SeekerRescue;
-import quests.not_done.Q00930_DisparagingThePhantoms;
-import quests.not_done.Q00985_AdventureGuildsSpecialRequestLv1;
 import quests.not_done.Q00986_AdventureGuildsSpecialRequestLv2;
 import quests.not_done.Q00987_AdventureGuildsSpecialRequestLv3;
 import quests.not_done.Q00988_AdventureGuildsSpecialRequestLv4;
@@ -798,7 +798,7 @@ public class QuestMasterHandler
 		Q00816_PlansToRepairTheStronghold.class,
 		Q00817_BlackAteliaResearch.class,
 		Q00823_DisappearedRaceNewFairy.class,
-		Q00824_AttackTheCommandPost.class, // TODO: Not done.
+		Q00824_AttackTheCommandPost.class,
 		Q00826_InSearchOfTheSecretWeapon.class,
 		Q00827_EinhasadsOrder.class,
 		Q00828_EvasBlessing.class,
@@ -828,11 +828,11 @@ public class QuestMasterHandler
 		Q00926_30DaySearchOperation.class,
 		Q00928_100DaySubjugationOperation.class,
 		Q00929_SeekerRescue.class, // TODO: Not done.
-		Q00930_DisparagingThePhantoms.class, // TODO: Not done.
+		Q00930_DisparagingThePhantoms.class,
 		Q00931_MemoriesOfTheWind.class,
 		Q00932_SayhasEnergy.class,
 		Q00937_ToReviveTheFishingGuild.class,
-		Q00985_AdventureGuildsSpecialRequestLv1.class, // TODO: Not done.
+		Q00985_AdventureGuildsSpecialRequestLv1.class,
 		Q00986_AdventureGuildsSpecialRequestLv2.class, // TODO: Not done.
 		Q00987_AdventureGuildsSpecialRequestLv3.class, // TODO: Not done.
 		Q00988_AdventureGuildsSpecialRequestLv4.class, // TODO: Not done.
