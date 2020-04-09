@@ -76,28 +76,16 @@ public class CreatureFollowTaskManager
 	
 	private void follow(Creature creature, int range)
 	{
-		if (creature.hasAI())
+		try
 		{
-			final CreatureAI ai = creature.getAI();
-			if (ai != null)
+			if (creature.hasAI())
 			{
-				final WorldObject followTarget = ai.getTarget();
-				if (followTarget == null)
+				final CreatureAI ai = creature.getAI();
+				if (ai != null)
 				{
-					if (creature.isSummon())
+					final WorldObject followTarget = ai.getTarget();
+					if (followTarget == null)
 					{
-						((Summon) creature).setFollowStatus(false);
-					}
-					ai.setIntention(AI_INTENTION_IDLE);
-					return;
-				}
-				
-				final int followRange = range == -1 ? Rnd.get(50, 100) : range;
-				if (!creature.isInsideRadius3D(followTarget, followRange))
-				{
-					if (!creature.isInsideRadius3D(followTarget, 3000))
-					{
-						// If the target is too far (maybe also teleported).
 						if (creature.isSummon())
 						{
 							((Summon) creature).setFollowStatus(false);
@@ -105,7 +93,26 @@ public class CreatureFollowTaskManager
 						ai.setIntention(AI_INTENTION_IDLE);
 						return;
 					}
-					ai.moveToPawn(followTarget, followRange);
+					
+					final int followRange = range == -1 ? Rnd.get(50, 100) : range;
+					if (!creature.isInsideRadius3D(followTarget, followRange))
+					{
+						if (!creature.isInsideRadius3D(followTarget, 3000))
+						{
+							// If the target is too far (maybe also teleported).
+							if (creature.isSummon())
+							{
+								((Summon) creature).setFollowStatus(false);
+							}
+							ai.setIntention(AI_INTENTION_IDLE);
+							return;
+						}
+						ai.moveToPawn(followTarget, followRange);
+					}
+				}
+				else
+				{
+					remove(creature);
 				}
 			}
 			else
@@ -113,9 +120,9 @@ public class CreatureFollowTaskManager
 				remove(creature);
 			}
 		}
-		else
+		catch (Exception e)
 		{
-			remove(creature);
+			// Ignore.
 		}
 	}
 	
