@@ -1533,11 +1533,6 @@
 				<amount>8</amount>
 				<mode>DIFF</mode>
 			</effect>
-			<effect name="ReflectSkill">
-				<amount>8</amount>
-				<mode>DIFF</mode>
-				<type>MAGIC</type>
-			</effect>
 		</effects>
 	</skill>
 	<skill id="3580" toLevel="1" name="Special Ability: Infinity Axe">
@@ -1600,11 +1595,6 @@
 				<amount>10</amount>
 				<mode>DIFF</mode>
 			</effect>
-			<effect name="ReflectSkill">
-				<amount>10</amount>
-				<mode>DIFF</mode>
-				<type>MAGIC</type>
-			</effect>
 			<effect name="Hp">
 				<amount>460</amount>
 				<mode>DIFF</mode>
@@ -1665,10 +1655,8 @@
 		<targetType>SELF</targetType>
 		<affectScope>SINGLE</affectScope>
 		<effects>
-			<effect name="DispelByCategory">
-				<slot>DEBUFF</slot>
-				<rate>100</rate>
-				<max>5</max>
+			<effect name="AbnormalShield">
+				<times>5</times>
 			</effect>
 		</effects>
 	</skill>
@@ -1699,6 +1687,10 @@
 				<amount>5</amount>
 				<mode>PER</mode>
 			</effect>
+			<effect name="PhysicalAttackSpeed">
+				<amount>5</amount>
+				<mode>PER</mode>
+			</effect>
 			<effect name="PvpPhysicalAttackDamageBonus">
 				<amount>5</amount>
 				<mode>PER</mode>
@@ -1710,15 +1702,6 @@
 			<effect name="PvpPhysicalSkillDamageBonus">
 				<amount>5</amount>
 				<mode>PER</mode>
-			</effect>
-			<effect name="ReflectSkill">
-				<amount>5</amount>
-				<mode>DIFF</mode>
-			</effect>
-			<effect name="ReflectSkill">
-				<amount>5</amount>
-				<mode>DIFF</mode>
-				<type>MAGIC</type>
 			</effect>
 		</effects>
 	</skill>
@@ -1735,17 +1718,17 @@
 		<targetType>SELF</targetType>
 		<affectScope>SINGLE</affectScope>
 		<effects>
-			<effect name="MagicMpCost">
+			<effect name="Reuse">
 				<amount>-10</amount>
 				<mode>PER</mode>
 				<magicType>0</magicType>
 			</effect>
-			<effect name="MagicMpCost">
+			<effect name="Reuse">
 				<amount>-10</amount>
 				<mode>PER</mode>
 				<magicType>1</magicType>
 			</effect>
-			<effect name="MagicMpCost">
+			<effect name="Reuse">
 				<amount>-10</amount>
 				<mode>PER</mode>
 				<magicType>3</magicType>
@@ -1817,7 +1800,7 @@
 		</effects>
 	</skill>
 	<skill id="3589" toLevel="1" name="Special Ability: Infinity Dagger">
-		<!-- Max HP +15%, Max MP +25%, Max CP +30%, M. Critical Rate +20, P. Critical Damage +20%. Inflicts additional damage during PvP by 5%, grants weapon with special effects. -->
+		<!-- Max HP +15%, Max MP +25%, Max CP +30%, P. Critical Rate +20, P. Critical Damage +20%. Inflicts additional damage during PvP by 5%, grants weapon with special effects. -->
 		<icon>icon.weapon_the_dagger_of_hero_i00</icon>
 		<magicLvl>80</magicLvl>
 		<operateType>P</operateType>
@@ -1835,7 +1818,7 @@
 				<amount>30</amount>
 				<mode>PER</mode>
 			</effect>
-			<effect name="MagicCriticalRate">
+			<effect name="CriticalRate">
 				<amount>20</amount>
 				<mode>DIFF</mode>
 			</effect>
@@ -1971,12 +1954,9 @@
 		<targetType>SELF</targetType>
 		<affectScope>SINGLE</affectScope>
 		<effects>
-			<effect name="PhysicalAttackSpeed">
+			<effect name="Speed">
 				<amount>15</amount>
-				<mode>PER</mode>
-				<weaponType>
-					<item>BOW</item>
-				</weaponType>
+				<mode>DIFF</mode>
 			</effect>
 			<effect name="PhysicalAttackRange">
 				<amount>100</amount>
@@ -1988,7 +1968,7 @@
 		</effects>
 	</skill>
 	<skill id="3595" toLevel="1" name="Special Ability: Infinity Scepter">
-		<!-- Max HP +10%, Max MP +25%, Max CP +30%, M. Atk. +10%, P. Critical Damage +10%. Inflicts additional damage during PvP by 5%, grants weapon with special effects. -->
+		<!-- Max HP +10%, Max MP +25%, Max CP +30%, M. Atk. +10%, M. Critical Damage +10%. Inflicts additional damage during PvP by 5%, grants weapon with special effects. -->
 		<icon>icon.weapon_the_staff_of_hero_i00</icon>
 		<magicLvl>80</magicLvl>
 		<operateType>P</operateType>
@@ -2010,7 +1990,7 @@
 				<amount>10</amount>
 				<mode>PER</mode>
 			</effect>
-			<effect name="CriticalDamage">
+			<effect name="MagicCriticalDamage">
 				<amount>10</amount>
 				<mode>PER</mode>
 			</effect>
@@ -2029,7 +2009,7 @@
 		</effects>
 	</skill>
 	<skill id="3596" toLevel="1" name="Infinity Power - Vampiric Mana">
-		<!-- For 5 min. increases Speed and the bow's range. -->
+		<!-- For 5 min. recovers MP, equal to 3% of inflicted damage with a certain probability. -->
 		<icon>icon.skill1268</icon>
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>300</abnormalTime>
@@ -2043,6 +2023,7 @@
 		<effects>
 			<effect name="MpVampiricAttack">
 				<amount>3</amount>
+				<chance>50</chance>
 			</effect>
 		</effects>
 	</skill>
