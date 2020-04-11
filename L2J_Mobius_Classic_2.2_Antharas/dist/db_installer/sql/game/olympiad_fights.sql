@@ -7,6 +7,7 @@ CREATE TABLE IF NOT EXISTS `olympiad_fights` (
   `winner` tinyint(1) unsigned NOT NULL DEFAULT '0',
   `start` bigint(13) unsigned NOT NULL DEFAULT '0',
   `time` bigint(13) unsigned NOT NULL DEFAULT '0',
+  `classed` tinyint(4) NOT NULL DEFAULT 0,
   KEY `charOneId` (`charOneId`),
   KEY `charTwoId` (`charTwoId`)
 ) ENGINE=MyISAM DEFAULT CHARSET=latin1 COLLATE=latin1_general_ci;
