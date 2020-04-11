@@ -24,6 +24,7 @@ import java.awt.event.ComponentAdapter;
 import java.awt.event.ComponentEvent;
 import java.awt.event.WindowAdapter;
 import java.awt.event.WindowEvent;
+import java.io.File;
 import java.io.OutputStream;
 import java.io.PrintStream;
 import java.util.ArrayList;
@@ -210,10 +211,10 @@ public class Gui
 		
 		// Set icons.
 		final List<Image> icons = new ArrayList<>();
-		icons.add(new ImageIcon("..\\images\\l2jmobius_16x16.png").getImage());
-		icons.add(new ImageIcon("..\\images\\l2jmobius_32x32.png").getImage());
-		icons.add(new ImageIcon("..\\images\\l2jmobius_64x64.png").getImage());
-		icons.add(new ImageIcon("..\\images\\l2jmobius_128x128.png").getImage());
+		icons.add(new ImageIcon(".." + File.separator + "images" + File.separator + "l2jmobius_16x16.png").getImage());
+		icons.add(new ImageIcon(".." + File.separator + "images" + File.separator + "l2jmobius_32x32.png").getImage());
+		icons.add(new ImageIcon(".." + File.separator + "images" + File.separator + "l2jmobius_64x64.png").getImage());
+		icons.add(new ImageIcon(".." + File.separator + "images" + File.separator + "l2jmobius_128x128.png").getImage());
 		
 		final JScrollPane scrollPanel = new JScrollPane(txtrConsole);
 		scrollPanel.setBounds(0, 0, 800, 550);
@@ -251,7 +252,7 @@ public class Gui
 		redirectSystemStreams();
 		
 		// Show SplashScreen.
-		new SplashScreen("..\\images\\splash.png", 5000, frame);
+		new SplashScreen(".." + File.separator + "images" + File.separator + "splash.png", 5000, frame);
 	}
 	
 	// Set where the text is redirected. In this case, txtrConsole.
