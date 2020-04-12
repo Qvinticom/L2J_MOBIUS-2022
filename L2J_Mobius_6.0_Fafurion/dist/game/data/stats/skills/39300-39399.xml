@@ -312,11 +312,54 @@
 	<skill id="39347" toLevel="1" name="Shining Dragon Attribute Tonic (XP)">
 		<!-- Increases Attack Attribute by 70, all Attribute Resistance by 70, and Acquired XP/ SP by 30% for 30 min. Buffs persist after death. Will be during maintenance on January 3rd, 2018. -->
 		<icon>icon.bm_dragon_posion_special</icon>
-		<operateType>A1</operateType>
-		<isMagic>4</isMagic>
+		<operateType>A2</operateType>
+		<isMagic>2</isMagic>
 		<hitTime>1000</hitTime>
+		<coolTime>500</coolTime>
 		<reuseDelay>300000</reuseDelay>
+		<abnormalType>GLOWING_DRAGON_POTION</abnormalType>
+		<abnormalLvl>1</abnormalLvl>
 		<effectPoint>1</effectPoint>
+		<abnormalTime>1800</abnormalTime>
+		<stayAfterDeath>true</stayAfterDeath>
+		<blockedInOlympiad>true</blockedInOlympiad> <!-- Unconfirmed -->
+		<targetType>SELF</targetType>
+		<affectScope>SINGLE</affectScope>
+		<effects>
+			<effect name="AttackAttributeAdd">
+				<amount>70</amount>
+			</effect>
+			<effect name="DefenceAttribute">
+				<amount>70</amount>
+				<attribute>FIRE</attribute>
+			</effect>
+			<effect name="DefenceAttribute">
+				<amount>70</amount>
+				<attribute>WATER</attribute>
+			</effect>
+			<effect name="DefenceAttribute">
+				<amount>70</amount>
+				<attribute>EARTH</attribute>
+			</effect>
+			<effect name="DefenceAttribute">
+				<amount>70</amount>
+				<attribute>WIND</attribute>
+			</effect>
+			<effect name="DefenceAttribute">
+				<amount>70</amount>
+				<attribute>HOLY</attribute>
+			</effect>
+			<effect name="DefenceAttribute">
+				<amount>70</amount>
+				<attribute>DARK</attribute>
+			</effect>
+			<effect name="ExpModify">
+				<amount>30</amount>
+			</effect>
+			<effect name="SpModify">
+				<amount>30</amount>
+			</effect>
+		</effects>
 	</skill>
 	<skill id="39348" toLevel="1" name="Angler's Blessing (1-h.)">
 		<!-- Increases Acquired XP/ SP on successful fishing by 100% for 1 h.. Effect remains after death and cannot be forcibly removed. Will be deleted during maintenance on January 3rd, 2018. -->
@@ -622,16 +665,65 @@
 				<amount>-10</amount>
 				<type>ENEMY_ALL</type>
 			</effect>
+			<effect name="ExpModify">
+				<amount>30</amount>
+			</effect>
+			<effect name="SpModify">
+				<amount>30</amount>
+			</effect>
 		</effects>
 	</skill>
 	<skill id="39356" toLevel="1" name="Shining Dragon Attribute Tonic (XP)">
 		<!-- Increases Attack Attribute by 70, all Attribute Resistance by 70, and Acquired XP/ SP by 30% for 30 min. Buffs persist after death. -->
 		<icon>icon.bm_dragon_posion_special</icon>
-		<operateType>A1</operateType>
-		<isMagic>4</isMagic>
+		<operateType>A2</operateType>
+		<isMagic>2</isMagic>
 		<hitTime>1000</hitTime>
+		<coolTime>500</coolTime>
 		<reuseDelay>300000</reuseDelay>
+		<abnormalType>GLOWING_DRAGON_POTION</abnormalType>
+		<abnormalLvl>1</abnormalLvl>
 		<effectPoint>1</effectPoint>
+		<abnormalTime>1800</abnormalTime>
+		<stayAfterDeath>true</stayAfterDeath>
+		<blockedInOlympiad>true</blockedInOlympiad> <!-- Unconfirmed -->
+		<targetType>SELF</targetType>
+		<affectScope>SINGLE</affectScope>
+		<effects>
+			<effect name="AttackAttributeAdd">
+				<amount>70</amount>
+			</effect>
+			<effect name="DefenceAttribute">
+				<amount>70</amount>
+				<attribute>FIRE</attribute>
+			</effect>
+			<effect name="DefenceAttribute">
+				<amount>70</amount>
+				<attribute>WATER</attribute>
+			</effect>
+			<effect name="DefenceAttribute">
+				<amount>70</amount>
+				<attribute>EARTH</attribute>
+			</effect>
+			<effect name="DefenceAttribute">
+				<amount>70</amount>
+				<attribute>WIND</attribute>
+			</effect>
+			<effect name="DefenceAttribute">
+				<amount>70</amount>
+				<attribute>HOLY</attribute>
+			</effect>
+			<effect name="DefenceAttribute">
+				<amount>70</amount>
+				<attribute>DARK</attribute>
+			</effect>
+			<effect name="ExpModify">
+				<amount>30</amount>
+			</effect>
+			<effect name="SpModify">
+				<amount>30</amount>
+			</effect>
+		</effects>
 	</skill>
 	<skill id="39357" toLevel="2" name="+9 Fallen Angel's Ring Box">
 		<!-- Use to obtain a Fallen Angel's Ring enchanted to +9. -->

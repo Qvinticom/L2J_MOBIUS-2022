@@ -1004,6 +1004,8 @@
 		<!-- PA-only item When used. Max HP/MP/CP +30%. P. Atk./M. Atk./P. Def./M. Def. +30%. Atk./Casting Spd. +10%. Speed +20. Attack/Defense Attributes +100. Damage +10%. P./M. Skill Power +10%. XP/SP +30%. Damage Received -10%. and Skill MP Consumption -15% for 30 min. Buffs persist after death. Cooldown 5 min. Does not stack with Art of Seduction and Pa'agrio's Blessing. Cannot be used in Olympiad. -->
 		<set name="icon" val="icon.bm_freya_ice_rose" />
 		<set name="default_action" val="SKILL_REDUCE" />
+		<set name="immediate_effect" val="true" />
+		<set name="reuse_delay" val="300000" />
 		<set name="material" val="PAPER" />
 		<set name="weight" val="1" />
 		<set name="is_tradable" val="false" />
@@ -1011,6 +1013,12 @@
 		<set name="is_depositable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="is_oly_restricted" val="true" />
+		<set name="is_coc_restricted" val="true" />
+		<set name="handler" val="ItemSkills" />
+		<skills>
+			<skill id="39350" level="1" /> <!-- Freya's Ice Rose -->
+		</skills>
 	</item>
 	<item id="80746" name="PA Storm Scroll" type="EtcItem">
 		<!-- PA-only item When hunting monsters. Vitality consumption +150% and XP/SP gain +150%. Buff persist after death. Duration 10 min. Cooldown 9 min. Can only be used when at least 1 Vitality slot is filled. -->
@@ -1027,17 +1035,25 @@
 		<!-- PC cafe-only item When used, All Stats +3, XPSP/ Gain in Vitality mode +30%. Remains even at death. Cooldown 5 minutes. Cannot be used in the Olympiad. -->
 		<set name="icon" val="icon.bm_royal_black_beer" />
 		<set name="default_action" val="SKILL_REDUCE" />
+		<set name="immediate_effect" val="true" />
 		<set name="material" val="PAPER" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_depositable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="is_oly_restricted" val="true" />
+		<set name="is_coc_restricted" val="true" />
+		<set name="handler" val="ItemSkills" />
+		<skills>
+			<skill id="39525" level="1" /> <!-- PA Honey Dark Beer -->
+		</skills>
 	</item>
 	<item id="80748" name="PA Glowing Dragon's Attribute Potion" additionalName="EXP" type="EtcItem">
 		<!-- PA-only item When used. increases Attack Attributes by 70. all Defense Attributes by 70. and XP/SP gain by 30% for 30 min. Buffs persist after death. Cooldown 5 min. Cannot be used in the Olympiad. -->
 		<set name="icon" val="icon.bm_dragon_posion_special" />
 		<set name="default_action" val="SKILL_REDUCE" />
+		<set name="immediate_effect" val="true" />
 		<set name="material" val="PAPER" />
 		<set name="weight" val="1" />
 		<set name="is_tradable" val="false" />
@@ -1045,6 +1061,12 @@
 		<set name="is_depositable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="is_oly_restricted" val="true" />
+		<set name="is_coc_restricted" val="true" />
+		<set name="handler" val="ItemSkills" />
+		<skills>
+			<skill id="39491" level="1" /> <!-- Glowing Dragon's Attribute Potion -->
+		</skills>
 	</item>
 	<item id="80749" name="PA Artifact - P. Atk. (Balance)" type="Armor">
 		<!-- PA-only item 2-hour item An artifact that increases P. Atk. Equipping it in the artifact balance slot increases P. Atk. by 4%. Cannot be enchanted. -->

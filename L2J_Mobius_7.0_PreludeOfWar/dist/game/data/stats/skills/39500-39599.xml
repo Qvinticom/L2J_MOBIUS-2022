@@ -123,8 +123,114 @@
 	<skill id="39514" toLevel="3" name="Fantasia Harmony - Emperor's Special Cocktail">
 		<!-- For $s1, P. Atk. +$s2, M. Atk. +$s3, P. Def. +$s4, M. Def. +$s5, P./M. Critical Rate +$s6, P. Critical Damage +$s7, M. Critical Damage +$s8, Atk. Spd. $s9, Casting Spd. +$s10, Shield Defense and Shield Defense Rate +$s11, Attack Attribute +$s12, Skill Cooldown -$s13, M. Skill MP Consumption -$s14., Received P./ M. Critical Rate -$s15. -->
 		<icon>icon.bm_special_cocktail_of_king_d</icon>
-		<operateType>A1</operateType>
+		<operateType>A2</operateType>
 		<effectPoint>1</effectPoint>
+		<abnormalType>BUFF_SPECIAL_CLASS</abnormalType>
+		<basicProperty>NONE</basicProperty>
+		<abnormalLvl>5</abnormalLvl>
+		<abnormalTime>
+			<value level="1">3600</value>
+			<value level="2">14400</value>
+			<value level="3">28800</value>
+		</abnormalTime>
+		<specialLevel>-2</specialLevel>
+		<magicLvl>-2</magicLvl>
+		<isMagic>22</isMagic>
+		<magicCriticalRate>-5</magicCriticalRate>
+		<targetType>SELF</targetType>
+		<affectScope>SINGLE</affectScope>
+		<stayAfterDeath>true</stayAfterDeath>
+		<irreplacableBuff>true</irreplacableBuff>
+		<blockedInOlympiad>true</blockedInOlympiad>
+		<effects>
+			<effect name="PAtk">
+				<amount>25</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="MAtk">
+				<amount>45</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="PhysicalDefence">
+				<amount>45</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="MagicalDefence">
+				<amount>35</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="CriticalRate">
+				<amount>100</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="MagicCriticalRate">
+				<amount>100</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="CriticalDamage">
+				<amount>85</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="MagicCriticalDamage">
+				<amount>35</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="PhysicalAttackSpeed">
+				<amount>10</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="MagicalAttackSpeed">
+				<amount>15</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="ShieldDefence">
+				<amount>50</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="ShieldDefenceRate">
+				<amount>50</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="DefenceCriticalRate">
+				<amount>-25</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="DefenceMagicCriticalRate">
+				<amount>-25</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="MagicMpCost">
+				<amount>-15</amount>
+				<mode>PER</mode>
+				<magicType>1</magicType>
+			</effect>
+			<effect name="AttackAttributeAdd">
+				<amount>100</amount>
+				<mode>DIFF</mode>
+			</effect>
+			<effect name="Reuse">
+				<amount>-20</amount>
+				<mode>PER</mode>
+				<magicType>1</magicType>
+			</effect>
+			<effect name="Reuse">
+				<amount>-20</amount>
+				<mode>PER</mode>
+				<magicType>0</magicType>
+			</effect>
+			<effect name="Reuse">
+				<amount>-20</amount>
+				<mode>PER</mode>
+				<magicType>22</magicType>
+			</effect>
+			<effect name="DispelBySlotProbability">
+				<dispel>MULTI_BUFF;DANCE_OF_BLADESTORM;SONG_OF_CHAMPION;SONG_OF_EARTH;SONG_OF_HUNTER;SONG_OF_LIFE;SONG_OF_MEDITATION;SONG_OF_RENEWAL;SONG_OF_VENGEANCE;SONG_OF_VITALITY;SONG_OF_WARDING;SONG_OF_WATER;SONG_OF_WIND;DANCE_OF_BERSERKER;DANCE_OF_CONCENTRATION;DANCE_OF_FIRE;DANCE_OF_FURY;DANCE_OF_INSPIRATION;DANCE_OF_MYSTIC;DANCE_OF_SIREN;DANCE_OF_VAMPIRE;DANCE_OF_WARRIOR;SONG_OF_PURIFICATION;WISPERING_OF_BATTLE;SONG_OF_WINDSTORM;MOTION_OF_DEFENCE;INSTINCT;BERSERKER;PA_PD_UP;IMPROVE_SHIELD_RATE_DEFENCE_UP;SHIELD_PROB_UP;SHIELD_DEFENCE_UP;CANCEL_PROB_DOWN;MA_UP_SPECIAL</dispel>
+				<rate>100</rate>
+			</effect>
+			<effect name="BlockAbnormalSlot">
+				<slot>MULTI_BUFF;DANCE_OF_BLADESTORM;SONG_OF_CHAMPION;SONG_OF_EARTH;SONG_OF_HUNTER;SONG_OF_LIFE;SONG_OF_MEDITATION;SONG_OF_RENEWAL;SONG_OF_VENGEANCE;SONG_OF_VITALITY;SONG_OF_WARDING;SONG_OF_WATER;SONG_OF_WIND;DANCE_OF_BERSERKER;DANCE_OF_CONCENTRATION;DANCE_OF_FIRE;DANCE_OF_FURY;DANCE_OF_INSPIRATION;DANCE_OF_MYSTIC;DANCE_OF_SIREN;DANCE_OF_VAMPIRE;DANCE_OF_WARRIOR;SONG_OF_PURIFICATION;WISPERING_OF_BATTLE;SONG_OF_WINDSTORM;MOTION_OF_DEFENCE;INSTINCT;BERSERKER;PA_PD_UP;IMPROVE_SHIELD_RATE_DEFENCE_UP;SHIELD_PROB_UP;SHIELD_DEFENCE_UP;CANCEL_PROB_DOWN;MA_UP_SPECIAL</slot>
+			</effect>
+		</effects>
 	</skill>
 	<skill id="39515" toLevel="1" name="Fantasia Harmony - Ceremony of Chaos">
 		<!-- For 7 minutes, P. Atk. +22%, M. Atk. +40%, P. Def. +45%, M. Def. +15%, P./M. Critical Rate +100%, P. Critical Damage +70%, Atk. Spd. +10%, Casting Spd. +15%, Shield Defense Rate +7 minutes0, Shield Def. +7 minutes1, Skill Cooldown -7 minutes2, All Skills MP Consumption -7 minutes3. -->
@@ -145,8 +251,66 @@
 	<skill id="39517" toLevel="3" name="Fantasia Melody - Emperor's Special Cocktail">
 		<!-- For $s1, PvP Damage +$s2, Received PvP Damage -$s3, Attack Attribute +$s4, Speed +$s5, HP/MP Recovery Bonus +$s6. Effect remains even after death, and cannot be forcefully eliminated. -->
 		<icon>icon.bm_special_cocktail_of_king_d</icon>
-		<operateType>A1</operateType>
+		<operateType>A2</operateType>
 		<effectPoint>1</effectPoint>
+		<abnormalTime>
+			<value level="1">3600</value>
+			<value level="2">14400</value>
+			<value level="3">28800</value>
+		</abnormalTime>
+		<abnormalLvl>2</abnormalLvl>
+		<abnormalType>DITTY</abnormalType>
+		<basicProperty>NONE</basicProperty>
+		<specialLevel>-2</specialLevel>
+		<isMagic>22</isMagic>
+		<magicLvl>-2</magicLvl>
+		<effectRange>-1</effectRange>
+		<targetType>SELF</targetType>
+		<affectScope>SINGLE</affectScope>
+		<stayAfterDeath>true</stayAfterDeath>
+		<irreplacableBuff>true</irreplacableBuff>
+		<blockedInOlympiad>true</blockedInOlympiad>
+		<effects>
+			<effect name="AttackAttributeAdd">
+				<amount>10</amount>
+			</effect>
+			<effect name="Speed">
+				<amount>10</amount>
+				<mode>DIFF</mode>
+			</effect>
+			<effect name="HpRegen">
+				<amount>10</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="MpRegen">
+				<amount>10</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="PvpPhysicalAttackDamageBonus">
+				<amount>10</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="PvpMagicalSkillDamageBonus">
+				<amount>10</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="PvpPhysicalSkillDamageBonus">
+				<amount>10</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="PvpPhysicalAttackDefenceBonus">
+				<amount>10</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="PvpMagicalSkillDefenceBonus">
+				<amount>10</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="PvpPhysicalSkillDefenceBonus">
+				<amount>10</amount>
+				<mode>PER</mode>
+			</effect>
+		</effects>
 	</skill>
 	<skill id="39518" toLevel="1" name="Nevit's Treasure Chest">
 		<operateType>A1</operateType>
@@ -185,16 +349,92 @@
 	<skill id="39525" toLevel="1" name="PA Honey Dark Beer">
 		<!-- All basic stats +3, XP/SP Gain in Vitality mode +30%. Buff persists through death. Cooldown is 5 minutes. Cannot be used in the Olympiad. -->
 		<icon>icon.bm_royal_black_beer</icon>
-		<operateType>A1</operateType>
-		<isMagic>4</isMagic>
+		<operateType>A2</operateType>
+		<isMagic>2</isMagic>
 		<reuseDelay>300000</reuseDelay>
+		<coolTime>500</coolTime>
+		<abnormalType>HONEY_BEER</abnormalType>
+		<abnormalLvl>1</abnormalLvl>
+		<abnormalTime>1800</abnormalTime>
+		<stayAfterDeath>true</stayAfterDeath>
+		<blockedInOlympiad>true</blockedInOlympiad> <!-- Unconfirmed -->
+		<targetType>SELF</targetType>
+		<affectScope>SINGLE</affectScope>
+		<effects>
+			<effect name="StatUp">
+				<amount>3</amount>
+				<stat>STR</stat>
+			</effect>
+			<effect name="StatUp">
+				<amount>3</amount>
+				<stat>CON</stat>
+			</effect>
+			<effect name="StatUp">
+				<amount>3</amount>
+				<stat>DEX</stat>
+			</effect>
+			<effect name="StatUp">
+				<amount>3</amount>
+				<stat>INT</stat>
+			</effect>
+			<effect name="StatUp">
+				<amount>3</amount>
+				<stat>WIT</stat>
+			</effect>
+			<effect name="StatUp">
+				<amount>3</amount>
+				<stat>MEN</stat>
+			</effect>
+			<effect name="VitalityExpRate">
+				<amount>30</amount>
+				<mode>PER</mode>
+			</effect>
+		</effects>
 	</skill>
 	<skill id="39526" toLevel="1" name="Honey Dark Beer">
 		<!-- All basic stats +3, XP/SP Gain in Vitality mode +30%. Buff persists through death. Cooldown is 5 minutes. Cannot be used in the Olympiad. -->
 		<icon>icon.bm_royal_black_beer</icon>
-		<operateType>A1</operateType>
-		<isMagic>4</isMagic>
+		<operateType>A2</operateType>
+		<isMagic>2</isMagic>
 		<reuseDelay>300000</reuseDelay>
+		<coolTime>500</coolTime>
+		<abnormalType>HONEY_BEER</abnormalType>
+		<abnormalLvl>1</abnormalLvl>
+		<abnormalTime>1800</abnormalTime>
+		<stayAfterDeath>true</stayAfterDeath>
+		<blockedInOlympiad>true</blockedInOlympiad> <!-- Unconfirmed -->
+		<targetType>SELF</targetType>
+		<affectScope>SINGLE</affectScope>
+		<effects>
+			<effect name="StatUp">
+				<amount>3</amount>
+				<stat>STR</stat>
+			</effect>
+			<effect name="StatUp">
+				<amount>3</amount>
+				<stat>CON</stat>
+			</effect>
+			<effect name="StatUp">
+				<amount>3</amount>
+				<stat>DEX</stat>
+			</effect>
+			<effect name="StatUp">
+				<amount>3</amount>
+				<stat>INT</stat>
+			</effect>
+			<effect name="StatUp">
+				<amount>3</amount>
+				<stat>WIT</stat>
+			</effect>
+			<effect name="StatUp">
+				<amount>3</amount>
+				<stat>MEN</stat>
+			</effect>
+			<effect name="VitalityExpRate">
+				<amount>30</amount>
+				<mode>PER</mode>
+			</effect>
+		</effects>
 	</skill>
 	<skill id="39527" toLevel="1" name="Enchant Scroll: Blessed Bracelet">
 		<operateType>A1</operateType>
@@ -246,6 +486,11 @@
 		<!-- Maintains Vitality when you have it in the inventory. -->
 		<icon>icon.ev_L2_soul_ore</icon>
 		<operateType>P</operateType>
+		<effects>
+			<effect name="VitalityPointsRate">
+				<amount>-100</amount>
+			</effect>
+		</effects>
 	</skill>
 	<skill id="39535" toLevel="1" name="Scroll of Escape: Herphah">
 		<operateType>A1</operateType>

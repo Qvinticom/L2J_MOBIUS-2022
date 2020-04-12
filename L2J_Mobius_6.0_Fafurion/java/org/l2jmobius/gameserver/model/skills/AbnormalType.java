@@ -552,7 +552,8 @@ public enum AbnormalType
 	MAPHR_AURA(599),
 	SAYHA_AURA(600),
 	EVAS_DEBUFF(601),
-	RIGHT_SIDESTEP(602);
+	RIGHT_SIDESTEP(602),
+	GLOWING_DRAGON_POTION(604);
 	
 	private int _clientId;
 	

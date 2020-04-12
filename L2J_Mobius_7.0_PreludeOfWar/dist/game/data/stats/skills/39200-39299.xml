@@ -40,11 +40,54 @@
 	<skill id="39205" toLevel="1" name="Glowing Dragon's Attribute Potion">
 		<!-- For 30 min., Attack Attribute +70, all Attribute Resistance +70, and Acquired XP/ SP +30%. Buff effects persist even after death. -->
 		<icon>icon.bm_dragon_posion_special</icon>
-		<operateType>A1</operateType>
-		<isMagic>4</isMagic>
+		<operateType>A2</operateType>
+		<isMagic>2</isMagic>
 		<hitTime>1000</hitTime>
+		<coolTime>500</coolTime>
 		<reuseDelay>300000</reuseDelay>
+		<abnormalType>GLOWING_DRAGON_POTION</abnormalType>
+		<abnormalLvl>1</abnormalLvl>
 		<effectPoint>1</effectPoint>
+		<abnormalTime>1800</abnormalTime>
+		<stayAfterDeath>true</stayAfterDeath>
+		<blockedInOlympiad>true</blockedInOlympiad> <!-- Unconfirmed -->
+		<targetType>SELF</targetType>
+		<affectScope>SINGLE</affectScope>
+		<effects>
+			<effect name="AttackAttributeAdd">
+				<amount>70</amount>
+			</effect>
+			<effect name="DefenceAttribute">
+				<amount>70</amount>
+				<attribute>FIRE</attribute>
+			</effect>
+			<effect name="DefenceAttribute">
+				<amount>70</amount>
+				<attribute>WATER</attribute>
+			</effect>
+			<effect name="DefenceAttribute">
+				<amount>70</amount>
+				<attribute>EARTH</attribute>
+			</effect>
+			<effect name="DefenceAttribute">
+				<amount>70</amount>
+				<attribute>WIND</attribute>
+			</effect>
+			<effect name="DefenceAttribute">
+				<amount>70</amount>
+				<attribute>HOLY</attribute>
+			</effect>
+			<effect name="DefenceAttribute">
+				<amount>70</amount>
+				<attribute>DARK</attribute>
+			</effect>
+			<effect name="ExpModify">
+				<amount>30</amount>
+			</effect>
+			<effect name="SpModify">
+				<amount>30</amount>
+			</effect>
+		</effects>
 	</skill>
 	<skill id="39206" toLevel="1" name="Royal Red Save Ticket Box">
 		<operateType>A1</operateType>
@@ -827,6 +870,14 @@
 		<!-- If stored in the inventory, increases Acquired XP/ SP by 20%. -->
 		<icon>icon.skill19226</icon>
 		<operateType>P</operateType>
+		<effects>
+			<effect name="ExpModify">
+				<amount>20</amount>
+			</effect>
+			<effect name="SpModify">
+				<amount>20</amount>
+			</effect>
+		</effects>
 	</skill>
 	<skill id="39244" toLevel="2" name="Deton's Gift Bundle">
 		<operateType>A1</operateType>
