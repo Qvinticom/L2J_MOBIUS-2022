@@ -1315,7 +1315,7 @@
 			</spoil>
 		</dropLists>
 	</npc>
-	<npc id="20761" level="76" type="Monster" name="Pytan">
+	<npc id="20761" level="85" type="Monster" name="Pytan">
 		<parameters>
 			<param name="MoveAroundSocial" value="60" />
 			<param name="MoveAroundSocial1" value="60" />
@@ -1332,29 +1332,33 @@
 		</parameters>
 		<race>DEMONIC</race>
 		<sex>FEMALE</sex>
-		<acquire exp="97341" sp="2920" />
+		<acquire exp="1978928" sp="59368" />
 		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
-			<vitals hp="1276.0265485714" hpRegen="8.5" mp="1679.73" mpRegen="3" />
-			<attack physical="734.253971" magical="455.81844" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
-			<defence physical="264.6823909" magical="213.05139" />
+			<vitals hp="11089.05225" hpRegen="8.5" mp="3081.939" mpRegen="3" />
+			<attack physical="1188.872595" magical="811.845865" random="30" critical="4.75" accuracy="4.75" attackSpeed="250" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="361.78814" magical="264.74086" />
 			<speed>
 				<walk ground="80" />
 				<run ground="174" />
 			</speed>
 			<hitTime>500</hitTime>
 		</stats>
-		<status undying="false" canBeSown="true" />
+		<status attackable="true" />
+		<collision>
+			<radius normal="21" />
+			<height normal="64" />
+		</collision>
 		<skillList>
-			<skill id="4002" level="6" /> <!-- NPC HP Drain -->
 			<skill id="4416" level="9" /> <!-- Demons -->
-			<skill id="4408" level="16" /> <!-- HP Increase (8x) -->
-			<skill id="4410" level="17" /> <!-- Very Strong P. Atk. -->
-			<skill id="4411" level="12" /> <!-- Slightly Strong M. Atk. -->
-			<skill id="4412" level="15" /> <!-- Strong P. Def. -->
-			<skill id="4278" level="1" /> <!-- Dark Attack -->
+			<skill id="4408" level="12" /> <!-- HP Increase (4x) -->
+			<skill id="4410" level="13" /> <!-- Slightly Strong P. Atk. -->
+			<skill id="4411" level="13" /> <!-- Slightly Strong M. Atk. -->
+			<skill id="4412" level="12" /> <!-- Slightly Strong P. Def. -->
+			<skill id="4413" level="5" /> <!-- Very Weak M. Def. -->
 			<skill id="4438" level="2" /> <!-- Greater Sleep Resistance -->
-			<skill id="4276" level="2" /> <!-- Bow Vulnerability -->
-			<skill id="4458" level="2" /> <!-- Spear Vulnerability -->
+			<skill id="4276" level="3" /> <!-- Bow Vulnerability -->
+			<skill id="4458" level="1" /> <!-- Spear Vulnerability -->
+			<skill id="4278" level="1" /> <!-- Dark Attack -->
 		</skillList>
 		<shots shotChance="30" spiritChance="30" />
 		<exCrtEffect>false</exCrtEffect>
@@ -1364,39 +1368,20 @@
 				<clan>MALRUK</clan>
 			</clanList>
 		</ai>
-		<collision>
-			<radius normal="21" />
-			<height normal="64" />
-		</collision>
 		<dropLists>
 			<drop>
-				<item id="358" min="1" max="1" chance="0.03" /> <!-- Blue Wolf Breastplate -->
-				<item id="2380" min="1" max="1" chance="0.03" /> <!-- Blue Wolf Gaiters -->
-				<item id="79" min="1" max="1" chance="0.003" /> <!-- Damascus -->
-				<item id="287" min="1" max="1" chance="0.003" /> <!-- Bow of Peril -->
-				<item id="57" min="4121" max="9613" chance="70" /> <!-- Adena -->
-				<item id="1864" min="4" max="12" chance="17.68" /> <!-- Stem -->
-				<item id="4080" min="1" max="1" chance="6.521" /> <!-- Blue Wolf Gaiter Material -->
-				<item id="1878" min="2" max="6" chance="5.738" /> <!-- Durable Braid -->
-				<item id="4078" min="1" max="1" chance="4.567" /> <!-- Blue Wolf Breastplate Part -->
-				<item id="1865" min="9" max="27" chance="4.002" /> <!-- Varnish -->
-				<item id="1895" min="3" max="9" chance="2.879" /> <!-- Metallic Fiber -->
-				<item id="4044" min="1" max="1" chance="2.334" /> <!-- Thons -->
-				<item id="4121" min="1" max="1" chance="1.392" /> <!-- Bow of Peril Shaft -->
-				<item id="4114" min="1" max="1" chance="1.313" /> <!-- Damascus Sword Blade -->
-				<item id="4041" min="1" max="1" chance="0.75" /> <!-- Mold Hardener -->
-				<item id="948" min="1" max="1" chance="0.3" /> <!-- Scroll: Enchant Armor (B-grade) -->
-				<item id="4966" min="1" max="1" chance="0.075" /> <!-- Recipe: Keshanberk (60%) -->
-				<item id="4968" min="1" max="1" chance="0.075" /> <!-- Recipe: Kris (60%) -->
-				<item id="90012" min="1" max="1" chance="0.075" /> <!-- Common Life Stone -->
+				<item id="8685" min="1" max="1" chance="0.003" /> <!-- Sobekk's Hurricane -->
+				<item id="57" min="3538" max="8255" chance="70" /> <!-- Adena -->
+				<item id="2133" min="1" max="1" chance="1.087" /> <!-- Gemstone (A-grade) -->
+				<item id="8719" min="1" max="1" chance="0.75" /> <!-- Sobekk's Hurricane Edge -->
 			</drop>
 			<spoil>
-				<item id="4960" min="1" max="1" chance="56.84" /> <!-- Recipe: Sealed Zubei's Gauntlets (60%) -->
-				<item id="4941" min="1" max="1" chance="23.19" /> <!-- Recipe: Zubei's Gaiters (60%) -->
+				<item id="8719" min="1" max="1" chance="1.9715" /> <!-- Sobekk's Hurricane Edge -->
+				<item id="8704" min="1" max="1" chance="0.3" /> <!-- Recipe: Sobekk's Hurricane (60%) -->
 			</spoil>
 		</dropLists>
 	</npc>
-	<npc id="20762" level="76" type="Monster" name="Pytan Knight">
+	<npc id="20762" level="84" type="Monster" name="Pytan Knight">
 		<parameters>
 			<param name="MoveAroundSocial" value="80" />
 			<param name="MoveAroundSocial1" value="80" />
@@ -1410,31 +1395,32 @@
 		</parameters>
 		<race>UNDEAD</race>
 		<sex>MALE</sex>
-		<equipment rhand="1472" /> <!-- rhand: Dreadbane -->
-		<acquire exp="185031" sp="5550" />
+		<equipment rhand="1472" /> 
+		<acquire exp="2024296" sp="60729" />
 		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
-			<vitals hp="1276.0265485714" hpRegen="8.5" mp="1679.73" mpRegen="3" />
-			<attack physical="587.4360727" magical="441.25696" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
-			<defence physical="314.99765" magical="209.54692" />
+			<vitals hp="21960.51075" hpRegen="8.5" mp="3024.147" mpRegen="3" />
+			<attack physical="1144.731301" magical="781.7030834" random="30" critical="4.75" accuracy="4.75" attackSpeed="250" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="357.86723" magical="261.87171" />
 			<speed>
 				<walk ground="100" />
 				<run ground="174" />
 			</speed>
-			<hitTime>450</hitTime>
 		</stats>
-		<status undying="false" canBeSown="true" />
+		<status attackable="true" />
+		<collision>
+			<radius normal="15" />
+			<height normal="45" />
+		</collision>
 		<skillList>
 			<skill id="4097" level="6" /> <!-- NPC Chant of Life -->
 			<skill id="4416" level="1" /> <!-- Undead -->
-			<skill id="4408" level="16" /> <!-- HP Increase (8x) -->
-			<skill id="4410" level="17" /> <!-- Very Strong P. Atk. -->
-			<skill id="4411" level="10" /> <!-- Slightly Weak M. Atk. -->
-			<skill id="4412" level="14" /> <!-- Strong P. Def. -->
-			<skill id="4413" level="10" /> <!-- Slightly Weak M. Def. -->
-			<skill id="4275" level="2" /> <!-- Holy Attack Vulnerability -->
+			<skill id="4408" level="10" /> <!-- HP Increase (2x) -->
+			<skill id="4410" level="12" /> <!-- Slightly Strong P. Atk. -->
+			<skill id="4411" level="12" /> <!-- Slightly Strong M. Atk. -->
+			<skill id="4413" level="5" /> <!-- Very Weak M. Def. -->
+			<skill id="4276" level="3" /> <!-- Bow Vulnerability -->
+			<skill id="4458" level="1" /> <!-- Spear Vulnerability -->
 			<skill id="4278" level="1" /> <!-- Dark Attack -->
-			<skill id="4276" level="2" /> <!-- Bow Vulnerability -->
-			<skill id="4458" level="2" /> <!-- Spear Vulnerability -->
 		</skillList>
 		<shots shotChance="30" spiritChance="30" />
 		<exCrtEffect>false</exCrtEffect>
@@ -1444,10 +1430,6 @@
 				<clan>MALRUK</clan>
 			</clanList>
 		</ai>
-		<collision>
-			<radius normal="15" />
-			<height normal="45" />
-		</collision>
 	</npc>
 	<npc id="20763" level="40" type="Monster" name="Lord of the Plains">
 		<!-- L2wiki: https://l2wiki.com/classic/Lord_of_the_Plains -->
