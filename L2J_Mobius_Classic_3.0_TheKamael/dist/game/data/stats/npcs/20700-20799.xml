@@ -1124,29 +1124,26 @@
 		</parameters>
 		<race>UNDEAD</race>
 		<sex>MALE</sex>
-		<equipment rhand="123" lhand="945" /> <!-- rhand: Saber lhand: Skeleton Buckler -->
-		<acquire exp="24931" sp="747" />
+		<equipment rhand="123" lhand="945" />
+		<acquire exp="29087" sp="873" attributeExp="7" />
 		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
-			<vitals hp="563.14676333333" hpRegen="5.5" mp="784.995" mpRegen="2.1" />
-			<attack physical="264.0417091" magical="198.33688" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
-			<defence physical="215.229322" magical="143.17771" shield="98" shieldRate="20" />
+			<vitals hp="4341.747" hpRegen="5.5" mp="800.961" mpRegen="2.1" />
+			<attack physical="290.44588" magical="198.33688" random="30" critical="4.75" accuracy="4.75" attackSpeed="250" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="195.66302" magical="143.17771" />
+			<attribute>
+				<attack type="earth" value="20" />
+				<defence fire="20" water="20" wind="-32" earth="53" holy="20" dark="20" />
+			</attribute>
 			<speed>
 				<walk ground="60" />
 				<run ground="174" />
 			</speed>
 			<hitTime>300</hitTime>
 		</stats>
-		<status undying="false" canBeSown="true" />
+		<status attackable="true" />
 		<skillList>
 			<skill id="4032" level="4" /> <!-- NPC Strike -->
 			<skill id="4416" level="1" /> <!-- Undead -->
-			<skill id="4408" level="11" /> <!-- HP Increase (3x) -->
-			<skill id="4410" level="16" /> <!-- Very Strong P. Atk. -->
-			<skill id="4411" level="10" /> <!-- Slightly Weak M. Atk. -->
-			<skill id="4412" level="12" /> <!-- Slightly Strong P. Def. -->
-			<skill id="4413" level="12" /> <!-- Slightly Strong M. Def. -->
-			<skill id="4275" level="2" /> <!-- Holy Attack Vulnerability -->
-			<skill id="4278" level="1" /> <!-- Dark Attack -->
 		</skillList>
 		<shots shotChance="30" spiritChance="30" />
 		<exCrtEffect>false</exCrtEffect>
@@ -1161,21 +1158,21 @@
 		</collision>
 		<dropLists>
 			<drop>
-				<item id="853" min="1" max="1" chance="0.75" /> <!-- Earring of Protection -->
-				<item id="884" min="1" max="1" chance="0.75" /> <!-- Ring of Protection -->
+				<item id="853" min="1" max="1" chance="0.3" /> <!-- Earring of Protection -->
+				<item id="884" min="1" max="1" chance="0.3" /> <!-- Ring of Protection -->
 				<item id="916" min="1" max="1" chance="0.3" /> <!-- Necklace of Protection -->
-				<item id="57" min="5778" max="13500" chance="70" /> <!-- Adena -->
-				<item id="1872" min="12" max="36" chance="14.25" /> <!-- Animal Bone -->
-				<item id="1877" min="1" max="1" chance="10.07" /> <!-- Adamantite Nugget -->
-				<item id="2226" min="1" max="1" chance="10.03" /> <!-- Recipe: Mithril Gauntlets -->
-				<item id="1913" min="2" max="6" chance="7.68" /> <!-- Necklace of Protection Gemstone -->
-				<item id="1912" min="5" max="15" chance="5.455" /> <!-- Ring of Protection Gemstone -->
-				<item id="1911" min="9" max="27" chance="2.133" /> <!-- Earring of Protection Gemstone -->
-				<item id="2337" min="1" max="1" chance="0.75" /> <!-- Recipe: Stick of Eternity -->
+				<item id="57" min="1635" max="3819" chance="70" /> <!-- Adena -->
+				<item id="1872" min="3" max="9" chance="16.12" /> <!-- Animal Bone -->
+				<item id="1912" min="1" max="3" chance="7.734" /> <!-- Ring of Protection Gemstone -->
+				<item id="1911" min="1" max="3" chance="3.487" /> <!-- Earring of Protection Gemstone -->
+				<item id="2226" min="1" max="1" chance="2.953" /> <!-- Recipe: Mithril Gauntlets -->
+				<item id="1877" min="1" max="1" chance="2.87" /> <!-- Adamantite Nugget -->
+				<item id="1913" min="2" max="6" chance="2.166" /> <!-- Necklace of Protection Gemstone -->
+				<item id="2337" min="1" max="1" chance="0.3" /> <!-- Recipe: Stick of Eternity -->
 			</drop>
 			<spoil>
-				<item id="2946" min="1" max="1" chance="75.53" /> <!-- Plated Leather Glove Design -->
-				<item id="2167" min="1" max="1" chance="71.18" /> <!-- Recipe: Ring of Ages -->
+				<item id="2946" min="1" max="1" chance="63.46" /> <!-- Plated Leather Glove Design -->
+				<item id="2167" min="1" max="1" chance="58.43" /> <!-- Recipe: Ring of Ages -->
 			</spoil>
 		</dropLists>
 	</npc>
