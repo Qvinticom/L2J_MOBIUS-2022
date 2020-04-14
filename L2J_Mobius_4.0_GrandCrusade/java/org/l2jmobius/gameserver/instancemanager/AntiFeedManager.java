@@ -19,15 +19,17 @@ package org.l2jmobius.gameserver.instancemanager;
 import java.util.Map;
 import java.util.concurrent.ConcurrentHashMap;
 import java.util.concurrent.atomic.AtomicInteger;
+import java.util.logging.Logger;
 
 import org.l2jmobius.Config;
-import org.l2jmobius.gameserver.model.World;
 import org.l2jmobius.gameserver.model.actor.Creature;
 import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
 import org.l2jmobius.gameserver.network.GameClient;
 
 public class AntiFeedManager
 {
+	protected static final Logger LOGGER_ACCOUNTING = Logger.getLogger("accounting");
+	
 	public static final int GAME_ID = 0;
 	public static final int OLYMPIAD_ID = 1;
 	public static final int TVT_ID = 2;
@@ -157,23 +159,12 @@ public class AntiFeedManager
 		
 		final Integer addrHash = client.getConnectionAddress().hashCode();
 		final AtomicInteger connectionCount = event.computeIfAbsent(addrHash, k -> new AtomicInteger());
-		if (!Config.DUALBOX_COUNT_OFFLINE_TRADERS)
-		{
-			final String address = client.getConnectionAddress().getHostAddress();
-			for (PlayerInstance player : World.getInstance().getPlayers())
-			{
-				if (((player.getClient() == null) || player.getClient().isDetached()) && player.getIPAddress().equals(address))
-				{
-					connectionCount.decrementAndGet();
-				}
-			}
-		}
-		
 		if ((connectionCount.get() + 1) <= (max + Config.DUALBOX_CHECK_WHITELIST.getOrDefault(addrHash, 0)))
 		{
 			connectionCount.incrementAndGet();
 			return true;
 		}
+		
 		return false;
 	}
 	
