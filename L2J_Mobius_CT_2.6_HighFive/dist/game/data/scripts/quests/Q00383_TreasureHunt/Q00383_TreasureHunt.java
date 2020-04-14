@@ -94,7 +94,7 @@ public class Q00383_TreasureHunt extends Quest
 				if (hasQuestItems(player, PIRATES_TREASURE_MAP))
 				{
 					giveAdena(player, 1000, false);
-					takeItems(player, PIRATES_TREASURE_MAP, -1);
+					takeItems(player, PIRATES_TREASURE_MAP, 1);
 					htmltext = event;
 				}
 				break;
@@ -109,7 +109,7 @@ public class Q00383_TreasureHunt extends Quest
 				if (hasQuestItems(player, PIRATES_TREASURE_MAP))
 				{
 					qs.startQuest();
-					takeItems(player, PIRATES_TREASURE_MAP, -1);
+					takeItems(player, PIRATES_TREASURE_MAP, 1);
 					htmltext = event;
 				}
 				break;
