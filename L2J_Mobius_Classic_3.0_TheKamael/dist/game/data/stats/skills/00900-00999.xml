@@ -376,7 +376,9 @@
 		<affectScope>POINT_BLANK</affectScope>
 		<affectObject>NOT_FRIEND</affectObject>
 		<effects>
-			<effect name="BlockActions" />
+			<effect name="BlockActions">
+				<allowedSkills>35016;35045;18103</allowedSkills>
+			</effect>
 		</effects>
 		<pveEffects>
 			<effect name="PhysicalAttack">
@@ -891,7 +893,7 @@
 		<effects>
 			<effect name="DispelByCategory">
 				<slot>DEBUFF</slot>
-				<rate>80</rate>
+				<rate>50</rate>
 				<max>3</max>
 			</effect>
 			<effect name="HealEffect">
@@ -899,7 +901,7 @@
 				<mode>PER</mode>
 			</effect>
 			<effect name="ResistAbnormalByCategory">
-				<amount>-50</amount>
+				<amount>-80</amount>
 				<slot>DEBUFF</slot>
 			</effect>
 		</effects>
@@ -927,7 +929,6 @@
 			<condition name="EquipWeapon">
 				<weaponType>
 					<item>DUAL</item>
-					<item>DUALBLUNT</item>
 				</weaponType>
 			</condition>
 		</conditions>
@@ -1312,14 +1313,14 @@
 			<value level="1">15</value>
 			<value level="2">20</value>
 			<value level="3">25</value>
-			<value level="4">25</value> <!-- FIXME: AUTO GENERATED LEVEL -->
+			<value level="4">30</value>
 		</abnormalTime>
 		<effectPoint>679</effectPoint>
 		<magicLvl>
 			<value level="1">51</value>
 			<value level="2">61</value>
 			<value level="3">71</value>
-			<value level="4">71</value> <!-- FIXME: AUTO GENERATED LEVEL -->
+			<value level="4">76</value>
 		</magicLvl>
 		<operateType>A2</operateType>
 		<mpConsume>38</mpConsume>
@@ -1598,10 +1599,6 @@
 				<criticalChance>30</criticalChance>
 				<chanceBoost>600</chanceBoost>
 				<overHit>true</overHit>
-			</effect>
-			<effect name="Lethal">
-				<fullLethal>0.1</fullLethal>
-				<halfLethal>8</halfLethal>
 			</effect>
 		</effects>
 	</skill>
@@ -3815,7 +3812,9 @@
 					<value level="8">928</value>
 				</power>
 			</effect>
-			<effect name="BlockActions" />
+			<effect name="BlockActions">
+				<allowedSkills>35016;35045;18103</allowedSkills>
+			</effect>
 		</effects>
 	</skill>
 	<skill id="974" toLevel="7" name="Stun Shot">
@@ -3870,7 +3869,9 @@
 					<value level="7">2784</value>
 				</power>
 			</effect>
-			<effect name="BlockActions" />
+			<effect name="BlockActions">
+				<allowedSkills>35016;35045;18103</allowedSkills>
+			</effect>
 			<effect name="TargetCancel">
 				<chance>40</chance>
 			</effect>
@@ -3891,26 +3892,34 @@
 		</effectPoint>
 		<effectRange>1250</effectRange>
 		<attributeType>WATER</attributeType>
-		<attributeValue>20</attributeValue>
+		<attributeValue>
+			<value level="1">25</value>
+			<value level="2">25</value>
+			<value level="3">30</value>
+			<value level="4">35</value>
+			<value level="5">40</value>
+			<value level="6">45</value>
+			<value level="7">50</value>
+		</attributeValue>
 		<hitTime>4000</hitTime>
 		<isMagic>1</isMagic> <!-- Magic Skill -->
 		<magicLvl>
-			<value level="1">20</value>
-			<value level="2">20</value>
-			<value level="3">23</value>
-			<value level="4">25</value>
-			<value level="5">28</value>
-			<value level="6">30</value>
-			<value level="7">33</value>
+			<value level="1">70</value>
+			<value level="2">80</value>
+			<value level="3">81</value>
+			<value level="4">82</value>
+			<value level="5">83</value>
+			<value level="6">84</value>
+			<value level="7">85</value>
 		</magicLvl>
 		<mpConsume>
-			<value level="1">18</value>
-			<value level="2">20</value>
-			<value level="3">22</value>
-			<value level="4">23</value>
-			<value level="5">25</value>
-			<value level="6">27</value>
-			<value level="7">29</value>
+			<value level="1">58</value>
+			<value level="2">58</value>
+			<value level="3">58</value>
+			<value level="4">59</value>
+			<value level="5">59</value>
+			<value level="6">60</value>
+			<value level="7">60</value>
 		</mpConsume>
 		<mpInitialConsume>15</mpInitialConsume>
 		<operateType>A1</operateType>
@@ -3921,13 +3930,13 @@
 		<effects>
 			<effect name="MagicalAttackRange">
 				<power>
-					<value level="1">23</value>
-					<value level="2">26</value>
-					<value level="3">29</value>
-					<value level="4">32</value>
-					<value level="5">35</value>
-					<value level="6">38</value>
-					<value level="7">42</value>
+					<value level="1">102</value>
+					<value level="2">116</value>
+					<value level="3">117</value>
+					<value level="4">119</value>
+					<value level="5">120</value>
+					<value level="6">121</value>
+					<value level="7">122</value>
 				</power>
 				<shieldDefPercent>40</shieldDefPercent>
 			</effect>
@@ -4127,7 +4136,9 @@
 				<power>1</power>
 				<overHit>true</overHit>
 			</effect>
-			<effect name="BlockActions" />
+			<effect name="BlockActions">
+				<allowedSkills>35016;35045;18103</allowedSkills>
+			</effect>
 		</effects>
 	</skill>
 	<skill id="979" toLevel="6" name="Aggression">
@@ -4264,7 +4275,9 @@
 		<targetType>ENEMY_ONLY</targetType>
 		<affectScope>SINGLE</affectScope>
 		<effects>
-			<effect name="BlockActions" />
+			<effect name="BlockActions">
+				<allowedSkills>35016;35045;18103</allowedSkills>
+			</effect>
 			<effect name="DefenceTrait">
 				<SLEEP>100</SLEEP>
 			</effect>
@@ -4575,10 +4588,6 @@
 		<conditions>
 			<condition name="EquipWeapon">
 				<weaponType>
-					<item>SWORD</item>
-					<item>BLUNT</item>
-					<item>DAGGER</item>
-					<item>POLE</item>
 					<item>DUAL</item>
 				</weaponType>
 			</condition>
@@ -4781,10 +4790,10 @@
 		<!-- Attacks the enemy by throwing a dagger with 3488 Power added to P. Atk. and Speed -80% for 10 sec. Requires a dagger to be equipped. -->
 		<icon>icon.skill0991</icon>
 		<abnormalLvl>3</abnormalLvl>
-		<abnormalTime>30</abnormalTime>
+		<abnormalTime>10</abnormalTime>
 		<abnormalType>SPEED_DOWN</abnormalType>
 		<activateRate>80</activateRate>
-		<basicProperty>MAGIC</basicProperty>
+		<basicProperty>PHYSICAL</basicProperty>
 		<castRange>300</castRange>
 		<effectPoint>-345</effectPoint>
 		<effectRange>450</effectRange>
@@ -4796,7 +4805,6 @@
 		<nextAction>ATTACK</nextAction>
 		<operateType>A2</operateType>
 		<reuseDelay>45000</reuseDelay>
-		<staticReuse>true</staticReuse>
 		<magicCriticalRate>5</magicCriticalRate>
 		<targetType>ENEMY</targetType>
 		<affectScope>SINGLE</affectScope>
@@ -4804,7 +4812,6 @@
 			<condition name="EquipWeapon">
 				<weaponType>
 					<item>DAGGER</item>
-					<item>DUALDAGGER</item>
 				</weaponType>
 			</condition>
 		</conditions>
@@ -4876,7 +4883,7 @@
 				<maxAttackerLevel>100</maxAttackerLevel>
 				<targetType>SELF</targetType>
 				<minDamage>1</minDamage>
-				<chance>20</chance>
+				<chance>15</chance>
 			</effect>
 			<effect name="TriggerSkillByAttack">
 				<!-- Focus Sonic -->
@@ -4894,7 +4901,7 @@
 				</skillLevel>
 				<allowWeapons>DUAL,SWORD,BLUNT</allowWeapons>
 				<minDamage>1</minDamage>
-				<chance>40</chance>
+				<chance>30</chance>
 				<targetType>SELF</targetType>
 				<attackerType>Creature</attackerType>
 				<minAttackerLevel>1</minAttackerLevel>
@@ -5061,7 +5068,7 @@
 				<power>4224</power>
 			</effect>
 			<effect name="BlockActions">
-				<allowedSkills>35016</allowedSkills>
+				<allowedSkills>35016;35045;18103</allowedSkills>
 			</effect>
 		</effects>
 	</skill>

@@ -1086,16 +1086,7 @@
 			<value level="7">74</value>
 			<value level="8">78</value>
 		</magicLvl>
-		<mpConsume>
-			<value level="1">50</value>
-			<value level="2">55</value>
-			<value level="3">60</value>
-			<value level="4">65</value>
-			<value level="5">70</value>
-			<value level="6">75</value>
-			<value level="7">80</value>
-			<value level="8">85</value>
-		</mpConsume>
+		<mpConsume>50</mpConsume>
 		<operateType>A2</operateType>
 		<isDebuff>true</isDebuff>
 		<reuseDelay>60000</reuseDelay>
@@ -1113,7 +1104,9 @@
 		<effects>
 			<effect name="TeleportToTarget" />
 			<effect name="TargetCancel" />
-			<effect name="BlockActions" />
+			<effect name="BlockActions">
+				<allowedSkills>35016;35045;18103</allowedSkills>
+			</effect>
 		</effects>
 	</skill>
 	<skill id="822" toLevel="3" name="Repair Golem">
@@ -1689,7 +1682,7 @@
 		<affectScope>SINGLE</affectScope>
 		<effects>
 			<effect name="DispelBySlot">
-				<dispel>TRANSFORM,-1</dispel>
+				<dispel>TRANSFORM,-1;SPECIAL_RIDE,1</dispel>
 			</effect>
 		</effects>
 	</skill>
@@ -2707,7 +2700,9 @@
 					<value level="11">2784</value>
 				</power>
 			</effect>
-			<effect name="BlockActions" />
+			<effect name="BlockActions">
+				<allowedSkills>35016;35045;18103</allowedSkills>
+			</effect>
 		</effects>
 	</skill>
 	<skill id="887" toLevel="11" name="Sky Clutch">

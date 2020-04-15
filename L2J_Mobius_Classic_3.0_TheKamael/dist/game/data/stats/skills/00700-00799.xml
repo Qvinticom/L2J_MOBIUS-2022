@@ -1295,7 +1295,9 @@
 				<power>1479</power>
 				<overHit>true</overHit>
 			</effect>
-			<effect name="BlockActions" />
+			<effect name="BlockActions">
+				<allowedSkills>35016;35045;18103</allowedSkills>
+			</effect>
 		</effects>
 	</skill>
 	<skill id="733" toLevel="1" name="Kechi Double Cutter">
@@ -1930,7 +1932,9 @@
 				</power>
 				<overHit>true</overHit>
 			</effect>
-			<effect name="BlockActions" />
+			<effect name="BlockActions">
+				<allowedSkills>35016;35045;18103</allowedSkills>
+			</effect>
 		</effects>
 	</skill>
 	<skill id="750" toLevel="1" name="Oel Mahum Ultimate Defense">
@@ -2367,18 +2371,21 @@
 	<skill id="762" toLevel="1" name="Insane Crusher">
 		<!-- Unleashes a powerful strike with 8409 Power added to P. Atk. and Dark Curse to surrounding enemies when rage reaches its peak. Cancels at least one of the enemy's buffs, and temporarily decreases Max CP significantly. Decreases Debuff Resistance, and effectiveness of receiving HP recovery. Requires a sword or blunt weapon. Ignores shield defense. Critical and Over-hit are possible. -->
 		<icon>icon.skill0762</icon>
-		<abnormalLvl>1</abnormalLvl>
+		<abnormalLvl>2</abnormalLvl>
 		<abnormalTime>60</abnormalTime>
 		<abnormalType>TOUCH_OF_DEATH</abnormalType>
-		<activateRate>40</activateRate>
+		<abnormalVisualEffect>REVENGE_AURA</abnormalVisualEffect>
+		<activateRate>90</activateRate>
 		<affectLimit>5-12</affectLimit>
 		<affectRange>300</affectRange>
 		<basicProperty>PHYSICAL</basicProperty>
 		<coolTime>700</coolTime>
-		<effectPoint>-4100</effectPoint>
+		<effectPoint>-1357</effectPoint>
 		<hitTime>1300</hitTime>
 		<isDebuff>true</isDebuff>
 		<lvlBonusRate>20</lvlBonusRate>
+		<attributeType>DARK</attributeType>
+		<attributeValue>20</attributeValue>
 		<magicLvl>80</magicLvl>
 		<mpConsume>80</mpConsume>
 		<operateType>A2</operateType>
@@ -2514,7 +2521,6 @@
 			<condition name="EquipWeapon">
 				<weaponType>
 					<item>DUAL</item>
-					<item>DUALBLUNT</item>
 				</weaponType>
 			</condition>
 		</conditions>
@@ -2720,7 +2726,6 @@
 				<power>8049</power>
 				<overHit>true</overHit>
 				<criticalChance>15</criticalChance>
-				<pDefMod>0.9</pDefMod>
 			</effect>
 			<effect name="CallSkill">
 				<skillId>23298</skillId> <!-- Flame Hawk -->
@@ -2758,7 +2763,6 @@
 				<power>7043</power>
 				<overHit>true</overHit>
 				<criticalChance>15</criticalChance>
-				<pDefMod>0.9</pDefMod>
 			</effect>
 			<effect name="CallSkill">
 				<skillId>23299</skillId> <!-- Arrow Rain -->
@@ -2797,7 +2801,6 @@
 				<power>8452</power>
 				<overHit>true</overHit>
 				<criticalChance>15</criticalChance>
-				<pDefMod>0.9</pDefMod>
 			</effect>
 			<effect name="CallSkill">
 				<skillId>23300</skillId> <!-- Ghost Piercing -->
@@ -2939,11 +2942,10 @@
 	<skill id="777" toLevel="1" name="Demolition Impact">
 		<!-- Unleashes a shock of destruction to attack enemy with 5980 Power added to P. Atk. For 10 sec. P. Def. -30%, M. Def. -30%. Requires a sword/ blunt weapon/ two-handed sword/ two-handed blunt weapon. Critical. Over-hit. -->
 		<icon>icon.skill0777</icon>
-		<abnormalLvl>1</abnormalLvl>
+		<abnormalLvl>4</abnormalLvl>
 		<abnormalTime>10</abnormalTime>
-		<abnormalType>STUN</abnormalType>
-		<abnormalVisualEffect>STUN</abnormalVisualEffect>
-		<activateRate>40</activateRate>
+		<abnormalType>PD_DOWN</abnormalType>
+		<activateRate>70</activateRate>
 		<affectRange>500</affectRange>
 		<hitTime>1200</hitTime>
 		<castRange>150</castRange>
@@ -2955,7 +2957,6 @@
 		<mpConsume>240</mpConsume>
 		<operateType>A2</operateType>
 		<reuseDelay>75000</reuseDelay>
-		<trait>SHOCK</trait>
 		<magicCriticalRate>5</magicCriticalRate>
 		<targetType>ENEMY_ONLY</targetType>
 		<affectScope>SINGLE</affectScope>
@@ -3605,7 +3606,7 @@
 				</power>
 			</effect>
 			<effect name="BlockActions">
-				<allowedSkills>35016</allowedSkills>
+				<allowedSkills>35016;35045;18103</allowedSkills>
 			</effect>
 			<effect name="PhysicalDefence" fromLevel="4" toLevel="8" fromSubLevel="2001" toSubLevel="2030">
 				<amount>

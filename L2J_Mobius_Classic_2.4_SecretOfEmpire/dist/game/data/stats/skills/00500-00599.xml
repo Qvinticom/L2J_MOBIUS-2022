@@ -1726,7 +1726,6 @@
 			<condition name="EquipWeapon">
 				<weaponType>
 					<item>DUAL</item>
-					<item>DUALBLUNT</item>
 				</weaponType>
 			</condition>
 		</conditions>
@@ -2699,7 +2698,9 @@
 				<overHit>true</overHit>
 				<criticalChance>15</criticalChance>
 			</effect>
-			<effect name="BlockActions" />
+			<effect name="BlockActions">
+				<allowedSkills>35016;35045;18103</allowedSkills>
+			</effect>
 		</effects>
 	</skill>
 	<skill id="575" toLevel="4" name="Steel Cutter">
@@ -3007,10 +3008,6 @@
 				</power>
 				<overHit>true</overHit>
 				<chanceBoost>200</chanceBoost>
-			</effect>
-			<effect name="Lethal">
-				<fullLethal>0</fullLethal>
-				<halfLethal>10</halfLethal>
 			</effect>
 		</effects>
 	</skill>

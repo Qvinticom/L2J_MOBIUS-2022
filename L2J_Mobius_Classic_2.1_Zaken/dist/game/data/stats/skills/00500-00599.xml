@@ -1383,8 +1383,8 @@
 		<abnormalLvl>
 			<value level="1">1</value>
 			<value level="2">2</value>
-			<value level="3">2</value> <!-- FIXME: AUTO GENERATED LEVEL -->
-			<value level="4">2</value> <!-- FIXME: AUTO GENERATED LEVEL -->
+			<value level="3">3</value>
+			<value level="4">4</value>
 		</abnormalLvl>
 		<abnormalTime>30</abnormalTime>
 		<abnormalType>REAL_TARGET</abnormalType>
@@ -1402,8 +1402,8 @@
 		<magicLvl>
 			<value level="1">78</value>
 			<value level="2">80</value>
-			<value level="3">80</value> <!-- FIXME: AUTO GENERATED LEVEL -->
-			<value level="4">80</value> <!-- FIXME: AUTO GENERATED LEVEL -->
+			<value level="3">80</value>
+			<value level="4">80</value>
 		</magicLvl>
 		<mpConsume>
 			<value level="1">55</value>
@@ -1420,8 +1420,8 @@
 				<BOW>
 					<value level="1">-12</value>
 					<value level="2">-16</value>
-					<value level="3">-16</value> <!-- FIXME: AUTO GENERATED LEVEL -->
-					<value level="4">-16</value> <!-- FIXME: AUTO GENERATED LEVEL -->
+					<value level="3">-20</value>
+					<value level="4">-24</value>
 				</BOW>
 			</effect>
 		</effects>
@@ -1718,7 +1718,6 @@
 			<condition name="EquipWeapon">
 				<weaponType>
 					<item>DUAL</item>
-					<item>DUALBLUNT</item>
 				</weaponType>
 			</condition>
 		</conditions>
@@ -2672,7 +2671,9 @@
 				<overHit>true</overHit>
 				<criticalChance>15</criticalChance>
 			</effect>
-			<effect name="BlockActions" />
+			<effect name="BlockActions">
+				<allowedSkills>35016;35045;18103</allowedSkills>
+			</effect>
 		</effects>
 	</skill>
 	<skill id="575" toLevel="4" name="Steel Cutter">
@@ -2980,10 +2981,6 @@
 				</power>
 				<overHit>true</overHit>
 				<chanceBoost>200</chanceBoost>
-			</effect>
-			<effect name="Lethal">
-				<fullLethal>0</fullLethal>
-				<halfLethal>10</halfLethal>
 			</effect>
 		</effects>
 	</skill>
