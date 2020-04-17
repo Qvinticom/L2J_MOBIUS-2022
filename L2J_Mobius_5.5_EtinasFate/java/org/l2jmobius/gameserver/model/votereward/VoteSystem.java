@@ -50,7 +50,7 @@ public abstract class VoteSystem implements Runnable
 	
 	public static void initialize()
 	{
-		if (Config.ALLOW_NETWORK_VOTE_REWARD || Config.ALLOW_TOPZONE_VOTE_REWARD || Config.ALLOW_HOPZONE_VOTE_REWARD || Config.ALLOW_L2TOP_VOTE_REWARD)
+		if (Config.ALLOW_NETWORK_VOTE_REWARD || Config.ALLOW_TOPZONE_VOTE_REWARD || Config.ALLOW_HOPZONE_VOTE_REWARD || Config.ALLOW_L2TOP_VOTE_REWARD || Config.ALLOW_L2JBRASIL_VOTE_REWARD)
 		{
 			LOGGER.info("VoteSystem: Initialized.");
 			if (Config.ALLOW_NETWORK_VOTE_REWARD)
@@ -88,6 +88,15 @@ public abstract class VoteSystem implements Runnable
 			else
 			{
 				LOGGER.info("VoteSystem: L2top.co votes disabled.");
+			}
+			if (Config.ALLOW_L2JBRASIL_VOTE_REWARD)
+			{
+				voteSystems.add(new L2jbrasil(Config.L2JBRASIL_VOTES_DIFFERENCE, Config.ALLOW_L2JBRASIL_GAME_SERVER_REPORT, Config.L2JBRASIL_DUALBOXES_ALLOWED, Config.L2JBRASIL_REWARD, Config.L2JBRASIL_REWARD_CHECK_TIME));
+				LOGGER.info("VoteSystem: L2JBrasil votes enabled.");
+			}
+			else
+			{
+				LOGGER.info("VoteSystem: L2JBrasil votes disabled.");
 			}
 		}
 		else

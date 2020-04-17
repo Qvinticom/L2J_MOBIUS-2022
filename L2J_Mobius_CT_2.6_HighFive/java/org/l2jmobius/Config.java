@@ -1361,6 +1361,13 @@ public class Config
 	public static Map<Integer, Integer> L2TOP_REWARD = new HashMap<>();
 	public static int L2TOP_DUALBOXES_ALLOWED;
 	public static boolean ALLOW_L2TOP_GAME_SERVER_REPORT;
+	public static boolean ALLOW_L2JBRASIL_VOTE_REWARD;
+	public static String L2JBRASIL_SERVER_LINK;
+	public static int L2JBRASIL_VOTES_DIFFERENCE;
+	public static int L2JBRASIL_REWARD_CHECK_TIME;
+	public static Map<Integer, Integer> L2JBRASIL_REWARD = new HashMap<>();
+	public static int L2JBRASIL_DUALBOXES_ALLOWED;
+	public static boolean ALLOW_L2JBRASIL_GAME_SERVER_REPORT;
 	
 	/**
 	 * This class initializes all global variables for configuration.<br>
@@ -3304,6 +3311,19 @@ public class Config
 			}
 			L2TOP_DUALBOXES_ALLOWED = VoteReward.getInt("L2topDualboxesAllowed", 1);
 			ALLOW_L2TOP_GAME_SERVER_REPORT = VoteReward.getBoolean("AllowL2topGameServerReport", false);
+			ALLOW_L2JBRASIL_VOTE_REWARD = VoteReward.getBoolean("AllowL2JBrasilVoteReward", false);
+			L2JBRASIL_SERVER_LINK = VoteReward.getString("L2JBrasilServerLink", "");
+			L2JBRASIL_VOTES_DIFFERENCE = VoteReward.getInt("L2JBrasilVotesDifference", 5);
+			L2JBRASIL_REWARD_CHECK_TIME = VoteReward.getInt("L2JBrasilRewardCheckTime", 5);
+			String L2JBRASIL_SMALL_REWARD_VALUE = VoteReward.getString("L2JBrasilReward", "57,100000000;");
+			String[] l2jbrasil_small_reward_splitted_1 = L2JBRASIL_SMALL_REWARD_VALUE.split(";");
+			for (String i : l2jbrasil_small_reward_splitted_1)
+			{
+				String[] l2jbrasil_small_reward_splitted_2 = i.split(",");
+				HOPZONE_REWARD.put(Integer.parseInt(l2jbrasil_small_reward_splitted_2[0]), Integer.parseInt(l2jbrasil_small_reward_splitted_2[1]));
+			}
+			L2JBRASIL_DUALBOXES_ALLOWED = VoteReward.getInt("L2JBrasilDualboxesAllowed", 1);
+			ALLOW_L2JBRASIL_GAME_SERVER_REPORT = VoteReward.getBoolean("AllowL2JBrasilGameServerReport", false);
 			
 			// Load WalkerBotProtection config file (if exists)
 			final PropertiesParser WalkerBotProtection = new PropertiesParser(CUSTOM_WALKER_BOT_PROTECTION_CONFIG_FILE);
