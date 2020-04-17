@@ -225,7 +225,7 @@ public class SummonAI extends PlayableAI implements Runnable
 		
 		if (_isDefending)
 		{
-			defendAttack(attacker);
+			allServitorsDefend(attacker);
 		}
 		else
 		{
@@ -240,11 +240,24 @@ public class SummonAI extends PlayableAI implements Runnable
 		
 		if (_isDefending)
 		{
-			defendAttack(attacker);
+			allServitorsDefend(attacker);
 		}
 		else
 		{
 			avoidAttack(attacker);
+		}
+	}
+	
+	private void allServitorsDefend(Creature attacker)
+	{
+		final Creature Owner = getActor().getOwner();
+		if ((Owner != null) && Owner.getActingPlayer().hasServitors())
+		{
+			Owner.getActingPlayer().getServitors().values().stream().filter(summon -> ((SummonAI) summon.getAI()).isDefending()).forEach(summon -> ((SummonAI) summon.getAI()).defendAttack(attacker));
+		}
+		else
+		{
+			defendAttack(attacker);
 		}
 	}
 	
@@ -273,9 +286,9 @@ public class SummonAI extends PlayableAI implements Runnable
 		}
 		
 		final Summon summon = getActor();
-		if ((summon.getOwner() != null) && (summon.getOwner() != attacker) && !summon.isMoving() && summon.canAttack(attacker, false) && summon.getOwner().isInsideRadius3D(_actor, 2 * AVOID_RADIUS))
+		if ((summon.getOwner() != null) && (summon.getOwner() != attacker) && !summon.isMoving() && summon.canAttack(attacker, false))
 		{
-			summon.doAutoAttack(attacker);
+			summon.doAttack(attacker);
 		}
 	}
 	
