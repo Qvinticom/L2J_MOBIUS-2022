@@ -86,8 +86,8 @@
 			<value level="2">70</value>
 		</magicLvl>
 		<mpConsume>
-			<value level="1">58</value>
-			<value level="2">65</value>
+			<value level="1">46</value>
+			<value level="2">52</value>
 		</mpConsume>
 		<mpInitialConsume>
 			<value level="1">12</value>
@@ -140,11 +140,11 @@
 			<value level="5">72</value>
 		</magicLvl>
 		<mpConsume>
-			<value level="1">44</value>
-			<value level="2">49</value>
-			<value level="3">54</value>
-			<value level="4">61</value>
-			<value level="5">67</value>
+			<value level="1">33</value>
+			<value level="2">36</value>
+			<value level="3">40</value>
+			<value level="4">47</value>
+			<value level="5">52</value>
 		</mpConsume>
 		<mpInitialConsume>
 			<value level="1">11</value>
@@ -208,18 +208,18 @@
 			<value level="12">78</value>
 		</magicLvl>
 		<mpConsume>
-			<value level="1">184</value>
-			<value level="2">189</value>
-			<value level="3">195</value>
-			<value level="4">201</value>
-			<value level="5">208</value>
-			<value level="6">214</value>
-			<value level="7">222</value>
-			<value level="8">228</value>
-			<value level="9">233</value>
-			<value level="10">239</value>
-			<value level="11">263</value>
-			<value level="12">267</value>
+			<value level="1">147</value>
+			<value level="2">151</value>
+			<value level="3">156</value>
+			<value level="4">160</value>
+			<value level="5">166</value>
+			<value level="6">171</value>
+			<value level="7">177</value>
+			<value level="8">182</value>
+			<value level="9">186</value>
+			<value level="10">191</value>
+			<value level="11">215</value>
+			<value level="12">218</value>
 		</mpConsume>
 		<mpInitialConsume>
 			<value level="1">37</value>
@@ -239,7 +239,7 @@
 		<reuseDelay>5000</reuseDelay>
 		<magicCriticalRate>5</magicCriticalRate>
 		<targetType>SELF</targetType>
-		<affectScope>PARTY_PLEDGE</affectScope>
+		<affectScope>PLEDGE</affectScope>
 		<affectObject>FRIEND</affectObject>
 		<effects>
 			<effect name="Cp">
@@ -297,18 +297,18 @@
 			<value level="12">78</value>
 		</magicLvl>
 		<mpConsume>
-			<value level="1">88</value>
-			<value level="2">92</value>
-			<value level="3">95</value>
-			<value level="4">100</value>
-			<value level="5">104</value>
-			<value level="6">108</value>
-			<value level="7">112</value>
-			<value level="8">114</value>
-			<value level="9">117</value>
-			<value level="10">120</value>
-			<value level="11">132</value>
-			<value level="12">136</value>
+			<value level="1">69</value>
+			<value level="2">72</value>
+			<value level="3">75</value>
+			<value level="4">79</value>
+			<value level="5">83</value>
+			<value level="6">86</value>
+			<value level="7">89</value>
+			<value level="8">91</value>
+			<value level="9">93</value>
+			<value level="10">96</value>
+			<value level="11">107</value>
+			<value level="12">111</value>
 		</mpConsume>
 		<mpInitialConsume>
 			<value level="1">19</value>
@@ -342,8 +342,8 @@
 					<value level="8">817</value>
 					<value level="9">839</value>
 					<value level="10">858</value>
-					<value level="11">839</value>
-					<value level="12">858</value>
+					<value level="11">863</value>
+					<value level="12">871</value>
 				</amount>
 				<mode>DIFF</mode>
 			</effect>
@@ -555,7 +555,7 @@
 					<value level="3">8</value>
 					<value level="4">9</value>
 				</amount>
-				<chance>30</chance>
+				<chance>80</chance>
 			</effect>
 		</effects>
 	</skill>
@@ -1394,7 +1394,7 @@
 		<hitTime>5000</hitTime>
 		<isMagic>1</isMagic> <!-- Magic Skill -->
 		<magicLvl>76</magicLvl>
-		<mpConsume>123</mpConsume>
+		<mpConsume>98</mpConsume>
 		<mpInitialConsume>25</mpInitialConsume>
 		<operateType>A1</operateType>
 		<reuseDelay>30000</reuseDelay>
@@ -1420,10 +1420,11 @@
 		<effectRange>1100</effectRange>
 		<hitTime>4000</hitTime>
 		<isDebuff>true</isDebuff>
+		<canBeDispelled>false</canBeDispelled>
 		<isMagic>1</isMagic> <!-- Magic Skill -->
 		<lvlBonusRate>30</lvlBonusRate>
 		<magicLvl>77</magicLvl>
-		<mpConsume>70</mpConsume>
+		<mpConsume>56</mpConsume>
 		<mpInitialConsume>14</mpInitialConsume>
 		<operateType>A2</operateType>
 		<reuseDelay>30000</reuseDelay>
@@ -1452,7 +1453,7 @@
 		<isMagic>1</isMagic> <!-- Magic Skill -->
 		<lvlBonusRate>30</lvlBonusRate>
 		<magicLvl>78</magicLvl>
-		<mpConsume>72</mpConsume>
+		<mpConsume>57</mpConsume>
 		<mpInitialConsume>15</mpInitialConsume>
 		<operateType>A2</operateType>
 		<reuseDelay>30000</reuseDelay>
@@ -1731,7 +1732,7 @@
 		<isMagic>1</isMagic> <!-- Magic Skill -->
 		<lvlBonusRate>2</lvlBonusRate>
 		<magicLvl>76</magicLvl>
-		<mpConsume>116</mpConsume>
+		<mpConsume>84</mpConsume>
 		<mpInitialConsume>21</mpInitialConsume>
 		<operateType>A2</operateType>
 		<reuseDelay>15000</reuseDelay>
@@ -1740,11 +1741,11 @@
 		<affectScope>SINGLE</affectScope>
 		<effects>
 			<effect name="MagicalAttack">
-				<power>126</power>
+				<power>139</power>
 			</effect>
 			<effect name="ManaDamOverTime">
 				<power>12</power>
-				<ticks>1</ticks>
+				<ticks>5</ticks>
 			</effect>
 			<effect name="Accuracy">
 				<amount>-6</amount>
@@ -1774,7 +1775,7 @@
 		<isMagic>1</isMagic> <!-- Magic Skill -->
 		<lvlBonusRate>2</lvlBonusRate>
 		<magicLvl>76</magicLvl>
-		<mpConsume>116</mpConsume>
+		<mpConsume>95</mpConsume>
 		<mpInitialConsume>21</mpInitialConsume>
 		<operateType>A2</operateType>
 		<reuseDelay>15000</reuseDelay>
@@ -2052,6 +2053,14 @@
 				<mode>PER</mode>
 			</effect>
 			<effect name="MAtk">
+				<amount>10</amount>
+				<mode>PER</mode>
+			</effect>			
+			<effect name="PhysicalDefence">
+				<amount>10</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="MagicalDefence">
 				<amount>10</amount>
 				<mode>PER</mode>
 			</effect>
@@ -2644,7 +2653,7 @@
 		<hitTime>2500</hitTime>
 		<isMagic>1</isMagic> <!-- Magic Skill -->
 		<magicLvl>77</magicLvl>
-		<mpConsume>280</mpConsume>
+		<mpConsume>224</mpConsume>
 		<mpInitialConsume>56</mpInitialConsume>
 		<operateType>A2</operateType>
 		<reuseDelay>5000</reuseDelay>
@@ -2791,7 +2800,7 @@
 		<basicProperty>NONE</basicProperty>
 		<magicCriticalRate>5</magicCriticalRate>
 		<targetType>SELF</targetType>
-		<affectScope>PARTY_PLEDGE</affectScope>
+		<affectScope>PLEDGE</affectScope>
 		<affectObject>FRIEND</affectObject>
 		<effects>
 			<effect name="DispelBySlot">
@@ -2829,7 +2838,7 @@
 		<basicProperty>NONE</basicProperty>
 		<magicCriticalRate>5</magicCriticalRate>
 		<targetType>SELF</targetType>
-		<affectScope>PARTY_PLEDGE</affectScope>
+		<affectScope>PLEDGE</affectScope>
 		<affectObject>FRIEND</affectObject>
 		<effects>
 			<effect name="DispelBySlot">
@@ -2864,7 +2873,7 @@
 		<isMagic>1</isMagic> <!-- Magic Skill -->
 		<lvlBonusRate>20</lvlBonusRate>
 		<magicLvl>79</magicLvl>
-		<mpConsume>107</mpConsume>
+		<mpConsume>85</mpConsume>
 		<mpInitialConsume>22</mpInitialConsume>
 		<operateType>A2</operateType>
 		<reuseDelay>30000</reuseDelay>
@@ -2921,7 +2930,7 @@
 		<isMagic>1</isMagic> <!-- Magic Skill -->
 		<lvlBonusRate>20</lvlBonusRate>
 		<magicLvl>77</magicLvl>
-		<mpConsume>105</mpConsume>
+		<mpConsume>84</mpConsume>
 		<mpInitialConsume>21</mpInitialConsume>
 		<operateType>A2</operateType>
 		<reuseDelay>15000</reuseDelay>
@@ -3132,6 +3141,7 @@
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>120</abnormalTime>
 		<abnormalType>HERO_BUFF</abnormalType>
+		<abnormalVisualEffect>DIVINITY</abnormalVisualEffect>
 		<affectRange>1000</affectRange>
 		<blockedInOlympiad>true</blockedInOlympiad>
 		<effectPoint>676</effectPoint>
@@ -3173,6 +3183,7 @@
 		<abnormalLvl>2</abnormalLvl>
 		<abnormalTime>15</abnormalTime>
 		<abnormalType>HERO_DEBUFF</abnormalType>
+		<abnormalVisualEffect>SU_SUMCROSS</abnormalVisualEffect>
 		<activateRate>80</activateRate>
 		<affectRange>1000</affectRange>
 		<basicProperty>MAGIC</basicProperty>
@@ -3385,7 +3396,7 @@
 			<value level="3">66</value>
 			<value level="4">70</value>
 			<value level="5">74</value>
-			<value level="6">74</value> <!-- FIXME: AUTO GENERATED LEVEL -->
+			<value level="6">76</value>
 		</magicLvl>
 		<mpConsume>
 			<value level="1">64</value>
@@ -3400,7 +3411,7 @@
 			<value level="3">19</value>
 			<value level="4">20</value>
 			<value level="5">21</value>
-			<value level="6">21</value> <!-- FIXME: AUTO GENERATED LEVEL -->
+			<value level="6">21</value>
 		</mpInitialConsume>
 		<operateType>A2</operateType>
 		<reuseDelay>75000</reuseDelay>
@@ -3465,16 +3476,6 @@
 		<affectScope>RANGE</affectScope>
 		<affectObject>NOT_FRIEND</affectObject>
 		<effects>
-			<effect name="MagicalAttack">
-				<power>
-					<value level="1">33</value>
-					<value level="2">36</value>
-					<value level="3">39</value>
-					<value level="4">41</value>
-					<value level="5">44</value>
-					<value level="6">46</value>
-				</power>
-			</effect>
 			<effect name="MagicalDefence">
 				<amount>-23</amount>
 				<mode>PER</mode>
@@ -3712,8 +3713,8 @@
 			<value level="8">70</value>
 			<value level="9">72</value>
 			<value level="10">74</value>
-			<value level="11">74</value> <!-- FIXME: AUTO GENERATED LEVEL -->
-			<value level="12">74</value> <!-- FIXME: AUTO GENERATED LEVEL -->
+			<value level="11">76</value>
+			<value level="12">78</value>
 		</magicLvl>
 		<mpConsume>
 			<value level="1">52</value>
@@ -4182,7 +4183,9 @@
 		<targetType>ENEMY_ONLY</targetType>
 		<affectScope>SINGLE</affectScope>
 		<effects>
-			<effect name="BlockActions" />
+			<effect name="BlockActions">
+				<allowedSkills>35016;35045;18103</allowedSkills>
+			</effect>
 			<effect name="DefenceTrait">
 				<SLEEP>100</SLEEP>
 			</effect>
@@ -4311,18 +4314,18 @@
 			<value level="12">78</value>
 		</magicLvl>
 		<mpConsume>
-			<value level="1">52</value>
-			<value level="2">54</value>
-			<value level="3">55</value>
-			<value level="4">58</value>
-			<value level="5">60</value>
-			<value level="6">62</value>
-			<value level="7">64</value>
-			<value level="8">65</value>
-			<value level="9">67</value>
-			<value level="10">69</value>
-			<value level="11">75</value>
-			<value level="12">79</value>
+			<value level="1">41</value>
+			<value level="2">43</value>
+			<value level="3">44</value>
+			<value level="4">46</value>
+			<value level="5">48</value>
+			<value level="6">49</value>
+			<value level="7">51</value>
+			<value level="8">52</value>
+			<value level="9">53</value>
+			<value level="10">55</value>
+			<value level="11">61</value>
+			<value level="12">64</value>
 		</mpConsume>
 		<mpInitialConsume>
 			<value level="1">11</value>
@@ -4405,21 +4408,21 @@
 		<effects>
 			<effect name="MagicMpCost">
 				<amount>
-					<value level="1">-4</value>
-					<value level="2">-7</value>
-					<value level="3">-10</value>
-				</amount>
-				<mode>PER</mode>
-				<magicType>1</magicType>
-			</effect>
-			<effect name="MagicMpCost">
-				<amount>
 					<value level="1">-10</value>
 					<value level="2">-15</value>
 					<value level="3">-20</value>
 				</amount>
 				<mode>PER</mode>
 				<magicType>0</magicType>
+			</effect>
+			<effect name="MagicMpCost">
+				<amount>
+					<value level="1">-4</value>
+					<value level="2">-7</value>
+					<value level="3">-10</value>
+				</amount>
+				<mode>PER</mode>
+				<magicType>1</magicType>
 			</effect>
 			<effect name="MagicMpCost">
 				<amount>

@@ -421,7 +421,7 @@
 		<effectRange>1100</effectRange>
 		<hitTime>4000</hitTime>
 		<isMagic>1</isMagic> <!-- Magic Skill -->
-		<itemConsumeCount>100</itemConsumeCount>
+		<itemConsumeCount>40</itemConsumeCount>
 		<itemConsumeId>3031</itemConsumeId> <!-- Spirit Ore -->
 		<magicLvl>77</magicLvl>
 		<mpConsume>58</mpConsume>
@@ -453,7 +453,7 @@
 		<itemConsumeCount>200</itemConsumeCount>
 		<itemConsumeId>3031</itemConsumeId> <!-- Spirit Ore -->
 		<magicLvl>79</magicLvl>
-		<mpConsume>87</mpConsume>
+		<mpConsume>69</mpConsume>
 		<mpInitialConsume>18</mpInitialConsume>
 		<operateType>A2</operateType>
 		<reuseDelay>3600000</reuseDelay>
@@ -740,7 +740,7 @@
 		<basicProperty>NONE</basicProperty>
 		<magicCriticalRate>5</magicCriticalRate>
 		<targetType>SELF</targetType>
-		<affectScope>PARTY_PLEDGE</affectScope>
+		<affectScope>PLEDGE</affectScope>
 		<affectObject>FRIEND</affectObject>
 		<effects>
 			<effect name="ResistDispelByCategory">
@@ -765,15 +765,15 @@
 		<hitTime>2500</hitTime>
 		<isMagic>1</isMagic> <!-- Magic Skill -->
 		<magicLvl>79</magicLvl>
-		<mpConsume>228</mpConsume>
-		<mpInitialConsume>56</mpInitialConsume>
+		<mpConsume>80</mpConsume>
+		<mpInitialConsume>25</mpInitialConsume>
 		<operateType>A2</operateType>
 		<reuseDelay>10000</reuseDelay>
 		<basicProperty>NONE</basicProperty>
 		<magicCriticalRate>5</magicCriticalRate>
 		<coolTime>500</coolTime>
 		<targetType>SELF</targetType>
-		<affectScope>PARTY_PLEDGE</affectScope>
+		<affectScope>PLEDGE</affectScope>
 		<affectObject>FRIEND</affectObject>
 		<effects>
 			<effect name="CpHealPercent">
@@ -1163,7 +1163,7 @@
 	<skill id="1427" toLevel="1" name="Flames of Invincibility">
 		<!-- Calls down a blessing of flames on nearby clan members to make them invincible. Consumes 100 Spirit Ore. -->
 		<icon>icon.skill1427</icon>
-		<abnormalLvl>1</abnormalLvl>
+		<abnormalLvl>3</abnormalLvl>
 		<abnormalTime>30</abnormalTime>
 		<abnormalType>INVINCIBILITY</abnormalType>
 		<abnormalVisualEffect>INVINCIBILITY</abnormalVisualEffect>
@@ -1172,7 +1172,7 @@
 		<hitTime>5000</hitTime>
 		<isMagic>1</isMagic> <!-- Magic Skill -->
 		<itemConsumeCount>100</itemConsumeCount>
-		<itemConsumeId>3031</itemConsumeId> <!-- Magic Symbol -->
+		<itemConsumeId>3031</itemConsumeId> <!-- Spirit Ore -->
 		<magicLvl>80</magicLvl>
 		<mpConsume>73</mpConsume>
 		<mpInitialConsume>36</mpInitialConsume>
@@ -3180,10 +3180,10 @@
 		<hitTime>3000</hitTime>
 		<isMagic>1</isMagic> <!-- Magic Skill -->
 		<magicLvl>79</magicLvl>
-		<mpConsume>180</mpConsume>
+		<mpConsume>142</mpConsume>
 		<mpInitialConsume>38</mpInitialConsume>
 		<operateType>A2</operateType>
-		<reuseDelay>3000</reuseDelay>
+		<reuseDelay>150000</reuseDelay>
 		<basicProperty>NONE</basicProperty>
 		<magicCriticalRate>5</magicCriticalRate>
 		<targetType>TARGET</targetType>
@@ -3246,10 +3246,7 @@
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>10</abnormalTime>
 		<abnormalType>NORMAL_ATTACK_BLOCK</abnormalType>
-		<activateRate>
-			<value fromLevel="1" toLevel="7">80</value>
-			<value fromLevel="6" toLevel="7" fromSubLevel="1001" toSubLevel="1030">{base + base / 100 * subIndex}</value>
-		</activateRate>
+		<activateRate>80</activateRate>
 		<affectLimit>10-10</affectLimit>
 		<affectRange>200</affectRange>
 		<basicProperty>MAGIC</basicProperty>
@@ -4600,7 +4597,7 @@
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>10</abnormalTime>
 		<abnormalType>ULTIMATE_DEBUFF</abnormalType>
-		<activateRate>100</activateRate>
+		<activateRate>80</activateRate>
 		<affectLimit>10-10</affectLimit>
 		<affectRange>300</affectRange>
 		<basicProperty>MAGIC</basicProperty>
@@ -4616,7 +4613,7 @@
 		<operateType>A2</operateType>
 		<reuseDelay>60000</reuseDelay>
 		<magicCriticalRate>5</magicCriticalRate>
-		<trait>DERANGEMENT</trait>
+		<trait>DEATH</trait>
 		<targetType>SELF</targetType>
 		<affectScope>POINT_BLANK</affectScope>
 		<affectObject>NOT_FRIEND</affectObject>
