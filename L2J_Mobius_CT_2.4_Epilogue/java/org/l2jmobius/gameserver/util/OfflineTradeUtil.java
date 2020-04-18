@@ -20,12 +20,12 @@ import java.util.logging.Logger;
 
 import org.l2jmobius.Config;
 import org.l2jmobius.gameserver.data.sql.impl.OfflineTraderTable;
+import org.l2jmobius.gameserver.instancemanager.AntiFeedManager;
 import org.l2jmobius.gameserver.model.World;
 import org.l2jmobius.gameserver.model.actor.Summon;
 import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
 import org.l2jmobius.gameserver.model.olympiad.Olympiad;
 import org.l2jmobius.gameserver.model.zone.ZoneId;
-import org.l2jmobius.gameserver.network.Disconnection;
 import org.l2jmobius.gameserver.network.GameClient;
 
 /**
@@ -104,13 +104,10 @@ public class OfflineTradeUtil
 		World.OFFLINE_TRADE_COUNT++;
 		
 		final GameClient client = player.getClient();
-		if (Config.DUALBOX_COUNT_OFFLINE_TRADERS)
+		client.close(true);
+		if (!Config.DUALBOX_COUNT_OFFLINE_TRADERS)
 		{
-			client.close(true);
-		}
-		else
-		{
-			Disconnection.of(client, player).defaultSequence(false);
+			AntiFeedManager.getInstance().onDisconnect(client);
 		}
 		client.setDetached(true);
 		
@@ -122,9 +119,9 @@ public class OfflineTradeUtil
 		if (pet != null)
 		{
 			pet.setRestoreSummon(true);
-			
 			pet.unSummon(player);
 			pet = player.getSummon();
+			
 			// Dead pet wasn't unsummoned, broadcast npcinfo changes (pet will be without owner name - means owner offline)
 			if (pet != null)
 			{
