@@ -45,7 +45,7 @@ public class RequestFriendInvite extends GameClientPacket
 		final PlayerInstance friend = World.getInstance().getPlayer(_name);
 		
 		// can't use friend invite for locating invisible characters
-		if ((friend == null) || friend.isOnline() || friend.getAppearance().isInvisible())
+		if ((friend == null) || !friend.isOnline() || friend.getAppearance().isInvisible())
 		{
 			// Target is not found in the game.
 			player.sendPacket(SystemMessageId.THE_USER_WHO_REQUESTED_TO_BECOME_FRIENDS_IS_NOT_FOUND_IN_THE_GAME);
