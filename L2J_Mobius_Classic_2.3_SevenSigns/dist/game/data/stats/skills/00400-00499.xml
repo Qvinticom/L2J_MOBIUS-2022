@@ -2927,26 +2927,22 @@
 			<value level="3">37</value>
 		</mpConsume>
 		<operateType>A1</operateType>
-		<reuseDelay>600000</reuseDelay>
+		<reuseDelay>
+			<value level="1">600000</value>
+			<value level="2">420000</value>
+			<value level="3">300000</value>
+		</reuseDelay>
 		<magicCriticalRate>5</magicCriticalRate>
 		<targetType>SELF</targetType>
 		<affectScope>SINGLE</affectScope>
 		<conditions>
 			<condition name="EnergySaved">
-				<amount>
-					<value level="1">3</value>
-					<value level="2">3</value>
-					<value level="3">3</value>
-				</amount>
+				<amount>3</amount>
 			</condition>
 		</conditions>
 		<effects>
 			<effect name="DispelBySlot">
-				<dispel>
-					<value level="1">SPEED_DOWN,3;ROOT_PHYSICALLY,3;ROOT_MAGICALLY,3</value>
-					<value level="2">SPEED_DOWN,3;ROOT_PHYSICALLY,3;ROOT_MAGICALLY,3</value>
-					<value level="3">SPEED_DOWN,3;ROOT_PHYSICALLY,3;ROOT_MAGICALLY,3</value>
-				</dispel>
+				<dispel>SPEED_DOWN,3;ROOT_PHYSICALLY,3;ROOT_MAGICALLY,3</dispel>
 			</effect>
 		</effects>
 	</skill>

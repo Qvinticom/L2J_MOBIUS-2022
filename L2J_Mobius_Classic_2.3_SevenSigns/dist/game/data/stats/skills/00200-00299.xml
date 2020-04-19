@@ -5343,7 +5343,6 @@
 			<condition name="EquipWeapon">
 				<weaponType>
 					<item>DUAL</item>
-					<item>DUALBLUNT</item>
 				</weaponType>
 			</condition>
 		</conditions>
@@ -5402,15 +5401,24 @@
 	<skill id="274" toLevel="2" name="Dance of Fire">
 		<!-- For 5 min., party members' P. Critical Damage +35%. Addtionally increases MP Consumption when the skill is used while song/ dance effect is in place. Requires a dual sword to be equipped. -->
 		<icon>icon.skill0274</icon>
-		<abnormalLvl>1</abnormalLvl>
+		<abnormalLvl>
+			<value level="1">1</value>
+			<value level="2">2</value>
+		</abnormalLvl>
 		<abnormalTime>300</abnormalTime>
 		<abnormalType>DANCE_OF_FIRE</abnormalType>
 		<affectRange>1000</affectRange>
 		<effectPoint>379</effectPoint>
 		<hitTime>2500</hitTime>
 		<isMagic>3</isMagic> <!-- Dance Skill -->
-		<magicLvl>40</magicLvl>
-		<mpConsume>60</mpConsume>
+		<magicLvl>
+			<value level="1">40</value>
+			<value level="2">61</value>
+		</magicLvl>
+		<mpConsume>
+			<value level="1">66</value>
+			<value level="2">73</value>
+		</mpConsume>
 		<operateType>A2</operateType>
 		<reuseDelay>3000</reuseDelay>
 		<basicProperty>NONE</basicProperty>
@@ -5427,7 +5435,10 @@
 		</conditions>
 		<effects>
 			<effect name="CriticalDamage">
-				<amount>35</amount>
+				<amount>
+					<value level="1">35</value>
+					<value level="2">38</value>
+				</amount>
 				<mode>PER</mode>
 			</effect>
 		</effects>
@@ -6671,7 +6682,7 @@
 			<value level="5">58</value>
 			<value level="6">59</value>
 			<value level="7">60</value>
-			<value level="8">61</value>
+			<value level="8">67</value>
 		</mpConsume>
 		<operateType>A2</operateType>
 		<reuseDelay>4000</reuseDelay>

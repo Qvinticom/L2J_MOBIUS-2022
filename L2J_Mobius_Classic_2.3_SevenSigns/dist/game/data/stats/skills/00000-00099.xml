@@ -2416,10 +2416,8 @@
 		</effects>
 	</skill>
 	<skill id="21" toLevel="3" name="Poison Recovery">
-		<!-- Cures the target of minor poisoning. -->
+		<!-- Cures the user of minor poisoning. -->
 		<icon>icon.skill0021</icon>
-		<castRange>600</castRange>
-		<effectRange>1100</effectRange>
 		<effectPoint>
 			<value level="1">204</value>
 			<value level="2">379</value>
@@ -2445,7 +2443,7 @@
 		<operateType>A1</operateType>
 		<reuseDelay>2000</reuseDelay>
 		<magicCriticalRate>5</magicCriticalRate>
-		<targetType>TARGET</targetType>
+		<targetType>SELF</targetType>
 		<affectScope>SINGLE</affectScope>
 		<effects>
 			<effect name="DispelBySlot">

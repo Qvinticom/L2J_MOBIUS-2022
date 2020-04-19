@@ -37,6 +37,7 @@
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>300</abnormalTime>
 		<irreplacableBuff>true</irreplacableBuff>
+		<stayAfterDeath>true</stayAfterDeath>
 		<isMagic>4</isMagic>
 		<targetType>SELF</targetType>
 		<affectScope>SINGLE</affectScope>
@@ -2382,13 +2383,13 @@
 		</effects>
 	</skill>
 	<skill id="55770" toLevel="10" name="Empire Cloak Augmentation">
-		<!-- M. Critical Rate +$s1 -->
+		<!-- P. Critical Rate +$s1 -->
 		<icon>BranchIcon.icon.g_bm_cloak_mineral_normal</icon>
 		<operateType>P</operateType>
 		<magicCriticalRate>5</magicCriticalRate>
 		<magicLvl>1</magicLvl>
 		<effects>
-			<effect name="MagicCriticalRate">
+			<effect name="CriticalRate">
 				<amount>
 					<value level="1">0.8</value>
 					<value level="2">1</value>

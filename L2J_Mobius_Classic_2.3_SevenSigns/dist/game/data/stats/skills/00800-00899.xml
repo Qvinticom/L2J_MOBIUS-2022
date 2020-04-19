@@ -1086,7 +1086,16 @@
 			<value level="7">74</value>
 			<value level="8">78</value>
 		</magicLvl>
-		<mpConsume>50</mpConsume>
+		<mpConsume>
+			<value level="1">50</value>
+			<value level="2">55</value>
+			<value level="3">60</value>
+			<value level="4">65</value>
+			<value level="5">70</value>
+			<value level="6">75</value>
+			<value level="7">80</value>
+			<value level="8">85</value>
+		</mpConsume>
 		<operateType>A2</operateType>
 		<isDebuff>true</isDebuff>
 		<reuseDelay>60000</reuseDelay>
@@ -1095,7 +1104,7 @@
 		<abnormalTime>2</abnormalTime>
 		<abnormalType>STUN</abnormalType>
 		<abnormalVisualEffect>STUN</abnormalVisualEffect>
-		<activateRate>70</activateRate>
+		<activateRate>60</activateRate>
 		<basicProperty>PHYSICAL</basicProperty>
 		<lvlBonusRate>20</lvlBonusRate>
 		<trait>SHOCK</trait>
