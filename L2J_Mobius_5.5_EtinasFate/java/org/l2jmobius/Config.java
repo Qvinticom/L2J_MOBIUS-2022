@@ -911,6 +911,13 @@ public class Config
 	public static int RAMONA_SPAWN_RANDOM;
 	public static int RAMONA_MIN_PLAYER;
 	
+	// Etis van Etina
+	public static int ETINA_SPAWN_INTERVAL;
+	public static int ETINA_SPAWN_RANDOM;
+	public static int ETINA_MIN_PLAYERS;
+	public static int ETINA_MAX_PLAYERS;
+	public static int ETINA_MIN_PLAYER_LVL;
+	
 	// Gracia Seeds Settings
 	public static int SOD_TIAT_KILL_COUNT;
 	public static long SOD_STAGE_2_LENGTH;
@@ -2441,6 +2448,11 @@ public class Config
 			RAMONA_SPAWN_INTERVAL = GrandBossSettings.getInt("IntervalOfRamonaSpawn", 72);
 			RAMONA_SPAWN_RANDOM = GrandBossSettings.getInt("RandomOfRamonaSpawn", 48);
 			RAMONA_MIN_PLAYER = GrandBossSettings.getInt("RamonaMinPlayers", 7);
+			ETINA_SPAWN_INTERVAL = GrandBossSettings.getInt("IntervalOfEtinaSpawn", 264);
+			ETINA_SPAWN_RANDOM = GrandBossSettings.getInt("RandomOfEtinaSpawn", 72);
+			ETINA_MIN_PLAYERS = GrandBossSettings.getInt("EtinaMinPlayers", 49);
+			ETINA_MAX_PLAYERS = GrandBossSettings.getInt("EtinaMaxPlayers", 112);
+			ETINA_MIN_PLAYER_LVL = GrandBossSettings.getInt("EtinaMinPlayerLvl", 103);
 			
 			// Gracia Seeds
 			final PropertiesParser GraciaSeedsSettings = new PropertiesParser(GRACIASEEDS_CONFIG_FILE);
