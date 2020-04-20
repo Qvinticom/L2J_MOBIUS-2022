@@ -24,6 +24,7 @@ import org.l2jmobius.gameserver.model.WorldObject;
 import org.l2jmobius.gameserver.model.actor.Npc;
 import org.l2jmobius.gameserver.model.actor.instance.MonsterInstance;
 import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
+import org.l2jmobius.gameserver.model.skills.AbnormalType;
 import org.l2jmobius.gameserver.model.skills.Skill;
 import org.l2jmobius.gameserver.network.serverpackets.MagicSkillUse;
 import org.l2jmobius.gameserver.util.Broadcast;
@@ -89,7 +90,7 @@ public class StakatoNest extends AbstractNpcAI
 	@Override
 	public String onAttack(Npc npc, PlayerInstance attacker, int damage, boolean isSummon)
 	{
-		if ((npc.getId() == STAKATO_LEADER) && (getRandom(1000) < 100) && (npc.getCurrentHp() < (npc.getMaxHp() * 0.3)))
+		if ((npc.getId() == STAKATO_LEADER) && (npc.getEffectList().getBuffInfoByAbnormalType(AbnormalType.SILENCE) == null) && (getRandom(1000) < 100) && (npc.getCurrentHp() < (npc.getMaxHp() * 0.3)))
 		{
 			final MonsterInstance follower = checkMinion(npc);
 			if (follower != null)

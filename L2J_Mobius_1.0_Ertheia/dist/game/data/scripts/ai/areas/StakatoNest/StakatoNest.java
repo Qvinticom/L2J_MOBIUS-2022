@@ -91,20 +91,19 @@ public class StakatoNest extends AbstractNpcAI
 	@Override
 	public String onAttack(Npc npc, PlayerInstance attacker, int damage, boolean isSummon)
 	{
-		final MonsterInstance mob = (MonsterInstance) npc;
-		if ((mob.getId() == STAKATO_LEADER) && (getRandom(1000) < 100) && (mob.getCurrentHp() < (mob.getMaxHp() * 0.3)))
+		if ((npc.getId() == STAKATO_LEADER) && (getRandom(1000) < 100) && (npc.getCurrentHp() < (npc.getMaxHp() * 0.3)))
 		{
 			final MonsterInstance follower = checkMinion(npc);
 			if (follower != null)
 			{
-				final double _hp = follower.getCurrentHp();
-				if (_hp > (follower.getMaxHp() * 0.3))
+				final double hp = follower.getCurrentHp();
+				if (hp > (follower.getMaxHp() * 0.3))
 				{
-					mob.abortAttack();
-					mob.abortCast();
-					mob.setHeading(Util.calculateHeadingFrom(mob, follower));
-					mob.doCast(DEVOUR_SUBORDINATE.getSkill());
-					mob.setCurrentHp(mob.getCurrentHp() + _hp);
+					npc.abortAttack();
+					npc.abortCast();
+					npc.setHeading(Util.calculateHeadingFrom(npc, follower));
+					npc.doCast(DEVOUR_SUBORDINATE.getSkill());
+					npc.setCurrentHp(npc.getCurrentHp() + hp);
 					follower.doDie(follower);
 					follower.deleteMe();
 				}
