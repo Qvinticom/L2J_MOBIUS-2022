@@ -900,6 +900,7 @@ public class SeedOfDestruction extends AbstractNpcAI
 			{
 				return 0;
 			}
+			
 			world = new SODWorld(System.currentTimeMillis() + 5400000);
 			world.setInstance(InstanceManager.getInstance().createDynamicInstance(INSTANCE_ID));
 			InstanceManager.getInstance().addWorld(world);
@@ -913,6 +914,7 @@ public class SeedOfDestruction extends AbstractNpcAI
 				}
 			}
 			LOGGER.info("Seed of Destruction started " + INSTANCE_ID + " Instance: " + instanceId + " created by player: " + player.getName());
+			
 			((SODWorld) world).ZoneWaitForTP = true;
 			teleto.instanceId = instanceId;
 			
@@ -921,7 +923,10 @@ public class SeedOfDestruction extends AbstractNpcAI
 				player.sendMessage("Welcome to Seed of Destruction. Time to finish the instance is 130 minutes.");
 				InstanceManager.getInstance().setInstanceTime(player.getObjectId(), INSTANCE_ID, (System.currentTimeMillis()));
 				teleportplayer(player, teleto, (SODWorld) world);
-				removeBuffs(player);
+				if (InstanceManager.getInstance().getInstance(instanceId).isRemoveBuffEnabled())
+				{
+					removeBuffs(player);
+				}
 				world.addAllowed(player);
 			}
 			else if (player.getParty().getCommandChannel() != null)
@@ -931,7 +936,10 @@ public class SeedOfDestruction extends AbstractNpcAI
 					player.sendMessage("Welcome to Seed of Destruction. Time to finish the instance is 130 minutes.");
 					InstanceManager.getInstance().setInstanceTime(channelMember.getObjectId(), INSTANCE_ID, (System.currentTimeMillis()));
 					teleportplayer(channelMember, teleto, (SODWorld) world);
-					removeBuffs(channelMember);
+					if (InstanceManager.getInstance().getInstance(instanceId).isRemoveBuffEnabled())
+					{
+						removeBuffs(channelMember);
+					}
 					world.addAllowed(channelMember);
 				}
 			}
@@ -942,7 +950,10 @@ public class SeedOfDestruction extends AbstractNpcAI
 					player.sendMessage("Welcome to Seed of Destruction. Time to finish the instance is 130 minutes.");
 					InstanceManager.getInstance().setInstanceTime(partyMember.getObjectId(), INSTANCE_ID, (System.currentTimeMillis()));
 					teleportplayer(partyMember, teleto, (SODWorld) world);
-					removeBuffs(partyMember);
+					if (InstanceManager.getInstance().getInstance(instanceId).isRemoveBuffEnabled())
+					{
+						removeBuffs(partyMember);
+					}
 					world.addAllowed(partyMember);
 				}
 			}
