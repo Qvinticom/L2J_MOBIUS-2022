@@ -9899,6 +9899,7 @@ public class PlayerInstance extends Playable
 			
 			sl.addSkill(s.getDisplayId(), s.getDisplayLevel(), s.isPassive(), isDisabled, isEnchantable);
 		}
+		
 		if (_transformation != null)
 		{
 			final Map<Integer, Integer> ts = new TreeMap<>();
@@ -9924,11 +9925,14 @@ public class PlayerInstance extends Playable
 			}
 			
 			// Add collection skills.
-			for (SkillLearn skill : SkillTreeData.getInstance().getCollectSkillTree().values())
+			if (_transformation.isFlying())
 			{
-				if (getKnownSkill(skill.getSkillId()) != null)
+				for (SkillLearn skill : SkillTreeData.getInstance().getCollectSkillTree().values())
 				{
-					addTransformSkill(SkillData.getInstance().getSkill(skill.getSkillId(), skill.getSkillLevel()));
+					if ((getKnownSkill(skill.getSkillId()) != null) && (!ts.containsKey(skill.getSkillId()) || (ts.get(skill.getSkillId()) < skill.getSkillLevel())))
+					{
+						ts.put(skill.getSkillId(), skill.getSkillLevel());
+					}
 				}
 			}
 			
@@ -9939,6 +9943,7 @@ public class PlayerInstance extends Playable
 				sl.addSkill(transformSkill.getKey(), transformSkill.getValue(), false, false, false);
 			}
 		}
+		
 		sendPacket(sl);
 	}
 	
