@@ -80,10 +80,10 @@ public class Vortex extends AbstractNpcAI
 				{
 					if ((attackers != null) && !attackers.isDead() && !attackers.isAlikeDead())
 					{
-						attackers.setCurrentHp(1.0);
-						attackers.setCurrentMp(1.0);
+						attackers.setCurrentHp(attackers.getMaxHp() * 0.2);
+						attackers.setCurrentMp(attackers.getMaxMp() * 0.2);
 						attackers.setCurrentCp(1.0);
-						startQuestTimer("despawn_big", 600000, npc, null);
+						startQuestTimer("despawn_big", 60000, npc, null);
 					}
 				});
 				break;

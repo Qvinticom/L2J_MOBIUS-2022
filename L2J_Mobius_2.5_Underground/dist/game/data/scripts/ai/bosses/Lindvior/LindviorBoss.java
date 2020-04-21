@@ -34,9 +34,6 @@ public class LindviorBoss extends AbstractNpcAI
 	private static final int LINDVIOR_RAID = 29240;
 	private static final int LINDVIOR_FLY = 19424;
 	// Skills
-	private static final SkillHolder SKILL_FLY_UP = new SkillHolder(15278, 1);
-	private static final SkillHolder SKILL_RABIES = new SkillHolder(15269, 1);
-	private static final SkillHolder SKILL_FLY = new SkillHolder(15279, 1);
 	private static final SkillHolder MASS_HELL_BINDING = new SkillHolder(11052, 6);
 	private static final SkillHolder MIGHTY_WIND_STRIKE = new SkillHolder(15274, 1);
 	private static final SkillHolder WIND_PULL = new SkillHolder(15591, 1);
@@ -48,7 +45,6 @@ public class LindviorBoss extends AbstractNpcAI
 	private static final SkillHolder TORNADO = new SkillHolder(15275, 1);
 	private static final SkillHolder LINDVIORS_ATTACK = new SkillHolder(15600, 1);
 	// Chances
-	private static final int CHANCE_MIGHTY_WIND_STRIKE = 9;
 	private static final int CHANCE_WIND_PULL = 4;
 	private static final int CHANCE_LINDVIORS_JUMP = 7;
 	private static final int CHANCE_BODY_SLAM = 2;
@@ -68,92 +64,88 @@ public class LindviorBoss extends AbstractNpcAI
 	@Override
 	public String onAttack(Npc npc, PlayerInstance attacker, int damage, boolean isSummon)
 	{
-		final double percent = ((npc.getCurrentHp() - damage) / npc.getMaxHp()) * 100;
-		final int chance = getRandom(100);
-		switch (npc.getId())
+		if (!npc.isCastingNow())
 		{
-			case LINDVIOR_GROUND:
+			final int chance = getRandom(100);
+			switch (npc.getId())
 			{
-				if ((percent <= 80) && npc.isScriptValue(0))
+				case LINDVIOR_GROUND:
 				{
-					npc.doCast(SKILL_FLY_UP.getSkill());
-					npc.doCast(SKILL_RABIES.getSkill());
-					npc.setScriptValue(1);
+					if (chance <= CHANCE_WIND_PULL)
+					{
+						npc.setTarget(attacker);
+						npc.doCast(WIND_PULL.getSkill());
+					}
+					else if (chance <= CHANCE_LINDVIORS_JUMP)
+					{
+						npc.setTarget(attacker);
+						npc.doCast(LINDVIORS_JUMP.getSkill());
+					}
+					else if (chance <= CHANCE_BODY_SLAM)
+					{
+						npc.setTarget(attacker);
+						npc.doCast(BODY_SLAM.getSkill());
+					}
+					else if (chance <= CHANCE_TAIL_SWIPE)
+					{
+						npc.setTarget(attacker);
+						npc.doCast(TAIL_SWIPE.getSkill());
+					}
+					else
+					{
+						npc.setTarget(attacker);
+						npc.doCast(MIGHTY_WIND_STRIKE.getSkill());
+					}
+					break;
 				}
-				else if ((percent <= 40) && (npc.isScriptValue(1)))
+				case LINDVIOR_FLY:
 				{
-					npc.doCast(SKILL_FLY.getSkill());
-					npc.setScriptValue(2);
+					if (chance <= CHANCE_SOAR)
+					{
+						npc.setTarget(attacker);
+						npc.doCast(SOAR.getSkill());
+					}
+					else
+					{
+						npc.setTarget(attacker);
+						npc.doCast(MIGHTY_WIND_STRIKE.getSkill());
+					}
+					break;
 				}
-				else if (!npc.isCastingNow() && (chance <= CHANCE_MIGHTY_WIND_STRIKE))
+				case LINDVIOR_RAID:
 				{
-					npc.setTarget(attacker);
-					npc.doCast(MIGHTY_WIND_STRIKE.getSkill());
+					if (chance <= CHANCE_WIND_BREAT)
+					{
+						npc.setTarget(attacker);
+						npc.doCast(WIND_BREAT.getSkill());
+					}
+					else if (chance <= CHANCE_WIND_PULL)
+					{
+						npc.setTarget(attacker);
+						npc.doCast(WIND_PULL.getSkill());
+					}
+					else if (chance <= CHANCE_TAIL_SWIPE)
+					{
+						npc.setTarget(attacker);
+						npc.doCast(TAIL_SWIPE.getSkill());
+					}
+					else if (chance <= CHANCE_TORNADO)
+					{
+						npc.setTarget(attacker);
+						npc.doCast(TORNADO.getSkill());
+					}
+					else if (chance <= CHANCE_LINDVIORS_ATTACK)
+					{
+						npc.setTarget(attacker);
+						npc.doCast(LINDVIORS_ATTACK.getSkill());
+					}
+					else
+					{
+						npc.setTarget(attacker);
+						npc.doCast(MIGHTY_WIND_STRIKE.getSkill());
+					}
+					break;
 				}
-				else if (!npc.isCastingNow() && (chance <= CHANCE_WIND_PULL))
-				{
-					npc.setTarget(attacker);
-					npc.doCast(WIND_PULL.getSkill());
-				}
-				else if (!npc.isCastingNow() && (chance <= CHANCE_LINDVIORS_JUMP))
-				{
-					npc.setTarget(attacker);
-					npc.doCast(LINDVIORS_JUMP.getSkill());
-				}
-				else if (!npc.isCastingNow() && (chance <= CHANCE_BODY_SLAM))
-				{
-					npc.setTarget(attacker);
-					npc.doCast(BODY_SLAM.getSkill());
-				}
-				else if (!npc.isCastingNow() && (chance <= CHANCE_TAIL_SWIPE))
-				{
-					npc.setTarget(attacker);
-					npc.doCast(TAIL_SWIPE.getSkill());
-				}
-				break;
-			}
-			case LINDVIOR_FLY:
-			{
-				if (!npc.isCastingNow() && (chance <= CHANCE_SOAR))
-				{
-					npc.setTarget(attacker);
-					npc.doCast(SOAR.getSkill());
-				}
-				break;
-			}
-			case LINDVIOR_RAID:
-			{
-				if ((percent <= 20) && (npc.isScriptValue(0)))
-				{
-					npc.doCast(SKILL_FLY.getSkill());
-					npc.setScriptValue(1);
-				}
-				else if (!npc.isCastingNow() && (chance <= CHANCE_WIND_BREAT))
-				{
-					npc.setTarget(attacker);
-					npc.doCast(WIND_BREAT.getSkill());
-				}
-				else if (!npc.isCastingNow() && (chance <= CHANCE_WIND_PULL))
-				{
-					npc.setTarget(attacker);
-					npc.doCast(WIND_PULL.getSkill());
-				}
-				else if (!npc.isCastingNow() && (chance <= CHANCE_TAIL_SWIPE))
-				{
-					npc.setTarget(attacker);
-					npc.doCast(TAIL_SWIPE.getSkill());
-				}
-				else if (!npc.isCastingNow() && (chance <= CHANCE_TORNADO))
-				{
-					npc.setTarget(attacker);
-					npc.doCast(TORNADO.getSkill());
-				}
-				else if (!npc.isCastingNow() && (chance <= CHANCE_LINDVIORS_ATTACK))
-				{
-					npc.setTarget(attacker);
-					npc.doCast(LINDVIORS_ATTACK.getSkill());
-				}
-				break;
 			}
 		}
 		return super.onAttack(npc, attacker, damage, isSummon);
