@@ -989,27 +989,27 @@
 	<skill id="1624" toLevel="1" name="Indestructible Sound">
 		<!-- Using Momentum, throws a powerful strike with a sword, blocking the target for 10 sec. Decreases damage received by the target by 50%, blocks target's movements and skill usage. Requires a dualsword. Requires Momentum level 7. -->
 		<icon>icon.skill1624</icon>
-		<abnormalLvl>1</abnormalLvl>
+		<abnormalLvl>10</abnormalLvl>
 		<abnormalTime>10</abnormalTime>
-		<abnormalType>NORMAL_ATTACK_BLOCK</abnormalType>
+		<abnormalType>ROOT_PHYSICALLY</abnormalType>
+		<abnormalVisualEffect>TORNADO_SLOW</abnormalVisualEffect>
 		<chargeConsume>7</chargeConsume>
-		<activateRate>90</activateRate>
+		<activateRate>100</activateRate>
 		<basicProperty>PHYSICAL</basicProperty>
+		<canBeDispelled>false</canBeDispelled>
 		<castRange>600</castRange>
 		<coolTime>500</coolTime>
 		<effectPoint>-687</effectPoint>
-		<effectRange>600</effectRange>
+		<effectRange>900</effectRange>
 		<hitTime>2500</hitTime>
 		<isDebuff>true</isDebuff>
-		<isMagic>1</isMagic>
-		<lvlBonusRate>30</lvlBonusRate>
+		<isMagic>0</isMagic>
+		<lvlBonusRate>20</lvlBonusRate>
 		<operateType>A2</operateType>
 		<magicLvl>78</magicLvl>
 		<mpConsume>120</mpConsume>
-		<nextAction>ATTACK</nextAction>
 		<reuseDelay>120000</reuseDelay>
 		<magicCriticalRate>5</magicCriticalRate>
-		<trait>PHYSICAL_BLOCKADE</trait>
 		<targetType>ENEMY_ONLY</targetType>
 		<affectScope>SINGLE</affectScope>
 		<conditions>
@@ -1019,18 +1019,47 @@
 				</weaponType>
 			</condition>
 			<condition name="EnergySaved">
-				<amount>5</amount>
+				<amount>7</amount>
 			</condition>
 		</conditions>
 		<effects>
-			<effect name="PhysicalAttackMute" />
-			<effect name="BlockActions" />
-			<effect name="DefenceCriticalDamage">
-				<amount>-50</amount>
+			<effect name="Mute" />
+			<effect name="PhysicalMute" />
+			<effect name="Root" />
+			<effect name="PveMagicalSkillDefenceBonus">
+				<amount>50</amount>
 				<mode>PER</mode>
 			</effect>
-			<effect name="DefenceMagicCriticalDamage">
-				<amount>-50</amount>
+			<effect name="PvePhysicalAttackDefenceBonus">
+				<amount>50</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="PvePhysicalSkillDefenceBonus">
+				<amount>50</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="PvpMagicalSkillDefenceBonus">
+				<amount>50</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="PvpPhysicalAttackDefenceBonus">
+				<amount>50</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="PvpPhysicalSkillDefenceBonus">
+				<amount>50</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="PveRaidMagicalSkillDefenceBonus">
+				<amount>50</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="PveRaidPhysicalAttackDefenceBonus">
+				<amount>50</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="PveRaidPhysicalSkillDefenceBonus">
+				<amount>50</amount>
 				<mode>PER</mode>
 			</effect>
 		</effects>

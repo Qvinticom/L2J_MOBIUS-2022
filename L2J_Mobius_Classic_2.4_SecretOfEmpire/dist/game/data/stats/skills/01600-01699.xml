@@ -1194,9 +1194,9 @@
 	<skill id="1624" toLevel="4" name="Indestructible Sound">
 		<!-- Using Momentum, throws a powerful strike with a sword, blocking the target for $s1 Damage received by the target -$s2, blocks target's movements and skill usage. Requires a dual sword. Requires Momentum level 5. -->
 		<icon>icon.skill1624</icon>
-		<abnormalLvl>1</abnormalLvl>
+		<abnormalLvl>10</abnormalLvl>
 		<abnormalTime>10</abnormalTime>
-		<abnormalType>SILENCE</abnormalType>
+		<abnormalType>ROOT_PHYSICALLY</abnormalType>
 		<abnormalVisualEffect>TORNADO_SLOW</abnormalVisualEffect>
 		<chargeConsume>7</chargeConsume>
 		<activateRate>100</activateRate>
@@ -1230,7 +1230,7 @@
 		<effects>
 			<effect name="Mute" />
 			<effect name="PhysicalMute" />
-			<effect name="BlockMove" />
+			<effect name="Root" />
 			<effect name="PveMagicalSkillDefenceBonus">
 				<amount>50</amount>
 				<mode>PER</mode>

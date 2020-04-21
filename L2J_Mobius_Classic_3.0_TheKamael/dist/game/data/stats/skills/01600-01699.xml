@@ -1195,9 +1195,9 @@
 		<!-- Using Momentum, throws a powerful strike with a sword, blocking the target for $s1. The target is engulfed by Momentum.
 			 Damage received -$s2, and becomes unable to use skills or move. Requires a dual sword. Requires Momentum Stage 5 recharge. -->
 		<icon>icon.skill1624</icon>
-		<abnormalLvl>1</abnormalLvl>
+		<abnormalLvl>10</abnormalLvl>
 		<abnormalTime>10</abnormalTime>
-		<abnormalType>SILENCE</abnormalType>
+		<abnormalType>ROOT_PHYSICALLY</abnormalType>
 		<abnormalVisualEffect>TORNADO_SLOW</abnormalVisualEffect>
 		<chargeConsume>7</chargeConsume>
 		<activateRate>100</activateRate>
@@ -1231,7 +1231,7 @@
 		<effects>
 			<effect name="Mute" />
 			<effect name="PhysicalMute" />
-			<effect name="BlockMove" />
+			<effect name="Root" />
 			<effect name="PveMagicalSkillDefenceBonus">
 				<amount>50</amount>
 				<mode>PER</mode>
