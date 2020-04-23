@@ -132,7 +132,6 @@ public class Q10962_NewHorizons extends Quest
 				htmltext = event;
 				break;
 			}
-			
 			case "TELEPORT_TO_HUNTING_GROUND":
 			{
 				player.teleToLocation(-107827, 47535, -1448);
@@ -156,12 +155,12 @@ public class Q10962_NewHorizons extends Quest
 					giveItems(player, MOON_ARMOR);
 					giveItems(player, MOON_GAUNTLETS);
 					giveItems(player, MOON_BOOTS);
-					qs.exitQuest(false, true);
 					if (CategoryData.getInstance().isInCategory(CategoryType.FIRST_CLASS_GROUP, player.getClassId().getId()))
 					{
 						showOnScreenMsg(player, NpcStringId.YOU_VE_FINISHED_THE_TUTORIAL_NTAKE_YOUR_1ST_CLASS_TRANSFER_AND_COMPLETE_YOUR_TRAINING_WITH_BATHIS_TO_BECOME_STRONGER, ExShowScreenMessage.TOP_CENTER, 10000);
 						player.sendPacket(ExRequestClassChangeUi.STATIC_PACKET);
 					}
+					qs.exitQuest(false, true);
 					htmltext = event;
 				}
 				break;
@@ -179,12 +178,12 @@ public class Q10962_NewHorizons extends Quest
 					giveItems(player, MOON_SHELL);
 					giveItems(player, MOON_LEATHER_GLOVES);
 					giveItems(player, MOON_SHOES);
-					qs.exitQuest(false, true);
 					if (CategoryData.getInstance().isInCategory(CategoryType.FIRST_CLASS_GROUP, player.getClassId().getId()))
 					{
 						showOnScreenMsg(player, NpcStringId.YOU_VE_FINISHED_THE_TUTORIAL_NTAKE_YOUR_1ST_CLASS_TRANSFER_AND_COMPLETE_YOUR_TRAINING_WITH_BATHIS_TO_BECOME_STRONGER, ExShowScreenMessage.TOP_CENTER, 10000);
 						player.sendPacket(ExRequestClassChangeUi.STATIC_PACKET);
 					}
+					qs.exitQuest(false, true);
 					htmltext = event;
 				}
 				break;
@@ -202,12 +201,12 @@ public class Q10962_NewHorizons extends Quest
 					giveItems(player, MOON_CAPE);
 					giveItems(player, MOON_SILK);
 					giveItems(player, MOON_SANDALS);
-					qs.exitQuest(false, true);
 					if (CategoryData.getInstance().isInCategory(CategoryType.FIRST_CLASS_GROUP, player.getClassId().getId()))
 					{
 						showOnScreenMsg(player, NpcStringId.YOU_VE_FINISHED_THE_TUTORIAL_NTAKE_YOUR_1ST_CLASS_TRANSFER_AND_COMPLETE_YOUR_TRAINING_WITH_BATHIS_TO_BECOME_STRONGER, ExShowScreenMessage.TOP_CENTER, 10000);
 						player.sendPacket(ExRequestClassChangeUi.STATIC_PACKET);
 					}
+					qs.exitQuest(false, true);
 					htmltext = event;
 				}
 				break;
@@ -228,7 +227,6 @@ public class Q10962_NewHorizons extends Quest
 				qs.set(KILL_COUNT_VAR, killCount);
 				playSound(killer, QuestSound.ITEMSOUND_QUEST_ITEMGET);
 				sendNpcLogList(killer);
-				
 			}
 			else
 			{

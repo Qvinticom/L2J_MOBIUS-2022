@@ -14232,7 +14232,7 @@ public class PlayerInstance extends Playable
 	
 	public boolean isInTimedHuntingZone()
 	{
-		return isInTimedHuntingZone(2); // Storm Isle
+		return isInTimedHuntingZone(2); // Ancient Pirates' Tomb
 	}
 	
 	public boolean isInTimedHuntingZone(int zoneId)

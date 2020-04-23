@@ -19,15 +19,24 @@ package quests.Q10984_CollectSpiderweb;
 import java.util.HashSet;
 import java.util.Set;
 
+import org.l2jmobius.Config;
+import org.l2jmobius.gameserver.data.xml.impl.CategoryData;
+import org.l2jmobius.gameserver.enums.CategoryType;
 import org.l2jmobius.gameserver.enums.QuestSound;
 import org.l2jmobius.gameserver.model.actor.Npc;
 import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
+import org.l2jmobius.gameserver.model.events.EventType;
+import org.l2jmobius.gameserver.model.events.ListenerRegisterType;
+import org.l2jmobius.gameserver.model.events.annotations.RegisterEvent;
+import org.l2jmobius.gameserver.model.events.annotations.RegisterType;
+import org.l2jmobius.gameserver.model.events.impl.creature.player.OnPlayerLogin;
 import org.l2jmobius.gameserver.model.holders.ItemHolder;
 import org.l2jmobius.gameserver.model.holders.NpcLogListHolder;
 import org.l2jmobius.gameserver.model.quest.Quest;
 import org.l2jmobius.gameserver.model.quest.QuestState;
 import org.l2jmobius.gameserver.network.NpcStringId;
 import org.l2jmobius.gameserver.network.serverpackets.ExShowScreenMessage;
+import org.l2jmobius.gameserver.network.serverpackets.classchange.ExRequestClassChangeUi;
 
 /**
  * Collect Spiderweb (10984)
@@ -122,7 +131,6 @@ public class Q10984_CollectSpiderweb extends Quest
 				htmltext = event;
 				break;
 			}
-			
 			case "TELEPORT_TO_HUNTING_GROUND":
 			{
 				player.teleToLocation(5135, 68148, -3256);
@@ -146,7 +154,11 @@ public class Q10984_CollectSpiderweb extends Quest
 					giveItems(player, MOON_ARMOR);
 					giveItems(player, MOON_GAUNTLETS);
 					giveItems(player, MOON_BOOTS);
-					player.sendPacket(new ExShowScreenMessage("Completed the tutorial.#Now try the first class transfer and as instructed by Bathis carry out the Adventurers Journey misions to grow your character.", 5000));
+					if (CategoryData.getInstance().isInCategory(CategoryType.FIRST_CLASS_GROUP, player.getClassId().getId()))
+					{
+						showOnScreenMsg(player, NpcStringId.YOU_VE_FINISHED_THE_TUTORIAL_NTAKE_YOUR_1ST_CLASS_TRANSFER_AND_COMPLETE_YOUR_TRAINING_WITH_BATHIS_TO_BECOME_STRONGER, ExShowScreenMessage.TOP_CENTER, 10000);
+						player.sendPacket(ExRequestClassChangeUi.STATIC_PACKET);
+					}
 					qs.exitQuest(false, true);
 					htmltext = event;
 				}
@@ -165,7 +177,11 @@ public class Q10984_CollectSpiderweb extends Quest
 					giveItems(player, MOON_SHELL);
 					giveItems(player, MOON_LEATHER_GLOVES);
 					giveItems(player, MOON_SHOES);
-					player.sendPacket(new ExShowScreenMessage("Completed the tutorial.#Now try the first class transfer and as instructed by Bathis carry out the Adventurers Journey misions to grow your character.", 5000));
+					if (CategoryData.getInstance().isInCategory(CategoryType.FIRST_CLASS_GROUP, player.getClassId().getId()))
+					{
+						showOnScreenMsg(player, NpcStringId.YOU_VE_FINISHED_THE_TUTORIAL_NTAKE_YOUR_1ST_CLASS_TRANSFER_AND_COMPLETE_YOUR_TRAINING_WITH_BATHIS_TO_BECOME_STRONGER, ExShowScreenMessage.TOP_CENTER, 10000);
+						player.sendPacket(ExRequestClassChangeUi.STATIC_PACKET);
+					}
 					qs.exitQuest(false, true);
 					htmltext = event;
 				}
@@ -184,7 +200,11 @@ public class Q10984_CollectSpiderweb extends Quest
 					giveItems(player, MOON_CAPE);
 					giveItems(player, MOON_SILK);
 					giveItems(player, MOON_SANDALS);
-					player.sendPacket(new ExShowScreenMessage("Completed the tutorial.#Now try the first class transfer and as instructed by Bathis carry out the Adventurers Journey misions to grow your character.", 5000));
+					if (CategoryData.getInstance().isInCategory(CategoryType.FIRST_CLASS_GROUP, player.getClassId().getId()))
+					{
+						showOnScreenMsg(player, NpcStringId.YOU_VE_FINISHED_THE_TUTORIAL_NTAKE_YOUR_1ST_CLASS_TRANSFER_AND_COMPLETE_YOUR_TRAINING_WITH_BATHIS_TO_BECOME_STRONGER, ExShowScreenMessage.TOP_CENTER, 10000);
+						player.sendPacket(ExRequestClassChangeUi.STATIC_PACKET);
+					}
 					qs.exitQuest(false, true);
 					htmltext = event;
 				}
@@ -206,7 +226,6 @@ public class Q10984_CollectSpiderweb extends Quest
 				qs.set(KILL_COUNT_VAR, killCount);
 				playSound(killer, QuestSound.ITEMSOUND_QUEST_ITEMGET);
 				sendNpcLogList(killer);
-				
 			}
 			else
 			{
@@ -272,5 +291,32 @@ public class Q10984_CollectSpiderweb extends Quest
 			}
 		}
 		return htmltext;
+	}
+	
+	@RegisterEvent(EventType.ON_PLAYER_LOGIN)
+	@RegisterType(ListenerRegisterType.GLOBAL_PLAYERS)
+	public void OnPlayerLogin(OnPlayerLogin event)
+	{
+		if (Config.DISABLE_TUTORIAL)
+		{
+			return;
+		}
+		
+		final PlayerInstance player = event.getPlayer();
+		if (player == null)
+		{
+			return;
+		}
+		
+		if (!CategoryData.getInstance().isInCategory(CategoryType.FIRST_CLASS_GROUP, player.getClassId().getId()))
+		{
+			return;
+		}
+		
+		final QuestState qs = getQuestState(player, false);
+		if ((qs != null) && qs.isCompleted())
+		{
+			player.sendPacket(ExRequestClassChangeUi.STATIC_PACKET);
+		}
 	}
 }

@@ -123,8 +123,8 @@ public class Q10966_ATripBegins extends Quest
 					giveItems(player, ADVENTURERS_BRACELET);
 					qs.exitQuest(false, true);
 					htmltext = event;
-					break;
 				}
+				break;
 			}
 		}
 		return htmltext;
