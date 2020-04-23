@@ -16,10 +16,13 @@
  */
 package ai.bosses.Ramona;
 
-import java.util.ArrayList;
+import java.util.List;
+import java.util.concurrent.CopyOnWriteArrayList;
 
 import org.l2jmobius.Config;
+import org.l2jmobius.commons.util.CommonUtil;
 import org.l2jmobius.commons.util.Rnd;
+import org.l2jmobius.gameserver.data.xml.impl.SkillData;
 import org.l2jmobius.gameserver.enums.ChatType;
 import org.l2jmobius.gameserver.enums.Movie;
 import org.l2jmobius.gameserver.enums.TeleportWhereType;
@@ -34,6 +37,9 @@ import org.l2jmobius.gameserver.model.actor.Npc;
 import org.l2jmobius.gameserver.model.actor.instance.DoorInstance;
 import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
 import org.l2jmobius.gameserver.model.quest.QuestTimer;
+import org.l2jmobius.gameserver.model.skills.Skill;
+import org.l2jmobius.gameserver.model.skills.SkillCaster;
+import org.l2jmobius.gameserver.model.variables.NpcVariables;
 import org.l2jmobius.gameserver.model.zone.type.EffectZone;
 import org.l2jmobius.gameserver.model.zone.type.NoSummonFriendZone;
 import org.l2jmobius.gameserver.network.NpcStringId;
@@ -74,6 +80,35 @@ public class Ramona extends AbstractNpcAI
 	private static final int SECOND_GENERATOR = 22230704;
 	private static final int THRID_GENERATOR = 22230706;
 	private static final int FOURTH_GENERATOR = 22230708;
+	// Skills
+	private static final Skill HYPER_MEGA_PLASMA_SHOT = SkillData.getInstance().getSkill(16641, 1);
+	private static final Skill HYPER_MEGA_PLASMA_BRUST = SkillData.getInstance().getSkill(16642, 1);
+	private static final Skill HIPER_MEGA_TELEKINESS = SkillData.getInstance().getSkill(16643, 1);
+	private static final Skill RIDE_THE_LIGHTING = SkillData.getInstance().getSkill(16644, 1);
+	private static final Skill RIDE_THE_LIGHTING_MEGA_BRUST = SkillData.getInstance().getSkill(16645, 1);
+	private static final Skill ULTRA_MEGA_TELEKINESS = SkillData.getInstance().getSkill(16647, 1);
+	private static final Skill[] RAMONA1_SKILLS =
+	{
+		HYPER_MEGA_PLASMA_BRUST,
+		HYPER_MEGA_PLASMA_SHOT,
+		RIDE_THE_LIGHTING
+	};
+	private static final Skill[] RAMONA2_SKILLS =
+	{
+		HYPER_MEGA_PLASMA_BRUST,
+		HYPER_MEGA_PLASMA_SHOT,
+		RIDE_THE_LIGHTING,
+		RIDE_THE_LIGHTING_MEGA_BRUST
+	};
+	private static final Skill[] RAMONA3_SKILLS =
+	{
+		HYPER_MEGA_PLASMA_BRUST,
+		HYPER_MEGA_PLASMA_SHOT,
+		RIDE_THE_LIGHTING,
+		RIDE_THE_LIGHTING_MEGA_BRUST,
+		HIPER_MEGA_TELEKINESS,
+		ULTRA_MEGA_TELEKINESS
+	};
 	// Locations
 	private static final Location DEFAULT_LOC = new Location(86338, 172099, -10602, 16383);
 	private static final Location RAMONA_SPAWN_LOC = new Location(86327, 169759, -10465, 16383);
@@ -87,7 +122,8 @@ public class Ramona extends AbstractNpcAI
 	// Vars
 	private static final String RAMONA_RESPAWN_VAR = "RamonaRespawn";
 	private static Status _boss = Status.ALIVE;
-	private static ArrayList<Npc> _minions = new ArrayList<>();
+	private static List<Npc> _minions = new CopyOnWriteArrayList<>();
+	private static int _bossStage;
 	private static long _lastAction;
 	private static Npc _ramona1;
 	private static Npc _ramona2;
@@ -96,7 +132,7 @@ public class Ramona extends AbstractNpcAI
 	private Ramona()
 	{
 		addStartNpc(MP_CONTROL);
-		addKillId(MP_CONTROL, RAMONA_3);
+		addKillId(MP_CONTROL, RAMONA_1, RAMONA_2, RAMONA_3);
 		addSeeCreatureId(MP_CONTROL);
 		addAttackId(MP_CONTROL, RAMONA_1, RAMONA_2, RAMONA_3);
 		addSpawnId(RAMONA_1, RAMONA_2, RAMONA_3);
@@ -137,6 +173,7 @@ public class Ramona extends AbstractNpcAI
 			}
 			case "SPAWN_RAMONA_1":
 			{
+				_bossStage = 1;
 				World.getInstance().forEachVisibleObjectInRange(npc, Npc.class, 3000, ramona ->
 				{
 					if (ramona.getId() == RAMONA)
@@ -150,6 +187,7 @@ public class Ramona extends AbstractNpcAI
 				startQuestTimer("GENERATOR_3", getRandom(1500000, 1800000), null, null);
 				startQuestTimer("GENERATOR_4", getRandom(2100000, 2400000), null, null);
 				_lastAction = System.currentTimeMillis();
+				startQuestTimer("RAMONA1_SKILL", 6000, _ramona1, null);
 				break;
 			}
 			case "GENERATOR_1":
@@ -176,21 +214,105 @@ public class Ramona extends AbstractNpcAI
 				ZONE_ERADICATION.setEnabled(true);
 				break;
 			}
+			case "SPAWN_RAMONA2":
+			{
+				playMovie(ZONE.getPlayersInside(), Movie.SC_RAMONA_TRANS_A);
+				_ramona2 = addSpawn(RAMONA_2, RAMONA_SPAWN_LOC, false, 1200000, false);
+				_ramona2.setCurrentHp(_ramona2.getMaxHp() * 0.75);
+				break;
+			}
+			case "SPAWN_RAMONA3":
+			{
+				playMovie(ZONE.getPlayersInside(), Movie.SC_RAMONA_TRANS_B);
+				_ramona3 = addSpawn(RAMONA_3, RAMONA_SPAWN_LOC, false, 1200000, false);
+				_ramona3.setCurrentHp(_ramona3.getMaxHp() * 0.5);
+				break;
+			}
+			case "RAMONA1_SKILL":
+			{
+				if ((_bossStage == 1) && _ramona1.isInCombat())
+				{
+					Skill randomAttackSkill = RAMONA1_SKILLS[Rnd.get(RAMONA1_SKILLS.length)];
+					if (getRandom(100) > 20)
+					{
+						_ramona1.doCast(randomAttackSkill);
+					}
+				}
+				break;
+			}
+			case "SPAWN_RAMONA_MINIONS":
+			{
+				_bossStage = 2;
+				for (int i = 0; i < 7; i++)
+				{
+					if (_ramona2 != null)
+					{
+						final Npc minion = addSpawn(MINION_LIST[Rnd.get(MINION_LIST.length)], _ramona2.getX() + getRandom(-200, 200), _ramona2.getY() + getRandom(-200, 200), _ramona2.getZ(), _ramona2.getHeading(), false, 600000);
+						minion.setRunning();
+						((Attackable) minion).setIsRaidMinion(true);
+						addAttackPlayerDesire(minion, player);
+						_minions.add(minion);
+					}
+				}
+				startQuestTimer("RAMONA2_SKILL", 6000, _ramona2, null);
+				break;
+			}
+			case "RAMONA2_SKILL":
+			{
+				if ((_bossStage == 2) && _ramona2.isInCombat())
+				{
+					Skill randomAttackSkill = RAMONA2_SKILLS[Rnd.get(RAMONA2_SKILLS.length)];
+					if (getRandom(100) > 20)
+					{
+						_ramona2.doCast(randomAttackSkill);
+					}
+				}
+				break;
+			}
+			case "SPAWN_RAMONA_MINIONS_1":
+			{
+				_bossStage = 3;
+				for (int i = 0; i < 7; i++)
+				{
+					if (_ramona3 != null)
+					{
+						final Npc minion = addSpawn(MINION_LIST[Rnd.get(MINION_LIST.length)], _ramona3.getX() + getRandom(-200, 200), _ramona3.getY() + getRandom(-200, 200), _ramona3.getZ(), _ramona3.getHeading(), false, 600000);
+						minion.setRunning();
+						((Attackable) minion).setIsRaidMinion(true);
+						addAttackPlayerDesire(minion, player);
+						_minions.add(minion);
+					}
+				}
+				startQuestTimer("RAMONA3_SKILL", 6000, _ramona3, null);
+				break;
+			}
+			case "RAMONA3_SKILL":
+			{
+				if ((_bossStage == 3) && _ramona3.isInCombat())
+				{
+					Skill randomAttackSkill = RAMONA3_SKILLS[Rnd.get(RAMONA3_SKILLS.length)];
+					if (getRandom(100) > 20)
+					{
+						_ramona3.doCast(randomAttackSkill);
+					}
+				}
+				break;
+			}
 			case "CHECK_ACTIVITY_TASK":
 			{
 				if ((_lastAction + 900000) < System.currentTimeMillis())
 				{
-					for (Creature charInside : ZONE.getCharactersInside())
+					for (Creature creature : ZONE.getCharactersInside())
 					{
-						if (charInside != null)
+						if (creature != null)
 						{
-							if (charInside.isNpc())
+							if (creature.isNpc())
 							{
-								charInside.deleteMe();
+								creature.deleteMe();
 							}
-							else if (charInside.isPlayer())
+							else if (creature.isPlayer())
 							{
-								charInside.teleToLocation(MapRegionManager.getInstance().getTeleToLocation(charInside, TeleportWhereType.TOWN));
+								creature.teleToLocation(MapRegionManager.getInstance().getTeleToLocation(creature, TeleportWhereType.TOWN));
 							}
 						}
 					}
@@ -198,12 +320,13 @@ public class Ramona extends AbstractNpcAI
 				}
 				else
 				{
-					startQuestTimer("CHECK_ACTIVITY_TASK", 30000, null, null);
+					startQuestTimer("CHECK_ACTIVITY_TASK", 60000, null, null);
 				}
 				break;
 			}
 			case "END_RAMONA":
 			{
+				_bossStage = 0;
 				ZONE.oustAllPlayers();
 				if (_ramona1 != null)
 				{
@@ -232,11 +355,12 @@ public class Ramona extends AbstractNpcAI
 				{
 					addSpawn(MP_CONTROL, RAMONA_SPAWN_LOC, false, 0, false);
 				}
-				final QuestTimer activityTimer = getQuestTimer("CHECK_ACTIVITY_TASK", null, null);
+				QuestTimer activityTimer = getQuestTimer("CHECK_ACTIVITY_TASK", null, null);
 				if (activityTimer != null)
 				{
 					activityTimer.cancel();
 				}
+				
 				for (int i = FIRST_GENERATOR; i <= FOURTH_GENERATOR; i++)
 				{
 					ZONE.broadcastPacket(new OnEventTrigger(i, false));
@@ -258,7 +382,7 @@ public class Ramona extends AbstractNpcAI
 	}
 	
 	@Override
-	public String onAttack(Npc npc, PlayerInstance attacker, int damage, boolean isSummon)
+	public String onAttack(Npc npc, PlayerInstance attacker, int damage, boolean isSummon, Skill skill)
 	{
 		switch (npc.getId())
 		{
@@ -272,53 +396,115 @@ public class Ramona extends AbstractNpcAI
 			}
 			case RAMONA_1:
 			{
-				if (npc.getCurrentHpPercent() < 75)
-				{
-					playMovie(ZONE.getPlayersInside(), Movie.SC_RAMONA_TRANS_A);
-					_ramona2 = addSpawn(RAMONA_2, RAMONA_SPAWN_LOC, false, 1200000, false);
-					_ramona2.setCurrentHp(_ramona1.getCurrentHp());
-					_ramona1.deleteMe();
-					for (int i = 0; i < 7; i++)
-					{
-						final Npc minion = addSpawn(MINION_LIST[Rnd.get(MINION_LIST.length)], npc.getX() + getRandom(-200, 200), npc.getY() + getRandom(-200, 200), npc.getZ(), npc.getHeading(), false, 600000);
-						minion.isRunning();
-						((Attackable) minion).setIsRaidMinion(true);
-						addAttackPlayerDesire(minion, attacker);
-						_minions.add(minion);
-					}
-				}
+				_lastAction = System.currentTimeMillis();
 				break;
 			}
 			case RAMONA_2:
 			{
-				if (npc.getCurrentHpPercent() < 50)
-				{
-					playMovie(ZONE.getPlayersInside(), Movie.SC_RAMONA_TRANS_B);
-					_ramona3 = addSpawn(RAMONA_3, RAMONA_SPAWN_LOC, false, 1200000, false);
-					_ramona3.setCurrentHp(_ramona2.getCurrentHp());
-					_ramona2.deleteMe();
-					for (int i = 0; i < 7; i++)
-					{
-						final Npc minion = addSpawn(MINION_LIST[Rnd.get(MINION_LIST.length)], npc.getX() + getRandom(-200, 200), npc.getY() + getRandom(-200, 200), npc.getZ(), npc.getHeading(), false, 600000);
-						minion.isRunning();
-						((Attackable) minion).setIsRaidMinion(true);
-						addAttackPlayerDesire(minion, attacker);
-						_minions.add(minion);
-					}
-				}
+				_lastAction = System.currentTimeMillis();
 				break;
 			}
 			case RAMONA_3:
 			{
-				if ((npc.getCurrentHpPercent() < 25) && npc.isScriptValue(2))
-				{
-					_lastAction = System.currentTimeMillis();
-					npc.setScriptValue(1);
-				}
+				_lastAction = System.currentTimeMillis();
 				break;
 			}
 		}
+		if ((npc.getId() == RAMONA_1) || (npc.getId() == RAMONA_2) || (npc.getId() == RAMONA_3))
+		{
+			if (skill == null)
+			{
+				refreshAiParams(attacker, npc, (damage * 1000));
+			}
+			else if (npc.getCurrentHp() < (npc.getMaxHp() * 0.25))
+			{
+				refreshAiParams(attacker, npc, ((damage / 3) * 100));
+			}
+			else if (npc.getCurrentHp() < (npc.getMaxHp() * 0.5))
+			{
+				refreshAiParams(attacker, npc, (damage * 20));
+			}
+			else if (npc.getCurrentHp() < (npc.getMaxHp() * 0.75))
+			{
+				refreshAiParams(attacker, npc, (damage * 10));
+			}
+			else
+			{
+				refreshAiParams(attacker, npc, ((damage / 3) * 20));
+			}
+			manageSkills(npc);
+		}
 		return super.onAttack(npc, attacker, damage, isSummon);
+	}
+	
+	private final void refreshAiParams(Creature attacker, Npc npc, int damage)
+	{
+		refreshAiParams(attacker, npc, damage, damage);
+	}
+	
+	private final void refreshAiParams(Creature attacker, Npc npc, int damage, int aggro)
+	{
+		final int newAggroVal = damage + getRandom(3000);
+		final int aggroVal = aggro + 1000;
+		final NpcVariables vars = npc.getVariables();
+		for (int i = 0; i < 3; i++)
+		{
+			if (attacker == vars.getObject("c_quest" + i, Creature.class))
+			{
+				if (vars.getInt("i_quest" + i) < aggroVal)
+				{
+					vars.set("i_quest" + i, newAggroVal);
+				}
+				return;
+			}
+		}
+		final int index = CommonUtil.getIndexOfMinValue(vars.getInt("i_quest0"), vars.getInt("i_quest1"), vars.getInt("i_quest2"));
+		vars.set("i_quest" + index, newAggroVal);
+		vars.set("c_quest" + index, attacker);
+	}
+	
+	@Override
+	public String onSpellFinished(Npc npc, PlayerInstance player, Skill skill)
+	{
+		startQuestTimer("MANAGE_SKILLS", 1000, npc, null);
+		
+		return super.onSpellFinished(npc, player, skill);
+	}
+	
+	private void manageSkills(Npc npc)
+	{
+		if (npc.isCastingNow(SkillCaster::isAnyNormalType) || npc.isCoreAIDisabled() || !npc.isInCombat())
+		{
+			return;
+		}
+		
+		final NpcVariables vars = npc.getVariables();
+		for (int i = 0; i < 3; i++)
+		{
+			final Creature attacker = vars.getObject("c_quest" + i, Creature.class);
+			if ((attacker == null) || ((npc.calculateDistance3D(attacker) > 9000) || attacker.isDead()))
+			{
+				vars.set("i_quest" + i, 0);
+			}
+		}
+		final int index = CommonUtil.getIndexOfMaxValue(vars.getInt("i_quest0"), vars.getInt("i_quest1"), vars.getInt("i_quest2"));
+		final Creature player = vars.getObject("c_quest" + index, Creature.class);
+		final int i2 = vars.getInt("i_quest" + index);
+		if ((i2 > 0) && (getRandom(100) < 70))
+		{
+			vars.set("i_quest" + index, 500);
+		}
+		
+		if ((player != null) && !player.isDead())
+		{
+			Skill skillToCast = RAMONA3_SKILLS[Rnd.get(RAMONA3_SKILLS.length)];
+			if ((skillToCast != null) && SkillCaster.checkUseConditions(npc, skillToCast))
+			
+			{
+				npc.setTarget(player);
+				npc.doCast(skillToCast);
+			}
+		}
 	}
 	
 	@Override
@@ -336,6 +522,18 @@ public class Ramona extends AbstractNpcAI
 					}
 				});
 				startQuestTimer("SPAWN_RAMONA_1", 10000, npc, null);
+				break;
+			}
+			case RAMONA_1:
+			{
+				startQuestTimer("SPAWN_RAMONA2", 1000, null, null);
+				startQuestTimer("SPAWN_RAMONA_MINIONS", 6000, _ramona2, null);
+				break;
+			}
+			case RAMONA_2:
+			{
+				startQuestTimer("SPAWN_RAMONA3", 1000, null, null);
+				startQuestTimer("SPAWN_RAMONA_MINIONS_1", 6000, _ramona3, null);
 				break;
 			}
 			case RAMONA_3:
