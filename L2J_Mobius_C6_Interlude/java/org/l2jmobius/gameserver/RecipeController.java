@@ -324,7 +324,7 @@ public class RecipeController
 				return;
 			}
 			
-			if (_player.isOnline() || _target.isOnline())
+			if (!_player.isOnline() || !_target.isOnline())
 			{
 				LOGGER.warning("Player or target is not online, aborting " + _target + _player);
 				abort();
