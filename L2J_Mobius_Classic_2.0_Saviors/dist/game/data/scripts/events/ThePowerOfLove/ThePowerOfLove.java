@@ -59,7 +59,7 @@ public class ThePowerOfLove extends LongTimeEvent
 			}
 			case "coco_giveItem":
 			{
-				if (!hasQuestItems(player, COCOGIFBOX))
+				if (!ownsAtLeastOneItem(player, COCOGIFBOX))
 				{
 					giveItems(player, COCOGIFBOX, 1);
 					htmltext = "33893-5.htm";

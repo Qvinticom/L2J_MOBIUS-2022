@@ -334,6 +334,7 @@ public class Message
 			_attachments.restore();
 			_unloadTask = ThreadPool.schedule(new AttachmentsUnloadTask(this), UNLOAD_ATTACHMENTS_INTERVAL + Rnd.get(UNLOAD_ATTACHMENTS_INTERVAL));
 		}
+		
 		return _attachments;
 	}
 	

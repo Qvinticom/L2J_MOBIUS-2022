@@ -44,8 +44,10 @@ import org.l2jmobius.gameserver.enums.AttributeType;
 import org.l2jmobius.gameserver.enums.Movie;
 import org.l2jmobius.gameserver.enums.QuestSound;
 import org.l2jmobius.gameserver.instancemanager.CastleManager;
+import org.l2jmobius.gameserver.instancemanager.CommissionManager;
 import org.l2jmobius.gameserver.instancemanager.FortManager;
 import org.l2jmobius.gameserver.instancemanager.InstanceManager;
+import org.l2jmobius.gameserver.instancemanager.MailManager;
 import org.l2jmobius.gameserver.instancemanager.PcCafePointsManager;
 import org.l2jmobius.gameserver.instancemanager.ZoneManager;
 import org.l2jmobius.gameserver.model.Location;
@@ -56,6 +58,7 @@ import org.l2jmobius.gameserver.model.actor.Attackable;
 import org.l2jmobius.gameserver.model.actor.Creature;
 import org.l2jmobius.gameserver.model.actor.Npc;
 import org.l2jmobius.gameserver.model.actor.Playable;
+import org.l2jmobius.gameserver.model.actor.Summon;
 import org.l2jmobius.gameserver.model.actor.instance.DoorInstance;
 import org.l2jmobius.gameserver.model.actor.instance.MonsterInstance;
 import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
@@ -63,6 +66,7 @@ import org.l2jmobius.gameserver.model.actor.instance.TrapInstance;
 import org.l2jmobius.gameserver.model.actor.templates.NpcTemplate;
 import org.l2jmobius.gameserver.model.entity.Castle;
 import org.l2jmobius.gameserver.model.entity.Fort;
+import org.l2jmobius.gameserver.model.entity.Message;
 import org.l2jmobius.gameserver.model.events.annotations.Id;
 import org.l2jmobius.gameserver.model.events.annotations.Ids;
 import org.l2jmobius.gameserver.model.events.annotations.NpcLevelRange;
@@ -132,7 +136,10 @@ import org.l2jmobius.gameserver.model.instancezone.Instance;
 import org.l2jmobius.gameserver.model.instancezone.InstanceTemplate;
 import org.l2jmobius.gameserver.model.interfaces.IPositionable;
 import org.l2jmobius.gameserver.model.itemcontainer.Inventory;
+import org.l2jmobius.gameserver.model.itemcontainer.Mail;
+import org.l2jmobius.gameserver.model.itemcontainer.PetInventory;
 import org.l2jmobius.gameserver.model.itemcontainer.PlayerInventory;
+import org.l2jmobius.gameserver.model.itemcontainer.PlayerWarehouse;
 import org.l2jmobius.gameserver.model.items.EtcItem;
 import org.l2jmobius.gameserver.model.items.Item;
 import org.l2jmobius.gameserver.model.items.enchant.attribute.AttributeHolder;
@@ -2420,6 +2427,105 @@ public abstract class AbstractScript extends ManagedScript implements IEventTime
 		for (int itemId : itemIds)
 		{
 			if (inv.getItemByItemId(itemId) != null)
+			{
+				return true;
+			}
+		}
+		return false;
+	}
+	
+	/**
+	 * Extensive player ownership check for single or multiple items.<br>
+	 * Checks inventory, warehouse, pet, summons, mail attachments and item auctions.
+	 * @param player the player to check for quest items
+	 * @param itemIds a list of item IDs to check for
+	 * @return {@code true} if player owns at least one items, {@code false} otherwise.
+	 */
+	public boolean ownsAtLeastOneItem(PlayerInstance player, int... itemIds)
+	{
+		// Inventory.
+		final PlayerInventory inventory = player.getInventory();
+		for (int itemId : itemIds)
+		{
+			if (inventory.getItemByItemId(itemId) != null)
+			{
+				return true;
+			}
+		}
+		// Warehouse.
+		final PlayerWarehouse warehouse = player.getWarehouse();
+		for (int itemId : itemIds)
+		{
+			if (warehouse.getItemByItemId(itemId) != null)
+			{
+				return true;
+			}
+		}
+		// Pet.
+		if (player.hasPet())
+		{
+			final PetInventory petInventory = player.getPet().getInventory();
+			if (petInventory != null)
+			{
+				for (int itemId : itemIds)
+				{
+					if (petInventory.getItemByItemId(itemId) != null)
+					{
+						return true;
+					}
+				}
+			}
+		}
+		// Summons.
+		if (player.hasServitors())
+		{
+			for (Summon summon : player.getServitors().values())
+			{
+				final PetInventory summonInventory = summon.getInventory();
+				if (summonInventory != null)
+				{
+					for (int itemId : itemIds)
+					{
+						if (summonInventory.getItemByItemId(itemId) != null)
+						{
+							return true;
+						}
+					}
+				}
+			}
+		}
+		// Mail attachments.
+		if (Config.ALLOW_MAIL)
+		{
+			final List<Message> inbox = MailManager.getInstance().getInbox(player.getObjectId());
+			for (int itemId : itemIds)
+			{
+				for (Message message : inbox)
+				{
+					final Mail mail = message.getAttachments();
+					if ((mail != null) && (mail.getItemByItemId(itemId) != null))
+					{
+						return true;
+					}
+				}
+			}
+			final List<Message> outbox = MailManager.getInstance().getOutbox(player.getObjectId());
+			for (int itemId : itemIds)
+			{
+				for (Message message : outbox)
+				{
+					final Mail mail = message.getAttachments();
+					if ((mail != null) && (mail.getItemByItemId(itemId) != null))
+					{
+						return true;
+					}
+				}
+			}
+		}
+		// Item auctions.
+		for (int itemId : itemIds)
+		{
+			if (CommissionManager.getInstance().hasCommissionedItemId(player, itemId))
 			{
 				return true;
 			}

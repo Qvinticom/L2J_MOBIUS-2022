@@ -446,6 +446,16 @@ public class CommissionManager
 	}
 	
 	/**
+	 * @param player the player
+	 * @param itemId the item id
+	 * @return {@code true} if the player has commissioned a specific item id, {@code false} otherwise.
+	 */
+	public boolean hasCommissionedItemId(PlayerInstance player, int itemId)
+	{
+		return !_commissionItems.values().stream().filter(c -> (c.getItemInstance().getOwnerId() == player.getObjectId()) && (c.getItemInstance().getItem().getId() == itemId)).collect(Collectors.toList()).isEmpty();
+	}
+	
+	/**
 	 * Checks if the player is allowed to interact with commission manager.
 	 * @param player the player
 	 * @return {@code true} if the player is allowed to interact, {@code false} otherwise

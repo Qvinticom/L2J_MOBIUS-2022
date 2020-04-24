@@ -279,7 +279,7 @@ public class Raina extends AbstractNpcAI
 				{
 					htmltext = "noSubChange.html";
 				}
-				else if (!hasQuestItems(player, SUBCLASS_CERTIFICATE))
+				else if (!ownsAtLeastOneItem(player, SUBCLASS_CERTIFICATE))
 				{
 					htmltext = "noCertificate.html";
 				}
@@ -378,7 +378,7 @@ public class Raina extends AbstractNpcAI
 				{
 					htmltext = "reawakenNoDual.html";
 				}
-				else if ((player.getAdena() < REAWAKEN_PRICE[index]) || !hasQuestItems(player, getCloakId(player)))
+				else if ((player.getAdena() < REAWAKEN_PRICE[index]) || !ownsAtLeastOneItem(player, getCloakId(player)))
 				{
 					final NpcHtmlMessage html = getNpcHtmlMessage(player, npc, "reawakenNoFee.html");
 					html.replace("%price%", REAWAKEN_PRICE[index]);
@@ -587,7 +587,7 @@ public class Raina extends AbstractNpcAI
 				}
 				
 				final int index = player.getLevel() > 94 ? REAWAKEN_PRICE.length - 1 : player.getLevel() - 85;
-				if ((player.getAdena() < REAWAKEN_PRICE[index]) || !hasQuestItems(player, getCloakId(player)))
+				if ((player.getAdena() < REAWAKEN_PRICE[index]) || !ownsAtLeastOneItem(player, getCloakId(player)))
 				{
 					final NpcHtmlMessage html = getNpcHtmlMessage(player, npc, "reawakenNoFee.html");
 					html.replace("%price%", REAWAKEN_PRICE[index]);

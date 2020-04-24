@@ -80,7 +80,7 @@ public class RudolphsBlessing extends LongTimeEvent
 		{
 			case "rudolph":
 			{
-				if (hasQuestItems(player, AGATHION_SEAL_BRACELET_RUDOLPH))
+				if (ownsAtLeastOneItem(player, AGATHION_SEAL_BRACELET_RUDOLPH))
 				{
 					htmltext = "13285-05.htm";
 				}

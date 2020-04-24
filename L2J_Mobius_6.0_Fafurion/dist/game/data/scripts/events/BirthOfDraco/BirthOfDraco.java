@@ -104,7 +104,7 @@ public class BirthOfDraco extends LongTimeEvent
 				break;
 			}
 			/*
-			 * case "giveAgathion": { if (hasQuestItems(player, AGATHION)) { htmltext = "33687-03.htm"; } else { giveItems(player, AGATHION, 1); htmltext = "33687-02.htm"; } break; }
+			 * case "giveAgathion": { if (hasQuestItemss(player, AGATHION)) { htmltext = "33687-03.htm"; } else { giveItems(player, AGATHION, 1); htmltext = "33687-02.htm"; } break; }
 			 */
 		}
 		return htmltext;

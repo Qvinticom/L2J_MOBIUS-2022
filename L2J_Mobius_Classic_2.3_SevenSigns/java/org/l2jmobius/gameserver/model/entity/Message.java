@@ -402,6 +402,7 @@ public class Message
 			_attachments = new Mail(_senderId, _messageId);
 			_attachments.restore();
 		}
+		
 		return _attachments;
 	}
 	

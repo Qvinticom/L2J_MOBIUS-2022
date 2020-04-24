@@ -72,7 +72,7 @@ public class ThePowerOfLove extends LongTimeEvent
 			}
 			case "ct":
 			{
-				if (!hasQuestItems(player, CT) && !hasQuestItems(player, CH) && !hasQuestItems(player, CC))
+				if (!ownsAtLeastOneItem(player, CT) && !ownsAtLeastOneItem(player, CH) && !ownsAtLeastOneItem(player, CC))
 				{
 					giveItems(player, CT, 1);
 					giveItems(player, CT_TRANSORM, 1);
@@ -87,7 +87,7 @@ public class ThePowerOfLove extends LongTimeEvent
 			}
 			case "ch":
 			{
-				if (!hasQuestItems(player, CT) && !hasQuestItems(player, CH) && !hasQuestItems(player, CC))
+				if (!ownsAtLeastOneItem(player, CT) && !ownsAtLeastOneItem(player, CH) && !ownsAtLeastOneItem(player, CC))
 				{
 					giveItems(player, CH, 1);
 					giveItems(player, CH_TRANSORM, 1);
@@ -102,7 +102,7 @@ public class ThePowerOfLove extends LongTimeEvent
 			}
 			case "cc":
 			{
-				if (!hasQuestItems(player, CT) && !hasQuestItems(player, CH) && !hasQuestItems(player, CC))
+				if (!ownsAtLeastOneItem(player, CT) && !ownsAtLeastOneItem(player, CH) && !ownsAtLeastOneItem(player, CC))
 				{
 					giveItems(player, CC, 1);
 					giveItems(player, CC_TRANSORM, 1);

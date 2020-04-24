@@ -65,7 +65,7 @@ public class HappyHours extends LongTimeEvent
 				{
 					return "34262-2.htm";
 				}
-				if (hasQuestItems(player, SUPPLY_BOX))
+				if (ownsAtLeastOneItem(player, SUPPLY_BOX))
 				{
 					return "34262-3.htm";
 				}

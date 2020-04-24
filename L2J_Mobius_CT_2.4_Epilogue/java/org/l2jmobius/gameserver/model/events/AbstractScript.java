@@ -41,6 +41,7 @@ import org.l2jmobius.gameserver.enums.Movie;
 import org.l2jmobius.gameserver.enums.QuestSound;
 import org.l2jmobius.gameserver.instancemanager.CastleManager;
 import org.l2jmobius.gameserver.instancemanager.FortManager;
+import org.l2jmobius.gameserver.instancemanager.MailManager;
 import org.l2jmobius.gameserver.instancemanager.ZoneManager;
 import org.l2jmobius.gameserver.model.Location;
 import org.l2jmobius.gameserver.model.Spawn;
@@ -54,6 +55,7 @@ import org.l2jmobius.gameserver.model.actor.instance.TrapInstance;
 import org.l2jmobius.gameserver.model.actor.templates.NpcTemplate;
 import org.l2jmobius.gameserver.model.entity.Castle;
 import org.l2jmobius.gameserver.model.entity.Fort;
+import org.l2jmobius.gameserver.model.entity.Message;
 import org.l2jmobius.gameserver.model.events.annotations.Id;
 import org.l2jmobius.gameserver.model.events.annotations.Ids;
 import org.l2jmobius.gameserver.model.events.annotations.NpcLevelRange;
@@ -111,7 +113,10 @@ import org.l2jmobius.gameserver.model.holders.SkillHolder;
 import org.l2jmobius.gameserver.model.instancezone.InstanceWorld;
 import org.l2jmobius.gameserver.model.interfaces.IPositionable;
 import org.l2jmobius.gameserver.model.itemcontainer.Inventory;
+import org.l2jmobius.gameserver.model.itemcontainer.Mail;
+import org.l2jmobius.gameserver.model.itemcontainer.PetInventory;
 import org.l2jmobius.gameserver.model.itemcontainer.PlayerInventory;
+import org.l2jmobius.gameserver.model.itemcontainer.PlayerWarehouse;
 import org.l2jmobius.gameserver.model.items.EtcItem;
 import org.l2jmobius.gameserver.model.items.Item;
 import org.l2jmobius.gameserver.model.items.instance.ItemInstance;
@@ -2081,6 +2086,79 @@ public abstract class AbstractScript extends ManagedScript
 			if (inv.getItemByItemId(itemId) != null)
 			{
 				return true;
+			}
+		}
+		return false;
+	}
+	
+	/**
+	 * Extensive player ownership check for single or multiple items.<br>
+	 * Checks inventory, warehouse, summon and mail attachments.
+	 * @param player the player to check for quest items
+	 * @param itemIds a list of item IDs to check for
+	 * @return {@code true} if player owns at least one items, {@code false} otherwise.
+	 */
+	public boolean ownsAtLeastOneItem(PlayerInstance player, int... itemIds)
+	{
+		// Inventory.
+		final PlayerInventory inventory = player.getInventory();
+		for (int itemId : itemIds)
+		{
+			if (inventory.getItemByItemId(itemId) != null)
+			{
+				return true;
+			}
+		}
+		// Warehouse.
+		final PlayerWarehouse warehouse = player.getWarehouse();
+		for (int itemId : itemIds)
+		{
+			if (warehouse.getItemByItemId(itemId) != null)
+			{
+				return true;
+			}
+		}
+		// Summon.
+		if (player.hasSummon())
+		{
+			final PetInventory petInventory = player.getSummon().getInventory();
+			if (petInventory != null)
+			{
+				for (int itemId : itemIds)
+				{
+					if (petInventory.getItemByItemId(itemId) != null)
+					{
+						return true;
+					}
+				}
+			}
+		}
+		// Mail attachments.
+		if (Config.ALLOW_MAIL)
+		{
+			final List<Message> inbox = MailManager.getInstance().getInbox(player.getObjectId());
+			for (int itemId : itemIds)
+			{
+				for (Message message : inbox)
+				{
+					final Mail mail = message.getAttachments();
+					if ((mail != null) && (mail.getItemByItemId(itemId) != null))
+					{
+						return true;
+					}
+				}
+			}
+			final List<Message> outbox = MailManager.getInstance().getOutbox(player.getObjectId());
+			for (int itemId : itemIds)
+			{
+				for (Message message : outbox)
+				{
+					final Mail mail = message.getAttachments();
+					if ((mail != null) && (mail.getItemByItemId(itemId) != null))
+					{
+						return true;
+					}
+				}
 			}
 		}
 		return false;

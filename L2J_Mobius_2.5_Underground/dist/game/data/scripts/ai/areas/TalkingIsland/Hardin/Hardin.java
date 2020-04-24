@@ -207,7 +207,7 @@ public class Hardin extends AbstractNpcAI
 		}
 		if (player.isDualClassActive()) // dual class
 		{
-			if (!hasQuestItems(player, CHAOS_ESSENCE_DUAL_CLASS))
+			if (!ownsAtLeastOneItem(player, CHAOS_ESSENCE_DUAL_CLASS))
 			{
 				return "33870-no_already_reawakened.html";
 			}
@@ -216,11 +216,11 @@ public class Hardin extends AbstractNpcAI
 		{
 			return "33870-no.html";
 		}
-		else if (!hasQuestItems(player, CHAOS_ESSENCE)) // main class
+		else if (!ownsAtLeastOneItem(player, CHAOS_ESSENCE)) // main class
 		{
 			return "33870-no_already_reawakened.html";
 		}
-		if (player.hasServitors())
+		if (player.hasSummon())
 		{
 			return "33870-no_summon.html";
 		}

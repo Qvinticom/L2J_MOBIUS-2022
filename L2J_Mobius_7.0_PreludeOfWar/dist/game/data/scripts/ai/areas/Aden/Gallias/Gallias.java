@@ -184,7 +184,7 @@ public class Gallias extends AbstractNpcAI
 			}
 			case "learnSubSkill":
 			{
-				if (player.isSubClassActive() || !hasQuestItems(player, SUB_CERTIFICATE))
+				if (player.isSubClassActive() || !ownsAtLeastOneItem(player, SUB_CERTIFICATE))
 				{
 					htmltext = "34514-21.html";
 				}
@@ -288,7 +288,7 @@ public class Gallias extends AbstractNpcAI
 				{
 					htmltext = "34514-30.html";
 				}
-				else if (!hasQuestItems(player, DUAL_CERTIFICATE))
+				else if (!ownsAtLeastOneItem(player, DUAL_CERTIFICATE))
 				{
 					htmltext = "34514-31.html";
 				}

@@ -174,7 +174,7 @@ public class Trandon extends AbstractNpcAI
 				{
 					htmltext = "33490-15.html";
 				}
-				else if (player.isSubClassActive() || !hasQuestItems(player, SUB_CERTIFICATE))
+				else if (player.isSubClassActive() || !ownsAtLeastOneItem(player, SUB_CERTIFICATE))
 				{
 					htmltext = "33490-21.html";
 				}
@@ -283,7 +283,7 @@ public class Trandon extends AbstractNpcAI
 				{
 					htmltext = "33490-30.html";
 				}
-				else if (!hasQuestItems(player, DUAL_CERTIFICATE))
+				else if (!ownsAtLeastOneItem(player, DUAL_CERTIFICATE))
 				{
 					htmltext = "33490-31.html";
 				}

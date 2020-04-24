@@ -68,7 +68,7 @@ public class LoversJubilee extends LongTimeEvent
 		{
 			case "50020_1":
 			{
-				htmtext = hasQuestItems(player, SPIRIT_TEST_REPORT) ? "4305-010.htm" : "4305-002.htm";
+				htmtext = ownsAtLeastOneItem(player, SPIRIT_TEST_REPORT) ? "4305-010.htm" : "4305-002.htm";
 				break;
 			}
 			case "50020_2":

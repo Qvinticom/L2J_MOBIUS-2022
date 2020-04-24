@@ -73,7 +73,7 @@ public class MasterOfEnchanting extends LongTimeEvent
 		String htmltext = event;
 		if (event.equalsIgnoreCase("buy_staff"))
 		{
-			if (!hasQuestItems(player, MASTER_YOGI_STAFF) && (getQuestItemsCount(player, Inventory.ADENA_ID) > STAFF_PRICE))
+			if (!ownsAtLeastOneItem(player, MASTER_YOGI_STAFF) && (getQuestItemsCount(player, Inventory.ADENA_ID) > STAFF_PRICE))
 			{
 				takeItems(player, Inventory.ADENA_ID, STAFF_PRICE);
 				giveItems(player, MASTER_YOGI_STAFF, 1);
