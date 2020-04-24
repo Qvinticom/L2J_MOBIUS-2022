@@ -77,7 +77,7 @@ public class CharacterBirthday extends AbstractNpcAI
 		else if (event.equalsIgnoreCase("change"))
 		{
 			// Change Hat
-			if (ownsAtLeastOneItem(player, 10250))
+			if (hasQuestItems(player, 10250))
 			{
 				takeItems(player, 10250, 1); // Adventurer Hat (Event)
 				giveItems(player, 21594, 1); // Birthday Hat
