@@ -14,11 +14,9 @@
  * You should have received a copy of the GNU General Public License
  * along with this program. If not, see <http://www.gnu.org/licenses/>.
  */
-
 package ai.bosses.Cyrax;
 
 import org.l2jmobius.commons.util.CommonUtil;
-import org.l2jmobius.gameserver.model.Party;
 import org.l2jmobius.gameserver.model.actor.Creature;
 import org.l2jmobius.gameserver.model.actor.Npc;
 import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
@@ -30,21 +28,19 @@ import org.l2jmobius.gameserver.model.variables.NpcVariables;
 import ai.AbstractNpcAI;
 
 /**
- * @author Mobius
+ * @author NviX
  */
-public class Cyrax extends AbstractNpcAI
+public class TempleEliteWizard extends AbstractNpcAI
 {
 	// NPC
-	private static final int CYRAX = 29374;
+	private static final int TEMPLE_ELITE_WIZARD = 29378;
 	// Skills
-	private static final SkillHolder AQUA_WAVE = new SkillHolder(32742, 1);
-	private static final SkillHolder SURGE_WAVE = new SkillHolder(32743, 1);
-	// Item
-	private static final int FONDUS_STONE = 80322;
+	private static final SkillHolder WATER_ARROW = new SkillHolder(32740, 1);
+	private static final SkillHolder ARROW_FLUSH = new SkillHolder(32741, 1);
 	
-	public Cyrax()
+	private TempleEliteWizard()
 	{
-		registerMobs(CYRAX);
+		registerMobs(TEMPLE_ELITE_WIZARD);
 	}
 	
 	@Override
@@ -67,7 +63,7 @@ public class Cyrax extends AbstractNpcAI
 	@Override
 	public String onAttack(Npc npc, PlayerInstance attacker, int damage, boolean isSummon, Skill skill)
 	{
-		if (npc.getId() == CYRAX)
+		if (npc.getId() == TEMPLE_ELITE_WIZARD)
 		{
 			if (skill == null)
 			{
@@ -125,6 +121,7 @@ public class Cyrax extends AbstractNpcAI
 	public String onSpellFinished(Npc npc, PlayerInstance player, Skill skill)
 	{
 		startQuestTimer("MANAGE_SKILLS", 1000, npc, null);
+		
 		return super.onSpellFinished(npc, player, skill);
 	}
 	
@@ -157,11 +154,11 @@ public class Cyrax extends AbstractNpcAI
 		{
 			if (getRandom(100) < 30)
 			{
-				skillToCast = SURGE_WAVE;
+				skillToCast = ARROW_FLUSH;
 			}
 			else
 			{
-				skillToCast = AQUA_WAVE;
+				skillToCast = WATER_ARROW;
 			}
 		}
 		
@@ -172,30 +169,8 @@ public class Cyrax extends AbstractNpcAI
 		}
 	}
 	
-	@Override
-	public String onKill(Npc npc, PlayerInstance killer, boolean isSummon)
-	{
-		if (killer.isInParty())
-		{
-			final Party party = killer.getParty();
-			if (party.getCommandChannel() != null)
-			{
-				giveItems(party.getCommandChannel().getLeader(), FONDUS_STONE, 1);
-			}
-			else
-			{
-				giveItems(party.getLeader(), FONDUS_STONE, 1);
-			}
-		}
-		else
-		{
-			giveItems(killer, FONDUS_STONE, 1);
-		}
-		return super.onKill(npc, killer, isSummon);
-	}
-	
 	public static void main(String[] args)
 	{
-		new Cyrax();
+		new TempleEliteWizard();
 	}
 }
