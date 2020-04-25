@@ -245,7 +245,6 @@ import quests.Q00930_DisparagingThePhantoms.Q00930_DisparagingThePhantoms;
 import quests.Q00931_MemoriesOfTheWind.Q00931_MemoriesOfTheWind;
 import quests.Q00932_SayhasEnergy.Q00932_SayhasEnergy;
 import quests.Q00937_ToReviveTheFishingGuild.Q00937_ToReviveTheFishingGuild;
-import quests.Q00985_AdventureGuildsSpecialRequestLv1.Q00985_AdventureGuildsSpecialRequestLv1;
 import quests.Q10273_GoodDayToFly.Q10273_GoodDayToFly;
 import quests.Q10274_CollectingInTheAir.Q10274_CollectingInTheAir;
 import quests.Q10282_ToTheSeedOfAnnihilation.Q10282_ToTheSeedOfAnnihilation;
@@ -557,6 +556,7 @@ import quests.not_done.Q00841_ContaminationContainment;
 import quests.not_done.Q00843_GiantEvolutionControl;
 import quests.not_done.Q00846_BuildingUpStrength;
 import quests.not_done.Q00929_SeekerRescue;
+import quests.not_done.Q00985_AdventureGuildsSpecialRequestLv1;
 import quests.not_done.Q00986_AdventureGuildsSpecialRequestLv2;
 import quests.not_done.Q00987_AdventureGuildsSpecialRequestLv3;
 import quests.not_done.Q00988_AdventureGuildsSpecialRequestLv4;
@@ -862,7 +862,7 @@ public class QuestMasterHandler
 		Q00931_MemoriesOfTheWind.class,
 		Q00932_SayhasEnergy.class,
 		Q00937_ToReviveTheFishingGuild.class,
-		Q00985_AdventureGuildsSpecialRequestLv1.class,
+		Q00985_AdventureGuildsSpecialRequestLv1.class, // TODO: Not done.
 		Q00986_AdventureGuildsSpecialRequestLv2.class, // TODO: Not done.
 		Q00987_AdventureGuildsSpecialRequestLv3.class, // TODO: Not done.
 		Q00988_AdventureGuildsSpecialRequestLv4.class, // TODO: Not done.
