@@ -264,8 +264,11 @@ public class EffectMasterHandler
 		EffectHandler.getInstance().registerHandler("PvePhysicalAttackDefenceBonus", PvePhysicalAttackDefenceBonus::new);
 		EffectHandler.getInstance().registerHandler("PvePhysicalSkillDamageBonus", PvePhysicalSkillDamageBonus::new);
 		EffectHandler.getInstance().registerHandler("PvePhysicalSkillDefenceBonus", PvePhysicalSkillDefenceBonus::new);
+		EffectHandler.getInstance().registerHandler("PveRaidMagicalSkillDamageBonus", PveRaidMagicalSkillDamageBonus::new);
 		EffectHandler.getInstance().registerHandler("PveRaidMagicalSkillDefenceBonus", PveRaidMagicalSkillDefenceBonus::new);
+		EffectHandler.getInstance().registerHandler("PveRaidPhysicalAttackDamageBonus", PveRaidPhysicalAttackDamageBonus::new);
 		EffectHandler.getInstance().registerHandler("PveRaidPhysicalAttackDefenceBonus", PveRaidPhysicalAttackDefenceBonus::new);
+		EffectHandler.getInstance().registerHandler("PveRaidPhysicalSkillDamageBonus", PveRaidPhysicalSkillDamageBonus::new);
 		EffectHandler.getInstance().registerHandler("PveRaidPhysicalSkillDefenceBonus", PveRaidPhysicalSkillDefenceBonus::new);
 		EffectHandler.getInstance().registerHandler("PvpMagicalSkillDamageBonus", PvpMagicalSkillDamageBonus::new);
 		EffectHandler.getInstance().registerHandler("PvpMagicalSkillDefenceBonus", PvpMagicalSkillDefenceBonus::new);

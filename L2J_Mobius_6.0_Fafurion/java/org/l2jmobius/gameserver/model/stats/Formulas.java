@@ -1605,6 +1605,7 @@ public class Formulas
 		{
 			final double pveAttack;
 			final double pveDefense;
+			final double pveRaidAttack;
 			final double pveRaidDefense;
 			
 			double pvePenalty = 1;
@@ -1628,6 +1629,7 @@ public class Formulas
 					// Magical Skill PvE
 					pveAttack = attacker.getStat().getValue(Stat.PVE_MAGICAL_SKILL_DAMAGE, 1) * (attackerPlayer == null ? 1 : Config.PVE_MAGICAL_SKILL_DAMAGE_MULTIPLIERS.getOrDefault(attackerPlayer.getClassId(), 1f));
 					pveDefense = target.getStat().getValue(Stat.PVE_MAGICAL_SKILL_DEFENCE, 1) * (targetPlayer == null ? 1 : Config.PVE_MAGICAL_SKILL_DEFENCE_MULTIPLIERS.getOrDefault(targetPlayer.getClassId(), 1f));
+					pveRaidAttack = attacker.isRaid() ? attacker.getStat().getValue(Stat.PVE_RAID_MAGICAL_SKILL_DAMAGE, 1) : 1;
 					pveRaidDefense = attacker.isRaid() ? attacker.getStat().getValue(Stat.PVE_RAID_MAGICAL_SKILL_DEFENCE, 1) : 1;
 				}
 				else
@@ -1635,6 +1637,7 @@ public class Formulas
 					// Physical Skill PvE
 					pveAttack = attacker.getStat().getValue(Stat.PVE_PHYSICAL_SKILL_DAMAGE, 1) * (attackerPlayer == null ? 1 : Config.PVE_PHYSICAL_SKILL_DAMAGE_MULTIPLIERS.getOrDefault(attackerPlayer.getClassId(), 1f));
 					pveDefense = target.getStat().getValue(Stat.PVE_PHYSICAL_SKILL_DEFENCE, 1) * (targetPlayer == null ? 1 : Config.PVE_PHYSICAL_SKILL_DEFENCE_MULTIPLIERS.getOrDefault(targetPlayer.getClassId(), 1f));
+					pveRaidAttack = attacker.isRaid() ? attacker.getStat().getValue(Stat.PVE_RAID_PHYSICAL_SKILL_DAMAGE, 1) : 1;
 					pveRaidDefense = attacker.isRaid() ? attacker.getStat().getValue(Stat.PVE_RAID_PHYSICAL_SKILL_DEFENCE, 1) : 1;
 				}
 			}
@@ -1643,10 +1646,11 @@ public class Formulas
 				// Autoattack PvE
 				pveAttack = attacker.getStat().getValue(Stat.PVE_PHYSICAL_ATTACK_DAMAGE, 1) * (attackerPlayer == null ? 1 : Config.PVE_PHYSICAL_ATTACK_DAMAGE_MULTIPLIERS.getOrDefault(attackerPlayer.getClassId(), 1f));
 				pveDefense = target.getStat().getValue(Stat.PVE_PHYSICAL_ATTACK_DEFENCE, 1) * (targetPlayer == null ? 1 : Config.PVE_PHYSICAL_ATTACK_DEFENCE_MULTIPLIERS.getOrDefault(targetPlayer.getClassId(), 1f));
+				pveRaidAttack = attacker.isRaid() ? attacker.getStat().getValue(Stat.PVE_RAID_PHYSICAL_ATTACK_DAMAGE, 1) : 1;
 				pveRaidDefense = attacker.isRaid() ? attacker.getStat().getValue(Stat.PVE_RAID_PHYSICAL_ATTACK_DEFENCE, 1) : 1;
 			}
 			
-			return Math.max(0.05, (1 + (pveAttack - (pveDefense * pveRaidDefense))) * pvePenalty); // Bonus should not be negative.
+			return Math.max(0.05, (1 + ((pveAttack * pveRaidAttack) - (pveDefense * pveRaidDefense))) * pvePenalty); // Bonus should not be negative.
 		}
 		
 		return 1;
