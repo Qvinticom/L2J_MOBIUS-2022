@@ -17,8 +17,8 @@
 package org.l2jmobius.gameserver.handler.admincommandhandlers;
 
 import org.l2jmobius.gameserver.handler.IAdminCommandHandler;
-import org.l2jmobius.gameserver.model.PlayerInventory;
 import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
+import org.l2jmobius.gameserver.model.itemcontainer.PlayerInventory;
 import org.l2jmobius.gameserver.model.items.instance.ItemInstance;
 import org.l2jmobius.gameserver.network.serverpackets.InventoryUpdate;
 

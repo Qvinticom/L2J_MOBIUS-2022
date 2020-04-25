@@ -19,9 +19,9 @@ package org.l2jmobius.gameserver.model.actor.instance;
 import java.util.Map;
 
 import org.l2jmobius.Config;
-import org.l2jmobius.gameserver.model.PlayerFreight;
 import org.l2jmobius.gameserver.model.actor.templates.NpcTemplate;
 import org.l2jmobius.gameserver.model.clan.Clan;
+import org.l2jmobius.gameserver.model.itemcontainer.PlayerFreight;
 import org.l2jmobius.gameserver.network.SystemMessageId;
 import org.l2jmobius.gameserver.network.serverpackets.ActionFailed;
 import org.l2jmobius.gameserver.network.serverpackets.EnchantResult;

@@ -14,7 +14,7 @@
  * You should have received a copy of the GNU General Public License
  * along with this program. If not, see <http://www.gnu.org/licenses/>.
  */
-package org.l2jmobius.gameserver.model;
+package org.l2jmobius.gameserver.model.itemcontainer;
 
 import java.sql.Connection;
 import java.sql.PreparedStatement;
@@ -26,8 +26,9 @@ import java.util.logging.Logger;
 
 import org.l2jmobius.Config;
 import org.l2jmobius.commons.database.DatabaseFactory;
-import org.l2jmobius.gameserver.GameTimeController;
 import org.l2jmobius.gameserver.datatables.ItemTable;
+import org.l2jmobius.gameserver.model.World;
+import org.l2jmobius.gameserver.model.WorldObject;
 import org.l2jmobius.gameserver.model.actor.Creature;
 import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
 import org.l2jmobius.gameserver.model.items.Item;
@@ -189,23 +190,8 @@ public abstract class ItemContainer
 			ItemTable.getInstance().destroyItem(process, item, actor, reference);
 			item.updateDatabase();
 			item = olditem;
-			
-			// Updates database
-			if ((item.getItemId() == 57) && (count < (10000 * Config.RATE_DROP_ADENA)))
-			{
-				// Small adena changes won't be saved to database all the time
-				if ((GameTimeController.getGameTicks() % 5) == 0)
-				{
-					item.updateDatabase();
-				}
-			}
-			else
-			{
-				item.updateDatabase();
-			}
 		}
-		// If item hasn't be found in inventory, create new one
-		else
+		else // If item hasn't be found in inventory, create new one
 		{
 			item.setOwnerId(process, getOwnerId(), actor, reference);
 			item.setLocation(getBaseLocation());
@@ -213,13 +199,9 @@ public abstract class ItemContainer
 			
 			// Add item in inventory
 			addItem(item);
-			
-			// Updates database
-			item.updateDatabase();
 		}
 		
 		refreshWeight();
-		
 		return item;
 	}
 	
@@ -241,23 +223,8 @@ public abstract class ItemContainer
 		{
 			item.changeCount(process, count, actor, reference);
 			item.setLastChange(ItemInstance.MODIFIED);
-			
-			// Updates database
-			if ((itemId == 57) && (count < (10000 * Config.RATE_DROP_ADENA)))
-			{
-				// Small adena changes won't be saved to database all the time
-				if ((GameTimeController.getGameTicks() % 5) == 0)
-				{
-					item.updateDatabase();
-				}
-			}
-			else
-			{
-				item.updateDatabase();
-			}
 		}
-		// If item hasn't be found in inventory, create new one
-		else
+		else // If item hasn't be found in inventory, create new one
 		{
 			for (int i = 0; i < count; i++)
 			{
@@ -284,8 +251,6 @@ public abstract class ItemContainer
 				
 				// Add item in inventory
 				addItem(item);
-				// Updates database
-				item.updateDatabase();
 				
 				// If stackable, end loop as entire count is included in 1 instance of item
 				if (template.isStackable() || !Config.MULTIPLE_ITEM_DROP)
@@ -296,7 +261,6 @@ public abstract class ItemContainer
 		}
 		
 		refreshWeight();
-		
 		return item;
 	}
 	
@@ -362,7 +326,6 @@ public abstract class ItemContainer
 		}
 		
 		ItemInstance targetitem = sourceitem.isStackable() ? target.getItemByItemId(sourceitem.getItemId()) : null;
-		
 		synchronized (sourceitem)
 		{
 			// check if this item still present in this container
@@ -390,8 +353,7 @@ public abstract class ItemContainer
 				{
 					sourceitem.changeCount(process, -count, actor, reference);
 				}
-				else
-				// Otherwise destroy old item
+				else // Otherwise destroy old item
 				{
 					removeItem(sourceitem);
 					ItemTable.getInstance().destroyItem(process, sourceitem, actor, reference);
@@ -401,8 +363,7 @@ public abstract class ItemContainer
 				{
 					targetitem.changeCount(process, count, actor, reference);
 				}
-				else
-				// Otherwise add new item
+				else // Otherwise add new item
 				{
 					targetitem = target.addItem(process, sourceitem.getItemId(), count, actor, reference);
 				}
@@ -414,15 +375,13 @@ public abstract class ItemContainer
 			{
 				targetitem.updateDatabase();
 			}
-			
 			if (sourceitem.isAugmented())
 			{
 				sourceitem.getAugmentation().removeBonus(actor);
 			}
-			
 			refreshWeight();
+			target.refreshWeight();
 		}
-		
 		return targetitem;
 	}
 	
@@ -519,8 +478,7 @@ public abstract class ItemContainer
 				item.changeCount(process, -count, actor, reference);
 				item.setLastChange(ItemInstance.MODIFIED);
 			}
-			// Directly drop entire item
-			else
+			else // Directly drop entire item
 			{
 				return destroyItem(process, item, actor, reference);
 			}

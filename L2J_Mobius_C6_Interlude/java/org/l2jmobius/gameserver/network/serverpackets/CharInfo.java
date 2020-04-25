@@ -21,10 +21,10 @@ import java.util.logging.Logger;
 import org.l2jmobius.Config;
 import org.l2jmobius.gameserver.datatables.sql.NpcTable;
 import org.l2jmobius.gameserver.instancemanager.CursedWeaponsManager;
-import org.l2jmobius.gameserver.model.Inventory;
 import org.l2jmobius.gameserver.model.actor.Creature;
 import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
 import org.l2jmobius.gameserver.model.actor.templates.NpcTemplate;
+import org.l2jmobius.gameserver.model.itemcontainer.Inventory;
 
 public class CharInfo extends GameServerPacket
 {

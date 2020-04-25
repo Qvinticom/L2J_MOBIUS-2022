@@ -94,13 +94,14 @@ public class SendWareHouseDepositList implements IClientIncomingPacket
 		{
 			return;
 		}
-		final boolean isPrivate = warehouse instanceof PlayerWarehouse;
+		
 		final Npc manager = player.getLastFolkNPC();
 		if (((manager == null) || !manager.isWarehouse() || !manager.canInteract(player)) && !player.isGM())
 		{
 			return;
 		}
 		
+		final boolean isPrivate = warehouse instanceof PlayerWarehouse;
 		if (!isPrivate && !player.getAccessLevel().allowTransaction())
 		{
 			player.sendMessage("Transactions are disabled for your Access Level.");
@@ -123,9 +124,9 @@ public class SendWareHouseDepositList implements IClientIncomingPacket
 		final long fee = _items.size() * 30;
 		long currentAdena = player.getAdena();
 		int slots = 0;
-		for (ItemHolder i : _items)
+		for (ItemHolder itemHolder : _items)
 		{
-			final ItemInstance item = player.checkItemManipulation(i.getId(), i.getCount(), "deposit");
+			final ItemInstance item = player.checkItemManipulation(itemHolder.getId(), itemHolder.getCount(), "deposit");
 			if (item == null)
 			{
 				LOGGER.warning("Error depositing a warehouse object for char " + player.getName() + " (validity check)");
@@ -135,11 +136,11 @@ public class SendWareHouseDepositList implements IClientIncomingPacket
 			// Calculate needed adena and slots
 			if (item.getId() == ADENA_ID)
 			{
-				currentAdena -= i.getCount();
+				currentAdena -= itemHolder.getCount();
 			}
 			if (!item.isStackable())
 			{
-				slots += i.getCount();
+				slots += itemHolder.getCount();
 			}
 			else if (warehouse.getItemByItemId(item.getId()) == null)
 			{
@@ -169,10 +170,10 @@ public class SendWareHouseDepositList implements IClientIncomingPacket
 		
 		// Proceed to the transfer
 		final InventoryUpdate playerIU = Config.FORCE_INVENTORY_UPDATE ? null : new InventoryUpdate();
-		for (ItemHolder i : _items)
+		for (ItemHolder itemHolder : _items)
 		{
 			// Check validity of requested item
-			final ItemInstance oldItem = player.checkItemManipulation(i.getId(), i.getCount(), "deposit");
+			final ItemInstance oldItem = player.checkItemManipulation(itemHolder.getId(), itemHolder.getCount(), "deposit");
 			if (oldItem == null)
 			{
 				LOGGER.warning("Error depositing a warehouse object for char " + player.getName() + " (olditem == null)");
@@ -184,7 +185,7 @@ public class SendWareHouseDepositList implements IClientIncomingPacket
 				continue;
 			}
 			
-			final ItemInstance newItem = player.getInventory().transferItem(warehouse.getName(), i.getId(), i.getCount(), warehouse, player, manager);
+			final ItemInstance newItem = player.getInventory().transferItem(warehouse.getName(), itemHolder.getId(), itemHolder.getCount(), warehouse, player, manager);
 			if (newItem == null)
 			{
 				LOGGER.warning("Error depositing a warehouse object for char " + player.getName() + " (newitem == null)");

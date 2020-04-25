@@ -389,22 +389,25 @@ public abstract class ItemContainer
 			if (count == item.getCount())
 			{
 				removeItem(item);
-			}
-			else
-			{
-				item.changeCount(process, -count, actor, reference);
+				
+				item.setItemLocation(newLocation);
 				item.updateDatabase(true);
-				item = ItemTable.getInstance().createItem(process, item.getId(), count, actor, reference);
-				item.setOwnerId(getOwnerId());
+				refreshWeight();
+				
+				return item;
 			}
 			
-			item.setItemLocation(newLocation);
+			item.changeCount(process, -count, actor, reference);
 			item.updateDatabase(true);
+			
+			final ItemInstance newItem = ItemTable.getInstance().createItem(process, item.getId(), count, actor, reference);
+			newItem.setOwnerId(getOwnerId());
+			newItem.setItemLocation(newLocation);
+			newItem.updateDatabase(true);
+			refreshWeight();
+			
+			return newItem;
 		}
-		
-		refreshWeight();
-		
-		return item;
 	}
 	
 	/**

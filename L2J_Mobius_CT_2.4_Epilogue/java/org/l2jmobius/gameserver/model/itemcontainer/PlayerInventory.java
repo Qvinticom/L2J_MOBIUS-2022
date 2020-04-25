@@ -651,6 +651,7 @@ public class PlayerInventory extends Inventory
 		{
 			EventDispatcher.getInstance().notifyEventAsync(new OnPlayerItemDrop(actor, item, item.getLocation()), item.getItem());
 		}
+		
 		return item;
 	}
 	

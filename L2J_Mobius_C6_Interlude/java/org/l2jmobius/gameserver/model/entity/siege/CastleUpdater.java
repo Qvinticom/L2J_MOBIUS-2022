@@ -21,8 +21,8 @@ import java.util.logging.Logger;
 import org.l2jmobius.Config;
 import org.l2jmobius.commons.concurrent.ThreadPool;
 import org.l2jmobius.gameserver.instancemanager.CastleManager;
-import org.l2jmobius.gameserver.model.ItemContainer;
 import org.l2jmobius.gameserver.model.clan.Clan;
+import org.l2jmobius.gameserver.model.itemcontainer.ItemContainer;
 
 /**
  * Thorgrim - 2005 Class managing periodical events with castle

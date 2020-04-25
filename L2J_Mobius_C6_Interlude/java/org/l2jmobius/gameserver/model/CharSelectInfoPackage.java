@@ -16,6 +16,9 @@
  */
 package org.l2jmobius.gameserver.model;
 
+import org.l2jmobius.gameserver.model.itemcontainer.Inventory;
+import org.l2jmobius.gameserver.model.itemcontainer.PlayerInventory;
+
 /**
  * Used to Store data sent to Client for Character Selection screen.
  * @version $Revision: 1.2.2.2.2.4 $ $Date: 2005/03/27 15:29:33 $

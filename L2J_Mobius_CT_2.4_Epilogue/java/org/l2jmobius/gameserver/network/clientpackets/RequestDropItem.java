@@ -66,6 +66,7 @@ public class RequestDropItem implements IClientIncomingPacket
 		{
 			return;
 		}
+		
 		// Flood protect drop to avoid packet lag
 		if (!client.getFloodProtectors().getDropItem().tryPerformAction("drop item"))
 		{
@@ -78,6 +79,7 @@ public class RequestDropItem implements IClientIncomingPacket
 			player.sendPacket(SystemMessageId.THIS_ITEM_CANNOT_BE_DISCARDED);
 			return;
 		}
+		
 		if (item.isQuestItem() && !(player.canOverrideCond(PlayerCondOverride.DROP_ALL_ITEMS) && Config.GM_TRADE_RESTRICTED_ITEMS))
 		{
 			return;
@@ -125,12 +127,14 @@ public class RequestDropItem implements IClientIncomingPacket
 			player.sendPacket(SystemMessageId.WHILE_OPERATING_A_PRIVATE_STORE_OR_WORKSHOP_YOU_CANNOT_DISCARD_DESTROY_OR_TRADE_AN_ITEM);
 			return;
 		}
+		
 		if (player.isFishing())
 		{
 			// You can't mount, dismount, break and drop items while fishing
 			player.sendPacket(SystemMessageId.YOU_CANNOT_DO_THAT_WHILE_FISHING_2);
 			return;
 		}
+		
 		if (player.isFlying())
 		{
 			return;
@@ -189,7 +193,6 @@ public class RequestDropItem implements IClientIncomingPacket
 			}
 			player.sendPacket(iu);
 			player.broadcastUserInfo();
-			
 			player.sendPacket(new ItemList(player, true));
 		}
 		

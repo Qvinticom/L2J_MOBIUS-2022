@@ -14,7 +14,7 @@
  * You should have received a copy of the GNU General Public License
  * along with this program. If not, see <http://www.gnu.org/licenses/>.
  */
-package org.l2jmobius.gameserver.model;
+package org.l2jmobius.gameserver.model.itemcontainer;
 
 import java.sql.Connection;
 import java.sql.PreparedStatement;
@@ -23,6 +23,8 @@ import java.util.ArrayList;
 import java.util.List;
 
 import org.l2jmobius.commons.database.DatabaseFactory;
+import org.l2jmobius.gameserver.model.TradeList;
+import org.l2jmobius.gameserver.model.WorldObject;
 import org.l2jmobius.gameserver.model.TradeList.TradeItem;
 import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
 import org.l2jmobius.gameserver.model.items.Item;
@@ -450,6 +452,7 @@ public class PlayerInventory extends Inventory
 	public ItemInstance transferItem(String process, int objectId, int count, ItemContainer target, PlayerInstance actor, WorldObject reference)
 	{
 		final ItemInstance item = super.transferItem(process, objectId, count, target, actor, reference);
+		
 		if ((_adena != null) && ((_adena.getCount() <= 0) || (_adena.getOwnerId() != getOwnerId())))
 		{
 			_adena = null;
@@ -474,7 +477,8 @@ public class PlayerInventory extends Inventory
 	@Override
 	public ItemInstance destroyItem(String process, ItemInstance item, PlayerInstance actor, WorldObject reference)
 	{
-		item = super.destroyItem(process, item, actor, reference);
+		final ItemInstance itemInstance = super.destroyItem(process, item, actor, reference);
+		
 		if ((_adena != null) && (_adena.getCount() <= 0))
 		{
 			_adena = null;
@@ -485,7 +489,7 @@ public class PlayerInventory extends Inventory
 			_ancientAdena = null;
 		}
 		
-		return item;
+		return itemInstance;
 	}
 	
 	/**
@@ -501,6 +505,7 @@ public class PlayerInventory extends Inventory
 	public ItemInstance destroyItem(String process, int objectId, int count, PlayerInstance actor, WorldObject reference)
 	{
 		final ItemInstance item = super.destroyItem(process, objectId, count, actor, reference);
+		
 		if ((_adena != null) && (_adena.getCount() <= 0))
 		{
 			_adena = null;
@@ -527,6 +532,7 @@ public class PlayerInventory extends Inventory
 	public ItemInstance destroyItemByItemId(String process, int itemId, int count, PlayerInstance actor, WorldObject reference)
 	{
 		final ItemInstance item = super.destroyItemByItemId(process, itemId, count, actor, reference);
+		
 		if ((_adena != null) && (_adena.getCount() <= 0))
 		{
 			_adena = null;
@@ -551,7 +557,8 @@ public class PlayerInventory extends Inventory
 	@Override
 	public ItemInstance dropItem(String process, ItemInstance item, PlayerInstance actor, WorldObject reference)
 	{
-		item = super.dropItem(process, item, actor, reference);
+		final ItemInstance itemInstance = super.dropItem(process, item, actor, reference);
+		
 		if ((_adena != null) && ((_adena.getCount() <= 0) || (_adena.getOwnerId() != getOwnerId())))
 		{
 			_adena = null;
@@ -562,7 +569,7 @@ public class PlayerInventory extends Inventory
 			_ancientAdena = null;
 		}
 		
-		return item;
+		return itemInstance;
 	}
 	
 	/**
@@ -578,6 +585,7 @@ public class PlayerInventory extends Inventory
 	public ItemInstance dropItem(String process, int objectId, int count, PlayerInstance actor, WorldObject reference)
 	{
 		final ItemInstance item = super.dropItem(process, objectId, count, actor, reference);
+		
 		if ((_adena != null) && ((_adena.getCount() <= 0) || (_adena.getOwnerId() != getOwnerId())))
 		{
 			_adena = null;

@@ -962,12 +962,13 @@ public abstract class Inventory extends ItemContainer
 				item.setLastChange(ItemInstance.MODIFIED);
 				item.updateDatabase();
 				
-				item = ItemTable.getInstance().createItem(process, item.getId(), count, actor, reference);
-				item.updateDatabase();
+				final ItemInstance newItem = ItemTable.getInstance().createItem(process, item.getId(), count, actor, reference);
+				newItem.updateDatabase();
 				refreshWeight();
-				return item;
+				return newItem;
 			}
 		}
+		
 		return dropItem(process, item, actor, reference);
 	}
 	

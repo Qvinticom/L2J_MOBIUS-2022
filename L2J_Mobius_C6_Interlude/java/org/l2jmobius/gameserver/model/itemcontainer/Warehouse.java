@@ -14,35 +14,11 @@
  * You should have received a copy of the GNU General Public License
  * along with this program. If not, see <http://www.gnu.org/licenses/>.
  */
-package org.l2jmobius.gameserver.model;
+package org.l2jmobius.gameserver.model.itemcontainer;
 
-import org.l2jmobius.gameserver.model.actor.instance.PetInstance;
-import org.l2jmobius.gameserver.model.items.instance.ItemInstance.ItemLocation;
-
-public class PetInventory extends Inventory
+/**
+ * @version $Revision: 1.3.2.1.2.12 $ $Date: 2005/04/06 16:13:42 $
+ */
+public abstract class Warehouse extends ItemContainer
 {
-	private final PetInstance _owner;
-	
-	public PetInventory(PetInstance owner)
-	{
-		_owner = owner;
-	}
-	
-	@Override
-	public PetInstance getOwner()
-	{
-		return _owner;
-	}
-	
-	@Override
-	protected ItemLocation getBaseLocation()
-	{
-		return ItemLocation.PET;
-	}
-	
-	@Override
-	protected ItemLocation getEquipLocation()
-	{
-		return ItemLocation.PET_EQUIP;
-	}
 }

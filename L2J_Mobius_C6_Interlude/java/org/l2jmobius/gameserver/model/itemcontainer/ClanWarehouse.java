@@ -14,30 +14,38 @@
  * You should have received a copy of the GNU General Public License
  * along with this program. If not, see <http://www.gnu.org/licenses/>.
  */
-package org.l2jmobius.gameserver.model;
+package org.l2jmobius.gameserver.model.itemcontainer;
 
+import org.l2jmobius.Config;
 import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
+import org.l2jmobius.gameserver.model.clan.Clan;
 import org.l2jmobius.gameserver.model.items.instance.ItemInstance.ItemLocation;
 
-public class PlayerWarehouse extends Warehouse
+public class ClanWarehouse extends Warehouse
 {
-	private final PlayerInstance _owner;
+	private final Clan _clan;
 	
-	public PlayerWarehouse(PlayerInstance owner)
+	public ClanWarehouse(Clan clan)
 	{
-		_owner = owner;
+		_clan = clan;
+	}
+	
+	@Override
+	public int getOwnerId()
+	{
+		return _clan.getLeader().getObjectId();
 	}
 	
 	@Override
 	public PlayerInstance getOwner()
 	{
-		return _owner;
+		return _clan.getLeader().getPlayerInstance();
 	}
 	
 	@Override
 	public ItemLocation getBaseLocation()
 	{
-		return ItemLocation.WAREHOUSE;
+		return ItemLocation.CLANWH;
 	}
 	
 	public String getLocationId()
@@ -52,12 +60,11 @@ public class PlayerWarehouse extends Warehouse
 	
 	public void setLocationId(PlayerInstance dummy)
 	{
-		return;
 	}
 	
 	@Override
 	public boolean validateCapacity(int slots)
 	{
-		return (_items.size() + slots) <= _owner.getWareHouseLimit();
+		return (_items.size() + slots) <= Config.WAREHOUSE_SLOTS_CLAN;
 	}
 }

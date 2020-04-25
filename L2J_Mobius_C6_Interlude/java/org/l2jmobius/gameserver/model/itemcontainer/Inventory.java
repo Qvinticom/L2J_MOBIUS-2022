@@ -14,7 +14,7 @@
  * You should have received a copy of the GNU General Public License
  * along with this program. If not, see <http://www.gnu.org/licenses/>.
  */
-package org.l2jmobius.gameserver.model;
+package org.l2jmobius.gameserver.model.itemcontainer;
 
 import java.sql.Connection;
 import java.sql.PreparedStatement;
@@ -26,6 +26,10 @@ import org.l2jmobius.commons.database.DatabaseFactory;
 import org.l2jmobius.gameserver.datatables.ItemTable;
 import org.l2jmobius.gameserver.datatables.SkillTable;
 import org.l2jmobius.gameserver.datatables.xml.ArmorSetData;
+import org.l2jmobius.gameserver.model.ArmorSet;
+import org.l2jmobius.gameserver.model.Skill;
+import org.l2jmobius.gameserver.model.World;
+import org.l2jmobius.gameserver.model.WorldObject;
 import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
 import org.l2jmobius.gameserver.model.items.Armor;
 import org.l2jmobius.gameserver.model.items.EtcItem;
@@ -641,12 +645,13 @@ public abstract class Inventory extends ItemContainer
 			item.setLastChange(ItemInstance.MODIFIED);
 			item.updateDatabase();
 			
-			item = ItemTable.getInstance().createItem(process, item.getItemId(), count, actor, reference);
-			item.updateDatabase();
+			final ItemInstance newItem = ItemTable.getInstance().createItem(process, item.getItemId(), count, actor, reference);
+			newItem.updateDatabase();
 			refreshWeight();
 			
-			return item;
+			return newItem;
 		}
+		
 		// Directly drop entire item
 		return dropItem(process, item, actor, reference);
 	}
