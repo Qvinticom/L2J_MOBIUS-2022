@@ -1087,18 +1087,90 @@
 		<mpConsume>10</mpConsume>
 	</skill>
 	<skill id="1893" toLevel="1" name="Cat's Potential">
-		<!-- Unravels Cat's true potential. Damage to raid bosses +5%, Damage received from raid bosses -10%. -->
+		<!-- Unravels Cat's true potential. Damage to raid bosses +5%%, Damage received from raid bosses -10%%. -->
 		<icon>icon.skill1406</icon>
 		<operateType>P</operateType>
+		<magicLvl>81</magicLvl>
+		<magicCriticalRate>5</magicCriticalRate>
+		<effects>
+			<effect name="PveRaidPhysicalAttackDamageBonus">
+				<amount>5</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="PveRaidPhysicalSkillDamageBonus">
+				<amount>5</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="PveRaidMagicalSkillDamageBonus">
+				<amount>5</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="PveRaidPhysicalAttackDefenceBonus">
+				<amount>10</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="PveRaidPhysicalSkillDefenceBonus">
+				<amount>10</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="PveRaidMagicalSkillDefenceBonus">
+				<amount>10</amount>
+				<mode>PER</mode>
+			</effect>
+		</effects>
 	</skill>
 	<skill id="1894" toLevel="1" name="Unicorn's Potential">
-		<!-- Unravels Unicorn's true potential. Damage to raid bosses +10%, Damage received from raid bosses -5%. -->
+		<!-- Unravels Unicorn's true potential. Damage to raid bosses +10%%, Damage received from raid bosses -5%%. -->
 		<icon>icon.skill1407</icon>
 		<operateType>P</operateType>
+		<magicLvl>81</magicLvl>
+		<magicCriticalRate>5</magicCriticalRate>
+		<effects>
+			<effect name="PveRaidPhysicalAttackDamageBonus">
+				<amount>10</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="PveRaidPhysicalSkillDamageBonus">
+				<amount>10</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="PveRaidMagicalSkillDamageBonus">
+				<amount>10</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="PveRaidPhysicalAttackDefenceBonus">
+				<amount>5</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="PveRaidPhysicalSkillDefenceBonus">
+				<amount>5</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="PveRaidMagicalSkillDefenceBonus">
+				<amount>5</amount>
+				<mode>PER</mode>
+			</effect>
+		</effects>
 	</skill>
 	<skill id="1895" toLevel="1" name="Spectral Potential">
-		<!-- Unravels true spectral potential. Damage to raid bosses +15%. -->
+		<!-- Unravels true spectral potential. Damage to raid bosses +15%%. -->
 		<icon>icon.skill1408</icon>
 		<operateType>P</operateType>
+		<magicLvl>81</magicLvl>
+		<magicCriticalRate>5</magicCriticalRate>
+		<effects>
+			<effect name="PveRaidPhysicalAttackDamageBonus">
+				<amount>15</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="PveRaidPhysicalSkillDamageBonus">
+				<amount>15</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="PveRaidMagicalSkillDamageBonus">
+				<amount>15</amount>
+				<mode>PER</mode>
+			</effect>
+		</effects>
 	</skill>
 </list>

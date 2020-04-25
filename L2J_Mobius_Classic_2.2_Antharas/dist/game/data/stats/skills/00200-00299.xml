@@ -5080,7 +5080,7 @@
 		<hitTime>2500</hitTime>
 		<isMagic>3</isMagic> <!-- Dance Skill -->
 		<magicLvl>52</magicLvl>
-		<mpConsume>60</mpConsume>
+		<mpConsume>66</mpConsume>
 		<operateType>A2</operateType>
 		<reuseDelay>3000</reuseDelay>
 		<basicProperty>NONE</basicProperty>
@@ -5189,7 +5189,7 @@
 		<hitTime>2500</hitTime>
 		<isMagic>3</isMagic> <!-- Dance Skill -->
 		<magicLvl>46</magicLvl>
-		<mpConsume>60</mpConsume>
+		<mpConsume>66</mpConsume>
 		<operateType>A2</operateType>
 		<reuseDelay>3000</reuseDelay>
 		<basicProperty>NONE</basicProperty>
@@ -5215,7 +5215,7 @@
 		<hitTime>2500</hitTime>
 		<isMagic>3</isMagic> <!-- Dance Skill -->
 		<magicLvl>40</magicLvl>
-		<mpConsume>60</mpConsume>
+		<mpConsume>66</mpConsume>
 		<operateType>A2</operateType>
 		<reuseDelay>3000</reuseDelay>
 		<basicProperty>NONE</basicProperty>
@@ -5261,15 +5261,15 @@
 		<effects>
 			<effect name="DefenceCriticalRate">
 				<amount>
-					<value level="1">5</value>
-					<value level="2">10</value>
+					<value level="1">-5</value>
+					<value level="2">-10</value>
 				</amount>
 				<mode>PER</mode>
 			</effect>
 			<effect name="DefenceMagicCriticalRate">
 				<amount>
-					<value level="1">5</value>
-					<value level="2">10</value>
+					<value level="1">-5</value>
+					<value level="2">-10</value>
 				</amount>
 				<mode>PER</mode>
 			</effect>
@@ -5331,7 +5331,7 @@
 		<hitTime>2500</hitTime>
 		<isMagic>3</isMagic> <!-- Dance Skill -->
 		<magicLvl>46</magicLvl>
-		<mpConsume>60</mpConsume>
+		<mpConsume>66</mpConsume>
 		<operateType>A2</operateType>
 		<reuseDelay>3000</reuseDelay>
 		<basicProperty>NONE</basicProperty>
@@ -5409,7 +5409,10 @@
 		<hitTime>2500</hitTime>
 		<isMagic>3</isMagic> <!-- Dance Skill -->
 		<magicLvl>40</magicLvl>
-		<mpConsume>60</mpConsume>
+		<mpConsume>
+			<value level="1">66</value>
+			<value level="2">73</value>
+		</mpConsume>
 		<operateType>A2</operateType>
 		<reuseDelay>3000</reuseDelay>
 		<basicProperty>NONE</basicProperty>
@@ -5442,7 +5445,7 @@
 		<hitTime>2500</hitTime>
 		<isMagic>3</isMagic> <!-- Dance Skill -->
 		<magicLvl>58</magicLvl>
-		<mpConsume>60</mpConsume>
+		<mpConsume>66</mpConsume>
 		<operateType>A2</operateType>
 		<reuseDelay>3000</reuseDelay>
 		<basicProperty>NONE</basicProperty>
@@ -5475,7 +5478,7 @@
 		<hitTime>2500</hitTime>
 		<isMagic>3</isMagic> <!-- Dance Skill -->
 		<magicLvl>52</magicLvl>
-		<mpConsume>60</mpConsume>
+		<mpConsume>66</mpConsume>
 		<operateType>A2</operateType>
 		<reuseDelay>3000</reuseDelay>
 		<basicProperty>NONE</basicProperty>
@@ -5513,7 +5516,7 @@
 		<hitTime>2500</hitTime>
 		<isMagic>3</isMagic> <!-- Dance Skill -->
 		<magicLvl>43</magicLvl>
-		<mpConsume>60</mpConsume>
+		<mpConsume>66</mpConsume>
 		<operateType>A2</operateType>
 		<reuseDelay>3000</reuseDelay>
 		<basicProperty>NONE</basicProperty>
@@ -7009,6 +7012,26 @@
 				</weaponType>
 			</effect>
 			<effect name="PAtk">
+				<amount>10</amount>
+				<mode>PER</mode>
+				<hpPercent>100</hpPercent>
+			</effect>
+			<effect name="PhysicalDefence">
+				<amount>10</amount>
+				<mode>PER</mode>
+				<hpPercent>100</hpPercent>
+			</effect>
+			<effect name="PhysicalAttackSpeed">
+				<amount>5</amount>
+				<mode>PER</mode>
+				<hpPercent>100</hpPercent>
+			</effect>
+			<effect name="CriticalRate">
+				<amount>50</amount>
+				<mode>DIFF</mode>
+				<hpPercent>100</hpPercent>
+			</effect>
+			<effect name="PAtk">
 				<amount>20</amount>
 				<mode>PER</mode>
 				<hpPercent>60</hpPercent>
@@ -7019,7 +7042,7 @@
 				<hpPercent>60</hpPercent>
 			</effect>
 			<effect name="PhysicalAttackSpeed">
-				<amount>20</amount>
+				<amount>10</amount>
 				<mode>PER</mode>
 				<hpPercent>60</hpPercent>
 			</effect>
@@ -7044,7 +7067,7 @@
 				<hpPercent>30</hpPercent>
 			</effect>
 			<effect name="PhysicalAttackSpeed">
-				<amount>20</amount>
+				<amount>10</amount>
 				<mode>PER</mode>
 				<hpPercent>30</hpPercent>
 			</effect>

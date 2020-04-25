@@ -866,8 +866,8 @@
 					<item>POLE</item>
 					<item>BLUNT</item>
 				</weaponType>
-			</effect>					
-			<effect name="TriggerSkillByAttack">
+			</effect>
+			<effect name="TriggerSkillByAttack" fromLevel="1" toLevel="1">
 				<attackerType>Creature</attackerType>
 				<minAttackerLevel>1</minAttackerLevel>
 				<maxAttackerLevel>100</maxAttackerLevel>
@@ -879,7 +879,7 @@
 				<skillId>1616</skillId>
 				<skillLevel>1</skillLevel>
 			</effect>						
-			<effect name="TriggerSkillByAttack">
+			<effect name="TriggerSkillByAttack" fromLevel="1" toLevel="1">
 				<attackerType>Creature</attackerType>
 				<minAttackerLevel>1</minAttackerLevel>
 				<maxAttackerLevel>100</maxAttackerLevel>
@@ -890,6 +890,30 @@
 				<allowWeapons>BLUNT,POLE</allowWeapons>
 				<skillId>1616</skillId>
 				<skillLevel>1</skillLevel>
+			</effect>
+			<effect name="TriggerSkillByAttack" fromLevel="2" toLevel="2">
+				<attackerType>Creature</attackerType>
+				<minAttackerLevel>1</minAttackerLevel>
+				<maxAttackerLevel>100</maxAttackerLevel>
+				<minDamage>1</minDamage>
+				<chance>10</chance>
+				<targetType>TARGET</targetType>
+				<isCritical>false</isCritical>
+				<allowWeapons>BLUNT,POLE</allowWeapons>
+				<skillId>1616</skillId>
+				<skillLevel>2</skillLevel>
+			</effect>						
+			<effect name="TriggerSkillByAttack" fromLevel="2" toLevel="2">
+				<attackerType>Creature</attackerType>
+				<minAttackerLevel>1</minAttackerLevel>
+				<maxAttackerLevel>100</maxAttackerLevel>
+				<minDamage>1</minDamage>
+				<chance>20</chance>
+				<targetType>TARGET</targetType>
+				<isCritical>true</isCritical>
+				<allowWeapons>BLUNT,POLE</allowWeapons>
+				<skillId>1616</skillId>
+				<skillLevel>2</skillLevel>
 			</effect>
 		</effects>
 	</skill>
@@ -910,11 +934,17 @@
 		<affectScope>SINGLE</affectScope>
 		<effects>
 			<effect name="MagicalAttackSpeed">
-				<amount>-10</amount>
+				<amount>
+					<value level="1">-10</value>
+					<value level="2">-15</value>
+				</amount>
 				<mode>PER</mode>
 			</effect>
 			<effect name="PhysicalAttackSpeed">
-				<amount>-10</amount>
+				<amount>
+					<value level="1">-10</value>
+					<value level="2">-15</value>
+				</amount>
 				<mode>PER</mode>
 			</effect>
 		</effects>
@@ -973,7 +1003,7 @@
 				<skillId>1618</skillId>
 				<skillLevel>2</skillLevel>
 			</effect>
-			<effect name="TriggerSkillByDamage" fromLevel="3" toLevel="4">
+			<effect name="TriggerSkillByDamage" fromLevel="3" toLevel="3">
 				<attackerType>Creature</attackerType>
 				<minAttackerLevel>1</minAttackerLevel>
 				<maxAttackerLevel>99</maxAttackerLevel>
@@ -982,6 +1012,16 @@
 				<minDamage>1</minDamage>
 				<skillId>1618</skillId>
 				<skillLevel>3</skillLevel>
+			</effect>
+			<effect name="TriggerSkillByDamage" fromLevel="4" toLevel="4">
+				<attackerType>Creature</attackerType>
+				<minAttackerLevel>1</minAttackerLevel>
+				<maxAttackerLevel>99</maxAttackerLevel>
+				<chance>20</chance>
+				<targetType>SELF</targetType>
+				<minDamage>1</minDamage>
+				<skillId>1618</skillId>
+				<skillLevel>4</skillLevel>
 			</effect>
 		</effects>
 	</skill>
@@ -993,7 +1033,7 @@
 			<value level="1">44</value>
 			<value level="2">56</value>
 			<value level="3">64</value>
-			<value level="4">64</value> <!-- FIXME: AUTO GENERATED LEVEL -->
+			<value level="4">80</value>
 		</magicLvl>
 		<operateType>A1</operateType>
 		<effectPoint>204</effectPoint>
@@ -1198,7 +1238,7 @@
 		<abnormalTime>10</abnormalTime>
 		<abnormalType>ROOT_PHYSICALLY</abnormalType>
 		<abnormalVisualEffect>TORNADO_SLOW</abnormalVisualEffect>
-		<chargeConsume>7</chargeConsume>
+		<chargeConsume>5</chargeConsume>
 		<activateRate>100</activateRate>
 		<basicProperty>PHYSICAL</basicProperty>
 		<canBeDispelled>false</canBeDispelled>
@@ -1224,7 +1264,7 @@
 				</weaponType>
 			</condition>
 			<condition name="EnergySaved">
-				<amount>7</amount>
+				<amount>5</amount>
 			</condition>
 		</conditions>
 		<effects>
@@ -1573,12 +1613,12 @@
 			<value level="1">100</value>
 			<value level="2">101</value>
 			<value level="3">101</value>
-			<value level="4">103</value>
+			<value level="4">104</value>
 			<value level="5">104</value>
-			<value level="6">104</value>
-			<value level="7">105</value>
+			<value level="6">105</value>
+			<value level="7">107</value>
 			<value level="8">107</value>
-			<value level="9">107</value>
+			<value level="9">108</value>
 		</mpConsume>
 		<hitTime>1500</hitTime>
 		<effectPoint>

@@ -335,7 +335,10 @@
 		</conditions>
 		<effects>
 			<effect name="Summon">
-				<npcId>14836</npcId> <!-- Feline King -->
+				<npcId>
+					<value level="1">14836</value>
+					<value level="2">14871</value>
+				</npcId>
 			</effect>
 		</effects>
 	</skill>
@@ -368,7 +371,10 @@
 		</conditions>
 		<effects>
 			<effect name="Summon">
-				<npcId>14837</npcId> <!-- Magnus the Unicorn -->
+				<npcId>
+					<value level="1">14837</value>
+					<value level="2">14886</value>
+				</npcId>
 			</effect>
 		</effects>
 	</skill>
@@ -381,23 +387,20 @@
 		<isMagic>1</isMagic> <!-- Magic Skill -->
 		<itemConsumeCount>
 			<value level="1">12</value>
-			<value level="1">14</value>
-			<value level="2">14</value> <!-- FIXME: AUTO GENERATED LEVEL -->
+			<value level="2">14</value>
 		</itemConsumeCount>
 		<itemConsumeId>3031</itemConsumeId> <!-- Spirit Ore -->
 		<magicLvl>
 			<value level="1">1</value>
-			<value level="1">2</value>
-			<value level="2">2</value> <!-- FIXME: AUTO GENERATED LEVEL -->
+			<value level="2">2</value>
 		</magicLvl>
 		<mpConsume>
 			<value level="1">144</value>
-			<value level="1">159</value>
+			<value level="2">159</value>
 		</mpConsume>
 		<mpInitialConsume>
 			<value level="1">29</value>
-			<value level="1">30</value>
-			<value level="2">30</value> <!-- FIXME: AUTO GENERATED LEVEL -->
+			<value level="2">30</value>
 		</mpInitialConsume>
 		<operateType>A1</operateType>
 		<reuseDelay>5000</reuseDelay>
@@ -409,7 +412,10 @@
 		</conditions>
 		<effects>
 			<effect name="Summon">
-				<npcId>14838</npcId> <!-- Spectral Lord -->
+				<npcId>
+					<value level="1">14838</value>
+					<value level="2">14901</value>
+				</npcId>
 			</effect>
 		</effects>
 	</skill>
@@ -421,7 +427,7 @@
 		<effectRange>1100</effectRange>
 		<hitTime>4000</hitTime>
 		<isMagic>1</isMagic> <!-- Magic Skill -->
-		<itemConsumeCount>100</itemConsumeCount>
+		<itemConsumeCount>40</itemConsumeCount>
 		<itemConsumeId>3031</itemConsumeId> <!-- Spirit Ore -->
 		<magicLvl>77</magicLvl>
 		<mpConsume>58</mpConsume>
@@ -623,14 +629,12 @@
 		<isMagic>1</isMagic> <!-- Magic Skill -->
 		<itemConsumeCount>
 			<value level="1">60</value>
-			<value level="1">70</value>
-			<value level="2">70</value> <!-- FIXME: AUTO GENERATED LEVEL -->
+			<value level="2">70</value>
 		</itemConsumeCount>
 		<itemConsumeId>3031</itemConsumeId> <!-- Spirit Ore -->
 		<magicLvl>
 			<value level="1">76</value>
-			<value level="1">82</value>
-			<value level="2">82</value> <!-- FIXME: AUTO GENERATED LEVEL -->
+			<value level="2">82</value>
 		</magicLvl>
 		<mpConsume>
 			<value level="1">284</value>

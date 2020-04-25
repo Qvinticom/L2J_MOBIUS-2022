@@ -5080,7 +5080,7 @@
 		<hitTime>2500</hitTime>
 		<isMagic>3</isMagic> <!-- Dance Skill -->
 		<magicLvl>52</magicLvl>
-		<mpConsume>60</mpConsume>
+		<mpConsume>66</mpConsume>
 		<operateType>A2</operateType>
 		<reuseDelay>3000</reuseDelay>
 		<basicProperty>NONE</basicProperty>
@@ -5189,7 +5189,7 @@
 		<hitTime>2500</hitTime>
 		<isMagic>3</isMagic> <!-- Dance Skill -->
 		<magicLvl>46</magicLvl>
-		<mpConsume>60</mpConsume>
+		<mpConsume>66</mpConsume>
 		<operateType>A2</operateType>
 		<reuseDelay>3000</reuseDelay>
 		<basicProperty>NONE</basicProperty>
@@ -5215,7 +5215,7 @@
 		<hitTime>2500</hitTime>
 		<isMagic>3</isMagic> <!-- Dance Skill -->
 		<magicLvl>40</magicLvl>
-		<mpConsume>60</mpConsume>
+		<mpConsume>66</mpConsume>
 		<operateType>A2</operateType>
 		<reuseDelay>3000</reuseDelay>
 		<basicProperty>NONE</basicProperty>
@@ -5261,15 +5261,15 @@
 		<effects>
 			<effect name="DefenceCriticalRate">
 				<amount>
-					<value level="1">5</value>
-					<value level="2">10</value>
+					<value level="1">-5</value>
+					<value level="2">-10</value>
 				</amount>
 				<mode>PER</mode>
 			</effect>
 			<effect name="DefenceMagicCriticalRate">
 				<amount>
-					<value level="1">5</value>
-					<value level="2">10</value>
+					<value level="1">-5</value>
+					<value level="2">-10</value>
 				</amount>
 				<mode>PER</mode>
 			</effect>
@@ -5331,7 +5331,7 @@
 		<hitTime>2500</hitTime>
 		<isMagic>3</isMagic> <!-- Dance Skill -->
 		<magicLvl>46</magicLvl>
-		<mpConsume>60</mpConsume>
+		<mpConsume>66</mpConsume>
 		<operateType>A2</operateType>
 		<reuseDelay>3000</reuseDelay>
 		<basicProperty>NONE</basicProperty>
@@ -5401,20 +5401,14 @@
 	<skill id="274" toLevel="2" name="Dance of Fire">
 		<!-- For 5 min., party members' P. Critical Damage +35%. Addtionally increases MP Consumption when the skill is used while song/ dance effect is in place. Requires a dual sword to be equipped. -->
 		<icon>icon.skill0274</icon>
-		<abnormalLvl>
-			<value level="1">1</value>
-			<value level="2">2</value>
-		</abnormalLvl>
+		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>300</abnormalTime>
 		<abnormalType>DANCE_OF_FIRE</abnormalType>
 		<affectRange>1000</affectRange>
 		<effectPoint>379</effectPoint>
 		<hitTime>2500</hitTime>
 		<isMagic>3</isMagic> <!-- Dance Skill -->
-		<magicLvl>
-			<value level="1">40</value>
-			<value level="2">61</value>
-		</magicLvl>
+		<magicLvl>40</magicLvl>
 		<mpConsume>
 			<value level="1">66</value>
 			<value level="2">73</value>
@@ -5435,10 +5429,7 @@
 		</conditions>
 		<effects>
 			<effect name="CriticalDamage">
-				<amount>
-					<value level="1">35</value>
-					<value level="2">38</value>
-				</amount>
+				<amount>35</amount>
 				<mode>PER</mode>
 			</effect>
 		</effects>
@@ -5454,7 +5445,7 @@
 		<hitTime>2500</hitTime>
 		<isMagic>3</isMagic> <!-- Dance Skill -->
 		<magicLvl>58</magicLvl>
-		<mpConsume>60</mpConsume>
+		<mpConsume>66</mpConsume>
 		<operateType>A2</operateType>
 		<reuseDelay>3000</reuseDelay>
 		<basicProperty>NONE</basicProperty>
@@ -5487,7 +5478,7 @@
 		<hitTime>2500</hitTime>
 		<isMagic>3</isMagic> <!-- Dance Skill -->
 		<magicLvl>52</magicLvl>
-		<mpConsume>60</mpConsume>
+		<mpConsume>66</mpConsume>
 		<operateType>A2</operateType>
 		<reuseDelay>3000</reuseDelay>
 		<basicProperty>NONE</basicProperty>
@@ -5525,7 +5516,7 @@
 		<hitTime>2500</hitTime>
 		<isMagic>3</isMagic> <!-- Dance Skill -->
 		<magicLvl>43</magicLvl>
-		<mpConsume>60</mpConsume>
+		<mpConsume>66</mpConsume>
 		<operateType>A2</operateType>
 		<reuseDelay>3000</reuseDelay>
 		<basicProperty>NONE</basicProperty>
@@ -5640,8 +5631,8 @@
 			<value level="3">66</value>
 			<value level="4">70</value>
 			<value level="5">74</value>
-			<value level="6">78</value>
-			<value level="7">82</value>
+			<value level="6">75</value>
+			<value level="7">77</value>
 			<value level="8">83</value>
 			<value level="9">84</value>
 		</magicLvl>
@@ -5651,8 +5642,8 @@
 			<value level="3">74</value>
 			<value level="4">78</value>
 			<value level="5">82</value>
-			<value level="6">94</value>
-			<value level="7">98</value>
+			<value level="6">83</value>
+			<value level="7">85</value>
 			<value level="8">103</value>
 			<value level="9">109</value>
 		</mpConsume>
@@ -5671,8 +5662,8 @@
 					<value level="3">3990</value>
 					<value level="4">4553</value>
 					<value level="5">5114</value>
-					<value level="6">5334</value>
-					<value level="7">5554</value>
+					<value level="6">5131</value>
+					<value level="7">5334</value>
 					<value level="8">5776</value>
 					<value level="9">6007</value>
 				</power>
@@ -6798,22 +6789,16 @@
 			</effect>
 			<effect name="PhysicalDefence">
 				<amount>
-					<value level="1">182.7</value>
-					<value level="2">241.6</value>
-					<value level="3">318.1</value>
-					<value level="4">384.7</value>
-					<value level="5">465</value>
+					<value level="1">121.8</value>
+					<value level="2">161.1</value>
+					<value level="3">212.1</value>
+					<value level="4">256.5</value>
+					<value level="5">310</value>
 				</amount>
 				<mode>DIFF</mode>
 			</effect>
 			<effect name="ShieldDefenceRate">
-				<amount>
-					<value level="1">50</value>
-					<value level="2">50</value>
-					<value level="3">50</value>
-					<value level="4">50</value>
-					<value level="5">60</value>
-				</amount>
+				<amount>50</amount>
 				<mode>PER</mode>
 			</effect>
 		</effects>
@@ -7063,6 +7048,26 @@
 				</weaponType>
 			</effect>
 			<effect name="PAtk">
+				<amount>10</amount>
+				<mode>PER</mode>
+				<hpPercent>100</hpPercent>
+			</effect>
+			<effect name="PhysicalDefence">
+				<amount>10</amount>
+				<mode>PER</mode>
+				<hpPercent>100</hpPercent>
+			</effect>
+			<effect name="PhysicalAttackSpeed">
+				<amount>5</amount>
+				<mode>PER</mode>
+				<hpPercent>100</hpPercent>
+			</effect>
+			<effect name="CriticalRate">
+				<amount>50</amount>
+				<mode>DIFF</mode>
+				<hpPercent>100</hpPercent>
+			</effect>
+			<effect name="PAtk">
 				<amount>20</amount>
 				<mode>PER</mode>
 				<hpPercent>60</hpPercent>
@@ -7073,7 +7078,7 @@
 				<hpPercent>60</hpPercent>
 			</effect>
 			<effect name="PhysicalAttackSpeed">
-				<amount>20</amount>
+				<amount>10</amount>
 				<mode>PER</mode>
 				<hpPercent>60</hpPercent>
 			</effect>
@@ -7098,7 +7103,7 @@
 				<hpPercent>30</hpPercent>
 			</effect>
 			<effect name="PhysicalAttackSpeed">
-				<amount>20</amount>
+				<amount>10</amount>
 				<mode>PER</mode>
 				<hpPercent>30</hpPercent>
 			</effect>

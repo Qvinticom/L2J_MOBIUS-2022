@@ -347,7 +347,14 @@
 		</conditions>
 		<effects>
 			<effect name="Summon">
-				<npcId>14836</npcId> <!-- Feline King -->
+				<npcId>
+					<value level="1">14836</value>
+					<value level="2">14871</value>
+					<value level="3">14871</value>
+					<value level="4">14871</value>
+					<value level="5">14871</value>
+					<value level="6">14871</value>
+				</npcId>
 			</effect>
 		</effects>
 	</skill>
@@ -392,7 +399,14 @@
 		</conditions>
 		<effects>
 			<effect name="Summon">
-				<npcId>14837</npcId> <!-- Magnus the Unicorn -->
+				<npcId>
+					<value level="1">14837</value>
+					<value level="2">14886</value>
+					<value level="3">14886</value>
+					<value level="4">14886</value>
+					<value level="5">14886</value>
+					<value level="6">14886</value>
+				</npcId>
 			</effect>
 		</effects>
 	</skill>
@@ -438,7 +452,14 @@
 		</conditions>
 		<effects>
 			<effect name="Summon">
-				<npcId>14838</npcId> <!-- Spectral Lord -->
+				<npcId>
+					<value level="1">14838</value>
+					<value level="2">14901</value>
+					<value level="3">14901</value>
+					<value level="4">14901</value>
+					<value level="5">14901</value>
+					<value level="6">14901</value>
+				</npcId>
 			</effect>
 		</effects>
 	</skill>
@@ -647,22 +668,17 @@
 		<abnormalType>MULTI_BUFF</abnormalType>
 		<affectLimit>50-100</affectLimit>
 		<affectRange>1000</affectRange>
-		<effectPoint>
-			<value level="1">666</value>
-			<value level="2">675</value>
-		</effectPoint>
+		<effectPoint>669</effectPoint>
 		<hitTime>2500</hitTime>
 		<isMagic>1</isMagic> <!-- Magic Skill -->
 		<itemConsumeCount>
 			<value level="1">60</value>
-			<value level="1">70</value>
-			<value level="2">70</value> <!-- FIXME: AUTO GENERATED LEVEL -->
+			<value level="2">70</value>
 		</itemConsumeCount>
 		<itemConsumeId>3031</itemConsumeId> <!-- Spirit Ore -->
 		<magicLvl>
 			<value level="1">76</value>
-			<value level="1">82</value>
-			<value level="2">82</value> <!-- FIXME: AUTO GENERATED LEVEL -->
+			<value level="2">82</value>
 		</magicLvl>
 		<mpConsume>
 			<value level="1">284</value>
@@ -3143,7 +3159,7 @@
 		</mpConsume>
 		<mpInitialConsume>38</mpInitialConsume>
 		<operateType>A2</operateType>
-		<reuseDelay>3000</reuseDelay>
+		<reuseDelay>150000</reuseDelay>
 		<basicProperty>NONE</basicProperty>
 		<magicCriticalRate>5</magicCriticalRate>
 		<targetType>TARGET</targetType>
@@ -3213,9 +3229,7 @@
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>10</abnormalTime>
 		<abnormalType>NORMAL_ATTACK_BLOCK</abnormalType>
-		<activateRate>
-			<value fromLevel="1" toLevel="3">80</value>
-		</activateRate>
+		<activateRate>80</activateRate>
 		<affectLimit>10-10</affectLimit>
 		<affectRange>200</affectRange>
 		<basicProperty>MAGIC</basicProperty>

@@ -101,7 +101,7 @@
 			<value level="8">194</value>
 			<value level="9">204</value>
 			<value level="10">224</value>
-			<value level="11">225</value>
+			<value level="11">235</value>
 			<value level="12">245</value>
 			<value level="13">255</value>
 			<value level="14">265</value>
@@ -177,7 +177,7 @@
 		<hitTime>2500</hitTime>
 		<isMagic>3</isMagic> <!-- Dance Skill -->
 		<magicLvl>66</magicLvl>
-		<mpConsume>60</mpConsume>
+		<mpConsume>66</mpConsume>
 		<operateType>A2</operateType>
 		<reuseDelay>3000</reuseDelay>
 		<basicProperty>NONE</basicProperty>
@@ -203,7 +203,7 @@
 		<hitTime>2500</hitTime>
 		<isMagic>3</isMagic> <!-- Dance Skill -->
 		<magicLvl>74</magicLvl>
-		<mpConsume>60</mpConsume>
+		<mpConsume>66</mpConsume>
 		<operateType>A2</operateType>
 		<reuseDelay>3000</reuseDelay>
 		<basicProperty>NONE</basicProperty>
@@ -347,7 +347,7 @@
 		<hitTime>2500</hitTime>
 		<isMagic>3</isMagic> <!-- Dance Skill -->
 		<magicLvl>74</magicLvl>
-		<mpConsume>60</mpConsume>
+		<mpConsume>66</mpConsume>
 		<operateType>A2</operateType>
 		<reuseDelay>3000</reuseDelay>
 		<basicProperty>NONE</basicProperty>
@@ -381,7 +381,10 @@
 		<hitTime>2500</hitTime>
 		<isMagic>3</isMagic> <!-- Dance Skill -->
 		<magicLvl>66</magicLvl>
-		<mpConsume>60</mpConsume>
+		<mpConsume>
+			<value level="1">66</value>
+			<value level="2">73</value>
+		</mpConsume>
 		<operateType>A2</operateType>
 		<reuseDelay>3000</reuseDelay>
 		<basicProperty>NONE</basicProperty>
@@ -398,7 +401,10 @@
 		</conditions>
 		<effects>
 			<effect name="DamageShieldResist">
-				<amount>10</amount>
+				<amount>
+					<value level="1">10</value>
+					<value level="2">20</value>
+				</amount>
 			</effect>
 		</effects>
 	</skill>
@@ -548,7 +554,25 @@
 			</condition>
 		</conditions>
 		<effects>
-			<effect name="BlockMove" />
+			<effect name="BlockMove" fromLevel="1" toLevel="8" />
+			<effect name="Speed">
+				<amount>
+					<value level="1">0</value>
+					<value level="2">0</value>
+					<value level="3">0</value>
+					<value level="4">0</value>
+					<value level="5">0</value>
+					<value level="6">0</value>
+					<value level="7">0</value>
+					<value level="8">0</value>
+					<value level="8">0</value>
+					<value level="9">-150</value>
+				</amount>
+				<mode>DIFF</mode>
+				<weaponType>
+					<item>BOW</item>
+				</weaponType>
+			</effect>
 			<effect name="PAtk">
 				<amount>
 					<value level="1">124</value>
@@ -1608,6 +1632,7 @@
 		<castRange>900</castRange>
 		<effectPoint>-897</effectPoint>
 		<effectRange>1400</effectRange>
+		<coolTime>500</coolTime>
 		<hitTime>4000</hitTime>
 		<magicLvl>76</magicLvl>
 		<mpConsume>168</mpConsume>
@@ -1690,7 +1715,7 @@
 			<value level="2">-360</value>
 			<value level="3">-380</value>
 			<value level="4">-400</value>
-			<value level="5">-692</value>
+			<value level="5">-420</value>
 			<value level="6">-696</value>
 			<value level="7">-700</value>
 			<value level="8">-704</value>
@@ -1775,7 +1800,7 @@
 			<value level="2">-360</value>
 			<value level="3">-380</value>
 			<value level="4">-400</value>
-			<value level="5">-692</value>
+			<value level="5">-420</value>
 			<value level="6">-696</value>
 			<value level="7">-700</value>
 			<value level="8">-704</value>
@@ -1948,7 +1973,7 @@
 		<hitTime>2500</hitTime>
 		<isMagic>3</isMagic> <!-- Dance Skill -->
 		<magicLvl>77</magicLvl>
-		<mpConsume>66</mpConsume>
+		<mpConsume>73</mpConsume>
 		<operateType>A2</operateType>
 		<reuseDelay>3000</reuseDelay>
 		<basicProperty>NONE</basicProperty>
@@ -2421,7 +2446,6 @@
 			<value level="1">77</value>
 			<value level="2">80</value>
 			<value level="2">83</value>
-			<value level="3">83</value> <!-- FIXME: AUTO GENERATED LEVEL -->
 		</magicLvl>
 		<mpConsume>
 			<value level="1">53</value>
@@ -2481,7 +2505,7 @@
 		<activateRate>40</activateRate>
 		<basicProperty>PHYSICAL</basicProperty>
 		<castRange>40</castRange>
-		<coolTime>100</coolTime>
+		<coolTime>500</coolTime>
 		<effectPoint>-507</effectPoint>
 		<effectRange>400</effectRange>
 		<hitTime>1900</hitTime>
@@ -2609,7 +2633,7 @@
 		<hitTime>2500</hitTime>
 		<isMagic>3</isMagic> <!-- Dance Skill -->
 		<magicLvl>78</magicLvl>
-		<mpConsume>66</mpConsume>
+		<mpConsume>73</mpConsume>
 		<operateType>A2</operateType>
 		<reuseDelay>3000</reuseDelay>
 		<basicProperty>NONE</basicProperty>
@@ -2643,7 +2667,7 @@
 		<hitTime>2500</hitTime>
 		<isMagic>3</isMagic> <!-- Dance Skill -->
 		<magicLvl>77</magicLvl>
-		<mpConsume>66</mpConsume>
+		<mpConsume>73</mpConsume>
 		<operateType>A2</operateType>
 		<reuseDelay>3000</reuseDelay>
 		<basicProperty>NONE</basicProperty>
@@ -3346,7 +3370,7 @@
 		<magicLvl>-1</magicLvl>
 		<mpConsume>72</mpConsume>
 		<operateType>A2</operateType>
-		<reuseDelay>900000</reuseDelay>
+		<reuseDelay>3600000</reuseDelay>
 		<staticReuse>true</staticReuse>
 		<basicProperty>NONE</basicProperty>
 		<magicCriticalRate>5</magicCriticalRate>
@@ -3387,7 +3411,7 @@
 		<magicLvl>-1</magicLvl>
 		<mpConsume>72</mpConsume>
 		<operateType>A2</operateType>
-		<reuseDelay>900000</reuseDelay>
+		<reuseDelay>3600000</reuseDelay>
 		<staticReuse>true</staticReuse>
 		<basicProperty>NONE</basicProperty>
 		<magicCriticalRate>5</magicCriticalRate>

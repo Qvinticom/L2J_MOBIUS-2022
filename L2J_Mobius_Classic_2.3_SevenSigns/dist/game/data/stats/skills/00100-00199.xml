@@ -1854,7 +1854,10 @@
 		<affectScope>SINGLE</affectScope>
 		<effects>
 			<effect name="Speed">
-				<amount>-20</amount>
+				<amount>
+					<value level="1">-15</value>
+					<value level="2">-10</value>
+				</amount>
 				<mode>PER</mode>
 			</effect>
 			<effect name="PhysicalAttackSpeed">
@@ -1899,9 +1902,12 @@
 		<targetType>SELF</targetType>
 		<affectScope>SINGLE</affectScope>
 		<effects>
-			<effect name="PhysicalDefence">
-				<amount>-10</amount>
-				<mode>PER</mode>
+			<effect name="PhysicalSkillPower">
+				<amount>
+					<value level="1">2</value>
+					<value level="2">3</value>
+					<value level="3">4</value>
+				</amount>
 			</effect>
 			<effect name="Accuracy">
 				<amount>

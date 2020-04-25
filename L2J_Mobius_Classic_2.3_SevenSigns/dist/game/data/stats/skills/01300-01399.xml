@@ -1853,7 +1853,7 @@
 		<!-- For 10 min., causes the servitor to be possessed with the spirit of an ancient hero. Max HP +10%, HP Recovery Bonus +10%, P. Def. +10%, P. Atk. +10%, Atk. Spd. +5%, Debuff Resistance +20%. Consumes 20 Spirit Ore. -->
 		<icon>icon.skill1346</icon>
 		<abnormalLvl>1</abnormalLvl>
-		<abnormalTime>300</abnormalTime>
+		<abnormalTime>600</abnormalTime>
 		<abnormalType>MULTI_BUFF</abnormalType>
 		<castRange>400</castRange>
 		<effectPoint>666</effectPoint>
@@ -1902,7 +1902,7 @@
 		<!-- For 10 min., causes the servitor to be possessed with the spirit of an ancient wizard. MP Recovery Bonus +10%, M. Atk. +10%, M. Def. +10%, Casting Spd. +5%, Debuff Resistance +20%. Skill MP Consumption -3%. Consumes 20 Spirit Ore. -->
 		<icon>icon.skill1347</icon>
 		<abnormalLvl>1</abnormalLvl>
-		<abnormalTime>300</abnormalTime>
+		<abnormalTime>600</abnormalTime>
 		<abnormalType>MULTI_BUFF</abnormalType>
 		<castRange>400</castRange>
 		<effectPoint>666</effectPoint>
@@ -1952,7 +1952,7 @@
 		<!-- Possesses a Servitor with a spirit of ancient assassins. For 10 min. P. Evasion +3, P. Accuracy +3, P. Critical +10%, P. Critical Damage +15%, Speed +10%, Debuff Resistance +20%. Consumes 20 Spirit Ore. -->
 		<icon>icon.skill1348</icon>
 		<abnormalLvl>1</abnormalLvl>
-		<abnormalTime>300</abnormalTime>
+		<abnormalTime>600</abnormalTime>
 		<abnormalType>MULTI_BUFF</abnormalType>
 		<castRange>400</castRange>
 		<effectPoint>666</effectPoint>
@@ -2005,7 +2005,7 @@
 		<!-- For 10 min., causes the servitor to be possessed with the spirit of an ancient hero. Max HP/ MP +10%, P./ M. Accuracy +4, P./ M. Evasion +4, P./ M. Atk. +10%, P./ M. Def. +10%, Atk. Spd./ Casting Spd. +5%, P./ M. Critical Rate +10%, P./ M. Critical Damage +10%, and Debuff Resistance +20. Consumes 40 Spirit Ore. -->
 		<icon>icon.skill1349</icon>
 		<abnormalLvl>1</abnormalLvl>
-		<abnormalTime>300</abnormalTime>
+		<abnormalTime>600</abnormalTime>
 		<abnormalType>MULTI_BUFF</abnormalType>
 		<castRange>400</castRange>
 		<effectPoint>669</effectPoint>
@@ -2487,7 +2487,7 @@
 				<mode>PER</mode>
 			</effect>
 			<effect name="ResistAbnormalByCategory">
-				<amount>10</amount>
+				<amount>-10</amount>
 				<slot>DEBUFF</slot>
 			</effect>
 		</effects>

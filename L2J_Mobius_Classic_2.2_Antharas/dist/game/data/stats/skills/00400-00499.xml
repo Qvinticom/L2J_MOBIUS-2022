@@ -530,10 +530,10 @@
 			<value level="4">49</value>
 			<value level="5">51</value>
 			<value level="6">52</value>
-			<value level="7">53</value>
-			<value level="8">54</value>
-			<value level="9">55</value>
-			<value level="10">57</value>
+			<value level="7">59</value>
+			<value level="8">61</value>
+			<value level="9">63</value>
+			<value level="10">65</value>
 			<value level="11">59</value>
 			<value level="12">61</value>
 			<value level="13">63</value>
@@ -2426,7 +2426,7 @@
 		<abnormalTime>10</abnormalTime>
 		<abnormalType>INVINCIBILITY</abnormalType>
 		<abnormalVisualEffect>INVINCIBILITY</abnormalVisualEffect>
-		<chargeConsume>5</chargeConsume>
+		<chargeConsume>3</chargeConsume>
 		<effectPoint>673</effectPoint>
 		<hitTime>2000</hitTime>
 		<magicLvl>77</magicLvl>
@@ -2445,7 +2445,7 @@
 				</weaponType>
 			</condition>
 			<condition name="EnergySaved">
-				<amount>5</amount>
+				<amount>3</amount>
 			</condition>
 		</conditions>
 		<effects>
@@ -2758,7 +2758,7 @@
 		<chargeConsume>
 			<value level="1">1</value>
 			<value level="2">2</value>
-			<value level="3">3</value>
+			<value level="3">2</value>
 		</chargeConsume>
 		<effectPoint>
 			<value level="1">540</value>
@@ -2792,7 +2792,7 @@
 				<amount>
 					<value level="1">1</value>
 					<value level="2">2</value>
-					<value level="3">3</value>
+					<value level="3">2</value>
 				</amount>
 			</condition>
 		</conditions>

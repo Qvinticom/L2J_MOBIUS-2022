@@ -6253,7 +6253,12 @@
 			<value level="3">3</value>
 			<value level="4">4</value>
 		</abnormalLvl>
-		<abnormalTime>60</abnormalTime>
+		<abnormalTime>
+			<value level="1">120</value>
+			<value level="2">120</value>
+			<value level="3">120</value>
+			<value level="4">180</value>
+		</abnormalTime>
 		<abnormalType>PA_UP_SPECIAL</abnormalType>
 		<effectPoint>
 			<value level="1">204</value>
@@ -6862,7 +6867,7 @@
 			<value level="52">38</value>
 			<value level="53">41</value>
 			<value level="54">42</value>
-			<value level="55">42</value>
+			<value level="55">43</value>
 			<value level="56">45</value>
 			<value level="57">46</value>
 			<value level="58">47</value>
