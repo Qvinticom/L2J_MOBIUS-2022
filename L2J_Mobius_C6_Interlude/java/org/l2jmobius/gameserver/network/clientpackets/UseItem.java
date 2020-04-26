@@ -617,23 +617,19 @@ public class UseItem extends GameClientPacket
 				items = player.getInventory().equipItemAndRecord(item);
 				if (item.getItem() instanceof Weapon)
 				{
-					// charge Soulshot/Spiritshot like L2OFF
+					// Charge Soulshot/Spiritshot like L2OFF
 					player.rechargeAutoSoulShot(true, true, false);
 					item.setChargedSoulshot(ItemInstance.CHARGED_NONE);
 					item.setChargedSpiritshot(ItemInstance.CHARGED_NONE);
 				}
-				// Consume mana - will start a task if required; returns if item is not a shadow item
+				// Consume mana - will start a task if required; returns if item is not a shadow item.
 				item.decreaseMana(false);
 			}
-			
-			/*
-			 * if(item.getItem().getType2() == Item.TYPE2_WEAPON) { activeChar.checkIfWeaponIsAllowed(); }
-			 */
 			
 			player.abortAttack();
 			
 			player.sendPacket(new EtcStatusUpdate(player));
-			// if an "invisible" item has changed (Jewels, helmet), we dont need to send broadcast packet to all other users
+			// If an "invisible" item has changed (Jewels, helmet), we dont need to send broadcast packet to all other users.
 			if ((((item.getItem().getBodyPart() & Item.SLOT_HEAD) <= 0) && ((item.getItem().getBodyPart() & Item.SLOT_NECK) <= 0) && ((item.getItem().getBodyPart() & Item.SLOT_L_EAR) <= 0) && ((item.getItem().getBodyPart() & Item.SLOT_R_EAR) <= 0) && ((item.getItem().getBodyPart() & Item.SLOT_L_FINGER) <= 0) && ((item.getItem().getBodyPart() & Item.SLOT_R_FINGER) <= 0)))
 			{
 				player.broadcastUserInfo();
@@ -648,11 +644,10 @@ public class UseItem extends GameClientPacket
 				player.sendPacket(iu);
 				player.sendPacket(new UserInfo(player));
 			}
-			else
+			else // Because of complicated jewels problem I am forced to resend the item list. :(
 			{
-				// because of complicated jewels problem i'm forced to resend the item list :(
-				player.sendPacket(new ItemList(player, true));
-				player.sendPacket(new UserInfo(player));
+				player.sendPacket(new UserInfo(player)); // Mobius: send UserInfo before ItemList.
+				player.sendPacket(new ItemList(player, true)); // Mobius: send ItemList after UserInfo.
 			}
 		}
 		else
