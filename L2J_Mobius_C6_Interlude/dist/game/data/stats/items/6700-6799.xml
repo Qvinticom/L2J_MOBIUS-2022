@@ -340,6 +340,9 @@
 		<set name="m_def" val="68"/>
 		<set name="price" val="3700000"/>
 		<set name="crystal_count" val="185"/>
+		<for>
+			<add val="68" order="0x10" stat="mDef"/>
+		</for>
 	</item>
 	<item id="6725" type="Armor" name="Sealed Tateossian Ring">
 		<!-- The seal of this item can be broken by going through the Blacksmith of Mammon. When the seal is broken, it will produce the effects of M. Def. +2 and MP+21. -->
@@ -351,6 +354,9 @@
 		<set name="m_def" val="46"/>
 		<set name="price" val="2470000"/>
 		<set name="crystal_count" val="123"/>
+		<for>
+			<add val="46" order="0x10" stat="mDef"/>
+		</for>
 	</item>
 	<item id="6726" type="Armor" name="Sealed Tateossian Necklace">
 		<!-- The seal can be broken with the help of the Blacksmith of Mammon. Once the seal is broken, the effect of M. Def+4 and MP+42 are given. -->
@@ -362,6 +368,9 @@
 		<set name="m_def" val="91"/>
 		<set name="price" val="4940000"/>
 		<set name="crystal_count" val="247"/>
+		<for>
+			<add val="91" order="0x10" stat="mDef"/>
+		</for>
 	</item>
 	<item id="6727" type="EtcItem" name="Seed: Alternative Great Coba">
 		<!-- Plant this seed onto a monster in the Goddard area and it will bear the fruit of the Alternative Great Coba. For best results, a level 80-90 character must plant it on a level 80-90 monster. -->
