@@ -137,6 +137,7 @@ import org.l2jmobius.gameserver.model.entity.siege.FortSiege;
 import org.l2jmobius.gameserver.model.entity.siege.Siege;
 import org.l2jmobius.gameserver.model.entity.siege.clanhalls.DevastatedCastle;
 import org.l2jmobius.gameserver.model.holders.PlayerStatsHolder;
+import org.l2jmobius.gameserver.model.holders.SummonRequestHolder;
 import org.l2jmobius.gameserver.model.itemcontainer.Inventory;
 import org.l2jmobius.gameserver.model.itemcontainer.ItemContainer;
 import org.l2jmobius.gameserver.model.itemcontainer.PetInventory;
@@ -399,7 +400,7 @@ public class PlayerInstance extends Playable
 	private FolkInstance _lastFolkNpc = null;
 	private int _questNpcObject = 0;
 	private int _partyFind = 0;
-	private final SummonRequest _summonRequest = new SummonRequest();
+	private final SummonRequestHolder _summonRequest = new SummonRequestHolder();
 	private final Map<String, QuestState> _quests = new HashMap<>();
 	private final ShortCuts _shortCuts = new ShortCuts(this);
 	private final MacroList _macroses = new MacroList(this);
@@ -766,35 +767,6 @@ public class PlayerInstance extends Playable
 	public PlayerStatsHolder getLastSavedStatus()
 	{
 		return savedStatus;
-	}
-	
-	protected static class SummonRequest
-	{
-		private PlayerInstance _summoner;
-		private Location _location;
-		private Skill _skill;
-		
-		public void setTarget(PlayerInstance summoner, Skill skill)
-		{
-			_summoner = summoner;
-			_location = new Location(summoner.getX(), summoner.getY(), summoner.getZ(), summoner.getHeading());
-			_skill = skill;
-		}
-		
-		public PlayerInstance getSummoner()
-		{
-			return _summoner;
-		}
-		
-		public Location getLocation()
-		{
-			return _location;
-		}
-		
-		public Skill getSkill()
-		{
-			return _skill;
-		}
 	}
 	
 	public boolean isSpawnProtected()
