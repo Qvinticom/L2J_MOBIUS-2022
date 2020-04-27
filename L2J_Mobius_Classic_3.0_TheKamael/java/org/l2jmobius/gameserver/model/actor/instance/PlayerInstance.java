@@ -39,6 +39,7 @@ import java.util.concurrent.ConcurrentSkipListMap;
 import java.util.concurrent.Future;
 import java.util.concurrent.ScheduledFuture;
 import java.util.concurrent.TimeUnit;
+import java.util.concurrent.atomic.AtomicBoolean;
 import java.util.concurrent.atomic.AtomicInteger;
 import java.util.logging.Level;
 import java.util.stream.Collectors;
@@ -859,7 +860,10 @@ public class PlayerInstance extends Playable
 	
 	private ScheduledFuture<?> _autoPlayTask = null;
 	private ScheduledFuture<?> _autoUseTask = null;
-	private int _autoPotionPercent = 0;
+	private final AtomicBoolean _pickup = new AtomicBoolean();
+	private final AtomicBoolean _longRange = new AtomicBoolean();
+	private final AtomicBoolean _respectfulHunting = new AtomicBoolean();
+	private final AtomicInteger _autoPotionPercent = new AtomicInteger();
 	private final Collection<Integer> _autoSupplyItems = ConcurrentHashMap.newKeySet();
 	private final Collection<Integer> _autoPotionItems = ConcurrentHashMap.newKeySet();
 	private final Collection<Integer> _autoSkills = ConcurrentHashMap.newKeySet();
@@ -14015,6 +14019,10 @@ public class PlayerInstance extends Playable
 	
 	public void startAutoPlayTask(boolean pickup, boolean longRange, boolean respectfulHunting)
 	{
+		_pickup.set(pickup);
+		_longRange.set(longRange);
+		_respectfulHunting.set(respectfulHunting);
+		
 		if (_autoPlayTask != null)
 		{
 			return;
@@ -14035,7 +14043,7 @@ public class PlayerInstance extends Playable
 			}
 			
 			// Pickup.
-			if (pickup)
+			if (_pickup.get())
 			{
 				for (ItemInstance droppedItem : World.getInstance().getVisibleObjectsInRange(this, ItemInstance.class, 200))
 				{
@@ -14066,7 +14074,7 @@ public class PlayerInstance extends Playable
 			// Find target.
 			MonsterInstance monster = null;
 			double closestDistance = Double.MAX_VALUE;
-			for (MonsterInstance nearby : World.getInstance().getVisibleObjectsInRange(this, MonsterInstance.class, longRange ? 1400 : 600))
+			for (MonsterInstance nearby : World.getInstance().getVisibleObjectsInRange(this, MonsterInstance.class, _longRange.get() ? 1400 : 600))
 			{
 				// Skip unavailable monsters.
 				if ((nearby == null) || nearby.isAlikeDead())
@@ -14074,7 +14082,7 @@ public class PlayerInstance extends Playable
 					continue;
 				}
 				// Check monster target.
-				if (respectfulHunting && (nearby.getTarget() != null) && (nearby.getTarget() != this))
+				if (_respectfulHunting.get() && (nearby.getTarget() != null) && (nearby.getTarget() != this))
 				{
 					continue;
 				}
@@ -14147,7 +14155,7 @@ public class PlayerInstance extends Playable
 				}
 			}
 			
-			if (Config.ENABLE_AUTO_POTION && (getCurrentHpPercent() <= _autoPotionPercent))
+			if (Config.ENABLE_AUTO_POTION && (getCurrentHpPercent() <= _autoPotionPercent.get()))
 			{
 				for (int itemId : _autoPotionItems)
 				{
@@ -14191,7 +14199,7 @@ public class PlayerInstance extends Playable
 	
 	public void setAutoPotionPercent(int value)
 	{
-		_autoPotionPercent = value;
+		_autoPotionPercent.set(value);
 	}
 	
 	public void addAutoSupplyItem(int itemId)
