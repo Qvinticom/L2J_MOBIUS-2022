@@ -4540,8 +4540,11 @@ public abstract class Creature extends WorldObject implements ISkillsHolder, IDe
 				value *= (100 + Math.max(_stat.getValue(Stat.PVE_DAMAGE_TAKEN_MONSTER), -80)) / 100;
 			}
 			
-			elementalDamage = Formulas.calcSpiritElementalDamage(attacker, this, value);
-			value += elementalDamage;
+			if (!reflect)
+			{
+				elementalDamage = Formulas.calcSpiritElementalDamage(attacker, this, value);
+				value += elementalDamage;
+			}
 		}
 		
 		final double damageCap = _stat.getValue(Stat.DAMAGE_LIMIT);
