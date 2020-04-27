@@ -16,7 +16,6 @@
  */
 package org.l2jmobius.gameserver.network.clientpackets;
 
-import java.nio.BufferUnderflowException;
 import java.util.logging.Logger;
 
 import org.l2jmobius.commons.mmocore.ReceivablePacket;
@@ -42,10 +41,6 @@ public abstract class GameClientPacket extends ReceivablePacket<GameClient>
 		catch (Exception e)
 		{
 			LOGGER.severe("Client: " + getClient() + " - Failed reading: " + getType() + " ; " + e.getMessage() + " " + e);
-			if (e instanceof BufferUnderflowException)
-			{
-				getClient().onBufferUnderflow();
-			}
 		}
 		return false;
 	}

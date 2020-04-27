@@ -74,42 +74,26 @@ public class GameClient extends MMOClient<MMOConnection<GameClient>> implements 
 		IN_GAME
 	}
 	
-	// floodprotectors
 	private final FloodProtectors _floodProtectors = new FloodProtectors(this);
-	
-	public GameClientState _state;
-	
-	// Info
-	public String _accountName;
-	public SessionKey _sessionId;
-	public PlayerInstance _player;
 	private final ReentrantLock _playerLock = new ReentrantLock();
-	
-	private boolean _isAuthedGG;
-	private final long _connectionStartTime;
 	private final List<Integer> _charSlotMapping = new ArrayList<>();
-	
-	protected ScheduledFuture<?> _cleanupTask = null;
-	
-	private final ClientStats _stats;
-	
-	// Crypt
-	private final GameCrypt _crypt;
-	
-	private boolean _isDetached = false;
-	
-	private final ArrayBlockingQueue<ReceivablePacket<GameClient>> _packetQueue;
 	private final ReentrantLock _queueLock = new ReentrantLock();
-	
+	private final ArrayBlockingQueue<ReceivablePacket<GameClient>> _packetQueue;
+	private final GameCrypt _crypt;
+	private GameClientState _state;
+	private String _accountName;
+	private SessionKey _sessionId;
+	private PlayerInstance _player;
+	private ScheduledFuture<?> _cleanupTask = null;
+	private volatile boolean _isDetached = false;
+	private boolean _isAuthedGG;
 	private int _protocolVersion;
 	
 	public GameClient(MMOConnection<GameClient> con)
 	{
 		super(con);
 		_state = GameClientState.CONNECTED;
-		_connectionStartTime = System.currentTimeMillis();
 		_crypt = new GameCrypt();
-		_stats = new ClientStats();
 		_packetQueue = new ArrayBlockingQueue<>(Config.CLIENT_PACKET_QUEUE_SIZE);
 	}
 	
@@ -132,16 +116,6 @@ public class GameClient extends MMOClient<MMOConnection<GameClient>> implements 
 			_state = pState;
 			_packetQueue.clear();
 		}
-	}
-	
-	public ClientStats getStats()
-	{
-		return _stats;
-	}
-	
-	public long getConnectionStartTime()
-	{
-		return _connectionStartTime;
 	}
 	
 	@Override
@@ -800,7 +774,7 @@ public class GameClient extends MMOClient<MMOConnection<GameClient>> implements 
 	}
 	
 	/**
-	 * Returns false if client can receive packets. True if detached, or flood detected, or queue overflow detected and queue still not empty.
+	 * Returns false if client can receive packets. True if detached or queue overflow detected and queue still not empty.
 	 * @return
 	 */
 	public boolean dropPacket()
@@ -809,48 +783,14 @@ public class GameClient extends MMOClient<MMOConnection<GameClient>> implements 
 	}
 	
 	/**
-	 * Counts buffer underflow exceptions.
-	 */
-	public void onBufferUnderflow()
-	{
-		if (_stats.countUnderflowException())
-		{
-			LOGGER.warning("Client " + this + " - Disconnected: Too many buffer underflow exceptions.");
-			closeNow();
-			return;
-		}
-		if (_state == GameClientState.CONNECTED) // in CONNECTED state kick client immediately
-		{
-			LOGGER.warning("Client " + this + " - Disconnected, too many buffer underflows in non-authed state.");
-			closeNow();
-		}
-	}
-	
-	/**
 	 * Add packet to the queue and start worker thread if needed
 	 * @param packet
 	 */
 	public void execute(ReceivablePacket<GameClient> packet)
 	{
-		if (_stats.countFloods())
-		{
-			LOGGER.warning("Client " + this + " - Disconnected, too many floods:" + _stats.longFloods + " long and " + _stats.shortFloods + " short.");
-			closeNow();
-			return;
-		}
-		
 		if (!_packetQueue.offer(packet))
 		{
-			if (_stats.countQueueOverflow())
-			{
-				LOGGER.warning("Client " + this + " - Disconnected, too many queue overflows.");
-				closeNow();
-			}
-			else
-			{
-				sendPacket(ActionFailed.STATIC_PACKET);
-			}
-			
+			sendPacket(ActionFailed.STATIC_PACKET);
 			return;
 		}
 		
@@ -861,21 +801,7 @@ public class GameClient extends MMOClient<MMOConnection<GameClient>> implements 
 		
 		try
 		{
-			if (_state == GameClientState.CONNECTED)
-			{
-				if (_stats.processedPackets > 3)
-				{
-					LOGGER.warning("Client " + this + " - Disconnected, too many packets in non-authed state.");
-					closeNow();
-					return;
-				}
-				
-				ThreadPool.execute(this);
-			}
-			else
-			{
-				ThreadPool.execute(this);
-			}
+			ThreadPool.execute(this);
 		}
 		catch (RejectedExecutionException e)
 		{
@@ -892,7 +818,6 @@ public class GameClient extends MMOClient<MMOConnection<GameClient>> implements 
 		
 		try
 		{
-			int count = 0;
 			while (true)
 			{
 				final ReceivablePacket<GameClient> packet = _packetQueue.poll();
@@ -914,12 +839,6 @@ public class GameClient extends MMOClient<MMOConnection<GameClient>> implements 
 				catch (Exception e)
 				{
 					LOGGER.warning("Exception during execution " + packet.getClass().getSimpleName() + ", client: " + this + "," + e.getMessage());
-				}
-				
-				count++;
-				if (_stats.countBurst(count))
-				{
-					return;
 				}
 			}
 		}

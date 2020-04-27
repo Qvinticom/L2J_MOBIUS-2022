@@ -67,31 +67,22 @@ public class GameClient extends ChannelInboundHandler<GameClient>
 	protected static final Logger LOGGER = Logger.getLogger(GameClient.class.getName());
 	protected static final Logger LOGGER_ACCOUNTING = Logger.getLogger("accounting");
 	
-	// Info
+	private final FloodProtectors _floodProtectors = new FloodProtectors(this);
+	private final ReentrantLock _playerLock = new ReentrantLock();
+	private final Crypt _crypt;
 	private InetAddress _addr;
 	private Channel _channel;
 	private String _accountName;
 	private SessionKey _sessionId;
 	private PlayerInstance _player;
-	private final ReentrantLock _playerLock = new ReentrantLock();
 	private SecondaryPasswordAuth _secondaryAuth;
 	private ClientHardwareInfoHolder _hardwareInfo;
-	private boolean _isAuthedGG;
 	private CharSelectInfoPackage[] _charSlotMapping = null;
-	
-	// flood protectors
-	private final FloodProtectors _floodProtectors = new FloodProtectors(this);
-	
-	// Crypt
-	private final Crypt _crypt;
-	
 	private volatile boolean _isDetached = false;
-	
-	private int _protocolVersion;
-	
+	private boolean _isAuthedGG;
 	private boolean _protocolOk;
-	
-	private int[][] trace;
+	private int _protocolVersion;
+	private int[][] _trace;
 	
 	public GameClient()
 	{
@@ -672,12 +663,12 @@ public class GameClient extends ChannelInboundHandler<GameClient>
 	
 	public void setClientTracert(int[][] tracert)
 	{
-		trace = tracert;
+		_trace = tracert;
 	}
 	
 	public int[][] getTrace()
 	{
-		return trace;
+		return _trace;
 	}
 	
 	public void sendActionFailed()
