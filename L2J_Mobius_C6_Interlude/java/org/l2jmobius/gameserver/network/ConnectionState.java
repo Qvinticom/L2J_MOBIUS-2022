@@ -16,23 +16,13 @@
  */
 package org.l2jmobius.gameserver.network;
 
-import org.l2jmobius.commons.network.IConnectionState;
-
 /**
  * @author KenM
  */
-public enum ConnectionState implements IConnectionState
+public enum ConnectionState
 {
 	CONNECTED,
-	DISCONNECTED,
-	CLOSING,
 	AUTHENTICATED,
 	ENTERING,
-	IN_GAME;
-	
-	public static final ConnectionState[] ENTERING_AND_IN_GAME = new ConnectionState[]
-	{
-		ConnectionState.ENTERING,
-		ConnectionState.IN_GAME
-	};
+	IN_GAME
 }

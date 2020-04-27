@@ -19,7 +19,7 @@ package org.l2jmobius.gameserver.network.clientpackets;
 import java.util.logging.Logger;
 
 import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
-import org.l2jmobius.gameserver.network.GameClient.GameClientState;
+import org.l2jmobius.gameserver.network.ConnectionState;
 import org.l2jmobius.gameserver.network.serverpackets.ActionFailed;
 import org.l2jmobius.gameserver.network.serverpackets.CharSelected;
 
@@ -81,7 +81,7 @@ public class CharacterSelected extends GameClientPacket
 					
 					cha.setClient(getClient());
 					getClient().setPlayer(cha);
-					getClient().setState(GameClientState.ENTERING);
+					getClient().setState(ConnectionState.ENTERING);
 					sendPacket(new CharSelected(cha, getClient().getSessionId().playOkID1));
 				}
 			}

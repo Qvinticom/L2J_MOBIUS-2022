@@ -39,8 +39,8 @@ import org.l2jmobius.commons.crypt.NewCrypt;
 import org.l2jmobius.commons.util.Rnd;
 import org.l2jmobius.gameserver.model.World;
 import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
+import org.l2jmobius.gameserver.network.ConnectionState;
 import org.l2jmobius.gameserver.network.GameClient;
-import org.l2jmobius.gameserver.network.GameClient.GameClientState;
 import org.l2jmobius.gameserver.network.gameserverpackets.AuthRequest;
 import org.l2jmobius.gameserver.network.gameserverpackets.BlowFishKey;
 import org.l2jmobius.gameserver.network.gameserverpackets.ChangeAccessLevel;
@@ -304,7 +304,7 @@ public class LoginServerThread extends Thread
 								{
 									final PlayerInGame pig = new PlayerInGame(par.getAccount());
 									sendPacket(pig);
-									wcToRemove.gameClient.setState(GameClientState.AUTHED);
+									wcToRemove.gameClient.setState(ConnectionState.AUTHENTICATED);
 									wcToRemove.gameClient.setSessionId(wcToRemove.session);
 									final CharSelectInfo cl = new CharSelectInfo(wcToRemove.account, wcToRemove.gameClient.getSessionId().playOkID1);
 									wcToRemove.gameClient.getConnection().sendPacket(cl);

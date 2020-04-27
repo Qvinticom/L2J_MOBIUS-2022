@@ -323,7 +323,7 @@ public class FloodProtectorAction
 				}
 				break;
 			}
-			case AUTHED:
+			case AUTHENTICATED:
 			{
 				if (client.getAccountName() != null)
 				{

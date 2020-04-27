@@ -26,8 +26,8 @@ import org.l2jmobius.gameserver.model.entity.olympiad.Olympiad;
 import org.l2jmobius.gameserver.model.entity.sevensigns.SevenSignsFestival;
 import org.l2jmobius.gameserver.model.itemcontainer.Inventory;
 import org.l2jmobius.gameserver.model.zone.ZoneId;
+import org.l2jmobius.gameserver.network.ConnectionState;
 import org.l2jmobius.gameserver.network.GameClient;
-import org.l2jmobius.gameserver.network.GameClient.GameClientState;
 import org.l2jmobius.gameserver.network.SystemMessageId;
 import org.l2jmobius.gameserver.network.serverpackets.ActionFailed;
 import org.l2jmobius.gameserver.network.serverpackets.CharSelectInfo;
@@ -180,7 +180,7 @@ public class RequestRestart extends GameClientPacket
 		getClient().setPlayer(null);
 		
 		// return the client to the authed status
-		client.setState(GameClientState.AUTHED);
+		client.setState(ConnectionState.AUTHENTICATED);
 		
 		// Restart true
 		sendPacket(RestartResponse.valueOf(true));

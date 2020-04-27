@@ -62,25 +62,13 @@ public class GameClient extends MMOClient<MMOConnection<GameClient>> implements 
 {
 	protected static final Logger LOGGER = Logger.getLogger(GameClient.class.getName());
 	
-	/**
-	 * CONNECTED - client has just connected AUTHED - client has authed but doesn't has character attached to it yet IN_GAME - client has selected a char and is in game
-	 * @author KenM
-	 */
-	public enum GameClientState
-	{
-		CONNECTED,
-		AUTHED,
-		ENTERING,
-		IN_GAME
-	}
-	
 	private final FloodProtectors _floodProtectors = new FloodProtectors(this);
 	private final ReentrantLock _playerLock = new ReentrantLock();
 	private final List<Integer> _charSlotMapping = new ArrayList<>();
 	private final ReentrantLock _queueLock = new ReentrantLock();
 	private final ArrayBlockingQueue<ReceivablePacket<GameClient>> _packetQueue;
 	private final GameCrypt _crypt;
-	private GameClientState _state;
+	private ConnectionState _state;
 	private String _accountName;
 	private SessionKey _sessionId;
 	private PlayerInstance _player;
@@ -92,7 +80,7 @@ public class GameClient extends MMOClient<MMOConnection<GameClient>> implements 
 	public GameClient(MMOConnection<GameClient> con)
 	{
 		super(con);
-		_state = GameClientState.CONNECTED;
+		_state = ConnectionState.CONNECTED;
 		_crypt = new GameCrypt();
 		_packetQueue = new ArrayBlockingQueue<>(Config.CLIENT_PACKET_QUEUE_SIZE);
 	}
@@ -104,12 +92,12 @@ public class GameClient extends MMOClient<MMOConnection<GameClient>> implements 
 		return key;
 	}
 	
-	public GameClientState getState()
+	public ConnectionState getState()
 	{
 		return _state;
 	}
 	
-	public void setState(GameClientState pState)
+	public void setState(ConnectionState pState)
 	{
 		if (_state != pState)
 		{
@@ -551,7 +539,7 @@ public class GameClient extends MMOClient<MMOConnection<GameClient>> implements 
 				{
 					return "[IP: " + getIpAddress() + "]";
 				}
-				case AUTHED:
+				case AUTHENTICATED:
 				{
 					return "[Account: " + _accountName + " - IP: " + getIpAddress() + "]";
 				}

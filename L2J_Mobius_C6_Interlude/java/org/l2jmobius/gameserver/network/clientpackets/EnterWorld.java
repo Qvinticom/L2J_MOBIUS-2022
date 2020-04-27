@@ -65,7 +65,7 @@ import org.l2jmobius.gameserver.model.items.instance.ItemInstance;
 import org.l2jmobius.gameserver.model.quest.Quest;
 import org.l2jmobius.gameserver.model.quest.QuestState;
 import org.l2jmobius.gameserver.model.zone.ZoneId;
-import org.l2jmobius.gameserver.network.GameClient.GameClientState;
+import org.l2jmobius.gameserver.network.ConnectionState;
 import org.l2jmobius.gameserver.network.SystemMessageId;
 import org.l2jmobius.gameserver.network.serverpackets.ClientSetTime;
 import org.l2jmobius.gameserver.network.serverpackets.CreatureSay;
@@ -120,7 +120,7 @@ public class EnterWorld extends GameClientPacket
 			return;
 		}
 		
-		getClient().setState(GameClientState.IN_GAME);
+		getClient().setState(ConnectionState.IN_GAME);
 		
 		// Set lock at login
 		player.setLocked(true);

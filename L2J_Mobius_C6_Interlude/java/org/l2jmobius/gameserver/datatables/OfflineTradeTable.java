@@ -31,8 +31,8 @@ import org.l2jmobius.gameserver.model.TradeList.TradeItem;
 import org.l2jmobius.gameserver.model.World;
 import org.l2jmobius.gameserver.model.actor.Creature;
 import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
+import org.l2jmobius.gameserver.network.ConnectionState;
 import org.l2jmobius.gameserver.network.GameClient;
-import org.l2jmobius.gameserver.network.GameClient.GameClientState;
 
 /**
  * @author Shyla
@@ -204,7 +204,7 @@ public class OfflineTradeTable
 					player = PlayerInstance.load(rs.getInt("charId"));
 					client.setPlayer(player);
 					client.setAccountName(player.getAccountName());
-					client.setState(GameClientState.IN_GAME);
+					client.setState(ConnectionState.IN_GAME);
 					player.setClient(client);
 					player.setOfflineMode(true);
 					player.setOnlineStatus(false);

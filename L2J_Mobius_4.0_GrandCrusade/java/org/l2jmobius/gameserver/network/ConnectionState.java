@@ -19,7 +19,7 @@ package org.l2jmobius.gameserver.network;
 import org.l2jmobius.commons.network.IConnectionState;
 
 /**
- * @author Nos
+ * @author KenM
  */
 public enum ConnectionState implements IConnectionState
 {

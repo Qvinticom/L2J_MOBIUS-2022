@@ -26,7 +26,6 @@ import org.l2jmobius.commons.mmocore.IPacketHandler;
 import org.l2jmobius.commons.mmocore.MMOConnection;
 import org.l2jmobius.commons.mmocore.ReceivablePacket;
 import org.l2jmobius.commons.util.Util;
-import org.l2jmobius.gameserver.network.GameClient.GameClientState;
 import org.l2jmobius.gameserver.network.clientpackets.*;
 import org.l2jmobius.gameserver.network.serverpackets.ActionFailed;
 
@@ -59,7 +58,7 @@ public class GamePacketHandler implements IPacketHandler<GameClient>, IClientFac
 		}
 		
 		ReceivablePacket<GameClient> msg = null;
-		final GameClientState state = client.getState();
+		final ConnectionState state = client.getState();
 		
 		switch (state)
 		{
@@ -85,7 +84,7 @@ public class GamePacketHandler implements IPacketHandler<GameClient>, IClientFac
 				}
 				break;
 			}
-			case AUTHED:
+			case AUTHENTICATED:
 			{
 				switch (opcode)
 				{
@@ -1314,7 +1313,7 @@ public class GamePacketHandler implements IPacketHandler<GameClient>, IClientFac
 		return msg;
 	}
 	
-	private void printDebug(int opcode, ByteBuffer buf, GameClientState state, GameClient client)
+	private void printDebug(int opcode, ByteBuffer buf, ConnectionState state, GameClient client)
 	{
 		if (!Config.PACKET_HANDLER_DEBUG)
 		{
@@ -1329,7 +1328,7 @@ public class GamePacketHandler implements IPacketHandler<GameClient>, IClientFac
 		LOGGER.warning(Util.printData(array, size));
 	}
 	
-	private void printDebugDoubleOpcode(int opcode, int id2, ByteBuffer buf, GameClientState state, GameClient client)
+	private void printDebugDoubleOpcode(int opcode, int id2, ByteBuffer buf, ConnectionState state, GameClient client)
 	{
 		if (!Config.PACKET_HANDLER_DEBUG)
 		{
