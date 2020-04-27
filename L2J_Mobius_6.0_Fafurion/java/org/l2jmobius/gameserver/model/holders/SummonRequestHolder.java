@@ -16,30 +16,30 @@
  */
 package org.l2jmobius.gameserver.model.holders;
 
+import org.l2jmobius.gameserver.model.Location;
 import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
-import org.l2jmobius.gameserver.model.skills.Skill;
 
 /**
- * @author UnAfraid
+ * @author Mobius
  */
 public class SummonRequestHolder
 {
-	private final PlayerInstance _target;
-	private final Skill _skill;
+	private final PlayerInstance _summoner;
+	private final Location _location;
 	
-	public SummonRequestHolder(PlayerInstance destination, Skill skill)
+	public SummonRequestHolder(PlayerInstance summoner)
 	{
-		_target = destination;
-		_skill = skill;
+		_summoner = summoner;
+		_location = new Location(summoner.getX(), summoner.getY(), summoner.getZ(), summoner.getHeading());
 	}
 	
-	public PlayerInstance getTarget()
+	public PlayerInstance getSummoner()
 	{
-		return _target;
+		return _summoner;
 	}
 	
-	public Skill getSkill()
+	public Location getLocation()
 	{
-		return _skill;
+		return _location;
 	}
 }

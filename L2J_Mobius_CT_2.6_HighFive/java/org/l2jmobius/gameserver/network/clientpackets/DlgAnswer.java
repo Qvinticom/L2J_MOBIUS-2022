@@ -91,9 +91,9 @@ public class DlgAnswer implements IClientIncomingPacket
 		else if (_messageId == SystemMessageId.C1_WISHES_TO_SUMMON_YOU_FROM_S2_DO_YOU_ACCEPT.getId())
 		{
 			final SummonRequestHolder holder = player.removeScript(SummonRequestHolder.class);
-			if ((_answer == 1) && (holder != null) && (holder.getTarget().getObjectId() == _requesterId))
+			if ((_answer == 1) && (holder != null) && (holder.getSummoner().getObjectId() == _requesterId))
 			{
-				player.teleToLocation(holder.getTarget().getLocation(), true);
+				player.teleToLocation(holder.getLocation(), true);
 			}
 		}
 		else if (_messageId == SystemMessageId.WOULD_YOU_LIKE_TO_OPEN_THE_GATE.getId())

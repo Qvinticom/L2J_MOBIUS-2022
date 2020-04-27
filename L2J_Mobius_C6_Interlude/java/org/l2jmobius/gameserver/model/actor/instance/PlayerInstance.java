@@ -768,41 +768,29 @@ public class PlayerInstance extends Playable
 		return savedStatus;
 	}
 	
-	/**
-	 * The Class SummonRequest.
-	 */
 	protected static class SummonRequest
 	{
-		/** The _target. */
-		private PlayerInstance _target = null;
+		private PlayerInstance _summoner;
+		private Location _location;
+		private Skill _skill;
 		
-		/** The _skill. */
-		private Skill _skill = null;
-		
-		/**
-		 * Sets the target.
-		 * @param destination the destination
-		 * @param skill the skill
-		 */
-		public void setTarget(PlayerInstance destination, Skill skill)
+		public void setTarget(PlayerInstance summoner, Skill skill)
 		{
-			_target = destination;
+			_summoner = summoner;
+			_location = new Location(summoner.getX(), summoner.getY(), summoner.getZ(), summoner.getHeading());
 			_skill = skill;
 		}
 		
-		/**
-		 * Gets the target.
-		 * @return the target
-		 */
-		public PlayerInstance getTarget()
+		public PlayerInstance getSummoner()
 		{
-			return _target;
+			return _summoner;
 		}
 		
-		/**
-		 * Gets the skill.
-		 * @return the skill
-		 */
+		public Location getLocation()
+		{
+			return _location;
+		}
+		
 		public Skill getSkill()
 		{
 			return _skill;
@@ -13332,14 +13320,14 @@ public class PlayerInstance extends Playable
 	}
 	
 	/**
-	 * Request Teleport *.
+	 * Request Teleport action.
 	 * @param requester the requester
 	 * @param skill the skill
 	 * @return true, if successful
 	 */
 	public boolean teleportRequest(PlayerInstance requester, Skill skill)
 	{
-		if ((_summonRequest.getTarget() != null) && (requester != null))
+		if ((_summonRequest.getSummoner() != null) && (requester != null))
 		{
 			return false;
 		}
@@ -13348,41 +13336,43 @@ public class PlayerInstance extends Playable
 	}
 	
 	/**
-	 * Action teleport *.
+	 * Action teleport answer.
 	 * @param answer the answer
 	 * @param requesterId the requester id
 	 */
 	public void teleportAnswer(int answer, int requesterId)
 	{
-		if (_summonRequest.getTarget() == null)
+		if (_summonRequest.getSummoner() == null)
 		{
 			return;
 		}
-		if ((answer == 1) && (_summonRequest.getTarget().getObjectId() == requesterId))
+		if ((answer == 1) && (_summonRequest.getSummoner().getObjectId() == requesterId))
 		{
-			teleToTarget(this, _summonRequest.getTarget(), _summonRequest.getSkill());
+			teleToTarget(this, _summonRequest.getSummoner(), _summonRequest.getLocation(), _summonRequest.getSkill());
 		}
 		_summonRequest.setTarget(null, null);
 	}
 	
 	/**
 	 * Tele to target.
-	 * @param targetChar the target char
-	 * @param summonerChar the summoner char
+	 * @param player the target player
+	 * @param summoner the summoner player
+	 * @param location the summon location
 	 * @param summonSkill the summon skill
 	 */
-	public static void teleToTarget(PlayerInstance targetChar, PlayerInstance summonerChar, Skill summonSkill)
+	public static void teleToTarget(PlayerInstance player, PlayerInstance summoner, Location location, Skill summonSkill)
 	{
-		if ((targetChar == null) || (summonerChar == null) || (summonSkill == null))
+		if ((player == null) || (summoner == null) || (summonSkill == null))
 		{
 			return;
 		}
 		
-		if (!checkSummonerStatus(summonerChar))
+		if (!checkSummonerStatus(summoner))
 		{
 			return;
 		}
-		if (!checkSummonTargetStatus(targetChar, summonerChar))
+		
+		if (!checkSummonTargetStatus(player, summoner))
 		{
 			return;
 		}
@@ -13391,19 +13381,20 @@ public class PlayerInstance extends Playable
 		final int itemConsumeCount = summonSkill.getTargetConsume();
 		if ((itemConsumeId != 0) && (itemConsumeCount != 0))
 		{
-			if (targetChar.getInventory().getInventoryItemCount(itemConsumeId, 0) < itemConsumeCount)
+			if (player.getInventory().getInventoryItemCount(itemConsumeId, 0) < itemConsumeCount)
 			{
 				final SystemMessage sm = SystemMessage.getSystemMessage(SystemMessageId.S1_IS_REQUIRED_FOR_SUMMONING);
 				sm.addItemName(summonSkill.getTargetConsumeId());
-				targetChar.sendPacket(sm);
+				player.sendPacket(sm);
 				return;
 			}
-			targetChar.getInventory().destroyItemByItemId("Consume", itemConsumeId, itemConsumeCount, summonerChar, targetChar);
+			player.getInventory().destroyItemByItemId("Consume", itemConsumeId, itemConsumeCount, summoner, player);
 			final SystemMessage sm = SystemMessage.getSystemMessage(SystemMessageId.S1_HAS_DISAPPEARED);
 			sm.addItemName(summonSkill.getTargetConsumeId());
-			targetChar.sendPacket(sm);
+			player.sendPacket(sm);
 		}
-		targetChar.teleToLocation(summonerChar.getX(), summonerChar.getY(), summonerChar.getZ(), true);
+		
+		player.teleToLocation(location, true);
 	}
 	
 	/**

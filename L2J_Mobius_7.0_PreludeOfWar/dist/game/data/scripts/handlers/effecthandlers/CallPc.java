@@ -77,8 +77,8 @@ public class CallPc extends AbstractEffect
 				sm.addItemName(_itemId);
 				target.sendPacket(sm);
 			}
+			target.addScript(new SummonRequestHolder(player));
 			
-			target.addScript(new SummonRequestHolder(player, skill));
 			final ConfirmDlg confirm = new ConfirmDlg(SystemMessageId.C1_WISHES_TO_SUMMON_YOU_FROM_S2_DO_YOU_ACCEPT.getId());
 			confirm.getSystemMessage().addString(player.getName());
 			confirm.getSystemMessage().addZoneName(player.getX(), player.getY(), player.getZ());
@@ -148,7 +148,7 @@ public class CallPc extends AbstractEffect
 		}
 		
 		final Instance instance = effector.getInstanceWorld();
-		if ((instance != null) && !instance.isPlayerSummonAllowed())
+		if (((instance != null) && !instance.isPlayerSummonAllowed()) || effector.isInTimedHuntingZone())
 		{
 			effector.sendPacket(SystemMessageId.YOU_MAY_NOT_SUMMON_FROM_YOUR_CURRENT_LOCATION);
 			return false;

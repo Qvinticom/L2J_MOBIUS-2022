@@ -82,8 +82,8 @@ public class CallPc extends AbstractEffect
 				sm.addItemName(_itemId);
 				target.sendPacket(sm);
 			}
+			target.addScript(new SummonRequestHolder(player));
 			
-			target.addScript(new SummonRequestHolder(player, info.getSkill()));
 			final ConfirmDlg confirm = new ConfirmDlg(SystemMessageId.C1_WISHES_TO_SUMMON_YOU_FROM_S2_DO_YOU_ACCEPT.getId());
 			confirm.getSystemMessage().addString(player.getName());
 			confirm.getSystemMessage().addZoneName(player.getX(), player.getY(), player.getZ());

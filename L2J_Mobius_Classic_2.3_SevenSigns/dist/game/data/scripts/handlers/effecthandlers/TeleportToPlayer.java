@@ -117,7 +117,7 @@ public class TeleportToPlayer extends AbstractEffect
 				return;
 			}
 			
-			effector.teleToLocation(effector.getTarget(), true, null);
+			effector.teleToLocation(target, true, null);
 		}
 	}
 }
