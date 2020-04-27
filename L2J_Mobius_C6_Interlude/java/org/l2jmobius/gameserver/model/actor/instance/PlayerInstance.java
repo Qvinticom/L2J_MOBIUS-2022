@@ -530,7 +530,7 @@ public class PlayerInstance extends Playable
 	private long _punishTimer = 0;
 	private ScheduledFuture<?> _punishTask;
 	private final GatesRequest _gatesRequest = new GatesRequest();
-	private final HashMap<Integer, Long> confirmDlgRequests = new HashMap<>();
+	private final HashMap<Integer, Long> _confirmDlgRequests = new HashMap<>();
 	private int _currentMultiSellId = -1;
 	private int _partyroom = 0;
 	private Future<?> _autoSaveTask = null;
@@ -5799,7 +5799,7 @@ public class PlayerInstance extends Playable
 	 * Engage answer.
 	 * @param answer the answer
 	 */
-	public void EngageAnswer(int answer)
+	public void engageAnswer(int answer)
 	{
 		if (!_engagerequest || (_engageid == 0))
 		{
@@ -16419,17 +16419,17 @@ public class PlayerInstance extends Playable
 	
 	public void addConfirmDlgRequestTime(int requestId, int time)
 	{
-		confirmDlgRequests.put(requestId, System.currentTimeMillis() + time + 2000);
+		_confirmDlgRequests.put(requestId, System.currentTimeMillis() + time + 2000);
 	}
 	
 	public Long getConfirmDlgRequestTime(int requestId)
 	{
-		return confirmDlgRequests.get(requestId);
+		return _confirmDlgRequests.get(requestId);
 	}
 	
 	public void removeConfirmDlgRequestTime(int requestId)
 	{
-		confirmDlgRequests.remove(requestId);
+		_confirmDlgRequests.remove(requestId);
 	}
 	
 	/**

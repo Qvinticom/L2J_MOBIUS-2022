@@ -27,14 +27,14 @@ public class DlgAnswer extends GameClientPacket
 {
 	private int _messageId;
 	private int _answer;
-	private int _requestId;
+	private int _requesterId;
 	
 	@Override
 	protected void readImpl()
 	{
 		_messageId = readD();
 		_answer = readD();
-		_requestId = readD();
+		_requesterId = readD();
 	}
 	
 	@Override
@@ -46,12 +46,12 @@ public class DlgAnswer extends GameClientPacket
 			return;
 		}
 		
-		final Long answerTime = getClient().getPlayer().getConfirmDlgRequestTime(_requestId);
+		final Long answerTime = player.getConfirmDlgRequestTime(_requesterId);
 		if ((_answer == 1) && (answerTime != null) && (System.currentTimeMillis() > answerTime))
 		{
 			_answer = 0;
 		}
-		getClient().getPlayer().removeConfirmDlgRequestTime(_requestId);
+		player.removeConfirmDlgRequestTime(_requesterId);
 		
 		if (_messageId == SystemMessageId.S1_IS_MAKING_AN_ATTEMPT_AT_RESURRECTION_DO_YOU_WANT_TO_CONTINUE_WITH_THIS_RESURRECTION.getId())
 		{
@@ -59,7 +59,7 @@ public class DlgAnswer extends GameClientPacket
 		}
 		else if (_messageId == SystemMessageId.S1_WISHES_TO_SUMMON_YOU_FROM_S2_DO_YOU_ACCEPT.getId())
 		{
-			player.teleportAnswer(_answer, _requestId);
+			player.teleportAnswer(_answer, _requesterId);
 		}
 		else if (_messageId == SystemMessageId.WOULD_YOU_LIKE_TO_OPEN_THE_GATE.getId())
 		{
@@ -69,9 +69,9 @@ public class DlgAnswer extends GameClientPacket
 		{
 			player.gatesAnswer(_answer, 0);
 		}
-		else if ((_messageId == 614) && Config.ALLOW_WEDDING)
+		else if ((_messageId == SystemMessageId.S1_S2.getId()) && Config.ALLOW_WEDDING)
 		{
-			player.EngageAnswer(_answer);
+			player.engageAnswer(_answer);
 		}
 		else if (_messageId == SystemMessageId.S1.getId())
 		{
