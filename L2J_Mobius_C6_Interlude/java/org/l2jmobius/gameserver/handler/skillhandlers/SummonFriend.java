@@ -48,7 +48,7 @@ public class SummonFriend implements ISkillHandler
 			return;
 		}
 		
-		final PlayerInstance activePlayer = (PlayerInstance) creature;
+		final PlayerInstance activePlayer = creature.getActingPlayer();
 		if (!PlayerInstance.checkSummonerStatus(activePlayer))
 		{
 			return;
@@ -62,34 +62,38 @@ public class SummonFriend implements ISkillHandler
 		
 		if (activePlayer._inEvent)
 		{
-			activePlayer.sendMessage("You cannot use this skill in Event.");
+			activePlayer.sendMessage("You cannot use this skill in an Event.");
 			return;
 		}
+		
 		if (activePlayer._inEventCTF && CTF.isStarted())
 		{
-			activePlayer.sendMessage("You cannot use this skill in Event.");
+			activePlayer.sendMessage("You cannot use this skill in an Event.");
 			return;
 		}
+		
 		if (activePlayer._inEventDM && DM.hasStarted())
 		{
-			activePlayer.sendMessage("You cannot use this skill in Event.");
+			activePlayer.sendMessage("You cannot use this skill in an Event.");
 			return;
 		}
+		
 		if (activePlayer._inEventTvT && TvT.isStarted())
 		{
-			activePlayer.sendMessage("You cannot use this skill in Event.");
+			activePlayer.sendMessage("You cannot use this skill in an Event.");
 			return;
 		}
+		
 		if (activePlayer._inEventVIP && VIP._started)
 		{
-			activePlayer.sendMessage("You cannot use this skill in Event.");
+			activePlayer.sendMessage("You cannot use this skill in an Event.");
 			return;
 		}
 		
 		// Checks summoner not in siege zone
-		if (creature.isInsideZone(ZoneId.SIEGE))
+		if (activePlayer.isInsideZone(ZoneId.SIEGE))
 		{
-			((PlayerInstance) creature).sendMessage("You cannot summon in siege zone.");
+			activePlayer.sendMessage("You cannot summon in a siege zone.");
 			return;
 		}
 		
@@ -108,14 +112,14 @@ public class SummonFriend implements ISkillHandler
 		
 		try
 		{
-			for (WorldObject target1 : targets)
+			for (WorldObject wo : targets)
 			{
-				if (!(target1 instanceof Creature))
+				if (!(wo instanceof Creature))
 				{
 					continue;
 				}
 				
-				final Creature target = (Creature) target1;
+				final Creature target = (Creature) wo;
 				if (creature == target)
 				{
 					continue;
@@ -123,106 +127,105 @@ public class SummonFriend implements ISkillHandler
 				
 				if (target instanceof PlayerInstance)
 				{
-					final PlayerInstance targetChar = (PlayerInstance) target;
-					if (!PlayerInstance.checkSummonTargetStatus(targetChar, activePlayer))
+					final PlayerInstance targetPlayer = target.getActingPlayer();
+					if (!PlayerInstance.checkSummonTargetStatus(targetPlayer, activePlayer))
 					{
 						continue;
 					}
 					
-					if (targetChar.isAlikeDead())
+					if (targetPlayer.isAlikeDead())
 					{
 						final SystemMessage sm = new SystemMessage(SystemMessageId.S1_IS_DEAD_AT_THE_MOMENT_AND_CANNOT_BE_SUMMONED);
-						sm.addString(targetChar.getName());
-						creature.sendPacket(sm);
+						sm.addString(targetPlayer.getName());
+						activePlayer.sendPacket(sm);
 						continue;
 					}
 					
-					if (targetChar._inEvent)
+					if (targetPlayer._inEvent)
 					{
-						targetChar.sendMessage("You cannot use this skill in a Event.");
+						targetPlayer.sendMessage("You cannot use this skill in an Event.");
 						return;
 					}
-					if (targetChar._inEventCTF)
+					if (targetPlayer._inEventCTF)
 					{
-						targetChar.sendMessage("You cannot use this skill in a Event.");
+						targetPlayer.sendMessage("You cannot use this skill in an Event.");
 						return;
 					}
-					if (targetChar._inEventDM)
+					if (targetPlayer._inEventDM)
 					{
-						targetChar.sendMessage("You cannot use this skill in a Event.");
+						targetPlayer.sendMessage("You cannot use this skill in an Event.");
 						return;
 					}
-					if (targetChar._inEventTvT)
+					if (targetPlayer._inEventTvT)
 					{
-						targetChar.sendMessage("You cannot use this skill in a Event.");
+						targetPlayer.sendMessage("You cannot use this skill in an Event.");
 						return;
 					}
-					if (targetChar._inEventVIP)
+					if (targetPlayer._inEventVIP)
 					{
-						targetChar.sendMessage("You cannot use this skill in a Event.");
+						targetPlayer.sendMessage("You cannot use this skill in an Event.");
 						return;
 					}
 					
-					if (targetChar.isInStoreMode())
+					if (targetPlayer.isInStoreMode())
 					{
 						final SystemMessage sm = new SystemMessage(SystemMessageId.S1_IS_CURRENTLY_TRADING_OR_OPERATING_A_PRIVATE_STORE_AND_CANNOT_BE_SUMMONED);
-						sm.addString(targetChar.getName());
-						creature.sendPacket(sm);
+						sm.addString(targetPlayer.getName());
+						activePlayer.sendPacket(sm);
 						continue;
 					}
 					
 					// Target cannot be in combat (or dead, but that's checked by TARGET_PARTY)
-					if (targetChar.isRooted() || targetChar.isInCombat())
+					if (targetPlayer.isRooted() || targetPlayer.isInCombat())
 					{
 						final SystemMessage sm = new SystemMessage(SystemMessageId.S1_IS_ENGAGED_IN_COMBAT_AND_CANNOT_BE_SUMMONED);
-						sm.addString(targetChar.getName());
-						creature.sendPacket(sm);
+						sm.addString(targetPlayer.getName());
+						activePlayer.sendPacket(sm);
 						continue;
 					}
 					
-					if ((GrandBossManager.getInstance().getZone(targetChar) != null) && !targetChar.isGM())
+					if ((GrandBossManager.getInstance().getZone(targetPlayer) != null) && !targetPlayer.isGM())
 					{
-						creature.sendPacket(new SystemMessage(SystemMessageId.YOUR_TARGET_IS_IN_AN_AREA_WHICH_BLOCKS_SUMMONING));
+						activePlayer.sendPacket(new SystemMessage(SystemMessageId.YOUR_TARGET_IS_IN_AN_AREA_WHICH_BLOCKS_SUMMONING));
 						continue;
 					}
 					// Check for the the target's festival status
-					if (targetChar.isInOlympiadMode())
+					if (targetPlayer.isInOlympiadMode())
 					{
-						creature.sendPacket(new SystemMessage(SystemMessageId.YOU_CANNOT_SUMMON_PLAYERS_WHO_ARE_CURRENTLY_PARTICIPATING_IN_THE_GRAND_OLYMPIAD));
+						activePlayer.sendPacket(new SystemMessage(SystemMessageId.YOU_CANNOT_SUMMON_PLAYERS_WHO_ARE_CURRENTLY_PARTICIPATING_IN_THE_GRAND_OLYMPIAD));
 						continue;
 					}
 					
 					// Check for the the target's festival status
-					if (targetChar.isFestivalParticipant())
+					if (targetPlayer.isFestivalParticipant())
 					{
-						creature.sendPacket(new SystemMessage(SystemMessageId.YOUR_TARGET_IS_IN_AN_AREA_WHICH_BLOCKS_SUMMONING));
+						activePlayer.sendPacket(new SystemMessage(SystemMessageId.YOUR_TARGET_IS_IN_AN_AREA_WHICH_BLOCKS_SUMMONING));
 						continue;
 					}
 					
 					// Check for the target's jail status, arenas and siege zones
-					if (targetChar.isInsideZone(ZoneId.PVP))
+					if (targetPlayer.isInsideZone(ZoneId.PVP))
 					{
-						creature.sendPacket(new SystemMessage(SystemMessageId.YOUR_TARGET_IS_IN_AN_AREA_WHICH_BLOCKS_SUMMONING));
+						activePlayer.sendPacket(new SystemMessage(SystemMessageId.YOUR_TARGET_IS_IN_AN_AREA_WHICH_BLOCKS_SUMMONING));
 						continue;
 					}
 					
 					// Requires a Summoning Crystal
-					/* if (targetChar.getInventory().getItemByItemId(8615) == null) */
-					if ((targetChar.getInventory().getItemByItemId(8615) == null) && (skill.getId() != 1429)) // KidZor
+					if ((targetPlayer.getInventory().getItemByItemId(8615) == null) && (skill.getId() != 1429)) // KidZor
 					{
-						((PlayerInstance) creature).sendMessage("Your target cannot be summoned while he hasn't got a Summoning Crystal");
-						targetChar.sendMessage("You cannot be summoned while you haven't got a Summoning Crystal");
+						activePlayer.sendMessage("Your target cannot be summoned while he hasn't got a Summoning Crystal.");
+						targetPlayer.sendMessage("You cannot be summoned while you haven't got a Summoning Crystal.");
 						continue;
 					}
 					
-					if (!Util.checkIfInRange(0, creature, target, false))
+					if (!Util.checkIfInRange(0, activePlayer, targetPlayer, false))
 					{
 						// Check already summon
-						if (!targetChar.teleportRequest((PlayerInstance) creature, skill))
+						if (!targetPlayer.teleportRequest(activePlayer, skill))
 						{
 							final SystemMessage sm = SystemMessage.getSystemMessage(SystemMessageId.S1_HAS_ALREADY_BEEN_SUMMONED);
-							sm.addString(target.getName());
-							creature.sendPacket(sm);
+							sm.addString(targetPlayer.getName());
+							activePlayer.sendPacket(sm);
 							continue;
 						}
 						
@@ -231,16 +234,16 @@ public class SummonFriend implements ISkillHandler
 						{
 							// Send message
 							final ConfirmDlg confirm = new ConfirmDlg(SystemMessageId.S1_WISHES_TO_SUMMON_YOU_FROM_S2_DO_YOU_ACCEPT.getId());
-							confirm.addString(creature.getName());
-							confirm.addZoneName(creature.getX(), creature.getY(), creature.getZ());
+							confirm.addString(activePlayer.getName());
+							confirm.addZoneName(activePlayer.getX(), activePlayer.getY(), activePlayer.getZ());
 							confirm.addTime(30000);
-							confirm.addRequesterId(creature.getObjectId());
-							targetChar.sendPacket(confirm);
+							confirm.addRequesterId(activePlayer.getObjectId());
+							targetPlayer.sendPacket(confirm);
 						}
 						else
 						{
-							PlayerInstance.teleToTarget(targetChar, (PlayerInstance) creature, creature.getLocation(), skill);
-							targetChar.teleportRequest(null, null);
+							PlayerInstance.teleToTarget(targetPlayer, activePlayer, activePlayer.getLocation(), skill);
+							targetPlayer.teleportRequest(null, null);
 						}
 					}
 				}
