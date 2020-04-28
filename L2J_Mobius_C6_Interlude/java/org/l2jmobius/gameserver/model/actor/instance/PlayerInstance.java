@@ -3853,12 +3853,6 @@ public class PlayerInstance extends Playable
 			{
 				item.changeCountWithoutTrace(process, -count, this, reference);
 				item.setLastChange(ItemInstance.MODIFIED);
-				
-				// could do also without saving, but let's save approx 1 of 10
-				if ((GameTimeController.getGameTicks() % 10) == 0)
-				{
-					item.updateDatabase();
-				}
 				_inventory.refreshWeight();
 			}
 		}
