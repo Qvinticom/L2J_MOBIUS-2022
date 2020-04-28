@@ -216,9 +216,8 @@
 				<type>BLOCK_MP</type>
 			</effect>
 			<effect name="DebuffBlock" />
-			<effect name="Cp">
-				<amount>9000</amount>
-				<mode>DIFF</mode>
+			<effect name="CpHealPercent">
+				<power>100</power>
 			</effect>
 			<effect name="HealPercent">
 				<power>100</power>
@@ -2570,7 +2569,7 @@
 		<basicProperty>NONE</basicProperty>
 		<magicCriticalRate>5</magicCriticalRate>
 		<lvlBonusRate>20</lvlBonusRate>
-		<activateRate>80</activateRate>
+		<activateRate>-1</activateRate>
 		<targetType>ENEMY</targetType>
 		<affectScope>SINGLE</affectScope>
 		<effects>
@@ -2849,6 +2848,20 @@
 				<chance>10</chance>
 				<targetType>MY_PARTY</targetType>
 				<isCritical>true</isCritical>
+				<allowWeapons>ALL</allowWeapons>
+				<skillId>6060</skillId>
+				<skillLevel>1</skillLevel>
+			</effect>
+			<effect name="TriggerSkillByAttack">
+				<attackerType>Creature</attackerType>
+				<minAttackerLevel>1</minAttackerLevel>
+				<maxAttackerLevel>100</maxAttackerLevel>
+				<minDamage>1</minDamage>
+				<chance>10</chance>
+				<targetType>ENEMY</targetType>
+				<allowSkillAttack>true</allowSkillAttack>
+				<allowNormalAttack>false</allowNormalAttack>
+				<isCritical>false</isCritical>
 				<allowWeapons>ALL</allowWeapons>
 				<skillId>6060</skillId>
 				<skillLevel>1</skillLevel>

@@ -1234,8 +1234,18 @@
 	<skill id="1624" toLevel="4" name="Indestructible Sound">
 		<!-- Using Momentum, throws a powerful strike with a sword, blocking the target for $s1 Damage received by the target -$s2, blocks target's movements and skill usage. Requires a dual sword. Requires Momentum level 5. -->
 		<icon>icon.skill1624</icon>
-		<abnormalLvl>10</abnormalLvl>
-		<abnormalTime>10</abnormalTime>
+		<abnormalLvl>
+			<value level="1">10</value>
+			<value level="2">11</value>
+			<value level="3">12</value>
+			<value level="4">13</value>
+		</abnormalLvl>
+		<abnormalTime>
+			<value level="1">10</value>
+			<value level="2">12</value>
+			<value level="3">14</value>
+			<value level="4">16</value>
+		</abnormalTime>
 		<abnormalType>ROOT_PHYSICALLY</abnormalType>
 		<abnormalVisualEffect>TORNADO_SLOW</abnormalVisualEffect>
 		<chargeConsume>5</chargeConsume>
@@ -1251,8 +1261,18 @@
 		<isMagic>0</isMagic>
 		<lvlBonusRate>20</lvlBonusRate>
 		<operateType>A2</operateType>
-		<magicLvl>78</magicLvl>
-		<mpConsume>120</mpConsume>
+		<magicLvl>
+			<value level="1">78</value>
+			<value level="2">80</value>
+			<value level="3">82</value>
+			<value level="4">84</value>
+		</magicLvl>
+		<mpConsume>
+			<value level="1">120</value>
+			<value level="2">130</value>
+			<value level="3">141</value>
+			<value level="4">153</value>
+		</mpConsume>
 		<reuseDelay>120000</reuseDelay>
 		<magicCriticalRate>5</magicCriticalRate>
 		<targetType>ENEMY_ONLY</targetType>

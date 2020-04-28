@@ -1710,14 +1710,14 @@
 			<value level="12">26</value>
 			<value level="13">27</value>
 			<value level="14">28</value>
-			<value level="15">39</value>
-			<value level="16">42</value>
-			<value level="17">44</value>
-			<value level="18">46</value>
-			<value level="19">48</value>
-			<value level="20">51</value>
-			<value level="21">54</value>
-			<value level="22">57</value>
+			<value level="15">31</value>
+			<value level="16">34</value>
+			<value level="17">35</value>
+			<value level="18">37</value>
+			<value level="19">38</value>
+			<value level="20">41</value>
+			<value level="21">43</value>
+			<value level="22">46</value>
 		</mpConsume>
 		<mpInitialConsume>
 			<value level="1">4</value>
@@ -2014,10 +2014,7 @@
 		<affectScope>SINGLE</affectScope>
 		<conditions>
 			<condition name="RemainHpPer">
-				<amount>
-					<value fromLevel="1" toLevel="5">60</value>
-					<value fromLevel="6" toLevel="9">90</value>
-				</amount>
+				<amount>90</amount>
 				<percentType>LESS</percentType>
 				<affectType>CASTER</affectType>
 			</condition>
@@ -3022,10 +3019,7 @@
 		<affectScope>SINGLE</affectScope>
 		<conditions>
 			<condition name="RemainHpPer">
-				<amount>
-					<value fromLevel="1" toLevel="5">60</value>
-					<value fromLevel="6" toLevel="9">90</value>
-				</amount>
+				<amount>90</amount>
 				<percentType>LESS</percentType>
 				<affectType>CASTER</affectType>
 			</condition>

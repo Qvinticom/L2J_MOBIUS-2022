@@ -1132,10 +1132,18 @@
 	<skill id="1896" toLevel="4" name="Full Knockdown">
 		<!-- Inflicts a powerful strike on target with $s1 Power added to P. Atk., knocking down for $s2 Requires a sword, blunt weapon, spear, fist weapon, or dual sword. Critical. Ignores Shield Defense. -->
 		<icon>icon.skill1896</icon>
+		<abnormalLvl>
+			<value level="1">1</value>
+			<value level="2">2</value>
+			<value level="3">3</value>
+		</abnormalLvl>
 		<abnormalTime>3</abnormalTime>
 		<abnormalType>KNOCKDOWN</abnormalType>
+		<activateRate>60</activateRate>
 		<castRange>40</castRange>
+		<lvlBonusRate>20</lvlBonusRate>
 		<coolTime>500</coolTime>
+		<basicProperty>PHYSICAL</basicProperty>
 		<effectPoint>
 			<value level="1">-713</value>
 			<value level="2">-717</value>
@@ -1157,7 +1165,7 @@
 			<value level="4">110</value>
 		</mpConsume>
 		<nextAction>ATTACK</nextAction>
-		<operateType>A1</operateType>
+		<operateType>A2</operateType>
 		<isDebuff>true</isDebuff>
 		<reuseDelay>15000</reuseDelay>
 		<magicCriticalRate>5</magicCriticalRate>
@@ -1184,7 +1192,6 @@
 				</power>
 				<ignoreShieldDefence>true</ignoreShieldDefence>
 				<criticalChance>15</criticalChance>
-				<overHit>true</overHit>
 			</effect>
 			<effect name="KnockBack">
 				<distance>200</distance>
@@ -1200,9 +1207,15 @@
 		<abnormalTime>30</abnormalTime>
 		<abnormalType>PD_DOWN</abnormalType>
 		<abnormalVisualEffect>STIGMA_OF_SILEN</abnormalVisualEffect>
-		<activateRate>80</activateRate>
+		<activateRate>-1</activateRate>
 		<basicProperty>MAGIC</basicProperty>
-		<castRange>600</castRange>
+		<castRange>
+			<value level="1">600</value>
+			<value level="2">700</value>
+			<value level="3">800</value>
+			<value level="4">900</value>
+			<value level="5">900</value>
+		</castRange>
 		<effectPoint>
 			<value level="1">-379</value>
 			<value level="2">-495</value>
@@ -1210,13 +1223,7 @@
 			<value level="4">-635</value>
 			<value level="5">-639</value>
 		</effectPoint>
-		<effectRange>
-			<value level="1">1100</value>
-			<value level="2">1200</value>
-			<value level="3">1300</value>
-			<value level="4">1400</value>
-			<value level="5">1500</value>
-		</effectRange>
+		<effectRange>200</effectRange>
 		<hitTime>1500</hitTime>
 		<isDebuff>true</isDebuff>
 		<lvlBonusRate>20</lvlBonusRate>
@@ -1238,7 +1245,7 @@
 		<reuseDelay>3000</reuseDelay>
 		<basicProperty>NONE</basicProperty>
 		<magicCriticalRate>5</magicCriticalRate>
-		<targetType>ENEMY_ONLY</targetType>
+		<targetType>ENEMY</targetType>
 		<affectScope>RANGE</affectScope>
 		<effects>
 			<effect name="DefenceTrait">
@@ -1249,6 +1256,34 @@
 					<value level="4">-40</value>
 					<value level="5">-48</value>
 				</SWORD>
+				<DAGGER>
+					<value level="1">-16</value>
+					<value level="2">-24</value>
+					<value level="3">-32</value>
+					<value level="4">-40</value>
+					<value level="5">-48</value>
+				</DAGGER>
+				<DUALFIST>
+					<value level="1">-16</value>
+					<value level="2">-24</value>
+					<value level="3">-32</value>
+					<value level="4">-40</value>
+					<value level="5">-48</value>
+				</DUALFIST>
+				<ANCIENTSWORD>
+					<value level="1">-16</value>
+					<value level="2">-24</value>
+					<value level="3">-32</value>
+					<value level="4">-40</value>
+					<value level="5">-48</value>
+				</ANCIENTSWORD>
+				<DUALDAGGER>
+					<value level="1">-16</value>
+					<value level="2">-24</value>
+					<value level="3">-32</value>
+					<value level="4">-40</value>
+					<value level="5">-48</value>
+				</DUALDAGGER>
 				<BLUNT>
 					<value level="1">-16</value>
 					<value level="2">-24</value>
@@ -1270,6 +1305,13 @@
 					<value level="4">-40</value>
 					<value level="5">-48</value>
 				</DUAL>
+				<RAPIER>
+					<value level="1">-16</value>
+					<value level="2">-24</value>
+					<value level="3">-32</value>
+					<value level="4">-40</value>
+					<value level="5">-48</value>
+				</RAPIER>
 			</effect>
 		</effects>
 	</skill>
@@ -1298,7 +1340,7 @@
 		<fanRange>0;0;600;60</fanRange>
 		<hitTime>800</hitTime>
 		<isDebuff>true</isDebuff>
-		<lvlBonusRate>30</lvlBonusRate>
+		<lvlBonusRate>20</lvlBonusRate>
 		<magicLvl>
 			<value level="1">76</value>
 			<value level="2">77</value>
@@ -1338,7 +1380,7 @@
 		</conditions>
 		<effects>
 			<effect name="BlockActions">
-				<allowedSkills>35016</allowedSkills>
+				<allowedSkills>35016;35045;18103</allowedSkills>
 			</effect>
 			<effect name="PhysicalAttack">
 				<power>

@@ -882,7 +882,7 @@
 		<hitTime>2500</hitTime>
 		<isMagic>3</isMagic> <!-- Dance Skill -->
 		<magicLvl>80</magicLvl>
-		<mpConsume>73</mpConsume>
+		<mpConsume>66</mpConsume>
 		<operateType>A2</operateType>
 		<reuseDelay>600000</reuseDelay>
 		<basicProperty>NONE</basicProperty>
@@ -917,9 +917,9 @@
 		<hitTime>2500</hitTime>
 		<isMagic>3</isMagic> <!-- Dance Skill -->
 		<magicLvl>80</magicLvl>
-		<mpConsume>66</mpConsume>
+		<mpConsume>73</mpConsume>
 		<operateType>A2</operateType>
-		<reuseDelay>3000</reuseDelay>
+		<reuseDelay>600000</reuseDelay>
 		<basicProperty>NONE</basicProperty>
 		<magicCriticalRate>5</magicCriticalRate>
 		<targetType>SELF</targetType>
@@ -4439,7 +4439,7 @@
 		</mpConsume>
 		<nextAction>ATTACK</nextAction>
 		<operateType>A1</operateType>
-		<reuseDelay>4000</reuseDelay>
+		<reuseDelay>6000</reuseDelay>
 		<magicCriticalRate>5</magicCriticalRate>
 		<coolTime>500</coolTime>
 		<targetType>ENEMY</targetType>
@@ -4754,7 +4754,7 @@
 		<activateRate>40</activateRate>
 		<basicProperty>PHYSICAL</basicProperty>
 		<castRange>900</castRange>
-		<effectPoint>-694</effectPoint>
+		<effectPoint>-1387</effectPoint>
 		<effectRange>1400</effectRange>
 		<hitTime>3500</hitTime>
 		<isDebuff>true</isDebuff>
