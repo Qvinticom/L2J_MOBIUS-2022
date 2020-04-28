@@ -85,6 +85,7 @@ import org.l2jmobius.gameserver.enums.ChatType;
 import org.l2jmobius.gameserver.enums.HtmlActionScope;
 import org.l2jmobius.gameserver.enums.IllegalActionPunishmentType;
 import org.l2jmobius.gameserver.enums.InstanceType;
+import org.l2jmobius.gameserver.enums.ItemLocation;
 import org.l2jmobius.gameserver.enums.MountType;
 import org.l2jmobius.gameserver.enums.PartyDistributionType;
 import org.l2jmobius.gameserver.enums.PlayerAction;
@@ -2223,6 +2224,25 @@ public class PlayerInstance extends Playable
 	
 	public void useEquippableItem(ItemInstance item, boolean abortAttack)
 	{
+		// Check if the item is null.
+		if (item == null)
+		{
+			return;
+		}
+		
+		// Check if the item is owned by this player.
+		if (item.getOwnerId() != getObjectId())
+		{
+			return;
+		}
+		
+		// Check if the item is in the inventory.
+		final ItemLocation itemLocation = item.getItemLocation();
+		if ((itemLocation != ItemLocation.INVENTORY) && (itemLocation != ItemLocation.PAPERDOLL))
+		{
+			return;
+		}
+		
 		// Equip or unEquip
 		ItemInstance[] items = null;
 		final boolean isEquiped = item.isEquipped();
@@ -2283,8 +2303,8 @@ public class PlayerInstance extends Playable
 				sendPacket(SystemMessageId.YOU_DO_NOT_MEET_THE_REQUIRED_CONDITION_TO_EQUIP_THAT_ITEM);
 			}
 		}
-		refreshExpertisePenalty();
 		
+		refreshExpertisePenalty();
 		broadcastUserInfo();
 		
 		final InventoryUpdate iu = new InventoryUpdate();

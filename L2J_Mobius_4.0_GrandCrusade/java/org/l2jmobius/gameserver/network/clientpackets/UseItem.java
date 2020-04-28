@@ -250,18 +250,8 @@ public class UseItem implements IClientIncomingPacket
 			}
 			else if (player.isAttackingNow())
 			{
-				ThreadPool.schedule(() ->
-				{
-					// Check if the item is still on inventory.
-					final ItemInstance equipItem = player.getInventory().getItemByObjectId(_objectId);
-					if (equipItem == null)
-					{
-						return;
-					}
-					
-					// Equip or unEquip.
-					player.useEquippableItem(equipItem, false);
-				}, player.getAttackEndTime() - TimeUnit.MILLISECONDS.toNanos(System.currentTimeMillis()));
+				// Equip or unEquip.
+				ThreadPool.schedule(() -> player.useEquippableItem(item, false), player.getAttackEndTime() - TimeUnit.MILLISECONDS.toNanos(System.currentTimeMillis()));
 			}
 			else
 			{
