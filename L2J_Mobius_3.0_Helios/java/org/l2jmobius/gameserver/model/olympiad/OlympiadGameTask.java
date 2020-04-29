@@ -245,6 +245,7 @@ public class OlympiadGameTask implements Runnable
 					delay = getDelay(BATTLE_START_TIME_FIRST);
 					if (_countDown <= 0)
 					{
+						_game.makePlayersInvul();
 						_game.resetDamage();
 						_stadium.openDoors();
 						
@@ -268,6 +269,7 @@ public class OlympiadGameTask implements Runnable
 					if (_countDown <= 0)
 					{
 						_state = GameState.BATTLE_STARTED;
+						_game.removePlayersInvul();
 					}
 					break;
 				}
