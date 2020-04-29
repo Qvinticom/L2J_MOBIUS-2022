@@ -80,7 +80,6 @@ import org.l2jmobius.gameserver.instancemanager.CoupleManager;
 import org.l2jmobius.gameserver.instancemanager.CursedWeaponsManager;
 import org.l2jmobius.gameserver.instancemanager.DimensionalRiftManager;
 import org.l2jmobius.gameserver.instancemanager.DuelManager;
-import org.l2jmobius.gameserver.instancemanager.FishingZoneManager;
 import org.l2jmobius.gameserver.instancemanager.FortSiegeManager;
 import org.l2jmobius.gameserver.instancemanager.ItemsOnGroundManager;
 import org.l2jmobius.gameserver.instancemanager.QuestManager;
@@ -168,6 +167,7 @@ import org.l2jmobius.gameserver.model.variables.AccountVariables;
 import org.l2jmobius.gameserver.model.variables.PlayerVariables;
 import org.l2jmobius.gameserver.model.zone.ZoneId;
 import org.l2jmobius.gameserver.model.zone.type.TownZone;
+import org.l2jmobius.gameserver.model.zone.type.WaterZone;
 import org.l2jmobius.gameserver.network.GameClient;
 import org.l2jmobius.gameserver.network.SystemMessageId;
 import org.l2jmobius.gameserver.network.serverpackets.ActionFailed;
@@ -15228,7 +15228,7 @@ public class PlayerInstance extends Playable
 	 */
 	public boolean dismount()
 	{
-		if (FishingZoneManager.getInstance().isInsideWaterZone(getX(), getY(), getZ() - 300) == null)
+		if (ZoneData.getInstance().getZone(getX(), getY(), getZ() - 300, WaterZone.class) == null)
 		{
 			if (!isInWater() && (getZ() > 10000))
 			{

@@ -18,9 +18,9 @@ package org.l2jmobius.gameserver.handler.skillhandlers;
 
 import org.l2jmobius.Config;
 import org.l2jmobius.commons.util.Rnd;
+import org.l2jmobius.gameserver.datatables.xml.ZoneData;
 import org.l2jmobius.gameserver.geoengine.GeoEngine;
 import org.l2jmobius.gameserver.handler.ISkillHandler;
-import org.l2jmobius.gameserver.instancemanager.FishingZoneManager;
 import org.l2jmobius.gameserver.model.Location;
 import org.l2jmobius.gameserver.model.Skill;
 import org.l2jmobius.gameserver.model.Skill.SkillType;
@@ -128,8 +128,8 @@ public class Fishing implements ISkillHandler
 		final int y = player.getY() + y1;
 		int z = player.getZ() - 30;
 		// ...and if the spot is in a fishing zone. If it is, it will then position the hook on the water surface. If not, you have to be GM to proceed past here... in that case, the hook will be positioned using the old Z lookup method.
-		final FishingZone aimingTo = FishingZoneManager.getInstance().isInsideFishingZone(x, y, z);
-		final WaterZone water = FishingZoneManager.getInstance().isInsideWaterZone(x, y, z);
+		final FishingZone aimingTo = ZoneData.getInstance().getZone(x, y, z, FishingZone.class);
+		final WaterZone water = ZoneData.getInstance().getZone(x, y, z, WaterZone.class);
 		if ((water != null))
 		{
 			final Location waterLocation = new Location(x, y, water.getWaterZ() - 50);
