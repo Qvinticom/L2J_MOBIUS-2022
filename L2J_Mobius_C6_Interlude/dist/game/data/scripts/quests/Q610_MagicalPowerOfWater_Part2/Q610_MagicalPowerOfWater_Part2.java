@@ -18,7 +18,6 @@ package quests.Q610_MagicalPowerOfWater_Part2;
 
 import java.util.logging.Level;
 
-import org.l2jmobius.commons.util.Rnd;
 import org.l2jmobius.gameserver.enums.RaidBossStatus;
 import org.l2jmobius.gameserver.instancemanager.RaidBossSpawnManager;
 import org.l2jmobius.gameserver.model.actor.instance.NpcInstance;
@@ -262,12 +261,10 @@ public class Q610_MagicalPowerOfWater_Part2 extends Quest
 		if ((raid != null) && (raid.getRaidStatus() == RaidBossStatus.ALIVE))
 		{
 			// set temporarily spawn location (to provide correct behavior of RaidBossInstance.checkAndReturnToSpawn())
-			raid.getSpawn().setLoc(104771, -36993, -1149, Rnd.get(65536));
+			// raid.getSpawn().setLoc(104771, -36993, -1149, Rnd.get(65536));
 			
-			// teleport raid from secret place
-			raid.teleToLocation(104771, -36993, -1149);
-			raid.setHeading(100);
-			raid.broadcastNpcSay("The water charm then is the storm and the tsunami strength! Opposes with it only has the blind alley!");
+			addSpawn(SOUL_OF_WATER_ASHUTAR, 104771, -36993, -1149, 100, false, 0);
+			raid.broadcastNpcSay("You didn’t come into this world. You came out of it, like a wave from the ocean. You are not a stranger here.");
 			
 			// set raid status
 			_status = IDLE_INTERVAL;

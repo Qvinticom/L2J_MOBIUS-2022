@@ -558,6 +558,10 @@ public class Q501_ProofOfClanAlliance extends Quest
 	{
 		final Clan clan = player.getClan();
 		final PlayerInstance leader = clan.getLeader().getPlayerInstance();
+		if (leader == null)
+		{
+			return null;
+		}
 		return leader.getQuestState(getName());
 	}
 }

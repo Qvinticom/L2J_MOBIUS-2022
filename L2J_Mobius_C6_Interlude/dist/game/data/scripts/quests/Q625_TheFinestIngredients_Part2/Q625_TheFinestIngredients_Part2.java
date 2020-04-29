@@ -276,11 +276,9 @@ public class Q625_TheFinestIngredients_Part2 extends Quest
 		if ((raid != null) && (raid.getRaidStatus() == RaidBossStatus.ALIVE))
 		{
 			// set temporarily spawn location (to provide correct behavior of RaidBossInstance.checkAndReturnToSpawn())
-			raid.getSpawn().setLoc(157117, -121939, -2397, Rnd.get(65536));
+			// raid.getSpawn().setLoc(157117, -121939, -2397, Rnd.get(65536));
 			
-			// teleport raid from secret place
-			raid.teleToLocation(157117, -121939, -2397);
-			raid.setHeading(100);
+			addSpawn(ICICLE_EMPEROR_BUMBALUMP, 157117, -121939, -2397, 100, false, 0);
 			raid.broadcastNpcSay("I smell something delicious...");
 			
 			// set raid status

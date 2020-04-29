@@ -282,11 +282,9 @@ public class Q604_DaimonTheWhiteEyed_Part2 extends Quest
 		if ((raid != null) && (raid.getRaidStatus() == RaidBossStatus.ALIVE))
 		{
 			// set temporarily spawn location (to provide correct behavior of RaidBossInstance.checkAndReturnToSpawn())
-			raid.getSpawn().setLoc(185900, -44000, -3160, Rnd.get(65536));
+			// raid.getSpawn().setLoc(185900, -44000, -3160, Rnd.get(65536));
 			
-			// teleport raid from secret place
-			raid.teleToLocation(185900, -44000, -3160);
-			raid.setHeading(100);
+			addSpawn(DAIMON_THE_WHITE_EYED, 185900, -44000, -3160, 100, false, 0);
 			raid.broadcastNpcSay("Who called me?");
 			
 			// set raid status

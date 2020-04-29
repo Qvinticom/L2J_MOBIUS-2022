@@ -18,7 +18,6 @@ package quests.Q616_MagicalPowerOfFire_Part2;
 
 import java.util.logging.Level;
 
-import org.l2jmobius.commons.util.Rnd;
 import org.l2jmobius.gameserver.enums.RaidBossStatus;
 import org.l2jmobius.gameserver.instancemanager.RaidBossSpawnManager;
 import org.l2jmobius.gameserver.model.actor.instance.NpcInstance;
@@ -273,11 +272,10 @@ public class Q616_MagicalPowerOfFire_Part2 extends Quest
 		if ((raid != null) && (raid.getRaidStatus() == RaidBossStatus.ALIVE))
 		{
 			// set temporarily spawn location (to provide correct behavior of RaidBossInstance.checkAndReturnToSpawn())
-			raid.getSpawn().setLoc(142624, -82285, -6491, Rnd.get(65536));
+			// raid.getSpawn().setLoc(142624, -82285, -6491, Rnd.get(65536));
 			
-			// teleport raid from secret place
-			raid.teleToLocation(142624, -82285, -6491);
-			raid.setHeading(100);
+			addSpawn(SOUL_OF_FIRE_NASTRON, 142624, -82285, -6491, 100, false, 0);
+			raid.broadcastNpcSay("The fire you kindle for your enemy often burns yourself more than them.");
 			
 			// set raid status
 			_status = IDLE_INTERVAL;
