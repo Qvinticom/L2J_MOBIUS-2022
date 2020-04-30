@@ -217,24 +217,36 @@
 	</skill>
 	<skill id="4416" levels="24" name="Races">
 		<!-- Called out of their graves by black magic, a curse or the power of an evil mind, most of these creatures lack intelligence and can perform only simple actions. However, some high-ranking undead possess great knowledge and sophistication even when compared to ordinary humanoids. -->
-		<table name="#holy">0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0</table>
-		<table name="#dark">20 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0</table>
-		<table name="#water">0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0</table>
-		<table name="#earth">0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0</table>
-		<table name="#wind">0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0</table>
-		<table name="#fire">0 0 20 20 20 20 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0</table>
+		<table name="#pDefMagicCreatures">1 0.85 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1</table>
+		<table name="#pDefBeasts">1 1 0.85 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1</table>
+		<table name="#pDefAnimals">1 1 1 0.85 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1</table>
+		<table name="#pDefPlants">1 1 1 1 0.85 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1</table>
+		<table name="#pDefDragons">1 1 1 1 1 1 1 1 1 0.85 1 1 1 1 1 1 1 1 1 1 1 1 1 1</table>
+		<table name="#pDefGiants">1 1 1 1 1 1 1 1 1 1 0.85 1 1 1 1 1 1 1 1 1 1 1 1 1</table>
+		<table name="#pDefBugs">1 1 1 1 1 1 1 1 1 1 1 0.85 1 1 1 1 1 1 1 1 1 1 1 1</table>
+		<table name="#pDefBows">1 1 1 0.85 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1</table>
+		<table name="#pDefBlunts">1 1 1 1 1 1 1 1 0.85 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1</table>
+		<table name="#pDefSwords">1 1 1 1 1 1 1 1 1 0.85 1 1 1 1 1 1 1 1 1 1 1 1 1 1</table>
+		<table name="#pDefDuals">1 1 1 1 1 1 1 1 1 0.85 1 1 1 1 1 1 1 1 1 1 1 1 1 1</table>
+		<table name="#pDefShocks">0 0 0 0 0 0 0 0 0 0 15 0 0 0 0 0 0 0 0 0 0 0 0 0</table>
 		<set name="target" val="TARGET_SELF"/>
 		<set name="skillType" val="BUFF"/>
 		<set name="castRange" val="-1"/>
 		<set name="effectRange" val="-1"/>
 		<set name="operateType" val="OP_PASSIVE"/>
 		<for>
-			<add order="0x40" stat="holyVuln" val="#holy"/>
-			<add order="0x40" stat="darkVuln" val="#dark"/>
-			<add order="0x40" stat="waterVuln" val="#water"/>
-			<add order="0x40" stat="earthVuln" val="#earth"/>
-			<add order="0x40" stat="windVuln" val="#wind"/>
-			<add order="0x40" stat="fireVuln" val="#fire"/>
+			<mul stat="pDef-magicCreature" val="#pDefMagicCreatures" order="0x30"/>
+			<mul stat="pDef-monsters" val="#pDefBeasts" order="0x30"/>
+			<mul stat="pDef-animals" val="#pDefAnimals" order="0x30"/>
+			<mul stat="pDef-plants" val="#pDefPlants" order="0x30"/>
+			<mul stat="pDef-dragons" val="#pDefDragons" order="0x30"/>
+			<mul stat="pDef-giants" val="#pDefGiants" order="0x30"/>
+			<mul stat="pDef-insects" val="#pDefBugs" order="0x30"/>
+			<mul stat="bowWpnVuln" val="#pDefBows" order="0x30"/>
+			<mul stat="bluntWpnVuln" val="#pDefBlunts" order="0x30"/>
+			<mul stat="swordWpnVuln" val="#pDefSwords" order="0x30"/>
+			<mul stat="dualWpnVuln" val="#pDefDuals" order="0x30"/>
+			<sub stat="stunVuln" val="#pDefShocks" order="0x40"/>
 		</for>
 	</skill>
 	<skill id="4417" levels="38" name="Race Types">
