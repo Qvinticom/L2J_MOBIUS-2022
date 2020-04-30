@@ -16,7 +16,9 @@
  */
 package handlers.targethandlers.affectobject;
 
+import org.l2jmobius.Config;
 import org.l2jmobius.gameserver.handler.IAffectObjectHandler;
+import org.l2jmobius.gameserver.model.CommandChannel;
 import org.l2jmobius.gameserver.model.Party;
 import org.l2jmobius.gameserver.model.actor.Creature;
 import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
@@ -56,6 +58,16 @@ public class NotFriendPc implements IAffectObjectHandler
 			if (target.isInsidePeaceZone(player) && !player.getAccessLevel().allowPeaceAttack())
 			{
 				return false;
+			}
+			
+			if (Config.ALT_COMMAND_CHANNEL_FRIENDS)
+			{
+				final CommandChannel playerCC = player.getCommandChannel();
+				final CommandChannel targetCC = targetPlayer.getCommandChannel();
+				if ((playerCC != null) && (targetCC != null) && (playerCC.getLeaderObjectId() == targetCC.getLeaderObjectId()))
+				{
+					return false;
+				}
 			}
 			
 			// Party (command channel doesn't make you friends).

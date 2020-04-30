@@ -270,6 +270,7 @@ public class Config
 	public static int ALT_PARTY_MAX_MEMBERS;
 	public static int ALT_PARTY_RANGE;
 	public static boolean ALT_LEAVE_PARTY_LEADER;
+	public static boolean ALT_COMMAND_CHANNEL_FRIENDS;
 	public static boolean INITIAL_EQUIPMENT_EVENT;
 	public static long STARTING_ADENA;
 	public static byte STARTING_LEVEL;
@@ -1827,6 +1828,7 @@ public class Config
 			ALT_PARTY_MAX_MEMBERS = Character.getInt("AltPartyMaxMembers", 7);
 			ALT_PARTY_RANGE = Character.getInt("AltPartyRange", 1500);
 			ALT_LEAVE_PARTY_LEADER = Character.getBoolean("AltLeavePartyLeader", false);
+			ALT_COMMAND_CHANNEL_FRIENDS = Character.getBoolean("AltCommandChannelFriends", false);
 			INITIAL_EQUIPMENT_EVENT = Character.getBoolean("InitialEquipmentEvent", false);
 			STARTING_ADENA = Character.getLong("StartingAdena", 0);
 			STARTING_LEVEL = Character.getByte("StartingLevel", (byte) 1);
