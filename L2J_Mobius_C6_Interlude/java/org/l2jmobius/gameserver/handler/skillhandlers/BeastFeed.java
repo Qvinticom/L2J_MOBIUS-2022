@@ -16,8 +16,6 @@
  */
 package org.l2jmobius.gameserver.handler.skillhandlers;
 
-import java.util.logging.Logger;
-
 import org.l2jmobius.gameserver.handler.ISkillHandler;
 import org.l2jmobius.gameserver.model.Skill;
 import org.l2jmobius.gameserver.model.Skill.SkillType;
@@ -26,12 +24,10 @@ import org.l2jmobius.gameserver.model.actor.Creature;
 import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
 
 /**
- * @author _drunk_ TODO To change the template for this generated type comment go to Window - Preferences - Java - Code Style - Code Templates
+ * @author _drunk_
  */
 public class BeastFeed implements ISkillHandler
 {
-	private static final Logger LOGGER = Logger.getLogger(BeastFeed.class.getName());
-	
 	private static final SkillType[] SKILL_IDS =
 	{
 		SkillType.BEAST_FEED
@@ -51,9 +47,7 @@ public class BeastFeed implements ISkillHandler
 			return;
 		}
 		
-		LOGGER.info("Beast Feed casting succeded.");
-		
-		// This is just a dummy skill handler for the golden food and crystal food skills, since the AI responce onSkillUse handles the rest.
+		// This is just a dummy skill handler for the golden food and crystal food skills, since the AI response onSkillUse handles the rest.
 	}
 	
 	@Override
