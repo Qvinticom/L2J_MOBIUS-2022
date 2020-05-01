@@ -367,6 +367,12 @@ public class SystemMessage implements IClientOutgoingPacket
 		packet.writeD(_params.length);
 		for (SMParam param : _params)
 		{
+			if (param == null)
+			{
+				LOGGER.warning("Found null parameter for SystemMessageId " + _smId);
+				continue;
+			}
+			
 			packet.writeD(param.getType());
 			switch (param.getType())
 			{
