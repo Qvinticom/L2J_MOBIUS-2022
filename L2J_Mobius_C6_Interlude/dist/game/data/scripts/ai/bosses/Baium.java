@@ -269,10 +269,12 @@ public class Baium extends Quest
 				}
 				else if (((_lastAttackVsBaiumTime + 300000) < System.currentTimeMillis()) && (npc.getCurrentHp() < ((npc.getMaxHp() * 3) / 4.0)))
 				{
-					// npc.setCastingNow(false); //just in case
 					npc.setTarget(npc);
 					npc.doCast(SkillTable.getInstance().getInfo(4135, 1));
-					// npc.setCastingNow(true);
+					if (GrandBossManager.getInstance().getBossStatus(LIVE_BAIUM) != AWAKE)
+					{
+						cancelQuestTimer("baium_despawn", npc, null);
+					}
 				}
 			}
 		}
