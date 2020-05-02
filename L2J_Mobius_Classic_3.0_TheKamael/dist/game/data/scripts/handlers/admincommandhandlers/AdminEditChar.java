@@ -1047,7 +1047,7 @@ public class AdminEditChar implements IAdminCommandHandler
 		final PageResult result = PageBuilder.newBuilder(players, 20, "bypass -h admin_show_characters").currentPage(page).bodyHandler((pages, player, sb) ->
 		{
 			sb.append("<tr>");
-			sb.append("<td width=80><a action=\"bypass -h admin_character_info " + player.getName() + "\">" + player.getName() + "</a></td>");
+			sb.append("<td width=80><a action=\"bypass -h admin_character_info " + player.getName() + "\">" + ((player.isInOfflineMode() ? ("<font color=\"808080\">" + player.getName() + "</font>") : player.getName()) + "</a></td>"));
 			sb.append("<td width=110>" + ClassListData.getInstance().getClass(player.getClassId()).getClientCode() + "</td><td width=40>" + player.getLevel() + "</td>");
 			sb.append("</tr>");
 		}).build();
@@ -1162,7 +1162,7 @@ public class AdminEditChar implements IAdminCommandHandler
 		adminReply.replace("%protocol%", String.valueOf(player.getClient() != null ? player.getClient().getProtocolVersion() : "NULL"));
 		adminReply.replace("%hwid%", (player.getClient() != null) && (player.getClient().getHardwareInfo() != null) ? player.getClient().getHardwareInfo().getMacAddress() : "Unknown");
 		adminReply.replace("%ai%", player.getAI().getIntention().name());
-		adminReply.replace("%inst%", player.isInInstance() ? "<tr><td>InstanceId:</td><td><a action=\"bypass -h admin_instance_spawns " + player.getInstanceId() + "\">" + player.getInstanceId() + "</a></td></tr>" : "");
+		adminReply.replace("%inst%", player.isInInstance() ? " " + player.getInstanceWorld().getName() + "</td><td><button value=\"Go\" action=\"bypass -h admin_instanceteleport " + player.getInstanceId() + "\"width=60 height=20 back=\"L2UI_CT1.Button_DF_Down\" fore=\"L2UI_CT1.Button_DF\">" : "NONE");
 		adminReply.replace("%noblesse%", player.isNoble() ? "Yes" : "No");
 		activeChar.sendPacket(adminReply);
 	}
