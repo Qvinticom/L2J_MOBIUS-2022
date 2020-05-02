@@ -343,8 +343,8 @@ public class RaidBossSpawnManager
 				{
 					// TODO(Zoey76): Change this to use batch.
 					ps.setLong(1, info.getLong("respawnTime"));
-					ps.setDouble(2, info.getDouble("currentHP"));
-					ps.setDouble(3, info.getDouble("currentMP"));
+					ps.setDouble(2, boss.isDead() ? boss.getMaxHp() : info.getDouble("currentHP"));
+					ps.setDouble(3, boss.isDead() ? boss.getMaxMp() : info.getDouble("currentMP"));
 					ps.setInt(4, bossId);
 					ps.executeUpdate();
 					ps.clearParameters();
