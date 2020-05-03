@@ -242,26 +242,7 @@
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>
 			<value fromLevel="1" toLevel="1">300</value>
-			<value fromLevel="1" toLevel="1" fromSubLevel="1001" toSubLevel="1001">{base + 15}</value>
-			<value fromLevel="1" toLevel="1" fromSubLevel="1002" toSubLevel="1002">{base + 30}</value>
-			<value fromLevel="1" toLevel="1" fromSubLevel="1003" toSubLevel="1003">{base + 45}</value>
-			<value fromLevel="1" toLevel="1" fromSubLevel="1004" toSubLevel="1004">{base + 60}</value>
-			<value fromLevel="1" toLevel="1" fromSubLevel="1005" toSubLevel="1005">{base + 75}</value>
-			<value fromLevel="1" toLevel="1" fromSubLevel="1006" toSubLevel="1006">{base + 90}</value>
-			<value fromLevel="1" toLevel="1" fromSubLevel="1007" toSubLevel="1007">{base + 105}</value>
-			<value fromLevel="1" toLevel="1" fromSubLevel="1008" toSubLevel="1008">{base + 120}</value>
-			<value fromLevel="1" toLevel="1" fromSubLevel="1009" toSubLevel="1009">{base + 135}</value>
-			<value fromLevel="1" toLevel="1" fromSubLevel="1010" toSubLevel="1010">{base + 150}</value>
-			<value fromLevel="1" toLevel="1" fromSubLevel="1011" toSubLevel="1011">{base + 165}</value>
-			<value fromLevel="1" toLevel="1" fromSubLevel="1012" toSubLevel="1012">{base + 180}</value>
-			<value fromLevel="1" toLevel="1" fromSubLevel="1013" toSubLevel="1013">{base + 195}</value>
-			<value fromLevel="1" toLevel="1" fromSubLevel="1014" toSubLevel="1014">{base + 210}</value>
-			<value fromLevel="1" toLevel="1" fromSubLevel="1015" toSubLevel="1015">{base + 225}</value>
-			<value fromLevel="1" toLevel="1" fromSubLevel="1016" toSubLevel="1016">{base + 240}</value>
-			<value fromLevel="1" toLevel="1" fromSubLevel="1017" toSubLevel="1017">{base + 255}</value>
-			<value fromLevel="1" toLevel="1" fromSubLevel="1018" toSubLevel="1018">{base + 270}</value>
-			<value fromLevel="1" toLevel="1" fromSubLevel="1019" toSubLevel="1019">{base + 285}</value>
-			<value fromLevel="1" toLevel="1" fromSubLevel="1020" toSubLevel="1020">{base + 300}</value>
+			<value fromLevel="1" toLevel="1" fromSubLevel="1001" toSubLevel="1020">{base + 15 * subIndex}</value>
 		</abnormalTime>
 		<abnormalType>SONG_WEAPON</abnormalType>
 		<affectRange>1000</affectRange>
