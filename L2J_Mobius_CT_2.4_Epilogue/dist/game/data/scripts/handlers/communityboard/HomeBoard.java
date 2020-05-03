@@ -79,7 +79,7 @@ public class HomeBoard implements IParseBoardHandler
 		Config.COMMUNITYBOARD_ENABLE_DELEVEL ? "_bbsdelevel" : null
 	};
 	
-	public static final BiPredicate<String, PlayerInstance> COMBAT_CHECK = (command, player) ->
+	private static final BiPredicate<String, PlayerInstance> COMBAT_CHECK = (command, player) ->
 	{
 		boolean commandCheck = false;
 		for (String c : CUSTOM_COMMANDS)
@@ -90,10 +90,10 @@ public class HomeBoard implements IParseBoardHandler
 				break;
 			}
 		}
-		return commandCheck && (player.isCastingNow() || player.isCastingSimultaneouslyNow() || player.isInCombat() || player.isInDuel() || player.isInOlympiadMode() || player.isInsideZone(ZoneId.SIEGE) || player.isInsideZone(ZoneId.PVP));
+		return commandCheck && (player.isCastingNow() || player.isCastingSimultaneouslyNow() || player.isInCombat() || player.isInDuel() || player.isInOlympiadMode() || player.isInsideZone(ZoneId.SIEGE) || player.isInsideZone(ZoneId.PVP) || (player.getPvpFlag() > 0) || player.isAlikeDead() || player.isOnEvent());
 	};
 	
-	public static final Predicate<PlayerInstance> KARMA_CHECK = player -> Config.COMMUNITYBOARD_KARMA_DISABLED && (player.getKarma() > 0);
+	private static final Predicate<PlayerInstance> KARMA_CHECK = player -> Config.COMMUNITYBOARD_KARMA_DISABLED && (player.getKarma() > 0);
 	
 	@Override
 	public String[] getCommunityBoardCommands()
