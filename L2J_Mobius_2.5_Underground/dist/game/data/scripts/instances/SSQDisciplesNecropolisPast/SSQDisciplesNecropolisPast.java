@@ -173,6 +173,7 @@ public class SSQDisciplesNecropolisPast extends AbstractInstance
 				{
 					if (getQuestItemsCount(player, SEAL_OF_BINDING) >= 4)
 					{
+						player.abortAttack();
 						playMovie(player, Movie.SSQ_SEALING_EMPEROR_2ND);
 						startQuestTimer("TELEPORT", 27000, null, player);
 					}
@@ -257,8 +258,8 @@ public class SSQDisciplesNecropolisPast extends AbstractInstance
 								}
 							}
 						}
-						startQuestTimer("FIGHT", 1000, null, player);
 					}
+					startQuestTimer("FIGHT", 1000, null, player);
 					break;
 				}
 			}
