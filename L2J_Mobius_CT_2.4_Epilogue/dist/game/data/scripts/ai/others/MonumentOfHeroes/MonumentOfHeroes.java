@@ -19,6 +19,7 @@ package ai.others.MonumentOfHeroes;
 import org.l2jmobius.commons.util.CommonUtil;
 import org.l2jmobius.gameserver.model.actor.Npc;
 import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
+import org.l2jmobius.gameserver.model.entity.Hero;
 
 import ai.AbstractNpcAI;
 
@@ -68,6 +69,22 @@ public class MonumentOfHeroes extends AbstractNpcAI
 	{
 		switch (event)
 		{
+			case "HeroClaim":
+			{
+				if (Hero.getInstance().isHero(player.getObjectId()))
+				{
+					return "already_hero_status.htm";
+				}
+				else if (!Hero.getInstance().isUnclaimedHero(player.getObjectId()))
+				{
+					return "no_hero_status.htm";
+				}
+				else
+				{
+					Hero.getInstance().claimHero(player);
+					return "receive_hero.htm";
+				}
+			}
 			case "HeroWeapon":
 			{
 				if (player.isHero())

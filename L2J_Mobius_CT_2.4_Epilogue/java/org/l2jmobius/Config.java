@@ -2450,7 +2450,7 @@ public class Config
 			ALT_OLY_CLASSED_RITEM_C = Olympiad.getInt("AltOlyClassedRewItemCount", 50);
 			ALT_OLY_NONCLASSED_RITEM_C = Olympiad.getInt("AltOlyNonClassedRewItemCount", 40);
 			ALT_OLY_COMP_RITEM = Olympiad.getInt("AltOlyCompRewItem", 13722);
-			ALT_OLY_GP_PER_POINT = Olympiad.getInt("AltOlyGPPerPoint", 1000);
+			ALT_OLY_GP_PER_POINT = Olympiad.getInt("AltOlyGPPerPoint", 1);
 			ALT_OLY_HERO_POINTS = Olympiad.getInt("AltOlyHeroPoints", 180);
 			ALT_OLY_RANK1_POINTS = Olympiad.getInt("AltOlyRank1Points", 120);
 			ALT_OLY_RANK2_POINTS = Olympiad.getInt("AltOlyRank2Points", 80);

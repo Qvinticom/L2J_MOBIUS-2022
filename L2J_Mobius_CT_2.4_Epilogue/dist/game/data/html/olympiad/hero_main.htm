@@ -1,6 +1,68 @@
-<html><body>Monument of Heroes:<br>
-You are a Noblesse. Welcome. I offer many things - but only for Heroes.<br>
-<a action="bypass -h Quest MonumentOfHeroes HeroWeapon">I want to receive weapons for a Hero.</a><br>
-<a action="bypass -h Quest MonumentOfHeroes HeroCirclet">I want to receive the Wings of Destiny Circlet for Heroes Only.</a><br>
-<a action="bypass npc_%objectId%_Olympiad 4">I want to verify who is the Hero of this era.</a>
-</body></html>
+<html><title>Monument Of Heroes</title>
+<body>
+<center>
+<body scroll="no">
+
+<center>
+<img src="L2UI.SquareGray" width=100 height=1>
+<img src="L2UI.SquareBlank" width=100 height=2>
+<img src="L2UI.SquareGray" width=250 height=1>
+</center>
+
+<table bgcolor=000000><tr><td>
+<table width=260 height=66 bgcolor=424242><tr><td>
+	<table border=0 width=260 height=60 cellspacing=4 cellpadding=3 bgcolor=000000>
+		<tr>
+			<td width=40 align=right valign=top>
+				<img src="icon.skill1374" width=32 height=32>
+			</td>
+			<td width=210 align=left valign=center>
+				<font color="4d94ff">Monument of Heroes: </font><br1><font color=c1b33a>You are a Noblesse. Welcome. I offer many things - but only for Heroes.</font> 
+			</td>
+		</tr>
+	</table>
+</td></tr></table>
+<table width=282 height=46 bgcolor=424242><tr><td>
+	<table border=0 width=282 height=40 cellspacing=4 cellpadding=3 bgcolor=000000>
+		<tr>
+			<td width=282 align=left valign=center>
+				<center><button value="Claiming Hero Status" action="bypass -h Quest MonumentOfHeroes HeroClaim" width=270 height=28 back="L2UI_ct1.button_df" fore="L2UI_ct1.button_df"></center>
+			</td>
+		</tr>
+	</table>
+</td></tr></table>
+<table width=282 height=46 bgcolor=424242><tr><td>
+	<table border=0 width=282 height=40 cellspacing=4 cellpadding=3 bgcolor=000000>
+		<tr>
+			<td width=282 align=left valign=center>
+				<center>
+				<button value="Receive Weapon Only for Hero" action="bypass -h Quest MonumentOfHeroes HeroWeapon" width=270 height=28 back="L2UI_ct1.button_df" fore="L2UI_ct1.button_df"><br1>
+				<button value="Receive Circlet Only for Hero" action="bypass -h Quest MonumentOfHeroes HeroCirclet" width=270 height=28 back="L2UI_ct1.button_df" fore="L2UI_ct1.button_df">
+				</center>
+			</td>
+		</tr>
+	</table>
+</td></tr></table>
+<table width=282 height=52 bgcolor=424242><tr><td>
+	<table border=0 width=282 height=40 cellspacing=4 cellpadding=3 bgcolor=000000>
+		<tr>
+			<td width=282 align=left valign=center>
+				<center><button value="I want to verify who is the Hero of this era." action="bypass npc_%objectId%_Olympiad 4" width=270 height=28 back="L2UI_ct1.button_df" fore="L2UI_ct1.button_df"></center>
+			</td>
+		</tr>
+	</table>
+</td></tr></table>
+
+<br>
+
+</td></tr></table>
+<center>
+<img src="L2UI.SquareGray" width=200 height=1>
+<img src="L2UI.SquareBlank" width=250 height=2>
+<img src="L2UI.SquareGray" width=100 height=1>
+</center>
+
+<center><img src="L2Font-e.mini_logo-e" width=250 height=100></center>
+
+</body>
+</html>
