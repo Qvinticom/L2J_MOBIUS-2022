@@ -32,7 +32,6 @@ import org.l2jmobius.gameserver.model.holders.ItemHolder;
 public class DailyMissionDataHolder
 {
 	private final int _id;
-	private final int _rewardId;
 	private final List<ItemHolder> _rewardsItems;
 	private final List<ClassId> _classRestriction;
 	private final int _requiredCompletions;
@@ -48,7 +47,6 @@ public class DailyMissionDataHolder
 	{
 		final Function<DailyMissionDataHolder, AbstractDailyMissionHandler> handler = DailyMissionHandler.getInstance().getHandler(set.getString("handler"));
 		_id = set.getInt("id");
-		_rewardId = set.getInt("reward_id", 0);
 		_requiredCompletions = set.getInt("requiredCompletion", 0);
 		_rewardsItems = set.getList("items", ItemHolder.class);
 		_classRestriction = set.getList("classRestriction", ClassId.class);
@@ -64,11 +62,6 @@ public class DailyMissionDataHolder
 	public int getId()
 	{
 		return _id;
-	}
-	
-	public int getRewardId()
-	{
-		return _rewardId;
 	}
 	
 	public List<ClassId> getClassRestriction()
