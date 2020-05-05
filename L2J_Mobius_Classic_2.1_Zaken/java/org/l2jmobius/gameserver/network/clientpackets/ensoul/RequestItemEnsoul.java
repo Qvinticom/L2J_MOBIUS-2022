@@ -197,10 +197,10 @@ public class RequestItemEnsoul implements IClientIncomingPacket
 			else if (itemOption.getType() == 2)
 			{
 				// Mystic Soul Crystal
-				fee = EnsoulData.getInstance().getEnsoulFee(item.getItem().getCrystalType(), position);
+				fee = EnsoulData.getInstance().getEnsoulFee(item.getItem().getCrystalType(), position + 2); // Client Special type position = 0
 				if ((itemOption.getPosition() == 1) && (item.getAdditionalSpecialAbility(position) != null))
 				{
-					fee = EnsoulData.getInstance().getResoulFee(item.getItem().getCrystalType(), position);
+					fee = EnsoulData.getInstance().getResoulFee(item.getItem().getCrystalType(), position + 2); // Client Special type position = 0
 				}
 			}
 			else
