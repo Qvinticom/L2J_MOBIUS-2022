@@ -179,6 +179,7 @@ public class RequestDropItem implements IClientIncomingPacket
 				final Skill skill = skillCaster.getSkill();
 				if ((skill != null) && (player.getKnownSkill(skill.getId()) != null))
 				{
+					player.sendMessage("You cannot drop an item while casting " + skill.getName() + ".");
 					return;
 				}
 			}
@@ -186,6 +187,7 @@ public class RequestDropItem implements IClientIncomingPacket
 		final SkillUseHolder skill = player.getQueuedSkill();
 		if ((skill != null) && (player.getKnownSkill(skill.getSkillId()) != null))
 		{
+			player.sendMessage("You cannot drop an item while casting " + skill.getSkill().getName() + ".");
 			return;
 		}
 		

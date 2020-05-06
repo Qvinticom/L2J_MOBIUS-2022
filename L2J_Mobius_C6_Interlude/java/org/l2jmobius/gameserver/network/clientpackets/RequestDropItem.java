@@ -180,6 +180,7 @@ public class RequestDropItem extends GameClientPacket
 				// Do not drop items when casting known skills to avoid exploits.
 				if (player.getKnownSkill(skill.getSkillId()) != null)
 				{
+					player.sendMessage("You cannot drop an item while casting " + skill.getSkill().getName() + ".");
 					return;
 				}
 			}

@@ -74,6 +74,7 @@ public class RequestDropItem extends ClientBasePacket
 			final Skill skill = activeChar.getSkill();
 			if ((skill != null) && activeChar.isSkillDisabled(skill.getId()) && (activeChar.getSkillLevel(skill.getId()) > 0))
 			{
+				activeChar.sendMessage("You cannot drop an item while casting " + skill.getName() + ".");
 				return;
 			}
 			
