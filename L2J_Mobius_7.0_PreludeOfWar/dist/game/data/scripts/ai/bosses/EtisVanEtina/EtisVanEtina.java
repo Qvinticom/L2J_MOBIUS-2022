@@ -378,7 +378,7 @@ public class EtisVanEtina extends AbstractNpcAI
 					}
 					startQuestTimer("end_etina", 2000, null, null);
 				}
-				else
+				else if (GrandBossManager.getInstance().getBossStatus(ETIS_VAN_ETINA1) == FIGHTING)
 				{
 					startQuestTimer("check_activity_task", 60000, null, null);
 				}
@@ -425,7 +425,7 @@ public class EtisVanEtina extends AbstractNpcAI
 			}
 			case "cancel_timers":
 			{
-				QuestTimer activityTimer = getQuestTimer("check_activity_task", null, null);
+				final QuestTimer activityTimer = getQuestTimer("check_activity_task", null, null);
 				if (activityTimer != null)
 				{
 					activityTimer.cancel();
@@ -695,7 +695,7 @@ public class EtisVanEtina extends AbstractNpcAI
 				BOSS_ZONE.getPlayersInside().forEach(player -> player.sendPacket(new ExShowScreenMessage(NpcStringId.YOU_CAN_T_DEFEAT_PARAGON_WHILE_PARAGON_S_MINIONS_ARE_ALIVE, ExShowScreenMessage.TOP_CENTER, 7000, true)));
 				GrandBossManager.getInstance().setBossStatus(ETIS_VAN_ETINA1, FIGHTING);
 				_lastAction = System.currentTimeMillis();
-				startQuestTimer("check_activity_task", 60000, null, null, true);
+				startQuestTimer("check_activity_task", 60000, null, null);
 			}
 		}
 		return super.onEnterZone(character, zone);
