@@ -140,27 +140,43 @@ public class RequestDropItem implements IClientIncomingPacket
 			return;
 		}
 		
-		// Cannot discard item that the skill is consuming.
 		if (player.isCastingNow())
 		{
 			final SkillUseHolder skill = player.getCurrentSkill();
-			if ((skill != null) && (skill.getSkill().getItemConsumeId() == item.getId()) //
-				&& ((player.getInventory().getInventoryItemCount(item.getId(), -1) - skill.getSkill().getItemConsumeCount()) < _count))
+			if (skill != null)
 			{
-				player.sendPacket(SystemMessageId.THIS_ITEM_CANNOT_BE_DISCARDED);
-				return;
+				// Cannot discard item that the skill is consuming.
+				if ((skill.getSkill().getItemConsumeId() == item.getId()) && ((player.getInventory().getInventoryItemCount(item.getId(), -1) - skill.getSkill().getItemConsumeCount()) < _count))
+				{
+					player.sendPacket(SystemMessageId.THIS_ITEM_CANNOT_BE_DISCARDED);
+					return;
+				}
+				
+				// Do not drop items when casting known skills to avoid exploits.
+				if (player.getKnownSkill(skill.getSkillId()) != null)
+				{
+					return;
+				}
 			}
 		}
 		
-		// Cannot discard item that the skill is consuming.
 		if (player.isCastingSimultaneouslyNow())
 		{
 			final Skill skill = player.getLastSimultaneousSkillCast();
-			if ((skill != null) && (skill.getItemConsumeId() == item.getId()) //
-				&& ((player.getInventory().getInventoryItemCount(item.getId(), -1) - skill.getItemConsumeCount()) < _count))
+			if (skill != null)
 			{
-				player.sendPacket(SystemMessageId.THIS_ITEM_CANNOT_BE_DISCARDED);
-				return;
+				// Cannot discard item that the skill is consuming.
+				if ((skill.getItemConsumeId() == item.getId()) && ((player.getInventory().getInventoryItemCount(item.getId(), -1) - skill.getItemConsumeCount()) < _count))
+				{
+					player.sendPacket(SystemMessageId.THIS_ITEM_CANNOT_BE_DISCARDED);
+					return;
+				}
+				
+				// Do not drop items when casting known skills to avoid exploits.
+				if (player.getKnownSkill(skill.getId()) != null)
+				{
+					return;
+				}
 			}
 		}
 		

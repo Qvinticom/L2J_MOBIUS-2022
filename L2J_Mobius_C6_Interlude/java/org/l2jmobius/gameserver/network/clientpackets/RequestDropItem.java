@@ -165,15 +165,23 @@ public class RequestDropItem extends GameClientPacket
 			return;
 		}
 		
-		// Cannot discard item that the skill is consuming.
 		if (player.isCastingNow())
 		{
-			final SkillDat skillDat = player.getCurrentSkill();
-			if ((skillDat != null) && (skillDat.getSkill().getItemConsumeId() == item.getItemId()) //
-				&& ((player.getInventory().getInventoryItemCount(item.getItemId(), -1) - skillDat.getSkill().getItemConsume()) < _count))
+			final SkillDat skill = player.getCurrentSkill();
+			if (skill != null)
 			{
-				player.sendPacket(SystemMessageId.THIS_ITEM_CANNOT_BE_DISCARDED);
-				return;
+				// Cannot discard item that the skill is consuming.
+				if ((skill.getSkill().getItemConsumeId() == item.getItemId()) && ((player.getInventory().getInventoryItemCount(item.getItemId(), -1) - skill.getSkill().getItemConsume()) < _count))
+				{
+					player.sendPacket(SystemMessageId.THIS_ITEM_CANNOT_BE_DISCARDED);
+					return;
+				}
+				
+				// Do not drop items when casting known skills to avoid exploits.
+				if (player.getKnownSkill(skill.getSkillId()) != null)
+				{
+					return;
+				}
 			}
 		}
 		

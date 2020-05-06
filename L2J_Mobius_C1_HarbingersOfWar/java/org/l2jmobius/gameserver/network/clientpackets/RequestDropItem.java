@@ -19,6 +19,7 @@ package org.l2jmobius.gameserver.network.clientpackets;
 
 import java.util.logging.Logger;
 
+import org.l2jmobius.gameserver.model.Skill;
 import org.l2jmobius.gameserver.model.World;
 import org.l2jmobius.gameserver.model.actor.instance.ItemInstance;
 import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
@@ -55,17 +56,27 @@ public class RequestDropItem extends ClientBasePacket
 				_log.warning("tried to drop an item that is not in the inventory ?!?:" + objectId);
 				return;
 			}
+			
 			final int oldCount = oldItem.getCount();
 			ItemInstance dropedItem = null;
 			if (oldCount < count)
 			{
 				return;
 			}
+			
 			if ((activeChar.getDistance(x, y) > 150.0) || (Math.abs(z - activeChar.getZ()) > 50))
 			{
 				activeChar.sendPacket(new SystemMessage(SystemMessage.CANNOT_DISCARD_DISTANCE_TOO_FAR));
 				return;
 			}
+			
+			// Do not drop items when casting known skills to avoid exploits.
+			final Skill skill = activeChar.getSkill();
+			if ((skill != null) && activeChar.isSkillDisabled(skill.getId()) && (activeChar.getSkillLevel(skill.getId()) > 0))
+			{
+				return;
+			}
+			
 			if (oldItem.isEquipped())
 			{
 				dropedItem = activeChar.getInventory().dropItem(objectId, count);
@@ -82,6 +93,7 @@ public class RequestDropItem extends ClientBasePacket
 			dropedItem.setY(y);
 			dropedItem.setZ(z);
 			dropedItem.setOnTheGround(true);
+			
 			final DropItem di = new DropItem(dropedItem, activeChar.getObjectId());
 			activeChar.sendPacket(di);
 			activeChar.addKnownObjectWithoutCreate(dropedItem);
@@ -89,6 +101,7 @@ public class RequestDropItem extends ClientBasePacket
 			{
 				player.addKnownObjectWithoutCreate(dropedItem);
 			}
+			
 			final InventoryUpdate iu = new InventoryUpdate();
 			if (oldCount == dropedItem.getCount())
 			{
@@ -99,6 +112,7 @@ public class RequestDropItem extends ClientBasePacket
 				iu.addModifiedItem(oldItem);
 			}
 			activeChar.sendPacket(iu);
+			
 			final SystemMessage sm = new SystemMessage(SystemMessage.YOU_DROPPED_S1);
 			sm.addItemName(dropedItem.getItemId());
 			activeChar.sendPacket(sm);

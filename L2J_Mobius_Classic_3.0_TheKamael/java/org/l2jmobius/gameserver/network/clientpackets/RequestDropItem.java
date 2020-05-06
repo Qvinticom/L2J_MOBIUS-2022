@@ -22,11 +22,14 @@ import org.l2jmobius.gameserver.data.xml.impl.AdminData;
 import org.l2jmobius.gameserver.enums.PrivateStoreType;
 import org.l2jmobius.gameserver.model.PlayerCondOverride;
 import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
+import org.l2jmobius.gameserver.model.holders.SkillUseHolder;
 import org.l2jmobius.gameserver.model.itemcontainer.Inventory;
 import org.l2jmobius.gameserver.model.items.Item;
 import org.l2jmobius.gameserver.model.items.instance.ItemInstance;
 import org.l2jmobius.gameserver.model.items.type.ActionType;
 import org.l2jmobius.gameserver.model.items.type.EtcItemType;
+import org.l2jmobius.gameserver.model.skills.Skill;
+import org.l2jmobius.gameserver.model.skills.SkillCaster;
 import org.l2jmobius.gameserver.model.zone.ZoneId;
 import org.l2jmobius.gameserver.network.GameClient;
 import org.l2jmobius.gameserver.network.SystemMessageId;
@@ -165,6 +168,24 @@ public class RequestDropItem implements IClientIncomingPacket
 		if (!player.getInventory().canManipulateWithItemId(item.getId()))
 		{
 			player.sendMessage("You cannot use this item.");
+			return;
+		}
+		
+		// Do not drop items when casting known skills to avoid exploits.
+		if (player.isCastingNow())
+		{
+			for (SkillCaster skillCaster : player.getSkillCasters())
+			{
+				final Skill skill = skillCaster.getSkill();
+				if ((skill != null) && (player.getKnownSkill(skill.getId()) != null))
+				{
+					return;
+				}
+			}
+		}
+		final SkillUseHolder skill = player.getQueuedSkill();
+		if ((skill != null) && (player.getKnownSkill(skill.getSkillId()) != null))
+		{
 			return;
 		}
 		
