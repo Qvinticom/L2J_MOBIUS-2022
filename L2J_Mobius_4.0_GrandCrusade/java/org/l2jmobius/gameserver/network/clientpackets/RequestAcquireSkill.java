@@ -433,6 +433,8 @@ public class RequestAcquireSkill implements IClientIncomingPacket
 					final String varName = count == 0 ? REVELATION_VAR_NAMES[0] : REVELATION_VAR_NAMES[1];
 					player.getVariables().set(varName, skill.getId());
 					giveSkill(player, trainer, skill);
+					// Exploit prevention.
+					SkillData.getInstance().getSkill(1570, 1).applyEffects(player, player);
 				}
 				
 				final List<SkillLearn> skills = SkillTreeData.getInstance().getAvailableRevelationSkills(player, SubclassType.BASECLASS);
