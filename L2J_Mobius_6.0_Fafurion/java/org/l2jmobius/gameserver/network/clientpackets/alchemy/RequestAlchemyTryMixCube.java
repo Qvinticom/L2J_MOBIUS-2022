@@ -32,6 +32,7 @@ import org.l2jmobius.gameserver.model.holders.ItemHolder;
 import org.l2jmobius.gameserver.model.itemcontainer.Inventory;
 import org.l2jmobius.gameserver.model.items.instance.ItemInstance;
 import org.l2jmobius.gameserver.model.skills.CommonSkill;
+import org.l2jmobius.gameserver.network.Disconnection;
 import org.l2jmobius.gameserver.network.GameClient;
 import org.l2jmobius.gameserver.network.SystemMessageId;
 import org.l2jmobius.gameserver.network.clientpackets.IClientIncomingPacket;
@@ -59,9 +60,23 @@ public class RequestAlchemyTryMixCube implements IClientIncomingPacket
 			return false;
 		}
 		
+		int id;
+		long count;
 		for (int i = 0; i < itemsCount; i++)
 		{
-			_items.add(new ItemHolder(packet.readD(), packet.readQ()));
+			id = packet.readD();
+			count = packet.readQ();
+			if ((count > 0) && (count < Long.MAX_VALUE))
+			{
+				_items.add(new ItemHolder(id, count));
+			}
+			else // Player used packet injection tool.
+			{
+				final PlayerInstance player = client.getPlayer();
+				LOGGER.warning("Kicked " + player + " for using packet injection tool with " + getClass().getSimpleName());
+				Disconnection.of(player).defaultSequence(true);
+				return false;
+			}
 		}
 		return true;
 	}
