@@ -547,15 +547,12 @@ public class PlayerStat extends PlayableStat
 			
 			if (points < 0) // vitality consumed
 			{
-				final int stat = (int) getValue(Stat.VITALITY_CONSUME_RATE, 1);
-				if (stat == 0)
+				double consumeRate = getValue(Stat.VITALITY_CONSUME_RATE, 1);
+				if (consumeRate <= 0)
 				{
 					return;
 				}
-				if (stat < 0)
-				{
-					points = -points;
-				}
+				points *= consumeRate;
 			}
 			
 			if (points > 0)
