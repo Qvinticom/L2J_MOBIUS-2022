@@ -33,6 +33,7 @@ import org.l2jmobius.gameserver.model.actor.instance.TamedBeastInstance;
 import org.l2jmobius.gameserver.model.actor.templates.NpcTemplate;
 import org.l2jmobius.gameserver.model.quest.Quest;
 import org.l2jmobius.gameserver.model.quest.QuestState;
+import org.l2jmobius.gameserver.model.spawn.Spawn;
 import org.l2jmobius.gameserver.network.serverpackets.CreatureSay;
 import org.l2jmobius.gameserver.network.serverpackets.SocialAction;
 import org.l2jmobius.gameserver.util.Util;
@@ -388,6 +389,11 @@ public class FeedableBeasts extends Quest
 		
 		// Despawn the old mob
 		npc.deleteMe();
+		final Spawn spawn = npc.getSpawn();
+		if (spawn != null)
+		{
+			spawn.decreaseCount(npc);
+		}
 		
 		// if this is finally a trained mob, then despawn any other trained mobs that the player might have and initialize the Tamed Beast.
 		if (Util.contains(TAMED_BEASTS, nextNpcId))
