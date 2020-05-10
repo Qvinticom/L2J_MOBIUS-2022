@@ -98,6 +98,7 @@ public class SendMessageLocalisationData implements IXmlReader
 				// Consider using proper SystemMessages where possible.
 				String[] searchMessage;
 				String[] replacementMessage;
+				String localisation = message;
 				boolean found;
 				for (Entry<String[], String[]> entry : localisations.entrySet())
 				{
@@ -107,7 +108,7 @@ public class SendMessageLocalisationData implements IXmlReader
 					// Exact match.
 					if (searchMessage.length == 1)
 					{
-						if (searchMessage[0].equals(message))
+						if (searchMessage[0].equals(localisation))
 						{
 							return replacementMessage[0];
 						}
@@ -117,7 +118,7 @@ public class SendMessageLocalisationData implements IXmlReader
 						found = true;
 						for (String part : searchMessage)
 						{
-							if (!message.contains(part))
+							if (!localisation.contains(part))
 							{
 								found = false;
 								break;
@@ -127,12 +128,13 @@ public class SendMessageLocalisationData implements IXmlReader
 						{
 							for (int i = 0; i < searchMessage.length; i++)
 							{
-								message = message.replace(searchMessage[i], replacementMessage[i]);
+								localisation = localisation.replace(searchMessage[i], replacementMessage[i]);
 							}
 							break;
 						}
 					}
 				}
+				return localisation;
 			}
 		}
 		return message;

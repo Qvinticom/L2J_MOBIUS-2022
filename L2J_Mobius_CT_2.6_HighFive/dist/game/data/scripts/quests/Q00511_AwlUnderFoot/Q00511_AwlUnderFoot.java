@@ -260,7 +260,7 @@ public class Q00511_AwlUnderFoot extends Quest
 		return null;
 	}
 	
-	protected String enterInstance(PlayerInstance player, int[] coords, FortDungeon dungeon, String ret)
+	protected String enterInstance(PlayerInstance player, int[] coords, FortDungeon dungeon, String retValue)
 	{
 		// check for existing instances for this player
 		InstanceWorld world = InstanceManager.getInstance().getPlayerWorld(player);
@@ -275,16 +275,19 @@ public class Q00511_AwlUnderFoot extends Quest
 			teleportPlayer(player, coords, world.getInstanceId());
 			return "";
 		}
+		
 		// New instance
+		if (retValue != null)
+		{
+			return retValue;
+		}
+		
+		final String ret = checkConditions(player);
 		if (ret != null)
 		{
 			return ret;
 		}
-		ret = checkConditions(player);
-		if (ret != null)
-		{
-			return ret;
-		}
+		
 		final Party party = player.getParty();
 		world = new FAUWorld();
 		final Instance instance = InstanceManager.getInstance().createDynamicInstance(dungeon.getInstanceId());

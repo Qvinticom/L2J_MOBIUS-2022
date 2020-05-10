@@ -303,12 +303,13 @@ public abstract class BaseGameServerRegister
 		
 		/**
 		 * Show the error.
-		 * @param msg the msg
+		 * @param message the msg
 		 * @param t the t
 		 */
-		public void showError(String msg, Throwable t)
+		public void showError(String message, Throwable t)
 		{
 			String title;
+			String msg = message;
 			if (_bundle != null)
 			{
 				title = _bundle.getString("error");

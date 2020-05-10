@@ -238,7 +238,7 @@ public class Q00726_LightWithinTheDarkness extends Quest
 		return null;
 	}
 	
-	protected String enterInstance(PlayerInstance player, String template, int[] coords, FortDungeon dungeon, String ret)
+	protected String enterInstance(PlayerInstance player, String template, int[] coords, FortDungeon dungeon, String retValue)
 	{
 		InstanceWorld world = InstanceManager.getInstance().getPlayerWorld(player);
 		if (world != null)
@@ -252,15 +252,17 @@ public class Q00726_LightWithinTheDarkness extends Quest
 			return "";
 		}
 		
+		if (retValue != null)
+		{
+			return retValue;
+		}
+		
+		final String ret = checkConditions(player);
 		if (ret != null)
 		{
 			return ret;
 		}
-		ret = checkConditions(player);
-		if (ret != null)
-		{
-			return ret;
-		}
+		
 		final Party party = player.getParty();
 		world = new PAWORLD();
 		final Instance instance = InstanceManager.getInstance().createDynamicInstance(dungeon.getInstanceId());

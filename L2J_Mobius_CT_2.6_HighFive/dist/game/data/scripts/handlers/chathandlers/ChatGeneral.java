@@ -42,7 +42,7 @@ public class ChatGeneral implements IChatHandler
 	};
 	
 	@Override
-	public void handleChat(ChatType type, PlayerInstance activeChar, String params, String text)
+	public void handleChat(ChatType type, PlayerInstance activeChar, String paramsValue, String text)
 	{
 		boolean vcdUsed = false;
 		if (text.startsWith("."))
@@ -50,6 +50,7 @@ public class ChatGeneral implements IChatHandler
 			final StringTokenizer st = new StringTokenizer(text);
 			final IVoicedCommandHandler vch;
 			String command = "";
+			String params = paramsValue;
 			if (st.countTokens() > 1)
 			{
 				command = st.nextToken().substring(1);

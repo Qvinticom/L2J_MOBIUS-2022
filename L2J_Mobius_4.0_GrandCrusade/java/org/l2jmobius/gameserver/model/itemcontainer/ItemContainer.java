@@ -77,13 +77,14 @@ public abstract class ItemContainer
 	}
 	
 	/**
-	 * @param filter
+	 * @param filterValue
 	 * @param filters
 	 * @return the quantity of items in the inventory
 	 */
 	@SafeVarargs
-	public final int getSize(Predicate<ItemInstance> filter, Predicate<ItemInstance>... filters)
+	public final int getSize(Predicate<ItemInstance> filterValue, Predicate<ItemInstance>... filters)
 	{
+		Predicate<ItemInstance> filter = filterValue;
 		for (Predicate<ItemInstance> additionalFilter : filters)
 		{
 			filter = filter.and(additionalFilter);
@@ -102,13 +103,14 @@ public abstract class ItemContainer
 	
 	/**
 	 * Gets the items in inventory filtered by filter.
-	 * @param filter the filter
+	 * @param filterValue the filter
 	 * @param filters multiple filters
 	 * @return the filtered items in inventory
 	 */
 	@SafeVarargs
-	public final Collection<ItemInstance> getItems(Predicate<ItemInstance> filter, Predicate<ItemInstance>... filters)
+	public final Collection<ItemInstance> getItems(Predicate<ItemInstance> filterValue, Predicate<ItemInstance>... filters)
 	{
+		Predicate<ItemInstance> filter = filterValue;
 		for (Predicate<ItemInstance> additionalFilter : filters)
 		{
 			filter = filter.and(additionalFilter);
@@ -196,32 +198,33 @@ public abstract class ItemContainer
 	 */
 	public ItemInstance addItem(String process, ItemInstance item, PlayerInstance actor, Object reference)
 	{
-		final ItemInstance olditem = getItemByItemId(item.getId());
+		ItemInstance newItem = item;
+		final ItemInstance olditem = getItemByItemId(newItem.getId());
 		
 		// If stackable item is found in inventory just add to current quantity
 		if ((olditem != null) && olditem.isStackable())
 		{
-			final long count = item.getCount();
+			final long count = newItem.getCount();
 			olditem.changeCount(process, count, actor, reference);
 			olditem.setLastChange(ItemInstance.MODIFIED);
 			
 			// And destroys the item
-			ItemTable.getInstance().destroyItem(process, item, actor, reference);
-			item.updateDatabase();
-			item = olditem;
+			ItemTable.getInstance().destroyItem(process, newItem, actor, reference);
+			newItem.updateDatabase();
+			newItem = olditem;
 		}
 		else // If item hasn't be found in inventory, create new one
 		{
-			item.setOwnerId(process, getOwnerId(), actor, reference);
-			item.setItemLocation(getBaseLocation());
-			item.setLastChange((ItemInstance.ADDED));
+			newItem.setOwnerId(process, getOwnerId(), actor, reference);
+			newItem.setItemLocation(getBaseLocation());
+			newItem.setLastChange((ItemInstance.ADDED));
 			
 			// Add item in inventory
-			addItem(item);
+			addItem(newItem);
 		}
 		
 		refreshWeight();
-		return item;
+		return newItem;
 	}
 	
 	/**
@@ -278,13 +281,13 @@ public abstract class ItemContainer
 	 * Transfers item to another inventory
 	 * @param process string Identifier of process triggering this action
 	 * @param objectId Item Identifier of the item to be transfered
-	 * @param count Quantity of items to be transfered
+	 * @param countValue Quantity of items to be transfered
 	 * @param target the item container where the item will be moved.
 	 * @param actor Player requesting the item transfer
 	 * @param reference Object Object referencing current action like NPC selling item or previous item in transformation
 	 * @return ItemInstance corresponding to the new item or the updated item in inventory
 	 */
-	public ItemInstance transferItem(String process, int objectId, long count, ItemContainer target, PlayerInstance actor, Object reference)
+	public ItemInstance transferItem(String process, int objectId, long countValue, ItemContainer target, PlayerInstance actor, Object reference)
 	{
 		if (target == null)
 		{
@@ -307,6 +310,7 @@ public abstract class ItemContainer
 			}
 			
 			// Check if requested quantity is available
+			long count = countValue;
 			if (count > sourceitem.getCount())
 			{
 				count = sourceitem.getCount();

@@ -194,14 +194,15 @@ public abstract class DocumentBase
 		_tables.put(name, table);
 	}
 	
-	protected void parseTemplate(Node n, Object template)
+	protected void parseTemplate(Node node, Object template)
 	{
 		Condition condition = null;
-		n = n.getFirstChild();
+		Node n = node.getFirstChild();
 		if (n == null)
 		{
 			return;
 		}
+		
 		if ("cond".equalsIgnoreCase(n.getNodeName()))
 		{
 			condition = parseCondition(n.getFirstChild(), template);
@@ -275,8 +276,9 @@ public abstract class DocumentBase
 		}
 	}
 	
-	protected Condition parseCondition(Node n, Object template)
+	protected Condition parseCondition(Node node, Object template)
 	{
+		Node n = node;
 		while ((n != null) && (n.getNodeType() != Node.ELEMENT_NODE))
 		{
 			n = n.getNextSibling();
@@ -324,12 +326,14 @@ public abstract class DocumentBase
 				}
 			}
 		}
+		
 		return condition;
 	}
 	
-	protected Condition parseLogicAnd(Node n, Object template)
+	protected Condition parseLogicAnd(Node node, Object template)
 	{
 		final ConditionLogicAnd cond = new ConditionLogicAnd();
+		Node n = node;
 		for (n = n.getFirstChild(); n != null; n = n.getNextSibling())
 		{
 			if (n.getNodeType() == Node.ELEMENT_NODE)
@@ -344,9 +348,10 @@ public abstract class DocumentBase
 		return cond;
 	}
 	
-	protected Condition parseLogicOr(Node n, Object template)
+	protected Condition parseLogicOr(Node node, Object template)
 	{
 		final ConditionLogicOr cond = new ConditionLogicOr();
+		Node n = node;
 		for (n = n.getFirstChild(); n != null; n = n.getNextSibling())
 		{
 			if (n.getNodeType() == Node.ELEMENT_NODE)
@@ -361,8 +366,9 @@ public abstract class DocumentBase
 		return cond;
 	}
 	
-	protected Condition parseLogicNot(Node n, Object template)
+	protected Condition parseLogicNot(Node node, Object template)
 	{
+		Node n = node;
 		for (n = n.getFirstChild(); n != null; n = n.getNextSibling())
 		{
 			if (n.getNodeType() == Node.ELEMENT_NODE)

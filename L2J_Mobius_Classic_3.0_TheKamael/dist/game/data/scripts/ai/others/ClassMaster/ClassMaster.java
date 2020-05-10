@@ -233,7 +233,7 @@ public class ClassMaster extends AbstractNpcAI implements IXmlReader
 	}
 	
 	@Override
-	public String onAdvEvent(String event, Npc npc, PlayerInstance player)
+	public String onAdvEvent(String eventValue, Npc npc, PlayerInstance player)
 	{
 		if (!_isEnabled)
 		{
@@ -241,6 +241,7 @@ public class ClassMaster extends AbstractNpcAI implements IXmlReader
 		}
 		
 		String htmltext = null;
+		String event = eventValue;
 		final StringTokenizer st = new StringTokenizer(event);
 		event = st.nextToken();
 		switch (event)

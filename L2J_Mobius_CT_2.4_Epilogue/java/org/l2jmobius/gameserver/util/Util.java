@@ -99,11 +99,7 @@ public class Util
 	
 	public static int convertDegreeToClientHeading(double degree)
 	{
-		if (degree < 0)
-		{
-			degree += 360;
-		}
-		return (int) (degree * 182.044444444);
+		return (int) ((degree < 0 ? degree + 360 : degree) * 182.044444444);
 	}
 	
 	public static int calculateHeadingFrom(ILocational from, ILocational to)
@@ -687,15 +683,17 @@ public class Util
 		{
 			return "now";
 		}
-		time = Math.abs(time);
+		
+		int remaining = Math.abs(time);
 		String ret = "";
-		final long numDays = time / 86400;
-		time -= numDays * 86400;
-		final long numHours = time / 3600;
-		time -= numHours * 3600;
-		final long numMins = time / 60;
-		time -= numMins * 60;
-		final long numSeconds = time;
+		final long numDays = remaining / 86400;
+		remaining -= numDays * 86400;
+		final long numHours = remaining / 3600;
+		remaining -= numHours * 3600;
+		final long numMins = remaining / 60;
+		remaining -= numMins * 60;
+		final long numSeconds = remaining;
+		
 		if (numDays > 0)
 		{
 			ret += numDays + "d ";
@@ -712,6 +710,7 @@ public class Util
 		{
 			ret += numSeconds + "s";
 		}
+		
 		return ret.trim();
 	}
 	
@@ -862,8 +861,7 @@ public class Util
 	 */
 	public static int map(int input, int inputMin, int inputMax, int outputMin, int outputMax)
 	{
-		input = constrain(input, inputMin, inputMax);
-		return (((input - inputMin) * (outputMax - outputMin)) / (inputMax - inputMin)) + outputMin;
+		return (((constrain(input, inputMin, inputMax) - inputMin) * (outputMax - outputMin)) / (inputMax - inputMin)) + outputMin;
 	}
 	
 	/**
@@ -877,8 +875,7 @@ public class Util
 	 */
 	public static long map(long input, long inputMin, long inputMax, long outputMin, long outputMax)
 	{
-		input = constrain(input, inputMin, inputMax);
-		return (((input - inputMin) * (outputMax - outputMin)) / (inputMax - inputMin)) + outputMin;
+		return (((constrain(input, inputMin, inputMax) - inputMin) * (outputMax - outputMin)) / (inputMax - inputMin)) + outputMin;
 	}
 	
 	/**
@@ -892,8 +889,7 @@ public class Util
 	 */
 	public static double map(double input, double inputMin, double inputMax, double outputMin, double outputMax)
 	{
-		input = constrain(input, inputMin, inputMax);
-		return (((input - inputMin) * (outputMax - outputMin)) / (inputMax - inputMin)) + outputMin;
+		return (((constrain(input, inputMin, inputMax) - inputMin) * (outputMax - outputMin)) / (inputMax - inputMin)) + outputMin;
 	}
 	
 	/**

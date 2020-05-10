@@ -101,7 +101,7 @@ public class Q00500_BrothersBoundInChains extends Quest
 				}
 				else
 				{
-					event = "30981-05.html";
+					return "30981-05.html";
 				}
 				break;
 			}
@@ -124,13 +124,13 @@ public class Q00500_BrothersBoundInChains extends Quest
 				{
 					// If player delete QuestItems: Need check how it work on retail.
 					qs.setCond(1);
-					event = "30981-07.html";
+					return "30981-07.html";
 				}
 				break;
 			}
 			default:
 			{
-				event = getNoQuestMsg(player);
+				return getNoQuestMsg(player);
 			}
 		}
 		

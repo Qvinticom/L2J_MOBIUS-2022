@@ -271,11 +271,13 @@ public class GeoDataConverter
 	 * @param x : Geodata X coordinate.
 	 * @param y : Geodata Y coordinate.
 	 * @param z : Geodata Z coordinate.
-	 * @param nswe : NSWE flag to be updated.
+	 * @param nsweValue : NSWE flag to be updated.
 	 * @return byte : Updated NSWE flag.
 	 */
-	private static byte updateNsweBelow(int x, int y, short z, byte nswe)
+	private static byte updateNsweBelow(int x, int y, short z, byte nsweValue)
 	{
+		byte nswe = nsweValue;
+		
 		// calculate virtual layer height
 		final short height = (short) (z + GeoStructure.CELL_IGNORE_HEIGHT);
 		

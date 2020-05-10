@@ -92,9 +92,9 @@ public class SubClass
 	{
 		if (expValue > ExperienceData.getInstance().getExpForLevel(Config.MAX_SUBCLASS_LEVEL))
 		{
-			expValue = ExperienceData.getInstance().getExpForLevel(Config.MAX_SUBCLASS_LEVEL);
+			_exp = ExperienceData.getInstance().getExpForLevel(Config.MAX_SUBCLASS_LEVEL);
+			return;
 		}
-		
 		_exp = expValue;
 	}
 	
@@ -112,13 +112,14 @@ public class SubClass
 	{
 		if (levelValue > (Config.MAX_SUBCLASS_LEVEL - 1))
 		{
-			levelValue = Config.MAX_SUBCLASS_LEVEL - 1;
+			_level = Config.MAX_SUBCLASS_LEVEL - 1;
+			return;
 		}
 		else if (levelValue < Config.BASE_SUBCLASS_LEVEL)
 		{
-			levelValue = Config.BASE_SUBCLASS_LEVEL;
+			_level = Config.BASE_SUBCLASS_LEVEL;
+			return;
 		}
-		
 		_level = levelValue;
 	}
 	

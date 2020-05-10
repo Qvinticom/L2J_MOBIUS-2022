@@ -379,20 +379,20 @@ public class PlayerInventory extends Inventory
 	@Override
 	public ItemInstance addItem(String process, ItemInstance item, PlayerInstance actor, Object reference)
 	{
-		item = super.addItem(process, item, actor, reference);
-		if (item != null)
+		final ItemInstance addedItem = super.addItem(process, item, actor, reference);
+		if (addedItem != null)
 		{
-			if ((item.getId() == ADENA_ID) && !item.equals(_adena))
+			if ((addedItem.getId() == ADENA_ID) && !addedItem.equals(_adena))
 			{
-				_adena = item;
+				_adena = addedItem;
 			}
-			else if ((item.getId() == ANCIENT_ADENA_ID) && !item.equals(_ancientAdena))
+			else if ((addedItem.getId() == ANCIENT_ADENA_ID) && !addedItem.equals(_ancientAdena))
 			{
-				_ancientAdena = item;
+				_ancientAdena = addedItem;
 			}
-			else if ((item.getId() == BEAUTY_TICKET_ID) && !item.equals(_beautyTickets))
+			else if ((addedItem.getId() == BEAUTY_TICKET_ID) && !addedItem.equals(_beautyTickets))
 			{
-				_beautyTickets = item;
+				_beautyTickets = addedItem;
 			}
 			
 			if (actor != null)
@@ -401,7 +401,7 @@ public class PlayerInventory extends Inventory
 				if (!Config.FORCE_INVENTORY_UPDATE)
 				{
 					final InventoryUpdate playerIU = new InventoryUpdate();
-					playerIU.addItem(item);
+					playerIU.addItem(addedItem);
 					actor.sendInventoryUpdate(playerIU);
 				}
 				else
@@ -410,11 +410,10 @@ public class PlayerInventory extends Inventory
 				}
 				
 				// Notify to scripts
-				EventDispatcher.getInstance().notifyEventAsync(new OnPlayerItemAdd(actor, item), actor, item.getItem());
+				EventDispatcher.getInstance().notifyEventAsync(new OnPlayerItemAdd(actor, addedItem), actor, addedItem.getItem());
 			}
 		}
-		
-		return item;
+		return addedItem;
 	}
 	
 	/**
@@ -498,6 +497,7 @@ public class PlayerInventory extends Inventory
 	public ItemInstance transferItem(String process, int objectId, long count, ItemContainer target, PlayerInstance actor, Object reference)
 	{
 		final ItemInstance item = super.transferItem(process, objectId, count, target, actor, reference);
+		
 		if ((_adena != null) && ((_adena.getCount() <= 0) || (_adena.getOwnerId() != getOwnerId())))
 		{
 			_adena = null;
@@ -510,18 +510,19 @@ public class PlayerInventory extends Inventory
 		
 		// Notify to scripts
 		EventDispatcher.getInstance().notifyEventAsync(new OnPlayerItemTransfer(actor, item, target), item.getItem());
+		
 		return item;
 	}
 	
 	@Override
 	public ItemInstance detachItem(String process, ItemInstance item, long count, ItemLocation newLocation, PlayerInstance actor, Object reference)
 	{
-		item = super.detachItem(process, item, count, newLocation, actor, reference);
-		if ((item != null) && (actor != null))
+		final ItemInstance detachedItem = super.detachItem(process, item, count, newLocation, actor, reference);
+		if ((detachedItem != null) && (actor != null))
 		{
 			actor.sendItemList();
 		}
-		return item;
+		return detachedItem;
 	}
 	
 	/**
@@ -549,7 +550,8 @@ public class PlayerInventory extends Inventory
 	@Override
 	public ItemInstance destroyItem(String process, ItemInstance item, long count, PlayerInstance actor, Object reference)
 	{
-		item = super.destroyItem(process, item, count, actor, reference);
+		final ItemInstance destroyedItem = super.destroyItem(process, item, count, actor, reference);
+		
 		if ((_adena != null) && (_adena.getCount() <= 0))
 		{
 			_adena = null;
@@ -561,11 +563,12 @@ public class PlayerInventory extends Inventory
 		}
 		
 		// Notify to scripts
-		if (item != null)
+		if (destroyedItem != null)
 		{
-			EventDispatcher.getInstance().notifyEventAsync(new OnPlayerItemDestroy(actor, item), item.getItem());
+			EventDispatcher.getInstance().notifyEventAsync(new OnPlayerItemDestroy(actor, destroyedItem), destroyedItem.getItem());
 		}
-		return item;
+		
+		return destroyedItem;
 	}
 	
 	/**
@@ -611,7 +614,8 @@ public class PlayerInventory extends Inventory
 	@Override
 	public ItemInstance dropItem(String process, ItemInstance item, PlayerInstance actor, Object reference)
 	{
-		item = super.dropItem(process, item, actor, reference);
+		final ItemInstance droppedItem = super.dropItem(process, item, actor, reference);
+		
 		if ((_adena != null) && ((_adena.getCount() <= 0) || (_adena.getOwnerId() != getOwnerId())))
 		{
 			_adena = null;
@@ -623,11 +627,12 @@ public class PlayerInventory extends Inventory
 		}
 		
 		// Notify to scripts
-		if (item != null)
+		if (droppedItem != null)
 		{
-			EventDispatcher.getInstance().notifyEventAsync(new OnPlayerItemDrop(actor, item, item.getLocation()), item.getItem());
+			EventDispatcher.getInstance().notifyEventAsync(new OnPlayerItemDrop(actor, droppedItem, droppedItem.getLocation()), droppedItem.getItem());
 		}
-		return item;
+		
+		return droppedItem;
 	}
 	
 	/**
@@ -643,6 +648,7 @@ public class PlayerInventory extends Inventory
 	public ItemInstance dropItem(String process, int objectId, long count, PlayerInstance actor, Object reference)
 	{
 		final ItemInstance item = super.dropItem(process, objectId, count, actor, reference);
+		
 		if ((_adena != null) && ((_adena.getCount() <= 0) || (_adena.getOwnerId() != getOwnerId())))
 		{
 			_adena = null;

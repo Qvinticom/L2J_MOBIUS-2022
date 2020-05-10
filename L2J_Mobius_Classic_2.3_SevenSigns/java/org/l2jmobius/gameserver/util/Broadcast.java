@@ -121,10 +121,11 @@ public class Broadcast
 	 * <font color=#FF0000><b><u>Caution</u>: This method DOESN'T SEND Server->Client packet to this Creature (to do this use method toSelfAndKnownPlayers)</b></font>
 	 * @param creature
 	 * @param mov
-	 * @param radius
+	 * @param radiusValue
 	 */
-	public static void toKnownPlayersInRadius(Creature creature, IClientOutgoingPacket mov, int radius)
+	public static void toKnownPlayersInRadius(Creature creature, IClientOutgoingPacket mov, int radiusValue)
 	{
+		int radius = radiusValue;
 		if (radius < 0)
 		{
 			radius = 1500;
@@ -154,8 +155,9 @@ public class Broadcast
 	}
 	
 	// To improve performance we are comparing values of radius^2 instead of calculating sqrt all the time
-	public static void toSelfAndKnownPlayersInRadius(Creature creature, IClientOutgoingPacket mov, int radius)
+	public static void toSelfAndKnownPlayersInRadius(Creature creature, IClientOutgoingPacket mov, int radiusValue)
 	{
+		int radius = radiusValue;
 		if (radius < 0)
 		{
 			radius = 600;

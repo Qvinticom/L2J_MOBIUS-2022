@@ -143,13 +143,14 @@ public class SystemPanel extends JPanel
 	
 	static String getDurationBreakdown(long millis)
 	{
-		final long days = TimeUnit.MILLISECONDS.toDays(millis);
-		millis -= TimeUnit.DAYS.toMillis(days);
-		final long hours = TimeUnit.MILLISECONDS.toHours(millis);
-		millis -= TimeUnit.HOURS.toMillis(hours);
-		final long minutes = TimeUnit.MILLISECONDS.toMinutes(millis);
-		millis -= TimeUnit.MINUTES.toMillis(minutes);
-		final long seconds = TimeUnit.MILLISECONDS.toSeconds(millis);
+		long remaining = millis;
+		final long days = TimeUnit.MILLISECONDS.toDays(remaining);
+		remaining -= TimeUnit.DAYS.toMillis(days);
+		final long hours = TimeUnit.MILLISECONDS.toHours(remaining);
+		remaining -= TimeUnit.HOURS.toMillis(hours);
+		final long minutes = TimeUnit.MILLISECONDS.toMinutes(remaining);
+		remaining -= TimeUnit.MINUTES.toMillis(minutes);
+		final long seconds = TimeUnit.MILLISECONDS.toSeconds(remaining);
 		return (days + "d " + hours + "h " + minutes + "m " + seconds + "s");
 	}
 }

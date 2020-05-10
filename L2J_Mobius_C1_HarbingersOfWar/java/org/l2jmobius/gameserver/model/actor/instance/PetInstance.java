@@ -94,8 +94,9 @@ public class PetInstance extends Creature
 		player.sendPacket(new MyTargetSelected(getObjectId(), player.getLevel() - getLevel()));
 	}
 	
-	public void setSummonHp(int hp)
+	public void setSummonHp(int value)
 	{
+		int hp = value;
 		if (hp == 0)
 		{
 			hp = 5000;
@@ -130,31 +131,19 @@ public class PetInstance extends Creature
 	@Override
 	public void setWalkSpeed(int walkSpeed)
 	{
-		if (walkSpeed < 24)
-		{
-			walkSpeed = 24;
-		}
-		super.setWalkSpeed(walkSpeed);
+		super.setWalkSpeed(Math.max(24, walkSpeed));
 	}
 	
 	@Override
 	public void setPhysicalDefense(int pdef)
 	{
-		if (pdef < 100)
-		{
-			pdef = 100;
-		}
-		super.setPhysicalDefense(pdef);
+		super.setPhysicalDefense(Math.max(100, pdef));
 	}
 	
 	@Override
 	public void setRunSpeed(int runSpeed)
 	{
-		if (runSpeed < 125)
-		{
-			runSpeed = 125;
-		}
-		super.setRunSpeed(runSpeed);
+		super.setRunSpeed(Math.max(125, runSpeed));
 	}
 	
 	public int getPetId()
@@ -322,12 +311,14 @@ public class PetInstance extends Creature
 	}
 	
 	@Override
-	public void setPhysicalAttack(int physicalAttack)
+	public void setPhysicalAttack(int value)
 	{
+		int physicalAttack = value;
 		if (physicalAttack < 100)
 		{
 			physicalAttack = 100;
 		}
+		
 		super.setPhysicalAttack(physicalAttack);
 		_dummyWeapon = new Weapon();
 		_dummyWeapon.setPDamage(physicalAttack);
@@ -503,9 +494,9 @@ public class PetInstance extends Creature
 		}
 	}
 	
-	public void dropItemHere(ItemInstance dropit)
+	public void dropItemHere(ItemInstance item)
 	{
-		dropit = getInventory().dropItem(dropit.getObjectId(), dropit.getCount());
+		final ItemInstance dropit = getInventory().dropItem(item.getObjectId(), item.getCount());
 		if (dropit != null)
 		{
 			dropit.setX(getX());
@@ -544,11 +535,7 @@ public class PetInstance extends Creature
 	
 	public void setAttackRange(int range)
 	{
-		if (range < 36)
-		{
-			range = 36;
-		}
-		_attackRange = range;
+		_attackRange = Math.max(36, range);
 	}
 	
 	public void setFollowStatus(boolean value)

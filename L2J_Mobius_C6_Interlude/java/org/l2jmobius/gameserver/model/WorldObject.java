@@ -242,24 +242,28 @@ public abstract class WorldObject
 		{
 			// Set the x,y,z position of the WorldObject spawn and update its _worldregion
 			_visible = true;
-			if (x > World.MAP_MAX_X)
+			
+			int spawnX = x;
+			if (spawnX > World.MAP_MAX_X)
 			{
-				x = World.MAP_MAX_X - 5000;
+				spawnX = World.MAP_MAX_X - 5000;
 			}
-			if (x < World.MAP_MIN_X)
+			if (spawnX < World.MAP_MIN_X)
 			{
-				x = World.MAP_MIN_X + 5000;
-			}
-			if (y > World.MAP_MAX_Y)
-			{
-				y = World.MAP_MAX_Y - 5000;
-			}
-			if (y < World.MAP_MIN_Y)
-			{
-				y = World.MAP_MIN_Y + 5000;
+				spawnX = World.MAP_MIN_X + 5000;
 			}
 			
-			getPosition().setWorldPosition(x, y, z);
+			int spawnY = y;
+			if (spawnY > World.MAP_MAX_Y)
+			{
+				spawnY = World.MAP_MAX_Y - 5000;
+			}
+			if (spawnY < World.MAP_MIN_Y)
+			{
+				spawnY = World.MAP_MIN_Y + 5000;
+			}
+			
+			getPosition().setWorldPosition(spawnX, spawnY, z);
 			getPosition().setWorldRegion(World.getInstance().getRegion(getPosition().getWorldPosition()));
 		}
 		

@@ -471,8 +471,9 @@ public class ClanHallManager extends AbstractNpcAI
 		World.getInstance().forEachVisibleObject(npc, PlayerInstance.class, player -> player.sendPacket(new AgitDecoInfo(clanHall)));
 	}
 	
-	private String getFunctionInfo(ResidenceFunction func, String htmltext, String name)
+	private String getFunctionInfo(ResidenceFunction func, String htmltextValue, String name)
 	{
+		String htmltext = htmltextValue;
 		if (func != null)
 		{
 			htmltext = htmltext.replaceAll("%" + name + "recovery%", String.valueOf((int) func.getTemplate().getValue()) + "%");

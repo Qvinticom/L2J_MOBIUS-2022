@@ -919,8 +919,7 @@ public class RainbowSpringsChateau extends ClanHallSiegeEngine
 		{
 			_nextSiege.cancel(true);
 		}
-		date -= 3600000;
-		setRegistrationEndString(date);
+		setRegistrationEndString(date - 3600000);
 		_nextSiege = ThreadPool.schedule(new SetFinalAttackers(), _rainbow.getNextSiegeTime());
 	}
 	

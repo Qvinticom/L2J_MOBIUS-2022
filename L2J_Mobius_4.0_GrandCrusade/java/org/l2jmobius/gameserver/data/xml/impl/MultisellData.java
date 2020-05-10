@@ -224,10 +224,10 @@ public class MultisellData implements IXmlReader
 	 * @param player
 	 * @param npc
 	 * @param inventoryOnly
-	 * @param ingredientMultiplier
-	 * @param productMultiplier
+	 * @param ingredientMultiplierValue
+	 * @param productMultiplierValue
 	 */
-	public void separateAndSend(int listId, PlayerInstance player, Npc npc, boolean inventoryOnly, double ingredientMultiplier, double productMultiplier)
+	public void separateAndSend(int listId, PlayerInstance player, Npc npc, boolean inventoryOnly, double ingredientMultiplierValue, double productMultiplierValue)
 	{
 		final MultisellListHolder template = _multisells.get(listId);
 		if (template == null)
@@ -250,9 +250,8 @@ public class MultisellData implements IXmlReader
 		}
 		
 		// Check if ingredient/product multipliers are set, if not, set them to the template value.
-		ingredientMultiplier = (Double.isNaN(ingredientMultiplier) ? template.getIngredientMultiplier() : ingredientMultiplier);
-		productMultiplier = (Double.isNaN(productMultiplier) ? template.getProductMultiplier() : productMultiplier);
-		
+		final double ingredientMultiplier = (Double.isNaN(ingredientMultiplierValue) ? template.getIngredientMultiplier() : ingredientMultiplierValue);
+		final double productMultiplier = (Double.isNaN(productMultiplierValue) ? template.getProductMultiplier() : productMultiplierValue);
 		final PreparedMultisellListHolder list = new PreparedMultisellListHolder(template, inventoryOnly, player.getInventory(), npc, ingredientMultiplier, productMultiplier);
 		int index = 0;
 		do
@@ -262,6 +261,7 @@ public class MultisellData implements IXmlReader
 			index += PAGE_SIZE;
 		}
 		while (index < list.getEntries().size());
+		
 		player.setMultiSell(list);
 	}
 	

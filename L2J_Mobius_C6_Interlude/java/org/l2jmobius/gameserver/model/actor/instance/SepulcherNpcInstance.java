@@ -228,11 +228,12 @@ public class SepulcherNpcInstance extends NpcInstance
 			{
 				setInvul(false);
 				reduceCurrentHp(getMaxHp() + 1, player);
+				PlayerInstance leader = player;
 				if ((player.getParty() != null) && !player.getParty().isLeader(player))
 				{
-					player = player.getParty().getLeader();
+					leader = player.getParty().getLeader();
 				}
-				player.addItem("Quest", HALLS_KEY, 1, player, true);
+				leader.addItem("Quest", HALLS_KEY, 1, leader, true);
 				break;
 			}
 			default:

@@ -101,13 +101,9 @@ public class Q10272_LightFragment extends Quest
 				if (getQuestItemsCount(player, Inventory.ADENA_ID) >= 10000)
 				{
 					takeItems(player, Inventory.ADENA_ID, 10000);
-					event = "32566-05.html";
+					return "32566-05.html";
 				}
-				else
-				{
-					event = "32566-04a.html";
-				}
-				break;
+				return "32566-04a.html";
 			}
 			case "32567-04.html":
 			{
@@ -128,7 +124,7 @@ public class Q10272_LightFragment extends Quest
 				}
 				else
 				{
-					event = "32557-04.html";
+					return "32557-04.html";
 				}
 				break;
 			}

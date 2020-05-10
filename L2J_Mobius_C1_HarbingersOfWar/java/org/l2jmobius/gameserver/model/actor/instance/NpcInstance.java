@@ -221,9 +221,8 @@ public class NpcInstance extends Creature
 	
 	public void insertObjectIdAndShowChatWindow(PlayerInstance player, String content)
 	{
-		content = content.replace("%objectId%", String.valueOf(getObjectId()));
 		final NpcHtmlMessage npcReply = new NpcHtmlMessage(5);
-		npcReply.setHtml(content);
+		npcReply.setHtml(content.replace("%objectId%", String.valueOf(getObjectId())));
 		player.sendPacket(npcReply);
 	}
 	

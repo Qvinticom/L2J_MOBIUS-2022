@@ -91,7 +91,7 @@ public class ControllableMobInstance extends MonsterInstance
 	}
 	
 	@Override
-	public void reduceCurrentHp(double i, Creature attacker, boolean awake)
+	public void reduceCurrentHp(double value, Creature attacker, boolean awake)
 	{
 		if (_isInvul || isDead())
 		{
@@ -103,13 +103,7 @@ public class ControllableMobInstance extends MonsterInstance
 			stopSleeping(null);
 		}
 		
-		i = getCurrentHp() - i;
-		if (i < 0)
-		{
-			i = 0;
-		}
-		
-		setCurrentHp(i);
+		setCurrentHp(Math.max(0, getCurrentHp() - value));
 		
 		if (isDead())
 		{

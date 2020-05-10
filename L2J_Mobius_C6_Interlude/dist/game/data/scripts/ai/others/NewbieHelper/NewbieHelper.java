@@ -179,7 +179,7 @@ public class NewbieHelper extends Quest
 		}
 		
 		String htmltext = event;
-		player = qs1.getPlayer();
+		// player = qs1.getPlayer();
 		
 		final int ex = qs2.getInt("Ex");
 		final int classId = qs1.getPlayer().getClassId().getId();
@@ -241,6 +241,7 @@ public class NewbieHelper extends Quest
 				}
 			}
 		}
+		
 		return htmltext;
 	}
 	

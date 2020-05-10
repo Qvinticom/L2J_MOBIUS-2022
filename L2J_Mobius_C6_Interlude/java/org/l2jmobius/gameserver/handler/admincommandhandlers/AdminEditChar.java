@@ -903,7 +903,7 @@ public class AdminEditChar implements IAdminCommandHandler
 		return false;
 	}
 	
-	private void listCharacters(PlayerInstance activeChar, int page)
+	private void listCharacters(PlayerInstance activeChar, int pageValue)
 	{
 		final List<PlayerInstance> onlinePlayersList = new ArrayList<>();
 		for (PlayerInstance actualPlayer : World.getInstance().getAllPlayers())
@@ -927,6 +927,7 @@ public class AdminEditChar implements IAdminCommandHandler
 		}
 		
 		// Check if number of users changed
+		int page = pageValue;
 		if (page > maxPages)
 		{
 			page = maxPages;
@@ -1343,8 +1344,9 @@ public class AdminEditChar implements IAdminCommandHandler
 		}
 	}
 	
-	private void showCharacterInfo(PlayerInstance activeChar, PlayerInstance player)
+	private void showCharacterInfo(PlayerInstance activeChar, PlayerInstance targetPlayer)
 	{
+		PlayerInstance player = targetPlayer;
 		if (player == null)
 		{
 			final WorldObject target = activeChar.getTarget();

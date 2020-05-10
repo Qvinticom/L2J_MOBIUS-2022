@@ -993,8 +993,9 @@ public class AdminEditChar implements IAdminCommandHandler
 		activeChar.sendPacket(html);
 	}
 	
-	private void showCharacterInfo(PlayerInstance activeChar, PlayerInstance player)
+	private void showCharacterInfo(PlayerInstance activeChar, PlayerInstance targetPlayer)
 	{
+		PlayerInstance player = targetPlayer;
 		if (player == null)
 		{
 			final WorldObject target = activeChar.getTarget();

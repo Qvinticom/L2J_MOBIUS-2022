@@ -17,6 +17,7 @@
 package org.l2jmobius.gameserver.network.serverpackets;
 
 import java.util.Arrays;
+import java.util.Collections;
 import java.util.List;
 
 import org.l2jmobius.commons.network.PacketWriter;
@@ -40,13 +41,11 @@ public class MagicSkillLaunched implements IClientOutgoingPacket
 		_objectId = creature.getObjectId();
 		_skillId = skillId;
 		_skillLevel = skillLevel;
-		
-		//@formatter:off
 		if (targets == null)
 		{
-			targets = new WorldObject[] { creature };
+			_targets = Collections.singletonList(creature);
+			return;
 		}
-		//@formatter:on
 		_targets = Arrays.asList(targets);
 	}
 	
@@ -59,6 +58,7 @@ public class MagicSkillLaunched implements IClientOutgoingPacket
 	public boolean write(PacketWriter packet)
 	{
 		OutgoingPackets.MAGIC_SKILL_LAUNCHED.writeId(packet);
+		
 		packet.writeD(_objectId);
 		packet.writeD(_skillId);
 		packet.writeD(_skillLevel);

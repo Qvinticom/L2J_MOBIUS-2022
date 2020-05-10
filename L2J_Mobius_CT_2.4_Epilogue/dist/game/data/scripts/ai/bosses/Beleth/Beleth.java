@@ -359,6 +359,7 @@ public class Beleth extends AbstractNpcAI
 			{
 				_minions.clear();
 				
+				Npc spawn;
 				int a = 0;
 				for (int i = 0; i < 16; i++)
 				{
@@ -366,12 +367,12 @@ public class Beleth extends AbstractNpcAI
 					
 					final int x = (int) ((650 * Math.cos(i * 0.39)) + 16323);
 					final int y = (int) ((650 * Math.sin(i * 0.39)) + 213170);
-					npc = addSpawn(FAKE_BELETH, new Location(x, y, -9357, 49152));
-					_minions.add(npc);
+					spawn = addSpawn(FAKE_BELETH, new Location(x, y, -9357, 49152));
+					_minions.add(spawn);
 					
 					if (a >= 2)
 					{
-						npc.setOverloaded(true);
+						spawn.setOverloaded(true);
 						a = 0;
 					}
 				}
@@ -382,33 +383,31 @@ public class Beleth extends AbstractNpcAI
 				{
 					xm[i] = (int) ((1700 * Math.cos((i * 1.57) + 0.78)) + 16323);
 					ym[i] = (int) ((1700 * Math.sin((i * 1.57) + 0.78)) + 213170);
-					npc = addSpawn(FAKE_BELETH, new Location(xm[i], ym[i], -9357, 49152));
-					npc.setImmobilized(true);
-					
-					_minions.add(npc);
+					spawn = addSpawn(FAKE_BELETH, new Location(xm[i], ym[i], -9357, 49152));
+					spawn.setImmobilized(true);
+					_minions.add(spawn);
 				}
 				
 				xm[4] = (xm[0] + xm[1]) / 2;
 				ym[4] = (ym[0] + ym[1]) / 2;
-				npc = addSpawn(FAKE_BELETH, new Location(xm[4], ym[4], -9357, 49152));
-				npc.setImmobilized(true);
-				_minions.add(npc);
+				spawn = addSpawn(FAKE_BELETH, new Location(xm[4], ym[4], -9357, 49152));
+				spawn.setImmobilized(true);
+				_minions.add(spawn);
 				xm[5] = (xm[1] + xm[2]) / 2;
 				ym[5] = (ym[1] + ym[2]) / 2;
-				npc = addSpawn(FAKE_BELETH, new Location(xm[5], ym[5], -9357, 49152));
-				npc.setImmobilized(true);
-				_minions.add(npc);
+				spawn = addSpawn(FAKE_BELETH, new Location(xm[5], ym[5], -9357, 49152));
+				spawn.setImmobilized(true);
+				_minions.add(spawn);
 				xm[6] = (xm[2] + xm[3]) / 2;
 				ym[6] = (ym[2] + ym[3]) / 2;
-				npc = addSpawn(FAKE_BELETH, new Location(xm[6], ym[6], -9357, 49152));
-				npc.setImmobilized(true);
-				_minions.add(npc);
+				spawn = addSpawn(FAKE_BELETH, new Location(xm[6], ym[6], -9357, 49152));
+				spawn.setImmobilized(true);
+				_minions.add(spawn);
 				xm[7] = (xm[3] + xm[0]) / 2;
 				ym[7] = (ym[3] + ym[0]) / 2;
-				npc = addSpawn(FAKE_BELETH, new Location(xm[7], ym[7], -9357, 49152));
-				npc.setImmobilized(true);
-				_minions.add(npc);
-				
+				spawn = addSpawn(FAKE_BELETH, new Location(xm[7], ym[7], -9357, 49152));
+				spawn.setImmobilized(true);
+				_minions.add(spawn);
 				xm[8] = (xm[0] + xm[4]) / 2;
 				ym[8] = (ym[0] + ym[4]) / 2;
 				_minions.add(addSpawn(FAKE_BELETH, new Location(xm[8], ym[8], -9357, 49152)));

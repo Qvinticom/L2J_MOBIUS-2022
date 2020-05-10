@@ -396,9 +396,9 @@ public abstract class Creature extends WorldObject
 		final StatusUpdate su = new StatusUpdate(getObjectId());
 		su.addAttribute(StatusUpdate.CUR_HP, (int) getCurrentHp());
 		su.addAttribute(StatusUpdate.CUR_MP, (int) getCurrentMp());
-		for (int i = 0; i < list.size(); ++i)
+		for (Creature element : list)
 		{
-			final Creature temp = list.get(i);
+			final Creature temp = element;
 			if (!(temp instanceof PlayerInstance))
 			{
 				continue;
@@ -881,19 +881,21 @@ public abstract class Creature extends WorldObject
 		}
 	}
 	
-	private synchronized void calculateMovement(int x, int y, int z, double distance)
+	private synchronized void calculateMovement(int x, int y, int z, double distanceValue)
 	{
 		if (isMoving())
 		{
 			stopMove();
 		}
-		if ((getPawnTarget() != null) && (distance <= getAttackRange()) && (getCurrentState() == CreatureState.FOLLOW))
+		if ((getPawnTarget() != null) && (distanceValue <= getAttackRange()) && (getCurrentState() == CreatureState.FOLLOW))
 		{
 			_moveTask = ThreadPool.schedule(new ArriveTask(this), 3000);
 			return;
 		}
+		
 		int dx = x - getX();
 		int dy = y - getY();
+		double distance = distanceValue;
 		if (_moveOffset > 0)
 		{
 			if ((distance - _moveOffset) <= 0.0)
@@ -908,6 +910,7 @@ public abstract class Creature extends WorldObject
 			dy = (int) (-(Math.sin(angle) * distance));
 			dx = (int) (-(Math.cos(angle) * distance));
 		}
+		
 		if ((distance > 0.0) || (getPawnTarget() != null))
 		{
 			final float speed = _effectiveSpeed;

@@ -320,30 +320,32 @@ public class Q00386_StolenDignity extends Quest
 	
 	private String fillBoard(QuestState qs, String html)
 	{
+		String result = html;
 		for (int i0 = 0; i0 < 9; i0 += 1)
 		{
 			final int i1 = getNumberFromBingoBoard(qs, i0);
 			if (isSelectedBingoNumber(qs, i1))
 			{
-				html = html.replace("<?Cell" + (i0 + 1) + "?>", Integer.toString(i1));
+				result = result.replace("<?Cell" + (i0 + 1) + "?>", Integer.toString(i1));
 			}
 			else
 			{
-				html = html.replace("<?Cell" + (i0 + 1) + "?>", "?");
+				result = result.replace("<?Cell" + (i0 + 1) + "?>", "?");
 			}
 		}
-		return html;
+		return result;
 	}
 	
 	private String colorBoard(QuestState qs, String html)
 	{
+		String result = html;
 		for (int i0 = 0; i0 < 9; i0 += 1)
 		{
 			final int i1 = getNumberFromBingoBoard(qs, i0);
-			html = html.replace("<?FontColor" + (i0 + 1) + "?>", isSelectedBingoNumber(qs, i1) ? "ff0000" : "ffffff");
-			html = html.replace("<?Cell" + (i0 + 1) + "?>", Integer.toString(i1));
+			result = result.replace("<?FontColor" + (i0 + 1) + "?>", isSelectedBingoNumber(qs, i1) ? "ff0000" : "ffffff");
+			result = result.replace("<?Cell" + (i0 + 1) + "?>", Integer.toString(i1));
 		}
-		return html;
+		return result;
 	}
 	
 	private String beforeReward(PlayerInstance player, QuestState qs, int num)

@@ -109,14 +109,15 @@ public class ExtendDropData implements IXmlReader
 		StatSet statSet = null;
 		List<Object> list = null;
 		Object text = null;
-		for (node = node.getFirstChild(); node != null; node = node.getNextSibling())
+		Node n = node;
+		for (n = n.getFirstChild(); n != null; n = n.getNextSibling())
 		{
-			final String nodeName = node.getNodeName();
-			switch (node.getNodeName())
+			final String nodeName = n.getNodeName();
+			switch (n.getNodeName())
 			{
 				case "#text":
 				{
-					final String value = node.getNodeValue().trim();
+					final String value = n.getNodeValue().trim();
 					if (!value.isEmpty())
 					{
 						text = value;
@@ -130,7 +131,7 @@ public class ExtendDropData implements IXmlReader
 						list = new LinkedList<>();
 					}
 					
-					final Object value = parseValue(node);
+					final Object value = parseValue(n);
 					if (value != null)
 					{
 						list.add(value);
@@ -139,7 +140,7 @@ public class ExtendDropData implements IXmlReader
 				}
 				default:
 				{
-					final Object value = parseValue(node);
+					final Object value = parseValue(n);
 					if (value != null)
 					{
 						if (statSet == null)
@@ -156,7 +157,7 @@ public class ExtendDropData implements IXmlReader
 		{
 			if (text != null)
 			{
-				throw new IllegalArgumentException("Text and list in same node are not allowed. Node[" + node + "]");
+				throw new IllegalArgumentException("Text and list in same node are not allowed. Node[" + n + "]");
 			}
 			if (statSet != null)
 			{
@@ -171,7 +172,7 @@ public class ExtendDropData implements IXmlReader
 		{
 			if (list != null)
 			{
-				throw new IllegalArgumentException("Text and list in same node are not allowed. Node[" + node + "]");
+				throw new IllegalArgumentException("Text and list in same node are not allowed. Node[" + n + "]");
 			}
 			if (statSet != null)
 			{

@@ -50,8 +50,9 @@ public class TelnetHandler implements IHandler<ITelnetHandler, String>
 	}
 	
 	@Override
-	public ITelnetHandler getHandler(String command)
+	public ITelnetHandler getHandler(String commandValue)
 	{
+		String command = commandValue;
 		if (command.contains(" "))
 		{
 			command = command.substring(0, command.indexOf(' '));

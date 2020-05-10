@@ -189,25 +189,28 @@ public abstract class WorldObject extends ListenersContainer implements IIdentif
 	{
 		synchronized (this)
 		{
-			if (x > World.MAP_MAX_X)
+			int spawnX = x;
+			if (spawnX > World.MAP_MAX_X)
 			{
-				x = World.MAP_MAX_X - 5000;
+				spawnX = World.MAP_MAX_X - 5000;
 			}
-			if (x < World.MAP_MIN_X)
+			if (spawnX < World.MAP_MIN_X)
 			{
-				x = World.MAP_MIN_X + 5000;
+				spawnX = World.MAP_MIN_X + 5000;
 			}
-			if (y > World.MAP_MAX_Y)
+			
+			int spawnY = y;
+			if (spawnY > World.MAP_MAX_Y)
 			{
-				y = World.MAP_MAX_Y - 5000;
+				spawnY = World.MAP_MAX_Y - 5000;
 			}
-			if (y < World.MAP_MIN_Y)
+			if (spawnY < World.MAP_MIN_Y)
 			{
-				y = World.MAP_MIN_Y + 5000;
+				spawnY = World.MAP_MIN_Y + 5000;
 			}
 			
 			// Set the x,y,z position of the WorldObject. If flagged with _isSpawned, setXYZ will automatically update world region, so avoid that.
-			setXYZ(x, y, z);
+			setXYZ(spawnX, spawnY, z);
 		}
 		
 		// Spawn and update its _worldregion
@@ -515,24 +518,27 @@ public abstract class WorldObject extends ListenersContainer implements IIdentif
 	
 	public void setXYZInvisible(int x, int y, int z)
 	{
-		if (x > World.MAP_MAX_X)
+		int correctX = x;
+		if (correctX > World.MAP_MAX_X)
 		{
-			x = World.MAP_MAX_X - 5000;
+			correctX = World.MAP_MAX_X - 5000;
 		}
-		if (x < World.MAP_MIN_X)
+		if (correctX < World.MAP_MIN_X)
 		{
-			x = World.MAP_MIN_X + 5000;
-		}
-		if (y > World.MAP_MAX_Y)
-		{
-			y = World.MAP_MAX_Y - 5000;
-		}
-		if (y < World.MAP_MIN_Y)
-		{
-			y = World.MAP_MIN_Y + 5000;
+			correctX = World.MAP_MIN_X + 5000;
 		}
 		
-		setXYZ(x, y, z);
+		int correctY = y;
+		if (correctY > World.MAP_MAX_Y)
+		{
+			correctY = World.MAP_MAX_Y - 5000;
+		}
+		if (correctY < World.MAP_MIN_Y)
+		{
+			correctY = World.MAP_MIN_Y + 5000;
+		}
+		
+		setXYZ(correctX, correctY, z);
 		setSpawned(false);
 	}
 	

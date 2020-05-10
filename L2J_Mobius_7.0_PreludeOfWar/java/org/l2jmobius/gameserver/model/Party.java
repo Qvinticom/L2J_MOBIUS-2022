@@ -824,17 +824,17 @@ public class Party extends AbstractPlayerGroup
 	 * <li>Get the PlayerInstance owner of the ServitorInstance (if necessary)</li>
 	 * <li>Calculate the Experience and SP reward distribution rate</li>
 	 * <li>Add Experience and SP to the PlayerInstance</li><br>
-	 * @param xpReward The Experience reward to distribute
-	 * @param spReward The SP reward to distribute
+	 * @param xpRewardValue The Experience reward to distribute
+	 * @param spRewardValue The SP reward to distribute
 	 * @param rewardedMembers The list of PlayerInstance to reward
 	 * @param topLvl
 	 * @param target
 	 */
-	public void distributeXpAndSp(double xpReward, double spReward, List<PlayerInstance> rewardedMembers, int topLvl, Attackable target)
+	public void distributeXpAndSp(double xpRewardValue, double spRewardValue, List<PlayerInstance> rewardedMembers, int topLvl, Attackable target)
 	{
 		final List<PlayerInstance> validMembers = getValidMembers(rewardedMembers, topLvl);
-		xpReward *= getExpBonus(validMembers.size(), target.getInstanceWorld());
-		spReward *= getSpBonus(validMembers.size(), target.getInstanceWorld());
+		double xpReward = xpRewardValue * getExpBonus(validMembers.size(), target.getInstanceWorld());
+		double spReward = spRewardValue * getSpBonus(validMembers.size(), target.getInstanceWorld());
 		int sqLevelSum = 0;
 		for (PlayerInstance member : validMembers)
 		{
@@ -888,10 +888,10 @@ public class Party extends AbstractPlayerGroup
 		}
 	}
 	
-	private double calculateExpSpPartyCutoff(PlayerInstance player, int topLvl, double addExp, double addSp, boolean vit)
+	private double calculateExpSpPartyCutoff(PlayerInstance player, int topLvl, double addExpValue, double addSpValue, boolean vit)
 	{
-		addExp *= Config.EXP_AMOUNT_MULTIPLIERS.getOrDefault(player.getClassId(), 1f);
-		addSp *= Config.SP_AMOUNT_MULTIPLIERS.getOrDefault(player.getClassId(), 1f);
+		final double addExp = addExpValue * Config.EXP_AMOUNT_MULTIPLIERS.getOrDefault(player.getClassId(), 1f);
+		final double addSp = addSpValue * Config.SP_AMOUNT_MULTIPLIERS.getOrDefault(player.getClassId(), 1f);
 		double xp = addExp;
 		double sp = addSp;
 		if (Config.PARTY_XP_CUTOFF_METHOD.equalsIgnoreCase("highfive"))

@@ -100,11 +100,7 @@ public class Shutdown extends Thread
 	 */
 	public Shutdown(int seconds, boolean restart)
 	{
-		if (seconds < 0)
-		{
-			seconds = 0;
-		}
-		_secondsShut = seconds;
+		_secondsShut = Math.max(0, seconds);
 		_shutdownMode = restart ? GM_RESTART : GM_SHUTDOWN;
 	}
 	

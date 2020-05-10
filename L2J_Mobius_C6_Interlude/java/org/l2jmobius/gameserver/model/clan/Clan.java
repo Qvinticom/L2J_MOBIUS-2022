@@ -854,8 +854,9 @@ public class Clan
 		}
 	}
 	
-	private void storeNotice(String notice, boolean enabled)
+	private void storeNotice(String noticeValue, boolean enabled)
 	{
+		String notice = noticeValue;
 		if (notice == null)
 		{
 			notice = "";
@@ -919,8 +920,10 @@ public class Clan
 		return (_introduction == null) ? "" : _introduction;
 	}
 	
-	public void setIntroduction(String intro, boolean saveOnDb)
+	public void setIntroduction(String value, boolean saveOnDb)
 	{
+		String intro = value;
+		
 		if (saveOnDb)
 		{
 			if (intro == null)
@@ -1426,10 +1429,10 @@ public class Clan
 		return _subPledges.values().toArray(new SubPledge[_subPledges.values().size()]);
 	}
 	
-	public SubPledge createSubPledge(PlayerInstance player, int pledgeType, String leaderName, String subPledgeName)
+	public SubPledge createSubPledge(PlayerInstance player, int pledgeTypeValue, String leaderName, String subPledgeName)
 	{
 		SubPledge subPledge = null;
-		pledgeType = getAvailablePledgeTypes(pledgeType);
+		int pledgeType = getAvailablePledgeTypes(pledgeTypeValue);
 		if (pledgeType == 0)
 		{
 			if (pledgeType == SUBUNIT_ACADEMY)
@@ -1505,8 +1508,7 @@ public class Clan
 				}
 				case SUBUNIT_ROYAL1:
 				{
-					pledgeType = getAvailablePledgeTypes(SUBUNIT_ROYAL2);
-					break;
+					return getAvailablePledgeTypes(SUBUNIT_ROYAL2);
 				}
 				case SUBUNIT_ROYAL2:
 				{
@@ -1514,18 +1516,15 @@ public class Clan
 				}
 				case SUBUNIT_KNIGHT1:
 				{
-					pledgeType = getAvailablePledgeTypes(SUBUNIT_KNIGHT2);
-					break;
+					return getAvailablePledgeTypes(SUBUNIT_KNIGHT2);
 				}
 				case SUBUNIT_KNIGHT2:
 				{
-					pledgeType = getAvailablePledgeTypes(SUBUNIT_KNIGHT3);
-					break;
+					return getAvailablePledgeTypes(SUBUNIT_KNIGHT3);
 				}
 				case SUBUNIT_KNIGHT3:
 				{
-					pledgeType = getAvailablePledgeTypes(SUBUNIT_KNIGHT4);
-					break;
+					return getAvailablePledgeTypes(SUBUNIT_KNIGHT4);
 				}
 				case SUBUNIT_KNIGHT4:
 				{

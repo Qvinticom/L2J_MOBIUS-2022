@@ -342,15 +342,16 @@ public class Auction
 	 */
 	private void returnItem(String clan, int quantity, boolean penalty)
 	{
+		int amount = quantity;
 		if (penalty)
 		{
-			quantity *= 0.9; // take 10% tax fee if needed
+			amount *= 0.9; // take 10% tax fee if needed
 		}
 		
 		// avoid overflow on return
 		final long limit = MAX_ADENA - ClanTable.getInstance().getClanByName(clan).getWarehouse().getAdena();
-		quantity = (int) Math.min(quantity, limit);
-		ClanTable.getInstance().getClanByName(clan).getWarehouse().addItem("Outbidded", ADENA_ID, quantity, null, null);
+		amount = (int) Math.min(amount, limit);
+		ClanTable.getInstance().getClanByName(clan).getWarehouse().addItem("Outbidded", ADENA_ID, amount, null, null);
 	}
 	
 	/**

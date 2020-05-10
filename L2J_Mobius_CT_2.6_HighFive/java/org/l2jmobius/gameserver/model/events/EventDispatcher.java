@@ -212,11 +212,12 @@ public class EventDispatcher
 	 * @param listeners
 	 * @param event
 	 * @param returnBackClass
-	 * @param callback
+	 * @param callbackValue
 	 * @return
 	 */
-	private <T extends AbstractEventReturn> T notifyToListeners(Queue<AbstractEventListener> listeners, IBaseEvent event, Class<T> returnBackClass, T callback)
+	private <T extends AbstractEventReturn> T notifyToListeners(Queue<AbstractEventListener> listeners, IBaseEvent event, Class<T> returnBackClass, T callbackValue)
 	{
+		T callback = callbackValue;
 		for (AbstractEventListener listener : listeners)
 		{
 			try

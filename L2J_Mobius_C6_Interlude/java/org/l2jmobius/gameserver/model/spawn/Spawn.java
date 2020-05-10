@@ -525,21 +525,16 @@ public class Spawn
 	}
 	
 	/**
-	 * @param i delay in seconds
+	 * @param value delay in seconds
 	 */
-	public void setRespawnDelay(int i)
+	public void setRespawnDelay(int value)
 	{
-		if (i < 0)
+		if (value < 0)
 		{
 			LOGGER.warning("respawn delay is negative for spawnId:" + _id);
 		}
 		
-		if (i < 10)
-		{
-			i = 10;
-		}
-		
-		_respawnDelay = i * 1000;
+		_respawnDelay = value < 10 ? 10000 : value * 1000;
 	}
 	
 	public NpcInstance getLastSpawn()

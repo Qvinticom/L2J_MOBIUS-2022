@@ -69,11 +69,11 @@ public class StoreTradeList
 		_items.add(item);
 	}
 	
-	public void replaceItem(int itemID, int price)
+	public void replaceItem(int itemID, int priceValue)
 	{
-		for (int i = 0; i < _items.size(); i++)
+		int price = priceValue;
+		for (final ItemInstance item : _items)
 		{
-			final ItemInstance item = _items.get(i);
 			if (item.getItemId() == itemID)
 			{
 				if (price < (item.getReferencePrice() / 2))
@@ -88,9 +88,8 @@ public class StoreTradeList
 	
 	public synchronized boolean decreaseCount(int itemID, int count)
 	{
-		for (int i = 0; i < _items.size(); i++)
+		for (final ItemInstance item : _items)
 		{
-			final ItemInstance item = _items.get(i);
 			if (item.getItemId() == itemID)
 			{
 				if (item.getCount() < count)
@@ -105,9 +104,8 @@ public class StoreTradeList
 	
 	public void restoreCount(int time)
 	{
-		for (int i = 0; i < _items.size(); i++)
+		for (final ItemInstance item : _items)
 		{
-			final ItemInstance item = _items.get(i);
 			if (item.getCountDecrease() && (item.getTime() == time))
 			{
 				item.restoreInitCount();
@@ -170,9 +168,8 @@ public class StoreTradeList
 	
 	public int getPriceForItemId(int itemId)
 	{
-		for (int i = 0; i < _items.size(); i++)
+		for (final ItemInstance item : _items)
 		{
-			final ItemInstance item = _items.get(i);
 			if (item.getItemId() == itemId)
 			{
 				return item.getPriceToSell();
@@ -183,9 +180,8 @@ public class StoreTradeList
 	
 	public boolean countDecrease(int itemId)
 	{
-		for (int i = 0; i < _items.size(); i++)
+		for (final ItemInstance item : _items)
 		{
-			final ItemInstance item = _items.get(i);
 			if (item.getItemId() == itemId)
 			{
 				return item.getCountDecrease();
@@ -208,9 +204,8 @@ public class StoreTradeList
 	
 	public ItemInstance getItem(int objectId)
 	{
-		for (int i = 0; i < _items.size(); i++)
+		for (final ItemInstance item : _items)
 		{
-			final ItemInstance item = _items.get(i);
 			if (item.getObjectId() == objectId)
 			{
 				return item;
@@ -250,9 +245,9 @@ public class StoreTradeList
 	{
 		boolean bool = false;
 		ItemInstance temp;
-		for (int y = 0; y < _items.size(); y++)
+		for (ItemInstance _item : _items)
 		{
-			temp = _items.get(y);
+			temp = _item;
 			if (temp.getObjectId() == objId)
 			{
 				bool = true;

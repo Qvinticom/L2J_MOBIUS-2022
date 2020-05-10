@@ -126,18 +126,13 @@ public class AutoChatHandler implements SpawnListener
 	private final AutoChatInstance registerChat(int npcId, NpcInstance npcInst, String[] chatTexts, long chatDelay)
 	{
 		AutoChatInstance chatInst = null;
-		if (chatDelay < 0)
-		{
-			chatDelay = DEFAULT_CHAT_DELAY;
-		}
-		
 		if (_registeredChats.containsKey(npcId))
 		{
 			chatInst = _registeredChats.get(npcId);
 		}
 		else
 		{
-			chatInst = new AutoChatInstance(npcId, chatTexts, chatDelay, (npcInst == null));
+			chatInst = new AutoChatInstance(npcId, chatTexts, chatDelay < 0 ? DEFAULT_CHAT_DELAY : chatDelay, (npcInst == null));
 		}
 		
 		if (npcInst != null)
@@ -146,7 +141,6 @@ public class AutoChatHandler implements SpawnListener
 		}
 		
 		_registeredChats.put(npcId, chatInst);
-		
 		return chatInst;
 	}
 	

@@ -484,6 +484,7 @@ public class MultiSellChoose extends GameClientPacket
 		}
 		
 		// Now modify the enchantment level of products, if necessary
+		int level = enchantLevel;
 		for (MultiSellIngredient ing : templateEntry.getProducts())
 		{
 			// Load the ingredient from the template
@@ -495,15 +496,16 @@ public class MultiSellChoose extends GameClientPacket
 				final Item tempItem = ItemTable.getInstance().createDummyItem(newIngredient.getItemId()).getItem();
 				if ((tempItem instanceof Armor) || (tempItem instanceof Weapon))
 				{
-					if ((enchantLevel == 0) && maintainEnchantment)
+					if ((level == 0) && maintainEnchantment)
 					{
-						enchantLevel = ing.getEnchantmentLevel();
+						level = ing.getEnchantmentLevel();
 					}
-					newIngredient.setEnchantmentLevel(enchantLevel);
+					newIngredient.setEnchantmentLevel(level);
 				}
 			}
 			newEntry.addProduct(newIngredient);
 		}
+		
 		return newEntry;
 	}
 }

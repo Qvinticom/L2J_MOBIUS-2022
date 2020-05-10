@@ -69,8 +69,9 @@ public class AuctionDateGenerator
 		return calcDestTime(_calendar.getTimeInMillis(), date, TimeUnit.MILLISECONDS.convert(_interval, TimeUnit.DAYS));
 	}
 	
-	private long calcDestTime(long time, long date, long add)
+	private long calcDestTime(long timeValue, long date, long add)
 	{
+		long time = timeValue;
 		if (time < date)
 		{
 			time += ((date - time) / add) * add;

@@ -325,13 +325,14 @@ public class AttackableAI extends CreatureAI
 	/**
 	 * Set the Intention of this CreatureAI and create an AI Task executed every 1s (call onEvtThink method) for this Attackable.<br>
 	 * <font color=#FF0000><b><u>Caution</u>: If actor _knowPlayer isn't EMPTY, AI_INTENTION_IDLE will be change in AI_INTENTION_ACTIVE</b></font>
-	 * @param intention The new Intention to set to the AI
+	 * @param newIntention The new Intention to set to the AI
 	 * @param arg0 The first parameter of the Intention
 	 * @param arg1 The second parameter of the Intention
 	 */
 	@Override
-	synchronized void changeIntention(CtrlIntention intention, Object arg0, Object arg1)
+	synchronized void changeIntention(CtrlIntention newIntention, Object arg0, Object arg1)
 	{
+		CtrlIntention intention = newIntention;
 		if ((intention == AI_INTENTION_IDLE) || (intention == AI_INTENTION_ACTIVE))
 		{
 			// Check if actor is not dead
@@ -359,7 +360,6 @@ public class AttackableAI extends CreatureAI
 				
 				// Cancel the AI
 				_actor.detachAI();
-				
 				return;
 			}
 		}

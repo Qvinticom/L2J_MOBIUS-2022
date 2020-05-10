@@ -62,28 +62,30 @@ public class LoginCrypt
 	
 	public int encrypt(byte[] raw, int offset, int size) throws IOException
 	{
+		int newSize = size;
 		// reserve checksum
-		size += 4;
+		newSize += 4;
 		
 		if (_static)
 		{
 			// reserve for XOR "key"
-			size += 4;
+			newSize += 4;
 			
 			// padding
-			size += 8 - (size % 8);
-			NewCrypt.encXORPass(raw, offset, size, Rnd.nextInt());
-			_staticCrypt.crypt(raw, offset, size);
+			newSize += 8 - (newSize % 8);
+			NewCrypt.encXORPass(raw, offset, newSize, Rnd.nextInt());
+			_staticCrypt.crypt(raw, offset, newSize);
 			
 			_static = false;
 		}
 		else
 		{
 			// padding
-			size += 8 - (size % 8);
-			NewCrypt.appendChecksum(raw, offset, size);
-			_crypt.crypt(raw, offset, size);
+			newSize += 8 - (newSize % 8);
+			NewCrypt.appendChecksum(raw, offset, newSize);
+			_crypt.crypt(raw, offset, newSize);
 		}
-		return size;
+		
+		return newSize;
 	}
 }

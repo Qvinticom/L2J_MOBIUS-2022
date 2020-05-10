@@ -44,10 +44,10 @@ public class SchemeBufferInstance extends Npc
 	}
 	
 	@Override
-	public void onBypassFeedback(PlayerInstance player, String command)
+	public void onBypassFeedback(PlayerInstance player, String commandValue)
 	{
 		// Simple hack to use createscheme bypass with a space.
-		command = command.replace("createscheme ", "createscheme;");
+		final String command = commandValue.replace("createscheme ", "createscheme;");
 		
 		final StringTokenizer st = new StringTokenizer(command, ";");
 		final String currentCommand = st.nextToken();
@@ -299,10 +299,10 @@ public class SchemeBufferInstance extends Npc
 	 * @param player : The player to make checks on.
 	 * @param groupType : The group of skills to select.
 	 * @param schemeName : The scheme to make check.
-	 * @param page The page.
+	 * @param pageValue The page.
 	 * @return a String representing skills available to selection for a given groupType.
 	 */
-	private String getGroupSkillList(PlayerInstance player, String groupType, String schemeName, int page)
+	private String getGroupSkillList(PlayerInstance player, String groupType, String schemeName, int pageValue)
 	{
 		// Retrieve the entire skills list based on group type.
 		List<Integer> skills = SchemeBufferTable.getInstance().getSkillsIdsByType(groupType);
@@ -313,6 +313,7 @@ public class SchemeBufferInstance extends Npc
 		
 		// Calculate page number.
 		final int max = countPagesNumber(skills.size(), PAGE_LIMIT);
+		int page = pageValue;
 		if (page > max)
 		{
 			page = max;

@@ -926,10 +926,10 @@ public class CreatureAI extends AbstractAI
 	 * <b><u>Example of use</u>:</b><br>
 	 * <li>PLayerAI, SummonAI</li><br>
 	 * @param target The targeted WorldObject
-	 * @param offset The Interact area radius
+	 * @param offsetValue The Interact area radius
 	 * @return True if a movement must be done
 	 */
-	protected boolean maybeMoveToPawn(WorldObject target, int offset)
+	protected boolean maybeMoveToPawn(WorldObject target, int offsetValue)
 	{
 		// Get the distance between the current position of the Creature and the target (x,y)
 		if (target == null)
@@ -939,12 +939,12 @@ public class CreatureAI extends AbstractAI
 		}
 		
 		// skill radius -1
-		if (offset < 0)
+		if (offsetValue < 0)
 		{
 			return false;
 		}
 		
-		int offsetWithCollision = offset + _actor.getTemplate().getCollisionRadius();
+		int offsetWithCollision = offsetValue + _actor.getTemplate().getCollisionRadius();
 		if (target instanceof Creature)
 		{
 			offsetWithCollision += ((Creature) target).getTemplate().getCollisionRadius();
@@ -998,7 +998,7 @@ public class CreatureAI extends AbstractAI
 			}
 			
 			stopFollow();
-			
+			int offset = offsetValue;
 			if ((target instanceof Creature) && !(target instanceof DoorInstance))
 			{
 				if (((Creature) target).isMoving())

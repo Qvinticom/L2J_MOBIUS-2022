@@ -725,18 +725,18 @@ public class Party extends AbstractPlayerGroup
 	 * <li>Get the PlayerInstance owner of the ServitorInstance (if necessary)</li>
 	 * <li>Calculate the Experience and SP reward distribution rate</li>
 	 * <li>Add Experience and SP to the PlayerInstance</li><br>
-	 * @param xpReward The Experience reward to distribute
-	 * @param spReward The SP reward to distribute
+	 * @param xpRewardValue The Experience reward to distribute
+	 * @param spRewardValue The SP reward to distribute
 	 * @param rewardedMembers The list of PlayerInstance to reward
 	 * @param topLvl
 	 * @param partyDmg
 	 * @param target
 	 */
-	public void distributeXpAndSp(double xpReward, double spReward, List<PlayerInstance> rewardedMembers, int topLvl, long partyDmg, Attackable target)
+	public void distributeXpAndSp(double xpRewardValue, double spRewardValue, List<PlayerInstance> rewardedMembers, int topLvl, long partyDmg, Attackable target)
 	{
 		final List<PlayerInstance> validMembers = getValidMembers(rewardedMembers, topLvl);
-		xpReward *= getExpBonus(validMembers.size());
-		spReward *= getSpBonus(validMembers.size());
+		double xpReward = xpRewardValue * getExpBonus(validMembers.size());
+		double spReward = spRewardValue * getSpBonus(validMembers.size());
 		int sqLevelSum = 0;
 		for (PlayerInstance member : validMembers)
 		{

@@ -41,19 +41,20 @@ public class PlayableStat extends CreatureStat
 		super(activeChar);
 	}
 	
-	public boolean addExp(long value)
+	public boolean addExp(long amount)
 	{
-		final TerminateReturn term = EventDispatcher.getInstance().notifyEvent(new OnPlayableExpChanged(getActiveChar(), getExp(), getExp() + value), getActiveChar(), TerminateReturn.class);
+		final TerminateReturn term = EventDispatcher.getInstance().notifyEvent(new OnPlayableExpChanged(getActiveChar(), getExp(), getExp() + amount), getActiveChar(), TerminateReturn.class);
 		if ((term != null) && term.terminate())
 		{
 			return false;
 		}
 		
-		if (((getExp() + value) < 0) || ((value > 0) && (getExp() == (getExpForLevel(getMaxLevel()) - 1))))
+		if (((getExp() + amount) < 0) || ((amount > 0) && (getExp() == (getExpForLevel(getMaxLevel()) - 1))))
 		{
 			return true;
 		}
 		
+		long value = amount;
 		if ((getExp() + value) >= getExpForLevel(getMaxLevel()))
 		{
 			value = getExpForLevel(getMaxLevel()) - 1 - getExp();
@@ -77,6 +78,7 @@ public class PlayableStat extends CreatureStat
 			level = --tmp;
 			break;
 		}
+		
 		if ((level != getLevel()) && (level >= minimumLevel))
 		{
 			addLevel((byte) (level - getLevel()));
@@ -85,8 +87,9 @@ public class PlayableStat extends CreatureStat
 		return true;
 	}
 	
-	public boolean removeExp(long value)
+	public boolean removeExp(long amount)
 	{
+		long value = amount;
 		if ((getExp() - value) < 0)
 		{
 			value = getExp() - 1;
@@ -131,8 +134,9 @@ public class PlayableStat extends CreatureStat
 		return expRemoved || spRemoved;
 	}
 	
-	public boolean addLevel(byte value)
+	public boolean addLevel(byte amount)
 	{
+		byte value = amount;
 		if ((getLevel() + value) > (getMaxLevel() - 1))
 		{
 			if (getLevel() < (getMaxLevel() - 1))
@@ -171,19 +175,21 @@ public class PlayableStat extends CreatureStat
 		return true;
 	}
 	
-	public boolean addSp(long value)
+	public boolean addSp(long amount)
 	{
-		if (value < 0)
+		if (amount < 0)
 		{
 			LOGGER.warning("wrong usage");
 			return false;
 		}
+		
 		final long currentSp = getSp();
 		if (currentSp >= Config.MAX_SP)
 		{
 			return false;
 		}
 		
+		long value = amount;
 		if (currentSp > (Config.MAX_SP - value))
 		{
 			value = Config.MAX_SP - currentSp;
@@ -193,14 +199,15 @@ public class PlayableStat extends CreatureStat
 		return true;
 	}
 	
-	public boolean removeSp(long value)
+	public boolean removeSp(long amount)
 	{
 		final long currentSp = getSp();
-		if (currentSp < value)
+		if (currentSp < amount)
 		{
-			value = currentSp;
+			setSp(getSp() - currentSp);
+			return true;
 		}
-		setSp(getSp() - value);
+		setSp(getSp() - amount);
 		return true;
 	}
 	

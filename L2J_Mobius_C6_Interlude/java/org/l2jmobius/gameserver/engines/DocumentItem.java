@@ -149,8 +149,9 @@ final class DocumentItem extends DocumentBase
 		}
 	}
 	
-	protected void parseItem(Node n)
+	protected void parseItem(Node node)
 	{
+		Node n = node;
 		final int itemId = Integer.parseInt(n.getAttributes().getNamedItem("id").getNodeValue());
 		final String className = n.getAttributes().getNamedItem("type").getNodeValue();
 		final String itemName = n.getAttributes().getNamedItem("name").getNodeValue();

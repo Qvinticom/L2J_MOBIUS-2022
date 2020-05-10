@@ -184,20 +184,21 @@ public class Party
 	 */
 	private PlayerInstance getCheckedNextLooter(int itemId, Creature target)
 	{
-		for (int i = 0; i < _members.size(); i++)
+		for (@SuppressWarnings("unused")
+		PlayerInstance member : _members)
 		{
 			if (++_itemLastLoot >= _members.size())
 			{
 				_itemLastLoot = 0;
 			}
 			
-			PlayerInstance member;
+			PlayerInstance player;
 			try
 			{
-				member = _members.get(_itemLastLoot);
-				if (member.getInventory().validateCapacityByItemId(itemId) && Util.checkIfInRange(Config.ALT_PARTY_RANGE, target, member, true))
+				player = _members.get(_itemLastLoot);
+				if (player.getInventory().validateCapacityByItemId(itemId) && Util.checkIfInRange(Config.ALT_PARTY_RANGE, target, player, true))
 				{
-					return member;
+					return player;
 				}
 			}
 			catch (Exception e)
@@ -691,20 +692,20 @@ public class Party
 	 * <li>Add Experience and SP to the PlayerInstance</li><br>
 	 * <font color=#FF0000><b><u>Caution</u>: This method DOESN'T GIVE rewards to PetInstance</b></font><br>
 	 * Exception are PetInstances that leech from the owner's XP; they get the exp indirectly, via the owner's exp gain
-	 * @param xpReward The Experience reward to distribute
-	 * @param spReward The SP reward to distribute
+	 * @param xpRewardValue The Experience reward to distribute
+	 * @param spRewardValue The SP reward to distribute
 	 * @param rewardedMembers The list of PlayerInstance to reward
 	 * @param topLvl
 	 */
-	public void distributeXpAndSp(long xpReward, int spReward, List<Playable> rewardedMembers, int topLvl)
+	public void distributeXpAndSp(long xpRewardValue, int spRewardValue, List<Playable> rewardedMembers, int topLvl)
 	{
 		SummonInstance summon = null;
 		final List<Playable> validMembers = getValidMembers(rewardedMembers, topLvl);
 		float penalty;
 		double sqLevel;
 		double preCalculation;
-		xpReward *= getExpBonus(validMembers.size());
-		spReward *= getSpBonus(validMembers.size());
+		int xpReward = (int) (xpRewardValue * getExpBonus(validMembers.size()));
+		int spReward = (int) (spRewardValue * getSpBonus(validMembers.size()));
 		double sqLevelSum = 0;
 		for (Playable character : validMembers)
 		{

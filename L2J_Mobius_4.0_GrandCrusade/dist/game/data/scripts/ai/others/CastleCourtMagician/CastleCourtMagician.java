@@ -386,8 +386,9 @@ public class CastleCourtMagician extends AbstractNpcAI
 		return ((player.getClan() != null) && (player.getClanId() == npc.getCastle().getOwnerId())) ? "courtmagician.html" : "courtmagician-01.html";
 	}
 	
-	private void showClassSpecificMultisell(PlayerInstance player, Npc npc, int index)
+	private void showClassSpecificMultisell(PlayerInstance player, Npc npc, int indexValue)
 	{
+		int index = indexValue;
 		for (CategoryType ct : AWAKENED_CT)
 		{
 			if (player.isInCategory(ct))

@@ -145,28 +145,29 @@ public class ChanceSkillList extends ConcurrentHashMap<Skill, ChanceCondition>
 		{
 			if (skill.calcWeaponDependancy(_owner))
 			{
-				if (skill.triggerAnotherSkill()) // should we use this skill or this skill is just referring to another one ...
+				Skill castedSkill = skill;
+				if (castedSkill.triggerAnotherSkill()) // should we use this skill or this skill is just referring to another one ...
 				{
-					skill = _owner.getSkills().get(skill.getTriggeredId());
-					if (skill == null)
+					castedSkill = _owner.getSkills().get(castedSkill.getTriggeredId());
+					if (castedSkill == null)
 					{
 						return;
 					}
 				}
 				
-				final ISkillHandler handler = SkillHandler.getInstance().getSkillHandler(skill.getSkillType());
-				final WorldObject[] targets = skill.getTargetList(_owner, false, target);
-				_owner.broadcastPacket(new MagicSkillLaunched(_owner, skill.getDisplayId(), skill.getLevel(), targets));
-				_owner.broadcastPacket(new MagicSkillUse(_owner, (Creature) targets[0], skill.getDisplayId(), skill.getLevel(), 0, 0));
+				final ISkillHandler handler = SkillHandler.getInstance().getSkillHandler(castedSkill.getSkillType());
+				final WorldObject[] targets = castedSkill.getTargetList(_owner, false, target);
+				_owner.broadcastPacket(new MagicSkillLaunched(_owner, castedSkill.getDisplayId(), castedSkill.getLevel(), targets));
+				_owner.broadcastPacket(new MagicSkillUse(_owner, (Creature) targets[0], castedSkill.getDisplayId(), castedSkill.getLevel(), 0, 0));
 				
 				// Launch the magic skill and calculate its effects
 				if (handler != null)
 				{
-					handler.useSkill(_owner, skill, targets);
+					handler.useSkill(_owner, castedSkill, targets);
 				}
 				else
 				{
-					skill.useSkill(_owner, targets);
+					castedSkill.useSkill(_owner, targets);
 				}
 			}
 		}

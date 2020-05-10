@@ -116,17 +116,18 @@ public class CreatureStatus
 	
 	/**
 	 * Reduce hp.
-	 * @param value the value
+	 * @param amount the value
 	 * @param attacker the attacker
 	 * @param awake the awake
 	 */
-	public void reduceHp(double value, Creature attacker, boolean awake)
+	public void reduceHp(double amount, Creature attacker, boolean awake)
 	{
 		if (_creature.isInvul())
 		{
 			return;
 		}
 		
+		double value = amount;
 		if (_creature instanceof PlayerInstance)
 		{
 			if (((PlayerInstance) _creature).isInDuel())
@@ -256,17 +257,11 @@ public class CreatureStatus
 	
 	/**
 	 * Reduce mp.
-	 * @param value the value
+	 * @param amount the value
 	 */
-	public void reduceMp(double value)
+	public void reduceMp(double amount)
 	{
-		value = _currentMp - value;
-		if (value < 0)
-		{
-			value = 0;
-		}
-		
-		setCurrentMp(value);
+		setCurrentMp(Math.max(0, _currentMp - amount));
 	}
 	
 	/**
@@ -376,21 +371,18 @@ public class CreatureStatus
 	
 	/**
 	 * Sets the current cp.
-	 * @param newCp the new cp
+	 * @param value the new cp
 	 * @param broadcastPacket the broadcast packet
 	 * @param direct the direct
 	 */
-	public void setCurrentCp(double newCp, boolean broadcastPacket, boolean direct)
+	public void setCurrentCp(double value, boolean broadcastPacket, boolean direct)
 	{
 		synchronized (this)
 		{
 			// Get the Max CP of the Creature
 			final int maxCp = _creature.getStat().getMaxCp();
-			if (newCp < 0)
-			{
-				newCp = 0;
-			}
 			
+			final double newCp = Math.max(0, value);
 			if ((newCp >= maxCp) && !direct)
 			{
 				// Set the RegenActive flag to false

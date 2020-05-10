@@ -790,19 +790,18 @@ public class PetInstance extends Summon
 		}
 	}
 	
-	public void dropItemHere(ItemInstance dropit, boolean protect)
+	public void dropItemHere(ItemInstance item, boolean protect)
 	{
-		dropit = _inventory.dropItem("Drop", dropit.getObjectId(), dropit.getCount(), getOwner(), this);
-		if (dropit == null)
+		final ItemInstance dropit = _inventory.dropItem("Drop", item.getObjectId(), item.getCount(), getOwner(), this);
+		if (dropit != null)
 		{
-			return;
+			if (protect)
+			{
+				dropit.getDropProtection().protect(getOwner());
+			}
+			LOGGER_PET.finer("Item id to drop: " + dropit.getId() + " amount: " + dropit.getCount());
+			dropit.dropMe(this, getX(), getY(), getZ() + 100);
 		}
-		if (protect)
-		{
-			dropit.getDropProtection().protect(getOwner());
-		}
-		LOGGER_PET.finer("Item id to drop: " + dropit.getId() + " amount: " + dropit.getCount());
-		dropit.dropMe(this, getX(), getY(), getZ() + 100);
 	}
 	
 	public void dropItemHere(ItemInstance dropit)

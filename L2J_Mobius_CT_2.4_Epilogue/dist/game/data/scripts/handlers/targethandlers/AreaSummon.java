@@ -36,8 +36,8 @@ public class AreaSummon implements ITargetTypeHandler
 	public WorldObject[] getTargetList(Skill skill, Creature creature, boolean onlyFirst, Creature target)
 	{
 		final List<Creature> targetList = new ArrayList<>();
-		target = creature.getSummon();
-		if ((target == null) || !target.isServitor() || target.isDead())
+		final Creature targetCreature = creature.getSummon();
+		if ((targetCreature == null) || !targetCreature.isServitor() || targetCreature.isDead())
 		{
 			return EMPTY_TARGET_LIST;
 		}
@@ -46,13 +46,13 @@ public class AreaSummon implements ITargetTypeHandler
 		{
 			return new Creature[]
 			{
-				target
+				targetCreature
 			};
 		}
 		
 		final boolean srcInArena = (creature.isInsideZone(ZoneId.PVP) && !creature.isInsideZone(ZoneId.SIEGE));
 		final int maxTargets = skill.getAffectLimit();
-		World.getInstance().forEachVisibleObjectInRange(target, Creature.class, skill.getAffectRange(), obj ->
+		World.getInstance().forEachVisibleObjectInRange(targetCreature, Creature.class, skill.getAffectRange(), obj ->
 		{
 			if (obj == creature)
 			{

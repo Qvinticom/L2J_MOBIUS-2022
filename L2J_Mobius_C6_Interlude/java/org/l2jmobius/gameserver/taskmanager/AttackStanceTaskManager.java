@@ -45,8 +45,9 @@ public class AttackStanceTaskManager
 		ThreadPool.scheduleAtFixedRate(new FightModeScheduler(), 0, 1000);
 	}
 	
-	public void addAttackStanceTask(Creature actor)
+	public void addAttackStanceTask(Creature creature)
 	{
+		Creature actor = creature;
 		if (actor instanceof Summon)
 		{
 			final Summon summon = (Summon) actor;
@@ -66,8 +67,9 @@ public class AttackStanceTaskManager
 		_attackStanceTasks.put(actor, System.currentTimeMillis());
 	}
 	
-	public void removeAttackStanceTask(Creature actor)
+	public void removeAttackStanceTask(Creature creature)
 	{
+		Creature actor = creature;
 		if (actor instanceof Summon)
 		{
 			final Summon summon = (Summon) actor;
@@ -76,8 +78,9 @@ public class AttackStanceTaskManager
 		_attackStanceTasks.remove(actor);
 	}
 	
-	public boolean hasAttackStanceTask(Creature actor)
+	public boolean hasAttackStanceTask(Creature creature)
 	{
+		Creature actor = creature;
 		if (actor instanceof Summon)
 		{
 			final Summon summon = (Summon) actor;

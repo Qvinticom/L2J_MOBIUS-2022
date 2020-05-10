@@ -89,11 +89,11 @@ public class HermuncusMinion extends AbstractNpcAI
 	}
 	
 	@Override
-	public String onAdvEvent(String event, Npc npc, PlayerInstance player)
+	public String onAdvEvent(String eventValue, Npc npc, PlayerInstance player)
 	{
 		String htmltext = null;
-		final StringTokenizer st = new StringTokenizer(event, " ");
-		event = st.nextToken();
+		final StringTokenizer st = new StringTokenizer(eventValue, " ");
+		final String event = st.nextToken();
 		if (event.equals("teleportList"))
 		{
 			if (!player.isInCategory(CategoryType.SIXTH_CLASS_GROUP))

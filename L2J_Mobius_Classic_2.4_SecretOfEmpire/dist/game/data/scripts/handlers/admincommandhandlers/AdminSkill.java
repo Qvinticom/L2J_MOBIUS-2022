@@ -86,8 +86,9 @@ public class AdminSkill implements IAdminCommandHandler
 	private static Skill[] adminSkills;
 	
 	@Override
-	public boolean useAdminCommand(String command, PlayerInstance activeChar)
+	public boolean useAdminCommand(String commandValue, PlayerInstance activeChar)
 	{
+		String command = commandValue;
 		if (command.equals("admin_show_skills"))
 		{
 			showMainPage(activeChar);
@@ -343,9 +344,9 @@ public class AdminSkill implements IAdminCommandHandler
 	/**
 	 * TODO: Externalize HTML
 	 * @param activeChar the active Game Master.
-	 * @param page
+	 * @param pageValue
 	 */
-	private void removeSkillsPage(PlayerInstance activeChar, int page)
+	private void removeSkillsPage(PlayerInstance activeChar, int pageValue)
 	{
 		final WorldObject target = activeChar.getTarget();
 		if ((target == null) || !target.isPlayer())
@@ -363,6 +364,7 @@ public class AdminSkill implements IAdminCommandHandler
 			maxPages++;
 		}
 		
+		int page = pageValue;
 		if (page > maxPages)
 		{
 			page = maxPages;

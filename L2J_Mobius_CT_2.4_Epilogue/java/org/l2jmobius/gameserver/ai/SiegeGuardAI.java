@@ -137,35 +137,37 @@ public class SiegeGuardAI extends CreatureAI implements Runnable
 		}
 		
 		// Get the owner if the target is a summon
-		if (target.isSummon())
+		Creature currentTarget = target;
+		if (currentTarget.isSummon())
 		{
-			final PlayerInstance owner = ((Summon) target).getOwner();
+			final PlayerInstance owner = ((Summon) currentTarget).getOwner();
 			if (_actor.isInsideRadius3D(owner, 1000))
 			{
-				target = owner;
+				currentTarget = owner;
 			}
 		}
 		
 		// Check if the target isn't in silent move mode AND too far (>100)
-		if (target.isPlayable() && ((Playable) target).isSilentMovingAffected() && !_actor.isInsideRadius2D(target, 250))
+		if (currentTarget.isPlayable() && ((Playable) currentTarget).isSilentMovingAffected() && !_actor.isInsideRadius2D(currentTarget, 250))
 		{
 			return false;
 		}
 		
 		// Los Check Here
-		return (_actor.isAutoAttackable(target) && GeoEngine.getInstance().canSeeTarget(_actor, target));
+		return (_actor.isAutoAttackable(currentTarget) && GeoEngine.getInstance().canSeeTarget(_actor, currentTarget));
 	}
 	
 	/**
 	 * Set the Intention of this CreatureAI and create an AI Task executed every 1s (call onEvtThink method) for this Attackable.<br>
 	 * <font color=#FF0000><b><u>Caution</u>: If actor _knowPlayer isn't EMPTY, AI_INTENTION_IDLE will be change in AI_INTENTION_ACTIVE</b></font>
-	 * @param intention The new Intention to set to the AI
+	 * @param newIntention The new Intention to set to the AI
 	 * @param arg0 The first parameter of the Intention
 	 * @param arg1 The second parameter of the Intention
 	 */
 	@Override
-	synchronized void changeIntention(CtrlIntention intention, Object arg0, Object arg1)
+	synchronized void changeIntention(CtrlIntention newIntention, Object arg0, Object arg1)
 	{
+		CtrlIntention intention = newIntention;
 		if (intention == AI_INTENTION_IDLE /* || intention == AI_INTENTION_ACTIVE */) // active becomes idle if only a summon is present
 		{
 			// Check if actor is not dead
@@ -198,7 +200,6 @@ public class SiegeGuardAI extends CreatureAI implements Runnable
 				
 				// Cancel the AI
 				_actor.detachAI();
-				
 				return;
 			}
 		}
@@ -731,8 +732,7 @@ public class SiegeGuardAI extends CreatureAI implements Runnable
 			me.addDamageHate(target, 0, aggro);
 			
 			// Get the hate of the actor against the target
-			aggro = me.getHating(target);
-			if (aggro <= 0)
+			if (me.getHating(target) <= 0)
 			{
 				if (me.getMostHated() == null)
 				{
@@ -783,8 +783,7 @@ public class SiegeGuardAI extends CreatureAI implements Runnable
 				me.addDamageHate(aggroed, 0, aggro);
 			}
 			
-			aggro = me.getHating(mostHated);
-			if (aggro <= 0)
+			if (me.getHating(mostHated) <= 0)
 			{
 				_globalAggro = -25;
 				me.clearAggroList();

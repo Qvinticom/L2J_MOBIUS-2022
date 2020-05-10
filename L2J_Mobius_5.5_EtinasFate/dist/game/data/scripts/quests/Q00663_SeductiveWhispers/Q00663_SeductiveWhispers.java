@@ -189,12 +189,9 @@ public class Q00663_SeductiveWhispers extends Quest
 				// practice
 				if (getQuestItemsCount(player, SPIRIT_BEAD) < 1)
 				{
-					event = "30846-13.html";
+					return "30846-13.html";
 				}
-				else
-				{
-					takeItems(player, SPIRIT_BEAD, 1);
-				}
+				takeItems(player, SPIRIT_BEAD, 1);
 				break;
 			}
 			case "30846-22.html":
@@ -207,8 +204,7 @@ public class Q00663_SeductiveWhispers extends Quest
 				{
 					playerCard = getRandomCard();
 				}
-				event = play(player, true, true);
-				break;
+				return play(player, true, true);
 			}
 			case "30846-23.html":
 			{
@@ -221,19 +217,15 @@ public class Q00663_SeductiveWhispers extends Quest
 				{
 					npcCard = getRandomCard();
 				}
-				event = play(player, false, true);
-				break;
+				return play(player, false, true);
 			}
 			case "30846-15.html":
 			{
 				if (getQuestItemsCount(player, SPIRIT_BEAD) < 50)
 				{
-					event = "30846-08.html";
+					return "30846-08.html";
 				}
-				else
-				{
-					takeItems(player, SPIRIT_BEAD, 50);
-				}
+				takeItems(player, SPIRIT_BEAD, 50);
 				break;
 			}
 			case "30846-16.html":
@@ -247,8 +239,7 @@ public class Q00663_SeductiveWhispers extends Quest
 				{
 					playerCard = getRandomCard();
 				}
-				event = play(player, true, false);
-				break;
+				return play(player, true, false);
 			}
 			case "30846-17.html":
 			{
@@ -262,9 +253,7 @@ public class Q00663_SeductiveWhispers extends Quest
 				{
 					npcCard = getRandomCard();
 				}
-				
-				event = play(player, false, false);
-				break;
+				return play(player, false, false);
 			}
 			case "30846-20.html":
 			{
@@ -484,6 +473,7 @@ public class Q00663_SeductiveWhispers extends Quest
 	{
 		SUN("Sun card"),
 		MOON("Moon card");
+		
 		private String _name;
 		
 		Side(String name)

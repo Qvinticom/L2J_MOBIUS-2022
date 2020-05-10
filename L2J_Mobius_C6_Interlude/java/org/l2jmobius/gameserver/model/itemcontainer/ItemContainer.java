@@ -177,32 +177,33 @@ public abstract class ItemContainer
 	 */
 	public ItemInstance addItem(String process, ItemInstance item, PlayerInstance actor, WorldObject reference)
 	{
-		final ItemInstance olditem = getItemByItemId(item.getItemId());
+		ItemInstance newItem = item;
+		final ItemInstance olditem = getItemByItemId(newItem.getItemId());
 		
 		// If stackable item is found in inventory just add to current quantity
 		if ((olditem != null) && olditem.isStackable())
 		{
-			final int count = item.getCount();
+			final int count = newItem.getCount();
 			olditem.changeCount(process, count, actor, reference);
 			olditem.setLastChange(ItemInstance.MODIFIED);
 			
 			// And destroys the item
-			ItemTable.getInstance().destroyItem(process, item, actor, reference);
-			item.updateDatabase();
-			item = olditem;
+			ItemTable.getInstance().destroyItem(process, newItem, actor, reference);
+			newItem.updateDatabase();
+			newItem = olditem;
 		}
 		else // If item hasn't be found in inventory, create new one
 		{
-			item.setOwnerId(process, getOwnerId(), actor, reference);
-			item.setLocation(getBaseLocation());
-			item.setLastChange(ItemInstance.ADDED);
+			newItem.setOwnerId(process, getOwnerId(), actor, reference);
+			newItem.setLocation(getBaseLocation());
+			newItem.setLastChange(ItemInstance.ADDED);
 			
 			// Add item in inventory
-			addItem(item);
+			addItem(newItem);
 		}
 		
 		refreshWeight();
-		return item;
+		return newItem;
 	}
 	
 	/**
@@ -306,13 +307,13 @@ public abstract class ItemContainer
 	 * Transfers item to another inventory
 	 * @param process : String Identifier of process triggering this action
 	 * @param objectId
-	 * @param count : int Quantity of items to be transfered
+	 * @param amount : int Quantity of items to be transfered
 	 * @param target
 	 * @param actor : PlayerInstance Player requesting the item transfer
 	 * @param reference : WorldObject Object referencing current action like NPC selling item or previous item in transformation
 	 * @return ItemInstance corresponding to the new item or the updated item in inventory
 	 */
-	public ItemInstance transferItem(String process, int objectId, int count, ItemContainer target, PlayerInstance actor, WorldObject reference)
+	public ItemInstance transferItem(String process, int objectId, int amount, ItemContainer target, PlayerInstance actor, WorldObject reference)
 	{
 		if (target == null)
 		{
@@ -335,6 +336,7 @@ public abstract class ItemContainer
 			}
 			
 			// Check if requested quantity is available
+			int count = amount;
 			if (count > sourceitem.getCount())
 			{
 				count = sourceitem.getCount();

@@ -51,8 +51,9 @@ public class AdminFortSiege implements IAdminCommandHandler
 	};
 	
 	@Override
-	public boolean useAdminCommand(String command, PlayerInstance activeChar)
+	public boolean useAdminCommand(String commandValue, PlayerInstance activeChar)
 	{
+		String command = commandValue;
 		final StringTokenizer st = new StringTokenizer(command, " ");
 		command = st.nextToken(); // Get actual command
 		

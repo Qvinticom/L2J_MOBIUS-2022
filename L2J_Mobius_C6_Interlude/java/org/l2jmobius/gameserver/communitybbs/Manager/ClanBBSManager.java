@@ -229,7 +229,7 @@ public class ClanBBSManager extends BaseBBSManager
 		send1002(activeChar, clan.getNotice(), "", "");
 	}
 	
-	private void sendClanList(PlayerInstance activeChar, int index)
+	private void sendClanList(PlayerInstance activeChar, int indexValue)
 	{
 		String content = HtmCache.getInstance().getHtm(CB_PATH + "clan/clanlist.htm");
 		
@@ -242,6 +242,7 @@ public class ClanBBSManager extends BaseBBSManager
 		}
 		
 		content = content.replace("%homebar%", sb.toString());
+		int index = indexValue;
 		if (index < 1)
 		{
 			index = 1;
@@ -303,7 +304,6 @@ public class ClanBBSManager extends BaseBBSManager
 		}
 		
 		sb.append("</tr></table>");
-		
 		content = content.replace("%clanlist%", sb.toString());
 		separateAndSend(content, activeChar);
 	}

@@ -218,9 +218,9 @@ public class MerchantInstance extends FolkInstance
 	/**
 	 * Try rent pet.
 	 * @param player the player
-	 * @param value the value
+	 * @param val the value
 	 */
-	public void tryRentPet(PlayerInstance player, int value)
+	public void tryRentPet(PlayerInstance player, int val)
 	{
 		if ((player == null) || (player.getPet() != null) || player.isMounted() || player.isRentedPet())
 		{
@@ -248,6 +248,7 @@ public class MerchantInstance extends FolkInstance
 			1800
 		};
 		
+		int value = val;
 		if (value > 10)
 		{
 			petId = 12526;

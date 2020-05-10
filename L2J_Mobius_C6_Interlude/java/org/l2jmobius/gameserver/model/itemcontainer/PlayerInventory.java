@@ -24,8 +24,8 @@ import java.util.List;
 
 import org.l2jmobius.commons.database.DatabaseFactory;
 import org.l2jmobius.gameserver.model.TradeList;
-import org.l2jmobius.gameserver.model.WorldObject;
 import org.l2jmobius.gameserver.model.TradeList.TradeItem;
+import org.l2jmobius.gameserver.model.WorldObject;
 import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
 import org.l2jmobius.gameserver.model.items.Item;
 import org.l2jmobius.gameserver.model.items.instance.ItemInstance;
@@ -399,18 +399,19 @@ public class PlayerInventory extends Inventory
 	@Override
 	public ItemInstance addItem(String process, ItemInstance item, PlayerInstance actor, WorldObject reference)
 	{
-		item = super.addItem(process, item, actor, reference);
-		if ((item != null) && (item.getItemId() == ADENA_ID) && !item.equals(_adena))
+		ItemInstance addedItem = super.addItem(process, item, actor, reference);
+		
+		if ((addedItem != null) && (addedItem.getItemId() == ADENA_ID) && !addedItem.equals(_adena))
 		{
-			_adena = item;
+			_adena = addedItem;
 		}
 		
-		if ((item != null) && (item.getItemId() == ANCIENT_ADENA_ID) && !item.equals(_ancientAdena))
+		if ((addedItem != null) && (addedItem.getItemId() == ANCIENT_ADENA_ID) && !addedItem.equals(_ancientAdena))
 		{
-			_ancientAdena = item;
+			_ancientAdena = addedItem;
 		}
 		
-		return item;
+		return addedItem;
 	}
 	
 	/**
@@ -426,6 +427,7 @@ public class PlayerInventory extends Inventory
 	public ItemInstance addItem(String process, int itemId, int count, PlayerInstance actor, WorldObject reference)
 	{
 		final ItemInstance item = super.addItem(process, itemId, count, actor, reference);
+		
 		if ((item != null) && (item.getItemId() == ADENA_ID) && !item.equals(_adena))
 		{
 			_adena = item;

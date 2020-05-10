@@ -2162,9 +2162,9 @@ public abstract class AbstractScript extends ManagedScript implements IEventTime
 	 * Add a temporary spawn of the specified NPC.
 	 * @param summoner the NPC that requires this spawn
 	 * @param npcId the ID of the NPC to spawn
-	 * @param x the X coordinate of the spawn location
-	 * @param y the Y coordinate of the spawn location
-	 * @param z the Z coordinate (height) of the spawn location
+	 * @param xValue the X coordinate of the spawn location
+	 * @param yValue the Y coordinate of the spawn location
+	 * @param zValue the Z coordinate (height) of the spawn location
 	 * @param heading the heading of the NPC
 	 * @param randomOffset if {@code true}, adds +/- 50~100 to X/Y coordinates of the spawn location
 	 * @param despawnDelay time in milliseconds till the NPC is despawned (0 - only despawned on server shutdown)
@@ -2175,17 +2175,19 @@ public abstract class AbstractScript extends ManagedScript implements IEventTime
 	 * @see #addSpawn(int, int, int, int, int, boolean, long)
 	 * @see #addSpawn(int, int, int, int, int, boolean, long, boolean)
 	 */
-	public static Npc addSpawn(Npc summoner, int npcId, int x, int y, int z, int heading, boolean randomOffset, long despawnDelay, boolean isSummonSpawn, int instance)
+	public static Npc addSpawn(Npc summoner, int npcId, int xValue, int yValue, int zValue, int heading, boolean randomOffset, long despawnDelay, boolean isSummonSpawn, int instance)
 	{
 		try
 		{
 			final Spawn spawn = new Spawn(npcId);
-			if ((x == 0) && (y == 0))
+			if ((xValue == 0) && (yValue == 0))
 			{
 				LOGGER.severe("addSpawn(): invalid spawn coordinates for NPC #" + npcId + "!");
 				return null;
 			}
 			
+			int x = xValue;
+			int y = yValue;
 			if (randomOffset)
 			{
 				int offset = Rnd.get(50, 100);
@@ -2204,7 +2206,7 @@ public abstract class AbstractScript extends ManagedScript implements IEventTime
 			
 			spawn.setInstanceId(instance);
 			spawn.setHeading(heading);
-			spawn.setXYZ(x, y, z);
+			spawn.setXYZ(x, y, zValue);
 			spawn.stopRespawn();
 			
 			final Npc npc = spawn.doSpawn(isSummonSpawn);
@@ -2556,16 +2558,16 @@ public abstract class AbstractScript extends ManagedScript implements IEventTime
 	 * Give a reward to player using multipliers.
 	 * @param player the player to whom to give the item
 	 * @param itemId the ID of the item to give
-	 * @param count the amount of items to give
+	 * @param countValue the amount of items to give
 	 */
-	public static void rewardItems(PlayerInstance player, int itemId, long count)
+	public static void rewardItems(PlayerInstance player, int itemId, long countValue)
 	{
 		if (player.isSimulatingTalking())
 		{
 			return;
 		}
 		
-		if (count <= 0)
+		if (countValue <= 0)
 		{
 			return;
 		}
@@ -2576,6 +2578,7 @@ public abstract class AbstractScript extends ManagedScript implements IEventTime
 			return;
 		}
 		
+		long count = countValue;
 		try
 		{
 			if (itemId == Inventory.ADENA_ID)
@@ -2846,29 +2849,29 @@ public abstract class AbstractScript extends ManagedScript implements IEventTime
 			return true;
 		}
 		
-		minAmount *= Config.RATE_QUEST_DROP;
-		maxAmount *= Config.RATE_QUEST_DROP;
-		dropChance *= Config.RATE_QUEST_DROP; // TODO separate configs for rate and amount
+		long minAmountWithBonus = (long) (minAmount * Config.RATE_QUEST_DROP);
+		long maxAmountWithBonus = (long) (maxAmount * Config.RATE_QUEST_DROP);
+		long dropChanceWithBonus = (long) (dropChance * Config.RATE_QUEST_DROP); // TODO separate configs for rate and amount
 		if ((npc != null) && Config.CHAMPION_ENABLE && npc.isChampion())
 		{
 			if ((itemId == Inventory.ADENA_ID) || (itemId == Inventory.ANCIENT_ADENA_ID))
 			{
-				dropChance *= Config.CHAMPION_ADENAS_REWARDS_CHANCE;
-				minAmount *= Config.CHAMPION_ADENAS_REWARDS_AMOUNT;
-				maxAmount *= Config.CHAMPION_ADENAS_REWARDS_AMOUNT;
+				dropChanceWithBonus *= Config.CHAMPION_ADENAS_REWARDS_CHANCE;
+				minAmountWithBonus *= Config.CHAMPION_ADENAS_REWARDS_AMOUNT;
+				maxAmountWithBonus *= Config.CHAMPION_ADENAS_REWARDS_AMOUNT;
 			}
 			else
 			{
-				dropChance *= Config.CHAMPION_REWARDS_CHANCE;
-				minAmount *= Config.CHAMPION_REWARDS_AMOUNT;
-				maxAmount *= Config.CHAMPION_REWARDS_AMOUNT;
+				dropChanceWithBonus *= Config.CHAMPION_REWARDS_CHANCE;
+				minAmountWithBonus *= Config.CHAMPION_REWARDS_AMOUNT;
+				maxAmountWithBonus *= Config.CHAMPION_REWARDS_AMOUNT;
 			}
 		}
 		
-		long amountToGive = (minAmount == maxAmount) ? minAmount : Rnd.get(minAmount, maxAmount);
+		long amountToGive = (minAmountWithBonus == maxAmountWithBonus) ? minAmountWithBonus : Rnd.get(minAmountWithBonus, maxAmountWithBonus);
 		final double random = Rnd.nextDouble();
 		// Inventory slot check (almost useless for non-stacking items)
-		if ((dropChance >= random) && (amountToGive > 0) && player.getInventory().validateCapacityByItemId(itemId))
+		if ((dropChanceWithBonus >= random) && (amountToGive > 0) && player.getInventory().validateCapacityByItemId(itemId))
 		{
 			if ((limit > 0) && ((currentCount + amountToGive) > limit))
 			{
@@ -2906,10 +2909,10 @@ public abstract class AbstractScript extends ManagedScript implements IEventTime
 	 * Take an amount of a specified item from player's inventory.
 	 * @param player the player whose item to take
 	 * @param itemId the ID of the item to take
-	 * @param amount the amount to take
+	 * @param amountValue the amount to take
 	 * @return {@code true} if any items were taken, {@code false} otherwise
 	 */
-	public static boolean takeItems(PlayerInstance player, int itemId, long amount)
+	public static boolean takeItems(PlayerInstance player, int itemId, long amountValue)
 	{
 		if (player.isSimulatingTalking())
 		{
@@ -2924,7 +2927,8 @@ public abstract class AbstractScript extends ManagedScript implements IEventTime
 		}
 		
 		// Tests on count value in order not to have negative value
-		if ((amount < 0) || (amount > item.getCount()))
+		long amount = amountValue;
+		if ((amountValue < 0) || (amountValue > item.getCount()))
 		{
 			amount = item.getCount();
 		}
@@ -2941,6 +2945,7 @@ public abstract class AbstractScript extends ManagedScript implements IEventTime
 			player.sendInventoryUpdate(iu);
 			player.broadcastUserInfo();
 		}
+		
 		return player.destroyItemByItemId("Quest", itemId, amount, player, true);
 	}
 	

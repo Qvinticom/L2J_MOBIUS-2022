@@ -42,11 +42,12 @@ public class FortManager implements InstanceListManager
 		return findNearestFort(obj, Long.MAX_VALUE);
 	}
 	
-	public Fort findNearestFort(WorldObject obj, long maxDistance)
+	public Fort findNearestFort(WorldObject obj, long maxDistanceValue)
 	{
 		Fort nearestFort = getFort(obj);
 		if (nearestFort == null)
 		{
+			long maxDistance = maxDistanceValue;
 			for (Fort fort : _forts.values())
 			{
 				final double distance = fort.getDistance(obj);

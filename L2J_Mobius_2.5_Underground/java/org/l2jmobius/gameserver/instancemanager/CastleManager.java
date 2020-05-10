@@ -62,12 +62,13 @@ public class CastleManager implements InstanceListManager
 		return findNearestCastle(obj, Long.MAX_VALUE);
 	}
 	
-	public Castle findNearestCastle(WorldObject obj, long maxDistance)
+	public Castle findNearestCastle(WorldObject obj, long maxDistanceValue)
 	{
 		Castle nearestCastle = getCastle(obj);
 		if (nearestCastle == null)
 		{
 			double distance;
+			long maxDistance = maxDistanceValue;
 			for (Castle castle : _castles.values())
 			{
 				distance = castle.getDistance(obj);

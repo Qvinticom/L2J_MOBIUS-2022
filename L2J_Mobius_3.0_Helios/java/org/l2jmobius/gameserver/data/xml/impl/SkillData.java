@@ -446,7 +446,8 @@ public class SkillData implements IXmlReader
 	
 	private NamedParamInfo parseNamedParamInfo(Node node, Map<String, Map<Integer, Map<Integer, Object>>> variableValues)
 	{
-		final NamedNodeMap attributes = node.getAttributes();
+		Node n = node;
+		final NamedNodeMap attributes = n.getAttributes();
 		final String name = parseString(attributes, "name");
 		final Integer level = parseInteger(attributes, "level");
 		final Integer fromLevel = parseInteger(attributes, "fromLevel", level);
@@ -455,11 +456,11 @@ public class SkillData implements IXmlReader
 		final Integer fromSubLevel = parseInteger(attributes, "fromSubLevel", subLevel);
 		final Integer toSubLevel = parseInteger(attributes, "toSubLevel", subLevel);
 		final Map<Integer, Map<Integer, StatSet>> info = new HashMap<>();
-		for (node = node.getFirstChild(); node != null; node = node.getNextSibling())
+		for (n = n.getFirstChild(); n != null; n = n.getNextSibling())
 		{
-			if (!node.getNodeName().equals("#text"))
+			if (!n.getNodeName().equals("#text"))
 			{
-				parseInfo(node, variableValues, info);
+				parseInfo(n, variableValues, info);
 			}
 		}
 		return new NamedParamInfo(name, fromLevel, toLevel, fromSubLevel, toSubLevel, info);
@@ -491,23 +492,24 @@ public class SkillData implements IXmlReader
 	
 	private Map<Integer, Map<Integer, Object>> parseValues(Node node)
 	{
+		Node n = node;
 		final Map<Integer, Map<Integer, Object>> values = new HashMap<>();
-		Object parsedValue = parseValue(node, true, false, Collections.emptyMap());
+		Object parsedValue = parseValue(n, true, false, Collections.emptyMap());
 		if (parsedValue != null)
 		{
 			values.computeIfAbsent(-1, k -> new HashMap<>()).put(-1, parsedValue);
 		}
 		else
 		{
-			for (node = node.getFirstChild(); node != null; node = node.getNextSibling())
+			for (n = n.getFirstChild(); n != null; n = n.getNextSibling())
 			{
-				if (node.getNodeName().equalsIgnoreCase("value"))
+				if (n.getNodeName().equalsIgnoreCase("value"))
 				{
-					final NamedNodeMap attributes = node.getAttributes();
+					final NamedNodeMap attributes = n.getAttributes();
 					final Integer level = parseInteger(attributes, "level");
 					if (level != null)
 					{
-						parsedValue = parseValue(node, false, false, Collections.emptyMap());
+						parsedValue = parseValue(n, false, false, Collections.emptyMap());
 						if (parsedValue != null)
 						{
 							final Integer subLevel = parseInteger(attributes, "subLevel", -1);
@@ -533,7 +535,7 @@ public class SkillData implements IXmlReader
 								{
 									variables.put("base", Double.parseDouble(String.valueOf(base)));
 								}
-								parsedValue = parseValue(node, false, false, variables);
+								parsedValue = parseValue(n, false, false, variables);
 								if (parsedValue != null)
 								{
 									subValues.put(j, parsedValue);
@@ -549,22 +551,23 @@ public class SkillData implements IXmlReader
 	
 	Object parseValue(Node node, boolean blockValue, boolean parseAttributes, Map<String, Double> variables)
 	{
+		Node n = node;
 		StatSet statSet = null;
 		List<Object> list = null;
 		Object text = null;
-		if (parseAttributes && (!node.getNodeName().equals("value") || !blockValue) && (node.getAttributes().getLength() > 0))
+		if (parseAttributes && (!n.getNodeName().equals("value") || !blockValue) && (n.getAttributes().getLength() > 0))
 		{
 			statSet = new StatSet();
-			parseAttributes(node.getAttributes(), "", statSet, variables);
+			parseAttributes(n.getAttributes(), "", statSet, variables);
 		}
-		for (node = node.getFirstChild(); node != null; node = node.getNextSibling())
+		for (n = n.getFirstChild(); n != null; n = n.getNextSibling())
 		{
-			final String nodeName = node.getNodeName();
-			switch (node.getNodeName())
+			final String nodeName = n.getNodeName();
+			switch (n.getNodeName())
 			{
 				case "#text":
 				{
-					final String value = node.getNodeValue().trim();
+					final String value = n.getNodeValue().trim();
 					if (!value.isEmpty())
 					{
 						text = parseNodeValue(value, variables);
@@ -578,7 +581,7 @@ public class SkillData implements IXmlReader
 						list = new LinkedList<>();
 					}
 					
-					final Object value = parseValue(node, false, true, variables);
+					final Object value = parseValue(n, false, true, variables);
 					if (value != null)
 					{
 						list.add(value);
@@ -595,7 +598,7 @@ public class SkillData implements IXmlReader
 				}
 				default:
 				{
-					final Object value = parseValue(node, false, true, variables);
+					final Object value = parseValue(n, false, true, variables);
 					if (value != null)
 					{
 						if (statSet == null)
@@ -612,7 +615,7 @@ public class SkillData implements IXmlReader
 		{
 			if (text != null)
 			{
-				throw new IllegalArgumentException("Text and list in same node are not allowed. Node[" + node + "]");
+				throw new IllegalArgumentException("Text and list in same node are not allowed. Node[" + n + "]");
 			}
 			if (statSet != null)
 			{
@@ -627,7 +630,7 @@ public class SkillData implements IXmlReader
 		{
 			if (list != null)
 			{
-				throw new IllegalArgumentException("Text and list in same node are not allowed. Node[" + node + "]");
+				throw new IllegalArgumentException("Text and list in same node are not allowed. Node[" + n + "]");
 			}
 			if (statSet != null)
 			{

@@ -73,10 +73,11 @@ public class AttackStanceTaskManager
 	
 	/**
 	 * Removes the attack stance task.
-	 * @param actor the actor
+	 * @param creature the actor
 	 */
-	public void removeAttackStanceTask(Creature actor)
+	public void removeAttackStanceTask(Creature creature)
 	{
+		Creature actor = creature;
 		if (actor != null)
 		{
 			if (actor.isSummon())
@@ -89,11 +90,12 @@ public class AttackStanceTaskManager
 	
 	/**
 	 * Checks for attack stance task.
-	 * @param actor the actor
+	 * @param creature the actor
 	 * @return {@code true} if the character has an attack stance task, {@code false} otherwise
 	 */
-	public boolean hasAttackStanceTask(Creature actor)
+	public boolean hasAttackStanceTask(Creature creature)
 	{
+		Creature actor = creature;
 		if (actor != null)
 		{
 			if (actor.isSummon())

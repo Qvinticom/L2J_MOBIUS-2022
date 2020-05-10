@@ -271,9 +271,9 @@ public class Castle extends AbstractResidence
 	// This method add to the treasury
 	/**
 	 * Add amount to castle instance's treasury (warehouse).
-	 * @param amount
+	 * @param amountValue
 	 */
-	public void addToTreasury(long amount)
+	public void addToTreasury(long amountValue)
 	{
 		// check if owned
 		if (_ownerId <= 0)
@@ -281,6 +281,7 @@ public class Castle extends AbstractResidence
 			return;
 		}
 		
+		long amount = amountValue;
 		if (getName().equalsIgnoreCase("Schuttgart") || getName().equalsIgnoreCase("Goddard"))
 		{
 			final Castle rune = CastleManager.getInstance().getCastle("rune");
@@ -314,16 +315,17 @@ public class Castle extends AbstractResidence
 	
 	/**
 	 * Add amount to castle instance's treasury (warehouse), no tax paying.
-	 * @param amount
+	 * @param amountValue
 	 * @return
 	 */
-	public boolean addToTreasuryNoTax(long amount)
+	public boolean addToTreasuryNoTax(long amountValue)
 	{
 		if (_ownerId <= 0)
 		{
 			return false;
 		}
 		
+		long amount = amountValue;
 		if (amount < 0)
 		{
 			amount *= -1;
@@ -333,16 +335,13 @@ public class Castle extends AbstractResidence
 			}
 			_treasury -= amount;
 		}
+		else if ((_treasury + amount) > Inventory.MAX_ADENA)
+		{
+			_treasury = Inventory.MAX_ADENA;
+		}
 		else
 		{
-			if ((_treasury + amount) > Inventory.MAX_ADENA)
-			{
-				_treasury = Inventory.MAX_ADENA;
-			}
-			else
-			{
-				_treasury += amount;
-			}
+			_treasury += amount;
 		}
 		
 		try (Connection con = DatabaseFactory.getConnection();
@@ -356,6 +355,7 @@ public class Castle extends AbstractResidence
 		{
 			LOGGER.log(Level.WARNING, e.getMessage(), e);
 		}
+		
 		return true;
 	}
 	

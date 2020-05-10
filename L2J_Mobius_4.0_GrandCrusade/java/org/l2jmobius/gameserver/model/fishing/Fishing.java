@@ -286,7 +286,7 @@ public class Fishing
 		}
 	}
 	
-	private void reelIn(FishingEndReason reason, boolean consumeBait)
+	private void reelIn(FishingEndReason reasonValue, boolean consumeBait)
 	{
 		if (!_isFishing)
 		{
@@ -295,6 +295,7 @@ public class Fishing
 		
 		cancelTasks();
 		
+		FishingEndReason reason = reasonValue;
 		try
 		{
 			final ItemInstance bait = _player.getInventory().getPaperdollItem(Inventory.PAPERDOLL_LHAND);

@@ -30,13 +30,14 @@ public class PlayableStat extends CreatureStat
 		super(activeChar);
 	}
 	
-	public boolean addExp(long value)
+	public boolean addExp(long amount)
 	{
-		if (((getExp() + value) < 0) || ((value > 0) && (getExp() == (getExpForLevel(ExperienceData.getInstance().getMaxLevel()) - 1))))
+		if (((getExp() + amount) < 0) || ((amount > 0) && (getExp() == (getExpForLevel(ExperienceData.getInstance().getMaxLevel()) - 1))))
 		{
 			return true;
 		}
 		
+		long value = amount;
 		if ((getExp() + value) >= getExpForLevel(ExperienceData.getInstance().getMaxLevel()))
 		{
 			value = getExpForLevel(ExperienceData.getInstance().getMaxLevel()) - 1 - getExp();
@@ -62,8 +63,9 @@ public class PlayableStat extends CreatureStat
 		return true;
 	}
 	
-	public boolean removeExp(long value)
+	public boolean removeExp(long amount)
 	{
+		long value = amount;
 		if ((getExp() - value) < 0)
 		{
 			value = getExp() - 1;
@@ -124,8 +126,9 @@ public class PlayableStat extends CreatureStat
 		return expRemoved || spRemoved;
 	}
 	
-	public boolean addLevel(byte value)
+	public boolean addLevel(byte amount)
 	{
+		byte value = amount;
 		if ((getLevel() + value) > (ExperienceData.getInstance().getMaxLevel() - 1))
 		{
 			if (getLevel() < (ExperienceData.getInstance().getMaxLevel() - 1))
@@ -159,9 +162,9 @@ public class PlayableStat extends CreatureStat
 		return true;
 	}
 	
-	public boolean addSp(int value)
+	public boolean addSp(int amount)
 	{
-		if (value < 0)
+		if (amount < 0)
 		{
 			LOGGER.info("wrong usage");
 			return false;
@@ -173,6 +176,7 @@ public class PlayableStat extends CreatureStat
 			return false;
 		}
 		
+		int value = amount;
 		if (currentSp > (Integer.MAX_VALUE - value))
 		{
 			value = Integer.MAX_VALUE - currentSp;
@@ -182,15 +186,15 @@ public class PlayableStat extends CreatureStat
 		return true;
 	}
 	
-	public boolean removeSp(int value)
+	public boolean removeSp(int amount)
 	{
 		final int currentSp = getSp();
-		if (currentSp < value)
+		if (currentSp < amount)
 		{
-			value = currentSp;
+			setSp(getSp() - currentSp);
+			return true;
 		}
-		
-		setSp(getSp() - value);
+		setSp(getSp() - amount);
 		return true;
 	}
 	

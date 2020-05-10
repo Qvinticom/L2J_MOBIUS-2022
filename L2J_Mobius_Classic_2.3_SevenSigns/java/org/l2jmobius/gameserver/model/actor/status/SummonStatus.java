@@ -37,7 +37,7 @@ public class SummonStatus extends PlayableStatus
 	}
 	
 	@Override
-	public void reduceHp(double value, Creature attacker, boolean awake, boolean isDOT, boolean isHPConsumption)
+	public void reduceHp(double amount, Creature attacker, boolean awake, boolean isDOT, boolean isHPConsumption)
 	{
 		if ((attacker == null) || getActiveChar().isDead())
 		{
@@ -50,6 +50,7 @@ public class SummonStatus extends PlayableStatus
 			attackerPlayer.setDuelState(Duel.DUELSTATE_INTERRUPTED);
 		}
 		
+		double value = amount;
 		final PlayerInstance caster = getActiveChar().getTransferingDamageTo();
 		if (getActiveChar().getOwner().getParty() != null)
 		{
@@ -110,6 +111,7 @@ public class SummonStatus extends PlayableStatus
 				value -= transferDmg;
 			}
 		}
+		
 		super.reduceHp(value, attacker, awake, isDOT, isHPConsumption);
 	}
 	

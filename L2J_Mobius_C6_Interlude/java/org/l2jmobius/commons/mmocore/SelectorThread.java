@@ -243,6 +243,7 @@ public class SelectorThread<T extends MMOClient<?>>extends Thread
 		}
 	}
 	
+	@SuppressWarnings("all")
 	private final void acceptConnection(SelectionKey key, MMOConnection<T> con)
 	{
 		final ServerSocketChannel ssc = (ServerSocketChannel) key.channel();

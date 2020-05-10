@@ -272,16 +272,17 @@ public class CronParser
 	/**
 	 * Parses a crontab-like line.
 	 * @param table The table on which the parsed task will be stored, by side-effect.
-	 * @param line The crontab-like line.
+	 * @param lineValue The crontab-like line.
 	 * @throws Exception The supplied line doesn't represent a valid task line.
 	 */
-	public static void parseLine(TaskTable table, String line) throws Exception
+	public static void parseLine(TaskTable table, String lineValue) throws Exception
 	{
-		line = line.trim();
+		String line = lineValue.trim();
 		if ((line.isEmpty()) || (line.charAt(0) == '#'))
 		{
 			return;
 		}
+		
 		// Detecting the pattern.
 		int size = line.length();
 		String pattern = null;
@@ -298,8 +299,10 @@ public class CronParser
 		{
 			throw new Exception("Invalid cron line: " + line);
 		}
+		
 		line = line.substring(pattern.length());
 		size = line.length();
+		
 		// Splitting the line
 		final ArrayList<String> splitted = new ArrayList<>();
 		StringBuilder current = null;
@@ -351,6 +354,7 @@ public class CronParser
 				}
 			}
 		}
+		
 		if ((current != null) && (current.length() > 0))
 		{
 			String str = current.toString();
@@ -361,6 +365,7 @@ public class CronParser
 			splitted.add(str);
 			current = null;
 		}
+		
 		// Analyzing
 		size = splitted.size();
 		int status = 0;
@@ -377,6 +382,7 @@ public class CronParser
 		for (int i = 0; i < size; i++)
 		{
 			final String tk = splitted.get(i);
+			
 			// Check the local status.
 			if (status == 0)
 			{
@@ -424,8 +430,10 @@ public class CronParser
 				}
 			}
 		}
+		
 		// Task preparing.
 		Task task;
+		
 		// Command evaluation.
 		if (command == null)
 		{
@@ -471,6 +479,7 @@ public class CronParser
 			{
 				cmdarray[i + 1] = argsList.get(i);
 			}
+			
 			// Environments.
 			String[] envs = null;
 			size = envsList.size();
@@ -482,6 +491,7 @@ public class CronParser
 					envs[i] = envsList.get(i);
 				}
 			}
+			
 			// Working directory.
 			File dir = null;
 			if (dirString != null)
@@ -492,8 +502,10 @@ public class CronParser
 					throw new Exception("Invalid cron working directory parameter at line: " + line, new FileNotFoundException(dirString + " doesn't exist or it is not a directory"));
 				}
 			}
+			
 			// Builds the task.
 			final ProcessTask process = new ProcessTask(cmdarray, envs, dir);
+			
 			// Channels.
 			if (stdinFile != null)
 			{
@@ -509,6 +521,7 @@ public class CronParser
 			}
 			task = process;
 		}
+		
 		// End.
 		table.add(new SchedulingPattern(pattern), task);
 	}

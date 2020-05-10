@@ -485,13 +485,14 @@ public abstract class AbstractAI implements Ctrl
 	 * Move the actor to Pawn server side AND client side by sending Server->Client packet MoveToPawn <i>(broadcast)</i>.<br>
 	 * <font color=#FF0000><b><u>Caution</u>: Low level function, used by AI subclasses</b></font>
 	 * @param pawn
-	 * @param offset
+	 * @param offsetValue
 	 */
-	public void moveToPawn(WorldObject pawn, int offset)
+	public void moveToPawn(WorldObject pawn, int offsetValue)
 	{
 		// Check if actor can move
 		if (!_actor.isMovementDisabled())
 		{
+			int offset = offsetValue;
 			if (offset < 10)
 			{
 				offset = 10;

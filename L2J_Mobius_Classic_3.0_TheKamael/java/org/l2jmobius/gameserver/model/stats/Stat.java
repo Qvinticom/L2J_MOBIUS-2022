@@ -346,16 +346,16 @@ public enum Stat
 	
 	public static Stat valueOfXml(String name)
 	{
-		name = name.intern();
+		String internName = name.intern();
 		for (Stat s : values())
 		{
-			if (s.getValue().equals(name))
+			if (s.getValue().equals(internName))
 			{
 				return s;
 			}
 		}
 		
-		throw new NoSuchElementException("Unknown name '" + name + "' for enum " + Stat.class.getSimpleName());
+		throw new NoSuchElementException("Unknown name '" + internName + "' for enum " + Stat.class.getSimpleName());
 	}
 	
 	/**

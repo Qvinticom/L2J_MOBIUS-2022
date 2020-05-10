@@ -942,13 +942,13 @@ public class NpcTemplate extends CreatureTemplate implements IIdentifiable
 		return _collisionHeightGrown;
 	}
 	
-	public static boolean isAssignableTo(Class<?> sub, Class<?> clazz)
+	public static boolean isAssignableTo(Class<?> subValue, Class<?> clazz)
 	{
 		// If clazz represents an interface
 		if (clazz.isInterface())
 		{
 			// check if obj implements the clazz interface
-			for (Class<?> interface1 : sub.getInterfaces())
+			for (Class<?> interface1 : subValue.getInterfaces())
 			{
 				if (clazz.getName().equals(interface1.getName()))
 				{
@@ -958,13 +958,13 @@ public class NpcTemplate extends CreatureTemplate implements IIdentifiable
 		}
 		else
 		{
+			Class<?> sub = subValue;
 			do
 			{
 				if (sub.getName().equals(clazz.getName()))
 				{
 					return true;
 				}
-				
 				sub = sub.getSuperclass();
 			}
 			while (sub != null);

@@ -1837,9 +1837,9 @@ public abstract class AbstractScript extends ManagedScript
 	 * Add a temporary spawn of the specified NPC.
 	 * @param summoner the NPC that requires this spawn
 	 * @param npcId the ID of the NPC to spawn
-	 * @param x the X coordinate of the spawn location
-	 * @param y the Y coordinate of the spawn location
-	 * @param z the Z coordinate (height) of the spawn location
+	 * @param xValue the X coordinate of the spawn location
+	 * @param yValue the Y coordinate of the spawn location
+	 * @param zValue the Z coordinate (height) of the spawn location
 	 * @param heading the heading of the NPC
 	 * @param randomOffset if {@code true}, adds +/- 50~100 to X/Y coordinates of the spawn location
 	 * @param despawnDelay time in milliseconds till the NPC is despawned (0 - only despawned on server shutdown)
@@ -1850,16 +1850,18 @@ public abstract class AbstractScript extends ManagedScript
 	 * @see #addSpawn(int, int, int, int, int, boolean, long)
 	 * @see #addSpawn(int, int, int, int, int, boolean, long, boolean)
 	 */
-	public static Npc addSpawn(Npc summoner, int npcId, int x, int y, int z, int heading, boolean randomOffset, long despawnDelay, boolean isSummonSpawn, int instanceId)
+	public static Npc addSpawn(Npc summoner, int npcId, int xValue, int yValue, int zValue, int heading, boolean randomOffset, long despawnDelay, boolean isSummonSpawn, int instanceId)
 	{
 		try
 		{
-			if ((x == 0) && (y == 0))
+			if ((xValue == 0) && (yValue == 0))
 			{
 				LOGGER.log(Level.SEVERE, "addSpawn(): invalid spawn coordinates for NPC #" + npcId + "!");
 				return null;
 			}
 			
+			int x = xValue;
+			int y = yValue;
 			if (randomOffset)
 			{
 				int offset = Rnd.get(50, 100);
@@ -1879,7 +1881,7 @@ public abstract class AbstractScript extends ManagedScript
 			final Spawn spawn = new Spawn(npcId);
 			spawn.setInstanceId(instanceId);
 			spawn.setHeading(heading);
-			spawn.setXYZ(x, y, z);
+			spawn.setXYZ(x, y, zValue);
 			spawn.stopRespawn();
 			
 			final Npc npc = spawn.doSpawn(isSummonSpawn);
@@ -2212,11 +2214,11 @@ public abstract class AbstractScript extends ManagedScript
 	 * Give a reward to player using multipliers.
 	 * @param player the player to whom to give the item
 	 * @param itemId the ID of the item to give
-	 * @param count the amount of items to give
+	 * @param countValue the amount of items to give
 	 */
-	public static void rewardItems(PlayerInstance player, int itemId, long count)
+	public static void rewardItems(PlayerInstance player, int itemId, long countValue)
 	{
-		if (count <= 0)
+		if (countValue <= 0)
 		{
 			return;
 		}
@@ -2227,6 +2229,7 @@ public abstract class AbstractScript extends ManagedScript
 			return;
 		}
 		
+		long count = countValue;
 		try
 		{
 			if (itemId == Inventory.ADENA_ID)
@@ -2468,29 +2471,29 @@ public abstract class AbstractScript extends ManagedScript
 			return true;
 		}
 		
-		minAmount *= Config.RATE_QUEST_DROP;
-		maxAmount *= Config.RATE_QUEST_DROP;
-		dropChance *= Config.RATE_QUEST_DROP; // TODO separate configs for rate and amount
+		long minAmountWithBonus = (long) (minAmount * Config.RATE_QUEST_DROP);
+		long maxAmountWithBonus = (long) (maxAmount * Config.RATE_QUEST_DROP);
+		long dropChanceWithBonus = (long) (dropChance * Config.RATE_QUEST_DROP); // TODO separate configs for rate and amount
 		if ((npc != null) && Config.CHAMPION_ENABLE && npc.isChampion())
 		{
 			if ((itemId == Inventory.ADENA_ID) || (itemId == Inventory.ANCIENT_ADENA_ID))
 			{
-				dropChance *= Config.CHAMPION_ADENAS_REWARDS_CHANCE;
-				minAmount *= Config.CHAMPION_ADENAS_REWARDS_AMOUNT;
-				maxAmount *= Config.CHAMPION_ADENAS_REWARDS_AMOUNT;
+				dropChanceWithBonus *= Config.CHAMPION_ADENAS_REWARDS_CHANCE;
+				minAmountWithBonus *= Config.CHAMPION_ADENAS_REWARDS_AMOUNT;
+				maxAmountWithBonus *= Config.CHAMPION_ADENAS_REWARDS_AMOUNT;
 			}
 			else
 			{
-				dropChance *= Config.CHAMPION_REWARDS_CHANCE;
-				minAmount *= Config.CHAMPION_REWARDS_AMOUNT;
-				maxAmount *= Config.CHAMPION_REWARDS_AMOUNT;
+				dropChanceWithBonus *= Config.CHAMPION_REWARDS_CHANCE;
+				minAmountWithBonus *= Config.CHAMPION_REWARDS_AMOUNT;
+				maxAmountWithBonus *= Config.CHAMPION_REWARDS_AMOUNT;
 			}
 		}
 		
-		long amountToGive = (minAmount == maxAmount) ? minAmount : Rnd.get(minAmount, maxAmount);
+		long amountToGive = (minAmountWithBonus == maxAmountWithBonus) ? minAmountWithBonus : Rnd.get(minAmountWithBonus, maxAmountWithBonus);
 		final double random = Rnd.nextDouble();
 		// Inventory slot check (almost useless for non-stacking items)
-		if ((dropChance >= random) && (amountToGive > 0) && player.getInventory().validateCapacityByItemId(itemId))
+		if ((dropChanceWithBonus >= random) && (amountToGive > 0) && player.getInventory().validateCapacityByItemId(itemId))
 		{
 			if ((limit > 0) && ((currentCount + amountToGive) > limit))
 			{

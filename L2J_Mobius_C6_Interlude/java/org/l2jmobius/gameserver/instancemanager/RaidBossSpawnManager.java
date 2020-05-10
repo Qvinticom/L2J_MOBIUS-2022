@@ -226,6 +226,7 @@ public class RaidBossSpawnManager
 			return;
 		}
 		
+		double hp = currentHP;
 		final int bossId = spawnDat.getNpcId();
 		final long time = Calendar.getInstance().getTimeInMillis();
 		SpawnTable.getInstance().addNewSpawn(spawnDat, false);
@@ -237,19 +238,19 @@ public class RaidBossSpawnManager
 				final double bonus = raidboss.getStat().calcStat(Stat.MAX_HP, 1, raidboss, null);
 				
 				// if new spawn, the currentHp is equal to maxHP/bonus, so set it to max
-				if ((int) (bonus * currentHP) == raidboss.getMaxHp())
+				if ((int) (bonus * hp) == raidboss.getMaxHp())
 				{
-					currentHP = (raidboss.getMaxHp());
+					hp = (raidboss.getMaxHp());
 				}
 				
-				raidboss.setCurrentHp(currentHP);
+				raidboss.setCurrentHp(hp);
 				raidboss.setCurrentMp(currentMP);
 				raidboss.setRaidStatus(RaidBossStatus.ALIVE);
 				
 				_bosses.put(bossId, raidboss);
 				
 				final StatSet info = new StatSet();
-				info.set("currentHP", currentHP);
+				info.set("currentHP", hp);
 				info.set("currentMP", currentMP);
 				info.set("respawnTime", 0);
 				_storedInfo.put(bossId, info);
@@ -277,7 +278,7 @@ public class RaidBossSpawnManager
 				statement.setInt(5, spawnDat.getZ());
 				statement.setInt(6, spawnDat.getHeading());
 				statement.setLong(7, respawnTime);
-				statement.setDouble(8, currentHP);
+				statement.setDouble(8, hp);
 				statement.setDouble(9, currentMP);
 				statement.execute();
 			}

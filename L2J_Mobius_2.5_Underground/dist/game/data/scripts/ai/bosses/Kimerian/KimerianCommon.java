@@ -92,23 +92,23 @@ public class KimerianCommon extends AbstractInstance
 			{
 				case "HELPER_TIME_ACTION":
 				{
-					player = npc.getVariables().getObject("PC_INSTANCE", PlayerInstance.class);
-					if (player != null)
+					final PlayerInstance pc = npc.getVariables().getObject("PC_INSTANCE", PlayerInstance.class);
+					if (pc != null)
 					{
-						final double distance = npc.calculateDistance2D(player);
+						final double distance = npc.calculateDistance2D(pc);
 						if (distance > 1000)
 						{
-							npc.teleToLocation(new Location(player.getX() + getRandom(-100, 100), player.getY() + getRandom(-100, 100), player.getZ() + 50));
+							npc.teleToLocation(new Location(pc.getX() + getRandom(-100, 100), pc.getY() + getRandom(-100, 100), pc.getZ() + 50));
 						}
 						else if (!npc.isAttackingNow() && (distance > 250))
 						{
 							npc.setRunning();
-							addMoveToDesire(npc, new Location(player.getX() + getRandom(-100, 100), player.getY() + getRandom(-100, 100), player.getZ() + 50), 23);
+							addMoveToDesire(npc, new Location(pc.getX() + getRandom(-100, 100), pc.getY() + getRandom(-100, 100), pc.getZ() + 50), 23);
 						}
 						else if (!npc.isInCombat() || !npc.isAttackingNow() || (npc.getTarget() == null))
 						{
-							final Creature monster = (Creature) player.getTarget();
-							if ((monster != null) && monster.isMonster() && player.isInCombat())
+							final Creature monster = (Creature) pc.getTarget();
+							if ((monster != null) && monster.isMonster() && pc.isInCombat())
 							{
 								addAttackDesire(npc, monster);
 							}

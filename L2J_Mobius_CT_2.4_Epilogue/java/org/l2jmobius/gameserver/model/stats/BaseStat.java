@@ -78,15 +78,16 @@ public enum BaseStat
 	
 	public static BaseStat valueOfXml(String name)
 	{
-		name = name.intern();
+		final String internName = name.intern();
 		for (BaseStat s : values())
 		{
-			if (s.getValue().equalsIgnoreCase(name))
+			if (s.getValue().equalsIgnoreCase(internName))
 			{
 				return s;
 			}
 		}
-		throw new NoSuchElementException("Unknown name '" + name + "' for enum BaseStats");
+		
+		throw new NoSuchElementException("Unknown name '" + internName + "' for enum BaseStats");
 	}
 	
 	protected static final class STR implements IBaseStatFunction

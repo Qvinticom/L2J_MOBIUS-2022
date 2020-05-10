@@ -101,7 +101,8 @@ public class PlayerStatus extends PlayableStatus
 			}
 		}
 		
-		int fullValue = (int) value;
+		double amount = value;
+		int fullValue = (int) amount;
 		int tDmg = 0;
 		int mpDam = 0;
 		if ((attacker != null) && (attacker != getActiveChar()))
@@ -137,27 +138,27 @@ public class PlayerStatus extends PlayableStatus
 			final Summon summon = getActiveChar().getSummon();
 			if (getActiveChar().hasServitor() && Util.checkIfInRange(1000, getActiveChar(), summon, true))
 			{
-				tDmg = ((int) value * (int) getActiveChar().getStat().calcStat(Stat.TRANSFER_DAMAGE_PERCENT, 0, null, null)) / 100;
+				tDmg = ((int) amount * (int) getActiveChar().getStat().calcStat(Stat.TRANSFER_DAMAGE_PERCENT, 0, null, null)) / 100;
 				
 				// Only transfer dmg up to current HP, it should not be killed
 				tDmg = Math.min((int) summon.getCurrentHp() - 1, tDmg);
 				if (tDmg > 0)
 				{
 					summon.reduceCurrentHp(tDmg, attacker, null);
-					value -= tDmg;
-					fullValue = (int) value; // reduce the announced value here as player will get a message about summon damage
+					amount -= tDmg;
+					fullValue = (int) amount; // reduce the announced value here as player will get a message about summon damage
 				}
 			}
 			
-			mpDam = ((int) value * (int) getActiveChar().getStat().calcStat(Stat.MANA_SHIELD_PERCENT, 0, null, null)) / 100;
+			mpDam = ((int) amount * (int) getActiveChar().getStat().calcStat(Stat.MANA_SHIELD_PERCENT, 0, null, null)) / 100;
 			if (mpDam > 0)
 			{
-				mpDam = (int) (value - mpDam);
+				mpDam = (int) (amount - mpDam);
 				if (mpDam > getActiveChar().getCurrentMp())
 				{
 					getActiveChar().sendPacket(SystemMessageId.MP_BECAME_0_AND_THE_ARCANE_SHIELD_IS_DISAPPEARING);
 					getActiveChar().stopSkillEffects(true, 1556);
-					value = mpDam - getActiveChar().getCurrentMp();
+					amount = mpDam - getActiveChar().getCurrentMp();
 					getActiveChar().setCurrentMp(0);
 				}
 				else
@@ -173,7 +174,7 @@ public class PlayerStatus extends PlayableStatus
 			final PlayerInstance caster = getActiveChar().getTransferingDamageTo();
 			if ((caster != null) && (getActiveChar().getParty() != null) && Util.checkIfInRange(1000, getActiveChar(), caster, true) && !caster.isDead() && (getActiveChar() != caster) && getActiveChar().getParty().getMembers().contains(caster))
 			{
-				int transferDmg = Math.min((int) caster.getCurrentHp() - 1, ((int) value * (int) getActiveChar().getStat().calcStat(Stat.TRANSFER_DAMAGE_TO_PLAYER, 0, null, null)) / 100);
+				int transferDmg = Math.min((int) caster.getCurrentHp() - 1, ((int) amount * (int) getActiveChar().getStat().calcStat(Stat.TRANSFER_DAMAGE_TO_PLAYER, 0, null, null)) / 100);
 				if (transferDmg > 0)
 				{
 					int membersInRange = 0;
@@ -201,22 +202,22 @@ public class PlayerStatus extends PlayableStatus
 					if (membersInRange > 0)
 					{
 						caster.reduceCurrentHp(transferDmg / membersInRange, attacker, null);
-						value -= transferDmg;
-						fullValue = (int) value;
+						amount -= transferDmg;
+						fullValue = (int) amount;
 					}
 				}
 			}
 			
 			if (!ignoreCP && (attacker.isPlayable() || attacker.isFakePlayer()))
 			{
-				if (_currentCp >= value)
+				if (_currentCp >= amount)
 				{
-					setCurrentCp(_currentCp - value); // Set Cp to diff of Cp vs value
-					value = 0; // No need to subtract anything from Hp
+					setCurrentCp(_currentCp - amount); // Set Cp to diff of Cp vs value
+					amount = 0; // No need to subtract anything from Hp
 				}
 				else
 				{
-					value -= _currentCp; // Get diff from value vs Cp; will apply diff to Hp
+					amount -= _currentCp; // Get diff from value vs Cp; will apply diff to Hp
 					setCurrentCp(0, false); // Set Cp to 0
 				}
 			}
@@ -252,10 +253,10 @@ public class PlayerStatus extends PlayableStatus
 			}
 		}
 		
-		if (value > 0)
+		if (amount > 0)
 		{
-			value = getCurrentHp() - value;
-			if (value <= 0)
+			amount = getCurrentHp() - amount;
+			if (amount <= 0)
 			{
 				if (getActiveChar().isInDuel())
 				{
@@ -271,14 +272,14 @@ public class PlayerStatus extends PlayableStatus
 					
 					// let the DuelManager know of his defeat
 					DuelManager.getInstance().onPlayerDefeat(getActiveChar());
-					value = 1;
+					amount = 1;
 				}
 				else
 				{
-					value = 0;
+					amount = 0;
 				}
 			}
-			setCurrentHp(value);
+			setCurrentHp(amount);
 		}
 		
 		if ((getActiveChar().getCurrentHp() < 0.5) && !isHPConsumption)
@@ -337,7 +338,7 @@ public class PlayerStatus extends PlayableStatus
 		setCurrentCp(newCp, true);
 	}
 	
-	public void setCurrentCp(double newCp, boolean broadcastPacket)
+	public void setCurrentCp(double value, boolean broadcastPacket)
 	{
 		// Get the Max CP of the Creature
 		final int currentCp = (int) _currentCp;
@@ -350,11 +351,7 @@ public class PlayerStatus extends PlayableStatus
 				return;
 			}
 			
-			if (newCp < 0)
-			{
-				newCp = 0;
-			}
-			
+			final double newCp = Math.max(0, value);
 			if (newCp >= maxCp)
 			{
 				// Set the RegenActive flag to false

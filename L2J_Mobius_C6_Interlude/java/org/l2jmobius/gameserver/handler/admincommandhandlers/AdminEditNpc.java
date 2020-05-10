@@ -1210,8 +1210,9 @@ public class AdminEditNpc implements IAdminCommandHandler
 		activeChar.sendPacket(adminReply);
 	}
 	
-	private void updateDropData(PlayerInstance activeChar, int npcId, int itemId, int min, int max, int category, int chance)
+	private void updateDropData(PlayerInstance activeChar, int npcIdValue, int itemId, int min, int max, int category, int chance)
 	{
+		int npcId = npcIdValue;
 		try (Connection con = DatabaseFactory.getConnection())
 		{
 			final PreparedStatement statement = con.prepareStatement("UPDATE droplist SET min=?, max=?, chance=? WHERE mobId=? AND itemId=? AND category=?");
@@ -1363,7 +1364,7 @@ public class AdminEditNpc implements IAdminCommandHandler
 		}
 	}
 	
-	private void showNpcSkillList(PlayerInstance activeChar, int npcId, int page)
+	private void showNpcSkillList(PlayerInstance activeChar, int npcId, int pageValue)
 	{
 		final NpcTemplate npcData = NpcTable.getInstance().getTemplate(npcId);
 		if (npcData == null)
@@ -1381,6 +1382,7 @@ public class AdminEditNpc implements IAdminCommandHandler
 			maxPages++;
 		}
 		
+		int page = pageValue;
 		if (page > maxPages)
 		{
 			page = maxPages;

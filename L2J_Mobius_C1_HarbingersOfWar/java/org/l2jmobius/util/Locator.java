@@ -52,13 +52,14 @@ public class Locator
 	
 	/**
 	 * Find the directory or jar a given resource has been loaded from.
-	 * @param c the classloader to be consulted for the source.
+	 * @param classLoader the classloader to be consulted for the source.
 	 * @param resource the resource whose location is required.
 	 * @return the file with the resource source or null if we cannot determine the location.
 	 * @since Ant 1.6
 	 */
-	public static File getResourceSource(ClassLoader c, String resource)
+	public static File getResourceSource(ClassLoader classLoader, String resource)
 	{
+		ClassLoader c = classLoader;
 		if (c == null)
 		{
 			c = Locator.class.getClassLoader();
@@ -99,12 +100,13 @@ public class Locator
 	 * <p>
 	 * Swallows '%' that are not followed by two characters, doesn't deal with non-ASCII characters.
 	 * </p>
-	 * @param uri the URI designating a file in the local filesystem.
+	 * @param uriValue the URI designating a file in the local filesystem.
 	 * @return the local file system path for the file.
 	 * @since Ant 1.6
 	 */
-	public static String fromURI(String uri)
+	public static String fromURI(String uriValue)
 	{
+		String uri = uriValue;
 		URL url = null;
 		try
 		{
@@ -114,10 +116,12 @@ public class Locator
 		{
 			// Ignore malformed exception
 		}
+		
 		if ((url == null) || !("file".equals(url.getProtocol())))
 		{
 			throw new IllegalArgumentException("Can only handle valid file: URIs");
 		}
+		
 		final StringBuilder buf = new StringBuilder(url.getHost());
 		if (buf.length() > 0)
 		{
@@ -126,13 +130,12 @@ public class Locator
 		final String file = url.getFile();
 		final int queryPos = file.indexOf('?');
 		buf.append((queryPos < 0) ? file : file.substring(0, queryPos));
-		
 		uri = buf.toString().replace('/', File.separatorChar);
-		
 		if ((File.pathSeparatorChar == ';') && uri.startsWith("\\") && (uri.length() > 2) && Character.isLetter(uri.charAt(1)) && (uri.lastIndexOf(':') > -1))
 		{
 			uri = uri.substring(1);
 		}
+		
 		return decodeUri(uri);
 	}
 	

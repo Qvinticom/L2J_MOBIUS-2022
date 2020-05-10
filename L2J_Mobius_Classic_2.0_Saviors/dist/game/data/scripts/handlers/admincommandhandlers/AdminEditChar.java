@@ -1075,8 +1075,9 @@ public class AdminEditChar implements IAdminCommandHandler
 		activeChar.sendPacket(html);
 	}
 	
-	private void showCharacterInfo(PlayerInstance activeChar, PlayerInstance player)
+	private void showCharacterInfo(PlayerInstance activeChar, PlayerInstance targetPlayer)
 	{
+		PlayerInstance player = targetPlayer;
 		if (player == null)
 		{
 			final WorldObject target = activeChar.getTarget();
@@ -1177,7 +1178,7 @@ public class AdminEditChar implements IAdminCommandHandler
 		activeChar.sendPacket(adminReply);
 	}
 	
-	private void setTargetReputation(PlayerInstance activeChar, int newReputation)
+	private void setTargetReputation(PlayerInstance activeChar, int value)
 	{
 		final WorldObject target = activeChar.getTarget();
 		PlayerInstance player = null;
@@ -1190,6 +1191,7 @@ public class AdminEditChar implements IAdminCommandHandler
 			return;
 		}
 		
+		int newReputation = value;
 		if (newReputation > Config.MAX_REPUTATION)
 		{
 			newReputation = Config.MAX_REPUTATION;

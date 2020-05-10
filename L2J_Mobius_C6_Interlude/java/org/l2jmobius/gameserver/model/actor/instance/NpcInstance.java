@@ -1626,9 +1626,8 @@ public class NpcInstance extends Creature
 	public void insertObjectIdAndShowChatWindow(PlayerInstance player, String content)
 	{
 		// Send a Server->Client packet NpcHtmlMessage to the PlayerInstance in order to display the message of the NpcInstance
-		content = content.replace("%objectId%", String.valueOf(getObjectId()));
 		final NpcHtmlMessage npcReply = new NpcHtmlMessage(getObjectId());
-		npcReply.setHtml(content);
+		npcReply.setHtml(content.replace("%objectId%", String.valueOf(getObjectId())));
 		player.sendPacket(npcReply);
 	}
 	
@@ -1785,9 +1784,8 @@ public class NpcInstance extends Creature
 				return;
 			}
 			
-			questId = qs.getQuest().getName();
 			final String stateId = State.getStateName(qs.getState());
-			final String path = Config.DATAPACK_ROOT + "/data/scripts/quests/" + questId + "/" + stateId + ".htm";
+			final String path = Config.DATAPACK_ROOT + "/data/scripts/quests/" + qs.getQuest().getName() + "/" + stateId + ".htm";
 			content = HtmCache.getInstance().getHtm(path);
 		}
 		

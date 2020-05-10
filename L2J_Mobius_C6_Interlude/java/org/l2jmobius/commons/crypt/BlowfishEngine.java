@@ -1178,6 +1178,7 @@ public class BlowfishEngine
 	 * @param xr
 	 * @param table
 	 */
+	@SuppressWarnings("all")
 	private void processTable(int xl, int xr, int[] table)
 	{
 		final int size = table.length;

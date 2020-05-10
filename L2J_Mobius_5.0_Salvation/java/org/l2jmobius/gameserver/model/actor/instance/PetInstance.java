@@ -802,9 +802,9 @@ public class PetInstance extends Summon
 		}
 	}
 	
-	public void dropItemHere(ItemInstance dropit, boolean protect)
+	public void dropItemHere(ItemInstance item, boolean protect)
 	{
-		dropit = _inventory.dropItem("Drop", dropit.getObjectId(), dropit.getCount(), getOwner(), this);
+		final ItemInstance dropit = _inventory.dropItem("Drop", item.getObjectId(), item.getCount(), getOwner(), this);
 		if (dropit != null)
 		{
 			if (protect)

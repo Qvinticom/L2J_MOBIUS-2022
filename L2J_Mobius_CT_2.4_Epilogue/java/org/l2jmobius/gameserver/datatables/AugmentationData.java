@@ -510,7 +510,7 @@ public class AugmentationData
 		}
 	}
 	
-	private Augmentation generateRandomWeaponAugmentation(int lifeStoneLevel, int lifeStoneGrade, int lifeStoneId, ItemInstance item)
+	private Augmentation generateRandomWeaponAugmentation(int level, int lifeStoneGrade, int lifeStoneId, ItemInstance item)
 	{
 		int stat12 = 0;
 		int stat34 = 0;
@@ -709,7 +709,7 @@ public class AugmentationData
 		boolean generateGlow = false;
 		
 		// life stone level is used for stat Id and skill level, but here the max level is 9
-		lifeStoneLevel = Math.min(lifeStoneLevel, 9);
+		int lifeStoneLevel = Math.min(level, 9);
 		
 		switch (lifeStoneGrade)
 		{
@@ -883,7 +883,7 @@ public class AugmentationData
 		return new Augmentation(((stat34 << 16) + stat12));
 	}
 	
-	private Augmentation generateRandomAccessoryAugmentation(int lifeStoneLevel, int bodyPart, int lifeStoneId)
+	private Augmentation generateRandomAccessoryAugmentation(int level, int bodyPart, int lifeStoneId)
 	{
 		int stat12 = 0;
 		int stat34 = 0;
@@ -952,7 +952,7 @@ public class AugmentationData
 			}
 			return new Augmentation(((stat34 << 16) + stat12));
 		}
-		lifeStoneLevel = Math.min(lifeStoneLevel, 9);
+		int lifeStoneLevel = Math.min(level, 9);
 		int base = 0;
 		int skillsLength = 0;
 		

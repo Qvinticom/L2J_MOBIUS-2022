@@ -315,7 +315,7 @@ public class MailBBSManager extends BaseBBSManager
 		showMailList(activeChar, page, type, "", "");
 	}
 	
-	private void showMailList(PlayerInstance activeChar, int page, MailType type, String sType, String search)
+	private void showMailList(PlayerInstance activeChar, int pageValue, MailType type, String sType, String search)
 	{
 		List<Mail> letters;
 		if (!sType.equals("") && !search.equals(""))
@@ -346,6 +346,7 @@ public class MailBBSManager extends BaseBBSManager
 		
 		final int countMails = getCountLetters(activeChar.getObjectId(), type, sType, search);
 		final int maxpage = getMaxPageId(countMails);
+		int page = pageValue;
 		if (page > maxpage)
 		{
 			page = maxpage;
@@ -522,7 +523,7 @@ public class MailBBSManager extends BaseBBSManager
 		send1002(activeChar, " ", "Re: " + letter.subject, "0");
 	}
 	
-	public void sendLetter(String recipients, String subject, String message, PlayerInstance activeChar)
+	public void sendLetter(String recipients, String subjectValue, String messageValue, PlayerInstance activeChar)
 	{
 		// Current time.
 		final long currentDate = Calendar.getInstance().getTimeInMillis();
@@ -546,13 +547,14 @@ public class MailBBSManager extends BaseBBSManager
 		}
 		
 		// Edit subject, if none.
+		String subject = subjectValue;
 		if ((subject == null) || subject.isEmpty())
 		{
 			subject = "(no subject)";
 		}
 		
 		// Edit message.
-		message = message.replace("\n", "<br1>");
+		String message = messageValue.replace("\n", "<br1>");
 		
 		try (Connection con = DatabaseFactory.getConnection())
 		{

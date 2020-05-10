@@ -106,9 +106,9 @@ public class Util
 		return number;
 	}
 	
-	public static void printSection(String s)
+	public static void printSection(String section)
 	{
-		s = "=[ " + s + " ]";
+		String s = "=[ " + section + " ]";
 		while (s.length() < 61)
 		{
 			s = "-" + s;

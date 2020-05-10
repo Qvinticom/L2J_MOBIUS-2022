@@ -106,11 +106,12 @@ public class DarkWaterDragon extends AbstractNpcAI
 				cancelQuestTimer("2", npc, null);
 				cancelQuestTimer("3", npc, null);
 				cancelQuestTimer("4", npc, null);
+				
 				MY_TRACKING_SET.remove(npc.getObjectId());
-				player = ID_MAP.remove(npc.getObjectId());
-				if (player != null)
+				final PlayerInstance removed = ID_MAP.remove(npc.getObjectId());
+				if (removed != null)
 				{
-					((Attackable) npc).doItemDrop(NpcData.getInstance().getTemplate(18485), player);
+					((Attackable) npc).doItemDrop(NpcData.getInstance().getTemplate(18485), removed);
 				}
 				
 				npc.deleteMe();

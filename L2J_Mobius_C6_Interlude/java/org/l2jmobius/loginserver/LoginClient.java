@@ -139,9 +139,10 @@ public class LoginClient extends MMOClient<MMOConnection<LoginClient>>
 	}
 	
 	@Override
-	public boolean encrypt(ByteBuffer buf, int size)
+	public boolean encrypt(ByteBuffer buf, int sizeValue)
 	{
 		final int offset = buf.position();
+		int size = sizeValue;
 		try
 		{
 			size = _loginCrypt.encrypt(buf.array(), offset, size);

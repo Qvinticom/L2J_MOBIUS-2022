@@ -457,11 +457,12 @@ public class Instance implements IIdentifiable, INamable
 	
 	/**
 	 * @param groupName
-	 * @param filter
+	 * @param filterValue
 	 * @return {@code Stream<Npc>} of NPCs that is part of a group and matches filter specified
 	 */
-	public Stream<Npc> getStreamOfGroup(String groupName, Predicate<Npc> filter)
+	public Stream<Npc> getStreamOfGroup(String groupName, Predicate<Npc> filterValue)
 	{
+		Predicate<Npc> filter = filterValue;
 		if (filter == null)
 		{
 			filter = Objects::nonNull;

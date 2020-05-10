@@ -113,8 +113,9 @@ final class DocumentSkill extends DocumentBase
 		}
 	}
 	
-	protected void parseSkill(Node n)
+	protected void parseSkill(Node node)
 	{
+		Node n = node;
 		final NamedNodeMap attrs = n.getAttributes();
 		int enchantLevels1 = 0;
 		int enchantLevels2 = 0;

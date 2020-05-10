@@ -177,15 +177,16 @@ public class QuestState
 	/**
 	 * Add parameter used in quests.
 	 * @param var String pointing out the name of the variable for quest
-	 * @param value String pointing out the value of the variable for quest
+	 * @param val String pointing out the value of the variable for quest
 	 */
-	public void setInternal(String var, String value)
+	public void setInternal(String var, String val)
 	{
 		if (_vars == null)
 		{
 			_vars = new HashMap<>();
 		}
 		
+		String value = val;
 		if (value == null)
 		{
 			value = "";
@@ -211,15 +212,16 @@ public class QuestState
 	 * If the key doesn't exist, the couple is added/created in the database</li>
 	 * <ul>
 	 * @param var String indicating the name of the variable for quest
-	 * @param value String indicating the value of the variable for quest
+	 * @param val String indicating the value of the variable for quest
 	 */
-	public void set(String var, String value)
+	public void set(String var, String val)
 	{
 		if (_vars == null)
 		{
 			_vars = new HashMap<>();
 		}
 		
+		String value = val;
 		if (value == null)
 		{
 			value = "";

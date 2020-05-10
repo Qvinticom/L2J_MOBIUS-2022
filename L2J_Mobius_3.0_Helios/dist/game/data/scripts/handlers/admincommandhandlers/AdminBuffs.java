@@ -61,8 +61,9 @@ public class AdminBuffs implements IAdminCommandHandler
 	private static final String FONT_RED2 = "</font>";
 	
 	@Override
-	public boolean useAdminCommand(String command, PlayerInstance activeChar)
+	public boolean useAdminCommand(String commandValue, PlayerInstance activeChar)
 	{
+		String command = commandValue;
 		if (command.startsWith("admin_buff"))
 		{
 			if ((activeChar.getTarget() == null) || !activeChar.getTarget().isCreature())

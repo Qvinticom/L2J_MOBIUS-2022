@@ -59,12 +59,14 @@ public class HexUtils
 	/**
 	 * Method to generate the hexadecimal character presentation of a byte
 	 * @param data byte to generate the hexadecimal character presentation from
-	 * @param dstHexChars the char array the hexadecimal character presentation should be copied to, if this is null, dstOffset is ignored and a new char array with 2 elements is created
-	 * @param dstOffset offset at which the hexadecimal character presentation is copied to dstHexChars
+	 * @param dstHexCharsValue the char array the hexadecimal character presentation should be copied to, if this is null, dstOffset is ignored and a new char array with 2 elements is created
+	 * @param dstOffsetValue offset at which the hexadecimal character presentation is copied to dstHexChars
 	 * @return the char array the hexadecimal character presentation was copied to
 	 */
-	public static char[] b2HexChars(byte data, char[] dstHexChars, int dstOffset)
+	public static char[] b2HexChars(byte data, char[] dstHexCharsValue, int dstOffsetValue)
 	{
+		char[] dstHexChars = dstHexCharsValue;
+		int dstOffset = dstOffsetValue;
 		if (dstHexChars == null)
 		{
 			dstHexChars = new char[2];
@@ -92,12 +94,14 @@ public class HexUtils
 	/**
 	 * Method to generate the hexadecimal character presentation of an integer
 	 * @param data integer to generate the hexadecimal character presentation from
-	 * @param dstHexChars the char array the hexadecimal character presentation should be copied to, if this is null, dstOffset is ignored and a new char array with 8 elements is created
-	 * @param dstOffset offset at which the hexadecimal character presentation is copied to dstHexChars
+	 * @param dstHexCharsValue the char array the hexadecimal character presentation should be copied to, if this is null, dstOffset is ignored and a new char array with 8 elements is created
+	 * @param dstOffsetValue offset at which the hexadecimal character presentation is copied to dstHexChars
 	 * @return the char array the hexadecimal character presentation was copied to
 	 */
-	public static char[] int2HexChars(int data, char[] dstHexChars, int dstOffset)
+	public static char[] int2HexChars(int data, char[] dstHexCharsValue, int dstOffsetValue)
 	{
+		char[] dstHexChars = dstHexCharsValue;
+		int dstOffset = dstOffsetValue;
 		if (dstHexChars == null)
 		{
 			dstHexChars = new char[8];
@@ -108,6 +112,7 @@ public class HexUtils
 		b2HexChars((byte) ((data & 0x00FF0000) >> 16), dstHexChars, dstOffset + 2);
 		b2HexChars((byte) ((data & 0x0000FF00) >> 8), dstHexChars, dstOffset + 4);
 		b2HexChars((byte) (data & 0x000000FF), dstHexChars, dstOffset + 6);
+		
 		return dstHexChars;
 	}
 	
@@ -129,12 +134,14 @@ public class HexUtils
 	 * @param data byte array to generate the hexadecimal character presentation from
 	 * @param offset offset where to start in data array
 	 * @param len number of bytes to generate the hexadecimal character presentation from
-	 * @param dstHexChars the char array the hexadecimal character presentation should be copied to, if this is null, dstOffset is ignored and a new char array with len*2 elements is created
-	 * @param dstOffset offset at which the hexadecimal character presentation is copied to dstHexChars
+	 * @param dstHexCharsValue the char array the hexadecimal character presentation should be copied to, if this is null, dstOffset is ignored and a new char array with len*2 elements is created
+	 * @param dstOffsetValue offset at which the hexadecimal character presentation is copied to dstHexChars
 	 * @return the char array the hexadecimal character presentation was copied to
 	 */
-	public static char[] bArr2HexChars(byte[] data, int offset, int len, char[] dstHexChars, int dstOffset)
+	public static char[] bArr2HexChars(byte[] data, int offset, int len, char[] dstHexCharsValue, int dstOffsetValue)
 	{
+		char[] dstHexChars = dstHexCharsValue;
+		int dstOffset = dstOffsetValue;
 		if (dstHexChars == null)
 		{
 			dstHexChars = new char[len * 2];
@@ -157,8 +164,10 @@ public class HexUtils
 		return bArr2AsciiChars(data, offset, len, new char[len], 0);
 	}
 	
-	public static char[] bArr2AsciiChars(byte[] data, int offset, int len, char[] dstAsciiChars, int dstOffset)
+	public static char[] bArr2AsciiChars(byte[] data, int offset, int len, char[] dstAsciiCharsValue, int dstOffsetValue)
 	{
+		char[] dstAsciiChars = dstAsciiCharsValue;
+		int dstOffset = dstOffsetValue;
 		if (dstAsciiChars == null)
 		{
 			dstAsciiChars = new char[len];

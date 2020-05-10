@@ -343,10 +343,11 @@ public class SkillTreeData implements IXmlReader
 		skillTree.putAll(_commonSkillTree);
 		
 		final LinkedList<ClassId> classSequence = new LinkedList<>();
-		while (classId != null)
+		ClassId currentClassId = classId;
+		while (currentClassId != null)
 		{
-			classSequence.addFirst(classId);
-			classId = _parentClassMap.get(classId);
+			classSequence.addFirst(currentClassId);
+			currentClassId = _parentClassMap.get(currentClassId);
 		}
 		
 		for (ClassId cid : classSequence)

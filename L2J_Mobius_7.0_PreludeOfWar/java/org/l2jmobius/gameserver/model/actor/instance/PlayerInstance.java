@@ -2037,13 +2037,15 @@ public class PlayerInstance extends Playable
 	
 	/**
 	 * Set the reputation of the PlayerInstance and send a Server->Client packet StatusUpdate (broadcast).
-	 * @param reputation
+	 * @param value
 	 */
 	@Override
-	public void setReputation(int reputation)
+	public void setReputation(int value)
 	{
 		// Notify to scripts.
-		EventDispatcher.getInstance().notifyEventAsync(new OnPlayerReputationChanged(this, getReputation(), reputation), this);
+		EventDispatcher.getInstance().notifyEventAsync(new OnPlayerReputationChanged(this, getReputation(), value), this);
+		
+		int reputation = value;
 		if (reputation > Config.MAX_REPUTATION) // Max count of positive reputation
 		{
 			reputation = Config.MAX_REPUTATION;
@@ -2632,12 +2634,7 @@ public class PlayerInstance extends Playable
 	 */
 	public void setExp(long exp)
 	{
-		if (exp < 0)
-		{
-			exp = 0;
-		}
-		
-		getStat().setExp(exp);
+		getStat().setExp(Math.max(0, exp));
 	}
 	
 	/**
@@ -2678,12 +2675,7 @@ public class PlayerInstance extends Playable
 	 */
 	public void setSp(long sp)
 	{
-		if (sp < 0)
-		{
-			sp = 0;
-		}
-		
-		super.getStat().setSp(sp);
+		super.getStat().setSp(Math.max(0, sp));
 	}
 	
 	/**
@@ -3355,8 +3347,8 @@ public class PlayerInstance extends Playable
 	 */
 	public boolean destroyItem(String process, ItemInstance item, long count, WorldObject reference, boolean sendMessage)
 	{
-		item = _inventory.destroyItem(process, item, count, this, reference);
-		if (item == null)
+		final ItemInstance destoyedItem = _inventory.destroyItem(process, item, count, this, reference);
+		if (destoyedItem == null)
 		{
 			if (sendMessage)
 			{
@@ -3369,7 +3361,7 @@ public class PlayerInstance extends Playable
 		if (!Config.FORCE_INVENTORY_UPDATE)
 		{
 			final InventoryUpdate playerIU = new InventoryUpdate();
-			playerIU.addItem(item);
+			playerIU.addItem(destoyedItem);
 			sendInventoryUpdate(playerIU);
 		}
 		else
@@ -3383,14 +3375,14 @@ public class PlayerInstance extends Playable
 			if (count > 1)
 			{
 				final SystemMessage sm = new SystemMessage(SystemMessageId.S2_S1_S_DISAPPEARED);
-				sm.addItemName(item);
+				sm.addItemName(destoyedItem);
 				sm.addLong(count);
 				sendPacket(sm);
 			}
 			else
 			{
 				final SystemMessage sm = new SystemMessage(SystemMessageId.S1_DISAPPEARED);
-				sm.addItemName(item);
+				sm.addItemName(destoyedItem);
 				sendPacket(sm);
 			}
 		}
@@ -3627,8 +3619,8 @@ public class PlayerInstance extends Playable
 	 */
 	public boolean dropItem(String process, ItemInstance item, WorldObject reference, boolean sendMessage, boolean protectItem)
 	{
-		item = _inventory.dropItem(process, item, this, reference);
-		if (item == null)
+		final ItemInstance droppedItem = _inventory.dropItem(process, item, this, reference);
+		if (droppedItem == null)
 		{
 			if (sendMessage)
 			{
@@ -3637,33 +3629,33 @@ public class PlayerInstance extends Playable
 			return false;
 		}
 		
-		item.dropMe(this, (getX() + Rnd.get(50)) - 25, (getY() + Rnd.get(50)) - 25, getZ() + 20);
-		if ((Config.AUTODESTROY_ITEM_AFTER > 0) && Config.DESTROY_DROPPED_PLAYER_ITEM && !Config.LIST_PROTECTED_ITEMS.contains(item.getId()) && ((item.isEquipable() && Config.DESTROY_EQUIPABLE_PLAYER_ITEM) || !item.isEquipable()))
+		droppedItem.dropMe(this, (getX() + Rnd.get(50)) - 25, (getY() + Rnd.get(50)) - 25, getZ() + 20);
+		if ((Config.AUTODESTROY_ITEM_AFTER > 0) && Config.DESTROY_DROPPED_PLAYER_ITEM && !Config.LIST_PROTECTED_ITEMS.contains(droppedItem.getId()) && ((droppedItem.isEquipable() && Config.DESTROY_EQUIPABLE_PLAYER_ITEM) || !droppedItem.isEquipable()))
 		{
-			ItemsAutoDestroy.getInstance().addItem(item);
+			ItemsAutoDestroy.getInstance().addItem(droppedItem);
 		}
 		
 		// protection against auto destroy dropped item
 		if (Config.DESTROY_DROPPED_PLAYER_ITEM)
 		{
-			item.setProtected(item.isEquipable() && (!item.isEquipable() || !Config.DESTROY_EQUIPABLE_PLAYER_ITEM));
+			droppedItem.setProtected(droppedItem.isEquipable() && (!droppedItem.isEquipable() || !Config.DESTROY_EQUIPABLE_PLAYER_ITEM));
 		}
 		else
 		{
-			item.setProtected(true);
+			droppedItem.setProtected(true);
 		}
 		
 		// retail drop protection
 		if (protectItem)
 		{
-			item.getDropProtection().protect(this);
+			droppedItem.getDropProtection().protect(this);
 		}
 		
 		// Send inventory update packet
 		if (!Config.FORCE_INVENTORY_UPDATE)
 		{
 			final InventoryUpdate playerIU = new InventoryUpdate();
-			playerIU.addItem(item);
+			playerIU.addItem(droppedItem);
 			sendInventoryUpdate(playerIU);
 		}
 		else
@@ -3675,7 +3667,7 @@ public class PlayerInstance extends Playable
 		if (sendMessage)
 		{
 			final SystemMessage sm = new SystemMessage(SystemMessageId.YOU_HAVE_DROPPED_S1);
-			sm.addItemName(item);
+			sm.addItemName(droppedItem);
 			sendPacket(sm);
 		}
 		
@@ -4542,11 +4534,12 @@ public class PlayerInstance extends Playable
 	 * <li>Add the PlayerInstance to the _statusListener of the new target if it's a Creature</li>
 	 * <li>Target the new WorldObject (add the target to the PlayerInstance _target, _knownObject and PlayerInstance to _KnownObject of the WorldObject)</li>
 	 * </ul>
-	 * @param newTarget The WorldObject to target
+	 * @param worldObject The WorldObject to target
 	 */
 	@Override
-	public void setTarget(WorldObject newTarget)
+	public void setTarget(WorldObject worldObject)
 	{
+		WorldObject newTarget = worldObject;
 		if (newTarget != null)
 		{
 			final boolean isInParty = (newTarget.isPlayer() && isInParty() && _party.containsPlayer(newTarget.getActingPlayer()));
@@ -8235,32 +8228,34 @@ public class PlayerInstance extends Playable
 	@Override
 	public boolean useMagic(Skill skill, ItemInstance item, boolean forceUse, boolean dontMove)
 	{
+		Skill usedSkill = skill;
+		
 		// Passive skills cannot be used.
-		if (skill.isPassive())
+		if (usedSkill.isPassive())
 		{
 			sendPacket(ActionFailed.STATIC_PACKET);
 			return false;
 		}
 		
 		// If Alternate rule Karma punishment is set to true, forbid skill Return to player with Karma
-		if (!Config.ALT_GAME_KARMA_PLAYER_CAN_TELEPORT && (getReputation() < 0) && skill.hasEffectType(EffectType.TELEPORT))
+		if (!Config.ALT_GAME_KARMA_PLAYER_CAN_TELEPORT && (getReputation() < 0) && usedSkill.hasEffectType(EffectType.TELEPORT))
 		{
 			sendPacket(ActionFailed.STATIC_PACKET);
 			return false;
 		}
 		
 		// players mounted on pets cannot use any toggle skills
-		if (skill.isToggle() && isMounted())
+		if (usedSkill.isToggle() && isMounted())
 		{
 			sendPacket(ActionFailed.STATIC_PACKET);
 			return false;
 		}
 		
 		// Support for wizard skills with stances (Fire, Water, Wind, Earth)
-		final Skill attachedSkill = skill.getAttachedSkill(this);
+		final Skill attachedSkill = usedSkill.getAttachedSkill(this);
 		if (attachedSkill != null)
 		{
-			skill = attachedSkill;
+			usedSkill = attachedSkill;
 		}
 		
 		// Alter skills
@@ -8273,7 +8268,7 @@ public class PlayerInstance extends Playable
 		// ************************************* Check Player State *******************************************
 		
 		// Abnormal effects(ex : Stun, Sleep...) are checked in Creature useMagic()
-		if (!skill.canCastWhileDisabled() && (isControlBlocked() || hasBlockActions()))
+		if (!usedSkill.canCastWhileDisabled() && (isControlBlocked() || hasBlockActions()))
 		{
 			sendPacket(ActionFailed.STATIC_PACKET);
 			return false;
@@ -8287,7 +8282,7 @@ public class PlayerInstance extends Playable
 		}
 		
 		// Check if fishing and trying to use non-fishing skills.
-		if (isFishing() && !skill.hasEffectType(EffectType.FISHING, EffectType.FISHING_START))
+		if (isFishing() && !usedSkill.hasEffectType(EffectType.FISHING, EffectType.FISHING_START))
 		{
 			sendPacket(SystemMessageId.ONLY_FISHING_SKILLS_MAY_BE_USED_AT_THIS_TIME);
 			return false;
@@ -8300,32 +8295,32 @@ public class PlayerInstance extends Playable
 			return false;
 		}
 		
-		if (isSkillDisabled(skill))
+		if (isSkillDisabled(usedSkill))
 		{
 			final SystemMessage sm;
-			if (hasSkillReuse(skill.getReuseHashCode()))
+			if (hasSkillReuse(usedSkill.getReuseHashCode()))
 			{
-				final int remainingTime = (int) (getSkillRemainingReuseTime(skill.getReuseHashCode()) / 1000);
+				final int remainingTime = (int) (getSkillRemainingReuseTime(usedSkill.getReuseHashCode()) / 1000);
 				final int hours = remainingTime / 3600;
 				final int minutes = (remainingTime % 3600) / 60;
 				final int seconds = (remainingTime % 60);
 				if (hours > 0)
 				{
 					sm = new SystemMessage(SystemMessageId.THERE_ARE_S2_HOUR_S_S3_MINUTE_S_AND_S4_SECOND_S_REMAINING_IN_S1_S_RE_USE_TIME);
-					sm.addSkillName(skill);
+					sm.addSkillName(usedSkill);
 					sm.addInt(hours);
 					sm.addInt(minutes);
 				}
 				else if (minutes > 0)
 				{
 					sm = new SystemMessage(SystemMessageId.THERE_ARE_S2_MINUTE_S_S3_SECOND_S_REMAINING_IN_S1_S_RE_USE_TIME);
-					sm.addSkillName(skill);
+					sm.addSkillName(usedSkill);
 					sm.addInt(minutes);
 				}
 				else
 				{
 					sm = new SystemMessage(SystemMessageId.THERE_ARE_S2_SECOND_S_REMAINING_IN_S1_S_RE_USE_TIME);
-					sm.addSkillName(skill);
+					sm.addSkillName(usedSkill);
 				}
 				
 				sm.addInt(seconds);
@@ -8333,11 +8328,11 @@ public class PlayerInstance extends Playable
 			else
 			{
 				sm = new SystemMessage(SystemMessageId.S1_IS_NOT_AVAILABLE_AT_THIS_TIME_BEING_PREPARED_FOR_REUSE);
-				sm.addSkillName(skill);
+				sm.addSkillName(usedSkill);
 			}
 			
 			// Don't send packet for Raise/Focus Shield if Final Ultimate Defense is active.
-			if ((getEffectList().getBuffInfoBySkillId(10017) == null) && ((skill.getId() == 10020) || (skill.getId() == 10021)))
+			if ((getEffectList().getBuffInfoBySkillId(10017) == null) && ((usedSkill.getId() == 10020) || (usedSkill.getId() == 10021)))
 			{
 				sendPacket(sm);
 				return false;
@@ -8353,20 +8348,20 @@ public class PlayerInstance extends Playable
 		}
 		
 		// Check if the skill type is toggle and disable it, unless the toggle is necessary to be on.
-		if (skill.isToggle())
+		if (usedSkill.isToggle())
 		{
-			if (isAffectedBySkill(skill.getId()))
+			if (isAffectedBySkill(usedSkill.getId()))
 			{
-				if (!skill.isNecessaryToggle())
+				if (!usedSkill.isNecessaryToggle())
 				{
-					stopSkillEffects(true, skill.getId());
+					stopSkillEffects(true, usedSkill.getId());
 				}
 				sendPacket(ActionFailed.STATIC_PACKET);
 				return false;
 			}
-			else if (skill.getToggleGroupId() > 0)
+			else if (usedSkill.getToggleGroupId() > 0)
 			{
-				getEffectList().stopAllTogglesOfGroup(skill.getToggleGroupId());
+				getEffectList().stopAllTogglesOfGroup(usedSkill.getToggleGroupId());
 			}
 		}
 		
@@ -8380,9 +8375,9 @@ public class PlayerInstance extends Playable
 		
 		// ************************************* Check Target *******************************************
 		// Create and set a WorldObject containing the target of the skill
-		final WorldObject target = skill.getTarget(this, forceUse, dontMove, true);
+		final WorldObject target = usedSkill.getTarget(this, forceUse, dontMove, true);
 		final Location worldPosition = _currentSkillWorldPosition;
-		if ((skill.getTargetType() == TargetType.GROUND) && (worldPosition == null))
+		if ((usedSkill.getTargetType() == TargetType.GROUND) && (worldPosition == null))
 		{
 			sendPacket(ActionFailed.STATIC_PACKET);
 			return false;
@@ -8396,27 +8391,27 @@ public class PlayerInstance extends Playable
 		}
 		
 		// Check if all casting conditions are completed
-		if (!skill.checkCondition(this, target, true))
+		if (!usedSkill.checkCondition(this, target, true))
 		{
 			sendPacket(ActionFailed.STATIC_PACKET);
 			
 			// Upon failed conditions, next action is called.
-			if ((skill.getNextAction() != NextActionType.NONE) && (target != this) && target.isAutoAttackable(this) && ((getAI().getNextIntention() == null) || (getAI().getNextIntention().getCtrlIntention() != CtrlIntention.AI_INTENTION_MOVE_TO)))
+			if ((usedSkill.getNextAction() != NextActionType.NONE) && (target != this) && target.isAutoAttackable(this) && ((getAI().getNextIntention() == null) || (getAI().getNextIntention().getCtrlIntention() != CtrlIntention.AI_INTENTION_MOVE_TO)))
 			{
-				if (skill.getNextAction() == NextActionType.ATTACK)
+				if (usedSkill.getNextAction() == NextActionType.ATTACK)
 				{
 					getAI().setIntention(CtrlIntention.AI_INTENTION_ATTACK, target);
 				}
-				else if (skill.getNextAction() == NextActionType.CAST)
+				else if (usedSkill.getNextAction() == NextActionType.CAST)
 				{
-					getAI().setIntention(CtrlIntention.AI_INTENTION_CAST, skill, target, item, false, false);
+					getAI().setIntention(CtrlIntention.AI_INTENTION_CAST, usedSkill, target, item, false, false);
 				}
 			}
 			
 			return false;
 		}
 		
-		final boolean doubleCast = isAffected(EffectFlag.DOUBLE_CAST) && skill.canDoubleCast();
+		final boolean doubleCast = isAffected(EffectFlag.DOUBLE_CAST) && usedSkill.canDoubleCast();
 		
 		// If a skill is currently being used, queue this one if this is not the same
 		// In case of double casting, check if both slots are occupied, then queue skill.
@@ -8426,7 +8421,7 @@ public class PlayerInstance extends Playable
 			if (item == null)
 			{
 				// Create a new SkillDat object and queue it in the player _queuedSkill
-				setQueuedSkill(skill, item, forceUse, dontMove);
+				setQueuedSkill(usedSkill, item, forceUse, dontMove);
 			}
 			sendPacket(ActionFailed.STATIC_PACKET);
 			return false;
@@ -8438,7 +8433,7 @@ public class PlayerInstance extends Playable
 		}
 		
 		// Notify the AI with AI_INTENTION_CAST and target
-		getAI().setIntention(CtrlIntention.AI_INTENTION_CAST, skill, target, item, forceUse, dontMove);
+		getAI().setIntention(CtrlIntention.AI_INTENTION_CAST, usedSkill, target, item, forceUse, dontMove);
 		return true;
 	}
 	

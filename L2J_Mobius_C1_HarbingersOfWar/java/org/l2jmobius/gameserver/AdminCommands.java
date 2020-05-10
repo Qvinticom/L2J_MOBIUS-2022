@@ -499,7 +499,7 @@ public class AdminCommands extends Thread
 		activeChar.sendPacket(adminReply);
 	}
 	
-	private void listCharacters(ClientThread client, int page)
+	private void listCharacters(ClientThread client, int pageValue)
 	{
 		final PlayerInstance activeChar = client.getActiveChar();
 		final Collection<PlayerInstance> allWorldPlayers = World.getInstance().getAllPlayers();
@@ -511,6 +511,7 @@ public class AdminCommands extends Thread
 		{
 			++maxPages;
 		}
+		int page = pageValue;
 		if (page > maxPages)
 		{
 			page = maxPages;

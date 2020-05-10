@@ -350,46 +350,46 @@ public class CommonUtil
 	
 	/**
 	 * Re-Maps a value from one range to another.
-	 * @param input
+	 * @param inputValue
 	 * @param inputMin
 	 * @param inputMax
 	 * @param outputMin
 	 * @param outputMax
 	 * @return The mapped value
 	 */
-	public static int map(int input, int inputMin, int inputMax, int outputMin, int outputMax)
+	public static int map(int inputValue, int inputMin, int inputMax, int outputMin, int outputMax)
 	{
-		input = constrain(input, inputMin, inputMax);
+		final int input = constrain(inputValue, inputMin, inputMax);
 		return (((input - inputMin) * (outputMax - outputMin)) / (inputMax - inputMin)) + outputMin;
 	}
 	
 	/**
 	 * Re-Maps a value from one range to another.
-	 * @param input
+	 * @param inputValue
 	 * @param inputMin
 	 * @param inputMax
 	 * @param outputMin
 	 * @param outputMax
 	 * @return The mapped value
 	 */
-	public static long map(long input, long inputMin, long inputMax, long outputMin, long outputMax)
+	public static long map(long inputValue, long inputMin, long inputMax, long outputMin, long outputMax)
 	{
-		input = constrain(input, inputMin, inputMax);
+		final long input = constrain(inputValue, inputMin, inputMax);
 		return (((input - inputMin) * (outputMax - outputMin)) / (inputMax - inputMin)) + outputMin;
 	}
 	
 	/**
 	 * Re-Maps a value from one range to another.
-	 * @param input
+	 * @param inputValue
 	 * @param inputMin
 	 * @param inputMax
 	 * @param outputMin
 	 * @param outputMax
 	 * @return The mapped value
 	 */
-	public static double map(double input, double inputMin, double inputMax, double outputMin, double outputMax)
+	public static double map(double inputValue, double inputMin, double inputMax, double outputMin, double outputMax)
 	{
-		input = constrain(input, inputMin, inputMax);
+		final double input = constrain(inputValue, inputMin, inputMax);
 		return (((input - inputMin) * (outputMax - outputMin)) / (inputMax - inputMin)) + outputMin;
 	}
 	

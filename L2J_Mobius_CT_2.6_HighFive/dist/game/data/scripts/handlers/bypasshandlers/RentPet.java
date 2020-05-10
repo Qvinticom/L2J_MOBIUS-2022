@@ -78,7 +78,7 @@ public class RentPet implements IBypassHandler
 		return false;
 	}
 	
-	public static void tryRentPet(PlayerInstance player, int value)
+	public static void tryRentPet(PlayerInstance player, int petValue)
 	{
 		if ((player == null) || player.hasSummon() || player.isMounted() || player.isRentedPet() || player.isTransformed() || player.isCursedWeaponEquipped())
 		{
@@ -106,6 +106,7 @@ public class RentPet implements IBypassHandler
 			1800
 		};
 		
+		int value = petValue;
 		if (value > 10)
 		{
 			petId = 12526;

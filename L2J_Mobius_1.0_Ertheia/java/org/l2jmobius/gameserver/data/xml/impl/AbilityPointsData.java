@@ -83,9 +83,9 @@ public class AbilityPointsData implements IXmlReader
 		return null;
 	}
 	
-	public long getPrice(int points)
+	public long getPrice(int value)
 	{
-		points++; // for next point
+		final int points = value + 1; // for next point
 		final RangeAbilityPointsHolder holder = getHolder(points);
 		if (holder == null)
 		{
@@ -96,7 +96,7 @@ public class AbilityPointsData implements IXmlReader
 			}
 			
 			// No data found
-			return points >= 13 ? 1_000_000_000 : points >= 9 ? 750_000_000 : points >= 5 ? 500_000_000 : 250_000_000;
+			return points >= 13 ? 1000000000 : points >= 9 ? 750000000 : points >= 5 ? 500000000 : 250000000;
 		}
 		return holder.getSP();
 	}

@@ -63,15 +63,15 @@ public class QuestSpawn
 	/**
 	 * Add spawn for player instance Return object id of newly spawned npc
 	 * @param npcId
-	 * @param x
-	 * @param y
-	 * @param z
+	 * @param xValue
+	 * @param yValue
+	 * @param zValue
 	 * @param heading
 	 * @param randomOffset
 	 * @param despawnDelay
 	 * @return
 	 */
-	public NpcInstance addSpawn(int npcId, int x, int y, int z, int heading, boolean randomOffset, int despawnDelay)
+	public NpcInstance addSpawn(int npcId, int xValue, int yValue, int zValue, int heading, boolean randomOffset, int despawnDelay)
 	{
 		NpcInstance result = null;
 		
@@ -82,12 +82,14 @@ public class QuestSpawn
 			{
 				// Sometimes, even if the quest script specifies some xyz (for example npc.getX() etc) by the time the code reaches here, xyz have become 0! Also, a questdev might have purposely set xy to 0,0...however,
 				// the spawn code is coded such that if x=y=0, it looks into location for the spawn loc! This will NOT work with quest spawns! For both of the above cases, we need a fail-safe spawn. For this, we use the default spawn location, which is at the player's loc.
-				if ((x == 0) && (y == 0))
+				if ((xValue == 0) && (yValue == 0))
 				{
 					LOGGER.warning("Failed to adjust bad locks for quest spawn!  Spawn aborted!");
 					return null;
 				}
 				
+				int x = xValue;
+				int y = yValue;
 				if (randomOffset)
 				{
 					int offset;
@@ -114,11 +116,12 @@ public class QuestSpawn
 					offset *= Rnd.get(50, 100);
 					y += offset;
 				}
+				
 				final Spawn spawn = new Spawn(template);
 				spawn.setHeading(heading);
 				spawn.setX(x);
 				spawn.setY(y);
-				spawn.setZ(z + 20);
+				spawn.setZ(zValue + 20);
 				spawn.stopRespawn();
 				result = spawn.doSpawn();
 				if (despawnDelay > 0)

@@ -148,16 +148,17 @@ public class ScriptEngineManager implements IXmlReader
 		}
 	}
 	
-	public void executeScript(Path sourceFile) throws Exception
+	public void executeScript(Path sourceFiles) throws Exception
 	{
-		if (!sourceFile.isAbsolute())
+		Path path = sourceFiles;
+		if (!path.isAbsolute())
 		{
-			sourceFile = SCRIPT_FOLDER.resolve(sourceFile);
+			path = SCRIPT_FOLDER.resolve(path);
 		}
 		
-		sourceFile = sourceFile.toAbsolutePath();
+		path = path.toAbsolutePath();
 		
-		final Entry<Path, Throwable> error = _javaExecutionContext.executeScript(sourceFile);
+		final Entry<Path, Throwable> error = _javaExecutionContext.executeScript(path);
 		if (error != null)
 		{
 			throw new Exception("ScriptEngine: " + error.getKey() + " failed execution!", error.getValue());

@@ -1074,8 +1074,9 @@ public class Clan implements IIdentifiable, INamable
 		}
 	}
 	
-	private void storeNotice(String notice, boolean enabled)
+	private void storeNotice(String noticeValue, boolean enabled)
 	{
+		String notice = noticeValue;
 		if (notice == null)
 		{
 			notice = "";

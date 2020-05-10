@@ -359,8 +359,9 @@ public class Multisell
 		return list;
 	}
 	
-	protected MultiSellEntry parseEntry(Node n)
+	protected MultiSellEntry parseEntry(Node node)
 	{
+		Node n = node;
 		final int entryId = Integer.parseInt(n.getAttributes().getNamedItem("id").getNodeValue());
 		final Node first = n.getFirstChild();
 		final MultiSellEntry entry = new MultiSellEntry();

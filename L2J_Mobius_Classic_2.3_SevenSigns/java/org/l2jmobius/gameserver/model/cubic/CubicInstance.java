@@ -206,8 +206,9 @@ public class CubicInstance
 		}
 	}
 	
-	private void tryToUseSkill(WorldObject target, CubicSkill cubicSkill)
+	private void tryToUseSkill(WorldObject worldObject, CubicSkill cubicSkill)
 	{
+		WorldObject target = worldObject;
 		final Skill skill = cubicSkill.getSkill();
 		if ((_template.getTargetType() != CubicTargetType.MASTER) && !((_template.getTargetType() == CubicTargetType.BY_SKILL) && (cubicSkill.getTargetType() == CubicTargetType.MASTER)))
 		{

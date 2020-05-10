@@ -1955,13 +1955,15 @@ public class PlayerInstance extends Playable
 	
 	/**
 	 * Set the Karma of the PlayerInstance and send a Server->Client packet StatusUpdate (broadcast).
-	 * @param karma
+	 * @param value
 	 */
 	@Override
-	public void setKarma(int karma)
+	public void setKarma(int value)
 	{
 		// Notify to scripts.
-		EventDispatcher.getInstance().notifyEventAsync(new OnPlayerKarmaChanged(this, getKarma(), karma), this);
+		EventDispatcher.getInstance().notifyEventAsync(new OnPlayerKarmaChanged(this, getKarma(), value), this);
+		
+		int karma = value;
 		if (karma < 0)
 		{
 			karma = 0;
@@ -2668,12 +2670,7 @@ public class PlayerInstance extends Playable
 	 */
 	public void setExp(long exp)
 	{
-		if (exp < 0)
-		{
-			exp = 0;
-		}
-		
-		getStat().setExp(exp);
+		getStat().setExp(Math.max(0, exp));
 	}
 	
 	/**
@@ -2720,12 +2717,7 @@ public class PlayerInstance extends Playable
 	 */
 	public void setSp(long sp)
 	{
-		if (sp < 0)
-		{
-			sp = 0;
-		}
-		
-		super.getStat().setSp(sp);
+		super.getStat().setSp(Math.max(0, sp));
 	}
 	
 	/**
@@ -3372,8 +3364,8 @@ public class PlayerInstance extends Playable
 	 */
 	public boolean destroyItem(String process, ItemInstance item, long count, WorldObject reference, boolean sendMessage)
 	{
-		item = _inventory.destroyItem(process, item, count, this, reference);
-		if (item == null)
+		final ItemInstance destoyedItem = _inventory.destroyItem(process, item, count, this, reference);
+		if (destoyedItem == null)
 		{
 			if (sendMessage)
 			{
@@ -3386,7 +3378,7 @@ public class PlayerInstance extends Playable
 		if (!Config.FORCE_INVENTORY_UPDATE)
 		{
 			final InventoryUpdate playerIU = new InventoryUpdate();
-			playerIU.addItem(item);
+			playerIU.addItem(destoyedItem);
 			sendPacket(playerIU);
 		}
 		else
@@ -3406,13 +3398,13 @@ public class PlayerInstance extends Playable
 			if (count > 1)
 			{
 				sm = new SystemMessage(SystemMessageId.S2_S1_HAS_DISAPPEARED);
-				sm.addItemName(item);
+				sm.addItemName(destoyedItem);
 				sm.addLong(count);
 			}
 			else
 			{
 				sm = new SystemMessage(SystemMessageId.S1_HAS_DISAPPEARED);
-				sm.addItemName(item);
+				sm.addItemName(destoyedItem);
 			}
 			sendPacket(sm);
 		}
@@ -3673,8 +3665,8 @@ public class PlayerInstance extends Playable
 	 */
 	public boolean dropItem(String process, ItemInstance item, WorldObject reference, boolean sendMessage, boolean protectItem)
 	{
-		item = _inventory.dropItem(process, item, this, reference);
-		if (item == null)
+		final ItemInstance droppedItem = _inventory.dropItem(process, item, this, reference);
+		if (droppedItem == null)
 		{
 			if (sendMessage)
 			{
@@ -3683,33 +3675,33 @@ public class PlayerInstance extends Playable
 			return false;
 		}
 		
-		item.dropMe(this, (getX() + Rnd.get(50)) - 25, (getY() + Rnd.get(50)) - 25, getZ() + 20);
-		if ((Config.AUTODESTROY_ITEM_AFTER > 0) && Config.DESTROY_DROPPED_PLAYER_ITEM && !Config.LIST_PROTECTED_ITEMS.contains(item.getId()) && ((item.isEquipable() && Config.DESTROY_EQUIPABLE_PLAYER_ITEM) || !item.isEquipable()))
+		droppedItem.dropMe(this, (getX() + Rnd.get(50)) - 25, (getY() + Rnd.get(50)) - 25, getZ() + 20);
+		if ((Config.AUTODESTROY_ITEM_AFTER > 0) && Config.DESTROY_DROPPED_PLAYER_ITEM && !Config.LIST_PROTECTED_ITEMS.contains(droppedItem.getId()) && ((droppedItem.isEquipable() && Config.DESTROY_EQUIPABLE_PLAYER_ITEM) || !droppedItem.isEquipable()))
 		{
-			ItemsAutoDestroy.getInstance().addItem(item);
+			ItemsAutoDestroy.getInstance().addItem(droppedItem);
 		}
 		
 		// protection against auto destroy dropped item
 		if (Config.DESTROY_DROPPED_PLAYER_ITEM)
 		{
-			item.setProtected(!(!item.isEquipable() || (item.isEquipable() && Config.DESTROY_EQUIPABLE_PLAYER_ITEM)));
+			droppedItem.setProtected(droppedItem.isEquipable() && (!droppedItem.isEquipable() || !Config.DESTROY_EQUIPABLE_PLAYER_ITEM));
 		}
 		else
 		{
-			item.setProtected(true);
+			droppedItem.setProtected(true);
 		}
 		
 		// retail drop protection
 		if (protectItem)
 		{
-			item.getDropProtection().protect(this);
+			droppedItem.getDropProtection().protect(this);
 		}
 		
 		// Send inventory update packet
 		if (!Config.FORCE_INVENTORY_UPDATE)
 		{
 			final InventoryUpdate playerIU = new InventoryUpdate();
-			playerIU.addItem(item);
+			playerIU.addItem(droppedItem);
 			sendPacket(playerIU);
 		}
 		else
@@ -3726,7 +3718,7 @@ public class PlayerInstance extends Playable
 		if (sendMessage)
 		{
 			final SystemMessage sm = new SystemMessage(SystemMessageId.YOU_HAVE_DROPPED_S1);
-			sm.addItemName(item);
+			sm.addItemName(droppedItem);
 			sendPacket(sm);
 		}
 		
@@ -4714,11 +4706,12 @@ public class PlayerInstance extends Playable
 	 * <li>Add the PlayerInstance to the _statusListener of the new target if it's a Creature</li>
 	 * <li>Target the new WorldObject (add the target to the PlayerInstance _target, _knownObject and PlayerInstance to _KnownObject of the WorldObject)</li>
 	 * </ul>
-	 * @param newTarget The WorldObject to target
+	 * @param worldObject The WorldObject to target
 	 */
 	@Override
-	public void setTarget(WorldObject newTarget)
+	public void setTarget(WorldObject worldObject)
 	{
+		WorldObject newTarget = worldObject;
 		if (newTarget != null)
 		{
 			final boolean isInParty = newTarget.isPlayer() && isInParty() && _party.containsPlayer(newTarget.getActingPlayer());
@@ -7994,23 +7987,21 @@ public class PlayerInstance extends Playable
 			return false;
 		}
 		
-		slot--;
-		
-		final Henna henna = _henna[slot];
+		final Henna henna = _henna[slot - 1];
 		if (henna == null)
 		{
 			return false;
 		}
 		
-		_henna[slot] = null;
+		_henna[slot - 1] = null;
 		
 		try (Connection con = DatabaseFactory.getConnection();
-			PreparedStatement ps = con.prepareStatement(DELETE_CHAR_HENNA))
+			PreparedStatement statement = con.prepareStatement(DELETE_CHAR_HENNA))
 		{
-			ps.setInt(1, getObjectId());
-			ps.setInt(2, slot + 1);
-			ps.setInt(3, _classIndex);
-			ps.execute();
+			statement.setInt(1, getObjectId());
+			statement.setInt(2, slot);
+			statement.setInt(3, _classIndex);
+			statement.execute();
 		}
 		catch (Exception e)
 		{

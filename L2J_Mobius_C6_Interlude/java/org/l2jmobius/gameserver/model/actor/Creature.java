@@ -606,12 +606,12 @@ public abstract class Creature extends WorldObject implements ISkillsHolder
 	 * <li>Set the x,y,z position of the WorldObject and if necessary modify its _worldRegion</li>
 	 * <li>Send a Server->Client packet TeleportToLocationt to the Creature AND to all PlayerInstance in its _KnownPlayers</li>
 	 * <li>Modify the position of the pet if necessary</li><br>
-	 * @param x the x
-	 * @param y the y
-	 * @param z the z
+	 * @param xValue the x
+	 * @param yValue the y
+	 * @param zValue the z
 	 * @param allowRandomOffset the allow random offset
 	 */
-	public void teleToLocation(int x, int y, int z, boolean allowRandomOffset)
+	public void teleToLocation(int xValue, int yValue, int zValue, boolean allowRandomOffset)
 	{
 		if (Config.TW_DISABLE_GK)
 		{
@@ -646,12 +646,14 @@ public abstract class Creature extends WorldObject implements ISkillsHolder
 		
 		getAI().setIntention(CtrlIntention.AI_INTENTION_ACTIVE);
 		
+		int x = xValue;
+		int y = yValue;
+		int z = zValue;
 		if (Config.RESPAWN_RANDOM_ENABLED && allowRandomOffset)
 		{
 			x += Rnd.get(-Config.RESPAWN_RANDOM_MAX_OFFSET, Config.RESPAWN_RANDOM_MAX_OFFSET);
 			y += Rnd.get(-Config.RESPAWN_RANDOM_MAX_OFFSET, Config.RESPAWN_RANDOM_MAX_OFFSET);
 		}
-		
 		z += 5;
 		
 		// Send a Server->Client packet TeleportToLocationt to the Creature AND to all PlayerInstance in the _KnownPlayers of the Creature
@@ -2836,17 +2838,18 @@ public abstract class Creature extends WorldObject implements ISkillsHolder
 	 */
 	public void setTitle(String value)
 	{
-		if (value == null)
+		String title = value;
+		if (title == null)
 		{
-			value = "";
+			title = "";
 		}
 		
-		if ((this instanceof PlayerInstance) && (value.length() > 16))
+		if ((this instanceof PlayerInstance) && (title.length() > 16))
 		{
-			value = value.substring(0, 15);
+			title = title.substring(0, 15);
 		}
 		
-		_title = value; // public void setTitle(String value) { _title = value; }
+		_title = title;
 	}
 	
 	/**
@@ -5403,10 +5406,11 @@ public abstract class Creature extends WorldObject implements ISkillsHolder
 	 * <b><u>Overriden in</u>:</b><br>
 	 * <br>
 	 * <li>PlayerInstance : Remove the PlayerInstance from the old target _statusListener and add it to the new target if it was a Creature</li><br>
-	 * @param object L2object to target
+	 * @param worldObject WorldObject to target
 	 */
-	public void setTarget(WorldObject object)
+	public void setTarget(WorldObject worldObject)
 	{
+		WorldObject object = worldObject;
 		if ((object != null) && !object.isVisible())
 		{
 			object = null;
@@ -5487,12 +5491,12 @@ public abstract class Creature extends WorldObject implements ISkillsHolder
 	 * <b><u>Example of use</u>:</b><br>
 	 * <li>AI : onIntentionMoveTo(L2CharPosition), onIntentionPickUp(WorldObject), onIntentionInteract(WorldObject)</li>
 	 * <li>FollowTask</li><br>
-	 * @param x The X position of the destination
-	 * @param y The Y position of the destination
-	 * @param z The Y position of the destination
-	 * @param offset The size of the interaction area of the Creature targeted
+	 * @param xValue The X position of the destination
+	 * @param yValue The Y position of the destination
+	 * @param zValue The Y position of the destination
+	 * @param offsetValue The size of the interaction area of the Creature targeted
 	 */
-	protected void moveToLocation(int x, int y, int z, int offset)
+	protected void moveToLocation(int xValue, int yValue, int zValue, int offsetValue)
 	{
 		// Block movement during Event start
 		if (this instanceof PlayerInstance)
@@ -5533,6 +5537,11 @@ public abstract class Creature extends WorldObject implements ISkillsHolder
 		{
 			return;
 		}
+		
+		int x = xValue;
+		int y = yValue;
+		int z = zValue;
+		int offset = offsetValue;
 		
 		// Get current position of the Creature
 		final int curX = getX();
@@ -6143,13 +6152,13 @@ public abstract class Creature extends WorldObject implements ISkillsHolder
 	 * <li>If attack isn't aborted and hit isn't missed, reduce HP of the target and calculate reflection damage to reduce HP of attacker if necessary</li>
 	 * <li>if attack isn't aborted and hit isn't missed, manage attack or cast break of the target (calculating rate, sending message...)</li><br>
 	 * @param target The Creature targeted
-	 * @param damage number of HP to reduce
+	 * @param damageValue number of HP to reduce
 	 * @param crit True if hit is critical
 	 * @param miss True if hit is missed
 	 * @param soulshot True if SoulShot are charged
 	 * @param shld True if shield is efficient
 	 */
-	protected void onHitTimer(Creature target, int damage, boolean crit, boolean miss, boolean soulshot, boolean shld)
+	protected void onHitTimer(Creature target, int damageValue, boolean crit, boolean miss, boolean soulshot, boolean shld)
 	{
 		// If the attacker/target is dead or use fake death, notify the AI with EVT_CANCEL
 		// and send a Server->Client packet ActionFailed (if attacker is a PlayerInstance)
@@ -6187,6 +6196,7 @@ public abstract class Creature extends WorldObject implements ISkillsHolder
 		// If attack isn't aborted, send a message system (critical hit, missed...) to attacker/target if they are PlayerInstance
 		if (!isAttackAborted())
 		{
+			int damage = damageValue;
 			if (Config.ALLOW_RAID_BOSS_PETRIFIED && ((this instanceof PlayerInstance) || (this instanceof Summon))) // Check if option is True Or False.
 			{
 				boolean toBeCursed = false;

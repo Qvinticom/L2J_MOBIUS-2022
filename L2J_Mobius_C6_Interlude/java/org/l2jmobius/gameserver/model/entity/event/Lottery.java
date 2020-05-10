@@ -397,12 +397,13 @@ public class Lottery
 		}
 	}
 	
-	public int[] decodeNumbers(int enchant, int type2)
+	public int[] decodeNumbers(int enchantValue, int type2Value)
 	{
 		final int[] res = new int[5];
 		int id = 0;
 		int nr = 1;
 		
+		int enchant = enchantValue;
 		while (enchant > 0)
 		{
 			final int val = enchant / 2;
@@ -417,6 +418,7 @@ public class Lottery
 		
 		nr = 17;
 		
+		int type2 = type2Value;
 		while (type2 > 0)
 		{
 			final int val = type2 / 2;

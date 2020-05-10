@@ -149,13 +149,14 @@ public class GuardInstance extends Attackable
 	 * @param player The PlayerInstance that start an action on the GuardInstance
 	 */
 	@Override
-	public void onAction(PlayerInstance player, boolean interact)
+	public void onAction(PlayerInstance player, boolean interactValue)
 	{
 		if (!canTarget(player))
 		{
 			return;
 		}
 		
+		boolean interact = interactValue;
 		if (Config.FACTION_SYSTEM_ENABLED && Config.FACTION_GUARDS_ENABLED && ((player.isGood() && getTemplate().isClan(Config.FACTION_EVIL_TEAM_NAME)) || (player.isEvil() && getTemplate().isClan(Config.FACTION_GOOD_TEAM_NAME))))
 		{
 			interact = false;
@@ -213,6 +214,7 @@ public class GuardInstance extends Attackable
 				}
 			}
 		}
+		
 		// Send a Server->Client ActionFailed to the PlayerInstance in order to avoid that the client wait another packet
 		player.sendPacket(ActionFailed.STATIC_PACKET);
 	}

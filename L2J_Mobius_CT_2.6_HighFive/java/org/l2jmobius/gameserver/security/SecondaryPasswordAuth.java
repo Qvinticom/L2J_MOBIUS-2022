@@ -100,7 +100,7 @@ public class SecondaryPasswordAuth
 		}
 	}
 	
-	public boolean savePassword(String password)
+	public boolean savePassword(String value)
 	{
 		if (passwordExist())
 		{
@@ -109,14 +109,13 @@ public class SecondaryPasswordAuth
 			return false;
 		}
 		
-		if (!validatePassword(password))
+		if (!validatePassword(value))
 		{
 			_activeClient.sendPacket(new Ex2ndPasswordAck(Ex2ndPasswordAck.WRONG_PATTERN));
 			return false;
 		}
 		
-		password = cryptPassword(password);
-		
+		final String password = cryptPassword(value);
 		try (Connection con = DatabaseFactory.getConnection();
 			PreparedStatement statement = con.prepareStatement(INSERT_PASSWORD))
 		{
@@ -173,12 +172,11 @@ public class SecondaryPasswordAuth
 			return false;
 		}
 		
-		newPassword = cryptPassword(newPassword);
-		
+		final String password = cryptPassword(newPassword);
 		try (Connection con = DatabaseFactory.getConnection();
 			PreparedStatement statement = con.prepareStatement(UPDATE_PASSWORD))
 		{
-			statement.setString(1, newPassword);
+			statement.setString(1, password);
 			statement.setString(2, _activeClient.getAccountName());
 			statement.setString(3, VAR_PWD);
 			statement.execute();
@@ -189,14 +187,14 @@ public class SecondaryPasswordAuth
 			return false;
 		}
 		
-		_password = newPassword;
+		_password = password;
 		_authed = false;
 		return true;
 	}
 	
-	public boolean checkPassword(String password, boolean skipAuth)
+	public boolean checkPassword(String value, boolean skipAuth)
 	{
-		password = cryptPassword(password);
+		final String password = cryptPassword(value);
 		if (!password.equals(_password))
 		{
 			_wrongAttempts++;

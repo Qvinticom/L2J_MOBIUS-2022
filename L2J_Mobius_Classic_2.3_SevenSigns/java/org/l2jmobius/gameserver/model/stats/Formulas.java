@@ -205,14 +205,16 @@ public class Formulas
 	
 	/**
 	 * Returns true in case of critical hit
-	 * @param rate
+	 * @param rateValue
 	 * @param skill
 	 * @param creature
 	 * @param target
 	 * @return
 	 */
-	public static boolean calcCrit(double rate, Creature creature, Creature target, Skill skill)
+	public static boolean calcCrit(double rateValue, Creature creature, Creature target, Skill skill)
 	{
+		double rate = rateValue;
+		
 		if (skill != null)
 		{
 			// Magic Critical Rate.
@@ -1239,7 +1241,7 @@ public class Formulas
 		final double karmaLooseMul = KarmaData.getInstance().getMultiplier(player.getLevel());
 		if (finalExp > 0) // Received exp
 		{
-			finalExp /= Config.RATE_KARMA_LOST;
+			return (int) ((Math.abs(finalExp / Config.RATE_KARMA_LOST) / karmaLooseMul) / 30);
 		}
 		return (int) ((Math.abs(finalExp) / karmaLooseMul) / 30);
 	}

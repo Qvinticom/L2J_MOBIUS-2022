@@ -113,7 +113,7 @@ public class PlayerStat extends PlayableStat
 		return true;
 	}
 	
-	public boolean addExpAndSp(double addToExp, double addToSp, boolean useBonuses)
+	public boolean addExpAndSp(double addToExpValue, double addToSpValue, boolean useBonuses)
 	{
 		final PlayerInstance player = getActiveChar();
 		
@@ -122,6 +122,9 @@ public class PlayerStat extends PlayableStat
 		{
 			return false;
 		}
+		
+		double addToExp = addToExpValue;
+		double addToSp = addToSpValue;
 		
 		// Premium rates
 		if (player.hasPremiumStatus())
@@ -477,9 +480,10 @@ public class PlayerStat extends PlayableStat
 	@Override
 	public void setLevel(byte value)
 	{
-		if (value > (ExperienceData.getInstance().getMaxLevel() - 1))
+		byte level = value;
+		if (level > (ExperienceData.getInstance().getMaxLevel() - 1))
 		{
-			value = (byte) (ExperienceData.getInstance().getMaxLevel() - 1);
+			level = (byte) (ExperienceData.getInstance().getMaxLevel() - 1);
 		}
 		
 		if (getActiveChar().isSubClassActive())
@@ -488,7 +492,7 @@ public class PlayerStat extends PlayableStat
 		}
 		else
 		{
-			super.setLevel(value);
+			super.setLevel(level);
 		}
 	}
 	
@@ -727,9 +731,9 @@ public class PlayerStat extends PlayableStat
 	/*
 	 * Set current vitality points to this value if quiet = true - does not send system messages
 	 */
-	public void setVitalityPoints(int points, boolean quiet)
+	public void setVitalityPoints(int value, boolean quiet)
 	{
-		points = Math.min(Math.max(points, MIN_VITALITY_POINTS), MAX_VITALITY_POINTS);
+		final int points = Math.min(Math.max(value, MIN_VITALITY_POINTS), MAX_VITALITY_POINTS);
 		if (points == _vitalityPoints)
 		{
 			return;
@@ -740,13 +744,14 @@ public class PlayerStat extends PlayableStat
 		getActiveChar().sendPacket(new ExVitalityPointInfo(getVitalityPoints()));
 	}
 	
-	public synchronized void updateVitalityPoints(float points, boolean useRates, boolean quiet)
+	public synchronized void updateVitalityPoints(float value, boolean useRates, boolean quiet)
 	{
-		if ((points == 0) || !Config.ENABLE_VITALITY)
+		if ((value == 0) || !Config.ENABLE_VITALITY)
 		{
 			return;
 		}
 		
+		float points = value;
 		if (useRates)
 		{
 			if (getActiveChar().isLucky())

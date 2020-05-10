@@ -108,7 +108,7 @@ public class DarkElfChange2 extends AbstractNpcAI
 						player.broadcastUserInfo();
 					}
 				}
-				event = "30474-" + suffix + ".html";
+				return "30474-" + suffix + ".html";
 			}
 		}
 		return event;

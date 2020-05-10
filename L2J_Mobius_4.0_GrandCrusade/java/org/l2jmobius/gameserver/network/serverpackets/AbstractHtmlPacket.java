@@ -81,7 +81,8 @@ public abstract class AbstractHtmlPacket implements IClientOutgoingPacket
 		
 		if (!html.contains("<html") && !html.startsWith("..\\L2"))
 		{
-			html = "<html><body>" + html + "</body></html>";
+			_html = "<html><body>" + html + "</body></html>";
+			return;
 		}
 		
 		_html = html;

@@ -50,7 +50,7 @@ public class Survivor extends AbstractNpcAI
 		{
 			if (player.getLevel() < MIN_LEVEL)
 			{
-				event = "32632-3.htm";
+				return "32632-3.htm";
 			}
 			else if (player.getAdena() < 150000)
 			{

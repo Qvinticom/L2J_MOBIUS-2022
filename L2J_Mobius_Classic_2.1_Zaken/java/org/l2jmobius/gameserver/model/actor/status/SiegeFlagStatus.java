@@ -37,9 +37,8 @@ public class SiegeFlagStatus extends NpcStatus
 	{
 		if (getActiveChar().isAdvancedHeadquarter())
 		{
-			value /= 2.;
+			super.reduceHp(value / 2, attacker, awake, isDOT, isHpConsumption);
 		}
-		
 		super.reduceHp(value, attacker, awake, isDOT, isHpConsumption);
 	}
 	

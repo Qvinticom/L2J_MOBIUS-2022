@@ -73,16 +73,17 @@ public class SkillTable
 	public int getMaxLevel(int magicId, int level)
 	{
 		Skill temp;
-		while (level < 100)
+		int result = level;
+		while (result < 100)
 		{
-			level++;
-			temp = _skills.get(getSkillHashCode(magicId, level));
+			result++;
+			temp = _skills.get(getSkillHashCode(magicId, result));
 			if (temp == null)
 			{
-				return level - 1;
+				return result - 1;
 			}
 		}
-		return level;
+		return result;
 	}
 	
 	private static final WeaponType[] weaponDbMasks =

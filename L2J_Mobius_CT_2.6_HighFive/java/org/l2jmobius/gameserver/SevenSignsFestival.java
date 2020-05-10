@@ -1980,10 +1980,10 @@ public class SevenSignsFestival implements SpawnListener
 		 * Returns the running instance of a festival for the given Oracle and festivalID.<br>
 		 * A <b>null</b> value is returned if there are no participants in that festival.
 		 * @param oracle
-		 * @param festivalId
+		 * @param festivalIdValue
 		 * @return DarknessFestival festivalInst
 		 */
-		public DarknessFestival getFestivalInstance(int oracle, int festivalId)
+		public DarknessFestival getFestivalInstance(int oracle, int festivalIdValue)
 		{
 			if (!_festivalInitialized)
 			{
@@ -1994,6 +1994,7 @@ public class SevenSignsFestival implements SpawnListener
 			 * Compute the offset if a Dusk instance is required. ID: 0 1 2 3 4 Dusk 1:1011121314 Dawn 2:2021222324
 			 */
 			
+			int festivalId = festivalIdValue;
 			festivalId += (oracle == SevenSigns.CABAL_DUSK) ? 10 : 20;
 			return _festivalInstances.get(festivalId);
 		}

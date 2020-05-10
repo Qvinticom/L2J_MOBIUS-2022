@@ -330,9 +330,9 @@ public class ClanEntryManager
 		return false;
 	}
 	
-	public List<PledgeWaitingInfo> getSortedWaitingList(int levelMin, int levelMax, int role, int sortBy, boolean descending)
+	public List<PledgeWaitingInfo> getSortedWaitingList(int levelMin, int levelMax, int role, int sortByValue, boolean descending)
 	{
-		sortBy = CommonUtil.constrain(sortBy, 1, PLAYER_COMPARATOR.size() - 1);
+		final int sortBy = CommonUtil.constrain(sortByValue, 1, PLAYER_COMPARATOR.size() - 1);
 		
 		// TODO: Handle Role
 		//@formatter:off
@@ -373,9 +373,10 @@ public class ClanEntryManager
 		return _clanList.values().stream().collect(Collectors.toList());
 	}
 	
-	public List<PledgeRecruitInfo> getSortedClanList(int clanLevel, int karma, int sortBy, boolean descending)
+	public List<PledgeRecruitInfo> getSortedClanList(int clanLevel, int karma, int sortByValue, boolean descending)
 	{
-		sortBy = CommonUtil.constrain(sortBy, 1, CLAN_COMPARATOR.size() - 1);
+		final int sortBy = CommonUtil.constrain(sortByValue, 1, CLAN_COMPARATOR.size() - 1);
+		
 		//@formatter:off
 		return _clanList.values().stream()
 		      .filter((p -> (((clanLevel < 0) && (karma >= 0) && (karma != p.getKarma())) || ((clanLevel >= 0) && (karma < 0) && (clanLevel != (p.getClan() != null ? p.getClanLevel() : 0))) || ((clanLevel >= 0) && (karma >= 0) && ((clanLevel != (p.getClan() != null ? p.getClanLevel() : 0)) || (karma != p.getKarma()))))))

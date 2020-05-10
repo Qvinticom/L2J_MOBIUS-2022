@@ -1128,12 +1128,15 @@ public class ItemInstance extends WorldObject
 	 * <li>Drop item</li>
 	 * <li>Call Pet</li><br>
 	 * @param dropper the dropper
-	 * @param x the x
-	 * @param y the y
-	 * @param z the z
+	 * @param xValue the x
+	 * @param yValue the y
+	 * @param zValue the z
 	 */
-	public void dropMe(Creature dropper, int x, int y, int z)
+	public void dropMe(Creature dropper, int xValue, int yValue, int zValue)
 	{
+		int x = xValue;
+		int y = yValue;
+		int z = zValue;
 		if (Config.PATHFINDING && (dropper != null))
 		{
 			final Location dropDest = GeoEngine.getInstance().canMoveToTargetLoc(dropper.getX(), dropper.getY(), dropper.getZ(), x, y, z, dropper.getInstanceId());

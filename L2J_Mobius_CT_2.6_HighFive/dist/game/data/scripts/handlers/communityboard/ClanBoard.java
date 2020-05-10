@@ -176,8 +176,9 @@ public class ClanBoard implements IWriteBoardHandler
 		}
 	}
 	
-	private void clanList(PlayerInstance player, int index)
+	private void clanList(PlayerInstance player, int indexValue)
 	{
+		int index = indexValue;
 		if (index < 1)
 		{
 			index = 1;

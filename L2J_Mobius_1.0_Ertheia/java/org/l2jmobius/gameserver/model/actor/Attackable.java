@@ -683,12 +683,13 @@ public class Attackable extends Npc
 	
 	/**
 	 * Add damage and hate to the attacker AggroInfo of the Attackable _aggroList.
-	 * @param attacker The Creature that gave damages to this Attackable
+	 * @param creature The Creature that gave damages to this Attackable
 	 * @param damage The number of damages given by the attacker Creature
-	 * @param aggro The hate (=damage) given by the attacker Creature
+	 * @param aggroValue The hate (=damage) given by the attacker Creature
 	 */
-	public void addDamageHate(Creature attacker, int damage, int aggro)
+	public void addDamageHate(Creature creature, int damage, int aggroValue)
 	{
+		Creature attacker = creature;
 		if ((attacker == null) || (attacker == this))
 		{
 			return;
@@ -715,6 +716,7 @@ public class Attackable extends Npc
 		// traps does not cause aggro
 		// making this hack because not possible to determine if damage made by trap
 		// so just check for triggered trap here
+		int aggro = aggroValue;
 		if ((targetPlayer == null) || (targetPlayer.getTrap() == null) || !targetPlayer.getTrap().isTriggered())
 		{
 			ai.addHate(aggro);
@@ -762,8 +764,7 @@ public class Attackable extends Npc
 				ai.addHate(amount);
 			}
 			
-			amount = getHating(mostHated);
-			if (amount >= 0)
+			if (getHating(mostHated) >= 0)
 			{
 				((AttackableAI) getAI()).setGlobalAggro(-25);
 				clearAggroList();

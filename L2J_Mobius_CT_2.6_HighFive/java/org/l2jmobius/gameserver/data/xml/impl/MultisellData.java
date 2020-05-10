@@ -155,8 +155,9 @@ public class MultisellData implements IXmlReader
 		return NUMERIC_FILTER;
 	}
 	
-	private final Entry parseEntry(Node n, int entryId, ListContainer list)
+	private final Entry parseEntry(Node node, int entryId, ListContainer list)
 	{
+		Node n = node;
 		final Node first = n.getFirstChild();
 		final Entry entry = new Entry(entryId);
 		NamedNodeMap attrs;

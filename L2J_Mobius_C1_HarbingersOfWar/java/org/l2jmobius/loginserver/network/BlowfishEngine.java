@@ -91,6 +91,7 @@ public class BlowfishEngine
 		return ((S0[x >>> 24] + S1[(x >>> 16) & 0xFF]) ^ S2[(x >>> 8) & 0xFF]) + S3[x & 0xFF];
 	}
 	
+	@SuppressWarnings("all")
 	private void processTable(int xl, int xr, int[] table)
 	{
 		final int size = table.length;

@@ -1163,8 +1163,9 @@ public class Clan implements IIdentifiable, INamable
 		}
 	}
 	
-	private void storeNotice(String notice, boolean enabled)
+	private void storeNotice(String noticeValue, boolean enabled)
 	{
+		String notice = noticeValue;
 		if (notice == null)
 		{
 			notice = "";
@@ -1832,10 +1833,10 @@ public class Clan implements IIdentifiable, INamable
 		return _subPledges.values().toArray(new SubPledge[_subPledges.values().size()]);
 	}
 	
-	public SubPledge createSubPledge(PlayerInstance player, int pledgeType, int leaderId, String subPledgeName)
+	public SubPledge createSubPledge(PlayerInstance player, int pledgeTypeValue, int leaderId, String subPledgeName)
 	{
 		SubPledge subPledge = null;
-		pledgeType = getAvailablePledgeTypes(pledgeType);
+		final int pledgeType = getAvailablePledgeTypes(pledgeTypeValue);
 		if (pledgeType == 0)
 		{
 			if (pledgeType == SUBUNIT_ACADEMY)
@@ -1912,8 +1913,7 @@ public class Clan implements IIdentifiable, INamable
 				}
 				case SUBUNIT_ROYAL1:
 				{
-					pledgeType = getAvailablePledgeTypes(SUBUNIT_ROYAL2);
-					break;
+					return getAvailablePledgeTypes(SUBUNIT_ROYAL2);
 				}
 				case SUBUNIT_ROYAL2:
 				{
@@ -1921,18 +1921,15 @@ public class Clan implements IIdentifiable, INamable
 				}
 				case SUBUNIT_KNIGHT1:
 				{
-					pledgeType = getAvailablePledgeTypes(SUBUNIT_KNIGHT2);
-					break;
+					return getAvailablePledgeTypes(SUBUNIT_KNIGHT2);
 				}
 				case SUBUNIT_KNIGHT2:
 				{
-					pledgeType = getAvailablePledgeTypes(SUBUNIT_KNIGHT3);
-					break;
+					return getAvailablePledgeTypes(SUBUNIT_KNIGHT3);
 				}
 				case SUBUNIT_KNIGHT3:
 				{
-					pledgeType = getAvailablePledgeTypes(SUBUNIT_KNIGHT4);
-					break;
+					return getAvailablePledgeTypes(SUBUNIT_KNIGHT4);
 				}
 				case SUBUNIT_KNIGHT4:
 				{

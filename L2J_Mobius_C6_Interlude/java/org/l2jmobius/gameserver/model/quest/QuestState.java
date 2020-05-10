@@ -224,15 +224,16 @@ public class QuestState
 	/**
 	 * Add parameter used in quests.
 	 * @param var String pointing out the name of the variable for quest
-	 * @param value String pointing out the value of the variable for quest
+	 * @param val String pointing out the value of the variable for quest
 	 */
-	public void setInternal(String var, String value)
+	public void setInternal(String var, String val)
 	{
 		if (_vars == null)
 		{
 			_vars = new HashMap<>();
 		}
 		
+		String value = val;
 		if (value == null)
 		{
 			value = "";
@@ -250,15 +251,16 @@ public class QuestState
 	 * <li>If the key represented by "var" exists in Map "vars", the couple (var,value) is updated in the database. The key is known as existing if the preceding value of the key (given as result of function put()) is not null.<br>
 	 * If the key doesn't exist, the couple is added/created in the database</li><br>
 	 * @param var : String indicating the name of the variable for quest
-	 * @param value : String indicating the value of the variable for quest
+	 * @param val : String indicating the value of the variable for quest
 	 */
-	public void set(String var, String value)
+	public void set(String var, String val)
 	{
 		if (_vars == null)
 		{
 			_vars = new HashMap<>();
 		}
 		
+		String value = val;
 		if (value == null)
 		{
 			value = "";
@@ -547,9 +549,9 @@ public class QuestState
 		giveItems(itemId, count, 0);
 	}
 	
-	public synchronized void giveItems(int itemId, int count, int enchantlevel)
+	public synchronized void giveItems(int itemId, int amount, int enchantlevel)
 	{
-		if (count <= 0)
+		if (amount <= 0)
 		{
 			return;
 		}
@@ -557,6 +559,7 @@ public class QuestState
 		final int questId = getQuest().getQuestId();
 		
 		// If item for reward is gold (ID=57), modify count with rate for quest reward
+		int count = amount;
 		if ((itemId == 57) && ((questId < 217) || (questId > 233)) && ((questId < 401) || (questId > 418)))
 		{
 			count = (int) (count * Config.RATE_QUESTS_REWARD);
@@ -609,9 +612,9 @@ public class QuestState
 	 * <li>Destroy quantity of items wanted</li>
 	 * <li>Send new inventory list to player</li><br>
 	 * @param itemId : Identifier of the item
-	 * @param count : Quantity of items to destroy
+	 * @param amount : Quantity of items to destroy
 	 */
-	public void takeItems(int itemId, int count)
+	public void takeItems(int itemId, int amount)
 	{
 		// Get object item from player's inventory list
 		final ItemInstance item = _player.getInventory().getItemByItemId(itemId);
@@ -626,6 +629,7 @@ public class QuestState
 		}
 		
 		// Tests on count value in order not to have negative value
+		int count = amount;
 		if ((count < 0) || (count > item.getCount()))
 		{
 			count = item.getCount();
@@ -702,9 +706,9 @@ public class QuestState
 		switch (type)
 		{
 			case DROP_DIVMOD:
-				dropChance *= Config.RATE_DROP_QUEST;
-				amount = count * (dropChance / DropData.MAX_CHANCE);
-				if (Rnd.get(DropData.MAX_CHANCE) < (dropChance % DropData.MAX_CHANCE))
+				final int chanceWithQuestRate = (int) (dropChance * Config.RATE_DROP_QUEST);
+				amount = count * (chanceWithQuestRate / DropData.MAX_CHANCE);
+				if (Rnd.get(DropData.MAX_CHANCE) < (chanceWithQuestRate % DropData.MAX_CHANCE))
 				{
 					amount += count;
 				}
@@ -802,9 +806,9 @@ public class QuestState
 			switch (type)
 			{
 				case DROP_DIVMOD:
-					dropChance *= Config.RATE_DROP_QUEST;
-					amount = count * (dropChance / DropData.MAX_CHANCE);
-					if (Rnd.get(DropData.MAX_CHANCE) < (dropChance % DropData.MAX_CHANCE))
+					final int chanceWithQuestRate = (int) (dropChance * Config.RATE_DROP_QUEST);
+					amount = count * (chanceWithQuestRate / DropData.MAX_CHANCE);
+					if (Rnd.get(DropData.MAX_CHANCE) < (chanceWithQuestRate % DropData.MAX_CHANCE))
 					{
 						amount += count;
 					}
@@ -902,8 +906,6 @@ public class QuestState
 	
 	public boolean dropQuestItems(int itemId, int minCount, int maxCount, int neededCount, int dropChance, boolean sound)
 	{
-		dropChance *= Config.RATE_DROP_QUEST / (_player.getParty() != null ? _player.getParty().getMemberCount() : 1);
-		
 		final int currentCount = getQuestItemsCount(itemId);
 		if ((neededCount > 0) && (currentCount >= neededCount))
 		{
@@ -918,7 +920,8 @@ public class QuestState
 		int itemCount = 0;
 		final int random = Rnd.get(DropData.MAX_CHANCE);
 		
-		while (random < dropChance)
+		int chanceWithQuestRate = (int) (dropChance * (Config.RATE_DROP_QUEST / (_player.getParty() != null ? _player.getParty().getMemberCount() : 1)));
+		while (random < chanceWithQuestRate)
 		{
 			// Get the item quantity dropped
 			if (minCount < maxCount)
@@ -935,7 +938,7 @@ public class QuestState
 			}
 			
 			// Prepare for next iteration if dropChance > DropData.MAX_CHANCE
-			dropChance -= DropData.MAX_CHANCE;
+			chanceWithQuestRate -= DropData.MAX_CHANCE;
 		}
 		
 		if (itemCount > 0)

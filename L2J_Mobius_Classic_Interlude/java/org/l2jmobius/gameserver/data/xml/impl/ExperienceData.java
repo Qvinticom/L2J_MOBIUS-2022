@@ -103,7 +103,7 @@ public class ExperienceData implements IXmlReader
 	{
 		if (level > Config.PLAYER_MAXIMUM_LEVEL)
 		{
-			level = Config.PLAYER_MAXIMUM_LEVEL;
+			return _expTable.get((int) Config.PLAYER_MAXIMUM_LEVEL);
 		}
 		return _expTable.get(level);
 	}
@@ -112,7 +112,7 @@ public class ExperienceData implements IXmlReader
 	{
 		if (level > Config.PLAYER_MAXIMUM_LEVEL)
 		{
-			level = Config.PLAYER_MAXIMUM_LEVEL;
+			return _traningRateTable.get((int) Config.PLAYER_MAXIMUM_LEVEL);
 		}
 		return _traningRateTable.get(level);
 	}

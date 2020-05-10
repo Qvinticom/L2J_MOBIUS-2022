@@ -897,7 +897,7 @@ public class Valakas extends Quest
 		}
 	}
 	
-	public void callSkillAI(NpcInstance npc, Creature c2, Skill skill)
+	public void callSkillAI(NpcInstance npc, Creature creature, Skill skill)
 	{
 		final QuestTimer timer = getQuestTimer("launch_random_skill", npc, null);
 		if (npc == null)
@@ -914,16 +914,18 @@ public class Valakas extends Quest
 			return;
 		}
 		
-		if ((c2 == null) || c2.isDead() || (timer == null))
+		Creature currentTarget = creature;
+		if ((currentTarget == null) || currentTarget.isDead() || (timer == null))
 		{
-			c2 = getRandomTarget(npc); // just in case if hate AI fail
+			currentTarget = getRandomTarget(npc); // just in case if hate AI fail
 			if (timer == null)
 			{
 				startQuestTimer("launch_random_skill", 500, npc, null, true);
 				return;
 			}
 		}
-		final Creature target = c2;
+		
+		final Creature target = currentTarget;
 		if ((target == null) || target.isDead())
 		{
 			return;

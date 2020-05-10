@@ -103,19 +103,20 @@ final class ScriptingFileManager implements StandardJavaFileManager
 			return _wrapped.getJavaFileForOutput(location, className, kind, sibling);
 		}
 		
-		if (className.contains("/"))
+		String javaName = className;
+		if (javaName.contains("/"))
 		{
-			className = className.replace('/', '.');
+			javaName = javaName.replace('/', '.');
 		}
 		
 		ScriptingOutputFileObject fileObject;
 		if (sibling != null)
 		{
-			fileObject = new ScriptingOutputFileObject(Paths.get(sibling.getName()), className, className.substring(className.lastIndexOf('.') + 1));
+			fileObject = new ScriptingOutputFileObject(Paths.get(sibling.getName()), javaName, javaName.substring(javaName.lastIndexOf('.') + 1));
 		}
 		else
 		{
-			fileObject = new ScriptingOutputFileObject(null, className, className.substring(className.lastIndexOf('.') + 1));
+			fileObject = new ScriptingOutputFileObject(null, javaName, javaName.substring(javaName.lastIndexOf('.') + 1));
 		}
 		
 		_classOutputs.add(fileObject);

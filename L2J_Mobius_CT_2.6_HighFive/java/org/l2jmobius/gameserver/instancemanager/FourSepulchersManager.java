@@ -1367,8 +1367,9 @@ public class FourSepulchersManager
 		}
 	}
 	
-	protected byte minuteSelect(byte min)
+	protected byte minuteSelect(byte value)
 	{
+		byte min = value;
 		if ((min % 5) != 0) // if doesn't divides on 5 fully
 		{
 			// mad table for selecting proper minutes...
@@ -1466,17 +1467,17 @@ public class FourSepulchersManager
 		return min;
 	}
 	
-	public void managerSay(byte min)
+	public void managerSay(byte value)
 	{
 		// for attack phase, sending message every 5 minutes
 		if (_inAttackTime)
 		{
-			if (min < 5)
+			if (value < 5)
 			{
 				return; // do not shout when < 5 minutes
 			}
 			
-			min = minuteSelect(min);
+			final byte min = minuteSelect(value);
 			NpcStringId msg = NpcStringId.MINUTE_S_HAVE_PASSED;
 			if (min == 90)
 			{

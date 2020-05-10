@@ -321,7 +321,6 @@ public class GameServerRegister extends BaseGameServerRegister
 	@Override
 	public void showError(String msg, Throwable t)
 	{
-		msg += Config.EOL + "Reason: " + t.getLocalizedMessage();
-		System.out.println("Error: " + msg);
+		System.out.println("Error: " + msg + Config.EOL + "Reason: " + t.getLocalizedMessage());
 	}
 }

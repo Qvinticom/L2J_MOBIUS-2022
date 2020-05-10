@@ -1406,10 +1406,10 @@ public abstract class Skill
 	 * <li>ITEM</li><br>
 	 * @param creature The Creature who use the skill
 	 * @param onlyFirst
-	 * @param target
+	 * @param targetCreature
 	 * @return
 	 */
-	public WorldObject[] getTargetList(Creature creature, boolean onlyFirst, Creature target)
+	public WorldObject[] getTargetList(Creature creature, boolean onlyFirst, Creature targetCreature)
 	{
 		// to avoid attacks during oly start period
 		if ((creature instanceof PlayerInstance) && _isOffensive && (((PlayerInstance) creature).isInOlympiadMode() && !((PlayerInstance) creature).isOlympiadStart()))
@@ -1427,6 +1427,7 @@ public abstract class Skill
 			};
 		}
 		
+		Creature target = targetCreature;
 		switch (_targetType)
 		{
 			// The skill can only be used on the Creature targeted, or on the caster itself

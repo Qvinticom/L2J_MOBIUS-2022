@@ -232,7 +232,7 @@ public class AdminSkill implements IAdminCommandHandler
 		return ADMIN_COMMANDS;
 	}
 	
-	private void removeSkillsPage(PlayerInstance activeChar, int page)
+	private void removeSkillsPage(PlayerInstance activeChar, int pageValue)
 	{
 		// TODO: Externalize HTML
 		final WorldObject target = activeChar.getTarget();
@@ -255,6 +255,7 @@ public class AdminSkill implements IAdminCommandHandler
 			maxPages++;
 		}
 		
+		int page = pageValue;
 		if (page > maxPages)
 		{
 			page = maxPages;

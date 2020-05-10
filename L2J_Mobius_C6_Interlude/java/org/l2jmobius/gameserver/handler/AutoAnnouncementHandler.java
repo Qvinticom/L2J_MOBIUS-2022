@@ -209,22 +209,15 @@ public class AutoAnnouncementHandler
 	private final AutoAnnouncementInstance registerAnnouncement(int id, String announcementTexts, long chatDelay)
 	{
 		AutoAnnouncementInstance announcementInst = null;
-		if (chatDelay < 0)
-		{
-			chatDelay = DEFAULT_ANNOUNCEMENT_DELAY;
-		}
-		
 		if (_registeredAnnouncements.containsKey(id))
 		{
 			announcementInst = _registeredAnnouncements.get(id);
 		}
 		else
 		{
-			announcementInst = new AutoAnnouncementInstance(id, announcementTexts, chatDelay);
+			announcementInst = new AutoAnnouncementInstance(id, announcementTexts, chatDelay < 0 ? DEFAULT_ANNOUNCEMENT_DELAY : chatDelay);
 		}
-		
 		_registeredAnnouncements.put(id, announcementInst);
-		
 		return announcementInst;
 	}
 	
@@ -256,6 +249,7 @@ public class AutoAnnouncementHandler
 		{
 			LOGGER.warning("Could not Delete Auto Announcement in Database, Reason: " + e);
 		}
+		
 		return removeAnnouncement(announcementInst);
 	}
 	
@@ -273,7 +267,6 @@ public class AutoAnnouncementHandler
 		
 		_registeredAnnouncements.remove(announcementInst.getDefaultId());
 		announcementInst.setActive(false);
-		
 		return true;
 	}
 	

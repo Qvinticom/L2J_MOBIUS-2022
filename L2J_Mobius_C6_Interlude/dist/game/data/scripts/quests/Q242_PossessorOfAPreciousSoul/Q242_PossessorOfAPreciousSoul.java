@@ -164,8 +164,8 @@ public class Q242_PossessorOfAPreciousSoul extends Quest
 		// Spawn Fallen Unicorn
 		else if (event.equals("sfu"))
 		{
-			npc = addSpawn(FALLEN_UNICORN, 85884, -76588, -3470, 0, false, 0);
-			npc.getSpawn().startRespawn();
+			final NpcInstance unicorn = addSpawn(FALLEN_UNICORN, 85884, -76588, -3470, 0, false, 0);
+			unicorn.getSpawn().startRespawn();
 			return null;
 		}
 		

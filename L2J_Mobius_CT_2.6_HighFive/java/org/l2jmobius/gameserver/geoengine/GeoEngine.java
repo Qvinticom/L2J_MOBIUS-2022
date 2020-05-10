@@ -484,19 +484,26 @@ public class GeoEngine
 	
 	/**
 	 * Simple check for origin to target visibility.
-	 * @param gox : origin X geodata coordinate
-	 * @param goy : origin Y geodata coordinate
-	 * @param goz : origin Z geodata coordinate
+	 * @param goxValue : origin X geodata coordinate
+	 * @param goyValue : origin Y geodata coordinate
+	 * @param gozValue : origin Z geodata coordinate
 	 * @param oheight : origin height (if instance of {@link Character})
-	 * @param gtx : target X geodata coordinate
-	 * @param gty : target Y geodata coordinate
-	 * @param gtz : target Z geodata coordinate
+	 * @param gtxValue : target X geodata coordinate
+	 * @param gtyValue : target Y geodata coordinate
+	 * @param gtzValue : target Z geodata coordinate
 	 * @param theight : target height (if instance of {@link Character})
 	 * @param instanceId
 	 * @return {@code boolean} : True, when target can be seen.
 	 */
-	private final boolean checkSee(int gox, int goy, int goz, double oheight, int gtx, int gty, int gtz, double theight, int instanceId)
+	private final boolean checkSee(int goxValue, int goyValue, int gozValue, double oheight, int gtxValue, int gtyValue, int gtzValue, double theight, int instanceId)
 	{
+		int goz = gozValue;
+		int gtz = gtzValue;
+		int gox = goxValue;
+		int goy = goyValue;
+		int gtx = gtxValue;
+		int gty = gtyValue;
+		
 		// get line of sight Z coordinates
 		double losoz = goz + ((oheight * Config.PART_OF_CHARACTER_HEIGHT) / 100);
 		double lostz = gtz + ((theight * Config.PART_OF_CHARACTER_HEIGHT) / 100);

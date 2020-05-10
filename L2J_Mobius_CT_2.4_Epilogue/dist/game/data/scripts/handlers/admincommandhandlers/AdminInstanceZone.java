@@ -37,9 +37,10 @@ public class AdminInstanceZone implements IAdminCommandHandler
 	};
 	
 	@Override
-	public boolean useAdminCommand(String command, PlayerInstance activeChar)
+	public boolean useAdminCommand(String commandValue, PlayerInstance activeChar)
 	{
 		final String target = (activeChar.getTarget() != null) ? activeChar.getTarget().getName() : "no-target";
+		String command = commandValue;
 		GMAudit.auditGMAction(activeChar.getName(), command, target, "");
 		if (command.startsWith("admin_instancezone_clear"))
 		{

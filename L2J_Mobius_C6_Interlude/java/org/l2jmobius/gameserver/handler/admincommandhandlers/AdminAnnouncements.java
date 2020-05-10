@@ -141,12 +141,7 @@ public class AdminAnnouncements implements IAdminCommandHandler
 			}
 			case "admin_announce":
 			{
-				// Call method from another class
-				if (Config.GM_ANNOUNCER_NAME)
-				{
-					command = command + " [ " + activeChar.getName() + " ]";
-				}
-				Announcements.getInstance().handleAnnounce(command, 15);
+				Announcements.getInstance().handleAnnounce(Config.GM_ANNOUNCER_NAME ? command + " [ " + activeChar.getName() + " ]" : command, 15);
 				return true;
 			}
 			case "admin_critannounce":

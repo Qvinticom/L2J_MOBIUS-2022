@@ -224,7 +224,7 @@ public class NpcViewMod implements IBypassHandler
 		return sb.toString();
 	}
 	
-	private void sendNpcDropList(PlayerInstance player, Npc npc, DropType dropType, int page)
+	private void sendNpcDropList(PlayerInstance player, Npc npc, DropType dropType, int pageValue)
 	{
 		final List<DropHolder> dropList = npc.getTemplate().getDropList(dropType);
 		if (dropList == null)
@@ -249,6 +249,7 @@ public class NpcViewMod implements IBypassHandler
 			pagesSb.append("</tr></table>");
 		}
 		
+		int page = pageValue;
 		if (page >= pages)
 		{
 			page = pages - 1;

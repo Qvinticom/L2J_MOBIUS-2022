@@ -436,11 +436,7 @@ public abstract class Summon extends Playable
 	
 	public void setAttackRange(int range)
 	{
-		if (range < 36)
-		{
-			range = 36;
-		}
-		_attackRange = range;
+		_attackRange = Math.max(36, range);
 	}
 	
 	public void setFollowStatus(boolean value)

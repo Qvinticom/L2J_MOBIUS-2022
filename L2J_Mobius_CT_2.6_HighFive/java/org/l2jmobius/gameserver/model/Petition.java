@@ -48,7 +48,7 @@ public class Petition
 	public Petition(PlayerInstance petitioner, String petitionText, int petitionType)
 	{
 		_id = IdFactory.getNextId();
-		_type = PetitionType.values()[--petitionType];
+		_type = PetitionType.values()[petitionType - 1];
 		_content = petitionText;
 		_petitioner = petitioner;
 	}

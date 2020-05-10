@@ -71,7 +71,7 @@ public class TimeAmountInterpreter
 	 * Please keep in mind, that this method is primarily designed to be used with heap text builders. Therefore, if the given text builder throws an {@link IOException}, this exception will be wrapped in a {@link RuntimeException} and returned to the caller as an unchecked exception.
 	 * @param <T>
 	 * @param textBuilder a character sequence builder
-	 * @param timeAmount amount of time to be written
+	 * @param amount amount of time to be written
 	 * @param timeUnit unit of the given amount
 	 * @param minConsolidationUnit smallest unit to be included within the description
 	 * @param maxConsolidationUnit largest unit to be included within the description
@@ -79,10 +79,11 @@ public class TimeAmountInterpreter
 	 * @return {@code textBuilder}
 	 */
 	@SuppressWarnings("unchecked")
-	private static <T extends Appendable & CharSequence> T appendConsolidated(T textBuilder, long timeAmount, TimeUnit timeUnit, TimeUnit minConsolidationUnit, TimeUnit maxConsolidationUnit, String noTimeUsedIndicator)
+	private static <T extends Appendable & CharSequence> T appendConsolidated(T textBuilder, long amount, TimeUnit timeUnit, TimeUnit minConsolidationUnit, TimeUnit maxConsolidationUnit, String noTimeUsedIndicator)
 	{
 		try
 		{
+			long timeAmount = amount;
 			if (timeAmount < 1)
 			{
 				return (T) textBuilder.append(noTimeUsedIndicator);
@@ -117,6 +118,7 @@ public class TimeAmountInterpreter
 		{
 			throw new RuntimeException(e);
 		}
+		
 		return textBuilder;
 	}
 }

@@ -934,9 +934,9 @@ public class Attackable extends NpcInstance
 	 * Add damage and hate to the attacker AggroInfo of the Attackable _aggroList.
 	 * @param attacker The Creature that gave damages to this Attackable
 	 * @param damage The number of damages given by the attacker Creature
-	 * @param aggro The hate (=damage) given by the attacker Creature
+	 * @param aggroValue The hate (=damage) given by the attacker Creature
 	 */
-	public void addDamageHate(Creature attacker, int damage, int aggro)
+	public void addDamageHate(Creature attacker, int damage, int aggroValue)
 	{
 		if (attacker == null)
 		{
@@ -954,6 +954,7 @@ public class Attackable extends NpcInstance
 		}
 		
 		// If aggro is negative, its comming from SEE_SPELL, buffs use constant 150
+		int aggro = aggroValue;
 		if (aggro < 0)
 		{
 			ai._hate -= (aggro * 150) / (getLevel() + 7);
@@ -1015,6 +1016,7 @@ public class Attackable extends NpcInstance
 			getAI().setIntention(CtrlIntention.AI_INTENTION_IDLE, null, null);
 			return;
 		}
+		
 		if (target == null) // whole aggrolist
 		{
 			final Creature mostHated = getMostHated();
@@ -1032,15 +1034,13 @@ public class Attackable extends NpcInstance
 				ai._hate -= amount;
 			}
 			
-			amount = getHating(mostHated);
-			if (amount <= 0)
+			if (getHating(mostHated) <= 0)
 			{
 				((AttackableAI) getAI()).setGlobalAggro(-25);
 				clearAggroList();
 				getAI().setIntention(CtrlIntention.AI_INTENTION_ACTIVE);
 				setWalking();
 			}
-			
 			return;
 		}
 		
@@ -2847,14 +2847,15 @@ public class Attackable extends NpcInstance
 	
 	/**
 	 * Calculate the Experience and SP to distribute to attacker (PlayerInstance, SummonInstance or Party) of the Attackable.
-	 * @param diff The difference of level between attacker (PlayerInstance, SummonInstance or Party) and the Attackable
+	 * @param diffValue The difference of level between attacker (PlayerInstance, SummonInstance or Party) and the Attackable
 	 * @param damage The damages given by the attacker (PlayerInstance, SummonInstance or Party)
 	 * @return
 	 */
-	private int[] calculateExpAndSp(int diff, long damage)
+	private int[] calculateExpAndSp(int diffValue, long damage)
 	{
 		double xp;
 		double sp;
+		int diff = diffValue;
 		if (diff < -5)
 		{
 			diff = -5; // makes possible to use ALT_GAME_EXPONENT configuration

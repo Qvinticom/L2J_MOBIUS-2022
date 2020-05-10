@@ -190,8 +190,9 @@ public class NevitSystem implements IUniqueId
 		}
 	}
 	
-	public synchronized void startNevitEffect(int time)
+	public synchronized void startNevitEffect(int timeValue)
 	{
+		int time = timeValue;
 		if (getEffectTime() > 0)
 		{
 			stopNevitEffectTask(false);

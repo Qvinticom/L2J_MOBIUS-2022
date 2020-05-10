@@ -203,11 +203,12 @@ public class DoppelgangerAI extends CreatureAI
 	}
 	
 	@Override
-	public void moveToPawn(WorldObject pawn, int offset)
+	public void moveToPawn(WorldObject pawn, int offsetValue)
 	{
 		// Check if actor can move
 		if (!_actor.isMovementDisabled() && (_actor.getMoveSpeed() > 0))
 		{
+			int offset = offsetValue;
 			if (offset < 10)
 			{
 				offset = 10;

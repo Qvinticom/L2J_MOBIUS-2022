@@ -166,10 +166,10 @@ final class GeoEnginePathfinding extends GeoEngine
 	
 	/**
 	 * Create list of node locations as result of calculated buffer node tree.
-	 * @param target : the entry point
+	 * @param node : the entry point
 	 * @return List<NodeLoc> : list of node location
 	 */
-	private static List<Location> constructPath(Node target)
+	private static List<Location> constructPath(Node node)
 	{
 		// create empty list
 		final LinkedList<Location> list = new LinkedList<>();
@@ -179,6 +179,7 @@ final class GeoEnginePathfinding extends GeoEngine
 		int dy = 0;
 		
 		// get target parent
+		Node target = node;
 		Node parent = target.getParent();
 		
 		// while parent exists

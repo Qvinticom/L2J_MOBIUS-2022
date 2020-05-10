@@ -177,6 +177,7 @@ import org.l2jmobius.gameserver.util.Util;
 public abstract class Creature extends WorldObject implements ISkillsHolder, IDeletable
 {
 	public static final Logger LOGGER = Logger.getLogger(Creature.class.getName());
+	
 	private Set<WeakReference<Creature>> _attackByList;
 	
 	private boolean _isDead = false;
@@ -689,7 +690,7 @@ public abstract class Creature extends WorldObject implements ISkillsHolder, IDe
 	 * <li>Send the Server->Client packet StatusUpdate with current HP and MP to all Creature called _statusListener that must be informed of HP/MP updates of this Creature</li>
 	 * </ul>
 	 * <font color=#FF0000><b><u>Caution</u>: This method DOESN'T SEND CP information</b></font>
-	 * @param caster TODO
+	 * @param caster
 	 */
 	public void broadcastStatusUpdate(Creature caster)
 	{
@@ -727,14 +728,20 @@ public abstract class Creature extends WorldObject implements ISkillsHolder, IDe
 	 * <li>Send a Server->Client packet TeleportToLocationt to the Creature AND to all PlayerInstance in its _KnownPlayers</li>
 	 * <li>Modify the position of the pet if necessary</li>
 	 * </ul>
-	 * @param x
-	 * @param y
-	 * @param z
-	 * @param heading
-	 * @param instance
+	 * @param xValue
+	 * @param yValue
+	 * @param zValue
+	 * @param headingValue
+	 * @param instanceValue
 	 */
-	public void teleToLocation(int x, int y, int z, int heading, Instance instance)
+	public void teleToLocation(int xValue, int yValue, int zValue, int headingValue, Instance instanceValue)
 	{
+		int x = xValue;
+		int y = yValue;
+		int z = zValue;
+		int heading = headingValue;
+		Instance instance = instanceValue;
+		
 		final LocationReturn term = EventDispatcher.getInstance().notifyEvent(new OnCreatureTeleport(this, x, y, z, heading, instance), this, LocationReturn.class);
 		if (term != null)
 		{
@@ -837,8 +844,10 @@ public abstract class Creature extends WorldObject implements ISkillsHolder, IDe
 		teleToLocation(x, y, z, heading, randomOffset, getInstanceWorld());
 	}
 	
-	public void teleToLocation(int x, int y, int z, int heading, int randomOffset, Instance instance)
+	public void teleToLocation(int xValue, int yValue, int z, int heading, int randomOffset, Instance instance)
 	{
+		int x = xValue;
+		int y = yValue;
 		if (Config.OFFSET_ON_TELEPORT_ENABLED && (randomOffset > 0))
 		{
 			x += Rnd.get(-randomOffset, randomOffset);
@@ -1201,7 +1210,7 @@ public abstract class Creature extends WorldObject implements ISkillsHolder, IDe
 		
 		// H5 Changes: without Polearm Mastery (skill 216) max simultaneous attacks is 3 (1 by default + 2 in skill 3599).
 		int attackCountMax = (int) _stat.getValue(Stat.ATTACK_COUNT_MAX, 1);
-		if ((attackCountMax > 1) && !(_stat.getValue(Stat.PHYSICAL_POLEARM_TARGET_SINGLE, 0) > 0))
+		if ((attackCountMax > 1) && (_stat.getValue(Stat.PHYSICAL_POLEARM_TARGET_SINGLE, 0) <= 0))
 		{
 			final double headingAngle = Util.convertHeadingToDegree(getHeading());
 			final int maxRadius = _stat.getPhysicalAttackRadius();
@@ -1246,11 +1255,12 @@ public abstract class Creature extends WorldObject implements ISkillsHolder, IDe
 		return attack;
 	}
 	
-	private Hit generateHit(Creature target, Weapon weapon, boolean shotConsumed, boolean halfDamage)
+	private Hit generateHit(Creature target, Weapon weapon, boolean shotConsumedValue, boolean halfDamage)
 	{
 		int damage = 0;
 		byte shld = 0;
 		boolean crit = false;
+		boolean shotConsumed = shotConsumedValue;
 		final boolean miss = Formulas.calcHitMiss(this, target);
 		if (!shotConsumed)
 		{
@@ -3151,9 +3161,9 @@ public abstract class Creature extends WorldObject implements ISkillsHolder, IDe
 	{
 		if ((object != null) && !object.isSpawned())
 		{
-			object = null;
+			_target = null;
+			return;
 		}
-		
 		_target = object;
 	}
 	
@@ -3204,12 +3214,12 @@ public abstract class Creature extends WorldObject implements ISkillsHolder, IDe
 	 * <li>AI : onIntentionMoveTo(Location), onIntentionPickUp(WorldObject), onIntentionInteract(WorldObject)</li>
 	 * <li>FollowTask</li>
 	 * </ul>
-	 * @param x The X position of the destination
-	 * @param y The Y position of the destination
-	 * @param z The Y position of the destination
-	 * @param offset The size of the interaction area of the Creature targeted
+	 * @param xValue The X position of the destination
+	 * @param yValue The Y position of the destination
+	 * @param zValue The Y position of the destination
+	 * @param offsetValue The size of the interaction area of the Creature targeted
 	 */
-	public void moveToLocation(int x, int y, int z, int offset)
+	public void moveToLocation(int xValue, int yValue, int zValue, int offsetValue)
 	{
 		// Get the Move Speed of the Creature
 		final double speed = _stat.getMoveSpeed();
@@ -3217,6 +3227,11 @@ public abstract class Creature extends WorldObject implements ISkillsHolder, IDe
 		{
 			return;
 		}
+		
+		int x = xValue;
+		int y = yValue;
+		int z = zValue;
+		int offset = offsetValue;
 		
 		// Get current position of the Creature
 		final int curX = getX();
@@ -3995,13 +4010,14 @@ public abstract class Creature extends WorldObject implements ISkillsHolder, IDe
 	 * <ul>
 	 * <li>PlayerInstance : Save update in the character_skills table of the database</li>
 	 * </ul>
-	 * @param newSkill The Skill to add to the Creature
+	 * @param skill The Skill to add to the Creature
 	 * @return The Skill replaced or null if just added a new Skill
 	 */
 	@Override
-	public Skill addSkill(Skill newSkill)
+	public Skill addSkill(Skill skill)
 	{
 		Skill oldSkill = null;
+		Skill newSkill = skill;
 		if (newSkill != null)
 		{
 			// Mobius: Keep sublevel on skill level increase.
@@ -4353,7 +4369,7 @@ public abstract class Creature extends WorldObject implements ISkillsHolder, IDe
 		_status.addStatusListener(object);
 	}
 	
-	public void doAttack(double damage, Creature target, Skill skill, boolean isDOT, boolean directlyToHp, boolean critical, boolean reflect)
+	public void doAttack(double damageValue, Creature target, Skill skill, boolean isDOT, boolean directlyToHp, boolean critical, boolean reflect)
 	{
 		// Check if fake players should aggro each other.
 		if (isFakePlayer() && !Config.FAKE_PLAYER_AGGRO_FPC && target.isFakePlayer())
@@ -4371,6 +4387,7 @@ public abstract class Creature extends WorldObject implements ISkillsHolder, IDe
 		getAI().clientStartAutoAttack();
 		
 		// ImmobileDamageBonus and ImmobileDamageResist effect bonuses.
+		double damage = damageValue;
 		if (target.isImmobilized())
 		{
 			damage *= _stat.getValue(Stat.IMMOBILE_DAMAGE_BONUS, 1);
@@ -4479,20 +4496,22 @@ public abstract class Creature extends WorldObject implements ISkillsHolder, IDe
 		}
 	}
 	
-	public void reduceCurrentHp(double value, Creature attacker, Skill skill)
+	public void reduceCurrentHp(double amount, Creature attacker, Skill skill)
 	{
-		reduceCurrentHp(value, attacker, skill, false, false, false, false);
+		reduceCurrentHp(amount, attacker, skill, false, false, false, false);
 	}
 	
-	public void reduceCurrentHp(double value, Creature attacker, Skill skill, boolean isDOT, boolean directlyToHp, boolean critical, boolean reflect)
+	public void reduceCurrentHp(double amountValue, Creature attacker, Skill skill, boolean isDOT, boolean directlyToHp, boolean critical, boolean reflect)
 	{
+		double amount = amountValue;
+		
 		// Notify of this attack only if there is an attacking creature.
 		if (attacker != null)
 		{
-			EventDispatcher.getInstance().notifyEventAsync(new OnCreatureDamageDealt(attacker, this, value, skill, critical, isDOT, reflect), attacker);
+			EventDispatcher.getInstance().notifyEventAsync(new OnCreatureDamageDealt(attacker, this, amount, skill, critical, isDOT, reflect), attacker);
 		}
 		
-		final DamageReturn term = EventDispatcher.getInstance().notifyEvent(new OnCreatureDamageReceived(attacker, this, value, skill, critical, isDOT, reflect), this, DamageReturn.class);
+		final DamageReturn term = EventDispatcher.getInstance().notifyEvent(new OnCreatureDamageReceived(attacker, this, amount, skill, critical, isDOT, reflect), this, DamageReturn.class);
 		if (term != null)
 		{
 			if (term.terminate())
@@ -4501,14 +4520,14 @@ public abstract class Creature extends WorldObject implements ISkillsHolder, IDe
 			}
 			else if (term.override())
 			{
-				value = term.getDamage();
+				amount = term.getDamage();
 			}
 		}
 		
 		final double damageCap = _stat.getValue(Stat.DAMAGE_LIMIT);
 		if (damageCap > 0)
 		{
-			value = Math.min(value, damageCap);
+			amount = Math.min(amount, damageCap);
 		}
 		
 		// Calculate PvP/PvE damage received. It is a post-attack stat.
@@ -4516,45 +4535,45 @@ public abstract class Creature extends WorldObject implements ISkillsHolder, IDe
 		{
 			if (attacker.isPlayable())
 			{
-				value *= (100 + Math.max(_stat.getValue(Stat.PVP_DAMAGE_TAKEN), -80)) / 100;
+				amount *= (100 + Math.max(_stat.getValue(Stat.PVP_DAMAGE_TAKEN), -80)) / 100;
 			}
 			else
 			{
-				value *= (100 + Math.max(_stat.getValue(Stat.PVE_DAMAGE_TAKEN), -80)) / 100;
+				amount *= (100 + Math.max(_stat.getValue(Stat.PVE_DAMAGE_TAKEN), -80)) / 100;
 			}
 			
 			if (attacker.isRaid() || attacker.isRaidMinion())
 			{
-				value *= (100 + Math.max(_stat.getValue(Stat.PVE_DAMAGE_TAKEN_RAID), -80)) / 100;
+				amount *= (100 + Math.max(_stat.getValue(Stat.PVE_DAMAGE_TAKEN_RAID), -80)) / 100;
 			}
 			else if (attacker.isMonster())
 			{
-				value *= (100 + Math.max(_stat.getValue(Stat.PVE_DAMAGE_TAKEN_MONSTER), -80)) / 100;
+				amount *= (100 + Math.max(_stat.getValue(Stat.PVE_DAMAGE_TAKEN_MONSTER), -80)) / 100;
 			}
 		}
 		
 		if (Config.CHAMPION_ENABLE && isChampion() && (Config.CHAMPION_HP != 0))
 		{
-			_status.reduceHp(value / Config.CHAMPION_HP, attacker, (skill == null) || !skill.isToggle(), isDOT, false);
+			_status.reduceHp(amount / Config.CHAMPION_HP, attacker, (skill == null) || !skill.isToggle(), isDOT, false);
 		}
 		else if (isPlayer())
 		{
-			getActingPlayer().getStatus().reduceHp(value, attacker, (skill == null) || !skill.isToggle(), isDOT, false, directlyToHp);
+			getActingPlayer().getStatus().reduceHp(amount, attacker, (skill == null) || !skill.isToggle(), isDOT, false, directlyToHp);
 		}
 		else
 		{
-			_status.reduceHp(value, attacker, (skill == null) || !skill.isToggle(), isDOT, false);
+			_status.reduceHp(amount, attacker, (skill == null) || !skill.isToggle(), isDOT, false);
 		}
 		
 		if (attacker != null)
 		{
-			attacker.sendDamageMessage(this, skill, (int) value, critical, false);
+			attacker.sendDamageMessage(this, skill, (int) amount, critical, false);
 		}
 	}
 	
-	public void reduceCurrentMp(double i)
+	public void reduceCurrentMp(double amount)
 	{
-		_status.reduceMp(i);
+		_status.reduceMp(amount);
 	}
 	
 	@Override
@@ -5058,8 +5077,9 @@ public abstract class Creature extends WorldObject implements ISkillsHolder, IDe
 	}
 	
 	@SafeVarargs
-	public final List<SkillCaster> getSkillCasters(Predicate<SkillCaster> filter, Predicate<SkillCaster>... filters)
+	public final List<SkillCaster> getSkillCasters(Predicate<SkillCaster> filterValue, Predicate<SkillCaster>... filters)
 	{
+		Predicate<SkillCaster> filter = filterValue;
 		for (Predicate<SkillCaster> additionalFilter : filters)
 		{
 			filter = filter.and(additionalFilter);
@@ -5068,8 +5088,9 @@ public abstract class Creature extends WorldObject implements ISkillsHolder, IDe
 	}
 	
 	@SafeVarargs
-	public final SkillCaster getSkillCaster(Predicate<SkillCaster> filter, Predicate<SkillCaster>... filters)
+	public final SkillCaster getSkillCaster(Predicate<SkillCaster> filterValue, Predicate<SkillCaster>... filters)
 	{
+		Predicate<SkillCaster> filter = filterValue;
 		for (Predicate<SkillCaster> additionalFilter : filters)
 		{
 			filter = filter.and(additionalFilter);

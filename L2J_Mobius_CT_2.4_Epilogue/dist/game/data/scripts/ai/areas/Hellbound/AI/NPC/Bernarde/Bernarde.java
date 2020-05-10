@@ -55,13 +55,9 @@ public class Bernarde extends AbstractNpcAI
 					&& (player.getInventory().getInventoryItemCount(DARION_BADGE, -1, false) >= 5) //
 					&& player.exchangeItemsById("Quest", npc, DARION_BADGE, 5, HOLY_WATER, 1, true))
 				{
-					event = "32300-02b.htm";
+					return "32300-02b.htm";
 				}
-				else
-				{
-					event = "32300-02c.htm";
-				}
-				break;
+				return "32300-02c.htm";
 			}
 			case "Treasure":
 			{
@@ -71,13 +67,11 @@ public class Bernarde extends AbstractNpcAI
 					takeItems(player, TREASURE, -1);
 					return "32300-02d.htm";
 				}
-				event = "32300-02e.htm";
-				break;
+				return "32300-02e.htm";
 			}
 			case "rumors":
 			{
-				event = "32300-" + HellboundEngine.getInstance().getLevel() + "r.htm";
-				break;
+				return "32300-" + HellboundEngine.getInstance().getLevel() + "r.htm";
 			}
 		}
 		return event;

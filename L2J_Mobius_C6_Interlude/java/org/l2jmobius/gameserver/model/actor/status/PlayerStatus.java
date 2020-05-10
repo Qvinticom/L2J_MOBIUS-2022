@@ -42,7 +42,7 @@ public class PlayerStatus extends PlayableStatus
 	}
 	
 	@Override
-	public void reduceHp(double value, Creature attacker, boolean awake)
+	public void reduceHp(double amount, Creature attacker, boolean awake)
 	{
 		if (getActiveChar().isInvul() && (getActiveChar() != attacker))
 		{
@@ -89,7 +89,8 @@ public class PlayerStatus extends PlayableStatus
 			}
 		}
 		
-		int fullValue = (int) value;
+		double value = amount;
+		int fullValue = (int) amount;
 		if ((attacker != null) && (attacker != getActiveChar()))
 		{
 			// Check and calculate transfered damage

@@ -498,9 +498,9 @@ public class GameServer
 		INSTANCE = new GameServer();
 	}
 	
-	private void printSection(String s)
+	private void printSection(String section)
 	{
-		s = "=[ " + s + " ]";
+		String s = "=[ " + section + " ]";
 		while (s.length() < 61)
 		{
 			s = "-" + s;

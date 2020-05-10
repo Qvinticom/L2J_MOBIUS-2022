@@ -2668,33 +2668,27 @@ public class Formulas
 			{
 				case BLEED:
 				{
-					multiplier = target.calcStat(Stat.BLEED_VULN, multiplier, target, null);
-					break;
+					return target.calcStat(Stat.BLEED_VULN, multiplier, target, null);
 				}
 				case POISON:
 				{
-					multiplier = target.calcStat(Stat.POISON_VULN, multiplier, target, null);
-					break;
+					return target.calcStat(Stat.POISON_VULN, multiplier, target, null);
 				}
 				case STUN:
 				{
-					multiplier = target.calcStat(Stat.STUN_VULN, multiplier, target, null);
-					break;
+					return target.calcStat(Stat.STUN_VULN, multiplier, target, null);
 				}
 				case PARALYZE:
 				{
-					multiplier = target.calcStat(Stat.PARALYZE_VULN, multiplier, target, null);
-					break;
+					return target.calcStat(Stat.PARALYZE_VULN, multiplier, target, null);
 				}
 				case ROOT:
 				{
-					multiplier = target.calcStat(Stat.ROOT_VULN, multiplier, target, null);
-					break;
+					return target.calcStat(Stat.ROOT_VULN, multiplier, target, null);
 				}
 				case SLEEP:
 				{
-					multiplier = target.calcStat(Stat.SLEEP_VULN, multiplier, target, null);
-					break;
+					return target.calcStat(Stat.SLEEP_VULN, multiplier, target, null);
 				}
 				case MUTE:
 				case FEAR:
@@ -2702,32 +2696,24 @@ public class Formulas
 				case AGGDEBUFF:
 				case ERASE:
 				{
-					multiplier = target.calcStat(Stat.DERANGEMENT_VULN, multiplier, target, null);
-					break;
+					return target.calcStat(Stat.DERANGEMENT_VULN, multiplier, target, null);
 				}
 				case CONFUSION:
 				case CONFUSE_MOB_ONLY:
 				{
-					multiplier = target.calcStat(Stat.CONFUSION_VULN, multiplier, target, null);
-					break;
+					return target.calcStat(Stat.CONFUSION_VULN, multiplier, target, null);
 				}
 				case DEBUFF:
 				{
-					multiplier = target.calcStat(Stat.DEBUFF_VULN, multiplier, target, null);
-					break;
+					return target.calcStat(Stat.DEBUFF_VULN, multiplier, target, null);
 				}
 				case BUFF:
 				{
-					multiplier = target.calcStat(Stat.BUFF_VULN, multiplier, target, null);
-					break;
+					return target.calcStat(Stat.BUFF_VULN, multiplier, target, null);
 				}
 				case CANCEL:
 				{
-					multiplier = target.calcStat(Stat.CANCEL_VULN, multiplier, target, null);
-					break;
-				}
-				default:
-				{
+					return target.calcStat(Stat.CANCEL_VULN, multiplier, target, null);
 				}
 			}
 		}

@@ -54,9 +54,9 @@ public class Wisp extends AbstractNpcAI
 	{
 		if (event.equals("DELETE_NPC"))
 		{
-			params = new StatSet();
-			params.set("LOCATION_OBJECT", npc.getLocation());
-			getTimers().addTimer("RESPAWN_WISP_" + npc.getObjectId(), params, getRandom(RESPAWN_MIN, RESPAWN_MAX), null, null);
+			final StatSet statSet = new StatSet();
+			statSet.set("LOCATION_OBJECT", npc.getLocation());
+			getTimers().addTimer("RESPAWN_WISP_" + npc.getObjectId(), statSet, getRandom(RESPAWN_MIN, RESPAWN_MAX), null, null);
 			npc.deleteMe();
 		}
 		else

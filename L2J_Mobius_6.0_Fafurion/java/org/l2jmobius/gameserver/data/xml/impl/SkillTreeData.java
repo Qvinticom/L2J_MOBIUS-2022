@@ -444,10 +444,11 @@ public class SkillTreeData implements IXmlReader
 		final Map<Long, SkillLearn> skillTree = new HashMap<>();
 		// Add all skills that belong to all classes.
 		skillTree.putAll(_commonSkillTree);
-		while ((classId != null) && (_classSkillTrees.get(classId) != null))
+		ClassId currentClassId = classId;
+		while ((currentClassId != null) && (_classSkillTrees.get(currentClassId) != null))
 		{
-			skillTree.putAll(_classSkillTrees.get(classId));
-			classId = _parentClassMap.get(classId);
+			skillTree.putAll(_classSkillTrees.get(currentClassId));
+			currentClassId = _parentClassMap.get(currentClassId);
 		}
 		return skillTree;
 	}

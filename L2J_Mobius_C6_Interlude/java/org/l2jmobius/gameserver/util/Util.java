@@ -120,12 +120,12 @@ public class Util
 	/**
 	 * Capitalizes the first letter of a string, and returns the result.<br>
 	 * (Based on ucfirst() function of PHP)
-	 * @param str
+	 * @param value
 	 * @return String containing the modified string.
 	 */
-	public static String capitalizeFirst(String str)
+	public static String capitalizeFirst(String value)
 	{
-		str = str.trim();
+		String str = value.trim();
 		if ((str.length() > 0) && Character.isLetter(str.charAt(0)))
 		{
 			return str.substring(0, 1).toUpperCase() + str.substring(1);
@@ -258,12 +258,13 @@ public class Util
 	
 	/**
 	 * Return amount of adena formatted with "," delimiter
-	 * @param amount
+	 * @param value
 	 * @return String formatted adena amount
 	 */
-	public static String formatAdena(int amount)
+	public static String formatAdena(int value)
 	{
 		String s = "";
+		int amount = value;
 		int rem = amount % 1000;
 		s = Integer.toString(rem);
 		amount = (amount - rem) / 1000;

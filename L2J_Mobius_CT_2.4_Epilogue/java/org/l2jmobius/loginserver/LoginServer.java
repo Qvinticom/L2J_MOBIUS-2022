@@ -145,7 +145,9 @@ public class LoginServer
 				lnr.lines()
 					.map(String::trim)
 					.filter(l -> !l.isEmpty() && (l.charAt(0) != '#'))
-					.forEach(line -> {
+					.forEach(lineValue ->
+					{
+						String line = lineValue; 
 						String[] parts = line.split("#", 2); // address[ duration][ # comments]
 						line = parts[0];
 						parts = line.split("\\s+"); // durations might be aligned via multiple spaces

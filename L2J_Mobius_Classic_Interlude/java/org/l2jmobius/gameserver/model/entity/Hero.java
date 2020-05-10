@@ -187,10 +187,10 @@ public class Hero
 		}
 	}
 	
-	private String calcFightTime(long fightTime)
+	private String calcFightTime(long fightTimeValue)
 	{
 		final String format = String.format("%%0%dd", 2);
-		fightTime /= 1000;
+		final long fightTime = fightTimeValue / 1000;
 		return String.format(format, (fightTime % 3600) / 60) + ":" + String.format(format, fightTime % 60);
 	}
 	

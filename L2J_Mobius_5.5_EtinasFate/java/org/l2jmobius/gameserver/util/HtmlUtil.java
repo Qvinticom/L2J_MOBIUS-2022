@@ -145,7 +145,7 @@ public class HtmlUtil
 	/**
 	 * Gets the HTML representation of a gauge.
 	 * @param width the width
-	 * @param current the current value
+	 * @param currentValue the current value
 	 * @param max the max value
 	 * @param displayAsPercentage if {@code true} the text in middle will be displayed as percent else it will be displayed as "current / max"
 	 * @param backgroundImage the background image
@@ -154,9 +154,9 @@ public class HtmlUtil
 	 * @param top the top adjustment
 	 * @return the HTML
 	 */
-	private static String getGauge(int width, long current, long max, boolean displayAsPercentage, String backgroundImage, String image, long imageHeight, long top)
+	private static String getGauge(int width, long currentValue, long max, boolean displayAsPercentage, String backgroundImage, String image, long imageHeight, long top)
 	{
-		current = Math.min(current, max);
+		final long current = Math.min(currentValue, max);
 		final StringBuilder sb = new StringBuilder();
 		sb.append("<table width=");
 		sb.append(width);

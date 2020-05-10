@@ -437,10 +437,11 @@ public class Q384_WarehouseKeepersPastime extends Quest
 	{
 		final String[] playerArray = st.getString("playerArray").split("");
 		final String[] board = st.getString("board").split("");
+		String result = htmltext;
 		for (int i = 1; i < 10; i++)
 		{
-			htmltext = htmltext.replace("<?Cell" + i + "?>", (Util.contains(playerArray, board[i])) ? board[i] : "?");
+			result = result.replace("<?Cell" + i + "?>", (Util.contains(playerArray, board[i])) ? board[i] : "?");
 		}
-		return htmltext;
+		return result;
 	}
 }

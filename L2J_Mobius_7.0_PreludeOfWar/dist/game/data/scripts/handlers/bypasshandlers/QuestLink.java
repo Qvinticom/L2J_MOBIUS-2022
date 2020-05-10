@@ -101,17 +101,18 @@ public class QuestLink implements IBypassHandler
 			.collect(Collectors.toSet());
 		//@formatter:on
 		
+		Collection<Quest> questList = quests;
 		if (Config.ORDER_QUEST_LIST_BY_QUESTID)
 		{
 			final Map<Integer, Quest> orderedQuests = new TreeMap<>(); // Use TreeMap to order quests
-			for (Quest q : quests)
+			for (Quest q : questList)
 			{
 				orderedQuests.put(q.getId(), q);
 			}
-			quests = orderedQuests.values();
+			questList = orderedQuests.values();
 		}
 		
-		for (Quest quest : quests)
+		for (Quest quest : questList)
 		{
 			final QuestState qs = player.getQuestState(quest.getScriptName());
 			if ((qs == null) || qs.isCreated() || (qs.isCompleted() && qs.isNowAvailable()))

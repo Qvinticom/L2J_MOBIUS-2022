@@ -38,7 +38,7 @@ public class HtmlUtil
 		return createPage(Arrays.asList(elements), elements.length, page, elementsPerPage, pagerFunction, bodyFunction);
 	}
 	
-	public static <T> PageResult createPage(Iterable<T> elements, int size, int page, int elementsPerPage, Function<Integer, String> pagerFunction, Function<T, String> bodyFunction)
+	public static <T> PageResult createPage(Iterable<T> elements, int size, int pageValue, int elementsPerPage, Function<Integer, String> pagerFunction, Function<T, String> bodyFunction)
 	{
 		int pages = size / elementsPerPage;
 		if ((elementsPerPage * pages) < size)
@@ -63,6 +63,7 @@ public class HtmlUtil
 			}
 		}
 		
+		int page = pageValue;
 		if (page >= pages)
 		{
 			page = pages - 1;

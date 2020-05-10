@@ -1921,8 +1921,8 @@ public class Formulas
 	public static boolean calcCancelSuccess(BuffInfo info, int cancelMagicLvl, int rate, Skill skill)
 	{
 		// Lvl Bonus Modifier.
-		rate *= info.getSkill().getMagicLevel() > 0 ? 1 + ((cancelMagicLvl - info.getSkill().getMagicLevel()) / 100.) : 1;
-		return Rnd.get(100) < Util.constrain(rate, skill.getMinChance(), skill.getMaxChance());
+		final int chance = (int) (rate * (info.getSkill().getMagicLevel() > 0 ? 1 + ((cancelMagicLvl - info.getSkill().getMagicLevel()) / 100.) : 1));
+		return Rnd.get(100) < Util.constrain(chance, skill.getMinChance(), skill.getMaxChance());
 	}
 	
 	/**
@@ -1996,7 +1996,7 @@ public class Formulas
 		final double karmaLooseMul = KarmaData.getInstance().getMultiplier(player.getLevel());
 		if (exp > 0) // Received exp
 		{
-			exp /= Config.RATE_KARMA_LOST;
+			return (int) ((Math.abs(exp / Config.RATE_KARMA_LOST) / karmaLooseMul) / 30);
 		}
 		return (int) ((Math.abs(exp) / karmaLooseMul) / 30);
 	}

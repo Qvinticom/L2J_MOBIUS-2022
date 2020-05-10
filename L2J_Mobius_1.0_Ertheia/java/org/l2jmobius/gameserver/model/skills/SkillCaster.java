@@ -110,6 +110,7 @@ public class SkillCaster implements Runnable
 		_skill = skill;
 		_item = item;
 		_castingType = castingType;
+		
 		calcSkillTiming(caster, skill);
 	}
 	
@@ -132,7 +133,7 @@ public class SkillCaster implements Runnable
 	/**
 	 * Checks if the caster can cast the specified skill on the given target with the selected parameters.
 	 * @param caster the creature trying to cast
-	 * @param target the selected target for cast
+	 * @param worldObject the selected target for cast
 	 * @param skill the skill being cast
 	 * @param item the reference item which requests the skill cast
 	 * @param castingType the type of casting
@@ -141,7 +142,7 @@ public class SkillCaster implements Runnable
 	 * @param castTime custom cast time in milliseconds or -1 for default.
 	 * @return {@code SkillCaster} object containing casting data if casting has started or {@code null} if casting was not started.
 	 */
-	public static SkillCaster castSkill(Creature caster, WorldObject target, Skill skill, ItemInstance item, SkillCastingType castingType, boolean ctrlPressed, boolean shiftPressed, int castTime)
+	public static SkillCaster castSkill(Creature caster, WorldObject worldObject, Skill skill, ItemInstance item, SkillCastingType castingType, boolean ctrlPressed, boolean shiftPressed, int castTime)
 	{
 		if ((caster == null) || (skill == null) || (castingType == null))
 		{
@@ -154,7 +155,7 @@ public class SkillCaster implements Runnable
 		}
 		
 		// Check true aiming target of the skill.
-		target = skill.getTarget(caster, target, ctrlPressed, shiftPressed, false);
+		final WorldObject target = skill.getTarget(caster, worldObject, ctrlPressed, shiftPressed, false);
 		if (target == null)
 		{
 			return null;
@@ -230,6 +231,7 @@ public class SkillCaster implements Runnable
 	{
 		final Creature caster = _caster.get();
 		final WorldObject target = _target.get();
+		
 		if ((caster == null) || (target == null))
 		{
 			return false;
@@ -400,6 +402,7 @@ public class SkillCaster implements Runnable
 	{
 		final Creature caster = _caster.get();
 		final WorldObject target = _target.get();
+		
 		if ((caster == null) || (target == null))
 		{
 			return false;
@@ -435,6 +438,7 @@ public class SkillCaster implements Runnable
 	{
 		final Creature caster = _caster.get();
 		final WorldObject target = _target.get();
+		
 		if ((caster == null) || (target == null))
 		{
 			return false;
@@ -519,6 +523,7 @@ public class SkillCaster implements Runnable
 		
 		// On each repeat recharge shots before cast.
 		caster.rechargeShots(_skill.useSoulShot(), _skill.useSpiritShot(), false);
+		
 		return true;
 	}
 	
@@ -603,6 +608,7 @@ public class SkillCaster implements Runnable
 						{
 							// Update pvpflag.
 							player.updatePvPStatus((Creature) obj);
+							
 							if (obj.isSummon())
 							{
 								((Summon) obj).updateAndBroadcastStatus(1);
@@ -803,19 +809,21 @@ public class SkillCaster implements Runnable
 					creature.disableSkill(skill, skill.getReuseDelay());
 				}
 				
+				WorldObject currentTarget = target;
 				if (!ignoreTargetType)
 				{
 					final WorldObject objTarget = skill.getTarget(creature, false, false, false);
 					if ((objTarget != null) && objTarget.isCreature())
 					{
-						target = objTarget;
+						currentTarget = objTarget;
 					}
 				}
 				
-				final WorldObject[] targets = skill.getTargetsAffected(creature, target).toArray(new WorldObject[0]);
+				final WorldObject[] targets = skill.getTargetsAffected(creature, currentTarget).toArray(new WorldObject[0]);
+				
 				if (!skill.isNotBroadcastable())
 				{
-					creature.broadcastPacket(new MagicSkillUse(creature, target, skill.getDisplayId(), skill.getLevel(), 0, 0));
+					creature.broadcastPacket(new MagicSkillUse(creature, currentTarget, skill.getDisplayId(), skill.getLevel(), 0, 0));
 				}
 				
 				// Launch the magic skill and calculate its effects

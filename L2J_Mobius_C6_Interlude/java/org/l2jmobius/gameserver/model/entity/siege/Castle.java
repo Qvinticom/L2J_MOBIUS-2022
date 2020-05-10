@@ -134,15 +134,16 @@ public class Castle
 	
 	/**
 	 * Add amount to castle instance's treasury (warehouse).
-	 * @param amount
+	 * @param amountValue
 	 */
-	public void addToTreasury(int amount)
+	public void addToTreasury(int amountValue)
 	{
 		if (_ownerId <= 0)
 		{
 			return;
 		}
 		
+		int amount = amountValue;
 		if (_name.equalsIgnoreCase("Schuttgart") || _name.equalsIgnoreCase("Goddard"))
 		{
 			final Castle rune = CastleManager.getInstance().getCastle("rune");
@@ -177,16 +178,17 @@ public class Castle
 	
 	/**
 	 * Add amount to castle instance's treasury (warehouse), no tax paying.
-	 * @param amount
+	 * @param amountValue
 	 * @return
 	 */
-	public boolean addToTreasuryNoTax(int amount)
+	public boolean addToTreasuryNoTax(int amountValue)
 	{
 		if (_ownerId <= 0)
 		{
 			return false;
 		}
 		
+		int amount = amountValue;
 		if (amount < 0)
 		{
 			amount *= -1;
@@ -218,6 +220,7 @@ public class Castle
 		{
 			LOGGER.warning(e.toString());
 		}
+		
 		return true;
 	}
 	
@@ -703,9 +706,8 @@ public class Castle
 			return null;
 		}
 		
-		for (int i = 0; i < _doors.size(); i++)
+		for (final DoorInstance door : _doors)
 		{
-			final DoorInstance door = _doors.get(i);
 			if (door.getDoorId() == doorId)
 			{
 				return door;

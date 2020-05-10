@@ -168,22 +168,7 @@ public class AutoSpawnHandler
 	 */
 	public AutoSpawnInstance registerSpawn(int npcId, int[][] spawnPoints, int initialDelay, int respawnDelay, int despawnDelay)
 	{
-		if (initialDelay < 0)
-		{
-			initialDelay = DEFAULT_INITIAL_SPAWN;
-		}
-		
-		if (respawnDelay < 0)
-		{
-			respawnDelay = DEFAULT_RESPAWN;
-		}
-		
-		if (despawnDelay < 0)
-		{
-			despawnDelay = DEFAULT_DESPAWN;
-		}
-		
-		final AutoSpawnInstance newSpawn = new AutoSpawnInstance(npcId, initialDelay, respawnDelay, despawnDelay);
+		final AutoSpawnInstance newSpawn = new AutoSpawnInstance(npcId, initialDelay < 0 ? DEFAULT_INITIAL_SPAWN : initialDelay, respawnDelay < 0 ? DEFAULT_RESPAWN : respawnDelay, despawnDelay < 0 ? DEFAULT_DESPAWN : despawnDelay);
 		if (spawnPoints != null)
 		{
 			for (int[] spawnPoint : spawnPoints)

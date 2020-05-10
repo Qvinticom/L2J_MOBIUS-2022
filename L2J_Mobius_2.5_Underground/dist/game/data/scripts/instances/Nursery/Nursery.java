@@ -98,11 +98,11 @@ public class Nursery extends AbstractInstance
 					{
 						if (gameTime == 0)
 						{
-							player = instance.getFirstPlayer();
-							if ((player != null) && hasQuestItems(player, SCORE_ITEM))
+							final PlayerInstance firstPlayer = instance.getFirstPlayer();
+							if ((firstPlayer != null) && hasQuestItems(firstPlayer, SCORE_ITEM))
 							{
-								final int itemCount = (int) getQuestItemsCount(player, SCORE_ITEM);
-								takeItems(player, SCORE_ITEM, itemCount);
+								final int itemCount = (int) getQuestItemsCount(firstPlayer, SCORE_ITEM);
+								takeItems(firstPlayer, SCORE_ITEM, itemCount);
 								npcVars.increaseInt("GAME_POINTS", 0, itemCount);
 							}
 							instance.despawnGroup("GAME_MONSTERS");

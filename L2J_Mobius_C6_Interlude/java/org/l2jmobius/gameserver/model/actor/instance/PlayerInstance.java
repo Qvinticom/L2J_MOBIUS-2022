@@ -1531,12 +1531,13 @@ public class PlayerInstance extends Playable
 	/**
 	 * Process quest event.
 	 * @param quest the quest
-	 * @param event the event
+	 * @param eventValue the event
 	 * @return the quest state
 	 */
-	public QuestState processQuestEvent(String quest, String event)
+	public QuestState processQuestEvent(String quest, String eventValue)
 	{
 		QuestState retval = null;
+		String event = eventValue;
 		if (event == null)
 		{
 			event = "";
@@ -2055,10 +2056,11 @@ public class PlayerInstance extends Playable
 	
 	/**
 	 * Set the Karma of the PlayerInstance and send a Server->Client packet StatusUpdate (broadcast).
-	 * @param karma the new karma
+	 * @param value the new karma
 	 */
-	public void setKarma(int karma)
+	public void setKarma(int value)
 	{
+		int karma = value;
 		if (karma < 0)
 		{
 			karma = 0;
@@ -3345,12 +3347,13 @@ public class PlayerInstance extends Playable
 	/**
 	 * Add adena to Inventory of the PlayerInstance and send a Server->Client InventoryUpdate packet to the PlayerInstance.
 	 * @param process : String Identifier of process triggering this action
-	 * @param count : int Quantity of adena to be added
+	 * @param amount : int Quantity of adena to be added
 	 * @param reference : WorldObject Object referencing current action like NPC selling item or previous item in transformation
 	 * @param sendMessage : boolean Specifies whether to send message to Client about this action
 	 */
-	public void addAdena(String process, int count, WorldObject reference, boolean sendMessage)
+	public void addAdena(String process, int amount, WorldObject reference, boolean sendMessage)
 	{
+		int count = amount;
 		if (count > 0)
 		{
 			if (_inventory.getAdena() == Integer.MAX_VALUE)
@@ -3717,8 +3720,8 @@ public class PlayerInstance extends Playable
 	 */
 	public boolean destroyItem(String process, ItemInstance item, WorldObject reference, boolean sendMessage)
 	{
-		item = _inventory.destroyItem(process, item, this, reference);
-		if (item == null)
+		final ItemInstance destoyedItem = _inventory.destroyItem(process, item, this, reference);
+		if (destoyedItem == null)
 		{
 			if (sendMessage)
 			{
@@ -3731,7 +3734,7 @@ public class PlayerInstance extends Playable
 		if (!Config.FORCE_INVENTORY_UPDATE)
 		{
 			final InventoryUpdate playerIU = new InventoryUpdate();
-			playerIU.addItem(item);
+			playerIU.addItem(destoyedItem);
 			sendPacket(playerIU);
 		}
 		else
@@ -3750,14 +3753,14 @@ public class PlayerInstance extends Playable
 			if (_count > 1)
 			{
 				final SystemMessage sm = new SystemMessage(SystemMessageId.S2_S1_HAS_DISAPPEARED);
-				sm.addItemName(item.getItemId());
+				sm.addItemName(destoyedItem.getItemId());
 				sm.addNumber(_count);
 				sendPacket(sm);
 			}
 			else
 			{
 				final SystemMessage sm = new SystemMessage(SystemMessageId.S1_HAS_DISAPPEARED);
-				sm.addItemName(item.getItemId());
+				sm.addItemName(destoyedItem.getItemId());
 				sendPacket(sm);
 			}
 		}
@@ -4109,8 +4112,8 @@ public class PlayerInstance extends Playable
 			return false;
 		}
 		
-		item = _inventory.dropItem(process, item, this, reference);
-		if (item == null)
+		final ItemInstance droppedItem = _inventory.dropItem(process, item, this, reference);
+		if (droppedItem == null)
 		{
 			if (sendMessage)
 			{
@@ -4119,41 +4122,41 @@ public class PlayerInstance extends Playable
 			return false;
 		}
 		
-		item.dropMe(this, (getClientX() + Rnd.get(50)) - 25, (getClientY() + Rnd.get(50)) - 25, getClientZ() + 20);
-		if (Config.DESTROY_DROPPED_PLAYER_ITEM && !Config.LIST_PROTECTED_ITEMS.contains(item.getItemId()))
+		droppedItem.dropMe(this, (getClientX() + Rnd.get(50)) - 25, (getClientY() + Rnd.get(50)) - 25, getClientZ() + 20);
+		if (Config.DESTROY_DROPPED_PLAYER_ITEM && !Config.LIST_PROTECTED_ITEMS.contains(droppedItem.getItemId()))
 		{
 			if (Config.AUTODESTROY_ITEM_AFTER > 0) // autodestroy enabled
 			{
-				if ((item.isEquipable() && Config.DESTROY_EQUIPABLE_PLAYER_ITEM) || !item.isEquipable())
+				if ((droppedItem.isEquipable() && Config.DESTROY_EQUIPABLE_PLAYER_ITEM) || !droppedItem.isEquipable())
 				{
-					ItemsAutoDestroy.getInstance().addItem(item);
-					item.setProtected(false);
+					ItemsAutoDestroy.getInstance().addItem(droppedItem);
+					droppedItem.setProtected(false);
 				}
 				else
 				{
-					item.setProtected(true);
+					droppedItem.setProtected(true);
 				}
 			}
 			else
 			{
-				item.setProtected(true);
+				droppedItem.setProtected(true);
 			}
 		}
 		else
 		{
-			item.setProtected(true);
+			droppedItem.setProtected(true);
 		}
 		
 		if (protectItem)
 		{
-			item.getDropProtection().protect(this);
+			droppedItem.getDropProtection().protect(this);
 		}
 		
 		// Send inventory update packet
 		if (!Config.FORCE_INVENTORY_UPDATE)
 		{
 			final InventoryUpdate playerIU = new InventoryUpdate();
-			playerIU.addItem(item);
+			playerIU.addItem(droppedItem);
 			sendPacket(playerIU);
 		}
 		else
@@ -4170,7 +4173,7 @@ public class PlayerInstance extends Playable
 		if (sendMessage)
 		{
 			final SystemMessage sm = new SystemMessage(SystemMessageId.YOU_HAVE_DROPPED_S1);
-			sm.addItemName(item.getItemId());
+			sm.addItemName(droppedItem.getItemId());
 			sendPacket(sm);
 		}
 		
@@ -5434,12 +5437,13 @@ public class PlayerInstance extends Playable
 	 * <li>Remove the PlayerInstance from the _statusListener of the old target if it was a Creature</li>
 	 * <li>Add the PlayerInstance to the _statusListener of the new target if it's a Creature</li>
 	 * <li>Target the new WorldObject (add the target to the PlayerInstance _target, _knownObject and PlayerInstance to _KnownObject of the WorldObject)</li><br>
-	 * @param newTarget The WorldObject to target
+	 * @param worldObject The WorldObject to target
 	 */
 	@Override
-	public void setTarget(WorldObject newTarget)
+	public void setTarget(WorldObject worldObject)
 	{
 		// Check if the new target is visible
+		WorldObject newTarget = worldObject;
 		if ((newTarget != null) && !newTarget.isVisible())
 		{
 			newTarget = null;
@@ -9527,21 +9531,19 @@ public class PlayerInstance extends Playable
 			return false;
 		}
 		
-		slot--;
-		
-		if (_henna[slot] == null)
+		if (_henna[slot - 1] == null)
 		{
 			return false;
 		}
 		
-		Henna henna = _henna[slot];
-		_henna[slot] = null;
+		Henna henna = _henna[slot - 1];
+		_henna[slot - 1] = null;
 		
 		try (Connection con = DatabaseFactory.getConnection())
 		{
 			PreparedStatement statement = con.prepareStatement(DELETE_CHAR_HENNA);
 			statement.setInt(1, getObjectId());
-			statement.setInt(2, slot + 1);
+			statement.setInt(2, slot);
 			statement.setInt(3, getClassIndex());
 			statement.execute();
 			statement.close();
@@ -10555,13 +10557,15 @@ public class PlayerInstance extends Playable
 	
 	/**
 	 * Check if the requested casting is a Pc->Pc skill cast and if it's a valid pvp condition.
-	 * @param target WorldObject instance containing the target
+	 * @param worldObject WorldObject instance containing the target
 	 * @param skill Skill instance with the skill being casted
 	 * @param srcIsSummon is Summon - caster?
 	 * @return False if the skill is a pvpSkill and target is not a valid pvp target
 	 */
-	public boolean checkPvpSkill(WorldObject target, Skill skill, boolean srcIsSummon)
+	public boolean checkPvpSkill(WorldObject worldObject, Skill skill, boolean srcIsSummon)
 	{
+		WorldObject target = worldObject;
+		
 		// Check if player and target are in events and on the same team.
 		if (target instanceof PlayerInstance)
 		{
@@ -15315,11 +15319,12 @@ public class PlayerInstance extends Playable
 	
 	/**
 	 * String to hex.
-	 * @param color the color
+	 * @param value the color
 	 * @return the string
 	 */
-	private String StringToHex(String color)
+	private String StringToHex(String value)
 	{
+		String color = value;
 		switch (color.length())
 		{
 			case 1:
@@ -15825,10 +15830,11 @@ public class PlayerInstance extends Playable
 	/**
 	 * Sets the end time.
 	 * @param process the process
-	 * @param value the value
+	 * @param time the value
 	 */
-	public void setEndTime(String process, int value)
+	public void setEndTime(String process, int time)
 	{
+		int value = time;
 		if (value > 0)
 		{
 			long endDay;

@@ -99,8 +99,9 @@ public class AdminEffects implements IAdminCommandHandler
 	};
 	
 	@Override
-	public boolean useAdminCommand(String command, PlayerInstance activeChar)
+	public boolean useAdminCommand(String commandValue, PlayerInstance activeChar)
 	{
+		String command = commandValue;
 		final StringTokenizer st = new StringTokenizer(command);
 		st.nextToken();
 		

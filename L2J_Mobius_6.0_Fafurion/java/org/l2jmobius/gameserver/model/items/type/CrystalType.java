@@ -87,20 +87,17 @@ public enum CrystalType
 		return getLevel() < crystalType.getLevel();
 	}
 	
-	public CrystalType plusLevel(int level)
+	public CrystalType plusLevel(int levelValue)
 	{
-		level += _level;
-		
+		final int level = levelValue + _level;
 		if (level >= CrystalType.R110.getLevel())
 		{
 			return CrystalType.R110;
 		}
-		
 		if (level <= CrystalType.NONE.getLevel())
 		{
 			return CrystalType.NONE;
 		}
-		
 		return getByLevel(level);
 	}
 	
@@ -113,7 +110,6 @@ public enum CrystalType
 				return crystalType;
 			}
 		}
-		
 		return null;
 	}
 }

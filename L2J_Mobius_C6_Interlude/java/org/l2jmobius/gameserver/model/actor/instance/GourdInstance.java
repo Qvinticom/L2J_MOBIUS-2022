@@ -63,8 +63,9 @@ public class GourdInstance extends MonsterInstance
 	}
 	
 	@Override
-	public void reduceCurrentHp(double damage, Creature attacker, boolean awake)
+	public void reduceCurrentHp(double damageValue, Creature attacker, boolean awake)
 	{
+		double damage = damageValue;
 		if (!attacker.getName().equalsIgnoreCase(_name))
 		{
 			damage = 0;

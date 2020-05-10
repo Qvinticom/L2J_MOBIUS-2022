@@ -98,27 +98,27 @@ public class ObjectPosition
 	 */
 	public void setXYZInvisible(int x, int y, int z)
 	{
-		if (x > World.MAP_MAX_X)
+		int correctX = x;
+		if (correctX > World.MAP_MAX_X)
 		{
-			x = World.MAP_MAX_X - 5000;
+			correctX = World.MAP_MAX_X - 5000;
+		}
+		if (correctX < World.MAP_MIN_X)
+		{
+			correctX = World.MAP_MIN_X + 5000;
 		}
 		
-		if (x < World.MAP_MIN_X)
+		int correctY = y;
+		if (correctY > World.MAP_MAX_Y)
 		{
-			x = World.MAP_MIN_X + 5000;
+			correctY = World.MAP_MAX_Y - 5000;
+		}
+		if (correctY < World.MAP_MIN_Y)
+		{
+			correctY = World.MAP_MIN_Y + 5000;
 		}
 		
-		if (y > World.MAP_MAX_Y)
-		{
-			y = World.MAP_MAX_Y - 5000;
-		}
-		
-		if (y < World.MAP_MIN_Y)
-		{
-			y = World.MAP_MIN_Y + 5000;
-		}
-		
-		setWorldPosition(x, y, z);
+		setWorldPosition(correctX, correctY, z);
 		_activeObject.setVisible(false);
 	}
 	

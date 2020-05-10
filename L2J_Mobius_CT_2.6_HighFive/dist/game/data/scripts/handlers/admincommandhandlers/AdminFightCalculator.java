@@ -159,10 +159,10 @@ public class AdminFightCalculator implements IAdminCommandHandler
 	
 	private void handleShow(String params, PlayerInstance activeChar)
 	{
-		params = params.trim();
+		String trimmedParams = params.trim();
 		Creature npc1 = null;
 		Creature npc2 = null;
-		if (params.isEmpty())
+		if (trimmedParams.isEmpty())
 		{
 			npc1 = activeChar;
 			npc2 = (Creature) activeChar.getTarget();
@@ -176,7 +176,7 @@ public class AdminFightCalculator implements IAdminCommandHandler
 		{
 			int mid1 = 0;
 			int mid2 = 0;
-			final StringTokenizer st = new StringTokenizer(params);
+			final StringTokenizer st = new StringTokenizer(trimmedParams);
 			mid1 = Integer.parseInt(st.nextToken());
 			mid2 = Integer.parseInt(st.nextToken());
 			npc1 = new MonsterInstance(NpcData.getInstance().getTemplate(mid1));
@@ -290,7 +290,7 @@ public class AdminFightCalculator implements IAdminCommandHandler
 		final NpcHtmlMessage adminReply = new NpcHtmlMessage();
 		final StringBuilder replyMSG = new StringBuilder(1000);
 		replyMSG.append("<html><title>Selected mobs to fight</title><body><table>");
-		if (params.isEmpty())
+		if (trimmedParams.isEmpty())
 		{
 			replyMSG.append("<tr><td width=140>Parameter</td><td width=70>me</td><td width=70>target</td></tr>");
 		}
@@ -320,7 +320,7 @@ public class AdminFightCalculator implements IAdminCommandHandler
 		
 		replyMSG.append("</tr></table><center><br>");
 		
-		if (params.isEmpty())
+		if (trimmedParams.isEmpty())
 		{
 			replyMSG.append("<button value=\"Retry\" action=\"bypass -h admin_fight_calculator_show\"  width=100 height=15 back=\"L2UI_ct1.button_df\" fore=\"L2UI_ct1.button_df\">");
 		}
@@ -333,7 +333,7 @@ public class AdminFightCalculator implements IAdminCommandHandler
 		adminReply.setHtml(replyMSG.toString());
 		activeChar.sendPacket(adminReply);
 		
-		if (params.length() != 0)
+		if (trimmedParams.length() != 0)
 		{
 			((MonsterInstance) npc1).deleteMe();
 			((MonsterInstance) npc2).deleteMe();

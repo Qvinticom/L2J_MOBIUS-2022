@@ -408,119 +408,144 @@ public class Q335_TheSongOfTheHunter extends Quest
 			return event;
 		}
 		
+		String htmltext = event;
 		final int state = st.getState();
-		if ("30744_03.htm".equalsIgnoreCase(event) && (state == 1))
+		if ("30744_03.htm".equals(htmltext))
 		{
-			if (st.getQuestItemsCount(TEST_INSTRUCTIONS1) == 0)
+			if (state == 1)
 			{
-				st.giveItems(TEST_INSTRUCTIONS1, 1);
+				if (st.getQuestItemsCount(TEST_INSTRUCTIONS1) == 0)
+				{
+					st.giveItems(TEST_INSTRUCTIONS1, 1);
+				}
+				st.setState(State.STARTED);
+				st.set("cond", "1");
+				st.playSound("ItemSound.quest_accept");
 			}
-			st.setState(State.STARTED);
-			st.set("cond", "1");
-			st.playSound("ItemSound.quest_accept");
 		}
-		else if ("30744_09.htm".equalsIgnoreCase(event) && (state == 2))
+		else if ("30744_09.htm".equals(htmltext))
 		{
-			if (GetCurrentRequest(st, REQUESTS1) != null)
+			if (state == 2)
 			{
-				return "30744_09a.htm";
+				if (GetCurrentRequest(st, REQUESTS1) != null)
+				{
+					return "30744_09a.htm";
+				}
+				if (st.getQuestItemsCount(TEST_INSTRUCTIONS2) == 0)
+				{
+					st.playSound("ItemSound.quest_middle");
+					st.giveItems(TEST_INSTRUCTIONS2, 1);
+				}
 			}
-			if (st.getQuestItemsCount(TEST_INSTRUCTIONS2) == 0)
+		}
+		else if ("30744_16.htm".equals(htmltext))
+		{
+			if (state == 2)
 			{
+				if (st.getQuestItemsCount(LAUREL_LEAF_PIN) >= 20)
+				{
+					st.giveItems(57, 20000);
+					htmltext = "30744_17.htm";
+				}
+				st.playSound("ItemSound.quest_finish");
+				st.exitQuest(true);
+			}
+		}
+		else if ("30746_03.htm".equals(htmltext))
+		{
+			if (state == 2)
+			{
+				if ((st.getQuestItemsCount(CIRCLE_HUNTER_LICENSE1) == 0) && (st.getQuestItemsCount(CIRCLE_HUNTER_LICENSE2) == 0))
+				{
+					return null;
+				}
+				if (st.getQuestItemsCount(CYBELLINS_DAGGER) == 0)
+				{
+					st.giveItems(CYBELLINS_DAGGER, 1);
+				}
+				if (st.getQuestItemsCount(CYBELLINS_REQUEST) == 0)
+				{
+					st.giveItems(CYBELLINS_REQUEST, 1);
+				}
+				for (int i : Q_BLOOD_CRYSTAL)
+				{
+					st.takeItems(i, -1);
+				}
 				st.playSound("ItemSound.quest_middle");
-				st.giveItems(TEST_INSTRUCTIONS2, 1);
+				st.giveItems(Q_BLOOD_CRYSTAL[1], 1);
 			}
 		}
-		else if ("30744_16.htm".equalsIgnoreCase(event) && (state == 2))
+		else if ("30746_06.htm".equals(htmltext))
 		{
-			if (st.getQuestItemsCount(LAUREL_LEAF_PIN) >= 20)
+			if (state == 2)
 			{
-				st.giveItems(57, 20000);
-				event = "30744_17.htm";
-			}
-			st.playSound("ItemSound.quest_finish");
-			st.exitQuest(true);
-		}
-		else if ("30746_03.htm".equalsIgnoreCase(event) && (state == 2))
-		{
-			if ((st.getQuestItemsCount(CIRCLE_HUNTER_LICENSE1) == 0) && (st.getQuestItemsCount(CIRCLE_HUNTER_LICENSE2) == 0))
-			{
-				return null;
-			}
-			if (st.getQuestItemsCount(CYBELLINS_DAGGER) == 0)
-			{
-				st.giveItems(CYBELLINS_DAGGER, 1);
-			}
-			if (st.getQuestItemsCount(CYBELLINS_REQUEST) == 0)
-			{
-				st.giveItems(CYBELLINS_REQUEST, 1);
-			}
-			for (int i : Q_BLOOD_CRYSTAL)
-			{
-				st.takeItems(i, -1);
-			}
-			st.playSound("ItemSound.quest_middle");
-			st.giveItems(Q_BLOOD_CRYSTAL[1], 1);
-		}
-		else if ("30746_06.htm".equalsIgnoreCase(event) && (state == 2))
-		{
-			if (!Blood_Crystal2Adena(st, Get_Blood_Crystal_Level(st)))
-			{
-				return null;
+				if (!Blood_Crystal2Adena(st, Get_Blood_Crystal_Level(st)))
+				{
+					return null;
+				}
 			}
 		}
-		else if ("30746_10.htm".equalsIgnoreCase(event) && (state == 2))
+		else if ("30746_10.htm".equals(htmltext))
 		{
-			st.takeItems(CYBELLINS_DAGGER, -1);
-			st.takeItems(CYBELLINS_REQUEST, -1);
-			for (int i : Q_BLOOD_CRYSTAL)
+			if (state == 2)
 			{
-				st.takeItems(i, -1);
+				st.takeItems(CYBELLINS_DAGGER, -1);
+				st.takeItems(CYBELLINS_REQUEST, -1);
+				for (int i : Q_BLOOD_CRYSTAL)
+				{
+					st.takeItems(i, -1);
+				}
 			}
 		}
-		else if ("30745_02.htm".equalsIgnoreCase(event) && (state == 2))
+		else if ("30745_02.htm".equals(htmltext))
 		{
-			if (st.getQuestItemsCount(TEST_INSTRUCTIONS2) > 0)
+			if (state == 2)
 			{
-				return "30745_03.htm";
+				if (st.getQuestItemsCount(TEST_INSTRUCTIONS2) > 0)
+				{
+					return "30745_03.htm";
+				}
 			}
 		}
-		else if ("30745_05b.htm".equalsIgnoreCase(event) && (state == 2))
+		else if ("30745_05b.htm".equals(htmltext))
 		{
-			if (st.getQuestItemsCount(LAUREL_LEAF_PIN) > 0)
+			if (state == 2)
 			{
-				st.takeItems(LAUREL_LEAF_PIN, 1);
-			}
-			for (Request r : REQUESTS1)
-			{
-				st.takeItems(r.request_id, -1);
-				st.takeItems(r.request_item, -1);
-			}
-			for (Request r : REQUESTS2)
-			{
-				st.takeItems(r.request_id, -1);
-				st.takeItems(r.request_item, -1);
+				if (st.getQuestItemsCount(LAUREL_LEAF_PIN) > 0)
+				{
+					st.takeItems(LAUREL_LEAF_PIN, 1);
+				}
+				for (Request r : REQUESTS1)
+				{
+					st.takeItems(r.request_id, -1);
+					st.takeItems(r.request_item, -1);
+				}
+				for (Request r : REQUESTS2)
+				{
+					st.takeItems(r.request_id, -1);
+					st.takeItems(r.request_item, -1);
+				}
 			}
 		}
-		else
+		else if (state == 2)
 		{
-			if ("30745-list1".equalsIgnoreCase(event) && (state == 2))
+			if ("30745-list1".equals(htmltext))
 			{
 				GenList(st);
 				return FormatList(st, REQUESTS1);
 			}
-			if ("30745-list2".equalsIgnoreCase(event) && (state == 2))
+			if ("30745-list2".equals(htmltext))
 			{
 				GenList(st);
 				return FormatList(st, REQUESTS2);
 			}
-			if (event.startsWith("30745-request-") && (state == 2))
+			if (htmltext.startsWith("30745-request-"))
 			{
-				event = event.replaceFirst("30745-request-", "");
+				htmltext = htmltext.replaceFirst("30745-request-", "");
 				int requestId;
 				try
 				{
-					requestId = Integer.parseInt(event);
+					requestId = Integer.parseInt(htmltext);
 				}
 				catch (Exception e)
 				{
@@ -534,7 +559,8 @@ public class Q335_TheSongOfTheHunter extends Quest
 				return "30745-" + requestId + ".htm";
 			}
 		}
-		return event;
+		
+		return htmltext;
 	}
 	
 	@Override
@@ -975,11 +1001,12 @@ public class Q335_TheSongOfTheHunter extends Quest
 		return result;
 	}
 	
-	private static int[] unpackInt(int a, int bits)
+	private static int[] unpackInt(int value, int bits)
 	{
 		final int m = 32 / bits;
 		final int mval = (int) Math.pow(2.0, bits);
 		final int[] result = new int[m];
+		int a = value;
 		for (int i = m; i > 0; --i)
 		{
 			final int next = a;

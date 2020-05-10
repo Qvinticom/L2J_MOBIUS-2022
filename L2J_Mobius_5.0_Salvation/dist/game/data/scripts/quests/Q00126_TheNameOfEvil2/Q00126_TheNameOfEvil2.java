@@ -198,45 +198,42 @@ public class Q00126_TheNameOfEvil2 extends Quest
 			case "DO_One":
 			{
 				qs.set("DO", "1");
-				event = "32122-4d.html";
-				break;
+				return "32122-4d.html";
 			}
 			case "MI_One":
 			{
 				qs.set("MI", "1");
-				event = "32122-4f.html";
-				break;
+				return "32122-4f.html";
 			}
 			case "FA_One":
 			{
 				qs.set("FA", "1");
-				event = "32122-4h.html";
-				break;
+				return "32122-4h.html";
 			}
 			case "SOL_One":
 			{
 				qs.set("SOL", "1");
-				event = "32122-4j.html";
-				break;
+				return "32122-4j.html";
 			}
 			case "FA2_One":
 			{
 				qs.set("FA2", "1");
 				if (qs.isCond(14) && (qs.getInt("DO") > 0) && (qs.getInt("MI") > 0) && (qs.getInt("FA") > 0) && (qs.getInt("SOL") > 0) && (qs.getInt("FA2") > 0))
 				{
-					event = "32122-4n.html";
 					qs.setCond(15, true);
-				}
-				else
-				{
-					event = "32122-4m.html";
+					qs.unset("DO");
+					qs.unset("MI");
+					qs.unset("FA");
+					qs.unset("SOL");
+					qs.unset("FA2");
+					return "32122-4n.html";
 				}
 				qs.unset("DO");
 				qs.unset("MI");
 				qs.unset("FA");
 				qs.unset("SOL");
 				qs.unset("FA2");
-				break;
+				return "32122-4m.html";
 			}
 			case "32122-4m.html":
 			{
@@ -250,45 +247,42 @@ public class Q00126_TheNameOfEvil2 extends Quest
 			case "FA_Two":
 			{
 				qs.set("FA", "1");
-				event = "32122-5a.html";
-				break;
+				return "32122-5a.html";
 			}
 			case "SOL_Two":
 			{
 				qs.set("SOL", "1");
-				event = "32122-5c.html";
-				break;
+				return "32122-5c.html";
 			}
 			case "TI_Two":
 			{
 				qs.set("TI", "1");
-				event = "32122-5e.html";
-				break;
+				return "32122-5e.html";
 			}
 			case "SOL2_Two":
 			{
 				qs.set("SOL2", "1");
-				event = "32122-5g.html";
-				break;
+				return "32122-5g.html";
 			}
 			case "FA2_Two":
 			{
 				qs.set("FA2", "1");
 				if (qs.isCond(15) && (qs.getInt("FA") > 0) && (qs.getInt("SOL") > 0) && (qs.getInt("TI") > 0) && (qs.getInt("SOL2") > 0) && (qs.getInt("FA2") > 0))
 				{
-					event = "32122-5j.html";
 					qs.setCond(16, true);
-				}
-				else
-				{
-					event = "32122-5i.html";
+					qs.unset("FA");
+					qs.unset("SOL");
+					qs.unset("TI");
+					qs.unset("SOL2");
+					qs.unset("FA2");
+					return "32122-5j.html";
 				}
 				qs.unset("FA");
 				qs.unset("SOL");
 				qs.unset("TI");
 				qs.unset("SOL2");
 				qs.unset("FA2");
-				break;
+				return "32122-5i.html";
 			}
 			case "32122-5i.html":
 			{
@@ -302,45 +296,42 @@ public class Q00126_TheNameOfEvil2 extends Quest
 			case "SOL_Three":
 			{
 				qs.set("SOL", "1");
-				event = "32122-6a.html";
-				break;
+				return "32122-6a.html";
 			}
 			case "FA_Three":
 			{
 				qs.set("FA", "1");
-				event = "32122-6c.html";
-				break;
+				return "32122-6c.html";
 			}
 			case "MI_Three":
 			{
 				qs.set("MI", "1");
-				event = "32122-6e.html";
-				break;
+				return "32122-6e.html";
 			}
 			case "FA2_Three":
 			{
 				qs.set("FA2", "1");
-				event = "32122-6g.html";
-				break;
+				return "32122-6g.html";
 			}
 			case "MI2_Three":
 			{
 				qs.set("MI2", "1");
 				if (qs.isCond(16) && (qs.getInt("SOL") > 0) && (qs.getInt("FA") > 0) && (qs.getInt("MI") > 0) && (qs.getInt("FA2") > 0) && (qs.getInt("MI2") > 0))
 				{
-					event = "32122-6j.html";
 					qs.setCond(17, true);
-				}
-				else
-				{
-					event = "32122-6i.html";
+					qs.unset("SOL");
+					qs.unset("FA");
+					qs.unset("MI");
+					qs.unset("FA2");
+					qs.unset("MI2");
+					return "32122-6j.html";
 				}
 				qs.unset("SOL");
 				qs.unset("FA");
 				qs.unset("MI");
 				qs.unset("FA2");
 				qs.unset("MI2");
-				break;
+				return "32122-6i.html";
 			}
 			case "32122-6i.html":
 			{

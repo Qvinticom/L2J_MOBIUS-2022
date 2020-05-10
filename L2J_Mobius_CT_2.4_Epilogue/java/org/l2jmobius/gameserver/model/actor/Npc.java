@@ -770,8 +770,7 @@ public class Npc extends Creature
 	public void insertObjectIdAndShowChatWindow(PlayerInstance player, String content)
 	{
 		// Send a Server->Client packet NpcHtmlMessage to the PlayerInstance in order to display the message of the NpcInstance
-		content = content.replaceAll("%objectId%", String.valueOf(getObjectId()));
-		player.sendPacket(new NpcHtmlMessage(getObjectId(), content));
+		player.sendPacket(new NpcHtmlMessage(getObjectId(), content.replaceAll("%objectId%", String.valueOf(getObjectId()))));
 	}
 	
 	/**

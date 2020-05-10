@@ -657,15 +657,20 @@ public abstract class Creature extends WorldObject implements ISkillsHolder, IDe
 	 * <li>Send a Server->Client packet TeleportToLocationt to the Creature AND to all PlayerInstance in its _KnownPlayers</li>
 	 * <li>Modify the position of the pet if necessary</li>
 	 * </ul>
-	 * @param x
-	 * @param y
-	 * @param z
-	 * @param heading
+	 * @param xValue
+	 * @param yValue
+	 * @param zValue
+	 * @param headingValue
 	 * @param instanceId
 	 * @param randomOffset
 	 */
-	public void teleToLocation(int x, int y, int z, int heading, int instanceId, int randomOffset)
+	public void teleToLocation(int xValue, int yValue, int zValue, int headingValue, int instanceId, int randomOffset)
 	{
+		int x = xValue;
+		int y = yValue;
+		int z = zValue;
+		int heading = headingValue;
+		
 		setInstanceId(instanceId);
 		
 		if (_isPendingRevive)
@@ -1524,11 +1529,11 @@ public abstract class Creature extends WorldObject implements ISkillsHolder, IDe
 		beginCast(skill, true, target, targets);
 	}
 	
-	private void beginCast(Skill skill, boolean simultaneously)
+	private void beginCast(Skill skill, boolean isSimultaneous)
 	{
 		if (!checkDoCastConditions(skill))
 		{
-			if (simultaneously)
+			if (isSimultaneous)
 			{
 				setCastingSimultaneouslyNow(false);
 			}
@@ -1544,6 +1549,7 @@ public abstract class Creature extends WorldObject implements ISkillsHolder, IDe
 		}
 		
 		// Override casting type
+		boolean simultaneously = isSimultaneous;
 		if (skill.isSimultaneousCast() && !simultaneously)
 		{
 			simultaneously = true;
@@ -1624,6 +1630,7 @@ public abstract class Creature extends WorldObject implements ISkillsHolder, IDe
 				}
 			}
 		}
+		
 		beginCast(skill, simultaneously, target, targets);
 	}
 	
@@ -4119,9 +4126,9 @@ public abstract class Creature extends WorldObject implements ISkillsHolder, IDe
 	{
 		if ((object != null) && !object.isSpawned())
 		{
-			object = null;
+			_target = null;
+			return;
 		}
-		
 		_target = object;
 	}
 	
@@ -4170,12 +4177,12 @@ public abstract class Creature extends WorldObject implements ISkillsHolder, IDe
 	 * <li>AI : onIntentionMoveTo(Location), onIntentionPickUp(WorldObject), onIntentionInteract(WorldObject)</li>
 	 * <li>FollowTask</li>
 	 * </ul>
-	 * @param x The X position of the destination
-	 * @param y The Y position of the destination
-	 * @param z The Y position of the destination
-	 * @param offset The size of the interaction area of the Creature targeted
+	 * @param xValue The X position of the destination
+	 * @param yValue The Y position of the destination
+	 * @param zValue The Y position of the destination
+	 * @param offsetValue The size of the interaction area of the Creature targeted
 	 */
-	public void moveToLocation(int x, int y, int z, int offset)
+	public void moveToLocation(int xValue, int yValue, int zValue, int offsetValue)
 	{
 		// Get the Move Speed of the Creature
 		final double speed = _stat.getMoveSpeed();
@@ -4183,6 +4190,11 @@ public abstract class Creature extends WorldObject implements ISkillsHolder, IDe
 		{
 			return;
 		}
+		
+		int x = xValue;
+		int y = yValue;
+		int z = zValue;
+		int offset = offsetValue;
 		
 		// Get current position of the Creature
 		final int curX = getX();
@@ -4641,13 +4653,13 @@ public abstract class Creature extends WorldObject implements ISkillsHolder, IDe
 	 * <li>if attack isn't aborted and hit isn't missed, manage attack or cast break of the target (calculating rate, sending message...)</li>
 	 * </ul>
 	 * @param target The Creature targeted
-	 * @param damage Number of HP to reduce
+	 * @param damageValue Number of HP to reduce
 	 * @param crit True if hit is critical
 	 * @param miss True if hit is missed
 	 * @param soulshot True if SoulShot are charged
 	 * @param shld True if shield is efficient
 	 */
-	public void onHitTimer(Creature target, int damage, boolean crit, boolean miss, boolean soulshot, byte shld)
+	public void onHitTimer(Creature target, int damageValue, boolean crit, boolean miss, boolean soulshot, byte shld)
 	{
 		// If the attacker/target is dead or use fake death, notify the AI with EVT_CANCEL
 		// and send a Server->Client packet ActionFailed (if attacker is a PlayerInstance)
@@ -4690,6 +4702,7 @@ public abstract class Creature extends WorldObject implements ISkillsHolder, IDe
 		}
 		
 		// Send message about damage/crit or miss
+		int damage = damageValue;
 		sendDamageMessage(target, damage, false, crit, miss);
 		
 		// Check Raidboss attack Creature will be petrified if attacking a raid that's more than 8 levels lower
@@ -6293,6 +6306,7 @@ public abstract class Creature extends WorldObject implements ISkillsHolder, IDe
 			{
 				return;
 			}
+			
 			if (skill.checkCondition(this, target, false))
 			{
 				if (isSkillDisabled(skill))
@@ -6313,25 +6327,26 @@ public abstract class Creature extends WorldObject implements ISkillsHolder, IDe
 					return;
 				}
 				
+				Creature skillTarget = target;
 				for (WorldObject obj : targets)
 				{
 					if ((obj != null) && obj.isCreature())
 					{
-						target = (Creature) obj;
+						skillTarget = (Creature) obj;
 						break;
 					}
 				}
 				
-				if (Config.ALT_VALIDATE_TRIGGER_SKILLS && isPlayable() && (target != null) && target.isPlayable())
+				if (Config.ALT_VALIDATE_TRIGGER_SKILLS && isPlayable() && (skillTarget != null) && skillTarget.isPlayable())
 				{
 					final PlayerInstance player = getActingPlayer();
-					if (!player.checkPvpSkill(target, skill))
+					if (!player.checkPvpSkill(skillTarget, skill))
 					{
 						return;
 					}
 				}
 				
-				broadcastPacket(new MagicSkillUse(this, target, skill.getDisplayId(), skill.getLevel(), 0, 0));
+				broadcastPacket(new MagicSkillUse(this, skillTarget, skill.getDisplayId(), skill.getLevel(), 0, 0));
 				broadcastPacket(new MagicSkillLaunched(this, skill.getDisplayId(), skill.getLevel(), targets));
 				
 				// Launch the magic skill and calculate its effects

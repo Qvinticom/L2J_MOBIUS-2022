@@ -93,7 +93,7 @@ public class DarkElfChange1 extends AbstractNpcAI
 						player.broadcastUserInfo();
 					}
 				}
-				event = npc.getId() + "-" + suffix + ".html";
+				return npc.getId() + "-" + suffix + ".html";
 			}
 		}
 		return event;

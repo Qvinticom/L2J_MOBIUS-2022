@@ -501,7 +501,7 @@ public class AdminSpawn implements IAdminCommandHandler
 		}
 	}
 	
-	private void spawnMonster(PlayerInstance activeChar, String monsterId, int respawnTime, int mobCount, boolean permanent)
+	private void spawnMonster(PlayerInstance activeChar, String monsterIdValue, int respawnTime, int mobCount, boolean permanentValue)
 	{
 		WorldObject target = activeChar.getTarget();
 		if (target == null)
@@ -510,6 +510,7 @@ public class AdminSpawn implements IAdminCommandHandler
 		}
 		
 		final NpcTemplate template1;
+		String monsterId = monsterIdValue;
 		if (monsterId.matches("[0-9]*"))
 		{
 			// First parameter was an ID number
@@ -536,6 +537,8 @@ public class AdminSpawn implements IAdminCommandHandler
 			spawn.setAmount(mobCount);
 			spawn.setHeading(activeChar.getHeading());
 			spawn.setRespawnDelay(respawnTime);
+			
+			boolean permanent = permanentValue;
 			if (activeChar.isInInstance())
 			{
 				spawn.setInstanceId(activeChar.getInstanceId());

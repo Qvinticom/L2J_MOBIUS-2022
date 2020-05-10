@@ -87,11 +87,11 @@ public class PlayerStat extends PlayableStat
 	 * <li>If the PlayerInstance increases it's level, send a Server->Client packet SocialAction (broadcast)</li>
 	 * <li>If the PlayerInstance increases it's level, manage the increase level task (Max MP, Max MP, Recommendation, Expertise and beginner skills...)</li>
 	 * <li>If the PlayerInstance increases it's level, send a Server->Client packet UserInfo to the PlayerInstance</li><br>
-	 * @param addToExp The Experience value to add
-	 * @param addToSp The SP value to add
+	 * @param addToExpValue The Experience value to add
+	 * @param addToSpValue The SP value to add
 	 */
 	@Override
-	public boolean addExpAndSp(long addToExp, int addToSp)
+	public boolean addExpAndSp(long addToExpValue, int addToSpValue)
 	{
 		float ratioTakenByPet = 0;
 		
@@ -101,6 +101,9 @@ public class PlayerStat extends PlayableStat
 		{
 			return false;
 		}
+		
+		long addToExp = addToExpValue;
+		int addToSp = addToSpValue;
 		
 		// if this player has a pet that takes from the owner's Exp, give the pet Exp now
 		if (player.getPet() instanceof PetInstance)
@@ -333,9 +336,10 @@ public class PlayerStat extends PlayableStat
 	@Override
 	public void setLevel(int value)
 	{
-		if (value > (ExperienceData.getInstance().getMaxLevel() - 1))
+		int level = value;
+		if (level > (ExperienceData.getInstance().getMaxLevel() - 1))
 		{
-			value = ExperienceData.getInstance().getMaxLevel() - 1;
+			level = ExperienceData.getInstance().getMaxLevel() - 1;
 		}
 		
 		final PlayerInstance player = getActiveChar();
@@ -344,12 +348,12 @@ public class PlayerStat extends PlayableStat
 			final SubClass playerSubclass = player.getSubClasses().get(player.getClassIndex());
 			if (playerSubclass != null)
 			{
-				playerSubclass.setLevel(value);
+				playerSubclass.setLevel(level);
 			}
 		}
 		else
 		{
-			super.setLevel(value);
+			super.setLevel(level);
 		}
 	}
 	

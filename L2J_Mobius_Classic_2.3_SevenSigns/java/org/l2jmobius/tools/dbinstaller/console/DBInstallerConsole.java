@@ -100,16 +100,17 @@ public class DBInstallerConsole implements DBOutputInterface
 	 */
 	public DBInstallerConsole(String defDatabase, String dir, String host, String port, String user, String pass, String database, String mode) throws Exception
 	{
-		if ((database == null) || database.isEmpty())
+		String currentDatabase = database;
+		if ((currentDatabase == null) || currentDatabase.isEmpty())
 		{
-			database = defDatabase;
+			currentDatabase = defDatabase;
 		}
 		
-		final MySqlConnect connector = new MySqlConnect(host, port, user, pass, database, true);
+		final MySqlConnect connector = new MySqlConnect(host, port, user, pass, currentDatabase, true);
 		_con = connector.getConnection();
 		if ((mode != null) && ("c".equalsIgnoreCase(mode) || "u".equalsIgnoreCase(mode)))
 		{
-			final RunTasks rt = new RunTasks(this, database, dir);
+			final RunTasks rt = new RunTasks(this, currentDatabase, dir);
 			rt.run();
 		}
 	}

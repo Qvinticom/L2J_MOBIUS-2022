@@ -102,8 +102,9 @@ public class DocumentItem extends DocumentBase implements IXmlReader
 		}
 	}
 	
-	protected void parseItem(Node n) throws InvocationTargetException
+	protected void parseItem(Node node) throws InvocationTargetException
 	{
+		Node n = node;
 		final int itemId = Integer.parseInt(n.getAttributes().getNamedItem("id").getNodeValue());
 		final String className = n.getAttributes().getNamedItem("type").getNodeValue();
 		final String itemName = n.getAttributes().getNamedItem("name").getNodeValue();

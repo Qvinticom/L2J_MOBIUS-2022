@@ -41,13 +41,14 @@ public class FortManager implements InstanceListManager
 		return findNearestFortIndex(obj, Long.MAX_VALUE);
 	}
 	
-	public int findNearestFortIndex(WorldObject obj, long maxDistance)
+	public int findNearestFortIndex(WorldObject obj, long maxDistanceValue)
 	{
 		int index = getFortIndex(obj);
 		if (index < 0)
 		{
-			double distance;
 			Fort fort;
+			double distance;
+			long maxDistance = maxDistanceValue;
 			for (int i = 0; i < _forts.size(); i++)
 			{
 				fort = _forts.get(i);

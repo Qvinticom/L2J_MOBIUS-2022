@@ -50,8 +50,9 @@ public class BypassHandler implements IHandler<IBypassHandler, String>
 	}
 	
 	@Override
-	public IBypassHandler getHandler(String command)
+	public IBypassHandler getHandler(String commandValue)
 	{
+		String command = commandValue;
 		if (command.contains(" "))
 		{
 			command = command.substring(0, command.indexOf(' '));

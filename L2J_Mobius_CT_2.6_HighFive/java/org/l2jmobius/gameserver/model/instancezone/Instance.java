@@ -484,8 +484,9 @@ public class Instance
 		}
 	}
 	
-	private void parseInstance(Node n) throws Exception
+	private void parseInstance(Node node) throws Exception
 	{
+		Node n = node;
 		_templateId = Integer.parseInt(n.getAttributes().getNamedItem("id").getNodeValue());
 		Node a = n.getAttributes().getNamedItem("ejectTime");
 		if (a != null)
@@ -758,11 +759,12 @@ public class Instance
 		}
 	}
 	
-	protected void doCheckTimeUp(int remaining)
+	protected void doCheckTimeUp(int value)
 	{
 		CreatureSay cs = null;
 		int timeLeft;
 		int interval;
+		int remaining = value;
 		if (_players.isEmpty() && (_emptyDestroyTime == 0))
 		{
 			remaining = 0;

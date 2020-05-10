@@ -786,12 +786,12 @@ public class PetInstance extends Summon
 	
 	/**
 	 * Drop item here.
-	 * @param dropit the dropit
+	 * @param item the dropit
 	 * @param protect the protect
 	 */
-	public void dropItemHere(ItemInstance dropit, boolean protect)
+	public void dropItemHere(ItemInstance item, boolean protect)
 	{
-		dropit = _inventory.dropItem("Drop", dropit.getObjectId(), dropit.getCount(), getOwner(), this);
+		ItemInstance dropit = _inventory.dropItem("Drop", item.getObjectId(), item.getCount(), getOwner(), this);
 		if (dropit != null)
 		{
 			if (protect)

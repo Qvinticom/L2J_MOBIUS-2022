@@ -335,9 +335,9 @@ public class RequestRefine extends GameClientPacket
 		return true;
 	}
 	
-	private int getLifeStoneGrade(int itemId)
+	private int getLifeStoneGrade(int itemIdValue)
 	{
-		itemId -= 8723;
+		int itemId = itemIdValue - 8723;
 		if (itemId < 10)
 		{
 			return 0; // normal grade
@@ -356,9 +356,9 @@ public class RequestRefine extends GameClientPacket
 		return 3; // top grade
 	}
 	
-	private int getLifeStoneLevel(int itemId)
+	private int getLifeStoneLevel(int itemIdValue)
 	{
-		itemId -= 10 * getLifeStoneGrade(itemId);
+		int itemId = itemIdValue - (10 * getLifeStoneGrade(itemIdValue));
 		itemId -= 8722;
 		return itemId;
 	}
