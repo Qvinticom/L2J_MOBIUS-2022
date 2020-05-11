@@ -378,7 +378,6 @@ public class Spawn
 			if (_template.getType().equalsIgnoreCase("Pet") || _template.getType().equalsIgnoreCase("Minion"))
 			{
 				_currentCount++;
-				
 				return npc;
 			}
 			
@@ -412,10 +411,6 @@ public class Spawn
 		return npc;
 	}
 	
-	/**
-	 * @param npc
-	 * @return
-	 */
 	private NpcInstance initializeNpcInstance(NpcInstance npc)
 	{
 		int newlocx;
@@ -446,8 +441,8 @@ public class Spawn
 			newlocz = _locZ;
 		}
 		
-		// Do not correct z of flying NPCs.
-		if (!npc.isFlying())
+		// Correct Z of monsters. Do not correct Z of flying NPCs.
+		if (npc.isMonster() && !npc.isFlying())
 		{
 			final int geoZ = GeoEngine.getInstance().getHeight(newlocx, newlocy, newlocz);
 			// Do not correct Z distances greater than 300.

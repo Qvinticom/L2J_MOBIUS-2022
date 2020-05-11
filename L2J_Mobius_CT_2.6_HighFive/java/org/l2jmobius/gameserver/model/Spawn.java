@@ -398,8 +398,8 @@ public class Spawn extends Location implements IIdentifiable, INamable
 			}
 		}
 		
-		// Do not correct z of flying NPCs.
-		if (!npc.isFlying())
+		// Correct Z of monsters. Do not correct Z of flying NPCs.
+		if (npc.isMonster() && !npc.isFlying())
 		{
 			final int geoZ = GeoEngine.getInstance().getHeight(newlocx, newlocy, newlocz);
 			// Do not correct Z distances greater than 300.
