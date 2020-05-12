@@ -24,7 +24,7 @@ import org.l2jmobius.gameserver.model.zone.ZoneRespawn;
 import org.l2jmobius.gameserver.network.SystemMessageId;
 
 /**
- * An arena
+ * A PVP Zone
  * @author durgus
  */
 public class ArenaZone extends ZoneRespawn
@@ -37,12 +37,12 @@ public class ArenaZone extends ZoneRespawn
 	@Override
 	protected void onEnter(Creature creature)
 	{
+		if (creature.isPlayer() && !creature.isInsideZone(ZoneId.PVP))
+		{
+			creature.getActingPlayer().sendPacket(SystemMessageId.YOU_HAVE_ENTERED_A_COMBAT_ZONE);
+		}
 		creature.setInsideZone(ZoneId.PVP, true);
 		creature.setInsideZone(ZoneId.NO_SUMMON_FRIEND, true);
-		if (creature instanceof PlayerInstance)
-		{
-			((PlayerInstance) creature).sendPacket(SystemMessageId.YOU_HAVE_ENTERED_A_COMBAT_ZONE);
-		}
 	}
 	
 	@Override
@@ -50,9 +50,9 @@ public class ArenaZone extends ZoneRespawn
 	{
 		creature.setInsideZone(ZoneId.PVP, false);
 		creature.setInsideZone(ZoneId.NO_SUMMON_FRIEND, false);
-		if (creature instanceof PlayerInstance)
+		if (creature.isPlayer() && !creature.isInsideZone(ZoneId.PVP))
 		{
-			((PlayerInstance) creature).sendPacket(SystemMessageId.YOU_HAVE_LEFT_A_COMBAT_ZONE);
+			creature.getActingPlayer().sendPacket(SystemMessageId.YOU_HAVE_LEFT_A_COMBAT_ZONE);
 		}
 	}
 	
