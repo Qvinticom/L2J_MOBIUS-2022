@@ -33,6 +33,7 @@ import org.l2jmobius.gameserver.model.StatSet;
 import org.l2jmobius.gameserver.model.actor.Attackable;
 import org.l2jmobius.gameserver.model.actor.Creature;
 import org.l2jmobius.gameserver.model.actor.Npc;
+import org.l2jmobius.gameserver.model.actor.instance.GrandBossInstance;
 import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
 import org.l2jmobius.gameserver.model.quest.QuestTimer;
 import org.l2jmobius.gameserver.model.skills.Skill;
@@ -191,6 +192,7 @@ public class Kelbim extends AbstractNpcAI
 			case "stage_1_kelbim_spawn":
 			{
 				_kelbimBoss = addSpawn(KELBIM, -56340, 60801, -269, 54262, false, 0);
+				GrandBossManager.getInstance().addBoss((GrandBossInstance) _kelbimBoss);
 				_lastAction = System.currentTimeMillis();
 				startQuestTimer("check_activity_task", 60000, null, null);
 				startQuestTimer("stage_all_random_area_attack", Rnd.get(2, 3) * 60000, null, null);
