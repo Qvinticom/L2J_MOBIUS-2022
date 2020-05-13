@@ -142,11 +142,11 @@ public class Q503_PursuitOfClanAmbition extends Quest
 		}
 		else if (event.equalsIgnoreCase("30760-20.htm"))
 		{
+			st.takeItems(SCEPTER_JUDGEMENT, -1);
+			st.giveItems(PROOF_ASPIRATION, 1);
+			st.rewardExpAndSp(0, 250000);
 			st.exitQuest(false);
 			finishQuestToClan(player);
-			st.giveItems(PROOF_ASPIRATION, 1);
-			st.takeItems(SCEPTER_JUDGEMENT, -1);
-			st.rewardExpAndSp(0, 250000);
 		}
 		else if (event.equalsIgnoreCase("30760-22.htm"))
 		{
@@ -154,11 +154,11 @@ public class Q503_PursuitOfClanAmbition extends Quest
 		}
 		else if (event.equalsIgnoreCase("30760-23.htm"))
 		{
-			finishQuestToClan(player);
-			st.exitQuest(false);
 			st.takeItems(SCEPTER_JUDGEMENT, -1);
 			st.giveItems(PROOF_ASPIRATION, 1);
 			st.rewardExpAndSp(0, 250000);
+			st.exitQuest(false);
+			finishQuestToClan(player);
 		}
 		// Martien
 		else if (event.equalsIgnoreCase("30645-03.htm"))
