@@ -203,7 +203,6 @@ public class QuestState
 		{
 			_player.delQuestState(_questName);
 			Quest.deleteQuestInDb(this);
-			
 			_vars = null;
 		}
 		else
@@ -213,10 +212,10 @@ public class QuestState
 			{
 				for (String var : _vars.keySet())
 				{
-					unset(var);
+					Quest.deleteQuestVarInDb(this, var);
 				}
+				_vars.clear();
 			}
-			
 			Quest.updateQuestInDb(this);
 		}
 	}
