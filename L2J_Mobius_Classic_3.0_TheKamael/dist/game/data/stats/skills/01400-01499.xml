@@ -329,14 +329,21 @@
 			<value level="6">85</value>
 		</magicLvl>
 		<mpConsume>
-			<value level="1">144</value>
-			<value level="2">159</value>
-			<value level="3">162</value>
-			<value level="4">165</value>
-			<value level="5">170</value>
-			<value level="6">175</value>
+			<value level="1">115</value>
+			<value level="2">127</value>
+			<value level="3">130</value>
+			<value level="4">132</value>
+			<value level="5">136</value>
+			<value level="6">140</value>
 		</mpConsume>
-		<mpInitialConsume>29</mpInitialConsume>
+		<mpInitialConsume>
+			<value level="1">29</value>
+			<value level="2">32</value>
+			<value level="3">32</value>
+			<value level="4">33</value>
+			<value level="5">34</value>
+			<value level="6">35</value>
+		</mpInitialConsume>
 		<operateType>A1</operateType>
 		<reuseDelay>5000</reuseDelay>
 		<magicCriticalRate>5</magicCriticalRate>
@@ -381,14 +388,21 @@
 			<value level="6">85</value>
 		</magicLvl>
 		<mpConsume>
-			<value level="1">144</value>
-			<value level="2">159</value>
-			<value level="3">162</value>
-			<value level="4">165</value>
-			<value level="5">170</value>
-			<value level="6">175</value>
+			<value level="1">115</value>
+			<value level="2">127</value>
+			<value level="3">130</value>
+			<value level="4">132</value>
+			<value level="5">136</value>
+			<value level="6">140</value>
 		</mpConsume>
-		<mpInitialConsume>29</mpInitialConsume>
+		<mpInitialConsume>
+			<value level="1">29</value>
+			<value level="2">32</value>
+			<value level="3">32</value>
+			<value level="4">33</value>
+			<value level="5">34</value>
+			<value level="6">35</value>
+		</mpInitialConsume>
 		<operateType>A1</operateType>
 		<reuseDelay>5000</reuseDelay>
 		<magicCriticalRate>5</magicCriticalRate>
@@ -435,13 +449,21 @@
 			<value level="6">85</value>
 		</magicLvl>
 		<mpConsume>
-			<value level="1">144</value>
-			<value level="2">159</value>
-			<value level="3">162</value>
-			<value level="4">165</value>
-			<value level="5">170</value>
-			<value level="6">175</value>
+			<value level="1">115</value>
+			<value level="2">127</value>
+			<value level="3">130</value>
+			<value level="4">132</value>
+			<value level="5">136</value>
+			<value level="6">140</value>
 		</mpConsume>
+		<mpInitialConsume>
+			<value level="1">29</value>
+			<value level="2">32</value>
+			<value level="3">32</value>
+			<value level="4">33</value>
+			<value level="5">34</value>
+			<value level="6">35</value>
+		</mpInitialConsume>
 		<operateType>A1</operateType>
 		<reuseDelay>5000</reuseDelay>
 		<magicCriticalRate>5</magicCriticalRate>
@@ -668,7 +690,10 @@
 		<abnormalType>MULTI_BUFF</abnormalType>
 		<affectLimit>50-100</affectLimit>
 		<affectRange>1000</affectRange>
-		<effectPoint>669</effectPoint>
+		<effectPoint>
+			<value level="1">666</value>
+			<value level="2">675</value>
+		</effectPoint>
 		<hitTime>2500</hitTime>
 		<isMagic>1</isMagic> <!-- Magic Skill -->
 		<itemConsumeCount>
@@ -1292,7 +1317,7 @@
 			<value level="10">143</value>
 		</mpConsume>
 		<operateType>A1</operateType>
-		<reuseDelay>180000</reuseDelay>
+		<reuseDelay>30000</reuseDelay>
 		<staticReuse>true</staticReuse>
 		<magicCriticalRate>5</magicCriticalRate>
 		<hitCancelTime>0</hitCancelTime>
@@ -3133,9 +3158,9 @@
 			<value level="1">1</value>
 			<value level="2">2</value>
 			<value level="3">3</value>
-			<value level="4">3</value> <!-- FIXME: AUTO GENERATED LEVEL -->
-			<value level="5">3</value> <!-- FIXME: AUTO GENERATED LEVEL -->
-			<value level="6">3</value> <!-- FIXME: AUTO GENERATED LEVEL -->
+			<value level="4">4</value>
+			<value level="5">5</value>
+			<value level="6">6</value>
 		</abnormalLvl>
 		<abnormalTime>1200</abnormalTime>
 		<abnormalType>RECHARGE_UP</abnormalType>
@@ -3148,16 +3173,26 @@
 			<value level="1">79</value>
 			<value level="2">80</value>
 			<value level="3">81</value>
-			<value level="4">81</value> <!-- FIXME: AUTO GENERATED LEVEL -->
-			<value level="5">81</value> <!-- FIXME: AUTO GENERATED LEVEL -->
-			<value level="6">81</value> <!-- FIXME: AUTO GENERATED LEVEL -->
+			<value level="4">82</value>
+			<value level="5">83</value>
+			<value level="6">84</value>
 		</magicLvl>
 		<mpConsume>
-			<value level="1">180</value>
-			<value level="2">184</value>
-			<value level="3">188</value>
+			<value level="1">144</value>
+			<value level="2">147</value>
+			<value level="3">150</value>
+			<value level="4">154</value>
+			<value level="5">157</value>
+			<value level="6">160</value>
 		</mpConsume>
-		<mpInitialConsume>38</mpInitialConsume>
+		<mpInitialConsume>
+			<value level="1">36</value>
+			<value level="2">37</value>
+			<value level="3">38</value>
+			<value level="4">38</value>
+			<value level="5">39</value>
+			<value level="6">40</value>
+		</mpInitialConsume>
 		<operateType>A2</operateType>
 		<reuseDelay>3000</reuseDelay>
 		<basicProperty>NONE</basicProperty>
@@ -3176,9 +3211,9 @@
 					<value level="1">85</value>
 					<value level="2">87</value>
 					<value level="3">89</value>
-					<value level="4">89</value> <!-- FIXME: AUTO GENERATED LEVEL -->
-					<value level="5">89</value> <!-- FIXME: AUTO GENERATED LEVEL -->
-					<value level="6">89</value> <!-- FIXME: AUTO GENERATED LEVEL -->
+					<value level="4">91</value>
+					<value level="5">93</value>
+					<value level="6">95</value>
 				</amount>
 				<mode>DIFF</mode>
 			</effect>

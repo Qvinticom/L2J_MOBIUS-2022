@@ -1699,8 +1699,7 @@
 			<value level="9">218</value>
 		</mpConsume>
 		<operateType>A1</operateType>
-		<coolTime>500</coolTime>
-		<reuseDelay>8000</reuseDelay>
+		<reuseDelay>6000</reuseDelay>
 		<magicCriticalRate>5</magicCriticalRate>
 		<trait>DEATH</trait>
 		<targetType>ENEMY</targetType>
@@ -2499,7 +2498,7 @@
 		<abnormalType>STUN</abnormalType>
 		<abnormalVisualEffect>STUN</abnormalVisualEffect>
 		<activateRate>40</activateRate>
-		<basicProperty>MAGIC</basicProperty>
+		<basicProperty>PHYSICAL</basicProperty>
 		<castRange>40</castRange>
 		<effectPoint>-1</effectPoint>
 		<effectRange>400</effectRange>
@@ -3009,7 +3008,7 @@
 		<activateRate>40</activateRate>
 		<affectLimit>10-10</affectLimit>
 		<affectRange>150</affectRange>
-		<basicProperty>MAGIC</basicProperty>
+		<basicProperty>PHYSICAL</basicProperty>
 		<coolTime>500</coolTime>
 		<effectPoint>
 			<value level="1">-666</value>
