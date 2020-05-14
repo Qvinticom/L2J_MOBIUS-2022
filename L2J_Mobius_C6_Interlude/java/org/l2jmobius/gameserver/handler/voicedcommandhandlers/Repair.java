@@ -41,9 +41,9 @@ import org.l2jmobius.gameserver.network.serverpackets.NpcHtmlMessage;
  */
 public class Repair implements IVoicedCommandHandler, ICustomByPassHandler
 {
-	static final Logger LOGGER = Logger.getLogger(Repair.class.getName());
+	private static final Logger LOGGER = Logger.getLogger(Repair.class.getName());
 	
-	private static final String[] _voicedCommands =
+	private static final String[] VOICED_COMMANDS =
 	{
 		"repair",
 	};
@@ -232,7 +232,7 @@ public class Repair implements IVoicedCommandHandler, ICustomByPassHandler
 	@Override
 	public String[] getVoicedCommandList()
 	{
-		return _voicedCommands;
+		return VOICED_COMMANDS;
 	}
 	
 	private static final String[] _BYPASSCMD =

@@ -37,7 +37,7 @@ import org.l2jmobius.gameserver.util.BuilderUtil;
  */
 public class AdminManor implements IAdminCommandHandler
 {
-	private static final String[] _adminCommands =
+	private static final String[] ADMIN_COMMANDS =
 	{
 		"admin_manor",
 		"admin_manor_reset",
@@ -131,7 +131,7 @@ public class AdminManor implements IAdminCommandHandler
 	@Override
 	public String[] getAdminCommandList()
 	{
-		return _adminCommands;
+		return ADMIN_COMMANDS;
 	}
 	
 	private void showMainPage(PlayerInstance activeChar)

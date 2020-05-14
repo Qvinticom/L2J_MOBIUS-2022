@@ -39,7 +39,7 @@ import org.l2jmobius.gameserver.network.serverpackets.ActionFailed;
  */
 public class Seed implements IItemHandler
 {
-	private static int[] _itemIds =
+	private static final int[] ITEM_IDS =
 	{
 		5016,
 		5017,
@@ -366,6 +366,6 @@ public class Seed implements IItemHandler
 	@Override
 	public int[] getItemIds()
 	{
-		return _itemIds;
+		return ITEM_IDS;
 	}
 }

@@ -24,7 +24,7 @@ import org.l2jmobius.gameserver.network.serverpackets.ShowMiniMap;
 
 public class WorldMap implements IItemHandler
 {
-	private static int[] _itemIds = new int[]
+	private static final int[] ITEM_IDS = new int[]
 	{
 		1665,
 		1863
@@ -40,6 +40,6 @@ public class WorldMap implements IItemHandler
 	@Override
 	public int[] getItemIds()
 	{
-		return _itemIds;
+		return ITEM_IDS;
 	}
 }

@@ -28,7 +28,7 @@ import org.l2jmobius.gameserver.templates.Weapon;
 
 public class SoulShots implements IItemHandler
 {
-	private static int[] _itemIds = new int[]
+	private static final int[] ITEM_IDS = new int[]
 	{
 		1835,
 		1463,
@@ -84,6 +84,6 @@ public class SoulShots implements IItemHandler
 	@Override
 	public int[] getItemIds()
 	{
-		return _itemIds;
+		return ITEM_IDS;
 	}
 }

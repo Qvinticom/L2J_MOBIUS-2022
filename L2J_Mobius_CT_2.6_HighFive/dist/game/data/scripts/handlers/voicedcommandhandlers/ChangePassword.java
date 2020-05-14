@@ -30,7 +30,7 @@ import org.l2jmobius.gameserver.network.serverpackets.NpcHtmlMessage;
  */
 public class ChangePassword implements IVoicedCommandHandler
 {
-	private static final String[] _voicedCommands =
+	private static final String[] VOICED_COMMANDS =
 	{
 		"changepassword"
 	};
@@ -108,6 +108,6 @@ public class ChangePassword implements IVoicedCommandHandler
 	@Override
 	public String[] getVoicedCommandList()
 	{
-		return _voicedCommands;
+		return VOICED_COMMANDS;
 	}
 }

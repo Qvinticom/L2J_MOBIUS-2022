@@ -32,7 +32,7 @@ public class HeroCustomItem implements IItemHandler
 {
 	protected static final Logger LOGGER = Logger.getLogger(HeroCustomItem.class.getName());
 	
-	String INSERT_DATA = "REPLACE INTO characters_custom_data (obj_Id, char_name, hero, noble, donator, hero_end_date) VALUES (?,?,?,?,?,?)";
+	private static final String INSERT_DATA = "REPLACE INTO characters_custom_data (obj_Id, char_name, hero, noble, donator, hero_end_date) VALUES (?,?,?,?,?,?)";
 	
 	@Override
 	public void useItem(Playable playable, ItemInstance item)

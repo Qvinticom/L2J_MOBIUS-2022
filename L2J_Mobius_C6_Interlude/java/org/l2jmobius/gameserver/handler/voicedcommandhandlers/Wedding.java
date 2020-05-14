@@ -46,7 +46,7 @@ public class Wedding implements IVoicedCommandHandler
 {
 	protected static final Logger LOGGER = Logger.getLogger(Wedding.class.getName());
 	
-	private static String[] _voicedCommands =
+	private static final String[] VOICED_COMMANDS =
 	{
 		"divorce",
 		"engage",
@@ -434,6 +434,6 @@ public class Wedding implements IVoicedCommandHandler
 	@Override
 	public String[] getVoicedCommandList()
 	{
-		return _voicedCommands;
+		return VOICED_COMMANDS;
 	}
 }

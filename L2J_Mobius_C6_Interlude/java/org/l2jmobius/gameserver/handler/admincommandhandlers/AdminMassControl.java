@@ -30,7 +30,7 @@ import org.l2jmobius.gameserver.util.BuilderUtil;
  */
 public class AdminMassControl implements IAdminCommandHandler
 {
-	private static String[] ADMIN_COMMANDS =
+	private static final String[] ADMIN_COMMANDS =
 	{
 		"admin_masskill",
 		"admin_massress"

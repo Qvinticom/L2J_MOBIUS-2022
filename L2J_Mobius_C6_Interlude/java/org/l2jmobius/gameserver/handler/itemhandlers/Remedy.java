@@ -28,7 +28,7 @@ import org.l2jmobius.gameserver.network.serverpackets.MagicSkillUse;
 
 public class Remedy implements IItemHandler
 {
-	private static int[] ITEM_IDS =
+	private static final int[] ITEM_IDS =
 	{
 		1831,
 		1832,

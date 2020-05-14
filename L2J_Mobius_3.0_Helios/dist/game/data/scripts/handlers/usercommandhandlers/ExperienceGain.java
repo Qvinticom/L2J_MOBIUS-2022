@@ -24,7 +24,7 @@ import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
  */
 public class ExperienceGain implements IVoicedCommandHandler
 {
-	private final String[] COMMANDS = new String[]
+	private static final String[] COMMANDS = new String[]
 	{
 		"expoff",
 		"expon",

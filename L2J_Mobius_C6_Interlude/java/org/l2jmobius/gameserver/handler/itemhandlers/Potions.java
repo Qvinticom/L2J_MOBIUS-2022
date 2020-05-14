@@ -49,34 +49,34 @@ public class Potions implements IItemHandler
 	protected static final Logger LOGGER = Logger.getLogger(Potions.class.getName());
 	private int _herbstask = 0;
 	
-	private static Map<Integer, PotionsSkills> potions = new HashMap<>();
+	private static final Map<Integer, PotionsSkills> POTIONS = new HashMap<>();
 	
 	private static void loadPotions()
 	{
 		for (PotionsSkills potionSkill : PotionsSkills.values())
 		{
-			potions.put(potionSkill.potionId, potionSkill);
+			POTIONS.put(potionSkill.potionId, potionSkill);
 		}
 	}
 	
 	public static PotionsSkills getSkillsForPotion(Integer potionId)
 	{
-		if (potions.isEmpty())
+		if (POTIONS.isEmpty())
 		{
 			loadPotions();
 		}
-		return potions.get(potionId);
+		return POTIONS.get(potionId);
 	}
 	
 	public static List<Integer> getPotionsForSkill(Integer skillId, Integer skillLevel)
 	{
-		if (potions.isEmpty())
+		if (POTIONS.isEmpty())
 		{
 			loadPotions();
 		}
 		
 		final List<Integer> outputPotions = new ArrayList<>();
-		for (Entry<Integer, PotionsSkills> entry : potions.entrySet())
+		for (Entry<Integer, PotionsSkills> entry : POTIONS.entrySet())
 		{
 			Map<Integer, Integer> itemSkills = null;
 			if (entry.getValue() != null)

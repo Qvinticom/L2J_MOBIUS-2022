@@ -28,7 +28,7 @@ import org.l2jmobius.gameserver.network.serverpackets.ShowXMasSeal;
  */
 public class SpecialXMas implements IItemHandler
 {
-	private static int[] _itemIds =
+	private static final int[] ITEM_IDS =
 	{
 		5555
 	};
@@ -59,6 +59,6 @@ public class SpecialXMas implements IItemHandler
 	@Override
 	public int[] getItemIds()
 	{
-		return _itemIds;
+		return ITEM_IDS;
 	}
 }

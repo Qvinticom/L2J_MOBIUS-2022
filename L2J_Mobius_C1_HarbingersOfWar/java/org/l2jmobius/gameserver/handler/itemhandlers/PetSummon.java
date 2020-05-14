@@ -35,7 +35,7 @@ import org.l2jmobius.gameserver.threadpool.ThreadPool;
 
 public class PetSummon implements IItemHandler
 {
-	private static int[] _itemIds = new int[]
+	private static final int[] ITEM_IDS = new int[]
 	{
 		2375,
 		3500,
@@ -124,6 +124,6 @@ public class PetSummon implements IItemHandler
 	@Override
 	public int[] getItemIds()
 	{
-		return _itemIds;
+		return ITEM_IDS;
 	}
 }

@@ -26,7 +26,7 @@ import org.l2jmobius.gameserver.network.serverpackets.SystemMessage;
 
 public class DamageSkill implements ISkillHandler
 {
-	private static int[] _skillIds = new int[]
+	private static final int[] SKILL_IDS = new int[]
 	{
 		3, // Power Strike
 		16, // Mortal Blow
@@ -76,6 +76,6 @@ public class DamageSkill implements ISkillHandler
 	@Override
 	public int[] getSkillIds()
 	{
-		return _skillIds;
+		return SKILL_IDS;
 	}
 }

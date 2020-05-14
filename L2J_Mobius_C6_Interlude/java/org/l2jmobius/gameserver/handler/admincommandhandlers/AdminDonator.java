@@ -31,7 +31,7 @@ import org.l2jmobius.gameserver.util.BuilderUtil;
 
 public class AdminDonator implements IAdminCommandHandler
 {
-	private static String[] ADMIN_COMMANDS =
+	private static final String[] ADMIN_COMMANDS =
 	{
 		"admin_setdonator"
 	};

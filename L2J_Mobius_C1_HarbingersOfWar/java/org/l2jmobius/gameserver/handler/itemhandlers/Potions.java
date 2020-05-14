@@ -26,7 +26,7 @@ import org.l2jmobius.gameserver.network.serverpackets.MagicSkillUser;
 
 public class Potions implements IItemHandler
 {
-	private static int[] _itemIds = new int[]
+	private static final int[] ITEM_IDS = new int[]
 	{
 		65,
 		725,
@@ -71,6 +71,6 @@ public class Potions implements IItemHandler
 	@Override
 	public int[] getItemIds()
 	{
-		return _itemIds;
+		return ITEM_IDS;
 	}
 }

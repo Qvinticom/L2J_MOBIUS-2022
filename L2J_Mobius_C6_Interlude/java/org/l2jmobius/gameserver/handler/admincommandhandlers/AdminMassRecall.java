@@ -31,7 +31,7 @@ import org.l2jmobius.gameserver.util.BuilderUtil;
  */
 public class AdminMassRecall implements IAdminCommandHandler
 {
-	private static String[] _adminCommands =
+	private static final String[] ADMIN_COMMANDS =
 	{
 		"admin_recallclan",
 		"admin_recallparty",
@@ -147,6 +147,6 @@ public class AdminMassRecall implements IAdminCommandHandler
 	@Override
 	public String[] getAdminCommandList()
 	{
-		return _adminCommands;
+		return ADMIN_COMMANDS;
 	}
 }

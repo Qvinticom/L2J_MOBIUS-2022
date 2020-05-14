@@ -28,7 +28,7 @@ import org.l2jmobius.gameserver.network.serverpackets.SystemMessage;
 
 public class HealSkill implements ISkillHandler
 {
-	private static int[] _skillIds = new int[]
+	private static final int[] SKILL_IDS = new int[]
 	{
 		45, // Divine Heal
 		58, // Elemental Heal
@@ -86,6 +86,6 @@ public class HealSkill implements ISkillHandler
 	@Override
 	public int[] getSkillIds()
 	{
-		return _skillIds;
+		return SKILL_IDS;
 	}
 }

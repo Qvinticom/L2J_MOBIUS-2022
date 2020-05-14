@@ -36,7 +36,7 @@ import org.l2jmobius.gameserver.taskmanager.AttackStanceTaskManager;
  */
 public class OfflineShop implements IVoicedCommandHandler
 {
-	private static String[] _voicedCommands =
+	private static final String[] VOICED_COMMANDS =
 	{
 		"offline_shop"
 	};
@@ -159,6 +159,6 @@ public class OfflineShop implements IVoicedCommandHandler
 	@Override
 	public String[] getVoicedCommandList()
 	{
-		return _voicedCommands;
+		return VOICED_COMMANDS;
 	}
 }

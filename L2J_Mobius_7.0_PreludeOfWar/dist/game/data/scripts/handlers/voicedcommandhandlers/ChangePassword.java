@@ -33,7 +33,7 @@ public class ChangePassword implements IVoicedCommandHandler
 {
 	private static final Logger LOGGER = Logger.getLogger(ChangePassword.class.getName());
 	
-	private static final String[] _voicedCommands =
+	private static final String[] VOICED_COMMANDS =
 	{
 		"changepassword"
 	};
@@ -111,6 +111,6 @@ public class ChangePassword implements IVoicedCommandHandler
 	@Override
 	public String[] getVoicedCommandList()
 	{
-		return _voicedCommands;
+		return VOICED_COMMANDS;
 	}
 }

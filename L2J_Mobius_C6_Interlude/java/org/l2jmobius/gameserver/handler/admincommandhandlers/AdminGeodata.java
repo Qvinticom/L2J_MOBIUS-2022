@@ -29,7 +29,7 @@ import org.l2jmobius.gameserver.util.GeoUtils;
  */
 public class AdminGeodata implements IAdminCommandHandler
 {
-	private static String[] _adminCommands =
+	private static final String[] ADMIN_COMMANDS =
 	{
 		"admin_geo_pos",
 		"admin_geo_spawn_pos",
@@ -132,6 +132,6 @@ public class AdminGeodata implements IAdminCommandHandler
 	@Override
 	public String[] getAdminCommandList()
 	{
-		return _adminCommands;
+		return ADMIN_COMMANDS;
 	}
 }

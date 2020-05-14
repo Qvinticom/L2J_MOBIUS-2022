@@ -57,7 +57,7 @@ public class AdminEditChar implements IAdminCommandHandler
 {
 	protected static final Logger LOGGER = Logger.getLogger(AdminEditChar.class.getName());
 	
-	private static String[] ADMIN_COMMANDS =
+	private static final String[] ADMIN_COMMANDS =
 	{
 		"admin_changename", // changes char name
 		"admin_setname", // changes char name

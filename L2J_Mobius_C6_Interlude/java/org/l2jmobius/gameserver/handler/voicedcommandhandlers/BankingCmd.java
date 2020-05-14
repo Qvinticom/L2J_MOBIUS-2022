@@ -27,7 +27,7 @@ import org.l2jmobius.gameserver.network.serverpackets.ItemList;
  */
 public class BankingCmd implements IVoicedCommandHandler
 {
-	private static String[] _voicedCommands =
+	private static final String[] VOICED_COMMANDS =
 	{
 		"bank",
 		"withdraw",
@@ -92,6 +92,6 @@ public class BankingCmd implements IVoicedCommandHandler
 	@Override
 	public String[] getVoicedCommandList()
 	{
-		return _voicedCommands;
+		return VOICED_COMMANDS;
 	}
 }

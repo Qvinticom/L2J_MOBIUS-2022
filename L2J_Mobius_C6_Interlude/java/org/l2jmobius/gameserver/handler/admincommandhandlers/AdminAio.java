@@ -38,7 +38,7 @@ public class AdminAio implements IAdminCommandHandler
 {
 	private static final Logger LOGGER = Logger.getLogger(AdminAio.class.getName());
 	
-	private static String[] _adminCommands =
+	private static final String[] ADMIN_COMMANDS =
 	{
 		"admin_setaio",
 		"admin_removeaio"
@@ -232,6 +232,6 @@ public class AdminAio implements IAdminCommandHandler
 	@Override
 	public String[] getAdminCommandList()
 	{
-		return _adminCommands;
+		return ADMIN_COMMANDS;
 	}
 }

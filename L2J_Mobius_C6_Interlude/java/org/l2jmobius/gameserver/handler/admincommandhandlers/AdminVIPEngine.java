@@ -24,7 +24,7 @@ import org.l2jmobius.gameserver.util.BuilderUtil;
 
 public class AdminVIPEngine implements IAdminCommandHandler
 {
-	private static String[] _adminCommands =
+	private static String[] ADMIN_COMMANDS =
 	{
 		"admin_vip",
 		"admin_vip_setteam",
@@ -338,7 +338,7 @@ public class AdminVIPEngine implements IAdminCommandHandler
 	@Override
 	public String[] getAdminCommandList()
 	{
-		return _adminCommands;
+		return ADMIN_COMMANDS;
 	}
 	
 	public void showMainPage(PlayerInstance activeChar)

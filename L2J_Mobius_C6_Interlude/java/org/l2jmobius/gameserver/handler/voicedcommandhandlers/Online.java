@@ -22,7 +22,7 @@ import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
 
 public class Online implements IVoicedCommandHandler
 {
-	private static String[] _voicedCommands =
+	private static final String[] VOICED_COMMANDS =
 	{
 		"online"
 	};
@@ -42,6 +42,6 @@ public class Online implements IVoicedCommandHandler
 	@Override
 	public String[] getVoicedCommandList()
 	{
-		return _voicedCommands;
+		return VOICED_COMMANDS;
 	}
 }

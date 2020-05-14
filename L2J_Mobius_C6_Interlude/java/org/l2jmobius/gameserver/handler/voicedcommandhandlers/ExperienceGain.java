@@ -25,7 +25,7 @@ import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
  */
 public class ExperienceGain implements IVoicedCommandHandler
 {
-	private static final String[] _voicedCommands =
+	private static final String[] VOICED_COMMANDS =
 	{
 		"xpoff",
 		"xpon"
@@ -50,6 +50,6 @@ public class ExperienceGain implements IVoicedCommandHandler
 	@Override
 	public String[] getVoicedCommandList()
 	{
-		return _voicedCommands;
+		return VOICED_COMMANDS;
 	}
 }
