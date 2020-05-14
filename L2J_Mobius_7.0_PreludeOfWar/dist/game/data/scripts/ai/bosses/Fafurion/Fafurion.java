@@ -14,19 +14,22 @@
  * You should have received a copy of the GNU General Public License
  * along with this program. If not, see <http://www.gnu.org/licenses/>.
  */
+
 package ai.bosses.Fafurion;
 
 import java.util.List;
 
 import org.l2jmobius.Config;
+import org.l2jmobius.gameserver.enums.Movie;
+import org.l2jmobius.gameserver.instancemanager.GlobalVariablesManager;
 import org.l2jmobius.gameserver.instancemanager.GrandBossManager;
 import org.l2jmobius.gameserver.instancemanager.ZoneManager;
 import org.l2jmobius.gameserver.model.Location;
 import org.l2jmobius.gameserver.model.Party;
 import org.l2jmobius.gameserver.model.StatSet;
 import org.l2jmobius.gameserver.model.World;
-import org.l2jmobius.gameserver.model.actor.Creature;
 import org.l2jmobius.gameserver.model.actor.Npc;
+import org.l2jmobius.gameserver.model.actor.instance.GrandBossInstance;
 import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
 import org.l2jmobius.gameserver.model.zone.type.NoRestartZone;
 import org.l2jmobius.gameserver.network.NpcStringId;
@@ -42,59 +45,76 @@ public class Fafurion extends AbstractNpcAI
 	// NPCs
 	private static final int HEART_OF_TSUNAMI = 34488;
 	private static final int FAFURION_GRANDBOSS_ID = 19740;
-	private static final int FAFURION_FINAL_FORM = 29367;
+	private static final int FAFURION_STAGE_1 = 29361;
+	private static final int FAFURION_STAGE_2 = 29362;
+	private static final int FAFURION_STAGE_3 = 29363;
+	private static final int FAFURION_STAGE_4 = 29364;
+	private static final int FAFURION_STAGE_5 = 29365;
+	private static final int FAFURION_STAGE_6 = 29366;
+	private static final int FAFURION_STAGE_7 = 29367;
+	private static final int EMERALD_DRAGON = 29368;
+	private static final int BLUE_WATER_DRAGON = 29369;
+	private static final int FAFURION_DEFENDER = 29370;
 	// Item
 	private static final int FONDUS_STONE = 80322;
+	// Zone
+	private static final NoRestartZone FAFURION_ZONE = ZoneManager.getInstance().getZoneById(85002, NoRestartZone.class);
 	// Locations
-	private static final Location ENTER_NPC_LOC = new Location(190856, 257112, -3328);
 	private static final Location RAID_ENTER_LOC = new Location(180059, 212896, -14727);
 	private static final Location FAFURION_SPAWN_LOC = new Location(180712, 210664, -14823, 22146);
-	// Zone
-	private static final NoRestartZone zone = ZoneManager.getInstance().getZoneById(85002, NoRestartZone.class); // Fafurion Nest zone
 	// Status
 	private static final int ALIVE = 0;
 	private static final int WAITING = 1;
 	private static final int FIGHTING = 2;
 	private static final int DEAD = 3;
 	// Misc
+	private static final int MAX_PEOPLE = 200;
 	private static final int RAID_DURATION = 5; // hours
+	private static GrandBossInstance _fafurion;
+	private int _stage;
 	
 	private Fafurion()
 	{
 		addStartNpc(HEART_OF_TSUNAMI);
 		addTalkId(HEART_OF_TSUNAMI);
 		addFirstTalkId(HEART_OF_TSUNAMI);
-		addKillId(FAFURION_FINAL_FORM);
-		final StatSet info = GrandBossManager.getInstance().getStatSet(FAFURION_GRANDBOSS_ID);
-		final long respawnTime = info.getLong("respawn_time");
+		addKillId(FAFURION_STAGE_1, FAFURION_STAGE_2, FAFURION_STAGE_3, FAFURION_STAGE_4, FAFURION_STAGE_5, FAFURION_STAGE_6, FAFURION_STAGE_7);
 		// Unlock
-		if (getStatus() == DEAD)
+		final StatSet info = GrandBossManager.getInstance().getStatSet(FAFURION_GRANDBOSS_ID);
+		final int status = GrandBossManager.getInstance().getBossStatus(FAFURION_GRANDBOSS_ID);
+		if (status == DEAD)
 		{
-			final long time = respawnTime - System.currentTimeMillis();
+			final long time = info.getLong("respawn_time") - System.currentTimeMillis();
 			if (time > 0)
 			{
 				startQuestTimer("unlock_fafurion", time, null, null);
 			}
 			else
 			{
-				setStatus(ALIVE);
+				final GrandBossInstance fafurion = (GrandBossInstance) addSpawn(FAFURION_GRANDBOSS_ID, -113360, -244676, -15536, 0, false, 0);
+				GrandBossManager.getInstance().addBoss(fafurion);
+				GrandBossManager.getInstance().setBossStatus(FAFURION_GRANDBOSS_ID, ALIVE);
 			}
 		}
-		else if (getStatus() != ALIVE)
+		else
 		{
-			setStatus(ALIVE);
+			final GrandBossInstance fafurion = (GrandBossInstance) addSpawn(FAFURION_GRANDBOSS_ID, -113360, -244676, -15536, 0, false, 0);
+			GrandBossManager.getInstance().addBoss(fafurion);
+			GrandBossManager.getInstance().setBossStatus(FAFURION_GRANDBOSS_ID, ALIVE);
 		}
 	}
 	
 	@Override
 	public String onAdvEvent(String event, Npc npc, PlayerInstance player)
 	{
-		final String htmltext = null;
+		String htmltext = null;
 		switch (event)
 		{
 			case "unlock_fafurion":
 			{
-				setStatus(ALIVE);
+				final GrandBossInstance fafurion = (GrandBossInstance) addSpawn(FAFURION_GRANDBOSS_ID, -113360, -244676, -15536, 0, false, 0);
+				GrandBossManager.getInstance().addBoss(fafurion);
+				GrandBossManager.getInstance().setBossStatus(FAFURION_GRANDBOSS_ID, ALIVE);
 				break;
 			}
 			case "warning":
@@ -111,105 +131,93 @@ public class Fafurion extends AbstractNpcAI
 			}
 			case "beginning":
 			{
-				if (getStatus() == WAITING)
+				if (GrandBossManager.getInstance().getBossStatus(FAFURION_GRANDBOSS_ID) == WAITING)
 				{
-					setStatus(FIGHTING);
-					final Npc bossInstance = addSpawn(FAFURION_FINAL_FORM, FAFURION_SPAWN_LOC.getX(), FAFURION_SPAWN_LOC.getY(), FAFURION_SPAWN_LOC.getZ(), FAFURION_SPAWN_LOC.getHeading(), false, 0, false);
-					startQuestTimer("resetRaid", RAID_DURATION * 60 * 60 * 1000, bossInstance, null);
-				}
-				break;
-			}
-			case "SKIP_WAITING":
-			{
-				if (getStatus() == WAITING)
-				{
-					cancelQuestTimer("warning", null, null);
-					cancelQuestTimer("beginning", null, null);
-					notifyEvent("beginning", null, null);
-					player.sendMessage(getClass().getSimpleName() + ": Skipping waiting time ...");
-				}
-				else
-				{
-					player.sendMessage(getClass().getSimpleName() + ": You can't skip waiting time right now!");
-				}
-				break;
-			}
-			case "RESPAWN_FAFURION":
-			{
-				if (getStatus() == DEAD)
-				{
-					setRespawn(0);
-					cancelQuestTimer("unlock_fafurion", null, null);
-					notifyEvent("unlock_fafurion", null, null);
-					player.sendMessage(getClass().getSimpleName() + ": Fafurion has been respawned.");
-				}
-				else
-				{
-					player.sendMessage(getClass().getSimpleName() + ": You can't respawn Fafurion while he is alive!");
-				}
-				break;
-			}
-			case "ABORT_FIGHT":
-			{
-				if (getStatus() == FIGHTING)
-				{
-					setStatus(ALIVE);
-					cancelQuestTimer("resetRaid", npc, null);
-					for (Creature creature : zone.getCharactersInside())
+					// checking fafurion stage.
+					_stage = GlobalVariablesManager.getInstance().getInt("Fafurion_Stage", 1);
+					FAFURION_ZONE.getPlayersInside().forEach(p ->
 					{
-						if (creature != null)
+						playMovie(p, Movie.SC_FAFURION_INTRO);
+					});
+					GrandBossManager.getInstance().setBossStatus(FAFURION_GRANDBOSS_ID, FIGHTING);
+					switch (_stage)
+					{
+						case 1:
 						{
-							if (creature.isNpc())
-							{
-								if (creature.getId() == FAFURION_FINAL_FORM)
-								{
-									creature.teleToLocation(FAFURION_SPAWN_LOC);
-								}
-								else
-								{
-									creature.deleteMe();
-								}
-							}
-							else if (creature.isPlayer() && !creature.isGM())
-							{
-								creature.teleToLocation(ENTER_NPC_LOC);
-							}
+							_fafurion = (GrandBossInstance) addSpawn(FAFURION_STAGE_1, FAFURION_SPAWN_LOC.getX(), FAFURION_SPAWN_LOC.getY(), FAFURION_SPAWN_LOC.getZ(), FAFURION_SPAWN_LOC.getHeading(), false, 0, false);
+							break;
+						}
+						case 2:
+						{
+							_fafurion = (GrandBossInstance) addSpawn(FAFURION_STAGE_2, FAFURION_SPAWN_LOC.getX(), FAFURION_SPAWN_LOC.getY(), FAFURION_SPAWN_LOC.getZ(), FAFURION_SPAWN_LOC.getHeading(), false, 0, false);
+							break;
+						}
+						case 3:
+						{
+							_fafurion = (GrandBossInstance) addSpawn(FAFURION_STAGE_3, FAFURION_SPAWN_LOC.getX(), FAFURION_SPAWN_LOC.getY(), FAFURION_SPAWN_LOC.getZ(), FAFURION_SPAWN_LOC.getHeading(), false, 0, false);
+							break;
+						}
+						case 4:
+						{
+							_fafurion = (GrandBossInstance) addSpawn(FAFURION_STAGE_4, FAFURION_SPAWN_LOC.getX(), FAFURION_SPAWN_LOC.getY(), FAFURION_SPAWN_LOC.getZ(), FAFURION_SPAWN_LOC.getHeading(), false, 0, false);
+							break;
+						}
+						case 5:
+						{
+							_fafurion = (GrandBossInstance) addSpawn(FAFURION_STAGE_5, FAFURION_SPAWN_LOC.getX(), FAFURION_SPAWN_LOC.getY(), FAFURION_SPAWN_LOC.getZ(), FAFURION_SPAWN_LOC.getHeading(), false, 0, false);
+							break;
+						}
+						case 6:
+						{
+							_fafurion = (GrandBossInstance) addSpawn(FAFURION_STAGE_6, FAFURION_SPAWN_LOC.getX(), FAFURION_SPAWN_LOC.getY(), FAFURION_SPAWN_LOC.getZ(), FAFURION_SPAWN_LOC.getHeading(), false, 0, false);
+							break;
+						}
+						case 7:
+						{
+							_fafurion = (GrandBossInstance) addSpawn(FAFURION_STAGE_7, FAFURION_SPAWN_LOC.getX(), FAFURION_SPAWN_LOC.getY(), FAFURION_SPAWN_LOC.getZ(), FAFURION_SPAWN_LOC.getHeading(), false, 0, false);
+							break;
 						}
 					}
-					player.sendMessage(getClass().getSimpleName() + ": Fight has been aborted!");
-				}
-				else
-				{
-					player.sendMessage(getClass().getSimpleName() + ": You can't abort fight right now!");
+					startQuestTimer("resetRaid", RAID_DURATION * 60 * 60 * 1000, _fafurion, null);
 				}
 				break;
 			}
 			case "resetRaid":
 			{
-				if ((getStatus() > ALIVE) && (getStatus() < DEAD))
+				final int status = GrandBossManager.getInstance().getBossStatus(FAFURION_GRANDBOSS_ID);
+				if ((status > ALIVE) && (status < DEAD))
 				{
 					for (PlayerInstance plr : World.getInstance().getVisibleObjectsInRange(npc, PlayerInstance.class, 5000))
 					{
 						plr.sendPacket(new ExShowScreenMessage(NpcStringId.EXCEEDED_THE_FAFURION_S_NEST_RAID_TIME_LIMIT, ExShowScreenMessage.TOP_CENTER, 10000, true));
 					}
-					setStatus(ALIVE);
-					setRespawn(0);
+					GrandBossManager.getInstance().setBossStatus(FAFURION_GRANDBOSS_ID, ALIVE);
+					FAFURION_ZONE.oustAllPlayers();
 					npc.deleteMe();
-					
+					if (_stage > 1)
+					{
+						_stage--;
+					}
+					GlobalVariablesManager.getInstance().set("Fafurion_Stage", _stage);
 				}
 				break;
 			}
 			case "enter_area":
 			{
+				final int status = GrandBossManager.getInstance().getBossStatus(FAFURION_GRANDBOSS_ID);
 				if (player.isGM())
 				{
 					player.teleToLocation(RAID_ENTER_LOC, true);
 				}
 				else
 				{
-					if (((getStatus() > ALIVE) && (getStatus() < DEAD)) || (getStatus() == DEAD))
+					if (((status > ALIVE) && (status < DEAD)) || (status == DEAD))
 					{
 						return "34488-02.html";
+					}
+					if (FAFURION_ZONE.getPlayersInside().size() >= MAX_PEOPLE)
+					{
+						return "34488-03.html";
 					}
 					if (!player.isInParty())
 					{
@@ -226,6 +234,10 @@ public class Fafurion extends AbstractNpcAI
 					if ((members.size() < Config.FAFURION_MIN_PLAYERS) || (members.size() > Config.FAFURION_MAX_PLAYERS))
 					{
 						return "34488-01.html";
+					}
+					if (members.size() > (MAX_PEOPLE - FAFURION_ZONE.getPlayersInside().size()))
+					{
+						return "34488-03.html";
 					}
 					for (PlayerInstance member : members)
 					{
@@ -249,9 +261,9 @@ public class Fafurion extends AbstractNpcAI
 						}
 					}
 				}
-				if (getStatus() == ALIVE)
+				if (status == ALIVE)
 				{
-					setStatus(WAITING);
+					GrandBossManager.getInstance().setBossStatus(FAFURION_GRANDBOSS_ID, WAITING);
 					startQuestTimer("beginning", Config.FAFURION_WAIT_TIME * 60000, null, null);
 					startQuestTimer("warning", Config.FAFURION_WAIT_TIME > 0 ? (Config.FAFURION_WAIT_TIME * 60000) - 30000 : 0, null, player);
 				}
@@ -262,33 +274,192 @@ public class Fafurion extends AbstractNpcAI
 	}
 	
 	@Override
+	public String onAttack(Npc npc, PlayerInstance attacker, int damage, boolean isSummon)
+	{
+		if (npc.getId() == _fafurion.getId())
+		{
+			switch (npc.getId())
+			{
+				// TODO: Manage Rage and feature do decrease rage in rooms.
+				case FAFURION_STAGE_1:
+				{
+					if (npc.getCurrentHp() < (npc.getMaxHp() * 0.6))
+					{
+						addSpawn(EMERALD_DRAGON, npc.getX(), npc.getY(), npc.getZ(), npc.getHeading(), true, 0);
+						addSpawn(BLUE_WATER_DRAGON, npc.getX(), npc.getY(), npc.getZ(), npc.getHeading(), true, 0);
+						addSpawn(FAFURION_DEFENDER, npc.getX(), npc.getY(), npc.getZ(), npc.getHeading(), true, 0);
+					}
+					else if (npc.getCurrentHp() < (npc.getMaxHp() * 0.3))
+					{
+						addSpawn(EMERALD_DRAGON, npc.getX(), npc.getY(), npc.getZ(), npc.getHeading(), true, 0);
+						addSpawn(BLUE_WATER_DRAGON, npc.getX(), npc.getY(), npc.getZ(), npc.getHeading(), true, 0);
+						addSpawn(FAFURION_DEFENDER, npc.getX(), npc.getY(), npc.getZ(), npc.getHeading(), true, 0);
+					}
+					break;
+				}
+				case FAFURION_STAGE_2:
+				{
+					if (npc.getCurrentHp() < (npc.getMaxHp() * 0.6))
+					{
+						addSpawn(EMERALD_DRAGON, npc.getX(), npc.getY(), npc.getZ(), npc.getHeading(), true, 0);
+						addSpawn(BLUE_WATER_DRAGON, npc.getX(), npc.getY(), npc.getZ(), npc.getHeading(), true, 0);
+						addSpawn(FAFURION_DEFENDER, npc.getX(), npc.getY(), npc.getZ(), npc.getHeading(), true, 0);
+					}
+					else if (npc.getCurrentHp() < (npc.getMaxHp() * 0.3))
+					{
+						addSpawn(EMERALD_DRAGON, npc.getX(), npc.getY(), npc.getZ(), npc.getHeading(), true, 0);
+						addSpawn(BLUE_WATER_DRAGON, npc.getX(), npc.getY(), npc.getZ(), npc.getHeading(), true, 0);
+						addSpawn(FAFURION_DEFENDER, npc.getX(), npc.getY(), npc.getZ(), npc.getHeading(), true, 0);
+					}
+					break;
+				}
+				case FAFURION_STAGE_3:
+				{
+					if (npc.getCurrentHp() < (npc.getMaxHp() * 0.6))
+					{
+						for (int i = 1; i < 3; i++)
+						{
+							addSpawn(EMERALD_DRAGON, npc.getX(), npc.getY(), npc.getZ(), npc.getHeading(), true, 0);
+							addSpawn(BLUE_WATER_DRAGON, npc.getX(), npc.getY(), npc.getZ(), npc.getHeading(), true, 0);
+							addSpawn(FAFURION_DEFENDER, npc.getX(), npc.getY(), npc.getZ(), npc.getHeading(), true, 0);
+						}
+					}
+					else if (npc.getCurrentHp() < (npc.getMaxHp() * 0.3))
+					{
+						for (int i = 1; i < 3; i++)
+						{
+							addSpawn(EMERALD_DRAGON, npc.getX(), npc.getY(), npc.getZ(), npc.getHeading(), true, 0);
+							addSpawn(BLUE_WATER_DRAGON, npc.getX(), npc.getY(), npc.getZ(), npc.getHeading(), true, 0);
+							addSpawn(FAFURION_DEFENDER, npc.getX(), npc.getY(), npc.getZ(), npc.getHeading(), true, 0);
+						}
+					}
+					break;
+				}
+				case FAFURION_STAGE_4:
+				{
+					if (npc.getCurrentHp() < (npc.getMaxHp() * 0.6))
+					{
+						for (int i = 1; i < 3; i++)
+						{
+							addSpawn(EMERALD_DRAGON, npc.getX(), npc.getY(), npc.getZ(), npc.getHeading(), true, 0);
+							addSpawn(BLUE_WATER_DRAGON, npc.getX(), npc.getY(), npc.getZ(), npc.getHeading(), true, 0);
+							addSpawn(FAFURION_DEFENDER, npc.getX(), npc.getY(), npc.getZ(), npc.getHeading(), true, 0);
+						}
+					}
+					else if (npc.getCurrentHp() < (npc.getMaxHp() * 0.3))
+					{
+						for (int i = 1; i < 3; i++)
+						{
+							addSpawn(EMERALD_DRAGON, npc.getX(), npc.getY(), npc.getZ(), npc.getHeading(), true, 0);
+							addSpawn(BLUE_WATER_DRAGON, npc.getX(), npc.getY(), npc.getZ(), npc.getHeading(), true, 0);
+							addSpawn(FAFURION_DEFENDER, npc.getX(), npc.getY(), npc.getZ(), npc.getHeading(), true, 0);
+						}
+					}
+					break;
+				}
+				case FAFURION_STAGE_5:
+				{
+					if (npc.getCurrentHp() < (npc.getMaxHp() * 0.6))
+					{
+						for (int i = 1; i < 3; i++)
+						{
+							addSpawn(EMERALD_DRAGON, npc.getX(), npc.getY(), npc.getZ(), npc.getHeading(), true, 0);
+							addSpawn(BLUE_WATER_DRAGON, npc.getX(), npc.getY(), npc.getZ(), npc.getHeading(), true, 0);
+							addSpawn(FAFURION_DEFENDER, npc.getX(), npc.getY(), npc.getZ(), npc.getHeading(), true, 0);
+						}
+					}
+					else if (npc.getCurrentHp() < (npc.getMaxHp() * 0.3))
+					{
+						for (int i = 1; i < 3; i++)
+						{
+							addSpawn(EMERALD_DRAGON, npc.getX(), npc.getY(), npc.getZ(), npc.getHeading(), true, 0);
+							addSpawn(BLUE_WATER_DRAGON, npc.getX(), npc.getY(), npc.getZ(), npc.getHeading(), true, 0);
+							addSpawn(FAFURION_DEFENDER, npc.getX(), npc.getY(), npc.getZ(), npc.getHeading(), true, 0);
+						}
+					}
+					break;
+				}
+				case FAFURION_STAGE_6:
+				{
+					if (npc.getCurrentHp() < (npc.getMaxHp() * 0.6))
+					{
+						for (int i = 1; i < 4; i++)
+						{
+							addSpawn(EMERALD_DRAGON, npc.getX(), npc.getY(), npc.getZ(), npc.getHeading(), true, 0);
+							addSpawn(BLUE_WATER_DRAGON, npc.getX(), npc.getY(), npc.getZ(), npc.getHeading(), true, 0);
+							addSpawn(FAFURION_DEFENDER, npc.getX(), npc.getY(), npc.getZ(), npc.getHeading(), true, 0);
+						}
+					}
+					else if (npc.getCurrentHp() < (npc.getMaxHp() * 0.3))
+					{
+						for (int i = 1; i < 4; i++)
+						{
+							addSpawn(EMERALD_DRAGON, npc.getX(), npc.getY(), npc.getZ(), npc.getHeading(), true, 0);
+							addSpawn(BLUE_WATER_DRAGON, npc.getX(), npc.getY(), npc.getZ(), npc.getHeading(), true, 0);
+							addSpawn(FAFURION_DEFENDER, npc.getX(), npc.getY(), npc.getZ(), npc.getHeading(), true, 0);
+						}
+					}
+					break;
+				}
+				case FAFURION_STAGE_7:
+				{
+					if (npc.getCurrentHp() < (npc.getMaxHp() * 0.6))
+					{
+						for (int i = 1; i < 4; i++)
+						{
+							addSpawn(EMERALD_DRAGON, npc.getX(), npc.getY(), npc.getZ(), npc.getHeading(), true, 0);
+							addSpawn(BLUE_WATER_DRAGON, npc.getX(), npc.getY(), npc.getZ(), npc.getHeading(), true, 0);
+							addSpawn(FAFURION_DEFENDER, npc.getX(), npc.getY(), npc.getZ(), npc.getHeading(), true, 0);
+						}
+					}
+					else if (npc.getCurrentHp() < (npc.getMaxHp() * 0.3))
+					{
+						for (int i = 1; i < 4; i++)
+						{
+							addSpawn(EMERALD_DRAGON, npc.getX(), npc.getY(), npc.getZ(), npc.getHeading(), true, 0);
+							addSpawn(BLUE_WATER_DRAGON, npc.getX(), npc.getY(), npc.getZ(), npc.getHeading(), true, 0);
+							addSpawn(FAFURION_DEFENDER, npc.getX(), npc.getY(), npc.getZ(), npc.getHeading(), true, 0);
+						}
+					}
+					break;
+				}
+			}
+		}
+		return super.onAttack(npc, attacker, damage, isSummon);
+	}
+	
+	@Override
 	public String onKill(Npc npc, PlayerInstance killer, boolean isSummon)
 	{
-		for (PlayerInstance player : World.getInstance().getVisibleObjectsInRange(npc, PlayerInstance.class, 5000))
+		if (npc.getId() == _fafurion.getId())
 		{
-			player.sendPacket(new ExShowScreenMessage(NpcStringId.HONORED_WARRIORS_HAVE_DEFEATED_THE_WATER_DRAGON_FAFURION, ExShowScreenMessage.TOP_CENTER, 10000, true));
+			FAFURION_ZONE.getPlayersInside().forEach(p ->
+			{
+				playMovie(p, Movie.SC_FAFURION_ENDING);
+				FAFURION_ZONE.getCharactersInside().forEach(m ->
+				{
+					if (m.isMonster())
+					{
+						m.deleteMe();
+					}
+				});
+				p.sendPacket(new ExShowScreenMessage(NpcStringId.HONORED_WARRIORS_HAVE_DEFEATED_THE_WATER_DRAGON_FAFURION, ExShowScreenMessage.TOP_CENTER, 20000, true));
+			});
+			
+			GrandBossManager.getInstance().setBossStatus(FAFURION_GRANDBOSS_ID, DEAD);
+			final long respawnTime = (Config.FAFURION_SPAWN_INTERVAL + getRandom(-Config.FAFURION_SPAWN_RANDOM, Config.FAFURION_SPAWN_RANDOM)) * 3600000;
+			final StatSet info = GrandBossManager.getInstance().getStatSet(FAFURION_GRANDBOSS_ID);
+			info.set("respawn_time", System.currentTimeMillis() + respawnTime);
+			GrandBossManager.getInstance().setStatSet(FAFURION_GRANDBOSS_ID, info);
+			startQuestTimer("unlock_fafurion", respawnTime, null, null);
+			if (_stage < 7)
+			{
+				_stage++;
+			}
+			GlobalVariablesManager.getInstance().set("Fafurion_Stage", _stage);
 		}
 		
-		setStatus(DEAD);
-		final long respawnTime = (Config.FAFURION_SPAWN_INTERVAL + getRandom(-Config.FAFURION_SPAWN_RANDOM, Config.FAFURION_SPAWN_RANDOM)) * 3600000;
-		startQuestTimer("unlock_fafurion", respawnTime, null, null);
-		setRespawn(respawnTime);
 		return super.onKill(npc, killer, isSummon);
-	}
-	
-	private int getStatus()
-	{
-		return GrandBossManager.getInstance().getBossStatus(FAFURION_GRANDBOSS_ID);
-	}
-	
-	private void setStatus(int status)
-	{
-		GrandBossManager.getInstance().setBossStatus(FAFURION_GRANDBOSS_ID, status);
-	}
-	
-	private void setRespawn(long respawnTime)
-	{
-		GrandBossManager.getInstance().getStatSet(FAFURION_GRANDBOSS_ID).set("respawn_time", System.currentTimeMillis() + respawnTime);
 	}
 	
 	@Override
