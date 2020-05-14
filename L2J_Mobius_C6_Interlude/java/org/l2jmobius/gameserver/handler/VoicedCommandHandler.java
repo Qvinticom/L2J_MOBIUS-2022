@@ -25,6 +25,7 @@ import org.l2jmobius.gameserver.handler.voicedcommandhandlers.BankingCmd;
 import org.l2jmobius.gameserver.handler.voicedcommandhandlers.CTFCmd;
 import org.l2jmobius.gameserver.handler.voicedcommandhandlers.DMCmd;
 import org.l2jmobius.gameserver.handler.voicedcommandhandlers.FarmPvpCmd;
+import org.l2jmobius.gameserver.handler.voicedcommandhandlers.ExperienceGain;
 import org.l2jmobius.gameserver.handler.voicedcommandhandlers.OfflineShop;
 import org.l2jmobius.gameserver.handler.voicedcommandhandlers.Online;
 import org.l2jmobius.gameserver.handler.voicedcommandhandlers.StatsCmd;
@@ -83,6 +84,11 @@ public class VoicedCommandHandler
 		if (Config.OFFLINE_TRADE_ENABLE && Config.OFFLINE_COMMAND2)
 		{
 			registerVoicedCommandHandler(new OfflineShop());
+		}
+		
+		if (Config.ENABLE_EXP_GAIN_COMMANDS)
+		{
+			registerVoicedCommandHandler(new ExperienceGain());
 		}
 		
 		LOGGER.info("VoicedCommandHandler: Loaded " + _datatable.size() + " handlers.");

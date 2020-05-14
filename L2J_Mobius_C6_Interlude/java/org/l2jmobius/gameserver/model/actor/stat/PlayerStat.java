@@ -52,8 +52,8 @@ public class PlayerStat extends PlayableStat
 	{
 		final PlayerInstance player = getActiveChar();
 		
-		// Player is GM and access level is below or equal to canGainExp and is in party, don't give XP
-		if (!getActiveChar().getAccessLevel().canGainExp() && getActiveChar().isInParty())
+		// Disable exp gain.
+		if (!player.getAccessLevel().canGainExp() || (Config.ENABLE_EXP_GAIN_COMMANDS && !getActiveChar().isExpGainEnabled()))
 		{
 			return false;
 		}
@@ -63,7 +63,7 @@ public class PlayerStat extends PlayableStat
 			return false;
 		}
 		
-		// Set new karma
+		// Set new karma.
 		if (!player.isCursedWeaponEquiped() && (player.getKarma() > 0) && (player.isGM() || !player.isInsideZone(ZoneId.PVP)))
 		{
 			final int karmaLost = player.calculateKarmaLost(value);
@@ -95,9 +95,9 @@ public class PlayerStat extends PlayableStat
 	{
 		float ratioTakenByPet = 0;
 		
-		// Player is GM and access level is below or equal to GM_DONT_TAKE_EXPSP and is in party, don't give Xp/Sp
+		// Disable exp gain.
 		final PlayerInstance player = getActiveChar();
-		if (!player.getAccessLevel().canGainExp() && player.isInParty())
+		if (!player.getAccessLevel().canGainExp() || (Config.ENABLE_EXP_GAIN_COMMANDS && !getActiveChar().isExpGainEnabled()))
 		{
 			return false;
 		}

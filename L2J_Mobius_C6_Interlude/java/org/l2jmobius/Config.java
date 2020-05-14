@@ -1097,6 +1097,7 @@ public class Config
 	public static boolean ALLOW_CLASS_MASTERS_THIRD_CLASS;
 	public static ClassMasterSettings CLASS_MASTER_SETTINGS;
 	public static boolean ALLOW_REMOTE_CLASS_MASTERS;
+	public static boolean ENABLE_EXP_GAIN_COMMANDS;
 	
 	public static long DEADLOCKCHECK_INTIAL_TIME;
 	public static long DEADLOCKCHECK_DELAY_TIME;
@@ -2788,6 +2789,7 @@ public class Config
 		ALLOW_CLASS_MASTERS_THIRD_CLASS = characterConfig.getBoolean("AllowClassMastersThirdClass", true);
 		CLASS_MASTER_SETTINGS = new ClassMasterSettings(characterConfig.getString("ConfigClassMaster", ""));
 		ALLOW_REMOTE_CLASS_MASTERS = characterConfig.getBoolean("AllowRemoteClassMasters", false);
+		ENABLE_EXP_GAIN_COMMANDS = characterConfig.getBoolean("EnableExpGainCommands", false);
 	}
 	
 	public static void loadDaemonsConf()
