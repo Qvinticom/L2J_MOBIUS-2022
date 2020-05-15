@@ -103,7 +103,7 @@ public class Kelbim extends AbstractNpcAI
 	private static final ZoneType ZONE = ZoneManager.getInstance().getZoneById(60023);
 	private static final Location KELBIM_LOCATION = new Location(-55386, 58939, -274);
 	// Vars
-	private static Npc _kelbimBoss;
+	private static GrandBossInstance _kelbimBoss;
 	private static long _lastAction;
 	private static int _bossStage;
 	private static ArrayList<Npc> _minions = new ArrayList<>();
@@ -191,8 +191,8 @@ public class Kelbim extends AbstractNpcAI
 			}
 			case "stage_1_kelbim_spawn":
 			{
-				_kelbimBoss = addSpawn(KELBIM, -56340, 60801, -269, 54262, false, 0);
-				GrandBossManager.getInstance().addBoss((GrandBossInstance) _kelbimBoss);
+				_kelbimBoss = (GrandBossInstance) addSpawn(KELBIM, -56340, 60801, -269, 54262, false, 0);
+				GrandBossManager.getInstance().addBoss(_kelbimBoss);
 				_lastAction = System.currentTimeMillis();
 				startQuestTimer("check_activity_task", 60000, null, null);
 				startQuestTimer("stage_all_random_area_attack", Rnd.get(2, 3) * 60000, null, null);
