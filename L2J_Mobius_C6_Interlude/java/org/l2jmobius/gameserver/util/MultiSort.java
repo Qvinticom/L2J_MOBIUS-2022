@@ -110,7 +110,7 @@ public class MultiSort
 	{
 		if (_keyList == null)
 		{
-			return new ArrayList<>();
+			return Collections.emptyList();
 		}
 		return _keyList;
 	}
@@ -184,7 +184,7 @@ public class MultiSort
 	{
 		if (_valueList == null)
 		{
-			return new ArrayList<>();
+			return Collections.emptyList();
 		}
 		return _valueList;
 	}

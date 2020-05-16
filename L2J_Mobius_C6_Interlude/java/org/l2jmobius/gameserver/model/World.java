@@ -18,6 +18,7 @@ package org.l2jmobius.gameserver.model;
 
 import java.util.ArrayList;
 import java.util.Collection;
+import java.util.Collections;
 import java.util.List;
 import java.util.Map;
 import java.util.concurrent.ConcurrentHashMap;
@@ -534,13 +535,13 @@ public class World
 	{
 		if ((object == null) || !object.isVisible())
 		{
-			return new ArrayList<>();
+			return Collections.emptyList();
 		}
 		
 		final WorldRegion region = object.getWorldRegion();
 		if (region == null)
 		{
-			return new ArrayList<>();
+			return Collections.emptyList();
 		}
 		
 		final int x = object.getX();
@@ -601,7 +602,7 @@ public class World
 	{
 		if ((object == null) || !object.isVisible())
 		{
-			return new ArrayList<>();
+			return Collections.emptyList();
 		}
 		
 		final int x = object.getX();
@@ -661,7 +662,7 @@ public class World
 		final WorldRegion region = object.getWorldRegion();
 		if (region == null)
 		{
-			return null;
+			return Collections.emptyList();
 		}
 		
 		// Create a list in order to contain all visible WorldObject
