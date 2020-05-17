@@ -532,10 +532,6 @@ public class Frintezza extends Quest
 			DoorData.getInstance().getDoor(25150045).closeMe();
 			DoorData.getInstance().getDoor(25150046).closeMe();
 		}
-		/*
-		 * else if (event.equals("loc_check")) { Integer status = GrandBossManager.getInstance().getBossStatus(FRINTEZZA); if (status == FIGHTING) { if (!_Zone.isInsideZone(npc)) npc.teleToLocation(getXFix(174232),getYFix(-88020),getZFix(-5116)); if (npc.getX() < getXFix(171932) || npc.getX() >
-		 * getXFix(176532) || npc.getY() < getYFix(-90320) || npc.getY() > getYFix(-85720) || npc.getZ() < getZFix(-5130)) npc.teleToLocation(getXFix(174232),getYFix(-88020),getZFix(-5116)); } }
-		 */
 		else if (event.equals("camera_1"))
 		{
 			GrandBossManager.getInstance().setBossStatus(FRINTEZZA, FIGHTING);
@@ -790,7 +786,6 @@ public class Frintezza extends Quest
 			_scarletDummy = null;
 			startQuestTimer("camera_23", 2000, _weakScarlet, null);
 			startQuestTimer("start_pc", 2000, _weakScarlet, null);
-			// startQuestTimer("loc_check", 60000, weakScarlet, null, true);
 			startQuestTimer("songs_play", 10000 + Rnd.get(10000), _frintezza, null);
 			startQuestTimer("skill01", 10000 + Rnd.get(10000), _weakScarlet, null);
 		}
@@ -910,7 +905,6 @@ public class Frintezza extends Quest
 		{
 			_zone.broadcastPacket(new SpecialCamera(_frintezza.getObjectId(), 250, 120, 15, 0, 10000));
 			
-			// cancelQuestTimer("loc_check");
 			_scarletX = _weakScarlet.getX();
 			_scarletY = _weakScarlet.getY();
 			_scarletZ = _weakScarlet.getZ();
@@ -970,7 +964,6 @@ public class Frintezza extends Quest
 			_activeScarlet = _strongScarlet;
 			_zone.broadcastPacket(new SpecialCamera(_strongScarlet.getObjectId(), 450, _angle, 12, 500, 14000));
 			startQuestTimer("morph_14", 3000, _strongScarlet, null);
-			// startQuestTimer("loc_check", 60000, strongScarlet, null, true);
 		}
 		else if (event.equals("morph_14"))
 		{
@@ -1349,9 +1342,8 @@ public class Frintezza extends Quest
 		{
 			_zone.broadcastPacket(new CreatureSay(npc.getObjectId(), ChatType.SHOUT, npc.getName(), "Exceeded his time limit, challenge failed!"));
 			_zone.oustAllPlayers();
-			
-			cancelQuestTimer("waiting", npc, null);
-			cancelQuestTimer("frintezza_despawn", null, null);
+			cancelQuestTimers("waiting");
+			cancelQuestTimers("frintezza_despawn");
 			startQuestTimer("clean", 1000, npc, null);
 			startQuestTimer("close", 1000, npc, null);
 			startQuestTimer("room1_del", 1000, npc, null);
@@ -1364,11 +1356,9 @@ public class Frintezza extends Quest
 			if (temp > 900000)
 			{
 				_zone.oustAllPlayers();
-				
-				cancelQuestTimer("waiting", npc, null);
-				// cancelQuestTimer("loc_check");
-				cancelQuestTimer("room_final", null, null);
-				cancelQuestTimer("spawn_minion", npc, null);
+				cancelQuestTimers("waiting");
+				cancelQuestTimers("room_final");
+				cancelQuestTimers("spawn_minion");
 				startQuestTimer("clean", 1000, npc, null);
 				startQuestTimer("close", 1000, npc, null);
 				startQuestTimer("attack_stop", 1000, npc, null);
@@ -1377,7 +1367,15 @@ public class Frintezza extends Quest
 				startQuestTimer("room3_del", 1000, npc, null);
 				startQuestTimer("minions_despawn", 1000, npc, null);
 				GrandBossManager.getInstance().setBossStatus(FRINTEZZA, DORMANT);
-				cancelQuestTimer("frintezza_despawn", null, null);
+				cancelQuestTimers("frintezza_despawn");
+			}
+			else
+			{
+				final int status = GrandBossManager.getInstance().getBossStatus(FRINTEZZA);
+				if ((status != DORMANT) && (status != DEAD))
+				{
+					startQuestTimer("frintezza_despawn", 60000, npc, null);
+				}
 			}
 		}
 		else if (event.equals("minions_despawn"))
@@ -1472,8 +1470,8 @@ public class Frintezza extends Quest
 					GrandBossManager.getInstance().setBossStatus(FRINTEZZA, WAITING);
 					startQuestTimer("close", 0, npc, null);
 					startQuestTimer("room1_spawn", 5000, npc, null);
-					startQuestTimer("room_final", 2100000, null, null);
-					startQuestTimer("frintezza_despawn", 60000, null, null, true);
+					startQuestTimer("room_final", 2100000, npc, null);
+					startQuestTimer("frintezza_despawn", 60000, npc, null);
 					_lastAction = System.currentTimeMillis();
 					if (Config.BYPASS_FRINTEZZA_PARTIES_CHECK)
 					{
@@ -1525,8 +1523,8 @@ public class Frintezza extends Quest
 								}
 							}
 							else
-							{ // teleport just actual party
-								
+							{
+								// teleport just actual party
 								final Party party = player.getParty();
 								for (PlayerInstance member : party.getPartyMembers())
 								{
@@ -1693,9 +1691,8 @@ public class Frintezza extends Quest
 		}
 		else if ((npc.getNpcId() == SCARLET2) && (_onCheck == 1) && (status == FIGHTING))
 		{
-			// cancelQuestTimer("loc_check");
-			cancelQuestTimer("spawn_minion", npc, null);
-			cancelQuestTimer("frintezza_despawn", null, null);
+			cancelQuestTimers("spawn_minion");
+			cancelQuestTimers("frintezza_despawn");
 			startQuestTimer("clean", 30000, npc, null);
 			startQuestTimer("close", 30000, npc, null);
 			startQuestTimer("room3_del", 60000, npc, null);
@@ -1726,10 +1723,6 @@ public class Frintezza extends Quest
 				DoorData.getInstance().getDoor(25150042).openMe();
 				DoorData.getInstance().getDoor(25150043).openMe();
 			}
-			/*
-			 * _KillHallAlarmDevice++; if (_KillHallAlarmDevice == 4) { startQuestTimer("room1_del", 100, npc, null); startQuestTimer("room2_spawn", 100, npc, null); DoorTable.getInstance().getDoor(17130042).openMe(); DoorTable.getInstance().getDoor(17130043).openMe(); //
-			 * DoorTable.getInstance().getDoor(17130045).openMe(); // DoorTable.getInstance().getDoor(17130046).openMe(); for (int i = 17130051; i <= 17130058; i++) DoorTable.getInstance().getDoor(i).openMe(); }
-			 */
 		}
 		else if (npc.getNpcId() == 18339)
 		{
@@ -1741,6 +1734,7 @@ public class Frintezza extends Quest
 				DoorData.getInstance().getDoor(25150045).closeMe();
 				DoorData.getInstance().getDoor(25150046).closeMe();
 				int outside = 0;
+				
 				synchronized (_playersInside)
 				{
 					for (PlayerInstance room2_pc : _playersInside)
@@ -1756,7 +1750,7 @@ public class Frintezza extends Quest
 				{
 					startQuestTimer("room2_del", 100, npc, null);
 					startQuestTimer("waiting", 180000, npc, null);
-					cancelQuestTimer("room_final", null, null);
+					cancelQuestTimers("room_final");
 				}
 				else
 				{
@@ -1779,7 +1773,7 @@ public class Frintezza extends Quest
 				DoorData.getInstance().getDoor(25150046).openMe();
 				
 				startQuestTimer("waiting", 180000, npc, null);
-				cancelQuestTimer("room_final", null, null);
+				cancelQuestTimers("room_final");
 			}
 		}
 		
