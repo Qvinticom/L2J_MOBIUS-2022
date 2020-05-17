@@ -199,7 +199,7 @@
 			<npc id="23463" count="1" /> <!-- Dimensional Orc Hunter -->
 			<npc id="23464" count="2" /> <!-- Dimensional Shaman -->
 		</group>
-		<group name="1_thred_spawn" spawnByDefault="false">
+		<group name="1_third_spawn" spawnByDefault="false">
 			<territories>
 				<territory name="deminsion_zone_1" minZ="320" maxZ="470">
 					<node x="-206600" y="241528"/>
@@ -266,7 +266,7 @@
 			<npc id="23463" count="1" /> <!-- Dimensional Orc Hunter -->
 			<npc id="23464" count="2" /> <!-- Dimensional Shaman -->
 		</group>
-		<group name="2_thred_spawn" spawnByDefault="false">
+		<group name="2_third_spawn" spawnByDefault="false">
 			<territories>
 				<territory name="deminsion_zone_2" minZ="1004" maxZ="1154">
 					<node x="-211384" y="239112"/>
@@ -333,7 +333,7 @@
 			<npc id="23463" count="1" /> <!-- Dimensional Orc Hunter -->
 			<npc id="23464" count="2" /> <!-- Dimensional Shaman -->
 		</group>
-		<group name="3_thred_spawn" spawnByDefault="false">
+		<group name="3_third_spawn" spawnByDefault="false">
 			<territories>
 				<territory name="deminsion_zone_3" minZ="1513" maxZ="1663">
 					<node x="-215688" y="239864"/>
@@ -401,7 +401,7 @@
 			<npc id="23463" count="1" /> <!-- Dimensional Orc Hunter -->
 			<npc id="23464" count="2" /> <!-- Dimensional Shaman -->
 		</group>
-		<group name="4_thred_spawn" spawnByDefault="false">
+		<group name="4_third_spawn" spawnByDefault="false">
 			<territories>
 				<territory name="deminsion_zone_4" minZ="2114" maxZ="2264">
 					<node x="-219208" y="241704"/>
@@ -442,7 +442,7 @@
 			</territories>
 			<npc id="19556" count="1" /> <!-- Dimensional Trap blue 1 -->
 			<npc id="19559" count="1" /> <!-- Dimensional Trap red 1 -->
-			<npc id="19562" count="1" /> <!-- Heall Trap -->
+			<npc id="19562" count="1" /> <!-- Heal Trap -->
 		</group>
 		<!-- 5 Floor -->
 		<group name="5_first_spawn" spawnByDefault="false">
@@ -469,7 +469,7 @@
 			<npc id="23463" count="1" /> <!-- Dimensional Orc Hunter -->
 			<npc id="23464" count="2" /> <!-- Dimensional Shaman -->
 		</group>
-		<group name="5_thred_spawn" spawnByDefault="false">
+		<group name="5_third_spawn" spawnByDefault="false">
 			<territories>
 				<territory name="deminsion_zone_5" minZ="2700" maxZ="2844">
 					<node x="-218248" y="244808"/>
@@ -494,7 +494,7 @@
 			</territories>
 			<npc id="19556" count="2" /> <!-- Dimensional Trap blue 1 -->
 			<npc id="19559" count="2" /> <!-- Dimensional Trap red 1 -->
-			<npc id="19562" count="1" /> <!-- Heall Trap -->
+			<npc id="19562" count="1" /> <!-- Heal Trap -->
 		</group>
 		<!-- 6 Floor -->
 		<group name="6_first_spawn" spawnByDefault="false">
@@ -523,7 +523,7 @@
 			<npc id="23463" count="1" /> <!-- Dimensional Orc Hunter -->
 			<npc id="23464" count="2" /> <!-- Dimensional Shaman -->
 		</group>
-		<group name="6_thred_spawn" spawnByDefault="false">
+		<group name="6_third_spawn" spawnByDefault="false">
 			<territories>
 				<territory name="deminsion_zone_6" minZ="3300" maxZ="3440">
 					<node x="-219080" y="248632"/>
@@ -592,7 +592,7 @@
 			<npc id="23464" count="2" /> <!-- Dimensional Shaman -->
 			<npc id="19480" x="-215972" y="250578" z="4104" count="1" /> <!-- Salamandra Trap Dummy -->
 		</group>
-		<group name="7_thred_spawn" spawnByDefault="false">
+		<group name="7_third_spawn" spawnByDefault="false">
 			<territories>
 				<territory name="deminsion_zone_7" minZ="3980" maxZ="4123">
 					<node x="-214968" y="251624"/>
@@ -611,7 +611,7 @@
 			</territories>
 			<npc id="23462" count="6" /> <!-- Dimensional Orc Butcher -->
 			<npc id="23465" count="1" /> <!-- Dimensional Bugbear -->
-			<npc id="19562" count="1" /> <!-- Heall Trap -->
+			<npc id="19562" count="1" /> <!-- Heal Trap -->
 			<npc id="19564" x="-215519" y="251252" z="4048" count="1" /> <!-- Invisible Dimensional Fragment NPC -->
 		</group>
 		<group name="7_trap_spawn" spawnByDefault="false">
@@ -661,7 +661,7 @@
 			<npc id="23463" count="1" /> <!-- Dimensional Orc Hunter -->
 			<npc id="23464" count="2" /> <!-- Dimensional Shaman -->
 		</group>
-		<group name="8_thred_spawn" spawnByDefault="false">
+		<group name="8_third_spawn" spawnByDefault="false">
 			<territories>
 				<territory name="deminsion_zone_8" minZ="4482" maxZ="4632">
 					<node x="-211800" y="251352"/>
@@ -729,7 +729,7 @@
 			<npc id="23464" count="2" /> <!-- Dimensional Shaman -->
 			<npc id="19480" x="-208231" y="249404" z="5216" count="1" /> <!-- Salamandra Trap Dummy -->
 		</group>
-		<group name="9_thred_spawn" spawnByDefault="false">
+		<group name="9_third_spawn" spawnByDefault="false">
 			<territories>
 				<territory name="deminsion_zone_9" minZ="5083" maxZ="5233">
 					<node x="-206936" y="249016"/>
@@ -769,7 +769,7 @@
 			</territories>
 			<npc id="19556" count="2" /> <!-- Dimensional Trap blue 1 -->
 			<npc id="19559" count="1" /> <!-- Dimensional Trap red 1 -->
-			<npc id="19562" count="1" /> <!-- Heall Trap -->
+			<npc id="19562" count="1" /> <!-- Heal Trap -->
 		</group>
 		<!-- 10 Floor -->
 		<group name="10_first_spawn" spawnByDefault="false">
@@ -796,9 +796,9 @@
 			<npc id="23463" count="1" /> <!-- Dimensional Orc Hunter -->
 			<npc id="23464" count="2" /> <!-- Dimensional Shaman -->
 			<npc id="19480" x="-205512" y="245775" z="5816" count="1" /> <!-- Salamandra Trap Dummy -->
-			<npc id="19562" count="1" /> <!-- Heall Trap -->
+			<npc id="19562" count="1" /> <!-- Heal Trap -->
 		</group>
-		<group name="10_thred_spawn" spawnByDefault="false">
+		<group name="10_third_spawn" spawnByDefault="false">
 			<territories>
 				<territory name="deminsion_zone_10" minZ="5662" maxZ="5812">
 					<node x="-207912" y="245944"/>
@@ -852,9 +852,9 @@
 			<npc id="23463" count="1" /> <!-- Dimensional Orc Hunter -->
 			<npc id="23464" count="2" /> <!-- Dimensional Shaman -->
 			<npc id="23472" count="1" /> <!-- Unworldly Shaman -->
-			<npc id="19562" count="1" /> <!-- Heall Trap -->
+			<npc id="19562" count="1" /> <!-- Heal Trap -->
 		</group>
-		<group name="11_thred_spawn" spawnByDefault="false">
+		<group name="11_third_spawn" spawnByDefault="false">
 			<territories>
 				<territory name="deminsion_zone_11" minZ="6511" maxZ="6661">
 					<node x="-207224" y="242184"/>
@@ -927,7 +927,7 @@
 			<npc id="23472" count="2" /> <!-- Unworldly Shaman -->
 			<npc id="19480" x="-210336" y="240171" z="7328" count="1" /> <!-- Salamandra Trap Dummy -->
 		</group>
-		<group name="12_thred_spawn" spawnByDefault="false">
+		<group name="12_third_spawn" spawnByDefault="false">
 			<territories>
 				<territory name="deminsion_zone_12" minZ="7200" maxZ="7344">
 					<node x="-211368" y="239128"/>
@@ -969,7 +969,7 @@
 			</territories>
 			<npc id="19557" count="2" /> <!-- Dimensional Trap blue 2 -->
 			<npc id="19560" count="1" /> <!-- Dimensional Trap red 2 -->
-			<npc id="19562" count="1" /> <!-- Heall Trap -->
+			<npc id="19562" count="1" /> <!-- Heal Trap -->
 		</group>
 		<!-- 13 Floor -->
 		<group name="13_first_spawn" spawnByDefault="false">
@@ -1002,7 +1002,7 @@
 			<npc id="23472" count="1" /> <!-- Unworldly Shaman -->
 			<npc id="19480" x="-214702" y="239690" z="7752" count="1" /> <!-- Salamandra Trap Dummy -->
 		</group>
-		<group name="13_thred_spawn" spawnByDefault="false">
+		<group name="13_third_spawn" spawnByDefault="false">
 			<territories>
 				<territory name="deminsion_zone_13" minZ="7703" maxZ="7853">
 					<node x="-214536" y="239400"/>
@@ -1073,7 +1073,7 @@
 			<npc id="23472" count="2" /> <!-- Unworldly Shaman -->
 			<npc id="19480" x="-218039" y="241416" z="8440" count="1" /> <!-- Salamandra Trap Dummy -->
 		</group>
-		<group name="14_thred_spawn" spawnByDefault="false">
+		<group name="14_third_spawn" spawnByDefault="false">
 			<territories>
 				<territory name="deminsion_zone_14" minZ="8304" maxZ="8454">
 					<node x="-219432" y="241736"/>
@@ -1144,7 +1144,7 @@
 			<npc id="23472" count="1" /> <!-- Unworldly Shaman -->
 			<npc id="19480" x="-220548" y="244943" z="9032" count="1" /> <!-- Salamandra Trap Dummy -->
 		</group>
-		<group name="15_thred_spawn" spawnByDefault="false">
+		<group name="15_third_spawn" spawnByDefault="false">
 			<territories>
 				<territory name="deminsion_zone_15" minZ="8884" maxZ="9034">
 					<node x="-218232" y="244744"/>
@@ -1169,7 +1169,7 @@
 			</territories>
 			<npc id="19557" count="5" /> <!-- Dimensional Trap blue 2 -->
 			<npc id="19560" count="2" /> <!-- Dimensional Trap red 2 -->
-			<npc id="19562" count="1" /> <!-- Heall Trap -->
+			<npc id="19562" count="1" /> <!-- Heal Trap -->
 		</group>
 		<!-- 16 Floor -->
 		<group name="16_first_spawn" spawnByDefault="false">
@@ -1201,9 +1201,9 @@
 			<npc id="23464" count="2" /> <!-- Dimensional Shaman -->
 			<npc id="23472" count="1" /> <!-- Unworldly Shaman -->
 			<npc id="23463" count="1" /> <!-- Dimensional Orc Hunter -->
-			<npc id="19562" count="1" /> <!-- Heall Trap -->
+			<npc id="19562" count="1" /> <!-- Heal Trap -->
 		</group>
-		<group name="16_thred_spawn" spawnByDefault="false">
+		<group name="16_third_spawn" spawnByDefault="false">
 			<territories>
 				<territory name="deminsion_zone_16" minZ="9809" maxZ="9959">
 					<node x="-219704" y="249192"/>
@@ -1275,7 +1275,7 @@
 			<npc id="19560" count="1" /> <!-- Dimensional Trap red 2 -->
 			<npc id="19480" x="-215957" y="250560" z="10624" count="1" /> <!-- Salamandra Trap Dummy -->
 		</group>
-		<group name="17_thred_spawn" spawnByDefault="false">
+		<group name="17_third_spawn" spawnByDefault="false">
 			<territories>
 				<territory name="deminsion_zone_17" minZ="10492" maxZ="10642">
 					<node x="-214984" y="251608"/>
@@ -1316,7 +1316,7 @@
 			</territories>
 			<npc id="19557" count="3" /> <!-- Dimensional Trap blue 2 -->
 			<npc id="19560" count="1" /> <!-- Dimensional Trap red 2 -->
-			<npc id="19562" count="2" /> <!-- Heall Trap -->
+			<npc id="19562" count="2" /> <!-- Heal Trap -->
 		</group>
 		<!-- 18 Floor -->
 		<group name="18_first_spawn" spawnByDefault="false">
@@ -1349,7 +1349,7 @@
 			<npc id="23463" count="1" /> <!-- Dimensional Orc Hunter -->
 			<npc id="19557" count="1" /> <!-- Dimensional Trap blue 2 -->
 		</group>
-		<group name="18_thred_spawn" spawnByDefault="false">
+		<group name="18_third_spawn" spawnByDefault="false">
 			<territories>
 				<territory name="deminsion_zone_18" minZ="11001" maxZ="11151">
 					<node x="-211864" y="251368"/>
@@ -1416,7 +1416,7 @@
 			<npc id="19480" x="-208294" y="249400" z="11736" count="1" /> <!-- Salamandra Trap Dummy -->
 			<npc id="19557" count="1" /> <!-- Dimensional Trap blue 2 -->
 		</group>
-		<group name="19_thred_spawn" spawnByDefault="false">
+		<group name="19_third_spawn" spawnByDefault="false">
 			<territories>
 				<territory name="deminsion_zone_19" minZ="11602" maxZ="11752">
 					<node x="-206936" y="249000"/>
@@ -1457,7 +1457,7 @@
 			</territories>
 			<npc id="19557" count="3" /> <!-- Dimensional Trap blue 2 -->
 			<npc id="19560" count="2" /> <!-- Dimensional Trap red 2 -->
-			<npc id="19562" count="2" /> <!-- Heall Trap -->
+			<npc id="19562" count="2" /> <!-- Heal Trap -->
 		</group>
 		<!-- 20 Floor -->
 		<group name="20_first_spawn" spawnByDefault="false">
@@ -1489,7 +1489,7 @@
 			<npc id="19480" x="-207821" y="245382" z="12256" count="1" /> <!-- Salamandra Trap Dummy -->
 			<npc id="19557" count="2" /> <!-- Dimensional Trap blue 2 -->
 		</group>
-		<group name="20_thred_spawn" spawnByDefault="false">
+		<group name="20_third_spawn" spawnByDefault="false">
 			<territories>
 				<territory name="deminsion_zone_20" minZ="12186" maxZ="12336">
 					<node x="-207896" y="246008"/>
@@ -1515,7 +1515,7 @@
 			</territories>
 			<npc id="19557" count="6" /> <!-- Dimensional Trap blue 2 -->
 			<npc id="19560" count="2" /> <!-- Dimensional Trap red 2 -->
-			<npc id="19562" count="2" /> <!-- Heall Trap -->
+			<npc id="19562" count="2" /> <!-- Heal Trap -->
 		</group>
 		<!-- 21 Floor -->
 		<group name="21_first_spawn" spawnByDefault="false">
@@ -1549,7 +1549,7 @@
 			<npc id="23476" count="1" /> <!-- Unworldly Harpy -->
 			<npc id="19561" count="1" /> <!-- Dimensional Trap red 3 -->
 		</group>
-		<group name="21_thred_spawn" spawnByDefault="false">
+		<group name="21_third_spawn" spawnByDefault="false">
 			<territories>
 				<territory name="deminsion_zone_21" minZ="3940" maxZ="4090">
 					<node x="-76424" y="-217016"/>
@@ -1574,7 +1574,7 @@
 			</territories>
 			<npc id="19558" count="2" /> <!-- Dimensional Trap blue 3 -->
 			<npc id="19561" count="1" /> <!-- Dimensional Trap red 3 -->
-			<npc id="19562" count="1" /> <!-- Heall Trap -->
+			<npc id="19562" count="1" /> <!-- Heal Trap -->
 		</group>
 		<!-- 22 Floor -->
 		<group name="22_first_spawn" spawnByDefault="false">
@@ -1626,7 +1626,7 @@
 			<npc id="23463" count="1" /> <!-- Dimensional Orc Hunter -->
 			<npc id="19480" x="-79749" y="-217626" z="4760" count="1" /> <!-- Salamandra Trap Dummy -->
 		</group>
-		<group name="22_thred_spawn" spawnByDefault="false">
+		<group name="22_third_spawn" spawnByDefault="false">
 			<territories>
 				<territory name="deminsion_zone_22" minZ="4634" maxZ="4774">
 					<node x="-80760" y="-218648"/>
@@ -1671,7 +1671,7 @@
 			</territories>
 			<npc id="19558" count="3" /> <!-- Dimensional Trap blue 3 -->
 			<npc id="19561" count="1" /> <!-- Dimensional Trap red 3 -->
-			<npc id="19562" count="1" /> <!-- Heall Trap -->
+			<npc id="19562" count="1" /> <!-- Heal Trap -->
 		</group>
 		<!-- 23 Floor -->
 		<group name="23_first_spawn" spawnByDefault="false">
@@ -1701,7 +1701,7 @@
 			<npc id="23472" count="1" /> <!-- Unworldly Shaman -->
 			<npc id="23472" count="2" /> <!-- Abyssal Shaman -->
 		</group>
-		<group name="23_thred_spawn" spawnByDefault="false">
+		<group name="23_third_spawn" spawnByDefault="false">
 			<territories>
 				<territory name="deminsion_zone_23" minZ="5143" maxZ="5283">
 					<node x="-83144" y="-218360"/>
@@ -1713,7 +1713,7 @@
 			<npc id="23462" count="3" /> <!-- Dimensional Orc Butcher -->
 			<npc id="23483" count="1" /> <!-- Abyssal Golem -->
 			<npc id="23468" count="7" /> <!-- Dimensional Demon -->
-			<npc id="19562" count="1" /> <!-- Heall Trap -->
+			<npc id="19562" count="1" /> <!-- Heal Trap -->
 			<npc id="19564" x="-83920" y="-218527" z="5208" count="1" /> <!-- Invisible Dimensional Fragment NPC -->
 		</group>
 		<group name="23_trap_spawn" spawnByDefault="false">
@@ -1774,7 +1774,7 @@
 			<npc id="23476" count="1" /> <!-- Unworldly Harpy -->
 			<npc id="19480" x="-86180" y="-217190" z="5872" count="1" /> <!-- Salamandra Trap Dummy -->
 		</group>
-		<group name="24_thred_spawn" spawnByDefault="false">
+		<group name="24_third_spawn" spawnByDefault="false">
 			<territories>
 				<territory name="deminsion_zone_24" minZ="5744" maxZ="5884">
 					<node x="-87592" y="-216824"/>
@@ -1794,7 +1794,7 @@
 			<npc id="23462" count="4" /> <!-- Dimensional Orc Butcher -->
 			<npc id="23471" count="1" /> <!-- Unworldly Etin -->
 			<npc id="23468" count="6" /> <!-- Dimensional Demon -->
-			<npc id="19562" count="1" /> <!-- Heall Trap -->
+			<npc id="19562" count="1" /> <!-- Heal Trap -->
 			<npc id="19564" x="-86997" y="-217169" z="5808" count="1" /> <!-- Invisible Dimensional Fragment NPC -->
 		</group>
 		<group name="24_trap_spawn" spawnByDefault="false">
@@ -1843,11 +1843,11 @@
 			<npc id="23464" count="2" /> <!-- Dimensional Shaman -->
 			<npc id="23472" count="2" /> <!-- Unworldly Shaman -->
 			<npc id="23480" count="1" /> <!-- Abyssal Harpy -->
-			<npc id="19562" count="1" /> <!-- Heall Trap -->
+			<npc id="19562" count="1" /> <!-- Heal Trap -->
 			<npc id="19480" x="-85938" y="-212511" z="6384" count="1" /> <!-- Salamandra Trap Dummy -->
 			<npc id="19480" x="-88022" y="-213905" z="6464" count="1" /> <!-- Salamandra Trap Dummy -->
 		</group>
-		<group name="25_thred_spawn" spawnByDefault="false">
+		<group name="25_third_spawn" spawnByDefault="false">
 			<territories>
 				<territory name="deminsion_zone_25" minZ="6317" maxZ="6467">
 					<node x="-85656" y="-214104"/>
@@ -1906,7 +1906,7 @@
 			<npc id="23480" count="1" /> <!-- Abyssal Harpy -->
 			<npc id="23478" count="1" /> <!-- Abyssal Berserker -->
 		</group>
-		<group name="26_thred_spawn" spawnByDefault="false">
+		<group name="26_third_spawn" spawnByDefault="false">
 			<territories>
 				<territory name="deminsion_zone_26" minZ="6910" maxZ="7060">
 					<node x="-87352" y="-209640"/>
@@ -1918,7 +1918,7 @@
 			<npc id="23462" count="4" /> <!-- Dimensional Orc Butcher -->
 			<npc id="23468" count="3" /> <!-- Dimensional Demon -->
 			<npc id="23470" count="3" /> <!-- Unworldly Demon -->
-			<npc id="19562" count="1" /> <!-- Heall Trap -->
+			<npc id="19562" count="1" /> <!-- Heal Trap -->
 			<npc id="19480" x="-86435" y="-209397" z="6984" count="1" /> <!-- Salamandra Trap Dummy -->
 			<npc id="19564" x="-86640" y="-209524" z="6984" count="1" /> <!-- Invisible Dimensional Fragment NPC -->
 		</group>
@@ -1982,7 +1982,7 @@
 			<npc id="23478" count="1" /> <!-- Abyssal Berserker -->
 			<npc id="19480" x="-83948" y="-208428" z="7728" count="1" /> <!-- Salamandra Trap Dummy -->
 		</group>
-		<group name="27_thred_spawn" spawnByDefault="false">
+		<group name="27_third_spawn" spawnByDefault="false">
 			<territories>
 				<territory name="deminsion_zone_27" minZ="7593" maxZ="7743">
 					<node x="-82920" y="-207368"/>
@@ -2058,7 +2058,7 @@
 			<npc id="23476" count="1" /> <!-- Unworldly Harpy -->
 			<npc id="19480" x="-80910" y="-207151" z="8224" count="1" /> <!-- Salamandra Trap Dummy -->
 		</group>
-		<group name="28_thred_spawn" spawnByDefault="false">
+		<group name="28_third_spawn" spawnByDefault="false">
 			<territories>
 				<territory name="deminsion_zone_28" minZ="8051" maxZ="8251">
 					<node x="-80520" y="-207752"/>
@@ -2085,7 +2085,7 @@
 			</territories>
 			<npc id="19558" count="3" /> <!-- Dimensional Trap blue 3 -->
 			<npc id="19561" count="1" /> <!-- Dimensional Trap red 3 -->
-			<npc id="19562" count="1" /> <!-- Heall Trap -->
+			<npc id="19562" count="1" /> <!-- Heal Trap -->
 		</group>
 		<!-- 29 Floor -->
 		<group name="29_first_spawn" spawnByDefault="false">
@@ -2131,7 +2131,7 @@
 			<npc id="23463" count="1" /> <!-- Dimensional Orc Hunter -->
 			<npc id="19480" x="-77648" y="-209695" z="8840" count="1" /> <!-- Salamandra Trap Dummy -->
 		</group>
-		<group name="29_thred_spawn" spawnByDefault="false">
+		<group name="29_third_spawn" spawnByDefault="false">
 			<territories>
 				<territory name="deminsion_zone_29" minZ="8703" maxZ="8853">
 					<node x="-76248" y="-210056"/>
@@ -2170,7 +2170,7 @@
 			</territories>
 			<npc id="19558" count="5" /> <!-- Dimensional Trap blue 3 -->
 			<npc id="19561" count="1" /> <!-- Dimensional Trap red 3 -->
-			<npc id="19562" count="1" /> <!-- Heall Trap -->
+			<npc id="19562" count="1" /> <!-- Heal Trap -->
 		</group>
 		<!-- 30 Floor -->
 		<group name="30_first_spawn" spawnByDefault="false">
@@ -2202,7 +2202,7 @@
 			<npc id="19480" x="-77919" y="-214000" z="9352" count="1" /> <!-- Salamandra Trap Dummy -->
 			<npc id="19480" x="-78085" y="-212931" z="9352" count="1" /> <!-- Salamandra Trap Dummy -->
 		</group>
-		<group name="30_thred_spawn" spawnByDefault="false">
+		<group name="30_third_spawn" spawnByDefault="false">
 			<territories>
 				<territory name="deminsion_zone_30" minZ="9286" maxZ="9436">
 					<node x="-78120" y="-212840"/>
@@ -2228,7 +2228,7 @@
 			</territories>
 			<npc id="19558" count="7" /> <!-- Dimensional Trap blue 3 -->
 			<npc id="19561" count="2" /> <!-- Dimensional Trap red 3 -->
-			<npc id="19562" count="1" /> <!-- Heall Trap -->
+			<npc id="19562" count="1" /> <!-- Heal Trap -->
 		</group>
 		<!-- 31 Floor -->
 		<group name="31_first_spawn" spawnByDefault="false">
@@ -2265,7 +2265,7 @@
 			<npc id="23480" count="1" /> <!-- Abyssal Harpy -->
 			<npc id="19480" x="-77327" y="-216494" z="10184" count="1" /> <!-- Salamandra Trap Dummy -->
 		</group>
-		<group name="31_thred_spawn" spawnByDefault="false">
+		<group name="31_third_spawn" spawnByDefault="false">
 			<territories>
 				<territory name="deminsion_zone_31" minZ="10130" maxZ="10280">
 					<node x="-77000" y="-216456"/>
@@ -2344,7 +2344,7 @@
 			<npc id="23480" count="2" /> <!-- Abyssal Harpy -->
 			<npc id="19480" x="-79753" y="-217626" z="10952" count="1" /> <!-- Salamandra Trap Dummy -->
 		</group>
-		<group name="32_thred_spawn" spawnByDefault="false">
+		<group name="32_third_spawn" spawnByDefault="false">
 			<territories>
 				<territory name="deminsion_zone_32" minZ="10814" maxZ="10964">
 					<node x="-80792" y="-218712"/>
@@ -2428,9 +2428,9 @@
 			<npc id="23476" count="2" /> <!-- Unworldly Harpy -->
 			<npc id="23480" count="2" /> <!-- Abyssal Harpy -->
 			<npc id="23483" count="1" /> <!-- Abyssal Golem -->
-			<npc id="19562" count="2" /> <!-- Heall Trap -->
+			<npc id="19562" count="2" /> <!-- Heal Trap -->
 		</group>
-		<group name="33_thred_spawn" spawnByDefault="false">
+		<group name="33_third_spawn" spawnByDefault="false">
 			<territories>
 				<territory name="deminsion_zone_33" minZ="11323" maxZ="11473">
 					<node x="-83224" y="-218312"/>
@@ -2504,7 +2504,7 @@
 			<npc id="23476" count="3" /> <!-- Unworldly Harpy -->
 			<npc id="19480" x="-86164" y="-217251" z="12056" count="1" /> <!-- Salamandra Trap Dummy -->
 		</group>
-		<group name="34_thred_spawn" spawnByDefault="false">
+		<group name="34_third_spawn" spawnByDefault="false">
 			<territories>
 				<territory name="deminsion_zone_34" minZ="11924" maxZ="12074">
 					<node x="-87544" y="-216840"/>
@@ -2552,7 +2552,7 @@
 			</territories>
 			<npc id="19558" count="3" /> <!-- Dimensional Trap blue 3 -->
 			<npc id="19561" count="2" /> <!-- Dimensional Trap red 3 -->
-			<npc id="19562" count="1" /> <!-- Heall Trap -->
+			<npc id="19562" count="1" /> <!-- Heal Trap -->
 		</group>
 		<!-- 35 Floor -->
 		<group name="35_first_spawn" spawnByDefault="false">
@@ -2587,7 +2587,7 @@
 			<npc id="19480" count="1" /> <!-- Salamandra Trap Dummy -->
 			<npc id="19480" count="1" /> <!-- Salamandra Trap Dummy -->
 		</group>
-		<group name="35_thred_spawn" spawnByDefault="false">
+		<group name="35_third_spawn" spawnByDefault="false">
 			<territories>
 				<territory name="deminsion_zone_35" minZ="12507" maxZ="12657">
 					<node x="-85704" y="-214120"/>
@@ -2616,7 +2616,7 @@
 			</territories>
 			<npc id="19558" count="6" /> <!-- Dimensional Trap blue 3 -->
 			<npc id="19561" count="2" /> <!-- Dimensional Trap red 3 -->
-			<npc id="19562" count="1" /> <!-- Heall Trap -->
+			<npc id="19562" count="1" /> <!-- Heal Trap -->
 		</group>
 	</spawnlist>
 </instance>
