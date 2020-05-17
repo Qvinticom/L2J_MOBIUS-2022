@@ -470,7 +470,7 @@ INSERT INTO `minions` VALUES
 (22211,22213,1,1),
 (22211,22222,1,1);
 
--- grand bosses
+-- GrandBosses
 INSERT INTO `minions` VALUES 
 -- (29001,29003,5,8),-- Nurse, implant in AI now
 -- (29001,29004,3,5),-- Guard, implant in AI now
@@ -490,3 +490,10 @@ INSERT INTO `minions` VALUES
 (20983,20984,1,1),
 (20983,20985,1,1),
 (20983,21074,1,1);
+
+-- Fairy Trees
+INSERT INTO `minions` VALUES
+(27185, 27189, 4, 4),
+(27186, 27189, 4, 4),
+(27187, 27189, 4, 4),
+(27188, 27189, 4, 4);
