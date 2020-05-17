@@ -36,17 +36,17 @@ import org.l2jmobius.gameserver.model.holders.MinionHolder;
  */
 public class MinionList
 {
-	protected final MonsterInstance _master;
+	private final MonsterInstance _master;
 	private final List<MonsterInstance> _spawnedMinions = new CopyOnWriteArrayList<>();
 	private final List<ScheduledFuture<?>> _respawnTasks = new CopyOnWriteArrayList<>();
 	
-	public MinionList(MonsterInstance pMaster)
+	public MinionList(MonsterInstance master)
 	{
-		if (pMaster == null)
+		if (master == null)
 		{
-			throw new NullPointerException("MinionList: master is null");
+			throw new NullPointerException("MinionList: Master is null!");
 		}
-		_master = pMaster;
+		_master = master;
 	}
 	
 	/**

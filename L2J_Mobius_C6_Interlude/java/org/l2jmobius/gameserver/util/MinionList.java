@@ -16,9 +16,8 @@
  */
 package org.l2jmobius.gameserver.util;
 
-import java.util.ArrayList;
+import java.util.Collection;
 import java.util.HashSet;
-import java.util.List;
 import java.util.Map;
 import java.util.Map.Entry;
 import java.util.Set;
@@ -35,40 +34,32 @@ import org.l2jmobius.gameserver.model.actor.instance.MonsterInstance;
 import org.l2jmobius.gameserver.model.actor.templates.NpcTemplate;
 
 /**
- * @version $Revision: 1.2 $ $Date: 2004/06/27 08:12:59 $
+ * @author luisantonioa, Mobius
  */
 public class MinionList
 {
-	/** List containing the current spawned minions for this MonsterInstance */
-	private final List<MinionInstance> minionReferences;
-	protected Map<Long, Integer> _respawnTasks = new ConcurrentHashMap<>();
-	private final MonsterInstance master;
+	private final Set<MinionInstance> _spawnedMinions = ConcurrentHashMap.newKeySet();
+	private final Map<Long, Integer> _respawnTasks = new ConcurrentHashMap<>();
+	private final MonsterInstance _master;
 	
-	public MinionList(MonsterInstance pMaster)
+	public MinionList(MonsterInstance master)
 	{
-		minionReferences = new ArrayList<>();
-		master = pMaster;
+		_master = master;
 	}
 	
 	public int countSpawnedMinions()
 	{
-		synchronized (minionReferences)
-		{
-			return minionReferences.size();
-		}
+		return _spawnedMinions.size();
 	}
 	
 	public int countSpawnedMinionsById(int minionId)
 	{
 		int count = 0;
-		synchronized (minionReferences)
+		for (MinionInstance minion : _spawnedMinions)
 		{
-			for (MinionInstance minion : minionReferences)
+			if (minion.getNpcId() == minionId)
 			{
-				if (minion.getNpcId() == minionId)
-				{
-					count++;
-				}
+				count++;
 			}
 		}
 		return count;
@@ -76,26 +67,23 @@ public class MinionList
 	
 	public boolean hasMinions()
 	{
-		return !minionReferences.isEmpty();
+		return !_spawnedMinions.isEmpty();
 	}
 	
-	public List<MinionInstance> getSpawnedMinions()
+	public Collection<MinionInstance> getSpawnedMinions()
 	{
-		return minionReferences;
+		return _spawnedMinions;
 	}
 	
 	public void addSpawnedMinion(MinionInstance minion)
 	{
-		synchronized (minionReferences)
-		{
-			minionReferences.add(minion);
-		}
+		_spawnedMinions.add(minion);
 	}
 	
 	public int lazyCountSpawnedMinionsGroups()
 	{
 		final Set<Integer> seenGroups = new HashSet<>();
-		for (MinionInstance minion : minionReferences)
+		for (MinionInstance minion : _spawnedMinions)
 		{
 			seenGroups.add(minion.getNpcId());
 		}
@@ -104,32 +92,25 @@ public class MinionList
 	
 	public void removeSpawnedMinion(MinionInstance minion)
 	{
-		synchronized (minionReferences)
-		{
-			minionReferences.remove(minion);
-		}
+		_spawnedMinions.remove(minion);
 	}
 	
 	public void moveMinionToRespawnList(MinionInstance minion)
 	{
 		final Long current = System.currentTimeMillis();
-		synchronized (minionReferences)
+		_spawnedMinions.remove(minion);
+		if (_respawnTasks.get(current) == null)
 		{
-			minionReferences.remove(minion);
-			if (_respawnTasks.get(current) == null)
+			_respawnTasks.put(current, minion.getNpcId());
+		}
+		else
+		{
+			for (int i = 1; i < 30; i++)
 			{
-				_respawnTasks.put(current, minion.getNpcId());
-			}
-			else
-			{
-				// nice AoE
-				for (int i = 1; i < 30; i++)
+				if (_respawnTasks.get(current + i) == null)
 				{
-					if (_respawnTasks.get(current + i) == null)
-					{
-						_respawnTasks.put(current + i, minion.getNpcId());
-						break;
-					}
+					_respawnTasks.put(current + i, minion.getNpcId());
+					break;
 				}
 			}
 		}
@@ -137,6 +118,19 @@ public class MinionList
 	
 	public void clearRespawnList()
 	{
+		for (MinionInstance minion : _spawnedMinions)
+		{
+			if (minion == null)
+			{
+				continue;
+			}
+			
+			minion.abortAttack();
+			minion.abortCast();
+			minion.deleteMe();
+		}
+		
+		_spawnedMinions.clear();
 		_respawnTasks.clear();
 	}
 	
@@ -145,7 +139,7 @@ public class MinionList
 	 */
 	public void maintainMinions()
 	{
-		if ((master == null) || master.isAlikeDead())
+		if ((_master == null) || _master.isAlikeDead())
 		{
 			return;
 		}
@@ -175,27 +169,22 @@ public class MinionList
 	 */
 	public void spawnMinions()
 	{
-		if ((master == null) || master.isAlikeDead())
+		if ((_master == null) || _master.isAlikeDead())
 		{
 			return;
 		}
 		
-		final List<MinionData> minions = master.getTemplate().getMinionData();
-		
-		synchronized (minionReferences)
+		int minionCount;
+		int minionId;
+		int minionsToSpawn;
+		for (MinionData minion : _master.getTemplate().getMinionData())
 		{
-			int minionCount;
-			int minionId;
-			int minionsToSpawn;
-			for (MinionData minion : minions)
+			minionCount = minion.getAmount();
+			minionId = minion.getMinionId();
+			minionsToSpawn = minionCount - countSpawnedMinionsById(minionId);
+			for (int i = 0; i < minionsToSpawn; i++)
 			{
-				minionCount = minion.getAmount();
-				minionId = minion.getMinionId();
-				minionsToSpawn = minionCount - countSpawnedMinionsById(minionId);
-				for (int i = 0; i < minionsToSpawn; i++)
-				{
-					spawnSingleMinion(minionId);
-				}
+				spawnSingleMinion(minionId);
 			}
 		}
 	}
@@ -221,10 +210,10 @@ public class MinionList
 		
 		// Set the Minion HP, MP and Heading
 		monster.setCurrentHpMp(monster.getMaxHp(), monster.getMaxMp());
-		monster.setHeading(master.getHeading());
+		monster.setHeading(_master.getHeading());
 		
 		// Set the Minion leader to this RaidBoss
-		monster.setLeader(master);
+		monster.setLeader(_master);
 		
 		// Init the position of the Minion and add it in the world as a visible object
 		int spawnConstant;
@@ -237,7 +226,7 @@ public class MinionList
 			spawnConstant *= -1;
 		}
 		
-		final int newX = master.getX() + spawnConstant;
+		final int newX = _master.getX() + spawnConstant;
 		spawnConstant = Rnd.get(randSpawnLim);
 		randPlusMin = Rnd.get(2);
 		if (randPlusMin == 1)
@@ -245,13 +234,13 @@ public class MinionList
 			spawnConstant *= -1;
 		}
 		
-		final int newY = master.getY() + spawnConstant;
-		monster.spawnMe(newX, newY, master.getZ());
+		final int newY = _master.getY() + spawnConstant;
+		monster.spawnMe(newX, newY, _master.getZ());
 		
 		// Assist master
-		if (!master.getAggroList().isEmpty())
+		if (!_master.getAggroList().isEmpty())
 		{
-			monster.getAggroList().putAll(master.getAggroList());
+			monster.getAggroList().putAll(_master.getAggroList());
 			monster.getAI().setIntention(CtrlIntention.AI_INTENTION_ATTACK, monster.getAggroList().keySet().stream().findFirst().get());
 		}
 	}

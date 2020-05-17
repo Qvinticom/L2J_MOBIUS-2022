@@ -16,8 +16,7 @@
  */
 package org.l2jmobius.gameserver.model.actor.instance;
 
-import java.util.Iterator;
-import java.util.List;
+import java.util.Collection;
 import java.util.concurrent.ScheduledFuture;
 
 import org.l2jmobius.Config;
@@ -28,7 +27,6 @@ import org.l2jmobius.gameserver.model.actor.Creature;
 import org.l2jmobius.gameserver.model.actor.knownlist.MonsterKnownList;
 import org.l2jmobius.gameserver.model.actor.templates.NpcTemplate;
 import org.l2jmobius.gameserver.model.spawn.Spawn;
-import org.l2jmobius.gameserver.network.serverpackets.SocialAction;
 import org.l2jmobius.gameserver.util.MinionList;
 
 /**
@@ -114,32 +112,8 @@ public class MonsterInstance extends Attackable
 		
 		if (getTemplate().getMinionData() != null)
 		{
-			try
-			{
-				for (MinionInstance minion : _minionList.getSpawnedMinions())
-				{
-					if (minion == null)
-					{
-						continue;
-					}
-					_minionList.getSpawnedMinions().remove(minion);
-					minion.deleteMe();
-				}
-				_minionList.clearRespawnList();
-				
-				manageMinions();
-			}
-			catch (NullPointerException e)
-			{
-			}
-			
-			switch (getTemplate().getNpcId())
-			{
-				case 12372: // baium
-				{
-					broadcastPacket(new SocialAction(getObjectId(), 2));
-				}
-			}
+			_minionList.clearRespawnList();
+			manageMinions();
 		}
 	}
 	
@@ -193,25 +167,18 @@ public class MonsterInstance extends Attackable
 	{
 		if (_minionList.hasMinions())
 		{
-			final List<MinionInstance> spawnedMinions = _minionList.getSpawnedMinions();
-			if ((spawnedMinions != null) && !spawnedMinions.isEmpty())
+			for (MinionInstance minion : _minionList.getSpawnedMinions())
 			{
-				final Iterator<MinionInstance> itr = spawnedMinions.iterator();
-				MinionInstance minion;
-				while (itr.hasNext())
+				// Trigger the aggro condition of the minion
+				if ((minion != null) && !minion.isDead())
 				{
-					minion = itr.next();
-					// Trigger the aggro condition of the minion
-					if ((minion != null) && !minion.isDead())
+					if (this instanceof RaidBossInstance)
 					{
-						if (this instanceof RaidBossInstance)
-						{
-							minion.addDamage(attacker, 100);
-						}
-						else
-						{
-							minion.addDamage(attacker, 1);
-						}
+						minion.addDamage(attacker, 100);
+					}
+					else
+					{
+						minion.addDamage(attacker, 1);
 					}
 				}
 			}
@@ -242,7 +209,7 @@ public class MonsterInstance extends Attackable
 	 * Gets the spawned minions.
 	 * @return the spawned minions
 	 */
-	public List<MinionInstance> getSpawnedMinions()
+	public Collection<MinionInstance> getSpawnedMinions()
 	{
 		return _minionList.getSpawnedMinions();
 	}
@@ -321,17 +288,6 @@ public class MonsterInstance extends Attackable
 	 */
 	public void deleteSpawnedMinions()
 	{
-		for (MinionInstance minion : _minionList.getSpawnedMinions())
-		{
-			if (minion == null)
-			{
-				continue;
-			}
-			minion.abortAttack();
-			minion.abortCast();
-			minion.deleteMe();
-			_minionList.getSpawnedMinions().remove(minion);
-		}
 		_minionList.clearRespawnList();
 	}
 	

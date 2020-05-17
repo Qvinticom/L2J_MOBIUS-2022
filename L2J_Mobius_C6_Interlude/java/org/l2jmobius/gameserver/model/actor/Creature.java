@@ -19,8 +19,8 @@ package org.l2jmobius.gameserver.model.actor;
 import static org.l2jmobius.gameserver.ai.CtrlIntention.AI_INTENTION_ATTACK;
 
 import java.util.ArrayList;
+import java.util.Collection;
 import java.util.HashMap;
-import java.util.Iterator;
 import java.util.List;
 import java.util.Map;
 import java.util.concurrent.ConcurrentHashMap;
@@ -3332,13 +3332,11 @@ public abstract class Creature extends WorldObject implements ISkillsHolder
 	 */
 	private List<Effect> effectQueueInsert(Effect newStackedEffect, List<Effect> stackQueue)
 	{
-		// Create an Iterator to go through the list of stacked effects in progress on the Creature
-		final Iterator<Effect> queueIterator = stackQueue.iterator();
+		// Go through the list of stacked effects in progress on the Creature.
 		int i = 0;
-		while (queueIterator.hasNext())
+		for (Effect effect : stackQueue)
 		{
-			final Effect cur = queueIterator.next();
-			if (newStackedEffect.getStackOrder() < cur.getStackOrder())
+			if (newStackedEffect.getStackOrder() < effect.getStackOrder())
 			{
 				i++;
 			}
@@ -6280,17 +6278,13 @@ public abstract class Creature extends WorldObject implements ISkillsHolder
 					
 					if (target instanceof MinionInstance)
 					{
-						((MinionInstance) target).getLeader().stopHating(this);
-						
-						final List<MinionInstance> spawnedMinions = ((MinionInstance) target).getLeader().getSpawnedMinions();
-						if ((spawnedMinions != null) && !spawnedMinions.isEmpty())
+						final MonsterInstance leader = ((MinionInstance) target).getLeader();
+						leader.stopHating(this);
+						if (leader.hasMinions())
 						{
-							final Iterator<MinionInstance> itr = spawnedMinions.iterator();
-							MinionInstance minion;
-							while (itr.hasNext())
+							for (MinionInstance minion : leader.getSpawnedMinions())
 							{
-								minion = itr.next();
-								if (((MinionInstance) target).getLeader().getMostHated() == null)
+								if (leader.getMostHated() == null)
 								{
 									((AttackableAI) minion.getAI()).setGlobalAggro(-25);
 									minion.clearAggroList();
@@ -6302,7 +6296,7 @@ public abstract class Creature extends WorldObject implements ISkillsHolder
 									((AttackableAI) minion.getAI()).setGlobalAggro(-25);
 									minion.clearAggroList();
 									minion.getAI().setIntention(CtrlIntention.AI_INTENTION_ACTIVE);
-									minion.addDamage(((MinionInstance) target).getLeader().getMostHated(), 100);
+									minion.addDamage(leader.getMostHated(), 100);
 								}
 							}
 						}
@@ -6310,14 +6304,11 @@ public abstract class Creature extends WorldObject implements ISkillsHolder
 					else
 					{
 						((Attackable) target).stopHating(this);
-						final List<MinionInstance> spawnedMinions = ((MonsterInstance) target).getSpawnedMinions();
+						final Collection<MinionInstance> spawnedMinions = ((MonsterInstance) target).getSpawnedMinions();
 						if ((spawnedMinions != null) && !spawnedMinions.isEmpty())
 						{
-							final Iterator<MinionInstance> itr = spawnedMinions.iterator();
-							MinionInstance minion;
-							while (itr.hasNext())
+							for (MinionInstance minion : spawnedMinions)
 							{
-								minion = itr.next();
 								if (((Attackable) target).getMostHated() == null)
 								{
 									((AttackableAI) minion.getAI()).setGlobalAggro(-25);
@@ -8051,16 +8042,13 @@ public abstract class Creature extends WorldObject implements ISkillsHolder
 								
 								if (creature instanceof MinionInstance)
 								{
-									((MinionInstance) creature).getLeader().stopHating(this);
-									final List<MinionInstance> spawnedMinions = ((MonsterInstance) creature).getSpawnedMinions();
-									if ((spawnedMinions != null) && !spawnedMinions.isEmpty())
+									final MonsterInstance leader = ((MinionInstance) creature).getLeader();
+									leader.stopHating(this);
+									if (leader.hasMinions())
 									{
-										final Iterator<MinionInstance> itr = spawnedMinions.iterator();
-										MinionInstance minion;
-										while (itr.hasNext())
+										for (MinionInstance minion : leader.getSpawnedMinions())
 										{
-											minion = itr.next();
-											if (((Attackable) creature).getMostHated() == null)
+											if (leader.getMostHated() == null)
 											{
 												((AttackableAI) minion.getAI()).setGlobalAggro(-25);
 												minion.clearAggroList();
@@ -8080,14 +8068,11 @@ public abstract class Creature extends WorldObject implements ISkillsHolder
 								else
 								{
 									((Attackable) creature).stopHating(this);
-									final List<MinionInstance> spawnedMinions = ((MonsterInstance) creature).getSpawnedMinions();
+									final Collection<MinionInstance> spawnedMinions = ((MonsterInstance) creature).getSpawnedMinions();
 									if ((spawnedMinions != null) && !spawnedMinions.isEmpty())
 									{
-										final Iterator<MinionInstance> itr = spawnedMinions.iterator();
-										MinionInstance minion;
-										while (itr.hasNext())
+										for (MinionInstance minion : spawnedMinions)
 										{
-											minion = itr.next();
 											if (((Attackable) creature).getMostHated() == null)
 											{
 												((AttackableAI) minion.getAI()).setGlobalAggro(-25);
