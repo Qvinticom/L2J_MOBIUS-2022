@@ -19,6 +19,7 @@ package handlers.admincommandhandlers;
 import java.io.File;
 import java.nio.file.Paths;
 import java.util.Arrays;
+import java.util.List;
 import java.util.Set;
 import java.util.StringTokenizer;
 import java.util.TreeSet;
@@ -252,7 +253,7 @@ public class AdminQuest implements IAdminCommandHandler
 				items = quest.getRegisteredItemIds().length + ":" + items.substring(2);
 			}
 			
-			for (Set<QuestTimer> list : quest.getQuestTimers().values())
+			for (List<QuestTimer> list : quest.getQuestTimers().values())
 			{
 				for (QuestTimer timer : list)
 				{
