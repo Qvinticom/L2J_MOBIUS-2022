@@ -342,7 +342,7 @@ public class VillageMasterInstance extends NpcInstance
 			}
 			final NpcHtmlMessage html = new NpcHtmlMessage(getObjectId());
 			// Subclasses may not be changed while a transformated state.
-			if (player.getTransformation() != null)
+			if (player.isTransformed())
 			{
 				html.setFile(player, "data/html/villagemaster/SubClass_NoTransformed.htm");
 				player.sendPacket(html);

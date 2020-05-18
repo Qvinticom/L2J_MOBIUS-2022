@@ -9779,7 +9779,7 @@ public class PlayerInstance extends Playable
 			restoreEffects();
 			
 			sendPacket(new EtcStatusUpdate(this));
-			for (int i = 0; i < 4; i++)
+			for (int i = 0; i < 3; i++)
 			{
 				_henna[i] = null;
 			}
