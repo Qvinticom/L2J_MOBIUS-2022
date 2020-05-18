@@ -440,11 +440,12 @@ public class EnterWorld extends GameClientPacket
 			DM.addDisconnectedPlayer(player);
 		}
 		
-		// Means that it's not ok multiBox situation, so logout
-		if (!player.checkMultiBox())
+		// Means that it's not ok multiBox situation, so logout.
+		if (!player.canMultiBox())
 		{
 			player.sendMessage("I'm sorry, but multibox is not allowed here.");
 			player.logout();
+			return;
 		}
 		
 		Hellows(player);

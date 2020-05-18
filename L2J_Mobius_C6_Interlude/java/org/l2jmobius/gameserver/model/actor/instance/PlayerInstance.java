@@ -15689,40 +15689,35 @@ public class PlayerInstance extends Playable
 	}
 	
 	/**
-	 * check if local player can make multibox and also refresh local boxes instances number.
+	 * Check if local player can make multibox and also refresh local boxes instances number.
 	 * @return true, if successful
 	 */
-	public boolean checkMultiBox()
+	public boolean canMultiBox()
 	{
-		boolean output = true;
-		int boxCount = 0;
+		boolean canMultiBox = true;
+		int boxCount = 1;
 		final List<String> activeBoxes = new ArrayList<>();
 		if ((_client != null) && (_client.getConnection() != null) && !_client.getConnection().isClosed() && (_client.getConnection().getInetAddress() != null))
 		{
-			final String thisip = _client.getConnection().getInetAddress().getHostAddress();
-			final Collection<PlayerInstance> allPlayers = World.getInstance().getAllPlayers();
-			for (PlayerInstance player : allPlayers)
+			final String playerIP = _client.getConnection().getInetAddress().getHostAddress();
+			for (PlayerInstance player : World.getInstance().getAllPlayers())
 			{
-				if ((player != null) && player.isOnline() && (player.getClient() != null) && (player.getClient().getConnection() != null) && !player.getClient().getConnection().isClosed() && (player.getClient().getConnection().getInetAddress() != null) && !player.getName().equals(getName()))
+				if ((player != null) && (player != this) && player.isOnline() && (player.getClient() != null) && (player.getClient().getConnection() != null) && !player.getClient().getConnection().isClosed() && (player.getClient().getConnection().getInetAddress() != null) && playerIP.equals(player.getClient().getConnection().getInetAddress().getHostAddress()))
 				{
-					final String ip = player.getClient().getConnection().getInetAddress().getHostAddress();
-					if (thisip.equals(ip) && (this != player))
+					boxCount++;
+					activeBoxes.add(player.getName());
+					if (!Config.ALLOW_DUALBOX || (boxCount > Config.ALLOWED_BOXES))
 					{
-						if (!Config.ALLOW_DUALBOX || ((boxCount + 1) > Config.ALLOWED_BOXES)) // actual count + actual player one
-						{
-							output = false;
-							break;
-						}
-						boxCount++;
-						activeBoxes.add(player.getName());
+						canMultiBox = false;
+						break;
 					}
 				}
 			}
 		}
 		
-		if (output)
+		if (canMultiBox)
 		{
-			_activeBoxes = boxCount + 1; // current number of boxes+this one
+			_activeBoxes = boxCount;
 			if (!activeBoxes.contains(getName()))
 			{
 				activeBoxes.add(getName());
@@ -15731,36 +15726,30 @@ public class PlayerInstance extends Playable
 			refreshOtherBoxes();
 		}
 		
-		return output;
+		return canMultiBox;
 	}
 	
 	/**
-	 * increase active boxes number for local player and other boxer for same ip.
+	 * Increase active boxes number for local player and other boxer for same IP.
 	 */
 	public void refreshOtherBoxes()
 	{
 		if ((_client != null) && (_client.getConnection() != null) && !_client.getConnection().isClosed() && (_client.getConnection().getInetAddress() != null))
 		{
-			final String thisip = _client.getConnection().getInetAddress().getHostAddress();
-			final Collection<PlayerInstance> allPlayers = World.getInstance().getAllPlayers();
-			final PlayerInstance[] players = allPlayers.toArray(new PlayerInstance[allPlayers.size()]);
-			for (PlayerInstance player : players)
+			final String playerIP = _client.getConnection().getInetAddress().getHostAddress();
+			for (PlayerInstance player : World.getInstance().getAllPlayers())
 			{
-				if ((player != null) && player.isOnline() && (player.getClient() != null) && (player.getClient().getConnection() != null) && !player.getClient().getConnection().isClosed() && !player.getName().equals(getName()))
+				if ((player != null) && (player != this) && player.isOnline() && (player.getClient() != null) && (player.getClient().getConnection() != null) && !player.getClient().getConnection().isClosed() && !player.getName().equals(getName()) && playerIP.equals(player.getClient().getConnection().getInetAddress().getHostAddress()))
 				{
-					final String ip = player.getClient().getConnection().getInetAddress().getHostAddress();
-					if (thisip.equals(ip) && (this != player))
-					{
-						player._activeBoxes = _activeBoxes;
-						player._activeBoxeCharacters = _activeBoxeCharacters;
-					}
+					player._activeBoxes = _activeBoxes;
+					player._activeBoxeCharacters = _activeBoxeCharacters;
 				}
 			}
 		}
 	}
 	
 	/**
-	 * descrease active boxes number for local player and other boxer for same ip.
+	 * Decrease active boxes number for local player and other boxer for same IP.
 	 */
 	public void decreaseBoxes()
 	{
