@@ -159,7 +159,7 @@ public class Q108_JumbleTumbleDiamondFuss extends Quest
 		switch (st.getState())
 		{
 			case State.CREATED:
-				if (player.getRace() != Race.DARK_ELF)
+				if (player.getRace() != Race.DWARF)
 				{
 					htmltext = "30523-00.htm";
 				}
