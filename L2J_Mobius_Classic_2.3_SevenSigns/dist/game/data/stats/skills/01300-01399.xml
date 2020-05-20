@@ -218,8 +218,8 @@
 			<value level="8">182</value>
 			<value level="9">186</value>
 			<value level="10">191</value>
-			<value level="11">215</value>
-			<value level="12">218</value>
+			<value level="11">210</value>
+			<value level="12">214</value>
 		</mpConsume>
 		<mpInitialConsume>
 			<value level="1">37</value>
@@ -232,8 +232,8 @@
 			<value level="8">46</value>
 			<value level="9">47</value>
 			<value level="10">48</value>
-			<value level="11">48</value>
-			<value level="12">49</value>
+			<value level="11">53</value>
+			<value level="12">53</value>
 		</mpInitialConsume>
 		<operateType>A1</operateType>
 		<reuseDelay>5000</reuseDelay>
@@ -307,8 +307,8 @@
 			<value level="8">91</value>
 			<value level="9">93</value>
 			<value level="10">96</value>
-			<value level="11">107</value>
-			<value level="12">111</value>
+			<value level="11">106</value>
+			<value level="12">109</value>
 		</mpConsume>
 		<mpInitialConsume>
 			<value level="1">19</value>
@@ -321,8 +321,8 @@
 			<value level="8">23</value>
 			<value level="9">24</value>
 			<value level="10">24</value>
-			<value level="11">25</value>
-			<value level="12">25</value>
+			<value level="11">26</value>
+			<value level="12">27</value>
 		</mpInitialConsume>
 		<operateType>A1</operateType>
 		<reuseDelay>5000</reuseDelay>
@@ -1559,12 +1559,12 @@
 			<value level="2">84</value>
 		</magicLvl>
 		<mpConsume>
-			<value level="1">116</value>
-			<value level="2">122</value>
+			<value level="1">93</value>
+			<value level="2">98</value>
 		</mpConsume>
 		<mpInitialConsume>
-			<value level="1">21</value>
-			<value level="2">21</value>
+			<value level="1">24</value>
+			<value level="2">24</value>
 		</mpInitialConsume>
 		<operateType>A2</operateType>
 		<reuseDelay>15000</reuseDelay>
@@ -1622,12 +1622,12 @@
 			<value level="2">82</value>
 		</magicLvl>
 		<mpConsume>
-			<value level="1">116</value>
-			<value level="2">122</value>
+			<value level="1">93</value>
+			<value level="2">98</value>
 		</mpConsume>
 		<mpInitialConsume>
-			<value level="1">21</value>
-			<value level="2">21</value>
+			<value level="1">24</value>
+			<value level="2">24</value>
 		</mpInitialConsume>
 		<operateType>A2</operateType>
 		<reuseDelay>15000</reuseDelay>
@@ -1677,12 +1677,12 @@
 			<value level="2">82</value>
 		</magicLvl>
 		<mpConsume>
-			<value level="1">116</value>
-			<value level="2">122</value>
+			<value level="1">93</value>
+			<value level="2">98</value>
 		</mpConsume>
 		<mpInitialConsume>
-			<value level="1">21</value>
-			<value level="2">21</value>
+			<value level="1">24</value>
+			<value level="2">24</value>
 		</mpInitialConsume>
 		<operateType>A2</operateType>
 		<reuseDelay>15000</reuseDelay>
@@ -1775,8 +1775,8 @@
 		<isMagic>1</isMagic> <!-- Magic Skill -->
 		<lvlBonusRate>2</lvlBonusRate>
 		<magicLvl>76</magicLvl>
-		<mpConsume>95</mpConsume>
-		<mpInitialConsume>21</mpInitialConsume>
+		<mpConsume>93</mpConsume>
+		<mpInitialConsume>24</mpInitialConsume>
 		<operateType>A2</operateType>
 		<reuseDelay>15000</reuseDelay>
 		<magicCriticalRate>5</magicCriticalRate>
@@ -2103,7 +2103,7 @@
 		<hitTime>4000</hitTime>
 		<isMagic>1</isMagic> <!-- Magic Skill -->
 		<magicLvl>76</magicLvl>
-		<mpConsume>70</mpConsume>
+		<mpConsume>56</mpConsume>
 		<mpInitialConsume>14</mpInitialConsume>
 		<operateType>A1</operateType>
 		<reuseDelay>3000</reuseDelay>
@@ -2126,7 +2126,7 @@
 		<hitTime>4000</hitTime>
 		<isMagic>1</isMagic> <!-- Magic Skill -->
 		<magicLvl>76</magicLvl>
-		<mpConsume>70</mpConsume>
+		<mpConsume>56</mpConsume>
 		<mpInitialConsume>14</mpInitialConsume>
 		<operateType>A1</operateType>
 		<reuseDelay>3000</reuseDelay>
@@ -2894,8 +2894,8 @@
 		<isMagic>1</isMagic> <!-- Magic Skill -->
 		<lvlBonusRate>20</lvlBonusRate>
 		<magicLvl>79</magicLvl>
-		<mpConsume>85</mpConsume>
-		<mpInitialConsume>22</mpInitialConsume>
+		<mpConsume>86</mpConsume>
+		<mpInitialConsume>21</mpInitialConsume>
 		<operateType>A2</operateType>
 		<reuseDelay>30000</reuseDelay>
 		<magicCriticalRate>5</magicCriticalRate>
@@ -3481,13 +3481,21 @@
 			<value level="6">78</value>
 		</magicLvl>
 		<mpConsume>
-			<value level="1">133</value>
-			<value level="2">144</value>
-			<value level="3">153</value>
-			<value level="4">162</value>
-			<value level="5">170</value>
-			<value level="6">187</value>
+			<value level="1">106</value>
+			<value level="2">115</value>
+			<value level="3">122</value>
+			<value level="4">130</value>
+			<value level="5">136</value>
+			<value level="6">150</value>
 		</mpConsume>
+		<mpInitialConsume>
+			<value level="1">27</value>
+			<value level="2">29</value>
+			<value level="3">31</value>
+			<value level="4">32</value>
+			<value level="5">34</value>
+			<value level="6">37</value>
+		</mpInitialConsume>
 		<operateType>A2</operateType>
 		<reuseDelay>60000</reuseDelay>
 		<magicCriticalRate>5</magicCriticalRate>
@@ -4345,8 +4353,8 @@
 			<value level="8">52</value>
 			<value level="9">53</value>
 			<value level="10">55</value>
-			<value level="11">61</value>
-			<value level="12">64</value>
+			<value level="11">60</value>
+			<value level="12">63</value>
 		</mpConsume>
 		<mpInitialConsume>
 			<value level="1">11</value>
@@ -4359,8 +4367,8 @@
 			<value level="8">13</value>
 			<value level="9">14</value>
 			<value level="10">14</value>
-			<value level="11">14</value>
-			<value level="12">15</value>
+			<value level="11">15</value>
+			<value level="12">16</value>
 		</mpInitialConsume>
 		<operateType>A2</operateType>
 		<reuseDelay>4000</reuseDelay>

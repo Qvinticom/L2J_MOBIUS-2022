@@ -321,10 +321,13 @@
 			<value level="2">81</value>
 		</magicLvl>
 		<mpConsume>
-			<value level="1">144</value>
-			<value level="2">159</value>
+			<value level="1">115</value>
+			<value level="2">127</value>
 		</mpConsume>
-		<mpInitialConsume>29</mpInitialConsume>
+		<mpInitialConsume>
+			<value level="1">29</value>
+			<value level="2">32</value>
+		</mpInitialConsume>
 		<operateType>A1</operateType>
 		<reuseDelay>5000</reuseDelay>
 		<magicCriticalRate>5</magicCriticalRate>
@@ -357,10 +360,13 @@
 			<value level="2">81</value>
 		</magicLvl>
 		<mpConsume>
-			<value level="1">144</value>
-			<value level="2">159</value>
+			<value level="1">115</value>
+			<value level="2">127</value>
 		</mpConsume>
-		<mpInitialConsume>29</mpInitialConsume>
+		<mpInitialConsume>
+			<value level="1">29</value>
+			<value level="2">32</value>
+		</mpInitialConsume>
 		<operateType>A1</operateType>
 		<reuseDelay>5000</reuseDelay>
 		<magicCriticalRate>5</magicCriticalRate>
@@ -395,12 +401,12 @@
 			<value level="2">2</value>
 		</magicLvl>
 		<mpConsume>
-			<value level="1">144</value>
-			<value level="2">159</value>
+			<value level="1">115</value>
+			<value level="2">127</value>
 		</mpConsume>
 		<mpInitialConsume>
 			<value level="1">29</value>
-			<value level="2">30</value>
+			<value level="2">32</value>
 		</mpInitialConsume>
 		<operateType>A1</operateType>
 		<reuseDelay>5000</reuseDelay>
@@ -3184,8 +3190,8 @@
 		<hitTime>3000</hitTime>
 		<isMagic>1</isMagic> <!-- Magic Skill -->
 		<magicLvl>79</magicLvl>
-		<mpConsume>142</mpConsume>
-		<mpInitialConsume>38</mpInitialConsume>
+		<mpConsume>144</mpConsume>
+		<mpInitialConsume>36</mpInitialConsume>
 		<operateType>A2</operateType>
 		<reuseDelay>3000</reuseDelay>
 		<basicProperty>NONE</basicProperty>

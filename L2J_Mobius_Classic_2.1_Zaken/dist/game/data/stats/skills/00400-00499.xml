@@ -25,7 +25,7 @@
 		<abnormalTime>30</abnormalTime>
 		<abnormalType>CRITICAL_PROB_DOWN</abnormalType>
 		<activateRate>80</activateRate>
-		<basicProperty>MAGIC</basicProperty>
+		<basicProperty>PHYSICAL</basicProperty>
 		<castRange>40</castRange>
 		<coolTime>700</coolTime>
 		<effectPoint>
@@ -179,7 +179,7 @@
 		<abnormalTime>30</abnormalTime>
 		<abnormalType>CRITICAL_DMG_DOWN</abnormalType>
 		<activateRate>80</activateRate>
-		<basicProperty>MAGIC</basicProperty>
+		<basicProperty>PHYSICAL</basicProperty>
 		<castRange>40</castRange>
 		<coolTime>700</coolTime>
 		<effectPoint>
@@ -2590,11 +2590,17 @@
 			<value level="4">74</value>
 		</magicLvl>
 		<mpConsume>
-			<value level="1">58</value>
-			<value level="2">62</value>
-			<value level="3">65</value>
-			<value level="4">69</value>
+			<value level="1">46</value>
+			<value level="2">50</value>
+			<value level="3">52</value>
+			<value level="4">55</value>
 		</mpConsume>
+		<mpInitialConsume>
+			<value level="1">12</value>
+			<value level="2">12</value>
+			<value level="3">13</value>
+			<value level="4">14</value>
+		</mpInitialConsume>
 		<operateType>A1</operateType>
 		<reuseDelay>5000</reuseDelay>
 		<magicCriticalRate>5</magicCriticalRate>
