@@ -45,25 +45,11 @@ public class AdminPledge implements IAdminCommandHandler
 		"admin_pledge"
 	};
 	
-	private enum CommandEnum
-	{
-		admin_pledge
-	}
-	
-	private enum ActionEnum
-	{
-		create,
-		dismiss,
-		info,
-		setlevel,
-		rep
-	}
-	
 	@Override
 	public boolean useAdminCommand(String command, PlayerInstance activeChar)
 	{
 		final StringTokenizer st = new StringTokenizer(command);
-		final CommandEnum comm = CommandEnum.valueOf(st.nextToken());
+		final String comm = st.nextToken();
 		if (comm == null)
 		{
 			return false;
@@ -71,7 +57,7 @@ public class AdminPledge implements IAdminCommandHandler
 		
 		switch (comm)
 		{
-			case admin_pledge:
+			case "admin_pledge":
 			{
 				final WorldObject target = activeChar.getTarget();
 				PlayerInstance player = null;
@@ -85,161 +71,162 @@ public class AdminPledge implements IAdminCommandHandler
 					showMainPage(activeChar);
 					return false;
 				}
+				
 				final String name = player.getName();
-				ActionEnum action = null;
+				String action = null;
 				String parameter = null;
 				if (st.hasMoreTokens())
 				{
-					action = ActionEnum.valueOf(st.nextToken()); // create|info|dismiss|setlevel|rep
-					if (action == null)
-					{
-						BuilderUtil.sendSysMessage(activeChar, "Not allowed Action on Clan");
-						showMainPage(activeChar);
-						return false;
-					}
+					action = st.nextToken(); // create|info|dismiss|setlevel|rep
 				}
-				if ((action != ActionEnum.create) && !player.isClanLeader())
+				
+				if (action == null)
+				{
+					BuilderUtil.sendSysMessage(activeChar, "Not allowed Action on Clan");
+					showMainPage(activeChar);
+					return false;
+				}
+				
+				if (!action.equals("create") && !player.isClanLeader())
 				{
 					activeChar.sendPacket(new SystemMessage(SystemMessageId.S1_IS_NOT_A_CLAN_LEADER).addString(name));
 					showMainPage(activeChar);
 					return false;
 				}
+				
 				if (st.hasMoreTokens())
 				{
 					parameter = st.nextToken(); // clanname|nothing|nothing|level|rep_points
 				}
-				if (action != null)
+				
+				switch (action)
 				{
-					switch (action)
+					case "create":
 					{
-						case create:
+						if ((parameter == null) || (parameter.length() == 0))
 						{
-							if ((parameter == null) || (parameter.length() == 0))
-							{
-								BuilderUtil.sendSysMessage(activeChar, "Please, enter clan name.");
-								showMainPage(activeChar);
-								return false;
-							}
-							final long cet = player.getClanCreateExpiryTime();
-							player.setClanCreateExpiryTime(0);
-							final Clan clan = ClanTable.getInstance().createClan(player, parameter);
-							if (clan != null)
-							{
-								BuilderUtil.sendSysMessage(activeChar, "Clan " + parameter + " created. Leader: " + player.getName());
-								return true;
-							}
-							player.setClanCreateExpiryTime(cet);
-							BuilderUtil.sendSysMessage(activeChar, "There was a problem while creating the clan.");
+							BuilderUtil.sendSysMessage(activeChar, "Please, enter clan name.");
 							showMainPage(activeChar);
 							return false;
 						}
-						case dismiss:
+						final long cet = player.getClanCreateExpiryTime();
+						player.setClanCreateExpiryTime(0);
+						final Clan clan = ClanTable.getInstance().createClan(player, parameter);
+						if (clan != null)
 						{
-							ClanTable.getInstance().destroyClan(player.getClanId());
-							final Clan clan = player.getClan();
-							if (clan == null)
-							{
-								BuilderUtil.sendSysMessage(activeChar, "Clan disbanded.");
-								return true;
-							}
-							BuilderUtil.sendSysMessage(activeChar, "There was a problem while destroying the clan.");
+							BuilderUtil.sendSysMessage(activeChar, "Clan " + parameter + " created. Leader: " + player.getName());
+							return true;
+						}
+						player.setClanCreateExpiryTime(cet);
+						BuilderUtil.sendSysMessage(activeChar, "There was a problem while creating the clan.");
+						showMainPage(activeChar);
+						return false;
+					}
+					case "dismiss":
+					{
+						ClanTable.getInstance().destroyClan(player.getClanId());
+						final Clan clan = player.getClan();
+						if (clan == null)
+						{
+							BuilderUtil.sendSysMessage(activeChar, "Clan disbanded.");
+							return true;
+						}
+						BuilderUtil.sendSysMessage(activeChar, "There was a problem while destroying the clan.");
+						showMainPage(activeChar);
+						return false;
+					}
+					case "info":
+					{
+						activeChar.sendPacket(new GMViewPledgeInfo(player.getClan(), player));
+						return true;
+					}
+					case "rep":
+					{
+						if (parameter == null)
+						{
+							BuilderUtil.sendSysMessage(activeChar, "Usage: //pledge <setlevel|rep> <number>");
 							showMainPage(activeChar);
 							return false;
 						}
-						case info:
+						int points = player.getClan().getReputationScore();
+						try
 						{
-							activeChar.sendPacket(new GMViewPledgeInfo(player.getClan(), player));
-							return true;
+							points = Integer.parseInt(parameter);
 						}
-						case rep:
+						catch (NumberFormatException nfe)
 						{
-							if (parameter == null)
-							{
-								BuilderUtil.sendSysMessage(activeChar, "Usage: //pledge <setlevel|rep> <number>");
-								showMainPage(activeChar);
-								return false;
-							}
-							int points = player.getClan().getReputationScore();
-							try
-							{
-								points = Integer.parseInt(parameter);
-							}
-							catch (NumberFormatException nfe)
-							{
-								BuilderUtil.sendSysMessage(activeChar, "Points incorrect.");
-								BuilderUtil.sendSysMessage(activeChar, "Usage: //pledge <setlevel|rep> <number>");
-								showMainPage(activeChar);
-								return false;
-							}
-							final Clan clan = player.getClan();
-							if (clan.getLevel() < 5)
-							{
-								BuilderUtil.sendSysMessage(activeChar, "Only clans of level 5 or above may receive reputation points.");
-								showMainPage(activeChar);
-								return false;
-							}
-							clan.setReputationScore(clan.getReputationScore() + points, true);
-							BuilderUtil.sendSysMessage(activeChar, "You " + (points > 0 ? "add " : "remove ") + Math.abs(points) + " points " + (points > 0 ? "to " : "from ") + clan.getName() + "'s reputation. Their current score is " + clan.getReputationScore());
-							return true;
+							BuilderUtil.sendSysMessage(activeChar, "Points incorrect.");
+							BuilderUtil.sendSysMessage(activeChar, "Usage: //pledge <setlevel|rep> <number>");
+							showMainPage(activeChar);
+							return false;
 						}
-						case setlevel:
+						final Clan clan = player.getClan();
+						if (clan.getLevel() < 5)
 						{
-							if (parameter == null)
-							{
-								BuilderUtil.sendSysMessage(activeChar, "Usage: //pledge <setlevel|rep> <number>");
-								showMainPage(activeChar);
-								return false;
-							}
-							int level = player.getClan().getLevel();
-							try
-							{
-								level = Integer.parseInt(parameter);
-							}
-							catch (NumberFormatException nfe)
-							{
-								BuilderUtil.sendSysMessage(activeChar, "Level incorrect.");
-								BuilderUtil.sendSysMessage(activeChar, "Usage: //pledge <setlevel|rep> <number>");
-								showMainPage(activeChar);
-								return false;
-							}
-							if ((level >= 0) && (level < 9))
-							{
-								player.getClan().changeLevel(level);
-								BuilderUtil.sendSysMessage(activeChar, "You set level " + level + " for clan " + player.getClan().getName());
-								return true;
-							}
+							BuilderUtil.sendSysMessage(activeChar, "Only clans of level 5 or above may receive reputation points.");
+							showMainPage(activeChar);
+							return false;
+						}
+						clan.setReputationScore(clan.getReputationScore() + points, true);
+						BuilderUtil.sendSysMessage(activeChar, "You " + (points > 0 ? "add " : "remove ") + Math.abs(points) + " points " + (points > 0 ? "to " : "from ") + clan.getName() + "'s reputation. Their current score is " + clan.getReputationScore());
+						return true;
+					}
+					case "setlevel":
+					{
+						if (parameter == null)
+						{
+							BuilderUtil.sendSysMessage(activeChar, "Usage: //pledge <setlevel|rep> <number>");
+							showMainPage(activeChar);
+							return false;
+						}
+						int level = player.getClan().getLevel();
+						try
+						{
+							level = Integer.parseInt(parameter);
+						}
+						catch (NumberFormatException nfe)
+						{
 							BuilderUtil.sendSysMessage(activeChar, "Level incorrect.");
 							BuilderUtil.sendSysMessage(activeChar, "Usage: //pledge <setlevel|rep> <number>");
 							showMainPage(activeChar);
 							return false;
 						}
-						default:
+						if ((level >= 0) && (level < 9))
 						{
-							BuilderUtil.sendSysMessage(activeChar, "Clan Action not allowed...");
-							showMainPage(activeChar);
-							return false;
+							player.getClan().changeLevel(level);
+							BuilderUtil.sendSysMessage(activeChar, "You set level " + level + " for clan " + player.getClan().getName());
+							return true;
 						}
+						BuilderUtil.sendSysMessage(activeChar, "Level incorrect.");
+						BuilderUtil.sendSysMessage(activeChar, "Usage: //pledge <setlevel|rep> <number>");
+						showMainPage(activeChar);
+						return false;
+					}
+					default:
+					{
+						BuilderUtil.sendSysMessage(activeChar, "Clan Action not allowed...");
+						showMainPage(activeChar);
+						return false;
 					}
 				}
-				return false;
 			}
 			default:
 			{
 				BuilderUtil.sendSysMessage(activeChar, "Clan command not allowed");
 				showMainPage(activeChar);
-				return false;
 			}
 		}
+		return false;
+	}
+	
+	private void showMainPage(PlayerInstance activeChar)
+	{
+		AdminHelpPage.showHelpPage(activeChar, "game_menu.htm");
 	}
 	
 	@Override
 	public String[] getAdminCommandList()
 	{
 		return ADMIN_COMMANDS;
-	}
-	
-	private void showMainPage(PlayerInstance activeChar)
-	{
-		AdminHelpPage.showHelpPage(activeChar, "game_menu.htm");
 	}
 }

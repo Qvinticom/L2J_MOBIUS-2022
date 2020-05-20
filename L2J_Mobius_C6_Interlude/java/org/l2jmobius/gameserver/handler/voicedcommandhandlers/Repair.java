@@ -48,6 +48,12 @@ public class Repair implements IVoicedCommandHandler, ICustomByPassHandler
 		"repair",
 	};
 	
+	private static final String[] BYPASS_COMMANDS =
+	{
+		"repair",
+		"repair_close_win"
+	};
+	
 	@Override
 	public boolean useVoicedCommand(String command, PlayerInstance activeChar, String target)
 	{
@@ -230,41 +236,16 @@ public class Repair implements IVoicedCommandHandler, ICustomByPassHandler
 	}
 	
 	@Override
-	public String[] getVoicedCommandList()
-	{
-		return VOICED_COMMANDS;
-	}
-	
-	private static final String[] _BYPASSCMD =
-	{
-		"repair",
-		"repair_close_win"
-	};
-	
-	private enum CommandEnum
-	{
-		repair,
-		repair_close_win
-	}
-	
-	@Override
-	public String[] getByPassCommands()
-	{
-		return _BYPASSCMD;
-	}
-	
-	@Override
 	public void handleCommand(String command, PlayerInstance activeChar, String repairChar)
 	{
-		final CommandEnum comm = CommandEnum.valueOf(command);
-		if (comm == null)
+		if (command == null)
 		{
 			return;
 		}
 		
-		switch (comm)
+		switch (command)
 		{
-			case repair:
+			case "repair":
 			{
 				if ((repairChar == null) || repairChar.equals(""))
 				{
@@ -310,11 +291,23 @@ public class Repair implements IVoicedCommandHandler, ICustomByPassHandler
 				activeChar.sendPacket(npcHtmlMessage);
 				return;
 			}
-			case repair_close_win:
+			case "repair_close_win":
 			{
 				// Do nothing.
 				return;
 			}
 		}
+	}
+	
+	@Override
+	public String[] getVoicedCommandList()
+	{
+		return VOICED_COMMANDS;
+	}
+	
+	@Override
+	public String[] getByPassCommands()
+	{
+		return BYPASS_COMMANDS;
 	}
 }

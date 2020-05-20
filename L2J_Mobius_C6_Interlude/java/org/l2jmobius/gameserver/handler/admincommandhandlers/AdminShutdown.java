@@ -42,26 +42,19 @@ public class AdminShutdown implements IAdminCommandHandler
 		"admin_server_abort"
 	};
 	
-	private enum CommandEnum
-	{
-		admin_server_shutdown,
-		admin_server_restart,
-		admin_server_abort
-	}
-	
 	@Override
 	public boolean useAdminCommand(String command, PlayerInstance activeChar)
 	{
 		final StringTokenizer st = new StringTokenizer(command);
-		final CommandEnum comm = CommandEnum.valueOf(st.nextToken());
-		if (comm == null)
+		final String comm = st.nextToken();
+		if (command == null)
 		{
 			return false;
 		}
 		
 		switch (comm)
 		{
-			case admin_server_shutdown:
+			case "admin_server_shutdown":
 			{
 				if (st.hasMoreTokens())
 				{
@@ -86,7 +79,7 @@ public class AdminShutdown implements IAdminCommandHandler
 				sendHtmlForm(activeChar);
 				return false;
 			}
-			case admin_server_restart:
+			case "admin_server_restart":
 			{
 				if (st.hasMoreTokens())
 				{
@@ -111,19 +104,13 @@ public class AdminShutdown implements IAdminCommandHandler
 				sendHtmlForm(activeChar);
 				return false;
 			}
-			case admin_server_abort:
+			case "admin_server_abort":
 			{
 				serverAbort(activeChar);
 				return true;
 			}
 		}
 		return false;
-	}
-	
-	@Override
-	public String[] getAdminCommandList()
-	{
-		return ADMIN_COMMANDS;
 	}
 	
 	private void sendHtmlForm(PlayerInstance activeChar)
@@ -155,5 +142,11 @@ public class AdminShutdown implements IAdminCommandHandler
 	private void serverAbort(PlayerInstance activeChar)
 	{
 		Shutdown.getInstance().abort(activeChar);
+	}
+	
+	@Override
+	public String[] getAdminCommandList()
+	{
+		return ADMIN_COMMANDS;
 	}
 }

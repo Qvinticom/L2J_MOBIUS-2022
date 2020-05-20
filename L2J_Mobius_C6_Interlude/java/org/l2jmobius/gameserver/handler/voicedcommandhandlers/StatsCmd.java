@@ -29,24 +29,17 @@ public class StatsCmd implements IVoicedCommandHandler
 		"stats"
 	};
 	
-	private enum CommandEnum
-	{
-		stat,
-		stats
-	}
-	
 	@Override
 	public boolean useVoicedCommand(String command, PlayerInstance activeChar, String target)
 	{
-		final CommandEnum comm = CommandEnum.valueOf(command);
-		if (comm == null)
+		if (command == null)
 		{
 			return false;
 		}
 		
-		switch (comm)
+		switch (command)
 		{
-			case stat:
+			case "stat":
 			{
 				if (!Config.ALLOW_DETAILED_STATS_VIEW)
 				{
@@ -117,7 +110,7 @@ public class StatsCmd implements IVoicedCommandHandler
 				activeChar.sendPacket(adminReply);
 				return true;
 			}
-			case stats:
+			case "stats":
 			{
 				if (!Config.ALLOW_SIMPLE_STATS_VIEW)
 				{
@@ -138,6 +131,7 @@ public class StatsCmd implements IVoicedCommandHandler
 					activeChar.sendMessage("You can only get the info of a player.");
 					return false;
 				}
+				
 				final PlayerInstance targetp = (PlayerInstance) activeChar.getTarget();
 				if (targetp != null)
 				{
@@ -156,13 +150,12 @@ public class StatsCmd implements IVoicedCommandHandler
 					activeChar.sendPacket(adminReply);
 					return true;
 				}
-				return false;
-			}
-			default:
-			{
+				
 				return false;
 			}
 		}
+		
+		return false;
 	}
 	
 	@Override
