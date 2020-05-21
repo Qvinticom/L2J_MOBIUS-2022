@@ -62,7 +62,6 @@ public class DailyTaskManager extends AbstractEventManager<AbstractEvent<?>>
 	@ScheduleTarget
 	private void onReset()
 	{
-		resetExtendDrop();
 		resetDailyMissionRewards();
 		resetDailySkills();
 		resetRecommends();
@@ -137,30 +136,6 @@ public class DailyTaskManager extends AbstractEventManager<AbstractEvent<?>>
 			LOGGER.log(Level.WARNING, "Error while updating vitality", e);
 		}
 		LOGGER.info("Vitality resetted");
-	}
-	
-	private void resetExtendDrop()
-	{
-		// Update data for offline players.
-		try (Connection con = DatabaseFactory.getConnection();
-			PreparedStatement ps = con.prepareStatement("DELETE FROM character_variables WHERE var = ?"))
-		{
-			ps.setString(1, PlayerVariables.EXTEND_DROP);
-			ps.execute();
-		}
-		catch (Exception e)
-		{
-			LOGGER.log(Level.SEVERE, "Could not reset extend drop : ", e);
-		}
-		
-		// Update data for online players.
-		World.getInstance().getPlayers().stream().forEach(player ->
-		{
-			player.getVariables().remove(PlayerVariables.EXTEND_DROP);
-			player.getVariables().storeMe();
-		});
-		
-		LOGGER.info("Daily world chat points has been resetted.");
 	}
 	
 	private void resetDailySkills()

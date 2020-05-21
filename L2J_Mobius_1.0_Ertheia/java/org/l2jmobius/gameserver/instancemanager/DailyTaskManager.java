@@ -61,7 +61,6 @@ public class DailyTaskManager extends AbstractEventManager<AbstractEvent<?>>
 	private void onReset()
 	{
 		resetClanBonus();
-		resetExtendDrop();
 		resetDailySkills();
 		resetRecommends();
 		resetWorldChatPoints();
@@ -141,30 +140,6 @@ public class DailyTaskManager extends AbstractEventManager<AbstractEvent<?>>
 	{
 		ClanTable.getInstance().getClans().forEach(Clan::resetClanBonus);
 		LOGGER.info("Daily clan bonus has been resetted.");
-	}
-	
-	private void resetExtendDrop()
-	{
-		// Update data for offline players.
-		try (Connection con = DatabaseFactory.getConnection();
-			PreparedStatement ps = con.prepareStatement("DELETE FROM character_variables WHERE var = ?"))
-		{
-			ps.setString(1, PlayerVariables.EXTEND_DROP);
-			ps.execute();
-		}
-		catch (Exception e)
-		{
-			LOGGER.log(Level.SEVERE, "Could not reset extend drop : ", e);
-		}
-		
-		// Update data for online players.
-		World.getInstance().getPlayers().stream().forEach(player ->
-		{
-			player.getVariables().remove(PlayerVariables.EXTEND_DROP);
-			player.getVariables().storeMe();
-		});
-		
-		LOGGER.info("Daily world chat points has been resetted.");
 	}
 	
 	private void resetDailySkills()
