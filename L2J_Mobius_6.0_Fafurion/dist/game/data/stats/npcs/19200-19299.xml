@@ -2624,13 +2624,6 @@
 			<radius normal="16" grown="1.2" />
 			<height normal="50" />
 		</collision>
-		<extendDrop>
-			<id>1</id>
-			<id>2</id>
-			<id>3</id>
-			<id>4</id>
-			<id>5</id>
-		</extendDrop>
 	</npc>
 	<npc id="19271" level="70" type="Npc" name="Verdof's Treasure Chest">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
@@ -3331,9 +3324,6 @@
 			<radius normal="15" />
 			<height normal="27" />
 		</collision>
-		<extendDrop>
-			<id>1</id>
-		</extendDrop>
 		<dropLists>
 			<drop>
 				<item id="17376" min="1" max="1" chance="4.957" /> <!-- Trace of Kimerian's Cavern -->

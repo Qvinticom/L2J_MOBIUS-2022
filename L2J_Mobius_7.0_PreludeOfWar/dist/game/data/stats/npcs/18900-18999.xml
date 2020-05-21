@@ -2552,9 +2552,6 @@
 			<radius normal="36" />
 			<height normal="50" />
 		</collision>
-		<extendDrop>
-			<id>1</id>
-		</extendDrop>
 	</npc>
 	<npc id="18973" level="90" type="Monster" name="Treekin Defender" title="Experienced Scout">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
@@ -2603,9 +2600,6 @@
 			<radius normal="36" />
 			<height normal="50" />
 		</collision>
-		<extendDrop>
-			<id>1</id>
-		</extendDrop>
 	</npc>
 	<npc id="18974" level="90" type="Monster" name="Centaur Archer" title="Scout">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
@@ -2650,9 +2644,6 @@
 			<radius normal="14" />
 			<height normal="24" />
 		</collision>
-		<extendDrop>
-			<id>1</id>
-		</extendDrop>
 	</npc>
 	<npc id="18975" level="90" type="Monster" name="Centaur Archer" title="Experienced Scout">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
@@ -2700,9 +2691,6 @@
 			<radius normal="14" />
 			<height normal="24" />
 		</collision>
-		<extendDrop>
-			<id>1</id>
-		</extendDrop>
 	</npc>
 	<npc id="18976" level="91" type="Monster" name="Beorning Berserker" title="Scout">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
@@ -2748,9 +2736,6 @@
 			<radius normal="32" />
 			<height normal="26.8" />
 		</collision>
-		<extendDrop>
-			<id>1</id>
-		</extendDrop>
 	</npc>
 	<npc id="18977" level="91" type="Monster" name="Beorning Berserker" title="Experienced Scout">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
@@ -2799,9 +2784,6 @@
 			<radius normal="32" />
 			<height normal="26.8" />
 		</collision>
-		<extendDrop>
-			<id>1</id>
-		</extendDrop>
 	</npc>
 	<npc id="18978" level="96" type="Monster" name="Orbis' Victim" title="Cursed">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
@@ -2840,13 +2822,6 @@
 			<radius normal="18" />
 			<height normal="46" />
 		</collision>
-		<extendDrop>
-			<id>1</id>
-			<id>2</id>
-			<id>3</id>
-			<id>4</id>
-			<id>5</id>
-		</extendDrop>
 		<dropLists>
 			<drop>
 				<item id="17401" min="1" max="1" chance="0.003" /> <!-- Seraph Shield - Heavy Armor -->
@@ -2910,13 +2885,6 @@
 			<radius normal="18" />
 			<height normal="46" />
 		</collision>
-		<extendDrop>
-			<id>1</id>
-			<id>2</id>
-			<id>3</id>
-			<id>4</id>
-			<id>5</id>
-		</extendDrop>
 		<dropLists>
 			<drop>
 				<item id="17397" min="1" max="1" chance="0.003" /> <!-- Seraph Breastplate - Heavy Armor -->
@@ -2981,13 +2949,6 @@
 			<radius normal="18" />
 			<height normal="46" />
 		</collision>
-		<extendDrop>
-			<id>1</id>
-			<id>2</id>
-			<id>3</id>
-			<id>4</id>
-			<id>5</id>
-		</extendDrop>
 		<dropLists>
 			<drop>
 				<item id="17401" min="1" max="1" chance="0.0075" /> <!-- Seraph Shield - Heavy Armor -->
@@ -3049,13 +3010,6 @@
 			<radius normal="18" />
 			<height normal="46" />
 		</collision>
-		<extendDrop>
-			<id>1</id>
-			<id>2</id>
-			<id>3</id>
-			<id>4</id>
-			<id>5</id>
-		</extendDrop>
 		<dropLists>
 			<drop>
 				<item id="17397" min="1" max="1" chance="0.003" /> <!-- Seraph Breastplate - Heavy Armor -->
@@ -3118,13 +3072,6 @@
 			<radius normal="18" />
 			<height normal="46" />
 		</collision>
-		<extendDrop>
-			<id>1</id>
-			<id>2</id>
-			<id>3</id>
-			<id>4</id>
-			<id>5</id>
-		</extendDrop>
 		<dropLists>
 			<drop>
 				<item id="17398" min="1" max="1" chance="0.0009" /> <!-- Seraph Gaiters - Heavy Armor -->
@@ -3183,13 +3130,6 @@
 			<radius normal="18" />
 			<height normal="46" />
 		</collision>
-		<extendDrop>
-			<id>1</id>
-			<id>2</id>
-			<id>3</id>
-			<id>4</id>
-			<id>5</id>
-		</extendDrop>
 		<dropLists>
 			<drop>
 				<item id="17401" min="1" max="1" chance="0.003" /> <!-- Seraph Shield - Heavy Armor -->

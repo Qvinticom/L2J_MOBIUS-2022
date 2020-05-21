@@ -22,7 +22,6 @@ import java.util.Collection;
 import java.util.LinkedList;
 import java.util.List;
 import java.util.Map;
-import java.util.Objects;
 import java.util.Optional;
 import java.util.concurrent.ConcurrentHashMap;
 import java.util.concurrent.atomic.AtomicReference;
@@ -36,7 +35,6 @@ import org.l2jmobius.gameserver.ai.AttackableAI;
 import org.l2jmobius.gameserver.ai.CreatureAI;
 import org.l2jmobius.gameserver.ai.CtrlEvent;
 import org.l2jmobius.gameserver.ai.CtrlIntention;
-import org.l2jmobius.gameserver.data.xml.impl.ExtendDropData;
 import org.l2jmobius.gameserver.datatables.EventDroplist;
 import org.l2jmobius.gameserver.datatables.ItemTable;
 import org.l2jmobius.gameserver.enums.ChatType;
@@ -1007,7 +1005,6 @@ public class Attackable extends Npc
 		}
 		
 		CursedWeaponsManager.getInstance().checkDrop(this, player);
-		npcTemplate.getExtendDrop().stream().map(ExtendDropData.getInstance()::getExtendDropById).filter(Objects::nonNull).forEach(e -> e.reward(player, this));
 		if (isSpoiled() && !_plundered)
 		{
 			_sweepItems.set(npcTemplate.calculateDrops(DropType.SPOIL, this, player));

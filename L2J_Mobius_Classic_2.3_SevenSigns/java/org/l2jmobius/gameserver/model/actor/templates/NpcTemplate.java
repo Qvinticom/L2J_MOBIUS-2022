@@ -119,9 +119,6 @@ public class NpcTemplate extends CreatureTemplate implements IIdentifiable
 	private MpRewardType _mpRewardType;
 	private int _mpRewardTicks;
 	private MpRewardAffectType _mpRewardAffectType;
-	
-	private List<Integer> _extendDrop;
-	
 	private ElementalType _elementalType;
 	private long _attributeExp;
 	
@@ -210,7 +207,6 @@ public class NpcTemplate extends CreatureTemplate implements IIdentifiable
 		_mpRewardType = set.getEnum("mpRewardType", MpRewardType.class, MpRewardType.DIFF);
 		_mpRewardTicks = set.getInt("mpRewardTicks", 0);
 		_mpRewardAffectType = set.getEnum("mpRewardAffectType", MpRewardAffectType.class, MpRewardAffectType.SOLO);
-		_extendDrop = set.getList("extendDrop", Integer.class);
 		if (Config.ENABLE_NPC_STAT_MULTIPLIERS) // Custom NPC Stat Multipliers
 		{
 			switch (_type)
@@ -998,10 +994,5 @@ public class NpcTemplate extends CreatureTemplate implements IIdentifiable
 	public static boolean isAssignableTo(Object obj, Class<?> clazz)
 	{
 		return isAssignableTo(obj.getClass(), clazz);
-	}
-	
-	public List<Integer> getExtendDrop()
-	{
-		return _extendDrop == null ? Collections.emptyList() : _extendDrop;
 	}
 }

@@ -65,7 +65,6 @@ import org.l2jmobius.gameserver.data.xml.impl.EnchantSkillGroupsData;
 import org.l2jmobius.gameserver.data.xml.impl.EnsoulData;
 import org.l2jmobius.gameserver.data.xml.impl.EventEngineData;
 import org.l2jmobius.gameserver.data.xml.impl.ExperienceData;
-import org.l2jmobius.gameserver.data.xml.impl.ExtendDropData;
 import org.l2jmobius.gameserver.data.xml.impl.FakePlayerData;
 import org.l2jmobius.gameserver.data.xml.impl.FenceData;
 import org.l2jmobius.gameserver.data.xml.impl.FishingData;
@@ -322,7 +321,6 @@ public class GameServer
 		NpcData.getInstance();
 		FakePlayerData.getInstance();
 		FakePlayerChatManager.getInstance();
-		ExtendDropData.getInstance();
 		SpawnData.getInstance();
 		MonsterBookData.getInstance();
 		WalkingManager.getInstance();

@@ -463,13 +463,6 @@ public class NpcData implements IXmlReader
 									}
 									break;
 								}
-								case "extenddrop":
-								{
-									final List<Integer> extendDrop = new ArrayList<>();
-									forEach(npcNode, "id", idNode -> extendDrop.add(Integer.parseInt(idNode.getTextContent())));
-									set.set("extendDrop", extendDrop);
-									break;
-								}
 								case "collision":
 								{
 									for (Node collisionNode = npcNode.getFirstChild(); collisionNode != null; collisionNode = collisionNode.getNextSibling())
