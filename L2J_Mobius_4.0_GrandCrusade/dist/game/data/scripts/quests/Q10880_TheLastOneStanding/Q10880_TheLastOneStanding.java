@@ -89,21 +89,6 @@ public class Q10880_TheLastOneStanding extends Quest
 		23510, // Atelia Flame Master 102
 		23511, // Fortress Archon 102
 		23512, // Atelia High Priest 102
-		// Shadow of the Mother Tree
-		24117, // Crystal Reep
-		24118, // Crystal Reep
-		24119, // Crystal Needle
-		24120, // Crystal Needle
-		24121, // Treant Blossom
-		24122, // Treant Blossom
-		24123, // Flush Teasle
-		24124, // Flush Teasle
-		24125, // Creeper Rampike
-		24126, // Creeper Rampike
-		24139, // Reep Child
-		24140, // Needle Child
-		24141, // Blossom Child
-		24142 // Teasle Child
 	};
 	
 	// Misc
