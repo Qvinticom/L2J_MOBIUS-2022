@@ -37,7 +37,7 @@
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="80603" name="15th Anniversary Magic Fork" type="EtcItem">
-		<!-- A fork used during the 15 Anniversary raid. Cake Party. When used on a �Delicious 15th Anniversary Cake'. you eat 1-6 cake pieces. Each cake piece eaten recovers a small amount of Vitality. -->
+		<!-- A fork used during the 15 Anniversary raid. Cake Party. When used on a 'Delicious 15th Anniversary Cake'. you eat 1-6 cake pieces. Each cake piece eaten recovers a small amount of Vitality. -->
 		<set name="icon" val="icon.ev_15th_foke" />
 		<set name="default_action" val="SKILL_REDUCE_ON_SKILL_SUCCESS" />
 		<set name="material" val="PAPER" />
@@ -48,7 +48,7 @@
 		<set name="is_sellable" val="false" />
 	</item>
 	<item id="80604" name="15th Anniversary Firecracker" type="EtcItem">
-		<!-- A firecracker item for the 15th Anniversary. Using it starts a fireworks display that lasts 10 seconds. The fireworks generates a magic number between 1 and 6. and using the item again during the fireworks adds further 1-6 to the first magic number generated. You receive �15th Anniversary Coins' when the display ends. You receive the maximum reward when the magic number reaches 15. and the fireworks end when the number exceeds 15. -->
+		<!-- A firecracker item for the 15th Anniversary. Using it starts a fireworks display that lasts 10 seconds. The fireworks generates a magic number between 1 and 6. and using the item again during the fireworks adds further 1-6 to the first magic number generated. You receive '15th Anniversary Coins' when the display ends. You receive the maximum reward when the magic number reaches 15. and the fireworks end when the number exceeds 15. -->
 		<set name="icon" val="icon.ev_15th_firework" />
 		<set name="default_action" val="SKILL_REDUCE" />
 		<set name="material" val="PAPER" />
