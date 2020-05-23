@@ -1,7 +1,6 @@
 ﻿<?xml version="1.0" encoding="UTF-8"?>
 <list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../xsd/npcs.xsd">
 	<npc id="21300" level="71" type="Monster" name="Eye of Guide">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="90" />
 			<param name="MoveAroundSocial1" value="90" />
@@ -75,7 +74,6 @@
 		</collision>
 	</npc>
 	<npc id="21301" level="71" type="Monster" name="Gaze of Nightmare">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="40" />
 			<param name="MoveAroundSocial1" value="40" />
@@ -155,7 +153,6 @@
 		</collision>
 	</npc>
 	<npc id="21302" level="72" type="Monster" name="Eye of Watchman">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="90" />
 			<param name="MoveAroundSocial1" value="90" />
@@ -234,7 +231,6 @@
 		</collision>
 	</npc>
 	<npc id="21303" level="74" type="Monster" name="Homunculus">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="80" />
 			<param name="MoveAroundSocial1" value="80" />
@@ -305,7 +301,6 @@
 		</collision>
 	</npc>
 	<npc id="21304" level="75" type="Monster" name="Grendel Slave">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="115" />
 			<param name="MoveAroundSocial1" value="115" />
@@ -383,7 +378,6 @@
 		</collision>
 	</npc>
 	<npc id="21305" level="73" type="Monster" name="Eye of Pilgrim">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="90" />
 			<param name="MoveAroundSocial1" value="90" />
@@ -458,7 +452,6 @@
 		</collision>
 	</npc>
 	<npc id="21306" level="76" type="Monster" name="Disciples of Protection">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="130" />
 			<param name="MoveAroundSocial1" value="130" />
@@ -531,7 +524,6 @@
 		</collision>
 	</npc>
 	<npc id="21307" level="74" type="Monster" name="Elder Homunculus">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="80" />
 			<param name="MoveAroundSocial1" value="80" />
@@ -605,7 +597,6 @@
 		</collision>
 	</npc>
 	<npc id="21308" level="77" type="Monster" name="Disciples of Punishment">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="130" />
 			<param name="MoveAroundSocial1" value="130" />
@@ -687,7 +678,6 @@
 		</collision>
 	</npc>
 	<npc id="21309" level="77" type="Monster" name="Disciples of Punishment">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="130" />
 			<param name="MoveAroundSocial1" value="130" />
@@ -747,9 +737,24 @@
 			<radius normal="8" grown="9" />
 			<height normal="30" grown="36.5" />
 		</collision>
+		<dropLists>
+			<drop>
+				<item id="57" min="123" max="287" chance="70" /> <!-- Adena -->
+				<item id="8731" min="1" max="1" chance="0.1" /> <!-- Life Stone - Lv. 70 -->
+				<item id="8741" min="1" max="1" chance="0.05" /> <!-- Mid-grade Life Stone - Lv. 70 -->
+				<item id="36544" min="1" max="1" chance="0.03000300030003" /> <!-- Orichalcum Wire -->
+				<item id="8751" min="1" max="1" chance="0.025" /> <!-- High-grade Life Stone - Lv. 70 -->
+				<item id="8761" min="1" max="1" chance="0.01" /> <!-- Top-grade Life Stone - Lv. 70 -->
+			</drop>
+			<spoil>
+				<item id="36533" min="1" max="1" chance="0.75187969924812" /> <!-- Synthetic Braid -->
+				<item id="36534" min="1" max="1" chance="0.149925037481259" /> <!-- Durable Braid -->
+				<item id="36882" min="1" max="1" chance="0.03000300030003" /> <!-- Recipe: Thin Braid - Upgrade -->
+				<item id="36881" min="1" max="1" chance="0.03000300030003" /> <!-- Recipe: Thin Braid - Downgrade -->
+			</spoil>
+		</dropLists>
 	</npc>
 	<npc id="21310" level="78" type="Monster" name="Disciples of Authority">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="85" />
 			<param name="MoveAroundSocial1" value="85" />
@@ -827,7 +832,6 @@
 		</collision>
 	</npc>
 	<npc id="21311" level="78" type="Monster" name="Disciples of Authority">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="85" />
 			<param name="MoveAroundSocial1" value="85" />
@@ -881,9 +885,24 @@
 			<radius normal="11" grown="13" />
 			<height normal="38.5" grown="46.5" />
 		</collision>
+		<dropLists>
+			<drop>
+				<item id="57" min="104" max="241" chance="70" /> <!-- Adena -->
+				<item id="8732" min="1" max="1" chance="0.1" /> <!-- Life Stone - Lv. 76 -->
+				<item id="8742" min="1" max="1" chance="0.05" /> <!-- Mid-grade Life Stone - Lv. 76 -->
+				<item id="959" min="1" max="1" chance="0.03000300030003" /> <!-- Scroll: Enchant Weapon (S-grade) -->
+				<item id="36554" min="1" max="1" chance="0.03000300030003" /> <!-- Armor Fragment (High-grade) -->
+				<item id="8752" min="1" max="1" chance="0.025" /> <!-- High-grade Life Stone - Lv. 76 -->
+			</drop>
+			<spoil>
+				<item id="36533" min="1" max="1" chance="0.75187969924812" /> <!-- Synthetic Braid -->
+				<item id="36534" min="1" max="1" chance="0.149925037481259" /> <!-- Durable Braid -->
+				<item id="36882" min="1" max="1" chance="0.03000300030003" /> <!-- Recipe: Thin Braid - Upgrade -->
+				<item id="36881" min="1" max="1" chance="0.03000300030003" /> <!-- Recipe: Thin Braid - Downgrade -->
+			</spoil>
+		</dropLists>
 	</npc>
 	<npc id="21312" level="74" type="Monster" name="Eye of Ruler">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="90" />
 			<param name="MoveAroundSocial1" value="90" />
@@ -965,7 +984,6 @@
 		</collision>
 	</npc>
 	<npc id="21313" level="72" type="Monster" name="Sly Hound Dog">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="78" />
 			<param name="MoveAroundSocial1" value="78" />
@@ -1035,7 +1053,6 @@
 		</collision>
 	</npc>
 	<npc id="21314" level="73" type="Monster" name="Hot Springs Bandersnatchling">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="78" />
 			<param name="MoveAroundSocial1" value="78" />
@@ -1124,7 +1141,6 @@
 		</collision>
 	</npc>
 	<npc id="21315" level="73" type="Monster" name="Hot Springs Buffalo">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="120" />
 			<param name="MoveAroundSocial1" value="30" />
@@ -1209,7 +1225,6 @@
 		</collision>
 	</npc>
 	<npc id="21316" level="74" type="Monster" name="Hot Springs Flava">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="120" />
 			<param name="MoveAroundSocial1" value="120" />
@@ -1298,7 +1313,6 @@
 		</collision>
 	</npc>
 	<npc id="21317" level="74" type="Monster" name="Hot Springs Atroxspawn">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="100" />
 			<param name="MoveAroundSocial1" value="100" />
@@ -1387,7 +1401,6 @@
 		</collision>
 	</npc>
 	<npc id="21318" level="74" type="Monster" name="Hot Springs Antelope">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="80" />
 			<param name="MoveAroundSocial1" value="80" />
@@ -1472,7 +1485,6 @@
 		</collision>
 	</npc>
 	<npc id="21319" level="75" type="Monster" name="Hot Springs Nepenthes">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="120" />
 			<param name="MoveAroundSocial1" value="120" />
@@ -1563,7 +1575,6 @@
 		</collision>
 	</npc>
 	<npc id="21320" level="75" type="Monster" name="Hot Springs Yeti">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="80" />
 			<param name="MoveAroundSocial1" value="80" />
@@ -1648,7 +1659,6 @@
 		</collision>
 	</npc>
 	<npc id="21321" level="76" type="Monster" name="Hot Springs Atrox">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="100" />
 			<param name="MoveAroundSocial1" value="100" />
@@ -1732,7 +1742,6 @@
 		</collision>
 	</npc>
 	<npc id="21322" level="76" type="Monster" name="Hot Springs Bandersnatch">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="78" />
 			<param name="MoveAroundSocial1" value="78" />
@@ -1816,7 +1825,6 @@
 		</collision>
 	</npc>
 	<npc id="21323" level="76" type="Monster" name="Hot Springs Grendel">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="115" />
 			<param name="MoveAroundSocial1" value="115" />
@@ -1896,7 +1904,6 @@
 		</collision>
 	</npc>
 	<npc id="21324" level="77" type="Monster" name="Ketra Orc Footman">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="90" />
 			<param name="MoveAroundSocial1" value="65" />
@@ -1982,7 +1989,6 @@
 		</collision>
 	</npc>
 	<npc id="21325" level="77" type="Monster" name="Ketra's War Hound">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="78" />
 			<param name="MoveAroundSocial1" value="78" />
@@ -2061,7 +2067,6 @@
 		</collision>
 	</npc>
 	<npc id="21326" level="77" type="Monster" name="Grazing Kookaburra">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="72" />
 			<param name="MoveAroundSocial1" value="30" />
@@ -2139,7 +2144,6 @@
 		</collision>
 	</npc>
 	<npc id="21327" level="78" type="Monster" name="Ketra Orc Raider">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="90" />
 			<param name="MoveAroundSocial1" value="65" />
@@ -2233,7 +2237,6 @@
 		</collision>
 	</npc>
 	<npc id="21328" level="78" type="Monster" name="Ketra Orc Scout">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="90" />
 			<param name="MoveAroundSocial1" value="65" />
@@ -2314,7 +2317,6 @@
 		</collision>
 	</npc>
 	<npc id="21329" level="78" type="Monster" name="Ketra Orc Shaman">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="90" />
 			<param name="MoveAroundSocial1" value="75" />
@@ -2411,7 +2413,6 @@
 		</collision>
 	</npc>
 	<npc id="21330" level="78" type="Monster" name="Grazing Buffalo">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="120" />
 			<param name="MoveAroundSocial1" value="30" />
@@ -2489,7 +2490,6 @@
 		</collision>
 	</npc>
 	<npc id="21331" level="78" type="Monster" name="Ketra Orc Warrior">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="90" />
 			<param name="MoveAroundSocial1" value="65" />
@@ -2575,7 +2575,6 @@
 		</collision>
 	</npc>
 	<npc id="21332" level="78" type="Monster" name="Ketra Orc Lieutenant">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="140" />
 			<param name="MoveAroundSocial1" value="54" />
@@ -2667,7 +2666,6 @@
 		</collision>
 	</npc>
 	<npc id="21333" level="78" type="Monster" name="Grazing Windsus">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="95" />
 			<param name="MoveAroundSocial1" value="95" />
@@ -2745,7 +2743,6 @@
 		</collision>
 	</npc>
 	<npc id="21334" level="78" type="Monster" name="Ketra Orc Medium">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="90" />
 			<param name="MoveAroundSocial1" value="75" />
@@ -2839,7 +2836,6 @@
 		</collision>
 	</npc>
 	<npc id="21335" level="78" type="Monster" name="Ketra Orc Elite Soldier">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="90" />
 			<param name="MoveAroundSocial1" value="65" />
@@ -2927,7 +2923,6 @@
 		</collision>
 	</npc>
 	<npc id="21336" level="78" type="Monster" name="Ketra Orc White Captain">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="90" />
 			<param name="MoveAroundSocial1" value="65" />
@@ -3019,7 +3014,6 @@
 		</collision>
 	</npc>
 	<npc id="21337" level="78" type="Monster" name="Grazing Elder Buffalo">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="120" />
 			<param name="MoveAroundSocial1" value="30" />
@@ -3094,7 +3088,6 @@
 		</collision>
 	</npc>
 	<npc id="21338" level="78" type="Monster" name="Ketra Orc Seer">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="90" />
 			<param name="MoveAroundSocial1" value="75" />
@@ -3190,7 +3183,6 @@
 		</collision>
 	</npc>
 	<npc id="21339" level="78" type="Monster" name="Ketra Orc General">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="140" />
 			<param name="MoveAroundSocial1" value="54" />
@@ -3280,7 +3272,6 @@
 		</collision>
 	</npc>
 	<npc id="21340" level="78" type="Monster" name="Ketra Orc Battalion Commander">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="110" />
 			<param name="MoveAroundSocial1" value="54" />
@@ -3373,7 +3364,6 @@
 		</collision>
 	</npc>
 	<npc id="21341" level="78" type="Monster" name="Grazing Elder Kookaburra">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="72" />
 			<param name="MoveAroundSocial1" value="30" />
@@ -3449,7 +3439,6 @@
 		</collision>
 	</npc>
 	<npc id="21342" level="78" type="Monster" name="Ketra Orc Grand Seer">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="90" />
 			<param name="MoveAroundSocial1" value="75" />
@@ -3548,7 +3537,6 @@
 		</collision>
 	</npc>
 	<npc id="21343" level="78" type="Monster" name="Ketra Commander">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="110" />
 			<param name="MoveAroundSocial1" value="54" />
@@ -3629,7 +3617,6 @@
 		</collision>
 	</npc>
 	<npc id="21344" level="78" type="Monster" name="Ketra Elite Guard">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="90" />
 			<param name="MoveAroundSocial1" value="65" />
@@ -3702,7 +3689,6 @@
 		</collision>
 	</npc>
 	<npc id="21345" level="78" type="Monster" name="Ketra's Head Shaman">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="90" />
 			<param name="MoveAroundSocial1" value="75" />
@@ -3783,7 +3769,6 @@
 		</collision>
 	</npc>
 	<npc id="21346" level="78" type="Monster" name="Ketra's Head Guard">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="140" />
 			<param name="MoveAroundSocial1" value="54" />
@@ -3855,7 +3840,6 @@
 		</collision>
 	</npc>
 	<npc id="21347" level="78" type="Monster" name="Ketra Prophet">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="90" />
 			<param name="MoveAroundSocial1" value="75" />
@@ -3946,7 +3930,6 @@
 		</collision>
 	</npc>
 	<npc id="21348" level="78" type="Monster" name="Prophet's Guard">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="140" />
 			<param name="MoveAroundSocial1" value="54" />
@@ -4018,7 +4001,6 @@
 		</collision>
 	</npc>
 	<npc id="21349" level="78" type="Monster" name="Prophet's Aide">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="90" />
 			<param name="MoveAroundSocial1" value="75" />
@@ -4099,7 +4081,6 @@
 		</collision>
 	</npc>
 	<npc id="21350" level="77" type="Monster" name="Varka Silenos Recruit">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="65" />
 			<param name="MoveAroundSocial1" value="65" />
@@ -4181,7 +4162,6 @@
 		</collision>
 	</npc>
 	<npc id="21351" level="77" type="Monster" name="Varka Silenos Footman">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="85" />
 			<param name="MoveAroundSocial1" value="85" />
@@ -4262,7 +4242,6 @@
 		</collision>
 	</npc>
 	<npc id="21352" level="77" type="Monster" name="Grazing Antelope">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="80" />
 			<param name="MoveAroundSocial1" value="80" />
@@ -4337,7 +4316,6 @@
 		</collision>
 	</npc>
 	<npc id="21353" level="78" type="Monster" name="Varka Silenos Scout">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="65" />
 			<param name="MoveAroundSocial1" value="65" />
@@ -4425,7 +4403,6 @@
 		</collision>
 	</npc>
 	<npc id="21354" level="78" type="Monster" name="Varka Silenos Hunter">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="75" />
 			<param name="MoveAroundSocial1" value="75" />
@@ -4508,7 +4485,6 @@
 		</collision>
 	</npc>
 	<npc id="21355" level="78" type="Monster" name="Varka Silenos Shaman">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="123" />
 			<param name="MoveAroundSocial1" value="123" />
@@ -4597,7 +4573,6 @@
 		</collision>
 	</npc>
 	<npc id="21356" level="78" type="Monster" name="Grazing Nepenthes">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="120" />
 			<param name="MoveAroundSocial1" value="120" />
@@ -4679,7 +4654,6 @@
 		</collision>
 	</npc>
 	<npc id="21357" level="78" type="Monster" name="Varka Silenos Priest">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="70" />
 			<param name="MoveAroundSocial1" value="70" />
@@ -4756,7 +4730,6 @@
 		</collision>
 	</npc>
 	<npc id="21358" level="78" type="Monster" name="Varka Silenos Warrior">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="85" />
 			<param name="MoveAroundSocial1" value="85" />
@@ -4843,7 +4816,6 @@
 		</collision>
 	</npc>
 	<npc id="21359" level="78" type="Monster" name="Grazing Bandersnatch">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="78" />
 			<param name="MoveAroundSocial1" value="78" />
@@ -4926,7 +4898,6 @@
 		</collision>
 	</npc>
 	<npc id="21360" level="78" type="Monster" name="Varka Silenos Medium">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="123" />
 			<param name="MoveAroundSocial1" value="123" />
@@ -5014,7 +4985,6 @@
 		</collision>
 	</npc>
 	<npc id="21361" level="78" type="Monster" name="Varka Silenos Magus">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="70" />
 			<param name="MoveAroundSocial1" value="70" />
@@ -5100,7 +5070,6 @@
 		</collision>
 	</npc>
 	<npc id="21362" level="78" type="Monster" name="Varka Silenos Officer">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="90" />
 			<param name="MoveAroundSocial1" value="90" />
@@ -5193,7 +5162,6 @@
 		</collision>
 	</npc>
 	<npc id="21363" level="78" type="Monster" name="Grazing Flava">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="120" />
 			<param name="MoveAroundSocial1" value="120" />
@@ -5281,7 +5249,6 @@
 		</collision>
 	</npc>
 	<npc id="21364" level="78" type="Monster" name="Varka Silenos Seer">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="123" />
 			<param name="MoveAroundSocial1" value="123" />
@@ -5376,7 +5343,6 @@
 		</collision>
 	</npc>
 	<npc id="21365" level="78" type="Monster" name="Varka Silenos Great Magus">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="85" />
 			<param name="MoveAroundSocial1" value="85" />
@@ -5469,7 +5435,6 @@
 		</collision>
 	</npc>
 	<npc id="21366" level="78" type="Monster" name="Varka Silenos General">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="90" />
 			<param name="MoveAroundSocial1" value="90" />
@@ -5559,7 +5524,6 @@
 		</collision>
 	</npc>
 	<npc id="21367" level="78" type="Monster" name="Grazing Elder Antelope">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="80" />
 			<param name="MoveAroundSocial1" value="80" />
@@ -5638,7 +5602,6 @@
 		</collision>
 	</npc>
 	<npc id="21368" level="78" type="Monster" name="Varka Silenos Great Seer">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="123" />
 			<param name="MoveAroundSocial1" value="123" />
@@ -5732,7 +5695,6 @@
 		</collision>
 	</npc>
 	<npc id="21369" level="78" type="Monster" name="Varka's Commander">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="90" />
 			<param name="MoveAroundSocial1" value="90" />
@@ -5799,9 +5761,35 @@
 			<radius normal="22" />
 			<height normal="51" />
 		</collision>
+		<dropLists>
+			<drop>
+				<item id="57" min="109" max="253" chance="70" /> <!-- Adena -->
+				<item id="5528" min="1" max="1" chance="1" /> <!-- Sealed Majestic Circlet Design -->
+				<item id="5541" min="1" max="1" chance="0.149925037481259" /> <!-- Tallum Glaive Edge -->
+				<item id="5529" min="1" max="1" chance="0.149925037481259" /> <!-- Dragon Slayer Edge -->
+				<item id="5167" min="1" max="1" chance="0.03000300030003" /> <!-- Recipe: Blessed Spiritshot Compressed Package (S-grade) -->
+				<item id="960" min="1" max="1" chance="0.03000300030003" /> <!-- Scroll: Enchant Armor (S-grade) -->
+				<item id="305" min="1" max="1" chance="0.01" /> <!-- Tallum Glaive -->
+				<!-- Also drops herbs. -->
+				<item id="8600" min="1" max="1" chance="10" /> <!-- Herb of Life -->
+				<item id="8601" min="1" max="1" chance="8" /> <!-- Major Herb of Life -->
+				<item id="8602" min="1" max="1" chance="2" /> <!-- Superior Herb of Life -->
+				<item id="8603" min="1" max="1" chance="19.8" /> <!-- Herb of Mana -->
+				<item id="8604" min="1" max="1" chance="9.9" /> <!-- Major Herb of Mana -->
+				<item id="8605" min="1" max="1" chance="3.3" /> <!-- Superior Herb of Mana -->
+				<item id="34849" min="1" max="1" chance="0.7" /> <!-- Mysterious Herb of Power -->
+				<item id="34850" min="1" max="1" chance="0.7" /> <!-- Mysterious Herb of Magic -->
+				<item id="13028" min="1" max="1" chance="0.1" /> <!-- Vitality Replenishing Herb -->
+			</drop>
+			<spoil>
+				<item id="36532" min="1" max="1" chance="0.75187969924812" /> <!-- Thin Braid -->
+				<item id="36533" min="1" max="1" chance="0.3003003003003" /> <!-- Synthetic Braid -->
+				<item id="36882" min="1" max="1" chance="0.03000300030003" /> <!-- Recipe: Thin Braid - Upgrade -->
+				<item id="36881" min="1" max="1" chance="0.03000300030003" /> <!-- Recipe: Thin Braid - Downgrade -->
+			</spoil>
+		</dropLists>
 	</npc>
 	<npc id="21370" level="78" type="Monster" name="Varka's Elite Guard">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="85" />
 			<param name="MoveAroundSocial1" value="85" />
@@ -5858,9 +5846,38 @@
 			<radius normal="16" />
 			<height normal="41" />
 		</collision>
+		<dropLists>
+			<drop>
+				<item id="57" min="80" max="187" chance="70" /> <!-- Adena -->
+				<item id="5488" min="1" max="1" chance="0.3003003003003" /> <!-- Sealed Majestic Robe Fabric -->
+				<item id="5487" min="1" max="1" chance="0.3003003003003" /> <!-- Sealed Robe of Nightmare Fabric -->
+				<item id="36558" min="1" max="1" chance="0.03000300030003" /> <!-- Accessory Gem (Mid-grade) -->
+				<item id="36563" min="1" max="1" chance="0.03000300030003" /> <!-- Synthetic Cokes -->
+				<item id="36553" min="1" max="1" chance="0.03000300030003" /> <!-- Armor Fragment (Mid-grade) -->
+				<item id="36548" min="1" max="1" chance="0.03000300030003" /> <!-- Weapon Fragment (Mid-grade) -->
+				<item id="959" min="1" max="1" chance="0.0149992500374981" /> <!-- Scroll: Enchant Weapon (S-grade) -->
+				<item id="5329" min="1" max="1" chance="0.01" /> <!-- Sealed Majestic Robe -->
+				<item id="5326" min="1" max="1" chance="0.01" /> <!-- Sealed Robe of Nightmare -->
+				<!-- Also drops herbs. -->
+				<item id="8600" min="1" max="1" chance="10" /> <!-- Herb of Life -->
+				<item id="8601" min="1" max="1" chance="8" /> <!-- Major Herb of Life -->
+				<item id="8602" min="1" max="1" chance="2" /> <!-- Superior Herb of Life -->
+				<item id="8603" min="1" max="1" chance="19.8" /> <!-- Herb of Mana -->
+				<item id="8604" min="1" max="1" chance="9.9" /> <!-- Major Herb of Mana -->
+				<item id="8605" min="1" max="1" chance="3.3" /> <!-- Superior Herb of Mana -->
+				<item id="34849" min="1" max="1" chance="0.7" /> <!-- Mysterious Herb of Power -->
+				<item id="34850" min="1" max="1" chance="0.7" /> <!-- Mysterious Herb of Magic -->
+				<item id="13028" min="1" max="1" chance="0.1" /> <!-- Vitality Replenishing Herb -->
+			</drop>
+			<spoil>
+				<item id="36532" min="1" max="1" chance="0.75187969924812" /> <!-- Thin Braid -->
+				<item id="36533" min="1" max="1" chance="0.3003003003003" /> <!-- Synthetic Braid -->
+				<item id="36882" min="1" max="1" chance="0.03000300030003" /> <!-- Recipe: Thin Braid - Upgrade -->
+				<item id="36881" min="1" max="1" chance="0.03000300030003" /> <!-- Recipe: Thin Braid - Downgrade -->
+			</spoil>
+		</dropLists>
 	</npc>
 	<npc id="21371" level="78" type="Monster" name="Varka's Head Magus">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="123" />
 			<param name="MoveAroundSocial1" value="123" />
@@ -5917,9 +5934,35 @@
 			<radius normal="14" />
 			<height normal="39.5" />
 		</collision>
+		<dropLists>
+			<drop>
+				<item id="57" min="76" max="177" chance="70" /> <!-- Adena -->
+				<item id="6714" min="1" max="1" chance="0.3003003003003" /> <!-- Sealed Major Arcana Circlet Pattern -->
+				<item id="6713" min="1" max="1" chance="0.3003003003003" /> <!-- Sealed Major Arcana Boot Design -->
+				<item id="7579" min="1" max="1" chance="0.149925037481259" /> <!-- Draconic Bow Shaft -->
+				<item id="5537" min="1" max="1" chance="0.149925037481259" /> <!-- Soul Separator Head -->
+				<item id="960" min="1" max="1" chance="0.03000300030003" /> <!-- Scroll: Enchant Armor (S-grade) -->
+				<item id="236" min="1" max="1" chance="0.005" /> <!-- Soul Separator -->
+				<!-- Also drops herbs. -->
+				<item id="8600" min="1" max="1" chance="10" /> <!-- Herb of Life -->
+				<item id="8601" min="1" max="1" chance="8" /> <!-- Major Herb of Life -->
+				<item id="8602" min="1" max="1" chance="2" /> <!-- Superior Herb of Life -->
+				<item id="8603" min="1" max="1" chance="19.8" /> <!-- Herb of Mana -->
+				<item id="8604" min="1" max="1" chance="9.9" /> <!-- Major Herb of Mana -->
+				<item id="8605" min="1" max="1" chance="3.3" /> <!-- Superior Herb of Mana -->
+				<item id="34849" min="1" max="1" chance="0.7" /> <!-- Mysterious Herb of Power -->
+				<item id="34850" min="1" max="1" chance="0.7" /> <!-- Mysterious Herb of Magic -->
+				<item id="13028" min="1" max="1" chance="0.1" /> <!-- Vitality Replenishing Herb -->
+			</drop>
+			<spoil>
+				<item id="36532" min="1" max="1" chance="0.75187969924812" /> <!-- Thin Braid -->
+				<item id="36533" min="1" max="1" chance="0.3003003003003" /> <!-- Synthetic Braid -->
+				<item id="36882" min="1" max="1" chance="0.03000300030003" /> <!-- Recipe: Thin Braid - Upgrade -->
+				<item id="36881" min="1" max="1" chance="0.03000300030003" /> <!-- Recipe: Thin Braid - Downgrade -->
+			</spoil>
+		</dropLists>
 	</npc>
 	<npc id="21372" level="78" type="Monster" name="Varka's Head Guard">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="65" />
 			<param name="MoveAroundSocial1" value="65" />
@@ -5989,7 +6032,6 @@
 		</collision>
 	</npc>
 	<npc id="21373" level="78" type="Monster" name="Varka's Prophet">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="123" />
 			<param name="MoveAroundSocial1" value="123" />
@@ -6049,9 +6091,36 @@
 			<radius normal="17" />
 			<height normal="47.5" />
 		</collision>
+		<dropLists>
+			<drop>
+				<item id="57" min="111" max="258" chance="70" /> <!-- Adena -->
+				<item id="36528" min="1" max="1" chance="0.75187969924812" /> <!-- Metallic Fiber -->
+				<item id="5488" min="1" max="1" chance="0.3003003003003" /> <!-- Sealed Majestic Robe Fabric -->
+				<item id="5487" min="1" max="1" chance="0.3003003003003" /> <!-- Sealed Robe of Nightmare Fabric -->
+				<item id="36563" min="1" max="1" chance="0.03000300030003" /> <!-- Synthetic Cokes -->
+				<item id="959" min="1" max="1" chance="0.0149992500374981" /> <!-- Scroll: Enchant Weapon (S-grade) -->
+				<item id="5329" min="1" max="1" chance="0.01" /> <!-- Sealed Majestic Robe -->
+				<item id="5326" min="1" max="1" chance="0.01" /> <!-- Sealed Robe of Nightmare -->
+				<!-- Also drops herbs. -->
+				<item id="8600" min="1" max="1" chance="10" /> <!-- Herb of Life -->
+				<item id="8601" min="1" max="1" chance="8" /> <!-- Major Herb of Life -->
+				<item id="8602" min="1" max="1" chance="2" /> <!-- Superior Herb of Life -->
+				<item id="8603" min="1" max="1" chance="19.8" /> <!-- Herb of Mana -->
+				<item id="8604" min="1" max="1" chance="9.9" /> <!-- Major Herb of Mana -->
+				<item id="8605" min="1" max="1" chance="3.3" /> <!-- Superior Herb of Mana -->
+				<item id="34849" min="1" max="1" chance="0.7" /> <!-- Mysterious Herb of Power -->
+				<item id="34850" min="1" max="1" chance="0.7" /> <!-- Mysterious Herb of Magic -->
+				<item id="13028" min="1" max="1" chance="0.1" /> <!-- Vitality Replenishing Herb -->
+			</drop>
+			<spoil>
+				<item id="36532" min="1" max="1" chance="0.75187969924812" /> <!-- Thin Braid -->
+				<item id="36533" min="1" max="1" chance="0.3003003003003" /> <!-- Synthetic Braid -->
+				<item id="36882" min="1" max="1" chance="0.03000300030003" /> <!-- Recipe: Thin Braid - Upgrade -->
+				<item id="36881" min="1" max="1" chance="0.03000300030003" /> <!-- Recipe: Thin Braid - Downgrade -->
+			</spoil>
+		</dropLists>
 	</npc>
 	<npc id="21374" level="78" type="Monster" name="Prophet's Guard">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="85" />
 			<param name="MoveAroundSocial1" value="85" />
@@ -6122,7 +6191,6 @@
 		</collision>
 	</npc>
 	<npc id="21375" level="78" type="Monster" name="Disciple of Prophet">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="70" />
 			<param name="MoveAroundSocial1" value="70" />
@@ -6192,7 +6260,6 @@
 		</collision>
 	</npc>
 	<npc id="21376" level="78" type="Monster" name="Scarlet Stakato Worker">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="70" />
 			<param name="MoveAroundSocial1" value="70" />
@@ -6244,9 +6311,22 @@
 			<radius normal="13" />
 			<height normal="40" />
 		</collision>
+		<dropLists>
+			<drop>
+				<item id="57" min="107" max="248" chance="70" /> <!-- Adena -->
+				<item id="5536" min="1" max="1" chance="0.3003003003003" /> <!-- Bloody Orchid Head -->
+				<item id="8732" min="1" max="1" chance="0.1" /> <!-- Life Stone - Lv. 76 -->
+				<item id="8742" min="1" max="1" chance="0.05" /> <!-- Mid-grade Life Stone - Lv. 76 -->
+				<item id="3036" min="1" max="1" chance="0.03000300030003" /> <!-- Recipe: Spiritshot (S-grade) -->
+				<item id="8752" min="1" max="1" chance="0.025" /> <!-- High-grade Life Stone - Lv. 76 -->
+				<item id="235" min="1" max="1" chance="0.01" /> <!-- Bloody Orchid -->
+			</drop>
+			<spoil>
+				<item id="5544" min="1" max="1" chance="0.75187969924812" /> <!-- Branch of the Mother Tree Head -->
+			</spoil>
+		</dropLists>
 	</npc>
 	<npc id="21377" level="78" type="Monster" name="Scarlet Stakato Soldier">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="90" />
 			<param name="MoveAroundSocial1" value="90" />
@@ -6298,9 +6378,28 @@
 			<radius normal="15" />
 			<height normal="38" />
 		</collision>
+		<dropLists>
+			<drop>
+				<item id="57" min="104" max="242" chance="70" /> <!-- Adena -->
+				<item id="5521" min="1" max="1" chance="0.3003003003003" /> <!-- Sealed Tallum Plate Armor Pattern -->
+				<item id="5520" min="1" max="1" chance="0.3003003003003" /> <!-- Sealed Dark Crystal Breastplate Pattern -->
+				<item id="5524" min="1" max="1" chance="0.3003003003003" /> <!-- Sealed Dark Crystal Gaiter Pattern -->
+				<item id="8732" min="1" max="1" chance="0.1" /> <!-- Life Stone - Lv. 76 -->
+				<item id="8742" min="1" max="1" chance="0.05" /> <!-- Mid-grade Life Stone - Lv. 76 -->
+				<item id="3957" min="1" max="1" chance="0.03000300030003" /> <!-- Recipe: Blessed Spiritshot (S-grade) -->
+				<item id="8752" min="1" max="1" chance="0.025" /> <!-- High-grade Life Stone - Lv. 76 -->
+				<item id="5287" min="1" max="1" chance="0.01" /> <!-- Sealed Dark Crystal breastplate -->
+				<item id="5288" min="1" max="1" chance="0.01" /> <!-- Sealed Dark Crystal Gaiters -->
+				<item id="5293" min="1" max="1" chance="0.01" /> <!-- Sealed Tallum Plate Armor -->
+			</drop>
+			<spoil>
+				<item id="5545" min="1" max="1" chance="0.75187969924812" /> <!-- Dark Legion's Edge Blade -->
+				<item id="5546" min="1" max="1" chance="0.75187969924812" /> <!-- Sword of Miracles Edge -->
+				<item id="1808" min="1" max="1" chance="0.149925037481259" /> <!-- Recipe: Soulshot (S-grade) -->
+			</spoil>
+		</dropLists>
 	</npc>
 	<npc id="21378" level="78" type="Monster" name="Scarlet Stakato Noble">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="62" />
 			<param name="MoveAroundSocial1" value="62" />
@@ -6354,9 +6453,23 @@
 			<radius normal="15" />
 			<height normal="39" />
 		</collision>
+		<dropLists>
+			<drop>
+				<item id="57" min="108" max="250" chance="70" /> <!-- Adena -->
+				<item id="5537" min="1" max="1" chance="0.3003003003003" /> <!-- Soul Separator Head -->
+				<item id="8732" min="1" max="1" chance="0.1" /> <!-- Life Stone - Lv. 76 -->
+				<item id="8742" min="1" max="1" chance="0.05" /> <!-- Mid-grade Life Stone - Lv. 76 -->
+				<item id="8752" min="1" max="1" chance="0.025" /> <!-- High-grade Life Stone - Lv. 76 -->
+				<item id="959" min="1" max="1" chance="0.0149992500374981" /> <!-- Scroll: Enchant Weapon (S-grade) -->
+				<item id="236" min="1" max="1" chance="0.005" /> <!-- Soul Separator -->
+			</drop>
+			<spoil>
+				<item id="5514" min="1" max="1" chance="2" /> <!-- Sealed Gauntlets of Nightmare Design -->
+				<item id="5282" min="1" max="1" chance="0.149925037481259" /> <!-- Recipe: Greater Blessed Spiritshot Compressed Package (S-grade) -->
+			</spoil>
+		</dropLists>
 	</npc>
 	<npc id="21379" level="78" type="Monster" name="Tepra Scorpion">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="85" />
 			<param name="MoveAroundSocial1" value="85" />
@@ -6410,9 +6523,25 @@
 			<radius normal="24" />
 			<height normal="52.8" />
 		</collision>
+		<dropLists>
+			<drop>
+				<item id="57" min="107" max="248" chance="70" /> <!-- Adena -->
+				<item id="5522" min="1" max="1" chance="0.3003003003003" /> <!-- Sealed Armor of Nightmare Pattern -->
+				<item id="5523" min="1" max="1" chance="0.3003003003003" /> <!-- Sealed Majestic Plate Armor Pattern -->
+				<item id="8732" min="1" max="1" chance="0.1" /> <!-- Life Stone - Lv. 76 -->
+				<item id="8742" min="1" max="1" chance="0.05" /> <!-- Mid-grade Life Stone - Lv. 76 -->
+				<item id="960" min="1" max="1" chance="0.03000300030003" /> <!-- Scroll: Enchant Armor (S-grade) -->
+				<item id="8752" min="1" max="1" chance="0.025" /> <!-- High-grade Life Stone - Lv. 76 -->
+				<item id="5311" min="1" max="1" chance="0.01" /> <!-- Sealed Armor of Nightmare -->
+				<item id="5316" min="1" max="1" chance="0.01" /> <!-- Sealed Majestic Plate Armor -->
+			</drop>
+			<spoil>
+				<item id="5515" min="1" max="1" chance="1.5" /> <!-- Sealed Majestic Gauntlet Design -->
+				<item id="5522" min="1" max="1" chance="0.75187969924812" /> <!-- Sealed Armor of Nightmare Pattern -->
+			</spoil>
+		</dropLists>
 	</npc>
 	<npc id="21380" level="78" type="Monster" name="Tepra Scarab">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="65" />
 			<param name="MoveAroundSocial1" value="65" />
@@ -6466,9 +6595,30 @@
 			<radius normal="14" />
 			<height normal="22" />
 		</collision>
+		<dropLists>
+			<drop>
+				<item id="57" min="107" max="248" chance="70" /> <!-- Adena -->
+				<item id="8349" min="1" max="1" chance="0.3003003003003" /> <!-- Doom Crusher Head -->
+				<item id="8342" min="1" max="1" chance="0.3003003003003" /> <!-- Flaming Dragon Skull Piece -->
+				<item id="5544" min="1" max="1" chance="0.149925037481259" /> <!-- Branch of the Mother Tree Head -->
+				<item id="5533" min="1" max="1" chance="0.149925037481259" /> <!-- Elysian Head -->
+				<item id="8732" min="1" max="1" chance="0.1" /> <!-- Life Stone - Lv. 76 -->
+				<item id="8742" min="1" max="1" chance="0.05" /> <!-- Mid-grade Life Stone - Lv. 76 -->
+				<item id="8752" min="1" max="1" chance="0.025" /> <!-- High-grade Life Stone - Lv. 76 -->
+				<item id="959" min="1" max="1" chance="0.0149992500374981" /> <!-- Scroll: Enchant Weapon (S-grade) -->
+				<item id="213" min="1" max="1" chance="0.01" /> <!-- Branch of the Mother Tree -->
+				<item id="7902" min="1" max="1" chance="0.01" /> <!-- Doom Crusher -->
+				<item id="7895" min="1" max="1" chance="0.01" /> <!-- Flaming Dragon Skull -->
+				<item id="164" min="1" max="1" chance="0.01" /> <!-- Elysian -->
+			</drop>
+			<spoil>
+				<item id="5523" min="1" max="1" chance="0.75187969924812" /> <!-- Sealed Majestic Plate Armor Pattern -->
+				<item id="5481" min="1" max="1" chance="0.75187969924812" /> <!-- Sealed Majestic Leather Armor Fabric -->
+				<item id="1808" min="1" max="1" chance="0.149925037481259" /> <!-- Recipe: Soulshot (S-grade) -->
+			</spoil>
+		</dropLists>
 	</npc>
 	<npc id="21381" level="78" type="Monster" name="Assassin Beetle">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="80" />
 			<param name="MoveAroundSocial1" value="80" />
@@ -6526,9 +6676,24 @@
 			<radius normal="19" />
 			<height normal="54.5" />
 		</collision>
+		<dropLists>
+			<drop>
+				<item id="57" min="107" max="248" chance="70" /> <!-- Adena -->
+				<item id="5541" min="1" max="1" chance="0.3003003003003" /> <!-- Tallum Glaive Edge -->
+				<item id="8732" min="1" max="1" chance="0.1" /> <!-- Life Stone - Lv. 76 -->
+				<item id="8742" min="1" max="1" chance="0.05" /> <!-- Mid-grade Life Stone - Lv. 76 -->
+				<item id="960" min="1" max="1" chance="0.03000300030003" /> <!-- Scroll: Enchant Armor (S-grade) -->
+				<item id="8752" min="1" max="1" chance="0.025" /> <!-- High-grade Life Stone - Lv. 76 -->
+				<item id="305" min="1" max="1" chance="0.01" /> <!-- Tallum Glaive -->
+			</drop>
+			<spoil>
+				<item id="5495" min="1" max="1" chance="1.5" /> <!-- Sealed Shield of Nightmare Fragment -->
+				<item id="3957" min="1" max="1" chance="0.149925037481259" /> <!-- Recipe: Blessed Spiritshot (S-grade) -->
+				<item id="5157" min="1" max="1" chance="0.149925037481259" /> <!-- Recipe: Soulshot Compressed Package (S-grade) -->
+			</spoil>
+		</dropLists>
 	</npc>
 	<npc id="21382" level="78" type="Monster" name="Mercenary of Destruction">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="215" />
 			<param name="MoveAroundSocial1" value="215" />
@@ -6590,9 +6755,24 @@
 			<radius normal="10" />
 			<height normal="25" />
 		</collision>
+		<dropLists>
+			<drop>
+				<item id="57" min="104" max="243" chance="70" /> <!-- Adena -->
+				<item id="5481" min="1" max="1" chance="0.3003003003003" /> <!-- Sealed Majestic Leather Armor Fabric -->
+				<item id="5480" min="1" max="1" chance="0.3003003003003" /> <!-- Sealed Leather Armor of Nightmare Fabric -->
+				<item id="8732" min="1" max="1" chance="0.1" /> <!-- Life Stone - Lv. 76 -->
+				<item id="8742" min="1" max="1" chance="0.05" /> <!-- Mid-grade Life Stone - Lv. 76 -->
+				<item id="8752" min="1" max="1" chance="0.025" /> <!-- High-grade Life Stone - Lv. 76 -->
+				<item id="959" min="1" max="1" chance="0.0149992500374981" /> <!-- Scroll: Enchant Weapon (S-grade) -->
+				<item id="5323" min="1" max="1" chance="0.01" /> <!-- Sealed Majestic Leather Armor -->
+				<item id="5320" min="1" max="1" chance="0.01" /> <!-- Sealed Leather Armor of Nightmare -->
+			</drop>
+			<spoil>
+				<item id="5502" min="1" max="1" chance="4" /> <!-- Sealed Boots of Nightmare Lining -->
+			</spoil>
+		</dropLists>
 	</npc>
 	<npc id="21383" level="78" type="Monster" name="Knight of Destruction">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="80" />
 			<param name="MoveAroundSocial1" value="80" />
@@ -6651,9 +6831,26 @@
 			<radius normal="11" />
 			<height normal="28.5" />
 		</collision>
+		<dropLists>
+			<drop>
+				<item id="57" min="107" max="249" chance="70" /> <!-- Adena -->
+				<item id="5522" min="1" max="1" chance="0.3003003003003" /> <!-- Sealed Armor of Nightmare Pattern -->
+				<item id="5523" min="1" max="1" chance="0.3003003003003" /> <!-- Sealed Majestic Plate Armor Pattern -->
+				<item id="8732" min="1" max="1" chance="0.1" /> <!-- Life Stone - Lv. 76 -->
+				<item id="8742" min="1" max="1" chance="0.05" /> <!-- Mid-grade Life Stone - Lv. 76 -->
+				<item id="960" min="1" max="1" chance="0.03000300030003" /> <!-- Scroll: Enchant Armor (S-grade) -->
+				<item id="8752" min="1" max="1" chance="0.025" /> <!-- High-grade Life Stone - Lv. 76 -->
+				<item id="5311" min="1" max="1" chance="0.01" /> <!-- Sealed Armor of Nightmare -->
+				<item id="5316" min="1" max="1" chance="0.01" /> <!-- Sealed Majestic Plate Armor -->
+			</drop>
+			<spoil>
+				<item id="5514" min="1" max="1" chance="1.5" /> <!-- Sealed Gauntlets of Nightmare Design -->
+				<item id="5503" min="1" max="1" chance="1.5" /> <!-- Sealed Majestic Boot Lining -->
+				<item id="5162" min="1" max="1" chance="0.149925037481259" /> <!-- Recipe: Spiritshot Compressed Package (S-grade) -->
+			</spoil>
+		</dropLists>
 	</npc>
 	<npc id="21384" level="78" type="Monster" name="Necromancer of Destruction">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="114" />
 			<param name="MoveAroundSocial1" value="114" />
@@ -6709,9 +6906,24 @@
 			<radius normal="14.5" />
 			<height normal="48" />
 		</collision>
+		<dropLists>
+			<drop>
+				<item id="57" min="107" max="249" chance="70" /> <!-- Adena -->
+				<item id="5481" min="1" max="1" chance="0.3003003003003" /> <!-- Sealed Majestic Leather Armor Fabric -->
+				<item id="5480" min="1" max="1" chance="0.3003003003003" /> <!-- Sealed Leather Armor of Nightmare Fabric -->
+				<item id="8732" min="1" max="1" chance="0.1" /> <!-- Life Stone - Lv. 76 -->
+				<item id="8742" min="1" max="1" chance="0.05" /> <!-- Mid-grade Life Stone - Lv. 76 -->
+				<item id="8752" min="1" max="1" chance="0.025" /> <!-- High-grade Life Stone - Lv. 76 -->
+				<item id="959" min="1" max="1" chance="0.0149992500374981" /> <!-- Scroll: Enchant Weapon (S-grade) -->
+				<item id="5323" min="1" max="1" chance="0.01" /> <!-- Sealed Majestic Leather Armor -->
+				<item id="5320" min="1" max="1" chance="0.01" /> <!-- Sealed Leather Armor of Nightmare -->
+			</drop>
+			<spoil>
+				<item id="5533" min="1" max="1" chance="0.75187969924812" /> <!-- Elysian Head -->
+			</spoil>
+		</dropLists>
 	</npc>
 	<npc id="21385" level="78" type="Monster" name="Lavastone Golem">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="116" />
 			<param name="MoveAroundSocial1" value="116" />
@@ -6764,9 +6976,26 @@
 			<radius normal="20" />
 			<height normal="31" />
 		</collision>
+		<dropLists>
+			<drop>
+				<item id="57" min="137" max="320" chance="70" /> <!-- Adena -->
+				<item id="5522" min="1" max="1" chance="0.3003003003003" /> <!-- Sealed Armor of Nightmare Pattern -->
+				<item id="5523" min="1" max="1" chance="0.3003003003003" /> <!-- Sealed Majestic Plate Armor Pattern -->
+				<item id="8732" min="1" max="1" chance="0.1" /> <!-- Life Stone - Lv. 76 -->
+				<item id="8742" min="1" max="1" chance="0.05" /> <!-- Mid-grade Life Stone - Lv. 76 -->
+				<item id="960" min="1" max="1" chance="0.03000300030003" /> <!-- Scroll: Enchant Armor (S-grade) -->
+				<item id="8752" min="1" max="1" chance="0.025" /> <!-- High-grade Life Stone - Lv. 76 -->
+				<item id="5311" min="1" max="1" chance="0.01" /> <!-- Sealed Armor of Nightmare -->
+				<item id="5316" min="1" max="1" chance="0.01" /> <!-- Sealed Majestic Plate Armor -->
+			</drop>
+			<spoil>
+				<item id="5534" min="1" max="1" chance="0.75187969924812" /> <!-- Soul Bow Shaft -->
+				<item id="5277" min="1" max="1" chance="0.149925037481259" /> <!-- Recipe: Greater Spiritshot Compressed Package (S-grade) -->
+				<item id="5272" min="1" max="1" chance="0.149925037481259" /> <!-- Recipe: Greater Soulshot Compressed Package (S-grade) -->
+			</spoil>
+		</dropLists>
 	</npc>
 	<npc id="21386" level="78" type="Monster" name="Magma Golem">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="135" />
 			<param name="MoveAroundSocial1" value="135" />
@@ -6824,9 +7053,24 @@
 			<radius normal="38" />
 			<height normal="45" />
 		</collision>
+		<dropLists>
+			<drop>
+				<item id="57" min="145" max="337" chance="70" /> <!-- Adena -->
+				<item id="5488" min="1" max="1" chance="0.3003003003003" /> <!-- Sealed Majestic Robe Fabric -->
+				<item id="5487" min="1" max="1" chance="0.3003003003003" /> <!-- Sealed Robe of Nightmare Fabric -->
+				<item id="8732" min="1" max="1" chance="0.1" /> <!-- Life Stone - Lv. 76 -->
+				<item id="8742" min="1" max="1" chance="0.05" /> <!-- Mid-grade Life Stone - Lv. 76 -->
+				<item id="8752" min="1" max="1" chance="0.025" /> <!-- High-grade Life Stone - Lv. 76 -->
+				<item id="959" min="1" max="1" chance="0.0149992500374981" /> <!-- Scroll: Enchant Weapon (S-grade) -->
+				<item id="5329" min="1" max="1" chance="0.01" /> <!-- Sealed Majestic Robe -->
+				<item id="5326" min="1" max="1" chance="0.01" /> <!-- Sealed Robe of Nightmare -->
+			</drop>
+			<spoil>
+				<item id="5537" min="1" max="1" chance="0.75187969924812" /> <!-- Soul Separator Head -->
+			</spoil>
+		</dropLists>
 	</npc>
 	<npc id="21387" level="78" type="Monster" name="Arimanes of Destruction">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="100" />
 			<param name="MoveAroundSocial1" value="100" />
@@ -6884,9 +7128,26 @@
 			<radius normal="14" grown="17" />
 			<height normal="57.75" grown="69" />
 		</collision>
+		<dropLists>
+			<drop>
+				<item id="57" min="146" max="340" chance="70" /> <!-- Adena -->
+				<item id="6344" min="1" max="1" chance="0.3003003003003" /> <!-- Sealed Majestic Necklace Beads -->
+				<item id="6346" min="1" max="1" chance="0.3003003003003" /> <!-- Sealed Majestic Ring Gemstone -->
+				<item id="6342" min="1" max="1" chance="0.3003003003003" /> <!-- Sealed Majestic Earring Gemstone -->
+				<item id="8732" min="1" max="1" chance="0.1" /> <!-- Life Stone - Lv. 76 -->
+				<item id="8742" min="1" max="1" chance="0.05" /> <!-- Mid-grade Life Stone - Lv. 76 -->
+				<item id="8752" min="1" max="1" chance="0.025" /> <!-- High-grade Life Stone - Lv. 76 -->
+				<item id="6327" min="1" max="1" chance="0.0149992500374981" /> <!-- Sealed Majestic Earring -->
+				<item id="6328" min="1" max="1" chance="0.0149992500374981" /> <!-- Sealed Majestic Ring -->
+				<item id="6326" min="1" max="1" chance="0.0149992500374981" /> <!-- Sealed Majestic Necklace -->
+				<item id="959" min="1" max="1" chance="0.0149992500374981" /> <!-- Scroll: Enchant Weapon (S-grade) -->
+			</drop>
+			<spoil>
+				<item id="5522" min="1" max="1" chance="0.75187969924812" /> <!-- Sealed Armor of Nightmare Pattern -->
+			</spoil>
+		</dropLists>
 	</npc>
 	<npc id="21388" level="78" type="Monster" name="Iblis of Destruction">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="108" />
 			<param name="MoveAroundSocial1" value="108" />
@@ -6942,9 +7203,30 @@
 			<radius normal="17" />
 			<height normal="55" />
 		</collision>
+		<dropLists>
+			<drop>
+				<item id="57" min="146" max="340" chance="70" /> <!-- Adena -->
+				<item id="5515" min="1" max="1" chance="0.3003003003003" /> <!-- Sealed Majestic Gauntlet Design -->
+				<item id="5514" min="1" max="1" chance="0.3003003003003" /> <!-- Sealed Gauntlets of Nightmare Design -->
+				<item id="5503" min="1" max="1" chance="0.3003003003003" /> <!-- Sealed Majestic Boot Lining -->
+				<item id="5502" min="1" max="1" chance="0.3003003003003" /> <!-- Sealed Boots of Nightmare Lining -->
+				<item id="8732" min="1" max="1" chance="0.1" /> <!-- Life Stone - Lv. 76 -->
+				<item id="8742" min="1" max="1" chance="0.05" /> <!-- Mid-grade Life Stone - Lv. 76 -->
+				<item id="960" min="1" max="1" chance="0.03000300030003" /> <!-- Scroll: Enchant Armor (S-grade) -->
+				<item id="8752" min="1" max="1" chance="0.025" /> <!-- High-grade Life Stone - Lv. 76 -->
+				<item id="5318" min="1" max="1" chance="0.01" /> <!-- Sealed Majestic Gauntlets -->
+				<item id="5313" min="1" max="1" chance="0.01" /> <!-- Sealed Gauntlets of Nightmare -->
+				<item id="5319" min="1" max="1" chance="0.01" /> <!-- Sealed Majestic Boots -->
+				<item id="5314" min="1" max="1" chance="0.01" /> <!-- Sealed Boots of Nightmare -->
+			</drop>
+			<spoil>
+				<item id="5527" min="1" max="1" chance="1.5" /> <!-- Sealed Helm of Nightmare Design -->
+				<item id="5523" min="1" max="1" chance="0.75187969924812" /> <!-- Sealed Majestic Plate Armor Pattern -->
+				<item id="1808" min="1" max="1" chance="0.149925037481259" /> <!-- Recipe: Soulshot (S-grade) -->
+			</spoil>
+		</dropLists>
 	</npc>
 	<npc id="21389" level="78" type="Monster" name="Balrog of Destruction">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="108" />
 			<param name="MoveAroundSocial1" value="108" />
@@ -7001,9 +7283,28 @@
 			<radius normal="24" grown="29" />
 			<height normal="40" grown="48" />
 		</collision>
+		<dropLists>
+			<drop>
+				<item id="57" min="139" max="322" chance="70" /> <!-- Adena -->
+				<item id="5545" min="1" max="1" chance="0.149925037481259" /> <!-- Dark Legion's Edge Blade -->
+				<item id="5546" min="1" max="1" chance="0.149925037481259" /> <!-- Sword of Miracles Edge -->
+				<item id="5529" min="1" max="1" chance="0.149925037481259" /> <!-- Dragon Slayer Edge -->
+				<item id="8732" min="1" max="1" chance="0.1" /> <!-- Life Stone - Lv. 76 -->
+				<item id="8742" min="1" max="1" chance="0.05" /> <!-- Mid-grade Life Stone - Lv. 76 -->
+				<item id="8752" min="1" max="1" chance="0.025" /> <!-- High-grade Life Stone - Lv. 76 -->
+				<item id="959" min="1" max="1" chance="0.0149992500374981" /> <!-- Scroll: Enchant Weapon (S-grade) -->
+				<item id="151" min="1" max="1" chance="0.01" /> <!-- Sword of Miracles -->
+				<item id="2500" min="1" max="1" chance="0.01" /> <!-- Dark Legion's Edge -->
+				<item id="81" min="1" max="1" chance="0.01" /> <!-- Dragon Slayer -->
+			</drop>
+			<spoil>
+				<item id="6691" min="1" max="1" chance="0.3003003003003" /> <!-- Angel Slayer Blade -->
+				<item id="6690" min="1" max="1" chance="0.3003003003003" /> <!-- Imperial Staff Head -->
+				<item id="959" min="1" max="1" chance="0.149925037481259" /> <!-- Scroll: Enchant Weapon (S-grade) -->
+			</spoil>
+		</dropLists>
 	</npc>
 	<npc id="21390" level="78" type="Monster" name="Ashuras of Destruction">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="100" />
 			<param name="MoveAroundSocial1" value="100" />
@@ -7060,9 +7361,28 @@
 			<radius normal="17" />
 			<height normal="49" />
 		</collision>
+		<dropLists>
+			<drop>
+				<item id="57" min="285" max="663" chance="70" /> <!-- Adena -->
+				<item id="6344" min="1" max="1" chance="0.75187969924812" /> <!-- Sealed Majestic Necklace Beads -->
+				<item id="6346" min="1" max="1" chance="0.75187969924812" /> <!-- Sealed Majestic Ring Gemstone -->
+				<item id="6342" min="1" max="1" chance="0.75187969924812" /> <!-- Sealed Majestic Earring Gemstone -->
+				<item id="8732" min="1" max="1" chance="0.1" /> <!-- Life Stone - Lv. 76 -->
+				<item id="8742" min="1" max="1" chance="0.05" /> <!-- Mid-grade Life Stone - Lv. 76 -->
+				<item id="960" min="1" max="1" chance="0.03000300030003" /> <!-- Scroll: Enchant Armor (S-grade) -->
+				<item id="8752" min="1" max="1" chance="0.025" /> <!-- High-grade Life Stone - Lv. 76 -->
+				<item id="6327" min="1" max="1" chance="0.0149992500374981" /> <!-- Sealed Majestic Earring -->
+				<item id="6328" min="1" max="1" chance="0.0149992500374981" /> <!-- Sealed Majestic Ring -->
+				<item id="6326" min="1" max="1" chance="0.0149992500374981" /> <!-- Sealed Majestic Necklace -->
+			</drop>
+			<spoil>
+				<item id="6703" min="1" max="1" chance="1.5" /> <!-- Sealed Imperial Crusader Gauntlet Design -->
+				<item id="6702" min="1" max="1" chance="0.75187969924812" /> <!-- Sealed Imperial Crusader Gaiter Pattern -->
+				<item id="6701" min="1" max="1" chance="0.75187969924812" /> <!-- Sealed Imperial Crusader Breastplate Part -->
+			</spoil>
+		</dropLists>
 	</npc>
 	<npc id="21391" level="78" type="Monster" name="Lavasillisk">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="0" />
 			<param name="MoveAroundSocial1" value="0" />
@@ -7114,9 +7434,30 @@
 			<radius normal="34" />
 			<height normal="25" />
 		</collision>
+		<dropLists>
+			<drop>
+				<item id="57" min="298" max="694" chance="70" /> <!-- Adena -->
+				<item id="5544" min="1" max="1" chance="0.149925037481259" /> <!-- Branch of the Mother Tree Head -->
+				<item id="8349" min="1" max="1" chance="0.149925037481259" /> <!-- Doom Crusher Head -->
+				<item id="5533" min="1" max="1" chance="0.149925037481259" /> <!-- Elysian Head -->
+				<item id="8342" min="1" max="1" chance="0.149925037481259" /> <!-- Flaming Dragon Skull Piece -->
+				<item id="8732" min="1" max="1" chance="0.1" /> <!-- Life Stone - Lv. 76 -->
+				<item id="8742" min="1" max="1" chance="0.05" /> <!-- Mid-grade Life Stone - Lv. 76 -->
+				<item id="960" min="1" max="1" chance="0.03000300030003" /> <!-- Scroll: Enchant Armor (S-grade) -->
+				<item id="8752" min="1" max="1" chance="0.025" /> <!-- High-grade Life Stone - Lv. 76 -->
+				<item id="213" min="1" max="1" chance="0.01" /> <!-- Branch of the Mother Tree -->
+				<item id="7902" min="1" max="1" chance="0.01" /> <!-- Doom Crusher -->
+				<item id="7895" min="1" max="1" chance="0.01" /> <!-- Flaming Dragon Skull -->
+				<item id="164" min="1" max="1" chance="0.01" /> <!-- Elysian -->
+			</drop>
+			<spoil>
+				<item id="6695" min="1" max="1" chance="0.3003003003003" /> <!-- Demon Splinter Blade -->
+				<item id="6696" min="1" max="1" chance="0.3003003003003" /> <!-- Heaven's Divider Edge -->
+				<item id="6697" min="1" max="1" chance="0.3003003003003" /> <!-- Arcana Mace Head -->
+			</spoil>
+		</dropLists>
 	</npc>
 	<npc id="21392" level="78" type="Monster" name="Blazing Ifrit">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="124" />
 			<param name="MoveAroundSocial1" value="124" />
@@ -7173,9 +7514,40 @@
 			<radius normal="13" />
 			<height normal="55" />
 		</collision>
+		<dropLists>
+			<drop>
+				<item id="57" min="292" max="679" chance="70" /> <!-- Adena -->
+				<item id="36517" min="1" max="1" chance="1.5" /> <!-- Leather -->
+				<item id="36527" min="1" max="1" chance="1.5" /> <!-- Synthetic Fiber -->
+				<item id="36522" min="1" max="1" chance="0.75187969924812" /> <!-- Silver -->
+				<item id="36537" min="1" max="1" chance="0.3003003003003" /> <!-- Leather Braid -->
+				<item id="36557" min="1" max="1" chance="0.3003003003003" /> <!-- Accessory Gem -->
+				<item id="36542" min="1" max="1" chance="0.3003003003003" /> <!-- Silver Wire -->
+				<item id="9551" min="1" max="1" chance="0.149925037481259" /> <!-- Holy Stone -->
+				<item id="36562" min="1" max="1" chance="0.0750187546886722" /> <!-- Greater Cokes -->
+				<item id="36552" min="1" max="1" chance="0.0750187546886722" /> <!-- Armor Fragment -->
+				<item id="36547" min="1" max="1" chance="0.0750187546886722" /> <!-- Weapon Fragment -->
+				<item id="36892" min="1" max="1" chance="0.0149992500374981" /> <!-- Recipe: Leather Braid - Combination -->
+				<item id="959" min="1" max="1" chance="0.0149992500374981" /> <!-- Scroll: Enchant Weapon (S-grade) -->
+				<item id="36857" min="1" max="1" chance="0.01" /> <!-- Recipe: Leather - Downgrade -->
+				<item id="36890" min="1" max="1" chance="0.01" /> <!-- Recipe: Leather Braid - Downgrade -->
+				<item id="36931" min="1" max="1" chance="0.01" /> <!-- Recipe: Accessory Gem - Downgrade -->
+				<item id="36865" min="1" max="1" chance="0.01" /> <!-- Recipe: Silver - Downgrade -->
+				<item id="36904" min="1" max="1" chance="0.01" /> <!-- Recipe: Silver Wire - Upgrade -->
+				<item id="36873" min="1" max="1" chance="0.01" /> <!-- Recipe: Synthetic Fiber - Downgrade -->
+				<item id="36939" min="1" max="1" chance="0.01" /> <!-- Recipe: Greater Cokes - Downgrade -->
+				<item id="36923" min="1" max="1" chance="0.01" /> <!-- Recipe: Armor Fragment - Downgrade -->
+				<item id="36915" min="1" max="1" chance="0.01" /> <!-- Recipe: Weapon Fragment - Downgrade -->
+			</drop>
+			<spoil>
+				<item id="36532" min="1" max="1" chance="3" /> <!-- Thin Braid -->
+				<item id="36533" min="1" max="1" chance="0.75187969924812" /> <!-- Synthetic Braid -->
+				<item id="36882" min="1" max="1" chance="0.03000300030003" /> <!-- Recipe: Thin Braid - Upgrade -->
+				<item id="36881" min="1" max="1" chance="0.03000300030003" /> <!-- Recipe: Thin Braid - Downgrade -->
+			</spoil>
+		</dropLists>
 	</npc>
 	<npc id="21393" level="78" type="Monster" name="Magma Drake">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="70" />
 			<param name="MoveAroundSocial1" value="70" />
@@ -7234,9 +7606,22 @@
 			<radius normal="29" />
 			<height normal="42" />
 		</collision>
+		<dropLists>
+			<drop>
+				<item id="57" min="301" max="701" chance="70" /> <!-- Adena -->
+				<item id="5541" min="1" max="1" chance="0.3003003003003" /> <!-- Tallum Glaive Edge -->
+				<item id="8732" min="1" max="1" chance="0.1" /> <!-- Life Stone - Lv. 76 -->
+				<item id="8742" min="1" max="1" chance="0.05" /> <!-- Mid-grade Life Stone - Lv. 76 -->
+				<item id="8752" min="1" max="1" chance="0.025" /> <!-- High-grade Life Stone - Lv. 76 -->
+				<item id="959" min="1" max="1" chance="0.0149992500374981" /> <!-- Scroll: Enchant Weapon (S-grade) -->
+				<item id="305" min="1" max="1" chance="0.01" /> <!-- Tallum Glaive -->
+			</drop>
+			<spoil>
+				<item id="959" min="1" max="1" chance="0.149925037481259" /> <!-- Scroll: Enchant Weapon (S-grade) -->
+			</spoil>
+		</dropLists>
 	</npc>
 	<npc id="21394" level="78" type="Monster" name="Lavasaurus">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="IsAggressive" value="1" />
 			<param name="Aggressive_Time" value="3" />
@@ -7288,9 +7673,24 @@
 			<radius normal="15" />
 			<height normal="75" />
 		</collision>
+		<dropLists>
+			<drop>
+				<item id="57" min="83" max="194" chance="70" /> <!-- Adena -->
+				<item id="5538" min="1" max="1" chance="0.3003003003003" /> <!-- Dragon Grinder Edge -->
+				<item id="8732" min="1" max="1" chance="0.1" /> <!-- Life Stone - Lv. 76 -->
+				<item id="8742" min="1" max="1" chance="0.05" /> <!-- Mid-grade Life Stone - Lv. 76 -->
+				<item id="960" min="1" max="1" chance="0.03000300030003" /> <!-- Scroll: Enchant Armor (S-grade) -->
+				<item id="8752" min="1" max="1" chance="0.025" /> <!-- High-grade Life Stone - Lv. 76 -->
+				<item id="270" min="1" max="1" chance="0.01" /> <!-- Dragon Grinder -->
+			</drop>
+			<spoil>
+				<item id="5527" min="1" max="1" chance="0.75187969924812" /> <!-- Sealed Helm of Nightmare Design -->
+				<item id="3036" min="1" max="1" chance="0.149925037481259" /> <!-- Recipe: Spiritshot (S-grade) -->
+				<item id="1808" min="1" max="1" chance="0.149925037481259" /> <!-- Recipe: Soulshot (S-grade) -->
+			</spoil>
+		</dropLists>
 	</npc>
 	<npc id="21395" level="78" type="Monster" name="Elder Lavasaurus">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="IsAggressive" value="1" />
 			<param name="Aggressive_Time" value="3" />
@@ -7342,5 +7742,37 @@
 			<radius normal="15" />
 			<height normal="75" />
 		</collision>
+		<dropLists>
+			<drop>
+				<item id="57" min="166" max="388" chance="70" /> <!-- Adena -->
+				<item id="36523" min="1" max="1" chance="0.3003003003003" /> <!-- Adamantite -->
+				<item id="36528" min="1" max="1" chance="0.3003003003003" /> <!-- Metallic Fiber -->
+				<item id="36518" min="1" max="1" chance="0.3003003003003" /> <!-- Durable Leather -->
+				<item id="9548" min="1" max="1" chance="0.149925037481259" /> <!-- Earth Stone -->
+				<item id="36543" min="1" max="1" chance="0.0750187546886722" /> <!-- Adamantite Wire -->
+				<item id="36538" min="1" max="1" chance="0.0750187546886722" /> <!-- Durable Leather Braid -->
+				<item id="36558" min="1" max="1" chance="0.03000300030003" /> <!-- Accessory Gem (Mid-grade) -->
+				<item id="960" min="1" max="1" chance="0.03000300030003" /> <!-- Scroll: Enchant Armor (S-grade) -->
+				<item id="36563" min="1" max="1" chance="0.03000300030003" /> <!-- Synthetic Cokes -->
+				<item id="36553" min="1" max="1" chance="0.03000300030003" /> <!-- Armor Fragment (Mid-grade) -->
+				<item id="36548" min="1" max="1" chance="0.03000300030003" /> <!-- Weapon Fragment (Mid-grade) -->
+				<item id="36905" min="1" max="1" chance="0.0149992500374981" /> <!-- Recipe: Silver Wire - Combination -->
+				<item id="36858" min="1" max="1" chance="0.01" /> <!-- Recipe: Leather - Upgrade -->
+				<item id="36891" min="1" max="1" chance="0.01" /> <!-- Recipe: Leather Braid - Upgrade -->
+				<item id="36932" min="1" max="1" chance="0.01" /> <!-- Recipe: Accessory Gem - Upgrade -->
+				<item id="36866" min="1" max="1" chance="0.01" /> <!-- Recipe: Silver - Upgrade -->
+				<item id="36903" min="1" max="1" chance="0.01" /> <!-- Recipe: Silver Wire - Downgrade -->
+				<item id="36874" min="1" max="1" chance="0.01" /> <!-- Recipe: Synthetic Fiber - Upgrade -->
+				<item id="36940" min="1" max="1" chance="0.01" /> <!-- Recipe: Greater Cokes - Upgrade -->
+				<item id="36924" min="1" max="1" chance="0.01" /> <!-- Recipe: Armor Fragment - Upgrade -->
+				<item id="36916" min="1" max="1" chance="0.01" /> <!-- Recipe: Weapon Fragment - Upgrade -->
+			</drop>
+			<spoil>
+				<item id="36532" min="1" max="1" chance="2.5" /> <!-- Thin Braid -->
+				<item id="36533" min="1" max="1" chance="0.75187969924812" /> <!-- Synthetic Braid -->
+				<item id="36882" min="1" max="1" chance="0.03000300030003" /> <!-- Recipe: Thin Braid - Upgrade -->
+				<item id="36881" min="1" max="1" chance="0.03000300030003" /> <!-- Recipe: Thin Braid - Downgrade -->
+			</spoil>
+		</dropLists>
 	</npc>
 </list>

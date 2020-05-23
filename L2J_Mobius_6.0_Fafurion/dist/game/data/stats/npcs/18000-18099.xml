@@ -1,7 +1,6 @@
 ﻿<?xml version="1.0" encoding="UTF-8"?>
 <list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../xsd/npcs.xsd">
 	<npc id="18001" level="60" type="Monster" name="Blood Queen">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="60" />
 			<param name="MoveAroundSocial1" value="60" />
@@ -68,7 +67,6 @@
 		</dropLists>
 	</npc>
 	<npc id="18002" level="60" type="Monster" name="Blood Queen">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="60" />
 			<param name="MoveAroundSocial1" value="60" />
@@ -147,7 +145,6 @@
 		</dropLists>
 	</npc>
 	<npc id="18003" level="1" type="Monster" name="Nepetir">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="0" />
 			<param name="MoveAroundSocial1" value="0" />
@@ -187,7 +184,6 @@
 		</collision>
 	</npc>
 	<npc id="18004" level="49" type="Monster" name="Susceptor Prime">
-		<!-- Confirmed CT2.5 -->
 		<race>CONSTRUCT</race>
 		<sex>MALE</sex>
 		<acquire sp="1" />
@@ -225,7 +221,6 @@
 		</collision>
 	</npc>
 	<npc id="18005" level="52" type="Monster" name="Mimic">
-		<!-- Confirmed CT2.5 -->
 		<race>CONSTRUCT</race>
 		<sex>MALE</sex>
 		<acquire exp="4867" sp="1" />
@@ -260,7 +255,6 @@
 		</collision>
 	</npc>
 	<npc id="18006" level="68" type="Monster" name="Maluk Lord">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="80" />
 			<param name="MoveAroundSocial1" value="80" />
@@ -313,9 +307,22 @@
 			<radius normal="15" grown="25" />
 			<height normal="45" grown="52" />
 		</collision>
+		<dropLists>
+			<drop>
+				<!-- Also drops herbs. -->
+				<item id="8600" min="1" max="1" chance="10" /> <!-- Herb of Life -->
+				<item id="8601" min="1" max="1" chance="8" /> <!-- Major Herb of Life -->
+				<item id="8602" min="1" max="1" chance="2" /> <!-- Superior Herb of Life -->
+				<item id="8603" min="1" max="1" chance="19.8" /> <!-- Herb of Mana -->
+				<item id="8604" min="1" max="1" chance="9.9" /> <!-- Major Herb of Mana -->
+				<item id="8605" min="1" max="1" chance="3.3" /> <!-- Superior Herb of Mana -->
+				<item id="34849" min="1" max="1" chance="0.7" /> <!-- Mysterious Herb of Power -->
+				<item id="34850" min="1" max="1" chance="0.7" /> <!-- Mysterious Herb of Magic -->
+				<item id="13028" min="1" max="1" chance="0.1" /> <!-- Vitality Replenishing Herb -->
+			</drop>
+		</dropLists>
 	</npc>
 	<npc id="18007" level="69" type="Monster" name="Limal Karinness">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="60" />
 			<param name="MoveAroundSocial1" value="60" />
@@ -365,9 +372,22 @@
 			<radius normal="14" />
 			<height normal="40" />
 		</collision>
+		<dropLists>
+			<drop>
+				<!-- Also drops herbs. -->
+				<item id="8600" min="1" max="1" chance="10" /> <!-- Herb of Life -->
+				<item id="8601" min="1" max="1" chance="8" /> <!-- Major Herb of Life -->
+				<item id="8602" min="1" max="1" chance="2" /> <!-- Superior Herb of Life -->
+				<item id="8603" min="1" max="1" chance="19.8" /> <!-- Herb of Mana -->
+				<item id="8604" min="1" max="1" chance="9.9" /> <!-- Major Herb of Mana -->
+				<item id="8605" min="1" max="1" chance="3.3" /> <!-- Superior Herb of Mana -->
+				<item id="34849" min="1" max="1" chance="0.7" /> <!-- Mysterious Herb of Power -->
+				<item id="34850" min="1" max="1" chance="0.7" /> <!-- Mysterious Herb of Magic -->
+				<item id="13028" min="1" max="1" chance="0.1" /> <!-- Vitality Replenishing Herb -->
+			</drop>
+		</dropLists>
 	</npc>
 	<npc id="18008" level="70" type="Monster" name="Karik">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="140" />
 			<param name="MoveAroundSocial1" value="140" />
@@ -416,9 +436,22 @@
 			<radius normal="25" grown="30" />
 			<height normal="90" grown="109" />
 		</collision>
+		<dropLists>
+			<drop>
+				<!-- Also drops herbs. -->
+				<item id="8600" min="1" max="1" chance="10" /> <!-- Herb of Life -->
+				<item id="8601" min="1" max="1" chance="8" /> <!-- Major Herb of Life -->
+				<item id="8602" min="1" max="1" chance="2" /> <!-- Superior Herb of Life -->
+				<item id="8603" min="1" max="1" chance="19.8" /> <!-- Herb of Mana -->
+				<item id="8604" min="1" max="1" chance="9.9" /> <!-- Major Herb of Mana -->
+				<item id="8605" min="1" max="1" chance="3.3" /> <!-- Superior Herb of Mana -->
+				<item id="34849" min="1" max="1" chance="0.7" /> <!-- Mysterious Herb of Power -->
+				<item id="34850" min="1" max="1" chance="0.7" /> <!-- Mysterious Herb of Magic -->
+				<item id="13028" min="1" max="1" chance="0.1" /> <!-- Vitality Replenishing Herb -->
+			</drop>
+		</dropLists>
 	</npc>
 	<npc id="18009" level="34" type="FestivalMonster" name="Offering of the Branded, Elder">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="RoomIndex" value="1" />
 			<param name="SSQPart" value="TWILIGHT" />
@@ -474,7 +507,6 @@
 		</collision>
 	</npc>
 	<npc id="18010" level="32" type="FestivalMonster" name="Offering of the Branded">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="RoomIndex" value="1" />
 			<param name="SSQPart" value="TWILIGHT" />
@@ -519,7 +551,6 @@
 		</collision>
 	</npc>
 	<npc id="18011" level="28" type="FestivalMonster" name="Offering of the Branded, Archer">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="RoomIndex" value="1" />
 			<param name="SSQPart" value="TWILIGHT" />
@@ -562,7 +593,6 @@
 		</collision>
 	</npc>
 	<npc id="18012" level="29" type="FestivalMonster" name="Offering of the Branded, Warrior">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="RoomIndex" value="1" />
 			<param name="SSQPart" value="TWILIGHT" />
@@ -610,7 +640,6 @@
 		</collision>
 	</npc>
 	<npc id="18013" level="29" type="FestivalMonster" name="Offering of the Branded, Follower">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="RoomIndex" value="1" />
 			<param name="SSQPart" value="TWILIGHT" />
@@ -661,7 +690,6 @@
 		</collision>
 	</npc>
 	<npc id="18014" level="37" type="FestivalMonster" name="Offering of the Branded, Berserker">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="RoomIndex" value="1" />
 			<param name="SSQPart" value="TWILIGHT" />
@@ -710,7 +738,6 @@
 		</collision>
 	</npc>
 	<npc id="18015" level="34" type="FestivalMonster" name="Offering of the Branded, Zealot">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="RoomIndex" value="1" />
 			<param name="SSQPart" value="TWILIGHT" />
@@ -759,7 +786,6 @@
 		</collision>
 	</npc>
 	<npc id="18016" level="32" type="FestivalMonster" name="Offering of the Branded, Sniper">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="RoomIndex" value="1" />
 			<param name="SSQPart" value="TWILIGHT" />
@@ -802,7 +828,6 @@
 		</collision>
 	</npc>
 	<npc id="18017" level="34" type="FestivalMonster" name="Offering of the Branded, Disciple">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="RoomIndex" value="1" />
 			<param name="SSQPart" value="TWILIGHT" />
@@ -847,7 +872,6 @@
 		</collision>
 	</npc>
 	<npc id="18018" level="39" type="FestivalMonster" name="Offering of the Branded, Saint">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="RoomIndex" value="1" />
 			<param name="SSQPart" value="TWILIGHT" />
@@ -895,7 +919,6 @@
 		</collision>
 	</npc>
 	<npc id="18019" level="45" type="FestivalMonster" name="Apostate's Offering, Elder">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="RoomIndex" value="2" />
 			<param name="SSQPart" value="TWILIGHT" />
@@ -946,7 +969,6 @@
 		</collision>
 	</npc>
 	<npc id="18020" level="43" type="FestivalMonster" name="Apostate's Offering">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="RoomIndex" value="2" />
 			<param name="SSQPart" value="TWILIGHT" />
@@ -991,7 +1013,6 @@
 		</collision>
 	</npc>
 	<npc id="18021" level="39" type="FestivalMonster" name="Apostate's Offering, Archer">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="RoomIndex" value="2" />
 			<param name="SSQPart" value="TWILIGHT" />
@@ -1034,7 +1055,6 @@
 		</collision>
 	</npc>
 	<npc id="18022" level="40" type="FestivalMonster" name="Apostate's Offering, Warrior">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="RoomIndex" value="2" />
 			<param name="SSQPart" value="TWILIGHT" />
@@ -1082,7 +1102,6 @@
 		</collision>
 	</npc>
 	<npc id="18023" level="40" type="FestivalMonster" name="Apostate's Offering, Follower">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="RoomIndex" value="2" />
 			<param name="SSQPart" value="TWILIGHT" />
@@ -1133,7 +1152,6 @@
 		</collision>
 	</npc>
 	<npc id="18024" level="48" type="FestivalMonster" name="Apostate's Offering, Berserker">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="RoomIndex" value="2" />
 			<param name="SSQPart" value="TWILIGHT" />
@@ -1181,7 +1199,6 @@
 		</collision>
 	</npc>
 	<npc id="18025" level="45" type="FestivalMonster" name="Apostate's Offering, Zealot">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="RoomIndex" value="2" />
 			<param name="SSQPart" value="TWILIGHT" />
@@ -1231,7 +1248,6 @@
 		</collision>
 	</npc>
 	<npc id="18026" level="43" type="FestivalMonster" name="Apostate's Offering, Sniper">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="RoomIndex" value="2" />
 			<param name="SSQPart" value="TWILIGHT" />
@@ -1274,7 +1290,6 @@
 		</collision>
 	</npc>
 	<npc id="18027" level="45" type="FestivalMonster" name="Apostate's Offering, Disciple">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="RoomIndex" value="2" />
 			<param name="SSQPart" value="TWILIGHT" />
@@ -1319,7 +1334,6 @@
 		</collision>
 	</npc>
 	<npc id="18028" level="50" type="FestivalMonster" name="Apostate's Offering, Saint">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="RoomIndex" value="2" />
 			<param name="SSQPart" value="TWILIGHT" />
@@ -1367,7 +1381,6 @@
 		</collision>
 	</npc>
 	<npc id="18029" level="56" type="FestivalMonster" name="Witch's Offering, Elder">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="RoomIndex" value="3" />
 			<param name="SSQPart" value="TWILIGHT" />
@@ -1418,7 +1431,6 @@
 		</collision>
 	</npc>
 	<npc id="18030" level="54" type="FestivalMonster" name="Witch's Offering">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="RoomIndex" value="3" />
 			<param name="SSQPart" value="TWILIGHT" />
@@ -1463,7 +1475,6 @@
 		</collision>
 	</npc>
 	<npc id="18031" level="50" type="FestivalMonster" name="Witch's Offering, Archer">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="RoomIndex" value="3" />
 			<param name="SSQPart" value="TWILIGHT" />
@@ -1506,7 +1517,6 @@
 		</collision>
 	</npc>
 	<npc id="18032" level="51" type="FestivalMonster" name="Witch's Offering, Warrior">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="RoomIndex" value="3" />
 			<param name="SSQPart" value="TWILIGHT" />
@@ -1554,7 +1564,6 @@
 		</collision>
 	</npc>
 	<npc id="18033" level="51" type="FestivalMonster" name="Witch's Offering, Follower">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="RoomIndex" value="3" />
 			<param name="SSQPart" value="TWILIGHT" />
@@ -1605,7 +1614,6 @@
 		</collision>
 	</npc>
 	<npc id="18034" level="59" type="FestivalMonster" name="Witch's Offering, Berserker">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="RoomIndex" value="3" />
 			<param name="SSQPart" value="TWILIGHT" />
@@ -1654,7 +1662,6 @@
 		</collision>
 	</npc>
 	<npc id="18035" level="56" type="FestivalMonster" name="Witch's Offering, Zealot">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="RoomIndex" value="3" />
 			<param name="SSQPart" value="TWILIGHT" />
@@ -1704,7 +1711,6 @@
 		</collision>
 	</npc>
 	<npc id="18036" level="54" type="FestivalMonster" name="Witch's Offering, Sniper">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="RoomIndex" value="3" />
 			<param name="SSQPart" value="TWILIGHT" />
@@ -1747,7 +1753,6 @@
 		</collision>
 	</npc>
 	<npc id="18037" level="56" type="FestivalMonster" name="Witch's Offering, Disciple">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="RoomIndex" value="3" />
 			<param name="SSQPart" value="TWILIGHT" />
@@ -1792,7 +1797,6 @@
 		</collision>
 	</npc>
 	<npc id="18038" level="61" type="FestivalMonster" name="Witch's Offering, Saint">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="RoomIndex" value="3" />
 			<param name="SSQPart" value="TWILIGHT" />
@@ -1840,7 +1844,6 @@
 		</collision>
 	</npc>
 	<npc id="18039" level="67" type="FestivalMonster" name="Dark Omen Offering Elder">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="RoomIndex" value="4" />
 			<param name="SSQPart" value="TWILIGHT" />
@@ -1891,7 +1894,6 @@
 		</collision>
 	</npc>
 	<npc id="18040" level="65" type="FestivalMonster" name="Dark Omen Offering">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="RoomIndex" value="4" />
 			<param name="SSQPart" value="TWILIGHT" />
@@ -1936,7 +1938,6 @@
 		</collision>
 	</npc>
 	<npc id="18041" level="61" type="FestivalMonster" name="Dark Omen Offering Archer">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="RoomIndex" value="4" />
 			<param name="SSQPart" value="TWILIGHT" />
@@ -1979,7 +1980,6 @@
 		</collision>
 	</npc>
 	<npc id="18042" level="62" type="FestivalMonster" name="Dark Omen Offering Warrior">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="RoomIndex" value="4" />
 			<param name="SSQPart" value="TWILIGHT" />
@@ -2027,7 +2027,6 @@
 		</collision>
 	</npc>
 	<npc id="18043" level="62" type="FestivalMonster" name="Dark Omen Offering Follower">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="RoomIndex" value="4" />
 			<param name="SSQPart" value="TWILIGHT" />
@@ -2078,7 +2077,6 @@
 		</collision>
 	</npc>
 	<npc id="18044" level="70" type="FestivalMonster" name="Dark Omen Offering Berserker">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="RoomIndex" value="4" />
 			<param name="SSQPart" value="TWILIGHT" />
@@ -2127,7 +2125,6 @@
 		</collision>
 	</npc>
 	<npc id="18045" level="67" type="FestivalMonster" name="Dark Omen Offering Zealot">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="RoomIndex" value="4" />
 			<param name="SSQPart" value="TWILIGHT" />
@@ -2177,7 +2174,6 @@
 		</collision>
 	</npc>
 	<npc id="18046" level="65" type="FestivalMonster" name="Dark Omen Offering Sniper">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="RoomIndex" value="4" />
 			<param name="SSQPart" value="TWILIGHT" />
@@ -2220,7 +2216,6 @@
 		</collision>
 	</npc>
 	<npc id="18047" level="67" type="FestivalMonster" name="Dark Omen Offering Disciple">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="RoomIndex" value="4" />
 			<param name="SSQPart" value="TWILIGHT" />
@@ -2265,7 +2260,6 @@
 		</collision>
 	</npc>
 	<npc id="18048" level="72" type="FestivalMonster" name="Dark Omen Offering Saint">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="RoomIndex" value="4" />
 			<param name="SSQPart" value="TWILIGHT" />
@@ -2313,7 +2307,6 @@
 		</collision>
 	</npc>
 	<npc id="18049" level="78" type="FestivalMonster" name="Offering of Forbidden Path, Elder">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="RoomIndex" value="5" />
 			<param name="SSQPart" value="TWILIGHT" />
@@ -2364,7 +2357,6 @@
 		</collision>
 	</npc>
 	<npc id="18050" level="76" type="FestivalMonster" name="Offering of Forbidden Path">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="RoomIndex" value="5" />
 			<param name="SSQPart" value="TWILIGHT" />
@@ -2409,7 +2401,6 @@
 		</collision>
 	</npc>
 	<npc id="18051" level="78" type="FestivalMonster" name="Offering of Forbidden Path, Archer">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="RoomIndex" value="5" />
 			<param name="SSQPart" value="TWILIGHT" />
@@ -2452,7 +2443,6 @@
 		</collision>
 	</npc>
 	<npc id="18052" level="78" type="FestivalMonster" name="Offering of Forbidden Path, Warrior">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="RoomIndex" value="5" />
 			<param name="SSQPart" value="TWILIGHT" />
@@ -2551,7 +2541,6 @@
 		</collision>
 	</npc>
 	<npc id="18054" level="78" type="FestivalMonster" name="Offering of Forbidden Path, Berserker">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="RoomIndex" value="5" />
 			<param name="SSQPart" value="TWILIGHT" />
@@ -2600,7 +2589,6 @@
 		</collision>
 	</npc>
 	<npc id="18055" level="78" type="FestivalMonster" name="Offering of Forbidden Path, Zealot">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="RoomIndex" value="5" />
 			<param name="SSQPart" value="TWILIGHT" />
@@ -2650,7 +2638,6 @@
 		</collision>
 	</npc>
 	<npc id="18056" level="76" type="FestivalMonster" name="Offering of Forbidden Path, Sniper">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="RoomIndex" value="5" />
 			<param name="SSQPart" value="TWILIGHT" />
@@ -2693,7 +2680,6 @@
 		</collision>
 	</npc>
 	<npc id="18057" level="78" type="FestivalMonster" name="Offering of Forbidden Path, Disciple">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="RoomIndex" value="5" />
 			<param name="SSQPart" value="TWILIGHT" />
@@ -2738,7 +2724,6 @@
 		</collision>
 	</npc>
 	<npc id="18058" level="78" type="FestivalMonster" name="Offering of Forbidden Path, Saint">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="RoomIndex" value="5" />
 			<param name="SSQPart" value="TWILIGHT" />
@@ -2786,7 +2771,6 @@
 		</collision>
 	</npc>
 	<npc id="18059" level="34" type="FestivalMonster" name="Offering of the Branded, Elder">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="RoomIndex" value="1" />
 			<param name="SSQPart" value="DAWN" />
@@ -2837,7 +2821,6 @@
 		</collision>
 	</npc>
 	<npc id="18060" level="32" type="FestivalMonster" name="Offering of the Branded">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="RoomIndex" value="1" />
 			<param name="SSQPart" value="DAWN" />
@@ -2882,7 +2865,6 @@
 		</collision>
 	</npc>
 	<npc id="18061" level="28" type="FestivalMonster" name="Offering of the Branded, Archer">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="RoomIndex" value="1" />
 			<param name="SSQPart" value="DAWN" />
@@ -2925,7 +2907,6 @@
 		</collision>
 	</npc>
 	<npc id="18062" level="29" type="FestivalMonster" name="Offering of the Branded, Warrior">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="RoomIndex" value="1" />
 			<param name="SSQPart" value="DAWN" />
@@ -2973,7 +2954,6 @@
 		</collision>
 	</npc>
 	<npc id="18063" level="29" type="FestivalMonster" name="Offering of the Branded, Follower">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="RoomIndex" value="1" />
 			<param name="SSQPart" value="DAWN" />
@@ -3024,7 +3004,6 @@
 		</collision>
 	</npc>
 	<npc id="18064" level="37" type="FestivalMonster" name="Offering of the Branded, Berserker">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="RoomIndex" value="1" />
 			<param name="SSQPart" value="DAWN" />
@@ -3073,7 +3052,6 @@
 		</collision>
 	</npc>
 	<npc id="18065" level="34" type="FestivalMonster" name="Offering of the Branded, Zealot">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="RoomIndex" value="1" />
 			<param name="SSQPart" value="DAWN" />
@@ -3123,7 +3101,6 @@
 		</collision>
 	</npc>
 	<npc id="18066" level="32" type="FestivalMonster" name="Offering of the Branded, Sniper">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="RoomIndex" value="1" />
 			<param name="SSQPart" value="DAWN" />
@@ -3166,7 +3143,6 @@
 		</collision>
 	</npc>
 	<npc id="18067" level="34" type="FestivalMonster" name="Offering of the Branded, Disciple">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="RoomIndex" value="1" />
 			<param name="SSQPart" value="DAWN" />
@@ -3211,7 +3187,6 @@
 		</collision>
 	</npc>
 	<npc id="18068" level="39" type="FestivalMonster" name="Offering of the Branded, Saint">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="RoomIndex" value="1" />
 			<param name="SSQPart" value="DAWN" />
@@ -3259,7 +3234,6 @@
 		</collision>
 	</npc>
 	<npc id="18069" level="45" type="FestivalMonster" name="Apostate's Offering, Elder">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="RoomIndex" value="2" />
 			<param name="SSQPart" value="DAWN" />
@@ -3310,7 +3284,6 @@
 		</collision>
 	</npc>
 	<npc id="18070" level="43" type="FestivalMonster" name="Apostate's Offering">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="RoomIndex" value="2" />
 			<param name="SSQPart" value="DAWN" />
@@ -3355,7 +3328,6 @@
 		</collision>
 	</npc>
 	<npc id="18071" level="39" type="FestivalMonster" name="Apostate's Offering, Archer">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="RoomIndex" value="2" />
 			<param name="SSQPart" value="DAWN" />
@@ -3398,7 +3370,6 @@
 		</collision>
 	</npc>
 	<npc id="18072" level="40" type="FestivalMonster" name="Apostate's Offering, Warrior">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="RoomIndex" value="2" />
 			<param name="SSQPart" value="DAWN" />
@@ -3446,7 +3417,6 @@
 		</collision>
 	</npc>
 	<npc id="18073" level="40" type="FestivalMonster" name="Apostate's Offering, Follower">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="RoomIndex" value="2" />
 			<param name="SSQPart" value="DAWN" />
@@ -3497,7 +3467,6 @@
 		</collision>
 	</npc>
 	<npc id="18074" level="48" type="FestivalMonster" name="Apostate's Offering, Berserker">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="RoomIndex" value="2" />
 			<param name="SSQPart" value="DAWN" />
@@ -3546,7 +3515,6 @@
 		</collision>
 	</npc>
 	<npc id="18075" level="45" type="FestivalMonster" name="Apostate's Offering, Zealot">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="RoomIndex" value="2" />
 			<param name="SSQPart" value="DAWN" />
@@ -3596,7 +3564,6 @@
 		</collision>
 	</npc>
 	<npc id="18076" level="43" type="FestivalMonster" name="Apostate's Offering, Sniper">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="RoomIndex" value="2" />
 			<param name="SSQPart" value="DAWN" />
@@ -3639,7 +3606,6 @@
 		</collision>
 	</npc>
 	<npc id="18077" level="45" type="FestivalMonster" name="Apostate's Offering, Disciple">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="RoomIndex" value="2" />
 			<param name="SSQPart" value="DAWN" />
@@ -3684,7 +3650,6 @@
 		</collision>
 	</npc>
 	<npc id="18078" level="50" type="FestivalMonster" name="Apostate's Offering, Saint">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="RoomIndex" value="2" />
 			<param name="SSQPart" value="DAWN" />
@@ -3732,7 +3697,6 @@
 		</collision>
 	</npc>
 	<npc id="18079" level="56" type="FestivalMonster" name="Witch's Offering, Elder">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="RoomIndex" value="3" />
 			<param name="SSQPart" value="DAWN" />
@@ -3783,7 +3747,6 @@
 		</collision>
 	</npc>
 	<npc id="18080" level="54" type="FestivalMonster" name="Witch's Offering">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="RoomIndex" value="3" />
 			<param name="SSQPart" value="DAWN" />
@@ -3828,7 +3791,6 @@
 		</collision>
 	</npc>
 	<npc id="18081" level="50" type="FestivalMonster" name="Witch's Offering, Archer">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="RoomIndex" value="3" />
 			<param name="SSQPart" value="DAWN" />
@@ -3871,7 +3833,6 @@
 		</collision>
 	</npc>
 	<npc id="18082" level="51" type="FestivalMonster" name="Witch's Offering, Warrior">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="RoomIndex" value="3" />
 			<param name="SSQPart" value="DAWN" />
@@ -3919,7 +3880,6 @@
 		</collision>
 	</npc>
 	<npc id="18083" level="51" type="FestivalMonster" name="Witch's Offering, Follower">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="RoomIndex" value="3" />
 			<param name="SSQPart" value="DAWN" />
@@ -3970,7 +3930,6 @@
 		</collision>
 	</npc>
 	<npc id="18084" level="59" type="FestivalMonster" name="Witch's Offering, Berserker">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="RoomIndex" value="3" />
 			<param name="SSQPart" value="DAWN" />
@@ -4019,7 +3978,6 @@
 		</collision>
 	</npc>
 	<npc id="18085" level="56" type="FestivalMonster" name="Witch's Offering, Zealot">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="RoomIndex" value="3" />
 			<param name="SSQPart" value="DAWN" />
@@ -4069,7 +4027,6 @@
 		</collision>
 	</npc>
 	<npc id="18086" level="54" type="FestivalMonster" name="Witch's Offering, Sniper">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="RoomIndex" value="3" />
 			<param name="SSQPart" value="DAWN" />
@@ -4112,7 +4069,6 @@
 		</collision>
 	</npc>
 	<npc id="18087" level="56" type="FestivalMonster" name="Witch's Offering, Disciple">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="RoomIndex" value="3" />
 			<param name="SSQPart" value="DAWN" />
@@ -4157,7 +4113,6 @@
 		</collision>
 	</npc>
 	<npc id="18088" level="61" type="FestivalMonster" name="Witch's Offering, Saint">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="RoomIndex" value="3" />
 			<param name="SSQPart" value="DAWN" />
@@ -4205,7 +4160,6 @@
 		</collision>
 	</npc>
 	<npc id="18089" level="67" type="FestivalMonster" name="Dark Omen Offering Elder">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="RoomIndex" value="4" />
 			<param name="SSQPart" value="DAWN" />
@@ -4256,7 +4210,6 @@
 		</collision>
 	</npc>
 	<npc id="18090" level="65" type="FestivalMonster" name="Dark Omen Offering">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="RoomIndex" value="4" />
 			<param name="SSQPart" value="DAWN" />
@@ -4301,7 +4254,6 @@
 		</collision>
 	</npc>
 	<npc id="18091" level="61" type="FestivalMonster" name="Dark Omen Offering Archer">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="RoomIndex" value="4" />
 			<param name="SSQPart" value="DAWN" />
@@ -4344,7 +4296,6 @@
 		</collision>
 	</npc>
 	<npc id="18092" level="62" type="FestivalMonster" name="Dark Omen Offering Warrior">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="RoomIndex" value="4" />
 			<param name="SSQPart" value="DAWN" />
@@ -4392,7 +4343,6 @@
 		</collision>
 	</npc>
 	<npc id="18093" level="62" type="FestivalMonster" name="Dark Omen Offering Follower">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="RoomIndex" value="4" />
 			<param name="SSQPart" value="DAWN" />
@@ -4443,7 +4393,6 @@
 		</collision>
 	</npc>
 	<npc id="18094" level="70" type="FestivalMonster" name="Dark Omen Offering Berserker">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="RoomIndex" value="4" />
 			<param name="SSQPart" value="DAWN" />
@@ -4492,7 +4441,6 @@
 		</collision>
 	</npc>
 	<npc id="18095" level="67" type="FestivalMonster" name="Dark Omen Offering Zealot">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="RoomIndex" value="4" />
 			<param name="SSQPart" value="DAWN" />
@@ -4542,7 +4490,6 @@
 		</collision>
 	</npc>
 	<npc id="18096" level="65" type="FestivalMonster" name="Dark Omen Offering Sniper">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="RoomIndex" value="4" />
 			<param name="SSQPart" value="DAWN" />
@@ -4585,7 +4532,6 @@
 		</collision>
 	</npc>
 	<npc id="18097" level="67" type="FestivalMonster" name="Dark Omen Offering Disciple">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="RoomIndex" value="4" />
 			<param name="SSQPart" value="DAWN" />
@@ -4630,7 +4576,6 @@
 		</collision>
 	</npc>
 	<npc id="18098" level="72" type="FestivalMonster" name="Dark Omen Offering Saint">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="RoomIndex" value="4" />
 			<param name="SSQPart" value="DAWN" />
@@ -4678,7 +4623,6 @@
 		</collision>
 	</npc>
 	<npc id="18099" level="78" type="FestivalMonster" name="Offering of Forbidden Path, Elder">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="RoomIndex" value="5" />
 			<param name="SSQPart" value="DAWN" />

@@ -1,7 +1,6 @@
 ﻿<?xml version="1.0" encoding="UTF-8"?>
 <list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../xsd/npcs.xsd">
 	<npc id="18900" level="84" type="FeedableBeast" name="Full Grown Grendel">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="my_type" value="4" />
 			<param name="my_grade" value="4" />
@@ -69,7 +68,6 @@
 		</collision>
 	</npc>
 	<npc id="18901" level="83" type="Monster" name="Kookaburra" title="Golden">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="IsAggressive" value="1" />
 			<skill name="Skill01_ID" id="6556" level="16" />
@@ -115,9 +113,22 @@
 			<radius normal="12" />
 			<height normal="21" />
 		</collision>
+		<dropLists>
+			<drop>
+				<!-- Also drops herbs. -->
+				<item id="8600" min="1" max="1" chance="10" /> <!-- Herb of Life -->
+				<item id="8601" min="1" max="1" chance="8" /> <!-- Major Herb of Life -->
+				<item id="8602" min="1" max="1" chance="2" /> <!-- Superior Herb of Life -->
+				<item id="8603" min="1" max="1" chance="19.8" /> <!-- Herb of Mana -->
+				<item id="8604" min="1" max="1" chance="9.9" /> <!-- Major Herb of Mana -->
+				<item id="8605" min="1" max="1" chance="3.3" /> <!-- Superior Herb of Mana -->
+				<item id="34849" min="1" max="1" chance="0.7" /> <!-- Mysterious Herb of Power -->
+				<item id="34850" min="1" max="1" chance="0.7" /> <!-- Mysterious Herb of Magic -->
+				<item id="13028" min="1" max="1" chance="0.1" /> <!-- Vitality Replenishing Herb -->
+			</drop>
+		</dropLists>
 	</npc>
 	<npc id="18902" level="83" type="Monster" name="Cougar" title="Golden">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="IsAggressive" value="1" />
 			<skill name="Skill01_ID" id="6556" level="16" />
@@ -163,9 +174,22 @@
 			<radius normal="13" />
 			<height normal="21" />
 		</collision>
+		<dropLists>
+			<drop>
+				<!-- Also drops herbs. -->
+				<item id="8600" min="1" max="1" chance="10" /> <!-- Herb of Life -->
+				<item id="8601" min="1" max="1" chance="8" /> <!-- Major Herb of Life -->
+				<item id="8602" min="1" max="1" chance="2" /> <!-- Superior Herb of Life -->
+				<item id="8603" min="1" max="1" chance="19.8" /> <!-- Herb of Mana -->
+				<item id="8604" min="1" max="1" chance="9.9" /> <!-- Major Herb of Mana -->
+				<item id="8605" min="1" max="1" chance="3.3" /> <!-- Superior Herb of Mana -->
+				<item id="34849" min="1" max="1" chance="0.7" /> <!-- Mysterious Herb of Power -->
+				<item id="34850" min="1" max="1" chance="0.7" /> <!-- Mysterious Herb of Magic -->
+				<item id="13028" min="1" max="1" chance="0.1" /> <!-- Vitality Replenishing Herb -->
+			</drop>
+		</dropLists>
 	</npc>
 	<npc id="18903" level="84" type="Monster" name="Buffalo" title="Golden">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="IsAggressive" value="1" />
 			<skill name="Skill01_ID" id="6556" level="17" />
@@ -211,9 +235,22 @@
 			<radius normal="16" />
 			<height normal="22" />
 		</collision>
+		<dropLists>
+			<drop>
+				<!-- Also drops herbs. -->
+				<item id="8600" min="1" max="1" chance="10" /> <!-- Herb of Life -->
+				<item id="8601" min="1" max="1" chance="8" /> <!-- Major Herb of Life -->
+				<item id="8602" min="1" max="1" chance="2" /> <!-- Superior Herb of Life -->
+				<item id="8603" min="1" max="1" chance="19.8" /> <!-- Herb of Mana -->
+				<item id="8604" min="1" max="1" chance="9.9" /> <!-- Major Herb of Mana -->
+				<item id="8605" min="1" max="1" chance="3.3" /> <!-- Superior Herb of Mana -->
+				<item id="34849" min="1" max="1" chance="0.7" /> <!-- Mysterious Herb of Power -->
+				<item id="34850" min="1" max="1" chance="0.7" /> <!-- Mysterious Herb of Magic -->
+				<item id="13028" min="1" max="1" chance="0.1" /> <!-- Vitality Replenishing Herb -->
+			</drop>
+		</dropLists>
 	</npc>
 	<npc id="18904" level="84" type="Monster" name="Grendel" title="Golden">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="IsAggressive" value="1" />
 			<skill name="Skill01_ID" id="6556" level="17" />
@@ -258,9 +295,22 @@
 			<radius normal="12" />
 			<height normal="17" />
 		</collision>
+		<dropLists>
+			<drop>
+				<!-- Also drops herbs. -->
+				<item id="8600" min="1" max="1" chance="10" /> <!-- Herb of Life -->
+				<item id="8601" min="1" max="1" chance="8" /> <!-- Major Herb of Life -->
+				<item id="8602" min="1" max="1" chance="2" /> <!-- Superior Herb of Life -->
+				<item id="8603" min="1" max="1" chance="19.8" /> <!-- Herb of Mana -->
+				<item id="8604" min="1" max="1" chance="9.9" /> <!-- Major Herb of Mana -->
+				<item id="8605" min="1" max="1" chance="3.3" /> <!-- Superior Herb of Mana -->
+				<item id="34849" min="1" max="1" chance="0.7" /> <!-- Mysterious Herb of Power -->
+				<item id="34850" min="1" max="1" chance="0.7" /> <!-- Mysterious Herb of Magic -->
+				<item id="13028" min="1" max="1" chance="0.1" /> <!-- Vitality Replenishing Herb -->
+			</drop>
+		</dropLists>
 	</npc>
 	<npc id="18905" level="84" type="Monster" name="Farm Bandit" title="Crazed">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="IsAggressive" value="1" />
 			<skill name="Skill01_ID" id="6559" level="17" />
@@ -333,7 +383,6 @@
 		</dropLists>
 	</npc>
 	<npc id="18906" level="84" type="Monster" name="Farm Bandit">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="IsAggressive" value="1" />
 			<skill name="Skill01_ID" id="6559" level="16" />
@@ -403,7 +452,6 @@
 		</collision>
 	</npc>
 	<npc id="18907" level="84" type="Monster" name="Beast Devourer">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="IsAggressive" value="1" />
 			<skill name="Skill01_ID" id="6566" level="17" />
@@ -471,7 +519,6 @@
 		</collision>
 	</npc>
 	<npc id="18908" level="83" type="Monster" name="Sel Mahum Chef">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<skill name="Skill01_ID" id="6330" level="1" />
 		</parameters>
@@ -515,9 +562,23 @@
 			<radius normal="35" />
 			<height normal="32.5" />
 		</collision>
+		<dropLists>
+			<drop>
+				<item id="15492" min="1" max="1" chance="25" /> <!-- Sel Mahum Salmon Porridge -->
+				<!-- Also drops herbs. -->
+				<item id="8600" min="1" max="1" chance="10" /> <!-- Herb of Life -->
+				<item id="8601" min="1" max="1" chance="8" /> <!-- Major Herb of Life -->
+				<item id="8602" min="1" max="1" chance="2" /> <!-- Superior Herb of Life -->
+				<item id="8603" min="1" max="1" chance="19.8" /> <!-- Herb of Mana -->
+				<item id="8604" min="1" max="1" chance="9.9" /> <!-- Major Herb of Mana -->
+				<item id="8605" min="1" max="1" chance="3.3" /> <!-- Superior Herb of Mana -->
+				<item id="34849" min="1" max="1" chance="0.7" /> <!-- Mysterious Herb of Power -->
+				<item id="34850" min="1" max="1" chance="0.7" /> <!-- Mysterious Herb of Magic -->
+				<item id="13028" min="1" max="1" chance="0.1" /> <!-- Vitality Replenishing Herb -->
+			</drop>
+		</dropLists>
 	</npc>
 	<npc id="18909" level="83" type="Monster" name="Solina Knights">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<skill name="PhysicalSpecial" id="6311" level="1" />
 		</parameters>
@@ -581,7 +642,6 @@
 		</collision>
 	</npc>
 	<npc id="18910" level="83" type="Monster" name="Solina Knight Captain">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<skill name="PhysicalSpecial" id="6312" level="1" />
 			<skill name="Buff" id="6313" level="1" />
@@ -1911,6 +1971,20 @@
 			<radius normal="15" />
 			<height normal="27.5" />
 		</collision>
+		<dropLists>
+			<drop>
+				<!-- Also drops herbs. -->
+				<item id="8600" min="1" max="1" chance="10" /> <!-- Herb of Life -->
+				<item id="8601" min="1" max="1" chance="8" /> <!-- Major Herb of Life -->
+				<item id="8602" min="1" max="1" chance="2" /> <!-- Superior Herb of Life -->
+				<item id="8603" min="1" max="1" chance="19.8" /> <!-- Herb of Mana -->
+				<item id="8604" min="1" max="1" chance="9.9" /> <!-- Major Herb of Mana -->
+				<item id="8605" min="1" max="1" chance="3.3" /> <!-- Superior Herb of Mana -->
+				<item id="34849" min="1" max="1" chance="0.7" /> <!-- Mysterious Herb of Power -->
+				<item id="34850" min="1" max="1" chance="0.7" /> <!-- Mysterious Herb of Magic -->
+				<item id="13028" min="1" max="1" chance="0.1" /> <!-- Vitality Replenishing Herb -->
+			</drop>
+		</dropLists>
 	</npc>
 	<npc id="18949" level="84" type="Monster" name="Etis van Etina" title="Head of the Embryo">
 		<!-- TODO: Must be confirmed -->
@@ -2377,7 +2451,7 @@
 			<height normal="47" />
 		</collision>
 	</npc>
-	<npc id="18960" level="85" type="Npc" name="Drake Lord">
+	<npc id="18960" level="85" type="Monster" name="Drake Lord">
 		<!-- TODO: Must be confirmed -->
 		<race>HUMANOID</race>
 		<sex>MALE</sex>
@@ -2401,7 +2475,7 @@
 			<height normal="51" />
 		</collision>
 	</npc>
-	<npc id="18961" level="85" type="Npc" name="Behemoth Leader">
+	<npc id="18961" level="85" type="Monster" name="Behemoth Leader">
 		<!-- TODO: Must be confirmed -->
 		<race>DRAGON</race>
 		<sex>MALE</sex>
@@ -2425,7 +2499,7 @@
 			<height normal="54" />
 		</collision>
 	</npc>
-	<npc id="18962" level="85" type="Npc" name="Dragon Beast">
+	<npc id="18962" level="85" type="Monster" name="Dragon Beast">
 		<!-- TODO: Must be confirmed -->
 		<race>DEMONIC</race>
 		<sex>MALE</sex>
@@ -2633,7 +2707,7 @@
 			<height normal="0.1" />
 		</collision>
 	</npc>
-	<npc id="18969" level="83" type="Npc" name="Magma Drake Mother">
+	<npc id="18969" level="83" type="Monster" name="Magma Drake Mother">
 		<!-- TODO: Must be confirmed -->
 		<race>DRAGON</race>
 		<sex>MALE</sex>
@@ -2668,7 +2742,7 @@
 			<height normal="42" />
 		</collision>
 	</npc>
-	<npc id="18970" level="83" type="Npc" name="Magma Drake Hatchling">
+	<npc id="18970" level="83" type="Monster" name="Magma Drake Hatchling">
 		<!-- TODO: Must be confirmed -->
 		<race>DRAGON</race>
 		<sex>MALE</sex>
@@ -2703,7 +2777,7 @@
 			<height normal="15.5" />
 		</collision>
 	</npc>
-	<npc id="18971" level="83" type="Npc" name="Gem Dragon Hatchling">
+	<npc id="18971" level="83" type="Monster" name="Gem Dragon Hatchling">
 		<!-- TODO: Must be confirmed -->
 		<race>DRAGON</race>
 		<sex>MALE</sex>
@@ -2739,7 +2813,6 @@
 		</collision>
 	</npc>
 	<npc id="18972" level="90" type="Monster" name="Treekin Defender" title="Scout">
-		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<parameters>
 			<param name="IsAggressive" value="1" />
 			<skill name="Skill01_ID" id="14053" level="2" />
@@ -2784,7 +2857,6 @@
 		</collision>
 	</npc>
 	<npc id="18973" level="90" type="Monster" name="Treekin Defender" title="Experienced Scout">
-		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<parameters>
 			<param name="IsAggressive" value="1" />
 			<skill name="Skill01_ID" id="14053" level="3" />
@@ -2830,9 +2902,22 @@
 			<radius normal="36" />
 			<height normal="50" />
 		</collision>
+		<dropLists>
+			<drop>
+				<!-- Also drops herbs. -->
+				<item id="8600" min="1" max="1" chance="10" /> <!-- Herb of Life -->
+				<item id="8601" min="1" max="1" chance="8" /> <!-- Major Herb of Life -->
+				<item id="8602" min="1" max="1" chance="2" /> <!-- Superior Herb of Life -->
+				<item id="8603" min="1" max="1" chance="19.8" /> <!-- Herb of Mana -->
+				<item id="8604" min="1" max="1" chance="9.9" /> <!-- Major Herb of Mana -->
+				<item id="8605" min="1" max="1" chance="3.3" /> <!-- Superior Herb of Mana -->
+				<item id="34849" min="1" max="1" chance="0.7" /> <!-- Mysterious Herb of Power -->
+				<item id="34850" min="1" max="1" chance="0.7" /> <!-- Mysterious Herb of Magic -->
+				<item id="13028" min="1" max="1" chance="0.1" /> <!-- Vitality Replenishing Herb -->
+			</drop>
+		</dropLists>
 	</npc>
 	<npc id="18974" level="90" type="Monster" name="Centaur Archer" title="Scout">
-		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<parameters>
 			<param name="IsAggressive" value="1" />
 			<skill name="Skill01_ID" id="14055" level="2" />
@@ -2876,7 +2961,6 @@
 		</collision>
 	</npc>
 	<npc id="18975" level="90" type="Monster" name="Centaur Archer" title="Experienced Scout">
-		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<parameters>
 			<param name="IsAggressive" value="1" />
 			<skill name="Skill01_ID" id="14055" level="3" />
@@ -2921,9 +3005,22 @@
 			<radius normal="14" />
 			<height normal="24" />
 		</collision>
+		<dropLists>
+			<drop>
+				<!-- Also drops herbs. -->
+				<item id="8600" min="1" max="1" chance="10" /> <!-- Herb of Life -->
+				<item id="8601" min="1" max="1" chance="8" /> <!-- Major Herb of Life -->
+				<item id="8602" min="1" max="1" chance="2" /> <!-- Superior Herb of Life -->
+				<item id="8603" min="1" max="1" chance="19.8" /> <!-- Herb of Mana -->
+				<item id="8604" min="1" max="1" chance="9.9" /> <!-- Major Herb of Mana -->
+				<item id="8605" min="1" max="1" chance="3.3" /> <!-- Superior Herb of Mana -->
+				<item id="34849" min="1" max="1" chance="0.7" /> <!-- Mysterious Herb of Power -->
+				<item id="34850" min="1" max="1" chance="0.7" /> <!-- Mysterious Herb of Magic -->
+				<item id="13028" min="1" max="1" chance="0.1" /> <!-- Vitality Replenishing Herb -->
+			</drop>
+		</dropLists>
 	</npc>
 	<npc id="18976" level="91" type="Monster" name="Beorning Berserker" title="Scout">
-		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<parameters>
 			<param name="IsAggressive" value="1" />
 			<skill name="Skill01_ID" id="14050" level="1" />
@@ -2968,7 +3065,6 @@
 		</collision>
 	</npc>
 	<npc id="18977" level="91" type="Monster" name="Beorning Berserker" title="Experienced Scout">
-		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<parameters>
 			<param name="IsAggressive" value="1" />
 			<skill name="Skill01_ID" id="14050" level="2" />
@@ -3016,7 +3112,6 @@
 		</collision>
 	</npc>
 	<npc id="18978" level="95" type="Monster" name="Orbis' Victim" title="Cursed">
-		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<parameters>
 			<param name="IsAggressive" value="1" />
 			<skill name="Skill01_ID" id="14038" level="1" />
@@ -3082,7 +3177,6 @@
 		</collision>
 	</npc>
 	<npc id="18979" level="95" type="Monster" name="Orbis' Guard" title="Cursed">
-		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<parameters>
 			<param name="IsAggressive" value="1" />
 			<skill name="Skill01_ID" id="14038" level="1" />
@@ -3146,7 +3240,6 @@
 		</collision>
 	</npc>
 	<npc id="18980" level="95" type="Monster" name="Orbis' Thrower" title="Cursed">
-		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<parameters>
 			<param name="IsAggressive" value="1" />
 			<skill name="Skill01_ID" id="14038" level="1" />
@@ -3213,7 +3306,6 @@
 		</collision>
 	</npc>
 	<npc id="18981" level="96" type="Monster" name="Orbis' Curator" title="Cursed">
-		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<parameters>
 			<param name="IsAggressive" value="1" />
 			<skill name="Skill01_ID" id="14038" level="1" />
@@ -3275,7 +3367,6 @@
 		</collision>
 	</npc>
 	<npc id="18982" level="96" type="Monster" name="Orbis' Ancient Hero" title="Cursed">
-		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<parameters>
 			<param name="IsAggressive" value="1" />
 			<skill name="Skill01_ID" id="14038" level="1" />
@@ -3333,7 +3424,6 @@
 		</collision>
 	</npc>
 	<npc id="18983" level="96" type="Monster" name="Orbis' Chief Curator" title="Cursed">
-		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<parameters>
 			<param name="IsAggressive" value="1" />
 			<skill name="Skill01_ID" id="14038" level="1" />
@@ -3645,7 +3735,6 @@
 		</collision>
 	</npc>
 	<npc id="18993" level="88" type="Monster" name="Hatched Millipede">
-		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<parameters>
 			<param name="IsAggressive" value="1" />
 			<skill name="Skill01_ID" id="14183" level="1" />
@@ -3691,7 +3780,6 @@
 		</collision>
 	</npc>
 	<npc id="18994" level="88" type="Monster" name="Hatched Underbug">
-		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<parameters>
 			<param name="IsAggressive" value="1" />
 			<skill name="Skill01_ID" id="14183" level="1" />
@@ -3735,7 +3823,6 @@
 		</collision>
 	</npc>
 	<npc id="18995" level="88" type="Monster" name="Awakened Millipede">
-		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<parameters>
 			<param name="IsAggressive" value="1" />
 			<skill name="Skill01_ID" id="14183" level="1" />

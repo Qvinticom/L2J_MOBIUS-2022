@@ -3292,7 +3292,6 @@
 		</collision>
 	</npc>
 	<npc id="18783" level="81" type="Monster" name="Defeated Troops Commander">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="Breath_Prob" value="1000" />
 			<param name="Skill01_Prob" value="1000" />
@@ -3348,7 +3347,6 @@
 		</collision>
 	</npc>
 	<npc id="18784" level="81" type="Monster" name="Defeated Troops No 1 Battalion Commander">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="Breath_Prob" value="1000" />
 			<param name="Skill01_Prob" value="1000" />
@@ -3404,7 +3402,6 @@
 		</collision>
 	</npc>
 	<npc id="18785" level="81" type="Monster" name="Defeated Troops White Dragon Captain">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="Breath_Prob" value="1000" />
 			<param name="Skill01_Prob" value="1000" />
@@ -3460,7 +3457,6 @@
 		</collision>
 	</npc>
 	<npc id="18786" level="80" type="Monster" name="Defeated Troops Infantry">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="Breath_Prob" value="1000" />
 			<param name="Skill01_Prob" value="1000" />
@@ -3516,7 +3512,6 @@
 		</collision>
 	</npc>
 	<npc id="18787" level="81" type="Monster" name="Defeated Troops Wizard Captain">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="Breath_Prob" value="1000" />
 			<param name="Skill01_Prob" value="10000" />
@@ -3573,7 +3568,6 @@
 		</collision>
 	</npc>
 	<npc id="18788" level="81" type="Monster" name="Defeated Troops Wizard">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="Breath_Prob" value="1000" />
 			<param name="Skill01_Prob" value="10000" />
@@ -3630,7 +3624,6 @@
 		</collision>
 	</npc>
 	<npc id="18789" level="80" type="Monster" name="Defeated Troops Wizard Soldier">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="Breath_Prob" value="1000" />
 			<param name="Skill01_Prob" value="10000" />
@@ -3688,7 +3681,6 @@
 		</collision>
 	</npc>
 	<npc id="18790" level="79" type="Monster" name="Defeated Troops Healer">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="Skill01_Prob" value="2000" />
 			<skill name="Skill01_ID" id="5835" level="1" />
@@ -3742,7 +3734,6 @@
 		</collision>
 	</npc>
 	<npc id="18791" level="80" type="Monster" name="Defeated Troops Javelin Thrower">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="Skill01_Prob" value="1000" />
 			<param name="Skill02_Prob" value="1000" />
@@ -3792,9 +3783,22 @@
 			<radius normal="25" />
 			<height normal="46.5" />
 		</collision>
+		<dropLists>
+			<drop>
+				<!-- Also drops herbs. -->
+				<item id="8600" min="1" max="1" chance="10" /> <!-- Herb of Life -->
+				<item id="8601" min="1" max="1" chance="8" /> <!-- Major Herb of Life -->
+				<item id="8602" min="1" max="1" chance="2" /> <!-- Superior Herb of Life -->
+				<item id="8603" min="1" max="1" chance="19.8" /> <!-- Herb of Mana -->
+				<item id="8604" min="1" max="1" chance="9.9" /> <!-- Major Herb of Mana -->
+				<item id="8605" min="1" max="1" chance="3.3" /> <!-- Superior Herb of Mana -->
+				<item id="34849" min="1" max="1" chance="0.7" /> <!-- Mysterious Herb of Power -->
+				<item id="34850" min="1" max="1" chance="0.7" /> <!-- Mysterious Herb of Magic -->
+				<item id="13028" min="1" max="1" chance="0.1" /> <!-- Vitality Replenishing Herb -->
+			</drop>
+		</dropLists>
 	</npc>
 	<npc id="18792" level="80" type="Monster" name="Defeated Troops Javelin Thrower">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="Skill01_Prob" value="1000" />
 			<param name="Skill02_Prob" value="1000" />
@@ -4039,7 +4043,6 @@
 		</collision>
 	</npc>
 	<npc id="18799" level="77" type="Monster" name="Newborn Lavasaurus">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="IsAggressive" value="1" />
 			<param name="Aggressive_Time" value="5" />

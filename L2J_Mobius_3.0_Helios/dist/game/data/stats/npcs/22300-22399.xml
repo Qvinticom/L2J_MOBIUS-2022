@@ -1,7 +1,6 @@
 ﻿<?xml version="1.0" encoding="UTF-8"?>
 <list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../xsd/npcs.xsd">
 	<npc id="22300" level="82" type="Monster" name="Dolph's Minion">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="110" />
 			<param name="MoveAroundSocial1" value="110" />
@@ -50,7 +49,6 @@
 		</collision>
 	</npc>
 	<npc id="22301" level="82" type="Monster" name="Terod">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="0" />
 			<param name="MoveAroundSocial1" value="0" />
@@ -105,7 +103,6 @@
 		</collision>
 	</npc>
 	<npc id="22302" level="82" type="Monster" name="Darnels's Guardian">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="0" />
 			<param name="MoveAroundSocial1" value="0" />
@@ -170,7 +167,6 @@
 		</collision>
 	</npc>
 	<npc id="22303" level="82" type="Monster" name="Guardian of the Square">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="80" />
 			<param name="MoveAroundSocial1" value="80" />
@@ -226,7 +222,6 @@
 		</collision>
 	</npc>
 	<npc id="22304" level="82" type="Monster" name="Guardian of the Emerald">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="0" />
 			<param name="MoveAroundSocial1" value="0" />
@@ -282,7 +277,6 @@
 		</collision>
 	</npc>
 	<npc id="22305" level="82" type="Monster" name="Kechi's Captain">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="40" />
 			<param name="MoveAroundSocial1" value="40" />
@@ -342,7 +336,6 @@
 		</collision>
 	</npc>
 	<npc id="22306" level="82" type="Monster" name="Kechi's Captain">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="135" />
 			<param name="MoveAroundSocial1" value="135" />
@@ -414,7 +407,6 @@
 		</collision>
 	</npc>
 	<npc id="22307" level="82" type="Monster" name="Kechi's Captain">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="80" />
 			<param name="MoveAroundSocial1" value="80" />
@@ -481,7 +473,6 @@
 		</collision>
 	</npc>
 	<npc id="22308" level="82" type="Monster" name="Kechi's Guard">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="0" />
 			<param name="MoveAroundSocial1" value="0" />
@@ -541,7 +532,6 @@
 		</collision>
 	</npc>
 	<npc id="22309" level="82" type="Monster" name="Kechi's Guard">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="90" />
 			<param name="MoveAroundSocial1" value="90" />
@@ -601,7 +591,6 @@
 		</collision>
 	</npc>
 	<npc id="22310" level="82" type="Monster" name="Kechi's Guard">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="0" />
 			<param name="MoveAroundSocial1" value="0" />
@@ -668,7 +657,6 @@
 		</collision>
 	</npc>
 	<npc id="22311" level="83" type="Monster" name="Parme's Guardian">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="40" />
 			<param name="MoveAroundSocial1" value="40" />
@@ -734,7 +722,6 @@
 		</collision>
 	</npc>
 	<npc id="22312" level="83" type="Monster" name="Fafurion's Henchman">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="70" />
 			<param name="MoveAroundSocial1" value="70" />
@@ -792,7 +779,6 @@
 		</collision>
 	</npc>
 	<npc id="22313" level="83" type="Monster" name="Garden Stakato">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="62" />
 			<param name="MoveAroundSocial1" value="62" />
@@ -856,7 +842,6 @@
 		</collision>
 	</npc>
 	<npc id="22314" level="83" type="Monster" name="Garden Poison Moth">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="150" />
 			<param name="MoveAroundSocial1" value="150" />
@@ -915,7 +900,6 @@
 		</collision>
 	</npc>
 	<npc id="22315" level="83" type="Monster" name="Garden Guard">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="0" />
 			<param name="MoveAroundSocial1" value="0" />
@@ -970,9 +954,22 @@
 			<radius normal="13" />
 			<height normal="44" />
 		</collision>
+		<dropLists>
+			<drop>
+				<!-- Also drops herbs. -->
+				<item id="8600" min="1" max="1" chance="10" /> <!-- Herb of Life -->
+				<item id="8601" min="1" max="1" chance="8" /> <!-- Major Herb of Life -->
+				<item id="8602" min="1" max="1" chance="2" /> <!-- Superior Herb of Life -->
+				<item id="8603" min="1" max="1" chance="19.8" /> <!-- Herb of Mana -->
+				<item id="8604" min="1" max="1" chance="9.9" /> <!-- Major Herb of Mana -->
+				<item id="8605" min="1" max="1" chance="3.3" /> <!-- Superior Herb of Mana -->
+				<item id="34849" min="1" max="1" chance="0.7" /> <!-- Mysterious Herb of Power -->
+				<item id="34850" min="1" max="1" chance="0.7" /> <!-- Mysterious Herb of Magic -->
+				<item id="13028" min="1" max="1" chance="0.1" /> <!-- Vitality Replenishing Herb -->
+			</drop>
+		</dropLists>
 	</npc>
 	<npc id="22316" level="83" type="Monster" name="Garden Guardian Tree">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="80" />
 			<param name="MoveAroundSocial1" value="80" />
@@ -1028,7 +1025,6 @@
 		</collision>
 	</npc>
 	<npc id="22317" level="83" type="Monster" name="Garden Castalia">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="90" />
 			<param name="MoveAroundSocial1" value="90" />

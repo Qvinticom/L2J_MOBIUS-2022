@@ -1,7 +1,6 @@
 ﻿<?xml version="1.0" encoding="UTF-8"?>
 <list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../xsd/npcs.xsd">
 	<npc id="18600" level="86" type="Monster" name="Kratei's Steward">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="85" />
 			<param name="MoveAroundSocial1" value="85" />
@@ -76,8 +75,7 @@
 			<height normal="31" />
 		</collision>
 	</npc>
-	<npc id="18601" level="70" type="Npc" name="Kratei's Watchman">
-		<!-- Confirmed CT2.5 -->
+	<npc id="18601" level="70" type="Monster" name="Kratei's Watchman">
 		<race>CONSTRUCT</race>
 		<sex>MALE</sex>
 		<stats str="79" int="34" dex="42" wit="66" con="75" men="12">
@@ -109,8 +107,7 @@
 			<height normal="32" />
 		</collision>
 	</npc>
-	<npc id="18602" level="70" type="Npc" name="Kratei's Watchman">
-		<!-- Confirmed CT2.5 -->
+	<npc id="18602" level="70" type="Monster" name="Kratei's Watchman">
 		<race>CONSTRUCT</race>
 		<sex>MALE</sex>
 		<stats str="79" int="34" dex="42" wit="66" con="75" men="12">
@@ -1143,7 +1140,6 @@
 		</collision>
 	</npc>
 	<npc id="18623" level="61" type="Monster" name="Begrudged Archer">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="157" />
 			<param name="MoveAroundSocial1" value="157" />
@@ -1207,7 +1203,6 @@
 		</collision>
 	</npc>
 	<npc id="18624" level="58" type="Monster" name="Deadman's Grudge">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="100" />
 			<param name="MoveAroundSocial1" value="100" />
@@ -1274,7 +1269,6 @@
 		</collision>
 	</npc>
 	<npc id="18625" level="61" type="Monster" name="Deadman's Grudge">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="215" />
 			<param name="MoveAroundSocial1" value="215" />
@@ -1342,7 +1336,6 @@
 		</collision>
 	</npc>
 	<npc id="18626" level="64" type="Monster" name="Deadman's Grudge">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="80" />
 			<param name="MoveAroundSocial1" value="80" />
@@ -1410,7 +1403,6 @@
 		</collision>
 	</npc>
 	<npc id="18627" level="64" type="Monster" name="Deadman's Grudge">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="80" />
 			<param name="MoveAroundSocial1" value="80" />
@@ -1478,7 +1470,6 @@
 		</collision>
 	</npc>
 	<npc id="18628" level="61" type="Monster" name="Atan" title="Lookout">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="100" />
 			<param name="MoveAroundSocial1" value="100" />
@@ -1544,7 +1535,6 @@
 		</collision>
 	</npc>
 	<npc id="18629" level="61" type="Monster" name="Kams" title="Panuka">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="215" />
 			<param name="MoveAroundSocial1" value="215" />
@@ -1610,7 +1600,6 @@
 		</collision>
 	</npc>
 	<npc id="18630" level="61" type="Monster" name="Hikoro" title="Panuka">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="0" />
 			<param name="MoveAroundSocial1" value="0" />
@@ -1676,7 +1665,6 @@
 		</collision>
 	</npc>
 	<npc id="18631" level="64" type="Monster" name="Alkaso" title="Panuka">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="70" />
 			<param name="MoveAroundSocial1" value="70" />
@@ -1742,7 +1730,6 @@
 		</collision>
 	</npc>
 	<npc id="18632" level="64" type="Monster" name="Gerbera" title="Panuka">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="85" />
 			<param name="MoveAroundSocial1" value="85" />
@@ -1808,7 +1795,6 @@
 		</collision>
 	</npc>
 	<npc id="18633" level="67" type="Monster" name="Lematan">
-		<!-- Confirmed CT2.5 -->
 		<race>DRAGON</race>
 		<sex>MALE</sex>
 		<acquire exp="476731" sp="114" />
@@ -1844,7 +1830,6 @@
 		</collision>
 	</npc>
 	<npc id="18634" level="64" type="Monster" name="Lematan's Subordinate">
-		<!-- Confirmed CT2.5 -->
 		<race>UNDEAD</race>
 		<sex>MALE</sex>
 		<equipment rhand="232" /> <!-- Dark Elven Dagger -->
@@ -1881,7 +1866,6 @@
 		</collision>
 	</npc>
 	<npc id="18635" level="77" type="Monster" name="Varka Silenos Recruit">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="65" />
 			<param name="MoveAroundSocial1" value="65" />
@@ -1961,7 +1945,6 @@
 		</collision>
 	</npc>
 	<npc id="18636" level="77" type="Monster" name="Varka Silenos Footman">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="85" />
 			<param name="MoveAroundSocial1" value="85" />
@@ -2040,7 +2023,6 @@
 		</collision>
 	</npc>
 	<npc id="18637" level="77" type="Monster" name="Grazing Antelope">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="80" />
 			<param name="MoveAroundSocial1" value="80" />
@@ -2113,7 +2095,6 @@
 		</collision>
 	</npc>
 	<npc id="18638" level="78" type="Monster" name="Varka Silenos Scout">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="65" />
 			<param name="MoveAroundSocial1" value="65" />
@@ -2191,7 +2172,6 @@
 		</collision>
 	</npc>
 	<npc id="18639" level="78" type="Monster" name="Varka Silenos Hunter">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="75" />
 			<param name="MoveAroundSocial1" value="75" />
@@ -2270,7 +2250,6 @@
 		</collision>
 	</npc>
 	<npc id="18640" level="78" type="Monster" name="Varka Silenos Shaman">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="123" />
 			<param name="MoveAroundSocial1" value="123" />
@@ -2351,7 +2330,6 @@
 		</collision>
 	</npc>
 	<npc id="18641" level="79" type="Monster" name="Varka Silenos Priest">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="70" />
 			<param name="MoveAroundSocial1" value="70" />
@@ -2437,7 +2415,6 @@
 		</collision>
 	</npc>
 	<npc id="18642" level="78" type="Monster" name="Varka Silenos Warrior">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="85" />
 			<param name="MoveAroundSocial1" value="85" />
@@ -2512,7 +2489,6 @@
 		</collision>
 	</npc>
 	<npc id="18643" level="77" type="Monster" name="Grazing Antelope">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="80" />
 			<param name="MoveAroundSocial1" value="80" />
@@ -2585,7 +2561,6 @@
 		</collision>
 	</npc>
 	<npc id="18644" level="78" type="Monster" name="Varka Silenos Medium">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="123" />
 			<param name="MoveAroundSocial1" value="123" />
@@ -2663,7 +2638,6 @@
 		</collision>
 	</npc>
 	<npc id="18645" level="78" type="Monster" name="Varka Silenos Magus">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="70" />
 			<param name="MoveAroundSocial1" value="70" />
@@ -2747,7 +2721,6 @@
 		</collision>
 	</npc>
 	<npc id="18646" level="78" type="Monster" name="Varka Silenos Sergeant">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="90" />
 			<param name="MoveAroundSocial1" value="90" />
@@ -2828,7 +2801,6 @@
 		</collision>
 	</npc>
 	<npc id="18647" level="78" type="Monster" name="Grazing Flava">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="120" />
 			<param name="MoveAroundSocial1" value="120" />
@@ -2912,7 +2884,6 @@
 		</collision>
 	</npc>
 	<npc id="18648" level="79" type="Monster" name="Varka Silenos Chief Priest">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="123" />
 			<param name="MoveAroundSocial1" value="123" />
@@ -2998,7 +2969,6 @@
 		</collision>
 	</npc>
 	<npc id="18649" level="79" type="Monster" name="Varka Silenos Great Magus">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="85" />
 			<param name="MoveAroundSocial1" value="85" />
@@ -3080,7 +3050,6 @@
 		</collision>
 	</npc>
 	<npc id="18650" level="79" type="Monster" name="Varka Silenos Officer">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="90" />
 			<param name="MoveAroundSocial1" value="90" />
@@ -3164,7 +3133,6 @@
 		</collision>
 	</npc>
 	<npc id="18651" level="78" type="Monster" name="Grazing Elder Antelope">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="80" />
 			<param name="MoveAroundSocial1" value="80" />
@@ -3241,7 +3209,6 @@
 		</collision>
 	</npc>
 	<npc id="18652" level="79" type="Monster" name="Varka Silenos Grand Priest">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="123" />
 			<param name="MoveAroundSocial1" value="123" />
@@ -3325,7 +3292,6 @@
 		</collision>
 	</npc>
 	<npc id="18653" level="74" type="Monster" name="Varka's Elite Escort">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="85" />
 			<param name="MoveAroundSocial1" value="85" />
@@ -3379,7 +3345,6 @@
 		</dropLists>
 	</npc>
 	<npc id="18654" level="72" type="Monster" name="Varka's Commander">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="90" />
 			<param name="MoveAroundSocial1" value="90" />
@@ -3434,7 +3399,6 @@
 		</dropLists>
 	</npc>
 	<npc id="18655" level="79" type="Monster" name="Varka's Chief Escort">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="85" />
 			<param name="MoveAroundSocial1" value="85" />
@@ -3508,7 +3472,6 @@
 		</collision>
 	</npc>
 	<npc id="18656" level="74" type="Monster" name="Varka's Chief Magus">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="123" />
 			<param name="MoveAroundSocial1" value="123" />
@@ -3565,7 +3528,6 @@
 		</dropLists>
 	</npc>
 	<npc id="18657" level="78" type="Monster" name="Prophet's Royal Guard">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="85" />
 			<param name="MoveAroundSocial1" value="85" />
@@ -3637,7 +3599,6 @@
 		</collision>
 	</npc>
 	<npc id="18658" level="78" type="Monster" name="Prophet's Disciple">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="70" />
 			<param name="MoveAroundSocial1" value="70" />
@@ -3710,7 +3671,6 @@
 		</collision>
 	</npc>
 	<npc id="18659" level="74" type="Monster" name="Varka's Prophet">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="123" />
 			<param name="MoveAroundSocial1" value="123" />
@@ -3767,7 +3727,6 @@
 		</dropLists>
 	</npc>
 	<npc id="18660" level="75" type="Monster" name="Latana">
-		<!-- Confirmed CT2.5 -->
 		<race>DRAGON</race>
 		<sex>FEMALE</sex>
 		<acquire exp="680736" sp="163" />

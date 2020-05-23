@@ -400,7 +400,6 @@
 		</collision>
 	</npc>
 	<npc id="25809" level="59" type="RaidBoss" name="Vladimir" title="Executioner">
-		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<race>UNDEAD</race>
 		<sex>MALE</sex>
 		<acquire exp="433094" sp="103" />
@@ -478,7 +477,6 @@
 		</collision>
 	</npc>
 	<npc id="25811" level="62" type="RaidBoss" name="Lazearth" title="Destroyer">
-		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<race>UNDEAD</race>
 		<sex>MALE</sex>
 		<acquire exp="433606" sp="104" />
@@ -557,7 +555,6 @@
 		</collision>
 	</npc>
 	<npc id="25813" level="66" type="RaidBoss" name="Byron" title="Queen of Blood">
-		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<race>DEMONIC</race>
 		<sex>FEMALE</sex>
 		<acquire exp="470081" sp="112" />
@@ -636,7 +633,6 @@
 		</collision>
 	</npc>
 	<npc id="25815" level="70" type="RaidBoss" name="Ken" title="Savage">
-		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<race>DIVINE</race>
 		<sex>MALE</sex>
 		<acquire exp="502954" sp="120" />
@@ -683,7 +679,6 @@
 		</collision>
 	</npc>
 	<npc id="25816" level="72" type="RaidBoss" name="Heaven's Palace Sniper Captain">
-		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<race>DIVINE</race>
 		<sex>MALE</sex>
 		<acquire exp="518128" sp="124" />
@@ -763,7 +758,6 @@
 		</collision>
 	</npc>
 	<npc id="25818" level="75" type="RaidBoss" name="Emperor of Heaven's Palace">
-		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<race>DIVINE</race>
 		<sex>MALE</sex>
 		<acquire exp="540997" sp="129" />
@@ -843,7 +837,6 @@
 		</collision>
 	</npc>
 	<npc id="25820" level="75" type="RaidBoss" name="Heaven's Palace Goddess">
-		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<race>DIVINE</race>
 		<sex>FEMALE</sex>
 		<acquire exp="540997" sp="129" />
@@ -999,7 +992,6 @@
 		</collision>
 	</npc>
 	<npc id="25824" level="97" type="RaidBoss" name="Ron" title="Raid Boss">
-		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<parameters>
 			<param name="IsAggressive" value="1" />
 			<skill name="Skill01_ID" id="14269" level="1" />
@@ -1355,7 +1347,6 @@
 		</collision>
 	</npc>
 	<npc id="25831" level="10" type="Monster" name="Eyesaroch" title="Husk">
-		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<parameters>
 			<skill name="Skill01_ID" id="14159" level="1" />
 			<skill name="Skill02_ID" id="14160" level="1" />
@@ -1420,7 +1411,6 @@
 		</collision>
 	</npc>
 	<npc id="25833" level="97" type="Monster" name="Orbis' Victim">
-		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<parameters>
 			<param name="IsAggressive" value="1" />
 			<skill name="Skill01_ID" id="14001" level="3" />
@@ -1463,7 +1453,6 @@
 		</collision>
 	</npc>
 	<npc id="25834" level="97" type="Monster" name="Orbis' Guard">
-		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<parameters>
 			<param name="IsAggressive" value="1" />
 			<skill name="Skill01_ID" id="14005" level="3" />
@@ -1504,9 +1493,13 @@
 			<radius normal="30" />
 			<height normal="54" />
 		</collision>
+		<dropLists>
+			<drop>
+				<item id="17724" min="1" max="1" chance="1" /> <!-- Orbis Ancient Hero's Shield -->
+			</drop>
+		</dropLists>
 	</npc>
 	<npc id="25835" level="97" type="Monster" name="Orbis' Thrower">
-		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<parameters>
 			<param name="IsAggressive" value="1" />
 			<skill name="Skill01_ID" id="14008" level="3" />
@@ -1548,7 +1541,6 @@
 		</collision>
 	</npc>
 	<npc id="25836" level="97" type="Monster" name="Orbis' Curator">
-		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<parameters>
 			<param name="IsAggressive" value="1" />
 			<skill name="Skill01_ID" id="14009" level="3" />
@@ -2027,7 +2019,6 @@
 		</collision>
 	</npc>
 	<npc id="25843" level="96" type="RaidBoss" name="Magical Warrior Konyar" title="Raid Boss">
-		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<parameters>
 			<param name="IsAggressive" value="1" />
 			<skill name="Skill01_ID" id="14358" level="1" />
@@ -2080,7 +2071,6 @@
 		</collision>
 	</npc>
 	<npc id="25844" level="96" type="RaidBoss" name="Magical Warrior Konyar" title="Raid Boss">
-		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<parameters>
 			<param name="IsAggressive" value="1" />
 			<skill name="Skill01_ID" id="14359" level="1" />
@@ -2295,7 +2285,6 @@
 		</collision>
 	</npc>
 	<npc id="25855" level="96" type="RaidBoss" name="Maliss" title="Grand Priest of Blood">
-		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<parameters>
 			<param name="IsAggressive" value="1" />
 			<skill name="Skill01_ID" id="14515" level="1" />
@@ -2350,7 +2339,6 @@
 		</collision>
 	</npc>
 	<npc id="25856" level="104" type="RaidBoss" name="Isadora" title="Great Magus of Greed">
-		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<parameters>
 			<param name="IsAggressive" value="1" />
 			<skill name="Skill01_ID" id="23707" level="4" />
@@ -2537,6 +2525,12 @@
 			<skill id="14194" level="1" /> <!-- Range Stun -->
 		</skillList>
 		<ai clanHelpRange="300" aggroRange="300" />
+		<dropLists>
+			<drop>
+				<item id="17413" min="1" max="1" chance="0.3003003003003" /> <!-- Seraph Necklace -->
+				<item id="17414" min="1" max="1" chance="0.3003003003003" /> <!-- Seraph Earring -->
+			</drop>
+		</dropLists>
 	</npc>
 	<npc id="25858" level="104" type="Monster" name="Corrupted High Priest" title="Guardian of the Altar">
 		<parameters>
@@ -2571,9 +2565,14 @@
 			<skill id="23707" level="1" /> <!-- Chaos Fire -->
 		</skillList>
 		<ai clanHelpRange="300" aggroRange="300" />
+		<dropLists>
+			<drop>
+				<item id="17415" min="1" max="1" chance="0.75187969924812" /> <!-- Seraph Ring -->
+				<item id="17414" min="1" max="1" chance="0.3003003003003" /> <!-- Seraph Earring -->
+			</drop>
+		</dropLists>
 	</npc>
 	<npc id="25859" level="97" type="RaidBoss" name="Flynt" title="Raid Boss">
-		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<parameters>
 			<param name="Skill01_Probablity" value="2000" />
 			<param name="Skill02_Probablity" value="500" />
@@ -2748,7 +2747,6 @@
 		</collision>
 	</npc>
 	<npc id="25862" level="97" type="RaidBoss" name="Harp" title="Raid Boss">
-		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<parameters>
 			<param name="Skill01_Probablity" value="2000" />
 			<param name="Skill02_Probablity" value="500" />
@@ -2961,7 +2959,6 @@
 		</collision>
 	</npc>
 	<npc id="25866" level="94" type="RaidBoss" name="Apherus">
-		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<parameters>
 			<skill name="Skill01_ID" id="14462" level="1" />
 			<skill name="Skill02_ID" id="14465" level="1" />
@@ -3001,9 +2998,17 @@
 			<radius normal="35" />
 			<height normal="93" />
 		</collision>
+		<dropLists>
+			<drop>
+				<item id="17526" min="1" max="1" chance="7.5" /> <!-- Scroll: Enchant Weapon (R-grade) -->
+				<item id="17347" min="1" max="1" chance="5" /> <!-- Twilight Leather Gloves - Light Armor -->
+				<item id="17352" min="1" max="1" chance="5" /> <!-- Twilight Gloves - Robe -->
+				<item id="17330" min="1" max="1" chance="0.3003003003003" /> <!-- Apocalypse Thrower -->
+				<item id="17334" min="1" max="1" chance="0.3003003003003" /> <!-- Apocalypse Retributer -->
+			</drop>
+		</dropLists>
 	</npc>
 	<npc id="25867" level="98" type="RaidBoss" name="Spezion" title="Raid Boss">
-		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<parameters>
 			<param name="IsAggressive" value="1" />
 			<skill name="Skill01_ID" id="14149" level="1" />
@@ -3056,9 +3061,52 @@
 			<radius normal="40" />
 			<height normal="81" />
 		</collision>
+		<dropLists>
+			<drop>
+				<item id="36513" min="2" max="3" chance="80" /> <!-- Elcyum Powder -->
+				<item id="36586" min="1" max="1" chance="75" /> <!-- Scroll: Modify Armor (R-grade) -->
+				<item id="36574" min="1" max="1" chance="25" /> <!-- Scroll: Modify Weapon (R-grade) -->
+				<item id="45430" min="1" max="1" chance="20" /> <!-- Entrance Pass: Spezion (Epic) -->
+				<item id="17527" min="1" max="1" chance="2.5" /> <!-- Scroll: Enchant Armor (R-grade) -->
+				<item id="17526" min="1" max="1" chance="0.75187969924812" /> <!-- Scroll: Enchant Weapon (R-grade) -->
+				<item id="17747" min="1" max="1" chance="0.75187969924812" /> <!-- Trace of Decaying Darkness -->
+				<item id="35302" min="1" max="3" chance="0.75187969924812" /> <!-- Specter Thrower Fragment -->
+				<item id="35301" min="1" max="3" chance="0.75187969924812" /> <!-- Specter Stormer Fragment -->
+				<item id="35306" min="1" max="3" chance="0.75187969924812" /> <!-- Specter Retributer Fragment -->
+				<item id="35300" min="1" max="3" chance="0.75187969924812" /> <!-- Specter Fighter Fragment -->
+				<item id="35305" min="1" max="3" chance="0.75187969924812" /> <!-- Specter Caster Fragment -->
+				<item id="35299" min="1" max="3" chance="0.75187969924812" /> <!-- Specter Avenger Fragment -->
+				<item id="35296" min="1" max="3" chance="0.75187969924812" /> <!-- Specter Shaper Fragment -->
+				<item id="35304" min="1" max="3" chance="0.75187969924812" /> <!-- Specter Buster Fragment -->
+				<item id="35297" min="1" max="3" chance="0.75187969924812" /> <!-- Specter Cutter Fragment -->
+				<item id="35303" min="1" max="3" chance="0.75187969924812" /> <!-- Specter Shooter Fragment -->
+				<item id="35298" min="1" max="3" chance="0.75187969924812" /> <!-- Specter Slasher Fragment -->
+				<item id="35426" min="1" max="1" chance="0.3003003003003" /> <!-- Recipe:�Specter Thrower (60%) -->
+				<item id="35425" min="1" max="1" chance="0.3003003003003" /> <!-- Recipe:�Specter Stormer (60%) -->
+				<item id="35430" min="1" max="1" chance="0.3003003003003" /> <!-- Recipe:�Specter Retributer (60%) -->
+				<item id="35424" min="1" max="1" chance="0.3003003003003" /> <!-- Recipe:�Specter Fighter (60%) -->
+				<item id="35429" min="1" max="1" chance="0.3003003003003" /> <!-- Recipe:�Specter Caster (60%) -->
+				<item id="35423" min="1" max="1" chance="0.3003003003003" /> <!-- Recipe:�Specter Avenger (60%) -->
+				<item id="35420" min="1" max="1" chance="0.3003003003003" /> <!-- Recipe:�Specter Shaper (60%) -->
+				<item id="35428" min="1" max="1" chance="0.3003003003003" /> <!-- Recipe:�Specter Buster (60%) -->
+				<item id="35421" min="1" max="1" chance="0.3003003003003" /> <!-- Recipe:�Specter Cutter (60%) -->
+				<item id="35427" min="1" max="1" chance="0.3003003003003" /> <!-- Recipe:�Specter Shooter (60%) -->
+				<item id="35422" min="1" max="1" chance="0.3003003003003" /> <!-- Recipe:�Specter Slasher (60%) -->
+				<item id="38018" min="1" max="1" chance="0.3003003003003" /> <!-- Specter Thrower Crafting Pack -->
+				<item id="38017" min="1" max="1" chance="0.3003003003003" /> <!-- Specter Stormer Crafting Pack -->
+				<item id="38022" min="1" max="1" chance="0.3003003003003" /> <!-- Specter Retributer Crafting Pack -->
+				<item id="38016" min="1" max="1" chance="0.3003003003003" /> <!-- Specter Fighter Crafting Pack -->
+				<item id="38021" min="1" max="1" chance="0.3003003003003" /> <!-- Specter Caster Crafting Pack -->
+				<item id="38015" min="1" max="1" chance="0.3003003003003" /> <!-- Specter Avenger Crafting Pack -->
+				<item id="38012" min="1" max="1" chance="0.3003003003003" /> <!-- Specter Shaper Crafting Pack -->
+				<item id="38020" min="1" max="1" chance="0.3003003003003" /> <!-- Specter Buster Crafting Pack -->
+				<item id="38013" min="1" max="1" chance="0.3003003003003" /> <!-- Specter Cutter Crafting Pack -->
+				<item id="38019" min="1" max="1" chance="0.3003003003003" /> <!-- Specter Shooter Crafting Pack -->
+				<item id="38014" min="1" max="1" chance="0.3003003003003" /> <!-- Specter Slasher Crafting Pack -->
+			</drop>
+		</dropLists>
 	</npc>
 	<npc id="25868" level="98" type="RaidBoss" name="Spezion" title="Raid Boss">
-		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<parameters>
 			<param name="Skill01_Probablity" value="300" />
 			<param name="Skill03_Probablity" value="300" />
@@ -3114,7 +3162,6 @@
 		</collision>
 	</npc>
 	<npc id="25869" level="98" type="RaidBoss" name="Berserk Spezion" title="Raid Boss">
-		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<parameters>
 			<skill name="Skill01_ID" id="14149" level="1" />
 			<skill name="Skill02_ID" id="14150" level="1" />
@@ -3169,7 +3216,6 @@
 		</collision>
 	</npc>
 	<npc id="25870" level="43" type="RaidBoss" name="Rose" title="Raid Boss">
-		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<parameters>
 			<skill name="SelfRangeCancel_a" id="4177" level="5" />
 			<skill name="SelfBuff_a" id="4175" level="5" />
@@ -3204,9 +3250,18 @@
 			<radius normal="7" />
 			<height normal="30" />
 		</collision>
+		<dropLists>
+			<drop>
+				<item id="2463" min="1" max="1" chance="5" /> <!-- Divine Gloves -->
+				<item id="356" min="1" max="1" chance="5" /> <!-- Full Plate Armor -->
+				<item id="266" min="1" max="1" chance="0.75187969924812" /> <!-- Great Pata -->
+				<item id="228" min="1" max="1" chance="0.75187969924812" /> <!-- Crystal Dagger -->
+				<item id="286" min="1" max="1" chance="0.75187969924812" /> <!-- Eminence Bow -->
+				<item id="299" min="1" max="1" chance="0.75187969924812" /> <!-- Orcish Poleaxe -->
+			</drop>
+		</dropLists>
 	</npc>
 	<npc id="25871" level="43" type="RaidBoss" name="Thorn" title="Raid Boss">
-		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<parameters>
 			<skill name="SelfRangeCancel_a" id="4177" level="5" />
 			<skill name="SelfBuff_a" id="4175" level="5" />
@@ -3780,7 +3835,6 @@
 		</dropLists>
 	</npc>
 	<npc id="25879" level="88" type="RaidBoss" name="Queen of Darkness" title="Raid Boss">
-		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<parameters>
 			<param name="MoveArounding" value="0" />
 			<skill name="Skill01_ID" id="14701" level="1" />
@@ -3870,7 +3924,6 @@
 		</dropLists>
 	</npc>
 	<npc id="25880" level="97" type="RaidBoss" name="Georgios" title="Raid Boss">
-		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<parameters>
 			<skill name="Skill01_ID" id="14012" level="2" />
 			<skill name="Skill02_ID" id="14013" level="2" />
@@ -3922,9 +3975,17 @@
 			<radius normal="80" />
 			<height normal="91" />
 		</collision>
+		<dropLists>
+			<drop>
+				<item id="9557" min="1" max="1" chance="2.5" /> <!-- Holy Crystal -->
+				<item id="17526" min="1" max="1" chance="0.75187969924812" /> <!-- Scroll: Enchant Weapon (R-grade) -->
+				<item id="17387" min="1" max="1" chance="0.0750187546886722" /> <!-- Specter Stormer -->
+				<item id="17391" min="1" max="1" chance="0.0750187546886722" /> <!-- Specter Caster -->
+				<item id="17390" min="1" max="1" chance="0.0750187546886722" /> <!-- Specter Buster -->
+			</drop>
+		</dropLists>
 	</npc>
 	<npc id="25881" level="98" type="Monster" name="Veridan" title="Hell's Warden">
-		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<race>DEMONIC</race>
 		<sex>MALE</sex>
 		<acquire exp="234222352" sp="56213" />
@@ -3969,6 +4030,66 @@
 			<radius normal="13" />
 			<height normal="55" />
 		</collision>
+		<dropLists>
+			<drop>
+				<item id="36586" min="1" max="1" chance="80" /> <!-- Scroll: Modify Armor (R-grade) -->
+				<item id="17527" min="1" max="1" chance="40" /> <!-- Scroll: Enchant Armor (R-grade) -->
+				<item id="36574" min="1" max="1" chance="20" /> <!-- Scroll: Modify Weapon (R-grade) -->
+				<item id="17526" min="1" max="1" chance="10" /> <!-- Scroll: Enchant Weapon (R-grade) -->
+				<item id="35307" min="1" max="3" chance="0.75187969924812" /> <!-- Seraph Helmet Ingredient -->
+				<item id="35322" min="1" max="3" chance="0.75187969924812" /> <!-- Seraph Shoe Ingredient -->
+				<item id="35318" min="1" max="3" chance="0.75187969924812" /> <!-- Seraph Circlet Ingredient -->
+				<item id="35308" min="1" max="3" chance="0.75187969924812" /> <!-- Seraph Breastplate Ingredient -->
+				<item id="35313" min="1" max="3" chance="0.75187969924812" /> <!-- Seraph Leather Helmet Ingredient -->
+				<item id="35314" min="1" max="3" chance="0.75187969924812" /> <!-- Seraph Leather Armor Ingredient -->
+				<item id="35315" min="1" max="3" chance="0.75187969924812" /> <!-- Seraph Leather Legging Ingredient -->
+				<item id="35316" min="1" max="3" chance="0.75187969924812" /> <!-- Seraph Leather Glove Ingredient -->
+				<item id="35317" min="1" max="3" chance="0.75187969924812" /> <!-- Seraph Leather Boot Ingredient -->
+				<item id="35309" min="1" max="3" chance="0.75187969924812" /> <!-- Seraph Gaiter Ingredient -->
+				<item id="35321" min="1" max="3" chance="0.75187969924812" /> <!-- Seraph Glove Ingredient -->
+				<item id="35310" min="1" max="3" chance="0.75187969924812" /> <!-- Seraph Gauntlet Ingredient -->
+				<item id="35311" min="1" max="3" chance="0.75187969924812" /> <!-- Seraph Boot Ingredient -->
+				<item id="35323" min="1" max="3" chance="0.75187969924812" /> <!-- Seraph Sigil Ingredient -->
+				<item id="35319" min="1" max="3" chance="0.75187969924812" /> <!-- Seraph Tunic Ingredient -->
+				<item id="35320" min="1" max="3" chance="0.75187969924812" /> <!-- Seraph Stocking Ingredient -->
+				<item id="35312" min="1" max="3" chance="0.75187969924812" /> <!-- Seraph Shield Ingredient -->
+				<item id="35446" min="1" max="1" chance="0.3003003003003" /> <!-- Recipe:�Seraph Shoes (60%) -->
+				<item id="35442" min="1" max="1" chance="0.3003003003003" /> <!-- Recipe:�Seraph Circlet (60%) -->
+				<item id="35432" min="1" max="1" chance="0.3003003003003" /> <!-- Recipe:�Seraph Breastplate (60%) -->
+				<item id="35438" min="1" max="1" chance="0.3003003003003" /> <!-- Recipe:�Seraph Leather Armor (60%) -->
+				<item id="35439" min="1" max="1" chance="0.3003003003003" /> <!-- Recipe:�Seraph Leather Leggings (60%) -->
+				<item id="35440" min="1" max="1" chance="0.3003003003003" /> <!-- Recipe:�Seraph Leather Gloves (60%) -->
+				<item id="35441" min="1" max="1" chance="0.3003003003003" /> <!-- Recipe:�Seraph Leather Boots (60%) -->
+				<item id="35437" min="1" max="1" chance="0.3003003003003" /> <!-- Recipe:�Seraph Leather Helmet (60%) -->
+				<item id="35433" min="1" max="1" chance="0.3003003003003" /> <!-- Recipe:�Seraph Gaiters (60%) -->
+				<item id="35445" min="1" max="1" chance="0.3003003003003" /> <!-- Recipe:�Seraph Gloves (60%) -->
+				<item id="35434" min="1" max="1" chance="0.3003003003003" /> <!-- Recipe:�Seraph Gauntlets (60%) -->
+				<item id="35435" min="1" max="1" chance="0.3003003003003" /> <!-- Recipe:�Seraph Boots (60%) -->
+				<item id="35447" min="1" max="1" chance="0.3003003003003" /> <!-- Recipe:�Seraph Sigil (60%) -->
+				<item id="35443" min="1" max="1" chance="0.3003003003003" /> <!-- Recipe:�Seraph Tunic (60%) -->
+				<item id="35431" min="1" max="1" chance="0.3003003003003" /> <!-- Recipe:�Seraph Helmet (60%) -->
+				<item id="35444" min="1" max="1" chance="0.3003003003003" /> <!-- Recipe:�Seraph Stockings (60%) -->
+				<item id="35436" min="1" max="1" chance="0.3003003003003" /> <!-- Recipe:�Seraph Shield (60%) -->
+				<item id="17433" min="1" max="1" chance="0.149925037481259" /> <!-- Eternal Gauntlets - Heavy Armor -->
+				<item id="38038" min="1" max="1" chance="0.149925037481259" /> <!-- Seraph Shoes Crafting Pack - Robe -->
+				<item id="38034" min="1" max="1" chance="0.149925037481259" /> <!-- Seraph Circlet Crafting Pack - Robe -->
+				<item id="38024" min="1" max="1" chance="0.149925037481259" /> <!-- Seraph Breastplate Crafting Pack - Heavy Armor -->
+				<item id="38031" min="1" max="1" chance="0.149925037481259" /> <!-- Seraph Leather Leggings Crafting Pack - Light Armor -->
+				<item id="38032" min="1" max="1" chance="0.149925037481259" /> <!-- Seraph Leather Gloves Crafting Pack - Light Armor -->
+				<item id="38033" min="1" max="1" chance="0.149925037481259" /> <!-- Seraph Leather Boots Crafting Pack - Light Armor -->
+				<item id="38030" min="1" max="1" chance="0.149925037481259" /> <!-- Seraph Leather Armor Crafting Pack - Light Armor -->
+				<item id="38029" min="1" max="1" chance="0.149925037481259" /> <!-- Seraph Leather Helmet Crafting Pack - Light Armor -->
+				<item id="38025" min="1" max="1" chance="0.149925037481259" /> <!-- Seraph Gaiters Crafting Pack - Heavy Armor -->
+				<item id="38037" min="1" max="1" chance="0.149925037481259" /> <!-- Seraph Gloves Crafting Pack - Robe -->
+				<item id="38026" min="1" max="1" chance="0.149925037481259" /> <!-- Seraph Gauntlets Crafting Pack - Heavy Armor -->
+				<item id="38027" min="1" max="1" chance="0.149925037481259" /> <!-- Seraph Boots Crafting Pack - Heavy Armor -->
+				<item id="38039" min="1" max="1" chance="0.149925037481259" /> <!-- Seraph Sigil Crafting Pack - Robe -->
+				<item id="38035" min="1" max="1" chance="0.149925037481259" /> <!-- Seraph Tunic Crafting Pack - Robe -->
+				<item id="38023" min="1" max="1" chance="0.149925037481259" /> <!-- Seraph Helmet Crafting Pack - Heavy Armor -->
+				<item id="38036" min="1" max="1" chance="0.149925037481259" /> <!-- Seraph Stockings Crafting Pack - Robe -->
+				<item id="38028" min="1" max="1" chance="0.149925037481259" /> <!-- Seraph Shield Crafting Pack - Heavy Armor -->
+			</drop>
+		</dropLists>
 	</npc>
 	<npc id="25882" level="88" type="RaidBoss" name="Zellaka" title="Lord of Kartia">
 		<parameters>
@@ -4373,7 +4494,6 @@
 		</collision>
 	</npc>
 	<npc id="25885" level="97" type="RaidBoss" name="Guillotine of Death" title="Raid Boss">
-		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<parameters>
 			<param name="Attack_BoostValue" value="148" />
 		</parameters>
@@ -4425,7 +4545,6 @@
 		</collision>
 	</npc>
 	<npc id="25886" level="97" type="RaidBoss" name="Houpon the Warden Overseer" title="Raid Boss">
-		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<parameters>
 			<param name="Attack_BoostValue" value="148" />
 		</parameters>
@@ -4545,7 +4664,6 @@
 		</collision>
 	</npc>
 	<npc id="25887" level="97" type="RaidBoss" name="Crook the Mad" title="Raid Boss">
-		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<parameters>
 			<param name="Attack_BoostValue" value="148" />
 		</parameters>
@@ -4664,7 +4782,6 @@
 		</collision>
 	</npc>
 	<npc id="25888" level="97" type="RaidBoss" name="Execution Grounds Watchman Guillotine" title="Raid Boss">
-		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<parameters>
 			<param name="Attack_BoostValue" value="148" />
 		</parameters>
@@ -4712,7 +4829,6 @@
 		</collision>
 	</npc>
 	<npc id="25889" level="97" type="Monster" name="Revenant of Sir Calibus" title="Raid Fighter">
-		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<parameters>
 			<param name="IsAggressive" value="1" />
 			<param name="Skill01_Probablity" value="0" />
@@ -4765,7 +4881,6 @@
 		</collision>
 	</npc>
 	<npc id="25890" level="97" type="Monster" name="Soul Collector Acheron" title="Raid Fighter">
-		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<parameters>
 			<param name="IsAggressive" value="1" />
 			<param name="Skill01_Probablity" value="0" />
@@ -4817,7 +4932,6 @@
 		</collision>
 	</npc>
 	<npc id="25891" level="97" type="Monster" name="Evil Spirit Tempest" title="Raid Fighter">
-		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<parameters>
 			<param name="IsAggressive" value="1" />
 			<param name="Skill01_Probablity" value="0" />
@@ -4869,7 +4983,6 @@
 		</collision>
 	</npc>
 	<npc id="25892" level="97" type="RaidBoss" name="Guillotine of Death" title="Raid Boss">
-		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<race>UNDEAD</race>
 		<sex>MALE</sex>
 		<acquire exp="3989190184" sp="957405" raidPoints="30" />
@@ -5007,7 +5120,6 @@
 		</collision>
 	</npc>
 	<npc id="25894" level="94" type="RaidBoss" name="Enraged Master Kinen" title="Raid Boss">
-		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<parameters>
 			<param name="IsAggressive" value="1" />
 			<skill name="Skill01_ID" id="14363" level="1" />

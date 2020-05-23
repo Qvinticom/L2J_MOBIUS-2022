@@ -1,7 +1,6 @@
 ﻿<?xml version="1.0" encoding="UTF-8"?>
 <list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../xsd/npcs.xsd">
 	<npc id="23010" level="97" type="Monster" name="Square Intruder">
-		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<parameters>
 			<param name="MoveAroundSocial" value="130" />
 			<param name="MoveAroundSocial1" value="130" />
@@ -42,7 +41,6 @@
 		</collision>
 	</npc>
 	<npc id="23011" level="97" type="Monster" name="Square Attacker">
-		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<parameters>
 			<param name="MoveAroundSocial" value="0" />
 			<param name="MoveAroundSocial1" value="0" />
@@ -83,7 +81,6 @@
 		</collision>
 	</npc>
 	<npc id="23012" level="97" type="Monster" name="Stronghold Protector">
-		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<parameters>
 			<param name="MoveAroundSocial" value="150" />
 			<param name="MoveAroundSocial1" value="150" />
@@ -124,7 +121,6 @@
 		</collision>
 	</npc>
 	<npc id="23013" level="97" type="Monster" name="Spirit Protector">
-		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<parameters>
 			<param name="MoveAroundSocial" value="80" />
 			<param name="MoveAroundSocial1" value="80" />
@@ -165,7 +161,6 @@
 		</collision>
 	</npc>
 	<npc id="23014" level="97" type="Monster" name="Vicious Dueler">
-		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<parameters>
 			<param name="MoveAroundSocial" value="80" />
 			<param name="MoveAroundSocial1" value="80" />
@@ -206,7 +201,6 @@
 		</collision>
 	</npc>
 	<npc id="23015" level="97" type="Monster" name="Vicious Swordsman">
-		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<parameters>
 			<param name="MoveAroundSocial" value="80" />
 			<param name="MoveAroundSocial1" value="80" />
@@ -247,7 +241,6 @@
 		</collision>
 	</npc>
 	<npc id="23016" level="97" type="Monster" name="Vicious Warrior">
-		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<parameters>
 			<param name="MoveAroundSocial" value="130" />
 			<param name="MoveAroundSocial1" value="130" />
@@ -288,7 +281,6 @@
 		</collision>
 	</npc>
 	<npc id="23017" level="97" type="Monster" name="Punisher of Sins">
-		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<parameters>
 			<param name="MoveAroundSocial" value="130" />
 			<param name="MoveAroundSocial1" value="130" />
@@ -329,7 +321,6 @@
 		</collision>
 	</npc>
 	<npc id="23018" level="97" type="Monster" name="Judge of Sins">
-		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<parameters>
 			<param name="MoveAroundSocial" value="100" />
 			<param name="MoveAroundSocial1" value="100" />
@@ -370,7 +361,6 @@
 		</collision>
 	</npc>
 	<npc id="23019" level="97" type="Monster" name="Arbitrator of Sins">
-		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<parameters>
 			<param name="MoveAroundSocial" value="75" />
 			<param name="MoveAroundSocial1" value="75" />
@@ -411,7 +401,6 @@
 		</collision>
 	</npc>
 	<npc id="23020" level="21" type="Monster" name="Giant Wild Boar">
-		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<parameters>
 			<param name="MoveAroundSocial" value="0" />
 			<param name="MoveAroundSocial1" value="100" />
@@ -442,9 +431,10 @@
 		<ai aggroRange="300" isAggressive="true" clanHelpRange="300" />
 		<dropLists>
 			<drop>
-				<item id="57" min="4" max="9" chance="70" /> <!-- Adena -->
-				<item id="36548" min="1" max="1" chance="0.003" /> <!-- Weapon Fragment (Mid-grade) -->
-				<item id="36563" min="1" max="1" chance="0.000899999999999997" /> <!-- Synthetic Cokes -->
+				<item id="57" min="4" max="10" chance="70" /> <!-- Adena -->
+				<item id="36563" min="1" max="1" chance="0.03000300030003" /> <!-- Synthetic Cokes -->
+				<item id="36548" min="1" max="1" chance="0.03000300030003" /> <!-- Weapon Fragment (Mid-grade) -->
+				<!-- Also drops herbs. -->
 				<item id="8600" min="1" max="1" chance="10" /> <!-- Herb of Life -->
 				<item id="8601" min="1" max="1" chance="8" /> <!-- Major Herb of Life -->
 				<item id="8602" min="1" max="1" chance="2" /> <!-- Superior Herb of Life -->
@@ -456,9 +446,9 @@
 				<item id="13028" min="1" max="1" chance="0.1" /> <!-- Vitality Replenishing Herb -->
 			</drop>
 			<spoil>
-				<item id="36556" min="1" max="1" chance="0.75" /> <!-- Accessory Gem (Low-grade) -->
-				<item id="36557" min="1" max="1" chance="0.03" /> <!-- Accessory Gem -->
-				<item id="36558" min="1" max="1" chance="0.003" /> <!-- Accessory Gem (Mid-grade) -->
+				<item id="36556" min="1" max="1" chance="0.75187969924812" /> <!-- Accessory Gem (Low-grade) -->
+				<item id="36557" min="1" max="1" chance="0.149925037481259" /> <!-- Accessory Gem -->
+				<item id="36558" min="1" max="1" chance="0.0750187546886722" /> <!-- Accessory Gem (Mid-grade) -->
 			</spoil>
 			<lucky>
 				<item id="39629" min="1" max="1" chance="100" /> <!-- Fortune Pocket - Stage 1 -->
@@ -470,7 +460,6 @@
 		</collision>
 	</npc>
 	<npc id="23021" level="23" type="Monster" name="Giant Venomous Spider">
-		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<parameters>
 			<param name="MoveAroundSocial" value="80" />
 			<param name="MoveAroundSocial1" value="80" />
@@ -504,8 +493,9 @@
 		<dropLists>
 			<drop>
 				<item id="57" min="5" max="11" chance="70" /> <!-- Adena -->
-				<item id="40" min="1" max="1" chance="0.3" /> <!-- Leather Boots -->
-				<item id="36553" min="1" max="1" chance="0.0009" /> <!-- Armor Fragment (Mid-grade) -->
+				<item id="40" min="1" max="1" chance="1" /> <!-- Leather Boots -->
+				<item id="36553" min="1" max="1" chance="0.03000300030003" /> <!-- Armor Fragment (Mid-grade) -->
+				<!-- Also drops herbs. -->
 				<item id="8600" min="1" max="1" chance="10" /> <!-- Herb of Life -->
 				<item id="8601" min="1" max="1" chance="8" /> <!-- Major Herb of Life -->
 				<item id="8602" min="1" max="1" chance="2" /> <!-- Superior Herb of Life -->
@@ -517,8 +507,8 @@
 				<item id="13028" min="1" max="1" chance="0.1" /> <!-- Vitality Replenishing Herb -->
 			</drop>
 			<spoil>
-				<item id="36531" min="1" max="1" chance="2.642" /> <!-- Thread -->
-				<item id="36533" min="1" max="1" chance="0.03" /> <!-- Synthetic Braid -->
+				<item id="36531" min="1" max="1" chance="2.5" /> <!-- Thread -->
+				<item id="36533" min="1" max="1" chance="0.0750187546886722" /> <!-- Synthetic Braid -->
 			</spoil>
 			<lucky>
 				<item id="39629" min="1" max="1" chance="100" /> <!-- Fortune Pocket - Stage 1 -->
@@ -530,7 +520,6 @@
 		</collision>
 	</npc>
 	<npc id="23022" level="29" type="Monster" name="Skeleton Warrior" title="Enraged">
-		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<parameters>
 			<param name="MoveAroundSocial" value="0" />
 			<param name="MoveAroundSocial1" value="100" />
@@ -567,7 +556,8 @@
 		<dropLists>
 			<drop>
 				<item id="57" min="6" max="14" chance="70" /> <!-- Adena -->
-				<item id="180" min="1" max="1" chance="0.03" /> <!-- Mace of Judgment -->
+				<item id="180" min="1" max="1" chance="0.03000300030003" /> <!-- Mace of Judgment -->
+				<!-- Also drops herbs. -->
 				<item id="8600" min="1" max="1" chance="10" /> <!-- Herb of Life -->
 				<item id="8601" min="1" max="1" chance="8" /> <!-- Major Herb of Life -->
 				<item id="8602" min="1" max="1" chance="2" /> <!-- Superior Herb of Life -->
@@ -579,9 +569,9 @@
 				<item id="13028" min="1" max="1" chance="0.1" /> <!-- Vitality Replenishing Herb -->
 			</drop>
 			<spoil>
-				<item id="36556" min="1" max="1" chance="0.75" /> <!-- Accessory Gem (Low-grade) -->
-				<item id="36557" min="1" max="1" chance="0.03" /> <!-- Accessory Gem -->
-				<item id="36558" min="1" max="1" chance="0.003" /> <!-- Accessory Gem (Mid-grade) -->
+				<item id="36556" min="1" max="1" chance="0.75187969924812" /> <!-- Accessory Gem (Low-grade) -->
+				<item id="36557" min="1" max="1" chance="0.149925037481259" /> <!-- Accessory Gem -->
+				<item id="36558" min="1" max="1" chance="0.0750187546886722" /> <!-- Accessory Gem (Mid-grade) -->
 			</spoil>
 			<lucky>
 				<item id="39629" min="1" max="1" chance="100" /> <!-- Fortune Pocket - Stage 1 -->
@@ -593,7 +583,6 @@
 		</collision>
 	</npc>
 	<npc id="23023" level="31" type="Monster" name="Ruin Bat" title="Enraged">
-		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<parameters>
 			<param name="MoveAroundSocial" value="0" />
 			<param name="MoveAroundSocial1" value="0" />
@@ -631,7 +620,8 @@
 		<dropLists>
 			<drop>
 				<item id="57" min="7" max="15" chance="70" /> <!-- Adena -->
-				<item id="36558" min="1" max="1" chance="0.03" /> <!-- Accessory Gem (Mid-grade) -->
+				<item id="36558" min="1" max="1" chance="0.03000300030003" /> <!-- Accessory Gem (Mid-grade) -->
+				<!-- Also drops herbs. -->
 				<item id="8600" min="1" max="1" chance="10" /> <!-- Herb of Life -->
 				<item id="8601" min="1" max="1" chance="8" /> <!-- Major Herb of Life -->
 				<item id="8602" min="1" max="1" chance="2" /> <!-- Superior Herb of Life -->
@@ -643,8 +633,8 @@
 				<item id="13028" min="1" max="1" chance="0.1" /> <!-- Vitality Replenishing Herb -->
 			</drop>
 			<spoil>
-				<item id="36531" min="1" max="1" chance="3.625" /> <!-- Thread -->
-				<item id="36533" min="1" max="1" chance="0.03" /> <!-- Synthetic Braid -->
+				<item id="36531" min="1" max="1" chance="2.5" /> <!-- Thread -->
+				<item id="36533" min="1" max="1" chance="0.0750187546886722" /> <!-- Synthetic Braid -->
 			</spoil>
 			<lucky>
 				<item id="39629" min="1" max="1" chance="100" /> <!-- Fortune Pocket - Stage 1 -->
@@ -656,7 +646,6 @@
 		</collision>
 	</npc>
 	<npc id="23024" level="36" type="Monster" name="Weary Jaguar">
-		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<parameters>
 			<param name="MoveAroundSocial" value="0" />
 			<param name="MoveAroundSocial1" value="100" />
@@ -688,8 +677,9 @@
 		<dropLists>
 			<drop>
 				<item id="57" min="9" max="20" chance="70" /> <!-- Adena -->
-				<item id="36553" min="1" max="1" chance="0.003" /> <!-- Armor Fragment (Mid-grade) -->
-				<item id="36563" min="1" max="1" chance="0.003" /> <!-- Synthetic Cokes -->
+				<item id="36563" min="1" max="1" chance="0.03000300030003" /> <!-- Synthetic Cokes -->
+				<item id="36553" min="1" max="1" chance="0.03000300030003" /> <!-- Armor Fragment (Mid-grade) -->
+				<!-- Also drops herbs. -->
 				<item id="8600" min="1" max="1" chance="10" /> <!-- Herb of Life -->
 				<item id="8601" min="1" max="1" chance="8" /> <!-- Major Herb of Life -->
 				<item id="8602" min="1" max="1" chance="2" /> <!-- Superior Herb of Life -->
@@ -701,7 +691,7 @@
 				<item id="13028" min="1" max="1" chance="0.1" /> <!-- Vitality Replenishing Herb -->
 			</drop>
 			<spoil>
-				<item id="36553" min="1" max="1" chance="0.0055" /> <!-- Armor Fragment (Mid-grade) -->
+				<item id="36553" min="1" max="1" chance="0.0750187546886722" /> <!-- Armor Fragment (Mid-grade) -->
 			</spoil>
 			<lucky>
 				<item id="39629" min="1" max="1" chance="100" /> <!-- Fortune Pocket - Stage 1 -->
@@ -713,7 +703,6 @@
 		</collision>
 	</npc>
 	<npc id="23025" level="37" type="Monster" name="Weary Jaguar Scout">
-		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<parameters>
 			<param name="MoveAroundSocial" value="0" />
 			<param name="MoveAroundSocial1" value="100" />
@@ -749,7 +738,8 @@
 		<dropLists>
 			<drop>
 				<item id="57" min="9" max="21" chance="70" /> <!-- Adena -->
-				<item id="956" min="1" max="1" chance="0.3" /> <!-- Scroll: Enchant Armor (D-grade) -->
+				<item id="956" min="1" max="1" chance="0.3003003003003" /> <!-- Scroll: Enchant Armor (D-grade) -->
+				<!-- Also drops herbs. -->
 				<item id="8600" min="1" max="1" chance="10" /> <!-- Herb of Life -->
 				<item id="8601" min="1" max="1" chance="8" /> <!-- Major Herb of Life -->
 				<item id="8602" min="1" max="1" chance="2" /> <!-- Superior Herb of Life -->
@@ -761,8 +751,8 @@
 				<item id="13028" min="1" max="1" chance="0.1" /> <!-- Vitality Replenishing Herb -->
 			</drop>
 			<spoil>
-				<item id="36531" min="1" max="1" chance="5.017" /> <!-- Thread -->
-				<item id="36533" min="1" max="1" chance="0.03" /> <!-- Synthetic Braid -->
+				<item id="36531" min="1" max="1" chance="5" /> <!-- Thread -->
+				<item id="36533" min="1" max="1" chance="0.0750187546886722" /> <!-- Synthetic Braid -->
 			</spoil>
 			<lucky>
 				<item id="39629" min="1" max="1" chance="100" /> <!-- Fortune Pocket - Stage 1 -->
@@ -774,7 +764,6 @@
 		</collision>
 	</npc>
 	<npc id="23026" level="38" type="Monster" name="Sahara">
-		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<parameters>
 			<param name="MoveAroundSocial" value="0" />
 			<param name="MoveAroundSocial1" value="100" />
@@ -801,8 +790,9 @@
 		<ai aggroRange="300" isAggressive="true" clanHelpRange="300" />
 		<dropLists>
 			<drop>
-				<item id="57" min="10" max="22" chance="70" /> <!-- Adena -->
-				<item id="36528" min="1" max="1" chance="0.3" /> <!-- Metallic Fiber -->
+				<item id="57" min="10" max="24" chance="70" /> <!-- Adena -->
+				<item id="36528" min="1" max="1" chance="0.149925037481259" /> <!-- Metallic Fiber -->
+				<!-- Also drops herbs. -->
 				<item id="8600" min="1" max="1" chance="10" /> <!-- Herb of Life -->
 				<item id="8601" min="1" max="1" chance="8" /> <!-- Major Herb of Life -->
 				<item id="8602" min="1" max="1" chance="2" /> <!-- Superior Herb of Life -->
@@ -814,8 +804,8 @@
 				<item id="13028" min="1" max="1" chance="0.1" /> <!-- Vitality Replenishing Herb -->
 			</drop>
 			<spoil>
-				<item id="36531" min="1" max="1" chance="5.311" /> <!-- Thread -->
-				<item id="36533" min="1" max="1" chance="0.03" /> <!-- Synthetic Braid -->
+				<item id="36531" min="1" max="1" chance="5" /> <!-- Thread -->
+				<item id="36533" min="1" max="1" chance="0.0750187546886722" /> <!-- Synthetic Braid -->
 			</spoil>
 			<lucky>
 				<item id="39629" min="1" max="1" chance="100" /> <!-- Fortune Pocket - Stage 1 -->
@@ -827,7 +817,6 @@
 		</collision>
 	</npc>
 	<npc id="23027" level="93" type="Monster" name="Taklacan">
-		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<parameters>
 			<skill name="Skill01_ID" id="14236" level="1" />
 			<skill name="Skill02_ID" id="14237" level="1" />
@@ -867,7 +856,6 @@
 		</collision>
 	</npc>
 	<npc id="23028" level="93" type="Monster" name="Torumba">
-		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<parameters>
 			<skill name="Skill01_ID" id="14240" level="1" />
 			<skill name="Skill02_ID" id="14241" level="1" />
@@ -906,9 +894,22 @@
 			<radius normal="35" />
 			<height normal="36" />
 		</collision>
+		<dropLists>
+			<drop>
+				<!-- Also drops herbs. -->
+				<item id="8600" min="1" max="1" chance="10" /> <!-- Herb of Life -->
+				<item id="8601" min="1" max="1" chance="8" /> <!-- Major Herb of Life -->
+				<item id="8602" min="1" max="1" chance="2" /> <!-- Superior Herb of Life -->
+				<item id="8603" min="1" max="1" chance="19.8" /> <!-- Herb of Mana -->
+				<item id="8604" min="1" max="1" chance="9.9" /> <!-- Major Herb of Mana -->
+				<item id="8605" min="1" max="1" chance="3.3" /> <!-- Superior Herb of Mana -->
+				<item id="34849" min="1" max="1" chance="0.7" /> <!-- Mysterious Herb of Power -->
+				<item id="34850" min="1" max="1" chance="0.7" /> <!-- Mysterious Herb of Magic -->
+				<item id="13028" min="1" max="1" chance="0.1" /> <!-- Vitality Replenishing Herb -->
+			</drop>
+		</dropLists>
 	</npc>
 	<npc id="23029" level="93" type="Monster" name="Dopagen">
-		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<parameters>
 			<skill name="Skill01_ID" id="14238" level="1" />
 			<skill name="Skill02_ID" id="14239" level="1" />
@@ -949,7 +950,6 @@
 		</collision>
 	</npc>
 	<npc id="23030" level="98" type="Monster" name="Taklacan">
-		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<parameters>
 			<skill name="Skill01_ID" id="14236" level="1" />
 			<skill name="Skill02_ID" id="14237" level="1" />
@@ -989,7 +989,6 @@
 		</collision>
 	</npc>
 	<npc id="23031" level="98" type="Monster" name="Torumba">
-		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<parameters>
 			<skill name="Skill01_ID" id="14240" level="1" />
 			<skill name="Skill02_ID" id="14241" level="1" />
@@ -1030,7 +1029,6 @@
 		</collision>
 	</npc>
 	<npc id="23032" level="98" type="Monster" name="Dopagen">
-		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<parameters>
 			<skill name="Skill01_ID" id="14238" level="1" />
 			<skill name="Skill02_ID" id="14239" level="1" />
@@ -1071,7 +1069,6 @@
 		</collision>
 	</npc>
 	<npc id="23033" level="88" type="Monster" name="Failed Creation">
-		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<parameters>
 			<skill name="Skill01_ID" id="14231" level="1" />
 			<skill name="Skill02_ID" id="14232" level="1" />
@@ -1113,10 +1110,11 @@
 		</ai>
 		<dropLists>
 			<drop>
-				<item id="57" min="213" max="497" chance="70" /> <!-- Adena -->
-				<item id="36562" min="1" max="1" chance="0.299999999999999" /> <!-- Greater Cokes -->
-				<item id="36563" min="1" max="1" chance="0.0750000000000006" /> <!-- Synthetic Cokes -->
-				<item id="17526" min="1" max="1" chance="0.00299999999999999" /> <!-- Scroll: Enchant Weapon (R-grade) -->
+				<item id="57" min="365" max="851" chance="20" /> <!-- Adena -->
+				<item id="36562" min="1" max="1" chance="0.3003003003003" /> <!-- Greater Cokes -->
+				<item id="36563" min="1" max="1" chance="0.0750187546886722" /> <!-- Synthetic Cokes -->
+				<item id="17526" min="1" max="1" chance="0.0149992500374981" /> <!-- Scroll: Enchant Weapon (R-grade) -->
+				<!-- Also drops herbs. -->
 				<item id="8600" min="1" max="1" chance="10" /> <!-- Herb of Life -->
 				<item id="8601" min="1" max="1" chance="8" /> <!-- Major Herb of Life -->
 				<item id="8602" min="1" max="1" chance="2" /> <!-- Superior Herb of Life -->
@@ -1128,8 +1126,8 @@
 				<item id="13028" min="1" max="1" chance="0.1" /> <!-- Vitality Replenishing Herb -->
 			</drop>
 			<spoil>
-				<item id="40205" min="1" max="1" chance="5.207" /> <!-- Requiem Fragment -->
-				<item id="40210" min="1" max="1" chance="0.003" /> <!-- Recipe: R (100%) -->
+				<item id="40205" min="1" max="1" chance="5" /> <!-- Requiem Fragment -->
+				<item id="40210" min="1" max="1" chance="0.0149992500374981" /> <!-- Recipe: R (100%) -->
 			</spoil>
 			<lucky>
 				<item id="39629" min="1" max="1" chance="100" /> <!-- Fortune Pocket - Stage 1 -->
@@ -1141,7 +1139,6 @@
 		</collision>
 	</npc>
 	<npc id="23034" level="88" type="Monster" name="Failed Creation">
-		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<parameters>
 			<skill name="Skill01_ID" id="14232" level="1" />
 			<skill name="Skill02_ID" id="14233" level="1" />
@@ -1183,11 +1180,12 @@
 		</ai>
 		<dropLists>
 			<drop>
-				<item id="57" min="214" max="499" chance="70" /> <!-- Adena -->
-				<item id="36562" min="1" max="1" chance="0.3" /> <!-- Greater Cokes -->
-				<item id="36563" min="1" max="1" chance="0.0749999999999981" /> <!-- Synthetic Cokes -->
-				<item id="30425" min="1" max="1" chance="0.03" /> <!-- Recipe: Blessed Spiritshot (R-grade) -->
-				<item id="17526" min="1" max="1" chance="0.003" /> <!-- Scroll: Enchant Weapon (R-grade) -->
+				<item id="57" min="365" max="851" chance="20" /> <!-- Adena -->
+				<item id="36562" min="1" max="1" chance="0.3003003003003" /> <!-- Greater Cokes -->
+				<item id="36563" min="1" max="1" chance="0.0750187546886722" /> <!-- Synthetic Cokes -->
+				<item id="30425" min="1" max="1" chance="0.03000300030003" /> <!-- Recipe: Blessed Spiritshot (R-grade) -->
+				<item id="17526" min="1" max="1" chance="0.0149992500374981" /> <!-- Scroll: Enchant Weapon (R-grade) -->
+				<!-- Also drops herbs. -->
 				<item id="8600" min="1" max="1" chance="10" /> <!-- Herb of Life -->
 				<item id="8601" min="1" max="1" chance="8" /> <!-- Major Herb of Life -->
 				<item id="8602" min="1" max="1" chance="2" /> <!-- Superior Herb of Life -->
@@ -1199,8 +1197,8 @@
 				<item id="13028" min="1" max="1" chance="0.1" /> <!-- Vitality Replenishing Herb -->
 			</drop>
 			<spoil>
-				<item id="36562" min="1" max="1" chance="0.3" /> <!-- Greater Cokes -->
-				<item id="36563" min="1" max="1" chance="0.075" /> <!-- Synthetic Cokes -->
+				<item id="36562" min="1" max="1" chance="0.3003003003003" /> <!-- Greater Cokes -->
+				<item id="36563" min="1" max="1" chance="0.0750187546886722" /> <!-- Synthetic Cokes -->
 			</spoil>
 			<lucky>
 				<item id="39629" min="1" max="1" chance="100" /> <!-- Fortune Pocket - Stage 1 -->
@@ -1212,7 +1210,6 @@
 		</collision>
 	</npc>
 	<npc id="23035" level="88" type="Monster" name="Failed Creation">
-		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<parameters>
 			<skill name="Skill01_ID" id="14233" level="1" />
 			<skill name="Skill02_ID" id="14234" level="1" />
@@ -1253,10 +1250,11 @@
 		</ai>
 		<dropLists>
 			<drop>
-				<item id="57" min="244" max="569" chance="70" /> <!-- Adena -->
-				<item id="36562" min="1" max="1" chance="0.3" /> <!-- Greater Cokes -->
-				<item id="36563" min="1" max="1" chance="0.0750000000000019" /> <!-- Synthetic Cokes -->
-				<item id="17527" min="1" max="1" chance="0.03" /> <!-- Scroll: Enchant Armor (R-grade) -->
+				<item id="57" min="365" max="851" chance="20" /> <!-- Adena -->
+				<item id="36562" min="1" max="1" chance="0.3003003003003" /> <!-- Greater Cokes -->
+				<item id="36563" min="1" max="1" chance="0.0750187546886722" /> <!-- Synthetic Cokes -->
+				<item id="17527" min="1" max="1" chance="0.03000300030003" /> <!-- Scroll: Enchant Armor (R-grade) -->
+				<!-- Also drops herbs. -->
 				<item id="8600" min="1" max="1" chance="10" /> <!-- Herb of Life -->
 				<item id="8601" min="1" max="1" chance="8" /> <!-- Major Herb of Life -->
 				<item id="8602" min="1" max="1" chance="2" /> <!-- Superior Herb of Life -->
@@ -1268,8 +1266,8 @@
 				<item id="13028" min="1" max="1" chance="0.1" /> <!-- Vitality Replenishing Herb -->
 			</drop>
 			<spoil>
-				<item id="40205" min="1" max="1" chance="5.912" /> <!-- Requiem Fragment -->
-				<item id="40210" min="1" max="1" chance="0.003" /> <!-- Recipe: R (100%) -->
+				<item id="40205" min="1" max="1" chance="5" /> <!-- Requiem Fragment -->
+				<item id="40210" min="1" max="1" chance="0.0149992500374981" /> <!-- Recipe: R (100%) -->
 			</spoil>
 			<lucky>
 				<item id="39629" min="1" max="1" chance="100" /> <!-- Fortune Pocket - Stage 1 -->
@@ -1281,7 +1279,6 @@
 		</collision>
 	</npc>
 	<npc id="23036" level="88" type="Monster" name="Failed Creation">
-		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<parameters>
 			<skill name="Skill01_ID" id="14234" level="1" />
 			<skill name="Skill02_ID" id="14231" level="1" />
@@ -1322,10 +1319,11 @@
 		</ai>
 		<dropLists>
 			<drop>
-				<item id="57" min="235" max="548" chance="70" /> <!-- Adena -->
-				<item id="36562" min="1" max="1" chance="0.3" /> <!-- Greater Cokes -->
-				<item id="36563" min="1" max="1" chance="0.0750000000000019" /> <!-- Synthetic Cokes -->
-				<item id="17527" min="1" max="1" chance="0.03" /> <!-- Scroll: Enchant Armor (R-grade) -->
+				<item id="57" min="365" max="851" chance="20" /> <!-- Adena -->
+				<item id="36562" min="1" max="1" chance="0.3003003003003" /> <!-- Greater Cokes -->
+				<item id="36563" min="1" max="1" chance="0.0750187546886722" /> <!-- Synthetic Cokes -->
+				<item id="17527" min="1" max="1" chance="0.03000300030003" /> <!-- Scroll: Enchant Armor (R-grade) -->
+				<!-- Also drops herbs. -->
 				<item id="8600" min="1" max="1" chance="10" /> <!-- Herb of Life -->
 				<item id="8601" min="1" max="1" chance="8" /> <!-- Major Herb of Life -->
 				<item id="8602" min="1" max="1" chance="2" /> <!-- Superior Herb of Life -->
@@ -1337,8 +1335,8 @@
 				<item id="13028" min="1" max="1" chance="0.1" /> <!-- Vitality Replenishing Herb -->
 			</drop>
 			<spoil>
-				<item id="36562" min="1" max="1" chance="0.3" /> <!-- Greater Cokes -->
-				<item id="36563" min="1" max="1" chance="0.075" /> <!-- Synthetic Cokes -->
+				<item id="36562" min="1" max="1" chance="0.3003003003003" /> <!-- Greater Cokes -->
+				<item id="36563" min="1" max="1" chance="0.0750187546886722" /> <!-- Synthetic Cokes -->
 			</spoil>
 			<lucky>
 				<item id="39629" min="1" max="1" chance="100" /> <!-- Fortune Pocket - Stage 1 -->
@@ -1350,7 +1348,6 @@
 		</collision>
 	</npc>
 	<npc id="23037" level="88" type="Monster" name="Failed Creation">
-		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<parameters>
 			<skill name="Skill01_ID" id="14232" level="1" />
 			<skill name="Skill02_ID" id="14234" level="1" />
@@ -1391,11 +1388,12 @@
 		</ai>
 		<dropLists>
 			<drop>
-				<item id="57" min="235" max="548" chance="70" /> <!-- Adena -->
-				<item id="36562" min="1" max="1" chance="0.299999999999999" /> <!-- Greater Cokes -->
-				<item id="36563" min="1" max="1" chance="0.0750000000000007" /> <!-- Synthetic Cokes -->
-				<item id="17527" min="1" max="1" chance="0.0299999999999999" /> <!-- Scroll: Enchant Armor (R-grade) -->
-				<item id="30423" min="1" max="1" chance="0.0299999999999999" /> <!-- Recipe: Soulshot (R-grade) -->
+				<item id="57" min="365" max="851" chance="20" /> <!-- Adena -->
+				<item id="36562" min="1" max="1" chance="0.3003003003003" /> <!-- Greater Cokes -->
+				<item id="36563" min="1" max="1" chance="0.0750187546886722" /> <!-- Synthetic Cokes -->
+				<item id="30423" min="1" max="1" chance="0.03000300030003" /> <!-- Recipe: Soulshot (R-grade) -->
+				<item id="17527" min="1" max="1" chance="0.03000300030003" /> <!-- Scroll: Enchant Armor (R-grade) -->
+				<!-- Also drops herbs. -->
 				<item id="8600" min="1" max="1" chance="10" /> <!-- Herb of Life -->
 				<item id="8601" min="1" max="1" chance="8" /> <!-- Major Herb of Life -->
 				<item id="8602" min="1" max="1" chance="2" /> <!-- Superior Herb of Life -->
@@ -1407,8 +1405,8 @@
 				<item id="13028" min="1" max="1" chance="0.1" /> <!-- Vitality Replenishing Herb -->
 			</drop>
 			<spoil>
-				<item id="40205" min="1" max="1" chance="5.655" /> <!-- Requiem Fragment -->
-				<item id="40210" min="1" max="1" chance="0.003" /> <!-- Recipe: R (100%) -->
+				<item id="40205" min="1" max="1" chance="5" /> <!-- Requiem Fragment -->
+				<item id="40210" min="1" max="1" chance="0.0149992500374981" /> <!-- Recipe: R (100%) -->
 			</spoil>
 			<lucky>
 				<item id="39629" min="1" max="1" chance="100" /> <!-- Fortune Pocket - Stage 1 -->
@@ -1420,7 +1418,6 @@
 		</collision>
 	</npc>
 	<npc id="23038" level="94" type="Monster" name="Angel Statue Keeper">
-		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<parameters>
 			<param name="MoveAroundSocial" value="120" />
 			<param name="MoveAroundSocial1" value="120" />
@@ -1457,13 +1454,13 @@
 		<ai aggroRange="300" isAggressive="true" clanHelpRange="300" />
 		<dropLists>
 			<drop>
-				<item id="57" min="15097" max="35227" chance="70" /> <!-- Adena -->
-				<item id="36523" min="2" max="6" chance="19.15" /> <!-- Adamantite -->
-				<item id="36522" min="15" max="45" chance="13.31" /> <!-- Silver -->
+				<item id="57" min="16351" max="38151" chance="70" /> <!-- Adena -->
+				<item id="36522" min="17" max="30" chance="15" /> <!-- Silver -->
+				<item id="36523" min="2" max="6" chance="7.5" /> <!-- Adamantite -->
 			</drop>
 			<spoil>
-				<item id="36522" min="1" max="7" chance="76.32" /> <!-- Silver -->
-				<item id="36523" min="1" max="1" chance="59.9" /> <!-- Adamantite -->
+				<item id="36522" min="1" max="7" chance="75" /> <!-- Silver -->
+				<item id="36523" min="1" max="1" chance="25" /> <!-- Adamantite -->
 			</spoil>
 			<lucky>
 				<item id="39629" min="1" max="1" chance="100" /> <!-- Fortune Pocket - Stage 1 -->
@@ -1475,7 +1472,6 @@
 		</collision>
 	</npc>
 	<npc id="23039" level="94" type="Monster" name="Fountain Keeper">
-		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<parameters>
 			<param name="MoveAroundSocial" value="120" />
 			<param name="MoveAroundSocial1" value="120" />
@@ -1512,13 +1508,13 @@
 		<ai aggroRange="300" isAggressive="true" clanHelpRange="300" />
 		<dropLists>
 			<drop>
-				<item id="57" min="15097" max="35227" chance="70" /> <!-- Adena -->
-				<item id="36523" min="2" max="6" chance="18.3199999999999" /> <!-- Adamantite -->
-				<item id="36522" min="15" max="45" chance="12.5700000000001" /> <!-- Silver -->
+				<item id="57" min="16351" max="38151" chance="70" /> <!-- Adena -->
+				<item id="36522" min="26" max="44" chance="15" /> <!-- Silver -->
+				<item id="36523" min="2" max="5" chance="7.5" /> <!-- Adamantite -->
 			</drop>
 			<spoil>
-				<item id="36522" min="1" max="7" chance="77.7" /> <!-- Silver -->
-				<item id="36523" min="1" max="1" chance="59.77" /> <!-- Adamantite -->
+				<item id="36522" min="1" max="7" chance="75" /> <!-- Silver -->
+				<item id="36523" min="1" max="1" chance="25" /> <!-- Adamantite -->
 			</spoil>
 			<lucky>
 				<item id="39629" min="1" max="1" chance="100" /> <!-- Fortune Pocket - Stage 1 -->
@@ -1530,7 +1526,6 @@
 		</collision>
 	</npc>
 	<npc id="23040" level="94" type="Monster" name="Goddess Statue Keeper">
-		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<parameters>
 			<param name="MoveAroundSocial" value="120" />
 			<param name="MoveAroundSocial1" value="120" />
@@ -1567,13 +1562,13 @@
 		<ai aggroRange="300" isAggressive="true" clanHelpRange="300" />
 		<dropLists>
 			<drop>
-				<item id="57" min="15097" max="35227" chance="70" /> <!-- Adena -->
-				<item id="36523" min="2" max="6" chance="19.5699999999998" /> <!-- Adamantite -->
-				<item id="36522" min="15" max="45" chance="13.6600000000002" /> <!-- Silver -->
+				<item id="57" min="16351" max="38151" chance="70" /> <!-- Adena -->
+				<item id="36522" min="21" max="43" chance="15" /> <!-- Silver -->
+				<item id="36523" min="2" max="6" chance="7.5" /> <!-- Adamantite -->
 			</drop>
 			<spoil>
-				<item id="36522" min="1" max="7" chance="77.62" /> <!-- Silver -->
-				<item id="36523" min="1" max="1" chance="58.04" /> <!-- Adamantite -->
+				<item id="36522" min="1" max="7" chance="75" /> <!-- Silver -->
+				<item id="36523" min="1" max="1" chance="25" /> <!-- Adamantite -->
 			</spoil>
 			<lucky>
 				<item id="39629" min="1" max="1" chance="100" /> <!-- Fortune Pocket - Stage 1 -->
@@ -1585,7 +1580,6 @@
 		</collision>
 	</npc>
 	<npc id="23041" level="89" type="Monster" name="Pan Direm">
-		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<parameters>
 			<param name="MoveAroundSocial" value="71" />
 			<param name="MoveAroundSocial1" value="71" />
@@ -1624,19 +1618,17 @@
 		<ai aggroRange="600" isAggressive="true" clanHelpRange="300" />
 		<dropLists>
 			<drop>
-				<item id="57" min="425" max="991" chance="70" /> <!-- Adena -->
-				<item id="17357" min="1" max="1" chance="0.0300000000000005" /> <!-- Twilight Ring -->
-				<item id="36855" min="1" max="1" chance="2.141" /> <!-- Twilight Ring Gem -->
-				<item id="36793" min="1" max="1" chance="0.0300000000000002" /> <!-- Recipe: Twilight Ring (60%) -->
-				<item id="17375" min="1" max="1" chance="50.0000000000003" /> <!-- Kimerian's Trace -->
-				<item id="17376" min="1" max="1" chance="24.9099999999998" /> <!-- Trace of Kimerian's Cavern -->
-				<item id="17527" min="1" max="1" chance="0.0300000000000002" /> <!-- Scroll: Enchant Armor (R-grade) -->
-				<item id="30423" min="1" max="1" chance="0.00550000000000003" /> <!-- Recipe: Soulshot (R-grade) -->
-				<item id="17526" min="1" max="1" chance="0.000899999999999975" /> <!-- Scroll: Enchant Weapon (R-grade) -->
+				<item id="57" min="727" max="1697" chance="20" /> <!-- Adena -->
+				<item id="36855" min="1" max="1" chance="1.5" /> <!-- Twilight Ring Gem -->
+				<item id="30423" min="1" max="1" chance="0.03000300030003" /> <!-- Recipe: Soulshot (R-grade) -->
+				<item id="17527" min="1" max="1" chance="0.03000300030003" /> <!-- Scroll: Enchant Armor (R-grade) -->
+				<item id="17357" min="1" max="1" chance="0.0149992500374981" /> <!-- Twilight Ring -->
+				<item id="36793" min="1" max="1" chance="0.0149992500374981" /> <!-- Recipe: Twilight Ring (60%) -->
+				<item id="17526" min="1" max="1" chance="0.0149992500374981" /> <!-- Scroll: Enchant Weapon (R-grade) -->
 			</drop>
 			<spoil>
-				<item id="36532" min="1" max="1" chance="7.469" /> <!-- Thin Braid -->
-				<item id="36533" min="1" max="1" chance="1.527" /> <!-- Synthetic Braid -->
+				<item id="36532" min="1" max="1" chance="6" /> <!-- Thin Braid -->
+				<item id="36533" min="1" max="1" chance="1.5" /> <!-- Synthetic Braid -->
 			</spoil>
 			<lucky>
 				<item id="39629" min="1" max="1" chance="100" /> <!-- Fortune Pocket - Stage 1 -->
@@ -1648,7 +1640,6 @@
 		</collision>
 	</npc>
 	<npc id="23044" level="56" type="Monster" name="Exhausted Vengeful Spirit">
-		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<parameters>
 			<param name="MoveAroundSocial" value="110" />
 			<param name="MoveAroundSocial1" value="110" />
@@ -1688,12 +1679,12 @@
 		<dropLists>
 			<drop>
 				<item id="57" min="93" max="216" chance="70" /> <!-- Adena -->
-				<item id="36548" min="1" max="1" chance="0.075" /> <!-- Weapon Fragment (Mid-grade) -->
+				<item id="36548" min="1" max="1" chance="0.0750187546886722" /> <!-- Weapon Fragment (Mid-grade) -->
 			</drop>
 			<spoil>
-				<item id="36531" min="1" max="1" chance="33.34" /> <!-- Thread -->
-				<item id="36532" min="1" max="1" chance="0.75" /> <!-- Thin Braid -->
-				<item id="36880" min="1" max="1" chance="0.003" /> <!-- Recipe: Thread - Downgrade -->
+				<item id="36531" min="1" max="1" chance="25" /> <!-- Thread -->
+				<item id="36532" min="1" max="1" chance="0.75187969924812" /> <!-- Thin Braid -->
+				<item id="36880" min="1" max="1" chance="0.03000300030003" /> <!-- Recipe: Thread - Downgrade -->
 			</spoil>
 			<lucky>
 				<item id="39629" min="1" max="1" chance="100" /> <!-- Fortune Pocket - Stage 1 -->
@@ -1705,7 +1696,6 @@
 		</collision>
 	</npc>
 	<npc id="23045" level="60" type="Monster" name="Wings of Viciousness">
-		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<parameters>
 			<param name="MoveAroundSocial" value="108" />
 			<param name="MoveAroundSocial1" value="108" />
@@ -1743,12 +1733,12 @@
 		<dropLists>
 			<drop>
 				<item id="57" min="104" max="243" chance="70" /> <!-- Adena -->
-				<item id="36548" min="1" max="1" chance="0.075" /> <!-- Weapon Fragment (Mid-grade) -->
+				<item id="36548" min="1" max="1" chance="0.0750187546886722" /> <!-- Weapon Fragment (Mid-grade) -->
 			</drop>
 			<spoil>
-				<item id="36531" min="1" max="1" chance="39.83" /> <!-- Thread -->
-				<item id="36532" min="1" max="1" chance="0.75" /> <!-- Thin Braid -->
-				<item id="36880" min="1" max="1" chance="0.003" /> <!-- Recipe: Thread - Downgrade -->
+				<item id="36531" min="1" max="1" chance="25" /> <!-- Thread -->
+				<item id="36532" min="1" max="1" chance="0.75187969924812" /> <!-- Thin Braid -->
+				<item id="36880" min="1" max="1" chance="0.03000300030003" /> <!-- Recipe: Thread - Downgrade -->
 			</spoil>
 			<lucky>
 				<item id="39629" min="1" max="1" chance="100" /> <!-- Fortune Pocket - Stage 1 -->
@@ -1760,7 +1750,6 @@
 		</collision>
 	</npc>
 	<npc id="23046" level="61" type="Monster" name="Byron's Knight">
-		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<parameters>
 			<param name="MoveAroundSocial" value="80" />
 			<param name="MoveAroundSocial1" value="80" />
@@ -1800,14 +1789,14 @@
 		<dropLists>
 			<drop>
 				<item id="57" min="146" max="340" chance="70" /> <!-- Adena -->
-				<item id="948" min="1" max="1" chance="0.75" /> <!-- Scroll: Enchant Armor (B-grade) -->
+				<item id="948" min="1" max="1" chance="0.3003003003003" /> <!-- Scroll: Enchant Armor (B-grade) -->
 			</drop>
 			<spoil>
-				<item id="36531" min="1" max="1" chance="33.57" /> <!-- Thread -->
-				<item id="36532" min="1" max="1" chance="0.75" /> <!-- Thin Braid -->
-				<item id="36880" min="1" max="1" chance="0.003" /> <!-- Recipe: Thread - Downgrade -->
-				<item id="36882" min="1" max="1" chance="0.003" /> <!-- Recipe: Thin Braid - Upgrade -->
-				<item id="36881" min="1" max="1" chance="0.0009" /> <!-- Recipe: Thin Braid - Downgrade -->
+				<item id="36531" min="1" max="1" chance="40" /> <!-- Thread -->
+				<item id="36532" min="1" max="1" chance="0.75187969924812" /> <!-- Thin Braid -->
+				<item id="36882" min="1" max="1" chance="0.03000300030003" /> <!-- Recipe: Thin Braid - Upgrade -->
+				<item id="36881" min="1" max="1" chance="0.03000300030003" /> <!-- Recipe: Thin Braid - Downgrade -->
+				<item id="36880" min="1" max="1" chance="0.03000300030003" /> <!-- Recipe: Thread - Downgrade -->
 			</spoil>
 			<lucky>
 				<item id="39629" min="1" max="1" chance="100" /> <!-- Fortune Pocket - Stage 1 -->
@@ -1819,7 +1808,6 @@
 		</collision>
 	</npc>
 	<npc id="23047" level="59" type="Monster" name="Terestian">
-		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<parameters>
 			<param name="MoveAroundSocial" value="80" />
 			<param name="MoveAroundSocial1" value="80" />
@@ -1858,12 +1846,12 @@
 		<dropLists>
 			<drop>
 				<item id="57" min="131" max="306" chance="70" /> <!-- Adena -->
-				<item id="948" min="1" max="1" chance="0.75" /> <!-- Scroll: Enchant Armor (B-grade) -->
+				<item id="948" min="1" max="1" chance="0.3003003003003" /> <!-- Scroll: Enchant Armor (B-grade) -->
 			</drop>
 			<spoil>
-				<item id="36531" min="1" max="1" chance="48.97" /> <!-- Thread -->
-				<item id="36532" min="1" max="1" chance="1.087" /> <!-- Thin Braid -->
-				<item id="36880" min="1" max="1" chance="0.003" /> <!-- Recipe: Thread - Downgrade -->
+				<item id="36531" min="1" max="1" chance="25" /> <!-- Thread -->
+				<item id="36532" min="1" max="1" chance="1" /> <!-- Thin Braid -->
+				<item id="36880" min="1" max="1" chance="0.03000300030003" /> <!-- Recipe: Thread - Downgrade -->
 			</spoil>
 			<lucky>
 				<item id="39629" min="1" max="1" chance="100" /> <!-- Fortune Pocket - Stage 1 -->
@@ -1875,7 +1863,6 @@
 		</collision>
 	</npc>
 	<npc id="23048" level="62" type="Monster" name="Drill Demon">
-		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<parameters>
 			<param name="MoveAroundSocial" value="100" />
 			<param name="MoveAroundSocial1" value="100" />
@@ -1913,14 +1900,14 @@
 		<dropLists>
 			<drop>
 				<item id="57" min="147" max="345" chance="70" /> <!-- Adena -->
-				<item id="8728" min="1" max="1" chance="1.31" /> <!-- Life Stone - Lv. 61 -->
-				<item id="8738" min="1" max="1" chance="0.299999999999996" /> <!-- Mid-grade Life Stone - Lv. 61 -->
-				<item id="8748" min="1" max="1" chance="0.0299999999999996" /> <!-- High-grade Life Stone - Lv. 61 -->
+				<item id="8728" min="1" max="1" chance="0.75187969924812" /> <!-- Life Stone - Lv. 61 -->
+				<item id="8738" min="1" max="1" chance="0.3003003003003" /> <!-- Mid-grade Life Stone - Lv. 61 -->
+				<item id="8748" min="1" max="1" chance="0.0750187546886722" /> <!-- High-grade Life Stone - Lv. 61 -->
 			</drop>
 			<spoil>
-				<item id="36532" min="1" max="1" chance="1.23" /> <!-- Thin Braid -->
-				<item id="36882" min="1" max="1" chance="0.003" /> <!-- Recipe: Thin Braid - Upgrade -->
-				<item id="36881" min="1" max="1" chance="0.0009" /> <!-- Recipe: Thin Braid - Downgrade -->
+				<item id="36532" min="1" max="1" chance="0.75187969924812" /> <!-- Thin Braid -->
+				<item id="36882" min="1" max="1" chance="0.03000300030003" /> <!-- Recipe: Thin Braid - Upgrade -->
+				<item id="36881" min="1" max="1" chance="0.03000300030003" /> <!-- Recipe: Thin Braid - Downgrade -->
 			</spoil>
 			<lucky>
 				<item id="39629" min="1" max="1" chance="100" /> <!-- Fortune Pocket - Stage 1 -->
@@ -1932,7 +1919,6 @@
 		</collision>
 	</npc>
 	<npc id="23049" level="57" type="Monster" name="Knight's Vengeful Spirit">
-		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<parameters>
 			<param name="MoveAroundSocial" value="215" />
 			<param name="MoveAroundSocial1" value="215" />
@@ -1971,12 +1957,12 @@
 		<dropLists>
 			<drop>
 				<item id="57" min="127" max="296" chance="70" /> <!-- Adena -->
-				<item id="948" min="1" max="1" chance="0.3" /> <!-- Scroll: Enchant Armor (B-grade) -->
+				<item id="948" min="1" max="1" chance="0.3003003003003" /> <!-- Scroll: Enchant Armor (B-grade) -->
 			</drop>
 			<spoil>
-				<item id="36531" min="1" max="1" chance="47.29" /> <!-- Thread -->
-				<item id="36532" min="1" max="1" chance="1.034" /> <!-- Thin Braid -->
-				<item id="36880" min="1" max="1" chance="0.003" /> <!-- Recipe: Thread - Downgrade -->
+				<item id="36531" min="1" max="1" chance="25" /> <!-- Thread -->
+				<item id="36532" min="1" max="1" chance="1" /> <!-- Thin Braid -->
+				<item id="36880" min="1" max="1" chance="0.03000300030003" /> <!-- Recipe: Thread - Downgrade -->
 			</spoil>
 			<lucky>
 				<item id="39629" min="1" max="1" chance="100" /> <!-- Fortune Pocket - Stage 1 -->
@@ -1988,7 +1974,6 @@
 		</collision>
 	</npc>
 	<npc id="23050" level="58" type="Monster" name="Escort Knight's Vengeful Spirit">
-		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<parameters>
 			<param name="MoveAroundSocial" value="80" />
 			<param name="MoveAroundSocial1" value="80" />
@@ -2027,12 +2012,12 @@
 		<dropLists>
 			<drop>
 				<item id="57" min="99" max="230" chance="70" /> <!-- Adena -->
-				<item id="948" min="1" max="1" chance="0.3" /> <!-- Scroll: Enchant Armor (B-grade) -->
+				<item id="948" min="1" max="1" chance="0.3003003003003" /> <!-- Scroll: Enchant Armor (B-grade) -->
 			</drop>
 			<spoil>
-				<item id="36531" min="1" max="1" chance="36.13" /> <!-- Thread -->
-				<item id="36532" min="1" max="1" chance="0.75" /> <!-- Thin Braid -->
-				<item id="36880" min="1" max="1" chance="0.003" /> <!-- Recipe: Thread - Downgrade -->
+				<item id="36531" min="1" max="1" chance="25" /> <!-- Thread -->
+				<item id="36532" min="1" max="1" chance="0.75187969924812" /> <!-- Thin Braid -->
+				<item id="36880" min="1" max="1" chance="0.03000300030003" /> <!-- Recipe: Thread - Downgrade -->
 			</spoil>
 			<lucky>
 				<item id="39629" min="1" max="1" chance="100" /> <!-- Fortune Pocket - Stage 1 -->
@@ -2044,7 +2029,6 @@
 		</collision>
 	</npc>
 	<npc id="23051" level="62" type="Monster" name="Byron's Confidant">
-		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<parameters>
 			<param name="MoveAroundSocial" value="114" />
 			<param name="MoveAroundSocial1" value="114" />
@@ -2083,12 +2067,12 @@
 		<dropLists>
 			<drop>
 				<item id="57" min="113" max="265" chance="70" /> <!-- Adena -->
-				<item id="948" min="1" max="1" chance="0.3" /> <!-- Scroll: Enchant Armor (B-grade) -->
+				<item id="948" min="1" max="1" chance="0.3003003003003" /> <!-- Scroll: Enchant Armor (B-grade) -->
 			</drop>
 			<spoil>
-				<item id="36532" min="1" max="1" chance="0.75" /> <!-- Thin Braid -->
-				<item id="36882" min="1" max="1" chance="0.003" /> <!-- Recipe: Thin Braid - Upgrade -->
-				<item id="36881" min="1" max="1" chance="0.0009" /> <!-- Recipe: Thin Braid - Downgrade -->
+				<item id="36532" min="1" max="1" chance="0.75187969924812" /> <!-- Thin Braid -->
+				<item id="36882" min="1" max="1" chance="0.03000300030003" /> <!-- Recipe: Thin Braid - Upgrade -->
+				<item id="36881" min="1" max="1" chance="0.03000300030003" /> <!-- Recipe: Thin Braid - Downgrade -->
 			</spoil>
 			<lucky>
 				<item id="39629" min="1" max="1" chance="100" /> <!-- Fortune Pocket - Stage 1 -->
@@ -2100,7 +2084,6 @@
 		</collision>
 	</npc>
 	<npc id="23052" level="59" type="Monster" name="Evil Shadow">
-		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<parameters>
 			<param name="MoveAroundSocial" value="80" />
 			<param name="MoveAroundSocial1" value="80" />
@@ -2138,13 +2121,13 @@
 		</ai>
 		<dropLists>
 			<drop>
-				<item id="57" min="103" max="239" chance="70" /> <!-- Adena -->
-				<item id="36548" min="1" max="1" chance="0.075" /> <!-- Weapon Fragment (Mid-grade) -->
+				<item id="57" min="103" max="235" chance="70" /> <!-- Adena -->
+				<item id="36548" min="1" max="1" chance="0.0750187546886722" /> <!-- Weapon Fragment (Mid-grade) -->
 			</drop>
 			<spoil>
-				<item id="36532" min="1" max="1" chance="0.75" /> <!-- Thin Braid -->
-				<item id="36533" min="1" max="1" chance="0.3" /> <!-- Synthetic Braid -->
-				<item id="36882" min="1" max="1" chance="0.003" /> <!-- Recipe: Thin Braid - Upgrade -->
+				<item id="36532" min="1" max="1" chance="0.75187969924812" /> <!-- Thin Braid -->
+				<item id="36533" min="1" max="1" chance="0.3003003003003" /> <!-- Synthetic Braid -->
+				<item id="36882" min="1" max="1" chance="0.03000300030003" /> <!-- Recipe: Thin Braid - Upgrade -->
 			</spoil>
 			<lucky>
 				<item id="39629" min="1" max="1" chance="100" /> <!-- Fortune Pocket - Stage 1 -->
@@ -2156,7 +2139,6 @@
 		</collision>
 	</npc>
 	<npc id="23053" level="64" type="Monster" name="Brutal Warrior">
-		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<parameters>
 			<param name="MoveAroundSocial" value="75" />
 			<param name="MoveAroundSocial1" value="75" />
@@ -2194,13 +2176,13 @@
 		<dropLists>
 			<drop>
 				<item id="57" min="158" max="367" chance="70" /> <!-- Adena -->
-				<item id="730" min="1" max="1" chance="0.3" /> <!-- Scroll: Enchant Armor (A-grade) -->
-				<item id="729" min="1" max="1" chance="0.03" /> <!-- Scroll: Enchant Weapon (A-grade) -->
+				<item id="730" min="1" max="1" chance="0.0750187546886722" /> <!-- Scroll: Enchant Armor (A-grade) -->
+				<item id="729" min="1" max="1" chance="0.03000300030003" /> <!-- Scroll: Enchant Weapon (A-grade) -->
 			</drop>
 			<spoil>
-				<item id="36532" min="1" max="1" chance="1.235" /> <!-- Thin Braid -->
-				<item id="36881" min="1" max="1" chance="0.003" /> <!-- Recipe: Thin Braid - Downgrade -->
-				<item id="36882" min="1" max="1" chance="0.0055" /> <!-- Recipe: Thin Braid - Upgrade -->
+				<item id="36532" min="1" max="1" chance="0.75187969924812" /> <!-- Thin Braid -->
+				<item id="36882" min="1" max="1" chance="0.03000300030003" /> <!-- Recipe: Thin Braid - Upgrade -->
+				<item id="36881" min="1" max="1" chance="0.03000300030003" /> <!-- Recipe: Thin Braid - Downgrade -->
 			</spoil>
 			<lucky>
 				<item id="39629" min="1" max="1" chance="100" /> <!-- Fortune Pocket - Stage 1 -->
@@ -2212,7 +2194,6 @@
 		</collision>
 	</npc>
 	<npc id="23054" level="65" type="Monster" name="Demon Knight">
-		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<parameters>
 			<param name="MoveAroundSocial" value="80" />
 			<param name="MoveAroundSocial1" value="80" />
@@ -2251,12 +2232,12 @@
 		<dropLists>
 			<drop>
 				<item id="57" min="206" max="482" chance="70" /> <!-- Adena -->
-				<item id="730" min="1" max="1" chance="0.3" /> <!-- Scroll: Enchant Armor (A-grade) -->
+				<item id="730" min="1" max="1" chance="0.3003003003003" /> <!-- Scroll: Enchant Armor (A-grade) -->
 			</drop>
 			<spoil>
-				<item id="36532" min="1" max="1" chance="1.636" /> <!-- Thin Braid -->
-				<item id="36881" min="1" max="1" chance="0.003" /> <!-- Recipe: Thin Braid - Downgrade -->
-				<item id="36882" min="1" max="1" chance="0.0055" /> <!-- Recipe: Thin Braid - Upgrade -->
+				<item id="36532" min="1" max="1" chance="0.75187969924812" /> <!-- Thin Braid -->
+				<item id="36882" min="1" max="1" chance="0.03000300030003" /> <!-- Recipe: Thin Braid - Upgrade -->
+				<item id="36881" min="1" max="1" chance="0.03000300030003" /> <!-- Recipe: Thin Braid - Downgrade -->
 			</spoil>
 			<lucky>
 				<item id="39629" min="1" max="1" chance="100" /> <!-- Fortune Pocket - Stage 1 -->
@@ -2268,7 +2249,6 @@
 		</collision>
 	</npc>
 	<npc id="23055" level="64" type="Monster" name="Demon Priest">
-		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<parameters>
 			<param name="MoveAroundSocial" value="110" />
 			<param name="MoveAroundSocial1" value="110" />
@@ -2306,12 +2286,12 @@
 		<dropLists>
 			<drop>
 				<item id="57" min="159" max="369" chance="70" /> <!-- Adena -->
-				<item id="36548" min="1" max="1" chance="0.3" /> <!-- Weapon Fragment (Mid-grade) -->
+				<item id="36548" min="1" max="1" chance="0.149925037481259" /> <!-- Weapon Fragment (Mid-grade) -->
 			</drop>
 			<spoil>
-				<item id="36532" min="1" max="1" chance="1.224" /> <!-- Thin Braid -->
-				<item id="36881" min="1" max="1" chance="0.003" /> <!-- Recipe: Thin Braid - Downgrade -->
-				<item id="36882" min="1" max="1" chance="0.0055" /> <!-- Recipe: Thin Braid - Upgrade -->
+				<item id="36532" min="1" max="1" chance="0.75187969924812" /> <!-- Thin Braid -->
+				<item id="36882" min="1" max="1" chance="0.03000300030003" /> <!-- Recipe: Thin Braid - Upgrade -->
+				<item id="36881" min="1" max="1" chance="0.03000300030003" /> <!-- Recipe: Thin Braid - Downgrade -->
 			</spoil>
 			<lucky>
 				<item id="39629" min="1" max="1" chance="100" /> <!-- Fortune Pocket - Stage 1 -->
@@ -2378,7 +2358,6 @@
 		</collision>
 	</npc>
 	<npc id="23057" level="63" type="Monster" name="Bonehead Slave">
-		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<parameters>
 			<param name="MoveAroundSocial" value="0" />
 			<param name="MoveAroundSocial1" value="0" />
@@ -2418,12 +2397,12 @@
 		<dropLists>
 			<drop>
 				<item id="57" min="118" max="274" chance="70" /> <!-- Adena -->
-				<item id="730" min="1" max="1" chance="0.3" /> <!-- Scroll: Enchant Armor (A-grade) -->
+				<item id="730" min="1" max="1" chance="0.149925037481259" /> <!-- Scroll: Enchant Armor (A-grade) -->
 			</drop>
 			<spoil>
-				<item id="36532" min="1" max="1" chance="0.75" /> <!-- Thin Braid -->
-				<item id="36882" min="1" max="1" chance="0.003" /> <!-- Recipe: Thin Braid - Upgrade -->
-				<item id="36881" min="1" max="1" chance="0.0009" /> <!-- Recipe: Thin Braid - Downgrade -->
+				<item id="36532" min="1" max="1" chance="0.75187969924812" /> <!-- Thin Braid -->
+				<item id="36882" min="1" max="1" chance="0.03000300030003" /> <!-- Recipe: Thin Braid - Upgrade -->
+				<item id="36881" min="1" max="1" chance="0.03000300030003" /> <!-- Recipe: Thin Braid - Downgrade -->
 			</spoil>
 			<lucky>
 				<item id="39629" min="1" max="1" chance="100" /> <!-- Fortune Pocket - Stage 1 -->
@@ -2435,7 +2414,6 @@
 		</collision>
 	</npc>
 	<npc id="23058" level="66" type="Monster" name="Platinum Tribe Soldier">
-		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<parameters>
 			<param name="MoveAroundSocial" value="90" />
 			<param name="MoveAroundSocial1" value="74" />
@@ -2475,12 +2453,12 @@
 		<dropLists>
 			<drop>
 				<item id="57" min="135" max="314" chance="70" /> <!-- Adena -->
-				<item id="36548" min="1" max="1" chance="0.075" /> <!-- Weapon Fragment (Mid-grade) -->
+				<item id="36548" min="1" max="1" chance="0.0750187546886722" /> <!-- Weapon Fragment (Mid-grade) -->
 			</drop>
 			<spoil>
-				<item id="36532" min="1" max="1" chance="1.111" /> <!-- Thin Braid -->
-				<item id="36882" min="1" max="1" chance="0.003" /> <!-- Recipe: Thin Braid - Upgrade -->
-				<item id="36881" min="1" max="1" chance="0.0009" /> <!-- Recipe: Thin Braid - Downgrade -->
+				<item id="36532" min="1" max="1" chance="0.75187969924812" /> <!-- Thin Braid -->
+				<item id="36882" min="1" max="1" chance="0.03000300030003" /> <!-- Recipe: Thin Braid - Upgrade -->
+				<item id="36881" min="1" max="1" chance="0.03000300030003" /> <!-- Recipe: Thin Braid - Downgrade -->
 			</spoil>
 			<lucky>
 				<item id="39629" min="1" max="1" chance="100" /> <!-- Fortune Pocket - Stage 1 -->
@@ -2492,7 +2470,6 @@
 		</collision>
 	</npc>
 	<npc id="23059" level="67" type="Monster" name="Platinum Tribe Archer">
-		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<parameters>
 			<param name="MoveAroundSocial" value="80" />
 			<param name="MoveAroundSocial1" value="74" />
@@ -2531,12 +2508,12 @@
 		<dropLists>
 			<drop>
 				<item id="57" min="136" max="318" chance="70" /> <!-- Adena -->
-				<item id="730" min="1" max="1" chance="0.3" /> <!-- Scroll: Enchant Armor (A-grade) -->
+				<item id="730" min="1" max="1" chance="0.3003003003003" /> <!-- Scroll: Enchant Armor (A-grade) -->
 			</drop>
 			<spoil>
-				<item id="36532" min="1" max="1" chance="1.142" /> <!-- Thin Braid -->
-				<item id="36882" min="1" max="1" chance="0.003" /> <!-- Recipe: Thin Braid - Upgrade -->
-				<item id="36881" min="1" max="1" chance="0.0009" /> <!-- Recipe: Thin Braid - Downgrade -->
+				<item id="36532" min="1" max="1" chance="0.75187969924812" /> <!-- Thin Braid -->
+				<item id="36882" min="1" max="1" chance="0.03000300030003" /> <!-- Recipe: Thin Braid - Upgrade -->
+				<item id="36881" min="1" max="1" chance="0.03000300030003" /> <!-- Recipe: Thin Braid - Downgrade -->
 			</spoil>
 			<lucky>
 				<item id="39629" min="1" max="1" chance="100" /> <!-- Fortune Pocket - Stage 1 -->
@@ -2548,7 +2525,6 @@
 		</collision>
 	</npc>
 	<npc id="23060" level="68" type="Monster" name="Platinum Tribe Warrior">
-		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<parameters>
 			<param name="MoveAroundSocial" value="110" />
 			<param name="MoveAroundSocial1" value="74" />
@@ -2587,12 +2563,12 @@
 		<dropLists>
 			<drop>
 				<item id="57" min="182" max="427" chance="70" /> <!-- Adena -->
-				<item id="729" min="1" max="1" chance="0.03" /> <!-- Scroll: Enchant Weapon (A-grade) -->
+				<item id="729" min="1" max="1" chance="0.0750187546886722" /> <!-- Scroll: Enchant Weapon (A-grade) -->
 			</drop>
 			<spoil>
-				<item id="36532" min="1" max="1" chance="1.474" /> <!-- Thin Braid -->
-				<item id="36881" min="1" max="1" chance="0.003" /> <!-- Recipe: Thin Braid - Downgrade -->
-				<item id="36882" min="1" max="1" chance="0.0055" /> <!-- Recipe: Thin Braid - Upgrade -->
+				<item id="36532" min="1" max="1" chance="0.75187969924812" /> <!-- Thin Braid -->
+				<item id="36882" min="1" max="1" chance="0.03000300030003" /> <!-- Recipe: Thin Braid - Upgrade -->
+				<item id="36881" min="1" max="1" chance="0.03000300030003" /> <!-- Recipe: Thin Braid - Downgrade -->
 			</spoil>
 			<lucky>
 				<item id="39629" min="1" max="1" chance="100" /> <!-- Fortune Pocket - Stage 1 -->
@@ -2604,7 +2580,6 @@
 		</collision>
 	</npc>
 	<npc id="23061" level="69" type="Monster" name="Platinum Tribe Shaman">
-		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<parameters>
 			<param name="MoveAroundSocial" value="90" />
 			<param name="MoveAroundSocial1" value="74" />
@@ -2643,13 +2618,13 @@
 		</ai>
 		<dropLists>
 			<drop>
-				<item id="57" min="186" max="434" chance="70" /> <!-- Adena -->
-				<item id="729" min="1" max="1" chance="0.03" /> <!-- Scroll: Enchant Weapon (A-grade) -->
+				<item id="57" min="186" max="432" chance="70" /> <!-- Adena -->
+				<item id="729" min="1" max="1" chance="0.0750187546886722" /> <!-- Scroll: Enchant Weapon (A-grade) -->
 			</drop>
 			<spoil>
-				<item id="36532" min="1" max="1" chance="1.501" /> <!-- Thin Braid -->
-				<item id="36881" min="1" max="1" chance="0.003" /> <!-- Recipe: Thin Braid - Downgrade -->
-				<item id="36882" min="1" max="1" chance="0.0055" /> <!-- Recipe: Thin Braid - Upgrade -->
+				<item id="36532" min="1" max="1" chance="1.5" /> <!-- Thin Braid -->
+				<item id="36882" min="1" max="1" chance="0.03000300030003" /> <!-- Recipe: Thin Braid - Upgrade -->
+				<item id="36881" min="1" max="1" chance="0.03000300030003" /> <!-- Recipe: Thin Braid - Downgrade -->
 			</spoil>
 			<lucky>
 				<item id="39629" min="1" max="1" chance="100" /> <!-- Fortune Pocket - Stage 1 -->
@@ -2661,7 +2636,6 @@
 		</collision>
 	</npc>
 	<npc id="23062" level="70" type="Monster" name="Platinum Tribe Prefect">
-		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<parameters>
 			<param name="MoveAroundSocial" value="90" />
 			<param name="MoveAroundSocial1" value="74" />
@@ -2700,12 +2674,12 @@
 		<dropLists>
 			<drop>
 				<item id="57" min="247" max="574" chance="70" /> <!-- Adena -->
-				<item id="729" min="1" max="1" chance="0.03" /> <!-- Scroll: Enchant Weapon (A-grade) -->
+				<item id="729" min="1" max="1" chance="0.0750187546886722" /> <!-- Scroll: Enchant Weapon (A-grade) -->
 			</drop>
 			<spoil>
-				<item id="36532" min="1" max="1" chance="1.982" /> <!-- Thin Braid -->
-				<item id="36881" min="1" max="1" chance="0.003" /> <!-- Recipe: Thin Braid - Downgrade -->
-				<item id="36882" min="1" max="1" chance="0.0055" /> <!-- Recipe: Thin Braid - Upgrade -->
+				<item id="36532" min="1" max="1" chance="1.5" /> <!-- Thin Braid -->
+				<item id="36882" min="1" max="1" chance="0.03000300030003" /> <!-- Recipe: Thin Braid - Upgrade -->
+				<item id="36881" min="1" max="1" chance="0.03000300030003" /> <!-- Recipe: Thin Braid - Downgrade -->
 			</spoil>
 			<lucky>
 				<item id="39629" min="1" max="1" chance="100" /> <!-- Fortune Pocket - Stage 1 -->
@@ -2717,7 +2691,6 @@
 		</collision>
 	</npc>
 	<npc id="23063" level="71" type="Monster" name="Heaven's Palace Knight">
-		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<parameters>
 			<param name="MoveAroundSocial" value="50" />
 			<param name="MoveAroundSocial1" value="50" />
@@ -2757,12 +2730,12 @@
 		<dropLists>
 			<drop>
 				<item id="57" min="206" max="478" chance="70" /> <!-- Adena -->
-				<item id="36548" min="1" max="1" chance="0.3" /> <!-- Weapon Fragment (Mid-grade) -->
+				<item id="36548" min="1" max="1" chance="0.149925037481259" /> <!-- Weapon Fragment (Mid-grade) -->
 			</drop>
 			<spoil>
-				<item id="36532" min="1" max="1" chance="1.596" /> <!-- Thin Braid -->
-				<item id="36881" min="1" max="1" chance="0.003" /> <!-- Recipe: Thin Braid - Downgrade -->
-				<item id="36882" min="1" max="1" chance="0.0055" /> <!-- Recipe: Thin Braid - Upgrade -->
+				<item id="36532" min="1" max="1" chance="1.5" /> <!-- Thin Braid -->
+				<item id="36882" min="1" max="1" chance="0.03000300030003" /> <!-- Recipe: Thin Braid - Upgrade -->
+				<item id="36881" min="1" max="1" chance="0.03000300030003" /> <!-- Recipe: Thin Braid - Downgrade -->
 			</spoil>
 			<lucky>
 				<item id="39629" min="1" max="1" chance="100" /> <!-- Fortune Pocket - Stage 1 -->
@@ -2774,7 +2747,6 @@
 		</collision>
 	</npc>
 	<npc id="23064" level="72" type="Monster" name="Heaven's Palace Fighter">
-		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<parameters>
 			<param name="MoveAroundSocial" value="90" />
 			<param name="MoveAroundSocial1" value="98" />
@@ -2813,12 +2785,12 @@
 		<dropLists>
 			<drop>
 				<item id="57" min="256" max="595" chance="70" /> <!-- Adena -->
-				<item id="729" min="1" max="1" chance="0.03" /> <!-- Scroll: Enchant Weapon (A-grade) -->
+				<item id="729" min="1" max="1" chance="0.0750187546886722" /> <!-- Scroll: Enchant Weapon (A-grade) -->
 			</drop>
 			<spoil>
-				<item id="36532" min="1" max="1" chance="2.058" /> <!-- Thin Braid -->
-				<item id="36881" min="1" max="1" chance="0.003" /> <!-- Recipe: Thin Braid - Downgrade -->
-				<item id="36882" min="1" max="1" chance="0.0055" /> <!-- Recipe: Thin Braid - Upgrade -->
+				<item id="36532" min="1" max="1" chance="1.5" /> <!-- Thin Braid -->
+				<item id="36882" min="1" max="1" chance="0.03000300030003" /> <!-- Recipe: Thin Braid - Upgrade -->
+				<item id="36881" min="1" max="1" chance="0.03000300030003" /> <!-- Recipe: Thin Braid - Downgrade -->
 			</spoil>
 			<lucky>
 				<item id="39629" min="1" max="1" chance="100" /> <!-- Fortune Pocket - Stage 1 -->
@@ -2830,7 +2802,6 @@
 		</collision>
 	</npc>
 	<npc id="23065" level="73" type="Monster" name="Heaven's Palace Terminator">
-		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<parameters>
 			<param name="MoveAroundSocial" value="130" />
 			<param name="MoveAroundSocial1" value="130" />
@@ -2870,12 +2841,12 @@
 		<dropLists>
 			<drop>
 				<item id="57" min="214" max="497" chance="70" /> <!-- Adena -->
-				<item id="730" min="1" max="1" chance="0.3" /> <!-- Scroll: Enchant Armor (A-grade) -->
+				<item id="730" min="1" max="1" chance="0.3003003003003" /> <!-- Scroll: Enchant Armor (A-grade) -->
 			</drop>
 			<spoil>
-				<item id="36532" min="1" max="1" chance="1.648" /> <!-- Thin Braid -->
-				<item id="36881" min="1" max="1" chance="0.003" /> <!-- Recipe: Thin Braid - Downgrade -->
-				<item id="36882" min="1" max="1" chance="0.0055" /> <!-- Recipe: Thin Braid - Upgrade -->
+				<item id="36532" min="1" max="1" chance="1.5" /> <!-- Thin Braid -->
+				<item id="36882" min="1" max="1" chance="0.03000300030003" /> <!-- Recipe: Thin Braid - Upgrade -->
+				<item id="36881" min="1" max="1" chance="0.03000300030003" /> <!-- Recipe: Thin Braid - Downgrade -->
 			</spoil>
 			<lucky>
 				<item id="39629" min="1" max="1" chance="100" /> <!-- Fortune Pocket - Stage 1 -->
@@ -2887,7 +2858,6 @@
 		</collision>
 	</npc>
 	<npc id="23066" level="74" type="Monster" name="Heaven's Palace Priest">
-		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<parameters>
 			<param name="MoveAroundSocial" value="85" />
 			<param name="MoveAroundSocial1" value="85" />
@@ -2926,13 +2896,13 @@
 		<dropLists>
 			<drop>
 				<item id="57" min="219" max="509" chance="70" /> <!-- Adena -->
-				<item id="730" min="1" max="1" chance="0.3" /> <!-- Scroll: Enchant Armor (A-grade) -->
-				<item id="729" min="1" max="1" chance="0.03" /> <!-- Scroll: Enchant Weapon (A-grade) -->
+				<item id="730" min="1" max="1" chance="0.149925037481259" /> <!-- Scroll: Enchant Armor (A-grade) -->
+				<item id="729" min="1" max="1" chance="0.0750187546886722" /> <!-- Scroll: Enchant Weapon (A-grade) -->
 			</drop>
 			<spoil>
-				<item id="36532" min="1" max="1" chance="1.748" /> <!-- Thin Braid -->
-				<item id="36881" min="1" max="1" chance="0.003" /> <!-- Recipe: Thin Braid - Downgrade -->
-				<item id="36882" min="1" max="1" chance="0.0055" /> <!-- Recipe: Thin Braid - Upgrade -->
+				<item id="36532" min="1" max="1" chance="1.5" /> <!-- Thin Braid -->
+				<item id="36882" min="1" max="1" chance="0.03000300030003" /> <!-- Recipe: Thin Braid - Upgrade -->
+				<item id="36881" min="1" max="1" chance="0.03000300030003" /> <!-- Recipe: Thin Braid - Downgrade -->
 			</spoil>
 			<lucky>
 				<item id="39629" min="1" max="1" chance="100" /> <!-- Fortune Pocket - Stage 1 -->
@@ -2944,7 +2914,6 @@
 		</collision>
 	</npc>
 	<npc id="23067" level="75" type="Monster" name="Heaven's Palace Judge">
-		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<parameters>
 			<param name="MoveAroundSocial" value="80" />
 			<param name="MoveAroundSocial1" value="80" />
@@ -2983,12 +2952,12 @@
 		<dropLists>
 			<drop>
 				<item id="57" min="286" max="666" chance="70" /> <!-- Adena -->
-				<item id="36548" min="1" max="1" chance="0.3" /> <!-- Weapon Fragment (Mid-grade) -->
+				<item id="36548" min="1" max="1" chance="0.149925037481259" /> <!-- Weapon Fragment (Mid-grade) -->
 			</drop>
 			<spoil>
-				<item id="36532" min="1" max="1" chance="2.236" /> <!-- Thin Braid -->
-				<item id="36881" min="1" max="1" chance="0.003" /> <!-- Recipe: Thin Braid - Downgrade -->
-				<item id="36882" min="1" max="1" chance="0.0055" /> <!-- Recipe: Thin Braid - Upgrade -->
+				<item id="36532" min="1" max="1" chance="1.5" /> <!-- Thin Braid -->
+				<item id="36882" min="1" max="1" chance="0.03000300030003" /> <!-- Recipe: Thin Braid - Upgrade -->
+				<item id="36881" min="1" max="1" chance="0.03000300030003" /> <!-- Recipe: Thin Braid - Downgrade -->
 			</spoil>
 			<lucky>
 				<item id="39629" min="1" max="1" chance="100" /> <!-- Fortune Pocket - Stage 1 -->
@@ -3000,7 +2969,6 @@
 		</collision>
 	</npc>
 	<npc id="23068" level="75" type="Monster" name="Heaven's Palace Sniper">
-		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<parameters>
 			<param name="MoveAroundSocial" value="80" />
 			<param name="MoveAroundSocial1" value="80" />
@@ -3039,12 +3007,12 @@
 		<dropLists>
 			<drop>
 				<item id="57" min="227" max="528" chance="70" /> <!-- Adena -->
-				<item id="729" min="1" max="1" chance="0.03" /> <!-- Scroll: Enchant Weapon (A-grade) -->
+				<item id="729" min="1" max="1" chance="0.0750187546886722" /> <!-- Scroll: Enchant Weapon (A-grade) -->
 			</drop>
 			<spoil>
-				<item id="36532" min="1" max="1" chance="1.791" /> <!-- Thin Braid -->
-				<item id="36881" min="1" max="1" chance="0.003" /> <!-- Recipe: Thin Braid - Downgrade -->
-				<item id="36882" min="1" max="1" chance="0.0055" /> <!-- Recipe: Thin Braid - Upgrade -->
+				<item id="36532" min="1" max="1" chance="1.5" /> <!-- Thin Braid -->
+				<item id="36882" min="1" max="1" chance="0.03000300030003" /> <!-- Recipe: Thin Braid - Upgrade -->
+				<item id="36881" min="1" max="1" chance="0.03000300030003" /> <!-- Recipe: Thin Braid - Downgrade -->
 			</spoil>
 			<lucky>
 				<item id="39629" min="1" max="1" chance="100" /> <!-- Fortune Pocket - Stage 1 -->
@@ -3056,7 +3024,6 @@
 		</collision>
 	</npc>
 	<npc id="23069" level="58" type="Monster" name="Vladimir's Warrior">
-		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<parameters>
 			<param name="MoveAroundSocial" value="0" />
 			<param name="MoveAroundSocial1" value="0" />
@@ -3095,12 +3062,12 @@
 		<dropLists>
 			<drop>
 				<item id="57" min="172" max="401" chance="70" /> <!-- Adena -->
-				<item id="948" min="1" max="1" chance="0.75" /> <!-- Scroll: Enchant Armor (B-grade) -->
+				<item id="948" min="1" max="1" chance="0.3003003003003" /> <!-- Scroll: Enchant Armor (B-grade) -->
 			</drop>
 			<spoil>
-				<item id="36531" min="1" max="1" chance="64.09" /> <!-- Thread -->
-				<item id="36532" min="1" max="1" chance="1.446" /> <!-- Thin Braid -->
-				<item id="36880" min="1" max="1" chance="0.0055" /> <!-- Recipe: Thread - Downgrade -->
+				<item id="36531" min="1" max="1" chance="50" /> <!-- Thread -->
+				<item id="36532" min="1" max="1" chance="1.5" /> <!-- Thin Braid -->
+				<item id="36880" min="1" max="1" chance="0.03000300030003" /> <!-- Recipe: Thread - Downgrade -->
 			</spoil>
 			<lucky>
 				<item id="39629" min="1" max="1" chance="100" /> <!-- Fortune Pocket - Stage 1 -->
@@ -3112,7 +3079,6 @@
 		</collision>
 	</npc>
 	<npc id="23070" level="62" type="Monster" name="Lazearth' Warrior">
-		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<parameters>
 			<param name="MoveAroundSocial" value="0" />
 			<param name="MoveAroundSocial1" value="0" />
@@ -3151,12 +3117,12 @@
 		<dropLists>
 			<drop>
 				<item id="57" min="199" max="467" chance="70" /> <!-- Adena -->
-				<item id="730" min="1" max="1" chance="0.3" /> <!-- Scroll: Enchant Armor (A-grade) -->
+				<item id="730" min="1" max="1" chance="0.3003003003003" /> <!-- Scroll: Enchant Armor (A-grade) -->
 			</drop>
 			<spoil>
-				<item id="36532" min="1" max="1" chance="1.637" /> <!-- Thin Braid -->
-				<item id="36881" min="1" max="1" chance="0.003" /> <!-- Recipe: Thin Braid - Downgrade -->
-				<item id="36882" min="1" max="1" chance="0.0055" /> <!-- Recipe: Thin Braid - Upgrade -->
+				<item id="36532" min="1" max="1" chance="1.5" /> <!-- Thin Braid -->
+				<item id="36882" min="1" max="1" chance="0.03000300030003" /> <!-- Recipe: Thin Braid - Upgrade -->
+				<item id="36881" min="1" max="1" chance="0.03000300030003" /> <!-- Recipe: Thin Braid - Downgrade -->
 			</spoil>
 			<lucky>
 				<item id="39629" min="1" max="1" chance="100" /> <!-- Fortune Pocket - Stage 1 -->
@@ -3168,7 +3134,6 @@
 		</collision>
 	</npc>
 	<npc id="23071" level="69" type="Monster" name="Beastian">
-		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<parameters>
 			<param name="MoveAroundSocial" value="110" />
 			<param name="MoveAroundSocial1" value="74" />
@@ -3206,12 +3171,12 @@
 		<dropLists>
 			<drop>
 				<item id="57" min="192" max="446" chance="70" /> <!-- Adena -->
-				<item id="730" min="1" max="1" chance="0.3" /> <!-- Scroll: Enchant Armor (A-grade) -->
+				<item id="730" min="1" max="1" chance="0.3003003003003" /> <!-- Scroll: Enchant Armor (A-grade) -->
 			</drop>
 			<spoil>
-				<item id="36532" min="1" max="1" chance="1.53" /> <!-- Thin Braid -->
-				<item id="36881" min="1" max="1" chance="0.003" /> <!-- Recipe: Thin Braid - Downgrade -->
-				<item id="36882" min="1" max="1" chance="0.0055" /> <!-- Recipe: Thin Braid - Upgrade -->
+				<item id="36532" min="1" max="1" chance="1.5" /> <!-- Thin Braid -->
+				<item id="36882" min="1" max="1" chance="0.03000300030003" /> <!-- Recipe: Thin Braid - Upgrade -->
+				<item id="36881" min="1" max="1" chance="0.03000300030003" /> <!-- Recipe: Thin Braid - Downgrade -->
 			</spoil>
 			<lucky>
 				<item id="39629" min="1" max="1" chance="100" /> <!-- Fortune Pocket - Stage 1 -->
@@ -3223,7 +3188,6 @@
 		</collision>
 	</npc>
 	<npc id="23072" level="69" type="Monster" name="Birestian">
-		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<parameters>
 			<param name="MoveAroundSocial" value="90" />
 			<param name="MoveAroundSocial1" value="74" />
@@ -3261,13 +3225,13 @@
 		</ai>
 		<dropLists>
 			<drop>
-				<item id="57" min="186" max="434" chance="70" /> <!-- Adena -->
-				<item id="730" min="1" max="1" chance="0.3" /> <!-- Scroll: Enchant Armor (A-grade) -->
+				<item id="57" min="186" max="432" chance="70" /> <!-- Adena -->
+				<item id="730" min="1" max="1" chance="0.3003003003003" /> <!-- Scroll: Enchant Armor (A-grade) -->
 			</drop>
 			<spoil>
-				<item id="36532" min="1" max="1" chance="1.491" /> <!-- Thin Braid -->
-				<item id="36881" min="1" max="1" chance="0.003" /> <!-- Recipe: Thin Braid - Downgrade -->
-				<item id="36882" min="1" max="1" chance="0.0055" /> <!-- Recipe: Thin Braid - Upgrade -->
+				<item id="36532" min="1" max="1" chance="1.5" /> <!-- Thin Braid -->
+				<item id="36882" min="1" max="1" chance="0.03000300030003" /> <!-- Recipe: Thin Braid - Upgrade -->
+				<item id="36881" min="1" max="1" chance="0.03000300030003" /> <!-- Recipe: Thin Braid - Downgrade -->
 			</spoil>
 			<lucky>
 				<item id="39629" min="1" max="1" chance="100" /> <!-- Fortune Pocket - Stage 1 -->
@@ -3279,7 +3243,6 @@
 		</collision>
 	</npc>
 	<npc id="23073" level="70" type="Monster" name="Kenneth Bastian">
-		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<parameters>
 			<param name="MoveAroundSocial" value="90" />
 			<param name="MoveAroundSocial1" value="74" />
@@ -3318,12 +3281,12 @@
 		<dropLists>
 			<drop>
 				<item id="57" min="261" max="606" chance="70" /> <!-- Adena -->
-				<item id="729" min="1" max="1" chance="0.03" /> <!-- Scroll: Enchant Weapon (A-grade) -->
+				<item id="729" min="1" max="1" chance="0.0750187546886722" /> <!-- Scroll: Enchant Weapon (A-grade) -->
 			</drop>
 			<spoil>
-				<item id="36532" min="1" max="1" chance="2.045" /> <!-- Thin Braid -->
-				<item id="36881" min="1" max="1" chance="0.003" /> <!-- Recipe: Thin Braid - Downgrade -->
-				<item id="36882" min="1" max="1" chance="0.0055" /> <!-- Recipe: Thin Braid - Upgrade -->
+				<item id="36532" min="1" max="1" chance="1.5" /> <!-- Thin Braid -->
+				<item id="36882" min="1" max="1" chance="0.03000300030003" /> <!-- Recipe: Thin Braid - Upgrade -->
+				<item id="36881" min="1" max="1" chance="0.03000300030003" /> <!-- Recipe: Thin Braid - Downgrade -->
 			</spoil>
 			<lucky>
 				<item id="39629" min="1" max="1" chance="100" /> <!-- Fortune Pocket - Stage 1 -->
@@ -3335,7 +3298,6 @@
 		</collision>
 	</npc>
 	<npc id="23074" level="75" type="Monster" name="Heaven's Palace Noble Warrior">
-		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<parameters>
 			<param name="MoveAroundSocial" value="150" />
 			<param name="MoveAroundSocial1" value="150" />
@@ -3373,12 +3335,12 @@
 		<dropLists>
 			<drop>
 				<item id="57" min="300" max="700" chance="70" /> <!-- Adena -->
-				<item id="729" min="1" max="1" chance="0.075" /> <!-- Scroll: Enchant Weapon (A-grade) -->
+				<item id="729" min="1" max="1" chance="0.0750187546886722" /> <!-- Scroll: Enchant Weapon (A-grade) -->
 			</drop>
 			<spoil>
-				<item id="36532" min="1" max="1" chance="2.442" /> <!-- Thin Braid -->
-				<item id="36881" min="1" max="1" chance="0.003" /> <!-- Recipe: Thin Braid - Downgrade -->
-				<item id="36882" min="1" max="1" chance="0.0055" /> <!-- Recipe: Thin Braid - Upgrade -->
+				<item id="36532" min="1" max="1" chance="2.5" /> <!-- Thin Braid -->
+				<item id="36882" min="1" max="1" chance="0.03000300030003" /> <!-- Recipe: Thin Braid - Upgrade -->
+				<item id="36881" min="1" max="1" chance="0.03000300030003" /> <!-- Recipe: Thin Braid - Downgrade -->
 			</spoil>
 			<lucky>
 				<item id="39629" min="1" max="1" chance="100" /> <!-- Fortune Pocket - Stage 1 -->
@@ -3390,7 +3352,6 @@
 		</collision>
 	</npc>
 	<npc id="23075" level="75" type="Monster" name="Heaven's Palace Noble Knight">
-		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<parameters>
 			<param name="MoveAroundSocial" value="165" />
 			<param name="MoveAroundSocial1" value="165" />
@@ -3428,15 +3389,15 @@
 		<dropLists>
 			<drop>
 				<item id="57" min="296" max="689" chance="70" /> <!-- Adena -->
-				<item id="8732" min="1" max="1" chance="0.750000000000005" /> <!-- Life Stone - Lv. 76 -->
-				<item id="8742" min="1" max="1" chance="0.3" /> <!-- Mid-grade Life Stone - Lv. 76 -->
-				<item id="8752" min="1" max="1" chance="0.03" /> <!-- High-grade Life Stone - Lv. 76 -->
-				<item id="36548" min="1" max="1" chance="0.03" /> <!-- Weapon Fragment (Mid-grade) -->
+				<item id="8732" min="1" max="1" chance="0.75187969924812" /> <!-- Life Stone - Lv. 76 -->
+				<item id="8742" min="1" max="1" chance="0.3003003003003" /> <!-- Mid-grade Life Stone - Lv. 76 -->
+				<item id="36548" min="1" max="1" chance="0.0750187546886722" /> <!-- Weapon Fragment (Mid-grade) -->
+				<item id="8752" min="1" max="1" chance="0.03000300030003" /> <!-- High-grade Life Stone - Lv. 76 -->
 			</drop>
 			<spoil>
-				<item id="36532" min="1" max="1" chance="2.406" /> <!-- Thin Braid -->
-				<item id="36881" min="1" max="1" chance="0.003" /> <!-- Recipe: Thin Braid - Downgrade -->
-				<item id="36882" min="1" max="1" chance="0.0055" /> <!-- Recipe: Thin Braid - Upgrade -->
+				<item id="36532" min="1" max="1" chance="2.5" /> <!-- Thin Braid -->
+				<item id="36882" min="1" max="1" chance="0.03000300030003" /> <!-- Recipe: Thin Braid - Upgrade -->
+				<item id="36881" min="1" max="1" chance="0.03000300030003" /> <!-- Recipe: Thin Braid - Downgrade -->
 			</spoil>
 			<lucky>
 				<item id="39629" min="1" max="1" chance="100" /> <!-- Fortune Pocket - Stage 1 -->
@@ -3686,6 +3647,20 @@
 			<radius normal="20" />
 			<height normal="39" />
 		</collision>
+		<dropLists>
+			<drop>
+				<!-- Also drops herbs. -->
+				<item id="8600" min="1" max="1" chance="10" /> <!-- Herb of Life -->
+				<item id="8601" min="1" max="1" chance="8" /> <!-- Major Herb of Life -->
+				<item id="8602" min="1" max="1" chance="2" /> <!-- Superior Herb of Life -->
+				<item id="8603" min="1" max="1" chance="19.8" /> <!-- Herb of Mana -->
+				<item id="8604" min="1" max="1" chance="9.9" /> <!-- Major Herb of Mana -->
+				<item id="8605" min="1" max="1" chance="3.3" /> <!-- Superior Herb of Mana -->
+				<item id="34849" min="1" max="1" chance="0.7" /> <!-- Mysterious Herb of Power -->
+				<item id="34850" min="1" max="1" chance="0.7" /> <!-- Mysterious Herb of Magic -->
+				<item id="13028" min="1" max="1" chance="0.1" /> <!-- Vitality Replenishing Herb -->
+			</drop>
+		</dropLists>
 	</npc>
 	<npc id="23082" level="96" type="Monster" name="Restrained Elite Soldier">
 		<parameters>
@@ -3859,7 +3834,6 @@
 		</collision>
 	</npc>
 	<npc id="23086" level="99" type="Monster" name="Octavis' Gladiator">
-		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<parameters>
 			<param name="MoveAroundSocial" value="80" />
 			<param name="MoveAroundSocial1" value="80" />
@@ -3903,7 +3877,6 @@
 		</collision>
 	</npc>
 	<npc id="23087" level="99" type="Monster" name="Beast of the Arena">
-		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<parameters>
 			<param name="MoveAroundSocial" value="0" />
 			<param name="MoveAroundSocial1" value="100" />
@@ -3944,7 +3917,6 @@
 		</collision>
 	</npc>
 	<npc id="23088" level="99" type="Monster" name="Octavis' Chief Curator">
-		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<parameters>
 			<param name="MoveAroundSocial" value="0" />
 			<param name="MoveAroundSocial1" value="100" />
@@ -3989,7 +3961,6 @@
 		</collision>
 	</npc>
 	<npc id="23089" level="99" type="Monster" name="Hero of the Arena" title="Cursed">
-		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<parameters>
 			<param name="MoveAroundSocial" value="0" />
 			<param name="MoveAroundSocial1" value="0" />
@@ -4031,7 +4002,6 @@
 		</collision>
 	</npc>
 	<npc id="23090" level="97" type="Monster" name="Hall Manager">
-		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<parameters>
 			<param name="MoveAroundSocial" value="110" />
 			<param name="MoveAroundSocial1" value="110" />
@@ -4072,11 +4042,11 @@
 		<dropLists>
 			<drop>
 				<item id="57" min="6211" max="14499" chance="70" /> <!-- Adena -->
-				<item id="30297" min="1" max="1" chance="0.75" /> <!-- Superior Giant's Codex -->
+				<item id="30297" min="1" max="1" chance="0.75187969924812" /> <!-- Superior Giant's Codex -->
 			</drop>
 			<spoil>
-				<item id="36533" min="1" max="1" chance="21.96" /> <!-- Synthetic Braid -->
-				<item id="30425" min="1" max="1" chance="0.75" /> <!-- Recipe: Blessed Spiritshot (R-grade) -->
+				<item id="36533" min="1" max="1" chance="15" /> <!-- Synthetic Braid -->
+				<item id="30425" min="1" max="1" chance="0.75187969924812" /> <!-- Recipe: Blessed Spiritshot (R-grade) -->
 			</spoil>
 			<lucky>
 				<item id="39629" min="1" max="1" chance="100" /> <!-- Fortune Pocket - Stage 1 -->
@@ -4088,7 +4058,6 @@
 		</collision>
 	</npc>
 	<npc id="23091" level="97" type="Monster" name="Hall Guard Warrior">
-		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<parameters>
 			<param name="MoveAroundSocial" value="110" />
 			<param name="MoveAroundSocial1" value="110" />
@@ -4127,12 +4096,12 @@
 		</ai>
 		<dropLists>
 			<drop>
-				<item id="57" min="3511" max="8196" chance="70" /> <!-- Adena -->
-				<item id="30300" min="1" max="1" chance="0.3" /> <!-- Superior Giant's Codex - Oblivion -->
+				<item id="57" min="3511" max="8196" chance="100" /> <!-- Adena -->
+				<item id="30300" min="1" max="1" chance="0.3003003003003" /> <!-- Superior Giant's Codex - Oblivion -->
 			</drop>
 			<spoil>
-				<item id="36533" min="1" max="1" chance="12.3" /> <!-- Synthetic Braid -->
-				<item id="36534" min="1" max="1" chance="1.172" /> <!-- Durable Braid -->
+				<item id="36533" min="1" max="1" chance="15" /> <!-- Synthetic Braid -->
+				<item id="36534" min="1" max="1" chance="1.5" /> <!-- Durable Braid -->
 			</spoil>
 			<lucky>
 				<item id="39629" min="1" max="1" chance="100" /> <!-- Fortune Pocket - Stage 1 -->
@@ -4144,7 +4113,6 @@
 		</collision>
 	</npc>
 	<npc id="23092" level="97" type="Monster" name="Hall Guard Warrior">
-		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<parameters>
 			<param name="MoveAroundSocial" value="90" />
 			<param name="MoveAroundSocial1" value="90" />
@@ -4184,11 +4152,11 @@
 		<dropLists>
 			<drop>
 				<item id="57" min="3511" max="8196" chance="70" /> <!-- Adena -->
-				<item id="30297" min="1" max="1" chance="0.3" /> <!-- Superior Giant's Codex -->
+				<item id="30297" min="1" max="1" chance="0.3003003003003" /> <!-- Superior Giant's Codex -->
 			</drop>
 			<spoil>
-				<item id="36533" min="1" max="1" chance="11.91" /> <!-- Synthetic Braid -->
-				<item id="17526" min="1" max="1" chance="0.075" /> <!-- Scroll: Enchant Weapon (R-grade) -->
+				<item id="36533" min="1" max="1" chance="10" /> <!-- Synthetic Braid -->
+				<item id="17526" min="1" max="1" chance="0.0750187546886722" /> <!-- Scroll: Enchant Weapon (R-grade) -->
 			</spoil>
 			<lucky>
 				<item id="39629" min="1" max="1" chance="100" /> <!-- Fortune Pocket - Stage 1 -->
@@ -4200,7 +4168,6 @@
 		</collision>
 	</npc>
 	<npc id="23093" level="97" type="Monster" name="Hall Guard Healer">
-		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<parameters>
 			<param name="Attack_BoostValue" value="148" />
 		</parameters>
@@ -4237,11 +4204,11 @@
 		<dropLists>
 			<drop>
 				<item id="57" min="3511" max="8196" chance="70" /> <!-- Adena -->
-				<item id="17527" min="1" max="1" chance="1.702" /> <!-- Scroll: Enchant Armor (R-grade) -->
+				<item id="17527" min="1" max="1" chance="0.3003003003003" /> <!-- Scroll: Enchant Armor (R-grade) -->
 			</drop>
 			<spoil>
-				<item id="36533" min="1" max="1" chance="11.43" /> <!-- Synthetic Braid -->
-				<item id="36534" min="1" max="1" chance="1.145" /> <!-- Durable Braid -->
+				<item id="36533" min="1" max="1" chance="10" /> <!-- Synthetic Braid -->
+				<item id="36534" min="1" max="1" chance="1" /> <!-- Durable Braid -->
 			</spoil>
 			<lucky>
 				<item id="39629" min="1" max="1" chance="100" /> <!-- Fortune Pocket - Stage 1 -->
@@ -4253,7 +4220,6 @@
 		</collision>
 	</npc>
 	<npc id="23094" level="22" type="Monster" name="Poisonous Spider">
-		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<parameters>
 			<param name="MoveAroundSocial" value="80" />
 			<param name="MoveAroundSocial1" value="80" />
@@ -4287,7 +4253,8 @@
 		<dropLists>
 			<drop>
 				<item id="57" min="5" max="11" chance="70" /> <!-- Adena -->
-				<item id="36558" min="1" max="1" chance="0.0055" /> <!-- Accessory Gem (Mid-grade) -->
+				<item id="36558" min="1" max="1" chance="0.0750187546886722" /> <!-- Accessory Gem (Mid-grade) -->
+				<!-- Also drops herbs. -->
 				<item id="8600" min="1" max="1" chance="10" /> <!-- Herb of Life -->
 				<item id="8601" min="1" max="1" chance="8" /> <!-- Major Herb of Life -->
 				<item id="8602" min="1" max="1" chance="2" /> <!-- Superior Herb of Life -->
@@ -4299,8 +4266,8 @@
 				<item id="13028" min="1" max="1" chance="0.1" /> <!-- Vitality Replenishing Herb -->
 			</drop>
 			<spoil>
-				<item id="36531" min="1" max="1" chance="2.586" /> <!-- Thread -->
-				<item id="36533" min="1" max="1" chance="0.03" /> <!-- Synthetic Braid -->
+				<item id="36531" min="1" max="1" chance="2.5" /> <!-- Thread -->
+				<item id="36533" min="1" max="1" chance="0.0750187546886722" /> <!-- Synthetic Braid -->
 			</spoil>
 			<lucky>
 				<item id="39629" min="1" max="1" chance="100" /> <!-- Fortune Pocket - Stage 1 -->
@@ -4312,7 +4279,6 @@
 		</collision>
 	</npc>
 	<npc id="23095" level="24" type="Monster" name="Arachnid Predator">
-		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<parameters>
 			<param name="MoveAroundSocial" value="100" />
 			<param name="MoveAroundSocial1" value="100" />
@@ -4346,8 +4312,9 @@
 		<dropLists>
 			<drop>
 				<item id="57" min="5" max="12" chance="70" /> <!-- Adena -->
-				<item id="36523" min="1" max="1" chance="0.03" /> <!-- Adamantite -->
-				<item id="36563" min="1" max="1" chance="0.003" /> <!-- Synthetic Cokes -->
+				<item id="36523" min="1" max="1" chance="0.0750187546886722" /> <!-- Adamantite -->
+				<item id="36563" min="1" max="1" chance="0.0750187546886722" /> <!-- Synthetic Cokes -->
+				<!-- Also drops herbs. -->
 				<item id="8600" min="1" max="1" chance="10" /> <!-- Herb of Life -->
 				<item id="8601" min="1" max="1" chance="8" /> <!-- Major Herb of Life -->
 				<item id="8602" min="1" max="1" chance="2" /> <!-- Superior Herb of Life -->
@@ -4359,8 +4326,8 @@
 				<item id="13028" min="1" max="1" chance="0.1" /> <!-- Vitality Replenishing Herb -->
 			</drop>
 			<spoil>
-				<item id="36531" min="1" max="1" chance="2.798" /> <!-- Thread -->
-				<item id="36533" min="1" max="1" chance="0.03" /> <!-- Synthetic Braid -->
+				<item id="36531" min="1" max="1" chance="2.5" /> <!-- Thread -->
+				<item id="36533" min="1" max="1" chance="0.0750187546886722" /> <!-- Synthetic Braid -->
 			</spoil>
 			<lucky>
 				<item id="39629" min="1" max="1" chance="100" /> <!-- Fortune Pocket - Stage 1 -->
@@ -4372,7 +4339,6 @@
 		</collision>
 	</npc>
 	<npc id="23096" level="29" type="Monster" name="Tumran Bugbear">
-		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<parameters>
 			<param name="MoveAroundSocial" value="124" />
 			<param name="MoveAroundSocial1" value="124" />
@@ -4408,10 +4374,11 @@
 		</ai>
 		<dropLists>
 			<drop>
-				<item id="57" min="6" max="14" chance="70" /> <!-- Adena -->
-				<item id="87" min="1" max="1" chance="0.03" /> <!-- Iron Hammer -->
-				<item id="295" min="1" max="1" chance="0.00550000000000004" /> <!-- Dwarven Trident -->
-				<item id="956" min="1" max="1" chance="0.075" /> <!-- Scroll: Enchant Armor (D-grade) -->
+				<item id="57" min="8" max="14" chance="70" /> <!-- Adena -->
+				<item id="956" min="1" max="1" chance="0.149925037481259" /> <!-- Scroll: Enchant Armor (D-grade) -->
+				<item id="87" min="1" max="1" chance="0.03000300030003" /> <!-- Iron Hammer -->
+				<item id="295" min="1" max="1" chance="0.03000300030003" /> <!-- Dwarven Trident -->
+				<!-- Also drops herbs. -->
 				<item id="8600" min="1" max="1" chance="10" /> <!-- Herb of Life -->
 				<item id="8601" min="1" max="1" chance="8" /> <!-- Major Herb of Life -->
 				<item id="8602" min="1" max="1" chance="2" /> <!-- Superior Herb of Life -->
@@ -4423,8 +4390,8 @@
 				<item id="13028" min="1" max="1" chance="0.1" /> <!-- Vitality Replenishing Herb -->
 			</drop>
 			<spoil>
-				<item id="36531" min="1" max="1" chance="3.207" /> <!-- Thread -->
-				<item id="36533" min="1" max="1" chance="0.03" /> <!-- Synthetic Braid -->
+				<item id="36531" min="1" max="1" chance="2.5" /> <!-- Thread -->
+				<item id="36533" min="1" max="1" chance="0.0750187546886722" /> <!-- Synthetic Braid -->
 			</spoil>
 			<lucky>
 				<item id="39629" min="1" max="1" chance="100" /> <!-- Fortune Pocket - Stage 1 -->
@@ -4436,7 +4403,6 @@
 		</collision>
 	</npc>
 	<npc id="23097" level="36" type="Monster" name="Skeleton Marauder">
-		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<parameters>
 			<param name="MoveAroundSocial" value="0" />
 			<param name="MoveAroundSocial1" value="100" />
@@ -4473,8 +4439,9 @@
 		<dropLists>
 			<drop>
 				<item id="57" min="9" max="20" chance="70" /> <!-- Adena -->
-				<item id="278" min="1" max="1" chance="0.03" /> <!-- Gastraphetes -->
-				<item id="956" min="1" max="1" chance="0.075" /> <!-- Scroll: Enchant Armor (D-grade) -->
+				<item id="956" min="1" max="1" chance="0.149925037481259" /> <!-- Scroll: Enchant Armor (D-grade) -->
+				<item id="278" min="1" max="1" chance="0.03000300030003" /> <!-- Gastraphetes -->
+				<!-- Also drops herbs. -->
 				<item id="8600" min="1" max="1" chance="10" /> <!-- Herb of Life -->
 				<item id="8601" min="1" max="1" chance="8" /> <!-- Major Herb of Life -->
 				<item id="8602" min="1" max="1" chance="2" /> <!-- Superior Herb of Life -->
@@ -4486,8 +4453,8 @@
 				<item id="13028" min="1" max="1" chance="0.1" /> <!-- Vitality Replenishing Herb -->
 			</drop>
 			<spoil>
-				<item id="36531" min="1" max="1" chance="4.708" /> <!-- Thread -->
-				<item id="36533" min="1" max="1" chance="0.03" /> <!-- Synthetic Braid -->
+				<item id="36531" min="1" max="1" chance="2.5" /> <!-- Thread -->
+				<item id="36533" min="1" max="1" chance="0.0750187546886722" /> <!-- Synthetic Braid -->
 			</spoil>
 			<lucky>
 				<item id="39629" min="1" max="1" chance="100" /> <!-- Fortune Pocket - Stage 1 -->
@@ -4499,7 +4466,6 @@
 		</collision>
 	</npc>
 	<npc id="23098" level="37" type="Monster" name="Granite Golem">
-		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<parameters>
 			<param name="MoveAroundSocial" value="116" />
 			<param name="MoveAroundSocial1" value="116" />
@@ -4533,9 +4499,10 @@
 		<ai aggroRange="300" isAggressive="true" clanHelpRange="300" />
 		<dropLists>
 			<drop>
-				<item id="57" min="12" max="28" chance="70" /> <!-- Adena -->
-				<item id="415" min="1" max="1" chance="0.3" /> <!-- Mithril Banded Gaiters -->
-				<item id="393" min="1" max="1" chance="0.075" /> <!-- Mithril Banded Mail -->
+				<item id="57" min="12" max="29" chance="70" /> <!-- Adena -->
+				<item id="393" min="1" max="1" chance="0.149925037481259" /> <!-- Mithril Banded Mail -->
+				<item id="415" min="1" max="1" chance="0.149925037481259" /> <!-- Mithril Banded Gaiters -->
+				<!-- Also drops herbs. -->
 				<item id="8600" min="1" max="1" chance="10" /> <!-- Herb of Life -->
 				<item id="8601" min="1" max="1" chance="8" /> <!-- Major Herb of Life -->
 				<item id="8602" min="1" max="1" chance="2" /> <!-- Superior Herb of Life -->
@@ -4547,9 +4514,9 @@
 				<item id="13028" min="1" max="1" chance="0.1" /> <!-- Vitality Replenishing Herb -->
 			</drop>
 			<spoil>
-				<item id="36516" min="1" max="1" chance="12.46" /> <!-- Worn Leather -->
-				<item id="36517" min="1" max="1" chance="0.3" /> <!-- Leather -->
-				<item id="36518" min="1" max="1" chance="0.075" /> <!-- Durable Leather -->
+				<item id="36516" min="1" max="1" chance="7.5" /> <!-- Worn Leather -->
+				<item id="36517" min="1" max="1" chance="0.3003003003003" /> <!-- Leather -->
+				<item id="36518" min="1" max="1" chance="0.0750187546886722" /> <!-- Durable Leather -->
 			</spoil>
 			<lucky>
 				<item id="39629" min="1" max="1" chance="100" /> <!-- Fortune Pocket - Stage 1 -->
@@ -4561,7 +4528,6 @@
 		</collision>
 	</npc>
 	<npc id="23099" level="38" type="Monster" name="Ant Soldier">
-		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<parameters>
 			<param name="MoveAroundSocial" value="100" />
 			<param name="MoveAroundSocial1" value="100" />
@@ -4596,8 +4562,9 @@
 		<dropLists>
 			<drop>
 				<item id="57" min="19" max="43" chance="70" /> <!-- Adena -->
-				<item id="36553" min="1" max="1" chance="0.00549999999999999" /> <!-- Armor Fragment (Mid-grade) -->
-				<item id="36563" min="1" max="1" chance="0.00300000000000001" /> <!-- Synthetic Cokes -->
+				<item id="36563" min="1" max="1" chance="0.0750187546886722" /> <!-- Synthetic Cokes -->
+				<item id="36553" min="1" max="1" chance="0.0750187546886722" /> <!-- Armor Fragment (Mid-grade) -->
+				<!-- Also drops herbs. -->
 				<item id="8600" min="1" max="1" chance="10" /> <!-- Herb of Life -->
 				<item id="8601" min="1" max="1" chance="8" /> <!-- Major Herb of Life -->
 				<item id="8602" min="1" max="1" chance="2" /> <!-- Superior Herb of Life -->
@@ -4609,9 +4576,9 @@
 				<item id="13028" min="1" max="1" chance="0.1" /> <!-- Vitality Replenishing Herb -->
 			</drop>
 			<spoil>
-				<item id="36546" min="1" max="1" chance="1.016" /> <!-- Weapon Fragment (Low-grade) -->
-				<item id="36547" min="1" max="1" chance="0.03" /> <!-- Weapon Fragment -->
-				<item id="36548" min="1" max="1" chance="0.003" /> <!-- Weapon Fragment (Mid-grade) -->
+				<item id="36546" min="1" max="1" chance="0.75187969924812" /> <!-- Weapon Fragment (Low-grade) -->
+				<item id="36547" min="1" max="1" chance="0.149925037481259" /> <!-- Weapon Fragment -->
+				<item id="36548" min="1" max="1" chance="0.0750187546886722" /> <!-- Weapon Fragment (Mid-grade) -->
 			</spoil>
 			<lucky>
 				<item id="39629" min="1" max="1" chance="100" /> <!-- Fortune Pocket - Stage 1 -->

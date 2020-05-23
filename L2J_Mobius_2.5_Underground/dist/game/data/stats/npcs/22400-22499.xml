@@ -1,7 +1,6 @@
 ﻿<?xml version="1.0" encoding="UTF-8"?>
 <list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../xsd/npcs.xsd">
 	<npc id="22400" level="83" type="Monster" name="Parme's Healer">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<skill name="MagicHeal" id="4065" level="9" />
 		</parameters>
@@ -43,9 +42,32 @@
 			<radius normal="20" />
 			<height normal="27.5" />
 		</collision>
+		<dropLists>
+			<drop>
+				<item id="57" min="76" max="114" chance="70" /> <!-- Adena -->
+				<item id="36517" min="1" max="1" chance="2" /> <!-- Leather -->
+				<item id="36522" min="1" max="1" chance="0.75187969924812" /> <!-- Silver -->
+				<item id="36552" min="1" max="1" chance="0.0750187546886722" /> <!-- Armor Fragment -->
+				<!-- Also drops herbs. -->
+				<item id="8600" min="1" max="1" chance="10" /> <!-- Herb of Life -->
+				<item id="8601" min="1" max="1" chance="8" /> <!-- Major Herb of Life -->
+				<item id="8602" min="1" max="1" chance="2" /> <!-- Superior Herb of Life -->
+				<item id="8603" min="1" max="1" chance="19.8" /> <!-- Herb of Mana -->
+				<item id="8604" min="1" max="1" chance="9.9" /> <!-- Major Herb of Mana -->
+				<item id="8605" min="1" max="1" chance="3.3" /> <!-- Superior Herb of Mana -->
+				<item id="34849" min="1" max="1" chance="0.7" /> <!-- Mysterious Herb of Power -->
+				<item id="34850" min="1" max="1" chance="0.7" /> <!-- Mysterious Herb of Magic -->
+				<item id="13028" min="1" max="1" chance="0.1" /> <!-- Vitality Replenishing Herb -->
+			</drop>
+			<spoil>
+				<item id="36532" min="1" max="1" chance="0.75187969924812" /> <!-- Thin Braid -->
+				<item id="36533" min="1" max="1" chance="0.3003003003003" /> <!-- Synthetic Braid -->
+				<item id="36882" min="1" max="1" chance="0.03000300030003" /> <!-- Recipe: Thin Braid - Upgrade -->
+				<item id="36881" min="1" max="1" chance="0.03000300030003" /> <!-- Recipe: Thin Braid - Downgrade -->
+			</spoil>
+		</dropLists>
 	</npc>
 	<npc id="22401" level="83" type="Monster" name="Parme's Healer">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<skill name="MagicHeal" id="4065" level="9" />
 		</parameters>
@@ -87,9 +109,41 @@
 			<radius normal="20" />
 			<height normal="27.5" />
 		</collision>
+		<dropLists>
+			<drop>
+				<item id="57" min="18" max="42" chance="70" /> <!-- Adena -->
+				<item id="14166" min="1" max="1" chance="0.1" /> <!-- Life Stone - Lv. 84 -->
+				<item id="5544" min="1" max="1" chance="0.0750187546886722" /> <!-- Branch of the Mother Tree Head -->
+				<item id="8349" min="1" max="1" chance="0.0750187546886722" /> <!-- Doom Crusher Head -->
+				<item id="5533" min="1" max="1" chance="0.0750187546886722" /> <!-- Elysian Head -->
+				<item id="8342" min="1" max="1" chance="0.0750187546886722" /> <!-- Flaming Dragon Skull Piece -->
+				<item id="14167" min="1" max="1" chance="0.05" /> <!-- Mid-grade Life Stone - Lv. 84 -->
+				<item id="14168" min="1" max="1" chance="0.025" /> <!-- High-grade Life Stone - Lv. 84 -->
+				<item id="960" min="1" max="1" chance="0.0149992500374981" /> <!-- Scroll: Enchant Armor (S-grade) -->
+				<item id="213" min="1" max="1" chance="0.01" /> <!-- Branch of the Mother Tree -->
+				<item id="14169" min="1" max="1" chance="0.01" /> <!-- Top-grade Life Stone - Lv. 84 -->
+				<item id="7902" min="1" max="1" chance="0.01" /> <!-- Doom Crusher -->
+				<item id="7895" min="1" max="1" chance="0.01" /> <!-- Flaming Dragon Skull -->
+				<item id="164" min="1" max="1" chance="0.01" /> <!-- Elysian -->
+				<!-- Also drops herbs. -->
+				<item id="8600" min="1" max="1" chance="10" /> <!-- Herb of Life -->
+				<item id="8601" min="1" max="1" chance="8" /> <!-- Major Herb of Life -->
+				<item id="8602" min="1" max="1" chance="2" /> <!-- Superior Herb of Life -->
+				<item id="8603" min="1" max="1" chance="19.8" /> <!-- Herb of Mana -->
+				<item id="8604" min="1" max="1" chance="9.9" /> <!-- Major Herb of Mana -->
+				<item id="8605" min="1" max="1" chance="3.3" /> <!-- Superior Herb of Mana -->
+				<item id="34849" min="1" max="1" chance="0.7" /> <!-- Mysterious Herb of Power -->
+				<item id="34850" min="1" max="1" chance="0.7" /> <!-- Mysterious Herb of Magic -->
+				<item id="13028" min="1" max="1" chance="0.1" /> <!-- Vitality Replenishing Herb -->
+			</drop>
+			<spoil>
+				<item id="5481" min="1" max="1" chance="0.75187969924812" /> <!-- Sealed Majestic Leather Armor Fabric -->
+				<item id="5487" min="1" max="1" chance="0.75187969924812" /> <!-- Sealed Robe of Nightmare Fabric -->
+				<item id="3036" min="1" max="1" chance="0.0750187546886722" /> <!-- Recipe: Spiritshot (S-grade) -->
+			</spoil>
+		</dropLists>
 	</npc>
 	<npc id="22402" level="83" type="Monster" name="Shadow Column">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<skill name="SelfRangeDDmagic" id="4614" level="9" />
 			<skill name="selfbuff" id="5417" level="1" />
@@ -133,9 +187,32 @@
 			<radius normal="68" />
 			<height normal="80" />
 		</collision>
+		<dropLists>
+			<drop>
+				<item id="57" min="57" max="111" chance="70" /> <!-- Adena -->
+				<item id="36527" min="1" max="1" chance="2" /> <!-- Synthetic Fiber -->
+				<item id="36537" min="1" max="1" chance="0.3003003003003" /> <!-- Leather Braid -->
+				<item id="36562" min="1" max="1" chance="0.0750187546886722" /> <!-- Greater Cokes -->
+				<!-- Also drops herbs. -->
+				<item id="8600" min="1" max="1" chance="10" /> <!-- Herb of Life -->
+				<item id="8601" min="1" max="1" chance="8" /> <!-- Major Herb of Life -->
+				<item id="8602" min="1" max="1" chance="2" /> <!-- Superior Herb of Life -->
+				<item id="8603" min="1" max="1" chance="19.8" /> <!-- Herb of Mana -->
+				<item id="8604" min="1" max="1" chance="9.9" /> <!-- Major Herb of Mana -->
+				<item id="8605" min="1" max="1" chance="3.3" /> <!-- Superior Herb of Mana -->
+				<item id="34849" min="1" max="1" chance="0.7" /> <!-- Mysterious Herb of Power -->
+				<item id="34850" min="1" max="1" chance="0.7" /> <!-- Mysterious Herb of Magic -->
+				<item id="13028" min="1" max="1" chance="0.1" /> <!-- Vitality Replenishing Herb -->
+			</drop>
+			<spoil>
+				<item id="36532" min="1" max="1" chance="0.75187969924812" /> <!-- Thin Braid -->
+				<item id="36533" min="1" max="1" chance="0.0750187546886722" /> <!-- Synthetic Braid -->
+				<item id="36882" min="1" max="1" chance="0.03000300030003" /> <!-- Recipe: Thin Braid - Upgrade -->
+				<item id="36881" min="1" max="1" chance="0.03000300030003" /> <!-- Recipe: Thin Braid - Downgrade -->
+			</spoil>
+		</dropLists>
 	</npc>
 	<npc id="22416" level="82" type="Monster" name="Kechi's Captain">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="124" />
 			<param name="MoveAroundSocial1" value="124" />
@@ -199,9 +276,25 @@
 			<radius normal="13" />
 			<height normal="55" />
 		</collision>
+		<dropLists>
+			<drop>
+				<item id="57" min="1393" max="3254" chance="70" /> <!-- Adena -->
+				<item id="1808" min="1" max="1" chance="0.3003003003003" /> <!-- Recipe: Soulshot (S-grade) -->
+				<item id="9547" min="1" max="1" chance="0.3003003003003" /> <!-- Water Stone -->
+				<item id="960" min="1" max="1" chance="0.3003003003003" /> <!-- Scroll: Enchant Armor (S-grade) -->
+				<item id="36904" min="1" max="1" chance="0.0149992500374981" /> <!-- Recipe: Silver Wire - Upgrade -->
+				<item id="36873" min="1" max="1" chance="0.0149992500374981" /> <!-- Recipe: Synthetic Fiber - Downgrade -->
+				<item id="36924" min="1" max="1" chance="0.0149992500374981" /> <!-- Recipe: Armor Fragment - Upgrade -->
+			</drop>
+			<spoil>
+				<item id="36532" min="1" max="1" chance="15" /> <!-- Thin Braid -->
+				<item id="36533" min="1" max="1" chance="2.5" /> <!-- Synthetic Braid -->
+				<item id="36882" min="1" max="1" chance="0.03000300030003" /> <!-- Recipe: Thin Braid - Upgrade -->
+				<item id="36881" min="1" max="1" chance="0.03000300030003" /> <!-- Recipe: Thin Braid - Downgrade -->
+			</spoil>
+		</dropLists>
 	</npc>
 	<npc id="22417" level="82" type="Monster" name="Kechi's Guard">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="0" />
 			<param name="MoveAroundSocial1" value="0" />
@@ -272,9 +365,29 @@
 			<radius normal="23" />
 			<height normal="52" />
 		</collision>
+		<dropLists>
+			<drop>
+				<item id="57" min="224" max="522" chance="70" /> <!-- Adena -->
+				<item id="10483" min="1" max="1" chance="0.3003003003003" /> <!-- Life Stone - Lv. 82 -->
+				<item id="10484" min="1" max="1" chance="0.149925037481259" /> <!-- Mid-grade Life Stone - Lv. 82 -->
+				<item id="9547" min="1" max="1" chance="0.149925037481259" /> <!-- Water Stone -->
+				<item id="10485" min="1" max="1" chance="0.03000300030003" /> <!-- High-grade Life Stone - Lv. 82 -->
+				<item id="3036" min="1" max="1" chance="0.03000300030003" /> <!-- Recipe: Spiritshot (S-grade) -->
+				<item id="10486" min="1" max="1" chance="0.0149992500374981" /> <!-- Top-grade Life Stone - Lv. 82 -->
+				<item id="36931" min="1" max="1" chance="0.0149992500374981" /> <!-- Recipe: Accessory Gem - Downgrade -->
+				<item id="36865" min="1" max="1" chance="0.0149992500374981" /> <!-- Recipe: Silver - Downgrade -->
+				<item id="36905" min="1" max="1" chance="0.0149992500374981" /> <!-- Recipe: Silver Wire - Combination -->
+				<item id="36874" min="1" max="1" chance="0.0149992500374981" /> <!-- Recipe: Synthetic Fiber - Upgrade -->
+			</drop>
+			<spoil>
+				<item id="36532" min="1" max="1" chance="2.5" /> <!-- Thin Braid -->
+				<item id="36533" min="1" max="1" chance="0.3003003003003" /> <!-- Synthetic Braid -->
+				<item id="36882" min="1" max="1" chance="0.03000300030003" /> <!-- Recipe: Thin Braid - Upgrade -->
+				<item id="36881" min="1" max="1" chance="0.03000300030003" /> <!-- Recipe: Thin Braid - Downgrade -->
+			</spoil>
+		</dropLists>
 	</npc>
 	<npc id="22418" level="82" type="Monster" name="Burning Iris">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="110" />
 			<param name="MoveAroundSocial1" value="110" />
@@ -328,9 +441,26 @@
 			<radius normal="34" />
 			<height normal="35" />
 		</collision>
+		<dropLists>
+			<drop>
+				<item id="57" min="153" max="358" chance="70" /> <!-- Adena -->
+				<item id="9547" min="1" max="1" chance="0.149925037481259" /> <!-- Water Stone -->
+				<item id="3957" min="1" max="1" chance="0.03000300030003" /> <!-- Recipe: Blessed Spiritshot (S-grade) -->
+				<item id="36890" min="1" max="1" chance="0.0149992500374981" /> <!-- Recipe: Leather Braid - Downgrade -->
+				<item id="36932" min="1" max="1" chance="0.0149992500374981" /> <!-- Recipe: Accessory Gem - Upgrade -->
+				<item id="36866" min="1" max="1" chance="0.0149992500374981" /> <!-- Recipe: Silver - Upgrade -->
+				<item id="36915" min="1" max="1" chance="0.0149992500374981" /> <!-- Recipe: Weapon Fragment - Downgrade -->
+				<item id="959" min="1" max="1" chance="0.0149992500374981" /> <!-- Scroll: Enchant Weapon (S-grade) -->
+			</drop>
+			<spoil>
+				<item id="36532" min="1" max="1" chance="1.5" /> <!-- Thin Braid -->
+				<item id="36533" min="1" max="1" chance="0.3003003003003" /> <!-- Synthetic Braid -->
+				<item id="36882" min="1" max="1" chance="0.03000300030003" /> <!-- Recipe: Thin Braid - Upgrade -->
+				<item id="36881" min="1" max="1" chance="0.03000300030003" /> <!-- Recipe: Thin Braid - Downgrade -->
+			</spoil>
+		</dropLists>
 	</npc>
 	<npc id="22419" level="82" type="Monster" name="Flame Iris">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="110" />
 			<param name="MoveAroundSocial1" value="110" />
@@ -392,9 +522,28 @@
 			<radius normal="34" />
 			<height normal="35" />
 		</collision>
+		<dropLists>
+			<drop>
+				<item id="57" min="144" max="336" chance="70" /> <!-- Adena -->
+				<item id="10483" min="1" max="1" chance="0.3003003003003" /> <!-- Life Stone - Lv. 82 -->
+				<item id="10484" min="1" max="1" chance="0.149925037481259" /> <!-- Mid-grade Life Stone - Lv. 82 -->
+				<item id="9547" min="1" max="1" chance="0.149925037481259" /> <!-- Water Stone -->
+				<item id="10485" min="1" max="1" chance="0.03000300030003" /> <!-- High-grade Life Stone - Lv. 82 -->
+				<item id="5157" min="1" max="1" chance="0.03000300030003" /> <!-- Recipe: Soulshot Compressed Package (S-grade) -->
+				<item id="960" min="1" max="1" chance="0.03000300030003" /> <!-- Scroll: Enchant Armor (S-grade) -->
+				<item id="10486" min="1" max="1" chance="0.0149992500374981" /> <!-- Top-grade Life Stone - Lv. 82 -->
+				<item id="36891" min="1" max="1" chance="0.0149992500374981" /> <!-- Recipe: Leather Braid - Upgrade -->
+				<item id="36939" min="1" max="1" chance="0.0149992500374981" /> <!-- Recipe: Greater Cokes - Downgrade -->
+			</drop>
+			<spoil>
+				<item id="36532" min="1" max="1" chance="1.5" /> <!-- Thin Braid -->
+				<item id="36533" min="1" max="1" chance="0.3003003003003" /> <!-- Synthetic Braid -->
+				<item id="36882" min="1" max="1" chance="0.03000300030003" /> <!-- Recipe: Thin Braid - Upgrade -->
+				<item id="36881" min="1" max="1" chance="0.03000300030003" /> <!-- Recipe: Thin Braid - Downgrade -->
+			</spoil>
+		</dropLists>
 	</npc>
 	<npc id="22420" level="82" type="Monster" name="Brimstone Iris">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="110" />
 			<param name="MoveAroundSocial1" value="110" />
@@ -455,9 +604,25 @@
 			<radius normal="34" />
 			<height normal="35" />
 		</collision>
+		<dropLists>
+			<drop>
+				<item id="57" min="157" max="367" chance="70" /> <!-- Adena -->
+				<item id="9547" min="1" max="1" chance="0.149925037481259" /> <!-- Water Stone -->
+				<item id="36857" min="1" max="1" chance="0.0149992500374981" /> <!-- Recipe: Leather - Downgrade -->
+				<item id="36892" min="1" max="1" chance="0.0149992500374981" /> <!-- Recipe: Leather Braid - Combination -->
+				<item id="36873" min="1" max="1" chance="0.0149992500374981" /> <!-- Recipe: Synthetic Fiber - Downgrade -->
+				<item id="36940" min="1" max="1" chance="0.0149992500374981" /> <!-- Recipe: Greater Cokes - Upgrade -->
+				<item id="36916" min="1" max="1" chance="0.0149992500374981" /> <!-- Recipe: Weapon Fragment - Upgrade -->
+			</drop>
+			<spoil>
+				<item id="36532" min="1" max="1" chance="1.5" /> <!-- Thin Braid -->
+				<item id="36533" min="1" max="1" chance="0.3003003003003" /> <!-- Synthetic Braid -->
+				<item id="36882" min="1" max="1" chance="0.03000300030003" /> <!-- Recipe: Thin Braid - Upgrade -->
+				<item id="36881" min="1" max="1" chance="0.03000300030003" /> <!-- Recipe: Thin Braid - Downgrade -->
+			</spoil>
+		</dropLists>
 	</npc>
 	<npc id="22443" level="45" type="Monster" name="Kertang's Messenger">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="0" />
 			<param name="MoveAroundSocial1" value="0" />
@@ -505,9 +670,19 @@
 			<radius normal="20" />
 			<height normal="36" />
 		</collision>
+		<dropLists>
+			<drop>
+				<item id="57" min="21" max="49" chance="70" /> <!-- Adena -->
+				<item id="36527" min="1" max="1" chance="0.75187969924812" /> <!-- Synthetic Fiber -->
+				<item id="36557" min="1" max="1" chance="0.3003003003003" /> <!-- Accessory Gem -->
+			</drop>
+			<spoil>
+				<item id="36531" min="1" max="1" chance="10" /> <!-- Thread -->
+				<item id="36880" min="1" max="1" chance="0.03000300030003" /> <!-- Recipe: Thread - Downgrade -->
+			</spoil>
+		</dropLists>
 	</npc>
 	<npc id="22444" level="55" type="Monster" name="Kertang's Messenger">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="0" />
 			<param name="MoveAroundSocial1" value="0" />
@@ -557,7 +732,6 @@
 		</collision>
 	</npc>
 	<npc id="22445" level="65" type="Monster" name="Kertang's Messenger">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="0" />
 			<param name="MoveAroundSocial1" value="0" />
@@ -606,9 +780,19 @@
 			<radius normal="20" />
 			<height normal="36" />
 		</collision>
+		<dropLists>
+			<drop>
+				<item id="57" min="44" max="104" chance="70" /> <!-- Adena -->
+				<item id="36542" min="1" max="1" chance="0.75187969924812" /> <!-- Silver Wire -->
+			</drop>
+			<spoil>
+				<item id="36532" min="1" max="1" chance="0.3003003003003" /> <!-- Thin Braid -->
+				<item id="36882" min="1" max="1" chance="0.03000300030003" /> <!-- Recipe: Thin Braid - Upgrade -->
+				<item id="36881" min="1" max="1" chance="0.03000300030003" /> <!-- Recipe: Thin Braid - Downgrade -->
+			</spoil>
+		</dropLists>
 	</npc>
 	<npc id="22446" level="75" type="Monster" name="Kertang's Messenger">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="0" />
 			<param name="MoveAroundSocial1" value="0" />
@@ -657,9 +841,20 @@
 			<radius normal="20" />
 			<height normal="36" />
 		</collision>
+		<dropLists>
+			<drop>
+				<item id="57" min="56" max="132" chance="70" /> <!-- Adena -->
+				<item id="36517" min="1" max="1" chance="1.5" /> <!-- Leather -->
+				<item id="36547" min="1" max="1" chance="0.0750187546886722" /> <!-- Weapon Fragment -->
+			</drop>
+			<spoil>
+				<item id="36532" min="1" max="1" chance="0.3003003003003" /> <!-- Thin Braid -->
+				<item id="36882" min="1" max="1" chance="0.03000300030003" /> <!-- Recipe: Thin Braid - Upgrade -->
+				<item id="36881" min="1" max="1" chance="0.03000300030003" /> <!-- Recipe: Thin Braid - Downgrade -->
+			</spoil>
+		</dropLists>
 	</npc>
 	<npc id="22447" level="80" type="Monster" name="Kertang's Messenger">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="0" />
 			<param name="MoveAroundSocial1" value="0" />
@@ -711,9 +906,21 @@
 			<radius normal="20" />
 			<height normal="36" />
 		</collision>
+		<dropLists>
+			<drop>
+				<item id="57" min="60" max="141" chance="70" /> <!-- Adena -->
+				<item id="36522" min="1" max="1" chance="1.5" /> <!-- Silver -->
+				<item id="36552" min="1" max="1" chance="0.3003003003003" /> <!-- Armor Fragment -->
+			</drop>
+			<spoil>
+				<item id="36532" min="1" max="1" chance="0.75187969924812" /> <!-- Thin Braid -->
+				<item id="36533" min="1" max="1" chance="0.3003003003003" /> <!-- Synthetic Braid -->
+				<item id="36882" min="1" max="1" chance="0.03000300030003" /> <!-- Recipe: Thin Braid - Upgrade -->
+				<item id="36881" min="1" max="1" chance="0.03000300030003" /> <!-- Recipe: Thin Braid - Downgrade -->
+			</spoil>
+		</dropLists>
 	</npc>
 	<npc id="22452" level="25" type="Monster" name="White Skull Kanabion">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="0" />
 			<param name="MoveAroundSocial1" value="0" />
@@ -788,7 +995,6 @@
 		</collision>
 	</npc>
 	<npc id="22453" level="25" type="Monster" name="White Skull Kanabion" title="Doppler">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="215" />
 			<param name="MoveAroundSocial1" value="215" />
@@ -868,7 +1074,6 @@
 		</collision>
 	</npc>
 	<npc id="22454" level="25" type="Monster" name="White Skull Kanabion" title="Void">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="80" />
 			<param name="MoveAroundSocial1" value="80" />
@@ -950,7 +1155,6 @@
 		</collision>
 	</npc>
 	<npc id="22455" level="30" type="Monster" name="Begrudged Kanabion">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="138" />
 			<param name="MoveAroundSocial1" value="138" />
@@ -1025,7 +1229,6 @@
 		</collision>
 	</npc>
 	<npc id="22456" level="30" type="Monster" name="Begrudged Kanabion" title="Doppler">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="75" />
 			<param name="MoveAroundSocial1" value="75" />
@@ -1103,7 +1306,6 @@
 		</collision>
 	</npc>
 	<npc id="22457" level="30" type="Monster" name="Begrudged Kanabion" title="Void">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="70" />
 			<param name="MoveAroundSocial1" value="70" />
@@ -1183,7 +1385,6 @@
 		</collision>
 	</npc>
 	<npc id="22458" level="35" type="Monster" name="Rotten Kanabion">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="120" />
 			<param name="MoveAroundSocial1" value="120" />
@@ -1257,7 +1458,6 @@
 		</collision>
 	</npc>
 	<npc id="22459" level="35" type="Monster" name="Rotten Kanabion" title="Doppler">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="126" />
 			<param name="MoveAroundSocial1" value="126" />
@@ -1334,7 +1534,6 @@
 		</collision>
 	</npc>
 	<npc id="22460" level="35" type="Monster" name="Rotten Kanabion" title="Void">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="80" />
 			<param name="MoveAroundSocial1" value="80" />
@@ -1412,7 +1611,6 @@
 		</collision>
 	</npc>
 	<npc id="22461" level="40" type="Monster" name="Gluttonous Kanabion">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="115" />
 			<param name="MoveAroundSocial1" value="90" />
@@ -1487,7 +1685,6 @@
 		</collision>
 	</npc>
 	<npc id="22462" level="40" type="Monster" name="Gluttonous Kanabion" title="Doppler">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="80" />
 			<param name="MoveAroundSocial1" value="80" />
@@ -1563,7 +1760,6 @@
 		</collision>
 	</npc>
 	<npc id="22463" level="40" type="Monster" name="Gluttonous Kanabion" title="Void">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="70" />
 			<param name="MoveAroundSocial1" value="81" />
@@ -1643,7 +1839,6 @@
 		</collision>
 	</npc>
 	<npc id="22464" level="45" type="Monster" name="Callous Kanabion">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="60" />
 			<param name="MoveAroundSocial1" value="60" />
@@ -1718,7 +1913,6 @@
 		</collision>
 	</npc>
 	<npc id="22465" level="45" type="Monster" name="Callous Kanabion" title="Doppler">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="120" />
 			<param name="MoveAroundSocial1" value="80" />
@@ -1796,7 +1990,6 @@
 		</collision>
 	</npc>
 	<npc id="22466" level="45" type="Monster" name="Callous Kanabion" title="Void">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="70" />
 			<param name="MoveAroundSocial1" value="70" />
@@ -1876,7 +2069,6 @@
 		</collision>
 	</npc>
 	<npc id="22467" level="50" type="Monster" name="Savage Kanabion">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="100" />
 			<param name="MoveAroundSocial1" value="50" />
@@ -1951,7 +2143,6 @@
 		</collision>
 	</npc>
 	<npc id="22468" level="50" type="Monster" name="Savage Kanabion" title="Doppler">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="60" />
 			<param name="MoveAroundSocial1" value="50" />
@@ -2029,7 +2220,6 @@
 		</collision>
 	</npc>
 	<npc id="22469" level="50" type="Monster" name="Savage Kanabion" title="Void">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="90" />
 			<param name="MoveAroundSocial1" value="60" />
@@ -2109,7 +2299,6 @@
 		</collision>
 	</npc>
 	<npc id="22470" level="55" type="Monster" name="Peerless Kanabion">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="35" />
 			<param name="MoveAroundSocial1" value="35" />
@@ -2184,7 +2373,6 @@
 		</collision>
 	</npc>
 	<npc id="22471" level="55" type="Monster" name="Peerless Kanabion" title="Doppler">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="60" />
 			<param name="MoveAroundSocial1" value="60" />
@@ -2262,7 +2450,6 @@
 		</collision>
 	</npc>
 	<npc id="22472" level="55" type="Monster" name="Peerless Kanabion" title="Void">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="60" />
 			<param name="MoveAroundSocial1" value="60" />
@@ -2342,7 +2529,6 @@
 		</collision>
 	</npc>
 	<npc id="22473" level="60" type="Monster" name="Massive Kanabion">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="90" />
 			<param name="MoveAroundSocial1" value="74" />
@@ -2417,7 +2603,6 @@
 		</collision>
 	</npc>
 	<npc id="22474" level="60" type="Monster" name="Massive Kanabion" title="Doppler">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="110" />
 			<param name="MoveAroundSocial1" value="74" />
@@ -2495,7 +2680,6 @@
 		</collision>
 	</npc>
 	<npc id="22475" level="60" type="Monster" name="Massive Kanabion" title="Void">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="90" />
 			<param name="MoveAroundSocial1" value="74" />
@@ -2575,7 +2759,6 @@
 		</collision>
 	</npc>
 	<npc id="22476" level="65" type="Monster" name="Fervent Kanabion">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="0" />
 			<param name="MoveAroundSocial1" value="0" />
@@ -2650,7 +2833,6 @@
 		</collision>
 	</npc>
 	<npc id="22477" level="65" type="Monster" name="Fervent Kanabion" title="Doppler">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="100" />
 			<param name="MoveAroundSocial1" value="100" />
@@ -2727,7 +2909,6 @@
 		</collision>
 	</npc>
 	<npc id="22478" level="65" type="Monster" name="Fervent Kanabion" title="Void">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="80" />
 			<param name="MoveAroundSocial1" value="80" />
@@ -2806,7 +2987,6 @@
 		</collision>
 	</npc>
 	<npc id="22479" level="70" type="Monster" name="Ruptured Kanabion">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="110" />
 			<param name="MoveAroundSocial1" value="110" />
@@ -2880,7 +3060,6 @@
 		</collision>
 	</npc>
 	<npc id="22480" level="70" type="Monster" name="Ruptured Kanabion" title="Doppler">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="110" />
 			<param name="MoveAroundSocial1" value="110" />
@@ -2957,7 +3136,6 @@
 		</collision>
 	</npc>
 	<npc id="22481" level="70" type="Monster" name="Ruptured Kanabion" title="Void">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="110" />
 			<param name="MoveAroundSocial1" value="110" />
@@ -3036,7 +3214,6 @@
 		</collision>
 	</npc>
 	<npc id="22482" level="75" type="Monster" name="Sword Kanabion">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="100" />
 			<param name="MoveAroundSocial1" value="100" />
@@ -3110,7 +3287,6 @@
 		</collision>
 	</npc>
 	<npc id="22483" level="75" type="Monster" name="Sword Kanabion" title="Doppler">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="160" />
 			<param name="MoveAroundSocial1" value="160" />
@@ -3187,7 +3363,6 @@
 		</collision>
 	</npc>
 	<npc id="22484" level="75" type="Monster" name="Sword Kanabion" title="Void">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="160" />
 			<param name="MoveAroundSocial1" value="160" />
@@ -3268,7 +3443,6 @@
 		</collision>
 	</npc>
 	<npc id="22485" level="29" type="Monster" name="Lost Watcher">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="120" />
 			<param name="MoveAroundSocial1" value="100" />
@@ -3328,7 +3502,6 @@
 		</collision>
 	</npc>
 	<npc id="22486" level="29" type="Monster" name="Lost Watcher">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="120" />
 			<param name="MoveAroundSocial1" value="100" />
@@ -3385,7 +3558,6 @@
 		</collision>
 	</npc>
 	<npc id="22487" level="29" type="Monster" name="Lost Beholder">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="120" />
 			<param name="MoveAroundSocial1" value="100" />
@@ -3446,7 +3618,6 @@
 		</collision>
 	</npc>
 	<npc id="22488" level="39" type="Monster" name="Lost Watcher">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="60" />
 			<param name="MoveAroundSocial1" value="60" />
@@ -3506,7 +3677,6 @@
 		</collision>
 	</npc>
 	<npc id="22489" level="39" type="Monster" name="Lost Watcher">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="60" />
 			<param name="MoveAroundSocial1" value="60" />
@@ -3563,7 +3733,6 @@
 		</collision>
 	</npc>
 	<npc id="22490" level="39" type="Monster" name="Lost Beholder">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="120" />
 			<param name="MoveAroundSocial1" value="80" />
@@ -3624,7 +3793,6 @@
 		</collision>
 	</npc>
 	<npc id="22491" level="49" type="Monster" name="Lost Watcher">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="116" />
 			<param name="MoveAroundSocial1" value="116" />
@@ -3683,7 +3851,6 @@
 		</collision>
 	</npc>
 	<npc id="22492" level="49" type="Monster" name="Lost Watcher">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="116" />
 			<param name="MoveAroundSocial1" value="116" />
@@ -3739,7 +3906,6 @@
 		</collision>
 	</npc>
 	<npc id="22493" level="49" type="Monster" name="Lost Beholder">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="0" />
 			<param name="MoveAroundSocial1" value="0" />
@@ -3799,7 +3965,6 @@
 		</collision>
 	</npc>
 	<npc id="22494" level="59" type="Monster" name="Lost Watcher">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="80" />
 			<param name="MoveAroundSocial1" value="80" />
@@ -3859,7 +4024,6 @@
 		</collision>
 	</npc>
 	<npc id="22495" level="59" type="Monster" name="Lost Watcher">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="80" />
 			<param name="MoveAroundSocial1" value="80" />
@@ -3916,7 +4080,6 @@
 		</collision>
 	</npc>
 	<npc id="22496" level="59" type="Monster" name="Lost Beholder">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="0" />
 			<param name="MoveAroundSocial1" value="0" />
@@ -3976,7 +4139,6 @@
 		</collision>
 	</npc>
 	<npc id="22497" level="69" type="Monster" name="Lost Watcher">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="78" />
 			<param name="MoveAroundSocial1" value="78" />
@@ -4035,7 +4197,6 @@
 		</collision>
 	</npc>
 	<npc id="22498" level="69" type="Monster" name="Lost Watcher">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="78" />
 			<param name="MoveAroundSocial1" value="78" />
@@ -4091,7 +4252,6 @@
 		</collision>
 	</npc>
 	<npc id="22499" level="69" type="Monster" name="Lost Beholder">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="90" />
 			<param name="MoveAroundSocial1" value="90" />

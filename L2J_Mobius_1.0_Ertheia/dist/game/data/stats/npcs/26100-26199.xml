@@ -81,64 +81,99 @@
 		</skillList>
 		<dropLists>
 			<drop>
-				<item id="17527" min="1" max="1" chance="78.88" /> <!-- Scroll: Enchant Armor (R-grade) -->
-				<item id="17526" min="1" max="1" chance="19.83" /> <!-- Scroll: Enchant Weapon (R-grade) -->
-				<item id="35346" min="1" max="1" chance="1.837" /> <!-- Eternal Leather Legging Ingredient -->
-				<item id="35342" min="1" max="1" chance="1.837" /> <!-- Eternal Boot Ingredient -->
-				<item id="35349" min="1" max="1" chance="1.8345" /> <!-- Eternal Circlet Ingredient -->
-				<item id="35337" min="1" max="1" chance="1.833" /> <!-- Amaranthine Retributer Fragment -->
-				<item id="35348" min="1" max="1" chance="1.828" /> <!-- Eternal Leather Boot Ingredient -->
-				<item id="35335" min="1" max="1" chance="1.8235" /> <!-- Amaranthine Buster Fragment -->
-				<item id="35353" min="1" max="1" chance="1.82" /> <!-- Eternal Shoe Ingredient -->
-				<item id="35339" min="1" max="1" chance="1.818" /> <!-- Eternal Breastplate Ingredient -->
-				<item id="35327" min="1" max="1" chance="1.815" /> <!-- Amaranthine Shaper Fragment -->
-				<item id="35333" min="1" max="1" chance="1.815" /> <!-- Amaranthine Thrower Fragment -->
-				<item id="35344" min="1" max="1" chance="1.81" /> <!-- Eternal Leather Helmet Ingredient -->
-				<item id="35341" min="1" max="1" chance="1.805" /> <!-- Eternal Gauntlet Ingredient -->
-				<item id="35332" min="1" max="1" chance="1.797" /> <!-- Amaranthine Stormer Fragment -->
-				<item id="35340" min="1" max="1" chance="1.797" /> <!-- Eternal Gaiter Ingredient -->
-				<item id="35350" min="1" max="1" chance="1.796" /> <!-- Eternal Tunic Ingredient -->
-				<item id="35328" min="1" max="1" chance="1.795" /> <!-- Amaranthine Cutter Fragment -->
-				<item id="35351" min="1" max="1" chance="1.792" /> <!-- Eternal Stocking Ingredient -->
-				<item id="35352" min="1" max="1" chance="1.789" /> <!-- Eternal Glove Ingredient -->
-				<item id="35338" min="1" max="1" chance="1.771" /> <!-- Eternal Helmet Ingredient -->
-				<item id="35334" min="1" max="1" chance="1.771" /> <!-- Amaranthine Shooter Fragment -->
-				<item id="35330" min="1" max="1" chance="1.757" /> <!-- Amaranthine Avenger Fragment -->
-				<item id="35329" min="1" max="1" chance="1.75" /> <!-- Amaranthine Slasher Fragment -->
-				<item id="35336" min="1" max="1" chance="1.742" /> <!-- Amaranthine Caster Fragment -->
-				<item id="35354" min="1" max="1" chance="1.737" /> <!-- Eternal Sigil Ingredient -->
-				<item id="35345" min="1" max="1" chance="1.734" /> <!-- Eternal Leather Armor Ingredient -->
-				<item id="35347" min="1" max="1" chance="1.725" /> <!-- Eternal Leather Glove Ingredient -->
-				<item id="35343" min="1" max="1" chance="1.721" /> <!-- Eternal Shield Ingredient -->
-				<item id="35331" min="1" max="1" chance="1.715" /> <!-- Amaranthine Fighter Fragment -->
-				<item id="35466" min="1" max="1" chance="0.3" /> <!-- Recipe: Eternal Boots (60%) -->
-				<item id="35467" min="1" max="1" chance="0.3" /> <!-- Recipe: Eternal Shield (60%) -->
-				<item id="35468" min="1" max="1" chance="0.3" /> <!-- Recipe: Eternal Leather Helmet (60%) -->
-				<item id="35469" min="1" max="1" chance="0.3" /> <!-- Recipe: Eternal Leather Armor (60%) -->
-				<item id="35470" min="1" max="1" chance="0.3" /> <!-- Recipe: Eternal Leather Leggings (60%) -->
-				<item id="35471" min="1" max="1" chance="0.3" /> <!-- Recipe: Eternal Leather Gloves (60%) -->
-				<item id="35472" min="1" max="1" chance="0.3" /> <!-- Recipe: Eternal Leather Boots (60%) -->
-				<item id="35473" min="1" max="1" chance="0.3" /> <!-- Recipe: Eternal Circlet (60%) -->
-				<item id="35474" min="1" max="1" chance="0.3" /> <!-- Recipe: Eternal Tunic (60%) -->
-				<item id="35475" min="1" max="1" chance="0.3" /> <!-- Recipe: Eternal Stockings (60%) -->
-				<item id="35476" min="1" max="1" chance="0.3" /> <!-- Recipe: Eternal Gloves (60%) -->
-				<item id="35477" min="1" max="1" chance="0.3" /> <!-- Recipe: Eternal Shoes (60%) -->
-				<item id="35478" min="1" max="1" chance="0.3" /> <!-- Recipe: Eternal Sigil (60%) -->
-				<item id="35465" min="1" max="1" chance="0.3" /> <!-- Recipe: Eternal Gauntlets (60%) -->
-				<item id="35464" min="1" max="1" chance="0.3" /> <!-- Recipe: Eternal Gaiters (60%) -->
-				<item id="35451" min="1" max="1" chance="0.3" /> <!-- Recipe: Amaranthine Shaper (60%) -->
-				<item id="35452" min="1" max="1" chance="0.3" /> <!-- Recipe: Amaranthine Cutter (60%) -->
-				<item id="35453" min="1" max="1" chance="0.3" /> <!-- Recipe: Amaranthine Slasher (60%) -->
-				<item id="35454" min="1" max="1" chance="0.3" /> <!-- Recipe: Amaranthine Avenger (60%) -->
-				<item id="35455" min="1" max="1" chance="0.3" /> <!-- Recipe: Amaranthine Fighter (60%) -->
-				<item id="35456" min="1" max="1" chance="0.3" /> <!-- Recipe: Amaranthine Stormer (60%) -->
-				<item id="35457" min="1" max="1" chance="0.3" /> <!-- Recipe: Amaranthine Thrower (60%) -->
-				<item id="35458" min="1" max="1" chance="0.3" /> <!-- Recipe: Amaranthine Shooter (60%) -->
-				<item id="35459" min="1" max="1" chance="0.3" /> <!-- Recipe: Amaranthine Buster (60%) -->
-				<item id="35460" min="1" max="1" chance="0.3" /> <!-- Recipe: Amaranthine Caster (60%) -->
-				<item id="35461" min="1" max="1" chance="0.3" /> <!-- Recipe: Amaranthine Retributer (60%) -->
-				<item id="35462" min="1" max="1" chance="0.3" /> <!-- Recipe: Eternal Helmet (60%) -->
-				<item id="35463" min="1" max="1" chance="0.3" /> <!-- Recipe: Eternal Breastplate (60%) -->
+				<item id="17527" min="1" max="1" chance="80" /> <!-- Scroll: Enchant Armor (R-grade) -->
+				<item id="17526" min="1" max="1" chance="20" /> <!-- Scroll: Enchant Weapon (R-grade) -->
+				<item id="45463" min="1" max="1" chance="5" /> <!-- Entrance Pass: Nightmare Kamaloka -->
+				<item id="35338" min="1" max="1" chance="3.00003" /> <!-- Eternal Helmet Ingredient -->
+				<item id="35353" min="1" max="1" chance="3" /> <!-- Eternal Shoe Ingredient -->
+				<item id="35349" min="1" max="1" chance="3" /> <!-- Eternal Circlet Ingredient -->
+				<item id="35339" min="1" max="1" chance="3" /> <!-- Eternal Breastplate Ingredient -->
+				<item id="35345" min="1" max="1" chance="3" /> <!-- Eternal Leather Armor Ingredient -->
+				<item id="35344" min="1" max="1" chance="3" /> <!-- Eternal Leather Helmet Ingredient -->
+				<item id="35346" min="1" max="1" chance="3" /> <!-- Eternal Leather Legging Ingredient -->
+				<item id="35347" min="1" max="1" chance="3" /> <!-- Eternal Leather Glove Ingredient -->
+				<item id="35348" min="1" max="1" chance="3" /> <!-- Eternal Leather Boot Ingredient -->
+				<item id="35340" min="1" max="1" chance="3" /> <!-- Eternal Gaiter Ingredient -->
+				<item id="35352" min="1" max="1" chance="3" /> <!-- Eternal Glove Ingredient -->
+				<item id="35341" min="1" max="1" chance="3" /> <!-- Eternal Gauntlet Ingredient -->
+				<item id="35342" min="1" max="1" chance="3" /> <!-- Eternal Boot Ingredient -->
+				<item id="35354" min="1" max="1" chance="3" /> <!-- Eternal Sigil Ingredient -->
+				<item id="35350" min="1" max="1" chance="3" /> <!-- Eternal Tunic Ingredient -->
+				<item id="35351" min="1" max="1" chance="3" /> <!-- Eternal Stocking Ingredient -->
+				<item id="35343" min="1" max="1" chance="3" /> <!-- Eternal Shield Ingredient -->
+				<item id="35333" min="1" max="1" chance="3" /> <!-- Amaranthine Thrower Fragment -->
+				<item id="35332" min="1" max="1" chance="3" /> <!-- Amaranthine Stormer Fragment -->
+				<item id="35337" min="1" max="1" chance="3" /> <!-- Amaranthine Retributer Fragment -->
+				<item id="35331" min="1" max="1" chance="3" /> <!-- Amaranthine Fighter Fragment -->
+				<item id="35336" min="1" max="1" chance="3" /> <!-- Amaranthine Caster Fragment -->
+				<item id="35330" min="1" max="1" chance="3" /> <!-- Amaranthine Avenger Fragment -->
+				<item id="35327" min="1" max="1" chance="3" /> <!-- Amaranthine Shaper Fragment -->
+				<item id="35335" min="1" max="1" chance="3" /> <!-- Amaranthine Buster Fragment -->
+				<item id="35328" min="1" max="1" chance="3" /> <!-- Amaranthine Cutter Fragment -->
+				<item id="35334" min="1" max="1" chance="3" /> <!-- Amaranthine Shooter Fragment -->
+				<item id="35329" min="1" max="1" chance="3" /> <!-- Amaranthine Slasher Fragment -->
+				<item id="17699" min="1" max="1" chance="0.3003003003003" /> <!-- Lv. 5 Giant CON Dye - CON + 5 -->
+				<item id="17702" min="1" max="1" chance="0.3003003003003" /> <!-- Lv. 5 Giant MEN Dye - Men + 5 -->
+				<item id="17700" min="1" max="1" chance="0.3003003003003" /> <!-- Lv. 5 Giant INT Dye - INT + 5 -->
+				<item id="17698" min="1" max="1" chance="0.3003003003003" /> <!-- Lv. 5 Giant DEX Dye - DEX + 5 -->
+				<item id="17701" min="1" max="1" chance="0.3003003003003" /> <!-- Lv. 5 Giant WIT Dye - Wit + 5 -->
+				<item id="17697" min="1" max="1" chance="0.3003003003003" /> <!-- Lv. 5 Giant STR Dye - STR + 5 -->
+				<item id="35477" min="1" max="1" chance="0.3003003003003" /> <!-- Recipe:�Eternal Shoes (60%) -->
+				<item id="35457" min="1" max="1" chance="0.3003003003003" /> <!-- Recipe:�Amaranthine Thrower (60%) -->
+				<item id="35456" min="1" max="1" chance="0.3003003003003" /> <!-- Recipe:�Amaranthine Stormer (60%) -->
+				<item id="35461" min="1" max="1" chance="0.3003003003003" /> <!-- Recipe:�Amaranthine Retributer (60%) -->
+				<item id="35455" min="1" max="1" chance="0.3003003003003" /> <!-- Recipe:�Amaranthine Fighter (60%) -->
+				<item id="35473" min="1" max="1" chance="0.3003003003003" /> <!-- Recipe:�Eternal Circlet (60%) -->
+				<item id="35460" min="1" max="1" chance="0.3003003003003" /> <!-- Recipe:�Amaranthine Caster (60%) -->
+				<item id="35463" min="1" max="1" chance="0.3003003003003" /> <!-- Recipe:�Eternal Breastplate (60%) -->
+				<item id="35470" min="1" max="1" chance="0.3003003003003" /> <!-- Recipe:�Eternal Leather Leggings (60%) -->
+				<item id="35471" min="1" max="1" chance="0.3003003003003" /> <!-- Recipe:�Eternal Leather Gloves (60%) -->
+				<item id="35472" min="1" max="1" chance="0.3003003003003" /> <!-- Recipe:�Eternal Leather Boots (60%) -->
+				<item id="35469" min="1" max="1" chance="0.3003003003003" /> <!-- Recipe:�Eternal Leather Armor (60%) -->
+				<item id="35468" min="1" max="1" chance="0.3003003003003" /> <!-- Recipe:�Eternal Leather Helmet (60%) -->
+				<item id="35454" min="1" max="1" chance="0.3003003003003" /> <!-- Recipe:�Amaranthine Avenger (60%) -->
+				<item id="35464" min="1" max="1" chance="0.3003003003003" /> <!-- Recipe:�Eternal Gaiters (60%) -->
+				<item id="35451" min="1" max="1" chance="0.3003003003003" /> <!-- Recipe:�Amaranthine Shaper (60%) -->
+				<item id="35476" min="1" max="1" chance="0.3003003003003" /> <!-- Recipe:�Eternal Gloves (60%) -->
+				<item id="35459" min="1" max="1" chance="0.3003003003003" /> <!-- Recipe:�Amaranthine Buster (60%) -->
+				<item id="35452" min="1" max="1" chance="0.3003003003003" /> <!-- Recipe:�Amaranthine Cutter (60%) -->
+				<item id="35465" min="1" max="1" chance="0.3003003003003" /> <!-- Recipe:�Eternal Gauntlets (60%) -->
+				<item id="35466" min="1" max="1" chance="0.3003003003003" /> <!-- Recipe:�Eternal Boots (60%) -->
+				<item id="35478" min="1" max="1" chance="0.3003003003003" /> <!-- Recipe:�Eternal Sigil (60%) -->
+				<item id="35458" min="1" max="1" chance="0.3003003003003" /> <!-- Recipe:�Amaranthine Shooter (60%) -->
+				<item id="35474" min="1" max="1" chance="0.3003003003003" /> <!-- Recipe:�Eternal Tunic (60%) -->
+				<item id="35462" min="1" max="1" chance="0.3003003003003" /> <!-- Recipe:�Eternal Helmet (60%) -->
+				<item id="35475" min="1" max="1" chance="0.3003003003003" /> <!-- Recipe:�Eternal Stockings (60%) -->
+				<item id="35467" min="1" max="1" chance="0.3003003003003" /> <!-- Recipe:�Eternal Shield (60%) -->
+				<item id="35453" min="1" max="1" chance="0.3003003003003" /> <!-- Recipe:�Amaranthine Slasher (60%) -->
+				<item id="38069" min="1" max="1" chance="0.0750187546886722" /> <!-- Eternal Shoes Crafting Pack - Robe -->
+				<item id="38049" min="1" max="1" chance="0.0750187546886722" /> <!-- Amaranthine Thrower Crafting Pack -->
+				<item id="38048" min="1" max="1" chance="0.0750187546886722" /> <!-- Amaranthine Stormer Crafting Pack -->
+				<item id="38053" min="1" max="1" chance="0.0750187546886722" /> <!-- Amaranthine Retributer Crafting Pack -->
+				<item id="38047" min="1" max="1" chance="0.0750187546886722" /> <!-- Amaranthine Fighter Crafting Pack -->
+				<item id="38065" min="1" max="1" chance="0.0750187546886722" /> <!-- Eternal Circlet Crafting Pack - Robe -->
+				<item id="38052" min="1" max="1" chance="0.0750187546886722" /> <!-- Amaranthine Caster Crafting Pack -->
+				<item id="38055" min="1" max="1" chance="0.0750187546886722" /> <!-- Eternal Breastplate Crafting Pack - Heavy Armor -->
+				<item id="38062" min="1" max="1" chance="0.0750187546886722" /> <!-- Eternal Leather Leggings Crafting Pack - Light Armor -->
+				<item id="38063" min="1" max="1" chance="0.0750187546886722" /> <!-- Eternal Leather Gloves Crafting Pack - Light Armor -->
+				<item id="38064" min="1" max="1" chance="0.0750187546886722" /> <!-- Eternal Leather Boots Crafting Pack - Light Armor -->
+				<item id="38061" min="1" max="1" chance="0.0750187546886722" /> <!-- Eternal Leather Armor Crafting Pack - Light Armor -->
+				<item id="38060" min="1" max="1" chance="0.0750187546886722" /> <!-- Eternal Leather Helmet Crafting Pack - Light Armor -->
+				<item id="38046" min="1" max="1" chance="0.0750187546886722" /> <!-- Amaranthine Avenger Crafting Pack -->
+				<item id="38056" min="1" max="1" chance="0.0750187546886722" /> <!-- Eternal Gaiters Crafting Pack - Heavy Armor -->
+				<item id="38043" min="1" max="1" chance="0.0750187546886722" /> <!-- Amaranthine Shaper Crafting Pack -->
+				<item id="38068" min="1" max="1" chance="0.0750187546886722" /> <!-- Eternal Gloves Crafting Pack - Robe -->
+				<item id="38051" min="1" max="1" chance="0.0750187546886722" /> <!-- Amaranthine Buster Crafting Pack -->
+				<item id="38044" min="1" max="1" chance="0.0750187546886722" /> <!-- Amaranthine Cutter Crafting Pack -->
+				<item id="38057" min="1" max="1" chance="0.0750187546886722" /> <!-- Eternal Gauntlets Crafting Pack - Heavy Armor -->
+				<item id="38058" min="1" max="1" chance="0.0750187546886722" /> <!-- Eternal Boots Crafting Pack - Heavy Armor -->
+				<item id="38070" min="1" max="1" chance="0.0750187546886722" /> <!-- Eternal Sigil Crafting Pack - Robe -->
+				<item id="38050" min="1" max="1" chance="0.0750187546886722" /> <!-- Amaranthine Shooter Crafting Pack -->
+				<item id="38066" min="1" max="1" chance="0.0750187546886722" /> <!-- Eternal Tunic Crafting Pack - Robe -->
+				<item id="38054" min="1" max="1" chance="0.0750187546886722" /> <!-- Eternal Helmet Crafting Pack - Heavy Armor -->
+				<item id="38067" min="1" max="1" chance="0.0750187546886722" /> <!-- Eternal Stockings Crafting Pack - Robe -->
+				<item id="38059" min="1" max="1" chance="0.0750187546886722" /> <!-- Eternal Shield Crafting Pack - Heavy Armor -->
+				<item id="38045" min="1" max="1" chance="0.0750187546886722" /> <!-- Amaranthine Slasher Crafting Pack -->
 			</drop>
 		</dropLists>
 		<collision>
@@ -240,6 +275,46 @@
 			<radius normal="13" />
 			<height normal="55" />
 		</collision>
+		<dropLists>
+			<drop>
+				<item id="19448" min="1" max="1" chance="80" /> <!-- Blessed Scroll: Enchant Armor (R-grade) -->
+				<item id="19447" min="1" max="1" chance="20" /> <!-- Blessed Scroll: Enchant Weapon (R-grade) -->
+				<item id="38023" min="1" max="1" chance="1.00001" /> <!-- Seraph Helmet Crafting Pack - Heavy Armor -->
+				<item id="38038" min="1" max="1" chance="1" /> <!-- Seraph Shoes Crafting Pack - Robe -->
+				<item id="38034" min="1" max="1" chance="1" /> <!-- Seraph Circlet Crafting Pack - Robe -->
+				<item id="38024" min="1" max="1" chance="1" /> <!-- Seraph Breastplate Crafting Pack - Heavy Armor -->
+				<item id="38031" min="1" max="1" chance="1" /> <!-- Seraph Leather Leggings Crafting Pack - Light Armor -->
+				<item id="38032" min="1" max="1" chance="1" /> <!-- Seraph Leather Gloves Crafting Pack - Light Armor -->
+				<item id="38033" min="1" max="1" chance="1" /> <!-- Seraph Leather Boots Crafting Pack - Light Armor -->
+				<item id="38030" min="1" max="1" chance="1" /> <!-- Seraph Leather Armor Crafting Pack - Light Armor -->
+				<item id="38029" min="1" max="1" chance="1" /> <!-- Seraph Leather Helmet Crafting Pack - Light Armor -->
+				<item id="38025" min="1" max="1" chance="1" /> <!-- Seraph Gaiters Crafting Pack - Heavy Armor -->
+				<item id="38037" min="1" max="1" chance="1" /> <!-- Seraph Gloves Crafting Pack - Robe -->
+				<item id="38026" min="1" max="1" chance="1" /> <!-- Seraph Gauntlets Crafting Pack - Heavy Armor -->
+				<item id="38027" min="1" max="1" chance="1" /> <!-- Seraph Boots Crafting Pack - Heavy Armor -->
+				<item id="38039" min="1" max="1" chance="1" /> <!-- Seraph Sigil Crafting Pack - Robe -->
+				<item id="38035" min="1" max="1" chance="1" /> <!-- Seraph Tunic Crafting Pack - Robe -->
+				<item id="38036" min="1" max="1" chance="1" /> <!-- Seraph Stockings Crafting Pack - Robe -->
+				<item id="38028" min="1" max="1" chance="1" /> <!-- Seraph Shield Crafting Pack - Heavy Armor -->
+				<item id="38069" min="1" max="1" chance="0.5" /> <!-- Eternal Shoes Crafting Pack - Robe -->
+				<item id="38065" min="1" max="1" chance="0.5" /> <!-- Eternal Circlet Crafting Pack - Robe -->
+				<item id="38055" min="1" max="1" chance="0.5" /> <!-- Eternal Breastplate Crafting Pack - Heavy Armor -->
+				<item id="38062" min="1" max="1" chance="0.5" /> <!-- Eternal Leather Leggings Crafting Pack - Light Armor -->
+				<item id="38063" min="1" max="1" chance="0.5" /> <!-- Eternal Leather Gloves Crafting Pack - Light Armor -->
+				<item id="38064" min="1" max="1" chance="0.5" /> <!-- Eternal Leather Boots Crafting Pack - Light Armor -->
+				<item id="38061" min="1" max="1" chance="0.5" /> <!-- Eternal Leather Armor Crafting Pack - Light Armor -->
+				<item id="38060" min="1" max="1" chance="0.5" /> <!-- Eternal Leather Helmet Crafting Pack - Light Armor -->
+				<item id="38056" min="1" max="1" chance="0.5" /> <!-- Eternal Gaiters Crafting Pack - Heavy Armor -->
+				<item id="38068" min="1" max="1" chance="0.5" /> <!-- Eternal Gloves Crafting Pack - Robe -->
+				<item id="38057" min="1" max="1" chance="0.5" /> <!-- Eternal Gauntlets Crafting Pack - Heavy Armor -->
+				<item id="38058" min="1" max="1" chance="0.5" /> <!-- Eternal Boots Crafting Pack - Heavy Armor -->
+				<item id="38070" min="1" max="1" chance="0.5" /> <!-- Eternal Sigil Crafting Pack - Robe -->
+				<item id="38066" min="1" max="1" chance="0.5" /> <!-- Eternal Tunic Crafting Pack - Robe -->
+				<item id="38054" min="1" max="1" chance="0.5" /> <!-- Eternal Helmet Crafting Pack - Heavy Armor -->
+				<item id="38067" min="1" max="1" chance="0.5" /> <!-- Eternal Stockings Crafting Pack - Robe -->
+				<item id="38059" min="1" max="1" chance="0.5" /> <!-- Eternal Shield Crafting Pack - Heavy Armor -->
+			</drop>
+		</dropLists>
 	</npc>
 	<npc id="26106" level="99" type="RaidBoss" name="Veridan" title="Wealthy">
 		<race>DEMONIC</race>
@@ -277,6 +352,14 @@
 			<radius normal="13" />
 			<height normal="55" />
 		</collision>
+		<dropLists>
+			<drop>
+				<item id="57" min="12500000" max="17500000" chance="100" /> <!-- Adena -->
+				<item id="19440" min="1" max="2" chance="100" /> <!-- Gemstone (R-grade) -->
+				<item id="19448" min="1" max="1" chance="8" /> <!-- Blessed Scroll: Enchant Armor (R-grade) -->
+				<item id="19447" min="1" max="1" chance="2" /> <!-- Blessed Scroll: Enchant Weapon (R-grade) -->
+			</drop>
+		</dropLists>
 	</npc>
 	<npc id="26107" level="99" type="RaidBoss" name="Veridan" title="Wise">
 		<race>DEMONIC</race>
@@ -313,6 +396,63 @@
 			<radius normal="13" />
 			<height normal="55" />
 		</collision>
+		<dropLists>
+			<drop>
+				<item id="17527" min="1" max="1" chance="80" /> <!-- Scroll: Enchant Armor (R-grade) -->
+				<item id="17526" min="1" max="1" chance="20" /> <!-- Scroll: Enchant Weapon (R-grade) -->
+				<item id="35322" min="1" max="3" chance="0.5" /> <!-- Seraph Shoe Ingredient -->
+				<item id="35318" min="1" max="3" chance="0.5" /> <!-- Seraph Circlet Ingredient -->
+				<item id="35308" min="1" max="3" chance="0.5" /> <!-- Seraph Breastplate Ingredient -->
+				<item id="35313" min="1" max="3" chance="0.5" /> <!-- Seraph Leather Helmet Ingredient -->
+				<item id="35314" min="1" max="3" chance="0.5" /> <!-- Seraph Leather Armor Ingredient -->
+				<item id="35315" min="1" max="3" chance="0.5" /> <!-- Seraph Leather Legging Ingredient -->
+				<item id="35316" min="1" max="3" chance="0.5" /> <!-- Seraph Leather Glove Ingredient -->
+				<item id="35317" min="1" max="3" chance="0.5" /> <!-- Seraph Leather Boot Ingredient -->
+				<item id="35309" min="1" max="3" chance="0.5" /> <!-- Seraph Gaiter Ingredient -->
+				<item id="35321" min="1" max="3" chance="0.5" /> <!-- Seraph Glove Ingredient -->
+				<item id="35310" min="1" max="3" chance="0.5" /> <!-- Seraph Gauntlet Ingredient -->
+				<item id="35311" min="1" max="3" chance="0.5" /> <!-- Seraph Boot Ingredient -->
+				<item id="35323" min="1" max="3" chance="0.5" /> <!-- Seraph Sigil Ingredient -->
+				<item id="35319" min="1" max="3" chance="0.5" /> <!-- Seraph Tunic Ingredient -->
+				<item id="35307" min="1" max="3" chance="0.5" /> <!-- Seraph Helmet Ingredient -->
+				<item id="35320" min="1" max="3" chance="0.5" /> <!-- Seraph Stocking Ingredient -->
+				<item id="35312" min="1" max="3" chance="0.5" /> <!-- Seraph Shield Ingredient -->
+				<item id="35446" min="1" max="1" chance="0.5" /> <!-- Recipe:�Seraph Shoes (60%) -->
+				<item id="35442" min="1" max="1" chance="0.5" /> <!-- Recipe:�Seraph Circlet (60%) -->
+				<item id="35432" min="1" max="1" chance="0.5" /> <!-- Recipe:�Seraph Breastplate (60%) -->
+				<item id="35438" min="1" max="1" chance="0.5" /> <!-- Recipe:�Seraph Leather Armor (60%) -->
+				<item id="35439" min="1" max="1" chance="0.5" /> <!-- Recipe:�Seraph Leather Leggings (60%) -->
+				<item id="35440" min="1" max="1" chance="0.5" /> <!-- Recipe:�Seraph Leather Gloves (60%) -->
+				<item id="35441" min="1" max="1" chance="0.5" /> <!-- Recipe:�Seraph Leather Boots (60%) -->
+				<item id="35437" min="1" max="1" chance="0.5" /> <!-- Recipe:�Seraph Leather Helmet (60%) -->
+				<item id="35433" min="1" max="1" chance="0.5" /> <!-- Recipe:�Seraph Gaiters (60%) -->
+				<item id="35445" min="1" max="1" chance="0.5" /> <!-- Recipe:�Seraph Gloves (60%) -->
+				<item id="35434" min="1" max="1" chance="0.5" /> <!-- Recipe:�Seraph Gauntlets (60%) -->
+				<item id="35435" min="1" max="1" chance="0.5" /> <!-- Recipe:�Seraph Boots (60%) -->
+				<item id="35447" min="1" max="1" chance="0.5" /> <!-- Recipe:�Seraph Sigil (60%) -->
+				<item id="35443" min="1" max="1" chance="0.5" /> <!-- Recipe:�Seraph Tunic (60%) -->
+				<item id="35431" min="1" max="1" chance="0.5" /> <!-- Recipe:�Seraph Helmet (60%) -->
+				<item id="35444" min="1" max="1" chance="0.5" /> <!-- Recipe:�Seraph Stockings (60%) -->
+				<item id="35436" min="1" max="1" chance="0.5" /> <!-- Recipe:�Seraph Shield (60%) -->
+				<item id="38038" min="1" max="1" chance="0.5" /> <!-- Seraph Shoes Crafting Pack - Robe -->
+				<item id="38034" min="1" max="1" chance="0.5" /> <!-- Seraph Circlet Crafting Pack - Robe -->
+				<item id="38024" min="1" max="1" chance="0.5" /> <!-- Seraph Breastplate Crafting Pack - Heavy Armor -->
+				<item id="38031" min="1" max="1" chance="0.5" /> <!-- Seraph Leather Leggings Crafting Pack - Light Armor -->
+				<item id="38032" min="1" max="1" chance="0.5" /> <!-- Seraph Leather Gloves Crafting Pack - Light Armor -->
+				<item id="38033" min="1" max="1" chance="0.5" /> <!-- Seraph Leather Boots Crafting Pack - Light Armor -->
+				<item id="38030" min="1" max="1" chance="0.5" /> <!-- Seraph Leather Armor Crafting Pack - Light Armor -->
+				<item id="38029" min="1" max="1" chance="0.5" /> <!-- Seraph Leather Helmet Crafting Pack - Light Armor -->
+				<item id="38025" min="1" max="1" chance="0.5" /> <!-- Seraph Gaiters Crafting Pack - Heavy Armor -->
+				<item id="38037" min="1" max="1" chance="0.5" /> <!-- Seraph Gloves Crafting Pack - Robe -->
+				<item id="38026" min="1" max="1" chance="0.5" /> <!-- Seraph Gauntlets Crafting Pack - Heavy Armor -->
+				<item id="38027" min="1" max="1" chance="0.5" /> <!-- Seraph Boots Crafting Pack - Heavy Armor -->
+				<item id="38039" min="1" max="1" chance="0.5" /> <!-- Seraph Sigil Crafting Pack - Robe -->
+				<item id="38035" min="1" max="1" chance="0.5" /> <!-- Seraph Tunic Crafting Pack - Robe -->
+				<item id="38023" min="1" max="1" chance="0.5" /> <!-- Seraph Helmet Crafting Pack - Heavy Armor -->
+				<item id="38036" min="1" max="1" chance="0.5" /> <!-- Seraph Stockings Crafting Pack - Robe -->
+				<item id="38028" min="1" max="1" chance="0.5" /> <!-- Seraph Shield Crafting Pack - Heavy Armor -->
+			</drop>
+		</dropLists>
 	</npc>
 	<npc id="26108" level="99" type="RaidBoss" name="Veridan" title="Armed">
 		<race>DEMONIC</race>
@@ -349,6 +489,46 @@
 			<radius normal="13" />
 			<height normal="55" />
 		</collision>
+		<dropLists>
+			<drop>
+				<item id="19448" min="1" max="1" chance="80" /> <!-- Blessed Scroll: Enchant Armor (R-grade) -->
+				<item id="19447" min="1" max="1" chance="20" /> <!-- Blessed Scroll: Enchant Weapon (R-grade) -->
+				<item id="38023" min="1" max="1" chance="1.00001" /> <!-- Seraph Helmet Crafting Pack - Heavy Armor -->
+				<item id="38038" min="1" max="1" chance="1" /> <!-- Seraph Shoes Crafting Pack - Robe -->
+				<item id="38034" min="1" max="1" chance="1" /> <!-- Seraph Circlet Crafting Pack - Robe -->
+				<item id="38024" min="1" max="1" chance="1" /> <!-- Seraph Breastplate Crafting Pack - Heavy Armor -->
+				<item id="38031" min="1" max="1" chance="1" /> <!-- Seraph Leather Leggings Crafting Pack - Light Armor -->
+				<item id="38032" min="1" max="1" chance="1" /> <!-- Seraph Leather Gloves Crafting Pack - Light Armor -->
+				<item id="38033" min="1" max="1" chance="1" /> <!-- Seraph Leather Boots Crafting Pack - Light Armor -->
+				<item id="38030" min="1" max="1" chance="1" /> <!-- Seraph Leather Armor Crafting Pack - Light Armor -->
+				<item id="38029" min="1" max="1" chance="1" /> <!-- Seraph Leather Helmet Crafting Pack - Light Armor -->
+				<item id="38025" min="1" max="1" chance="1" /> <!-- Seraph Gaiters Crafting Pack - Heavy Armor -->
+				<item id="38037" min="1" max="1" chance="1" /> <!-- Seraph Gloves Crafting Pack - Robe -->
+				<item id="38026" min="1" max="1" chance="1" /> <!-- Seraph Gauntlets Crafting Pack - Heavy Armor -->
+				<item id="38027" min="1" max="1" chance="1" /> <!-- Seraph Boots Crafting Pack - Heavy Armor -->
+				<item id="38039" min="1" max="1" chance="1" /> <!-- Seraph Sigil Crafting Pack - Robe -->
+				<item id="38035" min="1" max="1" chance="1" /> <!-- Seraph Tunic Crafting Pack - Robe -->
+				<item id="38036" min="1" max="1" chance="1" /> <!-- Seraph Stockings Crafting Pack - Robe -->
+				<item id="38028" min="1" max="1" chance="1" /> <!-- Seraph Shield Crafting Pack - Heavy Armor -->
+				<item id="38069" min="1" max="1" chance="0.5" /> <!-- Eternal Shoes Crafting Pack - Robe -->
+				<item id="38065" min="1" max="1" chance="0.5" /> <!-- Eternal Circlet Crafting Pack - Robe -->
+				<item id="38055" min="1" max="1" chance="0.5" /> <!-- Eternal Breastplate Crafting Pack - Heavy Armor -->
+				<item id="38062" min="1" max="1" chance="0.5" /> <!-- Eternal Leather Leggings Crafting Pack - Light Armor -->
+				<item id="38063" min="1" max="1" chance="0.5" /> <!-- Eternal Leather Gloves Crafting Pack - Light Armor -->
+				<item id="38064" min="1" max="1" chance="0.5" /> <!-- Eternal Leather Boots Crafting Pack - Light Armor -->
+				<item id="38061" min="1" max="1" chance="0.5" /> <!-- Eternal Leather Armor Crafting Pack - Light Armor -->
+				<item id="38060" min="1" max="1" chance="0.5" /> <!-- Eternal Leather Helmet Crafting Pack - Light Armor -->
+				<item id="38056" min="1" max="1" chance="0.5" /> <!-- Eternal Gaiters Crafting Pack - Heavy Armor -->
+				<item id="38068" min="1" max="1" chance="0.5" /> <!-- Eternal Gloves Crafting Pack - Robe -->
+				<item id="38057" min="1" max="1" chance="0.5" /> <!-- Eternal Gauntlets Crafting Pack - Heavy Armor -->
+				<item id="38058" min="1" max="1" chance="0.5" /> <!-- Eternal Boots Crafting Pack - Heavy Armor -->
+				<item id="38070" min="1" max="1" chance="0.5" /> <!-- Eternal Sigil Crafting Pack - Robe -->
+				<item id="38066" min="1" max="1" chance="0.5" /> <!-- Eternal Tunic Crafting Pack - Robe -->
+				<item id="38054" min="1" max="1" chance="0.5" /> <!-- Eternal Helmet Crafting Pack - Heavy Armor -->
+				<item id="38067" min="1" max="1" chance="0.5" /> <!-- Eternal Stockings Crafting Pack - Robe -->
+				<item id="38059" min="1" max="1" chance="0.5" /> <!-- Eternal Shield Crafting Pack - Heavy Armor -->
+			</drop>
+		</dropLists>
 	</npc>
 	<npc id="26109" level="99" type="RaidBoss" name="Veridan" title="Wealthy">
 		<race>DEMONIC</race>
@@ -385,6 +565,14 @@
 			<radius normal="13" />
 			<height normal="55" />
 		</collision>
+		<dropLists>
+			<drop>
+				<item id="57" min="12500000" max="17500000" chance="100" /> <!-- Adena -->
+				<item id="19440" min="1" max="2" chance="100" /> <!-- Gemstone (R-grade) -->
+				<item id="19448" min="1" max="1" chance="8" /> <!-- Blessed Scroll: Enchant Armor (R-grade) -->
+				<item id="19447" min="1" max="1" chance="2" /> <!-- Blessed Scroll: Enchant Weapon (R-grade) -->
+			</drop>
+		</dropLists>
 	</npc>
 	<npc id="26110" level="99" type="RaidBoss" name="Veridan" title="Wise">
 		<race>DEMONIC</race>
@@ -421,6 +609,63 @@
 			<radius normal="13" />
 			<height normal="55" />
 		</collision>
+		<dropLists>
+			<drop>
+				<item id="17527" min="1" max="1" chance="80" /> <!-- Scroll: Enchant Armor (R-grade) -->
+				<item id="17526" min="1" max="1" chance="20" /> <!-- Scroll: Enchant Weapon (R-grade) -->
+				<item id="35322" min="1" max="3" chance="0.5" /> <!-- Seraph Shoe Ingredient -->
+				<item id="35318" min="1" max="3" chance="0.5" /> <!-- Seraph Circlet Ingredient -->
+				<item id="35308" min="1" max="3" chance="0.5" /> <!-- Seraph Breastplate Ingredient -->
+				<item id="35313" min="1" max="3" chance="0.5" /> <!-- Seraph Leather Helmet Ingredient -->
+				<item id="35314" min="1" max="3" chance="0.5" /> <!-- Seraph Leather Armor Ingredient -->
+				<item id="35315" min="1" max="3" chance="0.5" /> <!-- Seraph Leather Legging Ingredient -->
+				<item id="35316" min="1" max="3" chance="0.5" /> <!-- Seraph Leather Glove Ingredient -->
+				<item id="35317" min="1" max="3" chance="0.5" /> <!-- Seraph Leather Boot Ingredient -->
+				<item id="35309" min="1" max="3" chance="0.5" /> <!-- Seraph Gaiter Ingredient -->
+				<item id="35321" min="1" max="3" chance="0.5" /> <!-- Seraph Glove Ingredient -->
+				<item id="35310" min="1" max="3" chance="0.5" /> <!-- Seraph Gauntlet Ingredient -->
+				<item id="35311" min="1" max="3" chance="0.5" /> <!-- Seraph Boot Ingredient -->
+				<item id="35323" min="1" max="3" chance="0.5" /> <!-- Seraph Sigil Ingredient -->
+				<item id="35319" min="1" max="3" chance="0.5" /> <!-- Seraph Tunic Ingredient -->
+				<item id="35307" min="1" max="3" chance="0.5" /> <!-- Seraph Helmet Ingredient -->
+				<item id="35320" min="1" max="3" chance="0.5" /> <!-- Seraph Stocking Ingredient -->
+				<item id="35312" min="1" max="3" chance="0.5" /> <!-- Seraph Shield Ingredient -->
+				<item id="35446" min="1" max="1" chance="0.5" /> <!-- Recipe:�Seraph Shoes (60%) -->
+				<item id="35442" min="1" max="1" chance="0.5" /> <!-- Recipe:�Seraph Circlet (60%) -->
+				<item id="35432" min="1" max="1" chance="0.5" /> <!-- Recipe:�Seraph Breastplate (60%) -->
+				<item id="35438" min="1" max="1" chance="0.5" /> <!-- Recipe:�Seraph Leather Armor (60%) -->
+				<item id="35439" min="1" max="1" chance="0.5" /> <!-- Recipe:�Seraph Leather Leggings (60%) -->
+				<item id="35440" min="1" max="1" chance="0.5" /> <!-- Recipe:�Seraph Leather Gloves (60%) -->
+				<item id="35441" min="1" max="1" chance="0.5" /> <!-- Recipe:�Seraph Leather Boots (60%) -->
+				<item id="35437" min="1" max="1" chance="0.5" /> <!-- Recipe:�Seraph Leather Helmet (60%) -->
+				<item id="35433" min="1" max="1" chance="0.5" /> <!-- Recipe:�Seraph Gaiters (60%) -->
+				<item id="35445" min="1" max="1" chance="0.5" /> <!-- Recipe:�Seraph Gloves (60%) -->
+				<item id="35434" min="1" max="1" chance="0.5" /> <!-- Recipe:�Seraph Gauntlets (60%) -->
+				<item id="35435" min="1" max="1" chance="0.5" /> <!-- Recipe:�Seraph Boots (60%) -->
+				<item id="35447" min="1" max="1" chance="0.5" /> <!-- Recipe:�Seraph Sigil (60%) -->
+				<item id="35443" min="1" max="1" chance="0.5" /> <!-- Recipe:�Seraph Tunic (60%) -->
+				<item id="35431" min="1" max="1" chance="0.5" /> <!-- Recipe:�Seraph Helmet (60%) -->
+				<item id="35444" min="1" max="1" chance="0.5" /> <!-- Recipe:�Seraph Stockings (60%) -->
+				<item id="35436" min="1" max="1" chance="0.5" /> <!-- Recipe:�Seraph Shield (60%) -->
+				<item id="38038" min="1" max="1" chance="0.5" /> <!-- Seraph Shoes Crafting Pack - Robe -->
+				<item id="38034" min="1" max="1" chance="0.5" /> <!-- Seraph Circlet Crafting Pack - Robe -->
+				<item id="38024" min="1" max="1" chance="0.5" /> <!-- Seraph Breastplate Crafting Pack - Heavy Armor -->
+				<item id="38031" min="1" max="1" chance="0.5" /> <!-- Seraph Leather Leggings Crafting Pack - Light Armor -->
+				<item id="38032" min="1" max="1" chance="0.5" /> <!-- Seraph Leather Gloves Crafting Pack - Light Armor -->
+				<item id="38033" min="1" max="1" chance="0.5" /> <!-- Seraph Leather Boots Crafting Pack - Light Armor -->
+				<item id="38030" min="1" max="1" chance="0.5" /> <!-- Seraph Leather Armor Crafting Pack - Light Armor -->
+				<item id="38029" min="1" max="1" chance="0.5" /> <!-- Seraph Leather Helmet Crafting Pack - Light Armor -->
+				<item id="38025" min="1" max="1" chance="0.5" /> <!-- Seraph Gaiters Crafting Pack - Heavy Armor -->
+				<item id="38037" min="1" max="1" chance="0.5" /> <!-- Seraph Gloves Crafting Pack - Robe -->
+				<item id="38026" min="1" max="1" chance="0.5" /> <!-- Seraph Gauntlets Crafting Pack - Heavy Armor -->
+				<item id="38027" min="1" max="1" chance="0.5" /> <!-- Seraph Boots Crafting Pack - Heavy Armor -->
+				<item id="38039" min="1" max="1" chance="0.5" /> <!-- Seraph Sigil Crafting Pack - Robe -->
+				<item id="38035" min="1" max="1" chance="0.5" /> <!-- Seraph Tunic Crafting Pack - Robe -->
+				<item id="38023" min="1" max="1" chance="0.5" /> <!-- Seraph Helmet Crafting Pack - Heavy Armor -->
+				<item id="38036" min="1" max="1" chance="0.5" /> <!-- Seraph Stockings Crafting Pack - Robe -->
+				<item id="38028" min="1" max="1" chance="0.5" /> <!-- Seraph Shield Crafting Pack - Heavy Armor -->
+			</drop>
+		</dropLists>
 	</npc>
 	<npc id="26111" level="99" type="RaidBoss" name="Kechi" title="Armed">
 		<race>DEMONIC</race>
@@ -456,151 +701,42 @@
 		</skillList>
 		<dropLists>
 			<drop>
-				<item id="57" min="25000000" max="35000000" chance="100" /> <!-- Adena -->
-				<item id="38025" min="1" max="1" chance="0.299999999999997" /> <!-- Seraph Gaiters Crafting Pack - Heavy Armor -->
-				<item id="38024" min="1" max="1" chance="0.299999999999997" /> <!-- Seraph Breastplate Crafting Pack - Heavy Armor -->
-				<item id="38036" min="1" max="1" chance="0.299999999999997" /> <!-- Seraph Stockings Crafting Pack - Robe -->
-				<item id="38035" min="1" max="1" chance="0.299999999999997" /> <!-- Seraph Tunic Crafting Pack - Robe -->
-				<item id="38031" min="1" max="1" chance="0.299999999999997" /> <!-- Seraph Leather Leggings Crafting Pack - Light Armor -->
-				<item id="38030" min="1" max="1" chance="0.299999999999997" /> <!-- Seraph Leather Armor Crafting Pack - Light Armor -->
-				<item id="35315" min="1" max="1" chance="0.299999999999997" /> <!-- Seraph Leather Legging Ingredient -->
-				<item id="35314" min="1" max="1" chance="0.299999999999997" /> <!-- Seraph Leather Armor Ingredient -->
-				<item id="35309" min="1" max="1" chance="0.299999999999997" /> <!-- Seraph Gaiter Ingredient -->
-				<item id="35308" min="1" max="1" chance="0.299999999999997" /> <!-- Seraph Breastplate Ingredient -->
-				<item id="35319" min="1" max="1" chance="0.299999999999997" /> <!-- Seraph Tunic Ingredient -->
-				<item id="35320" min="1" max="1" chance="0.299999999999997" /> <!-- Seraph Stocking Ingredient -->
-				<item id="38035" min="1" max="1" chance="0.750000000000006" /> <!-- Seraph Tunic Crafting Pack - Robe -->
-				<item id="38036" min="1" max="1" chance="0.750000000000006" /> <!-- Seraph Stockings Crafting Pack - Robe -->
-				<item id="38031" min="1" max="1" chance="0.750000000000006" /> <!-- Seraph Leather Leggings Crafting Pack - Light Armor -->
-				<item id="38030" min="1" max="1" chance="0.750000000000006" /> <!-- Seraph Leather Armor Crafting Pack - Light Armor -->
-				<item id="38024" min="1" max="1" chance="0.750000000000006" /> <!-- Seraph Breastplate Crafting Pack - Heavy Armor -->
-				<item id="38025" min="1" max="1" chance="0.750000000000006" /> <!-- Seraph Gaiters Crafting Pack - Heavy Armor -->
-				<item id="38066" min="1" max="1" chance="0.299999999999997" /> <!-- Eternal Tunic Crafting Pack - Robe -->
-				<item id="38067" min="1" max="1" chance="0.299999999999997" /> <!-- Eternal Stockings Crafting Pack - Robe -->
-				<item id="38062" min="1" max="1" chance="0.299999999999997" /> <!-- Eternal Leather Leggings Crafting Pack - Light Armor -->
-				<item id="38061" min="1" max="1" chance="0.299999999999997" /> <!-- Eternal Leather Armor Crafting Pack - Light Armor -->
-				<item id="38055" min="1" max="1" chance="0.299999999999997" /> <!-- Eternal Breastplate Crafting Pack - Heavy Armor -->
-				<item id="38056" min="1" max="1" chance="0.299999999999997" /> <!-- Eternal Gaiters Crafting Pack - Heavy Armor -->
-				<item id="38025" min="1" max="1" chance="0.299999999999997" /> <!-- Seraph Gaiters Crafting Pack - Heavy Armor -->
-				<item id="38024" min="1" max="1" chance="0.299999999999997" /> <!-- Seraph Breastplate Crafting Pack - Heavy Armor -->
-				<item id="38036" min="1" max="1" chance="0.299999999999997" /> <!-- Seraph Stockings Crafting Pack - Robe -->
-				<item id="38035" min="1" max="1" chance="0.299999999999997" /> <!-- Seraph Tunic Crafting Pack - Robe -->
-				<item id="38031" min="1" max="1" chance="0.299999999999997" /> <!-- Seraph Leather Leggings Crafting Pack - Light Armor -->
-				<item id="38030" min="1" max="1" chance="0.299999999999997" /> <!-- Seraph Leather Armor Crafting Pack - Light Armor -->
-				<item id="35315" min="1" max="1" chance="0.299999999999997" /> <!-- Seraph Leather Legging Ingredient -->
-				<item id="35314" min="1" max="1" chance="0.299999999999997" /> <!-- Seraph Leather Armor Ingredient -->
-				<item id="35309" min="1" max="1" chance="0.299999999999997" /> <!-- Seraph Gaiter Ingredient -->
-				<item id="35308" min="1" max="1" chance="0.299999999999997" /> <!-- Seraph Breastplate Ingredient -->
-				<item id="35319" min="1" max="1" chance="0.299999999999997" /> <!-- Seraph Tunic Ingredient -->
-				<item id="35320" min="1" max="1" chance="0.299999999999997" /> <!-- Seraph Stocking Ingredient -->
-				<item id="38023" min="1" max="1" chance="0.300000000000009" /> <!-- Seraph Helmet Crafting Pack - Heavy Armor -->
-				<item id="38026" min="1" max="1" chance="0.300000000000009" /> <!-- Seraph Gauntlets Crafting Pack - Heavy Armor -->
-				<item id="38027" min="1" max="1" chance="0.300000000000009" /> <!-- Seraph Boots Crafting Pack - Heavy Armor -->
-				<item id="38028" min="1" max="1" chance="0.300000000000009" /> <!-- Seraph Shield Crafting Pack - Heavy Armor -->
-				<item id="38039" min="1" max="1" chance="0.300000000000009" /> <!-- Seraph Sigil Crafting Pack - Robe -->
-				<item id="38038" min="1" max="1" chance="0.300000000000009" /> <!-- Seraph Shoes Crafting Pack - Robe -->
-				<item id="38037" min="1" max="1" chance="0.300000000000009" /> <!-- Seraph Gloves Crafting Pack - Robe -->
-				<item id="38034" min="1" max="1" chance="0.300000000000009" /> <!-- Seraph Circlet Crafting Pack - Robe -->
-				<item id="38033" min="1" max="1" chance="0.300000000000009" /> <!-- Seraph Leather Boots Crafting Pack - Light Armor -->
-				<item id="38032" min="1" max="1" chance="0.300000000000009" /> <!-- Seraph Leather Gloves Crafting Pack - Light Armor -->
-				<item id="38029" min="1" max="1" chance="0.300000000000009" /> <!-- Seraph Leather Helmet Crafting Pack - Light Armor -->
-				<item id="35307" min="1" max="1" chance="0.300000000000009" /> <!-- Seraph Helmet Ingredient -->
-				<item id="35318" min="1" max="1" chance="0.300000000000009" /> <!-- Seraph Circlet Ingredient -->
-				<item id="35313" min="1" max="1" chance="0.300000000000009" /> <!-- Seraph Leather Helmet Ingredient -->
-				<item id="35312" min="1" max="1" chance="0.300000000000009" /> <!-- Seraph Shield Ingredient -->
-				<item id="35323" min="1" max="1" chance="0.300000000000009" /> <!-- Seraph Sigil Ingredient -->
-				<item id="38033" min="1" max="1" chance="0.749999999999991" /> <!-- Seraph Leather Boots Crafting Pack - Light Armor -->
-				<item id="38034" min="1" max="1" chance="0.749999999999991" /> <!-- Seraph Circlet Crafting Pack - Robe -->
-				<item id="38037" min="1" max="1" chance="0.749999999999991" /> <!-- Seraph Gloves Crafting Pack - Robe -->
-				<item id="38038" min="1" max="1" chance="0.749999999999991" /> <!-- Seraph Shoes Crafting Pack - Robe -->
-				<item id="38039" min="1" max="1" chance="0.749999999999991" /> <!-- Seraph Sigil Crafting Pack - Robe -->
-				<item id="38032" min="1" max="1" chance="0.749999999999991" /> <!-- Seraph Leather Gloves Crafting Pack - Light Armor -->
-				<item id="38023" min="1" max="1" chance="0.749999999999991" /> <!-- Seraph Helmet Crafting Pack - Heavy Armor -->
-				<item id="38026" min="1" max="1" chance="0.749999999999991" /> <!-- Seraph Gauntlets Crafting Pack - Heavy Armor -->
-				<item id="38027" min="1" max="1" chance="0.749999999999991" /> <!-- Seraph Boots Crafting Pack - Heavy Armor -->
-				<item id="38028" min="1" max="1" chance="0.749999999999991" /> <!-- Seraph Shield Crafting Pack - Heavy Armor -->
-				<item id="38029" min="1" max="1" chance="0.749999999999991" /> <!-- Seraph Leather Helmet Crafting Pack - Light Armor -->
-				<item id="38064" min="1" max="1" chance="0.300000000000009" /> <!-- Eternal Leather Boots Crafting Pack - Light Armor -->
-				<item id="38065" min="1" max="1" chance="0.300000000000009" /> <!-- Eternal Circlet Crafting Pack - Robe -->
-				<item id="38068" min="1" max="1" chance="0.300000000000009" /> <!-- Eternal Gloves Crafting Pack - Robe -->
-				<item id="38069" min="1" max="1" chance="0.300000000000009" /> <!-- Eternal Shoes Crafting Pack - Robe -->
-				<item id="38070" min="1" max="1" chance="0.300000000000009" /> <!-- Eternal Sigil Crafting Pack - Robe -->
-				<item id="38063" min="1" max="1" chance="0.300000000000009" /> <!-- Eternal Leather Gloves Crafting Pack - Light Armor -->
-				<item id="38054" min="1" max="1" chance="0.300000000000009" /> <!-- Eternal Helmet Crafting Pack - Heavy Armor -->
-				<item id="38057" min="1" max="1" chance="0.300000000000009" /> <!-- Eternal Gauntlets Crafting Pack - Heavy Armor -->
-				<item id="38058" min="1" max="1" chance="0.300000000000009" /> <!-- Eternal Boots Crafting Pack - Heavy Armor -->
-				<item id="38059" min="1" max="1" chance="0.300000000000009" /> <!-- Eternal Shield Crafting Pack - Heavy Armor -->
-				<item id="38060" min="1" max="1" chance="0.300000000000009" /> <!-- Eternal Leather Helmet Crafting Pack - Light Armor -->
-				<item id="38026" min="1" max="1" chance="0.300000000000009" /> <!-- Seraph Gauntlets Crafting Pack - Heavy Armor -->
-				<item id="38023" min="1" max="1" chance="0.300000000000009" /> <!-- Seraph Helmet Crafting Pack - Heavy Armor -->
-				<item id="38027" min="1" max="1" chance="0.300000000000009" /> <!-- Seraph Boots Crafting Pack - Heavy Armor -->
-				<item id="38028" min="1" max="1" chance="0.300000000000009" /> <!-- Seraph Shield Crafting Pack - Heavy Armor -->
-				<item id="38039" min="1" max="1" chance="0.300000000000009" /> <!-- Seraph Sigil Crafting Pack - Robe -->
-				<item id="38038" min="1" max="1" chance="0.300000000000009" /> <!-- Seraph Shoes Crafting Pack - Robe -->
-				<item id="38037" min="1" max="1" chance="0.300000000000009" /> <!-- Seraph Gloves Crafting Pack - Robe -->
-				<item id="38034" min="1" max="1" chance="0.300000000000009" /> <!-- Seraph Circlet Crafting Pack - Robe -->
-				<item id="38033" min="1" max="1" chance="0.300000000000009" /> <!-- Seraph Leather Boots Crafting Pack - Light Armor -->
-				<item id="38032" min="1" max="1" chance="0.300000000000009" /> <!-- Seraph Leather Gloves Crafting Pack - Light Armor -->
-				<item id="38029" min="1" max="1" chance="0.300000000000009" /> <!-- Seraph Leather Helmet Crafting Pack - Light Armor -->
-				<item id="35313" min="1" max="1" chance="0.300000000000009" /> <!-- Seraph Leather Helmet Ingredient -->
-				<item id="35312" min="1" max="1" chance="0.300000000000009" /> <!-- Seraph Shield Ingredient -->
-				<item id="35307" min="1" max="1" chance="0.300000000000009" /> <!-- Seraph Helmet Ingredient -->
-				<item id="35318" min="1" max="1" chance="0.300000000000009" /> <!-- Seraph Circlet Ingredient -->
-				<item id="35323" min="1" max="1" chance="0.300000000000009" /> <!-- Seraph Sigil Ingredient -->
-				<item id="36513" min="4" max="10" chance="16.266495411324" /> <!-- Elcyum Powder -->
-				<item id="17527" min="1" max="1" chance="14.52839178803" /> <!-- Scroll: Enchant Armor (R-grade) -->
-				<item id="17526" min="1" max="1" chance="3.6336516749187" /> <!-- Scroll: Enchant Weapon (R-grade) -->
-				<item id="35447" min="1" max="1" chance="0.062149116446728" /> <!-- Recipe: Seraph Sigil (60%) -->
-				<item id="35446" min="1" max="1" chance="0.062149116446728" /> <!-- Recipe: Seraph Shoes (60%) -->
-				<item id="35445" min="1" max="1" chance="0.062149116446728" /> <!-- Recipe: Seraph Gloves (60%) -->
-				<item id="35444" min="1" max="1" chance="0.062149116446728" /> <!-- Recipe: Seraph Stockings (60%) -->
-				<item id="35443" min="1" max="1" chance="0.062149116446728" /> <!-- Recipe: Seraph Tunic (60%) -->
-				<item id="35442" min="1" max="1" chance="0.062149116446728" /> <!-- Recipe: Seraph Circlet (60%) -->
-				<item id="35441" min="1" max="1" chance="0.062149116446728" /> <!-- Recipe: Seraph Leather Boots (60%) -->
-				<item id="35440" min="1" max="1" chance="0.062149116446728" /> <!-- Recipe: Seraph Leather Gloves (60%) -->
-				<item id="35317" min="1" max="1" chance="0.062149116446728" /> <!-- Seraph Leather Boot Ingredient -->
-				<item id="35316" min="1" max="1" chance="0.062149116446728" /> <!-- Seraph Leather Glove Ingredient -->
-				<item id="35311" min="1" max="1" chance="0.062149116446728" /> <!-- Seraph Boot Ingredient -->
-				<item id="35310" min="1" max="1" chance="0.062149116446728" /> <!-- Seraph Gauntlet Ingredient -->
-				<item id="35439" min="1" max="1" chance="0.062149116446728" /> <!-- Recipe: Seraph Leather Leggings (60%) -->
-				<item id="35438" min="1" max="1" chance="0.062149116446728" /> <!-- Recipe: Seraph Leather Armor (60%) -->
-				<item id="35437" min="1" max="1" chance="0.062149116446728" /> <!-- Recipe: Seraph Leather Helmet (60%) -->
-				<item id="35436" min="1" max="1" chance="0.062149116446728" /> <!-- Recipe: Seraph Shield (60%) -->
-				<item id="35435" min="1" max="1" chance="0.062149116446728" /> <!-- Recipe: Seraph Boots (60%) -->
-				<item id="35434" min="1" max="1" chance="0.062149116446728" /> <!-- Recipe: Seraph Gauntlets (60%) -->
-				<item id="35433" min="1" max="1" chance="0.062149116446728" /> <!-- Recipe: Seraph Gaiters (60%) -->
-				<item id="35321" min="1" max="1" chance="0.062149116446728" /> <!-- Seraph Glove Ingredient -->
-				<item id="35322" min="1" max="1" chance="0.062149116446728" /> <!-- Seraph Shoe Ingredient -->
-				<item id="35431" min="1" max="1" chance="0.062149116446728" /> <!-- Recipe: Seraph Helmet (60%) -->
-				<item id="35432" min="1" max="1" chance="0.062149116446728" /> <!-- Recipe: Seraph Breastplate (60%) -->
-				<item id="17527" min="1" max="1" chance="16.347289262704" /> <!-- Scroll: Enchant Armor (R-grade) -->
-				<item id="17526" min="1" max="1" chance="4.2675726626753" /> <!-- Scroll: Enchant Weapon (R-grade) -->
-				<item id="19440" min="2" max="4" chance="20.716372148909" /> <!-- Gemstone (R-grade) -->
-				<item id="17527" min="1" max="1" chance="16.757473431253" /> <!-- Scroll: Enchant Armor (R-grade) -->
-				<item id="17526" min="1" max="1" chance="4.1888504485095" /> <!-- Scroll: Enchant Weapon (R-grade) -->
-				<item id="35447" min="1" max="1" chance="0.062149116446728" /> <!-- Recipe: Seraph Sigil (60%) -->
-				<item id="35446" min="1" max="1" chance="0.062149116446728" /> <!-- Recipe: Seraph Shoes (60%) -->
-				<item id="35445" min="1" max="1" chance="0.062149116446728" /> <!-- Recipe: Seraph Gloves (60%) -->
-				<item id="35444" min="1" max="1" chance="0.062149116446728" /> <!-- Recipe: Seraph Stockings (60%) -->
-				<item id="35443" min="1" max="1" chance="0.062149116446728" /> <!-- Recipe: Seraph Tunic (60%) -->
-				<item id="35442" min="1" max="1" chance="0.062149116446728" /> <!-- Recipe: Seraph Circlet (60%) -->
-				<item id="35441" min="1" max="1" chance="0.062149116446728" /> <!-- Recipe: Seraph Leather Boots (60%) -->
-				<item id="35440" min="1" max="1" chance="0.062149116446728" /> <!-- Recipe: Seraph Leather Gloves (60%) -->
-				<item id="35439" min="1" max="1" chance="0.062149116446728" /> <!-- Recipe: Seraph Leather Leggings (60%) -->
-				<item id="35438" min="1" max="1" chance="0.062149116446728" /> <!-- Recipe: Seraph Leather Armor (60%) -->
-				<item id="35317" min="1" max="1" chance="0.062149116446728" /> <!-- Seraph Leather Boot Ingredient -->
-				<item id="35316" min="1" max="1" chance="0.062149116446728" /> <!-- Seraph Leather Glove Ingredient -->
-				<item id="35311" min="1" max="1" chance="0.062149116446728" /> <!-- Seraph Boot Ingredient -->
-				<item id="35310" min="1" max="1" chance="0.062149116446728" /> <!-- Seraph Gauntlet Ingredient -->
-				<item id="35437" min="1" max="1" chance="0.062149116446728" /> <!-- Recipe: Seraph Leather Helmet (60%) -->
-				<item id="35436" min="1" max="1" chance="0.062149116446728" /> <!-- Recipe: Seraph Shield (60%) -->
-				<item id="35435" min="1" max="1" chance="0.062149116446728" /> <!-- Recipe: Seraph Boots (60%) -->
-				<item id="35434" min="1" max="1" chance="0.062149116446728" /> <!-- Recipe: Seraph Gauntlets (60%) -->
-				<item id="35433" min="1" max="1" chance="0.062149116446728" /> <!-- Recipe: Seraph Gaiters (60%) -->
-				<item id="35432" min="1" max="1" chance="0.062149116446728" /> <!-- Recipe: Seraph Breastplate (60%) -->
-				<item id="35431" min="1" max="1" chance="0.062149116446728" /> <!-- Recipe: Seraph Helmet (60%) -->
-				<item id="35322" min="1" max="1" chance="0.062149116446728" /> <!-- Seraph Shoe Ingredient -->
-				<item id="35321" min="1" max="1" chance="0.062149116446728" /> <!-- Seraph Glove Ingredient -->
+				<item id="19448" min="1" max="1" chance="80" /> <!-- Blessed Scroll: Enchant Armor (R-grade) -->
+				<item id="19447" min="1" max="1" chance="20" /> <!-- Blessed Scroll: Enchant Weapon (R-grade) -->
+				<item id="38023" min="1" max="1" chance="1.00001" /> <!-- Seraph Helmet Crafting Pack - Heavy Armor -->
+				<item id="38038" min="1" max="1" chance="1" /> <!-- Seraph Shoes Crafting Pack - Robe -->
+				<item id="38034" min="1" max="1" chance="1" /> <!-- Seraph Circlet Crafting Pack - Robe -->
+				<item id="38024" min="1" max="1" chance="1" /> <!-- Seraph Breastplate Crafting Pack - Heavy Armor -->
+				<item id="38031" min="1" max="1" chance="1" /> <!-- Seraph Leather Leggings Crafting Pack - Light Armor -->
+				<item id="38032" min="1" max="1" chance="1" /> <!-- Seraph Leather Gloves Crafting Pack - Light Armor -->
+				<item id="38033" min="1" max="1" chance="1" /> <!-- Seraph Leather Boots Crafting Pack - Light Armor -->
+				<item id="38030" min="1" max="1" chance="1" /> <!-- Seraph Leather Armor Crafting Pack - Light Armor -->
+				<item id="38029" min="1" max="1" chance="1" /> <!-- Seraph Leather Helmet Crafting Pack - Light Armor -->
+				<item id="38025" min="1" max="1" chance="1" /> <!-- Seraph Gaiters Crafting Pack - Heavy Armor -->
+				<item id="38037" min="1" max="1" chance="1" /> <!-- Seraph Gloves Crafting Pack - Robe -->
+				<item id="38026" min="1" max="1" chance="1" /> <!-- Seraph Gauntlets Crafting Pack - Heavy Armor -->
+				<item id="38027" min="1" max="1" chance="1" /> <!-- Seraph Boots Crafting Pack - Heavy Armor -->
+				<item id="38039" min="1" max="1" chance="1" /> <!-- Seraph Sigil Crafting Pack - Robe -->
+				<item id="38035" min="1" max="1" chance="1" /> <!-- Seraph Tunic Crafting Pack - Robe -->
+				<item id="38036" min="1" max="1" chance="1" /> <!-- Seraph Stockings Crafting Pack - Robe -->
+				<item id="38028" min="1" max="1" chance="1" /> <!-- Seraph Shield Crafting Pack - Heavy Armor -->
+				<item id="38069" min="1" max="1" chance="0.5" /> <!-- Eternal Shoes Crafting Pack - Robe -->
+				<item id="38065" min="1" max="1" chance="0.5" /> <!-- Eternal Circlet Crafting Pack - Robe -->
+				<item id="38055" min="1" max="1" chance="0.5" /> <!-- Eternal Breastplate Crafting Pack - Heavy Armor -->
+				<item id="38062" min="1" max="1" chance="0.5" /> <!-- Eternal Leather Leggings Crafting Pack - Light Armor -->
+				<item id="38063" min="1" max="1" chance="0.5" /> <!-- Eternal Leather Gloves Crafting Pack - Light Armor -->
+				<item id="38064" min="1" max="1" chance="0.5" /> <!-- Eternal Leather Boots Crafting Pack - Light Armor -->
+				<item id="38061" min="1" max="1" chance="0.5" /> <!-- Eternal Leather Armor Crafting Pack - Light Armor -->
+				<item id="38060" min="1" max="1" chance="0.5" /> <!-- Eternal Leather Helmet Crafting Pack - Light Armor -->
+				<item id="38056" min="1" max="1" chance="0.5" /> <!-- Eternal Gaiters Crafting Pack - Heavy Armor -->
+				<item id="38068" min="1" max="1" chance="0.5" /> <!-- Eternal Gloves Crafting Pack - Robe -->
+				<item id="38057" min="1" max="1" chance="0.5" /> <!-- Eternal Gauntlets Crafting Pack - Heavy Armor -->
+				<item id="38058" min="1" max="1" chance="0.5" /> <!-- Eternal Boots Crafting Pack - Heavy Armor -->
+				<item id="38070" min="1" max="1" chance="0.5" /> <!-- Eternal Sigil Crafting Pack - Robe -->
+				<item id="38066" min="1" max="1" chance="0.5" /> <!-- Eternal Tunic Crafting Pack - Robe -->
+				<item id="38054" min="1" max="1" chance="0.5" /> <!-- Eternal Helmet Crafting Pack - Heavy Armor -->
+				<item id="38067" min="1" max="1" chance="0.5" /> <!-- Eternal Stockings Crafting Pack - Robe -->
+				<item id="38059" min="1" max="1" chance="0.5" /> <!-- Eternal Shield Crafting Pack - Heavy Armor -->
 			</drop>
 			<lucky>
 				<item id="39629" min="2" max="2" chance="100" /> <!-- Fortune Pocket - Stage 1 -->
@@ -646,150 +782,9 @@
 		<dropLists>
 			<drop>
 				<item id="57" min="25000000" max="35000000" chance="100" /> <!-- Adena -->
-				<item id="38025" min="1" max="1" chance="0.299999999999997" /> <!-- Seraph Gaiters Crafting Pack - Heavy Armor -->
-				<item id="38024" min="1" max="1" chance="0.299999999999997" /> <!-- Seraph Breastplate Crafting Pack - Heavy Armor -->
-				<item id="38036" min="1" max="1" chance="0.299999999999997" /> <!-- Seraph Stockings Crafting Pack - Robe -->
-				<item id="38035" min="1" max="1" chance="0.299999999999997" /> <!-- Seraph Tunic Crafting Pack - Robe -->
-				<item id="38031" min="1" max="1" chance="0.299999999999997" /> <!-- Seraph Leather Leggings Crafting Pack - Light Armor -->
-				<item id="38030" min="1" max="1" chance="0.299999999999997" /> <!-- Seraph Leather Armor Crafting Pack - Light Armor -->
-				<item id="35315" min="1" max="1" chance="0.299999999999997" /> <!-- Seraph Leather Legging Ingredient -->
-				<item id="35314" min="1" max="1" chance="0.299999999999997" /> <!-- Seraph Leather Armor Ingredient -->
-				<item id="35309" min="1" max="1" chance="0.299999999999997" /> <!-- Seraph Gaiter Ingredient -->
-				<item id="35308" min="1" max="1" chance="0.299999999999997" /> <!-- Seraph Breastplate Ingredient -->
-				<item id="35319" min="1" max="1" chance="0.299999999999997" /> <!-- Seraph Tunic Ingredient -->
-				<item id="35320" min="1" max="1" chance="0.299999999999997" /> <!-- Seraph Stocking Ingredient -->
-				<item id="38035" min="1" max="1" chance="0.750000000000006" /> <!-- Seraph Tunic Crafting Pack - Robe -->
-				<item id="38036" min="1" max="1" chance="0.750000000000006" /> <!-- Seraph Stockings Crafting Pack - Robe -->
-				<item id="38031" min="1" max="1" chance="0.750000000000006" /> <!-- Seraph Leather Leggings Crafting Pack - Light Armor -->
-				<item id="38030" min="1" max="1" chance="0.750000000000006" /> <!-- Seraph Leather Armor Crafting Pack - Light Armor -->
-				<item id="38024" min="1" max="1" chance="0.750000000000006" /> <!-- Seraph Breastplate Crafting Pack - Heavy Armor -->
-				<item id="38025" min="1" max="1" chance="0.750000000000006" /> <!-- Seraph Gaiters Crafting Pack - Heavy Armor -->
-				<item id="38066" min="1" max="1" chance="0.299999999999997" /> <!-- Eternal Tunic Crafting Pack - Robe -->
-				<item id="38067" min="1" max="1" chance="0.299999999999997" /> <!-- Eternal Stockings Crafting Pack - Robe -->
-				<item id="38062" min="1" max="1" chance="0.299999999999997" /> <!-- Eternal Leather Leggings Crafting Pack - Light Armor -->
-				<item id="38061" min="1" max="1" chance="0.299999999999997" /> <!-- Eternal Leather Armor Crafting Pack - Light Armor -->
-				<item id="38055" min="1" max="1" chance="0.299999999999997" /> <!-- Eternal Breastplate Crafting Pack - Heavy Armor -->
-				<item id="38056" min="1" max="1" chance="0.299999999999997" /> <!-- Eternal Gaiters Crafting Pack - Heavy Armor -->
-				<item id="38025" min="1" max="1" chance="0.299999999999997" /> <!-- Seraph Gaiters Crafting Pack - Heavy Armor -->
-				<item id="38024" min="1" max="1" chance="0.299999999999997" /> <!-- Seraph Breastplate Crafting Pack - Heavy Armor -->
-				<item id="38036" min="1" max="1" chance="0.299999999999997" /> <!-- Seraph Stockings Crafting Pack - Robe -->
-				<item id="38035" min="1" max="1" chance="0.299999999999997" /> <!-- Seraph Tunic Crafting Pack - Robe -->
-				<item id="38031" min="1" max="1" chance="0.299999999999997" /> <!-- Seraph Leather Leggings Crafting Pack - Light Armor -->
-				<item id="38030" min="1" max="1" chance="0.299999999999997" /> <!-- Seraph Leather Armor Crafting Pack - Light Armor -->
-				<item id="35315" min="1" max="1" chance="0.299999999999997" /> <!-- Seraph Leather Legging Ingredient -->
-				<item id="35314" min="1" max="1" chance="0.299999999999997" /> <!-- Seraph Leather Armor Ingredient -->
-				<item id="35309" min="1" max="1" chance="0.299999999999997" /> <!-- Seraph Gaiter Ingredient -->
-				<item id="35308" min="1" max="1" chance="0.299999999999997" /> <!-- Seraph Breastplate Ingredient -->
-				<item id="35319" min="1" max="1" chance="0.299999999999997" /> <!-- Seraph Tunic Ingredient -->
-				<item id="35320" min="1" max="1" chance="0.299999999999997" /> <!-- Seraph Stocking Ingredient -->
-				<item id="38023" min="1" max="1" chance="0.300000000000009" /> <!-- Seraph Helmet Crafting Pack - Heavy Armor -->
-				<item id="38026" min="1" max="1" chance="0.300000000000009" /> <!-- Seraph Gauntlets Crafting Pack - Heavy Armor -->
-				<item id="38027" min="1" max="1" chance="0.300000000000009" /> <!-- Seraph Boots Crafting Pack - Heavy Armor -->
-				<item id="38028" min="1" max="1" chance="0.300000000000009" /> <!-- Seraph Shield Crafting Pack - Heavy Armor -->
-				<item id="38039" min="1" max="1" chance="0.300000000000009" /> <!-- Seraph Sigil Crafting Pack - Robe -->
-				<item id="38038" min="1" max="1" chance="0.300000000000009" /> <!-- Seraph Shoes Crafting Pack - Robe -->
-				<item id="38037" min="1" max="1" chance="0.300000000000009" /> <!-- Seraph Gloves Crafting Pack - Robe -->
-				<item id="38034" min="1" max="1" chance="0.300000000000009" /> <!-- Seraph Circlet Crafting Pack - Robe -->
-				<item id="38033" min="1" max="1" chance="0.300000000000009" /> <!-- Seraph Leather Boots Crafting Pack - Light Armor -->
-				<item id="38032" min="1" max="1" chance="0.300000000000009" /> <!-- Seraph Leather Gloves Crafting Pack - Light Armor -->
-				<item id="38029" min="1" max="1" chance="0.300000000000009" /> <!-- Seraph Leather Helmet Crafting Pack - Light Armor -->
-				<item id="35307" min="1" max="1" chance="0.300000000000009" /> <!-- Seraph Helmet Ingredient -->
-				<item id="35318" min="1" max="1" chance="0.300000000000009" /> <!-- Seraph Circlet Ingredient -->
-				<item id="35313" min="1" max="1" chance="0.300000000000009" /> <!-- Seraph Leather Helmet Ingredient -->
-				<item id="35312" min="1" max="1" chance="0.300000000000009" /> <!-- Seraph Shield Ingredient -->
-				<item id="35323" min="1" max="1" chance="0.300000000000009" /> <!-- Seraph Sigil Ingredient -->
-				<item id="38033" min="1" max="1" chance="0.749999999999991" /> <!-- Seraph Leather Boots Crafting Pack - Light Armor -->
-				<item id="38034" min="1" max="1" chance="0.749999999999991" /> <!-- Seraph Circlet Crafting Pack - Robe -->
-				<item id="38037" min="1" max="1" chance="0.749999999999991" /> <!-- Seraph Gloves Crafting Pack - Robe -->
-				<item id="38038" min="1" max="1" chance="0.749999999999991" /> <!-- Seraph Shoes Crafting Pack - Robe -->
-				<item id="38039" min="1" max="1" chance="0.749999999999991" /> <!-- Seraph Sigil Crafting Pack - Robe -->
-				<item id="38032" min="1" max="1" chance="0.749999999999991" /> <!-- Seraph Leather Gloves Crafting Pack - Light Armor -->
-				<item id="38023" min="1" max="1" chance="0.749999999999991" /> <!-- Seraph Helmet Crafting Pack - Heavy Armor -->
-				<item id="38026" min="1" max="1" chance="0.749999999999991" /> <!-- Seraph Gauntlets Crafting Pack - Heavy Armor -->
-				<item id="38027" min="1" max="1" chance="0.749999999999991" /> <!-- Seraph Boots Crafting Pack - Heavy Armor -->
-				<item id="38028" min="1" max="1" chance="0.749999999999991" /> <!-- Seraph Shield Crafting Pack - Heavy Armor -->
-				<item id="38029" min="1" max="1" chance="0.749999999999991" /> <!-- Seraph Leather Helmet Crafting Pack - Light Armor -->
-				<item id="38064" min="1" max="1" chance="0.300000000000009" /> <!-- Eternal Leather Boots Crafting Pack - Light Armor -->
-				<item id="38065" min="1" max="1" chance="0.300000000000009" /> <!-- Eternal Circlet Crafting Pack - Robe -->
-				<item id="38068" min="1" max="1" chance="0.300000000000009" /> <!-- Eternal Gloves Crafting Pack - Robe -->
-				<item id="38069" min="1" max="1" chance="0.300000000000009" /> <!-- Eternal Shoes Crafting Pack - Robe -->
-				<item id="38070" min="1" max="1" chance="0.300000000000009" /> <!-- Eternal Sigil Crafting Pack - Robe -->
-				<item id="38063" min="1" max="1" chance="0.300000000000009" /> <!-- Eternal Leather Gloves Crafting Pack - Light Armor -->
-				<item id="38054" min="1" max="1" chance="0.300000000000009" /> <!-- Eternal Helmet Crafting Pack - Heavy Armor -->
-				<item id="38057" min="1" max="1" chance="0.300000000000009" /> <!-- Eternal Gauntlets Crafting Pack - Heavy Armor -->
-				<item id="38058" min="1" max="1" chance="0.300000000000009" /> <!-- Eternal Boots Crafting Pack - Heavy Armor -->
-				<item id="38059" min="1" max="1" chance="0.300000000000009" /> <!-- Eternal Shield Crafting Pack - Heavy Armor -->
-				<item id="38060" min="1" max="1" chance="0.300000000000009" /> <!-- Eternal Leather Helmet Crafting Pack - Light Armor -->
-				<item id="38026" min="1" max="1" chance="0.300000000000009" /> <!-- Seraph Gauntlets Crafting Pack - Heavy Armor -->
-				<item id="38023" min="1" max="1" chance="0.300000000000009" /> <!-- Seraph Helmet Crafting Pack - Heavy Armor -->
-				<item id="38027" min="1" max="1" chance="0.300000000000009" /> <!-- Seraph Boots Crafting Pack - Heavy Armor -->
-				<item id="38028" min="1" max="1" chance="0.300000000000009" /> <!-- Seraph Shield Crafting Pack - Heavy Armor -->
-				<item id="38039" min="1" max="1" chance="0.300000000000009" /> <!-- Seraph Sigil Crafting Pack - Robe -->
-				<item id="38038" min="1" max="1" chance="0.300000000000009" /> <!-- Seraph Shoes Crafting Pack - Robe -->
-				<item id="38037" min="1" max="1" chance="0.300000000000009" /> <!-- Seraph Gloves Crafting Pack - Robe -->
-				<item id="38034" min="1" max="1" chance="0.300000000000009" /> <!-- Seraph Circlet Crafting Pack - Robe -->
-				<item id="38033" min="1" max="1" chance="0.300000000000009" /> <!-- Seraph Leather Boots Crafting Pack - Light Armor -->
-				<item id="38032" min="1" max="1" chance="0.300000000000009" /> <!-- Seraph Leather Gloves Crafting Pack - Light Armor -->
-				<item id="38029" min="1" max="1" chance="0.300000000000009" /> <!-- Seraph Leather Helmet Crafting Pack - Light Armor -->
-				<item id="35313" min="1" max="1" chance="0.300000000000009" /> <!-- Seraph Leather Helmet Ingredient -->
-				<item id="35312" min="1" max="1" chance="0.300000000000009" /> <!-- Seraph Shield Ingredient -->
-				<item id="35307" min="1" max="1" chance="0.300000000000009" /> <!-- Seraph Helmet Ingredient -->
-				<item id="35318" min="1" max="1" chance="0.300000000000009" /> <!-- Seraph Circlet Ingredient -->
-				<item id="35323" min="1" max="1" chance="0.300000000000009" /> <!-- Seraph Sigil Ingredient -->
-				<item id="36513" min="4" max="10" chance="16.266495411324" /> <!-- Elcyum Powder -->
-				<item id="17527" min="1" max="1" chance="14.52839178803" /> <!-- Scroll: Enchant Armor (R-grade) -->
-				<item id="17526" min="1" max="1" chance="3.6336516749187" /> <!-- Scroll: Enchant Weapon (R-grade) -->
-				<item id="35447" min="1" max="1" chance="0.062149116446728" /> <!-- Recipe: Seraph Sigil (60%) -->
-				<item id="35446" min="1" max="1" chance="0.062149116446728" /> <!-- Recipe: Seraph Shoes (60%) -->
-				<item id="35445" min="1" max="1" chance="0.062149116446728" /> <!-- Recipe: Seraph Gloves (60%) -->
-				<item id="35444" min="1" max="1" chance="0.062149116446728" /> <!-- Recipe: Seraph Stockings (60%) -->
-				<item id="35443" min="1" max="1" chance="0.062149116446728" /> <!-- Recipe: Seraph Tunic (60%) -->
-				<item id="35442" min="1" max="1" chance="0.062149116446728" /> <!-- Recipe: Seraph Circlet (60%) -->
-				<item id="35441" min="1" max="1" chance="0.062149116446728" /> <!-- Recipe: Seraph Leather Boots (60%) -->
-				<item id="35440" min="1" max="1" chance="0.062149116446728" /> <!-- Recipe: Seraph Leather Gloves (60%) -->
-				<item id="35317" min="1" max="1" chance="0.062149116446728" /> <!-- Seraph Leather Boot Ingredient -->
-				<item id="35316" min="1" max="1" chance="0.062149116446728" /> <!-- Seraph Leather Glove Ingredient -->
-				<item id="35311" min="1" max="1" chance="0.062149116446728" /> <!-- Seraph Boot Ingredient -->
-				<item id="35310" min="1" max="1" chance="0.062149116446728" /> <!-- Seraph Gauntlet Ingredient -->
-				<item id="35439" min="1" max="1" chance="0.062149116446728" /> <!-- Recipe: Seraph Leather Leggings (60%) -->
-				<item id="35438" min="1" max="1" chance="0.062149116446728" /> <!-- Recipe: Seraph Leather Armor (60%) -->
-				<item id="35437" min="1" max="1" chance="0.062149116446728" /> <!-- Recipe: Seraph Leather Helmet (60%) -->
-				<item id="35436" min="1" max="1" chance="0.062149116446728" /> <!-- Recipe: Seraph Shield (60%) -->
-				<item id="35435" min="1" max="1" chance="0.062149116446728" /> <!-- Recipe: Seraph Boots (60%) -->
-				<item id="35434" min="1" max="1" chance="0.062149116446728" /> <!-- Recipe: Seraph Gauntlets (60%) -->
-				<item id="35433" min="1" max="1" chance="0.062149116446728" /> <!-- Recipe: Seraph Gaiters (60%) -->
-				<item id="35321" min="1" max="1" chance="0.062149116446728" /> <!-- Seraph Glove Ingredient -->
-				<item id="35322" min="1" max="1" chance="0.062149116446728" /> <!-- Seraph Shoe Ingredient -->
-				<item id="35431" min="1" max="1" chance="0.062149116446728" /> <!-- Recipe: Seraph Helmet (60%) -->
-				<item id="35432" min="1" max="1" chance="0.062149116446728" /> <!-- Recipe: Seraph Breastplate (60%) -->
-				<item id="17527" min="1" max="1" chance="16.347289262704" /> <!-- Scroll: Enchant Armor (R-grade) -->
-				<item id="17526" min="1" max="1" chance="4.2675726626753" /> <!-- Scroll: Enchant Weapon (R-grade) -->
-				<item id="19440" min="2" max="4" chance="20.716372148909" /> <!-- Gemstone (R-grade) -->
-				<item id="17527" min="1" max="1" chance="16.757473431253" /> <!-- Scroll: Enchant Armor (R-grade) -->
-				<item id="17526" min="1" max="1" chance="4.1888504485095" /> <!-- Scroll: Enchant Weapon (R-grade) -->
-				<item id="35447" min="1" max="1" chance="0.062149116446728" /> <!-- Recipe: Seraph Sigil (60%) -->
-				<item id="35446" min="1" max="1" chance="0.062149116446728" /> <!-- Recipe: Seraph Shoes (60%) -->
-				<item id="35445" min="1" max="1" chance="0.062149116446728" /> <!-- Recipe: Seraph Gloves (60%) -->
-				<item id="35444" min="1" max="1" chance="0.062149116446728" /> <!-- Recipe: Seraph Stockings (60%) -->
-				<item id="35443" min="1" max="1" chance="0.062149116446728" /> <!-- Recipe: Seraph Tunic (60%) -->
-				<item id="35442" min="1" max="1" chance="0.062149116446728" /> <!-- Recipe: Seraph Circlet (60%) -->
-				<item id="35441" min="1" max="1" chance="0.062149116446728" /> <!-- Recipe: Seraph Leather Boots (60%) -->
-				<item id="35440" min="1" max="1" chance="0.062149116446728" /> <!-- Recipe: Seraph Leather Gloves (60%) -->
-				<item id="35439" min="1" max="1" chance="0.062149116446728" /> <!-- Recipe: Seraph Leather Leggings (60%) -->
-				<item id="35438" min="1" max="1" chance="0.062149116446728" /> <!-- Recipe: Seraph Leather Armor (60%) -->
-				<item id="35317" min="1" max="1" chance="0.062149116446728" /> <!-- Seraph Leather Boot Ingredient -->
-				<item id="35316" min="1" max="1" chance="0.062149116446728" /> <!-- Seraph Leather Glove Ingredient -->
-				<item id="35311" min="1" max="1" chance="0.062149116446728" /> <!-- Seraph Boot Ingredient -->
-				<item id="35310" min="1" max="1" chance="0.062149116446728" /> <!-- Seraph Gauntlet Ingredient -->
-				<item id="35437" min="1" max="1" chance="0.062149116446728" /> <!-- Recipe: Seraph Leather Helmet (60%) -->
-				<item id="35436" min="1" max="1" chance="0.062149116446728" /> <!-- Recipe: Seraph Shield (60%) -->
-				<item id="35435" min="1" max="1" chance="0.062149116446728" /> <!-- Recipe: Seraph Boots (60%) -->
-				<item id="35434" min="1" max="1" chance="0.062149116446728" /> <!-- Recipe: Seraph Gauntlets (60%) -->
-				<item id="35433" min="1" max="1" chance="0.062149116446728" /> <!-- Recipe: Seraph Gaiters (60%) -->
-				<item id="35432" min="1" max="1" chance="0.062149116446728" /> <!-- Recipe: Seraph Breastplate (60%) -->
-				<item id="35431" min="1" max="1" chance="0.062149116446728" /> <!-- Recipe: Seraph Helmet (60%) -->
-				<item id="35322" min="1" max="1" chance="0.062149116446728" /> <!-- Seraph Shoe Ingredient -->
-				<item id="35321" min="1" max="1" chance="0.062149116446728" /> <!-- Seraph Glove Ingredient -->
+				<item id="19440" min="2" max="4" chance="100" /> <!-- Gemstone (R-grade) -->
+				<item id="19448" min="1" max="1" chance="8" /> <!-- Blessed Scroll: Enchant Armor (R-grade) -->
+				<item id="19447" min="1" max="1" chance="2" /> <!-- Blessed Scroll: Enchant Weapon (R-grade) -->
 			</drop>
 			<lucky>
 				<item id="39629" min="2" max="2" chance="100" /> <!-- Fortune Pocket - Stage 1 -->
@@ -834,151 +829,59 @@
 		</skillList>
 		<dropLists>
 			<drop>
-				<item id="57" min="25000000" max="35000000" chance="100" /> <!-- Adena -->
-				<item id="38025" min="1" max="1" chance="0.299999999999997" /> <!-- Seraph Gaiters Crafting Pack - Heavy Armor -->
-				<item id="38024" min="1" max="1" chance="0.299999999999997" /> <!-- Seraph Breastplate Crafting Pack - Heavy Armor -->
-				<item id="38036" min="1" max="1" chance="0.299999999999997" /> <!-- Seraph Stockings Crafting Pack - Robe -->
-				<item id="38035" min="1" max="1" chance="0.299999999999997" /> <!-- Seraph Tunic Crafting Pack - Robe -->
-				<item id="38031" min="1" max="1" chance="0.299999999999997" /> <!-- Seraph Leather Leggings Crafting Pack - Light Armor -->
-				<item id="38030" min="1" max="1" chance="0.299999999999997" /> <!-- Seraph Leather Armor Crafting Pack - Light Armor -->
-				<item id="35315" min="1" max="1" chance="0.299999999999997" /> <!-- Seraph Leather Legging Ingredient -->
-				<item id="35314" min="1" max="1" chance="0.299999999999997" /> <!-- Seraph Leather Armor Ingredient -->
-				<item id="35309" min="1" max="1" chance="0.299999999999997" /> <!-- Seraph Gaiter Ingredient -->
-				<item id="35308" min="1" max="1" chance="0.299999999999997" /> <!-- Seraph Breastplate Ingredient -->
-				<item id="35319" min="1" max="1" chance="0.299999999999997" /> <!-- Seraph Tunic Ingredient -->
-				<item id="35320" min="1" max="1" chance="0.299999999999997" /> <!-- Seraph Stocking Ingredient -->
-				<item id="38035" min="1" max="1" chance="0.750000000000006" /> <!-- Seraph Tunic Crafting Pack - Robe -->
-				<item id="38036" min="1" max="1" chance="0.750000000000006" /> <!-- Seraph Stockings Crafting Pack - Robe -->
-				<item id="38031" min="1" max="1" chance="0.750000000000006" /> <!-- Seraph Leather Leggings Crafting Pack - Light Armor -->
-				<item id="38030" min="1" max="1" chance="0.750000000000006" /> <!-- Seraph Leather Armor Crafting Pack - Light Armor -->
-				<item id="38024" min="1" max="1" chance="0.750000000000006" /> <!-- Seraph Breastplate Crafting Pack - Heavy Armor -->
-				<item id="38025" min="1" max="1" chance="0.750000000000006" /> <!-- Seraph Gaiters Crafting Pack - Heavy Armor -->
-				<item id="38066" min="1" max="1" chance="0.299999999999997" /> <!-- Eternal Tunic Crafting Pack - Robe -->
-				<item id="38067" min="1" max="1" chance="0.299999999999997" /> <!-- Eternal Stockings Crafting Pack - Robe -->
-				<item id="38062" min="1" max="1" chance="0.299999999999997" /> <!-- Eternal Leather Leggings Crafting Pack - Light Armor -->
-				<item id="38061" min="1" max="1" chance="0.299999999999997" /> <!-- Eternal Leather Armor Crafting Pack - Light Armor -->
-				<item id="38055" min="1" max="1" chance="0.299999999999997" /> <!-- Eternal Breastplate Crafting Pack - Heavy Armor -->
-				<item id="38056" min="1" max="1" chance="0.299999999999997" /> <!-- Eternal Gaiters Crafting Pack - Heavy Armor -->
-				<item id="38025" min="1" max="1" chance="0.299999999999997" /> <!-- Seraph Gaiters Crafting Pack - Heavy Armor -->
-				<item id="38024" min="1" max="1" chance="0.299999999999997" /> <!-- Seraph Breastplate Crafting Pack - Heavy Armor -->
-				<item id="38036" min="1" max="1" chance="0.299999999999997" /> <!-- Seraph Stockings Crafting Pack - Robe -->
-				<item id="38035" min="1" max="1" chance="0.299999999999997" /> <!-- Seraph Tunic Crafting Pack - Robe -->
-				<item id="38031" min="1" max="1" chance="0.299999999999997" /> <!-- Seraph Leather Leggings Crafting Pack - Light Armor -->
-				<item id="38030" min="1" max="1" chance="0.299999999999997" /> <!-- Seraph Leather Armor Crafting Pack - Light Armor -->
-				<item id="35315" min="1" max="1" chance="0.299999999999997" /> <!-- Seraph Leather Legging Ingredient -->
-				<item id="35314" min="1" max="1" chance="0.299999999999997" /> <!-- Seraph Leather Armor Ingredient -->
-				<item id="35309" min="1" max="1" chance="0.299999999999997" /> <!-- Seraph Gaiter Ingredient -->
-				<item id="35308" min="1" max="1" chance="0.299999999999997" /> <!-- Seraph Breastplate Ingredient -->
-				<item id="35319" min="1" max="1" chance="0.299999999999997" /> <!-- Seraph Tunic Ingredient -->
-				<item id="35320" min="1" max="1" chance="0.299999999999997" /> <!-- Seraph Stocking Ingredient -->
-				<item id="38023" min="1" max="1" chance="0.300000000000009" /> <!-- Seraph Helmet Crafting Pack - Heavy Armor -->
-				<item id="38026" min="1" max="1" chance="0.300000000000009" /> <!-- Seraph Gauntlets Crafting Pack - Heavy Armor -->
-				<item id="38027" min="1" max="1" chance="0.300000000000009" /> <!-- Seraph Boots Crafting Pack - Heavy Armor -->
-				<item id="38028" min="1" max="1" chance="0.300000000000009" /> <!-- Seraph Shield Crafting Pack - Heavy Armor -->
-				<item id="38039" min="1" max="1" chance="0.300000000000009" /> <!-- Seraph Sigil Crafting Pack - Robe -->
-				<item id="38038" min="1" max="1" chance="0.300000000000009" /> <!-- Seraph Shoes Crafting Pack - Robe -->
-				<item id="38037" min="1" max="1" chance="0.300000000000009" /> <!-- Seraph Gloves Crafting Pack - Robe -->
-				<item id="38034" min="1" max="1" chance="0.300000000000009" /> <!-- Seraph Circlet Crafting Pack - Robe -->
-				<item id="38033" min="1" max="1" chance="0.300000000000009" /> <!-- Seraph Leather Boots Crafting Pack - Light Armor -->
-				<item id="38032" min="1" max="1" chance="0.300000000000009" /> <!-- Seraph Leather Gloves Crafting Pack - Light Armor -->
-				<item id="38029" min="1" max="1" chance="0.300000000000009" /> <!-- Seraph Leather Helmet Crafting Pack - Light Armor -->
-				<item id="35307" min="1" max="1" chance="0.300000000000009" /> <!-- Seraph Helmet Ingredient -->
-				<item id="35318" min="1" max="1" chance="0.300000000000009" /> <!-- Seraph Circlet Ingredient -->
-				<item id="35313" min="1" max="1" chance="0.300000000000009" /> <!-- Seraph Leather Helmet Ingredient -->
-				<item id="35312" min="1" max="1" chance="0.300000000000009" /> <!-- Seraph Shield Ingredient -->
-				<item id="35323" min="1" max="1" chance="0.300000000000009" /> <!-- Seraph Sigil Ingredient -->
-				<item id="38033" min="1" max="1" chance="0.749999999999991" /> <!-- Seraph Leather Boots Crafting Pack - Light Armor -->
-				<item id="38034" min="1" max="1" chance="0.749999999999991" /> <!-- Seraph Circlet Crafting Pack - Robe -->
-				<item id="38037" min="1" max="1" chance="0.749999999999991" /> <!-- Seraph Gloves Crafting Pack - Robe -->
-				<item id="38038" min="1" max="1" chance="0.749999999999991" /> <!-- Seraph Shoes Crafting Pack - Robe -->
-				<item id="38039" min="1" max="1" chance="0.749999999999991" /> <!-- Seraph Sigil Crafting Pack - Robe -->
-				<item id="38032" min="1" max="1" chance="0.749999999999991" /> <!-- Seraph Leather Gloves Crafting Pack - Light Armor -->
-				<item id="38023" min="1" max="1" chance="0.749999999999991" /> <!-- Seraph Helmet Crafting Pack - Heavy Armor -->
-				<item id="38026" min="1" max="1" chance="0.749999999999991" /> <!-- Seraph Gauntlets Crafting Pack - Heavy Armor -->
-				<item id="38027" min="1" max="1" chance="0.749999999999991" /> <!-- Seraph Boots Crafting Pack - Heavy Armor -->
-				<item id="38028" min="1" max="1" chance="0.749999999999991" /> <!-- Seraph Shield Crafting Pack - Heavy Armor -->
-				<item id="38029" min="1" max="1" chance="0.749999999999991" /> <!-- Seraph Leather Helmet Crafting Pack - Light Armor -->
-				<item id="38064" min="1" max="1" chance="0.300000000000009" /> <!-- Eternal Leather Boots Crafting Pack - Light Armor -->
-				<item id="38065" min="1" max="1" chance="0.300000000000009" /> <!-- Eternal Circlet Crafting Pack - Robe -->
-				<item id="38068" min="1" max="1" chance="0.300000000000009" /> <!-- Eternal Gloves Crafting Pack - Robe -->
-				<item id="38069" min="1" max="1" chance="0.300000000000009" /> <!-- Eternal Shoes Crafting Pack - Robe -->
-				<item id="38070" min="1" max="1" chance="0.300000000000009" /> <!-- Eternal Sigil Crafting Pack - Robe -->
-				<item id="38063" min="1" max="1" chance="0.300000000000009" /> <!-- Eternal Leather Gloves Crafting Pack - Light Armor -->
-				<item id="38054" min="1" max="1" chance="0.300000000000009" /> <!-- Eternal Helmet Crafting Pack - Heavy Armor -->
-				<item id="38057" min="1" max="1" chance="0.300000000000009" /> <!-- Eternal Gauntlets Crafting Pack - Heavy Armor -->
-				<item id="38058" min="1" max="1" chance="0.300000000000009" /> <!-- Eternal Boots Crafting Pack - Heavy Armor -->
-				<item id="38059" min="1" max="1" chance="0.300000000000009" /> <!-- Eternal Shield Crafting Pack - Heavy Armor -->
-				<item id="38060" min="1" max="1" chance="0.300000000000009" /> <!-- Eternal Leather Helmet Crafting Pack - Light Armor -->
-				<item id="38026" min="1" max="1" chance="0.300000000000009" /> <!-- Seraph Gauntlets Crafting Pack - Heavy Armor -->
-				<item id="38023" min="1" max="1" chance="0.300000000000009" /> <!-- Seraph Helmet Crafting Pack - Heavy Armor -->
-				<item id="38027" min="1" max="1" chance="0.300000000000009" /> <!-- Seraph Boots Crafting Pack - Heavy Armor -->
-				<item id="38028" min="1" max="1" chance="0.300000000000009" /> <!-- Seraph Shield Crafting Pack - Heavy Armor -->
-				<item id="38039" min="1" max="1" chance="0.300000000000009" /> <!-- Seraph Sigil Crafting Pack - Robe -->
-				<item id="38038" min="1" max="1" chance="0.300000000000009" /> <!-- Seraph Shoes Crafting Pack - Robe -->
-				<item id="38037" min="1" max="1" chance="0.300000000000009" /> <!-- Seraph Gloves Crafting Pack - Robe -->
-				<item id="38034" min="1" max="1" chance="0.300000000000009" /> <!-- Seraph Circlet Crafting Pack - Robe -->
-				<item id="38033" min="1" max="1" chance="0.300000000000009" /> <!-- Seraph Leather Boots Crafting Pack - Light Armor -->
-				<item id="38032" min="1" max="1" chance="0.300000000000009" /> <!-- Seraph Leather Gloves Crafting Pack - Light Armor -->
-				<item id="38029" min="1" max="1" chance="0.300000000000009" /> <!-- Seraph Leather Helmet Crafting Pack - Light Armor -->
-				<item id="35313" min="1" max="1" chance="0.300000000000009" /> <!-- Seraph Leather Helmet Ingredient -->
-				<item id="35312" min="1" max="1" chance="0.300000000000009" /> <!-- Seraph Shield Ingredient -->
-				<item id="35307" min="1" max="1" chance="0.300000000000009" /> <!-- Seraph Helmet Ingredient -->
-				<item id="35318" min="1" max="1" chance="0.300000000000009" /> <!-- Seraph Circlet Ingredient -->
-				<item id="35323" min="1" max="1" chance="0.300000000000009" /> <!-- Seraph Sigil Ingredient -->
-				<item id="36513" min="4" max="10" chance="16.266495411324" /> <!-- Elcyum Powder -->
-				<item id="17527" min="1" max="1" chance="14.52839178803" /> <!-- Scroll: Enchant Armor (R-grade) -->
-				<item id="17526" min="1" max="1" chance="3.6336516749187" /> <!-- Scroll: Enchant Weapon (R-grade) -->
-				<item id="35447" min="1" max="1" chance="0.062149116446728" /> <!-- Recipe: Seraph Sigil (60%) -->
-				<item id="35446" min="1" max="1" chance="0.062149116446728" /> <!-- Recipe: Seraph Shoes (60%) -->
-				<item id="35445" min="1" max="1" chance="0.062149116446728" /> <!-- Recipe: Seraph Gloves (60%) -->
-				<item id="35444" min="1" max="1" chance="0.062149116446728" /> <!-- Recipe: Seraph Stockings (60%) -->
-				<item id="35443" min="1" max="1" chance="0.062149116446728" /> <!-- Recipe: Seraph Tunic (60%) -->
-				<item id="35442" min="1" max="1" chance="0.062149116446728" /> <!-- Recipe: Seraph Circlet (60%) -->
-				<item id="35441" min="1" max="1" chance="0.062149116446728" /> <!-- Recipe: Seraph Leather Boots (60%) -->
-				<item id="35440" min="1" max="1" chance="0.062149116446728" /> <!-- Recipe: Seraph Leather Gloves (60%) -->
-				<item id="35317" min="1" max="1" chance="0.062149116446728" /> <!-- Seraph Leather Boot Ingredient -->
-				<item id="35316" min="1" max="1" chance="0.062149116446728" /> <!-- Seraph Leather Glove Ingredient -->
-				<item id="35311" min="1" max="1" chance="0.062149116446728" /> <!-- Seraph Boot Ingredient -->
-				<item id="35310" min="1" max="1" chance="0.062149116446728" /> <!-- Seraph Gauntlet Ingredient -->
-				<item id="35439" min="1" max="1" chance="0.062149116446728" /> <!-- Recipe: Seraph Leather Leggings (60%) -->
-				<item id="35438" min="1" max="1" chance="0.062149116446728" /> <!-- Recipe: Seraph Leather Armor (60%) -->
-				<item id="35437" min="1" max="1" chance="0.062149116446728" /> <!-- Recipe: Seraph Leather Helmet (60%) -->
-				<item id="35436" min="1" max="1" chance="0.062149116446728" /> <!-- Recipe: Seraph Shield (60%) -->
-				<item id="35435" min="1" max="1" chance="0.062149116446728" /> <!-- Recipe: Seraph Boots (60%) -->
-				<item id="35434" min="1" max="1" chance="0.062149116446728" /> <!-- Recipe: Seraph Gauntlets (60%) -->
-				<item id="35433" min="1" max="1" chance="0.062149116446728" /> <!-- Recipe: Seraph Gaiters (60%) -->
-				<item id="35321" min="1" max="1" chance="0.062149116446728" /> <!-- Seraph Glove Ingredient -->
-				<item id="35322" min="1" max="1" chance="0.062149116446728" /> <!-- Seraph Shoe Ingredient -->
-				<item id="35431" min="1" max="1" chance="0.062149116446728" /> <!-- Recipe: Seraph Helmet (60%) -->
-				<item id="35432" min="1" max="1" chance="0.062149116446728" /> <!-- Recipe: Seraph Breastplate (60%) -->
-				<item id="17527" min="1" max="1" chance="16.347289262704" /> <!-- Scroll: Enchant Armor (R-grade) -->
-				<item id="17526" min="1" max="1" chance="4.2675726626753" /> <!-- Scroll: Enchant Weapon (R-grade) -->
-				<item id="19440" min="2" max="4" chance="20.716372148909" /> <!-- Gemstone (R-grade) -->
-				<item id="17527" min="1" max="1" chance="16.757473431253" /> <!-- Scroll: Enchant Armor (R-grade) -->
-				<item id="17526" min="1" max="1" chance="4.1888504485095" /> <!-- Scroll: Enchant Weapon (R-grade) -->
-				<item id="35447" min="1" max="1" chance="0.062149116446728" /> <!-- Recipe: Seraph Sigil (60%) -->
-				<item id="35446" min="1" max="1" chance="0.062149116446728" /> <!-- Recipe: Seraph Shoes (60%) -->
-				<item id="35445" min="1" max="1" chance="0.062149116446728" /> <!-- Recipe: Seraph Gloves (60%) -->
-				<item id="35444" min="1" max="1" chance="0.062149116446728" /> <!-- Recipe: Seraph Stockings (60%) -->
-				<item id="35443" min="1" max="1" chance="0.062149116446728" /> <!-- Recipe: Seraph Tunic (60%) -->
-				<item id="35442" min="1" max="1" chance="0.062149116446728" /> <!-- Recipe: Seraph Circlet (60%) -->
-				<item id="35441" min="1" max="1" chance="0.062149116446728" /> <!-- Recipe: Seraph Leather Boots (60%) -->
-				<item id="35440" min="1" max="1" chance="0.062149116446728" /> <!-- Recipe: Seraph Leather Gloves (60%) -->
-				<item id="35439" min="1" max="1" chance="0.062149116446728" /> <!-- Recipe: Seraph Leather Leggings (60%) -->
-				<item id="35438" min="1" max="1" chance="0.062149116446728" /> <!-- Recipe: Seraph Leather Armor (60%) -->
-				<item id="35317" min="1" max="1" chance="0.062149116446728" /> <!-- Seraph Leather Boot Ingredient -->
-				<item id="35316" min="1" max="1" chance="0.062149116446728" /> <!-- Seraph Leather Glove Ingredient -->
-				<item id="35311" min="1" max="1" chance="0.062149116446728" /> <!-- Seraph Boot Ingredient -->
-				<item id="35310" min="1" max="1" chance="0.062149116446728" /> <!-- Seraph Gauntlet Ingredient -->
-				<item id="35437" min="1" max="1" chance="0.062149116446728" /> <!-- Recipe: Seraph Leather Helmet (60%) -->
-				<item id="35436" min="1" max="1" chance="0.062149116446728" /> <!-- Recipe: Seraph Shield (60%) -->
-				<item id="35435" min="1" max="1" chance="0.062149116446728" /> <!-- Recipe: Seraph Boots (60%) -->
-				<item id="35434" min="1" max="1" chance="0.062149116446728" /> <!-- Recipe: Seraph Gauntlets (60%) -->
-				<item id="35433" min="1" max="1" chance="0.062149116446728" /> <!-- Recipe: Seraph Gaiters (60%) -->
-				<item id="35432" min="1" max="1" chance="0.062149116446728" /> <!-- Recipe: Seraph Breastplate (60%) -->
-				<item id="35431" min="1" max="1" chance="0.062149116446728" /> <!-- Recipe: Seraph Helmet (60%) -->
-				<item id="35322" min="1" max="1" chance="0.062149116446728" /> <!-- Seraph Shoe Ingredient -->
-				<item id="35321" min="1" max="1" chance="0.062149116446728" /> <!-- Seraph Glove Ingredient -->
+				<item id="17527" min="1" max="1" chance="80" /> <!-- Scroll: Enchant Armor (R-grade) -->
+				<item id="17526" min="1" max="1" chance="20" /> <!-- Scroll: Enchant Weapon (R-grade) -->
+				<item id="35322" min="1" max="3" chance="0.5" /> <!-- Seraph Shoe Ingredient -->
+				<item id="35318" min="1" max="3" chance="0.5" /> <!-- Seraph Circlet Ingredient -->
+				<item id="35308" min="1" max="3" chance="0.5" /> <!-- Seraph Breastplate Ingredient -->
+				<item id="35313" min="1" max="3" chance="0.5" /> <!-- Seraph Leather Helmet Ingredient -->
+				<item id="35314" min="1" max="3" chance="0.5" /> <!-- Seraph Leather Armor Ingredient -->
+				<item id="35315" min="1" max="3" chance="0.5" /> <!-- Seraph Leather Legging Ingredient -->
+				<item id="35316" min="1" max="3" chance="0.5" /> <!-- Seraph Leather Glove Ingredient -->
+				<item id="35317" min="1" max="3" chance="0.5" /> <!-- Seraph Leather Boot Ingredient -->
+				<item id="35309" min="1" max="3" chance="0.5" /> <!-- Seraph Gaiter Ingredient -->
+				<item id="35321" min="1" max="3" chance="0.5" /> <!-- Seraph Glove Ingredient -->
+				<item id="35310" min="1" max="3" chance="0.5" /> <!-- Seraph Gauntlet Ingredient -->
+				<item id="35311" min="1" max="3" chance="0.5" /> <!-- Seraph Boot Ingredient -->
+				<item id="35323" min="1" max="3" chance="0.5" /> <!-- Seraph Sigil Ingredient -->
+				<item id="35319" min="1" max="3" chance="0.5" /> <!-- Seraph Tunic Ingredient -->
+				<item id="35307" min="1" max="3" chance="0.5" /> <!-- Seraph Helmet Ingredient -->
+				<item id="35320" min="1" max="3" chance="0.5" /> <!-- Seraph Stocking Ingredient -->
+				<item id="35312" min="1" max="3" chance="0.5" /> <!-- Seraph Shield Ingredient -->
+				<item id="35446" min="1" max="1" chance="0.5" /> <!-- Recipe:�Seraph Shoes (60%) -->
+				<item id="35442" min="1" max="1" chance="0.5" /> <!-- Recipe:�Seraph Circlet (60%) -->
+				<item id="35432" min="1" max="1" chance="0.5" /> <!-- Recipe:�Seraph Breastplate (60%) -->
+				<item id="35438" min="1" max="1" chance="0.5" /> <!-- Recipe:�Seraph Leather Armor (60%) -->
+				<item id="35439" min="1" max="1" chance="0.5" /> <!-- Recipe:�Seraph Leather Leggings (60%) -->
+				<item id="35440" min="1" max="1" chance="0.5" /> <!-- Recipe:�Seraph Leather Gloves (60%) -->
+				<item id="35441" min="1" max="1" chance="0.5" /> <!-- Recipe:�Seraph Leather Boots (60%) -->
+				<item id="35437" min="1" max="1" chance="0.5" /> <!-- Recipe:�Seraph Leather Helmet (60%) -->
+				<item id="35433" min="1" max="1" chance="0.5" /> <!-- Recipe:�Seraph Gaiters (60%) -->
+				<item id="35445" min="1" max="1" chance="0.5" /> <!-- Recipe:�Seraph Gloves (60%) -->
+				<item id="35434" min="1" max="1" chance="0.5" /> <!-- Recipe:�Seraph Gauntlets (60%) -->
+				<item id="35435" min="1" max="1" chance="0.5" /> <!-- Recipe:�Seraph Boots (60%) -->
+				<item id="35447" min="1" max="1" chance="0.5" /> <!-- Recipe:�Seraph Sigil (60%) -->
+				<item id="35443" min="1" max="1" chance="0.5" /> <!-- Recipe:�Seraph Tunic (60%) -->
+				<item id="35431" min="1" max="1" chance="0.5" /> <!-- Recipe:�Seraph Helmet (60%) -->
+				<item id="35444" min="1" max="1" chance="0.5" /> <!-- Recipe:�Seraph Stockings (60%) -->
+				<item id="35436" min="1" max="1" chance="0.5" /> <!-- Recipe:�Seraph Shield (60%) -->
+				<item id="38038" min="1" max="1" chance="0.5" /> <!-- Seraph Shoes Crafting Pack - Robe -->
+				<item id="38034" min="1" max="1" chance="0.5" /> <!-- Seraph Circlet Crafting Pack - Robe -->
+				<item id="38024" min="1" max="1" chance="0.5" /> <!-- Seraph Breastplate Crafting Pack - Heavy Armor -->
+				<item id="38031" min="1" max="1" chance="0.5" /> <!-- Seraph Leather Leggings Crafting Pack - Light Armor -->
+				<item id="38032" min="1" max="1" chance="0.5" /> <!-- Seraph Leather Gloves Crafting Pack - Light Armor -->
+				<item id="38033" min="1" max="1" chance="0.5" /> <!-- Seraph Leather Boots Crafting Pack - Light Armor -->
+				<item id="38030" min="1" max="1" chance="0.5" /> <!-- Seraph Leather Armor Crafting Pack - Light Armor -->
+				<item id="38029" min="1" max="1" chance="0.5" /> <!-- Seraph Leather Helmet Crafting Pack - Light Armor -->
+				<item id="38025" min="1" max="1" chance="0.5" /> <!-- Seraph Gaiters Crafting Pack - Heavy Armor -->
+				<item id="38037" min="1" max="1" chance="0.5" /> <!-- Seraph Gloves Crafting Pack - Robe -->
+				<item id="38026" min="1" max="1" chance="0.5" /> <!-- Seraph Gauntlets Crafting Pack - Heavy Armor -->
+				<item id="38027" min="1" max="1" chance="0.5" /> <!-- Seraph Boots Crafting Pack - Heavy Armor -->
+				<item id="38039" min="1" max="1" chance="0.5" /> <!-- Seraph Sigil Crafting Pack - Robe -->
+				<item id="38035" min="1" max="1" chance="0.5" /> <!-- Seraph Tunic Crafting Pack - Robe -->
+				<item id="38023" min="1" max="1" chance="0.5" /> <!-- Seraph Helmet Crafting Pack - Heavy Armor -->
+				<item id="38036" min="1" max="1" chance="0.5" /> <!-- Seraph Stockings Crafting Pack - Robe -->
+				<item id="38028" min="1" max="1" chance="0.5" /> <!-- Seraph Shield Crafting Pack - Heavy Armor -->
 			</drop>
 			<lucky>
 				<item id="39629" min="2" max="2" chance="100" /> <!-- Fortune Pocket - Stage 1 -->
@@ -1019,42 +922,42 @@
 		</skillList>
 		<dropLists>
 			<drop>
-				<item id="17527" min="1" max="1" chance="80.34" /> <!-- Scroll: Enchant Armor (R-grade) -->
-				<item id="17526" min="1" max="1" chance="20.7" /> <!-- Scroll: Enchant Weapon (R-grade) -->
-				<item id="38033" min="1" max="1" chance="0.75" /> <!-- Seraph Leather Boots Crafting Pack - Light Armor -->
-				<item id="38034" min="1" max="1" chance="0.75" /> <!-- Seraph Circlet Crafting Pack - Robe -->
-				<item id="38035" min="1" max="1" chance="0.75" /> <!-- Seraph Tunic Crafting Pack - Robe -->
-				<item id="38036" min="1" max="1" chance="0.75" /> <!-- Seraph Stockings Crafting Pack - Robe -->
-				<item id="38037" min="1" max="1" chance="0.75" /> <!-- Seraph Gloves Crafting Pack - Robe -->
-				<item id="38038" min="1" max="1" chance="0.75" /> <!-- Seraph Shoes Crafting Pack - Robe -->
-				<item id="38039" min="1" max="1" chance="0.75" /> <!-- Seraph Sigil Crafting Pack - Robe -->
-				<item id="38032" min="1" max="1" chance="0.75" /> <!-- Seraph Leather Gloves Crafting Pack - Light Armor -->
-				<item id="38031" min="1" max="1" chance="0.75" /> <!-- Seraph Leather Leggings Crafting Pack - Light Armor -->
-				<item id="38030" min="1" max="1" chance="0.75" /> <!-- Seraph Leather Armor Crafting Pack - Light Armor -->
-				<item id="38023" min="1" max="1" chance="0.75" /> <!-- Seraph Helmet Crafting Pack - Heavy Armor -->
-				<item id="38024" min="1" max="1" chance="0.75" /> <!-- Seraph Breastplate Crafting Pack - Heavy Armor -->
-				<item id="38025" min="1" max="1" chance="0.75" /> <!-- Seraph Gaiters Crafting Pack - Heavy Armor -->
-				<item id="38026" min="1" max="1" chance="0.75" /> <!-- Seraph Gauntlets Crafting Pack - Heavy Armor -->
-				<item id="38027" min="1" max="1" chance="0.75" /> <!-- Seraph Boots Crafting Pack - Heavy Armor -->
-				<item id="38028" min="1" max="1" chance="0.75" /> <!-- Seraph Shield Crafting Pack - Heavy Armor -->
-				<item id="38029" min="1" max="1" chance="0.75" /> <!-- Seraph Leather Helmet Crafting Pack - Light Armor -->
-				<item id="38064" min="1" max="1" chance="0.3" /> <!-- Eternal Leather Boots Crafting Pack - Light Armor -->
-				<item id="38065" min="1" max="1" chance="0.3" /> <!-- Eternal Circlet Crafting Pack - Robe -->
-				<item id="38066" min="1" max="1" chance="0.3" /> <!-- Eternal Tunic Crafting Pack - Robe -->
-				<item id="38067" min="1" max="1" chance="0.3" /> <!-- Eternal Stockings Crafting Pack - Robe -->
-				<item id="38068" min="1" max="1" chance="0.3" /> <!-- Eternal Gloves Crafting Pack - Robe -->
-				<item id="38069" min="1" max="1" chance="0.3" /> <!-- Eternal Shoes Crafting Pack - Robe -->
-				<item id="38070" min="1" max="1" chance="0.3" /> <!-- Eternal Sigil Crafting Pack - Robe -->
-				<item id="38063" min="1" max="1" chance="0.3" /> <!-- Eternal Leather Gloves Crafting Pack - Light Armor -->
-				<item id="38062" min="1" max="1" chance="0.3" /> <!-- Eternal Leather Leggings Crafting Pack - Light Armor -->
-				<item id="38061" min="1" max="1" chance="0.3" /> <!-- Eternal Leather Armor Crafting Pack - Light Armor -->
-				<item id="38054" min="1" max="1" chance="0.3" /> <!-- Eternal Helmet Crafting Pack - Heavy Armor -->
-				<item id="38055" min="1" max="1" chance="0.3" /> <!-- Eternal Breastplate Crafting Pack - Heavy Armor -->
-				<item id="38056" min="1" max="1" chance="0.3" /> <!-- Eternal Gaiters Crafting Pack - Heavy Armor -->
-				<item id="38057" min="1" max="1" chance="0.3" /> <!-- Eternal Gauntlets Crafting Pack - Heavy Armor -->
-				<item id="38058" min="1" max="1" chance="0.3" /> <!-- Eternal Boots Crafting Pack - Heavy Armor -->
-				<item id="38059" min="1" max="1" chance="0.3" /> <!-- Eternal Shield Crafting Pack - Heavy Armor -->
-				<item id="38060" min="1" max="1" chance="0.3" /> <!-- Eternal Leather Helmet Crafting Pack - Light Armor -->
+				<item id="19448" min="1" max="1" chance="80" /> <!-- Blessed Scroll: Enchant Armor (R-grade) -->
+				<item id="19447" min="1" max="1" chance="20" /> <!-- Blessed Scroll: Enchant Weapon (R-grade) -->
+				<item id="38023" min="1" max="1" chance="1.00001" /> <!-- Seraph Helmet Crafting Pack - Heavy Armor -->
+				<item id="38038" min="1" max="1" chance="1" /> <!-- Seraph Shoes Crafting Pack - Robe -->
+				<item id="38034" min="1" max="1" chance="1" /> <!-- Seraph Circlet Crafting Pack - Robe -->
+				<item id="38024" min="1" max="1" chance="1" /> <!-- Seraph Breastplate Crafting Pack - Heavy Armor -->
+				<item id="38031" min="1" max="1" chance="1" /> <!-- Seraph Leather Leggings Crafting Pack - Light Armor -->
+				<item id="38032" min="1" max="1" chance="1" /> <!-- Seraph Leather Gloves Crafting Pack - Light Armor -->
+				<item id="38033" min="1" max="1" chance="1" /> <!-- Seraph Leather Boots Crafting Pack - Light Armor -->
+				<item id="38030" min="1" max="1" chance="1" /> <!-- Seraph Leather Armor Crafting Pack - Light Armor -->
+				<item id="38029" min="1" max="1" chance="1" /> <!-- Seraph Leather Helmet Crafting Pack - Light Armor -->
+				<item id="38025" min="1" max="1" chance="1" /> <!-- Seraph Gaiters Crafting Pack - Heavy Armor -->
+				<item id="38037" min="1" max="1" chance="1" /> <!-- Seraph Gloves Crafting Pack - Robe -->
+				<item id="38026" min="1" max="1" chance="1" /> <!-- Seraph Gauntlets Crafting Pack - Heavy Armor -->
+				<item id="38027" min="1" max="1" chance="1" /> <!-- Seraph Boots Crafting Pack - Heavy Armor -->
+				<item id="38039" min="1" max="1" chance="1" /> <!-- Seraph Sigil Crafting Pack - Robe -->
+				<item id="38035" min="1" max="1" chance="1" /> <!-- Seraph Tunic Crafting Pack - Robe -->
+				<item id="38036" min="1" max="1" chance="1" /> <!-- Seraph Stockings Crafting Pack - Robe -->
+				<item id="38028" min="1" max="1" chance="1" /> <!-- Seraph Shield Crafting Pack - Heavy Armor -->
+				<item id="38069" min="1" max="1" chance="0.5" /> <!-- Eternal Shoes Crafting Pack - Robe -->
+				<item id="38065" min="1" max="1" chance="0.5" /> <!-- Eternal Circlet Crafting Pack - Robe -->
+				<item id="38055" min="1" max="1" chance="0.5" /> <!-- Eternal Breastplate Crafting Pack - Heavy Armor -->
+				<item id="38062" min="1" max="1" chance="0.5" /> <!-- Eternal Leather Leggings Crafting Pack - Light Armor -->
+				<item id="38063" min="1" max="1" chance="0.5" /> <!-- Eternal Leather Gloves Crafting Pack - Light Armor -->
+				<item id="38064" min="1" max="1" chance="0.5" /> <!-- Eternal Leather Boots Crafting Pack - Light Armor -->
+				<item id="38061" min="1" max="1" chance="0.5" /> <!-- Eternal Leather Armor Crafting Pack - Light Armor -->
+				<item id="38060" min="1" max="1" chance="0.5" /> <!-- Eternal Leather Helmet Crafting Pack - Light Armor -->
+				<item id="38056" min="1" max="1" chance="0.5" /> <!-- Eternal Gaiters Crafting Pack - Heavy Armor -->
+				<item id="38068" min="1" max="1" chance="0.5" /> <!-- Eternal Gloves Crafting Pack - Robe -->
+				<item id="38057" min="1" max="1" chance="0.5" /> <!-- Eternal Gauntlets Crafting Pack - Heavy Armor -->
+				<item id="38058" min="1" max="1" chance="0.5" /> <!-- Eternal Boots Crafting Pack - Heavy Armor -->
+				<item id="38070" min="1" max="1" chance="0.5" /> <!-- Eternal Sigil Crafting Pack - Robe -->
+				<item id="38066" min="1" max="1" chance="0.5" /> <!-- Eternal Tunic Crafting Pack - Robe -->
+				<item id="38054" min="1" max="1" chance="0.5" /> <!-- Eternal Helmet Crafting Pack - Heavy Armor -->
+				<item id="38067" min="1" max="1" chance="0.5" /> <!-- Eternal Stockings Crafting Pack - Robe -->
+				<item id="38059" min="1" max="1" chance="0.5" /> <!-- Eternal Shield Crafting Pack - Heavy Armor -->
 			</drop>
 		</dropLists>
 		<collision>
@@ -1095,6 +998,8 @@
 			<drop>
 				<item id="57" min="25000000" max="35000000" chance="100" /> <!-- Adena -->
 				<item id="19440" min="2" max="4" chance="100" /> <!-- Gemstone (R-grade) -->
+				<item id="19448" min="1" max="1" chance="8" /> <!-- Blessed Scroll: Enchant Armor (R-grade) -->
+				<item id="19447" min="1" max="1" chance="2" /> <!-- Blessed Scroll: Enchant Weapon (R-grade) -->
 			</drop>
 		</dropLists>
 		<collision>
@@ -1133,59 +1038,59 @@
 		</skillList>
 		<dropLists>
 			<drop>
-				<item id="17527" min="1" max="1" chance="81.42" /> <!-- Scroll: Enchant Armor (R-grade) -->
-				<item id="17526" min="1" max="1" chance="20.18" /> <!-- Scroll: Enchant Weapon (R-grade) -->
-				<item id="38026" min="1" max="1" chance="0.3" /> <!-- Seraph Gauntlets Crafting Pack - Heavy Armor -->
-				<item id="38025" min="1" max="1" chance="0.3" /> <!-- Seraph Gaiters Crafting Pack - Heavy Armor -->
-				<item id="38024" min="1" max="1" chance="0.3" /> <!-- Seraph Breastplate Crafting Pack - Heavy Armor -->
-				<item id="38023" min="1" max="1" chance="0.3" /> <!-- Seraph Helmet Crafting Pack - Heavy Armor -->
-				<item id="35447" min="1" max="1" chance="0.3" /> <!-- Recipe: Seraph Sigil (60%) -->
-				<item id="35446" min="1" max="1" chance="0.3" /> <!-- Recipe: Seraph Shoes (60%) -->
-				<item id="35445" min="1" max="1" chance="0.3" /> <!-- Recipe: Seraph Gloves (60%) -->
-				<item id="35444" min="1" max="1" chance="0.3" /> <!-- Recipe: Seraph Stockings (60%) -->
-				<item id="35443" min="1" max="1" chance="0.3" /> <!-- Recipe: Seraph Tunic (60%) -->
-				<item id="35442" min="1" max="1" chance="0.3" /> <!-- Recipe: Seraph Circlet (60%) -->
-				<item id="35441" min="1" max="1" chance="0.3" /> <!-- Recipe: Seraph Leather Boots (60%) -->
-				<item id="38027" min="1" max="1" chance="0.3" /> <!-- Seraph Boots Crafting Pack - Heavy Armor -->
-				<item id="38028" min="1" max="1" chance="0.3" /> <!-- Seraph Shield Crafting Pack - Heavy Armor -->
-				<item id="38039" min="1" max="1" chance="0.3" /> <!-- Seraph Sigil Crafting Pack - Robe -->
-				<item id="38038" min="1" max="1" chance="0.3" /> <!-- Seraph Shoes Crafting Pack - Robe -->
-				<item id="38037" min="1" max="1" chance="0.3" /> <!-- Seraph Gloves Crafting Pack - Robe -->
-				<item id="38036" min="1" max="1" chance="0.3" /> <!-- Seraph Stockings Crafting Pack - Robe -->
-				<item id="38035" min="1" max="1" chance="0.3" /> <!-- Seraph Tunic Crafting Pack - Robe -->
-				<item id="38034" min="1" max="1" chance="0.3" /> <!-- Seraph Circlet Crafting Pack - Robe -->
-				<item id="38033" min="1" max="1" chance="0.3" /> <!-- Seraph Leather Boots Crafting Pack - Light Armor -->
-				<item id="38032" min="1" max="1" chance="0.3" /> <!-- Seraph Leather Gloves Crafting Pack - Light Armor -->
-				<item id="38031" min="1" max="1" chance="0.3" /> <!-- Seraph Leather Leggings Crafting Pack - Light Armor -->
-				<item id="38030" min="1" max="1" chance="0.3" /> <!-- Seraph Leather Armor Crafting Pack - Light Armor -->
-				<item id="38029" min="1" max="1" chance="0.3" /> <!-- Seraph Leather Helmet Crafting Pack - Light Armor -->
-				<item id="35440" min="1" max="1" chance="0.3" /> <!-- Recipe: Seraph Leather Gloves (60%) -->
-				<item id="35439" min="1" max="1" chance="0.3" /> <!-- Recipe: Seraph Leather Leggings (60%) -->
-				<item id="35438" min="1" max="1" chance="0.3" /> <!-- Recipe: Seraph Leather Armor (60%) -->
-				<item id="35317" min="1" max="1" chance="0.3" /> <!-- Seraph Leather Boot Ingredient -->
-				<item id="35316" min="1" max="1" chance="0.3" /> <!-- Seraph Leather Glove Ingredient -->
-				<item id="35315" min="1" max="1" chance="0.3" /> <!-- Seraph Leather Legging Ingredient -->
-				<item id="35314" min="1" max="1" chance="0.3" /> <!-- Seraph Leather Armor Ingredient -->
-				<item id="35313" min="1" max="1" chance="0.3" /> <!-- Seraph Leather Helmet Ingredient -->
-				<item id="35312" min="1" max="1" chance="0.3" /> <!-- Seraph Shield Ingredient -->
-				<item id="35311" min="1" max="1" chance="0.3" /> <!-- Seraph Boot Ingredient -->
-				<item id="35310" min="1" max="1" chance="0.3" /> <!-- Seraph Gauntlet Ingredient -->
-				<item id="35309" min="1" max="1" chance="0.3" /> <!-- Seraph Gaiter Ingredient -->
-				<item id="35308" min="1" max="1" chance="0.3" /> <!-- Seraph Breastplate Ingredient -->
-				<item id="35307" min="1" max="1" chance="0.3" /> <!-- Seraph Helmet Ingredient -->
-				<item id="35318" min="1" max="1" chance="0.3" /> <!-- Seraph Circlet Ingredient -->
-				<item id="35319" min="1" max="1" chance="0.3" /> <!-- Seraph Tunic Ingredient -->
-				<item id="35437" min="1" max="1" chance="0.3" /> <!-- Recipe: Seraph Leather Helmet (60%) -->
-				<item id="35436" min="1" max="1" chance="0.3" /> <!-- Recipe: Seraph Shield (60%) -->
-				<item id="35435" min="1" max="1" chance="0.3" /> <!-- Recipe: Seraph Boots (60%) -->
-				<item id="35434" min="1" max="1" chance="0.3" /> <!-- Recipe: Seraph Gauntlets (60%) -->
-				<item id="35433" min="1" max="1" chance="0.3" /> <!-- Recipe: Seraph Gaiters (60%) -->
-				<item id="35432" min="1" max="1" chance="0.3" /> <!-- Recipe: Seraph Breastplate (60%) -->
-				<item id="35431" min="1" max="1" chance="0.3" /> <!-- Recipe: Seraph Helmet (60%) -->
-				<item id="35323" min="1" max="1" chance="0.3" /> <!-- Seraph Sigil Ingredient -->
-				<item id="35322" min="1" max="1" chance="0.3" /> <!-- Seraph Shoe Ingredient -->
-				<item id="35321" min="1" max="1" chance="0.3" /> <!-- Seraph Glove Ingredient -->
-				<item id="35320" min="1" max="1" chance="0.3" /> <!-- Seraph Stocking Ingredient -->
+				<item id="17527" min="1" max="1" chance="80" /> <!-- Scroll: Enchant Armor (R-grade) -->
+				<item id="17526" min="1" max="1" chance="20" /> <!-- Scroll: Enchant Weapon (R-grade) -->
+				<item id="35322" min="1" max="3" chance="0.5" /> <!-- Seraph Shoe Ingredient -->
+				<item id="35318" min="1" max="3" chance="0.5" /> <!-- Seraph Circlet Ingredient -->
+				<item id="35308" min="1" max="3" chance="0.5" /> <!-- Seraph Breastplate Ingredient -->
+				<item id="35313" min="1" max="3" chance="0.5" /> <!-- Seraph Leather Helmet Ingredient -->
+				<item id="35314" min="1" max="3" chance="0.5" /> <!-- Seraph Leather Armor Ingredient -->
+				<item id="35315" min="1" max="3" chance="0.5" /> <!-- Seraph Leather Legging Ingredient -->
+				<item id="35316" min="1" max="3" chance="0.5" /> <!-- Seraph Leather Glove Ingredient -->
+				<item id="35317" min="1" max="3" chance="0.5" /> <!-- Seraph Leather Boot Ingredient -->
+				<item id="35309" min="1" max="3" chance="0.5" /> <!-- Seraph Gaiter Ingredient -->
+				<item id="35321" min="1" max="3" chance="0.5" /> <!-- Seraph Glove Ingredient -->
+				<item id="35310" min="1" max="3" chance="0.5" /> <!-- Seraph Gauntlet Ingredient -->
+				<item id="35311" min="1" max="3" chance="0.5" /> <!-- Seraph Boot Ingredient -->
+				<item id="35323" min="1" max="3" chance="0.5" /> <!-- Seraph Sigil Ingredient -->
+				<item id="35319" min="1" max="3" chance="0.5" /> <!-- Seraph Tunic Ingredient -->
+				<item id="35307" min="1" max="3" chance="0.5" /> <!-- Seraph Helmet Ingredient -->
+				<item id="35320" min="1" max="3" chance="0.5" /> <!-- Seraph Stocking Ingredient -->
+				<item id="35312" min="1" max="3" chance="0.5" /> <!-- Seraph Shield Ingredient -->
+				<item id="35446" min="1" max="1" chance="0.5" /> <!-- Recipe:�Seraph Shoes (60%) -->
+				<item id="35442" min="1" max="1" chance="0.5" /> <!-- Recipe:�Seraph Circlet (60%) -->
+				<item id="35432" min="1" max="1" chance="0.5" /> <!-- Recipe:�Seraph Breastplate (60%) -->
+				<item id="35438" min="1" max="1" chance="0.5" /> <!-- Recipe:�Seraph Leather Armor (60%) -->
+				<item id="35439" min="1" max="1" chance="0.5" /> <!-- Recipe:�Seraph Leather Leggings (60%) -->
+				<item id="35440" min="1" max="1" chance="0.5" /> <!-- Recipe:�Seraph Leather Gloves (60%) -->
+				<item id="35441" min="1" max="1" chance="0.5" /> <!-- Recipe:�Seraph Leather Boots (60%) -->
+				<item id="35437" min="1" max="1" chance="0.5" /> <!-- Recipe:�Seraph Leather Helmet (60%) -->
+				<item id="35433" min="1" max="1" chance="0.5" /> <!-- Recipe:�Seraph Gaiters (60%) -->
+				<item id="35445" min="1" max="1" chance="0.5" /> <!-- Recipe:�Seraph Gloves (60%) -->
+				<item id="35434" min="1" max="1" chance="0.5" /> <!-- Recipe:�Seraph Gauntlets (60%) -->
+				<item id="35435" min="1" max="1" chance="0.5" /> <!-- Recipe:�Seraph Boots (60%) -->
+				<item id="35447" min="1" max="1" chance="0.5" /> <!-- Recipe:�Seraph Sigil (60%) -->
+				<item id="35443" min="1" max="1" chance="0.5" /> <!-- Recipe:�Seraph Tunic (60%) -->
+				<item id="35431" min="1" max="1" chance="0.5" /> <!-- Recipe:�Seraph Helmet (60%) -->
+				<item id="35444" min="1" max="1" chance="0.5" /> <!-- Recipe:�Seraph Stockings (60%) -->
+				<item id="35436" min="1" max="1" chance="0.5" /> <!-- Recipe:�Seraph Shield (60%) -->
+				<item id="38038" min="1" max="1" chance="0.5" /> <!-- Seraph Shoes Crafting Pack - Robe -->
+				<item id="38034" min="1" max="1" chance="0.5" /> <!-- Seraph Circlet Crafting Pack - Robe -->
+				<item id="38024" min="1" max="1" chance="0.5" /> <!-- Seraph Breastplate Crafting Pack - Heavy Armor -->
+				<item id="38031" min="1" max="1" chance="0.5" /> <!-- Seraph Leather Leggings Crafting Pack - Light Armor -->
+				<item id="38032" min="1" max="1" chance="0.5" /> <!-- Seraph Leather Gloves Crafting Pack - Light Armor -->
+				<item id="38033" min="1" max="1" chance="0.5" /> <!-- Seraph Leather Boots Crafting Pack - Light Armor -->
+				<item id="38030" min="1" max="1" chance="0.5" /> <!-- Seraph Leather Armor Crafting Pack - Light Armor -->
+				<item id="38029" min="1" max="1" chance="0.5" /> <!-- Seraph Leather Helmet Crafting Pack - Light Armor -->
+				<item id="38025" min="1" max="1" chance="0.5" /> <!-- Seraph Gaiters Crafting Pack - Heavy Armor -->
+				<item id="38037" min="1" max="1" chance="0.5" /> <!-- Seraph Gloves Crafting Pack - Robe -->
+				<item id="38026" min="1" max="1" chance="0.5" /> <!-- Seraph Gauntlets Crafting Pack - Heavy Armor -->
+				<item id="38027" min="1" max="1" chance="0.5" /> <!-- Seraph Boots Crafting Pack - Heavy Armor -->
+				<item id="38039" min="1" max="1" chance="0.5" /> <!-- Seraph Sigil Crafting Pack - Robe -->
+				<item id="38035" min="1" max="1" chance="0.5" /> <!-- Seraph Tunic Crafting Pack - Robe -->
+				<item id="38023" min="1" max="1" chance="0.5" /> <!-- Seraph Helmet Crafting Pack - Heavy Armor -->
+				<item id="38036" min="1" max="1" chance="0.5" /> <!-- Seraph Stockings Crafting Pack - Robe -->
+				<item id="38028" min="1" max="1" chance="0.5" /> <!-- Seraph Shield Crafting Pack - Heavy Armor -->
 			</drop>
 		</dropLists>
 		<collision>
@@ -1221,63 +1126,6 @@
 			<skill id="4441" level="5" /> <!-- Greater Mental Attack Resistance -->
 			<skill id="4439" level="5" /> <!-- Greater Hold Resistance -->
 		</skillList>
-		<dropLists>
-			<drop>
-				<item id="17527" min="1" max="1" chance="81.42" /> <!-- Scroll: Enchant Armor (R-grade) -->
-				<item id="17526" min="1" max="1" chance="20.18" /> <!-- Scroll: Enchant Weapon (R-grade) -->
-				<item id="38026" min="1" max="1" chance="0.3" /> <!-- Seraph Gauntlets Crafting Pack - Heavy Armor -->
-				<item id="38025" min="1" max="1" chance="0.3" /> <!-- Seraph Gaiters Crafting Pack - Heavy Armor -->
-				<item id="38024" min="1" max="1" chance="0.3" /> <!-- Seraph Breastplate Crafting Pack - Heavy Armor -->
-				<item id="38023" min="1" max="1" chance="0.3" /> <!-- Seraph Helmet Crafting Pack - Heavy Armor -->
-				<item id="35447" min="1" max="1" chance="0.3" /> <!-- Recipe: Seraph Sigil (60%) -->
-				<item id="35446" min="1" max="1" chance="0.3" /> <!-- Recipe: Seraph Shoes (60%) -->
-				<item id="35445" min="1" max="1" chance="0.3" /> <!-- Recipe: Seraph Gloves (60%) -->
-				<item id="35444" min="1" max="1" chance="0.3" /> <!-- Recipe: Seraph Stockings (60%) -->
-				<item id="35443" min="1" max="1" chance="0.3" /> <!-- Recipe: Seraph Tunic (60%) -->
-				<item id="35442" min="1" max="1" chance="0.3" /> <!-- Recipe: Seraph Circlet (60%) -->
-				<item id="35441" min="1" max="1" chance="0.3" /> <!-- Recipe: Seraph Leather Boots (60%) -->
-				<item id="38027" min="1" max="1" chance="0.3" /> <!-- Seraph Boots Crafting Pack - Heavy Armor -->
-				<item id="38028" min="1" max="1" chance="0.3" /> <!-- Seraph Shield Crafting Pack - Heavy Armor -->
-				<item id="38039" min="1" max="1" chance="0.3" /> <!-- Seraph Sigil Crafting Pack - Robe -->
-				<item id="38038" min="1" max="1" chance="0.3" /> <!-- Seraph Shoes Crafting Pack - Robe -->
-				<item id="38037" min="1" max="1" chance="0.3" /> <!-- Seraph Gloves Crafting Pack - Robe -->
-				<item id="38036" min="1" max="1" chance="0.3" /> <!-- Seraph Stockings Crafting Pack - Robe -->
-				<item id="38035" min="1" max="1" chance="0.3" /> <!-- Seraph Tunic Crafting Pack - Robe -->
-				<item id="38034" min="1" max="1" chance="0.3" /> <!-- Seraph Circlet Crafting Pack - Robe -->
-				<item id="38033" min="1" max="1" chance="0.3" /> <!-- Seraph Leather Boots Crafting Pack - Light Armor -->
-				<item id="38032" min="1" max="1" chance="0.3" /> <!-- Seraph Leather Gloves Crafting Pack - Light Armor -->
-				<item id="38031" min="1" max="1" chance="0.3" /> <!-- Seraph Leather Leggings Crafting Pack - Light Armor -->
-				<item id="38030" min="1" max="1" chance="0.3" /> <!-- Seraph Leather Armor Crafting Pack - Light Armor -->
-				<item id="38029" min="1" max="1" chance="0.3" /> <!-- Seraph Leather Helmet Crafting Pack - Light Armor -->
-				<item id="35440" min="1" max="1" chance="0.3" /> <!-- Recipe: Seraph Leather Gloves (60%) -->
-				<item id="35439" min="1" max="1" chance="0.3" /> <!-- Recipe: Seraph Leather Leggings (60%) -->
-				<item id="35438" min="1" max="1" chance="0.3" /> <!-- Recipe: Seraph Leather Armor (60%) -->
-				<item id="35317" min="1" max="1" chance="0.3" /> <!-- Seraph Leather Boot Ingredient -->
-				<item id="35316" min="1" max="1" chance="0.3" /> <!-- Seraph Leather Glove Ingredient -->
-				<item id="35315" min="1" max="1" chance="0.3" /> <!-- Seraph Leather Legging Ingredient -->
-				<item id="35314" min="1" max="1" chance="0.3" /> <!-- Seraph Leather Armor Ingredient -->
-				<item id="35313" min="1" max="1" chance="0.3" /> <!-- Seraph Leather Helmet Ingredient -->
-				<item id="35312" min="1" max="1" chance="0.3" /> <!-- Seraph Shield Ingredient -->
-				<item id="35311" min="1" max="1" chance="0.3" /> <!-- Seraph Boot Ingredient -->
-				<item id="35310" min="1" max="1" chance="0.3" /> <!-- Seraph Gauntlet Ingredient -->
-				<item id="35309" min="1" max="1" chance="0.3" /> <!-- Seraph Gaiter Ingredient -->
-				<item id="35308" min="1" max="1" chance="0.3" /> <!-- Seraph Breastplate Ingredient -->
-				<item id="35307" min="1" max="1" chance="0.3" /> <!-- Seraph Helmet Ingredient -->
-				<item id="35318" min="1" max="1" chance="0.3" /> <!-- Seraph Circlet Ingredient -->
-				<item id="35319" min="1" max="1" chance="0.3" /> <!-- Seraph Tunic Ingredient -->
-				<item id="35437" min="1" max="1" chance="0.3" /> <!-- Recipe: Seraph Leather Helmet (60%) -->
-				<item id="35436" min="1" max="1" chance="0.3" /> <!-- Recipe: Seraph Shield (60%) -->
-				<item id="35435" min="1" max="1" chance="0.3" /> <!-- Recipe: Seraph Boots (60%) -->
-				<item id="35434" min="1" max="1" chance="0.3" /> <!-- Recipe: Seraph Gauntlets (60%) -->
-				<item id="35433" min="1" max="1" chance="0.3" /> <!-- Recipe: Seraph Gaiters (60%) -->
-				<item id="35432" min="1" max="1" chance="0.3" /> <!-- Recipe: Seraph Breastplate (60%) -->
-				<item id="35431" min="1" max="1" chance="0.3" /> <!-- Recipe: Seraph Helmet (60%) -->
-				<item id="35323" min="1" max="1" chance="0.3" /> <!-- Seraph Sigil Ingredient -->
-				<item id="35322" min="1" max="1" chance="0.3" /> <!-- Seraph Shoe Ingredient -->
-				<item id="35321" min="1" max="1" chance="0.3" /> <!-- Seraph Glove Ingredient -->
-				<item id="35320" min="1" max="1" chance="0.3" /> <!-- Seraph Stocking Ingredient -->
-			</drop>
-		</dropLists>
 		<collision>
 			<radius normal="15" />
 			<height normal="32" />
@@ -1312,153 +1160,6 @@
 			<skill id="4439" level="5" /> <!-- Greater Hold Resistance -->
 		</skillList>
 		<dropLists>
-			<drop>
-				<item id="57" min="25000000" max="35000000" chance="100" /> <!-- Adena -->
-				<item id="38025" min="1" max="1" chance="0.299999999999997" /> <!-- Seraph Gaiters Crafting Pack - Heavy Armor -->
-				<item id="38024" min="1" max="1" chance="0.299999999999997" /> <!-- Seraph Breastplate Crafting Pack - Heavy Armor -->
-				<item id="38036" min="1" max="1" chance="0.299999999999997" /> <!-- Seraph Stockings Crafting Pack - Robe -->
-				<item id="38035" min="1" max="1" chance="0.299999999999997" /> <!-- Seraph Tunic Crafting Pack - Robe -->
-				<item id="38031" min="1" max="1" chance="0.299999999999997" /> <!-- Seraph Leather Leggings Crafting Pack - Light Armor -->
-				<item id="38030" min="1" max="1" chance="0.299999999999997" /> <!-- Seraph Leather Armor Crafting Pack - Light Armor -->
-				<item id="35315" min="1" max="1" chance="0.299999999999997" /> <!-- Seraph Leather Legging Ingredient -->
-				<item id="35314" min="1" max="1" chance="0.299999999999997" /> <!-- Seraph Leather Armor Ingredient -->
-				<item id="35309" min="1" max="1" chance="0.299999999999997" /> <!-- Seraph Gaiter Ingredient -->
-				<item id="35308" min="1" max="1" chance="0.299999999999997" /> <!-- Seraph Breastplate Ingredient -->
-				<item id="35319" min="1" max="1" chance="0.299999999999997" /> <!-- Seraph Tunic Ingredient -->
-				<item id="35320" min="1" max="1" chance="0.299999999999997" /> <!-- Seraph Stocking Ingredient -->
-				<item id="38035" min="1" max="1" chance="0.750000000000006" /> <!-- Seraph Tunic Crafting Pack - Robe -->
-				<item id="38036" min="1" max="1" chance="0.750000000000006" /> <!-- Seraph Stockings Crafting Pack - Robe -->
-				<item id="38031" min="1" max="1" chance="0.750000000000006" /> <!-- Seraph Leather Leggings Crafting Pack - Light Armor -->
-				<item id="38030" min="1" max="1" chance="0.750000000000006" /> <!-- Seraph Leather Armor Crafting Pack - Light Armor -->
-				<item id="38024" min="1" max="1" chance="0.750000000000006" /> <!-- Seraph Breastplate Crafting Pack - Heavy Armor -->
-				<item id="38025" min="1" max="1" chance="0.750000000000006" /> <!-- Seraph Gaiters Crafting Pack - Heavy Armor -->
-				<item id="38066" min="1" max="1" chance="0.299999999999997" /> <!-- Eternal Tunic Crafting Pack - Robe -->
-				<item id="38067" min="1" max="1" chance="0.299999999999997" /> <!-- Eternal Stockings Crafting Pack - Robe -->
-				<item id="38062" min="1" max="1" chance="0.299999999999997" /> <!-- Eternal Leather Leggings Crafting Pack - Light Armor -->
-				<item id="38061" min="1" max="1" chance="0.299999999999997" /> <!-- Eternal Leather Armor Crafting Pack - Light Armor -->
-				<item id="38055" min="1" max="1" chance="0.299999999999997" /> <!-- Eternal Breastplate Crafting Pack - Heavy Armor -->
-				<item id="38056" min="1" max="1" chance="0.299999999999997" /> <!-- Eternal Gaiters Crafting Pack - Heavy Armor -->
-				<item id="38025" min="1" max="1" chance="0.299999999999997" /> <!-- Seraph Gaiters Crafting Pack - Heavy Armor -->
-				<item id="38024" min="1" max="1" chance="0.299999999999997" /> <!-- Seraph Breastplate Crafting Pack - Heavy Armor -->
-				<item id="38036" min="1" max="1" chance="0.299999999999997" /> <!-- Seraph Stockings Crafting Pack - Robe -->
-				<item id="38035" min="1" max="1" chance="0.299999999999997" /> <!-- Seraph Tunic Crafting Pack - Robe -->
-				<item id="38031" min="1" max="1" chance="0.299999999999997" /> <!-- Seraph Leather Leggings Crafting Pack - Light Armor -->
-				<item id="38030" min="1" max="1" chance="0.299999999999997" /> <!-- Seraph Leather Armor Crafting Pack - Light Armor -->
-				<item id="35315" min="1" max="1" chance="0.299999999999997" /> <!-- Seraph Leather Legging Ingredient -->
-				<item id="35314" min="1" max="1" chance="0.299999999999997" /> <!-- Seraph Leather Armor Ingredient -->
-				<item id="35309" min="1" max="1" chance="0.299999999999997" /> <!-- Seraph Gaiter Ingredient -->
-				<item id="35308" min="1" max="1" chance="0.299999999999997" /> <!-- Seraph Breastplate Ingredient -->
-				<item id="35319" min="1" max="1" chance="0.299999999999997" /> <!-- Seraph Tunic Ingredient -->
-				<item id="35320" min="1" max="1" chance="0.299999999999997" /> <!-- Seraph Stocking Ingredient -->
-				<item id="38023" min="1" max="1" chance="0.300000000000009" /> <!-- Seraph Helmet Crafting Pack - Heavy Armor -->
-				<item id="38026" min="1" max="1" chance="0.300000000000009" /> <!-- Seraph Gauntlets Crafting Pack - Heavy Armor -->
-				<item id="38027" min="1" max="1" chance="0.300000000000009" /> <!-- Seraph Boots Crafting Pack - Heavy Armor -->
-				<item id="38028" min="1" max="1" chance="0.300000000000009" /> <!-- Seraph Shield Crafting Pack - Heavy Armor -->
-				<item id="38039" min="1" max="1" chance="0.300000000000009" /> <!-- Seraph Sigil Crafting Pack - Robe -->
-				<item id="38038" min="1" max="1" chance="0.300000000000009" /> <!-- Seraph Shoes Crafting Pack - Robe -->
-				<item id="38037" min="1" max="1" chance="0.300000000000009" /> <!-- Seraph Gloves Crafting Pack - Robe -->
-				<item id="38034" min="1" max="1" chance="0.300000000000009" /> <!-- Seraph Circlet Crafting Pack - Robe -->
-				<item id="38033" min="1" max="1" chance="0.300000000000009" /> <!-- Seraph Leather Boots Crafting Pack - Light Armor -->
-				<item id="38032" min="1" max="1" chance="0.300000000000009" /> <!-- Seraph Leather Gloves Crafting Pack - Light Armor -->
-				<item id="38029" min="1" max="1" chance="0.300000000000009" /> <!-- Seraph Leather Helmet Crafting Pack - Light Armor -->
-				<item id="35307" min="1" max="1" chance="0.300000000000009" /> <!-- Seraph Helmet Ingredient -->
-				<item id="35318" min="1" max="1" chance="0.300000000000009" /> <!-- Seraph Circlet Ingredient -->
-				<item id="35313" min="1" max="1" chance="0.300000000000009" /> <!-- Seraph Leather Helmet Ingredient -->
-				<item id="35312" min="1" max="1" chance="0.300000000000009" /> <!-- Seraph Shield Ingredient -->
-				<item id="35323" min="1" max="1" chance="0.300000000000009" /> <!-- Seraph Sigil Ingredient -->
-				<item id="38033" min="1" max="1" chance="0.749999999999991" /> <!-- Seraph Leather Boots Crafting Pack - Light Armor -->
-				<item id="38034" min="1" max="1" chance="0.749999999999991" /> <!-- Seraph Circlet Crafting Pack - Robe -->
-				<item id="38037" min="1" max="1" chance="0.749999999999991" /> <!-- Seraph Gloves Crafting Pack - Robe -->
-				<item id="38038" min="1" max="1" chance="0.749999999999991" /> <!-- Seraph Shoes Crafting Pack - Robe -->
-				<item id="38039" min="1" max="1" chance="0.749999999999991" /> <!-- Seraph Sigil Crafting Pack - Robe -->
-				<item id="38032" min="1" max="1" chance="0.749999999999991" /> <!-- Seraph Leather Gloves Crafting Pack - Light Armor -->
-				<item id="38023" min="1" max="1" chance="0.749999999999991" /> <!-- Seraph Helmet Crafting Pack - Heavy Armor -->
-				<item id="38026" min="1" max="1" chance="0.749999999999991" /> <!-- Seraph Gauntlets Crafting Pack - Heavy Armor -->
-				<item id="38027" min="1" max="1" chance="0.749999999999991" /> <!-- Seraph Boots Crafting Pack - Heavy Armor -->
-				<item id="38028" min="1" max="1" chance="0.749999999999991" /> <!-- Seraph Shield Crafting Pack - Heavy Armor -->
-				<item id="38029" min="1" max="1" chance="0.749999999999991" /> <!-- Seraph Leather Helmet Crafting Pack - Light Armor -->
-				<item id="38064" min="1" max="1" chance="0.300000000000009" /> <!-- Eternal Leather Boots Crafting Pack - Light Armor -->
-				<item id="38065" min="1" max="1" chance="0.300000000000009" /> <!-- Eternal Circlet Crafting Pack - Robe -->
-				<item id="38068" min="1" max="1" chance="0.300000000000009" /> <!-- Eternal Gloves Crafting Pack - Robe -->
-				<item id="38069" min="1" max="1" chance="0.300000000000009" /> <!-- Eternal Shoes Crafting Pack - Robe -->
-				<item id="38070" min="1" max="1" chance="0.300000000000009" /> <!-- Eternal Sigil Crafting Pack - Robe -->
-				<item id="38063" min="1" max="1" chance="0.300000000000009" /> <!-- Eternal Leather Gloves Crafting Pack - Light Armor -->
-				<item id="38054" min="1" max="1" chance="0.300000000000009" /> <!-- Eternal Helmet Crafting Pack - Heavy Armor -->
-				<item id="38057" min="1" max="1" chance="0.300000000000009" /> <!-- Eternal Gauntlets Crafting Pack - Heavy Armor -->
-				<item id="38058" min="1" max="1" chance="0.300000000000009" /> <!-- Eternal Boots Crafting Pack - Heavy Armor -->
-				<item id="38059" min="1" max="1" chance="0.300000000000009" /> <!-- Eternal Shield Crafting Pack - Heavy Armor -->
-				<item id="38060" min="1" max="1" chance="0.300000000000009" /> <!-- Eternal Leather Helmet Crafting Pack - Light Armor -->
-				<item id="38026" min="1" max="1" chance="0.300000000000009" /> <!-- Seraph Gauntlets Crafting Pack - Heavy Armor -->
-				<item id="38023" min="1" max="1" chance="0.300000000000009" /> <!-- Seraph Helmet Crafting Pack - Heavy Armor -->
-				<item id="38027" min="1" max="1" chance="0.300000000000009" /> <!-- Seraph Boots Crafting Pack - Heavy Armor -->
-				<item id="38028" min="1" max="1" chance="0.300000000000009" /> <!-- Seraph Shield Crafting Pack - Heavy Armor -->
-				<item id="38039" min="1" max="1" chance="0.300000000000009" /> <!-- Seraph Sigil Crafting Pack - Robe -->
-				<item id="38038" min="1" max="1" chance="0.300000000000009" /> <!-- Seraph Shoes Crafting Pack - Robe -->
-				<item id="38037" min="1" max="1" chance="0.300000000000009" /> <!-- Seraph Gloves Crafting Pack - Robe -->
-				<item id="38034" min="1" max="1" chance="0.300000000000009" /> <!-- Seraph Circlet Crafting Pack - Robe -->
-				<item id="38033" min="1" max="1" chance="0.300000000000009" /> <!-- Seraph Leather Boots Crafting Pack - Light Armor -->
-				<item id="38032" min="1" max="1" chance="0.300000000000009" /> <!-- Seraph Leather Gloves Crafting Pack - Light Armor -->
-				<item id="38029" min="1" max="1" chance="0.300000000000009" /> <!-- Seraph Leather Helmet Crafting Pack - Light Armor -->
-				<item id="35313" min="1" max="1" chance="0.300000000000009" /> <!-- Seraph Leather Helmet Ingredient -->
-				<item id="35312" min="1" max="1" chance="0.300000000000009" /> <!-- Seraph Shield Ingredient -->
-				<item id="35307" min="1" max="1" chance="0.300000000000009" /> <!-- Seraph Helmet Ingredient -->
-				<item id="35318" min="1" max="1" chance="0.300000000000009" /> <!-- Seraph Circlet Ingredient -->
-				<item id="35323" min="1" max="1" chance="0.300000000000009" /> <!-- Seraph Sigil Ingredient -->
-				<item id="36513" min="4" max="10" chance="16.538798315473" /> <!-- Elcyum Powder -->
-				<item id="17527" min="1" max="1" chance="14.084976858608" /> <!-- Scroll: Enchant Armor (R-grade) -->
-				<item id="17526" min="1" max="1" chance="3.5546011758329" /> <!-- Scroll: Enchant Weapon (R-grade) -->
-				<item id="35447" min="1" max="1" chance="0.062544302214068" /> <!-- Recipe: Seraph Sigil (60%) -->
-				<item id="35446" min="1" max="1" chance="0.062544302214068" /> <!-- Recipe: Seraph Shoes (60%) -->
-				<item id="35445" min="1" max="1" chance="0.062544302214068" /> <!-- Recipe: Seraph Gloves (60%) -->
-				<item id="35444" min="1" max="1" chance="0.062544302214068" /> <!-- Recipe: Seraph Stockings (60%) -->
-				<item id="35443" min="1" max="1" chance="0.062544302214068" /> <!-- Recipe: Seraph Tunic (60%) -->
-				<item id="35442" min="1" max="1" chance="0.062544302214068" /> <!-- Recipe: Seraph Circlet (60%) -->
-				<item id="35441" min="1" max="1" chance="0.062544302214068" /> <!-- Recipe: Seraph Leather Boots (60%) -->
-				<item id="35440" min="1" max="1" chance="0.062544302214068" /> <!-- Recipe: Seraph Leather Gloves (60%) -->
-				<item id="35317" min="1" max="1" chance="0.062544302214068" /> <!-- Seraph Leather Boot Ingredient -->
-				<item id="35316" min="1" max="1" chance="0.062544302214068" /> <!-- Seraph Leather Glove Ingredient -->
-				<item id="35311" min="1" max="1" chance="0.062544302214068" /> <!-- Seraph Boot Ingredient -->
-				<item id="35310" min="1" max="1" chance="0.062544302214068" /> <!-- Seraph Gauntlet Ingredient -->
-				<item id="35439" min="1" max="1" chance="0.062544302214068" /> <!-- Recipe: Seraph Leather Leggings (60%) -->
-				<item id="35438" min="1" max="1" chance="0.062544302214068" /> <!-- Recipe: Seraph Leather Armor (60%) -->
-				<item id="35437" min="1" max="1" chance="0.062544302214068" /> <!-- Recipe: Seraph Leather Helmet (60%) -->
-				<item id="35436" min="1" max="1" chance="0.062544302214068" /> <!-- Recipe: Seraph Shield (60%) -->
-				<item id="35435" min="1" max="1" chance="0.062544302214068" /> <!-- Recipe: Seraph Boots (60%) -->
-				<item id="35434" min="1" max="1" chance="0.062544302214068" /> <!-- Recipe: Seraph Gauntlets (60%) -->
-				<item id="35433" min="1" max="1" chance="0.062544302214068" /> <!-- Recipe: Seraph Gaiters (60%) -->
-				<item id="35321" min="1" max="1" chance="0.062544302214068" /> <!-- Seraph Glove Ingredient -->
-				<item id="35322" min="1" max="1" chance="0.062544302214068" /> <!-- Seraph Shoe Ingredient -->
-				<item id="35431" min="1" max="1" chance="0.062544302214068" /> <!-- Recipe: Seraph Helmet (60%) -->
-				<item id="35432" min="1" max="1" chance="0.062544302214068" /> <!-- Recipe: Seraph Breastplate (60%) -->
-				<item id="17527" min="1" max="1" chance="16.880707167577" /> <!-- Scroll: Enchant Armor (R-grade) -->
-				<item id="17526" min="1" max="1" chance="4.2259100195972" /> <!-- Scroll: Enchant Weapon (R-grade) -->
-				<item id="19440" min="2" max="4" chance="20.848100738023" /> <!-- Gemstone (R-grade) -->
-				<item id="17527" min="1" max="1" chance="16.40537047075" /> <!-- Scroll: Enchant Armor (R-grade) -->
-				<item id="17526" min="1" max="1" chance="4.1466872367927" /> <!-- Scroll: Enchant Weapon (R-grade) -->
-				<item id="35447" min="1" max="1" chance="0.062544302214068" /> <!-- Recipe: Seraph Sigil (60%) -->
-				<item id="35446" min="1" max="1" chance="0.062544302214068" /> <!-- Recipe: Seraph Shoes (60%) -->
-				<item id="35445" min="1" max="1" chance="0.062544302214068" /> <!-- Recipe: Seraph Gloves (60%) -->
-				<item id="35444" min="1" max="1" chance="0.062544302214068" /> <!-- Recipe: Seraph Stockings (60%) -->
-				<item id="35443" min="1" max="1" chance="0.062544302214068" /> <!-- Recipe: Seraph Tunic (60%) -->
-				<item id="35442" min="1" max="1" chance="0.062544302214068" /> <!-- Recipe: Seraph Circlet (60%) -->
-				<item id="35441" min="1" max="1" chance="0.062544302214068" /> <!-- Recipe: Seraph Leather Boots (60%) -->
-				<item id="35440" min="1" max="1" chance="0.062544302214068" /> <!-- Recipe: Seraph Leather Gloves (60%) -->
-				<item id="35439" min="1" max="1" chance="0.062544302214068" /> <!-- Recipe: Seraph Leather Leggings (60%) -->
-				<item id="35438" min="1" max="1" chance="0.062544302214068" /> <!-- Recipe: Seraph Leather Armor (60%) -->
-				<item id="35317" min="1" max="1" chance="0.062544302214068" /> <!-- Seraph Leather Boot Ingredient -->
-				<item id="35316" min="1" max="1" chance="0.062544302214068" /> <!-- Seraph Leather Glove Ingredient -->
-				<item id="35311" min="1" max="1" chance="0.062544302214068" /> <!-- Seraph Boot Ingredient -->
-				<item id="35310" min="1" max="1" chance="0.062544302214068" /> <!-- Seraph Gauntlet Ingredient -->
-				<item id="35437" min="1" max="1" chance="0.062544302214068" /> <!-- Recipe: Seraph Leather Helmet (60%) -->
-				<item id="35436" min="1" max="1" chance="0.062544302214068" /> <!-- Recipe: Seraph Shield (60%) -->
-				<item id="35435" min="1" max="1" chance="0.062544302214068" /> <!-- Recipe: Seraph Boots (60%) -->
-				<item id="35434" min="1" max="1" chance="0.062544302214068" /> <!-- Recipe: Seraph Gauntlets (60%) -->
-				<item id="35433" min="1" max="1" chance="0.062544302214068" /> <!-- Recipe: Seraph Gaiters (60%) -->
-				<item id="35432" min="1" max="1" chance="0.062544302214068" /> <!-- Recipe: Seraph Breastplate (60%) -->
-				<item id="35431" min="1" max="1" chance="0.062544302214068" /> <!-- Recipe: Seraph Helmet (60%) -->
-				<item id="35322" min="1" max="1" chance="0.062544302214068" /> <!-- Seraph Shoe Ingredient -->
-				<item id="35321" min="1" max="1" chance="0.062544302214068" /> <!-- Seraph Glove Ingredient -->
-			</drop>
 			<lucky>
 				<item id="39629" min="2" max="2" chance="100" /> <!-- Fortune Pocket - Stage 1 -->
 			</lucky>
@@ -1497,153 +1198,6 @@
 			<skill id="4439" level="5" /> <!-- Greater Hold Resistance -->
 		</skillList>
 		<dropLists>
-			<drop>
-				<item id="57" min="25000000" max="35000000" chance="100" /> <!-- Adena -->
-				<item id="38025" min="1" max="1" chance="0.299999999999997" /> <!-- Seraph Gaiters Crafting Pack - Heavy Armor -->
-				<item id="38024" min="1" max="1" chance="0.299999999999997" /> <!-- Seraph Breastplate Crafting Pack - Heavy Armor -->
-				<item id="38036" min="1" max="1" chance="0.299999999999997" /> <!-- Seraph Stockings Crafting Pack - Robe -->
-				<item id="38035" min="1" max="1" chance="0.299999999999997" /> <!-- Seraph Tunic Crafting Pack - Robe -->
-				<item id="38031" min="1" max="1" chance="0.299999999999997" /> <!-- Seraph Leather Leggings Crafting Pack - Light Armor -->
-				<item id="38030" min="1" max="1" chance="0.299999999999997" /> <!-- Seraph Leather Armor Crafting Pack - Light Armor -->
-				<item id="35315" min="1" max="1" chance="0.299999999999997" /> <!-- Seraph Leather Legging Ingredient -->
-				<item id="35314" min="1" max="1" chance="0.299999999999997" /> <!-- Seraph Leather Armor Ingredient -->
-				<item id="35309" min="1" max="1" chance="0.299999999999997" /> <!-- Seraph Gaiter Ingredient -->
-				<item id="35308" min="1" max="1" chance="0.299999999999997" /> <!-- Seraph Breastplate Ingredient -->
-				<item id="35319" min="1" max="1" chance="0.299999999999997" /> <!-- Seraph Tunic Ingredient -->
-				<item id="35320" min="1" max="1" chance="0.299999999999997" /> <!-- Seraph Stocking Ingredient -->
-				<item id="38035" min="1" max="1" chance="0.750000000000006" /> <!-- Seraph Tunic Crafting Pack - Robe -->
-				<item id="38036" min="1" max="1" chance="0.750000000000006" /> <!-- Seraph Stockings Crafting Pack - Robe -->
-				<item id="38031" min="1" max="1" chance="0.750000000000006" /> <!-- Seraph Leather Leggings Crafting Pack - Light Armor -->
-				<item id="38030" min="1" max="1" chance="0.750000000000006" /> <!-- Seraph Leather Armor Crafting Pack - Light Armor -->
-				<item id="38024" min="1" max="1" chance="0.750000000000006" /> <!-- Seraph Breastplate Crafting Pack - Heavy Armor -->
-				<item id="38025" min="1" max="1" chance="0.750000000000006" /> <!-- Seraph Gaiters Crafting Pack - Heavy Armor -->
-				<item id="38066" min="1" max="1" chance="0.299999999999997" /> <!-- Eternal Tunic Crafting Pack - Robe -->
-				<item id="38067" min="1" max="1" chance="0.299999999999997" /> <!-- Eternal Stockings Crafting Pack - Robe -->
-				<item id="38062" min="1" max="1" chance="0.299999999999997" /> <!-- Eternal Leather Leggings Crafting Pack - Light Armor -->
-				<item id="38061" min="1" max="1" chance="0.299999999999997" /> <!-- Eternal Leather Armor Crafting Pack - Light Armor -->
-				<item id="38055" min="1" max="1" chance="0.299999999999997" /> <!-- Eternal Breastplate Crafting Pack - Heavy Armor -->
-				<item id="38056" min="1" max="1" chance="0.299999999999997" /> <!-- Eternal Gaiters Crafting Pack - Heavy Armor -->
-				<item id="38025" min="1" max="1" chance="0.299999999999997" /> <!-- Seraph Gaiters Crafting Pack - Heavy Armor -->
-				<item id="38024" min="1" max="1" chance="0.299999999999997" /> <!-- Seraph Breastplate Crafting Pack - Heavy Armor -->
-				<item id="38036" min="1" max="1" chance="0.299999999999997" /> <!-- Seraph Stockings Crafting Pack - Robe -->
-				<item id="38035" min="1" max="1" chance="0.299999999999997" /> <!-- Seraph Tunic Crafting Pack - Robe -->
-				<item id="38031" min="1" max="1" chance="0.299999999999997" /> <!-- Seraph Leather Leggings Crafting Pack - Light Armor -->
-				<item id="38030" min="1" max="1" chance="0.299999999999997" /> <!-- Seraph Leather Armor Crafting Pack - Light Armor -->
-				<item id="35315" min="1" max="1" chance="0.299999999999997" /> <!-- Seraph Leather Legging Ingredient -->
-				<item id="35314" min="1" max="1" chance="0.299999999999997" /> <!-- Seraph Leather Armor Ingredient -->
-				<item id="35309" min="1" max="1" chance="0.299999999999997" /> <!-- Seraph Gaiter Ingredient -->
-				<item id="35308" min="1" max="1" chance="0.299999999999997" /> <!-- Seraph Breastplate Ingredient -->
-				<item id="35319" min="1" max="1" chance="0.299999999999997" /> <!-- Seraph Tunic Ingredient -->
-				<item id="35320" min="1" max="1" chance="0.299999999999997" /> <!-- Seraph Stocking Ingredient -->
-				<item id="38023" min="1" max="1" chance="0.300000000000009" /> <!-- Seraph Helmet Crafting Pack - Heavy Armor -->
-				<item id="38026" min="1" max="1" chance="0.300000000000009" /> <!-- Seraph Gauntlets Crafting Pack - Heavy Armor -->
-				<item id="38027" min="1" max="1" chance="0.300000000000009" /> <!-- Seraph Boots Crafting Pack - Heavy Armor -->
-				<item id="38028" min="1" max="1" chance="0.300000000000009" /> <!-- Seraph Shield Crafting Pack - Heavy Armor -->
-				<item id="38039" min="1" max="1" chance="0.300000000000009" /> <!-- Seraph Sigil Crafting Pack - Robe -->
-				<item id="38038" min="1" max="1" chance="0.300000000000009" /> <!-- Seraph Shoes Crafting Pack - Robe -->
-				<item id="38037" min="1" max="1" chance="0.300000000000009" /> <!-- Seraph Gloves Crafting Pack - Robe -->
-				<item id="38034" min="1" max="1" chance="0.300000000000009" /> <!-- Seraph Circlet Crafting Pack - Robe -->
-				<item id="38033" min="1" max="1" chance="0.300000000000009" /> <!-- Seraph Leather Boots Crafting Pack - Light Armor -->
-				<item id="38032" min="1" max="1" chance="0.300000000000009" /> <!-- Seraph Leather Gloves Crafting Pack - Light Armor -->
-				<item id="38029" min="1" max="1" chance="0.300000000000009" /> <!-- Seraph Leather Helmet Crafting Pack - Light Armor -->
-				<item id="35307" min="1" max="1" chance="0.300000000000009" /> <!-- Seraph Helmet Ingredient -->
-				<item id="35318" min="1" max="1" chance="0.300000000000009" /> <!-- Seraph Circlet Ingredient -->
-				<item id="35313" min="1" max="1" chance="0.300000000000009" /> <!-- Seraph Leather Helmet Ingredient -->
-				<item id="35312" min="1" max="1" chance="0.300000000000009" /> <!-- Seraph Shield Ingredient -->
-				<item id="35323" min="1" max="1" chance="0.300000000000009" /> <!-- Seraph Sigil Ingredient -->
-				<item id="38033" min="1" max="1" chance="0.749999999999991" /> <!-- Seraph Leather Boots Crafting Pack - Light Armor -->
-				<item id="38034" min="1" max="1" chance="0.749999999999991" /> <!-- Seraph Circlet Crafting Pack - Robe -->
-				<item id="38037" min="1" max="1" chance="0.749999999999991" /> <!-- Seraph Gloves Crafting Pack - Robe -->
-				<item id="38038" min="1" max="1" chance="0.749999999999991" /> <!-- Seraph Shoes Crafting Pack - Robe -->
-				<item id="38039" min="1" max="1" chance="0.749999999999991" /> <!-- Seraph Sigil Crafting Pack - Robe -->
-				<item id="38032" min="1" max="1" chance="0.749999999999991" /> <!-- Seraph Leather Gloves Crafting Pack - Light Armor -->
-				<item id="38023" min="1" max="1" chance="0.749999999999991" /> <!-- Seraph Helmet Crafting Pack - Heavy Armor -->
-				<item id="38026" min="1" max="1" chance="0.749999999999991" /> <!-- Seraph Gauntlets Crafting Pack - Heavy Armor -->
-				<item id="38027" min="1" max="1" chance="0.749999999999991" /> <!-- Seraph Boots Crafting Pack - Heavy Armor -->
-				<item id="38028" min="1" max="1" chance="0.749999999999991" /> <!-- Seraph Shield Crafting Pack - Heavy Armor -->
-				<item id="38029" min="1" max="1" chance="0.749999999999991" /> <!-- Seraph Leather Helmet Crafting Pack - Light Armor -->
-				<item id="38064" min="1" max="1" chance="0.300000000000009" /> <!-- Eternal Leather Boots Crafting Pack - Light Armor -->
-				<item id="38065" min="1" max="1" chance="0.300000000000009" /> <!-- Eternal Circlet Crafting Pack - Robe -->
-				<item id="38068" min="1" max="1" chance="0.300000000000009" /> <!-- Eternal Gloves Crafting Pack - Robe -->
-				<item id="38069" min="1" max="1" chance="0.300000000000009" /> <!-- Eternal Shoes Crafting Pack - Robe -->
-				<item id="38070" min="1" max="1" chance="0.300000000000009" /> <!-- Eternal Sigil Crafting Pack - Robe -->
-				<item id="38063" min="1" max="1" chance="0.300000000000009" /> <!-- Eternal Leather Gloves Crafting Pack - Light Armor -->
-				<item id="38054" min="1" max="1" chance="0.300000000000009" /> <!-- Eternal Helmet Crafting Pack - Heavy Armor -->
-				<item id="38057" min="1" max="1" chance="0.300000000000009" /> <!-- Eternal Gauntlets Crafting Pack - Heavy Armor -->
-				<item id="38058" min="1" max="1" chance="0.300000000000009" /> <!-- Eternal Boots Crafting Pack - Heavy Armor -->
-				<item id="38059" min="1" max="1" chance="0.300000000000009" /> <!-- Eternal Shield Crafting Pack - Heavy Armor -->
-				<item id="38060" min="1" max="1" chance="0.300000000000009" /> <!-- Eternal Leather Helmet Crafting Pack - Light Armor -->
-				<item id="38026" min="1" max="1" chance="0.300000000000009" /> <!-- Seraph Gauntlets Crafting Pack - Heavy Armor -->
-				<item id="38023" min="1" max="1" chance="0.300000000000009" /> <!-- Seraph Helmet Crafting Pack - Heavy Armor -->
-				<item id="38027" min="1" max="1" chance="0.300000000000009" /> <!-- Seraph Boots Crafting Pack - Heavy Armor -->
-				<item id="38028" min="1" max="1" chance="0.300000000000009" /> <!-- Seraph Shield Crafting Pack - Heavy Armor -->
-				<item id="38039" min="1" max="1" chance="0.300000000000009" /> <!-- Seraph Sigil Crafting Pack - Robe -->
-				<item id="38038" min="1" max="1" chance="0.300000000000009" /> <!-- Seraph Shoes Crafting Pack - Robe -->
-				<item id="38037" min="1" max="1" chance="0.300000000000009" /> <!-- Seraph Gloves Crafting Pack - Robe -->
-				<item id="38034" min="1" max="1" chance="0.300000000000009" /> <!-- Seraph Circlet Crafting Pack - Robe -->
-				<item id="38033" min="1" max="1" chance="0.300000000000009" /> <!-- Seraph Leather Boots Crafting Pack - Light Armor -->
-				<item id="38032" min="1" max="1" chance="0.300000000000009" /> <!-- Seraph Leather Gloves Crafting Pack - Light Armor -->
-				<item id="38029" min="1" max="1" chance="0.300000000000009" /> <!-- Seraph Leather Helmet Crafting Pack - Light Armor -->
-				<item id="35313" min="1" max="1" chance="0.300000000000009" /> <!-- Seraph Leather Helmet Ingredient -->
-				<item id="35312" min="1" max="1" chance="0.300000000000009" /> <!-- Seraph Shield Ingredient -->
-				<item id="35307" min="1" max="1" chance="0.300000000000009" /> <!-- Seraph Helmet Ingredient -->
-				<item id="35318" min="1" max="1" chance="0.300000000000009" /> <!-- Seraph Circlet Ingredient -->
-				<item id="35323" min="1" max="1" chance="0.300000000000009" /> <!-- Seraph Sigil Ingredient -->
-				<item id="36513" min="4" max="10" chance="16.538798315473" /> <!-- Elcyum Powder -->
-				<item id="17527" min="1" max="1" chance="14.084976858608" /> <!-- Scroll: Enchant Armor (R-grade) -->
-				<item id="17526" min="1" max="1" chance="3.5546011758329" /> <!-- Scroll: Enchant Weapon (R-grade) -->
-				<item id="35447" min="1" max="1" chance="0.062544302214068" /> <!-- Recipe: Seraph Sigil (60%) -->
-				<item id="35446" min="1" max="1" chance="0.062544302214068" /> <!-- Recipe: Seraph Shoes (60%) -->
-				<item id="35445" min="1" max="1" chance="0.062544302214068" /> <!-- Recipe: Seraph Gloves (60%) -->
-				<item id="35444" min="1" max="1" chance="0.062544302214068" /> <!-- Recipe: Seraph Stockings (60%) -->
-				<item id="35443" min="1" max="1" chance="0.062544302214068" /> <!-- Recipe: Seraph Tunic (60%) -->
-				<item id="35442" min="1" max="1" chance="0.062544302214068" /> <!-- Recipe: Seraph Circlet (60%) -->
-				<item id="35441" min="1" max="1" chance="0.062544302214068" /> <!-- Recipe: Seraph Leather Boots (60%) -->
-				<item id="35440" min="1" max="1" chance="0.062544302214068" /> <!-- Recipe: Seraph Leather Gloves (60%) -->
-				<item id="35317" min="1" max="1" chance="0.062544302214068" /> <!-- Seraph Leather Boot Ingredient -->
-				<item id="35316" min="1" max="1" chance="0.062544302214068" /> <!-- Seraph Leather Glove Ingredient -->
-				<item id="35311" min="1" max="1" chance="0.062544302214068" /> <!-- Seraph Boot Ingredient -->
-				<item id="35310" min="1" max="1" chance="0.062544302214068" /> <!-- Seraph Gauntlet Ingredient -->
-				<item id="35439" min="1" max="1" chance="0.062544302214068" /> <!-- Recipe: Seraph Leather Leggings (60%) -->
-				<item id="35438" min="1" max="1" chance="0.062544302214068" /> <!-- Recipe: Seraph Leather Armor (60%) -->
-				<item id="35437" min="1" max="1" chance="0.062544302214068" /> <!-- Recipe: Seraph Leather Helmet (60%) -->
-				<item id="35436" min="1" max="1" chance="0.062544302214068" /> <!-- Recipe: Seraph Shield (60%) -->
-				<item id="35435" min="1" max="1" chance="0.062544302214068" /> <!-- Recipe: Seraph Boots (60%) -->
-				<item id="35434" min="1" max="1" chance="0.062544302214068" /> <!-- Recipe: Seraph Gauntlets (60%) -->
-				<item id="35433" min="1" max="1" chance="0.062544302214068" /> <!-- Recipe: Seraph Gaiters (60%) -->
-				<item id="35321" min="1" max="1" chance="0.062544302214068" /> <!-- Seraph Glove Ingredient -->
-				<item id="35322" min="1" max="1" chance="0.062544302214068" /> <!-- Seraph Shoe Ingredient -->
-				<item id="35431" min="1" max="1" chance="0.062544302214068" /> <!-- Recipe: Seraph Helmet (60%) -->
-				<item id="35432" min="1" max="1" chance="0.062544302214068" /> <!-- Recipe: Seraph Breastplate (60%) -->
-				<item id="17527" min="1" max="1" chance="16.880707167577" /> <!-- Scroll: Enchant Armor (R-grade) -->
-				<item id="17526" min="1" max="1" chance="4.2259100195972" /> <!-- Scroll: Enchant Weapon (R-grade) -->
-				<item id="19440" min="2" max="4" chance="20.848100738023" /> <!-- Gemstone (R-grade) -->
-				<item id="17527" min="1" max="1" chance="16.40537047075" /> <!-- Scroll: Enchant Armor (R-grade) -->
-				<item id="17526" min="1" max="1" chance="4.1466872367927" /> <!-- Scroll: Enchant Weapon (R-grade) -->
-				<item id="35447" min="1" max="1" chance="0.062544302214068" /> <!-- Recipe: Seraph Sigil (60%) -->
-				<item id="35446" min="1" max="1" chance="0.062544302214068" /> <!-- Recipe: Seraph Shoes (60%) -->
-				<item id="35445" min="1" max="1" chance="0.062544302214068" /> <!-- Recipe: Seraph Gloves (60%) -->
-				<item id="35444" min="1" max="1" chance="0.062544302214068" /> <!-- Recipe: Seraph Stockings (60%) -->
-				<item id="35443" min="1" max="1" chance="0.062544302214068" /> <!-- Recipe: Seraph Tunic (60%) -->
-				<item id="35442" min="1" max="1" chance="0.062544302214068" /> <!-- Recipe: Seraph Circlet (60%) -->
-				<item id="35441" min="1" max="1" chance="0.062544302214068" /> <!-- Recipe: Seraph Leather Boots (60%) -->
-				<item id="35440" min="1" max="1" chance="0.062544302214068" /> <!-- Recipe: Seraph Leather Gloves (60%) -->
-				<item id="35439" min="1" max="1" chance="0.062544302214068" /> <!-- Recipe: Seraph Leather Leggings (60%) -->
-				<item id="35438" min="1" max="1" chance="0.062544302214068" /> <!-- Recipe: Seraph Leather Armor (60%) -->
-				<item id="35317" min="1" max="1" chance="0.062544302214068" /> <!-- Seraph Leather Boot Ingredient -->
-				<item id="35316" min="1" max="1" chance="0.062544302214068" /> <!-- Seraph Leather Glove Ingredient -->
-				<item id="35311" min="1" max="1" chance="0.062544302214068" /> <!-- Seraph Boot Ingredient -->
-				<item id="35310" min="1" max="1" chance="0.062544302214068" /> <!-- Seraph Gauntlet Ingredient -->
-				<item id="35437" min="1" max="1" chance="0.062544302214068" /> <!-- Recipe: Seraph Leather Helmet (60%) -->
-				<item id="35436" min="1" max="1" chance="0.062544302214068" /> <!-- Recipe: Seraph Shield (60%) -->
-				<item id="35435" min="1" max="1" chance="0.062544302214068" /> <!-- Recipe: Seraph Boots (60%) -->
-				<item id="35434" min="1" max="1" chance="0.062544302214068" /> <!-- Recipe: Seraph Gauntlets (60%) -->
-				<item id="35433" min="1" max="1" chance="0.062544302214068" /> <!-- Recipe: Seraph Gaiters (60%) -->
-				<item id="35432" min="1" max="1" chance="0.062544302214068" /> <!-- Recipe: Seraph Breastplate (60%) -->
-				<item id="35431" min="1" max="1" chance="0.062544302214068" /> <!-- Recipe: Seraph Helmet (60%) -->
-				<item id="35322" min="1" max="1" chance="0.062544302214068" /> <!-- Seraph Shoe Ingredient -->
-				<item id="35321" min="1" max="1" chance="0.062544302214068" /> <!-- Seraph Glove Ingredient -->
-			</drop>
 			<lucky>
 				<item id="39629" min="2" max="2" chance="100" /> <!-- Fortune Pocket - Stage 1 -->
 			</lucky>
@@ -1669,5 +1223,103 @@
 			<radius normal="77" />
 			<height normal="120" />
 		</collision>
+		<dropLists>
+			<drop>
+				<item id="17527" min="1" max="1" chance="75" /> <!-- Scroll: Enchant Armor (R-grade) -->
+				<item id="36586" min="1" max="1" chance="50" /> <!-- Scroll: Modify Armor (R-grade) -->
+				<item id="36574" min="1" max="1" chance="50" /> <!-- Scroll: Modify Weapon (R-grade) -->
+				<item id="17526" min="1" max="1" chance="25" /> <!-- Scroll: Enchant Weapon (R-grade) -->
+				<item id="35353" min="1" max="1" chance="2" /> <!-- Eternal Shoe Ingredient -->
+				<item id="35349" min="1" max="1" chance="2" /> <!-- Eternal Circlet Ingredient -->
+				<item id="35339" min="1" max="1" chance="2" /> <!-- Eternal Breastplate Ingredient -->
+				<item id="35345" min="1" max="1" chance="2" /> <!-- Eternal Leather Armor Ingredient -->
+				<item id="35344" min="1" max="1" chance="2" /> <!-- Eternal Leather Helmet Ingredient -->
+				<item id="35346" min="1" max="1" chance="2" /> <!-- Eternal Leather Legging Ingredient -->
+				<item id="35347" min="1" max="1" chance="2" /> <!-- Eternal Leather Glove Ingredient -->
+				<item id="35348" min="1" max="1" chance="2" /> <!-- Eternal Leather Boot Ingredient -->
+				<item id="35340" min="1" max="1" chance="2" /> <!-- Eternal Gaiter Ingredient -->
+				<item id="35352" min="1" max="1" chance="2" /> <!-- Eternal Glove Ingredient -->
+				<item id="35341" min="1" max="1" chance="2" /> <!-- Eternal Gauntlet Ingredient -->
+				<item id="35342" min="1" max="1" chance="2" /> <!-- Eternal Boot Ingredient -->
+				<item id="35354" min="1" max="1" chance="2" /> <!-- Eternal Sigil Ingredient -->
+				<item id="35350" min="1" max="1" chance="2" /> <!-- Eternal Tunic Ingredient -->
+				<item id="35338" min="1" max="1" chance="2" /> <!-- Eternal Helmet Ingredient -->
+				<item id="35351" min="1" max="1" chance="2" /> <!-- Eternal Stocking Ingredient -->
+				<item id="35343" min="1" max="1" chance="2" /> <!-- Eternal Shield Ingredient -->
+				<item id="35333" min="1" max="1" chance="2" /> <!-- Amaranthine Thrower Fragment -->
+				<item id="35332" min="1" max="1" chance="2" /> <!-- Amaranthine Stormer Fragment -->
+				<item id="35337" min="1" max="1" chance="2" /> <!-- Amaranthine Retributer Fragment -->
+				<item id="35331" min="1" max="1" chance="2" /> <!-- Amaranthine Fighter Fragment -->
+				<item id="35336" min="1" max="1" chance="2" /> <!-- Amaranthine Caster Fragment -->
+				<item id="35330" min="1" max="1" chance="2" /> <!-- Amaranthine Avenger Fragment -->
+				<item id="35335" min="1" max="1" chance="2" /> <!-- Amaranthine Buster Fragment -->
+				<item id="35328" min="1" max="1" chance="2" /> <!-- Amaranthine Cutter Fragment -->
+				<item id="35334" min="1" max="1" chance="2" /> <!-- Amaranthine Shooter Fragment -->
+				<item id="35329" min="1" max="1" chance="2" /> <!-- Amaranthine Slasher Fragment -->
+				<item id="35327" min="1" max="1" chance="1.99998" /> <!-- Amaranthine Shaper Fragment -->
+				<item id="17699" min="1" max="1" chance="0.3003003003003" /> <!-- Lv. 5 Giant CON Dye - CON + 5 -->
+				<item id="17702" min="1" max="1" chance="0.3003003003003" /> <!-- Lv. 5 Giant MEN Dye - Men + 5 -->
+				<item id="17700" min="1" max="1" chance="0.3003003003003" /> <!-- Lv. 5 Giant INT Dye - INT + 5 -->
+				<item id="17698" min="1" max="1" chance="0.3003003003003" /> <!-- Lv. 5 Giant DEX Dye - DEX + 5 -->
+				<item id="17701" min="1" max="1" chance="0.3003003003003" /> <!-- Lv. 5 Giant WIT Dye - Wit + 5 -->
+				<item id="17697" min="1" max="1" chance="0.3003003003003" /> <!-- Lv. 5 Giant STR Dye - STR + 5 -->
+				<item id="35477" min="1" max="1" chance="0.3003003003003" /> <!-- Recipe:�Eternal Shoes (60%) -->
+				<item id="35457" min="1" max="1" chance="0.3003003003003" /> <!-- Recipe:�Amaranthine Thrower (60%) -->
+				<item id="35456" min="1" max="1" chance="0.3003003003003" /> <!-- Recipe:�Amaranthine Stormer (60%) -->
+				<item id="35461" min="1" max="1" chance="0.3003003003003" /> <!-- Recipe:�Amaranthine Retributer (60%) -->
+				<item id="35455" min="1" max="1" chance="0.3003003003003" /> <!-- Recipe:�Amaranthine Fighter (60%) -->
+				<item id="35473" min="1" max="1" chance="0.3003003003003" /> <!-- Recipe:�Eternal Circlet (60%) -->
+				<item id="35460" min="1" max="1" chance="0.3003003003003" /> <!-- Recipe:�Amaranthine Caster (60%) -->
+				<item id="35463" min="1" max="1" chance="0.3003003003003" /> <!-- Recipe:�Eternal Breastplate (60%) -->
+				<item id="35470" min="1" max="1" chance="0.3003003003003" /> <!-- Recipe:�Eternal Leather Leggings (60%) -->
+				<item id="35471" min="1" max="1" chance="0.3003003003003" /> <!-- Recipe:�Eternal Leather Gloves (60%) -->
+				<item id="35472" min="1" max="1" chance="0.3003003003003" /> <!-- Recipe:�Eternal Leather Boots (60%) -->
+				<item id="35469" min="1" max="1" chance="0.3003003003003" /> <!-- Recipe:�Eternal Leather Armor (60%) -->
+				<item id="35468" min="1" max="1" chance="0.3003003003003" /> <!-- Recipe:�Eternal Leather Helmet (60%) -->
+				<item id="35454" min="1" max="1" chance="0.3003003003003" /> <!-- Recipe:�Amaranthine Avenger (60%) -->
+				<item id="35464" min="1" max="1" chance="0.3003003003003" /> <!-- Recipe:�Eternal Gaiters (60%) -->
+				<item id="35451" min="1" max="1" chance="0.3003003003003" /> <!-- Recipe:�Amaranthine Shaper (60%) -->
+				<item id="35476" min="1" max="1" chance="0.3003003003003" /> <!-- Recipe:�Eternal Gloves (60%) -->
+				<item id="35459" min="1" max="1" chance="0.3003003003003" /> <!-- Recipe:�Amaranthine Buster (60%) -->
+				<item id="35452" min="1" max="1" chance="0.3003003003003" /> <!-- Recipe:�Amaranthine Cutter (60%) -->
+				<item id="35465" min="1" max="1" chance="0.3003003003003" /> <!-- Recipe:�Eternal Gauntlets (60%) -->
+				<item id="35466" min="1" max="1" chance="0.3003003003003" /> <!-- Recipe:�Eternal Boots (60%) -->
+				<item id="35478" min="1" max="1" chance="0.3003003003003" /> <!-- Recipe:�Eternal Sigil (60%) -->
+				<item id="35458" min="1" max="1" chance="0.3003003003003" /> <!-- Recipe:�Amaranthine Shooter (60%) -->
+				<item id="35474" min="1" max="1" chance="0.3003003003003" /> <!-- Recipe:�Eternal Tunic (60%) -->
+				<item id="35462" min="1" max="1" chance="0.3003003003003" /> <!-- Recipe:�Eternal Helmet (60%) -->
+				<item id="35475" min="1" max="1" chance="0.3003003003003" /> <!-- Recipe:�Eternal Stockings (60%) -->
+				<item id="35467" min="1" max="1" chance="0.3003003003003" /> <!-- Recipe:�Eternal Shield (60%) -->
+				<item id="35453" min="1" max="1" chance="0.3003003003003" /> <!-- Recipe:�Amaranthine Slasher (60%) -->
+				<item id="38069" min="1" max="1" chance="0.0750187546886722" /> <!-- Eternal Shoes Crafting Pack - Robe -->
+				<item id="38065" min="1" max="1" chance="0.0750187546886722" /> <!-- Eternal Circlet Crafting Pack - Robe -->
+				<item id="38055" min="1" max="1" chance="0.0750187546886722" /> <!-- Eternal Breastplate Crafting Pack - Heavy Armor -->
+				<item id="38062" min="1" max="1" chance="0.0750187546886722" /> <!-- Eternal Leather Leggings Crafting Pack - Light Armor -->
+				<item id="38063" min="1" max="1" chance="0.0750187546886722" /> <!-- Eternal Leather Gloves Crafting Pack - Light Armor -->
+				<item id="38064" min="1" max="1" chance="0.0750187546886722" /> <!-- Eternal Leather Boots Crafting Pack - Light Armor -->
+				<item id="38061" min="1" max="1" chance="0.0750187546886722" /> <!-- Eternal Leather Armor Crafting Pack - Light Armor -->
+				<item id="38060" min="1" max="1" chance="0.0750187546886722" /> <!-- Eternal Leather Helmet Crafting Pack - Light Armor -->
+				<item id="38056" min="1" max="1" chance="0.0750187546886722" /> <!-- Eternal Gaiters Crafting Pack - Heavy Armor -->
+				<item id="38068" min="1" max="1" chance="0.0750187546886722" /> <!-- Eternal Gloves Crafting Pack - Robe -->
+				<item id="38057" min="1" max="1" chance="0.0750187546886722" /> <!-- Eternal Gauntlets Crafting Pack - Heavy Armor -->
+				<item id="38058" min="1" max="1" chance="0.0750187546886722" /> <!-- Eternal Boots Crafting Pack - Heavy Armor -->
+				<item id="38070" min="1" max="1" chance="0.0750187546886722" /> <!-- Eternal Sigil Crafting Pack - Robe -->
+				<item id="38066" min="1" max="1" chance="0.0750187546886722" /> <!-- Eternal Tunic Crafting Pack - Robe -->
+				<item id="38054" min="1" max="1" chance="0.0750187546886722" /> <!-- Eternal Helmet Crafting Pack - Heavy Armor -->
+				<item id="38067" min="1" max="1" chance="0.0750187546886722" /> <!-- Eternal Stockings Crafting Pack - Robe -->
+				<item id="38059" min="1" max="1" chance="0.0750187546886722" /> <!-- Eternal Shield Crafting Pack - Heavy Armor -->
+				<item id="38049" min="1" max="1" chance="0.03000300030003" /> <!-- Amaranthine Thrower Crafting Pack -->
+				<item id="38048" min="1" max="1" chance="0.03000300030003" /> <!-- Amaranthine Stormer Crafting Pack -->
+				<item id="38053" min="1" max="1" chance="0.03000300030003" /> <!-- Amaranthine Retributer Crafting Pack -->
+				<item id="38047" min="1" max="1" chance="0.03000300030003" /> <!-- Amaranthine Fighter Crafting Pack -->
+				<item id="38052" min="1" max="1" chance="0.03000300030003" /> <!-- Amaranthine Caster Crafting Pack -->
+				<item id="38046" min="1" max="1" chance="0.03000300030003" /> <!-- Amaranthine Avenger Crafting Pack -->
+				<item id="38043" min="1" max="1" chance="0.03000300030003" /> <!-- Amaranthine Shaper Crafting Pack -->
+				<item id="38051" min="1" max="1" chance="0.03000300030003" /> <!-- Amaranthine Buster Crafting Pack -->
+				<item id="38044" min="1" max="1" chance="0.03000300030003" /> <!-- Amaranthine Cutter Crafting Pack -->
+				<item id="38050" min="1" max="1" chance="0.03000300030003" /> <!-- Amaranthine Shooter Crafting Pack -->
+				<item id="38045" min="1" max="1" chance="0.03000300030003" /> <!-- Amaranthine Slasher Crafting Pack -->
+			</drop>
+		</dropLists>
 	</npc>
 </list>

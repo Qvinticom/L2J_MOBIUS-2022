@@ -1,7 +1,6 @@
 ﻿<?xml version="1.0" encoding="UTF-8"?>
 <list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../xsd/npcs.xsd">
 	<npc id="18800" level="77" type="Monster" name="Fledgling Lavasaurus">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="IsAggressive" value="1" />
 			<param name="Aggressive_Time" value="5" />
@@ -54,7 +53,6 @@
 		</dropLists>
 	</npc>
 	<npc id="18801" level="77" type="Monster" name="Adult Lavasaurus">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="IsAggressive" value="1" />
 			<param name="Aggressive_Time" value="5" />
@@ -108,7 +106,6 @@
 		</dropLists>
 	</npc>
 	<npc id="18802" level="78" type="Monster" name="Elderly Lavasaurus">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="IsAggressive" value="1" />
 			<param name="Aggressive_Time" value="5" />
@@ -163,7 +160,6 @@
 		</dropLists>
 	</npc>
 	<npc id="18803" level="78" type="Monster" name="Ancient Lavasaurus">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="IsAggressive" value="1" />
 			<param name="Aggressive_Time" value="5" />
@@ -218,7 +214,6 @@
 		</dropLists>
 	</npc>
 	<npc id="18804" level="78" type="Monster" name="Tar Beetle">
-		<!-- Confirmed CT2.5 -->
 		<race>BUG</race>
 		<sex>MALE</sex>
 		<stats str="79" int="34" dex="42" wit="66" con="75" men="12">
@@ -254,7 +249,6 @@
 		</collision>
 	</npc>
 	<npc id="18807" level="81" type="Monster" name="Frightened Ragna Orc">
-		<!-- Confirmed CT2.5 -->
 		<race>HUMANOID</race>
 		<sex>MALE</sex>
 		<acquire exp="3958" sp="0" />
@@ -287,7 +281,6 @@
 		</dropLists>
 	</npc>
 	<npc id="18808" level="82" type="Monster" name="Dark Shaman Varangka">
-		<!-- Confirmed CT2.5 -->
 		<race>HUMANOID</race>
 		<sex>MALE</sex>
 		<equipment rhand="6719" /> <!-- Monster Only (Ketra Orc Chieftain) -->
@@ -332,7 +325,6 @@
 		</dropLists>
 	</npc>
 	<npc id="18809" level="82" type="Monster" name="Varangka's Confidant">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<skill name="Skill01_ID" id="4032" level="9" />
 		</parameters>
@@ -379,9 +371,22 @@
 			<radius normal="12" />
 			<height normal="28" />
 		</collision>
+		<dropLists>
+			<drop>
+				<!-- Also drops herbs. -->
+				<item id="8600" min="1" max="1" chance="10" /> <!-- Herb of Life -->
+				<item id="8601" min="1" max="1" chance="8" /> <!-- Major Herb of Life -->
+				<item id="8602" min="1" max="1" chance="2" /> <!-- Superior Herb of Life -->
+				<item id="8603" min="1" max="1" chance="19.8" /> <!-- Herb of Mana -->
+				<item id="8604" min="1" max="1" chance="9.9" /> <!-- Major Herb of Mana -->
+				<item id="8605" min="1" max="1" chance="3.3" /> <!-- Superior Herb of Mana -->
+				<item id="34849" min="1" max="1" chance="0.7" /> <!-- Mysterious Herb of Power -->
+				<item id="34850" min="1" max="1" chance="0.7" /> <!-- Mysterious Herb of Magic -->
+				<item id="13028" min="1" max="1" chance="0.1" /> <!-- Vitality Replenishing Herb -->
+			</drop>
+		</dropLists>
 	</npc>
 	<npc id="18810" level="82" type="Monster" name="Varangka's Servant">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="HealProb" value="3333" />
 			<param name="SelfRangeHealProb" value="1500" />
@@ -436,7 +441,6 @@
 		</collision>
 	</npc>
 	<npc id="18811" level="82" type="Monster" name="Guardian of the Altar">
-		<!-- Confirmed CT2.5 -->
 		<race>CONSTRUCT</race>
 		<sex>MALE</sex>
 		<stats str="79" int="34" dex="42" wit="66" con="75" men="12">
@@ -470,7 +474,6 @@
 		</collision>
 	</npc>
 	<npc id="18812" level="81" type="Monster" name="Kasha's Eye" title="Atk. Spd. Boost">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="my_buff_type" value="1" />
 		</parameters>
@@ -508,7 +511,6 @@
 		</collision>
 	</npc>
 	<npc id="18813" level="81" type="Monster" name="Kasha's Eye" title="P. Atk. Boost">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="my_buff_type" value="2" />
 		</parameters>
@@ -546,7 +548,6 @@
 		</collision>
 	</npc>
 	<npc id="18814" level="81" type="Monster" name="Kasha's Eye" title="Critical Rate Boost">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="my_buff_type" value="3" />
 		</parameters>
@@ -584,7 +585,6 @@
 		</collision>
 	</npc>
 	<npc id="18815" level="83" type="Monster" name="Graveyard Guard" title="Death-calling">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="IsAggressive" value="1" />
 			<param name="MovingAttack" value="0" />
@@ -619,9 +619,22 @@
 			<radius normal="12" />
 			<height normal="60" />
 		</collision>
+		<dropLists>
+			<drop>
+				<!-- Also drops herbs. -->
+				<item id="8600" min="1" max="1" chance="10" /> <!-- Herb of Life -->
+				<item id="8601" min="1" max="1" chance="8" /> <!-- Major Herb of Life -->
+				<item id="8602" min="1" max="1" chance="2" /> <!-- Superior Herb of Life -->
+				<item id="8603" min="1" max="1" chance="19.8" /> <!-- Herb of Mana -->
+				<item id="8604" min="1" max="1" chance="9.9" /> <!-- Major Herb of Mana -->
+				<item id="8605" min="1" max="1" chance="3.3" /> <!-- Superior Herb of Mana -->
+				<item id="34849" min="1" max="1" chance="0.7" /> <!-- Mysterious Herb of Power -->
+				<item id="34850" min="1" max="1" chance="0.7" /> <!-- Mysterious Herb of Magic -->
+				<item id="13028" min="1" max="1" chance="0.1" /> <!-- Vitality Replenishing Herb -->
+			</drop>
+		</dropLists>
 	</npc>
 	<npc id="18816" level="81" type="Monster" name="Chieftain's Treasure Chest">
-		<!-- Confirmed CT2.5 -->
 		<race>CONSTRUCT</race>
 		<sex>MALE</sex>
 		<stats str="79" int="34" dex="42" wit="66" con="75" men="12">
@@ -656,7 +669,6 @@
 		</collision>
 	</npc>
 	<npc id="18817" level="81" type="Monster" name="Invader Martyr of Nightmare">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<skill name="SelfRangeDDMagic" id="5376" level="4" />
 		</parameters>
@@ -698,7 +710,6 @@
 		</collision>
 	</npc>
 	<npc id="18818" level="81" type="Monster" name="Nihil Invader Martyr">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<skill name="SelfRangeDDMagic" id="5376" level="4" />
 		</parameters>
@@ -739,7 +750,6 @@
 		</collision>
 	</npc>
 	<npc id="18819" level="82" type="Monster" name="Nihil Invader Treasure Chest">
-		<!-- Confirmed CT2.5 -->
 		<race>CONSTRUCT</race>
 		<sex>FEMALE</sex>
 		<stats str="79" int="34" dex="42" wit="66" con="75" men="12">
@@ -771,7 +781,6 @@
 		</collision>
 	</npc>
 	<npc id="18820" level="82" type="Monster" name="Nihil Invader Treasure Chest">
-		<!-- Confirmed CT2.5 -->
 		<race>CONSTRUCT</race>
 		<sex>FEMALE</sex>
 		<stats str="79" int="34" dex="42" wit="66" con="75" men="12">
@@ -803,7 +812,6 @@
 		</collision>
 	</npc>
 	<npc id="18821" level="84" type="Monster" name="Mutant Martyr">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<skill name="SelfRangeDDMagic" id="5376" level="5" />
 		</parameters>
@@ -844,7 +852,6 @@
 		</collision>
 	</npc>
 	<npc id="18822" level="84" type="Monster" name="Mutant Treasure Chest">
-		<!-- Confirmed CT2.5 -->
 		<race>CONSTRUCT</race>
 		<sex>FEMALE</sex>
 		<stats str="79" int="34" dex="42" wit="66" con="75" men="12">
@@ -876,7 +883,6 @@
 		</collision>
 	</npc>
 	<npc id="18823" level="84" type="Monster" name="Mutant Treasure Chest">
-		<!-- Confirmed CT2.5 -->
 		<race>CONSTRUCT</race>
 		<sex>FEMALE</sex>
 		<stats str="79" int="34" dex="42" wit="66" con="75" men="12">
@@ -2330,7 +2336,6 @@
 		</collision>
 	</npc>
 	<npc id="18862" level="82" type="Monster" name="Tanta Lizardman Guard" title="Ugoros' Escort">
-		<!-- Confirmed CT2.5 -->
 		<race>HUMANOID</race>
 		<sex>MALE</sex>
 		<equipment rhand="98" /> <!-- Halberd -->
@@ -2371,9 +2376,22 @@
 			<radius normal="13" grown="22" />
 			<height normal="35" grown="42.2" />
 		</collision>
+		<dropLists>
+			<drop>
+				<!-- Also drops herbs. -->
+				<item id="8600" min="1" max="1" chance="10" /> <!-- Herb of Life -->
+				<item id="8601" min="1" max="1" chance="8" /> <!-- Major Herb of Life -->
+				<item id="8602" min="1" max="1" chance="2" /> <!-- Superior Herb of Life -->
+				<item id="8603" min="1" max="1" chance="19.8" /> <!-- Herb of Mana -->
+				<item id="8604" min="1" max="1" chance="9.9" /> <!-- Major Herb of Mana -->
+				<item id="8605" min="1" max="1" chance="3.3" /> <!-- Superior Herb of Mana -->
+				<item id="34849" min="1" max="1" chance="0.7" /> <!-- Mysterious Herb of Power -->
+				<item id="34850" min="1" max="1" chance="0.7" /> <!-- Mysterious Herb of Magic -->
+				<item id="13028" min="1" max="1" chance="0.1" /> <!-- Vitality Replenishing Herb -->
+			</drop>
+		</dropLists>
 	</npc>
 	<npc id="18863" level="84" type="Monster" name="Priest Ugoros" title="Tanta Lizardmen">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<skill name="Skill01_ID" id="6426" level="1" />
 		</parameters>
@@ -2930,7 +2948,6 @@
 		</collision>
 	</npc>
 	<npc id="18873" level="83" type="FeedableBeast" name="Baby Alpine Kookaburra">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="my_type" value="1" />
 			<param name="my_grade" value="1" />
@@ -3058,7 +3075,6 @@
 		</dropLists>
 	</npc>
 	<npc id="18875" level="83" type="FeedableBeast" name="Young Kookaburra">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="my_type" value="1" />
 			<param name="my_grade" value="2" />
@@ -3120,7 +3136,6 @@
 		</dropLists>
 	</npc>
 	<npc id="18876" level="83" type="FeedableBeast" name="Adult Kookaburra">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="my_type" value="1" />
 			<param name="my_grade" value="3" />
@@ -3318,7 +3333,6 @@
 		</dropLists>
 	</npc>
 	<npc id="18879" level="83" type="FeedableBeast" name="Full Grown Kookaburra">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="my_type" value="1" />
 			<param name="my_grade" value="4" />
@@ -3382,7 +3396,6 @@
 		</dropLists>
 	</npc>
 	<npc id="18880" level="83" type="FeedableBeast" name="Baby Alpine Cougar">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="my_type" value="2" />
 			<param name="my_grade" value="1" />
@@ -3442,7 +3455,6 @@
 		</dropLists>
 	</npc>
 	<npc id="18881" level="83" type="FeedableBeast" name="Young Cougar">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="my_type" value="2" />
 			<param name="my_grade" value="2" />
@@ -3510,7 +3522,6 @@
 		</dropLists>
 	</npc>
 	<npc id="18882" level="83" type="FeedableBeast" name="Young Cougar">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="my_type" value="2" />
 			<param name="my_grade" value="2" />
@@ -3572,7 +3583,6 @@
 		</dropLists>
 	</npc>
 	<npc id="18883" level="83" type="FeedableBeast" name="Adult Cougar">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="my_type" value="2" />
 			<param name="my_grade" value="3" />
@@ -3636,7 +3646,6 @@
 		</dropLists>
 	</npc>
 	<npc id="18884" level="83" type="FeedableBeast" name="Adult Cougar">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="my_type" value="2" />
 			<param name="my_grade" value="3" />
@@ -3698,7 +3707,6 @@
 		</dropLists>
 	</npc>
 	<npc id="18885" level="83" type="FeedableBeast" name="Full Grown Cougar">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="my_type" value="2" />
 			<param name="my_grade" value="4" />
@@ -3769,7 +3777,6 @@
 		</dropLists>
 	</npc>
 	<npc id="18886" level="83" type="FeedableBeast" name="Full Grown Cougar">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="my_type" value="2" />
 			<param name="my_grade" value="4" />
@@ -3833,7 +3840,6 @@
 		</dropLists>
 	</npc>
 	<npc id="18887" level="84" type="FeedableBeast" name="Baby Alpine Buffalo">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="my_type" value="3" />
 			<param name="my_grade" value="1" />
@@ -3893,7 +3899,6 @@
 		</dropLists>
 	</npc>
 	<npc id="18888" level="84" type="FeedableBeast" name="Young Buffalo">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="my_type" value="3" />
 			<param name="my_grade" value="2" />
@@ -3961,7 +3966,6 @@
 		</dropLists>
 	</npc>
 	<npc id="18889" level="84" type="FeedableBeast" name="Young Buffalo">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="my_type" value="3" />
 			<param name="my_grade" value="2" />
@@ -4023,7 +4027,6 @@
 		</dropLists>
 	</npc>
 	<npc id="18890" level="84" type="FeedableBeast" name="Adult Buffalo">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="my_type" value="3" />
 			<param name="my_grade" value="3" />
@@ -4087,7 +4090,6 @@
 		</dropLists>
 	</npc>
 	<npc id="18891" level="84" type="FeedableBeast" name="Adult Buffalo">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="my_type" value="3" />
 			<param name="my_grade" value="3" />
@@ -4149,7 +4151,6 @@
 		</dropLists>
 	</npc>
 	<npc id="18892" level="84" type="FeedableBeast" name="Full Grown Buffalo">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="my_type" value="3" />
 			<param name="my_grade" value="4" />
@@ -4217,7 +4218,6 @@
 		</dropLists>
 	</npc>
 	<npc id="18893" level="84" type="FeedableBeast" name="Full Grown Buffalo">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="my_type" value="3" />
 			<param name="my_grade" value="4" />
@@ -4281,7 +4281,6 @@
 		</dropLists>
 	</npc>
 	<npc id="18894" level="84" type="FeedableBeast" name="Baby Alpine Grendel">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="my_type" value="4" />
 			<param name="my_grade" value="1" />
@@ -4340,7 +4339,6 @@
 		</dropLists>
 	</npc>
 	<npc id="18895" level="84" type="FeedableBeast" name="Young Grendel">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="my_type" value="4" />
 			<param name="my_grade" value="2" />
@@ -4407,7 +4405,6 @@
 		</dropLists>
 	</npc>
 	<npc id="18896" level="84" type="FeedableBeast" name="Young Grendel">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="my_type" value="4" />
 			<param name="my_grade" value="2" />
@@ -4468,7 +4465,6 @@
 		</dropLists>
 	</npc>
 	<npc id="18897" level="84" type="FeedableBeast" name="Adult Grendel">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="my_type" value="4" />
 			<param name="my_grade" value="3" />
@@ -4531,7 +4527,6 @@
 		</dropLists>
 	</npc>
 	<npc id="18898" level="84" type="FeedableBeast" name="Adult Grendel">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="my_type" value="4" />
 			<param name="my_grade" value="3" />
@@ -4593,7 +4588,6 @@
 		</dropLists>
 	</npc>
 	<npc id="18899" level="84" type="FeedableBeast" name="Full Grown Grendel">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="my_type" value="4" />
 			<param name="my_grade" value="4" />

@@ -1,7 +1,6 @@
 ﻿<?xml version="1.0" encoding="UTF-8"?>
 <list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../xsd/npcs.xsd">
 	<npc id="22300" level="82" type="Monster" name="Dolph's Minion">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="110" />
 			<param name="MoveAroundSocial1" value="110" />
@@ -48,9 +47,20 @@
 			<radius normal="34" />
 			<height normal="35" />
 		</collision>
+		<dropLists>
+			<drop>
+				<item id="57" min="235" max="548" chance="70" /> <!-- Adena -->
+				<item id="36904" min="1" max="1" chance="0.0149992500374981" /> <!-- Recipe: Silver Wire - Upgrade -->
+			</drop>
+			<spoil>
+				<item id="36532" min="1" max="1" chance="2.5" /> <!-- Thin Braid -->
+				<item id="36533" min="1" max="1" chance="0.3003003003003" /> <!-- Synthetic Braid -->
+				<item id="36882" min="1" max="1" chance="0.03000300030003" /> <!-- Recipe: Thin Braid - Upgrade -->
+				<item id="36881" min="1" max="1" chance="0.03000300030003" /> <!-- Recipe: Thin Braid - Downgrade -->
+			</spoil>
+		</dropLists>
 	</npc>
 	<npc id="22301" level="82" type="Monster" name="Terod">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="0" />
 			<param name="MoveAroundSocial1" value="0" />
@@ -103,9 +113,22 @@
 			<radius normal="24" />
 			<height normal="50.4" />
 		</collision>
+		<dropLists>
+			<drop>
+				<item id="57" min="1246" max="2909" chance="70" /> <!-- Adena -->
+				<item id="9546" min="1" max="1" chance="0.3003003003003" /> <!-- Fire Stone -->
+				<item id="36865" min="1" max="1" chance="0.0149992500374981" /> <!-- Recipe: Silver - Downgrade -->
+				<item id="36905" min="1" max="1" chance="0.0149992500374981" /> <!-- Recipe: Silver Wire - Combination -->
+			</drop>
+			<spoil>
+				<item id="36532" min="1" max="1" chance="12.5" /> <!-- Thin Braid -->
+				<item id="36533" min="1" max="1" chance="2.5" /> <!-- Synthetic Braid -->
+				<item id="36882" min="1" max="1" chance="0.03000300030003" /> <!-- Recipe: Thin Braid - Upgrade -->
+				<item id="36881" min="1" max="1" chance="0.03000300030003" /> <!-- Recipe: Thin Braid - Downgrade -->
+			</spoil>
+		</dropLists>
 	</npc>
 	<npc id="22302" level="82" type="Monster" name="Darnels's Guardian">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="0" />
 			<param name="MoveAroundSocial1" value="0" />
@@ -168,9 +191,20 @@
 			<radius normal="10" />
 			<height normal="54" />
 		</collision>
+		<dropLists>
+			<drop>
+				<item id="57" min="749" max="1748" chance="70" /> <!-- Adena -->
+				<item id="36915" min="1" max="1" chance="0.0149992500374981" /> <!-- Recipe: Weapon Fragment - Downgrade -->
+			</drop>
+			<spoil>
+				<item id="36532" min="1" max="1" chance="7.5" /> <!-- Thin Braid -->
+				<item id="36533" min="1" max="1" chance="1.5" /> <!-- Synthetic Braid -->
+				<item id="36882" min="1" max="1" chance="0.03000300030003" /> <!-- Recipe: Thin Braid - Upgrade -->
+				<item id="36881" min="1" max="1" chance="0.03000300030003" /> <!-- Recipe: Thin Braid - Downgrade -->
+			</spoil>
+		</dropLists>
 	</npc>
 	<npc id="22303" level="82" type="Monster" name="Guardian of the Square">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="80" />
 			<param name="MoveAroundSocial1" value="80" />
@@ -224,9 +258,22 @@
 			<radius normal="16" />
 			<height normal="35.6" />
 		</collision>
+		<dropLists>
+			<drop>
+				<item id="57" min="781" max="1824" chance="70" /> <!-- Adena -->
+				<item id="36866" min="1" max="1" chance="0.0149992500374981" /> <!-- Recipe: Silver - Upgrade -->
+				<item id="36916" min="1" max="1" chance="0.0149992500374981" /> <!-- Recipe: Weapon Fragment - Upgrade -->
+				<item id="36915" min="1" max="1" chance="0.0149992500374981" /> <!-- Recipe: Weapon Fragment - Downgrade -->
+			</drop>
+			<spoil>
+				<item id="36532" min="1" max="1" chance="7.5" /> <!-- Thin Braid -->
+				<item id="36533" min="1" max="1" chance="1.5" /> <!-- Synthetic Braid -->
+				<item id="36882" min="1" max="1" chance="0.03000300030003" /> <!-- Recipe: Thin Braid - Upgrade -->
+				<item id="36881" min="1" max="1" chance="0.03000300030003" /> <!-- Recipe: Thin Braid - Downgrade -->
+			</spoil>
+		</dropLists>
 	</npc>
 	<npc id="22304" level="82" type="Monster" name="Guardian of the Emerald">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="0" />
 			<param name="MoveAroundSocial1" value="0" />
@@ -280,9 +327,24 @@
 			<radius normal="13" />
 			<height normal="26" />
 		</collision>
+		<dropLists>
+			<drop>
+				<item id="57" min="784" max="1831" chance="70" /> <!-- Adena -->
+				<item id="9573" min="1" max="1" chance="3" /> <!-- Life Stone - Lv. 80 -->
+				<item id="9574" min="1" max="1" chance="0.75187969924812" /> <!-- Mid-grade Life Stone - Lv. 80 -->
+				<item id="9575" min="1" max="1" chance="0.0750187546886722" /> <!-- High-grade Life Stone - Lv. 80 -->
+				<item id="9576" min="1" max="1" chance="0.03000300030003" /> <!-- Top-grade Life Stone - Lv. 80 -->
+				<item id="36923" min="1" max="1" chance="0.0149992500374981" /> <!-- Recipe: Armor Fragment - Downgrade -->
+			</drop>
+			<spoil>
+				<item id="36532" min="1" max="1" chance="7.5" /> <!-- Thin Braid -->
+				<item id="36533" min="1" max="1" chance="1.5" /> <!-- Synthetic Braid -->
+				<item id="36882" min="1" max="1" chance="0.03000300030003" /> <!-- Recipe: Thin Braid - Upgrade -->
+				<item id="36881" min="1" max="1" chance="0.03000300030003" /> <!-- Recipe: Thin Braid - Downgrade -->
+			</spoil>
+		</dropLists>
 	</npc>
 	<npc id="22305" level="82" type="Monster" name="Kechi's Captain">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="40" />
 			<param name="MoveAroundSocial1" value="40" />
@@ -340,9 +402,24 @@
 			<radius normal="16" />
 			<height normal="36" />
 		</collision>
+		<dropLists>
+			<drop>
+				<item id="57" min="182" max="425" chance="70" /> <!-- Adena -->
+				<item id="9547" min="1" max="1" chance="0.149925037481259" /> <!-- Water Stone -->
+				<item id="5162" min="1" max="1" chance="0.03000300030003" /> <!-- Recipe: Spiritshot Compressed Package (S-grade) -->
+				<item id="36903" min="1" max="1" chance="0.0149992500374981" /> <!-- Recipe: Silver Wire - Downgrade -->
+				<item id="36874" min="1" max="1" chance="0.0149992500374981" /> <!-- Recipe: Synthetic Fiber - Upgrade -->
+				<item id="36923" min="1" max="1" chance="0.0149992500374981" /> <!-- Recipe: Armor Fragment - Downgrade -->
+			</drop>
+			<spoil>
+				<item id="36532" min="1" max="1" chance="2" /> <!-- Thin Braid -->
+				<item id="36533" min="1" max="1" chance="0.3003003003003" /> <!-- Synthetic Braid -->
+				<item id="36882" min="1" max="1" chance="0.03000300030003" /> <!-- Recipe: Thin Braid - Upgrade -->
+				<item id="36881" min="1" max="1" chance="0.03000300030003" /> <!-- Recipe: Thin Braid - Downgrade -->
+			</spoil>
+		</dropLists>
 	</npc>
 	<npc id="22306" level="82" type="Monster" name="Kechi's Captain">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="135" />
 			<param name="MoveAroundSocial1" value="135" />
@@ -412,9 +489,25 @@
 			<radius normal="38" />
 			<height normal="45" />
 		</collision>
+		<dropLists>
+			<drop>
+				<item id="57" min="418" max="976" chance="70" /> <!-- Adena -->
+				<item id="9547" min="1" max="1" chance="0.149925037481259" /> <!-- Water Stone -->
+				<item id="5167" min="1" max="1" chance="0.03000300030003" /> <!-- Recipe: Blessed Spiritshot Compressed Package (S-grade) -->
+				<item id="36890" min="1" max="1" chance="0.0149992500374981" /> <!-- Recipe: Leather Braid - Downgrade -->
+				<item id="36904" min="1" max="1" chance="0.0149992500374981" /> <!-- Recipe: Silver Wire - Upgrade -->
+				<item id="36924" min="1" max="1" chance="0.0149992500374981" /> <!-- Recipe: Armor Fragment - Upgrade -->
+				<item id="959" min="1" max="1" chance="0.0149992500374981" /> <!-- Scroll: Enchant Weapon (S-grade) -->
+			</drop>
+			<spoil>
+				<item id="36532" min="1" max="1" chance="4" /> <!-- Thin Braid -->
+				<item id="36533" min="1" max="1" chance="0.75187969924812" /> <!-- Synthetic Braid -->
+				<item id="36882" min="1" max="1" chance="0.03000300030003" /> <!-- Recipe: Thin Braid - Upgrade -->
+				<item id="36881" min="1" max="1" chance="0.03000300030003" /> <!-- Recipe: Thin Braid - Downgrade -->
+			</spoil>
+		</dropLists>
 	</npc>
 	<npc id="22307" level="82" type="Monster" name="Kechi's Captain">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="80" />
 			<param name="MoveAroundSocial1" value="80" />
@@ -479,9 +572,30 @@
 			<radius normal="35" />
 			<height normal="46.3765" />
 		</collision>
+		<dropLists>
+			<drop>
+				<item id="57" min="1011" max="2361" chance="70" /> <!-- Adena -->
+				<item id="9573" min="1" max="1" chance="1.5" /> <!-- Life Stone - Lv. 80 -->
+				<item id="9574" min="1" max="1" chance="0.3003003003003" /> <!-- Mid-grade Life Stone - Lv. 80 -->
+				<item id="9547" min="1" max="1" chance="0.3003003003003" /> <!-- Water Stone -->
+				<item id="960" min="1" max="1" chance="0.3003003003003" /> <!-- Scroll: Enchant Armor (S-grade) -->
+				<item id="5272" min="1" max="1" chance="0.0750187546886722" /> <!-- Recipe: Greater Soulshot Compressed Package (S-grade) -->
+				<item id="9575" min="1" max="1" chance="0.03000300030003" /> <!-- High-grade Life Stone - Lv. 80 -->
+				<item id="9576" min="1" max="1" chance="0.0149992500374981" /> <!-- Top-grade Life Stone - Lv. 80 -->
+				<item id="36857" min="1" max="1" chance="0.0149992500374981" /> <!-- Recipe: Leather - Downgrade -->
+				<item id="36891" min="1" max="1" chance="0.0149992500374981" /> <!-- Recipe: Leather Braid - Upgrade -->
+				<item id="36931" min="1" max="1" chance="0.0149992500374981" /> <!-- Recipe: Accessory Gem - Downgrade -->
+				<item id="36905" min="1" max="1" chance="0.0149992500374981" /> <!-- Recipe: Silver Wire - Combination -->
+			</drop>
+			<spoil>
+				<item id="36532" min="1" max="1" chance="10" /> <!-- Thin Braid -->
+				<item id="36533" min="1" max="1" chance="2" /> <!-- Synthetic Braid -->
+				<item id="36882" min="1" max="1" chance="0.03000300030003" /> <!-- Recipe: Thin Braid - Upgrade -->
+				<item id="36881" min="1" max="1" chance="0.03000300030003" /> <!-- Recipe: Thin Braid - Downgrade -->
+			</spoil>
+		</dropLists>
 	</npc>
 	<npc id="22308" level="82" type="Monster" name="Kechi's Guard">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="0" />
 			<param name="MoveAroundSocial1" value="0" />
@@ -539,9 +653,24 @@
 			<radius normal="11" />
 			<height normal="27" />
 		</collision>
+		<dropLists>
+			<drop>
+				<item id="57" min="166" max="388" chance="70" /> <!-- Adena -->
+				<item id="9547" min="1" max="1" chance="0.149925037481259" /> <!-- Water Stone -->
+				<item id="36858" min="1" max="1" chance="0.0149992500374981" /> <!-- Recipe: Leather - Upgrade -->
+				<item id="36892" min="1" max="1" chance="0.0149992500374981" /> <!-- Recipe: Leather Braid - Combination -->
+				<item id="36932" min="1" max="1" chance="0.0149992500374981" /> <!-- Recipe: Accessory Gem - Upgrade -->
+				<item id="36915" min="1" max="1" chance="0.0149992500374981" /> <!-- Recipe: Weapon Fragment - Downgrade -->
+			</drop>
+			<spoil>
+				<item id="36532" min="1" max="1" chance="1.5" /> <!-- Thin Braid -->
+				<item id="36533" min="1" max="1" chance="0.3003003003003" /> <!-- Synthetic Braid -->
+				<item id="36882" min="1" max="1" chance="0.03000300030003" /> <!-- Recipe: Thin Braid - Upgrade -->
+				<item id="36881" min="1" max="1" chance="0.03000300030003" /> <!-- Recipe: Thin Braid - Downgrade -->
+			</spoil>
+		</dropLists>
 	</npc>
 	<npc id="22309" level="82" type="Monster" name="Kechi's Guard">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="90" />
 			<param name="MoveAroundSocial1" value="90" />
@@ -599,9 +728,26 @@
 			<radius normal="15" />
 			<height normal="38" />
 		</collision>
+		<dropLists>
+			<drop>
+				<item id="57" min="228" max="533" chance="70" /> <!-- Adena -->
+				<item id="9547" min="1" max="1" chance="0.149925037481259" /> <!-- Water Stone -->
+				<item id="5282" min="1" max="1" chance="0.03000300030003" /> <!-- Recipe: Greater Blessed Spiritshot Compressed Package (S-grade) -->
+				<item id="5277" min="1" max="1" chance="0.03000300030003" /> <!-- Recipe: Greater Spiritshot Compressed Package (S-grade) -->
+				<item id="36865" min="1" max="1" chance="0.0149992500374981" /> <!-- Recipe: Silver - Downgrade -->
+				<item id="36939" min="1" max="1" chance="0.0149992500374981" /> <!-- Recipe: Greater Cokes - Downgrade -->
+				<item id="36916" min="1" max="1" chance="0.0149992500374981" /> <!-- Recipe: Weapon Fragment - Upgrade -->
+				<item id="959" min="1" max="1" chance="0.0149992500374981" /> <!-- Scroll: Enchant Weapon (S-grade) -->
+			</drop>
+			<spoil>
+				<item id="36532" min="1" max="1" chance="2.5" /> <!-- Thin Braid -->
+				<item id="36533" min="1" max="1" chance="0.3003003003003" /> <!-- Synthetic Braid -->
+				<item id="36882" min="1" max="1" chance="0.03000300030003" /> <!-- Recipe: Thin Braid - Upgrade -->
+				<item id="36881" min="1" max="1" chance="0.03000300030003" /> <!-- Recipe: Thin Braid - Downgrade -->
+			</spoil>
+		</dropLists>
 	</npc>
 	<npc id="22310" level="82" type="Monster" name="Kechi's Guard">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="0" />
 			<param name="MoveAroundSocial1" value="0" />
@@ -666,9 +812,26 @@
 			<radius normal="23" />
 			<height normal="52" />
 		</collision>
+		<dropLists>
+			<drop>
+				<item id="57" min="215" max="501" chance="70" /> <!-- Adena -->
+				<item id="9547" min="1" max="1" chance="0.149925037481259" /> <!-- Water Stone -->
+				<item id="960" min="1" max="1" chance="0.03000300030003" /> <!-- Scroll: Enchant Armor (S-grade) -->
+				<item id="36858" min="1" max="1" chance="0.0149992500374981" /> <!-- Recipe: Leather - Upgrade -->
+				<item id="36866" min="1" max="1" chance="0.0149992500374981" /> <!-- Recipe: Silver - Upgrade -->
+				<item id="36903" min="1" max="1" chance="0.0149992500374981" /> <!-- Recipe: Silver Wire - Downgrade -->
+				<item id="36940" min="1" max="1" chance="0.0149992500374981" /> <!-- Recipe: Greater Cokes - Upgrade -->
+				<item id="36923" min="1" max="1" chance="0.0149992500374981" /> <!-- Recipe: Armor Fragment - Downgrade -->
+			</drop>
+			<spoil>
+				<item id="36532" min="1" max="1" chance="2.5" /> <!-- Thin Braid -->
+				<item id="36533" min="1" max="1" chance="0.3003003003003" /> <!-- Synthetic Braid -->
+				<item id="36882" min="1" max="1" chance="0.03000300030003" /> <!-- Recipe: Thin Braid - Upgrade -->
+				<item id="36881" min="1" max="1" chance="0.03000300030003" /> <!-- Recipe: Thin Braid - Downgrade -->
+			</spoil>
+		</dropLists>
 	</npc>
 	<npc id="22311" level="83" type="Monster" name="Parme's Guardian">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="40" />
 			<param name="MoveAroundSocial1" value="40" />
@@ -732,9 +895,23 @@
 			<radius normal="25" />
 			<height normal="72" />
 		</collision>
+		<dropLists>
+			<drop>
+				<item id="57" min="746" max="1740" chance="70" /> <!-- Adena -->
+				<item id="10483" min="1" max="1" chance="0.75187969924812" /> <!-- Life Stone - Lv. 82 -->
+				<item id="10484" min="1" max="1" chance="0.3003003003003" /> <!-- Mid-grade Life Stone - Lv. 82 -->
+				<item id="36563" min="1" max="1" chance="0.3003003003003" /> <!-- Synthetic Cokes -->
+				<item id="10485" min="1" max="1" chance="0.03000300030003" /> <!-- High-grade Life Stone - Lv. 82 -->
+				<item id="10486" min="1" max="1" chance="0.0149992500374981" /> <!-- Top-grade Life Stone - Lv. 82 -->
+				<item id="36939" min="1" max="1" chance="0.0149992500374981" /> <!-- Recipe: Greater Cokes - Downgrade -->
+			</drop>
+			<spoil>
+				<item id="36562" min="1" max="1" chance="1.5" /> <!-- Greater Cokes -->
+				<item id="36563" min="1" max="1" chance="0.3003003003003" /> <!-- Synthetic Cokes -->
+			</spoil>
+		</dropLists>
 	</npc>
 	<npc id="22312" level="83" type="Monster" name="Fafurion's Henchman">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="70" />
 			<param name="MoveAroundSocial1" value="70" />
@@ -790,9 +967,19 @@
 			<radius normal="37" />
 			<height normal="64" />
 		</collision>
+		<dropLists>
+			<drop>
+				<item id="57" min="922" max="2149" chance="70" /> <!-- Adena -->
+				<item id="36563" min="1" max="1" chance="0.3003003003003" /> <!-- Synthetic Cokes -->
+				<item id="36939" min="1" max="1" chance="0.0149992500374981" /> <!-- Recipe: Greater Cokes - Downgrade -->
+			</drop>
+			<spoil>
+				<item id="36562" min="1" max="1" chance="2.5" /> <!-- Greater Cokes -->
+				<item id="36563" min="1" max="1" chance="0.3003003003003" /> <!-- Synthetic Cokes -->
+			</spoil>
+		</dropLists>
 	</npc>
 	<npc id="22313" level="83" type="Monster" name="Garden Stakato">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="62" />
 			<param name="MoveAroundSocial1" value="62" />
@@ -854,9 +1041,19 @@
 			<radius normal="15" />
 			<height normal="39" />
 		</collision>
+		<dropLists>
+			<drop>
+				<item id="57" min="252" max="588" chance="70" /> <!-- Adena -->
+				<item id="36563" min="1" max="1" chance="0.3003003003003" /> <!-- Synthetic Cokes -->
+				<item id="36939" min="1" max="1" chance="0.01" /> <!-- Recipe: Greater Cokes - Downgrade -->
+			</drop>
+			<spoil>
+				<item id="36562" min="1" max="1" chance="0.75187969924812" /> <!-- Greater Cokes -->
+				<item id="36563" min="1" max="1" chance="0.3003003003003" /> <!-- Synthetic Cokes -->
+			</spoil>
+		</dropLists>
 	</npc>
 	<npc id="22314" level="83" type="Monster" name="Garden Poison Moth">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="150" />
 			<param name="MoveAroundSocial1" value="150" />
@@ -913,9 +1110,19 @@
 			<radius normal="20" />
 			<height normal="41" />
 		</collision>
+		<dropLists>
+			<drop>
+				<item id="57" min="247" max="576" chance="70" /> <!-- Adena -->
+				<item id="36563" min="1" max="1" chance="0.3003003003003" /> <!-- Synthetic Cokes -->
+				<item id="36939" min="1" max="1" chance="0.01" /> <!-- Recipe: Greater Cokes - Downgrade -->
+			</drop>
+			<spoil>
+				<item id="36562" min="1" max="1" chance="0.75187969924812" /> <!-- Greater Cokes -->
+				<item id="36563" min="1" max="1" chance="0.3003003003003" /> <!-- Synthetic Cokes -->
+			</spoil>
+		</dropLists>
 	</npc>
 	<npc id="22315" level="83" type="Monster" name="Garden Guard">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="0" />
 			<param name="MoveAroundSocial1" value="0" />
@@ -970,9 +1177,33 @@
 			<radius normal="13" />
 			<height normal="44" />
 		</collision>
+		<dropLists>
+			<drop>
+				<item id="57" min="147" max="342" chance="70" /> <!-- Adena -->
+				<item id="10483" min="1" max="1" chance="0.3003003003003" /> <!-- Life Stone - Lv. 82 -->
+				<item id="10484" min="1" max="1" chance="0.149925037481259" /> <!-- Mid-grade Life Stone - Lv. 82 -->
+				<item id="36563" min="1" max="1" chance="0.0750187546886722" /> <!-- Synthetic Cokes -->
+				<item id="10485" min="1" max="1" chance="0.03000300030003" /> <!-- High-grade Life Stone - Lv. 82 -->
+				<item id="10486" min="1" max="1" chance="0.0149992500374981" /> <!-- Top-grade Life Stone - Lv. 82 -->
+				<item id="36939" min="1" max="1" chance="0.01" /> <!-- Recipe: Greater Cokes - Downgrade -->
+				<!-- Also drops herbs. -->
+				<item id="8600" min="1" max="1" chance="10" /> <!-- Herb of Life -->
+				<item id="8601" min="1" max="1" chance="8" /> <!-- Major Herb of Life -->
+				<item id="8602" min="1" max="1" chance="2" /> <!-- Superior Herb of Life -->
+				<item id="8603" min="1" max="1" chance="19.8" /> <!-- Herb of Mana -->
+				<item id="8604" min="1" max="1" chance="9.9" /> <!-- Major Herb of Mana -->
+				<item id="8605" min="1" max="1" chance="3.3" /> <!-- Superior Herb of Mana -->
+				<item id="34849" min="1" max="1" chance="0.7" /> <!-- Mysterious Herb of Power -->
+				<item id="34850" min="1" max="1" chance="0.7" /> <!-- Mysterious Herb of Magic -->
+				<item id="13028" min="1" max="1" chance="0.1" /> <!-- Vitality Replenishing Herb -->
+			</drop>
+			<spoil>
+				<item id="36562" min="1" max="1" chance="0.3003003003003" /> <!-- Greater Cokes -->
+				<item id="36563" min="1" max="1" chance="0.0750187546886722" /> <!-- Synthetic Cokes -->
+			</spoil>
+		</dropLists>
 	</npc>
 	<npc id="22316" level="83" type="Monster" name="Garden Guardian Tree">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="80" />
 			<param name="MoveAroundSocial1" value="80" />
@@ -1026,9 +1257,19 @@
 			<radius normal="60" />
 			<height normal="47" />
 		</collision>
+		<dropLists>
+			<drop>
+				<item id="57" min="425" max="991" chance="70" /> <!-- Adena -->
+				<item id="36563" min="1" max="1" chance="0.3003003003003" /> <!-- Synthetic Cokes -->
+				<item id="36939" min="1" max="1" chance="0.01" /> <!-- Recipe: Greater Cokes - Downgrade -->
+			</drop>
+			<spoil>
+				<item id="36562" min="1" max="1" chance="1" /> <!-- Greater Cokes -->
+				<item id="36563" min="1" max="1" chance="0.3003003003003" /> <!-- Synthetic Cokes -->
+			</spoil>
+		</dropLists>
 	</npc>
 	<npc id="22317" level="83" type="Monster" name="Garden Castalia">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="90" />
 			<param name="MoveAroundSocial1" value="90" />
@@ -1100,5 +1341,20 @@
 			<radius normal="20" />
 			<height normal="27.5" />
 		</collision>
+		<dropLists>
+			<drop>
+				<item id="57" min="61" max="141" chance="70" /> <!-- Adena -->
+				<item id="10483" min="1" max="1" chance="0.1" /> <!-- Life Stone - Lv. 82 -->
+				<item id="10484" min="1" max="1" chance="0.05" /> <!-- Mid-grade Life Stone - Lv. 82 -->
+				<item id="36563" min="1" max="1" chance="0.03000300030003" /> <!-- Synthetic Cokes -->
+				<item id="10485" min="1" max="1" chance="0.025" /> <!-- High-grade Life Stone - Lv. 82 -->
+				<item id="10486" min="1" max="1" chance="0.01" /> <!-- Top-grade Life Stone - Lv. 82 -->
+				<item id="36939" min="1" max="1" chance="0.01" /> <!-- Recipe: Greater Cokes - Downgrade -->
+			</drop>
+			<spoil>
+				<item id="36562" min="1" max="1" chance="0.3003003003003" /> <!-- Greater Cokes -->
+				<item id="36563" min="1" max="1" chance="0.0750187546886722" /> <!-- Synthetic Cokes -->
+			</spoil>
+		</dropLists>
 	</npc>
 </list>

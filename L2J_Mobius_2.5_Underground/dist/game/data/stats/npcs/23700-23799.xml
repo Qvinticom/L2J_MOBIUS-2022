@@ -38,7 +38,7 @@
 			<height normal="18" />
 		</collision>
 	</npc>
-	<npc id="23702" level="101" type="Npc" name="Monster" title="Dragonclaw Royal Guard">
+	<npc id="23702" level="101" type="Monster" name="Monster" title="Dragonclaw Royal Guard">
 		<race>HUMAN</race>
 		<sex>MALE</sex>
 		<acquire exp="946520799" sp="1893101" />
@@ -69,7 +69,7 @@
 			</drop>
 		</dropLists>
 	</npc>
-	<npc id="23703" level="101" type="Npc" name="Ice Knight" title="Winter Omen">
+	<npc id="23703" level="101" type="Monster" name="Ice Knight" title="Winter Omen">
 		<race>HUMANOID</race>
 		<sex>MALE</sex>
 		<acquire exp="3117951155" sp="6235973" />
@@ -130,7 +130,7 @@
 			</drop>
 		</dropLists>
 	</npc>
-	<npc id="23705" level="101" type="Npc" name="Monster" title="Master of Flames">
+	<npc id="23705" level="101" type="Monster" name="Monster" title="Master of Flames">
 		<race>DEMONIC</race>
 		<sex>MALE</sex>
 		<acquire exp="1019330130" sp="2038669" />
@@ -324,8 +324,7 @@
 			<height normal="22.5" />
 		</collision>
 	</npc>
-	<npc id="23714" level="85" type="Npc" name="Cyclone" title="Typhoon's Guardian">
-		<!-- AUTO GENERATED NPC TODO: FIX IT -->
+	<npc id="23714" level="85" type="Monster" name="Cyclone" title="Typhoon's Guardian">
 		<race>HUMAN</race>
 		<sex>FEMALE</sex>
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
@@ -341,8 +340,7 @@
 			<height normal="25" />
 		</collision>
 	</npc>
-	<npc id="23715" level="85" type="Npc" name="Hurricane" title="Typhoon's Guardian">
-		<!-- AUTO GENERATED NPC TODO: FIX IT -->
+	<npc id="23715" level="85" type="Monster" name="Hurricane" title="Typhoon's Guardian">
 		<race>HUMAN</race>
 		<sex>FEMALE</sex>
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
@@ -485,7 +483,7 @@
 			<height normal="28" />
 		</collision>
 	</npc>
-	<npc id="23721" level="100" type="Npc" name="Maze Buffalo">
+	<npc id="23721" level="100" type="Monster" name="Maze Buffalo">
 		<parameters>
 			<param name="MoveAroundSocial" value="120" />
 			<param name="MoveAroundSocial1" value="30" />

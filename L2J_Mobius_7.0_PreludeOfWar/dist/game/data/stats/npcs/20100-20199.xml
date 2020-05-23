@@ -1,7 +1,6 @@
 ﻿<?xml version="1.0" encoding="UTF-8"?>
 <list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../xsd/npcs.xsd">
 	<npc id="20116" level="2" type="Monster" name="Fox">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="80" />
 			<param name="MoveAroundSocial1" value="80" />
@@ -42,7 +41,6 @@
 		</collision>
 	</npc>
 	<npc id="20119" level="3" type="Monster" name="Elder Fox">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="80" />
 			<param name="MoveAroundSocial1" value="80" />
@@ -82,7 +80,6 @@
 		</collision>
 	</npc>
 	<npc id="20120" level="4" type="Monster" name="Wolf">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="60" />
 			<param name="MoveAroundSocial1" value="60" />
@@ -135,7 +132,6 @@
 		</collision>
 	</npc>
 	<npc id="20130" level="6" type="Monster" name="Orc">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="138" />
 			<param name="MoveAroundSocial1" value="138" />
@@ -178,9 +174,22 @@
 			<radius normal="10" />
 			<height normal="21" />
 		</collision>
+		<dropLists>
+			<drop>
+				<!-- Also drops herbs. -->
+				<item id="8600" min="1" max="1" chance="10" /> <!-- Herb of Life -->
+				<item id="8601" min="1" max="1" chance="8" /> <!-- Major Herb of Life -->
+				<item id="8602" min="1" max="1" chance="2" /> <!-- Superior Herb of Life -->
+				<item id="8603" min="1" max="1" chance="19.8" /> <!-- Herb of Mana -->
+				<item id="8604" min="1" max="1" chance="9.9" /> <!-- Major Herb of Mana -->
+				<item id="8605" min="1" max="1" chance="3.3" /> <!-- Superior Herb of Mana -->
+				<item id="34849" min="1" max="1" chance="0.7" /> <!-- Mysterious Herb of Power -->
+				<item id="34850" min="1" max="1" chance="0.7" /> <!-- Mysterious Herb of Magic -->
+				<item id="13028" min="1" max="1" chance="0.1" /> <!-- Vitality Replenishing Herb -->
+			</drop>
+		</dropLists>
 	</npc>
 	<npc id="20133" level="21" type="Monster" name="Bugbear">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="124" />
 			<param name="MoveAroundSocial1" value="124" />
@@ -232,7 +241,6 @@
 		</collision>
 	</npc>
 	<npc id="20134" level="59" type="Monster" name="Cave Maiden">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="0" />
 			<param name="MoveAroundSocial1" value="0" />
@@ -290,7 +298,6 @@
 		</dropLists>
 	</npc>
 	<npc id="20135" level="40" type="Monster" name="Alligator">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="0" />
 			<param name="MoveAroundSocial1" value="0" />
@@ -356,7 +363,6 @@
 		</dropLists>
 	</npc>
 	<npc id="20136" level="50" type="Monster" name="Death Knight">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="74" />
 			<param name="MoveAroundSocial1" value="74" />
@@ -440,7 +446,6 @@
 		</dropLists>
 	</npc>
 	<npc id="20137" level="57" type="Monster" name="Drake">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="60" />
 			<param name="MoveAroundSocial1" value="60" />
@@ -501,7 +506,6 @@
 		</dropLists>
 	</npc>
 	<npc id="20138" level="27" type="Monster" name="Gargoyle">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="0" />
 			<param name="MoveAroundSocial1" value="0" />
@@ -554,7 +558,6 @@
 		</collision>
 	</npc>
 	<npc id="20142" level="20" type="Monster" name="Griffin">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="0" />
 			<param name="MoveAroundSocial1" value="0" />
@@ -599,7 +602,6 @@
 		</collision>
 	</npc>
 	<npc id="20143" level="12" type="Monster" name="Bear">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="100" />
 			<param name="MoveAroundSocial1" value="100" />
@@ -656,7 +658,6 @@
 		</collision>
 	</npc>
 	<npc id="20145" level="32" type="Monster" name="Harpy">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="0" />
 			<param name="MoveAroundSocial1" value="0" />
@@ -715,7 +716,6 @@
 		</dropLists>
 	</npc>
 	<npc id="20146" level="50" type="Monster" name="Headless Knight">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="110" />
 			<param name="MoveAroundSocial1" value="110" />
@@ -775,7 +775,6 @@
 		</dropLists>
 	</npc>
 	<npc id="20147" level="21" type="Monster" name="Hobgoblin">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="0" />
 			<param name="MoveAroundSocial1" value="0" />
@@ -837,7 +836,6 @@
 		</dropLists>
 	</npc>
 	<npc id="20149" level="38" type="Monster" name="Steel Golem">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="0" />
 			<param name="MoveAroundSocial1" value="0" />
@@ -893,7 +891,6 @@
 		</collision>
 	</npc>
 	<npc id="20150" level="32" type="Monster" name="King Bugbear">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="149" />
 			<param name="MoveAroundSocial1" value="149" />
@@ -944,7 +941,6 @@
 		</collision>
 	</npc>
 	<npc id="20151" level="4" type="Monster" name="Kobold">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="0" />
 			<param name="MoveAroundSocial1" value="0" />
@@ -989,7 +985,6 @@
 		</collision>
 	</npc>
 	<npc id="20152" level="19" type="Monster" name="Lizardman">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="58" />
 			<param name="MoveAroundSocial1" value="58" />
@@ -1035,7 +1030,6 @@
 		</collision>
 	</npc>
 	<npc id="20153" level="11" type="Monster" name="Magical Weaver">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="0" />
 			<param name="MoveAroundSocial1" value="0" />
@@ -1088,7 +1082,6 @@
 		</dropLists>
 	</npc>
 	<npc id="20157" level="29" type="Monster" name="Marsh Stakato">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="57" />
 			<param name="MoveAroundSocial1" value="62" />
@@ -1157,7 +1150,6 @@
 		</dropLists>
 	</npc>
 	<npc id="20158" level="34" type="Monster" name="Medusa">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="0" />
 			<param name="MoveAroundSocial1" value="0" />
@@ -1219,7 +1211,6 @@
 		</dropLists>
 	</npc>
 	<npc id="20159" level="43" type="Monster" name="Minotaur">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="100" />
 			<param name="MoveAroundSocial1" value="50" />
@@ -1266,7 +1257,6 @@
 		</collision>
 	</npc>
 	<npc id="20161" level="53" type="Monster" name="Oel Mahum">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="120" />
 			<param name="MoveAroundSocial1" value="100" />
@@ -1342,7 +1332,6 @@
 		</dropLists>
 	</npc>
 	<npc id="20162" level="41" type="Monster" name="Ogre">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="62" />
 			<param name="MoveAroundSocial1" value="90" />
@@ -1389,7 +1378,6 @@
 		</collision>
 	</npc>
 	<npc id="20166" level="32" type="Monster" name="Succubus">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="110" />
 			<param name="MoveAroundSocial1" value="110" />
@@ -1441,7 +1429,6 @@
 		</collision>
 	</npc>
 	<npc id="20168" level="30" type="Monster" name="Silenos">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="0" />
 			<param name="MoveAroundSocial1" value="0" />
@@ -1504,7 +1491,6 @@
 		</dropLists>
 	</npc>
 	<npc id="20170" level="15" type="Monster" name="Spartoi">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="110" />
 			<param name="MoveAroundSocial1" value="110" />
@@ -1552,7 +1538,6 @@
 		</collision>
 	</npc>
 	<npc id="20172" level="10" type="Monster" name="Sylph">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="80" />
 			<param name="MoveAroundSocial1" value="80" />
@@ -1600,7 +1585,6 @@
 		</collision>
 	</npc>
 	<npc id="20173" level="33" type="Monster" name="Troll">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="135" />
 			<param name="MoveAroundSocial1" value="135" />
@@ -1646,7 +1630,6 @@
 		</collision>
 	</npc>
 	<npc id="20176" level="35" type="Monster" name="Wyrm">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="60" />
 			<param name="MoveAroundSocial1" value="60" />
@@ -1713,7 +1696,6 @@
 		</dropLists>
 	</npc>
 	<npc id="20177" level="6" type="Monster" name="Zombie">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="120" />
 			<param name="MoveAroundSocial1" value="120" />
@@ -1761,7 +1743,6 @@
 		</collision>
 	</npc>
 	<npc id="20190" level="29" type="Monster" name="Skeleton Marauder">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="157" />
 			<param name="MoveAroundSocial1" value="157" />
@@ -1829,7 +1810,6 @@
 		</dropLists>
 	</npc>
 	<npc id="20192" level="38" type="Monster" name="Tyrant">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="0" />
 			<param name="MoveAroundSocial1" value="0" />
@@ -1894,7 +1874,6 @@
 		</dropLists>
 	</npc>
 	<npc id="20194" level="50" type="Monster" name="Queen Undine">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="0" />
 			<param name="MoveAroundSocial1" value="0" />
@@ -1948,7 +1927,6 @@
 		</collision>
 	</npc>
 	<npc id="20199" level="30" type="Monster" name="Amber Basilisk">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="0" />
 			<param name="MoveAroundSocial1" value="0" />

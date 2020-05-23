@@ -1,7 +1,6 @@
 ﻿<?xml version="1.0" encoding="UTF-8"?>
 <list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../xsd/npcs.xsd">
 	<npc id="21508" level="66" type="Monster" name="Splinter Stakato">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="90" />
 			<param name="MoveAroundSocial1" value="90" />
@@ -68,7 +67,6 @@
 		</dropLists>
 	</npc>
 	<npc id="21509" level="67" type="Monster" name="Splinter Stakato Worker">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="70" />
 			<param name="MoveAroundSocial1" value="70" />
@@ -138,7 +136,6 @@
 		</dropLists>
 	</npc>
 	<npc id="21510" level="68" type="Monster" name="Splinter Stakato Soldier">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="90" />
 			<param name="MoveAroundSocial1" value="90" />
@@ -208,7 +205,6 @@
 		</dropLists>
 	</npc>
 	<npc id="21511" level="69" type="Monster" name="Splinter Stakato Drone">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="62" />
 			<param name="MoveAroundSocial1" value="62" />
@@ -280,7 +276,6 @@
 		</dropLists>
 	</npc>
 	<npc id="21512" level="70" type="Monster" name="Splinter Stakato Drone">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="62" />
 			<param name="MoveAroundSocial1" value="62" />
@@ -352,7 +347,6 @@
 		</dropLists>
 	</npc>
 	<npc id="21513" level="70" type="Monster" name="Needle Stakato">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="90" />
 			<param name="MoveAroundSocial1" value="90" />
@@ -420,7 +414,6 @@
 		</dropLists>
 	</npc>
 	<npc id="21514" level="71" type="Monster" name="Needle Stakato Worker">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="70" />
 			<param name="MoveAroundSocial1" value="70" />
@@ -490,7 +483,6 @@
 		</dropLists>
 	</npc>
 	<npc id="21515" level="72" type="Monster" name="Needle Stakato Soldier">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="90" />
 			<param name="MoveAroundSocial1" value="90" />
@@ -560,7 +552,6 @@
 		</dropLists>
 	</npc>
 	<npc id="21516" level="73" type="Monster" name="Needle Stakato Drone">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="62" />
 			<param name="MoveAroundSocial1" value="62" />
@@ -630,7 +621,6 @@
 		</dropLists>
 	</npc>
 	<npc id="21517" level="74" type="Monster" name="Needle Stakato Drone">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="62" />
 			<param name="MoveAroundSocial1" value="62" />
@@ -702,7 +692,6 @@
 		</dropLists>
 	</npc>
 	<npc id="21518" level="68" type="Monster" name="Frenzied Stakato Soldier">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="90" />
 			<param name="MoveAroundSocial1" value="90" />
@@ -737,9 +726,22 @@
 			<radius normal="15" />
 			<height normal="38" />
 		</collision>
+		<dropLists>
+			<drop>
+				<!-- Also drops herbs. -->
+				<item id="8600" min="1" max="1" chance="10" /> <!-- Herb of Life -->
+				<item id="8601" min="1" max="1" chance="8" /> <!-- Major Herb of Life -->
+				<item id="8602" min="1" max="1" chance="2" /> <!-- Superior Herb of Life -->
+				<item id="8603" min="1" max="1" chance="19.8" /> <!-- Herb of Mana -->
+				<item id="8604" min="1" max="1" chance="9.9" /> <!-- Major Herb of Mana -->
+				<item id="8605" min="1" max="1" chance="3.3" /> <!-- Superior Herb of Mana -->
+				<item id="34849" min="1" max="1" chance="0.7" /> <!-- Mysterious Herb of Power -->
+				<item id="34850" min="1" max="1" chance="0.7" /> <!-- Mysterious Herb of Magic -->
+				<item id="13028" min="1" max="1" chance="0.1" /> <!-- Vitality Replenishing Herb -->
+			</drop>
+		</dropLists>
 	</npc>
 	<npc id="21519" level="72" type="Monster" name="Frenzied Stakato Drone">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="62" />
 			<param name="MoveAroundSocial1" value="62" />
@@ -774,9 +776,22 @@
 			<radius normal="15" />
 			<height normal="39" />
 		</collision>
+		<dropLists>
+			<drop>
+				<!-- Also drops herbs. -->
+				<item id="8600" min="1" max="1" chance="10" /> <!-- Herb of Life -->
+				<item id="8601" min="1" max="1" chance="8" /> <!-- Major Herb of Life -->
+				<item id="8602" min="1" max="1" chance="2" /> <!-- Superior Herb of Life -->
+				<item id="8603" min="1" max="1" chance="19.8" /> <!-- Herb of Mana -->
+				<item id="8604" min="1" max="1" chance="9.9" /> <!-- Major Herb of Mana -->
+				<item id="8605" min="1" max="1" chance="3.3" /> <!-- Superior Herb of Mana -->
+				<item id="34849" min="1" max="1" chance="0.7" /> <!-- Mysterious Herb of Power -->
+				<item id="34850" min="1" max="1" chance="0.7" /> <!-- Mysterious Herb of Magic -->
+				<item id="13028" min="1" max="1" chance="0.1" /> <!-- Vitality Replenishing Herb -->
+			</drop>
+		</dropLists>
 	</npc>
 	<npc id="21520" level="60" type="Monster" name="Eye of Splendor">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="90" />
 			<param name="MoveAroundSocial1" value="74" />
@@ -845,7 +860,6 @@
 		</dropLists>
 	</npc>
 	<npc id="21521" level="60" type="Monster" name="Claws of Splendor">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="110" />
 			<param name="MoveAroundSocial1" value="74" />
@@ -921,7 +935,6 @@
 		</dropLists>
 	</npc>
 	<npc id="21522" level="60" type="Monster" name="Claws of Splendor">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="0" />
 			<param name="MoveAroundSocial1" value="0" />
@@ -1003,7 +1016,6 @@
 		</collision>
 	</npc>
 	<npc id="21523" level="61" type="Monster" name="Flash of Splendor">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="90" />
 			<param name="MoveAroundSocial1" value="74" />
@@ -1078,7 +1090,6 @@
 		</dropLists>
 	</npc>
 	<npc id="21524" level="61" type="Monster" name="Blade of Splendor">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="90" />
 			<param name="MoveAroundSocial1" value="74" />
@@ -1158,7 +1169,6 @@
 		</dropLists>
 	</npc>
 	<npc id="21525" level="61" type="Monster" name="Blade of Splendor">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="90" />
 			<param name="MoveAroundSocial1" value="74" />
@@ -1243,7 +1253,6 @@
 		</collision>
 	</npc>
 	<npc id="21526" level="62" type="Monster" name="Wisdom of Splendor">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="110" />
 			<param name="MoveAroundSocial1" value="74" />
@@ -1312,7 +1321,6 @@
 		</dropLists>
 	</npc>
 	<npc id="21527" level="63" type="Monster" name="Fury of Splendor">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="90" />
 			<param name="MoveAroundSocial1" value="74" />
@@ -1386,7 +1394,6 @@
 		</dropLists>
 	</npc>
 	<npc id="21528" level="63" type="Monster" name="Fury of Splendor">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="0" />
 			<param name="MoveAroundSocial1" value="0" />
@@ -1468,7 +1475,6 @@
 		</collision>
 	</npc>
 	<npc id="21529" level="63" type="Monster" name="Soul of Splendor">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="90" />
 			<param name="MoveAroundSocial1" value="74" />
@@ -1541,7 +1547,6 @@
 		</dropLists>
 	</npc>
 	<npc id="21530" level="64" type="Monster" name="Victory of Splendor">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="90" />
 			<param name="MoveAroundSocial1" value="74" />
@@ -1610,7 +1615,6 @@
 		</dropLists>
 	</npc>
 	<npc id="21531" level="64" type="Monster" name="Punishment of Splendor">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="110" />
 			<param name="MoveAroundSocial1" value="74" />
@@ -1688,7 +1692,6 @@
 		</dropLists>
 	</npc>
 	<npc id="21532" level="65" type="Monster" name="Shout of Splendor">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="90" />
 			<param name="MoveAroundSocial1" value="74" />
@@ -1761,7 +1764,6 @@
 		</dropLists>
 	</npc>
 	<npc id="21533" level="65" type="Monster" name="Alliance of Splendor">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="90" />
 			<param name="MoveAroundSocial1" value="74" />
@@ -1838,7 +1840,6 @@
 		</dropLists>
 	</npc>
 	<npc id="21534" level="65" type="Monster" name="Alliance of Splendor">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="0" />
 			<param name="MoveAroundSocial1" value="0" />
@@ -1920,7 +1921,6 @@
 		</collision>
 	</npc>
 	<npc id="21535" level="66" type="Monster" name="Signet of Splendor">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="110" />
 			<param name="MoveAroundSocial1" value="74" />
@@ -1993,7 +1993,6 @@
 		</dropLists>
 	</npc>
 	<npc id="21536" level="66" type="Monster" name="Crown of Splendor">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="90" />
 			<param name="MoveAroundSocial1" value="74" />
@@ -2062,7 +2061,6 @@
 		</dropLists>
 	</npc>
 	<npc id="21537" level="67" type="Monster" name="Fang of Splendor">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="90" />
 			<param name="MoveAroundSocial1" value="74" />
@@ -2141,7 +2139,6 @@
 		</dropLists>
 	</npc>
 	<npc id="21538" level="67" type="Monster" name="Fang of Splendor">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="0" />
 			<param name="MoveAroundSocial1" value="0" />
@@ -2223,7 +2220,6 @@
 		</collision>
 	</npc>
 	<npc id="21539" level="67" type="Monster" name="Wailing of Splendor">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="90" />
 			<param name="MoveAroundSocial1" value="74" />
@@ -2301,7 +2297,6 @@
 		</dropLists>
 	</npc>
 	<npc id="21540" level="67" type="Monster" name="Wailing of Splendor">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="90" />
 			<param name="MoveAroundSocial1" value="74" />
@@ -2384,7 +2379,6 @@
 		</collision>
 	</npc>
 	<npc id="21541" level="63" type="Monster" name="Pilgrim of Splendor">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="90" />
 			<param name="MoveAroundSocial1" value="74" />
@@ -2454,7 +2448,6 @@
 		</dropLists>
 	</npc>
 	<npc id="21542" level="62" type="Monster" name="Pilgrim's Disciple">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="110" />
 			<param name="MoveAroundSocial1" value="74" />
@@ -2516,7 +2509,6 @@
 		</dropLists>
 	</npc>
 	<npc id="21543" level="62" type="Monster" name="Pilgrim's Servant">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="90" />
 			<param name="MoveAroundSocial1" value="74" />
@@ -2561,9 +2553,22 @@
 			<radius normal="13" />
 			<height normal="26" />
 		</collision>
+		<dropLists>
+			<drop>
+				<!-- Also drops herbs. -->
+				<item id="8600" min="1" max="1" chance="10" /> <!-- Herb of Life -->
+				<item id="8601" min="1" max="1" chance="8" /> <!-- Major Herb of Life -->
+				<item id="8602" min="1" max="1" chance="2" /> <!-- Superior Herb of Life -->
+				<item id="8603" min="1" max="1" chance="19.8" /> <!-- Herb of Mana -->
+				<item id="8604" min="1" max="1" chance="9.9" /> <!-- Major Herb of Mana -->
+				<item id="8605" min="1" max="1" chance="3.3" /> <!-- Superior Herb of Mana -->
+				<item id="34849" min="1" max="1" chance="0.7" /> <!-- Mysterious Herb of Power -->
+				<item id="34850" min="1" max="1" chance="0.7" /> <!-- Mysterious Herb of Magic -->
+				<item id="13028" min="1" max="1" chance="0.1" /> <!-- Vitality Replenishing Herb -->
+			</drop>
+		</dropLists>
 	</npc>
 	<npc id="21544" level="67" type="Monster" name="Judge of Splendor">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="90" />
 			<param name="MoveAroundSocial1" value="74" />
@@ -2633,7 +2638,6 @@
 		</dropLists>
 	</npc>
 	<npc id="21545" level="66" type="Monster" name="Judge of Fire">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="90" />
 			<param name="MoveAroundSocial1" value="74" />
@@ -2696,7 +2700,6 @@
 		</dropLists>
 	</npc>
 	<npc id="21546" level="66" type="Monster" name="Judge of Light">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="90" />
 			<param name="MoveAroundSocial1" value="74" />
@@ -2743,7 +2746,6 @@
 		</collision>
 	</npc>
 	<npc id="21547" level="65" type="Monster" name="Corrupted Knight">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="215" />
 			<param name="MoveAroundSocial1" value="215" />
@@ -2817,7 +2819,6 @@
 		</dropLists>
 	</npc>
 	<npc id="21548" level="66" type="Monster" name="Resurrected Knight">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="215" />
 			<param name="MoveAroundSocial1" value="215" />
@@ -2886,7 +2887,6 @@
 		</dropLists>
 	</npc>
 	<npc id="21549" level="65" type="Monster" name="Corrupted Royal Guard">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="80" />
 			<param name="MoveAroundSocial1" value="80" />
@@ -2958,7 +2958,6 @@
 		</dropLists>
 	</npc>
 	<npc id="21550" level="65" type="Monster" name="Corrupted Royal Guard">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="80" />
 			<param name="MoveAroundSocial1" value="80" />
@@ -3034,7 +3033,6 @@
 		</dropLists>
 	</npc>
 	<npc id="21551" level="66" type="Monster" name="Resurrected Royal Guard">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="80" />
 			<param name="MoveAroundSocial1" value="80" />
@@ -3106,7 +3104,6 @@
 		</dropLists>
 	</npc>
 	<npc id="21552" level="66" type="Monster" name="Resurrected Royal Guard">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="80" />
 			<param name="MoveAroundSocial1" value="80" />
@@ -3180,7 +3177,6 @@
 		</dropLists>
 	</npc>
 	<npc id="21553" level="65" type="Monster" name="Trampled Man">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="120" />
 			<param name="MoveAroundSocial1" value="120" />
@@ -3247,7 +3243,6 @@
 		</dropLists>
 	</npc>
 	<npc id="21554" level="65" type="Monster" name="Trampled Man">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="120" />
 			<param name="MoveAroundSocial1" value="120" />
@@ -3317,7 +3312,6 @@
 		</dropLists>
 	</npc>
 	<npc id="21555" level="65" type="Monster" name="Slaughter Executioner">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="110" />
 			<param name="MoveAroundSocial1" value="110" />
@@ -3389,7 +3383,6 @@
 		</dropLists>
 	</npc>
 	<npc id="21556" level="65" type="Monster" name="Slaughter Executioner">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="110" />
 			<param name="MoveAroundSocial1" value="110" />
@@ -3457,7 +3450,6 @@
 		</dropLists>
 	</npc>
 	<npc id="21557" level="66" type="Monster" name="Bone Snatcher">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="140" />
 			<param name="MoveAroundSocial1" value="140" />
@@ -3534,7 +3526,6 @@
 		</dropLists>
 	</npc>
 	<npc id="21558" level="66" type="Monster" name="Bone Snatcher">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="140" />
 			<param name="MoveAroundSocial1" value="140" />
@@ -3619,7 +3610,6 @@
 		</collision>
 	</npc>
 	<npc id="21559" level="66" type="Monster" name="Bone Maker">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="140" />
 			<param name="MoveAroundSocial1" value="140" />
@@ -3700,7 +3690,6 @@
 		</dropLists>
 	</npc>
 	<npc id="21560" level="66" type="Monster" name="Bone Shaper">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="140" />
 			<param name="MoveAroundSocial1" value="140" />
@@ -3778,7 +3767,6 @@
 		</dropLists>
 	</npc>
 	<npc id="21561" level="67" type="Monster" name="Sacrificed Man">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="120" />
 			<param name="MoveAroundSocial1" value="120" />
@@ -3851,7 +3839,6 @@
 		</dropLists>
 	</npc>
 	<npc id="21562" level="67" type="Monster" name="Guillotine's Ghost">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="57" />
 			<param name="MoveAroundSocial1" value="57" />
@@ -3920,7 +3907,6 @@
 		</dropLists>
 	</npc>
 	<npc id="21563" level="67" type="Monster" name="Bone Collector">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="140" />
 			<param name="MoveAroundSocial1" value="140" />
@@ -4010,7 +3996,6 @@
 		</collision>
 	</npc>
 	<npc id="21564" level="67" type="Monster" name="Skull Collector">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="140" />
 			<param name="MoveAroundSocial1" value="140" />
@@ -4091,7 +4076,6 @@
 		</dropLists>
 	</npc>
 	<npc id="21565" level="68" type="Monster" name="Bone Animator">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="140" />
 			<param name="MoveAroundSocial1" value="140" />
@@ -4168,7 +4152,6 @@
 		</dropLists>
 	</npc>
 	<npc id="21566" level="68" type="Monster" name="Skull Animator">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="140" />
 			<param name="MoveAroundSocial1" value="140" />
@@ -4245,7 +4228,6 @@
 		</dropLists>
 	</npc>
 	<npc id="21567" level="68" type="Monster" name="Bone Slayer">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="140" />
 			<param name="MoveAroundSocial1" value="140" />
@@ -4319,7 +4301,6 @@
 		</dropLists>
 	</npc>
 	<npc id="21568" level="68" type="Monster" name="Devil Bat">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="0" />
 			<param name="MoveAroundSocial1" value="0" />
@@ -4394,7 +4375,6 @@
 		</dropLists>
 	</npc>
 	<npc id="21569" level="68" type="Monster" name="Devil Bat">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="0" />
 			<param name="MoveAroundSocial1" value="0" />
@@ -4460,7 +4440,6 @@
 		</dropLists>
 	</npc>
 	<npc id="21570" level="69" type="Monster" name="Ghost of Betrayer">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="70" />
 			<param name="MoveAroundSocial1" value="70" />
@@ -4533,7 +4512,6 @@
 		</dropLists>
 	</npc>
 	<npc id="21571" level="69" type="Monster" name="Ghost of Rebel Soldier">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="215" />
 			<param name="MoveAroundSocial1" value="215" />
@@ -4604,7 +4582,6 @@
 		</dropLists>
 	</npc>
 	<npc id="21572" level="69" type="Monster" name="Bone Sweeper">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="140" />
 			<param name="MoveAroundSocial1" value="140" />
@@ -4685,7 +4662,6 @@
 		</dropLists>
 	</npc>
 	<npc id="21573" level="69" type="Monster" name="Atrox">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="100" />
 			<param name="MoveAroundSocial1" value="100" />
@@ -4758,7 +4734,6 @@
 		</dropLists>
 	</npc>
 	<npc id="21574" level="70" type="Monster" name="Bone Grinder">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="140" />
 			<param name="MoveAroundSocial1" value="140" />
@@ -4833,7 +4808,6 @@
 		</dropLists>
 	</npc>
 	<npc id="21575" level="70" type="Monster" name="Bone Grinder">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="140" />
 			<param name="MoveAroundSocial1" value="140" />
@@ -4903,7 +4877,6 @@
 		</dropLists>
 	</npc>
 	<npc id="21576" level="70" type="Monster" name="Ghost of Guillotine">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="57" />
 			<param name="MoveAroundSocial1" value="57" />
@@ -4978,7 +4951,6 @@
 		</dropLists>
 	</npc>
 	<npc id="21577" level="70" type="Monster" name="Ghost of Guillotine">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="57" />
 			<param name="MoveAroundSocial1" value="57" />
@@ -5048,7 +5020,6 @@
 		</dropLists>
 	</npc>
 	<npc id="21578" level="71" type="Monster" name="Behemoth Zombie">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="80" />
 			<param name="MoveAroundSocial1" value="80" />
@@ -5121,7 +5092,6 @@
 		</dropLists>
 	</npc>
 	<npc id="21579" level="71" type="Monster" name="Ghost of Rebel Leader">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="80" />
 			<param name="MoveAroundSocial1" value="80" />
@@ -5193,7 +5163,6 @@
 		</dropLists>
 	</npc>
 	<npc id="21580" level="71" type="Monster" name="Bone Caster">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="140" />
 			<param name="MoveAroundSocial1" value="140" />
@@ -5269,7 +5238,6 @@
 		</dropLists>
 	</npc>
 	<npc id="21581" level="71" type="Monster" name="Bone Puppeteer">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="140" />
 			<param name="MoveAroundSocial1" value="140" />
@@ -5346,7 +5314,6 @@
 		</dropLists>
 	</npc>
 	<npc id="21582" level="71" type="Monster" name="Vampire Soldier">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="0" />
 			<param name="MoveAroundSocial1" value="0" />
@@ -5422,7 +5389,6 @@
 		</dropLists>
 	</npc>
 	<npc id="21583" level="72" type="Monster" name="Bone Scavenger">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="140" />
 			<param name="MoveAroundSocial1" value="140" />
@@ -5504,7 +5470,6 @@
 		</dropLists>
 	</npc>
 	<npc id="21584" level="72" type="Monster" name="Bone Scavenger">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="140" />
 			<param name="MoveAroundSocial1" value="140" />
@@ -5583,7 +5548,6 @@
 		</dropLists>
 	</npc>
 	<npc id="21585" level="72" type="Monster" name="Vampire Magician">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="0" />
 			<param name="MoveAroundSocial1" value="0" />
@@ -5662,7 +5626,6 @@
 		</dropLists>
 	</npc>
 	<npc id="21586" level="72" type="Monster" name="Vampire Adept">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="95" />
 			<param name="MoveAroundSocial1" value="95" />
@@ -5738,7 +5701,6 @@
 		</dropLists>
 	</npc>
 	<npc id="21587" level="72" type="Monster" name="Vampire Warrior">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="0" />
 			<param name="MoveAroundSocial1" value="0" />
@@ -5816,7 +5778,6 @@
 		</dropLists>
 	</npc>
 	<npc id="21588" level="73" type="Monster" name="Vampire Wizard">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="0" />
 			<param name="MoveAroundSocial1" value="0" />
@@ -5891,7 +5852,6 @@
 		</dropLists>
 	</npc>
 	<npc id="21589" level="73" type="Monster" name="Vampire Wizard">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="0" />
 			<param name="MoveAroundSocial1" value="0" />
@@ -5969,7 +5929,6 @@
 		</dropLists>
 	</npc>
 	<npc id="21590" level="73" type="Monster" name="Vampire Magister">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="95" />
 			<param name="MoveAroundSocial1" value="95" />
@@ -6043,7 +6002,6 @@
 		</dropLists>
 	</npc>
 	<npc id="21591" level="73" type="Monster" name="Vampire Magister">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="95" />
 			<param name="MoveAroundSocial1" value="95" />
@@ -6119,7 +6077,6 @@
 		</dropLists>
 	</npc>
 	<npc id="21592" level="73" type="Monster" name="Vampire Magister">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="95" />
 			<param name="MoveAroundSocial1" value="95" />
@@ -6190,7 +6147,6 @@
 		</dropLists>
 	</npc>
 	<npc id="21593" level="73" type="Monster" name="Vampire Warlord">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="100" />
 			<param name="MoveAroundSocial1" value="100" />
@@ -6263,7 +6219,6 @@
 		</dropLists>
 	</npc>
 	<npc id="21594" level="73" type="Monster" name="Vampire Warlord">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="100" />
 			<param name="MoveAroundSocial1" value="100" />
@@ -6339,7 +6294,6 @@
 		</dropLists>
 	</npc>
 	<npc id="21595" level="73" type="Monster" name="Vampire Warlord">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="100" />
 			<param name="MoveAroundSocial1" value="100" />
@@ -6412,7 +6366,6 @@
 		</dropLists>
 	</npc>
 	<npc id="21596" level="68" type="Monster" name="Requiem Lord">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="140" />
 			<param name="MoveAroundSocial1" value="140" />
@@ -6482,7 +6435,6 @@
 		</dropLists>
 	</npc>
 	<npc id="21597" level="67" type="Monster" name="Requiem Behemoth">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="80" />
 			<param name="MoveAroundSocial1" value="80" />
@@ -6545,7 +6497,6 @@
 		</dropLists>
 	</npc>
 	<npc id="21598" level="67" type="Monster" name="Requiem Behemoth">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="80" />
 			<param name="MoveAroundSocial1" value="80" />
@@ -6592,7 +6543,6 @@
 		</collision>
 	</npc>
 	<npc id="21599" level="71" type="Monster" name="Requiem Priest">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="140" />
 			<param name="MoveAroundSocial1" value="140" />

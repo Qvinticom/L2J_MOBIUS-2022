@@ -2177,7 +2177,6 @@
 		</collision>
 	</npc>
 	<npc id="18463" level="81" type="Monster" name="Remnant Warrior">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="0" />
 			<param name="MoveAroundSocial1" value="140" />
@@ -2232,9 +2231,31 @@
 			<radius normal="8" />
 			<height normal="22" />
 		</collision>
+		<dropLists>
+			<drop>
+				<item id="1344" min="10" max="30" chance="100" /> <!-- Mithril Arrow -->
+				<item id="9675" min="1" max="1" chance="100" /> <!-- Prayer Fragment -->
+				<item id="57" min="15000" max="30000" chance="70" /> <!-- Adena -->
+				<item id="5537" min="1" max="1" chance="4" /> <!-- Soul Separator Head -->
+				<item id="1808" min="1" max="1" chance="0.75187969924812" /> <!-- Recipe: Soulshot (S-grade) -->
+				<item id="236" min="1" max="1" chance="0.03000300030003" /> <!-- Soul Separator -->
+				<!-- Also drops herbs. -->
+				<item id="8600" min="1" max="1" chance="10" /> <!-- Herb of Life -->
+				<item id="8601" min="1" max="1" chance="8" /> <!-- Major Herb of Life -->
+				<item id="8602" min="1" max="1" chance="2" /> <!-- Superior Herb of Life -->
+				<item id="8603" min="1" max="1" chance="19.8" /> <!-- Herb of Mana -->
+				<item id="8604" min="1" max="1" chance="9.9" /> <!-- Major Herb of Mana -->
+				<item id="8605" min="1" max="1" chance="3.3" /> <!-- Superior Herb of Mana -->
+				<item id="34849" min="1" max="1" chance="0.7" /> <!-- Mysterious Herb of Power -->
+				<item id="34850" min="1" max="1" chance="0.7" /> <!-- Mysterious Herb of Magic -->
+				<item id="13028" min="1" max="1" chance="0.1" /> <!-- Vitality Replenishing Herb -->
+			</drop>
+			<spoil>
+				<item id="6710" min="1" max="3" chance="80" /> <!-- Sealed Draconic Leather Helmet Pattern -->
+			</spoil>
+		</dropLists>
 	</npc>
 	<npc id="18464" level="81" type="Monster" name="Remnant Priest">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="0" />
 			<param name="MoveAroundSocial1" value="90" />
@@ -2291,9 +2312,37 @@
 			<radius normal="8" />
 			<height normal="23" />
 		</collision>
+		<dropLists>
+			<drop>
+				<item id="57" min="15000" max="30000" chance="70" /> <!-- Adena -->
+				<item id="1344" min="240" max="720" chance="25" /> <!-- Mithril Arrow -->
+				<item id="9675" min="2" max="6" chance="12.5" /> <!-- Prayer Fragment -->
+				<item id="5541" min="1" max="1" chance="8" /> <!-- Tallum Glaive Edge -->
+				<item id="36558" min="1" max="1" chance="0.75187969924812" /> <!-- Accessory Gem (Mid-grade) -->
+				<item id="6901" min="1" max="1" chance="0.3003003003003" /> <!-- Recipe: Arrow of Light -->
+				<item id="36553" min="1" max="1" chance="0.3003003003003" /> <!-- Armor Fragment (Mid-grade) -->
+				<item id="36548" min="1" max="1" chance="0.3003003003003" /> <!-- Weapon Fragment (Mid-grade) -->
+				<item id="305" min="1" max="1" chance="0.0750187546886722" /> <!-- Tallum Glaive -->
+				<!-- Also drops herbs. -->
+				<item id="8600" min="1" max="1" chance="10" /> <!-- Herb of Life -->
+				<item id="8601" min="1" max="1" chance="8" /> <!-- Major Herb of Life -->
+				<item id="8602" min="1" max="1" chance="2" /> <!-- Superior Herb of Life -->
+				<item id="8603" min="1" max="1" chance="19.8" /> <!-- Herb of Mana -->
+				<item id="8604" min="1" max="1" chance="9.9" /> <!-- Major Herb of Mana -->
+				<item id="8605" min="1" max="1" chance="3.3" /> <!-- Superior Herb of Mana -->
+				<item id="34849" min="1" max="1" chance="0.7" /> <!-- Mysterious Herb of Power -->
+				<item id="34850" min="1" max="1" chance="0.7" /> <!-- Mysterious Herb of Magic -->
+				<item id="13028" min="1" max="1" chance="0.1" /> <!-- Vitality Replenishing Herb -->
+			</drop>
+			<spoil>
+				<item id="36532" min="1" max="1" chance="17.5" /> <!-- Thin Braid -->
+				<item id="36533" min="1" max="1" chance="3" /> <!-- Synthetic Braid -->
+				<item id="36882" min="1" max="1" chance="0.3003003003003" /> <!-- Recipe: Thin Braid - Upgrade -->
+				<item id="36881" min="1" max="1" chance="0.0750187546886722" /> <!-- Recipe: Thin Braid - Downgrade -->
+			</spoil>
+		</dropLists>
 	</npc>
 	<npc id="18465" level="81" type="Monster" name="Derek" title="Founding Priest">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="0" />
 			<param name="MoveAroundSocial1" value="90" />
@@ -2355,9 +2404,41 @@
 			<radius normal="10" />
 			<height normal="28.1" />
 		</collision>
+		<dropLists>
+			<drop>
+				<item id="57" min="30000" max="75000" chance="70" /> <!-- Adena -->
+				<item id="5514" min="6" max="18" chance="7.5" /> <!-- Sealed Gauntlets of Nightmare Design -->
+				<item id="5502" min="10" max="30" chance="5" /> <!-- Sealed Boots of Nightmare Lining -->
+				<item id="5515" min="16" max="48" chance="3" /> <!-- Sealed Majestic Gauntlet Design -->
+				<item id="5503" min="22" max="66" chance="2.5" /> <!-- Sealed Majestic Boot Lining -->
+				<item id="36548" min="1" max="1" chance="1.25" /> <!-- Weapon Fragment (Mid-grade) -->
+				<item id="36553" min="1" max="1" chance="1" /> <!-- Armor Fragment (Mid-grade) -->
+				<item id="5318" min="1" max="1" chance="0.75187969924812" /> <!-- Sealed Majestic Gauntlets -->
+				<item id="5313" min="1" max="1" chance="0.75187969924812" /> <!-- Sealed Gauntlets of Nightmare -->
+				<item id="5319" min="1" max="1" chance="0.75187969924812" /> <!-- Sealed Majestic Boots -->
+				<item id="5314" min="1" max="1" chance="0.75187969924812" /> <!-- Sealed Boots of Nightmare -->
+				<item id="36563" min="1" max="1" chance="0.75187969924812" /> <!-- Synthetic Cokes -->
+				<item id="959" min="1" max="1" chance="0.3003003003003" /> <!-- Scroll: Enchant Weapon (S-grade) -->
+				<!-- Also drops herbs. -->
+				<item id="8600" min="1" max="1" chance="10" /> <!-- Herb of Life -->
+				<item id="8601" min="1" max="1" chance="8" /> <!-- Major Herb of Life -->
+				<item id="8602" min="1" max="1" chance="2" /> <!-- Superior Herb of Life -->
+				<item id="8603" min="1" max="1" chance="19.8" /> <!-- Herb of Mana -->
+				<item id="8604" min="1" max="1" chance="9.9" /> <!-- Major Herb of Mana -->
+				<item id="8605" min="1" max="1" chance="3.3" /> <!-- Superior Herb of Mana -->
+				<item id="34849" min="1" max="1" chance="0.7" /> <!-- Mysterious Herb of Power -->
+				<item id="34850" min="1" max="1" chance="0.7" /> <!-- Mysterious Herb of Magic -->
+				<item id="13028" min="1" max="1" chance="0.1" /> <!-- Vitality Replenishing Herb -->
+			</drop>
+			<spoil>
+				<item id="36532" min="1" max="9" chance="75" /> <!-- Thin Braid -->
+				<item id="36533" min="1" max="1" chance="75" /> <!-- Synthetic Braid -->
+				<item id="36882" min="1" max="1" chance="1.5" /> <!-- Recipe: Thin Braid - Upgrade -->
+				<item id="36881" min="1" max="1" chance="0.3003003003003" /> <!-- Recipe: Thin Braid - Downgrade -->
+			</spoil>
+		</dropLists>
 	</npc>
 	<npc id="18466" level="81" type="Monster" name="Outpost Guard Captain">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="80" />
 			<param name="MoveAroundSocial1" value="80" />
@@ -2417,9 +2498,22 @@
 			<radius normal="20" />
 			<height normal="56" />
 		</collision>
+		<dropLists>
+			<drop>
+				<!-- Also drops herbs. -->
+				<item id="8600" min="1" max="1" chance="10" /> <!-- Herb of Life -->
+				<item id="8601" min="1" max="1" chance="8" /> <!-- Major Herb of Life -->
+				<item id="8602" min="1" max="1" chance="2" /> <!-- Superior Herb of Life -->
+				<item id="8603" min="1" max="1" chance="19.8" /> <!-- Herb of Mana -->
+				<item id="8604" min="1" max="1" chance="9.9" /> <!-- Major Herb of Mana -->
+				<item id="8605" min="1" max="1" chance="3.3" /> <!-- Superior Herb of Mana -->
+				<item id="34849" min="1" max="1" chance="0.7" /> <!-- Mysterious Herb of Power -->
+				<item id="34850" min="1" max="1" chance="0.7" /> <!-- Mysterious Herb of Magic -->
+				<item id="13028" min="1" max="1" chance="0.1" /> <!-- Vitality Replenishing Herb -->
+			</drop>
+		</dropLists>
 	</npc>
 	<npc id="18467" level="81" type="Monster" name="Wounded Land Gatekeeper">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="110" />
 			<param name="MoveAroundSocial1" value="110" />
@@ -2471,9 +2565,22 @@
 			<radius normal="36" />
 			<height normal="43.5" />
 		</collision>
+		<dropLists>
+			<drop>
+				<!-- Also drops herbs. -->
+				<item id="8600" min="1" max="1" chance="10" /> <!-- Herb of Life -->
+				<item id="8601" min="1" max="1" chance="8" /> <!-- Major Herb of Life -->
+				<item id="8602" min="1" max="1" chance="2" /> <!-- Superior Herb of Life -->
+				<item id="8603" min="1" max="1" chance="19.8" /> <!-- Herb of Mana -->
+				<item id="8604" min="1" max="1" chance="9.9" /> <!-- Major Herb of Mana -->
+				<item id="8605" min="1" max="1" chance="3.3" /> <!-- Superior Herb of Mana -->
+				<item id="34849" min="1" max="1" chance="0.7" /> <!-- Mysterious Herb of Power -->
+				<item id="34850" min="1" max="1" chance="0.7" /> <!-- Mysterious Herb of Magic -->
+				<item id="13028" min="1" max="1" chance="0.1" /> <!-- Vitality Replenishing Herb -->
+			</drop>
+		</dropLists>
 	</npc>
 	<npc id="18468" level="99" type="Monster" name="Tester">
-		<!-- Confirmed CT2.5 -->
 		<race>ETC</race>
 		<sex>ETC</sex>
 		<acquire exp="735075" sp="176" />
@@ -2507,7 +2614,6 @@
 		</collision>
 	</npc>
 	<npc id="18469" level="83" type="Monster" name="Hall Guard">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="90" />
 			<param name="MoveAroundSocial1" value="90" />
@@ -2568,7 +2674,6 @@
 		</collision>
 	</npc>
 	<npc id="18470" level="83" type="Monster" name="Hall Guard">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="90" />
 			<param name="MoveAroundSocial1" value="90" />
@@ -2624,7 +2729,6 @@
 		</collision>
 	</npc>
 	<npc id="18471" level="83" type="Monster" name="Hall Guard">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="150" />
 			<param name="MoveAroundSocial1" value="150" />
@@ -2696,7 +2800,6 @@
 		</collision>
 	</npc>
 	<npc id="18472" level="83" type="Monster" name="Hall Guard">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="150" />
 			<param name="MoveAroundSocial1" value="150" />
@@ -2752,7 +2855,6 @@
 		</collision>
 	</npc>
 	<npc id="18473" level="83" type="Monster" name="Hall Guard Captain">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="80" />
 			<param name="MoveAroundSocial1" value="80" />
@@ -2813,9 +2915,22 @@
 			<radius normal="34" grown="44" />
 			<height normal="48.8" grown="59.4" />
 		</collision>
+		<dropLists>
+			<drop>
+				<!-- Also drops herbs. -->
+				<item id="8600" min="1" max="1" chance="10" /> <!-- Herb of Life -->
+				<item id="8601" min="1" max="1" chance="8" /> <!-- Major Herb of Life -->
+				<item id="8602" min="1" max="1" chance="2" /> <!-- Superior Herb of Life -->
+				<item id="8603" min="1" max="1" chance="19.8" /> <!-- Herb of Mana -->
+				<item id="8604" min="1" max="1" chance="9.9" /> <!-- Major Herb of Mana -->
+				<item id="8605" min="1" max="1" chance="3.3" /> <!-- Superior Herb of Mana -->
+				<item id="34849" min="1" max="1" chance="0.7" /> <!-- Mysterious Herb of Power -->
+				<item id="34850" min="1" max="1" chance="0.7" /> <!-- Mysterious Herb of Magic -->
+				<item id="13028" min="1" max="1" chance="0.1" /> <!-- Vitality Replenishing Herb -->
+			</drop>
+		</dropLists>
 	</npc>
 	<npc id="18474" level="98" type="Monster" name="Alarm">
-		<!-- Confirmed CT2.5 -->
 		<race>ETC</race>
 		<sex>ETC</sex>
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
@@ -2851,9 +2966,22 @@
 			<radius normal="9" />
 			<height normal="33.5" />
 		</collision>
+		<dropLists>
+			<drop>
+				<!-- Also drops herbs. -->
+				<item id="8600" min="1" max="1" chance="10" /> <!-- Herb of Life -->
+				<item id="8601" min="1" max="1" chance="8" /> <!-- Major Herb of Life -->
+				<item id="8602" min="1" max="1" chance="2" /> <!-- Superior Herb of Life -->
+				<item id="8603" min="1" max="1" chance="19.8" /> <!-- Herb of Mana -->
+				<item id="8604" min="1" max="1" chance="9.9" /> <!-- Major Herb of Mana -->
+				<item id="8605" min="1" max="1" chance="3.3" /> <!-- Superior Herb of Mana -->
+				<item id="34849" min="1" max="1" chance="0.7" /> <!-- Mysterious Herb of Power -->
+				<item id="34850" min="1" max="1" chance="0.7" /> <!-- Mysterious Herb of Magic -->
+				<item id="13028" min="1" max="1" chance="0.1" /> <!-- Vitality Replenishing Herb -->
+			</drop>
+		</dropLists>
 	</npc>
 	<npc id="18475" level="83" type="Monster" name="Hall Guard">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="0" />
 			<param name="MoveAroundSocial1" value="0" />
@@ -2923,7 +3051,6 @@
 		</collision>
 	</npc>
 	<npc id="18476" level="83" type="Monster" name="Hall Guard">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="0" />
 			<param name="MoveAroundSocial1" value="0" />
@@ -2983,7 +3110,6 @@
 		</collision>
 	</npc>
 	<npc id="18477" level="83" type="Chest" name="Coral Treasure Chest">
-		<!-- Confirmed CT2.5 -->
 		<race>CONSTRUCT</race>
 		<sex>MALE</sex>
 		<stats str="79" int="34" dex="42" wit="66" con="75" men="12">
@@ -3018,7 +3144,6 @@
 		</collision>
 	</npc>
 	<npc id="18478" level="15" type="Monster" name="Herb Jar">
-		<!-- Confirmed CT2.5 -->
 		<race>CONSTRUCT</race>
 		<sex>MALE</sex>
 		<stats str="79" int="34" dex="42" wit="66" con="75" men="12">
@@ -3051,26 +3176,12 @@
 				<clan>NDG</clan>
 			</clanList>
 		</ai>
-		<dropLists>
-			<drop>
-				<item id="8600" min="1" max="1" chance="10" /> <!-- Herb of Life -->
-				<item id="8601" min="1" max="1" chance="8" /> <!-- Major Herb of Life -->
-				<item id="8602" min="1" max="1" chance="2" /> <!-- Superior Herb of Life -->
-				<item id="8603" min="1" max="1" chance="19.8" /> <!-- Herb of Mana -->
-				<item id="8604" min="1" max="1" chance="9.9" /> <!-- Major Herb of Mana -->
-				<item id="8605" min="1" max="1" chance="3.3" /> <!-- Superior Herb of Mana -->
-				<item id="34849" min="1" max="1" chance="0.7" /> <!-- Mysterious Herb of Power -->
-				<item id="34850" min="1" max="1" chance="0.7" /> <!-- Mysterious Herb of Magic -->
-				<item id="13028" min="1" max="1" chance="0.1" /> <!-- Vitality Replenishing Herb -->
-			</drop>
-		</dropLists>
 		<collision>
 			<radius normal="8" />
 			<height normal="21.5" />
 		</collision>
 	</npc>
 	<npc id="18479" level="81" type="Monster" name="Inner Castle Sentry">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="90" />
 			<param name="MoveAroundSocial1" value="74" />
@@ -3126,7 +3237,6 @@
 		</collision>
 	</npc>
 	<npc id="18480" level="81" type="Monster" name="Inner Castle Guard">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="110" />
 			<param name="MoveAroundSocial1" value="110" />
@@ -3183,7 +3293,6 @@
 		</collision>
 	</npc>
 	<npc id="18481" level="81" type="Monster" name="Inner Castle Wizard">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="110" />
 			<param name="MoveAroundSocial1" value="110" />

@@ -1,7 +1,6 @@
 ﻿<?xml version="1.0" encoding="UTF-8"?>
 <list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../xsd/npcs.xsd">
-	<npc id="24000" level="85" type="Npc" name="Leona Blackbird" title="Dragon's Advocate">
-		<!-- AUTO GENERATED NPC TODO: FIX IT -->
+	<npc id="24000" level="85" type="Monster" name="Leona Blackbird" title="Dragon's Advocate">
 		<race>ETC</race>
 		<sex>FEMALE</sex>
 		<equipment rhand="1893" />
@@ -20,8 +19,7 @@
 			<height normal="22.4" />
 		</collision>
 	</npc>
-	<npc id="24001" level="102" type="Npc" name="Kain Van Halter" title="Prince of the Second Dimension">
-		<!-- AUTO GENERATED NPC TODO: FIX IT -->
+	<npc id="24001" level="102" type="Monster" name="Kain Van Halter" title="Prince of the Second Dimension">
 		<race>ETC</race>
 		<sex>FEMALE</sex>
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
@@ -39,8 +37,7 @@
 			<height normal="20" />
 		</collision>
 	</npc>
-	<npc id="24002" level="85" type="Npc" name="Princess Ant" title="Successor in the Ant Nest">
-		<!-- AUTO GENERATED NPC TODO: FIX IT -->
+	<npc id="24002" level="85" type="Monster" name="Princess Ant" title="Successor in the Ant Nest">
 		<race>ETC</race>
 		<sex>FEMALE</sex>
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
@@ -58,8 +55,7 @@
 			<height normal="53" />
 		</collision>
 	</npc>
-	<npc id="24003" level="85" type="Npc" name="Escort Ant">
-		<!-- AUTO GENERATED NPC TODO: FIX IT -->
+	<npc id="24003" level="85" type="Monster" name="Escort Ant">
 		<race>ETC</race>
 		<sex>FEMALE</sex>
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
@@ -77,8 +73,7 @@
 			<height normal="15" />
 		</collision>
 	</npc>
-	<npc id="24004" level="85" type="Npc" name="Royal Guard Ant">
-		<!-- AUTO GENERATED NPC TODO: FIX IT -->
+	<npc id="24004" level="85" type="Monster" name="Royal Guard Ant">
 		<race>ETC</race>
 		<sex>FEMALE</sex>
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
@@ -96,8 +91,7 @@
 			<height normal="15" />
 		</collision>
 	</npc>
-	<npc id="24005" level="85" type="Npc" name="Urfen" title="Orfen Kin">
-		<!-- AUTO GENERATED NPC TODO: FIX IT -->
+	<npc id="24005" level="85" type="Monster" name="Urfen" title="Orfen Kin">
 		<race>ETC</race>
 		<sex>FEMALE</sex>
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
@@ -115,8 +109,7 @@
 			<height normal="128.4" />
 		</collision>
 	</npc>
-	<npc id="24006" level="85" type="Npc" name="Laikel">
-		<!-- AUTO GENERATED NPC TODO: FIX IT -->
+	<npc id="24006" level="85" type="Monster" name="Laikel">
 		<race>ETC</race>
 		<sex>FEMALE</sex>
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
@@ -134,8 +127,7 @@
 			<height normal="30.5" />
 		</collision>
 	</npc>
-	<npc id="24007" level="85" type="Npc" name="Riba">
-		<!-- AUTO GENERATED NPC TODO: FIX IT -->
+	<npc id="24007" level="85" type="Monster" name="Riba">
 		<race>ETC</race>
 		<sex>FEMALE</sex>
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
@@ -153,8 +145,7 @@
 			<height normal="34.5" />
 		</collision>
 	</npc>
-	<npc id="24008" level="85" type="Npc" name="Zaken" title="Unworldly Pirate King">
-		<!-- AUTO GENERATED NPC TODO: FIX IT -->
+	<npc id="24008" level="85" type="Monster" name="Zaken" title="Unworldly Pirate King">
 		<race>ETC</race>
 		<sex>FEMALE</sex>
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
@@ -172,8 +163,7 @@
 			<height normal="32" />
 		</collision>
 	</npc>
-	<npc id="24009" level="85" type="Npc" name="Zaken" title="Unworldly Pirate King">
-		<!-- AUTO GENERATED NPC TODO: FIX IT -->
+	<npc id="24009" level="85" type="Monster" name="Zaken" title="Unworldly Pirate King">
 		<race>ETC</race>
 		<sex>FEMALE</sex>
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
@@ -192,7 +182,6 @@
 		</collision>
 	</npc>
 	<npc id="24010" level="92" type="Monster" name="Pirate Zombie Captain">
-		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<race>UNDEAD</race>
 		<sex>FEMALE</sex>
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
@@ -232,7 +221,6 @@
 		</dropLists>
 	</npc>
 	<npc id="24011" level="92" type="Monster" name="Pirate Zombie">
-		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<race>UNDEAD</race>
 		<sex>FEMALE</sex>
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
@@ -271,8 +259,7 @@
 			</lucky>
 		</dropLists>
 	</npc>
-	<npc id="24012" level="85" type="Npc" name="Saium" title="Relative of the Emperor">
-		<!-- AUTO GENERATED NPC TODO: FIX IT -->
+	<npc id="24012" level="85" type="Monster" name="Saium" title="Relative of the Emperor">
 		<race>ETC</race>
 		<sex>FEMALE</sex>
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
@@ -290,8 +277,7 @@
 			<height normal="67.8" />
 		</collision>
 	</npc>
-	<npc id="24013" level="85" type="Npc" name="Traitor Angel">
-		<!-- AUTO GENERATED NPC TODO: FIX IT -->
+	<npc id="24013" level="85" type="Monster" name="Traitor Angel">
 		<race>ETC</race>
 		<sex>FEMALE</sex>
 		<equipment rhand="97" />
@@ -582,8 +568,7 @@
 			<skill id="14804" level="10" /> <!-- Damage Reflection Attack Resistance -->
 		</skillList>
 	</npc>
-	<npc id="24024" level="100" type="Npc" name="Embryo Raider">
-		<!-- AUTO GENERATED NPC TODO: FIX IT -->
+	<npc id="24024" level="100" type="Monster" name="Embryo Raider">
 		<race>HUMANOID</race>
 		<sex>FEMALE</sex>
 		<equipment rhand="17421" />
@@ -609,8 +594,7 @@
 			<skill id="16547" level="10" /> <!-- Danger Zone Attack Resistance -->
 		</skillList>
 	</npc>
-	<npc id="24025" level="100" type="Npc" name="Embryo Passionate Soldier">
-		<!-- AUTO GENERATED NPC TODO: FIX IT -->
+	<npc id="24025" level="100" type="Monster" name="Embryo Passionate Soldier">
 		<race>HUMANOID</race>
 		<sex>FEMALE</sex>
 		<equipment rhand="17421" />
@@ -636,8 +620,7 @@
 			<skill id="16547" level="10" /> <!-- Danger Zone Attack Resistance -->
 		</skillList>
 	</npc>
-	<npc id="24026" level="100" type="Npc" name="Embryo Guardian Captain">
-		<!-- AUTO GENERATED NPC TODO: FIX IT -->
+	<npc id="24026" level="100" type="Monster" name="Embryo Guardian Captain">
 		<race>HUMANOID</race>
 		<sex>FEMALE</sex>
 		<equipment rhand="17417" lhand="17435" />
@@ -663,8 +646,7 @@
 			<skill id="16547" level="10" /> <!-- Danger Zone Attack Resistance -->
 		</skillList>
 	</npc>
-	<npc id="24027" level="100" type="Npc" name="Embryo Elite Captain">
-		<!-- AUTO GENERATED NPC TODO: FIX IT -->
+	<npc id="24027" level="100" type="Monster" name="Embryo Elite Captain">
 		<race>HUMANOID</race>
 		<sex>FEMALE</sex>
 		<equipment rhand="17417" lhand="17435" />
@@ -690,8 +672,7 @@
 			<skill id="16547" level="10" /> <!-- Danger Zone Attack Resistance -->
 		</skillList>
 	</npc>
-	<npc id="24028" level="100" type="Npc" name="Embryo Dark Wizard">
-		<!-- AUTO GENERATED NPC TODO: FIX IT -->
+	<npc id="24028" level="100" type="Monster" name="Embryo Dark Wizard">
 		<race>HUMANOID</race>
 		<sex>FEMALE</sex>
 		<equipment rhand="17391" />
@@ -717,8 +698,7 @@
 			<skill id="16547" level="10" /> <!-- Danger Zone Attack Resistance -->
 		</skillList>
 	</npc>
-	<npc id="24029" level="100" type="Npc" name="Embryo Flame Master">
-		<!-- AUTO GENERATED NPC TODO: FIX IT -->
+	<npc id="24029" level="100" type="Monster" name="Embryo Flame Master">
 		<race>HUMANOID</race>
 		<sex>FEMALE</sex>
 		<equipment rhand="17425" />
@@ -744,8 +724,7 @@
 			<skill id="16547" level="10" /> <!-- Danger Zone Attack Resistance -->
 		</skillList>
 	</npc>
-	<npc id="24030" level="100" type="Npc" name="Embryo High Priest">
-		<!-- AUTO GENERATED NPC TODO: FIX IT -->
+	<npc id="24030" level="100" type="Monster" name="Embryo High Priest">
 		<race>HUMANOID</race>
 		<sex>FEMALE</sex>
 		<equipment rhand="17392" />
@@ -771,8 +750,7 @@
 			<skill id="16547" level="10" /> <!-- Danger Zone Attack Resistance -->
 		</skillList>
 	</npc>
-	<npc id="24031" level="100" type="Npc" name="Embryo Archon">
-		<!-- AUTO GENERATED NPC TODO: FIX IT -->
+	<npc id="24031" level="100" type="Monster" name="Embryo Archon">
 		<race>HUMANOID</race>
 		<sex>FEMALE</sex>
 		<equipment rhand="17426" />
@@ -798,8 +776,7 @@
 			<skill id="16547" level="10" /> <!-- Danger Zone Attack Resistance -->
 		</skillList>
 	</npc>
-	<npc id="24032" level="101" type="Npc" name="Embryo Soul Reaper">
-		<!-- AUTO GENERATED NPC TODO: FIX IT -->
+	<npc id="24032" level="101" type="Monster" name="Embryo Soul Reaper">
 		<race>DEMONIC</race>
 		<sex>FEMALE</sex>
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
@@ -824,8 +801,7 @@
 			<skill id="16547" level="10" /> <!-- Danger Zone Attack Resistance -->
 		</skillList>
 	</npc>
-	<npc id="24033" level="101" type="Npc" name="Embryo Slaughterer">
-		<!-- AUTO GENERATED NPC TODO: FIX IT -->
+	<npc id="24033" level="101" type="Monster" name="Embryo Slaughterer">
 		<race>DEMONIC</race>
 		<sex>FEMALE</sex>
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
@@ -850,8 +826,7 @@
 			<skill id="16547" level="10" /> <!-- Danger Zone Attack Resistance -->
 		</skillList>
 	</npc>
-	<npc id="24034" level="101" type="Npc" name="Embryo Soul Pathfinder">
-		<!-- AUTO GENERATED NPC TODO: FIX IT -->
+	<npc id="24034" level="101" type="Monster" name="Embryo Soul Pathfinder">
 		<race>DEMONIC</race>
 		<sex>FEMALE</sex>
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
@@ -876,8 +851,7 @@
 			<skill id="16547" level="10" /> <!-- Danger Zone Attack Resistance -->
 		</skillList>
 	</npc>
-	<npc id="24035" level="102" type="Npc" name="Embryo Squad Leader">
-		<!-- AUTO GENERATED NPC TODO: FIX IT -->
+	<npc id="24035" level="102" type="Monster" name="Embryo Squad Leader">
 		<race>HUMANOID</race>
 		<sex>FEMALE</sex>
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
@@ -902,8 +876,7 @@
 			<skill id="16547" level="10" /> <!-- Danger Zone Attack Resistance -->
 		</skillList>
 	</npc>
-	<npc id="24036" level="102" type="Npc" name="Embryo Dark Judge">
-		<!-- AUTO GENERATED NPC TODO: FIX IT -->
+	<npc id="24036" level="102" type="Monster" name="Embryo Dark Judge">
 		<race>DEMONIC</race>
 		<sex>FEMALE</sex>
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
@@ -928,8 +901,7 @@
 			<skill id="16547" level="10" /> <!-- Danger Zone Attack Resistance -->
 		</skillList>
 	</npc>
-	<npc id="24037" level="102" type="Npc" name="Embryo Siege Tank">
-		<!-- AUTO GENERATED NPC TODO: FIX IT -->
+	<npc id="24037" level="102" type="Monster" name="Embryo Siege Tank">
 		<race>DEMONIC</race>
 		<sex>FEMALE</sex>
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
@@ -955,8 +927,7 @@
 			<skill id="4440" level="5" /> <!-- Greater Paralysis Resistance -->
 		</skillList>
 	</npc>
-	<npc id="24038" level="97" type="Npc" name="Embryo Spy">
-		<!-- AUTO GENERATED NPC TODO: FIX IT -->
+	<npc id="24038" level="97" type="Monster" name="Embryo Spy">
 		<race>HUMANOID</race>
 		<sex>FEMALE</sex>
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
@@ -982,8 +953,7 @@
 			<skill id="16547" level="10" /> <!-- Danger Zone Attack Resistance -->
 		</skillList>
 	</npc>
-	<npc id="24039" level="97" type="Npc" name="Embryo Aide">
-		<!-- AUTO GENERATED NPC TODO: FIX IT -->
+	<npc id="24039" level="97" type="Monster" name="Embryo Aide">
 		<race>HUMANOID</race>
 		<sex>FEMALE</sex>
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
@@ -1009,8 +979,7 @@
 			<skill id="16547" level="10" /> <!-- Danger Zone Attack Resistance -->
 		</skillList>
 	</npc>
-	<npc id="24040" level="97" type="Npc" name="Embryo Spy Soldier">
-		<!-- AUTO GENERATED NPC TODO: FIX IT -->
+	<npc id="24040" level="97" type="Monster" name="Embryo Spy Soldier">
 		<race>HUMAN</race>
 		<sex>FEMALE</sex>
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
@@ -1036,8 +1005,7 @@
 			<skill id="16547" level="10" /> <!-- Danger Zone Attack Resistance -->
 		</skillList>
 	</npc>
-	<npc id="24041" level="98" type="Npc" name="Embryo Special Agent">
-		<!-- AUTO GENERATED NPC TODO: FIX IT -->
+	<npc id="24041" level="98" type="Monster" name="Embryo Special Agent">
 		<race>HUMANOID</race>
 		<sex>FEMALE</sex>
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">

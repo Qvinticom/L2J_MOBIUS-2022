@@ -1,7 +1,6 @@
 ﻿<?xml version="1.0" encoding="UTF-8"?>
 <list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../xsd/npcs.xsd">
 	<npc id="25600" level="82" type="Monster" name="Temenir" title="Darion's Challenger">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="AttackRange" value="2" />
 			<param name="IsHealer" value="2" />
@@ -69,9 +68,20 @@
 			<radius normal="25" grown="32" />
 			<height normal="37.5" grown="46.8" />
 		</collision>
+		<dropLists>
+			<drop>
+				<item id="3936" min="1" max="1" chance="10" /> <!-- Blessed Scroll of Resurrection -->
+				<item id="6696" min="2" max="6" chance="7.5" /> <!-- Heaven's Divider Edge -->
+				<item id="6707" min="18" max="54" chance="3" /> <!-- Sealed Draconic Leather Armor Part -->
+				<item id="6688" min="14" max="42" chance="1.5" /> <!-- Forgotten Blade Edge -->
+				<item id="6578" min="1" max="1" chance="0.75187969924812" /> <!-- Blessed Scroll: Enchant Armor (S-grade) -->
+				<item id="6680" min="1" max="1" chance="0.75187969924812" /> <!-- Sealed Draconic Leather Armor -->
+				<item id="6364" min="1" max="1" chance="0.3003003003003" /> <!-- Forgotten Blade -->
+				<item id="6372" min="1" max="1" chance="0.3003003003003" /> <!-- Heaven's Divider -->
+			</drop>
+		</dropLists>
 	</npc>
 	<npc id="25601" level="82" type="Monster" name="Draksius" title="Darion's Challenger">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="IsHealer" value="2" />
 			<param name="Party_Type" value="2" />
@@ -140,9 +150,20 @@
 			<radius normal="13" />
 			<height normal="47.2" />
 		</collision>
+		<dropLists>
+			<drop>
+				<item id="6702" min="32" max="96" chance="30" /> <!-- Sealed Imperial Crusader Gaiter Pattern -->
+				<item id="6701" min="67" max="201" chance="30" /> <!-- Sealed Imperial Crusader Breastplate Part -->
+				<item id="6688" min="3" max="9" chance="20" /> <!-- Forgotten Blade Edge -->
+				<item id="6696" min="3" max="9" chance="20" /> <!-- Heaven's Divider Edge -->
+				<item id="6674" min="1" max="1" chance="1" /> <!-- Sealed Imperial Crusader Breastplate -->
+				<item id="6675" min="1" max="1" chance="1" /> <!-- Sealed Imperial Crusader Gaiters -->
+				<item id="6364" min="1" max="1" chance="0.3003003003003" /> <!-- Forgotten Blade -->
+				<item id="6372" min="1" max="1" chance="0.3003003003003" /> <!-- Heaven's Divider -->
+			</drop>
+		</dropLists>
 	</npc>
 	<npc id="25602" level="82" type="Monster" name="Kiretcenah" title="Darion's Challenger">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="AttackRange" value="2" />
 			<param name="IsHealer" value="2" />
@@ -212,9 +233,23 @@
 			<radius normal="30" />
 			<height normal="39" />
 		</collision>
+		<dropLists>
+			<drop>
+				<item id="6698" min="9" max="27" chance="15" /> <!-- Sealed Tateossian Earring Part -->
+				<item id="6699" min="28" max="84" chance="7.5" /> <!-- Sealed Tateossian Ring Gem -->
+				<item id="960" min="1" max="1" chance="5" /> <!-- Scroll: Enchant Armor (S-grade) -->
+				<item id="6700" min="20" max="60" chance="5" /> <!-- Sealed Tateossian Necklace Chain -->
+				<item id="6725" min="1" max="1" chance="3" /> <!-- Sealed Tateossian Ring -->
+				<item id="6694" min="4" max="12" chance="3" /> <!-- Saint Spear Blade -->
+				<item id="6724" min="1" max="1" chance="2" /> <!-- Sealed Tateossian Earring -->
+				<item id="6726" min="1" max="1" chance="1.5" /> <!-- Sealed Tateossian Necklace -->
+				<item id="959" min="1" max="1" chance="0.3003003003003" /> <!-- Scroll: Enchant Weapon (S-grade) -->
+				<item id="6370" min="1" max="1" chance="0.3003003003003" /> <!-- Saint Spear -->
+				<item id="6577" min="1" max="1" chance="0.0750187546886722" /> <!-- Blessed Scroll: Enchant Weapon (S-grade) -->
+			</drop>
+		</dropLists>
 	</npc>
 	<npc id="25603" level="99" type="RaidBoss" name="Darion">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="IsAggressive" value="1" />
 			<param name="Aggressive_Time" value="1" />
@@ -283,6 +318,14 @@
 			<radius normal="50" />
 			<height normal="81.2165" />
 		</collision>
+		<dropLists>
+			<drop>
+				<item id="6691" min="96" max="288" chance="50" /> <!-- Angel Slayer Blade -->
+				<item id="6707" min="105" max="315" chance="50" /> <!-- Sealed Draconic Leather Armor Part -->
+				<item id="6680" min="1" max="1" chance="2" /> <!-- Sealed Draconic Leather Armor -->
+				<item id="21919" min="1" max="1" chance="0.3003003003003" /> <!-- Hellblade -->
+			</drop>
+		</dropLists>
 	</npc>
 	<npc id="25604" level="50" type="Monster" name="Mutated Elpy" title="Naia's Creature">
 		<!-- Confirmed CT2.5 -->
@@ -550,7 +593,6 @@
 		</collision>
 	</npc>
 	<npc id="25609" level="82" type="RaidBoss" name="Epidos" title="Naia Shambler">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="IsAggressive" value="1" />
 			<param name="AttackRange" value="2" />
@@ -623,9 +665,20 @@
 			<radius normal="60" />
 			<height normal="99.5" />
 		</collision>
+		<dropLists>
+			<drop>
+				<item id="6578" min="1" max="1" chance="12.5" /> <!-- Blessed Scroll: Enchant Armor (S-grade) -->
+				<item id="6681" min="1" max="1" chance="3" /> <!-- Sealed Draconic Leather Gloves -->
+				<item id="6685" min="1" max="1" chance="3" /> <!-- Sealed Major Arcana Gloves -->
+				<item id="6676" min="1" max="1" chance="3" /> <!-- Sealed Imperial Crusader Gauntlets -->
+				<item id="6682" min="1" max="1" chance="3" /> <!-- Sealed Draconic Leather Boots -->
+				<item id="6677" min="1" max="1" chance="3" /> <!-- Sealed Imperial Crusader Boots -->
+				<item id="6686" min="1" max="1" chance="3" /> <!-- Sealed Major Arcana Boots -->
+				<item id="7575" min="1" max="1" chance="1.5" /> <!-- Draconic Bow -->
+			</drop>
+		</dropLists>
 	</npc>
 	<npc id="25610" level="82" type="RaidBoss" name="Epidos" title="Naia Shambler">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="IsAggressive" value="1" />
 			<param name="AttackRange" value="2" />
@@ -698,9 +751,21 @@
 			<radius normal="60" />
 			<height normal="99.5" />
 		</collision>
+		<dropLists>
+			<drop>
+				<item id="6687" min="1" max="1" chance="6" /> <!-- Sealed Major Arcana Circlet -->
+				<item id="6683" min="1" max="1" chance="6" /> <!-- Sealed Draconic Leather Helmet -->
+				<item id="6679" min="1" max="1" chance="6" /> <!-- Sealed Imperial Crusader Helmet -->
+				<item id="959" min="1" max="1" chance="5" /> <!-- Scroll: Enchant Weapon (S-grade) -->
+				<item id="6365" min="1" max="1" chance="1.5" /> <!-- Basalt Battlehammer -->
+				<item id="6366" min="1" max="1" chance="1.5" /> <!-- Imperial Staff -->
+				<item id="6579" min="1" max="1" chance="1.5" /> <!-- Arcana Mace -->
+				<item id="6369" min="1" max="1" chance="1.5" /> <!-- Dragon Hunter Axe -->
+				<item id="6577" min="1" max="1" chance="0.75187969924812" /> <!-- Blessed Scroll: Enchant Weapon (S-grade) -->
+			</drop>
+		</dropLists>
 	</npc>
 	<npc id="25611" level="82" type="RaidBoss" name="Epidos" title="Naia Shambler">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="IsAggressive" value="1" />
 			<param name="AttackRange" value="2" />
@@ -773,9 +838,17 @@
 			<radius normal="60" />
 			<height normal="99.5" />
 		</collision>
+		<dropLists>
+			<drop>
+				<item id="6680" min="1" max="1" chance="6" /> <!-- Sealed Draconic Leather Armor -->
+				<item id="6365" min="1" max="1" chance="2" /> <!-- Basalt Battlehammer -->
+				<item id="6366" min="1" max="1" chance="2" /> <!-- Imperial Staff -->
+				<item id="6579" min="1" max="1" chance="2" /> <!-- Arcana Mace -->
+				<item id="6369" min="1" max="1" chance="2" /> <!-- Dragon Hunter Axe -->
+			</drop>
+		</dropLists>
 	</npc>
 	<npc id="25612" level="82" type="RaidBoss" name="Epidos" title="Naia Shambler">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="IsAggressive" value="1" />
 			<param name="AttackRange" value="2" />
@@ -848,6 +921,14 @@
 			<radius normal="60" />
 			<height normal="99.5" />
 		</collision>
+		<dropLists>
+			<drop>
+				<item id="6684" min="1" max="1" chance="12.5" /> <!-- Sealed Major Arcana Robe -->
+				<item id="7575" min="1" max="1" chance="5" /> <!-- Draconic Bow -->
+				<item id="959" min="1" max="1" chance="5" /> <!-- Scroll: Enchant Weapon (S-grade) -->
+				<item id="6577" min="1" max="1" chance="0.75187969924812" /> <!-- Blessed Scroll: Enchant Weapon (S-grade) -->
+			</drop>
+		</dropLists>
 	</npc>
 	<npc id="25613" level="83" type="Monster" name="Naia Spore">
 		<!-- Confirmed CT2.5 -->
@@ -975,7 +1056,6 @@
 		</collision>
 	</npc>
 	<npc id="25616" level="29" type="RaidBoss" name="Lost Warden">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<skill name="PhysicalSpecial_a" id="4723" level="2" />
 			<skill name="SelfRangePhysicalSpecial_a" id="4738" level="2" />
@@ -1023,7 +1103,6 @@
 		</collision>
 	</npc>
 	<npc id="25617" level="39" type="RaidBoss" name="Lost Warden">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<skill name="PhysicalSpecial_a" id="4723" level="3" />
 			<skill name="SelfRangePhysicalSpecial_a" id="4738" level="3" />
@@ -1071,7 +1150,6 @@
 		</collision>
 	</npc>
 	<npc id="25618" level="49" type="RaidBoss" name="Lost Warden">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<skill name="PhysicalSpecial_a" id="4723" level="4" />
 			<skill name="SelfRangePhysicalSpecial_a" id="4738" level="4" />
@@ -1118,7 +1196,6 @@
 		</collision>
 	</npc>
 	<npc id="25619" level="59" type="RaidBoss" name="Lost Warden">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<skill name="PhysicalSpecial_a" id="4723" level="5" />
 			<skill name="SelfRangePhysicalSpecial_a" id="4738" level="5" />
@@ -1166,7 +1243,6 @@
 		</collision>
 	</npc>
 	<npc id="25620" level="69" type="RaidBoss" name="Lost Warden">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<skill name="PhysicalSpecial_a" id="4723" level="6" />
 			<skill name="SelfRangePhysicalSpecial_a" id="4738" level="6" />
@@ -1213,7 +1289,6 @@
 		</collision>
 	</npc>
 	<npc id="25621" level="78" type="RaidBoss" name="Lost Warden">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<skill name="PhysicalSpecial_a" id="4723" level="7" />
 			<skill name="SelfRangePhysicalSpecial_a" id="4738" level="7" />
@@ -1266,7 +1341,6 @@
 		</collision>
 	</npc>
 	<npc id="25622" level="81" type="RaidBoss" name="Lost Warden">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<skill name="PhysicalSpecial_a" id="4723" level="8" />
 			<skill name="SelfRangePhysicalSpecial_a" id="4738" level="8" />
@@ -1319,7 +1393,6 @@
 		</collision>
 	</npc>
 	<npc id="25623" level="80" type="RaidBoss" name="Valdstone" title="Master Rider">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="Skill01_AttackSplash" value="1" />
 			<param name="Skill03_Target" value="3" />
@@ -1399,7 +1472,6 @@
 		</collision>
 	</npc>
 	<npc id="25624" level="83" type="RaidBoss" name="Rok" title="King of Birds">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="Skill01_AttackSplash" value="1" />
 			<param name="Skill03_AttackSplash" value="1" />
@@ -1466,7 +1538,6 @@
 		</collision>
 	</npc>
 	<npc id="25625" level="85" type="RaidBoss" name="Enira" title="Banshee Queen">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="Skill01_Target" value="3" />
 			<param name="Skill01_AttackSplash" value="1" />
@@ -1551,7 +1622,6 @@
 		</collision>
 	</npc>
 	<npc id="25626" level="85" type="RaidBoss" name="Dius" title="Deadman of Destruction">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="Skill01_AttackSplash" value="1" />
 			<param name="Skill02_AttackSplash" value="1" />
@@ -1724,7 +1794,6 @@
 		</collision>
 	</npc>
 	<npc id="25629" level="78" type="Monster" name="Floating Skeleton" title="Enira's Evil Spirit">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<skill name="Skill01_ID" id="5803" level="1" />
 			<skill name="Skill02_ID" id="5804" level="1" />
@@ -1774,7 +1843,6 @@
 		</collision>
 	</npc>
 	<npc id="25630" level="77" type="Monster" name="Floating Zombie" title="Enira's Evil Spirit">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="Skill02_Target" value="3" />
 			<skill name="Skill01_ID" id="5813" level="1" />
@@ -1981,7 +2049,6 @@
 		</collision>
 	</npc>
 	<npc id="25634" level="81" type="Monster" name="Cohemenes" title="Soul Collector">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="raise" value="5" />
 			<skill name="Skill01_ID" id="5898" level="2" />
@@ -2036,6 +2103,24 @@
 			<radius normal="31.68" />
 			<height normal="60.72" />
 		</collision>
+		<dropLists>
+			<drop>
+				<item id="9992" min="2" max="6" chance="10" /> <!-- Sealed Dynasty Necklace Gemstone -->
+				<item id="960" min="1" max="1" chance="10" /> <!-- Scroll: Enchant Armor (S-grade) -->
+				<item id="9993" min="5" max="15" chance="7.5" /> <!-- Sealed Dynasty Ring Gemstone -->
+				<item id="9991" min="9" max="27" chance="5" /> <!-- Sealed Dynasty Earring Gemstone -->
+				<item id="9454" min="1" max="1" chance="2.5" /> <!-- Sealed Dynasty Ring -->
+				<item id="959" min="1" max="1" chance="2" /> <!-- Scroll: Enchant Weapon (S-grade) -->
+				<item id="9617" min="4" max="12" chance="2" /> <!-- Dynasty Blade Piece -->
+				<item id="9616" min="3" max="9" chance="2" /> <!-- Dynasty Sword Piece -->
+				<item id="9618" min="4" max="12" chance="2" /> <!-- Dynasty Phantom Piece -->
+				<item id="9452" min="1" max="1" chance="1.5" /> <!-- Sealed Dynasty Earring -->
+				<item id="9453" min="1" max="1" chance="1" /> <!-- Sealed Dynasty Necklace -->
+				<item id="9443" min="1" max="1" chance="0.149925037481259" /> <!-- Dynasty Blade -->
+				<item id="9442" min="1" max="1" chance="0.149925037481259" /> <!-- Dynasty Sword -->
+				<item id="9444" min="1" max="1" chance="0.149925037481259" /> <!-- Dynasty Phantom -->
+			</drop>
+		</dropLists>
 	</npc>
 	<npc id="25635" level="81" type="Monster" name="Argekunte" title="Vacuous Soul">
 		<!-- Confirmed CT2.5 -->
@@ -2096,7 +2181,6 @@
 		</collision>
 	</npc>
 	<npc id="25636" level="81" type="Monster" name="Ravenous Soul Devourer">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="tide" value="3" />
 			<param name="type" value="spc_wagon_boss" />
@@ -2145,13 +2229,13 @@
 		</ai>
 		<dropLists>
 			<drop>
-				<item id="14110" min="1" max="1" chance="1.13899999999997" /> <!-- Sealed Vesper Boots -->
-				<item id="14113" min="1" max="1" chance="1.12000000000002" /> <!-- Sealed Vesper Leather Gloves -->
-				<item id="14109" min="1" max="1" chance="1.11099999999999" /> <!-- Sealed Vesper Gauntlets -->
-				<item id="14114" min="1" max="1" chance="1.101" /> <!-- Sealed Vesper Leather Boots -->
-				<item id="14117" min="1" max="1" chance="1.09999999999998" /> <!-- Sealed Vesper Shoes -->
-				<item id="14116" min="1" max="1" chance="1.07099999999997" /> <!-- Sealed Vesper Gloves -->
-				<item id="14052" min="60" max="180" chance="11.42" /> <!-- Vesper Noble Enhancement Stone -->
+				<item id="14052" min="60" max="180" chance="10" /> <!-- Vesper Noble Enhancement Stone -->
+				<item id="14117" min="1" max="1" chance="1.5" /> <!-- Sealed Vesper Shoes -->
+				<item id="14113" min="1" max="1" chance="1.5" /> <!-- Sealed Vesper Leather Gloves -->
+				<item id="14114" min="1" max="1" chance="1.5" /> <!-- Sealed Vesper Leather Boots -->
+				<item id="14116" min="1" max="1" chance="1.5" /> <!-- Sealed Vesper Gloves -->
+				<item id="14109" min="1" max="1" chance="1.5" /> <!-- Sealed Vesper Gauntlets -->
+				<item id="14110" min="1" max="1" chance="1.5" /> <!-- Sealed Vesper Boots -->
 			</drop>
 			<lucky>
 				<item id="39629" min="1" max="1" chance="91.03" /> <!-- Fortune Pocket - Stage 1 -->
@@ -2163,7 +2247,6 @@
 		</collision>
 	</npc>
 	<npc id="25637" level="81" type="Monster" name="Karpencharr" title="Prophet of Lies">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="raise" value="5" />
 			<skill name="Skill01_ID" id="5898" level="2" />
@@ -2214,15 +2297,15 @@
 		</ai>
 		<dropLists>
 			<drop>
-				<item id="6367" min="1" max="1" chance="0.299999999999997" /> <!-- Angel Slayer -->
-				<item id="6691" min="3" max="9" chance="8.18300000000002" /> <!-- Angel Slayer Blade -->
-				<item id="6675" min="1" max="1" chance="1.55900000000001" /> <!-- Sealed Imperial Crusader Gaiters -->
-				<item id="6674" min="1" max="1" chance="0.75" /> <!-- Sealed Imperial Crusader Breastplate -->
-				<item id="6702" min="28" max="84" chance="4.75299999999999" /> <!-- Sealed Imperial Crusader Gaiter Pattern -->
-				<item id="6701" min="60" max="180" chance="1.38500000000001" /> <!-- Sealed Imperial Crusader Breastplate Part -->
-				<item id="960" min="1" max="1" chance="7.12799999999999" /> <!-- Scroll: Enchant Armor (S-grade) -->
-				<item id="959" min="1" max="1" chance="0.750000000000002" /> <!-- Scroll: Enchant Weapon (S-grade) -->
-				<item id="6577" min="1" max="1" chance="0.299999999999999" /> <!-- Blessed Scroll: Enchant Weapon (S-grade) -->
+				<item id="6691" min="3" max="9" chance="8" /> <!-- Angel Slayer Blade -->
+				<item id="960" min="1" max="1" chance="7.5" /> <!-- Scroll: Enchant Armor (S-grade) -->
+				<item id="6702" min="28" max="84" chance="5" /> <!-- Sealed Imperial Crusader Gaiter Pattern -->
+				<item id="959" min="1" max="1" chance="2.5" /> <!-- Scroll: Enchant Weapon (S-grade) -->
+				<item id="6674" min="1" max="1" chance="1.5" /> <!-- Sealed Imperial Crusader Breastplate -->
+				<item id="6675" min="1" max="1" chance="1.5" /> <!-- Sealed Imperial Crusader Gaiters -->
+				<item id="6701" min="60" max="180" chance="1.5" /> <!-- Sealed Imperial Crusader Breastplate Part -->
+				<item id="6577" min="1" max="1" chance="0.75187969924812" /> <!-- Blessed Scroll: Enchant Weapon (S-grade) -->
+				<item id="6367" min="1" max="1" chance="0.75187969924812" /> <!-- Angel Slayer -->
 			</drop>
 			<lucky>
 				<item id="39629" min="1" max="1" chance="89.81" /> <!-- Fortune Pocket - Stage 1 -->
@@ -2234,7 +2317,6 @@
 		</collision>
 	</npc>
 	<npc id="25638" level="81" type="Monster" name="Romerohiv" title="Betrayer of Oblivion">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="raise" value="5" />
 			<skill name="Skill01_ID" id="5896" level="2" />
@@ -2285,19 +2367,19 @@
 		</ai>
 		<dropLists>
 			<drop>
-				<item id="6678" min="1" max="1" chance="2.217" /> <!-- Sealed Imperial Crusader Shield -->
-				<item id="6371" min="1" max="1" chance="0.299999999999999" /> <!-- Demon Splinter -->
-				<item id="6695" min="1" max="1" chance="28.8100000000001" /> <!-- Demon Splinter Blade -->
-				<item id="6683" min="1" max="1" chance="1.61999999999999" /> <!-- Sealed Draconic Leather Helmet -->
-				<item id="6679" min="1" max="1" chance="1.54999999999997" /> <!-- Sealed Imperial Crusader Helmet -->
-				<item id="6687" min="1" max="1" chance="1.52000000000003" /> <!-- Sealed Major Arcana Circlet -->
-				<item id="6705" min="6" max="18" chance="32.5999999999998" /> <!-- Sealed Imperial Crusader Shield Part -->
-				<item id="6706" min="10" max="30" chance="12.97" /> <!-- Sealed Imperial Crusader Helmet Pattern -->
-				<item id="6710" min="16" max="48" chance="8.24900000000028" /> <!-- Sealed Draconic Leather Helmet Pattern -->
-				<item id="6714" min="22" max="66" chance="5.86" /> <!-- Sealed Major Arcana Circlet Pattern -->
-				<item id="960" min="1" max="1" chance="7.12499999999998" /> <!-- Scroll: Enchant Armor (S-grade) -->
-				<item id="959" min="1" max="1" chance="0.75" /> <!-- Scroll: Enchant Weapon (S-grade) -->
-				<item id="6577" min="1" max="1" chance="0.3" /> <!-- Blessed Scroll: Enchant Weapon (S-grade) -->
+				<item id="6695" min="1" max="3" chance="30" /> <!-- Demon Splinter Blade -->
+				<item id="6705" min="6" max="18" chance="30" /> <!-- Sealed Imperial Crusader Shield Part -->
+				<item id="6706" min="10" max="30" chance="12.5" /> <!-- Sealed Imperial Crusader Helmet Pattern -->
+				<item id="6710" min="16" max="48" chance="10" /> <!-- Sealed Draconic Leather Helmet Pattern -->
+				<item id="6714" min="22" max="66" chance="7.5" /> <!-- Sealed Major Arcana Circlet Pattern -->
+				<item id="960" min="1" max="1" chance="7.5" /> <!-- Scroll: Enchant Armor (S-grade) -->
+				<item id="959" min="1" max="1" chance="2.5" /> <!-- Scroll: Enchant Weapon (S-grade) -->
+				<item id="6687" min="1" max="1" chance="2" /> <!-- Sealed Major Arcana Circlet -->
+				<item id="6683" min="1" max="1" chance="2" /> <!-- Sealed Draconic Leather Helmet -->
+				<item id="6679" min="1" max="1" chance="2" /> <!-- Sealed Imperial Crusader Helmet -->
+				<item id="6678" min="1" max="1" chance="2" /> <!-- Sealed Imperial Crusader Shield -->
+				<item id="6577" min="1" max="1" chance="0.75187969924812" /> <!-- Blessed Scroll: Enchant Weapon (S-grade) -->
+				<item id="6371" min="1" max="1" chance="0.75187969924812" /> <!-- Demon Splinter -->
 			</drop>
 			<lucky>
 				<item id="39629" min="1" max="1" chance="86.43" /> <!-- Fortune Pocket - Stage 1 -->
@@ -2309,7 +2391,6 @@
 		</collision>
 	</npc>
 	<npc id="25639" level="81" type="Monster" name="Hitchkarshiek" title="Wise Retainer of Suffering">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="raise" value="5" />
 			<skill name="Skill01_ID" id="5881" level="2" />
@@ -2362,17 +2443,17 @@
 		</ai>
 		<dropLists>
 			<drop>
-				<item id="6364" min="1" max="1" chance="0.299999999999996" /> <!-- Forgotten Blade -->
-				<item id="6372" min="1" max="1" chance="0.299999999999996" /> <!-- Heaven's Divider -->
-				<item id="6688" min="3" max="9" chance="6.18100000000003" /> <!-- Forgotten Blade Edge -->
-				<item id="6696" min="3" max="9" chance="5.28099999999998" /> <!-- Heaven's Divider Edge -->
-				<item id="6675" min="1" max="1" chance="1.11099999999998" /> <!-- Sealed Imperial Crusader Gaiters -->
-				<item id="6674" min="1" max="1" chance="0.749999999999979" /> <!-- Sealed Imperial Crusader Breastplate -->
-				<item id="6702" min="32" max="96" chance="3.09400000000001" /> <!-- Sealed Imperial Crusader Gaiter Pattern -->
-				<item id="6701" min="67" max="201" chance="0.749999999999979" /> <!-- Sealed Imperial Crusader Breastplate Part -->
-				<item id="960" min="1" max="1" chance="7.12300000000002" /> <!-- Scroll: Enchant Armor (S-grade) -->
-				<item id="959" min="1" max="1" chance="0.750000000000002" /> <!-- Scroll: Enchant Weapon (S-grade) -->
-				<item id="6577" min="1" max="1" chance="0.300000000000003" /> <!-- Blessed Scroll: Enchant Weapon (S-grade) -->
+				<item id="6688" min="3" max="9" chance="7.5" /> <!-- Forgotten Blade Edge -->
+				<item id="6696" min="3" max="9" chance="7.5" /> <!-- Heaven's Divider Edge -->
+				<item id="960" min="1" max="1" chance="7.5" /> <!-- Scroll: Enchant Armor (S-grade) -->
+				<item id="6702" min="32" max="96" chance="3" /> <!-- Sealed Imperial Crusader Gaiter Pattern -->
+				<item id="959" min="1" max="1" chance="2.5" /> <!-- Scroll: Enchant Weapon (S-grade) -->
+				<item id="6674" min="1" max="1" chance="1.5" /> <!-- Sealed Imperial Crusader Breastplate -->
+				<item id="6675" min="1" max="1" chance="1.5" /> <!-- Sealed Imperial Crusader Gaiters -->
+				<item id="6701" min="67" max="201" chance="1.5" /> <!-- Sealed Imperial Crusader Breastplate Part -->
+				<item id="6577" min="1" max="1" chance="0.75187969924812" /> <!-- Blessed Scroll: Enchant Weapon (S-grade) -->
+				<item id="6364" min="1" max="1" chance="0.75187969924812" /> <!-- Forgotten Blade -->
+				<item id="6372" min="1" max="1" chance="0.75187969924812" /> <!-- Heaven's Divider -->
 			</drop>
 			<lucky>
 				<item id="39629" min="1" max="1" chance="86.45" /> <!-- Fortune Pocket - Stage 1 -->
@@ -2384,7 +2465,6 @@
 		</collision>
 	</npc>
 	<npc id="25640" level="81" type="Monster" name="Freedkyilla" title="Hand of Night">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="raise" value="5" />
 			<skill name="Skill01_ID" id="5880" level="2" />
@@ -2435,13 +2515,13 @@
 		</ai>
 		<dropLists>
 			<drop>
-				<item id="7575" min="1" max="1" chance="0.300000000000001" /> <!-- Draconic Bow -->
-				<item id="7579" min="12" max="36" chance="3.05299999999999" /> <!-- Draconic Bow Shaft -->
-				<item id="6680" min="1" max="1" chance="1.19400000000001" /> <!-- Sealed Draconic Leather Armor -->
-				<item id="6707" min="15" max="45" chance="6.72899999999999" /> <!-- Sealed Draconic Leather Armor Part -->
-				<item id="960" min="1" max="1" chance="7.03400000000003" /> <!-- Scroll: Enchant Armor (S-grade) -->
-				<item id="959" min="1" max="1" chance="0.750000000000004" /> <!-- Scroll: Enchant Weapon (S-grade) -->
-				<item id="6577" min="1" max="1" chance="0.3" /> <!-- Blessed Scroll: Enchant Weapon (S-grade) -->
+				<item id="960" min="1" max="1" chance="7.5" /> <!-- Scroll: Enchant Armor (S-grade) -->
+				<item id="6707" min="15" max="45" chance="7.5" /> <!-- Sealed Draconic Leather Armor Part -->
+				<item id="7579" min="12" max="36" chance="3" /> <!-- Draconic Bow Shaft -->
+				<item id="959" min="1" max="1" chance="2.5" /> <!-- Scroll: Enchant Weapon (S-grade) -->
+				<item id="6680" min="1" max="1" chance="1.5" /> <!-- Sealed Draconic Leather Armor -->
+				<item id="6577" min="1" max="1" chance="0.75187969924812" /> <!-- Blessed Scroll: Enchant Weapon (S-grade) -->
+				<item id="7575" min="1" max="1" chance="0.75187969924812" /> <!-- Draconic Bow -->
 			</drop>
 			<lucky>
 				<item id="39629" min="1" max="1" chance="86.08" /> <!-- Fortune Pocket - Stage 1 -->
@@ -2453,7 +2533,6 @@
 		</collision>
 	</npc>
 	<npc id="25641" level="81" type="Monster" name="Yehan Cravenizad" title="Bloodsucker">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="raise" value="5" />
 			<skill name="Skill01_ID" id="5884" level="2" />
@@ -2507,18 +2586,18 @@
 		</ai>
 		<dropLists>
 			<drop>
-				<item id="6365" min="1" max="1" chance="0.300000000000001" /> <!-- Basalt Battlehammer -->
-				<item id="6366" min="1" max="1" chance="0.300000000000001" /> <!-- Imperial Staff -->
-				<item id="6369" min="1" max="1" chance="0.300000000000001" /> <!-- Dragon Hunter Axe -->
-				<item id="6579" min="1" max="1" chance="0.300000000000001" /> <!-- Arcana Mace -->
-				<item id="6690" min="2" max="6" chance="5.95299999999994" /> <!-- Imperial Staff Head -->
-				<item id="6693" min="3" max="9" chance="4.89299999999997" /> <!-- Dragon Hunter Axe Blade -->
-				<item id="6697" min="3" max="9" chance="4.24300000000007" /> <!-- Arcana Mace Head -->
-				<item id="6689" min="18" max="54" chance="0.750000000000003" /> <!-- Basalt Battlehammer Head -->
-				<item id="6684" min="1" max="1" chance="0.299999999999999" /> <!-- Sealed Major Arcana Robe -->
-				<item id="6711" min="24" max="72" chance="1.712" /> <!-- Sealed Major Arcana Robe Part -->
-				<item id="3936" min="1" max="1" chance="13.06" /> <!-- Blessed Scroll of Resurrection -->
-				<item id="6578" min="1" max="1" chance="1.112" /> <!-- Blessed Scroll: Enchant Armor (S-grade) -->
+				<item id="3936" min="1" max="1" chance="15" /> <!-- Blessed Scroll of Resurrection -->
+				<item id="6690" min="2" max="6" chance="7.5" /> <!-- Imperial Staff Head -->
+				<item id="6693" min="3" max="9" chance="5" /> <!-- Dragon Hunter Axe Blade -->
+				<item id="6697" min="3" max="9" chance="5" /> <!-- Arcana Mace Head -->
+				<item id="6578" min="1" max="1" chance="1.5" /> <!-- Blessed Scroll: Enchant Armor (S-grade) -->
+				<item id="6689" min="18" max="54" chance="1.5" /> <!-- Basalt Battlehammer Head -->
+				<item id="6711" min="24" max="72" chance="1.5" /> <!-- Sealed Major Arcana Robe Part -->
+				<item id="6365" min="1" max="1" chance="0.75187969924812" /> <!-- Basalt Battlehammer -->
+				<item id="6684" min="1" max="1" chance="0.75187969924812" /> <!-- Sealed Major Arcana Robe -->
+				<item id="6366" min="1" max="1" chance="0.75187969924812" /> <!-- Imperial Staff -->
+				<item id="6579" min="1" max="1" chance="0.75187969924812" /> <!-- Arcana Mace -->
+				<item id="6369" min="1" max="1" chance="0.75187969924812" /> <!-- Dragon Hunter Axe -->
 			</drop>
 			<lucky>
 				<item id="39629" min="1" max="1" chance="92.285" /> <!-- Fortune Pocket - Stage 1 -->
@@ -2530,7 +2609,6 @@
 		</collision>
 	</npc>
 	<npc id="25642" level="81" type="Monster" name="Yehan Jaxsibhan" title="Dark Guardian">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="raise" value="5" />
 			<skill name="Skill01_ID" id="5855" level="2" />
@@ -2584,14 +2662,14 @@
 		</ai>
 		<dropLists>
 			<drop>
-				<item id="6364" min="1" max="1" chance="0.3" /> <!-- Forgotten Blade -->
-				<item id="6372" min="1" max="1" chance="0.3" /> <!-- Heaven's Divider -->
-				<item id="6696" min="2" max="6" chance="9.859" /> <!-- Heaven's Divider Edge -->
-				<item id="6688" min="14" max="42" chance="1.777" /> <!-- Forgotten Blade Edge -->
-				<item id="6684" min="1" max="1" chance="0.750000000000009" /> <!-- Sealed Major Arcana Robe -->
-				<item id="6711" min="18" max="54" chance="3.73899999999999" /> <!-- Sealed Major Arcana Robe Part -->
-				<item id="3936" min="1" max="1" chance="12.9500000000001" /> <!-- Blessed Scroll of Resurrection -->
-				<item id="6578" min="1" max="1" chance="1.192" /> <!-- Blessed Scroll: Enchant Armor (S-grade) -->
+				<item id="3936" min="1" max="1" chance="15" /> <!-- Blessed Scroll of Resurrection -->
+				<item id="6696" min="2" max="6" chance="10" /> <!-- Heaven's Divider Edge -->
+				<item id="6711" min="18" max="54" chance="4" /> <!-- Sealed Major Arcana Robe Part -->
+				<item id="6688" min="14" max="42" chance="2" /> <!-- Forgotten Blade Edge -->
+				<item id="6578" min="1" max="1" chance="1.5" /> <!-- Blessed Scroll: Enchant Armor (S-grade) -->
+				<item id="6684" min="1" max="1" chance="1.5" /> <!-- Sealed Major Arcana Robe -->
+				<item id="6364" min="1" max="1" chance="0.75187969924812" /> <!-- Forgotten Blade -->
+				<item id="6372" min="1" max="1" chance="0.75187969924812" /> <!-- Heaven's Divider -->
 			</drop>
 			<lucky>
 				<item id="39629" min="1" max="1" chance="90.005" /> <!-- Fortune Pocket - Stage 1 -->
@@ -2603,7 +2681,6 @@
 		</collision>
 	</npc>
 	<npc id="25643" level="81" type="RaidBoss" name="Awakened Ancient Sentry" title="Raid Boss">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<skill name="Skill01_ID" id="5878" level="1" />
 			<skill name="Skill02_ID" id="5879" level="1" />
@@ -2658,9 +2735,19 @@
 			<radius normal="18" />
 			<height normal="27.5" />
 		</collision>
+		<dropLists>
+			<drop>
+				<item id="960" min="1" max="1" chance="7.5" /> <!-- Scroll: Enchant Armor (S-grade) -->
+				<item id="6707" min="15" max="45" chance="6.7" /> <!-- Sealed Draconic Leather Armor Part -->
+				<item id="6691" min="12" max="36" chance="3.3" /> <!-- Angel Slayer Blade -->
+				<item id="959" min="1" max="1" chance="2.5" /> <!-- Scroll: Enchant Weapon (S-grade) -->
+				<item id="6680" min="1" max="1" chance="1.5" /> <!-- Sealed Draconic Leather Armor -->
+				<item id="6577" min="1" max="1" chance="0.75187969924812" /> <!-- Blessed Scroll: Enchant Weapon (S-grade) -->
+				<item id="6367" min="1" max="1" chance="0.75187969924812" /> <!-- Angel Slayer -->
+			</drop>
+		</dropLists>
 	</npc>
 	<npc id="25644" level="81" type="RaidBoss" name="Awakened Ancient Severer" title="Raid Boss">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<skill name="Skill01_ID" id="5884" level="2" />
 			<skill name="Skill02_ID" id="5898" level="2" />
@@ -2714,9 +2801,24 @@
 			<radius normal="51.6" />
 			<height normal="57" />
 		</collision>
+		<dropLists>
+			<drop>
+				<item id="3936" min="1" max="1" chance="15" /> <!-- Blessed Scroll of Resurrection -->
+				<item id="6681" min="1" max="1" chance="2.5" /> <!-- Sealed Draconic Leather Gloves -->
+				<item id="6685" min="1" max="1" chance="2.5" /> <!-- Sealed Major Arcana Gloves -->
+				<item id="6676" min="1" max="1" chance="2.5" /> <!-- Sealed Imperial Crusader Gauntlets -->
+				<item id="6682" min="1" max="1" chance="2.5" /> <!-- Sealed Draconic Leather Boots -->
+				<item id="6677" min="1" max="1" chance="2.5" /> <!-- Sealed Imperial Crusader Boots -->
+				<item id="6686" min="1" max="1" chance="2.5" /> <!-- Sealed Major Arcana Boots -->
+				<item id="6578" min="1" max="1" chance="1.5" /> <!-- Blessed Scroll: Enchant Armor (S-grade) -->
+				<item id="6365" min="1" max="1" chance="0.75187969924812" /> <!-- Basalt Battlehammer -->
+				<item id="6366" min="1" max="1" chance="0.75187969924812" /> <!-- Imperial Staff -->
+				<item id="6579" min="1" max="1" chance="0.75187969924812" /> <!-- Arcana Mace -->
+				<item id="6369" min="1" max="1" chance="0.75187969924812" /> <!-- Dragon Hunter Axe -->
+			</drop>
+		</dropLists>
 	</npc>
 	<npc id="25645" level="81" type="RaidBoss" name="Awakened Ancient Soul Extractor" title="Raid Boss">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<skill name="Skill01_ID" id="5892" level="2" />
 			<skill name="Skill02_ID" id="5905" level="1" />
@@ -2771,9 +2873,20 @@
 			<radius normal="27.6" />
 			<height normal="37.2" />
 		</collision>
+		<dropLists>
+			<drop>
+				<item id="3936" min="1" max="1" chance="15" /> <!-- Blessed Scroll of Resurrection -->
+				<item id="6696" min="2" max="6" chance="10" /> <!-- Heaven's Divider Edge -->
+				<item id="6711" min="18" max="54" chance="4" /> <!-- Sealed Major Arcana Robe Part -->
+				<item id="6688" min="14" max="42" chance="2" /> <!-- Forgotten Blade Edge -->
+				<item id="6578" min="1" max="1" chance="1.5" /> <!-- Blessed Scroll: Enchant Armor (S-grade) -->
+				<item id="6684" min="1" max="1" chance="1.5" /> <!-- Sealed Major Arcana Robe -->
+				<item id="6364" min="1" max="1" chance="0.75187969924812" /> <!-- Forgotten Blade -->
+				<item id="6372" min="1" max="1" chance="0.75187969924812" /> <!-- Heaven's Divider -->
+			</drop>
+		</dropLists>
 	</npc>
 	<npc id="25646" level="81" type="RaidBoss" name="Awakened Ancient Soul Devourer" title="Raid Boss">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<skill name="Skill01_ID" id="5888" level="2" />
 			<skill name="Skill02_ID" id="5899" level="2" />
@@ -2827,9 +2940,19 @@
 			<radius normal="70" />
 			<height normal="44.2" />
 		</collision>
+		<dropLists>
+			<drop>
+				<item id="960" min="1" max="1" chance="7.5" /> <!-- Scroll: Enchant Armor (S-grade) -->
+				<item id="6711" min="15" max="45" chance="6.7" /> <!-- Sealed Major Arcana Robe Part -->
+				<item id="6691" min="12" max="36" chance="3.3" /> <!-- Angel Slayer Blade -->
+				<item id="959" min="1" max="1" chance="2.5" /> <!-- Scroll: Enchant Weapon (S-grade) -->
+				<item id="6684" min="1" max="1" chance="1.5" /> <!-- Sealed Major Arcana Robe -->
+				<item id="6577" min="1" max="1" chance="0.75187969924812" /> <!-- Blessed Scroll: Enchant Weapon (S-grade) -->
+				<item id="6367" min="1" max="1" chance="0.75187969924812" /> <!-- Angel Slayer -->
+			</drop>
+		</dropLists>
 	</npc>
 	<npc id="25647" level="81" type="RaidBoss" name="Awakened Ancient Fighter" title="Raid Boss">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<skill name="Skill01_ID" id="5884" level="2" />
 			<skill name="Skill02_ID" id="5891" level="1" />
@@ -2887,9 +3010,18 @@
 			<radius normal="34.32" />
 			<height normal="62.4" />
 		</collision>
+		<dropLists>
+			<drop>
+				<item id="6725" min="1" max="1" chance="9" /> <!-- Sealed Tateossian Ring -->
+				<item id="6724" min="1" max="1" chance="6" /> <!-- Sealed Tateossian Earring -->
+				<item id="6726" min="1" max="1" chance="4" /> <!-- Sealed Tateossian Necklace -->
+				<item id="959" min="1" max="1" chance="1.5" /> <!-- Scroll: Enchant Weapon (S-grade) -->
+				<item id="6577" min="1" max="1" chance="0.75187969924812" /> <!-- Blessed Scroll: Enchant Weapon (S-grade) -->
+				<item id="6371" min="1" max="1" chance="0.75187969924812" /> <!-- Demon Splinter -->
+			</drop>
+		</dropLists>
 	</npc>
 	<npc id="25648" level="81" type="RaidBoss" name="Awakened Ancient Fighter" title="Raid Boss">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<skill name="Skill01_ID" id="5855" level="1" />
 			<skill name="Skill02_ID" id="5891" level="1" />
@@ -2948,9 +3080,18 @@
 			<radius normal="34.32" />
 			<height normal="62.4" />
 		</collision>
+		<dropLists>
+			<drop>
+				<item id="3936" min="1" max="1" chance="15" /> <!-- Blessed Scroll of Resurrection -->
+				<item id="6707" min="15" max="45" chance="6.7" /> <!-- Sealed Draconic Leather Armor Part -->
+				<item id="6695" min="12" max="36" chance="3.3" /> <!-- Demon Splinter Blade -->
+				<item id="6578" min="1" max="1" chance="1.5" /> <!-- Blessed Scroll: Enchant Armor (S-grade) -->
+				<item id="6680" min="1" max="1" chance="1.5" /> <!-- Sealed Draconic Leather Armor -->
+				<item id="6371" min="1" max="1" chance="0.75187969924812" /> <!-- Demon Splinter -->
+			</drop>
+		</dropLists>
 	</npc>
 	<npc id="25649" level="81" type="RaidBoss" name="Awakened Ancient Executor" title="Raid Boss">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<skill name="Skill01_ID" id="5880" level="2" />
 			<skill name="Skill02_ID" id="5894" level="1" />
@@ -3004,18 +3145,18 @@
 		</ai>
 		<dropLists>
 			<drop>
-				<item id="6678" min="1" max="1" chance="2.20900000000002" /> <!-- Sealed Imperial Crusader Shield -->
-				<item id="6370" min="1" max="1" chance="0.300000000000002" /> <!-- Saint Spear -->
-				<item id="6694" min="1" max="1" chance="30.4899999999999" /> <!-- Saint Spear Blade -->
-				<item id="6683" min="1" max="1" chance="1.639" /> <!-- Sealed Draconic Leather Helmet -->
-				<item id="6679" min="1" max="1" chance="1.61200000000002" /> <!-- Sealed Imperial Crusader Helmet -->
-				<item id="6687" min="1" max="1" chance="1.59100000000001" /> <!-- Sealed Major Arcana Circlet -->
-				<item id="6705" min="6" max="18" chance="32.6600000000001" /> <!-- Sealed Imperial Crusader Shield Part -->
-				<item id="6706" min="10" max="30" chance="12.7800000000001" /> <!-- Sealed Imperial Crusader Helmet Pattern -->
-				<item id="6710" min="16" max="48" chance="8.2219999999998" /> <!-- Sealed Draconic Leather Helmet Pattern -->
-				<item id="6714" min="22" max="66" chance="5.86399999999998" /> <!-- Sealed Major Arcana Circlet Pattern -->
-				<item id="3936" min="1" max="1" chance="13.74" /> <!-- Blessed Scroll of Resurrection -->
-				<item id="6578" min="1" max="1" chance="1.227" /> <!-- Blessed Scroll: Enchant Armor (S-grade) -->
+				<item id="6694" min="1" max="3" chance="30" /> <!-- Saint Spear Blade -->
+				<item id="6705" min="6" max="18" chance="30" /> <!-- Sealed Imperial Crusader Shield Part -->
+				<item id="6706" min="10" max="30" chance="15" /> <!-- Sealed Imperial Crusader Helmet Pattern -->
+				<item id="3936" min="1" max="1" chance="15" /> <!-- Blessed Scroll of Resurrection -->
+				<item id="6710" min="16" max="48" chance="10" /> <!-- Sealed Draconic Leather Helmet Pattern -->
+				<item id="6714" min="22" max="66" chance="7.5" /> <!-- Sealed Major Arcana Circlet Pattern -->
+				<item id="6687" min="1" max="1" chance="2" /> <!-- Sealed Major Arcana Circlet -->
+				<item id="6683" min="1" max="1" chance="2" /> <!-- Sealed Draconic Leather Helmet -->
+				<item id="6679" min="1" max="1" chance="2" /> <!-- Sealed Imperial Crusader Helmet -->
+				<item id="6678" min="1" max="1" chance="2" /> <!-- Sealed Imperial Crusader Shield -->
+				<item id="6578" min="1" max="1" chance="1.5" /> <!-- Blessed Scroll: Enchant Armor (S-grade) -->
+				<item id="6370" min="1" max="1" chance="0.75187969924812" /> <!-- Saint Spear -->
 			</drop>
 			<lucky>
 				<item id="39629" min="1" max="1" chance="91.45" /> <!-- Fortune Pocket - Stage 1 -->
@@ -3027,7 +3168,6 @@
 		</collision>
 	</npc>
 	<npc id="25650" level="81" type="RaidBoss" name="Awakened Ancient Executor" title="Raid Boss">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<skill name="Skill01_ID" id="5881" level="2" />
 			<skill name="Skill02_ID" id="5894" level="1" />
@@ -3082,9 +3222,19 @@
 			<radius normal="24" />
 			<height normal="40.8" />
 		</collision>
+		<dropLists>
+			<drop>
+				<item id="6725" min="1" max="1" chance="6" /> <!-- Sealed Tateossian Ring -->
+				<item id="6724" min="1" max="1" chance="4" /> <!-- Sealed Tateossian Earring -->
+				<item id="6726" min="1" max="1" chance="3" /> <!-- Sealed Tateossian Necklace -->
+				<item id="6365" min="1" max="1" chance="0.75187969924812" /> <!-- Basalt Battlehammer -->
+				<item id="6366" min="1" max="1" chance="0.75187969924812" /> <!-- Imperial Staff -->
+				<item id="6579" min="1" max="1" chance="0.75187969924812" /> <!-- Arcana Mace -->
+				<item id="6369" min="1" max="1" chance="0.75187969924812" /> <!-- Dragon Hunter Axe -->
+			</drop>
+		</dropLists>
 	</npc>
 	<npc id="25651" level="81" type="RaidBoss" name="Awakened Ancient Prophet" title="Raid Boss">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<skill name="Skill01_ID" id="5898" level="2" />
 			<skill name="Skill02_ID" id="5904" level="2" />
@@ -3140,9 +3290,24 @@
 			<radius normal="31.68" />
 			<height normal="60.72" />
 		</collision>
+		<dropLists>
+			<drop>
+				<item id="3936" min="1" max="1" chance="15" /> <!-- Blessed Scroll of Resurrection -->
+				<item id="6690" min="2" max="6" chance="6" /> <!-- Imperial Staff Head -->
+				<item id="6693" min="3" max="9" chance="5" /> <!-- Dragon Hunter Axe Blade -->
+				<item id="6697" min="3" max="9" chance="5" /> <!-- Arcana Mace Head -->
+				<item id="6711" min="24" max="72" chance="2.5" /> <!-- Sealed Major Arcana Robe Part -->
+				<item id="6578" min="1" max="1" chance="1.5" /> <!-- Blessed Scroll: Enchant Armor (S-grade) -->
+				<item id="6684" min="1" max="1" chance="1.5" /> <!-- Sealed Major Arcana Robe -->
+				<item id="6689" min="18" max="54" chance="1.5" /> <!-- Basalt Battlehammer Head -->
+				<item id="6365" min="1" max="1" chance="0.75187969924812" /> <!-- Basalt Battlehammer -->
+				<item id="6366" min="1" max="1" chance="0.75187969924812" /> <!-- Imperial Staff -->
+				<item id="6579" min="1" max="1" chance="0.75187969924812" /> <!-- Arcana Mace -->
+				<item id="6369" min="1" max="1" chance="0.75187969924812" /> <!-- Dragon Hunter Axe -->
+			</drop>
+		</dropLists>
 	</npc>
 	<npc id="25652" level="81" type="RaidBoss" name="Awakened Ancient Prophet" title="Raid Boss">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<skill name="Skill01_ID" id="5896" level="2" />
 			<skill name="Skill02_ID" id="5901" level="2" />
@@ -3198,9 +3363,20 @@
 			<radius normal="31.68" />
 			<height normal="60.72" />
 		</collision>
+		<dropLists>
+			<drop>
+				<item id="6681" min="1" max="1" chance="3" /> <!-- Sealed Draconic Leather Gloves -->
+				<item id="6685" min="1" max="1" chance="3" /> <!-- Sealed Major Arcana Gloves -->
+				<item id="6676" min="1" max="1" chance="3" /> <!-- Sealed Imperial Crusader Gauntlets -->
+				<item id="6682" min="1" max="1" chance="3" /> <!-- Sealed Draconic Leather Boots -->
+				<item id="6677" min="1" max="1" chance="3" /> <!-- Sealed Imperial Crusader Boots -->
+				<item id="6686" min="1" max="1" chance="3" /> <!-- Sealed Major Arcana Boots -->
+				<item id="6578" min="1" max="1" chance="2.5" /> <!-- Blessed Scroll: Enchant Armor (S-grade) -->
+				<item id="6367" min="1" max="1" chance="0.75187969924812" /> <!-- Angel Slayer -->
+			</drop>
+		</dropLists>
 	</npc>
 	<npc id="25653" level="95" type="RaidBoss" name="Kanadis Herald" title="Invading Forces">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="String_Num1" value="1300145" />
 			<param name="String_Num2" value="1300147" />
@@ -3264,7 +3440,6 @@
 		</collision>
 	</npc>
 	<npc id="25654" level="97" type="RaidBoss" name="Kanadis Herald" title="Invading Forces">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="String_Num1" value="1300145" />
 			<param name="String_Num2" value="1300147" />
@@ -3327,7 +3502,6 @@
 		</collision>
 	</npc>
 	<npc id="25655" level="99" type="RaidBoss" name="Kanadis Herald" title="Invading Forces">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="String_Num1" value="1300146" />
 			<param name="String_Num2" value="1300147" />
@@ -3559,7 +3733,6 @@
 		</collision>
 	</npc>
 	<npc id="25659" level="95" type="RaidBoss" name="Kanadis Guide" title="Invading Forces">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="String_Num1" value="1300145" />
 			<param name="String_Num2" value="1300147" />
@@ -3623,7 +3796,6 @@
 		</collision>
 	</npc>
 	<npc id="25660" level="97" type="RaidBoss" name="Kanadis Guide" title="Invading Forces">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="String_Num1" value="1300145" />
 			<param name="String_Num2" value="1300147" />
@@ -3686,7 +3858,6 @@
 		</collision>
 	</npc>
 	<npc id="25661" level="99" type="RaidBoss" name="Kanadis Guide" title="Invading Forces">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="String_Num1" value="1300146" />
 			<param name="String_Num2" value="1300147" />
@@ -3917,7 +4088,6 @@
 		</collision>
 	</npc>
 	<npc id="25665" level="99" type="RaidBoss" name="Yehan Klodekus" title="Soul Destroyer">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<skill name="pan_skill" id="5933" level="1" />
 			<skill name="donut_skill" id="5936" level="1" />
@@ -3972,12 +4142,12 @@
 		</ai>
 		<dropLists>
 			<drop>
-				<item id="6371" min="1" max="1" chance="1.068" /> <!-- Demon Splinter -->
-				<item id="6726" min="1" max="1" chance="10.03" /> <!-- Sealed Tateossian Necklace -->
-				<item id="6724" min="1" max="1" chance="4.44699999999992" /> <!-- Sealed Tateossian Earring -->
-				<item id="6725" min="1" max="1" chance="2.55300000000004" /> <!-- Sealed Tateossian Ring -->
-				<item id="959" min="1" max="1" chance="2.423" /> <!-- Scroll: Enchant Weapon (S-grade) -->
-				<item id="6577" min="1" max="1" chance="0.300000000000004" /> <!-- Blessed Scroll: Enchant Weapon (S-grade) -->
+				<item id="6725" min="1" max="1" chance="9" /> <!-- Sealed Tateossian Ring -->
+				<item id="6724" min="1" max="1" chance="7" /> <!-- Sealed Tateossian Earring -->
+				<item id="6726" min="1" max="1" chance="5" /> <!-- Sealed Tateossian Necklace -->
+				<item id="959" min="1" max="1" chance="2.5" /> <!-- Scroll: Enchant Weapon (S-grade) -->
+				<item id="6371" min="1" max="1" chance="1" /> <!-- Demon Splinter -->
+				<item id="6577" min="1" max="1" chance="0.75187969924812" /> <!-- Blessed Scroll: Enchant Weapon (S-grade) -->
 			</drop>
 			<lucky>
 				<item id="39629" min="1" max="1" chance="92.19" /> <!-- Fortune Pocket - Stage 1 -->
@@ -3989,7 +4159,6 @@
 		</collision>
 	</npc>
 	<npc id="25666" level="99" type="RaidBoss" name="Yehan Klanikus" title="Guide of Darkness">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<skill name="pan_skill" id="5932" level="1" />
 			<skill name="donut_skill" id="5935" level="1" />
@@ -4044,17 +4213,17 @@
 		</ai>
 		<dropLists>
 			<drop>
-				<item id="6365" min="1" max="1" chance="0.3" /> <!-- Basalt Battlehammer -->
-				<item id="6579" min="1" max="1" chance="0.3" /> <!-- Arcana Mace -->
-				<item id="6366" min="1" max="1" chance="0.3" /> <!-- Imperial Staff -->
-				<item id="21959" min="1" max="1" chance="0.3" /> <!-- Blood Brother -->
-				<item id="6686" min="1" max="1" chance="5.54599999999997" /> <!-- Sealed Major Arcana Boots -->
-				<item id="6685" min="1" max="1" chance="5.49600000000002" /> <!-- Sealed Major Arcana Gloves -->
-				<item id="6676" min="1" max="1" chance="2.71799999999994" /> <!-- Sealed Imperial Crusader Gauntlets -->
-				<item id="6677" min="1" max="1" chance="1.77299999999999" /> <!-- Sealed Imperial Crusader Boots -->
-				<item id="6681" min="1" max="1" chance="1.414" /> <!-- Sealed Draconic Leather Gloves -->
-				<item id="6682" min="1" max="1" chance="1.103" /> <!-- Sealed Draconic Leather Boots -->
-				<item id="6578" min="1" max="1" chance="5.515" /> <!-- Blessed Scroll: Enchant Armor (S-grade) -->
+				<item id="6578" min="1" max="1" chance="7.5" /> <!-- Blessed Scroll: Enchant Armor (S-grade) -->
+				<item id="6676" min="1" max="1" chance="2.50001" /> <!-- Sealed Imperial Crusader Gauntlets -->
+				<item id="6681" min="1" max="1" chance="2.5" /> <!-- Sealed Draconic Leather Gloves -->
+				<item id="6685" min="1" max="1" chance="2.5" /> <!-- Sealed Major Arcana Gloves -->
+				<item id="6682" min="1" max="1" chance="2.5" /> <!-- Sealed Draconic Leather Boots -->
+				<item id="6677" min="1" max="1" chance="2.5" /> <!-- Sealed Imperial Crusader Boots -->
+				<item id="6686" min="1" max="1" chance="2.5" /> <!-- Sealed Major Arcana Boots -->
+				<item id="6365" min="1" max="1" chance="0.75187969924812" /> <!-- Basalt Battlehammer -->
+				<item id="6366" min="1" max="1" chance="0.75187969924812" /> <!-- Imperial Staff -->
+				<item id="6579" min="1" max="1" chance="0.75187969924812" /> <!-- Arcana Mace -->
+				<item id="21959" min="1" max="1" chance="0.3003003003003" /> <!-- Blood Brother -->
 			</drop>
 			<lucky>
 				<item id="39629" min="1" max="1" chance="90.745" /> <!-- Fortune Pocket - Stage 1 -->
@@ -4066,7 +4235,6 @@
 		</collision>
 	</npc>
 	<npc id="25667" level="84" type="RaidBoss" name="Cannibalistic Stakato Captain" title="Shadow of Violence">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<skill name="Skill01_ID" id="5350" level="1" />
 			<skill name="Skill02_ID" id="5352" level="1" />
@@ -4131,7 +4299,6 @@
 		</collision>
 	</npc>
 	<npc id="25668" level="82" type="RaidBoss" name="Cannibalistic Stakato Captain" title="Shadow of Violence">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<skill name="Skill01_ID" id="5350" level="1" />
 			<skill name="Skill02_ID" id="5352" level="1" />
@@ -4195,7 +4362,6 @@
 		</collision>
 	</npc>
 	<npc id="25669" level="82" type="RaidBoss" name="Cannibalistic Stakato Captain" title="Shadow of Violence">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<skill name="Skill01_ID" id="5350" level="1" />
 			<skill name="Skill02_ID" id="5352" level="1" />
@@ -4259,7 +4425,6 @@
 		</collision>
 	</npc>
 	<npc id="25670" level="82" type="RaidBoss" name="Cannibalistic Stakato Captain" title="Shadow of Violence">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<skill name="Skill01_ID" id="5350" level="1" />
 			<skill name="Skill02_ID" id="5352" level="1" />
@@ -4323,7 +4488,6 @@
 		</collision>
 	</npc>
 	<npc id="25671" level="84" type="RaidBoss" name="Queen Shyeed" title="Raid Boss">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<minions name="Privates">
 				<npc id="25673" count="1" respawnTime="360" weightPoint="1" />
@@ -4372,17 +4536,17 @@
 		<ai clanHelpRange="300" aggroRange="300" />
 		<dropLists>
 			<drop>
-				<item id="9525" min="1" max="1" chance="1.14000000000001" /> <!-- Sealed Dynasty Stockings -->
-				<item id="9514" min="1" max="1" chance="0.749999999999991" /> <!-- Sealed Dynasty Breastplate -->
-				<item id="9515" min="1" max="1" chance="0.749999999999991" /> <!-- Sealed Dynasty Gaiters -->
-				<item id="9524" min="1" max="1" chance="0.749999999999991" /> <!-- Sealed Dynasty Tunic -->
-				<item id="9531" min="6" max="18" chance="12.0599999999999" /> <!-- Sealed Dynasty Gaiters Piece -->
-				<item id="9530" min="10" max="30" chance="6.87899999999995" /> <!-- Sealed Dynasty Breastplate Piece -->
-				<item id="9541" min="16" max="48" chance="4.02800000000003" /> <!-- Sealed Dynasty Stockings Piece -->
-				<item id="9540" min="22" max="66" chance="2.03600000000001" /> <!-- Sealed Dynasty Tunic Piece -->
-				<item id="960" min="1" max="1" chance="9.95699999999995" /> <!-- Scroll: Enchant Armor (S-grade) -->
-				<item id="959" min="1" max="1" chance="0.750000000000003" /> <!-- Scroll: Enchant Weapon (S-grade) -->
-				<item id="6577" min="1" max="1" chance="0.299999999999997" /> <!-- Blessed Scroll: Enchant Weapon (S-grade) -->
+				<item id="9531" min="14" max="14" chance="12.5" /> <!-- Sealed Dynasty Gaiters Piece -->
+				<item id="960" min="1" max="1" chance="7.5" /> <!-- Scroll: Enchant Armor (S-grade) -->
+				<item id="9530" min="10" max="30" chance="7.5" /> <!-- Sealed Dynasty Breastplate Piece -->
+				<item id="9541" min="16" max="48" chance="5" /> <!-- Sealed Dynasty Stockings Piece -->
+				<item id="959" min="1" max="1" chance="2.5" /> <!-- Scroll: Enchant Weapon (S-grade) -->
+				<item id="9540" min="22" max="66" chance="2.5" /> <!-- Sealed Dynasty Tunic Piece -->
+				<item id="9514" min="1" max="1" chance="1" /> <!-- Sealed Dynasty Breastplate -->
+				<item id="9524" min="1" max="1" chance="1" /> <!-- Sealed Dynasty Tunic -->
+				<item id="9515" min="1" max="1" chance="1" /> <!-- Sealed Dynasty Gaiters -->
+				<item id="9525" min="1" max="1" chance="1" /> <!-- Sealed Dynasty Stockings -->
+				<item id="6577" min="1" max="1" chance="0.75187969924812" /> <!-- Blessed Scroll: Enchant Weapon (S-grade) -->
 			</drop>
 			<lucky>
 				<item id="39629" min="1" max="1" chance="87.3" /> <!-- Fortune Pocket - Stage 1 -->
@@ -4485,7 +4649,6 @@
 		</collision>
 	</npc>
 	<npc id="25674" level="83" type="RaidBoss" name="Gwindorr" title="Raid Boss">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<minions name="Privates">
 				<npc id="25675" count="3" respawnTime="360" weightPoint="1" />
@@ -4535,13 +4698,13 @@
 		<ai clanHelpRange="300" aggroRange="300" />
 		<dropLists>
 			<drop>
-				<item id="10223" min="1" max="1" chance="0.3" /> <!-- Icarus Spitter -->
-				<item id="9515" min="1" max="1" chance="1.27199999999997" /> <!-- Sealed Dynasty Gaiters -->
-				<item id="9514" min="1" max="1" chance="0.75" /> <!-- Sealed Dynasty Breastplate -->
-				<item id="9531" min="24" max="72" chance="4.52599999999996" /> <!-- Sealed Dynasty Gaiters Piece -->
-				<item id="9530" min="52" max="156" chance="2.00899999999999" /> <!-- Sealed Dynasty Breastplate Piece -->
-				<item id="3936" min="1" max="1" chance="17.26" /> <!-- Blessed Scroll of Resurrection -->
-				<item id="6578" min="1" max="1" chance="1.46699999999999" /> <!-- Blessed Scroll: Enchant Armor (S-grade) -->
+				<item id="3936" min="1" max="1" chance="15" /> <!-- Blessed Scroll of Resurrection -->
+				<item id="9531" min="24" max="72" chance="5" /> <!-- Sealed Dynasty Gaiters Piece -->
+				<item id="9530" min="52" max="156" chance="2.5" /> <!-- Sealed Dynasty Breastplate Piece -->
+				<item id="6578" min="1" max="1" chance="1.5" /> <!-- Blessed Scroll: Enchant Armor (S-grade) -->
+				<item id="9514" min="1" max="1" chance="1.5" /> <!-- Sealed Dynasty Breastplate -->
+				<item id="9515" min="1" max="1" chance="1.5" /> <!-- Sealed Dynasty Gaiters -->
+				<item id="10223" min="1" max="1" chance="0.75187969924812" /> <!-- Icarus Spitter -->
 			</drop>
 			<lucky>
 				<item id="39629" min="1" max="1" chance="86.71" /> <!-- Fortune Pocket - Stage 1 -->
@@ -4637,7 +4800,6 @@
 		</collision>
 	</npc>
 	<npc id="25677" level="84" type="RaidBoss" name="Water Spirit Lian" title="Raid Boss">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<minions name="Privates">
 				<npc id="25678" count="3" respawnTime="360" weightPoint="1" />
@@ -4686,17 +4848,17 @@
 		<ai clanHelpRange="300" aggroRange="300" />
 		<dropLists>
 			<drop>
-				<item id="9529" min="1" max="1" chance="1.937" /> <!-- Sealed Dynasty Shield -->
-				<item id="10220" min="1" max="1" chance="0.300000000000012" /> <!-- Icarus Hammer -->
-				<item id="10222" min="1" max="1" chance="0.300000000000012" /> <!-- Icarus Hall -->
-				<item id="13885" min="1" max="1" chance="3.71399999999996" /> <!-- Sealed Arcana Sigil -->
-				<item id="9516" min="1" max="1" chance="1.37099999999994" /> <!-- Sealed Dynasty Helmet -->
-				<item id="10114" min="14" max="42" chance="4.12399999999996" /> <!-- Sealed Dynasty Sigil Piece -->
-				<item id="9545" min="40" max="120" chance="2.50100000000006" /> <!-- Sealed Dynasty Shield Fragment -->
-				<item id="9532" min="81" max="243" chance="1.02200000000001" /> <!-- Sealed Dynasty Helmet Piece -->
-				<item id="960" min="1" max="1" chance="9.41399999999998" /> <!-- Scroll: Enchant Armor (S-grade) -->
-				<item id="959" min="1" max="1" chance="0.750000000000005" /> <!-- Scroll: Enchant Weapon (S-grade) -->
-				<item id="6577" min="1" max="1" chance="0.299999999999998" /> <!-- Blessed Scroll: Enchant Weapon (S-grade) -->
+				<item id="960" min="1" max="1" chance="7.5" /> <!-- Scroll: Enchant Armor (S-grade) -->
+				<item id="10114" min="18" max="35" chance="5" /> <!-- Sealed Dynasty Sigil Piece -->
+				<item id="13885" min="1" max="1" chance="3" /> <!-- Sealed Arcana Sigil -->
+				<item id="959" min="1" max="1" chance="2.5" /> <!-- Scroll: Enchant Weapon (S-grade) -->
+				<item id="9545" min="40" max="120" chance="2.5" /> <!-- Sealed Dynasty Shield Fragment -->
+				<item id="9516" min="1" max="1" chance="2" /> <!-- Sealed Dynasty Helmet -->
+				<item id="9529" min="1" max="1" chance="2" /> <!-- Sealed Dynasty Shield -->
+				<item id="9532" min="81" max="243" chance="1.5" /> <!-- Sealed Dynasty Helmet Piece -->
+				<item id="6577" min="1" max="1" chance="0.75187969924812" /> <!-- Blessed Scroll: Enchant Weapon (S-grade) -->
+				<item id="10220" min="1" max="1" chance="0.75187969924812" /> <!-- Icarus Hammer -->
+				<item id="10222" min="1" max="1" chance="0.75187969924812" /> <!-- Icarus Hall -->
 			</drop>
 			<lucky>
 				<item id="39629" min="1" max="1" chance="91.625" /> <!-- Fortune Pocket - Stage 1 -->
@@ -4798,7 +4960,6 @@
 		</collision>
 	</npc>
 	<npc id="25680" level="82" type="RaidBoss" name="Giant Marpanak" title="Raid Boss">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="RaidSpawnMusic" value="Rm01_A" />
 			<skill name="SelfRangeCancel_a" id="4177" level="8" />
@@ -4850,16 +5011,16 @@
 		<ai clanHelpRange="300" aggroRange="300" />
 		<dropLists>
 			<drop>
-				<item id="9529" min="1" max="1" chance="4.28000000000001" /> <!-- Sealed Dynasty Shield -->
-				<item id="9448" min="1" max="1" chance="0.299999999999999" /> <!-- Dynasty Cudgel -->
-				<item id="9449" min="1" max="1" chance="0.299999999999999" /> <!-- Dynasty Mace -->
-				<item id="10252" min="1" max="1" chance="0.299999999999999" /> <!-- Dynasty Staff -->
-				<item id="10253" min="1" max="1" chance="0.299999999999999" /> <!-- Dynasty Crusher -->
-				<item id="13885" min="1" max="1" chance="8.21000000000005" /> <!-- Sealed Arcana Sigil -->
-				<item id="9516" min="1" max="1" chance="3.00899999999995" /> <!-- Sealed Dynasty Helmet -->
-				<item id="14851" min="1" max="1" chance="97.117551083832" /> <!-- Cave Exploration Text 1 Sheet -->
-				<item id="959" min="1" max="1" chance="2.5910962629166" /> <!-- Scroll: Enchant Weapon (S-grade) -->
-				<item id="6577" min="1" max="1" chance="0.2913526532515" /> <!-- Blessed Scroll: Enchant Weapon (S-grade) -->
+				<item id="14851" min="1" max="1" chance="100" /> <!-- Cave Exploration Text 1 Sheet -->
+				<item id="13885" min="1" max="1" chance="8" /> <!-- Sealed Arcana Sigil -->
+				<item id="9516" min="1" max="1" chance="4" /> <!-- Sealed Dynasty Helmet -->
+				<item id="9529" min="1" max="1" chance="4" /> <!-- Sealed Dynasty Shield -->
+				<item id="959" min="1" max="1" chance="3" /> <!-- Scroll: Enchant Weapon (S-grade) -->
+				<item id="6577" min="1" max="1" chance="0.75187969924812" /> <!-- Blessed Scroll: Enchant Weapon (S-grade) -->
+				<item id="9449" min="1" max="1" chance="0.75187969924812" /> <!-- Dynasty Mace -->
+				<item id="9448" min="1" max="1" chance="0.75187969924812" /> <!-- Dynasty Cudgel -->
+				<item id="10253" min="1" max="1" chance="0.75187969924812" /> <!-- Dynasty Crusher -->
+				<item id="10252" min="1" max="1" chance="0.75187969924812" /> <!-- Dynasty Staff -->
 			</drop>
 			<lucky>
 				<item id="39629" min="1" max="1" chance="87.89" /> <!-- Fortune Pocket - Stage 1 -->
@@ -4871,7 +5032,6 @@
 		</collision>
 	</npc>
 	<npc id="25681" level="82" type="RaidBoss" name="Gorgolos" title="Raid Boss">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<minions name="Privates">
 				<npc id="25682" count="3" respawnTime="360" weightPoint="1" />
@@ -4924,17 +5084,17 @@
 		<ai clanHelpRange="300" aggroRange="300" />
 		<dropLists>
 			<drop>
-				<item id="9442" min="1" max="1" chance="0.299999999999997" /> <!-- Dynasty Sword -->
-				<item id="9443" min="1" max="1" chance="0.299999999999997" /> <!-- Dynasty Blade -->
-				<item id="9444" min="1" max="1" chance="0.299999999999997" /> <!-- Dynasty Phantom -->
-				<item id="9515" min="1" max="1" chance="0.37304153195722" /> <!-- Sealed Dynasty Gaiters -->
-				<item id="9514" min="1" max="1" chance="0.14921661278289" /> <!-- Sealed Dynasty Breastplate -->
-				<item id="9530" min="7" max="21" chance="49.73887092763" /> <!-- Sealed Dynasty Breastplate Piece -->
-				<item id="9531" min="36" max="108" chance="49.73887092763" /> <!-- Sealed Dynasty Gaiters Piece -->
-				<item id="14852" min="1" max="1" chance="57.204965390996" /> <!-- Cave Exploration Text 2 Sheet -->
-				<item id="9617" min="3" max="9" chance="14.455694754305" /> <!-- Dynasty Blade Piece -->
-				<item id="9618" min="4" max="12" chance="14.335564326984" /> <!-- Dynasty Phantom Piece -->
-				<item id="9616" min="3" max="9" chance="14.003775527716" /> <!-- Dynasty Sword Piece -->
+				<item id="14852" min="1" max="1" chance="100" /> <!-- Cave Exploration Text 2 Sheet -->
+				<item id="9530" min="13" max="20" chance="30" /> <!-- Sealed Dynasty Breastplate Piece -->
+				<item id="9531" min="48" max="97" chance="20" /> <!-- Sealed Dynasty Gaiters Piece -->
+				<item id="9618" min="4" max="12" chance="20" /> <!-- Dynasty Phantom Piece -->
+				<item id="9617" min="3" max="9" chance="15" /> <!-- Dynasty Blade Piece -->
+				<item id="9616" min="3" max="9" chance="15" /> <!-- Dynasty Sword Piece -->
+				<item id="9514" min="1" max="1" chance="1.5" /> <!-- Sealed Dynasty Breastplate -->
+				<item id="9515" min="1" max="1" chance="1.5" /> <!-- Sealed Dynasty Gaiters -->
+				<item id="9443" min="1" max="1" chance="0.75187969924812" /> <!-- Dynasty Blade -->
+				<item id="9442" min="1" max="1" chance="0.75187969924812" /> <!-- Dynasty Sword -->
+				<item id="9444" min="1" max="1" chance="0.75187969924812" /> <!-- Dynasty Phantom -->
 			</drop>
 			<lucky>
 				<item id="39629" min="1" max="1" chance="92.325" /> <!-- Fortune Pocket - Stage 1 -->
@@ -5032,7 +5192,6 @@
 		</collision>
 	</npc>
 	<npc id="25684" level="83" type="RaidBoss" name="Last Titan Utenus" title="Raid Boss">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<minions name="Privates">
 				<npc id="25685" count="3" respawnTime="360" weightPoint="1" />
@@ -5084,18 +5243,18 @@
 		<ai clanHelpRange="300" aggroRange="300" />
 		<dropLists>
 			<drop>
-				<item id="10220" min="1" max="1" chance="0.3" /> <!-- Icarus Hammer -->
-				<item id="10222" min="1" max="1" chance="0.3" /> <!-- Icarus Hall -->
-				<item id="9520" min="1" max="1" chance="1.14300000000004" /> <!-- Sealed Dynasty Leather Leggings -->
-				<item id="9519" min="1" max="1" chance="0.750000000000003" /> <!-- Sealed Dynasty Leather Armor -->
-				<item id="9535" min="7" max="21" chance="5.91100000000002" /> <!-- Sealed Dynasty Leather Armor Fragment -->
-				<item id="9536" min="32" max="96" chance="2.04500000000001" /> <!-- Sealed Dynasty Leather Leggings Piece -->
-				<item id="14853" min="1" max="1" chance="85.200647524921" /> <!-- Cave Exploration Text 3 Sheet -->
-				<item id="960" min="1" max="1" chance="8.4144159495612" /> <!-- Scroll: Enchant Armor (S-grade) -->
-				<item id="10402" min="3" max="9" chance="2.970946579194" /> <!-- Icarus Hammer Piece -->
-				<item id="10404" min="3" max="9" chance="2.5193831473119" /> <!-- Icarus Hall Piece -->
-				<item id="959" min="1" max="1" chance="0.63900485643691" /> <!-- Scroll: Enchant Weapon (S-grade) -->
-				<item id="6577" min="1" max="1" chance="0.25560194257476" /> <!-- Blessed Scroll: Enchant Weapon (S-grade) -->
+				<item id="14853" min="1" max="1" chance="100" /> <!-- Cave Exploration Text 3 Sheet -->
+				<item id="960" min="1" max="1" chance="7.5" /> <!-- Scroll: Enchant Armor (S-grade) -->
+				<item id="9535" min="7" max="21" chance="6" /> <!-- Sealed Dynasty Leather Armor Fragment -->
+				<item id="10402" min="4" max="7" chance="4" /> <!-- Icarus Hammer Piece -->
+				<item id="10404" min="3" max="9" chance="3" /> <!-- Icarus Hall Piece -->
+				<item id="959" min="1" max="1" chance="2.5" /> <!-- Scroll: Enchant Weapon (S-grade) -->
+				<item id="9536" min="32" max="96" chance="2" /> <!-- Sealed Dynasty Leather Leggings Piece -->
+				<item id="9520" min="1" max="1" chance="1.5" /> <!-- Sealed Dynasty Leather Leggings -->
+				<item id="9519" min="1" max="1" chance="1.5" /> <!-- Sealed Dynasty Leather Armor -->
+				<item id="6577" min="1" max="1" chance="0.75187969924812" /> <!-- Blessed Scroll: Enchant Weapon (S-grade) -->
+				<item id="10220" min="1" max="1" chance="0.75187969924812" /> <!-- Icarus Hammer -->
+				<item id="10222" min="1" max="1" chance="0.75187969924812" /> <!-- Icarus Hall -->
 			</drop>
 			<lucky>
 				<item id="39629" min="1" max="1" chance="91.79" /> <!-- Fortune Pocket - Stage 1 -->
@@ -5203,7 +5362,6 @@
 		</collision>
 	</npc>
 	<npc id="25687" level="83" type="RaidBoss" name="Hekaton Prime" title="Raid Boss">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<minions name="Privates">
 				<npc id="25688" count="1" respawnTime="360" weightPoint="1" />
@@ -5256,14 +5414,14 @@
 		<ai clanHelpRange="300" aggroRange="300" />
 		<dropLists>
 			<drop>
-				<item id="10221" min="1" max="1" chance="0.3" /> <!-- Icarus Hand -->
-				<item id="9520" min="1" max="1" chance="2.85299999999998" /> <!-- Sealed Dynasty Leather Leggings -->
-				<item id="9519" min="1" max="1" chance="1.712" /> <!-- Sealed Dynasty Leather Armor -->
-				<item id="9536" min="28" max="84" chance="5.66399999999996" /> <!-- Sealed Dynasty Leather Leggings Piece -->
-				<item id="9535" min="60" max="180" chance="1.75300000000006" /> <!-- Sealed Dynasty Leather Armor Fragment -->
-				<item id="3936" min="1" max="1" chance="33.5100000000001" /> <!-- Blessed Scroll of Resurrection -->
-				<item id="6578" min="1" max="1" chance="3.09199999999998" /> <!-- Blessed Scroll: Enchant Armor (S-grade) -->
-				<item id="10403" min="27" max="81" chance="0.749999999999996" /> <!-- Icarus Hand Piece -->
+				<item id="3936" min="1" max="1" chance="60" /> <!-- Blessed Scroll of Resurrection -->
+				<item id="9536" min="28" max="84" chance="6" /> <!-- Sealed Dynasty Leather Leggings Piece -->
+				<item id="6578" min="1" max="1" chance="3" /> <!-- Blessed Scroll: Enchant Armor (S-grade) -->
+				<item id="9520" min="1" max="1" chance="3" /> <!-- Sealed Dynasty Leather Leggings -->
+				<item id="9519" min="1" max="1" chance="3" /> <!-- Sealed Dynasty Leather Armor -->
+				<item id="9535" min="60" max="180" chance="2" /> <!-- Sealed Dynasty Leather Armor Fragment -->
+				<item id="10403" min="27" max="81" chance="1.5" /> <!-- Icarus Hand Piece -->
+				<item id="10221" min="1" max="1" chance="0.75187969924812" /> <!-- Icarus Hand -->
 			</drop>
 			<lucky>
 				<item id="39629" min="1" max="1" chance="90.48" /> <!-- Fortune Pocket - Stage 1 -->
@@ -5360,7 +5518,6 @@
 		</collision>
 	</npc>
 	<npc id="25690" level="81" type="RaidBoss" name="Aenkinel" title="Invader of Dream">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="IsAggressive" value="1" />
 			<param name="Skill01_Probablity" value="1000" />
@@ -5421,9 +5578,27 @@
 			<radius normal="30" />
 			<height normal="31.5" />
 		</collision>
+		<dropLists>
+			<drop>
+				<item id="9992" min="2" max="6" chance="7.5" /> <!-- Sealed Dynasty Necklace Gemstone -->
+				<item id="9993" min="5" max="15" chance="6" /> <!-- Sealed Dynasty Ring Gemstone -->
+				<item id="960" min="1" max="1" chance="5" /> <!-- Scroll: Enchant Armor (S-grade) -->
+				<item id="9991" min="9" max="27" chance="2.5" /> <!-- Sealed Dynasty Earring Gemstone -->
+				<item id="9616" min="3" max="9" chance="2" /> <!-- Dynasty Sword Piece -->
+				<item id="9454" min="1" max="1" chance="1.75" /> <!-- Sealed Dynasty Ring -->
+				<item id="9452" min="1" max="1" chance="1.5" /> <!-- Sealed Dynasty Earring -->
+				<item id="959" min="1" max="1" chance="1.5" /> <!-- Scroll: Enchant Weapon (S-grade) -->
+				<item id="9617" min="4" max="12" chance="1.5" /> <!-- Dynasty Blade Piece -->
+				<item id="9618" min="4" max="12" chance="1.5" /> <!-- Dynasty Phantom Piece -->
+				<item id="9453" min="1" max="1" chance="1" /> <!-- Sealed Dynasty Necklace -->
+				<item id="6577" min="1" max="1" chance="0.3003003003003" /> <!-- Blessed Scroll: Enchant Weapon (S-grade) -->
+				<item id="9443" min="1" max="1" chance="0.149925037481259" /> <!-- Dynasty Blade -->
+				<item id="9442" min="1" max="1" chance="0.149925037481259" /> <!-- Dynasty Sword -->
+				<item id="9444" min="1" max="1" chance="0.149925037481259" /> <!-- Dynasty Phantom -->
+			</drop>
+		</dropLists>
 	</npc>
 	<npc id="25691" level="81" type="RaidBoss" name="Aenkinel" title="Invader of Dream">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="IsAggressive" value="1" />
 			<param name="Skill01_Probablity" value="1000" />
@@ -5482,21 +5657,21 @@
 		<ai clanHelpRange="300" aggroRange="300" />
 		<dropLists>
 			<drop>
-				<item id="9442" min="1" max="1" chance="0.0749999999999992" /> <!-- Dynasty Sword -->
-				<item id="9443" min="1" max="1" chance="0.0749999999999992" /> <!-- Dynasty Blade -->
-				<item id="9444" min="1" max="1" chance="0.0749999999999992" /> <!-- Dynasty Phantom -->
-				<item id="9454" min="1" max="1" chance="1.84099999999999" /> <!-- Sealed Dynasty Ring -->
-				<item id="9452" min="1" max="1" chance="1.243" /> <!-- Sealed Dynasty Earring -->
-				<item id="9453" min="1" max="1" chance="0.749999999999993" /> <!-- Sealed Dynasty Necklace -->
-				<item id="9992" min="2" max="6" chance="8.24399999999998" /> <!-- Sealed Dynasty Necklace Gemstone -->
-				<item id="9993" min="5" max="15" chance="6.05" /> <!-- Sealed Dynasty Ring Gemstone -->
-				<item id="9991" min="9" max="27" chance="2.36200000000009" /> <!-- Sealed Dynasty Earring Gemstone -->
-				<item id="960" min="1" max="1" chance="5.47300000000002" /> <!-- Scroll: Enchant Armor (S-grade) -->
-				<item id="9616" min="3" max="9" chance="1.47299999999999" /> <!-- Dynasty Sword Piece -->
-				<item id="9617" min="4" max="12" chance="1.22900000000001" /> <!-- Dynasty Blade Piece -->
-				<item id="9618" min="4" max="12" chance="1.09300000000003" /> <!-- Dynasty Phantom Piece -->
-				<item id="959" min="1" max="1" chance="0.749999999999996" /> <!-- Scroll: Enchant Weapon (S-grade) -->
-				<item id="6577" min="1" max="1" chance="0.0749999999999996" /> <!-- Blessed Scroll: Enchant Weapon (S-grade) -->
+				<item id="9992" min="2" max="6" chance="8" /> <!-- Sealed Dynasty Necklace Gemstone -->
+				<item id="9993" min="5" max="15" chance="6" /> <!-- Sealed Dynasty Ring Gemstone -->
+				<item id="960" min="1" max="1" chance="5" /> <!-- Scroll: Enchant Armor (S-grade) -->
+				<item id="9991" min="9" max="27" chance="2.5" /> <!-- Sealed Dynasty Earring Gemstone -->
+				<item id="9454" min="1" max="1" chance="1.75" /> <!-- Sealed Dynasty Ring -->
+				<item id="9452" min="1" max="1" chance="1.5" /> <!-- Sealed Dynasty Earring -->
+				<item id="959" min="1" max="1" chance="1.5" /> <!-- Scroll: Enchant Weapon (S-grade) -->
+				<item id="9616" min="3" max="9" chance="1.5" /> <!-- Dynasty Sword Piece -->
+				<item id="9453" min="1" max="1" chance="1.25" /> <!-- Sealed Dynasty Necklace -->
+				<item id="9617" min="4" max="12" chance="1.25" /> <!-- Dynasty Blade Piece -->
+				<item id="9618" min="4" max="12" chance="1.25" /> <!-- Dynasty Phantom Piece -->
+				<item id="6577" min="1" max="1" chance="0.3003003003003" /> <!-- Blessed Scroll: Enchant Weapon (S-grade) -->
+				<item id="9443" min="1" max="1" chance="0.149925037481259" /> <!-- Dynasty Blade -->
+				<item id="9442" min="1" max="1" chance="0.149925037481259" /> <!-- Dynasty Sword -->
+				<item id="9444" min="1" max="1" chance="0.149925037481259" /> <!-- Dynasty Phantom -->
 			</drop>
 			<lucky>
 				<item id="39629" min="1" max="1" chance="90.645" /> <!-- Fortune Pocket - Stage 1 -->
@@ -5508,7 +5683,6 @@
 		</collision>
 	</npc>
 	<npc id="25692" level="81" type="RaidBoss" name="Aenkinel" title="Invader of Dream">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="IsAggressive" value="1" />
 			<param name="Skill01_Probablity" value="1000" />
@@ -5567,21 +5741,21 @@
 		<ai clanHelpRange="300" aggroRange="300" />
 		<dropLists>
 			<drop>
-				<item id="9442" min="1" max="1" chance="0.0749999999999992" /> <!-- Dynasty Sword -->
-				<item id="9443" min="1" max="1" chance="0.0749999999999992" /> <!-- Dynasty Blade -->
-				<item id="9444" min="1" max="1" chance="0.0749999999999992" /> <!-- Dynasty Phantom -->
-				<item id="9454" min="1" max="1" chance="1.73699999999999" /> <!-- Sealed Dynasty Ring -->
-				<item id="9452" min="1" max="1" chance="1.15999999999999" /> <!-- Sealed Dynasty Earring -->
-				<item id="9453" min="1" max="1" chance="0.749999999999993" /> <!-- Sealed Dynasty Necklace -->
-				<item id="9992" min="2" max="6" chance="8.18799999999999" /> <!-- Sealed Dynasty Necklace Gemstone -->
-				<item id="9993" min="5" max="15" chance="6.04199999999997" /> <!-- Sealed Dynasty Ring Gemstone -->
-				<item id="9991" min="9" max="27" chance="2.31099999999994" /> <!-- Sealed Dynasty Earring Gemstone -->
-				<item id="960" min="1" max="1" chance="5.528" /> <!-- Scroll: Enchant Armor (S-grade) -->
-				<item id="9616" min="3" max="9" chance="1.452" /> <!-- Dynasty Sword Piece -->
-				<item id="9617" min="4" max="12" chance="1.25099999999997" /> <!-- Dynasty Blade Piece -->
-				<item id="9618" min="4" max="12" chance="1.17800000000003" /> <!-- Dynasty Phantom Piece -->
-				<item id="959" min="1" max="1" chance="0.749999999999997" /> <!-- Scroll: Enchant Weapon (S-grade) -->
-				<item id="6577" min="1" max="1" chance="0.0749999999999997" /> <!-- Blessed Scroll: Enchant Weapon (S-grade) -->
+				<item id="9992" min="2" max="6" chance="8" /> <!-- Sealed Dynasty Necklace Gemstone -->
+				<item id="9993" min="5" max="15" chance="6" /> <!-- Sealed Dynasty Ring Gemstone -->
+				<item id="960" min="1" max="1" chance="5" /> <!-- Scroll: Enchant Armor (S-grade) -->
+				<item id="9991" min="9" max="27" chance="2.5" /> <!-- Sealed Dynasty Earring Gemstone -->
+				<item id="9454" min="1" max="1" chance="1.75" /> <!-- Sealed Dynasty Ring -->
+				<item id="9452" min="1" max="1" chance="1.5" /> <!-- Sealed Dynasty Earring -->
+				<item id="959" min="1" max="1" chance="1.5" /> <!-- Scroll: Enchant Weapon (S-grade) -->
+				<item id="9616" min="3" max="9" chance="1.5" /> <!-- Dynasty Sword Piece -->
+				<item id="9453" min="1" max="1" chance="1.25" /> <!-- Sealed Dynasty Necklace -->
+				<item id="9617" min="4" max="12" chance="1.25" /> <!-- Dynasty Blade Piece -->
+				<item id="9618" min="4" max="12" chance="1.25" /> <!-- Dynasty Phantom Piece -->
+				<item id="6577" min="1" max="1" chance="0.3003003003003" /> <!-- Blessed Scroll: Enchant Weapon (S-grade) -->
+				<item id="9443" min="1" max="1" chance="0.149925037481259" /> <!-- Dynasty Blade -->
+				<item id="9442" min="1" max="1" chance="0.149925037481259" /> <!-- Dynasty Sword -->
+				<item id="9444" min="1" max="1" chance="0.149925037481259" /> <!-- Dynasty Phantom -->
 			</drop>
 			<lucky>
 				<item id="39629" min="1" max="1" chance="90.24" /> <!-- Fortune Pocket - Stage 1 -->
@@ -5593,7 +5767,6 @@
 		</collision>
 	</npc>
 	<npc id="25693" level="81" type="RaidBoss" name="Aenkinel" title="Invader of Dream">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="IsAggressive" value="1" />
 			<param name="Skill01_Probablity" value="1000" />
@@ -5652,21 +5825,21 @@
 		<ai clanHelpRange="300" aggroRange="300" />
 		<dropLists>
 			<drop>
-				<item id="9442" min="1" max="1" chance="0.0749999999999992" /> <!-- Dynasty Sword -->
-				<item id="9443" min="1" max="1" chance="0.0749999999999992" /> <!-- Dynasty Blade -->
-				<item id="9444" min="1" max="1" chance="0.0749999999999992" /> <!-- Dynasty Phantom -->
-				<item id="9454" min="1" max="1" chance="1.759" /> <!-- Sealed Dynasty Ring -->
-				<item id="9452" min="1" max="1" chance="1.228" /> <!-- Sealed Dynasty Earring -->
-				<item id="9453" min="1" max="1" chance="0.75" /> <!-- Sealed Dynasty Necklace -->
-				<item id="9992" min="2" max="6" chance="8.25300000000007" /> <!-- Sealed Dynasty Necklace Gemstone -->
-				<item id="9993" min="5" max="15" chance="6.06899999999991" /> <!-- Sealed Dynasty Ring Gemstone -->
-				<item id="9991" min="9" max="27" chance="2.43299999999996" /> <!-- Sealed Dynasty Earring Gemstone -->
-				<item id="960" min="1" max="1" chance="5.48999999999997" /> <!-- Scroll: Enchant Armor (S-grade) -->
-				<item id="9616" min="3" max="9" chance="1.47500000000002" /> <!-- Dynasty Sword Piece -->
-				<item id="9617" min="4" max="12" chance="1.24900000000001" /> <!-- Dynasty Blade Piece -->
-				<item id="9618" min="4" max="12" chance="1.14799999999999" /> <!-- Dynasty Phantom Piece -->
-				<item id="959" min="1" max="1" chance="0.749999999999996" /> <!-- Scroll: Enchant Weapon (S-grade) -->
-				<item id="6577" min="1" max="1" chance="0.0749999999999996" /> <!-- Blessed Scroll: Enchant Weapon (S-grade) -->
+				<item id="9992" min="2" max="6" chance="8" /> <!-- Sealed Dynasty Necklace Gemstone -->
+				<item id="9993" min="5" max="15" chance="6" /> <!-- Sealed Dynasty Ring Gemstone -->
+				<item id="960" min="1" max="1" chance="5" /> <!-- Scroll: Enchant Armor (S-grade) -->
+				<item id="9991" min="9" max="27" chance="2.5" /> <!-- Sealed Dynasty Earring Gemstone -->
+				<item id="9454" min="1" max="1" chance="1.75" /> <!-- Sealed Dynasty Ring -->
+				<item id="9452" min="1" max="1" chance="1.5" /> <!-- Sealed Dynasty Earring -->
+				<item id="959" min="1" max="1" chance="1.5" /> <!-- Scroll: Enchant Weapon (S-grade) -->
+				<item id="9616" min="3" max="9" chance="1.5" /> <!-- Dynasty Sword Piece -->
+				<item id="9453" min="1" max="1" chance="1.25" /> <!-- Sealed Dynasty Necklace -->
+				<item id="9617" min="4" max="12" chance="1.25" /> <!-- Dynasty Blade Piece -->
+				<item id="9618" min="4" max="12" chance="1.25" /> <!-- Dynasty Phantom Piece -->
+				<item id="6577" min="1" max="1" chance="0.3003003003003" /> <!-- Blessed Scroll: Enchant Weapon (S-grade) -->
+				<item id="9443" min="1" max="1" chance="0.149925037481259" /> <!-- Dynasty Blade -->
+				<item id="9442" min="1" max="1" chance="0.149925037481259" /> <!-- Dynasty Sword -->
+				<item id="9444" min="1" max="1" chance="0.149925037481259" /> <!-- Dynasty Phantom -->
 			</drop>
 			<lucky>
 				<item id="39629" min="1" max="1" chance="88.02" /> <!-- Fortune Pocket - Stage 1 -->
@@ -5678,7 +5851,6 @@
 		</collision>
 	</npc>
 	<npc id="25694" level="82" type="RaidBoss" name="Aenkinel" title="Invader of Dream">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="IsAggressive" value="1" />
 			<param name="Skill01_Probablity" value="1000" />
@@ -5737,15 +5909,15 @@
 		<ai clanHelpRange="300" aggroRange="300" />
 		<dropLists>
 			<drop>
-				<item id="9442" min="1" max="1" chance="0.749999999999993" /> <!-- Dynasty Sword -->
-				<item id="9444" min="1" max="1" chance="0.749999999999993" /> <!-- Dynasty Phantom -->
-				<item id="21955" min="1" max="1" chance="0.749999999999993" /> <!-- Blades of Delusion -->
-				<item id="9452" min="1" max="1" chance="5.54999999999997" /> <!-- Sealed Dynasty Earring -->
-				<item id="9453" min="1" max="1" chance="3.14200000000004" /> <!-- Sealed Dynasty Necklace -->
-				<item id="9454" min="1" max="1" chance="2.47399999999999" /> <!-- Sealed Dynasty Ring -->
-				<item id="15341" min="1" max="3" chance="93.934640277295" /> <!-- Guiding Tea Leaves -->
-				<item id="959" min="1" max="1" chance="5.3608499206252" /> <!-- Scroll: Enchant Weapon (S-grade) -->
-				<item id="6577" min="1" max="1" chance="0.70450980207971" /> <!-- Blessed Scroll: Enchant Weapon (S-grade) -->
+				<item id="15341" min="1" max="3" chance="100" /> <!-- Guiding Tea Leaves -->
+				<item id="9454" min="1" max="1" chance="8" /> <!-- Sealed Dynasty Ring -->
+				<item id="959" min="1" max="1" chance="7.5" /> <!-- Scroll: Enchant Weapon (S-grade) -->
+				<item id="9452" min="1" max="1" chance="6" /> <!-- Sealed Dynasty Earring -->
+				<item id="9453" min="1" max="1" chance="4" /> <!-- Sealed Dynasty Necklace -->
+				<item id="9442" min="1" max="1" chance="1" /> <!-- Dynasty Sword -->
+				<item id="9444" min="1" max="1" chance="1" /> <!-- Dynasty Phantom -->
+				<item id="21955" min="1" max="1" chance="0.75187969924812" /> <!-- Blades of Delusion -->
+				<item id="6577" min="1" max="1" chance="0.75187969924812" /> <!-- Blessed Scroll: Enchant Weapon (S-grade) -->
 			</drop>
 			<lucky>
 				<item id="39629" min="1" max="1" chance="87.4" /> <!-- Fortune Pocket - Stage 1 -->
@@ -5757,7 +5929,6 @@
 		</collision>
 	</npc>
 	<npc id="25695" level="84" type="RaidBoss" name="Aenkinel" title="Invader of Dream">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="IsAggressive" value="1" />
 			<param name="Skill01_Probablity" value="1000" />
@@ -5816,15 +5987,15 @@
 		<ai aggroRange="300" clanHelpRange="300" isAggressive="true" />
 		<dropLists>
 			<drop>
-				<item id="10215" min="1" max="1" chance="0.749999999999993" /> <!-- Icarus Sawsword -->
-				<item id="10217" min="1" max="1" chance="0.749999999999993" /> <!-- Icarus Spirit -->
-				<item id="10218" min="1" max="1" chance="0.749999999999993" /> <!-- Icarus Heavy Arms -->
-				<item id="9452" min="1" max="1" chance="6.557" /> <!-- Sealed Dynasty Earring -->
-				<item id="9453" min="1" max="1" chance="3.66199999999998" /> <!-- Sealed Dynasty Necklace -->
-				<item id="9454" min="1" max="1" chance="2.97800000000002" /> <!-- Sealed Dynasty Ring -->
-				<item id="15341" min="2" max="3" chance="92.884145605187" /> <!-- Guiding Tea Leaves -->
-				<item id="959" min="1" max="1" chance="6.1312824513984" /> <!-- Scroll: Enchant Weapon (S-grade) -->
-				<item id="6577" min="1" max="1" chance="0.98457194341498" /> <!-- Blessed Scroll: Enchant Weapon (S-grade) -->
+				<item id="15341" min="3" max="3" chance="100" /> <!-- Guiding Tea Leaves -->
+				<item id="9454" min="1" max="1" chance="8" /> <!-- Sealed Dynasty Ring -->
+				<item id="959" min="1" max="1" chance="7.5" /> <!-- Scroll: Enchant Weapon (S-grade) -->
+				<item id="9452" min="1" max="1" chance="6" /> <!-- Sealed Dynasty Earring -->
+				<item id="9453" min="1" max="1" chance="4" /> <!-- Sealed Dynasty Necklace -->
+				<item id="6577" min="1" max="1" chance="1.5" /> <!-- Blessed Scroll: Enchant Weapon (S-grade) -->
+				<item id="10217" min="1" max="1" chance="1" /> <!-- Icarus Spirit -->
+				<item id="10215" min="1" max="1" chance="1" /> <!-- Icarus Sawsword -->
+				<item id="10218" min="1" max="1" chance="1" /> <!-- Icarus Heavy Arms -->
 			</drop>
 			<lucky>
 				<item id="39629" min="1" max="1" chance="86.18" /> <!-- Fortune Pocket - Stage 1 -->
@@ -5836,7 +6007,6 @@
 		</collision>
 	</npc>
 	<npc id="25696" level="90" type="RaidBoss" name="Taklacan" title="Bistakon">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<skill name="Skill01_ID" id="6379" level="1" />
 			<skill name="Skill02_ID" id="6378" level="1" />
@@ -5890,16 +6060,16 @@
 		<ai aggroRange="300" clanHelpRange="300" isAggressive="true" />
 		<dropLists>
 			<drop>
-				<item id="17295" min="1" max="1" chance="0.75" /> <!-- Requiem Stormer -->
-				<item id="17298" min="1" max="1" chance="0.75" /> <!-- Requiem Buster -->
-				<item id="17299" min="1" max="1" chance="0.75" /> <!-- Requiem Caster -->
-				<item id="17312" min="1" max="1" chance="4.528" /> <!-- Immortal Leather Leggings - Light Armor -->
-				<item id="17316" min="1" max="1" chance="2.842" /> <!-- Immortal Tunic - Robe -->
-				<item id="17305" min="1" max="1" chance="2.872" /> <!-- Immortal Breastplate - Heavy Armor -->
-				<item id="17314" min="1" max="1" chance="3.727" /> <!-- Immortal Leather Boots - Light Armor -->
-				<item id="17315" min="1" max="1" chance="1.852" /> <!-- Immortal Circlet - Robe -->
-				<item id="17307" min="1" max="1" chance="1.169" /> <!-- Immortal Gauntlets - Heavy Armor -->
-				<item id="17526" min="1" max="1" chance="2.314" /> <!-- Scroll: Enchant Weapon (R-grade) -->
+				<item id="17526" min="1" max="1" chance="10" /> <!-- Scroll: Enchant Weapon (R-grade) -->
+				<item id="17315" min="1" max="1" chance="2.5" /> <!-- Immortal Circlet - Robe -->
+				<item id="17305" min="1" max="1" chance="2.5" /> <!-- Immortal Breastplate - Heavy Armor -->
+				<item id="17312" min="1" max="1" chance="2.5" /> <!-- Immortal Leather Leggings - Light Armor -->
+				<item id="17314" min="1" max="1" chance="2.5" /> <!-- Immortal Leather Boots - Light Armor -->
+				<item id="17307" min="1" max="1" chance="2.5" /> <!-- Immortal Gauntlets - Heavy Armor -->
+				<item id="17316" min="1" max="1" chance="2.5" /> <!-- Immortal Tunic - Robe -->
+				<item id="17295" min="1" max="1" chance="0.75187969924812" /> <!-- Requiem Stormer -->
+				<item id="17299" min="1" max="1" chance="0.75187969924812" /> <!-- Requiem Caster -->
+				<item id="17298" min="1" max="1" chance="0.75187969924812" /> <!-- Requiem Buster -->
 			</drop>
 			<lucky>
 				<item id="39629" min="1" max="1" chance="100" /> <!-- Fortune Pocket - Stage 1 -->
@@ -5911,7 +6081,6 @@
 		</collision>
 	</npc>
 	<npc id="25697" level="90" type="RaidBoss" name="Torumba" title="Reptilikon">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<skill name="SpecialSkill01_ID" id="6403" level="1" />
 			<skill name="SpecialSkill02_ID" id="6404" level="1" />
@@ -5959,16 +6128,16 @@
 		<ai aggroRange="300" clanHelpRange="300" isAggressive="true" />
 		<dropLists>
 			<drop>
-				<item id="17309" min="1" max="1" chance="4.526" /> <!-- Immortal Shield - Heavy Armor -->
-				<item id="17292" min="1" max="1" chance="0.75" /> <!-- Requiem Slasher -->
-				<item id="17293" min="1" max="1" chance="0.75" /> <!-- Requiem Avenger -->
-				<item id="17294" min="1" max="1" chance="0.75" /> <!-- Requiem Fighter -->
-				<item id="17297" min="1" max="1" chance="0.75" /> <!-- Requiem Shooter -->
-				<item id="17317" min="1" max="1" chance="3.728" /> <!-- Immortal Stockings - Robe -->
-				<item id="17311" min="1" max="1" chance="2.775" /> <!-- Immortal Leather Armor - Light Armor -->
-				<item id="17306" min="1" max="1" chance="0.75" /> <!-- Immortal Gaiters - Heavy Armor -->
-				<item id="17320" min="1" max="1" chance="1.41" /> <!-- Immortal Sigil - Robe -->
-				<item id="17526" min="1" max="1" chance="11.41" /> <!-- Scroll: Enchant Weapon (R-grade) -->
+				<item id="17526" min="1" max="1" chance="10" /> <!-- Scroll: Enchant Weapon (R-grade) -->
+				<item id="17311" min="1" max="1" chance="2.5" /> <!-- Immortal Leather Armor - Light Armor -->
+				<item id="17306" min="1" max="1" chance="2.5" /> <!-- Immortal Gaiters - Heavy Armor -->
+				<item id="17320" min="1" max="1" chance="2.5" /> <!-- Immortal Sigil - Robe -->
+				<item id="17317" min="1" max="1" chance="2.5" /> <!-- Immortal Stockings - Robe -->
+				<item id="17309" min="1" max="1" chance="2.5" /> <!-- Immortal Shield - Heavy Armor -->
+				<item id="17294" min="1" max="1" chance="0.75187969924812" /> <!-- Requiem Fighter -->
+				<item id="17293" min="1" max="1" chance="0.75187969924812" /> <!-- Requiem Avenger -->
+				<item id="17297" min="1" max="1" chance="0.75187969924812" /> <!-- Requiem Shooter -->
+				<item id="17292" min="1" max="1" chance="0.75187969924812" /> <!-- Requiem Slasher -->
 			</drop>
 			<lucky>
 				<item id="39629" min="1" max="1" chance="100" /> <!-- Fortune Pocket - Stage 1 -->
@@ -5980,7 +6149,6 @@
 		</collision>
 	</npc>
 	<npc id="25698" level="90" type="RaidBoss" name="Dopagen" title="Kokracon">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<skill name="Skill01_ID" id="6390" level="1" />
 			<skill name="Skill02_ID" id="6391" level="1" />
@@ -6032,17 +6200,17 @@
 		<ai aggroRange="300" clanHelpRange="300" isAggressive="true" />
 		<dropLists>
 			<drop>
-				<item id="17300" min="1" max="1" chance="0.75" /> <!-- Requiem Retributer -->
-				<item id="17296" min="1" max="1" chance="0.75" /> <!-- Requiem Thrower -->
-				<item id="17291" min="1" max="1" chance="0.75" /> <!-- Requiem Cutter -->
-				<item id="17290" min="1" max="1" chance="0.75" /> <!-- Requiem Shaper -->
-				<item id="17313" min="1" max="1" chance="5.081" /> <!-- Immortal Leather Gloves - Light Armor -->
-				<item id="17319" min="1" max="1" chance="3.398" /> <!-- Immortal Shoes - Robe -->
-				<item id="17308" min="1" max="1" chance="2.528" /> <!-- Immortal Boots - Heavy Armor -->
-				<item id="17318" min="1" max="1" chance="2.072" /> <!-- Immortal Gloves - Robe -->
-				<item id="17304" min="1" max="1" chance="1.100" /> <!-- Immortal Helmet - Heavy Armor -->
-				<item id="17310" min="1" max="1" chance="0.75" /> <!-- Immortal Leather Helmet - Light Armor -->
-				<item id="17526" min="1" max="1" chance="11.41" /> <!-- Scroll: Enchant Weapon (R-grade) -->
+				<item id="17526" min="1" max="1" chance="10" /> <!-- Scroll: Enchant Weapon (R-grade) -->
+				<item id="17319" min="1" max="1" chance="2.5" /> <!-- Immortal Shoes - Robe -->
+				<item id="17313" min="1" max="1" chance="2.5" /> <!-- Immortal Leather Gloves - Light Armor -->
+				<item id="17310" min="1" max="1" chance="2.5" /> <!-- Immortal Leather Helmet - Light Armor -->
+				<item id="17318" min="1" max="1" chance="2.5" /> <!-- Immortal Gloves - Robe -->
+				<item id="17308" min="1" max="1" chance="2.5" /> <!-- Immortal Boots - Heavy Armor -->
+				<item id="17304" min="1" max="1" chance="2.5" /> <!-- Immortal Helmet - Heavy Armor -->
+				<item id="17296" min="1" max="1" chance="0.75187969924812" /> <!-- Requiem Thrower -->
+				<item id="17300" min="1" max="1" chance="0.75187969924812" /> <!-- Requiem Retributer -->
+				<item id="17290" min="1" max="1" chance="0.75187969924812" /> <!-- Requiem Shaper -->
+				<item id="17291" min="1" max="1" chance="0.75187969924812" /> <!-- Requiem Cutter -->
 			</drop>
 			<lucky>
 				<item id="39629" min="1" max="1" chance="100" /> <!-- Fortune Pocket - Stage 1 -->
@@ -6054,7 +6222,6 @@
 		</collision>
 	</npc>
 	<npc id="25699" level="85" type="RaidBoss" name="Glakias" title="Ice Knight Captain">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<skill name="Skill01_ID" id="6293" level="1" />
 			<skill name="Skill02_ID" id="6295" level="1" />

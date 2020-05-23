@@ -82,7 +82,6 @@
 		</collision>
 	</npc>
 	<npc id="25202" level="74" type="RaidBoss" name="Krokian Padisha Sobekk" title="Raid Boss">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<minions name="Privates">
 				<npc id="25203" count="2" respawnTime="360" weightPoint="1" />
@@ -254,7 +253,6 @@
 		</collision>
 	</npc>
 	<npc id="25205" level="76" type="RaidBoss" name="Ocean Flame Ashakiel" title="Raid Boss">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<minions name="Privates">
 				<npc id="25206" count="1" respawnTime="360" weightPoint="1" />
@@ -423,7 +421,6 @@
 		</collision>
 	</npc>
 	<npc id="25208" level="40" type="RaidBoss" name="Water Couatl Ateka" title="Raid Boss">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<minions name="Privates">
 				<npc id="25209" count="3" respawnTime="360" weightPoint="1" />
@@ -579,7 +576,6 @@
 		</collision>
 	</npc>
 	<npc id="25211" level="36" type="RaidBoss" name="Sebek" title="Raid Boss">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<minions name="Privates">
 				<npc id="25212" count="3" respawnTime="360" weightPoint="1" />
@@ -726,7 +722,6 @@
 		</collision>
 	</npc>
 	<npc id="25214" level="40" type="RaidBoss" name="Fafurion's Servant Sika" title="Raid Boss">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<minions name="Privates">
 				<npc id="25215" count="3" respawnTime="360" weightPoint="1" />
@@ -883,7 +878,6 @@
 		</collision>
 	</npc>
 	<npc id="25217" level="50" type="RaidBoss" name="Cursed Clara" title="Raid Boss">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<minions name="Privates">
 				<npc id="25218" count="3" respawnTime="360" weightPoint="1" />
@@ -929,6 +923,20 @@
 			<radius normal="10" />
 			<height normal="25" />
 		</collision>
+		<dropLists>
+			<drop>
+				<item id="8176" min="1" max="1" chance="80" /> <!-- Destruction Tombstone -->
+				<item id="9816" min="1" max="3" chance="80" /> <!-- Earth Egg -->
+				<item id="4603" min="1" max="1" chance="15" /> <!-- Greater CON Dye <Con + 3 Str - 3> -->
+				<item id="4601" min="1" max="1" chance="15" /> <!-- Greater STR Dye <STR + 3 CON - 3> -->
+				<item id="4602" min="1" max="1" chance="15" /> <!-- Greater STR Dye <STR + 3 DEX - 3> -->
+				<item id="951" min="1" max="1" chance="10" /> <!-- Scroll: Enchant Weapon (C-grade) -->
+				<item id="887" min="1" max="1" chance="7.5" /> <!-- Adamantite Ring -->
+				<item id="918" min="1" max="1" chance="5" /> <!-- Adamantite Necklace -->
+				<item id="856" min="1" max="1" chance="3" /> <!-- Adamantite Earring -->
+				<item id="267" min="1" max="1" chance="2.5" /> <!-- Arthro Nail -->
+			</drop>
+		</dropLists>
 	</npc>
 	<npc id="25218" level="49" type="Monster" name="Clara's Marksman" title="Raid Fighter">
 		<!-- Confirmed CT2.5 -->
@@ -1007,7 +1015,6 @@
 		</collision>
 	</npc>
 	<npc id="25220" level="73" type="RaidBoss" name="Death Lord Hallate" title="Raid Boss">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<minions name="Privates">
 				<npc id="25221" count="3" respawnTime="360" weightPoint="1" />
@@ -1055,6 +1062,22 @@
 			<radius normal="21" grown="25" />
 			<height normal="40" grown="48" />
 		</collision>
+		<dropLists>
+			<drop>
+				<item id="8176" min="1" max="4" chance="80" /> <!-- Destruction Tombstone -->
+				<item id="9814" min="3" max="7" chance="80" /> <!-- Memento Mori -->
+				<item id="8619" min="1" max="1" chance="50" /> <!-- Ancient Book: Divine Inspiration (Original Language Version) -->
+				<item id="5480" min="28" max="84" chance="10" /> <!-- Sealed Leather Armor of Nightmare Fabric -->
+				<item id="960" min="1" max="1" chance="10" /> <!-- Scroll: Enchant Armor (S-grade) -->
+				<item id="5534" min="20" max="60" chance="6" /> <!-- Soul Bow Shaft -->
+				<item id="5323" min="1" max="1" chance="4" /> <!-- Sealed Majestic Leather Armor -->
+				<item id="5320" min="1" max="1" chance="4" /> <!-- Sealed Leather Armor of Nightmare -->
+				<item id="5481" min="81" max="243" chance="4" /> <!-- Sealed Majestic Leather Armor Fabric -->
+				<item id="959" min="1" max="1" chance="2.5" /> <!-- Scroll: Enchant Weapon (S-grade) -->
+				<item id="289" min="1" max="1" chance="1.5" /> <!-- Soul Bow -->
+				<item id="6577" min="1" max="1" chance="0.75187969924812" /> <!-- Blessed Scroll: Enchant Weapon (S-grade) -->
+			</drop>
+		</dropLists>
 	</npc>
 	<npc id="25221" level="72" type="Monster" name="Death Mage Krician" title="Raid Fighter">
 		<!-- Confirmed CT2.5 -->
@@ -1143,7 +1166,6 @@
 		</collision>
 	</npc>
 	<npc id="25223" level="35" type="RaidBoss" name="Soul Collector Acheron" title="Raid Boss">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<minions name="Privates">
 				<npc id="25224" count="3" respawnTime="360" weightPoint="1" />
@@ -1192,6 +1214,18 @@
 			<radius normal="18" />
 			<height normal="63" />
 		</collision>
+		<dropLists>
+			<drop>
+				<item id="4600" min="1" max="3" chance="25" /> <!-- Greater WIT Dye <Wit + 2 Men - 2> -->
+				<item id="2428" min="1" max="1" chance="15" /> <!-- Plate Boots -->
+				<item id="61" min="1" max="1" chance="15" /> <!-- Mithril Gloves -->
+				<item id="2451" min="1" max="1" chance="15" /> <!-- Sage's Worn Gloves -->
+				<item id="607" min="1" max="1" chance="15" /> <!-- Ogre Power Gauntlets -->
+				<item id="2427" min="1" max="1" chance="15" /> <!-- Salamander Skin Boots -->
+				<item id="1125" min="1" max="1" chance="15" /> <!-- Assault Boots -->
+				<item id="225" min="1" max="1" chance="5" /> <!-- Mithril Dagger -->
+			</drop>
+		</dropLists>
 	</npc>
 	<npc id="25224" level="34" type="Monster" name="Soul Slasher" title="Raid Fighter">
 		<!-- Confirmed CT2.5 -->
@@ -1276,7 +1310,6 @@
 		</collision>
 	</npc>
 	<npc id="25226" level="62" type="RaidBoss" name="Roaring Lord Kastor" title="Raid Boss">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<minions name="Privates">
 				<npc id="25227" count="2" respawnTime="360" weightPoint="1" />
@@ -1443,7 +1476,6 @@
 		</collision>
 	</npc>
 	<npc id="25230" level="57" type="RaidBoss" name="Timak Priest Ragoth" title="Raid Boss">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<minions name="Privates">
 				<npc id="25231" count="1" respawnTime="360" weightPoint="1" />
@@ -1608,7 +1640,6 @@
 		</collision>
 	</npc>
 	<npc id="25233" level="69" type="RaidBoss" name="Spirit of Andras, the Betrayer" title="Raid Boss">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="RaidSpawnMusic" value="Rm01_A" />
 			<skill name="SelfRangeCancel_a" id="4177" level="6" />
@@ -1705,7 +1736,6 @@
 		</collision>
 	</npc>
 	<npc id="25234" level="60" type="RaidBoss" name="Ancient Weird Drake" title="Raid Boss">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="RaidSpawnMusic" value="Rm01_A" />
 			<skill name="SelfRangeCancel_a" id="4177" level="6" />
@@ -1754,9 +1784,21 @@
 			<radius normal="45" />
 			<height normal="150" />
 		</collision>
+		<dropLists>
+			<drop>
+				<item id="8176" min="1" max="2" chance="80" /> <!-- Destruction Tombstone -->
+				<item id="9815" min="1" max="4" chance="80" /> <!-- Dragon Heart -->
+				<item id="5292" min="1" max="1" chance="10" /> <!-- Sealed Dark Crystal Shield -->
+				<item id="5289" min="1" max="1" chance="5" /> <!-- Sealed Dark Crystal Helmet -->
+				<item id="5294" min="1" max="1" chance="5" /> <!-- Sealed Tallum Helmet -->
+				<item id="729" min="1" max="1" chance="2.5" /> <!-- Scroll: Enchant Weapon (A-grade) -->
+				<item id="2504" min="1" max="1" chance="1.25" /> <!-- Meteor Shower -->
+				<item id="212" min="1" max="1" chance="1.25" /> <!-- Dasparion's Staff -->
+				<item id="6569" min="1" max="1" chance="0.75187969924812" /> <!-- Blessed Scroll: Enchant Weapon (A-grade) -->
+			</drop>
+		</dropLists>
 	</npc>
 	<npc id="25235" level="72" type="RaidBoss" name="Vanor Chief Kandra" title="Raid Boss">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<minions name="Privates">
 				<npc id="25236" count="2" respawnTime="360" weightPoint="1" />
@@ -1922,7 +1964,6 @@
 		</collision>
 	</npc>
 	<npc id="25238" level="59" type="RaidBoss" name="Abyss Brukunt" title="Raid Boss">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<minions name="Privates">
 				<npc id="25239" count="2" respawnTime="360" weightPoint="1" />
@@ -2078,7 +2119,6 @@
 		</collision>
 	</npc>
 	<npc id="25241" level="55" type="RaidBoss" name="Harit Hero Tamash" title="Raid Boss">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<minions name="Privates">
 				<npc id="25242" count="3" respawnTime="360" weightPoint="1" />
@@ -2246,7 +2286,6 @@
 		</collision>
 	</npc>
 	<npc id="25244" level="75" type="RaidBoss" name="Last Lesser Giant Olkuth" title="Raid Boss">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="RaidSpawnMusic" value="Rm01_A" />
 			<skill name="SelfRangeCancel_a" id="4177" level="8" />
@@ -2336,7 +2375,6 @@
 		</collision>
 	</npc>
 	<npc id="25245" level="78" type="RaidBoss" name="Last Lesser Giant Glaki" title="Raid Boss">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<minions name="Privates">
 				<npc id="25246" count="1" respawnTime="360" weightPoint="1" />
@@ -2504,7 +2542,6 @@
 		</collision>
 	</npc>
 	<npc id="25248" level="72" type="RaidBoss" name="Doom Blade Thanatos" title="Raid Boss">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="RaidSpawnMusic" value="Rm01_A" />
 			<param name="doSummonNPC" value="1" />
@@ -2596,7 +2633,6 @@
 		</collision>
 	</npc>
 	<npc id="25252" level="70" type="RaidBoss" name="Palibati Queen Themis" title="Raid Boss">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<minions name="Privates">
 				<npc id="25253" count="3" respawnTime="360" weightPoint="1" />
@@ -2777,7 +2813,6 @@
 		</collision>
 	</npc>
 	<npc id="25255" level="65" type="RaidBoss" name="Gargoyle Lord Tiphon" title="Raid Boss">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="RaidSpawnMusic" value="Rm01_A" />
 			<skill name="SelfRangeCancel_a" id="4177" level="6" />
@@ -2869,7 +2904,6 @@
 		</collision>
 	</npc>
 	<npc id="25256" level="60" type="RaidBoss" name="Taik High Prefect Arak" title="Raid Boss">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<minions name="Privates">
 				<npc id="25257" count="3" respawnTime="360" weightPoint="1" />
@@ -3028,7 +3062,6 @@
 		</collision>
 	</npc>
 	<npc id="25259" level="55" type="RaidBoss" name="Zaken's Butcher Krantz" title="Raid Boss">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="RaidSpawnMusic" value="Rm01_A" />
 			<skill name="SelfRangeCancel_a" id="4177" level="5" />
@@ -3103,7 +3136,6 @@
 		</collision>
 	</npc>
 	<npc id="25260" level="45" type="RaidBoss" name="Iron Giant Totem" title="Raid Boss">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<minions name="Privates">
 				<npc id="25261" count="3" respawnTime="360" weightPoint="1" />
@@ -3264,7 +3296,6 @@
 		</collision>
 	</npc>
 	<npc id="25266" level="75" type="RaidBoss" name="Bloody Empress Decarbia" title="Raid Boss">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<minions name="Privates">
 				<npc id="25267" count="4" respawnTime="360" weightPoint="1" />
@@ -3316,6 +3347,17 @@
 			<radius normal="14" />
 			<height normal="31" />
 		</collision>
+		<dropLists>
+			<drop>
+				<item id="960" min="1" max="1" chance="10" /> <!-- Scroll: Enchant Armor (S-grade) -->
+				<item id="6694" min="12" max="36" chance="7.5" /> <!-- Saint Spear Blade -->
+				<item id="6684" min="1" max="1" chance="2.75" /> <!-- Sealed Major Arcana Robe -->
+				<item id="959" min="1" max="1" chance="2.5" /> <!-- Scroll: Enchant Weapon (S-grade) -->
+				<item id="6711" min="105" max="315" chance="2.5" /> <!-- Sealed Major Arcana Robe Part -->
+				<item id="6370" min="1" max="1" chance="1" /> <!-- Saint Spear -->
+				<item id="6577" min="1" max="1" chance="0.75187969924812" /> <!-- Blessed Scroll: Enchant Weapon (S-grade) -->
+			</drop>
+		</dropLists>
 	</npc>
 	<npc id="25267" level="74" type="Monster" name="Decarbia's Royal Guard" title="Raid Fighter">
 		<!-- Confirmed CT2.5 -->
@@ -3402,7 +3444,6 @@
 		</collision>
 	</npc>
 	<npc id="25269" level="70" type="RaidBoss" name="Beast Lord Behemoth" title="Raid Boss">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<minions name="Privates">
 				<npc id="25270" count="3" respawnTime="360" weightPoint="1" />
@@ -3561,7 +3602,6 @@
 		</collision>
 	</npc>
 	<npc id="25272" level="28" type="RaidBoss" name="Partisan Commander Talakin" title="Raid Boss">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="RaidSpawnMusic" value="Rm01_A" />
 			<skill name="SelfRangeCancel_a" id="4177" level="2" />
@@ -3637,7 +3677,6 @@
 		</collision>
 	</npc>
 	<npc id="25273" level="50" type="RaidBoss" name="Carnamakos" title="Raid Boss">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<minions name="Privates">
 				<npc id="25274" count="3" respawnTime="360" weightPoint="1" />
@@ -3801,7 +3840,6 @@
 		</collision>
 	</npc>
 	<npc id="25277" level="50" type="RaidBoss" name="Lilith' Witch Marilion" title="Raid Boss">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<minions name="Privates">
 				<npc id="25278" count="2" respawnTime="360" weightPoint="1" />
@@ -3850,6 +3888,20 @@
 			<radius normal="21" />
 			<height normal="64" />
 		</collision>
+		<dropLists>
+			<drop>
+				<item id="9814" min="2" max="5" chance="80" /> <!-- Memento Mori -->
+				<item id="8176" min="1" max="3" chance="60" /> <!-- Destruction Tombstone -->
+				<item id="4604" min="1" max="3" chance="15" /> <!-- Greater CON Dye <Con + 3 DEX - 3> -->
+				<item id="4606" min="1" max="3" chance="15" /> <!-- Greater DEX Dye <Dex + 3 CON - 3> -->
+				<item id="4605" min="1" max="3" chance="15" /> <!-- Greater DEX Dye <Dex + 3 Str - 3> -->
+				<item id="554" min="1" max="1" chance="5" /> <!-- Sealed Zubei's Boots -->
+				<item id="284" min="1" max="1" chance="3" /> <!-- Dark Elven Longbow -->
+				<item id="600" min="1" max="1" chance="3" /> <!-- Sealed Avadon Boots -->
+				<item id="612" min="1" max="1" chance="2.5" /> <!-- Sealed Zubei's Gauntlets -->
+				<item id="2464" min="1" max="1" chance="1.5" /> <!-- Sealed Avadon Gloves -->
+			</drop>
+		</dropLists>
 	</npc>
 	<npc id="25278" level="49" type="Monster" name="Dead Soul of the Branded" title="Raid Fighter">
 		<!-- Confirmed CT2.5 -->
@@ -3934,7 +3986,6 @@
 		</collision>
 	</npc>
 	<npc id="25280" level="55" type="RaidBoss" name="Pagan Watchman Cerberon" title="Raid Boss">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="RaidSpawnMusic" value="Rm02_A" />
 			<param name="SSQLoserTeleport" value="1" />
@@ -3984,9 +4035,20 @@
 			<radius normal="19" />
 			<height normal="48" />
 		</collision>
+		<dropLists>
+			<drop>
+				<item id="9818" min="2" max="6" chance="80" /> <!-- Angelic Essence -->
+				<item id="8176" min="1" max="3" chance="80" /> <!-- Destruction Tombstone -->
+				<item id="947" min="1" max="1" chance="9" /> <!-- Scroll: Enchant Weapon (B-grade) -->
+				<item id="300" min="1" max="1" chance="5" /> <!-- Great Axe -->
+				<item id="856" min="1" max="1" chance="4" /> <!-- Adamantite Earring -->
+				<item id="887" min="1" max="1" chance="3" /> <!-- Adamantite Ring -->
+				<item id="918" min="1" max="1" chance="1.5" /> <!-- Adamantite Necklace -->
+				<item id="6571" min="1" max="1" chance="0.75187969924812" /> <!-- Blessed Scroll: Enchant Weapon (B-grade) -->
+			</drop>
+		</dropLists>
 	</npc>
 	<npc id="25281" level="70" type="RaidBoss" name="Anakim's Nemesis Zakaron" title="Raid Boss">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="RaidSpawnMusic" value="Rm01_A" />
 			<param name="doSummonNPC" value="1" />
@@ -4037,9 +4099,22 @@
 			<radius normal="37" />
 			<height normal="136.5" />
 		</collision>
+		<dropLists>
+			<drop>
+				<item id="8176" min="1" max="4" chance="80" /> <!-- Destruction Tombstone -->
+				<item id="9814" min="3" max="7" chance="80" /> <!-- Memento Mori -->
+				<item id="8619" min="1" max="1" chance="50" /> <!-- Ancient Book: Divine Inspiration (Original Language Version) -->
+				<item id="5318" min="1" max="1" chance="5" /> <!-- Sealed Majestic Gauntlets -->
+				<item id="5319" min="1" max="1" chance="5" /> <!-- Sealed Majestic Boots -->
+				<item id="959" min="1" max="1" chance="2.5" /> <!-- Scroll: Enchant Weapon (S-grade) -->
+				<item id="5313" min="1" max="1" chance="2" /> <!-- Sealed Gauntlets of Nightmare -->
+				<item id="5314" min="1" max="1" chance="2" /> <!-- Sealed Boots of Nightmare -->
+				<item id="236" min="1" max="1" chance="1.75" /> <!-- Soul Separator -->
+				<item id="6577" min="1" max="1" chance="0.75187969924812" /> <!-- Blessed Scroll: Enchant Weapon (S-grade) -->
+			</drop>
+		</dropLists>
 	</npc>
 	<npc id="25282" level="75" type="RaidBoss" name="Death Lord Shax" title="Raid Boss">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="RaidSpawnMusic" value="Rm01_A" />
 			<param name="SSQLoserTeleport" value="1" />
@@ -4092,9 +4167,24 @@
 			<radius normal="31" />
 			<height normal="61.5" />
 		</collision>
+		<dropLists>
+			<drop>
+				<item id="6681" min="1" max="1" chance="3" /> <!-- Sealed Draconic Leather Gloves -->
+				<item id="6685" min="1" max="1" chance="3" /> <!-- Sealed Major Arcana Gloves -->
+				<item id="6676" min="1" max="1" chance="3" /> <!-- Sealed Imperial Crusader Gauntlets -->
+				<item id="6682" min="1" max="1" chance="3" /> <!-- Sealed Draconic Leather Boots -->
+				<item id="6677" min="1" max="1" chance="3" /> <!-- Sealed Imperial Crusader Boots -->
+				<item id="6686" min="1" max="1" chance="3" /> <!-- Sealed Major Arcana Boots -->
+				<item id="959" min="1" max="1" chance="2.5" /> <!-- Scroll: Enchant Weapon (S-grade) -->
+				<item id="6577" min="1" max="1" chance="0.75187969924812" /> <!-- Blessed Scroll: Enchant Weapon (S-grade) -->
+				<item id="6365" min="1" max="1" chance="0.3003003003003" /> <!-- Basalt Battlehammer -->
+				<item id="6366" min="1" max="1" chance="0.3003003003003" /> <!-- Imperial Staff -->
+				<item id="6579" min="1" max="1" chance="0.3003003003003" /> <!-- Arcana Mace -->
+				<item id="6369" min="1" max="1" chance="0.3003003003003" /> <!-- Dragon Hunter Axe -->
+			</drop>
+		</dropLists>
 	</npc>
 	<npc id="25283" level="89" type="GrandBoss" name="Lilith" title="Apostle">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<minions name="Privates">
 				<npc id="25284" count="4" respawnTime="360" weightPoint="1" />
@@ -4560,7 +4650,6 @@
 		</collision>
 	</npc>
 	<npc id="25291" level="77" type="Monster" name="Daimon's Family" title="Raid Fighter">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<skill name="DDMagic_a" id="4194" level="8" />
 			<skill name="Debuff_a" id="4205" level="8" />
@@ -4601,7 +4690,6 @@
 		</collision>
 	</npc>
 	<npc id="25292" level="77" type="Monster" name="Daimon's Family" title="Raid Fighter">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<skill name="HealMagic_a" id="4209" level="8" />
 			<skill name="SelfRangeBuff_a" id="4212" level="8" />
@@ -4644,7 +4732,6 @@
 		</collision>
 	</npc>
 	<npc id="25293" level="78" type="RaidBoss" name="Hestia, Guardian Deity of the Hot Springs" title="Raid Boss">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<minions name="Privates">
 				<npc id="25294" count="1" respawnTime="360" weightPoint="1" />
@@ -4807,7 +4894,6 @@
 		</collision>
 	</npc>
 	<npc id="25296" level="74" type="RaidBoss" name="Icicle Emperor Bumbalump" title="Raid Boss">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<minions name="Privates">
 				<npc id="25297" count="3" respawnTime="360" weightPoint="1" />
@@ -4964,7 +5050,6 @@
 		</collision>
 	</npc>
 	<npc id="25299" level="80" type="RaidBoss" name="Ketra's Hero Hekaton" title="Raid Boss">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<minions name="Privates">
 				<npc id="25300" count="3" respawnTime="360" weightPoint="1" />

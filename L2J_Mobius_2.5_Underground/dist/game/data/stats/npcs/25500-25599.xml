@@ -36,7 +36,6 @@
 		</collision>
 	</npc>
 	<npc id="25501" level="30" type="RaidBoss" name="Grave Robber Leader Akata" title="Raid Boss">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<minions name="Privates">
 				<npc id="25502" count="3" respawnTime="360" weightPoint="1" />
@@ -176,7 +175,6 @@
 		</collision>
 	</npc>
 	<npc id="25504" level="39" type="RaidBoss" name="Nellis' Vengeful Spirit" title="Raid Boss">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<minions name="Privates">
 				<npc id="25505" count="3" respawnTime="360" weightPoint="1" />
@@ -289,7 +287,6 @@
 		</collision>
 	</npc>
 	<npc id="25506" level="37" type="RaidBoss" name="Rayito the Looter" title="Raid Boss">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<minions name="Privates">
 				<npc id="25507" count="1" respawnTime="360" weightPoint="1" />
@@ -431,7 +428,6 @@
 		</collision>
 	</npc>
 	<npc id="25509" level="53" type="RaidBoss" name="Dark Shaman Varangka" title="Raid Boss">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<minions name="Privates">
 				<npc id="25511" count="4" respawnTime="360" weightPoint="1" />
@@ -482,6 +478,23 @@
 			<radius normal="13" />
 			<height normal="20.8" />
 		</collision>
+		<dropLists>
+			<drop>
+				<item id="8176" min="1" max="1" chance="80" /> <!-- Destruction Tombstone -->
+				<item id="9814" min="1" max="3" chance="80" /> <!-- Memento Mori -->
+				<item id="4615" min="1" max="1" chance="10" /> <!-- Greater CON Dye <Con + 4 Str - 4> -->
+				<item id="4613" min="1" max="1" chance="10" /> <!-- Greater STR Dye <STR + 4 CON - 4> -->
+				<item id="4614" min="1" max="1" chance="10" /> <!-- Greater STR Dye <STR + 4 DEX - 4> -->
+				<item id="2406" min="1" max="1" chance="5" /> <!-- Avadon Robe -->
+				<item id="947" min="1" max="1" chance="2.5" /> <!-- Scroll: Enchant Weapon (B-grade) -->
+				<item id="2397" min="1" max="1" chance="2.5" /> <!-- Tunic of Zubei -->
+				<item id="2402" min="1" max="1" chance="2.5" /> <!-- Stockings of Zubei -->
+				<item id="7900" min="1" max="1" chance="1.5" /> <!-- Ice Storm Hammer -->
+				<item id="92" min="1" max="1" chance="1.5" /> <!-- Spirit's Staff -->
+				<item id="7892" min="1" max="1" chance="1.5" /> <!-- Spell Breaker -->
+				<item id="91" min="1" max="1" chance="1.5" /> <!-- Heavy War Axe -->
+			</drop>
+		</dropLists>
 	</npc>
 	<npc id="25510" level="52" type="Monster" name="Varangka's Descendant" title="Raid Fighter">
 		<!-- Confirmed CT2.5 -->
@@ -560,7 +573,6 @@
 		</collision>
 	</npc>
 	<npc id="25512" level="52" type="RaidBoss" name="Gigantic Chaos Golem" title="Raid Boss">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="RaidSpawnMusic" value="Rm03_A" />
 			<skill name="SelfRangeCancel_a" id="4177" level="5" />
@@ -615,9 +627,24 @@
 			<radius normal="31" />
 			<height normal="51.8" />
 		</collision>
+		<dropLists>
+			<drop>
+				<item id="8176" min="1" max="1" chance="80" /> <!-- Destruction Tombstone -->
+				<item id="9817" min="1" max="3" chance="80" /> <!-- Nonliving Nucleus -->
+				<item id="4604" min="1" max="3" chance="10" /> <!-- Greater CON Dye <Con + 3 DEX - 3> -->
+				<item id="4606" min="1" max="3" chance="10" /> <!-- Greater DEX Dye <Dex + 3 CON - 3> -->
+				<item id="4605" min="1" max="3" chance="10" /> <!-- Greater DEX Dye <Dex + 3 Str - 3> -->
+				<item id="2376" min="1" max="1" chance="3.5" /> <!-- Avadon Breastplate -->
+				<item id="357" min="1" max="1" chance="3.5" /> <!-- Zubei's Breastplate -->
+				<item id="2379" min="1" max="1" chance="3.5" /> <!-- Avadon Gaiters -->
+				<item id="383" min="1" max="1" chance="3.5" /> <!-- Zubei's Gaiters -->
+				<item id="78" min="1" max="1" chance="1.5" /> <!-- Great Sword -->
+				<item id="142" min="1" max="1" chance="1.5" /> <!-- Keshanberk -->
+				<item id="148" min="1" max="1" chance="1.5" /> <!-- Sword of Valhalla -->
+			</drop>
+		</dropLists>
 	</npc>
 	<npc id="25514" level="80" type="RaidBoss" name="Queen Shyeed" title="Raid Boss">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<minions name="Privates">
 				<npc id="25516" count="1" respawnTime="360" weightPoint="1" />
@@ -663,6 +690,17 @@
 			<radius normal="45" />
 			<height normal="50.8" />
 		</collision>
+		<dropLists>
+			<drop>
+				<item id="3936" min="1" max="1" chance="20" /> <!-- Blessed Scroll of Resurrection -->
+				<item id="6687" min="1" max="1" chance="5" /> <!-- Sealed Major Arcana Circlet -->
+				<item id="6683" min="1" max="1" chance="5" /> <!-- Sealed Draconic Leather Helmet -->
+				<item id="6679" min="1" max="1" chance="5" /> <!-- Sealed Imperial Crusader Helmet -->
+				<item id="6678" min="1" max="1" chance="5" /> <!-- Sealed Imperial Crusader Shield -->
+				<item id="6578" min="1" max="1" chance="2" /> <!-- Blessed Scroll: Enchant Armor (S-grade) -->
+				<item id="6367" min="1" max="1" chance="0.75187969924812" /> <!-- Angel Slayer -->
+			</drop>
+		</dropLists>
 	</npc>
 	<npc id="25515" level="79" type="Monster" name="Spiked Stakato" title="Raid Fighter">
 		<!-- Confirmed CT2.5 -->
@@ -746,7 +784,6 @@
 		</collision>
 	</npc>
 	<npc id="25523" level="73" type="RaidBoss" name="Plague Golem" title="Raid Boss">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="RaidSpawnMusic" value="Rm01_A" />
 			<skill name="SelfRangeCancel_a" id="4177" level="7" />
@@ -811,7 +848,6 @@
 		</collision>
 	</npc>
 	<npc id="25524" level="76" type="RaidBoss" name="Flamestone Giant" title="Raid Boss">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<minions name="Privates">
 				<npc id="25525" count="2" respawnTime="360" weightPoint="1" />
@@ -955,7 +991,6 @@
 		</collision>
 	</npc>
 	<npc id="25527" level="80" type="RaidBoss" name="Uruka" title="Raid Boss">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="RaidSpawnMusic" value="Rm03_A" />
 			<skill name="SelfRangeCancel_a" id="4177" level="10" />
@@ -1018,7 +1053,6 @@
 		</collision>
 	</npc>
 	<npc id="25528" level="22" type="RaidBoss" name="Tiberias" title="Prime Inspector">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveArounding" value="0" />
 			<param name="Party_Type" value="2" />
@@ -1201,7 +1235,6 @@
 		</collision>
 	</npc>
 	<npc id="25531" level="81" type="RaidBoss" name="Darnel" title="Torture Maiden">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="InzoneRestriction" value="1" />
 			<skill name="SelfRangeDebuff_a" id="4182" level="9" />
@@ -1251,9 +1284,21 @@
 			<radius normal="20" />
 			<height normal="40.5985" />
 		</collision>
+		<dropLists>
+			<drop>
+				<item id="6578" min="1" max="1" chance="4" /> <!-- Blessed Scroll: Enchant Armor (S-grade) -->
+				<item id="6687" min="1" max="1" chance="4" /> <!-- Sealed Major Arcana Circlet -->
+				<item id="6683" min="1" max="1" chance="4" /> <!-- Sealed Draconic Leather Helmet -->
+				<item id="6679" min="1" max="1" chance="4" /> <!-- Sealed Imperial Crusader Helmet -->
+				<item id="6678" min="1" max="1" chance="4" /> <!-- Sealed Imperial Crusader Shield -->
+				<item id="9468" min="1" max="1" chance="2" /> <!-- Dynasty Necklace - Sleep Resistance -->
+				<item id="9474" min="1" max="1" chance="2" /> <!-- Dynasty Necklace - Hold Resistance -->
+				<item id="9477" min="1" max="1" chance="2" /> <!-- Dynasty Necklace - Fear Resistance -->
+				<item id="7575" min="1" max="1" chance="0.75187969924812" /> <!-- Draconic Bow -->
+			</drop>
+		</dropLists>
 	</npc>
 	<npc id="25532" level="82" type="RaidBoss" name="Kechi" title="Flaming">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="InzoneRestriction" value="1" />
 			<skill name="selfbuff1" id="5418" level="1" />
@@ -1305,6 +1350,26 @@
 			<radius normal="12" />
 			<height normal="29" />
 		</collision>
+		<dropLists>
+			<drop>
+				<item id="6578" min="1" max="1" chance="2.5" /> <!-- Blessed Scroll: Enchant Armor (S-grade) -->
+				<item id="6681" min="1" max="1" chance="2" /> <!-- Sealed Draconic Leather Gloves -->
+				<item id="6685" min="1" max="1" chance="2" /> <!-- Sealed Major Arcana Gloves -->
+				<item id="6682" min="1" max="1" chance="2" /> <!-- Sealed Draconic Leather Boots -->
+				<item id="6677" min="1" max="1" chance="2" /> <!-- Sealed Imperial Crusader Boots -->
+				<item id="6686" min="1" max="1" chance="2" /> <!-- Sealed Major Arcana Boots -->
+				<item id="6676" min="1" max="1" chance="1.99999" /> <!-- Sealed Imperial Crusader Gauntlets -->
+				<item id="10300" min="1" max="1" chance="1" /> <!-- Transformation Sealbook: Kechi -->
+				<item id="9459" min="1" max="1" chance="1" /> <!-- Dynasty Necklace - Stun Resistance -->
+				<item id="9462" min="1" max="1" chance="1" /> <!-- Dynasty Necklace - Poison Resistance -->
+				<item id="9465" min="1" max="1" chance="1" /> <!-- Dynasty Necklace - Bleed Resistance -->
+				<item id="9471" min="1" max="1" chance="1" /> <!-- Dynasty Necklace - Paralysis Resistance -->
+				<item id="6365" min="1" max="1" chance="0.75187969924812" /> <!-- Basalt Battlehammer -->
+				<item id="6366" min="1" max="1" chance="0.75187969924812" /> <!-- Imperial Staff -->
+				<item id="6579" min="1" max="1" chance="0.75187969924812" /> <!-- Arcana Mace -->
+				<item id="6369" min="1" max="1" chance="0.75187969924812" /> <!-- Dragon Hunter Axe -->
+			</drop>
+		</dropLists>
 	</npc>
 	<npc id="25533" level="82" type="Monster" name="Kechi's Henchman">
 		<!-- Confirmed CT2.5 -->
@@ -1360,7 +1425,6 @@
 		</collision>
 	</npc>
 	<npc id="25534" level="83" type="RaidBoss" name="Tears" title="Ice">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="InzoneRestriction" value="1" />
 			<skill name="W_LongRangeDDMagic" id="5238" level="1" />
@@ -1413,9 +1477,16 @@
 			<radius normal="20" />
 			<height normal="27.5" />
 		</collision>
+		<dropLists>
+			<drop>
+				<item id="6707" min="105" max="315" chance="40" /> <!-- Sealed Draconic Leather Armor Part -->
+				<item id="7579" min="96" max="288" chance="15" /> <!-- Draconic Bow Shaft -->
+				<item id="6680" min="1" max="1" chance="0.75187969924812" /> <!-- Sealed Draconic Leather Armor -->
+				<item id="7575" min="1" max="1" chance="0.3003003003003" /> <!-- Draconic Bow -->
+			</drop>
+		</dropLists>
 	</npc>
 	<npc id="25535" level="83" type="Monster" name="Tears" title="Ice">
-		<!-- Confirmed CT2.5 -->
 		<race>ELEMENTAL</race>
 		<sex>FEMALE</sex>
 		<equipment rhand="9638" lhand="9638" /> <!-- Tears r1 / Tears r1 -->
@@ -1459,7 +1530,6 @@
 		</collision>
 	</npc>
 	<npc id="25536" level="81" type="RaidBoss" name="Hannibal" title="Raid Boss">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<minions name="Privates">
 				<npc id="25537" count="1" respawnTime="60" weightPoint="1" />
@@ -1514,6 +1584,16 @@
 			<radius normal="20" />
 			<height normal="40.5985" />
 		</collision>
+		<dropLists>
+			<drop>
+				<item id="6687" min="1" max="1" chance="10" /> <!-- Sealed Major Arcana Circlet -->
+				<item id="6683" min="1" max="1" chance="10" /> <!-- Sealed Draconic Leather Helmet -->
+				<item id="6679" min="1" max="1" chance="10" /> <!-- Sealed Imperial Crusader Helmet -->
+				<item id="6678" min="1" max="1" chance="9.99999" /> <!-- Sealed Imperial Crusader Shield -->
+				<item id="6364" min="1" max="1" chance="0.75187969924812" /> <!-- Forgotten Blade -->
+				<item id="6372" min="1" max="1" chance="0.75187969924812" /> <!-- Heaven's Divider -->
+			</drop>
+		</dropLists>
 	</npc>
 	<npc id="25537" level="81" type="Monster" name="Enmity" title="Raid Fighter">
 		<!-- Confirmed CT2.5 -->
@@ -1602,7 +1682,6 @@
 		</collision>
 	</npc>
 	<npc id="25539" level="81" type="RaidBoss" name="Typhoon" title="Raid Boss">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="IsAggressive" value="1" />
 			<param name="Aggressive_Time" value="0" />
@@ -1659,9 +1738,19 @@
 			<radius normal="15" />
 			<height normal="32.5" />
 		</collision>
+		<dropLists>
+			<drop>
+				<item id="6681" min="1" max="1" chance="10" /> <!-- Sealed Draconic Leather Gloves -->
+				<item id="6685" min="1" max="1" chance="10" /> <!-- Sealed Major Arcana Gloves -->
+				<item id="6682" min="1" max="1" chance="10" /> <!-- Sealed Draconic Leather Boots -->
+				<item id="6677" min="1" max="1" chance="10" /> <!-- Sealed Imperial Crusader Boots -->
+				<item id="6686" min="1" max="1" chance="10" /> <!-- Sealed Major Arcana Boots -->
+				<item id="6676" min="1" max="1" chance="9.99998" /> <!-- Sealed Imperial Crusader Gauntlets -->
+				<item id="7575" min="1" max="1" chance="0.75187969924812" /> <!-- Draconic Bow -->
+			</drop>
+		</dropLists>
 	</npc>
 	<npc id="25540" level="83" type="RaidBoss" name="Demon Prince" title="Raid Boss">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="IsAggressive" value="1" />
 			<param name="Aggressive_Time" value="5" />
@@ -1778,7 +1867,6 @@
 		</collision>
 	</npc>
 	<npc id="25542" level="83" type="RaidBoss" name="Ranku" title="Raid Boss">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="IsAggressive" value="1" />
 			<param name="Aggressive_Time" value="5" />
@@ -1900,7 +1988,6 @@
 		</collision>
 	</npc>
 	<npc id="25544" level="83" type="RaidBoss" name="Tully" title="Steel Citadel">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="IsAggressive" value="1" />
 			<param name="Aggressive_Time" value="5" />
@@ -1955,6 +2042,14 @@
 			<radius normal="19" />
 			<height normal="32.5" />
 		</collision>
+		<dropLists>
+			<drop>
+				<item id="7579" min="96" max="288" chance="50" /> <!-- Draconic Bow Shaft -->
+				<item id="6707" min="105" max="315" chance="50" /> <!-- Sealed Draconic Leather Armor Part -->
+				<item id="6680" min="1" max="1" chance="3" /> <!-- Sealed Draconic Leather Armor -->
+				<item id="7575" min="1" max="1" chance="1.5" /> <!-- Draconic Bow -->
+			</drop>
+		</dropLists>
 	</npc>
 	<npc id="25545" level="83" type="Monster" name="Tully's Banshee" title="Raid Fighter">
 		<!-- Confirmed CT2.5 -->
@@ -2007,7 +2102,6 @@
 		</collision>
 	</npc>
 	<npc id="25546" level="95" type="RaidBoss" name="Betrayed Rhianna" title="Forsaken Prisoner">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<minions name="Privates">
 				<npc id="25547" count="2" respawnTime="360" weightPoint="1" />
@@ -2146,7 +2240,6 @@
 		</collision>
 	</npc>
 	<npc id="25549" level="95" type="RaidBoss" name="Tesla the Deceiver" title="Forsaken Prisoner">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<minions name="Privates">
 				<npc id="25550" count="3" respawnTime="360" weightPoint="1" />
@@ -2289,7 +2382,6 @@
 		</collision>
 	</npc>
 	<npc id="25552" level="95" type="RaidBoss" name="Soul Hunter Chakundel" title="Forsaken Prisoner">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="RaidSpawnMusic" value="Rm01_A" />
 			<param name="CouldDespawn" value="1" />
@@ -2348,7 +2440,6 @@
 		</collision>
 	</npc>
 	<npc id="25553" level="97" type="RaidBoss" name="Durango the Crusher" title="Forsaken Prisoner">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="RaidSpawnMusic" value="Rm03_A" />
 			<param name="doSummonNPC" value="1" />
@@ -2408,7 +2499,6 @@
 		</collision>
 	</npc>
 	<npc id="25554" level="97" type="RaidBoss" name="Brutus the Obstinate" title="Forsaken Prisoner">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<minions name="Privates">
 				<npc id="25555" count="1" respawnTime="360" weightPoint="1" />
@@ -2565,7 +2655,6 @@
 		</collision>
 	</npc>
 	<npc id="25557" level="97" type="RaidBoss" name="Ranger Karankawa" title="Forsaken Prisoner">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<minions name="Privates">
 				<npc id="25558" count="3" respawnTime="360" weightPoint="1" />
@@ -2719,7 +2808,6 @@
 		</collision>
 	</npc>
 	<npc id="25560" level="97" type="RaidBoss" name="Sargon the Mad" title="Forsaken Prisoner">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<minions name="Privates">
 				<npc id="25561" count="2" respawnTime="360" weightPoint="1" />
@@ -2875,7 +2963,6 @@
 		</collision>
 	</npc>
 	<npc id="25563" level="99" type="RaidBoss" name="Beautiful Atrielle" title="Forsaken Prisoner">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<minions name="Privates">
 				<npc id="25564" count="1" respawnTime="360" weightPoint="1" />
@@ -3036,7 +3123,6 @@
 		</collision>
 	</npc>
 	<npc id="25566" level="99" type="RaidBoss" name="Nagen the Tomboy" title="Forsaken Prisoner">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<minions name="Privates">
 				<npc id="25567" count="3" respawnTime="360" weightPoint="1" />
@@ -3204,7 +3290,6 @@
 		</collision>
 	</npc>
 	<npc id="25569" level="99" type="RaidBoss" name="Jax the Destroyer" title="Forsaken Prisoner">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<minions name="Privates">
 				<npc id="25570" count="3" respawnTime="360" weightPoint="1" />
@@ -3362,7 +3447,6 @@
 		</collision>
 	</npc>
 	<npc id="25572" level="93" type="RaidBoss" name="Hager the Outlaw" title="Forsaken Inmate">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<minions name="Privates">
 				<npc id="25573" count="2" respawnTime="360" weightPoint="1" />
@@ -3513,7 +3597,6 @@
 		</collision>
 	</npc>
 	<npc id="25575" level="93" type="RaidBoss" name="All-seeing Rango" title="Forsaken Inmate">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<minions name="Privates">
 				<npc id="25576" count="4" respawnTime="360" weightPoint="1" />
@@ -3664,7 +3747,6 @@
 		</collision>
 	</npc>
 	<npc id="25578" level="93" type="RaidBoss" name="Jakard" title="Forsaken Inmate">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="RaidSpawnMusic" value="Rm03_A" />
 			<param name="CouldDespawn" value="1" />
@@ -3723,7 +3805,6 @@
 		</collision>
 	</npc>
 	<npc id="25579" level="94" type="RaidBoss" name="Helsing" title="Forsaken Inmate">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<minions name="Privates">
 				<npc id="25580" count="4" respawnTime="360" weightPoint="1" />
@@ -3877,7 +3958,6 @@
 		</collision>
 	</npc>
 	<npc id="25582" level="95" type="RaidBoss" name="Gillien" title="Forsaken Inmate">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<minions name="Privates">
 				<npc id="25583" count="2" respawnTime="360" weightPoint="1" />
@@ -4029,7 +4109,6 @@
 		</collision>
 	</npc>
 	<npc id="25585" level="96" type="RaidBoss" name="Medici" title="Forsaken Inmate">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<minions name="Privates">
 				<npc id="25586" count="3" respawnTime="360" weightPoint="1" />
@@ -4182,7 +4261,6 @@
 		</collision>
 	</npc>
 	<npc id="25588" level="96" type="RaidBoss" name="Immortal Muus" title="Forsaken Inmate">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="RaidSpawnMusic" value="Rm02_A" />
 			<param name="CouldDespawn" value="1" />
@@ -4242,7 +4320,6 @@
 		</collision>
 	</npc>
 	<npc id="25589" level="97" type="RaidBoss" name="Brand the Exile" title="Forsaken Inmate">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<minions name="Privates">
 				<npc id="25590" count="1" respawnTime="360" weightPoint="1" />
@@ -4403,7 +4480,6 @@
 		</collision>
 	</npc>
 	<npc id="25592" level="98" type="RaidBoss" name="Commander Koenig" title="Forsaken Inmate">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="RaidSpawnMusic" value="Rm01_A" />
 			<param name="CouldDespawn" value="1" />
@@ -4468,7 +4544,6 @@
 		</collision>
 	</npc>
 	<npc id="25593" level="99" type="RaidBoss" name="Gerg the Hunter" title="Forsaken Inmate">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<minions name="Privates">
 				<npc id="25594" count="3" respawnTime="360" weightPoint="1" />

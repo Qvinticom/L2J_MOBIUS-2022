@@ -1669,7 +1669,6 @@
 		</collision>
 	</npc>
 	<npc id="18544" level="45" type="Monster" name="Cruma Border" title="Event Monster">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="DespawnTime" value="60" />
 			<skill name="Skill01_ID" id="4357" level="2" />
@@ -1721,7 +1720,6 @@
 		</dropLists>
 	</npc>
 	<npc id="18545" level="45" type="Monster" name="Ancient Giants' Experiment" title="Event Monster">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="57" />
 			<param name="MoveAroundSocial1" value="62" />
@@ -1777,7 +1775,6 @@
 		</dropLists>
 	</npc>
 	<npc id="18546" level="45" type="Monster" name="Ancient Giants' Experiment" title="Event Monster">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="116" />
 			<param name="MoveAroundSocial1" value="116" />
@@ -1836,7 +1833,6 @@
 		</dropLists>
 	</npc>
 	<npc id="18547" level="45" type="Monster" name="Ancient Giants' Experiment" title="Event Monster">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="90" />
 			<param name="MoveAroundSocial1" value="90" />
@@ -1912,7 +1908,6 @@
 		</dropLists>
 	</npc>
 	<npc id="18548" level="45" type="Monster" name="Ancient Giants' Experiment">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="90" />
 			<param name="MoveAroundSocial1" value="90" />
@@ -1963,7 +1958,6 @@
 		</dropLists>
 	</npc>
 	<npc id="18549" level="45" type="Monster" name="Ancient Giants' Experiment">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="90" />
 			<param name="MoveAroundSocial1" value="90" />
@@ -2005,7 +1999,6 @@
 		</collision>
 	</npc>
 	<npc id="18550" level="50" type="Monster" name="Cruma Phantom" title="Event Monster">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="80" />
 			<param name="MoveAroundSocial1" value="80" />
@@ -2059,7 +2052,6 @@
 		</collision>
 	</npc>
 	<npc id="18551" level="50" type="Monster" name="Cruma Phantom" title="Event Monster">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="0" />
 			<param name="MoveAroundSocial1" value="0" />
@@ -2120,7 +2112,6 @@
 		</collision>
 	</npc>
 	<npc id="18552" level="50" type="Monster" name="Cruma Phantom">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="0" />
 			<param name="MoveAroundSocial1" value="0" />
@@ -2173,7 +2164,6 @@
 		</collision>
 	</npc>
 	<npc id="18553" level="50" type="Monster" name="Cruma Phantom">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="0" />
 			<param name="MoveAroundSocial1" value="0" />
@@ -2233,7 +2223,6 @@
 		</collision>
 	</npc>
 	<npc id="18554" level="23" type="Monster" name="Tomlan Kamos" title="Kaneus">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="Skill01_Probablity" value="20" />
 			<param name="Skill02_Probablity" value="20" />
@@ -2282,7 +2271,6 @@
 		</dropLists>
 	</npc>
 	<npc id="18555" level="26" type="Monster" name="Ol Ariosh" title="Kaneus">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="Skill01_Probablity" value="5" />
 			<skill name="Skill01" id="4736" level="2" />
@@ -2324,7 +2312,6 @@
 		</dropLists>
 	</npc>
 	<npc id="18556" level="26" type="Monster" name="Ariosh's Subordinate">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="Skill01_Probablity" value="10" />
 			<skill name="Skill01" id="4719" level="1" />
@@ -2363,9 +2350,22 @@
 			<radius normal="14" grown="16" />
 			<height normal="27" grown="32" />
 		</collision>
+		<dropLists>
+			<drop>
+				<!-- Also drops herbs. -->
+				<item id="8600" min="1" max="1" chance="10" /> <!-- Herb of Life -->
+				<item id="8601" min="1" max="1" chance="8" /> <!-- Major Herb of Life -->
+				<item id="8602" min="1" max="1" chance="2" /> <!-- Superior Herb of Life -->
+				<item id="8603" min="1" max="1" chance="19.8" /> <!-- Herb of Mana -->
+				<item id="8604" min="1" max="1" chance="9.9" /> <!-- Major Herb of Mana -->
+				<item id="8605" min="1" max="1" chance="3.3" /> <!-- Superior Herb of Mana -->
+				<item id="34849" min="1" max="1" chance="0.7" /> <!-- Mysterious Herb of Power -->
+				<item id="34850" min="1" max="1" chance="0.7" /> <!-- Mysterious Herb of Magic -->
+				<item id="13028" min="1" max="1" chance="0.1" /> <!-- Vitality Replenishing Herb -->
+			</drop>
+		</dropLists>
 	</npc>
 	<npc id="18557" level="26" type="Monster" name="Ranc Deumus" title="Kaneus">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="Skill01_Probablity" value="10" />
 			<param name="Skill02_Probablity" value="10" />
@@ -2412,9 +2412,22 @@
 			<radius normal="12" />
 			<height normal="34.5" />
 		</collision>
+		<dropLists>
+			<drop>
+				<!-- Also drops herbs. -->
+				<item id="8600" min="1" max="1" chance="10" /> <!-- Herb of Life -->
+				<item id="8601" min="1" max="1" chance="8" /> <!-- Major Herb of Life -->
+				<item id="8602" min="1" max="1" chance="2" /> <!-- Superior Herb of Life -->
+				<item id="8603" min="1" max="1" chance="19.8" /> <!-- Herb of Mana -->
+				<item id="8604" min="1" max="1" chance="9.9" /> <!-- Major Herb of Mana -->
+				<item id="8605" min="1" max="1" chance="3.3" /> <!-- Superior Herb of Mana -->
+				<item id="34849" min="1" max="1" chance="0.7" /> <!-- Mysterious Herb of Power -->
+				<item id="34850" min="1" max="1" chance="0.7" /> <!-- Mysterious Herb of Magic -->
+				<item id="13028" min="1" max="1" chance="0.1" /> <!-- Vitality Replenishing Herb -->
+			</drop>
+		</dropLists>
 	</npc>
 	<npc id="18558" level="33" type="Monster" name="Crimson Hatu Otis" title="Kaneus">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<skill name="aoe_skill" id="4737" level="3" />
 			<skill name="haste_skill" id="4175" level="3" />
@@ -2460,7 +2473,6 @@
 		</dropLists>
 	</npc>
 	<npc id="18559" level="36" type="Monster" name="Seer Flouros" title="Kaneus">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="Skill01_Probablity" value="30" />
 			<param name="Skill02_Probablity" value="40" />
@@ -2503,7 +2515,6 @@
 		</dropLists>
 	</npc>
 	<npc id="18560" level="36" type="Monster" name="Flouros' Subordinate">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="Skill01_Probablity" value="50" />
 			<skill name="Skill01" id="4194" level="3" />
@@ -2541,9 +2552,22 @@
 			<radius normal="21" />
 			<height normal="43" />
 		</collision>
+		<dropLists>
+			<drop>
+				<!-- Also drops herbs. -->
+				<item id="8600" min="1" max="1" chance="10" /> <!-- Herb of Life -->
+				<item id="8601" min="1" max="1" chance="8" /> <!-- Major Herb of Life -->
+				<item id="8602" min="1" max="1" chance="2" /> <!-- Superior Herb of Life -->
+				<item id="8603" min="1" max="1" chance="19.8" /> <!-- Herb of Mana -->
+				<item id="8604" min="1" max="1" chance="9.9" /> <!-- Major Herb of Mana -->
+				<item id="8605" min="1" max="1" chance="3.3" /> <!-- Superior Herb of Mana -->
+				<item id="34849" min="1" max="1" chance="0.7" /> <!-- Mysterious Herb of Power -->
+				<item id="34850" min="1" max="1" chance="0.7" /> <!-- Mysterious Herb of Magic -->
+				<item id="13028" min="1" max="1" chance="0.1" /> <!-- Vitality Replenishing Herb -->
+			</drop>
+		</dropLists>
 	</npc>
 	<npc id="18561" level="36" type="Monster" name="Granitick Duerga" title="Kaneus">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="Skill01_Probablity" value="20" />
 			<param name="Skill02_Probablity" value="5" />
@@ -2588,9 +2612,22 @@
 			<radius normal="20" />
 			<height normal="31" />
 		</collision>
+		<dropLists>
+			<drop>
+				<!-- Also drops herbs. -->
+				<item id="8600" min="1" max="1" chance="10" /> <!-- Herb of Life -->
+				<item id="8601" min="1" max="1" chance="8" /> <!-- Major Herb of Life -->
+				<item id="8602" min="1" max="1" chance="2" /> <!-- Superior Herb of Life -->
+				<item id="8603" min="1" max="1" chance="19.8" /> <!-- Herb of Mana -->
+				<item id="8604" min="1" max="1" chance="9.9" /> <!-- Major Herb of Mana -->
+				<item id="8605" min="1" max="1" chance="3.3" /> <!-- Superior Herb of Mana -->
+				<item id="34849" min="1" max="1" chance="0.7" /> <!-- Mysterious Herb of Power -->
+				<item id="34850" min="1" max="1" chance="0.7" /> <!-- Mysterious Herb of Magic -->
+				<item id="13028" min="1" max="1" chance="0.1" /> <!-- Vitality Replenishing Herb -->
+			</drop>
+		</dropLists>
 	</npc>
 	<npc id="18562" level="43" type="Monster" name="Blade Otis" title="Kaneus">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="Skill01_Probablity" value="10" />
 			<param name="Skill02_Probablity" value="10" />
@@ -2639,7 +2676,6 @@
 		</dropLists>
 	</npc>
 	<npc id="18563" level="43" type="Monster" name="Otis' Subordinate">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<skill name="fake_heal" id="4065" level="1" />
 			<skill name="real_heal" id="4209" level="6" />
@@ -2679,9 +2715,22 @@
 			<radius normal="9" grown="11" />
 			<height normal="24" grown="26.4" />
 		</collision>
+		<dropLists>
+			<drop>
+				<!-- Also drops herbs. -->
+				<item id="8600" min="1" max="1" chance="10" /> <!-- Herb of Life -->
+				<item id="8601" min="1" max="1" chance="8" /> <!-- Major Herb of Life -->
+				<item id="8602" min="1" max="1" chance="2" /> <!-- Superior Herb of Life -->
+				<item id="8603" min="1" max="1" chance="19.8" /> <!-- Herb of Mana -->
+				<item id="8604" min="1" max="1" chance="9.9" /> <!-- Major Herb of Mana -->
+				<item id="8605" min="1" max="1" chance="3.3" /> <!-- Superior Herb of Mana -->
+				<item id="34849" min="1" max="1" chance="0.7" /> <!-- Mysterious Herb of Power -->
+				<item id="34850" min="1" max="1" chance="0.7" /> <!-- Mysterious Herb of Magic -->
+				<item id="13028" min="1" max="1" chance="0.1" /> <!-- Vitality Replenishing Herb -->
+			</drop>
+		</dropLists>
 	</npc>
 	<npc id="18564" level="46" type="Monster" name="Weird Bunei" title="Kaneus">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="Skill01_Probablity" value="5" />
 			<param name="Skill02_Probablity" value="20" />
@@ -2727,7 +2776,6 @@
 		</dropLists>
 	</npc>
 	<npc id="18565" level="46" type="Monster" name="Brave Martim" title="Kaneus">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="Skill01_Probablity" value="10" />
 			<param name="Skill02_Probablity" value="5" />
@@ -2780,7 +2828,6 @@
 		</dropLists>
 	</npc>
 	<npc id="18566" level="53" type="Monster" name="Kaim Abigore" title="Kaneus">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="Skill01_Probablity" value="10" />
 			<param name="Skill02_Probablity" value="10" />
@@ -2823,7 +2870,6 @@
 		</dropLists>
 	</npc>
 	<npc id="18567" level="53" type="Monster" name="Abigore's Subordinate">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<skill name="skill_explosion" id="4614" level="6" />
 		</parameters>
@@ -2860,9 +2906,22 @@
 			<radius normal="15" />
 			<height normal="28" />
 		</collision>
+		<dropLists>
+			<drop>
+				<!-- Also drops herbs. -->
+				<item id="8600" min="1" max="1" chance="10" /> <!-- Herb of Life -->
+				<item id="8601" min="1" max="1" chance="8" /> <!-- Major Herb of Life -->
+				<item id="8602" min="1" max="1" chance="2" /> <!-- Superior Herb of Life -->
+				<item id="8603" min="1" max="1" chance="19.8" /> <!-- Herb of Mana -->
+				<item id="8604" min="1" max="1" chance="9.9" /> <!-- Major Herb of Mana -->
+				<item id="8605" min="1" max="1" chance="3.3" /> <!-- Superior Herb of Mana -->
+				<item id="34849" min="1" max="1" chance="0.7" /> <!-- Mysterious Herb of Power -->
+				<item id="34850" min="1" max="1" chance="0.7" /> <!-- Mysterious Herb of Magic -->
+				<item id="13028" min="1" max="1" chance="0.1" /> <!-- Vitality Replenishing Herb -->
+			</drop>
+		</dropLists>
 	</npc>
 	<npc id="18568" level="56" type="Monster" name="Knight Montagnar" title="Kaneus">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="Skill01_Probablity" value="20" />
 			<skill name="Skill01" id="5043" level="7" />
@@ -2909,7 +2968,6 @@
 		</dropLists>
 	</npc>
 	<npc id="18569" level="56" type="Monster" name="Montagnar's Subordinate">
-		<!-- Confirmed CT2.5 -->
 		<race>ANIMAL</race>
 		<sex>MALE</sex>
 		<stats str="79" int="34" dex="42" wit="66" con="75" men="12">
@@ -2941,9 +2999,22 @@
 			<radius normal="7" />
 			<height normal="13" />
 		</collision>
+		<dropLists>
+			<drop>
+				<!-- Also drops herbs. -->
+				<item id="8600" min="1" max="1" chance="10" /> <!-- Herb of Life -->
+				<item id="8601" min="1" max="1" chance="8" /> <!-- Major Herb of Life -->
+				<item id="8602" min="1" max="1" chance="2" /> <!-- Superior Herb of Life -->
+				<item id="8603" min="1" max="1" chance="19.8" /> <!-- Herb of Mana -->
+				<item id="8604" min="1" max="1" chance="9.9" /> <!-- Major Herb of Mana -->
+				<item id="8605" min="1" max="1" chance="3.3" /> <!-- Superior Herb of Mana -->
+				<item id="34849" min="1" max="1" chance="0.7" /> <!-- Mysterious Herb of Power -->
+				<item id="34850" min="1" max="1" chance="0.7" /> <!-- Mysterious Herb of Magic -->
+				<item id="13028" min="1" max="1" chance="0.1" /> <!-- Vitality Replenishing Herb -->
+			</drop>
+		</dropLists>
 	</npc>
 	<npc id="18570" level="56" type="Monster" name="Summer Yaganitan" title="Kaneus">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="Skill01_Probablity" value="10" />
 			<param name="Skill02_Probablity" value="5" />
@@ -2994,7 +3065,6 @@
 		</dropLists>
 	</npc>
 	<npc id="18571" level="63" type="Monster" name="Venomous Storace" title="Kaneus">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="Skill01_Probablity" value="5" />
 			<skill name="Skill01" id="4171" level="6" />
@@ -3039,7 +3109,6 @@
 		</dropLists>
 	</npc>
 	<npc id="18572" level="63" type="Monster" name="Storace's Subordinate">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="Skill01_Probablity" value="10" />
 			<skill name="Skill01" id="4723" level="5" />
@@ -3078,9 +3147,22 @@
 			<radius normal="12" />
 			<height normal="54" />
 		</collision>
+		<dropLists>
+			<drop>
+				<!-- Also drops herbs. -->
+				<item id="8600" min="1" max="1" chance="10" /> <!-- Herb of Life -->
+				<item id="8601" min="1" max="1" chance="8" /> <!-- Major Herb of Life -->
+				<item id="8602" min="1" max="1" chance="2" /> <!-- Superior Herb of Life -->
+				<item id="8603" min="1" max="1" chance="19.8" /> <!-- Herb of Mana -->
+				<item id="8604" min="1" max="1" chance="9.9" /> <!-- Major Herb of Mana -->
+				<item id="8605" min="1" max="1" chance="3.3" /> <!-- Superior Herb of Mana -->
+				<item id="34849" min="1" max="1" chance="0.7" /> <!-- Mysterious Herb of Power -->
+				<item id="34850" min="1" max="1" chance="0.7" /> <!-- Mysterious Herb of Magic -->
+				<item id="13028" min="1" max="1" chance="0.1" /> <!-- Vitality Replenishing Herb -->
+			</drop>
+		</dropLists>
 	</npc>
 	<npc id="18573" level="66" type="Monster" name="Kel Bilette" title="Kaneus">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="Skill01_Probablity" value="10" />
 			<param name="Skill02_Probablity" value="20" />
@@ -3131,7 +3213,6 @@
 		</dropLists>
 	</npc>
 	<npc id="18574" level="66" type="Monster" name="Bilette's Subordinate">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<skill name="less_heal" id="4065" level="6" />
 		</parameters>
@@ -3169,9 +3250,22 @@
 			<radius normal="13" />
 			<height normal="25" />
 		</collision>
+		<dropLists>
+			<drop>
+				<!-- Also drops herbs. -->
+				<item id="8600" min="1" max="1" chance="10" /> <!-- Herb of Life -->
+				<item id="8601" min="1" max="1" chance="8" /> <!-- Major Herb of Life -->
+				<item id="8602" min="1" max="1" chance="2" /> <!-- Superior Herb of Life -->
+				<item id="8603" min="1" max="1" chance="19.8" /> <!-- Herb of Mana -->
+				<item id="8604" min="1" max="1" chance="9.9" /> <!-- Major Herb of Mana -->
+				<item id="8605" min="1" max="1" chance="3.3" /> <!-- Superior Herb of Mana -->
+				<item id="34849" min="1" max="1" chance="0.7" /> <!-- Mysterious Herb of Power -->
+				<item id="34850" min="1" max="1" chance="0.7" /> <!-- Mysterious Herb of Magic -->
+				<item id="13028" min="1" max="1" chance="0.1" /> <!-- Vitality Replenishing Herb -->
+			</drop>
+		</dropLists>
 	</npc>
 	<npc id="18575" level="66" type="Monster" name="Warlord Tamuze" title="Kaneus">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="Skill01_Probablity" value="5" />
 			<param name="Skill02_Probablity" value="5" />
@@ -3224,7 +3318,6 @@
 		</dropLists>
 	</npc>
 	<npc id="18576" level="66" type="Monster" name="Tamuze's Subordinate">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<skill name="self_explosion" id="4139" level="6" />
 		</parameters>
@@ -3263,9 +3356,22 @@
 			<radius normal="9" />
 			<height normal="25.8" />
 		</collision>
+		<dropLists>
+			<drop>
+				<!-- Also drops herbs. -->
+				<item id="8600" min="1" max="1" chance="10" /> <!-- Herb of Life -->
+				<item id="8601" min="1" max="1" chance="8" /> <!-- Major Herb of Life -->
+				<item id="8602" min="1" max="1" chance="2" /> <!-- Superior Herb of Life -->
+				<item id="8603" min="1" max="1" chance="19.8" /> <!-- Herb of Mana -->
+				<item id="8604" min="1" max="1" chance="9.9" /> <!-- Major Herb of Mana -->
+				<item id="8605" min="1" max="1" chance="3.3" /> <!-- Superior Herb of Mana -->
+				<item id="34849" min="1" max="1" chance="0.7" /> <!-- Mysterious Herb of Power -->
+				<item id="34850" min="1" max="1" chance="0.7" /> <!-- Mysterious Herb of Magic -->
+				<item id="13028" min="1" max="1" chance="0.1" /> <!-- Vitality Replenishing Herb -->
+			</drop>
+		</dropLists>
 	</npc>
 	<npc id="18577" level="73" type="Monster" name="White Allosce" title="Kaneus">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="Skill01_Probablity" value="20" />
 			<param name="Skill02_Probablity" value="20" />
@@ -3312,7 +3418,6 @@
 		</dropLists>
 	</npc>
 	<npc id="18578" level="73" type="Monster" name="Allosce's Subordinate">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<skill name="soul_skill" id="5624" level="1" />
 		</parameters>
@@ -3348,9 +3453,22 @@
 			<radius normal="21" />
 			<height normal="43" />
 		</collision>
+		<dropLists>
+			<drop>
+				<!-- Also drops herbs. -->
+				<item id="8600" min="1" max="1" chance="10" /> <!-- Herb of Life -->
+				<item id="8601" min="1" max="1" chance="8" /> <!-- Major Herb of Life -->
+				<item id="8602" min="1" max="1" chance="2" /> <!-- Superior Herb of Life -->
+				<item id="8603" min="1" max="1" chance="19.8" /> <!-- Herb of Mana -->
+				<item id="8604" min="1" max="1" chance="9.9" /> <!-- Major Herb of Mana -->
+				<item id="8605" min="1" max="1" chance="3.3" /> <!-- Superior Herb of Mana -->
+				<item id="34849" min="1" max="1" chance="0.7" /> <!-- Mysterious Herb of Power -->
+				<item id="34850" min="1" max="1" chance="0.7" /> <!-- Mysterious Herb of Magic -->
+				<item id="13028" min="1" max="1" chance="0.1" /> <!-- Vitality Replenishing Herb -->
+			</drop>
+		</dropLists>
 	</npc>
 	<npc id="18579" level="70" type="Monster" name="Hunting Ground Keeper">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="69" />
 			<param name="MoveAroundSocial1" value="69" />
@@ -3417,7 +3535,6 @@
 		</collision>
 	</npc>
 	<npc id="18580" level="71" type="Monster" name="Cursed Girl">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="80" />
 			<param name="MoveAroundSocial1" value="80" />
@@ -3483,7 +3600,6 @@
 		</collision>
 	</npc>
 	<npc id="18581" level="72" type="Monster" name="Gardener">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="148" />
 			<param name="MoveAroundSocial1" value="148" />
@@ -3547,7 +3663,6 @@
 		</collision>
 	</npc>
 	<npc id="18582" level="75" type="Monster" name="Turned Girl" title="Kratei's Fortune">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="80" />
 			<param name="MoveAroundSocial1" value="80" />
@@ -3614,7 +3729,6 @@
 		</collision>
 	</npc>
 	<npc id="18583" level="74" type="Monster" name="Housekeeper">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="75" />
 			<param name="MoveAroundSocial1" value="75" />
@@ -3678,7 +3792,6 @@
 		</collision>
 	</npc>
 	<npc id="18584" level="75" type="Monster" name="Turned Boy">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="60" />
 			<param name="MoveAroundSocial1" value="60" />
@@ -3743,7 +3856,6 @@
 		</collision>
 	</npc>
 	<npc id="18585" level="75" type="Monster" name="Cursed Girl">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="80" />
 			<param name="MoveAroundSocial1" value="80" />
@@ -3809,7 +3921,6 @@
 		</collision>
 	</npc>
 	<npc id="18586" level="75" type="Monster" name="Gardener">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="148" />
 			<param name="MoveAroundSocial1" value="148" />
@@ -3873,7 +3984,6 @@
 		</collision>
 	</npc>
 	<npc id="18587" level="76" type="Monster" name="Begrudged Maid">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="80" />
 			<param name="MoveAroundSocial1" value="80" />
@@ -3940,7 +4050,6 @@
 		</collision>
 	</npc>
 	<npc id="18588" level="77" type="Monster" name="Hunting Ground Keeper">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="69" />
 			<param name="MoveAroundSocial1" value="69" />
@@ -4007,7 +4116,6 @@
 		</collision>
 	</npc>
 	<npc id="18589" level="77" type="Monster" name="Cursed Gardener">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="148" />
 			<param name="MoveAroundSocial1" value="148" />
@@ -4071,7 +4179,6 @@
 		</collision>
 	</npc>
 	<npc id="18590" level="78" type="Monster" name="Baroness' Employee">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="69" />
 			<param name="MoveAroundSocial1" value="69" />
@@ -4138,7 +4245,6 @@
 		</collision>
 	</npc>
 	<npc id="18591" level="79" type="Monster" name="Begrudged Boy">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="60" />
 			<param name="MoveAroundSocial1" value="60" />
@@ -4203,7 +4309,6 @@
 		</collision>
 	</npc>
 	<npc id="18592" level="80" type="Monster" name="Kratei's Steward">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="85" />
 			<param name="MoveAroundSocial1" value="85" />
@@ -4273,7 +4378,6 @@
 		</collision>
 	</npc>
 	<npc id="18593" level="80" type="Monster" name="Housekeeper">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="75" />
 			<param name="MoveAroundSocial1" value="75" />
@@ -4342,7 +4446,6 @@
 		</collision>
 	</npc>
 	<npc id="18594" level="81" type="Monster" name="Mansion Guide">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="75" />
 			<param name="MoveAroundSocial1" value="75" />
@@ -4411,7 +4514,6 @@
 		</collision>
 	</npc>
 	<npc id="18595" level="82" type="Monster" name="Baroness' Employee">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="69" />
 			<param name="MoveAroundSocial1" value="69" />
@@ -4483,7 +4585,6 @@
 		</collision>
 	</npc>
 	<npc id="18596" level="83" type="Monster" name="Cursed Gardener">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="148" />
 			<param name="MoveAroundSocial1" value="148" />
@@ -4552,7 +4653,6 @@
 		</collision>
 	</npc>
 	<npc id="18597" level="84" type="Monster" name="Begrudged Maid">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="80" />
 			<param name="MoveAroundSocial1" value="80" />
@@ -4624,7 +4724,6 @@
 		</collision>
 	</npc>
 	<npc id="18598" level="85" type="Monster" name="Cursed Head Maid">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="80" />
 			<param name="MoveAroundSocial1" value="80" />
@@ -4698,7 +4797,6 @@
 		</collision>
 	</npc>
 	<npc id="18599" level="85" type="Monster" name="Mansion Manager">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="136" />
 			<param name="MoveAroundSocial1" value="136" />

@@ -1,7 +1,6 @@
 ﻿<?xml version="1.0" encoding="UTF-8"?>
 <list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../xsd/npcs.xsd">
 	<npc id="25600" level="82" type="Monster" name="Temenir" title="Darion's Challenger">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="AttackRange" value="2" />
 			<param name="IsHealer" value="2" />
@@ -71,7 +70,6 @@
 		</collision>
 	</npc>
 	<npc id="25601" level="82" type="Monster" name="Draksius" title="Darion's Challenger">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="IsHealer" value="2" />
 			<param name="Party_Type" value="2" />
@@ -142,7 +140,6 @@
 		</collision>
 	</npc>
 	<npc id="25602" level="82" type="Monster" name="Kiretcenah" title="Darion's Challenger">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="AttackRange" value="2" />
 			<param name="IsHealer" value="2" />
@@ -214,7 +211,6 @@
 		</collision>
 	</npc>
 	<npc id="25603" level="99" type="RaidBoss" name="Darion">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="IsAggressive" value="1" />
 			<param name="Aggressive_Time" value="1" />
@@ -550,7 +546,6 @@
 		</collision>
 	</npc>
 	<npc id="25609" level="82" type="RaidBoss" name="Epidos" title="Naia Shambler">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="IsAggressive" value="1" />
 			<param name="AttackRange" value="2" />
@@ -625,7 +620,6 @@
 		</collision>
 	</npc>
 	<npc id="25610" level="82" type="RaidBoss" name="Epidos" title="Naia Shambler">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="IsAggressive" value="1" />
 			<param name="AttackRange" value="2" />
@@ -700,7 +694,6 @@
 		</collision>
 	</npc>
 	<npc id="25611" level="82" type="RaidBoss" name="Epidos" title="Naia Shambler">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="IsAggressive" value="1" />
 			<param name="AttackRange" value="2" />
@@ -775,7 +768,6 @@
 		</collision>
 	</npc>
 	<npc id="25612" level="82" type="RaidBoss" name="Epidos" title="Naia Shambler">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="IsAggressive" value="1" />
 			<param name="AttackRange" value="2" />
@@ -975,7 +967,6 @@
 		</collision>
 	</npc>
 	<npc id="25616" level="29" type="RaidBoss" name="Lost Warden">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<skill name="PhysicalSpecial_a" id="4723" level="2" />
 			<skill name="SelfRangePhysicalSpecial_a" id="4738" level="2" />
@@ -1023,7 +1014,6 @@
 		</collision>
 	</npc>
 	<npc id="25617" level="39" type="RaidBoss" name="Lost Warden">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<skill name="PhysicalSpecial_a" id="4723" level="3" />
 			<skill name="SelfRangePhysicalSpecial_a" id="4738" level="3" />
@@ -1071,7 +1061,6 @@
 		</collision>
 	</npc>
 	<npc id="25618" level="49" type="RaidBoss" name="Lost Warden">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<skill name="PhysicalSpecial_a" id="4723" level="4" />
 			<skill name="SelfRangePhysicalSpecial_a" id="4738" level="4" />
@@ -1118,7 +1107,6 @@
 		</collision>
 	</npc>
 	<npc id="25619" level="59" type="RaidBoss" name="Lost Warden">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<skill name="PhysicalSpecial_a" id="4723" level="5" />
 			<skill name="SelfRangePhysicalSpecial_a" id="4738" level="5" />
@@ -1166,7 +1154,6 @@
 		</collision>
 	</npc>
 	<npc id="25620" level="69" type="RaidBoss" name="Lost Warden">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<skill name="PhysicalSpecial_a" id="4723" level="6" />
 			<skill name="SelfRangePhysicalSpecial_a" id="4738" level="6" />
@@ -1213,7 +1200,6 @@
 		</collision>
 	</npc>
 	<npc id="25621" level="78" type="RaidBoss" name="Lost Warden">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<skill name="PhysicalSpecial_a" id="4723" level="7" />
 			<skill name="SelfRangePhysicalSpecial_a" id="4738" level="7" />
@@ -1266,7 +1252,6 @@
 		</collision>
 	</npc>
 	<npc id="25622" level="81" type="RaidBoss" name="Lost Warden">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<skill name="PhysicalSpecial_a" id="4723" level="8" />
 			<skill name="SelfRangePhysicalSpecial_a" id="4738" level="8" />
@@ -1319,7 +1304,6 @@
 		</collision>
 	</npc>
 	<npc id="25623" level="80" type="RaidBoss" name="Valdstone" title="Master Rider">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="Skill01_AttackSplash" value="1" />
 			<param name="Skill03_Target" value="3" />
@@ -1399,7 +1383,6 @@
 		</collision>
 	</npc>
 	<npc id="25624" level="80" type="RaidBoss" name="Rok" title="King of Birds">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="Skill01_AttackSplash" value="1" />
 			<param name="Skill03_AttackSplash" value="1" />
@@ -1466,7 +1449,6 @@
 		</collision>
 	</npc>
 	<npc id="25625" level="80" type="RaidBoss" name="Enira" title="Banshee Queen">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="Skill01_Target" value="3" />
 			<param name="Skill01_AttackSplash" value="1" />
@@ -1551,7 +1533,6 @@
 		</collision>
 	</npc>
 	<npc id="25626" level="80" type="RaidBoss" name="Dius" title="Deadman of Destruction">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="Skill01_AttackSplash" value="1" />
 			<param name="Skill02_AttackSplash" value="1" />
@@ -1724,7 +1705,6 @@
 		</collision>
 	</npc>
 	<npc id="25629" level="78" type="Monster" name="Floating Skeleton" title="Enira's Evil Spirit">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<skill name="Skill01_ID" id="5803" level="1" />
 			<skill name="Skill02_ID" id="5804" level="1" />
@@ -1774,7 +1754,6 @@
 		</collision>
 	</npc>
 	<npc id="25630" level="77" type="Monster" name="Floating Zombie" title="Enira's Evil Spirit">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="Skill02_Target" value="3" />
 			<skill name="Skill01_ID" id="5813" level="1" />
@@ -1980,7 +1959,6 @@
 		</collision>
 	</npc>
 	<npc id="25634" level="81" type="Monster" name="Cohemenes" title="Soul Collector">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="raise" value="5" />
 			<skill name="Skill01_ID" id="5898" level="2" />
@@ -2095,7 +2073,6 @@
 		</collision>
 	</npc>
 	<npc id="25636" level="81" type="Monster" name="Ravenous Soul Devourer">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="tide" value="3" />
 			<param name="type" value="spc_wagon_boss" />
@@ -2162,7 +2139,6 @@
 		</collision>
 	</npc>
 	<npc id="25637" level="81" type="Monster" name="Karpencharr" title="Prophet of Lies">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="raise" value="5" />
 			<skill name="Skill01_ID" id="5898" level="2" />
@@ -2233,7 +2209,6 @@
 		</collision>
 	</npc>
 	<npc id="25638" level="81" type="Monster" name="Romerohiv" title="Betrayer of Oblivion">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="raise" value="5" />
 			<skill name="Skill01_ID" id="5896" level="2" />
@@ -2308,7 +2283,6 @@
 		</collision>
 	</npc>
 	<npc id="25639" level="81" type="Monster" name="Hitchkarshiek" title="Wise Retainer of Suffering">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="raise" value="5" />
 			<skill name="Skill01_ID" id="5881" level="2" />
@@ -2383,7 +2357,6 @@
 		</collision>
 	</npc>
 	<npc id="25640" level="81" type="Monster" name="Freedkyilla" title="Hand of Night">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="raise" value="5" />
 			<skill name="Skill01_ID" id="5880" level="2" />
@@ -2452,7 +2425,6 @@
 		</collision>
 	</npc>
 	<npc id="25641" level="81" type="Monster" name="Yehan Cravenizad" title="Bloodsucker">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="raise" value="5" />
 			<skill name="Skill01_ID" id="5884" level="2" />
@@ -2529,7 +2501,6 @@
 		</collision>
 	</npc>
 	<npc id="25642" level="81" type="Monster" name="Yehan Jaxsibhan" title="Dark Guardian">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="raise" value="5" />
 			<skill name="Skill01_ID" id="5855" level="2" />
@@ -2602,7 +2573,6 @@
 		</collision>
 	</npc>
 	<npc id="25643" level="81" type="RaidBoss" name="Awakened Ancient Sentry" title="Raid Boss">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<skill name="Skill01_ID" id="5878" level="1" />
 			<skill name="Skill02_ID" id="5879" level="1" />
@@ -2659,7 +2629,6 @@
 		</collision>
 	</npc>
 	<npc id="25644" level="81" type="RaidBoss" name="Awakened Ancient Severer" title="Raid Boss">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<skill name="Skill01_ID" id="5884" level="2" />
 			<skill name="Skill02_ID" id="5898" level="2" />
@@ -2715,7 +2684,6 @@
 		</collision>
 	</npc>
 	<npc id="25645" level="81" type="RaidBoss" name="Awakened Ancient Soul Extractor" title="Raid Boss">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<skill name="Skill01_ID" id="5892" level="2" />
 			<skill name="Skill02_ID" id="5905" level="1" />
@@ -2772,7 +2740,6 @@
 		</collision>
 	</npc>
 	<npc id="25646" level="81" type="RaidBoss" name="Awakened Ancient Soul Devourer" title="Raid Boss">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<skill name="Skill01_ID" id="5888" level="2" />
 			<skill name="Skill02_ID" id="5899" level="2" />
@@ -2828,7 +2795,6 @@
 		</collision>
 	</npc>
 	<npc id="25647" level="81" type="RaidBoss" name="Awakened Ancient Fighter" title="Raid Boss">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<skill name="Skill01_ID" id="5884" level="2" />
 			<skill name="Skill02_ID" id="5891" level="1" />
@@ -2888,7 +2854,6 @@
 		</collision>
 	</npc>
 	<npc id="25648" level="81" type="RaidBoss" name="Awakened Ancient Fighter" title="Raid Boss">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<skill name="Skill01_ID" id="5855" level="1" />
 			<skill name="Skill02_ID" id="5891" level="1" />
@@ -2949,7 +2914,6 @@
 		</collision>
 	</npc>
 	<npc id="25649" level="81" type="RaidBoss" name="Awakened Ancient Executor" title="Raid Boss">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<skill name="Skill01_ID" id="5880" level="2" />
 			<skill name="Skill02_ID" id="5894" level="1" />
@@ -3026,7 +2990,6 @@
 		</collision>
 	</npc>
 	<npc id="25650" level="81" type="RaidBoss" name="Awakened Ancient Executor" title="Raid Boss">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<skill name="Skill01_ID" id="5881" level="2" />
 			<skill name="Skill02_ID" id="5894" level="1" />
@@ -3102,7 +3065,6 @@
 		</dropLists>
 	</npc>
 	<npc id="25651" level="81" type="RaidBoss" name="Awakened Ancient Prophet" title="Raid Boss">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<skill name="Skill01_ID" id="5898" level="2" />
 			<skill name="Skill02_ID" id="5904" level="2" />
@@ -3160,7 +3122,6 @@
 		</collision>
 	</npc>
 	<npc id="25652" level="81" type="RaidBoss" name="Awakened Ancient Prophet" title="Raid Boss">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<skill name="Skill01_ID" id="5896" level="2" />
 			<skill name="Skill02_ID" id="5901" level="2" />
@@ -3218,7 +3179,6 @@
 		</collision>
 	</npc>
 	<npc id="25653" level="95" type="RaidBoss" name="Kanadis Herald" title="Invading Forces">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="String_Num1" value="1300145" />
 			<param name="String_Num2" value="1300147" />
@@ -3282,7 +3242,6 @@
 		</collision>
 	</npc>
 	<npc id="25654" level="97" type="RaidBoss" name="Kanadis Herald" title="Invading Forces">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="String_Num1" value="1300145" />
 			<param name="String_Num2" value="1300147" />
@@ -3345,7 +3304,6 @@
 		</collision>
 	</npc>
 	<npc id="25655" level="99" type="RaidBoss" name="Kanadis Herald" title="Invading Forces">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="String_Num1" value="1300146" />
 			<param name="String_Num2" value="1300147" />
@@ -3577,7 +3535,6 @@
 		</collision>
 	</npc>
 	<npc id="25659" level="95" type="RaidBoss" name="Kanadis Guide" title="Invading Forces">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="String_Num1" value="1300145" />
 			<param name="String_Num2" value="1300147" />
@@ -3641,7 +3598,6 @@
 		</collision>
 	</npc>
 	<npc id="25660" level="97" type="RaidBoss" name="Kanadis Guide" title="Invading Forces">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="String_Num1" value="1300145" />
 			<param name="String_Num2" value="1300147" />
@@ -3704,7 +3660,6 @@
 		</collision>
 	</npc>
 	<npc id="25661" level="99" type="RaidBoss" name="Kanadis Guide" title="Invading Forces">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="String_Num1" value="1300146" />
 			<param name="String_Num2" value="1300147" />
@@ -3935,7 +3890,6 @@
 		</collision>
 	</npc>
 	<npc id="25667" level="82" type="RaidBoss" name="Cannibalistic Stakato Captain" title="Shadow of Violence">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<skill name="Skill01_ID" id="5350" level="1" />
 			<skill name="Skill02_ID" id="5352" level="1" />
@@ -4000,7 +3954,6 @@
 		</collision>
 	</npc>
 	<npc id="25668" level="82" type="RaidBoss" name="Cannibalistic Stakato Captain" title="Shadow of Violence">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<skill name="Skill01_ID" id="5350" level="1" />
 			<skill name="Skill02_ID" id="5352" level="1" />
@@ -4064,7 +4017,6 @@
 		</collision>
 	</npc>
 	<npc id="25669" level="82" type="RaidBoss" name="Cannibalistic Stakato Captain" title="Shadow of Violence">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<skill name="Skill01_ID" id="5350" level="1" />
 			<skill name="Skill02_ID" id="5352" level="1" />
@@ -4128,7 +4080,6 @@
 		</collision>
 	</npc>
 	<npc id="25670" level="82" type="RaidBoss" name="Cannibalistic Stakato Captain" title="Shadow of Violence">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<skill name="Skill01_ID" id="5350" level="1" />
 			<skill name="Skill02_ID" id="5352" level="1" />
@@ -4192,7 +4143,6 @@
 		</collision>
 	</npc>
 	<npc id="25671" level="84" type="RaidBoss" name="Queen Shyeed" title="Raid Boss">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<minions name="Privates">
 				<npc id="25673" count="1" respawnTime="360" weightPoint="1" />
@@ -4409,7 +4359,6 @@
 		</dropLists>
 	</npc>
 	<npc id="25674" level="83" type="RaidBoss" name="Gwindorr" title="Raid Boss">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<minions name="Privates">
 				<npc id="25675" count="3" respawnTime="360" weightPoint="1" />
@@ -4586,7 +4535,6 @@
 		</collision>
 	</npc>
 	<npc id="25677" level="84" type="RaidBoss" name="Water Spirit Lian" title="Raid Boss">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<minions name="Privates">
 				<npc id="25678" count="3" respawnTime="360" weightPoint="1" />
@@ -4772,7 +4720,6 @@
 		</collision>
 	</npc>
 	<npc id="25690" level="81" type="RaidBoss" name="Aenkinel" title="Invader of Dream">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="IsAggressive" value="1" />
 			<param name="Skill01_Probablity" value="1000" />
@@ -4835,7 +4782,6 @@
 		</collision>
 	</npc>
 	<npc id="25691" level="81" type="RaidBoss" name="Aenkinel" title="Invader of Dream">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="IsAggressive" value="1" />
 			<param name="Skill01_Probablity" value="1000" />
@@ -4920,7 +4866,6 @@
 		</collision>
 	</npc>
 	<npc id="25692" level="81" type="RaidBoss" name="Aenkinel" title="Invader of Dream">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="IsAggressive" value="1" />
 			<param name="Skill01_Probablity" value="1000" />
@@ -5005,7 +4950,6 @@
 		</collision>
 	</npc>
 	<npc id="25693" level="81" type="RaidBoss" name="Aenkinel" title="Invader of Dream">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="IsAggressive" value="1" />
 			<param name="Skill01_Probablity" value="1000" />
@@ -5090,7 +5034,6 @@
 		</collision>
 	</npc>
 	<npc id="25694" level="82" type="RaidBoss" name="Aenkinel" title="Invader of Dream">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="IsAggressive" value="1" />
 			<param name="Skill01_Probablity" value="1000" />
@@ -5169,7 +5112,6 @@
 		</collision>
 	</npc>
 	<npc id="25695" level="84" type="RaidBoss" name="Aenkinel" title="Invader of Dream">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="IsAggressive" value="1" />
 			<param name="Skill01_Probablity" value="1000" />
@@ -5451,7 +5393,6 @@
 		</dropLists>
 	</npc>
 	<npc id="25698" level="89" type="RaidBoss" name="Dopagen" title="Kokracon">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<skill name="Skill01_ID" id="6390" level="1" />
 			<skill name="Skill02_ID" id="6391" level="1" />
@@ -5555,7 +5496,6 @@
 		</dropLists>
 	</npc>
 	<npc id="25699" level="85" type="RaidBoss" name="Glakias" title="Ice Knight Captain">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<skill name="Skill01_ID" id="6293" level="1" />
 			<skill name="Skill02_ID" id="6295" level="1" />

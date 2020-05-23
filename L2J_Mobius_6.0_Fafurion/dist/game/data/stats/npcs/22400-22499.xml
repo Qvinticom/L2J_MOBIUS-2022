@@ -1,7 +1,6 @@
 ﻿<?xml version="1.0" encoding="UTF-8"?>
 <list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../xsd/npcs.xsd">
 	<npc id="22400" level="83" type="Monster" name="Parme's Healer">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<skill name="MagicHeal" id="4065" level="9" />
 		</parameters>
@@ -43,9 +42,22 @@
 			<radius normal="20" />
 			<height normal="27.5" />
 		</collision>
+		<dropLists>
+			<drop>
+				<!-- Also drops herbs. -->
+				<item id="8600" min="1" max="1" chance="10" /> <!-- Herb of Life -->
+				<item id="8601" min="1" max="1" chance="8" /> <!-- Major Herb of Life -->
+				<item id="8602" min="1" max="1" chance="2" /> <!-- Superior Herb of Life -->
+				<item id="8603" min="1" max="1" chance="19.8" /> <!-- Herb of Mana -->
+				<item id="8604" min="1" max="1" chance="9.9" /> <!-- Major Herb of Mana -->
+				<item id="8605" min="1" max="1" chance="3.3" /> <!-- Superior Herb of Mana -->
+				<item id="34849" min="1" max="1" chance="0.7" /> <!-- Mysterious Herb of Power -->
+				<item id="34850" min="1" max="1" chance="0.7" /> <!-- Mysterious Herb of Magic -->
+				<item id="13028" min="1" max="1" chance="0.1" /> <!-- Vitality Replenishing Herb -->
+			</drop>
+		</dropLists>
 	</npc>
 	<npc id="22401" level="83" type="Monster" name="Parme's Healer">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<skill name="MagicHeal" id="4065" level="9" />
 		</parameters>
@@ -87,9 +99,22 @@
 			<radius normal="20" />
 			<height normal="27.5" />
 		</collision>
+		<dropLists>
+			<drop>
+				<!-- Also drops herbs. -->
+				<item id="8600" min="1" max="1" chance="10" /> <!-- Herb of Life -->
+				<item id="8601" min="1" max="1" chance="8" /> <!-- Major Herb of Life -->
+				<item id="8602" min="1" max="1" chance="2" /> <!-- Superior Herb of Life -->
+				<item id="8603" min="1" max="1" chance="19.8" /> <!-- Herb of Mana -->
+				<item id="8604" min="1" max="1" chance="9.9" /> <!-- Major Herb of Mana -->
+				<item id="8605" min="1" max="1" chance="3.3" /> <!-- Superior Herb of Mana -->
+				<item id="34849" min="1" max="1" chance="0.7" /> <!-- Mysterious Herb of Power -->
+				<item id="34850" min="1" max="1" chance="0.7" /> <!-- Mysterious Herb of Magic -->
+				<item id="13028" min="1" max="1" chance="0.1" /> <!-- Vitality Replenishing Herb -->
+			</drop>
+		</dropLists>
 	</npc>
 	<npc id="22402" level="83" type="Monster" name="Shadow Column">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<skill name="SelfRangeDDmagic" id="4614" level="9" />
 			<skill name="selfbuff" id="5417" level="1" />
@@ -133,9 +158,22 @@
 			<radius normal="68" />
 			<height normal="80" />
 		</collision>
+		<dropLists>
+			<drop>
+				<!-- Also drops herbs. -->
+				<item id="8600" min="1" max="1" chance="10" /> <!-- Herb of Life -->
+				<item id="8601" min="1" max="1" chance="8" /> <!-- Major Herb of Life -->
+				<item id="8602" min="1" max="1" chance="2" /> <!-- Superior Herb of Life -->
+				<item id="8603" min="1" max="1" chance="19.8" /> <!-- Herb of Mana -->
+				<item id="8604" min="1" max="1" chance="9.9" /> <!-- Major Herb of Mana -->
+				<item id="8605" min="1" max="1" chance="3.3" /> <!-- Superior Herb of Mana -->
+				<item id="34849" min="1" max="1" chance="0.7" /> <!-- Mysterious Herb of Power -->
+				<item id="34850" min="1" max="1" chance="0.7" /> <!-- Mysterious Herb of Magic -->
+				<item id="13028" min="1" max="1" chance="0.1" /> <!-- Vitality Replenishing Herb -->
+			</drop>
+		</dropLists>
 	</npc>
 	<npc id="22416" level="82" type="Monster" name="Kechi's Guard Captain">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="124" />
 			<param name="MoveAroundSocial1" value="124" />
@@ -201,7 +239,6 @@
 		</collision>
 	</npc>
 	<npc id="22417" level="82" type="Monster" name="Kechi's Guard">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="0" />
 			<param name="MoveAroundSocial1" value="0" />
@@ -274,7 +311,6 @@
 		</collision>
 	</npc>
 	<npc id="22418" level="82" type="Monster" name="Burning Illith">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="110" />
 			<param name="MoveAroundSocial1" value="110" />
@@ -330,7 +366,6 @@
 		</collision>
 	</npc>
 	<npc id="22419" level="82" type="Monster" name="Flame Illith">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="110" />
 			<param name="MoveAroundSocial1" value="110" />
@@ -394,7 +429,6 @@
 		</collision>
 	</npc>
 	<npc id="22420" level="82" type="Monster" name="Brimstone Illith">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="110" />
 			<param name="MoveAroundSocial1" value="110" />
@@ -457,7 +491,6 @@
 		</collision>
 	</npc>
 	<npc id="22443" level="45" type="Monster" name="Kertang's Messenger">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="0" />
 			<param name="MoveAroundSocial1" value="0" />
@@ -507,7 +540,6 @@
 		</collision>
 	</npc>
 	<npc id="22444" level="55" type="Monster" name="Kertang's Messenger">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="0" />
 			<param name="MoveAroundSocial1" value="0" />
@@ -557,7 +589,6 @@
 		</collision>
 	</npc>
 	<npc id="22445" level="65" type="Monster" name="Kertang's Messenger">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="0" />
 			<param name="MoveAroundSocial1" value="0" />
@@ -608,7 +639,6 @@
 		</collision>
 	</npc>
 	<npc id="22446" level="75" type="Monster" name="Kertang's Messenger">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="0" />
 			<param name="MoveAroundSocial1" value="0" />
@@ -659,7 +689,6 @@
 		</collision>
 	</npc>
 	<npc id="22447" level="80" type="Monster" name="Kertang's Messenger">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="0" />
 			<param name="MoveAroundSocial1" value="0" />
@@ -713,7 +742,6 @@
 		</collision>
 	</npc>
 	<npc id="22452" level="25" type="Monster" name="White Skull Kanabion">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="0" />
 			<param name="MoveAroundSocial1" value="0" />
@@ -780,7 +808,6 @@
 		</dropLists>
 	</npc>
 	<npc id="22453" level="25" type="Monster" name="White Skull Kanabion" title="Doppler">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="215" />
 			<param name="MoveAroundSocial1" value="215" />
@@ -851,7 +878,6 @@
 		</dropLists>
 	</npc>
 	<npc id="22454" level="27" type="Monster" name="White Skull Kanabion" title="Void">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="80" />
 			<param name="MoveAroundSocial1" value="80" />
@@ -924,7 +950,6 @@
 		</dropLists>
 	</npc>
 	<npc id="22455" level="30" type="Monster" name="Begrudged Kanabion">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="138" />
 			<param name="MoveAroundSocial1" value="138" />
@@ -990,7 +1015,6 @@
 		</dropLists>
 	</npc>
 	<npc id="22456" level="30" type="Monster" name="Begrudged Kanabion" title="Doppler">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="75" />
 			<param name="MoveAroundSocial1" value="75" />
@@ -1059,7 +1083,6 @@
 		</dropLists>
 	</npc>
 	<npc id="22457" level="32" type="Monster" name="Begrudged Kanabion" title="Void">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="70" />
 			<param name="MoveAroundSocial1" value="70" />
@@ -1131,7 +1154,6 @@
 		</dropLists>
 	</npc>
 	<npc id="22458" level="35" type="Monster" name="Rotten Kanabion">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="120" />
 			<param name="MoveAroundSocial1" value="120" />
@@ -1196,7 +1218,6 @@
 		</dropLists>
 	</npc>
 	<npc id="22459" level="35" type="Monster" name="Rotten Kanabion" title="Doppler">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="126" />
 			<param name="MoveAroundSocial1" value="126" />
@@ -1264,7 +1285,6 @@
 		</dropLists>
 	</npc>
 	<npc id="22460" level="37" type="Monster" name="Rotten Kanabion" title="Void">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="80" />
 			<param name="MoveAroundSocial1" value="80" />
@@ -1333,7 +1353,6 @@
 		</dropLists>
 	</npc>
 	<npc id="22461" level="40" type="Monster" name="Gluttonous Kanabion">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="115" />
 			<param name="MoveAroundSocial1" value="90" />
@@ -1400,7 +1419,6 @@
 		</dropLists>
 	</npc>
 	<npc id="22462" level="40" type="Monster" name="Gluttonous Kanabion" title="Doppler">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="80" />
 			<param name="MoveAroundSocial1" value="80" />
@@ -1468,7 +1486,6 @@
 		</dropLists>
 	</npc>
 	<npc id="22463" level="42" type="Monster" name="Gluttonous Kanabion" title="Void">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="70" />
 			<param name="MoveAroundSocial1" value="81" />
@@ -1539,7 +1556,6 @@
 		</dropLists>
 	</npc>
 	<npc id="22464" level="45" type="Monster" name="Callous Kanabion">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="60" />
 			<param name="MoveAroundSocial1" value="60" />
@@ -1606,7 +1622,6 @@
 		</dropLists>
 	</npc>
 	<npc id="22465" level="45" type="Monster" name="Callous Kanabion" title="Doppler">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="120" />
 			<param name="MoveAroundSocial1" value="80" />
@@ -1676,7 +1691,6 @@
 		</dropLists>
 	</npc>
 	<npc id="22466" level="47" type="Monster" name="Callous Kanabion" title="Void">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="70" />
 			<param name="MoveAroundSocial1" value="70" />
@@ -1748,7 +1762,6 @@
 		</dropLists>
 	</npc>
 	<npc id="22467" level="50" type="Monster" name="Savage Kanabion">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="100" />
 			<param name="MoveAroundSocial1" value="50" />
@@ -1814,7 +1827,6 @@
 		</dropLists>
 	</npc>
 	<npc id="22468" level="50" type="Monster" name="Savage Kanabion" title="Doppler">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="60" />
 			<param name="MoveAroundSocial1" value="50" />
@@ -1883,7 +1895,6 @@
 		</dropLists>
 	</npc>
 	<npc id="22469" level="52" type="Monster" name="Savage Kanabion" title="Void">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="90" />
 			<param name="MoveAroundSocial1" value="60" />
@@ -1954,7 +1965,6 @@
 		</dropLists>
 	</npc>
 	<npc id="22470" level="55" type="Monster" name="Peerless Kanabion">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="35" />
 			<param name="MoveAroundSocial1" value="35" />
@@ -2020,7 +2030,6 @@
 		</dropLists>
 	</npc>
 	<npc id="22471" level="55" type="Monster" name="Peerless Kanabion" title="Doppler">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="60" />
 			<param name="MoveAroundSocial1" value="60" />
@@ -2089,7 +2098,6 @@
 		</dropLists>
 	</npc>
 	<npc id="22472" level="57" type="Monster" name="Peerless Kanabion" title="Void">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="60" />
 			<param name="MoveAroundSocial1" value="60" />
@@ -2160,7 +2168,6 @@
 		</dropLists>
 	</npc>
 	<npc id="22473" level="60" type="Monster" name="Massive Kanabion">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="90" />
 			<param name="MoveAroundSocial1" value="74" />
@@ -2227,7 +2234,6 @@
 		</dropLists>
 	</npc>
 	<npc id="22474" level="60" type="Monster" name="Massive Kanabion" title="Doppler">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="110" />
 			<param name="MoveAroundSocial1" value="74" />
@@ -2296,7 +2302,6 @@
 		</dropLists>
 	</npc>
 	<npc id="22475" level="62" type="Monster" name="Massive Kanabion" title="Void">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="90" />
 			<param name="MoveAroundSocial1" value="74" />
@@ -2367,7 +2372,6 @@
 		</dropLists>
 	</npc>
 	<npc id="22476" level="65" type="Monster" name="Fervent Kanabion">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="0" />
 			<param name="MoveAroundSocial1" value="0" />
@@ -2434,7 +2438,6 @@
 		</dropLists>
 	</npc>
 	<npc id="22477" level="65" type="Monster" name="Fervent Kanabion" title="Doppler">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="100" />
 			<param name="MoveAroundSocial1" value="100" />
@@ -2502,7 +2505,6 @@
 		</dropLists>
 	</npc>
 	<npc id="22478" level="67" type="Monster" name="Fervent Kanabion" title="Void">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="80" />
 			<param name="MoveAroundSocial1" value="80" />
@@ -2572,7 +2574,6 @@
 		</dropLists>
 	</npc>
 	<npc id="22479" level="70" type="Monster" name="Ruptured Kanabion">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="110" />
 			<param name="MoveAroundSocial1" value="110" />
@@ -2637,7 +2638,6 @@
 		</dropLists>
 	</npc>
 	<npc id="22480" level="70" type="Monster" name="Ruptured Kanabion" title="Doppler">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="110" />
 			<param name="MoveAroundSocial1" value="110" />
@@ -2705,7 +2705,6 @@
 		</dropLists>
 	</npc>
 	<npc id="22481" level="72" type="Monster" name="Ruptured Kanabion" title="Void">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="110" />
 			<param name="MoveAroundSocial1" value="110" />
@@ -2775,7 +2774,6 @@
 		</dropLists>
 	</npc>
 	<npc id="22482" level="75" type="Monster" name="Sword Kanabion">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="100" />
 			<param name="MoveAroundSocial1" value="100" />
@@ -2840,7 +2838,6 @@
 		</dropLists>
 	</npc>
 	<npc id="22483" level="75" type="Monster" name="Sword Kanabion" title="Doppler">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="160" />
 			<param name="MoveAroundSocial1" value="160" />
@@ -2908,7 +2905,6 @@
 		</dropLists>
 	</npc>
 	<npc id="22484" level="77" type="Monster" name="Sword Kanabion" title="Void">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="160" />
 			<param name="MoveAroundSocial1" value="160" />
@@ -2978,7 +2974,6 @@
 		</dropLists>
 	</npc>
 	<npc id="22485" level="29" type="Monster" name="Lost Watchman">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="120" />
 			<param name="MoveAroundSocial1" value="100" />
@@ -3032,7 +3027,6 @@
 		</collision>
 	</npc>
 	<npc id="22486" level="29" type="Monster" name="Lost Watchman">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="120" />
 			<param name="MoveAroundSocial1" value="100" />
@@ -3089,7 +3083,6 @@
 		</collision>
 	</npc>
 	<npc id="22487" level="29" type="Monster" name="Lost Beholder">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="120" />
 			<param name="MoveAroundSocial1" value="100" />
@@ -3144,7 +3137,6 @@
 		</collision>
 	</npc>
 	<npc id="22488" level="39" type="Monster" name="Lost Watchman">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="60" />
 			<param name="MoveAroundSocial1" value="60" />
@@ -3199,7 +3191,6 @@
 		</collision>
 	</npc>
 	<npc id="22489" level="39" type="Monster" name="Lost Watchman">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="60" />
 			<param name="MoveAroundSocial1" value="60" />
@@ -3256,7 +3247,6 @@
 		</collision>
 	</npc>
 	<npc id="22490" level="39" type="Monster" name="Lost Beholder">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="120" />
 			<param name="MoveAroundSocial1" value="80" />
@@ -3312,7 +3302,6 @@
 		</collision>
 	</npc>
 	<npc id="22491" level="49" type="Monster" name="Lost Watchman">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="116" />
 			<param name="MoveAroundSocial1" value="116" />
@@ -3366,7 +3355,6 @@
 		</collision>
 	</npc>
 	<npc id="22492" level="49" type="Monster" name="Lost Watchman">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="116" />
 			<param name="MoveAroundSocial1" value="116" />
@@ -3422,7 +3410,6 @@
 		</collision>
 	</npc>
 	<npc id="22493" level="49" type="Monster" name="Lost Beholder">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="0" />
 			<param name="MoveAroundSocial1" value="0" />
@@ -3477,7 +3464,6 @@
 		</collision>
 	</npc>
 	<npc id="22494" level="59" type="Monster" name="Lost Watchman">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="80" />
 			<param name="MoveAroundSocial1" value="80" />
@@ -3531,7 +3517,6 @@
 		</collision>
 	</npc>
 	<npc id="22495" level="59" type="Monster" name="Lost Watchman">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="80" />
 			<param name="MoveAroundSocial1" value="80" />
@@ -3588,7 +3573,6 @@
 		</collision>
 	</npc>
 	<npc id="22496" level="59" type="Monster" name="Lost Beholder">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="0" />
 			<param name="MoveAroundSocial1" value="0" />
@@ -3643,7 +3627,6 @@
 		</collision>
 	</npc>
 	<npc id="22497" level="69" type="Monster" name="Lost Watchman">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="78" />
 			<param name="MoveAroundSocial1" value="78" />
@@ -3696,7 +3679,6 @@
 		</collision>
 	</npc>
 	<npc id="22498" level="69" type="Monster" name="Lost Watchman">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="78" />
 			<param name="MoveAroundSocial1" value="78" />
@@ -3752,7 +3734,6 @@
 		</collision>
 	</npc>
 	<npc id="22499" level="69" type="Monster" name="Lost Beholder">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="90" />
 			<param name="MoveAroundSocial1" value="90" />

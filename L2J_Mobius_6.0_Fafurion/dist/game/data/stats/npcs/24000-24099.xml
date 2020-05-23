@@ -1,7 +1,6 @@
 ﻿<?xml version="1.0" encoding="UTF-8"?>
 <list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../xsd/npcs.xsd">
-	<npc id="24000" level="85" type="Npc" name="Leona Blackbird" title="Dragon's Advocate">
-		<!-- AUTO GENERATED NPC TODO: FIX IT -->
+	<npc id="24000" level="85" type="Monster" name="Leona Blackbird" title="Dragon's Advocate">
 		<race>ETC</race>
 		<sex>FEMALE</sex>
 		<equipment rhand="1893" />
@@ -20,8 +19,7 @@
 			<height normal="22.4" />
 		</collision>
 	</npc>
-	<npc id="24001" level="102" type="Npc" name="Kain van Halter" title="Prince of the Second Dimension">
-		<!-- AUTO GENERATED NPC TODO: FIX IT -->
+	<npc id="24001" level="102" type="Monster" name="Kain van Halter" title="Prince of the Second Dimension">
 		<race>ETC</race>
 		<sex>FEMALE</sex>
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
@@ -39,8 +37,7 @@
 			<height normal="20" />
 		</collision>
 	</npc>
-	<npc id="24002" level="85" type="Npc" name="Princess Ant" title="Successor in the Ant Nest">
-		<!-- AUTO GENERATED NPC TODO: FIX IT -->
+	<npc id="24002" level="85" type="Monster" name="Princess Ant" title="Successor in the Ant Nest">
 		<race>ETC</race>
 		<sex>FEMALE</sex>
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
@@ -58,8 +55,7 @@
 			<height normal="53" />
 		</collision>
 	</npc>
-	<npc id="24003" level="85" type="Npc" name="Escort Ant">
-		<!-- AUTO GENERATED NPC TODO: FIX IT -->
+	<npc id="24003" level="85" type="Monster" name="Escort Ant">
 		<race>ETC</race>
 		<sex>FEMALE</sex>
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
@@ -77,8 +73,7 @@
 			<height normal="15" />
 		</collision>
 	</npc>
-	<npc id="24004" level="85" type="Npc" name="Royal Guard Ant">
-		<!-- AUTO GENERATED NPC TODO: FIX IT -->
+	<npc id="24004" level="85" type="Monster" name="Royal Guard Ant">
 		<race>ETC</race>
 		<sex>FEMALE</sex>
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
@@ -96,8 +91,7 @@
 			<height normal="15" />
 		</collision>
 	</npc>
-	<npc id="24005" level="85" type="Npc" name="Urfen" title="Orfen Kin">
-		<!-- AUTO GENERATED NPC TODO: FIX IT -->
+	<npc id="24005" level="85" type="Monster" name="Urfen" title="Orfen Kin">
 		<race>ETC</race>
 		<sex>FEMALE</sex>
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
@@ -115,8 +109,7 @@
 			<height normal="128.4" />
 		</collision>
 	</npc>
-	<npc id="24006" level="85" type="Npc" name="Laikel">
-		<!-- AUTO GENERATED NPC TODO: FIX IT -->
+	<npc id="24006" level="85" type="Monster" name="Laikel">
 		<race>ETC</race>
 		<sex>FEMALE</sex>
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
@@ -134,8 +127,7 @@
 			<height normal="30.5" />
 		</collision>
 	</npc>
-	<npc id="24007" level="85" type="Npc" name="Riba">
-		<!-- AUTO GENERATED NPC TODO: FIX IT -->
+	<npc id="24007" level="85" type="Monster" name="Riba">
 		<race>ETC</race>
 		<sex>FEMALE</sex>
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
@@ -153,8 +145,7 @@
 			<height normal="34.5" />
 		</collision>
 	</npc>
-	<npc id="24008" level="85" type="Npc" name="Zaken" title="Unworldly Pirate King">
-		<!-- AUTO GENERATED NPC TODO: FIX IT -->
+	<npc id="24008" level="85" type="Monster" name="Zaken" title="Unworldly Pirate King">
 		<race>ETC</race>
 		<sex>FEMALE</sex>
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
@@ -172,8 +163,7 @@
 			<height normal="32" />
 		</collision>
 	</npc>
-	<npc id="24009" level="85" type="Npc" name="Zaken" title="Unworldly Pirate King">
-		<!-- AUTO GENERATED NPC TODO: FIX IT -->
+	<npc id="24009" level="85" type="Monster" name="Zaken" title="Unworldly Pirate King">
 		<race>ETC</race>
 		<sex>FEMALE</sex>
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
@@ -192,7 +182,6 @@
 		</collision>
 	</npc>
 	<npc id="24010" level="92" type="Monster" name="Pirate Zombie Captain">
-		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<race>UNDEAD</race>
 		<sex>FEMALE</sex>
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
@@ -232,7 +221,6 @@
 		</dropLists>
 	</npc>
 	<npc id="24011" level="92" type="Monster" name="Pirate Zombie">
-		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<race>UNDEAD</race>
 		<sex>FEMALE</sex>
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
@@ -271,8 +259,7 @@
 			</lucky>
 		</dropLists>
 	</npc>
-	<npc id="24012" level="85" type="Npc" name="Saium" title="Relative of the Emperor">
-		<!-- AUTO GENERATED NPC TODO: FIX IT -->
+	<npc id="24012" level="85" type="Monster" name="Saium" title="Relative of the Emperor">
 		<race>ETC</race>
 		<sex>FEMALE</sex>
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
@@ -290,8 +277,7 @@
 			<height normal="67.8" />
 		</collision>
 	</npc>
-	<npc id="24013" level="85" type="Npc" name="Traitor Angel">
-		<!-- AUTO GENERATED NPC TODO: FIX IT -->
+	<npc id="24013" level="85" type="Monster" name="Traitor Angel">
 		<race>ETC</race>
 		<sex>FEMALE</sex>
 		<equipment rhand="97" />

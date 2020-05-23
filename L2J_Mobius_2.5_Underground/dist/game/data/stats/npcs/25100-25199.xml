@@ -77,7 +77,6 @@
 		</collision>
 	</npc>
 	<npc id="25102" level="45" type="RaidBoss" name="Shacram" title="Raid Boss">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="RaidSpawnMusic" value="Rm01_A" />
 			<skill name="SelfRangeCancel_a" id="4177" level="5" />
@@ -145,7 +144,6 @@
 		</collision>
 	</npc>
 	<npc id="25103" level="55" type="RaidBoss" name="Wizard Isirr" title="Raid Boss">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<minions name="Privates">
 				<npc id="25104" count="1" respawnTime="360" weightPoint="1" />
@@ -290,7 +288,6 @@
 		</collision>
 	</npc>
 	<npc id="25106" level="60" type="RaidBoss" name="Ghost of the Well Lidia" title="Raid Boss">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<minions name="Privates">
 				<npc id="25107" count="3" respawnTime="360" weightPoint="1" />
@@ -437,7 +434,6 @@
 		</collision>
 	</npc>
 	<npc id="25109" level="74" type="RaidBoss" name="Antharas Priest Cloe" title="Raid Boss">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<minions name="Privates">
 				<npc id="25110" count="3" respawnTime="360" weightPoint="1" />
@@ -484,6 +480,21 @@
 			<radius normal="20" />
 			<height normal="75" />
 		</collision>
+		<dropLists>
+			<drop>
+				<item id="8176" min="1" max="4" chance="80" /> <!-- Destruction Tombstone -->
+				<item id="9814" min="3" max="7" chance="80" /> <!-- Memento Mori -->
+				<item id="8619" min="1" max="1" chance="50" /> <!-- Ancient Book: Divine Inspiration (Original Language Version) -->
+				<item id="5522" min="28" max="84" chance="8.5" /> <!-- Sealed Armor of Nightmare Pattern -->
+				<item id="5541" min="20" max="60" chance="5.75" /> <!-- Tallum Glaive Edge -->
+				<item id="6570" min="1" max="1" chance="3.25" /> <!-- Blessed Scroll: Enchant Armor (A-grade) -->
+				<item id="5311" min="1" max="1" chance="3.25" /> <!-- Sealed Armor of Nightmare -->
+				<item id="5316" min="1" max="1" chance="3.25" /> <!-- Sealed Majestic Plate Armor -->
+				<item id="5523" min="81" max="243" chance="3" /> <!-- Sealed Majestic Plate Armor Pattern -->
+				<item id="305" min="1" max="1" chance="1.5" /> <!-- Tallum Glaive -->
+				<item id="6578" min="1" max="1" chance="1.25" /> <!-- Blessed Scroll: Enchant Armor (S-grade) -->
+			</drop>
+		</dropLists>
 	</npc>
 	<npc id="25110" level="73" type="Monster" name="Cloe's Servitor" title="Raid Fighter">
 		<!-- Confirmed CT2.5 -->
@@ -570,7 +581,6 @@
 		</collision>
 	</npc>
 	<npc id="25112" level="30" type="RaidBoss" name="Beleth' Agent Meana" title="Raid Boss">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<minions name="Privates">
 				<npc id="25113" count="3" respawnTime="360" weightPoint="1" />
@@ -714,7 +724,6 @@
 		</collision>
 	</npc>
 	<npc id="25115" level="40" type="RaidBoss" name="Icarus Sample 1" title="Raid Boss">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<minions name="Privates">
 				<npc id="25116" count="3" respawnTime="360" weightPoint="1" />
@@ -859,7 +868,6 @@
 		</collision>
 	</npc>
 	<npc id="25118" level="35" type="RaidBoss" name="Execution Grounds Watchman Guillotine" title="Raid Boss">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="RaidSpawnMusic" value="Rm02_A" />
 			<skill name="SelfRangeCancel_a" id="4177" level="4" />
@@ -910,9 +918,23 @@
 			<radius normal="20" />
 			<height normal="58" />
 		</collision>
+		<dropLists>
+			<drop>
+				<item id="4592" min="1" max="1" chance="12.5" /> <!-- Greater CON Dye <Con + 2 DEX - 2> -->
+				<item id="4591" min="1" max="1" chance="12.5" /> <!-- Greater CON Dye <Con + 2 Str - 2> -->
+				<item id="4593" min="1" max="1" chance="12.5" /> <!-- Greater DEX Dye <Dex + 2 Str - 2> -->
+				<item id="190" min="1" max="1" chance="4.5" /> <!-- Atuba Mace -->
+				<item id="189" min="1" max="1" chance="4.5" /> <!-- Staff of Life -->
+				<item id="380" min="1" max="1" chance="4.25" /> <!-- Plate Gaiters -->
+				<item id="353" min="1" max="1" chance="1.5" /> <!-- Half Plate Armor -->
+				<item id="159" min="1" max="1" chance="0.75187969924812" /> <!-- Bonebreaker -->
+				<item id="187" min="1" max="1" chance="0.75187969924812" /> <!-- Atuba Hammer -->
+				<item id="188" min="1" max="1" chance="0.75187969924812" /> <!-- Ghost Staff -->
+				<item id="6573" min="1" max="1" chance="0.3003003003003" /> <!-- Blessed Scroll: Enchant Weapon (C-grade) -->
+			</drop>
+		</dropLists>
 	</npc>
 	<npc id="25119" level="50" type="RaidBoss" name="Fairy Queen's Messenger Berun" title="Raid Boss">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<minions name="Privates">
 				<npc id="25120" count="3" respawnTime="360" weightPoint="1" />
@@ -1062,7 +1084,6 @@
 		</collision>
 	</npc>
 	<npc id="25122" level="56" type="RaidBoss" name="Refugee Applicant Leo" title="Raid Boss">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<minions name="Privates">
 				<npc id="25123" count="1" respawnTime="360" weightPoint="1" />
@@ -1210,7 +1231,6 @@
 		</collision>
 	</npc>
 	<npc id="25125" level="65" type="RaidBoss" name="Fierce Tiger King Angel" title="Raid Boss">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="RaidSpawnMusic" value="Rm03_A" />
 			<skill name="SelfRangeCancel_a" id="4177" level="6" />
@@ -1281,7 +1301,6 @@
 		</collision>
 	</npc>
 	<npc id="25126" level="79" type="RaidBoss" name="Longhorn Golkonda" title="Raid Boss">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="RaidSpawnMusic" value="Rm01_A" />
 			<skill name="SelfRangeCancel_a" id="4177" level="7" />
@@ -1330,9 +1349,21 @@
 			<radius normal="42" />
 			<height normal="94" />
 		</collision>
+		<dropLists>
+			<drop>
+				<item id="6578" min="1" max="1" chance="6" /> <!-- Blessed Scroll: Enchant Armor (S-grade) -->
+				<item id="6687" min="1" max="1" chance="5" /> <!-- Sealed Major Arcana Circlet -->
+				<item id="6683" min="1" max="1" chance="5" /> <!-- Sealed Draconic Leather Helmet -->
+				<item id="6678" min="1" max="1" chance="3.5" /> <!-- Sealed Imperial Crusader Shield -->
+				<item id="6679" min="1" max="1" chance="1.5" /> <!-- Sealed Imperial Crusader Helmet -->
+				<item id="6365" min="1" max="1" chance="0.75187969924812" /> <!-- Basalt Battlehammer -->
+				<item id="6366" min="1" max="1" chance="0.75187969924812" /> <!-- Imperial Staff -->
+				<item id="6579" min="1" max="1" chance="0.75187969924812" /> <!-- Arcana Mace -->
+				<item id="6369" min="1" max="1" chance="0.75187969924812" /> <!-- Dragon Hunter Axe -->
+			</drop>
+		</dropLists>
 	</npc>
 	<npc id="25127" level="24" type="RaidBoss" name="Langk Matriarch Rashkos" title="Raid Boss">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="RaidSpawnMusic" value="Rm02_A" />
 			<skill name="SelfRangeCancel_a" id="4177" level="3" />
@@ -1396,7 +1427,6 @@
 		</collision>
 	</npc>
 	<npc id="25128" level="33" type="RaidBoss" name="Vuku Grand Priest Gharmash" title="Raid Boss">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<minions name="Privates">
 				<npc id="25129" count="3" respawnTime="360" weightPoint="1" />
@@ -1543,7 +1573,6 @@
 		</collision>
 	</npc>
 	<npc id="25131" level="50" type="RaidBoss" name="Slaughter Lord Gato" title="Raid Boss">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<minions name="Privates">
 				<npc id="25132" count="3" respawnTime="360" weightPoint="1" />
@@ -1686,7 +1715,6 @@
 		</collision>
 	</npc>
 	<npc id="25134" level="40" type="RaidBoss" name="Leto Chief Talkin" title="Raid Boss">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<minions name="Privates">
 				<npc id="25135" count="2" respawnTime="360" weightPoint="1" />
@@ -1828,7 +1856,6 @@
 		</collision>
 	</npc>
 	<npc id="25137" level="55" type="RaidBoss" name="Beleth' Seer Sephia" title="Raid Boss">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<minions name="Privates">
 				<npc id="25138" count="3" respawnTime="360" weightPoint="1" />
@@ -1978,7 +2005,6 @@
 		</collision>
 	</npc>
 	<npc id="25140" level="65" type="RaidBoss" name="Hekaton Prime" title="Raid Boss">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<minions name="Privates">
 				<npc id="25141" count="1" respawnTime="360" weightPoint="1" />
@@ -2028,6 +2054,18 @@
 			<radius normal="20" grown="25" />
 			<height normal="35" grown="41.5" />
 		</collision>
+		<dropLists>
+			<drop>
+				<item id="8176" min="1" max="4" chance="80" /> <!-- Destruction Tombstone -->
+				<item id="9817" min="3" max="7" chance="80" /> <!-- Nonliving Nucleus -->
+				<item id="6323" min="1" max="1" chance="7.75" /> <!-- Sealed Phoenix Necklace -->
+				<item id="6325" min="1" max="1" chance="6" /> <!-- Sealed Phoenix Ring -->
+				<item id="729" min="1" max="1" chance="3" /> <!-- Scroll: Enchant Weapon (A-grade) -->
+				<item id="98" min="1" max="1" chance="2.75" /> <!-- Halberd -->
+				<item id="6324" min="1" max="1" chance="2.25" /> <!-- Sealed Phoenix Earring -->
+				<item id="6569" min="1" max="1" chance="0.3003003003003" /> <!-- Blessed Scroll: Enchant Weapon (A-grade) -->
+			</drop>
+		</dropLists>
 	</npc>
 	<npc id="25141" level="64" type="Monster" name="Hekaton Cottus" title="Raid Fighter">
 		<!-- Confirmed CT2.5 -->
@@ -2105,7 +2143,6 @@
 		</collision>
 	</npc>
 	<npc id="25143" level="78" type="RaidBoss" name="Fire of Wrath Shuriel" title="Raid Boss">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<minions name="Privates">
 				<npc id="25144" count="2" respawnTime="360" weightPoint="1" />
@@ -2246,7 +2283,6 @@
 		</collision>
 	</npc>
 	<npc id="25146" level="21" type="RaidBoss" name="Evil Spirit Bifrons" title="Raid Boss">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<minions name="Privates">
 				<npc id="25147" count="3" respawnTime="360" weightPoint="1" />
@@ -2385,7 +2421,6 @@
 		</collision>
 	</npc>
 	<npc id="25149" level="25" type="RaidBoss" name="Zombie Lord Crowl" title="Raid Boss">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<minions name="Privates">
 				<npc id="25150" count="3" respawnTime="360" weightPoint="1" />
@@ -2531,7 +2566,6 @@
 		</collision>
 	</npc>
 	<npc id="25152" level="35" type="RaidBoss" name="Flame Lord Shadar" title="Raid Boss">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<minions name="Privates">
 				<npc id="25153" count="1" respawnTime="360" weightPoint="1" />
@@ -2676,7 +2710,6 @@
 		</collision>
 	</npc>
 	<npc id="25155" level="40" type="RaidBoss" name="Shaman King Selu" title="Raid Boss">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<minions name="Privates">
 				<npc id="25156" count="3" respawnTime="360" weightPoint="1" />
@@ -2822,7 +2855,6 @@
 		</collision>
 	</npc>
 	<npc id="25158" level="48" type="RaidBoss" name="King Tarlk" title="Raid Boss">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="RaidSpawnMusic" value="Rm01_A" />
 			<skill name="SelfRangeCancel_a" id="4177" level="5" />
@@ -2891,7 +2923,6 @@
 		</collision>
 	</npc>
 	<npc id="25159" level="54" type="RaidBoss" name="Paniel the Unicorn" title="Raid Boss">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<minions name="Privates">
 				<npc id="25160" count="2" respawnTime="360" weightPoint="1" />
@@ -3033,7 +3064,6 @@
 		</collision>
 	</npc>
 	<npc id="25162" level="60" type="RaidBoss" name="Giant Marpanak" title="Raid Boss">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="RaidSpawnMusic" value="Rm01_A" />
 			<skill name="SelfRangeCancel_a" id="4177" level="6" />
@@ -3082,9 +3112,21 @@
 			<radius normal="50" />
 			<height normal="91" />
 		</collision>
+		<dropLists>
+			<drop>
+				<item id="8176" min="1" max="3" chance="80" /> <!-- Destruction Tombstone -->
+				<item id="9817" min="2" max="6" chance="80" /> <!-- Nonliving Nucleus -->
+				<item id="4622" min="1" max="3" chance="10" /> <!-- Greater MEN Dye <Men + 4 Wit - 4> -->
+				<item id="4624" min="1" max="3" chance="10" /> <!-- Greater WIT Dye <Wit + 4 Men - 4> -->
+				<item id="4623" min="1" max="3" chance="10" /> <!-- Greater WIT Dye <Wit + 4 Int - 4> -->
+				<item id="2417" min="1" max="1" chance="9.25" /> <!-- Doom Helmet -->
+				<item id="110" min="1" max="1" chance="5.25" /> <!-- Doom Shield -->
+				<item id="287" min="1" max="1" chance="3.5" /> <!-- Bow of Peril -->
+				<item id="2416" min="1" max="1" chance="2" /> <!-- Blue Wolf Helmet -->
+			</drop>
+		</dropLists>
 	</npc>
 	<npc id="25163" level="70" type="RaidBoss" name="Roaring Skylancer" title="Raid Boss">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="RaidSpawnMusic" value="Rm01_A" />
 			<skill name="SelfRangeCancel_a" id="4177" level="7" />
@@ -3157,7 +3199,6 @@
 		</collision>
 	</npc>
 	<npc id="25166" level="25" type="RaidBoss" name="Ikuntai" title="Raid Boss">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<minions name="Privates">
 				<npc id="25167" count="2" respawnTime="360" weightPoint="1" />
@@ -3301,7 +3342,6 @@
 		</collision>
 	</npc>
 	<npc id="25169" level="30" type="RaidBoss" name="Ragraman" title="Raid Boss">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="RaidSpawnMusic" value="Rm02_A" />
 			<skill name="SelfRangeCancel_a" id="4177" level="3" />
@@ -3372,7 +3412,6 @@
 		</collision>
 	</npc>
 	<npc id="25170" level="38" type="RaidBoss" name="Lizardmen Captain Hellion" title="Raid Boss">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<minions name="Privates">
 				<npc id="25171" count="3" respawnTime="360" weightPoint="1" />
@@ -3510,7 +3549,6 @@
 		</collision>
 	</npc>
 	<npc id="25173" level="45" type="RaidBoss" name="Tiger King Karuta" title="Raid Boss">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<minions name="Privates">
 				<npc id="25174" count="2" respawnTime="360" weightPoint="1" />
@@ -3651,7 +3689,6 @@
 		</collision>
 	</npc>
 	<npc id="25176" level="55" type="RaidBoss" name="Black Lily" title="Raid Boss">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<minions name="Privates">
 				<npc id="25177" count="1" respawnTime="360" weightPoint="1" />
@@ -3702,6 +3739,20 @@
 			<radius normal="12" />
 			<height normal="30.7" />
 		</collision>
+		<dropLists>
+			<drop>
+				<item id="8176" min="1" max="1" chance="90" /> <!-- Destruction Tombstone -->
+				<item id="9814" min="1" max="4" chance="75" /> <!-- Memento Mori -->
+				<item id="4616" min="1" max="1" chance="10" /> <!-- Greater CON Dye <Con + 4 DEX - 4> -->
+				<item id="4618" min="1" max="1" chance="10" /> <!-- Greater DEX Dye <Dex + 4 CON - 4> -->
+				<item id="4617" min="1" max="1" chance="10" /> <!-- Greater DEX Dye <Dex + 4 Str - 4> -->
+				<item id="2384" min="1" max="1" chance="5" /> <!-- Zubei's Leather Shirt -->
+				<item id="2388" min="1" max="1" chance="5" /> <!-- Zubei's Leather Gaiters -->
+				<item id="2390" min="1" max="1" chance="5" /> <!-- Avadon Leather Armor -->
+				<item id="284" min="1" max="1" chance="3" /> <!-- Dark Elven Longbow -->
+				<item id="6572" min="1" max="1" chance="2" /> <!-- Blessed Scroll: Enchant Armor (B-grade) -->
+			</drop>
+		</dropLists>
 	</npc>
 	<npc id="25177" level="54" type="Monster" name="Guardian Knight of Black Lily" title="Raid Fighter">
 		<!-- Confirmed CT2.5 -->
@@ -3783,7 +3834,6 @@
 		</collision>
 	</npc>
 	<npc id="25179" level="60" type="RaidBoss" name="Giant Statue Guardian Karum" title="Raid Boss">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<minions name="Privates">
 				<npc id="25180" count="3" respawnTime="360" weightPoint="1" />
@@ -3931,7 +3981,6 @@
 		</collision>
 	</npc>
 	<npc id="25182" level="59" type="RaidBoss" name="Demon Kuri" title="Raid Boss">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<minions name="Privates">
 				<npc id="25183" count="2" respawnTime="360" weightPoint="1" />
@@ -4079,7 +4128,6 @@
 		</collision>
 	</npc>
 	<npc id="25185" level="35" type="RaidBoss" name="Tasaba Patriarch Hellena" title="Raid Boss">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<minions name="Privates">
 				<npc id="25186" count="3" respawnTime="360" weightPoint="1" />
@@ -4219,7 +4267,6 @@
 		</collision>
 	</npc>
 	<npc id="25188" level="30" type="RaidBoss" name="Apepi" title="Raid Boss">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="RaidSpawnMusic" value="Rm03_A" />
 			<skill name="SelfRangeCancel_a" id="4177" level="3" />
@@ -4288,7 +4335,6 @@
 		</collision>
 	</npc>
 	<npc id="25189" level="34" type="RaidBoss" name="Cronos' Servitor Mumu" title="Raid Boss">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<minions name="Privates">
 				<npc id="25190" count="3" respawnTime="360" weightPoint="1" />
@@ -4428,7 +4474,6 @@
 		</collision>
 	</npc>
 	<npc id="25192" level="43" type="RaidBoss" name="Earth Protector Panathen" title="Raid Boss">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<minions name="Privates">
 				<npc id="25193" count="1" respawnTime="360" weightPoint="1" />
@@ -4571,7 +4616,6 @@
 		</collision>
 	</npc>
 	<npc id="25198" level="70" type="RaidBoss" name="Fafurion's Herald Lokness" title="Raid Boss">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="RaidSpawnMusic" value="Rm03_A" />
 			<skill name="SelfRangeCancel_a" id="4177" level="7" />
@@ -4640,7 +4684,6 @@
 		</collision>
 	</npc>
 	<npc id="25199" level="72" type="RaidBoss" name="Water Dragon Priest Sheshark" title="Raid Boss">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<minions name="Privates">
 				<npc id="25200" count="3" respawnTime="360" weightPoint="1" />

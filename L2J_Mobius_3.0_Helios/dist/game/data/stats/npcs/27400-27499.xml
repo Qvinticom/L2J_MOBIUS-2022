@@ -1,7 +1,6 @@
 ﻿<?xml version="1.0" encoding="UTF-8"?>
 <list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../xsd/npcs.xsd">
 	<npc id="27400" level="51" type="Monster" name="Shilen's Evil Thoughts">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<skill name="Skill01_ID" id="5975" level="1" />
 			<skill name="Skill02_ID" id="5976" level="1" />
@@ -45,7 +44,6 @@
 		</collision>
 	</npc>
 	<npc id="27401" level="61" type="Monster" name="Shilen's Evil Thoughts">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<skill name="Skill01_ID" id="5975" level="1" />
 			<skill name="Skill02_ID" id="5976" level="2" />
@@ -89,7 +87,6 @@
 		</collision>
 	</npc>
 	<npc id="27402" level="79" type="Monster" name="Shilen's Evil Thoughts">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="0" />
 			<param name="MoveAroundSocial1" value="0" />
@@ -1057,7 +1054,6 @@
 		</collision>
 	</npc>
 	<npc id="27425" level="79" type="Monster" name="Death Wound" title="Shilen's Creation">
-		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<parameters>
 			<param name="IsAggressive" value="1" />
 			<skill name="Skill01_ID" id="6050" level="13" />
@@ -1101,7 +1097,6 @@
 		</collision>
 	</npc>
 	<npc id="27426" level="79" type="Monster" name="Death Wound" title="Shilen's Creation">
-		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<parameters>
 			<param name="IsAggressive" value="1" />
 			<skill name="Skill01_ID" id="6914" level="3" />
@@ -1146,7 +1141,6 @@
 		</collision>
 	</npc>
 	<npc id="27427" level="79" type="Monster" name="Death Wound" title="Shilen's Creation">
-		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<parameters>
 			<param name="IsAggressive" value="1" />
 			<skill name="Skill01_ID" id="6914" level="3" />
@@ -1189,7 +1183,6 @@
 		</collision>
 	</npc>
 	<npc id="27428" level="79" type="Monster" name="Death Wound" title="Shilen's Creation">
-		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<parameters>
 			<param name="IsAggressive" value="1" />
 			<skill name="Skill01_ID" id="6050" level="13" />
@@ -1234,7 +1227,6 @@
 		</collision>
 	</npc>
 	<npc id="27429" level="79" type="Monster" name="Death Wound" title="Shilen's Creation">
-		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<parameters>
 			<param name="IsAggressive" value="1" />
 			<skill name="Skill01_ID" id="6914" level="3" />
@@ -1279,7 +1271,6 @@
 		</collision>
 	</npc>
 	<npc id="27430" level="76" type="Monster" name="Screaming Shaman" title="Resurrected">
-		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<parameters>
 			<param name="IsAggressive" value="1" />
 			<skill name="Skill01_ID" id="6527" level="11" />
@@ -1322,7 +1313,6 @@
 		</collision>
 	</npc>
 	<npc id="27431" level="76" type="Monster" name="Slayer" title="Resurrected">
-		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<parameters>
 			<param name="IsAggressive" value="1" />
 			<skill name="Skill01_ID" id="6515" level="11" />
@@ -1365,7 +1355,6 @@
 		</collision>
 	</npc>
 	<npc id="27432" level="76" type="Monster" name="Tracker" title="Resurrected">
-		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<parameters>
 			<param name="IsAggressive" value="1" />
 			<skill name="Skill01_ID" id="4073" level="9" />
@@ -1408,7 +1397,6 @@
 		</collision>
 	</npc>
 	<npc id="27433" level="76" type="Monster" name="Priest of Darkness" title="Resurrected">
-		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<parameters>
 			<param name="IsAggressive" value="1" />
 			<skill name="Skill01_ID" id="4613" level="9" />
@@ -1450,7 +1438,6 @@
 		</collision>
 	</npc>
 	<npc id="27434" level="76" type="Monster" name="Guardian of Darkness" title="Resurrected">
-		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<parameters>
 			<param name="IsAggressive" value="1" />
 			<skill name="Skill01_ID" id="4073" level="9" />
@@ -1493,7 +1480,6 @@
 		</collision>
 	</npc>
 	<npc id="27435" level="76" type="Monster" name="Victim's Spirit">
-		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<parameters>
 			<param name="IsAggressive" value="1" />
 		</parameters>
@@ -1527,7 +1513,6 @@
 		</collision>
 	</npc>
 	<npc id="27436" level="77" type="Monster" name="Resurrected Chaos">
-		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<parameters>
 			<param name="IsAggressive" value="1" />
 		</parameters>
@@ -1964,7 +1949,6 @@
 		</skillList>
 	</npc>
 	<npc id="27444" level="85" type="Monster" name="Noctum" title="Watchman of the Seal">
-		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<parameters>
 			<param name="Attack_BoostValue" value="126" />
 		</parameters>
@@ -2077,7 +2061,6 @@
 		</skillList>
 	</npc>
 	<npc id="27446" level="85" type="Monster" name="Demonic Bathus" title="Watchman of the Seal">
-		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<race>HUMANOID</race>
 		<sex>MALE</sex>
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
@@ -2110,7 +2093,6 @@
 		</collision>
 	</npc>
 	<npc id="27447" level="85" type="Monster" name="Demonic Carcass" title="Watchman of the Seal">
-		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<parameters>
 			<param name="IsAggressive" value="1" />
 		</parameters>
@@ -2147,7 +2129,6 @@
 		</collision>
 	</npc>
 	<npc id="27448" level="85" type="Monster" name="Demonic Rakzan" title="Watchman of the Seal">
-		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<race>HUMANOID</race>
 		<sex>MALE</sex>
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
@@ -2180,7 +2161,6 @@
 		</collision>
 	</npc>
 	<npc id="27449" level="85" type="Monster" name="Demonic Weiss Khan" title="Watchman of the Seal">
-		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<parameters>
 			<param name="IsAggressive" value="1" />
 		</parameters>
@@ -2216,7 +2196,6 @@
 		</collision>
 	</npc>
 	<npc id="27450" level="85" type="Monster" name="Demonic Bamonti" title="Watchman of the Seal">
-		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<parameters>
 			<param name="IsAggressive" value="1" />
 		</parameters>
@@ -2252,7 +2231,6 @@
 		</collision>
 	</npc>
 	<npc id="27451" level="29" type="Monster" name="Kanilov" title="Quest Monster">
-		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<parameters>
 			<skill name="Skill01_ID" id="4073" level="3" />
 			<skill name="Skill02_ID" id="14093" level="1" />
@@ -2290,7 +2268,6 @@
 		</collision>
 	</npc>
 	<npc id="27452" level="34" type="Monster" name="Poslof" title="Quest Monster">
-		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<parameters>
 			<skill name="Skill01_ID" id="4073" level="4" />
 			<skill name="Skill02_ID" id="14094" level="1" />
@@ -2328,7 +2305,6 @@
 		</collision>
 	</npc>
 	<npc id="27453" level="40" type="Monster" name="Sakum" title="Quest Monster">
-		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<parameters>
 			<skill name="Skill01_ID" id="14095" level="1" />
 			<skill name="Skill02_ID" id="14352" level="1" />
@@ -2367,7 +2343,6 @@
 		</collision>
 	</npc>
 	<npc id="27454" level="85" type="Monster" name="Weiss Ele" title="Aeore Healer">
-		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<parameters>
 			<skill name="Skill01_ID" id="14694" level="1" />
 			<skill name="Skill02_ID" id="14694" level="1" />
@@ -2424,7 +2399,6 @@
 		</skillList>
 	</npc>
 	<npc id="27456" level="10" type="Monster" name="Wisp">
-		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<race>CONSTRUCT</race>
 		<sex>MALE</sex>
 		<mpReward value="20" type="PER" ticks="10" affects="PARTY" />
@@ -2453,7 +2427,6 @@
 		</collision>
 	</npc>
 	<npc id="27457" level="3" type="Monster" name="Scarecrow" title="Training">
-		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<race>ETC</race>
 		<sex>ETC</sex>
 		<mpReward value="20" type="PER" ticks="10" affects="PARTY" />
@@ -2483,7 +2456,6 @@
 		</collision>
 	</npc>
 	<npc id="27458" level="30" type="Monster" name="Bat">
-		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<race>ANIMAL</race>
 		<sex>MALE</sex>
 		<mpReward value="20" type="PER" ticks="10" affects="PARTY" />
@@ -2518,7 +2490,6 @@
 		</collision>
 	</npc>
 	<npc id="27459" level="38" type="Monster" name="Regenerated Kanilov">
-		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<parameters>
 			<skill name="Skill01_ID" id="4073" level="4" />
 			<skill name="Skill02_ID" id="14094" level="5" />
@@ -2557,7 +2528,6 @@
 		</collision>
 	</npc>
 	<npc id="27460" level="38" type="Monster" name="Regenerated Poslof">
-		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<parameters>
 			<skill name="Skill01_ID" id="4073" level="4" />
 			<skill name="Skill02_ID" id="14094" level="5" />
@@ -2597,7 +2567,6 @@
 		</collision>
 	</npc>
 	<npc id="27461" level="38" type="Monster" name="Sakum's Summoned Pet">
-		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<parameters>
 			<skill name="Skill01_ID" id="14095" level="1" />
 			<skill name="Skill02_ID" id="14352" level="1" />
@@ -2635,7 +2604,6 @@
 		</collision>
 	</npc>
 	<npc id="27462" level="85" type="Monster" name="Rakzan" title="Sigel Knight">
-		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<parameters>
 			<skill name="Skill01_ID" id="14673" level="1" />
 			<skill name="Skill02_ID" id="14674" level="1" />
@@ -2679,9 +2647,22 @@
 			<radius normal="65" grown="48" />
 			<height normal="79" grown="93" />
 		</collision>
+		<dropLists>
+			<drop>
+				<!-- Also drops herbs. -->
+				<item id="8600" min="1" max="1" chance="10" /> <!-- Herb of Life -->
+				<item id="8601" min="1" max="1" chance="8" /> <!-- Major Herb of Life -->
+				<item id="8602" min="1" max="1" chance="2" /> <!-- Superior Herb of Life -->
+				<item id="8603" min="1" max="1" chance="19.8" /> <!-- Herb of Mana -->
+				<item id="8604" min="1" max="1" chance="9.9" /> <!-- Major Herb of Mana -->
+				<item id="8605" min="1" max="1" chance="3.3" /> <!-- Superior Herb of Mana -->
+				<item id="34849" min="1" max="1" chance="0.7" /> <!-- Mysterious Herb of Power -->
+				<item id="34850" min="1" max="1" chance="0.7" /> <!-- Mysterious Herb of Magic -->
+				<item id="13028" min="1" max="1" chance="0.1" /> <!-- Vitality Replenishing Herb -->
+			</drop>
+		</dropLists>
 	</npc>
 	<npc id="27463" level="85" type="Monster" name="Krakia Bathus" title="Tyrr Warrior">
-		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<parameters>
 			<skill name="Skill01_ID" id="14676" level="1" />
 			<skill name="Skill02_ID" id="14678" level="1" />
@@ -2725,9 +2706,22 @@
 			<radius normal="28" grown="32" />
 			<height normal="46.15" grown="55" />
 		</collision>
+		<dropLists>
+			<drop>
+				<!-- Also drops herbs. -->
+				<item id="8600" min="1" max="1" chance="10" /> <!-- Herb of Life -->
+				<item id="8601" min="1" max="1" chance="8" /> <!-- Major Herb of Life -->
+				<item id="8602" min="1" max="1" chance="2" /> <!-- Superior Herb of Life -->
+				<item id="8603" min="1" max="1" chance="19.8" /> <!-- Herb of Mana -->
+				<item id="8604" min="1" max="1" chance="9.9" /> <!-- Major Herb of Mana -->
+				<item id="8605" min="1" max="1" chance="3.3" /> <!-- Superior Herb of Mana -->
+				<item id="34849" min="1" max="1" chance="0.7" /> <!-- Mysterious Herb of Power -->
+				<item id="34850" min="1" max="1" chance="0.7" /> <!-- Mysterious Herb of Magic -->
+				<item id="13028" min="1" max="1" chance="0.1" /> <!-- Vitality Replenishing Herb -->
+			</drop>
+		</dropLists>
 	</npc>
 	<npc id="27464" level="85" type="Monster" name="Bamonti" title="Othell Rogue">
-		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<parameters>
 			<skill name="Skill01_ID" id="14679" level="1" />
 			<skill name="s_poison" id="14681" level="1" />
@@ -2770,9 +2764,22 @@
 			<radius normal="19" grown="14" />
 			<height normal="43" grown="50" />
 		</collision>
+		<dropLists>
+			<drop>
+				<!-- Also drops herbs. -->
+				<item id="8600" min="1" max="1" chance="10" /> <!-- Herb of Life -->
+				<item id="8601" min="1" max="1" chance="8" /> <!-- Major Herb of Life -->
+				<item id="8602" min="1" max="1" chance="2" /> <!-- Superior Herb of Life -->
+				<item id="8603" min="1" max="1" chance="19.8" /> <!-- Herb of Mana -->
+				<item id="8604" min="1" max="1" chance="9.9" /> <!-- Major Herb of Mana -->
+				<item id="8605" min="1" max="1" chance="3.3" /> <!-- Superior Herb of Mana -->
+				<item id="34849" min="1" max="1" chance="0.7" /> <!-- Mysterious Herb of Power -->
+				<item id="34850" min="1" max="1" chance="0.7" /> <!-- Mysterious Herb of Magic -->
+				<item id="13028" min="1" max="1" chance="0.1" /> <!-- Vitality Replenishing Herb -->
+			</drop>
+		</dropLists>
 	</npc>
 	<npc id="27465" level="85" type="Monster" name="Krakia Carcass" title="Yul Archer">
-		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<parameters>
 			<skill name="Skill01_ID" id="14682" level="1" />
 			<skill name="Skill02_ID" id="14683" level="1" />
@@ -2817,9 +2824,22 @@
 			<radius normal="28" grown="32" />
 			<height normal="46.15" grown="55" />
 		</collision>
+		<dropLists>
+			<drop>
+				<!-- Also drops herbs. -->
+				<item id="8600" min="1" max="1" chance="10" /> <!-- Herb of Life -->
+				<item id="8601" min="1" max="1" chance="8" /> <!-- Major Herb of Life -->
+				<item id="8602" min="1" max="1" chance="2" /> <!-- Superior Herb of Life -->
+				<item id="8603" min="1" max="1" chance="19.8" /> <!-- Herb of Mana -->
+				<item id="8604" min="1" max="1" chance="9.9" /> <!-- Major Herb of Mana -->
+				<item id="8605" min="1" max="1" chance="3.3" /> <!-- Superior Herb of Mana -->
+				<item id="34849" min="1" max="1" chance="0.7" /> <!-- Mysterious Herb of Power -->
+				<item id="34850" min="1" max="1" chance="0.7" /> <!-- Mysterious Herb of Magic -->
+				<item id="13028" min="1" max="1" chance="0.1" /> <!-- Vitality Replenishing Herb -->
+			</drop>
+		</dropLists>
 	</npc>
 	<npc id="27466" level="85" type="Monster" name="Weiss Khan" title="Feoh Wizard">
-		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<parameters>
 			<skill name="Skill01_ID" id="14685" level="1" />
 			<skill name="Skill02_ID" id="14685" level="1" />
@@ -2864,9 +2884,22 @@
 			<radius normal="16" grown="18" />
 			<height normal="42.5" grown="46" />
 		</collision>
+		<dropLists>
+			<drop>
+				<!-- Also drops herbs. -->
+				<item id="8600" min="1" max="1" chance="10" /> <!-- Herb of Life -->
+				<item id="8601" min="1" max="1" chance="8" /> <!-- Major Herb of Life -->
+				<item id="8602" min="1" max="1" chance="2" /> <!-- Superior Herb of Life -->
+				<item id="8603" min="1" max="1" chance="19.8" /> <!-- Herb of Mana -->
+				<item id="8604" min="1" max="1" chance="9.9" /> <!-- Major Herb of Mana -->
+				<item id="8605" min="1" max="1" chance="3.3" /> <!-- Superior Herb of Mana -->
+				<item id="34849" min="1" max="1" chance="0.7" /> <!-- Mysterious Herb of Power -->
+				<item id="34850" min="1" max="1" chance="0.7" /> <!-- Mysterious Herb of Magic -->
+				<item id="13028" min="1" max="1" chance="0.1" /> <!-- Vitality Replenishing Herb -->
+			</drop>
+		</dropLists>
 	</npc>
 	<npc id="27467" level="85" type="Monster" name="Seknus" title="Iss Enchanter">
-		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<parameters>
 			<skill name="Skill01_ID" id="14691" level="1" />
 			<skill name="Skill02_ID" id="14692" level="1" />
@@ -2911,9 +2944,22 @@
 			<radius normal="21" />
 			<height normal="69" grown="76" />
 		</collision>
+		<dropLists>
+			<drop>
+				<!-- Also drops herbs. -->
+				<item id="8600" min="1" max="1" chance="10" /> <!-- Herb of Life -->
+				<item id="8601" min="1" max="1" chance="8" /> <!-- Major Herb of Life -->
+				<item id="8602" min="1" max="1" chance="2" /> <!-- Superior Herb of Life -->
+				<item id="8603" min="1" max="1" chance="19.8" /> <!-- Herb of Mana -->
+				<item id="8604" min="1" max="1" chance="9.9" /> <!-- Major Herb of Mana -->
+				<item id="8605" min="1" max="1" chance="3.3" /> <!-- Superior Herb of Mana -->
+				<item id="34849" min="1" max="1" chance="0.7" /> <!-- Mysterious Herb of Power -->
+				<item id="34850" min="1" max="1" chance="0.7" /> <!-- Mysterious Herb of Magic -->
+				<item id="13028" min="1" max="1" chance="0.1" /> <!-- Vitality Replenishing Herb -->
+			</drop>
+		</dropLists>
 	</npc>
 	<npc id="27468" level="85" type="Monster" name="Krakia Lotus" title="Wynn Summoner">
-		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<parameters>
 			<skill name="Skill01_ID" id="14688" level="2" />
 			<skill name="Skill02_ID" id="14688" level="2" />
@@ -2958,9 +3004,22 @@
 			<radius normal="28" grown="32" />
 			<height normal="46.15" grown="55" />
 		</collision>
+		<dropLists>
+			<drop>
+				<!-- Also drops herbs. -->
+				<item id="8600" min="1" max="1" chance="10" /> <!-- Herb of Life -->
+				<item id="8601" min="1" max="1" chance="8" /> <!-- Major Herb of Life -->
+				<item id="8602" min="1" max="1" chance="2" /> <!-- Superior Herb of Life -->
+				<item id="8603" min="1" max="1" chance="19.8" /> <!-- Herb of Mana -->
+				<item id="8604" min="1" max="1" chance="9.9" /> <!-- Major Herb of Mana -->
+				<item id="8605" min="1" max="1" chance="3.3" /> <!-- Superior Herb of Mana -->
+				<item id="34849" min="1" max="1" chance="0.7" /> <!-- Mysterious Herb of Power -->
+				<item id="34850" min="1" max="1" chance="0.7" /> <!-- Mysterious Herb of Magic -->
+				<item id="13028" min="1" max="1" chance="0.1" /> <!-- Vitality Replenishing Herb -->
+			</drop>
+		</dropLists>
 	</npc>
 	<npc id="27469" level="85" type="Monster" name="Weiss Ele" title="Aeore Healer">
-		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<parameters>
 			<skill name="Skill01_ID" id="14694" level="1" />
 			<skill name="Skill02_ID" id="14694" level="1" />
@@ -3001,7 +3060,6 @@
 		</collision>
 	</npc>
 	<npc id="27470" level="70" type="Monster" name="Shilen's Messenger Cabrio" title="Quest Monster">
-		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<parameters>
 			<minions name="Privates">
 				<npc id="27471" count="2" respawnTime="120" weightPoint="1" />
@@ -3042,7 +3100,6 @@
 		</collision>
 	</npc>
 	<npc id="27471" level="69" type="Monster" name="Cabrio Captor" title="Quest Monster">
-		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<parameters>
 			<param name="Party_Type" value="1" />
 		</parameters>
@@ -3079,7 +3136,6 @@
 		</collision>
 	</npc>
 	<npc id="27472" level="69" type="Monster" name="Cabrio Blader" title="Quest Monster">
-		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<parameters>
 			<param name="Party_Type" value="1" />
 		</parameters>
@@ -3114,7 +3170,6 @@
 		</collision>
 	</npc>
 	<npc id="27473" level="75" type="Monster" name="Kernon" title="Quest Monster">
-		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<parameters>
 			<minions name="Privates">
 				<npc id="27474" count="2" respawnTime="120" weightPoint="1" />
@@ -3157,7 +3212,6 @@
 		</collision>
 	</npc>
 	<npc id="27474" level="74" type="Monster" name="Taliadon" title="Quest Monster">
-		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<parameters>
 			<param name="Party_Type" value="1" />
 			<skill name="Skill01_ID" id="4168" level="3" />
@@ -3194,7 +3248,6 @@
 		</collision>
 	</npc>
 	<npc id="27475" level="74" type="Monster" name="Vemsk" title="Quest Monster">
-		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<parameters>
 			<param name="Party_Type" value="1" />
 		</parameters>
@@ -3229,7 +3282,6 @@
 		</collision>
 	</npc>
 	<npc id="27476" level="79" type="Monster" name="Longhorn Golkonda" title="Quest Monster">
-		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<parameters>
 			<param name="MoveArounding" value="0" />
 			<skill name="Skill03_ID" id="4172" level="4" />
@@ -3264,7 +3316,6 @@
 		</collision>
 	</npc>
 	<npc id="27477" level="73" type="Monster" name="Death Lord Hallate" title="Quest Monster">
-		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<parameters>
 			<minions name="Privates">
 				<npc id="27478" count="3" respawnTime="120" weightPoint="1" />
@@ -3306,7 +3357,6 @@
 		</collision>
 	</npc>
 	<npc id="27478" level="72" type="Monster" name="Death Mage Krician" title="Quest Monster">
-		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<parameters>
 			<param name="Party_Type" value="1" />
 			<skill name="Skill01_ID" id="4194" level="3" />
@@ -3344,7 +3394,6 @@
 		</collision>
 	</npc>
 	<npc id="27479" level="72" type="Monster" name="Death Fighter Harik" title="Quest Monster">
-		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<parameters>
 			<param name="Party_Type" value="1" />
 			<skill name="Skill01_ID" id="4169" level="3" />
@@ -3381,7 +3430,6 @@
 		</collision>
 	</npc>
 	<npc id="27480" level="84" type="Monster" name="Sehkmeti">
-		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<parameters>
 			<param name="MoveAroundSocial" value="50" />
 			<param name="MoveAroundSocial1" value="50" />
@@ -3430,7 +3478,6 @@
 		</collision>
 	</npc>
 	<npc id="27481" level="84" type="Monster" name="Blood Thirst" title="Succubus Lord">
-		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<parameters>
 			<param name="MoveAroundSocial" value="150" />
 			<param name="MoveAroundSocial1" value="150" />
@@ -3473,7 +3520,6 @@
 		</collision>
 	</npc>
 	<npc id="27482" level="75" type="Monster" name="One Who Eats Prophecies" title="Quest Monster">
-		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<race>BEAST</race>
 		<sex>FEMALE</sex>
 		<mpReward value="20" type="PER" ticks="10" affects="PARTY" />
@@ -3707,8 +3753,7 @@
 			<height normal="0.1" />
 		</collision>
 	</npc>
-	<npc id="27491" level="40" type="Npc" name="Corpse of the Chamberlain of Darkness">
-		<!-- AUTO GENERATED NPC TODO: FIX IT -->
+	<npc id="27491" level="40" type="Monster" name="Corpse of the Chamberlain of Darkness">
 		<race>DEMONIC</race>
 		<sex>FEMALE</sex>
 		<mpReward value="20" type="PER" ticks="10" affects="PARTY" />
@@ -3737,7 +3782,6 @@
 		</collision>
 	</npc>
 	<npc id="27492" level="85" type="Monster" name="Shilen's Messenger">
-		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<race>UNDEAD</race>
 		<sex>MALE</sex>
 		<equipment rhand="13983" /> <!-- Monster Only (Death Knight_2hs) -->
@@ -3767,7 +3811,6 @@
 		</collision>
 	</npc>
 	<npc id="27493" level="85" type="Monster" name="Grotesque Bug">
-		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<race>BUG</race>
 		<sex>MALE</sex>
 		<mpReward value="20" type="PER" ticks="10" affects="PARTY" />
@@ -3795,7 +3838,6 @@
 		</collision>
 	</npc>
 	<npc id="27494" level="86" type="Monster" name="Grotesque Giant Bug">
-		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<race>BUG</race>
 		<sex>MALE</sex>
 		<mpReward value="20" type="PER" ticks="10" affects="PARTY" />
@@ -3824,7 +3866,6 @@
 		</collision>
 	</npc>
 	<npc id="27495" level="99" type="Monster" name="Lindvior's Minion">
-		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<race>DRAGON</race>
 		<sex>FEMALE</sex>
 		<mpReward value="20" type="PER" ticks="10" affects="PARTY" />
@@ -3853,7 +3894,6 @@
 		</collision>
 	</npc>
 	<npc id="27496" level="85" type="Monster" name="Unconscious Dwarf Workman">
-		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<race>DWARF</race>
 		<sex>MALE</sex>
 		<mpReward value="20" type="PER" ticks="10" affects="PARTY" />
@@ -3881,7 +3921,6 @@
 		</collision>
 	</npc>
 	<npc id="27497" level="82" type="Monster" name="Tanta Lizardman Chief Loygen" title="Quest Monster">
-		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<race>HUMANOID</race>
 		<sex>FEMALE</sex>
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
@@ -3906,7 +3945,6 @@
 		</collision>
 	</npc>
 	<npc id="27498" level="82" type="Monster" name="Sel Mahum Chief Keltron" title="Quest Monster">
-		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<race>HUMANOID</race>
 		<sex>FEMALE</sex>
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
@@ -3931,7 +3969,6 @@
 		</collision>
 	</npc>
 	<npc id="27499" level="75" type="Monster" name="Daimon the White-eyed" title="Quest Monster">
-		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<race>CONSTRUCT</race>
 		<sex>FEMALE</sex>
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">

@@ -1,7 +1,6 @@
 ﻿<?xml version="1.0" encoding="UTF-8"?>
 <list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../xsd/npcs.xsd">
 	<npc id="25001" level="23" type="RaidBoss" name="Greyclaw Kutus" title="Raid Boss">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<minions name="Privates">
 				<npc id="25002" count="3" respawnTime="360" weightPoint="1" />
@@ -132,7 +131,6 @@
 		</collision>
 	</npc>
 	<npc id="25004" level="30" type="RaidBoss" name="Turek Mercenary Captain" title="Raid Boss">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<minions name="Privates">
 				<npc id="25005" count="3" respawnTime="360" weightPoint="1" />
@@ -279,7 +277,6 @@
 		</collision>
 	</npc>
 	<npc id="25007" level="42" type="RaidBoss" name="Retreat Spider Cletu" title="Raid Boss">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<minions name="Privates">
 				<npc id="25008" count="2" respawnTime="360" weightPoint="1" />
@@ -431,7 +428,6 @@
 		</collision>
 	</npc>
 	<npc id="25013" level="50" type="RaidBoss" name="Ghost of Peasant Captain" title="Raid Boss">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<minions name="Privates">
 				<npc id="25014" count="1" respawnTime="360" weightPoint="1" />
@@ -566,7 +562,6 @@
 		</collision>
 	</npc>
 	<npc id="25016" level="60" type="RaidBoss" name="The 3rd Underwater Guardian" title="Raid Boss">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<minions name="Privates">
 				<npc id="25017" count="2" respawnTime="360" weightPoint="1" />
@@ -726,7 +721,6 @@
 		</collision>
 	</npc>
 	<npc id="25019" level="25" type="RaidBoss" name="Pan Dryad" title="Raid Boss">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="RaidSpawnMusic" value="Rm01_A" />
 			<skill name="SelfRangeCancel_a" id="4177" level="2" />
@@ -800,7 +794,6 @@
 		</collision>
 	</npc>
 	<npc id="25020" level="34" type="RaidBoss" name="Breka Warlock Pastu" title="Raid Boss">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<minions name="Privates">
 				<npc id="25021" count="2" respawnTime="360" weightPoint="1" />
@@ -959,7 +952,6 @@
 		</collision>
 	</npc>
 	<npc id="25023" level="34" type="RaidBoss" name="Marsh Stakato Queen Zyrnna" title="Raid Boss">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<minions name="Privates">
 				<npc id="25024" count="1" respawnTime="360" weightPoint="1" />
@@ -1109,7 +1101,6 @@
 		</collision>
 	</npc>
 	<npc id="25026" level="49" type="RaidBoss" name="Ketra's Commander Atis" title="Raid Boss">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<minions name="Privates">
 				<npc id="25027" count="3" respawnTime="360" weightPoint="1" />
@@ -1264,7 +1255,6 @@
 		</collision>
 	</npc>
 	<npc id="25029" level="53" type="RaidBoss" name="Atraiban" title="Raid Boss">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<minions name="Privates">
 				<npc id="25030" count="2" respawnTime="360" weightPoint="1" />
@@ -1414,7 +1404,6 @@
 		</collision>
 	</npc>
 	<npc id="25032" level="58" type="RaidBoss" name="Eva's Guardian Millenu" title="Raid Boss">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<minions name="Privates">
 				<npc id="25033" count="3" respawnTime="360" weightPoint="1" />
@@ -1586,7 +1575,6 @@
 		</collision>
 	</npc>
 	<npc id="25035" level="70" type="RaidBoss" name="Shilen's Messenger Cabrio" title="Raid Boss">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<minions name="Privates">
 				<npc id="25036" count="3" respawnTime="360" weightPoint="1" />
@@ -1717,7 +1705,6 @@
 		</collision>
 	</npc>
 	<npc id="25038" level="28" type="RaidBoss" name="Tirak" title="Raid Boss">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<minions name="Privates">
 				<npc id="25039" count="1" respawnTime="360" weightPoint="1" />
@@ -1875,7 +1862,6 @@
 		</collision>
 	</npc>
 	<npc id="25041" level="35" type="RaidBoss" name="Remmel" title="Raid Boss">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<minions name="Privates">
 				<npc id="25042" count="3" respawnTime="360" weightPoint="1" />
@@ -2025,7 +2011,6 @@
 		</collision>
 	</npc>
 	<npc id="25044" level="47" type="RaidBoss" name="Barion" title="Raid Boss">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<minions name="Privates">
 				<npc id="25045" count="2" respawnTime="360" weightPoint="1" />
@@ -2189,7 +2174,6 @@
 		</collision>
 	</npc>
 	<npc id="25047" level="49" type="RaidBoss" name="Karte" title="Raid Boss">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<minions name="Privates">
 				<npc id="25048" count="1" respawnTime="360" weightPoint="1" />
@@ -2358,7 +2342,6 @@
 		</collision>
 	</npc>
 	<npc id="25050" level="51" type="RaidBoss" name="Verfa" title="Raid Boss">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="RaidSpawnMusic" value="Rm01_A" />
 			<skill name="SelfRangeCancel_a" id="4177" level="5" />
@@ -2441,7 +2424,6 @@
 		</collision>
 	</npc>
 	<npc id="25051" level="65" type="RaidBoss" name="Rahha" title="Raid Boss">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<minions name="Privates">
 				<npc id="25052" count="2" respawnTime="360" weightPoint="1" />
@@ -2609,7 +2591,6 @@
 		</collision>
 	</npc>
 	<npc id="25054" level="75" type="RaidBoss" name="Kernon" title="Raid Boss">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<minions name="Privates">
 				<npc id="25055" count="1" respawnTime="360" weightPoint="1" />
@@ -2743,7 +2724,6 @@
 		</collision>
 	</npc>
 	<npc id="25057" level="45" type="RaidBoss" name="Beacon of Blue Sky" title="Raid Boss">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<minions name="Privates">
 				<npc id="25058" count="3" respawnTime="360" weightPoint="1" />
@@ -2900,7 +2880,6 @@
 		</collision>
 	</npc>
 	<npc id="25060" level="24" type="RaidBoss" name="Unrequited Kael" title="Raid Boss">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<minions name="Privates">
 				<npc id="25061" count="3" respawnTime="360" weightPoint="1" />
@@ -3055,7 +3034,6 @@
 		</collision>
 	</npc>
 	<npc id="25063" level="35" type="RaidBoss" name="Chertuba of Great Soul" title="Raid Boss">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="RaidSpawnMusic" value="Rm02_A" />
 			<skill name="SelfRangeCancel_a" id="4177" level="3" />
@@ -3128,7 +3106,6 @@
 		</collision>
 	</npc>
 	<npc id="25064" level="40" type="RaidBoss" name="Wizard of Storm Teruk" title="Raid Boss">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<minions name="Privates">
 				<npc id="25065" count="1" respawnTime="360" weightPoint="1" />
@@ -3294,7 +3271,6 @@
 		</collision>
 	</npc>
 	<npc id="25067" level="52" type="RaidBoss" name="Red Flag Captain Shaka" title="Raid Boss">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<minions name="Privates">
 				<npc id="25068" count="3" respawnTime="360" weightPoint="1" />
@@ -3455,7 +3431,6 @@
 		</collision>
 	</npc>
 	<npc id="25073" level="69" type="RaidBoss" name="Bloody Priest Rudelto" title="Raid Boss">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<minions name="Privates">
 				<npc id="25074" count="2" respawnTime="360" weightPoint="1" />
@@ -3585,7 +3560,6 @@
 		</collision>
 	</npc>
 	<npc id="25076" level="25" type="RaidBoss" name="Princess Molrang" title="Raid Boss">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<minions name="Privates">
 				<npc id="25077" count="1" respawnTime="360" weightPoint="1" />
@@ -3738,7 +3712,6 @@
 		</collision>
 	</npc>
 	<npc id="25079" level="30" type="RaidBoss" name="Cat's Eye" title="Raid Boss">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<minions name="Privates">
 				<npc id="25080" count="2" respawnTime="360" weightPoint="1" />
@@ -3888,7 +3861,6 @@
 		</dropLists>
 	</npc>
 	<npc id="25082" level="39" type="RaidBoss" name="Leader of Cat Gang" title="Raid Boss">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<minions name="Privates">
 				<npc id="25083" count="3" respawnTime="360" weightPoint="1" />
@@ -4040,7 +4012,6 @@
 		</collision>
 	</npc>
 	<npc id="25085" level="44" type="RaidBoss" name="Timak Orc Ranger Captain" title="Raid Boss">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<minions name="Privates">
 				<npc id="25086" count="3" respawnTime="360" weightPoint="1" />
@@ -4194,7 +4165,6 @@
 		</collision>
 	</npc>
 	<npc id="25088" level="43" type="RaidBoss" name="Crazy Mechanic Golem" title="Raid Boss">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="RaidSpawnMusic" value="Rm01_A" />
 			<skill name="SelfRangeCancel_a" id="4177" level="5" />
@@ -4271,7 +4241,6 @@
 		</collision>
 	</npc>
 	<npc id="25089" level="59" type="RaidBoss" name="Soulless Wild Boar" title="Raid Boss">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<minions name="Privates">
 				<npc id="25090" count="3" respawnTime="360" weightPoint="1" />
@@ -4426,7 +4395,6 @@
 		</collision>
 	</npc>
 	<npc id="25092" level="70" type="RaidBoss" name="Korim" title="Raid Boss">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<minions name="Privates">
 				<npc id="25093" count="1" respawnTime="360" weightPoint="1" />
@@ -4592,7 +4560,6 @@
 		</collision>
 	</npc>
 	<npc id="25095" level="29" type="RaidBoss" name="Elf Renoa" title="Raid Boss">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<minions name="Privates">
 				<npc id="25096" count="3" respawnTime="360" weightPoint="1" />
@@ -4742,7 +4709,6 @@
 		</collision>
 	</npc>
 	<npc id="25098" level="35" type="RaidBoss" name="Sejarr's Servitor" title="Raid Boss">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="RaidSpawnMusic" value="Rm03_A" />
 			<skill name="SelfRangeCancel_a" id="4177" level="3" />
@@ -4818,7 +4784,6 @@
 		</collision>
 	</npc>
 	<npc id="25099" level="56" type="RaidBoss" name="Rotting Tree Repiro" title="Raid Boss">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<minions name="Privates">
 				<npc id="25100" count="2" respawnTime="360" weightPoint="1" />

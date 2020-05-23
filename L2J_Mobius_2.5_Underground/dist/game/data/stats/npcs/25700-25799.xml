@@ -1,7 +1,6 @@
 ﻿<?xml version="1.0" encoding="UTF-8"?>
 <list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../xsd/npcs.xsd">
 	<npc id="25700" level="88" type="RaidBoss" name="Glakias" title="Ice Knight Captain">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<skill name="Skill01_ID" id="6293" level="1" />
 			<skill name="Skill02_ID" id="6295" level="1" />
@@ -58,7 +57,6 @@
 		</collision>
 	</npc>
 	<npc id="25701" level="84" type="RaidBoss" name="Anais" title="Lord of Splendor">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<skill name="Skill01_ID" id="6324" level="1" />
 			<skill name="Skill02_ID" id="6323" level="1" />
@@ -175,7 +173,6 @@
 		</collision>
 	</npc>
 	<npc id="25703" level="76" type="RaidBoss" name="Gigantic Golem" title="Chaos">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<minions name="Privates">
 				<npc id="25704" count="3" respawnTime="420" weightPoint="1" />
@@ -502,7 +499,6 @@
 		</collision>
 	</npc>
 	<npc id="25709" level="83" type="RaidBoss" name="Lost Warden">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<skill name="PhysicalSpecial_a" id="6694" level="8" />
 			<skill name="SelfRangePhysicalSpecial_a" id="6695" level="8" />
@@ -554,7 +550,6 @@
 		</collision>
 	</npc>
 	<npc id="25710" level="83" type="RaidBoss" name="Lost Captain">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<minions name="Privates">
 				<npc id="25711" count="2" respawnTime="150" weightPoint="1" />
@@ -720,7 +715,6 @@
 		</collision>
 	</npc>
 	<npc id="25713" level="84" type="RaidBoss" name="Darnel" title="Torture Maiden">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="InzoneRestriction" value="1" />
 			<skill name="SelfRangeDebuff_a" id="4182" level="9" />
@@ -770,9 +764,20 @@
 			<radius normal="20" />
 			<height normal="40.5985" />
 		</collision>
+		<dropLists>
+			<drop>
+				<item id="960" min="1" max="1" chance="15" /> <!-- Scroll: Enchant Armor (S-grade) -->
+				<item id="15709" min="1" max="1" chance="2.5" /> <!-- Sealed Moirai Sigil -->
+				<item id="15710" min="1" max="1" chance="2.5" /> <!-- Sealed Moirai Shield -->
+				<item id="959" min="1" max="1" chance="2.5" /> <!-- Scroll: Enchant Weapon (S-grade) -->
+				<item id="15696" min="1" max="1" chance="1.5" /> <!-- Sealed Moirai Circlet -->
+				<item id="15695" min="1" max="1" chance="1.5" /> <!-- Sealed Moirai Leather Helmet -->
+				<item id="15694" min="1" max="1" chance="1.5" /> <!-- Sealed Moirai Helmet -->
+				<item id="10223" min="1" max="1" chance="0.75187969924812" /> <!-- Icarus Spitter -->
+			</drop>
+		</dropLists>
 	</npc>
 	<npc id="25714" level="84" type="RaidBoss" name="Kechi" title="Flaming">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="InzoneRestriction" value="1" />
 			<skill name="selfbuff1" id="5418" level="1" />
@@ -824,6 +829,20 @@
 			<radius normal="12" />
 			<height normal="29" />
 		</collision>
+		<dropLists>
+			<drop>
+				<item id="960" min="1" max="1" chance="15" /> <!-- Scroll: Enchant Armor (S-grade) -->
+				<item id="959" min="1" max="1" chance="2.5" /> <!-- Scroll: Enchant Weapon (S-grade) -->
+				<item id="15708" min="1" max="1" chance="1.5" /> <!-- Sealed Moirai Shoes -->
+				<item id="15704" min="1" max="1" chance="1.5" /> <!-- Sealed Moirai Leather Gloves -->
+				<item id="15707" min="1" max="1" chance="1.5" /> <!-- Sealed Moirai Leather Boots -->
+				<item id="15705" min="1" max="1" chance="1.5" /> <!-- Sealed Moirai Gloves -->
+				<item id="15703" min="1" max="1" chance="1.5" /> <!-- Sealed Moirai Gauntlets -->
+				<item id="15706" min="1" max="1" chance="1.5" /> <!-- Sealed Moirai Boots -->
+				<item id="10220" min="1" max="1" chance="0.75187969924812" /> <!-- Icarus Hammer -->
+				<item id="10222" min="1" max="1" chance="0.75187969924812" /> <!-- Icarus Hall -->
+			</drop>
+		</dropLists>
 	</npc>
 	<npc id="25715" level="84" type="Monster" name="Kechi's Subordinate">
 		<!-- Confirmed CT2.5 -->
@@ -879,7 +898,6 @@
 		</collision>
 	</npc>
 	<npc id="25716" level="84" type="RaidBoss" name="Tears" title="Ice">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="InzoneRestriction" value="1" />
 			<skill name="W_LongRangeDDMagic" id="5238" level="1" />
@@ -932,9 +950,17 @@
 			<radius normal="20" />
 			<height normal="27.5" />
 		</collision>
+		<dropLists>
+			<drop>
+				<item id="6570" min="1" max="1" chance="5" /> <!-- Blessed Scroll: Enchant Armor (A-grade) -->
+				<item id="6578" min="1" max="1" chance="2.5" /> <!-- Blessed Scroll: Enchant Armor (S-grade) -->
+				<item id="15698" min="1" max="1" chance="2.5" /> <!-- Sealed Moirai Leather Breastplate -->
+				<item id="15701" min="1" max="1" chance="2.5" /> <!-- Sealed Moirai Leather Leggings -->
+				<item id="10223" min="1" max="1" chance="0.75187969924812" /> <!-- Icarus Spitter -->
+			</drop>
+		</dropLists>
 	</npc>
 	<npc id="25717" level="84" type="Monster" name="Tears" title="Ice">
-		<!-- Confirmed CT2.5 -->
 		<race>ELEMENTAL</race>
 		<sex>FEMALE</sex>
 		<equipment rhand="9638" lhand="9638" /> <!-- Tears r1 / Tears r1 -->
@@ -976,7 +1002,6 @@
 		</collision>
 	</npc>
 	<npc id="25718" level="84" type="RaidBoss" name="Emerald Horn" title="Raid Boss">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="IsAggressive" value="1" />
 			<skill name="Skill01_ID" id="6821" level="1" />
@@ -1046,7 +1071,6 @@
 		</collision>
 	</npc>
 	<npc id="25719" level="84" type="RaidBoss" name="Dust Rider" title="Raid Boss">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="IsAggressive" value="1" />
 			<param name="Skill03_Probablity" value="1111" />
@@ -1116,7 +1140,6 @@
 		</collision>
 	</npc>
 	<npc id="25720" level="84" type="RaidBoss" name="Bleeding Fly" title="Raid Boss">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="IsAggressive" value="1" />
 			<param name="Skill03_Probablity" value="1111" />
@@ -1193,7 +1216,6 @@
 		</collision>
 	</npc>
 	<npc id="25721" level="84" type="RaidBoss" name="Blackdagger Wing" title="Raid Boss">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="IsAggressive" value="1" />
 			<skill name="Skill02_ID" id="6833" level="1" />
@@ -1264,7 +1286,6 @@
 		</collision>
 	</npc>
 	<npc id="25722" level="84" type="RaidBoss" name="Shadow Summoner" title="Raid Boss">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="IsAggressive" value="1" />
 			<param name="Skill01_Probablity" value="1111" />
@@ -1340,7 +1361,6 @@
 		</collision>
 	</npc>
 	<npc id="25723" level="84" type="RaidBoss" name="Spike Slasher" title="Raid Boss">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="IsAggressive" value="1" />
 			<skill name="Skill01_ID" id="6839" level="1" />
@@ -1414,7 +1434,6 @@
 		</collision>
 	</npc>
 	<npc id="25724" level="84" type="RaidBoss" name="Muscle Bomber" title="Raid Boss">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="IsAggressive" value="1" />
 			<skill name="Skill04_ID" id="6844" level="1" />
@@ -1480,7 +1499,6 @@
 		</collision>
 	</npc>
 	<npc id="25725" level="85" type="RaidBoss" name="Drake Lord" title="Raid Boss">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<skill name="selfheal_skill" id="6886" level="1" />
 			<skill name="notank_skill_a" id="6887" level="1" />
@@ -1533,7 +1551,6 @@
 		</collision>
 	</npc>
 	<npc id="25726" level="85" type="RaidBoss" name="Behemoth Leader" title="Raid Boss">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<skill name="selfheal_skill" id="6886" level="1" />
 			<skill name="notank_skill_a" id="6887" level="1" />
@@ -1588,7 +1605,6 @@
 		</collision>
 	</npc>
 	<npc id="25727" level="85" type="RaidBoss" name="Dragon Beast" title="Raid Boss">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<skill name="selfheal_skill" id="6886" level="1" />
 			<skill name="notank_skill_a" id="6887" level="1" />
@@ -1831,7 +1847,6 @@
 		</collision>
 	</npc>
 	<npc id="25732" level="85" type="RaidBoss" name="Dragon Beast" title="Raid Boss">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<skill name="selfheal_skill" id="6886" level="1" />
 			<skill name="notank_skill_a" id="6887" level="1" />
@@ -1873,6 +1888,11 @@
 			<radius normal="50" />
 			<height normal="84" />
 		</collision>
+		<dropLists>
+			<drop>
+				<item id="17266" min="1" max="1" chance="20" /> <!-- Will of Antharas -->
+			</drop>
+		</dropLists>
 	</npc>
 	<npc id="25733" level="83" type="Monster" name="Gem Dragon">
 		<!-- Confirmed CT2.5 -->
@@ -3620,6 +3640,15 @@
 			<radius normal="80" />
 			<height normal="91" />
 		</collision>
+		<dropLists>
+			<drop>
+				<item id="9557" min="1" max="1" chance="2.5" /> <!-- Holy Crystal -->
+				<item id="17526" min="1" max="1" chance="0.75187969924812" /> <!-- Scroll: Enchant Weapon (R-grade) -->
+				<item id="17387" min="1" max="1" chance="0.0750187546886722" /> <!-- Specter Stormer -->
+				<item id="17391" min="1" max="1" chance="0.0750187546886722" /> <!-- Specter Caster -->
+				<item id="17390" min="1" max="1" chance="0.0750187546886722" /> <!-- Specter Buster -->
+			</drop>
+		</dropLists>
 	</npc>
 	<npc id="25762" level="97" type="RaidBoss" name="Angelos" title="Raid Boss">
 		<!-- TODO: Must be confirmed -->
@@ -3688,6 +3717,18 @@
 			<radius normal="40" />
 			<height normal="78" />
 		</collision>
+		<dropLists>
+			<drop>
+				<item id="17527" min="1" max="1" chance="15" /> <!-- Scroll: Enchant Armor (R-grade) -->
+				<item id="9553" min="1" max="1" chance="5" /> <!-- Water Crystal -->
+				<item id="17411" min="1" max="1" chance="0.3003003003003" /> <!-- Seraph Shoes - Robe -->
+				<item id="17405" min="1" max="1" chance="0.3003003003003" /> <!-- Seraph Leather Gloves - Light Armor -->
+				<item id="17396" min="1" max="1" chance="0.3003003003003" /> <!-- Seraph Helmet - Heavy Armor -->
+				<item id="17386" min="1" max="1" chance="0.0750187546886722" /> <!-- Specter Fighter -->
+				<item id="17389" min="1" max="1" chance="0.0750187546886722" /> <!-- Specter Shooter -->
+				<item id="17384" min="1" max="1" chance="0.0750187546886722" /> <!-- Specter Slasher -->
+			</drop>
+		</dropLists>
 	</npc>
 	<npc id="25763" level="97" type="RaidBoss" name="Theofanis" title="Raid Boss">
 		<!-- TODO: Must be confirmed -->
@@ -3833,6 +3874,17 @@
 			<radius normal="35" />
 			<height normal="67" />
 		</collision>
+		<dropLists>
+			<drop>
+				<item id="17527" min="1" max="1" chance="15" /> <!-- Scroll: Enchant Armor (R-grade) -->
+				<item id="9556" min="1" max="1" chance="5" /> <!-- Dark Crystal -->
+				<item id="17413" min="1" max="1" chance="0.3003003003003" /> <!-- Seraph Necklace -->
+				<item id="17392" min="1" max="1" chance="0.0750187546886722" /> <!-- Specter Retributer -->
+				<item id="22821" min="1" max="1" chance="0.0750187546886722" /> <!-- Steregos' Dagger -->
+				<item id="17385" min="1" max="1" chance="0.0750187546886722" /> <!-- Specter Avenger -->
+				<item id="17382" min="1" max="1" chance="0.0750187546886722" /> <!-- Specter Shaper -->
+			</drop>
+		</dropLists>
 	</npc>
 	<npc id="25765" level="96" type="Monster" name="Beast" title="Raid Fighter">
 		<!-- TODO: Must be confirmed -->
@@ -4108,6 +4160,15 @@
 			<radius normal="45" />
 			<height normal="59" />
 		</collision>
+		<dropLists>
+			<drop>
+				<item id="17527" min="1" max="1" chance="15" /> <!-- Scroll: Enchant Armor (R-grade) -->
+				<item id="9555" min="1" max="1" chance="5" /> <!-- Wind Crystal -->
+				<item id="17403" min="1" max="1" chance="0.3003003003003" /> <!-- Seraph Leather Armor - Light Armor -->
+				<item id="17398" min="1" max="1" chance="0.3003003003003" /> <!-- Seraph Gaiters - Heavy Armor -->
+				<item id="17409" min="1" max="1" chance="0.3003003003003" /> <!-- Seraph Stockings - Robe -->
+			</drop>
+		</dropLists>
 	</npc>
 	<npc id="25769" level="97" type="RaidBoss" name="Sotiris" title="Raid Boss">
 		<!-- TODO: Must be confirmed -->
@@ -4172,6 +4233,18 @@
 			<radius normal="45" />
 			<height normal="59" />
 		</collision>
+		<dropLists>
+			<drop>
+				<item id="9557" min="1" max="1" chance="5" /> <!-- Holy Crystal -->
+				<item id="17526" min="1" max="1" chance="2.5" /> <!-- Scroll: Enchant Weapon (R-grade) -->
+				<item id="17407" min="1" max="1" chance="0.3003003003003" /> <!-- Seraph Circlet - Robe -->
+				<item id="17397" min="1" max="1" chance="0.3003003003003" /> <!-- Seraph Breastplate - Heavy Armor -->
+				<item id="17404" min="1" max="1" chance="0.3003003003003" /> <!-- Seraph Leather Leggings - Light Armor -->
+				<item id="17406" min="1" max="1" chance="0.3003003003003" /> <!-- Seraph Leather Boots - Light Armor -->
+				<item id="17399" min="1" max="1" chance="0.3003003003003" /> <!-- Seraph Gauntlets - Heavy Armor -->
+				<item id="17408" min="1" max="1" chance="0.3003003003003" /> <!-- Seraph Tunic - Robe -->
+			</drop>
+		</dropLists>
 	</npc>
 	<npc id="25770" level="97" type="RaidBoss" name="Lazaros" title="Raid Boss">
 		<!-- TODO: Must be confirmed -->
@@ -4254,8 +4327,7 @@
 			<height normal="59" />
 		</collision>
 	</npc>
-	<npc id="25772" level="87" type="Npc" name="Harnak's Wraith" title="Greater Giant King">
-		<!-- AUTO GENERATED NPC TODO: FIX IT -->
+	<npc id="25772" level="87" type="Monster" name="Harnak's Wraith" title="Greater Giant King">
 		<race>HUMANOID</race>
 		<sex>FEMALE</sex>
 		<mpReward value="53" type="DIFF" ticks="10" affects="PARTY" />
@@ -4286,6 +4358,16 @@
 			<radius normal="50" />
 			<height normal="100" />
 		</collision>
+		<dropLists>
+			<drop>
+				<item id="17526" min="1" max="1" chance="2.5" /> <!-- Scroll: Enchant Weapon (R-grade) -->
+				<item id="17315" min="1" max="1" chance="1" /> <!-- Immortal Circlet - Robe -->
+				<item id="17305" min="1" max="1" chance="1" /> <!-- Immortal Breastplate - Heavy Armor -->
+				<item id="17314" min="1" max="1" chance="1" /> <!-- Immortal Leather Boots - Light Armor -->
+				<item id="17307" min="1" max="1" chance="1" /> <!-- Immortal Gauntlets - Heavy Armor -->
+				<item id="17316" min="1" max="1" chance="1" /> <!-- Immortal Tunic - Robe -->
+			</drop>
+		</dropLists>
 	</npc>
 	<npc id="25775" level="94" type="RaidBoss" name="Apherus">
 		<!-- TODO: Must be confirmed -->
@@ -4667,6 +4749,11 @@
 			<radius normal="13" />
 			<height normal="55" />
 		</collision>
+		<dropLists>
+			<drop>
+				<item id="17611" min="1" max="1" chance="10" /> <!-- Giant Cannonball -->
+			</drop>
+		</dropLists>
 	</npc>
 	<npc id="25781" level="94" type="Monster" name="Spezion's Subordinate">
 		<!-- TODO: Must be confirmed -->

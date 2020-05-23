@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="UTF-8"?>
+﻿<?xml version="1.0" encoding="UTF-8"?>
 <list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../xsd/npcs.xsd">
 	<npc id="29300" level="97" type="RaidBoss" name="Varkaron" title="Dimensional Invader">
 		<race>UNDEAD</race>
@@ -374,7 +374,6 @@
 		</dropLists>
 	</npc>
 	<npc id="29306" level="99" type="Monster" name="Leopold" title="Superion Siege Cannon">
-		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<!-- Leopold - Title: Superion Siege Cannon ?? -->
 		<race>ETC</race>
 		<stats>
@@ -390,7 +389,6 @@
 		</collision>
 	</npc>
 	<npc id="29307" level="99" type="Monster" name="Helios' Red Lightning" title="Enuma Elish">
-		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<!-- Helios Red Lightning - Title: Enuma Elish ?? -->
 		<race>ETC</race>
 		<acquire exp="0" sp="0" />
@@ -410,7 +408,6 @@
 		</collision>
 	</npc>
 	<npc id="29308" level="99" type="Monster" name="Helios' Blue Lightning" title="Enuma Elish">
-		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<!-- Helios Blue Lightning - Title: Enuma Elish ?? -->
 		<race>ETC</race>
 		<acquire exp="0" sp="0" />
@@ -728,8 +725,7 @@
 			<height normal="50.5" />
 		</collision>
 	</npc>
-	<npc id="29317" level="85" type="Npc" name="Lindvior" title="Wind Dragon">
-		<!-- AUTO GENERATED NPC TODO: FIX IT -->
+	<npc id="29317" level="85" type="Monster" name="Lindvior" title="Wind Dragon">
 		<race>ETC</race>
 		<sex>FEMALE</sex>
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">

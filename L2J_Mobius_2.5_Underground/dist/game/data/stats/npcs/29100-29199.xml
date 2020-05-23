@@ -125,7 +125,6 @@
 		</collision>
 	</npc>
 	<npc id="29103" level="83" type="Monster" name="Baylor" title="Warden">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<skill name="d_skill1" id="5401" level="1" />
 		</parameters>
@@ -163,6 +162,20 @@
 			<radius normal="54" />
 			<height normal="77.5" />
 		</collision>
+		<dropLists>
+			<drop>
+				<!-- Also drops herbs. -->
+				<item id="8600" min="1" max="1" chance="10" /> <!-- Herb of Life -->
+				<item id="8601" min="1" max="1" chance="8" /> <!-- Major Herb of Life -->
+				<item id="8602" min="1" max="1" chance="2" /> <!-- Superior Herb of Life -->
+				<item id="8603" min="1" max="1" chance="19.8" /> <!-- Herb of Mana -->
+				<item id="8604" min="1" max="1" chance="9.9" /> <!-- Major Herb of Mana -->
+				<item id="8605" min="1" max="1" chance="3.3" /> <!-- Superior Herb of Mana -->
+				<item id="34849" min="1" max="1" chance="0.7" /> <!-- Mysterious Herb of Power -->
+				<item id="34850" min="1" max="1" chance="0.7" /> <!-- Mysterious Herb of Magic -->
+				<item id="13028" min="1" max="1" chance="0.1" /> <!-- Vitality Replenishing Herb -->
+			</drop>
+		</dropLists>
 	</npc>
 	<npc id="29104" level="83" type="Monster" name="Crystal Prison Guard">
 		<!-- Confirmed CT2.5 -->
@@ -659,7 +672,6 @@
 		</collision>
 	</npc>
 	<npc id="29118" level="99" type="GrandBoss" name="Beleth">
-		<!-- Confirmed CT2.5 -->
 		<race>HUMANOID</race>
 		<sex>MALE</sex>
 		<acquire exp="16447436" sp="3947" />
@@ -1078,7 +1090,6 @@
 		</collision>
 	</npc>
 	<npc id="29129" level="29" type="RaidBoss" name="Lost Captain">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<minions name="Privates">
 				<npc id="29130" count="2" respawnTime="300" weightPoint="1" />
@@ -1131,6 +1142,17 @@
 			<radius normal="48" />
 			<height normal="73.5" />
 		</collision>
+		<dropLists>
+			<drop>
+				<item id="2040" min="12" max="36" chance="45" /> <!-- Reinforced Longbow Shaft -->
+				<item id="6576" min="3" max="9" chance="40" /> <!-- Blessed Scroll: Enchant Armor (D-grade) -->
+				<item id="279" min="1" max="1" chance="30" /> <!-- Reinforced Longbow -->
+				<item id="1942" min="53" max="157" chance="15" /> <!-- Manticore Skin Shirt Texture -->
+				<item id="1943" min="216" max="648" chance="10" /> <!-- Manticore Skin Gaiter Pattern -->
+				<item id="417" min="4" max="12" chance="10" /> <!-- Manticore Skin Gaiters -->
+				<item id="395" min="4" max="12" chance="10" /> <!-- Manticore Skin Shirt -->
+			</drop>
+		</dropLists>
 	</npc>
 	<npc id="29130" level="29" type="Monster" name="Lost Guard">
 		<!-- Confirmed CT2.5 -->
@@ -1214,7 +1236,6 @@
 		</collision>
 	</npc>
 	<npc id="29132" level="39" type="RaidBoss" name="Lost Captain">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<minions name="Privates">
 				<npc id="29133" count="2" respawnTime="300" weightPoint="1" />
@@ -1367,7 +1388,6 @@
 		</collision>
 	</npc>
 	<npc id="29135" level="49" type="RaidBoss" name="Lost Captain">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<minions name="Privates">
 				<npc id="29136" count="2" respawnTime="300" weightPoint="1" />
@@ -1519,7 +1539,6 @@
 		</collision>
 	</npc>
 	<npc id="29138" level="59" type="RaidBoss" name="Lost Captain">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<minions name="Privates">
 				<npc id="29139" count="2" respawnTime="300" weightPoint="1" />
@@ -1677,7 +1696,6 @@
 		</collision>
 	</npc>
 	<npc id="29141" level="69" type="RaidBoss" name="Lost Captain">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<minions name="Privates">
 				<npc id="29142" count="2" respawnTime="300" weightPoint="1" />
@@ -1827,7 +1845,6 @@
 		</collision>
 	</npc>
 	<npc id="29144" level="78" type="RaidBoss" name="Lost Captain">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<minions name="Privates">
 				<npc id="29145" count="2" respawnTime="150" weightPoint="1" />
@@ -1993,7 +2010,6 @@
 		</collision>
 	</npc>
 	<npc id="29147" level="81" type="RaidBoss" name="Lost Captain">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<minions name="Privates">
 				<npc id="29148" count="2" respawnTime="150" weightPoint="1" />
@@ -2159,7 +2175,6 @@
 		</collision>
 	</npc>
 	<npc id="29150" level="99" type="GrandBoss" name="Ekimus" title="Immortal Lord">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<skill name="Skill_HPBuff" id="5916" level="1" />
 		</parameters>
@@ -2747,7 +2762,6 @@
 		</collision>
 	</npc>
 	<npc id="29163" level="96" type="GrandBoss" name="Tiat" title="Witch of the Dragon of Darkness">
-		<!-- Confirmed CT2.5 -->
 		<race>DRAGON</race>
 		<sex>FEMALE</sex>
 		<acquire raidPoints="21" />
@@ -2798,6 +2812,69 @@
 			<radius normal="55" grown="66" />
 			<height normal="104" grown="124.8" />
 		</collision>
+		<dropLists>
+			<drop>
+				<item id="39738" min="1" max="1" chance="100" /> <!-- Rune Stone -->
+				<item id="19448" min="1" max="1" chance="50" /> <!-- Blessed Scroll: Enchant Armor (R-grade) -->
+				<item id="19447" min="1" max="1" chance="50" /> <!-- Blessed Scroll: Enchant Weapon (R-grade) -->
+				<item id="37084" min="1" max="1" chance="5" /> <!-- Monster Weapon Appearance Stone: Spicula's Crossbow -->
+				<item id="37075" min="1" max="1" chance="5" /> <!-- Monster Weapon Appearance Stone: Drakos' Dagger -->
+				<item id="37078" min="1" max="1" chance="5" /> <!-- Monster Weapon Appearance Stone: Thesakar's Spear -->
+				<item id="37082" min="1" max="1" chance="5" /> <!-- Monster Weapon Appearance Stone: Kanadis' Bow -->
+				<item id="37083" min="1" max="1" chance="5" /> <!-- Monster Weapon Appearance Stone: Centaur's Bow -->
+				<item id="37077" min="1" max="1" chance="5" /> <!-- Monster Weapon Appearance Stone: Guillotine's Greatsword -->
+				<item id="37069" min="1" max="1" chance="5" /> <!-- Monster Weapon Appearance Stone: Octavis' Sword -->
+				<item id="37068" min="1" max="1" chance="5" /> <!-- Monster Weapon Appearance Stone: Sword of Corruption -->
+				<item id="37067" min="1" max="1" chance="5" /> <!-- Monster Weapon Appearance Stone: Theor's Sword -->
+				<item id="37073" min="1" max="1" chance="5" /> <!-- Monster Weapon Appearance Stone: Glakias' Hammer -->
+				<item id="37071" min="1" max="1" chance="5" /> <!-- Monster Weapon Appearance Stone: Seknus' One-handed Magic Sword -->
+				<item id="37074" min="1" max="1" chance="5" /> <!-- Monster Weapon Appearance Stone: Tebot's Dual Blunt Weapon -->
+				<item id="37076" min="1" max="1" chance="5" /> <!-- Monster Weapon Appearance Stone: Drakos' Dual Dagger -->
+				<item id="37070" min="1" max="1" chance="5" /> <!-- Monster Weapon Appearance Stone: Tegaffe's Dualsword -->
+				<item id="37079" min="1" max="1" chance="5" /> <!-- Monster Weapon Appearance Stone: Mimilead's Staff -->
+				<item id="37080" min="1" max="1" chance="5" /> <!-- Monster Weapon Appearance Stone: Satyr's Staff -->
+				<item id="37081" min="1" max="1" chance="5" /> <!-- Monster Weapon Appearance Stone: Kanadis' Hand -->
+				<item id="37072" min="1" max="1" chance="5" /> <!-- Monster Weapon Appearance Stone: Tebot's Axe -->
+				<item id="37086" min="1" max="1" chance="5" /> <!-- Monster Weapon Appearance Stone: Shield of Corruption -->
+				<item id="37085" min="1" max="1" chance="5" /> <!-- Monster Weapon Appearance Stone: Theor's Shield -->
+				<item id="38023" min="1" max="1" chance="1.25001" /> <!-- Seraph Helmet Crafting Pack - Heavy Armor -->
+				<item id="38038" min="1" max="1" chance="1.25" /> <!-- Seraph Shoes Crafting Pack - Robe -->
+				<item id="38034" min="1" max="1" chance="1.25" /> <!-- Seraph Circlet Crafting Pack - Robe -->
+				<item id="38024" min="1" max="1" chance="1.25" /> <!-- Seraph Breastplate Crafting Pack - Heavy Armor -->
+				<item id="38031" min="1" max="1" chance="1.25" /> <!-- Seraph Leather Leggings Crafting Pack - Light Armor -->
+				<item id="38032" min="1" max="1" chance="1.25" /> <!-- Seraph Leather Gloves Crafting Pack - Light Armor -->
+				<item id="38033" min="1" max="1" chance="1.25" /> <!-- Seraph Leather Boots Crafting Pack - Light Armor -->
+				<item id="38030" min="1" max="1" chance="1.25" /> <!-- Seraph Leather Armor Crafting Pack - Light Armor -->
+				<item id="38029" min="1" max="1" chance="1.25" /> <!-- Seraph Leather Helmet Crafting Pack - Light Armor -->
+				<item id="38025" min="1" max="1" chance="1.25" /> <!-- Seraph Gaiters Crafting Pack - Heavy Armor -->
+				<item id="38037" min="1" max="1" chance="1.25" /> <!-- Seraph Gloves Crafting Pack - Robe -->
+				<item id="38026" min="1" max="1" chance="1.25" /> <!-- Seraph Gauntlets Crafting Pack - Heavy Armor -->
+				<item id="38027" min="1" max="1" chance="1.25" /> <!-- Seraph Boots Crafting Pack - Heavy Armor -->
+				<item id="38039" min="1" max="1" chance="1.25" /> <!-- Seraph Sigil Crafting Pack - Robe -->
+				<item id="38035" min="1" max="1" chance="1.25" /> <!-- Seraph Tunic Crafting Pack - Robe -->
+				<item id="38036" min="1" max="1" chance="1.25" /> <!-- Seraph Stockings Crafting Pack - Robe -->
+				<item id="38028" min="1" max="1" chance="1.25" /> <!-- Seraph Shield Crafting Pack - Heavy Armor -->
+				<item id="38591" min="1" max="1" chance="1" /> <!-- Tiat's Belt -->
+				<item id="17397" min="1" max="1" chance="0.5" /> <!-- Seraph Breastplate - Heavy Armor -->
+				<item id="17404" min="1" max="1" chance="0.5" /> <!-- Seraph Leather Leggings - Light Armor -->
+				<item id="17403" min="1" max="1" chance="0.5" /> <!-- Seraph Leather Armor - Light Armor -->
+				<item id="17398" min="1" max="1" chance="0.5" /> <!-- Seraph Gaiters - Heavy Armor -->
+				<item id="38018" min="1" max="1" chance="0.5" /> <!-- Specter Thrower Crafting Pack -->
+				<item id="38017" min="1" max="1" chance="0.5" /> <!-- Specter Stormer Crafting Pack -->
+				<item id="38022" min="1" max="1" chance="0.5" /> <!-- Specter Retributer Crafting Pack -->
+				<item id="38016" min="1" max="1" chance="0.5" /> <!-- Specter Fighter Crafting Pack -->
+				<item id="38021" min="1" max="1" chance="0.5" /> <!-- Specter Caster Crafting Pack -->
+				<item id="38015" min="1" max="1" chance="0.5" /> <!-- Specter Avenger Crafting Pack -->
+				<item id="38012" min="1" max="1" chance="0.5" /> <!-- Specter Shaper Crafting Pack -->
+				<item id="38020" min="1" max="1" chance="0.5" /> <!-- Specter Buster Crafting Pack -->
+				<item id="38013" min="1" max="1" chance="0.5" /> <!-- Specter Cutter Crafting Pack -->
+				<item id="38019" min="1" max="1" chance="0.5" /> <!-- Specter Shooter Crafting Pack -->
+				<item id="38014" min="1" max="1" chance="0.5" /> <!-- Specter Slasher Crafting Pack -->
+				<item id="17408" min="1" max="1" chance="0.5" /> <!-- Seraph Tunic - Robe -->
+				<item id="17409" min="1" max="1" chance="0.5" /> <!-- Seraph Stockings - Robe -->
+				<item id="21939" min="1" max="1" chance="0.3003003003003" /> <!-- Claw of Destruction -->
+			</drop>
+		</dropLists>
 	</npc>
 	<npc id="29164" level="73" type="Npc">
 		<!-- Confirmed CT2.5 -->
@@ -3168,7 +3245,6 @@
 		</collision>
 	</npc>
 	<npc id="29175" level="82" type="GrandBoss" name="Tiat" title="Witch of the Dragon of Darkness">
-		<!-- Confirmed CT2.5 -->
 		<race>DRAGON</race>
 		<sex>FEMALE</sex>
 		<acquire exp="11480333" sp="2755" />
@@ -3215,9 +3291,29 @@
 			<radius normal="55" grown="66" />
 			<height normal="104" grown="124.8" />
 		</collision>
+		<dropLists>
+			<drop>
+				<item id="3936" min="1" max="3" chance="50" /> <!-- Blessed Scroll of Resurrection -->
+				<item id="7579" min="12" max="36" chance="20" /> <!-- Draconic Bow Shaft -->
+				<item id="6712" min="36" max="108" chance="15" /> <!-- Sealed Major Arcana Gloves fabric -->
+				<item id="6709" min="28" max="82" chance="15" /> <!-- Sealed Draconic Leather Boot Design -->
+				<item id="6713" min="46" max="136" chance="15" /> <!-- Sealed Major Arcana Boot Design -->
+				<item id="6578" min="1" max="1" chance="10" /> <!-- Blessed Scroll: Enchant Armor (S-grade) -->
+				<item id="6703" min="112" max="336" chance="6" /> <!-- Sealed Imperial Crusader Gauntlet Design -->
+				<item id="6681" min="1" max="1" chance="3.5" /> <!-- Sealed Draconic Leather Gloves -->
+				<item id="6685" min="1" max="1" chance="3.5" /> <!-- Sealed Major Arcana Gloves -->
+				<item id="6682" min="1" max="1" chance="3.5" /> <!-- Sealed Draconic Leather Boots -->
+				<item id="6677" min="1" max="1" chance="3.5" /> <!-- Sealed Imperial Crusader Boots -->
+				<item id="6686" min="1" max="1" chance="3.5" /> <!-- Sealed Major Arcana Boots -->
+				<item id="6676" min="1" max="1" chance="3.49999" /> <!-- Sealed Imperial Crusader Gauntlets -->
+				<item id="6704" min="203" max="607" chance="2.5" /> <!-- Sealed Imperial Crusader Boot Design -->
+				<item id="7575" min="1" max="1" chance="1.5" /> <!-- Draconic Bow -->
+				<item id="6708" min="320" max="960" chance="1.5" /> <!-- Sealed Draconic Leather Glove Fabric -->
+				<item id="21939" min="1" max="1" chance="0.149925037481259" /> <!-- Claw of Destruction -->
+			</drop>
+		</dropLists>
 	</npc>
 	<npc id="29176" level="60" type="GrandBoss" name="Zaken">
-		<!-- Confirmed CT2.5 -->
 		<race>UNDEAD</race>
 		<sex>MALE</sex>
 		<acquire exp="4154684" sp="997" />
@@ -3259,9 +3355,22 @@
 			<radius normal="16" />
 			<height normal="32" />
 		</collision>
+		<dropLists>
+			<drop>
+				<item id="5547" min="9" max="12" chance="60" /> <!-- Elemental Sword Edge -->
+				<item id="730" min="1" max="1" chance="40" /> <!-- Scroll: Enchant Armor (A-grade) -->
+				<item id="5548" min="24" max="72" chance="15" /> <!-- Tallum Blade Edge -->
+				<item id="729" min="1" max="1" chance="10" /> <!-- Scroll: Enchant Weapon (A-grade) -->
+				<item id="80" min="1" max="1" chance="2.5" /> <!-- Tallum Blade -->
+				<item id="150" min="1" max="1" chance="2.5" /> <!-- Elemental Sword -->
+				<item id="6569" min="1" max="1" chance="1" /> <!-- Blessed Scroll: Enchant Weapon (A-grade) -->
+				<item id="8619" min="1" max="1" chance="1" /> <!-- Ancient Book: Divine Inspiration (Original Language Version) -->
+				<item id="8922" min="1" max="1" chance="0.149925037481259" /> <!-- Pirate Hat -->
+				<item id="6659" min="1" max="1" chance="0.1" /> <!-- Zaken's Earring -->
+			</drop>
+		</dropLists>
 	</npc>
 	<npc id="29177" level="85" type="GrandBoss" name="Freya" title="Ice Queen">
-		<!-- Confirmed CT2.5 -->
 		<race>HUMANOID</race>
 		<sex>FEMALE</sex>
 		<stats str="164" int="188" dex="55" wit="78" con="111" men="149">
@@ -3306,7 +3415,6 @@
 		</collision>
 	</npc>
 	<npc id="29178" level="85" type="GrandBoss" name="Freya" title="Ice Queen">
-		<!-- Confirmed CT2.5 -->
 		<race>HUMANOID</race>
 		<sex>FEMALE</sex>
 		<stats str="164" int="188" dex="55" wit="78" con="111" men="149">
@@ -3351,7 +3459,6 @@
 		</collision>
 	</npc>
 	<npc id="29179" level="85" type="GrandBoss" name="Freya" title="Ice Queen">
-		<!-- Confirmed CT2.5 -->
 		<race>HUMANOID</race>
 		<sex>FEMALE</sex>
 		<acquire exp="51569936" sp="12376" />
@@ -3396,9 +3503,51 @@
 			<radius normal="22" />
 			<height normal="55" />
 		</collision>
+		<dropLists>
+			<drop>
+				<item id="16164" min="1" max="3" chance="60" /> <!-- Life Stone - Lv. 86 -->
+				<item id="16165" min="1" max="3" chance="40" /> <!-- Mid-grade Life Stone - Lv. 86 -->
+				<item id="16025" min="1" max="1" chance="25" /> <!-- Freya's Necklace -->
+				<item id="14160" min="1" max="1" chance="12" /> <!-- Sealed Vesper Earring -->
+				<item id="14162" min="1" max="1" chance="12" /> <!-- Sealed Vesper Ring -->
+				<item id="14161" min="1" max="1" chance="12" /> <!-- Sealed Vesper Necklace -->
+				<item id="14106" min="1" max="1" chance="9" /> <!-- Sealed Vesper Leather Breastplate -->
+				<item id="14107" min="1" max="1" chance="9" /> <!-- Sealed Vesper Tunic -->
+				<item id="14112" min="1" max="1" chance="9" /> <!-- Sealed Vesper Leather Leggings -->
+				<item id="14108" min="1" max="1" chance="9" /> <!-- Sealed Vesper Gaiters -->
+				<item id="14115" min="1" max="1" chance="9" /> <!-- Sealed Vesper Stockings -->
+				<item id="14105" min="1" max="1" chance="8.99999" /> <!-- Sealed Vesper Breastplate -->
+				<item id="6578" min="1" max="1" chance="5" /> <!-- Blessed Scroll: Enchant Armor (S-grade) -->
+				<item id="6577" min="1" max="1" chance="5" /> <!-- Blessed Scroll: Enchant Weapon (S-grade) -->
+				<item id="13145" min="1" max="1" chance="4.5" /> <!-- Sealed Vesper Circlet -->
+				<item id="14117" min="1" max="1" chance="4.5" /> <!-- Sealed Vesper Shoes -->
+				<item id="14113" min="1" max="1" chance="4.5" /> <!-- Sealed Vesper Leather Gloves -->
+				<item id="14114" min="1" max="1" chance="4.5" /> <!-- Sealed Vesper Leather Boots -->
+				<item id="14116" min="1" max="1" chance="4.5" /> <!-- Sealed Vesper Gloves -->
+				<item id="14109" min="1" max="1" chance="4.5" /> <!-- Sealed Vesper Gauntlets -->
+				<item id="14110" min="1" max="1" chance="4.5" /> <!-- Sealed Vesper Boots -->
+				<item id="13144" min="1" max="1" chance="4.5" /> <!-- Sealed Vesper Leather Helmet -->
+				<item id="13887" min="1" max="1" chance="4.5" /> <!-- Sealed Vesper Sigil -->
+				<item id="13143" min="1" max="1" chance="4.5" /> <!-- Sealed Vesper Helmet -->
+				<item id="14111" min="1" max="1" chance="4.5" /> <!-- Sealed Vesper Shield -->
+				<item id="21714" min="1" max="1" chance="3" /> <!-- Sealed Cloak of Freya -->
+				<item id="21894" min="1" max="1" chance="3" /> <!-- Ice Queen's Tiara -->
+				<item id="15561" min="1" max="1" chance="1.5" /> <!-- Devilish Maul -->
+				<item id="15568" min="1" max="1" chance="1.5" /> <!-- Skull Carnium Bow -->
+				<item id="15559" min="1" max="1" chance="1.5" /> <!-- Skull Edge -->
+				<item id="15562" min="1" max="1" chance="1.5" /> <!-- Feather Eye Blade -->
+				<item id="15563" min="1" max="1" chance="1.5" /> <!-- Octo Claw -->
+				<item id="15567" min="1" max="1" chance="1.5" /> <!-- Veniplant Sword -->
+				<item id="15565" min="1" max="1" chance="1.5" /> <!-- Rising Star -->
+				<item id="15566" min="1" max="1" chance="1.5" /> <!-- Black Visage -->
+				<item id="15558" min="1" max="1" chance="1.5" /> <!-- Periel Sword -->
+				<item id="15564" min="1" max="1" chance="1.5" /> <!-- Doubletop Spear -->
+				<item id="15560" min="1" max="1" chance="1.5" /> <!-- Vigwik Axe -->
+				<item id="22791" min="1" max="1" chance="0.149925037481259" /> <!-- Freya's Staff -->
+			</drop>
+		</dropLists>
 	</npc>
 	<npc id="29180" level="88" type="GrandBoss" name="Freya" title="Ice Queen">
-		<!-- Confirmed CT2.5 -->
 		<race>HUMANOID</race>
 		<sex>FEMALE</sex>
 		<acquire exp="8789285120" sp="2109428" raidPoints="21" />
@@ -3443,9 +3592,49 @@
 			<radius normal="22" />
 			<height normal="55" />
 		</collision>
+		<dropLists>
+			<drop>
+				<item id="36513" min="2" max="4" chance="100" /> <!-- Elcyum Powder -->
+				<item id="36587" min="1" max="3" chance="80" /> <!-- Scroll: Modify Armor (S-grade) -->
+				<item id="17527" min="1" max="2" chance="75" /> <!-- Scroll: Enchant Armor (R-grade) -->
+				<item id="16027" min="1" max="1" chance="50" /> <!-- Bottle of Freya's Soul -->
+				<item id="16026" min="1" max="1" chance="25" /> <!-- Blessed Freya's Necklace -->
+				<item id="17526" min="1" max="2" chance="25" /> <!-- Scroll: Enchant Weapon (R-grade) -->
+				<item id="36575" min="1" max="3" chance="20" /> <!-- Scroll: Modify Weapon (S-grade) -->
+				<item id="21714" min="1" max="1" chance="5" /> <!-- Sealed Cloak of Freya -->
+				<item id="15586" min="1" max="1" chance="3.5" /> <!-- Elegia Shoes -->
+				<item id="15574" min="1" max="1" chance="3.5" /> <!-- Elegia Circlet -->
+				<item id="15575" min="1" max="1" chance="3.5" /> <!-- Elegia Breastplate -->
+				<item id="15576" min="1" max="1" chance="3.5" /> <!-- Elegia Leather Breastplate -->
+				<item id="15579" min="1" max="1" chance="3.5" /> <!-- Elegia Leather Leggings -->
+				<item id="15582" min="1" max="1" chance="3.5" /> <!-- Elegia Leather Gloves -->
+				<item id="15585" min="1" max="1" chance="3.5" /> <!-- Elegia Leather Boots -->
+				<item id="15573" min="1" max="1" chance="3.5" /> <!-- Elegia Leather Helmet -->
+				<item id="15578" min="1" max="1" chance="3.5" /> <!-- Elegia Gaiters -->
+				<item id="15583" min="1" max="1" chance="3.5" /> <!-- Elegia Gloves -->
+				<item id="15581" min="1" max="1" chance="3.5" /> <!-- Elegia Gauntlets -->
+				<item id="15584" min="1" max="1" chance="3.5" /> <!-- Elegia Boots -->
+				<item id="15588" min="1" max="1" chance="3.5" /> <!-- Elegia Sigil -->
+				<item id="15577" min="1" max="1" chance="3.5" /> <!-- Elegia Tunic -->
+				<item id="15572" min="1" max="1" chance="3.5" /> <!-- Elegia Helmet -->
+				<item id="15580" min="1" max="1" chance="3.5" /> <!-- Elegia Stockings -->
+				<item id="15587" min="1" max="1" chance="3.5" /> <!-- Elegia Shield -->
+				<item id="15546" min="1" max="1" chance="2.5" /> <!-- Eversor Mace -->
+				<item id="15545" min="1" max="1" chance="2.5" /> <!-- Mamba Edge -->
+				<item id="15554" min="1" max="1" chance="2.5" /> <!-- Recurve Thorne Bow -->
+				<item id="15553" min="1" max="1" chance="2.5" /> <!-- Archangel Sword -->
+				<item id="15544" min="1" max="1" chance="2.5" /> <!-- Eternal Core Sword -->
+				<item id="15547" min="1" max="1" chance="2.5" /> <!-- Contristo Hammer -->
+				<item id="15549" min="1" max="1" chance="2.5" /> <!-- Jade Claw -->
+				<item id="15550" min="1" max="1" chance="2.5" /> <!-- Demitelum -->
+				<item id="15548" min="1" max="1" chance="2.5" /> <!-- Lava Saw -->
+				<item id="15551" min="1" max="1" chance="2.5" /> <!-- Sacredium -->
+				<item id="15552" min="1" max="1" chance="2.5" /> <!-- Cyclic Cane -->
+				<item id="22791" min="1" max="1" chance="0.3003003003003" /> <!-- Freya's Staff -->
+			</drop>
+		</dropLists>
 	</npc>
 	<npc id="29181" level="83" type="GrandBoss" name="Zaken">
-		<!-- Confirmed CT2.5 -->
 		<race>UNDEAD</race>
 		<sex>MALE</sex>
 		<acquire exp="15282888" sp="3667" />
@@ -3489,6 +3678,74 @@
 			<radius normal="16" />
 			<height normal="32" />
 		</collision>
+		<dropLists>
+			<drop>
+				<item id="3936" min="1" max="10" chance="100" /> <!-- Blessed Scroll of Resurrection -->
+				<item id="1538" min="1" max="30" chance="100" /> <!-- Blessed Scroll of Escape -->
+				<item id="16162" min="1" max="3" chance="60" /> <!-- High-grade Life Stone - Lv. 85 -->
+				<item id="16166" min="1" max="3" chance="40" /> <!-- High-grade Life Stone - Lv. 86 -->
+				<item id="14162" min="1" max="1" chance="19" /> <!-- Sealed Vesper Ring -->
+				<item id="14160" min="1" max="1" chance="16" /> <!-- Sealed Vesper Earring -->
+				<item id="14161" min="1" max="1" chance="15" /> <!-- Sealed Vesper Necklace -->
+				<item id="15694" min="1" max="1" chance="4.00003" /> <!-- Sealed Moirai Helmet -->
+				<item id="15696" min="1" max="1" chance="4" /> <!-- Sealed Moirai Circlet -->
+				<item id="15697" min="1" max="1" chance="4" /> <!-- Sealed Moirai Breastplate -->
+				<item id="15698" min="1" max="1" chance="4" /> <!-- Sealed Moirai Leather Breastplate -->
+				<item id="15699" min="1" max="1" chance="4" /> <!-- Sealed Moirai Tunic -->
+				<item id="15708" min="1" max="1" chance="4" /> <!-- Sealed Moirai Shoes -->
+				<item id="15701" min="1" max="1" chance="4" /> <!-- Sealed Moirai Leather Leggings -->
+				<item id="15704" min="1" max="1" chance="4" /> <!-- Sealed Moirai Leather Gloves -->
+				<item id="15707" min="1" max="1" chance="4" /> <!-- Sealed Moirai Leather Boots -->
+				<item id="15700" min="1" max="1" chance="4" /> <!-- Sealed Moirai Gaiters -->
+				<item id="15705" min="1" max="1" chance="4" /> <!-- Sealed Moirai Gloves -->
+				<item id="15703" min="1" max="1" chance="4" /> <!-- Sealed Moirai Gauntlets -->
+				<item id="15706" min="1" max="1" chance="4" /> <!-- Sealed Moirai Boots -->
+				<item id="15702" min="1" max="1" chance="4" /> <!-- Sealed Moirai Stockings -->
+				<item id="15695" min="1" max="1" chance="4" /> <!-- Sealed Moirai Leather Helmet -->
+				<item id="15709" min="1" max="1" chance="4" /> <!-- Sealed Moirai Sigil -->
+				<item id="15710" min="1" max="1" chance="4" /> <!-- Sealed Moirai Shield -->
+				<item id="14174" min="1" max="1" chance="3" /> <!-- Forgotten Scroll: Pain of Shilen -->
+				<item id="14184" min="1" max="1" chance="3" /> <!-- Forgotten Scroll: Golem Armor -->
+				<item id="14188" min="1" max="1" chance="3" /> <!-- Forgotten Scroll: Frost Armor -->
+				<item id="14187" min="1" max="1" chance="3" /> <!-- Forgotten Scroll: Flame Armor -->
+				<item id="14173" min="1" max="1" chance="3" /> <!-- Forgotten Scroll: Eva's Will -->
+				<item id="14185" min="1" max="1" chance="3" /> <!-- Forgotten Scroll: Wild Shot -->
+				<item id="14179" min="1" max="1" chance="3" /> <!-- Forgotten Scroll: Arrow Rain -->
+				<item id="14172" min="1" max="1" chance="3" /> <!-- Forgotten Scroll: Spirit of the Phoenix -->
+				<item id="14171" min="1" max="1" chance="3" /> <!-- Forgotten Scroll: Hell Scream -->
+				<item id="14178" min="1" max="1" chance="3" /> <!-- Forgotten Scroll: Flame Hawk -->
+				<item id="14176" min="1" max="1" chance="3" /> <!-- Forgotten Scroll: Wind Riding -->
+				<item id="14177" min="1" max="1" chance="3" /> <!-- Forgotten Scroll: Ghost Walking -->
+				<item id="14180" min="1" max="1" chance="3" /> <!-- Forgotten Scroll: Ghost Piercing -->
+				<item id="14181" min="1" max="1" chance="3" /> <!-- Forgotten Scroll: Dread Pool -->
+				<item id="14182" min="1" max="1" chance="3" /> <!-- Forgotten Scroll: Force of Destruction -->
+				<item id="14175" min="1" max="1" chance="3" /> <!-- Forgotten Scroll: Exciting Adventure -->
+				<item id="14183" min="1" max="1" chance="3" /> <!-- Forgotten Scroll: Demolition Impact -->
+				<item id="14186" min="1" max="1" chance="3" /> <!-- Forgotten Scroll: Lightning Shock -->
+				<item id="21713" min="1" max="1" chance="3" /> <!-- Zaken's Sealed Cloak -->
+				<item id="21892" min="1" max="1" chance="3" /> <!-- Pirate King Hat -->
+				<item id="14170" min="1" max="1" chance="2.99998" /> <!-- Forgotten Scroll: Seed of Revenge -->
+				<item id="13143" min="1" max="1" chance="2.00002" /> <!-- Sealed Vesper Helmet -->
+				<item id="13145" min="1" max="1" chance="2" /> <!-- Sealed Vesper Circlet -->
+				<item id="14105" min="1" max="1" chance="2" /> <!-- Sealed Vesper Breastplate -->
+				<item id="14106" min="1" max="1" chance="2" /> <!-- Sealed Vesper Leather Breastplate -->
+				<item id="14107" min="1" max="1" chance="2" /> <!-- Sealed Vesper Tunic -->
+				<item id="14117" min="1" max="1" chance="2" /> <!-- Sealed Vesper Shoes -->
+				<item id="14112" min="1" max="1" chance="2" /> <!-- Sealed Vesper Leather Leggings -->
+				<item id="14113" min="1" max="1" chance="2" /> <!-- Sealed Vesper Leather Gloves -->
+				<item id="14114" min="1" max="1" chance="2" /> <!-- Sealed Vesper Leather Boots -->
+				<item id="14108" min="1" max="1" chance="2" /> <!-- Sealed Vesper Gaiters -->
+				<item id="14116" min="1" max="1" chance="2" /> <!-- Sealed Vesper Gloves -->
+				<item id="14109" min="1" max="1" chance="2" /> <!-- Sealed Vesper Gauntlets -->
+				<item id="14110" min="1" max="1" chance="2" /> <!-- Sealed Vesper Boots -->
+				<item id="14115" min="1" max="1" chance="2" /> <!-- Sealed Vesper Stockings -->
+				<item id="13144" min="1" max="1" chance="2" /> <!-- Sealed Vesper Leather Helmet -->
+				<item id="13887" min="1" max="1" chance="2" /> <!-- Sealed Vesper Sigil -->
+				<item id="14111" min="1" max="1" chance="2" /> <!-- Sealed Vesper Shield -->
+				<item id="21935" min="1" max="1" chance="0.149925037481259" /> <!-- Butcher Blades -->
+				<item id="21712" min="1" max="1" chance="0.149925037481259" /> <!-- Blessed Zaken's Earring -->
+			</drop>
+		</dropLists>
 	</npc>
 	<npc id="29182" level="81" type="Monster" name="Doll Blader">
 		<!-- Confirmed CT2.5 -->
@@ -3666,7 +3923,6 @@
 		</collision>
 	</npc>
 	<npc id="29186" level="85" type="GrandBoss" name="Baylor" title="Warden">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<skill name="selfbuff1" id="5221" level="1" />
 			<skill name="selfbuff2" id="5222" level="1" />
@@ -3730,6 +3986,34 @@
 			<radius normal="54" />
 			<height normal="77.5" />
 		</collision>
+		<dropLists>
+			<drop>
+				<item id="13145" min="1" max="1" chance="8" /> <!-- Sealed Vesper Circlet -->
+				<item id="14117" min="1" max="1" chance="8" /> <!-- Sealed Vesper Shoes -->
+				<item id="14113" min="1" max="1" chance="8" /> <!-- Sealed Vesper Leather Gloves -->
+				<item id="14114" min="1" max="1" chance="8" /> <!-- Sealed Vesper Leather Boots -->
+				<item id="14116" min="1" max="1" chance="8" /> <!-- Sealed Vesper Gloves -->
+				<item id="14109" min="1" max="1" chance="8" /> <!-- Sealed Vesper Gauntlets -->
+				<item id="14110" min="1" max="1" chance="8" /> <!-- Sealed Vesper Boots -->
+				<item id="13144" min="1" max="1" chance="8" /> <!-- Sealed Vesper Leather Helmet -->
+				<item id="13887" min="1" max="1" chance="8" /> <!-- Sealed Vesper Sigil -->
+				<item id="14111" min="1" max="1" chance="8" /> <!-- Sealed Vesper Shield -->
+				<item id="10170" min="1" max="1" chance="8" /> <!-- Baylor's Earring -->
+				<item id="13143" min="1" max="1" chance="7.99999" /> <!-- Sealed Vesper Helmet -->
+				<item id="6578" min="1" max="1" chance="4" /> <!-- Blessed Scroll: Enchant Armor (S-grade) -->
+				<item id="6577" min="1" max="1" chance="1" /> <!-- Blessed Scroll: Enchant Weapon (S-grade) -->
+				<!-- Also drops herbs. -->
+				<item id="8600" min="1" max="1" chance="10" /> <!-- Herb of Life -->
+				<item id="8601" min="1" max="1" chance="8" /> <!-- Major Herb of Life -->
+				<item id="8602" min="1" max="1" chance="2" /> <!-- Superior Herb of Life -->
+				<item id="8603" min="1" max="1" chance="19.8" /> <!-- Herb of Mana -->
+				<item id="8604" min="1" max="1" chance="9.9" /> <!-- Major Herb of Mana -->
+				<item id="8605" min="1" max="1" chance="3.3" /> <!-- Superior Herb of Mana -->
+				<item id="34849" min="1" max="1" chance="0.7" /> <!-- Mysterious Herb of Power -->
+				<item id="34850" min="1" max="1" chance="0.7" /> <!-- Mysterious Herb of Magic -->
+				<item id="13028" min="1" max="1" chance="0.1" /> <!-- Vitality Replenishing Herb -->
+			</drop>
+		</dropLists>
 	</npc>
 	<npc id="29187" level="85" type="Monster" name="Crystal Prison Guard">
 		<!-- Confirmed CT2.5 -->
@@ -3923,7 +4207,6 @@
 		</collision>
 	</npc>
 	<npc id="29191" level="98" type="RaidBoss" name="Octavis">
-		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<parameters>
 			<skill name="boss_skill_01" id="14285" level="1" /> <!-- Octavis' Arrow Shaft -->
 			<param name="Attack_BoostValue" value="151" />
@@ -4001,7 +4284,6 @@
 		</collision>
 	</npc>
 	<npc id="29193" level="98" type="RaidBoss" name="Octavis">
-		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<parameters>
 			<skill name="boss_skill_01" id="14026" level="1" />
 			<skill name="boss_skill_02" id="14027" level="1" />
@@ -4176,7 +4458,6 @@
 		</dropLists>
 	</npc>
 	<npc id="29195" level="94" type="RaidBoss" name="Istina" title="Queen of Annihilation">
-		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<parameters>
 			<skill name="Istina_Death_Skill01" id="14218" level="1" />
 			<skill name="Istina_Death_Skill02" id="14219" level="1" />
@@ -4334,7 +4615,6 @@
 		</collision>
 	</npc>
 	<npc id="29196" level="94" type="RaidBoss" name="Istina" title="Queen of Annihilation">
-		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<parameters>
 			<skill name="Istina_Death_Skill01" id="14218" level="1" />
 			<skill name="Istina_Death_Skill02" id="14219" level="1" />

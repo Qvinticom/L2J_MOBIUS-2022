@@ -1,7 +1,6 @@
 ﻿<?xml version="1.0" encoding="UTF-8"?>
 <list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../xsd/npcs.xsd">
 	<npc id="20402" level="34" type="Monster" name="Veelan Bugbear Warrior" title="Enraged">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="124" />
 			<param name="MoveAroundSocial1" value="124" />
@@ -48,8 +47,8 @@
 		</ai>
 		<dropLists>
 			<drop>
-				<item id="291" min="1" max="1" chance="0.075" /> <!-- Trident -->
 				<item id="57" min="14" max="32" chance="70" /> <!-- Adena -->
+				<item id="291" min="1" max="1" chance="0.0750187546886722" /> <!-- Trident -->
 				<!-- Also drops herbs. -->
 				<item id="8600" min="1" max="1" chance="10" /> <!-- Herb of Life -->
 				<item id="8601" min="1" max="1" chance="8" /> <!-- Major Herb of Life -->
@@ -62,8 +61,8 @@
 				<item id="13028" min="1" max="1" chance="0.1" /> <!-- Vitality Replenishing Herb -->
 			</drop>
 			<spoil>
-				<item id="36531" min="1" max="1" chance="7.63" /> <!-- Thread -->
-				<item id="36533" min="1" max="1" chance="0.03" /> <!-- Synthetic Braid -->
+				<item id="36531" min="1" max="1" chance="5" /> <!-- Thread -->
+				<item id="36533" min="1" max="1" chance="0.1" /> <!-- Synthetic Braid -->
 			</spoil>
 			<lucky>
 				<item id="39629" min="1" max="1" chance="100" /> <!-- Fortune Pocket - Stage 1 -->
@@ -75,7 +74,6 @@
 		</collision>
 	</npc>
 	<npc id="20403" level="16" type="Monster" name="Hunter Tarantula">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="0" />
 			<param name="MoveAroundSocial1" value="0" />
@@ -117,10 +115,10 @@
 		<dropLists>
 			<drop>
 				<item id="57" min="4" max="9" chance="70" /> <!-- Adena -->
-				<item id="734" min="1" max="1" chance="0.3" /> <!-- Wind Walk Potion -->
-				<item id="735" min="1" max="1" chance="0.3" /> <!-- Haste Potion -->
-				<item id="36561" min="1" max="1" chance="0.3" /> <!-- Cokes -->
-				<item id="5268" min="1" max="1" chance="0.03" /> <!-- Recipe: Greater Soulshot Compressed Package (D-grade) -->
+				<item id="735" min="1" max="1" chance="0.5" /> <!-- Haste Potion -->
+				<item id="734" min="1" max="1" chance="0.5" /> <!-- Wind Walk Potion -->
+				<item id="36561" min="1" max="1" chance="0.5" /> <!-- Cokes -->
+				<item id="5268" min="1" max="1" chance="0.05" /> <!-- Recipe: Greater Soulshot Compressed Package (D-grade) -->
 				<!-- Also drops herbs. -->
 				<item id="8600" min="1" max="1" chance="10" /> <!-- Herb of Life -->
 				<item id="8601" min="1" max="1" chance="8" /> <!-- Major Herb of Life -->
@@ -133,7 +131,7 @@
 				<item id="13028" min="1" max="1" chance="0.1" /> <!-- Vitality Replenishing Herb -->
 			</drop>
 			<spoil>
-				<item id="36531" min="1" max="1" chance="4.41" /> <!-- Thread -->
+				<item id="36531" min="1" max="1" chance="4" /> <!-- Thread -->
 			</spoil>
 			<lucky>
 				<item id="39629" min="1" max="1" chance="100" /> <!-- Fortune Pocket - Stage 1 -->
@@ -145,7 +143,6 @@
 		</collision>
 	</npc>
 	<npc id="20405" level="1" type="Monster" name="Young Brown Fox">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="80" />
 			<param name="MoveAroundSocial1" value="80" />
@@ -185,7 +182,6 @@
 		</collision>
 	</npc>
 	<npc id="20406" level="1" type="Monster" name="Young Red Fox">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="80" />
 			<param name="MoveAroundSocial1" value="80" />
@@ -225,7 +221,6 @@
 		</collision>
 	</npc>
 	<npc id="20407" level="1" type="Monster" name="Young Crimson Fox">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="80" />
 			<param name="MoveAroundSocial1" value="80" />
@@ -265,7 +260,6 @@
 		</collision>
 	</npc>
 	<npc id="20410" level="15" type="Monster" name="Scavenger Spider">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="0" />
 			<param name="MoveAroundSocial1" value="0" />
@@ -306,8 +300,8 @@
 		<dropLists>
 			<drop>
 				<item id="57" min="4" max="9" chance="70" /> <!-- Adena -->
-				<item id="36561" min="1" max="1" chance="0.3" /> <!-- Cokes -->
-				<item id="36562" min="1" max="1" chance="0.0075" /> <!-- Greater Cokes -->
+				<item id="36561" min="1" max="1" chance="0.3003003003003" /> <!-- Cokes -->
+				<item id="36562" min="1" max="1" chance="0.05" /> <!-- Greater Cokes -->
 				<!-- Also drops herbs. -->
 				<item id="8600" min="1" max="1" chance="10" /> <!-- Herb of Life -->
 				<item id="8601" min="1" max="1" chance="8" /> <!-- Major Herb of Life -->
@@ -320,8 +314,8 @@
 				<item id="13028" min="1" max="1" chance="0.1" /> <!-- Vitality Replenishing Herb -->
 			</drop>
 			<spoil>
-				<item id="36561" min="1" max="1" chance="0.3" /> <!-- Cokes -->
-				<item id="36562" min="1" max="1" chance="0.0075" /> <!-- Greater Cokes -->
+				<item id="36561" min="1" max="1" chance="1" /> <!-- Cokes -->
+				<item id="36562" min="1" max="1" chance="0.1" /> <!-- Greater Cokes -->
 			</spoil>
 			<lucky>
 				<item id="39629" min="1" max="1" chance="100" /> <!-- Fortune Pocket - Stage 1 -->
@@ -333,7 +327,6 @@
 		</collision>
 	</npc>
 	<npc id="20411" level="30" type="Monster" name="Scavenger Bat" title="Enraged">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="0" />
 			<param name="MoveAroundSocial1" value="0" />
@@ -381,8 +374,8 @@
 		</ai>
 		<dropLists>
 			<drop>
-				<item id="434" min="1" max="1" chance="0.3" /> <!-- White Tunic -->
 				<item id="57" min="9" max="21" chance="70" /> <!-- Adena -->
+				<item id="434" min="1" max="1" chance="0.2" /> <!-- White Tunic -->
 				<!-- Also drops herbs. -->
 				<item id="8600" min="1" max="1" chance="10" /> <!-- Herb of Life -->
 				<item id="8601" min="1" max="1" chance="8" /> <!-- Major Herb of Life -->
@@ -395,8 +388,8 @@
 				<item id="13028" min="1" max="1" chance="0.1" /> <!-- Vitality Replenishing Herb -->
 			</drop>
 			<spoil>
-				<item id="36531" min="1" max="1" chance="4.884" /> <!-- Thread -->
-				<item id="36533" min="1" max="1" chance="0.03" /> <!-- Synthetic Braid -->
+				<item id="36531" min="1" max="1" chance="5" /> <!-- Thread -->
+				<item id="36533" min="1" max="1" chance="0.2" /> <!-- Synthetic Braid -->
 			</spoil>
 			<lucky>
 				<item id="39629" min="1" max="1" chance="100" /> <!-- Fortune Pocket - Stage 1 -->
@@ -408,7 +401,6 @@
 		</collision>
 	</npc>
 	<npc id="20412" level="49" type="Monster" name="Susceptor">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="0" />
 			<param name="MoveAroundSocial1" value="0" />
@@ -460,7 +452,6 @@
 		</collision>
 	</npc>
 	<npc id="20419" level="20" type="Monster" name="Akaste Succubus">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="110" />
 			<param name="MoveAroundSocial1" value="110" />
@@ -509,7 +500,6 @@
 		</collision>
 	</npc>
 	<npc id="20422" level="17" type="Monster" name="Akaste Skeleton Prefect">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="167" />
 			<param name="MoveAroundSocial1" value="167" />
@@ -557,10 +547,20 @@
 		<dropLists>
 			<drop>
 				<item id="57" min="4" max="10" chance="70" /> <!-- Adena -->
-				<item id="36523" min="1" max="1" chance="0.03" /> <!-- Adamantite -->
+				<item id="36523" min="1" max="1" chance="0.05" /> <!-- Adamantite -->
+				<!-- Also drops herbs. -->
+				<item id="8600" min="1" max="1" chance="10" /> <!-- Herb of Life -->
+				<item id="8601" min="1" max="1" chance="8" /> <!-- Major Herb of Life -->
+				<item id="8602" min="1" max="1" chance="2" /> <!-- Superior Herb of Life -->
+				<item id="8603" min="1" max="1" chance="19.8" /> <!-- Herb of Mana -->
+				<item id="8604" min="1" max="1" chance="9.9" /> <!-- Major Herb of Mana -->
+				<item id="8605" min="1" max="1" chance="3.3" /> <!-- Superior Herb of Mana -->
+				<item id="34849" min="1" max="1" chance="0.7" /> <!-- Mysterious Herb of Power -->
+				<item id="34850" min="1" max="1" chance="0.7" /> <!-- Mysterious Herb of Magic -->
+				<item id="13028" min="1" max="1" chance="0.1" /> <!-- Vitality Replenishing Herb -->
 			</drop>
 			<spoil>
-				<item id="36523" min="1" max="1" chance="0.03" /> <!-- Adamantite -->
+				<item id="36523" min="1" max="1" chance="0.1" /> <!-- Adamantite -->
 			</spoil>
 			<lucky>
 				<item id="39629" min="1" max="1" chance="100" /> <!-- Fortune Pocket - Stage 1 -->
@@ -572,7 +572,6 @@
 		</collision>
 	</npc>
 	<npc id="20423" level="14" type="Monster" name="Akaste Skeleton Archer">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="157" />
 			<param name="MoveAroundSocial1" value="157" />
@@ -616,11 +615,21 @@
 		</ai>
 		<dropLists>
 			<drop>
-				<item id="57" min="3" max="7" chance="70" /> <!-- Adena -->
-				<item id="36522" min="1" max="1" chance="0.075" /> <!-- Silver -->
+				<item id="57" min="6" max="6" chance="70" /> <!-- Adena -->
+				<item id="36522" min="1" max="1" chance="0.05" /> <!-- Silver -->
+				<!-- Also drops herbs. -->
+				<item id="8600" min="1" max="1" chance="10" /> <!-- Herb of Life -->
+				<item id="8601" min="1" max="1" chance="8" /> <!-- Major Herb of Life -->
+				<item id="8602" min="1" max="1" chance="2" /> <!-- Superior Herb of Life -->
+				<item id="8603" min="1" max="1" chance="19.8" /> <!-- Herb of Mana -->
+				<item id="8604" min="1" max="1" chance="9.9" /> <!-- Major Herb of Mana -->
+				<item id="8605" min="1" max="1" chance="3.3" /> <!-- Superior Herb of Mana -->
+				<item id="34849" min="1" max="1" chance="0.7" /> <!-- Mysterious Herb of Power -->
+				<item id="34850" min="1" max="1" chance="0.7" /> <!-- Mysterious Herb of Magic -->
+				<item id="13028" min="1" max="1" chance="0.1" /> <!-- Vitality Replenishing Herb -->
 			</drop>
 			<spoil>
-				<item id="36522" min="1" max="1" chance="0.075" /> <!-- Silver -->
+				<item id="36522" min="1" max="1" chance="0.1" /> <!-- Silver -->
 			</spoil>
 			<lucky>
 				<item id="39629" min="1" max="1" chance="100" /> <!-- Fortune Pocket - Stage 1 -->
@@ -632,7 +641,6 @@
 		</collision>
 	</npc>
 	<npc id="20425" level="12" type="Monster" name="Akaste Skeleton Warrior">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="167" />
 			<param name="MoveAroundSocial1" value="167" />
@@ -676,11 +684,21 @@
 		</ai>
 		<dropLists>
 			<drop>
-				<item id="57" min="3" max="7" chance="70" /> <!-- Adena -->
-				<item id="36521" min="1" max="1" chance="3.552" /> <!-- Iron Ore -->
+				<item id="57" min="3" max="6" chance="70" /> <!-- Adena -->
+				<item id="36521" min="1" max="1" chance="4" /> <!-- Iron Ore -->
+				<!-- Also drops herbs. -->
+				<item id="8600" min="1" max="1" chance="10" /> <!-- Herb of Life -->
+				<item id="8601" min="1" max="1" chance="8" /> <!-- Major Herb of Life -->
+				<item id="8602" min="1" max="1" chance="2" /> <!-- Superior Herb of Life -->
+				<item id="8603" min="1" max="1" chance="19.8" /> <!-- Herb of Mana -->
+				<item id="8604" min="1" max="1" chance="9.9" /> <!-- Major Herb of Mana -->
+				<item id="8605" min="1" max="1" chance="3.3" /> <!-- Superior Herb of Mana -->
+				<item id="34849" min="1" max="1" chance="0.7" /> <!-- Mysterious Herb of Power -->
+				<item id="34850" min="1" max="1" chance="0.7" /> <!-- Mysterious Herb of Magic -->
+				<item id="13028" min="1" max="1" chance="0.1" /> <!-- Vitality Replenishing Herb -->
 			</drop>
 			<spoil>
-				<item id="36521" min="1" max="1" chance="3.798" /> <!-- Iron Ore -->
+				<item id="36521" min="1" max="1" chance="4" /> <!-- Iron Ore -->
 			</spoil>
 			<lucky>
 				<item id="39629" min="1" max="1" chance="100" /> <!-- Fortune Pocket - Stage 1 -->
@@ -692,7 +710,6 @@
 		</collision>
 	</npc>
 	<npc id="20426" level="10" type="Monster" name="Evil Eye">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="0" />
 			<param name="MoveAroundSocial1" value="0" />
@@ -738,6 +755,10 @@
 		</ai>
 		<dropLists>
 			<drop>
+				<item id="57" min="3" max="7" chance="70" /> <!-- Adena -->
+				<item id="1060" min="1" max="1" chance="2" /> <!-- Healing Potion -->
+				<item id="909" min="1" max="1" chance="0.5" /> <!-- Blue Diamond Necklace -->
+				<!-- Also drops herbs. -->
 				<item id="8600" min="1" max="1" chance="10" /> <!-- Herb of Life -->
 				<item id="8601" min="1" max="1" chance="8" /> <!-- Major Herb of Life -->
 				<item id="8602" min="1" max="1" chance="2" /> <!-- Superior Herb of Life -->
@@ -748,6 +769,9 @@
 				<item id="34850" min="1" max="1" chance="0.7" /> <!-- Mysterious Herb of Magic -->
 				<item id="13028" min="1" max="1" chance="0.1" /> <!-- Vitality Replenishing Herb -->
 			</drop>
+			<spoil>
+				<item id="36531" min="1" max="1" chance="4" /> <!-- Thread -->
+			</spoil>
 		</dropLists>
 		<collision>
 			<radius normal="21" />
@@ -755,7 +779,6 @@
 		</collision>
 	</npc>
 	<npc id="20428" level="14" type="Monster" name="Evil Eye Patrol">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="0" />
 			<param name="MoveAroundSocial1" value="0" />
@@ -801,6 +824,11 @@
 		</ai>
 		<dropLists>
 			<drop>
+				<item id="57" min="4" max="9" chance="70" /> <!-- Adena -->
+				<item id="1833" min="1" max="1" chance="1.5" /> <!-- Bandage -->
+				<item id="1831" min="1" max="1" chance="1.5" /> <!-- Antidote -->
+				<item id="909" min="1" max="1" chance="0.5" /> <!-- Blue Diamond Necklace -->
+				<!-- Also drops herbs. -->
 				<item id="8600" min="1" max="1" chance="10" /> <!-- Herb of Life -->
 				<item id="8601" min="1" max="1" chance="8" /> <!-- Major Herb of Life -->
 				<item id="8602" min="1" max="1" chance="2" /> <!-- Superior Herb of Life -->
@@ -811,6 +839,9 @@
 				<item id="34850" min="1" max="1" chance="0.7" /> <!-- Mysterious Herb of Magic -->
 				<item id="13028" min="1" max="1" chance="0.1" /> <!-- Vitality Replenishing Herb -->
 			</drop>
+			<spoil>
+				<item id="36531" min="1" max="1" chance="4" /> <!-- Thread -->
+			</spoil>
 		</dropLists>
 		<collision>
 			<radius normal="21" />
@@ -818,7 +849,6 @@
 		</collision>
 	</npc>
 	<npc id="20431" level="20" type="Monster" name="Elf Ghost">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="0" />
 			<param name="MoveAroundSocial1" value="0" />
@@ -867,7 +897,6 @@
 		</collision>
 	</npc>
 	<npc id="20435" level="15" type="Monster" name="Opal Beast">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="90" />
 			<param name="MoveAroundSocial1" value="90" />
@@ -903,11 +932,21 @@
 		<ai aggroRange="450" clanHelpRange="300" isAggressive="true" />
 		<dropLists>
 			<drop>
-				<item id="57" min="3" max="8" chance="70" /> <!-- Adena -->
-				<item id="36522" min="1" max="1" chance="0.075" /> <!-- Silver -->
+				<item id="57" min="3" max="7" chance="70" /> <!-- Adena -->
+				<item id="36522" min="1" max="1" chance="0.1" /> <!-- Silver -->
+				<!-- Also drops herbs. -->
+				<item id="8600" min="1" max="1" chance="10" /> <!-- Herb of Life -->
+				<item id="8601" min="1" max="1" chance="8" /> <!-- Major Herb of Life -->
+				<item id="8602" min="1" max="1" chance="2" /> <!-- Superior Herb of Life -->
+				<item id="8603" min="1" max="1" chance="19.8" /> <!-- Herb of Mana -->
+				<item id="8604" min="1" max="1" chance="9.9" /> <!-- Major Herb of Mana -->
+				<item id="8605" min="1" max="1" chance="3.3" /> <!-- Superior Herb of Mana -->
+				<item id="34849" min="1" max="1" chance="0.7" /> <!-- Mysterious Herb of Power -->
+				<item id="34850" min="1" max="1" chance="0.7" /> <!-- Mysterious Herb of Magic -->
+				<item id="13028" min="1" max="1" chance="0.1" /> <!-- Vitality Replenishing Herb -->
 			</drop>
 			<spoil>
-				<item id="36522" min="1" max="1" chance="0.075" /> <!-- Silver -->
+				<item id="36522" min="1" max="1" chance="0.2" /> <!-- Silver -->
 			</spoil>
 			<lucky>
 				<item id="39629" min="1" max="1" chance="100" /> <!-- Fortune Pocket - Stage 1 -->
@@ -919,7 +958,6 @@
 		</collision>
 	</npc>
 	<npc id="20436" level="23" type="Monster" name="Ol Mahum Supplier">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="130" />
 			<param name="MoveAroundSocial1" value="130" />
@@ -966,9 +1004,9 @@
 		</ai>
 		<dropLists>
 			<drop>
-				<item id="57" min="6" max="15" chance="70" /> <!-- Adena -->
-				<item id="36561" min="1" max="1" chance="0.3" /> <!-- Cokes -->
-				<item id="36938" min="1" max="1" chance="0.0009" /> <!-- Recipe: Cokes - Downgrade -->
+				<item id="57" min="6" max="14" chance="70" /> <!-- Adena -->
+				<item id="36561" min="1" max="1" chance="0.5" /> <!-- Cokes -->
+				<item id="36938" min="1" max="1" chance="0.01" /> <!-- Recipe: Cokes - Downgrade -->
 				<!-- Also drops herbs. -->
 				<item id="8600" min="1" max="1" chance="10" /> <!-- Herb of Life -->
 				<item id="8601" min="1" max="1" chance="8" /> <!-- Major Herb of Life -->
@@ -981,7 +1019,7 @@
 				<item id="13028" min="1" max="1" chance="0.1" /> <!-- Vitality Replenishing Herb -->
 			</drop>
 			<spoil>
-				<item id="36562" min="1" max="1" chance="0.03" /> <!-- Greater Cokes -->
+				<item id="36562" min="1" max="1" chance="0.1" /> <!-- Greater Cokes -->
 			</spoil>
 			<lucky>
 				<item id="39629" min="1" max="1" chance="100" /> <!-- Fortune Pocket - Stage 1 -->
@@ -993,7 +1031,6 @@
 		</collision>
 	</npc>
 	<npc id="20437" level="21" type="Monster" name="Ol Mahum Recruit">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="130" />
 			<param name="MoveAroundSocial1" value="130" />
@@ -1041,8 +1078,8 @@
 		<dropLists>
 			<drop>
 				<item id="57" min="6" max="13" chance="70" /> <!-- Adena -->
-				<item id="36561" min="1" max="1" chance="0.3" /> <!-- Cokes -->
-				<item id="36938" min="1" max="1" chance="0.0009" /> <!-- Recipe: Cokes - Downgrade -->
+				<item id="36561" min="1" max="1" chance="0.5" /> <!-- Cokes -->
+				<item id="36938" min="1" max="1" chance="0.01" /> <!-- Recipe: Cokes - Downgrade -->
 				<!-- Also drops herbs. -->
 				<item id="8600" min="1" max="1" chance="10" /> <!-- Herb of Life -->
 				<item id="8601" min="1" max="1" chance="8" /> <!-- Major Herb of Life -->
@@ -1055,7 +1092,7 @@
 				<item id="13028" min="1" max="1" chance="0.1" /> <!-- Vitality Replenishing Herb -->
 			</drop>
 			<spoil>
-				<item id="36562" min="1" max="1" chance="0.03" /> <!-- Greater Cokes -->
+				<item id="36562" min="1" max="1" chance="0.1" /> <!-- Greater Cokes -->
 			</spoil>
 			<lucky>
 				<item id="39629" min="1" max="1" chance="100" /> <!-- Fortune Pocket - Stage 1 -->
@@ -1067,7 +1104,6 @@
 		</collision>
 	</npc>
 	<npc id="20438" level="26" type="Monster" name="Ol Mahum General">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="90" />
 			<param name="MoveAroundSocial1" value="90" />
@@ -1114,9 +1150,9 @@
 		</ai>
 		<dropLists>
 			<drop>
-				<item id="57" min="8" max="18" chance="70" /> <!-- Adena -->
-				<item id="36562" min="1" max="1" chance="0.0075" /> <!-- Greater Cokes -->
-				<item id="36940" min="1" max="1" chance="0.0009" /> <!-- Recipe: Greater Cokes - Upgrade -->
+				<item id="57" min="10" max="10" chance="70" /> <!-- Adena -->
+				<item id="36562" min="1" max="1" chance="0.05" /> <!-- Greater Cokes -->
+				<item id="36940" min="1" max="1" chance="0.01" /> <!-- Recipe: Greater Cokes - Upgrade -->
 				<!-- Also drops herbs. -->
 				<item id="8600" min="1" max="1" chance="10" /> <!-- Herb of Life -->
 				<item id="8601" min="1" max="1" chance="8" /> <!-- Major Herb of Life -->
@@ -1129,7 +1165,7 @@
 				<item id="13028" min="1" max="1" chance="0.1" /> <!-- Vitality Replenishing Herb -->
 			</drop>
 			<spoil>
-				<item id="36563" min="1" max="1" chance="0.003" /> <!-- Synthetic Cokes -->
+				<item id="36563" min="1" max="1" chance="0.05" /> <!-- Synthetic Cokes -->
 			</spoil>
 			<lucky>
 				<item id="39629" min="1" max="1" chance="100" /> <!-- Fortune Pocket - Stage 1 -->
@@ -1141,7 +1177,6 @@
 		</collision>
 	</npc>
 	<npc id="20439" level="24" type="Monster" name="Ol Mahum Sergeant">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="130" />
 			<param name="MoveAroundSocial1" value="130" />
@@ -1188,6 +1223,10 @@
 		</ai>
 		<dropLists>
 			<drop>
+				<item id="57" min="7" max="16" chance="70" /> <!-- Adena -->
+				<item id="36562" min="1" max="1" chance="0.05" /> <!-- Greater Cokes -->
+				<item id="36940" min="1" max="1" chance="0.01" /> <!-- Recipe: Greater Cokes - Upgrade -->
+				<!-- Also drops herbs. -->
 				<item id="8600" min="1" max="1" chance="10" /> <!-- Herb of Life -->
 				<item id="8601" min="1" max="1" chance="8" /> <!-- Major Herb of Life -->
 				<item id="8602" min="1" max="1" chance="2" /> <!-- Superior Herb of Life -->
@@ -1198,6 +1237,9 @@
 				<item id="34850" min="1" max="1" chance="0.7" /> <!-- Mysterious Herb of Magic -->
 				<item id="13028" min="1" max="1" chance="0.1" /> <!-- Vitality Replenishing Herb -->
 			</drop>
+			<spoil>
+				<item id="36562" min="1" max="1" chance="0.1" /> <!-- Greater Cokes -->
+			</spoil>
 		</dropLists>
 		<collision>
 			<radius normal="13.5" />
@@ -1205,7 +1247,6 @@
 		</collision>
 	</npc>
 	<npc id="20440" level="3" type="Monster" name="Elder Brown Fox">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="80" />
 			<param name="MoveAroundSocial1" value="80" />
@@ -1245,7 +1286,6 @@
 		</collision>
 	</npc>
 	<npc id="20441" level="3" type="Monster" name="Elder Longtail Fox">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="80" />
 			<param name="MoveAroundSocial1" value="80" />
@@ -1285,7 +1325,6 @@
 		</collision>
 	</npc>
 	<npc id="20443" level="3" type="Monster" name="Elder Red Fox">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="80" />
 			<param name="MoveAroundSocial1" value="80" />
@@ -1325,7 +1364,6 @@
 		</collision>
 	</npc>
 	<npc id="20444" level="3" type="Monster" name="Elder Prairie Fox">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="80" />
 			<param name="MoveAroundSocial1" value="80" />
@@ -1365,7 +1403,6 @@
 		</collision>
 	</npc>
 	<npc id="20446" level="6" type="Monster" name="Utuku Orc">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="138" />
 			<param name="MoveAroundSocial1" value="138" />
@@ -1406,9 +1443,9 @@
 		</ai>
 		<dropLists>
 			<drop>
-				<item id="57" min="1" max="3" chance="70" /> <!-- Adena -->
-				<item id="36536" min="1" max="1" chance="0.75" /> <!-- Worn Leather Braid -->
-				<item id="36556" min="1" max="1" chance="0.3" /> <!-- Accessory Gem (Low-grade) -->
+				<item id="57" min="1" max="2" chance="70" /> <!-- Adena -->
+				<item id="36536" min="1" max="1" chance="0.75187969924812" /> <!-- Worn Leather Braid -->
+				<item id="36556" min="1" max="1" chance="0.3003003003003" /> <!-- Accessory Gem (Low-grade) -->
 				<!-- Also drops herbs. -->
 				<item id="8600" min="1" max="1" chance="10" /> <!-- Herb of Life -->
 				<item id="8601" min="1" max="1" chance="8" /> <!-- Major Herb of Life -->
@@ -1421,7 +1458,7 @@
 				<item id="13028" min="1" max="1" chance="0.1" /> <!-- Vitality Replenishing Herb -->
 			</drop>
 			<spoil>
-				<item id="36531" min="1" max="1" chance="1.47" /> <!-- Thread -->
+				<item id="36531" min="1" max="1" chance="1.5" /> <!-- Thread -->
 			</spoil>
 			<lucky>
 				<item id="39629" min="1" max="1" chance="100" /> <!-- Fortune Pocket - Stage 1 -->
@@ -1433,7 +1470,6 @@
 		</collision>
 	</npc>
 	<npc id="20447" level="8" type="Monster" name="Utuku Orc Archer">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="104" />
 			<param name="MoveAroundSocial1" value="104" />
@@ -1475,8 +1511,8 @@
 		<dropLists>
 			<drop>
 				<item id="57" min="2" max="5" chance="70" /> <!-- Adena -->
-				<item id="1060" min="1" max="1" chance="3.771" /> <!-- Healing Potion -->
-				<item id="36561" min="1" max="1" chance="0.3" /> <!-- Cokes -->
+				<item id="1060" min="1" max="1" chance="5" /> <!-- Healing Potion -->
+				<item id="36561" min="1" max="1" chance="0.3003003003003" /> <!-- Cokes -->
 				<!-- Also drops herbs. -->
 				<item id="8600" min="1" max="1" chance="10" /> <!-- Herb of Life -->
 				<item id="8601" min="1" max="1" chance="8" /> <!-- Major Herb of Life -->
@@ -1489,7 +1525,7 @@
 				<item id="13028" min="1" max="1" chance="0.1" /> <!-- Vitality Replenishing Herb -->
 			</drop>
 			<spoil>
-				<item id="36531" min="1" max="1" chance="2.452" /> <!-- Thread -->
+				<item id="36531" min="1" max="1" chance="2.5" /> <!-- Thread -->
 			</spoil>
 			<lucky>
 				<item id="39629" min="1" max="1" chance="100" /> <!-- Fortune Pocket - Stage 1 -->
@@ -1501,7 +1537,6 @@
 		</collision>
 	</npc>
 	<npc id="20448" level="7" type="Monster" name="Utuku Orc Soldier">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="138" />
 			<param name="MoveAroundSocial1" value="138" />
@@ -1543,7 +1578,7 @@
 		<dropLists>
 			<drop>
 				<item id="57" min="2" max="4" chance="70" /> <!-- Adena -->
-				<item id="36541" min="1" max="1" chance="0.75" /> <!-- Steel Wire -->
+				<item id="36541" min="1" max="1" chance="0.75187969924812" /> <!-- Steel Wire -->
 				<!-- Also drops herbs. -->
 				<item id="8600" min="1" max="1" chance="10" /> <!-- Herb of Life -->
 				<item id="8601" min="1" max="1" chance="8" /> <!-- Major Herb of Life -->
@@ -1556,7 +1591,7 @@
 				<item id="13028" min="1" max="1" chance="0.1" /> <!-- Vitality Replenishing Herb -->
 			</drop>
 			<spoil>
-				<item id="36531" min="1" max="1" chance="1.76" /> <!-- Thread -->
+				<item id="36531" min="1" max="1" chance="2" /> <!-- Thread -->
 			</spoil>
 			<lucky>
 				<item id="39629" min="1" max="1" chance="100" /> <!-- Fortune Pocket - Stage 1 -->
@@ -1568,7 +1603,6 @@
 		</collision>
 	</npc>
 	<npc id="20449" level="15" type="Monster" name="Will-O-Wisp">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="0" />
 			<param name="MoveAroundSocial1" value="0" />
@@ -1611,10 +1645,20 @@
 		<dropLists>
 			<drop>
 				<item id="57" min="4" max="9" chance="70" /> <!-- Adena -->
-				<item id="36522" min="1" max="1" chance="0.3" /> <!-- Silver -->
+				<item id="36522" min="1" max="1" chance="0.3003003003003" /> <!-- Silver -->
+				<!-- Also drops herbs. -->
+				<item id="8600" min="1" max="1" chance="10" /> <!-- Herb of Life -->
+				<item id="8601" min="1" max="1" chance="8" /> <!-- Major Herb of Life -->
+				<item id="8602" min="1" max="1" chance="2" /> <!-- Superior Herb of Life -->
+				<item id="8603" min="1" max="1" chance="19.8" /> <!-- Herb of Mana -->
+				<item id="8604" min="1" max="1" chance="9.9" /> <!-- Major Herb of Mana -->
+				<item id="8605" min="1" max="1" chance="3.3" /> <!-- Superior Herb of Mana -->
+				<item id="34849" min="1" max="1" chance="0.7" /> <!-- Mysterious Herb of Power -->
+				<item id="34850" min="1" max="1" chance="0.7" /> <!-- Mysterious Herb of Magic -->
+				<item id="13028" min="1" max="1" chance="0.1" /> <!-- Vitality Replenishing Herb -->
 			</drop>
 			<spoil>
-				<item id="36522" min="1" max="1" chance="0.3" /> <!-- Silver -->
+				<item id="36522" min="1" max="1" chance="0.75187969924812" /> <!-- Silver -->
 			</spoil>
 			<lucky>
 				<item id="39629" min="1" max="1" chance="100" /> <!-- Fortune Pocket - Stage 1 -->
@@ -1626,7 +1670,6 @@
 		</collision>
 	</npc>
 	<npc id="20451" level="21" type="Monster" name="Relic Spartoi">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="110" />
 			<param name="MoveAroundSocial1" value="110" />
@@ -1681,7 +1724,6 @@
 		</collision>
 	</npc>
 	<npc id="20453" level="20" type="Monster" name="Human Ghost">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="0" />
 			<param name="MoveAroundSocial1" value="0" />
@@ -1730,7 +1772,6 @@
 		</collision>
 	</npc>
 	<npc id="20458" level="33" type="Monster" name="Zombie Warrior" title="Enraged">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="120" />
 			<param name="MoveAroundSocial1" value="120" />
@@ -1780,9 +1821,9 @@
 		</ai>
 		<dropLists>
 			<drop>
-				<item id="377" min="1" max="1" chance="0.3" /> <!-- Scale Gaiters -->
-				<item id="467" min="1" max="1" chance="0.3" /> <!-- Dark Stockings -->
 				<item id="57" min="15" max="34" chance="70" /> <!-- Adena -->
+				<item id="467" min="1" max="1" chance="0.2" /> <!-- Dark Stockings -->
+				<item id="377" min="1" max="1" chance="0.2" /> <!-- Scale Gaiters -->
 				<!-- Also drops herbs. -->
 				<item id="8600" min="1" max="1" chance="10" /> <!-- Herb of Life -->
 				<item id="8601" min="1" max="1" chance="8" /> <!-- Major Herb of Life -->
@@ -1795,8 +1836,8 @@
 				<item id="13028" min="1" max="1" chance="0.1" /> <!-- Vitality Replenishing Herb -->
 			</drop>
 			<spoil>
-				<item id="36531" min="1" max="1" chance="8.148" /> <!-- Thread -->
-				<item id="36533" min="1" max="1" chance="0.03" /> <!-- Synthetic Braid -->
+				<item id="36531" min="1" max="1" chance="5" /> <!-- Thread -->
+				<item id="36533" min="1" max="1" chance="0.0750187546886722" /> <!-- Synthetic Braid -->
 			</spoil>
 			<lucky>
 				<item id="39629" min="1" max="1" chance="100" /> <!-- Fortune Pocket - Stage 1 -->
@@ -1808,7 +1849,6 @@
 		</collision>
 	</npc>
 	<npc id="20460" level="15" type="Monster" name="Crimson Spider">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="0" />
 			<param name="MoveAroundSocial1" value="0" />
@@ -1849,8 +1889,8 @@
 		<dropLists>
 			<drop>
 				<item id="57" min="4" max="9" chance="70" /> <!-- Adena -->
-				<item id="1833" min="1" max="1" chance="8.313" /> <!-- Bandage -->
-				<item id="36561" min="1" max="1" chance="0.3" /> <!-- Cokes -->
+				<item id="1833" min="1" max="1" chance="10" /> <!-- Bandage -->
+				<item id="36561" min="1" max="1" chance="0.3003003003003" /> <!-- Cokes -->
 				<!-- Also drops herbs. -->
 				<item id="8600" min="1" max="1" chance="10" /> <!-- Herb of Life -->
 				<item id="8601" min="1" max="1" chance="8" /> <!-- Major Herb of Life -->
@@ -1863,7 +1903,7 @@
 				<item id="13028" min="1" max="1" chance="0.1" /> <!-- Vitality Replenishing Herb -->
 			</drop>
 			<spoil>
-				<item id="36531" min="1" max="1" chance="4.393" /> <!-- Thread -->
+				<item id="36531" min="1" max="1" chance="3" /> <!-- Thread -->
 			</spoil>
 			<lucky>
 				<item id="39629" min="1" max="1" chance="100" /> <!-- Fortune Pocket - Stage 1 -->
@@ -1875,7 +1915,6 @@
 		</collision>
 	</npc>
 	<npc id="20463" level="13" type="Monster" name="Dungeon Skeleton Archer">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="157" />
 			<param name="MoveAroundSocial1" value="157" />
@@ -1920,10 +1959,20 @@
 		<dropLists>
 			<drop>
 				<item id="57" min="3" max="7" chance="70" /> <!-- Adena -->
-				<item id="36561" min="1" max="1" chance="0.3" /> <!-- Cokes -->
+				<item id="36561" min="1" max="1" chance="0.3003003003003" /> <!-- Cokes -->
+				<!-- Also drops herbs. -->
+				<item id="8600" min="1" max="1" chance="10" /> <!-- Herb of Life -->
+				<item id="8601" min="1" max="1" chance="8" /> <!-- Major Herb of Life -->
+				<item id="8602" min="1" max="1" chance="2" /> <!-- Superior Herb of Life -->
+				<item id="8603" min="1" max="1" chance="19.8" /> <!-- Herb of Mana -->
+				<item id="8604" min="1" max="1" chance="9.9" /> <!-- Major Herb of Mana -->
+				<item id="8605" min="1" max="1" chance="3.3" /> <!-- Superior Herb of Mana -->
+				<item id="34849" min="1" max="1" chance="0.7" /> <!-- Mysterious Herb of Power -->
+				<item id="34850" min="1" max="1" chance="0.7" /> <!-- Mysterious Herb of Magic -->
+				<item id="13028" min="1" max="1" chance="0.1" /> <!-- Vitality Replenishing Herb -->
 			</drop>
 			<spoil>
-				<item id="36531" min="1" max="1" chance="3.362" /> <!-- Thread -->
+				<item id="36531" min="1" max="1" chance="4" /> <!-- Thread -->
 			</spoil>
 			<lucky>
 				<item id="39629" min="1" max="1" chance="100" /> <!-- Fortune Pocket - Stage 1 -->
@@ -1935,7 +1984,6 @@
 		</collision>
 	</npc>
 	<npc id="20464" level="12" type="Monster" name="Dungeon Skeleton Soldier">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="167" />
 			<param name="MoveAroundSocial1" value="167" />
@@ -1980,10 +2028,20 @@
 		<dropLists>
 			<drop>
 				<item id="57" min="3" max="7" chance="70" /> <!-- Adena -->
-				<item id="36556" min="1" max="1" chance="1.399" /> <!-- Accessory Gem (Low-grade) -->
+				<item id="36556" min="1" max="1" chance="1.5" /> <!-- Accessory Gem (Low-grade) -->
+				<!-- Also drops herbs. -->
+				<item id="8600" min="1" max="1" chance="10" /> <!-- Herb of Life -->
+				<item id="8601" min="1" max="1" chance="8" /> <!-- Major Herb of Life -->
+				<item id="8602" min="1" max="1" chance="2" /> <!-- Superior Herb of Life -->
+				<item id="8603" min="1" max="1" chance="19.8" /> <!-- Herb of Mana -->
+				<item id="8604" min="1" max="1" chance="9.9" /> <!-- Major Herb of Mana -->
+				<item id="8605" min="1" max="1" chance="3.3" /> <!-- Superior Herb of Mana -->
+				<item id="34849" min="1" max="1" chance="0.7" /> <!-- Mysterious Herb of Power -->
+				<item id="34850" min="1" max="1" chance="0.7" /> <!-- Mysterious Herb of Magic -->
+				<item id="13028" min="1" max="1" chance="0.1" /> <!-- Vitality Replenishing Herb -->
 			</drop>
 			<spoil>
-				<item id="36531" min="1" max="1" chance="3.231" /> <!-- Thread -->
+				<item id="36531" min="1" max="1" chance="4" /> <!-- Thread -->
 			</spoil>
 			<lucky>
 				<item id="39629" min="1" max="1" chance="100" /> <!-- Fortune Pocket - Stage 1 -->
@@ -1995,7 +2053,6 @@
 		</collision>
 	</npc>
 	<npc id="20465" level="2" type="Monster" name="Prairie Fox">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="80" />
 			<param name="MoveAroundSocial1" value="80" />
@@ -2035,7 +2092,6 @@
 		</collision>
 	</npc>
 	<npc id="20466" level="17" type="Monster" name="Pincer Spider">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="0" />
 			<param name="MoveAroundSocial1" value="0" />
@@ -2077,7 +2133,7 @@
 		<dropLists>
 			<drop>
 				<item id="57" min="4" max="10" chance="70" /> <!-- Adena -->
-				<item id="734" min="1" max="1" chance="1.147" /> <!-- Wind Walk Potion -->
+				<item id="734" min="1" max="1" chance="1" /> <!-- Wind Walk Potion -->
 				<!-- Also drops herbs. -->
 				<item id="8600" min="1" max="1" chance="10" /> <!-- Herb of Life -->
 				<item id="8601" min="1" max="1" chance="8" /> <!-- Major Herb of Life -->
@@ -2090,7 +2146,7 @@
 				<item id="13028" min="1" max="1" chance="0.1" /> <!-- Vitality Replenishing Herb -->
 			</drop>
 			<spoil>
-				<item id="36531" min="1" max="1" chance="4.706" /> <!-- Thread -->
+				<item id="36531" min="1" max="1" chance="5" /> <!-- Thread -->
 			</spoil>
 			<lucky>
 				<item id="39629" min="1" max="1" chance="100" /> <!-- Fortune Pocket - Stage 1 -->
@@ -2102,7 +2158,6 @@
 		</collision>
 	</npc>
 	<npc id="20468" level="6" type="Monster" name="Kaboo Orc">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="138" />
 			<param name="MoveAroundSocial1" value="138" />
@@ -2143,8 +2198,8 @@
 		</ai>
 		<dropLists>
 			<drop>
-				<item id="57" min="1" max="3" chance="70" /> <!-- Adena -->
-				<item id="36561" min="1" max="1" chance="0.3" /> <!-- Cokes -->
+				<item id="57" min="1" max="2" chance="70" /> <!-- Adena -->
+				<item id="36561" min="1" max="1" chance="0.3003003003003" /> <!-- Cokes -->
 				<!-- Also drops herbs. -->
 				<item id="8600" min="1" max="1" chance="10" /> <!-- Herb of Life -->
 				<item id="8601" min="1" max="1" chance="8" /> <!-- Major Herb of Life -->
@@ -2157,7 +2212,7 @@
 				<item id="13028" min="1" max="1" chance="0.1" /> <!-- Vitality Replenishing Herb -->
 			</drop>
 			<spoil>
-				<item id="36561" min="1" max="1" chance="0.3" /> <!-- Cokes -->
+				<item id="36561" min="1" max="1" chance="0.75187969924812" /> <!-- Cokes -->
 			</spoil>
 			<lucky>
 				<item id="39629" min="1" max="1" chance="100" /> <!-- Fortune Pocket - Stage 1 -->
@@ -2169,7 +2224,6 @@
 		</collision>
 	</npc>
 	<npc id="20469" level="8" type="Monster" name="Kaboo Orc Archer">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="104" />
 			<param name="MoveAroundSocial1" value="104" />
@@ -2210,9 +2264,9 @@
 		</ai>
 		<dropLists>
 			<drop>
-				<item id="57" min="2" max="5" chance="70" /> <!-- Adena -->
-				<item id="1833" min="1" max="1" chance="4.516" /> <!-- Bandage -->
-				<item id="36561" min="1" max="1" chance="0.3" /> <!-- Cokes -->
+				<item id="57" min="3" max="3" chance="70" /> <!-- Adena -->
+				<item id="1833" min="1" max="1" chance="5" /> <!-- Bandage -->
+				<item id="36561" min="1" max="1" chance="0.3003003003003" /> <!-- Cokes -->
 				<!-- Also drops herbs. -->
 				<item id="8600" min="1" max="1" chance="10" /> <!-- Herb of Life -->
 				<item id="8601" min="1" max="1" chance="8" /> <!-- Major Herb of Life -->
@@ -2225,7 +2279,7 @@
 				<item id="13028" min="1" max="1" chance="0.1" /> <!-- Vitality Replenishing Herb -->
 			</drop>
 			<spoil>
-				<item id="36531" min="1" max="1" chance="2.38" /> <!-- Thread -->
+				<item id="36531" min="1" max="1" chance="2.5" /> <!-- Thread -->
 			</spoil>
 			<lucky>
 				<item id="39629" min="1" max="1" chance="100" /> <!-- Fortune Pocket - Stage 1 -->
@@ -2237,7 +2291,6 @@
 		</collision>
 	</npc>
 	<npc id="20470" level="7" type="Monster" name="Kaboo Orc Soldier">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="138" />
 			<param name="MoveAroundSocial1" value="138" />
@@ -2278,6 +2331,11 @@
 		</ai>
 		<dropLists>
 			<drop>
+				<item id="57" min="2" max="3" chance="70" /> <!-- Adena -->
+				<item id="1060" min="1" max="1" chance="2" /> <!-- Healing Potion -->
+				<item id="735" min="1" max="1" chance="0.1" /> <!-- Haste Potion -->
+				<item id="36561" min="1" max="1" chance="0.0750187546886722" /> <!-- Cokes -->
+				<!-- Also drops herbs. -->
 				<item id="8600" min="1" max="1" chance="10" /> <!-- Herb of Life -->
 				<item id="8601" min="1" max="1" chance="8" /> <!-- Major Herb of Life -->
 				<item id="8602" min="1" max="1" chance="2" /> <!-- Superior Herb of Life -->
@@ -2288,6 +2346,9 @@
 				<item id="34850" min="1" max="1" chance="0.7" /> <!-- Mysterious Herb of Magic -->
 				<item id="13028" min="1" max="1" chance="0.1" /> <!-- Vitality Replenishing Herb -->
 			</drop>
+			<spoil>
+				<item id="36561" min="1" max="1" chance="0.3003003003003" /> <!-- Cokes -->
+			</spoil>
 		</dropLists>
 		<collision>
 			<radius normal="10" />
@@ -2295,7 +2356,6 @@
 		</collision>
 	</npc>
 	<npc id="20471" level="10" type="Monster" name="Kaboo Orc Warrior">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="75" />
 			<param name="MoveAroundSocial1" value="75" />
@@ -2336,6 +2396,9 @@
 		</ai>
 		<dropLists>
 			<drop>
+				<item id="57" min="6" max="6" chance="70" /> <!-- Adena -->
+				<item id="36516" min="1" max="1" chance="0.5" /> <!-- Worn Leather -->
+				<!-- Also drops herbs. -->
 				<item id="8600" min="1" max="1" chance="10" /> <!-- Herb of Life -->
 				<item id="8601" min="1" max="1" chance="8" /> <!-- Major Herb of Life -->
 				<item id="8602" min="1" max="1" chance="2" /> <!-- Superior Herb of Life -->
@@ -2346,6 +2409,9 @@
 				<item id="34850" min="1" max="1" chance="0.7" /> <!-- Mysterious Herb of Magic -->
 				<item id="13028" min="1" max="1" chance="0.1" /> <!-- Vitality Replenishing Herb -->
 			</drop>
+			<spoil>
+				<item id="36531" min="1" max="1" chance="4" /> <!-- Thread -->
+			</spoil>
 		</dropLists>
 		<collision>
 			<radius normal="12" grown="14" />
@@ -2353,7 +2419,6 @@
 		</collision>
 	</npc>
 	<npc id="20472" level="12" type="Monster" name="Kaboo Orc Warrior Captain">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="75" />
 			<param name="MoveAroundSocial1" value="75" />
@@ -2395,7 +2460,7 @@
 		<dropLists>
 			<drop>
 				<item id="57" min="4" max="9" chance="70" /> <!-- Adena -->
-				<item id="36521" min="1" max="1" chance="4.346" /> <!-- Iron Ore -->
+				<item id="36521" min="1" max="1" chance="4" /> <!-- Iron Ore -->
 				<!-- Also drops herbs. -->
 				<item id="8600" min="1" max="1" chance="10" /> <!-- Herb of Life -->
 				<item id="8601" min="1" max="1" chance="8" /> <!-- Major Herb of Life -->
@@ -2408,7 +2473,7 @@
 				<item id="13028" min="1" max="1" chance="0.1" /> <!-- Vitality Replenishing Herb -->
 			</drop>
 			<spoil>
-				<item id="36531" min="1" max="1" chance="3.985" /> <!-- Thread -->
+				<item id="36531" min="1" max="1" chance="4" /> <!-- Thread -->
 			</spoil>
 			<lucky>
 				<item id="39629" min="1" max="1" chance="100" /> <!-- Fortune Pocket - Stage 1 -->
@@ -2420,7 +2485,6 @@
 		</collision>
 	</npc>
 	<npc id="20473" level="11" type="Monster" name="Kaboo Orc Warrior Lieutenant">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="75" />
 			<param name="MoveAroundSocial1" value="75" />
@@ -2461,8 +2525,8 @@
 		</ai>
 		<dropLists>
 			<drop>
-				<item id="57" min="3" max="8" chance="70" /> <!-- Adena -->
-				<item id="1831" min="1" max="1" chance="14.63" /> <!-- Antidote -->
+				<item id="57" min="3" max="7" chance="70" /> <!-- Adena -->
+				<item id="1831" min="1" max="1" chance="15" /> <!-- Antidote -->
 				<!-- Also drops herbs. -->
 				<item id="8600" min="1" max="1" chance="10" /> <!-- Herb of Life -->
 				<item id="8601" min="1" max="1" chance="8" /> <!-- Major Herb of Life -->
@@ -2475,7 +2539,7 @@
 				<item id="13028" min="1" max="1" chance="0.1" /> <!-- Vitality Replenishing Herb -->
 			</drop>
 			<spoil>
-				<item id="36531" min="1" max="1" chance="3.73" /> <!-- Thread -->
+				<item id="36531" min="1" max="1" chance="4" /> <!-- Thread -->
 			</spoil>
 			<lucky>
 				<item id="39629" min="1" max="1" chance="100" /> <!-- Fortune Pocket - Stage 1 -->
@@ -2487,7 +2551,6 @@
 		</collision>
 	</npc>
 	<npc id="20474" level="15" type="Monster" name="Kasha Spider">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="0" />
 			<param name="MoveAroundSocial1" value="0" />
@@ -2527,6 +2590,9 @@
 		</ai>
 		<dropLists>
 			<drop>
+				<item id="57" min="4" max="9" chance="70" /> <!-- Adena -->
+				<item id="39" min="1" max="1" chance="0.75187969924812" /> <!-- Boots -->
+				<!-- Also drops herbs. -->
 				<item id="8600" min="1" max="1" chance="10" /> <!-- Herb of Life -->
 				<item id="8601" min="1" max="1" chance="8" /> <!-- Major Herb of Life -->
 				<item id="8602" min="1" max="1" chance="2" /> <!-- Superior Herb of Life -->
@@ -2537,6 +2603,9 @@
 				<item id="34850" min="1" max="1" chance="0.7" /> <!-- Mysterious Herb of Magic -->
 				<item id="13028" min="1" max="1" chance="0.1" /> <!-- Vitality Replenishing Herb -->
 			</drop>
+			<spoil>
+				<item id="36531" min="1" max="1" chance="4" /> <!-- Thread -->
+			</spoil>
 		</dropLists>
 		<collision>
 			<radius normal="26" />
@@ -2544,7 +2613,6 @@
 		</collision>
 	</npc>
 	<npc id="20475" level="4" type="Monster" name="Kasha Wolf">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="60" />
 			<param name="MoveAroundSocial1" value="60" />
@@ -2580,6 +2648,10 @@
 		<ai clanHelpRange="300" aggroRange="450" />
 		<dropLists>
 			<drop>
+				<item id="57" min="1" max="2" chance="70" /> <!-- Adena -->
+				<item id="36556" min="1" max="1" chance="0.3003003003003" /> <!-- Accessory Gem (Low-grade) -->
+				<item id="36546" min="1" max="1" chance="0.0750187546886722" /> <!-- Weapon Fragment (Low-grade) -->
+				<!-- Also drops herbs. -->
 				<item id="8600" min="1" max="1" chance="10" /> <!-- Herb of Life -->
 				<item id="8601" min="1" max="1" chance="8" /> <!-- Major Herb of Life -->
 				<item id="8602" min="1" max="1" chance="2" /> <!-- Superior Herb of Life -->
@@ -2590,6 +2662,9 @@
 				<item id="34850" min="1" max="1" chance="0.7" /> <!-- Mysterious Herb of Magic -->
 				<item id="13028" min="1" max="1" chance="0.1" /> <!-- Vitality Replenishing Herb -->
 			</drop>
+			<spoil>
+				<item id="36531" min="1" max="1" chance="1" /> <!-- Thread -->
+			</spoil>
 		</dropLists>
 		<collision>
 			<radius normal="13" />
@@ -2597,7 +2672,6 @@
 		</collision>
 	</npc>
 	<npc id="20476" level="16" type="Monster" name="Kasha Fang Spider">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="0" />
 			<param name="MoveAroundSocial1" value="0" />
@@ -2638,6 +2712,9 @@
 		</ai>
 		<dropLists>
 			<drop>
+				<item id="57" min="4" max="9" chance="70" /> <!-- Adena -->
+				<item id="39" min="1" max="1" chance="0.75187969924812" /> <!-- Boots -->
+				<!-- Also drops herbs. -->
 				<item id="8600" min="1" max="1" chance="10" /> <!-- Herb of Life -->
 				<item id="8601" min="1" max="1" chance="8" /> <!-- Major Herb of Life -->
 				<item id="8602" min="1" max="1" chance="2" /> <!-- Superior Herb of Life -->
@@ -2648,6 +2725,9 @@
 				<item id="34850" min="1" max="1" chance="0.7" /> <!-- Mysterious Herb of Magic -->
 				<item id="13028" min="1" max="1" chance="0.1" /> <!-- Vitality Replenishing Herb -->
 			</drop>
+			<spoil>
+				<item id="36531" min="1" max="1" chance="4" /> <!-- Thread -->
+			</spoil>
 		</dropLists>
 		<collision>
 			<radius normal="26" />
@@ -2655,7 +2735,6 @@
 		</collision>
 	</npc>
 	<npc id="20477" level="6" type="Monster" name="Kasha Timber Wolf">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="60" />
 			<param name="MoveAroundSocial1" value="60" />
@@ -2691,6 +2770,10 @@
 		<ai clanHelpRange="300" aggroRange="450" />
 		<dropLists>
 			<drop>
+				<item id="57" min="1" max="2" chance="70" /> <!-- Adena -->
+				<item id="36561" min="1" max="1" chance="0.0750187546886722" /> <!-- Cokes -->
+				<item id="36551" min="1" max="1" chance="0.0750187546886722" /> <!-- Armor Fragment (Low-grade) -->
+				<!-- Also drops herbs. -->
 				<item id="8600" min="1" max="1" chance="10" /> <!-- Herb of Life -->
 				<item id="8601" min="1" max="1" chance="8" /> <!-- Major Herb of Life -->
 				<item id="8602" min="1" max="1" chance="2" /> <!-- Superior Herb of Life -->
@@ -2701,6 +2784,9 @@
 				<item id="34850" min="1" max="1" chance="0.7" /> <!-- Mysterious Herb of Magic -->
 				<item id="13028" min="1" max="1" chance="0.1" /> <!-- Vitality Replenishing Herb -->
 			</drop>
+			<spoil>
+				<item id="36531" min="1" max="1" chance="1.5" /> <!-- Thread -->
+			</spoil>
 		</dropLists>
 		<collision>
 			<radius normal="13" />
@@ -2708,7 +2794,6 @@
 		</collision>
 	</npc>
 	<npc id="20478" level="17" type="Monster" name="Kasha Blade Spider">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="0" />
 			<param name="MoveAroundSocial1" value="0" />
@@ -2751,6 +2836,11 @@
 		</ai>
 		<dropLists>
 			<drop>
+				<item id="57" min="4" max="10" chance="70" /> <!-- Adena -->
+				<item id="1831" min="1" max="1" chance="2" /> <!-- Antidote -->
+				<item id="39" min="1" max="1" chance="0.75187969924812" /> <!-- Boots -->
+				<item id="735" min="1" max="1" chance="0.1" /> <!-- Haste Potion -->
+				<!-- Also drops herbs. -->
 				<item id="8600" min="1" max="1" chance="10" /> <!-- Herb of Life -->
 				<item id="8601" min="1" max="1" chance="8" /> <!-- Major Herb of Life -->
 				<item id="8602" min="1" max="1" chance="2" /> <!-- Superior Herb of Life -->
@@ -2761,6 +2851,9 @@
 				<item id="34850" min="1" max="1" chance="0.7" /> <!-- Mysterious Herb of Magic -->
 				<item id="13028" min="1" max="1" chance="0.1" /> <!-- Vitality Replenishing Herb -->
 			</drop>
+			<spoil>
+				<item id="36531" min="1" max="1" chance="5" /> <!-- Thread -->
+			</spoil>
 		</dropLists>
 		<collision>
 			<radius normal="26" />
@@ -2768,7 +2861,6 @@
 		</collision>
 	</npc>
 	<npc id="20479" level="15" type="Monster" name="Kasha Bear">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="100" />
 			<param name="MoveAroundSocial1" value="100" />
@@ -2804,6 +2896,10 @@
 		<ai aggroRange="450" clanHelpRange="300" isAggressive="true" />
 		<dropLists>
 			<drop>
+				<item id="57" min="4" max="9" chance="70" /> <!-- Adena -->
+				<item id="1833" min="1" max="1" chance="3" /> <!-- Bandage -->
+				<item id="44" min="1" max="1" chance="0.75187969924812" /> <!-- Leather Helmet -->
+				<!-- Also drops herbs. -->
 				<item id="8600" min="1" max="1" chance="10" /> <!-- Herb of Life -->
 				<item id="8601" min="1" max="1" chance="8" /> <!-- Major Herb of Life -->
 				<item id="8602" min="1" max="1" chance="2" /> <!-- Superior Herb of Life -->
@@ -2814,6 +2910,9 @@
 				<item id="34850" min="1" max="1" chance="0.7" /> <!-- Mysterious Herb of Magic -->
 				<item id="13028" min="1" max="1" chance="0.1" /> <!-- Vitality Replenishing Herb -->
 			</drop>
+			<spoil>
+				<item id="36531" min="1" max="1" chance="4" /> <!-- Thread -->
+			</spoil>
 		</dropLists>
 		<collision>
 			<radius normal="21" />
@@ -2821,7 +2920,6 @@
 		</collision>
 	</npc>
 	<npc id="20480" level="10" type="Monster" name="Blade Bat">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="0" />
 			<param name="MoveAroundSocial1" value="0" />
@@ -2865,7 +2963,7 @@
 		<dropLists>
 			<drop>
 				<item id="57" min="3" max="7" chance="70" /> <!-- Adena -->
-				<item id="36561" min="1" max="1" chance="0.3" /> <!-- Cokes -->
+				<item id="36561" min="1" max="1" chance="0.3003003003003" /> <!-- Cokes -->
 				<!-- Also drops herbs. -->
 				<item id="8600" min="1" max="1" chance="10" /> <!-- Herb of Life -->
 				<item id="8601" min="1" max="1" chance="8" /> <!-- Major Herb of Life -->
@@ -2878,7 +2976,7 @@
 				<item id="13028" min="1" max="1" chance="0.1" /> <!-- Vitality Replenishing Herb -->
 			</drop>
 			<spoil>
-				<item id="36531" min="1" max="1" chance="3.281" /> <!-- Thread -->
+				<item id="36531" min="1" max="1" chance="4" /> <!-- Thread -->
 			</spoil>
 			<lucky>
 				<item id="39629" min="1" max="1" chance="100" /> <!-- Fortune Pocket - Stage 1 -->
@@ -2890,7 +2988,6 @@
 		</collision>
 	</npc>
 	<npc id="20483" level="17" type="Monster" name="Corpse Candle">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="0" />
 			<param name="MoveAroundSocial1" value="0" />
@@ -2934,10 +3031,20 @@
 		<dropLists>
 			<drop>
 				<item id="57" min="4" max="10" chance="70" /> <!-- Adena -->
-				<item id="36523" min="1" max="1" chance="0.03" /> <!-- Adamantite -->
+				<item id="36523" min="1" max="1" chance="0.03000300030003" /> <!-- Adamantite -->
+				<!-- Also drops herbs. -->
+				<item id="8600" min="1" max="1" chance="10" /> <!-- Herb of Life -->
+				<item id="8601" min="1" max="1" chance="8" /> <!-- Major Herb of Life -->
+				<item id="8602" min="1" max="1" chance="2" /> <!-- Superior Herb of Life -->
+				<item id="8603" min="1" max="1" chance="19.8" /> <!-- Herb of Mana -->
+				<item id="8604" min="1" max="1" chance="9.9" /> <!-- Major Herb of Mana -->
+				<item id="8605" min="1" max="1" chance="3.3" /> <!-- Superior Herb of Mana -->
+				<item id="34849" min="1" max="1" chance="0.7" /> <!-- Mysterious Herb of Power -->
+				<item id="34850" min="1" max="1" chance="0.7" /> <!-- Mysterious Herb of Magic -->
+				<item id="13028" min="1" max="1" chance="0.1" /> <!-- Vitality Replenishing Herb -->
 			</drop>
 			<spoil>
-				<item id="36523" min="1" max="1" chance="0.03" /> <!-- Adamantite -->
+				<item id="36523" min="1" max="1" chance="0.0750187546886722" /> <!-- Adamantite -->
 			</spoil>
 			<lucky>
 				<item id="39629" min="1" max="1" chance="100" /> <!-- Fortune Pocket - Stage 1 -->
@@ -2949,7 +3056,6 @@
 		</collision>
 	</npc>
 	<npc id="20490" level="40" type="Monster" name="Death Doll">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="0" />
 			<param name="MoveAroundSocial1" value="0" />
@@ -3003,7 +3109,6 @@
 		</collision>
 	</npc>
 	<npc id="20492" level="21" type="Monster" name="Kirunak's Escort">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="110" />
 			<param name="MoveAroundSocial1" value="110" />
@@ -3053,12 +3158,22 @@
 		</ai>
 		<dropLists>
 			<drop>
-				<item id="57" min="5" max="11" chance="70" /> <!-- Adena -->
-				<item id="36516" min="1" max="1" chance="7.451" /> <!-- Worn Leather -->
-				<item id="36561" min="1" max="1" chance="0.3" /> <!-- Cokes -->
+				<item id="57" min="6" max="11" chance="100" /> <!-- Adena -->
+				<item id="36516" min="1" max="1" chance="50" /> <!-- Worn Leather -->
+				<item id="36561" min="1" max="1" chance="0.3003003003003" /> <!-- Cokes -->
+				<!-- Also drops herbs. -->
+				<item id="8600" min="1" max="1" chance="10" /> <!-- Herb of Life -->
+				<item id="8601" min="1" max="1" chance="8" /> <!-- Major Herb of Life -->
+				<item id="8602" min="1" max="1" chance="2" /> <!-- Superior Herb of Life -->
+				<item id="8603" min="1" max="1" chance="19.8" /> <!-- Herb of Mana -->
+				<item id="8604" min="1" max="1" chance="9.9" /> <!-- Major Herb of Mana -->
+				<item id="8605" min="1" max="1" chance="3.3" /> <!-- Superior Herb of Mana -->
+				<item id="34849" min="1" max="1" chance="0.7" /> <!-- Mysterious Herb of Power -->
+				<item id="34850" min="1" max="1" chance="0.7" /> <!-- Mysterious Herb of Magic -->
+				<item id="13028" min="1" max="1" chance="0.1" /> <!-- Vitality Replenishing Herb -->
 			</drop>
 			<spoil>
-				<item id="36531" min="1" max="1" chance="5.295" /> <!-- Thread -->
+				<item id="36531" min="1" max="1" chance="5" /> <!-- Thread -->
 			</spoil>
 			<lucky>
 				<item id="39629" min="1" max="1" chance="100" /> <!-- Fortune Pocket - Stage 1 -->
@@ -3070,7 +3185,6 @@
 		</collision>
 	</npc>
 	<npc id="20494" level="31" type="Monster" name="Turek War Hound">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="60" />
 			<param name="MoveAroundSocial1" value="60" />
@@ -3117,9 +3231,9 @@
 		</ai>
 		<dropLists>
 			<drop>
-				<item id="40" min="1" max="1" chance="1.685" /> <!-- Leather Boots -->
-				<item id="57" min="21" max="49" chance="70" /> <!-- Adena -->
-				<item id="735" min="1" max="1" chance="0.75" /> <!-- Haste Potion -->
+				<item id="57" min="22" max="48" chance="70" /> <!-- Adena -->
+				<item id="40" min="1" max="1" chance="1" /> <!-- Leather Boots -->
+				<item id="735" min="1" max="1" chance="0.75187969924812" /> <!-- Haste Potion -->
 				<!-- Also drops herbs. -->
 				<item id="8600" min="1" max="1" chance="10" /> <!-- Herb of Life -->
 				<item id="8601" min="1" max="1" chance="8" /> <!-- Major Herb of Life -->
@@ -3132,7 +3246,7 @@
 				<item id="13028" min="1" max="1" chance="0.1" /> <!-- Vitality Replenishing Herb -->
 			</drop>
 			<spoil>
-				<item id="36532" min="1" max="1" chance="0.75" /> <!-- Thin Braid -->
+				<item id="36532" min="1" max="1" chance="1" /> <!-- Thin Braid -->
 			</spoil>
 			<lucky>
 				<item id="39629" min="1" max="1" chance="100" /> <!-- Fortune Pocket - Stage 1 -->
@@ -3144,7 +3258,6 @@
 		</collision>
 	</npc>
 	<npc id="20495" level="39" type="Monster" name="Turek Orc Prefect">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="70" />
 			<param name="MoveAroundSocial1" value="70" />
@@ -3194,8 +3307,8 @@
 		</ai>
 		<dropLists>
 			<drop>
-				<item id="45" min="1" max="1" chance="2.356" /> <!-- Bone Helmet -->
-				<item id="57" min="38" max="87" chance="70" /> <!-- Adena -->
+				<item id="57" min="42" max="85" chance="70" /> <!-- Adena -->
+				<item id="45" min="1" max="1" chance="1" /> <!-- Bone Helmet -->
 				<!-- Also drops herbs. -->
 				<item id="8600" min="1" max="1" chance="10" /> <!-- Herb of Life -->
 				<item id="8601" min="1" max="1" chance="8" /> <!-- Major Herb of Life -->
@@ -3208,7 +3321,7 @@
 				<item id="13028" min="1" max="1" chance="0.1" /> <!-- Vitality Replenishing Herb -->
 			</drop>
 			<spoil>
-				<item id="36532" min="1" max="1" chance="0.75" /> <!-- Thin Braid -->
+				<item id="36532" min="1" max="1" chance="1" /> <!-- Thin Braid -->
 			</spoil>
 			<lucky>
 				<item id="39629" min="1" max="1" chance="100" /> <!-- Fortune Pocket - Stage 1 -->
@@ -3220,7 +3333,6 @@
 		</collision>
 	</npc>
 	<npc id="20496" level="36" type="Monster" name="Turek Orc Archer">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="104" />
 			<param name="MoveAroundSocial1" value="104" />
@@ -3268,8 +3380,8 @@
 		</ai>
 		<dropLists>
 			<drop>
-				<item id="604" min="1" max="1" chance="2.862" /> <!-- Quality Leather Gloves -->
-				<item id="57" min="29" max="68" chance="70" /> <!-- Adena -->
+				<item id="57" min="31" max="68" chance="70" /> <!-- Adena -->
+				<item id="604" min="1" max="1" chance="2.5" /> <!-- Quality Leather Gloves -->
 				<!-- Also drops herbs. -->
 				<item id="8600" min="1" max="1" chance="10" /> <!-- Herb of Life -->
 				<item id="8601" min="1" max="1" chance="8" /> <!-- Major Herb of Life -->
@@ -3282,7 +3394,7 @@
 				<item id="13028" min="1" max="1" chance="0.1" /> <!-- Vitality Replenishing Herb -->
 			</drop>
 			<spoil>
-				<item id="36532" min="1" max="1" chance="0.75" /> <!-- Thin Braid -->
+				<item id="36532" min="1" max="1" chance="1" /> <!-- Thin Braid -->
 			</spoil>
 			<lucky>
 				<item id="39629" min="1" max="1" chance="100" /> <!-- Fortune Pocket - Stage 1 -->
@@ -3294,7 +3406,6 @@
 		</collision>
 	</npc>
 	<npc id="20497" level="37" type="Monster" name="Turek Orc Skirmisher">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="75" />
 			<param name="MoveAroundSocial1" value="75" />
@@ -3342,8 +3453,8 @@
 		</ai>
 		<dropLists>
 			<drop>
-				<item id="123" min="1" max="1" chance="0.3" /> <!-- Saber -->
 				<item id="57" min="30" max="70" chance="70" /> <!-- Adena -->
+				<item id="123" min="1" max="1" chance="0.0750187546886722" /> <!-- Saber -->
 				<!-- Also drops herbs. -->
 				<item id="8600" min="1" max="1" chance="10" /> <!-- Herb of Life -->
 				<item id="8601" min="1" max="1" chance="8" /> <!-- Major Herb of Life -->
@@ -3356,7 +3467,7 @@
 				<item id="13028" min="1" max="1" chance="0.1" /> <!-- Vitality Replenishing Herb -->
 			</drop>
 			<spoil>
-				<item id="36532" min="1" max="1" chance="0.75" /> <!-- Thin Braid -->
+				<item id="36532" min="1" max="1" chance="1" /> <!-- Thin Braid -->
 			</spoil>
 			<lucky>
 				<item id="39629" min="1" max="1" chance="100" /> <!-- Fortune Pocket - Stage 1 -->
@@ -3368,7 +3479,6 @@
 		</collision>
 	</npc>
 	<npc id="20498" level="34" type="Monster" name="Turek Orc Supplier">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="75" />
 			<param name="MoveAroundSocial1" value="75" />
@@ -3416,8 +3526,8 @@
 		</ai>
 		<dropLists>
 			<drop>
-				<item id="221" min="1" max="1" chance="0.3" /> <!-- Assassin Knife -->
-				<item id="57" min="25" max="58" chance="70" /> <!-- Adena -->
+				<item id="57" min="26" max="58" chance="70" /> <!-- Adena -->
+				<item id="221" min="1" max="1" chance="0.3003003003003" /> <!-- Assassin Knife -->
 				<!-- Also drops herbs. -->
 				<item id="8600" min="1" max="1" chance="10" /> <!-- Herb of Life -->
 				<item id="8601" min="1" max="1" chance="8" /> <!-- Major Herb of Life -->
@@ -3430,7 +3540,7 @@
 				<item id="13028" min="1" max="1" chance="0.1" /> <!-- Vitality Replenishing Herb -->
 			</drop>
 			<spoil>
-				<item id="36532" min="1" max="1" chance="0.75" /> <!-- Thin Braid -->
+				<item id="36532" min="1" max="1" chance="1" /> <!-- Thin Braid -->
 			</spoil>
 			<lucky>
 				<item id="39629" min="1" max="1" chance="100" /> <!-- Fortune Pocket - Stage 1 -->
@@ -3442,7 +3552,6 @@
 		</collision>
 	</npc>
 	<npc id="20499" level="32" type="Monster" name="Turek Orc Footman">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="138" />
 			<param name="MoveAroundSocial1" value="138" />
@@ -3490,8 +3599,8 @@
 		</ai>
 		<dropLists>
 			<drop>
-				<item id="291" min="1" max="1" chance="0.3" /> <!-- Trident -->
 				<item id="57" min="22" max="52" chance="70" /> <!-- Adena -->
+				<item id="291" min="1" max="1" chance="0.4" /> <!-- Trident -->
 				<!-- Also drops herbs. -->
 				<item id="8600" min="1" max="1" chance="10" /> <!-- Herb of Life -->
 				<item id="8601" min="1" max="1" chance="8" /> <!-- Major Herb of Life -->
@@ -3504,7 +3613,7 @@
 				<item id="13028" min="1" max="1" chance="0.1" /> <!-- Vitality Replenishing Herb -->
 			</drop>
 			<spoil>
-				<item id="36532" min="1" max="1" chance="0.75" /> <!-- Thin Braid -->
+				<item id="36532" min="1" max="1" chance="1" /> <!-- Thin Braid -->
 			</spoil>
 			<lucky>
 				<item id="39629" min="1" max="1" chance="100" /> <!-- Fortune Pocket - Stage 1 -->

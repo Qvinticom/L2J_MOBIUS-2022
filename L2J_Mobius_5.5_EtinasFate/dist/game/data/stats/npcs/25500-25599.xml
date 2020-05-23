@@ -36,7 +36,6 @@
 		</collision>
 	</npc>
 	<npc id="25501" level="30" type="RaidBoss" name="Grave Robber Leader Akata" title="Raid Boss">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<minions name="Privates">
 				<npc id="25502" count="3" respawnTime="360" weightPoint="1" />
@@ -186,7 +185,6 @@
 		</collision>
 	</npc>
 	<npc id="25504" level="39" type="RaidBoss" name="Nellis' Vengeful Spirit" title="Raid Boss">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<minions name="Privates">
 				<npc id="25505" count="3" respawnTime="360" weightPoint="1" />
@@ -309,7 +307,6 @@
 		</collision>
 	</npc>
 	<npc id="25506" level="37" type="RaidBoss" name="Rayito the Looter" title="Raid Boss">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<minions name="Privates">
 				<npc id="25507" count="1" respawnTime="360" weightPoint="1" />
@@ -461,7 +458,6 @@
 		</collision>
 	</npc>
 	<npc id="25509" level="82" type="Monster" name="Dark Shaman Varangka" title="Raid Boss">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<minions name="Privates">
 				<npc id="25511" count="4" respawnTime="360" weightPoint="1" />
@@ -608,7 +604,6 @@
 		</collision>
 	</npc>
 	<npc id="25512" level="52" type="RaidBoss" name="Gigantic Chaos Golem" title="Raid Boss">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="RaidSpawnMusic" value="Rm03_A" />
 			<skill name="SelfRangeCancel_a" id="4177" level="5" />
@@ -665,7 +660,6 @@
 		</collision>
 	</npc>
 	<npc id="25514" level="84" type="RaidBoss" name="Queen Shyeed" title="Raid Boss">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<minions name="Privates">
 				<npc id="25516" count="1" respawnTime="360" weightPoint="1" />
@@ -867,7 +861,6 @@
 		</dropLists>
 	</npc>
 	<npc id="25523" level="73" type="RaidBoss" name="Plague Golem" title="Raid Boss">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="RaidSpawnMusic" value="Rm01_A" />
 			<skill name="SelfRangeCancel_a" id="4177" level="7" />
@@ -954,7 +947,6 @@
 		</collision>
 	</npc>
 	<npc id="25524" level="76" type="RaidBoss" name="Flamestone Giant" title="Raid Boss">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<minions name="Privates">
 				<npc id="25525" count="2" respawnTime="360" weightPoint="1" />
@@ -1123,7 +1115,6 @@
 		</collision>
 	</npc>
 	<npc id="25527" level="80" type="RaidBoss" name="Uruka" title="Raid Boss">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="RaidSpawnMusic" value="Rm03_A" />
 			<skill name="SelfRangeCancel_a" id="4177" level="10" />
@@ -1211,7 +1202,6 @@
 		</collision>
 	</npc>
 	<npc id="25528" level="22" type="RaidBoss" name="Tiberias" title="Prime Inspector">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveArounding" value="0" />
 			<param name="Party_Type" value="2" />
@@ -1394,7 +1384,6 @@
 		</collision>
 	</npc>
 	<npc id="25531" level="81" type="RaidBoss" name="Darnel" title="Torture Maiden">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="InzoneRestriction" value="1" />
 			<skill name="SelfRangeDebuff_a" id="4182" level="9" />
@@ -1446,7 +1435,6 @@
 		</collision>
 	</npc>
 	<npc id="25532" level="99" type="RaidBoss" name="Kechi" title="Flaming">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="InzoneRestriction" value="1" />
 			<skill name="selfbuff1" id="5418" level="1" />
@@ -1648,7 +1636,6 @@
 		</collision>
 	</npc>
 	<npc id="25534" level="83" type="RaidBoss" name="Tears" title="Ice">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="InzoneRestriction" value="1" />
 			<skill name="W_LongRangeDDMagic" id="5238" level="1" />
@@ -1703,7 +1690,6 @@
 		</collision>
 	</npc>
 	<npc id="25535" level="83" type="Monster" name="Tears" title="Ice">
-		<!-- Confirmed CT2.5 -->
 		<race>ELEMENTAL</race>
 		<sex>FEMALE</sex>
 		<equipment rhand="9638" lhand="9638" /> <!-- Tears r1 / Tears r1 -->
@@ -1747,7 +1733,6 @@
 		</collision>
 	</npc>
 	<npc id="25536" level="81" type="RaidBoss" name="Hannibal" title="Raid Boss">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<minions name="Privates">
 				<npc id="25537" count="1" respawnTime="60" weightPoint="1" />
@@ -1890,7 +1875,6 @@
 		</collision>
 	</npc>
 	<npc id="25539" level="101" type="RaidBoss" name="Typhoon" title="Raid Boss">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="IsAggressive" value="1" />
 			<param name="Aggressive_Time" value="0" />
@@ -2009,7 +1993,6 @@
 		</dropLists>
 	</npc>
 	<npc id="25540" level="83" type="RaidBoss" name="Demon Prince" title="Raid Boss">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="IsAggressive" value="1" />
 			<param name="Aggressive_Time" value="5" />
@@ -2136,7 +2119,6 @@
 		</collision>
 	</npc>
 	<npc id="25542" level="83" type="RaidBoss" name="Ranku" title="Raid Boss">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="IsAggressive" value="1" />
 			<param name="Aggressive_Time" value="5" />
@@ -2268,7 +2250,6 @@
 		</collision>
 	</npc>
 	<npc id="25544" level="83" type="RaidBoss" name="Tully" title="Steel Citadel">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="IsAggressive" value="1" />
 			<param name="Aggressive_Time" value="5" />
@@ -2375,7 +2356,6 @@
 		</collision>
 	</npc>
 	<npc id="25546" level="95" type="RaidBoss" name="Betrayed Rhianna" title="Forsaken Prisoner">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<minions name="Privates">
 				<npc id="25547" count="2" respawnTime="360" weightPoint="1" />
@@ -2514,7 +2494,6 @@
 		</collision>
 	</npc>
 	<npc id="25549" level="95" type="RaidBoss" name="Tesla the Deceiver" title="Forsaken Prisoner">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<minions name="Privates">
 				<npc id="25550" count="3" respawnTime="360" weightPoint="1" />
@@ -2657,7 +2636,6 @@
 		</collision>
 	</npc>
 	<npc id="25552" level="95" type="RaidBoss" name="Soul Hunter Chakundel" title="Forsaken Prisoner">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="RaidSpawnMusic" value="Rm01_A" />
 			<param name="CouldDespawn" value="1" />
@@ -2716,7 +2694,6 @@
 		</collision>
 	</npc>
 	<npc id="25553" level="97" type="RaidBoss" name="Durango the Crusher" title="Forsaken Prisoner">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="RaidSpawnMusic" value="Rm03_A" />
 			<param name="doSummonNPC" value="1" />
@@ -2776,7 +2753,6 @@
 		</collision>
 	</npc>
 	<npc id="25554" level="97" type="RaidBoss" name="Brutus the Obstinate" title="Forsaken Prisoner">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<minions name="Privates">
 				<npc id="25555" count="1" respawnTime="360" weightPoint="1" />
@@ -2933,7 +2909,6 @@
 		</collision>
 	</npc>
 	<npc id="25557" level="97" type="RaidBoss" name="Ranger Karankawa" title="Forsaken Prisoner">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<minions name="Privates">
 				<npc id="25558" count="3" respawnTime="360" weightPoint="1" />
@@ -3087,7 +3062,6 @@
 		</collision>
 	</npc>
 	<npc id="25560" level="97" type="RaidBoss" name="Sargon the Mad" title="Forsaken Prisoner">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<minions name="Privates">
 				<npc id="25561" count="2" respawnTime="360" weightPoint="1" />
@@ -3243,7 +3217,6 @@
 		</collision>
 	</npc>
 	<npc id="25563" level="99" type="RaidBoss" name="Beautiful Atrielle" title="Forsaken Prisoner">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<minions name="Privates">
 				<npc id="25564" count="1" respawnTime="360" weightPoint="1" />
@@ -3414,7 +3387,6 @@
 		</collision>
 	</npc>
 	<npc id="25566" level="99" type="RaidBoss" name="Nagen the Tomboy" title="Forsaken Prisoner">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<minions name="Privates">
 				<npc id="25567" count="3" respawnTime="360" weightPoint="1" />
@@ -3592,7 +3564,6 @@
 		</collision>
 	</npc>
 	<npc id="25569" level="99" type="RaidBoss" name="Jax the Destroyer" title="Forsaken Prisoner">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<minions name="Privates">
 				<npc id="25570" count="3" respawnTime="360" weightPoint="1" />
@@ -3760,7 +3731,6 @@
 		</collision>
 	</npc>
 	<npc id="25572" level="93" type="RaidBoss" name="Hager the Outlaw" title="Forsaken Inmate">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<minions name="Privates">
 				<npc id="25573" count="2" respawnTime="360" weightPoint="1" />
@@ -3911,7 +3881,6 @@
 		</collision>
 	</npc>
 	<npc id="25575" level="93" type="RaidBoss" name="All-seeing Rango" title="Forsaken Inmate">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<minions name="Privates">
 				<npc id="25576" count="4" respawnTime="360" weightPoint="1" />
@@ -4062,7 +4031,6 @@
 		</collision>
 	</npc>
 	<npc id="25578" level="93" type="RaidBoss" name="Jakard" title="Forsaken Inmate">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="RaidSpawnMusic" value="Rm03_A" />
 			<param name="CouldDespawn" value="1" />
@@ -4121,7 +4089,6 @@
 		</collision>
 	</npc>
 	<npc id="25579" level="94" type="RaidBoss" name="Helsing" title="Forsaken Inmate">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<minions name="Privates">
 				<npc id="25580" count="4" respawnTime="360" weightPoint="1" />
@@ -4275,7 +4242,6 @@
 		</collision>
 	</npc>
 	<npc id="25582" level="95" type="RaidBoss" name="Gillien" title="Forsaken Inmate">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<minions name="Privates">
 				<npc id="25583" count="2" respawnTime="360" weightPoint="1" />
@@ -4427,7 +4393,6 @@
 		</collision>
 	</npc>
 	<npc id="25585" level="96" type="RaidBoss" name="Medici" title="Forsaken Inmate">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<minions name="Privates">
 				<npc id="25586" count="3" respawnTime="360" weightPoint="1" />
@@ -4580,7 +4545,6 @@
 		</collision>
 	</npc>
 	<npc id="25588" level="96" type="RaidBoss" name="Immortal Muus" title="Forsaken Inmate">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="RaidSpawnMusic" value="Rm02_A" />
 			<param name="CouldDespawn" value="1" />
@@ -4640,7 +4604,6 @@
 		</collision>
 	</npc>
 	<npc id="25589" level="97" type="RaidBoss" name="Brand the Exile" title="Forsaken Inmate">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<minions name="Privates">
 				<npc id="25590" count="1" respawnTime="360" weightPoint="1" />
@@ -4811,7 +4774,6 @@
 		</collision>
 	</npc>
 	<npc id="25592" level="98" type="RaidBoss" name="Commander Koenig" title="Forsaken Inmate">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="RaidSpawnMusic" value="Rm01_A" />
 			<param name="CouldDespawn" value="1" />
@@ -4886,7 +4848,6 @@
 		</collision>
 	</npc>
 	<npc id="25593" level="99" type="RaidBoss" name="Gerg the Hunter" title="Forsaken Inmate">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<minions name="Privates">
 				<npc id="25594" count="3" respawnTime="360" weightPoint="1" />

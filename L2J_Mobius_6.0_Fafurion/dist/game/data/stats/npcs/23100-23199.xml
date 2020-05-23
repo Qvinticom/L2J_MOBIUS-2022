@@ -1,7 +1,6 @@
 ﻿<?xml version="1.0" encoding="UTF-8"?>
 <list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../xsd/npcs.xsd">
 	<npc id="23100" level="39" type="Monster" name="Ant Warrior Captain">
-		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<parameters>
 			<param name="MoveAroundSocial" value="100" />
 			<param name="MoveAroundSocial1" value="100" />
@@ -62,7 +61,6 @@
 		</dropLists>
 	</npc>
 	<npc id="23101" level="61" type="Monster" name="Slaughter Bathin">
-		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<parameters>
 			<param name="MoveAroundSocial" value="74" />
 			<param name="MoveAroundSocial1" value="74" />
@@ -114,7 +112,6 @@
 		</dropLists>
 	</npc>
 	<npc id="23102" level="62" type="Monster" name="Bathin's Knight">
-		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<parameters>
 			<param name="MoveAroundSocial" value="215" />
 			<param name="MoveAroundSocial1" value="215" />
@@ -169,7 +166,6 @@
 		</dropLists>
 	</npc>
 	<npc id="23103" level="62" type="Monster" name="Bathin's Wizard">
-		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<parameters>
 			<param name="MoveAroundSocial" value="0" />
 			<param name="MoveAroundSocial1" value="0" />
@@ -227,7 +223,6 @@
 		</dropLists>
 	</npc>
 	<npc id="23104" level="65" type="Monster" name="Elmoreden's Lady">
-		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<parameters>
 			<param name="MoveAroundSocial" value="0" />
 			<param name="MoveAroundSocial1" value="0" />
@@ -278,7 +273,6 @@
 		</dropLists>
 	</npc>
 	<npc id="23105" level="64" type="Monster" name="Elmoreden's Archer">
-		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<parameters>
 			<param name="MoveAroundSocial" value="157" />
 			<param name="MoveAroundSocial1" value="157" />
@@ -328,7 +322,6 @@
 		</dropLists>
 	</npc>
 	<npc id="23106" level="64" type="Monster" name="Elmoreden's Maid">
-		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<parameters>
 			<param name="MoveAroundSocial" value="50" />
 			<param name="MoveAroundSocial1" value="50" />
@@ -378,7 +371,6 @@
 		</dropLists>
 	</npc>
 	<npc id="23107" level="64" type="Monster" name="Elmoreden's Warrior">
-		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<parameters>
 			<param name="MoveAroundSocial" value="215" />
 			<param name="MoveAroundSocial1" value="215" />
@@ -427,7 +419,6 @@
 		</dropLists>
 	</npc>
 	<npc id="23108" level="69" type="Monster" name="Binder">
-		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<parameters>
 			<param name="MoveAroundSocial" value="90" />
 			<param name="MoveAroundSocial1" value="74" />
@@ -478,7 +469,6 @@
 		</dropLists>
 	</npc>
 	<npc id="23109" level="68" type="Monster" name="Bound Warrior">
-		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<parameters>
 			<param name="MoveAroundSocial" value="110" />
 			<param name="MoveAroundSocial1" value="74" />
@@ -528,7 +518,6 @@
 		</dropLists>
 	</npc>
 	<npc id="23110" level="68" type="Monster" name="Bound Archer">
-		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<parameters>
 			<param name="MoveAroundSocial" value="80" />
 			<param name="MoveAroundSocial1" value="74" />
@@ -579,7 +568,6 @@
 		</dropLists>
 	</npc>
 	<npc id="23111" level="74" type="Monster" name="Heaven's Palace Seraphim">
-		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<parameters>
 			<param name="MoveAroundSocial" value="90" />
 			<param name="MoveAroundSocial1" value="98" />
@@ -629,7 +617,6 @@
 		</dropLists>
 	</npc>
 	<npc id="23112" level="73" type="Monster" name="Heaven's Palace Seraphim Escort">
-		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<parameters>
 			<param name="MoveAroundSocial" value="191" />
 			<param name="MoveAroundSocial1" value="191" />
@@ -676,7 +663,6 @@
 		</dropLists>
 	</npc>
 	<npc id="23113" level="10" type="Monster" name="Crawler" title="Husk">
-		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<parameters>
 			<param name="MoveAroundSocial" value="0" />
 			<param name="MoveAroundSocial1" value="100" />
@@ -707,9 +693,22 @@
 			<radius normal="6.5" />
 			<height normal="18.5" />
 		</collision>
+		<dropLists>
+			<drop>
+				<!-- Also drops herbs. -->
+				<item id="8600" min="1" max="1" chance="10" /> <!-- Herb of Life -->
+				<item id="8601" min="1" max="1" chance="8" /> <!-- Major Herb of Life -->
+				<item id="8602" min="1" max="1" chance="2" /> <!-- Superior Herb of Life -->
+				<item id="8603" min="1" max="1" chance="19.8" /> <!-- Herb of Mana -->
+				<item id="8604" min="1" max="1" chance="9.9" /> <!-- Major Herb of Mana -->
+				<item id="8605" min="1" max="1" chance="3.3" /> <!-- Superior Herb of Mana -->
+				<item id="34849" min="1" max="1" chance="0.7" /> <!-- Mysterious Herb of Power -->
+				<item id="34850" min="1" max="1" chance="0.7" /> <!-- Mysterious Herb of Magic -->
+				<item id="13028" min="1" max="1" chance="0.1" /> <!-- Vitality Replenishing Herb -->
+			</drop>
+		</dropLists>
 	</npc>
 	<npc id="23114" level="8" type="Monster" name="Stalker" title="Husk">
-		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<parameters>
 			<param name="MoveAroundSocial" value="0" />
 			<param name="MoveAroundSocial1" value="100" />
@@ -741,9 +740,22 @@
 			<radius normal="9.4" />
 			<height normal="20" />
 		</collision>
+		<dropLists>
+			<drop>
+				<!-- Also drops herbs. -->
+				<item id="8600" min="1" max="1" chance="10" /> <!-- Herb of Life -->
+				<item id="8601" min="1" max="1" chance="8" /> <!-- Major Herb of Life -->
+				<item id="8602" min="1" max="1" chance="2" /> <!-- Superior Herb of Life -->
+				<item id="8603" min="1" max="1" chance="19.8" /> <!-- Herb of Mana -->
+				<item id="8604" min="1" max="1" chance="9.9" /> <!-- Major Herb of Mana -->
+				<item id="8605" min="1" max="1" chance="3.3" /> <!-- Superior Herb of Mana -->
+				<item id="34849" min="1" max="1" chance="0.7" /> <!-- Mysterious Herb of Power -->
+				<item id="34850" min="1" max="1" chance="0.7" /> <!-- Mysterious Herb of Magic -->
+				<item id="13028" min="1" max="1" chance="0.1" /> <!-- Vitality Replenishing Herb -->
+			</drop>
+		</dropLists>
 	</npc>
 	<npc id="23115" level="16" type="Monster" name="Critter" title="Husk">
-		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<parameters>
 			<param name="MoveAroundSocial" value="0" />
 			<param name="MoveAroundSocial1" value="100" />
@@ -774,9 +786,22 @@
 			<radius normal="14.5" />
 			<height normal="18" />
 		</collision>
+		<dropLists>
+			<drop>
+				<!-- Also drops herbs. -->
+				<item id="8600" min="1" max="1" chance="10" /> <!-- Herb of Life -->
+				<item id="8601" min="1" max="1" chance="8" /> <!-- Major Herb of Life -->
+				<item id="8602" min="1" max="1" chance="2" /> <!-- Superior Herb of Life -->
+				<item id="8603" min="1" max="1" chance="19.8" /> <!-- Herb of Mana -->
+				<item id="8604" min="1" max="1" chance="9.9" /> <!-- Major Herb of Mana -->
+				<item id="8605" min="1" max="1" chance="3.3" /> <!-- Superior Herb of Mana -->
+				<item id="34849" min="1" max="1" chance="0.7" /> <!-- Mysterious Herb of Power -->
+				<item id="34850" min="1" max="1" chance="0.7" /> <!-- Mysterious Herb of Magic -->
+				<item id="13028" min="1" max="1" chance="0.1" /> <!-- Vitality Replenishing Herb -->
+			</drop>
+		</dropLists>
 	</npc>
 	<npc id="23116" level="14" type="Monster" name="Avian" title="Husk">
-		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<parameters>
 			<param name="MoveAroundSocial" value="0" />
 			<param name="MoveAroundSocial1" value="100" />
@@ -807,9 +832,22 @@
 			<radius normal="11" />
 			<height normal="16.5" />
 		</collision>
+		<dropLists>
+			<drop>
+				<!-- Also drops herbs. -->
+				<item id="8600" min="1" max="1" chance="10" /> <!-- Herb of Life -->
+				<item id="8601" min="1" max="1" chance="8" /> <!-- Major Herb of Life -->
+				<item id="8602" min="1" max="1" chance="2" /> <!-- Superior Herb of Life -->
+				<item id="8603" min="1" max="1" chance="19.8" /> <!-- Herb of Mana -->
+				<item id="8604" min="1" max="1" chance="9.9" /> <!-- Major Herb of Mana -->
+				<item id="8605" min="1" max="1" chance="3.3" /> <!-- Superior Herb of Mana -->
+				<item id="34849" min="1" max="1" chance="0.7" /> <!-- Mysterious Herb of Power -->
+				<item id="34850" min="1" max="1" chance="0.7" /> <!-- Mysterious Herb of Magic -->
+				<item id="13028" min="1" max="1" chance="0.1" /> <!-- Vitality Replenishing Herb -->
+			</drop>
+		</dropLists>
 	</npc>
 	<npc id="23117" level="18" type="Monster" name="Rider" title="Husk">
-		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<parameters>
 			<param name="MoveAroundSocial" value="0" />
 			<param name="MoveAroundSocial1" value="100" />
@@ -841,9 +879,22 @@
 			<radius normal="31" />
 			<height normal="36.5" />
 		</collision>
+		<dropLists>
+			<drop>
+				<!-- Also drops herbs. -->
+				<item id="8600" min="1" max="1" chance="10" /> <!-- Herb of Life -->
+				<item id="8601" min="1" max="1" chance="8" /> <!-- Major Herb of Life -->
+				<item id="8602" min="1" max="1" chance="2" /> <!-- Superior Herb of Life -->
+				<item id="8603" min="1" max="1" chance="19.8" /> <!-- Herb of Mana -->
+				<item id="8604" min="1" max="1" chance="9.9" /> <!-- Major Herb of Mana -->
+				<item id="8605" min="1" max="1" chance="3.3" /> <!-- Superior Herb of Mana -->
+				<item id="34849" min="1" max="1" chance="0.7" /> <!-- Mysterious Herb of Power -->
+				<item id="34850" min="1" max="1" chance="0.7" /> <!-- Mysterious Herb of Magic -->
+				<item id="13028" min="1" max="1" chance="0.1" /> <!-- Vitality Replenishing Herb -->
+			</drop>
+		</dropLists>
 	</npc>
 	<npc id="23118" level="14" type="Monster" name="Krapher" title="Husk">
-		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<parameters>
 			<param name="MoveAroundSocial" value="0" />
 			<param name="MoveAroundSocial1" value="100" />
@@ -875,9 +926,22 @@
 			<radius normal="9" />
 			<height normal="22.5" />
 		</collision>
+		<dropLists>
+			<drop>
+				<!-- Also drops herbs. -->
+				<item id="8600" min="1" max="1" chance="10" /> <!-- Herb of Life -->
+				<item id="8601" min="1" max="1" chance="8" /> <!-- Major Herb of Life -->
+				<item id="8602" min="1" max="1" chance="2" /> <!-- Superior Herb of Life -->
+				<item id="8603" min="1" max="1" chance="19.8" /> <!-- Herb of Mana -->
+				<item id="8604" min="1" max="1" chance="9.9" /> <!-- Major Herb of Mana -->
+				<item id="8605" min="1" max="1" chance="3.3" /> <!-- Superior Herb of Mana -->
+				<item id="34849" min="1" max="1" chance="0.7" /> <!-- Mysterious Herb of Power -->
+				<item id="34850" min="1" max="1" chance="0.7" /> <!-- Mysterious Herb of Magic -->
+				<item id="13028" min="1" max="1" chance="0.1" /> <!-- Vitality Replenishing Herb -->
+			</drop>
+		</dropLists>
 	</npc>
 	<npc id="23119" level="18" type="Monster" name="Handyman" title="Embryo">
-		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<parameters>
 			<param name="MoveAroundSocial" value="0" />
 			<param name="MoveAroundSocial1" value="100" />
@@ -925,7 +989,6 @@
 		</collision>
 	</npc>
 	<npc id="23120" level="18" type="Monster" name="Operative" title="Embryo">
-		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<parameters>
 			<param name="MoveAroundSocial" value="0" />
 			<param name="MoveAroundSocial1" value="100" />
@@ -1068,7 +1131,6 @@
 		</dropLists>
 	</npc>
 	<npc id="23123" level="98" type="Monster" name="Isolation Room Warden">
-		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<parameters>
 			<param name="MoveAroundSocial" value="0" />
 			<param name="MoveAroundSocial1" value="0" />
@@ -1111,7 +1173,6 @@
 		</collision>
 	</npc>
 	<npc id="23124" level="97" type="Monster" name="Istina's Creation">
-		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<parameters>
 			<skill name="Skill01_ID" id="14231" level="1" />
 			<skill name="Skill02_ID" id="14232" level="1" />
@@ -1145,7 +1206,6 @@
 		</collision>
 	</npc>
 	<npc id="23125" level="97" type="Monster" name="Istina's Creation">
-		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<parameters>
 			<skill name="Skill01_ID" id="14231" level="1" />
 			<skill name="Skill02_ID" id="14232" level="1" />
@@ -1910,7 +1970,6 @@
 		</ai>
 	</npc>
 	<npc id="23143" level="99" type="Monster" name="Octavis' Gladiator">
-		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<parameters>
 			<param name="MoveAroundSocial" value="80" />
 			<param name="MoveAroundSocial1" value="80" />
@@ -1952,7 +2011,6 @@
 		</collision>
 	</npc>
 	<npc id="23144" level="99" type="Monster" name="Beast of the Arena">
-		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<parameters>
 			<param name="MoveAroundSocial" value="0" />
 			<param name="MoveAroundSocial1" value="100" />
@@ -1994,7 +2052,6 @@
 		</collision>
 	</npc>
 	<npc id="23145" level="97" type="Monster" name="Octavis' Gladiator">
-		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<parameters>
 			<param name="MoveAroundSocial" value="80" />
 			<param name="MoveAroundSocial1" value="80" />
@@ -2038,7 +2095,6 @@
 		</collision>
 	</npc>
 	<npc id="23146" level="97" type="Monster" name="Beast of the Arena">
-		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<parameters>
 			<param name="MoveAroundSocial" value="0" />
 			<param name="MoveAroundSocial1" value="100" />
@@ -2083,7 +2139,6 @@
 		</collision>
 	</npc>
 	<npc id="23147" level="95" type="Monster" name="Resurrected Creation">
-		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<parameters>
 			<param name="MoveAroundSocial" value="90" />
 			<param name="MoveAroundSocial1" value="90" />
@@ -2158,7 +2213,6 @@
 		</dropLists>
 	</npc>
 	<npc id="23148" level="95" type="Monster" name="Lunatic Creature">
-		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<parameters>
 			<param name="MoveAroundSocial" value="80" />
 			<param name="MoveAroundSocial1" value="80" />
@@ -2234,7 +2288,6 @@
 		</dropLists>
 	</npc>
 	<npc id="23149" level="95" type="Monster" name="Undead Creature">
-		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<parameters>
 			<param name="MoveAroundSocial" value="80" />
 			<param name="MoveAroundSocial1" value="80" />
@@ -2384,7 +2437,6 @@
 		</dropLists>
 	</npc>
 	<npc id="23151" level="96" type="Monster" name="Shilen's Messenger">
-		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<parameters>
 			<param name="MoveAroundSocial" value="180" />
 			<param name="MoveAroundSocial1" value="180" />
@@ -2465,7 +2517,6 @@
 		</dropLists>
 	</npc>
 	<npc id="23152" level="20" type="Monster" name="Eyesaroch">
-		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<parameters>
 			<param name="MoveAroundSocial" value="0" />
 			<param name="MoveAroundSocial1" value="100" />
@@ -2512,7 +2563,6 @@
 		</collision>
 	</npc>
 	<npc id="23153" level="51" type="Monster" name="Achelando">
-		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<parameters>
 			<param name="MoveAroundSocial" value="0" />
 			<param name="MoveAroundSocial1" value="0" />
@@ -2572,7 +2622,6 @@
 		</dropLists>
 	</npc>
 	<npc id="23154" level="51" type="Monster" name="Styrindo">
-		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<parameters>
 			<param name="MoveAroundSocial" value="0" />
 			<param name="MoveAroundSocial1" value="0" />
@@ -2632,7 +2681,6 @@
 		</dropLists>
 	</npc>
 	<npc id="23155" level="51" type="Monster" name="Ashende">
-		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<parameters>
 			<param name="MoveAroundSocial" value="0" />
 			<param name="MoveAroundSocial1" value="0" />
@@ -2695,7 +2743,6 @@
 		</dropLists>
 	</npc>
 	<npc id="23156" level="51" type="Monster" name="Meforde">
-		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<parameters>
 			<param name="MoveAroundSocial" value="170" />
 			<param name="MoveAroundSocial1" value="170" />
@@ -2761,7 +2808,6 @@
 		</dropLists>
 	</npc>
 	<npc id="23157" level="51" type="Monster" name="Rorka">
-		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<parameters>
 			<param name="MoveAroundSocial" value="120" />
 			<param name="MoveAroundSocial1" value="120" />
@@ -2826,7 +2872,6 @@
 		</dropLists>
 	</npc>
 	<npc id="23158" level="51" type="Monster" name="Shumerun">
-		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<parameters>
 			<param name="MoveAroundSocial" value="110" />
 			<param name="MoveAroundSocial1" value="110" />
@@ -2887,7 +2932,6 @@
 		</dropLists>
 	</npc>
 	<npc id="23159" level="45" type="Monster" name="Accencio" title="Event Monster">
-		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<parameters>
 			<skill name="Skill01_ID" id="14274" level="1" />
 			<skill name="Skill02_ID" id="14275" level="1" />
@@ -2928,7 +2972,6 @@
 		</dropLists>
 	</npc>
 	<npc id="23160" level="93" type="Monster" name="Garden Chief Priest">
-		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<parameters>
 			<param name="IsAggressive" value="1" />
 			<param name="MoveArounding" value="1" />
@@ -2989,7 +3032,6 @@
 		</dropLists>
 	</npc>
 	<npc id="23161" level="92" type="Monster" name="Garden Priest">
-		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<parameters>
 			<param name="MoveArounding" value="1" />
 			<param name="Party_Type" value="1" />
@@ -4291,7 +4333,6 @@
 		</dropLists>
 	</npc>
 	<npc id="23182" level="79" type="Monster" name="Succubus Warrior">
-		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<parameters>
 			<param name="MoveAroundSocial" value="85" />
 			<param name="MoveAroundSocial1" value="85" />
@@ -4358,7 +4399,6 @@
 		</dropLists>
 	</npc>
 	<npc id="23183" level="78" type="Monster" name="Succubus Archer">
-		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<parameters>
 			<param name="MoveAroundSocial" value="0" />
 			<param name="MoveAroundSocial1" value="100" />
@@ -4425,7 +4465,6 @@
 		</dropLists>
 	</npc>
 	<npc id="23184" level="78" type="Monster" name="Succubus Shaman">
-		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<parameters>
 			<param name="MoveAroundSocial" value="0" />
 			<param name="MoveAroundSocial1" value="0" />
@@ -4493,7 +4532,6 @@
 		</dropLists>
 	</npc>
 	<npc id="23185" level="81" type="Monster" name="Bloody Succubus" title="Succubus Disciple">
-		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<parameters>
 			<param name="MoveAroundSocial" value="0" />
 			<param name="MoveAroundSocial1" value="0" />
@@ -4554,7 +4592,6 @@
 		</dropLists>
 	</npc>
 	<npc id="23186" level="80" type="Monster" name="Phantom Soldier">
-		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<parameters>
 			<param name="MoveAroundSocial" value="130" />
 			<param name="MoveAroundSocial1" value="130" />
@@ -4620,7 +4657,6 @@
 		</dropLists>
 	</npc>
 	<npc id="23187" level="81" type="Monster" name="Phantom Warrior">
-		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<parameters>
 			<param name="MoveAroundSocial" value="150" />
 			<param name="MoveAroundSocial1" value="150" />
@@ -4686,7 +4722,6 @@
 		</dropLists>
 	</npc>
 	<npc id="23188" level="81" type="Monster" name="Phantom Archer">
-		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<parameters>
 			<param name="MoveAroundSocial" value="130" />
 			<param name="MoveAroundSocial1" value="130" />
@@ -4753,7 +4788,6 @@
 		</dropLists>
 	</npc>
 	<npc id="23189" level="81" type="Monster" name="Phantom Shaman">
-		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<parameters>
 			<param name="MoveAroundSocial" value="0" />
 			<param name="MoveAroundSocial1" value="150" />
@@ -4821,7 +4855,6 @@
 		</dropLists>
 	</npc>
 	<npc id="23190" level="81" type="Monster" name="Phantom Martyr">
-		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<parameters>
 			<param name="MoveAroundSocial" value="0" />
 			<param name="MoveAroundSocial1" value="0" />
@@ -4888,7 +4921,6 @@
 		</dropLists>
 	</npc>
 	<npc id="23191" level="82" type="Monster" name="Succubus of Death" title="Succubus Disciple">
-		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<parameters>
 			<param name="MoveAroundSocial" value="0" />
 			<param name="MoveAroundSocial1" value="0" />
@@ -4952,7 +4984,6 @@
 		</dropLists>
 	</npc>
 	<npc id="23192" level="82" type="Monster" name="Succubus of Darkness" title="Succubus Disciple">
-		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<parameters>
 			<param name="MoveAroundSocial" value="0" />
 			<param name="MoveAroundSocial1" value="0" />
@@ -5015,7 +5046,6 @@
 		</dropLists>
 	</npc>
 	<npc id="23193" level="82" type="Monster" name="Apparition Destroyer">
-		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<parameters>
 			<param name="MoveAroundSocial" value="0" />
 			<param name="MoveAroundSocial1" value="150" />
@@ -5081,7 +5111,6 @@
 		</dropLists>
 	</npc>
 	<npc id="23194" level="83" type="Monster" name="Apparition Assassin">
-		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<parameters>
 			<param name="MoveAroundSocial" value="70" />
 			<param name="MoveAroundSocial1" value="70" />
@@ -5147,7 +5176,6 @@
 		</dropLists>
 	</npc>
 	<npc id="23195" level="83" type="Monster" name="Apparition Sniper">
-		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<parameters>
 			<param name="MoveAroundSocial" value="160" />
 			<param name="MoveAroundSocial1" value="160" />
@@ -5214,7 +5242,6 @@
 		</dropLists>
 	</npc>
 	<npc id="23196" level="83" type="Monster" name="Apparition Wizard">
-		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<parameters>
 			<param name="MoveAroundSocial" value="114" />
 			<param name="MoveAroundSocial1" value="114" />
@@ -5281,7 +5308,6 @@
 		</dropLists>
 	</npc>
 	<npc id="23197" level="84" type="Monster" name="Succubus of Lunacy" title="Succubus Disciple">
-		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<parameters>
 			<param name="MoveAroundSocial" value="120" />
 			<param name="MoveAroundSocial1" value="120" />
@@ -5344,7 +5370,6 @@
 		</dropLists>
 	</npc>
 	<npc id="23198" level="84" type="Monster" name="Succubus of Silence" title="Succubus Disciple">
-		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<parameters>
 			<param name="MoveAroundSocial" value="100" />
 			<param name="MoveAroundSocial1" value="100" />
@@ -5407,7 +5432,6 @@
 		</dropLists>
 	</npc>
 	<npc id="23199" level="96" type="Monster" name="Sadiac the Killer">
-		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<parameters>
 			<param name="MoveAroundSocial" value="80" />
 			<param name="MoveAroundSocial1" value="80" />

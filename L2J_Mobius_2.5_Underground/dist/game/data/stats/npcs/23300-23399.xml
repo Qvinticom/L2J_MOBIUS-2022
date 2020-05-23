@@ -56,7 +56,6 @@
 		</collision>
 	</npc>
 	<npc id="23301" level="95" type="Monster" name="Laido Destruction Golem">
-		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<race>CONSTRUCT</race>
 		<sex>FEMALE</sex>
 		<acquire exp="4120132" sp="988" />
@@ -102,7 +101,6 @@
 		</collision>
 	</npc>
 	<npc id="23302" level="94" type="Monster" name="Laido Golem of Repairs">
-		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<race>CONSTRUCT</race>
 		<sex>FEMALE</sex>
 		<acquire exp="4365175" sp="1047" />
@@ -147,7 +145,6 @@
 		</collision>
 	</npc>
 	<npc id="23303" level="94" type="Monster" name="Spicula Elite Guard">
-		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<race>HUMANOID</race>
 		<sex>FEMALE</sex>
 		<acquire exp="1583690" sp="380" />
@@ -198,7 +195,6 @@
 		</collision>
 	</npc>
 	<npc id="23304" level="96" type="Monster" name="Spicula Larva">
-		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<race>HUMANOID</race>
 		<sex>FEMALE</sex>
 		<acquire exp="6985683" sp="1676" />
@@ -246,7 +242,6 @@
 		</collision>
 	</npc>
 	<npc id="23305" level="55" type="Monster" name="Corroded Skeleton">
-		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<race>UNDEAD</race>
 		<sex>FEMALE</sex>
 		<acquire exp="31989" sp="7" />
@@ -297,7 +292,6 @@
 		</collision>
 	</npc>
 	<npc id="23306" level="57" type="Monster" name="Rotten Corpse">
-		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<race>UNDEAD</race>
 		<sex>FEMALE</sex>
 		<acquire exp="34010" sp="8" />
@@ -343,7 +337,6 @@
 		</collision>
 	</npc>
 	<npc id="23307" level="54" type="Monster" name="Corpse Spider">
-		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<race>HUMAN</race>
 		<sex>FEMALE</sex>
 		<acquire exp="30999" sp="7" />
@@ -395,7 +388,6 @@
 		</collision>
 	</npc>
 	<npc id="23308" level="57" type="Monster" name="Explosive Spider">
-		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<race>HUMAN</race>
 		<sex>FEMALE</sex>
 		<acquire exp="34010" sp="8" />
@@ -443,7 +435,6 @@
 		</collision>
 	</npc>
 	<npc id="23309" level="57" type="Monster" name="Corpse Looter Stakato">
-		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<race>HUMANOID</race>
 		<sex>FEMALE</sex>
 		<acquire exp="34010" sp="8" />
@@ -500,7 +491,6 @@
 		</collision>
 	</npc>
 	<npc id="23310" level="58" type="Monster" name="Lesser Laikel">
-		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<race>HUMAN</race>
 		<sex>FEMALE</sex>
 		<acquire exp="41698" sp="10" />
@@ -560,7 +550,6 @@
 		</collision>
 	</npc>
 	<npc id="23311" level="72" type="Monster" name="Valley Buffalo">
-		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<race>BEAST</race>
 		<sex>FEMALE</sex>
 		<acquire exp="61889" sp="14" />
@@ -588,9 +577,21 @@
 			<radius normal="22" grown="27" />
 			<height normal="31" grown="38" />
 		</collision>
+		<dropLists>
+			<drop>
+				<item id="57" min="99" max="230" chance="70" /> <!-- Adena -->
+				<item id="36519" min="1" max="1" chance="0.03000300030003" /> <!-- Quality Leather -->
+				<item id="730" min="1" max="1" chance="0.03000300030003" /> <!-- Scroll: Enchant Armor (A-grade) -->
+				<item id="36554" min="1" max="1" chance="0.03000300030003" /> <!-- Armor Fragment (High-grade) -->
+			</drop>
+			<spoil>
+				<item id="36534" min="1" max="1" chance="0.0750187546886722" /> <!-- Durable Braid -->
+				<item id="36882" min="1" max="1" chance="0.03000300030003" /> <!-- Recipe: Thin Braid - Upgrade -->
+				<item id="36881" min="1" max="1" chance="0.03000300030003" /> <!-- Recipe: Thin Braid - Downgrade -->
+			</spoil>
+		</dropLists>
 	</npc>
 	<npc id="23312" level="73" type="Monster" name="Valley Grendel">
-		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<race>ANIMAL</race>
 		<sex>FEMALE</sex>
 		<acquire exp="89707" sp="21" />
@@ -618,9 +619,19 @@
 			<radius normal="15" grown="18" />
 			<height normal="39" grown="47.5" />
 		</collision>
+		<dropLists>
+			<drop>
+				<item id="57" min="97" max="227" chance="70" /> <!-- Adena -->
+				<item id="36519" min="1" max="1" chance="0.3003003003003" /> <!-- Quality Leather -->
+			</drop>
+			<spoil>
+				<item id="36534" min="1" max="1" chance="0.0750187546886722" /> <!-- Durable Braid -->
+				<item id="36882" min="1" max="1" chance="0.03000300030003" /> <!-- Recipe: Thin Braid - Upgrade -->
+				<item id="36881" min="1" max="1" chance="0.03000300030003" /> <!-- Recipe: Thin Braid - Downgrade -->
+			</spoil>
+		</dropLists>
 	</npc>
 	<npc id="23313" level="76" type="Monster" name="Disciple of Protection">
-		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<race>DIVINE</race>
 		<sex>FEMALE</sex>
 		<acquire exp="173094" sp="41" />
@@ -650,9 +661,19 @@
 			<radius normal="8" grown="9" />
 			<height normal="30" grown="36.5" />
 		</collision>
+		<dropLists>
+			<drop>
+				<item id="57" min="114" max="265" chance="70" /> <!-- Adena -->
+				<item id="36529" min="1" max="1" chance="0.149925037481259" /> <!-- Quality Fiber -->
+				<item id="36559" min="1" max="1" chance="0.03000300030003" /> <!-- Accessory Gem (High-grade) -->
+			</drop>
+			<spoil>
+				<item id="36522" min="1" max="1" chance="1.5" /> <!-- Silver -->
+				<item id="36523" min="1" max="1" chance="0.3003003003003" /> <!-- Adamantite -->
+			</spoil>
+		</dropLists>
 	</npc>
 	<npc id="23314" level="99" type="Monster" name="Nerva Orc Raider">
-		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<race>ORC</race>
 		<sex>FEMALE</sex>
 		<acquire exp="95996432" sp="153594" />
@@ -695,7 +716,6 @@
 		</collision>
 	</npc>
 	<npc id="23315" level="99" type="Monster" name="Nerva Orc Archer">
-		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<race>ORC</race>
 		<sex>FEMALE</sex>
 		<acquire exp="103650867" sp="165841" />
@@ -740,7 +760,6 @@
 		</collision>
 	</npc>
 	<npc id="23316" level="99" type="Monster" name="Nerva Orc Priest">
-		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<race>ORC</race>
 		<sex>FEMALE</sex>
 		<acquire exp="124437219" sp="199099" />
@@ -787,7 +806,6 @@
 		</collision>
 	</npc>
 	<npc id="23317" level="99" type="Monster" name="Nerva Orc Wizard">
-		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<race>ORC</race>
 		<sex>FEMALE</sex>
 		<acquire exp="111937319" sp="179099" />
@@ -832,7 +850,6 @@
 		</collision>
 	</npc>
 	<npc id="23318" level="99" type="Monster" name="Nerva Orc Assassin">
-		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<race>ORC</race>
 		<sex>FEMALE</sex>
 		<acquire exp="104493556" sp="167189" />
@@ -876,7 +893,6 @@
 		</collision>
 	</npc>
 	<npc id="23319" level="99" type="Monster" name="Nerva Orc Ambusher">
-		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<race>ORC</race>
 		<sex>FEMALE</sex>
 		<acquire exp="88903791" sp="142246" />
@@ -922,7 +938,6 @@
 		</collision>
 	</npc>
 	<npc id="23320" level="99" type="Monster" name="Nerva Orc Merchant">
-		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<race>ORC</race>
 		<sex>FEMALE</sex>
 		<acquire exp="120926011" sp="193481" />
@@ -966,7 +981,6 @@
 		</collision>
 	</npc>
 	<npc id="23321" level="99" type="Monster" name="Nerva Orc Warrior">
-		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<race>ORC</race>
 		<sex>FEMALE</sex>
 		<acquire exp="215798859" sp="345278" />
@@ -1010,7 +1024,6 @@
 		</collision>
 	</npc>
 	<npc id="23322" level="99" type="Monster" name="Nerva Orc Prefect">
-		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<race>ORC</race>
 		<sex>FEMALE</sex>
 		<acquire exp="272259087" sp="435614" />
@@ -1055,7 +1068,6 @@
 		</collision>
 	</npc>
 	<npc id="23323" level="99" type="Monster" name="Nerva Orc Elite">
-		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<race>ORC</race>
 		<sex>FEMALE</sex>
 		<acquire exp="95996432" sp="153594" />
@@ -1099,7 +1111,6 @@
 		</collision>
 	</npc>
 	<npc id="23324" level="99" type="Monster" name="Captain" title="Nerva Bloodlust">
-		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<race>ORC</race>
 		<sex>FEMALE</sex>
 		<acquire exp="171101177" sp="273761" />
@@ -1143,7 +1154,6 @@
 		</collision>
 	</npc>
 	<npc id="23325" level="99" type="Monster" name="Archer" title="Nerva Bloodlust">
-		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<race>ORC</race>
 		<sex>FEMALE</sex>
 		<acquire exp="30863520" sp="49381" />
@@ -1191,7 +1201,6 @@
 		</collision>
 	</npc>
 	<npc id="23326" level="99" type="Monster" name="Wizard" title="Nerva Bloodlust">
-		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<race>ORC</race>
 		<sex>FEMALE</sex>
 		<acquire exp="30863520" sp="49381" />
@@ -1239,7 +1248,6 @@
 		</collision>
 	</npc>
 	<npc id="23327" level="99" type="Monster" name="Soldier" title="Nerva Bloodlust">
-		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<race>ORC</race>
 		<sex>FEMALE</sex>
 		<acquire exp="30863520" sp="49381" />
@@ -1286,7 +1294,6 @@
 		</collision>
 	</npc>
 	<npc id="23328" level="99" type="Monster" name="Assassin" title="Nerva Bloodlust">
-		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<race>ORC</race>
 		<sex>FEMALE</sex>
 		<acquire exp="30863520" sp="49381" />
@@ -1333,7 +1340,6 @@
 		</collision>
 	</npc>
 	<npc id="23329" level="99" type="Monster" name="Nerva Kaiser">
-		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<race>CONSTRUCT</race>
 		<sex>FEMALE</sex>
 		<acquire exp="959958945" sp="1535934" />
@@ -1376,7 +1382,6 @@
 		</collision>
 	</npc>
 	<npc id="23330" level="99" type="Monster" name="Rubble">
-		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<race>UNDEAD</race>
 		<sex>FEMALE</sex>
 		<acquire exp="17315719" sp="27705" />
@@ -1423,7 +1428,6 @@
 		</collision>
 	</npc>
 	<npc id="23332" level="99" type="Monster" name="One-armed Zombie">
-		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<race>UNDEAD</race>
 		<sex>FEMALE</sex>
 		<acquire exp="17315719" sp="27705" />
@@ -1470,7 +1474,6 @@
 		</collision>
 	</npc>
 	<npc id="23333" level="99" type="Monster" name="Putrefied Zombie">
-		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<race>UNDEAD</race>
 		<sex>FEMALE</sex>
 		<acquire exp="17315719" sp="27705" />
@@ -1515,7 +1518,6 @@
 		</collision>
 	</npc>
 	<npc id="23334" level="99" type="Monster" name="Shelop">
-		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<race>UNDEAD</race>
 		<sex>FEMALE</sex>
 		<acquire exp="17315719" sp="27705" />
@@ -1561,7 +1563,6 @@
 		</collision>
 	</npc>
 	<npc id="23335" level="99" type="Monster" name="Poras">
-		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<race>UNDEAD</race>
 		<sex>FEMALE</sex>
 		<acquire exp="17315719" sp="27705" />
@@ -1607,7 +1608,6 @@
 		</collision>
 	</npc>
 	<npc id="23336" level="99" type="Monster" name="Death Worm">
-		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<race>UNDEAD</race>
 		<sex>FEMALE</sex>
 		<acquire exp="17315719" sp="27705" />
@@ -1654,7 +1654,6 @@
 		</collision>
 	</npc>
 	<npc id="23337" level="99" type="Monster" name="Large Rubble">
-		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<race>UNDEAD</race>
 		<sex>FEMALE</sex>
 		<acquire exp="17315719" sp="27705" />
@@ -1700,7 +1699,6 @@
 		</collision>
 	</npc>
 	<npc id="23348" level="99" type="Monster" name="Chaos Horn">
-		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<race>UNDEAD</race>
 		<sex>FEMALE</sex>
 		<acquire exp="17315719" sp="27705" />
@@ -1801,7 +1799,6 @@
 		</collision>
 	</npc>
 	<npc id="23350" level="87" type="Monster" name="Demonic Noctum" title="Gravekeeper">
-		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<race>HUMANOID</race>
 		<sex>FEMALE</sex>
 		<acquire exp="3123732" sp="749" />
@@ -1855,7 +1852,6 @@
 		</collision>
 	</npc>
 	<npc id="23351" level="99" type="Monster" name="Wild Guardian Tree">
-		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<race>PLANT</race>
 		<sex>FEMALE</sex>
 		<acquire exp="1464542" sp="2343" />
@@ -1907,7 +1903,6 @@
 		</collision>
 	</npc>
 	<npc id="23352" level="98" type="Monster" name="Wild Protector Tree">
-		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<race>BEAST</race>
 		<sex>FEMALE</sex>
 		<acquire exp="1435018" sp="344" />
@@ -1959,7 +1954,6 @@
 		</collision>
 	</npc>
 	<npc id="23353" level="99" type="Monster" name="Wilderness Protector">
-		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<race>HUMANOID</race>
 		<sex>FEMALE</sex>
 		<acquire exp="1464542" sp="2343" />
@@ -2011,7 +2005,6 @@
 		</collision>
 	</npc>
 	<npc id="23354" level="99" type="Monster" name="Decay Hannibal">
-		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<race>CONSTRUCT</race>
 		<sex>FEMALE</sex>
 		<acquire exp="8649429" sp="20758" />
@@ -2054,7 +2047,6 @@
 		</collision>
 	</npc>
 	<npc id="23355" level="99" type="Monster" name="Armor Beast">
-		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<race>DIVINE</race>
 		<sex>FEMALE</sex>
 		<acquire exp="8649429" sp="20758" />
@@ -2097,7 +2089,6 @@
 		</collision>
 	</npc>
 	<npc id="23356" level="99" type="Monster" name="Klein Soldier">
-		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<race>BEAST</race>
 		<sex>FEMALE</sex>
 		<acquire exp="8649429" sp="20758" />
@@ -2141,7 +2132,6 @@
 		</collision>
 	</npc>
 	<npc id="23357" level="99" type="Monster" name="Disorder Warrior">
-		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<race>BEAST</race>
 		<sex>FEMALE</sex>
 		<acquire exp="8649429" sp="20758" />
@@ -2226,7 +2216,6 @@
 		</collision>
 	</npc>
 	<npc id="23359" level="99" type="Monster" name="Blow Soldier">
-		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<race>BEAST</race>
 		<sex>FEMALE</sex>
 		<acquire exp="2162357" sp="5189" />
@@ -2271,7 +2260,6 @@
 		</collision>
 	</npc>
 	<npc id="23360" level="99" type="Monster" name="Bizuard">
-		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<race>BEAST</race>
 		<sex>FEMALE</sex>
 		<acquire exp="8649429" sp="20758" />
@@ -2314,7 +2302,6 @@
 		</collision>
 	</npc>
 	<npc id="23361" level="99" type="Monster" name="Mutated Fly">
-		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<race>BEAST</race>
 		<sex>FEMALE</sex>
 		<acquire exp="8649429" sp="20758" />
@@ -2359,7 +2346,6 @@
 		</collision>
 	</npc>
 	<npc id="23362" level="99" type="Monster" name="Amos Soldier">
-		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<race>GIANT</race>
 		<sex>FEMALE</sex>
 		<acquire exp="8649429" sp="20758" />
@@ -2402,7 +2388,6 @@
 		</collision>
 	</npc>
 	<npc id="23363" level="99" type="Monster" name="Amos Officer">
-		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<race>GIANT</race>
 		<sex>FEMALE</sex>
 		<acquire exp="8649429" sp="20758" />
@@ -2444,7 +2429,6 @@
 		</collision>
 	</npc>
 	<npc id="23364" level="99" type="Monster" name="Amos Master">
-		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<race>HUMANOID</race>
 		<sex>FEMALE</sex>
 		<acquire exp="8649429" sp="20758" />
@@ -2488,7 +2472,6 @@
 		</collision>
 	</npc>
 	<npc id="23365" level="99" type="Monster" name="Ailith Hunter">
-		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<race>DEMONIC</race>
 		<sex>FEMALE</sex>
 		<acquire exp="8649429" sp="20758" />
@@ -2532,7 +2515,6 @@
 		</collision>
 	</npc>
 	<npc id="23366" level="99" type="Monster" name="Durable Charger">
-		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<race>ETC</race>
 		<sex>FEMALE</sex>
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
@@ -2568,7 +2550,6 @@
 		</collision>
 	</npc>
 	<npc id="23367" level="99" type="Monster" name="Armor Beast">
-		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<race>DIVINE</race>
 		<sex>FEMALE</sex>
 		<acquire exp="8649429" sp="20758" />
@@ -2611,7 +2592,6 @@
 		</collision>
 	</npc>
 	<npc id="23368" level="99" type="Monster" name="Klein Soldier">
-		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<race>BEAST</race>
 		<sex>FEMALE</sex>
 		<acquire exp="8649429" sp="20758" />
@@ -2656,7 +2636,6 @@
 		</collision>
 	</npc>
 	<npc id="23369" level="99" type="Monster" name="Disorder Warrior">
-		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<race>BEAST</race>
 		<sex>FEMALE</sex>
 		<acquire exp="8649429" sp="20758" />
@@ -2701,7 +2680,6 @@
 		</collision>
 	</npc>
 	<npc id="23370" level="99" type="Monster" name="Blow Archer">
-		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<race>DEMONIC</race>
 		<sex>FEMALE</sex>
 		<acquire exp="8649429" sp="20758" />
@@ -2743,7 +2721,6 @@
 		</collision>
 	</npc>
 	<npc id="23371" level="99" type="Monster" name="Blow Soldier">
-		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<race>BEAST</race>
 		<sex>FEMALE</sex>
 		<acquire exp="2162357" sp="5189" />
@@ -2787,7 +2764,6 @@
 		</collision>
 	</npc>
 	<npc id="23372" level="99" type="Monster" name="Bizuard">
-		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<race>BEAST</race>
 		<sex>FEMALE</sex>
 		<acquire exp="8649429" sp="20758" />
@@ -2830,7 +2806,6 @@
 		</collision>
 	</npc>
 	<npc id="23373" level="99" type="Monster" name="Mutated Fly">
-		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<race>BEAST</race>
 		<sex>FEMALE</sex>
 		<acquire exp="8649429" sp="20758" />
@@ -2874,7 +2849,6 @@
 		</collision>
 	</npc>
 	<npc id="23374" level="99" type="Monster" name="Lavi" title="Disciplined">
-		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<race>BEAST</race>
 		<sex>FEMALE</sex>
 		<acquire exp="4079150" sp="9789" />
@@ -2901,9 +2875,22 @@
 			<radius normal="10" />
 			<height normal="30" />
 		</collision>
+		<dropLists>
+			<drop>
+				<!-- Also drops herbs. -->
+				<item id="8600" min="1" max="1" chance="10" /> <!-- Herb of Life -->
+				<item id="8601" min="1" max="1" chance="8" /> <!-- Major Herb of Life -->
+				<item id="8602" min="1" max="1" chance="2" /> <!-- Superior Herb of Life -->
+				<item id="8603" min="1" max="1" chance="19.8" /> <!-- Herb of Mana -->
+				<item id="8604" min="1" max="1" chance="9.9" /> <!-- Major Herb of Mana -->
+				<item id="8605" min="1" max="1" chance="3.3" /> <!-- Superior Herb of Mana -->
+				<item id="34849" min="1" max="1" chance="0.7" /> <!-- Mysterious Herb of Power -->
+				<item id="34850" min="1" max="1" chance="0.7" /> <!-- Mysterious Herb of Magic -->
+				<item id="13028" min="1" max="1" chance="0.1" /> <!-- Vitality Replenishing Herb -->
+			</drop>
+		</dropLists>
 	</npc>
 	<npc id="23375" level="99" type="Monster" name="Lavi" title="Magical">
-		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<race>BEAST</race>
 		<sex>FEMALE</sex>
 		<acquire exp="4079150" sp="9789" />
@@ -2929,9 +2916,22 @@
 			<radius normal="10" />
 			<height normal="30" />
 		</collision>
+		<dropLists>
+			<drop>
+				<!-- Also drops herbs. -->
+				<item id="8600" min="1" max="1" chance="10" /> <!-- Herb of Life -->
+				<item id="8601" min="1" max="1" chance="8" /> <!-- Major Herb of Life -->
+				<item id="8602" min="1" max="1" chance="2" /> <!-- Superior Herb of Life -->
+				<item id="8603" min="1" max="1" chance="19.8" /> <!-- Herb of Mana -->
+				<item id="8604" min="1" max="1" chance="9.9" /> <!-- Major Herb of Mana -->
+				<item id="8605" min="1" max="1" chance="3.3" /> <!-- Superior Herb of Mana -->
+				<item id="34849" min="1" max="1" chance="0.7" /> <!-- Mysterious Herb of Power -->
+				<item id="34850" min="1" max="1" chance="0.7" /> <!-- Mysterious Herb of Magic -->
+				<item id="13028" min="1" max="1" chance="0.1" /> <!-- Vitality Replenishing Herb -->
+			</drop>
+		</dropLists>
 	</npc>
 	<npc id="23376" level="99" type="Monster" name="Lavisys" title="Disciplined">
-		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<race>BEAST</race>
 		<sex>FEMALE</sex>
 		<acquire exp="4894979" sp="11747" />
@@ -2978,7 +2978,6 @@
 		</collision>
 	</npc>
 	<npc id="23377" level="99" type="Monster" name="Lavisys" title="Explosive">
-		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<race>BEAST</race>
 		<sex>FEMALE</sex>
 		<acquire exp="4894979" sp="11747" />
@@ -3025,7 +3024,6 @@
 		</collision>
 	</npc>
 	<npc id="23378" level="99" type="Monster" name="Lavisys" title="Soothing">
-		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<race>BEAST</race>
 		<sex>FEMALE</sex>
 		<acquire exp="4894979" sp="11747" />
@@ -3071,7 +3069,6 @@
 		</collision>
 	</npc>
 	<npc id="23379" level="99" type="Monster" name="Tanya" title="Berserk">
-		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<race>DEMONIC</race>
 		<sex>FEMALE</sex>
 		<acquire exp="27194245" sp="65266" />
@@ -3117,7 +3114,6 @@
 		</collision>
 	</npc>
 	<npc id="23380" level="99" type="Monster" name="Scarlett" title="Berserk">
-		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<race>DEMONIC</race>
 		<sex>FEMALE</sex>
 		<acquire exp="27194245" sp="65266" />
@@ -3163,7 +3159,6 @@
 		</collision>
 	</npc>
 	<npc id="23381" level="99" type="Monster" name="Tanya" title="Berserk">
-		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<race>DEMONIC</race>
 		<sex>FEMALE</sex>
 		<acquire exp="27194245" sp="65266" />
@@ -3210,7 +3205,6 @@
 		</collision>
 	</npc>
 	<npc id="23382" level="99" type="Monster" name="Scarlett" title="Berserk">
-		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<race>DEMONIC</race>
 		<sex>FEMALE</sex>
 		<acquire exp="27194245" sp="65266" />
@@ -3257,7 +3251,6 @@
 		</collision>
 	</npc>
 	<npc id="23383" level="99" type="Monster" name="Immortal Tanya" title="Immortal">
-		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<race>DEMONIC</race>
 		<sex>FEMALE</sex>
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
@@ -3284,9 +3277,22 @@
 			<radius normal="15" />
 			<height normal="38" />
 		</collision>
+		<dropLists>
+			<drop>
+				<!-- Also drops herbs. -->
+				<item id="8600" min="1" max="1" chance="10" /> <!-- Herb of Life -->
+				<item id="8601" min="1" max="1" chance="8" /> <!-- Major Herb of Life -->
+				<item id="8602" min="1" max="1" chance="2" /> <!-- Superior Herb of Life -->
+				<item id="8603" min="1" max="1" chance="19.8" /> <!-- Herb of Mana -->
+				<item id="8604" min="1" max="1" chance="9.9" /> <!-- Major Herb of Mana -->
+				<item id="8605" min="1" max="1" chance="3.3" /> <!-- Superior Herb of Mana -->
+				<item id="34849" min="1" max="1" chance="0.7" /> <!-- Mysterious Herb of Power -->
+				<item id="34850" min="1" max="1" chance="0.7" /> <!-- Mysterious Herb of Magic -->
+				<item id="13028" min="1" max="1" chance="0.1" /> <!-- Vitality Replenishing Herb -->
+			</drop>
+		</dropLists>
 	</npc>
 	<npc id="23384" level="99" type="Monster" name="Smaug">
-		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<race>DRAGON</race>
 		<sex>FEMALE</sex>
 		<acquire exp="71385190" sp="171324" />
@@ -3335,7 +3341,6 @@
 		</collision>
 	</npc>
 	<npc id="23385" level="99" type="Monster" name="Lunatikan">
-		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<race>CONSTRUCT</race>
 		<sex>FEMALE</sex>
 		<acquire exp="71385190" sp="171324" />
@@ -3385,7 +3390,6 @@
 		</collision>
 	</npc>
 	<npc id="23386" level="99" type="Monster" name="Jabberwok">
-		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<race>BEAST</race>
 		<sex>FEMALE</sex>
 		<acquire exp="71385190" sp="171324" />
@@ -3435,7 +3439,6 @@
 		</collision>
 	</npc>
 	<npc id="23387" level="99" type="Monster" name="Kanzaroth">
-		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<race>BEAST</race>
 		<sex>FEMALE</sex>
 		<acquire exp="71385190" sp="171324" />
@@ -3483,7 +3486,6 @@
 		</collision>
 	</npc>
 	<npc id="23388" level="99" type="Monster" name="Kandiloth">
-		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<race>BEAST</race>
 		<sex>FEMALE</sex>
 		<acquire exp="71385190" sp="171324" />
@@ -3531,7 +3533,6 @@
 		</collision>
 	</npc>
 	<npc id="23389" level="99" type="Monster" name="Viper" title="Oasis Mirage">
-		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<race>BEAST</race>
 		<sex>FEMALE</sex>
 		<acquire exp="142770186" sp="342648" />
@@ -3562,9 +3563,20 @@
 			<radius normal="30" />
 			<height normal="45" />
 		</collision>
+		<dropLists>
+			<drop>
+				<item id="57" min="13757" max="32109" chance="70" /> <!-- Adena -->
+				<item id="37791" min="1" max="1" chance="0.3003003003003" /> <!-- Sealed Demonic Tome -->
+				<item id="37802" min="1" max="1" chance="0.0030000300003" /> <!-- Dark Eternal Enhancement Stone Fragment -->
+			</drop>
+			<spoil>
+				<item id="40052" min="1" max="1" chance="90" /> <!-- Scroll: 1,000,000 SP -->
+				<item id="40051" min="1" max="17" chance="90" /> <!-- Scroll: 100,000 SP -->
+				<item id="40053" min="1" max="1" chance="9" /> <!-- Scroll: 10,000,000 SP -->
+			</spoil>
+		</dropLists>
 	</npc>
 	<npc id="23390" level="99" type="Monster" name="Viper" title="Oasis Mirage">
-		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<race>BEAST</race>
 		<sex>FEMALE</sex>
 		<acquire exp="142770186" sp="342648" />
@@ -3595,9 +3607,20 @@
 			<radius normal="30" />
 			<height normal="45" />
 		</collision>
+		<dropLists>
+			<drop>
+				<item id="57" min="13757" max="32109" chance="70" /> <!-- Adena -->
+				<item id="37791" min="1" max="1" chance="0.3003003003003" /> <!-- Sealed Demonic Tome -->
+				<item id="37802" min="1" max="1" chance="0.0030000300003" /> <!-- Dark Eternal Enhancement Stone Fragment -->
+			</drop>
+			<spoil>
+				<item id="40052" min="1" max="1" chance="90" /> <!-- Scroll: 1,000,000 SP -->
+				<item id="40051" min="1" max="17" chance="90" /> <!-- Scroll: 100,000 SP -->
+				<item id="40053" min="1" max="1" chance="9" /> <!-- Scroll: 10,000,000 SP -->
+			</spoil>
+		</dropLists>
 	</npc>
 	<npc id="23391" level="99" type="Monster" name="Kefensis" title="Mirage Watcher">
-		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<race>PLANT</race>
 		<sex>FEMALE</sex>
 		<acquire exp="142770186" sp="342648" />
@@ -3646,7 +3669,6 @@
 		</collision>
 	</npc>
 	<npc id="23392" level="99" type="Monster" name="Kefensis" title="Mirage Watcher">
-		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<race>PLANT</race>
 		<sex>FEMALE</sex>
 		<acquire exp="142770186" sp="342648" />
@@ -3695,7 +3717,6 @@
 		</collision>
 	</npc>
 	<npc id="23393" level="99" type="Monster" name="Slaver">
-		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<race>HUMANOID</race>
 		<sex>FEMALE</sex>
 		<acquire exp="47590086" sp="114216" />
@@ -3744,7 +3765,6 @@
 		</collision>
 	</npc>
 	<npc id="23394" level="99" type="Monster" name="Slaver">
-		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<race>HUMANOID</race>
 		<sex>FEMALE</sex>
 		<acquire exp="47590086" sp="114216" />
@@ -3793,7 +3813,6 @@
 		</collision>
 	</npc>
 	<npc id="23395" level="99" type="Monster" name="Garion">
-		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<race>BEAST</race>
 		<sex>FEMALE</sex>
 		<acquire exp="90421084" sp="217010" />
@@ -3844,7 +3863,6 @@
 		</collision>
 	</npc>
 	<npc id="23396" level="99" type="Monster" name="Garion Neti">
-		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<race>BEAST</race>
 		<sex>FEMALE</sex>
 		<acquire exp="90421084" sp="217010" />
@@ -3896,7 +3914,6 @@
 		</collision>
 	</npc>
 	<npc id="23397" level="99" type="Monster" name="Desert Wendigo">
-		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<race>BEAST</race>
 		<sex>FEMALE</sex>
 		<acquire exp="90421084" sp="217010" />
@@ -3945,7 +3962,6 @@
 		</collision>
 	</npc>
 	<npc id="23398" level="99" type="Monster" name="Koraza">
-		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<race>BEAST</race>
 		<sex>FEMALE</sex>
 		<acquire exp="90421084" sp="217010" />
@@ -3994,7 +4010,6 @@
 		</collision>
 	</npc>
 	<npc id="23399" level="99" type="Monster" name="Bend Beetle">
-		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<race>HUMAN</race>
 		<sex>FEMALE</sex>
 		<acquire exp="90421084" sp="217010" />

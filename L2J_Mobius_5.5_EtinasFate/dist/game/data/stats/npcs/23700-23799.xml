@@ -38,7 +38,7 @@
 			<height normal="18" />
 		</collision>
 	</npc>
-	<npc id="23702" level="101" type="Npc" name="Monster" title="Dragonclaw Royal Guard">
+	<npc id="23702" level="101" type="Monster" name="Monster" title="Dragonclaw Royal Guard">
 		<race>HUMAN</race>
 		<sex>MALE</sex>
 		<acquire exp="946520799" sp="1893101" />
@@ -140,7 +140,7 @@
 			</drop>
 		</dropLists>
 	</npc>
-	<npc id="23705" level="101" type="Npc" name="Monster" title="Master of Flames">
+	<npc id="23705" level="101" type="Monster" name="Monster" title="Master of Flames">
 		<race>DEMONIC</race>
 		<sex>MALE</sex>
 		<acquire exp="1019330130" sp="2038669" />
@@ -334,8 +334,7 @@
 			<height normal="22.5" />
 		</collision>
 	</npc>
-	<npc id="23714" level="85" type="Npc" name="Cyclone" title="Typhoon's Guardian">
-		<!-- AUTO GENERATED NPC TODO: FIX IT -->
+	<npc id="23714" level="85" type="Monster" name="Cyclone" title="Typhoon's Guardian">
 		<race>HUMAN</race>
 		<sex>FEMALE</sex>
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
@@ -351,8 +350,7 @@
 			<height normal="25" />
 		</collision>
 	</npc>
-	<npc id="23715" level="85" type="Npc" name="Hurricane" title="Typhoon's Guardian">
-		<!-- AUTO GENERATED NPC TODO: FIX IT -->
+	<npc id="23715" level="85" type="Monster" name="Hurricane" title="Typhoon's Guardian">
 		<race>HUMAN</race>
 		<sex>FEMALE</sex>
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
@@ -495,7 +493,7 @@
 			<height normal="28" />
 		</collision>
 	</npc>
-	<npc id="23721" level="100" type="Npc" name="Maze Buffalo">
+	<npc id="23721" level="100" type="Monster" name="Maze Buffalo">
 		<parameters>
 			<param name="MoveAroundSocial" value="120" />
 			<param name="MoveAroundSocial1" value="30" />
@@ -2211,8 +2209,7 @@
 			</lucky>
 		</dropLists>
 	</npc>
-	<npc id="23762" level="85" type="Npc" name="Fairy Knight">
-		<!-- AUTO GENERATED NPC TODO: FIX IT -->
+	<npc id="23762" level="85" type="Monster" name="Fairy Knight">
 		<race>ETC</race>
 		<sex>FEMALE</sex>
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
@@ -2230,8 +2227,7 @@
 			<height normal="27" />
 		</collision>
 	</npc>
-	<npc id="23763" level="85" type="Npc" name="Fairy Knight" title="Enraged">
-		<!-- AUTO GENERATED NPC TODO: FIX IT -->
+	<npc id="23763" level="85" type="Monster" name="Fairy Knight" title="Enraged">
 		<race>ETC</race>
 		<sex>FEMALE</sex>
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
@@ -2249,8 +2245,7 @@
 			<height normal="27" />
 		</collision>
 	</npc>
-	<npc id="23764" level="85" type="Npc" name="Fairy Rogue">
-		<!-- AUTO GENERATED NPC TODO: FIX IT -->
+	<npc id="23764" level="85" type="Monster" name="Fairy Rogue">
 		<race>ETC</race>
 		<sex>FEMALE</sex>
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
@@ -2268,8 +2263,7 @@
 			<height normal="27" />
 		</collision>
 	</npc>
-	<npc id="23765" level="85" type="Npc" name="Fairy Rogue" title="Enraged">
-		<!-- AUTO GENERATED NPC TODO: FIX IT -->
+	<npc id="23765" level="85" type="Monster" name="Fairy Rogue" title="Enraged">
 		<race>ETC</race>
 		<sex>FEMALE</sex>
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
@@ -2287,8 +2281,7 @@
 			<height normal="27" />
 		</collision>
 	</npc>
-	<npc id="23766" level="85" type="Npc" name="Fairy Warrior">
-		<!-- AUTO GENERATED NPC TODO: FIX IT -->
+	<npc id="23766" level="85" type="Monster" name="Fairy Warrior">
 		<race>ETC</race>
 		<sex>FEMALE</sex>
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
@@ -2306,8 +2299,7 @@
 			<height normal="27" />
 		</collision>
 	</npc>
-	<npc id="23767" level="85" type="Npc" name="Fairy Warrior" title="Enraged">
-		<!-- AUTO GENERATED NPC TODO: FIX IT -->
+	<npc id="23767" level="85" type="Monster" name="Fairy Warrior" title="Enraged">
 		<race>ETC</race>
 		<sex>FEMALE</sex>
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
@@ -2325,8 +2317,7 @@
 			<height normal="27" />
 		</collision>
 	</npc>
-	<npc id="23768" level="85" type="Npc" name="Satyr Summoner">
-		<!-- AUTO GENERATED NPC TODO: FIX IT -->
+	<npc id="23768" level="85" type="Monster" name="Satyr Summoner">
 		<race>ETC</race>
 		<sex>FEMALE</sex>
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
@@ -2344,8 +2335,7 @@
 			<height normal="28" />
 		</collision>
 	</npc>
-	<npc id="23769" level="85" type="Npc" name="Satyr Summoner" title="Enraged">
-		<!-- AUTO GENERATED NPC TODO: FIX IT -->
+	<npc id="23769" level="85" type="Monster" name="Satyr Summoner" title="Enraged">
 		<race>ETC</race>
 		<sex>FEMALE</sex>
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
@@ -2363,8 +2353,7 @@
 			<height normal="28" />
 		</collision>
 	</npc>
-	<npc id="23770" level="85" type="Npc" name="Satyr Witch">
-		<!-- AUTO GENERATED NPC TODO: FIX IT -->
+	<npc id="23770" level="85" type="Monster" name="Satyr Witch">
 		<race>ETC</race>
 		<sex>FEMALE</sex>
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
@@ -2382,8 +2371,7 @@
 			<height normal="28" />
 		</collision>
 	</npc>
-	<npc id="23771" level="85" type="Npc" name="Satyr Witch" title="Enraged">
-		<!-- AUTO GENERATED NPC TODO: FIX IT -->
+	<npc id="23771" level="85" type="Monster" name="Satyr Witch" title="Enraged">
 		<race>ETC</race>
 		<sex>FEMALE</sex>
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
@@ -2401,8 +2389,7 @@
 			<height normal="28" />
 		</collision>
 	</npc>
-	<npc id="23772" level="85" type="Npc" name="Satyr Wizard">
-		<!-- AUTO GENERATED NPC TODO: FIX IT -->
+	<npc id="23772" level="85" type="Monster" name="Satyr Wizard">
 		<race>ETC</race>
 		<sex>FEMALE</sex>
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
@@ -2420,8 +2407,7 @@
 			<height normal="28" />
 		</collision>
 	</npc>
-	<npc id="23773" level="85" type="Npc" name="Satyr Wizard" title="Enraged">
-		<!-- AUTO GENERATED NPC TODO: FIX IT -->
+	<npc id="23773" level="85" type="Monster" name="Satyr Wizard" title="Enraged">
 		<race>ETC</race>
 		<sex>FEMALE</sex>
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
@@ -3330,8 +3316,7 @@
 			</spoil>
 		</dropLists>
 	</npc>
-	<npc id="23791" level="85" type="Npc" name="Bathus" title="Marred">
-		<!-- AUTO GENERATED NPC TODO: FIX IT -->
+	<npc id="23791" level="85" type="Monster" name="Bathus" title="Marred">
 		<race>HUMAN</race>
 		<sex>FEMALE</sex>
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
@@ -3444,8 +3429,7 @@
 			</spoil>
 		</dropLists>
 	</npc>
-	<npc id="23794" level="85" type="Npc" name="Lucas" title="Marred">
-		<!-- AUTO GENERATED NPC TODO: FIX IT -->
+	<npc id="23794" level="85" type="Monster" name="Lucas" title="Marred">
 		<race>HUMAN</race>
 		<sex>FEMALE</sex>
 		<equipment rhand="15304" />
@@ -3462,8 +3446,7 @@
 			<height normal="42.5" />
 		</collision>
 	</npc>
-	<npc id="23795" level="85" type="Npc" name="Viper Cherkia" title="Oasis Mirage">
-		<!-- AUTO GENERATED NPC TODO: FIX IT -->
+	<npc id="23795" level="85" type="Monster" name="Viper Cherkia" title="Oasis Mirage">
 		<race>HUMAN</race>
 		<sex>FEMALE</sex>
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">

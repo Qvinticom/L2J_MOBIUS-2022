@@ -125,7 +125,6 @@
 		</collision>
 	</npc>
 	<npc id="29103" level="83" type="Monster" name="Baylor" title="Warden">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<skill name="d_skill1" id="5401" level="1" />
 		</parameters>
@@ -163,6 +162,20 @@
 			<radius normal="54" />
 			<height normal="77.5" />
 		</collision>
+		<dropLists>
+			<drop>
+				<!-- Also drops herbs. -->
+				<item id="8600" min="1" max="1" chance="10" /> <!-- Herb of Life -->
+				<item id="8601" min="1" max="1" chance="8" /> <!-- Major Herb of Life -->
+				<item id="8602" min="1" max="1" chance="2" /> <!-- Superior Herb of Life -->
+				<item id="8603" min="1" max="1" chance="19.8" /> <!-- Herb of Mana -->
+				<item id="8604" min="1" max="1" chance="9.9" /> <!-- Major Herb of Mana -->
+				<item id="8605" min="1" max="1" chance="3.3" /> <!-- Superior Herb of Mana -->
+				<item id="34849" min="1" max="1" chance="0.7" /> <!-- Mysterious Herb of Power -->
+				<item id="34850" min="1" max="1" chance="0.7" /> <!-- Mysterious Herb of Magic -->
+				<item id="13028" min="1" max="1" chance="0.1" /> <!-- Vitality Replenishing Herb -->
+			</drop>
+		</dropLists>
 	</npc>
 	<npc id="29104" level="83" type="Monster" name="Crystal Prison Guard">
 		<!-- Confirmed CT2.5 -->
@@ -659,7 +672,6 @@
 		</collision>
 	</npc>
 	<npc id="29118" level="99" type="GrandBoss" name="Beleth">
-		<!-- Confirmed CT2.5 -->
 		<race>HUMANOID</race>
 		<sex>MALE</sex>
 		<acquire exp="16447436" sp="3947" />
@@ -1078,7 +1090,6 @@
 		</collision>
 	</npc>
 	<npc id="29129" level="29" type="RaidBoss" name="Lost Guard Captain">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<minions name="Privates">
 				<npc id="29130" count="2" respawnTime="300" weightPoint="1" />
@@ -1183,7 +1194,6 @@
 		</collision>
 	</npc>
 	<npc id="29132" level="39" type="RaidBoss" name="Lost Guard Captain">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<minions name="Privates">
 				<npc id="29133" count="2" respawnTime="300" weightPoint="1" />
@@ -1336,7 +1346,6 @@
 		</collision>
 	</npc>
 	<npc id="29135" level="49" type="RaidBoss" name="Lost Guard Captain">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<minions name="Privates">
 				<npc id="29136" count="2" respawnTime="300" weightPoint="1" />
@@ -1480,7 +1489,6 @@
 		</collision>
 	</npc>
 	<npc id="29138" level="59" type="RaidBoss" name="Lost Guard Captain">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<minions name="Privates">
 				<npc id="29139" count="2" respawnTime="300" weightPoint="1" />
@@ -1638,7 +1646,6 @@
 		</collision>
 	</npc>
 	<npc id="29141" level="69" type="RaidBoss" name="Lost Guard Captain">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<minions name="Privates">
 				<npc id="29142" count="2" respawnTime="300" weightPoint="1" />
@@ -1788,7 +1795,6 @@
 		</collision>
 	</npc>
 	<npc id="29144" level="78" type="RaidBoss" name="Lost Guard Captain">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<minions name="Privates">
 				<npc id="29145" count="2" respawnTime="150" weightPoint="1" />
@@ -1954,7 +1960,6 @@
 		</collision>
 	</npc>
 	<npc id="29147" level="81" type="RaidBoss" name="Lost Guard Captain">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<minions name="Privates">
 				<npc id="29148" count="2" respawnTime="150" weightPoint="1" />
@@ -2120,7 +2125,6 @@
 		</collision>
 	</npc>
 	<npc id="29150" level="99" type="GrandBoss" name="Ekimus" title="Immortal Lord">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<skill name="Skill_HPBuff" id="5916" level="1" />
 		</parameters>
@@ -2708,7 +2712,6 @@
 		</collision>
 	</npc>
 	<npc id="29163" level="96" type="GrandBoss" name="Tiat" title="Witch of the Dragon of Darkness">
-		<!-- Confirmed CT2.5 -->
 		<race>DRAGON</race>
 		<sex>FEMALE</sex>
 		<acquire exp="10771181568" sp="2585083" raidPoints="21" />
@@ -3205,7 +3208,6 @@
 		</collision>
 	</npc>
 	<npc id="29175" level="82" type="GrandBoss" name="Tiat" title="Witch of the Dragon of Darkness">
-		<!-- Confirmed CT2.5 -->
 		<race>DRAGON</race>
 		<sex>FEMALE</sex>
 		<acquire exp="11480334" sp="2755" raidPoints="0" />
@@ -3262,7 +3264,6 @@
 		</dropLists>
 	</npc>
 	<npc id="29176" level="60" type="GrandBoss" name="Zaken">
-		<!-- Confirmed CT2.5 -->
 		<race>UNDEAD</race>
 		<sex>MALE</sex>
 		<acquire exp="4154684" sp="997" raidPoints="0" />
@@ -3308,7 +3309,6 @@
 		</dropLists>
 	</npc>
 	<npc id="29177" level="85" type="GrandBoss" name="Freya" title="Ice Queen">
-		<!-- Confirmed CT2.5 -->
 		<race>HUMANOID</race>
 		<sex>FEMALE</sex>
 		<stats str="164" int="188" dex="55" wit="78" con="111" men="149">
@@ -3353,7 +3353,6 @@
 		</collision>
 	</npc>
 	<npc id="29178" level="85" type="GrandBoss" name="Freya" title="Ice Queen">
-		<!-- Confirmed CT2.5 -->
 		<race>HUMANOID</race>
 		<sex>FEMALE</sex>
 		<stats str="164" int="188" dex="55" wit="78" con="111" men="149">
@@ -3398,7 +3397,6 @@
 		</collision>
 	</npc>
 	<npc id="29179" level="85" type="GrandBoss" name="Freya" title="Ice Queen">
-		<!-- Confirmed CT2.5 -->
 		<race>HUMANOID</race>
 		<sex>FEMALE</sex>
 		<acquire exp="51569936" sp="12376" raidPoints="0" />
@@ -3491,7 +3489,6 @@
 		</dropLists>
 	</npc>
 	<npc id="29180" level="88" type="GrandBoss" name="Freya" title="Ice Queen">
-		<!-- Confirmed CT2.5 -->
 		<race>HUMANOID</race>
 		<sex>FEMALE</sex>
 		<acquire exp="8789285120" sp="2109428" raidPoints="21" />
@@ -3538,7 +3535,6 @@
 		</collision>
 	</npc>
 	<npc id="29181" level="83" type="GrandBoss" name="Zaken">
-		<!-- Confirmed CT2.5 -->
 		<race>UNDEAD</race>
 		<sex>MALE</sex>
 		<acquire exp="15282888" sp="3667" raidPoints="0" />
@@ -3812,7 +3808,6 @@
 		</collision>
 	</npc>
 	<npc id="29186" level="85" type="GrandBoss" name="Baylor" title="Warden">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<skill name="selfbuff1" id="5221" level="1" />
 			<skill name="selfbuff2" id="5222" level="1" />
@@ -3876,6 +3871,20 @@
 			<radius normal="54" />
 			<height normal="77.5" />
 		</collision>
+		<dropLists>
+			<drop>
+				<!-- Also drops herbs. -->
+				<item id="8600" min="1" max="1" chance="10" /> <!-- Herb of Life -->
+				<item id="8601" min="1" max="1" chance="8" /> <!-- Major Herb of Life -->
+				<item id="8602" min="1" max="1" chance="2" /> <!-- Superior Herb of Life -->
+				<item id="8603" min="1" max="1" chance="19.8" /> <!-- Herb of Mana -->
+				<item id="8604" min="1" max="1" chance="9.9" /> <!-- Major Herb of Mana -->
+				<item id="8605" min="1" max="1" chance="3.3" /> <!-- Superior Herb of Mana -->
+				<item id="34849" min="1" max="1" chance="0.7" /> <!-- Mysterious Herb of Power -->
+				<item id="34850" min="1" max="1" chance="0.7" /> <!-- Mysterious Herb of Magic -->
+				<item id="13028" min="1" max="1" chance="0.1" /> <!-- Vitality Replenishing Herb -->
+			</drop>
+		</dropLists>
 	</npc>
 	<npc id="29187" level="85" type="Monster" name="Crystal Prison Guard">
 		<!-- Confirmed CT2.5 -->
@@ -4065,7 +4074,6 @@
 		</dropLists>
 	</npc>
 	<npc id="29191" level="98" type="RaidBoss" name="Octavis">
-		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<parameters>
 			<skill name="boss_skill_01" id="14285" level="1" /> <!-- Octavis' Arrow Shaft -->
 			<param name="Attack_BoostValue" value="151" />
@@ -4143,7 +4151,6 @@
 		</collision>
 	</npc>
 	<npc id="29193" level="98" type="RaidBoss" name="Octavis">
-		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<parameters>
 			<skill name="boss_skill_01" id="14026" level="1" />
 			<skill name="boss_skill_02" id="14027" level="1" />
@@ -4303,7 +4310,6 @@
 		</dropLists>
 	</npc>
 	<npc id="29195" level="94" type="RaidBoss" name="Istina" title="Queen of Annihilation">
-		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<parameters>
 			<skill name="Istina_Death_Skill01" id="14218" level="1" />
 			<skill name="Istina_Death_Skill02" id="14219" level="1" />
@@ -4446,7 +4452,6 @@
 		</dropLists>
 	</npc>
 	<npc id="29196" level="99" type="RaidBoss" name="Istina" title="Queen of Annihilation">
-		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<parameters>
 			<skill name="Istina_Death_Skill01" id="14218" level="1" />
 			<skill name="Istina_Death_Skill02" id="14219" level="1" />

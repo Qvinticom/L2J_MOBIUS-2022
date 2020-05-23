@@ -1,7 +1,6 @@
 ﻿<?xml version="1.0" encoding="UTF-8"?>
 <list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../xsd/npcs.xsd">
 	<npc id="22602" level="73" type="Monster" name="Mutant Bird">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="110" />
 			<param name="MoveAroundSocial1" value="110" />
@@ -77,9 +76,22 @@
 			<radius normal="100" />
 			<height normal="85" />
 		</collision>
+		<dropLists>
+			<drop>
+				<!-- Also drops herbs. -->
+				<item id="8600" min="1" max="1" chance="10" /> <!-- Herb of Life -->
+				<item id="8601" min="1" max="1" chance="8" /> <!-- Major Herb of Life -->
+				<item id="8602" min="1" max="1" chance="2" /> <!-- Superior Herb of Life -->
+				<item id="8603" min="1" max="1" chance="19.8" /> <!-- Herb of Mana -->
+				<item id="8604" min="1" max="1" chance="9.9" /> <!-- Major Herb of Mana -->
+				<item id="8605" min="1" max="1" chance="3.3" /> <!-- Superior Herb of Mana -->
+				<item id="34849" min="1" max="1" chance="0.7" /> <!-- Mysterious Herb of Power -->
+				<item id="34850" min="1" max="1" chance="0.7" /> <!-- Mysterious Herb of Magic -->
+				<item id="13028" min="1" max="1" chance="0.1" /> <!-- Vitality Replenishing Herb -->
+			</drop>
+		</dropLists>
 	</npc>
 	<npc id="22603" level="74" type="Monster" name="Mutant Bird">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="110" />
 			<param name="MoveAroundSocial1" value="110" />
@@ -159,9 +171,22 @@
 			<radius normal="100" />
 			<height normal="85" />
 		</collision>
+		<dropLists>
+			<drop>
+				<!-- Also drops herbs. -->
+				<item id="8600" min="1" max="1" chance="10" /> <!-- Herb of Life -->
+				<item id="8601" min="1" max="1" chance="8" /> <!-- Major Herb of Life -->
+				<item id="8602" min="1" max="1" chance="2" /> <!-- Superior Herb of Life -->
+				<item id="8603" min="1" max="1" chance="19.8" /> <!-- Herb of Mana -->
+				<item id="8604" min="1" max="1" chance="9.9" /> <!-- Major Herb of Mana -->
+				<item id="8605" min="1" max="1" chance="3.3" /> <!-- Superior Herb of Mana -->
+				<item id="34849" min="1" max="1" chance="0.7" /> <!-- Mysterious Herb of Power -->
+				<item id="34850" min="1" max="1" chance="0.7" /> <!-- Mysterious Herb of Magic -->
+				<item id="13028" min="1" max="1" chance="0.1" /> <!-- Vitality Replenishing Herb -->
+			</drop>
+		</dropLists>
 	</npc>
 	<npc id="22604" level="74" type="Monster" name="Dra Hawk">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="90" />
 			<param name="MoveAroundSocial1" value="90" />
@@ -236,9 +261,22 @@
 			<radius normal="110" />
 			<height normal="35" />
 		</collision>
+		<dropLists>
+			<drop>
+				<!-- Also drops herbs. -->
+				<item id="8600" min="1" max="1" chance="10" /> <!-- Herb of Life -->
+				<item id="8601" min="1" max="1" chance="8" /> <!-- Major Herb of Life -->
+				<item id="8602" min="1" max="1" chance="2" /> <!-- Superior Herb of Life -->
+				<item id="8603" min="1" max="1" chance="19.8" /> <!-- Herb of Mana -->
+				<item id="8604" min="1" max="1" chance="9.9" /> <!-- Major Herb of Mana -->
+				<item id="8605" min="1" max="1" chance="3.3" /> <!-- Superior Herb of Mana -->
+				<item id="34849" min="1" max="1" chance="0.7" /> <!-- Mysterious Herb of Power -->
+				<item id="34850" min="1" max="1" chance="0.7" /> <!-- Mysterious Herb of Magic -->
+				<item id="13028" min="1" max="1" chance="0.1" /> <!-- Vitality Replenishing Herb -->
+			</drop>
+		</dropLists>
 	</npc>
 	<npc id="22605" level="75" type="Monster" name="Dra Hawk">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="90" />
 			<param name="MoveAroundSocial1" value="90" />
@@ -313,9 +351,22 @@
 			<radius normal="110" />
 			<height normal="35" />
 		</collision>
+		<dropLists>
+			<drop>
+				<!-- Also drops herbs. -->
+				<item id="8600" min="1" max="1" chance="10" /> <!-- Herb of Life -->
+				<item id="8601" min="1" max="1" chance="8" /> <!-- Major Herb of Life -->
+				<item id="8602" min="1" max="1" chance="2" /> <!-- Superior Herb of Life -->
+				<item id="8603" min="1" max="1" chance="19.8" /> <!-- Herb of Mana -->
+				<item id="8604" min="1" max="1" chance="9.9" /> <!-- Major Herb of Mana -->
+				<item id="8605" min="1" max="1" chance="3.3" /> <!-- Superior Herb of Mana -->
+				<item id="34849" min="1" max="1" chance="0.7" /> <!-- Mysterious Herb of Power -->
+				<item id="34850" min="1" max="1" chance="0.7" /> <!-- Mysterious Herb of Magic -->
+				<item id="13028" min="1" max="1" chance="0.1" /> <!-- Vitality Replenishing Herb -->
+			</drop>
+		</dropLists>
 	</npc>
 	<npc id="22606" level="76" type="Monster" name="Floating Skeleton">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="100" />
 			<param name="MoveAroundSocial1" value="100" />
@@ -397,9 +448,22 @@
 			<radius normal="28" />
 			<height normal="39" />
 		</collision>
+		<dropLists>
+			<drop>
+				<!-- Also drops herbs. -->
+				<item id="8600" min="1" max="1" chance="10" /> <!-- Herb of Life -->
+				<item id="8601" min="1" max="1" chance="8" /> <!-- Major Herb of Life -->
+				<item id="8602" min="1" max="1" chance="2" /> <!-- Superior Herb of Life -->
+				<item id="8603" min="1" max="1" chance="19.8" /> <!-- Herb of Mana -->
+				<item id="8604" min="1" max="1" chance="9.9" /> <!-- Major Herb of Mana -->
+				<item id="8605" min="1" max="1" chance="3.3" /> <!-- Superior Herb of Mana -->
+				<item id="34849" min="1" max="1" chance="0.7" /> <!-- Mysterious Herb of Power -->
+				<item id="34850" min="1" max="1" chance="0.7" /> <!-- Mysterious Herb of Magic -->
+				<item id="13028" min="1" max="1" chance="0.1" /> <!-- Vitality Replenishing Herb -->
+			</drop>
+		</dropLists>
 	</npc>
 	<npc id="22607" level="77" type="Monster" name="Floating Skeleton">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="100" />
 			<param name="MoveAroundSocial1" value="100" />
@@ -469,9 +533,22 @@
 			<radius normal="28" />
 			<height normal="39" />
 		</collision>
+		<dropLists>
+			<drop>
+				<!-- Also drops herbs. -->
+				<item id="8600" min="1" max="1" chance="10" /> <!-- Herb of Life -->
+				<item id="8601" min="1" max="1" chance="8" /> <!-- Major Herb of Life -->
+				<item id="8602" min="1" max="1" chance="2" /> <!-- Superior Herb of Life -->
+				<item id="8603" min="1" max="1" chance="19.8" /> <!-- Herb of Mana -->
+				<item id="8604" min="1" max="1" chance="9.9" /> <!-- Major Herb of Mana -->
+				<item id="8605" min="1" max="1" chance="3.3" /> <!-- Superior Herb of Mana -->
+				<item id="34849" min="1" max="1" chance="0.7" /> <!-- Mysterious Herb of Power -->
+				<item id="34850" min="1" max="1" chance="0.7" /> <!-- Mysterious Herb of Magic -->
+				<item id="13028" min="1" max="1" chance="0.1" /> <!-- Vitality Replenishing Herb -->
+			</drop>
+		</dropLists>
 	</npc>
 	<npc id="22608" level="75" type="Monster" name="Floating Zombie">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="110" />
 			<param name="MoveAroundSocial1" value="110" />
@@ -538,9 +615,22 @@
 			<radius normal="70" />
 			<height normal="50" />
 		</collision>
+		<dropLists>
+			<drop>
+				<!-- Also drops herbs. -->
+				<item id="8600" min="1" max="1" chance="10" /> <!-- Herb of Life -->
+				<item id="8601" min="1" max="1" chance="8" /> <!-- Major Herb of Life -->
+				<item id="8602" min="1" max="1" chance="2" /> <!-- Superior Herb of Life -->
+				<item id="8603" min="1" max="1" chance="19.8" /> <!-- Herb of Mana -->
+				<item id="8604" min="1" max="1" chance="9.9" /> <!-- Major Herb of Mana -->
+				<item id="8605" min="1" max="1" chance="3.3" /> <!-- Superior Herb of Mana -->
+				<item id="34849" min="1" max="1" chance="0.7" /> <!-- Mysterious Herb of Power -->
+				<item id="34850" min="1" max="1" chance="0.7" /> <!-- Mysterious Herb of Magic -->
+				<item id="13028" min="1" max="1" chance="0.1" /> <!-- Vitality Replenishing Herb -->
+			</drop>
+		</dropLists>
 	</npc>
 	<npc id="22609" level="76" type="Monster" name="Floating Zombie">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="110" />
 			<param name="MoveAroundSocial1" value="110" />
@@ -611,9 +701,22 @@
 			<radius normal="70" />
 			<height normal="50" />
 		</collision>
+		<dropLists>
+			<drop>
+				<!-- Also drops herbs. -->
+				<item id="8600" min="1" max="1" chance="10" /> <!-- Herb of Life -->
+				<item id="8601" min="1" max="1" chance="8" /> <!-- Major Herb of Life -->
+				<item id="8602" min="1" max="1" chance="2" /> <!-- Superior Herb of Life -->
+				<item id="8603" min="1" max="1" chance="19.8" /> <!-- Herb of Mana -->
+				<item id="8604" min="1" max="1" chance="9.9" /> <!-- Major Herb of Mana -->
+				<item id="8605" min="1" max="1" chance="3.3" /> <!-- Superior Herb of Mana -->
+				<item id="34849" min="1" max="1" chance="0.7" /> <!-- Mysterious Herb of Power -->
+				<item id="34850" min="1" max="1" chance="0.7" /> <!-- Mysterious Herb of Magic -->
+				<item id="13028" min="1" max="1" chance="0.1" /> <!-- Vitality Replenishing Herb -->
+			</drop>
+		</dropLists>
 	</npc>
 	<npc id="22610" level="75" type="Monster" name="Mutated Drake Wing">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="120" />
 			<param name="MoveAroundSocial1" value="120" />
@@ -687,9 +790,22 @@
 			<radius normal="153" />
 			<height normal="63" />
 		</collision>
+		<dropLists>
+			<drop>
+				<!-- Also drops herbs. -->
+				<item id="8600" min="1" max="1" chance="10" /> <!-- Herb of Life -->
+				<item id="8601" min="1" max="1" chance="8" /> <!-- Major Herb of Life -->
+				<item id="8602" min="1" max="1" chance="2" /> <!-- Superior Herb of Life -->
+				<item id="8603" min="1" max="1" chance="19.8" /> <!-- Herb of Mana -->
+				<item id="8604" min="1" max="1" chance="9.9" /> <!-- Major Herb of Mana -->
+				<item id="8605" min="1" max="1" chance="3.3" /> <!-- Superior Herb of Mana -->
+				<item id="34849" min="1" max="1" chance="0.7" /> <!-- Mysterious Herb of Power -->
+				<item id="34850" min="1" max="1" chance="0.7" /> <!-- Mysterious Herb of Magic -->
+				<item id="13028" min="1" max="1" chance="0.1" /> <!-- Vitality Replenishing Herb -->
+			</drop>
+		</dropLists>
 	</npc>
 	<npc id="22611" level="76" type="Monster" name="Mutated Drake Wing">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="120" />
 			<param name="MoveAroundSocial1" value="120" />
@@ -767,9 +883,22 @@
 			<radius normal="153" />
 			<height normal="63" />
 		</collision>
+		<dropLists>
+			<drop>
+				<!-- Also drops herbs. -->
+				<item id="8600" min="1" max="1" chance="10" /> <!-- Herb of Life -->
+				<item id="8601" min="1" max="1" chance="8" /> <!-- Major Herb of Life -->
+				<item id="8602" min="1" max="1" chance="2" /> <!-- Superior Herb of Life -->
+				<item id="8603" min="1" max="1" chance="19.8" /> <!-- Herb of Mana -->
+				<item id="8604" min="1" max="1" chance="9.9" /> <!-- Major Herb of Mana -->
+				<item id="8605" min="1" max="1" chance="3.3" /> <!-- Superior Herb of Mana -->
+				<item id="34849" min="1" max="1" chance="0.7" /> <!-- Mysterious Herb of Power -->
+				<item id="34850" min="1" max="1" chance="0.7" /> <!-- Mysterious Herb of Magic -->
+				<item id="13028" min="1" max="1" chance="0.1" /> <!-- Vitality Replenishing Herb -->
+			</drop>
+		</dropLists>
 	</npc>
 	<npc id="22612" level="76" type="Monster" name="Drak">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="80" />
 			<param name="MoveAroundSocial1" value="80" />
@@ -850,9 +979,22 @@
 			<radius normal="100" />
 			<height normal="40" />
 		</collision>
+		<dropLists>
+			<drop>
+				<!-- Also drops herbs. -->
+				<item id="8600" min="1" max="1" chance="10" /> <!-- Herb of Life -->
+				<item id="8601" min="1" max="1" chance="8" /> <!-- Major Herb of Life -->
+				<item id="8602" min="1" max="1" chance="2" /> <!-- Superior Herb of Life -->
+				<item id="8603" min="1" max="1" chance="19.8" /> <!-- Herb of Mana -->
+				<item id="8604" min="1" max="1" chance="9.9" /> <!-- Major Herb of Mana -->
+				<item id="8605" min="1" max="1" chance="3.3" /> <!-- Superior Herb of Mana -->
+				<item id="34849" min="1" max="1" chance="0.7" /> <!-- Mysterious Herb of Power -->
+				<item id="34850" min="1" max="1" chance="0.7" /> <!-- Mysterious Herb of Magic -->
+				<item id="13028" min="1" max="1" chance="0.1" /> <!-- Vitality Replenishing Herb -->
+			</drop>
+		</dropLists>
 	</npc>
 	<npc id="22613" level="77" type="Monster" name="Drak">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="80" />
 			<param name="MoveAroundSocial1" value="80" />
@@ -931,9 +1073,22 @@
 			<radius normal="100" />
 			<height normal="40" />
 		</collision>
+		<dropLists>
+			<drop>
+				<!-- Also drops herbs. -->
+				<item id="8600" min="1" max="1" chance="10" /> <!-- Herb of Life -->
+				<item id="8601" min="1" max="1" chance="8" /> <!-- Major Herb of Life -->
+				<item id="8602" min="1" max="1" chance="2" /> <!-- Superior Herb of Life -->
+				<item id="8603" min="1" max="1" chance="19.8" /> <!-- Herb of Mana -->
+				<item id="8604" min="1" max="1" chance="9.9" /> <!-- Major Herb of Mana -->
+				<item id="8605" min="1" max="1" chance="3.3" /> <!-- Superior Herb of Mana -->
+				<item id="34849" min="1" max="1" chance="0.7" /> <!-- Mysterious Herb of Power -->
+				<item id="34850" min="1" max="1" chance="0.7" /> <!-- Mysterious Herb of Magic -->
+				<item id="13028" min="1" max="1" chance="0.1" /> <!-- Vitality Replenishing Herb -->
+			</drop>
+		</dropLists>
 	</npc>
 	<npc id="22614" level="74" type="Monster" name="Vulture Rider">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="105" />
 			<param name="MoveAroundSocial1" value="105" />
@@ -1009,9 +1164,22 @@
 			<radius normal="123" />
 			<height normal="90" />
 		</collision>
+		<dropLists>
+			<drop>
+				<!-- Also drops herbs. -->
+				<item id="8600" min="1" max="1" chance="10" /> <!-- Herb of Life -->
+				<item id="8601" min="1" max="1" chance="8" /> <!-- Major Herb of Life -->
+				<item id="8602" min="1" max="1" chance="2" /> <!-- Superior Herb of Life -->
+				<item id="8603" min="1" max="1" chance="19.8" /> <!-- Herb of Mana -->
+				<item id="8604" min="1" max="1" chance="9.9" /> <!-- Major Herb of Mana -->
+				<item id="8605" min="1" max="1" chance="3.3" /> <!-- Superior Herb of Mana -->
+				<item id="34849" min="1" max="1" chance="0.7" /> <!-- Mysterious Herb of Power -->
+				<item id="34850" min="1" max="1" chance="0.7" /> <!-- Mysterious Herb of Magic -->
+				<item id="13028" min="1" max="1" chance="0.1" /> <!-- Vitality Replenishing Herb -->
+			</drop>
+		</dropLists>
 	</npc>
 	<npc id="22615" level="74" type="Monster" name="Vulture Rider">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="105" />
 			<param name="MoveAroundSocial1" value="105" />
@@ -1089,9 +1257,22 @@
 			<radius normal="123" />
 			<height normal="90" />
 		</collision>
+		<dropLists>
+			<drop>
+				<!-- Also drops herbs. -->
+				<item id="8600" min="1" max="1" chance="10" /> <!-- Herb of Life -->
+				<item id="8601" min="1" max="1" chance="8" /> <!-- Major Herb of Life -->
+				<item id="8602" min="1" max="1" chance="2" /> <!-- Superior Herb of Life -->
+				<item id="8603" min="1" max="1" chance="19.8" /> <!-- Herb of Mana -->
+				<item id="8604" min="1" max="1" chance="9.9" /> <!-- Major Herb of Mana -->
+				<item id="8605" min="1" max="1" chance="3.3" /> <!-- Superior Herb of Mana -->
+				<item id="34849" min="1" max="1" chance="0.7" /> <!-- Mysterious Herb of Power -->
+				<item id="34850" min="1" max="1" chance="0.7" /> <!-- Mysterious Herb of Magic -->
+				<item id="13028" min="1" max="1" chance="0.1" /> <!-- Vitality Replenishing Herb -->
+			</drop>
+		</dropLists>
 	</npc>
 	<npc id="22616" level="81" type="Monster" name="Seed of Pain">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<skill name="Skill01_ID" id="5882" level="1" />
 			<skill name="Skill02_ID" id="5890" level="1" />
@@ -1145,7 +1326,6 @@
 		</collision>
 	</npc>
 	<npc id="22617" level="82" type="Monster" name="Spiked Stakato">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<skill name="PhysicalSpecial" id="4032" level="9" />
 		</parameters>
@@ -1202,7 +1382,6 @@
 		</dropLists>
 	</npc>
 	<npc id="22618" level="82" type="Monster" name="Spiked Stakato Worker">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<skill name="PhysicalSpecial" id="4067" level="9" />
 		</parameters>
@@ -1262,7 +1441,6 @@
 		</dropLists>
 	</npc>
 	<npc id="22619" level="82" type="Monster" name="Spiked Stakato Guard">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<skill name="PhysicalSpecial" id="4067" level="9" />
 		</parameters>
@@ -1320,7 +1498,6 @@
 		</dropLists>
 	</npc>
 	<npc id="22620" level="82" type="Monster" name="Female Spiked Stakato">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="ai_type" value="n_spike_stakato_guard" />
 			<param name="silhouette" value="22619" />
@@ -1389,7 +1566,6 @@
 		</dropLists>
 	</npc>
 	<npc id="22621" level="82" type="Monster" name="Male Spiked Stakato">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<minions name="Privates">
 				<npc id="22620" count="1" respawnTime="0" weightPoint="1" />
@@ -1433,9 +1609,22 @@
 			<radius normal="18" />
 			<height normal="31" />
 		</collision>
+		<dropLists>
+			<drop>
+				<!-- Also drops herbs. -->
+				<item id="8600" min="1" max="1" chance="10" /> <!-- Herb of Life -->
+				<item id="8601" min="1" max="1" chance="8" /> <!-- Major Herb of Life -->
+				<item id="8602" min="1" max="1" chance="2" /> <!-- Superior Herb of Life -->
+				<item id="8603" min="1" max="1" chance="19.8" /> <!-- Herb of Mana -->
+				<item id="8604" min="1" max="1" chance="9.9" /> <!-- Major Herb of Mana -->
+				<item id="8605" min="1" max="1" chance="3.3" /> <!-- Superior Herb of Mana -->
+				<item id="34849" min="1" max="1" chance="0.7" /> <!-- Mysterious Herb of Power -->
+				<item id="34850" min="1" max="1" chance="0.7" /> <!-- Mysterious Herb of Magic -->
+				<item id="13028" min="1" max="1" chance="0.1" /> <!-- Vitality Replenishing Herb -->
+			</drop>
+		</dropLists>
 	</npc>
 	<npc id="22622" level="82" type="Monster" name="Male Spiked Stakato">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<skill name="PhysicalSpecial" id="4232" level="9" />
 			<skill name="SelfRangeDDMagic" id="4571" level="7" />
@@ -1513,7 +1702,6 @@
 		</dropLists>
 	</npc>
 	<npc id="22623" level="82" type="Monster" name="Spiked Stakato Wizard">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<skill name="W_LongRangeDDMagic" id="4563" level="9" />
 			<skill name="W_ShortRangeDDMagic" id="4257" level="9" />
@@ -1575,7 +1763,6 @@
 		</dropLists>
 	</npc>
 	<npc id="22624" level="82" type="Monster" name="Cannibalistic Stakato Subordinate">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<skill name="PhysicalSpecial1" id="4232" level="8" />
 			<skill name="PhysicalSpecial2" id="6167" level="9" />
@@ -1639,7 +1826,6 @@
 		</dropLists>
 	</npc>
 	<npc id="22625" level="83" type="Monster" name="Cannibalistic Stakato Leader">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<minions name="Privates">
 				<npc id="22624" count="1" respawnTime="0" weightPoint="1" />
@@ -1686,7 +1872,6 @@
 		</collision>
 	</npc>
 	<npc id="22626" level="83" type="Monster" name="Cannibalistic Stakato Leader">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<skill name="PhysicalSpecial" id="6167" level="9" />
 			<skill name="SelfRangeDDMagic" id="4571" level="8" />
@@ -1753,7 +1938,6 @@
 		</dropLists>
 	</npc>
 	<npc id="22627" level="83" type="Monster" name="Spiked Stakato Soldier">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<skill name="PhysicalSpecial" id="4032" level="9" />
 		</parameters>
@@ -1811,7 +1995,6 @@
 		</dropLists>
 	</npc>
 	<npc id="22628" level="83" type="Monster" name="Spiked Stakato Drone">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<skill name="PhysicalSpecial" id="4232" level="9" />
 		</parameters>
@@ -1870,7 +2053,6 @@
 		</dropLists>
 	</npc>
 	<npc id="22629" level="83" type="Monster" name="Spiked Stakato Guard Captain">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<skill name="PhysicalSpecial" id="4032" level="9" />
 		</parameters>
@@ -1930,7 +2112,6 @@
 		</dropLists>
 	</npc>
 	<npc id="22630" level="83" type="Monster" name="Spiked Stakato Nurse">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<minions name="Privates">
 				<npc id="22632" count="1" respawnTime="0" weightPoint="1" />
@@ -2000,7 +2181,6 @@
 		</dropLists>
 	</npc>
 	<npc id="22631" level="83" type="Monster" name="Spiked Stakato Nurse">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<skill name="DDMagic1" id="4100" level="9" />
 			<skill name="DDMagic2" id="4078" level="9" />
@@ -2065,7 +2245,6 @@
 		</dropLists>
 	</npc>
 	<npc id="22632" level="82" type="Monster" name="Spiked Stakato Baby">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="ai_type" value="n_spike_stakato_raider" />
 			<param name="silhouette" value="22629" />
@@ -2108,7 +2287,6 @@
 		</collision>
 	</npc>
 	<npc id="22633" level="83" type="Monster" name="Spiked Stakato Shaman">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<skill name="W_LongRangeDDMagic" id="4563" level="9" />
 			<skill name="W_ShortRangeDDMagic" id="4158" level="9" />
@@ -2172,7 +2350,6 @@
 		</dropLists>
 	</npc>
 	<npc id="22634" level="78" type="Monster" name="Scarlet Stakato Worker">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="IsAggressive" value="1" />
 			<skill name="Skill01_ID" id="4560" level="9" />
@@ -2228,7 +2405,6 @@
 		</dropLists>
 	</npc>
 	<npc id="22635" level="78" type="Monster" name="Scarlet Stakato Soldier">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="IsAggressive" value="1" />
 			<skill name="Skill01_ID" id="4580" level="9" />
@@ -2285,7 +2461,6 @@
 		</dropLists>
 	</npc>
 	<npc id="22636" level="78" type="Monster" name="Scarlet Stakato Noble">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="IsAggressive" value="1" />
 			<param name="Skill01_AttackSplash" value="1" />
@@ -2341,7 +2516,6 @@
 		</dropLists>
 	</npc>
 	<npc id="22637" level="78" type="Monster" name="Tepra Scorpion">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="IsAggressive" value="1" />
 			<skill name="Skill01_ID" id="4560" level="9" />
@@ -2397,7 +2571,6 @@
 		</dropLists>
 	</npc>
 	<npc id="22638" level="78" type="Monster" name="Tepra Scarab">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="IsAggressive" value="1" />
 			<skill name="Skill01_ID" id="4560" level="9" />
@@ -2453,7 +2626,6 @@
 		</dropLists>
 	</npc>
 	<npc id="22639" level="78" type="Monster" name="Assassin Beetle">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="IsAggressive" value="1" />
 			<param name="Skill01_AttackSplash" value="1" />
@@ -2510,7 +2682,6 @@
 		</dropLists>
 	</npc>
 	<npc id="22640" level="78" type="Monster" name="Mercenary of Destruction">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="IsAggressive" value="1" />
 			<param name="Skill01_AttackSplash" value="1" />
@@ -2568,7 +2739,6 @@
 		</dropLists>
 	</npc>
 	<npc id="22641" level="78" type="Monster" name="Knight of Destruction">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="IsAggressive" value="1" />
 			<skill name="Skill01_ID" id="4560" level="9" />
@@ -2624,7 +2794,6 @@
 		</dropLists>
 	</npc>
 	<npc id="22642" level="78" type="Monster" name="Lavastone Golem">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="IsAggressive" value="1" />
 			<skill name="Skill01_ID" id="4591" level="9" />
@@ -2680,7 +2849,6 @@
 		</dropLists>
 	</npc>
 	<npc id="22643" level="78" type="Monster" name="Magma Golem">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="IsAggressive" value="1" />
 			<skill name="Skill01_ID" id="4157" level="9" />
@@ -2737,7 +2905,6 @@
 		</dropLists>
 	</npc>
 	<npc id="22644" level="78" type="Monster" name="Arimanes of Destruction">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="IsAggressive" value="1" />
 			<skill name="Skill01_ID" id="4589" level="9" />
@@ -2797,7 +2964,6 @@
 		</dropLists>
 	</npc>
 	<npc id="22645" level="78" type="Monster" name="Balor of Destruction">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="IsAggressive" value="1" />
 			<skill name="Skill01_ID" id="4599" level="9" />
@@ -2857,7 +3023,6 @@
 		</dropLists>
 	</npc>
 	<npc id="22646" level="78" type="Monster" name="Ashuras of Destruction">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="IsAggressive" value="1" />
 			<param name="Skill01_AttackSplash" value="1" />
@@ -2916,7 +3081,6 @@
 		</dropLists>
 	</npc>
 	<npc id="22647" level="78" type="Monster" name="Lavasillisk">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="IsAggressive" value="1" />
 			<skill name="Skill01_ID" id="4560" level="9" /> <!-- NPC Fire Burn -->
@@ -2973,7 +3137,6 @@
 		</dropLists>
 	</npc>
 	<npc id="22648" level="78" type="Monster" name="Blazing Ifrit">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="IsAggressive" value="1" />
 			<skill name="Skill01_ID" id="4605" level="9" />
@@ -3028,7 +3191,6 @@
 		</dropLists>
 	</npc>
 	<npc id="22649" level="78" type="Monster" name="Magma Drake">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="IsAggressive" value="1" />
 			<skill name="Skill01_ID" id="4560" level="9" />
@@ -3081,7 +3243,6 @@
 		</dropLists>
 	</npc>
 	<npc id="22650" level="83" type="Monster" name="Mucrokian Fanatic">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<skill name="Skill01_ID" id="4670" level="9" />
 			<skill name="Skill02_ID" id="5909" level="1" />
@@ -3153,7 +3314,6 @@
 		</dropLists>
 	</npc>
 	<npc id="22651" level="83" type="Monster" name="Mucrokian Ascetic">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<skill name="Skill01_ID" id="4582" level="9" />
 			<skill name="Skill02_ID" id="5909" level="1" />
@@ -3229,7 +3389,6 @@
 		</dropLists>
 	</npc>
 	<npc id="22652" level="84" type="Monster" name="Mucrokian Savior">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<skill name="Skill01_ID" id="4670" level="9" />
 			<skill name="Skill02_ID" id="5909" level="1" />
@@ -3305,7 +3464,6 @@
 		</dropLists>
 	</npc>
 	<npc id="22653" level="84" type="Monster" name="Mucrokian Prophet">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<skill name="Skill01_ID" id="4582" level="9" />
 			<skill name="Skill02_ID" id="5909" level="1" />
@@ -3376,7 +3534,6 @@
 		</dropLists>
 	</npc>
 	<npc id="22654" level="83" type="Monster" name="Contaminated Mucrokian">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="IsAggressive" value="1" />
 			<skill name="Skill01_ID" id="4067" level="9" />
@@ -3448,7 +3605,6 @@
 		</dropLists>
 	</npc>
 	<npc id="22655" level="84" type="Monster" name="Awakened Mucrokian">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<skill name="Skill01_ID" id="4072" level="9" />
 			<skill name="Skill02_ID" id="5909" level="1" />
@@ -3525,7 +3681,6 @@
 		</dropLists>
 	</npc>
 	<npc id="22656" level="83" type="Monster" name="Suppressor">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<skill name="Skill01_ID" id="4670" level="9" />
 			<skill name="Skill02_ID" id="5909" level="1" />
@@ -3600,7 +3755,6 @@
 		</dropLists>
 	</npc>
 	<npc id="22657" level="84" type="Monster" name="Executioner">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<skill name="Skill01_ID" id="4670" level="9" />
 			<skill name="Skill02_ID" id="5909" level="1" />
@@ -3676,7 +3830,6 @@
 		</dropLists>
 	</npc>
 	<npc id="22658" level="83" type="Monster" name="Sentinel Waterspirit">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<skill name="Skill01_ID" id="4582" level="9" />
 			<skill name="Skill02_ID" id="5910" level="1" />
@@ -3748,7 +3901,6 @@
 		</dropLists>
 	</npc>
 	<npc id="22659" level="84" type="Monster" name="Guardian Waterspirit">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<skill name="Skill01_ID" id="4582" level="9" />
 			<skill name="Skill02_ID" id="5910" level="1" />
@@ -3825,7 +3977,6 @@
 		</dropLists>
 	</npc>
 	<npc id="22678" level="81" type="Monster" name="Grave Robber Summoner" title="Lunatic">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<minions name="Privates1">
 				<npc id="22683" count="1" respawnTime="0" weightPoint="1" />
@@ -3904,7 +4055,6 @@
 		</dropLists>
 	</npc>
 	<npc id="22679" level="82" type="Monster" name="Grave Robber Wizard" title="Lunatic">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<minions name="Privates1">
 				<npc id="22685" count="1" respawnTime="0" weightPoint="1" />
@@ -3983,7 +4133,6 @@
 		</dropLists>
 	</npc>
 	<npc id="22680" level="81" type="Monster" name="Grave Robber Worker" title="Lunatic">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<skill name="Skill01_ID" id="5082" level="1" />
 			<skill name="SelfBuff" id="6145" level="1" />
@@ -4050,7 +4199,6 @@
 		</dropLists>
 	</npc>
 	<npc id="22681" level="82" type="Monster" name="Grave Robber Warrior" title="Lunatic">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="DeBuffProb" value="2000" />
 			<skill name="Skill01_ID" id="5082" level="1" />
@@ -4120,7 +4268,6 @@
 		</dropLists>
 	</npc>
 	<npc id="22682" level="82" type="Monster" name="Grave Robber Berserker" title="Lunatic">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="IsAggressive" value="1" />
 			<skill name="Skill01_ID" id="4643" level="9" />
@@ -4190,7 +4337,6 @@
 		</dropLists>
 	</npc>
 	<npc id="22683" level="81" type="Monster" name="Servitor of Darkness">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<skill name="Skill01_ID" id="4643" level="9" />
 		</parameters>
@@ -4254,7 +4400,6 @@
 		</dropLists>
 	</npc>
 	<npc id="22684" level="81" type="Monster" name="Servitor of Darkness">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<skill name="Skill01_ID" id="4573" level="9" />
 		</parameters>
@@ -4286,9 +4431,22 @@
 			<radius normal="10" />
 			<height normal="25" />
 		</collision>
+		<dropLists>
+			<drop>
+				<!-- Also drops herbs. -->
+				<item id="8600" min="1" max="1" chance="10" /> <!-- Herb of Life -->
+				<item id="8601" min="1" max="1" chance="8" /> <!-- Major Herb of Life -->
+				<item id="8602" min="1" max="1" chance="2" /> <!-- Superior Herb of Life -->
+				<item id="8603" min="1" max="1" chance="19.8" /> <!-- Herb of Mana -->
+				<item id="8604" min="1" max="1" chance="9.9" /> <!-- Major Herb of Mana -->
+				<item id="8605" min="1" max="1" chance="3.3" /> <!-- Superior Herb of Mana -->
+				<item id="34849" min="1" max="1" chance="0.7" /> <!-- Mysterious Herb of Power -->
+				<item id="34850" min="1" max="1" chance="0.7" /> <!-- Mysterious Herb of Magic -->
+				<item id="13028" min="1" max="1" chance="0.1" /> <!-- Vitality Replenishing Herb -->
+			</drop>
+		</dropLists>
 	</npc>
 	<npc id="22685" level="82" type="Monster" name="Servitor of Darkness">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<skill name="Skill01_ID" id="4573" level="9" />
 		</parameters>
@@ -4352,7 +4510,6 @@
 		</dropLists>
 	</npc>
 	<npc id="22686" level="82" type="Monster" name="Servitor of Darkness">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<skill name="Skill01_ID" id="4573" level="9" />
 		</parameters>
@@ -4383,9 +4540,22 @@
 			<radius normal="12.5" />
 			<height normal="33.5" />
 		</collision>
+		<dropLists>
+			<drop>
+				<!-- Also drops herbs. -->
+				<item id="8600" min="1" max="1" chance="10" /> <!-- Herb of Life -->
+				<item id="8601" min="1" max="1" chance="8" /> <!-- Major Herb of Life -->
+				<item id="8602" min="1" max="1" chance="2" /> <!-- Superior Herb of Life -->
+				<item id="8603" min="1" max="1" chance="19.8" /> <!-- Herb of Mana -->
+				<item id="8604" min="1" max="1" chance="9.9" /> <!-- Major Herb of Mana -->
+				<item id="8605" min="1" max="1" chance="3.3" /> <!-- Superior Herb of Mana -->
+				<item id="34849" min="1" max="1" chance="0.7" /> <!-- Mysterious Herb of Power -->
+				<item id="34850" min="1" max="1" chance="0.7" /> <!-- Mysterious Herb of Magic -->
+				<item id="13028" min="1" max="1" chance="0.1" /> <!-- Vitality Replenishing Herb -->
+			</drop>
+		</dropLists>
 	</npc>
 	<npc id="22687" level="81" type="Monster" name="Phantoms of the Mine">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="DeBuffProb" value="2000" />
 			<param name="IsAggressive" value="1" />
@@ -4459,7 +4629,6 @@
 		</dropLists>
 	</npc>
 	<npc id="22688" level="82" type="Monster" name="Evil Spirits of the Mine">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="SelfRangeBuffProb" value="3333" />
 			<param name="IsAggressive" value="1" />
@@ -4528,7 +4697,6 @@
 		</dropLists>
 	</npc>
 	<npc id="22689" level="82" type="Monster" name="Spelunking Bug">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="IsAggressive" value="1" />
 			<skill name="SelfBuff" id="6145" level="1" />
@@ -4595,7 +4763,6 @@
 		</dropLists>
 	</npc>
 	<npc id="22690" level="82" type="Monster" name="Earth Wyrm's Descendant">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="DeBuffProb" value="5000" />
 			<skill name="Skill01_ID" id="4582" level="9" />
@@ -4662,7 +4829,6 @@
 		</dropLists>
 	</npc>
 	<npc id="22691" level="81" type="Monster" name="Ragna Orc" title="Spirit Infested">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<skill name="Skill01_ID" id="4032" level="9" />
 		</parameters>
@@ -4734,7 +4900,6 @@
 		</dropLists>
 	</npc>
 	<npc id="22692" level="82" type="Monster" name="Ragna Orc Warrior" title="Spirit Infested">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="BuffDelay" value="10" />
 			<skill name="Skill01_ID" id="4032" level="9" />
@@ -4812,7 +4977,6 @@
 		</dropLists>
 	</npc>
 	<npc id="22693" level="82" type="Monster" name="Ragna Orc Hero" title="Spirit Infested">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="IsAggressive" value="1" />
 			<param name="BuffDelay" value="10" />
@@ -4860,9 +5024,22 @@
 			<radius normal="12" />
 			<height normal="28" />
 		</collision>
+		<dropLists>
+			<drop>
+				<!-- Also drops herbs. -->
+				<item id="8600" min="1" max="1" chance="10" /> <!-- Herb of Life -->
+				<item id="8601" min="1" max="1" chance="8" /> <!-- Major Herb of Life -->
+				<item id="8602" min="1" max="1" chance="2" /> <!-- Superior Herb of Life -->
+				<item id="8603" min="1" max="1" chance="19.8" /> <!-- Herb of Mana -->
+				<item id="8604" min="1" max="1" chance="9.9" /> <!-- Major Herb of Mana -->
+				<item id="8605" min="1" max="1" chance="3.3" /> <!-- Superior Herb of Mana -->
+				<item id="34849" min="1" max="1" chance="0.7" /> <!-- Mysterious Herb of Power -->
+				<item id="34850" min="1" max="1" chance="0.7" /> <!-- Mysterious Herb of Magic -->
+				<item id="13028" min="1" max="1" chance="0.1" /> <!-- Vitality Replenishing Herb -->
+			</drop>
+		</dropLists>
 	</npc>
 	<npc id="22694" level="82" type="Monster" name="Ragna Orc Commander" title="Spirit Infested">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="IsAggressive" value="1" />
 			<minions name="Privates1">
@@ -4955,7 +5132,6 @@
 		</dropLists>
 	</npc>
 	<npc id="22695" level="81" type="Monster" name="Ragna Orc Healer" title="Spirit Infested">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="HealProb" value="3333" />
 			<param name="SelfRangeHealProb" value="1500" />
@@ -5036,7 +5212,6 @@
 		</dropLists>
 	</npc>
 	<npc id="22696" level="81" type="Monster" name="Ragna Orc Shaman" title="Spirit Infested">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="SelfRangeHealProb" value="1000" />
 			<skill name="Skill01_ID" id="4158" level="9" />
@@ -5122,7 +5297,6 @@
 		</dropLists>
 	</npc>
 	<npc id="22697" level="82" type="Monster" name="Ragna Orc Priest" title="Spirit Infested">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="IsAggressive" value="1" />
 			<param name="DeBuffProb" value="2000" />
@@ -5170,9 +5344,22 @@
 			<radius normal="9" />
 			<height normal="27" />
 		</collision>
+		<dropLists>
+			<drop>
+				<!-- Also drops herbs. -->
+				<item id="8600" min="1" max="1" chance="10" /> <!-- Herb of Life -->
+				<item id="8601" min="1" max="1" chance="8" /> <!-- Major Herb of Life -->
+				<item id="8602" min="1" max="1" chance="2" /> <!-- Superior Herb of Life -->
+				<item id="8603" min="1" max="1" chance="19.8" /> <!-- Herb of Mana -->
+				<item id="8604" min="1" max="1" chance="9.9" /> <!-- Major Herb of Mana -->
+				<item id="8605" min="1" max="1" chance="3.3" /> <!-- Superior Herb of Mana -->
+				<item id="34849" min="1" max="1" chance="0.7" /> <!-- Mysterious Herb of Power -->
+				<item id="34850" min="1" max="1" chance="0.7" /> <!-- Mysterious Herb of Magic -->
+				<item id="13028" min="1" max="1" chance="0.1" /> <!-- Vitality Replenishing Herb -->
+			</drop>
+		</dropLists>
 	</npc>
 	<npc id="22698" level="81" type="Monster" name="Ragna Orc Archer" title="Spirit Infested">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="IsAggressive" value="1" />
 			<skill name="Skill01_ID" id="4040" level="9" />
@@ -5250,7 +5437,6 @@
 		</dropLists>
 	</npc>
 	<npc id="22699" level="82" type="Monster" name="Ragna Orc Sniper" title="Spirit Infested">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="IsAggressive" value="1" />
 			<skill name="Skill01_ID" id="4040" level="9" />

@@ -1,7 +1,6 @@
 ﻿<?xml version="1.0" encoding="UTF-8"?>
 <list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../xsd/npcs.xsd">
 	<npc id="23400" level="99" type="Monster" name="Lavisys" title="Magical">
-		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<race>BEAST</race>
 		<sex>FEMALE</sex>
 		<acquire exp="4894979" sp="11747" />
@@ -27,15 +26,25 @@
 		</skillList>
 		<dropLists>
 			<drop>
-				<item id="57" min="8810" max="20521" chance="100" /> <!-- Adena -->
-				<item id="37776" min="1" max="1" chance="2.36190476190476" /> <!-- Scroll of Blessing Scraps: Weapon (R-grade) -->
-				<item id="37791" min="1" max="1" chance="2.36190476190476" /> <!-- Sealed Demonic Tome -->
-				<item id="37773" min="1" max="1" chance="0.236190476190476" /> <!-- Recipe: Scroll of Blessing: Weapon (R-grade) -->
+				<item id="57" min="10572" max="24625" chance="30" /> <!-- Adena -->
+				<item id="37791" min="1" max="1" chance="0.3003003003003" /> <!-- Sealed Demonic Tome -->
+				<item id="37776" min="1" max="1" chance="0.3003003003003" /> <!-- Scroll of Blessing Scraps: Weapon (R-grade) -->
+				<item id="37773" min="1" max="1" chance="0.03000300030003" /> <!-- Recipe: Scroll of Blessing: Weapon (R-grade) -->
+				<!-- Also drops herbs. -->
+				<item id="8600" min="1" max="1" chance="10" /> <!-- Herb of Life -->
+				<item id="8601" min="1" max="1" chance="8" /> <!-- Major Herb of Life -->
+				<item id="8602" min="1" max="1" chance="2" /> <!-- Superior Herb of Life -->
+				<item id="8603" min="1" max="1" chance="19.8" /> <!-- Herb of Mana -->
+				<item id="8604" min="1" max="1" chance="9.9" /> <!-- Major Herb of Mana -->
+				<item id="8605" min="1" max="1" chance="3.3" /> <!-- Superior Herb of Mana -->
+				<item id="34849" min="1" max="1" chance="0.7" /> <!-- Mysterious Herb of Power -->
+				<item id="34850" min="1" max="1" chance="0.7" /> <!-- Mysterious Herb of Magic -->
+				<item id="13028" min="1" max="1" chance="0.1" /> <!-- Vitality Replenishing Herb -->
 			</drop>
 			<spoil>
-				<item id="40049" min="1" max="1" chance="50.15" /> <!-- Scroll: 1,000 SP -->
-				<item id="40050" min="1" max="1" chance="5.117" /> <!-- Scroll: 10,000 SP -->
-				<item id="40051" min="1" max="1" chance="0.75" /> <!-- Scroll: 100,000 SP -->
+				<item id="40049" min="1" max="1" chance="50" /> <!-- Scroll: 1,000 SP -->
+				<item id="40050" min="1" max="1" chance="5" /> <!-- Scroll: 10,000 SP -->
+				<item id="40051" min="1" max="1" chance="0.75187969924812" /> <!-- Scroll: 100,000 SP -->
 			</spoil>
 			<lucky>
 				<item id="39629" min="1" max="1" chance="100" /> <!-- Fortune Pocket - Stage 1 -->
@@ -47,7 +56,6 @@
 		</collision>
 	</npc>
 	<npc id="23401" level="99" type="Monster" name="Bridget" title="Fire Slave">
-		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<race>HUMANOID</race>
 		<sex>FEMALE</sex>
 		<acquire exp="20395683" sp="48949" />
@@ -71,13 +79,23 @@
 		</skillList>
 		<dropLists>
 			<drop>
-				<item id="57" min="1932" max="4501" chance="50" /> <!-- Adena -->
-				<item id="37791" min="1" max="1" chance="0.075" /> <!-- Sealed Demonic Tome -->
+				<item id="57" min="2318" max="5401" chance="30" /> <!-- Adena -->
+				<item id="37791" min="1" max="1" chance="0.75187969924812" /> <!-- Sealed Demonic Tome -->
+				<!-- Also drops herbs. -->
+				<item id="8600" min="1" max="1" chance="10" /> <!-- Herb of Life -->
+				<item id="8601" min="1" max="1" chance="8" /> <!-- Major Herb of Life -->
+				<item id="8602" min="1" max="1" chance="2" /> <!-- Superior Herb of Life -->
+				<item id="8603" min="1" max="1" chance="19.8" /> <!-- Herb of Mana -->
+				<item id="8604" min="1" max="1" chance="9.9" /> <!-- Major Herb of Mana -->
+				<item id="8605" min="1" max="1" chance="3.3" /> <!-- Superior Herb of Mana -->
+				<item id="34849" min="1" max="1" chance="0.7" /> <!-- Mysterious Herb of Power -->
+				<item id="34850" min="1" max="1" chance="0.7" /> <!-- Mysterious Herb of Magic -->
+				<item id="13028" min="1" max="1" chance="0.1" /> <!-- Vitality Replenishing Herb -->
 			</drop>
 			<spoil>
-				<item id="40049" min="1" max="1" chance="11.28" /> <!-- Scroll: 1,000 SP -->
-				<item id="40050" min="1" max="1" chance="1.092" /> <!-- Scroll: 10,000 SP -->
-				<item id="40051" min="1" max="1" chance="0.3" /> <!-- Scroll: 100,000 SP -->
+				<item id="40049" min="1" max="1" chance="10" /> <!-- Scroll: 1,000 SP -->
+				<item id="40050" min="1" max="1" chance="1" /> <!-- Scroll: 10,000 SP -->
+				<item id="40051" min="1" max="1" chance="0.3003003003003" /> <!-- Scroll: 100,000 SP -->
 			</spoil>
 			<lucky>
 				<item id="39629" min="1" max="1" chance="100" /> <!-- Fortune Pocket - Stage 1 -->
@@ -89,7 +107,6 @@
 		</collision>
 	</npc>
 	<npc id="23402" level="99" type="Monster" name="Disorder Avatar">
-		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<race>BEAST</race>
 		<sex>FEMALE</sex>
 		<acquire exp="2162357" sp="5189" />
@@ -115,13 +132,23 @@
 		</skillList>
 		<dropLists>
 			<drop>
-				<item id="57" min="749" max="1749" chance="50" /> <!-- Adena -->
-				<item id="37791" min="1" max="1" chance="0.075" /> <!-- Sealed Demonic Tome -->
+				<item id="57" min="899" max="2095" chance="20" /> <!-- Adena -->
+				<item id="37791" min="1" max="1" chance="0.0750187546886722" /> <!-- Sealed Demonic Tome -->
+				<!-- Also drops herbs. -->
+				<item id="8600" min="1" max="1" chance="10" /> <!-- Herb of Life -->
+				<item id="8601" min="1" max="1" chance="8" /> <!-- Major Herb of Life -->
+				<item id="8602" min="1" max="1" chance="2" /> <!-- Superior Herb of Life -->
+				<item id="8603" min="1" max="1" chance="19.8" /> <!-- Herb of Mana -->
+				<item id="8604" min="1" max="1" chance="9.9" /> <!-- Major Herb of Mana -->
+				<item id="8605" min="1" max="1" chance="3.3" /> <!-- Superior Herb of Mana -->
+				<item id="34849" min="1" max="1" chance="0.7" /> <!-- Mysterious Herb of Power -->
+				<item id="34850" min="1" max="1" chance="0.7" /> <!-- Mysterious Herb of Magic -->
+				<item id="13028" min="1" max="1" chance="0.1" /> <!-- Vitality Replenishing Herb -->
 			</drop>
 			<spoil>
-				<item id="40049" min="1" max="1" chance="4.358" /> <!-- Scroll: 1,000 SP -->
-				<item id="40050" min="1" max="1" chance="0.3" /> <!-- Scroll: 10,000 SP -->
-				<item id="40051" min="1" max="1" chance="0.03" /> <!-- Scroll: 100,000 SP -->
+				<item id="40049" min="1" max="1" chance="4.5" /> <!-- Scroll: 1,000 SP -->
+				<item id="40050" min="1" max="1" chance="0.3003003003003" /> <!-- Scroll: 10,000 SP -->
+				<item id="40051" min="1" max="1" chance="0.03000300030003" /> <!-- Scroll: 100,000 SP -->
 			</spoil>
 			<lucky>
 				<item id="39629" min="1" max="1" chance="100" /> <!-- Fortune Pocket - Stage 1 -->
@@ -133,7 +160,6 @@
 		</collision>
 	</npc>
 	<npc id="23403" level="97" type="Monster" name="Suffering Fanatic">
-		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<race>HUMANOID</race>
 		<sex>FEMALE</sex>
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
@@ -161,7 +187,6 @@
 		</collision>
 	</npc>
 	<npc id="23404" level="97" type="Monster" name="Suffering Herald">
-		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<race>UNDEAD</race>
 		<sex>FEMALE</sex>
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
@@ -190,7 +215,6 @@
 		</collision>
 	</npc>
 	<npc id="23405" level="97" type="Monster" name="Suffering Zealot">
-		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<race>HUMANOID</race>
 		<sex>FEMALE</sex>
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
@@ -219,7 +243,6 @@
 		</collision>
 	</npc>
 	<npc id="23406" level="97" type="Monster" name="Suffering Mutant">
-		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<race>UNDEAD</race>
 		<sex>FEMALE</sex>
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
@@ -247,7 +270,6 @@
 		</collision>
 	</npc>
 	<npc id="23407" level="97" type="Monster" name="Suffering Hacker">
-		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<race>UNDEAD</race>
 		<sex>FEMALE</sex>
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
@@ -275,7 +297,6 @@
 		</collision>
 	</npc>
 	<npc id="23408" level="99" type="Monster" name="Emergency Caller" title="Dexterous">
-		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<race>HUMANOID</race>
 		<sex>FEMALE</sex>
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
@@ -302,7 +323,6 @@
 		</collision>
 	</npc>
 	<npc id="23409" level="99" type="Monster" name="Erosion Herald">
-		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<race>UNDEAD</race>
 		<sex>FEMALE</sex>
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
@@ -329,7 +349,6 @@
 		</collision>
 	</npc>
 	<npc id="23410" level="99" type="Monster" name="Hiding Tracker" title="Swift">
-		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<race>HUMANOID</race>
 		<sex>FEMALE</sex>
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
@@ -356,7 +375,6 @@
 		</collision>
 	</npc>
 	<npc id="23411" level="99" type="Monster" name="Erosion Mutant">
-		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<race>UNDEAD</race>
 		<sex>FEMALE</sex>
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
@@ -383,7 +401,6 @@
 		</collision>
 	</npc>
 	<npc id="23412" level="99" type="Monster" name="Erosion Hacker">
-		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<race>UNDEAD</race>
 		<sex>FEMALE</sex>
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
@@ -410,7 +427,6 @@
 		</collision>
 	</npc>
 	<npc id="23413" level="99" type="Monster" name="Erosion Ark">
-		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<race>CONSTRUCT</race>
 		<sex>FEMALE</sex>
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
@@ -437,7 +453,6 @@
 		</collision>
 	</npc>
 	<npc id="23414" level="21" type="Monster" name="Windima">
-		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<race>ELEMENTAL</race>
 		<sex>FEMALE</sex>
 		<acquire exp="935" sp="0" />
@@ -458,10 +473,20 @@
 		<dropLists>
 			<drop>
 				<item id="57" min="6" max="14" chance="70" /> <!-- Adena -->
-				<item id="36526" min="1" max="1" chance="21.69" /> <!-- Fiber -->
+				<item id="36526" min="1" max="1" chance="20" /> <!-- Fiber -->
+				<!-- Also drops herbs. -->
+				<item id="8600" min="1" max="1" chance="10" /> <!-- Herb of Life -->
+				<item id="8601" min="1" max="1" chance="8" /> <!-- Major Herb of Life -->
+				<item id="8602" min="1" max="1" chance="2" /> <!-- Superior Herb of Life -->
+				<item id="8603" min="1" max="1" chance="19.8" /> <!-- Herb of Mana -->
+				<item id="8604" min="1" max="1" chance="9.9" /> <!-- Major Herb of Mana -->
+				<item id="8605" min="1" max="1" chance="3.3" /> <!-- Superior Herb of Mana -->
+				<item id="34849" min="1" max="1" chance="0.7" /> <!-- Mysterious Herb of Power -->
+				<item id="34850" min="1" max="1" chance="0.7" /> <!-- Mysterious Herb of Magic -->
+				<item id="13028" min="1" max="1" chance="0.1" /> <!-- Vitality Replenishing Herb -->
 			</drop>
 			<spoil>
-				<item id="36532" min="1" max="1" chance="0.3" /> <!-- Thin Braid -->
+				<item id="36532" min="1" max="1" chance="0.3003003003003" /> <!-- Thin Braid -->
 			</spoil>
 			<lucky>
 				<item id="39629" min="1" max="1" chance="100" /> <!-- Fortune Pocket - Stage 1 -->
@@ -473,7 +498,6 @@
 		</collision>
 	</npc>
 	<npc id="23415" level="23" type="Monster" name="Windima Feri">
-		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<race>ELEMENTAL</race>
 		<sex>FEMALE</sex>
 		<acquire exp="1184" sp="0" />
@@ -496,10 +520,20 @@
 		<dropLists>
 			<drop>
 				<item id="57" min="7" max="16" chance="70" /> <!-- Adena -->
-				<item id="36526" min="1" max="1" chance="24.03" /> <!-- Fiber -->
+				<item id="36526" min="1" max="1" chance="20" /> <!-- Fiber -->
+				<!-- Also drops herbs. -->
+				<item id="8600" min="1" max="1" chance="10" /> <!-- Herb of Life -->
+				<item id="8601" min="1" max="1" chance="8" /> <!-- Major Herb of Life -->
+				<item id="8602" min="1" max="1" chance="2" /> <!-- Superior Herb of Life -->
+				<item id="8603" min="1" max="1" chance="19.8" /> <!-- Herb of Mana -->
+				<item id="8604" min="1" max="1" chance="9.9" /> <!-- Major Herb of Mana -->
+				<item id="8605" min="1" max="1" chance="3.3" /> <!-- Superior Herb of Mana -->
+				<item id="34849" min="1" max="1" chance="0.7" /> <!-- Mysterious Herb of Power -->
+				<item id="34850" min="1" max="1" chance="0.7" /> <!-- Mysterious Herb of Magic -->
+				<item id="13028" min="1" max="1" chance="0.1" /> <!-- Vitality Replenishing Herb -->
 			</drop>
 			<spoil>
-				<item id="36532" min="1" max="1" chance="0.3" /> <!-- Thin Braid -->
+				<item id="36532" min="1" max="1" chance="0.3003003003003" /> <!-- Thin Braid -->
 			</spoil>
 			<lucky>
 				<item id="39629" min="1" max="1" chance="100" /> <!-- Fortune Pocket - Stage 1 -->
@@ -511,7 +545,6 @@
 		</collision>
 	</npc>
 	<npc id="23416" level="25" type="Monster" name="Windima Resh">
-		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<race>ELEMENTAL</race>
 		<sex>FEMALE</sex>
 		<acquire exp="1894" sp="0" />
@@ -535,10 +568,20 @@
 		<dropLists>
 			<drop>
 				<item id="57" min="8" max="18" chance="70" /> <!-- Adena -->
-				<item id="36551" min="1" max="1" chance="1.139" /> <!-- Armor Fragment (Low-grade) -->
+				<item id="36551" min="1" max="1" chance="1" /> <!-- Armor Fragment (Low-grade) -->
+				<!-- Also drops herbs. -->
+				<item id="8600" min="1" max="1" chance="10" /> <!-- Herb of Life -->
+				<item id="8601" min="1" max="1" chance="8" /> <!-- Major Herb of Life -->
+				<item id="8602" min="1" max="1" chance="2" /> <!-- Superior Herb of Life -->
+				<item id="8603" min="1" max="1" chance="19.8" /> <!-- Herb of Mana -->
+				<item id="8604" min="1" max="1" chance="9.9" /> <!-- Major Herb of Mana -->
+				<item id="8605" min="1" max="1" chance="3.3" /> <!-- Superior Herb of Mana -->
+				<item id="34849" min="1" max="1" chance="0.7" /> <!-- Mysterious Herb of Power -->
+				<item id="34850" min="1" max="1" chance="0.7" /> <!-- Mysterious Herb of Magic -->
+				<item id="13028" min="1" max="1" chance="0.1" /> <!-- Vitality Replenishing Herb -->
 			</drop>
 			<spoil>
-				<item id="36532" min="1" max="1" chance="0.3" /> <!-- Thin Braid -->
+				<item id="36532" min="1" max="1" chance="0.3003003003003" /> <!-- Thin Braid -->
 			</spoil>
 			<lucky>
 				<item id="39629" min="1" max="1" chance="100" /> <!-- Fortune Pocket - Stage 1 -->
@@ -550,7 +593,6 @@
 		</collision>
 	</npc>
 	<npc id="23417" level="26" type="Monster" name="Wind Vortex" title="Cyclone">
-		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<race>HUMANOID</race>
 		<sex>FEMALE</sex>
 		<acquire exp="2126" sp="0" />
@@ -571,9 +613,27 @@
 			<radius normal="10" />
 			<height normal="20" />
 		</collision>
+		<dropLists>
+			<drop>
+				<item id="57" min="8" max="19" chance="70" /> <!-- Adena -->
+				<item id="36526" min="1" max="1" chance="27.5" /> <!-- Fiber -->
+				<!-- Also drops herbs. -->
+				<item id="8600" min="1" max="1" chance="10" /> <!-- Herb of Life -->
+				<item id="8601" min="1" max="1" chance="8" /> <!-- Major Herb of Life -->
+				<item id="8602" min="1" max="1" chance="2" /> <!-- Superior Herb of Life -->
+				<item id="8603" min="1" max="1" chance="19.8" /> <!-- Herb of Mana -->
+				<item id="8604" min="1" max="1" chance="9.9" /> <!-- Major Herb of Mana -->
+				<item id="8605" min="1" max="1" chance="3.3" /> <!-- Superior Herb of Mana -->
+				<item id="34849" min="1" max="1" chance="0.7" /> <!-- Mysterious Herb of Power -->
+				<item id="34850" min="1" max="1" chance="0.7" /> <!-- Mysterious Herb of Magic -->
+				<item id="13028" min="1" max="1" chance="0.1" /> <!-- Vitality Replenishing Herb -->
+			</drop>
+			<spoil>
+				<item id="36532" min="1" max="1" chance="0.3003003003003" /> <!-- Thin Braid -->
+			</spoil>
+		</dropLists>
 	</npc>
 	<npc id="23418" level="35" type="Monster" name="Marionette Spirit">
-		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<race>PLANT</race>
 		<sex>FEMALE</sex>
 		<acquire exp="2671" sp="0" />
@@ -594,9 +654,27 @@
 			<radius normal="32" />
 			<height normal="32" />
 		</collision>
+		<dropLists>
+			<drop>
+				<item id="57" min="15" max="30" chance="70" /> <!-- Adena -->
+				<item id="36561" min="1" max="1" chance="1" /> <!-- Cokes -->
+				<!-- Also drops herbs. -->
+				<item id="8600" min="1" max="1" chance="10" /> <!-- Herb of Life -->
+				<item id="8601" min="1" max="1" chance="8" /> <!-- Major Herb of Life -->
+				<item id="8602" min="1" max="1" chance="2" /> <!-- Superior Herb of Life -->
+				<item id="8603" min="1" max="1" chance="19.8" /> <!-- Herb of Mana -->
+				<item id="8604" min="1" max="1" chance="9.9" /> <!-- Major Herb of Mana -->
+				<item id="8605" min="1" max="1" chance="3.3" /> <!-- Superior Herb of Mana -->
+				<item id="34849" min="1" max="1" chance="0.7" /> <!-- Mysterious Herb of Power -->
+				<item id="34850" min="1" max="1" chance="0.7" /> <!-- Mysterious Herb of Magic -->
+				<item id="13028" min="1" max="1" chance="0.1" /> <!-- Vitality Replenishing Herb -->
+			</drop>
+			<spoil>
+				<item id="36532" min="1" max="1" chance="0.3003003003003" /> <!-- Thin Braid -->
+			</spoil>
+		</dropLists>
 	</npc>
 	<npc id="23419" level="25" type="Monster" name="Giant Windima">
-		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<race>PLANT</race>
 		<sex>FEMALE</sex>
 		<acquire exp="2956" sp="0" />
@@ -619,10 +697,20 @@
 		<dropLists>
 			<drop>
 				<item id="57" min="8" max="18" chance="70" /> <!-- Adena -->
-				<item id="36527" min="1" max="1" chance="0.75" /> <!-- Synthetic Fiber -->
+				<item id="36527" min="1" max="1" chance="0.75187969924812" /> <!-- Synthetic Fiber -->
+				<!-- Also drops herbs. -->
+				<item id="8600" min="1" max="1" chance="10" /> <!-- Herb of Life -->
+				<item id="8601" min="1" max="1" chance="8" /> <!-- Major Herb of Life -->
+				<item id="8602" min="1" max="1" chance="2" /> <!-- Superior Herb of Life -->
+				<item id="8603" min="1" max="1" chance="19.8" /> <!-- Herb of Mana -->
+				<item id="8604" min="1" max="1" chance="9.9" /> <!-- Major Herb of Mana -->
+				<item id="8605" min="1" max="1" chance="3.3" /> <!-- Superior Herb of Mana -->
+				<item id="34849" min="1" max="1" chance="0.7" /> <!-- Mysterious Herb of Power -->
+				<item id="34850" min="1" max="1" chance="0.7" /> <!-- Mysterious Herb of Magic -->
+				<item id="13028" min="1" max="1" chance="0.1" /> <!-- Vitality Replenishing Herb -->
 			</drop>
 			<spoil>
-				<item id="36532" min="1" max="1" chance="0.3" /> <!-- Thin Braid -->
+				<item id="36532" min="1" max="1" chance="0.3003003003003" /> <!-- Thin Braid -->
 			</spoil>
 			<lucky>
 				<item id="39629" min="1" max="1" chance="100" /> <!-- Fortune Pocket - Stage 1 -->
@@ -634,7 +722,6 @@
 		</collision>
 	</npc>
 	<npc id="23420" level="25" type="Monster" name="Immense Windima">
-		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<race>PLANT</race>
 		<sex>FEMALE</sex>
 		<acquire exp="2956" sp="0" />
@@ -657,10 +744,20 @@
 		<dropLists>
 			<drop>
 				<item id="57" min="8" max="18" chance="70" /> <!-- Adena -->
-				<item id="36527" min="1" max="1" chance="0.75" /> <!-- Synthetic Fiber -->
+				<item id="36527" min="1" max="1" chance="0.75187969924812" /> <!-- Synthetic Fiber -->
+				<!-- Also drops herbs. -->
+				<item id="8600" min="1" max="1" chance="10" /> <!-- Herb of Life -->
+				<item id="8601" min="1" max="1" chance="8" /> <!-- Major Herb of Life -->
+				<item id="8602" min="1" max="1" chance="2" /> <!-- Superior Herb of Life -->
+				<item id="8603" min="1" max="1" chance="19.8" /> <!-- Herb of Mana -->
+				<item id="8604" min="1" max="1" chance="9.9" /> <!-- Major Herb of Mana -->
+				<item id="8605" min="1" max="1" chance="3.3" /> <!-- Superior Herb of Mana -->
+				<item id="34849" min="1" max="1" chance="0.7" /> <!-- Mysterious Herb of Power -->
+				<item id="34850" min="1" max="1" chance="0.7" /> <!-- Mysterious Herb of Magic -->
+				<item id="13028" min="1" max="1" chance="0.1" /> <!-- Vitality Replenishing Herb -->
 			</drop>
 			<spoil>
-				<item id="36532" min="1" max="1" chance="0.3" /> <!-- Thin Braid -->
+				<item id="36532" min="1" max="1" chance="0.3003003003003" /> <!-- Thin Braid -->
 			</spoil>
 			<lucky>
 				<item id="39629" min="1" max="1" chance="100" /> <!-- Fortune Pocket - Stage 1 -->
@@ -672,7 +769,6 @@
 		</collision>
 	</npc>
 	<npc id="23421" level="35" type="Monster" name="Chertuba Mirage">
-		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<race>HUMANOID</race>
 		<sex>FEMALE</sex>
 		<acquire exp="7276" sp="1" />
@@ -698,9 +794,27 @@
 			<radius normal="24" />
 			<height normal="51" />
 		</collision>
+		<dropLists>
+			<drop>
+				<item id="57" min="13" max="29" chance="70" /> <!-- Adena -->
+				<item id="36562" min="1" max="1" chance="0.3003003003003" /> <!-- Greater Cokes -->
+				<!-- Also drops herbs. -->
+				<item id="8600" min="1" max="1" chance="10" /> <!-- Herb of Life -->
+				<item id="8601" min="1" max="1" chance="8" /> <!-- Major Herb of Life -->
+				<item id="8602" min="1" max="1" chance="2" /> <!-- Superior Herb of Life -->
+				<item id="8603" min="1" max="1" chance="19.8" /> <!-- Herb of Mana -->
+				<item id="8604" min="1" max="1" chance="9.9" /> <!-- Major Herb of Mana -->
+				<item id="8605" min="1" max="1" chance="3.3" /> <!-- Superior Herb of Mana -->
+				<item id="34849" min="1" max="1" chance="0.7" /> <!-- Mysterious Herb of Power -->
+				<item id="34850" min="1" max="1" chance="0.7" /> <!-- Mysterious Herb of Magic -->
+				<item id="13028" min="1" max="1" chance="0.1" /> <!-- Vitality Replenishing Herb -->
+			</drop>
+			<spoil>
+				<item id="36516" min="1" max="1" chance="43.2699" /> <!-- Worn Leather -->
+			</spoil>
+		</dropLists>
 	</npc>
 	<npc id="23422" level="35" type="Monster" name="Chertuba Illusion">
-		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<race>HUMANOID</race>
 		<sex>FEMALE</sex>
 		<acquire exp="7276" sp="1" />
@@ -726,6 +840,25 @@
 			<radius normal="24" />
 			<height normal="51" />
 		</collision>
+		<dropLists>
+			<drop>
+				<item id="57" min="13" max="29" chance="70" /> <!-- Adena -->
+				<item id="36552" min="1" max="1" chance="0.3003003003003" /> <!-- Armor Fragment -->
+				<!-- Also drops herbs. -->
+				<item id="8600" min="1" max="1" chance="10" /> <!-- Herb of Life -->
+				<item id="8601" min="1" max="1" chance="8" /> <!-- Major Herb of Life -->
+				<item id="8602" min="1" max="1" chance="2" /> <!-- Superior Herb of Life -->
+				<item id="8603" min="1" max="1" chance="19.8" /> <!-- Herb of Mana -->
+				<item id="8604" min="1" max="1" chance="9.9" /> <!-- Major Herb of Mana -->
+				<item id="8605" min="1" max="1" chance="3.3" /> <!-- Superior Herb of Mana -->
+				<item id="34849" min="1" max="1" chance="0.7" /> <!-- Mysterious Herb of Power -->
+				<item id="34850" min="1" max="1" chance="0.7" /> <!-- Mysterious Herb of Magic -->
+				<item id="13028" min="1" max="1" chance="0.1" /> <!-- Vitality Replenishing Herb -->
+			</drop>
+			<spoil>
+				<item id="36532" min="1" max="1" chance="0.3003003003003" /> <!-- Thin Braid -->
+			</spoil>
+		</dropLists>
 	</npc>
 	<npc id="23423" level="80" type="Monster" name="Mesmer Dragon">
 		<race>DRAGON</race>
@@ -751,16 +884,26 @@
 		</skillList>
 		<dropLists>
 			<drop>
-				<item id="57" min="18" max="42" chance="70" /> <!-- Adena -->
-				<item id="10483" min="1" max="1" chance="0.0299999999999999" /> <!-- Life Stone - Lv. 82 -->
-				<item id="9548" min="1" max="1" chance="0.00299999999999999" /> <!-- Earth Stone -->
-				<item id="10484" min="1" max="1" chance="0.00299999999999999" /> <!-- Mid-grade Life Stone - Lv. 82 -->
-				<item id="9554" min="1" max="1" chance="0.000899999999999986" /> <!-- Earth Crystal -->
-				<item id="10485" min="1" max="1" chance="0.000899999999999986" /> <!-- High-grade Life Stone - Lv. 82 -->
-				<item id="17248" min="1" max="1" chance="0.000899999999999986" /> <!-- Large Dragon Bone -->
+				<item id="57" min="24" max="55" chance="70" /> <!-- Adena -->
+				<item id="10483" min="1" max="1" chance="0.02" /> <!-- Life Stone - Lv. 82 -->
+				<item id="9548" min="1" max="1" chance="0.02" /> <!-- Earth Stone -->
+				<item id="10484" min="1" max="1" chance="0.01" /> <!-- Mid-grade Life Stone - Lv. 82 -->
+				<item id="9554" min="1" max="1" chance="0.01" /> <!-- Earth Crystal -->
+				<item id="10485" min="1" max="1" chance="0.005" /> <!-- High-grade Life Stone - Lv. 82 -->
+				<item id="17248" min="1" max="1" chance="0.005" /> <!-- Large Dragon Bone -->
+				<!-- Also drops herbs. -->
+				<item id="8600" min="1" max="1" chance="10" /> <!-- Herb of Life -->
+				<item id="8601" min="1" max="1" chance="8" /> <!-- Major Herb of Life -->
+				<item id="8602" min="1" max="1" chance="2" /> <!-- Superior Herb of Life -->
+				<item id="8603" min="1" max="1" chance="19.8" /> <!-- Herb of Mana -->
+				<item id="8604" min="1" max="1" chance="9.9" /> <!-- Major Herb of Mana -->
+				<item id="8605" min="1" max="1" chance="3.3" /> <!-- Superior Herb of Mana -->
+				<item id="34849" min="1" max="1" chance="0.7" /> <!-- Mysterious Herb of Power -->
+				<item id="34850" min="1" max="1" chance="0.7" /> <!-- Mysterious Herb of Magic -->
+				<item id="13028" min="1" max="1" chance="0.1" /> <!-- Vitality Replenishing Herb -->
 			</drop>
 			<spoil>
-				<item id="36532" min="1" max="1" chance="0.3" /> <!-- Thin Braid -->
+				<item id="36532" min="1" max="1" chance="0.75187969924812" /> <!-- Thin Braid -->
 			</spoil>
 			<lucky>
 				<item id="39629" min="1" max="1" chance="100" /> <!-- Fortune Pocket - Stage 1 -->
@@ -798,16 +941,26 @@
 		</skillList>
 		<dropLists>
 			<drop>
-				<item id="57" min="23" max="54" chance="70" /> <!-- Adena -->
-				<item id="10483" min="1" max="1" chance="0.03" /> <!-- Life Stone - Lv. 82 -->
-				<item id="9548" min="1" max="1" chance="0.00549999999999982" /> <!-- Earth Stone -->
-				<item id="10484" min="1" max="1" chance="0.00549999999999982" /> <!-- Mid-grade Life Stone - Lv. 82 -->
-				<item id="9554" min="1" max="1" chance="0.000899999999999991" /> <!-- Earth Crystal -->
-				<item id="10485" min="1" max="1" chance="0.000899999999999991" /> <!-- High-grade Life Stone - Lv. 82 -->
-				<item id="17248" min="1" max="1" chance="0.000899999999999991" /> <!-- Large Dragon Bone -->
+				<item id="57" min="24" max="55" chance="70" /> <!-- Adena -->
+				<item id="10483" min="1" max="1" chance="0.02" /> <!-- Life Stone - Lv. 82 -->
+				<item id="9548" min="1" max="1" chance="0.02" /> <!-- Earth Stone -->
+				<item id="10484" min="1" max="1" chance="0.01" /> <!-- Mid-grade Life Stone - Lv. 82 -->
+				<item id="9554" min="1" max="1" chance="0.01" /> <!-- Earth Crystal -->
+				<item id="10485" min="1" max="1" chance="0.005" /> <!-- High-grade Life Stone - Lv. 82 -->
+				<item id="17248" min="1" max="1" chance="0.005" /> <!-- Large Dragon Bone -->
+				<!-- Also drops herbs. -->
+				<item id="8600" min="1" max="1" chance="10" /> <!-- Herb of Life -->
+				<item id="8601" min="1" max="1" chance="8" /> <!-- Major Herb of Life -->
+				<item id="8602" min="1" max="1" chance="2" /> <!-- Superior Herb of Life -->
+				<item id="8603" min="1" max="1" chance="19.8" /> <!-- Herb of Mana -->
+				<item id="8604" min="1" max="1" chance="9.9" /> <!-- Major Herb of Mana -->
+				<item id="8605" min="1" max="1" chance="3.3" /> <!-- Superior Herb of Mana -->
+				<item id="34849" min="1" max="1" chance="0.7" /> <!-- Mysterious Herb of Power -->
+				<item id="34850" min="1" max="1" chance="0.7" /> <!-- Mysterious Herb of Magic -->
+				<item id="13028" min="1" max="1" chance="0.1" /> <!-- Vitality Replenishing Herb -->
 			</drop>
 			<spoil>
-				<item id="36532" min="1" max="1" chance="0.75" /> <!-- Thin Braid -->
+				<item id="36532" min="1" max="1" chance="0.75187969924812" /> <!-- Thin Braid -->
 			</spoil>
 			<lucky>
 				<item id="39629" min="1" max="1" chance="100" /> <!-- Fortune Pocket - Stage 1 -->
@@ -846,15 +999,25 @@
 		<dropLists>
 			<drop>
 				<item id="57" min="24" max="55" chance="70" /> <!-- Adena -->
-				<item id="10483" min="1" max="1" chance="0.03" /> <!-- Life Stone - Lv. 82 -->
-				<item id="9548" min="1" max="1" chance="0.00549999999999982" /> <!-- Earth Stone -->
-				<item id="10484" min="1" max="1" chance="0.00549999999999982" /> <!-- Mid-grade Life Stone - Lv. 82 -->
-				<item id="9554" min="1" max="1" chance="0.000899999999999991" /> <!-- Earth Crystal -->
-				<item id="10485" min="1" max="1" chance="0.000899999999999991" /> <!-- High-grade Life Stone - Lv. 82 -->
-				<item id="17248" min="1" max="1" chance="0.000899999999999991" /> <!-- Large Dragon Bone -->
+				<item id="10483" min="1" max="1" chance="0.02" /> <!-- Life Stone - Lv. 82 -->
+				<item id="9548" min="1" max="1" chance="0.02" /> <!-- Earth Stone -->
+				<item id="10484" min="1" max="1" chance="0.01" /> <!-- Mid-grade Life Stone - Lv. 82 -->
+				<item id="9554" min="1" max="1" chance="0.01" /> <!-- Earth Crystal -->
+				<item id="10485" min="1" max="1" chance="0.005" /> <!-- High-grade Life Stone - Lv. 82 -->
+				<item id="17248" min="1" max="1" chance="0.005" /> <!-- Large Dragon Bone -->
+				<!-- Also drops herbs. -->
+				<item id="8600" min="1" max="1" chance="10" /> <!-- Herb of Life -->
+				<item id="8601" min="1" max="1" chance="8" /> <!-- Major Herb of Life -->
+				<item id="8602" min="1" max="1" chance="2" /> <!-- Superior Herb of Life -->
+				<item id="8603" min="1" max="1" chance="19.8" /> <!-- Herb of Mana -->
+				<item id="8604" min="1" max="1" chance="9.9" /> <!-- Major Herb of Mana -->
+				<item id="8605" min="1" max="1" chance="3.3" /> <!-- Superior Herb of Mana -->
+				<item id="34849" min="1" max="1" chance="0.7" /> <!-- Mysterious Herb of Power -->
+				<item id="34850" min="1" max="1" chance="0.7" /> <!-- Mysterious Herb of Magic -->
+				<item id="13028" min="1" max="1" chance="0.1" /> <!-- Vitality Replenishing Herb -->
 			</drop>
 			<spoil>
-				<item id="36532" min="1" max="1" chance="0.75" /> <!-- Thin Braid -->
+				<item id="36532" min="1" max="1" chance="0.75187969924812" /> <!-- Thin Braid -->
 			</spoil>
 			<lucky>
 				<item id="39629" min="1" max="1" chance="100" /> <!-- Fortune Pocket - Stage 1 -->
@@ -892,16 +1055,26 @@
 		</skillList>
 		<dropLists>
 			<drop>
-				<item id="57" min="30" max="70" chance="70" /> <!-- Adena -->
-				<item id="10483" min="1" max="1" chance="0.03" /> <!-- Life Stone - Lv. 82 -->
-				<item id="9548" min="1" max="1" chance="0.00549999999999982" /> <!-- Earth Stone -->
-				<item id="10484" min="1" max="1" chance="0.00549999999999982" /> <!-- Mid-grade Life Stone - Lv. 82 -->
-				<item id="9554" min="1" max="1" chance="0.000899999999999991" /> <!-- Earth Crystal -->
-				<item id="10485" min="1" max="1" chance="0.000899999999999991" /> <!-- High-grade Life Stone - Lv. 82 -->
-				<item id="17248" min="1" max="1" chance="0.000899999999999991" /> <!-- Large Dragon Bone -->
+				<item id="57" min="24" max="55" chance="70" /> <!-- Adena -->
+				<item id="10483" min="1" max="1" chance="0.02" /> <!-- Life Stone - Lv. 82 -->
+				<item id="9548" min="1" max="1" chance="0.02" /> <!-- Earth Stone -->
+				<item id="10484" min="1" max="1" chance="0.01" /> <!-- Mid-grade Life Stone - Lv. 82 -->
+				<item id="9554" min="1" max="1" chance="0.01" /> <!-- Earth Crystal -->
+				<item id="10485" min="1" max="1" chance="0.005" /> <!-- High-grade Life Stone - Lv. 82 -->
+				<item id="17248" min="1" max="1" chance="0.005" /> <!-- Large Dragon Bone -->
+				<!-- Also drops herbs. -->
+				<item id="8600" min="1" max="1" chance="10" /> <!-- Herb of Life -->
+				<item id="8601" min="1" max="1" chance="8" /> <!-- Major Herb of Life -->
+				<item id="8602" min="1" max="1" chance="2" /> <!-- Superior Herb of Life -->
+				<item id="8603" min="1" max="1" chance="19.8" /> <!-- Herb of Mana -->
+				<item id="8604" min="1" max="1" chance="9.9" /> <!-- Major Herb of Mana -->
+				<item id="8605" min="1" max="1" chance="3.3" /> <!-- Superior Herb of Mana -->
+				<item id="34849" min="1" max="1" chance="0.7" /> <!-- Mysterious Herb of Power -->
+				<item id="34850" min="1" max="1" chance="0.7" /> <!-- Mysterious Herb of Magic -->
+				<item id="13028" min="1" max="1" chance="0.1" /> <!-- Vitality Replenishing Herb -->
 			</drop>
 			<spoil>
-				<item id="36532" min="1" max="1" chance="1.248" /> <!-- Thin Braid -->
+				<item id="36532" min="1" max="1" chance="0.75187969924812" /> <!-- Thin Braid -->
 			</spoil>
 			<lucky>
 				<item id="39629" min="1" max="1" chance="100" /> <!-- Fortune Pocket - Stage 1 -->
@@ -940,16 +1113,26 @@
 		</skillList>
 		<dropLists>
 			<drop>
-				<item id="57" min="31" max="72" chance="70" /> <!-- Adena -->
-				<item id="10483" min="1" max="1" chance="0.03" /> <!-- Life Stone - Lv. 82 -->
-				<item id="9548" min="1" max="1" chance="0.00549999999999982" /> <!-- Earth Stone -->
-				<item id="10484" min="1" max="1" chance="0.00549999999999982" /> <!-- Mid-grade Life Stone - Lv. 82 -->
-				<item id="9554" min="1" max="1" chance="0.000899999999999991" /> <!-- Earth Crystal -->
-				<item id="10485" min="1" max="1" chance="0.000899999999999991" /> <!-- High-grade Life Stone - Lv. 82 -->
-				<item id="17248" min="1" max="1" chance="0.000899999999999991" /> <!-- Large Dragon Bone -->
+				<item id="57" min="24" max="55" chance="70" /> <!-- Adena -->
+				<item id="10483" min="1" max="1" chance="0.02" /> <!-- Life Stone - Lv. 82 -->
+				<item id="9548" min="1" max="1" chance="0.02" /> <!-- Earth Stone -->
+				<item id="10484" min="1" max="1" chance="0.01" /> <!-- Mid-grade Life Stone - Lv. 82 -->
+				<item id="9554" min="1" max="1" chance="0.01" /> <!-- Earth Crystal -->
+				<item id="10485" min="1" max="1" chance="0.005" /> <!-- High-grade Life Stone - Lv. 82 -->
+				<item id="17248" min="1" max="1" chance="0.005" /> <!-- Large Dragon Bone -->
+				<!-- Also drops herbs. -->
+				<item id="8600" min="1" max="1" chance="10" /> <!-- Herb of Life -->
+				<item id="8601" min="1" max="1" chance="8" /> <!-- Major Herb of Life -->
+				<item id="8602" min="1" max="1" chance="2" /> <!-- Superior Herb of Life -->
+				<item id="8603" min="1" max="1" chance="19.8" /> <!-- Herb of Mana -->
+				<item id="8604" min="1" max="1" chance="9.9" /> <!-- Major Herb of Mana -->
+				<item id="8605" min="1" max="1" chance="3.3" /> <!-- Superior Herb of Mana -->
+				<item id="34849" min="1" max="1" chance="0.7" /> <!-- Mysterious Herb of Power -->
+				<item id="34850" min="1" max="1" chance="0.7" /> <!-- Mysterious Herb of Magic -->
+				<item id="13028" min="1" max="1" chance="0.1" /> <!-- Vitality Replenishing Herb -->
 			</drop>
 			<spoil>
-				<item id="36532" min="1" max="1" chance="1.374" /> <!-- Thin Braid -->
+				<item id="36532" min="1" max="1" chance="0.75187969924812" /> <!-- Thin Braid -->
 			</spoil>
 			<lucky>
 				<item id="39629" min="1" max="1" chance="100" /> <!-- Fortune Pocket - Stage 1 -->
@@ -989,15 +1172,25 @@
 		<dropLists>
 			<drop>
 				<item id="57" min="39" max="91" chance="70" /> <!-- Adena -->
-				<item id="10483" min="1" max="1" chance="0.03" /> <!-- Life Stone - Lv. 82 -->
-				<item id="10484" min="1" max="1" chance="0.03" /> <!-- Mid-grade Life Stone - Lv. 82 -->
-				<item id="9549" min="1" max="1" chance="0.00550000000000001" /> <!-- Wind Stone -->
-				<item id="10485" min="1" max="1" chance="0.003" /> <!-- High-grade Life Stone - Lv. 82 -->
-				<item id="959" min="1" max="1" chance="0.000900000000000021" /> <!-- Scroll: Enchant Weapon (S-grade) -->
-				<item id="17248" min="1" max="1" chance="0.000900000000000021" /> <!-- Large Dragon Bone -->
+				<item id="10483" min="1" max="1" chance="0.02" /> <!-- Life Stone - Lv. 82 -->
+				<item id="9549" min="1" max="1" chance="0.02" /> <!-- Wind Stone -->
+				<item id="10484" min="1" max="1" chance="0.01" /> <!-- Mid-grade Life Stone - Lv. 82 -->
+				<item id="10485" min="1" max="1" chance="0.005" /> <!-- High-grade Life Stone - Lv. 82 -->
+				<item id="17248" min="1" max="1" chance="0.005" /> <!-- Large Dragon Bone -->
+				<item id="959" min="1" max="1" chance="0.005" /> <!-- Scroll: Enchant Weapon (S-grade) -->
+				<!-- Also drops herbs. -->
+				<item id="8600" min="1" max="1" chance="10" /> <!-- Herb of Life -->
+				<item id="8601" min="1" max="1" chance="8" /> <!-- Major Herb of Life -->
+				<item id="8602" min="1" max="1" chance="2" /> <!-- Superior Herb of Life -->
+				<item id="8603" min="1" max="1" chance="19.8" /> <!-- Herb of Mana -->
+				<item id="8604" min="1" max="1" chance="9.9" /> <!-- Major Herb of Mana -->
+				<item id="8605" min="1" max="1" chance="3.3" /> <!-- Superior Herb of Mana -->
+				<item id="34849" min="1" max="1" chance="0.7" /> <!-- Mysterious Herb of Power -->
+				<item id="34850" min="1" max="1" chance="0.7" /> <!-- Mysterious Herb of Magic -->
+				<item id="13028" min="1" max="1" chance="0.1" /> <!-- Vitality Replenishing Herb -->
 			</drop>
 			<spoil>
-				<item id="36532" min="1" max="1" chance="1.669" /> <!-- Thin Braid -->
+				<item id="36532" min="1" max="1" chance="0.75187969924812" /> <!-- Thin Braid -->
 			</spoil>
 			<lucky>
 				<item id="39629" min="1" max="1" chance="100" /> <!-- Fortune Pocket - Stage 1 -->
@@ -1032,16 +1225,26 @@
 		</skillList>
 		<dropLists>
 			<drop>
-				<item id="57" min="16" max="38" chance="70" /> <!-- Adena -->
-				<item id="10483" min="1" max="1" chance="0.0300000000000002" /> <!-- Life Stone - Lv. 82 -->
-				<item id="9549" min="1" max="1" chance="0.00300000000000002" /> <!-- Wind Stone -->
-				<item id="10484" min="1" max="1" chance="0.00550000000000008" /> <!-- Mid-grade Life Stone - Lv. 82 -->
-				<item id="959" min="1" max="1" chance="0.00090000000000001" /> <!-- Scroll: Enchant Weapon (S-grade) -->
-				<item id="10485" min="1" max="1" chance="0.00090000000000001" /> <!-- High-grade Life Stone - Lv. 82 -->
-				<item id="17248" min="1" max="1" chance="0.00090000000000001" /> <!-- Large Dragon Bone -->
+				<item id="57" min="39" max="91" chance="70" /> <!-- Adena -->
+				<item id="10483" min="1" max="1" chance="0.02" /> <!-- Life Stone - Lv. 82 -->
+				<item id="9549" min="1" max="1" chance="0.02" /> <!-- Wind Stone -->
+				<item id="10484" min="1" max="1" chance="0.01" /> <!-- Mid-grade Life Stone - Lv. 82 -->
+				<item id="10485" min="1" max="1" chance="0.005" /> <!-- High-grade Life Stone - Lv. 82 -->
+				<item id="17248" min="1" max="1" chance="0.005" /> <!-- Large Dragon Bone -->
+				<item id="959" min="1" max="1" chance="0.005" /> <!-- Scroll: Enchant Weapon (S-grade) -->
+				<!-- Also drops herbs. -->
+				<item id="8600" min="1" max="1" chance="10" /> <!-- Herb of Life -->
+				<item id="8601" min="1" max="1" chance="8" /> <!-- Major Herb of Life -->
+				<item id="8602" min="1" max="1" chance="2" /> <!-- Superior Herb of Life -->
+				<item id="8603" min="1" max="1" chance="19.8" /> <!-- Herb of Mana -->
+				<item id="8604" min="1" max="1" chance="9.9" /> <!-- Major Herb of Mana -->
+				<item id="8605" min="1" max="1" chance="3.3" /> <!-- Superior Herb of Mana -->
+				<item id="34849" min="1" max="1" chance="0.7" /> <!-- Mysterious Herb of Power -->
+				<item id="34850" min="1" max="1" chance="0.7" /> <!-- Mysterious Herb of Magic -->
+				<item id="13028" min="1" max="1" chance="0.1" /> <!-- Vitality Replenishing Herb -->
 			</drop>
 			<spoil>
-				<item id="36532" min="1" max="1" chance="0.75" /> <!-- Thin Braid -->
+				<item id="36532" min="1" max="1" chance="0.75187969924812" /> <!-- Thin Braid -->
 			</spoil>
 			<lucky>
 				<item id="39629" min="1" max="1" chance="100" /> <!-- Fortune Pocket - Stage 1 -->
@@ -1076,16 +1279,26 @@
 		</skillList>
 		<dropLists>
 			<drop>
-				<item id="57" min="21" max="48" chance="70" /> <!-- Adena -->
-				<item id="10483" min="1" max="1" chance="0.0300000000000002" /> <!-- Life Stone - Lv. 82 -->
-				<item id="9547" min="1" max="1" chance="0.00300000000000002" /> <!-- Water Stone -->
-				<item id="10484" min="1" max="1" chance="0.00550000000000008" /> <!-- Mid-grade Life Stone - Lv. 82 -->
-				<item id="9553" min="1" max="1" chance="0.00090000000000001" /> <!-- Water Crystal -->
-				<item id="10485" min="1" max="1" chance="0.00090000000000001" /> <!-- High-grade Life Stone - Lv. 82 -->
-				<item id="17248" min="1" max="1" chance="0.00090000000000001" /> <!-- Large Dragon Bone -->
+				<item id="57" min="24" max="55" chance="70" /> <!-- Adena -->
+				<item id="10483" min="1" max="1" chance="0.02" /> <!-- Life Stone - Lv. 82 -->
+				<item id="9547" min="1" max="1" chance="0.02" /> <!-- Water Stone -->
+				<item id="10484" min="1" max="1" chance="0.01" /> <!-- Mid-grade Life Stone - Lv. 82 -->
+				<item id="9553" min="1" max="1" chance="0.01" /> <!-- Water Crystal -->
+				<item id="10485" min="1" max="1" chance="0.005" /> <!-- High-grade Life Stone - Lv. 82 -->
+				<item id="17248" min="1" max="1" chance="0.005" /> <!-- Large Dragon Bone -->
+				<!-- Also drops herbs. -->
+				<item id="8600" min="1" max="1" chance="10" /> <!-- Herb of Life -->
+				<item id="8601" min="1" max="1" chance="8" /> <!-- Major Herb of Life -->
+				<item id="8602" min="1" max="1" chance="2" /> <!-- Superior Herb of Life -->
+				<item id="8603" min="1" max="1" chance="19.8" /> <!-- Herb of Mana -->
+				<item id="8604" min="1" max="1" chance="9.9" /> <!-- Major Herb of Mana -->
+				<item id="8605" min="1" max="1" chance="3.3" /> <!-- Superior Herb of Mana -->
+				<item id="34849" min="1" max="1" chance="0.7" /> <!-- Mysterious Herb of Power -->
+				<item id="34850" min="1" max="1" chance="0.7" /> <!-- Mysterious Herb of Magic -->
+				<item id="13028" min="1" max="1" chance="0.1" /> <!-- Vitality Replenishing Herb -->
 			</drop>
 			<spoil>
-				<item id="36532" min="1" max="1" chance="0.75" /> <!-- Thin Braid -->
+				<item id="36532" min="1" max="1" chance="0.75187969924812" /> <!-- Thin Braid -->
 			</spoil>
 			<lucky>
 				<item id="39629" min="1" max="1" chance="100" /> <!-- Fortune Pocket - Stage 1 -->
@@ -1123,16 +1336,26 @@
 		</skillList>
 		<dropLists>
 			<drop>
-				<item id="57" min="41" max="95" chance="70" /> <!-- Adena -->
-				<item id="10483" min="1" max="1" chance="0.0749999999999998" /> <!-- Life Stone - Lv. 82 -->
-				<item id="10484" min="1" max="1" chance="0.0299999999999995" /> <!-- Mid-grade Life Stone - Lv. 82 -->
-				<item id="9547" min="1" max="1" chance="0.00550000000000002" /> <!-- Water Stone -->
-				<item id="9553" min="1" max="1" chance="0.00299999999999995" /> <!-- Water Crystal -->
-				<item id="10485" min="1" max="1" chance="0.00299999999999995" /> <!-- High-grade Life Stone - Lv. 82 -->
-				<item id="17248" min="1" max="1" chance="0.000899999999999995" /> <!-- Large Dragon Bone -->
+				<item id="57" min="24" max="55" chance="70" /> <!-- Adena -->
+				<item id="10483" min="1" max="1" chance="0.02" /> <!-- Life Stone - Lv. 82 -->
+				<item id="9547" min="1" max="1" chance="0.02" /> <!-- Water Stone -->
+				<item id="10484" min="1" max="1" chance="0.01" /> <!-- Mid-grade Life Stone - Lv. 82 -->
+				<item id="9553" min="1" max="1" chance="0.01" /> <!-- Water Crystal -->
+				<item id="10485" min="1" max="1" chance="0.005" /> <!-- High-grade Life Stone - Lv. 82 -->
+				<item id="17248" min="1" max="1" chance="0.005" /> <!-- Large Dragon Bone -->
+				<!-- Also drops herbs. -->
+				<item id="8600" min="1" max="1" chance="10" /> <!-- Herb of Life -->
+				<item id="8601" min="1" max="1" chance="8" /> <!-- Major Herb of Life -->
+				<item id="8602" min="1" max="1" chance="2" /> <!-- Superior Herb of Life -->
+				<item id="8603" min="1" max="1" chance="19.8" /> <!-- Herb of Mana -->
+				<item id="8604" min="1" max="1" chance="9.9" /> <!-- Major Herb of Mana -->
+				<item id="8605" min="1" max="1" chance="3.3" /> <!-- Superior Herb of Mana -->
+				<item id="34849" min="1" max="1" chance="0.7" /> <!-- Mysterious Herb of Power -->
+				<item id="34850" min="1" max="1" chance="0.7" /> <!-- Mysterious Herb of Magic -->
+				<item id="13028" min="1" max="1" chance="0.1" /> <!-- Vitality Replenishing Herb -->
 			</drop>
 			<spoil>
-				<item id="36532" min="1" max="1" chance="1.762" /> <!-- Thin Braid -->
+				<item id="36532" min="1" max="1" chance="0.75187969924812" /> <!-- Thin Braid -->
 			</spoil>
 			<lucky>
 				<item id="39629" min="1" max="1" chance="100" /> <!-- Fortune Pocket - Stage 1 -->
@@ -1170,16 +1393,26 @@
 		</skillList>
 		<dropLists>
 			<drop>
-				<item id="57" min="34" max="78" chance="70" /> <!-- Adena -->
-				<item id="10483" min="1" max="1" chance="0.03" /> <!-- Life Stone - Lv. 82 -->
-				<item id="10484" min="1" max="1" chance="0.03" /> <!-- Mid-grade Life Stone - Lv. 82 -->
-				<item id="9547" min="1" max="1" chance="0.00550000000000001" /> <!-- Water Stone -->
-				<item id="10485" min="1" max="1" chance="0.003" /> <!-- High-grade Life Stone - Lv. 82 -->
-				<item id="9553" min="1" max="1" chance="0.000900000000000021" /> <!-- Water Crystal -->
-				<item id="17248" min="1" max="1" chance="0.000900000000000021" /> <!-- Large Dragon Bone -->
+				<item id="57" min="24" max="55" chance="70" /> <!-- Adena -->
+				<item id="10483" min="1" max="1" chance="0.02" /> <!-- Life Stone - Lv. 82 -->
+				<item id="9547" min="1" max="1" chance="0.02" /> <!-- Water Stone -->
+				<item id="10484" min="1" max="1" chance="0.01" /> <!-- Mid-grade Life Stone - Lv. 82 -->
+				<item id="9553" min="1" max="1" chance="0.01" /> <!-- Water Crystal -->
+				<item id="10485" min="1" max="1" chance="0.005" /> <!-- High-grade Life Stone - Lv. 82 -->
+				<item id="17248" min="1" max="1" chance="0.005" /> <!-- Large Dragon Bone -->
+				<!-- Also drops herbs. -->
+				<item id="8600" min="1" max="1" chance="10" /> <!-- Herb of Life -->
+				<item id="8601" min="1" max="1" chance="8" /> <!-- Major Herb of Life -->
+				<item id="8602" min="1" max="1" chance="2" /> <!-- Superior Herb of Life -->
+				<item id="8603" min="1" max="1" chance="19.8" /> <!-- Herb of Mana -->
+				<item id="8604" min="1" max="1" chance="9.9" /> <!-- Major Herb of Mana -->
+				<item id="8605" min="1" max="1" chance="3.3" /> <!-- Superior Herb of Mana -->
+				<item id="34849" min="1" max="1" chance="0.7" /> <!-- Mysterious Herb of Power -->
+				<item id="34850" min="1" max="1" chance="0.7" /> <!-- Mysterious Herb of Magic -->
+				<item id="13028" min="1" max="1" chance="0.1" /> <!-- Vitality Replenishing Herb -->
 			</drop>
 			<spoil>
-				<item id="36532" min="1" max="1" chance="1.445" /> <!-- Thin Braid -->
+				<item id="36532" min="1" max="1" chance="0.75187969924812" /> <!-- Thin Braid -->
 			</spoil>
 			<lucky>
 				<item id="39629" min="1" max="1" chance="100" /> <!-- Fortune Pocket - Stage 1 -->
@@ -1218,16 +1451,26 @@
 		</skillList>
 		<dropLists>
 			<drop>
-				<item id="57" min="43" max="100" chance="70" /> <!-- Adena -->
-				<item id="10483" min="1" max="1" chance="0.0749999999999998" /> <!-- Life Stone - Lv. 82 -->
-				<item id="10484" min="1" max="1" chance="0.0299999999999995" /> <!-- Mid-grade Life Stone - Lv. 82 -->
-				<item id="9547" min="1" max="1" chance="0.00550000000000002" /> <!-- Water Stone -->
-				<item id="9553" min="1" max="1" chance="0.00299999999999995" /> <!-- Water Crystal -->
-				<item id="10485" min="1" max="1" chance="0.00299999999999995" /> <!-- High-grade Life Stone - Lv. 82 -->
-				<item id="17248" min="1" max="1" chance="0.000899999999999995" /> <!-- Large Dragon Bone -->
+				<item id="57" min="24" max="55" chance="70" /> <!-- Adena -->
+				<item id="10483" min="1" max="1" chance="0.02" /> <!-- Life Stone - Lv. 82 -->
+				<item id="9547" min="1" max="1" chance="0.02" /> <!-- Water Stone -->
+				<item id="10484" min="1" max="1" chance="0.01" /> <!-- Mid-grade Life Stone - Lv. 82 -->
+				<item id="9553" min="1" max="1" chance="0.01" /> <!-- Water Crystal -->
+				<item id="10485" min="1" max="1" chance="0.005" /> <!-- High-grade Life Stone - Lv. 82 -->
+				<item id="17248" min="1" max="1" chance="0.005" /> <!-- Large Dragon Bone -->
+				<!-- Also drops herbs. -->
+				<item id="8600" min="1" max="1" chance="10" /> <!-- Herb of Life -->
+				<item id="8601" min="1" max="1" chance="8" /> <!-- Major Herb of Life -->
+				<item id="8602" min="1" max="1" chance="2" /> <!-- Superior Herb of Life -->
+				<item id="8603" min="1" max="1" chance="19.8" /> <!-- Herb of Mana -->
+				<item id="8604" min="1" max="1" chance="9.9" /> <!-- Major Herb of Mana -->
+				<item id="8605" min="1" max="1" chance="3.3" /> <!-- Superior Herb of Mana -->
+				<item id="34849" min="1" max="1" chance="0.7" /> <!-- Mysterious Herb of Power -->
+				<item id="34850" min="1" max="1" chance="0.7" /> <!-- Mysterious Herb of Magic -->
+				<item id="13028" min="1" max="1" chance="0.1" /> <!-- Vitality Replenishing Herb -->
 			</drop>
 			<spoil>
-				<item id="36532" min="1" max="1" chance="1.836" /> <!-- Thin Braid -->
+				<item id="36532" min="1" max="1" chance="0.75187969924812" /> <!-- Thin Braid -->
 			</spoil>
 			<lucky>
 				<item id="39629" min="1" max="1" chance="100" /> <!-- Fortune Pocket - Stage 1 -->
@@ -1262,16 +1505,16 @@
 		</skillList>
 		<dropLists>
 			<drop>
-				<item id="57" min="21" max="48" chance="70" /> <!-- Adena -->
-				<item id="10483" min="1" max="1" chance="0.0300000000000002" /> <!-- Life Stone - Lv. 82 -->
-				<item id="9547" min="1" max="1" chance="0.00300000000000002" /> <!-- Water Stone -->
-				<item id="10484" min="1" max="1" chance="0.00550000000000008" /> <!-- Mid-grade Life Stone - Lv. 82 -->
-				<item id="9553" min="1" max="1" chance="0.00090000000000001" /> <!-- Water Crystal -->
-				<item id="10485" min="1" max="1" chance="0.00090000000000001" /> <!-- High-grade Life Stone - Lv. 82 -->
-				<item id="17248" min="1" max="1" chance="0.00090000000000001" /> <!-- Large Dragon Bone -->
+				<item id="57" min="24" max="55" chance="70" /> <!-- Adena -->
+				<item id="10483" min="1" max="1" chance="0.02" /> <!-- Life Stone - Lv. 82 -->
+				<item id="9547" min="1" max="1" chance="0.02" /> <!-- Water Stone -->
+				<item id="10484" min="1" max="1" chance="0.01" /> <!-- Mid-grade Life Stone - Lv. 82 -->
+				<item id="9553" min="1" max="1" chance="0.01" /> <!-- Water Crystal -->
+				<item id="10485" min="1" max="1" chance="0.005" /> <!-- High-grade Life Stone - Lv. 82 -->
+				<item id="17248" min="1" max="1" chance="0.005" /> <!-- Large Dragon Bone -->
 			</drop>
 			<spoil>
-				<item id="36532" min="1" max="1" chance="0.75" /> <!-- Thin Braid -->
+				<item id="36532" min="1" max="1" chance="0.75187969924812" /> <!-- Thin Braid -->
 			</spoil>
 			<lucky>
 				<item id="39629" min="1" max="1" chance="100" /> <!-- Fortune Pocket - Stage 1 -->
@@ -1311,16 +1554,16 @@
 		</ai>
 		<dropLists>
 			<drop>
-				<item id="57" min="18" max="42" chance="70" /> <!-- Adena -->
-				<item id="10483" min="1" max="1" chance="0.0300000000000002" /> <!-- Life Stone - Lv. 82 -->
-				<item id="9547" min="1" max="1" chance="0.00300000000000002" /> <!-- Water Stone -->
-				<item id="10484" min="1" max="1" chance="0.00550000000000008" /> <!-- Mid-grade Life Stone - Lv. 82 -->
-				<item id="9553" min="1" max="1" chance="0.00090000000000001" /> <!-- Water Crystal -->
-				<item id="10485" min="1" max="1" chance="0.00090000000000001" /> <!-- High-grade Life Stone - Lv. 82 -->
-				<item id="17248" min="1" max="1" chance="0.00090000000000001" /> <!-- Large Dragon Bone -->
+				<item id="57" min="24" max="55" chance="70" /> <!-- Adena -->
+				<item id="10483" min="1" max="1" chance="0.02" /> <!-- Life Stone - Lv. 82 -->
+				<item id="9547" min="1" max="1" chance="0.02" /> <!-- Water Stone -->
+				<item id="10484" min="1" max="1" chance="0.01" /> <!-- Mid-grade Life Stone - Lv. 82 -->
+				<item id="9553" min="1" max="1" chance="0.01" /> <!-- Water Crystal -->
+				<item id="10485" min="1" max="1" chance="0.005" /> <!-- High-grade Life Stone - Lv. 82 -->
+				<item id="17248" min="1" max="1" chance="0.005" /> <!-- Large Dragon Bone -->
 			</drop>
 			<spoil>
-				<item id="36532" min="1" max="1" chance="0.75" /> <!-- Thin Braid -->
+				<item id="36532" min="1" max="1" chance="0.75187969924812" /> <!-- Thin Braid -->
 			</spoil>
 			<lucky>
 				<item id="39629" min="1" max="1" chance="100" /> <!-- Fortune Pocket - Stage 1 -->
@@ -1357,16 +1600,26 @@
 		</skillList>
 		<dropLists>
 			<drop>
-				<item id="57" min="18" max="42" chance="70" /> <!-- Adena -->
-				<item id="10483" min="1" max="1" chance="0.0299999999999999" /> <!-- Life Stone - Lv. 82 -->
-				<item id="9549" min="1" max="1" chance="0.00299999999999999" /> <!-- Wind Stone -->
-				<item id="10484" min="1" max="1" chance="0.00299999999999999" /> <!-- Mid-grade Life Stone - Lv. 82 -->
-				<item id="9555" min="1" max="1" chance="0.000899999999999986" /> <!-- Wind Crystal -->
-				<item id="10485" min="1" max="1" chance="0.000899999999999986" /> <!-- High-grade Life Stone - Lv. 82 -->
-				<item id="17248" min="1" max="1" chance="0.000899999999999986" /> <!-- Large Dragon Bone -->
+				<item id="57" min="24" max="55" chance="70" /> <!-- Adena -->
+				<item id="10483" min="1" max="1" chance="0.02" /> <!-- Life Stone - Lv. 82 -->
+				<item id="9549" min="1" max="1" chance="0.02" /> <!-- Wind Stone -->
+				<item id="10484" min="1" max="1" chance="0.01" /> <!-- Mid-grade Life Stone - Lv. 82 -->
+				<item id="9555" min="1" max="1" chance="0.01" /> <!-- Wind Crystal -->
+				<item id="10485" min="1" max="1" chance="0.005" /> <!-- High-grade Life Stone - Lv. 82 -->
+				<item id="17248" min="1" max="1" chance="0.005" /> <!-- Large Dragon Bone -->
+				<!-- Also drops herbs. -->
+				<item id="8600" min="1" max="1" chance="10" /> <!-- Herb of Life -->
+				<item id="8601" min="1" max="1" chance="8" /> <!-- Major Herb of Life -->
+				<item id="8602" min="1" max="1" chance="2" /> <!-- Superior Herb of Life -->
+				<item id="8603" min="1" max="1" chance="19.8" /> <!-- Herb of Mana -->
+				<item id="8604" min="1" max="1" chance="9.9" /> <!-- Major Herb of Mana -->
+				<item id="8605" min="1" max="1" chance="3.3" /> <!-- Superior Herb of Mana -->
+				<item id="34849" min="1" max="1" chance="0.7" /> <!-- Mysterious Herb of Power -->
+				<item id="34850" min="1" max="1" chance="0.7" /> <!-- Mysterious Herb of Magic -->
+				<item id="13028" min="1" max="1" chance="0.1" /> <!-- Vitality Replenishing Herb -->
 			</drop>
 			<spoil>
-				<item id="36532" min="1" max="1" chance="0.3" /> <!-- Thin Braid -->
+				<item id="36532" min="1" max="1" chance="0.75187969924812" /> <!-- Thin Braid -->
 			</spoil>
 			<lucky>
 				<item id="39629" min="1" max="1" chance="100" /> <!-- Fortune Pocket - Stage 1 -->
@@ -1403,16 +1656,26 @@
 		</skillList>
 		<dropLists>
 			<drop>
-				<item id="57" min="28" max="66" chance="70" /> <!-- Adena -->
-				<item id="10483" min="1" max="1" chance="0.03" /> <!-- Life Stone - Lv. 82 -->
-				<item id="9549" min="1" max="1" chance="0.00549999999999982" /> <!-- Wind Stone -->
-				<item id="10484" min="1" max="1" chance="0.00549999999999982" /> <!-- Mid-grade Life Stone - Lv. 82 -->
-				<item id="9555" min="1" max="1" chance="0.000899999999999991" /> <!-- Wind Crystal -->
-				<item id="10485" min="1" max="1" chance="0.000899999999999991" /> <!-- High-grade Life Stone - Lv. 82 -->
-				<item id="17248" min="1" max="1" chance="0.000899999999999991" /> <!-- Large Dragon Bone -->
+				<item id="57" min="24" max="55" chance="70" /> <!-- Adena -->
+				<item id="10483" min="1" max="1" chance="0.02" /> <!-- Life Stone - Lv. 82 -->
+				<item id="9549" min="1" max="1" chance="0.02" /> <!-- Wind Stone -->
+				<item id="10484" min="1" max="1" chance="0.01" /> <!-- Mid-grade Life Stone - Lv. 82 -->
+				<item id="9555" min="1" max="1" chance="0.01" /> <!-- Wind Crystal -->
+				<item id="10485" min="1" max="1" chance="0.005" /> <!-- High-grade Life Stone - Lv. 82 -->
+				<item id="17248" min="1" max="1" chance="0.005" /> <!-- Large Dragon Bone -->
+				<!-- Also drops herbs. -->
+				<item id="8600" min="1" max="1" chance="10" /> <!-- Herb of Life -->
+				<item id="8601" min="1" max="1" chance="8" /> <!-- Major Herb of Life -->
+				<item id="8602" min="1" max="1" chance="2" /> <!-- Superior Herb of Life -->
+				<item id="8603" min="1" max="1" chance="19.8" /> <!-- Herb of Mana -->
+				<item id="8604" min="1" max="1" chance="9.9" /> <!-- Major Herb of Mana -->
+				<item id="8605" min="1" max="1" chance="3.3" /> <!-- Superior Herb of Mana -->
+				<item id="34849" min="1" max="1" chance="0.7" /> <!-- Mysterious Herb of Power -->
+				<item id="34850" min="1" max="1" chance="0.7" /> <!-- Mysterious Herb of Magic -->
+				<item id="13028" min="1" max="1" chance="0.1" /> <!-- Vitality Replenishing Herb -->
 			</drop>
 			<spoil>
-				<item id="36532" min="1" max="1" chance="1.198" /> <!-- Thin Braid -->
+				<item id="36532" min="1" max="1" chance="0.75187969924812" /> <!-- Thin Braid -->
 			</spoil>
 			<lucky>
 				<item id="39629" min="1" max="1" chance="100" /> <!-- Fortune Pocket - Stage 1 -->
@@ -1451,16 +1714,26 @@
 		</skillList>
 		<dropLists>
 			<drop>
-				<item id="57" min="42" max="99" chance="70" /> <!-- Adena -->
-				<item id="10483" min="1" max="1" chance="0.0749999999999998" /> <!-- Life Stone - Lv. 82 -->
-				<item id="10484" min="1" max="1" chance="0.0299999999999995" /> <!-- Mid-grade Life Stone - Lv. 82 -->
-				<item id="9549" min="1" max="1" chance="0.00550000000000002" /> <!-- Wind Stone -->
-				<item id="9555" min="1" max="1" chance="0.00299999999999995" /> <!-- Wind Crystal -->
-				<item id="10485" min="1" max="1" chance="0.00299999999999995" /> <!-- High-grade Life Stone - Lv. 82 -->
-				<item id="17248" min="1" max="1" chance="0.000899999999999995" /> <!-- Large Dragon Bone -->
+				<item id="57" min="24" max="55" chance="70" /> <!-- Adena -->
+				<item id="10483" min="1" max="1" chance="0.02" /> <!-- Life Stone - Lv. 82 -->
+				<item id="9549" min="1" max="1" chance="0.02" /> <!-- Wind Stone -->
+				<item id="10484" min="1" max="1" chance="0.01" /> <!-- Mid-grade Life Stone - Lv. 82 -->
+				<item id="9555" min="1" max="1" chance="0.01" /> <!-- Wind Crystal -->
+				<item id="10485" min="1" max="1" chance="0.005" /> <!-- High-grade Life Stone - Lv. 82 -->
+				<item id="17248" min="1" max="1" chance="0.005" /> <!-- Large Dragon Bone -->
+				<!-- Also drops herbs. -->
+				<item id="8600" min="1" max="1" chance="10" /> <!-- Herb of Life -->
+				<item id="8601" min="1" max="1" chance="8" /> <!-- Major Herb of Life -->
+				<item id="8602" min="1" max="1" chance="2" /> <!-- Superior Herb of Life -->
+				<item id="8603" min="1" max="1" chance="19.8" /> <!-- Herb of Mana -->
+				<item id="8604" min="1" max="1" chance="9.9" /> <!-- Major Herb of Mana -->
+				<item id="8605" min="1" max="1" chance="3.3" /> <!-- Superior Herb of Mana -->
+				<item id="34849" min="1" max="1" chance="0.7" /> <!-- Mysterious Herb of Power -->
+				<item id="34850" min="1" max="1" chance="0.7" /> <!-- Mysterious Herb of Magic -->
+				<item id="13028" min="1" max="1" chance="0.1" /> <!-- Vitality Replenishing Herb -->
 			</drop>
 			<spoil>
-				<item id="36532" min="1" max="1" chance="1.751" /> <!-- Thin Braid -->
+				<item id="36532" min="1" max="1" chance="0.75187969924812" /> <!-- Thin Braid -->
 			</spoil>
 			<lucky>
 				<item id="39629" min="1" max="1" chance="100" /> <!-- Fortune Pocket - Stage 1 -->
@@ -1498,16 +1771,26 @@
 		</skillList>
 		<dropLists>
 			<drop>
-				<item id="57" min="44" max="102" chance="70" /> <!-- Adena -->
-				<item id="10483" min="1" max="1" chance="0.0749999999999998" /> <!-- Life Stone - Lv. 82 -->
-				<item id="10484" min="1" max="1" chance="0.0299999999999995" /> <!-- Mid-grade Life Stone - Lv. 82 -->
-				<item id="9549" min="1" max="1" chance="0.00550000000000002" /> <!-- Wind Stone -->
-				<item id="9555" min="1" max="1" chance="0.00299999999999995" /> <!-- Wind Crystal -->
-				<item id="10485" min="1" max="1" chance="0.00299999999999995" /> <!-- High-grade Life Stone - Lv. 82 -->
-				<item id="17248" min="1" max="1" chance="0.000899999999999995" /> <!-- Large Dragon Bone -->
+				<item id="57" min="24" max="55" chance="70" /> <!-- Adena -->
+				<item id="10483" min="1" max="1" chance="0.02" /> <!-- Life Stone - Lv. 82 -->
+				<item id="9549" min="1" max="1" chance="0.02" /> <!-- Wind Stone -->
+				<item id="10484" min="1" max="1" chance="0.01" /> <!-- Mid-grade Life Stone - Lv. 82 -->
+				<item id="9555" min="1" max="1" chance="0.01" /> <!-- Wind Crystal -->
+				<item id="10485" min="1" max="1" chance="0.005" /> <!-- High-grade Life Stone - Lv. 82 -->
+				<item id="17248" min="1" max="1" chance="0.005" /> <!-- Large Dragon Bone -->
+				<!-- Also drops herbs. -->
+				<item id="8600" min="1" max="1" chance="10" /> <!-- Herb of Life -->
+				<item id="8601" min="1" max="1" chance="8" /> <!-- Major Herb of Life -->
+				<item id="8602" min="1" max="1" chance="2" /> <!-- Superior Herb of Life -->
+				<item id="8603" min="1" max="1" chance="19.8" /> <!-- Herb of Mana -->
+				<item id="8604" min="1" max="1" chance="9.9" /> <!-- Major Herb of Mana -->
+				<item id="8605" min="1" max="1" chance="3.3" /> <!-- Superior Herb of Mana -->
+				<item id="34849" min="1" max="1" chance="0.7" /> <!-- Mysterious Herb of Power -->
+				<item id="34850" min="1" max="1" chance="0.7" /> <!-- Mysterious Herb of Magic -->
+				<item id="13028" min="1" max="1" chance="0.1" /> <!-- Vitality Replenishing Herb -->
 			</drop>
 			<spoil>
-				<item id="36532" min="1" max="1" chance="1.785" /> <!-- Thin Braid -->
+				<item id="36532" min="1" max="1" chance="0.75187969924812" /> <!-- Thin Braid -->
 			</spoil>
 			<lucky>
 				<item id="39629" min="1" max="1" chance="100" /> <!-- Fortune Pocket - Stage 1 -->
@@ -1543,16 +1826,26 @@
 		</skillList>
 		<dropLists>
 			<drop>
-				<item id="57" min="20" max="47" chance="70" /> <!-- Adena -->
-				<item id="10483" min="1" max="1" chance="0.0300000000000002" /> <!-- Life Stone - Lv. 82 -->
-				<item id="9549" min="1" max="1" chance="0.00300000000000002" /> <!-- Wind Stone -->
-				<item id="10484" min="1" max="1" chance="0.00550000000000008" /> <!-- Mid-grade Life Stone - Lv. 82 -->
-				<item id="9555" min="1" max="1" chance="0.00090000000000001" /> <!-- Wind Crystal -->
-				<item id="10485" min="1" max="1" chance="0.00090000000000001" /> <!-- High-grade Life Stone - Lv. 82 -->
-				<item id="17248" min="1" max="1" chance="0.00090000000000001" /> <!-- Large Dragon Bone -->
+				<item id="57" min="24" max="55" chance="70" /> <!-- Adena -->
+				<item id="10483" min="1" max="1" chance="0.02" /> <!-- Life Stone - Lv. 82 -->
+				<item id="9549" min="1" max="1" chance="0.02" /> <!-- Wind Stone -->
+				<item id="10484" min="1" max="1" chance="0.01" /> <!-- Mid-grade Life Stone - Lv. 82 -->
+				<item id="9555" min="1" max="1" chance="0.01" /> <!-- Wind Crystal -->
+				<item id="10485" min="1" max="1" chance="0.005" /> <!-- High-grade Life Stone - Lv. 82 -->
+				<item id="17248" min="1" max="1" chance="0.005" /> <!-- Large Dragon Bone -->
+				<!-- Also drops herbs. -->
+				<item id="8600" min="1" max="1" chance="10" /> <!-- Herb of Life -->
+				<item id="8601" min="1" max="1" chance="8" /> <!-- Major Herb of Life -->
+				<item id="8602" min="1" max="1" chance="2" /> <!-- Superior Herb of Life -->
+				<item id="8603" min="1" max="1" chance="19.8" /> <!-- Herb of Mana -->
+				<item id="8604" min="1" max="1" chance="9.9" /> <!-- Major Herb of Mana -->
+				<item id="8605" min="1" max="1" chance="3.3" /> <!-- Superior Herb of Mana -->
+				<item id="34849" min="1" max="1" chance="0.7" /> <!-- Mysterious Herb of Power -->
+				<item id="34850" min="1" max="1" chance="0.7" /> <!-- Mysterious Herb of Magic -->
+				<item id="13028" min="1" max="1" chance="0.1" /> <!-- Vitality Replenishing Herb -->
 			</drop>
 			<spoil>
-				<item id="36532" min="1" max="1" chance="0.75" /> <!-- Thin Braid -->
+				<item id="36532" min="1" max="1" chance="0.75187969924812" /> <!-- Thin Braid -->
 			</spoil>
 			<lucky>
 				<item id="39629" min="1" max="1" chance="100" /> <!-- Fortune Pocket - Stage 1 -->
@@ -1591,15 +1884,25 @@
 		<dropLists>
 			<drop>
 				<item id="57" min="46" max="107" chance="70" /> <!-- Adena -->
-				<item id="10483" min="1" max="1" chance="0.0749999999999993" /> <!-- Life Stone - Lv. 82 -->
-				<item id="9546" min="1" max="1" chance="0.0300000000000003" /> <!-- Fire Stone -->
-				<item id="10484" min="1" max="1" chance="0.0300000000000003" /> <!-- Mid-grade Life Stone - Lv. 82 -->
-				<item id="9552" min="1" max="1" chance="0.00300000000000003" /> <!-- Fire Crystal -->
-				<item id="10485" min="1" max="1" chance="0.00300000000000003" /> <!-- High-grade Life Stone - Lv. 82 -->
-				<item id="17248" min="1" max="1" chance="0.000899999999999995" /> <!-- Large Dragon Bone -->
+				<item id="10483" min="1" max="1" chance="0.02" /> <!-- Life Stone - Lv. 82 -->
+				<item id="9546" min="1" max="1" chance="0.02" /> <!-- Fire Stone -->
+				<item id="10484" min="1" max="1" chance="0.01" /> <!-- Mid-grade Life Stone - Lv. 82 -->
+				<item id="9552" min="1" max="1" chance="0.01" /> <!-- Fire Crystal -->
+				<item id="10485" min="1" max="1" chance="0.005" /> <!-- High-grade Life Stone - Lv. 82 -->
+				<item id="17248" min="1" max="1" chance="0.005" /> <!-- Large Dragon Bone -->
+				<!-- Also drops herbs. -->
+				<item id="8600" min="1" max="1" chance="10" /> <!-- Herb of Life -->
+				<item id="8601" min="1" max="1" chance="8" /> <!-- Major Herb of Life -->
+				<item id="8602" min="1" max="1" chance="2" /> <!-- Superior Herb of Life -->
+				<item id="8603" min="1" max="1" chance="19.8" /> <!-- Herb of Mana -->
+				<item id="8604" min="1" max="1" chance="9.9" /> <!-- Major Herb of Mana -->
+				<item id="8605" min="1" max="1" chance="3.3" /> <!-- Superior Herb of Mana -->
+				<item id="34849" min="1" max="1" chance="0.7" /> <!-- Mysterious Herb of Power -->
+				<item id="34850" min="1" max="1" chance="0.7" /> <!-- Mysterious Herb of Magic -->
+				<item id="13028" min="1" max="1" chance="0.1" /> <!-- Vitality Replenishing Herb -->
 			</drop>
 			<spoil>
-				<item id="36532" min="1" max="1" chance="1.961" /> <!-- Thin Braid -->
+				<item id="36532" min="1" max="1" chance="2" /> <!-- Thin Braid -->
 			</spoil>
 			<lucky>
 				<item id="39629" min="1" max="1" chance="100" /> <!-- Fortune Pocket - Stage 1 -->
@@ -1638,16 +1941,26 @@
 		</skillList>
 		<dropLists>
 			<drop>
-				<item id="57" min="47" max="110" chance="70" /> <!-- Adena -->
-				<item id="10483" min="1" max="1" chance="0.0749999999999993" /> <!-- Life Stone - Lv. 82 -->
-				<item id="9546" min="1" max="1" chance="0.0300000000000003" /> <!-- Fire Stone -->
-				<item id="10484" min="1" max="1" chance="0.0300000000000003" /> <!-- Mid-grade Life Stone - Lv. 82 -->
-				<item id="9552" min="1" max="1" chance="0.00300000000000003" /> <!-- Fire Crystal -->
-				<item id="10485" min="1" max="1" chance="0.00300000000000003" /> <!-- High-grade Life Stone - Lv. 82 -->
-				<item id="17248" min="1" max="1" chance="0.000899999999999995" /> <!-- Large Dragon Bone -->
+				<item id="57" min="46" max="107" chance="70" /> <!-- Adena -->
+				<item id="10483" min="1" max="1" chance="0.02" /> <!-- Life Stone - Lv. 82 -->
+				<item id="9546" min="1" max="1" chance="0.02" /> <!-- Fire Stone -->
+				<item id="10484" min="1" max="1" chance="0.01" /> <!-- Mid-grade Life Stone - Lv. 82 -->
+				<item id="9552" min="1" max="1" chance="0.01" /> <!-- Fire Crystal -->
+				<item id="10485" min="1" max="1" chance="0.005" /> <!-- High-grade Life Stone - Lv. 82 -->
+				<item id="17248" min="1" max="1" chance="0.005" /> <!-- Large Dragon Bone -->
+				<!-- Also drops herbs. -->
+				<item id="8600" min="1" max="1" chance="10" /> <!-- Herb of Life -->
+				<item id="8601" min="1" max="1" chance="8" /> <!-- Major Herb of Life -->
+				<item id="8602" min="1" max="1" chance="2" /> <!-- Superior Herb of Life -->
+				<item id="8603" min="1" max="1" chance="19.8" /> <!-- Herb of Mana -->
+				<item id="8604" min="1" max="1" chance="9.9" /> <!-- Major Herb of Mana -->
+				<item id="8605" min="1" max="1" chance="3.3" /> <!-- Superior Herb of Mana -->
+				<item id="34849" min="1" max="1" chance="0.7" /> <!-- Mysterious Herb of Power -->
+				<item id="34850" min="1" max="1" chance="0.7" /> <!-- Mysterious Herb of Magic -->
+				<item id="13028" min="1" max="1" chance="0.1" /> <!-- Vitality Replenishing Herb -->
 			</drop>
 			<spoil>
-				<item id="36532" min="1" max="1" chance="2.048" /> <!-- Thin Braid -->
+				<item id="36532" min="1" max="1" chance="2" /> <!-- Thin Braid -->
 			</spoil>
 			<lucky>
 				<item id="39629" min="1" max="1" chance="100" /> <!-- Fortune Pocket - Stage 1 -->
@@ -1685,16 +1998,26 @@
 		</skillList>
 		<dropLists>
 			<drop>
-				<item id="57" min="42" max="98" chance="70" /> <!-- Adena -->
-				<item id="10483" min="1" max="1" chance="0.0749999999999998" /> <!-- Life Stone - Lv. 82 -->
-				<item id="10484" min="1" max="1" chance="0.0299999999999995" /> <!-- Mid-grade Life Stone - Lv. 82 -->
-				<item id="9546" min="1" max="1" chance="0.00550000000000002" /> <!-- Fire Stone -->
-				<item id="9552" min="1" max="1" chance="0.00299999999999995" /> <!-- Fire Crystal -->
-				<item id="10485" min="1" max="1" chance="0.00299999999999995" /> <!-- High-grade Life Stone - Lv. 82 -->
-				<item id="17248" min="1" max="1" chance="0.000899999999999995" /> <!-- Large Dragon Bone -->
+				<item id="57" min="46" max="107" chance="70" /> <!-- Adena -->
+				<item id="10483" min="1" max="1" chance="0.02" /> <!-- Life Stone - Lv. 82 -->
+				<item id="9546" min="1" max="1" chance="0.02" /> <!-- Fire Stone -->
+				<item id="10484" min="1" max="1" chance="0.01" /> <!-- Mid-grade Life Stone - Lv. 82 -->
+				<item id="9552" min="1" max="1" chance="0.01" /> <!-- Fire Crystal -->
+				<item id="10485" min="1" max="1" chance="0.005" /> <!-- High-grade Life Stone - Lv. 82 -->
+				<item id="17248" min="1" max="1" chance="0.005" /> <!-- Large Dragon Bone -->
+				<!-- Also drops herbs. -->
+				<item id="8600" min="1" max="1" chance="10" /> <!-- Herb of Life -->
+				<item id="8601" min="1" max="1" chance="8" /> <!-- Major Herb of Life -->
+				<item id="8602" min="1" max="1" chance="2" /> <!-- Superior Herb of Life -->
+				<item id="8603" min="1" max="1" chance="19.8" /> <!-- Herb of Mana -->
+				<item id="8604" min="1" max="1" chance="9.9" /> <!-- Major Herb of Mana -->
+				<item id="8605" min="1" max="1" chance="3.3" /> <!-- Superior Herb of Mana -->
+				<item id="34849" min="1" max="1" chance="0.7" /> <!-- Mysterious Herb of Power -->
+				<item id="34850" min="1" max="1" chance="0.7" /> <!-- Mysterious Herb of Magic -->
+				<item id="13028" min="1" max="1" chance="0.1" /> <!-- Vitality Replenishing Herb -->
 			</drop>
 			<spoil>
-				<item id="36532" min="1" max="1" chance="1.824" /> <!-- Thin Braid -->
+				<item id="36532" min="1" max="1" chance="2" /> <!-- Thin Braid -->
 			</spoil>
 			<lucky>
 				<item id="39629" min="1" max="1" chance="100" /> <!-- Fortune Pocket - Stage 1 -->
@@ -1732,16 +2055,26 @@
 		</skillList>
 		<dropLists>
 			<drop>
-				<item id="57" min="50" max="116" chance="70" /> <!-- Adena -->
-				<item id="10483" min="1" max="1" chance="0.0749999999999993" /> <!-- Life Stone - Lv. 82 -->
-				<item id="9546" min="1" max="1" chance="0.0300000000000003" /> <!-- Fire Stone -->
-				<item id="10484" min="1" max="1" chance="0.0300000000000003" /> <!-- Mid-grade Life Stone - Lv. 82 -->
-				<item id="9552" min="1" max="1" chance="0.00300000000000003" /> <!-- Fire Crystal -->
-				<item id="10485" min="1" max="1" chance="0.00300000000000003" /> <!-- High-grade Life Stone - Lv. 82 -->
-				<item id="17248" min="1" max="1" chance="0.000899999999999995" /> <!-- Large Dragon Bone -->
+				<item id="57" min="46" max="107" chance="70" /> <!-- Adena -->
+				<item id="10483" min="1" max="1" chance="0.02" /> <!-- Life Stone - Lv. 82 -->
+				<item id="9546" min="1" max="1" chance="0.02" /> <!-- Fire Stone -->
+				<item id="10484" min="1" max="1" chance="0.01" /> <!-- Mid-grade Life Stone - Lv. 82 -->
+				<item id="9552" min="1" max="1" chance="0.01" /> <!-- Fire Crystal -->
+				<item id="10485" min="1" max="1" chance="0.005" /> <!-- High-grade Life Stone - Lv. 82 -->
+				<item id="17248" min="1" max="1" chance="0.005" /> <!-- Large Dragon Bone -->
+				<!-- Also drops herbs. -->
+				<item id="8600" min="1" max="1" chance="10" /> <!-- Herb of Life -->
+				<item id="8601" min="1" max="1" chance="8" /> <!-- Major Herb of Life -->
+				<item id="8602" min="1" max="1" chance="2" /> <!-- Superior Herb of Life -->
+				<item id="8603" min="1" max="1" chance="19.8" /> <!-- Herb of Mana -->
+				<item id="8604" min="1" max="1" chance="9.9" /> <!-- Major Herb of Mana -->
+				<item id="8605" min="1" max="1" chance="3.3" /> <!-- Superior Herb of Mana -->
+				<item id="34849" min="1" max="1" chance="0.7" /> <!-- Mysterious Herb of Power -->
+				<item id="34850" min="1" max="1" chance="0.7" /> <!-- Mysterious Herb of Magic -->
+				<item id="13028" min="1" max="1" chance="0.1" /> <!-- Vitality Replenishing Herb -->
 			</drop>
 			<spoil>
-				<item id="36532" min="1" max="1" chance="2.121" /> <!-- Thin Braid -->
+				<item id="36532" min="1" max="1" chance="2" /> <!-- Thin Braid -->
 			</spoil>
 			<lucky>
 				<item id="39629" min="1" max="1" chance="100" /> <!-- Fortune Pocket - Stage 1 -->
@@ -1776,16 +2109,16 @@
 		</skillList>
 		<dropLists>
 			<drop>
-				<item id="57" min="18" max="42" chance="70" /> <!-- Adena -->
-				<item id="10483" min="1" max="1" chance="0.0299999999999999" /> <!-- Life Stone - Lv. 82 -->
-				<item id="9546" min="1" max="1" chance="0.00299999999999999" /> <!-- Fire Stone -->
-				<item id="10484" min="1" max="1" chance="0.00299999999999999" /> <!-- Mid-grade Life Stone - Lv. 82 -->
-				<item id="9552" min="1" max="1" chance="0.000899999999999986" /> <!-- Fire Crystal -->
-				<item id="10485" min="1" max="1" chance="0.000899999999999986" /> <!-- High-grade Life Stone - Lv. 82 -->
-				<item id="17248" min="1" max="1" chance="0.000899999999999986" /> <!-- Large Dragon Bone -->
+				<item id="57" min="24" max="55" chance="70" /> <!-- Adena -->
+				<item id="10483" min="1" max="1" chance="0.02" /> <!-- Life Stone - Lv. 82 -->
+				<item id="9546" min="1" max="1" chance="0.02" /> <!-- Fire Stone -->
+				<item id="10484" min="1" max="1" chance="0.01" /> <!-- Mid-grade Life Stone - Lv. 82 -->
+				<item id="9552" min="1" max="1" chance="0.01" /> <!-- Fire Crystal -->
+				<item id="10485" min="1" max="1" chance="0.005" /> <!-- High-grade Life Stone - Lv. 82 -->
+				<item id="17248" min="1" max="1" chance="0.005" /> <!-- Large Dragon Bone -->
 			</drop>
 			<spoil>
-				<item id="36532" min="1" max="1" chance="0.3" /> <!-- Thin Braid -->
+				<item id="36532" min="1" max="1" chance="0.75187969924812" /> <!-- Thin Braid -->
 			</spoil>
 			<lucky>
 				<item id="39629" min="1" max="1" chance="100" /> <!-- Fortune Pocket - Stage 1 -->
@@ -1820,16 +2153,16 @@
 		</skillList>
 		<dropLists>
 			<drop>
-				<item id="57" min="21" max="48" chance="70" /> <!-- Adena -->
-				<item id="10483" min="1" max="1" chance="0.0300000000000002" /> <!-- Life Stone - Lv. 82 -->
-				<item id="9546" min="1" max="1" chance="0.00300000000000002" /> <!-- Fire Stone -->
-				<item id="10484" min="1" max="1" chance="0.00550000000000008" /> <!-- Mid-grade Life Stone - Lv. 82 -->
-				<item id="9552" min="1" max="1" chance="0.00090000000000001" /> <!-- Fire Crystal -->
-				<item id="10485" min="1" max="1" chance="0.00090000000000001" /> <!-- High-grade Life Stone - Lv. 82 -->
-				<item id="17248" min="1" max="1" chance="0.00090000000000001" /> <!-- Large Dragon Bone -->
+				<item id="57" min="24" max="55" chance="70" /> <!-- Adena -->
+				<item id="10483" min="1" max="1" chance="0.02" /> <!-- Life Stone - Lv. 82 -->
+				<item id="9546" min="1" max="1" chance="0.02" /> <!-- Fire Stone -->
+				<item id="10484" min="1" max="1" chance="0.01" /> <!-- Mid-grade Life Stone - Lv. 82 -->
+				<item id="9552" min="1" max="1" chance="0.01" /> <!-- Fire Crystal -->
+				<item id="10485" min="1" max="1" chance="0.005" /> <!-- High-grade Life Stone - Lv. 82 -->
+				<item id="17248" min="1" max="1" chance="0.005" /> <!-- Large Dragon Bone -->
 			</drop>
 			<spoil>
-				<item id="36532" min="1" max="1" chance="0.75" /> <!-- Thin Braid -->
+				<item id="36532" min="1" max="1" chance="0.75187969924812" /> <!-- Thin Braid -->
 			</spoil>
 			<lucky>
 				<item id="39629" min="1" max="1" chance="100" /> <!-- Fortune Pocket - Stage 1 -->
@@ -1840,8 +2173,7 @@
 			<height normal="32" />
 		</collision>
 	</npc>
-	<npc id="23447" level="81" type="Npc" name="Gust Spiral">
-		<!-- AUTO GENERATED NPC TODO: FIX IT -->
+	<npc id="23447" level="81" type="Monster" name="Gust Spiral">
 		<race>UNDEAD</race>
 		<sex>FEMALE</sex>
 		<acquire exp="231269" sp="55" />
@@ -1866,16 +2198,26 @@
 		</skillList>
 		<dropLists>
 			<drop>
-				<item id="57" min="17" max="40" chance="70" /> <!-- Adena -->
-				<item id="10483" min="1" max="1" chance="0.0300000000000002" /> <!-- Life Stone - Lv. 82 -->
-				<item id="9546" min="1" max="1" chance="0.00300000000000002" /> <!-- Fire Stone -->
-				<item id="10484" min="1" max="1" chance="0.00550000000000008" /> <!-- Mid-grade Life Stone - Lv. 82 -->
-				<item id="9552" min="1" max="1" chance="0.00090000000000001" /> <!-- Fire Crystal -->
-				<item id="10485" min="1" max="1" chance="0.00090000000000001" /> <!-- High-grade Life Stone - Lv. 82 -->
-				<item id="17248" min="1" max="1" chance="0.00090000000000001" /> <!-- Large Dragon Bone -->
+				<item id="57" min="24" max="55" chance="70" /> <!-- Adena -->
+				<item id="10483" min="1" max="1" chance="0.02" /> <!-- Life Stone - Lv. 82 -->
+				<item id="9546" min="1" max="1" chance="0.02" /> <!-- Fire Stone -->
+				<item id="10484" min="1" max="1" chance="0.01" /> <!-- Mid-grade Life Stone - Lv. 82 -->
+				<item id="9552" min="1" max="1" chance="0.01" /> <!-- Fire Crystal -->
+				<item id="10485" min="1" max="1" chance="0.005" /> <!-- High-grade Life Stone - Lv. 82 -->
+				<item id="17248" min="1" max="1" chance="0.005" /> <!-- Large Dragon Bone -->
+				<!-- Also drops herbs. -->
+				<item id="8600" min="1" max="1" chance="10" /> <!-- Herb of Life -->
+				<item id="8601" min="1" max="1" chance="8" /> <!-- Major Herb of Life -->
+				<item id="8602" min="1" max="1" chance="2" /> <!-- Superior Herb of Life -->
+				<item id="8603" min="1" max="1" chance="19.8" /> <!-- Herb of Mana -->
+				<item id="8604" min="1" max="1" chance="9.9" /> <!-- Major Herb of Mana -->
+				<item id="8605" min="1" max="1" chance="3.3" /> <!-- Superior Herb of Mana -->
+				<item id="34849" min="1" max="1" chance="0.7" /> <!-- Mysterious Herb of Power -->
+				<item id="34850" min="1" max="1" chance="0.7" /> <!-- Mysterious Herb of Magic -->
+				<item id="13028" min="1" max="1" chance="0.1" /> <!-- Vitality Replenishing Herb -->
 			</drop>
 			<spoil>
-				<item id="36532" min="1" max="1" chance="0.75" /> <!-- Thin Braid -->
+				<item id="36532" min="1" max="1" chance="0.75187969924812" /> <!-- Thin Braid -->
 			</spoil>
 			<lucky>
 				<item id="39629" min="1" max="1" chance="100" /> <!-- Fortune Pocket - Stage 1 -->
@@ -1887,7 +2229,6 @@
 		</collision>
 	</npc>
 	<npc id="23448" level="2" type="Monster" name="Floato">
-		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<race>ANIMAL</race>
 		<sex>MALE</sex>
 		<acquire exp="88" sp="0" />
@@ -1917,11 +2258,21 @@
 		<dropLists>
 			<drop>
 				<item id="57" min="1" max="1" chance="70" /> <!-- Adena -->
-				<item id="8" min="1" max="1" chance="0.075" /> <!-- Willow Staff -->
-				<item id="36526" min="1" max="1" chance="0.3" /> <!-- Fiber -->
+				<item id="36526" min="1" max="1" chance="0.3003003003003" /> <!-- Fiber -->
+				<item id="8" min="1" max="1" chance="0.0750187546886722" /> <!-- Willow Staff -->
+				<!-- Also drops herbs. -->
+				<item id="8600" min="1" max="1" chance="10" /> <!-- Herb of Life -->
+				<item id="8601" min="1" max="1" chance="8" /> <!-- Major Herb of Life -->
+				<item id="8602" min="1" max="1" chance="2" /> <!-- Superior Herb of Life -->
+				<item id="8603" min="1" max="1" chance="19.8" /> <!-- Herb of Mana -->
+				<item id="8604" min="1" max="1" chance="9.9" /> <!-- Major Herb of Mana -->
+				<item id="8605" min="1" max="1" chance="3.3" /> <!-- Superior Herb of Mana -->
+				<item id="34849" min="1" max="1" chance="0.7" /> <!-- Mysterious Herb of Power -->
+				<item id="34850" min="1" max="1" chance="0.7" /> <!-- Mysterious Herb of Magic -->
+				<item id="13028" min="1" max="1" chance="0.1" /> <!-- Vitality Replenishing Herb -->
 			</drop>
 			<spoil>
-				<item id="36516" min="1" max="1" chance="1.313" /> <!-- Worn Leather -->
+				<item id="36516" min="1" max="1" chance="1.25" /> <!-- Worn Leather -->
 			</spoil>
 			<lucky>
 				<item id="39629" min="1" max="1" chance="100" /> <!-- Fortune Pocket - Stage 1 -->
@@ -1933,7 +2284,6 @@
 		</collision>
 	</npc>
 	<npc id="23449" level="5" type="Monster" name="Keen Floato">
-		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<race>ANIMAL</race>
 		<sex>MALE</sex>
 		<acquire exp="183" sp="0" />
@@ -1964,11 +2314,21 @@
 		<dropLists>
 			<drop>
 				<item id="57" min="1" max="3" chance="70" /> <!-- Adena -->
-				<item id="8" min="1" max="1" chance="0.3" /> <!-- Willow Staff -->
-				<item id="36526" min="1" max="1" chance="0.75" /> <!-- Fiber -->
+				<item id="36526" min="1" max="1" chance="0.75187969924812" /> <!-- Fiber -->
+				<item id="8" min="1" max="1" chance="0.3003003003003" /> <!-- Willow Staff -->
+				<!-- Also drops herbs. -->
+				<item id="8600" min="1" max="1" chance="10" /> <!-- Herb of Life -->
+				<item id="8601" min="1" max="1" chance="8" /> <!-- Major Herb of Life -->
+				<item id="8602" min="1" max="1" chance="2" /> <!-- Superior Herb of Life -->
+				<item id="8603" min="1" max="1" chance="19.8" /> <!-- Herb of Mana -->
+				<item id="8604" min="1" max="1" chance="9.9" /> <!-- Major Herb of Mana -->
+				<item id="8605" min="1" max="1" chance="3.3" /> <!-- Superior Herb of Mana -->
+				<item id="34849" min="1" max="1" chance="0.7" /> <!-- Mysterious Herb of Power -->
+				<item id="34850" min="1" max="1" chance="0.7" /> <!-- Mysterious Herb of Magic -->
+				<item id="13028" min="1" max="1" chance="0.1" /> <!-- Vitality Replenishing Herb -->
 			</drop>
 			<spoil>
-				<item id="36516" min="1" max="1" chance="4.109" /> <!-- Worn Leather -->
+				<item id="36516" min="1" max="1" chance="4" /> <!-- Worn Leather -->
 			</spoil>
 			<lucky>
 				<item id="39629" min="1" max="1" chance="100" /> <!-- Fortune Pocket - Stage 1 -->
@@ -1980,7 +2340,6 @@
 		</collision>
 	</npc>
 	<npc id="23450" level="7" type="Monster" name="Ratel">
-		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<race>ANIMAL</race>
 		<sex>MALE</sex>
 		<acquire exp="251" sp="0" />
@@ -2011,11 +2370,21 @@
 		<dropLists>
 			<drop>
 				<item id="57" min="2" max="5" chance="70" /> <!-- Adena -->
-				<item id="9" min="1" max="1" chance="0.075" /> <!-- Cedar Staff -->
-				<item id="36526" min="1" max="1" chance="1.392" /> <!-- Fiber -->
+				<item id="36526" min="1" max="1" chance="1.3" /> <!-- Fiber -->
+				<item id="9" min="1" max="1" chance="0.0750187546886722" /> <!-- Cedar Staff -->
+				<!-- Also drops herbs. -->
+				<item id="8600" min="1" max="1" chance="10" /> <!-- Herb of Life -->
+				<item id="8601" min="1" max="1" chance="8" /> <!-- Major Herb of Life -->
+				<item id="8602" min="1" max="1" chance="2" /> <!-- Superior Herb of Life -->
+				<item id="8603" min="1" max="1" chance="19.8" /> <!-- Herb of Mana -->
+				<item id="8604" min="1" max="1" chance="9.9" /> <!-- Major Herb of Mana -->
+				<item id="8605" min="1" max="1" chance="3.3" /> <!-- Superior Herb of Mana -->
+				<item id="34849" min="1" max="1" chance="0.7" /> <!-- Mysterious Herb of Power -->
+				<item id="34850" min="1" max="1" chance="0.7" /> <!-- Mysterious Herb of Magic -->
+				<item id="13028" min="1" max="1" chance="0.1" /> <!-- Vitality Replenishing Herb -->
 			</drop>
 			<spoil>
-				<item id="36532" min="1" max="1" chance="0.075" /> <!-- Thin Braid -->
+				<item id="36532" min="1" max="1" chance="0.0750187546886722" /> <!-- Thin Braid -->
 			</spoil>
 			<lucky>
 				<item id="39629" min="1" max="1" chance="100" /> <!-- Fortune Pocket - Stage 1 -->
@@ -2027,7 +2396,6 @@
 		</collision>
 	</npc>
 	<npc id="23451" level="9" type="Monster" name="Robust Ratel">
-		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<race>ANIMAL</race>
 		<sex>MALE</sex>
 		<acquire exp="481" sp="0" />
@@ -2058,11 +2426,21 @@
 		<dropLists>
 			<drop>
 				<item id="57" min="3" max="7" chance="70" /> <!-- Adena -->
-				<item id="9" min="1" max="1" chance="0.075" /> <!-- Cedar Staff -->
-				<item id="36516" min="1" max="1" chance="1.991" /> <!-- Worn Leather -->
+				<item id="36516" min="1" max="1" chance="2" /> <!-- Worn Leather -->
+				<item id="9" min="1" max="1" chance="0.0750187546886722" /> <!-- Cedar Staff -->
+				<!-- Also drops herbs. -->
+				<item id="8600" min="1" max="1" chance="10" /> <!-- Herb of Life -->
+				<item id="8601" min="1" max="1" chance="8" /> <!-- Major Herb of Life -->
+				<item id="8602" min="1" max="1" chance="2" /> <!-- Superior Herb of Life -->
+				<item id="8603" min="1" max="1" chance="19.8" /> <!-- Herb of Mana -->
+				<item id="8604" min="1" max="1" chance="9.9" /> <!-- Major Herb of Mana -->
+				<item id="8605" min="1" max="1" chance="3.3" /> <!-- Superior Herb of Mana -->
+				<item id="34849" min="1" max="1" chance="0.7" /> <!-- Mysterious Herb of Power -->
+				<item id="34850" min="1" max="1" chance="0.7" /> <!-- Mysterious Herb of Magic -->
+				<item id="13028" min="1" max="1" chance="0.1" /> <!-- Vitality Replenishing Herb -->
 			</drop>
 			<spoil>
-				<item id="36516" min="1" max="1" chance="10.74" /> <!-- Worn Leather -->
+				<item id="36516" min="1" max="1" chance="10" /> <!-- Worn Leather -->
 			</spoil>
 			<lucky>
 				<item id="39629" min="1" max="1" chance="100" /> <!-- Fortune Pocket - Stage 1 -->
@@ -2074,7 +2452,6 @@
 		</collision>
 	</npc>
 	<npc id="23452" level="10" type="Monster" name="Honeybee">
-		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<race>ANIMAL</race>
 		<sex>MALE</sex>
 		<acquire exp="413" sp="0" />
@@ -2105,11 +2482,21 @@
 		<dropLists>
 			<drop>
 				<item id="57" min="4" max="9" chance="70" /> <!-- Adena -->
-				<item id="23" min="1" max="1" chance="0.75" /> <!-- Wooden Breastplate -->
-				<item id="36526" min="1" max="1" chance="2.706" /> <!-- Fiber -->
+				<item id="36526" min="1" max="1" chance="2.5" /> <!-- Fiber -->
+				<item id="23" min="1" max="1" chance="0.75187969924812" /> <!-- Wooden Breastplate -->
+				<!-- Also drops herbs. -->
+				<item id="8600" min="1" max="1" chance="10" /> <!-- Herb of Life -->
+				<item id="8601" min="1" max="1" chance="8" /> <!-- Major Herb of Life -->
+				<item id="8602" min="1" max="1" chance="2" /> <!-- Superior Herb of Life -->
+				<item id="8603" min="1" max="1" chance="19.8" /> <!-- Herb of Mana -->
+				<item id="8604" min="1" max="1" chance="9.9" /> <!-- Major Herb of Mana -->
+				<item id="8605" min="1" max="1" chance="3.3" /> <!-- Superior Herb of Mana -->
+				<item id="34849" min="1" max="1" chance="0.7" /> <!-- Mysterious Herb of Power -->
+				<item id="34850" min="1" max="1" chance="0.7" /> <!-- Mysterious Herb of Magic -->
+				<item id="13028" min="1" max="1" chance="0.1" /> <!-- Vitality Replenishing Herb -->
 			</drop>
 			<spoil>
-				<item id="36532" min="1" max="1" chance="0.075" /> <!-- Thin Braid -->
+				<item id="36532" min="1" max="1" chance="0.0750187546886722" /> <!-- Thin Braid -->
 			</spoil>
 			<lucky>
 				<item id="39629" min="1" max="1" chance="100" /> <!-- Fortune Pocket - Stage 1 -->
@@ -2121,7 +2508,6 @@
 		</collision>
 	</npc>
 	<npc id="23453" level="12" type="Monster" name="Kiku">
-		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<race>ANIMAL</race>
 		<sex>MALE</sex>
 		<acquire exp="526" sp="0" />
@@ -2152,11 +2538,21 @@
 		<dropLists>
 			<drop>
 				<item id="57" min="5" max="11" chance="70" /> <!-- Adena -->
-				<item id="29" min="1" max="1" chance="4.874" /> <!-- Leather Pants -->
-				<item id="36516" min="1" max="1" chance="2.808" /> <!-- Worn Leather -->
+				<item id="29" min="1" max="1" chance="5" /> <!-- Leather Pants -->
+				<item id="36516" min="1" max="1" chance="2.75" /> <!-- Worn Leather -->
+				<!-- Also drops herbs. -->
+				<item id="8600" min="1" max="1" chance="10" /> <!-- Herb of Life -->
+				<item id="8601" min="1" max="1" chance="8" /> <!-- Major Herb of Life -->
+				<item id="8602" min="1" max="1" chance="2" /> <!-- Superior Herb of Life -->
+				<item id="8603" min="1" max="1" chance="19.8" /> <!-- Herb of Mana -->
+				<item id="8604" min="1" max="1" chance="9.9" /> <!-- Major Herb of Mana -->
+				<item id="8605" min="1" max="1" chance="3.3" /> <!-- Superior Herb of Mana -->
+				<item id="34849" min="1" max="1" chance="0.7" /> <!-- Mysterious Herb of Power -->
+				<item id="34850" min="1" max="1" chance="0.7" /> <!-- Mysterious Herb of Magic -->
+				<item id="13028" min="1" max="1" chance="0.1" /> <!-- Vitality Replenishing Herb -->
 			</drop>
 			<spoil>
-				<item id="36516" min="1" max="1" chance="15.42" /> <!-- Worn Leather -->
+				<item id="36516" min="1" max="1" chance="15" /> <!-- Worn Leather -->
 			</spoil>
 			<lucky>
 				<item id="39629" min="1" max="1" chance="100" /> <!-- Fortune Pocket - Stage 1 -->
@@ -2168,7 +2564,6 @@
 		</collision>
 	</npc>
 	<npc id="23454" level="13" type="Monster" name="Robust Kiku">
-		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<race>ANIMAL</race>
 		<sex>FEMALE</sex>
 		<acquire exp="529" sp="0" />
@@ -2192,11 +2587,21 @@
 		<dropLists>
 			<drop>
 				<item id="57" min="5" max="11" chance="70" /> <!-- Adena -->
-				<item id="29" min="1" max="1" chance="5.014" /> <!-- Leather Pants -->
-				<item id="36551" min="1" max="1" chance="0.3" /> <!-- Armor Fragment (Low-grade) -->
+				<item id="29" min="1" max="1" chance="5" /> <!-- Leather Pants -->
+				<item id="36551" min="1" max="1" chance="0.3003003003003" /> <!-- Armor Fragment (Low-grade) -->
+				<!-- Also drops herbs. -->
+				<item id="8600" min="1" max="1" chance="10" /> <!-- Herb of Life -->
+				<item id="8601" min="1" max="1" chance="8" /> <!-- Major Herb of Life -->
+				<item id="8602" min="1" max="1" chance="2" /> <!-- Superior Herb of Life -->
+				<item id="8603" min="1" max="1" chance="19.8" /> <!-- Herb of Mana -->
+				<item id="8604" min="1" max="1" chance="9.9" /> <!-- Major Herb of Mana -->
+				<item id="8605" min="1" max="1" chance="3.3" /> <!-- Superior Herb of Mana -->
+				<item id="34849" min="1" max="1" chance="0.7" /> <!-- Mysterious Herb of Power -->
+				<item id="34850" min="1" max="1" chance="0.7" /> <!-- Mysterious Herb of Magic -->
+				<item id="13028" min="1" max="1" chance="0.1" /> <!-- Vitality Replenishing Herb -->
 			</drop>
 			<spoil>
-				<item id="36516" min="1" max="1" chance="15.16" /> <!-- Worn Leather -->
+				<item id="36516" min="1" max="1" chance="15" /> <!-- Worn Leather -->
 			</spoil>
 			<lucky>
 				<item id="39629" min="1" max="1" chance="100" /> <!-- Fortune Pocket - Stage 1 -->
@@ -2208,7 +2613,6 @@
 		</collision>
 	</npc>
 	<npc id="23455" level="15" type="Monster" name="Growler">
-		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<race>ANIMAL</race>
 		<sex>MALE</sex>
 		<acquire exp="618" sp="0" />
@@ -2238,11 +2642,21 @@
 		<dropLists>
 			<drop>
 				<item id="57" min="5" max="12" chance="70" /> <!-- Adena -->
-				<item id="23" min="1" max="1" chance="1.018" /> <!-- Wooden Breastplate -->
-				<item id="36551" min="1" max="1" chance="0.3" /> <!-- Armor Fragment (Low-grade) -->
+				<item id="23" min="1" max="1" chance="1" /> <!-- Wooden Breastplate -->
+				<item id="36551" min="1" max="1" chance="0.3003003003003" /> <!-- Armor Fragment (Low-grade) -->
+				<!-- Also drops herbs. -->
+				<item id="8600" min="1" max="1" chance="10" /> <!-- Herb of Life -->
+				<item id="8601" min="1" max="1" chance="8" /> <!-- Major Herb of Life -->
+				<item id="8602" min="1" max="1" chance="2" /> <!-- Superior Herb of Life -->
+				<item id="8603" min="1" max="1" chance="19.8" /> <!-- Herb of Mana -->
+				<item id="8604" min="1" max="1" chance="9.9" /> <!-- Major Herb of Mana -->
+				<item id="8605" min="1" max="1" chance="3.3" /> <!-- Superior Herb of Mana -->
+				<item id="34849" min="1" max="1" chance="0.7" /> <!-- Mysterious Herb of Power -->
+				<item id="34850" min="1" max="1" chance="0.7" /> <!-- Mysterious Herb of Magic -->
+				<item id="13028" min="1" max="1" chance="0.1" /> <!-- Vitality Replenishing Herb -->
 			</drop>
 			<spoil>
-				<item id="36516" min="1" max="1" chance="16.31" /> <!-- Worn Leather -->
+				<item id="36516" min="1" max="1" chance="17.5" /> <!-- Worn Leather -->
 			</spoil>
 			<lucky>
 				<item id="39629" min="1" max="1" chance="100" /> <!-- Fortune Pocket - Stage 1 -->
@@ -2254,7 +2668,6 @@
 		</collision>
 	</npc>
 	<npc id="23456" level="17" type="Monster" name="Evolved Growler" title="Quest Monster">
-		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<race>ANIMAL</race>
 		<sex>MALE</sex>
 		<acquire exp="704" sp="0" />
@@ -2285,9 +2698,28 @@
 			<radius normal="14" />
 			<height normal="28" />
 		</collision>
+		<dropLists>
+			<drop>
+				<item id="57" min="5" max="12" chance="70" /> <!-- Adena -->
+				<item id="23" min="1" max="1" chance="1" /> <!-- Wooden Breastplate -->
+				<item id="36561" min="1" max="1" chance="0.3003003003003" /> <!-- Cokes -->
+				<!-- Also drops herbs. -->
+				<item id="8600" min="1" max="1" chance="10" /> <!-- Herb of Life -->
+				<item id="8601" min="1" max="1" chance="8" /> <!-- Major Herb of Life -->
+				<item id="8602" min="1" max="1" chance="2" /> <!-- Superior Herb of Life -->
+				<item id="8603" min="1" max="1" chance="19.8" /> <!-- Herb of Mana -->
+				<item id="8604" min="1" max="1" chance="9.9" /> <!-- Major Herb of Mana -->
+				<item id="8605" min="1" max="1" chance="3.3" /> <!-- Superior Herb of Mana -->
+				<item id="34849" min="1" max="1" chance="0.7" /> <!-- Mysterious Herb of Power -->
+				<item id="34850" min="1" max="1" chance="0.7" /> <!-- Mysterious Herb of Magic -->
+				<item id="13028" min="1" max="1" chance="0.1" /> <!-- Vitality Replenishing Herb -->
+			</drop>
+			<spoil>
+				<item id="36516" min="1" max="1" chance="17.5" /> <!-- Worn Leather -->
+			</spoil>
+		</dropLists>
 	</npc>
 	<npc id="23457" level="19" type="Monster" name="Treant">
-		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<race>ANIMAL</race>
 		<sex>MALE</sex>
 		<acquire exp="878" sp="0" />
@@ -2315,11 +2747,21 @@
 		<dropLists>
 			<drop>
 				<item id="57" min="6" max="13" chance="70" /> <!-- Adena -->
-				<item id="29" min="1" max="1" chance="6.087" /> <!-- Leather Pants -->
-				<item id="36516" min="1" max="1" chance="3.535" /> <!-- Worn Leather -->
+				<item id="29" min="1" max="1" chance="6" /> <!-- Leather Pants -->
+				<item id="36516" min="1" max="1" chance="3.5" /> <!-- Worn Leather -->
+				<!-- Also drops herbs. -->
+				<item id="8600" min="1" max="1" chance="10" /> <!-- Herb of Life -->
+				<item id="8601" min="1" max="1" chance="8" /> <!-- Major Herb of Life -->
+				<item id="8602" min="1" max="1" chance="2" /> <!-- Superior Herb of Life -->
+				<item id="8603" min="1" max="1" chance="19.8" /> <!-- Herb of Mana -->
+				<item id="8604" min="1" max="1" chance="9.9" /> <!-- Major Herb of Mana -->
+				<item id="8605" min="1" max="1" chance="3.3" /> <!-- Superior Herb of Mana -->
+				<item id="34849" min="1" max="1" chance="0.7" /> <!-- Mysterious Herb of Power -->
+				<item id="34850" min="1" max="1" chance="0.7" /> <!-- Mysterious Herb of Magic -->
+				<item id="13028" min="1" max="1" chance="0.1" /> <!-- Vitality Replenishing Herb -->
 			</drop>
 			<spoil>
-				<item id="36516" min="1" max="1" chance="18.44" /> <!-- Worn Leather -->
+				<item id="36516" min="1" max="1" chance="18" /> <!-- Worn Leather -->
 			</spoil>
 			<lucky>
 				<item id="39629" min="1" max="1" chance="100" /> <!-- Fortune Pocket - Stage 1 -->
@@ -2331,7 +2773,6 @@
 		</collision>
 	</npc>
 	<npc id="23458" level="18" type="Monster" name="Leafie">
-		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<race>ANIMAL</race>
 		<sex>MALE</sex>
 		<acquire exp="789" sp="0" />
@@ -2361,11 +2802,21 @@
 		<dropLists>
 			<drop>
 				<item id="57" min="6" max="13" chance="70" /> <!-- Adena -->
-				<item id="37" min="1" max="1" chance="3.312" /> <!-- Leather Shoes -->
-				<item id="36516" min="1" max="1" chance="3.496" /> <!-- Worn Leather -->
+				<item id="37" min="1" max="1" chance="6" /> <!-- Leather Shoes -->
+				<item id="36516" min="1" max="1" chance="3.5" /> <!-- Worn Leather -->
+				<!-- Also drops herbs. -->
+				<item id="8600" min="1" max="1" chance="10" /> <!-- Herb of Life -->
+				<item id="8601" min="1" max="1" chance="8" /> <!-- Major Herb of Life -->
+				<item id="8602" min="1" max="1" chance="2" /> <!-- Superior Herb of Life -->
+				<item id="8603" min="1" max="1" chance="19.8" /> <!-- Herb of Mana -->
+				<item id="8604" min="1" max="1" chance="9.9" /> <!-- Major Herb of Mana -->
+				<item id="8605" min="1" max="1" chance="3.3" /> <!-- Superior Herb of Mana -->
+				<item id="34849" min="1" max="1" chance="0.7" /> <!-- Mysterious Herb of Power -->
+				<item id="34850" min="1" max="1" chance="0.7" /> <!-- Mysterious Herb of Magic -->
+				<item id="13028" min="1" max="1" chance="0.1" /> <!-- Vitality Replenishing Herb -->
 			</drop>
 			<spoil>
-				<item id="36516" min="1" max="1" chance="18.51" /> <!-- Worn Leather -->
+				<item id="36516" min="1" max="1" chance="18" /> <!-- Worn Leather -->
 			</spoil>
 			<lucky>
 				<item id="39629" min="1" max="1" chance="100" /> <!-- Fortune Pocket - Stage 1 -->
@@ -2377,7 +2828,6 @@
 		</collision>
 	</npc>
 	<npc id="23459" level="19" type="Monster" name="Karaphon" title="Earth Spirit">
-		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<race>ELEMENTAL</race>
 		<sex>FEMALE</sex>
 		<acquire exp="8615" sp="2" />
@@ -2409,9 +2859,28 @@
 			<radius normal="12" />
 			<height normal="55" />
 		</collision>
+		<dropLists>
+			<drop>
+				<item id="57" min="7" max="10" chance="70" /> <!-- Adena -->
+				<item id="35" min="1" max="1" chance="12" /> <!-- Cloth Shoes -->
+				<item id="36546" min="1" max="1" chance="0.75187969924812" /> <!-- Weapon Fragment (Low-grade) -->
+				<!-- Also drops herbs. -->
+				<item id="8600" min="1" max="1" chance="10" /> <!-- Herb of Life -->
+				<item id="8601" min="1" max="1" chance="8" /> <!-- Major Herb of Life -->
+				<item id="8602" min="1" max="1" chance="2" /> <!-- Superior Herb of Life -->
+				<item id="8603" min="1" max="1" chance="19.8" /> <!-- Herb of Mana -->
+				<item id="8604" min="1" max="1" chance="9.9" /> <!-- Major Herb of Mana -->
+				<item id="8605" min="1" max="1" chance="3.3" /> <!-- Superior Herb of Mana -->
+				<item id="34849" min="1" max="1" chance="0.7" /> <!-- Mysterious Herb of Power -->
+				<item id="34850" min="1" max="1" chance="0.7" /> <!-- Mysterious Herb of Magic -->
+				<item id="13028" min="1" max="1" chance="0.1" /> <!-- Vitality Replenishing Herb -->
+			</drop>
+			<spoil>
+				<item id="36532" min="1" max="1" chance="1" /> <!-- Thin Braid -->
+			</spoil>
+		</dropLists>
 	</npc>
 	<npc id="23460" level="18" type="Monster" name="Keen Honeybee">
-		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<race>ANIMAL</race>
 		<sex>MALE</sex>
 		<acquire exp="205" sp="0" />
@@ -2437,9 +2906,28 @@
 			<radius normal="8" />
 			<height normal="20" />
 		</collision>
+		<dropLists>
+			<drop>
+				<item id="57" min="8" max="10" chance="100" /> <!-- Adena -->
+				<item id="41" min="1" max="1" chance="12" /> <!-- Cloth Cap -->
+				<item id="36561" min="1" max="1" chance="0.75187969924812" /> <!-- Cokes -->
+				<!-- Also drops herbs. -->
+				<item id="8600" min="1" max="1" chance="10" /> <!-- Herb of Life -->
+				<item id="8601" min="1" max="1" chance="8" /> <!-- Major Herb of Life -->
+				<item id="8602" min="1" max="1" chance="2" /> <!-- Superior Herb of Life -->
+				<item id="8603" min="1" max="1" chance="19.8" /> <!-- Herb of Mana -->
+				<item id="8604" min="1" max="1" chance="9.9" /> <!-- Major Herb of Mana -->
+				<item id="8605" min="1" max="1" chance="3.3" /> <!-- Superior Herb of Mana -->
+				<item id="34849" min="1" max="1" chance="0.7" /> <!-- Mysterious Herb of Power -->
+				<item id="34850" min="1" max="1" chance="0.7" /> <!-- Mysterious Herb of Magic -->
+				<item id="13028" min="1" max="1" chance="0.1" /> <!-- Vitality Replenishing Herb -->
+			</drop>
+			<spoil>
+				<item id="36532" min="1" max="1" chance="1" /> <!-- Thin Braid -->
+			</spoil>
+		</dropLists>
 	</npc>
 	<npc id="23461" level="19" type="Monster" name="Keen Growler">
-		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<race>ELEMENTAL</race>
 		<sex>MALE</sex>
 		<acquire exp="217" sp="0" />
@@ -2465,6 +2953,26 @@
 			<radius normal="14" />
 			<height normal="28" />
 		</collision>
+		<dropLists>
+			<drop>
+				<item id="57" min="7" max="10" chance="70" /> <!-- Adena -->
+				<item id="41" min="1" max="1" chance="12" /> <!-- Cloth Cap -->
+				<item id="36546" min="1" max="1" chance="0.75187969924812" /> <!-- Weapon Fragment (Low-grade) -->
+				<!-- Also drops herbs. -->
+				<item id="8600" min="1" max="1" chance="10" /> <!-- Herb of Life -->
+				<item id="8601" min="1" max="1" chance="8" /> <!-- Major Herb of Life -->
+				<item id="8602" min="1" max="1" chance="2" /> <!-- Superior Herb of Life -->
+				<item id="8603" min="1" max="1" chance="19.8" /> <!-- Herb of Mana -->
+				<item id="8604" min="1" max="1" chance="9.9" /> <!-- Major Herb of Mana -->
+				<item id="8605" min="1" max="1" chance="3.3" /> <!-- Superior Herb of Mana -->
+				<item id="34849" min="1" max="1" chance="0.7" /> <!-- Mysterious Herb of Power -->
+				<item id="34850" min="1" max="1" chance="0.7" /> <!-- Mysterious Herb of Magic -->
+				<item id="13028" min="1" max="1" chance="0.1" /> <!-- Vitality Replenishing Herb -->
+			</drop>
+			<spoil>
+				<item id="36532" min="1" max="1" chance="1" /> <!-- Thin Braid -->
+			</spoil>
+		</dropLists>
 	</npc>
 	<npc id="23462" level="99" type="Monster" name="Dimensional Orc Butcher">
 		<parameters>
@@ -2505,8 +3013,8 @@
 		</ai>
 		<dropLists>
 			<drop>
-				<item id="39597" min="1" max="1" chance="34.1799999999999" /> <!-- Warp Crystal -->
-				<item id="40051" min="1" max="1" chance="0.749999999999986" /> <!-- Scroll: 100,000 SP -->
+				<item id="39597" min="1" max="1" chance="35" /> <!-- Warp Crystal -->
+				<item id="40051" min="1" max="1" chance="0.75187969924812" /> <!-- Scroll: 100,000 SP -->
 			</drop>
 			<lucky>
 				<item id="39629" min="1" max="1" chance="100" /> <!-- Fortune Pocket - Stage 1 -->
@@ -2555,8 +3063,8 @@
 		</ai>
 		<dropLists>
 			<drop>
-				<item id="39597" min="1" max="1" chance="98.00558631842" /> <!-- Warp Crystal -->
-				<item id="40051" min="1" max="1" chance="1.9944136815799" /> <!-- Scroll: 100,000 SP -->
+				<item id="39597" min="1" max="1" chance="100" /> <!-- Warp Crystal -->
+				<item id="40051" min="1" max="1" chance="2" /> <!-- Scroll: 100,000 SP -->
 			</drop>
 			<lucky>
 				<item id="39629" min="1" max="1" chance="100" /> <!-- Fortune Pocket - Stage 1 -->
@@ -2608,8 +3116,8 @@
 		</ai>
 		<dropLists>
 			<drop>
-				<item id="39597" min="1" max="1" chance="98.075753712167" /> <!-- Warp Crystal -->
-				<item id="40051" min="1" max="1" chance="1.9242462878327" /> <!-- Scroll: 100,000 SP -->
+				<item id="39597" min="1" max="1" chance="100" /> <!-- Warp Crystal -->
+				<item id="40051" min="1" max="1" chance="2" /> <!-- Scroll: 100,000 SP -->
 			</drop>
 			<lucky>
 				<item id="39629" min="1" max="1" chance="100" /> <!-- Fortune Pocket - Stage 1 -->
@@ -2660,8 +3168,8 @@
 		</ai>
 		<dropLists>
 			<drop>
-				<item id="39597" min="1" max="1" chance="98.049789683201" /> <!-- Warp Crystal -->
-				<item id="40051" min="1" max="1" chance="1.9502103167989" /> <!-- Scroll: 100,000 SP -->
+				<item id="39597" min="1" max="1" chance="100" /> <!-- Warp Crystal -->
+				<item id="40051" min="1" max="1" chance="2" /> <!-- Scroll: 100,000 SP -->
 			</drop>
 			<lucky>
 				<item id="39629" min="1" max="1" chance="100" /> <!-- Fortune Pocket - Stage 1 -->
@@ -2751,8 +3259,8 @@
 		</ai>
 		<dropLists>
 			<drop>
-				<item id="39597" min="1" max="1" chance="98.072868141029" /> <!-- Warp Crystal -->
-				<item id="40051" min="1" max="1" chance="1.9271318589712" /> <!-- Scroll: 100,000 SP -->
+				<item id="39597" min="1" max="1" chance="100" /> <!-- Warp Crystal -->
+				<item id="40051" min="1" max="1" chance="2" /> <!-- Scroll: 100,000 SP -->
 			</drop>
 			<lucky>
 				<item id="39629" min="1" max="1" chance="100" /> <!-- Fortune Pocket - Stage 1 -->
@@ -2804,8 +3312,8 @@
 		</ai>
 		<dropLists>
 			<drop>
-				<item id="39597" min="1" max="1" chance="33.3200000000001" /> <!-- Warp Crystal -->
-				<item id="40051" min="1" max="1" chance="0.749999999999985" /> <!-- Scroll: 100,000 SP -->
+				<item id="39597" min="1" max="1" chance="30" /> <!-- Warp Crystal -->
+				<item id="40051" min="1" max="1" chance="0.75187969924812" /> <!-- Scroll: 100,000 SP -->
 			</drop>
 			<lucky>
 				<item id="39629" min="1" max="1" chance="100" /> <!-- Fortune Pocket - Stage 1 -->
@@ -2859,8 +3367,8 @@
 		</ai>
 		<dropLists>
 			<drop>
-				<item id="39597" min="2" max="2" chance="96.195469193401" /> <!-- Warp Crystal -->
-				<item id="40051" min="1" max="1" chance="3.804530806599" /> <!-- Scroll: 100,000 SP -->
+				<item id="39597" min="2" max="2" chance="100" /> <!-- Warp Crystal -->
+				<item id="40051" min="1" max="1" chance="4" /> <!-- Scroll: 100,000 SP -->
 			</drop>
 			<lucky>
 				<item id="39629" min="1" max="1" chance="100" /> <!-- Fortune Pocket - Stage 1 -->
@@ -2872,7 +3380,6 @@
 		</collision>
 	</npc>
 	<npc id="23470" level="99" type="Monster" name="Unworldly Demon">
-		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<race>DEMONIC</race>
 		<sex>FEMALE</sex>
 		<acquire exp="83739744" sp="301463" />
@@ -2903,8 +3410,8 @@
 		</skillList>
 		<dropLists>
 			<drop>
-				<item id="39597" min="1" max="1" chance="34.1100000000002" /> <!-- Warp Crystal -->
-				<item id="40051" min="1" max="1" chance="0.750000000000004" /> <!-- Scroll: 100,000 SP -->
+				<item id="39597" min="1" max="1" chance="30" /> <!-- Warp Crystal -->
+				<item id="40051" min="1" max="1" chance="0.75187969924812" /> <!-- Scroll: 100,000 SP -->
 			</drop>
 			<lucky>
 				<item id="39629" min="1" max="1" chance="100" /> <!-- Fortune Pocket - Stage 1 -->
@@ -2916,7 +3423,6 @@
 		</collision>
 	</npc>
 	<npc id="23471" level="99" type="Monster" name="Unworldly Etin">
-		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<race>GIANT</race>
 		<sex>FEMALE</sex>
 		<acquire exp="125609616" sp="452194" />
@@ -2948,8 +3454,8 @@
 		</skillList>
 		<dropLists>
 			<drop>
-				<item id="39597" min="1" max="1" chance="98.101731495561" /> <!-- Warp Crystal -->
-				<item id="40051" min="1" max="1" chance="1.8982685044391" /> <!-- Scroll: 100,000 SP -->
+				<item id="39597" min="1" max="1" chance="100" /> <!-- Warp Crystal -->
+				<item id="40051" min="1" max="1" chance="2" /> <!-- Scroll: 100,000 SP -->
 			</drop>
 			<lucky>
 				<item id="39629" min="1" max="1" chance="100" /> <!-- Fortune Pocket - Stage 1 -->
@@ -2961,7 +3467,6 @@
 		</collision>
 	</npc>
 	<npc id="23472" level="99" type="Monster" name="Unworldly Shaman" title="Watcher">
-		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<race>HUMANOID</race>
 		<sex>FEMALE</sex>
 		<acquire exp="125609616" sp="452194" />
@@ -2994,8 +3499,8 @@
 		</skillList>
 		<dropLists>
 			<drop>
-				<item id="39597" min="1" max="1" chance="98.076715606948" /> <!-- Warp Crystal -->
-				<item id="40051" min="1" max="1" chance="1.9232843930522" /> <!-- Scroll: 100,000 SP -->
+				<item id="39597" min="1" max="1" chance="100" /> <!-- Warp Crystal -->
+				<item id="40051" min="1" max="1" chance="2" /> <!-- Scroll: 100,000 SP -->
 			</drop>
 			<lucky>
 				<item id="39629" min="1" max="1" chance="100" /> <!-- Fortune Pocket - Stage 1 -->
@@ -3007,7 +3512,6 @@
 		</collision>
 	</npc>
 	<npc id="23473" level="99" type="Monster" name="Unworldly Salamander" title="Hunter">
-		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<race>ELEMENTAL</race>
 		<sex>FEMALE</sex>
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
@@ -3044,7 +3548,6 @@
 		</collision>
 	</npc>
 	<npc id="23474" level="99" type="Monster" name="Unworldly Golem">
-		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<race>CONSTRUCT</race>
 		<sex>FEMALE</sex>
 		<acquire exp="125609616" sp="452194" />
@@ -3077,8 +3580,8 @@
 		</skillList>
 		<dropLists>
 			<drop>
-				<item id="39597" min="1" max="1" chance="97.995982164731" /> <!-- Warp Crystal -->
-				<item id="40051" min="1" max="1" chance="2.0040178352688" /> <!-- Scroll: 100,000 SP -->
+				<item id="39597" min="1" max="1" chance="100" /> <!-- Warp Crystal -->
+				<item id="40051" min="1" max="1" chance="2" /> <!-- Scroll: 100,000 SP -->
 			</drop>
 			<lucky>
 				<item id="39629" min="1" max="1" chance="100" /> <!-- Fortune Pocket - Stage 1 -->
@@ -3090,7 +3593,6 @@
 		</collision>
 	</npc>
 	<npc id="23475" level="99" type="Monster" name="Unworldly Archon" title="Slaughterer">
-		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<race>UNDEAD</race>
 		<sex>FEMALE</sex>
 		<acquire exp="251219232" sp="904389" />
@@ -3125,8 +3627,8 @@
 		</skillList>
 		<dropLists>
 			<drop>
-				<item id="39597" min="2" max="2" chance="96.179740699419" /> <!-- Warp Crystal -->
-				<item id="40051" min="1" max="1" chance="3.8202593005809" /> <!-- Scroll: 100,000 SP -->
+				<item id="39597" min="1" max="1" chance="100" /> <!-- Warp Crystal -->
+				<item id="40051" min="1" max="1" chance="4" /> <!-- Scroll: 100,000 SP -->
 			</drop>
 			<lucky>
 				<item id="39629" min="1" max="1" chance="100" /> <!-- Fortune Pocket - Stage 1 -->
@@ -3138,7 +3640,6 @@
 		</collision>
 	</npc>
 	<npc id="23476" level="99" type="Monster" name="Unworldly Harpy" title="Avenger">
-		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<race>BEAST</race>
 		<sex>FEMALE</sex>
 		<acquire exp="125609616" sp="452194" />
@@ -3169,8 +3670,8 @@
 		</skillList>
 		<dropLists>
 			<drop>
-				<item id="39597" min="1" max="1" chance="97.988300196956" /> <!-- Warp Crystal -->
-				<item id="40051" min="1" max="1" chance="2.0116998030435" /> <!-- Scroll: 100,000 SP -->
+				<item id="39597" min="1" max="1" chance="100" /> <!-- Warp Crystal -->
+				<item id="40051" min="1" max="1" chance="2" /> <!-- Scroll: 100,000 SP -->
 			</drop>
 			<lucky>
 				<item id="39629" min="1" max="1" chance="100" /> <!-- Fortune Pocket - Stage 1 -->
@@ -3182,7 +3683,6 @@
 		</collision>
 	</npc>
 	<npc id="23477" level="99" type="Monster" name="Abyssal Shaman" title="Watcher">
-		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<race>UNDEAD</race>
 		<sex>FEMALE</sex>
 		<acquire exp="125609616" sp="452194" />
@@ -3217,8 +3717,8 @@
 		</skillList>
 		<dropLists>
 			<drop>
-				<item id="39597" min="1" max="1" chance="97.993101285669" /> <!-- Warp Crystal -->
-				<item id="40051" min="1" max="1" chance="2.0068987143305" /> <!-- Scroll: 100,000 SP -->
+				<item id="39597" min="1" max="1" chance="100" /> <!-- Warp Crystal -->
+				<item id="40051" min="1" max="1" chance="2" /> <!-- Scroll: 100,000 SP -->
 			</drop>
 			<lucky>
 				<item id="39629" min="1" max="1" chance="100" /> <!-- Fortune Pocket - Stage 1 -->
@@ -3230,7 +3730,6 @@
 		</collision>
 	</npc>
 	<npc id="23478" level="99" type="Monster" name="Abyssal Berserker">
-		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<race>UNDEAD</race>
 		<sex>FEMALE</sex>
 		<acquire exp="125609616" sp="452194" />
@@ -3261,8 +3760,8 @@
 		</skillList>
 		<dropLists>
 			<drop>
-				<item id="39597" min="1" max="1" chance="98.011349714297" /> <!-- Warp Crystal -->
-				<item id="40051" min="1" max="1" chance="1.9886502857031" /> <!-- Scroll: 100,000 SP -->
+				<item id="39597" min="1" max="1" chance="100" /> <!-- Warp Crystal -->
+				<item id="40051" min="1" max="1" chance="2" /> <!-- Scroll: 100,000 SP -->
 			</drop>
 			<lucky>
 				<item id="39629" min="1" max="1" chance="100" /> <!-- Fortune Pocket - Stage 1 -->
@@ -3274,7 +3773,6 @@
 		</collision>
 	</npc>
 	<npc id="23479" level="99" type="Monster" name="Abyssal Salamander" title="Hunter">
-		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<race>ELEMENTAL</race>
 		<sex>FEMALE</sex>
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
@@ -3311,7 +3809,6 @@
 		</collision>
 	</npc>
 	<npc id="23480" level="99" type="Monster" name="Abyssal Harpy" title="Avenger">
-		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<race>BEAST</race>
 		<sex>FEMALE</sex>
 		<acquire exp="125609616" sp="452194" />
@@ -3344,8 +3841,8 @@
 		</skillList>
 		<dropLists>
 			<drop>
-				<item id="39597" min="1" max="1" chance="98.058442831928" /> <!-- Warp Crystal -->
-				<item id="40051" min="1" max="1" chance="1.9415571680722" /> <!-- Scroll: 100,000 SP -->
+				<item id="39597" min="1" max="1" chance="100" /> <!-- Warp Crystal -->
+				<item id="40051" min="1" max="1" chance="2" /> <!-- Scroll: 100,000 SP -->
 			</drop>
 			<lucky>
 				<item id="39629" min="1" max="1" chance="100" /> <!-- Fortune Pocket - Stage 1 -->
@@ -3357,7 +3854,6 @@
 		</collision>
 	</npc>
 	<npc id="23481" level="99" type="Monster" name="Abyssal Binder">
-		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<race>ELEMENTAL</race>
 		<sex>FEMALE</sex>
 		<acquire exp="125609616" sp="452194" />
@@ -3389,8 +3885,8 @@
 		</skillList>
 		<dropLists>
 			<drop>
-				<item id="39597" min="1" max="1" chance="97.981579463061" /> <!-- Warp Crystal -->
-				<item id="40051" min="1" max="1" chance="2.0184205369391" /> <!-- Scroll: 100,000 SP -->
+				<item id="39597" min="1" max="1" chance="100" /> <!-- Warp Crystal -->
+				<item id="40051" min="1" max="1" chance="2" /> <!-- Scroll: 100,000 SP -->
 			</drop>
 			<lucky>
 				<item id="39629" min="1" max="1" chance="100" /> <!-- Fortune Pocket - Stage 1 -->
@@ -3402,7 +3898,6 @@
 		</collision>
 	</npc>
 	<npc id="23482" level="99" type="Monster" name="Abyssal Archon" title="Slaughterer">
-		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<race>UNDEAD</race>
 		<sex>FEMALE</sex>
 		<acquire exp="251219232" sp="904389" />
@@ -3438,8 +3933,8 @@
 		</skillList>
 		<dropLists>
 			<drop>
-				<item id="39597" min="2" max="2" chance="96.150148071228" /> <!-- Warp Crystal -->
-				<item id="40051" min="1" max="1" chance="3.849851928772" /> <!-- Scroll: 100,000 SP -->
+				<item id="39597" min="1" max="1" chance="100" /> <!-- Warp Crystal -->
+				<item id="40051" min="1" max="1" chance="4" /> <!-- Scroll: 100,000 SP -->
 			</drop>
 			<lucky>
 				<item id="39629" min="1" max="1" chance="100" /> <!-- Fortune Pocket - Stage 1 -->
@@ -3451,7 +3946,6 @@
 		</collision>
 	</npc>
 	<npc id="23483" level="99" type="Monster" name="Abyssal Golem">
-		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<race>CONSTRUCT</race>
 		<sex>FEMALE</sex>
 		<acquire exp="125609616" sp="452194" />
@@ -3483,8 +3977,8 @@
 		</skillList>
 		<dropLists>
 			<drop>
-				<item id="39597" min="1" max="1" chance="98.05363533853" /> <!-- Warp Crystal -->
-				<item id="40051" min="1" max="1" chance="1.9463646614698" /> <!-- Scroll: 100,000 SP -->
+				<item id="39597" min="1" max="1" chance="100" /> <!-- Warp Crystal -->
+				<item id="40051" min="1" max="1" chance="2" /> <!-- Scroll: 100,000 SP -->
 			</drop>
 			<lucky>
 				<item id="39629" min="1" max="1" chance="100" /> <!-- Fortune Pocket - Stage 1 -->
@@ -3496,7 +3990,6 @@
 		</collision>
 	</npc>
 	<npc id="23484" level="11" type="Monster" name="Robust Honeybee">
-		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<race>ANIMAL</race>
 		<sex>MALE</sex>
 		<acquire exp="443" sp="0" />
@@ -3526,11 +4019,21 @@
 		<dropLists>
 			<drop>
 				<item id="57" min="4" max="10" chance="70" /> <!-- Adena -->
-				<item id="44" min="1" max="1" chance="0.75" /> <!-- Leather Helmet -->
-				<item id="36516" min="1" max="1" chance="2.749" /> <!-- Worn Leather -->
+				<item id="36516" min="1" max="1" chance="2.75" /> <!-- Worn Leather -->
+				<item id="44" min="1" max="1" chance="0.75187969924812" /> <!-- Leather Helmet -->
+				<!-- Also drops herbs. -->
+				<item id="8600" min="1" max="1" chance="10" /> <!-- Herb of Life -->
+				<item id="8601" min="1" max="1" chance="8" /> <!-- Major Herb of Life -->
+				<item id="8602" min="1" max="1" chance="2" /> <!-- Superior Herb of Life -->
+				<item id="8603" min="1" max="1" chance="19.8" /> <!-- Herb of Mana -->
+				<item id="8604" min="1" max="1" chance="9.9" /> <!-- Major Herb of Mana -->
+				<item id="8605" min="1" max="1" chance="3.3" /> <!-- Superior Herb of Mana -->
+				<item id="34849" min="1" max="1" chance="0.7" /> <!-- Mysterious Herb of Power -->
+				<item id="34850" min="1" max="1" chance="0.7" /> <!-- Mysterious Herb of Magic -->
+				<item id="13028" min="1" max="1" chance="0.1" /> <!-- Vitality Replenishing Herb -->
 			</drop>
 			<spoil>
-				<item id="36516" min="1" max="1" chance="14.01" /> <!-- Worn Leather -->
+				<item id="36516" min="1" max="1" chance="15" /> <!-- Worn Leather -->
 			</spoil>
 			<lucky>
 				<item id="39629" min="1" max="1" chance="100" /> <!-- Fortune Pocket - Stage 1 -->
@@ -3542,7 +4045,6 @@
 		</collision>
 	</npc>
 	<npc id="23485" level="14" type="Monster" name="Evolved Kiku">
-		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<race>ANIMAL</race>
 		<sex>FEMALE</sex>
 		<acquire exp="539" sp="0" />
@@ -3566,9 +4068,28 @@
 			<radius normal="6" />
 			<height normal="10.5" />
 		</collision>
+		<dropLists>
+			<drop>
+				<item id="57" min="5" max="11" chance="70" /> <!-- Adena -->
+				<item id="49" min="1" max="1" chance="5" /> <!-- Gloves -->
+				<item id="36561" min="1" max="1" chance="0.3003003003003" /> <!-- Cokes -->
+				<!-- Also drops herbs. -->
+				<item id="8600" min="1" max="1" chance="10" /> <!-- Herb of Life -->
+				<item id="8601" min="1" max="1" chance="8" /> <!-- Major Herb of Life -->
+				<item id="8602" min="1" max="1" chance="2" /> <!-- Superior Herb of Life -->
+				<item id="8603" min="1" max="1" chance="19.8" /> <!-- Herb of Mana -->
+				<item id="8604" min="1" max="1" chance="9.9" /> <!-- Major Herb of Mana -->
+				<item id="8605" min="1" max="1" chance="3.3" /> <!-- Superior Herb of Mana -->
+				<item id="34849" min="1" max="1" chance="0.7" /> <!-- Mysterious Herb of Power -->
+				<item id="34850" min="1" max="1" chance="0.7" /> <!-- Mysterious Herb of Magic -->
+				<item id="13028" min="1" max="1" chance="0.1" /> <!-- Vitality Replenishing Herb -->
+			</drop>
+			<spoil>
+				<item id="36532" min="1" max="1" chance="0.75187969924812" /> <!-- Thin Braid -->
+			</spoil>
+		</dropLists>
 	</npc>
 	<npc id="23486" level="17" type="Monster" name="Robust Growler">
-		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<race>ANIMAL</race>
 		<sex>MALE</sex>
 		<acquire exp="704" sp="0" />
@@ -3598,11 +4119,21 @@
 		<dropLists>
 			<drop>
 				<item id="57" min="5" max="13" chance="70" /> <!-- Adena -->
-				<item id="50" min="1" max="1" chance="1.356" /> <!-- Leather Gloves -->
-				<item id="36516" min="1" max="1" chance="3.283" /> <!-- Worn Leather -->
+				<item id="36516" min="1" max="1" chance="3.25" /> <!-- Worn Leather -->
+				<item id="50" min="1" max="1" chance="1.25" /> <!-- Leather Gloves -->
+				<!-- Also drops herbs. -->
+				<item id="8600" min="1" max="1" chance="10" /> <!-- Herb of Life -->
+				<item id="8601" min="1" max="1" chance="8" /> <!-- Major Herb of Life -->
+				<item id="8602" min="1" max="1" chance="2" /> <!-- Superior Herb of Life -->
+				<item id="8603" min="1" max="1" chance="19.8" /> <!-- Herb of Mana -->
+				<item id="8604" min="1" max="1" chance="9.9" /> <!-- Major Herb of Mana -->
+				<item id="8605" min="1" max="1" chance="3.3" /> <!-- Superior Herb of Mana -->
+				<item id="34849" min="1" max="1" chance="0.7" /> <!-- Mysterious Herb of Power -->
+				<item id="34850" min="1" max="1" chance="0.7" /> <!-- Mysterious Herb of Magic -->
+				<item id="13028" min="1" max="1" chance="0.1" /> <!-- Vitality Replenishing Herb -->
 			</drop>
 			<spoil>
-				<item id="36516" min="1" max="1" chance="18.41" /> <!-- Worn Leather -->
+				<item id="36516" min="1" max="1" chance="18" /> <!-- Worn Leather -->
 			</spoil>
 			<lucky>
 				<item id="39629" min="1" max="1" chance="100" /> <!-- Fortune Pocket - Stage 1 -->
@@ -3641,14 +4172,14 @@
 		<dropLists>
 			<drop>
 				<item id="57" min="1203" max="2808" chance="20" /> <!-- Adena -->
-				<item id="36538" min="1" max="1" chance="0.3" /> <!-- Durable Leather Braid -->
-				<item id="35347" min="1" max="1" chance="0.075" /> <!-- Eternal Leather Glove Ingredient -->
-				<item id="36539" min="1" max="1" chance="0.03" /> <!-- Quality Leather Braid -->
-				<item id="17526" min="1" max="1" chance="0.003" /> <!-- Scroll: Enchant Weapon (R-grade) -->
+				<item id="36538" min="1" max="1" chance="0.3003003003003" /> <!-- Durable Leather Braid -->
+				<item id="35347" min="1" max="1" chance="0.0750187546886722" /> <!-- Eternal Leather Glove Ingredient -->
+				<item id="36539" min="1" max="1" chance="0.03000300030003" /> <!-- Quality Leather Braid -->
+				<item id="17526" min="1" max="1" chance="0.0030000300003" /> <!-- Scroll: Enchant Weapon (R-grade) -->
 			</drop>
 			<spoil>
-				<item id="36518" min="1" max="1" chance="7.256" /> <!-- Durable Leather -->
-				<item id="36519" min="1" max="1" chance="0.75" /> <!-- Quality Leather -->
+				<item id="36518" min="1" max="1" chance="8" /> <!-- Durable Leather -->
+				<item id="36519" min="1" max="1" chance="0.75187969924812" /> <!-- Quality Leather -->
 			</spoil>
 			<lucky>
 				<item id="39629" min="1" max="1" chance="100" /> <!-- Fortune Pocket - Stage 1 -->
@@ -3686,16 +4217,16 @@
 		</skillList>
 		<dropLists>
 			<drop>
-				<item id="57" min="2405" max="5615" chance="20" /> <!-- Adena -->
-				<item id="36538" min="1" max="1" chance="0.3" /> <!-- Durable Leather Braid -->
-				<item id="35345" min="1" max="1" chance="0.03" /> <!-- Eternal Leather Armor Ingredient -->
-				<item id="36539" min="1" max="1" chance="0.03" /> <!-- Quality Leather Braid -->
-				<item id="17526" min="1" max="1" chance="0.003" /> <!-- Scroll: Enchant Weapon (R-grade) -->
-				<item id="35460" min="1" max="1" chance="0.0009" /> <!-- Recipe: Amaranthine Caster (60%) -->
+				<item id="57" min="1203" max="2808" chance="20" /> <!-- Adena -->
+				<item id="36538" min="1" max="1" chance="0.75187969924812" /> <!-- Durable Leather Braid -->
+				<item id="36539" min="1" max="1" chance="0.0750187546886722" /> <!-- Quality Leather Braid -->
+				<item id="35345" min="1" max="1" chance="0.03000300030003" /> <!-- Eternal Leather Armor Ingredient -->
+				<item id="35460" min="1" max="1" chance="0.005" /> <!-- Recipe:�Amaranthine Caster (60%) -->
+				<item id="17526" min="1" max="1" chance="0.005" /> <!-- Scroll: Enchant Weapon (R-grade) -->
 			</drop>
 			<spoil>
-				<item id="36543" min="1" max="1" chance="2.506" /> <!-- Adamantite Wire -->
-				<item id="36544" min="1" max="1" chance="0.3" /> <!-- Orichalcum Wire -->
+				<item id="36543" min="1" max="1" chance="3" /> <!-- Adamantite Wire -->
+				<item id="36544" min="1" max="1" chance="0.3003003003003" /> <!-- Orichalcum Wire -->
 			</spoil>
 			<lucky>
 				<item id="39629" min="1" max="1" chance="100" /> <!-- Fortune Pocket - Stage 1 -->
@@ -3707,7 +4238,6 @@
 		</collision>
 	</npc>
 	<npc id="23489" level="70" type="Monster" name="Lava Wyrm">
-		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<race>DRAGON</race>
 		<sex>FEMALE</sex>
 		<acquire exp="19432" sp="4" />
@@ -3738,26 +4268,15 @@
 		</collision>
 		<dropLists>
 			<drop>
-				<item id="57" min="50" max="116" chance="70" /> <!-- Adena -->
-				<item id="5166" min="1" max="1" chance="0.03" /> <!-- Recipe: Blessed Spiritshot Compressed Package (A-grade) -->
-				<item id="36873" min="1" max="1" chance="0.0009" /> <!-- Recipe: Synthetic Fiber - Downgrade -->
-				<item id="36904" min="1" max="1" chance="0.0009" /> <!-- Recipe: Silver Wire - Upgrade -->
-				<item id="36916" min="1" max="1" chance="0.0009" /> <!-- Recipe: Weapon Fragment - Upgrade -->
-				<!-- Also drops herbs. -->
-				<item id="8600" min="1" max="1" chance="10" /> <!-- Herb of Life -->
-				<item id="8601" min="1" max="1" chance="8" /> <!-- Major Herb of Life -->
-				<item id="8602" min="1" max="1" chance="2" /> <!-- Superior Herb of Life -->
-				<item id="8603" min="1" max="1" chance="19.8" /> <!-- Herb of Mana -->
-				<item id="8604" min="1" max="1" chance="9.9" /> <!-- Major Herb of Mana -->
-				<item id="8605" min="1" max="1" chance="3.3" /> <!-- Superior Herb of Mana -->
-				<item id="34849" min="1" max="1" chance="0.7" /> <!-- Mysterious Herb of Power -->
-				<item id="34850" min="1" max="1" chance="0.7" /> <!-- Mysterious Herb of Magic -->
-				<item id="13028" min="1" max="1" chance="0.1" /> <!-- Vitality Replenishing Herb -->
+				<item id="57" min="1203" max="2808" chance="20" /> <!-- Adena -->
+				<item id="36543" min="1" max="1" chance="0.75187969924812" /> <!-- Adamantite Wire -->
+				<item id="36544" min="1" max="1" chance="0.0750187546886722" /> <!-- Orichalcum Wire -->
+				<item id="17527" min="1" max="1" chance="0.03000300030003" /> <!-- Scroll: Enchant Armor (R-grade) -->
+				<item id="35469" min="1" max="1" chance="0.005" /> <!-- Recipe:�Eternal Leather Armor (60%) -->
 			</drop>
 			<spoil>
-				<item id="36532" min="1" max="1" chance="0.3" /> <!-- Thin Braid -->
-				<item id="36882" min="1" max="1" chance="0.003" /> <!-- Recipe: Thin Braid - Upgrade -->
-				<item id="36881" min="1" max="1" chance="9" /> <!-- Recipe: Thin Braid - Downgrade -->
+				<item id="36518" min="1" max="1" chance="8" /> <!-- Durable Leather -->
+				<item id="36539" min="1" max="1" chance="0.3003003003003" /> <!-- Quality Leather Braid -->
 			</spoil>
 			<lucky>
 				<item id="39629" min="1" max="1" chance="100" /> <!-- Fortune Pocket - Stage 1 -->
@@ -3795,14 +4314,14 @@
 		<dropLists>
 			<drop>
 				<item id="57" min="1203" max="2808" chance="20" /> <!-- Adena -->
-				<item id="36543" min="1" max="1" chance="0.75" /> <!-- Adamantite Wire -->
-				<item id="17527" min="1" max="1" chance="0.075" /> <!-- Scroll: Enchant Armor (R-grade) -->
-				<item id="36544" min="1" max="1" chance="0.075" /> <!-- Orichalcum Wire -->
-				<item id="35471" min="1" max="1" chance="0.003" /> <!-- Recipe: Eternal Leather Gloves (60%) -->
+				<item id="36543" min="1" max="1" chance="0.75187969924812" /> <!-- Adamantite Wire -->
+				<item id="36544" min="1" max="1" chance="0.0750187546886722" /> <!-- Orichalcum Wire -->
+				<item id="17527" min="1" max="1" chance="0.03000300030003" /> <!-- Scroll: Enchant Armor (R-grade) -->
+				<item id="35471" min="1" max="1" chance="0.0030000300003" /> <!-- Recipe:�Eternal Leather Gloves (60%) -->
 			</drop>
 			<spoil>
-				<item id="36518" min="1" max="1" chance="7.249" /> <!-- Durable Leather -->
-				<item id="36539" min="1" max="1" chance="0.3" /> <!-- Quality Leather Braid -->
+				<item id="36518" min="1" max="1" chance="8" /> <!-- Durable Leather -->
+				<item id="36539" min="1" max="1" chance="0.3003003003003" /> <!-- Quality Leather Braid -->
 			</spoil>
 			<lucky>
 				<item id="39629" min="1" max="1" chance="100" /> <!-- Fortune Pocket - Stage 1 -->
@@ -3839,14 +4358,14 @@
 		<dropLists>
 			<drop>
 				<item id="57" min="1203" max="2808" chance="20" /> <!-- Adena -->
-				<item id="36543" min="1" max="1" chance="0.75" /> <!-- Adamantite Wire -->
-				<item id="17527" min="1" max="1" chance="0.075" /> <!-- Scroll: Enchant Armor (R-grade) -->
-				<item id="36544" min="1" max="1" chance="0.075" /> <!-- Orichalcum Wire -->
-				<item id="35472" min="1" max="1" chance="0.003" /> <!-- Recipe: Eternal Leather Boots (60%) -->
+				<item id="36543" min="1" max="1" chance="0.75187969924812" /> <!-- Adamantite Wire -->
+				<item id="36544" min="1" max="1" chance="0.0750187546886722" /> <!-- Orichalcum Wire -->
+				<item id="17527" min="1" max="1" chance="0.03000300030003" /> <!-- Scroll: Enchant Armor (R-grade) -->
+				<item id="35472" min="1" max="1" chance="0.0030000300003" /> <!-- Recipe:�Eternal Leather Boots (60%) -->
 			</drop>
 			<spoil>
-				<item id="36518" min="1" max="1" chance="7.237" /> <!-- Durable Leather -->
-				<item id="36539" min="1" max="1" chance="0.3" /> <!-- Quality Leather Braid -->
+				<item id="36518" min="1" max="1" chance="8" /> <!-- Durable Leather -->
+				<item id="36539" min="1" max="1" chance="0.3003003003003" /> <!-- Quality Leather Braid -->
 			</spoil>
 			<lucky>
 				<item id="39629" min="1" max="1" chance="100" /> <!-- Fortune Pocket - Stage 1 -->
@@ -3895,17 +4414,15 @@
 		</collision>
 		<dropLists>
 			<drop>
-				<item id="57" min="137" max="320" chance="70" /> <!-- Adena -->
-				<item id="3036" min="1" max="1" chance="0.03" /> <!-- Recipe: Spiritshot (S-grade) -->
-				<item id="3957" min="1" max="1" chance="0.03" /> <!-- Recipe: Blessed Spiritshot (S-grade) -->
-				<item id="9551" min="1" max="1" chance="0.03" /> <!-- Holy Stone -->
-				<item id="959" min="1" max="1" chance="0.003" /> <!-- Scroll: Enchant Weapon (S-grade) -->
+				<item id="57" min="1203" max="2808" chance="20" /> <!-- Adena -->
+				<item id="36543" min="1" max="1" chance="0.75187969924812" /> <!-- Adamantite Wire -->
+				<item id="36544" min="1" max="1" chance="0.0750187546886722" /> <!-- Orichalcum Wire -->
+				<item id="17527" min="1" max="1" chance="0.03000300030003" /> <!-- Scroll: Enchant Armor (R-grade) -->
+				<item id="35477" min="1" max="1" chance="0.0030000300003" /> <!-- Recipe:�Eternal Shoes (60%) -->
 			</drop>
 			<spoil>
-				<item id="36532" min="1" max="1" chance="1.493" /> <!-- Thin Braid -->
-				<item id="36533" min="1" max="1" chance="0.3" /> <!-- Synthetic Braid -->
-				<item id="36882" min="1" max="1" chance="0.0075" /> <!-- Recipe: Thin Braid - Upgrade -->
-				<item id="36881" min="1" max="1" chance="0.003" /> <!-- Recipe: Thin Braid - Downgrade -->
+				<item id="36538" min="1" max="1" chance="2" /> <!-- Durable Leather Braid -->
+				<item id="36519" min="1" max="1" chance="0.75187969924812" /> <!-- Quality Leather -->
 			</spoil>
 			<lucky>
 				<item id="39629" min="1" max="1" chance="100" /> <!-- Fortune Pocket - Stage 1 -->
@@ -3938,13 +4455,13 @@
 		<dropLists>
 			<drop>
 				<item id="57" min="1203" max="2808" chance="20" /> <!-- Adena -->
-				<item id="36543" min="1" max="1" chance="1.053" /> <!-- Adamantite Wire -->
-				<item id="17527" min="1" max="1" chance="0.3" /> <!-- Scroll: Enchant Armor (R-grade) -->
-				<item id="36544" min="1" max="1" chance="0.3" /> <!-- Orichalcum Wire -->
+				<item id="36543" min="1" max="1" chance="1.25" /> <!-- Adamantite Wire -->
+				<item id="36544" min="1" max="1" chance="0.3003003003003" /> <!-- Orichalcum Wire -->
+				<item id="17527" min="1" max="1" chance="0.03000300030003" /> <!-- Scroll: Enchant Armor (R-grade) -->
 			</drop>
 			<spoil>
-				<item id="36538" min="1" max="1" chance="1.734" /> <!-- Durable Leather Braid -->
-				<item id="36519" min="1" max="1" chance="0.75" /> <!-- Quality Leather -->
+				<item id="36538" min="1" max="1" chance="2" /> <!-- Durable Leather Braid -->
+				<item id="36519" min="1" max="1" chance="0.75187969924812" /> <!-- Quality Leather -->
 			</spoil>
 			<lucky>
 				<item id="39629" min="1" max="1" chance="100" /> <!-- Fortune Pocket - Stage 1 -->
@@ -3982,14 +4499,14 @@
 		<dropLists>
 			<drop>
 				<item id="57" min="1239" max="2893" chance="20" /> <!-- Adena -->
-				<item id="36538" min="1" max="1" chance="0.3" /> <!-- Durable Leather Braid -->
-				<item id="35348" min="1" max="1" chance="0.075" /> <!-- Eternal Leather Boot Ingredient -->
-				<item id="36539" min="1" max="1" chance="0.03" /> <!-- Quality Leather Braid -->
-				<item id="17526" min="1" max="1" chance="0.003" /> <!-- Scroll: Enchant Weapon (R-grade) -->
+				<item id="36538" min="1" max="1" chance="0.3003003003003" /> <!-- Durable Leather Braid -->
+				<item id="35348" min="1" max="1" chance="0.0750187546886722" /> <!-- Eternal Leather Boot Ingredient -->
+				<item id="36539" min="1" max="1" chance="0.03000300030003" /> <!-- Quality Leather Braid -->
+				<item id="17526" min="1" max="1" chance="0.005" /> <!-- Scroll: Enchant Weapon (R-grade) -->
 			</drop>
 			<spoil>
-				<item id="36538" min="1" max="1" chance="1.845" /> <!-- Durable Leather Braid -->
-				<item id="36539" min="1" max="1" chance="0.3" /> <!-- Quality Leather Braid -->
+				<item id="36538" min="1" max="1" chance="2" /> <!-- Durable Leather Braid -->
+				<item id="36539" min="1" max="1" chance="0.3003003003003" /> <!-- Quality Leather Braid -->
 			</spoil>
 			<lucky>
 				<item id="39629" min="1" max="1" chance="100" /> <!-- Fortune Pocket - Stage 1 -->
@@ -4026,14 +4543,14 @@
 		<dropLists>
 			<drop>
 				<item id="57" min="1239" max="2893" chance="20" /> <!-- Adena -->
-				<item id="36538" min="1" max="1" chance="0.3" /> <!-- Durable Leather Braid -->
-				<item id="35353" min="1" max="1" chance="0.075" /> <!-- Eternal Shoe Ingredient -->
-				<item id="36539" min="1" max="1" chance="0.03" /> <!-- Quality Leather Braid -->
-				<item id="17526" min="1" max="1" chance="0.003" /> <!-- Scroll: Enchant Weapon (R-grade) -->
+				<item id="36538" min="1" max="1" chance="0.3003003003003" /> <!-- Durable Leather Braid -->
+				<item id="35353" min="1" max="1" chance="0.0750187546886722" /> <!-- Eternal Shoe Ingredient -->
+				<item id="36539" min="1" max="1" chance="0.03000300030003" /> <!-- Quality Leather Braid -->
+				<item id="17526" min="1" max="1" chance="0.005" /> <!-- Scroll: Enchant Weapon (R-grade) -->
 			</drop>
 			<spoil>
-				<item id="36538" min="1" max="1" chance="1.871" /> <!-- Durable Leather Braid -->
-				<item id="36539" min="1" max="1" chance="0.3" /> <!-- Quality Leather Braid -->
+				<item id="36538" min="1" max="1" chance="2" /> <!-- Durable Leather Braid -->
+				<item id="36539" min="1" max="1" chance="0.3003003003003" /> <!-- Quality Leather Braid -->
 			</spoil>
 			<lucky>
 				<item id="39629" min="1" max="1" chance="100" /> <!-- Fortune Pocket - Stage 1 -->
@@ -4072,16 +4589,16 @@
 		<dropLists>
 			<drop>
 				<item id="57" min="2479" max="5786" chance="20" /> <!-- Adena -->
-				<item id="36538" min="1" max="1" chance="0.3" /> <!-- Durable Leather Braid -->
-				<item id="35328" min="1" max="1" chance="0.03" /> <!-- Amaranthine Cutter Fragment -->
-				<item id="35345" min="1" max="1" chance="0.03" /> <!-- Eternal Leather Armor Ingredient -->
-				<item id="36539" min="1" max="1" chance="0.03" /> <!-- Quality Leather Braid -->
-				<item id="17526" min="1" max="1" chance="0.003" /> <!-- Scroll: Enchant Weapon (R-grade) -->
-				<item id="35452" min="1" max="1" chance="0.0009" /> <!-- Recipe: Amaranthine Cutter (60%) -->
+				<item id="36538" min="1" max="1" chance="0.75187969924812" /> <!-- Durable Leather Braid -->
+				<item id="35345" min="1" max="1" chance="0.0750187546886722" /> <!-- Eternal Leather Armor Ingredient -->
+				<item id="36539" min="1" max="1" chance="0.0750187546886722" /> <!-- Quality Leather Braid -->
+				<item id="35328" min="1" max="1" chance="0.0750187546886722" /> <!-- Amaranthine Cutter Fragment -->
+				<item id="35452" min="1" max="1" chance="0.005" /> <!-- Recipe:�Amaranthine Cutter (60%) -->
+				<item id="17526" min="1" max="1" chance="0.005" /> <!-- Scroll: Enchant Weapon (R-grade) -->
 			</drop>
 			<spoil>
-				<item id="36543" min="1" max="1" chance="2.655" /> <!-- Adamantite Wire -->
-				<item id="36544" min="1" max="1" chance="0.3" /> <!-- Orichalcum Wire -->
+				<item id="36543" min="1" max="1" chance="2" /> <!-- Adamantite Wire -->
+				<item id="36544" min="1" max="1" chance="0.3003003003003" /> <!-- Orichalcum Wire -->
 			</spoil>
 			<lucky>
 				<item id="39629" min="1" max="1" chance="100" /> <!-- Fortune Pocket - Stage 1 -->
@@ -4120,17 +4637,17 @@
 		<dropLists>
 			<drop>
 				<item id="57" min="3099" max="7232" chance="20" /> <!-- Adena -->
-				<item id="36538" min="1" max="1" chance="0.3" /> <!-- Durable Leather Braid -->
-				<item id="35332" min="1" max="1" chance="0.075" /> <!-- Amaranthine Stormer Fragment -->
-				<item id="36539" min="1" max="1" chance="0.03" /> <!-- Quality Leather Braid -->
-				<item id="36549" min="1" max="1" chance="0.0075" /> <!-- Weapon Fragment (High-grade) -->
-				<item id="17526" min="1" max="1" chance="0.003" /> <!-- Scroll: Enchant Weapon (R-grade) -->
-				<item id="35456" min="1" max="1" chance="0.0009" /> <!-- Recipe: Amaranthine Stormer (60%) -->
-				<item id="35471" min="1" max="1" chance="0.0009" /> <!-- Recipe: Eternal Leather Gloves (60%) -->
+				<item id="36538" min="1" max="1" chance="0.3003003003003" /> <!-- Durable Leather Braid -->
+				<item id="35332" min="1" max="1" chance="0.0750187546886722" /> <!-- Amaranthine Stormer Fragment -->
+				<item id="36539" min="1" max="1" chance="0.03000300030003" /> <!-- Quality Leather Braid -->
+				<item id="36549" min="1" max="1" chance="0.03000300030003" /> <!-- Weapon Fragment (High-grade) -->
+				<item id="35456" min="1" max="1" chance="0.005" /> <!-- Recipe:�Amaranthine Stormer (60%) -->
+				<item id="35471" min="1" max="1" chance="0.005" /> <!-- Recipe:�Eternal Leather Gloves (60%) -->
+				<item id="17526" min="1" max="1" chance="0.005" /> <!-- Scroll: Enchant Weapon (R-grade) -->
 			</drop>
 			<spoil>
-				<item id="36539" min="1" max="1" chance="0.3" /> <!-- Quality Leather Braid -->
-				<item id="36544" min="1" max="1" chance="0.3" /> <!-- Orichalcum Wire -->
+				<item id="36539" min="1" max="1" chance="0.75187969924812" /> <!-- Quality Leather Braid -->
+				<item id="36544" min="1" max="1" chance="0.3003003003003" /> <!-- Orichalcum Wire -->
 			</spoil>
 			<lucky>
 				<item id="39629" min="1" max="1" chance="100" /> <!-- Fortune Pocket - Stage 1 -->
@@ -4169,17 +4686,17 @@
 		<dropLists>
 			<drop>
 				<item id="57" min="3099" max="7232" chance="20" /> <!-- Adena -->
-				<item id="36543" min="1" max="1" chance="0.3" /> <!-- Adamantite Wire -->
-				<item id="35335" min="1" max="1" chance="0.075" /> <!-- Amaranthine Buster Fragment -->
-				<item id="17527" min="1" max="1" chance="0.03" /> <!-- Scroll: Enchant Armor (R-grade) -->
-				<item id="36544" min="1" max="1" chance="0.03" /> <!-- Orichalcum Wire -->
-				<item id="36554" min="1" max="1" chance="0.0075" /> <!-- Armor Fragment (High-grade) -->
-				<item id="35459" min="1" max="1" chance="0.0009" /> <!-- Recipe: Amaranthine Buster (60%) -->
-				<item id="35472" min="1" max="1" chance="0.0009" /> <!-- Recipe: Eternal Leather Boots (60%) -->
+				<item id="36543" min="1" max="1" chance="0.3003003003003" /> <!-- Adamantite Wire -->
+				<item id="35335" min="1" max="1" chance="0.0750187546886722" /> <!-- Amaranthine Buster Fragment -->
+				<item id="36544" min="1" max="1" chance="0.03000300030003" /> <!-- Orichalcum Wire -->
+				<item id="17527" min="1" max="1" chance="0.03000300030003" /> <!-- Scroll: Enchant Armor (R-grade) -->
+				<item id="36554" min="1" max="1" chance="0.03000300030003" /> <!-- Armor Fragment (High-grade) -->
+				<item id="35472" min="1" max="1" chance="0.005" /> <!-- Recipe:�Eternal Leather Boots (60%) -->
+				<item id="35459" min="1" max="1" chance="0.005" /> <!-- Recipe:�Amaranthine Buster (60%) -->
 			</drop>
 			<spoil>
-				<item id="36539" min="1" max="1" chance="0.3" /> <!-- Quality Leather Braid -->
-				<item id="36544" min="1" max="1" chance="0.3" /> <!-- Orichalcum Wire -->
+				<item id="36539" min="1" max="1" chance="0.75187969924812" /> <!-- Quality Leather Braid -->
+				<item id="36544" min="1" max="1" chance="0.3003003003003" /> <!-- Orichalcum Wire -->
 			</spoil>
 			<lucky>
 				<item id="39629" min="1" max="1" chance="100" /> <!-- Fortune Pocket - Stage 1 -->
@@ -4216,15 +4733,15 @@
 		<dropLists>
 			<drop>
 				<item id="57" min="1239" max="2893" chance="20" /> <!-- Adena -->
-				<item id="36543" min="1" max="1" chance="0.3" /> <!-- Adamantite Wire -->
-				<item id="17527" min="1" max="1" chance="0.03" /> <!-- Scroll: Enchant Armor (R-grade) -->
-				<item id="35336" min="1" max="1" chance="0.03" /> <!-- Amaranthine Caster Fragment -->
-				<item id="36544" min="1" max="1" chance="0.03" /> <!-- Orichalcum Wire -->
-				<item id="35477" min="1" max="1" chance="0.0009" /> <!-- Recipe: Eternal Shoes (60%) -->
+				<item id="36543" min="1" max="1" chance="0.3003003003003" /> <!-- Adamantite Wire -->
+				<item id="36544" min="1" max="1" chance="0.03000300030003" /> <!-- Orichalcum Wire -->
+				<item id="17527" min="1" max="1" chance="0.03000300030003" /> <!-- Scroll: Enchant Armor (R-grade) -->
+				<item id="35336" min="1" max="1" chance="0.03000300030003" /> <!-- Amaranthine Caster Fragment -->
+				<item id="35477" min="1" max="1" chance="0.005" /> <!-- Recipe:�Eternal Shoes (60%) -->
 			</drop>
 			<spoil>
-				<item id="36518" min="1" max="1" chance="7.477" /> <!-- Durable Leather -->
-				<item id="36539" min="1" max="1" chance="0.3" /> <!-- Quality Leather Braid -->
+				<item id="36518" min="1" max="1" chance="9" /> <!-- Durable Leather -->
+				<item id="36539" min="1" max="1" chance="0.3003003003003" /> <!-- Quality Leather Braid -->
 			</spoil>
 			<lucky>
 				<item id="39629" min="1" max="1" chance="100" /> <!-- Fortune Pocket - Stage 1 -->

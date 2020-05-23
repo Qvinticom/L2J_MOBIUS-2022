@@ -155,7 +155,6 @@
 		</collision>
 	</npc>
 	<npc id="25306" level="80" type="RaidBoss" name="Fire Spirit Nastron" title="Raid Boss">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<minions name="Privates">
 				<npc id="25307" count="1" respawnTime="360" weightPoint="1" />
@@ -205,15 +204,15 @@
 		<ai type="BALANCED" clanHelpRange="300" />
 		<dropLists>
 			<drop>
-				<item id="6364" min="1" max="1" chance="0.3" /> <!-- Forgotten Blade -->
-				<item id="6372" min="1" max="1" chance="0.3" /> <!-- Heaven's Divider -->
-				<item id="6685" min="1" max="1" chance="2.80099999999999" /> <!-- Sealed Major Arcana Gloves -->
-				<item id="6677" min="1" max="1" chance="2.79399999999994" /> <!-- Sealed Imperial Crusader Boots -->
-				<item id="6682" min="1" max="1" chance="2.72100000000004" /> <!-- Sealed Draconic Leather Boots -->
-				<item id="6676" min="1" max="1" chance="2.68199999999992" /> <!-- Sealed Imperial Crusader Gauntlets -->
-				<item id="6681" min="1" max="1" chance="2.67399999999994" /> <!-- Sealed Draconic Leather Gloves -->
-				<item id="6686" min="1" max="1" chance="2.668" /> <!-- Sealed Major Arcana Boots -->
-				<item id="6578" min="1" max="1" chance="2.133" /> <!-- Blessed Scroll: Enchant Armor (S-grade) -->
+				<item id="6681" min="1" max="1" chance="3" /> <!-- Sealed Draconic Leather Gloves -->
+				<item id="6685" min="1" max="1" chance="3" /> <!-- Sealed Major Arcana Gloves -->
+				<item id="6676" min="1" max="1" chance="3" /> <!-- Sealed Imperial Crusader Gauntlets -->
+				<item id="6682" min="1" max="1" chance="3" /> <!-- Sealed Draconic Leather Boots -->
+				<item id="6677" min="1" max="1" chance="3" /> <!-- Sealed Imperial Crusader Boots -->
+				<item id="6686" min="1" max="1" chance="3" /> <!-- Sealed Major Arcana Boots -->
+				<item id="6578" min="1" max="1" chance="2.5" /> <!-- Blessed Scroll: Enchant Armor (S-grade) -->
+				<item id="6364" min="1" max="1" chance="0.3003003003003" /> <!-- Forgotten Blade -->
+				<item id="6372" min="1" max="1" chance="0.3003003003003" /> <!-- Heaven's Divider -->
 			</drop>
 			<lucky>
 				<item id="39629" min="1" max="1" chance="88.99" /> <!-- Fortune Pocket - Stage 1 -->
@@ -303,7 +302,6 @@
 		</collision>
 	</npc>
 	<npc id="25309" level="80" type="RaidBoss" name="Varka's Hero Shadith" title="Raid Boss">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<minions name="Privates">
 				<npc id="25310" count="1" respawnTime="360" weightPoint="1" />
@@ -352,15 +350,15 @@
 		<ai type="BALANCED" clanHelpRange="300" />
 		<dropLists>
 			<drop>
-				<item id="6367" min="1" max="1" chance="0.299999999999998" /> <!-- Angel Slayer -->
-				<item id="6691" min="27" max="81" chance="1.233" /> <!-- Angel Slayer Blade -->
-				<item id="6675" min="1" max="1" chance="2.10499999999998" /> <!-- Sealed Imperial Crusader Gaiters -->
-				<item id="6674" min="1" max="1" chance="1.23299999999999" /> <!-- Sealed Imperial Crusader Breastplate -->
-				<item id="6702" min="28" max="84" chance="6.21999999999997" /> <!-- Sealed Imperial Crusader Gaiter Pattern -->
-				<item id="6701" min="60" max="180" chance="1.76700000000005" /> <!-- Sealed Imperial Crusader Breastplate Part -->
-				<item id="960" min="1" max="1" chance="9.32199999999996" /> <!-- Scroll: Enchant Armor (S-grade) -->
-				<item id="959" min="1" max="1" chance="0.749999999999999" /> <!-- Scroll: Enchant Weapon (S-grade) -->
-				<item id="6577" min="1" max="1" chance="0.299999999999995" /> <!-- Blessed Scroll: Enchant Weapon (S-grade) -->
+				<item id="960" min="1" max="1" chance="5" /> <!-- Scroll: Enchant Armor (S-grade) -->
+				<item id="6675" min="1" max="1" chance="2" /> <!-- Sealed Imperial Crusader Gaiters -->
+				<item id="6702" min="16" max="32" chance="1.75" /> <!-- Sealed Imperial Crusader Gaiter Pattern -->
+				<item id="6701" min="60" max="180" chance="1.75" /> <!-- Sealed Imperial Crusader Breastplate Part -->
+				<item id="6674" min="1" max="1" chance="1.5" /> <!-- Sealed Imperial Crusader Breastplate -->
+				<item id="959" min="1" max="1" chance="1.5" /> <!-- Scroll: Enchant Weapon (S-grade) -->
+				<item id="6691" min="45" max="45" chance="1.25" /> <!-- Angel Slayer Blade -->
+				<item id="6577" min="1" max="1" chance="0.3003003003003" /> <!-- Blessed Scroll: Enchant Weapon (S-grade) -->
+				<item id="6367" min="1" max="1" chance="0.3003003003003" /> <!-- Angel Slayer -->
 			</drop>
 			<lucky>
 				<item id="39629" min="1" max="1" chance="86.94" /> <!-- Fortune Pocket - Stage 1 -->
@@ -526,7 +524,6 @@
 		</collision>
 	</npc>
 	<npc id="25316" level="80" type="RaidBoss" name="Water Spirit Ashutar" title="Raid Boss">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<minions name="Privates">
 				<npc id="25317" count="1" respawnTime="360" weightPoint="1" />
@@ -576,12 +573,12 @@
 		<ai type="BALANCED" clanHelpRange="300" />
 		<dropLists>
 			<drop>
-				<item id="6371" min="1" max="1" chance="0.3" /> <!-- Demon Splinter -->
-				<item id="6695" min="12" max="36" chance="2.834" /> <!-- Demon Splinter Blade -->
-				<item id="6680" min="1" max="1" chance="1.10799999999998" /> <!-- Sealed Draconic Leather Armor -->
-				<item id="6707" min="15" max="45" chance="6.16400000000002" /> <!-- Sealed Draconic Leather Armor Part -->
-				<item id="3936" min="1" max="1" chance="12.69" /> <!-- Blessed Scroll of Resurrection -->
-				<item id="6578" min="1" max="1" chance="1.15899999999999" /> <!-- Blessed Scroll: Enchant Armor (S-grade) -->
+				<item id="3936" min="1" max="1" chance="12.5" /> <!-- Blessed Scroll of Resurrection -->
+				<item id="6707" min="15" max="45" chance="6" /> <!-- Sealed Draconic Leather Armor Part -->
+				<item id="6695" min="12" max="36" chance="3" /> <!-- Demon Splinter Blade -->
+				<item id="6680" min="1" max="1" chance="1.5" /> <!-- Sealed Draconic Leather Armor -->
+				<item id="6578" min="1" max="1" chance="1.25" /> <!-- Blessed Scroll: Enchant Armor (S-grade) -->
+				<item id="6371" min="1" max="1" chance="0.3003003003003" /> <!-- Demon Splinter -->
 			</drop>
 			<lucky>
 				<item id="39629" min="1" max="1" chance="91.045" /> <!-- Fortune Pocket - Stage 1 -->
@@ -671,7 +668,6 @@
 		</collision>
 	</npc>
 	<npc id="25319" level="80" type="RaidBoss" name="Ember" title="Raid Boss">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<minions name="Privates">
 				<npc id="25320" count="3" respawnTime="360" weightPoint="1" />
@@ -719,17 +715,17 @@
 		<ai type="BALANCED" clanHelpRange="300" />
 		<dropLists>
 			<drop>
-				<item id="6579" min="1" max="1" chance="0.3" /> <!-- Arcana Mace -->
-				<item id="6369" min="1" max="1" chance="0.3" /> <!-- Dragon Hunter Axe -->
-				<item id="6366" min="1" max="1" chance="0.3" /> <!-- Imperial Staff -->
-				<item id="6365" min="1" max="1" chance="0.3" /> <!-- Basalt Battlehammer -->
-				<item id="6686" min="1" max="1" chance="6.04700000000001" /> <!-- Sealed Major Arcana Boots -->
-				<item id="6676" min="1" max="1" chance="3.00100000000006" /> <!-- Sealed Imperial Crusader Gauntlets -->
-				<item id="6677" min="1" max="1" chance="2.07000000000001" /> <!-- Sealed Imperial Crusader Boots -->
-				<item id="6681" min="1" max="1" chance="1.518" /> <!-- Sealed Draconic Leather Gloves -->
-				<item id="6682" min="1" max="1" chance="1.218" /> <!-- Sealed Draconic Leather Boots -->
-				<item id="6685" min="1" max="1" chance="1.022" /> <!-- Sealed Major Arcana Gloves -->
-				<item id="6578" min="1" max="1" chance="5.989" /> <!-- Blessed Scroll: Enchant Armor (S-grade) -->
+				<item id="6578" min="1" max="1" chance="7.5" /> <!-- Blessed Scroll: Enchant Armor (S-grade) -->
+				<item id="6681" min="1" max="1" chance="3" /> <!-- Sealed Draconic Leather Gloves -->
+				<item id="6685" min="1" max="1" chance="3" /> <!-- Sealed Major Arcana Gloves -->
+				<item id="6676" min="1" max="1" chance="3" /> <!-- Sealed Imperial Crusader Gauntlets -->
+				<item id="6682" min="1" max="1" chance="3" /> <!-- Sealed Draconic Leather Boots -->
+				<item id="6677" min="1" max="1" chance="3" /> <!-- Sealed Imperial Crusader Boots -->
+				<item id="6686" min="1" max="1" chance="3" /> <!-- Sealed Major Arcana Boots -->
+				<item id="6365" min="1" max="1" chance="0.3003003003003" /> <!-- Basalt Battlehammer -->
+				<item id="6366" min="1" max="1" chance="0.3003003003003" /> <!-- Imperial Staff -->
+				<item id="6579" min="1" max="1" chance="0.3003003003003" /> <!-- Arcana Mace -->
+				<item id="6369" min="1" max="1" chance="0.3003003003003" /> <!-- Dragon Hunter Axe -->
 			</drop>
 			<lucky>
 				<item id="39629" min="1" max="1" chance="91.95" /> <!-- Fortune Pocket - Stage 1 -->
@@ -826,7 +822,6 @@
 		</collision>
 	</npc>
 	<npc id="25322" level="66" type="RaidBoss" name="Demon's Agent Falston" title="Raid Boss">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<minions name="Privates">
 				<npc id="25323" count="3" respawnTime="360" weightPoint="1" />
@@ -872,16 +867,16 @@
 		<ai type="BALANCED" clanHelpRange="300" />
 		<dropLists>
 			<drop>
-				<item id="2504" min="1" max="1" chance="2.40799999999998" /> <!-- Meteor Shower -->
-				<item id="212" min="1" max="1" chance="2.28600000000002" /> <!-- Dasparion's Staff -->
-				<item id="6323" min="1" max="1" chance="6.10500000000005" /> <!-- Sealed Phoenix Necklace -->
-				<item id="6325" min="1" max="1" chance="4.85699999999998" /> <!-- Sealed Phoenix Ring -->
-				<item id="6324" min="1" max="1" chance="1.87499999999997" /> <!-- Sealed Phoenix Earring -->
-				<item id="9814" min="3" max="7" chance="38.324298522135" /> <!-- Memento Mori -->
-				<item id="8176" min="1" max="4" chance="37.005704455336" /> <!-- Destruction Tombstone -->
-				<item id="8619" min="1" max="1" chance="23.091937671618" /> <!-- Ancient Book: Divine Inspiration (Original Language Version) -->
-				<item id="729" min="1" max="1" chance="1.4362750426534" /> <!-- Scroll: Enchant Weapon (A-grade) -->
-				<item id="6569" min="1" max="1" chance="0.14178430825799" /> <!-- Blessed Scroll: Enchant Weapon (A-grade) -->
+				<item id="8176" min="1" max="4" chance="80" /> <!-- Destruction Tombstone -->
+				<item id="8619" min="1" max="1" chance="75" /> <!-- Ancient Book: Divine Inspiration (Original Language Version) -->
+				<item id="9814" min="2" max="5" chance="20" /> <!-- Memento Mori -->
+				<item id="6325" min="1" max="1" chance="5" /> <!-- Sealed Phoenix Ring -->
+				<item id="6324" min="1" max="1" chance="4" /> <!-- Sealed Phoenix Earring -->
+				<item id="6323" min="1" max="1" chance="3" /> <!-- Sealed Phoenix Necklace -->
+				<item id="729" min="1" max="1" chance="3" /> <!-- Scroll: Enchant Weapon (A-grade) -->
+				<item id="2504" min="1" max="1" chance="2.5" /> <!-- Meteor Shower -->
+				<item id="212" min="1" max="1" chance="2.5" /> <!-- Dasparion's Staff -->
+				<item id="6569" min="1" max="1" chance="0.75187969924812" /> <!-- Blessed Scroll: Enchant Weapon (A-grade) -->
 			</drop>
 			<lucky>
 				<item id="39629" min="1" max="1" chance="79.96" /> <!-- Fortune Pocket - Stage 1 -->
@@ -977,7 +972,6 @@
 		</collision>
 	</npc>
 	<npc id="25325" level="70" type="RaidBoss" name="Flame of Splendor Barakiel" title="Raid Boss">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<minions name="Privates">
 				<npc id="25326" count="1" respawnTime="360" weightPoint="1" />
@@ -1026,16 +1020,16 @@
 		<ai type="BALANCED" clanHelpRange="300" />
 		<dropLists>
 			<drop>
-				<item id="5315" min="1" max="1" chance="2.426" /> <!-- Sealed Shield of Nightmare -->
-				<item id="5312" min="1" max="1" chance="5.54700000000003" /> <!-- Sealed Helm of Nightmare -->
-				<item id="5317" min="1" max="1" chance="4.09000000000002" /> <!-- Sealed Majestic Circlet -->
-				<item id="5311" min="1" max="1" chance="3.80199999999995" /> <!-- Sealed Armor of Nightmare -->
-				<item id="5316" min="1" max="1" chance="3.79299999999999" /> <!-- Sealed Majestic Plate Armor -->
-				<item id="9818" min="3" max="7" chance="37.726296756696" /> <!-- Angelic Essence -->
-				<item id="8176" min="1" max="4" chance="36.582664707877" /> <!-- Destruction Tombstone -->
-				<item id="8619" min="1" max="1" chance="23.736015368968" /> <!-- Ancient Book: Divine Inspiration (Original Language Version) -->
-				<item id="6570" min="1" max="1" chance="1.4107808791954" /> <!-- Blessed Scroll: Enchant Armor (A-grade) -->
-				<item id="6578" min="1" max="1" chance="0.5442422872641" /> <!-- Blessed Scroll: Enchant Armor (S-grade) -->
+				<item id="8176" min="1" max="4" chance="80" /> <!-- Destruction Tombstone -->
+				<item id="9818" min="2" max="5" chance="50" /> <!-- Angelic Essence -->
+				<item id="8619" min="1" max="1" chance="50" /> <!-- Ancient Book: Divine Inspiration (Original Language Version) -->
+				<item id="6570" min="1" max="1" chance="4" /> <!-- Blessed Scroll: Enchant Armor (A-grade) -->
+				<item id="5317" min="1" max="1" chance="4" /> <!-- Sealed Majestic Circlet -->
+				<item id="5311" min="1" max="1" chance="4" /> <!-- Sealed Armor of Nightmare -->
+				<item id="5316" min="1" max="1" chance="4" /> <!-- Sealed Majestic Plate Armor -->
+				<item id="5312" min="1" max="1" chance="4" /> <!-- Sealed Helm of Nightmare -->
+				<item id="5315" min="1" max="1" chance="4" /> <!-- Sealed Shield of Nightmare -->
+				<item id="6578" min="1" max="1" chance="1.25" /> <!-- Blessed Scroll: Enchant Armor (S-grade) -->
 			</drop>
 			<lucky>
 				<item id="39629" min="1" max="1" chance="79.63" /> <!-- Fortune Pocket - Stage 1 -->
@@ -1123,7 +1117,6 @@
 		</collision>
 	</npc>
 	<npc id="25328" level="71" type="RaidBoss" name="Eilhalder von Hellmann" title="Raid Boss">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<minions name="Privates">
 				<npc id="25329" count="1" respawnTime="360" weightPoint="1" />
@@ -1171,21 +1164,21 @@
 		<ai type="BALANCED" clanHelpRange="300" />
 		<dropLists>
 			<drop>
-				<item id="81" min="1" max="1" chance="0.749999999999972" /> <!-- Dragon Slayer -->
-				<item id="151" min="1" max="1" chance="0.749999999999972" /> <!-- Sword of Miracles -->
-				<item id="2500" min="1" max="1" chance="0.749999999999972" /> <!-- Dark Legion's Edge -->
-				<item id="5529" min="2" max="6" chance="27.8800000000003" /> <!-- Dragon Slayer Edge -->
-				<item id="5546" min="3" max="9" chance="23.4099999999997" /> <!-- Sword of Miracles Edge -->
-				<item id="5545" min="3" max="9" chance="18.6100000000001" /> <!-- Dark Legion's Edge Blade -->
-				<item id="5311" min="1" max="1" chance="1.96100000000003" /> <!-- Sealed Armor of Nightmare -->
-				<item id="5316" min="1" max="1" chance="1.87800000000001" /> <!-- Sealed Majestic Plate Armor -->
-				<item id="5523" min="12" max="36" chance="11.8299999999999" /> <!-- Sealed Majestic Plate Armor Pattern -->
-				<item id="5522" min="36" max="108" chance="3.93399999999992" /> <!-- Sealed Armor of Nightmare Pattern -->
-				<item id="8176" min="1" max="4" chance="33.925288795867" /> <!-- Destruction Tombstone -->
-				<item id="9814" min="3" max="7" chance="33.390363706606" /> <!-- Memento Mori -->
-				<item id="8619" min="1" max="1" chance="21.834283603697" /> <!-- Ancient Book: Divine Inspiration (Original Language Version) -->
-				<item id="730" min="1" max="1" chance="10.341885059033" /> <!-- Scroll: Enchant Armor (A-grade) -->
-				<item id="6578" min="1" max="1" chance="0.5081788347973" /> <!-- Blessed Scroll: Enchant Armor (S-grade) -->
+				<item id="8176" min="1" max="4" chance="80" /> <!-- Destruction Tombstone -->
+				<item id="8619" min="1" max="1" chance="40" /> <!-- Ancient Book: Divine Inspiration (Original Language Version) -->
+				<item id="9814" min="3" max="7" chance="33" /> <!-- Memento Mori -->
+				<item id="5529" min="2" max="6" chance="22.5" /> <!-- Dragon Slayer Edge -->
+				<item id="5546" min="4" max="9" chance="17.5" /> <!-- Sword of Miracles Edge -->
+				<item id="5545" min="3" max="9" chance="15" /> <!-- Dark Legion's Edge Blade -->
+				<item id="730" min="1" max="1" chance="15" /> <!-- Scroll: Enchant Armor (A-grade) -->
+				<item id="5523" min="14" max="32" chance="7.5" /> <!-- Sealed Majestic Plate Armor Pattern -->
+				<item id="5311" min="1" max="1" chance="1" /> <!-- Sealed Armor of Nightmare -->
+				<item id="5316" min="1" max="1" chance="1" /> <!-- Sealed Majestic Plate Armor -->
+				<item id="6578" min="1" max="1" chance="0.75187969924812" /> <!-- Blessed Scroll: Enchant Armor (S-grade) -->
+				<item id="5522" min="36" max="73" chance="0.75187969924812" /> <!-- Sealed Armor of Nightmare Pattern -->
+				<item id="151" min="1" max="1" chance="0.75187969924812" /> <!-- Sword of Miracles -->
+				<item id="2500" min="1" max="1" chance="0.75187969924812" /> <!-- Dark Legion's Edge -->
+				<item id="81" min="1" max="1" chance="0.3003003003003" /> <!-- Dragon Slayer -->
 			</drop>
 			<lucky>
 				<item id="39629" min="1" max="1" chance="79.34" /> <!-- Fortune Pocket - Stage 1 -->
@@ -1371,7 +1364,6 @@
 		</collision>
 	</npc>
 	<npc id="25333" level="28" type="RaidBoss" name="Anakazel" title="Invaders' Leader">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="RaidSpawnMusic" value="Rm03_A" />
 			<skill name="SelfRangeCancel_a" id="4177" level="2" />
@@ -1421,9 +1413,16 @@
 			<radius normal="21" />
 			<height normal="54" />
 		</collision>
+		<dropLists>
+			<drop>
+				<item id="47" min="1" max="1" chance="10" /> <!-- Helmet -->
+				<item id="628" min="1" max="1" chance="5" /> <!-- Hoplon -->
+				<item id="260" min="1" max="1" chance="2.5" /> <!-- Triple-Edged Jamadhr -->
+				<item id="6575" min="1" max="1" chance="2" /> <!-- Blessed Scroll: Enchant Weapon (D-grade) -->
+			</drop>
+		</dropLists>
 	</npc>
 	<npc id="25334" level="38" type="RaidBoss" name="Anakazel" title="Invaders' Leader">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="RaidSpawnMusic" value="Rm03_A" />
 			<skill name="SelfRangeCancel_a" id="4177" level="3" />
@@ -1473,9 +1472,16 @@
 			<radius normal="21" />
 			<height normal="54" />
 		</collision>
+		<dropLists>
+			<drop>
+				<item id="2387" min="1" max="1" chance="1.5" /> <!-- Reinforced Mithril Gaiters -->
+				<item id="471" min="1" max="1" chance="1.5" /> <!-- Karmian Stockings -->
+				<item id="439" min="1" max="1" chance="0.75187969924812" /> <!-- Karmian Tunic -->
+				<item id="397" min="1" max="1" chance="0.75187969924812" /> <!-- Reinforced Mithril Shirt -->
+			</drop>
+		</dropLists>
 	</npc>
 	<npc id="25335" level="48" type="RaidBoss" name="Anakazel" title="Invaders' Leader">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="RaidSpawnMusic" value="Rm02_A" />
 			<skill name="SelfRangeCancel_a" id="4177" level="4" />
@@ -1525,9 +1531,30 @@
 			<radius normal="28" />
 			<height normal="48" />
 		</collision>
+		<dropLists>
+			<drop>
+				<item id="9814" min="1" max="2" chance="80" /> <!-- Memento Mori -->
+				<item id="8176" min="1" max="1" chance="60" /> <!-- Destruction Tombstone -->
+				<item id="2112" min="2" max="6" chance="22.5" /> <!-- Pa'agrio Axe Blade -->
+				<item id="2117" min="3" max="9" chance="15" /> <!-- Ghoul's Staff Head -->
+				<item id="2116" min="2" max="6" chance="15" /> <!-- Deadman's Staff Head -->
+				<item id="2969" min="4" max="12" chance="10" /> <!-- Yaksa Mace Head -->
+				<item id="2118" min="3" max="9" chance="10" /> <!-- Demon's Staff Head -->
+				<item id="4603" min="1" max="1" chance="10" /> <!-- Greater CON Dye <Con + 3 Str - 3> -->
+				<item id="4601" min="1" max="1" chance="10" /> <!-- Greater STR Dye <STR + 3 CON - 3> -->
+				<item id="4602" min="1" max="1" chance="10" /> <!-- Greater STR Dye <STR + 3 DEX - 3> -->
+				<item id="951" min="1" max="1" chance="7.5" /> <!-- Scroll: Enchant Weapon (C-grade) -->
+				<item id="1986" min="27" max="81" chance="5" /> <!-- Full Plate Armor Temper -->
+				<item id="356" min="1" max="1" chance="2.5" /> <!-- Full Plate Armor -->
+				<item id="2503" min="1" max="1" chance="1" /> <!-- Yaksa Mace -->
+				<item id="205" min="1" max="1" chance="1" /> <!-- Ghoul's Staff -->
+				<item id="206" min="1" max="1" chance="1" /> <!-- Demon's Staff -->
+				<item id="204" min="1" max="1" chance="1" /> <!-- Deadman's Staff -->
+				<item id="203" min="1" max="1" chance="1" /> <!-- Pa'agrio Axe -->
+			</drop>
+		</dropLists>
 	</npc>
 	<npc id="25336" level="58" type="RaidBoss" name="Anakazel" title="Invaders' Leader">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="RaidSpawnMusic" value="Rm02_A" />
 			<skill name="SelfRangeCancel_a" id="4177" level="5" />
@@ -1577,9 +1604,28 @@
 			<radius normal="28" />
 			<height normal="48" />
 		</collision>
+		<dropLists>
+			<drop>
+				<item id="8176" min="1" max="1" chance="70" /> <!-- Destruction Tombstone -->
+				<item id="9814" min="1" max="3" chance="70" /> <!-- Memento Mori -->
+				<item id="4114" min="1" max="1" chance="30" /> <!-- Damascus Sword Blade -->
+				<item id="4087" min="10" max="30" chance="20" /> <!-- Stockings of Doom Pattern -->
+				<item id="4086" min="6" max="18" chance="20" /> <!-- Blue Wolf Stocking Pattern -->
+				<item id="4085" min="22" max="66" chance="15" /> <!-- Tunic of Doom Pattern -->
+				<item id="4084" min="16" max="48" chance="15" /> <!-- Blue Wolf Tunic Fabric -->
+				<item id="4615" min="1" max="1" chance="7.5" /> <!-- Greater CON Dye <Con + 4 Str - 4> -->
+				<item id="4613" min="1" max="1" chance="7.5" /> <!-- Greater STR Dye <STR + 4 CON - 4> -->
+				<item id="4614" min="1" max="1" chance="7.5" /> <!-- Greater STR Dye <STR + 4 DEX - 4> -->
+				<item id="2404" min="1" max="1" chance="5" /> <!-- Stockings of Doom -->
+				<item id="2403" min="1" max="1" chance="5" /> <!-- Blue Wolf Stockings -->
+				<item id="2399" min="1" max="1" chance="3.5" /> <!-- Tunic of Doom -->
+				<item id="2398" min="1" max="1" chance="3.5" /> <!-- Blue Wolf Tunic -->
+				<item id="79" min="1" max="1" chance="1" /> <!-- Damascus Sword -->
+				<item id="6571" min="1" max="1" chance="0.75187969924812" /> <!-- Blessed Scroll: Enchant Weapon (B-grade) -->
+			</drop>
+		</dropLists>
 	</npc>
 	<npc id="25337" level="68" type="RaidBoss" name="Anakazel" title="Invaders' Leader">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="RaidSpawnMusic" value="Rm01_A" />
 			<skill name="SelfRangeCancel_a" id="4177" level="6" />
@@ -1629,9 +1675,23 @@
 			<radius normal="25" grown="30" />
 			<height normal="90" grown="109" />
 		</collision>
+		<dropLists>
+			<drop>
+				<item id="8176" min="1" max="1" chance="80" /> <!-- Destruction Tombstone -->
+				<item id="9814" min="1" max="3" chance="80" /> <!-- Memento Mori -->
+				<item id="8619" min="1" max="1" chance="50" /> <!-- Ancient Book: Divine Inspiration (Original Language Version) -->
+				<item id="5522" min="28" max="84" chance="3.5" /> <!-- Sealed Armor of Nightmare Pattern -->
+				<item id="5538" min="20" max="60" chance="2.5" /> <!-- Dragon Grinder Edge -->
+				<item id="5311" min="1" max="1" chance="1.5" /> <!-- Sealed Armor of Nightmare -->
+				<item id="5316" min="1" max="1" chance="1.5" /> <!-- Sealed Majestic Plate Armor -->
+				<item id="5523" min="81" max="243" chance="1.25" /> <!-- Sealed Majestic Plate Armor Pattern -->
+				<item id="6578" min="1" max="1" chance="1" /> <!-- Blessed Scroll: Enchant Armor (S-grade) -->
+				<item id="270" min="1" max="1" chance="0.75187969924812" /> <!-- Dragon Grinder -->
+				<item id="6577" min="1" max="1" chance="0.3003003003003" /> <!-- Blessed Scroll: Enchant Weapon (S-grade) -->
+			</drop>
+		</dropLists>
 	</npc>
 	<npc id="25338" level="78" type="RaidBoss" name="Anakazel" title="Invaders' Leader">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="RaidSpawnMusic" value="Rm01_A" />
 			<skill name="SelfRangeCancel_a" id="4177" level="8" />
@@ -1681,9 +1741,17 @@
 			<radius normal="25" grown="30" />
 			<height normal="90" grown="109" />
 		</collision>
+		<dropLists>
+			<drop>
+				<item id="6725" min="1" max="1" chance="7.5" /> <!-- Sealed Tateossian Ring -->
+				<item id="6724" min="1" max="1" chance="5" /> <!-- Sealed Tateossian Earring -->
+				<item id="6726" min="1" max="1" chance="4" /> <!-- Sealed Tateossian Necklace -->
+				<item id="6578" min="1" max="1" chance="2" /> <!-- Blessed Scroll: Enchant Armor (S-grade) -->
+				<item id="6370" min="1" max="1" chance="0.75187969924812" /> <!-- Saint Spear -->
+			</drop>
+		</dropLists>
 	</npc>
 	<npc id="25339" level="80" type="Monster" name="Halisha's Shadow" title="Ruler of Sepulcher">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<minions name="Privates">
 				<npc id="25340" count="1" respawnTime="360" weightPoint="1" />
@@ -1732,6 +1800,23 @@
 			<radius normal="23" />
 			<height normal="60" />
 		</collision>
+		<dropLists>
+			<drop>
+				<item id="6695" min="1" max="1" chance="25" /> <!-- Demon Splinter Blade -->
+				<item id="6705" min="6" max="18" chance="25" /> <!-- Sealed Imperial Crusader Shield Part -->
+				<item id="6706" min="10" max="30" chance="15" /> <!-- Sealed Imperial Crusader Helmet Pattern -->
+				<item id="6710" min="16" max="48" chance="10" /> <!-- Sealed Draconic Leather Helmet Pattern -->
+				<item id="6714" min="22" max="66" chance="10" /> <!-- Sealed Major Arcana Circlet Pattern -->
+				<item id="960" min="1" max="1" chance="10" /> <!-- Scroll: Enchant Armor (S-grade) -->
+				<item id="959" min="1" max="1" chance="2.5" /> <!-- Scroll: Enchant Weapon (S-grade) -->
+				<item id="6678" min="1" max="1" chance="2" /> <!-- Sealed Imperial Crusader Shield -->
+				<item id="6687" min="1" max="1" chance="1.5" /> <!-- Sealed Major Arcana Circlet -->
+				<item id="6683" min="1" max="1" chance="1.5" /> <!-- Sealed Draconic Leather Helmet -->
+				<item id="6679" min="1" max="1" chance="1.5" /> <!-- Sealed Imperial Crusader Helmet -->
+				<item id="6577" min="1" max="1" chance="0.75187969924812" /> <!-- Blessed Scroll: Enchant Weapon (S-grade) -->
+				<item id="6371" min="1" max="1" chance="0.75187969924812" /> <!-- Demon Splinter -->
+			</drop>
+		</dropLists>
 	</npc>
 	<npc id="25340" level="80" type="Monster" name="Knight of Shadow">
 		<!-- Confirmed CT2.5 -->
@@ -1814,7 +1899,6 @@
 		</collision>
 	</npc>
 	<npc id="25342" level="80" type="Monster" name="Halisha's Shadow" title="Ruler of Sepulcher">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<minions name="Privates">
 				<npc id="25343" count="1" respawnTime="360" weightPoint="1" />
@@ -1864,6 +1948,16 @@
 			<radius normal="23" />
 			<height normal="60" />
 		</collision>
+		<dropLists>
+			<drop>
+				<item id="3936" min="1" max="1" chance="12.5" /> <!-- Blessed Scroll of Resurrection -->
+				<item id="6707" min="15" max="45" chance="9" /> <!-- Sealed Draconic Leather Armor Part -->
+				<item id="7579" min="12" max="36" chance="3" /> <!-- Draconic Bow Shaft -->
+				<item id="6680" min="1" max="1" chance="1.5" /> <!-- Sealed Draconic Leather Armor -->
+				<item id="6578" min="1" max="1" chance="1" /> <!-- Blessed Scroll: Enchant Armor (S-grade) -->
+				<item id="7575" min="1" max="1" chance="0.75187969924812" /> <!-- Draconic Bow -->
+			</drop>
+		</dropLists>
 	</npc>
 	<npc id="25343" level="80" type="Monster" name="Knight of Shadow">
 		<!-- Confirmed CT2.5 -->
@@ -1989,7 +2083,6 @@
 		</collision>
 	</npc>
 	<npc id="25346" level="80" type="Monster" name="Halisha's Shadow" title="Ruler of Sepulcher">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<minions name="Privates">
 				<npc id="25347" count="1" respawnTime="360" weightPoint="1" />
@@ -2038,6 +2131,19 @@
 			<radius normal="23" />
 			<height normal="60" />
 		</collision>
+		<dropLists>
+			<drop>
+				<item id="960" min="1" max="1" chance="10" /> <!-- Scroll: Enchant Armor (S-grade) -->
+				<item id="6691" min="3" max="9" chance="7.5" /> <!-- Angel Slayer Blade -->
+				<item id="6702" min="28" max="84" chance="5" /> <!-- Sealed Imperial Crusader Gaiter Pattern -->
+				<item id="959" min="1" max="1" chance="2.5" /> <!-- Scroll: Enchant Weapon (S-grade) -->
+				<item id="6674" min="1" max="1" chance="1.5" /> <!-- Sealed Imperial Crusader Breastplate -->
+				<item id="6675" min="1" max="1" chance="1.5" /> <!-- Sealed Imperial Crusader Gaiters -->
+				<item id="6701" min="60" max="180" chance="1.25" /> <!-- Sealed Imperial Crusader Breastplate Part -->
+				<item id="6577" min="1" max="1" chance="0.75187969924812" /> <!-- Blessed Scroll: Enchant Weapon (S-grade) -->
+				<item id="6367" min="1" max="1" chance="0.75187969924812" /> <!-- Angel Slayer -->
+			</drop>
+		</dropLists>
 	</npc>
 	<npc id="25347" level="80" type="Monster" name="Knight of Shadow">
 		<!-- Confirmed CT2.5 -->
@@ -2127,7 +2233,6 @@
 		</collision>
 	</npc>
 	<npc id="25349" level="80" type="Monster" name="Halisha's Shadow" title="Ruler of Sepulcher">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<minions name="Privates">
 				<npc id="25350" count="1" respawnTime="360" weightPoint="1" />
@@ -2180,6 +2285,16 @@
 			<radius normal="23" />
 			<height normal="60" />
 		</collision>
+		<dropLists>
+			<drop>
+				<item id="6678" min="1" max="1" chance="5" /> <!-- Sealed Imperial Crusader Shield -->
+				<item id="6687" min="1" max="1" chance="3" /> <!-- Sealed Major Arcana Circlet -->
+				<item id="6683" min="1" max="1" chance="3" /> <!-- Sealed Draconic Leather Helmet -->
+				<item id="6679" min="1" max="1" chance="3" /> <!-- Sealed Imperial Crusader Helmet -->
+				<item id="6578" min="1" max="1" chance="2" /> <!-- Blessed Scroll: Enchant Armor (S-grade) -->
+				<item id="6684" min="1" max="1" chance="1" /> <!-- Sealed Major Arcana Robe -->
+			</drop>
+		</dropLists>
 	</npc>
 	<npc id="25350" level="80" type="Monster" name="Knight of Shadow">
 		<!-- Confirmed CT2.5 -->
@@ -2268,7 +2383,6 @@
 		</collision>
 	</npc>
 	<npc id="25352" level="30" type="RaidBoss" name="Giant Wasteland Basilisk" title="Raid Boss">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<minions name="Privates">
 				<npc id="25353" count="3" respawnTime="360" weightPoint="1" />
@@ -2311,12 +2425,12 @@
 		<ai type="BALANCED" clanHelpRange="300" />
 		<dropLists>
 			<drop>
-				<item id="261" min="1" max="1" chance="12.11" /> <!-- Bich'Hwa -->
-				<item id="395" min="1" max="1" chance="4.99599999999998" /> <!-- Manticore Skin Shirt -->
-				<item id="417" min="1" max="1" chance="2.51000000000002" /> <!-- Manticore Skin Gaiters -->
-				<item id="4561" min="1" max="1" chance="18.2699999999999" /> <!-- Greater MEN Dye <Men + 1 Int - 1> -->
-				<item id="4560" min="1" max="1" chance="17.88" /> <!-- Greater INT Dye <Int + 1 Wit - 1> -->
-				<item id="4559" min="1" max="3" chance="8.81700000000012" /> <!-- Greater INT Dye <Int + 1 Men - 1> -->
+				<item id="4561" min="1" max="3" chance="15" /> <!-- Greater MEN Dye <Men + 1 Int - 1> -->
+				<item id="4559" min="1" max="3" chance="15" /> <!-- Greater INT Dye <Int + 1 Men - 1> -->
+				<item id="4560" min="1" max="3" chance="15" /> <!-- Greater INT Dye <Int + 1 Wit - 1> -->
+				<item id="261" min="1" max="1" chance="12.5" /> <!-- Bich'Hwa -->
+				<item id="395" min="1" max="1" chance="5" /> <!-- Manticore Skin Shirt -->
+				<item id="417" min="1" max="1" chance="2.5" /> <!-- Manticore Skin Gaiters -->
 			</drop>
 			<lucky>
 				<item id="39629" min="1" max="1" chance="49.52" /> <!-- Fortune Pocket - Stage 1 -->
@@ -2367,7 +2481,6 @@
 		</collision>
 	</npc>
 	<npc id="25354" level="35" type="RaidBoss" name="Gargoyle Lord Sirocco" title="Raid Boss">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<minions name="Privates">
 				<npc id="25355" count="4" respawnTime="360" weightPoint="1" />
@@ -2418,13 +2531,13 @@
 		<ai type="BALANCED" clanHelpRange="300" />
 		<dropLists>
 			<drop>
-				<item id="630" min="1" max="1" chance="11.5099999999999" /> <!-- Square Shield -->
-				<item id="2494" min="1" max="1" chance="5.58400000000006" /> <!-- Plate Shield -->
-				<item id="2387" min="1" max="1" chance="8.44800000000004" /> <!-- Reinforced Mithril Gaiters -->
-				<item id="397" min="1" max="1" chance="3.98499999999996" /> <!-- Reinforced Mithril Shirt -->
-				<item id="2412" min="1" max="1" chance="2.198" /> <!-- Plate Helmet -->
-				<item id="951" min="1" max="1" chance="13.49" /> <!-- Scroll: Enchant Weapon (C-grade) -->
-				<item id="6573" min="1" max="1" chance="0.750000000000004" /> <!-- Blessed Scroll: Enchant Weapon (C-grade) -->
+				<item id="630" min="1" max="1" chance="12.5" /> <!-- Square Shield -->
+				<item id="951" min="1" max="1" chance="12.5" /> <!-- Scroll: Enchant Weapon (C-grade) -->
+				<item id="2387" min="1" max="1" chance="10" /> <!-- Reinforced Mithril Gaiters -->
+				<item id="2494" min="1" max="1" chance="5" /> <!-- Plate Shield -->
+				<item id="397" min="1" max="1" chance="5" /> <!-- Reinforced Mithril Shirt -->
+				<item id="2412" min="1" max="1" chance="2.5" /> <!-- Plate Helmet -->
+				<item id="6573" min="1" max="1" chance="0.75187969924812" /> <!-- Blessed Scroll: Enchant Weapon (C-grade) -->
 			</drop>
 			<lucky>
 				<item id="39629" min="1" max="1" chance="51.21" /> <!-- Fortune Pocket - Stage 1 -->
@@ -2516,7 +2629,6 @@
 		</collision>
 	</npc>
 	<npc id="25357" level="21" type="RaidBoss" name="Sukar Ratman Chief" title="Raid Boss">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<minions name="Privates">
 				<npc id="25358" count="2" respawnTime="360" weightPoint="1" />
@@ -2561,12 +2673,12 @@
 		<ai type="BALANCED" clanHelpRange="300" />
 		<dropLists>
 			<drop>
-				<item id="222" min="1" max="1" chance="2.475" /> <!-- Poniard Dagger -->
-				<item id="605" min="1" max="1" chance="8.06100000000002" /> <!-- Leather Gauntlets -->
-				<item id="1123" min="1" max="1" chance="3.76199999999998" /> <!-- Blue Buckskin Boots -->
-				<item id="6387" min="4" max="12" chance="17.1199999999998" /> <!-- Blessed Scroll of Resurrection (Pet) -->
-				<item id="955" min="1" max="1" chance="13.75" /> <!-- Scroll: Enchant Weapon (D-grade) -->
-				<item id="956" min="7" max="21" chance="7.47700000000016" /> <!-- Scroll: Enchant Armor (D-grade) -->
+				<item id="6387" min="4" max="12" chance="15" /> <!-- Blessed Scroll of Resurrection (Pet) -->
+				<item id="955" min="1" max="1" chance="15" /> <!-- Scroll: Enchant Weapon (D-grade) -->
+				<item id="605" min="1" max="1" chance="7.5" /> <!-- Leather Gauntlets -->
+				<item id="956" min="7" max="21" chance="7.5" /> <!-- Scroll: Enchant Armor (D-grade) -->
+				<item id="1123" min="1" max="1" chance="5" /> <!-- Blue Buckskin Boots -->
+				<item id="222" min="1" max="1" chance="2.5" /> <!-- Poniard Dagger -->
 			</drop>
 			<lucky>
 				<item id="39629" min="1" max="1" chance="40.5" /> <!-- Fortune Pocket - Stage 1 -->
@@ -2660,7 +2772,6 @@
 		</collision>
 	</npc>
 	<npc id="25360" level="26" type="RaidBoss" name="Tiger Hornet" title="Raid Boss">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<minions name="Privates">
 				<npc id="25361" count="3" respawnTime="360" weightPoint="1" />
@@ -2703,17 +2814,17 @@
 		<ai type="BALANCED" clanHelpRange="300" />
 		<dropLists>
 			<drop>
-				<item id="316" min="1" max="1" chance="4.78999999999997" /> <!-- Sage's Blood -->
-				<item id="317" min="1" max="1" chance="4.74700000000004" /> <!-- Tome of Blood -->
-				<item id="351" min="1" max="1" chance="22.7100000000001" /> <!-- Breastplate -->
-				<item id="59" min="1" max="1" chance="8.96800000000011" /> <!-- Mithril Gaiters -->
-				<item id="378" min="1" max="1" chance="7.24100000000012" /> <!-- Compound Scale Gaiters -->
-				<item id="379" min="1" max="1" chance="5.98700000000007" /> <!-- Dwarven Scale Gaiters -->
-				<item id="58" min="1" max="1" chance="3.15899999999999" /> <!-- Mithril Breastplate -->
-				<item id="350" min="1" max="1" chance="23.73" /> <!-- Dwarven Scale Mail -->
-				<item id="349" min="1" max="1" chance="2.72299999999998" /> <!-- Compound Scale Mail -->
-				<item id="6576" min="1" max="1" chance="20.7999999999999" /> <!-- Blessed Scroll: Enchant Armor (D-grade) -->
-				<item id="2030" min="21" max="63" chance="4.87800000000006" /> <!-- Tome of Blood Page -->
+				<item id="6576" min="1" max="1" chance="20" /> <!-- Blessed Scroll: Enchant Armor (D-grade) -->
+				<item id="351" min="1" max="1" chance="15" /> <!-- Breastplate -->
+				<item id="349" min="1" max="1" chance="15" /> <!-- Compound Scale Mail -->
+				<item id="378" min="1" max="1" chance="15" /> <!-- Compound Scale Gaiters -->
+				<item id="350" min="1" max="1" chance="15" /> <!-- Dwarven Scale Mail -->
+				<item id="379" min="1" max="1" chance="15" /> <!-- Dwarven Scale Gaiters -->
+				<item id="58" min="1" max="1" chance="7.5" /> <!-- Mithril Breastplate -->
+				<item id="59" min="1" max="1" chance="7.5" /> <!-- Mithril Gaiters -->
+				<item id="317" min="1" max="1" chance="5" /> <!-- Tome of Blood -->
+				<item id="316" min="1" max="1" chance="5" /> <!-- Sage's Blood -->
+				<item id="2030" min="21" max="63" chance="5" /> <!-- Tome of Blood Page -->
 			</drop>
 			<lucky>
 				<item id="39629" min="1" max="1" chance="41.13" /> <!-- Fortune Pocket - Stage 1 -->
@@ -2764,7 +2875,6 @@
 		</collision>
 	</npc>
 	<npc id="25362" level="23" type="RaidBoss" name="Tracker Captain Sharuk" title="Raid Boss">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<minions name="Privates">
 				<npc id="25363" count="2" respawnTime="360" weightPoint="1" />
@@ -2809,21 +2919,21 @@
 		<ai type="BALANCED" clanHelpRange="300" />
 		<dropLists>
 			<drop>
-				<item id="179" min="1" max="1" chance="4.63099999999989" /> <!-- Mace of Prayer -->
-				<item id="181" min="1" max="1" chance="4.62099999999984" /> <!-- Mace of Miracle -->
-				<item id="180" min="1" max="1" chance="4.57600000000018" /> <!-- Mace of Judgment -->
-				<item id="184" min="1" max="1" chance="4.56799999999985" /> <!-- Conjuror's Staff -->
-				<item id="183" min="1" max="1" chance="4.54099999999983" /> <!-- Mystic Staff -->
-				<item id="86" min="1" max="1" chance="4.53299999999987" /> <!-- Tomahawk -->
-				<item id="182" min="1" max="1" chance="4.53100000000015" /> <!-- Doom Hammer -->
-				<item id="185" min="1" max="1" chance="4.52800000000003" /> <!-- Staff of Mana -->
-				<item id="468" min="1" max="1" chance="11.93" /> <!-- Wizard Stockings -->
-				<item id="433" min="1" max="1" chance="5.97199999999999" /> <!-- Elven Tunic -->
-				<item id="434" min="1" max="1" chance="4.96000000000005" /> <!-- White Tunic -->
-				<item id="435" min="1" max="1" chance="4.17" /> <!-- Wizard Tunic -->
-				<item id="466" min="1" max="1" chance="2.957" /> <!-- Elven Stockings -->
-				<item id="467" min="1" max="1" chance="1.726" /> <!-- Dark Stockings -->
-				<item id="955" min="1" max="1" chance="43.67" /> <!-- Scroll: Enchant Weapon (D-grade) -->
+				<item id="955" min="1" max="1" chance="40" /> <!-- Scroll: Enchant Weapon (D-grade) -->
+				<item id="434" min="1" max="1" chance="10" /> <!-- White Tunic -->
+				<item id="467" min="1" max="1" chance="10" /> <!-- Dark Stockings -->
+				<item id="435" min="1" max="1" chance="10" /> <!-- Wizard Tunic -->
+				<item id="433" min="1" max="1" chance="10" /> <!-- Elven Tunic -->
+				<item id="468" min="1" max="1" chance="10" /> <!-- Wizard Stockings -->
+				<item id="466" min="1" max="1" chance="10" /> <!-- Elven Stockings -->
+				<item id="181" min="1" max="1" chance="5" /> <!-- Mace of Miracle -->
+				<item id="179" min="1" max="1" chance="5" /> <!-- Mace of Prayer -->
+				<item id="180" min="1" max="1" chance="5" /> <!-- Mace of Judgment -->
+				<item id="182" min="1" max="1" chance="5" /> <!-- Doom Hammer -->
+				<item id="184" min="1" max="1" chance="5" /> <!-- Conjuror's Staff -->
+				<item id="185" min="1" max="1" chance="5" /> <!-- Staff of Mana -->
+				<item id="183" min="1" max="1" chance="5" /> <!-- Mystic Staff -->
+				<item id="86" min="1" max="1" chance="5" /> <!-- Tomahawk -->
 			</drop>
 			<lucky>
 				<item id="39629" min="1" max="1" chance="38.07" /> <!-- Fortune Pocket - Stage 1 -->
@@ -2907,7 +3017,6 @@
 		</collision>
 	</npc>
 	<npc id="25365" level="26" type="RaidBoss" name="Patriarch Kuroboros" title="Raid Boss">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="RaidSpawnMusic" value="Rm01_A" />
 			<skill name="SelfRangeCancel_a" id="4177" level="2" />
@@ -2954,11 +3063,11 @@
 		<ai type="BALANCED" clanHelpRange="300" />
 		<dropLists>
 			<drop>
-				<item id="293" min="1" max="1" chance="1.715" /> <!-- War Hammer -->
-				<item id="296" min="1" max="1" chance="1.467" /> <!-- Dwarven Pike -->
-				<item id="436" min="1" max="1" chance="4.88699999999997" /> <!-- Tunic of Knowledge -->
-				<item id="469" min="1" max="1" chance="2.46400000000003" /> <!-- Stockings of Knowledge -->
-				<item id="6387" min="12" max="36" chance="19.16" /> <!-- Blessed Scroll of Resurrection (Pet) -->
+				<item id="6387" min="16" max="32" chance="20" /> <!-- Blessed Scroll of Resurrection (Pet) -->
+				<item id="436" min="1" max="1" chance="5" /> <!-- Tunic of Knowledge -->
+				<item id="469" min="1" max="1" chance="2.5" /> <!-- Stockings of Knowledge -->
+				<item id="296" min="1" max="1" chance="1.75" /> <!-- Dwarven Pike -->
+				<item id="293" min="1" max="1" chance="1.75" /> <!-- War Hammer -->
 			</drop>
 			<lucky>
 				<item id="39629" min="1" max="1" chance="41.2" /> <!-- Fortune Pocket - Stage 1 -->
@@ -2970,7 +3079,6 @@
 		</collision>
 	</npc>
 	<npc id="25366" level="23" type="RaidBoss" name="Kuroboros' Priest" title="Raid Boss">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<minions name="Privates">
 				<npc id="25367" count="2" respawnTime="360" weightPoint="1" />
@@ -3015,12 +3123,12 @@
 		<ai type="BALANCED" clanHelpRange="300" />
 		<dropLists>
 			<drop>
-				<item id="259" min="1" max="1" chance="1.725" /> <!-- Single-Edged Jamadhr -->
-				<item id="848" min="1" max="1" chance="13.2199999999999" /> <!-- Earring of Magic -->
-				<item id="879" min="1" max="1" chance="6.52400000000007" /> <!-- Ring of Magic -->
-				<item id="911" min="1" max="1" chance="4.55299999999998" /> <!-- Magic Necklace -->
-				<item id="6576" min="1" max="1" chance="10.2400000000001" /> <!-- Blessed Scroll: Enchant Armor (D-grade) -->
-				<item id="6575" min="1" max="1" chance="1.19999999999994" /> <!-- Blessed Scroll: Enchant Weapon (D-grade) -->
+				<item id="848" min="1" max="1" chance="12.5" /> <!-- Earring of Magic -->
+				<item id="6576" min="1" max="1" chance="10" /> <!-- Blessed Scroll: Enchant Armor (D-grade) -->
+				<item id="879" min="1" max="1" chance="7.5" /> <!-- Ring of Magic -->
+				<item id="911" min="1" max="1" chance="5" /> <!-- Magic Necklace -->
+				<item id="259" min="1" max="1" chance="1.75" /> <!-- Single-Edged Jamadhr -->
+				<item id="6575" min="1" max="1" chance="1.25" /> <!-- Blessed Scroll: Enchant Weapon (D-grade) -->
 			</drop>
 			<lucky>
 				<item id="39629" min="1" max="1" chance="41.6" /> <!-- Fortune Pocket - Stage 1 -->
@@ -3114,7 +3222,6 @@
 		</collision>
 	</npc>
 	<npc id="25369" level="25" type="RaidBoss" name="Soul Scavenger" title="Raid Boss">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<minions name="Privates">
 				<npc id="25370" count="1" respawnTime="360" weightPoint="1" />
@@ -3166,14 +3273,14 @@
 		<ai type="BALANCED" clanHelpRange="300" />
 		<dropLists>
 			<drop>
-				<item id="260" min="1" max="1" chance="6.449" /> <!-- Triple-Edged Jamadhr -->
-				<item id="2422" min="1" max="1" chance="28.783070843148" /> <!-- Reinforced Leather Boots -->
-				<item id="2423" min="1" max="1" chance="24.130278194171" /> <!-- Boots of Knowledge -->
-				<item id="2446" min="1" max="1" chance="19.136799890981" /> <!-- Reinforced Leather Gloves -->
-				<item id="2447" min="1" max="1" chance="16.158233885569" /> <!-- Gloves of Knowledge -->
-				<item id="63" min="1" max="1" chance="7.4074795101914" /> <!-- Gauntlets -->
-				<item id="553" min="1" max="1" chance="4.3841376759398" /> <!-- Iron Boots -->
-				<item id="955" min="1" max="1" chance="44.75" /> <!-- Scroll: Enchant Weapon (D-grade) -->
+				<item id="955" min="1" max="1" chance="40" /> <!-- Scroll: Enchant Weapon (D-grade) -->
+				<item id="2447" min="1" max="1" chance="20" /> <!-- Gloves of Knowledge -->
+				<item id="2423" min="1" max="1" chance="20" /> <!-- Boots of Knowledge -->
+				<item id="2446" min="1" max="1" chance="20" /> <!-- Reinforced Leather Gloves -->
+				<item id="2422" min="1" max="1" chance="20" /> <!-- Reinforced Leather Boots -->
+				<item id="553" min="1" max="1" chance="7.5" /> <!-- Iron Boots -->
+				<item id="63" min="1" max="1" chance="7.5" /> <!-- Gauntlets -->
+				<item id="260" min="1" max="1" chance="5" /> <!-- Triple-Edged Jamadhr -->
 			</drop>
 			<lucky>
 				<item id="39629" min="1" max="1" chance="40.16" /> <!-- Fortune Pocket - Stage 1 -->
@@ -3269,7 +3376,6 @@
 		</collision>
 	</npc>
 	<npc id="25372" level="20" type="RaidBoss" name="Discarded Guardian" title="Raid Boss">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="RaidSpawnMusic" value="Rm01_A" />
 			<skill name="SelfRangeCancel_a" id="4177" level="2" />
@@ -3320,9 +3426,21 @@
 			<radius normal="20" />
 			<height normal="40.3" />
 		</collision>
+		<dropLists>
+			<drop>
+				<item id="2017" min="9" max="27" chance="20" /> <!-- Saber Blade -->
+				<item id="413" min="1" max="1" chance="15" /> <!-- Puma Skin Gaiters -->
+				<item id="391" min="1" max="1" chance="15" /> <!-- Puma Skin Shirt -->
+				<item id="123" min="1" max="1" chance="15" /> <!-- Saber -->
+				<item id="6387" min="4" max="12" chance="15" /> <!-- Blessed Scroll of Resurrection (Pet) -->
+				<item id="955" min="1" max="1" chance="15" /> <!-- Scroll: Enchant Weapon (D-grade) -->
+				<item id="5285" min="1" max="1" chance="15" /> <!-- Heavy Sword -->
+				<item id="5531" min="32" max="96" chance="10" /> <!-- Heavy Sword Edge -->
+				<item id="956" min="7" max="21" chance="7.5" /> <!-- Scroll: Enchant Armor (D-grade) -->
+			</drop>
+		</dropLists>
 	</npc>
 	<npc id="25373" level="21" type="RaidBoss" name="Dagoniel's Herald Malex" title="Raid Boss">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<minions name="Privates">
 				<npc id="25374" count="3" respawnTime="360" weightPoint="1" />
@@ -3367,12 +3485,12 @@
 		<ai type="BALANCED" clanHelpRange="300" />
 		<dropLists>
 			<drop>
-				<item id="315" min="1" max="1" chance="13.7399999999999" /> <!-- Divine Tome -->
-				<item id="627" min="1" max="1" chance="3.98200000000008" /> <!-- Aspis -->
-				<item id="46" min="1" max="1" chance="10.29" /> <!-- Bronze Helmet -->
-				<item id="6387" min="3" max="9" chance="21.1099999999999" /> <!-- Blessed Scroll of Resurrection (Pet) -->
-				<item id="6576" min="1" max="1" chance="6.31799999999988" /> <!-- Blessed Scroll: Enchant Armor (D-grade) -->
-				<item id="6575" min="1" max="1" chance="0.750000000000011" /> <!-- Blessed Scroll: Enchant Weapon (D-grade) -->
+				<item id="6387" min="3" max="9" chance="20" /> <!-- Blessed Scroll of Resurrection (Pet) -->
+				<item id="627" min="1" max="1" chance="15" /> <!-- Aspis -->
+				<item id="315" min="1" max="1" chance="15" /> <!-- Divine Tome -->
+				<item id="46" min="1" max="1" chance="15" /> <!-- Bronze Helmet -->
+				<item id="6576" min="1" max="1" chance="7.5" /> <!-- Blessed Scroll: Enchant Armor (D-grade) -->
+				<item id="6575" min="1" max="1" chance="0.75187969924812" /> <!-- Blessed Scroll: Enchant Weapon (D-grade) -->
 			</drop>
 			<lucky>
 				<item id="39629" min="1" max="1" chance="40.84" /> <!-- Fortune Pocket - Stage 1 -->
@@ -3423,7 +3541,6 @@
 		</collision>
 	</npc>
 	<npc id="25375" level="20" type="RaidBoss" name="Zombie Lord Ferkel" title="Raid Boss">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<minions name="Privates">
 				<npc id="25376" count="2" respawnTime="360" weightPoint="1" />
@@ -3471,14 +3588,14 @@
 		<ai type="BALANCED" clanHelpRange="300" />
 		<dropLists>
 			<drop>
-				<item id="156" min="1" max="1" chance="3.19899999999999" /> <!-- Hand Axe -->
-				<item id="167" min="1" max="1" chance="2.75099999999997" /> <!-- Scalpel -->
-				<item id="178" min="1" max="1" chance="2.47099999999996" /> <!-- Bone Staff -->
-				<item id="376" min="1" max="1" chance="2.182" /> <!-- Iron Plate Gaiters -->
-				<item id="347" min="1" max="1" chance="6.467" /> <!-- Ring Breastplate -->
-				<item id="955" min="1" max="1" chance="13.9600000000001" /> <!-- Scroll: Enchant Weapon (D-grade) -->
-				<item id="6576" min="1" max="1" chance="6.97399999999993" /> <!-- Blessed Scroll: Enchant Armor (D-grade) -->
-				<item id="6575" min="1" max="1" chance="0.75000000000001" /> <!-- Blessed Scroll: Enchant Weapon (D-grade) -->
+				<item id="955" min="1" max="1" chance="15" /> <!-- Scroll: Enchant Weapon (D-grade) -->
+				<item id="376" min="1" max="1" chance="9" /> <!-- Iron Plate Gaiters -->
+				<item id="347" min="1" max="1" chance="9" /> <!-- Ring Breastplate -->
+				<item id="6576" min="1" max="1" chance="7.5" /> <!-- Blessed Scroll: Enchant Armor (D-grade) -->
+				<item id="167" min="1" max="1" chance="3" /> <!-- Scalpel -->
+				<item id="178" min="1" max="1" chance="3" /> <!-- Bone Staff -->
+				<item id="156" min="1" max="1" chance="3" /> <!-- Hand Axe -->
+				<item id="6575" min="1" max="1" chance="0.75187969924812" /> <!-- Blessed Scroll: Enchant Weapon (D-grade) -->
 			</drop>
 			<lucky>
 				<item id="39629" min="1" max="1" chance="38.7" /> <!-- Fortune Pocket - Stage 1 -->
@@ -3578,7 +3695,6 @@
 		</collision>
 	</npc>
 	<npc id="25378" level="20" type="RaidBoss" name="Madness Beast" title="Raid Boss">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<minions name="Privates">
 				<npc id="25379" count="3" respawnTime="360" weightPoint="1" />
@@ -3621,12 +3737,12 @@
 		<ai type="BALANCED" clanHelpRange="300" />
 		<dropLists>
 			<drop>
-				<item id="258" min="1" max="1" chance="4.67" /> <!-- Bagh-Nakh -->
-				<item id="465" min="1" max="1" chance="7.08499999999997" /> <!-- Cursed Stockings -->
-				<item id="432" min="1" max="1" chance="1.70800000000003" /> <!-- Cursed Tunic -->
-				<item id="6387" min="4" max="12" chance="16.8999999999999" /> <!-- Blessed Scroll of Resurrection (Pet) -->
-				<item id="955" min="1" max="1" chance="13.96" /> <!-- Scroll: Enchant Weapon (D-grade) -->
-				<item id="956" min="7" max="21" chance="7.61000000000009" /> <!-- Scroll: Enchant Armor (D-grade) -->
+				<item id="6387" min="3" max="9" chance="15" /> <!-- Blessed Scroll of Resurrection (Pet) -->
+				<item id="955" min="1" max="1" chance="15" /> <!-- Scroll: Enchant Weapon (D-grade) -->
+				<item id="432" min="1" max="1" chance="9" /> <!-- Cursed Tunic -->
+				<item id="465" min="1" max="1" chance="9" /> <!-- Cursed Stockings -->
+				<item id="956" min="7" max="21" chance="7.5" /> <!-- Scroll: Enchant Armor (D-grade) -->
+				<item id="258" min="1" max="1" chance="3" /> <!-- Bagh-Nakh -->
 			</drop>
 			<lucky>
 				<item id="39629" min="1" max="1" chance="39.46" /> <!-- Fortune Pocket - Stage 1 -->
@@ -3677,7 +3793,6 @@
 		</collision>
 	</npc>
 	<npc id="25380" level="21" type="RaidBoss" name="Icarus' Herald Kaysha" title="Raid Boss">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<minions name="Privates">
 				<npc id="25381" count="1" respawnTime="360" weightPoint="1" />
@@ -3727,12 +3842,12 @@
 		<ai type="BALANCED" clanHelpRange="300" />
 		<dropLists>
 			<drop>
-				<item id="292" min="1" max="1" chance="2.851" /> <!-- Pike -->
-				<item id="392" min="1" max="1" chance="8.63299999999996" /> <!-- Lion Skin Shirt -->
-				<item id="414" min="1" max="1" chance="4.37600000000004" /> <!-- Lion Skin Gaiters -->
-				<item id="6387" min="4" max="12" chance="16.5000000000001" /> <!-- Blessed Scroll of Resurrection (Pet) -->
-				<item id="955" min="1" max="1" chance="13.1000000000001" /> <!-- Scroll: Enchant Weapon (D-grade) -->
-				<item id="956" min="7" max="21" chance="7.39700000000017" /> <!-- Scroll: Enchant Armor (D-grade) -->
+				<item id="6387" min="4" max="12" chance="15" /> <!-- Blessed Scroll of Resurrection (Pet) -->
+				<item id="955" min="1" max="1" chance="15" /> <!-- Scroll: Enchant Weapon (D-grade) -->
+				<item id="414" min="1" max="1" chance="9" /> <!-- Lion Skin Gaiters -->
+				<item id="392" min="1" max="1" chance="9" /> <!-- Lion Skin Shirt -->
+				<item id="956" min="7" max="21" chance="7.5" /> <!-- Scroll: Enchant Armor (D-grade) -->
+				<item id="292" min="1" max="1" chance="3" /> <!-- Pike -->
 			</drop>
 			<lucky>
 				<item id="39629" min="1" max="1" chance="38.46" /> <!-- Fortune Pocket - Stage 1 -->
@@ -3818,7 +3933,6 @@
 		</collision>
 	</npc>
 	<npc id="25383" level="34" type="RaidBoss" name="Revenant of Sir Calibus" title="Raid Boss">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<minions name="Privates">
 				<npc id="25384" count="3" respawnTime="360" weightPoint="1" />
@@ -3868,6 +3982,15 @@
 			<radius normal="24" />
 			<height normal="29" />
 		</collision>
+		<dropLists>
+			<drop>
+				<item id="225" min="1" max="1" chance="7.5" /> <!-- Mithril Dagger -->
+				<item id="851" min="1" max="1" chance="7.5" /> <!-- Onyx Beast's Eye Earring -->
+				<item id="882" min="1" max="1" chance="4" /> <!-- Mithril Ring -->
+				<item id="914" min="1" max="1" chance="2.5" /> <!-- Dark Necklace -->
+				<item id="6573" min="1" max="1" chance="0.75187969924812" /> <!-- Blessed Scroll: Enchant Weapon (C-grade) -->
+			</drop>
+		</dropLists>
 	</npc>
 	<npc id="25384" level="33" type="Monster" name="Servant of Calibus" title="Raid Fighter">
 		<!-- Confirmed CT2.5 -->
@@ -3914,7 +4037,6 @@
 		</collision>
 	</npc>
 	<npc id="25385" level="36" type="RaidBoss" name="Evil Spirit Tempest" title="Raid Boss">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<minions name="Privates">
 				<npc id="25386" count="1" respawnTime="360" weightPoint="1" />
@@ -3964,14 +4086,14 @@
 		<ai type="BALANCED" clanHelpRange="300" />
 		<dropLists>
 			<drop>
-				<item id="280" min="1" max="1" chance="4.923" /> <!-- Light Crossbow -->
-				<item id="1125" min="1" max="1" chance="22.9" /> <!-- Assault Boots -->
-				<item id="2427" min="1" max="1" chance="18.0599999999997" /> <!-- Salamander Skin Boots -->
-				<item id="2428" min="1" max="1" chance="15.9300000000003" /> <!-- Plate Boots -->
-				<item id="2451" min="1" max="1" chance="12.6599999999997" /> <!-- Sage's Worn Gloves -->
-				<item id="61" min="1" max="1" chance="5.69599999999997" /> <!-- Mithril Gloves -->
-				<item id="607" min="1" max="1" chance="3.40599999999997" /> <!-- Ogre Power Gauntlets -->
-				<item id="6574" min="1" max="1" chance="9.21" /> <!-- Blessed Scroll: Enchant Armor (C-grade) -->
+				<item id="2428" min="1" max="1" chance="15" /> <!-- Plate Boots -->
+				<item id="61" min="1" max="1" chance="15" /> <!-- Mithril Gloves -->
+				<item id="2451" min="1" max="1" chance="15" /> <!-- Sage's Worn Gloves -->
+				<item id="607" min="1" max="1" chance="15" /> <!-- Ogre Power Gauntlets -->
+				<item id="2427" min="1" max="1" chance="15" /> <!-- Salamander Skin Boots -->
+				<item id="1125" min="1" max="1" chance="15" /> <!-- Assault Boots -->
+				<item id="6574" min="1" max="1" chance="10" /> <!-- Blessed Scroll: Enchant Armor (C-grade) -->
+				<item id="280" min="1" max="1" chance="5" /> <!-- Light Crossbow -->
 			</drop>
 			<lucky>
 				<item id="39629" min="1" max="1" chance="49.69" /> <!-- Fortune Pocket - Stage 1 -->
@@ -4067,7 +4189,6 @@
 		</collision>
 	</npc>
 	<npc id="25388" level="35" type="RaidBoss" name="Red Eye Captain Trakia" title="Raid Boss">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<minions name="Privates">
 				<npc id="25389" count="3" respawnTime="360" weightPoint="1" />
@@ -4112,11 +4233,11 @@
 		<ai type="BALANCED" clanHelpRange="300" />
 		<dropLists>
 			<drop>
-				<item id="297" min="1" max="1" chance="8.31900000000002" /> <!-- Glaive -->
-				<item id="2055" min="108" max="324" chance="2.15799999999998" /> <!-- Glaive Edge -->
-				<item id="396" min="1" max="1" chance="3.936" /> <!-- Salamander Skin Mail -->
-				<item id="6574" min="1" max="1" chance="8.82499999999994" /> <!-- Blessed Scroll: Enchant Armor (C-grade) -->
-				<item id="1952" min="105" max="315" chance="8.81000000000007" /> <!-- Salamander Skin Mail Texture -->
+				<item id="6574" min="1" max="1" chance="10" /> <!-- Blessed Scroll: Enchant Armor (C-grade) -->
+				<item id="297" min="1" max="1" chance="10" /> <!-- Glaive -->
+				<item id="2055" min="108" max="324" chance="10" /> <!-- Glaive Edge -->
+				<item id="1952" min="105" max="315" chance="10" /> <!-- Salamander Skin Mail Texture -->
+				<item id="396" min="1" max="1" chance="10" /> <!-- Salamander Skin Mail -->
 			</drop>
 			<lucky>
 				<item id="39629" min="1" max="1" chance="51.2" /> <!-- Fortune Pocket - Stage 1 -->
@@ -4200,7 +4321,6 @@
 		</collision>
 	</npc>
 	<npc id="25391" level="33" type="RaidBoss" name="Nurka's Messenger" title="Raid Boss">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="RaidSpawnMusic" value="Rm01_A" />
 			<skill name="SelfRangeCancel_a" id="4177" level="3" />
@@ -4247,14 +4367,14 @@
 		<ai type="BALANCED" clanHelpRange="300" />
 		<dropLists>
 			<drop>
-				<item id="297" min="1" max="1" chance="4.306" /> <!-- Glaive -->
-				<item id="1125" min="1" max="1" chance="19.3000000000001" /> <!-- Assault Boots -->
-				<item id="2427" min="1" max="1" chance="16.2499999999999" /> <!-- Salamander Skin Boots -->
-				<item id="2428" min="1" max="1" chance="12.7500000000003" /> <!-- Plate Boots -->
-				<item id="2451" min="1" max="1" chance="11.1899999999997" /> <!-- Sage's Worn Gloves -->
-				<item id="61" min="1" max="1" chance="5.07299999999999" /> <!-- Mithril Gloves -->
-				<item id="607" min="1" max="1" chance="2.98400000000001" /> <!-- Ogre Power Gauntlets -->
-				<item id="6574" min="1" max="1" chance="8.056" /> <!-- Blessed Scroll: Enchant Armor (C-grade) -->
+				<item id="2428" min="1" max="1" chance="15" /> <!-- Plate Boots -->
+				<item id="61" min="1" max="1" chance="15" /> <!-- Mithril Gloves -->
+				<item id="2451" min="1" max="1" chance="15" /> <!-- Sage's Worn Gloves -->
+				<item id="607" min="1" max="1" chance="15" /> <!-- Ogre Power Gauntlets -->
+				<item id="2427" min="1" max="1" chance="15" /> <!-- Salamander Skin Boots -->
+				<item id="1125" min="1" max="1" chance="15" /> <!-- Assault Boots -->
+				<item id="6574" min="1" max="1" chance="10" /> <!-- Blessed Scroll: Enchant Armor (C-grade) -->
+				<item id="297" min="1" max="1" chance="5" /> <!-- Glaive -->
 			</drop>
 			<lucky>
 				<item id="39629" min="1" max="1" chance="49.23" /> <!-- Fortune Pocket - Stage 1 -->
@@ -4266,7 +4386,6 @@
 		</collision>
 	</npc>
 	<npc id="25392" level="32" type="RaidBoss" name="Queen's Royal Guard Captain" title="Raid Boss">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<minions name="Privates">
 				<npc id="25393" count="3" respawnTime="360" weightPoint="1" />
@@ -4310,14 +4429,14 @@
 		<ai type="BALANCED" clanHelpRange="300" />
 		<dropLists>
 			<drop>
-				<item id="279" min="1" max="1" chance="1.111" /> <!-- Reinforced Longbow -->
-				<item id="2377" min="1" max="1" chance="7.03200000000002" /> <!-- Mithril Scale Gaiters -->
-				<item id="2378" min="1" max="1" chance="3.92799999999998" /> <!-- Brigandine Gaiters -->
-				<item id="352" min="1" max="1" chance="1.568" /> <!-- Brigandine -->
-				<item id="4564" min="1" max="1" chance="14.1200000000002" /> <!-- Greater WIT Dye <Wit + 1 Men - 1> -->
-				<item id="955" min="1" max="1" chance="13.3599999999999" /> <!-- Scroll: Enchant Weapon (D-grade) -->
-				<item id="4563" min="1" max="1" chance="12.9100000000001" /> <!-- Greater WIT Dye <Wit + 1 Int - 1> -->
-				<item id="4562" min="1" max="3" chance="6.80799999999982" /> <!-- Greater MEN Dye <Men + 1 Wit - 1> -->
+				<item id="955" min="1" max="1" chance="15" /> <!-- Scroll: Enchant Weapon (D-grade) -->
+				<item id="4562" min="1" max="3" chance="15" /> <!-- Greater MEN Dye <Men + 1 Wit - 1> -->
+				<item id="4564" min="1" max="3" chance="15" /> <!-- Greater WIT Dye <Wit + 1 Men - 1> -->
+				<item id="4563" min="1" max="3" chance="15" /> <!-- Greater WIT Dye <Wit + 1 Int - 1> -->
+				<item id="2377" min="1" max="1" chance="5" /> <!-- Mithril Scale Gaiters -->
+				<item id="352" min="1" max="1" chance="5" /> <!-- Brigandine -->
+				<item id="2378" min="1" max="1" chance="5" /> <!-- Brigandine Gaiters -->
+				<item id="279" min="1" max="1" chance="2.5" /> <!-- Reinforced Longbow -->
 			</drop>
 			<lucky>
 				<item id="39629" min="1" max="1" chance="50.16" /> <!-- Fortune Pocket - Stage 1 -->
@@ -4369,7 +4488,6 @@
 		</collision>
 	</npc>
 	<npc id="25394" level="38" type="RaidBoss" name="Premo Prime" title="Raid Boss">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="RaidSpawnMusic" value="Rm01_A" />
 			<skill name="SelfRangeCancel_a" id="4177" level="3" />
@@ -4419,12 +4537,12 @@
 		<ai type="BALANCED" clanHelpRange="300" />
 		<dropLists>
 			<drop>
-				<item id="298" min="1" max="1" chance="5.65199999999996" /> <!-- Orcish Glaive -->
-				<item id="302" min="1" max="1" chance="5.51600000000005" /> <!-- Body Slasher -->
-				<item id="96" min="1" max="1" chance="0.750000000000001" /> <!-- Scythe -->
-				<item id="381" min="1" max="1" chance="5.05900000000001" /> <!-- Chain Gaiters -->
-				<item id="354" min="1" max="1" chance="1.63899999999999" /> <!-- Chain Mail Shirt -->
-				<item id="6573" min="1" max="1" chance="1.088" /> <!-- Blessed Scroll: Enchant Weapon (C-grade) -->
+				<item id="354" min="1" max="1" chance="10" /> <!-- Chain Mail Shirt -->
+				<item id="381" min="1" max="1" chance="10" /> <!-- Chain Gaiters -->
+				<item id="96" min="1" max="1" chance="5" /> <!-- Scythe -->
+				<item id="298" min="1" max="1" chance="5" /> <!-- Orcish Glaive -->
+				<item id="302" min="1" max="1" chance="5" /> <!-- Body Slasher -->
+				<item id="6573" min="1" max="1" chance="2" /> <!-- Blessed Scroll: Enchant Weapon (C-grade) -->
 			</drop>
 			<lucky>
 				<item id="39629" min="1" max="1" chance="49.1" /> <!-- Fortune Pocket - Stage 1 -->
@@ -4436,7 +4554,6 @@
 		</collision>
 	</npc>
 	<npc id="25395" level="45" type="RaidBoss" name="Archon Susceptor" title="Raid Boss">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<minions name="Privates">
 				<npc id="25396" count="1" respawnTime="360" weightPoint="1" />
@@ -4480,23 +4597,23 @@
 		<ai type="BALANCED" clanHelpRange="300" />
 		<dropLists>
 			<drop>
-				<item id="103" min="1" max="1" chance="2.21600000000006" /> <!-- Tower Shield -->
-				<item id="202" min="1" max="1" chance="1.609" /> <!-- Mace of Underworld -->
-				<item id="196" min="1" max="1" chance="1.59199999999996" /> <!-- Stick of Eternity -->
-				<item id="197" min="1" max="1" chance="1.578" /> <!-- Paradia Staff -->
-				<item id="199" min="1" max="1" chance="1.565" /> <!-- Pa'agrio Hammer -->
-				<item id="201" min="1" max="1" chance="1.564" /> <!-- Club of Nature -->
-				<item id="200" min="1" max="1" chance="1.538" /> <!-- Sage's Staff -->
-				<item id="174" min="1" max="1" chance="1.50200000000001" /> <!-- Nirvana Axe -->
-				<item id="162" min="1" max="1" chance="1.49799999999999" /> <!-- War Axe -->
-				<item id="107" min="1" max="1" chance="1.21499999999999" /> <!-- Compound Shield -->
-				<item id="517" min="1" max="1" chance="0.749999999999996" /> <!-- Compound Helmet -->
-				<item id="1149" min="1" max="1" chance="0.300000000000004" /> <!-- Shining Circlet -->
-				<item id="9817" min="1" max="3" chance="38.13524165111" /> <!-- Nonliving Nucleus -->
-				<item id="8176" min="1" max="1" chance="38.124870358847" /> <!-- Destruction Tombstone -->
-				<item id="4605" min="1" max="1" chance="8.1673926571251" /> <!-- Greater DEX Dye <Dex + 3 Str - 3> -->
-				<item id="4604" min="1" max="1" chance="7.9703381041278" /> <!-- Greater CON Dye <Con + 3 DEX - 3> -->
-				<item id="4606" min="1" max="1" chance="7.6021572287907" /> <!-- Greater DEX Dye <Dex + 3 CON - 3> -->
+				<item id="9817" min="1" max="3" chance="60" /> <!-- Nonliving Nucleus -->
+				<item id="8176" min="1" max="1" chance="40" /> <!-- Destruction Tombstone -->
+				<item id="4604" min="1" max="1" chance="15" /> <!-- Greater CON Dye <Con + 3 DEX - 3> -->
+				<item id="4606" min="1" max="1" chance="15" /> <!-- Greater DEX Dye <Dex + 3 CON - 3> -->
+				<item id="4605" min="1" max="1" chance="15" /> <!-- Greater DEX Dye <Dex + 3 Str - 3> -->
+				<item id="103" min="1" max="1" chance="3" /> <!-- Tower Shield -->
+				<item id="517" min="1" max="1" chance="3" /> <!-- Compound Helmet -->
+				<item id="107" min="1" max="1" chance="3" /> <!-- Compound Shield -->
+				<item id="1149" min="1" max="1" chance="3" /> <!-- Shining Circlet -->
+				<item id="202" min="1" max="1" chance="1.5" /> <!-- Mace of Underworld -->
+				<item id="201" min="1" max="1" chance="1.5" /> <!-- Club of Nature -->
+				<item id="196" min="1" max="1" chance="1.5" /> <!-- Stick of Eternity -->
+				<item id="199" min="1" max="1" chance="1.5" /> <!-- Pa'agrio Hammer -->
+				<item id="200" min="1" max="1" chance="1.5" /> <!-- Sage's Staff -->
+				<item id="197" min="1" max="1" chance="1.5" /> <!-- Paradia Staff -->
+				<item id="162" min="1" max="1" chance="1.5" /> <!-- War Axe -->
+				<item id="174" min="1" max="1" chance="1.5" /> <!-- Nirvana Axe -->
 			</drop>
 			<lucky>
 				<item id="39629" min="1" max="1" chance="59.41" /> <!-- Fortune Pocket - Stage 1 -->
@@ -4588,7 +4705,6 @@
 		</collision>
 	</npc>
 	<npc id="25398" level="35" type="RaidBoss" name="Beleth' Eye" title="Raid Boss">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<minions name="Privates">
 				<npc id="25399" count="3" respawnTime="360" weightPoint="1" />
@@ -4636,11 +4752,11 @@
 		<ai type="BALANCED" clanHelpRange="300" />
 		<dropLists>
 			<drop>
-				<item id="2499" min="1" max="1" chance="8.27599999999996" /> <!-- Elven Long Sword -->
-				<item id="70" min="1" max="1" chance="1.41700000000004" /> <!-- Claymore -->
-				<item id="380" min="1" max="1" chance="7.682" /> <!-- Plate Gaiters -->
-				<item id="353" min="1" max="1" chance="2.479" /> <!-- Half Plate Armor -->
-				<item id="951" min="1" max="1" chance="28.42" /> <!-- Scroll: Enchant Weapon (C-grade) -->
+				<item id="951" min="1" max="1" chance="25" /> <!-- Scroll: Enchant Weapon (C-grade) -->
+				<item id="380" min="1" max="1" chance="7.5" /> <!-- Plate Gaiters -->
+				<item id="353" min="1" max="1" chance="5" /> <!-- Half Plate Armor -->
+				<item id="2499" min="1" max="1" chance="2.5" /> <!-- Elven Long Sword -->
+				<item id="70" min="1" max="1" chance="2.5" /> <!-- Claymore -->
 			</drop>
 			<lucky>
 				<item id="39629" min="1" max="1" chance="49.59" /> <!-- Fortune Pocket - Stage 1 -->

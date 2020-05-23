@@ -1,7 +1,6 @@
 ﻿<?xml version="1.0" encoding="UTF-8"?>
 <list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../xsd/npcs.xsd">
 	<npc id="29001" level="40" type="GrandBoss" name="Queen Ant">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<minions name="Privates">
 				<npc id="29003" count="6" respawnTime="10" weightPoint="1" />
@@ -269,7 +268,6 @@
 		</collision>
 	</npc>
 	<npc id="29006" level="50" type="GrandBoss" name="Core">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<minions name="Privates">
 				<npc id="29008" count="3" respawnTime="360" weightPoint="1" />
@@ -693,7 +691,6 @@
 		</collision>
 	</npc>
 	<npc id="29019" level="79" type="GrandBoss" name="Antharas">
-		<!-- Confirmed CT2.5 -->
 		<race>DRAGON</race>
 		<sex>MALE</sex>
 		<acquire exp="262720917" sp="63053" />
@@ -740,9 +737,22 @@
 			<radius normal="300" />
 			<height normal="300" />
 		</collision>
+		<dropLists>
+			<drop>
+				<!-- Also drops herbs. -->
+				<item id="8600" min="1" max="1" chance="10" /> <!-- Herb of Life -->
+				<item id="8601" min="1" max="1" chance="8" /> <!-- Major Herb of Life -->
+				<item id="8602" min="1" max="1" chance="2" /> <!-- Superior Herb of Life -->
+				<item id="8603" min="1" max="1" chance="19.8" /> <!-- Herb of Mana -->
+				<item id="8604" min="1" max="1" chance="9.9" /> <!-- Major Herb of Mana -->
+				<item id="8605" min="1" max="1" chance="3.3" /> <!-- Superior Herb of Mana -->
+				<item id="34849" min="1" max="1" chance="0.7" /> <!-- Mysterious Herb of Power -->
+				<item id="34850" min="1" max="1" chance="0.7" /> <!-- Mysterious Herb of Magic -->
+				<item id="13028" min="1" max="1" chance="0.1" /> <!-- Vitality Replenishing Herb -->
+			</drop>
+		</dropLists>
 	</npc>
 	<npc id="29020" level="78" type="GrandBoss" name="Baium">
-		<!-- Confirmed CT2.5 -->
 		<race>UNDEAD</race>
 		<sex>MALE</sex>
 		<acquire exp="11090077" sp="2661" raidPoints="0" />
@@ -857,7 +867,6 @@
 		</collision>
 	</npc>
 	<npc id="29022" level="60" type="GrandBoss" name="Zaken">
-		<!-- Confirmed CT2.5 -->
 		<race>UNDEAD</race>
 		<sex>MALE</sex>
 		<acquire exp="4879745" sp="1171" raidPoints="0" />
@@ -1337,7 +1346,6 @@
 		</collision>
 	</npc>
 	<npc id="29030" level="84" type="RaidBoss" name="Fenril Hound Kerinne" title="Family of Valakas">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<minions name="Privates">
 				<npc id="29031" count="2" respawnTime="360" weightPoint="1" />
@@ -1482,7 +1490,6 @@
 		</collision>
 	</npc>
 	<npc id="29033" level="84" type="RaidBoss" name="Fenril Hound Freki" title="Family of Valakas">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<minions name="Privates">
 				<npc id="29034" count="3" respawnTime="360" weightPoint="1" />
@@ -1627,7 +1634,6 @@
 		</collision>
 	</npc>
 	<npc id="29036" level="84" type="RaidBoss" name="Fenril Hound Uruz" title="Family of Valakas">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<skill name="SelfRangeCancel_a" id="4177" level="9" />
 			<skill name="SelfBuff_a" id="4175" level="9" />
@@ -1677,7 +1683,6 @@
 		</dropLists>
 	</npc>
 	<npc id="29037" level="84" type="RaidBoss" name="Fenril Hound Kinaz" title="Family of Valakas">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<minions name="Privates">
 				<npc id="29038" count="3" respawnTime="360" weightPoint="1" />
@@ -1832,7 +1837,6 @@
 		</collision>
 	</npc>
 	<npc id="29040" level="84" type="RaidBoss" name="Wings of Flame, Ixion" title="Gatekeeper of Valakas">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<minions name="Privates">
 				<npc id="29041" count="1" respawnTime="30" weightPoint="1" />
@@ -2084,7 +2088,6 @@
 		</collision>
 	</npc>
 	<npc id="29045" level="85" type="GrandBoss" name="Frintezza">
-		<!-- Confirmed CT2.5 -->
 		<race>HUMANOID</race>
 		<sex>MALE</sex>
 		<stats str="164" int="188" dex="55" wit="78" con="111" men="149">
@@ -2117,9 +2120,22 @@
 			<radius normal="45" />
 			<height normal="42.7" />
 		</collision>
+		<dropLists>
+			<drop>
+				<!-- Also drops herbs. -->
+				<item id="8600" min="1" max="1" chance="10" /> <!-- Herb of Life -->
+				<item id="8601" min="1" max="1" chance="8" /> <!-- Major Herb of Life -->
+				<item id="8602" min="1" max="1" chance="2" /> <!-- Superior Herb of Life -->
+				<item id="8603" min="1" max="1" chance="19.8" /> <!-- Herb of Mana -->
+				<item id="8604" min="1" max="1" chance="9.9" /> <!-- Major Herb of Mana -->
+				<item id="8605" min="1" max="1" chance="3.3" /> <!-- Superior Herb of Mana -->
+				<item id="34849" min="1" max="1" chance="0.7" /> <!-- Mysterious Herb of Power -->
+				<item id="34850" min="1" max="1" chance="0.7" /> <!-- Mysterious Herb of Magic -->
+				<item id="13028" min="1" max="1" chance="0.1" /> <!-- Vitality Replenishing Herb -->
+			</drop>
+		</dropLists>
 	</npc>
 	<npc id="29046" level="85" type="GrandBoss" name="Scarlet van Halisha">
-		<!-- Confirmed CT2.5 -->
 		<race>DEMONIC</race>
 		<sex>MALE</sex>
 		<equipment rhand="8204" /> <!-- Monster Only (Follower of Frintezza Calibur) -->
@@ -2170,9 +2186,22 @@
 			<radius normal="45" grown="54" />
 			<height normal="90.7" grown="109.4" />
 		</collision>
+		<dropLists>
+			<drop>
+				<!-- Also drops herbs. -->
+				<item id="8600" min="1" max="1" chance="10" /> <!-- Herb of Life -->
+				<item id="8601" min="1" max="1" chance="8" /> <!-- Major Herb of Life -->
+				<item id="8602" min="1" max="1" chance="2" /> <!-- Superior Herb of Life -->
+				<item id="8603" min="1" max="1" chance="19.8" /> <!-- Herb of Mana -->
+				<item id="8604" min="1" max="1" chance="9.9" /> <!-- Major Herb of Mana -->
+				<item id="8605" min="1" max="1" chance="3.3" /> <!-- Superior Herb of Mana -->
+				<item id="34849" min="1" max="1" chance="0.7" /> <!-- Mysterious Herb of Power -->
+				<item id="34850" min="1" max="1" chance="0.7" /> <!-- Mysterious Herb of Magic -->
+				<item id="13028" min="1" max="1" chance="0.1" /> <!-- Vitality Replenishing Herb -->
+			</drop>
+		</dropLists>
 	</npc>
 	<npc id="29047" level="85" type="GrandBoss" name="Scarlet van Halisha">
-		<!-- Confirmed CT2.5 -->
 		<race>DEMONIC</race>
 		<sex>MALE</sex>
 		<equipment rhand="8222" /> <!-- Monster Only (Follower of Frintezza Tran Calibur) -->
@@ -2546,7 +2575,6 @@
 		</collision>
 	</npc>
 	<npc id="29054" level="99" type="RaidBoss" name="Benom" title="Triol's Leader">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<skill name="PhysicalSpecial" id="4993" level="1" />
 			<skill name="DDMagic" id="4994" level="1" />
@@ -2641,7 +2669,6 @@
 		</collision>
 	</npc>
 	<npc id="29056" level="60" type="RaidBoss" name="Ice Fairy Sirra" title="Raid Boss">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<minions name="Privates">
 				<npc id="29058" count="2" respawnTime="360" weightPoint="1" />
@@ -2849,7 +2876,6 @@
 		</collision>
 	</npc>
 	<npc id="29060" level="59" type="RaidBoss" name="Ice Queen's Escort Captain" title="Raid Boss">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<skill name="SelfRangeCancel_a" id="4177" level="5" />
 			<skill name="SelfBuff_a" id="4173" level="5" />
@@ -2939,7 +2965,6 @@
 		</collision>
 	</npc>
 	<npc id="29062" level="99" type="RaidBoss" name="Andreas Van Halter" title="Seer of Pagan">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<minions name="Privates">
 				<npc id="29063" count="3" respawnTime="360" weightPoint="1" />
@@ -3163,7 +3188,6 @@
 		</collision>
 	</npc>
 	<npc id="29065" level="80" type="RaidBoss" name="Sailren" title="Sealed Evil Power">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="RootingManage" value="0" />
 			<skill name="SelfRangeCancel_a" id="5118" level="1" />
@@ -3229,7 +3253,6 @@
 		</dropLists>
 	</npc>
 	<npc id="29066" level="79" type="GrandBoss" name="Antharas">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="ultra_respawn_time" value="8" />
 		</parameters>
@@ -3272,9 +3295,22 @@
 			<radius normal="300" />
 			<height normal="300" />
 		</collision>
+		<dropLists>
+			<drop>
+				<!-- Also drops herbs. -->
+				<item id="8600" min="1" max="1" chance="10" /> <!-- Herb of Life -->
+				<item id="8601" min="1" max="1" chance="8" /> <!-- Major Herb of Life -->
+				<item id="8602" min="1" max="1" chance="2" /> <!-- Superior Herb of Life -->
+				<item id="8603" min="1" max="1" chance="19.8" /> <!-- Herb of Mana -->
+				<item id="8604" min="1" max="1" chance="9.9" /> <!-- Major Herb of Mana -->
+				<item id="8605" min="1" max="1" chance="3.3" /> <!-- Superior Herb of Mana -->
+				<item id="34849" min="1" max="1" chance="0.7" /> <!-- Mysterious Herb of Power -->
+				<item id="34850" min="1" max="1" chance="0.7" /> <!-- Mysterious Herb of Magic -->
+				<item id="13028" min="1" max="1" chance="0.1" /> <!-- Vitality Replenishing Herb -->
+			</drop>
+		</dropLists>
 	</npc>
 	<npc id="29067" level="79" type="GrandBoss" name="Antharas">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="ultra_respawn_time" value="5" />
 		</parameters>
@@ -3317,6 +3353,20 @@
 			<radius normal="300" />
 			<height normal="300" />
 		</collision>
+		<dropLists>
+			<drop>
+				<!-- Also drops herbs. -->
+				<item id="8600" min="1" max="1" chance="10" /> <!-- Herb of Life -->
+				<item id="8601" min="1" max="1" chance="8" /> <!-- Major Herb of Life -->
+				<item id="8602" min="1" max="1" chance="2" /> <!-- Superior Herb of Life -->
+				<item id="8603" min="1" max="1" chance="19.8" /> <!-- Herb of Mana -->
+				<item id="8604" min="1" max="1" chance="9.9" /> <!-- Major Herb of Mana -->
+				<item id="8605" min="1" max="1" chance="3.3" /> <!-- Superior Herb of Mana -->
+				<item id="34849" min="1" max="1" chance="0.7" /> <!-- Mysterious Herb of Power -->
+				<item id="34850" min="1" max="1" chance="0.7" /> <!-- Mysterious Herb of Magic -->
+				<item id="13028" min="1" max="1" chance="0.1" /> <!-- Vitality Replenishing Herb -->
+			</drop>
+		</dropLists>
 	</npc>
 	<npc id="29068" level="118" type="GrandBoss" name="Antharas" title="Land Dragon">
 		<parameters>
@@ -4757,7 +4807,6 @@
 		</collision>
 	</npc>
 	<npc id="29095" level="80" type="RaidBoss" name="Gordon" title="Knight of Destruction">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="RaidSpawnMusic" value="Rm01_A" />
 			<skill name="SelfRangeCancel_a" id="4177" level="10" />
@@ -4823,7 +4872,6 @@
 		</dropLists>
 	</npc>
 	<npc id="29096" level="84" type="RaidBoss" name="Anais" title="Lord of Splendor">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<minions name="Privates">
 				<npc id="29098" count="3" respawnTime="360" weightPoint="1" />
@@ -5010,7 +5058,6 @@
 		</collision>
 	</npc>
 	<npc id="29099" level="83" type="GrandBoss" name="Baylor" title="Warden">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<skill name="selfbuff1" id="5221" level="1" />
 			<skill name="selfbuff2" id="5222" level="1" />
@@ -5073,5 +5120,19 @@
 			<radius normal="54" />
 			<height normal="77.5" />
 		</collision>
+		<dropLists>
+			<drop>
+				<!-- Also drops herbs. -->
+				<item id="8600" min="1" max="1" chance="10" /> <!-- Herb of Life -->
+				<item id="8601" min="1" max="1" chance="8" /> <!-- Major Herb of Life -->
+				<item id="8602" min="1" max="1" chance="2" /> <!-- Superior Herb of Life -->
+				<item id="8603" min="1" max="1" chance="19.8" /> <!-- Herb of Mana -->
+				<item id="8604" min="1" max="1" chance="9.9" /> <!-- Major Herb of Mana -->
+				<item id="8605" min="1" max="1" chance="3.3" /> <!-- Superior Herb of Mana -->
+				<item id="34849" min="1" max="1" chance="0.7" /> <!-- Mysterious Herb of Power -->
+				<item id="34850" min="1" max="1" chance="0.7" /> <!-- Mysterious Herb of Magic -->
+				<item id="13028" min="1" max="1" chance="0.1" /> <!-- Vitality Replenishing Herb -->
+			</drop>
+		</dropLists>
 	</npc>
 </list>
