@@ -208,6 +208,7 @@ public class Trandon extends AbstractNpcAI
 				{
 					htmltext = null; // TODO: Unknown html
 					takeItems(player, SUB_CERTIFICATE, -1);
+					player.getWarehouse().destroyItemByItemId("Quest", SUB_CERTIFICATE, -1, player, true);
 					takeItems(player, Inventory.ADENA_ID, Config.FEE_DELETE_SUBCLASS_SKILLS);
 					for (SubClass subclass : player.getSubClasses().values())
 					{
@@ -317,6 +318,7 @@ public class Trandon extends AbstractNpcAI
 				{
 					htmltext = null; // TODO: Unknown html
 					takeItems(player, DUAL_CERTIFICATE, -1);
+					player.getWarehouse().destroyItemByItemId("Quest", DUAL_CERTIFICATE, -1, player, true);
 					takeItems(player, Inventory.ADENA_ID, Config.FEE_DELETE_DUALCLASS_SKILLS);
 					player.getVariables().remove(DUAL_CERTIFICATE_COUNT_VAR);
 					
