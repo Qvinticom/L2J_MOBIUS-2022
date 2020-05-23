@@ -14,6 +14,9 @@
 			<defence physical="405.85106382979" magical="297.0297029703" />
 		</stats>
 		<status attackable="false" />
+		<skillList>
+			<skill id="4416" level="14" /> <!-- Humans -->
+		</skillList>
 		<collision>
 			<radius normal="9.5" />
 			<height normal="22.4" />
@@ -50,6 +53,9 @@
 			<defence physical="405.85106382979" magical="297.0297029703" />
 		</stats>
 		<status attackable="false" />
+		<skillList>
+			<skill id="4416" level="12" /> <!-- Bugs -->
+		</skillList>
 		<collision>
 			<radius normal="45" />
 			<height normal="53" />
@@ -68,6 +74,9 @@
 			<defence physical="405.85106382979" magical="297.0297029703" />
 		</stats>
 		<status attackable="false" />
+		<skillList>
+			<skill id="4416" level="12" /> <!-- Bugs -->
+		</skillList>
 		<collision>
 			<radius normal="26" />
 			<height normal="15" />
@@ -86,6 +95,9 @@
 			<defence physical="405.85106382979" magical="297.0297029703" />
 		</stats>
 		<status attackable="false" />
+		<skillList>
+			<skill id="4416" level="12" /> <!-- Bugs -->
+		</skillList>
 		<collision>
 			<radius normal="26" />
 			<height normal="15" />
@@ -104,6 +116,9 @@
 			<defence physical="405.85106382979" magical="297.0297029703" />
 		</stats>
 		<status attackable="false" />
+		<skillList>
+			<skill id="4416" level="13" /> <!-- Fairies -->
+		</skillList>
 		<collision>
 			<radius normal="31.5" />
 			<height normal="128.4" />
@@ -122,6 +137,9 @@
 			<defence physical="405.85106382979" magical="297.0297029703" />
 		</stats>
 		<status attackable="false" />
+		<skillList>
+			<skill id="4416" level="12" /> <!-- Bugs -->
+		</skillList>
 		<collision>
 			<radius normal="18.5" />
 			<height normal="30.5" />
@@ -140,6 +158,9 @@
 			<defence physical="405.85106382979" magical="297.0297029703" />
 		</stats>
 		<status attackable="false" />
+		<skillList>
+			<skill id="4416" level="12" /> <!-- Bugs -->
+		</skillList>
 		<collision>
 			<radius normal="12.5" />
 			<height normal="34.5" />
@@ -158,6 +179,9 @@
 			<defence physical="405.85106382979" magical="297.0297029703" />
 		</stats>
 		<status attackable="false" />
+		<skillList>
+			<skill id="4416" level="1" /> <!-- Undead -->
+		</skillList>
 		<collision>
 			<radius normal="16" />
 			<height normal="32" />
@@ -176,6 +200,9 @@
 			<defence physical="405.85106382979" magical="297.0297029703" />
 		</stats>
 		<status attackable="false" />
+		<skillList>
+			<skill id="4416" level="1" /> <!-- Undead -->
+		</skillList>
 		<collision>
 			<radius normal="16" />
 			<height normal="32" />
@@ -200,10 +227,6 @@
 		</collision>
 		<skillList>
 			<skill id="4416" level="1" /> <!-- Undead -->
-			<skill id="4410" level="8" /> <!-- Weak P. Atk. -->
-			<skill id="4411" level="8" /> <!-- Weak M. Atk. -->
-			<skill id="4412" level="18" /> <!-- Extremely Strong P. Def. -->
-			<skill id="4413" level="14" /> <!-- Strong M. Def. -->
 		</skillList>
 		<dropLists>
 			<drop>
@@ -239,10 +262,6 @@
 		</collision>
 		<skillList>
 			<skill id="4416" level="1" /> <!-- Undead -->
-			<skill id="4410" level="12" /> <!-- Slightly Strong P. Atk. -->
-			<skill id="4411" level="12" /> <!-- Slightly Strong M. Atk. -->
-			<skill id="4412" level="14" /> <!-- Strong P. Def. -->
-			<skill id="4413" level="10" /> <!-- Slightly Weak M. Def. -->
 		</skillList>
 		<dropLists>
 			<drop>
@@ -272,6 +291,9 @@
 			<defence physical="405.85106382979" magical="297.0297029703" />
 		</stats>
 		<status attackable="false" />
+		<skillList>
+			<skill id="4416" level="1" /> <!-- Undead -->
+		</skillList>
 		<collision>
 			<radius normal="26" />
 			<height normal="67.8" />
@@ -291,6 +313,9 @@
 			<defence physical="405.85106382979" magical="297.0297029703" />
 		</stats>
 		<status attackable="false" />
+		<skillList>
+			<skill id="4416" level="8" /> <!-- Angels -->
+		</skillList>
 		<collision>
 			<radius normal="13" />
 			<height normal="37.5" />
@@ -317,11 +342,14 @@
 		</collision>
 		<skillList>
 			<skill id="4416" level="6" /> <!-- Humanoids -->
+			<skill id="4440" level="5" /> <!-- Greater Paralysis Resistance -->
 			<skill id="5467" level="1" /> <!-- Dark Attack -->
-			<skill id="16758" level="1" /> <!-- Embryo -->
 			<skill id="14821" level="1" /> <!-- Instant Kill Attack Resistance -->
 			<skill id="16547" level="10" /> <!-- Danger Zone Attack Resistance -->
-			<skill id="4440" level="5" /> <!-- Greater Paralysis Resistance -->
+			<skill id="16758" level="1" /> <!-- Embryo -->
+			<skill id="16763" level="1" /> <!-- Critical Slasher -->
+			<skill id="16764" level="1" /> <!-- Fatal Strike -->
+			<skill id="16766" level="1" /> <!-- Fatal Slasher -->
 		</skillList>
 	</npc>
 	<npc id="24015" level="101" type="Monster" name="Castle Guardian Knight">
@@ -344,12 +372,16 @@
 			<height normal="35.5" />
 		</collision>
 		<skillList>
+			<skill id="4028" level="1" /> <!-- Might -->
 			<skill id="4416" level="6" /> <!-- Humanoids -->
+			<skill id="4440" level="5" /> <!-- Greater Paralysis Resistance -->
 			<skill id="5467" level="1" /> <!-- Dark Attack -->
-			<skill id="16758" level="1" /> <!-- Embryo -->
 			<skill id="14821" level="1" /> <!-- Instant Kill Attack Resistance -->
 			<skill id="16547" level="10" /> <!-- Danger Zone Attack Resistance -->
-			<skill id="4440" level="5" /> <!-- Greater Paralysis Resistance -->
+			<skill id="16758" level="1" /> <!-- Embryo -->
+			<skill id="16763" level="1" /> <!-- Critical Slasher -->
+			<skill id="16764" level="1" /> <!-- Fatal Strike -->
+			<skill id="16766" level="1" /> <!-- Fatal Slasher -->
 		</skillList>
 	</npc>
 	<npc id="24016" level="101" type="Monster" name="Castle Berserker">
@@ -372,11 +404,14 @@
 		</collision>
 		<skillList>
 			<skill id="4416" level="9" /> <!-- Demons -->
+			<skill id="4440" level="5" /> <!-- Greater Paralysis Resistance -->
 			<skill id="5467" level="1" /> <!-- Dark Attack -->
-			<skill id="16758" level="1" /> <!-- Embryo -->
 			<skill id="14821" level="1" /> <!-- Instant Kill Attack Resistance -->
 			<skill id="16547" level="10" /> <!-- Danger Zone Attack Resistance -->
-			<skill id="4440" level="5" /> <!-- Greater Paralysis Resistance -->
+			<skill id="16758" level="1" /> <!-- Embryo -->
+			<skill id="16763" level="1" /> <!-- Critical Slasher -->
+			<skill id="16764" level="1" /> <!-- Fatal Strike -->
+			<skill id="16766" level="1" /> <!-- Fatal Slasher -->
 		</skillList>
 	</npc>
 	<npc id="24017" level="101" type="Monster" name="Castle Soul Reaper">
@@ -399,11 +434,14 @@
 		</collision>
 		<skillList>
 			<skill id="4416" level="9" /> <!-- Demons -->
+			<skill id="4440" level="5" /> <!-- Greater Paralysis Resistance -->
 			<skill id="5467" level="1" /> <!-- Dark Attack -->
-			<skill id="16758" level="1" /> <!-- Embryo -->
 			<skill id="14821" level="1" /> <!-- Instant Kill Attack Resistance -->
 			<skill id="16547" level="10" /> <!-- Danger Zone Attack Resistance -->
-			<skill id="4440" level="5" /> <!-- Greater Paralysis Resistance -->
+			<skill id="16758" level="1" /> <!-- Embryo -->
+			<skill id="16763" level="1" /> <!-- Critical Slasher -->
+			<skill id="16764" level="1" /> <!-- Fatal Strike -->
+			<skill id="16766" level="1" /> <!-- Fatal Slasher -->
 		</skillList>
 	</npc>
 	<npc id="24018" level="101" type="Monster" name="Castle High Priest">
@@ -427,11 +465,14 @@
 		</collision>
 		<skillList>
 			<skill id="4416" level="6" /> <!-- Humanoids -->
+			<skill id="4440" level="5" /> <!-- Greater Paralysis Resistance -->
 			<skill id="5467" level="1" /> <!-- Dark Attack -->
-			<skill id="16758" level="1" /> <!-- Embryo -->
 			<skill id="14821" level="1" /> <!-- Instant Kill Attack Resistance -->
 			<skill id="16547" level="10" /> <!-- Danger Zone Attack Resistance -->
-			<skill id="4440" level="5" /> <!-- Greater Paralysis Resistance -->
+			<skill id="16758" level="1" /> <!-- Embryo -->
+			<skill id="16768" level="1" /> <!-- Energy Spike -->
+			<skill id="16769" level="1" /> <!-- Energy Burst -->
+			<skill id="16770" level="1" /> <!-- Energy Blast -->
 		</skillList>
 	</npc>
 	<npc id="24019" level="101" type="Monster" name="Castle Dark Wizard">
@@ -455,11 +496,14 @@
 		</collision>
 		<skillList>
 			<skill id="4416" level="6" /> <!-- Humanoids -->
+			<skill id="4440" level="5" /> <!-- Greater Paralysis Resistance -->
 			<skill id="5467" level="1" /> <!-- Dark Attack -->
-			<skill id="16758" level="1" /> <!-- Embryo -->
 			<skill id="14821" level="1" /> <!-- Instant Kill Attack Resistance -->
 			<skill id="16547" level="10" /> <!-- Danger Zone Attack Resistance -->
-			<skill id="4440" level="5" /> <!-- Greater Paralysis Resistance -->
+			<skill id="16758" level="1" /> <!-- Embryo -->
+			<skill id="16768" level="1" /> <!-- Energy Spike -->
+			<skill id="16769" level="1" /> <!-- Energy Burst -->
+			<skill id="16770" level="1" /> <!-- Energy Blast -->
 		</skillList>
 	</npc>
 	<npc id="24020" level="101" type="Monster" name="Castle Choir">
@@ -482,11 +526,14 @@
 		</collision>
 		<skillList>
 			<skill id="4416" level="1" /> <!-- Undead -->
+			<skill id="4440" level="5" /> <!-- Greater Paralysis Resistance -->
 			<skill id="5467" level="1" /> <!-- Dark Attack -->
-			<skill id="16758" level="1" /> <!-- Embryo -->
 			<skill id="14821" level="1" /> <!-- Instant Kill Attack Resistance -->
 			<skill id="16547" level="10" /> <!-- Danger Zone Attack Resistance -->
-			<skill id="4440" level="5" /> <!-- Greater Paralysis Resistance -->
+			<skill id="16758" level="1" /> <!-- Embryo -->
+			<skill id="16768" level="1" /> <!-- Energy Spike -->
+			<skill id="16769" level="1" /> <!-- Energy Burst -->
+			<skill id="16770" level="1" /> <!-- Energy Blast -->
 		</skillList>
 	</npc>
 	<npc id="24021" level="101" type="Monster" name="Castle Soul Reaper">
@@ -509,11 +556,14 @@
 		</collision>
 		<skillList>
 			<skill id="4416" level="9" /> <!-- Demons -->
+			<skill id="4440" level="5" /> <!-- Greater Paralysis Resistance -->
 			<skill id="5467" level="1" /> <!-- Dark Attack -->
-			<skill id="16758" level="1" /> <!-- Embryo -->
 			<skill id="14821" level="1" /> <!-- Instant Kill Attack Resistance -->
 			<skill id="16547" level="10" /> <!-- Danger Zone Attack Resistance -->
-			<skill id="4440" level="5" /> <!-- Greater Paralysis Resistance -->
+			<skill id="16758" level="1" /> <!-- Embryo -->
+			<skill id="16768" level="1" /> <!-- Energy Spike -->
+			<skill id="16769" level="1" /> <!-- Energy Burst -->
+			<skill id="16770" level="1" /> <!-- Energy Blast -->
 		</skillList>
 	</npc>
 	<npc id="24022" level="101" type="Monster" name="Embryo Magic Cannon">
@@ -536,11 +586,14 @@
 		</collision>
 		<skillList>
 			<skill id="4416" level="9" /> <!-- Demons -->
+			<skill id="4440" level="5" /> <!-- Greater Paralysis Resistance -->
 			<skill id="5467" level="1" /> <!-- Dark Attack -->
-			<skill id="16758" level="1" /> <!-- Embryo -->
 			<skill id="14821" level="1" /> <!-- Instant Kill Attack Resistance -->
 			<skill id="16547" level="10" /> <!-- Danger Zone Attack Resistance -->
-			<skill id="4440" level="5" /> <!-- Greater Paralysis Resistance -->
+			<skill id="16758" level="1" /> <!-- Embryo -->
+			<skill id="16768" level="1" /> <!-- Energy Spike -->
+			<skill id="16769" level="1" /> <!-- Energy Burst -->
+			<skill id="16770" level="1" /> <!-- Energy Blast -->
 		</skillList>
 	</npc>
 	<npc id="24023" level="102" type="Monster" name="Embryo Castle Siege Tank">
@@ -562,10 +615,14 @@
 			<height normal="57" />
 		</collision>
 		<skillList>
+			<skill id="4045" level="1" /> <!-- Full Magic Attack Resistance -->
 			<skill id="4416" level="9" /> <!-- Demons -->
 			<skill id="5467" level="1" /> <!-- Dark Attack -->
+			<skill id="14804" level="10" /> <!-- Damage Reflect Attack Resistance -->
 			<skill id="16758" level="1" /> <!-- Embryo -->
-			<skill id="14804" level="10" /> <!-- Damage Reflection Attack Resistance -->
+			<skill id="16768" level="1" /> <!-- Energy Spike -->
+			<skill id="16769" level="1" /> <!-- Energy Burst -->
+			<skill id="16770" level="1" /> <!-- Energy Blast -->
 		</skillList>
 	</npc>
 	<npc id="24024" level="100" type="Monster" name="Embryo Raider">
@@ -589,9 +646,9 @@
 		<skillList>
 			<skill id="4416" level="6" /> <!-- Humanoids -->
 			<skill id="5467" level="1" /> <!-- Dark Attack -->
-			<skill id="16758" level="1" /> <!-- Embryo -->
 			<skill id="14823" level="1" /> <!-- Instant Kill Attack Resistance -->
 			<skill id="16547" level="10" /> <!-- Danger Zone Attack Resistance -->
+			<skill id="16758" level="1" /> <!-- Embryo -->
 		</skillList>
 	</npc>
 	<npc id="24025" level="100" type="Monster" name="Embryo Passionate Soldier">
@@ -615,9 +672,9 @@
 		<skillList>
 			<skill id="4416" level="6" /> <!-- Humanoids -->
 			<skill id="5467" level="1" /> <!-- Dark Attack -->
-			<skill id="16758" level="1" /> <!-- Embryo -->
 			<skill id="14823" level="1" /> <!-- Instant Kill Attack Resistance -->
 			<skill id="16547" level="10" /> <!-- Danger Zone Attack Resistance -->
+			<skill id="16758" level="1" /> <!-- Embryo -->
 		</skillList>
 	</npc>
 	<npc id="24026" level="100" type="Monster" name="Embryo Guardian Captain">
@@ -641,9 +698,9 @@
 		<skillList>
 			<skill id="4416" level="6" /> <!-- Humanoids -->
 			<skill id="5467" level="1" /> <!-- Dark Attack -->
-			<skill id="16758" level="1" /> <!-- Embryo -->
 			<skill id="14823" level="1" /> <!-- Instant Kill Attack Resistance -->
 			<skill id="16547" level="10" /> <!-- Danger Zone Attack Resistance -->
+			<skill id="16758" level="1" /> <!-- Embryo -->
 		</skillList>
 	</npc>
 	<npc id="24027" level="100" type="Monster" name="Embryo Elite Captain">
@@ -667,9 +724,9 @@
 		<skillList>
 			<skill id="4416" level="6" /> <!-- Humanoids -->
 			<skill id="5467" level="1" /> <!-- Dark Attack -->
-			<skill id="16758" level="1" /> <!-- Embryo -->
 			<skill id="14823" level="1" /> <!-- Instant Kill Attack Resistance -->
 			<skill id="16547" level="10" /> <!-- Danger Zone Attack Resistance -->
+			<skill id="16758" level="1" /> <!-- Embryo -->
 		</skillList>
 	</npc>
 	<npc id="24028" level="100" type="Monster" name="Embryo Dark Wizard">
@@ -693,9 +750,9 @@
 		<skillList>
 			<skill id="4416" level="6" /> <!-- Humanoids -->
 			<skill id="5467" level="1" /> <!-- Dark Attack -->
-			<skill id="16758" level="1" /> <!-- Embryo -->
 			<skill id="14823" level="1" /> <!-- Instant Kill Attack Resistance -->
 			<skill id="16547" level="10" /> <!-- Danger Zone Attack Resistance -->
+			<skill id="16758" level="1" /> <!-- Embryo -->
 		</skillList>
 	</npc>
 	<npc id="24029" level="100" type="Monster" name="Embryo Flame Master">
@@ -719,9 +776,9 @@
 		<skillList>
 			<skill id="4416" level="6" /> <!-- Humanoids -->
 			<skill id="5467" level="1" /> <!-- Dark Attack -->
-			<skill id="16758" level="1" /> <!-- Embryo -->
 			<skill id="14823" level="1" /> <!-- Instant Kill Attack Resistance -->
 			<skill id="16547" level="10" /> <!-- Danger Zone Attack Resistance -->
+			<skill id="16758" level="1" /> <!-- Embryo -->
 		</skillList>
 	</npc>
 	<npc id="24030" level="100" type="Monster" name="Embryo High Priest">
@@ -745,9 +802,9 @@
 		<skillList>
 			<skill id="4416" level="6" /> <!-- Humanoids -->
 			<skill id="5467" level="1" /> <!-- Dark Attack -->
-			<skill id="16758" level="1" /> <!-- Embryo -->
 			<skill id="14823" level="1" /> <!-- Instant Kill Attack Resistance -->
 			<skill id="16547" level="10" /> <!-- Danger Zone Attack Resistance -->
+			<skill id="16758" level="1" /> <!-- Embryo -->
 		</skillList>
 	</npc>
 	<npc id="24031" level="100" type="Monster" name="Embryo Archon">
@@ -771,9 +828,9 @@
 		<skillList>
 			<skill id="4416" level="6" /> <!-- Humanoids -->
 			<skill id="5467" level="1" /> <!-- Dark Attack -->
-			<skill id="16758" level="1" /> <!-- Embryo -->
 			<skill id="14823" level="1" /> <!-- Instant Kill Attack Resistance -->
 			<skill id="16547" level="10" /> <!-- Danger Zone Attack Resistance -->
+			<skill id="16758" level="1" /> <!-- Embryo -->
 		</skillList>
 	</npc>
 	<npc id="24032" level="101" type="Monster" name="Embryo Soul Reaper">
@@ -796,9 +853,12 @@
 		<skillList>
 			<skill id="4416" level="9" /> <!-- Demons -->
 			<skill id="5467" level="1" /> <!-- Dark Attack -->
-			<skill id="16758" level="1" /> <!-- Embryo -->
 			<skill id="14823" level="1" /> <!-- Instant Kill Attack Resistance -->
 			<skill id="16547" level="10" /> <!-- Danger Zone Attack Resistance -->
+			<skill id="16758" level="1" /> <!-- Embryo -->
+			<skill id="16763" level="1" /> <!-- Critical Slasher -->
+			<skill id="16764" level="1" /> <!-- Fatal Strike -->
+			<skill id="16766" level="1" /> <!-- Fatal Slasher -->
 		</skillList>
 	</npc>
 	<npc id="24033" level="101" type="Monster" name="Embryo Slaughterer">
@@ -821,9 +881,12 @@
 		<skillList>
 			<skill id="4416" level="9" /> <!-- Demons -->
 			<skill id="5467" level="1" /> <!-- Dark Attack -->
-			<skill id="16758" level="1" /> <!-- Embryo -->
 			<skill id="14823" level="1" /> <!-- Instant Kill Attack Resistance -->
 			<skill id="16547" level="10" /> <!-- Danger Zone Attack Resistance -->
+			<skill id="16758" level="1" /> <!-- Embryo -->
+			<skill id="16763" level="1" /> <!-- Critical Slasher -->
+			<skill id="16764" level="1" /> <!-- Fatal Strike -->
+			<skill id="16766" level="1" /> <!-- Fatal Slasher -->
 		</skillList>
 	</npc>
 	<npc id="24034" level="101" type="Monster" name="Embryo Soul Pathfinder">
@@ -846,9 +909,12 @@
 		<skillList>
 			<skill id="4416" level="9" /> <!-- Demons -->
 			<skill id="5467" level="1" /> <!-- Dark Attack -->
-			<skill id="16758" level="1" /> <!-- Embryo -->
 			<skill id="14823" level="1" /> <!-- Instant Kill Attack Resistance -->
 			<skill id="16547" level="10" /> <!-- Danger Zone Attack Resistance -->
+			<skill id="16758" level="1" /> <!-- Embryo -->
+			<skill id="16768" level="1" /> <!-- Energy Spike -->
+			<skill id="16769" level="1" /> <!-- Energy Burst -->
+			<skill id="16770" level="1" /> <!-- Energy Blast -->
 		</skillList>
 	</npc>
 	<npc id="24035" level="102" type="Monster" name="Embryo Squad Leader">
@@ -871,9 +937,12 @@
 		<skillList>
 			<skill id="4416" level="6" /> <!-- Humanoids -->
 			<skill id="5467" level="1" /> <!-- Dark Attack -->
-			<skill id="16758" level="1" /> <!-- Embryo -->
 			<skill id="14823" level="1" /> <!-- Instant Kill Attack Resistance -->
 			<skill id="16547" level="10" /> <!-- Danger Zone Attack Resistance -->
+			<skill id="16758" level="1" /> <!-- Embryo -->
+			<skill id="16763" level="1" /> <!-- Critical Slasher -->
+			<skill id="16764" level="1" /> <!-- Fatal Strike -->
+			<skill id="16766" level="1" /> <!-- Fatal Slasher -->
 		</skillList>
 	</npc>
 	<npc id="24036" level="102" type="Monster" name="Embryo Dark Judge">
@@ -896,9 +965,12 @@
 		<skillList>
 			<skill id="4416" level="9" /> <!-- Demons -->
 			<skill id="5467" level="1" /> <!-- Dark Attack -->
-			<skill id="16758" level="1" /> <!-- Embryo -->
 			<skill id="14823" level="1" /> <!-- Instant Kill Attack Resistance -->
 			<skill id="16547" level="10" /> <!-- Danger Zone Attack Resistance -->
+			<skill id="16758" level="1" /> <!-- Embryo -->
+			<skill id="16768" level="1" /> <!-- Energy Spike -->
+			<skill id="16769" level="1" /> <!-- Energy Burst -->
+			<skill id="16770" level="1" /> <!-- Energy Blast -->
 		</skillList>
 	</npc>
 	<npc id="24037" level="102" type="Monster" name="Embryo Siege Tank">
@@ -920,11 +992,14 @@
 		</collision>
 		<skillList>
 			<skill id="4416" level="9" /> <!-- Demons -->
+			<skill id="4440" level="5" /> <!-- Greater Paralysis Resistance -->
 			<skill id="5467" level="1" /> <!-- Dark Attack -->
-			<skill id="16758" level="1" /> <!-- Embryo -->
 			<skill id="14823" level="1" /> <!-- Instant Kill Attack Resistance -->
 			<skill id="16547" level="10" /> <!-- Danger Zone Attack Resistance -->
-			<skill id="4440" level="5" /> <!-- Greater Paralysis Resistance -->
+			<skill id="16758" level="1" /> <!-- Embryo -->
+			<skill id="16768" level="1" /> <!-- Energy Spike -->
+			<skill id="16769" level="1" /> <!-- Energy Burst -->
+			<skill id="16770" level="1" /> <!-- Energy Blast -->
 		</skillList>
 	</npc>
 	<npc id="24038" level="97" type="Monster" name="Embryo Spy">
@@ -945,12 +1020,12 @@
 			<height normal="22.5" />
 		</collision>
 		<skillList>
+			<skill id="4410" level="16" /> <!-- Very Strong P. Atk. -->
 			<skill id="4416" level="6" /> <!-- Humanoids -->
 			<skill id="5467" level="1" /> <!-- Dark Attack -->
-			<skill id="4410" level="16" /> <!-- Very Strong P. Atk. -->
-			<skill id="16758" level="1" /> <!-- Embryo -->
 			<skill id="14823" level="1" /> <!-- Instant Kill Attack Resistance -->
 			<skill id="16547" level="10" /> <!-- Danger Zone Attack Resistance -->
+			<skill id="16758" level="1" /> <!-- Embryo -->
 		</skillList>
 	</npc>
 	<npc id="24039" level="97" type="Monster" name="Embryo Aide">
@@ -971,12 +1046,12 @@
 			<height normal="22.5" />
 		</collision>
 		<skillList>
+			<skill id="4410" level="16" /> <!-- Very Strong P. Atk. -->
 			<skill id="4416" level="6" /> <!-- Humanoids -->
 			<skill id="5467" level="1" /> <!-- Dark Attack -->
-			<skill id="4410" level="16" /> <!-- Very Strong P. Atk. -->
-			<skill id="16758" level="1" /> <!-- Embryo -->
 			<skill id="14823" level="1" /> <!-- Instant Kill Attack Resistance -->
 			<skill id="16547" level="10" /> <!-- Danger Zone Attack Resistance -->
+			<skill id="16758" level="1" /> <!-- Embryo -->
 		</skillList>
 	</npc>
 	<npc id="24040" level="97" type="Monster" name="Embryo Spy Soldier">
@@ -997,12 +1072,12 @@
 			<height normal="22" />
 		</collision>
 		<skillList>
+			<skill id="4410" level="16" /> <!-- Very Strong P. Atk. -->
 			<skill id="4416" level="14" /> <!-- Humans -->
 			<skill id="5467" level="1" /> <!-- Dark Attack -->
-			<skill id="4410" level="16" /> <!-- Very Strong P. Atk. -->
-			<skill id="16758" level="1" /> <!-- Embryo -->
 			<skill id="14823" level="1" /> <!-- Instant Kill Attack Resistance -->
 			<skill id="16547" level="10" /> <!-- Danger Zone Attack Resistance -->
+			<skill id="16758" level="1" /> <!-- Embryo -->
 		</skillList>
 	</npc>
 	<npc id="24041" level="98" type="Monster" name="Embryo Special Agent">
@@ -1023,12 +1098,12 @@
 			<height normal="18" />
 		</collision>
 		<skillList>
+			<skill id="4410" level="16" /> <!-- Very Strong P. Atk. -->
 			<skill id="4416" level="6" /> <!-- Humanoids -->
 			<skill id="5467" level="1" /> <!-- Dark Attack -->
-			<skill id="4410" level="16" /> <!-- Very Strong P. Atk. -->
-			<skill id="16758" level="1" /> <!-- Embryo -->
 			<skill id="14823" level="1" /> <!-- Instant Kill Attack Resistance -->
 			<skill id="16547" level="10" /> <!-- Danger Zone Attack Resistance -->
+			<skill id="16758" level="1" /> <!-- Embryo -->
 		</skillList>
 	</npc>
 	<npc id="24042" level="102" type="Monster" name="Embryo Castle Magic Cannon">
@@ -1050,10 +1125,14 @@
 			<height normal="52.8" />
 		</collision>
 		<skillList>
+			<skill id="4045" level="1" /> <!-- Full Magic Attack Resistance -->
 			<skill id="4416" level="9" /> <!-- Demons -->
 			<skill id="5467" level="1" /> <!-- Dark Attack -->
+			<skill id="14804" level="10" /> <!-- Damage Reflect Attack Resistance -->
 			<skill id="16758" level="1" /> <!-- Embryo -->
-			<skill id="14804" level="10" /> <!-- Damage Reflection Attack Resistance -->
+			<skill id="16768" level="1" /> <!-- Energy Spike -->
+			<skill id="16769" level="1" /> <!-- Energy Burst -->
+			<skill id="16770" level="1" /> <!-- Energy Blast -->
 		</skillList>
 	</npc>
 	<npc id="24043" level="101" type="Monster" name="Castle Archer">
@@ -1077,11 +1156,13 @@
 		</collision>
 		<skillList>
 			<skill id="4416" level="6" /> <!-- Humanoids -->
+			<skill id="4440" level="5" /> <!-- Greater Paralysis Resistance -->
 			<skill id="5467" level="1" /> <!-- Dark Attack -->
-			<skill id="16758" level="1" /> <!-- Embryo -->
 			<skill id="14821" level="1" /> <!-- Instant Kill Attack Resistance -->
 			<skill id="16547" level="10" /> <!-- Danger Zone Attack Resistance -->
-			<skill id="4440" level="5" /> <!-- Greater Paralysis Resistance -->
+			<skill id="16758" level="1" /> <!-- Embryo -->
+			<skill id="16765" level="1" /> <!-- Fatal Shot -->
+			<skill id="16767" level="1" /> <!-- Burst Shot -->
 		</skillList>
 	</npc>
 	<npc id="24044" level="101" type="Monster" name="Orc Mercenary Squad Commander">
@@ -1104,11 +1185,14 @@
 		</collision>
 		<skillList>
 			<skill id="4416" level="6" /> <!-- Humanoids -->
+			<skill id="4440" level="5" /> <!-- Greater Paralysis Resistance -->
 			<skill id="5467" level="1" /> <!-- Dark Attack -->
-			<skill id="16758" level="1" /> <!-- Embryo -->
 			<skill id="14821" level="1" /> <!-- Instant Kill Attack Resistance -->
 			<skill id="16547" level="10" /> <!-- Danger Zone Attack Resistance -->
-			<skill id="4440" level="5" /> <!-- Greater Paralysis Resistance -->
+			<skill id="16758" level="1" /> <!-- Embryo -->
+			<skill id="16763" level="1" /> <!-- Critical Slasher -->
+			<skill id="16764" level="1" /> <!-- Fatal Strike -->
+			<skill id="16766" level="1" /> <!-- Fatal Slasher -->
 		</skillList>
 	</npc>
 	<npc id="24045" level="101" type="Monster" name="Orc Mercenary Warrior">
@@ -1132,11 +1216,14 @@
 		</collision>
 		<skillList>
 			<skill id="4416" level="6" /> <!-- Humanoids -->
+			<skill id="4440" level="5" /> <!-- Greater Paralysis Resistance -->
 			<skill id="5467" level="1" /> <!-- Dark Attack -->
-			<skill id="16758" level="1" /> <!-- Embryo -->
 			<skill id="14821" level="1" /> <!-- Instant Kill Attack Resistance -->
 			<skill id="16547" level="10" /> <!-- Danger Zone Attack Resistance -->
-			<skill id="4440" level="5" /> <!-- Greater Paralysis Resistance -->
+			<skill id="16758" level="1" /> <!-- Embryo -->
+			<skill id="16763" level="1" /> <!-- Critical Slasher -->
+			<skill id="16764" level="1" /> <!-- Fatal Strike -->
+			<skill id="16766" level="1" /> <!-- Fatal Slasher -->
 		</skillList>
 	</npc>
 	<npc id="24046" level="101" type="Monster" name="Orc Mercenary Member">
@@ -1160,11 +1247,14 @@
 		</collision>
 		<skillList>
 			<skill id="4416" level="6" /> <!-- Humanoids -->
+			<skill id="4440" level="5" /> <!-- Greater Paralysis Resistance -->
 			<skill id="5467" level="1" /> <!-- Dark Attack -->
-			<skill id="16758" level="1" /> <!-- Embryo -->
 			<skill id="14821" level="1" /> <!-- Instant Kill Attack Resistance -->
 			<skill id="16547" level="10" /> <!-- Danger Zone Attack Resistance -->
-			<skill id="4440" level="5" /> <!-- Greater Paralysis Resistance -->
+			<skill id="16758" level="1" /> <!-- Embryo -->
+			<skill id="16763" level="1" /> <!-- Critical Slasher -->
+			<skill id="16764" level="1" /> <!-- Fatal Strike -->
+			<skill id="16766" level="1" /> <!-- Fatal Slasher -->
 		</skillList>
 	</npc>
 	<npc id="24047" level="101" type="Monster" name="Castle Executor">
@@ -1187,11 +1277,14 @@
 		</collision>
 		<skillList>
 			<skill id="4416" level="6" /> <!-- Humanoids -->
+			<skill id="4440" level="5" /> <!-- Greater Paralysis Resistance -->
 			<skill id="5467" level="1" /> <!-- Dark Attack -->
-			<skill id="16758" level="1" /> <!-- Embryo -->
 			<skill id="14821" level="1" /> <!-- Instant Kill Attack Resistance -->
 			<skill id="16547" level="10" /> <!-- Danger Zone Attack Resistance -->
-			<skill id="4440" level="5" /> <!-- Greater Paralysis Resistance -->
+			<skill id="16758" level="1" /> <!-- Embryo -->
+			<skill id="16763" level="1" /> <!-- Critical Slasher -->
+			<skill id="16764" level="1" /> <!-- Fatal Strike -->
+			<skill id="16766" level="1" /> <!-- Fatal Slasher -->
 		</skillList>
 	</npc>
 	<npc id="24048" level="101" type="Monster" name="Enhanced Poslof">
@@ -1214,11 +1307,14 @@
 		</collision>
 		<skillList>
 			<skill id="4416" level="4" /> <!-- Animals -->
+			<skill id="4440" level="5" /> <!-- Greater Paralysis Resistance -->
 			<skill id="5467" level="1" /> <!-- Dark Attack -->
-			<skill id="16758" level="1" /> <!-- Embryo -->
 			<skill id="14821" level="1" /> <!-- Instant Kill Attack Resistance -->
 			<skill id="16547" level="10" /> <!-- Danger Zone Attack Resistance -->
-			<skill id="4440" level="5" /> <!-- Greater Paralysis Resistance -->
+			<skill id="16758" level="1" /> <!-- Embryo -->
+			<skill id="16763" level="1" /> <!-- Critical Slasher -->
+			<skill id="16764" level="1" /> <!-- Fatal Strike -->
+			<skill id="16766" level="1" /> <!-- Fatal Slasher -->
 		</skillList>
 	</npc>
 	<npc id="24049" level="101" type="Monster" name="Castle Inquisitor">
@@ -1241,11 +1337,14 @@
 		</collision>
 		<skillList>
 			<skill id="4416" level="9" /> <!-- Demons -->
+			<skill id="4440" level="5" /> <!-- Greater Paralysis Resistance -->
 			<skill id="5467" level="1" /> <!-- Dark Attack -->
-			<skill id="16758" level="1" /> <!-- Embryo -->
 			<skill id="14821" level="1" /> <!-- Instant Kill Attack Resistance -->
 			<skill id="16547" level="10" /> <!-- Danger Zone Attack Resistance -->
-			<skill id="4440" level="5" /> <!-- Greater Paralysis Resistance -->
+			<skill id="16758" level="1" /> <!-- Embryo -->
+			<skill id="16768" level="1" /> <!-- Energy Spike -->
+			<skill id="16769" level="1" /> <!-- Energy Burst -->
+			<skill id="16770" level="1" /> <!-- Energy Blast -->
 		</skillList>
 	</npc>
 	<npc id="24050" level="100" type="Monster" name="Knights Commander" title="Rune Castle Unit">
@@ -1268,10 +1367,10 @@
 		</collision>
 		<skillList>
 			<skill id="4416" level="14" /> <!-- Humans -->
+			<skill id="4435" level="5" /> <!-- High Stun Attack Resistance -->
 			<skill id="5467" level="1" /> <!-- Dark Attack -->
 			<skill id="14821" level="1" /> <!-- Instant Kill Attack Resistance -->
 			<skill id="16547" level="10" /> <!-- Danger Zone Attack Resistance -->
-			<skill id="4435" level="5" /> <!-- High Stun Attack Resistance -->
 		</skillList>
 	</npc>
 	<npc id="24051" level="100" type="Monster" name="Knights Warrior" title="Rune Castle Unit">
@@ -1294,10 +1393,10 @@
 		</collision>
 		<skillList>
 			<skill id="4416" level="14" /> <!-- Humans -->
+			<skill id="4435" level="5" /> <!-- High Stun Attack Resistance -->
 			<skill id="5467" level="1" /> <!-- Dark Attack -->
 			<skill id="14821" level="1" /> <!-- Instant Kill Attack Resistance -->
 			<skill id="16547" level="10" /> <!-- Danger Zone Attack Resistance -->
-			<skill id="4435" level="5" /> <!-- High Stun Attack Resistance -->
 		</skillList>
 	</npc>
 	<npc id="24052" level="100" type="Monster" name="Knights Archer" title="Rune Castle Unit">
@@ -1346,10 +1445,10 @@
 		</collision>
 		<skillList>
 			<skill id="4416" level="14" /> <!-- Humans -->
+			<skill id="4438" level="5" /> <!-- Greater Sleep Resistance -->
 			<skill id="5467" level="1" /> <!-- Dark Attack -->
 			<skill id="14821" level="1" /> <!-- Instant Kill Attack Resistance -->
 			<skill id="16547" level="10" /> <!-- Danger Zone Attack Resistance -->
-			<skill id="4438" level="5" /> <!-- Greater Sleep Resistance -->
 		</skillList>
 	</npc>
 	<npc id="24054" level="100" type="Monster" name="Knights Commander" title="Rune Castle Unit">
@@ -1372,10 +1471,10 @@
 		</collision>
 		<skillList>
 			<skill id="4416" level="1" /> <!-- Undead -->
+			<skill id="4435" level="5" /> <!-- High Stun Attack Resistance -->
 			<skill id="5467" level="1" /> <!-- Dark Attack -->
 			<skill id="14821" level="1" /> <!-- Instant Kill Attack Resistance -->
 			<skill id="16547" level="10" /> <!-- Danger Zone Attack Resistance -->
-			<skill id="4435" level="5" /> <!-- High Stun Attack Resistance -->
 		</skillList>
 	</npc>
 	<npc id="24055" level="100" type="Monster" name="Knights Warrior" title="Rune Castle Unit">
@@ -1398,10 +1497,10 @@
 		</collision>
 		<skillList>
 			<skill id="4416" level="1" /> <!-- Undead -->
+			<skill id="4435" level="5" /> <!-- High Stun Attack Resistance -->
 			<skill id="5467" level="1" /> <!-- Dark Attack -->
 			<skill id="14821" level="1" /> <!-- Instant Kill Attack Resistance -->
 			<skill id="16547" level="10" /> <!-- Danger Zone Attack Resistance -->
-			<skill id="4435" level="5" /> <!-- High Stun Attack Resistance -->
 		</skillList>
 	</npc>
 	<npc id="24056" level="100" type="Monster" name="Knights Archer" title="Rune Castle Unit">
@@ -1450,10 +1549,10 @@
 		</collision>
 		<skillList>
 			<skill id="4416" level="1" /> <!-- Undead -->
+			<skill id="4438" level="5" /> <!-- Greater Sleep Resistance -->
 			<skill id="5467" level="1" /> <!-- Dark Attack -->
 			<skill id="14821" level="1" /> <!-- Instant Kill Attack Resistance -->
 			<skill id="16547" level="10" /> <!-- Danger Zone Attack Resistance -->
-			<skill id="4438" level="5" /> <!-- Greater Sleep Resistance -->
 		</skillList>
 	</npc>
 	<npc id="24058" level="100" type="Monster" name="Vampire Warrior">
@@ -1476,10 +1575,10 @@
 		</collision>
 		<skillList>
 			<skill id="4416" level="1" /> <!-- Undead -->
+			<skill id="4435" level="5" /> <!-- High Stun Attack Resistance -->
 			<skill id="5467" level="1" /> <!-- Dark Attack -->
 			<skill id="14821" level="1" /> <!-- Instant Kill Attack Resistance -->
 			<skill id="16547" level="10" /> <!-- Danger Zone Attack Resistance -->
-			<skill id="4435" level="5" /> <!-- High Stun Attack Resistance -->
 		</skillList>
 	</npc>
 	<npc id="24059" level="100" type="Monster" name="Vampire Rogue">
@@ -1502,10 +1601,10 @@
 		</collision>
 		<skillList>
 			<skill id="4416" level="1" /> <!-- Undead -->
+			<skill id="4435" level="5" /> <!-- High Stun Attack Resistance -->
 			<skill id="5467" level="1" /> <!-- Dark Attack -->
 			<skill id="14821" level="1" /> <!-- Instant Kill Attack Resistance -->
 			<skill id="16547" level="10" /> <!-- Danger Zone Attack Resistance -->
-			<skill id="4435" level="5" /> <!-- High Stun Attack Resistance -->
 		</skillList>
 	</npc>
 	<npc id="24060" level="100" type="Monster" name="Vampire Shooter">
@@ -1554,10 +1653,10 @@
 		</collision>
 		<skillList>
 			<skill id="4416" level="1" /> <!-- Undead -->
+			<skill id="4438" level="5" /> <!-- Greater Sleep Resistance -->
 			<skill id="5467" level="1" /> <!-- Dark Attack -->
 			<skill id="14821" level="1" /> <!-- Instant Kill Attack Resistance -->
 			<skill id="16547" level="10" /> <!-- Danger Zone Attack Resistance -->
-			<skill id="4438" level="5" /> <!-- Greater Sleep Resistance -->
 		</skillList>
 	</npc>
 	<npc id="24062" level="100" type="Monster" name="Vampire Warrior">
@@ -1701,8 +1800,8 @@
 		<skillList>
 			<skill id="4416" level="1" /> <!-- Undead -->
 			<skill id="5467" level="1" /> <!-- Dark Attack -->
+			<skill id="14804" level="10" /> <!-- Damage Reflect Attack Resistance -->
 			<skill id="14823" level="1" /> <!-- Instant Kill Attack Resistance -->
-			<skill id="14804" level="10" /> <!-- Damage Reflection Attack Resistance -->
 		</skillList>
 		<dropLists>
 			<drop>
@@ -1786,8 +1885,8 @@
 		<skillList>
 			<skill id="4416" level="9" /> <!-- Demons -->
 			<skill id="5467" level="1" /> <!-- Dark Attack -->
+			<skill id="14804" level="10" /> <!-- Damage Reflect Attack Resistance -->
 			<skill id="14823" level="1" /> <!-- Instant Kill Attack Resistance -->
-			<skill id="14804" level="10" /> <!-- Damage Reflection Attack Resistance -->
 		</skillList>
 		<dropLists>
 			<drop>
@@ -1818,8 +1917,8 @@
 		<skillList>
 			<skill id="4416" level="9" /> <!-- Demons -->
 			<skill id="5467" level="1" /> <!-- Dark Attack -->
+			<skill id="14804" level="10" /> <!-- Damage Reflect Attack Resistance -->
 			<skill id="14823" level="1" /> <!-- Instant Kill Attack Resistance -->
-			<skill id="14804" level="10" /> <!-- Damage Reflection Attack Resistance -->
 		</skillList>
 		<dropLists>
 			<drop>
@@ -1875,8 +1974,8 @@
 		<skillList>
 			<skill id="4416" level="6" /> <!-- Humanoids -->
 			<skill id="5467" level="1" /> <!-- Dark Attack -->
+			<skill id="14804" level="10" /> <!-- Damage Reflect Attack Resistance -->
 			<skill id="14823" level="1" /> <!-- Instant Kill Attack Resistance -->
-			<skill id="14804" level="10" /> <!-- Damage Reflection Attack Resistance -->
 		</skillList>
 	</npc>
 </list>

@@ -18,9 +18,9 @@
 		</stats>
 		<status attackable="false" />
 		<skillList>
+			<skill id="4410" level="18" /> <!-- Extremely Strong P. Atk. -->
 			<skill id="4416" level="6" /> <!-- Humanoids -->
 			<skill id="5467" level="1" /> <!-- Dark Attack -->
-			<skill id="4410" level="18" /> <!-- Extremely Strong P. Atk. -->
 		</skillList>
 		<collision>
 			<radius normal="27" />
@@ -45,10 +45,10 @@
 		</stats>
 		<status attackable="false" />
 		<skillList>
-			<skill id="4416" level="1" /> <!-- Undead -->
-			<skill id="5467" level="1" /> <!-- Dark Attack -->
 			<skill id="4410" level="15" /> <!-- Strong P. Atk. -->
 			<skill id="4411" level="18" /> <!-- Extremely Strong M. Atk. -->
+			<skill id="4416" level="1" /> <!-- Undead -->
+			<skill id="5467" level="1" /> <!-- Dark Attack -->
 		</skillList>
 		<collision>
 			<radius normal="14.4" />
@@ -73,10 +73,10 @@
 		</stats>
 		<status attackable="false" />
 		<skillList>
-			<skill id="4416" level="6" /> <!-- Humanoids -->
-			<skill id="5467" level="1" /> <!-- Dark Attack -->
 			<skill id="4410" level="15" /> <!-- Strong P. Atk. -->
 			<skill id="4411" level="18" /> <!-- Extremely Strong M. Atk. -->
+			<skill id="4416" level="6" /> <!-- Humanoids -->
+			<skill id="5467" level="1" /> <!-- Dark Attack -->
 		</skillList>
 		<collision>
 			<radius normal="19" />
@@ -101,9 +101,9 @@
 		</stats>
 		<status attackable="false" />
 		<skillList>
+			<skill id="4410" level="18" /> <!-- Extremely Strong P. Atk. -->
 			<skill id="4416" level="1" /> <!-- Undead -->
 			<skill id="5467" level="1" /> <!-- Dark Attack -->
-			<skill id="4410" level="18" /> <!-- Extremely Strong P. Atk. -->
 		</skillList>
 		<collision>
 			<radius normal="43" />
@@ -128,9 +128,9 @@
 		</stats>
 		<status attackable="false" />
 		<skillList>
+			<skill id="4410" level="18" /> <!-- Extremely Strong P. Atk. -->
 			<skill id="4416" level="1" /> <!-- Undead -->
 			<skill id="5465" level="1" /> <!-- Earth Attack -->
-			<skill id="4410" level="18" /> <!-- Extremely Strong P. Atk. -->
 		</skillList>
 		<collision>
 			<radius normal="34" />
@@ -155,8 +155,8 @@
 		</stats>
 		<status attackable="false" />
 		<skillList>
-			<skill id="5467" level="1" /> <!-- Strong against the dark elemental. -->
 			<skill id="4416" level="6" /> <!-- Humanoids -->
+			<skill id="5467" level="1" /> <!-- Dark Attack -->
 		</skillList>
 		<collision>
 			<radius normal="27" />
@@ -207,8 +207,8 @@
 		</stats>
 		<status attackable="false" />
 		<skillList>
-			<skill id="5467" level="1" /> <!-- Strong against the dark elemental. -->
 			<skill id="4416" level="6" /> <!-- Humanoids -->
+			<skill id="5467" level="1" /> <!-- Dark Attack -->
 		</skillList>
 		<collision>
 			<radius normal="19" />
@@ -285,8 +285,8 @@
 		</stats>
 		<status attackable="false" />
 		<skillList>
-			<skill id="5467" level="1" /> <!-- Strong against the dark elemental. -->
 			<skill id="4416" level="2" /> <!-- Magic Creatures -->
+			<skill id="5467" level="1" /> <!-- Dark Attack -->
 		</skillList>
 		<collision>
 			<radius normal="20" />
@@ -308,8 +308,8 @@
 		</stats>
 		<status attackable="false" />
 		<skillList>
-			<skill id="4416" level="7" /> <!-- Spirits -->
 			<skill id="4410" level="13" /> <!-- Slightly Strong P. Atk. -->
+			<skill id="4416" level="7" /> <!-- Spirits -->
 		</skillList>
 		<collision>
 			<radius normal="23" />
@@ -349,10 +349,10 @@
 		</stats>
 		<status attackable="false" />
 		<skillList>
-			<skill id="4416" level="7" /> <!-- Spirits -->
 			<skill id="4410" level="15" /> <!-- Strong P. Atk. -->
 			<skill id="4412" level="12" /> <!-- Slightly Strong P. Def. -->
 			<skill id="4413" level="12" /> <!-- Slightly Strong M. Def. -->
+			<skill id="4416" level="7" /> <!-- Spirits -->
 		</skillList>
 		<collision>
 			<radius normal="23" />
@@ -392,11 +392,11 @@
 		</stats>
 		<status attackable="false" />
 		<skillList>
-			<skill id="4416" level="7" /> <!-- Spirits -->
 			<skill id="4410" level="15" /> <!-- Strong P. Atk. -->
 			<skill id="4411" level="15" /> <!-- Strong M. Atk. -->
 			<skill id="4412" level="14" /> <!-- Strong P. Def. -->
 			<skill id="4413" level="14" /> <!-- Strong M. Def. -->
+			<skill id="4416" level="7" /> <!-- Spirits -->
 		</skillList>
 		<collision>
 			<radius normal="23" />
@@ -506,10 +506,10 @@
 		</stats>
 		<status attackable="false" />
 		<skillList>
-			<skill id="4066" level="2" /> <!-- Twister -->
 			<skill id="4001" level="2" /> <!-- Gust -->
-			<skill id="4416" level="5" /> <!-- Plants -->
+			<skill id="4066" level="2" /> <!-- Twister -->
 			<skill id="4412" level="5" /> <!-- Very Weak P. Def. -->
+			<skill id="4416" level="5" /> <!-- Plants -->
 		</skillList>
 		<collision>
 			<radius normal="60" />
@@ -549,10 +549,10 @@
 		</stats>
 		<status attackable="false" />
 		<skillList>
-			<skill id="4066" level="2" /> <!-- Twister -->
 			<skill id="4001" level="2" /> <!-- Gust -->
-			<skill id="4416" level="5" /> <!-- Plants -->
+			<skill id="4066" level="2" /> <!-- Twister -->
 			<skill id="4413" level="5" /> <!-- Very Weak M. Def. -->
+			<skill id="4416" level="5" /> <!-- Plants -->
 		</skillList>
 		<collision>
 			<radius normal="60" />
@@ -592,12 +592,12 @@
 			<defence physical="137.23825693265" magical="100.07063809748" />
 		</stats>
 		<skillList>
+			<skill id="4173" level="3" /> <!-- Might -->
+			<skill id="4177" level="3" /> <!-- Cancellation -->
 			<skill id="4412" level="5" /> <!-- Very Weak P. Def. -->
 			<skill id="4416" level="6" /> <!-- Humanoids -->
-			<skill id="4737" level="3" /> <!-- Spinning Slasher -->
-			<skill id="4173" level="3" /> <!-- Might -->
 			<skill id="4722" level="3" /> <!-- Power Strike -->
-			<skill id="4177" level="3" /> <!-- Cancellation -->
+			<skill id="4737" level="3" /> <!-- Spinning Slasher -->
 		</skillList>
 		<collision>
 			<radius normal="24" />
@@ -633,12 +633,12 @@
 			<defence physical="137.09677419355" magical="100.97713739913" />
 		</stats>
 		<skillList>
+			<skill id="4173" level="3" /> <!-- Might -->
+			<skill id="4177" level="3" /> <!-- Cancellation -->
 			<skill id="4413" level="5" /> <!-- Very Weak M. Def. -->
 			<skill id="4416" level="6" /> <!-- Humanoids -->
-			<skill id="4737" level="3" /> <!-- Spinning Slasher -->
-			<skill id="4173" level="3" /> <!-- Might -->
 			<skill id="4722" level="3" /> <!-- Power Strike -->
-			<skill id="4177" level="3" /> <!-- Cancellation -->
+			<skill id="4737" level="3" /> <!-- Spinning Slasher -->
 		</skillList>
 		<collision>
 			<radius normal="24" />
@@ -680,6 +680,7 @@
 		<skillList>
 			<skill id="4416" level="10" /> <!-- Dragons -->
 			<skill id="5467" level="1" /> <!-- Dark Attack -->
+			<skill id="16331" level="1" /> <!-- Power Strike -->
 		</skillList>
 		<collision>
 			<radius normal="40" />
@@ -726,11 +727,12 @@
 			</speed>
 		</stats>
 		<skillList>
-			<skill id="4416" level="2" /> <!-- Magic Creatures -->
-			<skill id="5463" level="1" /> <!-- Water Attack -->
 			<skill id="4410" level="12" /> <!-- Slightly Strong P. Atk. -->
 			<skill id="4412" level="12" /> <!-- Slightly Strong P. Def. -->
 			<skill id="4413" level="12" /> <!-- Slightly Strong M. Def. -->
+			<skill id="4416" level="2" /> <!-- Magic Creatures -->
+			<skill id="5463" level="1" /> <!-- Water Attack -->
+			<skill id="16331" level="1" /> <!-- Power Strike -->
 		</skillList>
 		<collision>
 			<radius normal="25" />
@@ -778,10 +780,11 @@
 			</speed>
 		</stats>
 		<skillList>
-			<skill id="4416" level="10" /> <!-- Dragons -->
-			<skill id="5462" level="1" /> <!-- Fire Attack -->
 			<skill id="4412" level="12" /> <!-- Slightly Strong P. Def. -->
 			<skill id="4413" level="12" /> <!-- Slightly Strong M. Def. -->
+			<skill id="4416" level="10" /> <!-- Dragons -->
+			<skill id="5462" level="1" /> <!-- Fire Attack -->
+			<skill id="16331" level="1" /> <!-- Power Strike -->
 		</skillList>
 		<collision>
 			<radius normal="30" />
@@ -828,11 +831,12 @@
 			</speed>
 		</stats>
 		<skillList>
-			<skill id="4416" level="10" /> <!-- Dragons -->
-			<skill id="5464" level="1" /> <!-- Wind Attack -->
 			<skill id="4411" level="13" /> <!-- Slightly Strong M. Atk. -->
 			<skill id="4412" level="13" /> <!-- Slightly Strong P. Def. -->
 			<skill id="4413" level="13" /> <!-- Slightly Strong M. Def. -->
+			<skill id="4416" level="10" /> <!-- Dragons -->
+			<skill id="5464" level="1" /> <!-- Wind Attack -->
+			<skill id="16337" level="1" /> <!-- Magic Blast -->
 		</skillList>
 		<collision>
 			<radius normal="30" />
@@ -880,11 +884,12 @@
 			</speed>
 		</stats>
 		<skillList>
-			<skill id="4416" level="10" /> <!-- Dragons -->
-			<skill id="5465" level="1" /> <!-- Earth Attack -->
 			<skill id="4410" level="14" /> <!-- Strong P. Atk. -->
 			<skill id="4412" level="13" /> <!-- Slightly Strong P. Def. -->
 			<skill id="4413" level="13" /> <!-- Slightly Strong M. Def. -->
+			<skill id="4416" level="10" /> <!-- Dragons -->
+			<skill id="5465" level="1" /> <!-- Earth Attack -->
+			<skill id="16343" level="1" /> <!-- Fire Breath -->
 		</skillList>
 		<collision>
 			<radius normal="38" />
@@ -932,11 +937,12 @@
 			</speed>
 		</stats>
 		<skillList>
-			<skill id="4416" level="10" /> <!-- Dragons -->
-			<skill id="5465" level="1" /> <!-- Earth Attack -->
 			<skill id="4410" level="14" /> <!-- Strong P. Atk. -->
 			<skill id="4412" level="14" /> <!-- Strong P. Def. -->
 			<skill id="4413" level="14" /> <!-- Strong M. Def. -->
+			<skill id="4416" level="10" /> <!-- Dragons -->
+			<skill id="5465" level="1" /> <!-- Earth Attack -->
+			<skill id="16331" level="1" /> <!-- Power Strike -->
 		</skillList>
 		<collision>
 			<radius normal="22" />
@@ -1033,6 +1039,7 @@
 		<skillList>
 			<skill id="4416" level="10" /> <!-- Dragons -->
 			<skill id="5462" level="1" /> <!-- Fire Attack -->
+			<skill id="16332" level="1" /> <!-- Double Strike -->
 		</skillList>
 		<collision>
 			<radius normal="27" />
@@ -1079,11 +1086,12 @@
 			</speed>
 		</stats>
 		<skillList>
-			<skill id="4416" level="10" /> <!-- Dragons -->
-			<skill id="5467" level="1" /> <!-- Dark Attack -->
 			<skill id="4410" level="14" /> <!-- Strong P. Atk. -->
 			<skill id="4412" level="14" /> <!-- Strong P. Def. -->
 			<skill id="4413" level="14" /> <!-- Strong M. Def. -->
+			<skill id="4416" level="10" /> <!-- Dragons -->
+			<skill id="5467" level="1" /> <!-- Dark Attack -->
+			<skill id="16332" level="1" /> <!-- Double Strike -->
 		</skillList>
 		<collision>
 			<radius normal="24" />
@@ -1130,11 +1138,12 @@
 			</speed>
 		</stats>
 		<skillList>
-			<skill id="4416" level="10" /> <!-- Dragons -->
-			<skill id="5465" level="1" /> <!-- Earth Attack -->
 			<skill id="4411" level="13" /> <!-- Slightly Strong M. Atk. -->
 			<skill id="4412" level="13" /> <!-- Slightly Strong P. Def. -->
 			<skill id="4413" level="13" /> <!-- Slightly Strong M. Def. -->
+			<skill id="4416" level="10" /> <!-- Dragons -->
+			<skill id="5465" level="1" /> <!-- Earth Attack -->
+			<skill id="16337" level="2" /> <!-- Magic Blast -->
 		</skillList>
 		<collision>
 			<radius normal="33" />
@@ -1182,11 +1191,13 @@
 			</speed>
 		</stats>
 		<skillList>
-			<skill id="4416" level="10" /> <!-- Dragons -->
-			<skill id="5464" level="1" /> <!-- Wind Attack -->
 			<skill id="4410" level="14" /> <!-- Strong P. Atk. -->
 			<skill id="4412" level="14" /> <!-- Strong P. Def. -->
 			<skill id="4413" level="14" /> <!-- Strong M. Def. -->
+			<skill id="4416" level="10" /> <!-- Dragons -->
+			<skill id="5464" level="1" /> <!-- Wind Attack -->
+			<skill id="16336" level="1" /> <!-- Physical Decrease -->
+			<skill id="16343" level="1" /> <!-- Fire Breath -->
 		</skillList>
 		<collision>
 			<radius normal="33" />
@@ -1274,6 +1285,7 @@
 		<skillList>
 			<skill id="4416" level="10" /> <!-- Dragons -->
 			<skill id="5462" level="1" /> <!-- Fire Attack -->
+			<skill id="16332" level="1" /> <!-- Double Strike -->
 		</skillList>
 		<ai aggroRange="300" isAggressive="true" clanHelpRange="300">
 			<clanList>
@@ -1319,6 +1331,7 @@
 		<skillList>
 			<skill id="4416" level="1" /> <!-- Undead -->
 			<skill id="5467" level="1" /> <!-- Dark Attack -->
+			<skill id="16333" level="1" /> <!-- Long Attack -->
 		</skillList>
 		<collision>
 			<radius normal="12" />
@@ -1365,10 +1378,11 @@
 			</speed>
 		</stats>
 		<skillList>
-			<skill id="4416" level="1" /> <!-- Undead -->
-			<skill id="5467" level="1" /> <!-- Dark Attack -->
 			<skill id="4412" level="13" /> <!-- Slightly Strong P. Def. -->
 			<skill id="4413" level="13" /> <!-- Slightly Strong M. Def. -->
+			<skill id="4416" level="1" /> <!-- Undead -->
+			<skill id="5467" level="1" /> <!-- Dark Attack -->
+			<skill id="16331" level="1" /> <!-- Power Strike -->
 		</skillList>
 		<collision>
 			<radius normal="15" />
@@ -1416,11 +1430,12 @@
 			</speed>
 		</stats>
 		<skillList>
+			<skill id="4410" level="15" /> <!-- Strong P. Atk. -->
+			<skill id="4412" level="15" /> <!-- Strong P. Def. -->
+			<skill id="4413" level="15" /> <!-- Strong M. Def. -->
 			<skill id="4416" level="1" /> <!-- Undead -->
 			<skill id="5467" level="1" /> <!-- Dark Attack -->
-			<skill id="4410" level="15" /> <!-- Strong P. Atk. -->
-			<skill id="4412" level="14" /> <!-- Strong P. Def. -->
-			<skill id="4413" level="14" /> <!-- Strong M. Def. -->
+			<skill id="16331" level="1" /> <!-- Power Strike -->
 		</skillList>
 		<collision>
 			<radius normal="12" />
@@ -1467,11 +1482,12 @@
 			</speed>
 		</stats>
 		<skillList>
+			<skill id="4410" level="15" /> <!-- Strong P. Atk. -->
+			<skill id="4412" level="15" /> <!-- Strong P. Def. -->
+			<skill id="4413" level="15" /> <!-- Strong M. Def. -->
 			<skill id="4416" level="1" /> <!-- Undead -->
 			<skill id="5467" level="1" /> <!-- Dark Attack -->
-			<skill id="4410" level="15" /> <!-- Strong P. Atk. -->
-			<skill id="4412" level="14" /> <!-- Strong P. Def. -->
-			<skill id="4413" level="14" /> <!-- Strong M. Def. -->
+			<skill id="16331" level="1" /> <!-- Power Strike -->
 		</skillList>
 		<collision>
 			<radius normal="14" />
@@ -1521,6 +1537,8 @@
 		<skillList>
 			<skill id="4416" level="1" /> <!-- Undead -->
 			<skill id="5467" level="1" /> <!-- Dark Attack -->
+			<skill id="16331" level="1" /> <!-- Power Strike -->
+			<skill id="16336" level="1" /> <!-- Physical Decrease -->
 		</skillList>
 		<collision>
 			<radius normal="21" grown="24" />
@@ -1567,11 +1585,12 @@
 			</speed>
 		</stats>
 		<skillList>
+			<skill id="4410" level="15" /> <!-- Strong P. Atk. -->
+			<skill id="4412" level="15" /> <!-- Strong P. Def. -->
+			<skill id="4413" level="15" /> <!-- Strong M. Def. -->
 			<skill id="4416" level="1" /> <!-- Undead -->
 			<skill id="5467" level="1" /> <!-- Dark Attack -->
-			<skill id="4410" level="15" /> <!-- Strong P. Atk. -->
-			<skill id="4412" level="14" /> <!-- Strong P. Def. -->
-			<skill id="4413" level="14" /> <!-- Strong M. Def. -->
+			<skill id="16332" level="1" /> <!-- Double Strike -->
 		</skillList>
 		<collision>
 			<radius normal="20" />
@@ -1619,11 +1638,12 @@
 			</speed>
 		</stats>
 		<skillList>
+			<skill id="4410" level="15" /> <!-- Strong P. Atk. -->
+			<skill id="4412" level="15" /> <!-- Strong P. Def. -->
+			<skill id="4413" level="15" /> <!-- Strong M. Def. -->
 			<skill id="4416" level="1" /> <!-- Undead -->
 			<skill id="5467" level="1" /> <!-- Dark Attack -->
-			<skill id="4410" level="15" /> <!-- Strong P. Atk. -->
-			<skill id="4412" level="14" /> <!-- Strong P. Def. -->
-			<skill id="4413" level="14" /> <!-- Strong M. Def. -->
+			<skill id="16332" level="1" /> <!-- Double Strike -->
 		</skillList>
 		<collision>
 			<radius normal="22.88" />
@@ -1670,11 +1690,12 @@
 			</speed>
 		</stats>
 		<skillList>
+			<skill id="4411" level="14" /> <!-- Strong M. Atk. -->
+			<skill id="4412" level="14" /> <!-- Strong P. Def. -->
+			<skill id="4413" level="14" /> <!-- Strong M. Def. -->
 			<skill id="4416" level="1" /> <!-- Undead -->
 			<skill id="5467" level="1" /> <!-- Dark Attack -->
-			<skill id="4411" level="14" /> <!-- Strong M. Atk. -->
-			<skill id="4412" level="13" /> <!-- Slightly Strong P. Def. -->
-			<skill id="4413" level="13" /> <!-- Slightly Strong M. Def. -->
+			<skill id="16337" level="2" /> <!-- Magic Blast -->
 		</skillList>
 		<collision>
 			<radius normal="21.12" />
@@ -1721,11 +1742,13 @@
 			</speed>
 		</stats>
 		<skillList>
+			<skill id="4410" level="15" /> <!-- Strong P. Atk. -->
+			<skill id="4412" level="15" /> <!-- Strong P. Def. -->
+			<skill id="4413" level="15" /> <!-- Strong M. Def. -->
 			<skill id="4416" level="1" /> <!-- Undead -->
 			<skill id="5467" level="1" /> <!-- Dark Attack -->
-			<skill id="4410" level="15" /> <!-- Strong P. Atk. -->
-			<skill id="4412" level="14" /> <!-- Strong P. Def. -->
-			<skill id="4413" level="14" /> <!-- Strong M. Def. -->
+			<skill id="16335" level="1" /> <!-- Fear -->
+			<skill id="16344" level="1" /> <!-- Death's Bolt -->
 		</skillList>
 		<collision>
 			<radius normal="25" />
@@ -1883,8 +1906,8 @@
 		</stats>
 		<status undying="false" canBeSown="true" />
 		<skillList>
-			<skill id="4416" level="7" /> <!-- Spirits -->
 			<skill id="4410" level="14" /> <!-- Strong P. Atk. -->
+			<skill id="4416" level="7" /> <!-- Spirits -->
 		</skillList>
 		<exCrtEffect>false</exCrtEffect>
 		<ai clanHelpRange="300" />
@@ -1956,10 +1979,10 @@
 		</stats>
 		<status undying="false" canBeSown="true" />
 		<skillList>
-			<skill id="4416" level="4" /> <!-- Animals -->
 			<skill id="4410" level="14" /> <!-- Strong P. Atk. -->
 			<skill id="4412" level="13" /> <!-- Slightly Strong P. Def. -->
 			<skill id="4413" level="13" /> <!-- Slightly Strong M. Def. -->
+			<skill id="4416" level="4" /> <!-- Animals -->
 		</skillList>
 		<exCrtEffect>false</exCrtEffect>
 		<ai clanHelpRange="300" />
@@ -1995,8 +2018,8 @@
 		</stats>
 		<status undying="false" canBeSown="true" />
 		<skillList>
-			<skill id="4416" level="4" /> <!-- Animals -->
 			<skill id="4410" level="14" /> <!-- Strong P. Atk. -->
+			<skill id="4416" level="4" /> <!-- Animals -->
 		</skillList>
 		<exCrtEffect>false</exCrtEffect>
 		<ai clanHelpRange="300" />
@@ -2032,8 +2055,8 @@
 		</stats>
 		<status undying="false" canBeSown="true" />
 		<skillList>
-			<skill id="4416" level="4" /> <!-- Animals -->
 			<skill id="4410" level="14" /> <!-- Strong P. Atk. -->
+			<skill id="4416" level="4" /> <!-- Animals -->
 		</skillList>
 		<exCrtEffect>false</exCrtEffect>
 		<ai clanHelpRange="300" />
@@ -2067,10 +2090,10 @@
 		</stats>
 		<status attackable="false" />
 		<skillList>
-			<skill id="4416" level="4" /> <!-- Animals -->
 			<skill id="4410" level="14" /> <!-- Strong P. Atk. -->
 			<skill id="4412" level="13" /> <!-- Slightly Strong P. Def. -->
 			<skill id="4413" level="13" /> <!-- Slightly Strong M. Def. -->
+			<skill id="4416" level="4" /> <!-- Animals -->
 		</skillList>
 		<exCrtEffect>false</exCrtEffect>
 		<collision>
@@ -2104,10 +2127,10 @@
 		</stats>
 		<status undying="false" canBeSown="true" />
 		<skillList>
-			<skill id="4416" level="7" /> <!-- Spirits -->
 			<skill id="4410" level="13" /> <!-- Slightly Strong P. Atk. -->
 			<skill id="4412" level="13" /> <!-- Slightly Strong P. Def. -->
 			<skill id="4413" level="13" /> <!-- Slightly Strong M. Def. -->
+			<skill id="4416" level="7" /> <!-- Spirits -->
 		</skillList>
 		<exCrtEffect>false</exCrtEffect>
 		<ai clanHelpRange="300" />
@@ -2142,14 +2165,10 @@
 		</stats>
 		<status undying="false" canBeSown="true" />
 		<skillList>
-			<skill id="4408" level="1" /> <!-- HP Increase (1x) -->
-			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
-			<skill id="4410" level="15" /> <!-- Average P. Atk. -->
-			<skill id="4411" level="11" /> <!-- Average M. Atk. -->
-			<skill id="4412" level="14" /> <!-- Average P. Def. -->
-			<skill id="4413" level="14" /> <!-- Average M. Def. -->
-			<skill id="4414" level="2" /> <!-- Standard Type -->
-			<skill id="4416" level="7" /> <!-- Animals -->
+			<skill id="4410" level="15" /> <!-- Strong P. Atk. -->
+			<skill id="4412" level="14" /> <!-- Strong P. Def. -->
+			<skill id="4413" level="14" /> <!-- Strong M. Def. -->
+			<skill id="4416" level="7" /> <!-- Spirits -->
 		</skillList>
 		<exCrtEffect>false</exCrtEffect>
 		<ai clanHelpRange="300" />
@@ -2189,11 +2208,11 @@
 		</stats>
 		<status undying="false" canBeSown="true" />
 		<skillList>
-			<skill id="4416" level="7" /> <!-- Spirits -->
 			<skill id="4410" level="14" /> <!-- Strong P. Atk. -->
 			<skill id="4411" level="14" /> <!-- Strong M. Atk. -->
 			<skill id="4412" level="13" /> <!-- Slightly Strong P. Def. -->
 			<skill id="4413" level="13" /> <!-- Slightly Strong M. Def. -->
+			<skill id="4416" level="7" /> <!-- Spirits -->
 		</skillList>
 		<exCrtEffect>false</exCrtEffect>
 		<ai clanHelpRange="300" />
@@ -2228,11 +2247,11 @@
 		</stats>
 		<status undying="false" canBeSown="true" />
 		<skillList>
-			<skill id="4416" level="13" /> <!-- Fairies -->
 			<skill id="4410" level="14" /> <!-- Strong P. Atk. -->
 			<skill id="4411" level="14" /> <!-- Strong M. Atk. -->
 			<skill id="4412" level="13" /> <!-- Slightly Strong P. Def. -->
 			<skill id="4413" level="13" /> <!-- Slightly Strong M. Def. -->
+			<skill id="4416" level="13" /> <!-- Fairies -->
 		</skillList>
 		<exCrtEffect>false</exCrtEffect>
 		<ai clanHelpRange="300" />
@@ -2267,11 +2286,11 @@
 		</stats>
 		<status undying="false" canBeSown="true" randomWalk="false" />
 		<skillList>
-			<skill id="4416" level="7" /> <!-- Spirits -->
 			<skill id="4410" level="16" /> <!-- Very Strong P. Atk. -->
 			<skill id="4411" level="16" /> <!-- Very Strong M. Atk. -->
 			<skill id="4412" level="15" /> <!-- Strong P. Def. -->
 			<skill id="4413" level="15" /> <!-- Strong M. Def. -->
+			<skill id="4416" level="7" /> <!-- Spirits -->
 		</skillList>
 		<exCrtEffect>false</exCrtEffect>
 		<ai clanHelpRange="300" />
@@ -2306,9 +2325,8 @@
 		</stats>
 		<status undying="false" canBeSown="true" randomWalk="false" />
 		<skillList>
-			<skill id="4410" level="13" /> <!-- Average P. Atk. -->
+			<skill id="4410" level="13" /> <!-- Slightly Strong P. Atk. -->
 			<skill id="4416" level="4" /> <!-- Animals -->
-			<skill id="4293" level="1" /> <!-- Animals -->
 		</skillList>
 		<exCrtEffect>false</exCrtEffect>
 		<ai clanHelpRange="300" />
@@ -2347,9 +2365,8 @@
 		</stats>
 		<status undying="false" canBeSown="true" randomWalk="false" />
 		<skillList>
-			<skill id="4410" level="13" /> <!-- Average P. Atk. -->
+			<skill id="4410" level="13" /> <!-- Slightly Strong P. Atk. -->
 			<skill id="4416" level="7" /> <!-- Spirits -->
-			<skill id="4296" level="1" /> <!-- Spirits -->
 		</skillList>
 		<exCrtEffect>false</exCrtEffect>
 		<ai clanHelpRange="300" />
@@ -2395,14 +2412,14 @@
 		</stats>
 		<status attackable="false" />
 		<skillList>
-			<skill id="16365" level="1" /> <!-- Dimensional Defense Decrease -->
-			<skill id="16368" level="1" /> <!-- Dimensional Strike -->
 			<skill id="4416" level="6" /> <!-- Humanoids -->
 			<skill id="5462" level="1" /> <!-- Fire Attack -->
-			<skill id="16357" level="1" /> <!-- Dimensional Barrier -->
+			<skill id="16357" level="2" /> <!-- Dimensional Barrier -->
 			<skill id="16358" level="1" /> <!-- Dimensional Armor -->
 			<skill id="16361" level="1" /> <!-- Dimensional Warp Stun -->
 			<skill id="16364" level="1" /> <!-- Dimensional Warp Pull/ Danger Zone -->
+			<skill id="16365" level="1" /> <!-- Dimensional Defense Decrease -->
+			<skill id="16368" level="1" /> <!-- Dimensional Strike -->
 		</skillList>
 		<ai clanHelpRange="400" aggroRange="600">
 			<clanList>
@@ -2442,13 +2459,13 @@
 		</stats>
 		<status attackable="false" />
 		<skillList>
-			<skill id="16367" level="1" /> <!-- Dimensional Speed Decrease -->
-			<skill id="16380" level="1" /> <!-- Dimensional Recoil Shot -->
 			<skill id="4416" level="6" /> <!-- Humanoids -->
 			<skill id="5462" level="1" /> <!-- Fire Attack -->
-			<skill id="16357" level="1" /> <!-- Dimensional Barrier -->
+			<skill id="16357" level="2" /> <!-- Dimensional Barrier -->
 			<skill id="16358" level="2" /> <!-- Dimensional Armor -->
 			<skill id="16361" level="1" /> <!-- Dimensional Warp Stun -->
+			<skill id="16367" level="1" /> <!-- Dimensional Speed Decrease -->
+			<skill id="16380" level="1" /> <!-- Dimensional Recoil Shot -->
 		</skillList>
 		<ai clanHelpRange="400" aggroRange="600">
 			<clanList>
@@ -2487,17 +2504,17 @@
 		</stats>
 		<status attackable="false" />
 		<skillList>
-			<skill id="16383" level="1" /> <!-- Dimensional Silence -->
-			<skill id="16382" level="1" /> <!-- Dimensional Death Ring -->
-			<skill id="16366" level="1" /> <!-- Dimensional Resistance Decrease -->
-			<skill id="16372" level="1" /> <!-- Dimensional Spike -->
-			<skill id="16381" level="1" /> <!-- Dimensional Shield -->
 			<skill id="4416" level="9" /> <!-- Demons -->
 			<skill id="5467" level="1" /> <!-- Dark Attack -->
-			<skill id="16357" level="1" /> <!-- Dimensional Barrier -->
+			<skill id="16357" level="2" /> <!-- Dimensional Barrier -->
 			<skill id="16358" level="1" /> <!-- Dimensional Armor -->
 			<skill id="16360" level="1" /> <!-- Dimensional Warp Paralysis -->
 			<skill id="16363" level="1" /> <!-- Dimensioal Warp Aerial Yoke -->
+			<skill id="16366" level="1" /> <!-- Dimensional Resistance Decrease -->
+			<skill id="16372" level="1" /> <!-- Dimensional Spike -->
+			<skill id="16381" level="1" /> <!-- Dimensional Shield -->
+			<skill id="16382" level="1" /> <!-- Dimensional Death Ring -->
+			<skill id="16383" level="1" /> <!-- Dimensional Silence -->
 		</skillList>
 		<ai clanHelpRange="400" aggroRange="600">
 			<clanList>
@@ -2537,15 +2554,15 @@
 		</stats>
 		<status attackable="false" />
 		<skillList>
-			<skill id="16371" level="1" /> <!-- Dimensional Storm -->
-			<skill id="16375" level="1" /> <!-- Dimensional Hammer -->
-			<skill id="16368" level="1" /> <!-- Dimensional Strike -->
 			<skill id="4416" level="11" /> <!-- Giants -->
 			<skill id="5465" level="1" /> <!-- Earth Attack -->
 			<skill id="16357" level="1" /> <!-- Dimensional Barrier -->
 			<skill id="16358" level="2" /> <!-- Dimensional Armor -->
 			<skill id="16359" level="1" /> <!-- Dimensional Warp Hold -->
 			<skill id="16362" level="1" /> <!-- Dimensional Warp Knock Back/ Knock Down -->
+			<skill id="16368" level="1" /> <!-- Dimensional Strike -->
+			<skill id="16371" level="1" /> <!-- Dimensional Storm -->
+			<skill id="16375" level="1" /> <!-- Dimensional Hammer -->
 		</skillList>
 		<ai clanHelpRange="400" aggroRange="600">
 			<clanList>
@@ -2585,7 +2602,7 @@
 		<skillList>
 			<skill id="4416" level="7" /> <!-- Spirits -->
 			<skill id="5462" level="1" /> <!-- Fire Attack -->
-			<skill id="16357" level="1" /> <!-- Dimensional Barrier -->
+			<skill id="16357" level="2" /> <!-- Dimensional Barrier -->
 			<skill id="16358" level="1" /> <!-- Dimensional Armor -->
 			<skill id="16359" level="1" /> <!-- Dimensional Warp Hold -->
 			<skill id="16361" level="1" /> <!-- Dimensional Warp Stun -->
@@ -2618,16 +2635,16 @@
 		</stats>
 		<status attackable="false" />
 		<skillList>
-			<skill id="16371" level="1" /> <!-- Dimensional Storm -->
-			<skill id="16365" level="1" /> <!-- Dimensional Defense Decrease -->
-			<skill id="16367" level="1" /> <!-- Dimensional Speed Decrease -->
-			<skill id="16368" level="1" /> <!-- Dimensional Strike -->
 			<skill id="4416" level="6" /> <!-- Humanoids -->
 			<skill id="5463" level="1" /> <!-- Water Attack -->
 			<skill id="16357" level="1" /> <!-- Dimensional Barrier -->
 			<skill id="16358" level="2" /> <!-- Dimensional Armor -->
 			<skill id="16359" level="1" /> <!-- Dimensional Warp Hold -->
 			<skill id="16362" level="1" /> <!-- Dimensional Warp Knock Back/ Knock Down -->
+			<skill id="16365" level="1" /> <!-- Dimensional Defense Decrease -->
+			<skill id="16367" level="1" /> <!-- Dimensional Speed Decrease -->
+			<skill id="16368" level="1" /> <!-- Dimensional Strike -->
+			<skill id="16371" level="1" /> <!-- Dimensional Storm -->
 		</skillList>
 		<ai clanHelpRange="400" aggroRange="600">
 			<clanList>
@@ -2666,17 +2683,17 @@
 		</stats>
 		<status attackable="false" />
 		<skillList>
-			<skill id="16371" level="1" /> <!-- Dimensional Storm -->
-			<skill id="16384" level="1" /> <!-- Dimensional Bleed -->
-			<skill id="16365" level="1" /> <!-- Dimensional Defense Decrease -->
-			<skill id="16367" level="1" /> <!-- Dimensional Speed Decrease -->
-			<skill id="16368" level="1" /> <!-- Dimensional Strike -->
 			<skill id="4416" level="9" /> <!-- Demons -->
 			<skill id="5462" level="1" /> <!-- Fire Attack -->
-			<skill id="16357" level="1" /> <!-- Dimensional Barrier -->
+			<skill id="16357" level="2" /> <!-- Dimensional Barrier -->
 			<skill id="16358" level="1" /> <!-- Dimensional Armor -->
 			<skill id="16361" level="1" /> <!-- Dimensional Warp Stun -->
 			<skill id="16364" level="1" /> <!-- Dimensional Warp Pull/ Danger Zone -->
+			<skill id="16365" level="1" /> <!-- Dimensional Defense Decrease -->
+			<skill id="16367" level="1" /> <!-- Dimensional Speed Decrease -->
+			<skill id="16368" level="1" /> <!-- Dimensional Strike -->
+			<skill id="16371" level="1" /> <!-- Dimensional Storm -->
+			<skill id="16384" level="1" /> <!-- Dimensional Bleed -->
 		</skillList>
 		<ai clanHelpRange="400" aggroRange="600">
 			<clanList>
@@ -2715,11 +2732,6 @@
 		</stats>
 		<status attackable="false" />
 		<skillList>
-			<skill id="16371" level="1" /> <!-- Dimensional Storm -->
-			<skill id="16383" level="1" /> <!-- Dimensional Silence -->
-			<skill id="16365" level="1" /> <!-- Dimensional Defense Decrease -->
-			<skill id="16367" level="1" /> <!-- Dimensional Speed Decrease -->
-			<skill id="16368" level="1" /> <!-- Dimensional Strike -->
 			<skill id="4416" level="1" /> <!-- Undead -->
 			<skill id="5467" level="1" /> <!-- Dark Attack -->
 			<skill id="16357" level="1" /> <!-- Dimensional Barrier -->
@@ -2728,6 +2740,11 @@
 			<skill id="16360" level="1" /> <!-- Dimensional Warp Paralysis -->
 			<skill id="16361" level="1" /> <!-- Dimensional Warp Stun -->
 			<skill id="16364" level="1" /> <!-- Dimensional Warp Pull/ Danger Zone -->
+			<skill id="16365" level="1" /> <!-- Dimensional Defense Decrease -->
+			<skill id="16367" level="1" /> <!-- Dimensional Speed Decrease -->
+			<skill id="16368" level="1" /> <!-- Dimensional Strike -->
+			<skill id="16371" level="1" /> <!-- Dimensional Storm -->
+			<skill id="16383" level="1" /> <!-- Dimensional Silence -->
 		</skillList>
 		<ai clanHelpRange="400" aggroRange="600">
 			<clanList>
@@ -2763,15 +2780,15 @@
 		</stats>
 		<status attackable="false" />
 		<skillList>
-			<skill id="16371" level="1" /> <!-- Dimensional Storm -->
-			<skill id="16369" level="1" /> <!-- Dimensional Crush -->
-			<skill id="16365" level="1" /> <!-- Dimensional Defense Decrease -->
 			<skill id="4416" level="9" /> <!-- Demons -->
 			<skill id="5462" level="1" /> <!-- Fire Attack -->
-			<skill id="16357" level="1" /> <!-- Dimensional Barrier -->
+			<skill id="16357" level="2" /> <!-- Dimensional Barrier -->
 			<skill id="16358" level="1" /> <!-- Dimensional Armor -->
 			<skill id="16361" level="1" /> <!-- Dimensional Warp Stun -->
 			<skill id="16364" level="1" /> <!-- Dimensional Warp Pull/ Danger Zone -->
+			<skill id="16365" level="1" /> <!-- Dimensional Defense Decrease -->
+			<skill id="16369" level="1" /> <!-- Dimensional Crush -->
+			<skill id="16371" level="1" /> <!-- Dimensional Storm -->
 		</skillList>
 		<collision>
 			<radius normal="21" />
@@ -2802,16 +2819,16 @@
 		</stats>
 		<status attackable="false" />
 		<skillList>
-			<skill id="16371" level="1" /> <!-- Dimensional Storm -->
-			<skill id="16369" level="1" /> <!-- Dimensional Crush -->
-			<skill id="16365" level="1" /> <!-- Dimensional Defense Decrease -->
-			<skill id="16375" level="1" /> <!-- Dimensional Hammer -->
 			<skill id="4416" level="11" /> <!-- Giants -->
 			<skill id="5465" level="1" /> <!-- Earth Attack -->
 			<skill id="16357" level="1" /> <!-- Dimensional Barrier -->
 			<skill id="16358" level="2" /> <!-- Dimensional Armor -->
 			<skill id="16359" level="1" /> <!-- Dimensional Warp Hold -->
 			<skill id="16362" level="1" /> <!-- Dimensional Warp Knock Back/ Knock Down -->
+			<skill id="16365" level="1" /> <!-- Dimensional Defense Decrease -->
+			<skill id="16369" level="1" /> <!-- Dimensional Crush -->
+			<skill id="16371" level="1" /> <!-- Dimensional Storm -->
+			<skill id="16375" level="1" /> <!-- Dimensional Hammer -->
 		</skillList>
 		<collision>
 			<radius normal="24" />
@@ -2842,17 +2859,17 @@
 		</stats>
 		<status attackable="false" />
 		<skillList>
-			<skill id="16383" level="1" /> <!-- Dimensional Silence -->
-			<skill id="16382" level="1" /> <!-- Dimensional Death Ring -->
-			<skill id="16373" level="1" /> <!-- Dimensional Crash -->
-			<skill id="16366" level="1" /> <!-- Dimensional Resistance Decrease -->
-			<skill id="16381" level="1" /> <!-- Dimensional Shield -->
 			<skill id="4416" level="6" /> <!-- Humanoids -->
 			<skill id="5467" level="1" /> <!-- Dark Attack -->
-			<skill id="16357" level="1" /> <!-- Dimensional Barrier -->
+			<skill id="16357" level="2" /> <!-- Dimensional Barrier -->
 			<skill id="16358" level="1" /> <!-- Dimensional Armor -->
 			<skill id="16360" level="1" /> <!-- Dimensional Warp Paralysis -->
 			<skill id="16363" level="1" /> <!-- Dimensioal Warp Aerial Yoke -->
+			<skill id="16366" level="1" /> <!-- Dimensional Resistance Decrease -->
+			<skill id="16373" level="1" /> <!-- Dimensional Crash -->
+			<skill id="16381" level="1" /> <!-- Dimensional Shield -->
+			<skill id="16382" level="1" /> <!-- Dimensional Death Ring -->
+			<skill id="16383" level="1" /> <!-- Dimensional Silence -->
 		</skillList>
 		<collision>
 			<radius normal="18" />
@@ -2884,7 +2901,7 @@
 		<skillList>
 			<skill id="4416" level="7" /> <!-- Spirits -->
 			<skill id="5462" level="1" /> <!-- Fire Attack -->
-			<skill id="16357" level="1" /> <!-- Dimensional Barrier -->
+			<skill id="16357" level="2" /> <!-- Dimensional Barrier -->
 			<skill id="16358" level="1" /> <!-- Dimensional Armor -->
 			<skill id="16359" level="1" /> <!-- Dimensional Warp Hold -->
 			<skill id="16361" level="1" /> <!-- Dimensional Warp Stun -->
@@ -2914,17 +2931,17 @@
 		</stats>
 		<status attackable="false" />
 		<skillList>
-			<skill id="16371" level="1" /> <!-- Dimensional Storm -->
-			<skill id="16369" level="1" /> <!-- Dimensional Crush -->
-			<skill id="16367" level="1" /> <!-- Dimensional Speed Decrease -->
-			<skill id="16375" level="1" /> <!-- Dimensional Hammer -->
-			<skill id="16386" level="1" /> <!-- Dimensional Stun -->
 			<skill id="4416" level="2" /> <!-- Magic Creatures -->
 			<skill id="5465" level="1" /> <!-- Earth Attack -->
 			<skill id="16357" level="1" /> <!-- Dimensional Barrier -->
 			<skill id="16358" level="2" /> <!-- Dimensional Armor -->
 			<skill id="16359" level="1" /> <!-- Dimensional Warp Hold -->
 			<skill id="16361" level="1" /> <!-- Dimensional Warp Stun -->
+			<skill id="16367" level="1" /> <!-- Dimensional Speed Decrease -->
+			<skill id="16369" level="1" /> <!-- Dimensional Crush -->
+			<skill id="16371" level="1" /> <!-- Dimensional Storm -->
+			<skill id="16375" level="1" /> <!-- Dimensional Hammer -->
+			<skill id="16386" level="1" /> <!-- Dimensional Stun -->
 		</skillList>
 		<collision>
 			<radius normal="10" />
@@ -2955,11 +2972,6 @@
 		</stats>
 		<status attackable="false" />
 		<skillList>
-			<skill id="16371" level="1" /> <!-- Dimensional Storm -->
-			<skill id="16369" level="1" /> <!-- Dimensional Crush -->
-			<skill id="16365" level="1" /> <!-- Dimensional Defense Decrease -->
-			<skill id="16375" level="1" /> <!-- Dimensional Hammer -->
-			<skill id="16386" level="1" /> <!-- Dimensional Stun -->
 			<skill id="4416" level="1" /> <!-- Undead -->
 			<skill id="5467" level="1" /> <!-- Dark Attack -->
 			<skill id="16357" level="1" /> <!-- Dimensional Barrier -->
@@ -2968,6 +2980,11 @@
 			<skill id="16360" level="1" /> <!-- Dimensional Warp Paralysis -->
 			<skill id="16361" level="1" /> <!-- Dimensional Warp Stun -->
 			<skill id="16364" level="1" /> <!-- Dimensional Warp Pull/ Danger Zone -->
+			<skill id="16365" level="1" /> <!-- Dimensional Defense Decrease -->
+			<skill id="16369" level="1" /> <!-- Dimensional Crush -->
+			<skill id="16371" level="1" /> <!-- Dimensional Storm -->
+			<skill id="16375" level="1" /> <!-- Dimensional Hammer -->
+			<skill id="16386" level="1" /> <!-- Dimensional Stun -->
 		</skillList>
 		<collision>
 			<radius normal="23" />
@@ -2997,16 +3014,16 @@
 		</stats>
 		<status attackable="false" />
 		<skillList>
-			<skill id="16371" level="1" /> <!-- Dimensional Storm -->
-			<skill id="16384" level="1" /> <!-- Dimensional Bleed -->
-			<skill id="16369" level="1" /> <!-- Dimensional Crush -->
-			<skill id="16367" level="1" /> <!-- Dimensional Speed Decrease -->
 			<skill id="4416" level="3" /> <!-- Beast -->
 			<skill id="5466" level="1" /> <!-- Holy Attacks -->
-			<skill id="16357" level="1" /> <!-- Dimensional Barrier -->
+			<skill id="16357" level="2" /> <!-- Dimensional Barrier -->
 			<skill id="16358" level="1" /> <!-- Dimensional Armor -->
 			<skill id="16362" level="1" /> <!-- Dimensional Warp Knock Back/ Knock Down -->
 			<skill id="16363" level="1" /> <!-- Dimensioal Warp Aerial Yoke -->
+			<skill id="16367" level="1" /> <!-- Dimensional Speed Decrease -->
+			<skill id="16369" level="1" /> <!-- Dimensional Crush -->
+			<skill id="16371" level="1" /> <!-- Dimensional Storm -->
+			<skill id="16384" level="1" /> <!-- Dimensional Bleed -->
 		</skillList>
 		<collision>
 			<radius normal="13" />
@@ -3037,19 +3054,19 @@
 		</stats>
 		<status attackable="false" />
 		<skillList>
-			<skill id="16379" level="1" /> <!-- Dimensional Remedy -->
-			<skill id="16383" level="1" /> <!-- Dimensional Silence -->
-			<skill id="16382" level="1" /> <!-- Dimensional Death Ring -->
-			<skill id="16367" level="1" /> <!-- Dimensional Speed Decrease -->
-			<skill id="16366" level="1" /> <!-- Dimensional Resistance Decrease -->
-			<skill id="16374" level="1" /> <!-- Dimensional Destruction -->
-			<skill id="16381" level="1" /> <!-- Dimensional Shield -->
 			<skill id="4416" level="1" /> <!-- Undead -->
 			<skill id="5467" level="1" /> <!-- Dark Attack -->
-			<skill id="16357" level="1" /> <!-- Dimensional Barrier -->
+			<skill id="16357" level="2" /> <!-- Dimensional Barrier -->
 			<skill id="16358" level="1" /> <!-- Dimensional Armor -->
 			<skill id="16360" level="1" /> <!-- Dimensional Warp Paralysis -->
 			<skill id="16363" level="1" /> <!-- Dimensioal Warp Aerial Yoke -->
+			<skill id="16366" level="1" /> <!-- Dimensional Resistance Decrease -->
+			<skill id="16367" level="1" /> <!-- Dimensional Speed Decrease -->
+			<skill id="16374" level="1" /> <!-- Dimensional Destruction -->
+			<skill id="16379" level="1" /> <!-- Dimensional Remedy -->
+			<skill id="16381" level="1" /> <!-- Dimensional Shield -->
+			<skill id="16382" level="1" /> <!-- Dimensional Death Ring -->
+			<skill id="16383" level="1" /> <!-- Dimensional Silence -->
 		</skillList>
 		<collision>
 			<radius normal="12" />
@@ -3080,15 +3097,15 @@
 		</stats>
 		<status attackable="false" />
 		<skillList>
-			<skill id="16385" level="1" /> <!-- Dimesional Devil -->
-			<skill id="16370" level="1" /> <!-- Dimensional Slasher -->
-			<skill id="16386" level="1" /> <!-- Dimensional Stun -->
 			<skill id="4416" level="1" /> <!-- Undead -->
 			<skill id="5467" level="1" /> <!-- Dark Attack -->
 			<skill id="16357" level="1" /> <!-- Dimensional Barrier -->
 			<skill id="16358" level="2" /> <!-- Dimensional Armor -->
 			<skill id="16359" level="1" /> <!-- Dimensional Warp Hold -->
 			<skill id="16364" level="1" /> <!-- Dimensional Warp Pull/ Danger Zone -->
+			<skill id="16370" level="1" /> <!-- Dimensional Slasher -->
+			<skill id="16385" level="1" /> <!-- Dimesional Devil -->
+			<skill id="16386" level="1" /> <!-- Dimensional Stun -->
 		</skillList>
 		<collision>
 			<radius normal="12" />
@@ -3120,7 +3137,7 @@
 		<skillList>
 			<skill id="4416" level="7" /> <!-- Spirits -->
 			<skill id="5462" level="1" /> <!-- Fire Attack -->
-			<skill id="16357" level="1" /> <!-- Dimensional Barrier -->
+			<skill id="16357" level="2" /> <!-- Dimensional Barrier -->
 			<skill id="16358" level="1" /> <!-- Dimensional Armor -->
 			<skill id="16359" level="1" /> <!-- Dimensional Warp Hold -->
 			<skill id="16361" level="1" /> <!-- Dimensional Warp Stun -->
@@ -3149,18 +3166,18 @@
 		</stats>
 		<status attackable="false" />
 		<skillList>
-			<skill id="16371" level="1" /> <!-- Dimensional Storm -->
-			<skill id="16385" level="1" /> <!-- Dimesional Devil -->
-			<skill id="16384" level="1" /> <!-- Dimensional Bleed -->
-			<skill id="16370" level="1" /> <!-- Dimensional Slasher -->
-			<skill id="16367" level="1" /> <!-- Dimensional Speed Decrease -->
-			<skill id="16386" level="1" /> <!-- Dimensional Stun -->
 			<skill id="4416" level="3" /> <!-- Beast -->
 			<skill id="5466" level="1" /> <!-- Holy Attacks -->
-			<skill id="16357" level="1" /> <!-- Dimensional Barrier -->
+			<skill id="16357" level="2" /> <!-- Dimensional Barrier -->
 			<skill id="16358" level="1" /> <!-- Dimensional Armor -->
 			<skill id="16362" level="1" /> <!-- Dimensional Warp Knock Back/ Knock Down -->
 			<skill id="16363" level="1" /> <!-- Dimensioal Warp Aerial Yoke -->
+			<skill id="16367" level="1" /> <!-- Dimensional Speed Decrease -->
+			<skill id="16370" level="1" /> <!-- Dimensional Slasher -->
+			<skill id="16371" level="1" /> <!-- Dimensional Storm -->
+			<skill id="16384" level="1" /> <!-- Dimensional Bleed -->
+			<skill id="16385" level="1" /> <!-- Dimesional Devil -->
+			<skill id="16386" level="1" /> <!-- Dimensional Stun -->
 		</skillList>
 		<collision>
 			<radius normal="16" />
@@ -3191,16 +3208,16 @@
 		</stats>
 		<status attackable="false" />
 		<skillList>
-			<skill id="16385" level="1" /> <!-- Dimesional Devil -->
-			<skill id="16384" level="1" /> <!-- Dimensional Bleed -->
-			<skill id="16370" level="1" /> <!-- Dimensional Slasher -->
-			<skill id="16367" level="1" /> <!-- Dimensional Speed Decrease -->
 			<skill id="4416" level="7" /> <!-- Spirits -->
 			<skill id="5462" level="1" /> <!-- Fire Attack -->
 			<skill id="16357" level="1" /> <!-- Dimensional Barrier -->
 			<skill id="16358" level="2" /> <!-- Dimensional Armor -->
 			<skill id="16359" level="1" /> <!-- Dimensional Warp Hold -->
 			<skill id="16361" level="1" /> <!-- Dimensional Warp Stun -->
+			<skill id="16367" level="1" /> <!-- Dimensional Speed Decrease -->
+			<skill id="16370" level="1" /> <!-- Dimensional Slasher -->
+			<skill id="16384" level="1" /> <!-- Dimensional Bleed -->
+			<skill id="16385" level="1" /> <!-- Dimesional Devil -->
 		</skillList>
 		<collision>
 			<radius normal="10" />
@@ -3232,19 +3249,19 @@
 		</stats>
 		<status attackable="false" />
 		<skillList>
-			<skill id="16385" level="1" /> <!-- Dimesional Devil -->
-			<skill id="16384" level="1" /> <!-- Dimensional Bleed -->
-			<skill id="16370" level="1" /> <!-- Dimensional Slasher -->
-			<skill id="16365" level="1" /> <!-- Dimensional Defense Decrease -->
-			<skill id="16386" level="1" /> <!-- Dimensional Stun -->
 			<skill id="4416" level="1" /> <!-- Undead -->
 			<skill id="5467" level="1" /> <!-- Dark Attack -->
-			<skill id="16357" level="1" /> <!-- Dimensional Barrier -->
+			<skill id="16357" level="2" /> <!-- Dimensional Barrier -->
 			<skill id="16358" level="3" /> <!-- Dimensional Armor -->
 			<skill id="16359" level="1" /> <!-- Dimensional Warp Hold -->
 			<skill id="16360" level="1" /> <!-- Dimensional Warp Paralysis -->
 			<skill id="16361" level="1" /> <!-- Dimensional Warp Stun -->
 			<skill id="16364" level="1" /> <!-- Dimensional Warp Pull/ Danger Zone -->
+			<skill id="16365" level="1" /> <!-- Dimensional Defense Decrease -->
+			<skill id="16370" level="1" /> <!-- Dimensional Slasher -->
+			<skill id="16384" level="1" /> <!-- Dimensional Bleed -->
+			<skill id="16385" level="1" /> <!-- Dimesional Devil -->
+			<skill id="16386" level="1" /> <!-- Dimensional Stun -->
 		</skillList>
 		<collision>
 			<radius normal="24" />
@@ -3275,16 +3292,16 @@
 		</stats>
 		<status attackable="false" />
 		<skillList>
-			<skill id="16385" level="1" /> <!-- Dimesional Devil -->
-			<skill id="16370" level="1" /> <!-- Dimensional Slasher -->
-			<skill id="16367" level="1" /> <!-- Dimensional Speed Decrease -->
-			<skill id="16386" level="1" /> <!-- Dimensional Stun -->
 			<skill id="4416" level="2" /> <!-- Magic Creatures -->
 			<skill id="5465" level="1" /> <!-- Earth Attack -->
 			<skill id="16357" level="1" /> <!-- Dimensional Barrier -->
 			<skill id="16358" level="2" /> <!-- Dimensional Armor -->
 			<skill id="16359" level="1" /> <!-- Dimensional Warp Hold -->
 			<skill id="16361" level="1" /> <!-- Dimensional Warp Stun -->
+			<skill id="16367" level="1" /> <!-- Dimensional Speed Decrease -->
+			<skill id="16370" level="1" /> <!-- Dimensional Slasher -->
+			<skill id="16385" level="1" /> <!-- Dimesional Devil -->
+			<skill id="16386" level="1" /> <!-- Dimensional Stun -->
 		</skillList>
 		<collision>
 			<radius normal="10" />
@@ -3312,10 +3329,10 @@
 		</stats>
 		<status undying="false" canBeSown="true" />
 		<skillList>
-			<skill id="4416" level="4" /> <!-- Animals -->
 			<skill id="4410" level="14" /> <!-- Strong P. Atk. -->
 			<skill id="4412" level="13" /> <!-- Slightly Strong P. Def. -->
 			<skill id="4413" level="13" /> <!-- Slightly Strong M. Def. -->
+			<skill id="4416" level="4" /> <!-- Animals -->
 		</skillList>
 		<exCrtEffect>false</exCrtEffect>
 		<ai clanHelpRange="300" />
@@ -3349,10 +3366,10 @@
 		</stats>
 		<status attackable="false" />
 		<skillList>
-			<skill id="4416" level="4" /> <!-- Animals -->
 			<skill id="4410" level="15" /> <!-- Strong P. Atk. -->
 			<skill id="4412" level="14" /> <!-- Strong P. Def. -->
 			<skill id="4413" level="14" /> <!-- Strong M. Def. -->
+			<skill id="4416" level="4" /> <!-- Animals -->
 		</skillList>
 		<collision>
 			<radius normal="6" />
@@ -3385,10 +3402,10 @@
 		</stats>
 		<status undying="false" canBeSown="true" />
 		<skillList>
-			<skill id="4416" level="7" /> <!-- Spirits -->
 			<skill id="4410" level="13" /> <!-- Slightly Strong P. Atk. -->
 			<skill id="4412" level="13" /> <!-- Slightly Strong P. Def. -->
 			<skill id="4413" level="13" /> <!-- Slightly Strong M. Def. -->
+			<skill id="4416" level="7" /> <!-- Spirits -->
 		</skillList>
 		<exCrtEffect>false</exCrtEffect>
 		<ai clanHelpRange="300" />
@@ -3426,12 +3443,11 @@
 		</stats>
 		<status attackable="false" />
 		<skillList>
-			<skill id="4416" level="9" /> <!-- Demons -->
-			<skill id="5465" level="1" /> <!-- Earth Attack -->
+			<skill id="4379" level="5" /> <!-- Spear Resistance -->
 			<skill id="4410" level="17" /> <!-- Very Strong P. Atk. -->
 			<skill id="4412" level="13" /> <!-- Slightly Strong P. Def. -->
-			<skill id="4379" level="5" /> <!-- Spear Resistance -->
-			<skill id="16547" level="10" /> <!-- Danger Zone Attack Resistance -->
+			<skill id="4416" level="9" /> <!-- Demons -->
+			<skill id="5465" level="1" /> <!-- Earth Attack -->
 		</skillList>
 		<collision>
 			<radius normal="34" />
@@ -3478,13 +3494,12 @@
 			</attribute>
 		</stats>
 		<skillList>
-			<skill id="4416" level="9" /> <!-- Demons -->
-			<skill id="5465" level="1" /> <!-- Earth Attack -->
+			<skill id="4379" level="5" /> <!-- Spear Resistance -->
 			<skill id="4410" level="19" /> <!-- Extremely Strong P. Atk. -->
 			<skill id="4412" level="16" /> <!-- Very Strong P. Def. -->
 			<skill id="4413" level="16" /> <!-- Very Strong M. Def. -->
-			<skill id="4379" level="5" /> <!-- Spear Resistance -->
-			<skill id="16547" level="10" /> <!-- Danger Zone Attack Resistance -->
+			<skill id="4416" level="9" /> <!-- Demons -->
+			<skill id="5465" level="1" /> <!-- Earth Attack -->
 		</skillList>
 		<collision>
 			<radius normal="30" />
@@ -3533,12 +3548,10 @@
 		</stats>
 		<status attackable="false" />
 		<skillList>
-			<skill id="5462" level="1" /> <!-- Fire Attack -->
-			<skill id="4411" level="16" /> <!-- Very Strong M. Atk. -->
 			<skill id="4379" level="4" /> <!-- Spear Resistance -->
-			<skill id="23568" level="1" /> <!-- Monster Dueling -->
-			<skill id="16547" level="8" /> <!-- Danger Zone Attack Resistance -->
+			<skill id="4411" level="16" /> <!-- Very Strong M. Atk. -->
 			<skill id="4416" level="10" /> <!-- Dragons -->
+			<skill id="5462" level="1" /> <!-- Fire Attack -->
 		</skillList>
 		<collision>
 			<radius normal="29" />
@@ -3594,12 +3607,10 @@
 			</attribute>
 		</stats>
 		<skillList>
-			<skill id="18217" level="1" />
+			<skill id="4379" level="4" /> <!-- Spear Resistance -->
+			<skill id="4410" level="16" /> <!-- Very Strong P. Atk. -->
 			<skill id="4416" level="10" /> <!-- Dragons -->
 			<skill id="5465" level="1" /> <!-- Earth Attack -->
-			<skill id="4410" level="16" /> <!-- Very Strong P. Atk. -->
-			<skill id="4379" level="4" /> <!-- Spear Resistance -->
-			<skill id="16547" level="8" /> <!-- Danger Zone Attack Resistance -->
 		</skillList>
 		<collision>
 			<radius normal="38" />
@@ -3646,11 +3657,10 @@
 			</attribute>
 		</stats>
 		<skillList>
+			<skill id="4379" level="4" /> <!-- Spear Resistance -->
+			<skill id="4410" level="16" /> <!-- Very Strong P. Atk. -->
 			<skill id="4416" level="3" /> <!-- Beast -->
 			<skill id="5465" level="1" /> <!-- Earth Attack -->
-			<skill id="4410" level="16" /> <!-- Very Strong P. Atk. -->
-			<skill id="4379" level="4" /> <!-- Spear Resistance -->
-			<skill id="16547" level="8" /> <!-- Danger Zone Attack Resistance -->
 		</skillList>
 		<collision>
 			<radius normal="26" />
@@ -3702,9 +3712,12 @@
 			<height normal="31" />
 		</collision>
 		<skillList>
-			<skill id="18217" level="1" />
-			<skill id="5462" level="1" /> <!-- Fire Attack -->
+			<skill id="4379" level="4" /> <!-- Spear Resistance -->
+			<skill id="4411" level="16" /> <!-- Very Strong M. Atk. -->
+			<skill id="4412" level="16" /> <!-- Very Strong P. Def. -->
+			<skill id="4413" level="16" /> <!-- Very Strong M. Def. -->
 			<skill id="4416" level="2" /> <!-- Magic Creatures -->
+			<skill id="5462" level="1" /> <!-- Fire Attack -->
 		</skillList>
 		<dropLists>
 			<drop>
@@ -3739,11 +3752,10 @@
 			</attribute>
 		</stats>
 		<skillList>
+			<skill id="4379" level="4" /> <!-- Spear Resistance -->
+			<skill id="4410" level="16" /> <!-- Very Strong P. Atk. -->
 			<skill id="4416" level="9" /> <!-- Demons -->
 			<skill id="5465" level="1" /> <!-- Earth Attack -->
-			<skill id="4410" level="16" /> <!-- Very Strong P. Atk. -->
-			<skill id="4379" level="4" /> <!-- Spear Resistance -->
-			<skill id="16547" level="8" /> <!-- Danger Zone Attack Resistance -->
 		</skillList>
 		<collision>
 			<radius normal="12" />
@@ -3789,12 +3801,11 @@
 			</attribute>
 		</stats>
 		<skillList>
-			<skill id="4416" level="7" /> <!-- Spirits -->
-			<skill id="5462" level="1" /> <!-- Fire Attack -->
+			<skill id="4379" level="5" /> <!-- Spear Resistance -->
 			<skill id="4410" level="17" /> <!-- Very Strong P. Atk. -->
 			<skill id="4412" level="13" /> <!-- Slightly Strong P. Def. -->
-			<skill id="4379" level="5" /> <!-- Spear Resistance -->
-			<skill id="16547" level="10" /> <!-- Danger Zone Attack Resistance -->
+			<skill id="4416" level="7" /> <!-- Spirits -->
+			<skill id="5462" level="1" /> <!-- Fire Attack -->
 		</skillList>
 		<collision>
 			<radius normal="20" />
@@ -3841,11 +3852,10 @@
 			</attribute>
 		</stats>
 		<skillList>
+			<skill id="4379" level="5" /> <!-- Spear Resistance -->
+			<skill id="4411" level="17" /> <!-- Very Strong M. Atk. -->
 			<skill id="4416" level="9" /> <!-- Demons -->
 			<skill id="5462" level="1" /> <!-- Fire Attack -->
-			<skill id="4411" level="17" /> <!-- Very Strong M. Atk. -->
-			<skill id="4379" level="5" /> <!-- Spear Resistance -->
-			<skill id="16547" level="10" /> <!-- Danger Zone Attack Resistance -->
 		</skillList>
 		<collision>
 			<radius normal="20" />
@@ -3892,13 +3902,12 @@
 			</attribute>
 		</stats>
 		<skillList>
-			<skill id="4416" level="6" /> <!-- Humanoids -->
-			<skill id="5462" level="1" /> <!-- Fire Attack -->
+			<skill id="4379" level="5" /> <!-- Spear Resistance -->
 			<skill id="4410" level="19" /> <!-- Extremely Strong P. Atk. -->
 			<skill id="4412" level="16" /> <!-- Very Strong P. Def. -->
 			<skill id="4413" level="16" /> <!-- Very Strong M. Def. -->
-			<skill id="4379" level="5" /> <!-- Spear Resistance -->
-			<skill id="16547" level="10" /> <!-- Danger Zone Attack Resistance -->
+			<skill id="4416" level="6" /> <!-- Humanoids -->
+			<skill id="5462" level="1" /> <!-- Fire Attack -->
 		</skillList>
 		<collision>
 			<radius normal="19.6" />
@@ -3947,13 +3956,12 @@
 			</attribute>
 		</stats>
 		<skillList>
-			<skill id="4416" level="2" /> <!-- Magic Creatures -->
-			<skill id="5462" level="1" /> <!-- Fire Attack -->
+			<skill id="4379" level="5" /> <!-- Spear Resistance -->
 			<skill id="4411" level="19" /> <!-- Extremely Strong M. Atk. -->
 			<skill id="4412" level="16" /> <!-- Very Strong P. Def. -->
 			<skill id="4413" level="16" /> <!-- Very Strong M. Def. -->
-			<skill id="4379" level="5" /> <!-- Spear Resistance -->
-			<skill id="16547" level="10" /> <!-- Danger Zone Attack Resistance -->
+			<skill id="4416" level="2" /> <!-- Magic Creatures -->
+			<skill id="5462" level="1" /> <!-- Fire Attack -->
 		</skillList>
 		<collision>
 			<radius normal="15" />
@@ -4003,13 +4011,12 @@
 			</attribute>
 		</stats>
 		<skillList>
-			<skill id="4416" level="1" /> <!-- Undead -->
-			<skill id="5462" level="1" /> <!-- Fire Attack -->
+			<skill id="4379" level="5" /> <!-- Spear Resistance -->
 			<skill id="4411" level="19" /> <!-- Extremely Strong M. Atk. -->
 			<skill id="4412" level="16" /> <!-- Very Strong P. Def. -->
 			<skill id="4413" level="16" /> <!-- Very Strong M. Def. -->
-			<skill id="4379" level="5" /> <!-- Spear Resistance -->
-			<skill id="16547" level="10" /> <!-- Danger Zone Attack Resistance -->
+			<skill id="4416" level="1" /> <!-- Undead -->
+			<skill id="5462" level="1" /> <!-- Fire Attack -->
 		</skillList>
 		<collision>
 			<radius normal="18" />
@@ -4059,11 +4066,10 @@
 			</attribute>
 		</stats>
 		<skillList>
+			<skill id="4379" level="4" /> <!-- Spear Resistance -->
+			<skill id="4410" level="16" /> <!-- Very Strong P. Atk. -->
 			<skill id="4416" level="6" /> <!-- Humanoids -->
 			<skill id="5465" level="1" /> <!-- Earth Attack -->
-			<skill id="4410" level="16" /> <!-- Very Strong P. Atk. -->
-			<skill id="4379" level="4" /> <!-- Spear Resistance -->
-			<skill id="16547" level="8" /> <!-- Danger Zone Attack Resistance -->
 		</skillList>
 		<collision>
 			<radius normal="15" />

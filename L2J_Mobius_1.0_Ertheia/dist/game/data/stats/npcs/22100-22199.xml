@@ -34,12 +34,9 @@
 		<skillList>
 			<skill id="4085" level="1" /> <!-- Critical Damage -->
 			<skill id="4086" level="1" /> <!-- Critical Chance -->
-			<skill id="4379" level="5" /> <!-- Resist Spear Weapons -->
+			<skill id="4379" level="5" /> <!-- Spear Resistance -->
 			<skill id="4408" level="16" /> <!-- HP Increase (8x) -->
-			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
 			<skill id="4410" level="19" /> <!-- Extremely Strong P. Atk. -->
-			<skill id="4411" level="11" /> <!-- Average M. Atk. -->
-			<skill id="4412" level="11" /> <!-- Average P. Def. -->
 			<skill id="4413" level="20" /> <!-- Extremely Strong M. Def. -->
 			<skill id="4414" level="1" /> <!-- Heavy Armor Type -->
 			<skill id="4415" level="3" /> <!-- One-handed Sword -->
@@ -118,12 +115,15 @@
 		</stats>
 		<status undying="false" canBeSown="true" />
 		<skillList>
-			<skill id="4032" level="5" /> <!-- NPC Strike -->
-			<skill id="4416" level="2" /> <!-- Magic Creatures -->
+			<skill id="4032" level="5" /> <!-- Power Strike -->
+			<skill id="4379" level="5" /> <!-- Spear Resistance -->
+			<skill id="4408" level="16" /> <!-- HP Increase (8x) -->
 			<skill id="4410" level="19" /> <!-- Extremely Strong P. Atk. -->
 			<skill id="4413" level="20" /> <!-- Extremely Strong M. Def. -->
 			<skill id="4414" level="1" /> <!-- Heavy Armor Type -->
-			<skill id="4379" level="5" /> <!-- Spear Resistance -->
+			<skill id="4415" level="7" /> <!-- Dagger -->
+			<skill id="4416" level="2" /> <!-- Magic Creatures -->
+			<skill id="4417" level="5" /> <!-- Beast -->
 		</skillList>
 		<shots shotChance="30" spiritChance="30" />
 		<exCrtEffect>false</exCrtEffect>
@@ -201,6 +201,16 @@
 				<clan>ICE</clan>
 			</clanList>
 		</ai>
+		<skillList>
+			<skill id="4379" level="5" /> <!-- Spear Resistance -->
+			<skill id="4408" level="16" /> <!-- HP Increase (8x) -->
+			<skill id="4410" level="19" /> <!-- Extremely Strong P. Atk. -->
+			<skill id="4413" level="20" /> <!-- Extremely Strong M. Def. -->
+			<skill id="4414" level="1" /> <!-- Heavy Armor Type -->
+			<skill id="4415" level="4" /> <!-- One-handed Sword -->
+			<skill id="4416" level="2" /> <!-- Magic Creatures -->
+			<skill id="4417" level="5" /> <!-- Beast -->
+		</skillList>
 		<collision>
 			<radius normal="16" />
 			<height normal="50" />
@@ -259,20 +269,17 @@
 		</stats>
 		<status undying="false" canBeSown="true" />
 		<skillList>
-			<skill id="4065" level="5" /> <!-- NPC Heal -->
-			<skill id="4379" level="5" /> <!-- Resist Spear Weapons -->
+			<skill id="4065" level="5" /> <!-- Heal -->
+			<skill id="4379" level="5" /> <!-- Spear Resistance -->
 			<skill id="4408" level="16" /> <!-- HP Increase (8x) -->
-			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
 			<skill id="4410" level="19" /> <!-- Extremely Strong P. Atk. -->
-			<skill id="4411" level="11" /> <!-- Average M. Atk. -->
 			<skill id="4412" level="18" /> <!-- Extremely Strong P. Def. -->
-			<skill id="4413" level="11" /> <!-- Average M. Def. -->
 			<skill id="4414" level="1" /> <!-- Heavy Armor Type -->
 			<skill id="4415" level="3" /> <!-- One-handed Sword -->
 			<skill id="4416" level="4" /> <!-- Animals -->
 			<skill id="4417" level="1" /> <!-- Animals -->
-			<skill id="4438" level="5" /> <!-- Greater Resist Sleep -->
-			<skill id="4439" level="5" /> <!-- Greater Resist Hold -->
+			<skill id="4438" level="5" /> <!-- Greater Sleep Resistance -->
+			<skill id="4439" level="5" /> <!-- Greater Hold Resistance -->
 		</skillList>
 		<shots shotChance="30" spiritChance="30" />
 		<exCrtEffect>false</exCrtEffect>
@@ -346,20 +353,17 @@
 		</stats>
 		<status undying="false" canBeSown="true" />
 		<skillList>
-			<skill id="4379" level="5" /> <!-- Resist Spear Weapons -->
+			<skill id="4379" level="5" /> <!-- Spear Resistance -->
 			<skill id="4408" level="16" /> <!-- HP Increase (8x) -->
-			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
 			<skill id="4410" level="19" /> <!-- Extremely Strong P. Atk. -->
-			<skill id="4411" level="11" /> <!-- Average M. Atk. -->
 			<skill id="4412" level="19" /> <!-- Extremely Strong P. Def. -->
-			<skill id="4413" level="11" /> <!-- Average M. Def. -->
 			<skill id="4414" level="1" /> <!-- Heavy Armor Type -->
 			<skill id="4415" level="3" /> <!-- One-handed Sword -->
-			<skill id="4416" level="3" /> <!-- Beasts -->
-			<skill id="4417" level="4" /> <!-- Beasts -->
-			<skill id="4438" level="5" /> <!-- Greater Resist Sleep -->
-			<skill id="4439" level="5" /> <!-- Greater Resist Hold -->
-			<skill id="5044" level="2" /> <!-- NPC Ultimate Defense -->
+			<skill id="4416" level="3" /> <!-- Beast -->
+			<skill id="4417" level="4" /> <!-- Beast -->
+			<skill id="4438" level="5" /> <!-- Greater Sleep Resistance -->
+			<skill id="4439" level="5" /> <!-- Greater Hold Resistance -->
+			<skill id="5044" level="2" /> <!-- Ultimate Defense -->
 		</skillList>
 		<shots shotChance="30" spiritChance="30" />
 		<exCrtEffect>false</exCrtEffect>
@@ -428,18 +432,15 @@
 		</stats>
 		<status undying="false" canBeSown="true" />
 		<skillList>
-			<skill id="4032" level="7" /> <!-- NPC Strike -->
+			<skill id="4032" level="7" /> <!-- Power Strike -->
 			<skill id="4408" level="12" /> <!-- HP Increase (4x) -->
-			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
 			<skill id="4410" level="14" /> <!-- Strong P. Atk. -->
-			<skill id="4411" level="11" /> <!-- Average M. Atk. -->
 			<skill id="4412" level="14" /> <!-- Strong P. Def. -->
-			<skill id="4413" level="11" /> <!-- Average M. Def. -->
 			<skill id="4414" level="1" /> <!-- Heavy Armor Type -->
-			<skill id="4415" level="5" /> <!-- Blunt Weapons -->
+			<skill id="4415" level="5" /> <!-- Blunt Weapon -->
 			<skill id="4416" level="6" /> <!-- Humanoids -->
 			<skill id="4417" level="29" /> <!-- Humanoids -->
-			<skill id="4789" level="2" /> <!-- NPC High Level -->
+			<skill id="4789" level="2" /> <!-- High Lv. -->
 		</skillList>
 		<shots shotChance="30" spiritChance="30" />
 		<exCrtEffect>false</exCrtEffect>
@@ -513,18 +514,15 @@
 		</stats>
 		<status undying="false" canBeSown="true" />
 		<skillList>
-			<skill id="4067" level="7" /> <!-- NPC Mortal Blow -->
+			<skill id="4067" level="7" /> <!-- Blow -->
 			<skill id="4408" level="12" /> <!-- HP Increase (4x) -->
-			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
 			<skill id="4410" level="14" /> <!-- Strong P. Atk. -->
-			<skill id="4411" level="11" /> <!-- Average M. Atk. -->
 			<skill id="4412" level="14" /> <!-- Strong P. Def. -->
-			<skill id="4413" level="11" /> <!-- Average M. Def. -->
 			<skill id="4414" level="1" /> <!-- Heavy Armor Type -->
 			<skill id="4415" level="3" /> <!-- One-handed Sword -->
 			<skill id="4416" level="6" /> <!-- Humanoids -->
 			<skill id="4417" level="29" /> <!-- Humanoids -->
-			<skill id="4789" level="3" /> <!-- NPC High Level -->
+			<skill id="4789" level="3" /> <!-- High Lv. -->
 		</skillList>
 		<shots shotChance="30" spiritChance="30" />
 		<exCrtEffect>false</exCrtEffect>
@@ -599,18 +597,15 @@
 		</stats>
 		<status undying="false" canBeSown="true" />
 		<skillList>
-			<skill id="4067" level="7" /> <!-- NPC Mortal Blow -->
+			<skill id="4067" level="7" /> <!-- Blow -->
 			<skill id="4408" level="12" /> <!-- HP Increase (4x) -->
-			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
 			<skill id="4410" level="14" /> <!-- Strong P. Atk. -->
-			<skill id="4411" level="11" /> <!-- Average M. Atk. -->
 			<skill id="4412" level="14" /> <!-- Strong P. Def. -->
-			<skill id="4413" level="11" /> <!-- Average M. Def. -->
 			<skill id="4414" level="1" /> <!-- Heavy Armor Type -->
 			<skill id="4415" level="3" /> <!-- One-handed Sword -->
 			<skill id="4416" level="6" /> <!-- Humanoids -->
 			<skill id="4417" level="29" /> <!-- Humanoids -->
-			<skill id="4789" level="3" /> <!-- NPC High Level -->
+			<skill id="4789" level="3" /> <!-- High Lv. -->
 		</skillList>
 		<shots shotChance="30" spiritChance="30" />
 		<exCrtEffect>false</exCrtEffect>
@@ -681,23 +676,20 @@
 		</stats>
 		<status undying="false" canBeSown="true" />
 		<skillList>
-			<skill id="4029" level="3" /> <!-- NPC Shield -->
+			<skill id="4029" level="3" /> <!-- Shield -->
 			<skill id="4036" level="7" /> <!-- Poison -->
 			<skill id="4073" level="7" /> <!-- Stun -->
 			<skill id="4408" level="12" /> <!-- HP Increase (4x) -->
-			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
 			<skill id="4410" level="14" /> <!-- Strong P. Atk. -->
-			<skill id="4411" level="11" /> <!-- Average M. Atk. -->
 			<skill id="4412" level="14" /> <!-- Strong P. Def. -->
-			<skill id="4413" level="11" /> <!-- Average M. Def. -->
 			<skill id="4414" level="1" /> <!-- Heavy Armor Type -->
 			<skill id="4415" level="3" /> <!-- One-handed Sword -->
 			<skill id="4416" level="6" /> <!-- Humanoids -->
 			<skill id="4417" level="29" /> <!-- Humanoids -->
-			<skill id="4435" level="5" /> <!-- Greater Resist Stun -->
-			<skill id="4438" level="5" /> <!-- Greater Resist Sleep -->
-			<skill id="4439" level="5" /> <!-- Greater Resist Hold -->
-			<skill id="4789" level="3" /> <!-- NPC High Level -->
+			<skill id="4435" level="5" /> <!-- Greater Stun Resistance -->
+			<skill id="4438" level="5" /> <!-- Greater Sleep Resistance -->
+			<skill id="4439" level="5" /> <!-- Greater Hold Resistance -->
+			<skill id="4789" level="3" /> <!-- High Lv. -->
 		</skillList>
 		<shots shotChance="30" spiritChance="30" />
 		<exCrtEffect>false</exCrtEffect>
@@ -769,22 +761,19 @@
 		</stats>
 		<status undying="false" />
 		<skillList>
-			<skill id="4032" level="7" /> <!-- NPC Strike -->
+			<skill id="4032" level="7" /> <!-- Power Strike -->
 			<skill id="4072" level="7" /> <!-- Stun -->
 			<skill id="4408" level="12" /> <!-- HP Increase (4x) -->
-			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
 			<skill id="4410" level="14" /> <!-- Strong P. Atk. -->
-			<skill id="4411" level="11" /> <!-- Average M. Atk. -->
 			<skill id="4412" level="14" /> <!-- Strong P. Def. -->
-			<skill id="4413" level="11" /> <!-- Average M. Def. -->
 			<skill id="4414" level="1" /> <!-- Heavy Armor Type -->
 			<skill id="4415" level="3" /> <!-- One-handed Sword -->
 			<skill id="4416" level="6" /> <!-- Humanoids -->
 			<skill id="4417" level="29" /> <!-- Humanoids -->
-			<skill id="4435" level="5" /> <!-- Greater Resist Stun -->
-			<skill id="4438" level="5" /> <!-- Greater Resist Sleep -->
-			<skill id="4439" level="5" /> <!-- Greater Resist Hold -->
-			<skill id="4789" level="3" /> <!-- NPC High Level -->
+			<skill id="4435" level="5" /> <!-- Greater Stun Resistance -->
+			<skill id="4438" level="5" /> <!-- Greater Sleep Resistance -->
+			<skill id="4439" level="5" /> <!-- Greater Hold Resistance -->
+			<skill id="4789" level="3" /> <!-- High Lv. -->
 		</skillList>
 		<shots shotChance="30" spiritChance="30" />
 		<exCrtEffect>false</exCrtEffect>
@@ -855,23 +844,20 @@
 		</stats>
 		<status undying="false" canBeSown="true" />
 		<skillList>
-			<skill id="4030" level="3" /> <!-- NPC Clan Might -->
-			<skill id="4232" level="7" /> <!-- NPC AE Strike -->
+			<skill id="4030" level="3" /> <!-- Might -->
+			<skill id="4232" level="7" /> <!-- Spinning Slasher -->
 			<skill id="4408" level="12" /> <!-- HP Increase (4x) -->
-			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
 			<skill id="4410" level="16" /> <!-- Very Strong P. Atk. -->
-			<skill id="4411" level="11" /> <!-- Average M. Atk. -->
 			<skill id="4412" level="14" /> <!-- Strong P. Def. -->
-			<skill id="4413" level="11" /> <!-- Average M. Def. -->
 			<skill id="4414" level="1" /> <!-- Heavy Armor Type -->
 			<skill id="4415" level="3" /> <!-- One-handed Sword -->
 			<skill id="4416" level="6" /> <!-- Humanoids -->
 			<skill id="4417" level="29" /> <!-- Humanoids -->
-			<skill id="4435" level="5" /> <!-- Greater Resist Stun -->
-			<skill id="4438" level="5" /> <!-- Greater Resist Sleep -->
-			<skill id="4439" level="5" /> <!-- Greater Resist Hold -->
-			<skill id="4571" level="7" /> <!-- NPC Blazing Circle -->
-			<skill id="4789" level="3" /> <!-- NPC High Level -->
+			<skill id="4435" level="5" /> <!-- Greater Stun Resistance -->
+			<skill id="4438" level="5" /> <!-- Greater Sleep Resistance -->
+			<skill id="4439" level="5" /> <!-- Greater Hold Resistance -->
+			<skill id="4571" level="7" /> <!-- Blazing Circle -->
+			<skill id="4789" level="3" /> <!-- High Lv. -->
 		</skillList>
 		<shots shotChance="30" spiritChance="30" />
 		<exCrtEffect>false</exCrtEffect>
@@ -939,19 +925,16 @@
 		</stats>
 		<status undying="false" canBeSown="true" />
 		<skillList>
-			<skill id="4257" level="7" /> <!-- NPC Hydroblast - Magic -->
+			<skill id="4257" level="7" /> <!-- Hydro Blast -->
 			<skill id="4408" level="12" /> <!-- HP Increase (4x) -->
-			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
-			<skill id="4410" level="11" /> <!-- Average P. Atk. -->
 			<skill id="4411" level="14" /> <!-- Strong M. Atk. -->
-			<skill id="4412" level="11" /> <!-- Average P. Def. -->
 			<skill id="4413" level="14" /> <!-- Strong M. Def. -->
 			<skill id="4414" level="3" /> <!-- Light Armor Type -->
-			<skill id="4415" level="7" /> <!-- Daggers -->
+			<skill id="4415" level="7" /> <!-- Dagger -->
 			<skill id="4416" level="6" /> <!-- Humanoids -->
 			<skill id="4417" level="29" /> <!-- Humanoids -->
-			<skill id="4563" level="7" /> <!-- NPC Solar Flare - Magic -->
-			<skill id="4789" level="4" /> <!-- NPC High Level -->
+			<skill id="4563" level="7" /> <!-- Solar Flare -->
+			<skill id="4789" level="4" /> <!-- High Lv. -->
 		</skillList>
 		<shots shotChance="30" spiritChance="30" />
 		<exCrtEffect>false</exCrtEffect>
@@ -1028,21 +1011,18 @@
 		<status undying="false" canBeSown="true" />
 		<skillList>
 			<skill id="4072" level="8" /> <!-- Stun -->
-			<skill id="4232" level="8" /> <!-- NPC AE Strike -->
+			<skill id="4232" level="8" /> <!-- Spinning Slasher -->
 			<skill id="4408" level="12" /> <!-- HP Increase (4x) -->
-			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
 			<skill id="4410" level="14" /> <!-- Strong P. Atk. -->
-			<skill id="4411" level="11" /> <!-- Average M. Atk. -->
 			<skill id="4412" level="14" /> <!-- Strong P. Def. -->
-			<skill id="4413" level="11" /> <!-- Average M. Def. -->
 			<skill id="4414" level="1" /> <!-- Heavy Armor Type -->
 			<skill id="4415" level="3" /> <!-- One-handed Sword -->
 			<skill id="4416" level="6" /> <!-- Humanoids -->
 			<skill id="4417" level="29" /> <!-- Humanoids -->
-			<skill id="4435" level="5" /> <!-- Greater Resist Stun -->
-			<skill id="4438" level="5" /> <!-- Greater Resist Sleep -->
-			<skill id="4439" level="5" /> <!-- Greater Resist Hold -->
-			<skill id="4789" level="3" /> <!-- NPC High Level -->
+			<skill id="4435" level="5" /> <!-- Greater Stun Resistance -->
+			<skill id="4438" level="5" /> <!-- Greater Sleep Resistance -->
+			<skill id="4439" level="5" /> <!-- Greater Hold Resistance -->
+			<skill id="4789" level="3" /> <!-- High Lv. -->
 		</skillList>
 		<shots shotChance="30" spiritChance="30" />
 		<exCrtEffect>false</exCrtEffect>
@@ -1112,24 +1092,21 @@
 		</stats>
 		<status undying="false" />
 		<skillList>
-			<skill id="4028" level="3" /> <!-- NPC Might -->
+			<skill id="4028" level="3" /> <!-- Might -->
 			<skill id="4073" level="8" /> <!-- Stun -->
 			<skill id="4408" level="12" /> <!-- HP Increase (4x) -->
-			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
 			<skill id="4410" level="14" /> <!-- Strong P. Atk. -->
-			<skill id="4411" level="11" /> <!-- Average M. Atk. -->
 			<skill id="4412" level="14" /> <!-- Strong P. Def. -->
-			<skill id="4413" level="11" /> <!-- Average M. Def. -->
 			<skill id="4414" level="1" /> <!-- Heavy Armor Type -->
-			<skill id="4415" level="5" /> <!-- Blunt Weapons -->
+			<skill id="4415" level="5" /> <!-- Blunt Weapon -->
 			<skill id="4416" level="6" /> <!-- Humanoids -->
 			<skill id="4417" level="29" /> <!-- Humanoids -->
-			<skill id="4435" level="5" /> <!-- Greater Resist Stun -->
-			<skill id="4438" level="5" /> <!-- Greater Resist Sleep -->
-			<skill id="4439" level="5" /> <!-- Greater Resist Hold -->
-			<skill id="4484" level="1" /> <!-- Eating Follower Heal -->
-			<skill id="4485" level="1" /> <!-- Eating Follower -->
-			<skill id="4789" level="4" /> <!-- NPC High Level -->
+			<skill id="4435" level="5" /> <!-- Greater Stun Resistance -->
+			<skill id="4438" level="5" /> <!-- Greater Sleep Resistance -->
+			<skill id="4439" level="5" /> <!-- Greater Hold Resistance -->
+			<skill id="4484" level="1" /> <!-- Devour Subordinate -->
+			<skill id="4485" level="1" /> <!-- Devour Subordinate -->
+			<skill id="4789" level="4" /> <!-- High Lv. -->
 		</skillList>
 		<shots shotChance="30" spiritChance="30" />
 		<exCrtEffect>false</exCrtEffect>
@@ -1202,23 +1179,20 @@
 		</stats>
 		<status undying="false" canBeSown="true" />
 		<skillList>
-			<skill id="4029" level="3" /> <!-- NPC Shield -->
+			<skill id="4029" level="3" /> <!-- Shield -->
 			<skill id="4072" level="8" /> <!-- Stun -->
 			<skill id="4408" level="12" /> <!-- HP Increase (4x) -->
-			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
 			<skill id="4410" level="16" /> <!-- Very Strong P. Atk. -->
-			<skill id="4411" level="11" /> <!-- Average M. Atk. -->
 			<skill id="4412" level="14" /> <!-- Strong P. Def. -->
-			<skill id="4413" level="11" /> <!-- Average M. Def. -->
 			<skill id="4414" level="1" /> <!-- Heavy Armor Type -->
-			<skill id="4415" level="5" /> <!-- Blunt Weapons -->
+			<skill id="4415" level="5" /> <!-- Blunt Weapon -->
 			<skill id="4416" level="6" /> <!-- Humanoids -->
 			<skill id="4417" level="29" /> <!-- Humanoids -->
-			<skill id="4435" level="5" /> <!-- Greater Resist Stun -->
-			<skill id="4438" level="5" /> <!-- Greater Resist Sleep -->
-			<skill id="4439" level="5" /> <!-- Greater Resist Hold -->
-			<skill id="4571" level="8" /> <!-- NPC Blazing Circle -->
-			<skill id="4789" level="4" /> <!-- NPC High Level -->
+			<skill id="4435" level="5" /> <!-- Greater Stun Resistance -->
+			<skill id="4438" level="5" /> <!-- Greater Sleep Resistance -->
+			<skill id="4439" level="5" /> <!-- Greater Hold Resistance -->
+			<skill id="4571" level="8" /> <!-- Blazing Circle -->
+			<skill id="4789" level="4" /> <!-- High Lv. -->
 		</skillList>
 		<shots shotChance="30" spiritChance="30" />
 		<exCrtEffect>false</exCrtEffect>
@@ -1290,18 +1264,15 @@
 		</stats>
 		<status undying="false" canBeSown="true" />
 		<skillList>
-			<skill id="4032" level="8" /> <!-- NPC Strike -->
+			<skill id="4032" level="8" /> <!-- Power Strike -->
 			<skill id="4408" level="12" /> <!-- HP Increase (4x) -->
-			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
 			<skill id="4410" level="14" /> <!-- Strong P. Atk. -->
-			<skill id="4411" level="11" /> <!-- Average M. Atk. -->
 			<skill id="4412" level="14" /> <!-- Strong P. Def. -->
-			<skill id="4413" level="11" /> <!-- Average M. Def. -->
 			<skill id="4414" level="1" /> <!-- Heavy Armor Type -->
-			<skill id="4415" level="5" /> <!-- Blunt Weapons -->
+			<skill id="4415" level="5" /> <!-- Blunt Weapon -->
 			<skill id="4416" level="6" /> <!-- Humanoids -->
 			<skill id="4417" level="29" /> <!-- Humanoids -->
-			<skill id="4789" level="4" /> <!-- NPC High Level -->
+			<skill id="4789" level="4" /> <!-- High Lv. -->
 		</skillList>
 		<exCrtEffect>false</exCrtEffect>
 		<sNpcPropHpRate>4</sNpcPropHpRate>
@@ -1369,18 +1340,15 @@
 		</stats>
 		<status undying="false" canBeSown="true" />
 		<skillList>
-			<skill id="4232" level="8" /> <!-- NPC AE Strike -->
+			<skill id="4232" level="8" /> <!-- Spinning Slasher -->
 			<skill id="4408" level="12" /> <!-- HP Increase (4x) -->
-			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
 			<skill id="4410" level="14" /> <!-- Strong P. Atk. -->
-			<skill id="4411" level="11" /> <!-- Average M. Atk. -->
 			<skill id="4412" level="14" /> <!-- Strong P. Def. -->
-			<skill id="4413" level="11" /> <!-- Average M. Def. -->
 			<skill id="4414" level="1" /> <!-- Heavy Armor Type -->
 			<skill id="4415" level="3" /> <!-- One-handed Sword -->
 			<skill id="4416" level="6" /> <!-- Humanoids -->
 			<skill id="4417" level="29" /> <!-- Humanoids -->
-			<skill id="4789" level="5" /> <!-- NPC High Level -->
+			<skill id="4789" level="5" /> <!-- High Lv. -->
 		</skillList>
 		<exCrtEffect>false</exCrtEffect>
 		<sNpcPropHpRate>4</sNpcPropHpRate>
@@ -1446,18 +1414,15 @@
 		</stats>
 		<status undying="false" canBeSown="true" />
 		<skillList>
-			<skill id="4032" level="8" /> <!-- NPC Strike -->
+			<skill id="4032" level="8" /> <!-- Power Strike -->
 			<skill id="4408" level="12" /> <!-- HP Increase (4x) -->
-			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
 			<skill id="4410" level="14" /> <!-- Strong P. Atk. -->
-			<skill id="4411" level="11" /> <!-- Average M. Atk. -->
 			<skill id="4412" level="14" /> <!-- Strong P. Def. -->
-			<skill id="4413" level="11" /> <!-- Average M. Def. -->
 			<skill id="4414" level="1" /> <!-- Heavy Armor Type -->
-			<skill id="4415" level="7" /> <!-- Daggers -->
+			<skill id="4415" level="7" /> <!-- Dagger -->
 			<skill id="4416" level="6" /> <!-- Humanoids -->
 			<skill id="4417" level="29" /> <!-- Humanoids -->
-			<skill id="4789" level="5" /> <!-- NPC High Level -->
+			<skill id="4789" level="5" /> <!-- High Lv. -->
 		</skillList>
 		<exCrtEffect>false</exCrtEffect>
 		<sNpcPropHpRate>4</sNpcPropHpRate>
@@ -1524,22 +1489,19 @@
 		</stats>
 		<status undying="false" />
 		<skillList>
-			<skill id="4078" level="8" /> <!-- NPC Flamestrike -->
+			<skill id="4078" level="8" /> <!-- Flame Strike -->
 			<skill id="4408" level="12" /> <!-- HP Increase (4x) -->
-			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
-			<skill id="4410" level="11" /> <!-- Average P. Atk. -->
 			<skill id="4411" level="14" /> <!-- Strong M. Atk. -->
-			<skill id="4412" level="11" /> <!-- Average P. Def. -->
 			<skill id="4413" level="14" /> <!-- Strong M. Def. -->
 			<skill id="4414" level="1" /> <!-- Heavy Armor Type -->
 			<skill id="4415" level="3" /> <!-- One-handed Sword -->
 			<skill id="4416" level="6" /> <!-- Humanoids -->
 			<skill id="4417" level="29" /> <!-- Humanoids -->
-			<skill id="4435" level="5" /> <!-- Greater Resist Stun -->
-			<skill id="4438" level="5" /> <!-- Greater Resist Sleep -->
-			<skill id="4439" level="5" /> <!-- Greater Resist Hold -->
-			<skill id="4571" level="8" /> <!-- NPC Blazing Circle -->
-			<skill id="4789" level="6" /> <!-- NPC High Level -->
+			<skill id="4435" level="5" /> <!-- Greater Stun Resistance -->
+			<skill id="4438" level="5" /> <!-- Greater Sleep Resistance -->
+			<skill id="4439" level="5" /> <!-- Greater Hold Resistance -->
+			<skill id="4571" level="8" /> <!-- Blazing Circle -->
+			<skill id="4789" level="6" /> <!-- High Lv. -->
 		</skillList>
 		<exCrtEffect>false</exCrtEffect>
 		<sNpcPropHpRate>4</sNpcPropHpRate>
@@ -1610,23 +1572,20 @@
 		</stats>
 		<status undying="false" canBeSown="true" />
 		<skillList>
-			<skill id="4078" level="8" /> <!-- NPC Flamestrike -->
-			<skill id="4100" level="8" /> <!-- NPC Prominence -->
+			<skill id="4078" level="8" /> <!-- Flame Strike -->
+			<skill id="4100" level="8" /> <!-- Prominence -->
 			<skill id="4408" level="12" /> <!-- HP Increase (4x) -->
-			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
-			<skill id="4410" level="11" /> <!-- Average P. Atk. -->
 			<skill id="4411" level="16" /> <!-- Very Strong M. Atk. -->
-			<skill id="4412" level="11" /> <!-- Average P. Def. -->
 			<skill id="4413" level="14" /> <!-- Strong M. Def. -->
 			<skill id="4414" level="1" /> <!-- Heavy Armor Type -->
 			<skill id="4415" level="3" /> <!-- One-handed Sword -->
 			<skill id="4416" level="6" /> <!-- Humanoids -->
 			<skill id="4417" level="29" /> <!-- Humanoids -->
-			<skill id="4435" level="5" /> <!-- Greater Resist Stun -->
-			<skill id="4438" level="5" /> <!-- Greater Resist Sleep -->
-			<skill id="4439" level="5" /> <!-- Greater Resist Hold -->
+			<skill id="4435" level="5" /> <!-- Greater Stun Resistance -->
+			<skill id="4438" level="5" /> <!-- Greater Sleep Resistance -->
+			<skill id="4439" level="5" /> <!-- Greater Hold Resistance -->
 			<skill id="4486" level="7" /> <!-- Decrease P. Def. -->
-			<skill id="4789" level="6" /> <!-- NPC High Level -->
+			<skill id="4789" level="6" /> <!-- High Lv. -->
 		</skillList>
 		<exCrtEffect>false</exCrtEffect>
 		<sNpcPropHpRate>4</sNpcPropHpRate>
@@ -1698,22 +1657,19 @@
 		</stats>
 		<status undying="false" canBeSown="true" />
 		<skillList>
-			<skill id="4244" level="8" /> <!-- NPC Wild Sweep -->
+			<skill id="4244" level="8" /> <!-- Wild Sweep -->
 			<skill id="4408" level="12" /> <!-- HP Increase (4x) -->
-			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
 			<skill id="4410" level="14" /> <!-- Strong P. Atk. -->
-			<skill id="4411" level="11" /> <!-- Average M. Atk. -->
 			<skill id="4412" level="14" /> <!-- Strong P. Def. -->
-			<skill id="4413" level="11" /> <!-- Average M. Def. -->
 			<skill id="4414" level="1" /> <!-- Heavy Armor Type -->
 			<skill id="4415" level="3" /> <!-- One-handed Sword -->
 			<skill id="4416" level="6" /> <!-- Humanoids -->
 			<skill id="4417" level="29" /> <!-- Humanoids -->
-			<skill id="4435" level="5" /> <!-- Greater Resist Stun -->
-			<skill id="4438" level="5" /> <!-- Greater Resist Sleep -->
-			<skill id="4439" level="5" /> <!-- Greater Resist Hold -->
-			<skill id="4585" level="3" /> <!-- NPC Clan Buff - Berserk Might -->
-			<skill id="4789" level="6" /> <!-- NPC High Level -->
+			<skill id="4435" level="5" /> <!-- Greater Stun Resistance -->
+			<skill id="4438" level="5" /> <!-- Greater Sleep Resistance -->
+			<skill id="4439" level="5" /> <!-- Greater Hold Resistance -->
+			<skill id="4585" level="3" /> <!-- Berserker Spirit -->
+			<skill id="4789" level="6" /> <!-- High Lv. -->
 		</skillList>
 		<exCrtEffect>false</exCrtEffect>
 		<sNpcPropHpRate>4</sNpcPropHpRate>
@@ -1786,19 +1742,16 @@
 		<status undying="false" canBeSown="true" />
 		<skillList>
 			<skill id="4036" level="8" /> <!-- Poison -->
-			<skill id="4158" level="8" /> <!-- NPC Prominence - Magic -->
+			<skill id="4158" level="8" /> <!-- Prominence -->
 			<skill id="4408" level="12" /> <!-- HP Increase (4x) -->
-			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
-			<skill id="4410" level="11" /> <!-- Average P. Atk. -->
 			<skill id="4411" level="14" /> <!-- Strong M. Atk. -->
-			<skill id="4412" level="11" /> <!-- Average P. Def. -->
 			<skill id="4413" level="14" /> <!-- Strong M. Def. -->
 			<skill id="4414" level="3" /> <!-- Light Armor Type -->
-			<skill id="4415" level="7" /> <!-- Daggers -->
+			<skill id="4415" level="7" /> <!-- Dagger -->
 			<skill id="4416" level="6" /> <!-- Humanoids -->
 			<skill id="4417" level="29" /> <!-- Humanoids -->
-			<skill id="4563" level="8" /> <!-- NPC Solar Flare - Magic -->
-			<skill id="4789" level="6" /> <!-- NPC High Level -->
+			<skill id="4563" level="8" /> <!-- Solar Flare -->
+			<skill id="4789" level="6" /> <!-- High Lv. -->
 		</skillList>
 		<exCrtEffect>false</exCrtEffect>
 		<sNpcPropHpRate>4</sNpcPropHpRate>
@@ -1862,21 +1815,14 @@
 		</stats>
 		<status undying="false" canBeSown="true" />
 		<skillList>
-			<skill id="4032" level="9" /> <!-- NPC Strike -->
-			<skill id="4065" level="9" /> <!-- NPC Heal -->
+			<skill id="4032" level="9" /> <!-- Power Strike -->
+			<skill id="4065" level="9" /> <!-- Heal -->
+			<skill id="4336" level="2" /> <!-- Dark Attack Vulnerability -->
 			<skill id="4408" level="12" /> <!-- HP Increase (4x) -->
-			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
-			<skill id="4410" level="11" /> <!-- Average P. Atk. -->
-			<skill id="4411" level="11" /> <!-- Average M. Atk. -->
-			<skill id="4412" level="11" /> <!-- Average P. Def. -->
-			<skill id="4413" level="11" /> <!-- Average M. Def. -->
-			<skill id="4414" level="2" /> <!-- Standard Type -->
 			<skill id="4415" level="3" /> <!-- One-handed Sword -->
 			<skill id="4416" level="8" /> <!-- Angels -->
 			<skill id="4417" level="16" /> <!-- Angels -->
-			<skill id="4789" level="6" /> <!-- NPC High Level -->
-			<skill id="4423" level="3" /> <!-- Holy Attack -->
-			<skill id="4336" level="2" /> <!-- Dark Attack Vulnerability -->
+			<skill id="4789" level="6" /> <!-- High Lv. -->
 		</skillList>
 		<exCrtEffect>false</exCrtEffect>
 		<sNpcPropHpRate>4</sNpcPropHpRate>
@@ -1934,20 +1880,14 @@
 		</stats>
 		<status undying="false" canBeSown="true" />
 		<skillList>
-			<skill id="4032" level="9" /> <!-- NPC Strike -->
+			<skill id="4032" level="9" /> <!-- Power Strike -->
+			<skill id="4336" level="2" /> <!-- Dark Attack Vulnerability -->
 			<skill id="4408" level="12" /> <!-- HP Increase (4x) -->
-			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
-			<skill id="4410" level="11" /> <!-- Average P. Atk. -->
-			<skill id="4411" level="11" /> <!-- Average M. Atk. -->
-			<skill id="4412" level="11" /> <!-- Average P. Def. -->
-			<skill id="4413" level="11" /> <!-- Average M. Def. -->
 			<skill id="4414" level="1" /> <!-- Heavy Armor Type -->
-			<skill id="4415" level="11" /> <!-- Spears -->
+			<skill id="4415" level="11" /> <!-- Spear -->
 			<skill id="4416" level="8" /> <!-- Angels -->
 			<skill id="4417" level="16" /> <!-- Angels -->
-			<skill id="4789" level="9" /> <!-- NPC High Level -->
-			<skill id="4423" level="3" /> <!-- Holy Attack -->
-			<skill id="4336" level="2" /> <!-- Dark Attack Vulnerability -->
+			<skill id="4789" level="9" /> <!-- High Lv. -->
 		</skillList>
 		<exCrtEffect>false</exCrtEffect>
 		<sNpcPropHpRate>4</sNpcPropHpRate>
@@ -2007,23 +1947,17 @@
 		</stats>
 		<status undying="false" canBeSown="true" />
 		<skillList>
-			<skill id="4032" level="9" /> <!-- NPC Strike -->
+			<skill id="4032" level="9" /> <!-- Power Strike -->
+			<skill id="4336" level="2" /> <!-- Dark Attack Vulnerability -->
 			<skill id="4408" level="12" /> <!-- HP Increase (4x) -->
-			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
 			<skill id="4410" level="16" /> <!-- Very Strong P. Atk. -->
-			<skill id="4411" level="11" /> <!-- Average M. Atk. -->
-			<skill id="4412" level="11" /> <!-- Average P. Def. -->
-			<skill id="4413" level="11" /> <!-- Average M. Def. -->
-			<skill id="4414" level="2" /> <!-- Standard Type -->
-			<skill id="4415" level="5" /> <!-- Blunt Weapons -->
+			<skill id="4415" level="5" /> <!-- Blunt Weapon -->
 			<skill id="4416" level="8" /> <!-- Angels -->
 			<skill id="4417" level="17" /> <!-- Angels -->
-			<skill id="4467" level="3" /> <!-- Surrender To Light -->
-			<skill id="4574" level="9" /> <!-- NPC Sonic Storm -->
+			<skill id="4467" level="3" /> <!-- Surrender to Holy -->
+			<skill id="4574" level="9" /> <!-- Sonic Storm -->
 			<skill id="4589" level="10" /> <!-- Decrease Speed -->
-			<skill id="4789" level="9" /> <!-- NPC High Level -->
-			<skill id="4423" level="3" /> <!-- Holy Attack -->
-			<skill id="4336" level="2" /> <!-- Dark Attack Vulnerability -->
+			<skill id="4789" level="9" /> <!-- High Lv. -->
 		</skillList>
 		<exCrtEffect>false</exCrtEffect>
 		<sNpcPropHpRate>4</sNpcPropHpRate>
@@ -2082,22 +2016,16 @@
 		</stats>
 		<status undying="false" canBeSown="true" />
 		<skillList>
-			<skill id="4160" level="9" /> <!-- NPC Aura Burn - Magic -->
+			<skill id="4160" level="9" /> <!-- Aura Burn -->
+			<skill id="4336" level="2" /> <!-- Dark Attack Vulnerability -->
 			<skill id="4408" level="12" /> <!-- HP Increase (4x) -->
-			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
-			<skill id="4410" level="11" /> <!-- Average P. Atk. -->
 			<skill id="4411" level="16" /> <!-- Very Strong M. Atk. -->
-			<skill id="4412" level="11" /> <!-- Average P. Def. -->
-			<skill id="4413" level="11" /> <!-- Average M. Def. -->
-			<skill id="4414" level="2" /> <!-- Standard Type -->
-			<skill id="4415" level="5" /> <!-- Blunt Weapons -->
+			<skill id="4415" level="5" /> <!-- Blunt Weapon -->
 			<skill id="4416" level="8" /> <!-- Angels -->
 			<skill id="4417" level="17" /> <!-- Angels -->
-			<skill id="4563" level="9" /> <!-- NPC Solar Flare - Magic -->
-			<skill id="4613" level="9" /> <!-- NPC Clan Heal -->
-			<skill id="4789" level="9" /> <!-- NPC High Level -->
-			<skill id="4423" level="3" /> <!-- Holy Attack -->
-			<skill id="4336" level="2" /> <!-- Dark Attack Vulnerability -->
+			<skill id="4563" level="9" /> <!-- Solar Flare -->
+			<skill id="4613" level="9" /> <!-- Clan Heal -->
+			<skill id="4789" level="9" /> <!-- High Lv. -->
 		</skillList>
 		<exCrtEffect>false</exCrtEffect>
 		<sNpcPropHpRate>4</sNpcPropHpRate>
@@ -2148,23 +2076,17 @@
 		</stats>
 		<status undying="false" canBeSown="true" />
 		<skillList>
-			<skill id="4032" level="9" /> <!-- NPC Strike -->
+			<skill id="4032" level="9" /> <!-- Power Strike -->
+			<skill id="4336" level="2" /> <!-- Dark Attack Vulnerability -->
 			<skill id="4408" level="12" /> <!-- HP Increase (4x) -->
-			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
 			<skill id="4410" level="16" /> <!-- Very Strong P. Atk. -->
-			<skill id="4411" level="11" /> <!-- Average M. Atk. -->
-			<skill id="4412" level="11" /> <!-- Average P. Def. -->
-			<skill id="4413" level="11" /> <!-- Average M. Def. -->
-			<skill id="4414" level="2" /> <!-- Standard Type -->
 			<skill id="4415" level="3" /> <!-- One-handed Sword -->
 			<skill id="4416" level="8" /> <!-- Angels -->
 			<skill id="4417" level="17" /> <!-- Angels -->
-			<skill id="4467" level="3" /> <!-- Surrender To Light -->
-			<skill id="4574" level="9" /> <!-- NPC Sonic Storm -->
+			<skill id="4467" level="3" /> <!-- Surrender to Holy -->
+			<skill id="4574" level="9" /> <!-- Sonic Storm -->
 			<skill id="4589" level="10" /> <!-- Decrease Speed -->
-			<skill id="4789" level="9" /> <!-- NPC High Level -->
-			<skill id="4423" level="3" /> <!-- Holy Attack -->
-			<skill id="4336" level="2" /> <!-- Dark Attack Vulnerability -->
+			<skill id="4789" level="9" /> <!-- High Lv. -->
 		</skillList>
 		<exCrtEffect>false</exCrtEffect>
 		<sNpcPropHpRate>4</sNpcPropHpRate>
@@ -2219,22 +2141,16 @@
 		</stats>
 		<status undying="false" canBeSown="true" />
 		<skillList>
-			<skill id="4160" level="9" /> <!-- NPC Aura Burn - Magic -->
+			<skill id="4160" level="9" /> <!-- Aura Burn -->
+			<skill id="4336" level="2" /> <!-- Dark Attack Vulnerability -->
 			<skill id="4408" level="12" /> <!-- HP Increase (4x) -->
-			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
-			<skill id="4410" level="11" /> <!-- Average P. Atk. -->
 			<skill id="4411" level="16" /> <!-- Very Strong M. Atk. -->
-			<skill id="4412" level="11" /> <!-- Average P. Def. -->
-			<skill id="4413" level="11" /> <!-- Average M. Def. -->
-			<skill id="4414" level="2" /> <!-- Standard Type -->
 			<skill id="4415" level="3" /> <!-- One-handed Sword -->
 			<skill id="4416" level="8" /> <!-- Angels -->
 			<skill id="4417" level="17" /> <!-- Angels -->
-			<skill id="4563" level="9" /> <!-- NPC Solar Flare - Magic -->
-			<skill id="4789" level="9" /> <!-- NPC High Level -->
+			<skill id="4563" level="9" /> <!-- Solar Flare -->
+			<skill id="4789" level="9" /> <!-- High Lv. -->
 			<skill id="5021" level="9" /> <!-- Inspiration of Einhasad -->
-			<skill id="4423" level="3" /> <!-- Holy Attack -->
-			<skill id="4336" level="2" /> <!-- Dark Attack Vulnerability -->
 		</skillList>
 		<exCrtEffect>false</exCrtEffect>
 		<sNpcPropHpRate>4</sNpcPropHpRate>
@@ -2288,22 +2204,16 @@
 		</stats>
 		<status undying="false" canBeSown="true" />
 		<skillList>
-			<skill id="4408" level="1" /> <!-- HP Increase (1x) -->
-			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
+			<skill id="4336" level="2" /> <!-- Dark Attack Vulnerability -->
 			<skill id="4410" level="13" /> <!-- Slightly Strong P. Atk. -->
-			<skill id="4411" level="11" /> <!-- Average M. Atk. -->
-			<skill id="4412" level="11" /> <!-- Average P. Def. -->
-			<skill id="4413" level="11" /> <!-- Average M. Def. -->
 			<skill id="4414" level="3" /> <!-- Light Armor Type -->
 			<skill id="4415" level="3" /> <!-- One-handed Sword -->
 			<skill id="4416" level="8" /> <!-- Angels -->
 			<skill id="4417" level="16" /> <!-- Angels -->
-			<skill id="4438" level="4" /> <!-- Greater Resist Sleep -->
-			<skill id="4439" level="4" /> <!-- Greater Resist Hold -->
-			<skill id="4614" level="8" /> <!-- NPC Death Bomb -->
-			<skill id="4789" level="9" /> <!-- NPC High Level -->
-			<skill id="4423" level="3" /> <!-- Holy Attack -->
-			<skill id="4336" level="2" /> <!-- Dark Attack Vulnerability -->
+			<skill id="4438" level="4" /> <!-- Greater Sleep Resistance -->
+			<skill id="4439" level="4" /> <!-- Greater Hold Resistance -->
+			<skill id="4614" level="8" /> <!-- Death Bomb -->
+			<skill id="4789" level="9" /> <!-- High Lv. -->
 		</skillList>
 		<exCrtEffect>false</exCrtEffect>
 		<ai aggroRange="450" clanHelpRange="300" isAggressive="true">
@@ -2353,23 +2263,18 @@
 		</stats>
 		<status undying="false" canBeSown="true" />
 		<skillList>
-			<skill id="4032" level="9" /> <!-- NPC Strike -->
+			<skill id="4032" level="9" /> <!-- Power Strike -->
+			<skill id="4336" level="2" /> <!-- Dark Attack Vulnerability -->
 			<skill id="4408" level="12" /> <!-- HP Increase (4x) -->
-			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
 			<skill id="4410" level="16" /> <!-- Very Strong P. Atk. -->
-			<skill id="4411" level="11" /> <!-- Average M. Atk. -->
-			<skill id="4412" level="11" /> <!-- Average P. Def. -->
-			<skill id="4413" level="11" /> <!-- Average M. Def. -->
 			<skill id="4414" level="1" /> <!-- Heavy Armor Type -->
 			<skill id="4415" level="3" /> <!-- One-handed Sword -->
 			<skill id="4416" level="8" /> <!-- Angels -->
 			<skill id="4417" level="17" /> <!-- Angels -->
-			<skill id="4467" level="3" /> <!-- Surrender To Light -->
-			<skill id="4574" level="9" /> <!-- NPC Sonic Storm -->
+			<skill id="4467" level="3" /> <!-- Surrender to Holy -->
+			<skill id="4574" level="9" /> <!-- Sonic Storm -->
 			<skill id="4643" level="10" /> <!-- Decrease Speed -->
-			<skill id="4789" level="9" /> <!-- NPC High Level -->
-			<skill id="4423" level="3" /> <!-- Holy Attack -->
-			<skill id="4336" level="2" /> <!-- Dark Attack Vulnerability -->
+			<skill id="4789" level="9" /> <!-- High Lv. -->
 		</skillList>
 		<exCrtEffect>false</exCrtEffect>
 		<sNpcPropHpRate>4</sNpcPropHpRate>
@@ -2421,20 +2326,15 @@
 		</stats>
 		<status undying="false" canBeSown="true" />
 		<skillList>
-			<skill id="4065" level="6" /> <!-- NPC Heal -->
+			<skill id="4065" level="6" /> <!-- Heal -->
+			<skill id="4336" level="2" /> <!-- Dark Attack Vulnerability -->
 			<skill id="4408" level="12" /> <!-- HP Increase (4x) -->
-			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
-			<skill id="4410" level="11" /> <!-- Average P. Atk. -->
 			<skill id="4411" level="16" /> <!-- Very Strong M. Atk. -->
-			<skill id="4412" level="11" /> <!-- Average P. Def. -->
 			<skill id="4413" level="17" /> <!-- Very Strong M. Def. -->
-			<skill id="4414" level="2" /> <!-- Standard Type -->
 			<skill id="4415" level="3" /> <!-- One-handed Sword -->
 			<skill id="4416" level="8" /> <!-- Angels -->
 			<skill id="4417" level="16" /> <!-- Angels -->
-			<skill id="4789" level="10" /> <!-- NPC High Level -->
-			<skill id="4423" level="3" /> <!-- Holy Attack -->
-			<skill id="4336" level="2" /> <!-- Dark Attack Vulnerability -->
+			<skill id="4789" level="10" /> <!-- High Lv. -->
 		</skillList>
 		<exCrtEffect>false</exCrtEffect>
 		<sNpcPropHpRate>4</sNpcPropHpRate>
@@ -2490,24 +2390,19 @@
 		</stats>
 		<status undying="false" canBeSown="true" />
 		<skillList>
-			<skill id="4028" level="3" /> <!-- NPC Might -->
-			<skill id="4029" level="3" /> <!-- NPC Shield -->
-			<skill id="4074" level="2" /> <!-- NPC Haste -->
-			<skill id="4099" level="2" /> <!-- NPC Berserk -->
-			<skill id="4163" level="10" /> <!-- NPC Self-Damage Shield -->
+			<skill id="4028" level="3" /> <!-- Might -->
+			<skill id="4029" level="3" /> <!-- Shield -->
+			<skill id="4074" level="2" /> <!-- Haste -->
+			<skill id="4099" level="2" /> <!-- Berserker Spirit -->
+			<skill id="4163" level="10" /> <!-- Damage Shield -->
+			<skill id="4336" level="2" /> <!-- Dark Attack Vulnerability -->
 			<skill id="4408" level="13" /> <!-- HP Increase (5x) -->
-			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
-			<skill id="4410" level="11" /> <!-- Average P. Atk. -->
 			<skill id="4411" level="15" /> <!-- Strong M. Atk. -->
-			<skill id="4412" level="11" /> <!-- Average P. Def. -->
 			<skill id="4413" level="17" /> <!-- Very Strong M. Def. -->
-			<skill id="4414" level="2" /> <!-- Standard Type -->
-			<skill id="4415" level="5" /> <!-- Blunt Weapons -->
+			<skill id="4415" level="5" /> <!-- Blunt Weapon -->
 			<skill id="4416" level="8" /> <!-- Angels -->
 			<skill id="4417" level="16" /> <!-- Angels -->
-			<skill id="4789" level="10" /> <!-- NPC High Level -->
-			<skill id="4423" level="3" /> <!-- Holy Attack -->
-			<skill id="4336" level="2" /> <!-- Dark Attack Vulnerability -->
+			<skill id="4789" level="10" /> <!-- High Lv. -->
 		</skillList>
 		<exCrtEffect>false</exCrtEffect>
 		<sNpcPropHpRate>5</sNpcPropHpRate>
@@ -2560,21 +2455,15 @@
 		</stats>
 		<status undying="false" canBeSown="true" />
 		<skillList>
-			<skill id="4065" level="9" /> <!-- NPC Heal -->
+			<skill id="4065" level="9" /> <!-- Heal -->
+			<skill id="4336" level="2" /> <!-- Dark Attack Vulnerability -->
 			<skill id="4408" level="13" /> <!-- HP Increase (5x) -->
-			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
 			<skill id="4410" level="14" /> <!-- Strong P. Atk. -->
-			<skill id="4411" level="11" /> <!-- Average M. Atk. -->
-			<skill id="4412" level="11" /> <!-- Average P. Def. -->
-			<skill id="4413" level="11" /> <!-- Average M. Def. -->
-			<skill id="4414" level="2" /> <!-- Standard Type -->
-			<skill id="4415" level="5" /> <!-- Blunt Weapons -->
+			<skill id="4415" level="5" /> <!-- Blunt Weapon -->
 			<skill id="4416" level="8" /> <!-- Angels -->
 			<skill id="4417" level="17" /> <!-- Angels -->
 			<skill id="4491" level="9" /> <!-- Holy Weapon -->
-			<skill id="4789" level="10" /> <!-- NPC High Level -->
-			<skill id="4423" level="3" /> <!-- Holy Attack -->
-			<skill id="4336" level="2" /> <!-- Dark Attack Vulnerability -->
+			<skill id="4789" level="10" /> <!-- High Lv. -->
 		</skillList>
 		<exCrtEffect>false</exCrtEffect>
 		<sNpcPropHpRate>5</sNpcPropHpRate>
@@ -2633,25 +2522,19 @@
 		</stats>
 		<status undying="false" canBeSown="true" />
 		<skillList>
-			<skill id="4408" level="1" /> <!-- HP Increase (1x) -->
-			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
+			<skill id="4336" level="2" /> <!-- Dark Attack Vulnerability -->
 			<skill id="4410" level="13" /> <!-- Slightly Strong P. Atk. -->
-			<skill id="4411" level="11" /> <!-- Average M. Atk. -->
-			<skill id="4412" level="11" /> <!-- Average P. Def. -->
-			<skill id="4413" level="11" /> <!-- Average M. Def. -->
 			<skill id="4414" level="3" /> <!-- Light Armor Type -->
-			<skill id="4415" level="7" /> <!-- Daggers -->
+			<skill id="4415" level="7" /> <!-- Dagger -->
 			<skill id="4416" level="2" /> <!-- Magic Creatures -->
 			<skill id="4417" level="11" /> <!-- Magic Creatures -->
-			<skill id="4438" level="4" /> <!-- Greater Resist Sleep -->
-			<skill id="4439" level="4" /> <!-- Greater Resist Hold -->
+			<skill id="4438" level="4" /> <!-- Greater Sleep Resistance -->
+			<skill id="4439" level="4" /> <!-- Greater Hold Resistance -->
 			<skill id="4488" level="10" /> <!-- Hold -->
-			<skill id="4489" level="10" /> <!-- NPC Death MP Bomb -->
-			<skill id="4614" level="8" /> <!-- NPC Death Bomb -->
-			<skill id="4671" level="1" /> <!-- AV - Teleport -->
-			<skill id="4789" level="10" /> <!-- NPC High Level -->
-			<skill id="4423" level="3" /> <!-- Holy Attack -->
-			<skill id="4336" level="2" /> <!-- Dark Attack Vulnerability -->
+			<skill id="4489" level="10" /> <!-- Death Bomb -->
+			<skill id="4614" level="8" /> <!-- Death Bomb -->
+			<skill id="4671" level="1" /> <!-- Teleport -->
+			<skill id="4789" level="10" /> <!-- High Lv. -->
 		</skillList>
 		<exCrtEffect>false</exCrtEffect>
 		<ai type="BALANCED" aggroRange="450" clanHelpRange="300" isAggressive="true">
@@ -2703,22 +2586,16 @@
 		</stats>
 		<status undying="false" canBeSown="true" />
 		<skillList>
-			<skill id="4160" level="9" /> <!-- NPC Aura Burn - Magic -->
+			<skill id="4160" level="9" /> <!-- Aura Burn -->
+			<skill id="4336" level="2" /> <!-- Dark Attack Vulnerability -->
 			<skill id="4408" level="12" /> <!-- HP Increase (4x) -->
-			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
-			<skill id="4410" level="11" /> <!-- Average P. Atk. -->
 			<skill id="4411" level="16" /> <!-- Very Strong M. Atk. -->
-			<skill id="4412" level="11" /> <!-- Average P. Def. -->
-			<skill id="4413" level="11" /> <!-- Average M. Def. -->
-			<skill id="4414" level="2" /> <!-- Standard Type -->
-			<skill id="4415" level="5" /> <!-- Blunt Weapons -->
+			<skill id="4415" level="5" /> <!-- Blunt Weapon -->
 			<skill id="4416" level="8" /> <!-- Angels -->
 			<skill id="4417" level="17" /> <!-- Angels -->
-			<skill id="4563" level="9" /> <!-- NPC Solar Flare - Magic -->
-			<skill id="4613" level="9" /> <!-- NPC Clan Heal -->
-			<skill id="4789" level="10" /> <!-- NPC High Level -->
-			<skill id="4423" level="3" /> <!-- Holy Attack -->
-			<skill id="4336" level="2" /> <!-- Dark Attack Vulnerability -->
+			<skill id="4563" level="9" /> <!-- Solar Flare -->
+			<skill id="4613" level="9" /> <!-- Clan Heal -->
+			<skill id="4789" level="10" /> <!-- High Lv. -->
 		</skillList>
 		<exCrtEffect>false</exCrtEffect>
 		<sNpcPropHpRate>4</sNpcPropHpRate>
@@ -2773,20 +2650,15 @@
 		</stats>
 		<status undying="false" canBeSown="true" />
 		<skillList>
+			<skill id="4336" level="2" /> <!-- Dark Attack Vulnerability -->
 			<skill id="4408" level="14" /> <!-- HP Increase (6x) -->
-			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
 			<skill id="4410" level="16" /> <!-- Very Strong P. Atk. -->
-			<skill id="4411" level="11" /> <!-- Average M. Atk. -->
-			<skill id="4412" level="11" /> <!-- Average P. Def. -->
 			<skill id="4413" level="17" /> <!-- Very Strong M. Def. -->
-			<skill id="4414" level="2" /> <!-- Standard Type -->
-			<skill id="4415" level="11" /> <!-- Spears -->
+			<skill id="4415" level="11" /> <!-- Spear -->
 			<skill id="4416" level="8" /> <!-- Angels -->
 			<skill id="4417" level="17" /> <!-- Angels -->
-			<skill id="4574" level="9" /> <!-- NPC Sonic Storm -->
-			<skill id="4789" level="10" /> <!-- NPC High Level -->
-			<skill id="4423" level="3" /> <!-- Holy Attack -->
-			<skill id="4336" level="2" /> <!-- Dark Attack Vulnerability -->
+			<skill id="4574" level="9" /> <!-- Sonic Storm -->
+			<skill id="4789" level="10" /> <!-- High Lv. -->
 		</skillList>
 		<exCrtEffect>false</exCrtEffect>
 		<sNpcPropHpRate>6</sNpcPropHpRate>
@@ -2849,19 +2721,17 @@
 		</stats>
 		<status undying="false" canBeSown="true" />
 		<skillList>
-			<skill id="4408" level="16" /> <!-- HP Increase (4x) -->
-			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
-			<skill id="4410" level="11" /> <!-- Average P. Atk. -->
+			<skill id="4408" level="16" /> <!-- HP Increase (8x) -->
 			<skill id="4411" level="15" /> <!-- Strong M. Atk. -->
-			<skill id="4412" level="15" /> <!-- Average P. Def. -->
-			<skill id="4413" level="7" /> <!-- Average M. Def. -->
+			<skill id="4412" level="15" /> <!-- Strong P. Def. -->
+			<skill id="4413" level="7" /> <!-- Weak M. Def. -->
 			<skill id="4414" level="3" /> <!-- Light Armor Type -->
-			<skill id="4415" level="3" /> <!-- Blunt Weapons -->
+			<skill id="4415" level="3" /> <!-- One-handed Sword -->
 			<skill id="4416" level="1" /> <!-- Undead -->
 			<skill id="4417" level="35" /> <!-- Undead -->
-			<skill id="4789" level="9" /> <!-- NPC High Level -->
-			<skill id="5467" level="1" /> <!-- Strong against the dark elemental. -->
-			<skill id="5043" level="10" /> <!-- NPC Super Sonic Blaster -->
+			<skill id="4789" level="9" /> <!-- High Lv. -->
+			<skill id="5043" level="10" /> <!-- Supersonic Blaster -->
+			<skill id="5467" level="1" /> <!-- Dark Attack -->
 			<skill id="14765" level="4" /> <!-- Blood Siphon Resistance -->
 			<skill id="15455" level="1" /> <!-- Sensitive Skin -->
 			<skill id="15466" level="1" /> <!-- Triol's CON Increase -->
@@ -2923,25 +2793,22 @@
 		</stats>
 		<status undying="false" canBeSown="true" />
 		<skillList>
-			<skill id="4032" level="9" /> <!-- NPC Strike -->
-			<skill id="4253" level="9" /> <!-- NPC Blaze - Slow -->
-			<skill id="4408" level="16" /> <!-- HP Increase (1/2x) -->
-			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
-			<skill id="4410" level="11" /> <!-- Average P. Atk. -->
-			<skill id="4411" level="11" /> <!-- Average M. Atk. -->
-			<skill id="4412" level="15" /> <!-- Average P. Def. -->
-			<skill id="4413" level="7" /> <!-- Average M. Def. -->
-			<skill id="4414" level="3" /> <!-- Standard Type -->
+			<skill id="4001" level="1" /> <!-- Gust -->
+			<skill id="4032" level="9" /> <!-- Power Strike -->
+			<skill id="4253" level="9" /> <!-- Blaze -->
+			<skill id="4408" level="16" /> <!-- HP Increase (8x) -->
+			<skill id="4412" level="15" /> <!-- Strong P. Def. -->
+			<skill id="4413" level="7" /> <!-- Weak M. Def. -->
+			<skill id="4414" level="3" /> <!-- Light Armor Type -->
 			<skill id="4415" level="3" /> <!-- One-handed Sword -->
 			<skill id="4416" level="1" /> <!-- Undead -->
 			<skill id="4417" level="35" /> <!-- Undead -->
-			<skill id="5467" level="1" /> <!-- Strong against the dark elemental. -->
-			<skill id="4789" level="9" /> <!-- NPC High Level -->
+			<skill id="4789" level="9" /> <!-- High Lv. -->
+			<skill id="5467" level="1" /> <!-- Dark Attack -->
 			<skill id="14765" level="4" /> <!-- Blood Siphon Resistance -->
 			<skill id="15455" level="1" /> <!-- Sensitive Skin -->
 			<skill id="15466" level="1" /> <!-- Triol's CON Increase -->
 			<skill id="15467" level="1" /> <!-- Triol's P. Def. Increase -->
-			<skill id="4001" level="1" /> <!-- Gust -->
 		</skillList>
 		<exCrtEffect>true</exCrtEffect>
 		<sNpcPropHpRate>0.5</sNpcPropHpRate>
@@ -2999,25 +2866,21 @@
 		</stats>
 		<status undying="false" canBeSown="true" />
 		<skillList>
-			<skill id="4032" level="9" /> <!-- NPC Strike -->
-			<skill id="4253" level="9" /> <!-- NPC Blaze - Slow -->
-			<skill id="4408" level="13" /> <!-- HP Increase (1/2x) -->
-			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
-			<skill id="4410" level="11" /> <!-- Average P. Atk. -->
-			<skill id="4411" level="11" /> <!-- Average M. Atk. -->
-			<skill id="4412" level="15" /> <!-- Average P. Def. -->
-			<skill id="4413" level="11" /> <!-- Average M. Def. -->
-			<skill id="4414" level="3" /> <!-- Standard Type -->
-			<skill id="4415" level="3" /> <!-- Blunt Weapons -->
+			<skill id="4001" level="1" /> <!-- Gust -->
+			<skill id="4032" level="9" /> <!-- Power Strike -->
+			<skill id="4253" level="9" /> <!-- Blaze -->
+			<skill id="4408" level="13" /> <!-- HP Increase (5x) -->
+			<skill id="4412" level="15" /> <!-- Strong P. Def. -->
+			<skill id="4414" level="3" /> <!-- Light Armor Type -->
+			<skill id="4415" level="3" /> <!-- One-handed Sword -->
 			<skill id="4416" level="1" /> <!-- Undead -->
 			<skill id="4417" level="35" /> <!-- Undead -->
-			<skill id="5467" level="1" /> <!-- Strong against the dark elemental. -->
-			<skill id="4789" level="10" /> <!-- NPC High Level -->
+			<skill id="4789" level="10" /> <!-- High Lv. -->
+			<skill id="5467" level="1" /> <!-- Dark Attack -->
 			<skill id="14765" level="4" /> <!-- Blood Siphon Resistance -->
 			<skill id="15455" level="1" /> <!-- Sensitive Skin -->
 			<skill id="15466" level="1" /> <!-- Triol's CON Increase -->
 			<skill id="15467" level="1" /> <!-- Triol's P. Def. Increase -->
-			<skill id="4001" level="1" /> <!-- Gust -->
 		</skillList>
 		<exCrtEffect>true</exCrtEffect>
 		<sNpcPropHpRate>0.5</sNpcPropHpRate>
@@ -3076,21 +2939,17 @@
 		</stats>
 		<status undying="false" canBeSown="true" />
 		<skillList>
-			<skill id="4408" level="18" /> <!-- HP Increase (4x) -->
-			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
-			<skill id="4410" level="11" /> <!-- Average P. Atk. -->
-			<skill id="4411" level="11" /> <!-- Average M. Atk. -->
-			<skill id="4412" level="13" /> <!-- Average P. Def. -->
-			<skill id="4413" level="3" /> <!-- Average M. Def. -->
-			<skill id="4414" level="3" /> <!-- Heavy Armor Type -->
-			<skill id="4415" level="1" /> <!-- Blunt Weapons -->
+			<skill id="4408" level="18" /> <!-- HP Increase (10x) -->
+			<skill id="4413" level="3" /> <!-- Extremely Weak M. Def. -->
+			<skill id="4414" level="3" /> <!-- Light Armor Type -->
+			<skill id="4415" level="1" /> <!-- Bare Hands -->
 			<skill id="4416" level="1" /> <!-- Undead -->
 			<skill id="4417" level="35" /> <!-- Undead -->
-			<skill id="4466" level="3" /> <!-- Surrender To Darkness -->
-			<skill id="4622" level="9" /> <!-- NPC AE - 80% HP Drain - Magic -->
-			<skill id="4665" level="9" /> <!-- NPC 100% HP Drain - Magic -->
-			<skill id="5467" level="1" /> <!-- Strong against the dark elemental. -->
-			<skill id="4789" level="9" /> <!-- NPC High Level -->
+			<skill id="4466" level="3" /> <!-- Surrender to Dark -->
+			<skill id="4622" level="9" /> <!-- Drain Energy -->
+			<skill id="4665" level="9" /> <!-- Drain Energy -->
+			<skill id="4789" level="9" /> <!-- High Lv. -->
+			<skill id="5467" level="1" /> <!-- Dark Attack -->
 			<skill id="14765" level="4" /> <!-- Blood Siphon Resistance -->
 			<skill id="15455" level="1" /> <!-- Sensitive Skin -->
 		</skillList>
@@ -3162,20 +3021,16 @@
 		</stats>
 		<status undying="false" canBeSown="true" />
 		<skillList>
-			<skill id="4032" level="2" /> <!-- NPC Strike -->
-			<skill id="4408" level="18" /> <!-- HP Increase (4x) -->
-			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
-			<skill id="4410" level="11" /> <!-- Average P. Atk. -->
-			<skill id="4411" level="11" /> <!-- Average M. Atk. -->
-			<skill id="4412" level="13" /> <!-- Average P. Def. -->
-			<skill id="4413" level="3" /> <!-- Average M. Def. -->
-			<skill id="4414" level="3" /> <!-- Heavy Armor Type -->
+			<skill id="4032" level="2" /> <!-- Power Strike -->
+			<skill id="4408" level="18" /> <!-- HP Increase (10x) -->
+			<skill id="4413" level="3" /> <!-- Extremely Weak M. Def. -->
+			<skill id="4414" level="3" /> <!-- Light Armor Type -->
 			<skill id="4415" level="3" /> <!-- One-handed Sword -->
 			<skill id="4416" level="1" /> <!-- Undead -->
 			<skill id="4417" level="35" /> <!-- Undead -->
 			<skill id="4649" level="9" /> <!-- Poison -->
-			<skill id="5467" level="1" /> <!-- Strong against the dark elemental. -->
-			<skill id="4789" level="6" /> <!-- NPC High Level -->
+			<skill id="4789" level="6" /> <!-- High Lv. -->
+			<skill id="5467" level="1" /> <!-- Dark Attack -->
 			<skill id="14765" level="4" /> <!-- Blood Siphon Resistance -->
 			<skill id="15455" level="1" /> <!-- Sensitive Skin -->
 		</skillList>
@@ -3249,19 +3104,15 @@
 		<status undying="false" canBeSown="true" />
 		<skillList>
 			<skill id="4088" level="9" /> <!-- Bleed -->
-			<skill id="4408" level="18" /> <!-- HP Increase (4x) -->
-			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
-			<skill id="4410" level="11" /> <!-- Average P. Atk. -->
-			<skill id="4411" level="11" /> <!-- Average M. Atk. -->
-			<skill id="4412" level="13" /> <!-- Average P. Def. -->
-			<skill id="4413" level="3" /> <!-- Average M. Def. -->
-			<skill id="4414" level="3" /> <!-- Heavy Armor Type -->
+			<skill id="4408" level="18" /> <!-- HP Increase (10x) -->
+			<skill id="4413" level="3" /> <!-- Extremely Weak M. Def. -->
+			<skill id="4414" level="3" /> <!-- Light Armor Type -->
 			<skill id="4415" level="3" /> <!-- One-handed Sword -->
 			<skill id="4416" level="1" /> <!-- Undead -->
 			<skill id="4417" level="35" /> <!-- Undead -->
-			<skill id="4612" level="9" /> <!-- NPC Wide Wild Sweep -->
-			<skill id="5467" level="1" /> <!-- Strong against the dark elemental. -->
-			<skill id="4789" level="6" /> <!-- NPC High Level -->
+			<skill id="4612" level="9" /> <!-- Wide Sweep -->
+			<skill id="4789" level="6" /> <!-- High Lv. -->
+			<skill id="5467" level="1" /> <!-- Dark Attack -->
 			<skill id="14765" level="4" /> <!-- Blood Siphon Resistance -->
 			<skill id="15455" level="1" /> <!-- Sensitive Skin -->
 		</skillList>
@@ -3347,21 +3198,17 @@
 		</stats>
 		<status undying="false" canBeSown="true" />
 		<skillList>
-			<skill id="4032" level="9" /> <!-- NPC Strike -->
+			<skill id="4032" level="9" /> <!-- Power Strike -->
 			<skill id="4047" level="9" /> <!-- Hold -->
-			<skill id="4408" level="18" /> <!-- HP Increase (5x) -->
-			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
-			<skill id="4410" level="11" /> <!-- Average P. Atk. -->
-			<skill id="4411" level="11" /> <!-- Average M. Atk. -->
-			<skill id="4412" level="13" /> <!-- Average P. Def. -->
-			<skill id="4413" level="3" /> <!-- Average M. Def. -->
-			<skill id="4414" level="1" /> <!-- Standard Type -->
-			<skill id="4415" level="3" /> <!-- Bare Hands -->
+			<skill id="4408" level="18" /> <!-- HP Increase (10x) -->
+			<skill id="4413" level="3" /> <!-- Extremely Weak M. Def. -->
+			<skill id="4414" level="1" /> <!-- Heavy Armor Type -->
+			<skill id="4415" level="3" /> <!-- One-handed Sword -->
 			<skill id="4416" level="6" /> <!-- Humanoids -->
 			<skill id="4417" level="26" /> <!-- Humanoids -->
-			<skill id="4573" level="9" /> <!-- NPC Sonic Blaster -->
-			<skill id="5467" level="1" /> <!-- Strong against the dark elemental. -->
-			<skill id="4789" level="9" /> <!-- NPC High Level -->
+			<skill id="4573" level="9" /> <!-- Sonic Blaster -->
+			<skill id="4789" level="9" /> <!-- High Lv. -->
+			<skill id="5467" level="1" /> <!-- Dark Attack -->
 			<skill id="14765" level="4" /> <!-- Blood Siphon Resistance -->
 			<skill id="15455" level="1" /> <!-- Sensitive Skin -->
 		</skillList>
@@ -3450,21 +3297,17 @@
 		<status undying="false" canBeSown="true" />
 		<skillList>
 			<skill id="4047" level="9" /> <!-- Hold -->
-			<skill id="4408" level="18" /> <!-- HP Increase (5x) -->
-			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
-			<skill id="4410" level="11" /> <!-- Average P. Atk. -->
-			<skill id="4411" level="11" /> <!-- Average M. Atk. -->
-			<skill id="4412" level="13" /> <!-- Average P. Def. -->
-			<skill id="4413" level="3" /> <!-- Average M. Def. -->
-			<skill id="4414" level="1" /> <!-- Standard Type -->
-			<skill id="4415" level="11" /> <!-- Spears -->
+			<skill id="4408" level="18" /> <!-- HP Increase (10x) -->
+			<skill id="4413" level="3" /> <!-- Extremely Weak M. Def. -->
+			<skill id="4414" level="1" /> <!-- Heavy Armor Type -->
+			<skill id="4415" level="11" /> <!-- Spear -->
 			<skill id="4416" level="6" /> <!-- Humanoids -->
 			<skill id="4417" level="26" /> <!-- Humanoids -->
-			<skill id="4466" level="3" /> <!-- Surrender To Darkness -->
-			<skill id="4629" level="9" /> <!-- NPC MR - HP Drain -->
-			<skill id="4668" level="9" /> <!-- NPC Strong 100% HP Drain - Magic -->
-			<skill id="5467" level="1" /> <!-- Strong against the dark elemental. -->
-			<skill id="4789" level="9" /> <!-- NPC High Level -->
+			<skill id="4466" level="3" /> <!-- Surrender to Dark -->
+			<skill id="4629" level="9" /> <!-- Drain Energy -->
+			<skill id="4668" level="9" /> <!-- Drain Energy -->
+			<skill id="4789" level="9" /> <!-- High Lv. -->
+			<skill id="5467" level="1" /> <!-- Dark Attack -->
 			<skill id="14765" level="4" /> <!-- Blood Siphon Resistance -->
 			<skill id="15455" level="1" /> <!-- Sensitive Skin -->
 		</skillList>
@@ -3535,20 +3378,16 @@
 		</stats>
 		<status undying="false" canBeSown="true" />
 		<skillList>
-			<skill id="4152" level="9" /> <!-- NPC HP Drain - Magic -->
-			<skill id="4160" level="9" /> <!-- NPC Aura Burn - Magic -->
-			<skill id="4408" level="18" /> <!-- HP Increase (4x) -->
-			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
-			<skill id="4410" level="11" /> <!-- Average P. Atk. -->
-			<skill id="4411" level="11" /> <!-- Average M. Atk. -->
-			<skill id="4412" level="13" /> <!-- Average P. Def. -->
-			<skill id="4413" level="3" /> <!-- Average M. Def. -->
-			<skill id="4414" level="3" /> <!-- Heavy Armor Type -->
-			<skill id="4415" level="1" /> <!-- Blunt Weapons -->
+			<skill id="4152" level="9" /> <!-- Drain Energy -->
+			<skill id="4160" level="9" /> <!-- Aura Burn -->
+			<skill id="4408" level="18" /> <!-- HP Increase (10x) -->
+			<skill id="4413" level="3" /> <!-- Extremely Weak M. Def. -->
+			<skill id="4414" level="3" /> <!-- Light Armor Type -->
+			<skill id="4415" level="1" /> <!-- Bare Hands -->
 			<skill id="4416" level="1" /> <!-- Undead -->
 			<skill id="4417" level="35" /> <!-- Undead -->
-			<skill id="5467" level="1" /> <!-- Strong against the dark elemental. -->
-			<skill id="4789" level="9" /> <!-- NPC High Level -->
+			<skill id="4789" level="9" /> <!-- High Lv. -->
+			<skill id="5467" level="1" /> <!-- Dark Attack -->
 			<skill id="14765" level="4" /> <!-- Blood Siphon Resistance -->
 			<skill id="15455" level="1" /> <!-- Sensitive Skin -->
 		</skillList>
@@ -3623,19 +3462,15 @@
 		</stats>
 		<status undying="false" canBeSown="true" />
 		<skillList>
-			<skill id="4408" level="18" /> <!-- HP Increase (4x) -->
-			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
-			<skill id="4410" level="11" /> <!-- Average P. Atk. -->
-			<skill id="4411" level="11" /> <!-- Average M. Atk. -->
-			<skill id="4412" level="13" /> <!-- Average P. Def. -->
-			<skill id="4413" level="3" /> <!-- Average M. Def. -->
-			<skill id="4414" level="1" /> <!-- Light Armor Type -->
-			<skill id="4415" level="1" /> <!-- Blunt Weapons -->
+			<skill id="4408" level="18" /> <!-- HP Increase (10x) -->
+			<skill id="4413" level="3" /> <!-- Extremely Weak M. Def. -->
+			<skill id="4414" level="1" /> <!-- Heavy Armor Type -->
+			<skill id="4415" level="1" /> <!-- Bare Hands -->
 			<skill id="4416" level="1" /> <!-- Undead -->
 			<skill id="4417" level="36" /> <!-- Undead -->
-			<skill id="4614" level="9" /> <!-- NPC Death Bomb -->
-			<skill id="5467" level="1" /> <!-- Strong against the dark elemental. -->
-			<skill id="4789" level="9" /> <!-- NPC High Level -->
+			<skill id="4614" level="9" /> <!-- Death Bomb -->
+			<skill id="4789" level="9" /> <!-- High Lv. -->
+			<skill id="5467" level="1" /> <!-- Dark Attack -->
 			<skill id="14765" level="4" /> <!-- Blood Siphon Resistance -->
 			<skill id="15455" level="1" /> <!-- Sensitive Skin -->
 		</skillList>
@@ -3721,21 +3556,18 @@
 		</stats>
 		<status undying="false" canBeSown="true" />
 		<skillList>
-			<skill id="4032" level="9" /> <!-- NPC Strike -->
+			<skill id="4032" level="9" /> <!-- Power Strike -->
 			<skill id="4047" level="9" /> <!-- Hold -->
-			<skill id="4408" level="18" /> <!-- HP Increase (5x) -->
-			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
-			<skill id="4410" level="14" /> <!-- Average P. Atk. -->
-			<skill id="4411" level="14" /> <!-- Average M. Atk. -->
-			<skill id="4412" level="11" /> <!-- Average P. Def. -->
-			<skill id="4413" level="11" /> <!-- Average M. Def. -->
-			<skill id="4414" level="1" /> <!-- Standard Type -->
-			<skill id="4415" level="11" /> <!-- Spears -->
+			<skill id="4408" level="18" /> <!-- HP Increase (10x) -->
+			<skill id="4410" level="14" /> <!-- Strong P. Atk. -->
+			<skill id="4411" level="14" /> <!-- Strong M. Atk. -->
+			<skill id="4414" level="1" /> <!-- Heavy Armor Type -->
+			<skill id="4415" level="11" /> <!-- Spear -->
 			<skill id="4416" level="6" /> <!-- Humanoids -->
 			<skill id="4417" level="26" /> <!-- Humanoids -->
-			<skill id="4573" level="9" /> <!-- NPC Sonic Blaster -->
-			<skill id="5467" level="1" /> <!-- Strong against the dark elemental. -->
-			<skill id="4789" level="9" /> <!-- NPC High Level -->
+			<skill id="4573" level="9" /> <!-- Sonic Blaster -->
+			<skill id="4789" level="9" /> <!-- High Lv. -->
+			<skill id="5467" level="1" /> <!-- Dark Attack -->
 			<skill id="14765" level="4" /> <!-- Blood Siphon Resistance -->
 			<skill id="15455" level="1" /> <!-- Sensitive Skin -->
 			<skill id="15466" level="1" /> <!-- Triol's CON Increase -->
@@ -3808,20 +3640,17 @@
 		</stats>
 		<status undying="false" canBeSown="true" />
 		<skillList>
-			<skill id="4408" level="18" /> <!-- HP Increase (4x) -->
-			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
-			<skill id="4410" level="14" /> <!-- Average P. Atk. -->
-			<skill id="4411" level="14" /> <!-- Average M. Atk. -->
-			<skill id="4412" level="11" /> <!-- Average P. Def. -->
-			<skill id="4413" level="11" /> <!-- Average M. Def. -->
-			<skill id="4414" level="3" /> <!-- Standard Type -->
-			<skill id="4415" level="1" /> <!-- Blunt Weapons -->
+			<skill id="4408" level="18" /> <!-- HP Increase (10x) -->
+			<skill id="4410" level="14" /> <!-- Strong P. Atk. -->
+			<skill id="4411" level="14" /> <!-- Strong M. Atk. -->
+			<skill id="4414" level="3" /> <!-- Light Armor Type -->
+			<skill id="4415" level="1" /> <!-- Bare Hands -->
 			<skill id="4416" level="1" /> <!-- Undead -->
 			<skill id="4417" level="35" /> <!-- Undead -->
-			<skill id="4612" level="9" /> <!-- NPC Wide Wild Sweep -->
+			<skill id="4612" level="9" /> <!-- Wide Sweep -->
 			<skill id="4615" level="9" /> <!-- Bleed -->
-			<skill id="5467" level="1" /> <!-- Strong against the dark elemental. -->
-			<skill id="4789" level="9" /> <!-- NPC High Level -->
+			<skill id="4789" level="9" /> <!-- High Lv. -->
+			<skill id="5467" level="1" /> <!-- Dark Attack -->
 			<skill id="14765" level="4" /> <!-- Blood Siphon Resistance -->
 			<skill id="15455" level="1" /> <!-- Sensitive Skin -->
 			<skill id="15466" level="1" /> <!-- Triol's CON Increase -->
@@ -3897,20 +3726,17 @@
 		<status undying="false" canBeSown="true" />
 		<skillList>
 			<skill id="4088" level="9" /> <!-- Bleed -->
-			<skill id="4408" level="18" /> <!-- HP Increase (4x) -->
-			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
-			<skill id="4410" level="14" /> <!-- Average P. Atk. -->
-			<skill id="4411" level="14" /> <!-- Average M. Atk. -->
-			<skill id="4412" level="11" /> <!-- Average P. Def. -->
-			<skill id="4413" level="11" /> <!-- Average M. Def. -->
-			<skill id="4414" level="1" /> <!-- Standard Type -->
-			<skill id="4415" level="11" /> <!-- Spears -->
+			<skill id="4408" level="18" /> <!-- HP Increase (10x) -->
+			<skill id="4410" level="14" /> <!-- Strong P. Atk. -->
+			<skill id="4411" level="14" /> <!-- Strong M. Atk. -->
+			<skill id="4414" level="1" /> <!-- Heavy Armor Type -->
+			<skill id="4415" level="11" /> <!-- Spear -->
 			<skill id="4416" level="6" /> <!-- Humanoids -->
 			<skill id="4417" level="26" /> <!-- Humanoids -->
-			<skill id="4622" level="9" /> <!-- NPC AE - 80% HP Drain - Magic -->
-			<skill id="4665" level="9" /> <!-- NPC 100% HP Drain - Magic -->
-			<skill id="5467" level="1" /> <!-- Strong against the dark elemental. -->
-			<skill id="4789" level="9" /> <!-- NPC High Level -->
+			<skill id="4622" level="9" /> <!-- Drain Energy -->
+			<skill id="4665" level="9" /> <!-- Drain Energy -->
+			<skill id="4789" level="9" /> <!-- High Lv. -->
+			<skill id="5467" level="1" /> <!-- Dark Attack -->
 			<skill id="14765" level="4" /> <!-- Blood Siphon Resistance -->
 			<skill id="15455" level="1" /> <!-- Sensitive Skin -->
 			<skill id="15466" level="1" /> <!-- Triol's CON Increase -->
@@ -3982,20 +3808,17 @@
 		</stats>
 		<status undying="false" canBeSown="true" />
 		<skillList>
-			<skill id="4032" level="2" /> <!-- NPC Strike -->
-			<skill id="4408" level="18" /> <!-- HP Increase (4x) -->
-			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
-			<skill id="4410" level="14" /> <!-- Average P. Atk. -->
-			<skill id="4411" level="14" /> <!-- Average M. Atk. -->
-			<skill id="4412" level="11" /> <!-- Average P. Def. -->
-			<skill id="4413" level="11" /> <!-- Average M. Def. -->
-			<skill id="4414" level="3" /> <!-- Standard Type -->
-			<skill id="4415" level="1" /> <!-- Blunt Weapons -->
+			<skill id="4032" level="2" /> <!-- Power Strike -->
+			<skill id="4408" level="18" /> <!-- HP Increase (10x) -->
+			<skill id="4410" level="14" /> <!-- Strong P. Atk. -->
+			<skill id="4411" level="14" /> <!-- Strong M. Atk. -->
+			<skill id="4414" level="3" /> <!-- Light Armor Type -->
+			<skill id="4415" level="1" /> <!-- Bare Hands -->
 			<skill id="4416" level="1" /> <!-- Undead -->
 			<skill id="4417" level="35" /> <!-- Undead -->
 			<skill id="4649" level="9" /> <!-- Poison -->
-			<skill id="5467" level="1" /> <!-- Strong against the dark elemental. -->
-			<skill id="4789" level="9" /> <!-- NPC High Level -->
+			<skill id="4789" level="9" /> <!-- High Lv. -->
+			<skill id="5467" level="1" /> <!-- Dark Attack -->
 			<skill id="14765" level="4" /> <!-- Blood Siphon Resistance -->
 			<skill id="15455" level="1" /> <!-- Sensitive Skin -->
 			<skill id="15466" level="1" /> <!-- Triol's CON Increase -->
@@ -4072,21 +3895,18 @@
 		<status undying="false" canBeSown="true" />
 		<skillList>
 			<skill id="4088" level="9" /> <!-- Bleed -->
-			<skill id="4408" level="18" /> <!-- HP Increase (4x) -->
-			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
-			<skill id="4410" level="14" /> <!-- Average P. Atk. -->
-			<skill id="4411" level="14" /> <!-- Average M. Atk. -->
-			<skill id="4412" level="11" /> <!-- Average P. Def. -->
-			<skill id="4413" level="11" /> <!-- Average M. Def. -->
-			<skill id="4414" level="1" /> <!-- Standard Type -->
-			<skill id="4415" level="11" /> <!-- Spears -->
+			<skill id="4408" level="18" /> <!-- HP Increase (10x) -->
+			<skill id="4410" level="14" /> <!-- Strong P. Atk. -->
+			<skill id="4411" level="14" /> <!-- Strong M. Atk. -->
+			<skill id="4414" level="1" /> <!-- Heavy Armor Type -->
+			<skill id="4415" level="11" /> <!-- Spear -->
 			<skill id="4416" level="6" /> <!-- Humanoids -->
 			<skill id="4417" level="26" /> <!-- Humanoids -->
-			<skill id="4466" level="3" /> <!-- Surrender To Darkness -->
-			<skill id="4629" level="9" /> <!-- NPC MR - HP Drain -->
-			<skill id="4668" level="9" /> <!-- NPC Strong 100% HP Drain - Magic -->
-			<skill id="5467" level="1" /> <!-- Strong against the dark elemental. -->
-			<skill id="4789" level="9" /> <!-- NPC High Level -->
+			<skill id="4466" level="3" /> <!-- Surrender to Dark -->
+			<skill id="4629" level="9" /> <!-- Drain Energy -->
+			<skill id="4668" level="9" /> <!-- Drain Energy -->
+			<skill id="4789" level="9" /> <!-- High Lv. -->
+			<skill id="5467" level="1" /> <!-- Dark Attack -->
 			<skill id="14765" level="4" /> <!-- Blood Siphon Resistance -->
 			<skill id="15455" level="1" /> <!-- Sensitive Skin -->
 			<skill id="15466" level="1" /> <!-- Triol's CON Increase -->
@@ -4171,21 +3991,18 @@
 		<status undying="false" canBeSown="true" />
 		<skillList>
 			<skill id="4047" level="9" /> <!-- Hold -->
-			<skill id="4408" level="18" /> <!-- HP Increase (5x) -->
-			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
-			<skill id="4410" level="14" /> <!-- Average P. Atk. -->
-			<skill id="4411" level="14" /> <!-- Average M. Atk. -->
-			<skill id="4412" level="11" /> <!-- Average P. Def. -->
-			<skill id="4413" level="11" /> <!-- Average M. Def. -->
-			<skill id="4414" level="1" /> <!-- Standard Type -->
-			<skill id="4415" level="11" /> <!-- Spears -->
+			<skill id="4408" level="18" /> <!-- HP Increase (10x) -->
+			<skill id="4410" level="14" /> <!-- Strong P. Atk. -->
+			<skill id="4411" level="14" /> <!-- Strong M. Atk. -->
+			<skill id="4414" level="1" /> <!-- Heavy Armor Type -->
+			<skill id="4415" level="11" /> <!-- Spear -->
 			<skill id="4416" level="6" /> <!-- Humanoids -->
 			<skill id="4417" level="26" /> <!-- Humanoids -->
 			<skill id="4615" level="9" /> <!-- Bleed -->
-			<skill id="4629" level="9" /> <!-- NPC MR - HP Drain -->
-			<skill id="4668" level="9" /> <!-- NPC Strong 100% HP Drain - Magic -->
-			<skill id="5467" level="1" /> <!-- Strong against the dark elemental. -->
-			<skill id="4789" level="10" /> <!-- NPC High Level -->
+			<skill id="4629" level="9" /> <!-- Drain Energy -->
+			<skill id="4668" level="9" /> <!-- Drain Energy -->
+			<skill id="4789" level="10" /> <!-- High Lv. -->
+			<skill id="5467" level="1" /> <!-- Dark Attack -->
 			<skill id="14765" level="4" /> <!-- Blood Siphon Resistance -->
 			<skill id="15455" level="1" /> <!-- Sensitive Skin -->
 			<skill id="15466" level="1" /> <!-- Triol's CON Increase -->
@@ -4256,20 +4073,17 @@
 		</stats>
 		<status undying="false" canBeSown="true" />
 		<skillList>
-			<skill id="4408" level="18" /> <!-- HP Increase (4x) -->
-			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
-			<skill id="4410" level="14" /> <!-- Average P. Atk. -->
-			<skill id="4411" level="14" /> <!-- Average M. Atk. -->
-			<skill id="4412" level="11" /> <!-- Average P. Def. -->
-			<skill id="4413" level="11" /> <!-- Average M. Def. -->
-			<skill id="4414" level="3" /> <!-- Standard Type -->
-			<skill id="4415" level="3" /> <!-- Two-handed Sword -->
+			<skill id="4408" level="18" /> <!-- HP Increase (10x) -->
+			<skill id="4410" level="14" /> <!-- Strong P. Atk. -->
+			<skill id="4411" level="14" /> <!-- Strong M. Atk. -->
+			<skill id="4414" level="3" /> <!-- Light Armor Type -->
+			<skill id="4415" level="3" /> <!-- One-handed Sword -->
 			<skill id="4416" level="1" /> <!-- Undead -->
 			<skill id="4417" level="35" /> <!-- Undead -->
-			<skill id="4612" level="9" /> <!-- NPC Wide Wild Sweep -->
+			<skill id="4612" level="9" /> <!-- Wide Sweep -->
 			<skill id="4615" level="9" /> <!-- Bleed -->
-			<skill id="5467" level="1" /> <!-- Strong against the dark elemental. -->
-			<skill id="4789" level="9" /> <!-- NPC High Level -->
+			<skill id="4789" level="9" /> <!-- High Lv. -->
+			<skill id="5467" level="1" /> <!-- Dark Attack -->
 			<skill id="14765" level="4" /> <!-- Blood Siphon Resistance -->
 			<skill id="15455" level="1" /> <!-- Sensitive Skin -->
 			<skill id="15466" level="1" /> <!-- Triol's CON Increase -->
@@ -4344,21 +4158,18 @@
 		</stats>
 		<status undying="false" canBeSown="true" />
 		<skillList>
-			<skill id="4408" level="18" /> <!-- HP Increase (4x) -->
-			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
-			<skill id="4410" level="14" /> <!-- Average P. Atk. -->
-			<skill id="4411" level="14" /> <!-- Average M. Atk. -->
-			<skill id="4412" level="11" /> <!-- Average P. Def. -->
-			<skill id="4413" level="11" /> <!-- Average M. Def. -->
-			<skill id="4414" level="3" /> <!-- Standard Type -->
-			<skill id="4415" level="3" /> <!-- Two-handed Sword -->
+			<skill id="4408" level="18" /> <!-- HP Increase (10x) -->
+			<skill id="4410" level="14" /> <!-- Strong P. Atk. -->
+			<skill id="4411" level="14" /> <!-- Strong M. Atk. -->
+			<skill id="4414" level="3" /> <!-- Light Armor Type -->
+			<skill id="4415" level="3" /> <!-- One-handed Sword -->
 			<skill id="4416" level="1" /> <!-- Undead -->
 			<skill id="4417" level="35" /> <!-- Undead -->
-			<skill id="4466" level="3" /> <!-- Surrender To Darkness -->
-			<skill id="4622" level="9" /> <!-- NPC AE - 80% HP Drain - Magic -->
-			<skill id="4665" level="9" /> <!-- NPC 100% HP Drain - Magic -->
-			<skill id="5467" level="1" /> <!-- Strong against the dark elemental. -->
-			<skill id="4789" level="9" /> <!-- NPC High Level -->
+			<skill id="4466" level="3" /> <!-- Surrender to Dark -->
+			<skill id="4622" level="9" /> <!-- Drain Energy -->
+			<skill id="4665" level="9" /> <!-- Drain Energy -->
+			<skill id="4789" level="9" /> <!-- High Lv. -->
+			<skill id="5467" level="1" /> <!-- Dark Attack -->
 			<skill id="14765" level="4" /> <!-- Blood Siphon Resistance -->
 			<skill id="15455" level="1" /> <!-- Sensitive Skin -->
 			<skill id="15466" level="1" /> <!-- Triol's CON Increase -->
@@ -4432,19 +4243,16 @@
 		</stats>
 		<status undying="false" canBeSown="true" />
 		<skillList>
-			<skill id="4408" level="18" /> <!-- HP Increase (4x) -->
-			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
-			<skill id="4410" level="14" /> <!-- Average P. Atk. -->
-			<skill id="4411" level="14" /> <!-- Average M. Atk. -->
-			<skill id="4412" level="11" /> <!-- Average P. Def. -->
-			<skill id="4413" level="11" /> <!-- Average M. Def. -->
-			<skill id="4414" level="1" /> <!-- Light Armor Type -->
-			<skill id="4415" level="1" /> <!-- One-handed Sword -->
+			<skill id="4408" level="18" /> <!-- HP Increase (10x) -->
+			<skill id="4410" level="14" /> <!-- Strong P. Atk. -->
+			<skill id="4411" level="14" /> <!-- Strong M. Atk. -->
+			<skill id="4414" level="1" /> <!-- Heavy Armor Type -->
+			<skill id="4415" level="1" /> <!-- Bare Hands -->
 			<skill id="4416" level="1" /> <!-- Undead -->
 			<skill id="4417" level="36" /> <!-- Undead -->
-			<skill id="4614" level="9" /> <!-- NPC Death Bomb -->
-			<skill id="5467" level="1" /> <!-- Strong against the dark elemental. -->
-			<skill id="4789" level="10" /> <!-- NPC High Level -->
+			<skill id="4614" level="9" /> <!-- Death Bomb -->
+			<skill id="4789" level="10" /> <!-- High Lv. -->
+			<skill id="5467" level="1" /> <!-- Dark Attack -->
 			<skill id="14765" level="4" /> <!-- Blood Siphon Resistance -->
 			<skill id="15455" level="1" /> <!-- Sensitive Skin -->
 			<skill id="15466" level="1" /> <!-- Triol's CON Increase -->
@@ -4524,22 +4332,19 @@
 		</stats>
 		<status undying="false" canBeSown="true" />
 		<skillList>
-			<skill id="4032" level="9" /> <!-- NPC Strike -->
-			<skill id="4065" level="9" /> <!-- NPC Heal -->
-			<skill id="4408" level="13" /> <!-- HP Increase (5x) -->
-			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
-			<skill id="4410" level="10" /> <!-- Average P. Atk. -->
-			<skill id="4411" level="10" /> <!-- Average M. Atk. -->
-			<skill id="4412" level="19" /> <!-- Average P. Def. -->
-			<skill id="4413" level="9" /> <!-- Average M. Def. -->
-			<skill id="4414" level="2" /> <!-- Standard Type -->
+			<skill id="4410" level="10" /> <!-- Slightly Weak P. Atk. -->
+			<skill id="4411" level="10" /> <!-- Slightly Weak M. Atk. -->
+			<skill id="4412" level="19" /> <!-- Extremely Strong P. Def. -->
+			<skill id="4413" level="9" /> <!-- Slightly Weak M. Def. -->
+			<skill id="4414" level="1" /> <!-- Heavy Armor Type -->
 			<skill id="4415" level="3" /> <!-- One-handed Sword -->
 			<skill id="4416" level="6" /> <!-- Humanoids -->
 			<skill id="4417" level="26" /> <!-- Humanoids -->
-			<skill id="4612" level="9" /> <!-- NPC Wide Wild Sweep -->
-			<skill id="4641" level="10" /> <!-- NPC Super Strike -->
-			<skill id="5467" level="1" /> <!-- Strong against the dark elemental. -->
-			<skill id="4789" level="10" /> <!-- NPC High Level -->
+			<skill id="4466" level="3" /> <!-- Surrender to Dark -->
+			<skill id="4622" level="9" /> <!-- Drain Energy -->
+			<skill id="4665" level="9" /> <!-- Drain Energy -->
+			<skill id="4789" level="10" /> <!-- High Lv. -->
+			<skill id="5467" level="1" /> <!-- Dark Attack -->
 			<skill id="14765" level="4" /> <!-- Blood Siphon Resistance -->
 			<skill id="15455" level="1" /> <!-- Sensitive Skin -->
 		</skillList>
@@ -4612,19 +4417,17 @@
 		</stats>
 		<status undying="false" canBeSown="true" />
 		<skillList>
-			<skill id="4032" level="9" /> <!-- NPC Strike -->
-			<skill id="4408" level="12" /> <!-- HP Increase (4x) -->
-			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
-			<skill id="4410" level="10" /> <!-- Average P. Atk. -->
-			<skill id="4411" level="10" /> <!-- Average M. Atk. -->
-			<skill id="4412" level="19" /> <!-- Average P. Def. -->
-			<skill id="4413" level="9" /> <!-- Average M. Def. -->
-			<skill id="4414" level="1" /> <!-- Standard Type -->
-			<skill id="4415" level="11" /> <!-- Spears -->
+			<skill id="4032" level="9" /> <!-- Power Strike -->
+			<skill id="4410" level="10" /> <!-- Slightly Weak P. Atk. -->
+			<skill id="4411" level="10" /> <!-- Slightly Weak M. Atk. -->
+			<skill id="4412" level="19" /> <!-- Extremely Strong P. Def. -->
+			<skill id="4413" level="9" /> <!-- Slightly Weak M. Def. -->
+			<skill id="4414" level="1" /> <!-- Heavy Armor Type -->
+			<skill id="4415" level="11" /> <!-- Spear -->
 			<skill id="4416" level="6" /> <!-- Humanoids -->
 			<skill id="4417" level="26" /> <!-- Humanoids -->
-			<skill id="5467" level="1" /> <!-- Strong against the dark elemental. -->
-			<skill id="4789" level="10" /> <!-- NPC High Level -->
+			<skill id="4789" level="10" /> <!-- High Lv. -->
+			<skill id="5467" level="1" /> <!-- Dark Attack -->
 			<skill id="14765" level="4" /> <!-- Blood Siphon Resistance -->
 			<skill id="15455" level="1" /> <!-- Sensitive Skin -->
 		</skillList>
@@ -4693,19 +4496,17 @@
 		</stats>
 		<status undying="false" canBeSown="true" />
 		<skillList>
-			<skill id="4408" level="12" /> <!-- HP Increase (4x) -->
-			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
-			<skill id="4410" level="10" /> <!-- Average P. Atk. -->
-			<skill id="4411" level="10" /> <!-- Average M. Atk. -->
-			<skill id="4412" level="19" /> <!-- Average P. Def. -->
-			<skill id="4413" level="9" /> <!-- Average M. Def. -->
-			<skill id="4414" level="1" /> <!-- Standard Type -->
-			<skill id="4415" level="11" /> <!-- Spears -->
+			<skill id="4410" level="10" /> <!-- Slightly Weak P. Atk. -->
+			<skill id="4411" level="10" /> <!-- Slightly Weak M. Atk. -->
+			<skill id="4412" level="19" /> <!-- Extremely Strong P. Def. -->
+			<skill id="4413" level="9" /> <!-- Slightly Weak M. Def. -->
+			<skill id="4414" level="1" /> <!-- Heavy Armor Type -->
+			<skill id="4415" level="11" /> <!-- Spear -->
 			<skill id="4416" level="6" /> <!-- Humanoids -->
 			<skill id="4417" level="26" /> <!-- Humanoids -->
-			<skill id="4466" level="3" /> <!-- Surrender To Darkness -->
-			<skill id="5467" level="1" /> <!-- Strong against the dark elemental. -->
-			<skill id="4789" level="10" /> <!-- NPC High Level -->
+			<skill id="4466" level="3" /> <!-- Surrender to Dark -->
+			<skill id="4789" level="10" /> <!-- High Lv. -->
+			<skill id="5467" level="1" /> <!-- Dark Attack -->
 			<skill id="14765" level="4" /> <!-- Blood Siphon Resistance -->
 			<skill id="15455" level="1" /> <!-- Sensitive Skin -->
 		</skillList>
@@ -4776,21 +4577,19 @@
 		</stats>
 		<status undying="false" />
 		<skillList>
-			<skill id="4408" level="12" /> <!-- HP Increase (4x) -->
-			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
-			<skill id="4410" level="10" /> <!-- Average P. Atk. -->
-			<skill id="4411" level="10" /> <!-- Average M. Atk. -->
-			<skill id="4412" level="19" /> <!-- Average P. Def. -->
-			<skill id="4413" level="9" /> <!-- Average M. Def. -->
-			<skill id="4414" level="1" /> <!-- Standard Type -->
-			<skill id="4415" level="3" /> <!-- Bare Hands -->
+			<skill id="4410" level="10" /> <!-- Slightly Weak P. Atk. -->
+			<skill id="4411" level="10" /> <!-- Slightly Weak M. Atk. -->
+			<skill id="4412" level="19" /> <!-- Extremely Strong P. Def. -->
+			<skill id="4413" level="9" /> <!-- Slightly Weak M. Def. -->
+			<skill id="4414" level="1" /> <!-- Heavy Armor Type -->
+			<skill id="4415" level="3" /> <!-- One-handed Sword -->
 			<skill id="4416" level="6" /> <!-- Humanoids -->
 			<skill id="4417" level="26" /> <!-- Humanoids -->
-			<skill id="4466" level="3" /> <!-- Surrender To Darkness -->
-			<skill id="4622" level="9" /> <!-- NPC AE - 80% HP Drain - Magic -->
-			<skill id="4665" level="9" /> <!-- NPC 100% HP Drain - Magic -->
-			<skill id="5467" level="1" /> <!-- Strong against the dark elemental. -->
-			<skill id="4789" level="10" /> <!-- NPC High Level -->
+			<skill id="4466" level="3" /> <!-- Surrender to Dark -->
+			<skill id="4622" level="9" /> <!-- Drain Energy -->
+			<skill id="4665" level="9" /> <!-- Drain Energy -->
+			<skill id="4789" level="10" /> <!-- High Lv. -->
+			<skill id="5467" level="1" /> <!-- Dark Attack -->
 			<skill id="14765" level="4" /> <!-- Blood Siphon Resistance -->
 			<skill id="15455" level="1" /> <!-- Sensitive Skin -->
 		</skillList>
@@ -4868,22 +4667,19 @@
 		</stats>
 		<status undying="false" canBeSown="true" />
 		<skillList>
-			<skill id="4032" level="9" /> <!-- NPC Strike -->
-			<skill id="4065" level="9" /> <!-- NPC Heal -->
-			<skill id="4408" level="13" /> <!-- HP Increase (5x) -->
-			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
-			<skill id="4410" level="10" /> <!-- Average P. Atk. -->
-			<skill id="4411" level="10" /> <!-- Average M. Atk. -->
-			<skill id="4412" level="19" /> <!-- Average P. Def. -->
-			<skill id="4413" level="9" /> <!-- Average M. Def. -->
-			<skill id="4414" level="2" /> <!-- Standard Type -->
+			<skill id="4410" level="10" /> <!-- Slightly Weak P. Atk. -->
+			<skill id="4411" level="10" /> <!-- Slightly Weak M. Atk. -->
+			<skill id="4412" level="19" /> <!-- Extremely Strong P. Def. -->
+			<skill id="4413" level="9" /> <!-- Slightly Weak M. Def. -->
+			<skill id="4414" level="3" /> <!-- Light Armor Type -->
 			<skill id="4415" level="3" /> <!-- One-handed Sword -->
 			<skill id="4416" level="6" /> <!-- Humanoids -->
 			<skill id="4417" level="26" /> <!-- Humanoids -->
-			<skill id="4612" level="9" /> <!-- NPC Wide Wild Sweep -->
-			<skill id="4641" level="10" /> <!-- NPC Super Strike -->
-			<skill id="5467" level="1" /> <!-- Strong against the dark elemental. -->
-			<skill id="4789" level="10" /> <!-- NPC High Level -->
+			<skill id="4466" level="3" /> <!-- Surrender to Dark -->
+			<skill id="4622" level="9" /> <!-- Drain Energy -->
+			<skill id="4665" level="9" /> <!-- Drain Energy -->
+			<skill id="4789" level="10" /> <!-- High Lv. -->
+			<skill id="5467" level="1" /> <!-- Dark Attack -->
 			<skill id="14765" level="4" /> <!-- Blood Siphon Resistance -->
 			<skill id="15455" level="1" /> <!-- Sensitive Skin -->
 		</skillList>
@@ -4953,19 +4749,17 @@
 		</stats>
 		<status undying="false" canBeSown="true" />
 		<skillList>
-			<skill id="4032" level="9" /> <!-- NPC Strike -->
-			<skill id="4408" level="12" /> <!-- HP Increase (4x) -->
-			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
-			<skill id="4410" level="10" /> <!-- Average P. Atk. -->
-			<skill id="4411" level="10" /> <!-- Average M. Atk. -->
-			<skill id="4412" level="19" /> <!-- Average P. Def. -->
-			<skill id="4413" level="9" /> <!-- Average M. Def. -->
-			<skill id="4414" level="3" /> <!-- Standard Type -->
-			<skill id="4415" level="3" /> <!-- Spears -->
+			<skill id="4032" level="9" /> <!-- Power Strike -->
+			<skill id="4410" level="10" /> <!-- Slightly Weak P. Atk. -->
+			<skill id="4411" level="10" /> <!-- Slightly Weak M. Atk. -->
+			<skill id="4412" level="19" /> <!-- Extremely Strong P. Def. -->
+			<skill id="4413" level="9" /> <!-- Slightly Weak M. Def. -->
+			<skill id="4414" level="3" /> <!-- Light Armor Type -->
+			<skill id="4415" level="3" /> <!-- One-handed Sword -->
 			<skill id="4416" level="6" /> <!-- Humanoids -->
 			<skill id="4417" level="26" /> <!-- Humanoids -->
-			<skill id="5467" level="1" /> <!-- Strong against the dark elemental. -->
-			<skill id="4789" level="10" /> <!-- NPC High Level -->
+			<skill id="4789" level="10" /> <!-- High Lv. -->
+			<skill id="5467" level="1" /> <!-- Dark Attack -->
 			<skill id="14765" level="4" /> <!-- Blood Siphon Resistance -->
 			<skill id="15455" level="1" /> <!-- Sensitive Skin -->
 		</skillList>
@@ -5034,20 +4828,18 @@
 		</stats>
 		<status undying="false" />
 		<skillList>
-			<skill id="4032" level="9" /> <!-- NPC Strike -->
-			<skill id="4408" level="12" /> <!-- HP Increase (4x) -->
-			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
-			<skill id="4410" level="10" /> <!-- Average P. Atk. -->
-			<skill id="4411" level="10" /> <!-- Average M. Atk. -->
-			<skill id="4412" level="19" /> <!-- Average P. Def. -->
-			<skill id="4413" level="9" /> <!-- Average M. Def. -->
-			<skill id="4414" level="1" /> <!-- Light Armor Type -->
-			<skill id="4415" level="1" /> <!-- One-handed Sword -->
+			<skill id="4032" level="9" /> <!-- Power Strike -->
+			<skill id="4410" level="10" /> <!-- Slightly Weak P. Atk. -->
+			<skill id="4411" level="10" /> <!-- Slightly Weak M. Atk. -->
+			<skill id="4412" level="19" /> <!-- Extremely Strong P. Def. -->
+			<skill id="4413" level="9" /> <!-- Slightly Weak M. Def. -->
+			<skill id="4414" level="1" /> <!-- Heavy Armor Type -->
+			<skill id="4415" level="1" /> <!-- Bare Hands -->
 			<skill id="4416" level="1" /> <!-- Undead -->
 			<skill id="4417" level="36" /> <!-- Undead -->
-			<skill id="4614" level="9" /> <!-- NPC Death Bomb -->
-			<skill id="5467" level="1" /> <!-- Strong against the dark elemental. -->
-			<skill id="4789" level="10" /> <!-- NPC High Level -->
+			<skill id="4614" level="9" /> <!-- Death Bomb -->
+			<skill id="4789" level="10" /> <!-- High Lv. -->
+			<skill id="5467" level="1" /> <!-- Dark Attack -->
 			<skill id="14765" level="4" /> <!-- Blood Siphon Resistance -->
 			<skill id="15455" level="1" /> <!-- Sensitive Skin -->
 		</skillList>
@@ -5121,21 +4913,19 @@
 		</stats>
 		<status undying="false" />
 		<skillList>
-			<skill id="4408" level="12" /> <!-- HP Increase (4x) -->
-			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
-			<skill id="4410" level="10" /> <!-- Average P. Atk. -->
-			<skill id="4411" level="10" /> <!-- Average M. Atk. -->
-			<skill id="4412" level="19" /> <!-- Average P. Def. -->
-			<skill id="4413" level="9" /> <!-- Average M. Def. -->
-			<skill id="4414" level="3" /> <!-- Standard Type -->
+			<skill id="4410" level="10" /> <!-- Slightly Weak P. Atk. -->
+			<skill id="4411" level="10" /> <!-- Slightly Weak M. Atk. -->
+			<skill id="4412" level="19" /> <!-- Extremely Strong P. Def. -->
+			<skill id="4413" level="9" /> <!-- Slightly Weak M. Def. -->
+			<skill id="4414" level="3" /> <!-- Light Armor Type -->
 			<skill id="4415" level="3" /> <!-- One-handed Sword -->
 			<skill id="4416" level="6" /> <!-- Humanoids -->
 			<skill id="4417" level="26" /> <!-- Humanoids -->
-			<skill id="4466" level="3" /> <!-- Surrender To Darkness -->
-			<skill id="4622" level="9" /> <!-- NPC AE - 80% HP Drain - Magic -->
-			<skill id="4665" level="9" /> <!-- NPC 100% HP Drain - Magic -->
-			<skill id="5467" level="1" /> <!-- Strong against the dark elemental. -->
-			<skill id="4789" level="10" /> <!-- NPC High Level -->
+			<skill id="4466" level="3" /> <!-- Surrender to Dark -->
+			<skill id="4622" level="9" /> <!-- Drain Energy -->
+			<skill id="4665" level="9" /> <!-- Drain Energy -->
+			<skill id="4789" level="10" /> <!-- High Lv. -->
+			<skill id="5467" level="1" /> <!-- Dark Attack -->
 			<skill id="14765" level="4" /> <!-- Blood Siphon Resistance -->
 			<skill id="15455" level="1" /> <!-- Sensitive Skin -->
 		</skillList>
@@ -5216,24 +5006,18 @@
 		</stats>
 		<status undying="false" canBeSown="true" />
 		<skillList>
-			<skill id="4065" level="9" /> <!-- NPC Heal -->
-			<skill id="4088" level="9" /> <!-- Bleed -->
-			<skill id="4158" level="9" /> <!-- NPC Prominence - Magic -->
-			<skill id="4408" level="13" /> <!-- HP Increase (5x) -->
-			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
-			<skill id="4410" level="10" /> <!-- Average P. Atk. -->
-			<skill id="4411" level="10" /> <!-- Average M. Atk. -->
-			<skill id="4412" level="19" /> <!-- Average P. Def. -->
-			<skill id="4413" level="9" /> <!-- Average M. Def. -->
-			<skill id="4414" level="2" /> <!-- Standard Type -->
-			<skill id="4415" level="3" /> <!-- Blunt Weapons -->
+			<skill id="4410" level="10" /> <!-- Slightly Weak P. Atk. -->
+			<skill id="4411" level="10" /> <!-- Slightly Weak M. Atk. -->
+			<skill id="4412" level="19" /> <!-- Extremely Strong P. Def. -->
+			<skill id="4413" level="9" /> <!-- Slightly Weak M. Def. -->
+			<skill id="4414" level="1" /> <!-- Heavy Armor Type -->
+			<skill id="4415" level="11" /> <!-- Spear -->
 			<skill id="4416" level="6" /> <!-- Humanoids -->
 			<skill id="4417" level="26" /> <!-- Humanoids -->
-			<skill id="4622" level="9" /> <!-- NPC AE - 80% HP Drain - Magic -->
-			<skill id="4641" level="10" /> <!-- NPC Super Strike -->
-			<skill id="4655" level="9" /> <!-- NPC Death Link - Magic -->
-			<skill id="5467" level="1" /> <!-- Strong against the dark elemental. -->
-			<skill id="4789" level="10" /> <!-- NPC High Level -->
+			<skill id="4622" level="9" /> <!-- Drain Energy -->
+			<skill id="4665" level="9" /> <!-- Drain Energy -->
+			<skill id="4789" level="10" /> <!-- High Lv. -->
+			<skill id="5467" level="1" /> <!-- Dark Attack -->
 			<skill id="14765" level="4" /> <!-- Blood Siphon Resistance -->
 			<skill id="15455" level="1" /> <!-- Sensitive Skin -->
 		</skillList>
@@ -5303,19 +5087,17 @@
 		</stats>
 		<status undying="false" canBeSown="true" />
 		<skillList>
-			<skill id="4408" level="12" /> <!-- HP Increase (4x) -->
-			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
-			<skill id="4410" level="10" /> <!-- Average P. Atk. -->
-			<skill id="4411" level="10" /> <!-- Average M. Atk. -->
-			<skill id="4412" level="19" /> <!-- Average P. Def. -->
-			<skill id="4413" level="9" /> <!-- Average M. Def. -->
-			<skill id="4414" level="3" /> <!-- Standard Type -->
+			<skill id="4410" level="10" /> <!-- Slightly Weak P. Atk. -->
+			<skill id="4411" level="10" /> <!-- Slightly Weak M. Atk. -->
+			<skill id="4412" level="19" /> <!-- Extremely Strong P. Def. -->
+			<skill id="4413" level="9" /> <!-- Slightly Weak M. Def. -->
+			<skill id="4414" level="3" /> <!-- Light Armor Type -->
 			<skill id="4415" level="3" /> <!-- One-handed Sword -->
 			<skill id="4416" level="6" /> <!-- Humanoids -->
 			<skill id="4417" level="26" /> <!-- Humanoids -->
-			<skill id="4612" level="9" /> <!-- NPC Wide Wild Sweep -->
-			<skill id="5467" level="1" /> <!-- Strong against the dark elemental. -->
-			<skill id="4789" level="10" /> <!-- NPC High Level -->
+			<skill id="4612" level="9" /> <!-- Wide Sweep -->
+			<skill id="4789" level="10" /> <!-- High Lv. -->
+			<skill id="5467" level="1" /> <!-- Dark Attack -->
 			<skill id="14765" level="4" /> <!-- Blood Siphon Resistance -->
 			<skill id="15455" level="1" /> <!-- Sensitive Skin -->
 		</skillList>
@@ -5387,21 +5169,19 @@
 		</stats>
 		<status undying="false" canBeSown="true" />
 		<skillList>
-			<skill id="4408" level="12" /> <!-- HP Increase (4x) -->
-			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
-			<skill id="4410" level="10" /> <!-- Average P. Atk. -->
-			<skill id="4411" level="10" /> <!-- Average M. Atk. -->
-			<skill id="4412" level="19" /> <!-- Average P. Def. -->
-			<skill id="4413" level="9" /> <!-- Average M. Def. -->
-			<skill id="4414" level="1" /> <!-- Standard Type -->
-			<skill id="4415" level="11" /> <!-- Spears -->
+			<skill id="4410" level="10" /> <!-- Slightly Weak P. Atk. -->
+			<skill id="4411" level="10" /> <!-- Slightly Weak M. Atk. -->
+			<skill id="4412" level="19" /> <!-- Extremely Strong P. Def. -->
+			<skill id="4413" level="9" /> <!-- Slightly Weak M. Def. -->
+			<skill id="4414" level="1" /> <!-- Heavy Armor Type -->
+			<skill id="4415" level="11" /> <!-- Spear -->
 			<skill id="4416" level="6" /> <!-- Humanoids -->
 			<skill id="4417" level="26" /> <!-- Humanoids -->
-			<skill id="4466" level="3" /> <!-- Surrender To Darkness -->
-			<skill id="4622" level="9" /> <!-- NPC AE - 80% HP Drain - Magic -->
-			<skill id="4665" level="9" /> <!-- NPC 100% HP Drain - Magic -->
-			<skill id="5467" level="1" /> <!-- Strong against the dark elemental. -->
-			<skill id="4789" level="10" /> <!-- NPC High Level -->
+			<skill id="4466" level="3" /> <!-- Surrender to Dark -->
+			<skill id="4622" level="9" /> <!-- Drain Energy -->
+			<skill id="4665" level="9" /> <!-- Drain Energy -->
+			<skill id="4789" level="10" /> <!-- High Lv. -->
+			<skill id="5467" level="1" /> <!-- Dark Attack -->
 			<skill id="14765" level="4" /> <!-- Blood Siphon Resistance -->
 			<skill id="15455" level="1" /> <!-- Sensitive Skin -->
 		</skillList>
@@ -5471,20 +5251,18 @@
 		</stats>
 		<status undying="false" canBeSown="true" />
 		<skillList>
-			<skill id="4408" level="12" /> <!-- HP Increase (4x) -->
-			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
-			<skill id="4410" level="10" /> <!-- Average P. Atk. -->
-			<skill id="4411" level="10" /> <!-- Average M. Atk. -->
-			<skill id="4412" level="19" /> <!-- Average P. Def. -->
-			<skill id="4413" level="9" /> <!-- Average M. Def. -->
-			<skill id="4414" level="1" /> <!-- Standard Type -->
-			<skill id="4415" level="11" /> <!-- Spears -->
+			<skill id="4410" level="10" /> <!-- Slightly Weak P. Atk. -->
+			<skill id="4411" level="10" /> <!-- Slightly Weak M. Atk. -->
+			<skill id="4412" level="19" /> <!-- Extremely Strong P. Def. -->
+			<skill id="4413" level="9" /> <!-- Slightly Weak M. Def. -->
+			<skill id="4414" level="1" /> <!-- Heavy Armor Type -->
+			<skill id="4415" level="11" /> <!-- Spear -->
 			<skill id="4416" level="6" /> <!-- Humanoids -->
 			<skill id="4417" level="26" /> <!-- Humanoids -->
-			<skill id="4622" level="9" /> <!-- NPC AE - 80% HP Drain - Magic -->
-			<skill id="4665" level="9" /> <!-- NPC 100% HP Drain - Magic -->
-			<skill id="5467" level="1" /> <!-- Strong against the dark elemental. -->
-			<skill id="4789" level="10" /> <!-- NPC High Level -->
+			<skill id="4622" level="9" /> <!-- Drain Energy -->
+			<skill id="4665" level="9" /> <!-- Drain Energy -->
+			<skill id="4789" level="10" /> <!-- High Lv. -->
+			<skill id="5467" level="1" /> <!-- Dark Attack -->
 			<skill id="14765" level="4" /> <!-- Blood Siphon Resistance -->
 			<skill id="15455" level="1" /> <!-- Sensitive Skin -->
 		</skillList>
@@ -5562,22 +5340,17 @@
 		</stats>
 		<status undying="false" canBeSown="true" />
 		<skillList>
-			<skill id="4032" level="9" /> <!-- NPC Strike -->
-			<skill id="4065" level="9" /> <!-- NPC Heal -->
-			<skill id="4408" level="13" /> <!-- HP Increase (5x) -->
-			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
-			<skill id="4410" level="10" /> <!-- Average P. Atk. -->
-			<skill id="4411" level="10" /> <!-- Average M. Atk. -->
-			<skill id="4412" level="19" /> <!-- Average P. Def. -->
-			<skill id="4413" level="9" /> <!-- Average M. Def. -->
-			<skill id="4414" level="2" /> <!-- Standard Type -->
+			<skill id="4032" level="9" /> <!-- Power Strike -->
+			<skill id="4410" level="10" /> <!-- Slightly Weak P. Atk. -->
+			<skill id="4411" level="10" /> <!-- Slightly Weak M. Atk. -->
+			<skill id="4412" level="19" /> <!-- Extremely Strong P. Def. -->
+			<skill id="4413" level="9" /> <!-- Slightly Weak M. Def. -->
+			<skill id="4414" level="3" /> <!-- Light Armor Type -->
 			<skill id="4415" level="3" /> <!-- One-handed Sword -->
 			<skill id="4416" level="6" /> <!-- Humanoids -->
 			<skill id="4417" level="26" /> <!-- Humanoids -->
-			<skill id="4612" level="9" /> <!-- NPC Wide Wild Sweep -->
-			<skill id="4641" level="10" /> <!-- NPC Super Strike -->
-			<skill id="5467" level="1" /> <!-- Strong against the dark elemental. -->
-			<skill id="4789" level="10" /> <!-- NPC High Level -->
+			<skill id="4789" level="10" /> <!-- High Lv. -->
+			<skill id="5467" level="1" /> <!-- Dark Attack -->
 			<skill id="14765" level="4" /> <!-- Blood Siphon Resistance -->
 			<skill id="15455" level="1" /> <!-- Sensitive Skin -->
 		</skillList>
@@ -5649,21 +5422,19 @@
 		</stats>
 		<status undying="false" canBeSown="true" />
 		<skillList>
-			<skill id="4408" level="12" /> <!-- HP Increase (4x) -->
-			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
-			<skill id="4410" level="10" /> <!-- Average P. Atk. -->
-			<skill id="4411" level="10" /> <!-- Average M. Atk. -->
-			<skill id="4412" level="19" /> <!-- Average P. Def. -->
-			<skill id="4413" level="9" /> <!-- Average M. Def. -->
-			<skill id="4414" level="1" /> <!-- Standard Type -->
-			<skill id="4415" level="11" /> <!-- Spears -->
+			<skill id="4410" level="10" /> <!-- Slightly Weak P. Atk. -->
+			<skill id="4411" level="10" /> <!-- Slightly Weak M. Atk. -->
+			<skill id="4412" level="19" /> <!-- Extremely Strong P. Def. -->
+			<skill id="4413" level="9" /> <!-- Slightly Weak M. Def. -->
+			<skill id="4414" level="1" /> <!-- Heavy Armor Type -->
+			<skill id="4415" level="11" /> <!-- Spear -->
 			<skill id="4416" level="6" /> <!-- Humanoids -->
 			<skill id="4417" level="26" /> <!-- Humanoids -->
-			<skill id="4466" level="3" /> <!-- Surrender To Darkness -->
-			<skill id="4622" level="9" /> <!-- NPC AE - 80% HP Drain - Magic -->
-			<skill id="4665" level="9" /> <!-- NPC 100% HP Drain - Magic -->
-			<skill id="5467" level="1" /> <!-- Strong against the dark elemental. -->
-			<skill id="4789" level="10" /> <!-- NPC High Level -->
+			<skill id="4466" level="3" /> <!-- Surrender to Dark -->
+			<skill id="4622" level="9" /> <!-- Drain Energy -->
+			<skill id="4665" level="9" /> <!-- Drain Energy -->
+			<skill id="4789" level="10" /> <!-- High Lv. -->
+			<skill id="5467" level="1" /> <!-- Dark Attack -->
 			<skill id="14765" level="4" /> <!-- Blood Siphon Resistance -->
 			<skill id="15455" level="1" /> <!-- Sensitive Skin -->
 		</skillList>
@@ -5732,20 +5503,18 @@
 		</stats>
 		<status undying="false" canBeSown="true" />
 		<skillList>
-			<skill id="4032" level="9" /> <!-- NPC Strike -->
-			<skill id="4408" level="12" /> <!-- HP Increase (4x) -->
-			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
-			<skill id="4410" level="10" /> <!-- Average P. Atk. -->
-			<skill id="4411" level="10" /> <!-- Average M. Atk. -->
-			<skill id="4412" level="19" /> <!-- Average P. Def. -->
-			<skill id="4413" level="9" /> <!-- Average M. Def. -->
-			<skill id="4414" level="1" /> <!-- Light Armor Type -->
-			<skill id="4415" level="1" /> <!-- One-handed Sword -->
+			<skill id="4032" level="9" /> <!-- Power Strike -->
+			<skill id="4410" level="10" /> <!-- Slightly Weak P. Atk. -->
+			<skill id="4411" level="10" /> <!-- Slightly Weak M. Atk. -->
+			<skill id="4412" level="19" /> <!-- Extremely Strong P. Def. -->
+			<skill id="4413" level="9" /> <!-- Slightly Weak M. Def. -->
+			<skill id="4414" level="1" /> <!-- Heavy Armor Type -->
+			<skill id="4415" level="1" /> <!-- Bare Hands -->
 			<skill id="4416" level="1" /> <!-- Undead -->
 			<skill id="4417" level="36" /> <!-- Undead -->
-			<skill id="4614" level="9" /> <!-- NPC Death Bomb -->
-			<skill id="5467" level="1" /> <!-- Strong against the dark elemental. -->
-			<skill id="4789" level="10" /> <!-- NPC High Level -->
+			<skill id="4614" level="9" /> <!-- Death Bomb -->
+			<skill id="4789" level="10" /> <!-- High Lv. -->
+			<skill id="5467" level="1" /> <!-- Dark Attack -->
 			<skill id="14765" level="4" /> <!-- Blood Siphon Resistance -->
 			<skill id="15455" level="1" /> <!-- Sensitive Skin -->
 		</skillList>
@@ -5817,19 +5586,17 @@
 		</stats>
 		<status undying="false" canBeSown="true" />
 		<skillList>
-			<skill id="4032" level="9" /> <!-- NPC Strike -->
-			<skill id="4408" level="12" /> <!-- HP Increase (4x) -->
-			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
-			<skill id="4410" level="10" /> <!-- Average P. Atk. -->
-			<skill id="4411" level="10" /> <!-- Average M. Atk. -->
-			<skill id="4412" level="19" /> <!-- Average P. Def. -->
-			<skill id="4413" level="9" /> <!-- Average M. Def. -->
-			<skill id="4414" level="3" /> <!-- Standard Type -->
+			<skill id="4032" level="9" /> <!-- Power Strike -->
+			<skill id="4410" level="10" /> <!-- Slightly Weak P. Atk. -->
+			<skill id="4411" level="10" /> <!-- Slightly Weak M. Atk. -->
+			<skill id="4412" level="19" /> <!-- Extremely Strong P. Def. -->
+			<skill id="4413" level="9" /> <!-- Slightly Weak M. Def. -->
+			<skill id="4414" level="3" /> <!-- Light Armor Type -->
 			<skill id="4415" level="3" /> <!-- One-handed Sword -->
 			<skill id="4416" level="6" /> <!-- Humanoids -->
 			<skill id="4417" level="26" /> <!-- Humanoids -->
-			<skill id="5467" level="1" /> <!-- Strong against the dark elemental. -->
-			<skill id="4789" level="10" /> <!-- NPC High Level -->
+			<skill id="4789" level="10" /> <!-- High Lv. -->
+			<skill id="5467" level="1" /> <!-- Dark Attack -->
 			<skill id="14765" level="4" /> <!-- Blood Siphon Resistance -->
 			<skill id="15455" level="1" /> <!-- Sensitive Skin -->
 		</skillList>
@@ -5910,24 +5677,19 @@
 		</stats>
 		<status undying="false" canBeSown="true" />
 		<skillList>
-			<skill id="4065" level="9" /> <!-- NPC Heal -->
-			<skill id="4088" level="10" /> <!-- Bleed -->
-			<skill id="4158" level="9" /> <!-- NPC Prominence - Magic -->
-			<skill id="4408" level="13" /> <!-- HP Increase (5x) -->
-			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
-			<skill id="4410" level="10" /> <!-- Average P. Atk. -->
-			<skill id="4411" level="10" /> <!-- Average M. Atk. -->
-			<skill id="4412" level="19" /> <!-- Average P. Def. -->
-			<skill id="4413" level="9" /> <!-- Average M. Def. -->
-			<skill id="4414" level="2" /> <!-- Standard Type -->
-			<skill id="4415" level="3" /> <!-- Blunt Weapons -->
+			<skill id="4410" level="10" /> <!-- Slightly Weak P. Atk. -->
+			<skill id="4411" level="10" /> <!-- Slightly Weak M. Atk. -->
+			<skill id="4412" level="19" /> <!-- Extremely Strong P. Def. -->
+			<skill id="4413" level="9" /> <!-- Slightly Weak M. Def. -->
+			<skill id="4414" level="1" /> <!-- Heavy Armor Type -->
+			<skill id="4415" level="11" /> <!-- Spear -->
 			<skill id="4416" level="6" /> <!-- Humanoids -->
 			<skill id="4417" level="26" /> <!-- Humanoids -->
-			<skill id="4622" level="9" /> <!-- NPC AE - 80% HP Drain - Magic -->
-			<skill id="4641" level="10" /> <!-- NPC Super Strike -->
-			<skill id="4655" level="9" /> <!-- NPC Death Link - Magic -->
-			<skill id="5467" level="1" /> <!-- Strong against the dark elemental. -->
-			<skill id="4789" level="10" /> <!-- NPC High Level -->
+			<skill id="4466" level="3" /> <!-- Surrender to Dark -->
+			<skill id="4622" level="9" /> <!-- Drain Energy -->
+			<skill id="4665" level="9" /> <!-- Drain Energy -->
+			<skill id="4789" level="10" /> <!-- High Lv. -->
+			<skill id="5467" level="1" /> <!-- Dark Attack -->
 			<skill id="14765" level="4" /> <!-- Blood Siphon Resistance -->
 			<skill id="15455" level="1" /> <!-- Sensitive Skin -->
 		</skillList>
@@ -5997,20 +5759,18 @@
 		</stats>
 		<status undying="false" />
 		<skillList>
-			<skill id="4032" level="9" /> <!-- NPC Strike -->
-			<skill id="4408" level="12" /> <!-- HP Increase (4x) -->
-			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
-			<skill id="4410" level="10" /> <!-- Average P. Atk. -->
-			<skill id="4411" level="10" /> <!-- Average M. Atk. -->
-			<skill id="4412" level="19" /> <!-- Average P. Def. -->
-			<skill id="4413" level="9" /> <!-- Average M. Def. -->
-			<skill id="4414" level="1" /> <!-- Light Armor Type -->
-			<skill id="4415" level="1" /> <!-- One-handed Sword -->
+			<skill id="4032" level="9" /> <!-- Power Strike -->
+			<skill id="4410" level="10" /> <!-- Slightly Weak P. Atk. -->
+			<skill id="4411" level="10" /> <!-- Slightly Weak M. Atk. -->
+			<skill id="4412" level="19" /> <!-- Extremely Strong P. Def. -->
+			<skill id="4413" level="9" /> <!-- Slightly Weak M. Def. -->
+			<skill id="4414" level="1" /> <!-- Heavy Armor Type -->
+			<skill id="4415" level="1" /> <!-- Bare Hands -->
 			<skill id="4416" level="1" /> <!-- Undead -->
 			<skill id="4417" level="36" /> <!-- Undead -->
-			<skill id="4614" level="9" /> <!-- NPC Death Bomb -->
-			<skill id="5467" level="1" /> <!-- Strong against the dark elemental. -->
-			<skill id="4789" level="10" /> <!-- NPC High Level -->
+			<skill id="4614" level="9" /> <!-- Death Bomb -->
+			<skill id="4789" level="10" /> <!-- High Lv. -->
+			<skill id="5467" level="1" /> <!-- Dark Attack -->
 			<skill id="14765" level="4" /> <!-- Blood Siphon Resistance -->
 			<skill id="15455" level="1" /> <!-- Sensitive Skin -->
 		</skillList>
@@ -6085,20 +5845,18 @@
 		<status undying="false" canBeSown="true" />
 		<skillList>
 			<skill id="4088" level="10" /> <!-- Bleed -->
-			<skill id="4408" level="12" /> <!-- HP Increase (4x) -->
-			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
-			<skill id="4410" level="10" /> <!-- Average P. Atk. -->
-			<skill id="4411" level="10" /> <!-- Average M. Atk. -->
-			<skill id="4412" level="19" /> <!-- Average P. Def. -->
-			<skill id="4413" level="9" /> <!-- Average M. Def. -->
-			<skill id="4414" level="1" /> <!-- Standard Type -->
-			<skill id="4415" level="11" /> <!-- Spears -->
+			<skill id="4410" level="10" /> <!-- Slightly Weak P. Atk. -->
+			<skill id="4411" level="10" /> <!-- Slightly Weak M. Atk. -->
+			<skill id="4412" level="19" /> <!-- Extremely Strong P. Def. -->
+			<skill id="4413" level="9" /> <!-- Slightly Weak M. Def. -->
+			<skill id="4414" level="1" /> <!-- Heavy Armor Type -->
+			<skill id="4415" level="11" /> <!-- Spear -->
 			<skill id="4416" level="6" /> <!-- Humanoids -->
 			<skill id="4417" level="26" /> <!-- Humanoids -->
-			<skill id="4622" level="9" /> <!-- NPC AE - 80% HP Drain - Magic -->
-			<skill id="4665" level="9" /> <!-- NPC 100% HP Drain - Magic -->
-			<skill id="5467" level="1" /> <!-- Strong against the dark elemental. -->
-			<skill id="4789" level="10" /> <!-- NPC High Level -->
+			<skill id="4622" level="9" /> <!-- Drain Energy -->
+			<skill id="4665" level="9" /> <!-- Drain Energy -->
+			<skill id="4789" level="10" /> <!-- High Lv. -->
+			<skill id="5467" level="1" /> <!-- Dark Attack -->
 			<skill id="14765" level="4" /> <!-- Blood Siphon Resistance -->
 			<skill id="15455" level="1" /> <!-- Sensitive Skin -->
 		</skillList>
@@ -6169,21 +5927,19 @@
 		</stats>
 		<status undying="false" />
 		<skillList>
-			<skill id="4408" level="12" /> <!-- HP Increase (4x) -->
-			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
-			<skill id="4410" level="10" /> <!-- Average P. Atk. -->
-			<skill id="4411" level="10" /> <!-- Average M. Atk. -->
-			<skill id="4412" level="19" /> <!-- Average P. Def. -->
-			<skill id="4413" level="9" /> <!-- Average M. Def. -->
-			<skill id="4414" level="1" /> <!-- Standard Type -->
-			<skill id="4415" level="11" /> <!-- Spears -->
+			<skill id="4410" level="10" /> <!-- Slightly Weak P. Atk. -->
+			<skill id="4411" level="10" /> <!-- Slightly Weak M. Atk. -->
+			<skill id="4412" level="19" /> <!-- Extremely Strong P. Def. -->
+			<skill id="4413" level="9" /> <!-- Slightly Weak M. Def. -->
+			<skill id="4414" level="1" /> <!-- Heavy Armor Type -->
+			<skill id="4415" level="11" /> <!-- Spear -->
 			<skill id="4416" level="6" /> <!-- Humanoids -->
 			<skill id="4417" level="26" /> <!-- Humanoids -->
-			<skill id="4466" level="3" /> <!-- Surrender To Darkness -->
-			<skill id="4622" level="9" /> <!-- NPC AE - 80% HP Drain - Magic -->
-			<skill id="4665" level="9" /> <!-- NPC 100% HP Drain - Magic -->
-			<skill id="5467" level="1" /> <!-- Strong against the dark elemental. -->
-			<skill id="4789" level="10" /> <!-- NPC High Level -->
+			<skill id="4466" level="3" /> <!-- Surrender to Dark -->
+			<skill id="4622" level="9" /> <!-- Drain Energy -->
+			<skill id="4665" level="9" /> <!-- Drain Energy -->
+			<skill id="4789" level="10" /> <!-- High Lv. -->
+			<skill id="5467" level="1" /> <!-- Dark Attack -->
 			<skill id="14765" level="4" /> <!-- Blood Siphon Resistance -->
 			<skill id="15455" level="1" /> <!-- Sensitive Skin -->
 		</skillList>
@@ -6266,20 +6022,15 @@
 		<status undying="false" />
 		<skillList>
 			<skill id="4047" level="9" /> <!-- Hold -->
-			<skill id="4408" level="10" /> <!-- HP Increase (1/4x) -->
-			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
-			<skill id="4410" level="11" /> <!-- Average P. Atk. -->
-			<skill id="4411" level="11" /> <!-- Average M. Atk. -->
-			<skill id="4412" level="11" /> <!-- Average P. Def. -->
-			<skill id="4413" level="11" /> <!-- Average M. Def. -->
-			<skill id="4414" level="3" /> <!-- Heavy Armor Type -->
-			<skill id="4415" level="3" /> <!-- Two-handed Sword -->
+			<skill id="4408" level="10" /> <!-- HP Increase (2x) -->
+			<skill id="4414" level="3" /> <!-- Light Armor Type -->
+			<skill id="4415" level="3" /> <!-- One-handed Sword -->
 			<skill id="4416" level="1" /> <!-- Undead -->
 			<skill id="4417" level="35" /> <!-- Undead -->
-			<skill id="4573" level="9" /> <!-- NPC Sonic Blaster -->
-			<skill id="4612" level="9" /> <!-- NPC Wide Wild Sweep -->
-			<skill id="5467" level="1" /> <!-- Strong against the dark elemental. -->
-			<skill id="4789" level="10" /> <!-- NPC High Level -->
+			<skill id="4573" level="9" /> <!-- Sonic Blaster -->
+			<skill id="4612" level="9" /> <!-- Wide Sweep -->
+			<skill id="4789" level="10" /> <!-- High Lv. -->
+			<skill id="5467" level="1" /> <!-- Dark Attack -->
 			<skill id="14765" level="4" /> <!-- Blood Siphon Resistance -->
 			<skill id="15455" level="1" /> <!-- Sensitive Skin -->
 		</skillList>
@@ -6353,20 +6104,15 @@
 		</stats>
 		<status undying="false" />
 		<skillList>
-			<skill id="4032" level="2" /> <!-- NPC Strike -->
-			<skill id="4408" level="10" /> <!-- HP Increase (1/4x) -->
-			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
-			<skill id="4410" level="11" /> <!-- Average P. Atk. -->
-			<skill id="4411" level="11" /> <!-- Average M. Atk. -->
-			<skill id="4412" level="11" /> <!-- Average P. Def. -->
-			<skill id="4413" level="11" /> <!-- Average M. Def. -->
-			<skill id="4414" level="3" /> <!-- Heavy Armor Type -->
+			<skill id="4032" level="2" /> <!-- Power Strike -->
+			<skill id="4408" level="10" /> <!-- HP Increase (2x) -->
+			<skill id="4414" level="3" /> <!-- Light Armor Type -->
+			<skill id="4415" level="3" /> <!-- One-handed Sword -->
 			<skill id="4416" level="1" /> <!-- Undead -->
 			<skill id="4417" level="35" /> <!-- Undead -->
 			<skill id="4649" level="9" /> <!-- Poison -->
-			<skill id="5467" level="1" /> <!-- Strong against the dark elemental. -->
-			<skill id="4789" level="10" /> <!-- NPC High Level -->
-			<skill id="4415" level="3" /> <!-- One-handed Sword -->
+			<skill id="4789" level="10" /> <!-- High Lv. -->
+			<skill id="5467" level="1" /> <!-- Dark Attack -->
 			<skill id="14765" level="4" /> <!-- Blood Siphon Resistance -->
 			<skill id="15455" level="1" /> <!-- Sensitive Skin -->
 		</skillList>
@@ -6433,20 +6179,15 @@
 		</stats>
 		<status undying="false" />
 		<skillList>
-			<skill id="4032" level="9" /> <!-- NPC Strike -->
-			<skill id="4408" level="10" /> <!-- HP Increase (3x) -->
-			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
-			<skill id="4410" level="11" /> <!-- Average P. Atk. -->
-			<skill id="4411" level="11" /> <!-- Average M. Atk. -->
-			<skill id="4412" level="11" /> <!-- Average P. Def. -->
-			<skill id="4413" level="11" /> <!-- Average M. Def. -->
-			<skill id="4414" level="3" /> <!-- Light Armor Type -->
-			<skill id="4415" level="3" /> <!-- Blunt Weapons -->
-			<skill id="4416" level="6" /> <!-- Humanoids -->
-			<skill id="4417" level="26" /> <!-- Humanoids -->
-			<skill id="4612" level="9" /> <!-- NPC Wide Wild Sweep -->
-			<skill id="5467" level="1" /> <!-- Strong against the dark elemental. -->
-			<skill id="4789" level="10" /> <!-- NPC High Level -->
+			<skill id="4032" level="9" /> <!-- Power Strike -->
+			<skill id="4408" level="10" /> <!-- HP Increase (2x) -->
+			<skill id="4414" level="1" /> <!-- Heavy Armor Type -->
+			<skill id="4415" level="1" /> <!-- Bare Hands -->
+			<skill id="4416" level="1" /> <!-- Undead -->
+			<skill id="4417" level="36" /> <!-- Undead -->
+			<skill id="4614" level="9" /> <!-- Death Bomb -->
+			<skill id="4789" level="10" /> <!-- High Lv. -->
+			<skill id="5467" level="1" /> <!-- Dark Attack -->
 			<skill id="14765" level="4" /> <!-- Blood Siphon Resistance -->
 			<skill id="15455" level="1" /> <!-- Sensitive Skin -->
 		</skillList>
@@ -6510,19 +6251,14 @@
 		</stats>
 		<status undying="false" />
 		<skillList>
-			<skill id="4032" level="9" /> <!-- NPC Strike -->
+			<skill id="4032" level="9" /> <!-- Power Strike -->
 			<skill id="4408" level="10" /> <!-- HP Increase (2x) -->
-			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
-			<skill id="4410" level="11" /> <!-- Average P. Atk. -->
-			<skill id="4411" level="11" /> <!-- Average M. Atk. -->
-			<skill id="4412" level="11" /> <!-- Average P. Def. -->
-			<skill id="4413" level="11" /> <!-- Average M. Def. -->
 			<skill id="4414" level="3" /> <!-- Light Armor Type -->
-			<skill id="4415" level="3" /> <!-- Spears -->
+			<skill id="4415" level="3" /> <!-- One-handed Sword -->
 			<skill id="4416" level="6" /> <!-- Humanoids -->
 			<skill id="4417" level="26" /> <!-- Humanoids -->
-			<skill id="5467" level="1" /> <!-- Strong against the dark elemental. -->
-			<skill id="4789" level="10" /> <!-- NPC High Level -->
+			<skill id="4789" level="10" /> <!-- High Lv. -->
+			<skill id="5467" level="1" /> <!-- Dark Attack -->
 			<skill id="14765" level="4" /> <!-- Blood Siphon Resistance -->
 			<skill id="15455" level="1" /> <!-- Sensitive Skin -->
 		</skillList>
@@ -6586,20 +6322,15 @@
 		</stats>
 		<status undying="false" />
 		<skillList>
-			<skill id="4032" level="9" /> <!-- NPC Strike -->
+			<skill id="4032" level="9" /> <!-- Power Strike -->
 			<skill id="4408" level="10" /> <!-- HP Increase (2x) -->
-			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
-			<skill id="4410" level="11" /> <!-- Average P. Atk. -->
-			<skill id="4411" level="11" /> <!-- Average M. Atk. -->
-			<skill id="4412" level="11" /> <!-- Average P. Def. -->
-			<skill id="4413" level="11" /> <!-- Average M. Def. -->
-			<skill id="4414" level="1" /> <!-- Light Armor Type -->
-			<skill id="4415" level="1" /> <!-- One-handed Sword -->
+			<skill id="4414" level="1" /> <!-- Heavy Armor Type -->
+			<skill id="4415" level="1" /> <!-- Bare Hands -->
 			<skill id="4416" level="1" /> <!-- Undead -->
 			<skill id="4417" level="36" /> <!-- Undead -->
-			<skill id="4614" level="9" /> <!-- NPC Death Bomb -->
-			<skill id="5467" level="1" /> <!-- Strong against the dark elemental. -->
-			<skill id="4789" level="10" /> <!-- NPC High Level -->
+			<skill id="4614" level="9" /> <!-- Death Bomb -->
+			<skill id="4789" level="10" /> <!-- High Lv. -->
+			<skill id="5467" level="1" /> <!-- Dark Attack -->
 			<skill id="14765" level="4" /> <!-- Blood Siphon Resistance -->
 			<skill id="15455" level="1" /> <!-- Sensitive Skin -->
 		</skillList>
@@ -6672,22 +6403,17 @@
 		</stats>
 		<status undying="false" />
 		<skillList>
-			<skill id="4158" level="9" /> <!-- NPC Prominence - Magic -->
+			<skill id="4065" level="1" /> <!-- Heal -->
+			<skill id="4158" level="9" /> <!-- Prominence -->
 			<skill id="4408" level="10" /> <!-- HP Increase (2x) -->
-			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
-			<skill id="4410" level="11" /> <!-- Average P. Atk. -->
-			<skill id="4411" level="11" /> <!-- Average M. Atk. -->
-			<skill id="4412" level="11" /> <!-- Average P. Def. -->
-			<skill id="4413" level="11" /> <!-- Average M. Def. -->
 			<skill id="4414" level="3" /> <!-- Light Armor Type -->
-			<skill id="4415" level="3" /> <!-- Blunt Weapons -->
+			<skill id="4415" level="3" /> <!-- One-handed Sword -->
 			<skill id="4416" level="6" /> <!-- Humanoids -->
 			<skill id="4417" level="26" /> <!-- Humanoids -->
-			<skill id="4466" level="3" /> <!-- Surrender To Darkness -->
-			<skill id="4622" level="9" /> <!-- NPC AE - 80% HP Drain - Magic -->
-			<skill id="5467" level="1" /> <!-- Strong against the dark elemental. -->
-			<skill id="4789" level="10" /> <!-- NPC High Level -->
-			<skill id="4065" level="1" /> <!-- Heal -->
+			<skill id="4466" level="3" /> <!-- Surrender to Dark -->
+			<skill id="4622" level="9" /> <!-- Drain Energy -->
+			<skill id="4789" level="10" /> <!-- High Lv. -->
+			<skill id="5467" level="1" /> <!-- Dark Attack -->
 			<skill id="14765" level="4" /> <!-- Blood Siphon Resistance -->
 			<skill id="15455" level="1" /> <!-- Sensitive Skin -->
 		</skillList>
@@ -6768,21 +6494,16 @@
 		</stats>
 		<status undying="false" />
 		<skillList>
-			<skill id="4408" level="10" /> <!-- HP Increase (1x) -->
-			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
-			<skill id="4410" level="11" /> <!-- Average P. Atk. -->
-			<skill id="4411" level="11" /> <!-- Average M. Atk. -->
-			<skill id="4412" level="11" /> <!-- Average P. Def. -->
-			<skill id="4413" level="11" /> <!-- Average M. Def. -->
+			<skill id="4408" level="10" /> <!-- HP Increase (2x) -->
 			<skill id="4414" level="3" /> <!-- Light Armor Type -->
-			<skill id="4415" level="3" /> <!-- Spears -->
+			<skill id="4415" level="3" /> <!-- One-handed Sword -->
 			<skill id="4416" level="6" /> <!-- Humanoids -->
 			<skill id="4417" level="26" /> <!-- Humanoids -->
-			<skill id="4466" level="3" /> <!-- Surrender To Darkness -->
-			<skill id="4622" level="9" /> <!-- NPC AE - 80% HP Drain - Magic -->
-			<skill id="4665" level="9" /> <!-- NPC 100% HP Drain - Magic -->
-			<skill id="5467" level="1" /> <!-- Strong against the dark elemental. -->
-			<skill id="4789" level="10" /> <!-- NPC High Level -->
+			<skill id="4466" level="3" /> <!-- Surrender to Dark -->
+			<skill id="4622" level="9" /> <!-- Drain Energy -->
+			<skill id="4665" level="9" /> <!-- Drain Energy -->
+			<skill id="4789" level="10" /> <!-- High Lv. -->
+			<skill id="5467" level="1" /> <!-- Dark Attack -->
 			<skill id="14765" level="4" /> <!-- Blood Siphon Resistance -->
 			<skill id="15455" level="1" /> <!-- Sensitive Skin -->
 		</skillList>
@@ -6840,20 +6561,15 @@
 		</stats>
 		<status undying="false" />
 		<skillList>
-			<skill id="4408" level="10" /> <!-- HP Increase (1x) -->
-			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
-			<skill id="4410" level="11" /> <!-- Average P. Atk. -->
-			<skill id="4411" level="11" /> <!-- Average M. Atk. -->
-			<skill id="4412" level="11" /> <!-- Average P. Def. -->
-			<skill id="4413" level="11" /> <!-- Average M. Def. -->
+			<skill id="4408" level="10" /> <!-- HP Increase (2x) -->
 			<skill id="4414" level="3" /> <!-- Light Armor Type -->
-			<skill id="4415" level="3" /> <!-- Spears -->
+			<skill id="4415" level="3" /> <!-- One-handed Sword -->
 			<skill id="4416" level="6" /> <!-- Humanoids -->
 			<skill id="4417" level="26" /> <!-- Humanoids -->
-			<skill id="4622" level="9" /> <!-- NPC AE - 80% HP Drain - Magic -->
-			<skill id="4665" level="9" /> <!-- NPC 100% HP Drain - Magic -->
-			<skill id="5467" level="1" /> <!-- Strong against the dark elemental. -->
-			<skill id="4789" level="10" /> <!-- NPC High Level -->
+			<skill id="4622" level="9" /> <!-- Drain Energy -->
+			<skill id="4665" level="9" /> <!-- Drain Energy -->
+			<skill id="4789" level="10" /> <!-- High Lv. -->
+			<skill id="5467" level="1" /> <!-- Dark Attack -->
 			<skill id="14765" level="4" /> <!-- Blood Siphon Resistance -->
 			<skill id="15455" level="1" /> <!-- Sensitive Skin -->
 		</skillList>
@@ -6908,23 +6624,20 @@
 		</stats>
 		<status undying="false" canBeSown="true" />
 		<skillList>
-			<skill id="4032" level="9" /> <!-- NPC Strike -->
-			<skill id="4253" level="9" /> <!-- NPC Blaze - Slow -->
-			<skill id="4408" level="10" /> <!-- HP Increase (1/2x) -->
-			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
-			<skill id="4410" level="14" /> <!-- Average P. Atk. -->
-			<skill id="4411" level="14" /> <!-- Average M. Atk. -->
-			<skill id="4412" level="11" /> <!-- Average P. Def. -->
-			<skill id="4413" level="11" /> <!-- Average M. Def. -->
-			<skill id="4414" level="1" /> <!-- Standard Type -->
-			<skill id="4415" level="11" /> <!-- One-handed Sword -->
+			<skill id="4001" level="1" /> <!-- Gust -->
+			<skill id="4032" level="9" /> <!-- Power Strike -->
+			<skill id="4253" level="9" /> <!-- Blaze -->
+			<skill id="4408" level="10" /> <!-- HP Increase (2x) -->
+			<skill id="4410" level="14" /> <!-- Strong P. Atk. -->
+			<skill id="4411" level="14" /> <!-- Strong M. Atk. -->
+			<skill id="4414" level="1" /> <!-- Heavy Armor Type -->
+			<skill id="4415" level="11" /> <!-- Spear -->
 			<skill id="4416" level="1" /> <!-- Undead -->
 			<skill id="4417" level="35" /> <!-- Undead -->
-			<skill id="5467" level="1" /> <!-- Strong against the dark elemental. -->
-			<skill id="4789" level="9" /> <!-- NPC High Level -->
+			<skill id="4789" level="9" /> <!-- High Lv. -->
+			<skill id="5467" level="1" /> <!-- Dark Attack -->
 			<skill id="14765" level="4" /> <!-- Blood Siphon Resistance -->
 			<skill id="15455" level="1" /> <!-- Sensitive Skin -->
-			<skill id="4001" level="1" /> <!-- Gust -->
 		</skillList>
 		<exCrtEffect>true</exCrtEffect>
 		<sNpcPropHpRate>0.5</sNpcPropHpRate>
@@ -6983,19 +6696,16 @@
 		</stats>
 		<status undying="false" canBeSown="true" />
 		<skillList>
-			<skill id="4408" level="18" /> <!-- HP Increase (4x) -->
-			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
-			<skill id="4410" level="14" /> <!-- Average P. Atk. -->
-			<skill id="4411" level="14" /> <!-- Average M. Atk. -->
-			<skill id="4412" level="11" /> <!-- Average P. Def. -->
-			<skill id="4413" level="11" /> <!-- Average M. Def. -->
-			<skill id="4414" level="1" /> <!-- Light Armor Type -->
-			<skill id="4415" level="1" /> <!-- Blunt Weapons -->
+			<skill id="4408" level="18" /> <!-- HP Increase (10x) -->
+			<skill id="4410" level="14" /> <!-- Strong P. Atk. -->
+			<skill id="4411" level="14" /> <!-- Strong M. Atk. -->
+			<skill id="4414" level="1" /> <!-- Heavy Armor Type -->
+			<skill id="4415" level="1" /> <!-- Bare Hands -->
 			<skill id="4416" level="1" /> <!-- Undead -->
 			<skill id="4417" level="36" /> <!-- Undead -->
-			<skill id="4614" level="9" /> <!-- NPC Death Bomb -->
-			<skill id="5467" level="1" /> <!-- Strong against the dark elemental. -->
-			<skill id="4789" level="9" /> <!-- NPC High Level -->
+			<skill id="4614" level="9" /> <!-- Death Bomb -->
+			<skill id="4789" level="9" /> <!-- High Lv. -->
+			<skill id="5467" level="1" /> <!-- Dark Attack -->
 			<skill id="14765" level="4" /> <!-- Blood Siphon Resistance -->
 			<skill id="15455" level="1" /> <!-- Sensitive Skin -->
 		</skillList>
@@ -7068,26 +6778,20 @@
 		</stats>
 		<status undying="false" />
 		<skillList>
-			<skill id="4071" level="3" /> <!-- Resist Bow/Crossbow Weapons -->
-			<skill id="4084" level="9" /> <!-- Resist Physical Attack -->
-			<skill id="4285" level="5" /> <!-- Resist Sleep Attacks -->
-			<skill id="4408" level="1" /> <!-- HP Increase (1x) -->
-			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
+			<skill id="4071" level="3" /> <!-- Bow/Crossbow Resistance -->
+			<skill id="4073" level="10" /> <!-- Stun -->
+			<skill id="4084" level="9" /> <!-- Physical Attack Resistance -->
+			<skill id="4285" level="5" /> <!-- Sleep Resistance -->
 			<skill id="4410" level="12" /> <!-- Slightly Strong P. Atk. -->
-			<skill id="4411" level="11" /> <!-- Average M. Atk. -->
 			<skill id="4412" level="12" /> <!-- Slightly Strong P. Def. -->
-			<skill id="4413" level="11" /> <!-- Average M. Def. -->
 			<skill id="4414" level="3" /> <!-- Light Armor Type -->
-			<skill id="4415" level="5" /> <!-- Blunt Weapons -->
+			<skill id="4415" level="5" /> <!-- Blunt Weapon -->
 			<skill id="4416" level="24" /> <!-- Unknown Creature -->
-			<skill id="4417" level="4" /> <!-- Beasts -->
-			<skill id="4439" level="2" /> <!-- Greater Resist Hold -->
-			<skill id="4445" level="1" /> <!-- Greater Resist Spear Weapons -->
-			<skill id="5465" level="1" /> <!-- Earth Attacks -->
-			<skill id="5601" level="9" /> <!-- Short-Range Physical Attack Resistance -->
-			<skill id="5081" level="2" /> <!-- Silence -->
-			<skill id="5082" level="2" /> <!-- Spinning Slasher -->
-			<skill id="5079" level="1" /> <!-- Haste Focus -->
+			<skill id="4417" level="4" /> <!-- Beast -->
+			<skill id="4439" level="2" /> <!-- Greater Hold Resistance -->
+			<skill id="4445" level="1" /> <!-- Greater Spear Resistance -->
+			<skill id="5465" level="1" /> <!-- Earth Attack -->
+			<skill id="5601" level="9" /> <!-- Melee Attack Resistance -->
 		</skillList>
 		<exCrtEffect>false</exCrtEffect>
 		<ai aggroRange="300" clanHelpRange="600" isAggressive="true">
@@ -7157,24 +6861,20 @@
 		</stats>
 		<status undying="false" />
 		<skillList>
-			<skill id="4071" level="3" /> <!-- Resist Bow/Crossbow Weapons -->
+			<skill id="4071" level="3" /> <!-- Bow/Crossbow Resistance -->
 			<skill id="4073" level="10" /> <!-- Stun -->
-			<skill id="4084" level="9" /> <!-- Resist Physical Attack -->
-			<skill id="4285" level="5" /> <!-- Resist Sleep Attacks -->
-			<skill id="4408" level="1" /> <!-- HP Increase (1x) -->
-			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
+			<skill id="4084" level="9" /> <!-- Physical Attack Resistance -->
+			<skill id="4285" level="5" /> <!-- Sleep Resistance -->
 			<skill id="4410" level="12" /> <!-- Slightly Strong P. Atk. -->
-			<skill id="4411" level="11" /> <!-- Average M. Atk. -->
 			<skill id="4412" level="12" /> <!-- Slightly Strong P. Def. -->
-			<skill id="4413" level="11" /> <!-- Average M. Def. -->
 			<skill id="4414" level="3" /> <!-- Light Armor Type -->
-			<skill id="4415" level="5" /> <!-- Blunt Weapons -->
+			<skill id="4415" level="5" /> <!-- Blunt Weapon -->
 			<skill id="4416" level="24" /> <!-- Unknown Creature -->
-			<skill id="4417" level="4" /> <!-- Beasts -->
-			<skill id="4439" level="2" /> <!-- Greater Resist Hold -->
-			<skill id="4445" level="1" /> <!-- Greater Resist Spear Weapons -->
-			<skill id="5465" level="1" /> <!-- Earth Attacks -->
-			<skill id="5601" level="9" /> <!-- Short-Range Physical Attack Resistance -->
+			<skill id="4417" level="4" /> <!-- Beast -->
+			<skill id="4439" level="2" /> <!-- Greater Hold Resistance -->
+			<skill id="4445" level="1" /> <!-- Greater Spear Resistance -->
+			<skill id="5465" level="1" /> <!-- Earth Attack -->
+			<skill id="5601" level="9" /> <!-- Melee Attack Resistance -->
 		</skillList>
 		<exCrtEffect>false</exCrtEffect>
 		<ai aggroRange="300" clanHelpRange="600" isAggressive="true">
@@ -7253,27 +6953,23 @@
 		</stats>
 		<status undying="false" />
 		<skillList>
-			<skill id="4071" level="3" /> <!-- Resist Bow/Crossbow Weapons -->
-			<skill id="4084" level="9" /> <!-- Resist Physical Attack -->
-			<skill id="4285" level="5" /> <!-- Resist Sleep Attacks -->
-			<skill id="4408" level="1" /> <!-- HP Increase (1x) -->
-			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
+			<skill id="4071" level="3" /> <!-- Bow/Crossbow Resistance -->
+			<skill id="4084" level="9" /> <!-- Physical Attack Resistance -->
+			<skill id="4285" level="5" /> <!-- Sleep Resistance -->
 			<skill id="4410" level="12" /> <!-- Slightly Strong P. Atk. -->
-			<skill id="4411" level="11" /> <!-- Average M. Atk. -->
 			<skill id="4412" level="12" /> <!-- Slightly Strong P. Def. -->
-			<skill id="4413" level="11" /> <!-- Average M. Def. -->
 			<skill id="4414" level="3" /> <!-- Light Armor Type -->
-			<skill id="4415" level="5" /> <!-- Blunt Weapons -->
+			<skill id="4415" level="5" /> <!-- Blunt Weapon -->
 			<skill id="4416" level="24" /> <!-- Unknown Creature -->
-			<skill id="4417" level="4" /> <!-- Beasts -->
-			<skill id="4439" level="2" /> <!-- Greater Resist Hold -->
-			<skill id="4445" level="1" /> <!-- Greater Resist Spear Weapons -->
-			<skill id="5465" level="1" /> <!-- Earth Attacks -->
-			<skill id="5601" level="9" /> <!-- Short-Range Physical Attack Resistance -->
+			<skill id="4417" level="4" /> <!-- Beast -->
+			<skill id="4439" level="2" /> <!-- Greater Hold Resistance -->
+			<skill id="4445" level="1" /> <!-- Greater Spear Resistance -->
+			<skill id="5079" level="1" /> <!-- Haste Focus -->
 			<skill id="5081" level="2" /> <!-- Silence -->
 			<skill id="5082" level="2" /> <!-- Spinning Slasher -->
 			<skill id="5106" level="1" /> <!-- Capture A State -->
-			<skill id="5079" level="1" /> <!-- Haste Focus -->
+			<skill id="5465" level="1" /> <!-- Earth Attack -->
+			<skill id="5601" level="9" /> <!-- Melee Attack Resistance -->
 		</skillList>
 		<exCrtEffect>false</exCrtEffect>
 		<ai aggroRange="450" clanHelpRange="600" isAggressive="true">
@@ -7351,30 +7047,25 @@
 		</stats>
 		<status undying="false" />
 		<skillList>
-			<skill id="4071" level="3" /> <!-- Resist Bow/Crossbow Weapons -->
-			<skill id="4084" level="9" /> <!-- Resist Physical Attack -->
-			<skill id="4244" level="10" /> <!-- NPC Wild Sweep -->
-			<skill id="4408" level="1" /> <!-- HP Increase (1x) -->
-			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
+			<skill id="4071" level="3" /> <!-- Bow/Crossbow Resistance -->
+			<skill id="4073" level="1" /> <!-- Stun -->
+			<skill id="4084" level="9" /> <!-- Physical Attack Resistance -->
+			<skill id="4244" level="10" /> <!-- Wild Sweep -->
 			<skill id="4410" level="12" /> <!-- Slightly Strong P. Atk. -->
-			<skill id="4411" level="11" /> <!-- Average M. Atk. -->
 			<skill id="4412" level="12" /> <!-- Slightly Strong P. Def. -->
-			<skill id="4413" level="11" /> <!-- Average M. Def. -->
-			<skill id="4414" level="2" /> <!-- Standard Type -->
-			<skill id="4415" level="5" /> <!-- Blunt Weapons -->
+			<skill id="4415" level="5" /> <!-- Blunt Weapon -->
 			<skill id="4416" level="24" /> <!-- Unknown Creature -->
-			<skill id="4417" level="4" /> <!-- Beasts -->
-			<skill id="4438" level="5" /> <!-- Greater Resist Sleep -->
-			<skill id="4439" level="5" /> <!-- Greater Resist Hold -->
-			<skill id="4440" level="5" /> <!-- Greater Resist Paralysis -->
-			<skill id="4441" level="5" /> <!-- Greater Resist Mental Derangement -->
-			<skill id="4445" level="1" /> <!-- Greater Resist Spear Weapons -->
+			<skill id="4417" level="4" /> <!-- Beast -->
+			<skill id="4438" level="5" /> <!-- Greater Sleep Resistance -->
+			<skill id="4439" level="5" /> <!-- Greater Hold Resistance -->
+			<skill id="4440" level="5" /> <!-- Greater Paralysis Resistance -->
+			<skill id="4441" level="5" /> <!-- Greater Mental Attack Resistance -->
+			<skill id="4445" level="1" /> <!-- Greater Spear Resistance -->
 			<skill id="5083" level="3" /> <!-- Stun -->
 			<skill id="5087" level="1" /> <!-- Berserk -->
 			<skill id="5120" level="1" /> <!-- Stun -->
-			<skill id="5465" level="1" /> <!-- Earth Attacks -->
-			<skill id="5601" level="9" /> <!-- Short-Range Physical Attack Resistance -->
-			<skill id="4073" level="1" /> <!-- Stun -->
+			<skill id="5465" level="1" /> <!-- Earth Attack -->
+			<skill id="5601" level="9" /> <!-- Melee Attack Resistance -->
 		</skillList>
 		<exCrtEffect>true</exCrtEffect>
 		<ai aggroRange="300" clanHelpRange="300" isAggressive="true">

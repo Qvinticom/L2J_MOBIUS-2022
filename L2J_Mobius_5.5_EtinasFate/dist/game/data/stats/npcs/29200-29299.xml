@@ -417,14 +417,14 @@
 		</stats>
 		<status attackable="true" undying="false" isDeathPenalty="true" />
 		<skillList>
-			<skill id="14726" level="1" /> <!-- Octavis -->
-			<skill id="5467" level="1" /> <!-- Strong against the dark elemental. -->
-			<skill id="4416" level="6" /> <!-- Humanoids -->
-			<skill id="14025" level="1" /> <!-- Hero's Arrow Shaft -->
-			<skill id="5464" level="1" /> <!-- Wind Attack -->
+			<skill id="4045" level="1" /> <!-- Full Magic Attack Resistance -->
 			<skill id="4415" level="3" /> <!-- One-handed Sword -->
+			<skill id="4416" level="6" /> <!-- Humanoids -->
+			<skill id="5464" level="1" /> <!-- Wind Attack -->
+			<skill id="5467" level="1" /> <!-- Dark Attack -->
+			<skill id="14025" level="1" /> <!-- Hero's Arrow Shaft -->
+			<skill id="14726" level="1" /> <!-- Octavis -->
 			<skill id="14765" level="4" /> <!-- Blood Siphon Resistance -->
-			<skill id="4045" level="1" /> <!-- Resist Full Magic Attack -->
 		</skillList>
 		<ai clanHelpRange="300" aggroRange="300" />
 		<collision>
@@ -497,13 +497,16 @@
 		</stats>
 		<status attackable="true" undying="false" isDeathPenalty="true" />
 		<skillList>
-			<skill id="14726" level="1" /> <!-- Octavis -->
-			<skill id="5467" level="1" /> <!-- Strong against the dark elemental. -->
+			<skill id="4045" level="1" /> <!-- Full Magic Attack Resistance -->
+			<skill id="4415" level="3" /> <!-- One-handed Sword -->
 			<skill id="4416" level="6" /> <!-- Humanoids -->
 			<skill id="5464" level="1" /> <!-- Wind Attack -->
-			<skill id="4415" level="3" /> <!-- One-handed Sword -->
+			<skill id="5467" level="1" /> <!-- Dark Attack -->
+			<skill id="14026" level="1" /> <!-- Hero's Sword Energy -->
+			<skill id="14027" level="1" /> <!-- Hero's Rage -->
+			<skill id="14575" level="1" /> <!-- Medusa's Soul -->
+			<skill id="14726" level="1" /> <!-- Octavis -->
 			<skill id="14765" level="4" /> <!-- Blood Siphon Resistance -->
-			<skill id="4045" level="1" /> <!-- Resist Full Magic Attack -->
 		</skillList>
 		<ai clanHelpRange="300" aggroRange="300" />
 		<collision>
@@ -540,18 +543,18 @@
 		</stats>
 		<status undying="false" isDeathPenalty="true" />
 		<skillList>
-			<skill id="5464" level="1" /> <!-- Wind Attack -->
-			<skill id="14726" level="1" /> <!-- Octavis -->
+			<skill id="4045" level="1" /> <!-- Full Magic Attack Resistance -->
+			<skill id="4415" level="3" /> <!-- One-handed Sword -->
 			<skill id="4416" level="6" /> <!-- Humanoids -->
+			<skill id="5464" level="1" /> <!-- Wind Attack -->
 			<skill id="5467" level="1" /> <!-- Dark Attack -->
 			<skill id="14030" level="1" /> <!-- Hero's Magic -->
 			<skill id="14031" level="1" /> <!-- Hero's Magic -->
-			<skill id="4415" level="3" /> <!-- One-handed Sword -->
 			<skill id="14279" level="1" /> <!-- Octavis' Influence -->
 			<skill id="14280" level="1" /> <!-- Octavis' Influence -->
 			<skill id="14281" level="1" /> <!-- Octavis' Influence -->
+			<skill id="14726" level="1" /> <!-- Octavis -->
 			<skill id="14765" level="4" /> <!-- Blood Siphon Resistance -->
-			<skill id="4045" level="1" /> <!-- Resist Full Magic Attack -->
 		</skillList>
 		<ai clanHelpRange="600" aggroRange="300" />
 		<collision>
@@ -692,24 +695,31 @@
 		</stats>
 		<status attackable="false" undying="false" isDeathPenalty="true" />
 		<skillList>
-			<skill id="5467" level="1" /> <!-- Strong against the dark elemental. -->
+			<skill id="4415" level="1" /> <!-- Bare Hands -->
+			<skill id="4416" level="9" /> <!-- Demons -->
 			<skill id="4438" level="5" /> <!-- Greater Sleep Resistance -->
 			<skill id="4440" level="5" /> <!-- Greater Paralysis Resistance -->
 			<skill id="4441" level="5" /> <!-- Greater Mental Attack Resistance -->
-			<skill id="4416" level="9" /> <!-- Demons -->
-			<skill id="4415" level="1" /> <!-- Bare Hands -->
-			<skill id="14765" level="4" /> <!-- Blood Siphon Resistance -->
-			<skill id="14620" level="1" /> <!-- Aerial Yoke Resistance 1 -->
-			<skill id="14623" level="1" /> <!-- Mutation Resistance -->
-			<skill id="14617" level="1" /> <!-- Knock Down Resistance -->
-			<skill id="14619" level="1" /> <!-- Disarm Resistance -->
-			<skill id="14618" level="1" /> <!-- Knock Back Resistance -->
-			<skill id="14621" level="1" /> <!-- Pulling Resistance -->
+			<skill id="5221" level="1" /> <!-- Baylor - Physical Close Range Vulnerability -->
+			<skill id="5222" level="1" /> <!-- Baylor - Physical Long Range Vulnerability -->
+			<skill id="5223" level="1" /> <!-- Baylor - Magic Vulnerability -->
+			<skill id="5224" level="1" /> <!-- Berserk -->
+			<skill id="5225" level="1" /> <!-- Invincibility -->
+			<skill id="5226" level="1" /> <!-- Imprison -->
+			<skill id="5227" level="2" /> <!-- Ground Strike -->
+			<skill id="5228" level="2" /> <!-- Jump Attack -->
+			<skill id="5229" level="2" /> <!-- Strong Punch -->
 			<skill id="5230" level="1" /> <!-- Stun -->
 			<skill id="5231" level="1" /> <!-- Stun -->
-			<skill id="4494" level="1" /> <!-- Raid Boss -->
-			<skill id="16547" level="10" /> <!-- Danger Zone Attack Resistance -->
 			<skill id="5232" level="1" /> <!-- Stun -->
+			<skill id="5467" level="1" /> <!-- Dark Attack -->
+			<skill id="14617" level="1" /> <!-- Knock Down/ Knock Back Resistance -->
+			<skill id="14618" level="1" /> <!-- Knock Down/ Knock Back Resistance -->
+			<skill id="14619" level="1" /> <!-- Disarm Resistance -->
+			<skill id="14620" level="1" /> <!-- Aerial Yoke Attack Resistance -->
+			<skill id="14621" level="1" /> <!-- Pull Resistance -->
+			<skill id="14623" level="1" /> <!-- Mutation Resistance -->
+			<skill id="14765" level="4" /> <!-- Blood Siphon Resistance -->
 		</skillList>
 		<ai aggroRange="700" isAggressive="true" clanHelpRange="2000">
 			<clanList>
@@ -997,13 +1007,13 @@
 		</stats>
 		<status attackable="false" undying="false" isDeathPenalty="true" />
 		<skillList>
-			<skill id="5467" level="1" /> <!-- Strong against the dark elemental. -->
-			<skill id="14247" level="1" /> <!-- Black Vortex -->
-			<skill id="14366" level="1" /> <!-- Black Vortex Swamp -->
-			<skill id="4416" level="9" /> <!-- Demons -->
+			<skill id="4045" level="1" /> <!-- Full Magic Attack Resistance -->
 			<skill id="4415" level="4" /> <!-- One-handed Sword -->
+			<skill id="4416" level="9" /> <!-- Demons -->
+			<skill id="5226" level="1" /> <!-- Imprison -->
+			<skill id="5467" level="1" /> <!-- Dark Attack -->
+			<skill id="14727" level="1" /> <!-- Balok -->
 			<skill id="14765" level="4" /> <!-- Blood Siphon Resistance -->
-			<skill id="4045" level="1" /> <!-- Resist Full Magic Attack -->
 		</skillList>
 		<ai aggroRange="300" isAggressive="true" clanHelpRange="300" />
 		<dropLists>
@@ -1539,14 +1549,14 @@
 		</stats>
 		<status attackable="false" undying="false" isDeathPenalty="true" />
 		<skillList>
-			<skill id="5462" level="1" /> <!-- Fire Attack -->
-			<skill id="4679" level="1" /> <!-- Valakas -->
-			<skill id="4071" level="2" /> <!-- Bow/Crossbow Resistance -->
-			<skill id="4416" level="10" /> <!-- Dragons -->
-			<skill id="4680" level="1" /> <!-- Valakas Lava Skin -->
+			<skill id="4045" level="1" /> <!-- Full Magic Attack Resistance -->
+			<skill id="4071" level="2" /> <!-- Bow/ Crossbow Resistance -->
 			<skill id="4415" level="3" /> <!-- One-handed Sword -->
+			<skill id="4416" level="10" /> <!-- Dragons -->
+			<skill id="4679" level="1" /> <!-- Valakas -->
+			<skill id="4680" level="1" /> <!-- Valakas Lava Skin -->
+			<skill id="5462" level="1" /> <!-- Fire Attack -->
 			<skill id="14765" level="4" /> <!-- Blood Siphon Resistance -->
-			<skill id="4045" level="1" /> <!-- Resist Full Magic Attack -->
 		</skillList>
 		<ai aggroRange="300" isAggressive="true" clanHelpRange="300">
 			<clanList>
@@ -1744,17 +1754,17 @@
 		</stats>
 		<status attackable="false" undying="false" isDeathPenalty="true" />
 		<skillList>
-			<skill id="5467" level="1" /> <!-- Strong against the dark elemental. -->
-			<skill id="16101" level="1" /> <!-- Tauti -->
-			<skill id="4416" level="9" /> <!-- Demons -->
-			<skill id="4441" level="5" /> <!-- Greater Mental Attack Resistance -->
-			<skill id="4435" level="5" /> <!-- Greater Stun Resistance -->
-			<skill id="4440" level="5" /> <!-- Greater Paralysis Resistance -->
-			<skill id="4439" level="5" /> <!-- Greater Hold Resistance -->
-			<skill id="4438" level="5" /> <!-- Greater Sleep Resistance -->
+			<skill id="4045" level="1" /> <!-- Full Magic Attack Resistance -->
 			<skill id="4415" level="3" /> <!-- One-handed Sword -->
+			<skill id="4416" level="9" /> <!-- Demons -->
+			<skill id="4435" level="5" /> <!-- High Stun Attack Resistance -->
+			<skill id="4438" level="5" /> <!-- Greater Sleep Resistance -->
+			<skill id="4439" level="5" /> <!-- Greater Hold Resistance -->
+			<skill id="4440" level="5" /> <!-- Greater Paralysis Resistance -->
+			<skill id="4441" level="5" /> <!-- Greater Mental Attack Resistance -->
+			<skill id="5467" level="1" /> <!-- Dark Attack -->
 			<skill id="14765" level="4" /> <!-- Blood Siphon Resistance -->
-			<skill id="4045" level="1" /> <!-- Resist Full Magic Attack -->
+			<skill id="16101" level="1" /> <!-- Tauti -->
 		</skillList>
 		<ai aggroRange="300" isAggressive="true" clanHelpRange="300" />
 		<collision>
@@ -1791,17 +1801,17 @@
 		</stats>
 		<status attackable="false" undying="false" isDeathPenalty="true" />
 		<skillList>
-			<skill id="5467" level="1" /> <!-- Strong against the dark elemental. -->
-			<skill id="16101" level="1" /> <!-- Tauti -->
-			<skill id="4416" level="9" /> <!-- Demons -->
-			<skill id="4441" level="5" /> <!-- Greater Mental Attack Resistance -->
-			<skill id="4435" level="5" /> <!-- Greater Stun Resistance -->
-			<skill id="4440" level="5" /> <!-- Greater Paralysis Resistance -->
-			<skill id="4439" level="5" /> <!-- Greater Hold Resistance -->
-			<skill id="4438" level="5" /> <!-- Greater Sleep Resistance -->
+			<skill id="4045" level="1" /> <!-- Full Magic Attack Resistance -->
 			<skill id="4415" level="3" /> <!-- One-handed Sword -->
+			<skill id="4416" level="9" /> <!-- Demons -->
+			<skill id="4435" level="5" /> <!-- High Stun Attack Resistance -->
+			<skill id="4438" level="5" /> <!-- Greater Sleep Resistance -->
+			<skill id="4439" level="5" /> <!-- Greater Hold Resistance -->
+			<skill id="4440" level="5" /> <!-- Greater Paralysis Resistance -->
+			<skill id="4441" level="5" /> <!-- Greater Mental Attack Resistance -->
+			<skill id="5467" level="1" /> <!-- Dark Attack -->
 			<skill id="14765" level="4" /> <!-- Blood Siphon Resistance -->
-			<skill id="4045" level="1" /> <!-- Resist Full Magic Attack -->
+			<skill id="16101" level="1" /> <!-- Tauti -->
 		</skillList>
 		<ai aggroRange="300" isAggressive="true" clanHelpRange="300" />
 		<collision>
@@ -1838,17 +1848,17 @@
 		</stats>
 		<status attackable="false" undying="false" isDeathPenalty="true" />
 		<skillList>
-			<skill id="5467" level="1" /> <!-- Strong against the dark elemental. -->
-			<skill id="16101" level="1" /> <!-- Tauti -->
-			<skill id="4416" level="9" /> <!-- Demons -->
-			<skill id="4441" level="5" /> <!-- Greater Mental Attack Resistance -->
-			<skill id="4435" level="5" /> <!-- Greater Stun Resistance -->
-			<skill id="4440" level="5" /> <!-- Greater Paralysis Resistance -->
-			<skill id="4439" level="5" /> <!-- Greater Hold Resistance -->
-			<skill id="4438" level="5" /> <!-- Greater Sleep Resistance -->
+			<skill id="4045" level="1" /> <!-- Full Magic Attack Resistance -->
 			<skill id="4415" level="3" /> <!-- One-handed Sword -->
+			<skill id="4416" level="9" /> <!-- Demons -->
+			<skill id="4435" level="5" /> <!-- High Stun Attack Resistance -->
+			<skill id="4438" level="5" /> <!-- Greater Sleep Resistance -->
+			<skill id="4439" level="5" /> <!-- Greater Hold Resistance -->
+			<skill id="4440" level="5" /> <!-- Greater Paralysis Resistance -->
+			<skill id="4441" level="5" /> <!-- Greater Mental Attack Resistance -->
+			<skill id="5467" level="1" /> <!-- Dark Attack -->
 			<skill id="14765" level="4" /> <!-- Blood Siphon Resistance -->
-			<skill id="4045" level="1" /> <!-- Resist Full Magic Attack -->
+			<skill id="16101" level="1" /> <!-- Tauti -->
 		</skillList>
 		<ai aggroRange="300" isAggressive="true" clanHelpRange="300" />
 		<collision>
@@ -1877,17 +1887,17 @@
 		</stats>
 		<status attackable="false" undying="false" isDeathPenalty="true" />
 		<skillList>
-			<skill id="5467" level="1" /> <!-- Strong against the dark elemental. -->
-			<skill id="16101" level="1" /> <!-- Tauti -->
-			<skill id="4416" level="9" /> <!-- Demons -->
-			<skill id="4441" level="5" /> <!-- Greater Mental Attack Resistance -->
-			<skill id="4435" level="5" /> <!-- Greater Stun Resistance -->
-			<skill id="4440" level="5" /> <!-- Greater Paralysis Resistance -->
-			<skill id="4439" level="5" /> <!-- Greater Hold Resistance -->
-			<skill id="4438" level="5" /> <!-- Greater Sleep Resistance -->
+			<skill id="4045" level="1" /> <!-- Full Magic Attack Resistance -->
 			<skill id="4415" level="3" /> <!-- One-handed Sword -->
+			<skill id="4416" level="9" /> <!-- Demons -->
+			<skill id="4435" level="5" /> <!-- High Stun Attack Resistance -->
+			<skill id="4438" level="5" /> <!-- Greater Sleep Resistance -->
+			<skill id="4439" level="5" /> <!-- Greater Hold Resistance -->
+			<skill id="4440" level="5" /> <!-- Greater Paralysis Resistance -->
+			<skill id="4441" level="5" /> <!-- Greater Mental Attack Resistance -->
+			<skill id="5467" level="1" /> <!-- Dark Attack -->
 			<skill id="14765" level="4" /> <!-- Blood Siphon Resistance -->
-			<skill id="4045" level="1" /> <!-- Resist Full Magic Attack -->
+			<skill id="16101" level="1" /> <!-- Tauti -->
 		</skillList>
 		<ai aggroRange="300" isAggressive="true" clanHelpRange="300" />
 		<dropLists>
@@ -1984,17 +1994,17 @@
 		</stats>
 		<status attackable="false" undying="false" isDeathPenalty="true" />
 		<skillList>
-			<skill id="5467" level="1" /> <!-- Strong against the dark elemental. -->
-			<skill id="16101" level="1" /> <!-- Tauti -->
-			<skill id="4416" level="9" /> <!-- Demons -->
-			<skill id="4441" level="5" /> <!-- Greater Mental Attack Resistance -->
-			<skill id="4435" level="5" /> <!-- Greater Stun Resistance -->
-			<skill id="4440" level="5" /> <!-- Greater Paralysis Resistance -->
-			<skill id="4439" level="5" /> <!-- Greater Hold Resistance -->
-			<skill id="4438" level="5" /> <!-- Greater Sleep Resistance -->
+			<skill id="4045" level="1" /> <!-- Full Magic Attack Resistance -->
 			<skill id="4415" level="3" /> <!-- One-handed Sword -->
+			<skill id="4416" level="9" /> <!-- Demons -->
+			<skill id="4435" level="5" /> <!-- High Stun Attack Resistance -->
+			<skill id="4438" level="5" /> <!-- Greater Sleep Resistance -->
+			<skill id="4439" level="5" /> <!-- Greater Hold Resistance -->
+			<skill id="4440" level="5" /> <!-- Greater Paralysis Resistance -->
+			<skill id="4441" level="5" /> <!-- Greater Mental Attack Resistance -->
+			<skill id="5467" level="1" /> <!-- Dark Attack -->
 			<skill id="14765" level="4" /> <!-- Blood Siphon Resistance -->
-			<skill id="4045" level="1" /> <!-- Resist Full Magic Attack -->
+			<skill id="16101" level="1" /> <!-- Tauti -->
 		</skillList>
 		<ai aggroRange="300" isAggressive="true" clanHelpRange="300" />
 		<dropLists>
@@ -2091,17 +2101,17 @@
 		</stats>
 		<status attackable="false" undying="false" isDeathPenalty="true" />
 		<skillList>
-			<skill id="5467" level="1" /> <!-- Strong against the dark elemental. -->
-			<skill id="16101" level="1" /> <!-- Tauti -->
-			<skill id="4416" level="9" /> <!-- Demons -->
-			<skill id="4441" level="5" /> <!-- Greater Mental Attack Resistance -->
-			<skill id="4435" level="5" /> <!-- Greater Stun Resistance -->
-			<skill id="4440" level="5" /> <!-- Greater Paralysis Resistance -->
-			<skill id="4439" level="5" /> <!-- Greater Hold Resistance -->
-			<skill id="4438" level="5" /> <!-- Greater Sleep Resistance -->
+			<skill id="4045" level="1" /> <!-- Full Magic Attack Resistance -->
 			<skill id="4415" level="3" /> <!-- One-handed Sword -->
+			<skill id="4416" level="9" /> <!-- Demons -->
+			<skill id="4435" level="5" /> <!-- High Stun Attack Resistance -->
+			<skill id="4438" level="5" /> <!-- Greater Sleep Resistance -->
+			<skill id="4439" level="5" /> <!-- Greater Hold Resistance -->
+			<skill id="4440" level="5" /> <!-- Greater Paralysis Resistance -->
+			<skill id="4441" level="5" /> <!-- Greater Mental Attack Resistance -->
+			<skill id="5467" level="1" /> <!-- Dark Attack -->
 			<skill id="14765" level="4" /> <!-- Blood Siphon Resistance -->
-			<skill id="4045" level="1" /> <!-- Resist Full Magic Attack -->
+			<skill id="16101" level="1" /> <!-- Tauti -->
 		</skillList>
 		<ai aggroRange="300" isAggressive="true" clanHelpRange="300" />
 		<collision>
@@ -2129,17 +2139,17 @@
 		</stats>
 		<status attackable="false" targetable="false" isDeathPenalty="true" />
 		<skillList>
-			<skill id="5467" level="1" /> <!-- Strong against the dark elemental. -->
-			<skill id="16101" level="1" /> <!-- Tauti -->
-			<skill id="4416" level="9" /> <!-- Demons -->
-			<skill id="4441" level="5" /> <!-- Greater Mental Attack Resistance -->
-			<skill id="4435" level="5" /> <!-- Greater Stun Resistance -->
-			<skill id="4440" level="5" /> <!-- Greater Paralysis Resistance -->
-			<skill id="4439" level="5" /> <!-- Greater Hold Resistance -->
-			<skill id="4438" level="5" /> <!-- Greater Sleep Resistance -->
+			<skill id="4045" level="1" /> <!-- Full Magic Attack Resistance -->
 			<skill id="4415" level="3" /> <!-- One-handed Sword -->
+			<skill id="4416" level="9" /> <!-- Demons -->
+			<skill id="4435" level="5" /> <!-- High Stun Attack Resistance -->
+			<skill id="4438" level="5" /> <!-- Greater Sleep Resistance -->
+			<skill id="4439" level="5" /> <!-- Greater Hold Resistance -->
+			<skill id="4440" level="5" /> <!-- Greater Paralysis Resistance -->
+			<skill id="4441" level="5" /> <!-- Greater Mental Attack Resistance -->
+			<skill id="5467" level="1" /> <!-- Dark Attack -->
 			<skill id="14765" level="4" /> <!-- Blood Siphon Resistance -->
-			<skill id="4045" level="1" /> <!-- Resist Full Magic Attack -->
+			<skill id="16101" level="1" /> <!-- Tauti -->
 		</skillList>
 		<ai aggroRange="300" isAggressive="true" clanHelpRange="300" />
 		<collision>
@@ -2167,18 +2177,13 @@
 		</stats>
 		<status attackable="false" />
 		<skillList>
-			<skill id="15271" level="1"/> <!-- Body Slam -->
-			<skill id="15272" level="1"/> <!-- Wind Breath -->
-			<skill id="15273" level="1"/> <!-- Tail Swipe -->
-			<skill id="15274" level="1"/> <!-- Mighty Wind Strike -->
-			<skill id="15430" level="1"/> <!-- Lindvior's Jump -->
-			<skill id="15591" level="1"/> <!-- Wind Pull -->
-			<skill id="15275" level="1"/> <!-- Tornado -->
-			<skill id="15600" level="1"/> <!-- Lindvior's Attack -->
+			<skill id="4045" level="1" /> <!-- Full Magic Attack Resistance -->
+			<skill id="4412" level="11" /> <!-- Average P. Def. -->
+			<skill id="4413" level="11" /> <!-- Average M. Def. -->
 			<skill id="4416" level="10" /> <!-- Dragons -->
 			<skill id="5464" level="1" /> <!-- Wind Attack -->
+			<skill id="14804" level="10" /> <!-- Damage Reflect Attack Resistance -->
 			<skill id="15638" level="1" /> <!-- Lindvior -->
-			<skill id="14804" level="10" /> <!-- Damage Reflection Attack Resistance -->
 		</skillList>
 		<ai aggroRange="2000" isAggressive="true" />
 		<dropLists>
@@ -2414,10 +2419,11 @@
 		</stats>
 		<status attackable="false" />
 		<skillList>
-			<skill id="5467" level="1" /> <!-- Strong against the dark elemental. -->
-			<skill id="16179" level="1" /> <!-- Beleth -->
-			<skill id="4416" level="6" /> <!-- Humanoids -->
 			<skill id="4045" level="1" /> <!-- Full Magic Attack Resistance -->
+			<skill id="4416" level="6" /> <!-- Humanoids -->
+			<skill id="5467" level="1" /> <!-- Dark Attack -->
+			<skill id="14765" level="4" /> <!-- Blood Siphon Resistance -->
+			<skill id="16179" level="1" /> <!-- Beleth -->
 		</skillList>
 		<collision>
 			<radius normal="30" />
@@ -2443,10 +2449,10 @@
 		</stats>
 		<status attackable="false" />
 		<skillList>
-			<skill id="5467" level="1" /> <!-- Strong against the dark elemental. -->
-			<skill id="16179" level="1" /> <!-- Beleth -->
-			<skill id="4416" level="6" /> <!-- Humanoids -->
 			<skill id="4045" level="1" /> <!-- Full Magic Attack Resistance -->
+			<skill id="4416" level="6" /> <!-- Humanoids -->
+			<skill id="5467" level="1" /> <!-- Dark Attack -->
+			<skill id="16179" level="1" /> <!-- Beleth -->
 		</skillList>
 		<collision>
 			<radius normal="30" />
@@ -2472,10 +2478,11 @@
 		</stats>
 		<status attackable="false" />
 		<skillList>
-			<skill id="5467" level="1" /> <!-- Strong against the dark elemental. -->
-			<skill id="16180" level="1" /> <!-- Darion -->
-			<skill id="4416" level="9" /> <!-- Demons -->
 			<skill id="4045" level="1" /> <!-- Full Magic Attack Resistance -->
+			<skill id="4416" level="9" /> <!-- Demons -->
+			<skill id="5467" level="1" /> <!-- Dark Attack -->
+			<skill id="14765" level="4" /> <!-- Blood Siphon Resistance -->
+			<skill id="16180" level="1" /> <!-- Darion -->
 		</skillList>
 		<collision>
 			<radius normal="50" />
@@ -2500,10 +2507,10 @@
 		</stats>
 		<status attackable="false" />
 		<skillList>
-			<skill id="5467" level="1" /> <!-- Strong against the dark elemental. -->
-			<skill id="16179" level="1" /> <!-- Beleth -->
-			<skill id="4416" level="6" /> <!-- Humanoids -->
 			<skill id="4045" level="1" /> <!-- Full Magic Attack Resistance -->
+			<skill id="4416" level="6" /> <!-- Humanoids -->
+			<skill id="5467" level="1" /> <!-- Dark Attack -->
+			<skill id="16179" level="1" /> <!-- Beleth -->
 		</skillList>
 		<collision>
 			<radius normal="30" />
@@ -2529,9 +2536,9 @@
 		</stats>
 		<status attackable="false" />
 		<skillList>
-			<skill id="5467" level="1" /> <!-- Strong against the dark elemental. -->
-			<skill id="4416" level="1" /> <!-- Undead -->
 			<skill id="4045" level="1" /> <!-- Full Magic Attack Resistance -->
+			<skill id="4416" level="1" /> <!-- Undead -->
+			<skill id="5467" level="1" /> <!-- Dark Attack -->
 		</skillList>
 		<collision>
 			<radius normal="34.32" />
@@ -2557,9 +2564,9 @@
 		</stats>
 		<status attackable="false" />
 		<skillList>
-			<skill id="5467" level="1" /> <!-- Strong against the dark elemental. -->
-			<skill id="4416" level="1" /> <!-- Undead -->
 			<skill id="4045" level="1" /> <!-- Full Magic Attack Resistance -->
+			<skill id="4416" level="1" /> <!-- Undead -->
+			<skill id="5467" level="1" /> <!-- Dark Attack -->
 		</skillList>
 		<collision>
 			<radius normal="34.32" />
@@ -2585,10 +2592,11 @@
 		</stats>
 		<status attackable="false" />
 		<skillList>
-			<skill id="5467" level="1" /> <!-- Strong against the dark elemental. -->
-			<skill id="16179" level="1" /> <!-- Beleth -->
-			<skill id="4416" level="6" /> <!-- Humanoids -->
 			<skill id="4045" level="1" /> <!-- Full Magic Attack Resistance -->
+			<skill id="4416" level="6" /> <!-- Humanoids -->
+			<skill id="5467" level="1" /> <!-- Dark Attack -->
+			<skill id="14765" level="4" /> <!-- Blood Siphon Resistance -->
+			<skill id="16179" level="1" /> <!-- Beleth -->
 		</skillList>
 		<collision>
 			<radius normal="30" />
@@ -2614,12 +2622,13 @@
 		</stats>
 		<status attackable="false" />
 		<skillList>
-			<skill id="5467" level="1" /> <!-- Strong against the dark elemental. -->
-			<skill id="4494" level="1" /> <!-- Raid Boss -->
-			<skill id="14769" level="1" /> <!-- Raid Boss (Lv. 99) -->
-			<skill id="4438" level="5" /> <!-- Greater Sleep Resistance -->
-			<skill id="4416" level="1" /> <!-- Undead -->
 			<skill id="4045" level="1" /> <!-- Full Magic Attack Resistance -->
+			<skill id="4416" level="1" /> <!-- Undead -->
+			<skill id="4438" level="5" /> <!-- Greater Sleep Resistance -->
+			<skill id="4494" level="1" /> <!-- Raid Boss -->
+			<skill id="5467" level="1" /> <!-- Dark Attack -->
+			<skill id="14765" level="4" /> <!-- Blood Siphon Resistance -->
+			<skill id="14769" level="1" /> <!-- Raid Boss (Lv. 99) -->
 		</skillList>
 		<dropLists>
 			<drop>
@@ -2735,8 +2744,8 @@
 		</stats>
 		<status attackable="false" />
 		<skillList>
-			<skill id="5467" level="1" /> <!-- Strong against the dark elemental. -->
 			<skill id="4416" level="1" /> <!-- Undead -->
+			<skill id="5467" level="1" /> <!-- Dark Attack -->
 		</skillList>
 		<collision>
 			<radius normal="24" />
@@ -2762,8 +2771,8 @@
 		</stats>
 		<status attackable="false" />
 		<skillList>
-			<skill id="5465" level="1" /> <!-- Earth Attack -->
 			<skill id="4416" level="1" /> <!-- Undead -->
+			<skill id="5465" level="1" /> <!-- Earth Attack -->
 		</skillList>
 		<collision>
 			<radius normal="24" />
@@ -2788,8 +2797,8 @@
 		</stats>
 		<status attackable="false" />
 		<skillList>
-			<skill id="5467" level="1" /> <!-- Strong against the dark elemental. -->
 			<skill id="4416" level="1" /> <!-- Undead -->
+			<skill id="5467" level="1" /> <!-- Dark Attack -->
 		</skillList>
 		<collision>
 			<radius normal="31.68" />
@@ -2814,8 +2823,8 @@
 		</stats>
 		<status attackable="false" />
 		<skillList>
-			<skill id="5465" level="1" /> <!-- Earth Attack -->
 			<skill id="4416" level="1" /> <!-- Undead -->
+			<skill id="5465" level="1" /> <!-- Earth Attack -->
 		</skillList>
 		<collision>
 			<radius normal="31.68" />
@@ -2841,8 +2850,8 @@
 		</stats>
 		<status attackable="false" />
 		<skillList>
-			<skill id="5465" level="1" /> <!-- Earth Attack -->
 			<skill id="4416" level="1" /> <!-- Undead -->
+			<skill id="5465" level="1" /> <!-- Earth Attack -->
 		</skillList>
 		<collision>
 			<radius normal="34.32" />
@@ -2868,8 +2877,8 @@
 		</stats>
 		<status attackable="false" />
 		<skillList>
-			<skill id="5467" level="1" /> <!-- Strong against the dark elemental. -->
 			<skill id="4416" level="1" /> <!-- Undead -->
+			<skill id="5467" level="1" /> <!-- Dark Attack -->
 		</skillList>
 		<collision>
 			<radius normal="34.32" />
@@ -2944,10 +2953,14 @@
 		</stats>
 		<status attackable="false" />
 		<skillList>
-			<skill id="5467" level="1" /> <!-- Dark Attack -->
-			<skill id="4494" level="1" /> <!-- Raid Boss -->
-			<skill id="16452" level="1" /> <!-- Raid Boss (Lv. 99) -->
+			<skill id="4045" level="1" /> <!-- Full Magic Attack Resistance -->
 			<skill id="4416" level="6" /> <!-- Humanoids -->
+			<skill id="4494" level="1" /> <!-- Raid Boss -->
+			<skill id="5467" level="1" /> <!-- Dark Attack -->
+			<skill id="16452" level="1" /> <!-- Raid Boss (Lv. 99) -->
+			<skill id="16768" level="1" /> <!-- Energy Spike -->
+			<skill id="16769" level="1" /> <!-- Energy Burst -->
+			<skill id="16770" level="1" /> <!-- Energy Blast -->
 		</skillList>
 		<collision>
 			<radius normal="48" />
@@ -3068,10 +3081,14 @@
 		</stats>
 		<status attackable="false" />
 		<skillList>
-			<skill id="5467" level="1" /> <!-- Dark Attack -->
-			<skill id="4494" level="1" /> <!-- Raid Boss -->
-			<skill id="16452" level="2" /> <!-- Raid Boss (Lv. 99) -->
+			<skill id="4045" level="1" /> <!-- Full Magic Attack Resistance -->
 			<skill id="4416" level="6" /> <!-- Humanoids -->
+			<skill id="4494" level="1" /> <!-- Raid Boss -->
+			<skill id="5467" level="1" /> <!-- Dark Attack -->
+			<skill id="16452" level="2" /> <!-- Raid Boss (Lv. 99) -->
+			<skill id="16768" level="1" /> <!-- Energy Spike -->
+			<skill id="16769" level="1" /> <!-- Energy Burst -->
+			<skill id="16770" level="1" /> <!-- Energy Blast -->
 		</skillList>
 		<collision>
 			<radius normal="48" />
@@ -3192,10 +3209,14 @@
 		</stats>
 		<status attackable="false" />
 		<skillList>
-			<skill id="5465" level="1" /> <!-- Earth Attack -->
-			<skill id="4494" level="1" /> <!-- Raid Boss -->
-			<skill id="16452" level="4" /> <!-- Raid Boss (Lv. 99) -->
+			<skill id="4045" level="1" /> <!-- Full Magic Attack Resistance -->
 			<skill id="4416" level="6" /> <!-- Humanoids -->
+			<skill id="4494" level="1" /> <!-- Raid Boss -->
+			<skill id="5465" level="1" /> <!-- Earth Attack -->
+			<skill id="16452" level="4" /> <!-- Raid Boss (Lv. 99) -->
+			<skill id="16763" level="1" /> <!-- Critical Slasher -->
+			<skill id="16764" level="1" /> <!-- Fatal Strike -->
+			<skill id="16766" level="1" /> <!-- Fatal Slasher -->
 		</skillList>
 		<collision>
 			<radius normal="44" />
@@ -3256,10 +3277,14 @@
 		</stats>
 		<status attackable="false" />
 		<skillList>
-			<skill id="5467" level="1" /> <!-- Dark Attack -->
-			<skill id="4494" level="1" /> <!-- Raid Boss -->
-			<skill id="16490" level="1" /> <!-- 99Lv. Raid Boss -->
+			<skill id="4045" level="1" /> <!-- Full Magic Attack Resistance -->
 			<skill id="4416" level="9" /> <!-- Demons -->
+			<skill id="4494" level="1" /> <!-- Raid Boss -->
+			<skill id="5467" level="1" /> <!-- Dark Attack -->
+			<skill id="16490" level="1" /> <!-- Raid Boss (Lv. 99) -->
+			<skill id="16763" level="1" /> <!-- Critical Slasher -->
+			<skill id="16764" level="1" /> <!-- Fatal Strike -->
+			<skill id="16766" level="1" /> <!-- Fatal Slasher -->
 		</skillList>
 		<collision>
 			<radius normal="24" />
@@ -3385,10 +3410,14 @@
 		</stats>
 		<status attackable="false" />
 		<skillList>
-			<skill id="5467" level="1" /> <!-- Dark Attack -->
-			<skill id="4494" level="1" /> <!-- Raid Boss -->
-			<skill id="16491" level="1" /> <!-- 99Lv. Raid Boss -->
+			<skill id="4045" level="1" /> <!-- Full Magic Attack Resistance -->
 			<skill id="4416" level="1" /> <!-- Undead -->
+			<skill id="4494" level="1" /> <!-- Raid Boss -->
+			<skill id="5467" level="1" /> <!-- Dark Attack -->
+			<skill id="16491" level="1" /> <!-- Raid Boss (Lv. 99) -->
+			<skill id="16763" level="1" /> <!-- Critical Slasher -->
+			<skill id="16764" level="1" /> <!-- Fatal Strike -->
+			<skill id="16766" level="1" /> <!-- Fatal Slasher -->
 		</skillList>
 		<collision>
 			<radius normal="20" />
@@ -3513,10 +3542,14 @@
 		</stats>
 		<status attackable="false" />
 		<skillList>
-			<skill id="5467" level="1" /> <!-- Dark Attack -->
-			<skill id="4494" level="1" /> <!-- Raid Boss -->
-			<skill id="16492" level="1" /> <!-- 99Lv. Raid Boss -->
+			<skill id="4045" level="1" /> <!-- Full Magic Attack Resistance -->
 			<skill id="4416" level="1" /> <!-- Undead -->
+			<skill id="4494" level="1" /> <!-- Raid Boss -->
+			<skill id="5467" level="1" /> <!-- Dark Attack -->
+			<skill id="16492" level="1" /> <!-- Raid Boss (Lv. 99) -->
+			<skill id="16763" level="1" /> <!-- Critical Slasher -->
+			<skill id="16764" level="1" /> <!-- Fatal Strike -->
+			<skill id="16766" level="1" /> <!-- Fatal Slasher -->
 		</skillList>
 		<collision>
 			<radius normal="40" />
@@ -3689,10 +3722,14 @@
 		</stats>
 		<status attackable="false" />
 		<skillList>
-			<skill id="5464" level="1" /> <!-- Wind Attack -->
-			<skill id="4494" level="1" /> <!-- Raid Boss -->
-			<skill id="16493" level="1" /> <!-- 99Lv. Raid Boss -->
+			<skill id="4045" level="1" /> <!-- Full Magic Attack Resistance -->
 			<skill id="4416" level="10" /> <!-- Dragons -->
+			<skill id="4494" level="1" /> <!-- Raid Boss -->
+			<skill id="5464" level="1" /> <!-- Wind Attack -->
+			<skill id="16493" level="1" /> <!-- Raid Boss (Lv. 99) -->
+			<skill id="16768" level="1" /> <!-- Energy Spike -->
+			<skill id="16769" level="1" /> <!-- Energy Burst -->
+			<skill id="16770" level="1" /> <!-- Energy Blast -->
 		</skillList>
 		<collision>
 			<radius normal="60" />
@@ -3793,10 +3830,14 @@
 		</stats>
 		<status attackable="false" />
 		<skillList>
-			<skill id="5462" level="1" /> <!-- Fire Attack -->
-			<skill id="4494" level="1" /> <!-- Raid Boss -->
-			<skill id="16494" level="1" /> <!-- 99Lv. Raid Boss -->
+			<skill id="4045" level="1" /> <!-- Full Magic Attack Resistance -->
 			<skill id="4416" level="10" /> <!-- Dragons -->
+			<skill id="4494" level="1" /> <!-- Raid Boss -->
+			<skill id="5462" level="1" /> <!-- Fire Attack -->
+			<skill id="16494" level="1" /> <!-- Raid Boss (Lv. 99) -->
+			<skill id="16768" level="1" /> <!-- Energy Spike -->
+			<skill id="16769" level="1" /> <!-- Energy Burst -->
+			<skill id="16770" level="1" /> <!-- Energy Blast -->
 		</skillList>
 		<collision>
 			<radius normal="48" />
@@ -3897,10 +3938,14 @@
 		</stats>
 		<status attackable="false" />
 		<skillList>
-			<skill id="5465" level="1" /> <!-- Earth Attack -->
-			<skill id="4494" level="1" /> <!-- Raid Boss -->
-			<skill id="16495" level="1" /> <!-- 99Lv. Raid Boss -->
+			<skill id="4045" level="1" /> <!-- Full Magic Attack Resistance -->
 			<skill id="4416" level="10" /> <!-- Dragons -->
+			<skill id="4494" level="1" /> <!-- Raid Boss -->
+			<skill id="5465" level="1" /> <!-- Earth Attack -->
+			<skill id="16495" level="1" /> <!-- Raid Boss (Lv. 99) -->
+			<skill id="16763" level="1" /> <!-- Critical Slasher -->
+			<skill id="16764" level="1" /> <!-- Fatal Strike -->
+			<skill id="16766" level="1" /> <!-- Fatal Slasher -->
 		</skillList>
 		<collision>
 			<radius normal="100" />
@@ -4044,10 +4089,14 @@
 		</stats>
 		<status attackable="false" />
 		<skillList>
-			<skill id="5465" level="1" /> <!-- Earth Attack -->
-			<skill id="4494" level="1" /> <!-- Raid Boss -->
-			<skill id="16496" level="1" /> <!-- 99Lv. Raid Boss -->
+			<skill id="4045" level="1" /> <!-- Full Magic Attack Resistance -->
 			<skill id="4416" level="6" /> <!-- Humanoids -->
+			<skill id="4494" level="1" /> <!-- Raid Boss -->
+			<skill id="5465" level="1" /> <!-- Earth Attack -->
+			<skill id="16496" level="1" /> <!-- Raid Boss (Lv. 99) -->
+			<skill id="16763" level="1" /> <!-- Critical Slasher -->
+			<skill id="16764" level="1" /> <!-- Fatal Strike -->
+			<skill id="16766" level="1" /> <!-- Fatal Slasher -->
 		</skillList>
 		<collision>
 			<radius normal="21" />
@@ -4148,10 +4197,14 @@
 		</stats>
 		<status attackable="false" />
 		<skillList>
-			<skill id="5463" level="1" /> <!-- Water Attack -->
-			<skill id="4494" level="1" /> <!-- Raid Boss -->
-			<skill id="16497" level="1" /> <!-- 99Lv. Raid Boss -->
+			<skill id="4045" level="1" /> <!-- Full Magic Attack Resistance -->
 			<skill id="4416" level="6" /> <!-- Humanoids -->
+			<skill id="4494" level="1" /> <!-- Raid Boss -->
+			<skill id="5463" level="1" /> <!-- Water Attack -->
+			<skill id="16497" level="1" /> <!-- Raid Boss (Lv. 99) -->
+			<skill id="16763" level="1" /> <!-- Critical Slasher -->
+			<skill id="16764" level="1" /> <!-- Fatal Strike -->
+			<skill id="16766" level="1" /> <!-- Fatal Slasher -->
 		</skillList>
 		<collision>
 			<radius normal="45" grown="32" />
@@ -4252,10 +4305,14 @@
 		</stats>
 		<status attackable="false" />
 		<skillList>
-			<skill id="5465" level="1" /> <!-- Earth Attack -->
-			<skill id="4494" level="1" /> <!-- Raid Boss -->
-			<skill id="16498" level="1" /> <!-- 99Lv. Raid Boss -->
+			<skill id="4045" level="1" /> <!-- Full Magic Attack Resistance -->
 			<skill id="4416" level="6" /> <!-- Humanoids -->
+			<skill id="4494" level="1" /> <!-- Raid Boss -->
+			<skill id="5465" level="1" /> <!-- Earth Attack -->
+			<skill id="16498" level="1" /> <!-- Raid Boss (Lv. 99) -->
+			<skill id="16763" level="1" /> <!-- Critical Slasher -->
+			<skill id="16764" level="1" /> <!-- Fatal Strike -->
+			<skill id="16766" level="1" /> <!-- Fatal Slasher -->
 		</skillList>
 		<collision>
 			<radius normal="40" />
@@ -4399,10 +4456,14 @@
 		</stats>
 		<status attackable="false" />
 		<skillList>
-			<skill id="5465" level="1" /> <!-- Earth Attack -->
-			<skill id="4494" level="1" /> <!-- Raid Boss -->
-			<skill id="16499" level="1" /> <!-- 99Lv. Raid Boss -->
+			<skill id="4045" level="1" /> <!-- Full Magic Attack Resistance -->
 			<skill id="4416" level="6" /> <!-- Humanoids -->
+			<skill id="4494" level="1" /> <!-- Raid Boss -->
+			<skill id="5465" level="1" /> <!-- Earth Attack -->
+			<skill id="16499" level="1" /> <!-- Raid Boss (Lv. 99) -->
+			<skill id="16768" level="1" /> <!-- Energy Spike -->
+			<skill id="16769" level="1" /> <!-- Energy Burst -->
+			<skill id="16770" level="1" /> <!-- Energy Blast -->
 		</skillList>
 		<collision>
 			<radius normal="35" grown="18" />
@@ -4503,10 +4564,14 @@
 		</stats>
 		<status attackable="false" />
 		<skillList>
-			<skill id="5465" level="1" /> <!-- Earth Attack -->
-			<skill id="4494" level="1" /> <!-- Raid Boss -->
-			<skill id="16500" level="1" /> <!-- 99Lv. Raid Boss -->
+			<skill id="4045" level="1" /> <!-- Full Magic Attack Resistance -->
 			<skill id="4416" level="6" /> <!-- Humanoids -->
+			<skill id="4494" level="1" /> <!-- Raid Boss -->
+			<skill id="5465" level="1" /> <!-- Earth Attack -->
+			<skill id="16500" level="1" /> <!-- Raid Boss (Lv. 99) -->
+			<skill id="16768" level="1" /> <!-- Energy Spike -->
+			<skill id="16769" level="1" /> <!-- Energy Burst -->
+			<skill id="16770" level="1" /> <!-- Energy Blast -->
 		</skillList>
 		<collision>
 			<radius normal="30" grown="14" />
@@ -4607,10 +4672,14 @@
 		</stats>
 		<status attackable="false" />
 		<skillList>
-			<skill id="5463" level="1" /> <!-- Water Attack -->
-			<skill id="4494" level="1" /> <!-- Raid Boss -->
-			<skill id="16501" level="1" /> <!-- 99Lv. Raid Boss -->
+			<skill id="4045" level="1" /> <!-- Full Magic Attack Resistance -->
 			<skill id="4416" level="6" /> <!-- Humanoids -->
+			<skill id="4494" level="1" /> <!-- Raid Boss -->
+			<skill id="5463" level="1" /> <!-- Water Attack -->
+			<skill id="16501" level="1" /> <!-- Raid Boss (Lv. 99) -->
+			<skill id="16768" level="1" /> <!-- Energy Spike -->
+			<skill id="16769" level="1" /> <!-- Energy Burst -->
+			<skill id="16770" level="1" /> <!-- Energy Blast -->
 		</skillList>
 		<collision>
 			<radius normal="40" grown="32" />
@@ -4753,10 +4822,14 @@
 		</stats>
 		<status attackable="false" />
 		<skillList>
-			<skill id="5465" level="1" /> <!-- Earth Attack -->
-			<skill id="4494" level="1" /> <!-- Raid Boss -->
-			<skill id="16502" level="1" /> <!-- 99Lv. Raid Boss -->
+			<skill id="4045" level="1" /> <!-- Full Magic Attack Resistance -->
 			<skill id="4416" level="6" /> <!-- Humanoids -->
+			<skill id="4494" level="1" /> <!-- Raid Boss -->
+			<skill id="5465" level="1" /> <!-- Earth Attack -->
+			<skill id="16502" level="1" /> <!-- Raid Boss (Lv. 99) -->
+			<skill id="16763" level="1" /> <!-- Critical Slasher -->
+			<skill id="16764" level="1" /> <!-- Fatal Strike -->
+			<skill id="16766" level="1" /> <!-- Fatal Slasher -->
 		</skillList>
 		<collision>
 			<radius normal="22" />
@@ -4853,10 +4926,14 @@
 		</stats>
 		<status attackable="false" />
 		<skillList>
-			<skill id="5465" level="1" /> <!-- Earth Attack -->
-			<skill id="4494" level="1" /> <!-- Raid Boss -->
-			<skill id="16503" level="1" /> <!-- 99Lv. Raid Boss -->
+			<skill id="4045" level="1" /> <!-- Full Magic Attack Resistance -->
 			<skill id="4416" level="6" /> <!-- Humanoids -->
+			<skill id="4494" level="1" /> <!-- Raid Boss -->
+			<skill id="5465" level="1" /> <!-- Earth Attack -->
+			<skill id="16503" level="1" /> <!-- Raid Boss (Lv. 99) -->
+			<skill id="16763" level="1" /> <!-- Critical Slasher -->
+			<skill id="16764" level="1" /> <!-- Fatal Strike -->
+			<skill id="16766" level="1" /> <!-- Fatal Slasher -->
 		</skillList>
 		<collision>
 			<radius normal="26" />
@@ -4953,10 +5030,14 @@
 		</stats>
 		<status attackable="false" />
 		<skillList>
-			<skill id="5465" level="1" /> <!-- Earth Attack -->
-			<skill id="4494" level="1" /> <!-- Raid Boss -->
-			<skill id="16504" level="1" /> <!-- 99Lv. Raid Boss -->
+			<skill id="4045" level="1" /> <!-- Full Magic Attack Resistance -->
 			<skill id="4416" level="6" /> <!-- Humanoids -->
+			<skill id="4494" level="1" /> <!-- Raid Boss -->
+			<skill id="5465" level="1" /> <!-- Earth Attack -->
+			<skill id="16504" level="1" /> <!-- Raid Boss (Lv. 99) -->
+			<skill id="16763" level="1" /> <!-- Critical Slasher -->
+			<skill id="16764" level="1" /> <!-- Fatal Strike -->
+			<skill id="16766" level="1" /> <!-- Fatal Slasher -->
 		</skillList>
 		<collision>
 			<radius normal="22" />
@@ -5116,10 +5197,14 @@
 		</stats>
 		<status attackable="false" />
 		<skillList>
-			<skill id="5462" level="1" /> <!-- Fire Attack -->
-			<skill id="4494" level="1" /> <!-- Raid Boss -->
-			<skill id="16505" level="1" /> <!-- 99Lv. Raid Boss -->
+			<skill id="4045" level="1" /> <!-- Full Magic Attack Resistance -->
 			<skill id="4416" level="6" /> <!-- Humanoids -->
+			<skill id="4494" level="1" /> <!-- Raid Boss -->
+			<skill id="5462" level="1" /> <!-- Fire Attack -->
+			<skill id="16505" level="1" /> <!-- Raid Boss (Lv. 99) -->
+			<skill id="16763" level="1" /> <!-- Critical Slasher -->
+			<skill id="16764" level="1" /> <!-- Fatal Strike -->
+			<skill id="16766" level="1" /> <!-- Fatal Slasher -->
 		</skillList>
 		<collision>
 			<radius normal="28" />
@@ -5207,10 +5292,14 @@
 		</stats>
 		<status attackable="false" />
 		<skillList>
-			<skill id="5462" level="1" /> <!-- Fire Attack -->
-			<skill id="4494" level="1" /> <!-- Raid Boss -->
-			<skill id="16506" level="1" /> <!-- 99Lv. Raid Boss -->
+			<skill id="4045" level="1" /> <!-- Full Magic Attack Resistance -->
 			<skill id="4416" level="6" /> <!-- Humanoids -->
+			<skill id="4494" level="1" /> <!-- Raid Boss -->
+			<skill id="5462" level="1" /> <!-- Fire Attack -->
+			<skill id="16506" level="1" /> <!-- Raid Boss (Lv. 99) -->
+			<skill id="16763" level="1" /> <!-- Critical Slasher -->
+			<skill id="16764" level="1" /> <!-- Fatal Strike -->
+			<skill id="16766" level="1" /> <!-- Fatal Slasher -->
 		</skillList>
 		<collision>
 			<radius normal="26" />
@@ -5229,10 +5318,14 @@
 		</stats>
 		<status attackable="false" />
 		<skillList>
-			<skill id="5462" level="1" /> <!-- Fire Attack -->
-			<skill id="4494" level="1" /> <!-- Raid Boss -->
-			<skill id="16507" level="1" /> <!-- 99Lv. Raid Boss -->
+			<skill id="4045" level="1" /> <!-- Full Magic Attack Resistance -->
 			<skill id="4416" level="6" /> <!-- Humanoids -->
+			<skill id="4494" level="1" /> <!-- Raid Boss -->
+			<skill id="5462" level="1" /> <!-- Fire Attack -->
+			<skill id="16507" level="1" /> <!-- Raid Boss (Lv. 99) -->
+			<skill id="16763" level="1" /> <!-- Critical Slasher -->
+			<skill id="16764" level="1" /> <!-- Fatal Strike -->
+			<skill id="16766" level="1" /> <!-- Fatal Slasher -->
 		</skillList>
 		<collision>
 			<radius normal="24" />
@@ -5394,10 +5487,14 @@
 		</stats>
 		<status attackable="false" />
 		<skillList>
-			<skill id="5467" level="1" /> <!-- Dark Attack -->
-			<skill id="4494" level="1" /> <!-- Raid Boss -->
-			<skill id="16508" level="1" /> <!-- 99Lv. Raid Boss -->
+			<skill id="4045" level="1" /> <!-- Full Magic Attack Resistance -->
 			<skill id="4416" level="6" /> <!-- Humanoids -->
+			<skill id="4494" level="1" /> <!-- Raid Boss -->
+			<skill id="5467" level="1" /> <!-- Dark Attack -->
+			<skill id="16508" level="1" /> <!-- Raid Boss (Lv. 99) -->
+			<skill id="16763" level="1" /> <!-- Critical Slasher -->
+			<skill id="16764" level="1" /> <!-- Fatal Strike -->
+			<skill id="16766" level="1" /> <!-- Fatal Slasher -->
 		</skillList>
 		<collision>
 			<radius normal="40" />
@@ -5416,10 +5513,14 @@
 		</stats>
 		<status attackable="false" />
 		<skillList>
-			<skill id="5467" level="1" /> <!-- Dark Attack -->
-			<skill id="4494" level="1" /> <!-- Raid Boss -->
-			<skill id="16509" level="1" /> <!-- 99Lv. Raid Boss -->
+			<skill id="4045" level="1" /> <!-- Full Magic Attack Resistance -->
 			<skill id="4416" level="6" /> <!-- Humanoids -->
+			<skill id="4494" level="1" /> <!-- Raid Boss -->
+			<skill id="5467" level="1" /> <!-- Dark Attack -->
+			<skill id="16509" level="1" /> <!-- Raid Boss (Lv. 99) -->
+			<skill id="16768" level="1" /> <!-- Energy Spike -->
+			<skill id="16769" level="1" /> <!-- Energy Burst -->
+			<skill id="16770" level="1" /> <!-- Energy Blast -->
 		</skillList>
 		<collision>
 			<radius normal="30" />

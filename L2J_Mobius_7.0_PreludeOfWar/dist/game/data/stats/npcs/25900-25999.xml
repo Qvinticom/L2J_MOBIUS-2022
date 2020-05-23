@@ -52,11 +52,13 @@
 		</stats>
 		<status attackable="false" undying="false" />
 		<skillList>
+			<skill id="4045" level="1" /> <!-- Full Magic Attack Resistance -->
+			<skill id="4415" level="1" /> <!-- Bare Hands -->
+			<skill id="4416" level="6" /> <!-- Humanoid -->
 			<skill id="4494" level="1" /> <!-- Raid Boss -->
-			<skill id="15414" level="1" /> <!-- Raid Boss (Lv. 96) -->
-			<skill id="4416" level="6" /> <!-- Humanoids -->
 			<skill id="5465" level="1" /> <!-- Earth Attack -->
-			<skill id="14804" level="10" /> <!-- Damage Reflection Attack Resistance -->
+			<skill id="14765" level="4" /> <!-- Blood Siphon Resistance -->
+			<skill id="15414" level="1" /> <!-- Raid Boss (Lv. 96) -->
 		</skillList>
 		<ai clanHelpRange="1000" aggroRange="450">
 			<clanList>
@@ -161,14 +163,14 @@
 		</stats>
 		<status attackable="false" undying="false" />
 		<skillList>
-			<skill id="15413" level="1" /> <!-- Raid Boss (Lv. 96) -->
-			<skill id="4416" level="2" /> <!-- Magic Creatures -->
-			<skill id="5465" level="1" /> <!-- Earth Attack -->
+			<skill id="4045" level="1" /> <!-- Full Magic Attack Resistance -->
 			<skill id="4414" level="1" /> <!-- Heavy Armor Type -->
-			<skill id="4494" level="1" /> <!-- Raid Boss -->
 			<skill id="4415" level="1" /> <!-- Bare Hands -->
+			<skill id="4416" level="2" /> <!-- Magical Creatures -->
+			<skill id="4494" level="1" /> <!-- Raid Boss -->
+			<skill id="5465" level="1" /> <!-- Earth Attack -->
 			<skill id="14765" level="4" /> <!-- Blood Siphon Resistance -->
-			<skill id="4045" level="1" /> <!-- Resist Full Magic Attack -->
+			<skill id="15413" level="1" /> <!-- Raid Boss (Lv. 96) -->
 		</skillList>
 		<ai clanHelpRange="300" aggroRange="450" />
 		<dropLists>
@@ -710,11 +712,11 @@
 		</stats>
 		<status attackable="false" undying="false" />
 		<skillList>
-			<skill id="5467" level="1" /> <!-- Strong against the dark elemental. -->
-			<skill id="4416" level="8" /> <!-- Angels -->
+			<skill id="4045" level="1" /> <!-- Full Magic Attack Resistance -->
 			<skill id="4415" level="3" /> <!-- One-handed Sword -->
+			<skill id="4416" level="8" /> <!-- Angel -->
+			<skill id="5467" level="1" /> <!-- Dark Attack -->
 			<skill id="14765" level="4" /> <!-- Blood Siphon Resistance -->
-			<skill id="4045" level="1" /> <!-- Resist Full Magic Attack -->
 		</skillList>
 		<collision>
 			<radius normal="15.5" />
@@ -840,12 +842,12 @@
 		</stats>
 		<status attackable="false" undying="false" />
 		<skillList>
-			<skill id="5467" level="1" /> <!-- Strong against the dark elemental. -->
-			<skill id="4416" level="9" /> <!-- Demons -->
-			<skill id="4415" level="3" /> <!-- One-handed Sword -->
-			<skill id="14765" level="4" /> <!-- Blood Siphon Resistance -->
+			<skill id="4045" level="1" /> <!-- Full Magic Attack Resistance -->
 			<skill id="4197" level="1" /> <!-- Hold -->
-			<skill id="4045" level="1" /> <!-- Resist Full Magic Attack -->
+			<skill id="4415" level="3" /> <!-- One-handed Sword -->
+			<skill id="4416" level="9" /> <!-- Demons -->
+			<skill id="5467" level="1" /> <!-- Dark Attack -->
+			<skill id="14765" level="4" /> <!-- Blood Siphon Resistance -->
 		</skillList>
 		<collision>
 			<radius normal="42.5" />
@@ -952,16 +954,11 @@
 			<height normal="45" />
 		</collision>
 		<skillList>
-			<skill id="4416" level="6" /> <!-- Humanoids -->
-			<skill id="5465" level="1" /> <!-- Earth Attack -->
-			<skill id="4435" level="5" /> <!-- High Stun Attack Resistance -->
-			<skill id="4438" level="5" /> <!-- Greater Sleep Resistance -->
-			<skill id="4440" level="5" /> <!-- Greater Paralysis Resistance -->
-			<skill id="4441" level="5" /> <!-- Greater Mental Attack Resistance -->
-			<skill id="4439" level="5" /> <!-- Greater Hold Resistance -->
+			<skill id="4416" level="17" /> <!-- Orcs -->
 			<skill id="4494" level="1" /> <!-- Raid Boss -->
+			<skill id="5465" level="1" /> <!-- Earth Attack -->
+			<skill id="14765" level="4" /> <!-- Blood Siphon Resistance -->
 			<skill id="15635" level="1" /> <!-- Raid Boss (Lv. 99) -->
-			<skill id="14804" level="10" /> <!-- Damage Reflection Attack Resistance -->
 		</skillList>
 		<dropLists>
 			<drop>
@@ -1067,16 +1064,11 @@
 		</stats>
 		<status attackable="false" />
 		<skillList>
-			<skill id="4416" level="6" /> <!-- Humanoids -->
-			<skill id="5462" level="1" /> <!-- Fire Attack -->
-			<skill id="4435" level="5" /> <!-- High Stun Attack Resistance -->
-			<skill id="4438" level="5" /> <!-- Greater Sleep Resistance -->
-			<skill id="4440" level="5" /> <!-- Greater Paralysis Resistance -->
-			<skill id="4441" level="5" /> <!-- Greater Mental Attack Resistance -->
-			<skill id="4439" level="5" /> <!-- Greater Hold Resistance -->
+			<skill id="4416" level="17" /> <!-- Orcs -->
 			<skill id="4494" level="1" /> <!-- Raid Boss -->
+			<skill id="5462" level="1" /> <!-- Fire Attack -->
+			<skill id="14765" level="4" /> <!-- Blood Siphon Resistance -->
 			<skill id="15633" level="1" /> <!-- Raid Boss (Lv. 99) -->
-			<skill id="14804" level="10" /> <!-- Damage Reflection Attack Resistance -->
 		</skillList>
 		<collision>
 			<radius normal="26" />
@@ -1158,16 +1150,11 @@
 		</stats>
 		<status attackable="false" />
 		<skillList>
-			<skill id="4416" level="6" /> <!-- Humanoids -->
-			<skill id="5462" level="1" /> <!-- Fire Attack -->
-			<skill id="4435" level="5" /> <!-- High Stun Attack Resistance -->
-			<skill id="4438" level="5" /> <!-- Greater Sleep Resistance -->
-			<skill id="4440" level="5" /> <!-- Greater Paralysis Resistance -->
-			<skill id="4441" level="5" /> <!-- Greater Mental Attack Resistance -->
-			<skill id="4439" level="5" /> <!-- Greater Hold Resistance -->
+			<skill id="4416" level="17" /> <!-- Orcs -->
 			<skill id="4494" level="1" /> <!-- Raid Boss -->
+			<skill id="5462" level="1" /> <!-- Fire Attack -->
+			<skill id="14765" level="4" /> <!-- Blood Siphon Resistance -->
 			<skill id="15633" level="1" /> <!-- Raid Boss (Lv. 99) -->
-			<skill id="14804" level="10" /> <!-- Damage Reflection Attack Resistance -->
 		</skillList>
 		<collision>
 			<radius normal="24" />
@@ -1249,16 +1236,11 @@
 		</stats>
 		<status attackable="false" />
 		<skillList>
-			<skill id="4416" level="6" /> <!-- Humanoids -->
-			<skill id="5462" level="1" /> <!-- Fire Attack -->
-			<skill id="4435" level="5" /> <!-- High Stun Attack Resistance -->
-			<skill id="4438" level="5" /> <!-- Greater Sleep Resistance -->
-			<skill id="4440" level="5" /> <!-- Greater Paralysis Resistance -->
-			<skill id="4441" level="5" /> <!-- Greater Mental Attack Resistance -->
-			<skill id="4439" level="5" /> <!-- Greater Hold Resistance -->
+			<skill id="4416" level="17" /> <!-- Orcs -->
 			<skill id="4494" level="1" /> <!-- Raid Boss -->
+			<skill id="5462" level="1" /> <!-- Fire Attack -->
+			<skill id="14765" level="4" /> <!-- Blood Siphon Resistance -->
 			<skill id="15633" level="1" /> <!-- Raid Boss (Lv. 99) -->
-			<skill id="14804" level="10" /> <!-- Damage Reflection Attack Resistance -->
 		</skillList>
 		<collision>
 			<radius normal="28" />
@@ -1344,18 +1326,13 @@
 			<height normal="54.5" />
 		</collision>
 		<skillList>
+			<skill id="4416" level="17" /> <!-- Orcs -->
+			<skill id="4494" level="1" /> <!-- Raid Boss -->
+			<skill id="5462" level="1" /> <!-- Fire Attack -->
+			<skill id="14765" level="4" /> <!-- Blood Siphon Resistance -->
 			<skill id="15564" level="1" /> <!-- Theor's Attack -->
 			<skill id="15565" level="1" /> <!-- Theor's AoE Attack -->
-			<skill id="4416" level="6" /> <!-- Humanoids -->
-			<skill id="5462" level="1" /> <!-- Fire Attack -->
-			<skill id="4435" level="5" /> <!-- High Stun Attack Resistance -->
-			<skill id="4438" level="5" /> <!-- Greater Sleep Resistance -->
-			<skill id="4440" level="5" /> <!-- Greater Paralysis Resistance -->
-			<skill id="4441" level="5" /> <!-- Greater Mental Attack Resistance -->
-			<skill id="4439" level="5" /> <!-- Greater Hold Resistance -->
-			<skill id="4494" level="1" /> <!-- Raid Boss -->
 			<skill id="15633" level="1" /> <!-- Raid Boss (Lv. 99) -->
-			<skill id="14804" level="10" /> <!-- Damage Reflection Attack Resistance -->
 		</skillList>
 		<dropLists>
 			<drop>
@@ -1436,11 +1413,11 @@
 			<height normal="65" />
 		</collision>
 		<skillList>
+			<skill id="4416" level="2" /> <!-- Magical Creatures -->
 			<skill id="4494" level="1" /> <!-- Raid Boss -->
-			<skill id="4416" level="2" /> <!-- Magic Creatures -->
-			<skill id="5465" level="1" /> <!-- Earth Attack -->
+			<skill id="5464" level="1" /> <!-- Wind Attack -->
+			<skill id="14765" level="4" /> <!-- Blood Siphon Resistance -->
 			<skill id="15626" level="1" /> <!-- Raid Boss (Lv. 86) -->
-			<skill id="14804" level="10" /> <!-- Damage Reflection Attack Resistance -->
 		</skillList>
 		<dropLists>
 			<drop>
@@ -1536,11 +1513,11 @@
 			<height normal="92" />
 		</collision>
 		<skillList>
+			<skill id="4416" level="6" /> <!-- Humanoid -->
 			<skill id="4494" level="1" /> <!-- Raid Boss -->
-			<skill id="4416" level="6" /> <!-- Humanoids -->
 			<skill id="5465" level="1" /> <!-- Earth Attack -->
+			<skill id="14765" level="4" /> <!-- Blood Siphon Resistance -->
 			<skill id="15627" level="1" /> <!-- Raid Boss (Lv. 93) -->
-			<skill id="14804" level="10" /> <!-- Damage Reflection Attack Resistance -->
 		</skillList>
 		<dropLists>
 			<drop>
@@ -1707,11 +1684,11 @@
 			<height normal="40" />
 		</collision>
 		<skillList>
+			<skill id="4416" level="6" /> <!-- Humanoid -->
 			<skill id="4494" level="1" /> <!-- Raid Boss -->
-			<skill id="4416" level="6" /> <!-- Humanoids -->
 			<skill id="5465" level="1" /> <!-- Earth Attack -->
+			<skill id="14765" level="4" /> <!-- Blood Siphon Resistance -->
 			<skill id="15628" level="1" /> <!-- Raid Boss (Lv. 95) -->
-			<skill id="14804" level="10" /> <!-- Damage Reflection Attack Resistance -->
 		</skillList>
 		<dropLists>
 			<drop>
@@ -1870,11 +1847,14 @@
 		</stats>
 		<status attackable="false" />
 		<skillList>
-			<skill id="5465" level="1" /> <!-- Earth Attack -->
-			<skill id="4494" level="1" /> <!-- Raid Boss -->
-			<skill id="6062" level="1" /> <!-- Raid Boss (Lv. 99) -->
-			<skill id="4416" level="1" /> <!-- Undead -->
 			<skill id="4045" level="1" /> <!-- Full Magic Attack Resistance -->
+			<skill id="4416" level="1" /> <!-- Undead -->
+			<skill id="4494" level="1" /> <!-- Raid Boss -->
+			<skill id="5465" level="1" /> <!-- Earth Attack -->
+			<skill id="6062" level="1" /> <!-- Raid Boss (Lv. 99) -->
+			<skill id="14765" level="4" /> <!-- Blood Siphon Resistance -->
+			<skill id="16184" level="1" /> <!-- Vengeful Petrify -->
+			<skill id="16186" level="1" /> <!-- Belly Cut -->
 		</skillList>
 		<collision>
 			<radius normal="34.32" />
@@ -1901,11 +1881,14 @@
 		</stats>
 		<status attackable="false" />
 		<skillList>
-			<skill id="5467" level="1" /> <!-- Strong against the dark elemental. -->
-			<skill id="4494" level="1" /> <!-- Raid Boss -->
-			<skill id="6063" level="1" /> <!-- Raid Boss (Lv. 99) -->
-			<skill id="4416" level="1" /> <!-- Undead -->
 			<skill id="4045" level="1" /> <!-- Full Magic Attack Resistance -->
+			<skill id="4416" level="1" /> <!-- Undead -->
+			<skill id="4494" level="1" /> <!-- Raid Boss -->
+			<skill id="5467" level="1" /> <!-- Dark Attack -->
+			<skill id="6063" level="1" /> <!-- Raid Boss (Lv. 99) -->
+			<skill id="14765" level="4" /> <!-- Blood Siphon Resistance -->
+			<skill id="16184" level="1" /> <!-- Vengeful Petrify -->
+			<skill id="16186" level="1" /> <!-- Belly Cut -->
 		</skillList>
 		<collision>
 			<radius normal="34.32" />
@@ -1935,13 +1918,14 @@
 			<height normal="99" />
 		</collision>
 		<skillList>
-			<skill id="4416" level="7" /> <!-- Spirits -->
-			<skill id="5462" level="1" /> <!-- Fire Attack -->
+			<skill id="4045" level="1" /> <!-- Full Magic Attack Resistance -->
 			<skill id="4410" level="18" /> <!-- Extremely Strong P. Atk. -->
 			<skill id="4414" level="1" /> <!-- Heavy Armor Type -->
+			<skill id="4416" level="7" /> <!-- Spirits -->
 			<skill id="4494" level="1" /> <!-- Raid Boss -->
-			<skill id="16316" level="1" /> <!-- Raid Boss (Lv. 98) -->
-			<skill id="14804" level="10" /> <!-- Damage Reflection Attack Resistance -->
+			<skill id="5462" level="1" /> <!-- Fire Attack -->
+			<skill id="14765" level="4" /> <!-- Blood Siphon Resistance -->
+			<skill id="16316" level="1" /> <!-- 98Lv. Raid Boss -->
 		</skillList>
 		<dropLists>
 			<drop>
@@ -2061,13 +2045,14 @@
 			<height normal="99" />
 		</collision>
 		<skillList>
-			<skill id="4416" level="7" /> <!-- Spirits -->
-			<skill id="5464" level="1" /> <!-- Wind Attack -->
+			<skill id="4045" level="1" /> <!-- Full Magic Attack Resistance -->
 			<skill id="4410" level="16" /> <!-- Very Strong P. Atk. -->
 			<skill id="4414" level="1" /> <!-- Heavy Armor Type -->
+			<skill id="4416" level="7" /> <!-- Spirits -->
 			<skill id="4494" level="1" /> <!-- Raid Boss -->
+			<skill id="5464" level="1" /> <!-- Wind Attack -->
+			<skill id="14765" level="4" /> <!-- Blood Siphon Resistance -->
 			<skill id="16267" level="1" /> <!-- Raid Boss (Lv. 93) -->
-			<skill id="14804" level="10" /> <!-- Damage Reflection Attack Resistance -->
 		</skillList>
 		<dropLists>
 			<drop>
@@ -2182,13 +2167,14 @@
 			<height normal="99" />
 		</collision>
 		<skillList>
-			<skill id="4416" level="7" /> <!-- Spirits -->
-			<skill id="5465" level="1" /> <!-- Earth Attack -->
+			<skill id="4045" level="1" /> <!-- Full Magic Attack Resistance -->
 			<skill id="4410" level="16" /> <!-- Very Strong P. Atk. -->
 			<skill id="4414" level="1" /> <!-- Heavy Armor Type -->
+			<skill id="4416" level="7" /> <!-- Spirits -->
 			<skill id="4494" level="1" /> <!-- Raid Boss -->
-			<skill id="16248" level="1" /> <!-- Raid Boss (Lv. 88) -->
-			<skill id="14804" level="10" /> <!-- Damage Reflection Attack Resistance -->
+			<skill id="5465" level="1" /> <!-- Earth Attack -->
+			<skill id="14765" level="4" /> <!-- Blood Siphon Resistance -->
+			<skill id="16248" level="1" /> <!-- 88Lv. Raid Boss -->
 		</skillList>
 		<dropLists>
 			<drop>
@@ -2311,13 +2297,14 @@
 			<height normal="82.1" />
 		</collision>
 		<skillList>
-			<skill id="4416" level="3" /> <!-- Beast -->
-			<skill id="5465" level="1" /> <!-- Earth Attack -->
+			<skill id="4045" level="1" /> <!-- Full Magic Attack Resistance -->
 			<skill id="4410" level="18" /> <!-- Extremely Strong P. Atk. -->
 			<skill id="4414" level="1" /> <!-- Heavy Armor Type -->
+			<skill id="4416" level="3" /> <!-- Beast -->
 			<skill id="4494" level="1" /> <!-- Raid Boss -->
+			<skill id="5465" level="1" /> <!-- Earth Attack -->
+			<skill id="14765" level="4" /> <!-- Blood Siphon Resistance -->
 			<skill id="16310" level="1" /> <!-- Raid Boss (Lv. 98) -->
-			<skill id="14804" level="10" /> <!-- Damage Reflection Attack Resistance -->
 		</skillList>
 		<dropLists>
 			<drop>
@@ -2420,13 +2407,14 @@
 			<height normal="112" />
 		</collision>
 		<skillList>
-			<skill id="4416" level="10" /> <!-- Dragons -->
-			<skill id="5465" level="1" /> <!-- Earth Attack -->
+			<skill id="4045" level="1" /> <!-- Full Magic Attack Resistance -->
 			<skill id="4410" level="15" /> <!-- Strong P. Atk. -->
 			<skill id="4414" level="1" /> <!-- Heavy Armor Type -->
+			<skill id="4416" level="10" /> <!-- Dragons -->
 			<skill id="4494" level="1" /> <!-- Raid Boss -->
-			<skill id="16311" level="1" /> <!-- Raid Boss (Lv. 98) -->
-			<skill id="14804" level="10" /> <!-- Damage Reflection Attack Resistance -->
+			<skill id="5465" level="1" /> <!-- Earth Attack -->
+			<skill id="14765" level="4" /> <!-- Blood Siphon Resistance -->
+			<skill id="16311" level="1" /> <!-- 98Lv. Raid Boss -->
 		</skillList>
 		<dropLists>
 			<drop>
@@ -2529,13 +2517,14 @@
 			<height normal="150" />
 		</collision>
 		<skillList>
-			<skill id="4416" level="10" /> <!-- Dragons -->
-			<skill id="5467" level="1" /> <!-- Dark Attack -->
+			<skill id="4045" level="1" /> <!-- Full Magic Attack Resistance -->
 			<skill id="4411" level="14" /> <!-- Strong M. Atk. -->
 			<skill id="4414" level="1" /> <!-- Heavy Armor Type -->
+			<skill id="4416" level="10" /> <!-- Dragons -->
 			<skill id="4494" level="1" /> <!-- Raid Boss -->
+			<skill id="5467" level="1" /> <!-- Dark Attack -->
+			<skill id="14765" level="4" /> <!-- Blood Siphon Resistance -->
 			<skill id="16312" level="1" /> <!-- Raid Boss (Lv. 98) -->
-			<skill id="14804" level="10" /> <!-- Damage Reflection Attack Resistance -->
 		</skillList>
 		<dropLists>
 			<drop>
@@ -2638,13 +2627,14 @@
 			<height normal="73" />
 		</collision>
 		<skillList>
-			<skill id="4416" level="10" /> <!-- Dragons -->
-			<skill id="5462" level="1" /> <!-- Fire Attack -->
+			<skill id="4045" level="1" /> <!-- Full Magic Attack Resistance -->
 			<skill id="4410" level="15" /> <!-- Strong P. Atk. -->
 			<skill id="4414" level="1" /> <!-- Heavy Armor Type -->
+			<skill id="4416" level="10" /> <!-- Dragons -->
 			<skill id="4494" level="1" /> <!-- Raid Boss -->
-			<skill id="16313" level="1" /> <!-- Raid Boss (Lv. 98) -->
-			<skill id="14804" level="10" /> <!-- Damage Reflection Attack Resistance -->
+			<skill id="5462" level="1" /> <!-- Fire Attack -->
+			<skill id="14765" level="4" /> <!-- Blood Siphon Resistance -->
+			<skill id="16313" level="1" /> <!-- 98Lv. Raid Boss -->
 		</skillList>
 		<dropLists>
 			<drop>
@@ -2747,13 +2737,14 @@
 			<height normal="100" />
 		</collision>
 		<skillList>
-			<skill id="4416" level="10" /> <!-- Dragons -->
-			<skill id="5464" level="1" /> <!-- Wind Attack -->
+			<skill id="4045" level="1" /> <!-- Full Magic Attack Resistance -->
 			<skill id="4411" level="14" /> <!-- Strong M. Atk. -->
 			<skill id="4414" level="1" /> <!-- Heavy Armor Type -->
+			<skill id="4416" level="10" /> <!-- Dragons -->
 			<skill id="4494" level="1" /> <!-- Raid Boss -->
-			<skill id="16314" level="1" /> <!-- Raid Boss (Lv. 98) -->
-			<skill id="14804" level="10" /> <!-- Damage Reflection Attack Resistance -->
+			<skill id="5464" level="1" /> <!-- Wind Attack -->
+			<skill id="14765" level="4" /> <!-- Blood Siphon Resistance -->
+			<skill id="16314" level="1" /> <!-- 98Lv. Raid Boss -->
 		</skillList>
 		<dropLists>
 			<drop>
@@ -2856,13 +2847,14 @@
 			<height normal="80.5" />
 		</collision>
 		<skillList>
-			<skill id="4416" level="10" /> <!-- Dragons -->
-			<skill id="5463" level="1" /> <!-- Water Attack -->
+			<skill id="4045" level="1" /> <!-- Full Magic Attack Resistance -->
 			<skill id="4410" level="17" /> <!-- Very Strong P. Atk. -->
 			<skill id="4414" level="1" /> <!-- Heavy Armor Type -->
+			<skill id="4416" level="10" /> <!-- Dragons -->
 			<skill id="4494" level="1" /> <!-- Raid Boss -->
-			<skill id="16315" level="1" /> <!-- Raid Boss (Lv. 98) -->
-			<skill id="14804" level="10" /> <!-- Damage Reflection Attack Resistance -->
+			<skill id="5463" level="1" /> <!-- Water Attack -->
+			<skill id="14765" level="4" /> <!-- Blood Siphon Resistance -->
+			<skill id="16315" level="1" /> <!-- 98Lv. Raid Boss -->
 		</skillList>
 		<dropLists>
 			<drop>
@@ -3068,10 +3060,9 @@
 		</stats>
 		<status attackable="false" />
 		<skillList>
-			<skill id="5465" level="1" /> <!-- Earth Attack -->
 			<skill id="4414" level="3" /> <!-- Light Armor Type -->
 			<skill id="4416" level="9" /> <!-- Demons -->
-			<skill id="4045" level="1" /> <!-- Full Magic Attack Resistance -->
+			<skill id="5465" level="1" /> <!-- Earth Attack -->
 		</skillList>
 		<collision>
 			<radius normal="19" />
@@ -3109,13 +3100,14 @@
 			<height normal="100" />
 		</collision>
 		<skillList>
-			<skill id="4416" level="6" /> <!-- Humanoids -->
-			<skill id="5465" level="1" /> <!-- Earth Attack -->
+			<skill id="4045" level="1" /> <!-- Full Magic Attack Resistance -->
 			<skill id="4410" level="18" /> <!-- Extremely Strong P. Atk. -->
 			<skill id="4414" level="1" /> <!-- Heavy Armor Type -->
+			<skill id="4416" level="6" /> <!-- Humanoid -->
 			<skill id="4494" level="1" /> <!-- Raid Boss -->
-			<skill id="16298" level="1" /> <!-- Raid Boss (Lv. 98) -->
-			<skill id="14804" level="10" /> <!-- Damage Reflection Attack Resistance -->
+			<skill id="5465" level="1" /> <!-- Earth Attack -->
+			<skill id="14765" level="4" /> <!-- Blood Siphon Resistance -->
+			<skill id="16298" level="1" /> <!-- 98Lv. Raid Boss -->
 		</skillList>
 		<dropLists>
 			<drop>
@@ -3218,13 +3210,14 @@
 			<height normal="55" />
 		</collision>
 		<skillList>
-			<skill id="4416" level="6" /> <!-- Humanoids -->
-			<skill id="5465" level="1" /> <!-- Earth Attack -->
+			<skill id="4045" level="1" /> <!-- Full Magic Attack Resistance -->
 			<skill id="4410" level="15" /> <!-- Strong P. Atk. -->
 			<skill id="4414" level="1" /> <!-- Heavy Armor Type -->
+			<skill id="4416" level="6" /> <!-- Humanoid -->
 			<skill id="4494" level="1" /> <!-- Raid Boss -->
-			<skill id="16299" level="1" /> <!-- Raid Boss (Lv. 98) -->
-			<skill id="14804" level="10" /> <!-- Damage Reflection Attack Resistance -->
+			<skill id="5465" level="1" /> <!-- Earth Attack -->
+			<skill id="14765" level="4" /> <!-- Blood Siphon Resistance -->
+			<skill id="16299" level="1" /> <!-- 98Lv. Raid Boss -->
 		</skillList>
 		<dropLists>
 			<drop>
@@ -3327,13 +3320,14 @@
 			<height normal="88" />
 		</collision>
 		<skillList>
-			<skill id="4416" level="6" /> <!-- Humanoids -->
-			<skill id="5465" level="1" /> <!-- Earth Attack -->
+			<skill id="4045" level="1" /> <!-- Full Magic Attack Resistance -->
 			<skill id="4411" level="14" /> <!-- Strong M. Atk. -->
 			<skill id="4414" level="1" /> <!-- Heavy Armor Type -->
+			<skill id="4416" level="6" /> <!-- Humanoid -->
 			<skill id="4494" level="1" /> <!-- Raid Boss -->
-			<skill id="16300" level="1" /> <!-- Raid Boss (Lv. 98) -->
-			<skill id="14804" level="10" /> <!-- Damage Reflection Attack Resistance -->
+			<skill id="5465" level="1" /> <!-- Earth Attack -->
+			<skill id="14765" level="4" /> <!-- Blood Siphon Resistance -->
+			<skill id="16300" level="1" /> <!-- 98Lv. Raid Boss -->
 		</skillList>
 		<dropLists>
 			<drop>
@@ -3436,13 +3430,14 @@
 			<height normal="96" />
 		</collision>
 		<skillList>
-			<skill id="4416" level="6" /> <!-- Humanoids -->
-			<skill id="5463" level="1" /> <!-- Water Attack -->
+			<skill id="4045" level="1" /> <!-- Full Magic Attack Resistance -->
 			<skill id="4410" level="15" /> <!-- Strong P. Atk. -->
 			<skill id="4414" level="1" /> <!-- Heavy Armor Type -->
+			<skill id="4416" level="6" /> <!-- Humanoid -->
 			<skill id="4494" level="1" /> <!-- Raid Boss -->
-			<skill id="16301" level="1" /> <!-- Raid Boss (Lv. 98) -->
-			<skill id="14804" level="10" /> <!-- Damage Reflection Attack Resistance -->
+			<skill id="5463" level="1" /> <!-- Water Attack -->
+			<skill id="14765" level="4" /> <!-- Blood Siphon Resistance -->
+			<skill id="16301" level="1" /> <!-- 98Lv. Raid Boss -->
 		</skillList>
 		<dropLists>
 			<drop>
@@ -3545,13 +3540,14 @@
 			<height normal="85" />
 		</collision>
 		<skillList>
-			<skill id="4416" level="6" /> <!-- Humanoids -->
-			<skill id="5465" level="1" /> <!-- Earth Attack -->
+			<skill id="4045" level="1" /> <!-- Full Magic Attack Resistance -->
 			<skill id="4411" level="14" /> <!-- Strong M. Atk. -->
 			<skill id="4414" level="1" /> <!-- Heavy Armor Type -->
+			<skill id="4416" level="6" /> <!-- Humanoid -->
 			<skill id="4494" level="1" /> <!-- Raid Boss -->
-			<skill id="16302" level="1" /> <!-- Raid Boss (Lv. 98) -->
-			<skill id="14804" level="10" /> <!-- Damage Reflection Attack Resistance -->
+			<skill id="5465" level="1" /> <!-- Earth Attack -->
+			<skill id="14765" level="4" /> <!-- Blood Siphon Resistance -->
+			<skill id="16302" level="1" /> <!-- 98Lv. Raid Boss -->
 		</skillList>
 		<dropLists>
 			<drop>
@@ -3654,13 +3650,14 @@
 			<height normal="95" />
 		</collision>
 		<skillList>
-			<skill id="4416" level="6" /> <!-- Humanoids -->
-			<skill id="5463" level="1" /> <!-- Water Attack -->
+			<skill id="4045" level="1" /> <!-- Full Magic Attack Resistance -->
 			<skill id="4410" level="17" /> <!-- Very Strong P. Atk. -->
 			<skill id="4414" level="1" /> <!-- Heavy Armor Type -->
+			<skill id="4416" level="6" /> <!-- Humanoid -->
 			<skill id="4494" level="1" /> <!-- Raid Boss -->
-			<skill id="16303" level="1" /> <!-- Raid Boss (Lv. 98) -->
-			<skill id="14804" level="10" /> <!-- Damage Reflection Attack Resistance -->
+			<skill id="5463" level="1" /> <!-- Water Attack -->
+			<skill id="14765" level="4" /> <!-- Blood Siphon Resistance -->
+			<skill id="16303" level="1" /> <!-- 98Lv. Raid Boss -->
 		</skillList>
 		<dropLists>
 			<drop>
@@ -3865,10 +3862,9 @@
 		</stats>
 		<status attackable="false" />
 		<skillList>
-			<skill id="5465" level="1" /> <!-- Earth Attack -->
 			<skill id="4414" level="3" /> <!-- Light Armor Type -->
-			<skill id="4416" level="6" /> <!-- Humanoids -->
-			<skill id="4045" level="1" /> <!-- Full Magic Attack Resistance -->
+			<skill id="4416" level="6" /> <!-- Humanoid -->
+			<skill id="5465" level="1" /> <!-- Earth Attack -->
 		</skillList>
 		<collision>
 			<radius normal="8" />
@@ -3906,13 +3902,14 @@
 			<height normal="41" />
 		</collision>
 		<skillList>
-			<skill id="4416" level="6" /> <!-- Humanoids -->
-			<skill id="5462" level="1" /> <!-- Fire Attack -->
+			<skill id="4045" level="1" /> <!-- Full Magic Attack Resistance -->
 			<skill id="4410" level="18" /> <!-- Extremely Strong P. Atk. -->
 			<skill id="4414" level="1" /> <!-- Heavy Armor Type -->
+			<skill id="4416" level="6" /> <!-- Humanoid -->
 			<skill id="4494" level="1" /> <!-- Raid Boss -->
+			<skill id="5462" level="1" /> <!-- Fire Attack -->
+			<skill id="14765" level="4" /> <!-- Blood Siphon Resistance -->
 			<skill id="16286" level="1" /> <!-- Raid Boss (Lv. 97) -->
-			<skill id="14804" level="10" /> <!-- Damage Reflection Attack Resistance -->
 		</skillList>
 		<dropLists>
 			<drop>
@@ -4018,13 +4015,14 @@
 			<height normal="54.5" />
 		</collision>
 		<skillList>
-			<skill id="4416" level="6" /> <!-- Humanoids -->
-			<skill id="5462" level="1" /> <!-- Fire Attack -->
+			<skill id="4045" level="1" /> <!-- Full Magic Attack Resistance -->
 			<skill id="4410" level="15" /> <!-- Strong P. Atk. -->
 			<skill id="4414" level="1" /> <!-- Heavy Armor Type -->
+			<skill id="4416" level="6" /> <!-- Humanoid -->
 			<skill id="4494" level="1" /> <!-- Raid Boss -->
+			<skill id="5462" level="1" /> <!-- Fire Attack -->
+			<skill id="14765" level="4" /> <!-- Blood Siphon Resistance -->
 			<skill id="16287" level="1" /> <!-- Raid Boss (Lv. 97) -->
-			<skill id="14804" level="10" /> <!-- Damage Reflection Attack Resistance -->
 		</skillList>
 		<dropLists>
 			<drop>
@@ -4130,13 +4128,14 @@
 			<height normal="83" />
 		</collision>
 		<skillList>
-			<skill id="4416" level="11" /> <!-- Giants -->
-			<skill id="5465" level="1" /> <!-- Earth Attack -->
+			<skill id="4045" level="1" /> <!-- Full Magic Attack Resistance -->
 			<skill id="4411" level="14" /> <!-- Strong M. Atk. -->
 			<skill id="4414" level="1" /> <!-- Heavy Armor Type -->
+			<skill id="4416" level="11" /> <!-- Giant -->
 			<skill id="4494" level="1" /> <!-- Raid Boss -->
+			<skill id="5465" level="1" /> <!-- Earth Attack -->
+			<skill id="14765" level="4" /> <!-- Blood Siphon Resistance -->
 			<skill id="16288" level="1" /> <!-- Raid Boss (Lv. 97) -->
-			<skill id="14804" level="10" /> <!-- Damage Reflection Attack Resistance -->
 		</skillList>
 		<dropLists>
 			<drop>
@@ -4242,13 +4241,14 @@
 			<height normal="50" />
 		</collision>
 		<skillList>
-			<skill id="4416" level="6" /> <!-- Humanoids -->
-			<skill id="5462" level="1" /> <!-- Fire Attack -->
+			<skill id="4045" level="1" /> <!-- Full Magic Attack Resistance -->
 			<skill id="4410" level="15" /> <!-- Strong P. Atk. -->
 			<skill id="4414" level="1" /> <!-- Heavy Armor Type -->
+			<skill id="4416" level="6" /> <!-- Humanoid -->
 			<skill id="4494" level="1" /> <!-- Raid Boss -->
+			<skill id="5462" level="1" /> <!-- Fire Attack -->
+			<skill id="14765" level="4" /> <!-- Blood Siphon Resistance -->
 			<skill id="16289" level="1" /> <!-- Raid Boss (Lv. 97) -->
-			<skill id="14804" level="10" /> <!-- Damage Reflection Attack Resistance -->
 		</skillList>
 		<dropLists>
 			<drop>
@@ -4354,13 +4354,14 @@
 			<height normal="83" />
 		</collision>
 		<skillList>
-			<skill id="4416" level="11" /> <!-- Giants -->
-			<skill id="5465" level="1" /> <!-- Earth Attack -->
+			<skill id="4045" level="1" /> <!-- Full Magic Attack Resistance -->
 			<skill id="4411" level="14" /> <!-- Strong M. Atk. -->
 			<skill id="4414" level="1" /> <!-- Heavy Armor Type -->
+			<skill id="4416" level="11" /> <!-- Giant -->
 			<skill id="4494" level="1" /> <!-- Raid Boss -->
+			<skill id="5465" level="1" /> <!-- Earth Attack -->
+			<skill id="14765" level="4" /> <!-- Blood Siphon Resistance -->
 			<skill id="16290" level="1" /> <!-- Raid Boss (Lv. 97) -->
-			<skill id="14804" level="10" /> <!-- Damage Reflection Attack Resistance -->
 		</skillList>
 		<dropLists>
 			<drop>
@@ -4467,13 +4468,14 @@
 			<height normal="50" />
 		</collision>
 		<skillList>
-			<skill id="4416" level="6" /> <!-- Humanoids -->
-			<skill id="5462" level="1" /> <!-- Fire Attack -->
+			<skill id="4045" level="1" /> <!-- Full Magic Attack Resistance -->
 			<skill id="4410" level="17" /> <!-- Very Strong P. Atk. -->
 			<skill id="4414" level="1" /> <!-- Heavy Armor Type -->
+			<skill id="4416" level="6" /> <!-- Humanoid -->
 			<skill id="4494" level="1" /> <!-- Raid Boss -->
+			<skill id="5462" level="1" /> <!-- Fire Attack -->
+			<skill id="14765" level="4" /> <!-- Blood Siphon Resistance -->
 			<skill id="16291" level="1" /> <!-- Raid Boss (Lv. 97) -->
-			<skill id="14804" level="10" /> <!-- Damage Reflection Attack Resistance -->
 		</skillList>
 		<dropLists>
 			<drop>
@@ -4685,10 +4687,9 @@
 		</stats>
 		<status attackable="false" />
 		<skillList>
-			<skill id="5462" level="1" /> <!-- Fire Attack -->
 			<skill id="4414" level="3" /> <!-- Light Armor Type -->
-			<skill id="4416" level="6" /> <!-- Humanoids -->
-			<skill id="4045" level="1" /> <!-- Full Magic Attack Resistance -->
+			<skill id="4416" level="6" /> <!-- Humanoid -->
+			<skill id="5462" level="1" /> <!-- Fire Attack -->
 		</skillList>
 		<collision>
 			<radius normal="12" grown="14" />
@@ -4726,13 +4727,14 @@
 			<height normal="84" />
 		</collision>
 		<skillList>
-			<skill id="4416" level="2" /> <!-- Magic Creatures -->
-			<skill id="5467" level="1" /> <!-- Dark Attack -->
+			<skill id="4045" level="1" /> <!-- Full Magic Attack Resistance -->
 			<skill id="4410" level="18" /> <!-- Extremely Strong P. Atk. -->
 			<skill id="4414" level="1" /> <!-- Heavy Armor Type -->
+			<skill id="4416" level="2" /> <!-- Magical Creatures -->
 			<skill id="4494" level="1" /> <!-- Raid Boss -->
+			<skill id="5467" level="1" /> <!-- Dark Attack -->
+			<skill id="14765" level="4" /> <!-- Blood Siphon Resistance -->
 			<skill id="16274" level="1" /> <!-- Raid Boss (Lv. 97) -->
-			<skill id="14804" level="10" /> <!-- Damage Reflection Attack Resistance -->
 		</skillList>
 		<dropLists>
 			<drop>
@@ -4838,13 +4840,14 @@
 			<height normal="88" />
 		</collision>
 		<skillList>
-			<skill id="4416" level="6" /> <!-- Humanoids -->
-			<skill id="5467" level="1" /> <!-- Dark Attack -->
+			<skill id="4045" level="1" /> <!-- Full Magic Attack Resistance -->
 			<skill id="4410" level="15" /> <!-- Strong P. Atk. -->
 			<skill id="4414" level="1" /> <!-- Heavy Armor Type -->
+			<skill id="4416" level="6" /> <!-- Humanoid -->
 			<skill id="4494" level="1" /> <!-- Raid Boss -->
+			<skill id="5467" level="1" /> <!-- Dark Attack -->
+			<skill id="14765" level="4" /> <!-- Blood Siphon Resistance -->
 			<skill id="16275" level="1" /> <!-- Raid Boss (Lv. 97) -->
-			<skill id="14804" level="10" /> <!-- Damage Reflection Attack Resistance -->
 		</skillList>
 		<dropLists>
 			<drop>
@@ -4950,13 +4953,14 @@
 			<height normal="82" />
 		</collision>
 		<skillList>
-			<skill id="4416" level="6" /> <!-- Humanoids -->
-			<skill id="5467" level="1" /> <!-- Dark Attack -->
+			<skill id="4045" level="1" /> <!-- Full Magic Attack Resistance -->
 			<skill id="4411" level="14" /> <!-- Strong M. Atk. -->
 			<skill id="4414" level="1" /> <!-- Heavy Armor Type -->
+			<skill id="4416" level="6" /> <!-- Humanoid -->
 			<skill id="4494" level="1" /> <!-- Raid Boss -->
+			<skill id="5467" level="1" /> <!-- Dark Attack -->
+			<skill id="14765" level="4" /> <!-- Blood Siphon Resistance -->
 			<skill id="16276" level="1" /> <!-- Raid Boss (Lv. 97) -->
-			<skill id="14804" level="10" /> <!-- Damage Reflection Attack Resistance -->
 		</skillList>
 		<dropLists>
 			<drop>
@@ -5062,13 +5066,14 @@
 			<height normal="87" />
 		</collision>
 		<skillList>
-			<skill id="4416" level="6" /> <!-- Humanoids -->
-			<skill id="5467" level="1" /> <!-- Dark Attack -->
+			<skill id="4045" level="1" /> <!-- Full Magic Attack Resistance -->
 			<skill id="4410" level="15" /> <!-- Strong P. Atk. -->
 			<skill id="4414" level="1" /> <!-- Heavy Armor Type -->
+			<skill id="4416" level="6" /> <!-- Humanoid -->
 			<skill id="4494" level="1" /> <!-- Raid Boss -->
+			<skill id="5467" level="1" /> <!-- Dark Attack -->
+			<skill id="14765" level="4" /> <!-- Blood Siphon Resistance -->
 			<skill id="16277" level="1" /> <!-- Raid Boss (Lv. 97) -->
-			<skill id="14804" level="10" /> <!-- Damage Reflection Attack Resistance -->
 		</skillList>
 		<dropLists>
 			<drop>
@@ -5174,13 +5179,14 @@
 			<height normal="82" />
 		</collision>
 		<skillList>
-			<skill id="4416" level="6" /> <!-- Humanoids -->
-			<skill id="5467" level="1" /> <!-- Dark Attack -->
+			<skill id="4045" level="1" /> <!-- Full Magic Attack Resistance -->
 			<skill id="4411" level="14" /> <!-- Strong M. Atk. -->
 			<skill id="4414" level="1" /> <!-- Heavy Armor Type -->
+			<skill id="4416" level="6" /> <!-- Humanoid -->
 			<skill id="4494" level="1" /> <!-- Raid Boss -->
+			<skill id="5467" level="1" /> <!-- Dark Attack -->
+			<skill id="14765" level="4" /> <!-- Blood Siphon Resistance -->
 			<skill id="16278" level="1" /> <!-- Raid Boss (Lv. 97) -->
-			<skill id="14804" level="10" /> <!-- Damage Reflection Attack Resistance -->
 		</skillList>
 		<dropLists>
 			<drop>
@@ -5286,13 +5292,14 @@
 			<height normal="100" />
 		</collision>
 		<skillList>
-			<skill id="4416" level="1" /> <!-- Undead -->
-			<skill id="5467" level="1" /> <!-- Dark Attack -->
+			<skill id="4045" level="1" /> <!-- Full Magic Attack Resistance -->
 			<skill id="4410" level="17" /> <!-- Very Strong P. Atk. -->
 			<skill id="4414" level="1" /> <!-- Heavy Armor Type -->
+			<skill id="4416" level="1" /> <!-- Undead -->
 			<skill id="4494" level="1" /> <!-- Raid Boss -->
+			<skill id="5467" level="1" /> <!-- Dark Attack -->
+			<skill id="14765" level="4" /> <!-- Blood Siphon Resistance -->
 			<skill id="16279" level="1" /> <!-- Raid Boss (Lv. 97) -->
-			<skill id="14804" level="10" /> <!-- Damage Reflection Attack Resistance -->
 		</skillList>
 		<dropLists>
 			<drop>
@@ -5500,10 +5507,9 @@
 		</stats>
 		<status attackable="false" />
 		<skillList>
-			<skill id="5467" level="1" /> <!-- Strong against the dark elemental. -->
 			<skill id="4414" level="3" /> <!-- Light Armor Type -->
-			<skill id="4416" level="6" /> <!-- Humanoids -->
-			<skill id="4045" level="1" /> <!-- Full Magic Attack Resistance -->
+			<skill id="4416" level="6" /> <!-- Humanoid -->
+			<skill id="5467" level="1" /> <!-- Dark Attack -->
 		</skillList>
 		<collision>
 			<radius normal="15" />
@@ -5541,13 +5547,14 @@
 			<height normal="78" />
 		</collision>
 		<skillList>
-			<skill id="4416" level="6" /> <!-- Humanoids -->
-			<skill id="5465" level="1" /> <!-- Earth Attack -->
+			<skill id="4045" level="1" /> <!-- Full Magic Attack Resistance -->
 			<skill id="4410" level="16" /> <!-- Very Strong P. Atk. -->
 			<skill id="4414" level="1" /> <!-- Heavy Armor Type -->
+			<skill id="4416" level="6" /> <!-- Humanoid -->
 			<skill id="4494" level="1" /> <!-- Raid Boss -->
+			<skill id="5465" level="1" /> <!-- Earth Attack -->
+			<skill id="14765" level="4" /> <!-- Blood Siphon Resistance -->
 			<skill id="16261" level="1" /> <!-- Raid Boss (Lv. 93) -->
-			<skill id="14804" level="10" /> <!-- Damage Reflection Attack Resistance -->
 		</skillList>
 		<dropLists>
 			<drop>
@@ -5644,12 +5651,13 @@
 			<height normal="60" />
 		</collision>
 		<skillList>
-			<skill id="4416" level="6" /> <!-- Humanoids -->
-			<skill id="5467" level="1" /> <!-- Dark Attack -->
+			<skill id="4045" level="1" /> <!-- Full Magic Attack Resistance -->
 			<skill id="4414" level="1" /> <!-- Heavy Armor Type -->
+			<skill id="4416" level="6" /> <!-- Humanoid -->
 			<skill id="4494" level="1" /> <!-- Raid Boss -->
+			<skill id="5467" level="1" /> <!-- Dark Attack -->
+			<skill id="14765" level="4" /> <!-- Blood Siphon Resistance -->
 			<skill id="16262" level="1" /> <!-- Raid Boss (Lv. 93) -->
-			<skill id="14804" level="10" /> <!-- Damage Reflection Attack Resistance -->
 		</skillList>
 		<dropLists>
 			<drop>
@@ -5750,12 +5758,13 @@
 			<height normal="60" />
 		</collision>
 		<skillList>
-			<skill id="4416" level="6" /> <!-- Humanoids -->
-			<skill id="5467" level="1" /> <!-- Dark Attack -->
+			<skill id="4045" level="1" /> <!-- Full Magic Attack Resistance -->
 			<skill id="4414" level="1" /> <!-- Heavy Armor Type -->
+			<skill id="4416" level="6" /> <!-- Humanoid -->
 			<skill id="4494" level="1" /> <!-- Raid Boss -->
+			<skill id="5467" level="1" /> <!-- Dark Attack -->
+			<skill id="14765" level="4" /> <!-- Blood Siphon Resistance -->
 			<skill id="16263" level="1" /> <!-- Raid Boss (Lv. 93) -->
-			<skill id="14804" level="10" /> <!-- Damage Reflection Attack Resistance -->
 		</skillList>
 		<dropLists>
 			<drop>
@@ -5857,12 +5866,13 @@
 			<height normal="42" />
 		</collision>
 		<skillList>
-			<skill id="4416" level="16" /> <!-- Dark Elves -->
-			<skill id="5467" level="1" /> <!-- Dark Attack -->
+			<skill id="4045" level="1" /> <!-- Full Magic Attack Resistance -->
 			<skill id="4414" level="1" /> <!-- Heavy Armor Type -->
+			<skill id="4416" level="16" /> <!-- Dark Elves -->
 			<skill id="4494" level="1" /> <!-- Raid Boss -->
+			<skill id="5467" level="1" /> <!-- Dark Attack -->
+			<skill id="14765" level="4" /> <!-- Blood Siphon Resistance -->
 			<skill id="16264" level="1" /> <!-- Raid Boss (Lv. 93) -->
-			<skill id="14804" level="10" /> <!-- Damage Reflection Attack Resistance -->
 		</skillList>
 		<dropLists>
 			<drop>
@@ -5963,12 +5973,13 @@
 			<height normal="44" />
 		</collision>
 		<skillList>
-			<skill id="4416" level="6" /> <!-- Humanoids -->
-			<skill id="5467" level="1" /> <!-- Dark Attack -->
+			<skill id="4045" level="1" /> <!-- Full Magic Attack Resistance -->
 			<skill id="4414" level="1" /> <!-- Heavy Armor Type -->
+			<skill id="4416" level="6" /> <!-- Humanoid -->
 			<skill id="4494" level="1" /> <!-- Raid Boss -->
+			<skill id="5467" level="1" /> <!-- Dark Attack -->
+			<skill id="14765" level="4" /> <!-- Blood Siphon Resistance -->
 			<skill id="16265" level="1" /> <!-- Raid Boss (Lv. 93) -->
-			<skill id="14804" level="10" /> <!-- Damage Reflection Attack Resistance -->
 		</skillList>
 		<dropLists>
 			<drop>
@@ -6069,13 +6080,14 @@
 			<height normal="48" />
 		</collision>
 		<skillList>
-			<skill id="4416" level="6" /> <!-- Humanoids -->
-			<skill id="5467" level="1" /> <!-- Dark Attack -->
+			<skill id="4045" level="1" /> <!-- Full Magic Attack Resistance -->
 			<skill id="4410" level="15" /> <!-- Strong P. Atk. -->
 			<skill id="4414" level="1" /> <!-- Heavy Armor Type -->
+			<skill id="4416" level="6" /> <!-- Humanoid -->
 			<skill id="4494" level="1" /> <!-- Raid Boss -->
+			<skill id="5467" level="1" /> <!-- Dark Attack -->
+			<skill id="14765" level="4" /> <!-- Blood Siphon Resistance -->
 			<skill id="16266" level="1" /> <!-- Raid Boss (Lv. 93) -->
-			<skill id="14804" level="10" /> <!-- Damage Reflection Attack Resistance -->
 		</skillList>
 		<dropLists>
 			<drop>
@@ -6281,10 +6293,9 @@
 		</stats>
 		<status attackable="false" />
 		<skillList>
-			<skill id="5467" level="1" /> <!-- Strong against the dark elemental. -->
 			<skill id="4414" level="3" /> <!-- Light Armor Type -->
 			<skill id="4416" level="14" /> <!-- Humans -->
-			<skill id="4045" level="1" /> <!-- Full Magic Attack Resistance -->
+			<skill id="5467" level="1" /> <!-- Dark Attack -->
 		</skillList>
 		<collision>
 			<radius normal="15" />

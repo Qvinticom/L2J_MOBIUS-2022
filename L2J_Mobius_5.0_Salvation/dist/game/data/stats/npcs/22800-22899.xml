@@ -25,21 +25,19 @@
 		</stats>
 		<status undying="false" canBeSown="true" />
 		<skillList>
-			<skill id="4285" level="4" /> <!-- Resist Sleep Attacks -->
-			<skill id="4287" level="4" /> <!-- Resist Hold Attacks -->
+			<skill id="4285" level="4" /> <!-- Sleep Resistance -->
+			<skill id="4287" level="4" /> <!-- Hold Resistance -->
 			<skill id="4408" level="10" /> <!-- HP Increase (2x) -->
-			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
 			<skill id="4410" level="16" /> <!-- Very Strong P. Atk. -->
 			<skill id="4411" level="17" /> <!-- Very Strong M. Atk. -->
 			<skill id="4412" level="16" /> <!-- Very Strong P. Def. -->
 			<skill id="4413" level="3" /> <!-- Extremely Weak M. Def. -->
-			<skill id="4414" level="2" /> <!-- Standard Type -->
 			<skill id="4415" level="3" /> <!-- One-handed Sword -->
 			<skill id="4416" level="8" /> <!-- Angels -->
-			<skill id="4441" level="5" /> <!-- Greater Resist Mental Derangement -->
+			<skill id="4441" level="5" /> <!-- Greater Mental Attack Resistance -->
 			<skill id="5466" level="1" /> <!-- Holy Attacks -->
-			<skill id="5601" level="3" /> <!-- Short-Range Physical Attack Resistance -->
-			<skill id="6320" level="1" /> <!-- Summon Sacred Magic Force -->
+			<skill id="5601" level="3" /> <!-- Melee Attack Resistance -->
+			<skill id="6320" level="1" /> <!-- Summon Holy Magic Circle -->
 			<skill id="6321" level="1" /> <!-- Divine Flash -->
 			<skill id="6322" level="1" /> <!-- Divine Impact -->
 		</skillList>
@@ -101,18 +99,14 @@
 		</stats>
 		<status undying="false" canBeSown="true" />
 		<skillList>
-			<skill id="4276" level="2" /> <!-- Weak Point against Bow/Crossbow Weapons -->
-			<skill id="4408" level="1" /> <!-- HP Increase (1x) -->
-			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
+			<skill id="4276" level="2" /> <!-- Bow/Crossbow Vulnerability -->
 			<skill id="4410" level="15" /> <!-- Strong P. Atk. -->
 			<skill id="4411" level="14" /> <!-- Strong M. Atk. -->
-			<skill id="4412" level="11" /> <!-- Average P. Def. -->
 			<skill id="4413" level="8" /> <!-- Weak M. Def. -->
-			<skill id="4414" level="2" /> <!-- Standard Type -->
 			<skill id="4415" level="3" /> <!-- One-handed Sword -->
 			<skill id="4416" level="2" /> <!-- Magic Creatures -->
-			<skill id="6598" level="9" /> <!-- NPC earth attack -->
 			<skill id="6597" level="1" /> <!-- Earth Attack -->
+			<skill id="6598" level="9" /> <!-- Earth Attack -->
 		</skillList>
 		<exCrtEffect>false</exCrtEffect>
 		<ai clanHelpRange="300" aggroRange="300" />
@@ -169,17 +163,13 @@
 		</stats>
 		<status undying="false" canBeSown="true" />
 		<skillList>
-			<skill id="4276" level="2" /> <!-- Weak Point against Bow/Crossbow Weapons -->
-			<skill id="4408" level="1" /> <!-- HP Increase (1x) -->
-			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
+			<skill id="4276" level="2" /> <!-- Bow/Crossbow Vulnerability -->
 			<skill id="4410" level="15" /> <!-- Strong P. Atk. -->
 			<skill id="4411" level="14" /> <!-- Strong M. Atk. -->
-			<skill id="4412" level="11" /> <!-- Average P. Def. -->
 			<skill id="4413" level="8" /> <!-- Weak M. Def. -->
-			<skill id="4414" level="2" /> <!-- Standard Type -->
 			<skill id="4415" level="3" /> <!-- One-handed Sword -->
 			<skill id="4416" level="2" /> <!-- Magic Creatures -->
-			<skill id="6599" level="9" /> <!-- NPC earth attack -->
+			<skill id="6599" level="9" /> <!-- Earth Attack -->
 		</skillList>
 		<exCrtEffect>false</exCrtEffect>
 		<ai clanHelpRange="300" aggroRange="300" />
@@ -233,18 +223,14 @@
 		</stats>
 		<status undying="false" canBeSown="true" />
 		<skillList>
-			<skill id="4156" level="7" /> <!-- NPC Curve Beam Cannon - Magic -->
-			<skill id="4276" level="4" /> <!-- Weak Point against Bow/Crossbow Weapons -->
-			<skill id="4408" level="1" /> <!-- HP Increase (1x) -->
-			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
+			<skill id="4156" level="7" /> <!-- Beam Cannon -->
+			<skill id="4276" level="4" /> <!-- Bow/Crossbow Vulnerability -->
 			<skill id="4410" level="13" /> <!-- Slightly Strong P. Atk. -->
 			<skill id="4411" level="15" /> <!-- Strong M. Atk. -->
-			<skill id="4412" level="11" /> <!-- Average P. Def. -->
 			<skill id="4413" level="9" /> <!-- Slightly Weak M. Def. -->
-			<skill id="4414" level="2" /> <!-- Standard Type -->
 			<skill id="4415" level="3" /> <!-- One-handed Sword -->
 			<skill id="4416" level="2" /> <!-- Magic Creatures -->
-			<skill id="6610" level="9" /> <!-- NPC earth magic -->
+			<skill id="6610" level="9" /> <!-- Earth Magic -->
 		</skillList>
 		<exCrtEffect>false</exCrtEffect>
 		<ai clanHelpRange="300" aggroRange="300" />
@@ -298,18 +284,16 @@
 		</stats>
 		<status undying="false" canBeSown="true" />
 		<skillList>
-			<skill id="4156" level="7" /> <!-- NPC Curve Beam Cannon - Magic -->
-			<skill id="4276" level="4" /> <!-- Weak Point against Bow/Crossbow Weapons -->
+			<skill id="4156" level="7" /> <!-- Beam Cannon -->
+			<skill id="4276" level="4" /> <!-- Bow/Crossbow Vulnerability -->
 			<skill id="4408" level="10" /> <!-- HP Increase (2x) -->
-			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
 			<skill id="4410" level="15" /> <!-- Strong P. Atk. -->
 			<skill id="4411" level="16" /> <!-- Very Strong M. Atk. -->
 			<skill id="4412" level="13" /> <!-- Slightly Strong P. Def. -->
 			<skill id="4413" level="14" /> <!-- Strong M. Def. -->
-			<skill id="4414" level="2" /> <!-- Standard Type -->
 			<skill id="4415" level="3" /> <!-- One-handed Sword -->
 			<skill id="4416" level="2" /> <!-- Magic Creatures -->
-			<skill id="6599" level="9" /> <!-- NPC earth attack -->
+			<skill id="6599" level="9" /> <!-- Earth Attack -->
 		</skillList>
 		<exCrtEffect>false</exCrtEffect>
 		<sNpcPropHpRate>2</sNpcPropHpRate>
@@ -359,18 +343,16 @@
 		</stats>
 		<status undying="false" canBeSown="true" />
 		<skillList>
-			<skill id="4156" level="7" /> <!-- NPC Curve Beam Cannon - Magic -->
-			<skill id="4276" level="4" /> <!-- Weak Point against Bow/Crossbow Weapons -->
+			<skill id="4156" level="7" /> <!-- Beam Cannon -->
+			<skill id="4276" level="4" /> <!-- Bow/Crossbow Vulnerability -->
 			<skill id="4408" level="10" /> <!-- HP Increase (2x) -->
-			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
 			<skill id="4410" level="14" /> <!-- Strong P. Atk. -->
 			<skill id="4411" level="15" /> <!-- Strong M. Atk. -->
 			<skill id="4412" level="9" /> <!-- Slightly Weak P. Def. -->
 			<skill id="4413" level="8" /> <!-- Weak M. Def. -->
-			<skill id="4414" level="2" /> <!-- Standard Type -->
 			<skill id="4415" level="3" /> <!-- One-handed Sword -->
 			<skill id="4416" level="2" /> <!-- Magic Creatures -->
-			<skill id="6599" level="9" /> <!-- NPC earth attack -->
+			<skill id="6599" level="9" /> <!-- Earth Attack -->
 		</skillList>
 		<exCrtEffect>false</exCrtEffect>
 		<sNpcPropHpRate>2</sNpcPropHpRate>
@@ -418,14 +400,12 @@
 		</stats>
 		<status undying="false" canBeSown="true" />
 		<skillList>
-			<skill id="4276" level="4" /> <!-- Weak Point against Bow/Crossbow Weapons -->
+			<skill id="4276" level="4" /> <!-- Bow/Crossbow Vulnerability -->
 			<skill id="4408" level="11" /> <!-- HP Increase (3x) -->
-			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
 			<skill id="4410" level="16" /> <!-- Very Strong P. Atk. -->
 			<skill id="4411" level="17" /> <!-- Very Strong M. Atk. -->
 			<skill id="4412" level="13" /> <!-- Slightly Strong P. Def. -->
 			<skill id="4413" level="14" /> <!-- Strong M. Def. -->
-			<skill id="4414" level="2" /> <!-- Standard Type -->
 			<skill id="4415" level="3" /> <!-- One-handed Sword -->
 			<skill id="4416" level="2" /> <!-- Magic Creatures -->
 			<skill id="6262" level="1" /> <!-- EMP Power -->
@@ -475,14 +455,12 @@
 		</stats>
 		<status undying="false" canBeSown="true" />
 		<skillList>
-			<skill id="4276" level="4" /> <!-- Weak Point against Bow/Crossbow Weapons -->
+			<skill id="4276" level="4" /> <!-- Bow/Crossbow Vulnerability -->
 			<skill id="4408" level="10" /> <!-- HP Increase (2x) -->
-			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
 			<skill id="4410" level="14" /> <!-- Strong P. Atk. -->
 			<skill id="4411" level="16" /> <!-- Very Strong M. Atk. -->
 			<skill id="4412" level="8" /> <!-- Weak P. Def. -->
 			<skill id="4413" level="7" /> <!-- Weak M. Def. -->
-			<skill id="4414" level="2" /> <!-- Standard Type -->
 			<skill id="4415" level="3" /> <!-- One-handed Sword -->
 			<skill id="4416" level="2" /> <!-- Magic Creatures -->
 			<skill id="6264" level="1" /> <!-- Golem Boom -->
@@ -538,18 +516,13 @@
 		</stats>
 		<status undying="false" canBeSown="true" />
 		<skillList>
-			<skill id="4408" level="1" /> <!-- HP Increase (1x) -->
-			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
-			<skill id="4410" level="11" /> <!-- Average P. Atk. -->
 			<skill id="4411" level="13" /> <!-- Slightly Strong M. Atk. -->
 			<skill id="4412" level="16" /> <!-- Very Strong P. Def. -->
 			<skill id="4413" level="8" /> <!-- Weak M. Def. -->
-			<skill id="4414" level="2" /> <!-- Standard Type -->
 			<skill id="4415" level="3" /> <!-- One-handed Sword -->
 			<skill id="4416" level="9" /> <!-- Demons -->
-			<skill id="5467" level="1" /> <!-- Dark Attacks -->
+			<skill id="5467" level="1" /> <!-- Dark Attack -->
 			<skill id="6748" level="1" /> <!-- Stun Attack -->
-			<skill id="6750" level="1" /> <!-- Power Strike -->
 		</skillList>
 		<exCrtEffect>false</exCrtEffect>
 		<ai type="BALANCED" aggroRange="300" clanHelpRange="300" isAggressive="true">
@@ -607,18 +580,14 @@
 		</stats>
 		<status undying="false" canBeSown="true" />
 		<skillList>
-			<skill id="4408" level="1" /> <!-- HP Increase (1x) -->
-			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
 			<skill id="4410" level="12" /> <!-- Slightly Strong P. Atk. -->
 			<skill id="4411" level="13" /> <!-- Slightly Strong M. Atk. -->
 			<skill id="4412" level="14" /> <!-- Strong P. Def. -->
 			<skill id="4413" level="4" /> <!-- Extremely Weak M. Def. -->
-			<skill id="4414" level="2" /> <!-- Standard Type -->
 			<skill id="4415" level="13" /> <!-- Two-handed Sword -->
 			<skill id="4416" level="9" /> <!-- Demons -->
-			<skill id="5467" level="1" /> <!-- Dark Attacks -->
-			<skill id="6752" level="1" /> <!-- Revival -->
-			<skill id="6755" level="1" /> <!-- Death Strike -->
+			<skill id="5467" level="1" /> <!-- Dark Attack -->
+			<skill id="6755" level="1" /> <!-- Devil Strike -->
 		</skillList>
 		<exCrtEffect>false</exCrtEffect>
 		<ai type="BALANCED" aggroRange="300" clanHelpRange="300" isAggressive="true">
@@ -675,19 +644,16 @@
 		</stats>
 		<status undying="false" canBeSown="true" />
 		<skillList>
-			<skill id="4276" level="2" /> <!-- Weak Point against Bow/Crossbow Weapons -->
+			<skill id="4276" level="2" /> <!-- Bow/Crossbow Vulnerability -->
 			<skill id="4408" level="9" /> <!-- HP Increase (1/2x) -->
-			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
 			<skill id="4410" level="13" /> <!-- Slightly Strong P. Atk. -->
 			<skill id="4411" level="14" /> <!-- Strong M. Atk. -->
 			<skill id="4412" level="12" /> <!-- Slightly Strong P. Def. -->
 			<skill id="4413" level="4" /> <!-- Extremely Weak M. Def. -->
-			<skill id="4414" level="2" /> <!-- Standard Type -->
 			<skill id="4415" level="3" /> <!-- One-handed Sword -->
 			<skill id="4416" level="9" /> <!-- Demons -->
-			<skill id="5467" level="1" /> <!-- Dark Attacks -->
+			<skill id="5467" level="1" /> <!-- Dark Attack -->
 			<skill id="6753" level="1" /> <!-- Death Blow -->
-			<skill id="6754" level="1" /> <!-- Bleed -->
 		</skillList>
 		<exCrtEffect>false</exCrtEffect>
 		<sNpcPropHpRate>0.5</sNpcPropHpRate>
@@ -746,17 +712,13 @@
 		<status undying="false" canBeSown="true" />
 		<skillList>
 			<skill id="4408" level="10" /> <!-- HP Increase (2x) -->
-			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
 			<skill id="4410" level="13" /> <!-- Slightly Strong P. Atk. -->
 			<skill id="4411" level="16" /> <!-- Very Strong M. Atk. -->
-			<skill id="4412" level="11" /> <!-- Average P. Def. -->
 			<skill id="4413" level="6" /> <!-- Very Weak M. Def. -->
-			<skill id="4414" level="2" /> <!-- Standard Type -->
 			<skill id="4415" level="3" /> <!-- One-handed Sword -->
 			<skill id="4416" level="9" /> <!-- Demons -->
-			<skill id="5467" level="1" /> <!-- Dark Attacks -->
-			<skill id="6749" level="1" /> <!-- Death Strike -->
-			<skill id="6756" level="1" /> <!-- Death Talon -->
+			<skill id="5467" level="1" /> <!-- Dark Attack -->
+			<skill id="6749" level="1" /> <!-- Devil Strike -->
 		</skillList>
 		<exCrtEffect>false</exCrtEffect>
 		<sNpcPropHpRate>2</sNpcPropHpRate>
@@ -816,19 +778,14 @@
 		</stats>
 		<status undying="false" canBeSown="true" />
 		<skillList>
-			<skill id="4032" level="1" /> <!-- NPC Strike -->
 			<skill id="4408" level="10" /> <!-- HP Increase (2x) -->
-			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
 			<skill id="4410" level="13" /> <!-- Slightly Strong P. Atk. -->
 			<skill id="4411" level="16" /> <!-- Very Strong M. Atk. -->
-			<skill id="4412" level="11" /> <!-- Average P. Def. -->
 			<skill id="4413" level="6" /> <!-- Very Weak M. Def. -->
-			<skill id="4414" level="2" /> <!-- Standard Type -->
 			<skill id="4415" level="3" /> <!-- One-handed Sword -->
 			<skill id="4416" level="1" /> <!-- Undead -->
-			<skill id="5467" level="1" /> <!-- Dark Attacks -->
-			<skill id="6757" level="1" /> <!-- Slow -->
-			<skill id="6758" level="1" /> <!-- Rage -->
+			<skill id="5467" level="1" /> <!-- Dark Attack -->
+			<skill id="6757" level="1" /> <!-- Decrease Speed -->
 		</skillList>
 		<exCrtEffect>false</exCrtEffect>
 		<sNpcPropHpRate>2</sNpcPropHpRate>
@@ -888,17 +845,14 @@
 		</stats>
 		<status undying="false" canBeSown="true" />
 		<skillList>
-			<skill id="4276" level="2" /> <!-- Weak Point against Bow/Crossbow Weapons -->
+			<skill id="4276" level="2" /> <!-- Bow/Crossbow Vulnerability -->
 			<skill id="4408" level="9" /> <!-- HP Increase (1/2x) -->
-			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
-			<skill id="4410" level="11" /> <!-- Average P. Atk. -->
 			<skill id="4411" level="14" /> <!-- Strong M. Atk. -->
 			<skill id="4412" level="12" /> <!-- Slightly Strong P. Def. -->
 			<skill id="4413" level="4" /> <!-- Extremely Weak M. Def. -->
-			<skill id="4414" level="2" /> <!-- Standard Type -->
-			<skill id="4415" level="9" /> <!-- Bows -->
+			<skill id="4415" level="9" /> <!-- Bow -->
 			<skill id="4416" level="1" /> <!-- Undead -->
-			<skill id="5467" level="1" /> <!-- Dark Attacks -->
+			<skill id="5467" level="1" /> <!-- Dark Attack -->
 			<skill id="6759" level="1" /> <!-- Death Shot -->
 		</skillList>
 		<exCrtEffect>true</exCrtEffect>
@@ -959,16 +913,13 @@
 		<status undying="false" canBeSown="true" />
 		<skillList>
 			<skill id="4408" level="11" /> <!-- HP Increase (3x) -->
-			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
 			<skill id="4410" level="13" /> <!-- Slightly Strong P. Atk. -->
 			<skill id="4411" level="16" /> <!-- Very Strong M. Atk. -->
 			<skill id="4412" level="15" /> <!-- Strong P. Def. -->
 			<skill id="4413" level="4" /> <!-- Extremely Weak M. Def. -->
-			<skill id="4414" level="2" /> <!-- Standard Type -->
 			<skill id="4415" level="3" /> <!-- One-handed Sword -->
 			<skill id="4416" level="10" /> <!-- Dragons -->
-			<skill id="5465" level="1" /> <!-- Earth Attacks -->
-			<skill id="6761" level="1" /> <!-- Dragon Blow Strike -->
+			<skill id="5465" level="1" /> <!-- Earth Attack -->
 			<skill id="6763" level="1" /> <!-- Dragon Earth Strike -->
 		</skillList>
 		<exCrtEffect>false</exCrtEffect>
@@ -1035,16 +986,13 @@
 		<status undying="false" canBeSown="true" />
 		<skillList>
 			<skill id="4408" level="11" /> <!-- HP Increase (3x) -->
-			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
 			<skill id="4410" level="13" /> <!-- Slightly Strong P. Atk. -->
 			<skill id="4411" level="16" /> <!-- Very Strong M. Atk. -->
 			<skill id="4412" level="15" /> <!-- Strong P. Def. -->
 			<skill id="4413" level="4" /> <!-- Extremely Weak M. Def. -->
-			<skill id="4414" level="2" /> <!-- Standard Type -->
 			<skill id="4415" level="3" /> <!-- One-handed Sword -->
 			<skill id="4416" level="10" /> <!-- Dragons -->
-			<skill id="5465" level="1" /> <!-- Earth Attacks -->
-			<skill id="6761" level="1" /> <!-- Dragon Blow Strike -->
+			<skill id="5465" level="1" /> <!-- Earth Attack -->
 			<skill id="6763" level="1" /> <!-- Dragon Earth Strike -->
 		</skillList>
 		<exCrtEffect>false</exCrtEffect>
@@ -1109,16 +1057,13 @@
 		<status undying="false" canBeSown="true" />
 		<skillList>
 			<skill id="4408" level="12" /> <!-- HP Increase (4x) -->
-			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
 			<skill id="4410" level="13" /> <!-- Slightly Strong P. Atk. -->
 			<skill id="4411" level="16" /> <!-- Very Strong M. Atk. -->
 			<skill id="4412" level="15" /> <!-- Strong P. Def. -->
 			<skill id="4413" level="4" /> <!-- Extremely Weak M. Def. -->
-			<skill id="4414" level="2" /> <!-- Standard Type -->
 			<skill id="4415" level="3" /> <!-- One-handed Sword -->
 			<skill id="4416" level="10" /> <!-- Dragons -->
-			<skill id="5465" level="1" /> <!-- Earth Attacks -->
-			<skill id="6761" level="1" /> <!-- Dragon Blow Strike -->
+			<skill id="5465" level="1" /> <!-- Earth Attack -->
 			<skill id="6763" level="1" /> <!-- Dragon Earth Strike -->
 		</skillList>
 		<exCrtEffect>false</exCrtEffect>
@@ -1179,18 +1124,12 @@
 		</stats>
 		<status undying="false" canBeSown="true" />
 		<skillList>
-			<skill id="4408" level="1" /> <!-- HP Increase (1x) -->
-			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
-			<skill id="4410" level="11" /> <!-- Average P. Atk. -->
-			<skill id="4411" level="11" /> <!-- Average M. Atk. -->
 			<skill id="4412" level="9" /> <!-- Slightly Weak P. Def. -->
 			<skill id="4413" level="4" /> <!-- Extremely Weak M. Def. -->
-			<skill id="4414" level="2" /> <!-- Standard Type -->
-			<skill id="4415" level="11" /> <!-- Spears -->
+			<skill id="4415" level="11" /> <!-- Spear -->
 			<skill id="4416" level="10" /> <!-- Dragons -->
-			<skill id="5465" level="1" /> <!-- Earth Attacks -->
+			<skill id="5465" level="1" /> <!-- Earth Attack -->
 			<skill id="6760" level="1" /> <!-- Dragon Strike -->
-			<skill id="6762" level="1" /> <!-- Rage -->
 		</skillList>
 		<exCrtEffect>false</exCrtEffect>
 		<ai type="BALANCED" aggroRange="300" clanHelpRange="300" isAggressive="true">
@@ -1250,21 +1189,13 @@
 		</stats>
 		<status undying="false" noSleepMode="true" canBeSown="true" />
 		<skillList>
-			<skill id="4032" level="1" /> <!-- NPC Strike -->
-			<skill id="4408" level="1" /> <!-- HP Increase (1x) -->
-			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
 			<skill id="4410" level="13" /> <!-- Slightly Strong P. Atk. -->
-			<skill id="4411" level="11" /> <!-- Average M. Atk. -->
 			<skill id="4412" level="15" /> <!-- Strong P. Def. -->
 			<skill id="4413" level="4" /> <!-- Extremely Weak M. Def. -->
-			<skill id="4414" level="2" /> <!-- Standard Type -->
 			<skill id="4415" level="3" /> <!-- One-handed Sword -->
 			<skill id="4416" level="10" /> <!-- Dragons -->
-			<skill id="5465" level="1" /> <!-- Earth Attacks -->
-			<skill id="6758" level="1" /> <!-- Rage -->
+			<skill id="5465" level="1" /> <!-- Earth Attack -->
 			<skill id="6763" level="1" /> <!-- Dragon Earth Strike -->
-			<skill id="6818" level="1" /> <!-- Powerful Rage -->
-			<skill id="6820" level="1" /> <!-- P. Def. Enhance -->
 		</skillList>
 		<exCrtEffect>false</exCrtEffect>
 		<ai type="BALANCED" aggroRange="300" clanHelpRange="300" isAggressive="true">
@@ -1322,16 +1253,13 @@
 		<status undying="false" noSleepMode="true" canBeSown="true" />
 		<skillList>
 			<skill id="4408" level="10" /> <!-- HP Increase (2x) -->
-			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
 			<skill id="4410" level="15" /> <!-- Strong P. Atk. -->
-			<skill id="4411" level="11" /> <!-- Average M. Atk. -->
 			<skill id="4412" level="16" /> <!-- Very Strong P. Def. -->
 			<skill id="4413" level="4" /> <!-- Extremely Weak M. Def. -->
-			<skill id="4414" level="2" /> <!-- Standard Type -->
 			<skill id="4415" level="3" /> <!-- One-handed Sword -->
 			<skill id="4416" level="10" /> <!-- Dragons -->
-			<skill id="5465" level="1" /> <!-- Earth Attacks -->
-			<skill id="5620" level="2" /> <!-- Short-Range Physical Attack Weakness -->
+			<skill id="5465" level="1" /> <!-- Earth Attack -->
+			<skill id="5620" level="2" /> <!-- Melee Attack Vulnerability -->
 			<skill id="6760" level="1" /> <!-- Dragon Strike -->
 		</skillList>
 		<exCrtEffect>false</exCrtEffect>
@@ -1392,16 +1320,12 @@
 		<status undying="false" noSleepMode="true" canBeSown="true" />
 		<skillList>
 			<skill id="4408" level="9" /> <!-- HP Increase (1/2x) -->
-			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
 			<skill id="4410" level="14" /> <!-- Strong P. Atk. -->
-			<skill id="4411" level="11" /> <!-- Average M. Atk. -->
 			<skill id="4412" level="14" /> <!-- Strong P. Def. -->
 			<skill id="4413" level="4" /> <!-- Extremely Weak M. Def. -->
-			<skill id="4414" level="2" /> <!-- Standard Type -->
-			<skill id="4415" level="9" /> <!-- Bows -->
+			<skill id="4415" level="9" /> <!-- Bow -->
 			<skill id="4416" level="10" /> <!-- Dragons -->
-			<skill id="5465" level="1" /> <!-- Earth Attacks -->
-			<skill id="6761" level="1" /> <!-- Dragon Blow Strike -->
+			<skill id="5465" level="1" /> <!-- Earth Attack -->
 			<skill id="6764" level="1" /> <!-- Dragon Earth Shot -->
 		</skillList>
 		<exCrtEffect>false</exCrtEffect>
@@ -1462,18 +1386,13 @@
 		</stats>
 		<status undying="false" noSleepMode="true" canBeSown="true" />
 		<skillList>
-			<skill id="4276" level="2" /> <!-- Weak Point against Bow/Crossbow Weapons -->
-			<skill id="4408" level="1" /> <!-- HP Increase (1x) -->
-			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
+			<skill id="4276" level="2" /> <!-- Bow/Crossbow Vulnerability -->
 			<skill id="4410" level="12" /> <!-- Slightly Strong P. Atk. -->
-			<skill id="4411" level="11" /> <!-- Average M. Atk. -->
 			<skill id="4412" level="13" /> <!-- Slightly Strong P. Def. -->
 			<skill id="4413" level="6" /> <!-- Very Weak M. Def. -->
-			<skill id="4414" level="2" /> <!-- Standard Type -->
 			<skill id="4415" level="3" /> <!-- One-handed Sword -->
 			<skill id="4416" level="10" /> <!-- Dragons -->
-			<skill id="5465" level="1" /> <!-- Earth Attacks -->
-			<skill id="6765" level="1" /> <!-- Complete Recovery -->
+			<skill id="5465" level="1" /> <!-- Earth Attack -->
 			<skill id="6766" level="1" /> <!-- Earth Tremor -->
 		</skillList>
 		<exCrtEffect>false</exCrtEffect>
@@ -1532,15 +1451,13 @@
 		<status undying="false" canBeSown="true" />
 		<skillList>
 			<skill id="4408" level="10" /> <!-- HP Increase (2x) -->
-			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
 			<skill id="4410" level="16" /> <!-- Very Strong P. Atk. -->
 			<skill id="4411" level="15" /> <!-- Strong M. Atk. -->
 			<skill id="4412" level="16" /> <!-- Very Strong P. Def. -->
 			<skill id="4413" level="5" /> <!-- Very Weak M. Def. -->
-			<skill id="4414" level="2" /> <!-- Standard Type -->
-			<skill id="4415" level="11" /> <!-- Spears -->
+			<skill id="4415" level="11" /> <!-- Spear -->
 			<skill id="4416" level="10" /> <!-- Dragons -->
-			<skill id="5465" level="1" /> <!-- Earth Attacks -->
+			<skill id="5465" level="1" /> <!-- Earth Attack -->
 			<skill id="6768" level="1" /> <!-- Stun Attack -->
 		</skillList>
 		<exCrtEffect>false</exCrtEffect>
@@ -1602,18 +1519,13 @@
 		</stats>
 		<status undying="false" canBeSown="true" />
 		<skillList>
-			<skill id="4408" level="1" /> <!-- HP Increase (1x) -->
-			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
 			<skill id="4410" level="15" /> <!-- Strong P. Atk. -->
 			<skill id="4411" level="13" /> <!-- Slightly Strong M. Atk. -->
-			<skill id="4412" level="11" /> <!-- Average P. Def. -->
 			<skill id="4413" level="8" /> <!-- Weak M. Def. -->
-			<skill id="4414" level="2" /> <!-- Standard Type -->
 			<skill id="4415" level="3" /> <!-- One-handed Sword -->
 			<skill id="4416" level="10" /> <!-- Dragons -->
-			<skill id="5465" level="1" /> <!-- Earth Attacks -->
+			<skill id="5465" level="1" /> <!-- Earth Attack -->
 			<skill id="6769" level="1" /> <!-- Petrify -->
-			<skill id="6770" level="1" /> <!-- Heal -->
 		</skillList>
 		<exCrtEffect>false</exCrtEffect>
 		<ai type="BALANCED" aggroRange="300" clanHelpRange="300" isAggressive="true">
@@ -1672,21 +1584,17 @@
 		</stats>
 		<status undying="false" canBeSown="true" />
 		<skillList>
-			<skill id="4045" level="1" /> <!-- Resist Full Magic Attack -->
+			<skill id="4045" level="1" /> <!-- Full Magic Attack Resistance -->
 			<skill id="4408" level="9" /> <!-- HP Increase (1/2x) -->
-			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
 			<skill id="4410" level="19" /> <!-- Extremely Strong P. Atk. -->
 			<skill id="4411" level="19" /> <!-- Extremely Strong M. Atk. -->
 			<skill id="4412" level="19" /> <!-- Extremely Strong P. Def. -->
 			<skill id="4413" level="5" /> <!-- Very Weak M. Def. -->
-			<skill id="4414" level="2" /> <!-- Standard Type -->
 			<skill id="4415" level="1" /> <!-- Bare Hands -->
 			<skill id="4416" level="9" /> <!-- Demons -->
-			<skill id="5467" level="1" /> <!-- Dark Attacks -->
-			<skill id="5598" level="12" /> <!-- Flash Resistance -->
-			<skill id="6771" level="1" /> <!-- Death Strike -->
-			<skill id="6772" level="1" /> <!-- Power Strike -->
-			<skill id="6773" level="1" /> <!-- Rage -->
+			<skill id="5467" level="1" /> <!-- Dark Attack -->
+			<skill id="5598" level="12" /> <!-- Petrifaction Attack Resistance -->
+			<skill id="6771" level="1" /> <!-- Devil Strike -->
 		</skillList>
 		<exCrtEffect>true</exCrtEffect>
 		<sNpcPropHpRate>0.5</sNpcPropHpRate>
@@ -1743,20 +1651,17 @@
 		</stats>
 		<status undying="false" canBeSown="true" />
 		<skillList>
-			<skill id="4045" level="1" /> <!-- Resist Full Magic Attack -->
+			<skill id="4045" level="1" /> <!-- Full Magic Attack Resistance -->
 			<skill id="4408" level="8" /> <!-- HP Increase (1/4x) -->
-			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
 			<skill id="4410" level="19" /> <!-- Extremely Strong P. Atk. -->
 			<skill id="4411" level="19" /> <!-- Extremely Strong M. Atk. -->
 			<skill id="4412" level="19" /> <!-- Extremely Strong P. Def. -->
 			<skill id="4413" level="5" /> <!-- Very Weak M. Def. -->
-			<skill id="4414" level="2" /> <!-- Standard Type -->
 			<skill id="4415" level="3" /> <!-- One-handed Sword -->
 			<skill id="4416" level="9" /> <!-- Demons -->
-			<skill id="5467" level="1" /> <!-- Dark Attacks -->
-			<skill id="5598" level="12" /> <!-- Flash Resistance -->
+			<skill id="5467" level="1" /> <!-- Dark Attack -->
+			<skill id="5598" level="12" /> <!-- Petrifaction Attack Resistance -->
 			<skill id="6774" level="1" /> <!-- Stun Attack -->
-			<skill id="6775" level="1" /> <!-- Soul Breath -->
 		</skillList>
 		<exCrtEffect>true</exCrtEffect>
 		<sNpcPropHpRate>0.25</sNpcPropHpRate>
@@ -1816,21 +1721,17 @@
 		</stats>
 		<status undying="false" canBeSown="true" />
 		<skillList>
-			<skill id="4045" level="1" /> <!-- Resist Full Magic Attack -->
+			<skill id="4045" level="1" /> <!-- Full Magic Attack Resistance -->
 			<skill id="4408" level="8" /> <!-- HP Increase (1/4x) -->
-			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
 			<skill id="4410" level="19" /> <!-- Extremely Strong P. Atk. -->
 			<skill id="4411" level="19" /> <!-- Extremely Strong M. Atk. -->
 			<skill id="4412" level="19" /> <!-- Extremely Strong P. Def. -->
 			<skill id="4413" level="5" /> <!-- Very Weak M. Def. -->
-			<skill id="4414" level="2" /> <!-- Standard Type -->
-			<skill id="4415" level="19" /> <!-- Dual-Sword Weapons -->
+			<skill id="4415" level="19" /> <!-- Dual Sword -->
 			<skill id="4416" level="9" /> <!-- Demons -->
-			<skill id="5467" level="1" /> <!-- Dark Attacks -->
-			<skill id="5598" level="12" /> <!-- Flash Resistance -->
+			<skill id="5467" level="1" /> <!-- Dark Attack -->
+			<skill id="5598" level="12" /> <!-- Petrifaction Attack Resistance -->
 			<skill id="6776" level="1" /> <!-- Paralysis -->
-			<skill id="6777" level="1" /> <!-- Bleeding Gash -->
-			<skill id="6778" level="1" /> <!-- Death Strike -->
 		</skillList>
 		<exCrtEffect>true</exCrtEffect>
 		<sNpcPropHpRate>0.25</sNpcPropHpRate>
@@ -1885,19 +1786,16 @@
 		</stats>
 		<status undying="false" noSleepMode="true" canBeSown="true" />
 		<skillList>
-			<skill id="4045" level="1" /> <!-- Resist Full Magic Attack -->
-			<skill id="4408" level="1" /> <!-- HP Increase (1x) -->
-			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
+			<skill id="4045" level="1" /> <!-- Full Magic Attack Resistance -->
 			<skill id="4410" level="17" /> <!-- Very Strong P. Atk. -->
 			<skill id="4411" level="13" /> <!-- Slightly Strong M. Atk. -->
 			<skill id="4412" level="15" /> <!-- Strong P. Def. -->
 			<skill id="4413" level="5" /> <!-- Very Weak M. Def. -->
-			<skill id="4414" level="2" /> <!-- Standard Type -->
 			<skill id="4415" level="3" /> <!-- One-handed Sword -->
 			<skill id="4416" level="6" /> <!-- Humanoids -->
-			<skill id="5467" level="1" /> <!-- Dark Attacks -->
-			<skill id="5598" level="12" /> <!-- Flash Resistance -->
-			<skill id="6743" level="1" /> <!-- Dark Wind -->
+			<skill id="5467" level="1" /> <!-- Dark Attack -->
+			<skill id="5598" level="12" /> <!-- Petrifaction Attack Resistance -->
+			<skill id="6743" level="1" /> <!-- Dark Wound -->
 		</skillList>
 		<exCrtEffect>true</exCrtEffect>
 		<ai type="BALANCED" aggroRange="450" clanHelpRange="300" isAggressive="true" />
@@ -1958,14 +1856,14 @@
 		</stats>
 		<status attackable="false" undying="false" />
 		<skillList>
-			<skill id="5465" level="1" /> <!-- Earth Attack -->
-			<skill id="4414" level="3" /> <!-- Light Armor Type -->
-			<skill id="4416" level="13" /> <!-- Fairies -->
 			<skill id="4408" level="7" /> <!-- HP Very High -->
-			<skill id="14040" level="3" /> <!-- Power Strike -->
+			<skill id="4414" level="3" /> <!-- Light Armor Type -->
 			<skill id="4415" level="3" /> <!-- One-handed Sword -->
-			<skill id="14765" level="2" /> <!-- Blood Siphon Resistance -->
+			<skill id="4416" level="13" /> <!-- Fairies -->
+			<skill id="5465" level="1" /> <!-- Earth Attack -->
 			<skill id="6914" level="3" /> <!-- Haste -->
+			<skill id="14040" level="3" /> <!-- Power Strike -->
+			<skill id="14765" level="2" /> <!-- Blood Siphon Resistance -->
 		</skillList>
 		<ai aggroRange="300" isAggressive="true" clanHelpRange="300">
 			<clanList>
@@ -2033,16 +1931,16 @@
 		</stats>
 		<status attackable="false" undying="false" />
 		<skillList>
-			<skill id="5467" level="1" /> <!-- Strong against the dark elemental. -->
+			<skill id="4408" level="12" /> <!-- HP Increase (4x) -->
 			<skill id="4410" level="12" /> <!-- Slightly Strong P. Atk. -->
 			<skill id="4411" level="12" /> <!-- Slightly Strong M. Atk. -->
 			<skill id="4414" level="3" /> <!-- Light Armor Type -->
-			<skill id="4416" level="13" /> <!-- Fairies -->
-			<skill id="4408" level="12" /> <!-- HP Increase (4x) -->
-			<skill id="14040" level="3" /> <!-- Power Strike -->
 			<skill id="4415" level="3" /> <!-- One-handed Sword -->
-			<skill id="14765" level="2" /> <!-- Blood Siphon Resistance -->
+			<skill id="4416" level="13" /> <!-- Fairies -->
+			<skill id="5467" level="1" /> <!-- Dark Attack -->
 			<skill id="6914" level="3" /> <!-- Haste -->
+			<skill id="14040" level="3" /> <!-- Power Strike -->
+			<skill id="14765" level="2" /> <!-- Blood Siphon Resistance -->
 		</skillList>
 		<ai clanHelpRange="300" aggroRange="300">
 			<clanList>
@@ -2111,14 +2009,14 @@
 		</stats>
 		<status attackable="false" undying="false" />
 		<skillList>
-			<skill id="5465" level="1" /> <!-- Earth Attack -->
-			<skill id="4414" level="3" /> <!-- Light Armor Type -->
-			<skill id="4416" level="13" /> <!-- Fairies -->
 			<skill id="4408" level="11" /> <!-- HP Increase (3x) -->
-			<skill id="14040" level="3" /> <!-- Power Strike -->
+			<skill id="4414" level="3" /> <!-- Light Armor Type -->
 			<skill id="4415" level="3" /> <!-- One-handed Sword -->
-			<skill id="14765" level="2" /> <!-- Blood Siphon Resistance -->
+			<skill id="4416" level="13" /> <!-- Fairies -->
+			<skill id="5465" level="1" /> <!-- Earth Attack -->
 			<skill id="6914" level="3" /> <!-- Haste -->
+			<skill id="14040" level="3" /> <!-- Power Strike -->
+			<skill id="14765" level="2" /> <!-- Blood Siphon Resistance -->
 		</skillList>
 		<ai clanHelpRange="300" aggroRange="300">
 			<clanList>
@@ -2186,14 +2084,14 @@
 		</stats>
 		<status attackable="false" undying="false" />
 		<skillList>
-			<skill id="5465" level="1" /> <!-- Earth Attack -->
-			<skill id="4414" level="3" /> <!-- Light Armor Type -->
-			<skill id="4416" level="13" /> <!-- Fairies -->
 			<skill id="4408" level="10" /> <!-- HP Increase (2x) -->
-			<skill id="14040" level="3" /> <!-- Power Strike -->
+			<skill id="4414" level="3" /> <!-- Light Armor Type -->
 			<skill id="4415" level="3" /> <!-- One-handed Sword -->
-			<skill id="14765" level="2" /> <!-- Blood Siphon Resistance -->
+			<skill id="4416" level="13" /> <!-- Fairies -->
+			<skill id="5465" level="1" /> <!-- Earth Attack -->
 			<skill id="6914" level="3" /> <!-- Haste -->
+			<skill id="14040" level="3" /> <!-- Power Strike -->
+			<skill id="14765" level="2" /> <!-- Blood Siphon Resistance -->
 		</skillList>
 		<ai clanHelpRange="300" aggroRange="300">
 			<clanList>
@@ -2261,17 +2159,17 @@
 		</stats>
 		<status attackable="false" undying="false" />
 		<skillList>
-			<skill id="5465" level="1" /> <!-- Earth Attack -->
+			<skill id="4408" level="11" /> <!-- HP Increase (3x) -->
 			<skill id="4410" level="12" /> <!-- Slightly Strong P. Atk. -->
 			<skill id="4411" level="12" /> <!-- Slightly Strong M. Atk. -->
-			<skill id="4414" level="3" /> <!-- Light Armor Type -->
-			<skill id="4416" level="13" /> <!-- Fairies -->
-			<skill id="4408" level="11" /> <!-- HP Increase (3x) -->
-			<skill id="14040" level="4" /> <!-- Power Strike -->
-			<skill id="4415" level="3" /> <!-- One-handed Sword -->
-			<skill id="14765" level="3" /> <!-- Blood Siphon Resistance -->
 			<skill id="4412" level="12" /> <!-- Slightly Strong P. Def. -->
+			<skill id="4414" level="3" /> <!-- Light Armor Type -->
+			<skill id="4415" level="3" /> <!-- One-handed Sword -->
+			<skill id="4416" level="13" /> <!-- Fairies -->
+			<skill id="5465" level="1" /> <!-- Earth Attack -->
 			<skill id="6914" level="3" /> <!-- Haste -->
+			<skill id="14040" level="4" /> <!-- Power Strike -->
+			<skill id="14765" level="3" /> <!-- Blood Siphon Resistance -->
 		</skillList>
 		<ai clanHelpRange="300" aggroRange="300">
 			<clanList>
@@ -2339,18 +2237,18 @@
 		</stats>
 		<status attackable="false" undying="false" />
 		<skillList>
-			<skill id="5467" level="1" /> <!-- Strong against the dark elemental. -->
+			<skill id="4408" level="14" /> <!-- HP Increase (6x) -->
 			<skill id="4410" level="13" /> <!-- Slightly Strong P. Atk. -->
 			<skill id="4411" level="13" /> <!-- Slightly Strong M. Atk. -->
 			<skill id="4412" level="12" /> <!-- Slightly Strong P. Def. -->
 			<skill id="4413" level="12" /> <!-- Slightly Strong M. Def. -->
 			<skill id="4414" level="3" /> <!-- Light Armor Type -->
-			<skill id="4416" level="13" /> <!-- Fairies -->
-			<skill id="4408" level="14" /> <!-- HP Increase (6x) -->
-			<skill id="14040" level="4" /> <!-- Power Strike -->
 			<skill id="4415" level="3" /> <!-- One-handed Sword -->
-			<skill id="14765" level="3" /> <!-- Blood Siphon Resistance -->
+			<skill id="4416" level="13" /> <!-- Fairies -->
+			<skill id="5467" level="1" /> <!-- Dark Attack -->
 			<skill id="6914" level="3" /> <!-- Haste -->
+			<skill id="14040" level="4" /> <!-- Power Strike -->
+			<skill id="14765" level="3" /> <!-- Blood Siphon Resistance -->
 		</skillList>
 		<ai clanHelpRange="300" aggroRange="300">
 			<clanList>
@@ -2420,18 +2318,18 @@
 		</stats>
 		<status attackable="false" undying="false" />
 		<skillList>
-			<skill id="5465" level="1" /> <!-- Earth Attack -->
+			<skill id="4408" level="13" /> <!-- HP Increase (5x) -->
 			<skill id="4410" level="12" /> <!-- Slightly Strong P. Atk. -->
 			<skill id="4411" level="12" /> <!-- Slightly Strong M. Atk. -->
 			<skill id="4412" level="12" /> <!-- Slightly Strong P. Def. -->
 			<skill id="4413" level="12" /> <!-- Slightly Strong M. Def. -->
 			<skill id="4414" level="3" /> <!-- Light Armor Type -->
-			<skill id="4416" level="13" /> <!-- Fairies -->
-			<skill id="4408" level="13" /> <!-- HP Increase (5x) -->
-			<skill id="14040" level="4" /> <!-- Power Strike -->
 			<skill id="4415" level="3" /> <!-- One-handed Sword -->
-			<skill id="14765" level="3" /> <!-- Blood Siphon Resistance -->
+			<skill id="4416" level="13" /> <!-- Fairies -->
+			<skill id="5465" level="1" /> <!-- Earth Attack -->
 			<skill id="6914" level="3" /> <!-- Haste -->
+			<skill id="14040" level="4" /> <!-- Power Strike -->
+			<skill id="14765" level="3" /> <!-- Blood Siphon Resistance -->
 		</skillList>
 		<ai clanHelpRange="300" aggroRange="300">
 			<clanList>
@@ -2499,17 +2397,17 @@
 		</stats>
 		<status attackable="false" undying="false" />
 		<skillList>
-			<skill id="5465" level="1" /> <!-- Earth Attack -->
+			<skill id="4408" level="12" /> <!-- HP Increase (4x) -->
 			<skill id="4410" level="12" /> <!-- Slightly Strong P. Atk. -->
 			<skill id="4411" level="12" /> <!-- Slightly Strong M. Atk. -->
-			<skill id="4414" level="3" /> <!-- Light Armor Type -->
-			<skill id="4416" level="13" /> <!-- Fairies -->
-			<skill id="4408" level="12" /> <!-- HP Increase (4x) -->
-			<skill id="14040" level="4" /> <!-- Power Strike -->
-			<skill id="4415" level="3" /> <!-- One-handed Sword -->
-			<skill id="14765" level="3" /> <!-- Blood Siphon Resistance -->
 			<skill id="4412" level="12" /> <!-- Slightly Strong P. Def. -->
+			<skill id="4414" level="3" /> <!-- Light Armor Type -->
+			<skill id="4415" level="3" /> <!-- One-handed Sword -->
+			<skill id="4416" level="13" /> <!-- Fairies -->
+			<skill id="5465" level="1" /> <!-- Earth Attack -->
 			<skill id="6914" level="3" /> <!-- Haste -->
+			<skill id="14040" level="4" /> <!-- Power Strike -->
+			<skill id="14765" level="3" /> <!-- Blood Siphon Resistance -->
 		</skillList>
 		<ai clanHelpRange="300" aggroRange="300">
 			<clanList>
@@ -2578,14 +2476,14 @@
 		</stats>
 		<status attackable="false" undying="false" />
 		<skillList>
-			<skill id="5465" level="1" /> <!-- Earth Attack -->
-			<skill id="4414" level="3" /> <!-- Light Armor Type -->
-			<skill id="4416" level="13" /> <!-- Fairies -->
 			<skill id="4408" level="7" /> <!-- HP Very High -->
-			<skill id="14043" level="1" /> <!-- Double Blow -->
+			<skill id="4414" level="3" /> <!-- Light Armor Type -->
 			<skill id="4415" level="3" /> <!-- One-handed Sword -->
-			<skill id="14765" level="2" /> <!-- Blood Siphon Resistance -->
+			<skill id="4416" level="13" /> <!-- Fairies -->
+			<skill id="5465" level="1" /> <!-- Earth Attack -->
 			<skill id="6914" level="3" /> <!-- Haste -->
+			<skill id="14043" level="1" /> <!-- Double Blow -->
+			<skill id="14765" level="2" /> <!-- Blood Siphon Resistance -->
 		</skillList>
 		<ai aggroRange="300" isAggressive="true" clanHelpRange="300">
 			<clanList>
@@ -2650,16 +2548,16 @@
 		</stats>
 		<status attackable="false" undying="false" />
 		<skillList>
-			<skill id="5467" level="1" /> <!-- Strong against the dark elemental. -->
+			<skill id="4408" level="12" /> <!-- HP Increase (4x) -->
 			<skill id="4410" level="12" /> <!-- Slightly Strong P. Atk. -->
 			<skill id="4411" level="12" /> <!-- Slightly Strong M. Atk. -->
 			<skill id="4414" level="3" /> <!-- Light Armor Type -->
-			<skill id="4416" level="13" /> <!-- Fairies -->
-			<skill id="4408" level="12" /> <!-- HP Increase (4x) -->
-			<skill id="14043" level="1" /> <!-- Double Blow -->
 			<skill id="4415" level="3" /> <!-- One-handed Sword -->
-			<skill id="14765" level="2" /> <!-- Blood Siphon Resistance -->
+			<skill id="4416" level="13" /> <!-- Fairies -->
+			<skill id="5467" level="1" /> <!-- Dark Attack -->
 			<skill id="6914" level="3" /> <!-- Haste -->
+			<skill id="14043" level="1" /> <!-- Double Blow -->
+			<skill id="14765" level="2" /> <!-- Blood Siphon Resistance -->
 		</skillList>
 		<ai clanHelpRange="300" aggroRange="300">
 			<clanList>
@@ -2725,14 +2623,14 @@
 		</stats>
 		<status attackable="false" undying="false" />
 		<skillList>
-			<skill id="5465" level="1" /> <!-- Earth Attack -->
-			<skill id="4414" level="3" /> <!-- Light Armor Type -->
-			<skill id="4416" level="13" /> <!-- Fairies -->
 			<skill id="4408" level="11" /> <!-- HP Increase (3x) -->
-			<skill id="14043" level="1" /> <!-- Double Blow -->
+			<skill id="4414" level="3" /> <!-- Light Armor Type -->
 			<skill id="4415" level="3" /> <!-- One-handed Sword -->
-			<skill id="14765" level="2" /> <!-- Blood Siphon Resistance -->
+			<skill id="4416" level="13" /> <!-- Fairies -->
+			<skill id="5465" level="1" /> <!-- Earth Attack -->
 			<skill id="6914" level="3" /> <!-- Haste -->
+			<skill id="14043" level="1" /> <!-- Double Blow -->
+			<skill id="14765" level="2" /> <!-- Blood Siphon Resistance -->
 		</skillList>
 		<ai clanHelpRange="300" aggroRange="300">
 			<clanList>
@@ -2797,14 +2695,14 @@
 		</stats>
 		<status attackable="false" undying="false" />
 		<skillList>
-			<skill id="5465" level="1" /> <!-- Earth Attack -->
-			<skill id="4414" level="3" /> <!-- Light Armor Type -->
-			<skill id="4416" level="13" /> <!-- Fairies -->
 			<skill id="4408" level="10" /> <!-- HP Increase (2x) -->
-			<skill id="14043" level="1" /> <!-- Double Blow -->
+			<skill id="4414" level="3" /> <!-- Light Armor Type -->
 			<skill id="4415" level="3" /> <!-- One-handed Sword -->
-			<skill id="14765" level="2" /> <!-- Blood Siphon Resistance -->
+			<skill id="4416" level="13" /> <!-- Fairies -->
+			<skill id="5465" level="1" /> <!-- Earth Attack -->
 			<skill id="6914" level="3" /> <!-- Haste -->
+			<skill id="14043" level="1" /> <!-- Double Blow -->
+			<skill id="14765" level="2" /> <!-- Blood Siphon Resistance -->
 		</skillList>
 		<ai clanHelpRange="300" aggroRange="300">
 			<clanList>
@@ -2869,16 +2767,16 @@
 		</stats>
 		<status attackable="false" undying="false" />
 		<skillList>
-			<skill id="5465" level="1" /> <!-- Earth Attack -->
+			<skill id="4408" level="11" /> <!-- HP Increase (3x) -->
 			<skill id="4410" level="12" /> <!-- Slightly Strong P. Atk. -->
 			<skill id="4411" level="12" /> <!-- Slightly Strong M. Atk. -->
 			<skill id="4414" level="3" /> <!-- Light Armor Type -->
-			<skill id="4416" level="13" /> <!-- Fairies -->
-			<skill id="4408" level="11" /> <!-- HP Increase (3x) -->
-			<skill id="14043" level="1" /> <!-- Double Blow -->
 			<skill id="4415" level="3" /> <!-- One-handed Sword -->
-			<skill id="14765" level="3" /> <!-- Blood Siphon Resistance -->
+			<skill id="4416" level="13" /> <!-- Fairies -->
+			<skill id="5465" level="1" /> <!-- Earth Attack -->
 			<skill id="6914" level="3" /> <!-- Haste -->
+			<skill id="14043" level="1" /> <!-- Double Blow -->
+			<skill id="14765" level="3" /> <!-- Blood Siphon Resistance -->
 		</skillList>
 		<ai clanHelpRange="300" aggroRange="300">
 			<clanList>
@@ -2943,18 +2841,18 @@
 		</stats>
 		<status attackable="false" undying="false" />
 		<skillList>
-			<skill id="5467" level="1" /> <!-- Strong against the dark elemental. -->
+			<skill id="4408" level="14" /> <!-- HP Increase (6x) -->
 			<skill id="4410" level="13" /> <!-- Slightly Strong P. Atk. -->
 			<skill id="4411" level="13" /> <!-- Slightly Strong M. Atk. -->
 			<skill id="4412" level="12" /> <!-- Slightly Strong P. Def. -->
 			<skill id="4413" level="12" /> <!-- Slightly Strong M. Def. -->
 			<skill id="4414" level="3" /> <!-- Light Armor Type -->
-			<skill id="4416" level="13" /> <!-- Fairies -->
-			<skill id="4408" level="14" /> <!-- HP Increase (6x) -->
-			<skill id="14043" level="1" /> <!-- Double Blow -->
 			<skill id="4415" level="3" /> <!-- One-handed Sword -->
-			<skill id="14765" level="3" /> <!-- Blood Siphon Resistance -->
+			<skill id="4416" level="13" /> <!-- Fairies -->
+			<skill id="5467" level="1" /> <!-- Dark Attack -->
 			<skill id="6914" level="3" /> <!-- Haste -->
+			<skill id="14043" level="1" /> <!-- Double Blow -->
+			<skill id="14765" level="3" /> <!-- Blood Siphon Resistance -->
 		</skillList>
 		<ai clanHelpRange="300" aggroRange="300">
 			<clanList>
@@ -3021,18 +2919,18 @@
 		</stats>
 		<status attackable="false" undying="false" />
 		<skillList>
-			<skill id="5465" level="1" /> <!-- Earth Attack -->
+			<skill id="4408" level="13" /> <!-- HP Increase (5x) -->
 			<skill id="4410" level="12" /> <!-- Slightly Strong P. Atk. -->
 			<skill id="4411" level="12" /> <!-- Slightly Strong M. Atk. -->
 			<skill id="4412" level="12" /> <!-- Slightly Strong P. Def. -->
 			<skill id="4413" level="12" /> <!-- Slightly Strong M. Def. -->
 			<skill id="4414" level="3" /> <!-- Light Armor Type -->
-			<skill id="4416" level="13" /> <!-- Fairies -->
-			<skill id="4408" level="13" /> <!-- HP Increase (5x) -->
-			<skill id="14043" level="1" /> <!-- Double Blow -->
 			<skill id="4415" level="3" /> <!-- One-handed Sword -->
-			<skill id="14765" level="3" /> <!-- Blood Siphon Resistance -->
+			<skill id="4416" level="13" /> <!-- Fairies -->
+			<skill id="5465" level="1" /> <!-- Earth Attack -->
 			<skill id="6914" level="3" /> <!-- Haste -->
+			<skill id="14043" level="1" /> <!-- Double Blow -->
+			<skill id="14765" level="3" /> <!-- Blood Siphon Resistance -->
 		</skillList>
 		<ai clanHelpRange="300" aggroRange="300">
 			<clanList>
@@ -3097,16 +2995,16 @@
 		</stats>
 		<status attackable="false" undying="false" />
 		<skillList>
-			<skill id="5465" level="1" /> <!-- Earth Attack -->
+			<skill id="4408" level="12" /> <!-- HP Increase (4x) -->
 			<skill id="4410" level="12" /> <!-- Slightly Strong P. Atk. -->
 			<skill id="4411" level="12" /> <!-- Slightly Strong M. Atk. -->
 			<skill id="4414" level="3" /> <!-- Light Armor Type -->
-			<skill id="4416" level="13" /> <!-- Fairies -->
-			<skill id="4408" level="12" /> <!-- HP Increase (4x) -->
-			<skill id="14043" level="1" /> <!-- Double Blow -->
 			<skill id="4415" level="3" /> <!-- One-handed Sword -->
-			<skill id="14765" level="3" /> <!-- Blood Siphon Resistance -->
+			<skill id="4416" level="13" /> <!-- Fairies -->
+			<skill id="5465" level="1" /> <!-- Earth Attack -->
 			<skill id="6914" level="3" /> <!-- Haste -->
+			<skill id="14043" level="1" /> <!-- Double Blow -->
+			<skill id="14765" level="3" /> <!-- Blood Siphon Resistance -->
 		</skillList>
 		<ai clanHelpRange="300" aggroRange="300">
 			<clanList>
@@ -3170,12 +3068,12 @@
 		</stats>
 		<status attackable="false" undying="false" />
 		<skillList>
-			<skill id="5465" level="1" /> <!-- Earth Attack -->
-			<skill id="4414" level="1" /> <!-- Heavy Armor Type -->
-			<skill id="4416" level="13" /> <!-- Fairies -->
 			<skill id="4408" level="7" /> <!-- HP Very High -->
-			<skill id="14040" level="2" /> <!-- Power Strike -->
+			<skill id="4414" level="1" /> <!-- Heavy Armor Type -->
 			<skill id="4415" level="3" /> <!-- One-handed Sword -->
+			<skill id="4416" level="13" /> <!-- Fairies -->
+			<skill id="5465" level="1" /> <!-- Earth Attack -->
+			<skill id="14040" level="2" /> <!-- Power Strike -->
 			<skill id="14765" level="2" /> <!-- Blood Siphon Resistance -->
 		</skillList>
 		<ai clanHelpRange="300" aggroRange="300">
@@ -3243,14 +3141,14 @@
 		</stats>
 		<status attackable="false" undying="false" />
 		<skillList>
-			<skill id="5467" level="1" /> <!-- Strong against the dark elemental. -->
+			<skill id="4408" level="12" /> <!-- HP Increase (4x) -->
 			<skill id="4410" level="12" /> <!-- Slightly Strong P. Atk. -->
 			<skill id="4411" level="12" /> <!-- Slightly Strong M. Atk. -->
 			<skill id="4414" level="1" /> <!-- Heavy Armor Type -->
-			<skill id="4416" level="13" /> <!-- Fairies -->
-			<skill id="4408" level="12" /> <!-- HP Increase (4x) -->
-			<skill id="14040" level="2" /> <!-- Power Strike -->
 			<skill id="4415" level="3" /> <!-- One-handed Sword -->
+			<skill id="4416" level="13" /> <!-- Fairies -->
+			<skill id="5467" level="1" /> <!-- Dark Attack -->
+			<skill id="14040" level="2" /> <!-- Power Strike -->
 			<skill id="14765" level="2" /> <!-- Blood Siphon Resistance -->
 		</skillList>
 		<ai clanHelpRange="300" aggroRange="300">
@@ -3319,12 +3217,12 @@
 		</stats>
 		<status attackable="false" undying="false" />
 		<skillList>
-			<skill id="5465" level="1" /> <!-- Earth Attack -->
-			<skill id="4414" level="1" /> <!-- Heavy Armor Type -->
-			<skill id="4416" level="13" /> <!-- Fairies -->
 			<skill id="4408" level="11" /> <!-- HP Increase (3x) -->
-			<skill id="14040" level="2" /> <!-- Power Strike -->
+			<skill id="4414" level="1" /> <!-- Heavy Armor Type -->
 			<skill id="4415" level="3" /> <!-- One-handed Sword -->
+			<skill id="4416" level="13" /> <!-- Fairies -->
+			<skill id="5465" level="1" /> <!-- Earth Attack -->
+			<skill id="14040" level="2" /> <!-- Power Strike -->
 			<skill id="14765" level="2" /> <!-- Blood Siphon Resistance -->
 		</skillList>
 		<ai clanHelpRange="300" aggroRange="300">
@@ -3392,12 +3290,12 @@
 		</stats>
 		<status attackable="false" undying="false" />
 		<skillList>
-			<skill id="5465" level="1" /> <!-- Earth Attack -->
-			<skill id="4414" level="1" /> <!-- Heavy Armor Type -->
-			<skill id="4416" level="13" /> <!-- Fairies -->
 			<skill id="4408" level="10" /> <!-- HP Increase (2x) -->
-			<skill id="14040" level="2" /> <!-- Power Strike -->
+			<skill id="4414" level="1" /> <!-- Heavy Armor Type -->
 			<skill id="4415" level="3" /> <!-- One-handed Sword -->
+			<skill id="4416" level="13" /> <!-- Fairies -->
+			<skill id="5465" level="1" /> <!-- Earth Attack -->
+			<skill id="14040" level="2" /> <!-- Power Strike -->
 			<skill id="14765" level="2" /> <!-- Blood Siphon Resistance -->
 		</skillList>
 		<ai clanHelpRange="300" aggroRange="300">
@@ -3465,15 +3363,15 @@
 		</stats>
 		<status attackable="false" undying="false" />
 		<skillList>
-			<skill id="5465" level="1" /> <!-- Earth Attack -->
+			<skill id="4408" level="11" /> <!-- HP Increase (3x) -->
 			<skill id="4410" level="12" /> <!-- Slightly Strong P. Atk. -->
 			<skill id="4411" level="12" /> <!-- Slightly Strong M. Atk. -->
-			<skill id="4414" level="1" /> <!-- Heavy Armor Type -->
-			<skill id="4416" level="13" /> <!-- Fairies -->
-			<skill id="4408" level="11" /> <!-- HP Increase (3x) -->
-			<skill id="14040" level="5" /> <!-- Power Strike -->
-			<skill id="4415" level="3" /> <!-- One-handed Sword -->
 			<skill id="4412" level="4" /> <!-- Extremely Weak P. Def. -->
+			<skill id="4414" level="1" /> <!-- Heavy Armor Type -->
+			<skill id="4415" level="3" /> <!-- One-handed Sword -->
+			<skill id="4416" level="13" /> <!-- Fairies -->
+			<skill id="5465" level="1" /> <!-- Earth Attack -->
+			<skill id="14040" level="5" /> <!-- Power Strike -->
 			<skill id="14765" level="3" /> <!-- Blood Siphon Resistance -->
 		</skillList>
 		<ai clanHelpRange="300" aggroRange="300">
@@ -3540,16 +3438,16 @@
 		</stats>
 		<status attackable="false" undying="false" />
 		<skillList>
-			<skill id="5467" level="1" /> <!-- Strong against the dark elemental. -->
+			<skill id="4408" level="14" /> <!-- HP Increase (6x) -->
 			<skill id="4410" level="13" /> <!-- Slightly Strong P. Atk. -->
 			<skill id="4411" level="13" /> <!-- Slightly Strong M. Atk. -->
 			<skill id="4412" level="12" /> <!-- Slightly Strong P. Def. -->
 			<skill id="4413" level="12" /> <!-- Slightly Strong M. Def. -->
 			<skill id="4414" level="1" /> <!-- Heavy Armor Type -->
-			<skill id="4416" level="13" /> <!-- Fairies -->
-			<skill id="4408" level="14" /> <!-- HP Increase (6x) -->
-			<skill id="14040" level="5" /> <!-- Power Strike -->
 			<skill id="4415" level="3" /> <!-- One-handed Sword -->
+			<skill id="4416" level="13" /> <!-- Fairies -->
+			<skill id="5467" level="1" /> <!-- Dark Attack -->
+			<skill id="14040" level="5" /> <!-- Power Strike -->
 			<skill id="14765" level="3" /> <!-- Blood Siphon Resistance -->
 		</skillList>
 		<ai clanHelpRange="300" aggroRange="300">
@@ -3619,16 +3517,16 @@
 		</stats>
 		<status attackable="false" undying="false" />
 		<skillList>
-			<skill id="5465" level="1" /> <!-- Earth Attack -->
+			<skill id="4408" level="13" /> <!-- HP Increase (5x) -->
 			<skill id="4410" level="12" /> <!-- Slightly Strong P. Atk. -->
 			<skill id="4411" level="12" /> <!-- Slightly Strong M. Atk. -->
 			<skill id="4412" level="12" /> <!-- Slightly Strong P. Def. -->
 			<skill id="4413" level="12" /> <!-- Slightly Strong M. Def. -->
 			<skill id="4414" level="1" /> <!-- Heavy Armor Type -->
-			<skill id="4416" level="13" /> <!-- Fairies -->
-			<skill id="4408" level="13" /> <!-- HP Increase (5x) -->
-			<skill id="14040" level="5" /> <!-- Power Strike -->
 			<skill id="4415" level="3" /> <!-- One-handed Sword -->
+			<skill id="4416" level="13" /> <!-- Fairies -->
+			<skill id="5465" level="1" /> <!-- Earth Attack -->
+			<skill id="14040" level="5" /> <!-- Power Strike -->
 			<skill id="14765" level="3" /> <!-- Blood Siphon Resistance -->
 		</skillList>
 		<ai clanHelpRange="300" aggroRange="300">
@@ -3697,15 +3595,15 @@
 		</stats>
 		<status attackable="false" undying="false" />
 		<skillList>
-			<skill id="5465" level="1" /> <!-- Earth Attack -->
+			<skill id="4408" level="12" /> <!-- HP Increase (4x) -->
 			<skill id="4410" level="12" /> <!-- Slightly Strong P. Atk. -->
 			<skill id="4411" level="12" /> <!-- Slightly Strong M. Atk. -->
-			<skill id="4414" level="1" /> <!-- Heavy Armor Type -->
-			<skill id="4416" level="13" /> <!-- Fairies -->
-			<skill id="4408" level="12" /> <!-- HP Increase (4x) -->
-			<skill id="14040" level="5" /> <!-- Power Strike -->
-			<skill id="4415" level="3" /> <!-- One-handed Sword -->
 			<skill id="4412" level="4" /> <!-- Extremely Weak P. Def. -->
+			<skill id="4414" level="1" /> <!-- Heavy Armor Type -->
+			<skill id="4415" level="3" /> <!-- One-handed Sword -->
+			<skill id="4416" level="13" /> <!-- Fairies -->
+			<skill id="5465" level="1" /> <!-- Earth Attack -->
+			<skill id="14040" level="5" /> <!-- Power Strike -->
 			<skill id="14765" level="3" /> <!-- Blood Siphon Resistance -->
 		</skillList>
 		<ai clanHelpRange="300" aggroRange="300">
@@ -3776,11 +3674,11 @@
 		</stats>
 		<status attackable="false" undying="false" />
 		<skillList>
-			<skill id="5463" level="1" /> <!-- Water Attack -->
-			<skill id="4416" level="6" /> <!-- Humanoids -->
 			<skill id="4408" level="7" /> <!-- HP Very High -->
-			<skill id="14045" level="2" /> <!-- Fairy Attack -->
 			<skill id="4415" level="3" /> <!-- One-handed Sword -->
+			<skill id="4416" level="6" /> <!-- Humanoids -->
+			<skill id="5463" level="1" /> <!-- Water Attack -->
+			<skill id="14045" level="2" /> <!-- Fairy Attack -->
 			<skill id="14046" level="2" /> <!-- Fairy Curse Gloom -->
 			<skill id="14048" level="1" /> <!-- Fairy Acumen -->
 			<skill id="14765" level="2" /> <!-- Blood Siphon Resistance -->
@@ -3852,13 +3750,13 @@
 		</stats>
 		<status attackable="false" undying="false" />
 		<skillList>
-			<skill id="5467" level="1" /> <!-- Strong against the dark elemental. -->
+			<skill id="4408" level="12" /> <!-- HP Increase (4x) -->
 			<skill id="4410" level="12" /> <!-- Slightly Strong P. Atk. -->
 			<skill id="4411" level="12" /> <!-- Slightly Strong M. Atk. -->
-			<skill id="4416" level="6" /> <!-- Humanoids -->
-			<skill id="4408" level="12" /> <!-- HP Increase (4x) -->
-			<skill id="14045" level="2" /> <!-- Fairy Attack -->
 			<skill id="4415" level="3" /> <!-- One-handed Sword -->
+			<skill id="4416" level="6" /> <!-- Humanoids -->
+			<skill id="5467" level="1" /> <!-- Dark Attack -->
+			<skill id="14045" level="2" /> <!-- Fairy Attack -->
 			<skill id="14046" level="2" /> <!-- Fairy Curse Gloom -->
 			<skill id="14048" level="1" /> <!-- Fairy Acumen -->
 			<skill id="14765" level="2" /> <!-- Blood Siphon Resistance -->
@@ -3931,11 +3829,11 @@
 		</stats>
 		<status attackable="false" undying="false" />
 		<skillList>
-			<skill id="5463" level="1" /> <!-- Water Attack -->
-			<skill id="4416" level="6" /> <!-- Humanoids -->
 			<skill id="4408" level="11" /> <!-- HP Increase (3x) -->
-			<skill id="14045" level="2" /> <!-- Fairy Attack -->
 			<skill id="4415" level="3" /> <!-- One-handed Sword -->
+			<skill id="4416" level="6" /> <!-- Humanoids -->
+			<skill id="5463" level="1" /> <!-- Water Attack -->
+			<skill id="14045" level="2" /> <!-- Fairy Attack -->
 			<skill id="14046" level="2" /> <!-- Fairy Curse Gloom -->
 			<skill id="14048" level="1" /> <!-- Fairy Acumen -->
 			<skill id="14765" level="2" /> <!-- Blood Siphon Resistance -->
@@ -4007,11 +3905,11 @@
 		</stats>
 		<status attackable="false" undying="false" />
 		<skillList>
-			<skill id="5463" level="1" /> <!-- Water Attack -->
-			<skill id="4416" level="6" /> <!-- Humanoids -->
 			<skill id="4408" level="10" /> <!-- HP Increase (2x) -->
-			<skill id="14045" level="2" /> <!-- Fairy Attack -->
 			<skill id="4415" level="3" /> <!-- One-handed Sword -->
+			<skill id="4416" level="6" /> <!-- Humanoids -->
+			<skill id="5463" level="1" /> <!-- Water Attack -->
+			<skill id="14045" level="2" /> <!-- Fairy Attack -->
 			<skill id="14046" level="2" /> <!-- Fairy Curse Gloom -->
 			<skill id="14048" level="1" /> <!-- Fairy Acumen -->
 			<skill id="14765" level="2" /> <!-- Blood Siphon Resistance -->
@@ -4084,17 +3982,17 @@
 		</stats>
 		<status attackable="false" undying="false" />
 		<skillList>
-			<skill id="5463" level="1" /> <!-- Water Attack -->
+			<skill id="4408" level="11" /> <!-- HP Increase (3x) -->
 			<skill id="4410" level="12" /> <!-- Slightly Strong P. Atk. -->
 			<skill id="4411" level="12" /> <!-- Slightly Strong M. Atk. -->
-			<skill id="4416" level="6" /> <!-- Humanoids -->
-			<skill id="4408" level="11" /> <!-- HP Increase (3x) -->
-			<skill id="14045" level="3" /> <!-- Fairy Attack -->
+			<skill id="4413" level="12" /> <!-- Slightly Strong M. Def. -->
 			<skill id="4415" level="3" /> <!-- One-handed Sword -->
+			<skill id="4416" level="6" /> <!-- Humanoids -->
+			<skill id="5463" level="1" /> <!-- Water Attack -->
+			<skill id="14045" level="3" /> <!-- Fairy Attack -->
 			<skill id="14046" level="3" /> <!-- Fairy Curse Gloom -->
 			<skill id="14048" level="1" /> <!-- Fairy Acumen -->
 			<skill id="14765" level="3" /> <!-- Blood Siphon Resistance -->
-			<skill id="4413" level="12" /> <!-- Slightly Strong M. Def. -->
 		</skillList>
 		<ai clanHelpRange="300" aggroRange="300">
 			<clanList>
@@ -4151,15 +4049,15 @@
 		</stats>
 		<status attackable="false" undying="false" />
 		<skillList>
-			<skill id="5467" level="1" /> <!-- Strong against the dark elemental. -->
+			<skill id="4408" level="14" /> <!-- HP Increase (6x) -->
 			<skill id="4410" level="13" /> <!-- Slightly Strong P. Atk. -->
 			<skill id="4411" level="13" /> <!-- Slightly Strong M. Atk. -->
 			<skill id="4412" level="12" /> <!-- Slightly Strong P. Def. -->
 			<skill id="4413" level="12" /> <!-- Slightly Strong M. Def. -->
-			<skill id="4416" level="6" /> <!-- Humanoids -->
-			<skill id="4408" level="14" /> <!-- HP Increase (6x) -->
-			<skill id="14045" level="3" /> <!-- Fairy Attack -->
 			<skill id="4415" level="3" /> <!-- One-handed Sword -->
+			<skill id="4416" level="6" /> <!-- Humanoids -->
+			<skill id="5467" level="1" /> <!-- Dark Attack -->
+			<skill id="14045" level="3" /> <!-- Fairy Attack -->
 			<skill id="14046" level="3" /> <!-- Fairy Curse Gloom -->
 			<skill id="14048" level="1" /> <!-- Fairy Acumen -->
 			<skill id="14765" level="3" /> <!-- Blood Siphon Resistance -->
@@ -4233,15 +4131,15 @@
 		</stats>
 		<status attackable="false" undying="false" />
 		<skillList>
-			<skill id="5463" level="1" /> <!-- Water Attack -->
+			<skill id="4408" level="13" /> <!-- HP Increase (5x) -->
 			<skill id="4410" level="12" /> <!-- Slightly Strong P. Atk. -->
 			<skill id="4411" level="12" /> <!-- Slightly Strong M. Atk. -->
 			<skill id="4412" level="12" /> <!-- Slightly Strong P. Def. -->
 			<skill id="4413" level="12" /> <!-- Slightly Strong M. Def. -->
-			<skill id="4416" level="6" /> <!-- Humanoids -->
-			<skill id="4408" level="13" /> <!-- HP Increase (5x) -->
-			<skill id="14045" level="3" /> <!-- Fairy Attack -->
 			<skill id="4415" level="3" /> <!-- One-handed Sword -->
+			<skill id="4416" level="6" /> <!-- Humanoids -->
+			<skill id="5463" level="1" /> <!-- Water Attack -->
+			<skill id="14045" level="3" /> <!-- Fairy Attack -->
 			<skill id="14046" level="3" /> <!-- Fairy Curse Gloom -->
 			<skill id="14048" level="1" /> <!-- Fairy Acumen -->
 			<skill id="14765" level="3" /> <!-- Blood Siphon Resistance -->
@@ -4314,17 +4212,17 @@
 		</stats>
 		<status attackable="false" undying="false" />
 		<skillList>
-			<skill id="5463" level="1" /> <!-- Water Attack -->
+			<skill id="4408" level="12" /> <!-- HP Increase (4x) -->
 			<skill id="4410" level="12" /> <!-- Slightly Strong P. Atk. -->
 			<skill id="4411" level="12" /> <!-- Slightly Strong M. Atk. -->
-			<skill id="4416" level="6" /> <!-- Humanoids -->
-			<skill id="4408" level="12" /> <!-- HP Increase (4x) -->
-			<skill id="14045" level="3" /> <!-- Fairy Attack -->
+			<skill id="4413" level="12" /> <!-- Slightly Strong M. Def. -->
 			<skill id="4415" level="3" /> <!-- One-handed Sword -->
+			<skill id="4416" level="6" /> <!-- Humanoids -->
+			<skill id="5463" level="1" /> <!-- Water Attack -->
+			<skill id="14045" level="3" /> <!-- Fairy Attack -->
 			<skill id="14046" level="3" /> <!-- Fairy Curse Gloom -->
 			<skill id="14048" level="1" /> <!-- Fairy Acumen -->
 			<skill id="14765" level="3" /> <!-- Blood Siphon Resistance -->
-			<skill id="4413" level="12" /> <!-- Slightly Strong M. Def. -->
 		</skillList>
 		<ai clanHelpRange="300" aggroRange="300">
 			<clanList>
@@ -4394,11 +4292,11 @@
 		</stats>
 		<status attackable="false" undying="false" />
 		<skillList>
-			<skill id="5463" level="1" /> <!-- Water Attack -->
-			<skill id="4416" level="6" /> <!-- Humanoids -->
 			<skill id="4408" level="7" /> <!-- HP Very High -->
-			<skill id="14045" level="3" /> <!-- Fairy Attack -->
 			<skill id="4415" level="3" /> <!-- One-handed Sword -->
+			<skill id="4416" level="6" /> <!-- Humanoids -->
+			<skill id="5463" level="1" /> <!-- Water Attack -->
+			<skill id="14045" level="3" /> <!-- Fairy Attack -->
 			<skill id="14047" level="3" /> <!-- Fairy Curse Poison -->
 			<skill id="14765" level="2" /> <!-- Blood Siphon Resistance -->
 		</skillList>
@@ -4469,13 +4367,13 @@
 		</stats>
 		<status attackable="false" undying="false" />
 		<skillList>
-			<skill id="5467" level="1" /> <!-- Strong against the dark elemental. -->
+			<skill id="4408" level="12" /> <!-- HP Increase (4x) -->
 			<skill id="4410" level="12" /> <!-- Slightly Strong P. Atk. -->
 			<skill id="4411" level="12" /> <!-- Slightly Strong M. Atk. -->
-			<skill id="4416" level="6" /> <!-- Humanoids -->
-			<skill id="4408" level="12" /> <!-- HP Increase (4x) -->
-			<skill id="14045" level="3" /> <!-- Fairy Attack -->
 			<skill id="4415" level="3" /> <!-- One-handed Sword -->
+			<skill id="4416" level="6" /> <!-- Humanoids -->
+			<skill id="5467" level="1" /> <!-- Dark Attack -->
+			<skill id="14045" level="3" /> <!-- Fairy Attack -->
 			<skill id="14047" level="3" /> <!-- Fairy Curse Poison -->
 			<skill id="14765" level="2" /> <!-- Blood Siphon Resistance -->
 		</skillList>
@@ -4547,11 +4445,11 @@
 		</stats>
 		<status attackable="false" undying="false" />
 		<skillList>
-			<skill id="5463" level="1" /> <!-- Water Attack -->
-			<skill id="4416" level="6" /> <!-- Humanoids -->
 			<skill id="4408" level="11" /> <!-- HP Increase (3x) -->
-			<skill id="14045" level="3" /> <!-- Fairy Attack -->
 			<skill id="4415" level="3" /> <!-- One-handed Sword -->
+			<skill id="4416" level="6" /> <!-- Humanoids -->
+			<skill id="5463" level="1" /> <!-- Water Attack -->
+			<skill id="14045" level="3" /> <!-- Fairy Attack -->
 			<skill id="14047" level="3" /> <!-- Fairy Curse Poison -->
 			<skill id="14765" level="2" /> <!-- Blood Siphon Resistance -->
 		</skillList>
@@ -4622,11 +4520,11 @@
 		</stats>
 		<status attackable="false" undying="false" />
 		<skillList>
-			<skill id="5463" level="1" /> <!-- Water Attack -->
-			<skill id="4416" level="6" /> <!-- Humanoids -->
 			<skill id="4408" level="10" /> <!-- HP Increase (2x) -->
-			<skill id="14045" level="3" /> <!-- Fairy Attack -->
 			<skill id="4415" level="3" /> <!-- One-handed Sword -->
+			<skill id="4416" level="6" /> <!-- Humanoids -->
+			<skill id="5463" level="1" /> <!-- Water Attack -->
+			<skill id="14045" level="3" /> <!-- Fairy Attack -->
 			<skill id="14047" level="3" /> <!-- Fairy Curse Poison -->
 			<skill id="14765" level="2" /> <!-- Blood Siphon Resistance -->
 		</skillList>
@@ -4698,13 +4596,13 @@
 		</stats>
 		<status attackable="false" undying="false" />
 		<skillList>
-			<skill id="5463" level="1" /> <!-- Water Attack -->
+			<skill id="4408" level="11" /> <!-- HP Increase (3x) -->
 			<skill id="4410" level="12" /> <!-- Slightly Strong P. Atk. -->
 			<skill id="4411" level="12" /> <!-- Slightly Strong M. Atk. -->
-			<skill id="4416" level="6" /> <!-- Humanoids -->
-			<skill id="4408" level="11" /> <!-- HP Increase (3x) -->
-			<skill id="14045" level="4" /> <!-- Fairy Attack -->
 			<skill id="4415" level="3" /> <!-- One-handed Sword -->
+			<skill id="4416" level="6" /> <!-- Humanoids -->
+			<skill id="5463" level="1" /> <!-- Water Attack -->
+			<skill id="14045" level="4" /> <!-- Fairy Attack -->
 			<skill id="14047" level="4" /> <!-- Fairy Curse Poison -->
 			<skill id="14765" level="3" /> <!-- Blood Siphon Resistance -->
 		</skillList>

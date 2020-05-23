@@ -74,10 +74,11 @@
 			</attribute>
 		</stats>
 		<skillList>
+			<skill id="4045" level="1" /> <!-- Full Magic Attack Resistance -->
 			<skill id="4416" level="10" /> <!-- Dragons -->
-			<skill id="5462" level="1" /> <!-- Fire Attack -->
 			<skill id="4494" level="1" /> <!-- Raid Boss -->
-			<skill id="14804" level="1" /> <!-- Damage Reflect Attack Resistance -->
+			<skill id="5462" level="1" /> <!-- Fire Attack -->
+			<skill id="14765" level="4" /> <!-- Blood Siphon Resistance -->
 		</skillList>
 		<dropLists>
 			<drop>
@@ -239,7 +240,7 @@
 			<height normal="39.5" />
 		</collision>
 	</npc>
-	<npc id="26105" level="99" type="RaidBoss" name="Veridan" title="Armed">
+	<npc id="26105" level="98" type="RaidBoss" name="Veridan" title="Armed">
 		<race>DEMONIC</race>
 		<sex>FEMALE</sex>
 		<equipment rhand="5800" lhand="5799" /> <!-- Nephilim Lord / Nephilim Lord -->
@@ -258,18 +259,19 @@
 			</attribute>
 		</stats>
 		<skillList>
-			<skill id="5463" level="1" /> <!-- Water Attack -->
-			<skill id="4494" level="1" /> <!-- Raid Boss -->
-			<skill id="14714" level="1" /> <!-- Raid Boss (Lv. 98) -->
+			<skill id="4045" level="1" /> <!-- Full Magic Attack Resistance -->
+			<skill id="4416" level="9" /> <!-- Demons -->
+			<skill id="4435" level="3" /> <!-- Greater Stun Resistance -->
+			<skill id="4436" level="3" /> <!-- Greater Poison Resistance -->
+			<skill id="4437" level="3" /> <!-- Greater Bleed Resistance -->
+			<skill id="4438" level="3" /> <!-- Greater Sleep Resistance -->
+			<skill id="4439" level="3" /> <!-- Greater Hold Resistance -->
 			<skill id="4440" level="3" /> <!-- Greater Paralysis Resistance -->
 			<skill id="4441" level="3" /> <!-- Greater Mental Attack Resistance -->
-			<skill id="4438" level="3" /> <!-- Greater Sleep Resistance -->
-			<skill id="4437" level="3" /> <!-- Greater Bleed Resistance -->
-			<skill id="4436" level="3" /> <!-- Greater Poison Resistance -->
-			<skill id="4435" level="3" /> <!-- Greater Stun Resistance -->
-			<skill id="4439" level="3" /> <!-- Greater Hold Resistance -->
-			<skill id="4416" level="9" /> <!-- Demons -->
-			<skill id="4045" level="1" /> <!-- Full Magic Attack Resistance -->
+			<skill id="4494" level="1" /> <!-- Raid Boss -->
+			<skill id="5463" level="1" /> <!-- Water Attack -->
+			<skill id="14714" level="1" /> <!-- Raid Boss (Lv. 98) -->
+			<skill id="14765" level="4" /> <!-- Blood Siphon Resistance -->
 		</skillList>
 		<collision>
 			<radius normal="13" />
@@ -316,7 +318,7 @@
 			</drop>
 		</dropLists>
 	</npc>
-	<npc id="26106" level="99" type="RaidBoss" name="Veridan" title="Wealthy">
+	<npc id="26106" level="98" type="RaidBoss" name="Veridan" title="Wealthy">
 		<race>DEMONIC</race>
 		<sex>FEMALE</sex>
 		<equipment rhand="5800" lhand="5799" /> <!-- Nephilim Lord / Nephilim Lord -->
@@ -335,18 +337,19 @@
 			</attribute>
 		</stats>
 		<skillList>
-			<skill id="5463" level="1" /> <!-- Water Attack -->
-			<skill id="4494" level="1" /> <!-- Raid Boss -->
-			<skill id="14714" level="1" /> <!-- Raid Boss (Lv. 98) -->
+			<skill id="4045" level="1" /> <!-- Full Magic Attack Resistance -->
+			<skill id="4416" level="9" /> <!-- Demons -->
+			<skill id="4435" level="3" /> <!-- Greater Stun Resistance -->
+			<skill id="4436" level="3" /> <!-- Greater Poison Resistance -->
+			<skill id="4437" level="3" /> <!-- Greater Bleed Resistance -->
+			<skill id="4438" level="3" /> <!-- Greater Sleep Resistance -->
+			<skill id="4439" level="3" /> <!-- Greater Hold Resistance -->
 			<skill id="4440" level="3" /> <!-- Greater Paralysis Resistance -->
 			<skill id="4441" level="3" /> <!-- Greater Mental Attack Resistance -->
-			<skill id="4438" level="3" /> <!-- Greater Sleep Resistance -->
-			<skill id="4437" level="3" /> <!-- Greater Bleed Resistance -->
-			<skill id="4436" level="3" /> <!-- Greater Poison Resistance -->
-			<skill id="4435" level="3" /> <!-- Greater Stun Resistance -->
-			<skill id="4439" level="3" /> <!-- Greater Hold Resistance -->
-			<skill id="4416" level="9" /> <!-- Demons -->
-			<skill id="4045" level="1" /> <!-- Full Magic Attack Resistance -->
+			<skill id="4494" level="1" /> <!-- Raid Boss -->
+			<skill id="5463" level="1" /> <!-- Water Attack -->
+			<skill id="14714" level="1" /> <!-- Raid Boss (Lv. 98) -->
+			<skill id="14765" level="4" /> <!-- Blood Siphon Resistance -->
 		</skillList>
 		<collision>
 			<radius normal="13" />
@@ -361,7 +364,7 @@
 			</drop>
 		</dropLists>
 	</npc>
-	<npc id="26107" level="99" type="RaidBoss" name="Veridan" title="Wise">
+	<npc id="26107" level="98" type="RaidBoss" name="Veridan" title="Wise">
 		<race>DEMONIC</race>
 		<sex>FEMALE</sex>
 		<acquire exp="239026788" sp="56213" />
@@ -379,18 +382,19 @@
 			</attribute>
 		</stats>
 		<skillList>
-			<skill id="5463" level="1" /> <!-- Water Attack -->
-			<skill id="4494" level="1" /> <!-- Raid Boss -->
-			<skill id="14714" level="1" /> <!-- Raid Boss (Lv. 98) -->
+			<skill id="4045" level="1" /> <!-- Full Magic Attack Resistance -->
+			<skill id="4416" level="9" /> <!-- Demons -->
+			<skill id="4435" level="3" /> <!-- Greater Stun Resistance -->
+			<skill id="4436" level="3" /> <!-- Greater Poison Resistance -->
+			<skill id="4437" level="3" /> <!-- Greater Bleed Resistance -->
+			<skill id="4438" level="3" /> <!-- Greater Sleep Resistance -->
+			<skill id="4439" level="3" /> <!-- Greater Hold Resistance -->
 			<skill id="4440" level="3" /> <!-- Greater Paralysis Resistance -->
 			<skill id="4441" level="3" /> <!-- Greater Mental Attack Resistance -->
-			<skill id="4438" level="3" /> <!-- Greater Sleep Resistance -->
-			<skill id="4437" level="3" /> <!-- Greater Bleed Resistance -->
-			<skill id="4436" level="3" /> <!-- Greater Poison Resistance -->
-			<skill id="4435" level="3" /> <!-- Greater Stun Resistance -->
-			<skill id="4439" level="3" /> <!-- Greater Hold Resistance -->
-			<skill id="4416" level="9" /> <!-- Demons -->
-			<skill id="4045" level="1" /> <!-- Full Magic Attack Resistance -->
+			<skill id="4494" level="1" /> <!-- Raid Boss -->
+			<skill id="5463" level="1" /> <!-- Water Attack -->
+			<skill id="14714" level="1" /> <!-- Raid Boss (Lv. 98) -->
+			<skill id="14765" level="4" /> <!-- Blood Siphon Resistance -->
 		</skillList>
 		<collision>
 			<radius normal="13" />
@@ -454,7 +458,7 @@
 			</drop>
 		</dropLists>
 	</npc>
-	<npc id="26108" level="99" type="RaidBoss" name="Veridan" title="Armed">
+	<npc id="26108" level="98" type="RaidBoss" name="Veridan" title="Armed">
 		<race>DEMONIC</race>
 		<sex>FEMALE</sex>
 		<acquire exp="239026788" sp="56213" />
@@ -472,18 +476,19 @@
 			</attribute>
 		</stats>
 		<skillList>
-			<skill id="5463" level="1" /> <!-- Water Attack -->
-			<skill id="4494" level="1" /> <!-- Raid Boss -->
-			<skill id="14714" level="1" /> <!-- Raid Boss (Lv. 98) -->
+			<skill id="4045" level="1" /> <!-- Full Magic Attack Resistance -->
+			<skill id="4416" level="9" /> <!-- Demons -->
+			<skill id="4435" level="3" /> <!-- Greater Stun Resistance -->
+			<skill id="4436" level="3" /> <!-- Greater Poison Resistance -->
+			<skill id="4437" level="3" /> <!-- Greater Bleed Resistance -->
+			<skill id="4438" level="3" /> <!-- Greater Sleep Resistance -->
+			<skill id="4439" level="3" /> <!-- Greater Hold Resistance -->
 			<skill id="4440" level="3" /> <!-- Greater Paralysis Resistance -->
 			<skill id="4441" level="3" /> <!-- Greater Mental Attack Resistance -->
-			<skill id="4438" level="3" /> <!-- Greater Sleep Resistance -->
-			<skill id="4437" level="3" /> <!-- Greater Bleed Resistance -->
-			<skill id="4436" level="3" /> <!-- Greater Poison Resistance -->
-			<skill id="4435" level="3" /> <!-- Greater Stun Resistance -->
-			<skill id="4439" level="3" /> <!-- Greater Hold Resistance -->
-			<skill id="4416" level="9" /> <!-- Demons -->
-			<skill id="4045" level="1" /> <!-- Full Magic Attack Resistance -->
+			<skill id="4494" level="1" /> <!-- Raid Boss -->
+			<skill id="5463" level="1" /> <!-- Water Attack -->
+			<skill id="14714" level="1" /> <!-- Raid Boss (Lv. 98) -->
+			<skill id="14765" level="4" /> <!-- Blood Siphon Resistance -->
 		</skillList>
 		<collision>
 			<radius normal="13" />
@@ -530,7 +535,7 @@
 			</drop>
 		</dropLists>
 	</npc>
-	<npc id="26109" level="99" type="RaidBoss" name="Veridan" title="Wealthy">
+	<npc id="26109" level="98" type="RaidBoss" name="Veridan" title="Wealthy">
 		<race>DEMONIC</race>
 		<sex>FEMALE</sex>
 		<acquire exp="239026788" sp="56213" />
@@ -548,18 +553,19 @@
 			</attribute>
 		</stats>
 		<skillList>
-			<skill id="5463" level="1" /> <!-- Water Attack -->
-			<skill id="4494" level="1" /> <!-- Raid Boss -->
-			<skill id="14714" level="1" /> <!-- Raid Boss (Lv. 98) -->
+			<skill id="4045" level="1" /> <!-- Full Magic Attack Resistance -->
+			<skill id="4416" level="9" /> <!-- Demons -->
+			<skill id="4435" level="3" /> <!-- Greater Stun Resistance -->
+			<skill id="4436" level="3" /> <!-- Greater Poison Resistance -->
+			<skill id="4437" level="3" /> <!-- Greater Bleed Resistance -->
+			<skill id="4438" level="3" /> <!-- Greater Sleep Resistance -->
+			<skill id="4439" level="3" /> <!-- Greater Hold Resistance -->
 			<skill id="4440" level="3" /> <!-- Greater Paralysis Resistance -->
 			<skill id="4441" level="3" /> <!-- Greater Mental Attack Resistance -->
-			<skill id="4438" level="3" /> <!-- Greater Sleep Resistance -->
-			<skill id="4437" level="3" /> <!-- Greater Bleed Resistance -->
-			<skill id="4436" level="3" /> <!-- Greater Poison Resistance -->
-			<skill id="4435" level="3" /> <!-- Greater Stun Resistance -->
-			<skill id="4439" level="3" /> <!-- Greater Hold Resistance -->
-			<skill id="4416" level="9" /> <!-- Demons -->
-			<skill id="4045" level="1" /> <!-- Full Magic Attack Resistance -->
+			<skill id="4494" level="1" /> <!-- Raid Boss -->
+			<skill id="5463" level="1" /> <!-- Water Attack -->
+			<skill id="14714" level="1" /> <!-- Raid Boss (Lv. 98) -->
+			<skill id="14765" level="4" /> <!-- Blood Siphon Resistance -->
 		</skillList>
 		<collision>
 			<radius normal="13" />
@@ -574,7 +580,7 @@
 			</drop>
 		</dropLists>
 	</npc>
-	<npc id="26110" level="99" type="RaidBoss" name="Veridan" title="Wise">
+	<npc id="26110" level="98" type="RaidBoss" name="Veridan" title="Wise">
 		<race>DEMONIC</race>
 		<sex>FEMALE</sex>
 		<acquire exp="239026788" sp="56213" />
@@ -592,18 +598,19 @@
 			</attribute>
 		</stats>
 		<skillList>
-			<skill id="5463" level="1" /> <!-- Water Attack -->
-			<skill id="4494" level="1" /> <!-- Raid Boss -->
-			<skill id="14714" level="1" /> <!-- Raid Boss (Lv. 98) -->
+			<skill id="4045" level="1" /> <!-- Full Magic Attack Resistance -->
+			<skill id="4416" level="9" /> <!-- Demons -->
+			<skill id="4435" level="3" /> <!-- Greater Stun Resistance -->
+			<skill id="4436" level="3" /> <!-- Greater Poison Resistance -->
+			<skill id="4437" level="3" /> <!-- Greater Bleed Resistance -->
+			<skill id="4438" level="3" /> <!-- Greater Sleep Resistance -->
+			<skill id="4439" level="3" /> <!-- Greater Hold Resistance -->
 			<skill id="4440" level="3" /> <!-- Greater Paralysis Resistance -->
 			<skill id="4441" level="3" /> <!-- Greater Mental Attack Resistance -->
-			<skill id="4438" level="3" /> <!-- Greater Sleep Resistance -->
-			<skill id="4437" level="3" /> <!-- Greater Bleed Resistance -->
-			<skill id="4436" level="3" /> <!-- Greater Poison Resistance -->
-			<skill id="4435" level="3" /> <!-- Greater Stun Resistance -->
-			<skill id="4439" level="3" /> <!-- Greater Hold Resistance -->
-			<skill id="4416" level="9" /> <!-- Demons -->
-			<skill id="4045" level="1" /> <!-- Full Magic Attack Resistance -->
+			<skill id="4494" level="1" /> <!-- Raid Boss -->
+			<skill id="5463" level="1" /> <!-- Water Attack -->
+			<skill id="14714" level="1" /> <!-- Raid Boss (Lv. 98) -->
+			<skill id="14765" level="4" /> <!-- Blood Siphon Resistance -->
 		</skillList>
 		<collision>
 			<radius normal="13" />
@@ -667,7 +674,7 @@
 			</drop>
 		</dropLists>
 	</npc>
-	<npc id="26111" level="99" type="RaidBoss" name="Kechi" title="Armed">
+	<npc id="26111" level="98" type="RaidBoss" name="Kechi" title="Armed">
 		<race>DEMONIC</race>
 		<sex>FEMALE</sex>
 		<acquire exp="10340290224" sp="20680600" />
@@ -685,19 +692,20 @@
 			</attribute>
 		</stats>
 		<skillList>
-			<skill id="5462" level="1" /> <!-- Fire Attack -->
+			<skill id="4045" level="1" /> <!-- Full Magic Attack Resistance -->
 			<skill id="4414" level="1" /> <!-- Heavy Armor Type -->
-			<skill id="4494" level="1" /> <!-- Raid Boss -->
-			<skill id="14715" level="1" /> <!-- Raid Boss (Lv. 98) -->
+			<skill id="4416" level="9" /> <!-- Demons -->
 			<skill id="4435" level="5" /> <!-- Greater Stun Resistance -->
 			<skill id="4438" level="5" /> <!-- Greater Sleep Resistance -->
+			<skill id="4439" level="5" /> <!-- Greater Hold Resistance -->
 			<skill id="4440" level="5" /> <!-- Greater Paralysis Resistance -->
 			<skill id="4441" level="5" /> <!-- Greater Mental Attack Resistance -->
-			<skill id="4439" level="5" /> <!-- Greater Hold Resistance -->
-			<skill id="4416" level="9" /> <!-- Demons -->
-			<skill id="14371" level="1" /> <!-- Flame Slash -->
+			<skill id="4494" level="1" /> <!-- Raid Boss -->
+			<skill id="5462" level="1" /> <!-- Fire Attack -->
 			<skill id="14370" level="1" /> <!-- Flame Earth Summon -->
-			<skill id="4045" level="1" /> <!-- Full Magic Attack Resistance -->
+			<skill id="14371" level="1" /> <!-- Flame Slash -->
+			<skill id="14715" level="1" /> <!-- Raid Boss (Lv. 98) -->
+			<skill id="14765" level="4" /> <!-- Blood Siphon Resistance -->
 		</skillList>
 		<dropLists>
 			<drop>
@@ -747,7 +755,7 @@
 			<height normal="29" />
 		</collision>
 	</npc>
-	<npc id="26112" level="99" type="RaidBoss" name="Kechi" title="Wealthy">
+	<npc id="26112" level="98" type="RaidBoss" name="Kechi" title="Wealthy">
 		<race>DEMONIC</race>
 		<sex>FEMALE</sex>
 		<acquire exp="10340290224" sp="20680600" />
@@ -765,19 +773,20 @@
 			</attribute>
 		</stats>
 		<skillList>
-			<skill id="5462" level="1" /> <!-- Fire Attack -->
+			<skill id="4045" level="1" /> <!-- Full Magic Attack Resistance -->
 			<skill id="4414" level="1" /> <!-- Heavy Armor Type -->
-			<skill id="4494" level="1" /> <!-- Raid Boss -->
-			<skill id="14715" level="1" /> <!-- Raid Boss (Lv. 98) -->
+			<skill id="4416" level="9" /> <!-- Demons -->
 			<skill id="4435" level="5" /> <!-- Greater Stun Resistance -->
 			<skill id="4438" level="5" /> <!-- Greater Sleep Resistance -->
+			<skill id="4439" level="5" /> <!-- Greater Hold Resistance -->
 			<skill id="4440" level="5" /> <!-- Greater Paralysis Resistance -->
 			<skill id="4441" level="5" /> <!-- Greater Mental Attack Resistance -->
-			<skill id="4439" level="5" /> <!-- Greater Hold Resistance -->
-			<skill id="4416" level="9" /> <!-- Demons -->
-			<skill id="14371" level="1" /> <!-- Flame Slash -->
+			<skill id="4494" level="1" /> <!-- Raid Boss -->
+			<skill id="5462" level="1" /> <!-- Fire Attack -->
 			<skill id="14370" level="1" /> <!-- Flame Earth Summon -->
-			<skill id="4045" level="1" /> <!-- Full Magic Attack Resistance -->
+			<skill id="14371" level="1" /> <!-- Flame Slash -->
+			<skill id="14715" level="1" /> <!-- Raid Boss (Lv. 98) -->
+			<skill id="14765" level="4" /> <!-- Blood Siphon Resistance -->
 		</skillList>
 		<dropLists>
 			<drop>
@@ -795,7 +804,7 @@
 			<height normal="29" />
 		</collision>
 	</npc>
-	<npc id="26113" level="99" type="RaidBoss" name="Kechi" title="Wise">
+	<npc id="26113" level="98" type="RaidBoss" name="Kechi" title="Wise">
 		<race>DEMONIC</race>
 		<sex>FEMALE</sex>
 		<acquire exp="10340290224" sp="20680600" />
@@ -813,19 +822,20 @@
 			</attribute>
 		</stats>
 		<skillList>
-			<skill id="5462" level="1" /> <!-- Fire Attack -->
+			<skill id="4045" level="1" /> <!-- Full Magic Attack Resistance -->
 			<skill id="4414" level="1" /> <!-- Heavy Armor Type -->
-			<skill id="4494" level="1" /> <!-- Raid Boss -->
-			<skill id="14715" level="1" /> <!-- Raid Boss (Lv. 98) -->
+			<skill id="4416" level="9" /> <!-- Demons -->
 			<skill id="4435" level="5" /> <!-- Greater Stun Resistance -->
 			<skill id="4438" level="5" /> <!-- Greater Sleep Resistance -->
+			<skill id="4439" level="5" /> <!-- Greater Hold Resistance -->
 			<skill id="4440" level="5" /> <!-- Greater Paralysis Resistance -->
 			<skill id="4441" level="5" /> <!-- Greater Mental Attack Resistance -->
-			<skill id="4439" level="5" /> <!-- Greater Hold Resistance -->
-			<skill id="4416" level="9" /> <!-- Demons -->
-			<skill id="14371" level="1" /> <!-- Flame Slash -->
+			<skill id="4494" level="1" /> <!-- Raid Boss -->
+			<skill id="5462" level="1" /> <!-- Fire Attack -->
 			<skill id="14370" level="1" /> <!-- Flame Earth Summon -->
-			<skill id="4045" level="1" /> <!-- Full Magic Attack Resistance -->
+			<skill id="14371" level="1" /> <!-- Flame Slash -->
+			<skill id="14715" level="1" /> <!-- Raid Boss (Lv. 98) -->
+			<skill id="14765" level="4" /> <!-- Blood Siphon Resistance -->
 		</skillList>
 		<dropLists>
 			<drop>
@@ -892,7 +902,7 @@
 			<height normal="29" />
 		</collision>
 	</npc>
-	<npc id="26114" level="99" type="RaidBoss" name="Michaela" title="Armed">
+	<npc id="26114" level="98" type="RaidBoss" name="Michaela" title="Armed">
 		<!-- Source: www.l2wiki.com -->
 		<race>UNDEAD</race>
 		<acquire exp="15510435336" sp="31020949" raidPoints="0" />
@@ -910,15 +920,17 @@
 			</attribute>
 		</stats>
 		<skillList>
+			<skill id="4045" level="1" /> <!-- Full Magic Attack Resistance -->
 			<skill id="4416" level="1" /> <!-- Undead -->
-			<skill id="5467" level="1" /> <!-- Dark Attack -->
-			<skill id="4494" level="1" /> <!-- Raid Boss -->
-			<skill id="14716" level="1" /> <!-- Raid Boss (Lv. 98) -->
-			<skill id="4435" level="5" /> <!-- High Stun Attack Resistance -->
+			<skill id="4435" level="5" /> <!-- Greater Stun Resistance -->
 			<skill id="4438" level="5" /> <!-- Greater Sleep Resistance -->
+			<skill id="4439" level="5" /> <!-- Greater Hold Resistance -->
 			<skill id="4440" level="5" /> <!-- Greater Paralysis Resistance -->
 			<skill id="4441" level="5" /> <!-- Greater Mental Attack Resistance -->
-			<skill id="4439" level="5" /> <!-- Greater Hold Resistance -->
+			<skill id="4494" level="1" /> <!-- Raid Boss -->
+			<skill id="5467" level="1" /> <!-- Dark Attack -->
+			<skill id="14716" level="1" /> <!-- Raid Boss (Lv. 98) -->
+			<skill id="14765" level="4" /> <!-- Blood Siphon Resistance -->
 		</skillList>
 		<dropLists>
 			<drop>
@@ -965,7 +977,7 @@
 			<height normal="32" />
 		</collision>
 	</npc>
-	<npc id="26115" level="99" type="RaidBoss" name="Michaela" title="Wealthy">
+	<npc id="26115" level="98" type="RaidBoss" name="Michaela" title="Wealthy">
 		<!-- Source: www.l2wiki.com -->
 		<race>UNDEAD</race>
 		<sex>FEMALE</sex>
@@ -984,15 +996,17 @@
 			</attribute>
 		</stats>
 		<skillList>
+			<skill id="4045" level="1" /> <!-- Full Magic Attack Resistance -->
 			<skill id="4416" level="1" /> <!-- Undead -->
-			<skill id="5467" level="1" /> <!-- Dark Attack -->
-			<skill id="4494" level="1" /> <!-- Raid Boss -->
-			<skill id="14716" level="1" /> <!-- Raid Boss (Lv. 98) -->
-			<skill id="4435" level="5" /> <!-- High Stun Attack Resistance -->
+			<skill id="4435" level="5" /> <!-- Greater Stun Resistance -->
 			<skill id="4438" level="5" /> <!-- Greater Sleep Resistance -->
+			<skill id="4439" level="5" /> <!-- Greater Hold Resistance -->
 			<skill id="4440" level="5" /> <!-- Greater Paralysis Resistance -->
 			<skill id="4441" level="5" /> <!-- Greater Mental Attack Resistance -->
-			<skill id="4439" level="5" /> <!-- Greater Hold Resistance -->
+			<skill id="4494" level="1" /> <!-- Raid Boss -->
+			<skill id="5467" level="1" /> <!-- Dark Attack -->
+			<skill id="14716" level="1" /> <!-- Raid Boss (Lv. 98) -->
+			<skill id="14765" level="4" /> <!-- Blood Siphon Resistance -->
 		</skillList>
 		<dropLists>
 			<drop>
@@ -1007,7 +1021,7 @@
 			<height normal="32" />
 		</collision>
 	</npc>
-	<npc id="26116" level="99" type="RaidBoss" name="Michaela" title="Wise">
+	<npc id="26116" level="98" type="RaidBoss" name="Michaela" title="Wise">
 		<!-- Source: www.l2wiki.com -->
 		<race>UNDEAD</race>
 		<sex>FEMALE</sex>
@@ -1026,15 +1040,17 @@
 			</attribute>
 		</stats>
 		<skillList>
+			<skill id="4045" level="1" /> <!-- Full Magic Attack Resistance -->
 			<skill id="4416" level="1" /> <!-- Undead -->
-			<skill id="5467" level="1" /> <!-- Dark Attack -->
-			<skill id="4494" level="1" /> <!-- Raid Boss -->
-			<skill id="14716" level="1" /> <!-- Raid Boss (Lv. 98) -->
-			<skill id="4435" level="5" /> <!-- High Stun Attack Resistance -->
+			<skill id="4435" level="5" /> <!-- Greater Stun Resistance -->
 			<skill id="4438" level="5" /> <!-- Greater Sleep Resistance -->
+			<skill id="4439" level="5" /> <!-- Greater Hold Resistance -->
 			<skill id="4440" level="5" /> <!-- Greater Paralysis Resistance -->
 			<skill id="4441" level="5" /> <!-- Greater Mental Attack Resistance -->
-			<skill id="4439" level="5" /> <!-- Greater Hold Resistance -->
+			<skill id="4494" level="1" /> <!-- Raid Boss -->
+			<skill id="5467" level="1" /> <!-- Dark Attack -->
+			<skill id="14716" level="1" /> <!-- Raid Boss (Lv. 98) -->
+			<skill id="14765" level="4" /> <!-- Blood Siphon Resistance -->
 		</skillList>
 		<dropLists>
 			<drop>
@@ -1116,15 +1132,14 @@
 			</attribute>
 		</stats>
 		<skillList>
+			<skill id="4045" level="1" /> <!-- Full Magic Attack Resistance -->
 			<skill id="4416" level="1" /> <!-- Undead -->
-			<skill id="5467" level="1" /> <!-- Dark Attack -->
-			<skill id="4494" level="1" /> <!-- Raid Boss -->
-			<skill id="14716" level="1" /> <!-- Raid Boss (Lv. 98) -->
-			<skill id="4435" level="5" /> <!-- High Stun Attack Resistance -->
+			<skill id="4435" level="5" /> <!-- Greater Stun Resistance -->
 			<skill id="4438" level="5" /> <!-- Greater Sleep Resistance -->
+			<skill id="4439" level="5" /> <!-- Greater Hold Resistance -->
 			<skill id="4440" level="5" /> <!-- Greater Paralysis Resistance -->
 			<skill id="4441" level="5" /> <!-- Greater Mental Attack Resistance -->
-			<skill id="4439" level="5" /> <!-- Greater Hold Resistance -->
+			<skill id="5467" level="1" /> <!-- Dark Attack -->
 		</skillList>
 		<collision>
 			<radius normal="15" />
@@ -1149,15 +1164,14 @@
 			</attribute>
 		</stats>
 		<skillList>
+			<skill id="4045" level="1" /> <!-- Full Magic Attack Resistance -->
 			<skill id="4416" level="1" /> <!-- Undead -->
-			<skill id="5467" level="1" /> <!-- Dark Attack -->
-			<skill id="4494" level="1" /> <!-- Raid Boss -->
-			<skill id="14716" level="1" /> <!-- Raid Boss (Lv. 98) -->
-			<skill id="4435" level="5" /> <!-- High Stun Attack Resistance -->
+			<skill id="4435" level="5" /> <!-- Greater Stun Resistance -->
 			<skill id="4438" level="5" /> <!-- Greater Sleep Resistance -->
+			<skill id="4439" level="5" /> <!-- Greater Hold Resistance -->
 			<skill id="4440" level="5" /> <!-- Greater Paralysis Resistance -->
 			<skill id="4441" level="5" /> <!-- Greater Mental Attack Resistance -->
-			<skill id="4439" level="5" /> <!-- Greater Hold Resistance -->
+			<skill id="5467" level="1" /> <!-- Dark Attack -->
 		</skillList>
 		<dropLists>
 			<lucky>
@@ -1187,15 +1201,14 @@
 			</attribute>
 		</stats>
 		<skillList>
+			<skill id="4045" level="1" /> <!-- Full Magic Attack Resistance -->
 			<skill id="4416" level="1" /> <!-- Undead -->
-			<skill id="5467" level="1" /> <!-- Dark Attack -->
-			<skill id="4494" level="1" /> <!-- Raid Boss -->
-			<skill id="14716" level="1" /> <!-- Raid Boss (Lv. 98) -->
-			<skill id="4435" level="5" /> <!-- High Stun Attack Resistance -->
+			<skill id="4435" level="5" /> <!-- Greater Stun Resistance -->
 			<skill id="4438" level="5" /> <!-- Greater Sleep Resistance -->
+			<skill id="4439" level="5" /> <!-- Greater Hold Resistance -->
 			<skill id="4440" level="5" /> <!-- Greater Paralysis Resistance -->
 			<skill id="4441" level="5" /> <!-- Greater Mental Attack Resistance -->
-			<skill id="4439" level="5" /> <!-- Greater Hold Resistance -->
+			<skill id="5467" level="1" /> <!-- Dark Attack -->
 		</skillList>
 		<dropLists>
 			<lucky>

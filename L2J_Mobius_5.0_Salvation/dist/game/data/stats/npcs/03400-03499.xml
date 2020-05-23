@@ -29,11 +29,11 @@
 		</stats>
 		<status attackable="false" undying="false" />
 		<skillList>
-			<skill id="4790" level="1" /> <!-- Raid Boss (Lv. 23) -->
-			<skill id="4416" level="6" /> <!-- Humanoids -->
-			<skill id="4494" level="1" /> <!-- Raid Boss -->
+			<skill id="4045" level="1" /> <!-- Full Magic Attack Resistance -->
+			<skill id="4414" level="3" /> <!-- Light Armor Type -->
 			<skill id="4415" level="3" /> <!-- One-handed Sword -->
-			<skill id="4045" level="1" /> <!-- Resist Full Magic Attack -->
+			<skill id="4416" level="6" /> <!-- Humanoids -->
+			<skill id="4727" level="2" /> <!-- Stun -->
 		</skillList>
 		<ai clanHelpRange="300" />
 		<collision>
@@ -64,10 +64,12 @@
 		</stats>
 		<status attackable="false" undying="false" />
 		<skillList>
+			<skill id="4045" level="1" /> <!-- Full Magic Attack Resistance -->
+			<skill id="4191" level="2" /> <!-- (Wind Strike) -->
+			<skill id="4198" level="2" /> <!-- Poison -->
 			<skill id="4414" level="3" /> <!-- Light Armor Type -->
-			<skill id="4416" level="6" /> <!-- Humanoids -->
 			<skill id="4415" level="3" /> <!-- One-handed Sword -->
-			<skill id="4045" level="1" /> <!-- Resist Full Magic Attack -->
+			<skill id="4416" level="6" /> <!-- Humanoids -->
 		</skillList>
 		<ai clanHelpRange="300" />
 		<collision>
@@ -97,10 +99,11 @@
 		</stats>
 		<status attackable="false" undying="false" />
 		<skillList>
+			<skill id="4045" level="1" /> <!-- Full Magic Attack Resistance -->
 			<skill id="4414" level="3" /> <!-- Light Armor Type -->
-			<skill id="4416" level="6" /> <!-- Humanoids -->
 			<skill id="4415" level="3" /> <!-- One-handed Sword -->
-			<skill id="4045" level="1" /> <!-- Resist Full Magic Attack -->
+			<skill id="4416" level="6" /> <!-- Humanoids -->
+			<skill id="4727" level="2" /> <!-- Stun -->
 		</skillList>
 		<ai clanHelpRange="300" />
 		<collision>
@@ -137,11 +140,10 @@
 		</stats>
 		<status attackable="false" undying="false" />
 		<skillList>
-			<skill id="4929" level="1" /> <!-- Raid Boss (Lv. 23) -->
+			<skill id="4045" level="1" /> <!-- Full Magic Attack Resistance -->
+			<skill id="4414" level="3" /> <!-- Light Armor Type -->
+			<skill id="4415" level="9" /> <!-- Bow -->
 			<skill id="4416" level="6" /> <!-- Humanoids -->
-			<skill id="4494" level="1" /> <!-- Raid Boss -->
-			<skill id="4415" level="3" /> <!-- One-handed Sword -->
-			<skill id="4045" level="1" /> <!-- Resist Full Magic Attack -->
 		</skillList>
 		<ai clanHelpRange="300" />
 		<collision>
@@ -200,10 +202,10 @@
 		</stats>
 		<status attackable="false" undying="false" />
 		<skillList>
+			<skill id="4045" level="1" /> <!-- Full Magic Attack Resistance -->
 			<skill id="4414" level="3" /> <!-- Light Armor Type -->
-			<skill id="4416" level="6" /> <!-- Humanoids -->
 			<skill id="4415" level="3" /> <!-- One-handed Sword -->
-			<skill id="4045" level="1" /> <!-- Resist Full Magic Attack -->
+			<skill id="4416" level="6" /> <!-- Humanoids -->
 		</skillList>
 		<ai clanHelpRange="300" />
 		<collision>
@@ -230,10 +232,10 @@
 		</stats>
 		<status attackable="false" undying="false" />
 		<skillList>
+			<skill id="4045" level="1" /> <!-- Full Magic Attack Resistance -->
 			<skill id="4414" level="3" /> <!-- Light Armor Type -->
+			<skill id="4415" level="9" /> <!-- Bow -->
 			<skill id="4416" level="6" /> <!-- Humanoids -->
-			<skill id="4415" level="9" /> <!-- Bows -->
-			<skill id="4045" level="1" /> <!-- Resist Full Magic Attack -->
 		</skillList>
 		<ai clanHelpRange="300" />
 		<collision>
@@ -270,11 +272,11 @@
 		</stats>
 		<status attackable="false" undying="false" />
 		<skillList>
-			<skill id="4927" level="1" /> <!-- Raid Boss (Lv. 21) -->
+			<skill id="4045" level="1" /> <!-- Full Magic Attack Resistance -->
+			<skill id="4414" level="3" /> <!-- Light Armor Type -->
+			<skill id="4415" level="5" /> <!-- Blunt Weapon -->
 			<skill id="4416" level="6" /> <!-- Humanoids -->
-			<skill id="4494" level="1" /> <!-- Raid Boss -->
-			<skill id="4415" level="7" /> <!-- Dagger -->
-			<skill id="4045" level="1" /> <!-- Resist Full Magic Attack -->
+			<skill id="4783" level="2" /> <!-- Heal -->
 		</skillList>
 		<ai clanHelpRange="300" />
 		<collision>
@@ -327,10 +329,11 @@
 		</stats>
 		<status attackable="false" undying="false" />
 		<skillList>
+			<skill id="4045" level="1" /> <!-- Full Magic Attack Resistance -->
 			<skill id="4414" level="3" /> <!-- Light Armor Type -->
-			<skill id="4416" level="6" /> <!-- Humanoids -->
 			<skill id="4415" level="7" /> <!-- Dagger -->
-			<skill id="4045" level="1" /> <!-- Resist Full Magic Attack -->
+			<skill id="4416" level="6" /> <!-- Humanoids -->
+			<skill id="4733" level="2" /> <!-- Mortal Blow -->
 		</skillList>
 		<ai clanHelpRange="300" />
 		<collision>
@@ -361,10 +364,11 @@
 		</stats>
 		<status attackable="false" undying="false" />
 		<skillList>
+			<skill id="4045" level="1" /> <!-- Full Magic Attack Resistance -->
 			<skill id="4414" level="3" /> <!-- Light Armor Type -->
-			<skill id="4416" level="6" /> <!-- Humanoids -->
 			<skill id="4415" level="5" /> <!-- Blunt Weapon -->
-			<skill id="4045" level="1" /> <!-- Resist Full Magic Attack -->
+			<skill id="4416" level="6" /> <!-- Humanoids -->
+			<skill id="4783" level="2" /> <!-- Heal -->
 		</skillList>
 		<ai clanHelpRange="300" />
 		<collision>
@@ -402,13 +406,12 @@
 		</stats>
 		<status attackable="false" undying="false" />
 		<skillList>
-			<skill id="4853" level="1" /> <!-- Raid Boss (Lv. 25) -->
-			<skill id="4416" level="1" /> <!-- Undead -->
-			<skill id="4275" level="2" /> <!-- Holy Attack Vulnerability -->
+			<skill id="4045" level="1" /> <!-- Full Magic Attack Resistance -->
+			<skill id="4275" level="2" /> <!-- Holy Vulnerability -->
 			<skill id="4278" level="1" /> <!-- Dark Attack -->
-			<skill id="4494" level="1" /> <!-- Raid Boss -->
+			<skill id="4414" level="3" /> <!-- Light Armor Type -->
 			<skill id="4415" level="3" /> <!-- One-handed Sword -->
-			<skill id="4045" level="1" /> <!-- Resist Full Magic Attack -->
+			<skill id="4416" level="1" /> <!-- Undead -->
 		</skillList>
 		<ai clanHelpRange="300" />
 		<collision>
@@ -461,12 +464,12 @@
 		</stats>
 		<status attackable="false" undying="false" />
 		<skillList>
+			<skill id="4045" level="1" /> <!-- Full Magic Attack Resistance -->
 			<skill id="4278" level="1" /> <!-- Dark Attack -->
 			<skill id="4333" level="5" /> <!-- Dark Attack Resistance -->
-			<skill id="4416" level="9" /> <!-- Demons -->
-			<skill id="4780" level="1" /> <!-- Heal -->
 			<skill id="4415" level="3" /> <!-- One-handed Sword -->
-			<skill id="4045" level="1" /> <!-- Resist Full Magic Attack -->
+			<skill id="4416" level="9" /> <!-- Demons -->
+			<skill id="4780" level="2" /> <!-- Heal -->
 		</skillList>
 		<ai clanHelpRange="300" />
 		<collision>
@@ -494,12 +497,12 @@
 		</stats>
 		<status attackable="false" undying="false" />
 		<skillList>
-			<skill id="4414" level="3" /> <!-- Light Armor Type -->
-			<skill id="4275" level="2" /> <!-- Holy Attack Vulnerability -->
+			<skill id="4045" level="1" /> <!-- Full Magic Attack Resistance -->
+			<skill id="4275" level="2" /> <!-- Holy Vulnerability -->
 			<skill id="4278" level="1" /> <!-- Dark Attack -->
-			<skill id="4416" level="1" /> <!-- Undead -->
+			<skill id="4414" level="3" /> <!-- Light Armor Type -->
 			<skill id="4415" level="3" /> <!-- One-handed Sword -->
-			<skill id="4045" level="1" /> <!-- Resist Full Magic Attack -->
+			<skill id="4416" level="1" /> <!-- Undead -->
 		</skillList>
 		<ai clanHelpRange="300" />
 		<collision>
@@ -536,13 +539,12 @@
 		</stats>
 		<status attackable="false" undying="false" />
 		<skillList>
-			<skill id="4846" level="1" /> <!-- Raid Boss (Lv. 25) -->
-			<skill id="4416" level="1" /> <!-- Undead -->
-			<skill id="4275" level="2" /> <!-- Holy Attack Vulnerability -->
+			<skill id="4045" level="1" /> <!-- Full Magic Attack Resistance -->
+			<skill id="4275" level="2" /> <!-- Holy Vulnerability -->
 			<skill id="4278" level="1" /> <!-- Dark Attack -->
-			<skill id="4494" level="1" /> <!-- Raid Boss -->
-			<skill id="4415" level="1" /> <!-- Bare Hands -->
-			<skill id="4045" level="1" /> <!-- Resist Full Magic Attack -->
+			<skill id="4414" level="3" /> <!-- Light Armor Type -->
+			<skill id="4415" level="3" /> <!-- One-handed Sword -->
+			<skill id="4416" level="1" /> <!-- Undead -->
 		</skillList>
 		<ai clanHelpRange="300" />
 		<collision>
@@ -599,12 +601,13 @@
 		</stats>
 		<status attackable="false" undying="false" />
 		<skillList>
-			<skill id="4414" level="3" /> <!-- Light Armor Type -->
-			<skill id="4275" level="2" /> <!-- Holy Attack Vulnerability -->
+			<skill id="4045" level="1" /> <!-- Full Magic Attack Resistance -->
+			<skill id="4275" level="2" /> <!-- Holy Vulnerability -->
 			<skill id="4278" level="1" /> <!-- Dark Attack -->
+			<skill id="4414" level="3" /> <!-- Light Armor Type -->
+			<skill id="4415" level="9" /> <!-- Bow -->
 			<skill id="4416" level="1" /> <!-- Undead -->
-			<skill id="4415" level="9" /> <!-- Bows -->
-			<skill id="4045" level="1" /> <!-- Resist Full Magic Attack -->
+			<skill id="4756" level="2" /> <!-- Power Shot -->
 		</skillList>
 		<ai clanHelpRange="300" />
 		<collision>
@@ -632,12 +635,12 @@
 		</stats>
 		<status attackable="false" undying="false" />
 		<skillList>
-			<skill id="4414" level="3" /> <!-- Light Armor Type -->
-			<skill id="4275" level="2" /> <!-- Holy Attack Vulnerability -->
+			<skill id="4045" level="1" /> <!-- Full Magic Attack Resistance -->
+			<skill id="4275" level="2" /> <!-- Holy Vulnerability -->
 			<skill id="4278" level="1" /> <!-- Dark Attack -->
-			<skill id="4416" level="1" /> <!-- Undead -->
+			<skill id="4414" level="3" /> <!-- Light Armor Type -->
 			<skill id="4415" level="3" /> <!-- One-handed Sword -->
-			<skill id="4045" level="1" /> <!-- Resist Full Magic Attack -->
+			<skill id="4416" level="1" /> <!-- Undead -->
 		</skillList>
 		<ai clanHelpRange="300" />
 		<collision>
@@ -674,15 +677,15 @@
 		</stats>
 		<status attackable="false" undying="false" />
 		<skillList>
-			<skill id="4899" level="1" /> <!-- Raid Boss (Lv. 20) -->
-			<skill id="4416" level="1" /> <!-- Undead -->
-			<skill id="4275" level="2" /> <!-- Holy Attack Vulnerability -->
-			<skill id="4278" level="1" /> <!-- Dark Attack -->
+			<skill id="4045" level="1" /> <!-- Full Magic Attack Resistance -->
 			<skill id="4273" level="3" /> <!-- Dagger/Rapier Resistance -->
 			<skill id="4274" level="1" /> <!-- Blunt Weapon Vulnerability -->
-			<skill id="4494" level="1" /> <!-- Raid Boss -->
+			<skill id="4275" level="2" /> <!-- Holy Vulnerability -->
+			<skill id="4278" level="1" /> <!-- Dark Attack -->
+			<skill id="4414" level="3" /> <!-- Light Armor Type -->
 			<skill id="4415" level="1" /> <!-- Bare Hands -->
-			<skill id="4045" level="1" /> <!-- Resist Full Magic Attack -->
+			<skill id="4416" level="1" /> <!-- Undead -->
+			<skill id="4783" level="1" /> <!-- Heal -->
 		</skillList>
 		<ai clanHelpRange="300" />
 		<collision>
@@ -737,14 +740,15 @@
 		</stats>
 		<status attackable="false" undying="false" />
 		<skillList>
-			<skill id="4414" level="3" /> <!-- Light Armor Type -->
-			<skill id="4275" level="2" /> <!-- Holy Attack Vulnerability -->
-			<skill id="4278" level="1" /> <!-- Dark Attack -->
+			<skill id="4045" level="1" /> <!-- Full Magic Attack Resistance -->
 			<skill id="4273" level="3" /> <!-- Dagger/Rapier Resistance -->
 			<skill id="4274" level="1" /> <!-- Blunt Weapon Vulnerability -->
-			<skill id="4416" level="1" /> <!-- Undead -->
+			<skill id="4275" level="2" /> <!-- Holy Vulnerability -->
+			<skill id="4278" level="1" /> <!-- Dark Attack -->
+			<skill id="4414" level="3" /> <!-- Light Armor Type -->
 			<skill id="4415" level="1" /> <!-- Bare Hands -->
-			<skill id="4045" level="1" /> <!-- Resist Full Magic Attack -->
+			<skill id="4416" level="1" /> <!-- Undead -->
+			<skill id="4743" level="1" /> <!-- Power Strike -->
 		</skillList>
 		<ai clanHelpRange="300" />
 		<collision>
@@ -775,14 +779,15 @@
 		</stats>
 		<status attackable="false" undying="false" />
 		<skillList>
-			<skill id="4414" level="3" /> <!-- Light Armor Type -->
-			<skill id="4275" level="2" /> <!-- Holy Attack Vulnerability -->
-			<skill id="4278" level="1" /> <!-- Dark Attack -->
+			<skill id="4045" level="1" /> <!-- Full Magic Attack Resistance -->
 			<skill id="4273" level="3" /> <!-- Dagger/Rapier Resistance -->
 			<skill id="4274" level="1" /> <!-- Blunt Weapon Vulnerability -->
-			<skill id="4416" level="1" /> <!-- Undead -->
+			<skill id="4275" level="2" /> <!-- Holy Vulnerability -->
+			<skill id="4278" level="1" /> <!-- Dark Attack -->
+			<skill id="4414" level="3" /> <!-- Light Armor Type -->
 			<skill id="4415" level="1" /> <!-- Bare Hands -->
-			<skill id="4045" level="1" /> <!-- Resist Full Magic Attack -->
+			<skill id="4416" level="1" /> <!-- Undead -->
+			<skill id="4783" level="1" /> <!-- Heal -->
 		</skillList>
 		<ai clanHelpRange="300" />
 		<collision>
@@ -864,13 +869,12 @@
 		</stats>
 		<status attackable="false" undying="false" />
 		<skillList>
-			<skill id="4847" level="1" /> <!-- Raid Boss (Lv. 35) -->
-			<skill id="4416" level="9" /> <!-- Demons -->
+			<skill id="4045" level="1" /> <!-- Full Magic Attack Resistance -->
 			<skill id="4278" level="1" /> <!-- Dark Attack -->
 			<skill id="4333" level="5" /> <!-- Dark Attack Resistance -->
-			<skill id="4494" level="1" /> <!-- Raid Boss -->
-			<skill id="4415" level="1" /> <!-- Bare Hands -->
-			<skill id="4045" level="1" /> <!-- Resist Full Magic Attack -->
+			<skill id="4414" level="3" /> <!-- Light Armor Type -->
+			<skill id="4415" level="3" /> <!-- One-handed Sword -->
+			<skill id="4416" level="9" /> <!-- Demons -->
 		</skillList>
 		<ai clanHelpRange="300" />
 		<collision>
@@ -924,10 +928,11 @@
 		</stats>
 		<status attackable="false" undying="false" />
 		<skillList>
+			<skill id="4045" level="1" /> <!-- Full Magic Attack Resistance -->
 			<skill id="4414" level="3" /> <!-- Light Armor Type -->
-			<skill id="4416" level="13" /> <!-- Fairies -->
 			<skill id="4415" level="3" /> <!-- One-handed Sword -->
-			<skill id="4045" level="1" /> <!-- Resist Full Magic Attack -->
+			<skill id="4416" level="13" /> <!-- Fairies -->
+			<skill id="4731" level="3" /> <!-- Mortal Blow -->
 		</skillList>
 		<ai clanHelpRange="300" />
 		<collision>
@@ -954,12 +959,12 @@
 		</stats>
 		<status attackable="false" undying="false" />
 		<skillList>
-			<skill id="4414" level="3" /> <!-- Light Armor Type -->
+			<skill id="4045" level="1" /> <!-- Full Magic Attack Resistance -->
 			<skill id="4278" level="1" /> <!-- Dark Attack -->
 			<skill id="4333" level="5" /> <!-- Dark Attack Resistance -->
-			<skill id="4416" level="9" /> <!-- Demons -->
+			<skill id="4414" level="3" /> <!-- Light Armor Type -->
 			<skill id="4415" level="3" /> <!-- One-handed Sword -->
-			<skill id="4045" level="1" /> <!-- Resist Full Magic Attack -->
+			<skill id="4416" level="9" /> <!-- Demons -->
 		</skillList>
 		<ai clanHelpRange="300" />
 		<collision>
@@ -997,13 +1002,13 @@
 		</stats>
 		<status attackable="false" undying="false" />
 		<skillList>
-			<skill id="4869" level="1" /> <!-- Raid Boss (Lv. 35) -->
-			<skill id="4416" level="9" /> <!-- Demons -->
-			<skill id="4275" level="2" /> <!-- Holy Attack Vulnerability -->
+			<skill id="4045" level="1" /> <!-- Full Magic Attack Resistance -->
+			<skill id="4275" level="2" /> <!-- Holy Vulnerability -->
 			<skill id="4278" level="1" /> <!-- Dark Attack -->
-			<skill id="4494" level="1" /> <!-- Raid Boss -->
+			<skill id="4414" level="3" /> <!-- Light Armor Type -->
 			<skill id="4415" level="5" /> <!-- Blunt Weapon -->
-			<skill id="4045" level="1" /> <!-- Resist Full Magic Attack -->
+			<skill id="4416" level="1" /> <!-- Undead -->
+			<skill id="4727" level="3" /> <!-- Stun -->
 		</skillList>
 		<collision>
 			<radius normal="18" />
@@ -1033,12 +1038,14 @@
 		</stats>
 		<status attackable="false" undying="false" />
 		<skillList>
-			<skill id="4414" level="3" /> <!-- Light Armor Type -->
-			<skill id="4275" level="2" /> <!-- Holy Attack Vulnerability -->
+			<skill id="4045" level="1" /> <!-- Full Magic Attack Resistance -->
+			<skill id="4196" level="3" /> <!-- Decrease Speed -->
+			<skill id="4203" level="3" /> <!-- Decrease Speed -->
+			<skill id="4275" level="2" /> <!-- Holy Vulnerability -->
 			<skill id="4278" level="1" /> <!-- Dark Attack -->
-			<skill id="4416" level="1" /> <!-- Undead -->
+			<skill id="4414" level="3" /> <!-- Light Armor Type -->
 			<skill id="4415" level="5" /> <!-- Blunt Weapon -->
-			<skill id="4045" level="1" /> <!-- Resist Full Magic Attack -->
+			<skill id="4416" level="1" /> <!-- Undead -->
 		</skillList>
 		<collision>
 			<radius normal="20" />
@@ -1067,12 +1074,13 @@
 		</stats>
 		<status attackable="false" undying="false" />
 		<skillList>
-			<skill id="4414" level="3" /> <!-- Light Armor Type -->
-			<skill id="4275" level="2" /> <!-- Holy Attack Vulnerability -->
+			<skill id="4045" level="1" /> <!-- Full Magic Attack Resistance -->
+			<skill id="4275" level="2" /> <!-- Holy Vulnerability -->
 			<skill id="4278" level="1" /> <!-- Dark Attack -->
-			<skill id="4416" level="1" /> <!-- Undead -->
+			<skill id="4414" level="3" /> <!-- Light Armor Type -->
 			<skill id="4415" level="5" /> <!-- Blunt Weapon -->
-			<skill id="4045" level="1" /> <!-- Resist Full Magic Attack -->
+			<skill id="4416" level="1" /> <!-- Undead -->
+			<skill id="4727" level="3" /> <!-- Stun -->
 		</skillList>
 		<collision>
 			<radius normal="30" grown="15.5" />
@@ -1109,15 +1117,15 @@
 		</stats>
 		<status attackable="false" undying="false" />
 		<skillList>
-			<skill id="4947" level="1" /> <!-- Raid Boss (Lv. 60) -->
-			<skill id="4416" level="1" /> <!-- Undead -->
-			<skill id="4275" level="2" /> <!-- Holy Attack Vulnerability -->
-			<skill id="4278" level="1" /> <!-- Dark Attack -->
+			<skill id="4045" level="1" /> <!-- Full Magic Attack Resistance -->
 			<skill id="4273" level="3" /> <!-- Dagger/Rapier Resistance -->
 			<skill id="4274" level="1" /> <!-- Blunt Weapon Vulnerability -->
-			<skill id="4494" level="1" /> <!-- Raid Boss -->
+			<skill id="4275" level="2" /> <!-- Holy Vulnerability -->
+			<skill id="4278" level="1" /> <!-- Dark Attack -->
+			<skill id="4414" level="3" /> <!-- Light Armor Type -->
 			<skill id="4415" level="3" /> <!-- One-handed Sword -->
-			<skill id="4045" level="1" /> <!-- Resist Full Magic Attack -->
+			<skill id="4416" level="1" /> <!-- Undead -->
+			<skill id="4743" level="5" /> <!-- Power Strike -->
 		</skillList>
 		<ai clanHelpRange="300" />
 		<collision>
@@ -1148,14 +1156,15 @@
 		</stats>
 		<status attackable="false" undying="false" />
 		<skillList>
-			<skill id="4414" level="3" /> <!-- Light Armor Type -->
-			<skill id="4275" level="2" /> <!-- Holy Attack Vulnerability -->
-			<skill id="4278" level="1" /> <!-- Dark Attack -->
+			<skill id="4045" level="1" /> <!-- Full Magic Attack Resistance -->
 			<skill id="4273" level="3" /> <!-- Dagger/Rapier Resistance -->
 			<skill id="4274" level="1" /> <!-- Blunt Weapon Vulnerability -->
-			<skill id="4416" level="1" /> <!-- Undead -->
+			<skill id="4275" level="2" /> <!-- Holy Vulnerability -->
+			<skill id="4278" level="1" /> <!-- Dark Attack -->
+			<skill id="4414" level="3" /> <!-- Light Armor Type -->
 			<skill id="4415" level="7" /> <!-- Dagger -->
-			<skill id="4045" level="1" /> <!-- Resist Full Magic Attack -->
+			<skill id="4416" level="1" /> <!-- Undead -->
+			<skill id="4733" level="5" /> <!-- Mortal Blow -->
 		</skillList>
 		<ai clanHelpRange="300" />
 		<collision>
@@ -1186,14 +1195,15 @@
 		</stats>
 		<status attackable="false" undying="false" />
 		<skillList>
-			<skill id="4414" level="3" /> <!-- Light Armor Type -->
-			<skill id="4275" level="2" /> <!-- Holy Attack Vulnerability -->
-			<skill id="4278" level="1" /> <!-- Dark Attack -->
+			<skill id="4045" level="1" /> <!-- Full Magic Attack Resistance -->
 			<skill id="4273" level="3" /> <!-- Dagger/Rapier Resistance -->
 			<skill id="4274" level="1" /> <!-- Blunt Weapon Vulnerability -->
-			<skill id="4416" level="1" /> <!-- Undead -->
+			<skill id="4275" level="2" /> <!-- Holy Vulnerability -->
+			<skill id="4278" level="1" /> <!-- Dark Attack -->
+			<skill id="4414" level="3" /> <!-- Light Armor Type -->
 			<skill id="4415" level="3" /> <!-- One-handed Sword -->
-			<skill id="4045" level="1" /> <!-- Resist Full Magic Attack -->
+			<skill id="4416" level="1" /> <!-- Undead -->
+			<skill id="4743" level="5" /> <!-- Power Strike -->
 		</skillList>
 		<ai clanHelpRange="300" />
 		<collision>
@@ -1230,13 +1240,11 @@
 		</stats>
 		<status attackable="false" undying="false" />
 		<skillList>
-			<skill id="4859" level="1" /> <!-- Raid Boss (Lv. 59) -->
-			<skill id="4416" level="9" /> <!-- Demons -->
+			<skill id="4045" level="1" /> <!-- Full Magic Attack Resistance -->
+			<skill id="4275" level="2" /> <!-- Holy Vulnerability -->
 			<skill id="4278" level="1" /> <!-- Dark Attack -->
-			<skill id="4333" level="5" /> <!-- Dark Attack Resistance -->
-			<skill id="4494" level="1" /> <!-- Raid Boss -->
 			<skill id="4415" level="3" /> <!-- One-handed Sword -->
-			<skill id="4045" level="1" /> <!-- Resist Full Magic Attack -->
+			<skill id="4416" level="1" /> <!-- Undead -->
 		</skillList>
 		<ai clanHelpRange="300" />
 		<collision>
@@ -1292,11 +1300,12 @@
 		</stats>
 		<status attackable="false" undying="false" />
 		<skillList>
+			<skill id="4045" level="1" /> <!-- Full Magic Attack Resistance -->
 			<skill id="4278" level="1" /> <!-- Dark Attack -->
 			<skill id="4333" level="5" /> <!-- Dark Attack Resistance -->
-			<skill id="4416" level="9" /> <!-- Demons -->
 			<skill id="4415" level="3" /> <!-- One-handed Sword -->
-			<skill id="4045" level="1" /> <!-- Resist Full Magic Attack -->
+			<skill id="4416" level="9" /> <!-- Demons -->
+			<skill id="4786" level="5" /> <!-- Chant of Life -->
 		</skillList>
 		<ai clanHelpRange="300" />
 		<collision>
@@ -1324,11 +1333,11 @@
 		</stats>
 		<status attackable="false" undying="false" />
 		<skillList>
-			<skill id="4275" level="2" /> <!-- Holy Attack Vulnerability -->
+			<skill id="4045" level="1" /> <!-- Full Magic Attack Resistance -->
+			<skill id="4275" level="2" /> <!-- Holy Vulnerability -->
 			<skill id="4278" level="1" /> <!-- Dark Attack -->
-			<skill id="4416" level="1" /> <!-- Undead -->
 			<skill id="4415" level="3" /> <!-- One-handed Sword -->
-			<skill id="4045" level="1" /> <!-- Resist Full Magic Attack -->
+			<skill id="4416" level="1" /> <!-- Undead -->
 		</skillList>
 		<ai clanHelpRange="300" />
 		<collision>
@@ -1404,11 +1413,9 @@
 		</stats>
 		<status attackable="false" undying="false" />
 		<skillList>
-			<skill id="4840" level="1" /> <!-- Raid Boss (Lv. 50) -->
-			<skill id="4416" level="6" /> <!-- Humanoids -->
-			<skill id="4494" level="1" /> <!-- Raid Boss -->
+			<skill id="4045" level="1" /> <!-- Full Magic Attack Resistance -->
 			<skill id="4415" level="3" /> <!-- One-handed Sword -->
-			<skill id="4045" level="1" /> <!-- Resist Full Magic Attack -->
+			<skill id="4416" level="6" /> <!-- Humanoids -->
 		</skillList>
 		<ai clanHelpRange="300" />
 		<collision>
@@ -1469,10 +1476,11 @@
 		</stats>
 		<status attackable="false" undying="false" />
 		<skillList>
+			<skill id="4045" level="1" /> <!-- Full Magic Attack Resistance -->
 			<skill id="4414" level="3" /> <!-- Light Armor Type -->
+			<skill id="4415" level="9" /> <!-- Bow -->
 			<skill id="4416" level="6" /> <!-- Humanoids -->
-			<skill id="4415" level="9" /> <!-- Bows -->
-			<skill id="4045" level="1" /> <!-- Resist Full Magic Attack -->
+			<skill id="4761" level="4" /> <!-- Stun -->
 		</skillList>
 		<ai clanHelpRange="300" />
 		<collision>
@@ -1499,9 +1507,9 @@
 		</stats>
 		<status attackable="false" undying="false" />
 		<skillList>
-			<skill id="4416" level="6" /> <!-- Humanoids -->
+			<skill id="4045" level="1" /> <!-- Full Magic Attack Resistance -->
 			<skill id="4415" level="3" /> <!-- One-handed Sword -->
-			<skill id="4045" level="1" /> <!-- Resist Full Magic Attack -->
+			<skill id="4416" level="6" /> <!-- Humanoids -->
 		</skillList>
 		<ai clanHelpRange="300" />
 		<collision>
@@ -1538,11 +1546,9 @@
 		</stats>
 		<status attackable="false" undying="false" />
 		<skillList>
-			<skill id="4799" level="1" /> <!-- Raid Boss (Lv. 49) -->
+			<skill id="4045" level="1" /> <!-- Full Magic Attack Resistance -->
+			<skill id="4415" level="3" /> <!-- One-handed Sword -->
 			<skill id="4416" level="6" /> <!-- Humanoids -->
-			<skill id="4494" level="1" /> <!-- Raid Boss -->
-			<skill id="4415" level="5" /> <!-- Blunt Weapon -->
-			<skill id="4045" level="1" /> <!-- Resist Full Magic Attack -->
 		</skillList>
 		<ai clanHelpRange="300" />
 		<collision>
@@ -1602,10 +1608,11 @@
 		</stats>
 		<status attackable="false" undying="false" />
 		<skillList>
+			<skill id="4045" level="1" /> <!-- Full Magic Attack Resistance -->
 			<skill id="4414" level="3" /> <!-- Light Armor Type -->
+			<skill id="4415" level="9" /> <!-- Bow -->
 			<skill id="4416" level="6" /> <!-- Humanoids -->
-			<skill id="4415" level="9" /> <!-- Bows -->
-			<skill id="4045" level="1" /> <!-- Resist Full Magic Attack -->
+			<skill id="4761" level="4" /> <!-- Stun -->
 		</skillList>
 		<ai clanHelpRange="300" />
 		<collision>
@@ -1632,9 +1639,9 @@
 		</stats>
 		<status attackable="false" undying="false" />
 		<skillList>
-			<skill id="4416" level="6" /> <!-- Humanoids -->
+			<skill id="4045" level="1" /> <!-- Full Magic Attack Resistance -->
 			<skill id="4415" level="3" /> <!-- One-handed Sword -->
-			<skill id="4045" level="1" /> <!-- Resist Full Magic Attack -->
+			<skill id="4416" level="6" /> <!-- Humanoids -->
 		</skillList>
 		<ai clanHelpRange="300" />
 		<collision>
@@ -1670,11 +1677,11 @@
 		</stats>
 		<status attackable="false" undying="false" />
 		<skillList>
-			<skill id="4810" level="1" /> <!-- Raid Boss (Lv. 45) -->
-			<skill id="4416" level="3" /> <!-- Beast -->
-			<skill id="4494" level="1" /> <!-- Raid Boss -->
+			<skill id="4045" level="1" /> <!-- Full Magic Attack Resistance -->
+			<skill id="4275" level="2" /> <!-- Holy Vulnerability -->
+			<skill id="4278" level="1" /> <!-- Dark Attack -->
 			<skill id="4415" level="3" /> <!-- One-handed Sword -->
-			<skill id="4045" level="1" /> <!-- Resist Full Magic Attack -->
+			<skill id="4416" level="1" /> <!-- Undead -->
 		</skillList>
 		<ai clanHelpRange="300" />
 		<collision>
@@ -1734,12 +1741,13 @@
 		</stats>
 		<status attackable="false" undying="false" />
 		<skillList>
-			<skill id="4414" level="3" /> <!-- Light Armor Type -->
-			<skill id="4275" level="2" /> <!-- Holy Attack Vulnerability -->
+			<skill id="4045" level="1" /> <!-- Full Magic Attack Resistance -->
+			<skill id="4275" level="2" /> <!-- Holy Vulnerability -->
 			<skill id="4278" level="1" /> <!-- Dark Attack -->
+			<skill id="4414" level="3" /> <!-- Light Armor Type -->
+			<skill id="4415" level="9" /> <!-- Bow -->
 			<skill id="4416" level="1" /> <!-- Undead -->
-			<skill id="4415" level="9" /> <!-- Bows -->
-			<skill id="4045" level="1" /> <!-- Resist Full Magic Attack -->
+			<skill id="4757" level="5" /> <!-- Power Shot -->
 		</skillList>
 		<ai clanHelpRange="300" />
 		<collision>
@@ -1767,11 +1775,11 @@
 		</stats>
 		<status attackable="false" undying="false" />
 		<skillList>
-			<skill id="4275" level="2" /> <!-- Holy Attack Vulnerability -->
+			<skill id="4045" level="1" /> <!-- Full Magic Attack Resistance -->
+			<skill id="4275" level="2" /> <!-- Holy Vulnerability -->
 			<skill id="4278" level="1" /> <!-- Dark Attack -->
-			<skill id="4416" level="1" /> <!-- Undead -->
 			<skill id="4415" level="3" /> <!-- One-handed Sword -->
-			<skill id="4045" level="1" /> <!-- Resist Full Magic Attack -->
+			<skill id="4416" level="1" /> <!-- Undead -->
 		</skillList>
 		<ai clanHelpRange="300" />
 		<collision>
@@ -1810,11 +1818,10 @@
 		</stats>
 		<status attackable="false" undying="false" />
 		<skillList>
-			<skill id="4863" level="1" /> <!-- Raid Boss (Lv. 43) -->
+			<skill id="4045" level="1" /> <!-- Full Magic Attack Resistance -->
+			<skill id="4414" level="3" /> <!-- Light Armor Type -->
+			<skill id="4415" level="9" /> <!-- Bow -->
 			<skill id="4416" level="6" /> <!-- Humanoids -->
-			<skill id="4494" level="1" /> <!-- Raid Boss -->
-			<skill id="4415" level="5" /> <!-- Blunt Weapon -->
-			<skill id="4045" level="1" /> <!-- Resist Full Magic Attack -->
 		</skillList>
 		<ai clanHelpRange="300" />
 		<collision>
@@ -1871,9 +1878,10 @@
 		</stats>
 		<status attackable="false" undying="false" />
 		<skillList>
-			<skill id="4416" level="6" /> <!-- Humanoids -->
+			<skill id="4045" level="1" /> <!-- Full Magic Attack Resistance -->
 			<skill id="4415" level="3" /> <!-- One-handed Sword -->
-			<skill id="4045" level="1" /> <!-- Resist Full Magic Attack -->
+			<skill id="4416" level="6" /> <!-- Humanoids -->
+			<skill id="4721" level="4" /> <!-- Power Strike -->
 		</skillList>
 		<ai clanHelpRange="300" />
 		<collision>
@@ -1900,10 +1908,10 @@
 		</stats>
 		<status attackable="false" undying="false" />
 		<skillList>
+			<skill id="4045" level="1" /> <!-- Full Magic Attack Resistance -->
 			<skill id="4414" level="3" /> <!-- Light Armor Type -->
+			<skill id="4415" level="9" /> <!-- Bow -->
 			<skill id="4416" level="6" /> <!-- Humanoids -->
-			<skill id="4415" level="9" /> <!-- Bows -->
-			<skill id="4045" level="1" /> <!-- Resist Full Magic Attack -->
 		</skillList>
 		<ai clanHelpRange="300" />
 		<collision>
@@ -1939,11 +1947,11 @@
 		</stats>
 		<status attackable="false" undying="false" />
 		<skillList>
-			<skill id="4954" level="1" /> <!-- Raid Boss (Lv. 25) -->
-			<skill id="4416" level="6" /> <!-- Humanoids -->
-			<skill id="4494" level="1" /> <!-- Raid Boss -->
+			<skill id="4045" level="1" /> <!-- Full Magic Attack Resistance -->
+			<skill id="4414" level="3" /> <!-- Light Armor Type -->
 			<skill id="4415" level="1" /> <!-- Bare Hands -->
-			<skill id="4045" level="1" /> <!-- Resist Full Magic Attack -->
+			<skill id="4416" level="4" /> <!-- Animals -->
+			<skill id="4728" level="2" /> <!-- Stun -->
 		</skillList>
 		<ai clanHelpRange="300" />
 		<collision>
@@ -1994,10 +2002,11 @@
 		</stats>
 		<status attackable="false" undying="false" />
 		<skillList>
+			<skill id="4045" level="1" /> <!-- Full Magic Attack Resistance -->
 			<skill id="4414" level="3" /> <!-- Light Armor Type -->
-			<skill id="4416" level="4" /> <!-- Animals -->
 			<skill id="4415" level="3" /> <!-- One-handed Sword -->
-			<skill id="4045" level="1" /> <!-- Resist Full Magic Attack -->
+			<skill id="4416" level="4" /> <!-- Animals -->
+			<skill id="4743" level="2" /> <!-- Power Strike -->
 		</skillList>
 		<ai clanHelpRange="300" />
 		<collision>
@@ -2026,10 +2035,11 @@
 		</stats>
 		<status attackable="false" undying="false" />
 		<skillList>
+			<skill id="4045" level="1" /> <!-- Full Magic Attack Resistance -->
 			<skill id="4414" level="3" /> <!-- Light Armor Type -->
-			<skill id="4416" level="4" /> <!-- Animals -->
 			<skill id="4415" level="1" /> <!-- Bare Hands -->
-			<skill id="4045" level="1" /> <!-- Resist Full Magic Attack -->
+			<skill id="4416" level="4" /> <!-- Animals -->
+			<skill id="4728" level="2" /> <!-- Stun -->
 		</skillList>
 		<ai clanHelpRange="300" />
 		<collision>
@@ -2066,13 +2076,13 @@
 		</stats>
 		<status attackable="false" undying="false" />
 		<skillList>
-			<skill id="5026" level="1" /> <!-- Raid Boss (Lv. 39) -->
-			<skill id="4416" level="1" /> <!-- Undead -->
+			<skill id="4045" level="1" /> <!-- Full Magic Attack Resistance -->
 			<skill id="4278" level="1" /> <!-- Dark Attack -->
 			<skill id="4333" level="3" /> <!-- Dark Attack Resistance -->
-			<skill id="4494" level="1" /> <!-- Raid Boss -->
+			<skill id="4414" level="3" /> <!-- Light Armor Type -->
 			<skill id="4415" level="3" /> <!-- One-handed Sword -->
-			<skill id="4045" level="1" /> <!-- Resist Full Magic Attack -->
+			<skill id="4416" level="1" /> <!-- Undead -->
+			<skill id="4723" level="3" /> <!-- Power Strike -->
 		</skillList>
 		<ai clanHelpRange="300" />
 		<collision>
@@ -2134,12 +2144,13 @@
 		</stats>
 		<status attackable="false" undying="false" />
 		<skillList>
-			<skill id="4414" level="3" /> <!-- Light Armor Type -->
+			<skill id="4045" level="1" /> <!-- Full Magic Attack Resistance -->
 			<skill id="4278" level="1" /> <!-- Dark Attack -->
 			<skill id="4333" level="3" /> <!-- Dark Attack Resistance -->
-			<skill id="4416" level="1" /> <!-- Undead -->
+			<skill id="4414" level="3" /> <!-- Light Armor Type -->
 			<skill id="4415" level="3" /> <!-- One-handed Sword -->
-			<skill id="4045" level="1" /> <!-- Resist Full Magic Attack -->
+			<skill id="4416" level="1" /> <!-- Undead -->
+			<skill id="4723" level="3" /> <!-- Power Strike -->
 		</skillList>
 		<ai clanHelpRange="300" />
 		<collision>
@@ -2176,11 +2187,12 @@
 		</stats>
 		<status attackable="false" undying="false" />
 		<skillList>
-			<skill id="5027" level="1" /> <!-- Raid Boss (Lv. 37) -->
-			<skill id="4416" level="6" /> <!-- Humanoids -->
-			<skill id="4494" level="1" /> <!-- Raid Boss -->
+			<skill id="4045" level="1" /> <!-- Full Magic Attack Resistance -->
+			<skill id="4194" level="3" /> <!-- Aura Burn -->
+			<skill id="4202" level="3" /> <!-- Hold -->
+			<skill id="4414" level="3" /> <!-- Light Armor Type -->
 			<skill id="4415" level="5" /> <!-- Blunt Weapon -->
-			<skill id="4045" level="1" /> <!-- Resist Full Magic Attack -->
+			<skill id="4416" level="6" /> <!-- Humanoids -->
 		</skillList>
 		<ai clanHelpRange="300" />
 		<collision>
@@ -2231,10 +2243,11 @@
 		</stats>
 		<status attackable="false" undying="false" />
 		<skillList>
+			<skill id="4045" level="1" /> <!-- Full Magic Attack Resistance -->
 			<skill id="4414" level="3" /> <!-- Light Armor Type -->
-			<skill id="4416" level="6" /> <!-- Humanoids -->
 			<skill id="4415" level="5" /> <!-- Blunt Weapon -->
-			<skill id="4045" level="1" /> <!-- Resist Full Magic Attack -->
+			<skill id="4416" level="6" /> <!-- Humanoids -->
+			<skill id="4728" level="3" /> <!-- Stun -->
 		</skillList>
 		<ai clanHelpRange="300" />
 		<collision>
@@ -2265,10 +2278,12 @@
 		</stats>
 		<status attackable="false" undying="false" />
 		<skillList>
+			<skill id="4045" level="1" /> <!-- Full Magic Attack Resistance -->
+			<skill id="4194" level="3" /> <!-- Aura Burn -->
+			<skill id="4202" level="3" /> <!-- Hold -->
 			<skill id="4414" level="3" /> <!-- Light Armor Type -->
-			<skill id="4416" level="6" /> <!-- Humanoids -->
 			<skill id="4415" level="5" /> <!-- Blunt Weapon -->
-			<skill id="4045" level="1" /> <!-- Resist Full Magic Attack -->
+			<skill id="4416" level="6" /> <!-- Humanoids -->
 		</skillList>
 		<ai clanHelpRange="300" />
 		<collision>
@@ -2305,11 +2320,10 @@
 		</stats>
 		<status attackable="false" undying="false" />
 		<skillList>
-			<skill id="4903" level="1" /> <!-- Raid Boss (Lv. 80) -->
+			<skill id="4045" level="1" /> <!-- Full Magic Attack Resistance -->
+			<skill id="4414" level="3" /> <!-- Light Armor Type -->
+			<skill id="4415" level="7" /> <!-- Dagger -->
 			<skill id="4416" level="6" /> <!-- Humanoids -->
-			<skill id="4494" level="1" /> <!-- Raid Boss -->
-			<skill id="4415" level="6" /> <!-- Blunt Weapon -->
-			<skill id="4045" level="1" /> <!-- Resist Full Magic Attack -->
 		</skillList>
 		<ai clanHelpRange="300" />
 		<collision>
@@ -2374,10 +2388,10 @@
 		</stats>
 		<status attackable="false" undying="false" />
 		<skillList>
+			<skill id="4045" level="1" /> <!-- Full Magic Attack Resistance -->
 			<skill id="4414" level="3" /> <!-- Light Armor Type -->
+			<skill id="4415" level="9" /> <!-- Bow -->
 			<skill id="4416" level="6" /> <!-- Humanoids -->
-			<skill id="4415" level="9" /> <!-- Bows -->
-			<skill id="4045" level="1" /> <!-- Resist Full Magic Attack -->
 		</skillList>
 		<ai clanHelpRange="300" />
 		<collision>
@@ -2404,10 +2418,10 @@
 		</stats>
 		<status attackable="false" undying="false" />
 		<skillList>
+			<skill id="4045" level="1" /> <!-- Full Magic Attack Resistance -->
 			<skill id="4414" level="3" /> <!-- Light Armor Type -->
-			<skill id="4416" level="6" /> <!-- Humanoids -->
 			<skill id="4415" level="7" /> <!-- Dagger -->
-			<skill id="4045" level="1" /> <!-- Resist Full Magic Attack -->
+			<skill id="4416" level="6" /> <!-- Humanoids -->
 		</skillList>
 		<ai clanHelpRange="300" />
 		<collision>
@@ -2446,11 +2460,10 @@
 		</stats>
 		<status attackable="false" undying="false" />
 		<skillList>
-			<skill id="4907" level="1" /> <!-- Raid Boss (Lv. 80) -->
+			<skill id="4045" level="1" /> <!-- Full Magic Attack Resistance -->
+			<skill id="4414" level="3" /> <!-- Light Armor Type -->
+			<skill id="4415" level="7" /> <!-- Dagger -->
 			<skill id="4416" level="6" /> <!-- Humanoids -->
-			<skill id="4494" level="1" /> <!-- Raid Boss -->
-			<skill id="4415" level="6" /> <!-- Blunt Weapon -->
-			<skill id="4045" level="1" /> <!-- Resist Full Magic Attack -->
 		</skillList>
 		<ai clanHelpRange="300" />
 		<collision>
@@ -2521,10 +2534,11 @@
 		</stats>
 		<status attackable="false" undying="false" />
 		<skillList>
+			<skill id="4045" level="1" /> <!-- Full Magic Attack Resistance -->
 			<skill id="4414" level="3" /> <!-- Light Armor Type -->
-			<skill id="4416" level="6" /> <!-- Humanoids -->
 			<skill id="4415" level="3" /> <!-- One-handed Sword -->
-			<skill id="4045" level="1" /> <!-- Resist Full Magic Attack -->
+			<skill id="4416" level="6" /> <!-- Humanoids -->
+			<skill id="4741" level="8" /> <!-- Power Strike -->
 		</skillList>
 		<ai clanHelpRange="300" />
 		<collision>
@@ -2551,10 +2565,10 @@
 		</stats>
 		<status attackable="false" undying="false" />
 		<skillList>
+			<skill id="4045" level="1" /> <!-- Full Magic Attack Resistance -->
 			<skill id="4414" level="3" /> <!-- Light Armor Type -->
-			<skill id="4416" level="6" /> <!-- Humanoids -->
 			<skill id="4415" level="7" /> <!-- Dagger -->
-			<skill id="4045" level="1" /> <!-- Resist Full Magic Attack -->
+			<skill id="4416" level="6" /> <!-- Humanoids -->
 		</skillList>
 		<ai clanHelpRange="300" />
 		<collision>
@@ -2674,13 +2688,11 @@
 		</stats>
 		<status attackable="false" undying="false" />
 		<skillList>
-			<skill id="4809" level="1" /> <!-- Raid Boss (Lv. 75) -->
-			<skill id="4416" level="9" /> <!-- Demons -->
+			<skill id="4045" level="1" /> <!-- Full Magic Attack Resistance -->
+			<skill id="4275" level="2" /> <!-- Holy Vulnerability -->
 			<skill id="4278" level="1" /> <!-- Dark Attack -->
-			<skill id="4333" level="5" /> <!-- Dark Attack Resistance -->
-			<skill id="4494" level="1" /> <!-- Raid Boss -->
-			<skill id="4415" level="1" /> <!-- Bare Hands -->
-			<skill id="4045" level="1" /> <!-- Resist Full Magic Attack -->
+			<skill id="4415" level="3" /> <!-- One-handed Sword -->
+			<skill id="4416" level="1" /> <!-- Undead -->
 		</skillList>
 		<ai clanHelpRange="300" />
 		<collision>
@@ -2711,11 +2723,12 @@
 		</stats>
 		<status attackable="false" undying="false" />
 		<skillList>
-			<skill id="4275" level="2" /> <!-- Holy Attack Vulnerability -->
+			<skill id="4045" level="1" /> <!-- Full Magic Attack Resistance -->
+			<skill id="4168" level="7" /> <!-- Power Strike -->
+			<skill id="4275" level="2" /> <!-- Holy Vulnerability -->
 			<skill id="4278" level="1" /> <!-- Dark Attack -->
-			<skill id="4416" level="1" /> <!-- Undead -->
 			<skill id="4415" level="3" /> <!-- One-handed Sword -->
-			<skill id="4045" level="1" /> <!-- Resist Full Magic Attack -->
+			<skill id="4416" level="1" /> <!-- Undead -->
 		</skillList>
 		<ai clanHelpRange="300" />
 		<collision>
@@ -2743,11 +2756,11 @@
 		</stats>
 		<status attackable="false" undying="false" />
 		<skillList>
-			<skill id="4275" level="2" /> <!-- Holy Attack Vulnerability -->
+			<skill id="4045" level="1" /> <!-- Full Magic Attack Resistance -->
+			<skill id="4275" level="2" /> <!-- Holy Vulnerability -->
 			<skill id="4278" level="1" /> <!-- Dark Attack -->
-			<skill id="4416" level="1" /> <!-- Undead -->
 			<skill id="4415" level="3" /> <!-- One-handed Sword -->
-			<skill id="4045" level="1" /> <!-- Resist Full Magic Attack -->
+			<skill id="4416" level="1" /> <!-- Undead -->
 		</skillList>
 		<ai clanHelpRange="300" />
 		<collision>
@@ -2784,11 +2797,13 @@
 		</stats>
 		<status attackable="false" undying="false" />
 		<skillList>
-			<skill id="4962" level="1" /> <!-- Raid Boss (Lv. 70) -->
-			<skill id="4416" level="10" /> <!-- Dragons -->
-			<skill id="4494" level="1" /> <!-- Raid Boss -->
-			<skill id="4415" level="3" /> <!-- One-handed Sword -->
-			<skill id="4045" level="1" /> <!-- Resist Full Magic Attack -->
+			<skill id="4045" level="1" /> <!-- Full Magic Attack Resistance -->
+			<skill id="4278" level="1" /> <!-- Dark Attack -->
+			<skill id="4333" level="5" /> <!-- Dark Attack Resistance -->
+			<skill id="4414" level="3" /> <!-- Light Armor Type -->
+			<skill id="4415" level="1" /> <!-- Bare Hands -->
+			<skill id="4416" level="9" /> <!-- Demons -->
+			<skill id="4780" level="6" /> <!-- Heal -->
 		</skillList>
 		<ai clanHelpRange="300" />
 		<collision>
@@ -2818,10 +2833,12 @@
 		</stats>
 		<status attackable="false" undying="false" />
 		<skillList>
+			<skill id="4045" level="1" /> <!-- Full Magic Attack Resistance -->
+			<skill id="4196" level="6" /> <!-- Decrease Speed -->
+			<skill id="4204" level="6" /> <!-- Bleed -->
 			<skill id="4414" level="3" /> <!-- Light Armor Type -->
-			<skill id="4416" level="10" /> <!-- Dragons -->
 			<skill id="4415" level="3" /> <!-- One-handed Sword -->
-			<skill id="4045" level="1" /> <!-- Resist Full Magic Attack -->
+			<skill id="4416" level="10" /> <!-- Dragons -->
 		</skillList>
 		<ai clanHelpRange="300" />
 		<collision>
@@ -2852,12 +2869,13 @@
 		</stats>
 		<status attackable="false" undying="false" />
 		<skillList>
-			<skill id="4414" level="3" /> <!-- Light Armor Type -->
+			<skill id="4045" level="1" /> <!-- Full Magic Attack Resistance -->
 			<skill id="4278" level="1" /> <!-- Dark Attack -->
 			<skill id="4333" level="5" /> <!-- Dark Attack Resistance -->
-			<skill id="4416" level="9" /> <!-- Demons -->
+			<skill id="4414" level="3" /> <!-- Light Armor Type -->
 			<skill id="4415" level="1" /> <!-- Bare Hands -->
-			<skill id="4045" level="1" /> <!-- Resist Full Magic Attack -->
+			<skill id="4416" level="9" /> <!-- Demons -->
+			<skill id="4780" level="6" /> <!-- Heal -->
 		</skillList>
 		<ai clanHelpRange="300" />
 		<collision>
@@ -2892,14 +2910,14 @@
 		</stats>
 		<status attackable="false" undying="false" />
 		<skillList>
-			<skill id="4983" level="1" /> <!-- Raid Boss (Lv. 25) -->
-			<skill id="4416" level="9" /> <!-- Demons -->
-			<skill id="4444" level="2" /> <!-- Greater Bow/Crossbow Resistance -->
+			<skill id="4045" level="1" /> <!-- Full Magic Attack Resistance -->
 			<skill id="4273" level="3" /> <!-- Dagger/Rapier Resistance -->
 			<skill id="4274" level="1" /> <!-- Blunt Weapon Vulnerability -->
-			<skill id="4494" level="1" /> <!-- Raid Boss -->
+			<skill id="4414" level="3" /> <!-- Light Armor Type -->
 			<skill id="4415" level="1" /> <!-- Bare Hands -->
-			<skill id="4045" level="1" /> <!-- Resist Full Magic Attack -->
+			<skill id="4416" level="9" /> <!-- Demons -->
+			<skill id="4444" level="2" /> <!-- Greater Bow/Crossbow Resistance -->
+			<skill id="4743" level="2" /> <!-- Power Strike -->
 		</skillList>
 		<ai clanHelpRange="300" />
 		<collision>
@@ -2954,13 +2972,14 @@
 		</stats>
 		<status attackable="false" undying="false" />
 		<skillList>
-			<skill id="4414" level="3" /> <!-- Light Armor Type -->
-			<skill id="4444" level="2" /> <!-- Greater Bow/Crossbow Resistance -->
+			<skill id="4045" level="1" /> <!-- Full Magic Attack Resistance -->
 			<skill id="4273" level="3" /> <!-- Dagger/Rapier Resistance -->
 			<skill id="4274" level="1" /> <!-- Blunt Weapon Vulnerability -->
-			<skill id="4416" level="9" /> <!-- Demons -->
+			<skill id="4414" level="3" /> <!-- Light Armor Type -->
 			<skill id="4415" level="1" /> <!-- Bare Hands -->
-			<skill id="4045" level="1" /> <!-- Resist Full Magic Attack -->
+			<skill id="4416" level="9" /> <!-- Demons -->
+			<skill id="4444" level="2" /> <!-- Greater Bow/Crossbow Resistance -->
+			<skill id="4743" level="2" /> <!-- Power Strike -->
 		</skillList>
 		<ai clanHelpRange="300" />
 		<collision>
@@ -3223,14 +3242,13 @@
 			<height normal="27.5" />
 		</collision>
 		<skillList>
-			<skill id="15413" level="1" /> <!-- Raid Boss (Lv. 96) -->
-			<skill id="4416" level="2" /> <!-- Magic Creatures -->
-			<skill id="5465" level="1" /> <!-- Earth Attack -->
 			<skill id="4414" level="1" /> <!-- Heavy Armor Type -->
-			<skill id="4494" level="1" /> <!-- Raid Boss -->
 			<skill id="4415" level="1" /> <!-- Bare Hands -->
-			<skill id="14765" level="4" /> <!-- Blood Siphon Resistance -->
-			<skill id="4045" level="1" /> <!-- Resist Full Magic Attack -->
+			<skill id="4416" level="4" /> <!-- Animals -->
+			<skill id="5465" level="1" /> <!-- Earth Attack -->
+			<skill id="14765" level="3" /> <!-- Blood Siphon Resistance -->
+			<skill id="23555" level="2" /> <!-- (Power Smash) -->
+			<skill id="23557" level="2" /> <!-- Energy Burst -->
 		</skillList>
 		<ai clanHelpRange="300" aggroRange="450">
 			<clanList>
@@ -3317,11 +3335,13 @@
 		</stats>
 		<status attackable="false" undying="false" />
 		<skillList>
+			<skill id="4414" level="1" /> <!-- Heavy Armor Type -->
+			<skill id="4415" level="1" /> <!-- Bare Hands -->
 			<skill id="4416" level="2" /> <!-- Magic Creatures -->
 			<skill id="5465" level="1" /> <!-- Earth Attack -->
-			<skill id="4415" level="1" /> <!-- Bare Hands -->
 			<skill id="14765" level="3" /> <!-- Blood Siphon Resistance -->
-			<skill id="4414" level="1" /> <!-- Heavy Armor Type -->
+			<skill id="23545" level="2" /> <!-- Whirlwind -->
+			<skill id="23546" level="2" /> <!-- (Battle Cry) -->
 		</skillList>
 		<ai clanHelpRange="300" aggroRange="300">
 			<clanList>
@@ -3355,11 +3375,11 @@
 		</stats>
 		<status attackable="false" undying="false" />
 		<skillList>
+			<skill id="4414" level="1" /> <!-- Heavy Armor Type -->
+			<skill id="4415" level="1" /> <!-- Bare Hands -->
 			<skill id="4416" level="7" /> <!-- Spirits -->
 			<skill id="5465" level="1" /> <!-- Earth Attack -->
-			<skill id="4415" level="1" /> <!-- Bare Hands -->
 			<skill id="14765" level="3" /> <!-- Blood Siphon Resistance -->
-			<skill id="4414" level="1" /> <!-- Heavy Armor Type -->
 		</skillList>
 		<ai clanHelpRange="300" aggroRange="300">
 			<clanList>
@@ -3397,11 +3417,13 @@
 		</stats>
 		<status attackable="false" undying="false" />
 		<skillList>
+			<skill id="4414" level="1" /> <!-- Heavy Armor Type -->
+			<skill id="4415" level="1" /> <!-- Bare Hands -->
 			<skill id="4416" level="4" /> <!-- Animals -->
 			<skill id="5465" level="1" /> <!-- Earth Attack -->
-			<skill id="4415" level="1" /> <!-- Bare Hands -->
 			<skill id="14765" level="3" /> <!-- Blood Siphon Resistance -->
-			<skill id="4414" level="1" /> <!-- Heavy Armor Type -->
+			<skill id="23555" level="2" /> <!-- (Power Smash) -->
+			<skill id="23557" level="2" /> <!-- Energy Burst -->
 		</skillList>
 		<ai clanHelpRange="300" aggroRange="300">
 			<clanList>
@@ -3454,12 +3476,12 @@
 			<height normal="37.5" />
 		</collision>
 		<skillList>
-			<skill id="4416" level="2" /> <!-- Magic Creatures -->
-			<skill id="5465" level="1" /> <!-- Earth Attack -->
-			<skill id="4415" level="1" /> <!-- Bare Hands -->
-			<skill id="14765" level="4" /> <!-- Blood Siphon Resistance -->
 			<skill id="4414" level="1" /> <!-- Heavy Armor Type -->
-			<skill id="4045" level="1" /> <!-- Resist Full Magic Attack -->
+			<skill id="4415" level="1" /> <!-- Bare Hands -->
+			<skill id="4416" level="7" /> <!-- Spirits -->
+			<skill id="5465" level="1" /> <!-- Earth Attack -->
+			<skill id="14765" level="3" /> <!-- Blood Siphon Resistance -->
+			<skill id="23547" level="1" /> <!-- (Power Strike) -->
 		</skillList>
 		<ai clanHelpRange="300" aggroRange="450">
 			<clanList>
@@ -3508,11 +3530,12 @@
 		</stats>
 		<status attackable="false" undying="false" />
 		<skillList>
+			<skill id="4414" level="1" /> <!-- Heavy Armor Type -->
+			<skill id="4415" level="1" /> <!-- Bare Hands -->
 			<skill id="4416" level="7" /> <!-- Spirits -->
 			<skill id="5465" level="1" /> <!-- Earth Attack -->
-			<skill id="4415" level="1" /> <!-- Bare Hands -->
 			<skill id="14765" level="3" /> <!-- Blood Siphon Resistance -->
-			<skill id="4414" level="1" /> <!-- Heavy Armor Type -->
+			<skill id="23547" level="1" /> <!-- (Power Strike) -->
 		</skillList>
 		<ai clanHelpRange="300" aggroRange="300">
 			<clanList>
@@ -3557,12 +3580,12 @@
 		</stats>
 		<status attackable="true" />
 		<skillList>
+			<skill id="4414" level="1" /> <!-- Heavy Armor Type -->
+			<skill id="4415" level="1" /> <!-- Bare Hands -->
 			<skill id="4416" level="7" /> <!-- Spirits -->
 			<skill id="5465" level="1" /> <!-- Earth Attack -->
-			<skill id="4415" level="1" /> <!-- Bare Hands -->
-			<skill id="14765" level="4" /> <!-- Blood Siphon Resistance -->
-			<skill id="4414" level="1" /> <!-- Heavy Armor Type -->
-			<skill id="4045" level="1" /> <!-- Resist Full Magic Attack -->
+			<skill id="14765" level="3" /> <!-- Blood Siphon Resistance -->
+			<skill id="23553" level="1" /> <!-- (Wind Strike) -->
 		</skillList>
 		<ai clanHelpRange="300" aggroRange="300">
 			<clanList>
@@ -3610,11 +3633,12 @@
 		</stats>
 		<status attackable="false" undying="false" />
 		<skillList>
+			<skill id="4414" level="1" /> <!-- Heavy Armor Type -->
+			<skill id="4415" level="1" /> <!-- Bare Hands -->
 			<skill id="4416" level="7" /> <!-- Spirits -->
 			<skill id="5465" level="1" /> <!-- Earth Attack -->
-			<skill id="4415" level="1" /> <!-- Bare Hands -->
 			<skill id="14765" level="3" /> <!-- Blood Siphon Resistance -->
-			<skill id="4414" level="1" /> <!-- Heavy Armor Type -->
+			<skill id="23553" level="1" /> <!-- (Wind Strike) -->
 		</skillList>
 		<ai clanHelpRange="300" aggroRange="300">
 			<clanList>
@@ -3659,12 +3683,12 @@
 		</stats>
 		<status attackable="true" />
 		<skillList>
-			<skill id="4416" level="4" /> <!-- Animals -->
-			<skill id="5465" level="1" /> <!-- Earth Attack -->
-			<skill id="4415" level="1" /> <!-- Bare Hands -->
-			<skill id="14765" level="4" /> <!-- Blood Siphon Resistance -->
 			<skill id="4414" level="1" /> <!-- Heavy Armor Type -->
-			<skill id="4045" level="1" /> <!-- Resist Full Magic Attack -->
+			<skill id="4415" level="1" /> <!-- Bare Hands -->
+			<skill id="4416" level="7" /> <!-- Spirits -->
+			<skill id="5465" level="1" /> <!-- Earth Attack -->
+			<skill id="14765" level="3" /> <!-- Blood Siphon Resistance -->
+			<skill id="23559" level="1" /> <!-- Mega Storm Strike -->
 		</skillList>
 		<ai clanHelpRange="300" aggroRange="450">
 			<clanList>
@@ -3710,11 +3734,12 @@
 		</stats>
 		<status attackable="false" undying="false" />
 		<skillList>
+			<skill id="4414" level="1" /> <!-- Heavy Armor Type -->
+			<skill id="4415" level="1" /> <!-- Bare Hands -->
 			<skill id="4416" level="7" /> <!-- Spirits -->
 			<skill id="5465" level="1" /> <!-- Earth Attack -->
-			<skill id="4415" level="1" /> <!-- Bare Hands -->
 			<skill id="14765" level="3" /> <!-- Blood Siphon Resistance -->
-			<skill id="4414" level="1" /> <!-- Heavy Armor Type -->
+			<skill id="23559" level="1" /> <!-- Mega Storm Strike -->
 		</skillList>
 		<ai clanHelpRange="300" aggroRange="300">
 			<clanList>

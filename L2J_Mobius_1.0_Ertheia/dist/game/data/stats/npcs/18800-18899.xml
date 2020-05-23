@@ -26,13 +26,15 @@
 		</stats>
 		<status undying="false" canMove="false" canBeSown="true" />
 		<skillList>
-			<skill id="4607" level="1" /> <!-- Magma Attack -->
-			<skill id="4416" level="2" /> <!-- Magic Creatures -->
-			<skill id="5462" level="1" /> <!-- Fire Attack -->
-			<skill id="4410" level="10" /> <!-- Slightly Weak P. Atk. -->
+			<skill id="4045" level="1" /> <!-- Full Magic Attack Resistance -->
+			<skill id="4408" level="14" /> <!-- HP Increase (6x) -->
+			<skill id="4410" level="8" /> <!-- Weak P. Atk. -->
 			<skill id="4412" level="10" /> <!-- Slightly Weak P. Def. -->
 			<skill id="4413" level="10" /> <!-- Slightly Weak M. Def. -->
-			<skill id="4410" level="8" /> <!-- Weak P. Atk. -->
+			<skill id="4415" level="3" /> <!-- One-handed Sword -->
+			<skill id="4416" level="2" /> <!-- Magic Creatures -->
+			<skill id="4607" level="1" /> <!-- Magma Attack -->
+			<skill id="5462" level="1" /> <!-- Fire Attack -->
 		</skillList>
 		<exCrtEffect>true</exCrtEffect>
 		<sNpcPropHpRate>6</sNpcPropHpRate>
@@ -81,14 +83,16 @@
 		</stats>
 		<status undying="false" canMove="false" canBeSown="true" />
 		<skillList>
-			<skill id="4607" level="1" /> <!-- Magma Attack -->
-			<skill id="4416" level="2" /> <!-- Magic Creatures -->
-			<skill id="5462" level="1" /> <!-- Fire Attack -->
-			<skill id="4410" level="10" /> <!-- Slightly Weak P. Atk. -->
+			<skill id="4045" level="1" /> <!-- Full Magic Attack Resistance -->
+			<skill id="4408" level="14" /> <!-- HP Increase (6x) -->
+			<skill id="4410" level="8" /> <!-- Weak P. Atk. -->
 			<skill id="4412" level="10" /> <!-- Slightly Weak P. Def. -->
 			<skill id="4413" level="10" /> <!-- Slightly Weak M. Def. -->
 			<skill id="4414" level="1" /> <!-- Heavy Armor Type -->
-			<skill id="4410" level="8" /> <!-- Weak P. Atk. -->
+			<skill id="4415" level="5" /> <!-- Blunt Weapon -->
+			<skill id="4416" level="2" /> <!-- Magic Creatures -->
+			<skill id="4607" level="1" /> <!-- Magma Attack -->
+			<skill id="5462" level="1" /> <!-- Fire Attack -->
 		</skillList>
 		<exCrtEffect>true</exCrtEffect>
 		<sNpcPropHpRate>6</sNpcPropHpRate>
@@ -137,13 +141,15 @@
 		</stats>
 		<status undying="false" canMove="false" canBeSown="true" />
 		<skillList>
-			<skill id="4607" level="1" /> <!-- Magma Attack -->
-			<skill id="4416" level="2" /> <!-- Magic Creatures -->
-			<skill id="5462" level="1" /> <!-- Fire Attack -->
-			<skill id="4410" level="10" /> <!-- Slightly Weak P. Atk. -->
+			<skill id="4045" level="1" /> <!-- Full Magic Attack Resistance -->
+			<skill id="4408" level="14" /> <!-- HP Increase (6x) -->
+			<skill id="4410" level="8" /> <!-- Weak P. Atk. -->
 			<skill id="4412" level="10" /> <!-- Slightly Weak P. Def. -->
 			<skill id="4413" level="10" /> <!-- Slightly Weak M. Def. -->
-			<skill id="4410" level="8" /> <!-- Weak P. Atk. -->
+			<skill id="4415" level="3" /> <!-- One-handed Sword -->
+			<skill id="4416" level="2" /> <!-- Magic Creatures -->
+			<skill id="4607" level="1" /> <!-- Magma Attack -->
+			<skill id="5462" level="1" /> <!-- Fire Attack -->
 		</skillList>
 		<exCrtEffect>true</exCrtEffect>
 		<sNpcPropHpRate>6</sNpcPropHpRate>
@@ -194,13 +200,15 @@
 		</stats>
 		<status undying="false" canMove="false" canBeSown="true" />
 		<skillList>
-			<skill id="4607" level="1" /> <!-- Magma Attack -->
-			<skill id="4416" level="2" /> <!-- Magic Creatures -->
-			<skill id="5462" level="1" /> <!-- Fire Attack -->
-			<skill id="4410" level="10" /> <!-- Slightly Weak P. Atk. -->
+			<skill id="4045" level="1" /> <!-- Full Magic Attack Resistance -->
+			<skill id="4408" level="14" /> <!-- HP Increase (6x) -->
+			<skill id="4410" level="8" /> <!-- Weak P. Atk. -->
 			<skill id="4412" level="10" /> <!-- Slightly Weak P. Def. -->
 			<skill id="4413" level="10" /> <!-- Slightly Weak M. Def. -->
-			<skill id="4410" level="8" /> <!-- Weak P. Atk. -->
+			<skill id="4415" level="3" /> <!-- One-handed Sword -->
+			<skill id="4416" level="2" /> <!-- Magic Creatures -->
+			<skill id="4607" level="1" /> <!-- Magma Attack -->
+			<skill id="5462" level="1" /> <!-- Fire Attack -->
 		</skillList>
 		<exCrtEffect>true</exCrtEffect>
 		<sNpcPropHpRate>6</sNpcPropHpRate>
@@ -241,17 +249,9 @@
 		</stats>
 		<status targetable="false" canMove="false" canBeSown="true" />
 		<skillList>
-			<skill id="4045" level="1" /> <!-- Resist Full Magic Attack -->
-			<skill id="4408" level="1" /> <!-- HP Increase (1x) -->
-			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
-			<skill id="4410" level="11" /> <!-- Average P. Atk. -->
-			<skill id="4411" level="11" /> <!-- Average M. Atk. -->
-			<skill id="4412" level="11" /> <!-- Average P. Def. -->
-			<skill id="4413" level="11" /> <!-- Average M. Def. -->
-			<skill id="4414" level="2" /> <!-- Standard Type -->
+			<skill id="4045" level="1" /> <!-- Full Magic Attack Resistance -->
 			<skill id="4415" level="3" /> <!-- One-handed Sword -->
 			<skill id="4416" level="12" /> <!-- Bugs -->
-			<skill id="6142" level="1" /> <!-- Tar Trap -->
 		</skillList>
 		<exCrtEffect>true</exCrtEffect>
 		<ai clanHelpRange="300" aggroRange="300" />
@@ -275,13 +275,6 @@
 		</stats>
 		<status undying="false" canBeSown="true" />
 		<skillList>
-			<skill id="4408" level="1" /> <!-- HP Increase (1x) -->
-			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
-			<skill id="4410" level="11" /> <!-- Average P. Atk. -->
-			<skill id="4411" level="11" /> <!-- Average M. Atk. -->
-			<skill id="4412" level="11" /> <!-- Average P. Def. -->
-			<skill id="4413" level="11" /> <!-- Average M. Def. -->
-			<skill id="4414" level="2" /> <!-- Standard Type -->
 			<skill id="4415" level="3" /> <!-- One-handed Sword -->
 			<skill id="4416" level="2" /> <!-- Magic Creatures -->
 		</skillList>
@@ -308,6 +301,10 @@
 		<status undying="false" canBeSown="true" />
 		<exCrtEffect>true</exCrtEffect>
 		<ai type="BALANCED" clanHelpRange="300" aggroRange="300" />
+		<skillList>
+			<skill id="4415" level="3" /> <!-- One-handed Sword -->
+			<skill id="4416" level="2" /> <!-- Magic Creatures -->
+		</skillList>
 		<collision>
 			<radius normal="16" />
 			<height normal="31" />
@@ -345,12 +342,7 @@
 		<status undying="false" canBeSown="true" />
 		<skillList>
 			<skill id="4408" level="10" /> <!-- HP Increase (2x) -->
-			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
 			<skill id="4410" level="5" /> <!-- Very Weak P. Atk. -->
-			<skill id="4411" level="11" /> <!-- Average M. Atk. -->
-			<skill id="4412" level="11" /> <!-- Average P. Def. -->
-			<skill id="4413" level="11" /> <!-- Average M. Def. -->
-			<skill id="4414" level="2" /> <!-- Standard Type -->
 			<skill id="4415" level="3" /> <!-- One-handed Sword -->
 			<skill id="4416" level="6" /> <!-- Humanoids -->
 		</skillList>
@@ -405,17 +397,14 @@
 		</stats>
 		<status undying="false" canBeSown="true" />
 		<skillList>
-			<skill id="4045" level="1" /> <!-- Resist Full Magic Attack -->
+			<skill id="4045" level="1" /> <!-- Full Magic Attack Resistance -->
 			<skill id="4408" level="10" /> <!-- HP Increase (2x) -->
-			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
 			<skill id="4410" level="3" /> <!-- Extremely Weak P. Atk. -->
 			<skill id="4411" level="3" /> <!-- Extremely Weak M. Atk. -->
-			<skill id="4412" level="11" /> <!-- Average P. Def. -->
-			<skill id="4413" level="11" /> <!-- Average M. Def. -->
 			<skill id="4414" level="1" /> <!-- Heavy Armor Type -->
-			<skill id="4415" level="6" /> <!-- Blunt Weapons -->
+			<skill id="4415" level="6" /> <!-- Blunt Weapon -->
 			<skill id="4416" level="6" /> <!-- Humanoids -->
-			<skill id="5462" level="1" /> <!-- Fire Attacks -->
+			<skill id="5462" level="1" /> <!-- Fire Attack -->
 			<skill id="6147" level="1" /> <!-- Kasha's Divine Protection -->
 		</skillList>
 		<exCrtEffect>true</exCrtEffect>
@@ -471,17 +460,12 @@
 		</stats>
 		<status undying="false" canBeSown="true" />
 		<skillList>
-			<skill id="4032" level="9" /> <!-- NPC Strike -->
-			<skill id="4408" level="1" /> <!-- HP Increase (1x) -->
-			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
+			<skill id="4032" level="9" /> <!-- Power Strike -->
 			<skill id="4410" level="3" /> <!-- Extremely Weak P. Atk. -->
 			<skill id="4411" level="3" /> <!-- Extremely Weak M. Atk. -->
-			<skill id="4412" level="11" /> <!-- Average P. Def. -->
-			<skill id="4413" level="11" /> <!-- Average M. Def. -->
-			<skill id="4414" level="2" /> <!-- Standard Type -->
 			<skill id="4415" level="3" /> <!-- One-handed Sword -->
 			<skill id="4416" level="6" /> <!-- Humanoids -->
-			<skill id="5462" level="1" /> <!-- Fire Attacks -->
+			<skill id="5462" level="1" /> <!-- Fire Attack -->
 		</skillList>
 		<exCrtEffect>true</exCrtEffect>
 		<ai clanHelpRange="300" aggroRange="300">
@@ -537,19 +521,14 @@
 		</stats>
 		<status undying="false" canBeSown="true" />
 		<skillList>
-			<skill id="4065" level="9" /> <!-- NPC Heal -->
-			<skill id="4408" level="1" /> <!-- HP Increase (1x) -->
-			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
+			<skill id="4065" level="9" /> <!-- Heal -->
 			<skill id="4410" level="3" /> <!-- Extremely Weak P. Atk. -->
 			<skill id="4411" level="3" /> <!-- Extremely Weak M. Atk. -->
-			<skill id="4412" level="11" /> <!-- Average P. Def. -->
-			<skill id="4413" level="11" /> <!-- Average M. Def. -->
-			<skill id="4414" level="2" /> <!-- Standard Type -->
 			<skill id="4415" level="3" /> <!-- One-handed Sword -->
 			<skill id="4416" level="6" /> <!-- Humanoids -->
-			<skill id="4610" level="2" /> <!-- NPC Clan Buff - Focus -->
-			<skill id="4613" level="9" /> <!-- NPC Clan Heal -->
-			<skill id="5462" level="1" /> <!-- Fire Attacks -->
+			<skill id="4610" level="2" /> <!-- Focus -->
+			<skill id="4613" level="9" /> <!-- Clan Heal -->
+			<skill id="5462" level="1" /> <!-- Fire Attack -->
 		</skillList>
 		<exCrtEffect>true</exCrtEffect>
 		<ai clanHelpRange="300" aggroRange="300">
@@ -578,14 +557,7 @@
 		</stats>
 		<status canMove="false" canBeSown="true" />
 		<skillList>
-			<skill id="4408" level="1" /> <!-- HP Increase (1x) -->
-			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
-			<skill id="4410" level="11" /> <!-- Average P. Atk. -->
-			<skill id="4411" level="11" /> <!-- Average M. Atk. -->
-			<skill id="4412" level="11" /> <!-- Average P. Def. -->
-			<skill id="4413" level="11" /> <!-- Average M. Def. -->
-			<skill id="4414" level="2" /> <!-- Standard Type -->
-			<skill id="4415" level="5" /> <!-- Blunt Weapons -->
+			<skill id="4415" level="5" /> <!-- Blunt Weapon -->
 			<skill id="4416" level="2" /> <!-- Magic Creatures -->
 		</skillList>
 		<exCrtEffect>false</exCrtEffect>
@@ -615,12 +587,6 @@
 		<status undying="false" canMove="false" canBeSown="true" />
 		<skillList>
 			<skill id="4408" level="8" /> <!-- HP Increase (1/4x) -->
-			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
-			<skill id="4410" level="11" /> <!-- Average P. Atk. -->
-			<skill id="4411" level="11" /> <!-- Average M. Atk. -->
-			<skill id="4412" level="11" /> <!-- Average P. Def. -->
-			<skill id="4413" level="11" /> <!-- Average M. Def. -->
-			<skill id="4414" level="2" /> <!-- Standard Type -->
 			<skill id="4415" level="3" /> <!-- One-handed Sword -->
 			<skill id="4416" level="2" /> <!-- Magic Creatures -->
 		</skillList>
@@ -652,12 +618,6 @@
 		<status undying="false" canMove="false" canBeSown="true" />
 		<skillList>
 			<skill id="4408" level="8" /> <!-- HP Increase (1/4x) -->
-			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
-			<skill id="4410" level="11" /> <!-- Average P. Atk. -->
-			<skill id="4411" level="11" /> <!-- Average M. Atk. -->
-			<skill id="4412" level="11" /> <!-- Average P. Def. -->
-			<skill id="4413" level="11" /> <!-- Average M. Def. -->
-			<skill id="4414" level="2" /> <!-- Standard Type -->
 			<skill id="4415" level="3" /> <!-- One-handed Sword -->
 			<skill id="4416" level="2" /> <!-- Magic Creatures -->
 		</skillList>
@@ -689,12 +649,6 @@
 		<status undying="false" canMove="false" canBeSown="true" />
 		<skillList>
 			<skill id="4408" level="8" /> <!-- HP Increase (1/4x) -->
-			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
-			<skill id="4410" level="11" /> <!-- Average P. Atk. -->
-			<skill id="4411" level="11" /> <!-- Average M. Atk. -->
-			<skill id="4412" level="11" /> <!-- Average P. Def. -->
-			<skill id="4413" level="11" /> <!-- Average M. Def. -->
-			<skill id="4414" level="2" /> <!-- Standard Type -->
 			<skill id="4415" level="3" /> <!-- One-handed Sword -->
 			<skill id="4416" level="2" /> <!-- Magic Creatures -->
 		</skillList>
@@ -729,17 +683,12 @@
 		</stats>
 		<status canMove="false" canBeSown="true" />
 		<skillList>
-			<skill id="4045" level="1" /> <!-- Resist Full Magic Attack -->
-			<skill id="4408" level="1" /> <!-- HP Increase (1x) -->
-			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
-			<skill id="4410" level="11" /> <!-- Average P. Atk. -->
+			<skill id="4045" level="1" /> <!-- Full Magic Attack Resistance -->
 			<skill id="4411" level="19" /> <!-- Extremely Strong M. Atk. -->
-			<skill id="4412" level="11" /> <!-- Average P. Def. -->
-			<skill id="4413" level="11" /> <!-- Average M. Def. -->
 			<skill id="4414" level="1" /> <!-- Heavy Armor Type -->
 			<skill id="4415" level="3" /> <!-- One-handed Sword -->
 			<skill id="4416" level="2" /> <!-- Magic Creatures -->
-			<skill id="5313" level="9" /> <!-- NPC(party) -Magic Range Long Range DD - Fire -->
+			<skill id="5313" level="9" /> <!-- Flame Strike -->
 		</skillList>
 		<exCrtEffect>true</exCrtEffect>
 		<ai aggroRange="300" clanHelpRange="300" isAggressive="true">
@@ -782,14 +731,7 @@
 		</stats>
 		<status undying="false" canMove="false" canBeSown="true" />
 		<skillList>
-			<skill id="4045" level="1" /> <!-- Resist Full Magic Attack -->
-			<skill id="4408" level="1" /> <!-- HP Increase (1x) -->
-			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
-			<skill id="4410" level="11" /> <!-- Average P. Atk. -->
-			<skill id="4411" level="11" /> <!-- Average M. Atk. -->
-			<skill id="4412" level="11" /> <!-- Average P. Def. -->
-			<skill id="4413" level="11" /> <!-- Average M. Def. -->
-			<skill id="4414" level="2" /> <!-- Standard Type -->
+			<skill id="4045" level="1" /> <!-- Full Magic Attack Resistance -->
 			<skill id="4415" level="3" /> <!-- One-handed Sword -->
 			<skill id="4416" level="2" /> <!-- Magic Creatures -->
 		</skillList>
@@ -836,16 +778,10 @@
 		</stats>
 		<status undying="false" canBeSown="true" />
 		<skillList>
-			<skill id="4408" level="1" /> <!-- HP Increase (1x) -->
-			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
-			<skill id="4410" level="11" /> <!-- Average P. Atk. -->
-			<skill id="4411" level="11" /> <!-- Average M. Atk. -->
-			<skill id="4412" level="11" /> <!-- Average P. Def. -->
-			<skill id="4413" level="11" /> <!-- Average M. Def. -->
 			<skill id="4414" level="3" /> <!-- Light Armor Type -->
-			<skill id="4415" level="17" /> <!-- Hand-to-hand weapons -->
+			<skill id="4415" level="17" /> <!-- Fist Weapon -->
 			<skill id="4416" level="1" /> <!-- Undead -->
-			<skill id="5376" level="4" /> <!-- NPC(party) -Magic Range Close Range DD - Fire(Self-Destruction) -->
+			<skill id="5376" level="4" /> <!-- Blazing Circle -->
 		</skillList>
 		<exCrtEffect>true</exCrtEffect>
 		<ai clanHelpRange="300" aggroRange="300">
@@ -876,16 +812,9 @@
 		</stats>
 		<status undying="false" canBeSown="true" />
 		<skillList>
-			<skill id="4408" level="1" /> <!-- HP Increase (1x) -->
-			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
-			<skill id="4410" level="11" /> <!-- Average P. Atk. -->
-			<skill id="4411" level="11" /> <!-- Average M. Atk. -->
-			<skill id="4412" level="11" /> <!-- Average P. Def. -->
-			<skill id="4413" level="11" /> <!-- Average M. Def. -->
-			<skill id="4414" level="2" /> <!-- Standard Type -->
 			<skill id="4415" level="3" /> <!-- One-handed Sword -->
 			<skill id="4416" level="9" /> <!-- Demons -->
-			<skill id="5376" level="4" /> <!-- NPC(party) -Magic Range Close Range DD - Fire(Self-Destruction) -->
+			<skill id="5376" level="4" /> <!-- Blazing Circle -->
 		</skillList>
 		<exCrtEffect>true</exCrtEffect>
 		<ai clanHelpRange="300" aggroRange="300">
@@ -912,13 +841,6 @@
 			<abnormalResist physical="10" magical="10" />
 		</stats>
 		<skillList>
-			<skill id="4408" level="1" /> <!-- HP Increase (1x) -->
-			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
-			<skill id="4410" level="11" /> <!-- Average P. Atk. -->
-			<skill id="4411" level="11" /> <!-- Average M. Atk. -->
-			<skill id="4412" level="11" /> <!-- Average P. Def. -->
-			<skill id="4413" level="11" /> <!-- Average M. Def. -->
-			<skill id="4414" level="2" /> <!-- Standard Type -->
 			<skill id="4415" level="3" /> <!-- One-handed Sword -->
 			<skill id="4416" level="2" /> <!-- Magic Creatures -->
 		</skillList>
@@ -943,13 +865,6 @@
 			<abnormalResist physical="10" magical="10" />
 		</stats>
 		<skillList>
-			<skill id="4408" level="1" /> <!-- HP Increase (1x) -->
-			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
-			<skill id="4410" level="11" /> <!-- Average P. Atk. -->
-			<skill id="4411" level="11" /> <!-- Average M. Atk. -->
-			<skill id="4412" level="11" /> <!-- Average P. Def. -->
-			<skill id="4413" level="11" /> <!-- Average M. Def. -->
-			<skill id="4414" level="2" /> <!-- Standard Type -->
 			<skill id="4415" level="3" /> <!-- One-handed Sword -->
 			<skill id="4416" level="2" /> <!-- Magic Creatures -->
 		</skillList>
@@ -978,16 +893,9 @@
 		</stats>
 		<status undying="false" canBeSown="true" />
 		<skillList>
-			<skill id="4408" level="1" /> <!-- HP Increase (1x) -->
-			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
-			<skill id="4410" level="11" /> <!-- Average P. Atk. -->
-			<skill id="4411" level="11" /> <!-- Average M. Atk. -->
-			<skill id="4412" level="11" /> <!-- Average P. Def. -->
-			<skill id="4413" level="11" /> <!-- Average M. Def. -->
-			<skill id="4414" level="2" /> <!-- Standard Type -->
 			<skill id="4415" level="3" /> <!-- One-handed Sword -->
 			<skill id="4416" level="9" /> <!-- Demons -->
-			<skill id="5376" level="5" /> <!-- NPC(party) -Magic Range Close Range DD - Fire(Self-Destruction) -->
+			<skill id="5376" level="5" /> <!-- Blazing Circle -->
 		</skillList>
 		<exCrtEffect>true</exCrtEffect>
 		<ai clanHelpRange="300" aggroRange="300">
@@ -1014,13 +922,6 @@
 			<abnormalResist physical="10" magical="10" />
 		</stats>
 		<skillList>
-			<skill id="4408" level="1" /> <!-- HP Increase (1x) -->
-			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
-			<skill id="4410" level="11" /> <!-- Average P. Atk. -->
-			<skill id="4411" level="11" /> <!-- Average M. Atk. -->
-			<skill id="4412" level="11" /> <!-- Average P. Def. -->
-			<skill id="4413" level="11" /> <!-- Average M. Def. -->
-			<skill id="4414" level="2" /> <!-- Standard Type -->
 			<skill id="4415" level="3" /> <!-- One-handed Sword -->
 			<skill id="4416" level="2" /> <!-- Magic Creatures -->
 		</skillList>
@@ -1046,13 +947,6 @@
 		</stats>
 		<status canMove="false" canBeSown="true" />
 		<skillList>
-			<skill id="4408" level="1" /> <!-- HP Increase (1x) -->
-			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
-			<skill id="4410" level="11" /> <!-- Average P. Atk. -->
-			<skill id="4411" level="11" /> <!-- Average M. Atk. -->
-			<skill id="4412" level="11" /> <!-- Average P. Def. -->
-			<skill id="4413" level="11" /> <!-- Average M. Def. -->
-			<skill id="4414" level="2" /> <!-- Standard Type -->
 			<skill id="4415" level="3" /> <!-- One-handed Sword -->
 			<skill id="4416" level="2" /> <!-- Magic Creatures -->
 		</skillList>
@@ -2516,18 +2410,20 @@
 		</stats>
 		<status undying="false" canBeSown="true" />
 		<skillList>
-			<skill id="4416" level="6" /> <!-- Humanoids -->
-			<skill id="5465" level="1" /> <!-- Earth Attack -->
+			<skill id="4116" level="9" /> <!-- Magic Attack Resistance -->
+			<skill id="4273" level="4" /> <!-- Dagger/Rapier Resistance -->
+			<skill id="4276" level="4" /> <!-- Bow/Crossbow Vulnerability -->
 			<skill id="4410" level="15" /> <!-- Strong P. Atk. -->
 			<skill id="4411" level="13" /> <!-- Slightly Strong M. Atk. -->
 			<skill id="4412" level="15" /> <!-- Strong P. Def. -->
 			<skill id="4413" level="16" /> <!-- Very Strong M. Def. -->
 			<skill id="4414" level="3" /> <!-- Light Armor Type -->
-			<skill id="5601" level="9" /> <!-- Melee Attack Resistance -->
-			<skill id="4276" level="4" /> <!-- Bow/ Crossbow Vulnerability -->
-			<skill id="4273" level="4" /> <!-- Dagger/ Rapier Resistance -->
+			<skill id="4415" level="11" /> <!-- Spear -->
+			<skill id="4416" level="6" /> <!-- Humanoids -->
 			<skill id="4424" level="4" /> <!-- Fist Weapon Resistance -->
 			<skill id="4449" level="4" /> <!-- Greater Two-handed Weapon Resistance -->
+			<skill id="5465" level="1" /> <!-- Earth Attack -->
+			<skill id="5601" level="9" /> <!-- Melee Attack Resistance -->
 		</skillList>
 		<exCrtEffect>true</exCrtEffect>
 		<ai aggroRange="300" clanHelpRange="300" isAggressive="true" />
@@ -2572,18 +2468,21 @@
 		</stats>
 		<status undying="false" canBeSown="true" />
 		<skillList>
-			<skill id="6426" level="1" /> <!-- Priest's Ire -->
-			<skill id="4416" level="6" /> <!-- Humanoids -->
-			<skill id="5465" level="1" /> <!-- Earth Attack -->
+			<skill id="4116" level="9" /> <!-- Magic Attack Resistance -->
+			<skill id="4273" level="4" /> <!-- Dagger/Rapier Resistance -->
+			<skill id="4276" level="4" /> <!-- Bow/Crossbow Vulnerability -->
+			<skill id="4408" level="12" /> <!-- HP Increase (4x) -->
 			<skill id="4410" level="15" /> <!-- Strong P. Atk. -->
 			<skill id="4411" level="16" /> <!-- Very Strong M. Atk. -->
 			<skill id="4412" level="16" /> <!-- Very Strong P. Def. -->
 			<skill id="4413" level="19" /> <!-- Extremely Strong M. Def. -->
-			<skill id="5601" level="9" /> <!-- Melee Attack Resistance -->
-			<skill id="4276" level="4" /> <!-- Bow/ Crossbow Vulnerability -->
-			<skill id="4273" level="4" /> <!-- Dagger/ Rapier Resistance -->
+			<skill id="4415" level="3" /> <!-- One-handed Sword -->
+			<skill id="4416" level="6" /> <!-- Humanoids -->
 			<skill id="4424" level="4" /> <!-- Fist Weapon Resistance -->
 			<skill id="4449" level="4" /> <!-- Greater Two-handed Weapon Resistance -->
+			<skill id="5465" level="1" /> <!-- Earth Attack -->
+			<skill id="5601" level="9" /> <!-- Melee Attack Resistance -->
+			<skill id="6426" level="1" /> <!-- Priest's Ire -->
 		</skillList>
 		<exCrtEffect>true</exCrtEffect>
 		<sNpcPropHpRate>4</sNpcPropHpRate>
@@ -3143,13 +3042,15 @@
 		</stats>
 		<status undying="false" canBeSown="true" />
 		<skillList>
-			<skill id="4416" level="3" /> <!-- Beast -->
-			<skill id="5463" level="1" /> <!-- Water Attack -->
+			<skill id="4071" level="3" /> <!-- Bow/Crossbow Resistance -->
+			<skill id="4116" level="5" /> <!-- Magic Attack Resistance -->
+			<skill id="4379" level="5" /> <!-- Spear Resistance -->
 			<skill id="4410" level="13" /> <!-- Slightly Strong P. Atk. -->
 			<skill id="4413" level="14" /> <!-- Strong M. Def. -->
-			<skill id="4071" level="3" /> <!-- Bow/ Crossbow Resistance -->
+			<skill id="4415" level="3" /> <!-- One-handed Sword -->
+			<skill id="4416" level="3" /> <!-- Beast -->
+			<skill id="5463" level="1" /> <!-- Water Attack -->
 			<skill id="5620" level="2" /> <!-- Melee Attack Vulnerability -->
-			<skill id="4379" level="5" /> <!-- Spear Resistance -->
 		</skillList>
 		<exCrtEffect>false</exCrtEffect>
 		<ai clanHelpRange="300" aggroRange="300" />
@@ -3209,22 +3110,20 @@
 		</stats>
 		<status undying="false" canBeSown="true" />
 		<skillList>
-			<skill id="4071" level="3" /> <!-- Resist Bow/Crossbow Weapons -->
-			<skill id="4074" level="1" /> <!-- NPC Haste -->
-			<skill id="4116" level="5" /> <!-- Resist M. Atk. -->
-			<skill id="4379" level="5" /> <!-- Resist Spear Weapons -->
+			<skill id="4071" level="3" /> <!-- Bow/Crossbow Resistance -->
+			<skill id="4074" level="1" /> <!-- Haste -->
+			<skill id="4116" level="5" /> <!-- Magic Attack Resistance -->
+			<skill id="4379" level="5" /> <!-- Spear Resistance -->
 			<skill id="4408" level="10" /> <!-- HP Increase (2x) -->
-			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
 			<skill id="4410" level="14" /> <!-- Strong P. Atk. -->
 			<skill id="4411" level="13" /> <!-- Slightly Strong M. Atk. -->
 			<skill id="4412" level="12" /> <!-- Slightly Strong P. Def. -->
 			<skill id="4413" level="16" /> <!-- Very Strong M. Def. -->
-			<skill id="4414" level="2" /> <!-- Standard Type -->
 			<skill id="4415" level="3" /> <!-- One-handed Sword -->
-			<skill id="4416" level="3" /> <!-- Beasts -->
-			<skill id="5463" level="1" /> <!-- Water Attacks -->
-			<skill id="5620" level="2" /> <!-- Short-Range Physical Attack Weakness -->
-			<skill id="6556" level="16" /> <!-- NPC water attack -->
+			<skill id="4416" level="3" /> <!-- Beast -->
+			<skill id="5463" level="1" /> <!-- Water Attack -->
+			<skill id="5620" level="2" /> <!-- Melee Attack Vulnerability -->
+			<skill id="6556" level="16" /> <!-- Water Attack -->
 		</skillList>
 		<exCrtEffect>false</exCrtEffect>
 		<sNpcPropHpRate>2</sNpcPropHpRate>
@@ -3285,22 +3184,20 @@
 		</stats>
 		<status undying="false" canBeSown="true" />
 		<skillList>
-			<skill id="4071" level="3" /> <!-- Resist Bow/Crossbow Weapons -->
-			<skill id="4074" level="1" /> <!-- NPC Haste -->
-			<skill id="4116" level="5" /> <!-- Resist M. Atk. -->
-			<skill id="4379" level="5" /> <!-- Resist Spear Weapons -->
+			<skill id="4071" level="3" /> <!-- Bow/Crossbow Resistance -->
+			<skill id="4074" level="1" /> <!-- Haste -->
+			<skill id="4116" level="5" /> <!-- Magic Attack Resistance -->
+			<skill id="4379" level="5" /> <!-- Spear Resistance -->
 			<skill id="4408" level="10" /> <!-- HP Increase (2x) -->
-			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
 			<skill id="4410" level="14" /> <!-- Strong P. Atk. -->
 			<skill id="4411" level="13" /> <!-- Slightly Strong M. Atk. -->
 			<skill id="4412" level="12" /> <!-- Slightly Strong P. Def. -->
 			<skill id="4413" level="16" /> <!-- Very Strong M. Def. -->
-			<skill id="4414" level="2" /> <!-- Standard Type -->
 			<skill id="4415" level="3" /> <!-- One-handed Sword -->
-			<skill id="4416" level="3" /> <!-- Beasts -->
-			<skill id="5463" level="1" /> <!-- Water Attacks -->
-			<skill id="5620" level="2" /> <!-- Short-Range Physical Attack Weakness -->
-			<skill id="6556" level="16" /> <!-- NPC water attack -->
+			<skill id="4416" level="3" /> <!-- Beast -->
+			<skill id="5463" level="1" /> <!-- Water Attack -->
+			<skill id="5620" level="2" /> <!-- Melee Attack Vulnerability -->
+			<skill id="6556" level="16" /> <!-- Water Attack -->
 		</skillList>
 		<exCrtEffect>false</exCrtEffect>
 		<sNpcPropHpRate>2</sNpcPropHpRate>
@@ -3352,22 +3249,20 @@
 		</stats>
 		<status undying="false" canBeSown="true" />
 		<skillList>
-			<skill id="4071" level="3" /> <!-- Resist Bow/Crossbow Weapons -->
-			<skill id="4074" level="1" /> <!-- NPC Haste -->
-			<skill id="4116" level="5" /> <!-- Resist M. Atk. -->
-			<skill id="4379" level="5" /> <!-- Resist Spear Weapons -->
+			<skill id="4071" level="3" /> <!-- Bow/Crossbow Resistance -->
+			<skill id="4074" level="1" /> <!-- Haste -->
+			<skill id="4116" level="5" /> <!-- Magic Attack Resistance -->
+			<skill id="4379" level="5" /> <!-- Spear Resistance -->
 			<skill id="4408" level="11" /> <!-- HP Increase (3x) -->
-			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
 			<skill id="4410" level="15" /> <!-- Strong P. Atk. -->
 			<skill id="4411" level="14" /> <!-- Strong M. Atk. -->
 			<skill id="4412" level="14" /> <!-- Strong P. Def. -->
 			<skill id="4413" level="18" /> <!-- Extremely Strong M. Def. -->
-			<skill id="4414" level="2" /> <!-- Standard Type -->
 			<skill id="4415" level="3" /> <!-- One-handed Sword -->
-			<skill id="4416" level="3" /> <!-- Beasts -->
-			<skill id="5463" level="1" /> <!-- Water Attacks -->
-			<skill id="5620" level="7" /> <!-- Short-Range Physical Attack Weakness -->
-			<skill id="6556" level="16" /> <!-- NPC water attack -->
+			<skill id="4416" level="3" /> <!-- Beast -->
+			<skill id="5463" level="1" /> <!-- Water Attack -->
+			<skill id="5620" level="7" /> <!-- Melee Attack Vulnerability -->
+			<skill id="6556" level="16" /> <!-- Water Attack -->
 		</skillList>
 		<exCrtEffect>false</exCrtEffect>
 		<sNpcPropHpRate>3</sNpcPropHpRate>
@@ -3424,22 +3319,20 @@
 		</stats>
 		<status undying="false" canBeSown="true" />
 		<skillList>
-			<skill id="4071" level="3" /> <!-- Resist Bow/Crossbow Weapons -->
-			<skill id="4074" level="1" /> <!-- NPC Haste -->
-			<skill id="4116" level="5" /> <!-- Resist M. Atk. -->
-			<skill id="4379" level="5" /> <!-- Resist Spear Weapons -->
+			<skill id="4071" level="3" /> <!-- Bow/Crossbow Resistance -->
+			<skill id="4074" level="1" /> <!-- Haste -->
+			<skill id="4116" level="5" /> <!-- Magic Attack Resistance -->
+			<skill id="4379" level="5" /> <!-- Spear Resistance -->
 			<skill id="4408" level="11" /> <!-- HP Increase (3x) -->
-			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
 			<skill id="4410" level="15" /> <!-- Strong P. Atk. -->
 			<skill id="4411" level="14" /> <!-- Strong M. Atk. -->
 			<skill id="4412" level="14" /> <!-- Strong P. Def. -->
 			<skill id="4413" level="18" /> <!-- Extremely Strong M. Def. -->
-			<skill id="4414" level="2" /> <!-- Standard Type -->
 			<skill id="4415" level="3" /> <!-- One-handed Sword -->
-			<skill id="4416" level="3" /> <!-- Beasts -->
-			<skill id="5463" level="1" /> <!-- Water Attacks -->
-			<skill id="5620" level="7" /> <!-- Short-Range Physical Attack Weakness -->
-			<skill id="6556" level="16" /> <!-- NPC water attack -->
+			<skill id="4416" level="3" /> <!-- Beast -->
+			<skill id="5463" level="1" /> <!-- Water Attack -->
+			<skill id="5620" level="7" /> <!-- Melee Attack Vulnerability -->
+			<skill id="6556" level="16" /> <!-- Water Attack -->
 		</skillList>
 		<exCrtEffect>false</exCrtEffect>
 		<sNpcPropHpRate>3</sNpcPropHpRate>
@@ -3492,23 +3385,21 @@
 		</stats>
 		<status undying="false" canBeSown="true" />
 		<skillList>
-			<skill id="4071" level="3" /> <!-- Resist Bow/Crossbow Weapons -->
-			<skill id="4074" level="1" /> <!-- NPC Haste -->
-			<skill id="4116" level="5" /> <!-- Resist M. Atk. -->
-			<skill id="4379" level="5" /> <!-- Resist Spear Weapons -->
+			<skill id="4071" level="3" /> <!-- Bow/Crossbow Resistance -->
+			<skill id="4074" level="1" /> <!-- Haste -->
+			<skill id="4116" level="5" /> <!-- Magic Attack Resistance -->
+			<skill id="4379" level="5" /> <!-- Spear Resistance -->
 			<skill id="4408" level="11" /> <!-- HP Increase (3x) -->
-			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
 			<skill id="4410" level="16" /> <!-- Very Strong P. Atk. -->
 			<skill id="4411" level="16" /> <!-- Very Strong M. Atk. -->
 			<skill id="4412" level="15" /> <!-- Strong P. Def. -->
 			<skill id="4413" level="18" /> <!-- Extremely Strong M. Def. -->
-			<skill id="4414" level="2" /> <!-- Standard Type -->
 			<skill id="4415" level="3" /> <!-- One-handed Sword -->
-			<skill id="4416" level="3" /> <!-- Beasts -->
+			<skill id="4416" level="3" /> <!-- Beast -->
 			<skill id="4592" level="10" /> <!-- Decrease P. Def. -->
-			<skill id="5463" level="1" /> <!-- Water Attacks -->
-			<skill id="5620" level="7" /> <!-- Short-Range Physical Attack Weakness -->
-			<skill id="6556" level="16" /> <!-- NPC water attack -->
+			<skill id="5463" level="1" /> <!-- Water Attack -->
+			<skill id="5620" level="7" /> <!-- Melee Attack Vulnerability -->
+			<skill id="6556" level="16" /> <!-- Water Attack -->
 		</skillList>
 		<exCrtEffect>false</exCrtEffect>
 		<sNpcPropHpRate>3</sNpcPropHpRate>
@@ -3573,23 +3464,21 @@
 		</stats>
 		<status undying="false" canBeSown="true" />
 		<skillList>
-			<skill id="4071" level="3" /> <!-- Resist Bow/Crossbow Weapons -->
-			<skill id="4074" level="1" /> <!-- NPC Haste -->
-			<skill id="4116" level="5" /> <!-- Resist M. Atk. -->
-			<skill id="4379" level="5" /> <!-- Resist Spear Weapons -->
+			<skill id="4071" level="3" /> <!-- Bow/Crossbow Resistance -->
+			<skill id="4074" level="1" /> <!-- Haste -->
+			<skill id="4116" level="5" /> <!-- Magic Attack Resistance -->
+			<skill id="4379" level="5" /> <!-- Spear Resistance -->
 			<skill id="4408" level="11" /> <!-- HP Increase (3x) -->
-			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
 			<skill id="4410" level="16" /> <!-- Very Strong P. Atk. -->
 			<skill id="4411" level="15" /> <!-- Strong M. Atk. -->
 			<skill id="4412" level="16" /> <!-- Very Strong P. Def. -->
 			<skill id="4413" level="18" /> <!-- Extremely Strong M. Def. -->
-			<skill id="4414" level="2" /> <!-- Standard Type -->
 			<skill id="4415" level="3" /> <!-- One-handed Sword -->
-			<skill id="4416" level="3" /> <!-- Beasts -->
+			<skill id="4416" level="3" /> <!-- Beast -->
 			<skill id="4592" level="10" /> <!-- Decrease P. Def. -->
-			<skill id="5463" level="1" /> <!-- Water Attacks -->
-			<skill id="5620" level="7" /> <!-- Short-Range Physical Attack Weakness -->
-			<skill id="6556" level="16" /> <!-- NPC water attack -->
+			<skill id="5463" level="1" /> <!-- Water Attack -->
+			<skill id="5620" level="7" /> <!-- Melee Attack Vulnerability -->
+			<skill id="6556" level="16" /> <!-- Water Attack -->
 		</skillList>
 		<exCrtEffect>false</exCrtEffect>
 		<sNpcPropHpRate>3</sNpcPropHpRate>
@@ -3639,13 +3528,15 @@
 		</stats>
 		<status undying="false" canBeSown="true" />
 		<skillList>
-			<skill id="4416" level="3" /> <!-- Beast -->
-			<skill id="5463" level="1" /> <!-- Water Attack -->
+			<skill id="4071" level="3" /> <!-- Bow/Crossbow Resistance -->
+			<skill id="4116" level="5" /> <!-- Magic Attack Resistance -->
+			<skill id="4379" level="5" /> <!-- Spear Resistance -->
 			<skill id="4410" level="13" /> <!-- Slightly Strong P. Atk. -->
 			<skill id="4413" level="14" /> <!-- Strong M. Def. -->
-			<skill id="4071" level="3" /> <!-- Bow/ Crossbow Resistance -->
+			<skill id="4415" level="5" /> <!-- Blunt Weapon -->
+			<skill id="4416" level="3" /> <!-- Beast -->
+			<skill id="5463" level="1" /> <!-- Water Attack -->
 			<skill id="5620" level="2" /> <!-- Melee Attack Vulnerability -->
-			<skill id="4379" level="5" /> <!-- Spear Resistance -->
 		</skillList>
 		<exCrtEffect>false</exCrtEffect>
 		<ai clanHelpRange="300" aggroRange="300" />
@@ -3705,22 +3596,20 @@
 		</stats>
 		<status undying="false" canBeSown="true" />
 		<skillList>
-			<skill id="4071" level="3" /> <!-- Resist Bow/Crossbow Weapons -->
-			<skill id="4074" level="1" /> <!-- NPC Haste -->
-			<skill id="4116" level="5" /> <!-- Resist M. Atk. -->
-			<skill id="4379" level="5" /> <!-- Resist Spear Weapons -->
+			<skill id="4071" level="3" /> <!-- Bow/Crossbow Resistance -->
+			<skill id="4074" level="1" /> <!-- Haste -->
+			<skill id="4116" level="5" /> <!-- Magic Attack Resistance -->
+			<skill id="4379" level="5" /> <!-- Spear Resistance -->
 			<skill id="4408" level="10" /> <!-- HP Increase (2x) -->
-			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
 			<skill id="4410" level="14" /> <!-- Strong P. Atk. -->
 			<skill id="4411" level="13" /> <!-- Slightly Strong M. Atk. -->
 			<skill id="4412" level="12" /> <!-- Slightly Strong P. Def. -->
 			<skill id="4413" level="16" /> <!-- Very Strong M. Def. -->
-			<skill id="4414" level="2" /> <!-- Standard Type -->
-			<skill id="4415" level="5" /> <!-- Blunt Weapons -->
-			<skill id="4416" level="3" /> <!-- Beasts -->
-			<skill id="5463" level="1" /> <!-- Water Attacks -->
-			<skill id="5620" level="2" /> <!-- Short-Range Physical Attack Weakness -->
-			<skill id="6556" level="16" /> <!-- NPC water attack -->
+			<skill id="4415" level="5" /> <!-- Blunt Weapon -->
+			<skill id="4416" level="3" /> <!-- Beast -->
+			<skill id="5463" level="1" /> <!-- Water Attack -->
+			<skill id="5620" level="2" /> <!-- Melee Attack Vulnerability -->
+			<skill id="6556" level="16" /> <!-- Water Attack -->
 		</skillList>
 		<exCrtEffect>false</exCrtEffect>
 		<sNpcPropHpRate>2</sNpcPropHpRate>
@@ -3781,22 +3670,20 @@
 		</stats>
 		<status undying="false" canBeSown="true" />
 		<skillList>
-			<skill id="4071" level="3" /> <!-- Resist Bow/Crossbow Weapons -->
-			<skill id="4074" level="1" /> <!-- NPC Haste -->
-			<skill id="4116" level="5" /> <!-- Resist M. Atk. -->
-			<skill id="4379" level="5" /> <!-- Resist Spear Weapons -->
+			<skill id="4071" level="3" /> <!-- Bow/Crossbow Resistance -->
+			<skill id="4074" level="1" /> <!-- Haste -->
+			<skill id="4116" level="5" /> <!-- Magic Attack Resistance -->
+			<skill id="4379" level="5" /> <!-- Spear Resistance -->
 			<skill id="4408" level="10" /> <!-- HP Increase (2x) -->
-			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
 			<skill id="4410" level="14" /> <!-- Strong P. Atk. -->
 			<skill id="4411" level="13" /> <!-- Slightly Strong M. Atk. -->
 			<skill id="4412" level="12" /> <!-- Slightly Strong P. Def. -->
 			<skill id="4413" level="16" /> <!-- Very Strong M. Def. -->
-			<skill id="4414" level="2" /> <!-- Standard Type -->
-			<skill id="4415" level="5" /> <!-- Blunt Weapons -->
-			<skill id="4416" level="3" /> <!-- Beasts -->
-			<skill id="5463" level="1" /> <!-- Water Attacks -->
-			<skill id="5620" level="2" /> <!-- Short-Range Physical Attack Weakness -->
-			<skill id="6556" level="16" /> <!-- NPC water attack -->
+			<skill id="4415" level="5" /> <!-- Blunt Weapon -->
+			<skill id="4416" level="3" /> <!-- Beast -->
+			<skill id="5463" level="1" /> <!-- Water Attack -->
+			<skill id="5620" level="2" /> <!-- Melee Attack Vulnerability -->
+			<skill id="6556" level="16" /> <!-- Water Attack -->
 		</skillList>
 		<exCrtEffect>false</exCrtEffect>
 		<sNpcPropHpRate>2</sNpcPropHpRate>
@@ -3848,22 +3735,20 @@
 		</stats>
 		<status undying="false" canBeSown="true" />
 		<skillList>
-			<skill id="4071" level="3" /> <!-- Resist Bow/Crossbow Weapons -->
-			<skill id="4074" level="1" /> <!-- NPC Haste -->
-			<skill id="4116" level="5" /> <!-- Resist M. Atk. -->
-			<skill id="4379" level="5" /> <!-- Resist Spear Weapons -->
+			<skill id="4071" level="3" /> <!-- Bow/Crossbow Resistance -->
+			<skill id="4074" level="1" /> <!-- Haste -->
+			<skill id="4116" level="5" /> <!-- Magic Attack Resistance -->
+			<skill id="4379" level="5" /> <!-- Spear Resistance -->
 			<skill id="4408" level="11" /> <!-- HP Increase (3x) -->
-			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
 			<skill id="4410" level="15" /> <!-- Strong P. Atk. -->
 			<skill id="4411" level="14" /> <!-- Strong M. Atk. -->
 			<skill id="4412" level="14" /> <!-- Strong P. Def. -->
 			<skill id="4413" level="18" /> <!-- Extremely Strong M. Def. -->
-			<skill id="4414" level="2" /> <!-- Standard Type -->
-			<skill id="4415" level="5" /> <!-- Blunt Weapons -->
-			<skill id="4416" level="3" /> <!-- Beasts -->
-			<skill id="5463" level="1" /> <!-- Water Attacks -->
-			<skill id="5620" level="7" /> <!-- Short-Range Physical Attack Weakness -->
-			<skill id="6556" level="16" /> <!-- NPC water attack -->
+			<skill id="4415" level="5" /> <!-- Blunt Weapon -->
+			<skill id="4416" level="3" /> <!-- Beast -->
+			<skill id="5463" level="1" /> <!-- Water Attack -->
+			<skill id="5620" level="7" /> <!-- Melee Attack Vulnerability -->
+			<skill id="6556" level="16" /> <!-- Water Attack -->
 		</skillList>
 		<exCrtEffect>false</exCrtEffect>
 		<sNpcPropHpRate>3</sNpcPropHpRate>
@@ -3920,22 +3805,20 @@
 		</stats>
 		<status undying="false" canBeSown="true" />
 		<skillList>
-			<skill id="4071" level="3" /> <!-- Resist Bow/Crossbow Weapons -->
-			<skill id="4074" level="1" /> <!-- NPC Haste -->
-			<skill id="4116" level="5" /> <!-- Resist M. Atk. -->
-			<skill id="4379" level="5" /> <!-- Resist Spear Weapons -->
+			<skill id="4071" level="3" /> <!-- Bow/Crossbow Resistance -->
+			<skill id="4074" level="1" /> <!-- Haste -->
+			<skill id="4116" level="5" /> <!-- Magic Attack Resistance -->
+			<skill id="4379" level="5" /> <!-- Spear Resistance -->
 			<skill id="4408" level="11" /> <!-- HP Increase (3x) -->
-			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
 			<skill id="4410" level="15" /> <!-- Strong P. Atk. -->
 			<skill id="4411" level="14" /> <!-- Strong M. Atk. -->
 			<skill id="4412" level="14" /> <!-- Strong P. Def. -->
 			<skill id="4413" level="18" /> <!-- Extremely Strong M. Def. -->
-			<skill id="4414" level="2" /> <!-- Standard Type -->
-			<skill id="4415" level="5" /> <!-- Blunt Weapons -->
-			<skill id="4416" level="3" /> <!-- Beasts -->
-			<skill id="5463" level="1" /> <!-- Water Attacks -->
-			<skill id="5620" level="7" /> <!-- Short-Range Physical Attack Weakness -->
-			<skill id="6556" level="16" /> <!-- NPC water attack -->
+			<skill id="4415" level="5" /> <!-- Blunt Weapon -->
+			<skill id="4416" level="3" /> <!-- Beast -->
+			<skill id="5463" level="1" /> <!-- Water Attack -->
+			<skill id="5620" level="7" /> <!-- Melee Attack Vulnerability -->
+			<skill id="6556" level="16" /> <!-- Water Attack -->
 		</skillList>
 		<exCrtEffect>false</exCrtEffect>
 		<sNpcPropHpRate>3</sNpcPropHpRate>
@@ -3988,23 +3871,21 @@
 		</stats>
 		<status undying="false" canBeSown="true" />
 		<skillList>
-			<skill id="4071" level="3" /> <!-- Resist Bow/Crossbow Weapons -->
-			<skill id="4074" level="1" /> <!-- NPC Haste -->
-			<skill id="4116" level="5" /> <!-- Resist M. Atk. -->
-			<skill id="4379" level="5" /> <!-- Resist Spear Weapons -->
+			<skill id="4071" level="3" /> <!-- Bow/Crossbow Resistance -->
+			<skill id="4074" level="1" /> <!-- Haste -->
+			<skill id="4116" level="5" /> <!-- Magic Attack Resistance -->
+			<skill id="4379" level="5" /> <!-- Spear Resistance -->
 			<skill id="4408" level="11" /> <!-- HP Increase (3x) -->
-			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
 			<skill id="4410" level="16" /> <!-- Very Strong P. Atk. -->
 			<skill id="4411" level="16" /> <!-- Very Strong M. Atk. -->
 			<skill id="4412" level="15" /> <!-- Strong P. Def. -->
 			<skill id="4413" level="18" /> <!-- Extremely Strong M. Def. -->
-			<skill id="4414" level="2" /> <!-- Standard Type -->
-			<skill id="4415" level="5" /> <!-- Blunt Weapons -->
-			<skill id="4416" level="3" /> <!-- Beasts -->
+			<skill id="4415" level="5" /> <!-- Blunt Weapon -->
+			<skill id="4416" level="3" /> <!-- Beast -->
 			<skill id="4592" level="10" /> <!-- Decrease P. Def. -->
-			<skill id="5463" level="1" /> <!-- Water Attacks -->
-			<skill id="5620" level="7" /> <!-- Short-Range Physical Attack Weakness -->
-			<skill id="6556" level="16" /> <!-- NPC water attack -->
+			<skill id="5463" level="1" /> <!-- Water Attack -->
+			<skill id="5620" level="7" /> <!-- Melee Attack Vulnerability -->
+			<skill id="6556" level="16" /> <!-- Water Attack -->
 		</skillList>
 		<exCrtEffect>false</exCrtEffect>
 		<sNpcPropHpRate>3</sNpcPropHpRate>
@@ -4068,23 +3949,21 @@
 		</stats>
 		<status undying="false" canBeSown="true" />
 		<skillList>
-			<skill id="4071" level="3" /> <!-- Resist Bow/Crossbow Weapons -->
-			<skill id="4074" level="1" /> <!-- NPC Haste -->
-			<skill id="4116" level="5" /> <!-- Resist M. Atk. -->
-			<skill id="4379" level="5" /> <!-- Resist Spear Weapons -->
+			<skill id="4071" level="3" /> <!-- Bow/Crossbow Resistance -->
+			<skill id="4074" level="1" /> <!-- Haste -->
+			<skill id="4116" level="5" /> <!-- Magic Attack Resistance -->
+			<skill id="4379" level="5" /> <!-- Spear Resistance -->
 			<skill id="4408" level="11" /> <!-- HP Increase (3x) -->
-			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
 			<skill id="4410" level="16" /> <!-- Very Strong P. Atk. -->
 			<skill id="4411" level="15" /> <!-- Strong M. Atk. -->
 			<skill id="4412" level="16" /> <!-- Very Strong P. Def. -->
 			<skill id="4413" level="18" /> <!-- Extremely Strong M. Def. -->
-			<skill id="4414" level="2" /> <!-- Standard Type -->
-			<skill id="4415" level="5" /> <!-- Blunt Weapons -->
-			<skill id="4416" level="3" /> <!-- Beasts -->
+			<skill id="4415" level="5" /> <!-- Blunt Weapon -->
+			<skill id="4416" level="3" /> <!-- Beast -->
 			<skill id="4592" level="10" /> <!-- Decrease P. Def. -->
-			<skill id="5463" level="1" /> <!-- Water Attacks -->
-			<skill id="5620" level="7" /> <!-- Short-Range Physical Attack Weakness -->
-			<skill id="6556" level="16" /> <!-- NPC water attack -->
+			<skill id="5463" level="1" /> <!-- Water Attack -->
+			<skill id="5620" level="7" /> <!-- Melee Attack Vulnerability -->
+			<skill id="6556" level="16" /> <!-- Water Attack -->
 		</skillList>
 		<exCrtEffect>false</exCrtEffect>
 		<sNpcPropHpRate>3</sNpcPropHpRate>
@@ -4134,13 +4013,15 @@
 		</stats>
 		<status undying="false" canBeSown="true" />
 		<skillList>
-			<skill id="4416" level="3" /> <!-- Beast -->
-			<skill id="5463" level="1" /> <!-- Water Attack -->
+			<skill id="4071" level="3" /> <!-- Bow/Crossbow Resistance -->
+			<skill id="4116" level="5" /> <!-- Magic Attack Resistance -->
+			<skill id="4379" level="5" /> <!-- Spear Resistance -->
 			<skill id="4410" level="13" /> <!-- Slightly Strong P. Atk. -->
 			<skill id="4413" level="14" /> <!-- Strong M. Def. -->
-			<skill id="4071" level="3" /> <!-- Bow/ Crossbow Resistance -->
+			<skill id="4415" level="3" /> <!-- One-handed Sword -->
+			<skill id="4416" level="3" /> <!-- Beast -->
+			<skill id="5463" level="1" /> <!-- Water Attack -->
 			<skill id="5620" level="2" /> <!-- Melee Attack Vulnerability -->
-			<skill id="4379" level="5" /> <!-- Spear Resistance -->
 		</skillList>
 		<exCrtEffect>false</exCrtEffect>
 		<ai clanHelpRange="300" aggroRange="300" />
@@ -4200,22 +4081,20 @@
 		</stats>
 		<status undying="false" canBeSown="true" />
 		<skillList>
-			<skill id="4028" level="2" /> <!-- NPC Might -->
-			<skill id="4071" level="3" /> <!-- Resist Bow/Crossbow Weapons -->
-			<skill id="4116" level="5" /> <!-- Resist M. Atk. -->
-			<skill id="4379" level="5" /> <!-- Resist Spear Weapons -->
+			<skill id="4028" level="2" /> <!-- Might -->
+			<skill id="4071" level="3" /> <!-- Bow/Crossbow Resistance -->
+			<skill id="4116" level="5" /> <!-- Magic Attack Resistance -->
+			<skill id="4379" level="5" /> <!-- Spear Resistance -->
 			<skill id="4408" level="10" /> <!-- HP Increase (2x) -->
-			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
 			<skill id="4410" level="14" /> <!-- Strong P. Atk. -->
 			<skill id="4411" level="13" /> <!-- Slightly Strong M. Atk. -->
 			<skill id="4412" level="12" /> <!-- Slightly Strong P. Def. -->
 			<skill id="4413" level="16" /> <!-- Very Strong M. Def. -->
-			<skill id="4414" level="2" /> <!-- Standard Type -->
 			<skill id="4415" level="3" /> <!-- One-handed Sword -->
-			<skill id="4416" level="3" /> <!-- Beasts -->
-			<skill id="5463" level="1" /> <!-- Water Attacks -->
-			<skill id="5620" level="2" /> <!-- Short-Range Physical Attack Weakness -->
-			<skill id="6556" level="17" /> <!-- NPC water attack -->
+			<skill id="4416" level="3" /> <!-- Beast -->
+			<skill id="5463" level="1" /> <!-- Water Attack -->
+			<skill id="5620" level="2" /> <!-- Melee Attack Vulnerability -->
+			<skill id="6556" level="17" /> <!-- Water Attack -->
 		</skillList>
 		<exCrtEffect>false</exCrtEffect>
 		<sNpcPropHpRate>2</sNpcPropHpRate>
@@ -4276,22 +4155,20 @@
 		</stats>
 		<status undying="false" canBeSown="true" />
 		<skillList>
-			<skill id="4028" level="2" /> <!-- NPC Might -->
-			<skill id="4071" level="3" /> <!-- Resist Bow/Crossbow Weapons -->
-			<skill id="4116" level="5" /> <!-- Resist M. Atk. -->
-			<skill id="4379" level="5" /> <!-- Resist Spear Weapons -->
+			<skill id="4028" level="2" /> <!-- Might -->
+			<skill id="4071" level="3" /> <!-- Bow/Crossbow Resistance -->
+			<skill id="4116" level="5" /> <!-- Magic Attack Resistance -->
+			<skill id="4379" level="5" /> <!-- Spear Resistance -->
 			<skill id="4408" level="10" /> <!-- HP Increase (2x) -->
-			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
 			<skill id="4410" level="14" /> <!-- Strong P. Atk. -->
 			<skill id="4411" level="13" /> <!-- Slightly Strong M. Atk. -->
 			<skill id="4412" level="12" /> <!-- Slightly Strong P. Def. -->
 			<skill id="4413" level="16" /> <!-- Very Strong M. Def. -->
-			<skill id="4414" level="2" /> <!-- Standard Type -->
 			<skill id="4415" level="3" /> <!-- One-handed Sword -->
-			<skill id="4416" level="3" /> <!-- Beasts -->
-			<skill id="5463" level="1" /> <!-- Water Attacks -->
-			<skill id="5620" level="2" /> <!-- Short-Range Physical Attack Weakness -->
-			<skill id="6556" level="17" /> <!-- NPC water attack -->
+			<skill id="4416" level="3" /> <!-- Beast -->
+			<skill id="5463" level="1" /> <!-- Water Attack -->
+			<skill id="5620" level="2" /> <!-- Melee Attack Vulnerability -->
+			<skill id="6556" level="17" /> <!-- Water Attack -->
 		</skillList>
 		<exCrtEffect>false</exCrtEffect>
 		<sNpcPropHpRate>2</sNpcPropHpRate>
@@ -4343,22 +4220,20 @@
 		</stats>
 		<status undying="false" canBeSown="true" />
 		<skillList>
-			<skill id="4028" level="2" /> <!-- NPC Might -->
-			<skill id="4071" level="3" /> <!-- Resist Bow/Crossbow Weapons -->
-			<skill id="4116" level="5" /> <!-- Resist M. Atk. -->
-			<skill id="4379" level="5" /> <!-- Resist Spear Weapons -->
+			<skill id="4028" level="2" /> <!-- Might -->
+			<skill id="4071" level="3" /> <!-- Bow/Crossbow Resistance -->
+			<skill id="4116" level="5" /> <!-- Magic Attack Resistance -->
+			<skill id="4379" level="5" /> <!-- Spear Resistance -->
 			<skill id="4408" level="11" /> <!-- HP Increase (3x) -->
-			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
 			<skill id="4410" level="15" /> <!-- Strong P. Atk. -->
 			<skill id="4411" level="14" /> <!-- Strong M. Atk. -->
 			<skill id="4412" level="14" /> <!-- Strong P. Def. -->
 			<skill id="4413" level="18" /> <!-- Extremely Strong M. Def. -->
-			<skill id="4414" level="2" /> <!-- Standard Type -->
 			<skill id="4415" level="3" /> <!-- One-handed Sword -->
-			<skill id="4416" level="3" /> <!-- Beasts -->
-			<skill id="5463" level="1" /> <!-- Water Attacks -->
-			<skill id="5620" level="7" /> <!-- Short-Range Physical Attack Weakness -->
-			<skill id="6556" level="17" /> <!-- NPC water attack -->
+			<skill id="4416" level="3" /> <!-- Beast -->
+			<skill id="5463" level="1" /> <!-- Water Attack -->
+			<skill id="5620" level="7" /> <!-- Melee Attack Vulnerability -->
+			<skill id="6556" level="17" /> <!-- Water Attack -->
 		</skillList>
 		<exCrtEffect>false</exCrtEffect>
 		<sNpcPropHpRate>3</sNpcPropHpRate>
@@ -4415,22 +4290,20 @@
 		</stats>
 		<status undying="false" canBeSown="true" />
 		<skillList>
-			<skill id="4028" level="2" /> <!-- NPC Might -->
-			<skill id="4071" level="3" /> <!-- Resist Bow/Crossbow Weapons -->
-			<skill id="4116" level="5" /> <!-- Resist M. Atk. -->
-			<skill id="4379" level="5" /> <!-- Resist Spear Weapons -->
+			<skill id="4028" level="2" /> <!-- Might -->
+			<skill id="4071" level="3" /> <!-- Bow/Crossbow Resistance -->
+			<skill id="4116" level="5" /> <!-- Magic Attack Resistance -->
+			<skill id="4379" level="5" /> <!-- Spear Resistance -->
 			<skill id="4408" level="11" /> <!-- HP Increase (3x) -->
-			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
 			<skill id="4410" level="15" /> <!-- Strong P. Atk. -->
 			<skill id="4411" level="14" /> <!-- Strong M. Atk. -->
 			<skill id="4412" level="14" /> <!-- Strong P. Def. -->
 			<skill id="4413" level="18" /> <!-- Extremely Strong M. Def. -->
-			<skill id="4414" level="2" /> <!-- Standard Type -->
 			<skill id="4415" level="3" /> <!-- One-handed Sword -->
-			<skill id="4416" level="3" /> <!-- Beasts -->
-			<skill id="5463" level="1" /> <!-- Water Attacks -->
-			<skill id="5620" level="7" /> <!-- Short-Range Physical Attack Weakness -->
-			<skill id="6556" level="17" /> <!-- NPC water attack -->
+			<skill id="4416" level="3" /> <!-- Beast -->
+			<skill id="5463" level="1" /> <!-- Water Attack -->
+			<skill id="5620" level="7" /> <!-- Melee Attack Vulnerability -->
+			<skill id="6556" level="17" /> <!-- Water Attack -->
 		</skillList>
 		<exCrtEffect>false</exCrtEffect>
 		<sNpcPropHpRate>3</sNpcPropHpRate>
@@ -4483,23 +4356,21 @@
 		</stats>
 		<status undying="false" canBeSown="true" />
 		<skillList>
-			<skill id="4028" level="2" /> <!-- NPC Might -->
-			<skill id="4071" level="3" /> <!-- Resist Bow/Crossbow Weapons -->
-			<skill id="4116" level="5" /> <!-- Resist M. Atk. -->
-			<skill id="4379" level="5" /> <!-- Resist Spear Weapons -->
+			<skill id="4028" level="2" /> <!-- Might -->
+			<skill id="4071" level="3" /> <!-- Bow/Crossbow Resistance -->
+			<skill id="4116" level="5" /> <!-- Magic Attack Resistance -->
+			<skill id="4379" level="5" /> <!-- Spear Resistance -->
 			<skill id="4408" level="11" /> <!-- HP Increase (3x) -->
-			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
 			<skill id="4410" level="16" /> <!-- Very Strong P. Atk. -->
 			<skill id="4411" level="16" /> <!-- Very Strong M. Atk. -->
 			<skill id="4412" level="15" /> <!-- Strong P. Def. -->
 			<skill id="4413" level="18" /> <!-- Extremely Strong M. Def. -->
-			<skill id="4414" level="2" /> <!-- Standard Type -->
-			<skill id="4415" level="6" /> <!-- Blunt Weapons -->
-			<skill id="4416" level="3" /> <!-- Beasts -->
+			<skill id="4415" level="6" /> <!-- Blunt Weapon -->
+			<skill id="4416" level="3" /> <!-- Beast -->
 			<skill id="4592" level="10" /> <!-- Decrease P. Def. -->
-			<skill id="5463" level="1" /> <!-- Water Attacks -->
-			<skill id="5620" level="7" /> <!-- Short-Range Physical Attack Weakness -->
-			<skill id="6556" level="17" /> <!-- NPC water attack -->
+			<skill id="5463" level="1" /> <!-- Water Attack -->
+			<skill id="5620" level="7" /> <!-- Melee Attack Vulnerability -->
+			<skill id="6556" level="17" /> <!-- Water Attack -->
 		</skillList>
 		<exCrtEffect>false</exCrtEffect>
 		<sNpcPropHpRate>3</sNpcPropHpRate>
@@ -4559,23 +4430,21 @@
 		</stats>
 		<status undying="false" canBeSown="true" />
 		<skillList>
-			<skill id="4028" level="2" /> <!-- NPC Might -->
-			<skill id="4071" level="3" /> <!-- Resist Bow/Crossbow Weapons -->
-			<skill id="4116" level="5" /> <!-- Resist M. Atk. -->
-			<skill id="4379" level="5" /> <!-- Resist Spear Weapons -->
+			<skill id="4028" level="2" /> <!-- Might -->
+			<skill id="4071" level="3" /> <!-- Bow/Crossbow Resistance -->
+			<skill id="4116" level="5" /> <!-- Magic Attack Resistance -->
+			<skill id="4379" level="5" /> <!-- Spear Resistance -->
 			<skill id="4408" level="11" /> <!-- HP Increase (3x) -->
-			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
 			<skill id="4410" level="16" /> <!-- Very Strong P. Atk. -->
 			<skill id="4411" level="15" /> <!-- Strong M. Atk. -->
 			<skill id="4412" level="16" /> <!-- Very Strong P. Def. -->
 			<skill id="4413" level="18" /> <!-- Extremely Strong M. Def. -->
-			<skill id="4414" level="2" /> <!-- Standard Type -->
-			<skill id="4415" level="6" /> <!-- Blunt Weapons -->
-			<skill id="4416" level="3" /> <!-- Beasts -->
+			<skill id="4415" level="6" /> <!-- Blunt Weapon -->
+			<skill id="4416" level="3" /> <!-- Beast -->
 			<skill id="4592" level="10" /> <!-- Decrease P. Def. -->
-			<skill id="5463" level="1" /> <!-- Water Attacks -->
-			<skill id="5620" level="7" /> <!-- Short-Range Physical Attack Weakness -->
-			<skill id="6556" level="17" /> <!-- NPC water attack -->
+			<skill id="5463" level="1" /> <!-- Water Attack -->
+			<skill id="5620" level="7" /> <!-- Melee Attack Vulnerability -->
+			<skill id="6556" level="17" /> <!-- Water Attack -->
 		</skillList>
 		<exCrtEffect>false</exCrtEffect>
 		<sNpcPropHpRate>3</sNpcPropHpRate>
@@ -4624,13 +4493,15 @@
 		</stats>
 		<status undying="false" canBeSown="true" />
 		<skillList>
-			<skill id="4416" level="4" /> <!-- Animals -->
-			<skill id="5463" level="1" /> <!-- Water Attack -->
+			<skill id="4071" level="3" /> <!-- Bow/Crossbow Resistance -->
+			<skill id="4116" level="5" /> <!-- Magic Attack Resistance -->
+			<skill id="4379" level="5" /> <!-- Spear Resistance -->
 			<skill id="4410" level="13" /> <!-- Slightly Strong P. Atk. -->
 			<skill id="4413" level="14" /> <!-- Strong M. Def. -->
-			<skill id="4071" level="3" /> <!-- Bow/ Crossbow Resistance -->
+			<skill id="4415" level="3" /> <!-- One-handed Sword -->
+			<skill id="4416" level="4" /> <!-- Animals -->
+			<skill id="5463" level="1" /> <!-- Water Attack -->
 			<skill id="5620" level="2" /> <!-- Melee Attack Vulnerability -->
-			<skill id="4379" level="5" /> <!-- Spear Resistance -->
 		</skillList>
 		<exCrtEffect>false</exCrtEffect>
 		<ai clanHelpRange="300" aggroRange="300" />
@@ -4689,22 +4560,20 @@
 		</stats>
 		<status undying="false" canBeSown="true" />
 		<skillList>
-			<skill id="4028" level="2" /> <!-- NPC Might -->
-			<skill id="4071" level="3" /> <!-- Resist Bow/Crossbow Weapons -->
-			<skill id="4116" level="5" /> <!-- Resist M. Atk. -->
-			<skill id="4379" level="5" /> <!-- Resist Spear Weapons -->
+			<skill id="4028" level="2" /> <!-- Might -->
+			<skill id="4071" level="3" /> <!-- Bow/Crossbow Resistance -->
+			<skill id="4116" level="5" /> <!-- Magic Attack Resistance -->
+			<skill id="4379" level="5" /> <!-- Spear Resistance -->
 			<skill id="4408" level="10" /> <!-- HP Increase (2x) -->
-			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
 			<skill id="4410" level="14" /> <!-- Strong P. Atk. -->
 			<skill id="4411" level="13" /> <!-- Slightly Strong M. Atk. -->
 			<skill id="4412" level="12" /> <!-- Slightly Strong P. Def. -->
 			<skill id="4413" level="16" /> <!-- Very Strong M. Def. -->
-			<skill id="4414" level="2" /> <!-- Standard Type -->
 			<skill id="4415" level="3" /> <!-- One-handed Sword -->
 			<skill id="4416" level="4" /> <!-- Animals -->
-			<skill id="5463" level="1" /> <!-- Water Attacks -->
-			<skill id="5620" level="2" /> <!-- Short-Range Physical Attack Weakness -->
-			<skill id="6556" level="17" /> <!-- NPC water attack -->
+			<skill id="5463" level="1" /> <!-- Water Attack -->
+			<skill id="5620" level="2" /> <!-- Melee Attack Vulnerability -->
+			<skill id="6556" level="17" /> <!-- Water Attack -->
 		</skillList>
 		<exCrtEffect>false</exCrtEffect>
 		<sNpcPropHpRate>2</sNpcPropHpRate>
@@ -4764,22 +4633,20 @@
 		</stats>
 		<status undying="false" canBeSown="true" />
 		<skillList>
-			<skill id="4028" level="2" /> <!-- NPC Might -->
-			<skill id="4071" level="3" /> <!-- Resist Bow/Crossbow Weapons -->
-			<skill id="4116" level="5" /> <!-- Resist M. Atk. -->
-			<skill id="4379" level="5" /> <!-- Resist Spear Weapons -->
+			<skill id="4028" level="2" /> <!-- Might -->
+			<skill id="4071" level="3" /> <!-- Bow/Crossbow Resistance -->
+			<skill id="4116" level="5" /> <!-- Magic Attack Resistance -->
+			<skill id="4379" level="5" /> <!-- Spear Resistance -->
 			<skill id="4408" level="10" /> <!-- HP Increase (2x) -->
-			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
 			<skill id="4410" level="14" /> <!-- Strong P. Atk. -->
 			<skill id="4411" level="13" /> <!-- Slightly Strong M. Atk. -->
 			<skill id="4412" level="12" /> <!-- Slightly Strong P. Def. -->
 			<skill id="4413" level="16" /> <!-- Very Strong M. Def. -->
-			<skill id="4414" level="2" /> <!-- Standard Type -->
 			<skill id="4415" level="3" /> <!-- One-handed Sword -->
 			<skill id="4416" level="4" /> <!-- Animals -->
-			<skill id="5463" level="1" /> <!-- Water Attacks -->
-			<skill id="5620" level="2" /> <!-- Short-Range Physical Attack Weakness -->
-			<skill id="6556" level="17" /> <!-- NPC water attack -->
+			<skill id="5463" level="1" /> <!-- Water Attack -->
+			<skill id="5620" level="2" /> <!-- Melee Attack Vulnerability -->
+			<skill id="6556" level="17" /> <!-- Water Attack -->
 		</skillList>
 		<exCrtEffect>false</exCrtEffect>
 		<sNpcPropHpRate>2</sNpcPropHpRate>
@@ -4831,22 +4698,20 @@
 		</stats>
 		<status undying="false" canBeSown="true" />
 		<skillList>
-			<skill id="4028" level="2" /> <!-- NPC Might -->
-			<skill id="4071" level="3" /> <!-- Resist Bow/Crossbow Weapons -->
-			<skill id="4116" level="5" /> <!-- Resist M. Atk. -->
-			<skill id="4379" level="5" /> <!-- Resist Spear Weapons -->
+			<skill id="4028" level="2" /> <!-- Might -->
+			<skill id="4071" level="3" /> <!-- Bow/Crossbow Resistance -->
+			<skill id="4116" level="5" /> <!-- Magic Attack Resistance -->
+			<skill id="4379" level="5" /> <!-- Spear Resistance -->
 			<skill id="4408" level="11" /> <!-- HP Increase (3x) -->
-			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
 			<skill id="4410" level="15" /> <!-- Strong P. Atk. -->
 			<skill id="4411" level="14" /> <!-- Strong M. Atk. -->
 			<skill id="4412" level="14" /> <!-- Strong P. Def. -->
 			<skill id="4413" level="18" /> <!-- Extremely Strong M. Def. -->
-			<skill id="4414" level="2" /> <!-- Standard Type -->
 			<skill id="4415" level="4" /> <!-- One-handed Sword -->
 			<skill id="4416" level="4" /> <!-- Animals -->
-			<skill id="5463" level="1" /> <!-- Water Attacks -->
-			<skill id="5620" level="7" /> <!-- Short-Range Physical Attack Weakness -->
-			<skill id="6556" level="17" /> <!-- NPC water attack -->
+			<skill id="5463" level="1" /> <!-- Water Attack -->
+			<skill id="5620" level="7" /> <!-- Melee Attack Vulnerability -->
+			<skill id="6556" level="17" /> <!-- Water Attack -->
 		</skillList>
 		<exCrtEffect>false</exCrtEffect>
 		<sNpcPropHpRate>3</sNpcPropHpRate>
@@ -4902,22 +4767,20 @@
 		</stats>
 		<status undying="false" canBeSown="true" />
 		<skillList>
-			<skill id="4028" level="2" /> <!-- NPC Might -->
-			<skill id="4071" level="3" /> <!-- Resist Bow/Crossbow Weapons -->
-			<skill id="4116" level="5" /> <!-- Resist M. Atk. -->
-			<skill id="4379" level="5" /> <!-- Resist Spear Weapons -->
+			<skill id="4028" level="2" /> <!-- Might -->
+			<skill id="4071" level="3" /> <!-- Bow/Crossbow Resistance -->
+			<skill id="4116" level="5" /> <!-- Magic Attack Resistance -->
+			<skill id="4379" level="5" /> <!-- Spear Resistance -->
 			<skill id="4408" level="11" /> <!-- HP Increase (3x) -->
-			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
 			<skill id="4410" level="15" /> <!-- Strong P. Atk. -->
 			<skill id="4411" level="14" /> <!-- Strong M. Atk. -->
 			<skill id="4412" level="14" /> <!-- Strong P. Def. -->
 			<skill id="4413" level="18" /> <!-- Extremely Strong M. Def. -->
-			<skill id="4414" level="2" /> <!-- Standard Type -->
 			<skill id="4415" level="4" /> <!-- One-handed Sword -->
 			<skill id="4416" level="4" /> <!-- Animals -->
-			<skill id="5463" level="1" /> <!-- Water Attacks -->
-			<skill id="5620" level="7" /> <!-- Short-Range Physical Attack Weakness -->
-			<skill id="6556" level="17" /> <!-- NPC water attack -->
+			<skill id="5463" level="1" /> <!-- Water Attack -->
+			<skill id="5620" level="7" /> <!-- Melee Attack Vulnerability -->
+			<skill id="6556" level="17" /> <!-- Water Attack -->
 		</skillList>
 		<exCrtEffect>false</exCrtEffect>
 		<sNpcPropHpRate>3</sNpcPropHpRate>
@@ -4969,23 +4832,21 @@
 		</stats>
 		<status undying="false" canBeSown="true" />
 		<skillList>
-			<skill id="4028" level="2" /> <!-- NPC Might -->
-			<skill id="4071" level="3" /> <!-- Resist Bow/Crossbow Weapons -->
-			<skill id="4116" level="5" /> <!-- Resist M. Atk. -->
-			<skill id="4379" level="5" /> <!-- Resist Spear Weapons -->
+			<skill id="4028" level="2" /> <!-- Might -->
+			<skill id="4071" level="3" /> <!-- Bow/Crossbow Resistance -->
+			<skill id="4116" level="5" /> <!-- Magic Attack Resistance -->
+			<skill id="4379" level="5" /> <!-- Spear Resistance -->
 			<skill id="4408" level="11" /> <!-- HP Increase (3x) -->
-			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
 			<skill id="4410" level="16" /> <!-- Very Strong P. Atk. -->
 			<skill id="4411" level="16" /> <!-- Very Strong M. Atk. -->
 			<skill id="4412" level="15" /> <!-- Strong P. Def. -->
 			<skill id="4413" level="18" /> <!-- Extremely Strong M. Def. -->
-			<skill id="4414" level="2" /> <!-- Standard Type -->
 			<skill id="4415" level="3" /> <!-- One-handed Sword -->
 			<skill id="4416" level="4" /> <!-- Animals -->
 			<skill id="4592" level="10" /> <!-- Decrease P. Def. -->
-			<skill id="5463" level="1" /> <!-- Water Attacks -->
-			<skill id="5620" level="7" /> <!-- Short-Range Physical Attack Weakness -->
-			<skill id="6556" level="17" /> <!-- NPC water attack -->
+			<skill id="5463" level="1" /> <!-- Water Attack -->
+			<skill id="5620" level="7" /> <!-- Melee Attack Vulnerability -->
+			<skill id="6556" level="17" /> <!-- Water Attack -->
 		</skillList>
 		<exCrtEffect>false</exCrtEffect>
 		<sNpcPropHpRate>3</sNpcPropHpRate>

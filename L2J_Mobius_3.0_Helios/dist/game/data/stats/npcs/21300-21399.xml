@@ -32,20 +32,19 @@
 		</stats>
 		<status undying="false" canBeSown="true" />
 		<skillList>
-			<skill id="4158" level="7" /> <!-- NPC Prominence - Magic -->
-			<skill id="4160" level="7" /> <!-- NPC Aura Burn - Magic -->
-			<skill id="4276" level="1" /> <!-- Weak Point against Bow/Crossbow Weapons -->
-			<skill id="4408" level="10" /> <!-- HP Increase (3x) -->
-			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
+			<skill id="4158" level="7" /> <!-- Prominence -->
+			<skill id="4160" level="7" /> <!-- Aura Burn -->
+			<skill id="4276" level="1" /> <!-- Bow/Crossbow Vulnerability -->
+			<skill id="4408" level="10" /> <!-- HP Increase (2x) -->
 			<skill id="4410" level="9" /> <!-- Slightly Weak P. Atk. -->
 			<skill id="4411" level="9" /> <!-- Slightly Weak M. Atk. -->
-			<skill id="4412" level="14" /> <!-- Slightly Strong P. Def. -->
-			<skill id="4413" level="8" /> <!-- Slightly Strong M. Def. -->
+			<skill id="4412" level="14" /> <!-- Strong P. Def. -->
+			<skill id="4413" level="8" /> <!-- Weak M. Def. -->
 			<skill id="4414" level="3" /> <!-- Light Armor Type -->
 			<skill id="4415" level="3" /> <!-- One-handed Sword -->
 			<skill id="4416" level="2" /> <!-- Magic Creatures -->
-			<skill id="4613" level="7" /> <!-- NPC Clan Heal -->
-			<skill id="4789" level="2" /> <!-- NPC High Level -->
+			<skill id="4613" level="7" /> <!-- Clan Heal -->
+			<skill id="4789" level="2" /> <!-- High Lv. -->
 		</skillList>
 		<shots shotChance="30" spiritChance="30" />
 		<exCrtEffect>false</exCrtEffect>
@@ -110,20 +109,18 @@
 		<skillList>
 			<skill id="4046" level="7" /> <!-- Sleep -->
 			<skill id="4047" level="7" /> <!-- Hold -->
-			<skill id="4094" level="7" /> <!-- NPC Cancel Magic -->
+			<skill id="4094" level="7" /> <!-- Cancellation -->
 			<skill id="4098" level="7" /> <!-- Silence -->
-			<skill id="4105" level="7" /> <!-- NPC Straight Beam Cannon -->
-			<skill id="4408" level="10" /> <!-- HP Increase (4x) -->
-			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
+			<skill id="4105" level="7" /> <!-- Beam Cannon -->
+			<skill id="4408" level="10" /> <!-- HP Increase (2x) -->
 			<skill id="4410" level="8" /> <!-- Weak P. Atk. -->
 			<skill id="4411" level="8" /> <!-- Weak M. Atk. -->
-			<skill id="4412" level="13" /> <!-- Strong P. Def. -->
-			<skill id="4413" level="9" /> <!-- Strong M. Def. -->
-			<skill id="4414" level="2" /> <!-- Standard Type -->
+			<skill id="4412" level="13" /> <!-- Slightly Strong P. Def. -->
+			<skill id="4413" level="9" /> <!-- Slightly Weak M. Def. -->
 			<skill id="4415" level="3" /> <!-- One-handed Sword -->
 			<skill id="4416" level="2" /> <!-- Magic Creatures -->
-			<skill id="4650" level="1" /> <!-- NPC AE - Dispel Hold -->
-			<skill id="4789" level="2" /> <!-- NPC High Level -->
+			<skill id="4650" level="1" /> <!-- Dispel Hold -->
+			<skill id="4789" level="2" /> <!-- High Lv. -->
 		</skillList>
 		<shots shotChance="30" spiritChance="30" />
 		<exCrtEffect>false</exCrtEffect>
@@ -187,22 +184,21 @@
 		<status undying="false" canBeSown="true" />
 		<skillList>
 			<skill id="4046" level="7" /> <!-- Sleep -->
-			<skill id="4094" level="7" /> <!-- NPC Cancel Magic -->
+			<skill id="4094" level="7" /> <!-- Cancellation -->
 			<skill id="4098" level="7" /> <!-- Silence -->
-			<skill id="4105" level="7" /> <!-- NPC Straight Beam Cannon -->
-			<skill id="4276" level="1" /> <!-- Weak Point against Bow/Crossbow Weapons -->
-			<skill id="4408" level="10" /> <!-- HP Increase (3x) -->
-			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
+			<skill id="4105" level="7" /> <!-- Beam Cannon -->
+			<skill id="4276" level="1" /> <!-- Bow/Crossbow Vulnerability -->
+			<skill id="4408" level="10" /> <!-- HP Increase (2x) -->
 			<skill id="4410" level="13" /> <!-- Slightly Strong P. Atk. -->
 			<skill id="4411" level="13" /> <!-- Slightly Strong M. Atk. -->
-			<skill id="4412" level="13" /> <!-- Slightly Weak P. Def. -->
+			<skill id="4412" level="13" /> <!-- Slightly Strong P. Def. -->
 			<skill id="4413" level="9" /> <!-- Slightly Weak M. Def. -->
 			<skill id="4414" level="3" /> <!-- Light Armor Type -->
 			<skill id="4415" level="3" /> <!-- One-handed Sword -->
 			<skill id="4416" level="2" /> <!-- Magic Creatures -->
-			<skill id="4650" level="1" /> <!-- NPC AE - Dispel Hold -->
+			<skill id="4650" level="1" /> <!-- Dispel Hold -->
 			<skill id="4657" level="7" /> <!-- Hold -->
-			<skill id="4789" level="3" /> <!-- NPC High Level -->
+			<skill id="4789" level="3" /> <!-- High Lv. -->
 		</skillList>
 		<shots shotChance="30" spiritChance="30" />
 		<exCrtEffect>false</exCrtEffect>
@@ -260,19 +256,18 @@
 		</stats>
 		<status undying="false" canBeSown="true" />
 		<skillList>
-			<skill id="4276" level="1" /> <!-- Weak Point against Bow/Crossbow Weapons -->
-			<skill id="4408" level="10" /> <!-- HP Increase (3x) -->
-			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
+			<skill id="4276" level="1" /> <!-- Bow/Crossbow Vulnerability -->
+			<skill id="4408" level="10" /> <!-- HP Increase (2x) -->
 			<skill id="4410" level="14" /> <!-- Strong P. Atk. -->
 			<skill id="4411" level="14" /> <!-- Strong M. Atk. -->
-			<skill id="4412" level="13" /> <!-- Weak P. Def. -->
-			<skill id="4413" level="9" /> <!-- Weak M. Def. -->
+			<skill id="4412" level="13" /> <!-- Slightly Strong P. Def. -->
+			<skill id="4413" level="9" /> <!-- Slightly Weak M. Def. -->
 			<skill id="4414" level="3" /> <!-- Light Armor Type -->
 			<skill id="4415" level="3" /> <!-- One-handed Sword -->
 			<skill id="4416" level="2" /> <!-- Magic Creatures -->
-			<skill id="4561" level="7" /> <!-- NPC Fire Burn - Magic -->
-			<skill id="4563" level="7" /> <!-- NPC Solar Flare - Magic -->
-			<skill id="4789" level="3" /> <!-- NPC High Level -->
+			<skill id="4561" level="7" /> <!-- Fire Burn -->
+			<skill id="4563" level="7" /> <!-- Solar Flare -->
+			<skill id="4789" level="3" /> <!-- High Lv. -->
 		</skillList>
 		<shots shotChance="30" spiritChance="30" />
 		<exCrtEffect>false</exCrtEffect>
@@ -334,20 +329,18 @@
 		</stats>
 		<status undying="false" canBeSown="true" />
 		<skillList>
-			<skill id="4089" level="1" /> <!-- NPC Bear Spirit Totem -->
-			<skill id="4090" level="1" /> <!-- NPC Wolf Spirit Totem -->
-			<skill id="4091" level="1" /> <!-- NPC Ogre Spirit Totem -->
-			<skill id="4092" level="1" /> <!-- NPC Puma Spirit Totem -->
-			<skill id="4408" level="10" /> <!-- HP Increase (4x) -->
-			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
+			<skill id="4089" level="1" /> <!-- Spirit Bear -->
+			<skill id="4090" level="1" /> <!-- Spirit Wolf -->
+			<skill id="4091" level="1" /> <!-- Spirit Ogre -->
+			<skill id="4092" level="1" /> <!-- Spirit Puma -->
+			<skill id="4408" level="10" /> <!-- HP Increase (2x) -->
 			<skill id="4410" level="12" /> <!-- Slightly Strong P. Atk. -->
 			<skill id="4411" level="12" /> <!-- Slightly Strong M. Atk. -->
 			<skill id="4412" level="9" /> <!-- Slightly Weak P. Def. -->
-			<skill id="4413" level="13" /> <!-- Slightly Weak M. Def. -->
-			<skill id="4414" level="2" /> <!-- Standard Type -->
+			<skill id="4413" level="13" /> <!-- Slightly Strong M. Def. -->
 			<skill id="4415" level="4" /> <!-- One-handed Sword -->
 			<skill id="4416" level="4" /> <!-- Animals -->
-			<skill id="4789" level="3" /> <!-- NPC High Level -->
+			<skill id="4789" level="3" /> <!-- High Lv. -->
 		</skillList>
 		<shots shotChance="30" spiritChance="30" />
 		<exCrtEffect>false</exCrtEffect>
@@ -409,20 +402,19 @@
 		</stats>
 		<status undying="false" canBeSown="true" />
 		<skillList>
-			<skill id="4158" level="7" /> <!-- NPC Prominence - Magic -->
-			<skill id="4160" level="7" /> <!-- NPC Aura Burn - Magic -->
-			<skill id="4276" level="1" /> <!-- Weak Point against Bow/Crossbow Weapons -->
-			<skill id="4408" level="10" /> <!-- HP Increase (3x) -->
-			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
+			<skill id="4158" level="7" /> <!-- Prominence -->
+			<skill id="4160" level="7" /> <!-- Aura Burn -->
+			<skill id="4276" level="1" /> <!-- Bow/Crossbow Vulnerability -->
+			<skill id="4408" level="10" /> <!-- HP Increase (2x) -->
 			<skill id="4410" level="10" /> <!-- Slightly Weak P. Atk. -->
 			<skill id="4411" level="10" /> <!-- Slightly Weak M. Atk. -->
-			<skill id="4412" level="14" /> <!-- Slightly Strong P. Def. -->
-			<skill id="4413" level="8" /> <!-- Slightly Strong M. Def. -->
+			<skill id="4412" level="14" /> <!-- Strong P. Def. -->
+			<skill id="4413" level="8" /> <!-- Weak M. Def. -->
 			<skill id="4414" level="3" /> <!-- Light Armor Type -->
 			<skill id="4415" level="3" /> <!-- One-handed Sword -->
 			<skill id="4416" level="2" /> <!-- Magic Creatures -->
-			<skill id="4613" level="7" /> <!-- NPC Clan Heal -->
-			<skill id="4789" level="3" /> <!-- NPC High Level -->
+			<skill id="4613" level="7" /> <!-- Clan Heal -->
+			<skill id="4789" level="3" /> <!-- High Lv. -->
 		</skillList>
 		<shots shotChance="30" spiritChance="30" />
 		<exCrtEffect>false</exCrtEffect>
@@ -483,17 +475,15 @@
 		<skillList>
 			<skill id="4085" level="1" /> <!-- Critical Damage -->
 			<skill id="4086" level="1" /> <!-- Critical Chance -->
-			<skill id="4408" level="10" /> <!-- HP Increase (5x) -->
-			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
+			<skill id="4408" level="10" /> <!-- HP Increase (2x) -->
 			<skill id="4410" level="8" /> <!-- Weak P. Atk. -->
 			<skill id="4411" level="8" /> <!-- Weak M. Atk. -->
 			<skill id="4412" level="14" /> <!-- Strong P. Def. -->
 			<skill id="4413" level="14" /> <!-- Strong M. Def. -->
-			<skill id="4414" level="2" /> <!-- Standard Type -->
 			<skill id="4415" level="4" /> <!-- One-handed Sword -->
 			<skill id="4416" level="8" /> <!-- Angels -->
-			<skill id="4585" level="3" /> <!-- NPC Clan Buff - Berserk Might -->
-			<skill id="4789" level="3" /> <!-- NPC High Level -->
+			<skill id="4585" level="3" /> <!-- Berserker Spirit -->
+			<skill id="4789" level="3" /> <!-- High Lv. -->
 		</skillList>
 		<shots shotChance="30" spiritChance="30" />
 		<exCrtEffect>false</exCrtEffect>
@@ -554,20 +544,19 @@
 		</stats>
 		<status undying="false" canBeSown="true" />
 		<skillList>
-			<skill id="4038" level="5" /> <!-- Decrease Atk. Spd. -->
-			<skill id="4257" level="8" /> <!-- NPC Hydroblast - Magic -->
-			<skill id="4276" level="1" /> <!-- Weak Point against Bow/Crossbow Weapons -->
-			<skill id="4408" level="10" /> <!-- HP Increase (4x) -->
-			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
+			<skill id="4038" level="5" /> <!-- Shackle -->
+			<skill id="4257" level="8" /> <!-- Hydro Blast -->
+			<skill id="4276" level="1" /> <!-- Bow/Crossbow Vulnerability -->
+			<skill id="4408" level="10" /> <!-- HP Increase (2x) -->
 			<skill id="4410" level="13" /> <!-- Slightly Strong P. Atk. -->
 			<skill id="4411" level="13" /> <!-- Slightly Strong M. Atk. -->
-			<skill id="4412" level="13" /> <!-- Slightly Weak P. Def. -->
+			<skill id="4412" level="13" /> <!-- Slightly Strong P. Def. -->
 			<skill id="4413" level="9" /> <!-- Slightly Weak M. Def. -->
 			<skill id="4414" level="3" /> <!-- Light Armor Type -->
 			<skill id="4415" level="3" /> <!-- One-handed Sword -->
 			<skill id="4416" level="2" /> <!-- Magic Creatures -->
-			<skill id="4561" level="8" /> <!-- NPC Fire Burn - Magic -->
-			<skill id="4789" level="4" /> <!-- NPC High Level -->
+			<skill id="4561" level="8" /> <!-- Fire Burn -->
+			<skill id="4789" level="4" /> <!-- High Lv. -->
 		</skillList>
 		<shots shotChance="30" spiritChance="30" />
 		<exCrtEffect>false</exCrtEffect>
@@ -631,19 +620,17 @@
 		<skillList>
 			<skill id="4085" level="1" /> <!-- Critical Damage -->
 			<skill id="4086" level="1" /> <!-- Critical Chance -->
-			<skill id="4158" level="8" /> <!-- NPC Prominence - Magic -->
-			<skill id="4408" level="10" /> <!-- HP Increase (5x) -->
-			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
+			<skill id="4158" level="8" /> <!-- Prominence -->
+			<skill id="4408" level="10" /> <!-- HP Increase (2x) -->
 			<skill id="4410" level="12" /> <!-- Slightly Strong P. Atk. -->
 			<skill id="4411" level="12" /> <!-- Slightly Strong M. Atk. -->
 			<skill id="4412" level="10" /> <!-- Slightly Weak P. Def. -->
 			<skill id="4413" level="10" /> <!-- Slightly Weak M. Def. -->
-			<skill id="4414" level="2" /> <!-- Standard Type -->
 			<skill id="4415" level="4" /> <!-- One-handed Sword -->
 			<skill id="4416" level="8" /> <!-- Angels -->
 			<skill id="4599" level="8" /> <!-- Decrease Speed -->
-			<skill id="5466" level="1" /> <!-- Holy Attack -->
-			<skill id="4789" level="4" /> <!-- NPC High Level -->
+			<skill id="4789" level="4" /> <!-- High Lv. -->
+			<skill id="5466" level="1" /> <!-- Holy Attacks -->
 		</skillList>
 		<shots shotChance="30" spiritChance="30" />
 		<exCrtEffect>false</exCrtEffect>
@@ -709,21 +696,19 @@
 		</stats>
 		<status undying="false" canBeSown="true" />
 		<skillList>
-			<skill id="4033" level="8" /> <!-- NPC Burn -->
+			<skill id="4033" level="8" /> <!-- Aura Burn -->
 			<skill id="4085" level="1" /> <!-- Critical Damage -->
 			<skill id="4086" level="1" /> <!-- Critical Chance -->
-			<skill id="4091" level="1" /> <!-- NPC Ogre Spirit Totem -->
-			<skill id="4408" level="10" /> <!-- HP Increase (5x) -->
-			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
+			<skill id="4091" level="1" /> <!-- Spirit Ogre -->
+			<skill id="4408" level="10" /> <!-- HP Increase (2x) -->
 			<skill id="4410" level="9" /> <!-- Slightly Weak P. Atk. -->
 			<skill id="4411" level="9" /> <!-- Slightly Weak M. Atk. -->
 			<skill id="4412" level="13" /> <!-- Slightly Strong P. Def. -->
 			<skill id="4413" level="13" /> <!-- Slightly Strong M. Def. -->
-			<skill id="4414" level="2" /> <!-- Standard Type -->
 			<skill id="4415" level="4" /> <!-- One-handed Sword -->
 			<skill id="4416" level="8" /> <!-- Angels -->
 			<skill id="4580" level="8" /> <!-- Decrease P. Atk. -->
-			<skill id="4789" level="4" /> <!-- NPC High Level -->
+			<skill id="4789" level="4" /> <!-- High Lv. -->
 		</skillList>
 		<shots shotChance="30" spiritChance="30" />
 		<exCrtEffect>false</exCrtEffect>
@@ -770,18 +755,17 @@
 		<skillList>
 			<skill id="4085" level="1" /> <!-- Critical Damage -->
 			<skill id="4086" level="1" /> <!-- Critical Chance -->
-			<skill id="4158" level="8" /> <!-- NPC Prominence - Magic -->
-			<skill id="4408" level="10" /> <!-- HP Increase (5x) -->
-			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
+			<skill id="4158" level="8" /> <!-- Prominence -->
+			<skill id="4408" level="10" /> <!-- HP Increase (2x) -->
 			<skill id="4410" level="12" /> <!-- Slightly Strong P. Atk. -->
 			<skill id="4411" level="12" /> <!-- Slightly Strong M. Atk. -->
 			<skill id="4412" level="10" /> <!-- Slightly Weak P. Def. -->
 			<skill id="4413" level="10" /> <!-- Slightly Weak M. Def. -->
 			<skill id="4414" level="3" /> <!-- Light Armor Type -->
-			<skill id="4415" level="5" /> <!-- Blunt Weapons -->
+			<skill id="4415" level="5" /> <!-- Blunt Weapon -->
 			<skill id="4416" level="8" /> <!-- Angels -->
 			<skill id="4599" level="8" /> <!-- Decrease Speed -->
-			<skill id="4789" level="4" /> <!-- NPC High Level -->
+			<skill id="4789" level="4" /> <!-- High Lv. -->
 		</skillList>
 		<shots shotChance="30" spiritChance="30" />
 		<exCrtEffect>false</exCrtEffect>
@@ -844,18 +828,17 @@
 		</stats>
 		<status undying="false" canBeSown="true" />
 		<skillList>
-			<skill id="4158" level="8" /> <!-- NPC Prominence - Magic -->
-			<skill id="4160" level="8" /> <!-- NPC Aura Burn - Magic -->
-			<skill id="4408" level="10" /> <!-- HP Increase (5x) -->
-			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
+			<skill id="4158" level="8" /> <!-- Prominence -->
+			<skill id="4160" level="8" /> <!-- Aura Burn -->
+			<skill id="4408" level="10" /> <!-- HP Increase (2x) -->
 			<skill id="4410" level="9" /> <!-- Slightly Weak P. Atk. -->
 			<skill id="4411" level="9" /> <!-- Slightly Weak M. Atk. -->
 			<skill id="4412" level="13" /> <!-- Slightly Strong P. Def. -->
 			<skill id="4413" level="13" /> <!-- Slightly Strong M. Def. -->
 			<skill id="4414" level="3" /> <!-- Light Armor Type -->
-			<skill id="4415" level="5" /> <!-- Blunt Weapons -->
+			<skill id="4415" level="5" /> <!-- Blunt Weapon -->
 			<skill id="4416" level="8" /> <!-- Angels -->
-			<skill id="4789" level="4" /> <!-- NPC High Level -->
+			<skill id="4789" level="4" /> <!-- High Lv. -->
 		</skillList>
 		<shots shotChance="30" spiritChance="30" />
 		<exCrtEffect>false</exCrtEffect>
@@ -906,23 +889,15 @@
 		</stats>
 		<status undying="false" canBeSown="true" />
 		<skillList>
-			<skill id="4047" level="7" /> <!-- Hold -->
-			<skill id="4156" level="7" /> <!-- NPC Curve Beam Cannon - Magic -->
-			<skill id="4160" level="7" /> <!-- NPC Aura Burn - Magic -->
-			<skill id="4276" level="1" /> <!-- Weak Point against Bow/Crossbow Weapons -->
 			<skill id="4408" level="11" /> <!-- HP Increase (3x) -->
-			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
-			<skill id="4410" level="10" /> <!-- Slightly Weak P. Atk. -->
-			<skill id="4411" level="10" /> <!-- Slightly Weak M. Atk. -->
+			<skill id="4410" level="13" /> <!-- Slightly Strong P. Atk. -->
+			<skill id="4411" level="13" /> <!-- Slightly Strong M. Atk. -->
 			<skill id="4412" level="13" /> <!-- Slightly Strong P. Def. -->
-			<skill id="4413" level="9" /> <!-- Slightly Strong M. Def. -->
-			<skill id="4414" level="3" /> <!-- Light Armor Type -->
-			<skill id="4415" level="3" /> <!-- One-handed Sword -->
-			<skill id="4416" level="2" /> <!-- Magic Creatures -->
-			<skill id="4571" level="7" /> <!-- NPC Blazing Circle -->
-			<skill id="4609" level="4" /> <!-- NPC Clan Buff - Vampiric Rage -->
-			<skill id="4650" level="1" /> <!-- NPC AE - Dispel Hold -->
-			<skill id="4789" level="3" /> <!-- NPC High Level -->
+			<skill id="4413" level="9" /> <!-- Slightly Weak M. Def. -->
+			<skill id="4415" level="4" /> <!-- One-handed Sword -->
+			<skill id="4416" level="3" /> <!-- Beast -->
+			<skill id="4579" level="7" /> <!-- Bleed -->
+			<skill id="4789" level="2" /> <!-- High Lv. -->
 		</skillList>
 		<shots shotChance="30" spiritChance="30" />
 		<exCrtEffect>false</exCrtEffect>
@@ -982,16 +957,14 @@
 		<status undying="false" canBeSown="true" />
 		<skillList>
 			<skill id="4408" level="11" /> <!-- HP Increase (3x) -->
-			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
 			<skill id="4410" level="13" /> <!-- Slightly Strong P. Atk. -->
 			<skill id="4411" level="13" /> <!-- Slightly Strong M. Atk. -->
-			<skill id="4412" level="13" /> <!-- Slightly Weak P. Def. -->
+			<skill id="4412" level="13" /> <!-- Slightly Strong P. Def. -->
 			<skill id="4413" level="9" /> <!-- Slightly Weak M. Def. -->
-			<skill id="4414" level="2" /> <!-- Standard Type -->
 			<skill id="4415" level="4" /> <!-- One-handed Sword -->
-			<skill id="4416" level="3" /> <!-- Beasts -->
+			<skill id="4416" level="3" /> <!-- Beast -->
 			<skill id="4579" level="7" /> <!-- Bleed -->
-			<skill id="4789" level="2" /> <!-- NPC High Level -->
+			<skill id="4789" level="2" /> <!-- High Lv. -->
 		</skillList>
 		<shots shotChance="30" spiritChance="30" />
 		<exCrtEffect>false</exCrtEffect>
@@ -1052,25 +1025,19 @@
 		</stats>
 		<status undying="false" canBeSown="true" />
 		<skillList>
-			<skill id="4002" level="7" /> <!-- NPC HP Drain -->
+			<skill id="4002" level="7" /> <!-- Blood Siphon -->
 			<skill id="4073" level="7" /> <!-- Stun -->
-			<skill id="4074" level="2" /> <!-- NPC Haste -->
+			<skill id="4074" level="2" /> <!-- Haste -->
 			<skill id="4085" level="1" /> <!-- Critical Damage -->
 			<skill id="4086" level="1" /> <!-- Critical Chance -->
-			<skill id="4096" level="3" /> <!-- NPC Hawkeye -->
+			<skill id="4096" level="3" /> <!-- Hawk Eye -->
 			<skill id="4408" level="10" /> <!-- HP Increase (2x) -->
-			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
-			<skill id="4410" level="11" /> <!-- Average P. Atk. -->
-			<skill id="4411" level="11" /> <!-- Average M. Atk. -->
-			<skill id="4412" level="11" /> <!-- Average P. Def. -->
-			<skill id="4413" level="11" /> <!-- Average M. Def. -->
-			<skill id="4414" level="2" /> <!-- Standard Type -->
 			<skill id="4415" level="4" /> <!-- One-handed Sword -->
-			<skill id="4416" level="3" /> <!-- Beasts -->
-			<skill id="4555" level="1" /> <!-- NPC Resist Mutant -->
-			<skill id="4789" level="3" /> <!-- NPC High Level -->
-			<skill id="4554" level="1" /> <!-- Hot Spring Malaria -->
+			<skill id="4416" level="3" /> <!-- Beast -->
 			<skill id="4551" level="1" /> <!-- Hot Springs Rheumatism -->
+			<skill id="4554" level="1" /> <!-- Hot Spring Malaria -->
+			<skill id="4555" level="1" /> <!-- Mutation Resistance -->
+			<skill id="4789" level="3" /> <!-- High Lv. -->
 		</skillList>
 		<shots shotChance="30" spiritChance="30" />
 		<exCrtEffect>false</exCrtEffect>
@@ -1142,19 +1109,13 @@
 			<skill id="4073" level="7" /> <!-- Stun -->
 			<skill id="4085" level="1" /> <!-- Critical Damage -->
 			<skill id="4086" level="1" /> <!-- Critical Chance -->
-			<skill id="4092" level="1" /> <!-- NPC Puma Spirit Totem -->
+			<skill id="4092" level="1" /> <!-- Spirit Puma -->
 			<skill id="4408" level="10" /> <!-- HP Increase (2x) -->
-			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
-			<skill id="4410" level="11" /> <!-- Average P. Atk. -->
-			<skill id="4411" level="11" /> <!-- Average M. Atk. -->
-			<skill id="4412" level="11" /> <!-- Average P. Def. -->
-			<skill id="4413" level="11" /> <!-- Average M. Def. -->
-			<skill id="4414" level="2" /> <!-- Standard Type -->
-			<skill id="4415" level="6" /> <!-- Blunt Weapons -->
-			<skill id="4416" level="3" /> <!-- Beasts -->
-			<skill id="4444" level="2" /> <!-- Higher Resist Bow/Crossbow Weapons -->
-			<skill id="4555" level="1" /> <!-- NPC Resist Mutant -->
-			<skill id="4789" level="3" /> <!-- NPC High Level -->
+			<skill id="4415" level="6" /> <!-- Blunt Weapon -->
+			<skill id="4416" level="3" /> <!-- Beast -->
+			<skill id="4444" level="2" /> <!-- Greater Bow/Crossbow Resistance -->
+			<skill id="4555" level="1" /> <!-- Mutation Resistance -->
+			<skill id="4789" level="3" /> <!-- High Lv. -->
 		</skillList>
 		<shots shotChance="30" spiritChance="30" />
 		<exCrtEffect>false</exCrtEffect>
@@ -1224,25 +1185,20 @@
 		<status undying="false" canBeSown="true" />
 		<skillList>
 			<skill id="4073" level="7" /> <!-- Stun -->
-			<skill id="4074" level="2" /> <!-- NPC Haste -->
+			<skill id="4074" level="2" /> <!-- Haste -->
 			<skill id="4085" level="1" /> <!-- Critical Damage -->
 			<skill id="4086" level="1" /> <!-- Critical Chance -->
-			<skill id="4099" level="2" /> <!-- NPC Berserk -->
-			<skill id="4277" level="5" /> <!-- Resist Poison Attacks -->
-			<skill id="4408" level="10" /> <!-- HP Increase (2x) -->
-			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
-			<skill id="4410" level="11" /> <!-- Average P. Atk. -->
-			<skill id="4411" level="11" /> <!-- Average M. Atk. -->
-			<skill id="4412" level="11" /> <!-- Average P. Def. -->
-			<skill id="4413" level="15" /> <!-- Strong M. Def. -->
-			<skill id="4414" level="2" /> <!-- Standard Type -->
-			<skill id="4415" level="5" /> <!-- Blunt Weapons -->
-			<skill id="4416" level="5" /> <!-- Plants -->
-			<skill id="4555" level="1" /> <!-- NPC Resist Mutant -->
-			<skill id="4789" level="3" /> <!-- NPC High Level -->
-			<skill id="4554" level="1" /> <!-- Hot Spring Malaria -->
+			<skill id="4099" level="2" /> <!-- Berserker Spirit -->
+			<skill id="4277" level="5" /> <!-- Poison Resistance -->
 			<skill id="4279" level="1" /> <!-- Fire Vulnerability -->
+			<skill id="4408" level="10" /> <!-- HP Increase (2x) -->
+			<skill id="4413" level="15" /> <!-- Strong M. Def. -->
+			<skill id="4415" level="5" /> <!-- Blunt Weapon -->
+			<skill id="4416" level="5" /> <!-- Plants -->
 			<skill id="4552" level="1" /> <!-- Hot Springs Cholera -->
+			<skill id="4554" level="1" /> <!-- Hot Spring Malaria -->
+			<skill id="4555" level="1" /> <!-- Mutation Resistance -->
+			<skill id="4789" level="3" /> <!-- High Lv. -->
 		</skillList>
 		<shots shotChance="30" spiritChance="30" />
 		<exCrtEffect>false</exCrtEffect>
@@ -1312,25 +1268,19 @@
 		</stats>
 		<status undying="false" canBeSown="true" />
 		<skillList>
-			<skill id="4002" level="7" /> <!-- NPC HP Drain -->
+			<skill id="4002" level="7" /> <!-- Blood Siphon -->
 			<skill id="4073" level="7" /> <!-- Stun -->
-			<skill id="4074" level="2" /> <!-- NPC Haste -->
+			<skill id="4074" level="2" /> <!-- Haste -->
 			<skill id="4085" level="1" /> <!-- Critical Damage -->
 			<skill id="4086" level="1" /> <!-- Critical Chance -->
-			<skill id="4096" level="3" /> <!-- NPC Hawkeye -->
+			<skill id="4096" level="3" /> <!-- Hawk Eye -->
 			<skill id="4408" level="10" /> <!-- HP Increase (2x) -->
-			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
-			<skill id="4410" level="11" /> <!-- Average P. Atk. -->
-			<skill id="4411" level="11" /> <!-- Average M. Atk. -->
-			<skill id="4412" level="11" /> <!-- Average P. Def. -->
-			<skill id="4413" level="11" /> <!-- Average M. Def. -->
-			<skill id="4414" level="2" /> <!-- Standard Type -->
 			<skill id="4415" level="4" /> <!-- One-handed Sword -->
 			<skill id="4416" level="12" /> <!-- Bugs -->
-			<skill id="4555" level="1" /> <!-- NPC Resist Mutant -->
-			<skill id="4789" level="3" /> <!-- NPC High Level -->
 			<skill id="4553" level="1" /> <!-- Hot Springs Flu -->
 			<skill id="4554" level="1" /> <!-- Hot Spring Malaria -->
+			<skill id="4555" level="1" /> <!-- Mutation Resistance -->
+			<skill id="4789" level="3" /> <!-- High Lv. -->
 		</skillList>
 		<shots shotChance="30" spiritChance="30" />
 		<exCrtEffect>false</exCrtEffect>
@@ -1398,23 +1348,17 @@
 		</stats>
 		<status undying="false" canBeSown="true" />
 		<skillList>
-			<skill id="4033" level="7" /> <!-- NPC Burn -->
-			<skill id="4071" level="5" /> <!-- Resist Bow/Crossbow Weapons -->
+			<skill id="4033" level="7" /> <!-- Aura Burn -->
+			<skill id="4071" level="5" /> <!-- Bow/Crossbow Resistance -->
 			<skill id="4073" level="7" /> <!-- Stun -->
 			<skill id="4085" level="1" /> <!-- Critical Damage -->
 			<skill id="4086" level="1" /> <!-- Critical Chance -->
-			<skill id="4092" level="1" /> <!-- NPC Puma Spirit Totem -->
+			<skill id="4092" level="1" /> <!-- Spirit Puma -->
 			<skill id="4408" level="10" /> <!-- HP Increase (2x) -->
-			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
-			<skill id="4410" level="11" /> <!-- Average P. Atk. -->
-			<skill id="4411" level="11" /> <!-- Average M. Atk. -->
-			<skill id="4412" level="11" /> <!-- Average P. Def. -->
-			<skill id="4413" level="11" /> <!-- Average M. Def. -->
-			<skill id="4414" level="2" /> <!-- Standard Type -->
 			<skill id="4415" level="3" /> <!-- One-handed Sword -->
 			<skill id="4416" level="4" /> <!-- Animals -->
-			<skill id="4555" level="1" /> <!-- NPC Resist Mutant -->
-			<skill id="4789" level="3" /> <!-- NPC High Level -->
+			<skill id="4555" level="1" /> <!-- Mutation Resistance -->
+			<skill id="4789" level="3" /> <!-- High Lv. -->
 		</skillList>
 		<shots shotChance="30" spiritChance="30" />
 		<exCrtEffect>false</exCrtEffect>
@@ -1486,25 +1430,20 @@
 		<skillList>
 			<skill id="4072" level="8" /> <!-- Stun -->
 			<skill id="4073" level="8" /> <!-- Stun -->
-			<skill id="4074" level="2" /> <!-- NPC Haste -->
+			<skill id="4074" level="2" /> <!-- Haste -->
 			<skill id="4085" level="1" /> <!-- Critical Damage -->
 			<skill id="4086" level="1" /> <!-- Critical Chance -->
-			<skill id="4099" level="2" /> <!-- NPC Berserk -->
-			<skill id="4277" level="5" /> <!-- Resist Poison Attacks -->
-			<skill id="4408" level="10" /> <!-- HP Increase (2x) -->
-			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
-			<skill id="4410" level="11" /> <!-- Average P. Atk. -->
-			<skill id="4411" level="11" /> <!-- Average M. Atk. -->
-			<skill id="4412" level="11" /> <!-- Average P. Def. -->
-			<skill id="4413" level="15" /> <!-- Strong M. Def. -->
-			<skill id="4414" level="2" /> <!-- Standard Type -->
-			<skill id="4415" level="6" /> <!-- Blunt Weapons -->
-			<skill id="4416" level="5" /> <!-- Plants -->
-			<skill id="4555" level="1" /> <!-- NPC Resist Mutant -->
-			<skill id="4789" level="4" /> <!-- NPC High Level -->
-			<skill id="4554" level="1" /> <!-- Hot Spring Malaria -->
+			<skill id="4099" level="2" /> <!-- Berserker Spirit -->
+			<skill id="4277" level="5" /> <!-- Poison Resistance -->
 			<skill id="4279" level="1" /> <!-- Fire Vulnerability -->
+			<skill id="4408" level="10" /> <!-- HP Increase (2x) -->
+			<skill id="4413" level="15" /> <!-- Strong M. Def. -->
+			<skill id="4415" level="6" /> <!-- Blunt Weapon -->
+			<skill id="4416" level="5" /> <!-- Plants -->
 			<skill id="4552" level="1" /> <!-- Hot Springs Cholera -->
+			<skill id="4554" level="1" /> <!-- Hot Spring Malaria -->
+			<skill id="4555" level="1" /> <!-- Mutation Resistance -->
+			<skill id="4789" level="4" /> <!-- High Lv. -->
 		</skillList>
 		<shots shotChance="30" spiritChance="30" />
 		<exCrtEffect>false</exCrtEffect>
@@ -1576,19 +1515,13 @@
 			<skill id="4073" level="8" /> <!-- Stun -->
 			<skill id="4085" level="1" /> <!-- Critical Damage -->
 			<skill id="4086" level="1" /> <!-- Critical Chance -->
-			<skill id="4092" level="1" /> <!-- NPC Puma Spirit Totem -->
+			<skill id="4092" level="1" /> <!-- Spirit Puma -->
 			<skill id="4408" level="10" /> <!-- HP Increase (2x) -->
-			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
-			<skill id="4410" level="11" /> <!-- Average P. Atk. -->
-			<skill id="4411" level="11" /> <!-- Average M. Atk. -->
-			<skill id="4412" level="11" /> <!-- Average P. Def. -->
-			<skill id="4413" level="11" /> <!-- Average M. Def. -->
-			<skill id="4414" level="2" /> <!-- Standard Type -->
 			<skill id="4415" level="3" /> <!-- One-handed Sword -->
 			<skill id="4416" level="11" /> <!-- Giants -->
-			<skill id="4444" level="2" /> <!-- Higher Resist Bow/Crossbow Weapons -->
-			<skill id="4555" level="1" /> <!-- NPC Resist Mutant -->
-			<skill id="4789" level="4" /> <!-- NPC High Level -->
+			<skill id="4444" level="2" /> <!-- Greater Bow/Crossbow Resistance -->
+			<skill id="4555" level="1" /> <!-- Mutation Resistance -->
+			<skill id="4789" level="4" /> <!-- High Lv. -->
 		</skillList>
 		<shots shotChance="30" spiritChance="30" />
 		<exCrtEffect>false</exCrtEffect>
@@ -1653,25 +1586,20 @@
 		</stats>
 		<status undying="false" canBeSown="true" />
 		<skillList>
-			<skill id="4002" level="8" /> <!-- NPC HP Drain -->
+			<skill id="4002" level="8" /> <!-- Blood Siphon -->
 			<skill id="4073" level="8" /> <!-- Stun -->
-			<skill id="4074" level="2" /> <!-- NPC Haste -->
+			<skill id="4074" level="2" /> <!-- Haste -->
 			<skill id="4085" level="1" /> <!-- Critical Damage -->
 			<skill id="4086" level="1" /> <!-- Critical Chance -->
-			<skill id="4096" level="3" /> <!-- NPC Hawkeye -->
+			<skill id="4096" level="3" /> <!-- Hawk Eye -->
 			<skill id="4408" level="10" /> <!-- HP Increase (2x) -->
-			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
-			<skill id="4410" level="11" /> <!-- Average P. Atk. -->
-			<skill id="4411" level="11" /> <!-- Average M. Atk. -->
-			<skill id="4412" level="11" /> <!-- Average P. Def. -->
 			<skill id="4413" level="15" /> <!-- Strong M. Def. -->
-			<skill id="4414" level="2" /> <!-- Standard Type -->
 			<skill id="4415" level="4" /> <!-- One-handed Sword -->
 			<skill id="4416" level="12" /> <!-- Bugs -->
-			<skill id="4555" level="1" /> <!-- NPC Resist Mutant -->
-			<skill id="4789" level="4" /> <!-- NPC High Level -->
-			<skill id="4554" level="1" /> <!-- Hot Spring Malaria -->
 			<skill id="4551" level="1" /> <!-- Hot Springs Rheumatism -->
+			<skill id="4554" level="1" /> <!-- Hot Spring Malaria -->
+			<skill id="4555" level="1" /> <!-- Mutation Resistance -->
+			<skill id="4789" level="4" /> <!-- High Lv. -->
 		</skillList>
 		<exCrtEffect>false</exCrtEffect>
 		<sNpcPropHpRate>2</sNpcPropHpRate>
@@ -1736,25 +1664,20 @@
 		</stats>
 		<status undying="false" canBeSown="true" />
 		<skillList>
-			<skill id="4002" level="8" /> <!-- NPC HP Drain -->
+			<skill id="4002" level="8" /> <!-- Blood Siphon -->
 			<skill id="4073" level="8" /> <!-- Stun -->
-			<skill id="4074" level="2" /> <!-- NPC Haste -->
+			<skill id="4074" level="2" /> <!-- Haste -->
 			<skill id="4085" level="1" /> <!-- Critical Damage -->
 			<skill id="4086" level="1" /> <!-- Critical Chance -->
-			<skill id="4099" level="2" /> <!-- NPC Berserk -->
+			<skill id="4099" level="2" /> <!-- Berserker Spirit -->
 			<skill id="4408" level="10" /> <!-- HP Increase (2x) -->
-			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
-			<skill id="4410" level="11" /> <!-- Average P. Atk. -->
-			<skill id="4411" level="11" /> <!-- Average M. Atk. -->
-			<skill id="4412" level="11" /> <!-- Average P. Def. -->
 			<skill id="4413" level="15" /> <!-- Strong M. Def. -->
-			<skill id="4414" level="2" /> <!-- Standard Type -->
 			<skill id="4415" level="4" /> <!-- One-handed Sword -->
-			<skill id="4416" level="3" /> <!-- Beasts -->
-			<skill id="4555" level="1" /> <!-- NPC Resist Mutant -->
-			<skill id="4789" level="4" /> <!-- NPC High Level -->
+			<skill id="4416" level="3" /> <!-- Beast -->
 			<skill id="4553" level="1" /> <!-- Hot Springs Flu -->
 			<skill id="4554" level="1" /> <!-- Hot Spring Malaria -->
+			<skill id="4555" level="1" /> <!-- Mutation Resistance -->
+			<skill id="4789" level="4" /> <!-- High Lv. -->
 		</skillList>
 		<exCrtEffect>false</exCrtEffect>
 		<sNpcPropHpRate>2</sNpcPropHpRate>
@@ -1817,23 +1740,17 @@
 		</stats>
 		<status undying="false" canBeSown="true" />
 		<skillList>
-			<skill id="4033" level="8" /> <!-- NPC Burn -->
+			<skill id="4033" level="8" /> <!-- Aura Burn -->
 			<skill id="4073" level="8" /> <!-- Stun -->
 			<skill id="4085" level="1" /> <!-- Critical Damage -->
 			<skill id="4086" level="1" /> <!-- Critical Chance -->
-			<skill id="4092" level="1" /> <!-- NPC Puma Spirit Totem -->
+			<skill id="4092" level="1" /> <!-- Spirit Puma -->
 			<skill id="4408" level="10" /> <!-- HP Increase (2x) -->
-			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
-			<skill id="4410" level="11" /> <!-- Average P. Atk. -->
-			<skill id="4411" level="11" /> <!-- Average M. Atk. -->
-			<skill id="4412" level="11" /> <!-- Average P. Def. -->
-			<skill id="4413" level="11" /> <!-- Average M. Def. -->
-			<skill id="4414" level="2" /> <!-- Standard Type -->
 			<skill id="4415" level="4" /> <!-- One-handed Sword -->
 			<skill id="4416" level="4" /> <!-- Animals -->
-			<skill id="4444" level="2" /> <!-- Higher Resist Bow/Crossbow Weapons -->
-			<skill id="4555" level="1" /> <!-- NPC Resist Mutant -->
-			<skill id="4789" level="4" /> <!-- NPC High Level -->
+			<skill id="4444" level="2" /> <!-- Greater Bow/Crossbow Resistance -->
+			<skill id="4555" level="1" /> <!-- Mutation Resistance -->
+			<skill id="4789" level="4" /> <!-- High Lv. -->
 		</skillList>
 		<exCrtEffect>false</exCrtEffect>
 		<sNpcPropHpRate>2</sNpcPropHpRate>
@@ -1906,18 +1823,13 @@
 		<status undying="false" canBeSown="true" />
 		<skillList>
 			<skill id="4072" level="8" /> <!-- Stun -->
-			<skill id="4099" level="2" /> <!-- NPC Berserk -->
+			<skill id="4099" level="2" /> <!-- Berserker Spirit -->
 			<skill id="4408" level="10" /> <!-- HP Increase (2x) -->
-			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
-			<skill id="4410" level="11" /> <!-- Average P. Atk. -->
-			<skill id="4411" level="11" /> <!-- Average M. Atk. -->
-			<skill id="4412" level="11" /> <!-- Average P. Def. -->
-			<skill id="4413" level="10" /> <!-- Average M. Def. -->
-			<skill id="4414" level="2" /> <!-- Standard Type -->
+			<skill id="4413" level="10" /> <!-- Slightly Weak M. Def. -->
 			<skill id="4415" level="3" /> <!-- One-handed Sword -->
 			<skill id="4416" level="6" /> <!-- Humanoids -->
-			<skill id="4573" level="8" /> <!-- NPC Sonic Blaster -->
-			<skill id="4789" level="5" /> <!-- NPC High Level -->
+			<skill id="4573" level="8" /> <!-- Sonic Blaster -->
+			<skill id="4789" level="5" /> <!-- High Lv. -->
 		</skillList>
 		<shots shotChance="30" spiritChance="30" />
 		<exCrtEffect>false</exCrtEffect>
@@ -1985,17 +1897,15 @@
 		</stats>
 		<status undying="false" canBeSown="true" />
 		<skillList>
-			<skill id="4032" level="8" /> <!-- NPC Strike -->
+			<skill id="4032" level="8" /> <!-- Power Strike -->
 			<skill id="4408" level="10" /> <!-- HP Increase (2x) -->
-			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
 			<skill id="4410" level="12" /> <!-- Slightly Strong P. Atk. -->
 			<skill id="4411" level="12" /> <!-- Slightly Strong M. Atk. -->
 			<skill id="4412" level="10" /> <!-- Slightly Weak P. Def. -->
 			<skill id="4413" level="10" /> <!-- Slightly Weak M. Def. -->
-			<skill id="4414" level="2" /> <!-- Standard Type -->
 			<skill id="4415" level="4" /> <!-- One-handed Sword -->
-			<skill id="4416" level="3" /> <!-- Beasts -->
-			<skill id="4789" level="5" /> <!-- NPC High Level -->
+			<skill id="4416" level="3" /> <!-- Beast -->
+			<skill id="4789" level="5" /> <!-- High Lv. -->
 		</skillList>
 		<exCrtEffect>false</exCrtEffect>
 		<sNpcPropHpRate>2</sNpcPropHpRate>
@@ -2064,15 +1974,14 @@
 		<skillList>
 			<skill id="4073" level="8" /> <!-- Stun -->
 			<skill id="4408" level="10" /> <!-- HP Increase (2x) -->
-			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
 			<skill id="4410" level="9" /> <!-- Slightly Weak P. Atk. -->
 			<skill id="4411" level="9" /> <!-- Slightly Weak M. Atk. -->
 			<skill id="4412" level="13" /> <!-- Slightly Strong P. Def. -->
-			<skill id="4413" level="10" /> <!-- Slightly Strong M. Def. -->
+			<skill id="4413" level="10" /> <!-- Slightly Weak M. Def. -->
 			<skill id="4414" level="3" /> <!-- Light Armor Type -->
 			<skill id="4415" level="3" /> <!-- One-handed Sword -->
-			<skill id="4416" level="3" /> <!-- Beasts -->
-			<skill id="4789" level="5" /> <!-- NPC High Level -->
+			<skill id="4416" level="3" /> <!-- Beast -->
+			<skill id="4789" level="5" /> <!-- High Lv. -->
 		</skillList>
 		<exCrtEffect>false</exCrtEffect>
 		<sNpcPropHpRate>2</sNpcPropHpRate>
@@ -2147,22 +2056,20 @@
 		</stats>
 		<status undying="false" canBeSown="true" />
 		<skillList>
-			<skill id="4038" level="5" /> <!-- Decrease Atk. Spd. -->
+			<skill id="4038" level="5" /> <!-- Shackle -->
 			<skill id="4072" level="8" /> <!-- Stun -->
 			<skill id="4085" level="1" /> <!-- Critical Damage -->
 			<skill id="4086" level="1" /> <!-- Critical Chance -->
 			<skill id="4317" level="1" /> <!-- Increase Rage Might -->
 			<skill id="4408" level="10" /> <!-- HP Increase (2x) -->
-			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
 			<skill id="4410" level="13" /> <!-- Slightly Strong P. Atk. -->
 			<skill id="4411" level="13" /> <!-- Slightly Strong M. Atk. -->
 			<skill id="4412" level="9" /> <!-- Slightly Weak P. Def. -->
 			<skill id="4413" level="9" /> <!-- Slightly Weak M. Def. -->
-			<skill id="4414" level="2" /> <!-- Standard Type -->
 			<skill id="4415" level="3" /> <!-- One-handed Sword -->
 			<skill id="4416" level="6" /> <!-- Humanoids -->
-			<skill id="4572" level="8" /> <!-- NPC Triple Sonic Slash -->
-			<skill id="4789" level="5" /> <!-- NPC High Level -->
+			<skill id="4572" level="8" /> <!-- Triple Sonic Slash -->
+			<skill id="4789" level="5" /> <!-- High Lv. -->
 		</skillList>
 		<shots shotChance="30" spiritChance="30" />
 		<exCrtEffect>false</exCrtEffect>
@@ -2236,17 +2143,15 @@
 		</stats>
 		<status undying="false" canBeSown="true" />
 		<skillList>
-			<skill id="4040" level="8" /> <!-- NPC Bow Attack -->
+			<skill id="4040" level="8" /> <!-- Power Shot -->
 			<skill id="4408" level="10" /> <!-- HP Increase (2x) -->
-			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
 			<skill id="4410" level="10" /> <!-- Slightly Weak P. Atk. -->
 			<skill id="4411" level="10" /> <!-- Slightly Weak M. Atk. -->
 			<skill id="4412" level="12" /> <!-- Slightly Strong P. Def. -->
-			<skill id="4413" level="10" /> <!-- Slightly Strong M. Def. -->
-			<skill id="4414" level="2" /> <!-- Standard Type -->
-			<skill id="4415" level="9" /> <!-- Bows -->
+			<skill id="4413" level="10" /> <!-- Slightly Weak M. Def. -->
+			<skill id="4415" level="9" /> <!-- Bow -->
 			<skill id="4416" level="6" /> <!-- Humanoids -->
-			<skill id="4789" level="5" /> <!-- NPC High Level -->
+			<skill id="4789" level="5" /> <!-- High Lv. -->
 		</skillList>
 		<shots shotChance="30" spiritChance="30" />
 		<exCrtEffect>false</exCrtEffect>
@@ -2322,21 +2227,17 @@
 		</stats>
 		<status undying="false" canBeSown="true" />
 		<skillList>
-			<skill id="4030" level="3" /> <!-- NPC Clan Might -->
-			<skill id="4031" level="3" /> <!-- NPC Clan Aegis -->
+			<skill id="4030" level="3" /> <!-- Might -->
+			<skill id="4031" level="3" /> <!-- Might -->
 			<skill id="4035" level="8" /> <!-- Poison -->
-			<skill id="4157" level="8" /> <!-- NPC Blaze - Magic -->
+			<skill id="4157" level="8" /> <!-- Blaze -->
 			<skill id="4408" level="10" /> <!-- HP Increase (2x) -->
-			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
-			<skill id="4410" level="11" /> <!-- Average P. Atk. -->
-			<skill id="4411" level="11" /> <!-- Average M. Atk. -->
-			<skill id="4412" level="11" /> <!-- Average P. Def. -->
-			<skill id="4413" level="10" /> <!-- Average M. Def. -->
+			<skill id="4413" level="10" /> <!-- Slightly Weak M. Def. -->
 			<skill id="4414" level="3" /> <!-- Light Armor Type -->
-			<skill id="4415" level="5" /> <!-- Blunt Weapons -->
+			<skill id="4415" level="5" /> <!-- Blunt Weapon -->
 			<skill id="4416" level="6" /> <!-- Humanoids -->
-			<skill id="4561" level="8" /> <!-- NPC Fire Burn - Magic -->
-			<skill id="4789" level="6" /> <!-- NPC High Level -->
+			<skill id="4561" level="8" /> <!-- Fire Burn -->
+			<skill id="4789" level="6" /> <!-- High Lv. -->
 		</skillList>
 		<shots shotChance="30" spiritChance="30" />
 		<exCrtEffect>false</exCrtEffect>
@@ -2410,15 +2311,13 @@
 		<skillList>
 			<skill id="4073" level="8" /> <!-- Stun -->
 			<skill id="4408" level="10" /> <!-- HP Increase (2x) -->
-			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
 			<skill id="4410" level="9" /> <!-- Slightly Weak P. Atk. -->
 			<skill id="4411" level="9" /> <!-- Slightly Weak M. Atk. -->
 			<skill id="4412" level="13" /> <!-- Slightly Strong P. Def. -->
-			<skill id="4413" level="10" /> <!-- Slightly Strong M. Def. -->
-			<skill id="4414" level="2" /> <!-- Standard Type -->
-			<skill id="4415" level="6" /> <!-- Blunt Weapons -->
-			<skill id="4416" level="3" /> <!-- Beasts -->
-			<skill id="4789" level="6" /> <!-- NPC High Level -->
+			<skill id="4413" level="10" /> <!-- Slightly Weak M. Def. -->
+			<skill id="4415" level="6" /> <!-- Blunt Weapon -->
+			<skill id="4416" level="3" /> <!-- Beast -->
+			<skill id="4789" level="6" /> <!-- High Lv. -->
 		</skillList>
 		<exCrtEffect>false</exCrtEffect>
 		<sNpcPropHpRate>2</sNpcPropHpRate>
@@ -2491,19 +2390,17 @@
 		</stats>
 		<status undying="false" canBeSown="true" />
 		<skillList>
-			<skill id="4078" level="9" /> <!-- NPC Flamestrike -->
+			<skill id="4078" level="9" /> <!-- Flame Strike -->
 			<skill id="4119" level="3" /> <!-- Decrease Accuracy -->
 			<skill id="4408" level="10" /> <!-- HP Increase (2x) -->
-			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
 			<skill id="4410" level="12" /> <!-- Slightly Strong P. Atk. -->
 			<skill id="4411" level="12" /> <!-- Slightly Strong M. Atk. -->
 			<skill id="4412" level="10" /> <!-- Slightly Weak P. Def. -->
 			<skill id="4413" level="10" /> <!-- Slightly Weak M. Def. -->
-			<skill id="4414" level="2" /> <!-- Standard Type -->
 			<skill id="4415" level="3" /> <!-- One-handed Sword -->
 			<skill id="4416" level="6" /> <!-- Humanoids -->
 			<skill id="4596" level="9" /> <!-- Bleed -->
-			<skill id="4789" level="6" /> <!-- NPC High Level -->
+			<skill id="4789" level="6" /> <!-- High Lv. -->
 		</skillList>
 		<shots shotChance="30" spiritChance="30" />
 		<exCrtEffect>false</exCrtEffect>
@@ -2578,22 +2475,20 @@
 		</stats>
 		<status undying="false" canBeSown="true" />
 		<skillList>
-			<skill id="4038" level="5" /> <!-- Decrease Atk. Spd. -->
+			<skill id="4038" level="5" /> <!-- Shackle -->
 			<skill id="4072" level="9" /> <!-- Stun -->
 			<skill id="4085" level="1" /> <!-- Critical Damage -->
 			<skill id="4086" level="1" /> <!-- Critical Chance -->
 			<skill id="4317" level="1" /> <!-- Increase Rage Might -->
 			<skill id="4408" level="10" /> <!-- HP Increase (2x) -->
-			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
 			<skill id="4410" level="10" /> <!-- Slightly Weak P. Atk. -->
 			<skill id="4411" level="10" /> <!-- Slightly Weak M. Atk. -->
 			<skill id="4412" level="12" /> <!-- Slightly Strong P. Def. -->
-			<skill id="4413" level="10" /> <!-- Slightly Strong M. Def. -->
-			<skill id="4414" level="2" /> <!-- Standard Type -->
-			<skill id="4415" level="6" /> <!-- Blunt Weapons -->
+			<skill id="4413" level="10" /> <!-- Slightly Weak M. Def. -->
+			<skill id="4415" level="6" /> <!-- Blunt Weapon -->
 			<skill id="4416" level="6" /> <!-- Humanoids -->
-			<skill id="4573" level="9" /> <!-- NPC Sonic Blaster -->
-			<skill id="4789" level="6" /> <!-- NPC High Level -->
+			<skill id="4573" level="9" /> <!-- Sonic Blaster -->
+			<skill id="4789" level="6" /> <!-- High Lv. -->
 		</skillList>
 		<shots shotChance="50" spiritChance="50" />
 		<exCrtEffect>false</exCrtEffect>
@@ -2661,17 +2556,15 @@
 		</stats>
 		<status undying="false" canBeSown="true" />
 		<skillList>
-			<skill id="4067" level="9" /> <!-- NPC Mortal Blow -->
+			<skill id="4067" level="9" /> <!-- Blow -->
 			<skill id="4408" level="10" /> <!-- HP Increase (2x) -->
-			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
 			<skill id="4410" level="9" /> <!-- Slightly Weak P. Atk. -->
 			<skill id="4411" level="9" /> <!-- Slightly Weak M. Atk. -->
 			<skill id="4412" level="13" /> <!-- Slightly Strong P. Def. -->
-			<skill id="4413" level="10" /> <!-- Slightly Strong M. Def. -->
-			<skill id="4414" level="2" /> <!-- Standard Type -->
-			<skill id="4415" level="5" /> <!-- Blunt Weapons -->
+			<skill id="4413" level="10" /> <!-- Slightly Weak M. Def. -->
+			<skill id="4415" level="5" /> <!-- Blunt Weapon -->
 			<skill id="4416" level="4" /> <!-- Animals -->
-			<skill id="4789" level="7" /> <!-- NPC High Level -->
+			<skill id="4789" level="7" /> <!-- High Lv. -->
 		</skillList>
 		<exCrtEffect>false</exCrtEffect>
 		<sNpcPropHpRate>2</sNpcPropHpRate>
@@ -2750,21 +2643,17 @@
 		<status undying="false" canBeSown="true" />
 		<skillList>
 			<skill id="4035" level="9" /> <!-- Poison -->
-			<skill id="4158" level="9" /> <!-- NPC Prominence - Magic -->
+			<skill id="4158" level="9" /> <!-- Prominence -->
 			<skill id="4408" level="10" /> <!-- HP Increase (2x) -->
-			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
-			<skill id="4410" level="11" /> <!-- Average P. Atk. -->
-			<skill id="4411" level="11" /> <!-- Average M. Atk. -->
-			<skill id="4412" level="11" /> <!-- Average P. Def. -->
-			<skill id="4413" level="10" /> <!-- Average M. Def. -->
+			<skill id="4413" level="10" /> <!-- Slightly Weak M. Def. -->
 			<skill id="4414" level="3" /> <!-- Light Armor Type -->
-			<skill id="4415" level="5" /> <!-- Blunt Weapons -->
+			<skill id="4415" level="5" /> <!-- Blunt Weapon -->
 			<skill id="4416" level="6" /> <!-- Humanoids -->
-			<skill id="4561" level="9" /> <!-- NPC Fire Burn - Magic -->
-			<skill id="4571" level="9" /> <!-- NPC Blazing Circle -->
-			<skill id="4575" level="2" /> <!-- NPC Clan Buff - Haste -->
-			<skill id="4576" level="3" /> <!-- NPC Clan Buff - Damage Shield -->
-			<skill id="4789" level="7" /> <!-- NPC High Level -->
+			<skill id="4561" level="9" /> <!-- Fire Burn -->
+			<skill id="4571" level="9" /> <!-- Blazing Circle -->
+			<skill id="4575" level="2" /> <!-- Haste -->
+			<skill id="4576" level="3" /> <!-- Reflect Damage -->
+			<skill id="4789" level="7" /> <!-- High Lv. -->
 		</skillList>
 		<shots shotChance="30" spiritChance="30" />
 		<exCrtEffect>false</exCrtEffect>
@@ -2837,19 +2726,14 @@
 		</stats>
 		<status undying="false" canBeSown="true" />
 		<skillList>
-			<skill id="4099" level="2" /> <!-- NPC Berserk -->
+			<skill id="4099" level="2" /> <!-- Berserker Spirit -->
 			<skill id="4408" level="10" /> <!-- HP Increase (2x) -->
-			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
-			<skill id="4410" level="11" /> <!-- Average P. Atk. -->
-			<skill id="4411" level="11" /> <!-- Average M. Atk. -->
-			<skill id="4412" level="11" /> <!-- Average P. Def. -->
-			<skill id="4413" level="10" /> <!-- Average M. Def. -->
-			<skill id="4414" level="2" /> <!-- Standard Type -->
+			<skill id="4413" level="10" /> <!-- Slightly Weak M. Def. -->
 			<skill id="4415" level="3" /> <!-- One-handed Sword -->
 			<skill id="4416" level="6" /> <!-- Humanoids -->
-			<skill id="4571" level="9" /> <!-- NPC Blazing Circle -->
-			<skill id="4573" level="9" /> <!-- NPC Sonic Blaster -->
-			<skill id="4789" level="7" /> <!-- NPC High Level -->
+			<skill id="4571" level="9" /> <!-- Blazing Circle -->
+			<skill id="4573" level="9" /> <!-- Sonic Blaster -->
+			<skill id="4789" level="7" /> <!-- High Lv. -->
 		</skillList>
 		<shots shotChance="30" spiritChance="30" />
 		<exCrtEffect>false</exCrtEffect>
@@ -2926,22 +2810,20 @@
 		</stats>
 		<status undying="false" canBeSown="true" />
 		<skillList>
-			<skill id="4038" level="5" /> <!-- Decrease Atk. Spd. -->
+			<skill id="4038" level="5" /> <!-- Shackle -->
 			<skill id="4072" level="9" /> <!-- Stun -->
 			<skill id="4085" level="1" /> <!-- Critical Damage -->
 			<skill id="4086" level="1" /> <!-- Critical Chance -->
 			<skill id="4317" level="1" /> <!-- Increase Rage Might -->
 			<skill id="4408" level="10" /> <!-- HP Increase (2x) -->
-			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
 			<skill id="4410" level="10" /> <!-- Slightly Weak P. Atk. -->
 			<skill id="4411" level="10" /> <!-- Slightly Weak M. Atk. -->
 			<skill id="4412" level="12" /> <!-- Slightly Strong P. Def. -->
-			<skill id="4413" level="10" /> <!-- Slightly Strong M. Def. -->
-			<skill id="4414" level="2" /> <!-- Standard Type -->
+			<skill id="4413" level="10" /> <!-- Slightly Weak M. Def. -->
 			<skill id="4415" level="3" /> <!-- One-handed Sword -->
 			<skill id="4416" level="6" /> <!-- Humanoids -->
-			<skill id="4572" level="9" /> <!-- NPC Triple Sonic Slash -->
-			<skill id="4789" level="7" /> <!-- NPC High Level -->
+			<skill id="4572" level="9" /> <!-- Triple Sonic Slash -->
+			<skill id="4789" level="7" /> <!-- High Lv. -->
 		</skillList>
 		<shots shotChance="50" spiritChance="50" />
 		<exCrtEffect>false</exCrtEffect>
@@ -3009,17 +2891,15 @@
 		</stats>
 		<status undying="false" canBeSown="true" />
 		<skillList>
-			<skill id="4032" level="9" /> <!-- NPC Strike -->
+			<skill id="4032" level="9" /> <!-- Power Strike -->
 			<skill id="4408" level="10" /> <!-- HP Increase (2x) -->
-			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
 			<skill id="4410" level="9" /> <!-- Slightly Weak P. Atk. -->
 			<skill id="4411" level="9" /> <!-- Slightly Weak M. Atk. -->
 			<skill id="4412" level="13" /> <!-- Slightly Strong P. Def. -->
-			<skill id="4413" level="10" /> <!-- Slightly Strong M. Def. -->
-			<skill id="4414" level="2" /> <!-- Standard Type -->
-			<skill id="4415" level="6" /> <!-- Blunt Weapons -->
-			<skill id="4416" level="3" /> <!-- Beasts -->
-			<skill id="4789" level="8" /> <!-- NPC High Level -->
+			<skill id="4413" level="10" /> <!-- Slightly Weak M. Def. -->
+			<skill id="4415" level="6" /> <!-- Blunt Weapon -->
+			<skill id="4416" level="3" /> <!-- Beast -->
+			<skill id="4789" level="8" /> <!-- High Lv. -->
 		</skillList>
 		<exCrtEffect>false</exCrtEffect>
 		<sNpcPropHpRate>2</sNpcPropHpRate>
@@ -3093,11 +2973,10 @@
 		</stats>
 		<status undying="false" canBeSown="true" />
 		<skillList>
-			<skill id="4030" level="3" /> <!-- NPC Clan Might -->
+			<skill id="4030" level="3" /> <!-- Might -->
 			<skill id="4035" level="9" /> <!-- Poison -->
-			<skill id="4158" level="9" /> <!-- NPC Prominence - Magic -->
+			<skill id="4158" level="9" /> <!-- Prominence -->
 			<skill id="4408" level="10" /> <!-- HP Increase (2x) -->
-			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
 			<skill id="4410" level="12" /> <!-- Slightly Strong P. Atk. -->
 			<skill id="4411" level="12" /> <!-- Slightly Strong M. Atk. -->
 			<skill id="4412" level="10" /> <!-- Slightly Weak P. Def. -->
@@ -3105,9 +2984,9 @@
 			<skill id="4414" level="3" /> <!-- Light Armor Type -->
 			<skill id="4415" level="3" /> <!-- One-handed Sword -->
 			<skill id="4416" level="6" /> <!-- Humanoids -->
-			<skill id="4561" level="9" /> <!-- NPC Fire Burn - Magic -->
-			<skill id="4575" level="2" /> <!-- NPC Clan Buff - Haste -->
-			<skill id="4789" level="8" /> <!-- NPC High Level -->
+			<skill id="4561" level="9" /> <!-- Fire Burn -->
+			<skill id="4575" level="2" /> <!-- Haste -->
+			<skill id="4789" level="8" /> <!-- High Lv. -->
 		</skillList>
 		<shots shotChance="30" spiritChance="30" />
 		<exCrtEffect>false</exCrtEffect>
@@ -3186,22 +3065,20 @@
 		</stats>
 		<status undying="false" canBeSown="true" />
 		<skillList>
-			<skill id="4038" level="5" /> <!-- Decrease Atk. Spd. -->
+			<skill id="4038" level="5" /> <!-- Shackle -->
 			<skill id="4072" level="9" /> <!-- Stun -->
 			<skill id="4085" level="1" /> <!-- Critical Damage -->
 			<skill id="4086" level="1" /> <!-- Critical Chance -->
 			<skill id="4317" level="1" /> <!-- Increase Rage Might -->
 			<skill id="4408" level="10" /> <!-- HP Increase (2x) -->
-			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
 			<skill id="4410" level="13" /> <!-- Slightly Strong P. Atk. -->
 			<skill id="4411" level="13" /> <!-- Slightly Strong M. Atk. -->
 			<skill id="4412" level="9" /> <!-- Slightly Weak P. Def. -->
 			<skill id="4413" level="9" /> <!-- Slightly Weak M. Def. -->
-			<skill id="4414" level="2" /> <!-- Standard Type -->
-			<skill id="4415" level="6" /> <!-- Blunt Weapons -->
+			<skill id="4415" level="6" /> <!-- Blunt Weapon -->
 			<skill id="4416" level="6" /> <!-- Humanoids -->
-			<skill id="4573" level="9" /> <!-- NPC Sonic Blaster -->
-			<skill id="4789" level="8" /> <!-- NPC High Level -->
+			<skill id="4573" level="9" /> <!-- Sonic Blaster -->
+			<skill id="4789" level="8" /> <!-- High Lv. -->
 		</skillList>
 		<shots shotChance="50" spiritChance="50" />
 		<exCrtEffect>false</exCrtEffect>
@@ -3275,22 +3152,17 @@
 		</stats>
 		<status undying="false" canBeSown="true" />
 		<skillList>
-			<skill id="4038" level="5" /> <!-- Decrease Atk. Spd. -->
+			<skill id="4038" level="5" /> <!-- Shackle -->
 			<skill id="4072" level="9" /> <!-- Stun -->
 			<skill id="4085" level="1" /> <!-- Critical Damage -->
 			<skill id="4086" level="1" /> <!-- Critical Chance -->
 			<skill id="4317" level="1" /> <!-- Increase Rage Might -->
 			<skill id="4408" level="10" /> <!-- HP Increase (2x) -->
-			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
-			<skill id="4410" level="11" /> <!-- Average P. Atk. -->
-			<skill id="4411" level="11" /> <!-- Average M. Atk. -->
-			<skill id="4412" level="11" /> <!-- Average P. Def. -->
-			<skill id="4413" level="10" /> <!-- Average M. Def. -->
-			<skill id="4414" level="2" /> <!-- Standard Type -->
+			<skill id="4413" level="10" /> <!-- Slightly Weak M. Def. -->
 			<skill id="4415" level="3" /> <!-- One-handed Sword -->
 			<skill id="4416" level="6" /> <!-- Humanoids -->
-			<skill id="4573" level="9" /> <!-- NPC Sonic Blaster -->
-			<skill id="4789" level="8" /> <!-- NPC High Level -->
+			<skill id="4573" level="9" /> <!-- Sonic Blaster -->
+			<skill id="4789" level="8" /> <!-- High Lv. -->
 		</skillList>
 		<shots shotChance="60" spiritChance="60" />
 		<exCrtEffect>false</exCrtEffect>
@@ -3360,16 +3232,15 @@
 		<status undying="false" canBeSown="true" />
 		<skillList>
 			<skill id="4408" level="10" /> <!-- HP Increase (2x) -->
-			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
 			<skill id="4410" level="9" /> <!-- Slightly Weak P. Atk. -->
 			<skill id="4411" level="9" /> <!-- Slightly Weak M. Atk. -->
 			<skill id="4412" level="13" /> <!-- Slightly Strong P. Def. -->
-			<skill id="4413" level="10" /> <!-- Slightly Strong M. Def. -->
+			<skill id="4413" level="10" /> <!-- Slightly Weak M. Def. -->
 			<skill id="4414" level="3" /> <!-- Light Armor Type -->
 			<skill id="4415" level="3" /> <!-- One-handed Sword -->
-			<skill id="4416" level="3" /> <!-- Beasts -->
+			<skill id="4416" level="3" /> <!-- Beast -->
 			<skill id="4580" level="9" /> <!-- Decrease P. Atk. -->
-			<skill id="4789" level="9" /> <!-- NPC High Level -->
+			<skill id="4789" level="9" /> <!-- High Lv. -->
 		</skillList>
 		<exCrtEffect>false</exCrtEffect>
 		<sNpcPropHpRate>2</sNpcPropHpRate>
@@ -3445,22 +3316,17 @@
 		</stats>
 		<status undying="false" canBeSown="true" />
 		<skillList>
-			<skill id="4031" level="3" /> <!-- NPC Clan Aegis -->
+			<skill id="4031" level="3" /> <!-- Might -->
 			<skill id="4035" level="9" /> <!-- Poison -->
-			<skill id="4158" level="9" /> <!-- NPC Prominence - Magic -->
+			<skill id="4158" level="9" /> <!-- Prominence -->
 			<skill id="4408" level="10" /> <!-- HP Increase (2x) -->
-			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
-			<skill id="4410" level="11" /> <!-- Average P. Atk. -->
-			<skill id="4411" level="11" /> <!-- Average M. Atk. -->
-			<skill id="4412" level="11" /> <!-- Average P. Def. -->
-			<skill id="4413" level="10" /> <!-- Average M. Def. -->
-			<skill id="4414" level="2" /> <!-- Standard Type -->
-			<skill id="4415" level="5" /> <!-- Blunt Weapons -->
+			<skill id="4413" level="10" /> <!-- Slightly Weak M. Def. -->
+			<skill id="4415" level="5" /> <!-- Blunt Weapon -->
 			<skill id="4416" level="6" /> <!-- Humanoids -->
-			<skill id="4561" level="9" /> <!-- NPC Fire Burn - Magic -->
-			<skill id="4571" level="9" /> <!-- NPC Blazing Circle -->
-			<skill id="4575" level="2" /> <!-- NPC Clan Buff - Haste -->
-			<skill id="4789" level="9" /> <!-- NPC High Level -->
+			<skill id="4561" level="9" /> <!-- Fire Burn -->
+			<skill id="4571" level="9" /> <!-- Blazing Circle -->
+			<skill id="4575" level="2" /> <!-- Haste -->
+			<skill id="4789" level="9" /> <!-- High Lv. -->
 		</skillList>
 		<shots shotChance="50" spiritChance="50" />
 		<exCrtEffect>false</exCrtEffect>
@@ -3541,21 +3407,15 @@
 		</stats>
 		<status undying="false" canBeSown="true" />
 		<skillList>
-			<skill id="4038" level="5" /> <!-- Decrease Atk. Spd. -->
-			<skill id="4085" level="1" /> <!-- Critical Damage -->
-			<skill id="4086" level="1" /> <!-- Critical Chance -->
 			<skill id="4408" level="10" /> <!-- HP Increase (2x) -->
-			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
-			<skill id="4410" level="11" /> <!-- Average P. Atk. -->
-			<skill id="4411" level="11" /> <!-- Average M. Atk. -->
-			<skill id="4412" level="11" /> <!-- Average P. Def. -->
-			<skill id="4413" level="10" /> <!-- Average M. Def. -->
-			<skill id="4414" level="2" /> <!-- Standard Type -->
-			<skill id="4415" level="7" /> <!-- Daggers -->
+			<skill id="4410" level="13" /> <!-- Slightly Strong P. Atk. -->
+			<skill id="4411" level="13" /> <!-- Slightly Strong M. Atk. -->
+			<skill id="4412" level="9" /> <!-- Slightly Weak P. Def. -->
+			<skill id="4413" level="9" /> <!-- Slightly Weak M. Def. -->
+			<skill id="4415" level="3" /> <!-- One-handed Sword -->
 			<skill id="4416" level="6" /> <!-- Humanoids -->
-			<skill id="4572" level="9" /> <!-- NPC Triple Sonic Slash -->
-			<skill id="4575" level="2" /> <!-- NPC Clan Buff - Haste -->
-			<skill id="4789" level="7" /> <!-- NPC High Level -->
+			<skill id="4573" level="9" /> <!-- Sonic Blaster -->
+			<skill id="4789" level="6" /> <!-- High Lv. -->
 		</skillList>
 		<shots shotChance="50" spiritChance="50" />
 		<exCrtEffect>false</exCrtEffect>
@@ -3617,16 +3477,14 @@
 		<status undying="false" canBeSown="true" />
 		<skillList>
 			<skill id="4408" level="10" /> <!-- HP Increase (2x) -->
-			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
 			<skill id="4410" level="13" /> <!-- Slightly Strong P. Atk. -->
 			<skill id="4411" level="13" /> <!-- Slightly Strong M. Atk. -->
 			<skill id="4412" level="9" /> <!-- Slightly Weak P. Def. -->
 			<skill id="4413" level="9" /> <!-- Slightly Weak M. Def. -->
-			<skill id="4414" level="2" /> <!-- Standard Type -->
 			<skill id="4415" level="3" /> <!-- One-handed Sword -->
 			<skill id="4416" level="6" /> <!-- Humanoids -->
-			<skill id="4573" level="9" /> <!-- NPC Sonic Blaster -->
-			<skill id="4789" level="6" /> <!-- NPC High Level -->
+			<skill id="4573" level="9" /> <!-- Sonic Blaster -->
+			<skill id="4789" level="6" /> <!-- High Lv. -->
 		</skillList>
 		<shots shotChance="30" spiritChance="30" />
 		<exCrtEffect>false</exCrtEffect>
@@ -3693,17 +3551,15 @@
 		</stats>
 		<status undying="false" canBeSown="true" />
 		<skillList>
-			<skill id="4100" level="9" /> <!-- NPC Prominence -->
 			<skill id="4408" level="10" /> <!-- HP Increase (2x) -->
-			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
-			<skill id="4410" level="12" /> <!-- Slightly Strong P. Atk. -->
-			<skill id="4411" level="12" /> <!-- Slightly Strong M. Atk. -->
-			<skill id="4412" level="10" /> <!-- Slightly Weak P. Def. -->
+			<skill id="4410" level="9" /> <!-- Slightly Weak P. Atk. -->
+			<skill id="4411" level="9" /> <!-- Slightly Weak M. Atk. -->
+			<skill id="4412" level="13" /> <!-- Slightly Strong P. Def. -->
 			<skill id="4413" level="10" /> <!-- Slightly Weak M. Def. -->
-			<skill id="4414" level="2" /> <!-- Standard Type -->
-			<skill id="4415" level="5" /> <!-- Blunt Weapons -->
+			<skill id="4415" level="6" /> <!-- Blunt Weapon -->
 			<skill id="4416" level="6" /> <!-- Humanoids -->
-			<skill id="4789" level="9" /> <!-- NPC High Level -->
+			<skill id="4573" level="9" /> <!-- Sonic Blaster -->
+			<skill id="4789" level="8" /> <!-- High Lv. -->
 		</skillList>
 		<shots shotChance="30" spiritChance="30" />
 		<exCrtEffect>false</exCrtEffect>
@@ -3769,16 +3625,14 @@
 		<status undying="false" canBeSown="true" />
 		<skillList>
 			<skill id="4408" level="10" /> <!-- HP Increase (2x) -->
-			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
 			<skill id="4410" level="9" /> <!-- Slightly Weak P. Atk. -->
 			<skill id="4411" level="9" /> <!-- Slightly Weak M. Atk. -->
 			<skill id="4412" level="13" /> <!-- Slightly Strong P. Def. -->
-			<skill id="4413" level="10" /> <!-- Slightly Strong M. Def. -->
-			<skill id="4414" level="2" /> <!-- Standard Type -->
-			<skill id="4415" level="6" /> <!-- Blunt Weapons -->
+			<skill id="4413" level="10" /> <!-- Slightly Weak M. Def. -->
+			<skill id="4415" level="6" /> <!-- Blunt Weapon -->
 			<skill id="4416" level="6" /> <!-- Humanoids -->
-			<skill id="4573" level="9" /> <!-- NPC Sonic Blaster -->
-			<skill id="4789" level="8" /> <!-- NPC High Level -->
+			<skill id="4573" level="9" /> <!-- Sonic Blaster -->
+			<skill id="4789" level="8" /> <!-- High Lv. -->
 		</skillList>
 		<shots shotChance="30" spiritChance="30" />
 		<exCrtEffect>false</exCrtEffect>
@@ -3849,21 +3703,13 @@
 		</stats>
 		<status undying="false" canBeSown="true" />
 		<skillList>
-			<skill id="4030" level="3" /> <!-- NPC Clan Might -->
 			<skill id="4035" level="9" /> <!-- Poison -->
-			<skill id="4158" level="9" /> <!-- NPC Prominence - Magic -->
+			<skill id="4100" level="9" /> <!-- Prominence -->
 			<skill id="4408" level="10" /> <!-- HP Increase (2x) -->
-			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
-			<skill id="4410" level="11" /> <!-- Average P. Atk. -->
-			<skill id="4411" level="11" /> <!-- Average M. Atk. -->
-			<skill id="4412" level="11" /> <!-- Average P. Def. -->
-			<skill id="4413" level="10" /> <!-- Average M. Def. -->
-			<skill id="4414" level="2" /> <!-- Standard Type -->
-			<skill id="4415" level="5" /> <!-- Blunt Weapons -->
+			<skill id="4413" level="10" /> <!-- Slightly Weak M. Def. -->
+			<skill id="4415" level="5" /> <!-- Blunt Weapon -->
 			<skill id="4416" level="6" /> <!-- Humanoids -->
-			<skill id="4561" level="9" /> <!-- NPC Fire Burn - Magic -->
-			<skill id="4575" level="2" /> <!-- NPC Clan Buff - Haste -->
-			<skill id="4789" level="10" /> <!-- NPC High Level -->
+			<skill id="4789" level="9" /> <!-- High Lv. -->
 		</skillList>
 		<shots shotChance="50" spiritChance="50" />
 		<exCrtEffect>false</exCrtEffect>
@@ -3930,16 +3776,11 @@
 		<status undying="false" canBeSown="true" />
 		<skillList>
 			<skill id="4408" level="10" /> <!-- HP Increase (2x) -->
-			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
-			<skill id="4410" level="11" /> <!-- Average P. Atk. -->
-			<skill id="4411" level="11" /> <!-- Average M. Atk. -->
-			<skill id="4412" level="11" /> <!-- Average P. Def. -->
-			<skill id="4413" level="10" /> <!-- Average M. Def. -->
-			<skill id="4414" level="2" /> <!-- Standard Type -->
-			<skill id="4415" level="6" /> <!-- Blunt Weapons -->
+			<skill id="4413" level="10" /> <!-- Slightly Weak M. Def. -->
+			<skill id="4415" level="6" /> <!-- Blunt Weapon -->
 			<skill id="4416" level="6" /> <!-- Humanoids -->
-			<skill id="4573" level="9" /> <!-- NPC Sonic Blaster -->
-			<skill id="4789" level="9" /> <!-- NPC High Level -->
+			<skill id="4573" level="9" /> <!-- Sonic Blaster -->
+			<skill id="4789" level="9" /> <!-- High Lv. -->
 		</skillList>
 		<shots shotChance="30" spiritChance="30" />
 		<exCrtEffect>false</exCrtEffect>
@@ -4004,17 +3845,12 @@
 		<status undying="false" canBeSown="true" />
 		<skillList>
 			<skill id="4035" level="9" /> <!-- Poison -->
-			<skill id="4100" level="9" /> <!-- NPC Prominence -->
+			<skill id="4100" level="9" /> <!-- Prominence -->
 			<skill id="4408" level="10" /> <!-- HP Increase (2x) -->
-			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
-			<skill id="4410" level="11" /> <!-- Average P. Atk. -->
-			<skill id="4411" level="11" /> <!-- Average M. Atk. -->
-			<skill id="4412" level="11" /> <!-- Average P. Def. -->
-			<skill id="4413" level="10" /> <!-- Average M. Def. -->
-			<skill id="4414" level="2" /> <!-- Standard Type -->
-			<skill id="4415" level="5" /> <!-- Blunt Weapons -->
+			<skill id="4413" level="10" /> <!-- Slightly Weak M. Def. -->
+			<skill id="4415" level="5" /> <!-- Blunt Weapon -->
 			<skill id="4416" level="6" /> <!-- Humanoids -->
-			<skill id="4789" level="9" /> <!-- NPC High Level -->
+			<skill id="4789" level="9" /> <!-- High Lv. -->
 		</skillList>
 		<shots shotChance="30" spiritChance="30" />
 		<exCrtEffect>false</exCrtEffect>
@@ -4083,10 +3919,13 @@
 		</stats>
 		<status undying="false" canBeSown="true" />
 		<skillList>
-			<skill id="4032" level="8" /> <!-- NPC Strike -->
+			<skill id="4032" level="8" /> <!-- Power Strike -->
 			<skill id="4072" level="8" /> <!-- Stun -->
-			<skill id="4092" level="1" /> <!-- NPC Puma Spirit Totem -->
+			<skill id="4092" level="1" /> <!-- Spirit Puma -->
+			<skill id="4408" level="10" /> <!-- HP Increase (2x) -->
+			<skill id="4415" level="3" /> <!-- One-handed Sword -->
 			<skill id="4416" level="6" /> <!-- Humanoids -->
+			<skill id="4789" level="5" /> <!-- High Lv. -->
 			<skill id="5620" level="6" /> <!-- Melee Attack Vulnerability -->
 		</skillList>
 		<shots shotChance="30" spiritChance="30" />
@@ -4162,10 +4001,15 @@
 		</stats>
 		<status undying="false" canBeSown="true" />
 		<skillList>
-			<skill id="4573" level="8" /> <!-- NPC Sonic Blaster -->
-			<skill id="4416" level="6" /> <!-- Humanoids -->
+			<skill id="4408" level="10" /> <!-- HP Increase (2x) -->
+			<skill id="4410" level="12" /> <!-- Slightly Strong P. Atk. -->
+			<skill id="4411" level="12" /> <!-- Slightly Strong M. Atk. -->
 			<skill id="4412" level="10" /> <!-- Slightly Weak P. Def. -->
 			<skill id="4413" level="10" /> <!-- Slightly Weak M. Def. -->
+			<skill id="4415" level="3" /> <!-- One-handed Sword -->
+			<skill id="4416" level="6" /> <!-- Humanoids -->
+			<skill id="4573" level="8" /> <!-- Sonic Blaster -->
+			<skill id="4789" level="5" /> <!-- High Lv. -->
 			<skill id="5620" level="6" /> <!-- Melee Attack Vulnerability -->
 		</skillList>
 		<shots shotChance="30" spiritChance="30" />
@@ -4239,12 +4083,14 @@
 		</stats>
 		<status undying="false" canBeSown="true" />
 		<skillList>
-			<skill id="4067" level="8" /> <!-- NPC Mortal Blow -->
-			<skill id="4416" level="4" /> <!-- Animals -->
+			<skill id="4067" level="8" /> <!-- Blow -->
 			<skill id="4410" level="9" /> <!-- Slightly Weak P. Atk. -->
 			<skill id="4411" level="9" /> <!-- Slightly Weak M. Atk. -->
 			<skill id="4412" level="13" /> <!-- Slightly Strong P. Def. -->
 			<skill id="4413" level="13" /> <!-- Slightly Strong M. Def. -->
+			<skill id="4415" level="3" /> <!-- One-handed Sword -->
+			<skill id="4416" level="4" /> <!-- Animals -->
+			<skill id="4789" level="5" /> <!-- High Lv. -->
 			<skill id="5620" level="6" /> <!-- Melee Attack Vulnerability -->
 		</skillList>
 		<exCrtEffect>false</exCrtEffect>
@@ -4319,15 +4165,20 @@
 		</stats>
 		<status undying="false" canBeSown="true" />
 		<skillList>
-			<skill id="4038" level="5" /> <!-- Decrease Atk. Spd. -->
+			<skill id="4038" level="5" /> <!-- Shackle -->
 			<skill id="4072" level="8" /> <!-- Stun -->
-			<skill id="4317" level="1" /> <!-- Increase Rage Might -->
-			<skill id="4573" level="8" /> <!-- NPC Sonic Blaster -->
-			<skill id="4416" level="6" /> <!-- Humanoids -->
-			<skill id="4412" level="9" /> <!-- Slightly Weak P. Def. -->
-			<skill id="4413" level="9" /> <!-- Slightly Weak M. Def. -->
 			<skill id="4085" level="1" /> <!-- Critical Damage -->
 			<skill id="4086" level="1" /> <!-- Critical Chance -->
+			<skill id="4317" level="1" /> <!-- Increase Rage Might -->
+			<skill id="4408" level="10" /> <!-- HP Increase (2x) -->
+			<skill id="4410" level="13" /> <!-- Slightly Strong P. Atk. -->
+			<skill id="4411" level="13" /> <!-- Slightly Strong M. Atk. -->
+			<skill id="4412" level="9" /> <!-- Slightly Weak P. Def. -->
+			<skill id="4413" level="9" /> <!-- Slightly Weak M. Def. -->
+			<skill id="4415" level="3" /> <!-- One-handed Sword -->
+			<skill id="4416" level="6" /> <!-- Humanoids -->
+			<skill id="4573" level="8" /> <!-- Sonic Blaster -->
+			<skill id="4789" level="5" /> <!-- High Lv. -->
 			<skill id="5620" level="6" /> <!-- Melee Attack Vulnerability -->
 		</skillList>
 		<shots shotChance="30" spiritChance="30" />
@@ -4403,12 +4254,15 @@
 		</stats>
 		<status undying="false" canBeSown="true" />
 		<skillList>
-			<skill id="4040" level="8" /> <!-- NPC Bow Attack -->
-			<skill id="4416" level="6" /> <!-- Humanoids -->
+			<skill id="4040" level="8" /> <!-- Power Shot -->
+			<skill id="4408" level="10" /> <!-- HP Increase (2x) -->
 			<skill id="4410" level="10" /> <!-- Slightly Weak P. Atk. -->
 			<skill id="4411" level="10" /> <!-- Slightly Weak M. Atk. -->
 			<skill id="4412" level="12" /> <!-- Slightly Strong P. Def. -->
 			<skill id="4413" level="12" /> <!-- Slightly Strong M. Def. -->
+			<skill id="4415" level="9" /> <!-- Bow -->
+			<skill id="4416" level="6" /> <!-- Humanoids -->
+			<skill id="4789" level="5" /> <!-- High Lv. -->
 			<skill id="5620" level="6" /> <!-- Melee Attack Vulnerability -->
 		</skillList>
 		<shots shotChance="30" spiritChance="30" />
@@ -4489,13 +4343,16 @@
 		</stats>
 		<status undying="false" canBeSown="true" />
 		<skillList>
-			<skill id="4030" level="3" /> <!-- NPC Clan Might -->
-			<skill id="4031" level="3" /> <!-- NPC Clan Aegis -->
+			<skill id="4030" level="3" /> <!-- Might -->
+			<skill id="4031" level="3" /> <!-- Might -->
 			<skill id="4098" level="8" /> <!-- Silence -->
-			<skill id="4160" level="8" /> <!-- NPC Aura Burn - Magic -->
-			<skill id="4563" level="8" /> <!-- NPC Solar Flare - Magic -->
-			<skill id="4416" level="6" /> <!-- Humanoids -->
+			<skill id="4160" level="8" /> <!-- Aura Burn -->
+			<skill id="4408" level="10" /> <!-- HP Increase (2x) -->
 			<skill id="4414" level="3" /> <!-- Light Armor Type -->
+			<skill id="4415" level="6" /> <!-- Blunt Weapon -->
+			<skill id="4416" level="6" /> <!-- Humanoids -->
+			<skill id="4563" level="8" /> <!-- Solar Flare -->
+			<skill id="4789" level="6" /> <!-- High Lv. -->
 			<skill id="5620" level="6" /> <!-- Melee Attack Vulnerability -->
 		</skillList>
 		<shots shotChance="30" spiritChance="30" />
@@ -4571,19 +4428,16 @@
 		<status undying="false" canBeSown="true" />
 		<skillList>
 			<skill id="4073" level="8" /> <!-- Stun -->
-			<skill id="4277" level="5" /> <!-- Resist Poison Attacks -->
-			<skill id="4408" level="1" /> <!-- HP Increase (1x) -->
-			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
+			<skill id="4277" level="5" /> <!-- Poison Resistance -->
+			<skill id="4279" level="1" /> <!-- Fire Vulnerability -->
 			<skill id="4410" level="9" /> <!-- Slightly Weak P. Atk. -->
 			<skill id="4411" level="9" /> <!-- Slightly Weak M. Atk. -->
 			<skill id="4412" level="13" /> <!-- Slightly Strong P. Def. -->
 			<skill id="4413" level="13" /> <!-- Slightly Strong M. Def. -->
-			<skill id="4414" level="2" /> <!-- Standard Type -->
-			<skill id="4415" level="6" /> <!-- Blunt Weapons -->
+			<skill id="4415" level="6" /> <!-- Blunt Weapon -->
 			<skill id="4416" level="5" /> <!-- Plants -->
-			<skill id="4789" level="6" /> <!-- NPC High Level -->
-			<skill id="5620" level="6" /> <!-- Short-Range Physical Attack Weakness -->
-			<skill id="4279" level="1" /> <!-- Fire Vulnerability -->
+			<skill id="4789" level="6" /> <!-- High Lv. -->
+			<skill id="5620" level="6" /> <!-- Melee Attack Vulnerability -->
 		</skillList>
 		<exCrtEffect>false</exCrtEffect>
 		<ai clanHelpRange="300" aggroRange="300">
@@ -4658,18 +4512,16 @@
 		<skillList>
 			<skill id="4119" level="3" /> <!-- Decrease Accuracy -->
 			<skill id="4408" level="10" /> <!-- HP Increase (2x) -->
-			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
 			<skill id="4410" level="12" /> <!-- Slightly Strong P. Atk. -->
 			<skill id="4411" level="12" /> <!-- Slightly Strong M. Atk. -->
 			<skill id="4412" level="10" /> <!-- Slightly Weak P. Def. -->
 			<skill id="4413" level="10" /> <!-- Slightly Weak M. Def. -->
-			<skill id="4414" level="2" /> <!-- Standard Type -->
 			<skill id="4415" level="3" /> <!-- One-handed Sword -->
 			<skill id="4416" level="6" /> <!-- Humanoids -->
-			<skill id="4560" level="9" /> <!-- NPC Fire Burn -->
-			<skill id="4562" level="9" /> <!-- NPC Solar Flare -->
-			<skill id="4789" level="6" /> <!-- NPC High Level -->
-			<skill id="5620" level="6" /> <!-- Short-Range Physical Attack Weakness -->
+			<skill id="4560" level="9" /> <!-- Fire Burn -->
+			<skill id="4562" level="9" /> <!-- Solar Flare -->
+			<skill id="4789" level="6" /> <!-- High Lv. -->
+			<skill id="5620" level="6" /> <!-- Melee Attack Vulnerability -->
 		</skillList>
 		<shots shotChance="30" spiritChance="30" />
 		<exCrtEffect>false</exCrtEffect>
@@ -4733,17 +4585,20 @@
 		</stats>
 		<status undying="false" canBeSown="true" />
 		<skillList>
-			<skill id="4038" level="5" /> <!-- Decrease Atk. Spd. -->
+			<skill id="4038" level="5" /> <!-- Shackle -->
 			<skill id="4072" level="9" /> <!-- Stun -->
+			<skill id="4085" level="1" /> <!-- Critical Damage -->
+			<skill id="4086" level="1" /> <!-- Critical Chance -->
 			<skill id="4317" level="1" /> <!-- Increase Rage Might -->
-			<skill id="4572" level="9" /> <!-- NPC Triple Sonic Slash -->
-			<skill id="4416" level="6" /> <!-- Humanoids -->
+			<skill id="4408" level="10" /> <!-- HP Increase (2x) -->
 			<skill id="4410" level="10" /> <!-- Slightly Weak P. Atk. -->
 			<skill id="4411" level="10" /> <!-- Slightly Weak M. Atk. -->
 			<skill id="4412" level="12" /> <!-- Slightly Strong P. Def. -->
 			<skill id="4413" level="12" /> <!-- Slightly Strong M. Def. -->
-			<skill id="4085" level="1" /> <!-- Critical Damage -->
-			<skill id="4086" level="1" /> <!-- Critical Chance -->
+			<skill id="4415" level="3" /> <!-- One-handed Sword -->
+			<skill id="4416" level="6" /> <!-- Humanoids -->
+			<skill id="4572" level="9" /> <!-- Triple Sonic Slash -->
+			<skill id="4789" level="6" /> <!-- High Lv. -->
 			<skill id="5620" level="6" /> <!-- Melee Attack Vulnerability -->
 		</skillList>
 		<shots shotChance="50" spiritChance="50" />
@@ -4813,18 +4668,15 @@
 		</stats>
 		<status undying="false" canBeSown="true" />
 		<skillList>
-			<skill id="4032" level="9" /> <!-- NPC Strike -->
-			<skill id="4408" level="1" /> <!-- HP Increase (1x) -->
-			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
+			<skill id="4032" level="9" /> <!-- Power Strike -->
 			<skill id="4410" level="9" /> <!-- Slightly Weak P. Atk. -->
 			<skill id="4411" level="9" /> <!-- Slightly Weak M. Atk. -->
 			<skill id="4412" level="13" /> <!-- Slightly Strong P. Def. -->
 			<skill id="4413" level="13" /> <!-- Slightly Strong M. Def. -->
-			<skill id="4414" level="2" /> <!-- Standard Type -->
 			<skill id="4415" level="4" /> <!-- One-handed Sword -->
-			<skill id="4416" level="3" /> <!-- Beasts -->
-			<skill id="4789" level="7" /> <!-- NPC High Level -->
-			<skill id="5620" level="6" /> <!-- Short-Range Physical Attack Weakness -->
+			<skill id="4416" level="3" /> <!-- Beast -->
+			<skill id="4789" level="7" /> <!-- High Lv. -->
+			<skill id="5620" level="6" /> <!-- Melee Attack Vulnerability -->
 		</skillList>
 		<exCrtEffect>false</exCrtEffect>
 		<ai clanHelpRange="300" aggroRange="300">
@@ -4903,14 +4755,17 @@
 		</stats>
 		<status undying="false" canBeSown="true" />
 		<skillList>
-			<skill id="4033" level="9" /> <!-- NPC Burn -->
+			<skill id="4033" level="9" /> <!-- Aura Burn -->
 			<skill id="4035" level="9" /> <!-- Poison -->
-			<skill id="4160" level="9" /> <!-- NPC Aura Burn - Magic -->
-			<skill id="4563" level="9" /> <!-- NPC Solar Flare - Magic -->
-			<skill id="4575" level="2" /> <!-- NPC Clan Buff - Haste -->
-			<skill id="4576" level="3" /> <!-- NPC Clan Buff - Damage Shield -->
-			<skill id="4416" level="6" /> <!-- Humanoids -->
+			<skill id="4160" level="9" /> <!-- Aura Burn -->
+			<skill id="4408" level="10" /> <!-- HP Increase (2x) -->
 			<skill id="4414" level="3" /> <!-- Light Armor Type -->
+			<skill id="4415" level="6" /> <!-- Blunt Weapon -->
+			<skill id="4416" level="6" /> <!-- Humanoids -->
+			<skill id="4563" level="9" /> <!-- Solar Flare -->
+			<skill id="4575" level="2" /> <!-- Haste -->
+			<skill id="4576" level="3" /> <!-- Reflect Damage -->
+			<skill id="4789" level="7" /> <!-- High Lv. -->
 			<skill id="5620" level="6" /> <!-- Melee Attack Vulnerability -->
 		</skillList>
 		<shots shotChance="30" spiritChance="30" />
@@ -4987,10 +4842,13 @@
 		</stats>
 		<status undying="false" canBeSown="true" />
 		<skillList>
-			<skill id="4099" level="2" /> <!-- NPC Berserk -->
-			<skill id="4571" level="9" /> <!-- NPC Blazing Circle -->
-			<skill id="4573" level="9" /> <!-- NPC Sonic Blaster -->
+			<skill id="4099" level="2" /> <!-- Berserker Spirit -->
+			<skill id="4408" level="10" /> <!-- HP Increase (2x) -->
+			<skill id="4415" level="5" /> <!-- Blunt Weapon -->
 			<skill id="4416" level="6" /> <!-- Humanoids -->
+			<skill id="4571" level="9" /> <!-- Blazing Circle -->
+			<skill id="4573" level="9" /> <!-- Sonic Blaster -->
+			<skill id="4789" level="7" /> <!-- High Lv. -->
 			<skill id="5620" level="6" /> <!-- Melee Attack Vulnerability -->
 		</skillList>
 		<shots shotChance="30" spiritChance="30" />
@@ -5073,17 +4931,20 @@
 		</stats>
 		<status undying="false" canBeSown="true" />
 		<skillList>
-			<skill id="4038" level="5" /> <!-- Decrease Atk. Spd. -->
+			<skill id="4038" level="5" /> <!-- Shackle -->
 			<skill id="4072" level="9" /> <!-- Stun -->
+			<skill id="4085" level="1" /> <!-- Critical Damage -->
+			<skill id="4086" level="1" /> <!-- Critical Chance -->
 			<skill id="4317" level="1" /> <!-- Increase Rage Might -->
-			<skill id="4572" level="9" /> <!-- NPC Triple Sonic Slash -->
-			<skill id="4416" level="6" /> <!-- Humanoids -->
+			<skill id="4408" level="10" /> <!-- HP Increase (2x) -->
 			<skill id="4410" level="10" /> <!-- Slightly Weak P. Atk. -->
 			<skill id="4411" level="10" /> <!-- Slightly Weak M. Atk. -->
 			<skill id="4412" level="12" /> <!-- Slightly Strong P. Def. -->
 			<skill id="4413" level="12" /> <!-- Slightly Strong M. Def. -->
-			<skill id="4085" level="1" /> <!-- Critical Damage -->
-			<skill id="4086" level="1" /> <!-- Critical Chance -->
+			<skill id="4415" level="6" /> <!-- Blunt Weapon -->
+			<skill id="4416" level="6" /> <!-- Humanoids -->
+			<skill id="4572" level="9" /> <!-- Triple Sonic Slash -->
+			<skill id="4789" level="7" /> <!-- High Lv. -->
 			<skill id="5620" level="6" /> <!-- Melee Attack Vulnerability -->
 		</skillList>
 		<shots shotChance="50" spiritChance="50" />
@@ -5159,13 +5020,17 @@
 		</stats>
 		<status undying="false" canBeSown="true" />
 		<skillList>
-			<skill id="4032" level="9" /> <!-- NPC Strike -->
-			<skill id="4416" level="5" /> <!-- Plants -->
+			<skill id="4032" level="9" /> <!-- Power Strike -->
+			<skill id="4277" level="5" /> <!-- Poison Resistance -->
+			<skill id="4279" level="1" /> <!-- Fire Vulnerability -->
+			<skill id="4408" level="10" /> <!-- HP Increase (2x) -->
 			<skill id="4410" level="9" /> <!-- Slightly Weak P. Atk. -->
 			<skill id="4411" level="9" /> <!-- Slightly Weak M. Atk. -->
 			<skill id="4412" level="13" /> <!-- Slightly Strong P. Def. -->
 			<skill id="4413" level="13" /> <!-- Slightly Strong M. Def. -->
-			<skill id="4277" level="5" /> <!-- Poison Resistance -->
+			<skill id="4415" level="3" /> <!-- One-handed Sword -->
+			<skill id="4416" level="5" /> <!-- Plants -->
+			<skill id="4789" level="8" /> <!-- High Lv. -->
 			<skill id="5620" level="6" /> <!-- Melee Attack Vulnerability -->
 		</skillList>
 		<exCrtEffect>false</exCrtEffect>
@@ -5253,15 +5118,19 @@
 		</stats>
 		<status undying="false" canBeSown="true" />
 		<skillList>
-			<skill id="4030" level="3" /> <!-- NPC Clan Might -->
+			<skill id="4030" level="3" /> <!-- Might -->
 			<skill id="4119" level="3" /> <!-- Decrease Accuracy -->
-			<skill id="4160" level="9" /> <!-- NPC Aura Burn - Magic -->
-			<skill id="4562" level="9" /> <!-- NPC Solar Flare -->
-			<skill id="4575" level="2" /> <!-- NPC Clan Buff - Haste -->
-			<skill id="4416" level="6" /> <!-- Humanoids -->
+			<skill id="4160" level="9" /> <!-- Aura Burn -->
+			<skill id="4410" level="12" /> <!-- Slightly Strong P. Atk. -->
+			<skill id="4411" level="12" /> <!-- Slightly Strong M. Atk. -->
 			<skill id="4412" level="10" /> <!-- Slightly Weak P. Def. -->
 			<skill id="4413" level="10" /> <!-- Slightly Weak M. Def. -->
 			<skill id="4414" level="3" /> <!-- Light Armor Type -->
+			<skill id="4415" level="6" /> <!-- Blunt Weapon -->
+			<skill id="4416" level="6" /> <!-- Humanoids -->
+			<skill id="4562" level="9" /> <!-- Solar Flare -->
+			<skill id="4575" level="2" /> <!-- Haste -->
+			<skill id="4789" level="8" /> <!-- High Lv. -->
 			<skill id="5620" level="6" /> <!-- Melee Attack Vulnerability -->
 		</skillList>
 		<shots shotChance="30" spiritChance="30" />
@@ -5346,16 +5215,21 @@
 		</stats>
 		<status undying="false" canBeSown="true" />
 		<skillList>
-			<skill id="4038" level="5" /> <!-- Decrease Atk. Spd. -->
-			<skill id="4072" level="9" /> <!-- Stun -->
-			<skill id="4317" level="1" /> <!-- Increase Rage Might -->
-			<skill id="4573" level="9" /> <!-- NPC Sonic Blaster -->
 			<skill id="4033" level="1" /> <!-- Aura Burn -->
-			<skill id="4416" level="6" /> <!-- Humanoids -->
-			<skill id="4412" level="9" /> <!-- Slightly Weak P. Def. -->
-			<skill id="4413" level="9" /> <!-- Slightly Weak M. Def. -->
+			<skill id="4038" level="5" /> <!-- Shackle -->
+			<skill id="4072" level="9" /> <!-- Stun -->
 			<skill id="4085" level="1" /> <!-- Critical Damage -->
 			<skill id="4086" level="1" /> <!-- Critical Chance -->
+			<skill id="4317" level="1" /> <!-- Increase Rage Might -->
+			<skill id="4408" level="10" /> <!-- HP Increase (2x) -->
+			<skill id="4410" level="13" /> <!-- Slightly Strong P. Atk. -->
+			<skill id="4411" level="13" /> <!-- Slightly Strong M. Atk. -->
+			<skill id="4412" level="9" /> <!-- Slightly Weak P. Def. -->
+			<skill id="4413" level="9" /> <!-- Slightly Weak M. Def. -->
+			<skill id="4415" level="3" /> <!-- One-handed Sword -->
+			<skill id="4416" level="6" /> <!-- Humanoids -->
+			<skill id="4573" level="9" /> <!-- Sonic Blaster -->
+			<skill id="4789" level="8" /> <!-- High Lv. -->
 			<skill id="5620" level="6" /> <!-- Melee Attack Vulnerability -->
 		</skillList>
 		<shots shotChance="50" spiritChance="50" />
@@ -5438,13 +5312,16 @@
 		</stats>
 		<status undying="false" canBeSown="true" />
 		<skillList>
-			<skill id="4038" level="5" /> <!-- Decrease Atk. Spd. -->
+			<skill id="4038" level="5" /> <!-- Shackle -->
 			<skill id="4072" level="9" /> <!-- Stun -->
-			<skill id="4077" level="9" /> <!-- NPC Aura Burn -->
-			<skill id="4317" level="1" /> <!-- Increase Rage Might -->
-			<skill id="4416" level="6" /> <!-- Humanoids -->
+			<skill id="4077" level="9" /> <!-- Aura Burn -->
 			<skill id="4085" level="1" /> <!-- Critical Damage -->
 			<skill id="4086" level="1" /> <!-- Critical Chance -->
+			<skill id="4317" level="1" /> <!-- Increase Rage Might -->
+			<skill id="4408" level="10" /> <!-- HP Increase (2x) -->
+			<skill id="4415" level="6" /> <!-- Blunt Weapon -->
+			<skill id="4416" level="6" /> <!-- Humanoids -->
+			<skill id="4789" level="8" /> <!-- High Lv. -->
 			<skill id="5620" level="6" /> <!-- Melee Attack Vulnerability -->
 		</skillList>
 		<shots shotChance="60" spiritChance="60" />
@@ -5521,12 +5398,14 @@
 		</stats>
 		<status undying="false" canBeSown="true" />
 		<skillList>
-			<skill id="4580" level="9" /> <!-- Decrease P. Atk. -->
-			<skill id="4416" level="4" /> <!-- Animals -->
 			<skill id="4410" level="9" /> <!-- Slightly Weak P. Atk. -->
 			<skill id="4411" level="9" /> <!-- Slightly Weak M. Atk. -->
 			<skill id="4412" level="13" /> <!-- Slightly Strong P. Def. -->
 			<skill id="4413" level="13" /> <!-- Slightly Strong M. Def. -->
+			<skill id="4415" level="3" /> <!-- One-handed Sword -->
+			<skill id="4416" level="4" /> <!-- Animals -->
+			<skill id="4580" level="9" /> <!-- Decrease P. Atk. -->
+			<skill id="4789" level="9" /> <!-- High Lv. -->
 			<skill id="5620" level="6" /> <!-- Melee Attack Vulnerability -->
 		</skillList>
 		<exCrtEffect>false</exCrtEffect>
@@ -5607,14 +5486,17 @@
 		</stats>
 		<status undying="false" canBeSown="true" />
 		<skillList>
-			<skill id="4033" level="9" /> <!-- NPC Burn -->
+			<skill id="4033" level="9" /> <!-- Aura Burn -->
 			<skill id="4119" level="3" /> <!-- Decrease Accuracy -->
-			<skill id="4160" level="9" /> <!-- NPC Aura Burn - Magic -->
-			<skill id="4563" level="9" /> <!-- NPC Solar Flare - Magic -->
-			<skill id="4575" level="2" /> <!-- NPC Clan Buff - Haste -->
-			<skill id="4576" level="3" /> <!-- NPC Clan Buff - Damage Shield -->
-			<skill id="4416" level="6" /> <!-- Humanoids -->
+			<skill id="4160" level="9" /> <!-- Aura Burn -->
+			<skill id="4408" level="10" /> <!-- HP Increase (2x) -->
 			<skill id="4414" level="3" /> <!-- Light Armor Type -->
+			<skill id="4415" level="6" /> <!-- Blunt Weapon -->
+			<skill id="4416" level="6" /> <!-- Humanoids -->
+			<skill id="4563" level="9" /> <!-- Solar Flare -->
+			<skill id="4575" level="2" /> <!-- Haste -->
+			<skill id="4576" level="3" /> <!-- Reflect Damage -->
+			<skill id="4789" level="9" /> <!-- High Lv. -->
 			<skill id="5620" level="6" /> <!-- Melee Attack Vulnerability -->
 		</skillList>
 		<shots shotChance="50" spiritChance="50" />
@@ -5700,22 +5582,16 @@
 		</stats>
 		<status undying="false" canBeSown="true" />
 		<skillList>
-			<skill id="4038" level="5" /> <!-- Decrease Atk. Spd. -->
-			<skill id="4085" level="1" /> <!-- Critical Damage -->
-			<skill id="4086" level="1" /> <!-- Critical Chance -->
 			<skill id="4408" level="10" /> <!-- HP Increase (2x) -->
-			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
-			<skill id="4410" level="11" /> <!-- Average P. Atk. -->
-			<skill id="4411" level="11" /> <!-- Average M. Atk. -->
-			<skill id="4412" level="11" /> <!-- Average P. Def. -->
-			<skill id="4413" level="11" /> <!-- Average M. Def. -->
-			<skill id="4414" level="2" /> <!-- Standard Type -->
-			<skill id="4415" level="4" /> <!-- One-handed Sword -->
+			<skill id="4410" level="13" /> <!-- Slightly Strong P. Atk. -->
+			<skill id="4411" level="13" /> <!-- Slightly Strong M. Atk. -->
+			<skill id="4412" level="9" /> <!-- Slightly Weak P. Def. -->
+			<skill id="4413" level="9" /> <!-- Slightly Weak M. Def. -->
+			<skill id="4415" level="3" /> <!-- One-handed Sword -->
 			<skill id="4416" level="6" /> <!-- Humanoids -->
-			<skill id="4573" level="9" /> <!-- NPC Sonic Blaster -->
-			<skill id="4575" level="2" /> <!-- NPC Clan Buff - Haste -->
-			<skill id="4789" level="7" /> <!-- NPC High Level -->
-			<skill id="5620" level="6" /> <!-- Short-Range Physical Attack Weakness -->
+			<skill id="4572" level="9" /> <!-- Triple Sonic Slash -->
+			<skill id="4789" level="6" /> <!-- High Lv. -->
+			<skill id="5620" level="6" /> <!-- Melee Attack Vulnerability -->
 		</skillList>
 		<shots shotChance="50" spiritChance="50" />
 		<exCrtEffect>false</exCrtEffect>
@@ -5777,17 +5653,15 @@
 		<status undying="false" canBeSown="true" />
 		<skillList>
 			<skill id="4408" level="10" /> <!-- HP Increase (2x) -->
-			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
 			<skill id="4410" level="13" /> <!-- Slightly Strong P. Atk. -->
 			<skill id="4411" level="13" /> <!-- Slightly Strong M. Atk. -->
 			<skill id="4412" level="9" /> <!-- Slightly Weak P. Def. -->
 			<skill id="4413" level="9" /> <!-- Slightly Weak M. Def. -->
-			<skill id="4414" level="2" /> <!-- Standard Type -->
 			<skill id="4415" level="3" /> <!-- One-handed Sword -->
 			<skill id="4416" level="6" /> <!-- Humanoids -->
-			<skill id="4572" level="9" /> <!-- NPC Triple Sonic Slash -->
-			<skill id="4789" level="6" /> <!-- NPC High Level -->
-			<skill id="5620" level="6" /> <!-- Short-Range Physical Attack Weakness -->
+			<skill id="4572" level="9" /> <!-- Triple Sonic Slash -->
+			<skill id="4789" level="6" /> <!-- High Lv. -->
+			<skill id="5620" level="6" /> <!-- Melee Attack Vulnerability -->
 		</skillList>
 		<shots shotChance="30" spiritChance="30" />
 		<exCrtEffect>false</exCrtEffect>
@@ -5852,12 +5726,14 @@
 		</stats>
 		<status undying="false" canBeSown="true" />
 		<skillList>
-			<skill id="4562" level="9" /> <!-- NPC Solar Flare -->
-			<skill id="4416" level="6" /> <!-- Humanoids -->
 			<skill id="4410" level="9" /> <!-- Slightly Weak P. Atk. -->
 			<skill id="4411" level="9" /> <!-- Slightly Weak M. Atk. -->
 			<skill id="4412" level="13" /> <!-- Slightly Strong P. Def. -->
 			<skill id="4413" level="13" /> <!-- Slightly Strong M. Def. -->
+			<skill id="4415" level="3" /> <!-- One-handed Sword -->
+			<skill id="4416" level="6" /> <!-- Humanoids -->
+			<skill id="4573" level="9" /> <!-- Sonic Blaster -->
+			<skill id="4789" level="8" /> <!-- High Lv. -->
 			<skill id="5620" level="6" /> <!-- Melee Attack Vulnerability -->
 		</skillList>
 		<shots shotChance="50" spiritChance="50" />
@@ -5919,7 +5795,15 @@
 		</stats>
 		<status undying="false" canBeSown="true" />
 		<skillList>
-			<skill id="4573" level="9" /> <!-- NPC Sonic Blaster -->
+			<skill id="4410" level="9" /> <!-- Slightly Weak P. Atk. -->
+			<skill id="4411" level="9" /> <!-- Slightly Weak M. Atk. -->
+			<skill id="4412" level="13" /> <!-- Slightly Strong P. Def. -->
+			<skill id="4413" level="13" /> <!-- Slightly Strong M. Def. -->
+			<skill id="4415" level="3" /> <!-- One-handed Sword -->
+			<skill id="4416" level="6" /> <!-- Humanoids -->
+			<skill id="4573" level="9" /> <!-- Sonic Blaster -->
+			<skill id="4789" level="8" /> <!-- High Lv. -->
+			<skill id="5620" level="6" /> <!-- Melee Attack Vulnerability -->
 		</skillList>
 		<shots shotChance="30" spiritChance="30" />
 		<exCrtEffect>false</exCrtEffect>
@@ -5997,11 +5881,11 @@
 		</stats>
 		<status undying="false" canBeSown="true" />
 		<skillList>
-			<skill id="4030" level="3" /> <!-- NPC Clan Might -->
-			<skill id="4160" level="9" /> <!-- NPC Aura Burn - Magic -->
-			<skill id="4563" level="9" /> <!-- NPC Solar Flare - Magic -->
-			<skill id="4575" level="2" /> <!-- NPC Clan Buff - Haste -->
+			<skill id="4066" level="9" /> <!-- Twister -->
+			<skill id="4098" level="9" /> <!-- Silence -->
+			<skill id="4415" level="3" /> <!-- One-handed Sword -->
 			<skill id="4416" level="6" /> <!-- Humanoids -->
+			<skill id="4789" level="9" /> <!-- High Lv. -->
 			<skill id="5620" level="6" /> <!-- Melee Attack Vulnerability -->
 		</skillList>
 		<shots shotChance="50" spiritChance="50" />
@@ -6064,8 +5948,10 @@
 		</stats>
 		<status undying="false" canBeSown="true" />
 		<skillList>
-			<skill id="4573" level="9" /> <!-- NPC Sonic Blaster -->
+			<skill id="4415" level="3" /> <!-- One-handed Sword -->
 			<skill id="4416" level="6" /> <!-- Humanoids -->
+			<skill id="4573" level="9" /> <!-- Sonic Blaster -->
+			<skill id="4789" level="9" /> <!-- High Lv. -->
 			<skill id="5620" level="6" /> <!-- Melee Attack Vulnerability -->
 		</skillList>
 		<shots shotChance="30" spiritChance="30" />
@@ -6134,8 +6020,12 @@
 		</stats>
 		<status undying="false" canBeSown="true" />
 		<skillList>
-			<skill id="4066" level="9" /> <!-- NPC Twister -->
+			<skill id="4066" level="9" /> <!-- Twister -->
 			<skill id="4098" level="9" /> <!-- Silence -->
+			<skill id="4415" level="3" /> <!-- One-handed Sword -->
+			<skill id="4416" level="6" /> <!-- Humanoids -->
+			<skill id="4789" level="9" /> <!-- High Lv. -->
+			<skill id="5620" level="6" /> <!-- Melee Attack Vulnerability -->
 		</skillList>
 		<shots shotChance="30" spiritChance="30" />
 		<exCrtEffect>false</exCrtEffect>
@@ -6202,19 +6092,17 @@
 		</stats>
 		<status undying="false" canBeSown="true" />
 		<skillList>
-			<skill id="4229" level="9" /> <!-- NPC Double Wind Fist -->
+			<skill id="4229" level="9" /> <!-- Double Wind Fist -->
 			<skill id="4408" level="14" /> <!-- HP Increase (6x) -->
-			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
 			<skill id="4410" level="12" /> <!-- Slightly Strong P. Atk. -->
 			<skill id="4411" level="12" /> <!-- Slightly Strong M. Atk. -->
 			<skill id="4412" level="17" /> <!-- Very Strong P. Def. -->
 			<skill id="4413" level="10" /> <!-- Slightly Weak M. Def. -->
-			<skill id="4414" level="2" /> <!-- Standard Type -->
 			<skill id="4415" level="3" /> <!-- One-handed Sword -->
 			<skill id="4416" level="7" /> <!-- Spirits -->
-			<skill id="4605" level="9" /> <!-- Surrender To Fire -->
-			<skill id="4614" level="9" /> <!-- NPC Death Bomb -->
-			<skill id="4789" level="8" /> <!-- NPC High Level -->
+			<skill id="4605" level="9" /> <!-- Surrender to Fire -->
+			<skill id="4614" level="9" /> <!-- Death Bomb -->
+			<skill id="4789" level="8" /> <!-- High Lv. -->
 		</skillList>
 		<shots shotChance="30" spiritChance="30" />
 		<exCrtEffect>false</exCrtEffect>
@@ -6253,21 +6141,20 @@
 		</stats>
 		<status undying="false" canBeSown="true" />
 		<skillList>
-			<skill id="4274" level="1" /> <!-- Blunt Weapon Weak Point -->
-			<skill id="4389" level="4" /> <!-- Resist Mental Attacks -->
+			<skill id="4009" level="3" /> <!-- Fire Resistance -->
+			<skill id="4274" level="1" /> <!-- Blunt Weapon Vulnerability -->
+			<skill id="4280" level="1" /> <!-- Water Vulnerability -->
+			<skill id="4389" level="4" /> <!-- Mental Attack Resistance -->
 			<skill id="4408" level="14" /> <!-- HP Increase (6x) -->
-			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
 			<skill id="4410" level="12" /> <!-- Slightly Strong P. Atk. -->
 			<skill id="4411" level="12" /> <!-- Slightly Strong M. Atk. -->
 			<skill id="4412" level="15" /> <!-- Strong P. Def. -->
 			<skill id="4413" level="10" /> <!-- Slightly Weak M. Def. -->
 			<skill id="4414" level="3" /> <!-- Light Armor Type -->
-			<skill id="4415" level="10" /> <!-- Bows -->
+			<skill id="4415" level="10" /> <!-- Bow -->
 			<skill id="4416" level="2" /> <!-- Magic Creatures -->
 			<skill id="4607" level="1" /> <!-- Magma Attack -->
-			<skill id="4789" level="8" /> <!-- NPC High Level -->
-			<skill id="4009" level="3" /> <!-- Fire Resistance -->
-			<skill id="4280" level="1" /> <!-- Water Vulnerability -->
+			<skill id="4789" level="8" /> <!-- High Lv. -->
 		</skillList>
 		<shots shotChance="30" spiritChance="30" />
 		<exCrtEffect>false</exCrtEffect>

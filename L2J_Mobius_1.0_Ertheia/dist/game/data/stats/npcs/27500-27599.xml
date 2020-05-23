@@ -757,11 +757,11 @@
 		</stats>
 		<status attackable="false" />
 		<skillList>
-			<skill id="4416" level="9" /> <!-- Demons -->
+			<skill id="4001" level="1" /> <!-- Gust -->
 			<skill id="4028" level="1" /> <!-- Might -->
 			<skill id="4032" level="1" /> <!-- Power Strike -->
 			<skill id="4151" level="1" /> <!-- Wind Strike -->
-			<skill id="4001" level="1" /> <!-- Gust -->
+			<skill id="4416" level="9" /> <!-- Demons -->
 		</skillList>
 		<collision>
 			<radius normal="10" grown="11" />
@@ -823,14 +823,6 @@
 		</stats>
 		<status undying="false" canBeSown="true" />
 		<skillList>
-			<skill id="4408" level="1" /> <!-- HP Increase (1x) -->
-			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
-			<skill id="4410" level="12" /> <!-- Slightly Strong P. Atk. -->
-			<skill id="4411" level="12" /> <!-- Slightly Strong M. Atk. -->
-			<skill id="4412" level="10" /> <!-- Slightly Weak P. Def. -->
-			<skill id="4413" level="10" /> <!-- Slightly Weak M. Def. -->
-			<skill id="4414" level="2" /> <!-- Standard Type -->
-			<skill id="4415" level="3" /> <!-- One-handed Sword -->
 			<skill id="4416" level="2" /> <!-- Magic Creatures -->
 		</skillList>
 		<exCrtEffect>false</exCrtEffect>
@@ -1093,8 +1085,8 @@
 		</stats>
 		<status attackable="false" />
 		<skillList>
-			<skill id="4416" level="2" /> <!-- Magic Creatures -->
 			<skill id="4078" level="1" /> <!-- Flame Strike -->
+			<skill id="4416" level="2" /> <!-- Magic Creatures -->
 		</skillList>
 		<collision>
 			<radius normal="29" />
@@ -1115,8 +1107,8 @@
 		</stats>
 		<status attackable="false" />
 		<skillList>
-			<skill id="4416" level="2" /> <!-- Magic Creatures -->
 			<skill id="4078" level="1" /> <!-- Flame Strike -->
+			<skill id="4416" level="2" /> <!-- Magic Creatures -->
 		</skillList>
 		<collision>
 			<radius normal="25" />

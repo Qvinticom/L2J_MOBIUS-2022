@@ -14,6 +14,11 @@
 			</speed>
 		</stats>
 		<status attackable="true" />
+		<skillList>
+			<skill id="14765" level="3" /> <!-- Blood Siphon Resistance -->
+			<skill id="16577" level="1" /> <!-- Dragonclaw Bluff -->
+			<skill id="23739" level="1" /> <!-- Heart Breaker -->
+		</skillList>
 		<collision>
 			<radius normal="9" />
 			<height normal="23" />
@@ -115,7 +120,6 @@
 		<skillList>
 			<skill id="4416" level="7" /> <!-- Spirits -->
 			<skill id="5462" level="1" /> <!-- Fire Attack -->
-			<skill id="14823" level="1" /> <!-- Instant Kill Attack Resistance -->
 		</skillList>
 		<dropLists>
 			<drop>
@@ -151,7 +155,6 @@
 		<skillList>
 			<skill id="4416" level="9" /> <!-- Demons -->
 			<skill id="5462" level="1" /> <!-- Fire Attack -->
-			<skill id="14823" level="1" /> <!-- Instant Kill Attack Resistance -->
 		</skillList>
 		<dropLists>
 			<drop>
@@ -218,6 +221,10 @@
 			</speed>
 		</stats>
 		<status attackable="true" />
+		<skillList>
+			<skill id="14765" level="3" /> <!-- Blood Siphon Resistance -->
+			<skill id="16568" level="1" /> <!-- Dragonclaw Power Smash -->
+		</skillList>
 		<collision>
 			<radius normal="9" />
 			<height normal="18" />
@@ -244,7 +251,6 @@
 		<skillList>
 			<skill id="4416" level="12" /> <!-- Bugs -->
 			<skill id="5462" level="1" /> <!-- Fire Attack -->
-			<skill id="14817" level="1" /> <!-- Instant Kill Attack Resistance -->
 		</skillList>
 	</npc>
 	<npc id="23710" level="100" type="Monster" name="Knight Guardian">
@@ -261,6 +267,11 @@
 			</speed>
 		</stats>
 		<status attackable="true" />
+		<skillList>
+			<skill id="14765" level="3" /> <!-- Blood Siphon Resistance -->
+			<skill id="16559" level="1" /> <!-- Dragonclaw Shield Stun -->
+			<skill id="23728" level="1" /> <!-- Superior Aggression Aura -->
+		</skillList>
 		<collision>
 			<radius normal="7.5" />
 			<height normal="24" />
@@ -280,6 +291,10 @@
 			</speed>
 		</stats>
 		<status attackable="true" />
+		<skillList>
+			<skill id="14765" level="3" /> <!-- Blood Siphon Resistance -->
+			<skill id="16578" level="1" /> <!-- Dragonclaw Crush -->
+		</skillList>
 		<collision>
 			<radius normal="7" />
 			<height normal="27" />
@@ -300,6 +315,10 @@
 			</speed>
 		</stats>
 		<status attackable="true" />
+		<skillList>
+			<skill id="4415" level="10" /> <!-- Bow -->
+			<skill id="14765" level="3" /> <!-- Blood Siphon Resistance -->
+		</skillList>
 		<collision>
 			<radius normal="7.5" />
 			<height normal="24" />
@@ -319,6 +338,10 @@
 			</speed>
 		</stats>
 		<status attackable="true" />
+		<skillList>
+			<skill id="14765" level="3" /> <!-- Blood Siphon Resistance -->
+			<skill id="16579" level="1" /> <!-- Dragonclaw Vortex -->
+		</skillList>
 		<collision>
 			<radius normal="6.5" />
 			<height normal="22.5" />
@@ -335,6 +358,11 @@
 			</speed>
 		</stats>
 		<status attackable="false" />
+		<skillList>
+			<skill id="14765" level="3" /> <!-- Blood Siphon Resistance -->
+			<skill id="16583" level="1" /> <!-- Pounce -->
+			<skill id="16584" level="1" /> <!-- Mass Fear -->
+		</skillList>
 		<collision>
 			<radius normal="18" />
 			<height normal="25" />
@@ -351,6 +379,11 @@
 			</speed>
 		</stats>
 		<status attackable="false" />
+		<skillList>
+			<skill id="14765" level="3" /> <!-- Blood Siphon Resistance -->
+			<skill id="16583" level="1" /> <!-- Pounce -->
+			<skill id="16584" level="1" /> <!-- Mass Fear -->
+		</skillList>
 		<collision>
 			<radius normal="18" />
 			<height normal="25" />
@@ -370,6 +403,10 @@
 			</speed>
 		</stats>
 		<status attackable="true" />
+		<skillList>
+			<skill id="14765" level="3" /> <!-- Blood Siphon Resistance -->
+			<skill id="16585" level="1" /> <!-- Dragonclaw Cannon -->
+		</skillList>
 		<collision>
 			<radius normal="46.5" />
 			<height normal="43.5" />
@@ -389,6 +426,11 @@
 			</speed>
 		</stats>
 		<status attackable="true" />
+		<skillList>
+			<skill id="14765" level="3" /> <!-- Blood Siphon Resistance -->
+			<skill id="16586" level="1" /> <!-- Dragonclaw Siege Attack -->
+			<skill id="16587" level="1" /> <!-- Dragonclaw Siege Punch -->
+		</skillList>
 		<collision>
 			<radius normal="50" />
 			<height normal="68" />
@@ -411,6 +453,9 @@
 		<skillList>
 			<skill id="4416" level="7" /> <!-- Spirits -->
 			<skill id="5463" level="1" /> <!-- Water Attack -->
+			<skill id="14765" level="3" /> <!-- Blood Siphon Resistance -->
+			<skill id="16551" level="1" /> <!-- Ice Attack -->
+			<skill id="16552" level="1" /> <!-- Ice Fist -->
 		</skillList>
 		<collision>
 			<radius normal="40" />
@@ -437,8 +482,10 @@
 			</clanList>
 		</ai>
 		<skillList>
-			<skill id="5463" level="1" /> <!-- Water Attack -->
 			<skill id="4416" level="6" /> <!-- Humanoids -->
+			<skill id="5463" level="1" /> <!-- Water Attack -->
+			<skill id="14765" level="3" /> <!-- Blood Siphon Resistance -->
+			<skill id="16554" level="1" /> <!-- Spinning Slash -->
 		</skillList>
 		<collision>
 			<radius normal="12" />
@@ -475,8 +522,9 @@
 			</clanList>
 		</ai>
 		<skillList>
-			<skill id="5463" level="1" /> <!-- Water Attack -->
 			<skill id="4416" level="3" /> <!-- Beast -->
+			<skill id="5463" level="1" /> <!-- Water Attack -->
+			<skill id="14765" level="3" /> <!-- Blood Siphon Resistance -->
 		</skillList>
 		<collision>
 			<radius normal="34" />
@@ -511,8 +559,9 @@
 		</stats>
 		<status attackable="true" />
 		<skillList>
-			<skill id="5463" level="1" /> <!-- Water Attack -->
 			<skill id="4416" level="3" /> <!-- Beast -->
+			<skill id="5463" level="1" /> <!-- Water Attack -->
+			<skill id="14765" level="3" /> <!-- Blood Siphon Resistance -->
 		</skillList>
 		<collision>
 			<radius normal="22" grown="27" />
@@ -544,8 +593,9 @@
 		</stats>
 		<status attackable="true" />
 		<skillList>
-			<skill id="5463" level="1" /> <!-- Water Attack -->
 			<skill id="4416" level="3" /> <!-- Beast -->
+			<skill id="5463" level="1" /> <!-- Water Attack -->
+			<skill id="14765" level="3" /> <!-- Blood Siphon Resistance -->
 		</skillList>
 		<collision>
 			<radius normal="24" />
@@ -581,8 +631,9 @@
 			</clanList>
 		</ai>
 		<skillList>
-			<skill id="5463" level="1" /> <!-- Water Attack -->
 			<skill id="4416" level="4" /> <!-- Animals -->
+			<skill id="5463" level="1" /> <!-- Water Attack -->
+			<skill id="14765" level="3" /> <!-- Blood Siphon Resistance -->
 		</skillList>
 		<collision>
 			<radius normal="21" />
@@ -621,6 +672,7 @@
 		<skillList>
 			<skill id="4416" level="3" /> <!-- Beast -->
 			<skill id="5463" level="1" /> <!-- Water Attack -->
+			<skill id="14765" level="3" /> <!-- Blood Siphon Resistance -->
 		</skillList>
 		<collision>
 			<radius normal="22" grown="27" />
@@ -657,8 +709,9 @@
 			</clanList>
 		</ai>
 		<skillList>
-			<skill id="5463" level="1" /> <!-- Water Attack -->
 			<skill id="4416" level="4" /> <!-- Animals -->
+			<skill id="5463" level="1" /> <!-- Water Attack -->
+			<skill id="14765" level="3" /> <!-- Blood Siphon Resistance -->
 		</skillList>
 		<collision>
 			<radius normal="21" />
@@ -683,8 +736,13 @@
 		</stats>
 		<status attackable="true" />
 		<skillList>
-			<skill id="5463" level="1" /> <!-- Water Attack -->
+			<skill id="4045" level="1" /> <!-- Full Magic Attack Resistance -->
 			<skill id="4416" level="7" /> <!-- Spirits -->
+			<skill id="5463" level="1" /> <!-- Water Attack -->
+			<skill id="14765" level="3" /> <!-- Blood Siphon Resistance -->
+			<skill id="16551" level="1" /> <!-- Ice Attack -->
+			<skill id="16552" level="1" /> <!-- Ice Fist -->
+			<skill id="16553" level="1" /> <!-- Ice Breath -->
 		</skillList>
 		<collision>
 			<radius normal="50" />

@@ -18,7 +18,7 @@
 		</stats>
 		<status attackable="false" />
 		<skillList>
-			<skill id="4416" level="6" /> <!-- Humanoids -->
+			<skill id="4416" level="6" /> <!-- Humanoid -->
 		</skillList>
 		<collision>
 			<radius normal="15" />
@@ -67,7 +67,7 @@
 		</stats>
 		<status attackable="false" />
 		<skillList>
-			<skill id="4416" level="6" /> <!-- Humanoids -->
+			<skill id="4416" level="6" /> <!-- Humanoid -->
 		</skillList>
 		<collision>
 			<radius normal="22" />
@@ -92,7 +92,7 @@
 		</stats>
 		<status attackable="false" />
 		<skillList>
-			<skill id="4416" level="6" /> <!-- Humanoids -->
+			<skill id="4416" level="6" /> <!-- Humanoid -->
 		</skillList>
 		<collision>
 			<radius normal="22" />
@@ -116,7 +116,7 @@
 		</stats>
 		<status attackable="false" />
 		<skillList>
-			<skill id="4416" level="11" /> <!-- Giants -->
+			<skill id="4416" level="11" /> <!-- Giant -->
 		</skillList>
 		<collision>
 			<radius normal="30" />
@@ -140,7 +140,7 @@
 		</stats>
 		<status attackable="false" />
 		<skillList>
-			<skill id="4416" level="6" /> <!-- Humanoids -->
+			<skill id="4416" level="6" /> <!-- Humanoid -->
 		</skillList>
 		<collision>
 			<radius normal="30" />
@@ -164,7 +164,7 @@
 		</stats>
 		<status attackable="false" />
 		<skillList>
-			<skill id="4416" level="6" /> <!-- Humanoids -->
+			<skill id="4416" level="6" /> <!-- Humanoid -->
 		</skillList>
 		<collision>
 			<radius normal="18" />
@@ -188,7 +188,7 @@
 		</stats>
 		<status attackable="false" />
 		<skillList>
-			<skill id="4416" level="6" /> <!-- Humanoids -->
+			<skill id="4416" level="6" /> <!-- Humanoid -->
 		</skillList>
 		<collision>
 			<radius normal="6" />
@@ -212,7 +212,7 @@
 		</stats>
 		<status attackable="false" />
 		<skillList>
-			<skill id="4416" level="6" /> <!-- Humanoids -->
+			<skill id="4416" level="6" /> <!-- Humanoid -->
 		</skillList>
 		<collision>
 			<radius normal="6" />
@@ -260,7 +260,7 @@
 		</stats>
 		<status attackable="false" />
 		<skillList>
-			<skill id="4416" level="6" /> <!-- Humanoids -->
+			<skill id="4416" level="6" /> <!-- Humanoid -->
 		</skillList>
 		<collision>
 			<radius normal="6" />
@@ -332,7 +332,7 @@
 		</stats>
 		<status attackable="false" />
 		<skillList>
-			<skill id="4416" level="6" /> <!-- Humanoids -->
+			<skill id="4416" level="6" /> <!-- Humanoid -->
 		</skillList>
 		<collision>
 			<radius normal="6" />
@@ -404,7 +404,7 @@
 		</stats>
 		<status attackable="false" />
 		<skillList>
-			<skill id="4416" level="6" /> <!-- Humanoids -->
+			<skill id="4416" level="6" /> <!-- Humanoid -->
 		</skillList>
 		<collision>
 			<radius normal="6" />
@@ -425,7 +425,7 @@
 		</stats>
 		<status attackable="false" />
 		<skillList>
-			<skill id="4416" level="6" /> <!-- Humanoids -->
+			<skill id="4416" level="6" /> <!-- Humanoid -->
 		</skillList>
 		<collision>
 			<radius normal="15" />
@@ -446,7 +446,7 @@
 		</stats>
 		<status attackable="false" />
 		<skillList>
-			<skill id="4416" level="12" /> <!-- Bugs -->
+			<skill id="4416" level="12" /> <!-- Bug -->
 		</skillList>
 		<collision>
 			<radius normal="37" />
@@ -510,7 +510,7 @@
 		</stats>
 		<status attackable="false" />
 		<skillList>
-			<skill id="4416" level="11" /> <!-- Giants -->
+			<skill id="4416" level="11" /> <!-- Giant -->
 		</skillList>
 		<collision>
 			<radius normal="30" />
@@ -531,7 +531,7 @@
 		</stats>
 		<status attackable="false" />
 		<skillList>
-			<skill id="4416" level="6" /> <!-- Humanoids -->
+			<skill id="4416" level="6" /> <!-- Humanoid -->
 		</skillList>
 		<collision>
 			<radius normal="6" />
@@ -594,7 +594,7 @@
 		</stats>
 		<status attackable="false" />
 		<skillList>
-			<skill id="4416" level="11" /> <!-- Giants -->
+			<skill id="4416" level="11" /> <!-- Giant -->
 		</skillList>
 		<collision>
 			<radius normal="30" />
@@ -775,11 +775,11 @@
 		</stats>
 		<status attackable="false" />
 		<skillList>
-			<skill id="4416" level="9" /> <!-- Demons -->
+			<skill id="4001" level="1" /> <!-- Gust -->
 			<skill id="4028" level="1" /> <!-- Might -->
 			<skill id="4032" level="1" /> <!-- Power Strike -->
-			<skill id="4151" level="1" /> <!-- Wind Strike -->
-			<skill id="4001" level="1" /> <!-- Gust -->
+			<skill id="4151" level="1" /> <!-- (Wind Strike) -->
+			<skill id="4416" level="9" /> <!-- Demons -->
 		</skillList>
 		<collision>
 			<radius normal="10" grown="11" />
@@ -837,15 +837,7 @@
 		</stats>
 		<status undying="false" canBeSown="true" />
 		<skillList>
-			<skill id="4408" level="1" /> <!-- HP Increase (1x) -->
-			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
-			<skill id="4410" level="12" /> <!-- Slightly Strong P. Atk. -->
-			<skill id="4411" level="12" /> <!-- Slightly Strong M. Atk. -->
-			<skill id="4412" level="10" /> <!-- Slightly Weak P. Def. -->
-			<skill id="4413" level="10" /> <!-- Slightly Weak M. Def. -->
-			<skill id="4414" level="2" /> <!-- Standard Type -->
-			<skill id="4415" level="3" /> <!-- One-handed Sword -->
-			<skill id="4416" level="2" /> <!-- Magic Creatures -->
+			<skill id="4416" level="2" /> <!-- Magical Creatures -->
 		</skillList>
 		<exCrtEffect>false</exCrtEffect>
 		<collision>
@@ -888,7 +880,7 @@
 		</stats>
 		<status attackable="false" />
 		<skillList>
-			<skill id="4416" level="11" /> <!-- Giants -->
+			<skill id="4416" level="11" /> <!-- Giant -->
 		</skillList>
 		<collision>
 			<radius normal="30" />
@@ -911,7 +903,7 @@
 		<skillList>
 			<skill id="4410" level="7" /> <!-- Weak P. Atk. -->
 			<skill id="4411" level="7" /> <!-- Weak M. Atk. -->
-			<skill id="4416" level="11" /> <!-- Giants -->
+			<skill id="4416" level="11" /> <!-- Giant -->
 		</skillList>
 		<collision>
 			<radius normal="21" grown="25" />
@@ -932,7 +924,7 @@
 		</stats>
 		<status attackable="false" randomWalk="false" />
 		<skillList>
-			<skill id="4416" level="2" /> <!-- Magic Creatures -->
+			<skill id="4416" level="2" /> <!-- Magical Creatures -->
 		</skillList>
 		<collision>
 			<radius normal="24" />
@@ -953,7 +945,7 @@
 		</stats>
 		<status attackable="false" />
 		<skillList>
-			<skill id="4416" level="2" /> <!-- Magic Creatures -->
+			<skill id="4416" level="2" /> <!-- Magical Creatures -->
 		</skillList>
 		<collision>
 			<radius normal="35" />
@@ -974,7 +966,7 @@
 		</stats>
 		<status attackable="false" />
 		<skillList>
-			<skill id="4416" level="2" /> <!-- Magic Creatures -->
+			<skill id="4416" level="2" /> <!-- Magical Creatures -->
 		</skillList>
 		<collision>
 			<radius normal="48" />
@@ -995,7 +987,7 @@
 		</stats>
 		<status attackable="false" />
 		<skillList>
-			<skill id="4416" level="6" /> <!-- Humanoids -->
+			<skill id="4416" level="6" /> <!-- Humanoid -->
 		</skillList>
 		<collision>
 			<radius normal="6" />
@@ -1016,7 +1008,7 @@
 		</stats>
 		<status attackable="false" randomWalk="false" />
 		<skillList>
-			<skill id="4416" level="6" /> <!-- Humanoids -->
+			<skill id="4416" level="6" /> <!-- Humanoid -->
 		</skillList>
 		<collision>
 			<radius normal="6" />
@@ -1037,7 +1029,7 @@
 		</stats>
 		<status attackable="false" />
 		<skillList>
-			<skill id="4416" level="6" /> <!-- Humanoids -->
+			<skill id="4416" level="6" /> <!-- Humanoid -->
 		</skillList>
 		<collision>
 			<radius normal="6" />
@@ -1060,7 +1052,7 @@
 		<skillList>
 			<skill id="4412" level="16" /> <!-- Very Strong P. Def. -->
 			<skill id="4413" level="16" /> <!-- Very Strong M. Def. -->
-			<skill id="4416" level="6" /> <!-- Humanoids -->
+			<skill id="4416" level="6" /> <!-- Humanoid -->
 		</skillList>
 		<collision>
 			<radius normal="34" grown="44" />
@@ -1081,7 +1073,7 @@
 		</stats>
 		<status attackable="false" />
 		<skillList>
-			<skill id="4416" level="6" /> <!-- Humanoids -->
+			<skill id="4416" level="6" /> <!-- Humanoid -->
 		</skillList>
 		<collision>
 			<radius normal="15" />
@@ -1128,7 +1120,7 @@
 		<status attackable="false" />
 		<skillList>
 			<skill id="4078" level="1" /> <!-- Flame Strike -->
-			<skill id="4416" level="2" /> <!-- Magic Creatures -->
+			<skill id="4416" level="2" /> <!-- Magical Creatures -->
 		</skillList>
 		<collision>
 			<radius normal="29" />
@@ -1150,7 +1142,7 @@
 		<status attackable="false" />
 		<skillList>
 			<skill id="4078" level="1" /> <!-- Flame Strike -->
-			<skill id="4416" level="2" /> <!-- Magic Creatures -->
+			<skill id="4416" level="2" /> <!-- Magical Creatures -->
 		</skillList>
 		<collision>
 			<radius normal="25" />
@@ -1171,7 +1163,7 @@
 		</stats>
 		<status attackable="false" />
 		<skillList>
-			<skill id="4416" level="2" /> <!-- Magic Creatures -->
+			<skill id="4416" level="2" /> <!-- Magical Creatures -->
 		</skillList>
 		<collision>
 			<radius normal="22" />

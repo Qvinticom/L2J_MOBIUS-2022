@@ -26,21 +26,16 @@
 		</stats>
 		<status undying="false" canBeSown="true" />
 		<skillList>
-			<skill id="4032" level="9" /> <!-- NPC Strike -->
-			<skill id="4116" level="9" /> <!-- Resist M. Atk. -->
-			<skill id="4408" level="1" /> <!-- HP Increase (1x) -->
-			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
+			<skill id="4032" level="9" /> <!-- Power Strike -->
+			<skill id="4116" level="9" /> <!-- Magic Attack Resistance -->
 			<skill id="4410" level="13" /> <!-- Slightly Strong P. Atk. -->
-			<skill id="4411" level="11" /> <!-- Average M. Atk. -->
-			<skill id="4412" level="11" /> <!-- Average P. Def. -->
 			<skill id="4413" level="16" /> <!-- Very Strong M. Def. -->
-			<skill id="4414" level="2" /> <!-- Standard Type -->
 			<skill id="4415" level="3" /> <!-- One-handed Sword -->
 			<skill id="4416" level="9" /> <!-- Demons -->
-			<skill id="4444" level="3" /> <!-- Higher Resist Bow/Crossbow Weapons -->
-			<skill id="5467" level="1" /> <!-- Dark Attacks -->
-			<skill id="5620" level="5" /> <!-- Short-Range Physical Attack Weakness -->
-			<skill id="6168" level="9" /> <!-- Shock -->
+			<skill id="4444" level="3" /> <!-- Greater Bow/Crossbow Resistance -->
+			<skill id="5467" level="1" /> <!-- Dark Attack -->
+			<skill id="5620" level="5" /> <!-- Melee Attack Vulnerability -->
+			<skill id="6168" level="9" /> <!-- Stun -->
 		</skillList>
 		<shots shotChance="10" spiritChance="10" />
 		<exCrtEffect>false</exCrtEffect>
@@ -112,21 +107,16 @@
 		<status undying="false" canBeSown="true" />
 		<skillList>
 			<skill id="4046" level="9" /> <!-- Sleep -->
-			<skill id="4116" level="9" /> <!-- Resist M. Atk. -->
-			<skill id="4158" level="9" /> <!-- NPC Prominence - Magic -->
-			<skill id="4160" level="9" /> <!-- NPC Aura Burn - Magic -->
-			<skill id="4408" level="1" /> <!-- HP Increase (1x) -->
-			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
-			<skill id="4410" level="11" /> <!-- Average P. Atk. -->
+			<skill id="4116" level="9" /> <!-- Magic Attack Resistance -->
+			<skill id="4158" level="9" /> <!-- Prominence -->
+			<skill id="4160" level="9" /> <!-- Aura Burn -->
 			<skill id="4411" level="13" /> <!-- Slightly Strong M. Atk. -->
-			<skill id="4412" level="11" /> <!-- Average P. Def. -->
 			<skill id="4413" level="16" /> <!-- Very Strong M. Def. -->
-			<skill id="4414" level="2" /> <!-- Standard Type -->
 			<skill id="4415" level="3" /> <!-- One-handed Sword -->
 			<skill id="4416" level="9" /> <!-- Demons -->
-			<skill id="4444" level="3" /> <!-- Higher Resist Bow/Crossbow Weapons -->
-			<skill id="5467" level="1" /> <!-- Dark Attacks -->
-			<skill id="5620" level="5" /> <!-- Short-Range Physical Attack Weakness -->
+			<skill id="4444" level="3" /> <!-- Greater Bow/Crossbow Resistance -->
+			<skill id="5467" level="1" /> <!-- Dark Attack -->
+			<skill id="5620" level="5" /> <!-- Melee Attack Vulnerability -->
 		</skillList>
 		<shots shotChance="10" spiritChance="10" />
 		<exCrtEffect>false</exCrtEffect>
@@ -197,22 +187,19 @@
 		</stats>
 		<status undying="false" canBeSown="true" />
 		<skillList>
-			<skill id="4116" level="9" /> <!-- Resist M. Atk. -->
-			<skill id="4160" level="10" /> <!-- NPC Aura Burn - Magic -->
+			<skill id="4077" level="1" /> <!-- Aura Burn -->
+			<skill id="4116" level="9" /> <!-- Magic Attack Resistance -->
+			<skill id="4160" level="10" /> <!-- Aura Burn -->
 			<skill id="4408" level="12" /> <!-- HP Increase (4x) -->
-			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
 			<skill id="4410" level="15" /> <!-- Strong P. Atk. -->
 			<skill id="4411" level="14" /> <!-- Strong M. Atk. -->
-			<skill id="4412" level="11" /> <!-- Average P. Def. -->
 			<skill id="4413" level="16" /> <!-- Very Strong M. Def. -->
-			<skill id="4414" level="2" /> <!-- Standard Type -->
 			<skill id="4415" level="3" /> <!-- One-handed Sword -->
 			<skill id="4416" level="6" /> <!-- Humanoids -->
-			<skill id="4444" level="4" /> <!-- Higher Resist Bow/Crossbow Weapons -->
-			<skill id="4458" level="4" /> <!-- Spear Weapon Weak Point -->
-			<skill id="5465" level="1" /> <!-- Earth Attacks -->
-			<skill id="5620" level="9" /> <!-- Short-Range Physical Attack Weakness -->
-			<skill id="4077" level="1" /> <!-- Aura Burn -->
+			<skill id="4444" level="4" /> <!-- Greater Bow/Crossbow Resistance -->
+			<skill id="4458" level="4" /> <!-- Spear Vulnerability -->
+			<skill id="5465" level="1" /> <!-- Earth Attack -->
+			<skill id="5620" level="9" /> <!-- Melee Attack Vulnerability -->
 		</skillList>
 		<exCrtEffect>false</exCrtEffect>
 		<sNpcPropHpRate>4</sNpcPropHpRate>
@@ -264,28 +251,26 @@
 		</stats>
 		<status undying="false" canBeSown="true" />
 		<skillList>
-			<skill id="4116" level="9" /> <!-- Resist M. Atk. -->
-			<skill id="4160" level="10" /> <!-- NPC Aura Burn - Magic -->
+			<skill id="4077" level="1" /> <!-- Aura Burn -->
+			<skill id="4116" level="9" /> <!-- Magic Attack Resistance -->
+			<skill id="4160" level="10" /> <!-- Aura Burn -->
 			<skill id="4408" level="13" /> <!-- HP Increase (5x) -->
-			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
 			<skill id="4410" level="16" /> <!-- Very Strong P. Atk. -->
 			<skill id="4411" level="15" /> <!-- Strong M. Atk. -->
 			<skill id="4412" level="15" /> <!-- Strong P. Def. -->
 			<skill id="4413" level="16" /> <!-- Very Strong M. Def. -->
-			<skill id="4414" level="2" /> <!-- Standard Type -->
 			<skill id="4415" level="3" /> <!-- One-handed Sword -->
 			<skill id="4416" level="6" /> <!-- Humanoids -->
-			<skill id="4425" level="4" /> <!-- Resist Blunt Weapons -->
-			<skill id="4426" level="4" /> <!-- Resist Dual-Sword Weapons -->
-			<skill id="4427" level="4" /> <!-- Resist Swords -->
-			<skill id="4442" level="4" /> <!-- Greater Resist Hand-to-hand Weapons -->
-			<skill id="4444" level="4" /> <!-- Higher Resist Bow/Crossbow Weapons -->
-			<skill id="4448" level="4" /> <!-- Higher resist Daggers/Rapier Weapon -->
-			<skill id="4449" level="4" /> <!-- Greater Resist Two-handed Weapons -->
-			<skill id="4458" level="4" /> <!-- Spear Weapon Weak Point -->
-			<skill id="5465" level="1" /> <!-- Earth Attacks -->
-			<skill id="5620" level="9" /> <!-- Short-Range Physical Attack Weakness -->
-			<skill id="4077" level="1" /> <!-- Aura Burn -->
+			<skill id="4425" level="4" /> <!-- Blunt Weapon Resistance -->
+			<skill id="4426" level="4" /> <!-- Dualsword Resistance -->
+			<skill id="4427" level="4" /> <!-- Sword Resistance -->
+			<skill id="4442" level="4" /> <!-- Greater Fist Weapon Resistance -->
+			<skill id="4444" level="4" /> <!-- Greater Bow/Crossbow Resistance -->
+			<skill id="4448" level="4" /> <!-- Greater Dagger/Rapier Resistance -->
+			<skill id="4449" level="4" /> <!-- Greater Two-handed Weapon Resistance -->
+			<skill id="4458" level="4" /> <!-- Spear Vulnerability -->
+			<skill id="5465" level="1" /> <!-- Earth Attack -->
+			<skill id="5620" level="9" /> <!-- Melee Attack Vulnerability -->
 		</skillList>
 		<exCrtEffect>false</exCrtEffect>
 		<sNpcPropHpRate>5</sNpcPropHpRate>
@@ -343,27 +328,25 @@
 		</stats>
 		<status undying="false" canBeSown="true" />
 		<skillList>
-			<skill id="4116" level="9" /> <!-- Resist M. Atk. -->
+			<skill id="4116" level="9" /> <!-- Magic Attack Resistance -->
 			<skill id="4408" level="13" /> <!-- HP Increase (5x) -->
-			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
 			<skill id="4410" level="17" /> <!-- Very Strong P. Atk. -->
 			<skill id="4411" level="16" /> <!-- Very Strong M. Atk. -->
 			<skill id="4412" level="15" /> <!-- Strong P. Def. -->
 			<skill id="4413" level="16" /> <!-- Very Strong M. Def. -->
-			<skill id="4414" level="2" /> <!-- Standard Type -->
 			<skill id="4415" level="3" /> <!-- One-handed Sword -->
 			<skill id="4416" level="6" /> <!-- Humanoids -->
-			<skill id="4425" level="4" /> <!-- Resist Blunt Weapons -->
-			<skill id="4426" level="4" /> <!-- Resist Dual-Sword Weapons -->
-			<skill id="4427" level="4" /> <!-- Resist Swords -->
-			<skill id="4442" level="4" /> <!-- Greater Resist Hand-to-hand Weapons -->
-			<skill id="4444" level="4" /> <!-- Higher Resist Bow/Crossbow Weapons -->
-			<skill id="4448" level="4" /> <!-- Higher resist Daggers/Rapier Weapon -->
-			<skill id="4449" level="4" /> <!-- Greater Resist Two-handed Weapons -->
-			<skill id="4458" level="4" /> <!-- Spear Weapon Weak Point -->
-			<skill id="4561" level="10" /> <!-- NPC Fire Burn - Magic -->
-			<skill id="5465" level="1" /> <!-- Earth Attacks -->
-			<skill id="5620" level="9" /> <!-- Short-Range Physical Attack Weakness -->
+			<skill id="4425" level="4" /> <!-- Blunt Weapon Resistance -->
+			<skill id="4426" level="4" /> <!-- Dualsword Resistance -->
+			<skill id="4427" level="4" /> <!-- Sword Resistance -->
+			<skill id="4442" level="4" /> <!-- Greater Fist Weapon Resistance -->
+			<skill id="4444" level="4" /> <!-- Greater Bow/Crossbow Resistance -->
+			<skill id="4448" level="4" /> <!-- Greater Dagger/Rapier Resistance -->
+			<skill id="4449" level="4" /> <!-- Greater Two-handed Weapon Resistance -->
+			<skill id="4458" level="4" /> <!-- Spear Vulnerability -->
+			<skill id="4561" level="10" /> <!-- Fire Burn -->
+			<skill id="5465" level="1" /> <!-- Earth Attack -->
+			<skill id="5620" level="9" /> <!-- Melee Attack Vulnerability -->
 		</skillList>
 		<exCrtEffect>false</exCrtEffect>
 		<sNpcPropHpRate>5</sNpcPropHpRate>
@@ -418,9 +401,8 @@
 		</stats>
 		<status undying="false" canBeSown="true" />
 		<skillList>
-			<skill id="4116" level="9" /> <!-- Resist M. Atk. -->
+			<skill id="4116" level="9" /> <!-- Magic Attack Resistance -->
 			<skill id="4408" level="14" /> <!-- HP Increase (6x) -->
-			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
 			<skill id="4410" level="18" /> <!-- Extremely Strong P. Atk. -->
 			<skill id="4411" level="17" /> <!-- Very Strong M. Atk. -->
 			<skill id="4412" level="15" /> <!-- Strong P. Def. -->
@@ -428,17 +410,17 @@
 			<skill id="4414" level="1" /> <!-- Heavy Armor Type -->
 			<skill id="4415" level="3" /> <!-- One-handed Sword -->
 			<skill id="4416" level="1" /> <!-- Undead -->
-			<skill id="4425" level="4" /> <!-- Resist Blunt Weapons -->
-			<skill id="4426" level="4" /> <!-- Resist Dual-Sword Weapons -->
-			<skill id="4427" level="4" /> <!-- Resist Swords -->
-			<skill id="4442" level="4" /> <!-- Greater Resist Hand-to-hand Weapons -->
-			<skill id="4444" level="4" /> <!-- Higher Resist Bow/Crossbow Weapons -->
-			<skill id="4448" level="4" /> <!-- Higher resist Daggers/Rapier Weapon -->
-			<skill id="4449" level="4" /> <!-- Greater Resist Two-handed Weapons -->
-			<skill id="4458" level="4" /> <!-- Spear Weapon Weak Point -->
-			<skill id="4560" level="10" /> <!-- NPC Fire Burn -->
-			<skill id="5467" level="1" /> <!-- Dark Attacks -->
-			<skill id="5620" level="9" /> <!-- Short-Range Physical Attack Weakness -->
+			<skill id="4425" level="4" /> <!-- Blunt Weapon Resistance -->
+			<skill id="4426" level="4" /> <!-- Dualsword Resistance -->
+			<skill id="4427" level="4" /> <!-- Sword Resistance -->
+			<skill id="4442" level="4" /> <!-- Greater Fist Weapon Resistance -->
+			<skill id="4444" level="4" /> <!-- Greater Bow/Crossbow Resistance -->
+			<skill id="4448" level="4" /> <!-- Greater Dagger/Rapier Resistance -->
+			<skill id="4449" level="4" /> <!-- Greater Two-handed Weapon Resistance -->
+			<skill id="4458" level="4" /> <!-- Spear Vulnerability -->
+			<skill id="4560" level="10" /> <!-- Fire Burn -->
+			<skill id="5467" level="1" /> <!-- Dark Attack -->
+			<skill id="5620" level="9" /> <!-- Melee Attack Vulnerability -->
 		</skillList>
 		<exCrtEffect>false</exCrtEffect>
 		<sNpcPropHpRate>6</sNpcPropHpRate>
@@ -494,26 +476,25 @@
 		</stats>
 		<status undying="false" canBeSown="true" />
 		<skillList>
-			<skill id="4116" level="9" /> <!-- Resist M. Atk. -->
-			<skill id="4158" level="10" /> <!-- NPC Prominence - Magic -->
+			<skill id="4116" level="9" /> <!-- Magic Attack Resistance -->
+			<skill id="4158" level="10" /> <!-- Prominence -->
 			<skill id="4408" level="16" /> <!-- HP Increase (8x) -->
-			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
 			<skill id="4410" level="18" /> <!-- Extremely Strong P. Atk. -->
 			<skill id="4411" level="17" /> <!-- Very Strong M. Atk. -->
 			<skill id="4412" level="19" /> <!-- Extremely Strong P. Def. -->
 			<skill id="4413" level="16" /> <!-- Very Strong M. Def. -->
 			<skill id="4414" level="1" /> <!-- Heavy Armor Type -->
-			<skill id="4415" level="6" /> <!-- Blunt Weapons -->
+			<skill id="4415" level="6" /> <!-- Blunt Weapon -->
 			<skill id="4416" level="1" /> <!-- Undead -->
-			<skill id="4425" level="4" /> <!-- Resist Blunt Weapons -->
-			<skill id="4426" level="4" /> <!-- Resist Dual-Sword Weapons -->
-			<skill id="4427" level="4" /> <!-- Resist Swords -->
-			<skill id="4442" level="4" /> <!-- Greater Resist Hand-to-hand Weapons -->
-			<skill id="4444" level="4" /> <!-- Higher Resist Bow/Crossbow Weapons -->
-			<skill id="4448" level="4" /> <!-- Higher resist Daggers/Rapier Weapon -->
-			<skill id="4449" level="4" /> <!-- Greater Resist Two-handed Weapons -->
-			<skill id="5467" level="1" /> <!-- Dark Attacks -->
-			<skill id="5620" level="9" /> <!-- Short-Range Physical Attack Weakness -->
+			<skill id="4425" level="4" /> <!-- Blunt Weapon Resistance -->
+			<skill id="4426" level="4" /> <!-- Dualsword Resistance -->
+			<skill id="4427" level="4" /> <!-- Sword Resistance -->
+			<skill id="4442" level="4" /> <!-- Greater Fist Weapon Resistance -->
+			<skill id="4444" level="4" /> <!-- Greater Bow/Crossbow Resistance -->
+			<skill id="4448" level="4" /> <!-- Greater Dagger/Rapier Resistance -->
+			<skill id="4449" level="4" /> <!-- Greater Two-handed Weapon Resistance -->
+			<skill id="5467" level="1" /> <!-- Dark Attack -->
+			<skill id="5620" level="9" /> <!-- Melee Attack Vulnerability -->
 		</skillList>
 		<exCrtEffect>false</exCrtEffect>
 		<sNpcPropHpRate>8</sNpcPropHpRate>
@@ -567,14 +548,11 @@
 		<status undying="false" canBeSown="true" />
 		<skillList>
 			<skill id="4408" level="13" /> <!-- HP Increase (5x) -->
-			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
-			<skill id="4410" level="11" /> <!-- Average P. Atk. -->
-			<skill id="4411" level="11" /> <!-- Average M. Atk. -->
 			<skill id="4414" level="3" /> <!-- Light Armor Type -->
 			<skill id="4415" level="3" /> <!-- One-handed Sword -->
 			<skill id="4416" level="1" /> <!-- Undead -->
-			<skill id="5334" level="4" /> <!-- NPC(party) - Physical Single Close Range Attack -->
-			<skill id="5467" level="1" /> <!-- Dark Attacks -->
+			<skill id="5334" level="4" /> <!-- Power Strike -->
+			<skill id="5467" level="1" /> <!-- Dark Attack -->
 		</skillList>
 		<exCrtEffect>false</exCrtEffect>
 		<sNpcPropHpRate>5</sNpcPropHpRate>
@@ -630,16 +608,11 @@
 		<status undying="false" canBeSown="true" />
 		<skillList>
 			<skill id="4408" level="13" /> <!-- HP Increase (5x) -->
-			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
-			<skill id="4410" level="11" /> <!-- Average P. Atk. -->
-			<skill id="4411" level="11" /> <!-- Average M. Atk. -->
-			<skill id="4412" level="11" /> <!-- Average P. Def. -->
-			<skill id="4413" level="11" /> <!-- Average M. Def. -->
 			<skill id="4414" level="3" /> <!-- Light Armor Type -->
-			<skill id="4415" level="17" /> <!-- Hand-to-hand weapons -->
+			<skill id="4415" level="17" /> <!-- Fist Weapon -->
 			<skill id="4416" level="1" /> <!-- Undead -->
-			<skill id="4613" level="10" /> <!-- NPC Clan Heal -->
-			<skill id="5467" level="1" /> <!-- Dark Attacks -->
+			<skill id="4613" level="10" /> <!-- Clan Heal -->
+			<skill id="5467" level="1" /> <!-- Dark Attack -->
 		</skillList>
 		<exCrtEffect>false</exCrtEffect>
 		<sNpcPropHpRate>5</sNpcPropHpRate>
@@ -699,17 +672,12 @@
 		<skillList>
 			<skill id="4046" level="10" /> <!-- Sleep -->
 			<skill id="4408" level="11" /> <!-- HP Increase (3x) -->
-			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
-			<skill id="4410" level="11" /> <!-- Average P. Atk. -->
-			<skill id="4411" level="11" /> <!-- Average M. Atk. -->
-			<skill id="4412" level="11" /> <!-- Average P. Def. -->
-			<skill id="4413" level="11" /> <!-- Average M. Def. -->
 			<skill id="4414" level="3" /> <!-- Light Armor Type -->
-			<skill id="4415" level="17" /> <!-- Hand-to-hand weapons -->
+			<skill id="4415" level="17" /> <!-- Fist Weapon -->
 			<skill id="4416" level="1" /> <!-- Undead -->
-			<skill id="5374" level="4" /> <!-- NPC(party) -Magic Range Long Range DD - Fire -->
-			<skill id="5375" level="4" /> <!-- NPC(party) -Magic Range Close Range DD - Fire -->
-			<skill id="5467" level="1" /> <!-- Dark Attacks -->
+			<skill id="5374" level="4" /> <!-- Flame Strike -->
+			<skill id="5375" level="4" /> <!-- Blazing Circle -->
+			<skill id="5467" level="1" /> <!-- Dark Attack -->
 		</skillList>
 		<exCrtEffect>false</exCrtEffect>
 		<sNpcPropHpRate>3</sNpcPropHpRate>
@@ -765,16 +733,12 @@
 		<status undying="false" canBeSown="true" />
 		<skillList>
 			<skill id="4408" level="12" /> <!-- HP Increase (4x) -->
-			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
 			<skill id="4410" level="18" /> <!-- Extremely Strong P. Atk. -->
-			<skill id="4411" level="11" /> <!-- Average M. Atk. -->
-			<skill id="4412" level="11" /> <!-- Average P. Def. -->
-			<skill id="4413" level="11" /> <!-- Average M. Def. -->
 			<skill id="4414" level="3" /> <!-- Light Armor Type -->
 			<skill id="4415" level="1" /> <!-- Bare Hands -->
 			<skill id="4416" level="1" /> <!-- Undead -->
-			<skill id="5334" level="4" /> <!-- NPC(party) - Physical Single Close Range Attack -->
-			<skill id="5467" level="1" /> <!-- Dark Attacks -->
+			<skill id="5334" level="4" /> <!-- Power Strike -->
+			<skill id="5467" level="1" /> <!-- Dark Attack -->
 		</skillList>
 		<exCrtEffect>false</exCrtEffect>
 		<sNpcPropHpRate>4</sNpcPropHpRate>
@@ -828,17 +792,13 @@
 		<status undying="false" canBeSown="true" />
 		<skillList>
 			<skill id="4408" level="11" /> <!-- HP Increase (3x) -->
-			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
 			<skill id="4410" level="14" /> <!-- Strong P. Atk. -->
-			<skill id="4411" level="11" /> <!-- Average M. Atk. -->
-			<skill id="4412" level="11" /> <!-- Average P. Def. -->
-			<skill id="4413" level="11" /> <!-- Average M. Def. -->
 			<skill id="4414" level="3" /> <!-- Light Armor Type -->
-			<skill id="4415" level="19" /> <!-- Dual-Sword Weapons -->
+			<skill id="4415" level="19" /> <!-- Dualsword -->
 			<skill id="4416" level="9" /> <!-- Demons -->
 			<skill id="4579" level="9" /> <!-- Bleed -->
-			<skill id="5467" level="1" /> <!-- Dark Attacks -->
 			<skill id="5364" level="1" /> <!-- Bleed -->
+			<skill id="5467" level="1" /> <!-- Dark Attack -->
 		</skillList>
 		<exCrtEffect>false</exCrtEffect>
 		<sNpcPropHpRate>3</sNpcPropHpRate>
@@ -897,18 +857,12 @@
 		<status undying="false" canBeSown="true" />
 		<skillList>
 			<skill id="4408" level="12" /> <!-- HP Increase (4x) -->
-			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
-			<skill id="4410" level="11" /> <!-- Average P. Atk. -->
-			<skill id="4411" level="11" /> <!-- Average M. Atk. -->
-			<skill id="4412" level="11" /> <!-- Average P. Def. -->
-			<skill id="4413" level="11" /> <!-- Average M. Def. -->
-			<skill id="4414" level="2" /> <!-- Standard Type -->
 			<skill id="4415" level="3" /> <!-- One-handed Sword -->
 			<skill id="4416" level="1" /> <!-- Undead -->
-			<skill id="4608" level="2" /> <!-- NPC Clan Buff - Berserk -->
-			<skill id="5374" level="4" /> <!-- NPC(party) -Magic Range Long Range DD - Fire -->
-			<skill id="5375" level="4" /> <!-- NPC(party) -Magic Range Close Range DD - Fire -->
-			<skill id="5467" level="1" /> <!-- Dark Attacks -->
+			<skill id="4608" level="2" /> <!-- Berserker Spirit -->
+			<skill id="5374" level="4" /> <!-- Flame Strike -->
+			<skill id="5375" level="4" /> <!-- Blazing Circle -->
+			<skill id="5467" level="1" /> <!-- Dark Attack -->
 		</skillList>
 		<exCrtEffect>false</exCrtEffect>
 		<sNpcPropHpRate>4</sNpcPropHpRate>
@@ -963,16 +917,10 @@
 		<status undying="false" canBeSown="true" />
 		<skillList>
 			<skill id="4408" level="11" /> <!-- HP Increase (3x) -->
-			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
-			<skill id="4410" level="11" /> <!-- Average P. Atk. -->
-			<skill id="4411" level="11" /> <!-- Average M. Atk. -->
-			<skill id="4412" level="11" /> <!-- Average P. Def. -->
-			<skill id="4413" level="11" /> <!-- Average M. Def. -->
-			<skill id="4414" level="2" /> <!-- Standard Type -->
-			<skill id="4415" level="9" /> <!-- Bows -->
+			<skill id="4415" level="9" /> <!-- Bow -->
 			<skill id="4416" level="1" /> <!-- Undead -->
-			<skill id="5335" level="4" /> <!-- NPC(party) - Physical Single Long Range Attack -->
-			<skill id="5467" level="1" /> <!-- Dark Attacks -->
+			<skill id="5335" level="4" /> <!-- Power Shot -->
+			<skill id="5467" level="1" /> <!-- Dark Attack -->
 		</skillList>
 		<exCrtEffect>false</exCrtEffect>
 		<sNpcPropHpRate>3</sNpcPropHpRate>
@@ -1027,16 +975,10 @@
 		<status undying="false" canBeSown="true" />
 		<skillList>
 			<skill id="4408" level="13" /> <!-- HP Increase (5x) -->
-			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
-			<skill id="4410" level="11" /> <!-- Average P. Atk. -->
-			<skill id="4411" level="11" /> <!-- Average M. Atk. -->
-			<skill id="4412" level="11" /> <!-- Average P. Def. -->
-			<skill id="4413" level="11" /> <!-- Average M. Def. -->
-			<skill id="4414" level="2" /> <!-- Standard Type -->
-			<skill id="4415" level="5" /> <!-- Blunt Weapons -->
+			<skill id="4415" level="5" /> <!-- Blunt Weapon -->
 			<skill id="4416" level="1" /> <!-- Undead -->
-			<skill id="5334" level="4" /> <!-- NPC(party) - Physical Single Close Range Attack -->
-			<skill id="5467" level="1" /> <!-- Dark Attacks -->
+			<skill id="5334" level="4" /> <!-- Power Strike -->
+			<skill id="5467" level="1" /> <!-- Dark Attack -->
 		</skillList>
 		<exCrtEffect>false</exCrtEffect>
 		<sNpcPropHpRate>5</sNpcPropHpRate>
@@ -1090,17 +1032,10 @@
 		</stats>
 		<status undying="false" canBeSown="true" />
 		<skillList>
-			<skill id="4408" level="1" /> <!-- HP Increase (1x) -->
-			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
-			<skill id="4410" level="11" /> <!-- Average P. Atk. -->
-			<skill id="4411" level="11" /> <!-- Average M. Atk. -->
-			<skill id="4412" level="11" /> <!-- Average P. Def. -->
-			<skill id="4413" level="11" /> <!-- Average M. Def. -->
-			<skill id="4414" level="2" /> <!-- Standard Type -->
-			<skill id="4415" level="5" /> <!-- Blunt Weapons -->
+			<skill id="4415" level="5" /> <!-- Blunt Weapon -->
 			<skill id="4416" level="1" /> <!-- Undead -->
-			<skill id="5334" level="4" /> <!-- NPC(party) - Physical Single Close Range Attack -->
-			<skill id="5467" level="1" /> <!-- Dark Attacks -->
+			<skill id="5334" level="4" /> <!-- Power Strike -->
+			<skill id="5467" level="1" /> <!-- Dark Attack -->
 		</skillList>
 		<exCrtEffect>false</exCrtEffect>
 		<ai aggroRange="300" clanHelpRange="300" isAggressive="true">
@@ -1154,16 +1089,10 @@
 		<status undying="false" canBeSown="true" />
 		<skillList>
 			<skill id="4408" level="16" /> <!-- HP Increase (8x) -->
-			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
-			<skill id="4410" level="11" /> <!-- Average P. Atk. -->
-			<skill id="4411" level="11" /> <!-- Average M. Atk. -->
-			<skill id="4412" level="11" /> <!-- Average P. Def. -->
-			<skill id="4413" level="11" /> <!-- Average M. Def. -->
-			<skill id="4414" level="2" /> <!-- Standard Type -->
 			<skill id="4415" level="3" /> <!-- One-handed Sword -->
 			<skill id="4416" level="1" /> <!-- Undead -->
-			<skill id="5334" level="4" /> <!-- NPC(party) - Physical Single Close Range Attack -->
-			<skill id="5467" level="1" /> <!-- Dark Attacks -->
+			<skill id="5334" level="4" /> <!-- Power Strike -->
+			<skill id="5467" level="1" /> <!-- Dark Attack -->
 		</skillList>
 		<exCrtEffect>false</exCrtEffect>
 		<sNpcPropHpRate>8</sNpcPropHpRate>
@@ -1219,16 +1148,14 @@
 		<status undying="false" canBeSown="true" />
 		<skillList>
 			<skill id="4408" level="16" /> <!-- HP Increase (8x) -->
-			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
 			<skill id="4410" level="18" /> <!-- Extremely Strong P. Atk. -->
-			<skill id="4411" level="11" /> <!-- Average M. Atk. -->
 			<skill id="4412" level="14" /> <!-- Strong P. Def. -->
 			<skill id="4413" level="13" /> <!-- Slightly Strong M. Def. -->
 			<skill id="4414" level="1" /> <!-- Heavy Armor Type -->
 			<skill id="4415" level="3" /> <!-- One-handed Sword -->
 			<skill id="4416" level="1" /> <!-- Undead -->
-			<skill id="5334" level="4" /> <!-- NPC(party) - Physical Single Close Range Attack -->
-			<skill id="5467" level="1" /> <!-- Dark Attacks -->
+			<skill id="5334" level="4" /> <!-- Power Strike -->
+			<skill id="5467" level="1" /> <!-- Dark Attack -->
 		</skillList>
 		<exCrtEffect>false</exCrtEffect>
 		<sNpcPropHpRate>8</sNpcPropHpRate>
@@ -1281,17 +1208,12 @@
 		</stats>
 		<status undying="false" canBeSown="true" />
 		<skillList>
-			<skill id="4408" level="1" /> <!-- HP Increase (1x) -->
-			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
-			<skill id="4410" level="11" /> <!-- Average P. Atk. -->
-			<skill id="4411" level="11" /> <!-- Average M. Atk. -->
 			<skill id="4412" level="14" /> <!-- Strong P. Def. -->
 			<skill id="4413" level="15" /> <!-- Strong M. Def. -->
-			<skill id="4414" level="2" /> <!-- Standard Type -->
 			<skill id="4415" level="13" /> <!-- Two-handed Sword -->
 			<skill id="4416" level="9" /> <!-- Demons -->
-			<skill id="5334" level="4" /> <!-- NPC(party) - Physical Single Close Range Attack -->
-			<skill id="5467" level="1" /> <!-- Dark Attacks -->
+			<skill id="5334" level="4" /> <!-- Power Strike -->
+			<skill id="5467" level="1" /> <!-- Dark Attack -->
 		</skillList>
 		<exCrtEffect>false</exCrtEffect>
 		<ai aggroRange="300" clanHelpRange="300" isAggressive="true">
@@ -1344,17 +1266,10 @@
 		</stats>
 		<status undying="false" canBeSown="true" />
 		<skillList>
-			<skill id="4408" level="1" /> <!-- HP Increase (1x) -->
-			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
-			<skill id="4410" level="11" /> <!-- Average P. Atk. -->
-			<skill id="4411" level="11" /> <!-- Average M. Atk. -->
-			<skill id="4412" level="11" /> <!-- Average P. Def. -->
-			<skill id="4413" level="11" /> <!-- Average M. Def. -->
-			<skill id="4414" level="2" /> <!-- Standard Type -->
 			<skill id="4415" level="3" /> <!-- One-handed Sword -->
 			<skill id="4416" level="9" /> <!-- Demons -->
-			<skill id="4613" level="10" /> <!-- NPC Clan Heal -->
-			<skill id="5467" level="1" /> <!-- Dark Attacks -->
+			<skill id="4613" level="10" /> <!-- Clan Heal -->
+			<skill id="5467" level="1" /> <!-- Dark Attack -->
 		</skillList>
 		<exCrtEffect>false</exCrtEffect>
 		<ai aggroRange="300" clanHelpRange="300" isAggressive="true">
@@ -1411,18 +1326,11 @@
 		<status undying="false" canBeSown="true" />
 		<skillList>
 			<skill id="4046" level="10" /> <!-- Sleep -->
-			<skill id="4408" level="1" /> <!-- HP Increase (1x) -->
-			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
-			<skill id="4410" level="11" /> <!-- Average P. Atk. -->
-			<skill id="4411" level="11" /> <!-- Average M. Atk. -->
-			<skill id="4412" level="11" /> <!-- Average P. Def. -->
-			<skill id="4413" level="11" /> <!-- Average M. Def. -->
-			<skill id="4414" level="2" /> <!-- Standard Type -->
 			<skill id="4415" level="3" /> <!-- One-handed Sword -->
 			<skill id="4416" level="9" /> <!-- Demons -->
-			<skill id="5374" level="4" /> <!-- NPC(party) -Magic Range Long Range DD - Fire -->
-			<skill id="5375" level="4" /> <!-- NPC(party) -Magic Range Close Range DD - Fire -->
-			<skill id="5467" level="1" /> <!-- Dark Attacks -->
+			<skill id="5374" level="4" /> <!-- Flame Strike -->
+			<skill id="5375" level="4" /> <!-- Blazing Circle -->
+			<skill id="5467" level="1" /> <!-- Dark Attack -->
 		</skillList>
 		<exCrtEffect>false</exCrtEffect>
 		<ai aggroRange="300" clanHelpRange="300" isAggressive="true">
@@ -1474,16 +1382,10 @@
 		</stats>
 		<status undying="false" canBeSown="true" />
 		<skillList>
-			<skill id="4408" level="1" /> <!-- HP Increase (1x) -->
-			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
-			<skill id="4411" level="11" /> <!-- Average M. Atk. -->
-			<skill id="4412" level="11" /> <!-- Average P. Def. -->
-			<skill id="4413" level="11" /> <!-- Average M. Def. -->
-			<skill id="4414" level="2" /> <!-- Standard Type -->
-			<skill id="4415" level="19" /> <!-- Dual-Sword Weapons -->
+			<skill id="4415" level="19" /> <!-- Dualsword -->
 			<skill id="4416" level="1" /> <!-- Undead -->
-			<skill id="5334" level="4" /> <!-- NPC(party) - Physical Single Close Range Attack -->
-			<skill id="5467" level="1" /> <!-- Dark Attacks -->
+			<skill id="5334" level="4" /> <!-- Power Strike -->
+			<skill id="5467" level="1" /> <!-- Dark Attack -->
 		</skillList>
 		<exCrtEffect>false</exCrtEffect>
 		<ai aggroRange="300" clanHelpRange="300" isAggressive="true">
@@ -1535,18 +1437,13 @@
 		</stats>
 		<status undying="false" canBeSown="true" />
 		<skillList>
-			<skill id="4408" level="1" /> <!-- HP Increase (1x) -->
-			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
 			<skill id="4410" level="13" /> <!-- Slightly Strong P. Atk. -->
-			<skill id="4411" level="11" /> <!-- Average M. Atk. -->
-			<skill id="4412" level="11" /> <!-- Average P. Def. -->
-			<skill id="4413" level="11" /> <!-- Average M. Def. -->
 			<skill id="4414" level="3" /> <!-- Light Armor Type -->
 			<skill id="4415" level="3" /> <!-- One-handed Sword -->
 			<skill id="4416" level="1" /> <!-- Undead -->
 			<skill id="4579" level="9" /> <!-- Bleed -->
-			<skill id="5467" level="1" /> <!-- Dark Attacks -->
 			<skill id="5364" level="1" /> <!-- Bleed -->
+			<skill id="5467" level="1" /> <!-- Dark Attack -->
 		</skillList>
 		<exCrtEffect>false</exCrtEffect>
 		<ai aggroRange="300" clanHelpRange="300" isAggressive="true">
@@ -1603,19 +1500,12 @@
 		</stats>
 		<status undying="false" canBeSown="true" />
 		<skillList>
-			<skill id="4408" level="1" /> <!-- HP Increase (1x) -->
-			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
-			<skill id="4410" level="11" /> <!-- Average P. Atk. -->
-			<skill id="4411" level="11" /> <!-- Average M. Atk. -->
-			<skill id="4412" level="11" /> <!-- Average P. Def. -->
-			<skill id="4413" level="11" /> <!-- Average M. Def. -->
-			<skill id="4414" level="2" /> <!-- Standard Type -->
 			<skill id="4415" level="3" /> <!-- One-handed Sword -->
 			<skill id="4416" level="9" /> <!-- Demons -->
-			<skill id="4608" level="2" /> <!-- NPC Clan Buff - Berserk -->
-			<skill id="5374" level="4" /> <!-- NPC(party) -Magic Range Long Range DD - Fire -->
-			<skill id="5375" level="4" /> <!-- NPC(party) -Magic Range Close Range DD - Fire -->
-			<skill id="5467" level="1" /> <!-- Dark Attacks -->
+			<skill id="4608" level="2" /> <!-- Berserker Spirit -->
+			<skill id="5374" level="4" /> <!-- Flame Strike -->
+			<skill id="5375" level="4" /> <!-- Blazing Circle -->
+			<skill id="5467" level="1" /> <!-- Dark Attack -->
 		</skillList>
 		<exCrtEffect>false</exCrtEffect>
 		<ai aggroRange="300" clanHelpRange="300" isAggressive="true">
@@ -1669,17 +1559,10 @@
 		</stats>
 		<status undying="false" canBeSown="true" />
 		<skillList>
-			<skill id="4408" level="1" /> <!-- HP Increase (1x) -->
-			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
-			<skill id="4410" level="11" /> <!-- Average P. Atk. -->
-			<skill id="4411" level="11" /> <!-- Average M. Atk. -->
-			<skill id="4412" level="11" /> <!-- Average P. Def. -->
-			<skill id="4413" level="11" /> <!-- Average M. Def. -->
-			<skill id="4414" level="2" /> <!-- Standard Type -->
-			<skill id="4415" level="9" /> <!-- Bows -->
+			<skill id="4415" level="9" /> <!-- Bow -->
 			<skill id="4416" level="1" /> <!-- Undead -->
-			<skill id="5335" level="4" /> <!-- NPC(party) - Physical Single Long Range Attack -->
-			<skill id="5467" level="1" /> <!-- Dark Attacks -->
+			<skill id="5335" level="4" /> <!-- Power Shot -->
+			<skill id="5467" level="1" /> <!-- Dark Attack -->
 		</skillList>
 		<exCrtEffect>false</exCrtEffect>
 		<ai aggroRange="300" clanHelpRange="300" isAggressive="true">
@@ -1732,17 +1615,10 @@
 		</stats>
 		<status undying="false" canBeSown="true" />
 		<skillList>
-			<skill id="4408" level="1" /> <!-- HP Increase (1x) -->
-			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
-			<skill id="4410" level="11" /> <!-- Average P. Atk. -->
-			<skill id="4411" level="11" /> <!-- Average M. Atk. -->
-			<skill id="4412" level="11" /> <!-- Average P. Def. -->
-			<skill id="4413" level="11" /> <!-- Average M. Def. -->
-			<skill id="4414" level="2" /> <!-- Standard Type -->
 			<skill id="4415" level="3" /> <!-- One-handed Sword -->
 			<skill id="4416" level="1" /> <!-- Undead -->
-			<skill id="5334" level="4" /> <!-- NPC(party) - Physical Single Close Range Attack -->
-			<skill id="5467" level="1" /> <!-- Dark Attacks -->
+			<skill id="5334" level="4" /> <!-- Power Strike -->
+			<skill id="5467" level="1" /> <!-- Dark Attack -->
 		</skillList>
 		<exCrtEffect>false</exCrtEffect>
 		<ai aggroRange="300" clanHelpRange="300" isAggressive="true">
@@ -1796,16 +1672,10 @@
 		<status undying="false" canBeSown="true" />
 		<skillList>
 			<skill id="4408" level="8" /> <!-- HP Increase (1/4x) -->
-			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
-			<skill id="4410" level="11" /> <!-- Average P. Atk. -->
-			<skill id="4411" level="11" /> <!-- Average M. Atk. -->
-			<skill id="4412" level="11" /> <!-- Average P. Def. -->
-			<skill id="4413" level="11" /> <!-- Average M. Def. -->
-			<skill id="4414" level="2" /> <!-- Standard Type -->
 			<skill id="4415" level="3" /> <!-- One-handed Sword -->
 			<skill id="4416" level="1" /> <!-- Undead -->
-			<skill id="5334" level="4" /> <!-- NPC(party) - Physical Single Close Range Attack -->
-			<skill id="5467" level="1" /> <!-- Dark Attacks -->
+			<skill id="5334" level="4" /> <!-- Power Strike -->
+			<skill id="5467" level="1" /> <!-- Dark Attack -->
 		</skillList>
 		<exCrtEffect>false</exCrtEffect>
 		<sNpcPropHpRate>0.25</sNpcPropHpRate>
@@ -1859,17 +1729,10 @@
 		</stats>
 		<status undying="false" canBeSown="true" />
 		<skillList>
-			<skill id="4408" level="1" /> <!-- HP Increase (1x) -->
-			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
-			<skill id="4410" level="11" /> <!-- Average P. Atk. -->
-			<skill id="4411" level="11" /> <!-- Average M. Atk. -->
-			<skill id="4412" level="11" /> <!-- Average P. Def. -->
-			<skill id="4413" level="11" /> <!-- Average M. Def. -->
-			<skill id="4414" level="2" /> <!-- Standard Type -->
 			<skill id="4415" level="3" /> <!-- One-handed Sword -->
 			<skill id="4416" level="9" /> <!-- Demons -->
-			<skill id="5334" level="4" /> <!-- NPC(party) - Physical Single Close Range Attack -->
-			<skill id="5467" level="1" /> <!-- Dark Attacks -->
+			<skill id="5334" level="4" /> <!-- Power Strike -->
+			<skill id="5467" level="1" /> <!-- Dark Attack -->
 		</skillList>
 		<exCrtEffect>false</exCrtEffect>
 		<ai aggroRange="300" clanHelpRange="300" isAggressive="true">
@@ -1923,15 +1786,12 @@
 		<status undying="false" canBeSown="true" />
 		<skillList>
 			<skill id="4408" level="10" /> <!-- HP Increase (2x) -->
-			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
-			<skill id="4411" level="11" /> <!-- Average M. Atk. -->
 			<skill id="4412" level="14" /> <!-- Strong P. Def. -->
 			<skill id="4413" level="13" /> <!-- Slightly Strong M. Def. -->
-			<skill id="4414" level="2" /> <!-- Standard Type -->
 			<skill id="4415" level="13" /> <!-- Two-handed Sword -->
 			<skill id="4416" level="9" /> <!-- Demons -->
-			<skill id="5334" level="4" /> <!-- NPC(party) - Physical Single Close Range Attack -->
-			<skill id="5467" level="1" /> <!-- Dark Attacks -->
+			<skill id="5334" level="4" /> <!-- Power Strike -->
+			<skill id="5467" level="1" /> <!-- Dark Attack -->
 		</skillList>
 		<exCrtEffect>false</exCrtEffect>
 		<sNpcPropHpRate>2</sNpcPropHpRate>
@@ -1985,18 +1845,13 @@
 		</stats>
 		<status undying="false" canBeSown="true" />
 		<skillList>
-			<skill id="4408" level="1" /> <!-- HP Increase (1x) -->
-			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
-			<skill id="4410" level="11" /> <!-- Average P. Atk. -->
-			<skill id="4411" level="11" /> <!-- Average M. Atk. -->
 			<skill id="4412" level="16" /> <!-- Very Strong P. Def. -->
 			<skill id="4413" level="15" /> <!-- Strong M. Def. -->
-			<skill id="4414" level="2" /> <!-- Standard Type -->
 			<skill id="4415" level="13" /> <!-- Two-handed Sword -->
 			<skill id="4416" level="9" /> <!-- Demons -->
-			<skill id="4441" level="5" /> <!-- Greater Resist Mental Derangement -->
-			<skill id="5334" level="5" /> <!-- NPC(party) - Physical Single Close Range Attack -->
-			<skill id="5467" level="1" /> <!-- Dark Attacks -->
+			<skill id="4441" level="5" /> <!-- Greater Mental Attack Resistance -->
+			<skill id="5334" level="5" /> <!-- Power Strike -->
+			<skill id="5467" level="1" /> <!-- Dark Attack -->
 		</skillList>
 		<exCrtEffect>true</exCrtEffect>
 		<ai aggroRange="300" clanHelpRange="300" isAggressive="true">
@@ -2050,17 +1905,10 @@
 		</stats>
 		<status undying="false" canBeSown="true" />
 		<skillList>
-			<skill id="4408" level="1" /> <!-- HP Increase (1x) -->
-			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
-			<skill id="4410" level="11" /> <!-- Average P. Atk. -->
-			<skill id="4411" level="11" /> <!-- Average M. Atk. -->
-			<skill id="4412" level="11" /> <!-- Average P. Def. -->
-			<skill id="4413" level="11" /> <!-- Average M. Def. -->
-			<skill id="4414" level="2" /> <!-- Standard Type -->
 			<skill id="4415" level="3" /> <!-- One-handed Sword -->
 			<skill id="4416" level="9" /> <!-- Demons -->
-			<skill id="4613" level="10" /> <!-- NPC Clan Heal -->
-			<skill id="5467" level="1" /> <!-- Dark Attacks -->
+			<skill id="4613" level="10" /> <!-- Clan Heal -->
+			<skill id="5467" level="1" /> <!-- Dark Attack -->
 		</skillList>
 		<exCrtEffect>false</exCrtEffect>
 		<ai aggroRange="300" clanHelpRange="300" isAggressive="true">
@@ -2118,18 +1966,11 @@
 		<status undying="false" canBeSown="true" />
 		<skillList>
 			<skill id="4046" level="10" /> <!-- Sleep -->
-			<skill id="4408" level="1" /> <!-- HP Increase (1x) -->
-			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
-			<skill id="4410" level="11" /> <!-- Average P. Atk. -->
-			<skill id="4411" level="11" /> <!-- Average M. Atk. -->
-			<skill id="4412" level="11" /> <!-- Average P. Def. -->
-			<skill id="4413" level="11" /> <!-- Average M. Def. -->
-			<skill id="4414" level="2" /> <!-- Standard Type -->
 			<skill id="4415" level="3" /> <!-- One-handed Sword -->
 			<skill id="4416" level="9" /> <!-- Demons -->
-			<skill id="5374" level="4" /> <!-- NPC(party) -Magic Range Long Range DD - Fire -->
-			<skill id="5375" level="4" /> <!-- NPC(party) -Magic Range Close Range DD - Fire -->
-			<skill id="5467" level="1" /> <!-- Dark Attacks -->
+			<skill id="5374" level="4" /> <!-- Flame Strike -->
+			<skill id="5375" level="4" /> <!-- Blazing Circle -->
+			<skill id="5467" level="1" /> <!-- Dark Attack -->
 		</skillList>
 		<exCrtEffect>false</exCrtEffect>
 		<ai aggroRange="300" clanHelpRange="300" isAggressive="true">
@@ -2182,17 +2023,11 @@
 		</stats>
 		<status undying="false" canBeSown="true" />
 		<skillList>
-			<skill id="4408" level="1" /> <!-- HP Increase (1x) -->
-			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
 			<skill id="4410" level="18" /> <!-- Extremely Strong P. Atk. -->
-			<skill id="4411" level="11" /> <!-- Average M. Atk. -->
-			<skill id="4412" level="11" /> <!-- Average P. Def. -->
-			<skill id="4413" level="11" /> <!-- Average M. Def. -->
-			<skill id="4414" level="2" /> <!-- Standard Type -->
-			<skill id="4415" level="19" /> <!-- Dual-Sword Weapons -->
+			<skill id="4415" level="19" /> <!-- Dualsword -->
 			<skill id="4416" level="1" /> <!-- Undead -->
-			<skill id="5334" level="5" /> <!-- NPC(party) - Physical Single Close Range Attack -->
-			<skill id="5467" level="1" /> <!-- Dark Attacks -->
+			<skill id="5334" level="5" /> <!-- Power Strike -->
+			<skill id="5467" level="1" /> <!-- Dark Attack -->
 		</skillList>
 		<exCrtEffect>false</exCrtEffect>
 		<ai aggroRange="300" clanHelpRange="300" isAggressive="true">
@@ -2245,18 +2080,13 @@
 		</stats>
 		<status undying="false" canBeSown="true" />
 		<skillList>
-			<skill id="4408" level="1" /> <!-- HP Increase (1x) -->
-			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
 			<skill id="4410" level="14" /> <!-- Strong P. Atk. -->
-			<skill id="4411" level="11" /> <!-- Average M. Atk. -->
-			<skill id="4412" level="11" /> <!-- Average P. Def. -->
-			<skill id="4413" level="11" /> <!-- Average M. Def. -->
 			<skill id="4414" level="3" /> <!-- Light Armor Type -->
 			<skill id="4415" level="3" /> <!-- One-handed Sword -->
 			<skill id="4416" level="1" /> <!-- Undead -->
 			<skill id="4579" level="9" /> <!-- Bleed -->
-			<skill id="5467" level="1" /> <!-- Dark Attacks -->
 			<skill id="5364" level="1" /> <!-- Bleed -->
+			<skill id="5467" level="1" /> <!-- Dark Attack -->
 		</skillList>
 		<exCrtEffect>false</exCrtEffect>
 		<ai aggroRange="300" clanHelpRange="300" isAggressive="true">
@@ -2314,19 +2144,12 @@
 		</stats>
 		<status undying="false" canBeSown="true" />
 		<skillList>
-			<skill id="4408" level="1" /> <!-- HP Increase (1x) -->
-			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
-			<skill id="4410" level="11" /> <!-- Average P. Atk. -->
-			<skill id="4411" level="11" /> <!-- Average M. Atk. -->
-			<skill id="4412" level="11" /> <!-- Average P. Def. -->
-			<skill id="4413" level="11" /> <!-- Average M. Def. -->
-			<skill id="4414" level="2" /> <!-- Standard Type -->
 			<skill id="4415" level="3" /> <!-- One-handed Sword -->
 			<skill id="4416" level="9" /> <!-- Demons -->
-			<skill id="4608" level="2" /> <!-- NPC Clan Buff - Berserk -->
-			<skill id="5374" level="4" /> <!-- NPC(party) -Magic Range Long Range DD - Fire -->
-			<skill id="5375" level="4" /> <!-- NPC(party) -Magic Range Close Range DD - Fire -->
-			<skill id="5467" level="1" /> <!-- Dark Attacks -->
+			<skill id="4608" level="2" /> <!-- Berserker Spirit -->
+			<skill id="5374" level="4" /> <!-- Flame Strike -->
+			<skill id="5375" level="4" /> <!-- Blazing Circle -->
+			<skill id="5467" level="1" /> <!-- Dark Attack -->
 		</skillList>
 		<exCrtEffect>false</exCrtEffect>
 		<ai aggroRange="300" clanHelpRange="300" isAggressive="true">
@@ -2380,17 +2203,10 @@
 		</stats>
 		<status undying="false" canBeSown="true" />
 		<skillList>
-			<skill id="4408" level="1" /> <!-- HP Increase (1x) -->
-			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
-			<skill id="4410" level="11" /> <!-- Average P. Atk. -->
-			<skill id="4411" level="11" /> <!-- Average M. Atk. -->
-			<skill id="4412" level="11" /> <!-- Average P. Def. -->
-			<skill id="4413" level="11" /> <!-- Average M. Def. -->
-			<skill id="4414" level="2" /> <!-- Standard Type -->
-			<skill id="4415" level="9" /> <!-- Bows -->
+			<skill id="4415" level="9" /> <!-- Bow -->
 			<skill id="4416" level="1" /> <!-- Undead -->
-			<skill id="5335" level="4" /> <!-- NPC(party) - Physical Single Long Range Attack -->
-			<skill id="5467" level="1" /> <!-- Dark Attacks -->
+			<skill id="5335" level="4" /> <!-- Power Shot -->
+			<skill id="5467" level="1" /> <!-- Dark Attack -->
 		</skillList>
 		<exCrtEffect>false</exCrtEffect>
 		<ai aggroRange="300" clanHelpRange="300" isAggressive="true">
@@ -2443,17 +2259,10 @@
 		</stats>
 		<status undying="false" canBeSown="true" />
 		<skillList>
-			<skill id="4408" level="1" /> <!-- HP Increase (1x) -->
-			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
-			<skill id="4410" level="11" /> <!-- Average P. Atk. -->
-			<skill id="4411" level="11" /> <!-- Average M. Atk. -->
-			<skill id="4412" level="11" /> <!-- Average P. Def. -->
-			<skill id="4413" level="11" /> <!-- Average M. Def. -->
-			<skill id="4414" level="2" /> <!-- Standard Type -->
 			<skill id="4415" level="3" /> <!-- One-handed Sword -->
 			<skill id="4416" level="1" /> <!-- Undead -->
-			<skill id="5334" level="5" /> <!-- NPC(party) - Physical Single Close Range Attack -->
-			<skill id="5467" level="1" /> <!-- Dark Attacks -->
+			<skill id="5334" level="5" /> <!-- Power Strike -->
+			<skill id="5467" level="1" /> <!-- Dark Attack -->
 		</skillList>
 		<exCrtEffect>false</exCrtEffect>
 		<ai aggroRange="300" clanHelpRange="300" isAggressive="true">
@@ -2507,16 +2316,10 @@
 		<status undying="false" canBeSown="true" />
 		<skillList>
 			<skill id="4408" level="8" /> <!-- HP Increase (1/4x) -->
-			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
-			<skill id="4410" level="11" /> <!-- Average P. Atk. -->
-			<skill id="4411" level="11" /> <!-- Average M. Atk. -->
-			<skill id="4412" level="11" /> <!-- Average P. Def. -->
-			<skill id="4413" level="11" /> <!-- Average M. Def. -->
-			<skill id="4414" level="2" /> <!-- Standard Type -->
 			<skill id="4415" level="3" /> <!-- One-handed Sword -->
 			<skill id="4416" level="1" /> <!-- Undead -->
-			<skill id="5334" level="5" /> <!-- NPC(party) - Physical Single Close Range Attack -->
-			<skill id="5467" level="1" /> <!-- Dark Attacks -->
+			<skill id="5334" level="5" /> <!-- Power Strike -->
+			<skill id="5467" level="1" /> <!-- Dark Attack -->
 		</skillList>
 		<exCrtEffect>false</exCrtEffect>
 		<sNpcPropHpRate>0.25</sNpcPropHpRate>
@@ -2571,16 +2374,10 @@
 		<status undying="false" canBeSown="true" />
 		<skillList>
 			<skill id="4408" level="10" /> <!-- HP Increase (2x) -->
-			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
-			<skill id="4410" level="11" /> <!-- Average P. Atk. -->
-			<skill id="4411" level="11" /> <!-- Average M. Atk. -->
-			<skill id="4412" level="11" /> <!-- Average P. Def. -->
-			<skill id="4413" level="11" /> <!-- Average M. Def. -->
-			<skill id="4414" level="2" /> <!-- Standard Type -->
-			<skill id="4415" level="19" /> <!-- Dual-Sword Weapons -->
+			<skill id="4415" level="19" /> <!-- Dualsword -->
 			<skill id="4416" level="9" /> <!-- Demons -->
-			<skill id="5334" level="5" /> <!-- NPC(party) - Physical Single Close Range Attack -->
-			<skill id="5467" level="1" /> <!-- Dark Attacks -->
+			<skill id="5334" level="5" /> <!-- Power Strike -->
+			<skill id="5467" level="1" /> <!-- Dark Attack -->
 		</skillList>
 		<exCrtEffect>false</exCrtEffect>
 		<sNpcPropHpRate>2</sNpcPropHpRate>
@@ -2635,16 +2432,13 @@
 		<status undying="false" canBeSown="true" />
 		<skillList>
 			<skill id="4408" level="10" /> <!-- HP Increase (2x) -->
-			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
 			<skill id="4410" level="18" /> <!-- Extremely Strong P. Atk. -->
-			<skill id="4411" level="11" /> <!-- Average M. Atk. -->
 			<skill id="4412" level="14" /> <!-- Strong P. Def. -->
 			<skill id="4413" level="13" /> <!-- Slightly Strong M. Def. -->
-			<skill id="4414" level="2" /> <!-- Standard Type -->
 			<skill id="4415" level="3" /> <!-- One-handed Sword -->
 			<skill id="4416" level="9" /> <!-- Demons -->
-			<skill id="5334" level="5" /> <!-- NPC(party) - Physical Single Close Range Attack -->
-			<skill id="5467" level="1" /> <!-- Dark Attacks -->
+			<skill id="5334" level="5" /> <!-- Power Strike -->
+			<skill id="5467" level="1" /> <!-- Dark Attack -->
 		</skillList>
 		<exCrtEffect>false</exCrtEffect>
 		<sNpcPropHpRate>2</sNpcPropHpRate>
@@ -2696,16 +2490,12 @@
 		</stats>
 		<status undying="false" canBeSown="true" />
 		<skillList>
-			<skill id="4408" level="1" /> <!-- HP Increase (1x) -->
-			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
 			<skill id="4410" level="13" /> <!-- Slightly Strong P. Atk. -->
-			<skill id="4411" level="11" /> <!-- Average M. Atk. -->
 			<skill id="4412" level="9" /> <!-- Slightly Weak P. Def. -->
-			<skill id="4413" level="11" /> <!-- Average M. Def. -->
 			<skill id="4414" level="3" /> <!-- Light Armor Type -->
-			<skill id="4415" level="7" /> <!-- Daggers -->
+			<skill id="4415" level="7" /> <!-- Dagger -->
 			<skill id="4416" level="6" /> <!-- Humanoids -->
-			<skill id="5465" level="1" /> <!-- Earth Attacks -->
+			<skill id="5465" level="1" /> <!-- Earth Attack -->
 		</skillList>
 		<exCrtEffect>false</exCrtEffect>
 		<ai clanHelpRange="300" aggroRange="300">
@@ -2766,24 +2556,19 @@
 		</stats>
 		<status undying="false" canBeSown="true" />
 		<skillList>
-			<skill id="4071" level="5" /> <!-- Resist Bow/Crossbow Weapons -->
-			<skill id="4084" level="9" /> <!-- Resist Physical Attack -->
-			<skill id="4285" level="5" /> <!-- Resist Sleep Attacks -->
+			<skill id="4071" level="5" /> <!-- Bow/Crossbow Resistance -->
+			<skill id="4084" level="9" /> <!-- Physical Attack Resistance -->
+			<skill id="4285" level="5" /> <!-- Sleep Resistance -->
 			<skill id="4408" level="8" /> <!-- HP Increase (1/4x) -->
-			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
 			<skill id="4410" level="16" /> <!-- Very Strong P. Atk. -->
-			<skill id="4411" level="11" /> <!-- Average M. Atk. -->
 			<skill id="4412" level="14" /> <!-- Strong P. Def. -->
 			<skill id="4413" level="7" /> <!-- Weak M. Def. -->
-			<skill id="4414" level="3" /> <!-- Light Armor Type -->
-			<skill id="4415" level="5" /> <!-- Blunt Weapons -->
+			<skill id="4415" level="5" /> <!-- Blunt Weapon -->
 			<skill id="4416" level="24" /> <!-- Unknown Creature -->
-			<skill id="4417" level="4" /> <!-- Beasts -->
-			<skill id="4439" level="2" /> <!-- Greater Resist Hold -->
-			<skill id="4445" level="1" /> <!-- Greater Resist Spear Weapons -->
+			<skill id="4417" level="4" /> <!-- Beast -->
+			<skill id="4439" level="2" /> <!-- Greater Hold Resistance -->
+			<skill id="4445" level="1" /> <!-- Greater Spear Resistance -->
 			<skill id="5084" level="1" /> <!-- Blinding Blow -->
-			<skill id="5080" level="1" /> <!-- Haste Might -->
-			<skill id="5083" level="1" /> <!-- Stun -->
 		</skillList>
 		<exCrtEffect>false</exCrtEffect>
 		<sNpcPropHpRate>0.25</sNpcPropHpRate>
@@ -2839,24 +2624,19 @@
 		</stats>
 		<status undying="false" canBeSown="true" />
 		<skillList>
-			<skill id="4071" level="5" /> <!-- Resist Bow/Crossbow Weapons -->
-			<skill id="4084" level="9" /> <!-- Resist Physical Attack -->
-			<skill id="4285" level="5" /> <!-- Resist Sleep Attacks -->
+			<skill id="4032" level="10" /> <!-- Power Strike -->
+			<skill id="4071" level="3" /> <!-- Bow/Crossbow Resistance -->
+			<skill id="4084" level="9" /> <!-- Physical Attack Resistance -->
+			<skill id="4285" level="5" /> <!-- Sleep Resistance -->
+			<skill id="4287" level="5" /> <!-- Hold Resistance -->
 			<skill id="4408" level="8" /> <!-- HP Increase (1/4x) -->
-			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
 			<skill id="4410" level="14" /> <!-- Strong P. Atk. -->
-			<skill id="4411" level="11" /> <!-- Average M. Atk. -->
 			<skill id="4412" level="14" /> <!-- Strong P. Def. -->
 			<skill id="4413" level="7" /> <!-- Weak M. Def. -->
-			<skill id="4414" level="3" /> <!-- Light Armor Type -->
-			<skill id="4415" level="5" /> <!-- Blunt Weapons -->
+			<skill id="4415" level="5" /> <!-- Blunt Weapon -->
 			<skill id="4416" level="24" /> <!-- Unknown Creature -->
-			<skill id="4417" level="4" /> <!-- Beasts -->
-			<skill id="4439" level="2" /> <!-- Greater Resist Hold -->
-			<skill id="4445" level="1" /> <!-- Greater Resist Spear Weapons -->
-			<skill id="5082" level="1" /> <!-- Spinning Slasher -->
-			<skill id="5084" level="1" /> <!-- Blinding Blow -->
-			<skill id="5079" level="1" /> <!-- Haste Focus -->
+			<skill id="4417" level="4" /> <!-- Beast -->
+			<skill id="4445" level="1" /> <!-- Greater Spear Resistance -->
 		</skillList>
 		<exCrtEffect>false</exCrtEffect>
 		<sNpcPropHpRate>0.25</sNpcPropHpRate>
@@ -2902,22 +2682,19 @@
 		</stats>
 		<status undying="false" canBeSown="true" />
 		<skillList>
-			<skill id="4071" level="5" /> <!-- Resist Bow/Crossbow Weapons -->
-			<skill id="4084" level="9" /> <!-- Resist Physical Attack -->
-			<skill id="4285" level="5" /> <!-- Resist Sleep Attacks -->
+			<skill id="4071" level="5" /> <!-- Bow/Crossbow Resistance -->
+			<skill id="4084" level="9" /> <!-- Physical Attack Resistance -->
+			<skill id="4285" level="5" /> <!-- Sleep Resistance -->
 			<skill id="4408" level="8" /> <!-- HP Increase (1/4x) -->
-			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
 			<skill id="4410" level="16" /> <!-- Very Strong P. Atk. -->
-			<skill id="4411" level="11" /> <!-- Average M. Atk. -->
 			<skill id="4412" level="14" /> <!-- Strong P. Def. -->
 			<skill id="4413" level="7" /> <!-- Weak M. Def. -->
-			<skill id="4414" level="2" /> <!-- Standard Type -->
-			<skill id="4415" level="5" /> <!-- Blunt Weapons -->
+			<skill id="4415" level="5" /> <!-- Blunt Weapon -->
 			<skill id="4416" level="24" /> <!-- Unknown Creature -->
-			<skill id="4417" level="4" /> <!-- Beasts -->
-			<skill id="4439" level="2" /> <!-- Greater Resist Hold -->
-			<skill id="4445" level="1" /> <!-- Greater Resist Spear Weapons -->
-			<skill id="5084" level="1" /> <!-- NPC Blinding Blow -->
+			<skill id="4417" level="4" /> <!-- Beast -->
+			<skill id="4439" level="2" /> <!-- Greater Hold Resistance -->
+			<skill id="4445" level="1" /> <!-- Greater Spear Resistance -->
+			<skill id="5084" level="1" /> <!-- Blinding Blow -->
 		</skillList>
 		<exCrtEffect>false</exCrtEffect>
 		<sNpcPropHpRate>0.25</sNpcPropHpRate>
@@ -2963,22 +2740,19 @@
 		</stats>
 		<status undying="false" canBeSown="true" />
 		<skillList>
-			<skill id="4032" level="10" /> <!-- NPC Strike -->
-			<skill id="4071" level="3" /> <!-- Resist Bow/Crossbow Weapons -->
-			<skill id="4084" level="9" /> <!-- Resist Physical Attack -->
-			<skill id="4285" level="5" /> <!-- Resist Sleep Attacks -->
-			<skill id="4287" level="5" /> <!-- Resist Hold Attacks -->
+			<skill id="4032" level="10" /> <!-- Power Strike -->
+			<skill id="4071" level="3" /> <!-- Bow/Crossbow Resistance -->
+			<skill id="4084" level="9" /> <!-- Physical Attack Resistance -->
+			<skill id="4285" level="5" /> <!-- Sleep Resistance -->
+			<skill id="4287" level="5" /> <!-- Hold Resistance -->
 			<skill id="4408" level="8" /> <!-- HP Increase (1/4x) -->
-			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
 			<skill id="4410" level="14" /> <!-- Strong P. Atk. -->
-			<skill id="4411" level="11" /> <!-- Average M. Atk. -->
 			<skill id="4412" level="14" /> <!-- Strong P. Def. -->
 			<skill id="4413" level="7" /> <!-- Weak M. Def. -->
-			<skill id="4414" level="2" /> <!-- Standard Type -->
-			<skill id="4415" level="5" /> <!-- Blunt Weapons -->
+			<skill id="4415" level="5" /> <!-- Blunt Weapon -->
 			<skill id="4416" level="24" /> <!-- Unknown Creature -->
-			<skill id="4417" level="4" /> <!-- Beasts -->
-			<skill id="4445" level="1" /> <!-- Greater Resist Spear Weapons -->
+			<skill id="4417" level="4" /> <!-- Beast -->
+			<skill id="4445" level="1" /> <!-- Greater Spear Resistance -->
 		</skillList>
 		<exCrtEffect>false</exCrtEffect>
 		<sNpcPropHpRate>0.25</sNpcPropHpRate>
@@ -3027,22 +2801,20 @@
 		</stats>
 		<status undying="false" canBeSown="true" />
 		<skillList>
-			<skill id="4388" level="4" /> <!-- Resist Paralysis Attacks -->
-			<skill id="4408" level="9" /> <!-- HP Increase (2x) -->
-			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
+			<skill id="4388" level="4" /> <!-- Paralysis Resistance -->
+			<skill id="4408" level="9" /> <!-- HP Increase (1/2x) -->
 			<skill id="4410" level="17" /> <!-- Very Strong P. Atk. -->
 			<skill id="4411" level="16" /> <!-- Very Strong M. Atk. -->
 			<skill id="4412" level="15" /> <!-- Strong P. Def. -->
-			<skill id="4413" level="8" /> <!-- Extremely Weak M. Def. -->
-			<skill id="4414" level="2" /> <!-- Standard Type -->
+			<skill id="4413" level="8" /> <!-- Weak M. Def. -->
 			<skill id="4415" level="3" /> <!-- One-handed Sword -->
-			<skill id="4416" level="3" /> <!-- Beasts -->
-			<skill id="4438" level="4" /> <!-- Greater Resist Sleep -->
-			<skill id="4439" level="4" /> <!-- Greater Resist Hold -->
-			<skill id="4441" level="5" /> <!-- Greater Resist Mental Derangement -->
-			<skill id="5465" level="1" /> <!-- Earth Attacks -->
-			<skill id="5598" level="9" /> <!-- Flash Resistance -->
-			<skill id="5599" level="9" /> <!-- Stun Resistance -->
+			<skill id="4416" level="3" /> <!-- Beast -->
+			<skill id="4438" level="4" /> <!-- Greater Sleep Resistance -->
+			<skill id="4439" level="4" /> <!-- Greater Hold Resistance -->
+			<skill id="4441" level="5" /> <!-- Greater Mental Attack Resistance -->
+			<skill id="5465" level="1" /> <!-- Earth Attack -->
+			<skill id="5598" level="9" /> <!-- Petrifaction Attack Resistance -->
+			<skill id="5599" level="9" /> <!-- Stun Attack Resistance -->
 			<skill id="6382" level="1" /> <!-- Bistakon Rolling Claw -->
 			<skill id="6383" level="1" /> <!-- Bistakon Deadly Roar -->
 			<skill id="6384" level="1" /> <!-- Bistakon Deadly Blow -->
@@ -3100,22 +2872,20 @@
 		</stats>
 		<status undying="false" canBeSown="true" />
 		<skillList>
-			<skill id="4388" level="4" /> <!-- Resist Paralysis Attacks -->
+			<skill id="4388" level="4" /> <!-- Paralysis Resistance -->
 			<skill id="4408" level="10" /> <!-- HP Increase (2x) -->
-			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
 			<skill id="4410" level="17" /> <!-- Very Strong P. Atk. -->
 			<skill id="4411" level="16" /> <!-- Very Strong M. Atk. -->
 			<skill id="4412" level="15" /> <!-- Strong P. Def. -->
-			<skill id="4413" level="8" /> <!-- Extremely Weak M. Def. -->
-			<skill id="4414" level="2" /> <!-- Standard Type -->
+			<skill id="4413" level="8" /> <!-- Weak M. Def. -->
 			<skill id="4415" level="3" /> <!-- One-handed Sword -->
-			<skill id="4416" level="3" /> <!-- Beasts -->
-			<skill id="4438" level="4" /> <!-- Greater Resist Sleep -->
-			<skill id="4439" level="4" /> <!-- Greater Resist Hold -->
-			<skill id="4441" level="5" /> <!-- Greater Resist Mental Derangement -->
-			<skill id="5465" level="1" /> <!-- Earth Attacks -->
-			<skill id="5598" level="9" /> <!-- Flash Resistance -->
-			<skill id="5599" level="9" /> <!-- Stun Resistance -->
+			<skill id="4416" level="3" /> <!-- Beast -->
+			<skill id="4438" level="4" /> <!-- Greater Sleep Resistance -->
+			<skill id="4439" level="4" /> <!-- Greater Hold Resistance -->
+			<skill id="4441" level="5" /> <!-- Greater Mental Attack Resistance -->
+			<skill id="5465" level="1" /> <!-- Earth Attack -->
+			<skill id="5598" level="9" /> <!-- Petrifaction Attack Resistance -->
+			<skill id="5599" level="9" /> <!-- Stun Attack Resistance -->
 			<skill id="6381" level="1" /> <!-- Bistakon Soul Beam -->
 			<skill id="6384" level="2" /> <!-- Bistakon Deadly Blow -->
 			<skill id="6385" level="1" /> <!-- Bistakon Critical Claw -->
@@ -3170,25 +2940,23 @@
 		</stats>
 		<status undying="false" canBeSown="true" />
 		<skillList>
-			<skill id="4388" level="4" /> <!-- Resist Paralysis Attacks -->
+			<skill id="4388" level="4" /> <!-- Paralysis Resistance -->
 			<skill id="4408" level="10" /> <!-- HP Increase (2x) -->
-			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
 			<skill id="4410" level="16" /> <!-- Very Strong P. Atk. -->
 			<skill id="4411" level="17" /> <!-- Very Strong M. Atk. -->
 			<skill id="4412" level="16" /> <!-- Very Strong P. Def. -->
-			<skill id="4413" level="8" /> <!-- Extremely Weak M. Def. -->
-			<skill id="4414" level="2" /> <!-- Standard Type -->
+			<skill id="4413" level="8" /> <!-- Weak M. Def. -->
 			<skill id="4415" level="3" /> <!-- One-handed Sword -->
-			<skill id="4416" level="3" /> <!-- Beasts -->
-			<skill id="4438" level="4" /> <!-- Greater Resist Sleep -->
-			<skill id="4439" level="4" /> <!-- Greater Resist Hold -->
-			<skill id="4441" level="5" /> <!-- Greater Resist Mental Derangement -->
-			<skill id="5465" level="1" /> <!-- Earth Attacks -->
-			<skill id="5598" level="9" /> <!-- Flash Resistance -->
-			<skill id="5599" level="9" /> <!-- Stun Resistance -->
+			<skill id="4416" level="3" /> <!-- Beast -->
+			<skill id="4435" level="4" /> <!-- High Stun Attack Resistance -->
+			<skill id="4438" level="4" /> <!-- Greater Sleep Resistance -->
+			<skill id="4439" level="4" /> <!-- Greater Hold Resistance -->
+			<skill id="4441" level="5" /> <!-- Greater Mental Attack Resistance -->
+			<skill id="5465" level="1" /> <!-- Earth Attack -->
+			<skill id="5598" level="9" /> <!-- Petrifaction Attack Resistance -->
+			<skill id="5599" level="9" /> <!-- Stun Attack Resistance -->
 			<skill id="6381" level="1" /> <!-- Bistakon Soul Beam -->
 			<skill id="6386" level="1" /> <!-- Bistakon Earth Rise -->
-			<skill id="4435" level="4" /> <!-- Greater Stun Resistance -->
 			<skill id="6387" level="1" /> <!-- Bistakon Earthquake -->
 			<skill id="14765" level="2" /> <!-- Blood Siphon Resistance -->
 		</skillList>
@@ -3240,15 +3008,26 @@
 		</stats>
 		<status undying="false" canBeSown="true" />
 		<skillList>
+			<skill id="4388" level="4" /> <!-- Paralysis Resistance -->
+			<skill id="4408" level="10" /> <!-- HP Increase (2x) -->
+			<skill id="4410" level="17" /> <!-- Very Strong P. Atk. -->
+			<skill id="4411" level="17" /> <!-- Very Strong M. Atk. -->
+			<skill id="4412" level="15" /> <!-- Strong P. Def. -->
+			<skill id="4413" level="8" /> <!-- Weak M. Def. -->
+			<skill id="4415" level="3" /> <!-- One-handed Sword -->
+			<skill id="4416" level="3" /> <!-- Beast -->
+			<skill id="4435" level="5" /> <!-- High Stun Attack Resistance -->
+			<skill id="4438" level="4" /> <!-- Greater Sleep Resistance -->
+			<skill id="4439" level="4" /> <!-- Greater Hold Resistance -->
+			<skill id="4441" level="5" /> <!-- Greater Mental Attack Resistance -->
+			<skill id="5465" level="1" /> <!-- Earth Attack -->
+			<skill id="5598" level="9" /> <!-- Petrifaction Attack Resistance -->
+			<skill id="5599" level="9" /> <!-- Stun Attack Resistance -->
+			<skill id="5622" level="1" /> <!-- Double Skill Attack -->
 			<skill id="6381" level="1" /> <!-- Bistakon Soul Beam -->
 			<skill id="6385" level="1" /> <!-- Bistakon Critical Claw -->
 			<skill id="6388" level="1" /> <!-- Bistakon Jump Blow -->
-			<skill id="4416" level="3" /> <!-- Beast -->
-			<skill id="5465" level="1" /> <!-- Earth Attack -->
-			<skill id="4439" level="4" /> <!-- Greater Hold Resistance -->
-			<skill id="4438" level="4" /> <!-- Greater Sleep Resistance -->
-			<skill id="4435" level="5" /> <!-- High Stun Attack Resistance -->
-			<skill id="4441" level="5" /> <!-- Greater Mental Attack Resistance -->
+			<skill id="14765" level="2" /> <!-- Blood Siphon Resistance -->
 		</skillList>
 		<exCrtEffect>true</exCrtEffect>
 		<sNpcPropHpRate>2</sNpcPropHpRate>
@@ -3299,22 +3078,20 @@
 		</stats>
 		<status undying="false" canBeSown="true" />
 		<skillList>
-			<skill id="4388" level="4" /> <!-- Resist Paralysis Attacks -->
-			<skill id="4408" level="9" /> <!-- HP Increase (2x) -->
-			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
-			<skill id="4410" level="14" /> <!-- Very Strong P. Atk. -->
+			<skill id="4388" level="4" /> <!-- Paralysis Resistance -->
+			<skill id="4408" level="9" /> <!-- HP Increase (1/2x) -->
+			<skill id="4410" level="14" /> <!-- Strong P. Atk. -->
 			<skill id="4411" level="17" /> <!-- Very Strong M. Atk. -->
 			<skill id="4412" level="15" /> <!-- Strong P. Def. -->
-			<skill id="4413" level="8" /> <!-- Very Weak M. Def. -->
-			<skill id="4414" level="2" /> <!-- Standard Type -->
+			<skill id="4413" level="8" /> <!-- Weak M. Def. -->
 			<skill id="4415" level="3" /> <!-- One-handed Sword -->
-			<skill id="4416" level="3" /> <!-- Beasts -->
-			<skill id="4438" level="4" /> <!-- Greater Resist Sleep -->
-			<skill id="4439" level="4" /> <!-- Greater Resist Hold -->
-			<skill id="4441" level="5" /> <!-- Greater Resist Mental Derangement -->
-			<skill id="5465" level="1" /> <!-- Earth Attacks -->
-			<skill id="5598" level="9" /> <!-- Flash Resistance -->
-			<skill id="5599" level="9" /> <!-- Stun Resistance -->
+			<skill id="4416" level="3" /> <!-- Beast -->
+			<skill id="4438" level="4" /> <!-- Greater Sleep Resistance -->
+			<skill id="4439" level="4" /> <!-- Greater Hold Resistance -->
+			<skill id="4441" level="5" /> <!-- Greater Mental Attack Resistance -->
+			<skill id="5465" level="1" /> <!-- Earth Attack -->
+			<skill id="5598" level="9" /> <!-- Petrifaction Attack Resistance -->
+			<skill id="5599" level="9" /> <!-- Stun Attack Resistance -->
 			<skill id="5622" level="1" /> <!-- Double Skill Attack -->
 			<skill id="6382" level="1" /> <!-- Bistakon Rolling Claw -->
 			<skill id="6383" level="1" /> <!-- Bistakon Deadly Roar -->
@@ -3379,22 +3156,20 @@
 		</stats>
 		<status undying="false" canBeSown="true" />
 		<skillList>
-			<skill id="4388" level="4" /> <!-- Resist Paralysis Attacks -->
+			<skill id="4388" level="4" /> <!-- Paralysis Resistance -->
 			<skill id="4408" level="10" /> <!-- HP Increase (2x) -->
-			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
-			<skill id="4410" level="14" /> <!-- Very Strong P. Atk. -->
+			<skill id="4410" level="14" /> <!-- Strong P. Atk. -->
 			<skill id="4411" level="17" /> <!-- Very Strong M. Atk. -->
 			<skill id="4412" level="15" /> <!-- Strong P. Def. -->
-			<skill id="4413" level="8" /> <!-- Very Weak M. Def. -->
-			<skill id="4414" level="2" /> <!-- Standard Type -->
+			<skill id="4413" level="8" /> <!-- Weak M. Def. -->
 			<skill id="4415" level="3" /> <!-- One-handed Sword -->
-			<skill id="4416" level="3" /> <!-- Beasts -->
-			<skill id="4438" level="4" /> <!-- Greater Resist Sleep -->
-			<skill id="4439" level="4" /> <!-- Greater Resist Hold -->
-			<skill id="4441" level="5" /> <!-- Greater Resist Mental Derangement -->
-			<skill id="5465" level="1" /> <!-- Earth Attacks -->
-			<skill id="5598" level="9" /> <!-- Flash Resistance -->
-			<skill id="5599" level="9" /> <!-- Stun Resistance -->
+			<skill id="4416" level="3" /> <!-- Beast -->
+			<skill id="4438" level="4" /> <!-- Greater Sleep Resistance -->
+			<skill id="4439" level="4" /> <!-- Greater Hold Resistance -->
+			<skill id="4441" level="5" /> <!-- Greater Mental Attack Resistance -->
+			<skill id="5465" level="1" /> <!-- Earth Attack -->
+			<skill id="5598" level="9" /> <!-- Petrifaction Attack Resistance -->
+			<skill id="5599" level="9" /> <!-- Stun Attack Resistance -->
 			<skill id="5622" level="1" /> <!-- Double Skill Attack -->
 			<skill id="6381" level="1" /> <!-- Bistakon Soul Beam -->
 			<skill id="6384" level="2" /> <!-- Bistakon Deadly Blow -->
@@ -3456,26 +3231,24 @@
 		</stats>
 		<status undying="false" canBeSown="true" />
 		<skillList>
-			<skill id="4388" level="4" /> <!-- Resist Paralysis Attacks -->
+			<skill id="4388" level="4" /> <!-- Paralysis Resistance -->
 			<skill id="4408" level="10" /> <!-- HP Increase (2x) -->
-			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
-			<skill id="4410" level="14" /> <!-- Very Strong P. Atk. -->
+			<skill id="4410" level="14" /> <!-- Strong P. Atk. -->
 			<skill id="4411" level="16" /> <!-- Very Strong M. Atk. -->
 			<skill id="4412" level="14" /> <!-- Strong P. Def. -->
-			<skill id="4413" level="8" /> <!-- Very Weak M. Def. -->
-			<skill id="4414" level="2" /> <!-- Standard Type -->
+			<skill id="4413" level="8" /> <!-- Weak M. Def. -->
 			<skill id="4415" level="3" /> <!-- One-handed Sword -->
-			<skill id="4416" level="3" /> <!-- Beasts -->
-			<skill id="4438" level="4" /> <!-- Greater Resist Sleep -->
-			<skill id="4439" level="4" /> <!-- Greater Resist Hold -->
-			<skill id="4441" level="5" /> <!-- Greater Resist Mental Derangement -->
-			<skill id="5465" level="1" /> <!-- Earth Attacks -->
-			<skill id="5598" level="9" /> <!-- Flash Resistance -->
-			<skill id="5599" level="9" /> <!-- Stun Resistance -->
+			<skill id="4416" level="3" /> <!-- Beast -->
+			<skill id="4435" level="4" /> <!-- High Stun Attack Resistance -->
+			<skill id="4438" level="4" /> <!-- Greater Sleep Resistance -->
+			<skill id="4439" level="4" /> <!-- Greater Hold Resistance -->
+			<skill id="4441" level="5" /> <!-- Greater Mental Attack Resistance -->
+			<skill id="5465" level="1" /> <!-- Earth Attack -->
+			<skill id="5598" level="9" /> <!-- Petrifaction Attack Resistance -->
+			<skill id="5599" level="9" /> <!-- Stun Attack Resistance -->
 			<skill id="5622" level="1" /> <!-- Double Skill Attack -->
 			<skill id="6381" level="1" /> <!-- Bistakon Soul Beam -->
 			<skill id="6386" level="1" /> <!-- Bistakon Earth Rise -->
-			<skill id="4435" level="4" /> <!-- Greater Stun Resistance -->
 			<skill id="6387" level="1" /> <!-- Bistakon Earthquake -->
 			<skill id="14765" level="2" /> <!-- Blood Siphon Resistance -->
 		</skillList>
@@ -3532,26 +3305,24 @@
 		</stats>
 		<status undying="false" canBeSown="true" />
 		<skillList>
-			<skill id="4388" level="4" /> <!-- Resist Paralysis Attacks -->
+			<skill id="4388" level="4" /> <!-- Paralysis Resistance -->
 			<skill id="4408" level="10" /> <!-- HP Increase (2x) -->
-			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
-			<skill id="4410" level="14" /> <!-- Very Strong P. Atk. -->
+			<skill id="4410" level="14" /> <!-- Strong P. Atk. -->
 			<skill id="4411" level="17" /> <!-- Very Strong M. Atk. -->
 			<skill id="4412" level="15" /> <!-- Strong P. Def. -->
-			<skill id="4413" level="8" /> <!-- Very Weak M. Def. -->
-			<skill id="4414" level="2" /> <!-- Standard Type -->
+			<skill id="4413" level="8" /> <!-- Weak M. Def. -->
 			<skill id="4415" level="3" /> <!-- One-handed Sword -->
-			<skill id="4416" level="3" /> <!-- Beasts -->
-			<skill id="4438" level="4" /> <!-- Greater Resist Sleep -->
-			<skill id="4439" level="4" /> <!-- Greater Resist Hold -->
-			<skill id="4441" level="5" /> <!-- Greater Resist Mental Derangement -->
-			<skill id="5465" level="1" /> <!-- Earth Attacks -->
-			<skill id="5598" level="9" /> <!-- Flash Resistance -->
-			<skill id="5599" level="9" /> <!-- Stun Resistance -->
+			<skill id="4416" level="3" /> <!-- Beast -->
+			<skill id="4435" level="5" /> <!-- High Stun Attack Resistance -->
+			<skill id="4438" level="4" /> <!-- Greater Sleep Resistance -->
+			<skill id="4439" level="4" /> <!-- Greater Hold Resistance -->
+			<skill id="4441" level="5" /> <!-- Greater Mental Attack Resistance -->
+			<skill id="5465" level="1" /> <!-- Earth Attack -->
+			<skill id="5598" level="9" /> <!-- Petrifaction Attack Resistance -->
+			<skill id="5599" level="9" /> <!-- Stun Attack Resistance -->
 			<skill id="5622" level="1" /> <!-- Double Skill Attack -->
 			<skill id="6381" level="1" /> <!-- Bistakon Soul Beam -->
 			<skill id="6385" level="1" /> <!-- Bistakon Critical Claw -->
-			<skill id="4435" level="5" /> <!-- Greater Stun Resistance -->
 			<skill id="6388" level="1" /> <!-- Bistakon Jump Blow -->
 			<skill id="14765" level="2" /> <!-- Blood Siphon Resistance -->
 		</skillList>
@@ -3609,26 +3380,24 @@
 		</stats>
 		<status undying="false" canBeSown="true" />
 		<skillList>
-			<skill id="4388" level="4" /> <!-- Resist Paralysis Attacks -->
+			<skill id="4388" level="4" /> <!-- Paralysis Resistance -->
 			<skill id="4408" level="10" /> <!-- HP Increase (2x) -->
-			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
 			<skill id="4410" level="17" /> <!-- Very Strong P. Atk. -->
 			<skill id="4411" level="16" /> <!-- Very Strong M. Atk. -->
 			<skill id="4412" level="15" /> <!-- Strong P. Def. -->
-			<skill id="4413" level="8" /> <!-- Extremely Weak M. Def. -->
-			<skill id="4414" level="2" /> <!-- Standard Type -->
+			<skill id="4413" level="8" /> <!-- Weak M. Def. -->
 			<skill id="4415" level="3" /> <!-- One-handed Sword -->
-			<skill id="4416" level="3" /> <!-- Beasts -->
-			<skill id="4438" level="4" /> <!-- Greater Resist Sleep -->
-			<skill id="4439" level="4" /> <!-- Greater Resist Hold -->
-			<skill id="4441" level="5" /> <!-- Greater Resist Mental Derangement -->
-			<skill id="5465" level="1" /> <!-- Earth Attacks -->
-			<skill id="5598" level="9" /> <!-- Flash Resistance -->
-			<skill id="5599" level="9" /> <!-- Stun Resistance -->
+			<skill id="4416" level="3" /> <!-- Beast -->
+			<skill id="4435" level="4" /> <!-- High Stun Attack Resistance -->
+			<skill id="4438" level="4" /> <!-- Greater Sleep Resistance -->
+			<skill id="4439" level="4" /> <!-- Greater Hold Resistance -->
+			<skill id="4441" level="5" /> <!-- Greater Mental Attack Resistance -->
+			<skill id="5465" level="1" /> <!-- Earth Attack -->
+			<skill id="5598" level="9" /> <!-- Petrifaction Attack Resistance -->
+			<skill id="5599" level="9" /> <!-- Stun Attack Resistance -->
 			<skill id="6409" level="1" /> <!-- Reptilikon Earthquake -->
 			<skill id="6410" level="1" /> <!-- Reptilikon Rush -->
 			<skill id="6411" level="1" /> <!-- Reptilikon Summon -->
-			<skill id="4435" level="4" /> <!-- Greater Stun Resistance -->
 			<skill id="6412" level="1" /> <!-- Reptilikon Critical Blow -->
 			<skill id="14765" level="2" /> <!-- Blood Siphon Resistance -->
 		</skillList>
@@ -3683,25 +3452,23 @@
 		</stats>
 		<status undying="false" canBeSown="true" />
 		<skillList>
-			<skill id="4388" level="4" /> <!-- Resist Paralysis Attacks -->
+			<skill id="4388" level="4" /> <!-- Paralysis Resistance -->
 			<skill id="4408" level="10" /> <!-- HP Increase (2x) -->
-			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
 			<skill id="4410" level="17" /> <!-- Very Strong P. Atk. -->
 			<skill id="4411" level="16" /> <!-- Very Strong M. Atk. -->
 			<skill id="4412" level="15" /> <!-- Strong P. Def. -->
-			<skill id="4413" level="8" /> <!-- Extremely Weak M. Def. -->
-			<skill id="4414" level="2" /> <!-- Standard Type -->
+			<skill id="4413" level="8" /> <!-- Weak M. Def. -->
 			<skill id="4415" level="3" /> <!-- One-handed Sword -->
-			<skill id="4416" level="3" /> <!-- Beasts -->
-			<skill id="4438" level="4" /> <!-- Greater Resist Sleep -->
-			<skill id="4439" level="4" /> <!-- Greater Resist Hold -->
-			<skill id="4441" level="5" /> <!-- Greater Resist Mental Derangement -->
-			<skill id="5465" level="1" /> <!-- Earth Attacks -->
-			<skill id="5598" level="9" /> <!-- Flash Resistance -->
-			<skill id="5599" level="9" /> <!-- Stun Resistance -->
+			<skill id="4416" level="3" /> <!-- Beast -->
+			<skill id="4435" level="5" /> <!-- High Stun Attack Resistance -->
+			<skill id="4438" level="4" /> <!-- Greater Sleep Resistance -->
+			<skill id="4439" level="4" /> <!-- Greater Hold Resistance -->
+			<skill id="4441" level="5" /> <!-- Greater Mental Attack Resistance -->
+			<skill id="5465" level="1" /> <!-- Earth Attack -->
+			<skill id="5598" level="9" /> <!-- Petrifaction Attack Resistance -->
+			<skill id="5599" level="9" /> <!-- Stun Attack Resistance -->
 			<skill id="6413" level="1" /> <!-- Reptilikon Missile -->
 			<skill id="6414" level="1" /> <!-- Reptilikon Charge -->
-			<skill id="4435" level="5" /> <!-- Greater Stun Resistance -->
 			<skill id="6415" level="1" /> <!-- Reptilikon Scratch -->
 			<skill id="14765" level="2" /> <!-- Blood Siphon Resistance -->
 		</skillList>
@@ -3755,14 +3522,24 @@
 		</stats>
 		<status undying="false" canBeSown="true" />
 		<skillList>
+			<skill id="4388" level="4" /> <!-- Paralysis Resistance -->
+			<skill id="4408" level="9" /> <!-- HP Increase (1/2x) -->
+			<skill id="4410" level="16" /> <!-- Very Strong P. Atk. -->
+			<skill id="4411" level="17" /> <!-- Very Strong M. Atk. -->
+			<skill id="4412" level="16" /> <!-- Very Strong P. Def. -->
+			<skill id="4413" level="8" /> <!-- Weak M. Def. -->
+			<skill id="4415" level="3" /> <!-- One-handed Sword -->
+			<skill id="4416" level="3" /> <!-- Beast -->
+			<skill id="4438" level="4" /> <!-- Greater Sleep Resistance -->
+			<skill id="4439" level="4" /> <!-- Greater Hold Resistance -->
+			<skill id="4441" level="5" /> <!-- Greater Mental Attack Resistance -->
+			<skill id="5465" level="1" /> <!-- Earth Attack -->
+			<skill id="5598" level="9" /> <!-- Petrifaction Attack Resistance -->
+			<skill id="5599" level="9" /> <!-- Stun Attack Resistance -->
 			<skill id="6416" level="1" /> <!-- Reptilikon Poison Breath -->
 			<skill id="6417" level="1" /> <!-- Reptilikon Poison Shot -->
 			<skill id="6418" level="1" /> <!-- Reptilikon Fury Poison Bomb -->
-			<skill id="4416" level="3" /> <!-- Beast -->
-			<skill id="5465" level="1" /> <!-- Earth Attack -->
-			<skill id="4439" level="4" /> <!-- Greater Hold Resistance -->
-			<skill id="4438" level="4" /> <!-- Greater Sleep Resistance -->
-			<skill id="4441" level="5" /> <!-- Greater Mental Attack Resistance -->
+			<skill id="14765" level="2" /> <!-- Blood Siphon Resistance -->
 		</skillList>
 		<exCrtEffect>true</exCrtEffect>
 		<sNpcPropHpRate>2</sNpcPropHpRate>
@@ -3814,27 +3591,25 @@
 		</stats>
 		<status undying="false" canBeSown="true" />
 		<skillList>
-			<skill id="4388" level="4" /> <!-- Resist Paralysis Attacks -->
+			<skill id="4388" level="4" /> <!-- Paralysis Resistance -->
 			<skill id="4408" level="10" /> <!-- HP Increase (2x) -->
-			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
-			<skill id="4410" level="14" /> <!-- Very Strong P. Atk. -->
+			<skill id="4410" level="14" /> <!-- Strong P. Atk. -->
 			<skill id="4411" level="17" /> <!-- Very Strong M. Atk. -->
 			<skill id="4412" level="15" /> <!-- Strong P. Def. -->
-			<skill id="4413" level="8" /> <!-- Very Weak M. Def. -->
-			<skill id="4414" level="2" /> <!-- Standard Type -->
+			<skill id="4413" level="8" /> <!-- Weak M. Def. -->
 			<skill id="4415" level="3" /> <!-- One-handed Sword -->
-			<skill id="4416" level="3" /> <!-- Beasts -->
-			<skill id="4438" level="4" /> <!-- Greater Resist Sleep -->
-			<skill id="4439" level="4" /> <!-- Greater Resist Hold -->
-			<skill id="4441" level="5" /> <!-- Greater Resist Mental Derangement -->
-			<skill id="5465" level="1" /> <!-- Earth Attacks -->
-			<skill id="5598" level="9" /> <!-- Flash Resistance -->
-			<skill id="5599" level="9" /> <!-- Stun Resistance -->
+			<skill id="4416" level="3" /> <!-- Beast -->
+			<skill id="4435" level="4" /> <!-- High Stun Attack Resistance -->
+			<skill id="4438" level="4" /> <!-- Greater Sleep Resistance -->
+			<skill id="4439" level="4" /> <!-- Greater Hold Resistance -->
+			<skill id="4441" level="5" /> <!-- Greater Mental Attack Resistance -->
+			<skill id="5465" level="1" /> <!-- Earth Attack -->
+			<skill id="5598" level="9" /> <!-- Petrifaction Attack Resistance -->
+			<skill id="5599" level="9" /> <!-- Stun Attack Resistance -->
 			<skill id="5622" level="1" /> <!-- Double Skill Attack -->
 			<skill id="6409" level="1" /> <!-- Reptilikon Earthquake -->
 			<skill id="6410" level="1" /> <!-- Reptilikon Rush -->
 			<skill id="6411" level="1" /> <!-- Reptilikon Summon -->
-			<skill id="4435" level="4" /> <!-- Greater Stun Resistance -->
 			<skill id="6412" level="1" /> <!-- Reptilikon Critical Blow -->
 			<skill id="14765" level="2" /> <!-- Blood Siphon Resistance -->
 		</skillList>
@@ -3895,22 +3670,20 @@
 		</stats>
 		<status undying="false" canBeSown="true" />
 		<skillList>
-			<skill id="4388" level="4" /> <!-- Resist Paralysis Attacks -->
+			<skill id="4388" level="4" /> <!-- Paralysis Resistance -->
 			<skill id="4408" level="10" /> <!-- HP Increase (2x) -->
-			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
-			<skill id="4410" level="14" /> <!-- Very Strong P. Atk. -->
+			<skill id="4410" level="14" /> <!-- Strong P. Atk. -->
 			<skill id="4411" level="16" /> <!-- Very Strong M. Atk. -->
 			<skill id="4412" level="14" /> <!-- Strong P. Def. -->
-			<skill id="4413" level="8" /> <!-- Very Weak M. Def. -->
-			<skill id="4414" level="2" /> <!-- Standard Type -->
+			<skill id="4413" level="8" /> <!-- Weak M. Def. -->
 			<skill id="4415" level="3" /> <!-- One-handed Sword -->
-			<skill id="4416" level="3" /> <!-- Beasts -->
-			<skill id="4438" level="4" /> <!-- Greater Resist Sleep -->
-			<skill id="4439" level="4" /> <!-- Greater Resist Hold -->
-			<skill id="4441" level="5" /> <!-- Greater Resist Mental Derangement -->
-			<skill id="5465" level="1" /> <!-- Earth Attacks -->
-			<skill id="5598" level="9" /> <!-- Flash Resistance -->
-			<skill id="5599" level="9" /> <!-- Stun Resistance -->
+			<skill id="4416" level="3" /> <!-- Beast -->
+			<skill id="4438" level="4" /> <!-- Greater Sleep Resistance -->
+			<skill id="4439" level="4" /> <!-- Greater Hold Resistance -->
+			<skill id="4441" level="5" /> <!-- Greater Mental Attack Resistance -->
+			<skill id="5465" level="1" /> <!-- Earth Attack -->
+			<skill id="5598" level="9" /> <!-- Petrifaction Attack Resistance -->
+			<skill id="5599" level="9" /> <!-- Stun Attack Resistance -->
 			<skill id="5622" level="1" /> <!-- Double Skill Attack -->
 			<skill id="6413" level="1" /> <!-- Reptilikon Missile -->
 			<skill id="6414" level="1" /> <!-- Reptilikon Charge -->
@@ -3971,22 +3744,20 @@
 		</stats>
 		<status undying="false" canBeSown="true" />
 		<skillList>
-			<skill id="4388" level="4" /> <!-- Resist Paralysis Attacks -->
-			<skill id="4408" level="9" /> <!-- HP Increase (2x) -->
-			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
+			<skill id="4388" level="4" /> <!-- Paralysis Resistance -->
+			<skill id="4408" level="9" /> <!-- HP Increase (1/2x) -->
 			<skill id="4410" level="16" /> <!-- Very Strong P. Atk. -->
-			<skill id="4411" level="14" /> <!-- Very Strong M. Atk. -->
+			<skill id="4411" level="14" /> <!-- Strong M. Atk. -->
 			<skill id="4412" level="15" /> <!-- Strong P. Def. -->
-			<skill id="4413" level="8" /> <!-- Very Weak M. Def. -->
-			<skill id="4414" level="2" /> <!-- Standard Type -->
+			<skill id="4413" level="8" /> <!-- Weak M. Def. -->
 			<skill id="4415" level="3" /> <!-- One-handed Sword -->
-			<skill id="4416" level="3" /> <!-- Beasts -->
-			<skill id="4438" level="4" /> <!-- Greater Resist Sleep -->
-			<skill id="4439" level="4" /> <!-- Greater Resist Hold -->
-			<skill id="4441" level="5" /> <!-- Greater Resist Mental Derangement -->
-			<skill id="5465" level="1" /> <!-- Earth Attacks -->
-			<skill id="5598" level="9" /> <!-- Flash Resistance -->
-			<skill id="5599" level="9" /> <!-- Stun Resistance -->
+			<skill id="4416" level="3" /> <!-- Beast -->
+			<skill id="4438" level="4" /> <!-- Greater Sleep Resistance -->
+			<skill id="4439" level="4" /> <!-- Greater Hold Resistance -->
+			<skill id="4441" level="5" /> <!-- Greater Mental Attack Resistance -->
+			<skill id="5465" level="1" /> <!-- Earth Attack -->
+			<skill id="5598" level="9" /> <!-- Petrifaction Attack Resistance -->
+			<skill id="5599" level="9" /> <!-- Stun Attack Resistance -->
 			<skill id="5622" level="1" /> <!-- Double Skill Attack -->
 			<skill id="6416" level="1" /> <!-- Reptilikon Poison Breath -->
 			<skill id="6417" level="1" /> <!-- Reptilikon Poison Shot -->
@@ -4050,27 +3821,25 @@
 		</stats>
 		<status undying="false" canBeSown="true" />
 		<skillList>
-			<skill id="4388" level="4" /> <!-- Resist Paralysis Attacks -->
-			<skill id="4408" level="9" /> <!-- HP Increase (2x) -->
-			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
+			<skill id="4388" level="4" /> <!-- Paralysis Resistance -->
+			<skill id="4408" level="9" /> <!-- HP Increase (1/2x) -->
 			<skill id="4410" level="17" /> <!-- Very Strong P. Atk. -->
 			<skill id="4411" level="16" /> <!-- Very Strong M. Atk. -->
 			<skill id="4412" level="15" /> <!-- Strong P. Def. -->
-			<skill id="4413" level="8" /> <!-- Extremely Weak M. Def. -->
-			<skill id="4414" level="2" /> <!-- Standard Type -->
+			<skill id="4413" level="8" /> <!-- Weak M. Def. -->
 			<skill id="4415" level="3" /> <!-- One-handed Sword -->
-			<skill id="4416" level="3" /> <!-- Beasts -->
-			<skill id="4438" level="4" /> <!-- Greater Resist Sleep -->
-			<skill id="4439" level="4" /> <!-- Greater Resist Hold -->
-			<skill id="4441" level="5" /> <!-- Greater Resist Mental Derangement -->
-			<skill id="5465" level="1" /> <!-- Earth Attacks -->
-			<skill id="5598" level="9" /> <!-- Flash Resistance -->
-			<skill id="5599" level="9" /> <!-- Stun Resistance -->
-			<skill id="6392" level="1" /> <!-- Cokrakon Sonic Shot -->
-			<skill id="6393" level="1" /> <!-- Cokrakon Sonic Beam -->
-			<skill id="6394" level="1" /> <!-- Cokrakon Sonic Bomb -->
-			<skill id="4435" level="5" /> <!-- Greater Stun Resistance -->
-			<skill id="6395" level="1" /> <!-- Cokrakon Dreadful Clow -->
+			<skill id="4416" level="3" /> <!-- Beast -->
+			<skill id="4435" level="5" /> <!-- High Stun Attack Resistance -->
+			<skill id="4438" level="4" /> <!-- Greater Sleep Resistance -->
+			<skill id="4439" level="4" /> <!-- Greater Hold Resistance -->
+			<skill id="4441" level="5" /> <!-- Greater Mental Attack Resistance -->
+			<skill id="5465" level="1" /> <!-- Earth Attack -->
+			<skill id="5598" level="9" /> <!-- Petrifaction Attack Resistance -->
+			<skill id="5599" level="9" /> <!-- Stun Attack Resistance -->
+			<skill id="6392" level="1" /> <!-- Kokracon Sonic Shot -->
+			<skill id="6393" level="1" /> <!-- Kokracon Sonic Beam -->
+			<skill id="6394" level="1" /> <!-- Kokracon Sonic Bomb -->
+			<skill id="6395" level="1" /> <!-- Kokracon Dreadful Clow -->
 			<skill id="14765" level="2" /> <!-- Blood Siphon Resistance -->
 		</skillList>
 		<exCrtEffect>true</exCrtEffect>
@@ -4124,25 +3893,23 @@
 		</stats>
 		<status undying="false" canBeSown="true" />
 		<skillList>
-			<skill id="4388" level="4" /> <!-- Resist Paralysis Attacks -->
+			<skill id="4388" level="4" /> <!-- Paralysis Resistance -->
 			<skill id="4408" level="10" /> <!-- HP Increase (2x) -->
-			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
 			<skill id="4410" level="17" /> <!-- Very Strong P. Atk. -->
 			<skill id="4411" level="16" /> <!-- Very Strong M. Atk. -->
 			<skill id="4412" level="15" /> <!-- Strong P. Def. -->
-			<skill id="4413" level="8" /> <!-- Extremely Weak M. Def. -->
-			<skill id="4414" level="2" /> <!-- Standard Type -->
+			<skill id="4413" level="8" /> <!-- Weak M. Def. -->
 			<skill id="4415" level="3" /> <!-- One-handed Sword -->
-			<skill id="4416" level="3" /> <!-- Beasts -->
-			<skill id="4438" level="4" /> <!-- Greater Resist Sleep -->
-			<skill id="4439" level="4" /> <!-- Greater Resist Hold -->
-			<skill id="4441" level="5" /> <!-- Greater Resist Mental Derangement -->
-			<skill id="5465" level="1" /> <!-- Earth Attacks -->
-			<skill id="5598" level="9" /> <!-- Flash Resistance -->
-			<skill id="5599" level="9" /> <!-- Stun Resistance -->
-			<skill id="6396" level="1" /> <!-- Cokrakon Panic -->
-			<skill id="6397" level="1" /> <!-- Cokrakon Staggering Blow -->
-			<skill id="6398" level="1" /> <!-- Cokrakon Sonic Shout -->
+			<skill id="4416" level="3" /> <!-- Beast -->
+			<skill id="4438" level="4" /> <!-- Greater Sleep Resistance -->
+			<skill id="4439" level="4" /> <!-- Greater Hold Resistance -->
+			<skill id="4441" level="5" /> <!-- Greater Mental Attack Resistance -->
+			<skill id="5465" level="1" /> <!-- Earth Attack -->
+			<skill id="5598" level="9" /> <!-- Petrifaction Attack Resistance -->
+			<skill id="5599" level="9" /> <!-- Stun Attack Resistance -->
+			<skill id="6396" level="1" /> <!-- Kokracon Panic -->
+			<skill id="6397" level="1" /> <!-- Kokracon Staggering Blow -->
+			<skill id="6398" level="1" /> <!-- Kokracon Sonic Shout -->
 			<skill id="14765" level="2" /> <!-- Blood Siphon Resistance -->
 		</skillList>
 		<exCrtEffect>true</exCrtEffect>
@@ -4194,26 +3961,24 @@
 		</stats>
 		<status undying="false" canBeSown="true" />
 		<skillList>
-			<skill id="4388" level="4" /> <!-- Resist Paralysis Attacks -->
+			<skill id="4388" level="4" /> <!-- Paralysis Resistance -->
 			<skill id="4408" level="10" /> <!-- HP Increase (2x) -->
-			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
 			<skill id="4410" level="16" /> <!-- Very Strong P. Atk. -->
 			<skill id="4411" level="17" /> <!-- Very Strong M. Atk. -->
 			<skill id="4412" level="16" /> <!-- Very Strong P. Def. -->
-			<skill id="4413" level="8" /> <!-- Extremely Weak M. Def. -->
-			<skill id="4414" level="2" /> <!-- Standard Type -->
+			<skill id="4413" level="8" /> <!-- Weak M. Def. -->
 			<skill id="4415" level="3" /> <!-- One-handed Sword -->
-			<skill id="4416" level="3" /> <!-- Beasts -->
-			<skill id="4438" level="4" /> <!-- Greater Resist Sleep -->
-			<skill id="4439" level="4" /> <!-- Greater Resist Hold -->
-			<skill id="4441" level="5" /> <!-- Greater Resist Mental Derangement -->
-			<skill id="5465" level="1" /> <!-- Earth Attacks -->
-			<skill id="5598" level="9" /> <!-- Flash Resistance -->
-			<skill id="5599" level="9" /> <!-- Stun Resistance -->
-			<skill id="6399" level="1" /> <!-- Cokrakon Dreadful Piercing -->
-			<skill id="6400" level="1" /> <!-- Cokrakon Dwindling Velocity -->
-			<skill id="4435" level="4" /> <!-- Greater Stun Resistance -->
-			<skill id="6401" level="1" /> <!-- Cokrakon Wheeling Clow -->
+			<skill id="4416" level="3" /> <!-- Beast -->
+			<skill id="4435" level="4" /> <!-- High Stun Attack Resistance -->
+			<skill id="4438" level="4" /> <!-- Greater Sleep Resistance -->
+			<skill id="4439" level="4" /> <!-- Greater Hold Resistance -->
+			<skill id="4441" level="5" /> <!-- Greater Mental Attack Resistance -->
+			<skill id="5465" level="1" /> <!-- Earth Attack -->
+			<skill id="5598" level="9" /> <!-- Petrifaction Attack Resistance -->
+			<skill id="5599" level="9" /> <!-- Stun Attack Resistance -->
+			<skill id="6399" level="1" /> <!-- Kokracon Dreadful Piercing -->
+			<skill id="6400" level="1" /> <!-- Kokracon Dwindling Velocity -->
+			<skill id="6401" level="1" /> <!-- Kokracon Wheeling Clow -->
 			<skill id="14765" level="2" /> <!-- Blood Siphon Resistance -->
 		</skillList>
 		<exCrtEffect>true</exCrtEffect>
@@ -4266,28 +4031,26 @@
 		</stats>
 		<status undying="false" canBeSown="true" />
 		<skillList>
-			<skill id="4388" level="4" /> <!-- Resist Paralysis Attacks -->
+			<skill id="4388" level="4" /> <!-- Paralysis Resistance -->
 			<skill id="4408" level="10" /> <!-- HP Increase (2x) -->
-			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
 			<skill id="4410" level="16" /> <!-- Very Strong P. Atk. -->
-			<skill id="4411" level="14" /> <!-- Very Strong M. Atk. -->
+			<skill id="4411" level="14" /> <!-- Strong M. Atk. -->
 			<skill id="4412" level="15" /> <!-- Strong P. Def. -->
-			<skill id="4413" level="8" /> <!-- Very Weak M. Def. -->
-			<skill id="4414" level="2" /> <!-- Standard Type -->
+			<skill id="4413" level="8" /> <!-- Weak M. Def. -->
 			<skill id="4415" level="3" /> <!-- One-handed Sword -->
-			<skill id="4416" level="3" /> <!-- Beasts -->
-			<skill id="4438" level="4" /> <!-- Greater Resist Sleep -->
-			<skill id="4439" level="4" /> <!-- Greater Resist Hold -->
-			<skill id="4441" level="5" /> <!-- Greater Resist Mental Derangement -->
-			<skill id="5465" level="1" /> <!-- Earth Attacks -->
-			<skill id="5598" level="9" /> <!-- Flash Resistance -->
-			<skill id="5599" level="9" /> <!-- Stun Resistance -->
+			<skill id="4416" level="3" /> <!-- Beast -->
+			<skill id="4435" level="5" /> <!-- High Stun Attack Resistance -->
+			<skill id="4438" level="4" /> <!-- Greater Sleep Resistance -->
+			<skill id="4439" level="4" /> <!-- Greater Hold Resistance -->
+			<skill id="4441" level="5" /> <!-- Greater Mental Attack Resistance -->
+			<skill id="5465" level="1" /> <!-- Earth Attack -->
+			<skill id="5598" level="9" /> <!-- Petrifaction Attack Resistance -->
+			<skill id="5599" level="9" /> <!-- Stun Attack Resistance -->
 			<skill id="5622" level="1" /> <!-- Double Skill Attack -->
-			<skill id="6392" level="1" /> <!-- Cokrakon Sonic Shot -->
-			<skill id="6393" level="1" /> <!-- Cokrakon Sonic Beam -->
-			<skill id="6394" level="1" /> <!-- Cokrakon Sonic Bomb -->
-			<skill id="4435" level="5" /> <!-- Greater Stun Resistance -->
-			<skill id="6395" level="1" /> <!-- Cokrakon Dreadful Clow -->
+			<skill id="6392" level="1" /> <!-- Kokracon Sonic Shot -->
+			<skill id="6393" level="1" /> <!-- Kokracon Sonic Beam -->
+			<skill id="6394" level="1" /> <!-- Kokracon Sonic Bomb -->
+			<skill id="6395" level="1" /> <!-- Kokracon Dreadful Clow -->
 			<skill id="14765" level="2" /> <!-- Blood Siphon Resistance -->
 		</skillList>
 		<exCrtEffect>true</exCrtEffect>
@@ -4347,26 +4110,24 @@
 		</stats>
 		<status undying="false" canBeSown="true" />
 		<skillList>
-			<skill id="4388" level="4" /> <!-- Resist Paralysis Attacks -->
+			<skill id="4388" level="4" /> <!-- Paralysis Resistance -->
 			<skill id="4408" level="10" /> <!-- HP Increase (2x) -->
-			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
 			<skill id="4410" level="17" /> <!-- Very Strong P. Atk. -->
-			<skill id="4411" level="14" /> <!-- Very Strong M. Atk. -->
+			<skill id="4411" level="14" /> <!-- Strong M. Atk. -->
 			<skill id="4412" level="14" /> <!-- Strong P. Def. -->
-			<skill id="4413" level="8" /> <!-- Very Weak M. Def. -->
-			<skill id="4414" level="2" /> <!-- Standard Type -->
+			<skill id="4413" level="8" /> <!-- Weak M. Def. -->
 			<skill id="4415" level="3" /> <!-- One-handed Sword -->
-			<skill id="4416" level="3" /> <!-- Beasts -->
-			<skill id="4438" level="4" /> <!-- Greater Resist Sleep -->
-			<skill id="4439" level="4" /> <!-- Greater Resist Hold -->
-			<skill id="4441" level="5" /> <!-- Greater Resist Mental Derangement -->
-			<skill id="5465" level="1" /> <!-- Earth Attacks -->
-			<skill id="5598" level="9" /> <!-- Flash Resistance -->
-			<skill id="5599" level="9" /> <!-- Stun Resistance -->
+			<skill id="4416" level="3" /> <!-- Beast -->
+			<skill id="4438" level="4" /> <!-- Greater Sleep Resistance -->
+			<skill id="4439" level="4" /> <!-- Greater Hold Resistance -->
+			<skill id="4441" level="5" /> <!-- Greater Mental Attack Resistance -->
+			<skill id="5465" level="1" /> <!-- Earth Attack -->
+			<skill id="5598" level="9" /> <!-- Petrifaction Attack Resistance -->
+			<skill id="5599" level="9" /> <!-- Stun Attack Resistance -->
 			<skill id="5622" level="1" /> <!-- Double Skill Attack -->
-			<skill id="6396" level="1" /> <!-- Cokrakon Panic -->
-			<skill id="6397" level="1" /> <!-- Cokrakon Staggering Blow -->
-			<skill id="6398" level="1" /> <!-- Cokrakon Sonic Shout -->
+			<skill id="6396" level="1" /> <!-- Kokracon Panic -->
+			<skill id="6397" level="1" /> <!-- Kokracon Staggering Blow -->
+			<skill id="6398" level="1" /> <!-- Kokracon Sonic Shout -->
 			<skill id="14765" level="2" /> <!-- Blood Siphon Resistance -->
 		</skillList>
 		<exCrtEffect>true</exCrtEffect>
@@ -4424,27 +4185,25 @@
 		</stats>
 		<status undying="false" canBeSown="true" />
 		<skillList>
-			<skill id="4388" level="4" /> <!-- Resist Paralysis Attacks -->
+			<skill id="4388" level="4" /> <!-- Paralysis Resistance -->
 			<skill id="4408" level="10" /> <!-- HP Increase (2x) -->
-			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
 			<skill id="4410" level="16" /> <!-- Very Strong P. Atk. -->
-			<skill id="4411" level="14" /> <!-- Very Strong M. Atk. -->
+			<skill id="4411" level="14" /> <!-- Strong M. Atk. -->
 			<skill id="4412" level="15" /> <!-- Strong P. Def. -->
-			<skill id="4413" level="8" /> <!-- Very Weak M. Def. -->
-			<skill id="4414" level="2" /> <!-- Standard Type -->
+			<skill id="4413" level="8" /> <!-- Weak M. Def. -->
 			<skill id="4415" level="3" /> <!-- One-handed Sword -->
-			<skill id="4416" level="3" /> <!-- Beasts -->
-			<skill id="4438" level="4" /> <!-- Greater Resist Sleep -->
-			<skill id="4439" level="4" /> <!-- Greater Resist Hold -->
-			<skill id="4441" level="5" /> <!-- Greater Resist Mental Derangement -->
-			<skill id="5465" level="1" /> <!-- Earth Attacks -->
-			<skill id="5598" level="9" /> <!-- Flash Resistance -->
-			<skill id="5599" level="9" /> <!-- Stun Resistance -->
+			<skill id="4416" level="3" /> <!-- Beast -->
+			<skill id="4435" level="4" /> <!-- High Stun Attack Resistance -->
+			<skill id="4438" level="4" /> <!-- Greater Sleep Resistance -->
+			<skill id="4439" level="4" /> <!-- Greater Hold Resistance -->
+			<skill id="4441" level="5" /> <!-- Greater Mental Attack Resistance -->
+			<skill id="5465" level="1" /> <!-- Earth Attack -->
+			<skill id="5598" level="9" /> <!-- Petrifaction Attack Resistance -->
+			<skill id="5599" level="9" /> <!-- Stun Attack Resistance -->
 			<skill id="5622" level="1" /> <!-- Double Skill Attack -->
-			<skill id="6399" level="1" /> <!-- Cokrakon Dreadful Piercing -->
-			<skill id="6400" level="1" /> <!-- Cokrakon Dwindling Velocity -->
-			<skill id="4435" level="4" /> <!-- Greater Stun Resistance -->
-			<skill id="6401" level="1" /> <!-- Cokrakon Wheeling Clow -->
+			<skill id="6399" level="1" /> <!-- Kokracon Dreadful Piercing -->
+			<skill id="6400" level="1" /> <!-- Kokracon Dwindling Velocity -->
+			<skill id="6401" level="1" /> <!-- Kokracon Wheeling Clow -->
 			<skill id="14765" level="2" /> <!-- Blood Siphon Resistance -->
 		</skillList>
 		<exCrtEffect>true</exCrtEffect>
@@ -4490,13 +4249,8 @@
 		</stats>
 		<status undying="false" canBeSown="true" randomWalk="false" />
 		<skillList>
-			<skill id="4408" level="1" /> <!-- HP Increase (1x) -->
-			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
 			<skill id="4410" level="7" /> <!-- Weak P. Atk. -->
 			<skill id="4411" level="6" /> <!-- Very Weak M. Atk. -->
-			<skill id="4412" level="11" /> <!-- Average P. Def. -->
-			<skill id="4413" level="11" /> <!-- Average M. Def. -->
-			<skill id="4414" level="2" /> <!-- Standard Type -->
 			<skill id="4415" level="3" /> <!-- One-handed Sword -->
 			<skill id="4416" level="12" /> <!-- Bugs -->
 		</skillList>
@@ -4542,12 +4296,6 @@
 		<status undying="false" canBeSown="true" randomWalk="false" />
 		<skillList>
 			<skill id="4408" level="11" /> <!-- HP Increase (3x) -->
-			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
-			<skill id="4410" level="11" /> <!-- Average P. Atk. -->
-			<skill id="4411" level="11" /> <!-- Average M. Atk. -->
-			<skill id="4412" level="11" /> <!-- Average P. Def. -->
-			<skill id="4413" level="11" /> <!-- Average M. Def. -->
-			<skill id="4414" level="2" /> <!-- Standard Type -->
 			<skill id="4415" level="3" /> <!-- One-handed Sword -->
 			<skill id="4416" level="6" /> <!-- Humanoids -->
 			<skill id="6290" level="1" /> <!-- Power Strike -->
@@ -4599,23 +4347,19 @@
 		</stats>
 		<status undying="false" canBeSown="true" />
 		<skillList>
-			<skill id="4116" level="9" /> <!-- Resist M. Atk. -->
-			<skill id="4273" level="4" /> <!-- Resist Daggers/Rapier Weapon -->
-			<skill id="4276" level="4" /> <!-- Weak Point against Bow/Crossbow Weapons -->
-			<skill id="4408" level="1" /> <!-- HP Increase (1x) -->
-			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
-			<skill id="4410" level="11" /> <!-- Average P. Atk. -->
-			<skill id="4411" level="11" /> <!-- Average M. Atk. -->
+			<skill id="4116" level="9" /> <!-- Magic Attack Resistance -->
+			<skill id="4273" level="4" /> <!-- Dagger/Rapier Resistance -->
+			<skill id="4276" level="4" /> <!-- Bow/Crossbow Vulnerability -->
 			<skill id="4412" level="8" /> <!-- Weak P. Def. -->
 			<skill id="4413" level="16" /> <!-- Very Strong M. Def. -->
 			<skill id="4414" level="3" /> <!-- Light Armor Type -->
-			<skill id="4415" level="11" /> <!-- Spears -->
+			<skill id="4415" level="11" /> <!-- Spear -->
 			<skill id="4416" level="6" /> <!-- Humanoids -->
-			<skill id="4424" level="4" /> <!-- Resist Hand-to-hand Weapons -->
-			<skill id="4427" level="4" /> <!-- Resist Swords -->
-			<skill id="4449" level="4" /> <!-- Greater Resist Two-handed Weapons -->
-			<skill id="5465" level="1" /> <!-- Earth Attacks -->
-			<skill id="5601" level="9" /> <!-- Short-Range Physical Attack Resistance -->
+			<skill id="4424" level="4" /> <!-- Fist Weapon Resistance -->
+			<skill id="4427" level="4" /> <!-- Sword Resistance -->
+			<skill id="4449" level="4" /> <!-- Greater Two-handed Weapon Resistance -->
+			<skill id="5465" level="1" /> <!-- Earth Attack -->
+			<skill id="5601" level="9" /> <!-- Melee Attack Resistance -->
 			<skill id="6419" level="1" /> <!-- Light of Scout -->
 		</skillList>
 		<exCrtEffect>false</exCrtEffect>
@@ -4675,24 +4419,22 @@
 		</stats>
 		<status undying="false" canBeSown="true" />
 		<skillList>
-			<skill id="4116" level="9" /> <!-- Resist M. Atk. -->
-			<skill id="4273" level="4" /> <!-- Resist Daggers/Rapier Weapon -->
-			<skill id="4276" level="4" /> <!-- Weak Point against Bow/Crossbow Weapons -->
-			<skill id="4408" level="1" /> <!-- HP Increase (1x) -->
-			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
+			<skill id="4116" level="9" /> <!-- Magic Attack Resistance -->
+			<skill id="4273" level="4" /> <!-- Dagger/Rapier Resistance -->
+			<skill id="4276" level="4" /> <!-- Bow/Crossbow Vulnerability -->
 			<skill id="4410" level="14" /> <!-- Strong P. Atk. -->
 			<skill id="4411" level="13" /> <!-- Slightly Strong M. Atk. -->
 			<skill id="4412" level="13" /> <!-- Slightly Strong P. Def. -->
 			<skill id="4413" level="17" /> <!-- Very Strong M. Def. -->
 			<skill id="4414" level="3" /> <!-- Light Armor Type -->
-			<skill id="4415" level="7" /> <!-- Daggers -->
+			<skill id="4415" level="7" /> <!-- Dagger -->
 			<skill id="4416" level="6" /> <!-- Humanoids -->
-			<skill id="4424" level="4" /> <!-- Resist Hand-to-hand Weapons -->
-			<skill id="4427" level="4" /> <!-- Resist Swords -->
-			<skill id="4449" level="4" /> <!-- Greater Resist Two-handed Weapons -->
-			<skill id="5465" level="1" /> <!-- Earth Attacks -->
-			<skill id="5601" level="9" /> <!-- Short-Range Physical Attack Resistance -->
-			<skill id="6420" level="1" /> <!-- Lizard Strike -->
+			<skill id="4424" level="4" /> <!-- Fist Weapon Resistance -->
+			<skill id="4427" level="4" /> <!-- Sword Resistance -->
+			<skill id="4449" level="4" /> <!-- Greater Two-handed Weapon Resistance -->
+			<skill id="5465" level="1" /> <!-- Earth Attack -->
+			<skill id="5601" level="9" /> <!-- Melee Attack Resistance -->
+			<skill id="6420" level="1" /> <!-- Lizard Blow -->
 		</skillList>
 		<exCrtEffect>false</exCrtEffect>
 		<ai clanHelpRange="300" aggroRange="300" />
@@ -4750,24 +4492,22 @@
 		</stats>
 		<status undying="false" canBeSown="true" />
 		<skillList>
-			<skill id="4116" level="9" /> <!-- Resist M. Atk. -->
-			<skill id="4273" level="4" /> <!-- Resist Daggers/Rapier Weapon -->
-			<skill id="4276" level="4" /> <!-- Weak Point against Bow/Crossbow Weapons -->
+			<skill id="4116" level="9" /> <!-- Magic Attack Resistance -->
+			<skill id="4273" level="4" /> <!-- Dagger/Rapier Resistance -->
+			<skill id="4276" level="4" /> <!-- Bow/Crossbow Vulnerability -->
 			<skill id="4408" level="10" /> <!-- HP Increase (2x) -->
-			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
 			<skill id="4410" level="14" /> <!-- Strong P. Atk. -->
 			<skill id="4411" level="13" /> <!-- Slightly Strong M. Atk. -->
-			<skill id="4412" level="11" /> <!-- Average P. Def. -->
 			<skill id="4413" level="18" /> <!-- Extremely Strong M. Def. -->
 			<skill id="4414" level="3" /> <!-- Light Armor Type -->
 			<skill id="4415" level="3" /> <!-- One-handed Sword -->
 			<skill id="4416" level="6" /> <!-- Humanoids -->
-			<skill id="4424" level="4" /> <!-- Resist Hand-to-hand Weapons -->
-			<skill id="4427" level="4" /> <!-- Resist Swords -->
-			<skill id="4449" level="4" /> <!-- Greater Resist Two-handed Weapons -->
-			<skill id="5465" level="1" /> <!-- Earth Attacks -->
-			<skill id="5601" level="9" /> <!-- Short-Range Physical Attack Resistance -->
-			<skill id="6421" level="1" /> <!-- Rage of Soldier -->
+			<skill id="4424" level="4" /> <!-- Fist Weapon Resistance -->
+			<skill id="4427" level="4" /> <!-- Sword Resistance -->
+			<skill id="4449" level="4" /> <!-- Greater Two-handed Weapon Resistance -->
+			<skill id="5465" level="1" /> <!-- Earth Attack -->
+			<skill id="5601" level="9" /> <!-- Melee Attack Resistance -->
+			<skill id="6421" level="1" /> <!-- Warrior's Rage -->
 		</skillList>
 		<exCrtEffect>false</exCrtEffect>
 		<sNpcPropHpRate>2</sNpcPropHpRate>
@@ -4838,23 +4578,20 @@
 		</stats>
 		<status undying="false" canBeSown="true" />
 		<skillList>
-			<skill id="4116" level="9" /> <!-- Resist M. Atk. -->
-			<skill id="4273" level="4" /> <!-- Resist Daggers/Rapier Weapon -->
-			<skill id="4276" level="4" /> <!-- Weak Point against Bow/Crossbow Weapons -->
+			<skill id="4116" level="9" /> <!-- Magic Attack Resistance -->
+			<skill id="4273" level="4" /> <!-- Dagger/Rapier Resistance -->
+			<skill id="4276" level="4" /> <!-- Bow/Crossbow Vulnerability -->
 			<skill id="4408" level="10" /> <!-- HP Increase (2x) -->
-			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
 			<skill id="4410" level="15" /> <!-- Strong P. Atk. -->
 			<skill id="4411" level="14" /> <!-- Strong M. Atk. -->
-			<skill id="4412" level="11" /> <!-- Average P. Def. -->
 			<skill id="4413" level="18" /> <!-- Extremely Strong M. Def. -->
-			<skill id="4414" level="2" /> <!-- Standard Type -->
 			<skill id="4415" level="3" /> <!-- One-handed Sword -->
 			<skill id="4416" level="6" /> <!-- Humanoids -->
-			<skill id="4424" level="4" /> <!-- Resist Hand-to-hand Weapons -->
-			<skill id="4427" level="4" /> <!-- Resist Swords -->
-			<skill id="4449" level="4" /> <!-- Greater Resist Two-handed Weapons -->
-			<skill id="5465" level="1" /> <!-- Earth Attacks -->
-			<skill id="5601" level="9" /> <!-- Short-Range Physical Attack Resistance -->
+			<skill id="4424" level="4" /> <!-- Fist Weapon Resistance -->
+			<skill id="4427" level="4" /> <!-- Sword Resistance -->
+			<skill id="4449" level="4" /> <!-- Greater Two-handed Weapon Resistance -->
+			<skill id="5465" level="1" /> <!-- Earth Attack -->
+			<skill id="5601" level="9" /> <!-- Melee Attack Resistance -->
 			<skill id="6422" level="1" /> <!-- Resistance Explosion -->
 		</skillList>
 		<exCrtEffect>false</exCrtEffect>
@@ -4921,24 +4658,21 @@
 		</stats>
 		<status undying="false" canBeSown="true" />
 		<skillList>
-			<skill id="4116" level="9" /> <!-- Resist M. Atk. -->
-			<skill id="4273" level="4" /> <!-- Resist Daggers/Rapier Weapon -->
-			<skill id="4276" level="4" /> <!-- Weak Point against Bow/Crossbow Weapons -->
-			<skill id="4408" level="1" /> <!-- HP Increase (1x) -->
-			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
+			<skill id="4116" level="9" /> <!-- Magic Attack Resistance -->
+			<skill id="4273" level="4" /> <!-- Dagger/Rapier Resistance -->
+			<skill id="4276" level="4" /> <!-- Bow/Crossbow Vulnerability -->
 			<skill id="4410" level="14" /> <!-- Strong P. Atk. -->
 			<skill id="4411" level="13" /> <!-- Slightly Strong M. Atk. -->
 			<skill id="4412" level="15" /> <!-- Strong P. Def. -->
 			<skill id="4413" level="17" /> <!-- Very Strong M. Def. -->
-			<skill id="4414" level="2" /> <!-- Standard Type -->
-			<skill id="4415" level="9" /> <!-- Bows -->
+			<skill id="4415" level="9" /> <!-- Bow -->
 			<skill id="4416" level="6" /> <!-- Humanoids -->
-			<skill id="4424" level="4" /> <!-- Resist Hand-to-hand Weapons -->
-			<skill id="4427" level="4" /> <!-- Resist Swords -->
-			<skill id="4449" level="4" /> <!-- Greater Resist Two-handed Weapons -->
-			<skill id="5465" level="1" /> <!-- Earth Attacks -->
-			<skill id="5601" level="9" /> <!-- Short-Range Physical Attack Resistance -->
-			<skill id="6423" level="1" /> <!-- Shock -->
+			<skill id="4424" level="4" /> <!-- Fist Weapon Resistance -->
+			<skill id="4427" level="4" /> <!-- Sword Resistance -->
+			<skill id="4449" level="4" /> <!-- Greater Two-handed Weapon Resistance -->
+			<skill id="5465" level="1" /> <!-- Earth Attack -->
+			<skill id="5601" level="9" /> <!-- Melee Attack Resistance -->
+			<skill id="6423" level="1" /> <!-- Stun -->
 			<skill id="6424" level="1" /> <!-- Double Shot -->
 		</skillList>
 		<exCrtEffect>false</exCrtEffect>
@@ -5007,25 +4741,23 @@
 		</stats>
 		<status undying="false" canBeSown="true" />
 		<skillList>
-			<skill id="4116" level="9" /> <!-- Resist M. Atk. -->
-			<skill id="4273" level="4" /> <!-- Resist Daggers/Rapier Weapon -->
-			<skill id="4276" level="4" /> <!-- Weak Point against Bow/Crossbow Weapons -->
-			<skill id="4408" level="1" /> <!-- HP Increase (1x) -->
-			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
+			<skill id="4116" level="9" /> <!-- Magic Attack Resistance -->
+			<skill id="4273" level="4" /> <!-- Dagger/Rapier Resistance -->
+			<skill id="4276" level="4" /> <!-- Bow/Crossbow Vulnerability -->
 			<skill id="4410" level="15" /> <!-- Strong P. Atk. -->
 			<skill id="4411" level="16" /> <!-- Very Strong M. Atk. -->
 			<skill id="4412" level="13" /> <!-- Slightly Strong P. Def. -->
 			<skill id="4413" level="17" /> <!-- Very Strong M. Def. -->
 			<skill id="4414" level="3" /> <!-- Light Armor Type -->
-			<skill id="4415" level="5" /> <!-- Blunt Weapons -->
+			<skill id="4415" level="5" /> <!-- Blunt Weapon -->
 			<skill id="4416" level="6" /> <!-- Humanoids -->
-			<skill id="4424" level="4" /> <!-- Resist Hand-to-hand Weapons -->
-			<skill id="4427" level="4" /> <!-- Resist Swords -->
-			<skill id="4449" level="4" /> <!-- Greater Resist Two-handed Weapons -->
-			<skill id="5465" level="1" /> <!-- Earth Attacks -->
-			<skill id="5601" level="9" /> <!-- Short-Range Physical Attack Resistance -->
-			<skill id="6676" level="1" /> <!-- Magician's Perversity -->
+			<skill id="4424" level="4" /> <!-- Fist Weapon Resistance -->
+			<skill id="4427" level="4" /> <!-- Sword Resistance -->
+			<skill id="4449" level="4" /> <!-- Greater Two-handed Weapon Resistance -->
+			<skill id="5465" level="1" /> <!-- Earth Attack -->
+			<skill id="5601" level="9" /> <!-- Melee Attack Resistance -->
 			<skill id="6611" level="1" /> <!-- Earth Magic -->
+			<skill id="6676" level="1" /> <!-- Magician's Perversity -->
 		</skillList>
 		<exCrtEffect>false</exCrtEffect>
 		<ai type="MAGE" aggroRange="300" clanHelpRange="300" isAggressive="true" />
@@ -5097,26 +4829,24 @@
 		</stats>
 		<status undying="false" canBeSown="true" />
 		<skillList>
-			<skill id="4116" level="9" /> <!-- Resist M. Atk. -->
-			<skill id="4273" level="4" /> <!-- Resist Daggers/Rapier Weapon -->
-			<skill id="4276" level="4" /> <!-- Weak Point against Bow/Crossbow Weapons -->
+			<skill id="4116" level="9" /> <!-- Magic Attack Resistance -->
+			<skill id="4273" level="4" /> <!-- Dagger/Rapier Resistance -->
+			<skill id="4276" level="4" /> <!-- Bow/Crossbow Vulnerability -->
 			<skill id="4408" level="10" /> <!-- HP Increase (2x) -->
-			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
 			<skill id="4410" level="13" /> <!-- Slightly Strong P. Atk. -->
 			<skill id="4411" level="13" /> <!-- Slightly Strong M. Atk. -->
 			<skill id="4412" level="10" /> <!-- Slightly Weak P. Def. -->
 			<skill id="4413" level="18" /> <!-- Extremely Strong M. Def. -->
-			<skill id="4414" level="2" /> <!-- Standard Type -->
 			<skill id="4415" level="3" /> <!-- One-handed Sword -->
 			<skill id="4416" level="6" /> <!-- Humanoids -->
-			<skill id="4424" level="4" /> <!-- Resist Hand-to-hand Weapons -->
-			<skill id="4427" level="4" /> <!-- Resist Swords -->
-			<skill id="4449" level="4" /> <!-- Greater Resist Two-handed Weapons -->
-			<skill id="5465" level="1" /> <!-- Earth Attacks -->
-			<skill id="5601" level="9" /> <!-- Short-Range Physical Attack Resistance -->
-			<skill id="6679" level="1" /> <!-- Summoner's Strike -->
+			<skill id="4424" level="4" /> <!-- Fist Weapon Resistance -->
+			<skill id="4427" level="4" /> <!-- Sword Resistance -->
+			<skill id="4449" level="4" /> <!-- Greater Two-handed Weapon Resistance -->
+			<skill id="5465" level="1" /> <!-- Earth Attack -->
+			<skill id="5601" level="9" /> <!-- Melee Attack Resistance -->
 			<skill id="6425" level="1" /> <!-- Demotivation Hex -->
 			<skill id="6611" level="1" /> <!-- Earth Magic -->
+			<skill id="6679" level="1" /> <!-- Summoner's Blow -->
 		</skillList>
 		<exCrtEffect>false</exCrtEffect>
 		<sNpcPropHpRate>2</sNpcPropHpRate>
@@ -5186,21 +4916,19 @@
 		</stats>
 		<status undying="false" canBeSown="true" />
 		<skillList>
-			<skill id="4071" level="5" /> <!-- Resist Bow/Crossbow Weapons -->
-			<skill id="4116" level="9" /> <!-- Resist M. Atk. -->
+			<skill id="4071" level="5" /> <!-- Bow/Crossbow Resistance -->
+			<skill id="4116" level="9" /> <!-- Magic Attack Resistance -->
 			<skill id="4408" level="10" /> <!-- HP Increase (2x) -->
-			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
 			<skill id="4410" level="8" /> <!-- Weak P. Atk. -->
 			<skill id="4411" level="14" /> <!-- Strong M. Atk. -->
 			<skill id="4412" level="7" /> <!-- Weak P. Def. -->
 			<skill id="4413" level="17" /> <!-- Very Strong M. Def. -->
-			<skill id="4414" level="2" /> <!-- Standard Type -->
 			<skill id="4415" level="3" /> <!-- One-handed Sword -->
 			<skill id="4416" level="6" /> <!-- Humanoids -->
-			<skill id="4458" level="1" /> <!-- Spear Weapon Weak Point -->
-			<skill id="5462" level="1" /> <!-- Fire Attacks -->
-			<skill id="5620" level="9" /> <!-- Short-Range Physical Attack Weakness -->
-			<skill id="5663" level="5" /> <!-- Resistance to Ancient Sword -->
+			<skill id="4458" level="1" /> <!-- Spear Vulnerability -->
+			<skill id="5462" level="1" /> <!-- Fire Attack -->
+			<skill id="5620" level="9" /> <!-- Melee Attack Vulnerability -->
+			<skill id="5663" level="5" /> <!-- Ancient Sword Resistance -->
 			<skill id="6335" level="1" /> <!-- Electric Rain 1 -->
 			<skill id="6337" level="1" /> <!-- Red Slash 1 -->
 		</skillList>
@@ -5277,21 +5005,19 @@
 		</stats>
 		<status undying="false" canBeSown="true" />
 		<skillList>
-			<skill id="4071" level="5" /> <!-- Resist Bow/Crossbow Weapons -->
-			<skill id="4116" level="9" /> <!-- Resist M. Atk. -->
+			<skill id="4071" level="5" /> <!-- Bow/Crossbow Resistance -->
+			<skill id="4116" level="9" /> <!-- Magic Attack Resistance -->
 			<skill id="4408" level="11" /> <!-- HP Increase (3x) -->
-			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
 			<skill id="4410" level="8" /> <!-- Weak P. Atk. -->
 			<skill id="4411" level="14" /> <!-- Strong M. Atk. -->
 			<skill id="4412" level="7" /> <!-- Weak P. Def. -->
 			<skill id="4413" level="17" /> <!-- Very Strong M. Def. -->
-			<skill id="4414" level="2" /> <!-- Standard Type -->
 			<skill id="4415" level="3" /> <!-- One-handed Sword -->
 			<skill id="4416" level="6" /> <!-- Humanoids -->
-			<skill id="4458" level="1" /> <!-- Spear Weapon Weak Point -->
-			<skill id="5462" level="1" /> <!-- Fire Attacks -->
-			<skill id="5620" level="9" /> <!-- Short-Range Physical Attack Weakness -->
-			<skill id="5663" level="5" /> <!-- Resistance to Ancient Sword -->
+			<skill id="4458" level="1" /> <!-- Spear Vulnerability -->
+			<skill id="5462" level="1" /> <!-- Fire Attack -->
+			<skill id="5620" level="9" /> <!-- Melee Attack Vulnerability -->
+			<skill id="5663" level="5" /> <!-- Ancient Sword Resistance -->
 			<skill id="6336" level="1" /> <!-- Electric Rain 2 -->
 			<skill id="6338" level="1" /> <!-- Red Slash 2 -->
 		</skillList>
@@ -5371,23 +5097,21 @@
 		</stats>
 		<status undying="false" canBeSown="true" />
 		<skillList>
-			<skill id="4071" level="5" /> <!-- Resist Bow/Crossbow Weapons -->
-			<skill id="4116" level="9" /> <!-- Resist M. Atk. -->
+			<skill id="4071" level="5" /> <!-- Bow/Crossbow Resistance -->
+			<skill id="4116" level="9" /> <!-- Magic Attack Resistance -->
 			<skill id="4408" level="10" /> <!-- HP Increase (2x) -->
-			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
 			<skill id="4410" level="8" /> <!-- Weak P. Atk. -->
 			<skill id="4411" level="14" /> <!-- Strong M. Atk. -->
 			<skill id="4412" level="7" /> <!-- Weak P. Def. -->
 			<skill id="4413" level="17" /> <!-- Very Strong M. Def. -->
-			<skill id="4414" level="2" /> <!-- Standard Type -->
 			<skill id="4415" level="3" /> <!-- One-handed Sword -->
 			<skill id="4416" level="6" /> <!-- Humanoids -->
-			<skill id="4458" level="1" /> <!-- Spear Weapon Weak Point -->
-			<skill id="5462" level="1" /> <!-- Fire Attacks -->
-			<skill id="5620" level="9" /> <!-- Short-Range Physical Attack Weakness -->
-			<skill id="5663" level="5" /> <!-- Resistance to Ancient Sword -->
-			<skill id="6339" level="1" /> <!-- Sacred Hammer Attack -->
-			<skill id="6340" level="1" /> <!-- Shock -->
+			<skill id="4458" level="1" /> <!-- Spear Vulnerability -->
+			<skill id="5462" level="1" /> <!-- Fire Attack -->
+			<skill id="5620" level="9" /> <!-- Melee Attack Vulnerability -->
+			<skill id="5663" level="5" /> <!-- Ancient Sword Resistance -->
+			<skill id="6339" level="1" /> <!-- Divine Hammer Attack -->
+			<skill id="6340" level="1" /> <!-- Stun -->
 		</skillList>
 		<exCrtEffect>false</exCrtEffect>
 		<sNpcPropHpRate>2</sNpcPropHpRate>
@@ -5453,22 +5177,20 @@
 		</stats>
 		<status undying="false" canBeSown="true" />
 		<skillList>
-			<skill id="4071" level="5" /> <!-- Resist Bow/Crossbow Weapons -->
-			<skill id="4116" level="9" /> <!-- Resist M. Atk. -->
+			<skill id="4071" level="5" /> <!-- Bow/Crossbow Resistance -->
+			<skill id="4116" level="9" /> <!-- Magic Attack Resistance -->
 			<skill id="4408" level="10" /> <!-- HP Increase (2x) -->
-			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
 			<skill id="4410" level="8" /> <!-- Weak P. Atk. -->
 			<skill id="4411" level="14" /> <!-- Strong M. Atk. -->
 			<skill id="4412" level="7" /> <!-- Weak P. Def. -->
 			<skill id="4413" level="17" /> <!-- Very Strong M. Def. -->
-			<skill id="4414" level="2" /> <!-- Standard Type -->
 			<skill id="4415" level="1" /> <!-- Bare Hands -->
 			<skill id="4416" level="6" /> <!-- Humanoids -->
-			<skill id="4458" level="1" /> <!-- Spear Weapon Weak Point -->
-			<skill id="5462" level="1" /> <!-- Fire Attacks -->
-			<skill id="5620" level="9" /> <!-- Short-Range Physical Attack Weakness -->
-			<skill id="5663" level="5" /> <!-- Resistance to Ancient Sword -->
-			<skill id="6334" level="1" /> <!-- Shock -->
+			<skill id="4458" level="1" /> <!-- Spear Vulnerability -->
+			<skill id="5462" level="1" /> <!-- Fire Attack -->
+			<skill id="5620" level="9" /> <!-- Melee Attack Vulnerability -->
+			<skill id="5663" level="5" /> <!-- Ancient Sword Resistance -->
+			<skill id="6334" level="1" /> <!-- Stun -->
 		</skillList>
 		<exCrtEffect>false</exCrtEffect>
 		<sNpcPropHpRate>2</sNpcPropHpRate>
@@ -5546,23 +5268,21 @@
 		</stats>
 		<status undying="false" canBeSown="true" />
 		<skillList>
-			<skill id="4071" level="5" /> <!-- Resist Bow/Crossbow Weapons -->
-			<skill id="4116" level="9" /> <!-- Resist M. Atk. -->
+			<skill id="4071" level="5" /> <!-- Bow/Crossbow Resistance -->
+			<skill id="4116" level="9" /> <!-- Magic Attack Resistance -->
 			<skill id="4408" level="10" /> <!-- HP Increase (2x) -->
-			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
 			<skill id="4410" level="8" /> <!-- Weak P. Atk. -->
 			<skill id="4411" level="13" /> <!-- Slightly Strong M. Atk. -->
 			<skill id="4412" level="7" /> <!-- Weak P. Def. -->
 			<skill id="4413" level="16" /> <!-- Very Strong M. Def. -->
-			<skill id="4414" level="2" /> <!-- Standard Type -->
 			<skill id="4415" level="3" /> <!-- One-handed Sword -->
 			<skill id="4416" level="6" /> <!-- Humanoids -->
-			<skill id="4458" level="1" /> <!-- Spear Weapon Weak Point -->
-			<skill id="5462" level="1" /> <!-- Fire Attacks -->
-			<skill id="5620" level="9" /> <!-- Short-Range Physical Attack Weakness -->
-			<skill id="5663" level="5" /> <!-- Resistance to Ancient Sword -->
-			<skill id="6339" level="1" /> <!-- Sacred Hammer Attack -->
-			<skill id="6340" level="1" /> <!-- Shock -->
+			<skill id="4458" level="1" /> <!-- Spear Vulnerability -->
+			<skill id="5462" level="1" /> <!-- Fire Attack -->
+			<skill id="5620" level="9" /> <!-- Melee Attack Vulnerability -->
+			<skill id="5663" level="5" /> <!-- Ancient Sword Resistance -->
+			<skill id="6339" level="1" /> <!-- Divine Hammer Attack -->
+			<skill id="6340" level="1" /> <!-- Stun -->
 		</skillList>
 		<exCrtEffect>false</exCrtEffect>
 		<sNpcPropHpRate>2</sNpcPropHpRate>
@@ -5650,21 +5370,18 @@
 		</stats>
 		<status undying="false" canBeSown="true" />
 		<skillList>
-			<skill id="4071" level="5" /> <!-- Resist Bow/Crossbow Weapons -->
-			<skill id="4116" level="9" /> <!-- Resist M. Atk. -->
-			<skill id="4408" level="1" /> <!-- HP Increase (1x) -->
-			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
+			<skill id="4071" level="5" /> <!-- Bow/Crossbow Resistance -->
+			<skill id="4116" level="9" /> <!-- Magic Attack Resistance -->
 			<skill id="4410" level="7" /> <!-- Weak P. Atk. -->
 			<skill id="4411" level="14" /> <!-- Strong M. Atk. -->
 			<skill id="4412" level="6" /> <!-- Very Weak P. Def. -->
 			<skill id="4413" level="17" /> <!-- Very Strong M. Def. -->
-			<skill id="4414" level="2" /> <!-- Standard Type -->
 			<skill id="4415" level="3" /> <!-- One-handed Sword -->
 			<skill id="4416" level="6" /> <!-- Humanoids -->
-			<skill id="4458" level="1" /> <!-- Spear Weapon Weak Point -->
-			<skill id="5462" level="1" /> <!-- Fire Attacks -->
-			<skill id="5620" level="9" /> <!-- Short-Range Physical Attack Weakness -->
-			<skill id="5663" level="5" /> <!-- Resistance to Ancient Sword -->
+			<skill id="4458" level="1" /> <!-- Spear Vulnerability -->
+			<skill id="5462" level="1" /> <!-- Fire Attack -->
+			<skill id="5620" level="9" /> <!-- Melee Attack Vulnerability -->
+			<skill id="5663" level="5" /> <!-- Ancient Sword Resistance -->
 			<skill id="6335" level="1" /> <!-- Electric Rain 1 -->
 			<skill id="6337" level="1" /> <!-- Red Slash 1 -->
 		</skillList>
@@ -5750,21 +5467,17 @@
 		</stats>
 		<status undying="false" canBeSown="true" />
 		<skillList>
-			<skill id="4071" level="5" /> <!-- Resist Bow/Crossbow Weapons -->
-			<skill id="4116" level="9" /> <!-- Resist M. Atk. -->
-			<skill id="4408" level="1" /> <!-- HP Increase (1x) -->
-			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
+			<skill id="4071" level="5" /> <!-- Bow/Crossbow Resistance -->
+			<skill id="4116" level="9" /> <!-- Magic Attack Resistance -->
 			<skill id="4410" level="8" /> <!-- Weak P. Atk. -->
-			<skill id="4411" level="11" /> <!-- Average M. Atk. -->
 			<skill id="4412" level="7" /> <!-- Weak P. Def. -->
 			<skill id="4413" level="16" /> <!-- Very Strong M. Def. -->
-			<skill id="4414" level="2" /> <!-- Standard Type -->
 			<skill id="4415" level="3" /> <!-- One-handed Sword -->
 			<skill id="4416" level="6" /> <!-- Humanoids -->
-			<skill id="4458" level="1" /> <!-- Spear Weapon Weak Point -->
-			<skill id="5462" level="1" /> <!-- Fire Attacks -->
-			<skill id="5620" level="9" /> <!-- Short-Range Physical Attack Weakness -->
-			<skill id="5663" level="5" /> <!-- Resistance to Ancient Sword -->
+			<skill id="4458" level="1" /> <!-- Spear Vulnerability -->
+			<skill id="5462" level="1" /> <!-- Fire Attack -->
+			<skill id="5620" level="9" /> <!-- Melee Attack Vulnerability -->
+			<skill id="5663" level="5" /> <!-- Ancient Sword Resistance -->
 			<skill id="6336" level="1" /> <!-- Electric Rain 2 -->
 			<skill id="6338" level="1" /> <!-- Red Slash 2 -->
 		</skillList>
@@ -5832,23 +5545,20 @@
 		</stats>
 		<status undying="false" canBeSown="true" />
 		<skillList>
-			<skill id="4071" level="5" /> <!-- Resist Bow/Crossbow Weapons -->
-			<skill id="4116" level="9" /> <!-- Resist M. Atk. -->
-			<skill id="4408" level="1" /> <!-- HP Increase (1x) -->
-			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
+			<skill id="4071" level="5" /> <!-- Bow/Crossbow Resistance -->
+			<skill id="4116" level="9" /> <!-- Magic Attack Resistance -->
 			<skill id="4410" level="7" /> <!-- Weak P. Atk. -->
 			<skill id="4411" level="14" /> <!-- Strong M. Atk. -->
 			<skill id="4412" level="6" /> <!-- Very Weak P. Def. -->
 			<skill id="4413" level="17" /> <!-- Very Strong M. Def. -->
-			<skill id="4414" level="2" /> <!-- Standard Type -->
 			<skill id="4415" level="3" /> <!-- One-handed Sword -->
 			<skill id="4416" level="6" /> <!-- Humanoids -->
-			<skill id="4458" level="1" /> <!-- Spear Weapon Weak Point -->
-			<skill id="5462" level="1" /> <!-- Fire Attacks -->
-			<skill id="5620" level="9" /> <!-- Short-Range Physical Attack Weakness -->
-			<skill id="5663" level="5" /> <!-- Resistance to Ancient Sword -->
-			<skill id="6339" level="1" /> <!-- Sacred Hammer Attack -->
-			<skill id="6340" level="1" /> <!-- Shock -->
+			<skill id="4458" level="1" /> <!-- Spear Vulnerability -->
+			<skill id="5462" level="1" /> <!-- Fire Attack -->
+			<skill id="5620" level="9" /> <!-- Melee Attack Vulnerability -->
+			<skill id="5663" level="5" /> <!-- Ancient Sword Resistance -->
+			<skill id="6339" level="1" /> <!-- Divine Hammer Attack -->
+			<skill id="6340" level="1" /> <!-- Stun -->
 		</skillList>
 		<exCrtEffect>false</exCrtEffect>
 		<ai aggroRange="300" clanHelpRange="800" isAggressive="false">
@@ -5920,23 +5630,20 @@
 		</stats>
 		<status undying="false" canBeSown="true" />
 		<skillList>
-			<skill id="4071" level="5" /> <!-- Resist Bow/Crossbow Weapons -->
-			<skill id="4116" level="9" /> <!-- Resist M. Atk. -->
-			<skill id="4408" level="1" /> <!-- HP Increase (1x) -->
-			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
+			<skill id="4071" level="5" /> <!-- Bow/Crossbow Resistance -->
+			<skill id="4116" level="9" /> <!-- Magic Attack Resistance -->
 			<skill id="4410" level="6" /> <!-- Very Weak P. Atk. -->
 			<skill id="4411" level="13" /> <!-- Slightly Strong M. Atk. -->
 			<skill id="4412" level="7" /> <!-- Weak P. Def. -->
 			<skill id="4413" level="16" /> <!-- Very Strong M. Def. -->
-			<skill id="4414" level="2" /> <!-- Standard Type -->
 			<skill id="4415" level="3" /> <!-- One-handed Sword -->
 			<skill id="4416" level="6" /> <!-- Humanoids -->
-			<skill id="4458" level="1" /> <!-- Spear Weapon Weak Point -->
-			<skill id="5462" level="1" /> <!-- Fire Attacks -->
-			<skill id="5620" level="9" /> <!-- Short-Range Physical Attack Weakness -->
-			<skill id="5663" level="5" /> <!-- Resistance to Ancient Sword -->
-			<skill id="6339" level="1" /> <!-- Sacred Hammer Attack -->
-			<skill id="6340" level="1" /> <!-- Shock -->
+			<skill id="4458" level="1" /> <!-- Spear Vulnerability -->
+			<skill id="5462" level="1" /> <!-- Fire Attack -->
+			<skill id="5620" level="9" /> <!-- Melee Attack Vulnerability -->
+			<skill id="5663" level="5" /> <!-- Ancient Sword Resistance -->
+			<skill id="6339" level="1" /> <!-- Divine Hammer Attack -->
+			<skill id="6340" level="1" /> <!-- Stun -->
 		</skillList>
 		<exCrtEffect>false</exCrtEffect>
 		<ai aggroRange="300" clanHelpRange="800" isAggressive="false">
@@ -6006,21 +5713,18 @@
 		</stats>
 		<status undying="false" canBeSown="true" />
 		<skillList>
-			<skill id="4071" level="5" /> <!-- Resist Bow/Crossbow Weapons -->
-			<skill id="4116" level="9" /> <!-- Resist M. Atk. -->
-			<skill id="4408" level="1" /> <!-- HP Increase (1x) -->
-			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
+			<skill id="4071" level="5" /> <!-- Bow/Crossbow Resistance -->
+			<skill id="4116" level="9" /> <!-- Magic Attack Resistance -->
 			<skill id="4410" level="7" /> <!-- Weak P. Atk. -->
 			<skill id="4411" level="14" /> <!-- Strong M. Atk. -->
 			<skill id="4412" level="6" /> <!-- Very Weak P. Def. -->
 			<skill id="4413" level="17" /> <!-- Very Strong M. Def. -->
-			<skill id="4414" level="2" /> <!-- Standard Type -->
 			<skill id="4415" level="1" /> <!-- Bare Hands -->
 			<skill id="4416" level="6" /> <!-- Humanoids -->
-			<skill id="4458" level="1" /> <!-- Spear Weapon Weak Point -->
-			<skill id="5462" level="1" /> <!-- Fire Attacks -->
-			<skill id="5620" level="9" /> <!-- Short-Range Physical Attack Weakness -->
-			<skill id="5663" level="5" /> <!-- Resistance to Ancient Sword -->
+			<skill id="4458" level="1" /> <!-- Spear Vulnerability -->
+			<skill id="5462" level="1" /> <!-- Fire Attack -->
+			<skill id="5620" level="9" /> <!-- Melee Attack Vulnerability -->
+			<skill id="5663" level="5" /> <!-- Ancient Sword Resistance -->
 			<skill id="6333" level="1" /> <!-- Electric Bolt 1 -->
 		</skillList>
 		<exCrtEffect>false</exCrtEffect>
@@ -6090,22 +5794,18 @@
 		</stats>
 		<status undying="false" canBeSown="true" />
 		<skillList>
-			<skill id="4071" level="5" /> <!-- Resist Bow/Crossbow Weapons -->
-			<skill id="4116" level="9" /> <!-- Resist M. Atk. -->
-			<skill id="4408" level="1" /> <!-- HP Increase (1x) -->
-			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
+			<skill id="4071" level="5" /> <!-- Bow/Crossbow Resistance -->
+			<skill id="4116" level="9" /> <!-- Magic Attack Resistance -->
 			<skill id="4410" level="6" /> <!-- Very Weak P. Atk. -->
-			<skill id="4411" level="11" /> <!-- Average M. Atk. -->
 			<skill id="4412" level="4" /> <!-- Extremely Weak P. Def. -->
 			<skill id="4413" level="15" /> <!-- Strong M. Def. -->
-			<skill id="4414" level="2" /> <!-- Standard Type -->
 			<skill id="4415" level="1" /> <!-- Bare Hands -->
 			<skill id="4416" level="6" /> <!-- Humanoids -->
-			<skill id="4458" level="1" /> <!-- Spear Weapon Weak Point -->
-			<skill id="5462" level="1" /> <!-- Fire Attacks -->
-			<skill id="5620" level="9" /> <!-- Short-Range Physical Attack Weakness -->
-			<skill id="5663" level="5" /> <!-- Resistance to Ancient Sword -->
-			<skill id="6334" level="1" /> <!-- Shock -->
+			<skill id="4458" level="1" /> <!-- Spear Vulnerability -->
+			<skill id="5462" level="1" /> <!-- Fire Attack -->
+			<skill id="5620" level="9" /> <!-- Melee Attack Vulnerability -->
+			<skill id="5663" level="5" /> <!-- Ancient Sword Resistance -->
+			<skill id="6334" level="1" /> <!-- Stun -->
 		</skillList>
 		<exCrtEffect>false</exCrtEffect>
 		<ai aggroRange="300" clanHelpRange="800" isAggressive="false">
@@ -6171,21 +5871,18 @@
 		</stats>
 		<status undying="false" canBeSown="true" />
 		<skillList>
-			<skill id="4071" level="5" /> <!-- Resist Bow/Crossbow Weapons -->
-			<skill id="4116" level="9" /> <!-- Resist M. Atk. -->
+			<skill id="4071" level="5" /> <!-- Bow/Crossbow Resistance -->
+			<skill id="4116" level="9" /> <!-- Magic Attack Resistance -->
 			<skill id="4408" level="10" /> <!-- HP Increase (2x) -->
-			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
 			<skill id="4410" level="7" /> <!-- Weak P. Atk. -->
-			<skill id="4411" level="11" /> <!-- Average M. Atk. -->
 			<skill id="4412" level="5" /> <!-- Very Weak P. Def. -->
 			<skill id="4413" level="15" /> <!-- Strong M. Def. -->
-			<skill id="4414" level="2" /> <!-- Standard Type -->
 			<skill id="4415" level="3" /> <!-- One-handed Sword -->
 			<skill id="4416" level="6" /> <!-- Humanoids -->
-			<skill id="4458" level="1" /> <!-- Spear Weapon Weak Point -->
-			<skill id="5462" level="1" /> <!-- Fire Attacks -->
-			<skill id="5620" level="9" /> <!-- Short-Range Physical Attack Weakness -->
-			<skill id="5663" level="5" /> <!-- Resistance to Ancient Sword -->
+			<skill id="4458" level="1" /> <!-- Spear Vulnerability -->
+			<skill id="5462" level="1" /> <!-- Fire Attack -->
+			<skill id="5620" level="9" /> <!-- Melee Attack Vulnerability -->
+			<skill id="5663" level="5" /> <!-- Ancient Sword Resistance -->
 			<skill id="6335" level="1" /> <!-- Electric Rain 1 -->
 			<skill id="6337" level="1" /> <!-- Red Slash 1 -->
 		</skillList>
@@ -6256,23 +5953,20 @@
 		</stats>
 		<status undying="false" canBeSown="true" />
 		<skillList>
-			<skill id="4071" level="5" /> <!-- Resist Bow/Crossbow Weapons -->
-			<skill id="4116" level="9" /> <!-- Resist M. Atk. -->
+			<skill id="4071" level="5" /> <!-- Bow/Crossbow Resistance -->
+			<skill id="4116" level="9" /> <!-- Magic Attack Resistance -->
 			<skill id="4408" level="10" /> <!-- HP Increase (2x) -->
-			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
 			<skill id="4410" level="7" /> <!-- Weak P. Atk. -->
-			<skill id="4411" level="11" /> <!-- Average M. Atk. -->
 			<skill id="4412" level="5" /> <!-- Very Weak P. Def. -->
 			<skill id="4413" level="15" /> <!-- Strong M. Def. -->
-			<skill id="4414" level="2" /> <!-- Standard Type -->
 			<skill id="4415" level="3" /> <!-- One-handed Sword -->
 			<skill id="4416" level="6" /> <!-- Humanoids -->
-			<skill id="4458" level="1" /> <!-- Spear Weapon Weak Point -->
-			<skill id="5462" level="1" /> <!-- Fire Attacks -->
-			<skill id="5620" level="9" /> <!-- Short-Range Physical Attack Weakness -->
-			<skill id="5663" level="5" /> <!-- Resistance to Ancient Sword -->
-			<skill id="6339" level="1" /> <!-- Sacred Hammer Attack -->
-			<skill id="6340" level="1" /> <!-- Shock -->
+			<skill id="4458" level="1" /> <!-- Spear Vulnerability -->
+			<skill id="5462" level="1" /> <!-- Fire Attack -->
+			<skill id="5620" level="9" /> <!-- Melee Attack Vulnerability -->
+			<skill id="5663" level="5" /> <!-- Ancient Sword Resistance -->
+			<skill id="6339" level="1" /> <!-- Divine Hammer Attack -->
+			<skill id="6340" level="1" /> <!-- Stun -->
 		</skillList>
 		<exCrtEffect>false</exCrtEffect>
 		<sNpcPropHpRate>2</sNpcPropHpRate>
@@ -6357,21 +6051,18 @@
 		</stats>
 		<status undying="false" canBeSown="true" />
 		<skillList>
-			<skill id="4071" level="5" /> <!-- Resist Bow/Crossbow Weapons -->
-			<skill id="4116" level="9" /> <!-- Resist M. Atk. -->
+			<skill id="4071" level="5" /> <!-- Bow/Crossbow Resistance -->
+			<skill id="4116" level="9" /> <!-- Magic Attack Resistance -->
 			<skill id="4408" level="10" /> <!-- HP Increase (2x) -->
-			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
 			<skill id="4410" level="7" /> <!-- Weak P. Atk. -->
-			<skill id="4411" level="11" /> <!-- Average M. Atk. -->
 			<skill id="4412" level="5" /> <!-- Very Weak P. Def. -->
 			<skill id="4413" level="15" /> <!-- Strong M. Def. -->
-			<skill id="4414" level="2" /> <!-- Standard Type -->
 			<skill id="4415" level="1" /> <!-- Bare Hands -->
 			<skill id="4416" level="6" /> <!-- Humanoids -->
-			<skill id="4458" level="1" /> <!-- Spear Weapon Weak Point -->
-			<skill id="5462" level="1" /> <!-- Fire Attacks -->
-			<skill id="5620" level="9" /> <!-- Short-Range Physical Attack Weakness -->
-			<skill id="5663" level="5" /> <!-- Resistance to Ancient Sword -->
+			<skill id="4458" level="1" /> <!-- Spear Vulnerability -->
+			<skill id="5462" level="1" /> <!-- Fire Attack -->
+			<skill id="5620" level="9" /> <!-- Melee Attack Vulnerability -->
+			<skill id="5663" level="5" /> <!-- Ancient Sword Resistance -->
 			<skill id="6333" level="1" /> <!-- Electric Bolt 1 -->
 		</skillList>
 		<exCrtEffect>false</exCrtEffect>
@@ -6455,21 +6146,19 @@
 		</stats>
 		<status undying="false" canBeSown="true" />
 		<skillList>
-			<skill id="4276" level="5" /> <!-- Weak Point against Bow/Crossbow Weapons -->
+			<skill id="4276" level="5" /> <!-- Bow/Crossbow Vulnerability -->
 			<skill id="4408" level="10" /> <!-- HP Increase (2x) -->
-			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
 			<skill id="4410" level="12" /> <!-- Slightly Strong P. Atk. -->
 			<skill id="4411" level="13" /> <!-- Slightly Strong M. Atk. -->
 			<skill id="4412" level="7" /> <!-- Weak P. Def. -->
 			<skill id="4413" level="8" /> <!-- Weak M. Def. -->
-			<skill id="4414" level="2" /> <!-- Standard Type -->
-			<skill id="4415" level="5" /> <!-- Blunt Weapons -->
+			<skill id="4415" level="5" /> <!-- Blunt Weapon -->
 			<skill id="4416" level="8" /> <!-- Angels -->
-			<skill id="4445" level="3" /> <!-- Greater Resist Spear Weapons -->
+			<skill id="4445" level="3" /> <!-- Greater Spear Resistance -->
 			<skill id="5466" level="1" /> <!-- Holy Attacks -->
-			<skill id="5620" level="4" /> <!-- Short-Range Physical Attack Weakness -->
+			<skill id="5620" level="4" /> <!-- Melee Attack Vulnerability -->
 			<skill id="6303" level="1" /> <!-- Trial of the Coup -->
-			<skill id="6304" level="1" /> <!-- Shock -->
+			<skill id="6304" level="1" /> <!-- Stun -->
 		</skillList>
 		<exCrtEffect>false</exCrtEffect>
 		<sNpcPropHpRate>2</sNpcPropHpRate>
@@ -6532,20 +6221,18 @@
 		</stats>
 		<status undying="false" canBeSown="true" />
 		<skillList>
-			<skill id="4276" level="5" /> <!-- Weak Point against Bow/Crossbow Weapons -->
+			<skill id="4276" level="5" /> <!-- Bow/Crossbow Vulnerability -->
 			<skill id="4408" level="10" /> <!-- HP Increase (2x) -->
-			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
 			<skill id="4410" level="13" /> <!-- Slightly Strong P. Atk. -->
 			<skill id="4411" level="14" /> <!-- Strong M. Atk. -->
 			<skill id="4412" level="8" /> <!-- Weak P. Def. -->
 			<skill id="4413" level="9" /> <!-- Slightly Weak M. Def. -->
-			<skill id="4414" level="2" /> <!-- Standard Type -->
 			<skill id="4415" level="3" /> <!-- One-handed Sword -->
 			<skill id="4416" level="8" /> <!-- Angels -->
-			<skill id="4445" level="3" /> <!-- Greater Resist Spear Weapons -->
+			<skill id="4445" level="3" /> <!-- Greater Spear Resistance -->
 			<skill id="5466" level="1" /> <!-- Holy Attacks -->
-			<skill id="5620" level="4" /> <!-- Short-Range Physical Attack Weakness -->
-			<skill id="6305" level="1" /> <!-- Sacred Gnosis -->
+			<skill id="5620" level="4" /> <!-- Melee Attack Vulnerability -->
+			<skill id="6305" level="1" /> <!-- Divine Gnosis -->
 			<skill id="6306" level="1" /> <!-- Solina Strike -->
 		</skillList>
 		<exCrtEffect>false</exCrtEffect>
@@ -6608,9 +6295,8 @@
 		</stats>
 		<status undying="false" canBeSown="true" />
 		<skillList>
-			<skill id="4276" level="5" /> <!-- Weak Point against Bow/Crossbow Weapons -->
+			<skill id="4276" level="5" /> <!-- Bow/Crossbow Vulnerability -->
 			<skill id="4408" level="10" /> <!-- HP Increase (2x) -->
-			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
 			<skill id="4410" level="13" /> <!-- Slightly Strong P. Atk. -->
 			<skill id="4411" level="14" /> <!-- Strong M. Atk. -->
 			<skill id="4412" level="8" /> <!-- Weak P. Def. -->
@@ -6618,9 +6304,9 @@
 			<skill id="4414" level="3" /> <!-- Light Armor Type -->
 			<skill id="4415" level="3" /> <!-- One-handed Sword -->
 			<skill id="4416" level="8" /> <!-- Angels -->
-			<skill id="4445" level="3" /> <!-- Greater Resist Spear Weapons -->
+			<skill id="4445" level="3" /> <!-- Greater Spear Resistance -->
 			<skill id="5466" level="1" /> <!-- Holy Attacks -->
-			<skill id="5620" level="4" /> <!-- Short-Range Physical Attack Weakness -->
+			<skill id="5620" level="4" /> <!-- Melee Attack Vulnerability -->
 			<skill id="6307" level="1" /> <!-- Opus of the Hand -->
 			<skill id="6308" level="1" /> <!-- Opus of the Wave -->
 		</skillList>
@@ -6685,22 +6371,20 @@
 		</stats>
 		<status undying="false" canBeSown="true" />
 		<skillList>
-			<skill id="4276" level="5" /> <!-- Weak Point against Bow/Crossbow Weapons -->
+			<skill id="4276" level="5" /> <!-- Bow/Crossbow Vulnerability -->
 			<skill id="4408" level="10" /> <!-- HP Increase (2x) -->
-			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
 			<skill id="4410" level="13" /> <!-- Slightly Strong P. Atk. -->
 			<skill id="4411" level="13" /> <!-- Slightly Strong M. Atk. -->
 			<skill id="4412" level="9" /> <!-- Slightly Weak P. Def. -->
 			<skill id="4413" level="10" /> <!-- Slightly Weak M. Def. -->
-			<skill id="4414" level="2" /> <!-- Standard Type -->
-			<skill id="4415" level="5" /> <!-- Blunt Weapons -->
+			<skill id="4415" level="5" /> <!-- Blunt Weapon -->
 			<skill id="4416" level="14" /> <!-- Humans -->
-			<skill id="4445" level="3" /> <!-- Greater Resist Spear Weapons -->
+			<skill id="4445" level="3" /> <!-- Greater Spear Resistance -->
 			<skill id="5466" level="1" /> <!-- Holy Attacks -->
-			<skill id="5620" level="4" /> <!-- Short-Range Physical Attack Weakness -->
+			<skill id="5620" level="4" /> <!-- Melee Attack Vulnerability -->
 			<skill id="6309" level="1" /> <!-- Pain of the Ascetic -->
 			<skill id="6677" level="1" /> <!-- Hold -->
-			<skill id="6678" level="1" /> <!-- Hold Cancel -->
+			<skill id="6678" level="1" /> <!-- Cancel Hold -->
 		</skillList>
 		<exCrtEffect>false</exCrtEffect>
 		<sNpcPropHpRate>2</sNpcPropHpRate>
@@ -6762,19 +6446,17 @@
 		</stats>
 		<status undying="false" canBeSown="true" />
 		<skillList>
-			<skill id="4276" level="5" /> <!-- Weak Point against Bow/Crossbow Weapons -->
+			<skill id="4276" level="5" /> <!-- Bow/Crossbow Vulnerability -->
 			<skill id="4408" level="10" /> <!-- HP Increase (2x) -->
-			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
 			<skill id="4410" level="14" /> <!-- Strong P. Atk. -->
 			<skill id="4411" level="13" /> <!-- Slightly Strong M. Atk. -->
 			<skill id="4412" level="9" /> <!-- Slightly Weak P. Def. -->
 			<skill id="4413" level="10" /> <!-- Slightly Weak M. Def. -->
-			<skill id="4414" level="2" /> <!-- Standard Type -->
-			<skill id="4415" level="5" /> <!-- Blunt Weapons -->
+			<skill id="4415" level="5" /> <!-- Blunt Weapon -->
 			<skill id="4416" level="8" /> <!-- Angels -->
-			<skill id="4445" level="3" /> <!-- Greater Resist Spear Weapons -->
+			<skill id="4445" level="3" /> <!-- Greater Spear Resistance -->
 			<skill id="5466" level="1" /> <!-- Holy Attacks -->
-			<skill id="5620" level="4" /> <!-- Short-Range Physical Attack Weakness -->
+			<skill id="5620" level="4" /> <!-- Melee Attack Vulnerability -->
 			<skill id="6310" level="1" /> <!-- Loss of Quest -->
 		</skillList>
 		<exCrtEffect>false</exCrtEffect>
@@ -6840,9 +6522,7 @@
 		</stats>
 		<status undying="false" canBeSown="true" />
 		<skillList>
-			<skill id="4276" level="5" /> <!-- Weak Point against Bow/Crossbow Weapons -->
-			<skill id="4408" level="1" /> <!-- HP Increase (1x) -->
-			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
+			<skill id="4276" level="5" /> <!-- Bow/Crossbow Vulnerability -->
 			<skill id="4410" level="15" /> <!-- Strong P. Atk. -->
 			<skill id="4411" level="14" /> <!-- Strong M. Atk. -->
 			<skill id="4412" level="14" /> <!-- Strong P. Def. -->
@@ -6850,12 +6530,12 @@
 			<skill id="4414" level="3" /> <!-- Light Armor Type -->
 			<skill id="4415" level="3" /> <!-- One-handed Sword -->
 			<skill id="4416" level="8" /> <!-- Angels -->
-			<skill id="4441" level="5" /> <!-- Greater Resist Mental Derangement -->
-			<skill id="4458" level="2" /> <!-- Spear Weapon Weak Point -->
+			<skill id="4441" level="5" /> <!-- Greater Mental Attack Resistance -->
+			<skill id="4458" level="2" /> <!-- Spear Vulnerability -->
 			<skill id="5466" level="1" /> <!-- Holy Attacks -->
-			<skill id="5620" level="9" /> <!-- Short-Range Physical Attack Weakness -->
-			<skill id="6314" level="1" /> <!-- Sacred Judgement -->
-			<skill id="6315" level="1" /> <!-- Sacred Strike -->
+			<skill id="5620" level="9" /> <!-- Melee Attack Vulnerability -->
+			<skill id="6314" level="1" /> <!-- Divine Judgment -->
+			<skill id="6315" level="1" /> <!-- Divine Blow -->
 		</skillList>
 		<exCrtEffect>true</exCrtEffect>
 		<ai type="BALANCED" aggroRange="300" clanHelpRange="300" isAggressive="true">
@@ -6912,21 +6592,18 @@
 		</stats>
 		<status undying="false" canBeSown="true" />
 		<skillList>
-			<skill id="4276" level="5" /> <!-- Weak Point against Bow/Crossbow Weapons -->
-			<skill id="4408" level="1" /> <!-- HP Increase (1x) -->
-			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
+			<skill id="4276" level="5" /> <!-- Bow/Crossbow Vulnerability -->
 			<skill id="4410" level="14" /> <!-- Strong P. Atk. -->
 			<skill id="4411" level="15" /> <!-- Strong M. Atk. -->
 			<skill id="4412" level="13" /> <!-- Slightly Strong P. Def. -->
 			<skill id="4413" level="14" /> <!-- Strong M. Def. -->
-			<skill id="4414" level="2" /> <!-- Standard Type -->
-			<skill id="4415" level="11" /> <!-- Spears -->
+			<skill id="4415" level="11" /> <!-- Spear -->
 			<skill id="4416" level="8" /> <!-- Angels -->
-			<skill id="4441" level="5" /> <!-- Greater Resist Mental Derangement -->
-			<skill id="4458" level="2" /> <!-- Spear Weapon Weak Point -->
+			<skill id="4441" level="5" /> <!-- Greater Mental Attack Resistance -->
+			<skill id="4458" level="2" /> <!-- Spear Vulnerability -->
 			<skill id="5466" level="1" /> <!-- Holy Attacks -->
 			<skill id="6309" level="1" /> <!-- Pain of the Ascetic -->
-			<skill id="6316" level="1" /> <!-- Accomplish of Authority -->
+			<skill id="6316" level="1" /> <!-- Execution of Authority -->
 		</skillList>
 		<exCrtEffect>true</exCrtEffect>
 		<ai type="BALANCED" aggroRange="300" clanHelpRange="300" isAggressive="true">
@@ -6980,20 +6657,17 @@
 		</stats>
 		<status undying="false" canBeSown="true" />
 		<skillList>
-			<skill id="4276" level="5" /> <!-- Weak Point against Bow/Crossbow Weapons -->
-			<skill id="4408" level="1" /> <!-- HP Increase (1x) -->
-			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
+			<skill id="4276" level="5" /> <!-- Bow/Crossbow Vulnerability -->
 			<skill id="4410" level="15" /> <!-- Strong P. Atk. -->
 			<skill id="4411" level="15" /> <!-- Strong M. Atk. -->
 			<skill id="4412" level="13" /> <!-- Slightly Strong P. Def. -->
 			<skill id="4413" level="14" /> <!-- Strong M. Def. -->
-			<skill id="4414" level="2" /> <!-- Standard Type -->
-			<skill id="4415" level="11" /> <!-- Spears -->
+			<skill id="4415" level="11" /> <!-- Spear -->
 			<skill id="4416" level="8" /> <!-- Angels -->
-			<skill id="4441" level="5" /> <!-- Greater Resist Mental Derangement -->
-			<skill id="4458" level="2" /> <!-- Spear Weapon Weak Point -->
+			<skill id="4441" level="5" /> <!-- Greater Mental Attack Resistance -->
+			<skill id="4458" level="2" /> <!-- Spear Vulnerability -->
 			<skill id="5466" level="1" /> <!-- Holy Attacks -->
-			<skill id="6317" level="1" /> <!-- Sacred Tacit -->
+			<skill id="6317" level="1" /> <!-- Divinity Tacit -->
 		</skillList>
 		<exCrtEffect>true</exCrtEffect>
 		<ai type="BALANCED" aggroRange="300" clanHelpRange="300" isAggressive="true">
@@ -7045,9 +6719,7 @@
 		</stats>
 		<status undying="false" canBeSown="true" />
 		<skillList>
-			<skill id="4276" level="5" /> <!-- Weak Point against Bow/Crossbow Weapons -->
-			<skill id="4408" level="1" /> <!-- HP Increase (1x) -->
-			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
+			<skill id="4276" level="5" /> <!-- Bow/Crossbow Vulnerability -->
 			<skill id="4410" level="14" /> <!-- Strong P. Atk. -->
 			<skill id="4411" level="14" /> <!-- Strong M. Atk. -->
 			<skill id="4412" level="13" /> <!-- Slightly Strong P. Def. -->
@@ -7055,11 +6727,11 @@
 			<skill id="4414" level="3" /> <!-- Light Armor Type -->
 			<skill id="4415" level="3" /> <!-- One-handed Sword -->
 			<skill id="4416" level="8" /> <!-- Angels -->
-			<skill id="4441" level="5" /> <!-- Greater Resist Mental Derangement -->
-			<skill id="4458" level="2" /> <!-- Spear Weapon Weak Point -->
+			<skill id="4441" level="5" /> <!-- Greater Mental Attack Resistance -->
+			<skill id="4458" level="2" /> <!-- Spear Vulnerability -->
 			<skill id="5466" level="1" /> <!-- Holy Attacks -->
-			<skill id="5620" level="9" /> <!-- Short-Range Physical Attack Weakness -->
-			<skill id="6327" level="1" /> <!-- Sacred Worship -->
+			<skill id="5620" level="9" /> <!-- Melee Attack Vulnerability -->
+			<skill id="6327" level="1" /> <!-- Divinity Worship -->
 		</skillList>
 		<exCrtEffect>true</exCrtEffect>
 		<ai type="BALANCED" aggroRange="300" clanHelpRange="300" isAggressive="true">
@@ -7114,25 +6786,23 @@
 		</stats>
 		<status undying="false" canBeSown="true" />
 		<skillList>
-			<skill id="4276" level="4" /> <!-- Weak Point against Bow/Crossbow Weapons -->
-			<skill id="4285" level="4" /> <!-- Resist Sleep Attacks -->
-			<skill id="4287" level="4" /> <!-- Resist Hold Attacks -->
+			<skill id="4276" level="4" /> <!-- Bow/Crossbow Vulnerability -->
+			<skill id="4285" level="4" /> <!-- Sleep Resistance -->
+			<skill id="4287" level="4" /> <!-- Hold Resistance -->
 			<skill id="4408" level="10" /> <!-- HP Increase (2x) -->
-			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
 			<skill id="4410" level="17" /> <!-- Very Strong P. Atk. -->
 			<skill id="4411" level="16" /> <!-- Very Strong M. Atk. -->
 			<skill id="4412" level="6" /> <!-- Very Weak P. Def. -->
 			<skill id="4413" level="13" /> <!-- Slightly Strong M. Def. -->
-			<skill id="4414" level="2" /> <!-- Standard Type -->
-			<skill id="4415" level="5" /> <!-- Blunt Weapons -->
+			<skill id="4415" level="5" /> <!-- Blunt Weapon -->
 			<skill id="4416" level="8" /> <!-- Angels -->
-			<skill id="4441" level="5" /> <!-- Greater Resist Mental Derangement -->
+			<skill id="4441" level="5" /> <!-- Greater Mental Attack Resistance -->
 			<skill id="5466" level="1" /> <!-- Holy Attacks -->
-			<skill id="6316" level="1" /> <!-- Accomplish of Authority -->
-			<skill id="6318" level="1" /> <!-- Divine Shield Protection -->
-			<skill id="6319" level="1" /> <!-- Sacred Magic Protection -->
-			<skill id="6502" level="17" /> <!-- NPC holy shot -->
-			<skill id="6686" level="1" /> <!-- Sacred Protector Cancel -->
+			<skill id="6316" level="1" /> <!-- Execution of Authority -->
+			<skill id="6318" level="1" /> <!-- Holy Shield Defense -->
+			<skill id="6319" level="1" /> <!-- Divine Magic Protection -->
+			<skill id="6502" level="17" /> <!-- Holy Shot -->
+			<skill id="6686" level="1" /> <!-- Cancel Holy Protection -->
 		</skillList>
 		<exCrtEffect>true</exCrtEffect>
 		<sNpcPropHpRate>2</sNpcPropHpRate>
@@ -7184,22 +6854,20 @@
 		</stats>
 		<status undying="false" canBeSown="true" />
 		<skillList>
-			<skill id="4276" level="4" /> <!-- Weak Point against Bow/Crossbow Weapons -->
-			<skill id="4285" level="4" /> <!-- Resist Sleep Attacks -->
-			<skill id="4287" level="4" /> <!-- Resist Hold Attacks -->
+			<skill id="4276" level="4" /> <!-- Bow/Crossbow Vulnerability -->
+			<skill id="4285" level="4" /> <!-- Sleep Resistance -->
+			<skill id="4287" level="4" /> <!-- Hold Resistance -->
 			<skill id="4408" level="10" /> <!-- HP Increase (2x) -->
-			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
 			<skill id="4410" level="16" /> <!-- Very Strong P. Atk. -->
 			<skill id="4411" level="15" /> <!-- Strong M. Atk. -->
 			<skill id="4412" level="12" /> <!-- Slightly Strong P. Def. -->
-			<skill id="4413" level="9" /> <!-- Average M. Def. -->
-			<skill id="4414" level="2" /> <!-- Standard Type -->
+			<skill id="4413" level="9" /> <!-- Slightly Weak M. Def. -->
 			<skill id="4415" level="3" /> <!-- One-handed Sword -->
 			<skill id="4416" level="8" /> <!-- Angels -->
-			<skill id="4441" level="5" /> <!-- Greater Resist Mental Derangement -->
+			<skill id="4441" level="5" /> <!-- Greater Mental Attack Resistance -->
 			<skill id="5466" level="1" /> <!-- Holy Attacks -->
 			<skill id="6328" level="1" /> <!-- Fighter Judgement -->
-			<skill id="6329" level="1" /> <!-- Fighter Strike -->
+			<skill id="6329" level="1" /> <!-- Fighter Blow -->
 		</skillList>
 		<exCrtEffect>true</exCrtEffect>
 		<sNpcPropHpRate>2</sNpcPropHpRate>

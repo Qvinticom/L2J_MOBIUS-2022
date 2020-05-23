@@ -22,8 +22,6 @@
 		</stats>
 		<status attackable="false" />
 		<skillList>
-			<skill id="15494" level="1" />
-			<skill id="5466" level="1" /> <!-- Holy Attack -->
 			<skill id="4410" level="19" /> <!-- Extremely Strong P. Atk. -->
 			<skill id="4411" level="19" /> <!-- Extremely Strong M. Atk. -->
 			<skill id="4412" level="21" /> <!-- Extremely Strong P. Def. -->
@@ -73,11 +71,11 @@
 		</stats>
 		<status attackable="false" />
 		<skillList>
-			<skill id="5465" level="1" /> <!-- Earth Attack -->
 			<skill id="4410" level="12" /> <!-- Slightly Strong P. Atk. -->
 			<skill id="4411" level="12" /> <!-- Slightly Strong M. Atk. -->
 			<skill id="4414" level="1" /> <!-- Heavy Armor Type -->
 			<skill id="4416" level="2" /> <!-- Magic Creatures -->
+			<skill id="5465" level="1" /> <!-- Earth Attack -->
 		</skillList>
 		<ai aggroRange="300" isAggressive="true" />
 		<dropLists>
@@ -118,11 +116,11 @@
 		</stats>
 		<status attackable="false" />
 		<skillList>
-			<skill id="5465" level="1" /> <!-- Earth Attack -->
 			<skill id="4410" level="12" /> <!-- Slightly Strong P. Atk. -->
 			<skill id="4411" level="12" /> <!-- Slightly Strong M. Atk. -->
 			<skill id="4414" level="1" /> <!-- Heavy Armor Type -->
 			<skill id="4416" level="2" /> <!-- Magic Creatures -->
+			<skill id="5465" level="1" /> <!-- Earth Attack -->
 		</skillList>
 		<dropLists>
 			<drop>
@@ -162,9 +160,9 @@
 		</stats>
 		<status attackable="false" />
 		<skillList>
-			<skill id="5465" level="1" /> <!-- Earth Attack -->
 			<skill id="4414" level="3" /> <!-- Light Armor Type -->
 			<skill id="4416" level="6" /> <!-- Humanoids -->
+			<skill id="5465" level="1" /> <!-- Earth Attack -->
 		</skillList>
 		<ai aggroRange="1000" isAggressive="true" />
 		<dropLists>
@@ -212,11 +210,11 @@
 		</stats>
 		<status attackable="false" />
 		<skillList>
-			<skill id="5465" level="1" /> <!-- Earth Attack -->
 			<skill id="4412" level="14" /> <!-- Strong P. Def. -->
 			<skill id="4413" level="14" /> <!-- Strong M. Def. -->
 			<skill id="4414" level="3" /> <!-- Light Armor Type -->
 			<skill id="4416" level="6" /> <!-- Humanoids -->
+			<skill id="5465" level="1" /> <!-- Earth Attack -->
 		</skillList>
 		<dropLists>
 			<drop>
@@ -567,11 +565,11 @@
 		</stats>
 		<status attackable="false" />
 		<skillList>
+			<skill id="4032" level="1" /> <!-- Power Strike -->
 			<skill id="4412" level="9" /> <!-- Slightly Weak P. Def. -->
 			<skill id="4413" level="13" /> <!-- Slightly Strong M. Def. -->
 			<skill id="4414" level="1" /> <!-- Heavy Armor Type -->
 			<skill id="4416" level="3" /> <!-- Beast -->
-			<skill id="4032" level="1" /> <!-- Power Strike -->
 		</skillList>
 		<collision>
 			<radius normal="22" grown="27" />
@@ -609,11 +607,11 @@
 		</stats>
 		<status attackable="false" />
 		<skillList>
+			<skill id="4032" level="1" /> <!-- Power Strike -->
 			<skill id="4412" level="9" /> <!-- Slightly Weak P. Def. -->
 			<skill id="4413" level="13" /> <!-- Slightly Strong M. Def. -->
 			<skill id="4414" level="1" /> <!-- Heavy Armor Type -->
 			<skill id="4416" level="4" /> <!-- Animals -->
-			<skill id="4032" level="1" /> <!-- Power Strike -->
 		</skillList>
 		<collision>
 			<radius normal="15" grown="18" />
@@ -649,12 +647,12 @@
 		</stats>
 		<status attackable="false" />
 		<skillList>
+			<skill id="4085" level="1" /> <!-- Critical Damage -->
+			<skill id="4086" level="1" /> <!-- Critical Chance -->
 			<skill id="4410" level="8" /> <!-- Weak P. Atk. -->
 			<skill id="4411" level="8" /> <!-- Weak M. Atk. -->
 			<skill id="4412" level="14" /> <!-- Strong P. Def. -->
 			<skill id="4413" level="14" /> <!-- Strong M. Def. -->
-			<skill id="4085" level="1" /> <!-- Critical Damage -->
-			<skill id="4086" level="1" /> <!-- Critical Chance -->
 			<skill id="4416" level="8" /> <!-- Angels -->
 		</skillList>
 		<collision>
@@ -692,8 +690,8 @@
 		</stats>
 		<status attackable="false" />
 		<skillList>
+			<skill id="4416" level="17" /> <!-- Orcs -->
 			<skill id="5465" level="1" /> <!-- Earth Attack -->
-			<skill id="4416" level="17" /> <!-- Humanoids -->
 		</skillList>
 		<ai aggroRange="600" isAggressive="true" />
 		<dropLists>
@@ -734,8 +732,8 @@
 		</stats>
 		<status attackable="false" />
 		<skillList>
+			<skill id="4416" level="17" /> <!-- Orcs -->
 			<skill id="5465" level="1" /> <!-- Earth Attack -->
-			<skill id="4416" level="17" /> <!-- Humanoids -->
 		</skillList>
 		<ai aggroRange="600" isAggressive="true" />
 		<dropLists>
@@ -777,9 +775,8 @@
 		</stats>
 		<status attackable="false" />
 		<skillList>
+			<skill id="4416" level="17" /> <!-- Orcs -->
 			<skill id="5465" level="1" /> <!-- Earth Attack -->
-			<skill id="23568" level="1" /> <!-- Monster Dueling -->
-			<skill id="4416" level="17" /> <!-- Humanoids -->
 			<skill id="15629" level="1" /> <!-- Nerva's Mental Blow -->
 		</skillList>
 		<ai aggroRange="600" isAggressive="true" />
@@ -822,8 +819,8 @@
 		</stats>
 		<status attackable="false" />
 		<skillList>
+			<skill id="4416" level="17" /> <!-- Orcs -->
 			<skill id="5465" level="1" /> <!-- Earth Attack -->
-			<skill id="4416" level="17" /> <!-- Humanoids -->
 			<skill id="15629" level="1" /> <!-- Nerva's Mental Blow -->
 		</skillList>
 		<ai aggroRange="600" isAggressive="true" />
@@ -866,8 +863,8 @@
 		</stats>
 		<status attackable="false" />
 		<skillList>
+			<skill id="4416" level="17" /> <!-- Orcs -->
 			<skill id="5465" level="1" /> <!-- Earth Attack -->
-			<skill id="4416" level="17" /> <!-- Humanoids -->
 		</skillList>
 		<ai aggroRange="600" isAggressive="true" />
 		<dropLists>
@@ -909,9 +906,8 @@
 		</stats>
 		<status attackable="false" />
 		<skillList>
+			<skill id="4416" level="17" /> <!-- Orcs -->
 			<skill id="5465" level="1" /> <!-- Earth Attack -->
-			<skill id="23568" level="1" /> <!-- Monster Dueling -->
-			<skill id="4416" level="17" /> <!-- Humanoids -->
 		</skillList>
 		<ai aggroRange="600" isAggressive="true" />
 		<dropLists>
@@ -953,8 +949,8 @@
 		</stats>
 		<status attackable="false" />
 		<skillList>
+			<skill id="4416" level="17" /> <!-- Orcs -->
 			<skill id="5465" level="1" /> <!-- Earth Attack -->
-			<skill id="4416" level="17" /> <!-- Humanoids -->
 		</skillList>
 		<ai aggroRange="600" isAggressive="true" />
 		<dropLists>
@@ -996,8 +992,8 @@
 		</stats>
 		<status attackable="false" />
 		<skillList>
+			<skill id="4416" level="17" /> <!-- Orcs -->
 			<skill id="5465" level="1" /> <!-- Earth Attack -->
-			<skill id="4416" level="17" /> <!-- Humanoids -->
 		</skillList>
 		<ai aggroRange="600" isAggressive="true" />
 		<dropLists>
@@ -1039,8 +1035,8 @@
 		</stats>
 		<status attackable="false" />
 		<skillList>
+			<skill id="4416" level="17" /> <!-- Orcs -->
 			<skill id="5465" level="1" /> <!-- Earth Attack -->
-			<skill id="4416" level="17" /> <!-- Humanoids -->
 			<skill id="15629" level="1" /> <!-- Nerva's Mental Blow -->
 		</skillList>
 		<ai aggroRange="600" isAggressive="true" />
@@ -1083,8 +1079,8 @@
 		</stats>
 		<status attackable="false" />
 		<skillList>
+			<skill id="4416" level="17" /> <!-- Orcs -->
 			<skill id="5465" level="1" /> <!-- Earth Attack -->
-			<skill id="4416" level="17" /> <!-- Humanoids -->
 		</skillList>
 		<ai aggroRange="600" isAggressive="true" />
 		<dropLists>
@@ -1126,8 +1122,8 @@
 		</stats>
 		<status attackable="false" />
 		<skillList>
+			<skill id="4416" level="17" /> <!-- Orcs -->
 			<skill id="5465" level="1" /> <!-- Earth Attack -->
-			<skill id="4416" level="17" /> <!-- Humanoids -->
 		</skillList>
 		<ai aggroRange="600" isAggressive="true" />
 		<dropLists>
@@ -1169,12 +1165,12 @@
 		</stats>
 		<status attackable="false" />
 		<skillList>
-			<skill id="5465" level="1" /> <!-- Earth Attack -->
 			<skill id="4410" level="8" /> <!-- Weak P. Atk. -->
 			<skill id="4411" level="8" /> <!-- Weak M. Atk. -->
 			<skill id="4412" level="7" /> <!-- Weak P. Def. -->
 			<skill id="4413" level="7" /> <!-- Weak M. Def. -->
-			<skill id="4416" level="17" /> <!-- Humanoids -->
+			<skill id="4416" level="17" /> <!-- Orcs -->
+			<skill id="5465" level="1" /> <!-- Earth Attack -->
 		</skillList>
 		<ai aggroRange="600" isAggressive="true" />
 		<dropLists>
@@ -1216,12 +1212,12 @@
 		</stats>
 		<status attackable="false" />
 		<skillList>
-			<skill id="5465" level="1" /> <!-- Earth Attack -->
 			<skill id="4410" level="8" /> <!-- Weak P. Atk. -->
 			<skill id="4411" level="8" /> <!-- Weak M. Atk. -->
 			<skill id="4412" level="7" /> <!-- Weak P. Def. -->
 			<skill id="4413" level="7" /> <!-- Weak M. Def. -->
-			<skill id="4416" level="17" /> <!-- Humanoids -->
+			<skill id="4416" level="17" /> <!-- Orcs -->
+			<skill id="5465" level="1" /> <!-- Earth Attack -->
 			<skill id="15629" level="1" /> <!-- Nerva's Mental Blow -->
 		</skillList>
 		<ai aggroRange="600" isAggressive="true" />
@@ -1263,12 +1259,12 @@
 		</stats>
 		<status attackable="false" />
 		<skillList>
-			<skill id="5465" level="1" /> <!-- Earth Attack -->
 			<skill id="4410" level="8" /> <!-- Weak P. Atk. -->
 			<skill id="4411" level="8" /> <!-- Weak M. Atk. -->
 			<skill id="4412" level="7" /> <!-- Weak P. Def. -->
 			<skill id="4413" level="7" /> <!-- Weak M. Def. -->
-			<skill id="4416" level="17" /> <!-- Humanoids -->
+			<skill id="4416" level="17" /> <!-- Orcs -->
+			<skill id="5465" level="1" /> <!-- Earth Attack -->
 		</skillList>
 		<ai aggroRange="600" isAggressive="true" />
 		<dropLists>
@@ -1309,12 +1305,12 @@
 		</stats>
 		<status attackable="false" />
 		<skillList>
-			<skill id="5465" level="1" /> <!-- Earth Attack -->
 			<skill id="4410" level="8" /> <!-- Weak P. Atk. -->
 			<skill id="4411" level="8" /> <!-- Weak M. Atk. -->
 			<skill id="4412" level="7" /> <!-- Weak P. Def. -->
 			<skill id="4413" level="7" /> <!-- Weak M. Def. -->
-			<skill id="4416" level="17" /> <!-- Humanoids -->
+			<skill id="4416" level="17" /> <!-- Orcs -->
+			<skill id="5465" level="1" /> <!-- Earth Attack -->
 		</skillList>
 		<ai aggroRange="600" isAggressive="true" />
 		<dropLists>
@@ -1355,8 +1351,8 @@
 		</stats>
 		<status attackable="false" />
 		<skillList>
-			<skill id="5465" level="1" /> <!-- Earth Attack -->
 			<skill id="4416" level="2" /> <!-- Magic Creatures -->
+			<skill id="5465" level="1" /> <!-- Earth Attack -->
 		</skillList>
 		<ai aggroRange="600" isAggressive="true" />
 		<dropLists>
@@ -1396,11 +1392,11 @@
 		</stats>
 		<status attackable="false" />
 		<skillList>
-			<skill id="5467" level="1" /> <!-- Strong against the dark elemental. -->
-			<skill id="4412" level="10" /> <!-- Slightly Weak P. Def. -->
-			<skill id="4458" level="4" /> <!-- Spear Vulnerability -->
-			<skill id="4450" level="2" /> <!-- Stun Vulnerability -->
+			<skill id="4412" level="16" /> <!-- Very Strong P. Def. -->
+			<skill id="4413" level="16" /> <!-- Very Strong M. Def. -->
 			<skill id="4416" level="1" /> <!-- Undead -->
+			<skill id="4458" level="4" /> <!-- Spear Vulnerability -->
+			<skill id="5467" level="1" /> <!-- Dark Attack -->
 		</skillList>
 		<ai aggroRange="300" isAggressive="true" />
 		<dropLists>
@@ -1442,11 +1438,11 @@
 		</stats>
 		<status attackable="false" />
 		<skillList>
-			<skill id="5467" level="1" /> <!-- Strong against the dark elemental. -->
-			<skill id="4412" level="10" /> <!-- Slightly Weak P. Def. -->
-			<skill id="4458" level="4" /> <!-- Spear Vulnerability -->
-			<skill id="4450" level="2" /> <!-- Stun Vulnerability -->
+			<skill id="4412" level="16" /> <!-- Very Strong P. Def. -->
+			<skill id="4413" level="16" /> <!-- Very Strong M. Def. -->
 			<skill id="4416" level="1" /> <!-- Undead -->
+			<skill id="4458" level="4" /> <!-- Spear Vulnerability -->
+			<skill id="5467" level="1" /> <!-- Dark Attack -->
 		</skillList>
 		<ai aggroRange="300" isAggressive="true" />
 		<dropLists>
@@ -1488,11 +1484,11 @@
 		</stats>
 		<status attackable="false" />
 		<skillList>
-			<skill id="5467" level="1" /> <!-- Strong against the dark elemental. -->
-			<skill id="4412" level="10" /> <!-- Slightly Weak P. Def. -->
-			<skill id="4458" level="4" /> <!-- Spear Vulnerability -->
-			<skill id="4450" level="2" /> <!-- Stun Vulnerability -->
+			<skill id="4412" level="16" /> <!-- Very Strong P. Def. -->
+			<skill id="4413" level="16" /> <!-- Very Strong M. Def. -->
 			<skill id="4416" level="1" /> <!-- Undead -->
+			<skill id="4458" level="4" /> <!-- Spear Vulnerability -->
+			<skill id="5467" level="1" /> <!-- Dark Attack -->
 		</skillList>
 		<ai aggroRange="300" isAggressive="true" />
 		<dropLists>
@@ -1532,11 +1528,11 @@
 		</stats>
 		<status attackable="false" />
 		<skillList>
-			<skill id="5467" level="1" /> <!-- Strong against the dark elemental. -->
-			<skill id="4412" level="10" /> <!-- Slightly Weak P. Def. -->
-			<skill id="4458" level="4" /> <!-- Spear Vulnerability -->
-			<skill id="4450" level="2" /> <!-- Stun Vulnerability -->
+			<skill id="4412" level="16" /> <!-- Very Strong P. Def. -->
+			<skill id="4413" level="16" /> <!-- Very Strong M. Def. -->
 			<skill id="4416" level="1" /> <!-- Undead -->
+			<skill id="4458" level="4" /> <!-- Spear Vulnerability -->
+			<skill id="5467" level="1" /> <!-- Dark Attack -->
 		</skillList>
 		<ai aggroRange="300" isAggressive="true" />
 		<dropLists>
@@ -1577,11 +1573,11 @@
 		</stats>
 		<status attackable="false" />
 		<skillList>
-			<skill id="5467" level="1" /> <!-- Strong against the dark elemental. -->
-			<skill id="4412" level="10" /> <!-- Slightly Weak P. Def. -->
-			<skill id="4458" level="4" /> <!-- Spear Vulnerability -->
-			<skill id="4450" level="2" /> <!-- Stun Vulnerability -->
+			<skill id="4412" level="16" /> <!-- Very Strong P. Def. -->
+			<skill id="4413" level="16" /> <!-- Very Strong M. Def. -->
 			<skill id="4416" level="1" /> <!-- Undead -->
+			<skill id="4458" level="4" /> <!-- Spear Vulnerability -->
+			<skill id="5467" level="1" /> <!-- Dark Attack -->
 		</skillList>
 		<ai aggroRange="300" isAggressive="true" />
 		<dropLists>
@@ -1622,11 +1618,11 @@
 		</stats>
 		<status attackable="false" />
 		<skillList>
-			<skill id="5467" level="1" /> <!-- Strong against the dark elemental. -->
-			<skill id="4412" level="10" /> <!-- Slightly Weak P. Def. -->
-			<skill id="4458" level="4" /> <!-- Spear Vulnerability -->
-			<skill id="4450" level="2" /> <!-- Stun Vulnerability -->
+			<skill id="4412" level="16" /> <!-- Very Strong P. Def. -->
+			<skill id="4413" level="16" /> <!-- Very Strong M. Def. -->
 			<skill id="4416" level="1" /> <!-- Undead -->
+			<skill id="4458" level="4" /> <!-- Spear Vulnerability -->
+			<skill id="5467" level="1" /> <!-- Dark Attack -->
 		</skillList>
 		<ai aggroRange="300" isAggressive="true" />
 		<dropLists>
@@ -1668,11 +1664,11 @@
 		</stats>
 		<status attackable="false" />
 		<skillList>
-			<skill id="5467" level="1" /> <!-- Strong against the dark elemental. -->
-			<skill id="4412" level="10" /> <!-- Slightly Weak P. Def. -->
-			<skill id="4458" level="4" /> <!-- Spear Vulnerability -->
-			<skill id="4450" level="2" /> <!-- Stun Vulnerability -->
+			<skill id="4412" level="16" /> <!-- Very Strong P. Def. -->
+			<skill id="4413" level="16" /> <!-- Very Strong M. Def. -->
 			<skill id="4416" level="1" /> <!-- Undead -->
+			<skill id="4458" level="4" /> <!-- Spear Vulnerability -->
+			<skill id="5467" level="1" /> <!-- Dark Attack -->
 		</skillList>
 		<ai aggroRange="300" isAggressive="true" />
 		<dropLists>
@@ -1713,8 +1709,10 @@
 		</stats>
 		<status attackable="false" />
 		<skillList>
-			<skill id="5467" level="1" /> <!-- Strong against the dark elemental. -->
+			<skill id="4412" level="16" /> <!-- Very Strong P. Def. -->
+			<skill id="4413" level="16" /> <!-- Very Strong M. Def. -->
 			<skill id="4416" level="1" /> <!-- Undead -->
+			<skill id="5467" level="1" /> <!-- Dark Attack -->
 		</skillList>
 		<dropLists>
 			<drop>
@@ -1760,10 +1758,10 @@
 		</stats>
 		<status attackable="false" />
 		<skillList>
-			<skill id="5465" level="1" /> <!-- Earth Attack -->
 			<skill id="4410" level="13" /> <!-- Slightly Strong P. Atk. -->
 			<skill id="4411" level="13" /> <!-- Slightly Strong M. Atk. -->
 			<skill id="4416" level="6" /> <!-- Humanoids -->
+			<skill id="5465" level="1" /> <!-- Earth Attack -->
 		</skillList>
 		<dropLists>
 			<drop>
@@ -1813,10 +1811,10 @@
 		</stats>
 		<status attackable="false" />
 		<skillList>
-			<skill id="5465" level="1" /> <!-- Earth Attack -->
 			<skill id="4410" level="13" /> <!-- Slightly Strong P. Atk. -->
 			<skill id="4411" level="13" /> <!-- Slightly Strong M. Atk. -->
 			<skill id="4416" level="6" /> <!-- Humanoids -->
+			<skill id="5465" level="1" /> <!-- Earth Attack -->
 		</skillList>
 		<dropLists>
 			<drop>
@@ -2020,8 +2018,8 @@
 		</stats>
 		<status attackable="false" />
 		<skillList>
-			<skill id="5465" level="1" /> <!-- Earth Attack -->
 			<skill id="4416" level="2" /> <!-- Magic Creatures -->
+			<skill id="5465" level="1" /> <!-- Earth Attack -->
 		</skillList>
 		<dropLists>
 			<drop>
@@ -2072,9 +2070,9 @@
 		</stats>
 		<status attackable="false" />
 		<skillList>
-			<skill id="5465" level="1" /> <!-- Earth Attack -->
 			<skill id="4410" level="14" /> <!-- Strong P. Atk. -->
 			<skill id="4416" level="8" /> <!-- Angels -->
+			<skill id="5465" level="1" /> <!-- Earth Attack -->
 		</skillList>
 		<dropLists>
 			<drop>
@@ -2124,9 +2122,9 @@
 		</stats>
 		<status attackable="false" />
 		<skillList>
-			<skill id="5465" level="1" /> <!-- Earth Attack -->
 			<skill id="4410" level="14" /> <!-- Strong P. Atk. -->
 			<skill id="4416" level="3" /> <!-- Beast -->
+			<skill id="5465" level="1" /> <!-- Earth Attack -->
 		</skillList>
 		<dropLists>
 			<drop>
@@ -2177,9 +2175,9 @@
 		</stats>
 		<status attackable="false" />
 		<skillList>
-			<skill id="5465" level="1" /> <!-- Earth Attack -->
 			<skill id="4412" level="9" /> <!-- Slightly Weak P. Def. -->
 			<skill id="4416" level="3" /> <!-- Beast -->
+			<skill id="5465" level="1" /> <!-- Earth Attack -->
 		</skillList>
 		<dropLists>
 			<drop>
@@ -2230,8 +2228,8 @@
 		</stats>
 		<status attackable="false" />
 		<skillList>
-			<skill id="5465" level="1" /> <!-- Earth Attack -->
 			<skill id="4416" level="9" /> <!-- Demons -->
+			<skill id="5465" level="1" /> <!-- Earth Attack -->
 		</skillList>
 		<dropLists>
 			<drop>
@@ -2281,10 +2279,10 @@
 		</stats>
 		<status attackable="false" />
 		<skillList>
-			<skill id="5465" level="1" /> <!-- Earth Attack -->
 			<skill id="4410" level="10" /> <!-- Slightly Weak P. Atk. -->
 			<skill id="4412" level="9" /> <!-- Slightly Weak P. Def. -->
 			<skill id="4416" level="3" /> <!-- Beast -->
+			<skill id="5465" level="1" /> <!-- Earth Attack -->
 		</skillList>
 		<dropLists>
 			<drop>
@@ -2335,9 +2333,9 @@
 		</stats>
 		<status attackable="false" />
 		<skillList>
-			<skill id="5465" level="1" /> <!-- Earth Attack -->
 			<skill id="4413" level="10" /> <!-- Slightly Weak M. Def. -->
 			<skill id="4416" level="3" /> <!-- Beast -->
+			<skill id="5465" level="1" /> <!-- Earth Attack -->
 		</skillList>
 		<dropLists>
 			<drop>
@@ -2387,10 +2385,10 @@
 		</stats>
 		<status attackable="false" />
 		<skillList>
-			<skill id="5465" level="1" /> <!-- Earth Attack -->
 			<skill id="4410" level="10" /> <!-- Slightly Weak P. Atk. -->
 			<skill id="4413" level="10" /> <!-- Slightly Weak M. Def. -->
 			<skill id="4416" level="3" /> <!-- Beast -->
+			<skill id="5465" level="1" /> <!-- Earth Attack -->
 		</skillList>
 		<dropLists>
 			<drop>
@@ -2441,8 +2439,8 @@
 		</stats>
 		<status attackable="false" />
 		<skillList>
-			<skill id="5465" level="1" /> <!-- Earth Attack -->
 			<skill id="4416" level="11" /> <!-- Giants -->
+			<skill id="5465" level="1" /> <!-- Earth Attack -->
 		</skillList>
 		<dropLists>
 			<drop>
@@ -2493,8 +2491,8 @@
 		</stats>
 		<status attackable="false" />
 		<skillList>
-			<skill id="5465" level="1" /> <!-- Earth Attack -->
 			<skill id="4416" level="11" /> <!-- Giants -->
+			<skill id="5465" level="1" /> <!-- Earth Attack -->
 		</skillList>
 		<dropLists>
 			<drop>
@@ -2544,9 +2542,9 @@
 		</stats>
 		<status attackable="false" />
 		<skillList>
-			<skill id="5465" level="1" /> <!-- Earth Attack -->
 			<skill id="4410" level="13" /> <!-- Slightly Strong P. Atk. -->
 			<skill id="4416" level="6" /> <!-- Humanoids -->
+			<skill id="5465" level="1" /> <!-- Earth Attack -->
 		</skillList>
 		<dropLists>
 			<drop>
@@ -2597,9 +2595,9 @@
 		</stats>
 		<status attackable="false" />
 		<skillList>
-			<skill id="5465" level="1" /> <!-- Earth Attack -->
 			<skill id="4276" level="2" /> <!-- Bow/Crossbow Vulnerability -->
 			<skill id="4416" level="9" /> <!-- Demons -->
+			<skill id="5465" level="1" /> <!-- Earth Attack -->
 		</skillList>
 		<dropLists>
 			<drop>
@@ -2695,9 +2693,9 @@
 		</stats>
 		<status attackable="false" />
 		<skillList>
-			<skill id="5465" level="1" /> <!-- Earth Attack -->
 			<skill id="4410" level="14" /> <!-- Strong P. Atk. -->
 			<skill id="4416" level="8" /> <!-- Angels -->
+			<skill id="5465" level="1" /> <!-- Earth Attack -->
 		</skillList>
 		<dropLists>
 			<drop>
@@ -2747,9 +2745,9 @@
 		</stats>
 		<status attackable="false" />
 		<skillList>
-			<skill id="5465" level="1" /> <!-- Earth Attack -->
 			<skill id="4410" level="14" /> <!-- Strong P. Atk. -->
 			<skill id="4416" level="3" /> <!-- Beast -->
+			<skill id="5465" level="1" /> <!-- Earth Attack -->
 		</skillList>
 		<dropLists>
 			<drop>
@@ -2801,9 +2799,9 @@
 		</stats>
 		<status attackable="false" />
 		<skillList>
-			<skill id="5465" level="1" /> <!-- Earth Attack -->
 			<skill id="4412" level="9" /> <!-- Slightly Weak P. Def. -->
 			<skill id="4416" level="3" /> <!-- Beast -->
+			<skill id="5465" level="1" /> <!-- Earth Attack -->
 		</skillList>
 		<dropLists>
 			<drop>
@@ -2855,8 +2853,8 @@
 		</stats>
 		<status attackable="false" />
 		<skillList>
-			<skill id="5465" level="1" /> <!-- Earth Attack -->
 			<skill id="4416" level="9" /> <!-- Demons -->
+			<skill id="5465" level="1" /> <!-- Earth Attack -->
 		</skillList>
 		<dropLists>
 			<drop>
@@ -2906,10 +2904,10 @@
 		</stats>
 		<status attackable="false" />
 		<skillList>
-			<skill id="5465" level="1" /> <!-- Earth Attack -->
 			<skill id="4410" level="10" /> <!-- Slightly Weak P. Atk. -->
 			<skill id="4412" level="9" /> <!-- Slightly Weak P. Def. -->
 			<skill id="4416" level="3" /> <!-- Beast -->
+			<skill id="5465" level="1" /> <!-- Earth Attack -->
 		</skillList>
 		<dropLists>
 			<drop>
@@ -2959,9 +2957,9 @@
 		</stats>
 		<status attackable="false" />
 		<skillList>
-			<skill id="5465" level="1" /> <!-- Earth Attack -->
 			<skill id="4413" level="10" /> <!-- Slightly Weak M. Def. -->
 			<skill id="4416" level="3" /> <!-- Beast -->
+			<skill id="5465" level="1" /> <!-- Earth Attack -->
 		</skillList>
 		<dropLists>
 			<drop>
@@ -3011,10 +3009,10 @@
 		</stats>
 		<status attackable="false" />
 		<skillList>
-			<skill id="5465" level="1" /> <!-- Earth Attack -->
 			<skill id="4410" level="10" /> <!-- Slightly Weak P. Atk. -->
 			<skill id="4413" level="10" /> <!-- Slightly Weak M. Def. -->
 			<skill id="4416" level="3" /> <!-- Beast -->
+			<skill id="5465" level="1" /> <!-- Earth Attack -->
 		</skillList>
 		<dropLists>
 			<drop>
@@ -3064,9 +3062,9 @@
 		</stats>
 		<status attackable="false" />
 		<skillList>
-			<skill id="5462" level="1" /> <!-- Fire Attack -->
-			<skill id="4458" level="3" /> <!-- Spear Vulnerability -->
 			<skill id="4416" level="3" /> <!-- Beast -->
+			<skill id="4458" level="3" /> <!-- Spear Vulnerability -->
+			<skill id="5462" level="1" /> <!-- Fire Attack -->
 		</skillList>
 		<collision>
 			<radius normal="10" />
@@ -3106,8 +3104,8 @@
 		</stats>
 		<status attackable="false" />
 		<skillList>
-			<skill id="5462" level="1" /> <!-- Fire Attack -->
 			<skill id="4416" level="3" /> <!-- Beast -->
+			<skill id="5462" level="1" /> <!-- Fire Attack -->
 		</skillList>
 		<collision>
 			<radius normal="10" />
@@ -3147,11 +3145,11 @@
 		</stats>
 		<status attackable="false" />
 		<skillList>
-			<skill id="5462" level="1" /> <!-- Fire Attack -->
 			<skill id="4410" level="12" /> <!-- Slightly Strong P. Atk. -->
 			<skill id="4411" level="12" /> <!-- Slightly Strong M. Atk. -->
-			<skill id="4458" level="3" /> <!-- Spear Vulnerability -->
 			<skill id="4416" level="3" /> <!-- Beast -->
+			<skill id="4458" level="3" /> <!-- Spear Vulnerability -->
+			<skill id="5462" level="1" /> <!-- Fire Attack -->
 		</skillList>
 		<dropLists>
 			<drop>
@@ -3203,11 +3201,11 @@
 		</stats>
 		<status attackable="false" />
 		<skillList>
-			<skill id="5462" level="1" /> <!-- Fire Attack -->
 			<skill id="4410" level="13" /> <!-- Slightly Strong P. Atk. -->
 			<skill id="4411" level="12" /> <!-- Slightly Strong M. Atk. -->
-			<skill id="4458" level="3" /> <!-- Spear Vulnerability -->
 			<skill id="4416" level="3" /> <!-- Beast -->
+			<skill id="4458" level="3" /> <!-- Spear Vulnerability -->
+			<skill id="5462" level="1" /> <!-- Fire Attack -->
 		</skillList>
 		<dropLists>
 			<drop>
@@ -3259,10 +3257,10 @@
 		</stats>
 		<status attackable="false" />
 		<skillList>
-			<skill id="5462" level="1" /> <!-- Fire Attack -->
 			<skill id="4410" level="12" /> <!-- Slightly Strong P. Atk. -->
 			<skill id="4411" level="12" /> <!-- Slightly Strong M. Atk. -->
 			<skill id="4416" level="3" /> <!-- Beast -->
+			<skill id="5462" level="1" /> <!-- Fire Attack -->
 		</skillList>
 		<dropLists>
 			<drop>
@@ -3314,9 +3312,9 @@
 		</stats>
 		<status attackable="false" />
 		<skillList>
-			<skill id="5462" level="1" /> <!-- Fire Attack -->
 			<skill id="4225" level="2" /> <!-- Stun Resistance -->
 			<skill id="4416" level="9" /> <!-- Demons -->
+			<skill id="5462" level="1" /> <!-- Fire Attack -->
 		</skillList>
 		<dropLists>
 			<drop>
@@ -3372,9 +3370,9 @@
 		</stats>
 		<status attackable="false" />
 		<skillList>
-			<skill id="5462" level="1" /> <!-- Fire Attack -->
 			<skill id="4287" level="2" /> <!-- Hold Resistance -->
 			<skill id="4416" level="9" /> <!-- Demons -->
+			<skill id="5462" level="1" /> <!-- Fire Attack -->
 		</skillList>
 		<dropLists>
 			<drop>
@@ -3430,10 +3428,10 @@
 		</stats>
 		<status attackable="false" />
 		<skillList>
-			<skill id="5462" level="1" /> <!-- Fire Attack -->
-			<skill id="4458" level="3" /> <!-- Spear Vulnerability -->
 			<skill id="4225" level="2" /> <!-- Stun Resistance -->
 			<skill id="4416" level="9" /> <!-- Demons -->
+			<skill id="4458" level="3" /> <!-- Spear Vulnerability -->
+			<skill id="5462" level="1" /> <!-- Fire Attack -->
 		</skillList>
 		<dropLists>
 			<drop>
@@ -3489,10 +3487,10 @@
 		</stats>
 		<status attackable="false" />
 		<skillList>
-			<skill id="5462" level="1" /> <!-- Fire Attack -->
-			<skill id="4458" level="3" /> <!-- Spear Vulnerability -->
 			<skill id="4287" level="2" /> <!-- Hold Resistance -->
 			<skill id="4416" level="9" /> <!-- Demons -->
+			<skill id="4458" level="3" /> <!-- Spear Vulnerability -->
+			<skill id="5462" level="1" /> <!-- Fire Attack -->
 		</skillList>
 		<dropLists>
 			<drop>
@@ -3546,10 +3544,10 @@
 		</stats>
 		<status attackable="false" />
 		<skillList>
-			<skill id="5462" level="1" /> <!-- Fire Attack -->
 			<skill id="4410" level="18" /> <!-- Extremely Strong P. Atk. -->
 			<skill id="4411" level="18" /> <!-- Extremely Strong M. Atk. -->
 			<skill id="4416" level="9" /> <!-- Demons -->
+			<skill id="5462" level="1" /> <!-- Fire Attack -->
 		</skillList>
 		<collision>
 			<radius normal="15" />
@@ -3589,14 +3587,12 @@
 		</stats>
 		<status attackable="false" />
 		<skillList>
-			<skill id="5465" level="1" /> <!-- Earth Attack -->
 			<skill id="4412" level="8" /> <!-- Weak P. Def. -->
+			<skill id="4416" level="10" /> <!-- Dragons -->
 			<skill id="4457" level="1" /> <!-- Fist Weapon Vulnerability -->
 			<skill id="4459" level="1" /> <!-- Dualsword Vulnerability -->
 			<skill id="4460" level="1" /> <!-- Sword Vulnerability -->
-			<skill id="4379" level="5" /> <!-- Spear Resistance -->
-			<skill id="14823" level="1" /> <!-- Lethal Strike Resistance -->
-			<skill id="4416" level="10" /> <!-- Dragons -->
+			<skill id="5465" level="1" /> <!-- Earth Attack -->
 		</skillList>
 		<dropLists>
 			<drop>
@@ -3646,15 +3642,13 @@
 		</stats>
 		<status attackable="false" />
 		<skillList>
-			<skill id="5465" level="1" /> <!-- Earth Attack -->
+			<skill id="4225" level="3" /> <!-- Stun Resistance -->
 			<skill id="4412" level="8" /> <!-- Weak P. Def. -->
+			<skill id="4416" level="2" /> <!-- Magic Creatures -->
 			<skill id="4457" level="1" /> <!-- Fist Weapon Vulnerability -->
 			<skill id="4459" level="1" /> <!-- Dualsword Vulnerability -->
 			<skill id="4460" level="1" /> <!-- Sword Vulnerability -->
-			<skill id="4225" level="3" /> <!-- Stun Resistance -->
-			<skill id="4379" level="5" /> <!-- Spear Resistance -->
-			<skill id="14823" level="1" /> <!-- Lethal Strike Resistance -->
-			<skill id="4416" level="2" /> <!-- Magic Creatures -->
+			<skill id="5465" level="1" /> <!-- Earth Attack -->
 		</skillList>
 		<dropLists>
 			<drop>
@@ -3704,14 +3698,12 @@
 		</stats>
 		<status attackable="false" />
 		<skillList>
-			<skill id="5465" level="1" /> <!-- Earth Attack -->
 			<skill id="4412" level="8" /> <!-- Weak P. Def. -->
+			<skill id="4416" level="3" /> <!-- Beast -->
 			<skill id="4457" level="1" /> <!-- Fist Weapon Vulnerability -->
 			<skill id="4459" level="1" /> <!-- Dualsword Vulnerability -->
 			<skill id="4460" level="1" /> <!-- Sword Vulnerability -->
-			<skill id="4379" level="5" /> <!-- Spear Resistance -->
-			<skill id="14823" level="1" /> <!-- Lethal Strike Resistance -->
-			<skill id="4416" level="3" /> <!-- Beast -->
+			<skill id="5465" level="1" /> <!-- Earth Attack -->
 		</skillList>
 		<dropLists>
 			<drop>
@@ -3762,12 +3754,10 @@
 		</stats>
 		<status attackable="false" />
 		<skillList>
-			<skill id="5465" level="1" /> <!-- Earth Attack -->
-			<skill id="4412" level="8" /> <!-- Weak P. Def. -->
 			<skill id="4225" level="3" /> <!-- Stun Resistance -->
-			<skill id="4379" level="5" /> <!-- Spear Resistance -->
-			<skill id="14823" level="1" /> <!-- Lethal Strike Resistance -->
+			<skill id="4412" level="8" /> <!-- Weak P. Def. -->
 			<skill id="4416" level="3" /> <!-- Beast -->
+			<skill id="5465" level="1" /> <!-- Earth Attack -->
 		</skillList>
 		<dropLists>
 			<drop>
@@ -3818,12 +3808,10 @@
 		</stats>
 		<status attackable="false" />
 		<skillList>
-			<skill id="5465" level="1" /> <!-- Earth Attack -->
-			<skill id="4412" level="8" /> <!-- Weak P. Def. -->
 			<skill id="4225" level="3" /> <!-- Stun Resistance -->
-			<skill id="4379" level="5" /> <!-- Spear Resistance -->
-			<skill id="14823" level="1" /> <!-- Lethal Strike Resistance -->
+			<skill id="4412" level="8" /> <!-- Weak P. Def. -->
 			<skill id="4416" level="3" /> <!-- Beast -->
+			<skill id="5465" level="1" /> <!-- Earth Attack -->
 		</skillList>
 		<dropLists>
 			<drop>
@@ -3874,12 +3862,10 @@
 		</stats>
 		<status attackable="false" />
 		<skillList>
-			<skill id="5465" level="1" /> <!-- Earth Attack -->
 			<skill id="4410" level="13" /> <!-- Slightly Strong P. Atk. -->
 			<skill id="4411" level="13" /> <!-- Slightly Strong M. Atk. -->
-			<skill id="4379" level="5" /> <!-- Spear Resistance -->
-			<skill id="14823" level="1" /> <!-- Lethal Strike Resistance -->
 			<skill id="4416" level="3" /> <!-- Beast -->
+			<skill id="5465" level="1" /> <!-- Earth Attack -->
 		</skillList>
 		<collision>
 			<radius normal="30" />
@@ -3917,12 +3903,10 @@
 		</stats>
 		<status attackable="false" />
 		<skillList>
-			<skill id="5465" level="1" /> <!-- Earth Attack -->
 			<skill id="4410" level="13" /> <!-- Slightly Strong P. Atk. -->
 			<skill id="4411" level="13" /> <!-- Slightly Strong M. Atk. -->
-			<skill id="4379" level="5" /> <!-- Spear Resistance -->
-			<skill id="14823" level="1" /> <!-- Lethal Strike Resistance -->
 			<skill id="4416" level="3" /> <!-- Beast -->
+			<skill id="5465" level="1" /> <!-- Earth Attack -->
 		</skillList>
 		<collision>
 			<radius normal="30" />
@@ -3960,12 +3944,10 @@
 		</stats>
 		<status attackable="false" />
 		<skillList>
-			<skill id="5465" level="1" /> <!-- Earth Attack -->
 			<skill id="4410" level="13" /> <!-- Slightly Strong P. Atk. -->
 			<skill id="4411" level="13" /> <!-- Slightly Strong M. Atk. -->
-			<skill id="4379" level="5" /> <!-- Spear Resistance -->
-			<skill id="14823" level="1" /> <!-- Lethal Strike Resistance -->
 			<skill id="4416" level="5" /> <!-- Plants -->
+			<skill id="5465" level="1" /> <!-- Earth Attack -->
 		</skillList>
 		<dropLists>
 			<drop>
@@ -4007,12 +3989,10 @@
 		</stats>
 		<status attackable="false" />
 		<skillList>
-			<skill id="5465" level="1" /> <!-- Earth Attack -->
 			<skill id="4410" level="13" /> <!-- Slightly Strong P. Atk. -->
 			<skill id="4411" level="13" /> <!-- Slightly Strong M. Atk. -->
-			<skill id="4379" level="5" /> <!-- Spear Resistance -->
-			<skill id="14823" level="1" /> <!-- Lethal Strike Resistance -->
 			<skill id="4416" level="5" /> <!-- Plants -->
+			<skill id="5465" level="1" /> <!-- Earth Attack -->
 		</skillList>
 		<dropLists>
 			<drop>
@@ -4054,14 +4034,12 @@
 		</stats>
 		<status attackable="false" />
 		<skillList>
-			<skill id="5465" level="1" /> <!-- Earth Attack -->
+			<skill id="4287" level="3" /> <!-- Hold Resistance -->
+			<skill id="4416" level="6" /> <!-- Humanoids -->
 			<skill id="4457" level="1" /> <!-- Fist Weapon Vulnerability -->
 			<skill id="4459" level="1" /> <!-- Dualsword Vulnerability -->
 			<skill id="4460" level="1" /> <!-- Sword Vulnerability -->
-			<skill id="4287" level="3" /> <!-- Hold Resistance -->
-			<skill id="4379" level="5" /> <!-- Spear Resistance -->
-			<skill id="14823" level="1" /> <!-- Lethal Strike Resistance -->
-			<skill id="4416" level="6" /> <!-- Humanoids -->
+			<skill id="5465" level="1" /> <!-- Earth Attack -->
 		</skillList>
 		<dropLists>
 			<drop>
@@ -4111,14 +4089,12 @@
 		</stats>
 		<status attackable="false" />
 		<skillList>
-			<skill id="5465" level="1" /> <!-- Earth Attack -->
+			<skill id="4287" level="3" /> <!-- Hold Resistance -->
+			<skill id="4416" level="6" /> <!-- Humanoids -->
 			<skill id="4457" level="1" /> <!-- Fist Weapon Vulnerability -->
 			<skill id="4459" level="1" /> <!-- Dualsword Vulnerability -->
 			<skill id="4460" level="1" /> <!-- Sword Vulnerability -->
-			<skill id="4287" level="3" /> <!-- Hold Resistance -->
-			<skill id="4379" level="5" /> <!-- Spear Resistance -->
-			<skill id="14823" level="1" /> <!-- Lethal Strike Resistance -->
-			<skill id="4416" level="6" /> <!-- Humanoids -->
+			<skill id="5465" level="1" /> <!-- Earth Attack -->
 		</skillList>
 		<dropLists>
 			<drop>
@@ -4168,16 +4144,14 @@
 		</stats>
 		<status attackable="false" />
 		<skillList>
-			<skill id="5465" level="1" /> <!-- Earth Attack -->
 			<skill id="4410" level="12" /> <!-- Slightly Strong P. Atk. -->
 			<skill id="4411" level="12" /> <!-- Slightly Strong M. Atk. -->
 			<skill id="4412" level="9" /> <!-- Slightly Weak P. Def. -->
+			<skill id="4416" level="3" /> <!-- Beast -->
 			<skill id="4457" level="1" /> <!-- Fist Weapon Vulnerability -->
 			<skill id="4459" level="1" /> <!-- Dualsword Vulnerability -->
 			<skill id="4460" level="1" /> <!-- Sword Vulnerability -->
-			<skill id="4379" level="5" /> <!-- Spear Resistance -->
-			<skill id="14823" level="1" /> <!-- Lethal Strike Resistance -->
-			<skill id="4416" level="3" /> <!-- Beast -->
+			<skill id="5465" level="1" /> <!-- Earth Attack -->
 		</skillList>
 		<dropLists>
 			<drop>
@@ -4227,16 +4201,14 @@
 		</stats>
 		<status attackable="false" />
 		<skillList>
-			<skill id="5465" level="1" /> <!-- Earth Attack -->
 			<skill id="4410" level="12" /> <!-- Slightly Strong P. Atk. -->
 			<skill id="4411" level="12" /> <!-- Slightly Strong M. Atk. -->
 			<skill id="4412" level="9" /> <!-- Slightly Weak P. Def. -->
+			<skill id="4416" level="3" /> <!-- Beast -->
 			<skill id="4457" level="1" /> <!-- Fist Weapon Vulnerability -->
 			<skill id="4459" level="1" /> <!-- Dualsword Vulnerability -->
 			<skill id="4460" level="1" /> <!-- Sword Vulnerability -->
-			<skill id="4379" level="5" /> <!-- Spear Resistance -->
-			<skill id="14823" level="1" /> <!-- Lethal Strike Resistance -->
-			<skill id="4416" level="3" /> <!-- Beast -->
+			<skill id="5465" level="1" /> <!-- Earth Attack -->
 		</skillList>
 		<dropLists>
 			<drop>
@@ -4287,13 +4259,11 @@
 		</stats>
 		<status attackable="false" />
 		<skillList>
-			<skill id="5465" level="1" /> <!-- Earth Attack -->
 			<skill id="4410" level="12" /> <!-- Slightly Strong P. Atk. -->
 			<skill id="4411" level="12" /> <!-- Slightly Strong M. Atk. -->
 			<skill id="4412" level="9" /> <!-- Slightly Weak P. Def. -->
-			<skill id="4379" level="5" /> <!-- Spear Resistance -->
-			<skill id="14823" level="1" /> <!-- Lethal Strike Resistance -->
 			<skill id="4416" level="3" /> <!-- Beast -->
+			<skill id="5465" level="1" /> <!-- Earth Attack -->
 		</skillList>
 		<dropLists>
 			<drop>
@@ -4344,13 +4314,11 @@
 		</stats>
 		<status attackable="false" />
 		<skillList>
-			<skill id="5465" level="1" /> <!-- Earth Attack -->
 			<skill id="4410" level="12" /> <!-- Slightly Strong P. Atk. -->
 			<skill id="4411" level="12" /> <!-- Slightly Strong M. Atk. -->
 			<skill id="4412" level="9" /> <!-- Slightly Weak P. Def. -->
-			<skill id="4379" level="5" /> <!-- Spear Resistance -->
-			<skill id="14823" level="1" /> <!-- Lethal Strike Resistance -->
 			<skill id="4416" level="3" /> <!-- Beast -->
+			<skill id="5465" level="1" /> <!-- Earth Attack -->
 		</skillList>
 		<dropLists>
 			<drop>
@@ -4401,17 +4369,15 @@
 		</stats>
 		<status attackable="false" />
 		<skillList>
-			<skill id="5465" level="1" /> <!-- Earth Attack -->
+			<skill id="4225" level="3" /> <!-- Stun Resistance -->
 			<skill id="4410" level="12" /> <!-- Slightly Strong P. Atk. -->
 			<skill id="4411" level="12" /> <!-- Slightly Strong M. Atk. -->
 			<skill id="4412" level="9" /> <!-- Slightly Weak P. Def. -->
+			<skill id="4416" level="12" /> <!-- Bugs -->
 			<skill id="4457" level="1" /> <!-- Fist Weapon Vulnerability -->
 			<skill id="4459" level="1" /> <!-- Dualsword Vulnerability -->
 			<skill id="4460" level="1" /> <!-- Sword Vulnerability -->
-			<skill id="4225" level="3" /> <!-- Stun Resistance -->
-			<skill id="4379" level="5" /> <!-- Spear Resistance -->
-			<skill id="14823" level="1" /> <!-- Lethal Strike Resistance -->
-			<skill id="4416" level="12" /> <!-- Bugs -->
+			<skill id="5465" level="1" /> <!-- Earth Attack -->
 		</skillList>
 		<dropLists>
 			<drop>

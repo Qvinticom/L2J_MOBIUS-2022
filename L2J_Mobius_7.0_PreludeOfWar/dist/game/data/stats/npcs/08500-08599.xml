@@ -1475,12 +1475,13 @@
 		</stats>
 		<status attackable="false" />
 		<skillList>
-			<skill id="5462" level="1" /> <!-- Fire Attack -->
+			<skill id="4045" level="1" /> <!-- Full Magic Attack Resistance -->
 			<skill id="4410" level="12" /> <!-- Slightly Strong P. Atk. -->
 			<skill id="4411" level="12" /> <!-- Slightly Strong M. Atk. -->
-			<skill id="4458" level="3" /> <!-- Spear Vulnerability -->
 			<skill id="4416" level="3" /> <!-- Beast -->
-			<skill id="4045" level="1" /> <!-- Full Magic Attack Resistance -->
+			<skill id="4458" level="3" /> <!-- Spear Vulnerability -->
+			<skill id="5462" level="1" /> <!-- Fire Attack -->
+			<skill id="23613" level="1" /> <!-- Crackling Timber -->
 		</skillList>
 		<collision>
 			<radius normal="30" />
@@ -1505,12 +1506,13 @@
 		</stats>
 		<status attackable="false" />
 		<skillList>
-			<skill id="5463" level="1" /> <!-- Water Attack -->
+			<skill id="4045" level="1" /> <!-- Full Magic Attack Resistance -->
 			<skill id="4410" level="12" /> <!-- Slightly Strong P. Atk. -->
 			<skill id="4411" level="12" /> <!-- Slightly Strong M. Atk. -->
-			<skill id="4458" level="3" /> <!-- Spear Vulnerability -->
 			<skill id="4416" level="3" /> <!-- Beast -->
-			<skill id="4045" level="1" /> <!-- Full Magic Attack Resistance -->
+			<skill id="4458" level="3" /> <!-- Spear Vulnerability -->
+			<skill id="5463" level="1" /> <!-- Water Attack -->
+			<skill id="23616" level="1" /> <!-- Frost Shard -->
 		</skillList>
 		<collision>
 			<radius normal="30" />
@@ -1535,12 +1537,13 @@
 		</stats>
 		<status attackable="false" />
 		<skillList>
-			<skill id="5467" level="1" /> <!-- Strong against the dark elemental. -->
+			<skill id="4045" level="1" /> <!-- Full Magic Attack Resistance -->
 			<skill id="4410" level="12" /> <!-- Slightly Strong P. Atk. -->
 			<skill id="4411" level="12" /> <!-- Slightly Strong M. Atk. -->
-			<skill id="4458" level="3" /> <!-- Spear Vulnerability -->
 			<skill id="4416" level="3" /> <!-- Beast -->
-			<skill id="4045" level="1" /> <!-- Full Magic Attack Resistance -->
+			<skill id="4458" level="3" /> <!-- Spear Vulnerability -->
+			<skill id="5467" level="1" /> <!-- Dark Attack -->
+			<skill id="23619" level="1" /> <!-- Silence Bomb -->
 		</skillList>
 		<collision>
 			<radius normal="30" />
@@ -1565,12 +1568,13 @@
 		</stats>
 		<status attackable="false" />
 		<skillList>
-			<skill id="5465" level="1" /> <!-- Earth Attack -->
+			<skill id="4045" level="1" /> <!-- Full Magic Attack Resistance -->
 			<skill id="4410" level="12" /> <!-- Slightly Strong P. Atk. -->
 			<skill id="4411" level="12" /> <!-- Slightly Strong M. Atk. -->
-			<skill id="4458" level="3" /> <!-- Spear Vulnerability -->
 			<skill id="4416" level="3" /> <!-- Beast -->
-			<skill id="4045" level="1" /> <!-- Full Magic Attack Resistance -->
+			<skill id="4458" level="3" /> <!-- Spear Vulnerability -->
+			<skill id="5465" level="1" /> <!-- Earth Attack -->
+			<skill id="23622" level="1" /> <!-- Quaking Earth -->
 		</skillList>
 		<collision>
 			<radius normal="30" />
@@ -1658,11 +1662,14 @@
 		</stats>
 		<status attackable="false" />
 		<skillList>
-			<skill id="5465" level="1" /> <!-- Earth Attack -->
+			<skill id="4045" level="1" /> <!-- Full Magic Attack Resistance -->
 			<skill id="4410" level="7" /> <!-- Weak P. Atk. -->
 			<skill id="4414" level="1" /> <!-- Heavy Armor Type -->
-			<skill id="4416" level="6" /> <!-- Humanoids -->
-			<skill id="4045" level="1" /> <!-- Full Magic Attack Resistance -->
+			<skill id="4416" level="6" /> <!-- Humanoid -->
+			<skill id="5465" level="1" /> <!-- Earth Attack -->
+			<skill id="23600" level="1" /> <!-- P. Atk. Boost -->
+			<skill id="23601" level="1" /> <!-- Decrease P. Atk. -->
+			<skill id="23603" level="1" /> <!-- Stun Attack -->
 		</skillList>
 		<collision>
 			<radius normal="15" />
@@ -1688,9 +1695,11 @@
 		</stats>
 		<status attackable="false" />
 		<skillList>
-			<skill id="5465" level="1" /> <!-- Earth Attack -->
-			<skill id="4416" level="6" /> <!-- Humanoids -->
 			<skill id="4045" level="1" /> <!-- Full Magic Attack Resistance -->
+			<skill id="4416" level="6" /> <!-- Humanoid -->
+			<skill id="5465" level="1" /> <!-- Earth Attack -->
+			<skill id="23591" level="1" /> <!-- Banished Prey -->
+			<skill id="23604" level="1" /> <!-- Heal -->
 		</skillList>
 		<collision>
 			<radius normal="15" />

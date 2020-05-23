@@ -21,14 +21,7 @@
 		</stats>
 		<status undying="false" canBeSown="true" />
 		<skillList>
-			<skill id="4065" level="9" /> <!-- NPC Heal -->
-			<skill id="4408" level="1" /> <!-- HP Increase (1x) -->
-			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
-			<skill id="4410" level="11" /> <!-- Average P. Atk. -->
-			<skill id="4411" level="11" /> <!-- Average M. Atk. -->
-			<skill id="4412" level="11" /> <!-- Average P. Def. -->
-			<skill id="4413" level="11" /> <!-- Average M. Def. -->
-			<skill id="4414" level="2" /> <!-- Standard Type -->
+			<skill id="4065" level="9" /> <!-- Heal -->
 			<skill id="4415" level="3" /> <!-- One-handed Sword -->
 			<skill id="4416" level="7" /> <!-- Spirits -->
 		</skillList>
@@ -78,14 +71,7 @@
 		</stats>
 		<status undying="false" canBeSown="true" />
 		<skillList>
-			<skill id="4065" level="9" /> <!-- NPC Heal -->
-			<skill id="4408" level="1" /> <!-- HP Increase (1x) -->
-			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
-			<skill id="4410" level="11" /> <!-- Average P. Atk. -->
-			<skill id="4411" level="11" /> <!-- Average M. Atk. -->
-			<skill id="4412" level="11" /> <!-- Average P. Def. -->
-			<skill id="4413" level="11" /> <!-- Average M. Def. -->
-			<skill id="4414" level="2" /> <!-- Standard Type -->
+			<skill id="4065" level="9" /> <!-- Heal -->
 			<skill id="4415" level="3" /> <!-- One-handed Sword -->
 			<skill id="4416" level="7" /> <!-- Spirits -->
 		</skillList>
@@ -135,18 +121,11 @@
 		</stats>
 		<status undying="false" canBeSown="true" />
 		<skillList>
-			<skill id="4178" level="12" /> <!-- BOSS Flamestrike -->
-			<skill id="4408" level="1" /> <!-- HP Increase (1x) -->
-			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
-			<skill id="4410" level="11" /> <!-- Average P. Atk. -->
-			<skill id="4411" level="11" /> <!-- Average M. Atk. -->
-			<skill id="4412" level="11" /> <!-- Average P. Def. -->
-			<skill id="4413" level="11" /> <!-- Average M. Def. -->
-			<skill id="4414" level="2" /> <!-- Standard Type -->
+			<skill id="4178" level="12" /> <!-- Flame Strike -->
 			<skill id="4415" level="3" /> <!-- One-handed Sword -->
-			<skill id="4416" level="2" /> <!-- Magic Creatures -->
-			<skill id="4614" level="9" /> <!-- NPC Death Bomb -->
-			<skill id="5417" level="1" /> <!-- Invincible -->
+			<skill id="4416" level="2" /> <!-- Magical Creatures -->
+			<skill id="4614" level="9" /> <!-- Death Bomb -->
+			<skill id="5417" level="1" /> <!-- Invincibility -->
 		</skillList>
 		<exCrtEffect>true</exCrtEffect>
 		<ai type="CORPSE" clanHelpRange="300" aggroRange="450">
@@ -214,18 +193,17 @@
 		</stats>
 		<status undying="false" canBeSown="true" />
 		<skillList>
-			<skill id="4408" level="1" /> <!-- HP Increase (1x) -->
-			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
-			<skill id="4410" level="11" /> <!-- Average P. Atk. -->
-			<skill id="4411" level="13" /> <!-- Slightly Strong M. Atk. -->
-			<skill id="4412" level="11" /> <!-- Average P. Def. -->
-			<skill id="4413" level="11" /> <!-- Average M. Def. -->
-			<skill id="4414" level="3" /> <!-- Light Armor Type -->
-			<skill id="4415" level="3" /> <!-- One-handed Sword -->
-			<skill id="4416" level="7" /> <!-- Spirits -->
-			<skill id="5273" level="4" /> <!-- NPC(party) - Physical Single Close Range Attack -->
-			<skill id="5280" level="3" /> <!-- NPC(party) - Physical Range Long Range Attack - Fire -->
-			<skill id="5462" level="1" /> <!-- Fire Attacks -->
+			<skill id="4104" level="10" /> <!-- Chill Flame -->
+			<skill id="4160" level="10" /> <!-- Aura Burn -->
+			<skill id="4408" level="14" /> <!-- HP Increase (6x) -->
+			<skill id="4413" level="14" /> <!-- Strong M. Def. -->
+			<skill id="4415" level="1" /> <!-- Bare Hands -->
+			<skill id="4416" level="9" /> <!-- Demons -->
+			<skill id="4439" level="5" /> <!-- Greater Hold Resistance -->
+			<skill id="4443" level="1" /> <!-- Greater Blunt Weapon Resistance -->
+			<skill id="4444" level="1" /> <!-- Greater Bow/ Crossbow Resistance -->
+			<skill id="4593" level="1" /> <!-- Decrease P. Def. -->
+			<skill id="5462" level="1" /> <!-- Fire Attack -->
 		</skillList>
 		<exCrtEffect>false</exCrtEffect>
 		<ai type="BALANCED" clanHelpRange="500" aggroRange="450">
@@ -281,22 +259,17 @@
 		</stats>
 		<status undying="false" canBeSown="true" />
 		<skillList>
-			<skill id="4104" level="10" /> <!-- Flame -->
-			<skill id="4160" level="10" /> <!-- NPC Aura Burn - Magic -->
+			<skill id="4104" level="10" /> <!-- Chill Flame -->
+			<skill id="4160" level="10" /> <!-- Aura Burn -->
 			<skill id="4408" level="14" /> <!-- HP Increase (6x) -->
-			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
-			<skill id="4410" level="11" /> <!-- Average P. Atk. -->
-			<skill id="4411" level="11" /> <!-- Average M. Atk. -->
-			<skill id="4412" level="11" /> <!-- Average P. Def. -->
 			<skill id="4413" level="14" /> <!-- Strong M. Def. -->
-			<skill id="4414" level="2" /> <!-- Standard Type -->
 			<skill id="4415" level="1" /> <!-- Bare Hands -->
 			<skill id="4416" level="9" /> <!-- Demons -->
-			<skill id="4439" level="5" /> <!-- Greater Resist Hold -->
-			<skill id="4443" level="1" /> <!-- Greater Resist Blunt Weapons -->
-			<skill id="4444" level="1" /> <!-- Higher Resist Bow/Crossbow Weapons -->
+			<skill id="4439" level="5" /> <!-- Greater Hold Resistance -->
+			<skill id="4443" level="1" /> <!-- Greater Blunt Weapon Resistance -->
+			<skill id="4444" level="1" /> <!-- Greater Bow/ Crossbow Resistance -->
 			<skill id="4593" level="1" /> <!-- Decrease P. Def. -->
-			<skill id="5462" level="1" /> <!-- Fire Attacks -->
+			<skill id="5462" level="1" /> <!-- Fire Attack -->
 		</skillList>
 		<exCrtEffect>false</exCrtEffect>
 		<sNpcPropHpRate>6</sNpcPropHpRate>
@@ -340,18 +313,13 @@
 		</stats>
 		<status undying="false" canBeSown="true" />
 		<skillList>
-			<skill id="4032" level="10" /> <!-- NPC Strike -->
+			<skill id="4032" level="10" /> <!-- Power Strike -->
 			<skill id="4408" level="12" /> <!-- HP Increase (4x) -->
-			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
 			<skill id="4410" level="14" /> <!-- Strong P. Atk. -->
-			<skill id="4411" level="11" /> <!-- Average M. Atk. -->
-			<skill id="4412" level="11" /> <!-- Average P. Def. -->
-			<skill id="4413" level="11" /> <!-- Average M. Def. -->
-			<skill id="4414" level="2" /> <!-- Standard Type -->
 			<skill id="4415" level="3" /> <!-- One-handed Sword -->
 			<skill id="4416" level="9" /> <!-- Demons -->
-			<skill id="4460" level="2" /> <!-- Sword Weak Point -->
-			<skill id="5462" level="1" /> <!-- Fire Attacks -->
+			<skill id="4460" level="2" /> <!-- Sword Vulnerability -->
+			<skill id="5462" level="1" /> <!-- Fire Attack -->
 		</skillList>
 		<exCrtEffect>false</exCrtEffect>
 		<sNpcPropHpRate>4</sNpcPropHpRate>
@@ -402,19 +370,14 @@
 		</stats>
 		<status undying="false" canBeSown="true" />
 		<skillList>
-			<skill id="4157" level="10" /> <!-- NPC Blaze - Magic -->
-			<skill id="4160" level="10" /> <!-- NPC Aura Burn - Magic -->
+			<skill id="4157" level="10" /> <!-- Blaze -->
+			<skill id="4160" level="10" /> <!-- Aura Burn -->
 			<skill id="4408" level="12" /> <!-- HP Increase (4x) -->
-			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
-			<skill id="4410" level="11" /> <!-- Average P. Atk. -->
 			<skill id="4411" level="14" /> <!-- Strong M. Atk. -->
-			<skill id="4412" level="11" /> <!-- Average P. Def. -->
-			<skill id="4413" level="11" /> <!-- Average M. Def. -->
-			<skill id="4414" level="2" /> <!-- Standard Type -->
 			<skill id="4415" level="3" /> <!-- One-handed Sword -->
 			<skill id="4416" level="9" /> <!-- Demons -->
-			<skill id="4460" level="2" /> <!-- Sword Weak Point -->
-			<skill id="5462" level="1" /> <!-- Fire Attacks -->
+			<skill id="4460" level="2" /> <!-- Sword Vulnerability -->
+			<skill id="5462" level="1" /> <!-- Fire Attack -->
 		</skillList>
 		<exCrtEffect>false</exCrtEffect>
 		<sNpcPropHpRate>4</sNpcPropHpRate>
@@ -465,18 +428,14 @@
 		<status undying="false" canBeSown="true" />
 		<skillList>
 			<skill id="4072" level="10" /> <!-- Stun -->
-			<skill id="4078" level="10" /> <!-- NPC Flamestrike -->
+			<skill id="4078" level="10" /> <!-- Flame Strike -->
 			<skill id="4408" level="12" /> <!-- HP Increase (4x) -->
-			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
 			<skill id="4410" level="14" /> <!-- Strong P. Atk. -->
-			<skill id="4411" level="11" /> <!-- Average M. Atk. -->
-			<skill id="4412" level="11" /> <!-- Average P. Def. -->
 			<skill id="4413" level="13" /> <!-- Slightly Strong M. Def. -->
-			<skill id="4414" level="2" /> <!-- Standard Type -->
 			<skill id="4415" level="3" /> <!-- One-handed Sword -->
 			<skill id="4416" level="9" /> <!-- Demons -->
-			<skill id="4460" level="2" /> <!-- Sword Weak Point -->
-			<skill id="5462" level="1" /> <!-- Fire Attacks -->
+			<skill id="4460" level="2" /> <!-- Sword Vulnerability -->
+			<skill id="5462" level="1" /> <!-- Fire Attack -->
 		</skillList>
 		<exCrtEffect>false</exCrtEffect>
 		<sNpcPropHpRate>4</sNpcPropHpRate>
@@ -516,15 +475,9 @@
 		</stats>
 		<status undying="false" />
 		<skillList>
-			<skill id="4408" level="1" /> <!-- HP Increase (1x) -->
-			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
-			<skill id="4410" level="11" /> <!-- Average P. Atk. -->
-			<skill id="4411" level="11" /> <!-- Average M. Atk. -->
-			<skill id="4412" level="11" /> <!-- Average P. Def. -->
-			<skill id="4413" level="11" /> <!-- Average M. Def. -->
 			<skill id="4414" level="3" /> <!-- Light Armor Type -->
 			<skill id="4415" level="1" /> <!-- Bare Hands -->
-			<skill id="4416" level="3" /> <!-- Beasts -->
+			<skill id="4416" level="3" /> <!-- Beast -->
 			<skill id="4579" level="5" /> <!-- Bleed -->
 			<skill id="4582" level="5" /> <!-- Poison -->
 		</skillList>
@@ -565,15 +518,9 @@
 		</stats>
 		<status undying="false" />
 		<skillList>
-			<skill id="4408" level="1" /> <!-- HP Increase (1x) -->
-			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
-			<skill id="4410" level="11" /> <!-- Average P. Atk. -->
-			<skill id="4411" level="11" /> <!-- Average M. Atk. -->
-			<skill id="4412" level="11" /> <!-- Average P. Def. -->
-			<skill id="4413" level="11" /> <!-- Average M. Def. -->
 			<skill id="4414" level="3" /> <!-- Light Armor Type -->
 			<skill id="4415" level="1" /> <!-- Bare Hands -->
-			<skill id="4416" level="3" /> <!-- Beasts -->
+			<skill id="4416" level="3" /> <!-- Beast -->
 			<skill id="4579" level="5" /> <!-- Bleed -->
 			<skill id="4582" level="6" /> <!-- Poison -->
 		</skillList>
@@ -615,15 +562,9 @@
 		</stats>
 		<status undying="false" />
 		<skillList>
-			<skill id="4408" level="1" /> <!-- HP Increase (1x) -->
-			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
-			<skill id="4410" level="11" /> <!-- Average P. Atk. -->
-			<skill id="4411" level="11" /> <!-- Average M. Atk. -->
-			<skill id="4412" level="11" /> <!-- Average P. Def. -->
-			<skill id="4413" level="11" /> <!-- Average M. Def. -->
 			<skill id="4414" level="3" /> <!-- Light Armor Type -->
 			<skill id="4415" level="1" /> <!-- Bare Hands -->
-			<skill id="4416" level="3" /> <!-- Beasts -->
+			<skill id="4416" level="3" /> <!-- Beast -->
 			<skill id="4579" level="6" /> <!-- Bleed -->
 			<skill id="4606" level="7" /> <!-- Poison -->
 		</skillList>
@@ -665,15 +606,9 @@
 		</stats>
 		<status undying="false" />
 		<skillList>
-			<skill id="4408" level="1" /> <!-- HP Increase (1x) -->
-			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
-			<skill id="4410" level="11" /> <!-- Average P. Atk. -->
-			<skill id="4411" level="11" /> <!-- Average M. Atk. -->
-			<skill id="4412" level="11" /> <!-- Average P. Def. -->
-			<skill id="4413" level="11" /> <!-- Average M. Def. -->
 			<skill id="4414" level="3" /> <!-- Light Armor Type -->
 			<skill id="4415" level="1" /> <!-- Bare Hands -->
-			<skill id="4416" level="3" /> <!-- Beasts -->
+			<skill id="4416" level="3" /> <!-- Beast -->
 			<skill id="4597" level="8" /> <!-- Bleed -->
 			<skill id="4606" level="8" /> <!-- Poison -->
 		</skillList>
@@ -717,16 +652,10 @@
 		</stats>
 		<status undying="false" />
 		<skillList>
-			<skill id="4078" level="9" /> <!-- NPC Flamestrike -->
-			<skill id="4408" level="1" /> <!-- HP Increase (1x) -->
-			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
-			<skill id="4410" level="11" /> <!-- Average P. Atk. -->
-			<skill id="4411" level="11" /> <!-- Average M. Atk. -->
-			<skill id="4412" level="11" /> <!-- Average P. Def. -->
-			<skill id="4413" level="11" /> <!-- Average M. Def. -->
+			<skill id="4078" level="9" /> <!-- Flame Strike -->
 			<skill id="4414" level="3" /> <!-- Light Armor Type -->
 			<skill id="4415" level="1" /> <!-- Bare Hands -->
-			<skill id="4416" level="3" /> <!-- Beasts -->
+			<skill id="4416" level="3" /> <!-- Beast -->
 			<skill id="4597" level="9" /> <!-- Bleed -->
 			<skill id="4606" level="9" /> <!-- Poison -->
 		</skillList>
@@ -777,10 +706,11 @@
 		</stats>
 		<status undying="false" />
 		<skillList>
-			<skill id="4032" level="2" /> <!-- NPC Strike -->
-			<skill id="5719" level="1" /> <!-- Kamabion Susceptibility -->
-			<skill id="4416" level="1" /> <!-- Undead -->
+			<skill id="4032" level="2" /> <!-- Power Strike -->
 			<skill id="4414" level="3" /> <!-- Light Armor Type -->
+			<skill id="4415" level="11" /> <!-- Spear -->
+			<skill id="4416" level="1" /> <!-- Undead -->
+			<skill id="5719" level="1" /> <!-- Kanabion Susceptibility -->
 		</skillList>
 		<exCrtEffect>false</exCrtEffect>
 		<ai type="BALANCED" clanHelpRange="200" aggroRange="300">
@@ -845,11 +775,12 @@
 		</stats>
 		<status undying="false" />
 		<skillList>
-			<skill id="4032" level="2" /> <!-- NPC Strike -->
-			<skill id="5719" level="1" /> <!-- Kamabion Susceptibility -->
+			<skill id="4032" level="2" /> <!-- Power Strike -->
+			<skill id="4415" level="13" /> <!-- Two-Handed Sword -->
 			<skill id="4416" level="1" /> <!-- Undead -->
 			<skill id="4436" level="5" /> <!-- Greater Poison Resistance -->
 			<skill id="4437" level="5" /> <!-- Greater Bleed Resistance -->
+			<skill id="5719" level="1" /> <!-- Kanabion Susceptibility -->
 		</skillList>
 		<exCrtEffect>false</exCrtEffect>
 		<ai type="BALANCED" clanHelpRange="200" aggroRange="300">
@@ -916,12 +847,13 @@
 		</stats>
 		<status undying="false" />
 		<skillList>
-			<skill id="4032" level="2" /> <!-- NPC Strike -->
-			<skill id="4340" level="1" /> <!-- Ultimate Buff, 2nd -->
-			<skill id="5719" level="1" /> <!-- Kamabion Susceptibility -->
+			<skill id="4032" level="2" /> <!-- Power Strike -->
+			<skill id="4340" level="1" /> <!-- Ultimate Buff -->
+			<skill id="4415" level="7" /> <!-- Dagger -->
 			<skill id="4416" level="1" /> <!-- Undead -->
 			<skill id="4436" level="5" /> <!-- Greater Poison Resistance -->
 			<skill id="4437" level="5" /> <!-- Greater Bleed Resistance -->
+			<skill id="5719" level="1" /> <!-- Kanabion Susceptibility -->
 		</skillList>
 		<exCrtEffect>false</exCrtEffect>
 		<ai type="BALANCED" clanHelpRange="300" aggroRange="300">
@@ -985,9 +917,10 @@
 		</stats>
 		<status undying="false" />
 		<skillList>
-			<skill id="4032" level="3" /> <!-- NPC Strike -->
-			<skill id="5719" level="1" /> <!-- Kamabion Susceptibility -->
-			<skill id="4416" level="6" /> <!-- Humanoids -->
+			<skill id="4032" level="3" /> <!-- Power Strike -->
+			<skill id="4415" level="3" /> <!-- One-handed Sword -->
+			<skill id="4416" level="6" /> <!-- Humanoid -->
+			<skill id="5719" level="1" /> <!-- Kanabion Susceptibility -->
 		</skillList>
 		<exCrtEffect>false</exCrtEffect>
 		<ai type="BALANCED" clanHelpRange="200" aggroRange="300">
@@ -1052,9 +985,10 @@
 		</stats>
 		<status undying="false" />
 		<skillList>
-			<skill id="4032" level="3" /> <!-- NPC Strike -->
-			<skill id="5719" level="1" /> <!-- Kamabion Susceptibility -->
-			<skill id="4416" level="6" /> <!-- Humanoids -->
+			<skill id="4032" level="3" /> <!-- Power Strike -->
+			<skill id="4415" level="7" /> <!-- Dagger -->
+			<skill id="4416" level="6" /> <!-- Humanoid -->
+			<skill id="5719" level="1" /> <!-- Kanabion Susceptibility -->
 		</skillList>
 		<exCrtEffect>false</exCrtEffect>
 		<ai type="BALANCED" clanHelpRange="200" aggroRange="300">
@@ -1121,11 +1055,12 @@
 		</stats>
 		<status undying="false" />
 		<skillList>
-			<skill id="4032" level="3" /> <!-- NPC Strike -->
-			<skill id="4340" level="1" /> <!-- Ultimate Buff, 2nd -->
-			<skill id="5719" level="1" /> <!-- Kamabion Susceptibility -->
-			<skill id="4416" level="6" /> <!-- Humanoids -->
+			<skill id="4032" level="3" /> <!-- Power Strike -->
+			<skill id="4340" level="1" /> <!-- Ultimate Buff -->
 			<skill id="4414" level="3" /> <!-- Light Armor Type -->
+			<skill id="4415" level="7" /> <!-- Dagger -->
+			<skill id="4416" level="6" /> <!-- Humanoid -->
+			<skill id="5719" level="1" /> <!-- Kanabion Susceptibility -->
 		</skillList>
 		<exCrtEffect>false</exCrtEffect>
 		<ai type="BALANCED" clanHelpRange="300" aggroRange="300">
@@ -1188,9 +1123,10 @@
 		</stats>
 		<status undying="false" />
 		<skillList>
-			<skill id="4032" level="3" /> <!-- NPC Strike -->
-			<skill id="5719" level="1" /> <!-- Kamabion Susceptibility -->
+			<skill id="4032" level="3" /> <!-- Power Strike -->
+			<skill id="4415" level="1" /> <!-- Bare Hands -->
 			<skill id="4416" level="1" /> <!-- Undead -->
+			<skill id="5719" level="1" /> <!-- Kanabion Susceptibility -->
 		</skillList>
 		<exCrtEffect>false</exCrtEffect>
 		<ai type="BALANCED" clanHelpRange="200" aggroRange="300">
@@ -1254,9 +1190,10 @@
 		</stats>
 		<status undying="false" />
 		<skillList>
-			<skill id="4032" level="3" /> <!-- NPC Strike -->
-			<skill id="5719" level="1" /> <!-- Kamabion Susceptibility -->
+			<skill id="4032" level="3" /> <!-- Power Strike -->
+			<skill id="4415" level="3" /> <!-- One-handed Sword -->
 			<skill id="4416" level="1" /> <!-- Undead -->
+			<skill id="5719" level="1" /> <!-- Kanabion Susceptibility -->
 		</skillList>
 		<exCrtEffect>false</exCrtEffect>
 		<ai type="BALANCED" clanHelpRange="200" aggroRange="300">
@@ -1321,10 +1258,11 @@
 		</stats>
 		<status undying="false" />
 		<skillList>
-			<skill id="4032" level="3" /> <!-- NPC Strike -->
-			<skill id="4340" level="1" /> <!-- Ultimate Buff, 2nd -->
-			<skill id="5719" level="1" /> <!-- Kamabion Susceptibility -->
+			<skill id="4032" level="3" /> <!-- Power Strike -->
+			<skill id="4340" level="1" /> <!-- Ultimate Buff -->
+			<skill id="4415" level="1" /> <!-- Bare Hands -->
 			<skill id="4416" level="1" /> <!-- Undead -->
+			<skill id="5719" level="1" /> <!-- Kanabion Susceptibility -->
 		</skillList>
 		<exCrtEffect>false</exCrtEffect>
 		<ai type="BALANCED" clanHelpRange="300" aggroRange="300">
@@ -1388,10 +1326,11 @@
 		</stats>
 		<status undying="false" />
 		<skillList>
-			<skill id="4032" level="4" /> <!-- NPC Strike -->
-			<skill id="5719" level="1" /> <!-- Kamabion Susceptibility -->
-			<skill id="4416" level="6" /> <!-- Humanoids -->
+			<skill id="4032" level="4" /> <!-- Power Strike -->
 			<skill id="4414" level="1" /> <!-- Heavy Armor Type -->
+			<skill id="4415" level="3" /> <!-- One-handed Sword -->
+			<skill id="4416" level="6" /> <!-- Humanoid -->
+			<skill id="5719" level="1" /> <!-- Kanabion Susceptibility -->
 		</skillList>
 		<exCrtEffect>false</exCrtEffect>
 		<ai type="BALANCED" clanHelpRange="200" aggroRange="300">
@@ -1454,10 +1393,11 @@
 		</stats>
 		<status undying="false" />
 		<skillList>
-			<skill id="4032" level="4" /> <!-- NPC Strike -->
-			<skill id="5719" level="1" /> <!-- Kamabion Susceptibility -->
-			<skill id="4416" level="6" /> <!-- Humanoids -->
+			<skill id="4032" level="4" /> <!-- Power Strike -->
 			<skill id="4414" level="1" /> <!-- Heavy Armor Type -->
+			<skill id="4415" level="11" /> <!-- Spear -->
+			<skill id="4416" level="6" /> <!-- Humanoid -->
+			<skill id="5719" level="1" /> <!-- Kanabion Susceptibility -->
 		</skillList>
 		<exCrtEffect>false</exCrtEffect>
 		<ai type="BALANCED" clanHelpRange="200" aggroRange="300">
@@ -1524,10 +1464,11 @@
 		</stats>
 		<status undying="false" />
 		<skillList>
-			<skill id="4032" level="4" /> <!-- NPC Strike -->
-			<skill id="4340" level="1" /> <!-- Ultimate Buff, 2nd -->
-			<skill id="5719" level="1" /> <!-- Kamabion Susceptibility -->
-			<skill id="4416" level="6" /> <!-- Humanoids -->
+			<skill id="4032" level="4" /> <!-- Power Strike -->
+			<skill id="4340" level="1" /> <!-- Ultimate Buff -->
+			<skill id="4415" level="3" /> <!-- One-handed Sword -->
+			<skill id="4416" level="6" /> <!-- Humanoid -->
+			<skill id="5719" level="1" /> <!-- Kanabion Susceptibility -->
 		</skillList>
 		<exCrtEffect>false</exCrtEffect>
 		<ai type="BALANCED" clanHelpRange="300" aggroRange="300">
@@ -1591,10 +1532,11 @@
 		</stats>
 		<status undying="false" />
 		<skillList>
-			<skill id="4032" level="4" /> <!-- NPC Strike -->
-			<skill id="5719" level="1" /> <!-- Kamabion Susceptibility -->
-			<skill id="4416" level="6" /> <!-- Humanoids -->
+			<skill id="4032" level="4" /> <!-- Power Strike -->
 			<skill id="4414" level="3" /> <!-- Light Armor Type -->
+			<skill id="4415" level="3" /> <!-- One-handed Sword -->
+			<skill id="4416" level="6" /> <!-- Humanoid -->
+			<skill id="5719" level="1" /> <!-- Kanabion Susceptibility -->
 		</skillList>
 		<exCrtEffect>false</exCrtEffect>
 		<ai type="BALANCED" clanHelpRange="200" aggroRange="300">
@@ -1659,10 +1601,11 @@
 		</stats>
 		<status undying="false" />
 		<skillList>
-			<skill id="4032" level="4" /> <!-- NPC Strike -->
-			<skill id="5719" level="1" /> <!-- Kamabion Susceptibility -->
-			<skill id="4416" level="6" /> <!-- Humanoids -->
+			<skill id="4032" level="4" /> <!-- Power Strike -->
 			<skill id="4414" level="3" /> <!-- Light Armor Type -->
+			<skill id="4415" level="11" /> <!-- Spear -->
+			<skill id="4416" level="6" /> <!-- Humanoid -->
+			<skill id="5719" level="1" /> <!-- Kanabion Susceptibility -->
 		</skillList>
 		<exCrtEffect>false</exCrtEffect>
 		<ai type="BALANCED" clanHelpRange="200" aggroRange="300">
@@ -1729,11 +1672,12 @@
 		</stats>
 		<status undying="false" />
 		<skillList>
-			<skill id="4032" level="4" /> <!-- NPC Strike -->
-			<skill id="4340" level="1" /> <!-- Ultimate Buff, 2nd -->
-			<skill id="5719" level="1" /> <!-- Kamabion Susceptibility -->
-			<skill id="4416" level="6" /> <!-- Humanoids -->
+			<skill id="4032" level="4" /> <!-- Power Strike -->
+			<skill id="4340" level="1" /> <!-- Ultimate Buff -->
 			<skill id="4414" level="3" /> <!-- Light Armor Type -->
+			<skill id="4415" level="7" /> <!-- Dagger -->
+			<skill id="4416" level="6" /> <!-- Humanoid -->
+			<skill id="5719" level="1" /> <!-- Kanabion Susceptibility -->
 		</skillList>
 		<exCrtEffect>false</exCrtEffect>
 		<ai type="BALANCED" clanHelpRange="300" aggroRange="300">
@@ -1797,9 +1741,10 @@
 		</stats>
 		<status undying="false" />
 		<skillList>
-			<skill id="4032" level="5" /> <!-- NPC Strike -->
-			<skill id="5719" level="1" /> <!-- Kamabion Susceptibility -->
-			<skill id="4416" level="6" /> <!-- Humanoids -->
+			<skill id="4032" level="5" /> <!-- Power Strike -->
+			<skill id="4415" level="3" /> <!-- One-handed Sword -->
+			<skill id="4416" level="6" /> <!-- Humanoid -->
+			<skill id="5719" level="1" /> <!-- Kanabion Susceptibility -->
 		</skillList>
 		<exCrtEffect>false</exCrtEffect>
 		<ai type="BALANCED" clanHelpRange="200" aggroRange="300">
@@ -1864,9 +1809,10 @@
 		</stats>
 		<status undying="false" />
 		<skillList>
-			<skill id="4032" level="5" /> <!-- NPC Strike -->
-			<skill id="5719" level="1" /> <!-- Kamabion Susceptibility -->
-			<skill id="4416" level="6" /> <!-- Humanoids -->
+			<skill id="4032" level="5" /> <!-- Power Strike -->
+			<skill id="4415" level="3" /> <!-- One-handed Sword -->
+			<skill id="4416" level="6" /> <!-- Humanoid -->
+			<skill id="5719" level="1" /> <!-- Kanabion Susceptibility -->
 		</skillList>
 		<exCrtEffect>false</exCrtEffect>
 		<ai type="BALANCED" clanHelpRange="200" aggroRange="300">
@@ -1933,10 +1879,11 @@
 		</stats>
 		<status undying="false" />
 		<skillList>
-			<skill id="4032" level="5" /> <!-- NPC Strike -->
-			<skill id="4340" level="1" /> <!-- Ultimate Buff, 2nd -->
-			<skill id="5719" level="1" /> <!-- Kamabion Susceptibility -->
-			<skill id="4416" level="6" /> <!-- Humanoids -->
+			<skill id="4032" level="5" /> <!-- Power Strike -->
+			<skill id="4340" level="1" /> <!-- Ultimate Buff -->
+			<skill id="4415" level="3" /> <!-- One-handed Sword -->
+			<skill id="4416" level="6" /> <!-- Humanoid -->
+			<skill id="5719" level="1" /> <!-- Kanabion Susceptibility -->
 		</skillList>
 		<exCrtEffect>false</exCrtEffect>
 		<ai type="BALANCED" clanHelpRange="300" aggroRange="300">
@@ -2000,9 +1947,10 @@
 		</stats>
 		<status undying="false" />
 		<skillList>
-			<skill id="4032" level="5" /> <!-- NPC Strike -->
-			<skill id="5719" level="1" /> <!-- Kamabion Susceptibility -->
-			<skill id="4416" level="6" /> <!-- Humanoids -->
+			<skill id="4032" level="5" /> <!-- Power Strike -->
+			<skill id="4415" level="3" /> <!-- One-handed Sword -->
+			<skill id="4416" level="6" /> <!-- Humanoid -->
+			<skill id="5719" level="1" /> <!-- Kanabion Susceptibility -->
 		</skillList>
 		<exCrtEffect>false</exCrtEffect>
 		<ai type="BALANCED" clanHelpRange="200" aggroRange="300">
@@ -2067,9 +2015,10 @@
 		</stats>
 		<status undying="false" />
 		<skillList>
-			<skill id="4032" level="5" /> <!-- NPC Strike -->
-			<skill id="5719" level="1" /> <!-- Kamabion Susceptibility -->
-			<skill id="4416" level="6" /> <!-- Humanoids -->
+			<skill id="4032" level="5" /> <!-- Power Strike -->
+			<skill id="4415" level="3" /> <!-- One-handed Sword -->
+			<skill id="4416" level="6" /> <!-- Humanoid -->
+			<skill id="5719" level="1" /> <!-- Kanabion Susceptibility -->
 		</skillList>
 		<exCrtEffect>false</exCrtEffect>
 		<ai type="BALANCED" clanHelpRange="200" aggroRange="300">
@@ -2136,10 +2085,11 @@
 		</stats>
 		<status undying="false" />
 		<skillList>
-			<skill id="4032" level="5" /> <!-- NPC Strike -->
-			<skill id="4340" level="1" /> <!-- Ultimate Buff, 2nd -->
-			<skill id="5719" level="1" /> <!-- Kamabion Susceptibility -->
-			<skill id="4416" level="6" /> <!-- Humanoids -->
+			<skill id="4032" level="5" /> <!-- Power Strike -->
+			<skill id="4340" level="1" /> <!-- Ultimate Buff -->
+			<skill id="4415" level="3" /> <!-- One-handed Sword -->
+			<skill id="4416" level="6" /> <!-- Humanoid -->
+			<skill id="5719" level="1" /> <!-- Kanabion Susceptibility -->
 		</skillList>
 		<exCrtEffect>false</exCrtEffect>
 		<ai type="BALANCED" clanHelpRange="300" aggroRange="300">
@@ -2203,10 +2153,11 @@
 		</stats>
 		<status undying="false" />
 		<skillList>
-			<skill id="4032" level="6" /> <!-- NPC Strike -->
-			<skill id="5719" level="1" /> <!-- Kamabion Susceptibility -->
-			<skill id="4416" level="8" /> <!-- Angels -->
+			<skill id="4032" level="6" /> <!-- Power Strike -->
 			<skill id="4414" level="3" /> <!-- Light Armor Type -->
+			<skill id="4415" level="3" /> <!-- One-handed Sword -->
+			<skill id="4416" level="8" /> <!-- Angel -->
+			<skill id="5719" level="1" /> <!-- Kanabion Susceptibility -->
 		</skillList>
 		<exCrtEffect>false</exCrtEffect>
 		<ai type="BALANCED" clanHelpRange="200" aggroRange="300">
@@ -2271,9 +2222,10 @@
 		</stats>
 		<status undying="false" />
 		<skillList>
-			<skill id="4032" level="6" /> <!-- NPC Strike -->
-			<skill id="5719" level="1" /> <!-- Kamabion Susceptibility -->
-			<skill id="4416" level="8" /> <!-- Angels -->
+			<skill id="4032" level="6" /> <!-- Power Strike -->
+			<skill id="4415" level="3" /> <!-- One-handed Sword -->
+			<skill id="4416" level="8" /> <!-- Angel -->
+			<skill id="5719" level="1" /> <!-- Kanabion Susceptibility -->
 		</skillList>
 		<exCrtEffect>false</exCrtEffect>
 		<ai type="BALANCED" clanHelpRange="200" aggroRange="300">
@@ -2340,10 +2292,11 @@
 		</stats>
 		<status undying="false" />
 		<skillList>
-			<skill id="4032" level="6" /> <!-- NPC Strike -->
-			<skill id="4340" level="1" /> <!-- Ultimate Buff, 2nd -->
-			<skill id="5719" level="1" /> <!-- Kamabion Susceptibility -->
-			<skill id="4416" level="8" /> <!-- Angels -->
+			<skill id="4032" level="6" /> <!-- Power Strike -->
+			<skill id="4340" level="1" /> <!-- Ultimate Buff -->
+			<skill id="4415" level="3" /> <!-- One-handed Sword -->
+			<skill id="4416" level="8" /> <!-- Angel -->
+			<skill id="5719" level="1" /> <!-- Kanabion Susceptibility -->
 		</skillList>
 		<exCrtEffect>false</exCrtEffect>
 		<ai type="BALANCED" clanHelpRange="300" aggroRange="300">
@@ -2407,10 +2360,11 @@
 		</stats>
 		<status undying="false" />
 		<skillList>
-			<skill id="4032" level="6" /> <!-- NPC Strike -->
-			<skill id="5719" level="1" /> <!-- Kamabion Susceptibility -->
-			<skill id="4416" level="9" /> <!-- Demons -->
+			<skill id="4032" level="6" /> <!-- Power Strike -->
 			<skill id="4414" level="1" /> <!-- Heavy Armor Type -->
+			<skill id="4415" level="3" /> <!-- One-handed Sword -->
+			<skill id="4416" level="9" /> <!-- Demons -->
+			<skill id="5719" level="1" /> <!-- Kanabion Susceptibility -->
 		</skillList>
 		<exCrtEffect>false</exCrtEffect>
 		<ai type="BALANCED" clanHelpRange="200" aggroRange="300">
@@ -2474,9 +2428,10 @@
 		</stats>
 		<status undying="false" />
 		<skillList>
-			<skill id="4032" level="6" /> <!-- NPC Strike -->
-			<skill id="5719" level="1" /> <!-- Kamabion Susceptibility -->
+			<skill id="4032" level="6" /> <!-- Power Strike -->
+			<skill id="4415" level="3" /> <!-- One-handed Sword -->
 			<skill id="4416" level="9" /> <!-- Demons -->
+			<skill id="5719" level="1" /> <!-- Kanabion Susceptibility -->
 		</skillList>
 		<exCrtEffect>false</exCrtEffect>
 		<ai type="BALANCED" clanHelpRange="200" aggroRange="300">
@@ -2542,10 +2497,11 @@
 		</stats>
 		<status undying="false" />
 		<skillList>
-			<skill id="4032" level="6" /> <!-- NPC Strike -->
-			<skill id="4340" level="1" /> <!-- Ultimate Buff, 2nd -->
-			<skill id="5719" level="1" /> <!-- Kamabion Susceptibility -->
+			<skill id="4032" level="6" /> <!-- Power Strike -->
+			<skill id="4340" level="1" /> <!-- Ultimate Buff -->
+			<skill id="4415" level="3" /> <!-- One-handed Sword -->
 			<skill id="4416" level="9" /> <!-- Demons -->
+			<skill id="5719" level="1" /> <!-- Kanabion Susceptibility -->
 		</skillList>
 		<exCrtEffect>false</exCrtEffect>
 		<ai type="BALANCED" clanHelpRange="300" aggroRange="300">
@@ -2608,9 +2564,10 @@
 		</stats>
 		<status undying="false" />
 		<skillList>
-			<skill id="4032" level="7" /> <!-- NPC Strike -->
-			<skill id="5719" level="1" /> <!-- Kamabion Susceptibility -->
+			<skill id="4032" level="7" /> <!-- Power Strike -->
+			<skill id="4415" level="1" /> <!-- Bare Hands -->
 			<skill id="4416" level="9" /> <!-- Demons -->
+			<skill id="5719" level="1" /> <!-- Kanabion Susceptibility -->
 		</skillList>
 		<exCrtEffect>false</exCrtEffect>
 		<ai type="BALANCED" clanHelpRange="200" aggroRange="300">
@@ -2674,9 +2631,10 @@
 		</stats>
 		<status undying="false" />
 		<skillList>
-			<skill id="4032" level="7" /> <!-- NPC Strike -->
-			<skill id="5719" level="1" /> <!-- Kamabion Susceptibility -->
+			<skill id="4032" level="7" /> <!-- Power Strike -->
+			<skill id="4415" level="1" /> <!-- Bare Hands -->
 			<skill id="4416" level="9" /> <!-- Demons -->
+			<skill id="5719" level="1" /> <!-- Kanabion Susceptibility -->
 		</skillList>
 		<exCrtEffect>false</exCrtEffect>
 		<ai type="BALANCED" clanHelpRange="200" aggroRange="300">
@@ -2742,10 +2700,11 @@
 		</stats>
 		<status undying="false" />
 		<skillList>
-			<skill id="4032" level="7" /> <!-- NPC Strike -->
-			<skill id="4340" level="1" /> <!-- Ultimate Buff, 2nd -->
-			<skill id="5719" level="1" /> <!-- Kamabion Susceptibility -->
+			<skill id="4032" level="7" /> <!-- Power Strike -->
+			<skill id="4340" level="1" /> <!-- Ultimate Buff -->
+			<skill id="4415" level="1" /> <!-- Bare Hands -->
 			<skill id="4416" level="9" /> <!-- Demons -->
+			<skill id="5719" level="1" /> <!-- Kanabion Susceptibility -->
 		</skillList>
 		<exCrtEffect>false</exCrtEffect>
 		<ai type="BALANCED" clanHelpRange="300" aggroRange="300">
@@ -2808,9 +2767,10 @@
 		</stats>
 		<status undying="false" />
 		<skillList>
-			<skill id="4032" level="8" /> <!-- NPC Strike -->
-			<skill id="5719" level="1" /> <!-- Kamabion Susceptibility -->
+			<skill id="4032" level="8" /> <!-- Power Strike -->
+			<skill id="4415" level="5" /> <!-- One-handed Blunt Weapons -->
 			<skill id="4416" level="9" /> <!-- Demons -->
+			<skill id="5719" level="1" /> <!-- Kanabion Susceptibility -->
 		</skillList>
 		<exCrtEffect>false</exCrtEffect>
 		<ai type="BALANCED" clanHelpRange="200" aggroRange="300">
@@ -2874,9 +2834,10 @@
 		</stats>
 		<status undying="false" />
 		<skillList>
-			<skill id="4032" level="8" /> <!-- NPC Strike -->
-			<skill id="5719" level="1" /> <!-- Kamabion Susceptibility -->
+			<skill id="4032" level="8" /> <!-- Power Strike -->
+			<skill id="4415" level="7" /> <!-- Dagger -->
 			<skill id="4416" level="9" /> <!-- Demons -->
+			<skill id="5719" level="1" /> <!-- Kanabion Susceptibility -->
 		</skillList>
 		<exCrtEffect>false</exCrtEffect>
 		<ai type="BALANCED" clanHelpRange="200" aggroRange="300">
@@ -2942,10 +2903,13 @@
 		</stats>
 		<status undying="false" />
 		<skillList>
-			<skill id="4032" level="8" /> <!-- NPC Strike -->
-			<skill id="4340" level="1" /> <!-- Ultimate Buff, 2nd -->
-			<skill id="5719" level="1" /> <!-- Kamabion Susceptibility -->
+			<skill id="4032" level="8" /> <!-- Power Strike -->
+			<skill id="4045" level="1" /> <!-- Full Magic Attack Resistance -->
+			<skill id="4340" level="1" /> <!-- Ultimate Buff -->
+			<skill id="4415" level="7" /> <!-- Dagger -->
 			<skill id="4416" level="9" /> <!-- Demons -->
+			<skill id="5479" level="1" /> <!-- Boss Petrification Resistance -->
+			<skill id="5719" level="1" /> <!-- Kanabion Susceptibility -->
 		</skillList>
 		<exCrtEffect>false</exCrtEffect>
 		<ai type="BALANCED" clanHelpRange="300" aggroRange="300">
@@ -3009,11 +2973,12 @@
 		</stats>
 		<status undying="false" canBeSown="true" />
 		<skillList>
-			<skill id="4032" level="2" /> <!-- NPC Strike -->
+			<skill id="4032" level="2" /> <!-- Power Strike -->
 			<skill id="4047" level="2" /> <!-- Hold -->
-			<skill id="4416" level="6" /> <!-- Humanoids -->
 			<skill id="4410" level="3" /> <!-- Extremely Weak P. Atk. -->
 			<skill id="4411" level="3" /> <!-- Extremely Weak M. Atk. -->
+			<skill id="4415" level="3" /> <!-- One-handed Sword -->
+			<skill id="4416" level="6" /> <!-- Humanoid -->
 		</skillList>
 		<exCrtEffect>false</exCrtEffect>
 		<ai type="BALANCED" aggroRange="300" clanHelpRange="1000" isAggressive="true">
@@ -3059,17 +3024,12 @@
 		</stats>
 		<status undying="false" canBeSown="true" />
 		<skillList>
-			<skill id="4032" level="2" /> <!-- NPC Strike -->
+			<skill id="4032" level="2" /> <!-- Power Strike -->
 			<skill id="4047" level="2" /> <!-- Hold -->
-			<skill id="4408" level="1" /> <!-- HP Increase (1x) -->
-			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
 			<skill id="4410" level="3" /> <!-- Extremely Weak P. Atk. -->
 			<skill id="4411" level="3" /> <!-- Extremely Weak M. Atk. -->
-			<skill id="4412" level="11" /> <!-- Average P. Def. -->
-			<skill id="4413" level="11" /> <!-- Average M. Def. -->
-			<skill id="4414" level="2" /> <!-- Standard Type -->
 			<skill id="4415" level="3" /> <!-- One-handed Sword -->
-			<skill id="4416" level="6" /> <!-- Humanoids -->
+			<skill id="4416" level="6" /> <!-- Humanoid -->
 		</skillList>
 		<exCrtEffect>false</exCrtEffect>
 		<ai type="BALANCED" aggroRange="300" clanHelpRange="1000" isAggressive="true">
@@ -3118,12 +3078,13 @@
 		</stats>
 		<status undying="false" canBeSown="true" />
 		<skillList>
-			<skill id="4032" level="2" /> <!-- NPC Strike -->
+			<skill id="4032" level="2" /> <!-- Power Strike -->
 			<skill id="4098" level="3" /> <!-- Silence -->
-			<skill id="4613" level="2" /> <!-- NPC Clan Heal -->
-			<skill id="4416" level="6" /> <!-- Humanoids -->
 			<skill id="4412" level="7" /> <!-- Weak P. Def. -->
 			<skill id="4413" level="8" /> <!-- Weak M. Def. -->
+			<skill id="4415" level="3" /> <!-- One-handed Sword -->
+			<skill id="4416" level="6" /> <!-- Humanoid -->
+			<skill id="4613" level="2" /> <!-- Clan Heal -->
 		</skillList>
 		<exCrtEffect>false</exCrtEffect>
 		<ai type="BALANCED" aggroRange="300" clanHelpRange="1000" isAggressive="true">
@@ -3172,12 +3133,13 @@
 		</stats>
 		<status undying="false" canBeSown="true" />
 		<skillList>
-			<skill id="4032" level="3" /> <!-- NPC Strike -->
+			<skill id="4032" level="3" /> <!-- Power Strike -->
 			<skill id="4047" level="3" /> <!-- Hold -->
-			<skill id="4416" level="6" /> <!-- Humanoids -->
 			<skill id="4410" level="3" /> <!-- Extremely Weak P. Atk. -->
 			<skill id="4411" level="3" /> <!-- Extremely Weak M. Atk. -->
 			<skill id="4414" level="3" /> <!-- Light Armor Type -->
+			<skill id="4415" level="3" /> <!-- One-handed Sword -->
+			<skill id="4416" level="6" /> <!-- Humanoid -->
 		</skillList>
 		<exCrtEffect>false</exCrtEffect>
 		<ai type="BALANCED" aggroRange="300" clanHelpRange="1000" isAggressive="true">
@@ -3223,17 +3185,13 @@
 		</stats>
 		<status undying="false" canBeSown="true" />
 		<skillList>
-			<skill id="4032" level="3" /> <!-- NPC Strike -->
+			<skill id="4032" level="3" /> <!-- Power Strike -->
 			<skill id="4047" level="3" /> <!-- Hold -->
-			<skill id="4408" level="1" /> <!-- HP Increase (1x) -->
-			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
 			<skill id="4410" level="3" /> <!-- Extremely Weak P. Atk. -->
 			<skill id="4411" level="3" /> <!-- Extremely Weak M. Atk. -->
-			<skill id="4412" level="11" /> <!-- Average P. Def. -->
-			<skill id="4413" level="11" /> <!-- Average M. Def. -->
 			<skill id="4414" level="3" /> <!-- Light Armor Type -->
 			<skill id="4415" level="3" /> <!-- One-handed Sword -->
-			<skill id="4416" level="6" /> <!-- Humanoids -->
+			<skill id="4416" level="6" /> <!-- Humanoid -->
 		</skillList>
 		<exCrtEffect>false</exCrtEffect>
 		<ai type="BALANCED" aggroRange="300" clanHelpRange="1000" isAggressive="true">
@@ -3282,13 +3240,14 @@
 		</stats>
 		<status undying="false" canBeSown="true" />
 		<skillList>
-			<skill id="4032" level="3" /> <!-- NPC Strike -->
+			<skill id="4032" level="3" /> <!-- Power Strike -->
 			<skill id="4098" level="4" /> <!-- Silence -->
-			<skill id="4613" level="3" /> <!-- NPC Clan Heal -->
-			<skill id="4416" level="6" /> <!-- Humanoids -->
 			<skill id="4412" level="7" /> <!-- Weak P. Def. -->
 			<skill id="4413" level="8" /> <!-- Weak M. Def. -->
 			<skill id="4414" level="3" /> <!-- Light Armor Type -->
+			<skill id="4415" level="3" /> <!-- One-handed Sword -->
+			<skill id="4416" level="6" /> <!-- Humanoid -->
+			<skill id="4613" level="3" /> <!-- Clan Heal -->
 		</skillList>
 		<exCrtEffect>false</exCrtEffect>
 		<ai type="BALANCED" aggroRange="300" clanHelpRange="1000" isAggressive="true">
@@ -3336,12 +3295,13 @@
 		</stats>
 		<status undying="false" canBeSown="true" />
 		<skillList>
-			<skill id="4032" level="4" /> <!-- NPC Strike -->
+			<skill id="4032" level="4" /> <!-- Power Strike -->
 			<skill id="4047" level="4" /> <!-- Hold -->
-			<skill id="4416" level="2" /> <!-- Magic Creatures -->
 			<skill id="4410" level="3" /> <!-- Extremely Weak P. Atk. -->
 			<skill id="4411" level="3" /> <!-- Extremely Weak M. Atk. -->
 			<skill id="4414" level="1" /> <!-- Heavy Armor Type -->
+			<skill id="4415" level="3" /> <!-- One-handed Sword -->
+			<skill id="4416" level="2" /> <!-- Magical Creatures -->
 		</skillList>
 		<exCrtEffect>false</exCrtEffect>
 		<ai type="BALANCED" aggroRange="300" clanHelpRange="1000" isAggressive="true">
@@ -3386,17 +3346,13 @@
 		</stats>
 		<status undying="false" canBeSown="true" />
 		<skillList>
-			<skill id="4032" level="4" /> <!-- NPC Strike -->
+			<skill id="4032" level="4" /> <!-- Power Strike -->
 			<skill id="4047" level="4" /> <!-- Hold -->
-			<skill id="4408" level="1" /> <!-- HP Increase (1x) -->
-			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
 			<skill id="4410" level="3" /> <!-- Extremely Weak P. Atk. -->
 			<skill id="4411" level="3" /> <!-- Extremely Weak M. Atk. -->
-			<skill id="4412" level="11" /> <!-- Average P. Def. -->
-			<skill id="4413" level="11" /> <!-- Average M. Def. -->
 			<skill id="4414" level="1" /> <!-- Heavy Armor Type -->
 			<skill id="4415" level="3" /> <!-- One-handed Sword -->
-			<skill id="4416" level="2" /> <!-- Magic Creatures -->
+			<skill id="4416" level="2" /> <!-- Magical Creatures -->
 		</skillList>
 		<exCrtEffect>false</exCrtEffect>
 		<ai type="BALANCED" aggroRange="300" clanHelpRange="1000" isAggressive="true">
@@ -3444,13 +3400,14 @@
 		</stats>
 		<status undying="false" canBeSown="true" />
 		<skillList>
-			<skill id="4032" level="4" /> <!-- NPC Strike -->
+			<skill id="4032" level="4" /> <!-- Power Strike -->
 			<skill id="4098" level="5" /> <!-- Silence -->
-			<skill id="4613" level="4" /> <!-- NPC Clan Heal -->
-			<skill id="4416" level="2" /> <!-- Magic Creatures -->
 			<skill id="4412" level="7" /> <!-- Weak P. Def. -->
 			<skill id="4413" level="8" /> <!-- Weak M. Def. -->
 			<skill id="4414" level="1" /> <!-- Heavy Armor Type -->
+			<skill id="4415" level="5" /> <!-- One-handed Blunt Weapons -->
+			<skill id="4416" level="2" /> <!-- Magical Creatures -->
+			<skill id="4613" level="4" /> <!-- Clan Heal -->
 		</skillList>
 		<exCrtEffect>false</exCrtEffect>
 		<ai type="BALANCED" aggroRange="300" clanHelpRange="1000" isAggressive="true">
@@ -3499,11 +3456,12 @@
 		</stats>
 		<status undying="false" canBeSown="true" />
 		<skillList>
-			<skill id="4032" level="5" /> <!-- NPC Strike -->
+			<skill id="4032" level="5" /> <!-- Power Strike -->
 			<skill id="4047" level="5" /> <!-- Hold -->
-			<skill id="4416" level="1" /> <!-- Undead -->
 			<skill id="4410" level="3" /> <!-- Extremely Weak P. Atk. -->
 			<skill id="4411" level="3" /> <!-- Extremely Weak M. Atk. -->
+			<skill id="4415" level="3" /> <!-- One-handed Sword -->
+			<skill id="4416" level="1" /> <!-- Undead -->
 		</skillList>
 		<exCrtEffect>false</exCrtEffect>
 		<ai type="BALANCED" aggroRange="300" clanHelpRange="1000" isAggressive="true">
@@ -3549,15 +3507,10 @@
 		</stats>
 		<status undying="false" canBeSown="true" />
 		<skillList>
-			<skill id="4032" level="5" /> <!-- NPC Strike -->
+			<skill id="4032" level="5" /> <!-- Power Strike -->
 			<skill id="4047" level="5" /> <!-- Hold -->
-			<skill id="4408" level="1" /> <!-- HP Increase (1x) -->
-			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
 			<skill id="4410" level="3" /> <!-- Extremely Weak P. Atk. -->
 			<skill id="4411" level="3" /> <!-- Extremely Weak M. Atk. -->
-			<skill id="4412" level="11" /> <!-- Average P. Def. -->
-			<skill id="4413" level="11" /> <!-- Average M. Def. -->
-			<skill id="4414" level="2" /> <!-- Standard Type -->
 			<skill id="4415" level="3" /> <!-- One-handed Sword -->
 			<skill id="4416" level="1" /> <!-- Undead -->
 		</skillList>
@@ -3607,13 +3560,14 @@
 		</stats>
 		<status undying="false" canBeSown="true" />
 		<skillList>
-			<skill id="4032" level="5" /> <!-- NPC Strike -->
+			<skill id="4032" level="5" /> <!-- Power Strike -->
 			<skill id="4098" level="6" /> <!-- Silence -->
-			<skill id="4613" level="5" /> <!-- NPC Clan Heal -->
-			<skill id="4416" level="1" /> <!-- Undead -->
 			<skill id="4412" level="7" /> <!-- Weak P. Def. -->
 			<skill id="4413" level="8" /> <!-- Weak M. Def. -->
 			<skill id="4414" level="3" /> <!-- Light Armor Type -->
+			<skill id="4415" level="3" /> <!-- One-handed Sword -->
+			<skill id="4416" level="1" /> <!-- Undead -->
+			<skill id="4613" level="5" /> <!-- Clan Heal -->
 		</skillList>
 		<exCrtEffect>false</exCrtEffect>
 		<ai type="BALANCED" aggroRange="300" clanHelpRange="1000" isAggressive="true">
@@ -3661,11 +3615,12 @@
 		</stats>
 		<status undying="false" canBeSown="true" />
 		<skillList>
-			<skill id="4032" level="6" /> <!-- NPC Strike -->
+			<skill id="4032" level="6" /> <!-- Power Strike -->
 			<skill id="4047" level="6" /> <!-- Hold -->
-			<skill id="4416" level="3" /> <!-- Beast -->
 			<skill id="4410" level="3" /> <!-- Extremely Weak P. Atk. -->
 			<skill id="4411" level="3" /> <!-- Extremely Weak M. Atk. -->
+			<skill id="4415" level="4" /> <!-- One-handed Sword -->
+			<skill id="4416" level="3" /> <!-- Beast -->
 		</skillList>
 		<exCrtEffect>false</exCrtEffect>
 		<ai type="BALANCED" aggroRange="300" clanHelpRange="1000" isAggressive="true">
@@ -3710,17 +3665,12 @@
 		</stats>
 		<status undying="false" canBeSown="true" />
 		<skillList>
-			<skill id="4032" level="6" /> <!-- NPC Strike -->
+			<skill id="4032" level="6" /> <!-- Power Strike -->
 			<skill id="4047" level="6" /> <!-- Hold -->
-			<skill id="4408" level="1" /> <!-- HP Increase (1x) -->
-			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
 			<skill id="4410" level="3" /> <!-- Extremely Weak P. Atk. -->
 			<skill id="4411" level="3" /> <!-- Extremely Weak M. Atk. -->
-			<skill id="4412" level="11" /> <!-- Average P. Def. -->
-			<skill id="4413" level="11" /> <!-- Average M. Def. -->
-			<skill id="4414" level="2" /> <!-- Standard Type -->
 			<skill id="4415" level="4" /> <!-- One-handed Sword -->
-			<skill id="4416" level="3" /> <!-- Beasts -->
+			<skill id="4416" level="3" /> <!-- Beast -->
 		</skillList>
 		<exCrtEffect>false</exCrtEffect>
 		<ai type="BALANCED" aggroRange="300" clanHelpRange="1000" isAggressive="true">
@@ -3768,12 +3718,13 @@
 		</stats>
 		<status undying="false" canBeSown="true" />
 		<skillList>
-			<skill id="4032" level="6" /> <!-- NPC Strike -->
+			<skill id="4032" level="6" /> <!-- Power Strike -->
 			<skill id="4098" level="7" /> <!-- Silence -->
-			<skill id="4613" level="6" /> <!-- NPC Clan Heal -->
-			<skill id="4416" level="3" /> <!-- Beast -->
 			<skill id="4412" level="7" /> <!-- Weak P. Def. -->
 			<skill id="4413" level="8" /> <!-- Weak M. Def. -->
+			<skill id="4415" level="6" /> <!-- One-handed Blunt Weapons -->
+			<skill id="4416" level="3" /> <!-- Beast -->
+			<skill id="4613" level="6" /> <!-- Clan Heal -->
 		</skillList>
 		<exCrtEffect>false</exCrtEffect>
 		<ai type="BALANCED" aggroRange="300" clanHelpRange="1000" isAggressive="true">

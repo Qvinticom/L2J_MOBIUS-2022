@@ -22,7 +22,8 @@
 			</speed>
 		</stats>
 		<skillList>
-			<skill id="32852" level="1" />
+			<skill id="4379" level="4" /> <!-- Spear Resistance -->
+			<skill id="4410" level="16" /> <!-- Very Strong P. Atk. -->
 			<skill id="4416" level="9" /> <!-- Demons -->
 			<skill id="5462" level="1" /> <!-- Fire Attack -->
 		</skillList>
@@ -70,9 +71,9 @@
 			</speed>
 		</stats>
 		<skillList>
-			<skill id="18217" level="5" />
-			<skill id="32854" level="1" />
-			<skill id="4416" level="6" /> <!-- Humanoids -->
+			<skill id="4379" level="4" /> <!-- Spear Resistance -->
+			<skill id="4411" level="13" /> <!-- Slightly Strong M. Atk. -->
+			<skill id="4416" level="6" /> <!-- Humanoid -->
 			<skill id="5465" level="1" /> <!-- Earth Attack -->
 		</skillList>
 		<collision>
@@ -116,7 +117,8 @@
 			</speed>
 		</stats>
 		<skillList>
-			<skill id="32849" level="1" />
+			<skill id="4379" level="4" /> <!-- Spear Resistance -->
+			<skill id="4410" level="16" /> <!-- Very Strong P. Atk. -->
 			<skill id="4416" level="7" /> <!-- Spirits -->
 			<skill id="5465" level="1" /> <!-- Earth Attack -->
 		</skillList>
@@ -161,7 +163,8 @@
 			</speed>
 		</stats>
 		<skillList>
-			<skill id="32854" level="1" />
+			<skill id="4379" level="4" /> <!-- Spear Resistance -->
+			<skill id="4411" level="16" /> <!-- Very Strong M. Atk. -->
 			<skill id="4416" level="9" /> <!-- Demons -->
 			<skill id="5462" level="1" /> <!-- Fire Attack -->
 		</skillList>
@@ -206,12 +209,10 @@
 			</attribute>
 		</stats>
 		<skillList>
-			<skill id="32862" level="1" />
+			<skill id="4379" level="4" /> <!-- Spear Resistance -->
+			<skill id="4410" level="16" /> <!-- Very Strong P. Atk. -->
 			<skill id="4416" level="3" /> <!-- Beast -->
 			<skill id="5465" level="1" /> <!-- Earth Attack -->
-			<skill id="4410" level="16" /> <!-- Very Strong P. Atk. -->
-			<skill id="4379" level="4" /> <!-- Spear Resistance -->
-			<skill id="16547" level="8" /> <!-- Danger Zone Attack Resistance -->
 		</skillList>
 		<collision>
 			<radius normal="20" />
@@ -268,13 +269,14 @@
 			</speed>
 		</stats>
 		<skillList>
+			<skill id="4416" level="6" /> <!-- Humanoid -->
+			<skill id="5467" level="1" /> <!-- Dark Attack -->
+			<skill id="14821" level="1" /> <!-- Instant Kill Attack Resistance -->
+			<skill id="16758" level="1" /> <!-- Embryo -->
 			<skill id="23638" level="1" /> <!-- Bloody Strike -->
 			<skill id="23639" level="1" /> <!-- Rush Assault -->
-			<skill id="23708" level="4" /> <!-- Dark Breaker -->
-			<skill id="4416" level="6" /> <!-- Humanoids -->
-			<skill id="5467" level="1" /> <!-- Dark Attack -->
-			<skill id="16758" level="1" /> <!-- Embryo -->
-			<skill id="14821" level="1" /> <!-- Instant Kill Attack Resistance -->
+			<skill id="23708" level="1" /> <!-- Dark Breaker -->
+			<skill id="23709" level="1" /> <!-- Chaos Breaker -->
 		</skillList>
 		<ai aggroRange="300" clanHelpRange="300" isAggressive="true">
 			<clanList>
@@ -329,17 +331,19 @@
 			</speed>
 		</stats>
 		<skillList>
-			<skill id="23636" level="1" /> <!-- Stun Crush -->
-			<skill id="23637" level="1" /> <!-- Dark Provoke -->
-			<skill id="23709" level="4" /> <!-- Chaos Breaker -->
-			<skill id="4416" level="6" /> <!-- Humanoids -->
-			<skill id="5467" level="1" /> <!-- Dark Attack -->
 			<skill id="4412" level="14" /> <!-- Strong P. Def. -->
 			<skill id="4413" level="14" /> <!-- Strong M. Def. -->
-			<skill id="16758" level="1" /> <!-- Embryo -->
+			<skill id="4416" level="6" /> <!-- Humanoid -->
+			<skill id="4440" level="5" /> <!-- Greater Paralysis Resistance -->
+			<skill id="5467" level="1" /> <!-- Dark Attack -->
 			<skill id="14821" level="1" /> <!-- Instant Kill Attack Resistance -->
 			<skill id="16547" level="10" /> <!-- Danger Zone Attack Resistance -->
-			<skill id="4440" level="5" /> <!-- Greater Paralysis Resistance -->
+			<skill id="16758" level="1" /> <!-- Embryo -->
+			<skill id="23636" level="1" /> <!-- Stun Crush -->
+			<skill id="23637" level="1" /> <!-- Dark Provoke -->
+			<skill id="23642" level="1" /> <!-- Crack of Air -->
+			<skill id="23708" level="2" /> <!-- Dark Breaker -->
+			<skill id="23709" level="2" /> <!-- Chaos Breaker -->
 		</skillList>
 		<ai aggroRange="300" clanHelpRange="300" isAggressive="true">
 			<clanList>
@@ -393,13 +397,14 @@
 			</speed>
 		</stats>
 		<skillList>
+			<skill id="4416" level="6" /> <!-- Humanoid -->
+			<skill id="5467" level="1" /> <!-- Dark Attack -->
+			<skill id="14821" level="1" /> <!-- Instant Kill Attack Resistance -->
+			<skill id="16758" level="1" /> <!-- Embryo -->
 			<skill id="23640" level="1" /> <!-- Thirst of Blood -->
 			<skill id="23641" level="1" /> <!-- Embryo Haste -->
-			<skill id="23708" level="4" /> <!-- Dark Breaker -->
-			<skill id="4416" level="6" /> <!-- Humanoids -->
-			<skill id="5467" level="1" /> <!-- Dark Attack -->
-			<skill id="16758" level="1" /> <!-- Embryo -->
-			<skill id="14821" level="1" /> <!-- Instant Kill Attack Resistance -->
+			<skill id="23708" level="1" /> <!-- Dark Breaker -->
+			<skill id="23709" level="1" /> <!-- Chaos Breaker -->
 		</skillList>
 		<ai aggroRange="300" clanHelpRange="300" isAggressive="true">
 			<clanList>
@@ -452,16 +457,19 @@
 			</speed>
 		</stats>
 		<skillList>
-			<skill id="23642" level="1" /> <!-- Crack of Air -->
-			<skill id="23709" level="4" /> <!-- Chaos Breaker -->
-			<skill id="4416" level="6" /> <!-- Humanoids -->
-			<skill id="5467" level="1" /> <!-- Dark Attack -->
 			<skill id="4412" level="14" /> <!-- Strong P. Def. -->
 			<skill id="4413" level="14" /> <!-- Strong M. Def. -->
-			<skill id="16758" level="1" /> <!-- Embryo -->
+			<skill id="4416" level="6" /> <!-- Humanoid -->
+			<skill id="4440" level="5" /> <!-- Greater Paralysis Resistance -->
+			<skill id="5467" level="1" /> <!-- Dark Attack -->
 			<skill id="14821" level="1" /> <!-- Instant Kill Attack Resistance -->
 			<skill id="16547" level="10" /> <!-- Danger Zone Attack Resistance -->
-			<skill id="4440" level="5" /> <!-- Greater Paralysis Resistance -->
+			<skill id="16758" level="1" /> <!-- Embryo -->
+			<skill id="23642" level="1" /> <!-- Crack of Air -->
+			<skill id="23643" level="1" /> <!-- Vampiric Force -->
+			<skill id="23644" level="1" /> <!-- Road of Embryo -->
+			<skill id="23708" level="2" /> <!-- Dark Breaker -->
+			<skill id="23709" level="2" /> <!-- Chaos Breaker -->
 		</skillList>
 		<ai aggroRange="300" clanHelpRange="300" isAggressive="true">
 			<clanList>
@@ -516,15 +524,17 @@
 			</speed>
 		</stats>
 		<skillList>
-			<skill id="23645" level="1" /> <!-- Curse of Silence -->
-			<skill id="23646" level="1" /> <!-- Blessing of Darkness -->
-			<skill id="23706" level="4" /> <!-- Dark Fire -->
-			<skill id="4416" level="6" /> <!-- Humanoids -->
-			<skill id="5467" level="1" /> <!-- Dark Attack -->
 			<skill id="4412" level="14" /> <!-- Strong P. Def. -->
 			<skill id="4413" level="14" /> <!-- Strong M. Def. -->
-			<skill id="16758" level="1" /> <!-- Embryo -->
+			<skill id="4416" level="6" /> <!-- Humanoid -->
+			<skill id="5467" level="1" /> <!-- Dark Attack -->
 			<skill id="14821" level="1" /> <!-- Instant Kill Attack Resistance -->
+			<skill id="16758" level="1" /> <!-- Embryo -->
+			<skill id="23645" level="1" /> <!-- Curse of Silence -->
+			<skill id="23646" level="1" /> <!-- Blessing of Darkness -->
+			<skill id="23647" level="1" /> <!-- Absolute Black -->
+			<skill id="23706" level="1" /> <!-- Dark Fire -->
+			<skill id="23707" level="1" /> <!-- Chaos Fire -->
 		</skillList>
 		<ai aggroRange="300" clanHelpRange="300" isAggressive="true">
 			<clanList>
@@ -581,16 +591,17 @@
 			</speed>
 		</stats>
 		<skillList>
+			<skill id="4412" level="14" /> <!-- Strong P. Def. -->
+			<skill id="4413" level="14" /> <!-- Strong M. Def. -->
+			<skill id="4416" level="6" /> <!-- Humanoid -->
+			<skill id="5467" level="1" /> <!-- Dark Attack -->
+			<skill id="14821" level="1" /> <!-- Instant Kill Attack Resistance -->
+			<skill id="16758" level="1" /> <!-- Embryo -->
 			<skill id="23645" level="1" /> <!-- Curse of Silence -->
 			<skill id="23649" level="1" /> <!-- Curse of Blaze -->
 			<skill id="23650" level="1" /> <!-- Meteor Hurricane -->
-			<skill id="23706" level="4" /> <!-- Dark Fire -->
-			<skill id="4416" level="6" /> <!-- Humanoids -->
-			<skill id="5467" level="1" /> <!-- Dark Attack -->
-			<skill id="4412" level="14" /> <!-- Strong P. Def. -->
-			<skill id="4413" level="14" /> <!-- Strong M. Def. -->
-			<skill id="16758" level="1" /> <!-- Embryo -->
-			<skill id="14821" level="1" /> <!-- Instant Kill Attack Resistance -->
+			<skill id="23706" level="1" /> <!-- Dark Fire -->
+			<skill id="23707" level="1" /> <!-- Chaos Fire -->
 		</skillList>
 		<ai aggroRange="300" clanHelpRange="300" isAggressive="true">
 			<clanList>
@@ -637,14 +648,18 @@
 			</speed>
 		</stats>
 		<skillList>
-			<skill id="4416" level="6" /> <!-- Humanoids -->
-			<skill id="5467" level="1" /> <!-- Dark Attack -->
 			<skill id="4412" level="16" /> <!-- Very Strong P. Def. -->
 			<skill id="4413" level="16" /> <!-- Very Strong M. Def. -->
-			<skill id="16758" level="1" /> <!-- Embryo -->
+			<skill id="4416" level="6" /> <!-- Humanoid -->
+			<skill id="4440" level="5" /> <!-- Greater Paralysis Resistance -->
+			<skill id="5467" level="1" /> <!-- Dark Attack -->
 			<skill id="14821" level="1" /> <!-- Instant Kill Attack Resistance -->
 			<skill id="16547" level="10" /> <!-- Danger Zone Attack Resistance -->
-			<skill id="4440" level="5" /> <!-- Greater Paralysis Resistance -->
+			<skill id="16758" level="1" /> <!-- Embryo -->
+			<skill id="23651" level="1" /> <!-- Absolute Crimson -->
+			<skill id="23652" level="1" /> <!-- Rage of Embryo -->
+			<skill id="23706" level="2" /> <!-- Dark Fire -->
+			<skill id="23707" level="2" /> <!-- Chaos Fire -->
 		</skillList>
 		<ai aggroRange="300" clanHelpRange="300" isAggressive="true">
 			<clanList>
@@ -691,14 +706,18 @@
 			</speed>
 		</stats>
 		<skillList>
-			<skill id="4416" level="6" /> <!-- Humanoids -->
-			<skill id="5467" level="1" /> <!-- Dark Attack -->
 			<skill id="4412" level="16" /> <!-- Very Strong P. Def. -->
 			<skill id="4413" level="16" /> <!-- Very Strong M. Def. -->
-			<skill id="16758" level="1" /> <!-- Embryo -->
+			<skill id="4416" level="6" /> <!-- Humanoid -->
+			<skill id="4440" level="5" /> <!-- Greater Paralysis Resistance -->
+			<skill id="5467" level="1" /> <!-- Dark Attack -->
 			<skill id="14821" level="1" /> <!-- Instant Kill Attack Resistance -->
 			<skill id="16547" level="10" /> <!-- Danger Zone Attack Resistance -->
-			<skill id="4440" level="5" /> <!-- Greater Paralysis Resistance -->
+			<skill id="16758" level="1" /> <!-- Embryo -->
+			<skill id="23647" level="1" /> <!-- Absolute Black -->
+			<skill id="23648" level="1" /> <!-- Blessing of Atelia -->
+			<skill id="23706" level="2" /> <!-- Dark Fire -->
+			<skill id="23707" level="2" /> <!-- Chaos Fire -->
 		</skillList>
 		<ai aggroRange="300" clanHelpRange="300" isAggressive="true">
 			<clanList>
@@ -747,15 +766,19 @@
 			</speed>
 		</stats>
 		<skillList>
-			<skill id="23637" level="1" /> <!-- Dark Provoke -->
-			<skill id="4416" level="6" /> <!-- Humanoids -->
-			<skill id="5467" level="1" /> <!-- Dark Attack -->
 			<skill id="4412" level="14" /> <!-- Strong P. Def. -->
 			<skill id="4413" level="14" /> <!-- Strong M. Def. -->
-			<skill id="16758" level="1" /> <!-- Embryo -->
+			<skill id="4416" level="6" /> <!-- Humanoid -->
+			<skill id="4440" level="5" /> <!-- Greater Paralysis Resistance -->
+			<skill id="5467" level="1" /> <!-- Dark Attack -->
 			<skill id="14821" level="1" /> <!-- Instant Kill Attack Resistance -->
 			<skill id="16547" level="10" /> <!-- Danger Zone Attack Resistance -->
-			<skill id="4440" level="5" /> <!-- Greater Paralysis Resistance -->
+			<skill id="16758" level="1" /> <!-- Embryo -->
+			<skill id="23636" level="1" /> <!-- Stun Crush -->
+			<skill id="23637" level="1" /> <!-- Dark Provoke -->
+			<skill id="23642" level="1" /> <!-- Crack of Air -->
+			<skill id="23708" level="2" /> <!-- Dark Breaker -->
+			<skill id="23709" level="2" /> <!-- Chaos Breaker -->
 		</skillList>
 		<ai aggroRange="300" clanHelpRange="300" isAggressive="true">
 			<clanList>
@@ -802,14 +825,19 @@
 			</speed>
 		</stats>
 		<skillList>
-			<skill id="4416" level="6" /> <!-- Humanoids -->
-			<skill id="5467" level="1" /> <!-- Dark Attack -->
 			<skill id="4412" level="14" /> <!-- Strong P. Def. -->
 			<skill id="4413" level="14" /> <!-- Strong M. Def. -->
-			<skill id="16758" level="1" /> <!-- Embryo -->
+			<skill id="4416" level="6" /> <!-- Humanoid -->
+			<skill id="4440" level="5" /> <!-- Greater Paralysis Resistance -->
+			<skill id="5467" level="1" /> <!-- Dark Attack -->
 			<skill id="14821" level="1" /> <!-- Instant Kill Attack Resistance -->
 			<skill id="16547" level="10" /> <!-- Danger Zone Attack Resistance -->
-			<skill id="4440" level="5" /> <!-- Greater Paralysis Resistance -->
+			<skill id="16758" level="1" /> <!-- Embryo -->
+			<skill id="23642" level="1" /> <!-- Crack of Air -->
+			<skill id="23643" level="1" /> <!-- Vampiric Force -->
+			<skill id="23644" level="1" /> <!-- Road of Embryo -->
+			<skill id="23708" level="2" /> <!-- Dark Breaker -->
+			<skill id="23709" level="2" /> <!-- Chaos Breaker -->
 		</skillList>
 		<ai aggroRange="300" clanHelpRange="300" isAggressive="true">
 			<clanList>
@@ -856,14 +884,18 @@
 			</speed>
 		</stats>
 		<skillList>
-			<skill id="4416" level="6" /> <!-- Humanoids -->
-			<skill id="5467" level="1" /> <!-- Dark Attack -->
 			<skill id="4412" level="16" /> <!-- Very Strong P. Def. -->
 			<skill id="4413" level="16" /> <!-- Very Strong M. Def. -->
-			<skill id="16758" level="1" /> <!-- Embryo -->
+			<skill id="4416" level="6" /> <!-- Humanoid -->
+			<skill id="4440" level="5" /> <!-- Greater Paralysis Resistance -->
+			<skill id="5467" level="1" /> <!-- Dark Attack -->
 			<skill id="14821" level="1" /> <!-- Instant Kill Attack Resistance -->
 			<skill id="16547" level="10" /> <!-- Danger Zone Attack Resistance -->
-			<skill id="4440" level="5" /> <!-- Greater Paralysis Resistance -->
+			<skill id="16758" level="1" /> <!-- Embryo -->
+			<skill id="23651" level="1" /> <!-- Absolute Crimson -->
+			<skill id="23652" level="1" /> <!-- Rage of Embryo -->
+			<skill id="23706" level="2" /> <!-- Dark Fire -->
+			<skill id="23707" level="2" /> <!-- Chaos Fire -->
 		</skillList>
 		<ai aggroRange="300" clanHelpRange="300" isAggressive="true">
 			<clanList>
@@ -910,14 +942,18 @@
 			</speed>
 		</stats>
 		<skillList>
-			<skill id="4416" level="6" /> <!-- Humanoids -->
-			<skill id="5467" level="1" /> <!-- Dark Attack -->
 			<skill id="4412" level="16" /> <!-- Very Strong P. Def. -->
 			<skill id="4413" level="16" /> <!-- Very Strong M. Def. -->
-			<skill id="16758" level="1" /> <!-- Embryo -->
+			<skill id="4416" level="6" /> <!-- Humanoid -->
+			<skill id="4440" level="5" /> <!-- Greater Paralysis Resistance -->
+			<skill id="5467" level="1" /> <!-- Dark Attack -->
 			<skill id="14821" level="1" /> <!-- Instant Kill Attack Resistance -->
 			<skill id="16547" level="10" /> <!-- Danger Zone Attack Resistance -->
-			<skill id="4440" level="5" /> <!-- Greater Paralysis Resistance -->
+			<skill id="16758" level="1" /> <!-- Embryo -->
+			<skill id="23647" level="1" /> <!-- Absolute Black -->
+			<skill id="23648" level="1" /> <!-- Blessing of Atelia -->
+			<skill id="23706" level="2" /> <!-- Dark Fire -->
+			<skill id="23707" level="2" /> <!-- Chaos Fire -->
 		</skillList>
 		<ai aggroRange="300" clanHelpRange="300" isAggressive="true">
 			<clanList>
@@ -964,14 +1000,19 @@
 			</speed>
 		</stats>
 		<skillList>
-			<skill id="4416" level="6" /> <!-- Humanoids -->
-			<skill id="5467" level="1" /> <!-- Dark Attack -->
 			<skill id="4412" level="14" /> <!-- Strong P. Def. -->
 			<skill id="4413" level="14" /> <!-- Strong M. Def. -->
-			<skill id="16758" level="1" /> <!-- Embryo -->
+			<skill id="4416" level="6" /> <!-- Humanoid -->
+			<skill id="4440" level="5" /> <!-- Greater Paralysis Resistance -->
+			<skill id="5467" level="1" /> <!-- Dark Attack -->
 			<skill id="14821" level="1" /> <!-- Instant Kill Attack Resistance -->
 			<skill id="16547" level="10" /> <!-- Danger Zone Attack Resistance -->
-			<skill id="4440" level="5" /> <!-- Greater Paralysis Resistance -->
+			<skill id="16758" level="1" /> <!-- Embryo -->
+			<skill id="23642" level="1" /> <!-- Crack of Air -->
+			<skill id="23643" level="1" /> <!-- Vampiric Force -->
+			<skill id="23644" level="1" /> <!-- Road of Embryo -->
+			<skill id="23708" level="3" /> <!-- Dark Breaker -->
+			<skill id="23709" level="3" /> <!-- Chaos Breaker -->
 		</skillList>
 		<ai aggroRange="300" clanHelpRange="300" isAggressive="true">
 			<clanList>
@@ -1018,14 +1059,18 @@
 			</speed>
 		</stats>
 		<skillList>
-			<skill id="4416" level="6" /> <!-- Humanoids -->
-			<skill id="5467" level="1" /> <!-- Dark Attack -->
 			<skill id="4412" level="16" /> <!-- Very Strong P. Def. -->
 			<skill id="4413" level="16" /> <!-- Very Strong M. Def. -->
-			<skill id="16758" level="1" /> <!-- Embryo -->
+			<skill id="4416" level="6" /> <!-- Humanoid -->
+			<skill id="4440" level="5" /> <!-- Greater Paralysis Resistance -->
+			<skill id="5467" level="1" /> <!-- Dark Attack -->
 			<skill id="14821" level="1" /> <!-- Instant Kill Attack Resistance -->
 			<skill id="16547" level="10" /> <!-- Danger Zone Attack Resistance -->
-			<skill id="4440" level="5" /> <!-- Greater Paralysis Resistance -->
+			<skill id="16758" level="1" /> <!-- Embryo -->
+			<skill id="23647" level="1" /> <!-- Absolute Black -->
+			<skill id="23648" level="1" /> <!-- Blessing of Atelia -->
+			<skill id="23706" level="3" /> <!-- Dark Fire -->
+			<skill id="23707" level="3" /> <!-- Chaos Fire -->
 		</skillList>
 		<ai aggroRange="300" clanHelpRange="300" isAggressive="true">
 			<clanList>
@@ -1078,13 +1123,15 @@
 			</speed>
 		</stats>
 		<skillList>
-			<skill id="23654" level="1" /> <!-- Earth Breaker -->
-			<skill id="23655" level="1" /> <!-- Gravity Slam -->
-			<skill id="23680" level="1" /> <!-- Kelbim's Blessing -->
-			<skill id="4416" level="6" /> <!-- Humanoids -->
-			<skill id="16758" level="1" /> <!-- Embryo -->
+			<skill id="4416" level="6" /> <!-- Humanoid -->
 			<skill id="5467" level="1" /> <!-- Dark Attack -->
 			<skill id="14821" level="1" /> <!-- Instant Kill Attack Resistance -->
+			<skill id="16758" level="1" /> <!-- Embryo -->
+			<skill id="23636" level="1" /> <!-- Stun Crush -->
+			<skill id="23637" level="1" /> <!-- Dark Provoke -->
+			<skill id="23642" level="1" /> <!-- Crack of Air -->
+			<skill id="23708" level="3" /> <!-- Dark Breaker -->
+			<skill id="23709" level="3" /> <!-- Chaos Breaker -->
 		</skillList>
 		<collision>
 			<radius normal="24" />
@@ -1109,11 +1156,13 @@
 			</speed>
 		</stats>
 		<skillList>
+			<skill id="4410" level="14" /> <!-- Strong P. Atk. -->
 			<skill id="4416" level="7" /> <!-- Spirits -->
 			<skill id="5466" level="1" /> <!-- Holy Attacks -->
 			<skill id="14821" level="1" /> <!-- Instant Kill Attack Resistance -->
-			<skill id="16547" level="10" /> <!-- Danger Zone Attack Resistance -->
-			<skill id="4435" level="5" /> <!-- High Stun Attack Resistance -->
+			<skill id="23660" level="1" /> <!-- Holy Fatal Strike -->
+			<skill id="23664" level="1" /> <!-- Holy Blast -->
+			<skill id="23670" level="1" /> <!-- Holy Defense Down -->
 		</skillList>
 		<ai aggroRange="300" clanHelpRange="300" isAggressive="true">
 			<clanList>
@@ -1158,11 +1207,14 @@
 			</speed>
 		</stats>
 		<skillList>
+			<skill id="4410" level="14" /> <!-- Strong P. Atk. -->
 			<skill id="4416" level="7" /> <!-- Spirits -->
 			<skill id="5466" level="1" /> <!-- Holy Attacks -->
 			<skill id="14821" level="1" /> <!-- Instant Kill Attack Resistance -->
 			<skill id="16547" level="10" /> <!-- Danger Zone Attack Resistance -->
-			<skill id="4435" level="5" /> <!-- High Stun Attack Resistance -->
+			<skill id="23660" level="1" /> <!-- Holy Fatal Strike -->
+			<skill id="23664" level="1" /> <!-- Holy Blast -->
+			<skill id="23670" level="1" /> <!-- Holy Defense Down -->
 		</skillList>
 		<ai aggroRange="300" clanHelpRange="300" isAggressive="true">
 			<clanList>
@@ -1207,11 +1259,14 @@
 			</speed>
 		</stats>
 		<skillList>
+			<skill id="4410" level="14" /> <!-- Strong P. Atk. -->
 			<skill id="4416" level="7" /> <!-- Spirits -->
 			<skill id="5464" level="1" /> <!-- Wind Attack -->
 			<skill id="14821" level="1" /> <!-- Instant Kill Attack Resistance -->
-			<skill id="16547" level="10" /> <!-- Danger Zone Attack Resistance -->
-			<skill id="4435" level="5" /> <!-- High Stun Attack Resistance -->
+			<skill id="23657" level="1" /> <!-- Wind Aura Spike -->
+			<skill id="23659" level="1" /> <!-- Fatal Wind Strike -->
+			<skill id="23663" level="1" /> <!-- Wind Blast -->
+			<skill id="23669" level="1" /> <!-- Wind Defense Down -->
 		</skillList>
 		<ai aggroRange="300" clanHelpRange="300" isAggressive="true">
 			<clanList>
@@ -1256,11 +1311,16 @@
 			</speed>
 		</stats>
 		<skillList>
+			<skill id="4411" level="14" /> <!-- Strong M. Atk. -->
 			<skill id="4416" level="7" /> <!-- Spirits -->
 			<skill id="5464" level="1" /> <!-- Wind Attack -->
+			<skill id="14620" level="2" /> <!-- Aerial Yoke Attack Resistance -->
 			<skill id="14821" level="1" /> <!-- Instant Kill Attack Resistance -->
 			<skill id="16547" level="10" /> <!-- Danger Zone Attack Resistance -->
-			<skill id="14620" level="4" /> <!-- Aerial Yoke Resistance -->
+			<skill id="23657" level="1" /> <!-- Wind Aura Spike -->
+			<skill id="23659" level="1" /> <!-- Fatal Wind Strike -->
+			<skill id="23663" level="1" /> <!-- Wind Blast -->
+			<skill id="23669" level="1" /> <!-- Wind Defense Down -->
 		</skillList>
 		<ai aggroRange="300" clanHelpRange="300" isAggressive="true">
 			<clanList>
@@ -1304,9 +1364,13 @@
 			</speed>
 		</stats>
 		<skillList>
+			<skill id="4410" level="12" /> <!-- Slightly Strong P. Atk. -->
 			<skill id="4416" level="7" /> <!-- Spirits -->
 			<skill id="5466" level="1" /> <!-- Holy Attacks -->
 			<skill id="14817" level="1" /> <!-- Instant Kill Attack Resistance -->
+			<skill id="23660" level="1" /> <!-- Holy Fatal Strike -->
+			<skill id="23664" level="1" /> <!-- Holy Blast -->
+			<skill id="23670" level="1" /> <!-- Holy Defense Down -->
 		</skillList>
 		<ai aggroRange="300" clanHelpRange="300" isAggressive="true">
 			<clanList>
@@ -1350,11 +1414,15 @@
 			</speed>
 		</stats>
 		<skillList>
+			<skill id="4411" level="14" /> <!-- Strong M. Atk. -->
 			<skill id="4416" level="7" /> <!-- Spirits -->
 			<skill id="5464" level="1" /> <!-- Wind Attack -->
+			<skill id="14620" level="2" /> <!-- Aerial Yoke Attack Resistance -->
 			<skill id="14821" level="1" /> <!-- Instant Kill Attack Resistance -->
-			<skill id="16547" level="10" /> <!-- Danger Zone Attack Resistance -->
-			<skill id="14620" level="4" /> <!-- Aerial Yoke Resistance -->
+			<skill id="23657" level="1" /> <!-- Wind Aura Spike -->
+			<skill id="23659" level="1" /> <!-- Fatal Wind Strike -->
+			<skill id="23663" level="1" /> <!-- Wind Blast -->
+			<skill id="23669" level="1" /> <!-- Wind Defense Down -->
 		</skillList>
 		<ai aggroRange="300" clanHelpRange="300" isAggressive="true">
 			<clanList>
@@ -1405,13 +1473,16 @@
 			</speed>
 		</stats>
 		<skillList>
-			<skill id="23667" level="1" /> <!-- Mass Air Binding -->
-			<skill id="23658" level="1" /> <!-- Earth Aura Spike -->
+			<skill id="4411" level="14" /> <!-- Strong M. Atk. -->
 			<skill id="4416" level="7" /> <!-- Spirits -->
 			<skill id="5464" level="1" /> <!-- Wind Attack -->
+			<skill id="14620" level="2" /> <!-- Aerial Yoke Attack Resistance -->
 			<skill id="14821" level="1" /> <!-- Instant Kill Attack Resistance -->
 			<skill id="16547" level="10" /> <!-- Danger Zone Attack Resistance -->
-			<skill id="14620" level="4" /> <!-- Aerial Yoke Resistance -->
+			<skill id="23657" level="1" /> <!-- Wind Aura Spike -->
+			<skill id="23659" level="1" /> <!-- Fatal Wind Strike -->
+			<skill id="23663" level="1" /> <!-- Wind Blast -->
+			<skill id="23669" level="1" /> <!-- Wind Defense Down -->
 		</skillList>
 		<ai aggroRange="300" clanHelpRange="300" isAggressive="true">
 			<clanList>
@@ -1458,8 +1529,9 @@
 			<skill id="4416" level="7" /> <!-- Spirits -->
 			<skill id="5466" level="1" /> <!-- Holy Attacks -->
 			<skill id="14821" level="1" /> <!-- Instant Kill Attack Resistance -->
-			<skill id="16547" level="10" /> <!-- Danger Zone Attack Resistance -->
-			<skill id="4435" level="5" /> <!-- High Stun Attack Resistance -->
+			<skill id="23660" level="1" /> <!-- Holy Fatal Strike -->
+			<skill id="23664" level="1" /> <!-- Holy Blast -->
+			<skill id="23670" level="1" /> <!-- Holy Defense Down -->
 		</skillList>
 		<ai aggroRange="300" clanHelpRange="300" isAggressive="true">
 			<clanList>
@@ -1492,8 +1564,10 @@
 			<skill id="4416" level="7" /> <!-- Spirits -->
 			<skill id="5464" level="1" /> <!-- Wind Attack -->
 			<skill id="14821" level="1" /> <!-- Instant Kill Attack Resistance -->
-			<skill id="16547" level="10" /> <!-- Danger Zone Attack Resistance -->
-			<skill id="4435" level="5" /> <!-- High Stun Attack Resistance -->
+			<skill id="23657" level="1" /> <!-- Wind Aura Spike -->
+			<skill id="23659" level="1" /> <!-- Fatal Wind Strike -->
+			<skill id="23663" level="1" /> <!-- Wind Blast -->
+			<skill id="23669" level="1" /> <!-- Wind Defense Down -->
 		</skillList>
 		<ai aggroRange="300" clanHelpRange="300" isAggressive="true">
 			<clanList>
@@ -1523,11 +1597,15 @@
 			</speed>
 		</stats>
 		<skillList>
+			<skill id="4410" level="14" /> <!-- Strong P. Atk. -->
 			<skill id="4416" level="7" /> <!-- Spirits -->
 			<skill id="5467" level="1" /> <!-- Dark Attack -->
 			<skill id="14821" level="1" /> <!-- Instant Kill Attack Resistance -->
+			<skill id="16154" level="6" /> <!-- Mass Chain Smash -->
 			<skill id="16547" level="10" /> <!-- Danger Zone Attack Resistance -->
-			<skill id="4435" level="5" /> <!-- High Stun Attack Resistance -->
+			<skill id="23662" level="1" /> <!-- Dark Fatal Strike -->
+			<skill id="23666" level="1" /> <!-- Darkness Blast -->
+			<skill id="23672" level="1" /> <!-- Dark Defense Down -->
 		</skillList>
 		<ai aggroRange="300" clanHelpRange="300" isAggressive="true">
 			<clanList>
@@ -1571,11 +1649,14 @@
 			</speed>
 		</stats>
 		<skillList>
+			<skill id="4410" level="14" /> <!-- Strong P. Atk. -->
 			<skill id="4416" level="7" /> <!-- Spirits -->
 			<skill id="5467" level="1" /> <!-- Dark Attack -->
 			<skill id="14821" level="1" /> <!-- Instant Kill Attack Resistance -->
-			<skill id="16547" level="10" /> <!-- Danger Zone Attack Resistance -->
-			<skill id="4435" level="5" /> <!-- High Stun Attack Resistance -->
+			<skill id="16154" level="6" /> <!-- Mass Chain Smash -->
+			<skill id="23662" level="1" /> <!-- Dark Fatal Strike -->
+			<skill id="23666" level="1" /> <!-- Darkness Blast -->
+			<skill id="23672" level="1" /> <!-- Dark Defense Down -->
 		</skillList>
 		<ai aggroRange="300" clanHelpRange="300" isAggressive="true">
 			<clanList>
@@ -1622,11 +1703,17 @@
 			</speed>
 		</stats>
 		<skillList>
+			<skill id="4410" level="14" /> <!-- Strong P. Atk. -->
 			<skill id="4416" level="7" /> <!-- Spirits -->
 			<skill id="5465" level="1" /> <!-- Earth Attack -->
 			<skill id="14821" level="1" /> <!-- Instant Kill Attack Resistance -->
+			<skill id="16154" level="6" /> <!-- Mass Chain Smash -->
 			<skill id="16547" level="10" /> <!-- Danger Zone Attack Resistance -->
-			<skill id="4435" level="5" /> <!-- High Stun Attack Resistance -->
+			<skill id="23658" level="1" /> <!-- Earth Aura Spike -->
+			<skill id="23661" level="1" /> <!-- Earth Fatal Strike -->
+			<skill id="23665" level="1" /> <!-- Earth Blast -->
+			<skill id="23668" level="1" /> <!-- Mass Power Slam -->
+			<skill id="23671" level="1" /> <!-- Earth Defense Down -->
 		</skillList>
 		<ai aggroRange="300" clanHelpRange="300" isAggressive="true">
 			<clanList>
@@ -1671,11 +1758,16 @@
 			</speed>
 		</stats>
 		<skillList>
+			<skill id="4411" level="14" /> <!-- Strong M. Atk. -->
 			<skill id="4416" level="7" /> <!-- Spirits -->
 			<skill id="5465" level="1" /> <!-- Earth Attack -->
+			<skill id="14620" level="2" /> <!-- Aerial Yoke Attack Resistance -->
 			<skill id="14821" level="1" /> <!-- Instant Kill Attack Resistance -->
-			<skill id="16547" level="10" /> <!-- Danger Zone Attack Resistance -->
-			<skill id="14620" level="4" /> <!-- Aerial Yoke Resistance -->
+			<skill id="23658" level="1" /> <!-- Earth Aura Spike -->
+			<skill id="23661" level="1" /> <!-- Earth Fatal Strike -->
+			<skill id="23665" level="1" /> <!-- Earth Blast -->
+			<skill id="23668" level="1" /> <!-- Mass Power Slam -->
+			<skill id="23671" level="1" /> <!-- Earth Defense Down -->
 		</skillList>
 		<ai aggroRange="300" clanHelpRange="300" isAggressive="true">
 			<clanList>
@@ -1722,9 +1814,13 @@
 			</attribute>
 		</stats>
 		<skillList>
+			<skill id="4410" level="12" /> <!-- Slightly Strong P. Atk. -->
 			<skill id="4416" level="7" /> <!-- Spirits -->
 			<skill id="5467" level="1" /> <!-- Dark Attack -->
 			<skill id="14817" level="1" /> <!-- Instant Kill Attack Resistance -->
+			<skill id="23662" level="1" /> <!-- Dark Fatal Strike -->
+			<skill id="23666" level="1" /> <!-- Darkness Blast -->
+			<skill id="23672" level="1" /> <!-- Dark Defense Down -->
 		</skillList>
 		<ai aggroRange="300" clanHelpRange="300" isAggressive="true">
 			<clanList>
@@ -1768,11 +1864,17 @@
 			</speed>
 		</stats>
 		<skillList>
+			<skill id="4411" level="14" /> <!-- Strong M. Atk. -->
 			<skill id="4416" level="7" /> <!-- Spirits -->
 			<skill id="5465" level="1" /> <!-- Earth Attack -->
+			<skill id="14620" level="2" /> <!-- Aerial Yoke Attack Resistance -->
 			<skill id="14821" level="1" /> <!-- Instant Kill Attack Resistance -->
 			<skill id="16547" level="10" /> <!-- Danger Zone Attack Resistance -->
-			<skill id="14620" level="4" /> <!-- Aerial Yoke Resistance -->
+			<skill id="23658" level="1" /> <!-- Earth Aura Spike -->
+			<skill id="23661" level="1" /> <!-- Earth Fatal Strike -->
+			<skill id="23665" level="1" /> <!-- Earth Blast -->
+			<skill id="23668" level="1" /> <!-- Mass Power Slam -->
+			<skill id="23671" level="1" /> <!-- Earth Defense Down -->
 		</skillList>
 		<ai aggroRange="300" clanHelpRange="300" isAggressive="true">
 			<clanList>
@@ -1825,13 +1927,16 @@
 			</speed>
 		</stats>
 		<skillList>
-			<skill id="23667" level="1" /> <!-- Mass Air Binding -->
-			<skill id="23658" level="2" /> <!-- Earth Aura Spike -->
+			<skill id="4411" level="14" /> <!-- Strong M. Atk. -->
 			<skill id="4416" level="7" /> <!-- Spirits -->
 			<skill id="5465" level="1" /> <!-- Earth Attack -->
+			<skill id="14620" level="2" /> <!-- Aerial Yoke Attack Resistance -->
 			<skill id="14821" level="1" /> <!-- Instant Kill Attack Resistance -->
-			<skill id="16547" level="10" /> <!-- Danger Zone Attack Resistance -->
-			<skill id="14620" level="4" /> <!-- Aerial Yoke Resistance -->
+			<skill id="23658" level="1" /> <!-- Earth Aura Spike -->
+			<skill id="23661" level="1" /> <!-- Earth Fatal Strike -->
+			<skill id="23665" level="1" /> <!-- Earth Blast -->
+			<skill id="23668" level="1" /> <!-- Mass Power Slam -->
+			<skill id="23671" level="1" /> <!-- Earth Defense Down -->
 		</skillList>
 		<ai aggroRange="300" clanHelpRange="300" isAggressive="true">
 			<clanList>
@@ -1881,8 +1986,10 @@
 			<skill id="4416" level="7" /> <!-- Spirits -->
 			<skill id="5467" level="1" /> <!-- Dark Attack -->
 			<skill id="14821" level="1" /> <!-- Instant Kill Attack Resistance -->
-			<skill id="16547" level="10" /> <!-- Danger Zone Attack Resistance -->
-			<skill id="4435" level="5" /> <!-- High Stun Attack Resistance -->
+			<skill id="16156" level="8" /> <!-- Mass Droop -->
+			<skill id="23662" level="1" /> <!-- Dark Fatal Strike -->
+			<skill id="23666" level="1" /> <!-- Darkness Blast -->
+			<skill id="23672" level="1" /> <!-- Dark Defense Down -->
 		</skillList>
 		<ai aggroRange="300" clanHelpRange="300" isAggressive="true">
 			<clanList>
@@ -1915,8 +2022,12 @@
 			<skill id="4416" level="7" /> <!-- Spirits -->
 			<skill id="5465" level="1" /> <!-- Earth Attack -->
 			<skill id="14821" level="1" /> <!-- Instant Kill Attack Resistance -->
-			<skill id="16547" level="10" /> <!-- Danger Zone Attack Resistance -->
-			<skill id="4435" level="5" /> <!-- High Stun Attack Resistance -->
+			<skill id="16156" level="8" /> <!-- Mass Droop -->
+			<skill id="23658" level="1" /> <!-- Earth Aura Spike -->
+			<skill id="23661" level="1" /> <!-- Earth Fatal Strike -->
+			<skill id="23665" level="1" /> <!-- Earth Blast -->
+			<skill id="23668" level="1" /> <!-- Mass Power Slam -->
+			<skill id="23671" level="1" /> <!-- Earth Defense Down -->
 		</skillList>
 		<ai aggroRange="300" clanHelpRange="300" isAggressive="true">
 			<clanList>
@@ -1946,9 +2057,15 @@
 			</speed>
 		</stats>
 		<skillList>
+			<skill id="4410" level="7" /> <!-- Weak P. Atk. -->
+			<skill id="4411" level="7" /> <!-- Weak M. Atk. -->
 			<skill id="4416" level="7" /> <!-- Spirits -->
 			<skill id="5464" level="1" /> <!-- Wind Attack -->
-			<skill id="14817" level="1" /> <!-- Instant Kill Attack Resistance -->
+			<skill id="14821" level="1" /> <!-- Instant Kill Attack Resistance -->
+			<skill id="23657" level="1" /> <!-- Wind Aura Spike -->
+			<skill id="23659" level="1" /> <!-- Fatal Wind Strike -->
+			<skill id="23663" level="1" /> <!-- Wind Blast -->
+			<skill id="23669" level="1" /> <!-- Wind Defense Down -->
 		</skillList>
 		<ai aggroRange="300" clanHelpRange="300" isAggressive="true">
 			<clanList>
@@ -1978,9 +2095,15 @@
 			</speed>
 		</stats>
 		<skillList>
+			<skill id="4410" level="7" /> <!-- Weak P. Atk. -->
+			<skill id="4411" level="7" /> <!-- Weak M. Atk. -->
 			<skill id="4416" level="7" /> <!-- Spirits -->
 			<skill id="5465" level="1" /> <!-- Earth Attack -->
-			<skill id="14817" level="1" /> <!-- Instant Kill Attack Resistance -->
+			<skill id="14821" level="1" /> <!-- Instant Kill Attack Resistance -->
+			<skill id="23658" level="1" /> <!-- Earth Aura Spike -->
+			<skill id="23661" level="1" /> <!-- Earth Fatal Strike -->
+			<skill id="23665" level="1" /> <!-- Earth Blast -->
+			<skill id="23671" level="1" /> <!-- Earth Defense Down -->
 		</skillList>
 		<ai aggroRange="300" clanHelpRange="300" isAggressive="true">
 			<clanList>
@@ -2011,9 +2134,12 @@
 		<skillList>
 			<skill id="4416" level="7" /> <!-- Spirits -->
 			<skill id="5464" level="1" /> <!-- Wind Attack -->
-			<skill id="14823" level="1" /> <!-- Instant Kill Attack Resistance -->
-			<skill id="16547" level="10" /> <!-- Danger Zone Attack Resistance -->
-			<skill id="14620" level="4" /> <!-- Aerial Yoke Resistance -->
+			<skill id="14821" level="1" /> <!-- Instant Kill Attack Resistance -->
+			<skill id="23657" level="1" /> <!-- Wind Aura Spike -->
+			<skill id="23659" level="1" /> <!-- Fatal Wind Strike -->
+			<skill id="23663" level="1" /> <!-- Wind Blast -->
+			<skill id="23678" level="1" /> <!-- Summon Friends -->
+			<skill id="23681" level="1" /> <!-- Harpe Stone Cancel -->
 		</skillList>
 		<collision>
 			<radius normal="43" />
@@ -2049,10 +2175,13 @@
 		</stats>
 		<skillList>
 			<skill id="4416" level="7" /> <!-- Spirits -->
-			<skill id="5465" level="1" /> <!-- Earth Attack -->
-			<skill id="14823" level="1" /> <!-- Instant Kill Attack Resistance -->
-			<skill id="16547" level="10" /> <!-- Danger Zone Attack Resistance -->
-			<skill id="14620" level="4" /> <!-- Aerial Yoke Resistance -->
+			<skill id="5464" level="1" /> <!-- Wind Attack -->
+			<skill id="14821" level="1" /> <!-- Instant Kill Attack Resistance -->
+			<skill id="23657" level="1" /> <!-- Wind Aura Spike -->
+			<skill id="23659" level="1" /> <!-- Fatal Wind Strike -->
+			<skill id="23663" level="1" /> <!-- Wind Blast -->
+			<skill id="23678" level="1" /> <!-- Summon Friends -->
+			<skill id="23681" level="1" /> <!-- Harpe Stone Cancel -->
 		</skillList>
 		<collision>
 			<radius normal="43" />
@@ -2086,6 +2215,11 @@
 		<skillList>
 			<skill id="4416" level="7" /> <!-- Spirits -->
 			<skill id="5465" level="1" /> <!-- Earth Attack -->
+			<skill id="23658" level="1" /> <!-- Earth Aura Spike -->
+			<skill id="23661" level="1" /> <!-- Earth Fatal Strike -->
+			<skill id="23665" level="1" /> <!-- Earth Blast -->
+			<skill id="23668" level="1" /> <!-- Mass Power Slam -->
+			<skill id="23671" level="1" /> <!-- Earth Defense Down -->
 		</skillList>
 		<collision>
 			<radius normal="46" />
@@ -2109,6 +2243,11 @@
 		<skillList>
 			<skill id="4416" level="7" /> <!-- Spirits -->
 			<skill id="5465" level="1" /> <!-- Earth Attack -->
+			<skill id="23658" level="1" /> <!-- Earth Aura Spike -->
+			<skill id="23661" level="1" /> <!-- Earth Fatal Strike -->
+			<skill id="23665" level="1" /> <!-- Earth Blast -->
+			<skill id="23668" level="1" /> <!-- Mass Power Slam -->
+			<skill id="23671" level="1" /> <!-- Earth Defense Down -->
 		</skillList>
 		<collision>
 			<radius normal="46" />
@@ -2132,6 +2271,10 @@
 		<skillList>
 			<skill id="4416" level="7" /> <!-- Spirits -->
 			<skill id="5464" level="1" /> <!-- Wind Attack -->
+			<skill id="23657" level="1" /> <!-- Wind Aura Spike -->
+			<skill id="23659" level="1" /> <!-- Fatal Wind Strike -->
+			<skill id="23663" level="1" /> <!-- Wind Blast -->
+			<skill id="23669" level="1" /> <!-- Wind Defense Down -->
 		</skillList>
 		<collision>
 			<radius normal="46" />
@@ -2158,6 +2301,8 @@
 		<skillList>
 			<skill id="4416" level="5" /> <!-- Plants -->
 			<skill id="5465" level="1" /> <!-- Earth Attack -->
+			<skill id="23715" level="1" /> <!-- Power Strike -->
+			<skill id="23716" level="1" /> <!-- Power Smash -->
 		</skillList>
 		<collision>
 			<radius normal="10" />
@@ -2199,6 +2344,8 @@
 		<skillList>
 			<skill id="4416" level="5" /> <!-- Plants -->
 			<skill id="5465" level="1" /> <!-- Earth Attack -->
+			<skill id="23715" level="1" /> <!-- Power Strike -->
+			<skill id="23716" level="1" /> <!-- Power Smash -->
 		</skillList>
 		<collision>
 			<radius normal="10" />
@@ -2243,10 +2390,10 @@
 			</speed>
 		</stats>
 		<skillList>
-			<skill id="23715" level="2" /> <!-- Power Strike -->
-			<skill id="23716" level="2" /> <!-- Power Smash -->
 			<skill id="4416" level="5" /> <!-- Plants -->
 			<skill id="5465" level="1" /> <!-- Earth Attack -->
+			<skill id="23715" level="1" /> <!-- Power Strike -->
+			<skill id="23716" level="1" /> <!-- Power Smash -->
 		</skillList>
 		<collision>
 			<radius normal="10" />
@@ -2292,10 +2439,10 @@
 			</speed>
 		</stats>
 		<skillList>
-			<skill id="23715" level="2" /> <!-- Power Strike -->
-			<skill id="23716" level="2" /> <!-- Power Smash -->
 			<skill id="4416" level="5" /> <!-- Plants -->
 			<skill id="5465" level="1" /> <!-- Earth Attack -->
+			<skill id="23715" level="1" /> <!-- Power Strike -->
+			<skill id="23716" level="1" /> <!-- Power Smash -->
 		</skillList>
 		<collision>
 			<radius normal="10" />
@@ -2342,11 +2489,10 @@
 			</speed>
 		</stats>
 		<skillList>
-			<skill id="23715" level="2" /> <!-- Power Strike -->
-			<skill id="23716" level="2" /> <!-- Power Smash -->
-			<skill id="23721" level="1" /> <!-- Tulip Scent Spray -->
 			<skill id="4416" level="5" /> <!-- Plants -->
 			<skill id="5465" level="1" /> <!-- Earth Attack -->
+			<skill id="23715" level="1" /> <!-- Power Strike -->
+			<skill id="23716" level="1" /> <!-- Power Smash -->
 		</skillList>
 		<collision>
 			<radius normal="10" />
@@ -2392,11 +2538,10 @@
 			</speed>
 		</stats>
 		<skillList>
-			<skill id="23715" level="2" /> <!-- Power Strike -->
-			<skill id="23716" level="2" /> <!-- Power Smash -->
-			<skill id="23721" level="1" /> <!-- Tulip Scent Spray -->
 			<skill id="4416" level="5" /> <!-- Plants -->
 			<skill id="5465" level="1" /> <!-- Earth Attack -->
+			<skill id="23715" level="1" /> <!-- Power Strike -->
+			<skill id="23716" level="1" /> <!-- Power Smash -->
 		</skillList>
 		<collision>
 			<radius normal="10" />
@@ -2439,9 +2584,10 @@
 			</speed>
 		</stats>
 		<skillList>
-			<skill id="23715" level="2" /> <!-- Power Strike -->
 			<skill id="4416" level="5" /> <!-- Plants -->
 			<skill id="5465" level="1" /> <!-- Earth Attack -->
+			<skill id="23715" level="1" /> <!-- Power Strike -->
+			<skill id="23716" level="1" /> <!-- Power Smash -->
 		</skillList>
 		<collision>
 			<radius normal="10" />
@@ -2483,9 +2629,10 @@
 			</speed>
 		</stats>
 		<skillList>
-			<skill id="23715" level="2" /> <!-- Power Strike -->
 			<skill id="4416" level="5" /> <!-- Plants -->
 			<skill id="5465" level="1" /> <!-- Earth Attack -->
+			<skill id="23715" level="1" /> <!-- Power Strike -->
+			<skill id="23716" level="1" /> <!-- Power Smash -->
 		</skillList>
 		<collision>
 			<radius normal="10" />
@@ -2528,6 +2675,9 @@
 			<skill id="5465" level="1" /> <!-- Earth Attack -->
 			<skill id="14823" level="1" /> <!-- Instant Kill Attack Resistance -->
 			<skill id="16547" level="10" /> <!-- Danger Zone Attack Resistance -->
+			<skill id="23715" level="1" /> <!-- Power Strike -->
+			<skill id="23716" level="1" /> <!-- Power Smash -->
+			<skill id="23718" level="1" /> <!-- Dust Spray -->
 		</skillList>
 		<collision>
 			<radius normal="14" />
@@ -2570,6 +2720,9 @@
 			<skill id="5465" level="1" /> <!-- Earth Attack -->
 			<skill id="14823" level="1" /> <!-- Instant Kill Attack Resistance -->
 			<skill id="16547" level="10" /> <!-- Danger Zone Attack Resistance -->
+			<skill id="23715" level="1" /> <!-- Power Strike -->
+			<skill id="23716" level="1" /> <!-- Power Smash -->
+			<skill id="23718" level="1" /> <!-- Dust Spray -->
 		</skillList>
 		<collision>
 			<radius normal="14" />
@@ -2612,6 +2765,9 @@
 			<skill id="5465" level="1" /> <!-- Earth Attack -->
 			<skill id="14823" level="1" /> <!-- Instant Kill Attack Resistance -->
 			<skill id="16547" level="10" /> <!-- Danger Zone Attack Resistance -->
+			<skill id="23715" level="1" /> <!-- Power Strike -->
+			<skill id="23716" level="1" /> <!-- Power Smash -->
+			<skill id="23718" level="1" /> <!-- Dust Spray -->
 		</skillList>
 		<collision>
 			<radius normal="14" />
@@ -2654,6 +2810,9 @@
 			<skill id="5465" level="1" /> <!-- Earth Attack -->
 			<skill id="14823" level="1" /> <!-- Instant Kill Attack Resistance -->
 			<skill id="16547" level="10" /> <!-- Danger Zone Attack Resistance -->
+			<skill id="23715" level="1" /> <!-- Power Strike -->
+			<skill id="23716" level="1" /> <!-- Power Smash -->
+			<skill id="23718" level="1" /> <!-- Dust Spray -->
 		</skillList>
 		<collision>
 			<radius normal="14" />
@@ -2698,12 +2857,15 @@
 			</speed>
 		</stats>
 		<skillList>
-			<skill id="23715" level="2" /> <!-- Power Strike -->
-			<skill id="23723" level="1" /> <!-- Guardian Knock Down -->
 			<skill id="4416" level="5" /> <!-- Plants -->
 			<skill id="5465" level="1" /> <!-- Earth Attack -->
 			<skill id="14823" level="1" /> <!-- Instant Kill Attack Resistance -->
 			<skill id="16547" level="10" /> <!-- Danger Zone Attack Resistance -->
+			<skill id="23715" level="1" /> <!-- Power Strike -->
+			<skill id="23716" level="1" /> <!-- Power Smash -->
+			<skill id="23718" level="1" /> <!-- Dust Spray -->
+			<skill id="23723" level="1" /> <!-- Guardian Knock Down -->
+			<skill id="23724" level="1" /> <!-- Nymph's Fury -->
 		</skillList>
 		<collision>
 			<radius normal="28" />
@@ -2787,6 +2949,9 @@
 		<skillList>
 			<skill id="4416" level="5" /> <!-- Plants -->
 			<skill id="5465" level="1" /> <!-- Earth Attack -->
+			<skill id="23715" level="1" /> <!-- Power Strike -->
+			<skill id="23716" level="1" /> <!-- Power Smash -->
+			<skill id="23718" level="1" /> <!-- Dust Spray -->
 		</skillList>
 		<collision>
 			<radius normal="14" />
@@ -2826,6 +2991,9 @@
 		<skillList>
 			<skill id="4416" level="5" /> <!-- Plants -->
 			<skill id="5465" level="1" /> <!-- Earth Attack -->
+			<skill id="23715" level="1" /> <!-- Power Strike -->
+			<skill id="23716" level="1" /> <!-- Power Smash -->
+			<skill id="23718" level="1" /> <!-- Dust Spray -->
 		</skillList>
 		<collision>
 			<radius normal="14" />
@@ -2865,6 +3033,9 @@
 		<skillList>
 			<skill id="4416" level="5" /> <!-- Plants -->
 			<skill id="5465" level="1" /> <!-- Earth Attack -->
+			<skill id="23715" level="1" /> <!-- Power Strike -->
+			<skill id="23716" level="1" /> <!-- Power Smash -->
+			<skill id="23718" level="1" /> <!-- Dust Spray -->
 		</skillList>
 		<collision>
 			<radius normal="14" />
@@ -2904,6 +3075,9 @@
 		<skillList>
 			<skill id="4416" level="5" /> <!-- Plants -->
 			<skill id="5465" level="1" /> <!-- Earth Attack -->
+			<skill id="23715" level="1" /> <!-- Power Strike -->
+			<skill id="23716" level="1" /> <!-- Power Smash -->
+			<skill id="23718" level="1" /> <!-- Dust Spray -->
 		</skillList>
 		<collision>
 			<radius normal="14" />
@@ -2941,10 +3115,15 @@
 			</speed>
 		</stats>
 		<skillList>
-			<skill id="4416" level="6" /> <!-- Humanoids -->
-			<skill id="16758" level="1" /> <!-- Embryo -->
+			<skill id="4416" level="6" /> <!-- Humanoid -->
 			<skill id="5467" level="1" /> <!-- Dark Attack -->
 			<skill id="14823" level="1" /> <!-- Instant Kill Attack Resistance -->
+			<skill id="16523" level="1" /> <!-- Magma Splash -->
+			<skill id="16524" level="1" /> <!-- Full Swing Crusher -->
+			<skill id="16525" level="1" /> <!-- Spirit of Master -->
+			<skill id="16758" level="1" /> <!-- Embryo -->
+			<skill id="23708" level="3" /> <!-- Dark Breaker -->
+			<skill id="23709" level="3" /> <!-- Chaos Breaker -->
 		</skillList>
 		<ai aggroRange="300" clanHelpRange="300" isAggressive="true">
 			<clanList>
@@ -2974,10 +3153,13 @@
 			</speed>
 		</stats>
 		<skillList>
-			<skill id="4416" level="6" /> <!-- Humanoids -->
-			<skill id="16758" level="1" /> <!-- Embryo -->
+			<skill id="4416" level="6" /> <!-- Humanoid -->
 			<skill id="5467" level="1" /> <!-- Dark Attack -->
 			<skill id="14823" level="1" /> <!-- Instant Kill Attack Resistance -->
+			<skill id="16522" level="1" /> <!-- Shield Swing -->
+			<skill id="16758" level="1" /> <!-- Embryo -->
+			<skill id="23708" level="4" /> <!-- Dark Breaker -->
+			<skill id="23709" level="4" /> <!-- Chaos Breaker -->
 		</skillList>
 		<collision>
 			<radius normal="14" />
@@ -3002,10 +3184,15 @@
 			</speed>
 		</stats>
 		<skillList>
-			<skill id="4416" level="6" /> <!-- Humanoids -->
-			<skill id="16758" level="1" /> <!-- Embryo -->
+			<skill id="4416" level="6" /> <!-- Humanoid -->
 			<skill id="5467" level="1" /> <!-- Dark Attack -->
 			<skill id="14823" level="1" /> <!-- Instant Kill Attack Resistance -->
+			<skill id="16519" level="1" /> <!-- Slay X -->
+			<skill id="16520" level="1" /> <!-- Shield of Atelia -->
+			<skill id="16521" level="1" /> <!-- Embryo's Call -->
+			<skill id="16758" level="1" /> <!-- Embryo -->
+			<skill id="23708" level="3" /> <!-- Dark Breaker -->
+			<skill id="23709" level="3" /> <!-- Chaos Breaker -->
 		</skillList>
 		<collision>
 			<radius normal="24" />
@@ -3030,10 +3217,10 @@
 			</speed>
 		</stats>
 		<skillList>
-			<skill id="4416" level="6" /> <!-- Humanoids -->
+			<skill id="4416" level="6" /> <!-- Humanoid -->
 			<skill id="5467" level="1" /> <!-- Dark Attack -->
-			<skill id="16758" level="1" /> <!-- Embryo -->
 			<skill id="14821" level="1" /> <!-- Instant Kill Attack Resistance -->
+			<skill id="16758" level="1" /> <!-- Embryo -->
 		</skillList>
 		<ai aggroRange="300" clanHelpRange="300" isAggressive="true">
 			<clanList>
@@ -3077,6 +3264,8 @@
 			<skill id="4416" level="14" /> <!-- Humans -->
 			<skill id="5467" level="1" /> <!-- Dark Attack -->
 			<skill id="14823" level="1" /> <!-- Instant Kill Attack Resistance -->
+			<skill id="23641" level="1" /> <!-- Embryo Haste -->
+			<skill id="23709" level="3" /> <!-- Chaos Breaker -->
 		</skillList>
 	</npc>
 	<npc id="23591" level="103" type="Monster" name="Barton" title="Brainwashed Aden Vanguard">
@@ -3106,6 +3295,9 @@
 			<skill id="4416" level="17" /> <!-- Orcs -->
 			<skill id="5467" level="1" /> <!-- Dark Attack -->
 			<skill id="14823" level="1" /> <!-- Instant Kill Attack Resistance -->
+			<skill id="23638" level="1" /> <!-- Bloody Strike -->
+			<skill id="23639" level="1" /> <!-- Rush Assault -->
+			<skill id="23708" level="3" /> <!-- Dark Breaker -->
 		</skillList>
 	</npc>
 	<npc id="23592" level="103" type="Monster" name="Hayuk" title="Brainwashed Aden Vanguard">
@@ -3135,6 +3327,8 @@
 			<skill id="4416" level="15" /> <!-- Elves -->
 			<skill id="5467" level="1" /> <!-- Dark Attack -->
 			<skill id="14823" level="1" /> <!-- Instant Kill Attack Resistance -->
+			<skill id="23641" level="1" /> <!-- Embryo Haste -->
+			<skill id="23708" level="3" /> <!-- Dark Breaker -->
 		</skillList>
 	</npc>
 	<npc id="23593" level="103" type="Monster" name="Elise" title="Brainwashed Aden Vanguard">
@@ -3163,8 +3357,11 @@
 		<skillList>
 			<skill id="4416" level="14" /> <!-- Humans -->
 			<skill id="5467" level="1" /> <!-- Dark Attack -->
-			<skill id="16547" level="10" /> <!-- Danger Zone Attack Resistance -->
 			<skill id="14823" level="1" /> <!-- Instant Kill Attack Resistance -->
+			<skill id="16547" level="10" /> <!-- Danger Zone Attack Resistance -->
+			<skill id="23645" level="1" /> <!-- Curse of Silence -->
+			<skill id="23646" level="1" /> <!-- Blessing of Darkness -->
+			<skill id="23706" level="3" /> <!-- Dark Fire -->
 		</skillList>
 	</npc>
 	<npc id="23594" level="103" type="Monster" name="Eliyah" title="Brainwashed Aden Vanguard">
@@ -3192,8 +3389,10 @@
 		<skillList>
 			<skill id="4416" level="14" /> <!-- Humans -->
 			<skill id="5467" level="1" /> <!-- Dark Attack -->
-			<skill id="16547" level="10" /> <!-- Danger Zone Attack Resistance -->
 			<skill id="14823" level="1" /> <!-- Instant Kill Attack Resistance -->
+			<skill id="16547" level="10" /> <!-- Danger Zone Attack Resistance -->
+			<skill id="23706" level="3" /> <!-- Dark Fire -->
+			<skill id="23748" level="1" /> <!-- Elemental Destruction -->
 		</skillList>
 	</npc>
 	<npc id="23595" level="101" type="Monster" name="Fortress Raider">
@@ -3223,13 +3422,14 @@
 			</speed>
 		</stats>
 		<skillList>
-			<skill id="23638" level="1" /> <!-- Bloody Strike -->
-			<skill id="23639" level="1" /> <!-- Rush Assault -->
-			<skill id="23708" level="4" /> <!-- Dark Breaker -->
-			<skill id="4416" level="6" /> <!-- Humanoids -->
-			<skill id="16758" level="1" /> <!-- Embryo -->
+			<skill id="4416" level="6" /> <!-- Humanoid -->
 			<skill id="5467" level="1" /> <!-- Dark Attack -->
 			<skill id="14817" level="1" /> <!-- Instant Kill Attack Resistance -->
+			<skill id="16758" level="1" /> <!-- Embryo -->
+			<skill id="23638" level="1" /> <!-- Bloody Strike -->
+			<skill id="23639" level="1" /> <!-- Rush Assault -->
+			<skill id="23708" level="1" /> <!-- Dark Breaker -->
+			<skill id="23709" level="1" /> <!-- Chaos Breaker -->
 		</skillList>
 		<ai aggroRange="300" clanHelpRange="300" isAggressive="true">
 			<clanList>
@@ -3268,13 +3468,15 @@
 			</speed>
 		</stats>
 		<skillList>
-			<skill id="23636" level="1" /> <!-- Stun Crush -->
-			<skill id="23637" level="1" /> <!-- Dark Provoke -->
-			<skill id="23709" level="4" /> <!-- Chaos Breaker -->
-			<skill id="4416" level="6" /> <!-- Humanoids -->
-			<skill id="16758" level="1" /> <!-- Embryo -->
+			<skill id="4416" level="6" /> <!-- Humanoid -->
 			<skill id="5467" level="1" /> <!-- Dark Attack -->
 			<skill id="14821" level="1" /> <!-- Instant Kill Attack Resistance -->
+			<skill id="16758" level="1" /> <!-- Embryo -->
+			<skill id="23636" level="1" /> <!-- Stun Crush -->
+			<skill id="23637" level="1" /> <!-- Dark Provoke -->
+			<skill id="23642" level="1" /> <!-- Crack of Air -->
+			<skill id="23708" level="2" /> <!-- Dark Breaker -->
+			<skill id="23709" level="2" /> <!-- Chaos Breaker -->
 		</skillList>
 		<ai aggroRange="300" clanHelpRange="300" isAggressive="true">
 			<clanList>
@@ -3313,13 +3515,14 @@
 			</speed>
 		</stats>
 		<skillList>
-			<skill id="23640" level="1" /> <!-- Thirst of Blood -->
-			<skill id="23641" level="1" /> <!-- Embryo Haste -->
-			<skill id="23708" level="4" /> <!-- Dark Breaker -->
-			<skill id="4416" level="6" /> <!-- Humanoids -->
-			<skill id="16758" level="1" /> <!-- Embryo -->
+			<skill id="4416" level="6" /> <!-- Humanoid -->
 			<skill id="5467" level="1" /> <!-- Dark Attack -->
 			<skill id="14817" level="1" /> <!-- Instant Kill Attack Resistance -->
+			<skill id="16758" level="1" /> <!-- Embryo -->
+			<skill id="23640" level="1" /> <!-- Thirst of Blood -->
+			<skill id="23641" level="1" /> <!-- Embryo Haste -->
+			<skill id="23708" level="1" /> <!-- Dark Breaker -->
+			<skill id="23709" level="1" /> <!-- Chaos Breaker -->
 		</skillList>
 		<ai aggroRange="300" clanHelpRange="300" isAggressive="true">
 			<clanList>
@@ -3356,12 +3559,15 @@
 			</speed>
 		</stats>
 		<skillList>
-			<skill id="23642" level="1" /> <!-- Crack of Air -->
-			<skill id="23709" level="4" /> <!-- Chaos Breaker -->
-			<skill id="4416" level="6" /> <!-- Humanoids -->
-			<skill id="16758" level="1" /> <!-- Embryo -->
+			<skill id="4416" level="6" /> <!-- Humanoid -->
 			<skill id="5467" level="1" /> <!-- Dark Attack -->
 			<skill id="14821" level="1" /> <!-- Instant Kill Attack Resistance -->
+			<skill id="16758" level="1" /> <!-- Embryo -->
+			<skill id="23642" level="1" /> <!-- Crack of Air -->
+			<skill id="23643" level="1" /> <!-- Vampiric Force -->
+			<skill id="23644" level="1" /> <!-- Road of Embryo -->
+			<skill id="23708" level="2" /> <!-- Dark Breaker -->
+			<skill id="23709" level="2" /> <!-- Chaos Breaker -->
 		</skillList>
 		<ai aggroRange="300" clanHelpRange="300" isAggressive="true">
 			<clanList>
@@ -3401,13 +3607,15 @@
 			</speed>
 		</stats>
 		<skillList>
-			<skill id="23645" level="1" /> <!-- Curse of Silence -->
-			<skill id="23646" level="1" /> <!-- Blessing of Darkness -->
-			<skill id="23706" level="4" /> <!-- Dark Fire -->
-			<skill id="4416" level="6" /> <!-- Humanoids -->
-			<skill id="16758" level="1" /> <!-- Embryo -->
+			<skill id="4416" level="6" /> <!-- Humanoid -->
 			<skill id="5467" level="1" /> <!-- Dark Attack -->
 			<skill id="14817" level="1" /> <!-- Instant Kill Attack Resistance -->
+			<skill id="16758" level="1" /> <!-- Embryo -->
+			<skill id="23645" level="1" /> <!-- Curse of Silence -->
+			<skill id="23646" level="1" /> <!-- Blessing of Darkness -->
+			<skill id="23647" level="1" /> <!-- Absolute Black -->
+			<skill id="23706" level="1" /> <!-- Dark Fire -->
+			<skill id="23707" level="1" /> <!-- Chaos Fire -->
 		</skillList>
 		<ai aggroRange="300" clanHelpRange="300" isAggressive="true">
 			<clanList>

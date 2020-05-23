@@ -26,13 +26,8 @@
 		</stats>
 		<status undying="false" />
 		<skillList>
-			<skill id="4408" level="1" /> <!-- HP Increase (1x) -->
-			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
-			<skill id="4410" level="11" /> <!-- Average P. Atk. -->
 			<skill id="4411" level="14" /> <!-- Strong M. Atk. -->
 			<skill id="4412" level="8" /> <!-- Weak P. Def. -->
-			<skill id="4413" level="11" /> <!-- Average M. Def. -->
-			<skill id="4414" level="2" /> <!-- Standard Type -->
 			<skill id="4415" level="3" /> <!-- One-handed Sword -->
 			<skill id="4416" level="9" /> <!-- Demons -->
 			<skill id="5303" level="4" /> <!-- Bleed -->
@@ -89,19 +84,13 @@
 		</stats>
 		<status undying="false" />
 		<skillList>
-			<skill id="4408" level="1" /> <!-- HP Increase (1x) -->
-			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
-			<skill id="4410" level="11" /> <!-- Average P. Atk. -->
-			<skill id="4411" level="11" /> <!-- Average M. Atk. -->
-			<skill id="4412" level="11" /> <!-- Average P. Def. -->
-			<skill id="4413" level="11" /> <!-- Average M. Def. -->
 			<skill id="4414" level="3" /> <!-- Light Armor Type -->
 			<skill id="4415" level="3" /> <!-- One-handed Sword -->
 			<skill id="4416" level="1" /> <!-- Undead -->
 			<skill id="5203" level="10" /> <!-- Fear -->
-			<skill id="5283" level="4" /> <!-- NPC(party) - Physical Range Close Range Attack - Water -->
-			<skill id="5317" level="4" /> <!-- NPC(party) -Magic Range Long Range DD - Water -->
-			<skill id="5463" level="1" /> <!-- Water Attacks -->
+			<skill id="5283" level="4" /> <!-- Spinning Slasher -->
+			<skill id="5317" level="4" /> <!-- Mass Hydro Blast -->
+			<skill id="5463" level="1" /> <!-- Water Attack -->
 		</skillList>
 		<exCrtEffect>false</exCrtEffect>
 		<ai clanHelpRange="700" aggroRange="450">
@@ -167,19 +156,13 @@
 		</stats>
 		<status undying="false" />
 		<skillList>
-			<skill id="4408" level="1" /> <!-- HP Increase (1x) -->
-			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
-			<skill id="4410" level="11" /> <!-- Average P. Atk. -->
 			<skill id="4411" level="14" /> <!-- Strong M. Atk. -->
-			<skill id="4412" level="11" /> <!-- Average P. Def. -->
-			<skill id="4413" level="11" /> <!-- Average M. Def. -->
-			<skill id="4414" level="2" /> <!-- Standard Type -->
 			<skill id="4415" level="3" /> <!-- One-handed Sword -->
 			<skill id="4416" level="13" /> <!-- Fairies -->
-			<skill id="4666" level="10" /> <!-- NPC 100% HP Drain - Slow -->
-			<skill id="5360" level="2" /> <!-- NPC(party) - Physical Range Close Range Attack - Dark -->
-			<skill id="5390" level="4" /> <!-- NPC(party) -Magic Range Long Range DD - Holy -->
-			<skill id="5467" level="1" /> <!-- Dark Attacks -->
+			<skill id="4666" level="10" /> <!-- Drain Energy -->
+			<skill id="5360" level="2" /> <!-- Spinning Slasher -->
+			<skill id="5390" level="4" /> <!-- Unholy Blast -->
+			<skill id="5467" level="1" /> <!-- Dark Attack -->
 		</skillList>
 		<exCrtEffect>false</exCrtEffect>
 		<ai clanHelpRange="500" aggroRange="450">
@@ -235,18 +218,12 @@
 		</stats>
 		<status undying="false" />
 		<skillList>
-			<skill id="4408" level="1" /> <!-- HP Increase (1x) -->
-			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
 			<skill id="4410" level="14" /> <!-- Strong P. Atk. -->
-			<skill id="4411" level="11" /> <!-- Average M. Atk. -->
-			<skill id="4412" level="11" /> <!-- Average P. Def. -->
-			<skill id="4413" level="11" /> <!-- Average M. Def. -->
-			<skill id="4414" level="2" /> <!-- Standard Type -->
 			<skill id="4415" level="3" /> <!-- One-handed Sword -->
 			<skill id="4416" level="7" /> <!-- Spirits -->
-			<skill id="5359" level="4" /> <!-- NPC(party) - Physical Single Long Range Attack - Dark -->
+			<skill id="5359" level="4" /> <!-- Power Shot -->
 			<skill id="5365" level="4" /> <!-- Paralysis -->
-			<skill id="5467" level="1" /> <!-- Dark Attacks -->
+			<skill id="5467" level="1" /> <!-- Dark Attack -->
 		</skillList>
 		<exCrtEffect>false</exCrtEffect>
 		<ai clanHelpRange="500" aggroRange="450">
@@ -304,18 +281,12 @@
 		</stats>
 		<status undying="false" />
 		<skillList>
-			<skill id="4408" level="1" /> <!-- HP Increase (1x) -->
-			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
-			<skill id="4410" level="11" /> <!-- Average P. Atk. -->
-			<skill id="4411" level="11" /> <!-- Average M. Atk. -->
-			<skill id="4412" level="11" /> <!-- Average P. Def. -->
 			<skill id="4413" level="14" /> <!-- Strong M. Def. -->
-			<skill id="4414" level="2" /> <!-- Standard Type -->
 			<skill id="4415" level="3" /> <!-- One-handed Sword -->
 			<skill id="4416" level="7" /> <!-- Spirits -->
 			<skill id="5362" level="4" /> <!-- Stun -->
-			<skill id="5393" level="4" /> <!-- NPC MP Burn -->
-			<skill id="5467" level="1" /> <!-- Dark Attacks -->
+			<skill id="5393" level="4" /> <!-- Mana Burn -->
+			<skill id="5467" level="1" /> <!-- Dark Attack -->
 		</skillList>
 		<exCrtEffect>false</exCrtEffect>
 		<ai clanHelpRange="500" aggroRange="450">
@@ -380,17 +351,12 @@
 		</stats>
 		<status undying="false" />
 		<skillList>
-			<skill id="4408" level="1" /> <!-- HP Increase (1x) -->
-			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
-			<skill id="4410" level="11" /> <!-- Average P. Atk. -->
-			<skill id="4411" level="11" /> <!-- Average M. Atk. -->
-			<skill id="4412" level="11" /> <!-- Average P. Def. -->
-			<skill id="4413" level="11" /> <!-- Average M. Def. -->
-			<skill id="4414" level="2" /> <!-- Standard Type -->
-			<skill id="4415" level="3" /> <!-- One-handed Sword -->
+			<skill id="4408" level="12" /> <!-- HP Increase (4x) -->
+			<skill id="4414" level="3" /> <!-- Light Armor Type -->
+			<skill id="4415" level="1" /> <!-- Bare Hands -->
 			<skill id="4416" level="2" /> <!-- Magic Creatures -->
-			<skill id="5273" level="3" /> <!-- NPC(party) - Physical Single Close Range Attack -->
-			<skill id="5462" level="1" /> <!-- Fire Attacks -->
+			<skill id="4614" level="10" /> <!-- Death Bomb -->
+			<skill id="5462" level="1" /> <!-- Fire Attack -->
 		</skillList>
 		<exCrtEffect>false</exCrtEffect>
 		<ai clanHelpRange="500" aggroRange="450">
@@ -465,18 +431,15 @@
 		</stats>
 		<status undying="false" />
 		<skillList>
-			<skill id="4408" level="11" /> <!-- HP Increase (3x) -->
-			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
-			<skill id="4410" level="11" /> <!-- Average P. Atk. -->
-			<skill id="4411" level="11" /> <!-- Average M. Atk. -->
-			<skill id="4412" level="11" /> <!-- Average P. Def. -->
-			<skill id="4413" level="11" /> <!-- Average M. Def. -->
-			<skill id="4414" level="3" /> <!-- Light Armor Type -->
-			<skill id="4415" level="3" /> <!-- One-handed Sword -->
-			<skill id="4416" level="2" /> <!-- Magic Creatures -->
-			<skill id="5312" level="4" /> <!-- NPC(party) -Magic Single Long Range DD - Fire -->
-			<skill id="5314" level="4" /> <!-- NPC(party) -Magic Range Close Range DD - Fire -->
-			<skill id="5462" level="1" /> <!-- Fire Attacks -->
+			<skill id="4085" level="1" /> <!-- Critical Damage -->
+			<skill id="4408" level="14" /> <!-- HP Increase (6x) -->
+			<skill id="4412" level="14" /> <!-- Strong P. Def. -->
+			<skill id="4414" level="1" /> <!-- Heavy Armor Type -->
+			<skill id="4415" level="1" /> <!-- Bare Hands -->
+			<skill id="4416" level="6" /> <!-- Humanoids -->
+			<skill id="4572" level="10" /> <!-- Triple Sonic Slash -->
+			<skill id="5301" level="3" /> <!-- Stun -->
+			<skill id="5462" level="1" /> <!-- Fire Attack -->
 		</skillList>
 		<exCrtEffect>false</exCrtEffect>
 		<sNpcPropHpRate>3</sNpcPropHpRate>
@@ -548,18 +511,16 @@
 		</stats>
 		<status undying="false" />
 		<skillList>
-			<skill id="4408" level="10" /> <!-- HP Increase (2x) -->
-			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
-			<skill id="4410" level="11" /> <!-- Average P. Atk. -->
-			<skill id="4411" level="11" /> <!-- Average M. Atk. -->
-			<skill id="4412" level="13" /> <!-- Slightly Strong P. Def. -->
-			<skill id="4413" level="11" /> <!-- Average M. Def. -->
-			<skill id="4414" level="1" /> <!-- Heavy Armor Type -->
-			<skill id="4415" level="5" /> <!-- Blunt Weapons -->
-			<skill id="4416" level="2" /> <!-- Magic Creatures -->
-			<skill id="4444" level="1" /> <!-- Higher Resist Bow/Crossbow Weapons -->
-			<skill id="5340" level="3" /> <!-- NPC(party) - Physical Range Close Range Attack - Fire -->
-			<skill id="5462" level="1" /> <!-- Fire Attacks -->
+			<skill id="4157" level="10" /> <!-- Blaze -->
+			<skill id="4408" level="14" /> <!-- HP Increase (6x) -->
+			<skill id="4411" level="14" /> <!-- Strong M. Atk. -->
+			<skill id="4415" level="1" /> <!-- Bare Hands -->
+			<skill id="4416" level="9" /> <!-- Demons -->
+			<skill id="4439" level="5" /> <!-- Greater Hold Resistance -->
+			<skill id="4443" level="1" /> <!-- Greater Blunt Weapon Resistance -->
+			<skill id="4444" level="1" /> <!-- Greater Bow/Crossbow Resistance -->
+			<skill id="4561" level="10" /> <!-- Fire Burn -->
+			<skill id="5462" level="1" /> <!-- Fire Attack -->
 		</skillList>
 		<exCrtEffect>false</exCrtEffect>
 		<sNpcPropHpRate>2</sNpcPropHpRate>
@@ -631,16 +592,11 @@
 		<status undying="false" />
 		<skillList>
 			<skill id="4408" level="12" /> <!-- HP Increase (4x) -->
-			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
-			<skill id="4410" level="11" /> <!-- Average P. Atk. -->
-			<skill id="4411" level="11" /> <!-- Average M. Atk. -->
-			<skill id="4412" level="11" /> <!-- Average P. Def. -->
-			<skill id="4413" level="11" /> <!-- Average M. Def. -->
 			<skill id="4414" level="3" /> <!-- Light Armor Type -->
 			<skill id="4415" level="1" /> <!-- Bare Hands -->
 			<skill id="4416" level="2" /> <!-- Magic Creatures -->
-			<skill id="4614" level="10" /> <!-- NPC Death Bomb -->
-			<skill id="5462" level="1" /> <!-- Fire Attacks -->
+			<skill id="4614" level="10" /> <!-- Death Bomb -->
+			<skill id="5462" level="1" /> <!-- Fire Attack -->
 		</skillList>
 		<exCrtEffect>false</exCrtEffect>
 		<sNpcPropHpRate>4</sNpcPropHpRate>
@@ -705,17 +661,13 @@
 		<skillList>
 			<skill id="4085" level="1" /> <!-- Critical Damage -->
 			<skill id="4408" level="14" /> <!-- HP Increase (6x) -->
-			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
-			<skill id="4410" level="11" /> <!-- Average P. Atk. -->
-			<skill id="4411" level="11" /> <!-- Average M. Atk. -->
 			<skill id="4412" level="14" /> <!-- Strong P. Def. -->
-			<skill id="4413" level="11" /> <!-- Average M. Def. -->
 			<skill id="4414" level="1" /> <!-- Heavy Armor Type -->
 			<skill id="4415" level="1" /> <!-- Bare Hands -->
 			<skill id="4416" level="6" /> <!-- Humanoids -->
-			<skill id="4572" level="10" /> <!-- NPC Triple Sonic Slash -->
+			<skill id="4572" level="10" /> <!-- Triple Sonic Slash -->
 			<skill id="5301" level="3" /> <!-- Stun -->
-			<skill id="5462" level="1" /> <!-- Fire Attacks -->
+			<skill id="5462" level="1" /> <!-- Fire Attack -->
 		</skillList>
 		<exCrtEffect>false</exCrtEffect>
 		<sNpcPropHpRate>6</sNpcPropHpRate>
@@ -785,21 +737,16 @@
 		</stats>
 		<status undying="false" />
 		<skillList>
-			<skill id="4157" level="10" /> <!-- NPC Blaze - Magic -->
+			<skill id="4157" level="10" /> <!-- Blaze -->
 			<skill id="4408" level="14" /> <!-- HP Increase (6x) -->
-			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
-			<skill id="4410" level="11" /> <!-- Average P. Atk. -->
 			<skill id="4411" level="14" /> <!-- Strong M. Atk. -->
-			<skill id="4412" level="11" /> <!-- Average P. Def. -->
-			<skill id="4413" level="11" /> <!-- Average M. Def. -->
-			<skill id="4414" level="2" /> <!-- Standard Type -->
 			<skill id="4415" level="1" /> <!-- Bare Hands -->
 			<skill id="4416" level="9" /> <!-- Demons -->
-			<skill id="4439" level="5" /> <!-- Greater Resist Hold -->
-			<skill id="4443" level="1" /> <!-- Greater Resist Blunt Weapons -->
-			<skill id="4444" level="1" /> <!-- Higher Resist Bow/Crossbow Weapons -->
-			<skill id="4561" level="10" /> <!-- NPC Fire Burn - Magic -->
-			<skill id="5462" level="1" /> <!-- Fire Attacks -->
+			<skill id="4439" level="5" /> <!-- Greater Hold Resistance -->
+			<skill id="4443" level="1" /> <!-- Greater Blunt Weapon Resistance -->
+			<skill id="4444" level="1" /> <!-- Greater Bow/Crossbow Resistance -->
+			<skill id="4561" level="10" /> <!-- Fire Burn -->
+			<skill id="5462" level="1" /> <!-- Fire Attack -->
 		</skillList>
 		<exCrtEffect>false</exCrtEffect>
 		<sNpcPropHpRate>6</sNpcPropHpRate>
@@ -872,17 +819,14 @@
 		<status undying="false" />
 		<skillList>
 			<skill id="4408" level="10" /> <!-- HP Increase (2x) -->
-			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
-			<skill id="4410" level="11" /> <!-- Average P. Atk. -->
 			<skill id="4411" level="13" /> <!-- Slightly Strong M. Atk. -->
-			<skill id="4412" level="11" /> <!-- Average P. Def. -->
 			<skill id="4413" level="13" /> <!-- Slightly Strong M. Def. -->
 			<skill id="4414" level="3" /> <!-- Light Armor Type -->
 			<skill id="4415" level="3" /> <!-- One-handed Sword -->
 			<skill id="4416" level="12" /> <!-- Bugs -->
-			<skill id="5317" level="4" /> <!-- NPC(party) -Magic Range Long Range DD - Water -->
-			<skill id="5318" level="4" /> <!-- NPC(party) -Magic Range Close Range DD - Water -->
-			<skill id="5463" level="1" /> <!-- Water Attacks -->
+			<skill id="5317" level="4" /> <!-- Mass Hydro Blast -->
+			<skill id="5318" level="4" /> <!-- Frost Wall -->
+			<skill id="5463" level="1" /> <!-- Water Attack -->
 		</skillList>
 		<exCrtEffect>false</exCrtEffect>
 		<sNpcPropHpRate>2</sNpcPropHpRate>
@@ -944,18 +888,14 @@
 		</stats>
 		<status undying="false" />
 		<skillList>
-			<skill id="4408" level="1" /> <!-- HP Increase (1x) -->
-			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
 			<skill id="4410" level="14" /> <!-- Strong P. Atk. -->
-			<skill id="4411" level="11" /> <!-- Average M. Atk. -->
-			<skill id="4412" level="11" /> <!-- Average P. Def. -->
 			<skill id="4413" level="9" /> <!-- Slightly Weak M. Def. -->
 			<skill id="4414" level="1" /> <!-- Heavy Armor Type -->
 			<skill id="4415" level="3" /> <!-- One-handed Sword -->
 			<skill id="4416" level="12" /> <!-- Bugs -->
-			<skill id="5282" level="4" /> <!-- NPC(party) - Physical Single Long Range Attack - Water -->
-			<skill id="5283" level="4" /> <!-- NPC(party) - Physical Range Close Range Attack - Water -->
-			<skill id="5463" level="1" /> <!-- Water Attacks -->
+			<skill id="5282" level="4" /> <!-- Power Shot -->
+			<skill id="5283" level="4" /> <!-- Spinning Slasher -->
+			<skill id="5463" level="1" /> <!-- Water Attack -->
 		</skillList>
 		<exCrtEffect>false</exCrtEffect>
 		<ai clanHelpRange="500" aggroRange="450">
@@ -1019,16 +959,11 @@
 			<skill id="4072" level="10" /> <!-- Stun -->
 			<skill id="4086" level="1" /> <!-- Critical Chance -->
 			<skill id="4408" level="10" /> <!-- HP Increase (2x) -->
-			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
-			<skill id="4410" level="11" /> <!-- Average P. Atk. -->
-			<skill id="4411" level="11" /> <!-- Average M. Atk. -->
-			<skill id="4412" level="11" /> <!-- Average P. Def. -->
-			<skill id="4413" level="11" /> <!-- Average M. Def. -->
 			<skill id="4414" level="3" /> <!-- Light Armor Type -->
 			<skill id="4415" level="3" /> <!-- One-handed Sword -->
 			<skill id="4416" level="6" /> <!-- Humanoids -->
-			<skill id="5282" level="4" /> <!-- NPC(party) - Physical Single Long Range Attack - Water -->
-			<skill id="5463" level="1" /> <!-- Water Attacks -->
+			<skill id="5282" level="4" /> <!-- Power Shot -->
+			<skill id="5463" level="1" /> <!-- Water Attack -->
 		</skillList>
 		<exCrtEffect>false</exCrtEffect>
 		<sNpcPropHpRate>2</sNpcPropHpRate>
@@ -1087,17 +1022,11 @@
 		<status undying="false" />
 		<skillList>
 			<skill id="4408" level="10" /> <!-- HP Increase (2x) -->
-			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
-			<skill id="4410" level="11" /> <!-- Average P. Atk. -->
-			<skill id="4411" level="11" /> <!-- Average M. Atk. -->
-			<skill id="4412" level="11" /> <!-- Average P. Def. -->
-			<skill id="4413" level="11" /> <!-- Average M. Def. -->
-			<skill id="4414" level="2" /> <!-- Standard Type -->
 			<skill id="4415" level="1" /> <!-- Bare Hands -->
 			<skill id="4416" level="9" /> <!-- Demons -->
-			<skill id="5310" level="4" /> <!-- NPC(party) - Magic Close Range DD - less powerful -->
+			<skill id="5310" level="4" /> <!-- Aura Burn -->
 			<skill id="5333" level="4" /> <!-- Poison -->
-			<skill id="5463" level="1" /> <!-- Water Attacks -->
+			<skill id="5463" level="1" /> <!-- Water Attack -->
 		</skillList>
 		<exCrtEffect>false</exCrtEffect>
 		<sNpcPropHpRate>2</sNpcPropHpRate>
@@ -1154,18 +1083,14 @@
 		</stats>
 		<status undying="false" />
 		<skillList>
-			<skill id="4408" level="1" /> <!-- HP Increase (1x) -->
-			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
 			<skill id="4410" level="13" /> <!-- Slightly Strong P. Atk. -->
-			<skill id="4411" level="11" /> <!-- Average M. Atk. -->
-			<skill id="4412" level="11" /> <!-- Average P. Def. -->
 			<skill id="4413" level="8" /> <!-- Weak M. Def. -->
 			<skill id="4414" level="1" /> <!-- Heavy Armor Type -->
-			<skill id="4415" level="11" /> <!-- Spears -->
+			<skill id="4415" level="11" /> <!-- Spear -->
 			<skill id="4416" level="11" /> <!-- Giants -->
-			<skill id="5273" level="4" /> <!-- NPC(party) - Physical Single Close Range Attack -->
+			<skill id="5273" level="4" /> <!-- Power Strike -->
 			<skill id="5309" level="4" /> <!-- Bleed -->
-			<skill id="5463" level="1" /> <!-- Water Attacks -->
+			<skill id="5463" level="1" /> <!-- Water Attack -->
 		</skillList>
 		<exCrtEffect>false</exCrtEffect>
 		<ai clanHelpRange="500" aggroRange="450">
@@ -1234,18 +1159,14 @@
 		</stats>
 		<status undying="false" />
 		<skillList>
-			<skill id="4408" level="1" /> <!-- HP Increase (1x) -->
-			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
-			<skill id="4410" level="11" /> <!-- Average P. Atk. -->
 			<skill id="4411" level="14" /> <!-- Strong M. Atk. -->
 			<skill id="4412" level="16" /> <!-- Very Strong P. Def. -->
-			<skill id="4413" level="11" /> <!-- Average M. Def. -->
 			<skill id="4414" level="1" /> <!-- Heavy Armor Type -->
 			<skill id="4415" level="3" /> <!-- One-handed Sword -->
 			<skill id="4416" level="5" /> <!-- Plants -->
-			<skill id="4463" level="3" /> <!-- Surrender To Water -->
-			<skill id="5273" level="4" /> <!-- NPC(party) - Physical Single Close Range Attack -->
-			<skill id="5463" level="1" /> <!-- Water Attacks -->
+			<skill id="4463" level="3" /> <!-- Surrender to Water -->
+			<skill id="5273" level="4" /> <!-- Power Strike -->
+			<skill id="5463" level="1" /> <!-- Water Attack -->
 		</skillList>
 		<exCrtEffect>false</exCrtEffect>
 		<ai clanHelpRange="500" aggroRange="450">
@@ -1317,18 +1238,13 @@
 		<status undying="false" />
 		<skillList>
 			<skill id="4408" level="9" /> <!-- HP Increase (1/2x) -->
-			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
-			<skill id="4410" level="11" /> <!-- Average P. Atk. -->
 			<skill id="4411" level="13" /> <!-- Slightly Strong M. Atk. -->
-			<skill id="4412" level="11" /> <!-- Average P. Def. -->
-			<skill id="4413" level="11" /> <!-- Average M. Def. -->
-			<skill id="4414" level="2" /> <!-- Standard Type -->
 			<skill id="4415" level="3" /> <!-- One-handed Sword -->
 			<skill id="4416" level="7" /> <!-- Spirits -->
-			<skill id="4613" level="10" /> <!-- NPC Clan Heal -->
-			<skill id="5282" level="4" /> <!-- NPC(party) - Physical Single Long Range Attack - Water -->
-			<skill id="5318" level="4" /> <!-- NPC(party) -Magic Range Close Range DD - Water -->
-			<skill id="5463" level="1" /> <!-- Water Attacks -->
+			<skill id="4613" level="10" /> <!-- Clan Heal -->
+			<skill id="5282" level="4" /> <!-- Power Shot -->
+			<skill id="5318" level="4" /> <!-- Frost Wall -->
+			<skill id="5463" level="1" /> <!-- Water Attack -->
 		</skillList>
 		<exCrtEffect>false</exCrtEffect>
 		<sNpcPropHpRate>0.5</sNpcPropHpRate>

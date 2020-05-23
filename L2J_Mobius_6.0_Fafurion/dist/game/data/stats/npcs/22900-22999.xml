@@ -32,14 +32,17 @@
 		</stats>
 		<status attackable="false" undying="false" />
 		<skillList>
-			<skill id="14045" level="4" /> <!-- Fairy Attack -->
-			<skill id="14047" level="4" /> <!-- Fairy Curse Poison -->
-			<skill id="4416" level="6" /> <!-- Humanoids -->
-			<skill id="5467" level="1" /> <!-- Dark Attack -->
+			<skill id="4408" level="14" /> <!-- HP Increase (6x) -->
 			<skill id="4410" level="13" /> <!-- Slightly Strong P. Atk. -->
 			<skill id="4411" level="13" /> <!-- Slightly Strong M. Atk. -->
 			<skill id="4412" level="12" /> <!-- Slightly Strong P. Def. -->
 			<skill id="4413" level="12" /> <!-- Slightly Strong M. Def. -->
+			<skill id="4415" level="3" /> <!-- One-handed Sword -->
+			<skill id="4416" level="6" /> <!-- Humanoids -->
+			<skill id="5467" level="1" /> <!-- Dark Attack -->
+			<skill id="14045" level="4" /> <!-- Fairy Attack -->
+			<skill id="14047" level="4" /> <!-- Fairy Curse Poison -->
+			<skill id="14765" level="3" /> <!-- Blood Siphon Resistance -->
 		</skillList>
 		<ai aggroRange="300" isAggressive="true" clanHelpRange="300">
 			<clanList>
@@ -107,14 +110,17 @@
 		</stats>
 		<status attackable="false" undying="false" />
 		<skillList>
-			<skill id="14045" level="4" /> <!-- Fairy Attack -->
-			<skill id="14047" level="4" /> <!-- Fairy Curse Poison -->
-			<skill id="4416" level="6" /> <!-- Humanoids -->
-			<skill id="5463" level="1" /> <!-- Water Attack -->
+			<skill id="4408" level="13" /> <!-- HP Increase (5x) -->
 			<skill id="4410" level="12" /> <!-- Slightly Strong P. Atk. -->
 			<skill id="4411" level="12" /> <!-- Slightly Strong M. Atk. -->
 			<skill id="4412" level="12" /> <!-- Slightly Strong P. Def. -->
 			<skill id="4413" level="12" /> <!-- Slightly Strong M. Def. -->
+			<skill id="4415" level="3" /> <!-- One-handed Sword -->
+			<skill id="4416" level="6" /> <!-- Humanoids -->
+			<skill id="5463" level="1" /> <!-- Water Attack -->
+			<skill id="14045" level="4" /> <!-- Fairy Attack -->
+			<skill id="14047" level="4" /> <!-- Fairy Curse Poison -->
+			<skill id="14765" level="3" /> <!-- Blood Siphon Resistance -->
 		</skillList>
 		<ai aggroRange="300" isAggressive="true" clanHelpRange="300">
 			<clanList>
@@ -180,12 +186,15 @@
 		</stats>
 		<status attackable="false" undying="false" />
 		<skillList>
-			<skill id="14045" level="4" /> <!-- Fairy Attack -->
-			<skill id="14047" level="4" /> <!-- Fairy Curse Poison -->
-			<skill id="4416" level="6" /> <!-- Humanoids -->
-			<skill id="5463" level="1" /> <!-- Water Attack -->
+			<skill id="4408" level="12" /> <!-- HP Increase (4x) -->
 			<skill id="4410" level="12" /> <!-- Slightly Strong P. Atk. -->
 			<skill id="4411" level="12" /> <!-- Slightly Strong M. Atk. -->
+			<skill id="4415" level="3" /> <!-- One-handed Sword -->
+			<skill id="4416" level="6" /> <!-- Humanoids -->
+			<skill id="5463" level="1" /> <!-- Water Attack -->
+			<skill id="14045" level="4" /> <!-- Fairy Attack -->
+			<skill id="14047" level="4" /> <!-- Fairy Curse Poison -->
+			<skill id="14765" level="3" /> <!-- Blood Siphon Resistance -->
 		</skillList>
 		<ai aggroRange="300" isAggressive="true" clanHelpRange="300">
 			<clanList>
@@ -252,11 +261,14 @@
 		</stats>
 		<status attackable="false" undying="false" />
 		<skillList>
-			<skill id="14045" level="3" /> <!-- Fairy Attack -->
-			<skill id="14049" level="1" /> <!-- Fairy Heal -->
-			<skill id="14046" level="3" /> <!-- Fairy Curse Gloom -->
+			<skill id="4408" level="7" /> <!-- HP Very High -->
+			<skill id="4415" level="3" /> <!-- One-handed Sword -->
 			<skill id="4416" level="6" /> <!-- Humanoids -->
 			<skill id="5463" level="1" /> <!-- Water Attack -->
+			<skill id="14045" level="3" /> <!-- Fairy Attack -->
+			<skill id="14046" level="3" /> <!-- Fairy Curse Gloom -->
+			<skill id="14049" level="1" /> <!-- Fairy Heal -->
+			<skill id="14765" level="2" /> <!-- Blood Siphon Resistance -->
 		</skillList>
 		<ai aggroRange="300" isAggressive="true" clanHelpRange="300">
 			<clanList>
@@ -322,13 +334,16 @@
 		</stats>
 		<status attackable="false" undying="false" />
 		<skillList>
-			<skill id="14045" level="3" /> <!-- Fairy Attack -->
-			<skill id="14049" level="1" /> <!-- Fairy Heal -->
-			<skill id="14046" level="3" /> <!-- Fairy Curse Gloom -->
-			<skill id="4416" level="6" /> <!-- Humanoids -->
-			<skill id="5467" level="1" /> <!-- Dark Attack -->
+			<skill id="4408" level="12" /> <!-- HP Increase (4x) -->
 			<skill id="4410" level="12" /> <!-- Slightly Strong P. Atk. -->
 			<skill id="4411" level="12" /> <!-- Slightly Strong M. Atk. -->
+			<skill id="4415" level="3" /> <!-- One-handed Sword -->
+			<skill id="4416" level="6" /> <!-- Humanoids -->
+			<skill id="5467" level="1" /> <!-- Dark Attack -->
+			<skill id="14045" level="3" /> <!-- Fairy Attack -->
+			<skill id="14046" level="3" /> <!-- Fairy Curse Gloom -->
+			<skill id="14049" level="1" /> <!-- Fairy Heal -->
+			<skill id="14765" level="2" /> <!-- Blood Siphon Resistance -->
 		</skillList>
 		<ai aggroRange="300" isAggressive="true" clanHelpRange="300">
 			<clanList>
@@ -395,11 +410,14 @@
 		</stats>
 		<status attackable="false" undying="false" />
 		<skillList>
-			<skill id="14045" level="3" /> <!-- Fairy Attack -->
-			<skill id="14049" level="1" /> <!-- Fairy Heal -->
-			<skill id="14046" level="3" /> <!-- Fairy Curse Gloom -->
+			<skill id="4408" level="11" /> <!-- HP Increase (3x) -->
+			<skill id="4415" level="3" /> <!-- One-handed Sword -->
 			<skill id="4416" level="6" /> <!-- Humanoids -->
 			<skill id="5463" level="1" /> <!-- Water Attack -->
+			<skill id="14045" level="3" /> <!-- Fairy Attack -->
+			<skill id="14046" level="3" /> <!-- Fairy Curse Gloom -->
+			<skill id="14049" level="1" /> <!-- Fairy Heal -->
+			<skill id="14765" level="2" /> <!-- Blood Siphon Resistance -->
 		</skillList>
 		<ai aggroRange="300" isAggressive="true" clanHelpRange="300">
 			<clanList>
@@ -465,11 +483,14 @@
 		</stats>
 		<status attackable="false" undying="false" />
 		<skillList>
-			<skill id="14045" level="3" /> <!-- Fairy Attack -->
-			<skill id="14049" level="1" /> <!-- Fairy Heal -->
-			<skill id="14046" level="3" /> <!-- Fairy Curse Gloom -->
+			<skill id="4408" level="10" /> <!-- HP Increase (2x) -->
+			<skill id="4415" level="3" /> <!-- One-handed Sword -->
 			<skill id="4416" level="6" /> <!-- Humanoids -->
 			<skill id="5463" level="1" /> <!-- Water Attack -->
+			<skill id="14045" level="3" /> <!-- Fairy Attack -->
+			<skill id="14046" level="3" /> <!-- Fairy Curse Gloom -->
+			<skill id="14049" level="1" /> <!-- Fairy Heal -->
+			<skill id="14765" level="2" /> <!-- Blood Siphon Resistance -->
 		</skillList>
 		<ai aggroRange="300" isAggressive="true" clanHelpRange="300">
 			<clanList>
@@ -536,13 +557,16 @@
 		</stats>
 		<status attackable="false" undying="false" />
 		<skillList>
-			<skill id="14045" level="4" /> <!-- Fairy Attack -->
-			<skill id="14049" level="1" /> <!-- Fairy Heal -->
-			<skill id="14046" level="4" /> <!-- Fairy Curse Gloom -->
-			<skill id="4416" level="6" /> <!-- Humanoids -->
-			<skill id="5463" level="1" /> <!-- Water Attack -->
+			<skill id="4408" level="11" /> <!-- HP Increase (3x) -->
 			<skill id="4410" level="12" /> <!-- Slightly Strong P. Atk. -->
 			<skill id="4411" level="12" /> <!-- Slightly Strong M. Atk. -->
+			<skill id="4415" level="3" /> <!-- One-handed Sword -->
+			<skill id="4416" level="6" /> <!-- Humanoids -->
+			<skill id="5463" level="1" /> <!-- Water Attack -->
+			<skill id="14045" level="4" /> <!-- Fairy Attack -->
+			<skill id="14046" level="4" /> <!-- Fairy Curse Gloom -->
+			<skill id="14049" level="1" /> <!-- Fairy Heal -->
+			<skill id="14765" level="3" /> <!-- Blood Siphon Resistance -->
 		</skillList>
 		<ai aggroRange="300" isAggressive="true" clanHelpRange="300">
 			<clanList>
@@ -608,15 +632,18 @@
 		</stats>
 		<status attackable="false" undying="false" />
 		<skillList>
-			<skill id="14045" level="4" /> <!-- Fairy Attack -->
-			<skill id="14049" level="1" /> <!-- Fairy Heal -->
-			<skill id="14046" level="4" /> <!-- Fairy Curse Gloom -->
-			<skill id="4416" level="6" /> <!-- Humanoids -->
-			<skill id="5467" level="1" /> <!-- Dark Attack -->
+			<skill id="4408" level="14" /> <!-- HP Increase (6x) -->
 			<skill id="4410" level="13" /> <!-- Slightly Strong P. Atk. -->
 			<skill id="4411" level="13" /> <!-- Slightly Strong M. Atk. -->
 			<skill id="4412" level="12" /> <!-- Slightly Strong P. Def. -->
 			<skill id="4413" level="12" /> <!-- Slightly Strong M. Def. -->
+			<skill id="4415" level="3" /> <!-- One-handed Sword -->
+			<skill id="4416" level="6" /> <!-- Humanoids -->
+			<skill id="5467" level="1" /> <!-- Dark Attack -->
+			<skill id="14045" level="4" /> <!-- Fairy Attack -->
+			<skill id="14046" level="4" /> <!-- Fairy Curse Gloom -->
+			<skill id="14049" level="1" /> <!-- Fairy Heal -->
+			<skill id="14765" level="3" /> <!-- Blood Siphon Resistance -->
 		</skillList>
 		<ai aggroRange="300" isAggressive="true" clanHelpRange="300">
 			<clanList>
@@ -684,15 +711,18 @@
 		</stats>
 		<status attackable="false" undying="false" />
 		<skillList>
-			<skill id="14045" level="4" /> <!-- Fairy Attack -->
-			<skill id="14049" level="1" /> <!-- Fairy Heal -->
-			<skill id="14046" level="4" /> <!-- Fairy Curse Gloom -->
-			<skill id="4416" level="6" /> <!-- Humanoids -->
-			<skill id="5463" level="1" /> <!-- Water Attack -->
+			<skill id="4408" level="13" /> <!-- HP Increase (5x) -->
 			<skill id="4410" level="12" /> <!-- Slightly Strong P. Atk. -->
 			<skill id="4411" level="12" /> <!-- Slightly Strong M. Atk. -->
 			<skill id="4412" level="12" /> <!-- Slightly Strong P. Def. -->
 			<skill id="4413" level="12" /> <!-- Slightly Strong M. Def. -->
+			<skill id="4415" level="3" /> <!-- One-handed Sword -->
+			<skill id="4416" level="6" /> <!-- Humanoids -->
+			<skill id="5463" level="1" /> <!-- Water Attack -->
+			<skill id="14045" level="4" /> <!-- Fairy Attack -->
+			<skill id="14046" level="4" /> <!-- Fairy Curse Gloom -->
+			<skill id="14049" level="1" /> <!-- Fairy Heal -->
+			<skill id="14765" level="3" /> <!-- Blood Siphon Resistance -->
 		</skillList>
 		<ai aggroRange="300" isAggressive="true" clanHelpRange="300">
 			<clanList>
@@ -758,13 +788,16 @@
 		</stats>
 		<status attackable="false" undying="false" />
 		<skillList>
-			<skill id="14045" level="4" /> <!-- Fairy Attack -->
-			<skill id="14049" level="1" /> <!-- Fairy Heal -->
-			<skill id="14046" level="4" /> <!-- Fairy Curse Gloom -->
-			<skill id="4416" level="6" /> <!-- Humanoids -->
-			<skill id="5463" level="1" /> <!-- Water Attack -->
+			<skill id="4408" level="12" /> <!-- HP Increase (4x) -->
 			<skill id="4410" level="12" /> <!-- Slightly Strong P. Atk. -->
 			<skill id="4411" level="12" /> <!-- Slightly Strong M. Atk. -->
+			<skill id="4415" level="3" /> <!-- One-handed Sword -->
+			<skill id="4416" level="6" /> <!-- Humanoids -->
+			<skill id="5463" level="1" /> <!-- Water Attack -->
+			<skill id="14045" level="4" /> <!-- Fairy Attack -->
+			<skill id="14046" level="4" /> <!-- Fairy Curse Gloom -->
+			<skill id="14049" level="1" /> <!-- Fairy Heal -->
+			<skill id="14765" level="3" /> <!-- Blood Siphon Resistance -->
 		</skillList>
 		<ai aggroRange="300" isAggressive="true" clanHelpRange="300">
 			<clanList>
@@ -830,11 +863,11 @@
 		</stats>
 		<status attackable="false" undying="false" randomAnimation="false" randomWalk="false" />
 		<skillList>
-			<skill id="14001" level="1" /> <!-- Cross Slash -->
+			<skill id="4415" level="4" /> <!-- One-handed Sword -->
 			<skill id="4416" level="6" /> <!-- Humanoids -->
 			<skill id="5467" level="1" /> <!-- Dark Attack -->
-			<skill id="4458" level="1" /> <!-- Spear Vulnerability -->
-			<skill id="4457" level="1" /> <!-- Fist Weapon Vulnerability -->
+			<skill id="14001" level="1" /> <!-- Cross Slash -->
+			<skill id="14765" level="3" /> <!-- Blood Siphon Resistance -->
 		</skillList>
 		<ai aggroRange="150" isAggressive="true" clanHelpRange="300" />
 		<collision>
@@ -890,12 +923,12 @@
 		</stats>
 		<status attackable="false" undying="false" randomAnimation="false" randomWalk="false" />
 		<skillList>
-			<skill id="14001" level="1" /> <!-- Cross Slash -->
+			<skill id="4410" level="9" /> <!-- Slightly Weak P. Atk. -->
+			<skill id="4415" level="4" /> <!-- One-handed Sword -->
 			<skill id="4416" level="6" /> <!-- Humanoids -->
 			<skill id="5467" level="1" /> <!-- Dark Attack -->
-			<skill id="4410" level="9" /> <!-- Slightly Weak P. Atk. -->
-			<skill id="4458" level="1" /> <!-- Spear Vulnerability -->
-			<skill id="4457" level="1" /> <!-- Fist Weapon Vulnerability -->
+			<skill id="14001" level="1" /> <!-- Cross Slash -->
+			<skill id="14765" level="4" /> <!-- Blood Siphon Resistance -->
 		</skillList>
 		<ai aggroRange="150" isAggressive="true" clanHelpRange="300" />
 		<collision>
@@ -952,11 +985,12 @@
 		</stats>
 		<status attackable="false" undying="false" randomAnimation="false" randomWalk="false" />
 		<skillList>
-			<skill id="14001" level="1" /> <!-- Cross Slash -->
+			<skill id="4408" level="10" /> <!-- HP Increase (2x) -->
+			<skill id="4415" level="4" /> <!-- One-handed Sword -->
 			<skill id="4416" level="6" /> <!-- Humanoids -->
 			<skill id="5467" level="1" /> <!-- Dark Attack -->
-			<skill id="4458" level="1" /> <!-- Spear Vulnerability -->
-			<skill id="4457" level="1" /> <!-- Fist Weapon Vulnerability -->
+			<skill id="14001" level="1" /> <!-- Cross Slash -->
+			<skill id="14765" level="4" /> <!-- Blood Siphon Resistance -->
 		</skillList>
 		<ai aggroRange="150" isAggressive="true" clanHelpRange="300" />
 		<collision>
@@ -1013,11 +1047,11 @@
 		</stats>
 		<status attackable="false" undying="false" randomAnimation="false" randomWalk="false" />
 		<skillList>
-			<skill id="14004" level="1" /> <!-- Front Elven Bow -->
+			<skill id="4415" level="12" /> <!-- Spear -->
 			<skill id="4416" level="6" /> <!-- Humanoids -->
 			<skill id="5467" level="1" /> <!-- Dark Attack -->
-			<skill id="4458" level="1" /> <!-- Spear Vulnerability -->
-			<skill id="4457" level="1" /> <!-- Fist Weapon Vulnerability -->
+			<skill id="14004" level="1" /> <!-- Front Elven Bow -->
+			<skill id="14765" level="3" /> <!-- Blood Siphon Resistance -->
 		</skillList>
 		<ai aggroRange="150" isAggressive="true" clanHelpRange="300" />
 		<collision>
@@ -1071,12 +1105,12 @@
 		</stats>
 		<status attackable="false" undying="false" randomAnimation="false" randomWalk="false" />
 		<skillList>
-			<skill id="14004" level="1" /> <!-- Front Elven Bow -->
+			<skill id="4410" level="9" /> <!-- Slightly Weak P. Atk. -->
+			<skill id="4415" level="12" /> <!-- Spear -->
 			<skill id="4416" level="6" /> <!-- Humanoids -->
 			<skill id="5467" level="1" /> <!-- Dark Attack -->
-			<skill id="4410" level="9" /> <!-- Slightly Weak P. Atk. -->
-			<skill id="4458" level="1" /> <!-- Spear Vulnerability -->
-			<skill id="4457" level="1" /> <!-- Fist Weapon Vulnerability -->
+			<skill id="14004" level="1" /> <!-- Front Elven Bow -->
+			<skill id="14765" level="4" /> <!-- Blood Siphon Resistance -->
 		</skillList>
 		<ai aggroRange="150" isAggressive="true" clanHelpRange="300" />
 		<collision>
@@ -1130,11 +1164,12 @@
 		</stats>
 		<status attackable="false" undying="false" randomAnimation="false" randomWalk="false" />
 		<skillList>
-			<skill id="14004" level="1" /> <!-- Front Elven Bow -->
+			<skill id="4408" level="10" /> <!-- HP Increase (2x) -->
+			<skill id="4415" level="12" /> <!-- Spear -->
 			<skill id="4416" level="6" /> <!-- Humanoids -->
 			<skill id="5467" level="1" /> <!-- Dark Attack -->
-			<skill id="4458" level="1" /> <!-- Spear Vulnerability -->
-			<skill id="4457" level="1" /> <!-- Fist Weapon Vulnerability -->
+			<skill id="14004" level="1" /> <!-- Front Elven Bow -->
+			<skill id="14765" level="4" /> <!-- Blood Siphon Resistance -->
 		</skillList>
 		<ai aggroRange="150" isAggressive="true" clanHelpRange="300" />
 		<collision>
@@ -1188,13 +1223,11 @@
 		</stats>
 		<status attackable="false" undying="false" randomAnimation="false" randomWalk="false" />
 		<skillList>
-			<skill id="14006" level="1" /> <!-- Shield Stun -->
+			<skill id="4415" level="10" /> <!-- Bow -->
 			<skill id="4416" level="6" /> <!-- Humanoids -->
 			<skill id="5467" level="1" /> <!-- Dark Attack -->
-			<skill id="4410" level="5" /> <!-- Very Weak P. Atk. -->
-			<skill id="4411" level="5" /> <!-- Very Weak M. Atk. -->
-			<skill id="4458" level="1" /> <!-- Spear Vulnerability -->
-			<skill id="4457" level="1" /> <!-- Fist Weapon Vulnerability -->
+			<skill id="14006" level="1" /> <!-- Shield Stun -->
+			<skill id="14765" level="3" /> <!-- Blood Siphon Resistance -->
 		</skillList>
 		<ai aggroRange="600" isAggressive="true" clanHelpRange="300" />
 		<collision>
@@ -1251,13 +1284,12 @@
 		</stats>
 		<status attackable="false" undying="false" randomAnimation="false" randomWalk="false" />
 		<skillList>
-			<skill id="14006" level="1" /> <!-- Shield Stun -->
+			<skill id="4410" level="9" /> <!-- Slightly Weak P. Atk. -->
+			<skill id="4415" level="10" /> <!-- Bow -->
 			<skill id="4416" level="6" /> <!-- Humanoids -->
 			<skill id="5467" level="1" /> <!-- Dark Attack -->
-			<skill id="4410" level="5" /> <!-- Very Weak P. Atk. -->
-			<skill id="4411" level="5" /> <!-- Very Weak M. Atk. -->
-			<skill id="4458" level="1" /> <!-- Spear Vulnerability -->
-			<skill id="4457" level="1" /> <!-- Fist Weapon Vulnerability -->
+			<skill id="14006" level="1" /> <!-- Shield Stun -->
+			<skill id="14765" level="4" /> <!-- Blood Siphon Resistance -->
 		</skillList>
 		<ai aggroRange="600" isAggressive="true" clanHelpRange="300" />
 		<collision>
@@ -1314,13 +1346,12 @@
 		</stats>
 		<status attackable="false" undying="false" randomAnimation="false" randomWalk="false" />
 		<skillList>
-			<skill id="14006" level="1" /> <!-- Shield Stun -->
+			<skill id="4408" level="10" /> <!-- HP Increase (2x) -->
+			<skill id="4415" level="10" /> <!-- Bow -->
 			<skill id="4416" level="6" /> <!-- Humanoids -->
 			<skill id="5467" level="1" /> <!-- Dark Attack -->
-			<skill id="4410" level="5" /> <!-- Very Weak P. Atk. -->
-			<skill id="4411" level="5" /> <!-- Very Weak M. Atk. -->
-			<skill id="4458" level="1" /> <!-- Spear Vulnerability -->
-			<skill id="4457" level="1" /> <!-- Fist Weapon Vulnerability -->
+			<skill id="14006" level="1" /> <!-- Shield Stun -->
+			<skill id="14765" level="4" /> <!-- Blood Siphon Resistance -->
 		</skillList>
 		<ai aggroRange="600" isAggressive="true" clanHelpRange="300" />
 		<collision>
@@ -1377,13 +1408,13 @@
 		</stats>
 		<status attackable="false" undying="false" randomAnimation="false" randomWalk="false" />
 		<skillList>
-			<skill id="14007" level="1" /> <!-- Power Blow -->
+			<skill id="4408" level="10" /> <!-- HP Increase (2x) -->
+			<skill id="4410" level="12" /> <!-- Slightly Strong P. Atk. -->
+			<skill id="4415" level="10" /> <!-- Bow -->
 			<skill id="4416" level="6" /> <!-- Humanoids -->
 			<skill id="5467" level="1" /> <!-- Dark Attack -->
-			<skill id="4410" level="5" /> <!-- Very Weak P. Atk. -->
-			<skill id="4411" level="5" /> <!-- Very Weak M. Atk. -->
-			<skill id="4458" level="1" /> <!-- Spear Vulnerability -->
-			<skill id="4457" level="1" /> <!-- Fist Weapon Vulnerability -->
+			<skill id="14007" level="1" /> <!-- Power Blow -->
+			<skill id="14765" level="4" /> <!-- Blood Siphon Resistance -->
 		</skillList>
 		<ai aggroRange="600" isAggressive="true" clanHelpRange="300" />
 		<collision>
@@ -1439,11 +1470,11 @@
 		</stats>
 		<status attackable="false" undying="false" randomAnimation="false" randomWalk="false" />
 		<skillList>
-			<skill id="14009" level="1" /> <!-- Electric Shock -->
+			<skill id="4415" level="3" /> <!-- One-handed Sword -->
 			<skill id="4416" level="6" /> <!-- Humanoids -->
 			<skill id="5463" level="1" /> <!-- Water Attack -->
-			<skill id="4458" level="1" /> <!-- Spear Vulnerability -->
-			<skill id="4457" level="1" /> <!-- Fist Weapon Vulnerability -->
+			<skill id="14009" level="1" /> <!-- Electric Shock -->
+			<skill id="14765" level="3" /> <!-- Blood Siphon Resistance -->
 		</skillList>
 		<ai aggroRange="150" isAggressive="true" clanHelpRange="300" />
 		<collision>
@@ -1494,12 +1525,12 @@
 		</stats>
 		<status attackable="false" undying="false" randomAnimation="false" randomWalk="false" />
 		<skillList>
-			<skill id="14009" level="1" /> <!-- Electric Shock -->
+			<skill id="4411" level="9" /> <!-- Slightly Weak M. Atk. -->
+			<skill id="4415" level="3" /> <!-- One-handed Sword -->
 			<skill id="4416" level="6" /> <!-- Humanoids -->
 			<skill id="5463" level="1" /> <!-- Water Attack -->
-			<skill id="4411" level="9" /> <!-- Slightly Weak M. Atk. -->
-			<skill id="4458" level="1" /> <!-- Spear Vulnerability -->
-			<skill id="4457" level="1" /> <!-- Fist Weapon Vulnerability -->
+			<skill id="14009" level="1" /> <!-- Electric Shock -->
+			<skill id="14765" level="4" /> <!-- Blood Siphon Resistance -->
 		</skillList>
 		<ai aggroRange="150" isAggressive="true" clanHelpRange="300" />
 		<collision>
@@ -1550,11 +1581,12 @@
 		</stats>
 		<status attackable="false" undying="false" randomAnimation="false" randomWalk="false" />
 		<skillList>
-			<skill id="14009" level="1" /> <!-- Electric Shock -->
+			<skill id="4408" level="10" /> <!-- HP Increase (2x) -->
+			<skill id="4415" level="3" /> <!-- One-handed Sword -->
 			<skill id="4416" level="6" /> <!-- Humanoids -->
 			<skill id="5463" level="1" /> <!-- Water Attack -->
-			<skill id="4458" level="1" /> <!-- Spear Vulnerability -->
-			<skill id="4457" level="1" /> <!-- Fist Weapon Vulnerability -->
+			<skill id="14009" level="1" /> <!-- Electric Shock -->
+			<skill id="14765" level="4" /> <!-- Blood Siphon Resistance -->
 		</skillList>
 		<ai aggroRange="150" isAggressive="true" clanHelpRange="300" />
 		<collision>
@@ -1605,9 +1637,12 @@
 		</stats>
 		<status attackable="false" undying="false" randomAnimation="false" randomWalk="false" />
 		<skillList>
-			<skill id="14012" level="1" /> <!-- Iron Deal -->
+			<skill id="4408" level="14" /> <!-- HP Increase (6x) -->
+			<skill id="4415" level="5" /> <!-- One-handed Blunt Weapons -->
 			<skill id="4416" level="6" /> <!-- Humanoids -->
 			<skill id="5467" level="1" /> <!-- Dark Attack -->
+			<skill id="14012" level="1" /> <!-- Iron Deal -->
+			<skill id="14765" level="4" /> <!-- Blood Siphon Resistance -->
 		</skillList>
 		<ai aggroRange="300" isAggressive="true" clanHelpRange="300" />
 		<collision>
@@ -1660,10 +1695,13 @@
 		</stats>
 		<status attackable="false" undying="false" randomAnimation="false" randomWalk="false" />
 		<skillList>
-			<skill id="14012" level="1" /> <!-- Iron Deal -->
+			<skill id="4408" level="14" /> <!-- HP Increase (6x) -->
+			<skill id="4410" level="14" /> <!-- Strong P. Atk. -->
+			<skill id="4415" level="6" /> <!-- One-handed Blunt Weapons -->
 			<skill id="4416" level="6" /> <!-- Humanoids -->
 			<skill id="5467" level="1" /> <!-- Dark Attack -->
-			<skill id="4410" level="14" /> <!-- Strong P. Atk. -->
+			<skill id="14012" level="1" /> <!-- Iron Deal -->
+			<skill id="14765" level="4" /> <!-- Blood Siphon Resistance -->
 		</skillList>
 		<ai aggroRange="300" isAggressive="true" clanHelpRange="300" />
 		<collision>
@@ -1718,9 +1756,12 @@
 		</stats>
 		<status attackable="false" undying="false" randomAnimation="false" randomWalk="false" />
 		<skillList>
-			<skill id="14009" level="1" /> <!-- Electric Shock -->
+			<skill id="4408" level="14" /> <!-- HP Increase (6x) -->
+			<skill id="4415" level="3" /> <!-- One-handed Sword -->
 			<skill id="4416" level="6" /> <!-- Humanoids -->
 			<skill id="5463" level="1" /> <!-- Water Attack -->
+			<skill id="14009" level="1" /> <!-- Electric Shock -->
+			<skill id="14765" level="4" /> <!-- Blood Siphon Resistance -->
 		</skillList>
 		<ai aggroRange="300" isAggressive="true" clanHelpRange="300" />
 		<collision>
@@ -1772,10 +1813,13 @@
 		</stats>
 		<status attackable="false" undying="false" randomAnimation="false" randomWalk="false" />
 		<skillList>
-			<skill id="14009" level="1" /> <!-- Electric Shock -->
+			<skill id="4408" level="14" /> <!-- HP Increase (6x) -->
+			<skill id="4411" level="14" /> <!-- Strong M. Atk. -->
+			<skill id="4415" level="3" /> <!-- One-handed Sword -->
 			<skill id="4416" level="6" /> <!-- Humanoids -->
 			<skill id="5463" level="1" /> <!-- Water Attack -->
-			<skill id="4411" level="14" /> <!-- Strong M. Atk. -->
+			<skill id="14009" level="1" /> <!-- Electric Shock -->
+			<skill id="14765" level="4" /> <!-- Blood Siphon Resistance -->
 		</skillList>
 		<ai aggroRange="300" isAggressive="true" clanHelpRange="300" />
 		<collision>
@@ -1826,16 +1870,16 @@
 		</stats>
 		<status attackable="false" undying="false" />
 		<skillList>
-			<skill id="5467" level="1" /> <!-- Strong against the dark elemental. -->
-			<skill id="4416" level="6" /> <!-- Humanoids -->
 			<skill id="4408" level="14" /> <!-- HP Increase (6x) -->
-			<skill id="14032" level="1" /> <!-- Red Net -->
 			<skill id="4415" level="3" /> <!-- One-handed Sword -->
-			<skill id="11556" level="1" /> <!-- Cancel Transform -->
-			<skill id="14034" level="1" /> <!-- Waist Slash -->
-			<skill id="14033" level="1" /> <!-- Vital Spot Attack -->
-			<skill id="14765" level="4" /> <!-- Blood Siphon Resistance -->
+			<skill id="4416" level="6" /> <!-- Humanoids -->
+			<skill id="5467" level="1" /> <!-- Dark Attack -->
 			<skill id="5549" level="1" /> <!-- Melee Attack Vulnerability -->
+			<skill id="11556" level="1" /> <!-- Cancel Transform -->
+			<skill id="14032" level="1" /> <!-- Red Net -->
+			<skill id="14033" level="1" /> <!-- Vital Spot Attack -->
+			<skill id="14034" level="1" /> <!-- Waist Slash -->
+			<skill id="14765" level="4" /> <!-- Blood Siphon Resistance -->
 		</skillList>
 		<ai aggroRange="300" isAggressive="true" clanHelpRange="300" />
 		<collision>
@@ -1873,12 +1917,12 @@
 		</stats>
 		<status attackable="false" undying="false" />
 		<skillList>
-			<skill id="5467" level="1" /> <!-- Strong against the dark elemental. -->
-			<skill id="4416" level="3" /> <!-- Beast -->
 			<skill id="4415" level="3" /> <!-- One-handed Sword -->
-			<skill id="14765" level="4" /> <!-- Blood Siphon Resistance -->
-			<skill id="14037" level="1" /> <!-- Front Foot Attack -->
+			<skill id="4416" level="3" /> <!-- Beast -->
+			<skill id="5467" level="1" /> <!-- Dark Attack -->
 			<skill id="14036" level="1" /> <!-- Vulnerability Attack -->
+			<skill id="14037" level="1" /> <!-- Front Foot Attack -->
+			<skill id="14765" level="4" /> <!-- Blood Siphon Resistance -->
 		</skillList>
 		<ai aggroRange="300" isAggressive="true" clanHelpRange="300" />
 		<collision>
@@ -1919,16 +1963,16 @@
 		</stats>
 		<status attackable="false" undying="false" />
 		<skillList>
-			<skill id="5467" level="1" /> <!-- Strong against the dark elemental. -->
-			<skill id="4416" level="6" /> <!-- Humanoids -->
 			<skill id="4408" level="10" /> <!-- HP Increase (2x) -->
 			<skill id="4415" level="3" /> <!-- One-handed Sword -->
-			<skill id="14282" level="1" /> <!-- Octavis' Obedience -->
-			<skill id="14765" level="4" /> <!-- Blood Siphon Resistance -->
+			<skill id="4416" level="6" /> <!-- Humanoids -->
+			<skill id="5467" level="1" /> <!-- Dark Attack -->
 			<skill id="5549" level="1" /> <!-- Melee Attack Vulnerability -->
+			<skill id="14009" level="3" /> <!-- Electric Shock -->
 			<skill id="14010" level="3" /> <!-- Electric Range -->
 			<skill id="14011" level="3" /> <!-- Electric Staff -->
-			<skill id="14009" level="3" /> <!-- Electric Shock -->
+			<skill id="14282" level="1" /> <!-- Octavis' Obedience -->
+			<skill id="14765" level="4" /> <!-- Blood Siphon Resistance -->
 		</skillList>
 		<ai aggroRange="600" isAggressive="true" clanHelpRange="300" />
 		<collision>
@@ -1978,11 +2022,13 @@
 		</stats>
 		<status attackable="false" undying="false" />
 		<skillList>
-			<skill id="14448" level="1" /> <!-- Blink -->
-			<skill id="4416" level="6" /> <!-- Humanoids -->
-			<skill id="5463" level="1" /> <!-- Water Attack -->
 			<skill id="4410" level="15" /> <!-- Strong P. Atk. -->
 			<skill id="4411" level="15" /> <!-- Strong M. Atk. -->
+			<skill id="4415" level="3" /> <!-- One-handed Sword -->
+			<skill id="4416" level="6" /> <!-- Humanoids -->
+			<skill id="5463" level="1" /> <!-- Water Attack -->
+			<skill id="14448" level="1" /> <!-- Blink -->
+			<skill id="14765" level="2" /> <!-- Blood Siphon Resistance -->
 		</skillList>
 		<ai aggroRange="300" isAggressive="false" />
 		<collision>
@@ -2057,11 +2103,13 @@
 		</stats>
 		<status attackable="false" undying="false" />
 		<skillList>
-			<skill id="14448" level="1" /> <!-- Blink -->
-			<skill id="4416" level="6" /> <!-- Humanoids -->
-			<skill id="5463" level="1" /> <!-- Water Attack -->
 			<skill id="4410" level="15" /> <!-- Strong P. Atk. -->
 			<skill id="4411" level="15" /> <!-- Strong M. Atk. -->
+			<skill id="4415" level="9" /> <!-- Bow -->
+			<skill id="4416" level="6" /> <!-- Humanoids -->
+			<skill id="5463" level="1" /> <!-- Water Attack -->
+			<skill id="14448" level="1" /> <!-- Blink -->
+			<skill id="14765" level="2" /> <!-- Blood Siphon Resistance -->
 		</skillList>
 		<ai aggroRange="300" isAggressive="false" />
 		<collision>
@@ -2135,11 +2183,14 @@
 		</stats>
 		<status attackable="false" undying="false" />
 		<skillList>
-			<skill id="14448" level="1" /> <!-- Blink -->
-			<skill id="4416" level="6" /> <!-- Humanoids -->
-			<skill id="5463" level="1" /> <!-- Water Attack -->
+			<skill id="4408" level="10" /> <!-- HP Increase (2x) -->
 			<skill id="4410" level="15" /> <!-- Strong P. Atk. -->
 			<skill id="4411" level="15" /> <!-- Strong M. Atk. -->
+			<skill id="4415" level="3" /> <!-- One-handed Sword -->
+			<skill id="4416" level="6" /> <!-- Humanoids -->
+			<skill id="5463" level="1" /> <!-- Water Attack -->
+			<skill id="14448" level="1" /> <!-- Blink -->
+			<skill id="14765" level="2" /> <!-- Blood Siphon Resistance -->
 		</skillList>
 		<ai aggroRange="300" isAggressive="false" />
 		<collision>
@@ -2211,11 +2262,14 @@
 		</stats>
 		<status attackable="false" undying="false" />
 		<skillList>
-			<skill id="14448" level="1" /> <!-- Blink -->
-			<skill id="4416" level="6" /> <!-- Humanoids -->
-			<skill id="5465" level="1" /> <!-- Earth Attack -->
+			<skill id="4408" level="10" /> <!-- HP Increase (2x) -->
 			<skill id="4410" level="15" /> <!-- Strong P. Atk. -->
 			<skill id="4411" level="15" /> <!-- Strong M. Atk. -->
+			<skill id="4415" level="3" /> <!-- One-handed Sword -->
+			<skill id="4416" level="6" /> <!-- Humanoids -->
+			<skill id="5465" level="1" /> <!-- Earth Attack -->
+			<skill id="14448" level="1" /> <!-- Blink -->
+			<skill id="14765" level="2" /> <!-- Blood Siphon Resistance -->
 		</skillList>
 		<ai aggroRange="300" isAggressive="false" />
 		<collision>
@@ -2287,11 +2341,13 @@
 		</stats>
 		<status attackable="false" undying="false" />
 		<skillList>
-			<skill id="14448" level="1" /> <!-- Blink -->
-			<skill id="4416" level="6" /> <!-- Humanoids -->
-			<skill id="5465" level="1" /> <!-- Earth Attack -->
 			<skill id="4410" level="15" /> <!-- Strong P. Atk. -->
 			<skill id="4411" level="15" /> <!-- Strong M. Atk. -->
+			<skill id="4415" level="3" /> <!-- One-handed Sword -->
+			<skill id="4416" level="6" /> <!-- Humanoids -->
+			<skill id="5465" level="1" /> <!-- Earth Attack -->
+			<skill id="14448" level="1" /> <!-- Blink -->
+			<skill id="14765" level="2" /> <!-- Blood Siphon Resistance -->
 		</skillList>
 		<ai aggroRange="300" isAggressive="false" />
 		<collision>
@@ -2364,12 +2420,14 @@
 		</stats>
 		<status attackable="false" undying="false" />
 		<skillList>
-			<skill id="14609" level="1" /> <!-- Cry of Destiny - Dark Blast -->
-			<skill id="14448" level="1" /> <!-- Blink -->
-			<skill id="4416" level="6" /> <!-- Humanoids -->
-			<skill id="5465" level="1" /> <!-- Earth Attack -->
 			<skill id="4410" level="15" /> <!-- Strong P. Atk. -->
 			<skill id="4411" level="15" /> <!-- Strong M. Atk. -->
+			<skill id="4415" level="3" /> <!-- One-handed Sword -->
+			<skill id="4416" level="6" /> <!-- Humanoids -->
+			<skill id="5465" level="1" /> <!-- Earth Attack -->
+			<skill id="14448" level="1" /> <!-- Blink -->
+			<skill id="14609" level="1" /> <!-- Cry of Destiny - Dark Blast -->
+			<skill id="14765" level="2" /> <!-- Blood Siphon Resistance -->
 		</skillList>
 		<ai aggroRange="300" isAggressive="false" />
 		<collision>
@@ -2443,11 +2501,13 @@
 		</stats>
 		<status attackable="false" undying="false" />
 		<skillList>
-			<skill id="14448" level="1" /> <!-- Blink -->
-			<skill id="4416" level="6" /> <!-- Humanoids -->
-			<skill id="5465" level="1" /> <!-- Earth Attack -->
 			<skill id="4410" level="15" /> <!-- Strong P. Atk. -->
 			<skill id="4411" level="15" /> <!-- Strong M. Atk. -->
+			<skill id="4415" level="3" /> <!-- One-handed Sword -->
+			<skill id="4416" level="6" /> <!-- Humanoids -->
+			<skill id="5465" level="1" /> <!-- Earth Attack -->
+			<skill id="14448" level="1" /> <!-- Blink -->
+			<skill id="14765" level="2" /> <!-- Blood Siphon Resistance -->
 		</skillList>
 		<ai aggroRange="300" isAggressive="false" />
 		<collision>
@@ -2521,11 +2581,13 @@
 		</stats>
 		<status attackable="false" undying="false" />
 		<skillList>
-			<skill id="14448" level="1" /> <!-- Blink -->
-			<skill id="4416" level="6" /> <!-- Humanoids -->
-			<skill id="5465" level="1" /> <!-- Earth Attack -->
 			<skill id="4410" level="15" /> <!-- Strong P. Atk. -->
 			<skill id="4411" level="15" /> <!-- Strong M. Atk. -->
+			<skill id="4415" level="3" /> <!-- One-handed Sword -->
+			<skill id="4416" level="6" /> <!-- Humanoids -->
+			<skill id="5465" level="1" /> <!-- Earth Attack -->
+			<skill id="14448" level="1" /> <!-- Blink -->
+			<skill id="14765" level="2" /> <!-- Blood Siphon Resistance -->
 		</skillList>
 		<ai aggroRange="300" isAggressive="false" />
 		<collision>
@@ -2600,11 +2662,13 @@
 		</stats>
 		<status attackable="false" undying="false" />
 		<skillList>
-			<skill id="14447" level="1" /> <!-- Chains of Hatred -->
-			<skill id="4416" level="6" /> <!-- Humanoids -->
-			<skill id="5463" level="1" /> <!-- Water Attack -->
 			<skill id="4410" level="17" /> <!-- Very Strong P. Atk. -->
 			<skill id="4411" level="17" /> <!-- Very Strong M. Atk. -->
+			<skill id="4415" level="3" /> <!-- One-handed Sword -->
+			<skill id="4416" level="6" /> <!-- Humanoids -->
+			<skill id="5463" level="1" /> <!-- Water Attack -->
+			<skill id="14447" level="1" /> <!-- Chains of Hatred -->
+			<skill id="14765" level="2" /> <!-- Blood Siphon Resistance -->
 		</skillList>
 		<ai aggroRange="300" isAggressive="true" clanHelpRange="450">
 			<clanList>
@@ -2684,11 +2748,13 @@
 		</stats>
 		<status attackable="false" undying="false" />
 		<skillList>
-			<skill id="14447" level="1" /> <!-- Chains of Hatred -->
-			<skill id="4416" level="6" /> <!-- Humanoids -->
-			<skill id="5463" level="1" /> <!-- Water Attack -->
 			<skill id="4410" level="17" /> <!-- Very Strong P. Atk. -->
 			<skill id="4411" level="17" /> <!-- Very Strong M. Atk. -->
+			<skill id="4415" level="9" /> <!-- Bow -->
+			<skill id="4416" level="6" /> <!-- Humanoids -->
+			<skill id="5463" level="1" /> <!-- Water Attack -->
+			<skill id="14447" level="1" /> <!-- Chains of Hatred -->
+			<skill id="14765" level="2" /> <!-- Blood Siphon Resistance -->
 		</skillList>
 		<ai aggroRange="300" isAggressive="true" clanHelpRange="450">
 			<clanList>
@@ -2765,11 +2831,14 @@
 		</stats>
 		<status attackable="false" undying="false" />
 		<skillList>
-			<skill id="14447" level="1" /> <!-- Chains of Hatred -->
-			<skill id="4416" level="6" /> <!-- Humanoids -->
-			<skill id="5463" level="1" /> <!-- Water Attack -->
+			<skill id="4408" level="10" /> <!-- HP Increase (2x) -->
 			<skill id="4410" level="17" /> <!-- Very Strong P. Atk. -->
 			<skill id="4411" level="17" /> <!-- Very Strong M. Atk. -->
+			<skill id="4415" level="3" /> <!-- One-handed Sword -->
+			<skill id="4416" level="6" /> <!-- Humanoids -->
+			<skill id="5463" level="1" /> <!-- Water Attack -->
+			<skill id="14447" level="1" /> <!-- Chains of Hatred -->
+			<skill id="14765" level="2" /> <!-- Blood Siphon Resistance -->
 		</skillList>
 		<ai aggroRange="300" isAggressive="true" clanHelpRange="450">
 			<clanList>
@@ -2844,11 +2913,14 @@
 		</stats>
 		<status attackable="false" undying="false" />
 		<skillList>
-			<skill id="14447" level="1" /> <!-- Chains of Hatred -->
-			<skill id="4416" level="6" /> <!-- Humanoids -->
-			<skill id="5465" level="1" /> <!-- Earth Attack -->
+			<skill id="4408" level="10" /> <!-- HP Increase (2x) -->
 			<skill id="4410" level="17" /> <!-- Very Strong P. Atk. -->
 			<skill id="4411" level="17" /> <!-- Very Strong M. Atk. -->
+			<skill id="4415" level="3" /> <!-- One-handed Sword -->
+			<skill id="4416" level="6" /> <!-- Humanoids -->
+			<skill id="5465" level="1" /> <!-- Earth Attack -->
+			<skill id="14447" level="1" /> <!-- Chains of Hatred -->
+			<skill id="14765" level="2" /> <!-- Blood Siphon Resistance -->
 		</skillList>
 		<ai aggroRange="300" isAggressive="true" clanHelpRange="450">
 			<clanList>
@@ -2928,11 +3000,13 @@
 		</stats>
 		<status attackable="false" undying="false" />
 		<skillList>
-			<skill id="14447" level="1" /> <!-- Chains of Hatred -->
-			<skill id="4416" level="6" /> <!-- Humanoids -->
-			<skill id="5465" level="1" /> <!-- Earth Attack -->
 			<skill id="4410" level="17" /> <!-- Very Strong P. Atk. -->
 			<skill id="4411" level="17" /> <!-- Very Strong M. Atk. -->
+			<skill id="4415" level="3" /> <!-- One-handed Sword -->
+			<skill id="4416" level="6" /> <!-- Humanoids -->
+			<skill id="5465" level="1" /> <!-- Earth Attack -->
+			<skill id="14447" level="1" /> <!-- Chains of Hatred -->
+			<skill id="14765" level="2" /> <!-- Blood Siphon Resistance -->
 		</skillList>
 		<ai aggroRange="300" isAggressive="true" clanHelpRange="450">
 			<clanList>
@@ -3008,11 +3082,13 @@
 		</stats>
 		<status attackable="false" undying="false" />
 		<skillList>
-			<skill id="14447" level="1" /> <!-- Chains of Hatred -->
-			<skill id="4416" level="6" /> <!-- Humanoids -->
-			<skill id="5465" level="1" /> <!-- Earth Attack -->
 			<skill id="4410" level="17" /> <!-- Very Strong P. Atk. -->
 			<skill id="4411" level="17" /> <!-- Very Strong M. Atk. -->
+			<skill id="4415" level="3" /> <!-- One-handed Sword -->
+			<skill id="4416" level="6" /> <!-- Humanoids -->
+			<skill id="5465" level="1" /> <!-- Earth Attack -->
+			<skill id="14447" level="1" /> <!-- Chains of Hatred -->
+			<skill id="14765" level="2" /> <!-- Blood Siphon Resistance -->
 		</skillList>
 		<ai aggroRange="300" isAggressive="true" clanHelpRange="450">
 			<clanList>
@@ -3089,11 +3165,13 @@
 		</stats>
 		<status attackable="false" undying="false" />
 		<skillList>
-			<skill id="14447" level="1" /> <!-- Chains of Hatred -->
-			<skill id="4416" level="6" /> <!-- Humanoids -->
-			<skill id="5465" level="1" /> <!-- Earth Attack -->
 			<skill id="4410" level="17" /> <!-- Very Strong P. Atk. -->
 			<skill id="4411" level="17" /> <!-- Very Strong M. Atk. -->
+			<skill id="4415" level="3" /> <!-- One-handed Sword -->
+			<skill id="4416" level="6" /> <!-- Humanoids -->
+			<skill id="5465" level="1" /> <!-- Earth Attack -->
+			<skill id="14447" level="1" /> <!-- Chains of Hatred -->
+			<skill id="14765" level="2" /> <!-- Blood Siphon Resistance -->
 		</skillList>
 		<ai aggroRange="300" isAggressive="true" clanHelpRange="450">
 			<clanList>
@@ -3172,11 +3250,13 @@
 		</stats>
 		<status attackable="false" undying="false" />
 		<skillList>
-			<skill id="14447" level="1" /> <!-- Chains of Hatred -->
-			<skill id="4416" level="6" /> <!-- Humanoids -->
-			<skill id="5465" level="1" /> <!-- Earth Attack -->
 			<skill id="4410" level="17" /> <!-- Very Strong P. Atk. -->
 			<skill id="4411" level="17" /> <!-- Very Strong M. Atk. -->
+			<skill id="4415" level="3" /> <!-- One-handed Sword -->
+			<skill id="4416" level="6" /> <!-- Humanoids -->
+			<skill id="5465" level="1" /> <!-- Earth Attack -->
+			<skill id="14447" level="1" /> <!-- Chains of Hatred -->
+			<skill id="14765" level="2" /> <!-- Blood Siphon Resistance -->
 		</skillList>
 		<ai aggroRange="300" isAggressive="true" clanHelpRange="450">
 			<clanList>
@@ -3240,10 +3320,12 @@
 		</stats>
 		<status attackable="false" undying="false" />
 		<skillList>
-			<skill id="14068" level="1" /> <!-- Garden Inducement -->
+			<skill id="4411" level="13" /> <!-- Slightly Strong M. Atk. -->
+			<skill id="4415" level="3" /> <!-- One-handed Sword -->
 			<skill id="4416" level="3" /> <!-- Beast -->
 			<skill id="5464" level="1" /> <!-- Wind Attack -->
-			<skill id="4411" level="13" /> <!-- Slightly Strong M. Atk. -->
+			<skill id="14068" level="1" /> <!-- Garden Inducement -->
+			<skill id="14765" level="2" /> <!-- Blood Siphon Resistance -->
 		</skillList>
 		<ai aggroRange="300" isAggressive="true" clanHelpRange="300">
 			<clanList>
@@ -3295,9 +3377,11 @@
 		</stats>
 		<status attackable="false" undying="false" />
 		<skillList>
-			<skill id="14069" level="1" /> <!-- Garden Dark Magic -->
+			<skill id="4415" level="3" /> <!-- One-handed Sword -->
 			<skill id="4416" level="12" /> <!-- Bugs -->
 			<skill id="5464" level="1" /> <!-- Wind Attack -->
+			<skill id="14069" level="1" /> <!-- Garden Dark Magic -->
+			<skill id="14765" level="2" /> <!-- Blood Siphon Resistance -->
 		</skillList>
 		<ai aggroRange="300" isAggressive="true" clanHelpRange="300">
 			<clanList>
@@ -3347,10 +3431,12 @@
 		</stats>
 		<status attackable="false" undying="false" />
 		<skillList>
-			<skill id="14070" level="1" /> <!-- Branch Straightening -->
+			<skill id="4410" level="15" /> <!-- Strong P. Atk. -->
+			<skill id="4415" level="3" /> <!-- One-handed Sword -->
 			<skill id="4416" level="3" /> <!-- Beast -->
 			<skill id="5465" level="1" /> <!-- Earth Attack -->
-			<skill id="4410" level="15" /> <!-- Strong P. Atk. -->
+			<skill id="14070" level="1" /> <!-- Branch Straightening -->
+			<skill id="14765" level="3" /> <!-- Blood Siphon Resistance -->
 		</skillList>
 		<ai aggroRange="300" isAggressive="true" clanHelpRange="300">
 			<clanList>
@@ -3403,9 +3489,12 @@
 		</stats>
 		<status attackable="false" undying="false" />
 		<skillList>
-			<skill id="14072" level="1" /> <!-- Gardener Blow -->
+			<skill id="4408" level="10" /> <!-- HP Increase (2x) -->
+			<skill id="4415" level="3" /> <!-- One-handed Sword -->
 			<skill id="4416" level="4" /> <!-- Animals -->
 			<skill id="5465" level="1" /> <!-- Earth Attack -->
+			<skill id="14072" level="1" /> <!-- Gardener Blow -->
+			<skill id="14765" level="3" /> <!-- Blood Siphon Resistance -->
 		</skillList>
 		<ai aggroRange="300" isAggressive="true" clanHelpRange="300" />
 		<collision>
@@ -3451,10 +3540,12 @@
 		</stats>
 		<status attackable="false" undying="false" />
 		<skillList>
-			<skill id="14073" level="1" /> <!-- Garden Destroyer Slash -->
+			<skill id="4410" level="13" /> <!-- Slightly Strong P. Atk. -->
+			<skill id="4415" level="3" /> <!-- One-handed Sword -->
 			<skill id="4416" level="1" /> <!-- Undead -->
 			<skill id="5464" level="1" /> <!-- Wind Attack -->
-			<skill id="4410" level="13" /> <!-- Slightly Strong P. Atk. -->
+			<skill id="14073" level="1" /> <!-- Garden Destroyer Slash -->
+			<skill id="14765" level="2" /> <!-- Blood Siphon Resistance -->
 		</skillList>
 		<ai aggroRange="300" isAggressive="true" clanHelpRange="300" />
 		<collision>
@@ -3501,9 +3592,11 @@
 		</stats>
 		<status attackable="false" undying="false" />
 		<skillList>
-			<skill id="6578" level="1" /> <!-- Wind Attack -->
+			<skill id="4415" level="3" /> <!-- One-handed Sword -->
 			<skill id="4416" level="13" /> <!-- Fairies -->
 			<skill id="5464" level="1" /> <!-- Wind Attack -->
+			<skill id="6578" level="1" /> <!-- Wind Attack -->
+			<skill id="14765" level="3" /> <!-- Blood Siphon Resistance -->
 		</skillList>
 		<ai aggroRange="150" isAggressive="true" clanHelpRange="300" />
 		<collision>
@@ -3552,9 +3645,11 @@
 		</stats>
 		<status attackable="false" undying="false" />
 		<skillList>
-			<skill id="14069" level="1" /> <!-- Garden Dark Magic -->
+			<skill id="4415" level="3" /> <!-- One-handed Sword -->
 			<skill id="4416" level="12" /> <!-- Bugs -->
 			<skill id="5464" level="1" /> <!-- Wind Attack -->
+			<skill id="14069" level="1" /> <!-- Garden Dark Magic -->
+			<skill id="14765" level="3" /> <!-- Blood Siphon Resistance -->
 		</skillList>
 		<ai aggroRange="300" isAggressive="true" clanHelpRange="300" />
 		<collision>
@@ -3605,10 +3700,13 @@
 		</stats>
 		<status attackable="false" undying="false" />
 		<skillList>
-			<skill id="14077" level="1" /> <!-- Gardener Slash -->
+			<skill id="4408" level="10" /> <!-- HP Increase (2x) -->
+			<skill id="4410" level="13" /> <!-- Slightly Strong P. Atk. -->
+			<skill id="4415" level="3" /> <!-- One-handed Sword -->
 			<skill id="4416" level="6" /> <!-- Humanoids -->
 			<skill id="5465" level="1" /> <!-- Earth Attack -->
-			<skill id="4410" level="13" /> <!-- Slightly Strong P. Atk. -->
+			<skill id="14077" level="1" /> <!-- Gardener Slash -->
+			<skill id="14765" level="3" /> <!-- Blood Siphon Resistance -->
 		</skillList>
 		<ai aggroRange="300" isAggressive="true" clanHelpRange="300">
 			<clanList>
@@ -3664,9 +3762,12 @@
 		</stats>
 		<status attackable="false" undying="false" />
 		<skillList>
-			<skill id="14078" level="1" /> <!-- Pirate Gardener Shock -->
+			<skill id="4408" level="10" /> <!-- HP Increase (2x) -->
+			<skill id="4415" level="3" /> <!-- One-handed Sword -->
 			<skill id="4416" level="4" /> <!-- Animals -->
 			<skill id="5464" level="1" /> <!-- Wind Attack -->
+			<skill id="14078" level="1" /> <!-- Pirate Gardener Shock -->
+			<skill id="14765" level="3" /> <!-- Blood Siphon Resistance -->
 		</skillList>
 		<ai aggroRange="300" isAggressive="true" clanHelpRange="300">
 			<clanList>
@@ -3722,10 +3823,13 @@
 		</stats>
 		<status attackable="false" undying="false" />
 		<skillList>
-			<skill id="14079" level="1" /> <!-- Garden Reflect -->
+			<skill id="4408" level="10" /> <!-- HP Increase (2x) -->
+			<skill id="4410" level="13" /> <!-- Slightly Strong P. Atk. -->
+			<skill id="4415" level="3" /> <!-- One-handed Sword -->
 			<skill id="4416" level="3" /> <!-- Beast -->
 			<skill id="5465" level="1" /> <!-- Earth Attack -->
-			<skill id="4410" level="13" /> <!-- Slightly Strong P. Atk. -->
+			<skill id="14079" level="1" /> <!-- Garden Reflect -->
+			<skill id="14765" level="3" /> <!-- Blood Siphon Resistance -->
 		</skillList>
 		<ai aggroRange="300" isAggressive="true" clanHelpRange="300" />
 		<collision>
@@ -3772,10 +3876,12 @@
 		</stats>
 		<status attackable="false" undying="false" />
 		<skillList>
-			<skill id="14081" level="1" /> <!-- Garden Judgment -->
+			<skill id="4410" level="12" /> <!-- Slightly Strong P. Atk. -->
+			<skill id="4415" level="3" /> <!-- One-handed Sword -->
 			<skill id="4416" level="6" /> <!-- Humanoids -->
 			<skill id="5465" level="1" /> <!-- Earth Attack -->
-			<skill id="4410" level="12" /> <!-- Slightly Strong P. Atk. -->
+			<skill id="14081" level="1" /> <!-- Garden Judgment -->
+			<skill id="14765" level="3" /> <!-- Blood Siphon Resistance -->
 		</skillList>
 		<ai aggroRange="300" isAggressive="true" clanHelpRange="300" />
 		<collision>
@@ -3825,10 +3931,13 @@
 		</stats>
 		<status attackable="false" undying="false" />
 		<skillList>
-			<skill id="14082" level="1" /> <!-- Gardener's Wrath -->
+			<skill id="4408" level="10" /> <!-- HP Increase (2x) -->
+			<skill id="4410" level="13" /> <!-- Slightly Strong P. Atk. -->
+			<skill id="4415" level="3" /> <!-- One-handed Sword -->
 			<skill id="4416" level="6" /> <!-- Humanoids -->
 			<skill id="5465" level="1" /> <!-- Earth Attack -->
-			<skill id="4410" level="13" /> <!-- Slightly Strong P. Atk. -->
+			<skill id="14082" level="1" /> <!-- Gardener's Wrath -->
+			<skill id="14765" level="3" /> <!-- Blood Siphon Resistance -->
 		</skillList>
 		<ai aggroRange="300" isAggressive="true" clanHelpRange="300">
 			<clanList>
@@ -3883,10 +3992,13 @@
 		</stats>
 		<status attackable="false" undying="false" />
 		<skillList>
-			<skill id="6602" level="1" /> <!-- Earth Attack -->
+			<skill id="4408" level="8" /> <!-- HP Increase (1/ 4x) -->
+			<skill id="4410" level="10" /> <!-- Slightly Weak P. Atk. -->
+			<skill id="4415" level="3" /> <!-- One-handed Sword -->
 			<skill id="4416" level="4" /> <!-- Animals -->
 			<skill id="5465" level="1" /> <!-- Earth Attack -->
-			<skill id="4410" level="10" /> <!-- Slightly Weak P. Atk. -->
+			<skill id="6602" level="1" /> <!-- Earth Attack -->
+			<skill id="14765" level="3" /> <!-- Blood Siphon Resistance -->
 		</skillList>
 		<ai aggroRange="300" isAggressive="true" clanHelpRange="300">
 			<clanList>
@@ -3942,9 +4054,12 @@
 		</stats>
 		<status attackable="false" undying="false" />
 		<skillList>
-			<skill id="14084" level="1" /> <!-- Garden Range Bleed -->
+			<skill id="4408" level="10" /> <!-- HP Increase (2x) -->
+			<skill id="4415" level="3" /> <!-- One-handed Sword -->
 			<skill id="4416" level="4" /> <!-- Animals -->
 			<skill id="5465" level="1" /> <!-- Earth Attack -->
+			<skill id="14084" level="1" /> <!-- Garden Range Bleed -->
+			<skill id="14765" level="3" /> <!-- Blood Siphon Resistance -->
 		</skillList>
 		<ai aggroRange="300" isAggressive="true" clanHelpRange="300">
 			<clanList>
@@ -3994,10 +4109,12 @@
 		</stats>
 		<status attackable="false" undying="false" />
 		<skillList>
-			<skill id="14068" level="1" /> <!-- Garden Inducement -->
+			<skill id="4411" level="13" /> <!-- Slightly Strong M. Atk. -->
+			<skill id="4415" level="3" /> <!-- One-handed Sword -->
 			<skill id="4416" level="3" /> <!-- Beast -->
 			<skill id="5464" level="1" /> <!-- Wind Attack -->
-			<skill id="4411" level="13" /> <!-- Slightly Strong M. Atk. -->
+			<skill id="14068" level="1" /> <!-- Garden Inducement -->
+			<skill id="14765" level="3" /> <!-- Blood Siphon Resistance -->
 		</skillList>
 		<ai aggroRange="300" isAggressive="true" clanHelpRange="300">
 			<clanList>
@@ -4053,10 +4170,13 @@
 		</stats>
 		<status attackable="false" undying="false" />
 		<skillList>
-			<skill id="14079" level="1" /> <!-- Garden Reflect -->
+			<skill id="4408" level="10" /> <!-- HP Increase (2x) -->
+			<skill id="4410" level="15" /> <!-- Strong P. Atk. -->
+			<skill id="4415" level="3" /> <!-- One-handed Sword -->
 			<skill id="4416" level="3" /> <!-- Beast -->
 			<skill id="5465" level="1" /> <!-- Earth Attack -->
-			<skill id="4410" level="15" /> <!-- Strong P. Atk. -->
+			<skill id="14079" level="1" /> <!-- Garden Reflect -->
+			<skill id="14765" level="3" /> <!-- Blood Siphon Resistance -->
 		</skillList>
 		<ai aggroRange="300" isAggressive="true" clanHelpRange="300">
 			<clanList>
@@ -4107,10 +4227,12 @@
 		</stats>
 		<status attackable="false" undying="false" />
 		<skillList>
-			<skill id="14081" level="1" /> <!-- Garden Judgment -->
+			<skill id="4410" level="12" /> <!-- Slightly Strong P. Atk. -->
+			<skill id="4415" level="3" /> <!-- One-handed Sword -->
 			<skill id="4416" level="6" /> <!-- Humanoids -->
 			<skill id="5465" level="1" /> <!-- Earth Attack -->
-			<skill id="4410" level="12" /> <!-- Slightly Strong P. Atk. -->
+			<skill id="14081" level="1" /> <!-- Garden Judgment -->
+			<skill id="14765" level="3" /> <!-- Blood Siphon Resistance -->
 		</skillList>
 		<ai aggroRange="300" isAggressive="true" clanHelpRange="300">
 			<clanList>
@@ -4161,9 +4283,12 @@
 		</stats>
 		<status attackable="false" undying="false" />
 		<skillList>
-			<skill id="14085" level="1" /> <!-- Protection -->
+			<skill id="4408" level="10" /> <!-- HP Increase (2x) -->
+			<skill id="4415" level="3" /> <!-- One-handed Sword -->
 			<skill id="4416" level="6" /> <!-- Humanoids -->
 			<skill id="5464" level="1" /> <!-- Wind Attack -->
+			<skill id="14085" level="1" /> <!-- Protection -->
+			<skill id="14765" level="3" /> <!-- Blood Siphon Resistance -->
 		</skillList>
 		<ai aggroRange="300" isAggressive="true" clanHelpRange="300" />
 		<collision>
@@ -4210,9 +4335,12 @@
 		</stats>
 		<status attackable="false" undying="false" />
 		<skillList>
-			<skill id="14130" level="1" /> <!-- Phantom Circle -->
+			<skill id="4408" level="9" /> <!-- HP Increase (1/ 2x) -->
+			<skill id="4415" level="3" /> <!-- One-handed Sword -->
 			<skill id="4416" level="6" /> <!-- Humanoids -->
 			<skill id="5467" level="1" /> <!-- Dark Attack -->
+			<skill id="14130" level="1" /> <!-- Phantom Circle -->
+			<skill id="14765" level="3" /> <!-- Blood Siphon Resistance -->
 		</skillList>
 		<ai aggroRange="300" isAggressive="true" clanHelpRange="300" />
 		<collision>
@@ -4263,9 +4391,12 @@
 		</stats>
 		<status attackable="false" undying="false" />
 		<skillList>
-			<skill id="14132" level="1" /> <!-- Curse Bloodstain -->
+			<skill id="4408" level="9" /> <!-- HP Increase (1/ 2x) -->
+			<skill id="4415" level="3" /> <!-- One-handed Sword -->
 			<skill id="4416" level="6" /> <!-- Humanoids -->
 			<skill id="5467" level="1" /> <!-- Dark Attack -->
+			<skill id="14132" level="1" /> <!-- Curse Bloodstain -->
+			<skill id="14765" level="3" /> <!-- Blood Siphon Resistance -->
 		</skillList>
 		<ai aggroRange="300" isAggressive="true" clanHelpRange="300" />
 		<collision>
@@ -4316,10 +4447,13 @@
 		</stats>
 		<status attackable="false" undying="false" />
 		<skillList>
-			<skill id="14130" level="1" /> <!-- Phantom Circle -->
+			<skill id="4408" level="9" /> <!-- HP Increase (1/ 2x) -->
+			<skill id="4410" level="13" /> <!-- Slightly Strong P. Atk. -->
+			<skill id="4415" level="3" /> <!-- One-handed Sword -->
 			<skill id="4416" level="6" /> <!-- Humanoids -->
 			<skill id="5467" level="1" /> <!-- Dark Attack -->
-			<skill id="4410" level="13" /> <!-- Slightly Strong P. Atk. -->
+			<skill id="14130" level="1" /> <!-- Phantom Circle -->
+			<skill id="14765" level="3" /> <!-- Blood Siphon Resistance -->
 		</skillList>
 		<ai aggroRange="300" isAggressive="true" clanHelpRange="300" />
 		<collision>
@@ -4371,10 +4505,12 @@
 		</stats>
 		<status attackable="false" undying="false" />
 		<skillList>
-			<skill id="14134" level="1" /> <!-- Exile Attack -->
+			<skill id="4410" level="14" /> <!-- Strong P. Atk. -->
+			<skill id="4415" level="3" /> <!-- One-handed Sword -->
 			<skill id="4416" level="6" /> <!-- Humanoids -->
 			<skill id="5467" level="1" /> <!-- Dark Attack -->
-			<skill id="4410" level="14" /> <!-- Strong P. Atk. -->
+			<skill id="14134" level="1" /> <!-- Exile Attack -->
+			<skill id="14765" level="3" /> <!-- Blood Siphon Resistance -->
 		</skillList>
 		<ai aggroRange="300" isAggressive="true" clanHelpRange="300" />
 		<collision>
@@ -4426,10 +4562,12 @@
 		</stats>
 		<status attackable="false" undying="false" />
 		<skillList>
-			<skill id="14130" level="1" /> <!-- Phantom Circle -->
+			<skill id="4410" level="13" /> <!-- Slightly Strong P. Atk. -->
+			<skill id="4415" level="1" /> <!-- Bare Hands -->
 			<skill id="4416" level="9" /> <!-- Demons -->
 			<skill id="5467" level="1" /> <!-- Dark Attack -->
-			<skill id="4410" level="13" /> <!-- Slightly Strong P. Atk. -->
+			<skill id="14130" level="1" /> <!-- Phantom Circle -->
+			<skill id="14765" level="3" /> <!-- Blood Siphon Resistance -->
 		</skillList>
 		<ai aggroRange="300" isAggressive="true" clanHelpRange="300" />
 		<collision>
@@ -4478,10 +4616,12 @@
 		</stats>
 		<status attackable="false" undying="false" />
 		<skillList>
-			<skill id="14131" level="1" /> <!-- Phantom Attack -->
+			<skill id="4411" level="13" /> <!-- Slightly Strong M. Atk. -->
+			<skill id="4415" level="3" /> <!-- One-handed Sword -->
 			<skill id="4416" level="9" /> <!-- Demons -->
 			<skill id="5467" level="1" /> <!-- Dark Attack -->
-			<skill id="4411" level="13" /> <!-- Slightly Strong M. Atk. -->
+			<skill id="14131" level="1" /> <!-- Phantom Attack -->
+			<skill id="14765" level="3" /> <!-- Blood Siphon Resistance -->
 		</skillList>
 		<ai aggroRange="300" isAggressive="true" clanHelpRange="300" />
 		<collision>
@@ -4532,9 +4672,11 @@
 		</stats>
 		<status attackable="false" undying="false" randomWalk="false" />
 		<skillList>
-			<skill id="14143" level="1" /> <!-- Exile Sword Attack -->
+			<skill id="4415" level="3" /> <!-- One-handed Sword -->
 			<skill id="4416" level="6" /> <!-- Humanoids -->
 			<skill id="5467" level="1" /> <!-- Dark Attack -->
+			<skill id="14143" level="1" /> <!-- Exile Sword Attack -->
+			<skill id="14765" level="3" /> <!-- Blood Siphon Resistance -->
 		</skillList>
 		<ai aggroRange="300" isAggressive="true" clanHelpRange="300" />
 		<collision>
@@ -4587,9 +4729,11 @@
 		</stats>
 		<status attackable="false" undying="false" randomWalk="false" />
 		<skillList>
-			<skill id="14145" level="1" /> <!-- Yoke of Blood -->
+			<skill id="4415" level="3" /> <!-- One-handed Sword -->
 			<skill id="4416" level="6" /> <!-- Humanoids -->
 			<skill id="5467" level="1" /> <!-- Dark Attack -->
+			<skill id="14145" level="1" /> <!-- Yoke of Blood -->
+			<skill id="14765" level="3" /> <!-- Blood Siphon Resistance -->
 		</skillList>
 		<ai aggroRange="300" isAggressive="true" clanHelpRange="300" />
 		<collision>
@@ -4640,9 +4784,11 @@
 		</stats>
 		<status attackable="false" undying="false" randomWalk="false" />
 		<skillList>
-			<skill id="14147" level="1" /> <!-- Exile Knuckle -->
+			<skill id="4415" level="3" /> <!-- One-handed Sword -->
 			<skill id="4416" level="6" /> <!-- Humanoids -->
 			<skill id="5467" level="1" /> <!-- Dark Attack -->
+			<skill id="14147" level="1" /> <!-- Exile Knuckle -->
+			<skill id="14765" level="3" /> <!-- Blood Siphon Resistance -->
 		</skillList>
 		<ai aggroRange="300" isAggressive="true" clanHelpRange="300" />
 		<collision>
@@ -4693,9 +4839,9 @@
 		</stats>
 		<status attackable="false" undying="false" />
 		<skillList>
-			<skill id="5467" level="1" /> <!-- Strong against the dark elemental. -->
-			<skill id="4416" level="9" /> <!-- Demons -->
 			<skill id="4415" level="3" /> <!-- One-handed Sword -->
+			<skill id="4416" level="9" /> <!-- Demons -->
+			<skill id="5467" level="1" /> <!-- Dark Attack -->
 			<skill id="14765" level="3" /> <!-- Blood Siphon Resistance -->
 		</skillList>
 		<ai clanHelpRange="300" aggroRange="300" />
@@ -4729,9 +4875,9 @@
 		</stats>
 		<status attackable="false" undying="false" />
 		<skillList>
-			<skill id="4416" level="9" /> <!-- Demons -->
 			<skill id="4408" level="11" /> <!-- HP Increase (3x) -->
 			<skill id="4415" level="3" /> <!-- One-handed Sword -->
+			<skill id="4416" level="9" /> <!-- Demons -->
 			<skill id="14136" level="1" /> <!-- Dark Counter -->
 		</skillList>
 		<ai clanHelpRange="300" aggroRange="300" />
@@ -4769,10 +4915,10 @@
 		</stats>
 		<status attackable="false" undying="false" randomWalk="false" />
 		<skillList>
-			<skill id="5465" level="1" /> <!-- Earth Attack -->
-			<skill id="4416" level="6" /> <!-- Humanoids -->
-			<skill id="14143" level="1" /> <!-- Exile Sword Attack -->
 			<skill id="4415" level="3" /> <!-- One-handed Sword -->
+			<skill id="4416" level="6" /> <!-- Humanoids -->
+			<skill id="5465" level="1" /> <!-- Earth Attack -->
+			<skill id="14143" level="1" /> <!-- Exile Sword Attack -->
 			<skill id="14765" level="3" /> <!-- Blood Siphon Resistance -->
 		</skillList>
 		<ai clanHelpRange="300" aggroRange="300" />
@@ -4817,11 +4963,12 @@
 		</stats>
 		<status attackable="false" undying="false" />
 		<skillList>
-			<skill id="14158" level="1" /> <!-- Crawler Spear -->
-			<skill id="4416" level="6" /> <!-- Humanoids -->
 			<skill id="4410" level="13" /> <!-- Slightly Strong P. Atk. -->
 			<skill id="4412" level="9" /> <!-- Slightly Weak P. Def. -->
 			<skill id="4413" level="8" /> <!-- Weak M. Def. -->
+			<skill id="4415" level="3" /> <!-- One-handed Sword -->
+			<skill id="4416" level="6" /> <!-- Humanoids -->
+			<skill id="14158" level="1" /> <!-- Crawler Spear -->
 		</skillList>
 		<ai clanHelpRange="300" aggroRange="300" />
 		<collision>
@@ -4852,12 +4999,12 @@
 		</stats>
 		<status attackable="false" undying="false" />
 		<skillList>
-			<skill id="14156" level="1" /> <!-- Snake -->
-			<skill id="14157" level="1" /> <!-- Long Snake -->
-			<skill id="4416" level="14" /> <!-- Humans -->
 			<skill id="4410" level="13" /> <!-- Slightly Strong P. Atk. -->
 			<skill id="4412" level="9" /> <!-- Slightly Weak P. Def. -->
 			<skill id="4413" level="8" /> <!-- Weak M. Def. -->
+			<skill id="4415" level="3" /> <!-- One-handed Sword -->
+			<skill id="4416" level="14" /> <!-- Humans -->
+			<skill id="14156" level="1" /> <!-- Snake -->
 		</skillList>
 		<ai aggroRange="300" isAggressive="true" clanHelpRange="300" />
 		<collision>
@@ -4888,11 +5035,13 @@
 		</stats>
 		<status attackable="false" undying="false" />
 		<skillList>
-			<skill id="14166" level="1" /> <!-- Baelz -->
-			<skill id="4416" level="4" /> <!-- Animals -->
+			<skill id="4408" level="9" /> <!-- HP Increase (1/ 2x) -->
 			<skill id="4410" level="13" /> <!-- Slightly Strong P. Atk. -->
 			<skill id="4412" level="9" /> <!-- Slightly Weak P. Def. -->
 			<skill id="4413" level="8" /> <!-- Weak M. Def. -->
+			<skill id="4415" level="3" /> <!-- One-handed Sword -->
+			<skill id="4416" level="4" /> <!-- Animals -->
+			<skill id="14166" level="1" /> <!-- Baelz -->
 		</skillList>
 		<ai clanHelpRange="300" aggroRange="200" />
 		<collision>
@@ -4935,11 +5084,12 @@
 		</stats>
 		<status attackable="false" undying="false" />
 		<skillList>
-			<skill id="14161" level="1" /> <!-- Gash -->
-			<skill id="4416" level="4" /> <!-- Animals -->
 			<skill id="4410" level="13" /> <!-- Slightly Strong P. Atk. -->
 			<skill id="4412" level="9" /> <!-- Slightly Weak P. Def. -->
 			<skill id="4413" level="8" /> <!-- Weak M. Def. -->
+			<skill id="4415" level="3" /> <!-- One-handed Sword -->
+			<skill id="4416" level="4" /> <!-- Animals -->
+			<skill id="14161" level="1" /> <!-- Gash -->
 		</skillList>
 		<ai clanHelpRange="300" aggroRange="300" />
 		<collision>
@@ -4983,12 +5133,12 @@
 		</stats>
 		<status attackable="false" undying="false" />
 		<skillList>
-			<skill id="14162" level="1" /> <!-- Sweep -->
-			<skill id="14163" level="1" /> <!-- Howl -->
-			<skill id="4416" level="14" /> <!-- Humans -->
 			<skill id="4411" level="13" /> <!-- Slightly Strong M. Atk. -->
 			<skill id="4412" level="8" /> <!-- Weak P. Def. -->
 			<skill id="4413" level="9" /> <!-- Slightly Weak M. Def. -->
+			<skill id="4415" level="3" /> <!-- One-handed Sword -->
+			<skill id="4416" level="14" /> <!-- Humans -->
+			<skill id="14162" level="1" /> <!-- Sweep -->
 		</skillList>
 		<ai clanHelpRange="300" aggroRange="300" />
 		<collision>
@@ -5033,12 +5183,12 @@
 		</stats>
 		<status attackable="false" undying="false" />
 		<skillList>
-			<skill id="14164" level="1" /> <!-- Arcane Jet -->
-			<skill id="14165" level="1" /> <!-- Arcane Bust -->
-			<skill id="4416" level="6" /> <!-- Humanoids -->
 			<skill id="4411" level="13" /> <!-- Slightly Strong M. Atk. -->
 			<skill id="4412" level="8" /> <!-- Weak P. Def. -->
 			<skill id="4413" level="9" /> <!-- Slightly Weak M. Def. -->
+			<skill id="4415" level="3" /> <!-- One-handed Sword -->
+			<skill id="4416" level="6" /> <!-- Humanoids -->
+			<skill id="14164" level="1" /> <!-- Arcane Jet -->
 		</skillList>
 		<ai aggroRange="150" isAggressive="true" clanHelpRange="300" />
 		<collision>
@@ -5083,12 +5233,12 @@
 		</stats>
 		<status attackable="false" undying="false" />
 		<skillList>
+			<skill id="4410" level="13" /> <!-- Slightly Strong P. Atk. -->
+			<skill id="4411" level="13" /> <!-- Slightly Strong M. Atk. -->
 			<skill id="4412" level="8" /> <!-- Weak P. Def. -->
 			<skill id="4413" level="9" /> <!-- Slightly Weak M. Def. -->
+			<skill id="4415" level="9" /> <!-- Bow -->
 			<skill id="4416" level="6" /> <!-- Humanoids -->
-			<skill id="4415" level="9" /> <!-- Bows -->
-			<skill id="4411" level="13" /> <!-- Slightly Strong M. Atk. -->
-			<skill id="4410" level="13" /> <!-- Slightly Strong P. Atk. -->
 			<skill id="14167" level="1" /> <!-- Black Powder -->
 		</skillList>
 		<ai clanHelpRange="300" aggroRange="100" />
@@ -5135,13 +5285,13 @@
 		</stats>
 		<status attackable="false" undying="false" />
 		<skillList>
+			<skill id="4410" level="13" /> <!-- Slightly Strong P. Atk. -->
+			<skill id="4411" level="13" /> <!-- Slightly Strong M. Atk. -->
 			<skill id="4412" level="8" /> <!-- Weak P. Def. -->
 			<skill id="4413" level="9" /> <!-- Slightly Weak M. Def. -->
+			<skill id="4415" level="3" /> <!-- One-handed Sword -->
 			<skill id="4416" level="6" /> <!-- Humanoids -->
 			<skill id="14169" level="1" /> <!-- Dirty Fighting -->
-			<skill id="4415" level="3" /> <!-- One-handed Sword -->
-			<skill id="4411" level="13" /> <!-- Slightly Strong M. Atk. -->
-			<skill id="4410" level="13" /> <!-- Slightly Strong P. Atk. -->
 		</skillList>
 		<ai clanHelpRange="300" aggroRange="100" />
 		<dropLists>

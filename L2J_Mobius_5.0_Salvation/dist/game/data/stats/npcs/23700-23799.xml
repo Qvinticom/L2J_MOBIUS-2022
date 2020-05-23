@@ -14,6 +14,11 @@
 			</speed>
 		</stats>
 		<status attackable="true" />
+		<skillList>
+			<skill id="14765" level="3" /> <!-- Blood Siphon Resistance -->
+			<skill id="16577" level="1" /> <!-- Dragonclaw Bluff -->
+			<skill id="23739" level="1" /> <!-- Heart Breaker -->
+		</skillList>
 		<collision>
 			<radius normal="9" />
 			<height normal="23" />
@@ -125,7 +130,6 @@
 		<skillList>
 			<skill id="4416" level="7" /> <!-- Spirits -->
 			<skill id="5462" level="1" /> <!-- Fire Attack -->
-			<skill id="14823" level="1" /> <!-- Instant Kill Attack Resistance -->
 		</skillList>
 		<dropLists>
 			<drop>
@@ -161,7 +165,6 @@
 		<skillList>
 			<skill id="4416" level="9" /> <!-- Demons -->
 			<skill id="5462" level="1" /> <!-- Fire Attack -->
-			<skill id="14823" level="1" /> <!-- Instant Kill Attack Resistance -->
 		</skillList>
 		<dropLists>
 			<drop>
@@ -228,6 +231,10 @@
 			</speed>
 		</stats>
 		<status attackable="true" />
+		<skillList>
+			<skill id="14765" level="3" /> <!-- Blood Siphon Resistance -->
+			<skill id="16568" level="1" /> <!-- Dragonclaw Power Smash -->
+		</skillList>
 		<collision>
 			<radius normal="9" />
 			<height normal="18" />
@@ -254,7 +261,6 @@
 		<skillList>
 			<skill id="4416" level="12" /> <!-- Bugs -->
 			<skill id="5462" level="1" /> <!-- Fire Attack -->
-			<skill id="14817" level="1" /> <!-- Instant Kill Attack Resistance -->
 		</skillList>
 	</npc>
 	<npc id="23710" level="100" type="Monster" name="Knight Guardian">
@@ -271,6 +277,11 @@
 			</speed>
 		</stats>
 		<status attackable="true" />
+		<skillList>
+			<skill id="14765" level="3" /> <!-- Blood Siphon Resistance -->
+			<skill id="16559" level="1" /> <!-- Dragonclaw Shield Stun -->
+			<skill id="23728" level="1" /> <!-- Superior Aggression Aura -->
+		</skillList>
 		<collision>
 			<radius normal="7.5" />
 			<height normal="24" />
@@ -290,6 +301,10 @@
 			</speed>
 		</stats>
 		<status attackable="true" />
+		<skillList>
+			<skill id="14765" level="3" /> <!-- Blood Siphon Resistance -->
+			<skill id="16578" level="1" /> <!-- Dragonclaw Crush -->
+		</skillList>
 		<collision>
 			<radius normal="7" />
 			<height normal="27" />
@@ -310,6 +325,10 @@
 			</speed>
 		</stats>
 		<status attackable="true" />
+		<skillList>
+			<skill id="4415" level="10" /> <!-- Bow -->
+			<skill id="14765" level="3" /> <!-- Blood Siphon Resistance -->
+		</skillList>
 		<collision>
 			<radius normal="7.5" />
 			<height normal="24" />
@@ -329,6 +348,10 @@
 			</speed>
 		</stats>
 		<status attackable="true" />
+		<skillList>
+			<skill id="14765" level="3" /> <!-- Blood Siphon Resistance -->
+			<skill id="16579" level="1" /> <!-- Dragonclaw Vortex -->
+		</skillList>
 		<collision>
 			<radius normal="6.5" />
 			<height normal="22.5" />
@@ -345,6 +368,11 @@
 			</speed>
 		</stats>
 		<status attackable="false" />
+		<skillList>
+			<skill id="14765" level="3" /> <!-- Blood Siphon Resistance -->
+			<skill id="16583" level="1" /> <!-- Pounce -->
+			<skill id="16584" level="1" /> <!-- Mass Fear -->
+		</skillList>
 		<collision>
 			<radius normal="18" />
 			<height normal="25" />
@@ -361,6 +389,11 @@
 			</speed>
 		</stats>
 		<status attackable="false" />
+		<skillList>
+			<skill id="14765" level="3" /> <!-- Blood Siphon Resistance -->
+			<skill id="16583" level="1" /> <!-- Pounce -->
+			<skill id="16584" level="1" /> <!-- Mass Fear -->
+		</skillList>
 		<collision>
 			<radius normal="18" />
 			<height normal="25" />
@@ -380,6 +413,10 @@
 			</speed>
 		</stats>
 		<status attackable="true" />
+		<skillList>
+			<skill id="14765" level="3" /> <!-- Blood Siphon Resistance -->
+			<skill id="16585" level="1" /> <!-- Dragonclaw Cannon -->
+		</skillList>
 		<collision>
 			<radius normal="46.5" />
 			<height normal="43.5" />
@@ -399,6 +436,11 @@
 			</speed>
 		</stats>
 		<status attackable="true" />
+		<skillList>
+			<skill id="14765" level="3" /> <!-- Blood Siphon Resistance -->
+			<skill id="16586" level="1" /> <!-- Dragonclaw Siege Attack -->
+			<skill id="16587" level="1" /> <!-- Dragonclaw Siege Punch -->
+		</skillList>
 		<collision>
 			<radius normal="50" />
 			<height normal="68" />
@@ -421,6 +463,9 @@
 		<skillList>
 			<skill id="4416" level="7" /> <!-- Spirits -->
 			<skill id="5463" level="1" /> <!-- Water Attack -->
+			<skill id="14765" level="3" /> <!-- Blood Siphon Resistance -->
+			<skill id="16551" level="1" /> <!-- Ice Attack -->
+			<skill id="16552" level="1" /> <!-- Ice Fist -->
 		</skillList>
 		<collision>
 			<radius normal="40" />
@@ -447,8 +492,10 @@
 			</clanList>
 		</ai>
 		<skillList>
-			<skill id="5463" level="1" /> <!-- Water Attack -->
 			<skill id="4416" level="6" /> <!-- Humanoids -->
+			<skill id="5463" level="1" /> <!-- Water Attack -->
+			<skill id="14765" level="3" /> <!-- Blood Siphon Resistance -->
+			<skill id="16554" level="1" /> <!-- Spinning Slash -->
 		</skillList>
 		<collision>
 			<radius normal="12" />
@@ -485,8 +532,9 @@
 			</clanList>
 		</ai>
 		<skillList>
-			<skill id="5463" level="1" /> <!-- Water Attack -->
 			<skill id="4416" level="3" /> <!-- Beast -->
+			<skill id="5463" level="1" /> <!-- Water Attack -->
+			<skill id="14765" level="3" /> <!-- Blood Siphon Resistance -->
 		</skillList>
 		<collision>
 			<radius normal="34" />
@@ -521,8 +569,9 @@
 		</stats>
 		<status attackable="true" />
 		<skillList>
-			<skill id="5463" level="1" /> <!-- Water Attack -->
 			<skill id="4416" level="3" /> <!-- Beast -->
+			<skill id="5463" level="1" /> <!-- Water Attack -->
+			<skill id="14765" level="3" /> <!-- Blood Siphon Resistance -->
 		</skillList>
 		<collision>
 			<radius normal="22" grown="27" />
@@ -554,8 +603,9 @@
 		</stats>
 		<status attackable="true" />
 		<skillList>
-			<skill id="5463" level="1" /> <!-- Water Attack -->
 			<skill id="4416" level="3" /> <!-- Beast -->
+			<skill id="5463" level="1" /> <!-- Water Attack -->
+			<skill id="14765" level="3" /> <!-- Blood Siphon Resistance -->
 		</skillList>
 		<collision>
 			<radius normal="24" />
@@ -591,8 +641,9 @@
 			</clanList>
 		</ai>
 		<skillList>
-			<skill id="5463" level="1" /> <!-- Water Attack -->
 			<skill id="4416" level="4" /> <!-- Animals -->
+			<skill id="5463" level="1" /> <!-- Water Attack -->
+			<skill id="14765" level="3" /> <!-- Blood Siphon Resistance -->
 		</skillList>
 		<collision>
 			<radius normal="21" />
@@ -631,6 +682,7 @@
 		<skillList>
 			<skill id="4416" level="3" /> <!-- Beast -->
 			<skill id="5463" level="1" /> <!-- Water Attack -->
+			<skill id="14765" level="3" /> <!-- Blood Siphon Resistance -->
 		</skillList>
 		<collision>
 			<radius normal="22" grown="27" />
@@ -667,8 +719,9 @@
 			</clanList>
 		</ai>
 		<skillList>
-			<skill id="5463" level="1" /> <!-- Water Attack -->
 			<skill id="4416" level="4" /> <!-- Animals -->
+			<skill id="5463" level="1" /> <!-- Water Attack -->
+			<skill id="14765" level="3" /> <!-- Blood Siphon Resistance -->
 		</skillList>
 		<collision>
 			<radius normal="21" />
@@ -693,8 +746,13 @@
 		</stats>
 		<status attackable="true" />
 		<skillList>
-			<skill id="5463" level="1" /> <!-- Water Attack -->
+			<skill id="4045" level="1" /> <!-- Full Magic Attack Resistance -->
 			<skill id="4416" level="7" /> <!-- Spirits -->
+			<skill id="5463" level="1" /> <!-- Water Attack -->
+			<skill id="14765" level="3" /> <!-- Blood Siphon Resistance -->
+			<skill id="16551" level="1" /> <!-- Ice Attack -->
+			<skill id="16552" level="1" /> <!-- Ice Fist -->
+			<skill id="16553" level="1" /> <!-- Ice Breath -->
 		</skillList>
 		<collision>
 			<radius normal="50" />
@@ -717,15 +775,17 @@
 			</attribute>
 		</stats>
 		<skillList>
-			<skill id="4416" level="11" /> <!-- Giants -->
-			<skill id="5465" level="1" /> <!-- Earth Attack -->
-			<skill id="14823" level="1" /> <!-- Lethal Strike Resistance -->
-			<skill id="16547" level="10" /> <!-- Danger Zone Attack Resistance -->
-			<skill id="4379" level="5" /> <!-- Spear Resistance -->
-			<skill id="4435" level="5" /> <!-- Greater Stun Resistance -->
-			<skill id="4461" level="1" /> <!-- Dagger/Rapier Vulnerability -->
-			<skill id="16608" level="1" /> <!-- Servitor Attack Weakness -->
 			<skill id="4071" level="1" /> <!-- Bow/Crossbow Resistance -->
+			<skill id="4379" level="5" /> <!-- Spear Resistance -->
+			<skill id="4416" level="11" /> <!-- Giants -->
+			<skill id="4435" level="5" /> <!-- High Stun Attack Resistance -->
+			<skill id="4461" level="1" /> <!-- Dagger/Rapier Vulnerability -->
+			<skill id="5465" level="1" /> <!-- Earth Attack -->
+			<skill id="14823" level="1" /> <!-- Instant Kill Attack Resistance -->
+			<skill id="16547" level="10" /> <!-- Danger Zone Attack Resistance -->
+			<skill id="16594" level="1" /> <!-- Plasma Strike -->
+			<skill id="16598" level="1" /> <!-- Stun Strike -->
+			<skill id="16608" level="1" /> <!-- Servitor Attack Weakness -->
 		</skillList>
 		<collision>
 			<radius normal="24" />
@@ -772,14 +832,16 @@
 			</attribute>
 		</stats>
 		<skillList>
-			<skill id="4416" level="11" /> <!-- Giants -->
-			<skill id="5465" level="1" /> <!-- Earth Attack -->
-			<skill id="14823" level="1" /> <!-- Lethal Strike Resistance -->
-			<skill id="16547" level="10" /> <!-- Danger Zone Attack Resistance -->
-			<skill id="4379" level="5" /> <!-- Spear Resistance -->
-			<skill id="4461" level="1" /> <!-- Dagger/Rapier Vulnerability -->
-			<skill id="16608" level="1" /> <!-- Servitor Attack Weakness -->
 			<skill id="4071" level="1" /> <!-- Bow/Crossbow Resistance -->
+			<skill id="4379" level="5" /> <!-- Spear Resistance -->
+			<skill id="4416" level="11" /> <!-- Giants -->
+			<skill id="4461" level="1" /> <!-- Dagger/Rapier Vulnerability -->
+			<skill id="5465" level="1" /> <!-- Earth Attack -->
+			<skill id="14823" level="1" /> <!-- Instant Kill Attack Resistance -->
+			<skill id="16547" level="10" /> <!-- Danger Zone Attack Resistance -->
+			<skill id="16595" level="1" /> <!-- Plasma Shooter -->
+			<skill id="16599" level="1" /> <!-- Piercing Bolt -->
+			<skill id="16608" level="1" /> <!-- Servitor Attack Weakness -->
 		</skillList>
 		<collision>
 			<radius normal="24" />
@@ -820,15 +882,17 @@
 			</attribute>
 		</stats>
 		<skillList>
-			<skill id="4416" level="11" /> <!-- Giants -->
-			<skill id="5465" level="1" /> <!-- Earth Attack -->
-			<skill id="14823" level="1" /> <!-- Lethal Strike Resistance -->
-			<skill id="16547" level="10" /> <!-- Danger Zone Attack Resistance -->
+			<skill id="4071" level="1" /> <!-- Bow/Crossbow Resistance -->
 			<skill id="4379" level="5" /> <!-- Spear Resistance -->
+			<skill id="4416" level="11" /> <!-- Giants -->
 			<skill id="4438" level="5" /> <!-- Greater Sleep Resistance -->
 			<skill id="4461" level="1" /> <!-- Dagger/Rapier Vulnerability -->
+			<skill id="5465" level="1" /> <!-- Earth Attack -->
+			<skill id="14823" level="1" /> <!-- Instant Kill Attack Resistance -->
+			<skill id="16547" level="10" /> <!-- Danger Zone Attack Resistance -->
+			<skill id="16596" level="1" /> <!-- Plasma Ball -->
+			<skill id="16597" level="1" /> <!-- Plasma Wave -->
 			<skill id="16608" level="1" /> <!-- Servitor Attack Weakness -->
-			<skill id="4071" level="1" /> <!-- Bow/Crossbow Resistance -->
 		</skillList>
 		<collision>
 			<radius normal="24" />
@@ -869,15 +933,17 @@
 			</attribute>
 		</stats>
 		<skillList>
-			<skill id="4416" level="11" /> <!-- Giants -->
-			<skill id="5465" level="1" /> <!-- Earth Attack -->
-			<skill id="14823" level="1" /> <!-- Lethal Strike Resistance -->
-			<skill id="16547" level="10" /> <!-- Danger Zone Attack Resistance -->
-			<skill id="4379" level="5" /> <!-- Spear Resistance -->
-			<skill id="4435" level="5" /> <!-- Greater Stun Resistance -->
-			<skill id="4461" level="1" /> <!-- Dagger/Rapier Vulnerability -->
-			<skill id="16608" level="1" /> <!-- Servitor Attack Weakness -->
 			<skill id="4071" level="1" /> <!-- Bow/Crossbow Resistance -->
+			<skill id="4379" level="5" /> <!-- Spear Resistance -->
+			<skill id="4416" level="11" /> <!-- Giants -->
+			<skill id="4435" level="5" /> <!-- High Stun Attack Resistance -->
+			<skill id="4461" level="1" /> <!-- Dagger/Rapier Vulnerability -->
+			<skill id="5465" level="1" /> <!-- Earth Attack -->
+			<skill id="14823" level="1" /> <!-- Instant Kill Attack Resistance -->
+			<skill id="16547" level="10" /> <!-- Danger Zone Attack Resistance -->
+			<skill id="16594" level="1" /> <!-- Plasma Strike -->
+			<skill id="16598" level="1" /> <!-- Stun Strike -->
+			<skill id="16608" level="1" /> <!-- Servitor Attack Weakness -->
 		</skillList>
 		<collision>
 			<radius normal="24" />
@@ -920,14 +986,16 @@
 			</attribute>
 		</stats>
 		<skillList>
-			<skill id="4416" level="11" /> <!-- Giants -->
-			<skill id="5465" level="1" /> <!-- Earth Attack -->
-			<skill id="14823" level="1" /> <!-- Lethal Strike Resistance -->
-			<skill id="16547" level="10" /> <!-- Danger Zone Attack Resistance -->
-			<skill id="4379" level="5" /> <!-- Spear Resistance -->
-			<skill id="4461" level="1" /> <!-- Dagger/Rapier Vulnerability -->
-			<skill id="16608" level="1" /> <!-- Servitor Attack Weakness -->
 			<skill id="4071" level="1" /> <!-- Bow/Crossbow Resistance -->
+			<skill id="4379" level="5" /> <!-- Spear Resistance -->
+			<skill id="4416" level="11" /> <!-- Giants -->
+			<skill id="4461" level="1" /> <!-- Dagger/Rapier Vulnerability -->
+			<skill id="5465" level="1" /> <!-- Earth Attack -->
+			<skill id="14823" level="1" /> <!-- Instant Kill Attack Resistance -->
+			<skill id="16547" level="10" /> <!-- Danger Zone Attack Resistance -->
+			<skill id="16595" level="1" /> <!-- Plasma Shooter -->
+			<skill id="16599" level="1" /> <!-- Piercing Bolt -->
+			<skill id="16608" level="1" /> <!-- Servitor Attack Weakness -->
 		</skillList>
 		<collision>
 			<radius normal="24" />
@@ -967,15 +1035,17 @@
 			</attribute>
 		</stats>
 		<skillList>
-			<skill id="4416" level="11" /> <!-- Giants -->
-			<skill id="5465" level="1" /> <!-- Earth Attack -->
-			<skill id="14823" level="1" /> <!-- Lethal Strike Resistance -->
-			<skill id="16547" level="10" /> <!-- Danger Zone Attack Resistance -->
+			<skill id="4071" level="1" /> <!-- Bow/Crossbow Resistance -->
 			<skill id="4379" level="5" /> <!-- Spear Resistance -->
+			<skill id="4416" level="11" /> <!-- Giants -->
 			<skill id="4438" level="5" /> <!-- Greater Sleep Resistance -->
 			<skill id="4461" level="1" /> <!-- Dagger/Rapier Vulnerability -->
+			<skill id="5465" level="1" /> <!-- Earth Attack -->
+			<skill id="14823" level="1" /> <!-- Instant Kill Attack Resistance -->
+			<skill id="16547" level="10" /> <!-- Danger Zone Attack Resistance -->
+			<skill id="16596" level="1" /> <!-- Plasma Ball -->
+			<skill id="16597" level="1" /> <!-- Plasma Wave -->
 			<skill id="16608" level="1" /> <!-- Servitor Attack Weakness -->
-			<skill id="4071" level="1" /> <!-- Bow/Crossbow Resistance -->
 		</skillList>
 		<collision>
 			<radius normal="24" />
@@ -1020,11 +1090,11 @@
 			</attribute>
 		</stats>
 		<skillList>
-			<skill id="23661" level="1" /> <!-- Earth Fatal Strike -->
 			<skill id="4416" level="11" /> <!-- Giants -->
 			<skill id="5465" level="1" /> <!-- Earth Attack -->
-			<skill id="14823" level="1" /> <!-- Lethal Strike Resistance -->
+			<skill id="14823" level="1" /> <!-- Instant Kill Attack Resistance -->
 			<skill id="16547" level="10" /> <!-- Danger Zone Attack Resistance -->
+			<skill id="23661" level="1" /> <!-- Earth  Fatal Strike -->
 		</skillList>
 		<collision>
 			<radius normal="31.5" />
@@ -1071,11 +1141,11 @@
 			</attribute>
 		</stats>
 		<skillList>
-			<skill id="16121" level="5" /> <!-- Sleeping Cloud -->
-			<skill id="23665" level="1" /> <!-- Earth Blast -->
 			<skill id="4416" level="11" /> <!-- Giants -->
 			<skill id="5465" level="1" /> <!-- Earth Attack -->
-			<skill id="14823" level="1" /> <!-- Lethal Strike Resistance -->
+			<skill id="14823" level="1" /> <!-- Instant Kill Attack Resistance -->
+			<skill id="16121" level="5" /> <!-- Sleeping Cloud -->
+			<skill id="16223" level="5" /> <!-- Earth Blast -->
 			<skill id="16547" level="10" /> <!-- Danger Zone Attack Resistance -->
 		</skillList>
 		<collision>
@@ -1121,11 +1191,11 @@
 			</attribute>
 		</stats>
 		<skillList>
-			<skill id="16600" level="1" /> <!-- Devil Swarm -->
 			<skill id="4416" level="9" /> <!-- Demons -->
 			<skill id="5467" level="1" /> <!-- Dark Attack -->
-			<skill id="14823" level="1" /> <!-- Lethal Strike Resistance -->
+			<skill id="14823" level="1" /> <!-- Instant Kill Attack Resistance -->
 			<skill id="16547" level="10" /> <!-- Danger Zone Attack Resistance -->
+			<skill id="16600" level="1" /> <!-- Devil Swarm -->
 		</skillList>
 		<collision>
 			<radius normal="19" />
@@ -1170,11 +1240,12 @@
 			</attribute>
 		</stats>
 		<skillList>
-			<skill id="16600" level="1" /> <!-- Devil Swarm -->
 			<skill id="4416" level="9" /> <!-- Demons -->
 			<skill id="5467" level="1" /> <!-- Dark Attack -->
-			<skill id="14823" level="1" /> <!-- Lethal Strike Resistance -->
+			<skill id="14823" level="1" /> <!-- Instant Kill Attack Resistance -->
 			<skill id="16547" level="10" /> <!-- Danger Zone Attack Resistance -->
+			<skill id="16601" level="1" /> <!-- Devil Fire -->
+			<skill id="16602" level="1" /> <!-- Dark Curse -->
 		</skillList>
 		<collision>
 			<radius normal="21" />
@@ -1216,8 +1287,9 @@
 		<skillList>
 			<skill id="4416" level="9" /> <!-- Demons -->
 			<skill id="5467" level="1" /> <!-- Dark Attack -->
-			<skill id="14823" level="1" /> <!-- Lethal Strike Resistance -->
+			<skill id="14823" level="1" /> <!-- Instant Kill Attack Resistance -->
 			<skill id="16547" level="10" /> <!-- Danger Zone Attack Resistance -->
+			<skill id="16603" level="1" /> <!-- Poison Wave -->
 		</skillList>
 		<collision>
 			<radius normal="20" />
@@ -1259,8 +1331,9 @@
 		<skillList>
 			<skill id="4416" level="9" /> <!-- Demons -->
 			<skill id="5467" level="1" /> <!-- Dark Attack -->
-			<skill id="14823" level="1" /> <!-- Lethal Strike Resistance -->
+			<skill id="14823" level="1" /> <!-- Instant Kill Attack Resistance -->
 			<skill id="16547" level="10" /> <!-- Danger Zone Attack Resistance -->
+			<skill id="16604" level="1" /> <!-- Devil Trap -->
 		</skillList>
 		<collision>
 			<radius normal="17" />
@@ -1302,8 +1375,11 @@
 		<skillList>
 			<skill id="4416" level="9" /> <!-- Demons -->
 			<skill id="5467" level="1" /> <!-- Dark Attack -->
-			<skill id="14823" level="1" /> <!-- Lethal Strike Resistance -->
+			<skill id="14823" level="1" /> <!-- Instant Kill Attack Resistance -->
 			<skill id="16547" level="10" /> <!-- Danger Zone Attack Resistance -->
+			<skill id="16600" level="1" /> <!-- Devil Swarm -->
+			<skill id="16602" level="1" /> <!-- Dark Curse -->
+			<skill id="16604" level="1" /> <!-- Devil Trap -->
 		</skillList>
 		<collision>
 			<radius normal="36.3" />
@@ -1348,8 +1424,10 @@
 		<skillList>
 			<skill id="4416" level="9" /> <!-- Demons -->
 			<skill id="5467" level="1" /> <!-- Dark Attack -->
-			<skill id="14823" level="1" /> <!-- Lethal Strike Resistance -->
+			<skill id="14823" level="1" /> <!-- Instant Kill Attack Resistance -->
 			<skill id="16547" level="10" /> <!-- Danger Zone Attack Resistance -->
+			<skill id="16601" level="1" /> <!-- Devil Fire -->
+			<skill id="16603" level="1" /> <!-- Poison Wave -->
 		</skillList>
 		<collision>
 			<radius normal="23.4" />
@@ -1394,8 +1472,10 @@
 		<skillList>
 			<skill id="4416" level="9" /> <!-- Demons -->
 			<skill id="5467" level="1" /> <!-- Dark Attack -->
-			<skill id="14823" level="1" /> <!-- Lethal Strike Resistance -->
+			<skill id="14823" level="1" /> <!-- Instant Kill Attack Resistance -->
 			<skill id="16547" level="10" /> <!-- Danger Zone Attack Resistance -->
+			<skill id="16601" level="1" /> <!-- Devil Fire -->
+			<skill id="16604" level="1" /> <!-- Devil Trap -->
 		</skillList>
 		<collision>
 			<radius normal="26" />
@@ -1442,11 +1522,12 @@
 			</attribute>
 		</stats>
 		<skillList>
-			<skill id="16594" level="1" /> <!-- Plasma Strike -->
 			<skill id="4416" level="11" /> <!-- Giants -->
 			<skill id="5465" level="1" /> <!-- Earth Attack -->
-			<skill id="14823" level="1" /> <!-- Lethal Strike Resistance -->
+			<skill id="14823" level="1" /> <!-- Instant Kill Attack Resistance -->
 			<skill id="16547" level="10" /> <!-- Danger Zone Attack Resistance -->
+			<skill id="16594" level="1" /> <!-- Plasma Strike -->
+			<skill id="16598" level="1" /> <!-- Stun Strike -->
 		</skillList>
 		<collision>
 			<radius normal="24" />
@@ -1495,12 +1576,12 @@
 			</attribute>
 		</stats>
 		<skillList>
-			<skill id="16595" level="1" /> <!-- Plasma Shooter -->
-			<skill id="16599" level="1" /> <!-- Piercing Bolt -->
 			<skill id="4416" level="11" /> <!-- Giants -->
 			<skill id="5465" level="1" /> <!-- Earth Attack -->
 			<skill id="14823" level="1" /> <!-- Instant Kill Attack Resistance -->
 			<skill id="16547" level="10" /> <!-- Danger Zone Attack Resistance -->
+			<skill id="16595" level="1" /> <!-- Plasma Shooter -->
+			<skill id="16599" level="1" /> <!-- Piercing Bolt -->
 		</skillList>
 		<collision>
 			<radius normal="24" />
@@ -1543,8 +1624,10 @@
 		<skillList>
 			<skill id="4416" level="11" /> <!-- Giants -->
 			<skill id="5465" level="1" /> <!-- Earth Attack -->
-			<skill id="14823" level="1" /> <!-- Lethal Strike Resistance -->
+			<skill id="14823" level="1" /> <!-- Instant Kill Attack Resistance -->
 			<skill id="16547" level="10" /> <!-- Danger Zone Attack Resistance -->
+			<skill id="16596" level="1" /> <!-- Plasma Ball -->
+			<skill id="16597" level="1" /> <!-- Plasma Wave -->
 		</skillList>
 		<collision>
 			<radius normal="24" />
@@ -1588,8 +1671,10 @@
 		<skillList>
 			<skill id="4416" level="11" /> <!-- Giants -->
 			<skill id="5465" level="1" /> <!-- Earth Attack -->
-			<skill id="14823" level="1" /> <!-- Lethal Strike Resistance -->
+			<skill id="14823" level="1" /> <!-- Instant Kill Attack Resistance -->
 			<skill id="16547" level="10" /> <!-- Danger Zone Attack Resistance -->
+			<skill id="16595" level="1" /> <!-- Plasma Shooter -->
+			<skill id="16599" level="1" /> <!-- Piercing Bolt -->
 		</skillList>
 		<collision>
 			<radius normal="24" />
@@ -1633,8 +1718,10 @@
 		<skillList>
 			<skill id="4416" level="11" /> <!-- Giants -->
 			<skill id="5465" level="1" /> <!-- Earth Attack -->
-			<skill id="14823" level="1" /> <!-- Lethal Strike Resistance -->
+			<skill id="14823" level="1" /> <!-- Instant Kill Attack Resistance -->
 			<skill id="16547" level="10" /> <!-- Danger Zone Attack Resistance -->
+			<skill id="16606" level="1" /> <!-- Energy Tremble -->
+			<skill id="23661" level="1" /> <!-- Earth  Fatal Strike -->
 		</skillList>
 		<collision>
 			<radius normal="31.5" />
@@ -1682,11 +1769,11 @@
 			</attribute>
 		</stats>
 		<skillList>
-			<skill id="16121" level="5" /> <!-- Sleeping Cloud -->
-			<skill id="23665" level="2" /> <!-- Earth Blast -->
 			<skill id="4416" level="11" /> <!-- Giants -->
 			<skill id="5465" level="1" /> <!-- Earth Attack -->
-			<skill id="14823" level="1" /> <!-- Lethal Strike Resistance -->
+			<skill id="14823" level="1" /> <!-- Instant Kill Attack Resistance -->
+			<skill id="16121" level="5" /> <!-- Sleeping Cloud -->
+			<skill id="16223" level="5" /> <!-- Earth Blast -->
 			<skill id="16547" level="10" /> <!-- Danger Zone Attack Resistance -->
 		</skillList>
 		<collision>
@@ -1730,8 +1817,10 @@
 		<skillList>
 			<skill id="4416" level="11" /> <!-- Giants -->
 			<skill id="5465" level="1" /> <!-- Earth Attack -->
-			<skill id="14823" level="1" /> <!-- Lethal Strike Resistance -->
+			<skill id="14823" level="1" /> <!-- Instant Kill Attack Resistance -->
+			<skill id="16153" level="6" /> <!-- Power Slam -->
 			<skill id="16547" level="10" /> <!-- Danger Zone Attack Resistance -->
+			<skill id="23661" level="1" /> <!-- Earth  Fatal Strike -->
 		</skillList>
 		<collision>
 			<radius normal="50" />
@@ -1775,10 +1864,10 @@
 			</attribute>
 		</stats>
 		<skillList>
-			<skill id="23682" level="1" /> <!-- Fatal Strike -->
 			<skill id="4416" level="2" /> <!-- Magic Creatures -->
 			<skill id="5465" level="1" /> <!-- Earth Attack -->
-			<skill id="14823" level="1" /> <!-- Lethal Strike Resistance -->
+			<skill id="14823" level="1" /> <!-- Instant Kill Attack Resistance -->
+			<skill id="16104" level="7" /> <!-- Fatal Strike -->
 			<skill id="16547" level="10" /> <!-- Danger Zone Attack Resistance -->
 		</skillList>
 		<collision>
@@ -1821,14 +1910,16 @@
 			</attribute>
 		</stats>
 		<skillList>
-			<skill id="4416" level="11" /> <!-- Giants -->
-			<skill id="5465" level="1" /> <!-- Earth Attack -->
-			<skill id="14823" level="1" /> <!-- Lethal Strike Resistance -->
-			<skill id="16547" level="10" /> <!-- Danger Zone Attack Resistance -->
-			<skill id="4379" level="5" /> <!-- Spear Resistance -->
-			<skill id="4461" level="1" /> <!-- Dagger/Rapier Vulnerability -->
-			<skill id="16608" level="1" /> <!-- Servitor Attack Weakness -->
 			<skill id="4071" level="1" /> <!-- Bow/Crossbow Resistance -->
+			<skill id="4379" level="5" /> <!-- Spear Resistance -->
+			<skill id="4416" level="11" /> <!-- Giants -->
+			<skill id="4461" level="1" /> <!-- Dagger/Rapier Vulnerability -->
+			<skill id="5465" level="1" /> <!-- Earth Attack -->
+			<skill id="14823" level="1" /> <!-- Instant Kill Attack Resistance -->
+			<skill id="16547" level="10" /> <!-- Danger Zone Attack Resistance -->
+			<skill id="16595" level="1" /> <!-- Plasma Shooter -->
+			<skill id="16599" level="1" /> <!-- Piercing Bolt -->
+			<skill id="16608" level="1" /> <!-- Servitor Attack Weakness -->
 		</skillList>
 		<collision>
 			<radius normal="24" />
@@ -1872,14 +1963,16 @@
 			</attribute>
 		</stats>
 		<skillList>
-			<skill id="4416" level="11" /> <!-- Giants -->
-			<skill id="5465" level="1" /> <!-- Earth Attack -->
-			<skill id="14823" level="1" /> <!-- Lethal Strike Resistance -->
-			<skill id="16547" level="10" /> <!-- Danger Zone Attack Resistance -->
-			<skill id="4379" level="5" /> <!-- Spear Resistance -->
-			<skill id="4461" level="1" /> <!-- Dagger/Rapier Vulnerability -->
-			<skill id="16608" level="1" /> <!-- Servitor Attack Weakness -->
 			<skill id="4071" level="1" /> <!-- Bow/Crossbow Resistance -->
+			<skill id="4379" level="5" /> <!-- Spear Resistance -->
+			<skill id="4416" level="11" /> <!-- Giants -->
+			<skill id="4461" level="1" /> <!-- Dagger/Rapier Vulnerability -->
+			<skill id="5465" level="1" /> <!-- Earth Attack -->
+			<skill id="14823" level="1" /> <!-- Instant Kill Attack Resistance -->
+			<skill id="16547" level="10" /> <!-- Danger Zone Attack Resistance -->
+			<skill id="16595" level="1" /> <!-- Plasma Shooter -->
+			<skill id="16599" level="1" /> <!-- Piercing Bolt -->
+			<skill id="16608" level="1" /> <!-- Servitor Attack Weakness -->
 		</skillList>
 		<collision>
 			<radius normal="24" />
@@ -1922,8 +2015,10 @@
 		<skillList>
 			<skill id="4416" level="11" /> <!-- Giants -->
 			<skill id="5465" level="1" /> <!-- Earth Attack -->
-			<skill id="14823" level="1" /> <!-- Lethal Strike Resistance -->
+			<skill id="14823" level="1" /> <!-- Instant Kill Attack Resistance -->
 			<skill id="16547" level="10" /> <!-- Danger Zone Attack Resistance -->
+			<skill id="16595" level="1" /> <!-- Plasma Shooter -->
+			<skill id="16599" level="1" /> <!-- Piercing Bolt -->
 		</skillList>
 		<collision>
 			<radius normal="50" />
@@ -1966,8 +2061,10 @@
 		<skillList>
 			<skill id="4416" level="11" /> <!-- Giants -->
 			<skill id="5465" level="1" /> <!-- Earth Attack -->
-			<skill id="14823" level="1" /> <!-- Lethal Strike Resistance -->
+			<skill id="14823" level="1" /> <!-- Instant Kill Attack Resistance -->
 			<skill id="16547" level="10" /> <!-- Danger Zone Attack Resistance -->
+			<skill id="16595" level="1" /> <!-- Plasma Shooter -->
+			<skill id="16599" level="1" /> <!-- Piercing Bolt -->
 		</skillList>
 		<collision>
 			<radius normal="50" />
@@ -2013,11 +2110,10 @@
 			</attribute>
 		</stats>
 		<skillList>
-			<skill id="16156" level="8" /> <!-- Mass Droop -->
-			<skill id="23682" level="1" /> <!-- Fatal Strike -->
 			<skill id="4416" level="2" /> <!-- Magic Creatures -->
 			<skill id="5465" level="1" /> <!-- Earth Attack -->
-			<skill id="14823" level="1" /> <!-- Lethal Strike Resistance -->
+			<skill id="14823" level="1" /> <!-- Instant Kill Attack Resistance -->
+			<skill id="16104" level="7" /> <!-- Fatal Strike -->
 			<skill id="16547" level="10" /> <!-- Danger Zone Attack Resistance -->
 		</skillList>
 		<collision>
@@ -2064,10 +2160,10 @@
 		<skillList>
 			<skill id="4416" level="1" /> <!-- Undead -->
 			<skill id="5467" level="1" /> <!-- Dark Attack -->
-			<skill id="14823" level="1" /> <!-- Lethal Strike Resistance -->
+			<skill id="14823" level="1" /> <!-- Instant Kill Attack Resistance -->
+			<skill id="16103" level="1" /> <!-- Death Lift -->
+			<skill id="16106" level="1" /> <!-- Chain Smash -->
 			<skill id="16547" level="10" /> <!-- Danger Zone Attack Resistance -->
-			<skill id="16103" level="6" /> <!-- Death Lift -->
-			<skill id="16106" level="5" /> <!-- Chain Smash -->
 		</skillList>
 		<collision>
 			<radius normal="12" />
@@ -2100,10 +2196,9 @@
 		<skillList>
 			<skill id="4416" level="1" /> <!-- Undead -->
 			<skill id="5467" level="1" /> <!-- Dark Attack -->
-			<skill id="14823" level="1" /> <!-- Lethal Strike Resistance -->
+			<skill id="14823" level="1" /> <!-- Instant Kill Attack Resistance -->
+			<skill id="16107" level="1" /> <!-- Fatal Blow -->
 			<skill id="16547" level="10" /> <!-- Danger Zone Attack Resistance -->
-			<skill id="16207" level="4" /> <!-- Dark Spike -->
-			<skill id="16213" level="4" /> <!-- Dark Buster -->
 		</skillList>
 		<collision>
 			<radius normal="12" />
@@ -2138,10 +2233,10 @@
 		<skillList>
 			<skill id="4416" level="6" /> <!-- Humanoids -->
 			<skill id="5465" level="1" /> <!-- Earth Attack -->
-			<skill id="14823" level="1" /> <!-- Lethal Strike Resistance -->
+			<skill id="14055" level="4" /> <!-- Power Shot -->
+			<skill id="14823" level="1" /> <!-- Instant Kill Attack Resistance -->
+			<skill id="16205" level="1" /> <!-- Burst Shot -->
 			<skill id="16547" level="10" /> <!-- Danger Zone Attack Resistance -->
-			<skill id="16205" level="6" /> <!-- Burst Shot -->
-			<skill id="16775" level="1" /> <!-- Power Shot -->
 		</skillList>
 		<collision>
 			<radius normal="15" />
@@ -2168,7 +2263,9 @@
 		<skillList>
 			<skill id="4416" level="1" /> <!-- Undead -->
 			<skill id="5467" level="1" /> <!-- Dark Attack -->
-			<skill id="14823" level="1" /> <!-- Lethal Strike Resistance -->
+			<skill id="14823" level="1" /> <!-- Instant Kill Attack Resistance -->
+			<skill id="16104" level="1" /> <!-- Fatal Strike -->
+			<skill id="16105" level="1" /> <!-- Fatal Bomber -->
 			<skill id="16547" level="10" /> <!-- Danger Zone Attack Resistance -->
 		</skillList>
 		<collision>
@@ -2196,7 +2293,11 @@
 		<skillList>
 			<skill id="4416" level="6" /> <!-- Humanoids -->
 			<skill id="5467" level="1" /> <!-- Dark Attack -->
-			<skill id="14823" level="1" /> <!-- Lethal Strike Resistance -->
+			<skill id="14823" level="1" /> <!-- Instant Kill Attack Resistance -->
+			<skill id="16103" level="6" /> <!-- Death Lift -->
+			<skill id="16105" level="6" /> <!-- Fatal Bomber -->
+			<skill id="16106" level="5" /> <!-- Chain Smash -->
+			<skill id="16107" level="3" /> <!-- Fatal Blow -->
 			<skill id="16547" level="10" /> <!-- Danger Zone Attack Resistance -->
 		</skillList>
 		<collision>
@@ -2222,6 +2323,11 @@
 			<defence physical="405.85106382979" magical="297.0297029703" />
 		</stats>
 		<status attackable="false" />
+		<skillList>
+			<skill id="4414" level="1" /> <!-- Heavy Armor Type -->
+			<skill id="4416" level="13" /> <!-- Fairies -->
+			<skill id="5465" level="1" /> <!-- Earth Attack -->
+		</skillList>
 		<collision>
 			<radius normal="12" />
 			<height normal="27" />
@@ -2240,6 +2346,13 @@
 			<defence physical="405.85106382979" magical="297.0297029703" />
 		</stats>
 		<status attackable="false" />
+		<skillList>
+			<skill id="4410" level="12" /> <!-- Slightly Strong P. Atk. -->
+			<skill id="4411" level="12" /> <!-- Slightly Strong M. Atk. -->
+			<skill id="4414" level="1" /> <!-- Heavy Armor Type -->
+			<skill id="4416" level="13" /> <!-- Fairies -->
+			<skill id="5465" level="1" /> <!-- Earth Attack -->
+		</skillList>
 		<collision>
 			<radius normal="12" />
 			<height normal="27" />
@@ -2258,6 +2371,11 @@
 			<defence physical="405.85106382979" magical="297.0297029703" />
 		</stats>
 		<status attackable="false" />
+		<skillList>
+			<skill id="4414" level="3" /> <!-- Light Armor Type -->
+			<skill id="4416" level="13" /> <!-- Fairies -->
+			<skill id="5465" level="1" /> <!-- Earth Attack -->
+		</skillList>
 		<collision>
 			<radius normal="12" />
 			<height normal="27" />
@@ -2276,6 +2394,13 @@
 			<defence physical="405.85106382979" magical="297.0297029703" />
 		</stats>
 		<status attackable="false" />
+		<skillList>
+			<skill id="4410" level="12" /> <!-- Slightly Strong P. Atk. -->
+			<skill id="4411" level="12" /> <!-- Slightly Strong M. Atk. -->
+			<skill id="4414" level="3" /> <!-- Light Armor Type -->
+			<skill id="4416" level="13" /> <!-- Fairies -->
+			<skill id="5465" level="1" /> <!-- Earth Attack -->
+		</skillList>
 		<collision>
 			<radius normal="12" />
 			<height normal="27" />
@@ -2294,6 +2419,11 @@
 			<defence physical="405.85106382979" magical="297.0297029703" />
 		</stats>
 		<status attackable="false" />
+		<skillList>
+			<skill id="4414" level="3" /> <!-- Light Armor Type -->
+			<skill id="4416" level="13" /> <!-- Fairies -->
+			<skill id="5465" level="1" /> <!-- Earth Attack -->
+		</skillList>
 		<collision>
 			<radius normal="12" />
 			<height normal="27" />
@@ -2312,6 +2442,13 @@
 			<defence physical="405.85106382979" magical="297.0297029703" />
 		</stats>
 		<status attackable="false" />
+		<skillList>
+			<skill id="4410" level="12" /> <!-- Slightly Strong P. Atk. -->
+			<skill id="4411" level="12" /> <!-- Slightly Strong M. Atk. -->
+			<skill id="4414" level="3" /> <!-- Light Armor Type -->
+			<skill id="4416" level="13" /> <!-- Fairies -->
+			<skill id="5465" level="1" /> <!-- Earth Attack -->
+		</skillList>
 		<collision>
 			<radius normal="12" />
 			<height normal="27" />
@@ -2330,6 +2467,13 @@
 			<defence physical="405.85106382979" magical="297.0297029703" />
 		</stats>
 		<status attackable="false" />
+		<skillList>
+			<skill id="4416" level="6" /> <!-- Humanoids -->
+			<skill id="5463" level="1" /> <!-- Water Attack -->
+			<skill id="14045" level="1" /> <!-- Fairy Attack -->
+			<skill id="14047" level="1" /> <!-- Fairy Curse Poison -->
+			<skill id="14048" level="1" /> <!-- Fairy Acumen -->
+		</skillList>
 		<collision>
 			<radius normal="15" />
 			<height normal="28" />
@@ -2348,6 +2492,15 @@
 			<defence physical="405.85106382979" magical="297.0297029703" />
 		</stats>
 		<status attackable="false" />
+		<skillList>
+			<skill id="4410" level="12" /> <!-- Slightly Strong P. Atk. -->
+			<skill id="4411" level="12" /> <!-- Slightly Strong M. Atk. -->
+			<skill id="4416" level="6" /> <!-- Humanoids -->
+			<skill id="5463" level="1" /> <!-- Water Attack -->
+			<skill id="14045" level="1" /> <!-- Fairy Attack -->
+			<skill id="14047" level="1" /> <!-- Fairy Curse Poison -->
+			<skill id="14048" level="1" /> <!-- Fairy Acumen -->
+		</skillList>
 		<collision>
 			<radius normal="15" />
 			<height normal="28" />
@@ -2366,6 +2519,13 @@
 			<defence physical="405.85106382979" magical="297.0297029703" />
 		</stats>
 		<status attackable="false" />
+		<skillList>
+			<skill id="4416" level="6" /> <!-- Humanoids -->
+			<skill id="5463" level="1" /> <!-- Water Attack -->
+			<skill id="14045" level="1" /> <!-- Fairy Attack -->
+			<skill id="14046" level="1" /> <!-- Fairy Curse Gloom -->
+			<skill id="14049" level="1" /> <!-- Fairy Heal -->
+		</skillList>
 		<collision>
 			<radius normal="15" />
 			<height normal="28" />
@@ -2384,6 +2544,15 @@
 			<defence physical="405.85106382979" magical="297.0297029703" />
 		</stats>
 		<status attackable="false" />
+		<skillList>
+			<skill id="4410" level="12" /> <!-- Slightly Strong P. Atk. -->
+			<skill id="4411" level="12" /> <!-- Slightly Strong M. Atk. -->
+			<skill id="4416" level="6" /> <!-- Humanoids -->
+			<skill id="5463" level="1" /> <!-- Water Attack -->
+			<skill id="14045" level="1" /> <!-- Fairy Attack -->
+			<skill id="14046" level="1" /> <!-- Fairy Curse Gloom -->
+			<skill id="14049" level="1" /> <!-- Fairy Heal -->
+		</skillList>
 		<collision>
 			<radius normal="15" />
 			<height normal="28" />
@@ -2402,6 +2571,13 @@
 			<defence physical="405.85106382979" magical="297.0297029703" />
 		</stats>
 		<status attackable="false" />
+		<skillList>
+			<skill id="4416" level="6" /> <!-- Humanoids -->
+			<skill id="5463" level="1" /> <!-- Water Attack -->
+			<skill id="14045" level="1" /> <!-- Fairy Attack -->
+			<skill id="14047" level="1" /> <!-- Fairy Curse Poison -->
+			<skill id="14048" level="1" /> <!-- Fairy Acumen -->
+		</skillList>
 		<collision>
 			<radius normal="15" />
 			<height normal="28" />
@@ -2420,6 +2596,15 @@
 			<defence physical="405.85106382979" magical="297.0297029703" />
 		</stats>
 		<status attackable="false" />
+		<skillList>
+			<skill id="4410" level="12" /> <!-- Slightly Strong P. Atk. -->
+			<skill id="4411" level="12" /> <!-- Slightly Strong M. Atk. -->
+			<skill id="4416" level="6" /> <!-- Humanoids -->
+			<skill id="5463" level="1" /> <!-- Water Attack -->
+			<skill id="14045" level="1" /> <!-- Fairy Attack -->
+			<skill id="14047" level="1" /> <!-- Fairy Curse Poison -->
+			<skill id="14048" level="1" /> <!-- Fairy Acumen -->
+		</skillList>
 		<collision>
 			<radius normal="15" />
 			<height normal="28" />
@@ -2444,15 +2629,18 @@
 			<abnormalResist physical="10" magical="10" />
 		</stats>
 		<skillList>
-			<skill id="4416" level="11" /> <!-- Giants -->
-			<skill id="5465" level="1" /> <!-- Earth Attack -->
-			<skill id="14823" level="1" /> <!-- Lethal Strike Resistance -->
-			<skill id="16547" level="10" /> <!-- Danger Zone Attack Resistance -->
-			<skill id="4379" level="5" /> <!-- Spear Resistance -->
-			<skill id="4435" level="5" /> <!-- Greater Stun Resistance -->
-			<skill id="4461" level="1" /> <!-- Dagger/Rapier Vulnerability -->
-			<skill id="16608" level="1" /> <!-- Servitor Attack Weakness -->
 			<skill id="4071" level="1" /> <!-- Bow/Crossbow Resistance -->
+			<skill id="4379" level="5" /> <!-- Spear Resistance -->
+			<skill id="4416" level="11" /> <!-- Giants -->
+			<skill id="4435" level="5" /> <!-- High Stun Attack Resistance -->
+			<skill id="4461" level="1" /> <!-- Dagger/Rapier Vulnerability -->
+			<skill id="5465" level="1" /> <!-- Earth Attack -->
+			<skill id="14823" level="1" /> <!-- Instant Kill Attack Resistance -->
+			<skill id="16547" level="10" /> <!-- Danger Zone Attack Resistance -->
+			<skill id="16608" level="1" /> <!-- Servitor Attack Weakness -->
+			<skill id="16650" level="1" /> <!-- Vertical Smash -->
+			<skill id="16651" level="1" /> <!-- Horizon Smash -->
+			<skill id="16652" level="1" /> <!-- Tombstone Attack -->
 		</skillList>
 		<ai clanHelpRange="300" aggroRange="300">
 			<clanList>
@@ -2504,14 +2692,16 @@
 			<abnormalResist physical="10" magical="10" />
 		</stats>
 		<skillList>
-			<skill id="4416" level="11" /> <!-- Giants -->
-			<skill id="5465" level="1" /> <!-- Earth Attack -->
-			<skill id="14823" level="1" /> <!-- Lethal Strike Resistance -->
-			<skill id="16547" level="10" /> <!-- Danger Zone Attack Resistance -->
-			<skill id="4379" level="5" /> <!-- Spear Resistance -->
-			<skill id="4461" level="1" /> <!-- Dagger/Rapier Vulnerability -->
-			<skill id="16608" level="1" /> <!-- Servitor Attack Weakness -->
 			<skill id="4071" level="1" /> <!-- Bow/Crossbow Resistance -->
+			<skill id="4379" level="5" /> <!-- Spear Resistance -->
+			<skill id="4416" level="11" /> <!-- Giants -->
+			<skill id="4461" level="1" /> <!-- Dagger/Rapier Vulnerability -->
+			<skill id="5465" level="1" /> <!-- Earth Attack -->
+			<skill id="14823" level="1" /> <!-- Instant Kill Attack Resistance -->
+			<skill id="16547" level="10" /> <!-- Danger Zone Attack Resistance -->
+			<skill id="16608" level="1" /> <!-- Servitor Attack Weakness -->
+			<skill id="16640" level="1" /> <!-- Triple Shot -->
+			<skill id="16653" level="1" /> <!-- Delta Multi Shot -->
 		</skillList>
 		<ai clanHelpRange="300" aggroRange="300">
 			<clanList>
@@ -2563,15 +2753,18 @@
 			<abnormalResist physical="10" magical="10" />
 		</stats>
 		<skillList>
-			<skill id="4416" level="11" /> <!-- Giants -->
-			<skill id="5465" level="1" /> <!-- Earth Attack -->
-			<skill id="14823" level="1" /> <!-- Lethal Strike Resistance -->
-			<skill id="16547" level="10" /> <!-- Danger Zone Attack Resistance -->
+			<skill id="4071" level="1" /> <!-- Bow/Crossbow Resistance -->
 			<skill id="4379" level="5" /> <!-- Spear Resistance -->
+			<skill id="4416" level="11" /> <!-- Giants -->
 			<skill id="4438" level="5" /> <!-- Greater Sleep Resistance -->
 			<skill id="4461" level="1" /> <!-- Dagger/Rapier Vulnerability -->
+			<skill id="5465" level="1" /> <!-- Earth Attack -->
+			<skill id="14823" level="1" /> <!-- Instant Kill Attack Resistance -->
+			<skill id="16547" level="10" /> <!-- Danger Zone Attack Resistance -->
 			<skill id="16608" level="1" /> <!-- Servitor Attack Weakness -->
-			<skill id="4071" level="1" /> <!-- Bow/Crossbow Resistance -->
+			<skill id="16638" level="1" /> <!-- Delta Plasma Lightning -->
+			<skill id="16655" level="1" /> <!-- Delta Plasma Ball -->
+			<skill id="16656" level="1" /> <!-- Delta Plasma Wave -->
 		</skillList>
 		<ai clanHelpRange="300" aggroRange="300">
 			<clanList>
@@ -2623,15 +2816,18 @@
 			<abnormalResist physical="10" magical="10" />
 		</stats>
 		<skillList>
-			<skill id="4416" level="11" /> <!-- Giants -->
-			<skill id="5465" level="1" /> <!-- Earth Attack -->
-			<skill id="14823" level="1" /> <!-- Lethal Strike Resistance -->
-			<skill id="16547" level="10" /> <!-- Danger Zone Attack Resistance -->
-			<skill id="4379" level="5" /> <!-- Spear Resistance -->
-			<skill id="4435" level="5" /> <!-- Greater Stun Resistance -->
-			<skill id="4461" level="1" /> <!-- Dagger/Rapier Vulnerability -->
-			<skill id="16608" level="1" /> <!-- Servitor Attack Weakness -->
 			<skill id="4071" level="1" /> <!-- Bow/Crossbow Resistance -->
+			<skill id="4379" level="5" /> <!-- Spear Resistance -->
+			<skill id="4416" level="11" /> <!-- Giants -->
+			<skill id="4435" level="5" /> <!-- High Stun Attack Resistance -->
+			<skill id="4461" level="1" /> <!-- Dagger/Rapier Vulnerability -->
+			<skill id="5465" level="1" /> <!-- Earth Attack -->
+			<skill id="14823" level="1" /> <!-- Instant Kill Attack Resistance -->
+			<skill id="16547" level="10" /> <!-- Danger Zone Attack Resistance -->
+			<skill id="16608" level="1" /> <!-- Servitor Attack Weakness -->
+			<skill id="16657" level="1" /> <!-- Royal Aggression Aura -->
+			<skill id="16658" level="1" /> <!-- Royal Chain Strike -->
+			<skill id="16702" level="1" /> <!-- Royal Shout -->
 		</skillList>
 		<ai clanHelpRange="300" aggroRange="300">
 			<clanList>
@@ -2684,14 +2880,17 @@
 			<abnormalResist physical="10" magical="10" />
 		</stats>
 		<skillList>
-			<skill id="4416" level="11" /> <!-- Giants -->
-			<skill id="5465" level="1" /> <!-- Earth Attack -->
-			<skill id="14823" level="1" /> <!-- Lethal Strike Resistance -->
-			<skill id="16547" level="10" /> <!-- Danger Zone Attack Resistance -->
-			<skill id="4379" level="5" /> <!-- Spear Resistance -->
-			<skill id="4461" level="1" /> <!-- Dagger/Rapier Vulnerability -->
-			<skill id="16608" level="1" /> <!-- Servitor Attack Weakness -->
 			<skill id="4071" level="1" /> <!-- Bow/Crossbow Resistance -->
+			<skill id="4379" level="5" /> <!-- Spear Resistance -->
+			<skill id="4416" level="11" /> <!-- Giants -->
+			<skill id="4461" level="1" /> <!-- Dagger/Rapier Vulnerability -->
+			<skill id="5465" level="1" /> <!-- Earth Attack -->
+			<skill id="14823" level="1" /> <!-- Instant Kill Attack Resistance -->
+			<skill id="16547" level="10" /> <!-- Danger Zone Attack Resistance -->
+			<skill id="16608" level="1" /> <!-- Servitor Attack Weakness -->
+			<skill id="16659" level="1" /> <!-- Royal Head Shot -->
+			<skill id="16660" level="1" /> <!-- Royal Multi Shot -->
+			<skill id="16661" level="1" /> <!-- Royal Stun Shot -->
 		</skillList>
 		<ai clanHelpRange="300" aggroRange="300">
 			<clanList>
@@ -2742,15 +2941,19 @@
 			<abnormalResist physical="10" magical="10" />
 			</stats>
 		<skillList>
-			<skill id="4416" level="11" /> <!-- Giants -->
-			<skill id="5465" level="1" /> <!-- Earth Attack -->
-			<skill id="14823" level="1" /> <!-- Lethal Strike Resistance -->
-			<skill id="16547" level="10" /> <!-- Danger Zone Attack Resistance -->
+			<skill id="4071" level="1" /> <!-- Bow/Crossbow Resistance -->
 			<skill id="4379" level="5" /> <!-- Spear Resistance -->
+			<skill id="4416" level="11" /> <!-- Giants -->
 			<skill id="4438" level="5" /> <!-- Greater Sleep Resistance -->
 			<skill id="4461" level="1" /> <!-- Dagger/Rapier Vulnerability -->
+			<skill id="5465" level="1" /> <!-- Earth Attack -->
+			<skill id="14823" level="1" /> <!-- Instant Kill Attack Resistance -->
+			<skill id="16547" level="10" /> <!-- Danger Zone Attack Resistance -->
 			<skill id="16608" level="1" /> <!-- Servitor Attack Weakness -->
-			<skill id="4071" level="1" /> <!-- Bow/Crossbow Resistance -->
+			<skill id="16639" level="1" /> <!-- Royal Plasma Lightning -->
+			<skill id="16662" level="1" /> <!-- Royal Plasma Ball -->
+			<skill id="16663" level="1" /> <!-- Royal Plasma Wave -->
+			<skill id="16664" level="1" /> <!-- Royal Sleep Cloud -->
 		</skillList>
 		<ai clanHelpRange="300" aggroRange="300">
 			<clanList>
@@ -2800,15 +3003,17 @@
 			<abnormalResist physical="10" magical="10" />
 			</stats>
 		<skillList>
-			<skill id="4416" level="11" /> <!-- Giants -->
-			<skill id="5465" level="1" /> <!-- Earth Attack -->
-			<skill id="14823" level="1" /> <!-- Lethal Strike Resistance -->
-			<skill id="16547" level="10" /> <!-- Danger Zone Attack Resistance -->
-			<skill id="4379" level="5" /> <!-- Spear Resistance -->
-			<skill id="4435" level="5" /> <!-- Greater Stun Resistance -->
-			<skill id="4461" level="1" /> <!-- Dagger/Rapier Vulnerability -->
-			<skill id="16608" level="1" /> <!-- Servitor Attack Weakness -->
 			<skill id="4071" level="1" /> <!-- Bow/Crossbow Resistance -->
+			<skill id="4379" level="5" /> <!-- Spear Resistance -->
+			<skill id="4416" level="11" /> <!-- Giants -->
+			<skill id="4435" level="5" /> <!-- High Stun Attack Resistance -->
+			<skill id="4461" level="1" /> <!-- Dagger/Rapier Vulnerability -->
+			<skill id="5465" level="1" /> <!-- Earth Attack -->
+			<skill id="14823" level="1" /> <!-- Instant Kill Attack Resistance -->
+			<skill id="16547" level="10" /> <!-- Danger Zone Attack Resistance -->
+			<skill id="16608" level="1" /> <!-- Servitor Attack Weakness -->
+			<skill id="16657" level="1" /> <!-- Royal Aggression Aura -->
+			<skill id="16665" level="1" /> <!-- Royal Power Strike -->
 		</skillList>
 		<ai clanHelpRange="300" aggroRange="300">
 			<clanList>
@@ -2863,14 +3068,17 @@
 			<abnormalResist physical="10" magical="10" />
 			</stats>
 		<skillList>
-			<skill id="4416" level="11" /> <!-- Giants -->
-			<skill id="5465" level="1" /> <!-- Earth Attack -->
-			<skill id="14823" level="1" /> <!-- Lethal Strike Resistance -->
-			<skill id="16547" level="10" /> <!-- Danger Zone Attack Resistance -->
-			<skill id="4379" level="5" /> <!-- Spear Resistance -->
-			<skill id="4461" level="1" /> <!-- Dagger/Rapier Vulnerability -->
-			<skill id="16608" level="1" /> <!-- Servitor Attack Weakness -->
 			<skill id="4071" level="1" /> <!-- Bow/Crossbow Resistance -->
+			<skill id="4379" level="5" /> <!-- Spear Resistance -->
+			<skill id="4416" level="11" /> <!-- Giants -->
+			<skill id="4461" level="1" /> <!-- Dagger/Rapier Vulnerability -->
+			<skill id="5465" level="1" /> <!-- Earth Attack -->
+			<skill id="14823" level="1" /> <!-- Instant Kill Attack Resistance -->
+			<skill id="16547" level="10" /> <!-- Danger Zone Attack Resistance -->
+			<skill id="16608" level="1" /> <!-- Servitor Attack Weakness -->
+			<skill id="16660" level="1" /> <!-- Royal Multi Shot -->
+			<skill id="16668" level="1" /> <!-- Royal Quick Shot -->
+			<skill id="16669" level="1" /> <!-- Royal Mark of Death -->
 		</skillList>
 		<ai clanHelpRange="300" aggroRange="300">
 			<clanList>
@@ -2923,15 +3131,18 @@
 			<abnormalResist physical="10" magical="10" />
 			</stats>
 		<skillList>
-			<skill id="4416" level="11" /> <!-- Giants -->
-			<skill id="5465" level="1" /> <!-- Earth Attack -->
-			<skill id="14823" level="1" /> <!-- Lethal Strike Resistance -->
-			<skill id="16547" level="10" /> <!-- Danger Zone Attack Resistance -->
+			<skill id="4071" level="1" /> <!-- Bow/Crossbow Resistance -->
 			<skill id="4379" level="5" /> <!-- Spear Resistance -->
+			<skill id="4416" level="11" /> <!-- Giants -->
 			<skill id="4438" level="5" /> <!-- Greater Sleep Resistance -->
 			<skill id="4461" level="1" /> <!-- Dagger/Rapier Vulnerability -->
+			<skill id="5465" level="1" /> <!-- Earth Attack -->
+			<skill id="14823" level="1" /> <!-- Instant Kill Attack Resistance -->
+			<skill id="16547" level="10" /> <!-- Danger Zone Attack Resistance -->
 			<skill id="16608" level="1" /> <!-- Servitor Attack Weakness -->
-			<skill id="4071" level="1" /> <!-- Bow/Crossbow Resistance -->
+			<skill id="16670" level="1" /> <!-- Royal Super Plasma Ball -->
+			<skill id="16671" level="1" /> <!-- Royal Super Plasma Wave -->
+			<skill id="16672" level="1" /> <!-- Royal Super Magic Barrier Weakness -->
 		</skillList>
 		<ai clanHelpRange="300" aggroRange="300">
 			<clanList>
@@ -2983,15 +3194,18 @@
 			<abnormalResist physical="10" magical="10" />
 		</stats>
 		<skillList>
-			<skill id="4416" level="11" /> <!-- Giants -->
-			<skill id="5465" level="1" /> <!-- Earth Attack -->
-			<skill id="14823" level="1" /> <!-- Lethal Strike Resistance -->
-			<skill id="16547" level="10" /> <!-- Danger Zone Attack Resistance -->
-			<skill id="4379" level="5" /> <!-- Spear Resistance -->
-			<skill id="4435" level="5" /> <!-- Greater Stun Resistance -->
-			<skill id="4461" level="1" /> <!-- Dagger/Rapier Vulnerability -->
-			<skill id="16608" level="1" /> <!-- Servitor Attack Weakness -->
 			<skill id="4071" level="1" /> <!-- Bow/Crossbow Resistance -->
+			<skill id="4379" level="5" /> <!-- Spear Resistance -->
+			<skill id="4416" level="11" /> <!-- Giants -->
+			<skill id="4435" level="5" /> <!-- High Stun Attack Resistance -->
+			<skill id="4461" level="1" /> <!-- Dagger/Rapier Vulnerability -->
+			<skill id="5465" level="1" /> <!-- Earth Attack -->
+			<skill id="14823" level="1" /> <!-- Instant Kill Attack Resistance -->
+			<skill id="16547" level="10" /> <!-- Danger Zone Attack Resistance -->
+			<skill id="16608" level="1" /> <!-- Servitor Attack Weakness -->
+			<skill id="16674" level="1" /> <!-- Hyper Mega Strike -->
+			<skill id="16675" level="1" /> <!-- Hyper Giga Strike -->
+			<skill id="16676" level="1" /> <!-- Hyper Taunt -->
 		</skillList>
 		<ai clanHelpRange="300" aggroRange="300">
 			<clanList>
@@ -3052,14 +3266,14 @@
 			</speed>
 		</stats>
 		<skillList>
-			<skill id="4416" level="9" /> <!-- Demons -->
-			<skill id="5465" level="1" /> <!-- Earth Attack -->
-			<skill id="14823" level="1" /> <!-- Lethal Strike Resistance -->
-			<skill id="16547" level="10" /> <!-- Danger Zone Attack Resistance -->
-			<skill id="4379" level="5" /> <!-- Spear Resistance -->
-			<skill id="4461" level="1" /> <!-- Dagger/Rapier Vulnerability -->
-			<skill id="16608" level="1" /> <!-- Servitor Attack Weakness -->
 			<skill id="4071" level="1" /> <!-- Bow/Crossbow Resistance -->
+			<skill id="4379" level="5" /> <!-- Spear Resistance -->
+			<skill id="4416" level="9" /> <!-- Demons -->
+			<skill id="4461" level="1" /> <!-- Dagger/Rapier Vulnerability -->
+			<skill id="5465" level="1" /> <!-- Earth Attack -->
+			<skill id="14823" level="1" /> <!-- Instant Kill Attack Resistance -->
+			<skill id="16547" level="10" /> <!-- Danger Zone Attack Resistance -->
+			<skill id="16608" level="1" /> <!-- Servitor Attack Weakness -->
 		</skillList>
 		<collision>
 			<radius normal="86" />
@@ -3094,8 +3308,11 @@
 		<skillList>
 			<skill id="4416" level="5" /> <!-- Plants -->
 			<skill id="5465" level="1" /> <!-- Earth Attack -->
-			<skill id="14823" level="1" /> <!-- Lethal Strike Resistance -->
+			<skill id="14823" level="1" /> <!-- Instant Kill Attack Resistance -->
 			<skill id="16547" level="10" /> <!-- Danger Zone Attack Resistance -->
+			<skill id="23715" level="1" /> <!-- Power Strike -->
+			<skill id="23716" level="1" /> <!-- Power Smash -->
+			<skill id="23718" level="1" /> <!-- Dust Spray -->
 		</skillList>
 		<collision>
 			<radius normal="14" />
@@ -3136,8 +3353,11 @@
 		<skillList>
 			<skill id="4416" level="5" /> <!-- Plants -->
 			<skill id="5465" level="1" /> <!-- Earth Attack -->
-			<skill id="14823" level="1" /> <!-- Lethal Strike Resistance -->
+			<skill id="14823" level="1" /> <!-- Instant Kill Attack Resistance -->
 			<skill id="16547" level="10" /> <!-- Danger Zone Attack Resistance -->
+			<skill id="23715" level="1" /> <!-- Power Strike -->
+			<skill id="23716" level="1" /> <!-- Power Smash -->
+			<skill id="23718" level="1" /> <!-- Dust Spray -->
 		</skillList>
 		<collision>
 			<radius normal="14" />
@@ -3178,8 +3398,11 @@
 		<skillList>
 			<skill id="4416" level="5" /> <!-- Plants -->
 			<skill id="5465" level="1" /> <!-- Earth Attack -->
-			<skill id="14823" level="1" /> <!-- Lethal Strike Resistance -->
+			<skill id="14823" level="1" /> <!-- Instant Kill Attack Resistance -->
 			<skill id="16547" level="10" /> <!-- Danger Zone Attack Resistance -->
+			<skill id="23715" level="1" /> <!-- Power Strike -->
+			<skill id="23716" level="1" /> <!-- Power Smash -->
+			<skill id="23718" level="1" /> <!-- Dust Spray -->
 		</skillList>
 		<collision>
 			<radius normal="14" />
@@ -3218,8 +3441,11 @@
 		<skillList>
 			<skill id="4416" level="5" /> <!-- Plants -->
 			<skill id="5465" level="1" /> <!-- Earth Attack -->
-			<skill id="14823" level="1" /> <!-- Lethal Strike Resistance -->
+			<skill id="14823" level="1" /> <!-- Instant Kill Attack Resistance -->
 			<skill id="16547" level="10" /> <!-- Danger Zone Attack Resistance -->
+			<skill id="23715" level="1" /> <!-- Power Strike -->
+			<skill id="23716" level="1" /> <!-- Power Smash -->
+			<skill id="23718" level="1" /> <!-- Dust Spray -->
 		</skillList>
 		<collision>
 			<radius normal="14" />
@@ -3254,8 +3480,10 @@
 		<skillList>
 			<skill id="4416" level="13" /> <!-- Fairies -->
 			<skill id="5465" level="1" /> <!-- Earth Attack -->
-			<skill id="14823" level="1" /> <!-- Lethal Strike Resistance -->
+			<skill id="14823" level="1" /> <!-- Instant Kill Attack Resistance -->
 			<skill id="16547" level="10" /> <!-- Danger Zone Attack Resistance -->
+			<skill id="23715" level="1" /> <!-- Power Strike -->
+			<skill id="23716" level="1" /> <!-- Power Smash -->
 		</skillList>
 		<collision>
 			<radius normal="22" />
@@ -3302,6 +3530,8 @@
 			<skill id="5465" level="1" /> <!-- Earth Attack -->
 			<skill id="14823" level="1" /> <!-- Instant Kill Attack Resistance -->
 			<skill id="16547" level="10" /> <!-- Danger Zone Attack Resistance -->
+			<skill id="23715" level="1" /> <!-- Power Strike -->
+			<skill id="23716" level="1" /> <!-- Power Smash -->
 		</skillList>
 		<dropLists>
 			<drop>
@@ -3327,6 +3557,12 @@
 			</speed>
 		</stats>
 		<status attackable="false" />
+		<skillList>
+			<skill id="4416" level="11" /> <!-- Giants -->
+			<skill id="5465" level="1" /> <!-- Earth Attack -->
+			<skill id="14823" level="1" /> <!-- Instant Kill Attack Resistance -->
+			<skill id="16547" level="10" /> <!-- Danger Zone Attack Resistance -->
+		</skillList>
 		<collision>
 			<radius normal="24" />
 			<height normal="46" />
@@ -3441,6 +3677,12 @@
 			</speed>
 		</stats>
 		<status attackable="false" />
+		<skillList>
+			<skill id="4416" level="11" /> <!-- Giants -->
+			<skill id="5465" level="1" /> <!-- Earth Attack -->
+			<skill id="14823" level="1" /> <!-- Instant Kill Attack Resistance -->
+			<skill id="16547" level="10" /> <!-- Danger Zone Attack Resistance -->
+		</skillList>
 		<collision>
 			<radius normal="24" />
 			<height normal="42.5" />
@@ -3457,6 +3699,16 @@
 			</speed>
 		</stats>
 		<status attackable="false" />
+		<skillList>
+			<skill id="4071" level="1" /> <!-- Bow/Crossbow Resistance -->
+			<skill id="4379" level="5" /> <!-- Spear Resistance -->
+			<skill id="4416" level="3" /> <!-- Beast -->
+			<skill id="4461" level="1" /> <!-- Dagger/Rapier Vulnerability -->
+			<skill id="5465" level="1" /> <!-- Earth Attack -->
+			<skill id="14823" level="1" /> <!-- Instant Kill Attack Resistance -->
+			<skill id="16547" level="10" /> <!-- Danger Zone Attack Resistance -->
+			<skill id="16608" level="1" /> <!-- Servitor Attack Weakness -->
+		</skillList>
 		<collision>
 			<radius normal="45" />
 			<height normal="97" />
@@ -3481,14 +3733,14 @@
 			<height normal="97" />
 		</collision>
 		<skillList>
+			<skill id="4071" level="1" /> <!-- Bow/Crossbow Resistance -->
+			<skill id="4379" level="5" /> <!-- Spear Resistance -->
 			<skill id="4416" level="3" /> <!-- Beast -->
+			<skill id="4461" level="1" /> <!-- Dagger/Rapier Vulnerability -->
 			<skill id="5465" level="1" /> <!-- Earth Attack -->
 			<skill id="14823" level="1" /> <!-- Instant Kill Attack Resistance -->
 			<skill id="16547" level="10" /> <!-- Danger Zone Attack Resistance -->
-			<skill id="4379" level="5" /> <!-- Spear Resistance -->
-			<skill id="4461" level="1" /> <!-- Dagger/ Rapier Vulnerability -->
 			<skill id="16608" level="1" /> <!-- Servitor Attack Weakness -->
-			<skill id="4071" level="1" /> <!-- Bow/ Crossbow Resistance -->
 		</skillList>
 		<dropLists>
 			<drop>
@@ -3526,9 +3778,15 @@
 			<height normal="14" />
 		</collision>
 		<skillList>
+			<skill id="4410" level="7" /> <!-- Weak P. Atk. -->
+			<skill id="4411" level="7" /> <!-- Weak M. Atk. -->
 			<skill id="4416" level="7" /> <!-- Spirits -->
 			<skill id="5464" level="1" /> <!-- Wind Attack -->
-			<skill id="14817" level="1" /> <!-- Instant Kill Attack Resistance -->
+			<skill id="14821" level="1" /> <!-- Instant Kill Attack Resistance -->
+			<skill id="23657" level="1" /> <!-- Wind Aura Spike -->
+			<skill id="23659" level="1" /> <!-- Wind Fatal Strike -->
+			<skill id="23663" level="1" /> <!-- Wind Blast -->
+			<skill id="23669" level="1" /> <!-- Wind Defense Down -->
 		</skillList>
 	</npc>
 	<npc id="23798" level="102" type="Monster" name="Delta Bathus" title="Superion Scout">
@@ -3549,13 +3807,10 @@
 		<skillList>
 			<skill id="4416" level="11" /> <!-- Giants -->
 			<skill id="5465" level="1" /> <!-- Earth Attack -->
-			<skill id="14823" level="1" /> <!-- Lethal Strike Resistance -->
+			<skill id="14823" level="1" /> <!-- Instant Kill Attack Resistance -->
 			<skill id="16547" level="10" /> <!-- Danger Zone Attack Resistance -->
-			<skill id="4379" level="5" /> <!-- Spear Resistance -->
-			<skill id="4435" level="5" /> <!-- Greater Stun Resistance -->
-			<skill id="4461" level="1" /> <!-- Dagger/Rapier Vulnerability -->
-			<skill id="16608" level="1" /> <!-- Servitor Attack Weakness -->
-			<skill id="4071" level="1" /> <!-- Bow/Crossbow Resistance -->
+			<skill id="16594" level="1" /> <!-- Plasma Strike -->
+			<skill id="16598" level="1" /> <!-- Stun Strike -->
 		</skillList>
 		<collision>
 			<radius normal="24" />
@@ -3601,12 +3856,10 @@
 		<skillList>
 			<skill id="4416" level="11" /> <!-- Giants -->
 			<skill id="5465" level="1" /> <!-- Earth Attack -->
-			<skill id="14823" level="1" /> <!-- Lethal Strike Resistance -->
+			<skill id="14823" level="1" /> <!-- Instant Kill Attack Resistance -->
 			<skill id="16547" level="10" /> <!-- Danger Zone Attack Resistance -->
-			<skill id="4379" level="5" /> <!-- Spear Resistance -->
-			<skill id="4461" level="1" /> <!-- Dagger/Rapier Vulnerability -->
-			<skill id="16608" level="1" /> <!-- Servitor Attack Weakness -->
-			<skill id="4071" level="1" /> <!-- Bow/Crossbow Resistance -->
+			<skill id="16595" level="1" /> <!-- Plasma Shooter -->
+			<skill id="16599" level="1" /> <!-- Piercing Bolt -->
 		</skillList>
 		<collision>
 			<radius normal="24" />
