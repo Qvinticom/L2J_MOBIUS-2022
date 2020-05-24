@@ -1651,6 +1651,8 @@ public class Config
 			SUBCLASS_STORE_SKILL_COOLTIME = Character.getBoolean("SubclassStoreSkillCooltime", false);
 			SUMMON_STORE_SKILL_COOLTIME = Character.getBoolean("SummonStoreSkillCooltime", true);
 			EFFECT_TICK_RATIO = Character.getLong("EffectTickRatio", 666);
+			FAKE_DEATH_UNTARGET = Character.getBoolean("FakeDeathUntarget", true);
+			FAKE_DEATH_DAMAGE_STAND = Character.getBoolean("FakeDeathDamageStand", false);
 			LIFE_CRYSTAL_NEEDED = Character.getBoolean("LifeCrystalNeeded", true);
 			DIVINE_SP_BOOK_NEEDED = Character.getBoolean("DivineInspirationSpBookNeeded", true);
 			ALT_GAME_SUBCLASS_WITHOUT_QUESTS = Character.getBoolean("AltSubClassWithoutQuests", false);
