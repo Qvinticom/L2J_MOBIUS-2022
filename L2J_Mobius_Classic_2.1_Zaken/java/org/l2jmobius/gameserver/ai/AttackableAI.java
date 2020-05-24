@@ -83,7 +83,6 @@ public class AttackableAI extends CreatureAI
 	private boolean _thinking;
 	
 	private int chaostime = 0;
-	int lastBuffTick;
 	
 	public AttackableAI(Attackable attackable)
 	{
@@ -267,23 +266,6 @@ public class AttackableAI extends CreatureAI
 		// Calculate the attack timeout
 		_attackTimeout = MAX_ATTACK_TIMEOUT + GameTimeController.getInstance().getGameTicks();
 		
-		// self and buffs
-		if ((lastBuffTick + 30) < GameTimeController.getInstance().getGameTicks())
-		{
-			for (Skill buff : getActiveChar().getTemplate().getAISkills(AISkillScope.BUFF))
-			{
-				final Creature buffTarget = skillTargetReconsider(buff, true);
-				if (buffTarget != null)
-				{
-					setTarget(buffTarget);
-					_actor.doCast(buff);
-					setTarget(target);
-					break;
-				}
-			}
-			lastBuffTick = GameTimeController.getInstance().getGameTicks();
-		}
-		
 		// Manage the Attack Intention : Stop current Attack (if necessary), Start a new Attack and Launch Think Event
 		super.onIntentionAttack(target);
 	}
@@ -295,10 +277,12 @@ public class AttackableAI extends CreatureAI
 		{
 			return;
 		}
+		
 		if (maybeMoveToPawn(target, _actor.getMagicalAttackRange(_skill)))
 		{
 			return;
 		}
+		
 		setIntention(AI_INTENTION_ACTIVE);
 		_actor.doCast(_skill, _item, _forceUse, _dontMove);
 	}
@@ -316,6 +300,7 @@ public class AttackableAI extends CreatureAI
 	{
 		final Attackable npc = getActiveChar();
 		WorldObject target = getTarget();
+		
 		// Update every 1s the _globalAggro counter to come close to 0
 		if (_globalAggro != 0)
 		{

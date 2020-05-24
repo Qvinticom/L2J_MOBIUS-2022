@@ -913,7 +913,6 @@ public class AttackableAI extends CreatureAI
 						
 						final WorldObject oldTarget = _actor.getTarget();
 						clientStopMoving(null);
-						
 						_accessor.doCast(sk);
 						_actor.setTarget(oldTarget);
 						return;

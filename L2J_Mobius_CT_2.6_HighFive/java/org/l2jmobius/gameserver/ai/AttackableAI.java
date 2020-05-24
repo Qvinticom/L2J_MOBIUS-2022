@@ -112,7 +112,6 @@ public class AttackableAI extends CreatureAI
 	/** The flag used to indicate that a thinking action is in progress, to prevent recursive thinking. */
 	private boolean _thinking;
 	private int _chaosTime = 0;
-	private int _lastBuffTick;
 	// Fear parameters
 	private int _fearTime;
 	private Future<?> _fearTask = null;
@@ -380,22 +379,6 @@ public class AttackableAI extends CreatureAI
 	{
 		// Calculate the attack timeout
 		_attackTimeout = MAX_ATTACK_TIMEOUT + GameTimeController.getInstance().getGameTicks();
-		
-		// self and buffs
-		if ((_lastBuffTick + 30) < GameTimeController.getInstance().getGameTicks())
-		{
-			for (Skill buff : getActiveChar().getTemplate().getAISkills(AISkillScope.BUFF))
-			{
-				if (checkSkillCastConditions(getActiveChar(), buff) && !_actor.isAffectedBySkill(buff.getId()))
-				{
-					_actor.setTarget(_actor);
-					_actor.doCast(buff);
-					_actor.setTarget(target);
-					break;
-				}
-			}
-			_lastBuffTick = GameTimeController.getInstance().getGameTicks();
-		}
 		
 		// Manage the Attack Intention : Stop current Attack (if necessary), Start a new Attack and Launch Think Event
 		super.onIntentionAttack(target);
@@ -1834,16 +1817,19 @@ public class AttackableAI extends CreatureAI
 		{
 			return false;
 		}
+		
 		// Character is in "skill disabled" mode.
 		if (caster.isSkillDisabled(skill))
 		{
 			return false;
 		}
+		
 		// If is a static skill and magic skill and character is muted or is a physical skill muted and character is physically muted.
 		if (!skill.isStatic() && ((skill.isMagic() && caster.isMuted()) || caster.isPhysicalMuted()))
 		{
 			return false;
 		}
+		
 		return true;
 	}
 	
@@ -1853,6 +1839,7 @@ public class AttackableAI extends CreatureAI
 		{
 			return null;
 		}
+		
 		final Attackable actor = getActiveChar();
 		if (!sk.hasEffectType(EffectType.DISPEL, EffectType.DISPEL_BY_SLOT))
 		{
