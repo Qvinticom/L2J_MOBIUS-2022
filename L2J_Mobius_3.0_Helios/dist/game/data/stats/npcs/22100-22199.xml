@@ -993,6 +993,10 @@
 	</npc>
 	<npc id="22135" level="78" type="Monster" name="Beholder of Light">
 		<parameters>
+			<minions name="Privates">
+				<npc id="22130" count="1" respawnTime="360" weightPoint="1" />
+				<npc id="22131" count="1" respawnTime="360" weightPoint="1" />
+			</minions>
 			<param name="MoveAroundSocial" value="80" />
 			<param name="MoveAroundSocial1" value="80" />
 			<param name="MoveAroundSocial2" value="122" />
@@ -4692,6 +4696,9 @@
 		<parameters>
 			<param name="ag_type" value="1" />
 			<minions name="Privates">
+				<npc id="22218" count="1" respawnTime="360" weightPoint="1" />
+				<npc id="22223" count="1" respawnTime="360" weightPoint="1" />
+				<npc id="22197" count="1" respawnTime="360" weightPoint="1" />
 				<npc id="22197" count="2" respawnTime="0" weightPoint="1" />
 			</minions>
 			<param name="ProbSelfRangeBuff1" value="100" />
@@ -4847,6 +4854,9 @@
 		<parameters>
 			<param name="mobile_type" value="1" />
 			<minions name="Privates">
+				<npc id="22197" count="1" respawnTime="360" weightPoint="1" />
+				<npc id="22218" count="1" respawnTime="360" weightPoint="1" />
+				<npc id="22223" count="1" respawnTime="360" weightPoint="1" />
 				<npc id="22197" count="4" respawnTime="0" weightPoint="1" />
 			</minions>
 			<param name="ProbSelfRangeBuff1" value="100" />

@@ -137,6 +137,10 @@
 	</npc>
 	<npc id="25902" level="96" type="RaidBoss" name="Gigantic Golem" title="Raid Boss">
 		<parameters>
+			<minions name="Privates">
+				<npc id="25903" count="1" respawnTime="360" weightPoint="1" />
+				<npc id="25904" count="1" respawnTime="360" weightPoint="1" />
+			</minions>
 			<skill name="Skill01_ID" id="15369" level="1" />
 			<skill name="Skill02_ID" id="15367" level="1" />
 			<param name="Skill01_Probablity" value="300" />
@@ -1547,6 +1551,13 @@
 		</collision>
 	</npc>
 	<npc id="25933" level="93" type="RaidBoss" name="Garden Patrol Captain" title="Raid Boss">
+		<parameters>
+			<minions name="Privates">
+				<npc id="25934" count="1" respawnTime="360" weightPoint="1" />
+				<npc id="25935" count="1" respawnTime="360" weightPoint="1" />
+				<npc id="25936" count="1" respawnTime="360" weightPoint="1" />
+			</minions>
+		</parameters>
 		<race>HUMANOID</race>
 		<sex>FEMALE</sex>
 		<acquire exp="3969891000" sp="952773" raidPoints="30" />

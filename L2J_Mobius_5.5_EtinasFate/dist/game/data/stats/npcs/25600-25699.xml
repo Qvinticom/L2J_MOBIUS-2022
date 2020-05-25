@@ -1818,6 +1818,9 @@
 	</npc>
 	<npc id="25634" level="81" type="Monster" name="Cohemenes" title="Soul Collector">
 		<parameters>
+			<minions name="Privates">
+				<npc id="25635" count="1" respawnTime="360" weightPoint="1" />
+			</minions>
 			<param name="raise" value="5" />
 			<skill name="Skill01_ID" id="5898" level="2" />
 			<skill name="Skill02_ID" id="5904" level="2" />

@@ -500,6 +500,9 @@
 	</npc>
 	<npc id="27021" level="22" type="Monster" name="Kirunak" title="Quest Monster">
 		<parameters>
+			<minions name="Privates">
+				<npc id="20492" count="3" respawnTime="360" weightPoint="1" />
+			</minions>
 			<param name="MoveAroundSocial" value="0" />
 			<param name="MoveAroundSocial1" value="0" />
 			<param name="MoveAroundSocial2" value="0" />

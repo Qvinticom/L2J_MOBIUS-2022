@@ -1098,6 +1098,9 @@
 	</npc>
 	<npc id="20935" level="37" type="Monster" name="Wasp Leader">
 		<parameters>
+			<minions name="Privates">
+				<npc id="20934" count="3" respawnTime="360" weightPoint="1" />
+			</minions>
 			<param name="MoveAroundSocial" value="0" />
 			<param name="MoveAroundSocial1" value="0" />
 			<param name="MoveAroundSocial2" value="0" />
@@ -1162,6 +1165,11 @@
 	</npc>
 	<npc id="20936" level="40" type="Monster" name="Tanor Silenos">
 		<parameters>
+			<minions name="Privates">
+				<npc id="20939" count="1" respawnTime="360" weightPoint="1" />
+				<npc id="20937" count="1" respawnTime="360" weightPoint="1" />
+				<npc id="20938" count="1" respawnTime="360" weightPoint="1" />
+			</minions>
 			<param name="MoveAroundSocial" value="100" />
 			<param name="MoveAroundSocial1" value="50" />
 			<param name="MoveAroundSocial2" value="100" />

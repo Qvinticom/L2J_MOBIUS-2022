@@ -57,6 +57,11 @@
 		</collision>
 	</npc>
 	<npc id="23301" level="95" type="Monster" name="Laido Destruction Golem">
+		<parameters>
+			<minions name="Privates">
+				<npc id="23302" count="1" respawnTime="360" weightPoint="1" />
+			</minions>
+		</parameters>
 		<race>CONSTRUCT</race>
 		<sex>FEMALE</sex>
 		<acquire exp="4120132" sp="988" />
@@ -1762,6 +1767,12 @@
 		</collision>
 	</npc>
 	<npc id="23350" level="87" type="Monster" name="Demonic Noctum" title="Gravekeeper">
+		<parameters>
+			<minions name="Privates">
+				<npc id="22940" count="1" respawnTime="360" weightPoint="1" />
+				<npc id="22946" count="2" respawnTime="360" weightPoint="1" />
+			</minions>
+		</parameters>
 		<race>HUMANOID</race>
 		<sex>FEMALE</sex>
 		<acquire exp="3123732" sp="749" />

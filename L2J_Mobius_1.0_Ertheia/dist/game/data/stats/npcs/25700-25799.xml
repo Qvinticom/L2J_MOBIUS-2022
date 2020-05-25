@@ -2426,6 +2426,9 @@
 	<npc id="25745" level="92" type="RaidBoss" name="Kimerian" title="Fairy Leader">
 		<!-- TODO: Must be confirmed -->
 		<parameters>
+			<minions name="Privates">
+				<npc id="25746" count="4" respawnTime="360" weightPoint="1" />
+			</minions>
 			<param name="IsAggressive" value="1" />
 			<skill name="Skill01_ID" id="14061" level="1" />
 			<skill name="Skill02_ID" id="14062" level="1" />
@@ -3182,6 +3185,9 @@
 	<npc id="25758" level="95" type="RaidBoss" name="Kimerian" title="Fairy Leader">
 		<!-- TODO: Must be confirmed -->
 		<parameters>
+			<minions name="Privates">
+				<npc id="25759" count="4" respawnTime="360" weightPoint="1" />
+			</minions>
 			<param name="IsAggressive" value="1" />
 			<skill name="Skill01_ID" id="14061" level="2" />
 			<skill name="Skill02_ID" id="14062" level="2" />
@@ -4038,6 +4044,14 @@
 		</collision>
 	</npc>
 	<npc id="25772" level="87" type="Monster" name="Harnak's Wraith" title="Greater Giant King">
+		<parameters>
+			<minions name="Privates">
+				<npc id="22939" count="3" respawnTime="360" weightPoint="1" />
+				<npc id="22940" count="3" respawnTime="360" weightPoint="1" />
+				<npc id="22941" count="3" respawnTime="360" weightPoint="1" />
+				<npc id="22942" count="3" respawnTime="360" weightPoint="1" />
+			</minions>
+		</parameters>
 		<race>HUMANOID</race>
 		<sex>FEMALE</sex>
 		<mpReward value="53" type="DIFF" ticks="10" affects="PARTY" />
@@ -4129,6 +4143,10 @@
 	<npc id="25776" level="92" type="RaidBoss" name="Royal Guard" title="Apherus Garden">
 		<!-- TODO: Must be confirmed -->
 		<parameters>
+			<minions name="Privates">
+				<npc id="25778" count="3" respawnTime="360" weightPoint="1" />
+				<npc id="25777" count="1" respawnTime="360" weightPoint="1" />
+			</minions>
 			<param name="IsAggressive" value="1" />
 			<skill name="Skill01_ID" id="6599" level="25" />
 			<param name="Attack_BoostValue" value="139" />
@@ -4682,6 +4700,10 @@
 	<npc id="25787" level="87" type="RaidBoss" name="Lachikios" title="Son-in-law of the King">
 		<!-- TODO: Must be confirmed -->
 		<parameters>
+			<minions name="Privates">
+				<npc id="25788" count="1" respawnTime="360" weightPoint="1" />
+				<npc id="25789" count="1" respawnTime="360" weightPoint="1" />
+			</minions>
 			<skill name="Skill01_ID" id="14100" level="3" />
 			<skill name="Skill04_ID" id="14105" level="3" />
 			<param name="Attack_BoostValue" value="129" />

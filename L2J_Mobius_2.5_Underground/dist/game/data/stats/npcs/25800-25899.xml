@@ -375,6 +375,11 @@
 		</collision>
 	</npc>
 	<npc id="25809" level="59" type="RaidBoss" name="Vladimir" title="Executioner">
+		<parameters>
+			<minions name="Privates">
+				<npc id="25810" count="2" respawnTime="360" weightPoint="1" />
+			</minions>
+		</parameters>
 		<race>UNDEAD</race>
 		<sex>MALE</sex>
 		<acquire exp="433094" sp="103" />
@@ -452,6 +457,11 @@
 		</collision>
 	</npc>
 	<npc id="25811" level="62" type="RaidBoss" name="Lazearth" title="Destroyer">
+		<parameters>
+			<minions name="Privates">
+				<npc id="25812" count="2" respawnTime="360" weightPoint="1" />
+			</minions>
+		</parameters>
 		<race>UNDEAD</race>
 		<sex>MALE</sex>
 		<acquire exp="433606" sp="104" />
@@ -530,6 +540,11 @@
 		</collision>
 	</npc>
 	<npc id="25813" level="66" type="RaidBoss" name="Byron" title="Queen of Blood">
+		<parameters>
+			<minions name="Privates">
+				<npc id="25814" count="2" respawnTime="360" weightPoint="1" />
+			</minions>
+		</parameters>
 		<race>DEMONIC</race>
 		<sex>FEMALE</sex>
 		<acquire exp="470081" sp="112" />
@@ -654,6 +669,11 @@
 		</collision>
 	</npc>
 	<npc id="25816" level="72" type="RaidBoss" name="Heaven's Palace Sniper Captain">
+		<parameters>
+			<minions name="Privates">
+				<npc id="25817" count="2" respawnTime="360" weightPoint="1" />
+			</minions>
+		</parameters>
 		<race>DIVINE</race>
 		<sex>MALE</sex>
 		<acquire exp="518128" sp="124" />
@@ -733,6 +753,11 @@
 		</collision>
 	</npc>
 	<npc id="25818" level="75" type="RaidBoss" name="Emperor of Heaven's Palace">
+		<parameters>
+			<minions name="Privates">
+				<npc id="25819" count="2" respawnTime="360" weightPoint="1" />
+			</minions>
+		</parameters>
 		<race>DIVINE</race>
 		<sex>MALE</sex>
 		<acquire exp="540997" sp="129" />
@@ -812,6 +837,11 @@
 		</collision>
 	</npc>
 	<npc id="25820" level="75" type="RaidBoss" name="Heaven's Palace Goddess">
+		<parameters>
+			<minions name="Privates">
+				<npc id="25821" count="2" respawnTime="360" weightPoint="1" />
+			</minions>
+		</parameters>
 		<race>DIVINE</race>
 		<sex>FEMALE</sex>
 		<acquire exp="540997" sp="129" />
@@ -1026,6 +1056,9 @@
 	</npc>
 	<npc id="25825" level="97" type="RaidBoss" name="Ron" title="Raid Boss">
 		<parameters>
+			<minions name="Privates">
+				<npc id="25826" count="2" respawnTime="360" weightPoint="1" />
+			</minions>
 			<param name="IsAggressive" value="1" />
 			<skill name="Skill01_ID" id="14271" level="1" />
 			<skill name="Skill02_ID" id="14272" level="1" />
@@ -1870,6 +1903,9 @@
 	</npc>
 	<npc id="25841" level="95" type="RaidBoss" name="Sir Lesyinda of the Black Shadow" title="Raid Boss">
 		<parameters>
+			<minions name="Privates">
+				<npc id="25842" count="2" respawnTime="360" weightPoint="1" />
+			</minions>
 			<param name="IsAggressive" value="1" />
 			<skill name="Skill01_ID" id="14357" level="1" />
 			<skill name="Rage_Skill" id="14491" level="1" />

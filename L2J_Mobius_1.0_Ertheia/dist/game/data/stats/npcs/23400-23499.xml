@@ -1149,6 +1149,11 @@
 		</collision>
 	</npc>
 	<npc id="23428" level="83" type="Monster" name="Dragonblood Captain">
+		<parameters>
+			<minions name="Privates">
+				<npc id="23429" count="2" respawnTime="360" weightPoint="1" />
+			</minions>
+		</parameters>
 		<race>DRAGON</race>
 		<sex>MALE</sex>
 		<acquire exp="440867" sp="105" />

@@ -58,6 +58,12 @@
 	</npc>
 	<npc id="26102" level="101" type="RaidBoss" name="Dark Rider" title="Betrayed">
 		<!-- Source: www.l2wiki.com -->
+		<parameters>
+			<minions name="Privates">
+				<npc id="26104" count="2" respawnTime="360" weightPoint="1" />
+				<npc id="26103" count="2" respawnTime="360" weightPoint="1" />
+			</minions>
+		</parameters>
 		<race>DRAGON</race>
 		<acquire exp="58137911944" sp="116275894" raidPoints="7" />
 		<stats str="164" int="188" dex="55" wit="78" con="111" men="149">
@@ -3233,6 +3239,12 @@
 	</npc>
 	<npc id="26152" level="97" type="RaidBoss" name="Enhanced Core" title="Helios' Calling">
 		<!-- Source: www.l2wiki.com -->
+		<parameters>
+			<minions name="Privates">
+				<npc id="26154" count="9" respawnTime="360" weightPoint="1" />
+				<npc id="26153" count="7" respawnTime="360" weightPoint="1" />
+			</minions>
+		</parameters>
 		<race>CONSTRUCT</race>
 		<sex>MALE</sex>
 		<acquire exp="79902417297" sp="127843867" raidPoints="100" />
@@ -3436,6 +3448,14 @@
 	</npc>
 	<npc id="26157" level="92" type="RaidBoss" name="Enhanced Harnak's Wraith" title="Helios' Calling">
 		<!-- Source: www.l2wiki.com -->
+		<parameters>
+			<minions name="Privates">
+				<npc id="26158" count="3" respawnTime="360" weightPoint="1" />
+				<npc id="26159" count="3" respawnTime="360" weightPoint="1" />
+				<npc id="26160" count="3" respawnTime="360" weightPoint="1" />
+				<npc id="26161" count="3" respawnTime="360" weightPoint="1" />
+			</minions>
+		</parameters>
 		<race>GIANT</race>
 		<sex>MALE</sex>
 		<acquire exp="28884659443" sp="38416597" raidPoints="100" />
@@ -3634,6 +3654,14 @@
 	</npc>
 	<npc id="26162" level="101" type="RaidBoss" name="Demon Worshipper Dorgon" title="Raid Boss">
 		<!-- Source: www.l2wiki.com -->
+		<parameters>
+			<minions name="Privates">
+				<npc id="26166" count="1" respawnTime="360" weightPoint="1" />
+				<npc id="26169" count="1" respawnTime="360" weightPoint="1" />
+				<npc id="26167" count="1" respawnTime="360" weightPoint="1" />
+				<npc id="26168" count="1" respawnTime="360" weightPoint="1" />
+			</minions>
+		</parameters>
 		<race>HUMANOID</race>
 		<acquire exp="68063897677" sp="136127856" raidPoints="100" />
 		<stats str="164" int="188" dex="55" wit="78" con="111" men="149">
@@ -3741,6 +3769,14 @@
 		</collision>
 	</npc>
 	<npc id="26163" level="101" type="RaidBoss" name="Demon Worshipper Zarka" title="Raid Boss">
+		<parameters>
+			<minions name="Privates">
+				<npc id="26166" count="1" respawnTime="360" weightPoint="1" />
+				<npc id="26169" count="1" respawnTime="360" weightPoint="1" />
+				<npc id="26167" count="1" respawnTime="360" weightPoint="1" />
+				<npc id="26168" count="1" respawnTime="360" weightPoint="1" />
+			</minions>
+		</parameters>
 		<race>HUMANOID</race>
 		<sex>MALE</sex>
 		<acquire exp="68063897677" sp="136127856" raidPoints="100" />
@@ -3850,6 +3886,14 @@
 	</npc>
 	<npc id="26164" level="101" type="RaidBoss" name="Demon Worshipper Kultaan" title="Raid Boss">
 		<!-- Source: www.l2wiki.com -->
+		<parameters>
+			<minions name="Privates">
+				<npc id="26166" count="1" respawnTime="360" weightPoint="1" />
+				<npc id="26169" count="1" respawnTime="360" weightPoint="1" />
+				<npc id="26167" count="1" respawnTime="360" weightPoint="1" />
+				<npc id="26168" count="1" respawnTime="360" weightPoint="1" />
+			</minions>
+		</parameters>
 		<race>HUMANOID</race>
 		<acquire exp="68063897677" sp="136127856" raidPoints="100" />
 		<stats str="164" int="188" dex="55" wit="78" con="111" men="149">
@@ -3957,6 +4001,14 @@
 		</collision>
 	</npc>
 	<npc id="26165" level="101" type="RaidBoss" name="Demon Worshipper Nortan" title="Raid Boss">
+		<parameters>
+			<minions name="Privates">
+				<npc id="26166" count="1" respawnTime="360" weightPoint="1" />
+				<npc id="26169" count="1" respawnTime="360" weightPoint="1" />
+				<npc id="26167" count="1" respawnTime="360" weightPoint="1" />
+				<npc id="26168" count="1" respawnTime="360" weightPoint="1" />
+			</minions>
+		</parameters>
 		<race>HUMANOID</race>
 		<sex>MALE</sex>
 		<acquire exp="68063897677" sp="136127856" raidPoints="100" />
@@ -4137,6 +4189,14 @@
 		</collision>
 	</npc>
 	<npc id="26170" level="101" type="RaidBoss" name="Valac" title="Raid Boss">
+		<parameters>
+			<minions name="Privates">
+				<npc id="26176" count="1" respawnTime="360" weightPoint="1" />
+				<npc id="26174" count="1" respawnTime="360" weightPoint="1" />
+				<npc id="26177" count="1" respawnTime="360" weightPoint="1" />
+				<npc id="26175" count="1" respawnTime="360" weightPoint="1" />
+			</minions>
+		</parameters>
 		<race>DEMONIC</race>
 		<sex>MALE</sex>
 		<acquire exp="68063897677" sp="136127856" raidPoints="100" />
@@ -4245,6 +4305,14 @@
 		</dropLists>
 	</npc>
 	<npc id="26171" level="101" type="RaidBoss" name="Kurion" title="Raid Boss">
+		<parameters>
+			<minions name="Privates">
+				<npc id="26176" count="1" respawnTime="360" weightPoint="1" />
+				<npc id="26174" count="1" respawnTime="360" weightPoint="1" />
+				<npc id="26177" count="1" respawnTime="360" weightPoint="1" />
+				<npc id="26175" count="1" respawnTime="360" weightPoint="1" />
+			</minions>
+		</parameters>
 		<race>DEMONIC</race>
 		<sex>MALE</sex>
 		<acquire exp="68063897677" sp="136127856" raidPoints="100" />
@@ -4353,6 +4421,14 @@
 		</dropLists>
 	</npc>
 	<npc id="26172" level="101" type="RaidBoss" name="Atluum" title="Raid Boss">
+		<parameters>
+			<minions name="Privates">
+				<npc id="26176" count="1" respawnTime="360" weightPoint="1" />
+				<npc id="26174" count="1" respawnTime="360" weightPoint="1" />
+				<npc id="26177" count="1" respawnTime="360" weightPoint="1" />
+				<npc id="26175" count="1" respawnTime="360" weightPoint="1" />
+			</minions>
+		</parameters>
 		<race>DEMONIC</race>
 		<sex>MALE</sex>
 		<acquire exp="68063897677" sp="136127856" raidPoints="100" />
@@ -4462,6 +4538,14 @@
 	</npc>
 	<npc id="26173" level="101" type="RaidBoss" name="Lebruum" title="Raid Boss">
 		<!-- Source: www.l2wiki.com -->
+		<parameters>
+			<minions name="Privates">
+				<npc id="26176" count="1" respawnTime="360" weightPoint="1" />
+				<npc id="26174" count="1" respawnTime="360" weightPoint="1" />
+				<npc id="26177" count="1" respawnTime="360" weightPoint="1" />
+				<npc id="26175" count="1" respawnTime="360" weightPoint="1" />
+			</minions>
+		</parameters>
 		<race>DEMONIC</race>
 		<acquire exp="68063897677" sp="136127856" raidPoints="100" />
 		<stats str="164" int="188" dex="55" wit="78" con="111" men="149">
@@ -4652,6 +4736,14 @@
 	</npc>
 	<npc id="26178" level="103" type="RaidBoss" name="Berserker Hard" title="Raid Boss">
 		<!-- Source: www.l2wiki.com -->
+		<parameters>
+			<minions name="Privates">
+				<npc id="26182" count="1" respawnTime="360" weightPoint="1" />
+				<npc id="26185" count="1" respawnTime="360" weightPoint="1" />
+				<npc id="26184" count="1" respawnTime="360" weightPoint="1" />
+				<npc id="26183" count="1" respawnTime="360" weightPoint="1" />
+			</minions>
+		</parameters>
 		<race>HUMANOID</race>
 		<acquire exp="101938380030" sp="203876760" raidPoints="100" />
 		<stats str="164" int="188" dex="55" wit="78" con="111" men="149">
@@ -4760,6 +4852,14 @@
 	</npc>
 	<npc id="26179" level="103" type="RaidBoss" name="Patrol Commander Pho" title="Raid Boss">
 		<!-- Source: www.l2wiki.com -->
+		<parameters>
+			<minions name="Privates">
+				<npc id="26182" count="1" respawnTime="360" weightPoint="1" />
+				<npc id="26185" count="1" respawnTime="360" weightPoint="1" />
+				<npc id="26184" count="1" respawnTime="360" weightPoint="1" />
+				<npc id="26183" count="1" respawnTime="360" weightPoint="1" />
+			</minions>
+		</parameters>
 		<race>HUMANOID</race>
 		<acquire exp="101938380030" sp="203876760" raidPoints="100" />
 		<stats str="164" int="188" dex="55" wit="78" con="111" men="149">
@@ -4868,6 +4968,14 @@
 	</npc>
 	<npc id="26180" level="103" type="RaidBoss" name="Guardian Gastra" title="Raid Boss">
 		<!-- Source: www.l2wiki.com -->
+		<parameters>
+			<minions name="Privates">
+				<npc id="26182" count="1" respawnTime="360" weightPoint="1" />
+				<npc id="26185" count="1" respawnTime="360" weightPoint="1" />
+				<npc id="26184" count="1" respawnTime="360" weightPoint="1" />
+				<npc id="26183" count="1" respawnTime="360" weightPoint="1" />
+			</minions>
+		</parameters>
 		<race>UNDEAD</race>
 		<acquire exp="101938380030" sp="203876760" raidPoints="100" />
 		<stats str="164" int="188" dex="55" wit="78" con="111" men="149">
@@ -4976,6 +5084,14 @@
 	</npc>
 	<npc id="26181" level="103" type="RaidBoss" name="Dark Wizard Ruby" title="Raid Boss">
 		<!-- Source: www.l2wiki.com -->
+		<parameters>
+			<minions name="Privates">
+				<npc id="26182" count="1" respawnTime="360" weightPoint="1" />
+				<npc id="26185" count="1" respawnTime="360" weightPoint="1" />
+				<npc id="26184" count="1" respawnTime="360" weightPoint="1" />
+				<npc id="26183" count="1" respawnTime="360" weightPoint="1" />
+			</minions>
+		</parameters>
 		<race>HUMANOID</race>
 		<acquire exp="101938380030" sp="203876760" raidPoints="100" />
 		<equipment rhand="17425" />
@@ -5156,6 +5272,14 @@
 	</npc>
 	<npc id="26186" level="103" type="RaidBoss" name="Wandering Croamis" title="Raid Boss">
 		<!-- Source: www.l2wiki.com -->
+		<parameters>
+			<minions name="Privates">
+				<npc id="26191" count="1" respawnTime="360" weightPoint="1" />
+				<npc id="26192" count="1" respawnTime="360" weightPoint="1" />
+				<npc id="26190" count="1" respawnTime="360" weightPoint="1" />
+				<npc id="26193" count="1" respawnTime="360" weightPoint="1" />
+			</minions>
+		</parameters>
 		<race>ELEMENTAL</race>
 		<acquire exp="101938380030" sp="203876760" raidPoints="100" />
 		<stats str="164" int="188" dex="55" wit="78" con="111" men="149">
@@ -5264,6 +5388,14 @@
 	</npc>
 	<npc id="26187" level="103" type="RaidBoss" name="Wandering Harpe" title="Raid Boss">
 		<!-- Source: www.l2wiki.com -->
+		<parameters>
+			<minions name="Privates">
+				<npc id="26191" count="1" respawnTime="360" weightPoint="1" />
+				<npc id="26192" count="1" respawnTime="360" weightPoint="1" />
+				<npc id="26190" count="1" respawnTime="360" weightPoint="1" />
+				<npc id="26193" count="1" respawnTime="360" weightPoint="1" />
+			</minions>
+		</parameters>
 		<race>ELEMENTAL</race>
 		<acquire exp="101938380030" sp="203876760" raidPoints="100" />
 		<stats str="164" int="188" dex="55" wit="78" con="111" men="149">
@@ -5372,6 +5504,14 @@
 	</npc>
 	<npc id="26188" level="103" type="RaidBoss" name="Wandering Barrena" title="Raid Boss">
 		<!-- Source: www.l2wiki.com -->
+		<parameters>
+			<minions name="Privates">
+				<npc id="26191" count="1" respawnTime="360" weightPoint="1" />
+				<npc id="26192" count="1" respawnTime="360" weightPoint="1" />
+				<npc id="26190" count="1" respawnTime="360" weightPoint="1" />
+				<npc id="26193" count="1" respawnTime="360" weightPoint="1" />
+			</minions>
+		</parameters>
 		<race>ELEMENTAL</race>
 		<acquire exp="101938380030" sp="203876760" raidPoints="100" />
 		<stats str="164" int="188" dex="55" wit="78" con="111" men="149">
@@ -5480,6 +5620,14 @@
 	</npc>
 	<npc id="26189" level="103" type="RaidBoss" name="Wandering Purka" title="Raid Boss">
 		<!-- Source: www.l2wiki.com -->
+		<parameters>
+			<minions name="Privates">
+				<npc id="26191" count="1" respawnTime="360" weightPoint="1" />
+				<npc id="26192" count="1" respawnTime="360" weightPoint="1" />
+				<npc id="26190" count="1" respawnTime="360" weightPoint="1" />
+				<npc id="26193" count="1" respawnTime="360" weightPoint="1" />
+			</minions>
+		</parameters>
 		<race>ELEMENTAL</race>
 		<acquire exp="101938380030" sp="203876760" raidPoints="100" />
 		<stats str="164" int="188" dex="55" wit="78" con="111" men="149">

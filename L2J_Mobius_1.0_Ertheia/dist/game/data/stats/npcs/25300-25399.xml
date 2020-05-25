@@ -73,7 +73,6 @@
 		</collision>
 	</npc>
 	<npc id="25303" level="80" type="Monster" name="Tayr's Aide" title="Raid Fighter">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<skill name="DDMagic_a" id="4195" level="9" />
 			<skill name="Debuff_a" id="4200" level="9" />
@@ -115,7 +114,6 @@
 		</collision>
 	</npc>
 	<npc id="25304" level="80" type="Monster" name="Tayr's Royal Guard" title="Raid Fighter">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<skill name="PhysicalSpecial_a" id="4741" level="9" />
 		</parameters>
@@ -432,7 +430,6 @@
 		</collision>
 	</npc>
 	<npc id="25313" level="80" type="Monster" name="Mos' Aide" title="Raid Fighter">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<skill name="HealMagic_a" id="4786" level="9" />
 			<skill name="SelfRangeBuff_a" id="4212" level="9" />
@@ -474,7 +471,6 @@
 		</collision>
 	</npc>
 	<npc id="25314" level="80" type="Monster" name="Mos' Escort" title="Raid Fighter">
-		<!-- Confirmed CT2.5 -->
 		<race>HUMANOID</race>
 		<sex>MALE</sex>
 		<equipment rhand="142" /> <!-- Keshanberk -->

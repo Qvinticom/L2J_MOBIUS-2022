@@ -309,6 +309,10 @@
 	</npc>
 	<npc id="27346" level="79" type="Monster" name="Shilen's Evil Thoughts">
 		<parameters>
+			<minions name="Privates">
+				<npc id="27399" count="1" respawnTime="360" weightPoint="1" />
+				<npc id="27402" count="1" respawnTime="360" weightPoint="1" />
+			</minions>
 			<param name="MoveAroundSocial" value="150" />
 			<param name="MoveAroundSocial1" value="150" />
 			<param name="MoveAroundSocial2" value="150" />

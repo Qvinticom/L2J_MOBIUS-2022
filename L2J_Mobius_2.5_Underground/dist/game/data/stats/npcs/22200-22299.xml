@@ -2,6 +2,11 @@
 <list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../xsd/npcs.xsd">
 	<npc id="22200" level="80" type="Monster" name="Ornithomimus">
 		<parameters>
+			<minions name="Privates">
+				<npc id="22202" count="1" respawnTime="360" weightPoint="1" />
+				<npc id="22219" count="1" respawnTime="360" weightPoint="1" />
+				<npc id="22201" count="1" respawnTime="360" weightPoint="1" />
+			</minions>
 			<param name="ag_type" value="0" />
 			<param name="ProbSelfRangeBuff1" value="50" />
 			<param name="ProbPhysicalSpecial1" value="33" />
@@ -252,6 +257,12 @@
 	</npc>
 	<npc id="22203" level="80" type="Monster" name="Deinonychus">
 		<parameters>
+			<minions name="Privates">
+				<npc id="22205" count="1" respawnTime="360" weightPoint="1" />
+				<npc id="22220" count="1" respawnTime="360" weightPoint="1" />
+				<npc id="22225" count="1" respawnTime="360" weightPoint="1" />
+				<npc id="22204" count="1" respawnTime="360" weightPoint="1" />
+			</minions>
 			<param name="ag_type" value="0" />
 			<param name="ProbSelfRangeBuff1" value="100" />
 			<param name="ProbPhysicalSpecial1" value="33" />
@@ -500,6 +511,11 @@
 	</npc>
 	<npc id="22208" level="80" type="Monster" name="Pachycephalosaurus">
 		<parameters>
+			<minions name="Privates">
+				<npc id="22209" count="1" respawnTime="360" weightPoint="1" />
+				<npc id="22210" count="1" respawnTime="360" weightPoint="1" />
+				<npc id="22221" count="1" respawnTime="360" weightPoint="1" />
+			</minions>
 			<param name="ag_type" value="1" />
 			<param name="ProbSelfRangeBuff1" value="50" />
 			<param name="ProbPhysicalSpecial1" value="33" />
@@ -738,6 +754,11 @@
 	</npc>
 	<npc id="22211" level="80" type="Monster" name="Wild Strider">
 		<parameters>
+			<minions name="Privates">
+				<npc id="22212" count="1" respawnTime="360" weightPoint="1" />
+				<npc id="22213" count="1" respawnTime="360" weightPoint="1" />
+				<npc id="22222" count="1" respawnTime="360" weightPoint="1" />
+			</minions>
 			<param name="ag_type" value="1" />
 			<param name="ProbSelfRangeBuff1" value="100" />
 			<param name="ProbPhysicalSpecial1" value="3" />

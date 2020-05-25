@@ -888,6 +888,9 @@
 	</npc>
 	<npc id="22844" level="85" type="Monster" name="Dragon Knight">
 		<parameters>
+			<minions name="Privates">
+				<npc id="22847" count="2" respawnTime="360" weightPoint="1" />
+			</minions>
 			<param name="IsAggressive" value="1" />
 			<skill name="Skill01_ID" id="6763" level="1" />
 			<skill name="Skill02_ID" id="6761" level="1" />
@@ -961,6 +964,9 @@
 	</npc>
 	<npc id="22845" level="85" type="Monster" name="Dragon Knight">
 		<parameters>
+			<minions name="Privates">
+				<npc id="22847" count="4" respawnTime="360" weightPoint="1" />
+			</minions>
 			<param name="IsAggressive" value="1" />
 			<skill name="Skill01_ID" id="6763" level="1" />
 			<skill name="Skill02_ID" id="6761" level="1" />
@@ -1032,6 +1038,9 @@
 	</npc>
 	<npc id="22846" level="85" type="Monster" name="Elite Dragon Knight">
 		<parameters>
+			<minions name="Privates">
+				<npc id="22847" count="8" respawnTime="360" weightPoint="1" />
+			</minions>
 			<param name="IsAggressive" value="1" />
 			<skill name="Skill01_ID" id="6763" level="1" />
 			<skill name="Skill02_ID" id="6761" level="1" />

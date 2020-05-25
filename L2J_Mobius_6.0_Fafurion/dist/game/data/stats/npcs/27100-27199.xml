@@ -1259,6 +1259,11 @@
 		</collision>
 	</npc>
 	<npc id="27181" level="60" type="Monster" name="Imperial Gravekeeper" title="Quest Monster">
+		<parameters>
+			<minions name="Privates">
+				<npc id="27180" count="4" respawnTime="360" weightPoint="1" />
+			</minions>
+		</parameters>
 		<race>UNDEAD</race>
 		<sex>MALE</sex>
 		<equipment rhand="1472" /> <!-- Dreadbane -->

@@ -366,6 +366,12 @@
 		</collision>
 	</npc>
 	<npc id="18808" level="82" type="Monster" name="Dark Shaman Varangka">
+		<parameters>
+			<minions name="Privates">
+				<npc id="18810" count="1" respawnTime="360" weightPoint="1" />
+				<npc id="18809" count="1" respawnTime="360" weightPoint="1" />
+			</minions>
+		</parameters>
 		<race>HUMANOID</race>
 		<sex>MALE</sex>
 		<equipment rhand="6719" /> <!-- Monster Only (Ketra Orc Chieftain) -->

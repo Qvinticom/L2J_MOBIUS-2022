@@ -806,6 +806,10 @@
 	</npc>
 	<npc id="23622" level="100" type="Monster" name="Unit 7 Elite Soldier" title="Ashen Shadow">
 		<parameters>
+			<minions name="Privates">
+				<npc id="23649" count="1" respawnTime="360" weightPoint="1" />
+				<npc id="23648" count="1" respawnTime="360" weightPoint="1" />
+			</minions>
 			<skill name="Skill_TYPE1" id="23758" level="1" />
 			<skill name="Skill_TYPE2" id="23759" level="1" />
 			<skill name="Skill_TYPE3" id="23760" level="1" />
@@ -1275,6 +1279,10 @@
 	</npc>
 	<npc id="23630" level="100" type="Monster" name="Unit 7 Elite Soldier" title="Ashen Shadow">
 		<parameters>
+			<minions name="Privates">
+				<npc id="23649" count="1" respawnTime="360" weightPoint="1" />
+				<npc id="23648" count="1" respawnTime="360" weightPoint="1" />
+			</minions>
 			<skill name="Skill_TYPE1" id="23758" level="1" />
 			<skill name="Skill_TYPE2" id="23759" level="1" />
 			<skill name="Skill_TYPE3" id="23760" level="1" />
@@ -1744,6 +1752,10 @@
 	</npc>
 	<npc id="23638" level="100" type="Monster" name="Unit 7 Elite Soldier" title="Ashen Shadow">
 		<parameters>
+			<minions name="Privates">
+				<npc id="23649" count="1" respawnTime="360" weightPoint="1" />
+				<npc id="23648" count="1" respawnTime="360" weightPoint="1" />
+			</minions>
 			<skill name="Skill_TYPE1" id="23758" level="1" />
 			<skill name="Skill_TYPE2" id="23759" level="1" />
 			<skill name="Skill_TYPE3" id="23760" level="1" />
@@ -2213,6 +2225,10 @@
 	</npc>
 	<npc id="23646" level="100" type="Monster" name="Unit 7 Elite Soldier" title="Ashen Shadow">
 		<parameters>
+			<minions name="Privates">
+				<npc id="23649" count="1" respawnTime="360" weightPoint="1" />
+				<npc id="23648" count="1" respawnTime="360" weightPoint="1" />
+			</minions>
 			<skill name="Skill_TYPE1" id="23758" level="1" />
 			<skill name="Skill_TYPE2" id="23759" level="1" />
 			<skill name="Skill_TYPE3" id="23760" level="1" />

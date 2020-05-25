@@ -1030,6 +1030,9 @@
 	</npc>
 	<npc id="25531" level="81" type="RaidBoss" name="Darnel" title="Torture Maiden">
 		<parameters>
+			<minions name="Privates">
+				<npc id="22302" count="1" respawnTime="360" weightPoint="1" />
+			</minions>
 			<param name="InzoneRestriction" value="1" />
 			<skill name="SelfRangeDebuff_a" id="4182" level="9" />
 			<skill name="debuff" id="4189" level="9" />
@@ -1597,6 +1600,9 @@
 	</npc>
 	<npc id="25540" level="83" type="RaidBoss" name="Demon Prince" title="Raid Boss">
 		<parameters>
+			<minions name="Privates">
+				<npc id="25541" count="6" respawnTime="360" weightPoint="1" />
+			</minions>
 			<param name="IsAggressive" value="1" />
 			<param name="Aggressive_Time" value="5" />
 			<param name="Skill01_Target" value="3" />
@@ -1836,6 +1842,9 @@
 	</npc>
 	<npc id="25544" level="83" type="RaidBoss" name="Tully" title="Steel Citadel">
 		<parameters>
+			<minions name="Privates">
+				<npc id="25545" count="3" respawnTime="360" weightPoint="1" />
+			</minions>
 			<param name="IsAggressive" value="1" />
 			<param name="Aggressive_Time" value="5" />
 			<param name="Skill02_Target" value="3" />

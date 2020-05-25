@@ -734,6 +734,9 @@
 	<npc id="29020" level="118" type="GrandBoss" name="Baium">
 		<!-- NEW UPDATE: PRELUDE OF WAR -->
 		<parameters>
+			<minions name="Privates">
+				<npc id="29021" count="5" respawnTime="360" weightPoint="1" />
+			</minions>
 			<skill name="Skill01_ID" id="4127" level="1" />
 			<skill name="Skill02_ID" id="4128" level="1" />
 			<skill name="Skill03_ID" id="4129" level="1" />

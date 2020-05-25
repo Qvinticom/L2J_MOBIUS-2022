@@ -1902,6 +1902,9 @@
 	</npc>
 	<npc id="22626" level="83" type="Monster" name="Cannibalistic Stakato Leader">
 		<parameters>
+			<minions name="Privates">
+				<npc id="22624" count="3" respawnTime="360" weightPoint="1" />
+			</minions>
 			<skill name="PhysicalSpecial" id="6167" level="9" />
 			<skill name="SelfRangeDDMagic" id="4571" level="8" />
 			<skill name="SelfBuff" id="4029" level="3" />

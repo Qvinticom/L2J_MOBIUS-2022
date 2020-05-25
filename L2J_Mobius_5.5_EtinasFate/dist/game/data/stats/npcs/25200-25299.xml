@@ -2130,6 +2130,9 @@
 	</npc>
 	<npc id="25244" level="75" type="RaidBoss" name="Last Lesser Giant Olkuth" title="Raid Boss">
 		<parameters>
+			<minions name="Privates">
+				<npc id="25246" count="1" respawnTime="360" weightPoint="1" />
+			</minions>
 			<param name="RaidSpawnMusic" value="Rm01_A" />
 			<skill name="SelfRangeCancel_a" id="4177" level="8" />
 			<skill name="SelfBuff_a" id="4174" level="8" />

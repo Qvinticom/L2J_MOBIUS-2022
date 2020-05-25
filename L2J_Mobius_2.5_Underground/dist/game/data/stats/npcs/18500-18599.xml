@@ -3066,6 +3066,9 @@
 	</npc>
 	<npc id="18568" level="56" type="Monster" name="Knight Montagnar" title="Kaneus">
 		<parameters>
+			<minions name="Privates">
+				<npc id="18569" count="6" respawnTime="360" weightPoint="1" />
+			</minions>
 			<param name="Skill01_Probablity" value="20" />
 			<skill name="Skill01" id="5043" level="7" />
 		</parameters>

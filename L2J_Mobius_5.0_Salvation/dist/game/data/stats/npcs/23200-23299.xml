@@ -4709,6 +4709,11 @@
 	</npc>
 	<npc id="23275" level="96" type="Monster" name="Spicula Captain" title="Elite">
 		<parameters>
+			<minions name="Privates">
+				<npc id="23272" count="2" respawnTime="360" weightPoint="1" />
+				<npc id="23268" count="1" respawnTime="360" weightPoint="1" />
+				<npc id="23273" count="1" respawnTime="360" weightPoint="1" />
+			</minions>
 			<param name="MoveAroundSocial" value="119" />
 			<param name="MoveAroundSocial1" value="119" />
 			<param name="IsAggressive" value="1" />

@@ -732,6 +732,11 @@
 		</dropLists>
 	</npc>
 	<npc id="29020" level="78" type="GrandBoss" name="Baium">
+		<parameters>
+			<minions name="Privates">
+				<npc id="29021" count="5" respawnTime="360" weightPoint="1" />
+			</minions>
+		</parameters>
 		<race>UNDEAD</race>
 		<sex>MALE</sex>
 		<acquire exp="11090077" sp="2661" raidPoints="0" />

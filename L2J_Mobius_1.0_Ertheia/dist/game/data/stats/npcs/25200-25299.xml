@@ -1982,6 +1982,9 @@
 	</npc>
 	<npc id="25244" level="75" type="RaidBoss" name="Last Lesser Giant Olkuth" title="Raid Boss">
 		<parameters>
+			<minions name="Privates">
+				<npc id="25246" count="1" respawnTime="360" weightPoint="1" />
+			</minions>
 			<param name="RaidSpawnMusic" value="Rm01_A" />
 			<skill name="SelfRangeCancel_a" id="4177" level="8" />
 			<skill name="SelfBuff_a" id="4174" level="8" />
@@ -3970,7 +3973,6 @@
 		</collision>
 	</npc>
 	<npc id="25291" level="77" type="Monster" name="Daimon's Family" title="Raid Fighter">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<skill name="DDMagic_a" id="4194" level="8" />
 			<skill name="Debuff_a" id="4205" level="8" />
@@ -4011,7 +4013,6 @@
 		</collision>
 	</npc>
 	<npc id="25292" level="77" type="Monster" name="Daimon's Family" title="Raid Fighter">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<skill name="HealMagic_a" id="4209" level="8" />
 			<skill name="SelfRangeBuff_a" id="4212" level="8" />

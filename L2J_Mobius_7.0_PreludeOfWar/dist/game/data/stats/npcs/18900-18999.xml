@@ -486,6 +486,9 @@
 	</npc>
 	<npc id="18908" level="103" type="Monster" name="Sel Mahum Chef">
 		<parameters>
+			<minions name="Privates">
+				<npc id="22779" count="2" respawnTime="360" weightPoint="1" />
+			</minions>
 			<skill name="Skill01_ID" id="6330" level="1" />
 		</parameters>
 		<race>HUMANOID</race>

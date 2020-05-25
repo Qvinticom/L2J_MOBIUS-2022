@@ -2537,6 +2537,12 @@
 		</collision>
 	</npc>
 	<npc id="29251" level="99" type="Monster" name="Ekimus" title="Immortal Lord">
+		<parameters>
+			<minions name="Privates">
+				<npc id="29258" count="1" respawnTime="360" weightPoint="1" />
+				<npc id="29259" count="1" respawnTime="360" weightPoint="1" />
+			</minions>
+		</parameters>
 		<race>UNDEAD</race>
 		<sex>FEMALE</sex>
 		<acquire exp="17393795496" sp="27830072" />

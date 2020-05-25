@@ -58,6 +58,12 @@
 	</npc>
 	<npc id="26102" level="101" type="RaidBoss" name="Dark Rider" title="Betrayed">
 		<!-- Source: www.l2wiki.com -->
+		<parameters>
+			<minions name="Privates">
+				<npc id="26104" count="2" respawnTime="360" weightPoint="1" />
+				<npc id="26103" count="2" respawnTime="360" weightPoint="1" />
+			</minions>
+		</parameters>
 		<race>DRAGON</race>
 		<acquire exp="58137911944" sp="116275894" raidPoints="7" />
 		<stats str="164" int="188" dex="55" wit="78" con="111" men="149">
@@ -2850,6 +2856,12 @@
 	</npc>
 	<npc id="26152" level="97" type="RaidBoss" name="Enhanced Core">
 		<!-- Source: www.l2wiki.com -->
+		<parameters>
+			<minions name="Privates">
+				<npc id="26154" count="9" respawnTime="360" weightPoint="1" />
+				<npc id="26153" count="7" respawnTime="360" weightPoint="1" />
+			</minions>
+		</parameters>
 		<race>CONSTRUCT</race>
 		<sex>MALE</sex>
 		<acquire exp="79902417297" sp="127843867" raidPoints="100" />
@@ -2969,6 +2981,14 @@
 	</npc>
 	<npc id="26157" level="92" type="RaidBoss" name="Enhanced Harnak's Wraith">
 		<!-- Source: www.l2wiki.com -->
+		<parameters>
+			<minions name="Privates">
+				<npc id="26158" count="3" respawnTime="360" weightPoint="1" />
+				<npc id="26159" count="3" respawnTime="360" weightPoint="1" />
+				<npc id="26160" count="3" respawnTime="360" weightPoint="1" />
+				<npc id="26161" count="3" respawnTime="360" weightPoint="1" />
+			</minions>
+		</parameters>
 		<race>GIANT</race>
 		<sex>MALE</sex>
 		<acquire exp="28884659443" sp="38416597" raidPoints="100" />

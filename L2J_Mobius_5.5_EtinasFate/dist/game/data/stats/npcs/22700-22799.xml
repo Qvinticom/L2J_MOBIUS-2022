@@ -3566,6 +3566,11 @@
 	</npc>
 	<npc id="22757" level="89" type="Monster" name="Elite Turtlelian" title="Reptilikon">
 		<parameters>
+			<minions name="Privates">
+				<npc id="22755" count="1" respawnTime="360" weightPoint="1" />
+				<npc id="22756" count="1" respawnTime="360" weightPoint="1" />
+				<npc id="22754" count="1" respawnTime="360" weightPoint="1" />
+			</minions>
 			<skill name="Skill01_ID" id="6409" level="1" />
 			<skill name="Skill02_ID" id="6410" level="1" />
 			<skill name="SpecialSkill01_ID" id="6411" level="1" />
@@ -3646,6 +3651,11 @@
 	</npc>
 	<npc id="22758" level="89" type="Monster" name="Elite Krajian" title="Reptilikon">
 		<parameters>
+			<minions name="Privates">
+				<npc id="22755" count="1" respawnTime="360" weightPoint="1" />
+				<npc id="22756" count="1" respawnTime="360" weightPoint="1" />
+				<npc id="22754" count="1" respawnTime="360" weightPoint="1" />
+			</minions>
 			<skill name="Skill01_ID" id="6413" level="1" />
 			<skill name="Skill02_ID" id="6414" level="1" />
 			<skill name="SpecialSkill01_ID" id="6415" level="1" />
@@ -3720,6 +3730,11 @@
 	</npc>
 	<npc id="22759" level="89" type="Monster" name="Elite Tardyon" title="Reptilikon">
 		<parameters>
+			<minions name="Privates">
+				<npc id="22755" count="1" respawnTime="360" weightPoint="1" />
+				<npc id="22756" count="1" respawnTime="360" weightPoint="1" />
+				<npc id="22754" count="1" respawnTime="360" weightPoint="1" />
+			</minions>
 			<skill name="Skill01_ID" id="6416" level="1" />
 			<skill name="Skill02_ID" id="6417" level="1" />
 			<skill name="SpecialSkill01_ID" id="6418" level="1" />

@@ -124,6 +124,11 @@
 		</collision>
 	</npc>
 	<npc id="27505" level="84" type="Monster" name="Awakening Meccadan" title="Quest Monster">
+		<parameters>
+			<minions name="Privates">
+				<npc id="27506" count="3" respawnTime="360" weightPoint="1" />
+			</minions>
+		</parameters>
 		<race>HUMANOID</race>
 		<sex>FEMALE</sex>
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
@@ -867,6 +872,11 @@
 		</collision>
 	</npc>
 	<npc id="27534" level="50" type="Monster" name="Enraged Giant Narsides" title="Quest Monster">
+		<parameters>
+			<minions name="Privates">
+				<npc id="27535" count="2" respawnTime="360" weightPoint="1" />
+			</minions>
+		</parameters>
 		<race>GIANT</race>
 		<sex>FEMALE</sex>
 		<stats str="79" int="34" dex="42" wit="66" con="75" men="12">
@@ -1037,6 +1047,11 @@
 		</collision>
 	</npc>
 	<npc id="27542" level="68" type="Monster" name="Needle Stakato Captain" title="Quest Monster">
+		<parameters>
+			<minions name="Privates">
+				<npc id="27543" count="3" respawnTime="360" weightPoint="1" />
+			</minions>
+		</parameters>
 		<race>HUMANOID</race>
 		<sex>FEMALE</sex>
 		<stats str="79" int="34" dex="42" wit="66" con="75" men="12">

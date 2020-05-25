@@ -67,6 +67,10 @@
 	</npc>
 	<npc id="23101" level="61" type="Monster" name="Slaughter Bathin">
 		<parameters>
+			<minions name="Privates">
+				<npc id="23103" count="1" respawnTime="360" weightPoint="1" />
+				<npc id="23102" count="1" respawnTime="360" weightPoint="1" />
+			</minions>
 			<param name="MoveAroundSocial" value="74" />
 			<param name="MoveAroundSocial1" value="74" />
 			<param name="MoveAroundSocial2" value="74" />
@@ -220,6 +224,11 @@
 	</npc>
 	<npc id="23104" level="65" type="Monster" name="Elmoreden's Lady">
 		<parameters>
+			<minions name="Privates">
+				<npc id="23107" count="1" respawnTime="360" weightPoint="1" />
+				<npc id="23106" count="1" respawnTime="360" weightPoint="1" />
+				<npc id="23105" count="1" respawnTime="360" weightPoint="1" />
+			</minions>
 			<param name="MoveAroundSocial" value="0" />
 			<param name="MoveAroundSocial1" value="0" />
 			<param name="MoveAroundSocial2" value="0" />
@@ -436,6 +445,10 @@
 	</npc>
 	<npc id="23108" level="69" type="Monster" name="Binder">
 		<parameters>
+			<minions name="Privates">
+				<npc id="23109" count="1" respawnTime="360" weightPoint="1" />
+				<npc id="23110" count="1" respawnTime="360" weightPoint="1" />
+			</minions>
 			<param name="MoveAroundSocial" value="90" />
 			<param name="MoveAroundSocial1" value="74" />
 			<param name="MoveAroundSocial2" value="90" />
@@ -600,6 +613,9 @@
 	</npc>
 	<npc id="23111" level="74" type="Monster" name="Heaven's Palace Seraphim">
 		<parameters>
+			<minions name="Privates">
+				<npc id="23112" count="2" respawnTime="360" weightPoint="1" />
+			</minions>
 			<param name="MoveAroundSocial" value="90" />
 			<param name="MoveAroundSocial1" value="98" />
 			<param name="MoveAroundSocial2" value="90" />
@@ -3845,6 +3861,9 @@
 	</npc>
 	<npc id="23172" level="90" type="Monster" name="Delegate of Blood">
 		<parameters>
+			<minions name="Privates">
+				<npc id="23173" count="2" respawnTime="360" weightPoint="1" />
+			</minions>
 			<param name="MoveAroundSocial" value="130" />
 			<param name="MoveAroundSocial1" value="130" />
 			<param name="MoveAroundSocial2" value="130" />
