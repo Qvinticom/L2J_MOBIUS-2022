@@ -9,13 +9,13 @@
 		<sex>FEMALE</sex>
 		<acquire exp="2799199" sp="1791" />
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="15761" hpRegen="10.5" mp="2317" mpRegen="3.6" />
+			<vitals hp="15761.2716763006" hpRegen="10.5" mp="2317.49174917492" mpRegen="3.6" />
 			<speed>
 				<walk ground="60" />
 				<run ground="200" />
 			</speed>
-			<attack physical="17045.702302755" magical="5736.0042671637" critical="4" attackSpeed="253" range="40" />
-			<defence physical="1103.7928684988" magical="613.99328787368" />
+			<attack physical="45078.6767896626" magical="6640.91595152975" critical="4" attackSpeed="253" range="40" />
+			<defence physical="618.792971734148" magical="258.87633856938" />
 			<attribute>
 				<defence fire="150" water="150" wind="150" earth="150" holy="150" dark="150" />
 			</attribute>
@@ -28,6 +28,7 @@
 			<skill id="4413" level="8" /> <!-- Weak M. Def. -->
 			<skill id="4414" level="1" /> <!-- Heavy Armor Type -->
 			<skill id="4416" level="8" /> <!-- Angels -->
+			<skill id="5466" level="1" /> <!-- Holy Attacks -->
 			<skill id="5467" level="1" /> <!-- Dark Attack -->
 		</skillList>
 		<dropLists>
@@ -63,13 +64,13 @@
 		<sex>FEMALE</sex>
 		<acquire exp="4120132" sp="988" />
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="14806" hpRegen="10.5" mp="2205" mpRegen="3.6" />
+			<vitals hp="14547.3988439306" hpRegen="10.5" mp="2169.63696369637" mpRegen="3.6" />
 			<speed>
 				<walk ground="60" />
 				<run ground="190" />
 			</speed>
-			<attack physical="6043.123730944" magical="5511.2118000069" critical="4" attackSpeed="553" range="40" />
-			<defence physical="1500" magical="807.1459319845" />
+			<attack physical="10624.4179328067" magical="1581.74669054034" critical="4" attackSpeed="553" range="40" />
+			<defence physical="1143.1693989071" magical="468.585703901823" />
 			<attribute>
 				<defence fire="150" water="150" wind="150" earth="150" holy="150" dark="150" />
 			</attribute>
@@ -108,13 +109,13 @@
 		<sex>FEMALE</sex>
 		<acquire exp="4365175" sp="1047" />
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="14547" hpRegen="10.5" mp="2169" mpRegen="3.6" />
+			<vitals hp="14547.3988439306" hpRegen="10.5" mp="2169.63696369637" mpRegen="3.6" />
 			<speed>
 				<walk ground="18" />
 				<run ground="190" />
 			</speed>
-			<attack physical="8911.6811886562" magical="5571.60819078" critical="4" attackSpeed="553" range="40" />
-			<defence physical="1442.6229508197" magical="775.48738480405" />
+			<attack physical="10624.4179328067" magical="1581.74669054034" critical="4" attackSpeed="553" range="40" />
+			<defence physical="1143.1693989071" magical="468.585703901823" />
 			<attribute>
 				<defence fire="150" water="150" wind="150" earth="150" holy="150" dark="150" />
 			</attribute>
@@ -152,13 +153,13 @@
 		<sex>FEMALE</sex>
 		<acquire exp="1583690" sp="380" />
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="14547" hpRegen="10.5" mp="2169" mpRegen="3.6" />
+			<vitals hp="14547.3988439306" hpRegen="10.5" mp="2169.63696369637" mpRegen="3.6" />
 			<speed>
 				<walk ground="40" />
 				<run ground="180" />
 			</speed>
-			<attack physical="6126.7808172012" magical="3041.1694708008" critical="4" attackSpeed="253" range="40" />
-			<defence physical="655.73770491803" magical="559.07230067269" />
+			<attack physical="10624.3442825489" magical="1581.79825942747" critical="4" attackSpeed="253" range="40" />
+			<defence physical="762.295081967213" magical="633.968893514231" />
 			<attribute>
 				<defence fire="150" water="150" wind="150" earth="150" holy="150" dark="150" />
 			</attribute>
@@ -202,13 +203,13 @@
 		<sex>FEMALE</sex>
 		<acquire exp="6985683" sp="1676" />
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="14890" hpRegen="10.5" mp="2242" mpRegen="3.6" />
+			<vitals hp="14890.1734104046" hpRegen="10.5" mp="2242.24422442244" mpRegen="3.6" />
 			<speed>
 				<walk ground="50" />
 				<run ground="160" />
 			</speed>
-			<attack physical="16428.585739186" magical="5588.0869647497" critical="4" attackSpeed="253" range="40" />
-			<defence physical="709.20544604755" magical="599.30398648481" />
+			<attack physical="11691.1425881033" magical="1731.47414593765" critical="4" attackSpeed="253" range="40" />
+			<defence physical="792.928266612477" magical="665.928385635341" />
 			<attribute>
 				<defence fire="150" water="150" wind="150" earth="150" holy="150" dark="150" />
 			</attribute>
@@ -250,13 +251,13 @@
 		<acquire exp="31989" sp="7" />
 		<equipment rhand="78" /> <!-- Great Sword -->
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="1673" hpRegen="6.5" mp="889" mpRegen="2.4" />
+			<vitals hp="1673.41040462428" hpRegen="6.5" mp="889.108910891089" mpRegen="2.4" />
 			<speed>
 				<walk ground="40" />
 				<run ground="128" />
 			</speed>
-			<attack physical="345.42047607281" magical="108.27886895427" critical="4" attackSpeed="253" range="40" />
-			<defence physical="269.44444444444" magical="120.09534286762" />
+			<attack physical="388.14759904456" magical="234.050598509668" critical="4" attackSpeed="253" range="40" />
+			<defence physical="268.75" magical="142.695428963186" />
 			<attribute>
 				<defence fire="150" water="150" wind="150" earth="150" holy="150" dark="150" />
 			</attribute>
@@ -299,13 +300,13 @@
 		<sex>FEMALE</sex>
 		<acquire exp="34010" sp="8" />
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="1776" hpRegen="6.5" mp="948" mpRegen="2.4" />
+			<vitals hp="1776.30057803468" hpRegen="6.5" mp="948.514851485149" mpRegen="2.4" />
 			<speed>
 				<walk ground="15" />
 				<run ground="128" />
 			</speed>
-			<attack physical="323.42577454634" magical="99.205259708436" critical="4" attackSpeed="253" range="40" />
-			<defence physical="258.21917808219" magical="115.28550115286" />
+			<attack physical="424.464595793942" magical="255.026205291415" critical="4" attackSpeed="253" range="40" />
+			<defence physical="280.13698630137" magical="148.603305833859" />
 			<attribute>
 				<defence fire="150" water="150" wind="150" earth="150" holy="150" dark="150" />
 			</attribute>
@@ -344,13 +345,13 @@
 		<sex>FEMALE</sex>
 		<acquire exp="30999" sp="7" />
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="1621" hpRegen="6.5" mp="861" mpRegen="2.4" />
+			<vitals hp="1621.38728323699" hpRegen="6.5" mp="861.386138613861" mpRegen="2.4" />
 			<speed>
 				<walk ground="72" />
 				<run ground="128" />
 			</speed>
-			<attack physical="330.2109306557" magical="103.41138030931" critical="4" attackSpeed="253" range="40" />
-			<defence physical="263.63636363636" magical="117.70407810012" />
+			<attack physical="371.16330667109" magical="223.9662008424" critical="4" attackSpeed="253" range="40" />
+			<defence physical="262.937062937063" magical="139.679519791444" />
 			<attribute>
 				<defence fire="150" water="150" wind="150" earth="150" holy="150" dark="150" />
 			</attribute>
@@ -395,13 +396,13 @@
 		<sex>FEMALE</sex>
 		<acquire exp="34010" sp="8" />
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="1776" hpRegen="6.5" mp="948" mpRegen="2.4" />
+			<vitals hp="1776.30057803468" hpRegen="6.5" mp="948.514851485149" mpRegen="2.4" />
 			<speed>
 				<walk ground="60" />
 				<run ground="128" />
 			</speed>
-			<attack physical="323.42577454634" magical="99.205259708436" critical="4" attackSpeed="253" range="40" />
-			<defence physical="258.21917808219" magical="115.28550115286" />
+			<attack physical="424.464595793942" magical="255.026205291415" critical="4" attackSpeed="253" range="40" />
+			<defence physical="280.13698630137" magical="148.603305833859" />
 			<attribute>
 				<defence fire="150" water="150" wind="150" earth="150" holy="150" dark="150" />
 			</attribute>
@@ -442,13 +443,13 @@
 		<sex>FEMALE</sex>
 		<acquire exp="34010" sp="8" />
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="1776" hpRegen="6.5" mp="948" mpRegen="2.4" />
+			<vitals hp="1776.30057803468" hpRegen="6.5" mp="948.514851485149" mpRegen="2.4" />
 			<speed>
 				<walk ground="25" />
 				<run ground="128" />
 			</speed>
-			<attack physical="323.42577454634" magical="99.205259708436" critical="4" attackSpeed="253" range="40" />
-			<defence physical="258.21917808219" magical="115.28550115286" />
+			<attack physical="424.464595793942" magical="255.026205291415" critical="4" attackSpeed="253" range="40" />
+			<defence physical="280.13698630137" magical="148.603305833859" />
 			<attribute>
 				<defence fire="150" water="150" wind="150" earth="150" holy="150" dark="150" />
 			</attribute>
@@ -498,13 +499,13 @@
 		<sex>FEMALE</sex>
 		<acquire exp="41698" sp="10" />
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="1828" hpRegen="6.5" mp="977" mpRegen="2.4" />
+			<vitals hp="1828.32369942197" hpRegen="6.5" mp="977.557755775578" mpRegen="2.4" />
 			<speed>
 				<walk ground="60" />
 				<run ground="128" />
 			</speed>
-			<attack physical="394.34602603087" magical="123.47644452889" critical="4" attackSpeed="253" range="40" />
-			<defence physical="285.71428571429" magical="127.97198087156" />
+			<attack physical="443.261070180481" magical="265.885759895827" critical="4" attackSpeed="253" range="40" />
+			<defence physical="285.714285714286" magical="151.496959811332" />
 			<attribute>
 				<defence fire="150" water="150" wind="150" earth="150" holy="150" dark="150" />
 			</attribute>
@@ -557,13 +558,13 @@
 		<sex>FEMALE</sex>
 		<acquire exp="61889" sp="14" />
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="2540" hpRegen="8.5" mp="1410" mpRegen="3" />
+			<vitals hp="2540.46242774566" hpRegen="8.5" mp="1410.56105610561" mpRegen="3" />
 			<speed>
 				<walk ground="80" />
 				<run ground="128" />
 			</speed>
-			<attack physical="46.042847473859" magical="23.994391510234" critical="4" attackSpeed="253" range="40" />
-			<defence physical="74.833495472574" magical="40.997888608737" />
+			<attack physical="731.620846359622" magical="430.893393179856" critical="4" attackSpeed="253" range="40" />
+			<defence physical="366.68412781561" magical="194.456388658039" />
 			<attribute>
 				<defence fire="150" water="150" wind="150" earth="150" holy="150" dark="150" />
 			</attribute>
@@ -599,13 +600,13 @@
 		<sex>FEMALE</sex>
 		<acquire exp="89707" sp="21" />
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="2586" hpRegen="8.5" mp="1442" mpRegen="3" />
+			<vitals hp="2586.12716763006" hpRegen="8.5" mp="1442.24422442244" mpRegen="3" />
 			<speed>
 				<walk ground="36" />
 				<run ground="128" />
 			</speed>
-			<attack physical="45.758632365996" magical="23.699078735588" critical="4" attackSpeed="253" range="40" />
-			<defence physical="74.371560315335" magical="40.744815222263" />
+			<attack physical="753.187088744291" magical="442.80569266631" critical="4" attackSpeed="253" range="40" />
+			<defence physical="372.60151717983" magical="197.355411137659" />
 			<attribute>
 				<defence fire="150" water="150" wind="150" earth="150" holy="150" dark="150" />
 			</attribute>
@@ -639,13 +640,13 @@
 		<sex>FEMALE</sex>
 		<acquire exp="173094" sp="41" />
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="2758" hpRegen="8.5" mp="1540" mpRegen="3" />
+			<vitals hp="2758.38150289017" hpRegen="8.5" mp="1540.59405940594" mpRegen="3" />
 			<speed>
 				<walk ground="50" />
 				<run ground="128" />
 			</speed>
-			<attack physical="44.926657232069" magical="22.845128460488" critical="4" attackSpeed="253" range="40" />
-			<defence physical="60.606060606061" magical="40.00400040004" />
+			<attack physical="824.640616299155" magical="483.243577145727" critical="4" attackSpeed="253" range="40" />
+			<defence physical="323.991797676008" magical="237.01618282129" />
 			<attribute>
 				<defence fire="150" water="150" wind="150" earth="150" holy="150" dark="150" />
 			</attribute>
@@ -681,13 +682,13 @@
 		<sex>FEMALE</sex>
 		<acquire exp="95996432" sp="153594" />
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="316834" hpRegen="10.5" mp="23550" mpRegen="3.6" />
+			<vitals hp="316834.104046243" hpRegen="10.5" mp="23550.495049505" mpRegen="3.6" />
 			<speed>
 				<walk ground="60" />
 				<run ground="180" />
 			</speed>
-			<attack physical="985757.77171427" magical="175972.90129492" critical="4" attackSpeed="698" range="40" />
-			<defence physical="4920.2127659574" magical="3159.8904571308" />
+			<attack physical="657171.979243884" magical="97990.2660416814" critical="4" attackSpeed="698" range="40" />
+			<defence physical="3280.31914893617" magical="3159.89045713082" />
 			<attribute>
 				<defence fire="150" water="150" wind="150" earth="300" holy="150" dark="150" />
 				<attack type="EARTH" value="370" />
@@ -695,7 +696,7 @@
 		</stats>
 		<status attackable="false" />
 		<skillList>
-			<skill id="4416" level="17" /> <!-- Orcs -->
+			<skill id="4416" level="6" /> <!-- Humanoids -->
 			<skill id="5465" level="1" /> <!-- Earth Attack -->
 		</skillList>
 		<ai aggroRange="600" isAggressive="true" />
@@ -723,13 +724,13 @@
 		<sex>FEMALE</sex>
 		<acquire exp="103650867" sp="165841" />
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="316834" hpRegen="10.5" mp="23550" mpRegen="3.6" />
+			<vitals hp="316834.104046243" hpRegen="10.5" mp="23550.495049505" mpRegen="3.6" />
 			<speed>
 				<walk ground="60" />
 				<run ground="180" />
 			</speed>
-			<attack physical="1048846.269104" magical="175972.90129492" critical="8" attackSpeed="398" range="900" />
-			<defence physical="4787.2340425532" magical="3054.5607752265" />
+			<attack physical="699231.108938063" magical="97990.2660416814" critical="8" attackSpeed="398" range="900" />
+			<defence physical="3192.02127659574" magical="3054.56077522646" />
 			<attribute>
 				<defence fire="150" water="150" wind="150" earth="300" holy="150" dark="150" />
 				<attack type="EARTH" value="370" />
@@ -737,8 +738,9 @@
 		</stats>
 		<status attackable="false" />
 		<skillList>
-			<skill id="4416" level="17" /> <!-- Orcs -->
+			<skill id="4416" level="6" /> <!-- Humanoids -->
 			<skill id="5465" level="1" /> <!-- Earth Attack -->
+			<skill id="16547" level="10" /> <!-- Danger Zone Attack Resistance -->
 		</skillList>
 		<ai aggroRange="600" isAggressive="true" />
 		<dropLists>
@@ -766,13 +768,13 @@
 		<sex>FEMALE</sex>
 		<acquire exp="124437219" sp="199099" />
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="316834" hpRegen="10.5" mp="23550" mpRegen="3.6" />
+			<vitals hp="316834.104046243" hpRegen="10.5" mp="23550.495049505" mpRegen="3.6" />
 			<speed>
 				<walk ground="60" />
 				<run ground="180" />
 			</speed>
-			<attack physical="906897.14997713" magical="175972.90129492" critical="4" attackSpeed="698" range="40" />
-			<defence physical="4840.4255319149" magical="3159.8904571308" />
+			<attack physical="604598.362853493" magical="97990.2660416814" critical="4" attackSpeed="698" range="40" />
+			<defence physical="3227.12765957447" magical="3159.89045713082" />
 			<attribute>
 				<defence fire="150" water="150" wind="150" earth="300" holy="150" dark="150" />
 				<attack type="EARTH" value="370" />
@@ -780,9 +782,10 @@
 		</stats>
 		<status attackable="false" />
 		<skillList>
-			<skill id="4416" level="17" /> <!-- Orcs -->
+			<skill id="4416" level="6" /> <!-- Humanoids -->
 			<skill id="5465" level="1" /> <!-- Earth Attack -->
 			<skill id="15629" level="1" /> <!-- Nerva's Mental Blow -->
+			<skill id="16547" level="10" /> <!-- Danger Zone Attack Resistance -->
 		</skillList>
 		<ai aggroRange="600" isAggressive="true" />
 		<dropLists>
@@ -810,13 +813,13 @@
 		<sex>FEMALE</sex>
 		<acquire exp="111937319" sp="179099" />
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="316834" hpRegen="10.5" mp="23550" mpRegen="3.6" />
+			<vitals hp="316834.104046243" hpRegen="10.5" mp="23550.495049505" mpRegen="3.6" />
 			<speed>
 				<walk ground="60" />
 				<run ground="180" />
 			</speed>
-			<attack physical="875352.90128227" magical="87986.450647461" critical="4" attackSpeed="698" range="40" />
-			<defence physical="4787.2340425532" magical="3124.7805631627" />
+			<attack physical="583568.600854849" magical="97990.2660416814" critical="4" attackSpeed="698" range="40" />
+			<defence physical="3192.02127659574" magical="3124.7805631627" />
 			<attribute>
 				<defence fire="150" water="150" wind="150" earth="300" holy="150" dark="150" />
 				<attack type="EARTH" value="370" />
@@ -824,7 +827,7 @@
 		</stats>
 		<status attackable="false" />
 		<skillList>
-			<skill id="4416" level="17" /> <!-- Orcs -->
+			<skill id="4416" level="6" /> <!-- Humanoids -->
 			<skill id="5465" level="1" /> <!-- Earth Attack -->
 			<skill id="15629" level="1" /> <!-- Nerva's Mental Blow -->
 		</skillList>
@@ -854,13 +857,13 @@
 		<sex>FEMALE</sex>
 		<acquire exp="104493556" sp="167189" />
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="316834" hpRegen="10.5" mp="23550" mpRegen="3.6" />
+			<vitals hp="316834.104046243" hpRegen="10.5" mp="23550.495049505" mpRegen="3.6" />
 			<speed>
 				<walk ground="60" />
 				<run ground="180" />
 			</speed>
-			<attack physical="946327.4608457" magical="87986.450647461" critical="8" attackSpeed="698" range="40" />
-			<defence physical="5319.1489361702" magical="3510.989396812" />
+			<attack physical="630884.973897134" magical="97990.2660416814" critical="8" attackSpeed="698" range="40" />
+			<defence physical="3546.27659574468" magical="3511.3404957517" />
 			<attribute>
 				<defence fire="150" water="150" wind="150" earth="300" holy="150" dark="150" />
 				<attack type="EARTH" value="370" />
@@ -868,7 +871,7 @@
 		</stats>
 		<status attackable="false" />
 		<skillList>
-			<skill id="4416" level="17" /> <!-- Orcs -->
+			<skill id="4416" level="6" /> <!-- Humanoids -->
 			<skill id="5465" level="1" /> <!-- Earth Attack -->
 		</skillList>
 		<ai aggroRange="600" isAggressive="true" />
@@ -897,13 +900,13 @@
 		<sex>FEMALE</sex>
 		<acquire exp="88903791" sp="142246" />
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="316834" hpRegen="10.5" mp="23550" mpRegen="3.6" />
+			<vitals hp="316834.104046243" hpRegen="10.5" mp="23550.495049505" mpRegen="3.6" />
 			<speed>
 				<walk ground="60" />
 				<run ground="180" />
 			</speed>
-			<attack physical="946327.4608457" magical="175972.90129492" critical="4" attackSpeed="698" range="40" />
-			<defence physical="4787.2340425532" magical="3124.7805631627" />
+			<attack physical="630884.973897134" magical="97990.2660416814" critical="4" attackSpeed="698" range="40" />
+			<defence physical="3192.02127659574" magical="3124.7805631627" />
 			<attribute>
 				<defence fire="150" water="150" wind="150" earth="300" holy="150" dark="150" />
 				<attack type="EARTH" value="370" />
@@ -911,8 +914,9 @@
 		</stats>
 		<status attackable="false" />
 		<skillList>
-			<skill id="4416" level="17" /> <!-- Orcs -->
+			<skill id="4416" level="6" /> <!-- Humanoids -->
 			<skill id="5465" level="1" /> <!-- Earth Attack -->
+			<skill id="16547" level="10" /> <!-- Danger Zone Attack Resistance -->
 		</skillList>
 		<ai aggroRange="600" isAggressive="true" />
 		<dropLists>
@@ -940,13 +944,13 @@
 		<sex>FEMALE</sex>
 		<acquire exp="120926011" sp="193481" />
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="316834" hpRegen="10.5" mp="23550" mpRegen="3.6" />
+			<vitals hp="316834.104046243" hpRegen="10.5" mp="23550.495049505" mpRegen="3.6" />
 			<speed>
 				<walk ground="60" />
 				<run ground="180" />
 			</speed>
-			<attack physical="985757.77171427" magical="175972.90129492" critical="4" attackSpeed="698" range="40" />
-			<defence physical="4787.2340425532" magical="3124.7805631627" />
+			<attack physical="657171.979243884" magical="97990.2660416814" critical="4" attackSpeed="698" range="40" />
+			<defence physical="3192.02127659574" magical="3124.7805631627" />
 			<attribute>
 				<defence fire="150" water="150" wind="150" earth="300" holy="150" dark="150" />
 				<attack type="EARTH" value="370" />
@@ -954,7 +958,7 @@
 		</stats>
 		<status attackable="false" />
 		<skillList>
-			<skill id="4416" level="17" /> <!-- Orcs -->
+			<skill id="4416" level="6" /> <!-- Humanoids -->
 			<skill id="5465" level="1" /> <!-- Earth Attack -->
 		</skillList>
 		<ai aggroRange="600" isAggressive="true" />
@@ -983,13 +987,13 @@
 		<sex>FEMALE</sex>
 		<acquire exp="215798859" sp="345278" />
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="316834" hpRegen="10.5" mp="23550" mpRegen="3.6" />
+			<vitals hp="316834.104046243" hpRegen="10.5" mp="23550.495049505" mpRegen="3.6" />
 			<speed>
 				<walk ground="60" />
 				<run ground="180" />
 			</speed>
-			<attack physical="985757.77171427" magical="175972.90129492" critical="4" attackSpeed="698" range="40" />
-			<defence physical="5319.1489361702" magical="3159.8904571308" />
+			<attack physical="657171.979243884" magical="97990.2660416814" critical="4" attackSpeed="698" range="40" />
+			<defence physical="3546.27659574468" magical="3159.89045713082" />
 			<attribute>
 				<defence fire="150" water="150" wind="150" earth="300" holy="150" dark="150" />
 				<attack type="EARTH" value="370" />
@@ -997,7 +1001,7 @@
 		</stats>
 		<status attackable="false" />
 		<skillList>
-			<skill id="4416" level="17" /> <!-- Orcs -->
+			<skill id="4416" level="6" /> <!-- Humanoids -->
 			<skill id="5465" level="1" /> <!-- Earth Attack -->
 		</skillList>
 		<ai aggroRange="600" isAggressive="true" />
@@ -1026,13 +1030,13 @@
 		<sex>FEMALE</sex>
 		<acquire exp="272259087" sp="435614" />
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="316834" hpRegen="10.5" mp="23550" mpRegen="3.6" />
+			<vitals hp="316834.104046243" hpRegen="10.5" mp="23550.495049505" mpRegen="3.6" />
 			<speed>
 				<walk ground="60" />
 				<run ground="180" />
 			</speed>
-			<attack physical="985757.77171427" magical="175972.90129492" critical="4" attackSpeed="698" range="40" />
-			<defence physical="5319.1489361702" magical="3159.8904571308" />
+			<attack physical="657171.979243884" magical="97990.2660416814" critical="4" attackSpeed="698" range="40" />
+			<defence physical="3546.27659574468" magical="3159.89045713082" />
 			<attribute>
 				<defence fire="150" water="150" wind="150" earth="300" holy="150" dark="150" />
 				<attack type="EARTH" value="370" />
@@ -1040,7 +1044,7 @@
 		</stats>
 		<status attackable="false" />
 		<skillList>
-			<skill id="4416" level="17" /> <!-- Orcs -->
+			<skill id="4416" level="6" /> <!-- Humanoids -->
 			<skill id="5465" level="1" /> <!-- Earth Attack -->
 			<skill id="15629" level="1" /> <!-- Nerva's Mental Blow -->
 		</skillList>
@@ -1070,13 +1074,13 @@
 		<sex>FEMALE</sex>
 		<acquire exp="95996432" sp="153594" />
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="316834" hpRegen="10.5" mp="23550" mpRegen="3.6" />
+			<vitals hp="316834.104046243" hpRegen="10.5" mp="23550.495049505" mpRegen="3.6" />
 			<speed>
 				<walk ground="60" />
 				<run ground="180" />
 			</speed>
-			<attack physical="906897.14997713" magical="175972.90129492" critical="4" attackSpeed="698" range="40" />
-			<defence physical="4787.2340425532" magical="2808.7915174496" />
+			<attack physical="604598.362853493" magical="97990.2660416814" critical="4" attackSpeed="698" range="40" />
+			<defence physical="3192.02127659574" magical="2808.79151744962" />
 			<attribute>
 				<defence fire="150" water="150" wind="150" earth="300" holy="150" dark="150" />
 				<attack type="EARTH" value="370" />
@@ -1084,7 +1088,7 @@
 		</stats>
 		<status attackable="false" />
 		<skillList>
-			<skill id="4416" level="17" /> <!-- Orcs -->
+			<skill id="4416" level="6" /> <!-- Humanoids -->
 			<skill id="5465" level="1" /> <!-- Earth Attack -->
 		</skillList>
 		<ai aggroRange="600" isAggressive="true" />
@@ -1113,13 +1117,13 @@
 		<sex>FEMALE</sex>
 		<acquire exp="171101177" sp="273761" />
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="316834" hpRegen="10.5" mp="23550" mpRegen="3.6" />
+			<vitals hp="316834.104046243" hpRegen="10.5" mp="23550.495049505" mpRegen="3.6" />
 			<speed>
 				<walk ground="60" />
 				<run ground="180" />
 			</speed>
-			<attack physical="788606.21737142" magical="175972.90129492" critical="4" attackSpeed="698" range="40" />
-			<defence physical="4787.2340425532" magical="3159.8904571308" />
+			<attack physical="525737.741116351" magical="97990.2660416814" critical="4" attackSpeed="698" range="40" />
+			<defence physical="3192.02127659574" magical="3159.89045713082" />
 			<attribute>
 				<defence fire="150" water="150" wind="150" earth="300" holy="150" dark="150" />
 				<attack type="EARTH" value="370" />
@@ -1127,7 +1131,7 @@
 		</stats>
 		<status attackable="false" />
 		<skillList>
-			<skill id="4416" level="17" /> <!-- Orcs -->
+			<skill id="4416" level="6" /> <!-- Humanoids -->
 			<skill id="5465" level="1" /> <!-- Earth Attack -->
 		</skillList>
 		<ai aggroRange="600" isAggressive="true" />
@@ -1156,13 +1160,13 @@
 		<sex>FEMALE</sex>
 		<acquire exp="30863520" sp="49381" />
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="316834" hpRegen="10.5" mp="23550" mpRegen="3.6" />
+			<vitals hp="316834.104046243" hpRegen="10.5" mp="23550.495049505" mpRegen="3.6" />
 			<speed>
 				<walk ground="60" />
 				<run ground="180" />
 			</speed>
-			<attack physical="828036.52823999" magical="175972.90129492" critical="8" attackSpeed="398" range="900" />
-			<defence physical="4787.2340425532" magical="3159.8904571308" />
+			<attack physical="552024.870979872" magical="97990.4749155651" critical="8" attackSpeed="398" range="900" />
+			<defence physical="3192.2602528523" magical="3159.89045713082" />
 			<attribute>
 				<defence fire="150" water="150" wind="150" earth="300" holy="150" dark="150" />
 				<attack type="EARTH" value="370" />
@@ -1174,7 +1178,7 @@
 			<skill id="4411" level="8" /> <!-- Weak M. Atk. -->
 			<skill id="4412" level="7" /> <!-- Weak P. Def. -->
 			<skill id="4413" level="7" /> <!-- Weak M. Def. -->
-			<skill id="4416" level="17" /> <!-- Orcs -->
+			<skill id="4416" level="6" /> <!-- Humanoids -->
 			<skill id="5465" level="1" /> <!-- Earth Attack -->
 		</skillList>
 		<ai aggroRange="600" isAggressive="true" />
@@ -1203,13 +1207,13 @@
 		<sex>FEMALE</sex>
 		<acquire exp="30863520" sp="49381" />
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="316834" hpRegen="10.5" mp="23550" mpRegen="3.6" />
+			<vitals hp="316834.104046243" hpRegen="10.5" mp="23550.495049505" mpRegen="3.6" />
 			<speed>
 				<walk ground="60" />
 				<run ground="180" />
 			</speed>
-			<attack physical="788606.21737142" magical="175972.90129492" critical="4" attackSpeed="698" range="40" />
-			<defence physical="4787.2340425532" magical="3159.8904571308" />
+			<attack physical="525737.824127532" magical="97990.4749155651" critical="4" attackSpeed="698" range="40" />
+			<defence physical="3192.2602528523" magical="3159.89045713082" />
 			<attribute>
 				<defence fire="150" water="150" wind="150" earth="300" holy="150" dark="150" />
 				<attack type="EARTH" value="370" />
@@ -1221,7 +1225,7 @@
 			<skill id="4411" level="8" /> <!-- Weak M. Atk. -->
 			<skill id="4412" level="7" /> <!-- Weak P. Def. -->
 			<skill id="4413" level="7" /> <!-- Weak M. Def. -->
-			<skill id="4416" level="17" /> <!-- Orcs -->
+			<skill id="4416" level="6" /> <!-- Humanoids -->
 			<skill id="5465" level="1" /> <!-- Earth Attack -->
 			<skill id="15629" level="1" /> <!-- Nerva's Mental Blow -->
 		</skillList>
@@ -1250,13 +1254,13 @@
 		<sex>FEMALE</sex>
 		<acquire exp="30863520" sp="49381" />
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="316834" hpRegen="10.5" mp="23550" mpRegen="3.6" />
+			<vitals hp="316834.104046243" hpRegen="10.5" mp="23550.495049505" mpRegen="3.6" />
 			<speed>
 				<walk ground="60" />
 				<run ground="180" />
 			</speed>
-			<attack physical="788606.21737142" magical="175972.90129492" critical="4" attackSpeed="698" range="40" />
-			<defence physical="4787.2340425532" magical="3159.8904571308" />
+			<attack physical="525737.824127532" magical="97990.4749155651" critical="4" attackSpeed="698" range="40" />
+			<defence physical="3192.2602528523" magical="3159.89045713082" />
 			<attribute>
 				<defence fire="150" water="150" wind="150" earth="300" holy="150" dark="150" />
 				<attack type="EARTH" value="370" />
@@ -1268,7 +1272,7 @@
 			<skill id="4411" level="8" /> <!-- Weak M. Atk. -->
 			<skill id="4412" level="7" /> <!-- Weak P. Def. -->
 			<skill id="4413" level="7" /> <!-- Weak M. Def. -->
-			<skill id="4416" level="17" /> <!-- Orcs -->
+			<skill id="4416" level="6" /> <!-- Humanoids -->
 			<skill id="5465" level="1" /> <!-- Earth Attack -->
 		</skillList>
 		<ai aggroRange="600" isAggressive="true" />
@@ -1296,13 +1300,13 @@
 		<sex>FEMALE</sex>
 		<acquire exp="30863520" sp="49381" />
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="316834" hpRegen="10.5" mp="23550" mpRegen="3.6" />
+			<vitals hp="316834.104046243" hpRegen="10.5" mp="23550.495049505" mpRegen="3.6" />
 			<speed>
 				<walk ground="60" />
 				<run ground="180" />
 			</speed>
-			<attack physical="788606.21737142" magical="175972.90129492" critical="8" attackSpeed="698" range="40" />
-			<defence physical="4787.2340425532" magical="3159.8904571308" />
+			<attack physical="525737.824127532" magical="97990.4749155651" critical="8" attackSpeed="698" range="40" />
+			<defence physical="3192.2602528523" magical="3159.89045713082" />
 			<attribute>
 				<defence fire="150" water="150" wind="150" earth="300" holy="150" dark="150" />
 				<attack type="EARTH" value="370" />
@@ -1314,7 +1318,7 @@
 			<skill id="4411" level="8" /> <!-- Weak M. Atk. -->
 			<skill id="4412" level="7" /> <!-- Weak P. Def. -->
 			<skill id="4413" level="7" /> <!-- Weak M. Def. -->
-			<skill id="4416" level="17" /> <!-- Orcs -->
+			<skill id="4416" level="6" /> <!-- Humanoids -->
 			<skill id="5465" level="1" /> <!-- Earth Attack -->
 		</skillList>
 		<ai aggroRange="600" isAggressive="true" />
@@ -1342,13 +1346,13 @@
 		<sex>FEMALE</sex>
 		<acquire exp="959958945" sp="1535934" />
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="316834" hpRegen="10.5" mp="23550" mpRegen="3.6" />
+			<vitals hp="316834.104046243" hpRegen="10.5" mp="23550.495049505" mpRegen="3.6" />
 			<speed>
 				<walk ground="60" />
 				<run ground="180" />
 			</speed>
-			<attack physical="788606.21737142" magical="175972.90129492" critical="4" attackSpeed="698" range="40" />
-			<defence physical="21276.595744681" magical="12288.462888842" />
+			<attack physical="788606.217371418" magical="97990.2660416814" critical="4" attackSpeed="698" range="40" />
+			<defence physical="14184.5744680851" magical="12288.8139877818" />
 			<attribute>
 				<defence fire="150" water="150" wind="150" earth="300" holy="150" dark="150" />
 				<attack type="EARTH" value="370" />
@@ -1384,22 +1388,23 @@
 		<sex>FEMALE</sex>
 		<acquire exp="17315719" sp="27705" />
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="285150" hpRegen="10.5" mp="23550" mpRegen="3.6" />
+			<vitals hp="285150.289017341" hpRegen="10.5" mp="23550.495049505" mpRegen="3.6" />
 			<speed>
 				<walk ground="60" />
 				<run ground="180" />
 			</speed>
-			<attack physical="52573.616390392" magical="5807.1057427324" critical="4" attackSpeed="753" range="40" />
-			<defence physical="23380.874444704" magical="13236.430025981" />
+			<attack physical="20237.607053294" magical="2973.07218030154" critical="4" attackSpeed="753" range="40" />
+			<defence physical="1860.53308393734" magical="609.734556117168" />
 			<attribute>
 				<defence fire="150" water="150" wind="150" earth="150" holy="150" dark="300" />
 			</attribute>
 		</stats>
 		<status attackable="false" />
 		<skillList>
-			<skill id="4412" level="16" /> <!-- Very Strong P. Def. -->
+			<skill id="4412" level="10" /> <!-- Slightly Weak P. Def. -->
 			<skill id="4413" level="16" /> <!-- Very Strong M. Def. -->
 			<skill id="4416" level="1" /> <!-- Undead -->
+			<skill id="4450" level="2" /> <!-- Stun Vulnerability -->
 			<skill id="4458" level="4" /> <!-- Spear Vulnerability -->
 			<skill id="5467" level="1" /> <!-- Dark Attack -->
 		</skillList>
@@ -1430,22 +1435,23 @@
 		<sex>FEMALE</sex>
 		<acquire exp="17315719" sp="27705" />
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="285150" hpRegen="10.5" mp="23550" mpRegen="3.6" />
+			<vitals hp="285150.289017341" hpRegen="10.5" mp="23550.495049505" mpRegen="3.6" />
 			<speed>
 				<walk ground="60" />
 				<run ground="180" />
 			</speed>
-			<attack physical="78860.621737142" magical="5807.1057427324" critical="4" attackSpeed="553" range="40" />
-			<defence physical="8767.8279167641" magical="6214.4512323573" />
+			<attack physical="20237.607053294" magical="2973.07218030154" critical="4" attackSpeed="553" range="40" />
+			<defence physical="1860.53308393734" magical="609.734556117168" />
 			<attribute>
 				<defence fire="150" water="150" wind="150" earth="150" holy="150" dark="150" />
 			</attribute>
 		</stats>
 		<status attackable="false" />
 		<skillList>
-			<skill id="4412" level="16" /> <!-- Very Strong P. Def. -->
+			<skill id="4412" level="10" /> <!-- Slightly Weak P. Def. -->
 			<skill id="4413" level="16" /> <!-- Very Strong M. Def. -->
 			<skill id="4416" level="1" /> <!-- Undead -->
+			<skill id="4450" level="2" /> <!-- Stun Vulnerability -->
 			<skill id="4458" level="4" /> <!-- Spear Vulnerability -->
 			<skill id="5467" level="1" /> <!-- Dark Attack -->
 		</skillList>
@@ -1476,22 +1482,23 @@
 		<sex>FEMALE</sex>
 		<acquire exp="17315719" sp="27705" />
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="285150" hpRegen="10.5" mp="23550" mpRegen="3.6" />
+			<vitals hp="285150.289017341" hpRegen="10.5" mp="23550.495049505" mpRegen="3.6" />
 			<speed>
 				<walk ground="60" />
 				<run ground="180" />
 			</speed>
-			<attack physical="52573.616390392" magical="5807.1057427324" critical="4" attackSpeed="753" range="40" />
-			<defence physical="23380.874444704" magical="13236.430025981" />
+			<attack physical="20237.607053294" magical="2973.07218030154" critical="4" attackSpeed="753" range="40" />
+			<defence physical="1860.53308393734" magical="609.734556117168" />
 			<attribute>
 				<defence fire="150" water="150" wind="150" earth="150" holy="150" dark="150" />
 			</attribute>
 		</stats>
 		<status attackable="false" />
 		<skillList>
-			<skill id="4412" level="16" /> <!-- Very Strong P. Def. -->
+			<skill id="4412" level="10" /> <!-- Slightly Weak P. Def. -->
 			<skill id="4413" level="16" /> <!-- Very Strong M. Def. -->
 			<skill id="4416" level="1" /> <!-- Undead -->
+			<skill id="4450" level="2" /> <!-- Stun Vulnerability -->
 			<skill id="4458" level="4" /> <!-- Spear Vulnerability -->
 			<skill id="5467" level="1" /> <!-- Dark Attack -->
 		</skillList>
@@ -1520,22 +1527,23 @@
 		<sex>FEMALE</sex>
 		<acquire exp="17315719" sp="27705" />
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="285150" hpRegen="10.5" mp="23550" mpRegen="3.6" />
+			<vitals hp="285150.289017341" hpRegen="10.5" mp="23550.495049505" mpRegen="3.6" />
 			<speed>
 				<walk ground="60" />
 				<run ground="180" />
 			</speed>
-			<attack physical="52573.616390392" magical="5807.1057427324" critical="4" attackSpeed="753" range="40" />
-			<defence physical="23380.874444704" magical="13236.430025981" />
+			<attack physical="20237.607053294" magical="2973.07218030154" critical="4" attackSpeed="753" range="40" />
+			<defence physical="1860.53308393734" magical="609.734556117168" />
 			<attribute>
 				<defence fire="150" water="150" wind="150" earth="150" holy="150" dark="150" />
 			</attribute>
 		</stats>
 		<status attackable="false" />
 		<skillList>
-			<skill id="4412" level="16" /> <!-- Very Strong P. Def. -->
+			<skill id="4412" level="10" /> <!-- Slightly Weak P. Def. -->
 			<skill id="4413" level="16" /> <!-- Very Strong M. Def. -->
 			<skill id="4416" level="1" /> <!-- Undead -->
+			<skill id="4450" level="2" /> <!-- Stun Vulnerability -->
 			<skill id="4458" level="4" /> <!-- Spear Vulnerability -->
 			<skill id="5467" level="1" /> <!-- Dark Attack -->
 		</skillList>
@@ -1565,22 +1573,23 @@
 		<sex>FEMALE</sex>
 		<acquire exp="17315719" sp="27705" />
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="285150" hpRegen="10.5" mp="23550" mpRegen="3.6" />
+			<vitals hp="285150.289017341" hpRegen="10.5" mp="23550.495049505" mpRegen="3.6" />
 			<speed>
 				<walk ground="60" />
 				<run ground="180" />
 			</speed>
-			<attack physical="52573.616390392" magical="5807.1057427324" critical="4" attackSpeed="753" range="40" />
-			<defence physical="23380.874444704" magical="13236.430025981" />
+			<attack physical="20237.607053294" magical="2973.07218030154" critical="4" attackSpeed="753" range="40" />
+			<defence physical="1860.53308393734" magical="609.734556117168" />
 			<attribute>
 				<defence fire="150" water="150" wind="150" earth="150" holy="150" dark="150" />
 			</attribute>
 		</stats>
 		<status attackable="false" />
 		<skillList>
-			<skill id="4412" level="16" /> <!-- Very Strong P. Def. -->
+			<skill id="4412" level="10" /> <!-- Slightly Weak P. Def. -->
 			<skill id="4413" level="16" /> <!-- Very Strong M. Def. -->
 			<skill id="4416" level="1" /> <!-- Undead -->
+			<skill id="4450" level="2" /> <!-- Stun Vulnerability -->
 			<skill id="4458" level="4" /> <!-- Spear Vulnerability -->
 			<skill id="5467" level="1" /> <!-- Dark Attack -->
 		</skillList>
@@ -1610,22 +1619,23 @@
 		<sex>FEMALE</sex>
 		<acquire exp="17315719" sp="27705" />
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="285150" hpRegen="10.5" mp="23550" mpRegen="3.6" />
+			<vitals hp="285150.289017341" hpRegen="10.5" mp="23550.495049505" mpRegen="3.6" />
 			<speed>
 				<walk ground="60" />
 				<run ground="180" />
 			</speed>
-			<attack physical="52573.616390392" magical="5807.1057427324" critical="4" attackSpeed="753" range="40" />
-			<defence physical="23380.874444704" magical="13236.430025981" />
+			<attack physical="20237.607053294" magical="2973.07218030154" critical="4" attackSpeed="753" range="40" />
+			<defence physical="1860.53308393734" magical="609.734556117168" />
 			<attribute>
 				<defence fire="150" water="150" wind="150" earth="150" holy="150" dark="150" />
 			</attribute>
 		</stats>
 		<status attackable="false" />
 		<skillList>
-			<skill id="4412" level="16" /> <!-- Very Strong P. Def. -->
+			<skill id="4412" level="10" /> <!-- Slightly Weak P. Def. -->
 			<skill id="4413" level="16" /> <!-- Very Strong M. Def. -->
 			<skill id="4416" level="1" /> <!-- Undead -->
+			<skill id="4450" level="2" /> <!-- Stun Vulnerability -->
 			<skill id="4458" level="4" /> <!-- Spear Vulnerability -->
 			<skill id="5467" level="1" /> <!-- Dark Attack -->
 		</skillList>
@@ -1656,22 +1666,23 @@
 		<sex>FEMALE</sex>
 		<acquire exp="17315719" sp="27705" />
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="285150" hpRegen="10.5" mp="23550" mpRegen="3.6" />
+			<vitals hp="285150.289017341" hpRegen="10.5" mp="23550.495049505" mpRegen="3.6" />
 			<speed>
 				<walk ground="60" />
 				<run ground="180" />
 			</speed>
-			<attack physical="52573.616390392" magical="5807.1057427324" critical="4" attackSpeed="753" range="40" />
-			<defence physical="23380.874444704" magical="13236.430025981" />
+			<attack physical="20237.607053294" magical="2973.07218030154" critical="4" attackSpeed="753" range="40" />
+			<defence physical="1860.53308393734" magical="609.734556117168" />
 			<attribute>
 				<defence fire="150" water="150" wind="150" earth="150" holy="150" dark="150" />
 			</attribute>
 		</stats>
 		<status attackable="false" />
 		<skillList>
-			<skill id="4412" level="16" /> <!-- Very Strong P. Def. -->
+			<skill id="4412" level="10" /> <!-- Slightly Weak P. Def. -->
 			<skill id="4413" level="16" /> <!-- Very Strong M. Def. -->
 			<skill id="4416" level="1" /> <!-- Undead -->
+			<skill id="4450" level="2" /> <!-- Stun Vulnerability -->
 			<skill id="4458" level="4" /> <!-- Spear Vulnerability -->
 			<skill id="5467" level="1" /> <!-- Dark Attack -->
 		</skillList>
@@ -1701,13 +1712,13 @@
 		<sex>FEMALE</sex>
 		<acquire exp="17315719" sp="27705" />
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="316834" hpRegen="10.5" mp="23550" mpRegen="3.6" />
+			<vitals hp="316834.104046243" hpRegen="10.5" mp="23550.495049505" mpRegen="3.6" />
 			<speed>
 				<walk ground="60" />
 				<run ground="128" />
 			</speed>
-			<attack physical="709745.59563428" magical="5807.1057427324" critical="4" attackSpeed="753" range="40" />
-			<defence physical="10638.29787234" magical="6214.4512323573" />
+			<attack physical="60712.0325536647" magical="8918.9225702535" critical="4" attackSpeed="753" range="40" />
+			<defence physical="1051.6056561385" magical="609.734556117168" />
 			<attribute>
 				<defence fire="150" water="150" wind="150" earth="150" holy="150" dark="150" />
 			</attribute>
@@ -1750,13 +1761,13 @@
 		<sex>FEMALE</sex>
 		<acquire exp="2042250" sp="490" />
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="13497" hpRegen="9.5" mp="1917" mpRegen="3.3" />
+			<vitals hp="13497.1098265896" hpRegen="9.5" mp="1917.49174917492" mpRegen="3.3" />
 			<speed>
 				<walk ground="50" />
 				<run ground="180" />
 			</speed>
-			<attack physical="31589.055866298" magical="15059.044639482" critical="4" attackSpeed="253" range="40" />
-			<defence physical="3409.0909090909" magical="1687.6687668767" />
+			<attack physical="8884.61776232944" magical="1350.14391499102" critical="4" attackSpeed="253" range="40" />
+			<defence physical="265.340909090909" magical="145.139513951395" />
 			<attribute>
 				<defence fire="150" water="150" wind="150" earth="150" holy="150" dark="150" />
 			</attribute>
@@ -1809,13 +1820,13 @@
 		<sex>FEMALE</sex>
 		<acquire exp="3123732" sp="749" />
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="13497" hpRegen="9.5" mp="1917" mpRegen="3.3" />
+			<vitals hp="13497.1098265896" hpRegen="9.5" mp="1917.49174917492" mpRegen="3.3" />
 			<speed>
 				<walk ground="50" />
 				<run ground="180" />
 			</speed>
-			<attack physical="31589.055866298" magical="15059.044639482" critical="4" attackSpeed="253" range="40" />
-			<defence physical="3409.0909090909" magical="1687.6687668767" />
+			<attack physical="8884.61776232944" magical="1350.14391499102" critical="4" attackSpeed="253" range="40" />
+			<defence physical="265.340909090909" magical="145.139513951395" />
 			<attribute>
 				<defence fire="150" water="150" wind="150" earth="150" holy="150" dark="150" />
 			</attribute>
@@ -1862,13 +1873,13 @@
 		<sex>FEMALE</sex>
 		<acquire exp="1464542" sp="2343" />
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="15841" hpRegen="10.5" mp="2355" mpRegen="3.6" />
+			<vitals hp="15841.0404624277" hpRegen="10.5" mp="2355.11551155116" mpRegen="3.6" />
 			<speed>
 				<walk ground="60" />
 				<run ground="180" />
 			</speed>
-			<attack physical="34698.673564342" magical="11614.211485465" critical="4" attackSpeed="253" range="40" />
-			<defence physical="1404.0794795147" magical="932.16768485359" />
+			<attack physical="34698.6735643424" magical="9701.03148761072" critical="4" attackSpeed="253" range="40" />
+			<defence physical="1404.51907860032" magical="932.518783793273" />
 			<attribute>
 				<defence fire="150" water="150" wind="150" earth="150" holy="150" dark="150" />
 			</attribute>
@@ -1913,13 +1924,13 @@
 		<sex>FEMALE</sex>
 		<acquire exp="1435018" sp="344" />
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="15761" hpRegen="10.5" mp="2317" mpRegen="3.6" />
+			<vitals hp="15761.2716763006" hpRegen="10.5" mp="2317.49174917492" mpRegen="3.6" />
 			<speed>
 				<walk ground="36" />
 				<run ground="180" />
 			</speed>
-			<attack physical="34884.22796843" magical="11738.75977987" critical="4" attackSpeed="253" range="40" />
-			<defence physical="1411.5879259292" magical="937.15253878329" />
+			<attack physical="34884.2279684298" magical="9816.00638343678" critical="4" attackSpeed="253" range="40" />
+			<defence physical="1412.02987581208" magical="937.505515257408" />
 			<attribute>
 				<defence fire="150" water="150" wind="150" earth="150" holy="150" dark="150" />
 			</attribute>
@@ -1964,13 +1975,13 @@
 		<sex>FEMALE</sex>
 		<acquire exp="1464542" sp="2343" />
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="15841" hpRegen="10.5" mp="2355" mpRegen="3.6" />
+			<vitals hp="15841.0404624277" hpRegen="10.5" mp="2355.11551155116" mpRegen="3.6" />
 			<speed>
 				<walk ground="57" />
 				<run ground="180" />
 			</speed>
-			<attack physical="34698.673564342" magical="11614.211485465" critical="4" attackSpeed="253" range="40" />
-			<defence physical="1404.0794795147" magical="932.16768485359" />
+			<attack physical="34698.6735643424" magical="9701.03148761072" critical="4" attackSpeed="253" range="40" />
+			<defence physical="1404.51907860032" magical="932.518783793273" />
 			<attribute>
 				<defence fire="150" water="150" wind="150" earth="150" holy="150" dark="150" />
 			</attribute>
@@ -2015,13 +2026,13 @@
 		<sex>FEMALE</sex>
 		<acquire exp="8649429" sp="20758" />
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="37639" hpRegen="10.5" mp="23550" mpRegen="3.6" />
+			<vitals hp="37639.3063583815" hpRegen="10.5" mp="23550.495049505" mpRegen="3.6" />
 			<speed>
 				<walk ground="38" />
 				<run ground="180" />
 			</speed>
-			<attack physical="47220.557386874" magical="8305.0410766139" critical="4" attackSpeed="253" range="40" />
-			<defence physical="526.06382978723" magical="305.10497858296" />
+			<attack physical="47220.5573868744" magical="6936.97244026951" critical="4" attackSpeed="253" range="40" />
+			<defence physical="1051.59574468085" magical="609.858858226248" />
 			<attribute>
 				<defence fire="250" water="250" wind="200" earth="250" holy="250" dark="250" />
 				<attack type="EARTH" value="330" />
@@ -2057,13 +2068,13 @@
 		<sex>FEMALE</sex>
 		<acquire exp="8649429" sp="20758" />
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="37639" hpRegen="10.5" mp="23550" mpRegen="3.6" />
+			<vitals hp="37639.3063583815" hpRegen="10.5" mp="23550.495049505" mpRegen="3.6" />
 			<speed>
 				<walk ground="40" />
 				<run ground="160" />
 			</speed>
-			<attack physical="47220.317247387" magical="8305.0410766139" critical="4" attackSpeed="253" range="40" />
-			<defence physical="526.06382978723" magical="305.10497858296" />
+			<attack physical="47220.3172473872" magical="6936.97244026951" critical="4" attackSpeed="253" range="40" />
+			<defence physical="1051.59574468085" magical="609.858858226248" />
 			<attribute>
 				<defence fire="250" water="250" wind="200" earth="250" holy="250" dark="250" />
 				<attack type="EARTH" value="330" />
@@ -2099,13 +2110,13 @@
 		<sex>FEMALE</sex>
 		<acquire exp="8649429" sp="20758" />
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="37639" hpRegen="10.5" mp="23550" mpRegen="3.6" />
+			<vitals hp="37639.3063583815" hpRegen="10.5" mp="23550.495049505" mpRegen="3.6" />
 			<speed>
 				<walk ground="60" />
 				<run ground="180" />
 			</speed>
-			<attack physical="47220.317247387" magical="8305.0410766139" critical="4" attackSpeed="253" range="40" />
-			<defence physical="526.06382978723" magical="305.10497858296" />
+			<attack physical="47220.3172473872" magical="6936.97244026951" critical="4" attackSpeed="253" range="40" />
+			<defence physical="1051.59574468085" magical="609.858858226248" />
 			<attribute>
 				<defence fire="250" water="250" wind="200" earth="250" holy="250" dark="250" />
 				<attack type="EARTH" value="330" />
@@ -2142,13 +2153,13 @@
 		<sex>FEMALE</sex>
 		<acquire exp="8649429" sp="20758" />
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="37639" hpRegen="10.5" mp="23550" mpRegen="3.6" />
+			<vitals hp="37639.3063583815" hpRegen="10.5" mp="23550.495049505" mpRegen="3.6" />
 			<speed>
 				<walk ground="60" />
 				<run ground="180" />
 			</speed>
-			<attack physical="47220.557386874" magical="8305.0410766139" critical="4" attackSpeed="253" range="40" />
-			<defence physical="526.14714175852" magical="305.10497858296" />
+			<attack physical="47220.5573868744" magical="6936.97244026951" critical="4" attackSpeed="253" range="40" />
+			<defence physical="1051.65342219944" magical="609.858858226248" />
 			<attribute>
 				<defence fire="250" water="250" wind="200" earth="250" holy="250" dark="250" />
 				<attack type="EARTH" value="330" />
@@ -2185,13 +2196,13 @@
 		<acquire exp="8649429" sp="20758" />
 		<equipment rhand="17330" /> <!-- Apocalypse Thrower -->
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="37639" hpRegen="10.5" mp="23550" mpRegen="3.6" />
+			<vitals hp="37639.3063583815" hpRegen="10.5" mp="23550.495049505" mpRegen="3.6" />
 			<speed>
 				<walk ground="43" />
 				<run ground="170" />
 			</speed>
-			<attack physical="47220.557386874" magical="8305.0410766139" critical="4" attackSpeed="253" range="1100" />
-			<defence physical="526.06382978723" magical="305.10497858296" />
+			<attack physical="47220.5573868744" magical="6936.97244026951" critical="4" attackSpeed="253" range="1100" />
+			<defence physical="1051.59574468085" magical="609.858858226248" />
 			<attribute>
 				<defence fire="250" water="250" wind="200" earth="250" holy="250" dark="250" />
 				<attack type="EARTH" value="330" />
@@ -2226,13 +2237,13 @@
 		<sex>FEMALE</sex>
 		<acquire exp="2162357" sp="5189" />
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="37639" hpRegen="10.5" mp="23550" mpRegen="3.6" />
+			<vitals hp="37639.3063583815" hpRegen="10.5" mp="23550.495049505" mpRegen="3.6" />
 			<speed>
 				<walk ground="35" />
 				<run ground="120" />
 			</speed>
-			<attack physical="47220.61371589" magical="8305.0410766139" critical="4" attackSpeed="253" range="40" />
-			<defence physical="526.14714175852" magical="305.10497858296" />
+			<attack physical="47220.61371589" magical="6936.97244026951" critical="4" attackSpeed="253" range="40" />
+			<defence physical="1051.65342219944" magical="609.858858226248" />
 			<attribute>
 				<defence fire="250" water="250" wind="200" earth="250" holy="250" dark="250" />
 				<attack type="EARTH" value="330" />
@@ -2270,13 +2281,13 @@
 		<sex>FEMALE</sex>
 		<acquire exp="8649429" sp="20758" />
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="37639" hpRegen="10.5" mp="23550" mpRegen="3.6" />
+			<vitals hp="37639.3063583815" hpRegen="10.5" mp="23550.495049505" mpRegen="3.6" />
 			<speed>
 				<walk ground="60" />
 				<run ground="180" />
 			</speed>
-			<attack physical="47220.557386874" magical="8305.0410766139" critical="4" attackSpeed="253" range="40" />
-			<defence physical="526.06382978723" magical="304.80017840456" />
+			<attack physical="47220.5573868744" magical="6936.97244026951" critical="4" attackSpeed="253" range="40" />
+			<defence physical="1051.59574468085" magical="609.60035680912" />
 			<attribute>
 				<defence fire="250" water="250" wind="200" earth="250" holy="250" dark="250" />
 				<attack type="EARTH" value="330" />
@@ -2312,13 +2323,13 @@
 		<sex>FEMALE</sex>
 		<acquire exp="8649429" sp="20758" />
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="37639" hpRegen="10.5" mp="23550" mpRegen="3.6" />
+			<vitals hp="37639.3063583815" hpRegen="10.5" mp="23550.495049505" mpRegen="3.6" />
 			<speed>
 				<walk ground="60" />
 				<run ground="180" />
 			</speed>
-			<attack physical="47220.61371589" magical="8305.0410766139" critical="4" attackSpeed="253" range="40" />
-			<defence physical="526.06382978723" magical="304.80017840456" />
+			<attack physical="47220.61371589" magical="6936.97244026951" critical="4" attackSpeed="253" range="40" />
+			<defence physical="1051.59574468085" magical="609.60035680912" />
 			<attribute>
 				<defence fire="250" water="250" wind="200" earth="250" holy="250" dark="250" />
 				<attack type="EARTH" value="330" />
@@ -2356,13 +2367,13 @@
 		<sex>FEMALE</sex>
 		<acquire exp="8649429" sp="20758" />
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="37639" hpRegen="10.5" mp="23550" mpRegen="3.6" />
+			<vitals hp="37639.3063583815" hpRegen="10.5" mp="23550.495049505" mpRegen="3.6" />
 			<speed>
 				<walk ground="35" />
 				<run ground="110" />
 			</speed>
-			<attack physical="47220.557386874" magical="8305.0410766139" critical="4" attackSpeed="253" range="40" />
-			<defence physical="526.06382978723" magical="305.10497858296" />
+			<attack physical="47220.5573868744" magical="6936.97244026951" critical="4" attackSpeed="253" range="40" />
+			<defence physical="1051.59574468085" magical="609.858858226248" />
 			<attribute>
 				<defence fire="250" water="250" wind="200" earth="250" holy="250" dark="250" />
 				<attack type="EARTH" value="330" />
@@ -2398,13 +2409,13 @@
 		<sex>FEMALE</sex>
 		<acquire exp="8649429" sp="20758" />
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="37639" hpRegen="10.5" mp="23550" mpRegen="3.6" />
+			<vitals hp="37639.3063583815" hpRegen="10.5" mp="23550.495049505" mpRegen="3.6" />
 			<speed>
 				<walk ground="30" />
 				<run ground="160" />
 			</speed>
-			<attack physical="47220.557386874" magical="8305.0410766139" critical="4" attackSpeed="253" range="40" />
-			<defence physical="526.06382978723" magical="305.10497858296" />
+			<attack physical="47220.5573868744" magical="6936.97244026951" critical="4" attackSpeed="253" range="40" />
+			<defence physical="1051.59574468085" magical="609.858858226248" />
 			<attribute>
 				<defence fire="250" water="250" wind="200" earth="250" holy="250" dark="250" />
 				<attack type="EARTH" value="330" />
@@ -2439,13 +2450,13 @@
 		<sex>FEMALE</sex>
 		<acquire exp="8649429" sp="20758" />
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="37639" hpRegen="10.5" mp="23550" mpRegen="3.6" />
+			<vitals hp="37639.3063583815" hpRegen="10.5" mp="23550.495049505" mpRegen="3.6" />
 			<speed>
 				<walk ground="60" />
 				<run ground="160" />
 			</speed>
-			<attack physical="47220.241292647" magical="8305.0410766139" critical="4" attackSpeed="253" range="40" />
-			<defence physical="526.06382978723" magical="305.10497858296" />
+			<attack physical="47220.2412926468" magical="6936.97244026951" critical="4" attackSpeed="253" range="40" />
+			<defence physical="1051.59574468085" magical="609.858858226248" />
 			<attribute>
 				<defence fire="250" water="250" wind="200" earth="250" holy="250" dark="250" />
 				<attack type="EARTH" value="330" />
@@ -2482,13 +2493,13 @@
 		<sex>FEMALE</sex>
 		<acquire exp="8649429" sp="20758" />
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="37639" hpRegen="10.5" mp="23550" mpRegen="3.6" />
+			<vitals hp="37639.3063583815" hpRegen="10.5" mp="23550.495049505" mpRegen="3.6" />
 			<speed>
 				<walk ground="60" />
 				<run ground="210" />
 			</speed>
-			<attack physical="47220.557386874" magical="8305.0410766139" critical="4" attackSpeed="253" range="40" />
-			<defence physical="526.06382978723" magical="305.10497858296" />
+			<attack physical="47220.5573868744" magical="6936.97244026951" critical="4" attackSpeed="253" range="40" />
+			<defence physical="1051.59574468085" magical="609.858858226248" />
 			<attribute>
 				<defence fire="250" water="250" wind="200" earth="250" holy="250" dark="250" />
 				<attack type="EARTH" value="330" />
@@ -2524,13 +2535,13 @@
 		<race>ETC</race>
 		<sex>FEMALE</sex>
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="37639" hpRegen="10.5" mp="23550" mpRegen="3.6" />
+			<vitals hp="37639.3063583815" hpRegen="10.5" mp="23550.495049505" mpRegen="3.6" />
 			<speed>
 				<walk ground="13" />
 				<run ground="160" />
 			</speed>
-			<attack physical="47220.557386874" magical="8305.0410766139" critical="4" attackSpeed="253" range="40" />
-			<defence physical="526.06382978723" magical="305.10497858296" />
+			<attack physical="47220.5573868744" magical="6936.97244026951" critical="4" attackSpeed="253" range="40" />
+			<defence physical="1051.59574468085" magical="609.858858226248" />
 			<attribute>
 				<defence fire="250" water="250" wind="250" earth="250" holy="250" dark="250" />
 			</attribute>
@@ -2560,13 +2571,13 @@
 		<sex>FEMALE</sex>
 		<acquire exp="8649429" sp="20758" />
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="37639" hpRegen="10.5" mp="23550" mpRegen="3.6" />
+			<vitals hp="37639.3063583815" hpRegen="10.5" mp="23550.495049505" mpRegen="3.6" />
 			<speed>
 				<walk ground="40" />
 				<run ground="160" />
 			</speed>
-			<attack physical="47220.317247387" magical="8305.0410766139" critical="4" attackSpeed="253" range="40" />
-			<defence physical="526.06382978723" magical="305.10497858296" />
+			<attack physical="47220.3172473872" magical="6936.97244026951" critical="4" attackSpeed="253" range="40" />
+			<defence physical="1051.59574468085" magical="609.858858226248" />
 			<attribute>
 				<defence fire="250" water="250" wind="200" earth="250" holy="250" dark="250" />
 				<attack type="EARTH" value="330" />
@@ -2602,13 +2613,13 @@
 		<sex>FEMALE</sex>
 		<acquire exp="8649429" sp="20758" />
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="37639" hpRegen="10.5" mp="23550" mpRegen="3.6" />
+			<vitals hp="37639.3063583815" hpRegen="10.5" mp="23550.495049505" mpRegen="3.6" />
 			<speed>
 				<walk ground="60" />
 				<run ground="180" />
 			</speed>
-			<attack physical="47220.317247387" magical="8305.0410766139" critical="4" attackSpeed="253" range="40" />
-			<defence physical="526.06382978723" magical="305.10497858296" />
+			<attack physical="47220.3172473872" magical="6936.97244026951" critical="4" attackSpeed="253" range="40" />
+			<defence physical="1051.59574468085" magical="609.858858226248" />
 			<attribute>
 				<defence fire="250" water="250" wind="200" earth="250" holy="250" dark="250" />
 				<attack type="EARTH" value="330" />
@@ -2646,13 +2657,13 @@
 		<sex>FEMALE</sex>
 		<acquire exp="8649429" sp="20758" />
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="37639" hpRegen="10.5" mp="23550" mpRegen="3.6" />
+			<vitals hp="37639.3063583815" hpRegen="10.5" mp="23550.495049505" mpRegen="3.6" />
 			<speed>
 				<walk ground="60" />
 				<run ground="180" />
 			</speed>
-			<attack physical="47220.557386874" magical="8305.0410766139" critical="4" attackSpeed="253" range="40" />
-			<defence physical="526.14714175852" magical="305.10497858296" />
+			<attack physical="47220.5573868744" magical="6936.97244026951" critical="4" attackSpeed="253" range="40" />
+			<defence physical="1051.65342219944" magical="609.858858226248" />
 			<attribute>
 				<defence fire="250" water="250" wind="200" earth="250" holy="250" dark="250" />
 				<attack type="EARTH" value="330" />
@@ -2690,13 +2701,13 @@
 		<sex>FEMALE</sex>
 		<acquire exp="8649429" sp="20758" />
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="37639" hpRegen="10.5" mp="23550" mpRegen="3.6" />
+			<vitals hp="37639.3063583815" hpRegen="10.5" mp="23550.495049505" mpRegen="3.6" />
 			<speed>
 				<walk ground="43" />
 				<run ground="170" />
 			</speed>
-			<attack physical="47220.557386874" magical="8305.0410766139" critical="4" attackSpeed="253" range="1100" />
-			<defence physical="526.06382978723" magical="305.10497858296" />
+			<attack physical="47220.5573868744" magical="6936.97244026951" critical="4" attackSpeed="253" range="1100" />
+			<defence physical="1051.59574468085" magical="609.858858226248" />
 			<attribute>
 				<defence fire="250" water="250" wind="200" earth="250" holy="250" dark="250" />
 				<attack type="EARTH" value="330" />
@@ -2731,13 +2742,13 @@
 		<sex>FEMALE</sex>
 		<acquire exp="2162357" sp="5189" />
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="37639" hpRegen="10.5" mp="23550" mpRegen="3.6" />
+			<vitals hp="37639.3063583815" hpRegen="10.5" mp="23550.495049505" mpRegen="3.6" />
 			<speed>
 				<walk ground="35" />
 				<run ground="120" />
 			</speed>
-			<attack physical="47220.61371589" magical="8305.0410766139" critical="4" attackSpeed="253" range="40" />
-			<defence physical="526.14714175852" magical="305.10497858296" />
+			<attack physical="47220.61371589" magical="6936.97244026951" critical="4" attackSpeed="253" range="40" />
+			<defence physical="1051.65342219944" magical="609.858858226248" />
 			<attribute>
 				<defence fire="250" water="250" wind="200" earth="250" holy="250" dark="250" />
 				<attack type="EARTH" value="330" />
@@ -2774,13 +2785,13 @@
 		<sex>FEMALE</sex>
 		<acquire exp="8649429" sp="20758" />
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="37639" hpRegen="10.5" mp="23550" mpRegen="3.6" />
+			<vitals hp="37639.3063583815" hpRegen="10.5" mp="23550.495049505" mpRegen="3.6" />
 			<speed>
 				<walk ground="60" />
 				<run ground="180" />
 			</speed>
-			<attack physical="47220.557386874" magical="8305.0410766139" critical="4" attackSpeed="253" range="40" />
-			<defence physical="526.06382978723" magical="304.80017840456" />
+			<attack physical="47220.5573868744" magical="6936.97244026951" critical="4" attackSpeed="253" range="40" />
+			<defence physical="1051.59574468085" magical="609.60035680912" />
 			<attribute>
 				<defence fire="250" water="250" wind="200" earth="250" holy="250" dark="250" />
 				<attack type="EARTH" value="330" />
@@ -2816,13 +2827,13 @@
 		<sex>FEMALE</sex>
 		<acquire exp="8649429" sp="20758" />
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="37639" hpRegen="10.5" mp="23550" mpRegen="3.6" />
+			<vitals hp="37639.3063583815" hpRegen="10.5" mp="23550.495049505" mpRegen="3.6" />
 			<speed>
 				<walk ground="60" />
 				<run ground="180" />
 			</speed>
-			<attack physical="47220.61371589" magical="8305.0410766139" critical="4" attackSpeed="253" range="40" />
-			<defence physical="526.06382978723" magical="304.80017840456" />
+			<attack physical="47220.61371589" magical="6936.97244026951" critical="4" attackSpeed="253" range="40" />
+			<defence physical="1051.59574468085" magical="609.60035680912" />
 			<attribute>
 				<defence fire="250" water="250" wind="200" earth="250" holy="250" dark="250" />
 				<attack type="EARTH" value="330" />
@@ -2859,13 +2870,13 @@
 		<sex>FEMALE</sex>
 		<acquire exp="4079150" sp="9789" />
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="104555" hpRegen="10.5" mp="23550" mpRegen="3.6" />
+			<vitals hp="104555.49132948" hpRegen="10.5" mp="23550.495049505" mpRegen="3.6" />
 			<speed>
 				<walk ground="60" />
 				<run ground="300" />
 			</speed>
-			<attack physical="47220.557386874" magical="8305.0410766139" critical="4" attackSpeed="253" range="40" />
-			<defence physical="526.06382978723" magical="305.10497858296" />
+			<attack physical="47220.5573868744" magical="6936.97244026951" critical="4" attackSpeed="253" range="40" />
+			<defence physical="1051.59574468085" magical="609.858858226248" />
 			<attribute>
 				<defence fire="250" water="200" wind="250" earth="250" holy="250" dark="250" />
 				<attack type="FIRE" value="330" />
@@ -2901,13 +2912,13 @@
 		<sex>FEMALE</sex>
 		<acquire exp="4079150" sp="9789" />
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="104555" hpRegen="10.5" mp="23550" mpRegen="3.6" />
+			<vitals hp="104555.49132948" hpRegen="10.5" mp="23550.495049505" mpRegen="3.6" />
 			<speed>
 				<walk ground="60" />
 				<run ground="300" />
 			</speed>
-			<attack physical="47220.557386874" magical="8305.0410766139" critical="4" attackSpeed="253" range="40" />
-			<defence physical="526.06382978723" magical="305.10497858296" />
+			<attack physical="47220.5573868744" magical="6936.97244026951" critical="4" attackSpeed="253" range="40" />
+			<defence physical="1051.59574468085" magical="609.858858226248" />
 			<attribute>
 				<defence fire="250" water="200" wind="250" earth="250" holy="250" dark="250" />
 				<attack type="FIRE" value="330" />
@@ -2942,13 +2953,13 @@
 		<sex>FEMALE</sex>
 		<acquire exp="4894979" sp="11747" />
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="139406" hpRegen="10.5" mp="23550" mpRegen="3.6" />
+			<vitals hp="139406.358381503" hpRegen="10.5" mp="23550.495049505" mpRegen="3.6" />
 			<speed>
 				<walk ground="60" />
 				<run ground="300" />
 			</speed>
-			<attack physical="47220.306466714" magical="8304.9029160715" critical="4" attackSpeed="253" range="40" />
-			<defence physical="526.06382978723" magical="305.10497858296" />
+			<attack physical="47220.3064667144" magical="6936.85703856762" critical="4" attackSpeed="253" range="40" />
+			<defence physical="1051.59574468085" magical="609.858858226248" />
 			<attribute>
 				<defence fire="250" water="200" wind="250" earth="250" holy="250" dark="250" />
 				<attack type="FIRE" value="330" />
@@ -2988,13 +2999,13 @@
 		<sex>FEMALE</sex>
 		<acquire exp="4894979" sp="11747" />
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="139406" hpRegen="10.5" mp="23550" mpRegen="3.6" />
+			<vitals hp="139406.358381503" hpRegen="10.5" mp="23550.495049505" mpRegen="3.6" />
 			<speed>
 				<walk ground="60" />
 				<run ground="300" />
 			</speed>
-			<attack physical="47220.241292647" magical="8304.9029160715" critical="4" attackSpeed="253" range="40" />
-			<defence physical="526.06382978723" magical="305.10497858296" />
+			<attack physical="47220.2412926468" magical="6936.85703856762" critical="4" attackSpeed="253" range="40" />
+			<defence physical="1051.59574468085" magical="609.858858226248" />
 			<attribute>
 				<defence fire="250" water="200" wind="250" earth="250" holy="250" dark="250" />
 				<attack type="FIRE" value="330" />
@@ -3034,13 +3045,13 @@
 		<sex>FEMALE</sex>
 		<acquire exp="4894979" sp="11747" />
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="139406" hpRegen="10.5" mp="23550" mpRegen="3.6" />
+			<vitals hp="139406.358381503" hpRegen="10.5" mp="23550.495049505" mpRegen="3.6" />
 			<speed>
 				<walk ground="60" />
 				<run ground="300" />
 			</speed>
-			<attack physical="47220.306466714" magical="8304.9029160715" critical="4" attackSpeed="253" range="40" />
-			<defence physical="526.06382978723" magical="305.10497858296" />
+			<attack physical="47220.3064667144" magical="6936.85703856762" critical="4" attackSpeed="253" range="40" />
+			<defence physical="1051.59574468085" magical="609.858858226248" />
 			<attribute>
 				<defence fire="250" water="200" wind="250" earth="250" holy="250" dark="250" />
 				<attack type="FIRE" value="330" />
@@ -3079,13 +3090,13 @@
 		<sex>FEMALE</sex>
 		<acquire exp="27194245" sp="65266" />
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="253467" hpRegen="10.5" mp="23550" mpRegen="3.6" />
+			<vitals hp="253467.052023121" hpRegen="10.5" mp="23550.495049505" mpRegen="3.6" />
 			<speed>
 				<walk ground="60" />
 				<run ground="160" />
 			</speed>
-			<attack physical="47220.557386874" magical="8305.0410766139" critical="4" attackSpeed="253" range="40" />
-			<defence physical="526.06382978723" magical="305.10497858296" />
+			<attack physical="47220.5573868744" magical="6936.97244026951" critical="4" attackSpeed="253" range="40" />
+			<defence physical="1051.59574468085" magical="609.858858226248" />
 			<attribute>
 				<defence fire="250" water="200" wind="250" earth="250" holy="250" dark="250" />
 				<attack type="FIRE" value="330" />
@@ -3124,13 +3135,13 @@
 		<sex>FEMALE</sex>
 		<acquire exp="27194245" sp="65266" />
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="253467" hpRegen="10.5" mp="23550" mpRegen="3.6" />
+			<vitals hp="253467.052023121" hpRegen="10.5" mp="23550.495049505" mpRegen="3.6" />
 			<speed>
 				<walk ground="60" />
 				<run ground="170" />
 			</speed>
-			<attack physical="47220.557386874" magical="8305.0410766139" critical="4" attackSpeed="253" range="40" />
-			<defence physical="526.06382978723" magical="305.10497858296" />
+			<attack physical="47220.5573868744" magical="6936.97244026951" critical="4" attackSpeed="253" range="40" />
+			<defence physical="1051.59574468085" magical="609.858858226248" />
 			<attribute>
 				<defence fire="250" water="200" wind="250" earth="250" holy="250" dark="250" />
 				<attack type="FIRE" value="330" />
@@ -3169,13 +3180,13 @@
 		<sex>FEMALE</sex>
 		<acquire exp="27194245" sp="65266" />
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="253467" hpRegen="10.5" mp="23550" mpRegen="3.6" />
+			<vitals hp="253467.052023121" hpRegen="10.5" mp="23550.495049505" mpRegen="3.6" />
 			<speed>
 				<walk ground="60" />
 				<run ground="160" />
 			</speed>
-			<attack physical="47220.557386874" magical="8305.0410766139" critical="4" attackSpeed="253" range="40" />
-			<defence physical="526.06382978723" magical="305.10497858296" />
+			<attack physical="47220.5573868744" magical="6936.97244026951" critical="4" attackSpeed="253" range="40" />
+			<defence physical="1051.59574468085" magical="609.858858226248" />
 			<attribute>
 				<defence fire="250" water="200" wind="250" earth="250" holy="250" dark="250" />
 				<attack type="FIRE" value="330" />
@@ -3215,13 +3226,13 @@
 		<sex>FEMALE</sex>
 		<acquire exp="27194245" sp="65266" />
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="253467" hpRegen="10.5" mp="23550" mpRegen="3.6" />
+			<vitals hp="253467.052023121" hpRegen="10.5" mp="23550.495049505" mpRegen="3.6" />
 			<speed>
 				<walk ground="60" />
 				<run ground="170" />
 			</speed>
-			<attack physical="47220.557386874" magical="8305.0410766139" critical="4" attackSpeed="253" range="40" />
-			<defence physical="526.06382978723" magical="305.10497858296" />
+			<attack physical="47220.5573868744" magical="6936.97244026951" critical="4" attackSpeed="253" range="40" />
+			<defence physical="1051.59574468085" magical="609.858858226248" />
 			<attribute>
 				<defence fire="250" water="200" wind="250" earth="250" holy="250" dark="250" />
 				<attack type="FIRE" value="330" />
@@ -3260,13 +3271,13 @@
 		<race>DEMONIC</race>
 		<sex>FEMALE</sex>
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="316834" hpRegen="10.5" mp="23550" mpRegen="3.6" />
+			<vitals hp="316834.104046243" hpRegen="10.5" mp="23550.495049505" mpRegen="3.6" />
 			<speed>
 				<walk ground="60" />
 				<run ground="160" />
 			</speed>
-			<attack physical="46490.165755271" magical="8304.8994625376" critical="4" attackSpeed="253" range="40" />
-			<defence physical="526.06382978723" magical="305.10497858296" />
+			<attack physical="46490.1657552709" magical="6936.85415392572" critical="4" attackSpeed="253" range="40" />
+			<defence physical="1051.59574468085" magical="609.858858226248" />
 			<attribute>
 				<defence fire="250" water="200" wind="250" earth="250" holy="250" dark="250" />
 				<attack type="FIRE" value="330" />
@@ -3303,13 +3314,13 @@
 		<sex>FEMALE</sex>
 		<acquire exp="71385190" sp="171324" />
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="316834" hpRegen="10.5" mp="23550" mpRegen="3.6" />
+			<vitals hp="316834.104046243" hpRegen="10.5" mp="23550.495049505" mpRegen="3.6" />
 			<speed>
 				<walk ground="46" />
 				<run ground="200" />
 			</speed>
-			<attack physical="47220.557386874" magical="8305.0410766139" critical="4" attackSpeed="253" range="40" />
-			<defence physical="526.31578947368" magical="305.10497858296" />
+			<attack physical="47220.5573868744" magical="6936.97244026951" critical="4" attackSpeed="253" range="40" />
+			<defence physical="1051.93169092945" magical="609.858858226248" />
 			<attribute>
 				<defence fire="250" water="250" wind="200" earth="250" holy="250" dark="250" />
 				<attack type="EARTH" value="330" />
@@ -3317,12 +3328,15 @@
 		</stats>
 		<status attackable="false" />
 		<skillList>
+			<skill id="4379" level="5" /> <!-- Spear Resistance -->
 			<skill id="4412" level="8" /> <!-- Weak P. Def. -->
 			<skill id="4416" level="10" /> <!-- Dragons -->
 			<skill id="4457" level="1" /> <!-- Fist Weapon Vulnerability -->
 			<skill id="4459" level="1" /> <!-- Dualsword Vulnerability -->
 			<skill id="4460" level="1" /> <!-- Sword Vulnerability -->
 			<skill id="5465" level="1" /> <!-- Earth Attack -->
+			<skill id="14823" level="1" /> <!-- Lethal Strike Resistance -->
+			<skill id="16547" level="10" /> <!-- Danger Zone Attack Resistance -->
 		</skillList>
 		<dropLists>
 			<drop>
@@ -3348,13 +3362,13 @@
 		<sex>FEMALE</sex>
 		<acquire exp="71385190" sp="171324" />
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="316834" hpRegen="10.5" mp="23550" mpRegen="3.6" />
+			<vitals hp="316834.104046243" hpRegen="10.5" mp="23550.495049505" mpRegen="3.6" />
 			<speed>
 				<walk ground="36" />
 				<run ground="170" />
 			</speed>
-			<attack physical="47220.557386874" magical="8305.0410766139" critical="4" attackSpeed="253" range="40" />
-			<defence physical="526.31578947368" magical="305.10497858296" />
+			<attack physical="47220.5573868744" magical="6936.97244026951" critical="4" attackSpeed="253" range="40" />
+			<defence physical="1051.93169092945" magical="609.858858226248" />
 			<attribute>
 				<defence fire="250" water="250" wind="200" earth="250" holy="250" dark="250" />
 				<attack type="EARTH" value="330" />
@@ -3363,12 +3377,15 @@
 		<status attackable="false" />
 		<skillList>
 			<skill id="4225" level="3" /> <!-- Stun Resistance -->
+			<skill id="4379" level="5" /> <!-- Spear Resistance -->
 			<skill id="4412" level="8" /> <!-- Weak P. Def. -->
 			<skill id="4416" level="2" /> <!-- Magic Creatures -->
 			<skill id="4457" level="1" /> <!-- Fist Weapon Vulnerability -->
 			<skill id="4459" level="1" /> <!-- Dualsword Vulnerability -->
 			<skill id="4460" level="1" /> <!-- Sword Vulnerability -->
 			<skill id="5465" level="1" /> <!-- Earth Attack -->
+			<skill id="14823" level="1" /> <!-- Lethal Strike Resistance -->
+			<skill id="16547" level="10" /> <!-- Danger Zone Attack Resistance -->
 		</skillList>
 		<dropLists>
 			<drop>
@@ -3394,13 +3411,13 @@
 		<sex>FEMALE</sex>
 		<acquire exp="71385190" sp="171324" />
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="316834" hpRegen="10.5" mp="23550" mpRegen="3.6" />
+			<vitals hp="316834.104046243" hpRegen="10.5" mp="23550.495049505" mpRegen="3.6" />
 			<speed>
 				<walk ground="56" />
 				<run ground="180" />
 			</speed>
-			<attack physical="47220.557386874" magical="8305.0410766139" critical="4" attackSpeed="253" range="40" />
-			<defence physical="526.31578947368" magical="305.10497858296" />
+			<attack physical="47220.5573868744" magical="6936.97244026951" critical="4" attackSpeed="253" range="40" />
+			<defence physical="1051.93169092945" magical="609.858858226248" />
 			<attribute>
 				<defence fire="250" water="250" wind="200" earth="250" holy="250" dark="250" />
 				<attack type="EARTH" value="330" />
@@ -3408,12 +3425,15 @@
 		</stats>
 		<status attackable="false" />
 		<skillList>
+			<skill id="4379" level="5" /> <!-- Spear Resistance -->
 			<skill id="4412" level="8" /> <!-- Weak P. Def. -->
 			<skill id="4416" level="3" /> <!-- Beast -->
 			<skill id="4457" level="1" /> <!-- Fist Weapon Vulnerability -->
 			<skill id="4459" level="1" /> <!-- Dualsword Vulnerability -->
 			<skill id="4460" level="1" /> <!-- Sword Vulnerability -->
 			<skill id="5465" level="1" /> <!-- Earth Attack -->
+			<skill id="14823" level="1" /> <!-- Lethal Strike Resistance -->
+			<skill id="16547" level="10" /> <!-- Danger Zone Attack Resistance -->
 		</skillList>
 		<dropLists>
 			<drop>
@@ -3440,13 +3460,13 @@
 		<sex>FEMALE</sex>
 		<acquire exp="71385190" sp="171324" />
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="316834" hpRegen="10.5" mp="23550" mpRegen="3.6" />
+			<vitals hp="316834.104046243" hpRegen="10.5" mp="23550.495049505" mpRegen="3.6" />
 			<speed>
 				<walk ground="37.5" />
 				<run ground="180" />
 			</speed>
-			<attack physical="47220.557386874" magical="8305.0410766139" critical="4" attackSpeed="253" range="40" />
-			<defence physical="526.31578947368" magical="305.10497858296" />
+			<attack physical="47220.5573868744" magical="6936.97244026951" critical="4" attackSpeed="253" range="40" />
+			<defence physical="1051.93169092945" magical="609.858858226248" />
 			<attribute>
 				<defence fire="250" water="250" wind="200" earth="250" holy="250" dark="250" />
 				<attack type="EARTH" value="330" />
@@ -3455,9 +3475,12 @@
 		<status attackable="false" />
 		<skillList>
 			<skill id="4225" level="3" /> <!-- Stun Resistance -->
+			<skill id="4379" level="5" /> <!-- Spear Resistance -->
 			<skill id="4412" level="8" /> <!-- Weak P. Def. -->
 			<skill id="4416" level="3" /> <!-- Beast -->
 			<skill id="5465" level="1" /> <!-- Earth Attack -->
+			<skill id="14823" level="1" /> <!-- Lethal Strike Resistance -->
+			<skill id="16547" level="10" /> <!-- Danger Zone Attack Resistance -->
 		</skillList>
 		<dropLists>
 			<drop>
@@ -3484,13 +3507,13 @@
 		<sex>FEMALE</sex>
 		<acquire exp="71385190" sp="171324" />
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="316834" hpRegen="10.5" mp="23550" mpRegen="3.6" />
+			<vitals hp="316834.104046243" hpRegen="10.5" mp="23550.495049505" mpRegen="3.6" />
 			<speed>
 				<walk ground="40" />
 				<run ground="120" />
 			</speed>
-			<attack physical="47220.557386874" magical="8305.0410766139" critical="4" attackSpeed="253" range="40" />
-			<defence physical="526.31578947368" magical="305.10497858296" />
+			<attack physical="47220.5573868744" magical="6936.97244026951" critical="4" attackSpeed="253" range="40" />
+			<defence physical="1051.93169092945" magical="609.858858226248" />
 			<attribute>
 				<defence fire="250" water="250" wind="200" earth="250" holy="250" dark="250" />
 				<attack type="EARTH" value="330" />
@@ -3499,9 +3522,12 @@
 		<status attackable="false" />
 		<skillList>
 			<skill id="4225" level="3" /> <!-- Stun Resistance -->
+			<skill id="4379" level="5" /> <!-- Spear Resistance -->
 			<skill id="4412" level="8" /> <!-- Weak P. Def. -->
 			<skill id="4416" level="3" /> <!-- Beast -->
 			<skill id="5465" level="1" /> <!-- Earth Attack -->
+			<skill id="14823" level="1" /> <!-- Lethal Strike Resistance -->
+			<skill id="16547" level="10" /> <!-- Danger Zone Attack Resistance -->
 		</skillList>
 		<dropLists>
 			<drop>
@@ -3528,13 +3554,13 @@
 		<sex>FEMALE</sex>
 		<acquire exp="142770186" sp="342648" />
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="316834" hpRegen="10.5" mp="23550" mpRegen="3.6" />
+			<vitals hp="316834.104046243" hpRegen="10.5" mp="23550.495049505" mpRegen="3.6" />
 			<speed>
 				<walk ground="60" />
 				<run ground="180" />
 			</speed>
-			<attack physical="47220.241292647" magical="8304.9567060447" critical="4" attackSpeed="253" range="40" />
-			<defence physical="526.06382978723" magical="305.10497858296" />
+			<attack physical="47220.2412926468" magical="6936.90196785314" critical="4" attackSpeed="253" range="40" />
+			<defence physical="1051.59574468085" magical="609.858858226248" />
 			<attribute>
 				<defence fire="250" water="250" wind="200" earth="250" holy="250" dark="250" />
 				<attack type="EARTH" value="330" />
@@ -3542,10 +3568,13 @@
 		</stats>
 		<status attackable="false" />
 		<skillList>
+			<skill id="4379" level="5" /> <!-- Spear Resistance -->
 			<skill id="4410" level="13" /> <!-- Slightly Strong P. Atk. -->
 			<skill id="4411" level="13" /> <!-- Slightly Strong M. Atk. -->
 			<skill id="4416" level="3" /> <!-- Beast -->
 			<skill id="5465" level="1" /> <!-- Earth Attack -->
+			<skill id="14823" level="1" /> <!-- Lethal Strike Resistance -->
+			<skill id="16547" level="10" /> <!-- Danger Zone Attack Resistance -->
 		</skillList>
 		<collision>
 			<radius normal="30" />
@@ -3569,13 +3598,13 @@
 		<sex>FEMALE</sex>
 		<acquire exp="142770186" sp="342648" />
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="348517" hpRegen="10.5" mp="23550" mpRegen="3.6" />
+			<vitals hp="316834.104046243" hpRegen="10.5" mp="23550.495049505" mpRegen="3.6" />
 			<speed>
 				<walk ground="60" />
 				<run ground="180" />
 			</speed>
-			<attack physical="47220.241292647" magical="8304.9567060447" critical="4" attackSpeed="253" range="40" />
-			<defence physical="526.06382978723" magical="305.10497858296" />
+			<attack physical="47220.2412926468" magical="6936.90196785314" critical="4" attackSpeed="253" range="40" />
+			<defence physical="1051.59574468085" magical="609.858858226248" />
 			<attribute>
 				<defence fire="250" water="250" wind="200" earth="250" holy="250" dark="250" />
 				<attack type="EARTH" value="330" />
@@ -3583,10 +3612,13 @@
 		</stats>
 		<status attackable="false" />
 		<skillList>
+			<skill id="4379" level="5" /> <!-- Spear Resistance -->
 			<skill id="4410" level="13" /> <!-- Slightly Strong P. Atk. -->
 			<skill id="4411" level="13" /> <!-- Slightly Strong M. Atk. -->
 			<skill id="4416" level="3" /> <!-- Beast -->
 			<skill id="5465" level="1" /> <!-- Earth Attack -->
+			<skill id="14823" level="1" /> <!-- Lethal Strike Resistance -->
+			<skill id="16547" level="10" /> <!-- Danger Zone Attack Resistance -->
 		</skillList>
 		<collision>
 			<radius normal="30" />
@@ -3610,13 +3642,13 @@
 		<sex>FEMALE</sex>
 		<acquire exp="142770186" sp="342648" />
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="316834" hpRegen="10.5" mp="23550" mpRegen="3.6" />
+			<vitals hp="316834.104046243" hpRegen="10.5" mp="23550.495049505" mpRegen="3.6" />
 			<speed>
 				<walk ground="48" />
 				<run ground="150" />
 			</speed>
-			<attack physical="47220.241292647" magical="8304.9567060447" critical="4" attackSpeed="253" range="40" />
-			<defence physical="526.06382978723" magical="305.10497858296" />
+			<attack physical="47220.2412926468" magical="6936.90196785314" critical="4" attackSpeed="253" range="40" />
+			<defence physical="1051.59574468085" magical="609.858858226248" />
 			<attribute>
 				<defence fire="250" water="250" wind="200" earth="250" holy="250" dark="250" />
 				<attack type="EARTH" value="330" />
@@ -3624,10 +3656,13 @@
 		</stats>
 		<status attackable="false" />
 		<skillList>
+			<skill id="4379" level="5" /> <!-- Spear Resistance -->
 			<skill id="4410" level="13" /> <!-- Slightly Strong P. Atk. -->
 			<skill id="4411" level="13" /> <!-- Slightly Strong M. Atk. -->
 			<skill id="4416" level="5" /> <!-- Plants -->
 			<skill id="5465" level="1" /> <!-- Earth Attack -->
+			<skill id="14823" level="1" /> <!-- Lethal Strike Resistance -->
+			<skill id="16547" level="10" /> <!-- Danger Zone Attack Resistance -->
 		</skillList>
 		<dropLists>
 			<drop>
@@ -3655,13 +3690,13 @@
 		<sex>FEMALE</sex>
 		<acquire exp="142770186" sp="342648" />
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="348517" hpRegen="10.5" mp="23550" mpRegen="3.6" />
+			<vitals hp="316834.104046243" hpRegen="10.5" mp="23550.495049505" mpRegen="3.6" />
 			<speed>
 				<walk ground="48" />
 				<run ground="150" />
 			</speed>
-			<attack physical="47220.241292647" magical="8304.9567060447" critical="4" attackSpeed="253" range="40" />
-			<defence physical="526.06382978723" magical="305.10497858296" />
+			<attack physical="47220.2412926468" magical="6936.90196785314" critical="4" attackSpeed="253" range="40" />
+			<defence physical="1051.59574468085" magical="609.858858226248" />
 			<attribute>
 				<defence fire="250" water="250" wind="200" earth="250" holy="250" dark="250" />
 				<attack type="EARTH" value="330" />
@@ -3669,10 +3704,13 @@
 		</stats>
 		<status attackable="false" />
 		<skillList>
+			<skill id="4379" level="5" /> <!-- Spear Resistance -->
 			<skill id="4410" level="13" /> <!-- Slightly Strong P. Atk. -->
 			<skill id="4411" level="13" /> <!-- Slightly Strong M. Atk. -->
 			<skill id="4416" level="5" /> <!-- Plants -->
 			<skill id="5465" level="1" /> <!-- Earth Attack -->
+			<skill id="14823" level="1" /> <!-- Lethal Strike Resistance -->
+			<skill id="16547" level="10" /> <!-- Danger Zone Attack Resistance -->
 		</skillList>
 		<dropLists>
 			<drop>
@@ -3700,13 +3738,13 @@
 		<sex>FEMALE</sex>
 		<acquire exp="47590086" sp="114216" />
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="158417" hpRegen="10.5" mp="23550" mpRegen="3.6" />
+			<vitals hp="158417.341040462" hpRegen="10.5" mp="23550.495049505" mpRegen="3.6" />
 			<speed>
 				<walk ground="56" />
 				<run ground="160" />
 			</speed>
-			<attack physical="47220.557386874" magical="8305.0410766139" critical="4" attackSpeed="253" range="40" />
-			<defence physical="526.06382978723" magical="305.10497858296" />
+			<attack physical="47220.5573868744" magical="6936.97244026951" critical="4" attackSpeed="253" range="40" />
+			<defence physical="1051.59574468085" magical="609.858858226248" />
 			<attribute>
 				<defence fire="250" water="250" wind="200" earth="250" holy="250" dark="250" />
 				<attack type="EARTH" value="330" />
@@ -3715,11 +3753,14 @@
 		<status attackable="false" />
 		<skillList>
 			<skill id="4287" level="3" /> <!-- Hold Resistance -->
+			<skill id="4379" level="5" /> <!-- Spear Resistance -->
 			<skill id="4416" level="6" /> <!-- Humanoids -->
 			<skill id="4457" level="1" /> <!-- Fist Weapon Vulnerability -->
 			<skill id="4459" level="1" /> <!-- Dualsword Vulnerability -->
 			<skill id="4460" level="1" /> <!-- Sword Vulnerability -->
 			<skill id="5465" level="1" /> <!-- Earth Attack -->
+			<skill id="14823" level="1" /> <!-- Lethal Strike Resistance -->
+			<skill id="16547" level="10" /> <!-- Danger Zone Attack Resistance -->
 		</skillList>
 		<dropLists>
 			<drop>
@@ -3745,13 +3786,13 @@
 		<sex>FEMALE</sex>
 		<acquire exp="47590086" sp="114216" />
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="174258" hpRegen="10.5" mp="23550" mpRegen="3.6" />
+			<vitals hp="158417.341040462" hpRegen="10.5" mp="23550.495049505" mpRegen="3.6" />
 			<speed>
 				<walk ground="56" />
 				<run ground="160" />
 			</speed>
-			<attack physical="47220.557386874" magical="8305.0410766139" critical="4" attackSpeed="253" range="40" />
-			<defence physical="526.06382978723" magical="305.10497858296" />
+			<attack physical="47220.5573868744" magical="6936.97244026951" critical="4" attackSpeed="253" range="40" />
+			<defence physical="1051.59574468085" magical="609.858858226248" />
 			<attribute>
 				<defence fire="250" water="250" wind="200" earth="250" holy="250" dark="250" />
 				<attack type="EARTH" value="330" />
@@ -3760,11 +3801,14 @@
 		<status attackable="false" />
 		<skillList>
 			<skill id="4287" level="3" /> <!-- Hold Resistance -->
+			<skill id="4379" level="5" /> <!-- Spear Resistance -->
 			<skill id="4416" level="6" /> <!-- Humanoids -->
 			<skill id="4457" level="1" /> <!-- Fist Weapon Vulnerability -->
 			<skill id="4459" level="1" /> <!-- Dualsword Vulnerability -->
 			<skill id="4460" level="1" /> <!-- Sword Vulnerability -->
 			<skill id="5465" level="1" /> <!-- Earth Attack -->
+			<skill id="14823" level="1" /> <!-- Lethal Strike Resistance -->
+			<skill id="16547" level="10" /> <!-- Danger Zone Attack Resistance -->
 		</skillList>
 		<dropLists>
 			<drop>
@@ -3790,13 +3834,13 @@
 		<sex>FEMALE</sex>
 		<acquire exp="90421084" sp="217010" />
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="348517" hpRegen="10.5" mp="23550" mpRegen="3.6" />
+			<vitals hp="316834.104046243" hpRegen="10.5" mp="23550.495049505" mpRegen="3.6" />
 			<speed>
 				<walk ground="35" />
 				<run ground="160" />
 			</speed>
-			<attack physical="47220.306466714" magical="8304.9029160715" critical="4" attackSpeed="253" range="40" />
-			<defence physical="526.14714175852" magical="305.10497858296" />
+			<attack physical="47220.3064667144" magical="6936.85703856762" critical="4" attackSpeed="253" range="40" />
+			<defence physical="1051.65342219944" magical="609.858858226248" />
 			<attribute>
 				<defence fire="250" water="250" wind="200" earth="250" holy="250" dark="250" />
 				<attack type="EARTH" value="330" />
@@ -3804,6 +3848,7 @@
 		</stats>
 		<status attackable="false" />
 		<skillList>
+			<skill id="4379" level="5" /> <!-- Spear Resistance -->
 			<skill id="4410" level="12" /> <!-- Slightly Strong P. Atk. -->
 			<skill id="4411" level="12" /> <!-- Slightly Strong M. Atk. -->
 			<skill id="4412" level="9" /> <!-- Slightly Weak P. Def. -->
@@ -3812,6 +3857,8 @@
 			<skill id="4459" level="1" /> <!-- Dualsword Vulnerability -->
 			<skill id="4460" level="1" /> <!-- Sword Vulnerability -->
 			<skill id="5465" level="1" /> <!-- Earth Attack -->
+			<skill id="14823" level="1" /> <!-- Lethal Strike Resistance -->
+			<skill id="16547" level="10" /> <!-- Danger Zone Attack Resistance -->
 		</skillList>
 		<dropLists>
 			<drop>
@@ -3837,13 +3884,13 @@
 		<sex>FEMALE</sex>
 		<acquire exp="90421084" sp="217010" />
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="348517" hpRegen="10.5" mp="23550" mpRegen="3.6" />
+			<vitals hp="316834.104046243" hpRegen="10.5" mp="23550.495049505" mpRegen="3.6" />
 			<speed>
 				<walk ground="15" />
 				<run ground="160" />
 			</speed>
-			<attack physical="47220.306466714" magical="8304.9029160715" critical="4" attackSpeed="253" range="40" />
-			<defence physical="526.14714175852" magical="305.10497858296" />
+			<attack physical="47220.3064667144" magical="6936.85703856762" critical="4" attackSpeed="253" range="40" />
+			<defence physical="1051.65342219944" magical="609.858858226248" />
 			<attribute>
 				<defence fire="250" water="250" wind="200" earth="250" holy="250" dark="250" />
 				<attack type="EARTH" value="330" />
@@ -3851,6 +3898,7 @@
 		</stats>
 		<status attackable="false" />
 		<skillList>
+			<skill id="4379" level="5" /> <!-- Spear Resistance -->
 			<skill id="4410" level="12" /> <!-- Slightly Strong P. Atk. -->
 			<skill id="4411" level="12" /> <!-- Slightly Strong M. Atk. -->
 			<skill id="4412" level="9" /> <!-- Slightly Weak P. Def. -->
@@ -3859,6 +3907,8 @@
 			<skill id="4459" level="1" /> <!-- Dualsword Vulnerability -->
 			<skill id="4460" level="1" /> <!-- Sword Vulnerability -->
 			<skill id="5465" level="1" /> <!-- Earth Attack -->
+			<skill id="14823" level="1" /> <!-- Lethal Strike Resistance -->
+			<skill id="16547" level="10" /> <!-- Danger Zone Attack Resistance -->
 		</skillList>
 		<dropLists>
 			<drop>
@@ -3885,13 +3935,13 @@
 		<sex>FEMALE</sex>
 		<acquire exp="90421084" sp="217010" />
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="348517" hpRegen="10.5" mp="23550" mpRegen="3.6" />
+			<vitals hp="316834.104046243" hpRegen="10.5" mp="23550.495049505" mpRegen="3.6" />
 			<speed>
 				<walk ground="50" />
 				<run ground="120" />
 			</speed>
-			<attack physical="47220.306466714" magical="8304.9029160715" critical="4" attackSpeed="253" range="40" />
-			<defence physical="526.14714175852" magical="305.10497858296" />
+			<attack physical="47220.3064667144" magical="6936.85703856762" critical="4" attackSpeed="253" range="40" />
+			<defence physical="1051.65342219944" magical="609.858858226248" />
 			<attribute>
 				<defence fire="250" water="250" wind="200" earth="250" holy="250" dark="250" />
 				<attack type="EARTH" value="330" />
@@ -3899,11 +3949,14 @@
 		</stats>
 		<status attackable="false" />
 		<skillList>
+			<skill id="4379" level="5" /> <!-- Spear Resistance -->
 			<skill id="4410" level="12" /> <!-- Slightly Strong P. Atk. -->
 			<skill id="4411" level="12" /> <!-- Slightly Strong M. Atk. -->
 			<skill id="4412" level="9" /> <!-- Slightly Weak P. Def. -->
 			<skill id="4416" level="3" /> <!-- Beast -->
 			<skill id="5465" level="1" /> <!-- Earth Attack -->
+			<skill id="14823" level="1" /> <!-- Lethal Strike Resistance -->
+			<skill id="16547" level="10" /> <!-- Danger Zone Attack Resistance -->
 		</skillList>
 		<dropLists>
 			<drop>
@@ -3930,13 +3983,13 @@
 		<sex>FEMALE</sex>
 		<acquire exp="90421084" sp="217010" />
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="348517" hpRegen="10.5" mp="23550" mpRegen="3.6" />
+			<vitals hp="316834.104046243" hpRegen="10.5" mp="23550.495049505" mpRegen="3.6" />
 			<speed>
 				<walk ground="29" />
 				<run ground="93" />
 			</speed>
-			<attack physical="47220.306466714" magical="8304.9029160715" critical="4" attackSpeed="253" range="40" />
-			<defence physical="526.14714175852" magical="305.10497858296" />
+			<attack physical="47220.3064667144" magical="6936.85703856762" critical="4" attackSpeed="253" range="40" />
+			<defence physical="1051.65342219944" magical="609.858858226248" />
 			<attribute>
 				<defence fire="250" water="250" wind="200" earth="250" holy="250" dark="250" />
 				<attack type="EARTH" value="330" />
@@ -3944,11 +3997,14 @@
 		</stats>
 		<status attackable="false" />
 		<skillList>
+			<skill id="4379" level="5" /> <!-- Spear Resistance -->
 			<skill id="4410" level="12" /> <!-- Slightly Strong P. Atk. -->
 			<skill id="4411" level="12" /> <!-- Slightly Strong M. Atk. -->
 			<skill id="4412" level="9" /> <!-- Slightly Weak P. Def. -->
 			<skill id="4416" level="3" /> <!-- Beast -->
 			<skill id="5465" level="1" /> <!-- Earth Attack -->
+			<skill id="14823" level="1" /> <!-- Lethal Strike Resistance -->
+			<skill id="16547" level="10" /> <!-- Danger Zone Attack Resistance -->
 		</skillList>
 		<dropLists>
 			<drop>
@@ -3975,13 +4031,13 @@
 		<sex>FEMALE</sex>
 		<acquire exp="90421084" sp="217010" />
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="348517" hpRegen="10.5" mp="23550" mpRegen="3.6" />
+			<vitals hp="316834.104046243" hpRegen="10.5" mp="23550.495049505" mpRegen="3.6" />
 			<speed>
 				<walk ground="45" />
 				<run ground="170" />
 			</speed>
-			<attack physical="47220.306466714" magical="8304.9029160715" critical="4" attackSpeed="253" range="40" />
-			<defence physical="526.14714175852" magical="305.10497858296" />
+			<attack physical="47220.3064667144" magical="6936.85703856762" critical="4" attackSpeed="253" range="40" />
+			<defence physical="1051.65342219944" magical="609.858858226248" />
 			<attribute>
 				<defence fire="250" water="250" wind="200" earth="250" holy="250" dark="250" />
 				<attack type="EARTH" value="330" />
@@ -3990,6 +4046,7 @@
 		<status attackable="false" />
 		<skillList>
 			<skill id="4225" level="3" /> <!-- Stun Resistance -->
+			<skill id="4379" level="5" /> <!-- Spear Resistance -->
 			<skill id="4410" level="12" /> <!-- Slightly Strong P. Atk. -->
 			<skill id="4411" level="12" /> <!-- Slightly Strong M. Atk. -->
 			<skill id="4412" level="9" /> <!-- Slightly Weak P. Def. -->
@@ -3998,6 +4055,8 @@
 			<skill id="4459" level="1" /> <!-- Dualsword Vulnerability -->
 			<skill id="4460" level="1" /> <!-- Sword Vulnerability -->
 			<skill id="5465" level="1" /> <!-- Earth Attack -->
+			<skill id="14823" level="1" /> <!-- Lethal Strike Resistance -->
+			<skill id="16547" level="10" /> <!-- Danger Zone Attack Resistance -->
 		</skillList>
 		<dropLists>
 			<drop>

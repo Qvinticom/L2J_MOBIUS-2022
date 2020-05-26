@@ -23,10 +23,10 @@
 		</parameters>
 		<race>UNDEAD</race>
 		<sex>MALE</sex>
-		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="4439" hpRegen="8.5" mp="1881" mpRegen="3" />
-			<attack physical="1233.98508337826" magical="842.651845283929" random="10" critical="4" accuracy="5" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
-			<defence physical="365.6202" magical="267.545" />
+		<stats str="79" int="34" dex="42" wit="66" con="75" men="12">
+			<vitals hp="4439.1167192429" hpRegen="8.5" mp="1881.5896188159" mpRegen="3" />
+			<attack physical="1703.33333333333" magical="781.472668360897" random="10" critical="4" accuracy="5" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="366.045548654244" magical="267.700882376257" />
 			<attribute>
 				<attack type="DARK" value="180" />
 				<defence fire="100" water="100" wind="100" earth="100" holy="50" dark="100" default="70" />
@@ -74,9 +74,9 @@
 		<race>CONSTRUCT</race>
 		<sex>MALE</sex>
 		<stats str="79" int="34" dex="42" wit="66" con="75" men="12">
-			<vitals hp="1" hpRegen="7.5" mp="1345" mpRegen="2.7" />
-			<attack physical="688.86373" magical="470.40463" random="10" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
-			<defence physical="295.91597" magical="216.53847" />
+			<vitals hp="1.26182965299685" hpRegen="7.5" mp="1345.49878345499" mpRegen="2.7" />
+			<attack physical="950.733752620545" magical="445.095379897059" random="10" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="296.323173681664" magical="216.561030522666" />
 			<speed>
 				<walk ground="1" />
 				<run ground="1" />
@@ -101,9 +101,9 @@
 		<race>CONSTRUCT</race>
 		<sex>MALE</sex>
 		<stats str="79" int="34" dex="42" wit="66" con="75" men="12">
-			<vitals hp="1" hpRegen="7.5" mp="1345" mpRegen="2.7" />
-			<attack physical="688.86373" magical="470.40463" random="10" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
-			<defence physical="295.91597" magical="216.53847" />
+			<vitals hp="1.26182965299685" hpRegen="7.5" mp="1345.49878345499" mpRegen="2.7" />
+			<attack physical="950.733752620545" magical="445.095379897059" random="10" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="296.323173681664" magical="216.561030522666" />
 			<speed>
 				<walk ground="1" />
 				<run ground="1" />
@@ -1139,9 +1139,9 @@
 		<equipment rhand="279" /> <!-- Reinforced Longbow -->
 		<acquire exp="4815" sp="1" />
 		<stats str="79" int="34" dex="42" wit="66" con="75" men="12">
-			<vitals hp="1985" hpRegen="7.5" mp="1066" mpRegen="2.7" />
-			<attack physical="501.08068" magical="342.17315" random="5" critical="8" accuracy="0" attackSpeed="253" reuseDelay="1500" type="BOW" range="1100" distance="10" width="0" />
-			<defence physical="252.49346" magical="184.76376" />
+			<vitals hp="1986.11987381703" hpRegen="7.5" mp="1066.50446066504" mpRegen="2.7" />
+			<attack physical="564.314314314314" magical="327.641209306521" random="5" critical="8" accuracy="0" attackSpeed="253" reuseDelay="1500" type="BOW" range="1100" distance="10" width="0" />
+			<defence physical="202" magical="217.546872763704" />
 			<speed>
 				<walk ground="40" />
 				<run ground="140" />
@@ -1198,9 +1198,9 @@
 		<sex>MALE</sex>
 		<acquire exp="2827" sp="151" />
 		<stats str="79" int="34" dex="42" wit="66" con="75" men="12">
-			<vitals hp="1828" hpRegen="6.5" mp="977" mpRegen="2.4" />
-			<attack physical="442.8992" magical="302.44274" random="5" critical="8" accuracy="0" attackSpeed="253" type="DAGGER" range="40" distance="80" width="120" />
-			<defence physical="237.99429" magical="174.1539" />
+			<vitals hp="1828.39116719243" hpRegen="6.5" mp="977.291159772912" mpRegen="2.4" />
+			<attack physical="616.415148434853" magical="290.834288475725" random="5" critical="8" accuracy="0" attackSpeed="253" type="DAGGER" range="40" distance="80" width="120" />
+			<defence physical="285.714285714286" magical="151.60336146871" />
 			<speed>
 				<walk ground="21" />
 				<run ground="143" />
@@ -1260,9 +1260,9 @@
 		<equipment rhand="78" /> <!-- Great Sword -->
 		<acquire exp="3126" sp="174" />
 		<stats str="79" int="34" dex="42" wit="66" con="75" men="12">
-			<vitals hp="1985" hpRegen="7.5" mp="1066" mpRegen="2.7" />
-			<attack physical="501.08068" magical="342.17315" random="10" critical="4" accuracy="5" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
-			<defence physical="252.49346" magical="184.76376" />
+			<vitals hp="1986.11987381703" hpRegen="7.5" mp="1066.50446066504" mpRegen="2.7" />
+			<attack physical="691.666666666667" magical="327.641209306521" random="10" critical="4" accuracy="5" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="252.666666666667" magical="184.914841849148" />
 			<speed>
 				<walk ground="40" />
 				<run ground="160" />
@@ -1321,9 +1321,9 @@
 		<equipment rhand="225" lhand="945" /> <!-- Mithril Dagger / Skeleton Buckler -->
 		<acquire exp="3443" sp="199" />
 		<stats str="79" int="34" dex="42" wit="66" con="75" men="12">
-			<vitals hp="2141" hpRegen="7.5" mp="1158" mpRegen="2.7" />
-			<attack physical="562.02275" magical="383.78868" random="5" critical="8" accuracy="0" attackSpeed="253" type="DAGGER" range="40" distance="80" width="120" />
-			<defence physical="267.04468" magical="195.41171" />
+			<vitals hp="2141.32492113565" hpRegen="7.5" mp="1158.15085158151" mpRegen="2.7" />
+			<attack physical="781.934740690657" magical="365.800561056902" random="5" critical="8" accuracy="0" attackSpeed="253" type="DAGGER" range="40" distance="80" width="120" />
+			<defence physical="267.320261437908" magical="195.60135489719" />
 			<speed>
 				<walk ground="80" />
 				<run ground="120" />
@@ -1382,9 +1382,9 @@
 		<equipment rhand="225" lhand="945" /> <!-- Mithril Dagger / Skeleton Buckler -->
 		<acquire exp="3443" sp="199" />
 		<stats str="79" int="34" dex="42" wit="66" con="75" men="12">
-			<vitals hp="2141" hpRegen="7.5" mp="1158" mpRegen="2.7" />
-			<attack physical="562.02275" magical="383.78868" random="10" critical="4" accuracy="5" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
-			<defence physical="267.04468" magical="195.41171" />
+			<vitals hp="2141.32492113565" hpRegen="7.5" mp="1158.15085158151" mpRegen="2.7" />
+			<attack physical="775.599128540305" magical="365.800561056902" random="10" critical="4" accuracy="5" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="267.320261437908" magical="195.60135489719" />
 			<speed>
 				<walk ground="80" />
 				<run ground="120" />
@@ -1440,9 +1440,9 @@
 		<equipment rhand="232" /> <!-- Dark Elven Dagger -->
 		<acquire exp="4399" sp="1" />
 		<stats str="79" int="34" dex="42" wit="66" con="75" men="12">
-			<vitals hp="1985" hpRegen="7.5" mp="1066" mpRegen="2.7" />
-			<attack physical="501.08068" magical="342.17315" random="5" critical="8" accuracy="0" attackSpeed="253" type="DAGGER" range="40" distance="80" width="120" />
-			<defence physical="252.49346" magical="184.76376" />
+			<vitals hp="1986.11987381703" hpRegen="7.5" mp="1066.50446066504" mpRegen="2.7" />
+			<attack physical="697.318007662835" magical="327.641209306521" random="5" critical="8" accuracy="0" attackSpeed="253" type="DAGGER" range="40" distance="80" width="120" />
+			<defence physical="252.666666666667" magical="184.914841849148" />
 			<speed>
 				<walk ground="11" />
 				<run ground="145" />
@@ -1500,9 +1500,9 @@
 		<equipment rhand="150" lhand="103" /> <!-- Elemental Sword / Tower Shield -->
 		<acquire exp="94773" sp="22" />
 		<stats str="79" int="34" dex="42" wit="66" con="75" men="12">
-			<vitals hp="22092" hpRegen="15" mp="1066" mpRegen="2.7" />
-			<attack physical="501.08068" magical="342.17315" random="10" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
-			<defence physical="252.49346" magical="184.76376" />
+			<vitals hp="22092.1135646688" hpRegen="15" mp="1066.50446066504" mpRegen="2.7" />
+			<attack physical="691.666666666667" magical="327.641209306521" random="10" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="252.666666666667" magical="184.914841849148" />
 			<speed>
 				<walk ground="40" />
 				<run ground="160" />
@@ -1558,9 +1558,9 @@
 		<equipment rhand="3" /> <!-- Broadsword -->
 		<acquire exp="94773" sp="22" />
 		<stats str="79" int="34" dex="42" wit="66" con="75" men="12">
-			<vitals hp="22092" hpRegen="15" mp="1066" mpRegen="2.7" />
-			<attack physical="501.08068" magical="342.17315" random="10" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
-			<defence physical="252.49346" magical="184.76376" />
+			<vitals hp="22092.1135646688" hpRegen="15" mp="1066.50446066504" mpRegen="2.7" />
+			<attack physical="691.666666666667" magical="327.641209306521" random="10" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="202" magical="217.546872763704" />
 			<speed>
 				<walk ground="60" />
 				<run ground="150" />
@@ -1617,9 +1617,9 @@
 		<equipment rhand="232" /> <!-- Dark Elven Dagger -->
 		<acquire exp="97320" sp="23" />
 		<stats str="79" int="34" dex="42" wit="66" con="75" men="12">
-			<vitals hp="22860" hpRegen="15" mp="1158" mpRegen="2.7" />
-			<attack physical="562.02275" magical="383.78868" random="5" critical="8" accuracy="0" attackSpeed="253" type="DAGGER" range="40" distance="80" width="120" />
-			<defence physical="267.04468" magical="195.41171" />
+			<vitals hp="22860.5678233438" hpRegen="15" mp="1158.15085158151" mpRegen="2.7" />
+			<attack physical="781.934740690657" magical="365.800561056902" random="5" critical="8" accuracy="0" attackSpeed="253" type="DAGGER" range="40" distance="80" width="120" />
+			<defence physical="267.320261437908" magical="195.60135489719" />
 			<speed>
 				<walk ground="14" />
 				<run ground="155" />
@@ -1675,9 +1675,9 @@
 		<equipment rhand="134" lhand="6721" /> <!-- Sword of Nightmare / Monster Only (Shield of Imperial Warlord Zombie) -->
 		<acquire exp="97320" sp="23" />
 		<stats str="79" int="34" dex="42" wit="66" con="75" men="12">
-			<vitals hp="24719" hpRegen="15" mp="1158" mpRegen="2.7" />
-			<attack physical="562.02275" magical="383.78868" random="10" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
-			<defence physical="267.04468" magical="195.41171" />
+			<vitals hp="24719.2429022082" hpRegen="15" mp="1158.15085158151" mpRegen="2.7" />
+			<attack physical="775.599128540305" magical="365.800561056902" random="10" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="213.725490196078" magical="230.119241055518" />
 			<speed>
 				<walk ground="39" />
 				<run ground="150" />
@@ -1724,9 +1724,9 @@
 		<sex>MALE</sex>
 		<acquire exp="476731" sp="114" />
 		<stats str="79" int="34" dex="42" wit="66" con="75" men="12">
-			<vitals hp="49438" hpRegen="15" mp="1251" mpRegen="2.7" />
-			<attack physical="624.93199" magical="426.74754" random="10" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
-			<defence physical="281.55251" magical="206.02791" />
+			<vitals hp="49438.4858044164" hpRegen="15" mp="1251.41930251419" mpRegen="2.7" />
+			<attack physical="862.713675213675" magical="405.60709752719" random="10" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="282.051282051282" magical="206.396739243455" />
 			<speed>
 				<walk ground="25" />
 				<run ground="120" />
@@ -1752,9 +1752,9 @@
 		<equipment rhand="232" /> <!-- Dark Elven Dagger -->
 		<acquire exp="3443" sp="199" />
 		<stats str="79" int="34" dex="42" wit="66" con="75" men="12">
-			<vitals hp="2141" hpRegen="7.5" mp="1158" mpRegen="2.7" />
-			<attack physical="562.02275" magical="383.78868" random="5" critical="8" accuracy="0" attackSpeed="253" type="DAGGER" range="40" distance="80" width="120" />
-			<defence physical="267.04468" magical="195.41171" />
+			<vitals hp="2141.32492113565" hpRegen="7.5" mp="1158.15085158151" mpRegen="2.7" />
+			<attack physical="781.934740690657" magical="365.800561056902" random="5" critical="8" accuracy="0" attackSpeed="253" type="DAGGER" range="40" distance="80" width="120" />
+			<defence physical="267.320261437908" magical="195.60135489719" />
 			<speed>
 				<walk ground="11" />
 				<run ground="145" />
@@ -1789,9 +1789,9 @@
 		<equipment rhand="2504" lhand="6918" /> <!-- Meteor Shower / Monster Only (Shield of Silenos) -->
 		<acquire exp="90202" sp="21" />
 		<stats str="79" int="34" dex="42" wit="66" con="75" men="12">
-			<vitals hp="7483" hpRegen="17" mp="1410" mpRegen="3" />
-			<attack physical="365.712" magical="124.8841975" random="10" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
-			<defence physical="305.35947" magical="223.44881" />
+			<vitals hp="8115.67068023282" hpRegen="17" mp="1529.56832642244" mpRegen="3" />
+			<attack physical="554.134794398575" magical="128.446035031602" random="10" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="331.452464788732" magical="242.430862547548" />
 			<speed>
 				<walk ground="44" />
 				<run ground="175" />
@@ -1860,9 +1860,9 @@
 		<equipment rhand="2504" lhand="6918" /> <!-- Meteor Shower / Monster Only (Shield of Silenos) -->
 		<acquire exp="75070" sp="18" />
 		<stats str="79" int="34" dex="42" wit="66" con="75" men="12">
-			<vitals hp="7483" hpRegen="17" mp="1410" mpRegen="3" />
-			<attack physical="365.712" magical="124.8841975" random="10" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
-			<defence physical="305.35947" magical="223.44881" />
+			<vitals hp="8115.67068023282" hpRegen="17" mp="1529.56832642244" mpRegen="3" />
+			<attack physical="554.134794398575" magical="128.446035031602" random="10" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="331.452464788732" magical="242.430862547548" />
 			<speed>
 				<walk ground="34" />
 				<run ground="175" />
@@ -1929,9 +1929,9 @@
 		<sex>MALE</sex>
 		<acquire exp="93567" sp="22" />
 		<stats str="79" int="34" dex="42" wit="66" con="75" men="12">
-			<vitals hp="2540" hpRegen="8.5" mp="1410" mpRegen="3" />
-			<attack physical="731.52506" magical="499.53679" random="10" critical="4" accuracy="5" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
-			<defence physical="305.35947" magical="223.44881" />
+			<vitals hp="2716.4563617245" hpRegen="8.5" mp="1508.3243218888" mpRegen="3" />
+			<attack physical="1079.96175523349" magical="504.313141976882" random="10" critical="4" accuracy="5" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="326.811594202899" magical="239.195082102096" />
 			<speed>
 				<walk ground="45" />
 				<run ground="185" />
@@ -1996,9 +1996,9 @@
 		<equipment rhand="2504" lhand="6918" /> <!-- Meteor Shower / Monster Only (Shield of Silenos) -->
 		<acquire exp="82322" sp="19" />
 		<stats str="79" int="34" dex="42" wit="66" con="75" men="12">
-			<vitals hp="7577" hpRegen="8.5" mp="1410" mpRegen="3" />
-			<attack physical="365.712" magical="124.8841975" random="10" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="80" distance="80" width="120" />
-			<defence physical="305.35947" magical="223.44881" />
+			<vitals hp="8208.7276550999" hpRegen="8.5" mp="1527.9129494458" mpRegen="3" />
+			<attack physical="553.480700126128" magical="127.715665825314" random="10" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="80" distance="80" width="120" />
+			<defence physical="331.055900621118" magical="242.301511739785" />
 			<speed>
 				<walk ground="44" />
 				<run ground="175" />
@@ -2067,9 +2067,9 @@
 		<equipment rhand="6917" /> <!-- Monster Only (Poison Sting) -->
 		<acquire exp="85799" sp="20" />
 		<stats str="79" int="34" dex="42" wit="66" con="75" men="12">
-			<vitals hp="2540" hpRegen="8.5" mp="1410" mpRegen="3" />
-			<attack physical="731.52506" magical="499.53679" random="5" critical="8" accuracy="0" attackSpeed="253" reuseDelay="1500" type="BOW" range="1100" distance="10" width="0" />
-			<defence physical="305.35947" magical="223.44881" />
+			<vitals hp="2751.73501577287" hpRegen="8.5" mp="1527.9129494458" mpRegen="3" />
+			<attack physical="892.623990450077" magical="510.862663301258" random="5" critical="8" accuracy="0" attackSpeed="253" reuseDelay="1500" type="BOW" range="1100" distance="10" width="0" />
+			<defence physical="331.055900621118" magical="242.301511739785" />
 			<speed>
 				<walk ground="30" />
 				<run ground="175" />
@@ -2139,9 +2139,9 @@
 		<equipment rhand="6716" /> <!-- Monster Only (Silenos Shaman) -->
 		<acquire exp="83438" sp="20" />
 		<stats str="79" int="34" dex="42" wit="66" con="75" men="12">
-			<vitals hp="2540" hpRegen="8.5" mp="1410" mpRegen="3" />
-			<attack physical="731.52506" magical="499.53679" random="20" critical="1" accuracy="9" attackSpeed="253" type="BLUNT" range="40" distance="80" width="120" />
-			<defence physical="305.35947" magical="223.44881" />
+			<vitals hp="2751.73501577287" hpRegen="8.5" mp="1527.9129494458" mpRegen="3" />
+			<attack physical="499.782458667147" magical="510.862663301258" random="20" critical="1" accuracy="9" attackSpeed="253" type="BLUNT" range="40" distance="80" width="120" />
+			<defence physical="265.113871635611" magical="285.060602046806" />
 			<speed>
 				<walk ground="36" />
 				<run ground="150" />
@@ -2213,9 +2213,9 @@
 		<equipment rhand="6716" /> <!-- Monster Only (Silenos Shaman) -->
 		<acquire exp="175270" sp="42" />
 		<stats str="79" int="34" dex="42" wit="66" con="75" men="12">
-			<vitals hp="2540" hpRegen="8.5" mp="1410" mpRegen="3" />
-			<attack physical="731.52506" magical="499.53679" random="10" critical="4" accuracy="5" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
-			<defence physical="305.35947" magical="223.44881" />
+			<vitals hp="2787.01366982124" hpRegen="8.5" mp="1547.50157700279" mpRegen="3" />
+			<attack physical="1108.01270991488" magical="517.412184625633" random="10" critical="4" accuracy="5" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="335.300207039337" magical="245.407941377475" />
 			<speed>
 				<walk ground="36" />
 				<run ground="180" />
@@ -2289,9 +2289,9 @@
 		<equipment rhand="142" lhand="6918" /> <!-- Keshanberk / Monster Only (Shield of Silenos) -->
 		<acquire exp="89275" sp="21" />
 		<stats str="79" int="34" dex="42" wit="66" con="75" men="12">
-			<vitals hp="7577" hpRegen="17" mp="1475" mpRegen="3" />
-			<attack physical="386.5" magical="132.104" random="10" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
-			<defence physical="314.65987" magical="230.25444" />
+			<vitals hp="8208.7276550999" hpRegen="17" mp="1598.20221681536" mpRegen="3" />
+			<attack physical="584.901001880012" magical="135.262500624083" random="10" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="341.149068322981" magical="249.941649497346" />
 			<speed>
 				<walk ground="34" />
 				<run ground="175" />
@@ -2354,9 +2354,9 @@
 		<sex>MALE</sex>
 		<acquire exp="93567" sp="22" />
 		<stats str="79" int="34" dex="42" wit="66" con="75" men="12">
-			<vitals hp="2586" hpRegen="8.5" mp="1442" mpRegen="3" />
-			<attack physical="752.73928" magical="514.02335" random="10" critical="4" accuracy="5" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
-			<defence physical="310.02959" magical="226.8662" />
+			<vitals hp="2727.82507238235" hpRegen="8.5" mp="1521.02567521026" mpRegen="3" />
+			<attack physical="1096.03134336772" magical="510.725164477424" random="10" critical="4" accuracy="5" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="327.50718755285" magical="239.742829557922" />
 			<speed>
 				<walk ground="45" />
 				<run ground="185" />
@@ -2423,9 +2423,9 @@
 		<equipment rhand="6716" /> <!-- Monster Only (Silenos Shaman) -->
 		<acquire exp="122882" sp="29" />
 		<stats str="79" int="34" dex="42" wit="66" con="75" men="12">
-			<vitals hp="2540" hpRegen="8.5" mp="1410" mpRegen="3" />
-			<attack physical="731.52506" magical="499.53679" random="20" critical="1" accuracy="9" attackSpeed="253" type="BLUNT" range="40" distance="80" width="120" />
-			<defence physical="305.35947" magical="223.44881" />
+			<vitals hp="2751.73501577287" hpRegen="8.5" mp="1527.9129494458" mpRegen="3" />
+			<attack physical="499.782458667147" magical="510.862663301258" random="20" critical="1" accuracy="9" attackSpeed="253" type="BLUNT" range="40" distance="80" width="120" />
+			<defence physical="265.113871635611" magical="285.060602046806" />
 			<speed>
 				<walk ground="36" />
 				<run ground="150" />
@@ -2494,9 +2494,9 @@
 		<equipment rhand="6716" lhand="6918" /> <!-- Monster Only (Silenos Shaman) / Monster Only (Shield of Silenos) -->
 		<acquire exp="78287" sp="18" />
 		<stats str="79" int="34" dex="42" wit="66" con="75" men="12">
-			<vitals hp="2586" hpRegen="8.5" mp="1442" mpRegen="3" />
-			<attack physical="752.73928" magical="514.02335" random="20" critical="1" accuracy="9" attackSpeed="253" type="BLUNT" range="40" distance="80" width="120" />
-			<defence physical="310.02959" magical="226.8662" />
+			<vitals hp="2763.25137202368" hpRegen="8.5" mp="1540.77925540779" mpRegen="3" />
+			<attack physical="1110.26551665821" magical="517.357958821287" random="20" critical="1" accuracy="9" attackSpeed="253" type="BLUNT" range="40" distance="80" width="120" />
+			<defence physical="331.760527650939" magical="242.856372798934" />
 			<speed>
 				<walk ground="36" />
 				<run ground="175" />
@@ -2568,9 +2568,9 @@
 		<equipment rhand="2504" lhand="6918" /> <!-- Meteor Shower / Monster Only (Shield of Silenos) -->
 		<acquire exp="89275" sp="21" />
 		<stats str="79" int="34" dex="42" wit="66" con="75" men="12">
-			<vitals hp="6660" hpRegen="17" mp="1540" mpRegen="3" />
-			<attack physical="412.21" magical="140.74335" random="20" critical="1" accuracy="9" attackSpeed="253" type="BLUNT" range="40" distance="80" width="120" />
-			<defence physical="323.78455" magical="236.93149" />
+			<vitals hp="7116.77109891535" hpRegen="17" mp="1645.63543645635" mpRegen="3" />
+			<attack physical="615.4979968159" magical="141.765117537274" random="20" critical="1" accuracy="9" attackSpeed="253" type="BLUNT" range="40" distance="80" width="120" />
+			<defence physical="346.270928462709" magical="253.554891424438" />
 			<speed>
 				<walk ground="25" />
 				<run ground="175" />
@@ -2639,9 +2639,9 @@
 		<sex>MALE</sex>
 		<acquire exp="82751" sp="19" />
 		<stats str="79" int="34" dex="42" wit="66" con="75" men="12">
-			<vitals hp="2632" hpRegen="8.5" mp="1475" mpRegen="3" />
-			<attack physical="773.81598" magical="528.41601" random="10" critical="4" accuracy="5" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
-			<defence physical="314.65987" magical="230.25444" />
+			<vitals hp="2774.45647540285" hpRegen="8.5" mp="1555.00756230683" mpRegen="3" />
+			<attack physical="1125.7254186702" magical="524.368066317887" random="10" critical="4" accuracy="5" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="331.736030509037" magical="242.824885698022" />
 			<speed>
 				<walk ground="30" />
 				<run ground="165" />
@@ -2719,9 +2719,9 @@
 		<equipment rhand="6716" /> <!-- Monster Only (Silenos Shaman) -->
 		<acquire exp="175270" sp="42" />
 		<stats str="79" int="34" dex="42" wit="66" con="75" men="12">
-			<vitals hp="2586" hpRegen="8.5" mp="1442" mpRegen="3" />
-			<attack physical="752.73928" magical="514.02335" random="20" critical="1" accuracy="9" attackSpeed="253" type="BLUNT" range="40" distance="80" width="120" />
-			<defence physical="310.02959" magical="226.8662" />
+			<vitals hp="2798.67767166501" hpRegen="8.5" mp="1560.53283560533" mpRegen="3" />
+			<attack physical="513.923304991622" magical="523.99075316515" random="20" critical="1" accuracy="9" attackSpeed="253" type="BLUNT" range="40" distance="80" width="120" />
+			<defence physical="268.543886352105" magical="289.376371811701" />
 			<speed>
 				<walk ground="36" />
 				<run ground="150" />
@@ -2796,9 +2796,9 @@
 		<equipment rhand="2500" lhand="6918" /> <!-- Dark Legion's Edge / Monster Only (Shield of Silenos) -->
 		<acquire exp="175270" sp="42" />
 		<stats str="79" int="34" dex="42" wit="66" con="75" men="12">
-			<vitals hp="9374" hpRegen="17" mp="1574" mpRegen="3" />
-			<attack physical="438.22" magical="146.209" random="10" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
-			<defence physical="328.27073" magical="240.21427" />
+			<vitals hp="10144.609135301" hpRegen="17" mp="1703.59630703596" mpRegen="3" />
+			<attack physical="662.740727133474" magical="149.303042113651" random="10" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="355.386436664975" magical="260.056298896859" />
 			<speed>
 				<walk ground="34" />
 				<run ground="175" />
@@ -2871,9 +2871,9 @@
 		<equipment rhand="2500" lhand="6918" /> <!-- Dark Legion's Edge / Monster Only (Shield of Silenos) -->
 		<acquire exp="175270" sp="42" />
 		<stats str="79" int="34" dex="42" wit="66" con="75" men="12">
-			<vitals hp="9374" hpRegen="17" mp="1574" mpRegen="3" />
-			<attack physical="438.22" magical="146.209" random="20" critical="1" accuracy="9" attackSpeed="253" type="BLUNT" range="40" distance="80" width="120" />
-			<defence physical="328.27073" magical="240.21427" />
+			<vitals hp="10144.609135301" hpRegen="17" mp="1703.59630703596" mpRegen="3" />
+			<attack physical="662.740727133474" magical="149.303042113651" random="20" critical="1" accuracy="9" attackSpeed="253" type="BLUNT" range="40" distance="80" width="120" />
+			<defence physical="355.386436664975" magical="260.056298896859" />
 			<speed>
 				<walk ground="25" />
 				<run ground="175" />
@@ -2944,9 +2944,9 @@
 		<sex>MALE</sex>
 		<acquire exp="95010" sp="22" />
 		<stats str="79" int="34" dex="42" wit="66" con="75" men="12">
-			<vitals hp="2632" hpRegen="8.5" mp="1475" mpRegen="3" />
-			<attack physical="773.81598" magical="528.41601" random="20" critical="1" accuracy="9" attackSpeed="253" type="BLUNT" range="40" distance="80" width="120" />
-			<defence physical="314.65987" magical="230.25444" />
+			<vitals hp="2774.45647540285" hpRegen="8.5" mp="1555.00756230683" mpRegen="3" />
+			<attack physical="1125.7254186702" magical="524.368066317887" random="20" critical="1" accuracy="9" attackSpeed="253" type="BLUNT" range="40" distance="80" width="120" />
+			<defence physical="331.736030509037" magical="242.824885698022" />
 			<speed>
 				<walk ground="45" />
 				<run ground="185" />
@@ -3017,9 +3017,9 @@
 		<equipment rhand="6716" /> <!-- Monster Only (Silenos Shaman) -->
 		<acquire exp="175270" sp="42" />
 		<stats str="79" int="34" dex="42" wit="66" con="75" men="12">
-			<vitals hp="2632" hpRegen="8.5" mp="1475" mpRegen="3" />
-			<attack physical="773.81598" magical="528.41601" random="20" critical="1" accuracy="9" attackSpeed="253" type="BLUNT" range="40" distance="80" width="120" />
-			<defence physical="314.65987" magical="230.25444" />
+			<vitals hp="2810.0264302157" hpRegen="8.5" mp="1574.94355669538" mpRegen="3" />
+			<attack physical="520.874635638573" magical="531.090733834783" random="20" critical="1" accuracy="9" attackSpeed="253" type="BLUNT" range="40" distance="80" width="120" />
+			<defence physical="269.184214889736" magical="289.338853245003" />
 			<speed>
 				<walk ground="36" />
 				<run ground="150" />
@@ -3092,9 +3092,9 @@
 		<equipment rhand="2504" lhand="6918" /> <!-- Meteor Shower / Monster Only (Shield of Silenos) -->
 		<acquire exp="58812" sp="14" />
 		<stats str="79" int="34" dex="42" wit="66" con="75" men="12">
-			<vitals hp="4229.65416" hpRegen="8.5" mp="1196.225" mpRegen="3" />
-			<attack physical="386.51" magical="528.41601" random="10" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
-			<defence physical="314.65987" magical="230.25444" />
+			<vitals hp="6703.47003154574" hpRegen="8.5" mp="1475.26358475264" mpRegen="3" />
+			<attack physical="539.894929835696" magical="497.477396250303" random="10" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="314.723926380368" magical="230.372327457097" />
 			<speed>
 				<walk ground="34" />
 				<run ground="175" />
@@ -3147,9 +3147,9 @@
 		<equipment rhand="2500" lhand="6918" /> <!-- Dark Legion's Edge / Monster Only (Shield of Silenos) -->
 		<acquire exp="54887" sp="13" />
 		<stats str="79" int="34" dex="42" wit="66" con="75" men="12">
-			<vitals hp="4200.001155" hpRegen="8.5" mp="1222.177" mpRegen="3" />
-			<attack physical="397.12" magical="542.68324" random="10" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
-			<defence physical="319.24623" magical="233.61053" />
+			<vitals hp="6656.15141955836" hpRegen="8.5" mp="1507.70478507705" mpRegen="3" />
+			<attack physical="554.633397586921" magical="512.29164977203" random="10" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="319.254658385093" magical="233.737840846695" />
 			<speed>
 				<walk ground="25" />
 				<run ground="175" />
@@ -3203,9 +3203,9 @@
 		<equipment rhand="142" lhand="6918" /> <!-- Keshanberk / Monster Only (Shield of Silenos) -->
 		<acquire exp="175270" sp="42" />
 		<stats str="79" int="34" dex="42" wit="66" con="75" men="12">
-			<vitals hp="8619" hpRegen="17" mp="1574" mpRegen="3" />
-			<attack physical="428.243" magical="146.209" random="10" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
-			<defence physical="328.27073" magical="240.21427" />
+			<vitals hp="9201.96095148777" hpRegen="17" mp="1680.57473531926" mpRegen="3" />
+			<attack physical="638.48159032737" magical="146.968504960569" random="10" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="351.052893384182" magical="256.561698055585" />
 			<speed>
 				<walk ground="34" />
 				<run ground="175" />
@@ -3270,9 +3270,9 @@
 		<equipment rhand="6716" /> <!-- Monster Only (Silenos Shaman) -->
 		<acquire exp="4327" sp="1" />
 		<stats str="79" int="34" dex="42" wit="66" con="75" men="12">
-			<vitals hp="1661.199195" hpRegen="8.5" mp="1196.225" mpRegen="3" />
-			<attack physical="773.81598" magical="528.41601" random="20" critical="1" accuracy="9" attackSpeed="253" type="BLUNT" range="40" distance="80" width="120" />
-			<defence physical="314.65987" magical="230.25444" />
+			<vitals hp="2632.17665615142" hpRegen="8.5" mp="1475.26358475264" mpRegen="3" />
+			<attack physical="487.907886547524" magical="497.477396250303" random="20" critical="1" accuracy="9" attackSpeed="253" type="BLUNT" range="40" distance="80" width="120" />
+			<defence physical="252.147239263804" magical="271.026267596585" />
 			<speed>
 				<walk ground="36" />
 				<run ground="150" />
@@ -3327,9 +3327,9 @@
 		<equipment rhand="2504" lhand="6918" /> <!-- Meteor Shower / Monster Only (Shield of Silenos) -->
 		<acquire exp="85784" sp="20" />
 		<stats str="79" int="34" dex="42" wit="66" con="75" men="12">
-			<vitals hp="8619" hpRegen="17" mp="1607" mpRegen="3" />
-			<attack physical="445.25" magical="152.024" random="10" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
-			<defence physical="332.70061" magical="243.45587" />
+			<vitals hp="9085.4804331145" hpRegen="17" mp="1694.35128559216" mpRegen="3" />
+			<attack physical="655.485451603497" magical="151.154316810712" random="10" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="351.135798375062" magical="256.98530019877" />
 			<speed>
 				<walk ground="34" />
 				<run ground="175" />
@@ -3392,9 +3392,9 @@
 		<equipment rhand="6716" /> <!-- Monster Only (Silenos Shaman) -->
 		<acquire exp="79574" sp="19" />
 		<stats str="79" int="34" dex="42" wit="66" con="75" men="12">
-			<vitals hp="2632" hpRegen="8.5" mp="1475" mpRegen="3" />
-			<attack physical="773.81598" magical="528.41601" random="10" critical="4" accuracy="5" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
-			<defence physical="314.65987" magical="230.25444" />
+			<vitals hp="2774.45647540285" hpRegen="8.5" mp="1555.00756230683" mpRegen="3" />
+			<attack physical="1125.7254186702" magical="524.368066317887" random="10" critical="4" accuracy="5" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="331.736030509037" magical="242.824885698022" />
 			<speed>
 				<walk ground="36" />
 				<run ground="180" />
@@ -3458,9 +3458,9 @@
 		<equipment rhand="6716" /> <!-- Monster Only (Silenos Shaman) -->
 		<acquire exp="4327" sp="1" />
 		<stats str="79" int="34" dex="42" wit="66" con="75" men="12">
-			<vitals hp="1661.199195" hpRegen="8.5" mp="1196.225" mpRegen="3" />
-			<attack physical="773.81598" magical="528.41601" random="20" critical="1" accuracy="9" attackSpeed="253" type="BLUNT" range="40" distance="80" width="120" />
-			<defence physical="314.65987" magical="230.25444" />
+			<vitals hp="2632.17665615142" hpRegen="8.5" mp="1475.26358475264" mpRegen="3" />
+			<attack physical="487.907886547524" magical="497.477396250303" random="20" critical="1" accuracy="9" attackSpeed="253" type="BLUNT" range="40" distance="80" width="120" />
+			<defence physical="314.723926380368" magical="230.372327457097" />
 			<speed>
 				<walk ground="36" />
 				<run ground="150" />
@@ -3505,9 +3505,9 @@
 		<sex>FEMALE</sex>
 		<acquire exp="680736" sp="163" />
 		<stats str="79" int="34" dex="42" wit="66" con="75" men="12">
-			<vitals hp="60325" hpRegen="17" mp="1251" mpRegen="2.7" />
-			<attack physical="4768.26" magical="542.68324" random="10" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
-			<defence physical="319.24623" magical="233.61053" />
+			<vitals hp="60325.5520504732" hpRegen="17" mp="1251.41930251419" mpRegen="2.7" />
+			<attack physical="6580.28455284553" magical="510.356662972985" random="10" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="319.512195121951" magical="233.912923070837" />
 			<speed>
 				<walk ground="1" />
 				<run ground="80" />

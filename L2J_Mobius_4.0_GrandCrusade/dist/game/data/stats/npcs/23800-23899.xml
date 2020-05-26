@@ -3,14 +3,14 @@
 	<npc id="23800" level="102" type="Monster" name="Delta Kshana" title="Superion Scout">
 		<race>GIANT</race>
 		<acquire exp="908048947" sp="908061" />
-		<stats>
-			<vitals hp="283012" hpRegen="11.5" mp="24308" mpRegen="3.9" />
+		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
+			<vitals hp="283012.716763006" hpRegen="11.5" mp="24308.2508250825" mpRegen="3.9" />
 			<speed>
 				<walk ground="55" />
 				<run ground="140" />
 			</speed>
-			<attack physical="49047.619047619" magical="8655.46218487395" critical="4" attackSpeed="398" range="40" />
-			<defence physical="3814.81481481481" magical="2215.05376344086" />
+			<attack physical="333994.155065416" magical="51976.9444935764" critical="4" attackSpeed="398" range="40" />
+			<defence physical="2231.41361256545" magical="1293.5220223593" />
 			<attribute>
 			<defence fire="150" water="150" wind="150" earth="150" holy="150" dark="150" default="150" />
 			</attribute>
@@ -48,12 +48,14 @@
 			</lucky>
 		</dropLists>
 	</npc>
-	<npc id="23801" level="89" type="Monster" name="Lillim Royal Knight">
+	<npc id="23801" level="101" type="Monster" name="Lillim Royal Knight">
 		<!-- Lillim Royal Knight ?? -->
 		<race>DEMONIC</race>
 		<equipment rhand="5800" lhand="5799" />
-		<stats>
+		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
 			<vitals hp="58233" hpRegen="10.5" mp="24308" mpRegen="3.6" />
+			<attack physical="59542.3510592642" magical="9095.40427545412" critical="4" attackSpeed="253" range="40" />
+			<defence physical="1988.94736842105" magical="1153.03109258294" />
 			<speed>
 				<walk ground="56" />
 				<run ground="180" />
@@ -83,11 +85,13 @@
 			</spoil>
 		</dropLists>
 	</npc>
-	<npc id="23802" level="87" type="Monster" name="Lillim Slayer">
+	<npc id="23802" level="101" type="Monster" name="Lillim Slayer">
 		<!-- Lillim Slayer ?? -->
 		<race>DEMONIC</race>
-		<stats>
+		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
 			<vitals hp="58233" hpRegen="10.5" mp="24690" mpRegen="3.6" />
+			<attack physical="59542.3510592642" magical="9095.40427545412" critical="4" attackSpeed="253" range="40" />
+			<defence physical="1988.94736842105" magical="1153.03109258294" />
 			<speed>
 				<walk ground="36" />
 				<run ground="180" />
@@ -122,14 +126,14 @@
 		<race>DIVINE</race>
 		<acquire exp="13963332" sp="13975" />
 		<equipment rhand="5793" />
-		<stats>
-			<vitals hp="58233" hpRegen="10.5" mp="24308" mpRegen="3.6" />
+		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
+			<vitals hp="58233.5260115607" hpRegen="10.5" mp="24308.2508250825" mpRegen="3.6" />
 			<speed>
 				<walk ground="49" />
 				<run ground="180" />
 			</speed>
-			<attack physical="23610.1029394933" magical="5767.28134561036" random="10" critical="4" accuracy="5" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
-			<defence physical="3839.95121517957" magical="2066.69244923556" />
+			<attack physical="59542.3510592642" magical="9095.40427545412" random="10" critical="4" accuracy="5" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="1988.94736842105" magical="1153.03109258294" />
 			<attribute>
 			<defence fire="150" water="150" wind="150" earth="150" holy="150" dark="150" default="150" />
 			</attribute>
@@ -147,11 +151,13 @@
 			<skill id="16776" level="1" /> <!-- Sleep -->
 		</skillList>
 	</npc>
-	<npc id="23804" level="88" type="Monster" name="Lillim Great Magus">
+	<npc id="23804" level="101" type="Monster" name="Lillim Great Magus">
 		<!-- Lillim Great Magus ?? -->
 		<race>DEMONIC</race>
-		<stats>
+		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
 			<vitals hp="58233" hpRegen="10.5" mp="24690" mpRegen="3.6" />
+			<attack physical="59542.3510592642" magical="9095.40427545412" critical="4" attackSpeed="253" range="40" />
+			<defence physical="1988.94736842105" magical="1153.03109258294" />
 			<speed>
 				<walk ground="50" />
 				<run ground="180" />
@@ -181,11 +187,13 @@
 			</spoil>
 		</dropLists>
 	</npc>
-	<npc id="23805" level="92" type="Monster" name="Nephilim Royal Guard">
+	<npc id="23805" level="101" type="Monster" name="Nephilim Royal Guard">
 		<!-- Nephilim Royal Guard ?? -->
 		<race>DIVINE</race>
-		<stats>
+		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
 			<vitals hp="58233" hpRegen="10.5" mp="24308" mpRegen="3.6" />
+			<attack physical="59542.3510592642" magical="9095.40427545412" critical="4" attackSpeed="253" range="40" />
+			<defence physical="1988.94736842105" magical="1153.03109258294" />
 			<speed>
 				<walk ground="65" />
 				<run ground="180" />
@@ -219,8 +227,10 @@
 		<!-- Wandering Dead of the Dimension ?? -->
 		<race>UNDEAD</race>
 		<acquire exp="27926665" sp="27950" />
-		<stats>
+		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
 			<vitals hp="58233" hpRegen="10.5" mp="24308" mpRegen="3.6" />
+			<attack physical="59542.3510592642" magical="9095.40427545412" critical="4" attackSpeed="253" range="40" />
+			<defence physical="1988.94736842105" magical="1153.03109258294" />
 			<speed>
 				<walk ground="39" />
 				<run ground="180" />
@@ -248,8 +258,10 @@
 		<!-- Wandering Dimensional Spirit ?? -->
 		<race>BEAST</race>
 		<acquire exp="27926665" sp="27950" />
-		<stats>
+		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
 			<vitals hp="58233" hpRegen="10.5" mp="24690" mpRegen="3.6" />
+			<attack physical="59542.3510592642" magical="9095.40427545412" critical="4" attackSpeed="253" range="40" />
+			<defence physical="1988.94736842105" magical="1153.03109258294" />
 			<speed>
 				<walk ground="88" />
 				<run ground="180" />
@@ -277,8 +289,10 @@
 		<!-- Lost Soul of the Dimension ?? -->
 		<race>UNDEAD</race>
 		<acquire exp="27926665" sp="27950" />
-		<stats>
+		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
 			<vitals hp="58233" hpRegen="10.5" mp="24308" mpRegen="3.6" />
+			<attack physical="59542.3510592642" magical="9095.40427545412" critical="4" attackSpeed="253" range="40" />
+			<defence physical="1988.94736842105" magical="1153.03109258294" />
 			<speed>
 				<walk ground="39" />
 				<run ground="180" />
@@ -306,8 +320,10 @@
 		<!-- Lost Dimensional Evil Thoughts ?? -->
 		<race>DEMONIC</race>
 		<acquire exp="27926665" sp="27950" />
-		<stats>
+		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
 			<vitals hp="58233" hpRegen="10.5" mp="24690" mpRegen="3.6" />
+			<attack physical="59542.3510592642" magical="9095.40427545412" critical="4" attackSpeed="253" range="40" />
+			<defence physical="1988.94736842105" magical="1153.03109258294" />
 			<speed>
 				<walk ground="50" />
 				<run ground="180" />
@@ -336,8 +352,10 @@
 		<race>HUMANOID</race>
 		<acquire exp="27926665" sp="27950" />
 		<equipment rhand="10128" />
-		<stats>
+		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
 			<vitals hp="58233" hpRegen="10.5" mp="24308" mpRegen="3.6" />
+			<attack physical="59542.3510592642" magical="9095.40427545412" critical="8" attackSpeed="253" range="400" />
+			<defence physical="1988.94736842105" magical="1153.03109258294" />
 			<speed>
 				<walk ground="36" />
 				<run ground="180" />
@@ -367,13 +385,13 @@
 		<sex>FEMALE</sex>
 		<acquire exp="20777923" sp="20778" />
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="37639" hpRegen="10.5" mp="23550" mpRegen="3.6" />
+			<vitals hp="37639.8843930636" hpRegen="10.5" mp="23550.495049505" mpRegen="3.6" />
 			<speed>
 				<walk ground="60" />
 				<run ground="160" />
 			</speed>
-			<attack physical="27349" magical="21195" critical="4" attackSpeed="253" range="40" />
-			<defence physical="11721" magical="11775" />
+			<attack physical="94440.7204706402" magical="13873.7978952135" critical="4" attackSpeed="253" range="40" />
+			<defence physical="1051.59574468085" magical="609.858858226248" />
 			<attribute>
 				<defence fire="250" water="200" wind="250" earth="250" holy="250" dark="250" />
 				<attack type="FIRE" value="330" />
@@ -404,13 +422,13 @@
 		<race>DEMONIC</race>
 		<acquire exp="20777923" sp="20778" />
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="37639" hpRegen="10.5" mp="23550" mpRegen="3.6" />
+			<vitals hp="37639.8843930636" hpRegen="10.5" mp="23550.495049505" mpRegen="3.6" />
 			<speed>
 				<walk ground="70" />
 				<run ground="160" />
 			</speed>
-			<attack physical="27349" magical="21195" critical="4" attackSpeed="253" range="40" />
-			<defence physical="11721" magical="11775" />
+			<attack physical="94440.7204706402" magical="13873.7978952135" critical="4" attackSpeed="253" range="40" />
+			<defence physical="1051.59574468085" magical="609.858858226248" />
 			<attribute>
 				<defence fire="250" water="200" wind="250" earth="250" holy="250" dark="250" />
 				<attack type="FIRE" value="330" />
@@ -441,13 +459,13 @@
 		<race>ETC</race>
 		<acquire exp="20777923" sp="20778" />
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="37639" hpRegen="10.5" mp="23550" mpRegen="3.6" />
+			<vitals hp="37639.8843930636" hpRegen="10.5" mp="23550.495049505" mpRegen="3.6" />
 			<speed>
 				<walk ground="13" />
 				<run ground="160" />
 			</speed>
-			<attack physical="27349" magical="21195" critical="4" attackSpeed="253" range="40" />
-			<defence physical="11721" magical="11775" />
+			<attack physical="94440.7204706402" magical="13873.7978952135" critical="4" attackSpeed="253" range="40" />
+			<defence physical="1051.59574468085" magical="609.858858226248" />
 			<attribute>
 				<defence fire="250" water="200" wind="250" earth="250" holy="250" dark="250" />
 				<attack type="FIRE" value="330" />
@@ -479,13 +497,13 @@
 		<race>ELEMENTAL</race>
 		<acquire exp="20777923" sp="20778" />
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="37639" hpRegen="10.5" mp="23550" mpRegen="3.6" />
+			<vitals hp="37639.8843930636" hpRegen="10.5" mp="23550.495049505" mpRegen="3.6" />
 			<speed>
 				<walk ground="38" />
 				<run ground="160" />
 			</speed>
-			<attack physical="27349" magical="21195" critical="4" attackSpeed="253" range="40" />
-			<defence physical="11721" magical="11775" />
+			<attack physical="94440.7204706402" magical="13873.7978952135" critical="4" attackSpeed="253" range="40" />
+			<defence physical="1051.59574468085" magical="609.858858226248" />
 			<attribute>
 				<defence fire="250" water="200" wind="250" earth="250" holy="250" dark="250" />
 				<attack type="FIRE" value="330" />
@@ -516,13 +534,13 @@
 		<race>HUMANOID</race>
 		<acquire exp="20777923" sp="20778" />
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="37639" hpRegen="10.5" mp="23550" mpRegen="3.6" />
+			<vitals hp="37639.8843930636" hpRegen="10.5" mp="23550.495049505" mpRegen="3.6" />
 			<speed>
 				<walk ground="46" />
 				<run ground="160" />
 			</speed>
-			<attack physical="27349" magical="21195" critical="4" attackSpeed="253" range="40" />
-			<defence physical="11721" magical="11775" />
+			<attack physical="94440.7204706402" magical="13873.7978952135" critical="4" attackSpeed="253" range="40" />
+			<defence physical="1051.59574468085" magical="609.858858226248" />
 			<attribute>
 				<defence fire="250" water="200" wind="250" earth="250" holy="250" dark="250" />
 				<attack type="FIRE" value="330" />
@@ -549,18 +567,18 @@
 			</lucky>
 		</dropLists>
 	</npc>
-	<npc id="23820" level="85" type="Monster" name="Ketra Elite Soldier">
+	<npc id="23820" level="60" type="Monster" name="Ketra Elite Soldier">
 		<race>ETC</race>
 		<sex>FEMALE</sex>
 		<equipment rhand="160" />
-		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="8446" hpRegen="10.5" mp="1036" mpRegen="3.6" />
+		<stats str="79" int="34" dex="42" wit="66" con="75" men="12">
+			<vitals hp="7733.12302839117" hpRegen="10.5" mp="1037.30738037307" mpRegen="3.6" />
 			<speed>
 				<walk ground="36" />
 				<run ground="180" />
 			</speed>
-			<attack physical="1950.2231755595" magical="1331.5869440987" critical="4" attackSpeed="253" range="40" />
-			<defence physical="405.85106382979" magical="297.0297029703" />
+			<attack physical="481.543624161074" magical="315.348233981419" critical="4" attackSpeed="253" range="40" />
+			<defence physical="247.651006711409" magical="181.257042081027" />
 		</stats>
 		<status attackable="false" />
 		<skillList>
@@ -571,18 +589,18 @@
 			<height normal="24" />
 		</collision>
 	</npc>
-	<npc id="23821" level="85" type="Monster" name="Ketra Commando">
+	<npc id="23821" level="61" type="Monster" name="Ketra Commando">
 		<race>ETC</race>
 		<sex>FEMALE</sex>
 		<equipment rhand="279" />
-		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="8446" hpRegen="10.5" mp="1066" mpRegen="3.6" />
+		<stats str="79" int="34" dex="42" wit="66" con="75" men="12">
+			<vitals hp="9928.07570977918" hpRegen="10.5" mp="1067.31549067315" mpRegen="3.6" />
 			<speed>
 				<walk ground="45" />
 				<run ground="180" />
 			</speed>
-			<attack physical="1950.2231755595" magical="1331.5869440987" critical="4" attackSpeed="253" range="40" />
-			<defence physical="405.85106382979" magical="297.0297029703" />
+			<attack physical="501.111111111111" magical="327.641209306521" critical="4" attackSpeed="253" range="40" />
+			<defence physical="252.666666666667" magical="184.914841849148" />
 		</stats>
 		<status attackable="false" />
 		<skillList>
@@ -593,18 +611,18 @@
 			<height normal="27" />
 		</collision>
 	</npc>
-	<npc id="23822" level="85" type="Monster" name="Ketra Centurion" title="Ketra Orc Leader">
+	<npc id="23822" level="62" type="Monster" name="Ketra Centurion" title="Ketra Orc Leader">
 		<race>ETC</race>
 		<sex>FEMALE</sex>
 		<equipment rhand="160" />
-		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="8446" hpRegen="10.5" mp="1097" mpRegen="3.6" />
+		<stats str="79" int="34" dex="42" wit="66" con="75" men="12">
+			<vitals hp="14264.9842271293" hpRegen="10.5" mp="1097.32360097324" mpRegen="3.6" />
 			<speed>
 				<walk ground="80" />
 				<run ground="180" />
 			</speed>
-			<attack physical="1950.2231755595" magical="1331.5869440987" critical="4" attackSpeed="253" range="40" />
-			<defence physical="405.85106382979" magical="297.0297029703" />
+			<attack physical="521.523178807947" magical="340.156785791482" critical="4" attackSpeed="253" range="40" />
+			<defence physical="257.615894039735" magical="188.524193938222" />
 		</stats>
 		<status attackable="false" />
 		<skillList>
@@ -615,18 +633,18 @@
 			<height normal="24" />
 		</collision>
 	</npc>
-	<npc id="23823" level="85" type="Monster" name="Ketra Shaman">
+	<npc id="23823" level="63" type="Monster" name="Ketra Shaman">
 		<race>ETC</race>
 		<sex>FEMALE</sex>
 		<equipment rhand="2503" />
-		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="8446" hpRegen="10.5" mp="1127" mpRegen="3.6" />
+		<stats str="79" int="34" dex="42" wit="66" con="75" men="12">
+			<vitals hp="14629.6529968454" hpRegen="10.5" mp="1128.14274128143" mpRegen="3.6" />
 			<speed>
 				<walk ground="50" />
 				<run ground="180" />
 			</speed>
-			<attack physical="1950.2231755595" magical="1331.5869440987" critical="4" attackSpeed="253" range="40" />
-			<defence physical="405.85106382979" magical="297.0297029703" />
+			<attack physical="541.666666666667" magical="353.489422932554" critical="4" attackSpeed="253" range="40" />
+			<defence physical="262.5" magical="192.086054552439" />
 		</stats>
 		<status attackable="false" />
 		<skillList>
@@ -637,18 +655,18 @@
 			<height normal="16" />
 		</collision>
 	</npc>
-	<npc id="23824" level="85" type="Monster" name="Ketra Commander" title="Ketra Orc Leader">
+	<npc id="23824" level="64" type="Monster" name="Ketra Commander" title="Ketra Orc Leader">
 		<race>ETC</race>
 		<sex>FEMALE</sex>
 		<equipment rhand="298" />
-		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="8446" hpRegen="10.5" mp="1158" mpRegen="3.6" />
+		<stats str="79" int="34" dex="42" wit="66" con="75" men="12">
+			<vitals hp="19276.9716088328" hpRegen="10.5" mp="1158.15085158151" mpRegen="3.6" />
 			<speed>
 				<walk ground="24" />
 				<run ground="180" />
 			</speed>
-			<attack physical="1950.2231755595" magical="1331.5869440987" critical="4" attackSpeed="253" range="40" />
-			<defence physical="405.85106382979" magical="297.0297029703" />
+			<attack physical="562.091503267974" magical="365.800561056902" critical="4" attackSpeed="253" range="40" />
+			<defence physical="267.320261437908" magical="195.60135489719" />
 		</stats>
 		<status attackable="false" />
 		<skillList>
@@ -659,18 +677,18 @@
 			<height normal="38.5" />
 		</collision>
 	</npc>
-	<npc id="23825" level="85" type="Monster" name="Kel Mahum Ranger">
+	<npc id="23825" level="60" type="Monster" name="Kel Mahum Ranger">
 		<race>ETC</race>
 		<sex>FEMALE</sex>
 		<equipment rhand="160" />
-		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="8446" hpRegen="10.5" mp="1036" mpRegen="3.6" />
+		<stats str="79" int="34" dex="42" wit="66" con="75" men="12">
+			<vitals hp="7733.12302839117" hpRegen="10.5" mp="1037.30738037307" mpRegen="3.6" />
 			<speed>
 				<walk ground="50" />
 				<run ground="180" />
 			</speed>
-			<attack physical="1950.2231755595" magical="1331.5869440987" critical="4" attackSpeed="253" range="40" />
-			<defence physical="405.85106382979" magical="297.0297029703" />
+			<attack physical="481.543624161074" magical="315.348233981419" critical="4" attackSpeed="253" range="40" />
+			<defence physical="247.651006711409" magical="181.257042081027" />
 		</stats>
 		<status attackable="false" />
 		<skillList>
@@ -681,18 +699,18 @@
 			<height normal="26" />
 		</collision>
 	</npc>
-	<npc id="23826" level="85" type="Monster" name="Kel Mahum Hunter">
+	<npc id="23826" level="61" type="Monster" name="Kel Mahum Hunter">
 		<race>ETC</race>
 		<sex>FEMALE</sex>
 		<equipment rhand="279" />
-		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="8446" hpRegen="10.5" mp="1066" mpRegen="3.6" />
+		<stats str="79" int="34" dex="42" wit="66" con="75" men="12">
+			<vitals hp="9928.07570977918" hpRegen="10.5" mp="1067.31549067315" mpRegen="3.6" />
 			<speed>
 				<walk ground="50" />
 				<run ground="180" />
 			</speed>
-			<attack physical="1950.2231755595" magical="1331.5869440987" critical="4" attackSpeed="253" range="40" />
-			<defence physical="405.85106382979" magical="297.0297029703" />
+			<attack physical="501.111111111111" magical="327.641209306521" critical="4" attackSpeed="253" range="40" />
+			<defence physical="252.666666666667" magical="184.914841849148" />
 		</stats>
 		<status attackable="false" />
 		<skillList>
@@ -703,18 +721,18 @@
 			<height normal="27" />
 		</collision>
 	</npc>
-	<npc id="23827" level="85" type="Monster" name="Kel Mahum Elite Leader" title="Kel Mahum Leader">
+	<npc id="23827" level="62" type="Monster" name="Kel Mahum Elite Leader" title="Kel Mahum Leader">
 		<race>ETC</race>
 		<sex>FEMALE</sex>
 		<equipment rhand="160" />
-		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="8446" hpRegen="10.5" mp="1097" mpRegen="3.6" />
+		<stats str="79" int="34" dex="42" wit="66" con="75" men="12">
+			<vitals hp="14264.9842271293" hpRegen="10.5" mp="1097.32360097324" mpRegen="3.6" />
 			<speed>
 				<walk ground="50" />
 				<run ground="180" />
 			</speed>
-			<attack physical="1950.2231755595" magical="1331.5869440987" critical="4" attackSpeed="253" range="40" />
-			<defence physical="405.85106382979" magical="297.0297029703" />
+			<attack physical="521.523178807947" magical="340.156785791482" critical="4" attackSpeed="253" range="40" />
+			<defence physical="257.615894039735" magical="188.524193938222" />
 		</stats>
 		<status attackable="false" />
 		<skillList>
@@ -725,18 +743,18 @@
 			<height normal="28" />
 		</collision>
 	</npc>
-	<npc id="23828" level="85" type="Monster" name="Kel Mahum Priest">
+	<npc id="23828" level="63" type="Monster" name="Kel Mahum Priest">
 		<race>ETC</race>
 		<sex>FEMALE</sex>
 		<equipment rhand="2503" />
-		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="8446" hpRegen="10.5" mp="1127" mpRegen="3.6" />
+		<stats str="79" int="34" dex="42" wit="66" con="75" men="12">
+			<vitals hp="14629.6529968454" hpRegen="10.5" mp="1128.14274128143" mpRegen="3.6" />
 			<speed>
 				<walk ground="50" />
 				<run ground="180" />
 			</speed>
-			<attack physical="1950.2231755595" magical="1331.5869440987" critical="4" attackSpeed="253" range="40" />
-			<defence physical="405.85106382979" magical="297.0297029703" />
+			<attack physical="541.666666666667" magical="353.489422932554" critical="4" attackSpeed="253" range="40" />
+			<defence physical="262.5" magical="192.086054552439" />
 		</stats>
 		<status attackable="false" />
 		<skillList>
@@ -747,18 +765,18 @@
 			<height normal="25" />
 		</collision>
 	</npc>
-	<npc id="23829" level="85" type="Monster" name="Kel Mahum Commander" title="Kel Mahum Leader">
+	<npc id="23829" level="64" type="Monster" name="Kel Mahum Commander" title="Kel Mahum Leader">
 		<race>ETC</race>
 		<sex>FEMALE</sex>
 		<equipment rhand="299" />
-		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="8446" hpRegen="10.5" mp="1158" mpRegen="3.6" />
+		<stats str="79" int="34" dex="42" wit="66" con="75" men="12">
+			<vitals hp="19276.9716088328" hpRegen="10.5" mp="1158.15085158151" mpRegen="3.6" />
 			<speed>
 				<walk ground="50" />
 				<run ground="180" />
 			</speed>
-			<attack physical="1950.2231755595" magical="1331.5869440987" critical="4" attackSpeed="253" range="40" />
-			<defence physical="405.85106382979" magical="297.0297029703" />
+			<attack physical="562.091503267974" magical="365.800561056902" critical="4" attackSpeed="253" range="40" />
+			<defence physical="267.320261437908" magical="195.60135489719" />
 		</stats>
 		<status attackable="false" />
 		<skillList>
@@ -769,18 +787,18 @@
 			<height normal="32" />
 		</collision>
 	</npc>
-	<npc id="23830" level="85" type="Monster" name="Molten Guardian">
+	<npc id="23830" level="64" type="Monster" name="Molten Guardian">
 		<race>ETC</race>
 		<sex>FEMALE</sex>
 		<equipment rhand="84" />
-		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="8446" hpRegen="10.5" mp="1158" mpRegen="3.6" />
+		<stats str="79" int="34" dex="42" wit="66" con="75" men="12">
+			<vitals hp="14993.0599369085" hpRegen="10.5" mp="1158.15085158151" mpRegen="3.6" />
 			<speed>
 				<walk ground="40" />
 				<run ground="180" />
 			</speed>
-			<attack physical="1950.2231755595" magical="1331.5869440987" critical="4" attackSpeed="253" range="40" />
-			<defence physical="405.85106382979" magical="297.0297029703" />
+			<attack physical="562.091503267974" magical="365.800561056902" critical="4" attackSpeed="253" range="40" />
+			<defence physical="267.320261437908" magical="195.60135489719" />
 		</stats>
 		<status attackable="false" />
 		<skillList>
@@ -791,18 +809,18 @@
 			<height normal="25" />
 		</collision>
 	</npc>
-	<npc id="23831" level="85" type="Monster" name="Resurrected Guardian">
+	<npc id="23831" level="65" type="Monster" name="Resurrected Guardian">
 		<race>ETC</race>
 		<sex>FEMALE</sex>
 		<equipment rhand="946" lhand="945" />
-		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="8446" hpRegen="10.5" mp="1188" mpRegen="3.6" />
+		<stats str="79" int="34" dex="42" wit="66" con="75" men="12">
+			<vitals hp="19741.3249211356" hpRegen="10.5" mp="1188.9699918897" mpRegen="3.6" />
 			<speed>
 				<walk ground="80" />
 				<run ground="180" />
 			</speed>
-			<attack physical="1950.2231755595" magical="1331.5869440987" critical="4" attackSpeed="253" range="40" />
-			<defence physical="405.85106382979" magical="297.0297029703" />
+			<attack physical="583.333333333333" magical="378.90274609333" critical="4" attackSpeed="253" range="40" />
+			<defence physical="272.077922077922" magical="199.07100199071" />
 		</stats>
 		<status attackable="false" />
 		<skillList>
@@ -813,17 +831,17 @@
 			<height normal="28.5" />
 		</collision>
 	</npc>
-	<npc id="23832" level="85" type="Monster" name="Muddled Guardian Ghost" title="Undead Leader">
+	<npc id="23832" level="66" type="Monster" name="Muddled Guardian Ghost" title="Undead Leader">
 		<race>ETC</race>
 		<sex>FEMALE</sex>
-		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="8446" hpRegen="10.5" mp="1219" mpRegen="3.6" />
+		<stats str="79" int="34" dex="42" wit="66" con="75" men="12">
+			<vitals hp="26936.2776025237" hpRegen="10.5" mp="1220.600162206" mpRegen="3.6" />
 			<speed>
 				<walk ground="45" />
 				<run ground="180" />
 			</speed>
-			<attack physical="1950.2231755595" magical="1331.5869440987" critical="4" attackSpeed="253" range="40" />
-			<defence physical="405.85106382979" magical="297.0297029703" />
+			<attack physical="604.301075268817" magical="392.175445316677" critical="4" attackSpeed="253" range="40" />
+			<defence physical="276.774193548387" magical="203.019124610836" />
 		</stats>
 		<status attackable="false" />
 		<skillList>
@@ -834,17 +852,17 @@
 			<height normal="32.5" />
 		</collision>
 	</npc>
-	<npc id="23833" level="85" type="Monster" name="Vindictive Guardian Ghost">
+	<npc id="23833" level="66" type="Monster" name="Vindictive Guardian Ghost">
 		<race>ETC</race>
 		<sex>FEMALE</sex>
-		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="8446" hpRegen="10.5" mp="1219" mpRegen="3.6" />
+		<stats str="79" int="34" dex="42" wit="66" con="75" men="12">
+			<vitals hp="31425.8675078864" hpRegen="10.5" mp="1220.600162206" mpRegen="3.6" />
 			<speed>
 				<walk ground="45" />
 				<run ground="180" />
 			</speed>
-			<attack physical="1950.2231755595" magical="1331.5869440987" critical="4" attackSpeed="253" range="40" />
-			<defence physical="405.85106382979" magical="297.0297029703" />
+			<attack physical="604.301075268817" magical="392.175445316677" critical="4" attackSpeed="253" range="40" />
+			<defence physical="276.774193548387" magical="203.019124610836" />
 		</stats>
 		<status attackable="false" />
 		<skillList>
@@ -855,17 +873,17 @@
 			<height normal="32.5" />
 		</collision>
 	</npc>
-	<npc id="23834" level="85" type="Monster" name="Cursed Guardian Ghost" title="Undead Leader">
+	<npc id="23834" level="67" type="Monster" name="Cursed Guardian Ghost" title="Undead Leader">
 		<race>ETC</race>
 		<sex>FEMALE</sex>
-		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="8446" hpRegen="10.5" mp="1251" mpRegen="3.6" />
+		<stats str="79" int="34" dex="42" wit="66" con="75" men="12">
+			<vitals hp="36728.0757097792" hpRegen="10.5" mp="1251.41930251419" mpRegen="3.6" />
 			<speed>
 				<walk ground="45" />
 				<run ground="180" />
 			</speed>
-			<attack physical="1950.2231755595" magical="1331.5869440987" critical="4" attackSpeed="253" range="40" />
-			<defence physical="405.85106382979" magical="297.0297029703" />
+			<attack physical="625" magical="405.60709752719" critical="4" attackSpeed="253" range="40" />
+			<defence physical="282.051282051282" magical="206.396739243455" />
 		</stats>
 		<status attackable="false" />
 		<skillList>
@@ -876,17 +894,17 @@
 			<height normal="39" />
 		</collision>
 	</npc>
-	<npc id="23835" level="85" type="Monster" name="Arena Saber Tooth">
+	<npc id="23835" level="64" type="Monster" name="Arena Saber Tooth">
 		<race>ETC</race>
 		<sex>FEMALE</sex>
-		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="8446" hpRegen="10.5" mp="1158" mpRegen="3.6" />
+		<stats str="79" int="34" dex="42" wit="66" con="75" men="12">
+			<vitals hp="14993.0599369085" hpRegen="10.5" mp="1158.15085158151" mpRegen="3.6" />
 			<speed>
 				<walk ground="60" />
 				<run ground="180" />
 			</speed>
-			<attack physical="1950.2231755595" magical="1331.5869440987" critical="4" attackSpeed="253" range="40" />
-			<defence physical="405.85106382979" magical="297.0297029703" />
+			<attack physical="562.091503267974" magical="365.800561056902" critical="4" attackSpeed="253" range="40" />
+			<defence physical="267.320261437908" magical="195.60135489719" />
 		</stats>
 		<status attackable="false" />
 		<skillList>
@@ -897,17 +915,17 @@
 			<height normal="28" />
 		</collision>
 	</npc>
-	<npc id="23836" level="85" type="Monster" name="Arena Grizzly">
+	<npc id="23836" level="65" type="Monster" name="Arena Grizzly">
 		<race>ETC</race>
 		<sex>FEMALE</sex>
-		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="8446" hpRegen="10.5" mp="1188" mpRegen="3.6" />
+		<stats str="79" int="34" dex="42" wit="66" con="75" men="12">
+			<vitals hp="19741.3249211356" hpRegen="10.5" mp="1188.9699918897" mpRegen="3.6" />
 			<speed>
 				<walk ground="40" />
 				<run ground="180" />
 			</speed>
-			<attack physical="1950.2231755595" magical="1331.5869440987" critical="4" attackSpeed="253" range="40" />
-			<defence physical="405.85106382979" magical="297.0297029703" />
+			<attack physical="583.333333333333" magical="378.90274609333" critical="4" attackSpeed="253" range="40" />
+			<defence physical="272.077922077922" magical="199.07100199071" />
 		</stats>
 		<status attackable="false" />
 		<skillList>
@@ -918,17 +936,17 @@
 			<height normal="40" />
 		</collision>
 	</npc>
-	<npc id="23837" level="85" type="Monster" name="Arena Predator" title="Beast King">
+	<npc id="23837" level="66" type="Monster" name="Arena Predator" title="Beast King">
 		<race>ETC</race>
 		<sex>FEMALE</sex>
-		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="8446" hpRegen="10.5" mp="1219" mpRegen="3.6" />
+		<stats str="79" int="34" dex="42" wit="66" con="75" men="12">
+			<vitals hp="26936.2776025237" hpRegen="10.5" mp="1220.600162206" mpRegen="3.6" />
 			<speed>
 				<walk ground="40" />
 				<run ground="180" />
 			</speed>
-			<attack physical="1950.2231755595" magical="1331.5869440987" critical="4" attackSpeed="253" range="40" />
-			<defence physical="405.85106382979" magical="297.0297029703" />
+			<attack physical="604.301075268817" magical="392.175445316677" critical="4" attackSpeed="253" range="40" />
+			<defence physical="276.774193548387" magical="203.019124610836" />
 		</stats>
 		<status attackable="false" />
 		<skillList>
@@ -939,17 +957,17 @@
 			<height normal="32.5" />
 		</collision>
 	</npc>
-	<npc id="23838" level="85" type="Monster" name="Arena Basilisk">
+	<npc id="23838" level="66" type="Monster" name="Arena Basilisk">
 		<race>ETC</race>
 		<sex>FEMALE</sex>
-		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="8446" hpRegen="10.5" mp="1219" mpRegen="3.6" />
+		<stats str="79" int="34" dex="42" wit="66" con="75" men="12">
+			<vitals hp="31425.8675078864" hpRegen="10.5" mp="1220.600162206" mpRegen="3.6" />
 			<speed>
 				<walk ground="35" />
 				<run ground="180" />
 			</speed>
-			<attack physical="1950.2231755595" magical="1331.5869440987" critical="4" attackSpeed="253" range="40" />
-			<defence physical="405.85106382979" magical="297.0297029703" />
+			<attack physical="604.301075268817" magical="392.175445316677" critical="4" attackSpeed="253" range="40" />
+			<defence physical="276.774193548387" magical="203.019124610836" />
 		</stats>
 		<status attackable="false" />
 		<skillList>
@@ -960,17 +978,17 @@
 			<height normal="25" />
 		</collision>
 	</npc>
-	<npc id="23839" level="85" type="Monster" name="Arena Deadly Fang" title="Beast King">
+	<npc id="23839" level="67" type="Monster" name="Arena Deadly Fang" title="Beast King">
 		<race>ETC</race>
 		<sex>FEMALE</sex>
-		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="8446" hpRegen="10.5" mp="1251" mpRegen="3.6" />
+		<stats str="79" int="34" dex="42" wit="66" con="75" men="12">
+			<vitals hp="36728.0757097792" hpRegen="10.5" mp="1251.41930251419" mpRegen="3.6" />
 			<speed>
 				<walk ground="26" />
 				<run ground="180" />
 			</speed>
-			<attack physical="1950.2231755595" magical="1331.5869440987" critical="4" attackSpeed="253" range="40" />
-			<defence physical="405.85106382979" magical="297.0297029703" />
+			<attack physical="625" magical="405.60709752719" critical="4" attackSpeed="253" range="40" />
+			<defence physical="282.051282051282" magical="206.396739243455" />
 		</stats>
 		<status attackable="false" />
 		<skillList>
@@ -981,17 +999,17 @@
 			<height normal="33.5" />
 		</collision>
 	</npc>
-	<npc id="23840" level="85" type="Monster" name="Beetle of Terror">
+	<npc id="23840" level="67" type="Monster" name="Beetle of Terror">
 		<race>ETC</race>
 		<sex>FEMALE</sex>
-		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="8446" hpRegen="10.5" mp="1251" mpRegen="3.6" />
+		<stats str="79" int="34" dex="42" wit="66" con="75" men="12">
+			<vitals hp="32136.9085173502" hpRegen="10.5" mp="1251.41930251419" mpRegen="3.6" />
 			<speed>
 				<walk ground="45" />
 				<run ground="180" />
 			</speed>
-			<attack physical="1950.2231755595" magical="1331.5869440987" critical="4" attackSpeed="253" range="40" />
-			<defence physical="405.85106382979" magical="297.0297029703" />
+			<attack physical="625" magical="405.60709752719" critical="4" attackSpeed="253" range="40" />
+			<defence physical="282.051282051282" magical="206.396739243455" />
 		</stats>
 		<status attackable="false" />
 		<skillList>
@@ -1002,17 +1020,17 @@
 			<height normal="22" />
 		</collision>
 	</npc>
-	<npc id="23841" level="85" type="Monster" name="Scorpion of Terror">
+	<npc id="23841" level="68" type="Monster" name="Scorpion of Terror">
 		<race>ETC</race>
 		<sex>FEMALE</sex>
-		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="8446" hpRegen="10.5" mp="1282" mpRegen="3.6" />
+		<stats str="79" int="34" dex="42" wit="66" con="75" men="12">
+			<vitals hp="39878.2334384858" hpRegen="10.5" mp="1283.04947283049" mpRegen="3.6" />
 			<speed>
 				<walk ground="37" />
 				<run ground="180" />
 			</speed>
-			<attack physical="1950.2231755595" magical="1331.5869440987" critical="4" attackSpeed="253" range="40" />
-			<defence physical="405.85106382979" magical="297.0297029703" />
+			<attack physical="646.496815286624" magical="418.620202976462" critical="4" attackSpeed="253" range="40" />
+			<defence physical="286.624203821656" magical="209.731326938078" />
 		</stats>
 		<status attackable="false" />
 		<skillList>
@@ -1023,17 +1041,17 @@
 			<height normal="66" />
 		</collision>
 	</npc>
-	<npc id="23842" level="85" type="Monster" name="Laikel of Terror" title="Leader of Creation">
+	<npc id="23842" level="69" type="Monster" name="Laikel of Terror" title="Leader of Creation">
 		<race>ETC</race>
 		<sex>FEMALE</sex>
-		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="8446" hpRegen="10.5" mp="1314" mpRegen="3.6" />
+		<stats str="79" int="34" dex="42" wit="66" con="75" men="12">
+			<vitals hp="47909.1482649842" hpRegen="10.5" mp="1314.6796431468" mpRegen="3.6" />
 			<speed>
 				<walk ground="60" />
 				<run ground="180" />
 			</speed>
-			<attack physical="1950.2231755595" magical="1331.5869440987" critical="4" attackSpeed="253" range="40" />
-			<defence physical="405.85106382979" magical="297.0297029703" />
+			<attack physical="667.721518987342" magical="431.786470309814" critical="4" attackSpeed="253" range="40" />
+			<defence physical="291.772151898734" magical="213.537014793598" />
 		</stats>
 		<status attackable="false" />
 		<skillList>
@@ -1044,17 +1062,17 @@
 			<height normal="64" />
 		</collision>
 	</npc>
-	<npc id="23843" level="85" type="Monster" name="Giant Spider of Terror">
+	<npc id="23843" level="69" type="Monster" name="Giant Spider of Terror">
 		<race>ETC</race>
 		<sex>FEMALE</sex>
-		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="8446" hpRegen="10.5" mp="1314" mpRegen="3.6" />
+		<stats str="79" int="34" dex="42" wit="66" con="75" men="12">
+			<vitals hp="52700.3154574133" hpRegen="10.5" mp="1314.6796431468" mpRegen="3.6" />
 			<speed>
 				<walk ground="105" />
 				<run ground="180" />
 			</speed>
-			<attack physical="1950.2231755595" magical="1331.5869440987" critical="4" attackSpeed="253" range="40" />
-			<defence physical="405.85106382979" magical="297.0297029703" />
+			<attack physical="667.721518987342" magical="431.786470309814" critical="4" attackSpeed="253" range="40" />
+			<defence physical="291.772151898734" magical="213.537014793598" />
 		</stats>
 		<status attackable="false" />
 		<skillList>
@@ -1065,17 +1083,17 @@
 			<height normal="39" />
 		</collision>
 	</npc>
-	<npc id="23844" level="85" type="Monster" name="Riba of Terror" title="Leader of Creation">
+	<npc id="23844" level="70" type="Monster" name="Riba of Terror" title="Leader of Creation">
 		<race>ETC</race>
 		<sex>FEMALE</sex>
-		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="8446" hpRegen="10.5" mp="1345" mpRegen="3.6" />
+		<stats str="79" int="34" dex="42" wit="66" con="75" men="12">
+			<vitals hp="58667.5078864353" hpRegen="10.5" mp="1346.3098134631" mpRegen="3.6" />
 			<speed>
 				<walk ground="60" />
 				<run ground="180" />
 			</speed>
-			<attack physical="1950.2231755595" magical="1331.5869440987" critical="4" attackSpeed="253" range="40" />
-			<defence physical="405.85106382979" magical="297.0297029703" />
+			<attack physical="689.203354297694" magical="445.095379897059" critical="4" attackSpeed="253" range="40" />
+			<defence physical="296.22641509434" magical="216.78475059552" />
 		</stats>
 		<status attackable="false" />
 		<skillList>
@@ -1086,17 +1104,17 @@
 			<height normal="72" />
 		</collision>
 	</npc>
-	<npc id="23845" level="85" type="Monster" name="Mansion Gatekeeper">
+	<npc id="23845" level="67" type="Monster" name="Mansion Gatekeeper">
 		<race>ETC</race>
 		<sex>FEMALE</sex>
-		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="8446" hpRegen="10.5" mp="1251" mpRegen="3.6" />
+		<stats str="79" int="34" dex="42" wit="66" con="75" men="12">
+			<vitals hp="32136.9085173502" hpRegen="10.5" mp="1251.41930251419" mpRegen="3.6" />
 			<speed>
 				<walk ground="140" />
 				<run ground="180" />
 			</speed>
-			<attack physical="1950.2231755595" magical="1331.5869440987" critical="4" attackSpeed="253" range="40" />
-			<defence physical="405.85106382979" magical="297.0297029703" />
+			<attack physical="625" magical="405.60709752719" critical="4" attackSpeed="253" range="40" />
+			<defence physical="282.051282051282" magical="206.396739243455" />
 		</stats>
 		<status attackable="false" />
 		<skillList>
@@ -1107,17 +1125,17 @@
 			<height normal="50" />
 		</collision>
 	</npc>
-	<npc id="23846" level="85" type="Monster" name="Mine Gatekeeper">
+	<npc id="23846" level="68" type="Monster" name="Mine Gatekeeper">
 		<race>ETC</race>
 		<sex>FEMALE</sex>
-		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="8446" hpRegen="10.5" mp="1282" mpRegen="3.6" />
+		<stats str="79" int="34" dex="42" wit="66" con="75" men="12">
+			<vitals hp="39878.2334384858" hpRegen="10.5" mp="1283.04947283049" mpRegen="3.6" />
 			<speed>
 				<walk ground="54" />
 				<run ground="180" />
 			</speed>
-			<attack physical="1950.2231755595" magical="1331.5869440987" critical="4" attackSpeed="253" range="40" />
-			<defence physical="405.85106382979" magical="297.0297029703" />
+			<attack physical="646.496815286624" magical="418.620202976462" critical="4" attackSpeed="253" range="40" />
+			<defence physical="286.624203821656" magical="209.731326938078" />
 		</stats>
 		<status attackable="false" />
 		<skillList>
@@ -1128,17 +1146,17 @@
 			<height normal="47" />
 		</collision>
 	</npc>
-	<npc id="23847" level="85" type="Monster" name="Gatekeeper of Fire" title="Gatekeeper Leader">
+	<npc id="23847" level="69" type="Monster" name="Gatekeeper of Fire" title="Gatekeeper Leader">
 		<race>ETC</race>
 		<sex>FEMALE</sex>
-		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="8446" hpRegen="10.5" mp="1314" mpRegen="3.6" />
+		<stats str="79" int="34" dex="42" wit="66" con="75" men="12">
+			<vitals hp="47909.1482649842" hpRegen="10.5" mp="1314.6796431468" mpRegen="3.6" />
 			<speed>
 				<walk ground="13" />
 				<run ground="180" />
 			</speed>
-			<attack physical="1950.2231755595" magical="1331.5869440987" critical="4" attackSpeed="253" range="40" />
-			<defence physical="405.85106382979" magical="297.0297029703" />
+			<attack physical="667.721518987342" magical="431.786470309814" critical="4" attackSpeed="253" range="40" />
+			<defence physical="291.772151898734" magical="213.537014793598" />
 		</stats>
 		<status attackable="false" />
 		<skillList>
@@ -1149,17 +1167,17 @@
 			<height normal="45" />
 		</collision>
 	</npc>
-	<npc id="23848" level="85" type="Monster" name="Gatekeeper of Crystal">
+	<npc id="23848" level="69" type="Monster" name="Gatekeeper of Crystal">
 		<race>ETC</race>
 		<sex>FEMALE</sex>
-		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="8446" hpRegen="10.5" mp="1314" mpRegen="3.6" />
+		<stats str="79" int="34" dex="42" wit="66" con="75" men="12">
+			<vitals hp="52700.3154574133" hpRegen="10.5" mp="1314.6796431468" mpRegen="3.6" />
 			<speed>
 				<walk ground="23" />
 				<run ground="180" />
 			</speed>
-			<attack physical="1950.2231755595" magical="1331.5869440987" critical="4" attackSpeed="253" range="40" />
-			<defence physical="405.85106382979" magical="297.0297029703" />
+			<attack physical="667.721518987342" magical="431.786470309814" critical="4" attackSpeed="253" range="40" />
+			<defence physical="291.772151898734" magical="213.537014793598" />
 		</stats>
 		<status attackable="false" />
 		<skillList>
@@ -1170,17 +1188,17 @@
 			<height normal="31" />
 		</collision>
 	</npc>
-	<npc id="23849" level="85" type="Monster" name="Ultimate Gatekeeper A1803-1" title="Gatekeeper Leader">
+	<npc id="23849" level="70" type="Monster" name="Ultimate Gatekeeper A1803-1" title="Gatekeeper Leader">
 		<race>ETC</race>
 		<sex>FEMALE</sex>
-		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="8446" hpRegen="10.5" mp="1345" mpRegen="3.6" />
+		<stats str="79" int="34" dex="42" wit="66" con="75" men="12">
+			<vitals hp="58667.5078864353" hpRegen="10.5" mp="1346.3098134631" mpRegen="3.6" />
 			<speed>
 				<walk ground="60" />
 				<run ground="180" />
 			</speed>
-			<attack physical="1950.2231755595" magical="1331.5869440987" critical="4" attackSpeed="253" range="40" />
-			<defence physical="405.85106382979" magical="297.0297029703" />
+			<attack physical="689.203354297694" magical="445.095379897059" critical="4" attackSpeed="253" range="40" />
+			<defence physical="296.22641509434" magical="216.78475059552" />
 		</stats>
 		<status attackable="false" />
 		<skillList>
@@ -1191,17 +1209,17 @@
 			<height normal="463.765" />
 		</collision>
 	</npc>
-	<npc id="23850" level="85" type="Monster" name="Hell Assassin">
+	<npc id="23850" level="70" type="Monster" name="Hell Assassin">
 		<race>ETC</race>
 		<sex>FEMALE</sex>
-		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="8446" hpRegen="10.5" mp="1345" mpRegen="3.6" />
+		<stats str="79" int="34" dex="42" wit="66" con="75" men="12">
+			<vitals hp="53778.5488958991" hpRegen="10.5" mp="1346.3098134631" mpRegen="3.6" />
 			<speed>
 				<walk ground="36" />
 				<run ground="180" />
 			</speed>
-			<attack physical="1950.2231755595" magical="1331.5869440987" critical="4" attackSpeed="253" range="40" />
-			<defence physical="405.85106382979" magical="297.0297029703" />
+			<attack physical="689.203354297694" magical="445.095379897059" critical="4" attackSpeed="253" range="40" />
+			<defence physical="296.22641509434" magical="216.78475059552" />
 		</stats>
 		<status attackable="false" />
 		<skillList>
@@ -1212,17 +1230,17 @@
 			<height normal="40" />
 		</collision>
 	</npc>
-	<npc id="23851" level="85" type="Monster" name="Hell Dark Wizard">
+	<npc id="23851" level="71" type="Monster" name="Hell Dark Wizard">
 		<race>ETC</race>
 		<sex>FEMALE</sex>
-		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="8446" hpRegen="10.5" mp="1377" mpRegen="3.6" />
+		<stats str="79" int="34" dex="42" wit="66" con="75" men="12">
+			<vitals hp="59825.8675078864" hpRegen="10.5" mp="1377.9399837794" mpRegen="3.6" />
 			<speed>
 				<walk ground="50" />
 				<run ground="180" />
 			</speed>
-			<attack physical="1950.2231755595" magical="1331.5869440987" critical="4" attackSpeed="253" range="40" />
-			<defence physical="405.85106382979" magical="297.0297029703" />
+			<attack physical="710.416666666667" magical="457.993597923654" critical="4" attackSpeed="253" range="40" />
+			<defence physical="301.25" magical="220.498783454988" />
 		</stats>
 		<status attackable="false" />
 		<skillList>
@@ -1233,17 +1251,17 @@
 			<height normal="34" />
 		</collision>
 	</npc>
-	<npc id="23852" level="85" type="Monster" name="Hell Armor" title="Devil's Advocate">
+	<npc id="23852" level="72" type="Monster" name="Hell Armor" title="Devil's Advocate">
 		<race>ETC</race>
 		<sex>FEMALE</sex>
-		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="8446" hpRegen="10.5" mp="1410" mpRegen="3.6" />
+		<stats str="79" int="34" dex="42" wit="66" con="75" men="12">
+			<vitals hp="68584.2271293375" hpRegen="10.5" mp="1410.38118410381" mpRegen="3.6" />
 			<speed>
 				<walk ground="56" />
 				<run ground="180" />
 			</speed>
-			<attack physical="1950.2231755595" magical="1331.5869440987" critical="4" attackSpeed="253" range="40" />
-			<defence physical="405.85106382979" magical="297.0297029703" />
+			<attack physical="731.884057971015" magical="471.565535355007" critical="4" attackSpeed="253" range="40" />
+			<defence physical="305.590062111801" magical="223.662933913648" />
 		</stats>
 		<status attackable="false" />
 		<skillList>
@@ -1254,17 +1272,17 @@
 			<height normal="50" />
 		</collision>
 	</npc>
-	<npc id="23853" level="85" type="Monster" name="Hell Puppeteer">
+	<npc id="23853" level="73" type="Monster" name="Hell Puppeteer">
 		<race>ETC</race>
 		<sex>FEMALE</sex>
-		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="8446" hpRegen="10.5" mp="1442" mpRegen="3.6" />
+		<stats str="79" int="34" dex="42" wit="66" con="75" men="12">
+			<vitals hp="75013.880126183" hpRegen="10.5" mp="1442.82238442822" mpRegen="3.6" />
 			<speed>
 				<walk ground="80" />
 				<run ground="180" />
 			</speed>
-			<attack physical="1950.2231755595" magical="1331.5869440987" critical="4" attackSpeed="253" range="40" />
-			<defence physical="405.85106382979" magical="297.0297029703" />
+			<attack physical="753.086419753086" magical="484.193987101974" critical="4" attackSpeed="253" range="40" />
+			<defence physical="310.493827160494" magical="227.288656593874" />
 		</stats>
 		<status attackable="false" />
 		<skillList>
@@ -1275,17 +1293,17 @@
 			<height normal="42" />
 		</collision>
 	</npc>
-	<npc id="23854" level="85" type="Monster" name="Hell Lord" title="Devil's Advocate">
+	<npc id="23854" level="74" type="Monster" name="Hell Lord" title="Devil's Advocate">
 		<race>ETC</race>
 		<sex>FEMALE</sex>
-		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="8446" hpRegen="10.5" mp="1475" mpRegen="3.6" />
+		<stats str="79" int="34" dex="42" wit="66" con="75" men="12">
+			<vitals hp="84230.2839116719" hpRegen="10.5" mp="1475.26358475264" mpRegen="3.6" />
 			<speed>
 				<walk ground="40" />
 				<run ground="180" />
 			</speed>
-			<attack physical="1950.2231755595" magical="1331.5869440987" critical="4" attackSpeed="253" range="40" />
-			<defence physical="405.85106382979" magical="297.0297029703" />
+			<attack physical="774.028629856851" magical="497.477396250303" critical="4" attackSpeed="253" range="40" />
+			<defence physical="314.723926380368" magical="230.372327457097" />
 		</stats>
 		<status attackable="false" />
 		<skillList>
@@ -1296,17 +1314,17 @@
 			<height normal="40" />
 		</collision>
 	</npc>
-	<npc id="23855" level="85" type="Monster" name="Heavenly Soldier">
+	<npc id="23855" level="70" type="Monster" name="Heavenly Soldier">
 		<race>ETC</race>
 		<sex>FEMALE</sex>
-		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="8446" hpRegen="10.5" mp="1345" mpRegen="3.6" />
+		<stats str="79" int="34" dex="42" wit="66" con="75" men="12">
+			<vitals hp="53778.5488958991" hpRegen="10.5" mp="1346.3098134631" mpRegen="3.6" />
 			<speed>
 				<walk ground="50" />
 				<run ground="180" />
 			</speed>
-			<attack physical="1950.2231755595" magical="1331.5869440987" critical="4" attackSpeed="253" range="40" />
-			<defence physical="405.85106382979" magical="297.0297029703" />
+			<attack physical="689.203354297694" magical="445.095379897059" critical="4" attackSpeed="253" range="40" />
+			<defence physical="296.22641509434" magical="216.78475059552" />
 		</stats>
 		<status attackable="false" />
 		<skillList>
@@ -1317,17 +1335,17 @@
 			<height normal="30" />
 		</collision>
 	</npc>
-	<npc id="23856" level="85" type="Monster" name="Heavenly Priest">
+	<npc id="23856" level="71" type="Monster" name="Heavenly Priest">
 		<race>ETC</race>
 		<sex>FEMALE</sex>
-		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="8446" hpRegen="10.5" mp="1377" mpRegen="3.6" />
+		<stats str="79" int="34" dex="42" wit="66" con="75" men="12">
+			<vitals hp="59825.8675078864" hpRegen="10.5" mp="1377.9399837794" mpRegen="3.6" />
 			<speed>
 				<walk ground="50" />
 				<run ground="180" />
 			</speed>
-			<attack physical="1950.2231755595" magical="1331.5869440987" critical="4" attackSpeed="253" range="40" />
-			<defence physical="405.85106382979" magical="297.0297029703" />
+			<attack physical="710.416666666667" magical="457.993597923654" critical="4" attackSpeed="253" range="40" />
+			<defence physical="301.25" magical="220.498783454988" />
 		</stats>
 		<status attackable="false" />
 		<skillList>
@@ -1338,18 +1356,18 @@
 			<height normal="38.5" />
 		</collision>
 	</npc>
-	<npc id="23857" level="85" type="Monster" name="Heavenly Judge" title="Angel's Advocate">
+	<npc id="23857" level="72" type="Monster" name="Heavenly Judge" title="Angel's Advocate">
 		<race>ETC</race>
 		<sex>FEMALE</sex>
 		<equipment rhand="97" />
-		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="8446" hpRegen="10.5" mp="1410" mpRegen="3.6" />
+		<stats str="79" int="34" dex="42" wit="66" con="75" men="12">
+			<vitals hp="68584.2271293375" hpRegen="10.5" mp="1410.38118410381" mpRegen="3.6" />
 			<speed>
 				<walk ground="50" />
 				<run ground="180" />
 			</speed>
-			<attack physical="1950.2231755595" magical="1331.5869440987" critical="4" attackSpeed="253" range="40" />
-			<defence physical="405.85106382979" magical="297.0297029703" />
+			<attack physical="731.884057971015" magical="471.565535355007" critical="4" attackSpeed="253" range="40" />
+			<defence physical="305.590062111801" magical="223.662933913648" />
 		</stats>
 		<status attackable="false" />
 		<skillList>
@@ -1360,18 +1378,18 @@
 			<height normal="80" />
 		</collision>
 	</npc>
-	<npc id="23858" level="85" type="Monster" name="Heavenly Wings">
+	<npc id="23858" level="73" type="Monster" name="Heavenly Wings">
 		<race>ETC</race>
 		<sex>FEMALE</sex>
 		<equipment rhand="97" />
-		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="8446" hpRegen="10.5" mp="1442" mpRegen="3.6" />
+		<stats str="79" int="34" dex="42" wit="66" con="75" men="12">
+			<vitals hp="75013.880126183" hpRegen="10.5" mp="1442.82238442822" mpRegen="3.6" />
 			<speed>
 				<walk ground="30" />
 				<run ground="180" />
 			</speed>
-			<attack physical="1950.2231755595" magical="1331.5869440987" critical="4" attackSpeed="253" range="40" />
-			<defence physical="405.85106382979" magical="297.0297029703" />
+			<attack physical="753.086419753086" magical="484.193987101974" critical="4" attackSpeed="253" range="40" />
+			<defence physical="310.493827160494" magical="227.288656593874" />
 		</stats>
 		<status attackable="false" />
 		<skillList>
@@ -1382,17 +1400,17 @@
 			<height normal="47" />
 		</collision>
 	</npc>
-	<npc id="23859" level="85" type="Monster" name="Heavenly Guardian" title="Angel's Advocate">
+	<npc id="23859" level="74" type="Monster" name="Heavenly Guardian" title="Angel's Advocate">
 		<race>ETC</race>
 		<sex>FEMALE</sex>
-		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="8446" hpRegen="10.5" mp="1475" mpRegen="3.6" />
+		<stats str="79" int="34" dex="42" wit="66" con="75" men="12">
+			<vitals hp="84230.2839116719" hpRegen="10.5" mp="1475.26358475264" mpRegen="3.6" />
 			<speed>
 				<walk ground="60" />
 				<run ground="180" />
 			</speed>
-			<attack physical="1950.2231755595" magical="1331.5869440987" critical="4" attackSpeed="253" range="40" />
-			<defence physical="405.85106382979" magical="297.0297029703" />
+			<attack physical="774.028629856851" magical="497.477396250303" critical="4" attackSpeed="253" range="40" />
+			<defence physical="314.723926380368" magical="230.372327457097" />
 		</stats>
 		<status attackable="false" />
 		<skillList>
@@ -1403,17 +1421,17 @@
 			<height normal="33" />
 		</collision>
 	</npc>
-	<npc id="23860" level="85" type="Monster" name="Drake">
+	<npc id="23860" level="75" type="Monster" name="Drake">
 		<race>ETC</race>
 		<sex>FEMALE</sex>
-		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="8446" hpRegen="10.5" mp="1507" mpRegen="3.6" />
+		<stats str="79" int="34" dex="42" wit="66" con="75" men="12">
+			<vitals hp="80300.3154574133" hpRegen="10.5" mp="1508.51581508516" mpRegen="3.6" />
 			<speed>
 				<walk ground="70" />
 				<run ground="180" />
 			</speed>
-			<attack physical="1950.2231755595" magical="1331.5869440987" critical="4" attackSpeed="253" range="40" />
-			<defence physical="405.85106382979" magical="297.0297029703" />
+			<attack physical="794.715447154472" magical="510.356662972985" critical="4" attackSpeed="253" range="40" />
+			<defence physical="319.512195121951" magical="233.912923070837" />
 		</stats>
 		<status attackable="false" />
 		<skillList>
@@ -1424,17 +1442,17 @@
 			<height normal="100" />
 		</collision>
 	</npc>
-	<npc id="23861" level="85" type="Monster" name="Mutated Drake">
+	<npc id="23861" level="76" type="Monster" name="Mutated Drake">
 		<race>ETC</race>
 		<sex>FEMALE</sex>
-		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="8446" hpRegen="10.5" mp="1540" mpRegen="3.6" />
+		<stats str="79" int="34" dex="42" wit="66" con="75" men="12">
+			<vitals hp="91016.403785489" hpRegen="10.5" mp="1540.95701540957" mpRegen="3.6" />
 			<speed>
 				<walk ground="46" />
 				<run ground="180" />
 			</speed>
-			<attack physical="1950.2231755595" magical="1331.5869440987" critical="4" attackSpeed="253" range="40" />
-			<defence physical="405.85106382979" magical="297.0297029703" />
+			<attack physical="824.747474747475" magical="528.427762146419" critical="4" attackSpeed="253" range="40" />
+			<defence physical="324.242424242424" magical="237.410602374106" />
 		</stats>
 		<status attackable="false" />
 		<skillList>
@@ -1445,17 +1463,17 @@
 			<height normal="53.5" />
 		</collision>
 	</npc>
-	<npc id="23862" level="85" type="Monster" name="Drak" title="Dragon's Advocate">
+	<npc id="23862" level="77" type="Monster" name="Drak" title="Dragon's Advocate">
 		<race>ETC</race>
 		<sex>FEMALE</sex>
-		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="8446" hpRegen="10.5" mp="1574" mpRegen="3.6" />
+		<stats str="79" int="34" dex="42" wit="66" con="75" men="12">
+			<vitals hp="102844.164037855" hpRegen="10.5" mp="1574.20924574209" mpRegen="3.6" />
 			<speed>
 				<walk ground="60" />
 				<run ground="180" />
 			</speed>
-			<attack physical="1950.2231755595" magical="1331.5869440987" critical="4" attackSpeed="253" range="40" />
-			<defence physical="405.85106382979" magical="297.0297029703" />
+			<attack physical="856.927710843374" magical="548.475213154438" critical="4" attackSpeed="253" range="40" />
+			<defence physical="328.313253012048" magical="240.377568668836" />
 		</stats>
 		<status attackable="false" />
 		<skillList>
@@ -1466,17 +1484,17 @@
 			<height normal="40" />
 		</collision>
 	</npc>
-	<npc id="23863" level="85" type="Monster" name="Inferno Drake">
+	<npc id="23863" level="77" type="Monster" name="Inferno Drake">
 		<race>ETC</race>
 		<sex>FEMALE</sex>
-		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="8446" hpRegen="10.5" mp="1574" mpRegen="3.6" />
+		<stats str="79" int="34" dex="42" wit="66" con="75" men="12">
+			<vitals hp="114271.293375394" hpRegen="10.5" mp="1574.20924574209" mpRegen="3.6" />
 			<speed>
 				<walk ground="57" />
 				<run ground="180" />
 			</speed>
-			<attack physical="1950.2231755595" magical="1331.5869440987" critical="4" attackSpeed="253" range="40" />
-			<defence physical="405.85106382979" magical="297.0297029703" />
+			<attack physical="856.927710843374" magical="548.475213154438" critical="4" attackSpeed="253" range="40" />
+			<defence physical="328.313253012048" magical="240.377568668836" />
 		</stats>
 		<status attackable="false" />
 		<skillList>
@@ -1487,17 +1505,17 @@
 			<height normal="35" />
 		</collision>
 	</npc>
-	<npc id="23864" level="85" type="Monster" name="Chaos Drake" title="Dragon's Advocate">
+	<npc id="23864" level="78" type="Monster" name="Chaos Drake" title="Dragon's Advocate">
 		<race>ETC</race>
 		<sex>FEMALE</sex>
-		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="8446" hpRegen="10.5" mp="1607" mpRegen="3.6" />
+		<stats str="79" int="34" dex="42" wit="66" con="75" men="12">
+			<vitals hp="130871.924290221" hpRegen="10.5" mp="1607.46147607461" mpRegen="3.6" />
 			<speed>
 				<walk ground="60" />
 				<run ground="180" />
 			</speed>
-			<attack physical="1950.2231755595" magical="1331.5869440987" critical="4" attackSpeed="253" range="40" />
-			<defence physical="405.85106382979" magical="297.0297029703" />
+			<attack physical="5412.1756487026" magical="3459.07199599582" critical="4" attackSpeed="253" range="40" />
+			<defence physical="532.335329341317" magical="584.718640577725" />
 		</stats>
 		<status attackable="false" />
 		<skillList>
@@ -1508,17 +1526,17 @@
 			<height normal="60" />
 		</collision>
 	</npc>
-	<npc id="23865" level="85" type="Monster" name="Velociraptor">
+	<npc id="23865" level="75" type="Monster" name="Velociraptor">
 		<race>ETC</race>
 		<sex>FEMALE</sex>
-		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="8446" hpRegen="10.5" mp="1507" mpRegen="3.6" />
+		<stats str="79" int="34" dex="42" wit="66" con="75" men="12">
+			<vitals hp="80300.3154574133" hpRegen="10.5" mp="1508.51581508516" mpRegen="3.6" />
 			<speed>
 				<walk ground="33" />
 				<run ground="180" />
 			</speed>
-			<attack physical="1950.2231755595" magical="1331.5869440987" critical="4" attackSpeed="253" range="40" />
-			<defence physical="405.85106382979" magical="297.0297029703" />
+			<attack physical="794.715447154472" magical="510.356662972985" critical="4" attackSpeed="253" range="40" />
+			<defence physical="319.512195121951" magical="233.912923070837" />
 		</stats>
 		<status attackable="false" />
 		<skillList>
@@ -1529,17 +1547,17 @@
 			<height normal="47.2" />
 		</collision>
 	</npc>
-	<npc id="23866" level="85" type="Monster" name="Ornithomimus">
+	<npc id="23866" level="76" type="Monster" name="Ornithomimus">
 		<race>ETC</race>
 		<sex>FEMALE</sex>
-		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="8446" hpRegen="10.5" mp="1540" mpRegen="3.6" />
+		<stats str="79" int="34" dex="42" wit="66" con="75" men="12">
+			<vitals hp="91016.403785489" hpRegen="10.5" mp="1540.95701540957" mpRegen="3.6" />
 			<speed>
 				<walk ground="36" />
 				<run ground="180" />
 			</speed>
-			<attack physical="1950.2231755595" magical="1331.5869440987" critical="4" attackSpeed="253" range="40" />
-			<defence physical="405.85106382979" magical="297.0297029703" />
+			<attack physical="824.747474747475" magical="528.427762146419" critical="4" attackSpeed="253" range="40" />
+			<defence physical="324.242424242424" magical="237.410602374106" />
 		</stats>
 		<status attackable="false" />
 		<skillList>
@@ -1550,17 +1568,17 @@
 			<height normal="37.2" />
 		</collision>
 	</npc>
-	<npc id="23867" level="85" type="Monster" name="Pterosaur" title="Dominator of the Wild">
+	<npc id="23867" level="77" type="Monster" name="Pterosaur" title="Dominator of the Wild">
 		<race>ETC</race>
 		<sex>FEMALE</sex>
-		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="8446" hpRegen="10.5" mp="1574" mpRegen="3.6" />
+		<stats str="79" int="34" dex="42" wit="66" con="75" men="12">
+			<vitals hp="102844.164037855" hpRegen="10.5" mp="1574.20924574209" mpRegen="3.6" />
 			<speed>
 				<walk ground="54" />
 				<run ground="180" />
 			</speed>
-			<attack physical="1950.2231755595" magical="1331.5869440987" critical="4" attackSpeed="253" range="40" />
-			<defence physical="405.85106382979" magical="297.0297029703" />
+			<attack physical="856.927710843374" magical="548.475213154438" critical="4" attackSpeed="253" range="40" />
+			<defence physical="328.313253012048" magical="240.377568668836" />
 		</stats>
 		<status attackable="false" />
 		<skillList>
@@ -1571,17 +1589,17 @@
 			<height normal="43.7" />
 		</collision>
 	</npc>
-	<npc id="23868" level="85" type="Monster" name="Primeval Strider">
+	<npc id="23868" level="77" type="Monster" name="Primeval Strider">
 		<race>ETC</race>
 		<sex>FEMALE</sex>
-		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="8446" hpRegen="10.5" mp="1574" mpRegen="3.6" />
+		<stats str="79" int="34" dex="42" wit="66" con="75" men="12">
+			<vitals hp="114271.293375394" hpRegen="10.5" mp="1574.20924574209" mpRegen="3.6" />
 			<speed>
 				<walk ground="50" />
 				<run ground="180" />
 			</speed>
-			<attack physical="1950.2231755595" magical="1331.5869440987" critical="4" attackSpeed="253" range="40" />
-			<defence physical="405.85106382979" magical="297.0297029703" />
+			<attack physical="856.927710843374" magical="548.475213154438" critical="4" attackSpeed="253" range="40" />
+			<defence physical="328.313253012048" magical="240.377568668836" />
 		</stats>
 		<status attackable="false" />
 		<skillList>
@@ -1592,17 +1610,17 @@
 			<height normal="44.2" />
 		</collision>
 	</npc>
-	<npc id="23869" level="85" type="Monster" name="Tyrannosaurus" title="Dominator of the Wild">
+	<npc id="23869" level="78" type="Monster" name="Tyrannosaurus" title="Dominator of the Wild">
 		<race>ETC</race>
 		<sex>FEMALE</sex>
-		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="8446" hpRegen="10.5" mp="1607" mpRegen="3.6" />
+		<stats str="79" int="34" dex="42" wit="66" con="75" men="12">
+			<vitals hp="130871.924290221" hpRegen="10.5" mp="1607.46147607461" mpRegen="3.6" />
 			<speed>
 				<walk ground="105" />
 				<run ground="180" />
 			</speed>
-			<attack physical="1950.2231755595" magical="1331.5869440987" critical="4" attackSpeed="253" range="40" />
-			<defence physical="405.85106382979" magical="297.0297029703" />
+			<attack physical="890.718562874251" magical="569.427113373419" critical="4" attackSpeed="253" range="40" />
+			<defence physical="332.934131736527" magical="243.794649144533" />
 		</stats>
 		<status attackable="false" />
 		<skillList>
@@ -1613,17 +1631,17 @@
 			<height normal="89.7" />
 		</collision>
 	</npc>
-	<npc id="23870" level="85" type="Monster" name="Giant Golden Pig of Good Fortune" title="Intruding Challenger">
+	<npc id="23870" level="67" type="Monster" name="Giant Golden Pig of Good Fortune" title="Intruding Challenger">
 		<race>ETC</race>
 		<sex>FEMALE</sex>
-		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="8446" hpRegen="10.5" mp="1251" mpRegen="3.6" />
+		<stats str="79" int="34" dex="42" wit="66" con="75" men="12">
+			<vitals hp="36728.0757097792" hpRegen="10.5" mp="1251.41930251419" mpRegen="3.6" />
 			<speed>
 				<walk ground="120" />
 				<run ground="180" />
 			</speed>
-			<attack physical="1950.2231755595" magical="1331.5869440987" critical="4" attackSpeed="253" range="40" />
-			<defence physical="405.85106382979" magical="297.0297029703" />
+			<attack physical="625" magical="405.60709752719" critical="4" attackSpeed="253" range="40" />
+			<defence physical="282.051282051282" magical="206.396739243455" />
 		</stats>
 		<status attackable="false" />
 		<skillList>
@@ -1634,17 +1652,17 @@
 			<height normal="38.25" />
 		</collision>
 	</npc>
-	<npc id="23871" level="85" type="Monster" name="Dancing Bard" title="Intruding Challenger">
+	<npc id="23871" level="67" type="Monster" name="Dancing Bard" title="Intruding Challenger">
 		<race>ETC</race>
 		<sex>FEMALE</sex>
-		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="8446" hpRegen="10.5" mp="1251" mpRegen="3.6" />
+		<stats str="79" int="34" dex="42" wit="66" con="75" men="12">
+			<vitals hp="36728.0757097792" hpRegen="10.5" mp="1251.41930251419" mpRegen="3.6" />
 			<speed>
 				<walk ground="15" />
 				<run ground="180" />
 			</speed>
-			<attack physical="1950.2231755595" magical="1331.5869440987" critical="4" attackSpeed="253" range="40" />
-			<defence physical="405.85106382979" magical="297.0297029703" />
+			<attack physical="625" magical="405.60709752719" critical="4" attackSpeed="253" range="40" />
+			<defence physical="282.051282051282" magical="206.396739243455" />
 		</stats>
 		<status attackable="false" />
 		<skillList>
@@ -1655,17 +1673,17 @@
 			<height normal="61.5" />
 		</collision>
 	</npc>
-	<npc id="23872" level="85" type="Monster" name="Gatekeeper Roxxy" title="Intruding Challenger">
+	<npc id="23872" level="70" type="Monster" name="Gatekeeper Roxxy" title="Intruding Challenger">
 		<race>ETC</race>
 		<sex>FEMALE</sex>
-		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="8446" hpRegen="10.5" mp="1345" mpRegen="3.6" />
+		<stats str="79" int="34" dex="42" wit="66" con="75" men="12">
+			<vitals hp="63556.4668769716" hpRegen="10.5" mp="1346.3098134631" mpRegen="3.6" />
 			<speed>
 				<walk ground="50" />
 				<run ground="180" />
 			</speed>
-			<attack physical="1950.2231755595" magical="1331.5869440987" critical="4" attackSpeed="253" range="40" />
-			<defence physical="405.85106382979" magical="297.0297029703" />
+			<attack physical="689.203354297694" magical="445.095379897059" critical="4" attackSpeed="253" range="40" />
+			<defence physical="296.22641509434" magical="216.78475059552" />
 		</stats>
 		<status attackable="false" />
 		<skillList>
@@ -1676,17 +1694,17 @@
 			<height normal="23" />
 		</collision>
 	</npc>
-	<npc id="23873" level="85" type="Monster" name="Super Kat the Cat" title="Intruding Challenger">
+	<npc id="23873" level="70" type="Monster" name="Super Kat the Cat" title="Intruding Challenger">
 		<race>ETC</race>
 		<sex>FEMALE</sex>
-		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="8446" hpRegen="10.5" mp="1345" mpRegen="3.6" />
+		<stats str="79" int="34" dex="42" wit="66" con="75" men="12">
+			<vitals hp="63556.4668769716" hpRegen="10.5" mp="1346.3098134631" mpRegen="3.6" />
 			<speed>
 				<walk ground="60" />
 				<run ground="180" />
 			</speed>
-			<attack physical="1950.2231755595" magical="1331.5869440987" critical="4" attackSpeed="253" range="40" />
-			<defence physical="405.85106382979" magical="297.0297029703" />
+			<attack physical="689.203354297694" magical="445.095379897059" critical="4" attackSpeed="253" range="40" />
+			<defence physical="296.22641509434" magical="216.78475059552" />
 		</stats>
 		<status attackable="false" />
 		<skillList>
@@ -1697,17 +1715,17 @@
 			<height normal="39" />
 		</collision>
 	</npc>
-	<npc id="23874" level="85" type="Monster" name="Super Mew the Cat" title="Intruding Challenger">
+	<npc id="23874" level="74" type="Monster" name="Super Mew the Cat" title="Intruding Challenger">
 		<race>ETC</race>
 		<sex>FEMALE</sex>
-		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="8446" hpRegen="10.5" mp="1475" mpRegen="3.6" />
+		<stats str="79" int="34" dex="42" wit="66" con="75" men="12">
+			<vitals hp="97391.7981072555" hpRegen="10.5" mp="1475.26358475264" mpRegen="3.6" />
 			<speed>
 				<walk ground="60" />
 				<run ground="180" />
 			</speed>
-			<attack physical="1950.2231755595" magical="1331.5869440987" critical="4" attackSpeed="253" range="40" />
-			<defence physical="405.85106382979" magical="297.0297029703" />
+			<attack physical="774.028629856851" magical="497.477396250303" critical="4" attackSpeed="253" range="40" />
+			<defence physical="314.723926380368" magical="230.372327457097" />
 		</stats>
 		<status attackable="false" />
 		<skillList>
@@ -1718,17 +1736,17 @@
 			<height normal="39" />
 		</collision>
 	</npc>
-	<npc id="23875" level="85" type="Monster" name="Super Queen the Cat" title="Intruding Challenger">
+	<npc id="23875" level="74" type="Monster" name="Super Queen the Cat" title="Intruding Challenger">
 		<race>ETC</race>
 		<sex>FEMALE</sex>
-		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="8446" hpRegen="10.5" mp="1475" mpRegen="3.6" />
+		<stats str="79" int="34" dex="42" wit="66" con="75" men="12">
+			<vitals hp="97391.7981072555" hpRegen="10.5" mp="1475.26358475264" mpRegen="3.6" />
 			<speed>
 				<walk ground="60" />
 				<run ground="180" />
 			</speed>
-			<attack physical="1950.2231755595" magical="1331.5869440987" critical="4" attackSpeed="253" range="40" />
-			<defence physical="405.85106382979" magical="297.0297029703" />
+			<attack physical="774.028629856851" magical="497.477396250303" critical="4" attackSpeed="253" range="40" />
+			<defence physical="314.723926380368" magical="230.372327457097" />
 		</stats>
 		<status attackable="false" />
 		<skillList>
@@ -1739,17 +1757,17 @@
 			<height normal="45" />
 		</collision>
 	</npc>
-	<npc id="23876" level="85" type="Monster" name="Roa" title="Intruding Challenger">
+	<npc id="23876" level="78" type="Monster" name="Roa" title="Intruding Challenger">
 		<race>ETC</race>
 		<sex>FEMALE</sex>
-		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="8446" hpRegen="10.5" mp="1607" mpRegen="3.6" />
+		<stats str="79" int="34" dex="42" wit="66" con="75" men="12">
+			<vitals hp="142769.716088328" hpRegen="10.5" mp="1607.46147607461" mpRegen="3.6" />
 			<speed>
 				<walk ground="64" />
 				<run ground="180" />
 			</speed>
-			<attack physical="1950.2231755595" magical="1331.5869440987" critical="4" attackSpeed="253" range="40" />
-			<defence physical="405.85106382979" magical="297.0297029703" />
+			<attack physical="890.718562874251" magical="569.427113373419" critical="4" attackSpeed="253" range="40" />
+			<defence physical="332.934131736527" magical="243.794649144533" />
 		</stats>
 		<status attackable="false" />
 		<skillList>
@@ -1760,17 +1778,17 @@
 			<height normal="21.5" />
 		</collision>
 	</npc>
-	<npc id="23877" level="85" type="Monster" name="Golden Bat Dandy" title="Intruding Challenger">
+	<npc id="23877" level="78" type="Monster" name="Golden Bat Dandy" title="Intruding Challenger">
 		<race>ETC</race>
 		<sex>FEMALE</sex>
-		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="8446" hpRegen="10.5" mp="1607" mpRegen="3.6" />
+		<stats str="79" int="34" dex="42" wit="66" con="75" men="12">
+			<vitals hp="142769.716088328" hpRegen="10.5" mp="1607.46147607461" mpRegen="3.6" />
 			<speed>
 				<walk ground="50" />
 				<run ground="180" />
 			</speed>
-			<attack physical="1950.2231755595" magical="1331.5869440987" critical="4" attackSpeed="253" range="40" />
-			<defence physical="405.85106382979" magical="297.0297029703" />
+			<attack physical="890.718562874251" magical="569.427113373419" critical="4" attackSpeed="253" range="40" />
+			<defence physical="332.934131736527" magical="243.794649144533" />
 		</stats>
 		<status attackable="false" />
 		<skillList>
@@ -1781,18 +1799,18 @@
 			<height normal="30" />
 		</collision>
 	</npc>
-	<npc id="23878" level="85" type="Monster" name="Ketra Elite Soldier">
+	<npc id="23878" level="60" type="Monster" name="Ketra Elite Soldier">
 		<race>ETC</race>
 		<sex>FEMALE</sex>
 		<equipment rhand="160" />
-		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="8446" hpRegen="10.5" mp="1036" mpRegen="3.6" />
+		<stats str="79" int="34" dex="42" wit="66" con="75" men="12">
+			<vitals hp="7733.12302839117" hpRegen="10.5" mp="1037.30738037307" mpRegen="3.6" />
 			<speed>
 				<walk ground="36" />
 				<run ground="180" />
 			</speed>
-			<attack physical="1950.2231755595" magical="1331.5869440987" critical="4" attackSpeed="253" range="40" />
-			<defence physical="405.85106382979" magical="297.0297029703" />
+			<attack physical="481.631445633886" magical="315.264163537808" critical="4" attackSpeed="253" range="40" />
+			<defence physical="247.651006711409" magical="181.257042081027" />
 		</stats>
 		<status attackable="false" />
 		<skillList>
@@ -1805,18 +1823,18 @@
 			<height normal="24" />
 		</collision>
 	</npc>
-	<npc id="23879" level="85" type="Monster" name="Ketra Commando">
+	<npc id="23879" level="61" type="Monster" name="Ketra Commando">
 		<race>ETC</race>
 		<sex>FEMALE</sex>
 		<equipment rhand="279" />
-		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="8446" hpRegen="10.5" mp="1066" mpRegen="3.6" />
+		<stats str="79" int="34" dex="42" wit="66" con="75" men="12">
+			<vitals hp="9928.07570977918" hpRegen="10.5" mp="1067.31549067315" mpRegen="3.6" />
 			<speed>
 				<walk ground="45" />
 				<run ground="180" />
 			</speed>
-			<attack physical="1950.2231755595" magical="1331.5869440987" critical="4" attackSpeed="253" range="40" />
-			<defence physical="405.85106382979" magical="297.0297029703" />
+			<attack physical="501.37741046832" magical="327.729225054166" critical="4" attackSpeed="253" range="40" />
+			<defence physical="252.666666666667" magical="184.914841849148" />
 		</stats>
 		<status attackable="false" />
 		<skillList>
@@ -1829,18 +1847,18 @@
 			<height normal="27" />
 		</collision>
 	</npc>
-	<npc id="23880" level="85" type="Monster" name="Ketra Centurion" title="Ketra Orc Leader">
+	<npc id="23880" level="62" type="Monster" name="Ketra Centurion" title="Ketra Orc Leader">
 		<race>ETC</race>
 		<sex>FEMALE</sex>
 		<equipment rhand="160" />
-		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="8446" hpRegen="10.5" mp="1097" mpRegen="3.6" />
+		<stats str="79" int="34" dex="42" wit="66" con="75" men="12">
+			<vitals hp="14264.9842271293" hpRegen="10.5" mp="1097.32360097324" mpRegen="3.6" />
 			<speed>
 				<walk ground="80" />
 				<run ground="180" />
 			</speed>
-			<attack physical="1950.2231755595" magical="1331.5869440987" critical="4" attackSpeed="253" range="40" />
-			<defence physical="405.85106382979" magical="297.0297029703" />
+			<attack physical="521.317935526244" magical="340.304744375994" critical="4" attackSpeed="253" range="40" />
+			<defence physical="257.615894039735" magical="188.524193938222" />
 		</stats>
 		<status attackable="false" />
 		<skillList>
@@ -1853,18 +1871,18 @@
 			<height normal="24" />
 		</collision>
 	</npc>
-	<npc id="23881" level="85" type="Monster" name="Ketra Shaman">
+	<npc id="23881" level="63" type="Monster" name="Ketra Shaman">
 		<race>ETC</race>
 		<sex>FEMALE</sex>
 		<equipment rhand="2503" />
-		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="8446" hpRegen="10.5" mp="1127" mpRegen="3.6" />
+		<stats str="79" int="34" dex="42" wit="66" con="75" men="12">
+			<vitals hp="14629.6529968454" hpRegen="10.5" mp="1128.14274128143" mpRegen="3.6" />
 			<speed>
 				<walk ground="50" />
 				<run ground="180" />
 			</speed>
-			<attack physical="1950.2231755595" magical="1331.5869440987" critical="4" attackSpeed="253" range="40" />
-			<defence physical="405.85106382979" magical="297.0297029703" />
+			<attack physical="541.449180803248" magical="352.981571952964" critical="4" attackSpeed="253" range="40" />
+			<defence physical="262.5" magical="192.086054552439" />
 		</stats>
 		<status attackable="false" />
 		<skillList>
@@ -1877,18 +1895,18 @@
 			<height normal="16" />
 		</collision>
 	</npc>
-	<npc id="23882" level="85" type="Monster" name="Ketra Commander" title="Ketra Orc Leader">
+	<npc id="23882" level="64" type="Monster" name="Ketra Commander" title="Ketra Orc Leader">
 		<race>ETC</race>
 		<sex>FEMALE</sex>
 		<equipment rhand="298" />
-		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="8446" hpRegen="10.5" mp="1158" mpRegen="3.6" />
+		<stats str="79" int="34" dex="42" wit="66" con="75" men="12">
+			<vitals hp="19276.9716088328" hpRegen="10.5" mp="1158.15085158151" mpRegen="3.6" />
 			<speed>
 				<walk ground="24" />
 				<run ground="180" />
 			</speed>
-			<attack physical="1950.2231755595" magical="1331.5869440987" critical="4" attackSpeed="253" range="40" />
-			<defence physical="405.85106382979" magical="297.0297029703" />
+			<attack physical="562.217540827167" magical="366.246598863366" critical="4" attackSpeed="253" range="40" />
+			<defence physical="267.320261437908" magical="195.60135489719" />
 		</stats>
 		<status attackable="false" />
 		<skillList>
@@ -1901,18 +1919,18 @@
 			<height normal="38.5" />
 		</collision>
 	</npc>
-	<npc id="23883" level="85" type="Monster" name="Kel Mahum Ranger">
+	<npc id="23883" level="60" type="Monster" name="Kel Mahum Ranger">
 		<race>ETC</race>
 		<sex>FEMALE</sex>
 		<equipment rhand="160" />
-		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="8446" hpRegen="10.5" mp="1036" mpRegen="3.6" />
+		<stats str="79" int="34" dex="42" wit="66" con="75" men="12">
+			<vitals hp="7733.12302839117" hpRegen="10.5" mp="1037.30738037307" mpRegen="3.6" />
 			<speed>
 				<walk ground="50" />
 				<run ground="180" />
 			</speed>
-			<attack physical="1950.2231755595" magical="1331.5869440987" critical="4" attackSpeed="253" range="40" />
-			<defence physical="405.85106382979" magical="297.0297029703" />
+			<attack physical="481.631445633886" magical="315.264163537808" critical="4" attackSpeed="253" range="40" />
+			<defence physical="247.651006711409" magical="181.257042081027" />
 		</stats>
 		<status attackable="false" />
 		<skillList>
@@ -1925,18 +1943,18 @@
 			<height normal="26" />
 		</collision>
 	</npc>
-	<npc id="23884" level="85" type="Monster" name="Kel Mahum Hunter">
+	<npc id="23884" level="61" type="Monster" name="Kel Mahum Hunter">
 		<race>ETC</race>
 		<sex>FEMALE</sex>
 		<equipment rhand="279" />
-		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="8446" hpRegen="10.5" mp="1066" mpRegen="3.6" />
+		<stats str="79" int="34" dex="42" wit="66" con="75" men="12">
+			<vitals hp="9928.07570977918" hpRegen="10.5" mp="1067.31549067315" mpRegen="3.6" />
 			<speed>
 				<walk ground="50" />
 				<run ground="180" />
 			</speed>
-			<attack physical="1950.2231755595" magical="1331.5869440987" critical="4" attackSpeed="253" range="40" />
-			<defence physical="405.85106382979" magical="297.0297029703" />
+			<attack physical="501.37741046832" magical="327.729225054166" critical="4" attackSpeed="253" range="40" />
+			<defence physical="252.666666666667" magical="184.914841849148" />
 		</stats>
 		<status attackable="false" />
 		<skillList>
@@ -1949,18 +1967,18 @@
 			<height normal="27" />
 		</collision>
 	</npc>
-	<npc id="23885" level="85" type="Monster" name="Kel Mahum Elite Leader" title="Kel Mahum Leader">
+	<npc id="23885" level="62" type="Monster" name="Kel Mahum Elite Leader" title="Kel Mahum Leader">
 		<race>ETC</race>
 		<sex>FEMALE</sex>
 		<equipment rhand="160" />
-		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="8446" hpRegen="10.5" mp="1097" mpRegen="3.6" />
+		<stats str="79" int="34" dex="42" wit="66" con="75" men="12">
+			<vitals hp="14264.9842271293" hpRegen="10.5" mp="1097.32360097324" mpRegen="3.6" />
 			<speed>
 				<walk ground="50" />
 				<run ground="180" />
 			</speed>
-			<attack physical="1950.2231755595" magical="1331.5869440987" critical="4" attackSpeed="253" range="40" />
-			<defence physical="405.85106382979" magical="297.0297029703" />
+			<attack physical="521.317935526244" magical="340.304744375994" critical="4" attackSpeed="253" range="40" />
+			<defence physical="257.615894039735" magical="188.524193938222" />
 		</stats>
 		<status attackable="false" />
 		<skillList>
@@ -1973,18 +1991,18 @@
 			<height normal="28" />
 		</collision>
 	</npc>
-	<npc id="23886" level="85" type="Monster" name="Kel Mahum Priest">
+	<npc id="23886" level="63" type="Monster" name="Kel Mahum Priest">
 		<race>ETC</race>
 		<sex>FEMALE</sex>
 		<equipment rhand="2503" />
-		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="8446" hpRegen="10.5" mp="1127" mpRegen="3.6" />
+		<stats str="79" int="34" dex="42" wit="66" con="75" men="12">
+			<vitals hp="14629.6529968454" hpRegen="10.5" mp="1128.14274128143" mpRegen="3.6" />
 			<speed>
 				<walk ground="50" />
 				<run ground="180" />
 			</speed>
-			<attack physical="1950.2231755595" magical="1331.5869440987" critical="4" attackSpeed="253" range="40" />
-			<defence physical="405.85106382979" magical="297.0297029703" />
+			<attack physical="541.449180803248" magical="352.981571952964" critical="4" attackSpeed="253" range="40" />
+			<defence physical="262.5" magical="192.086054552439" />
 		</stats>
 		<status attackable="false" />
 		<skillList>
@@ -1997,18 +2015,18 @@
 			<height normal="25" />
 		</collision>
 	</npc>
-	<npc id="23887" level="85" type="Monster" name="Kel Mahum Commander" title="Kel Mahum Leader">
+	<npc id="23887" level="64" type="Monster" name="Kel Mahum Commander" title="Kel Mahum Leader">
 		<race>ETC</race>
 		<sex>FEMALE</sex>
 		<equipment rhand="299" />
-		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="8446" hpRegen="10.5" mp="1158" mpRegen="3.6" />
+		<stats str="79" int="34" dex="42" wit="66" con="75" men="12">
+			<vitals hp="19276.9716088328" hpRegen="10.5" mp="1158.15085158151" mpRegen="3.6" />
 			<speed>
 				<walk ground="50" />
 				<run ground="180" />
 			</speed>
-			<attack physical="1950.2231755595" magical="1331.5869440987" critical="4" attackSpeed="253" range="40" />
-			<defence physical="405.85106382979" magical="297.0297029703" />
+			<attack physical="562.217540827167" magical="366.246598863366" critical="4" attackSpeed="253" range="40" />
+			<defence physical="267.320261437908" magical="195.60135489719" />
 		</stats>
 		<status attackable="false" />
 		<skillList>
@@ -2021,18 +2039,18 @@
 			<height normal="32" />
 		</collision>
 	</npc>
-	<npc id="23888" level="85" type="Monster" name="Molten Guardian">
+	<npc id="23888" level="64" type="Monster" name="Molten Guardian">
 		<race>ETC</race>
 		<sex>FEMALE</sex>
 		<equipment rhand="84" />
-		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="8446" hpRegen="10.5" mp="1158" mpRegen="3.6" />
+		<stats str="79" int="34" dex="42" wit="66" con="75" men="12">
+			<vitals hp="14993.0599369085" hpRegen="10.5" mp="1158.15085158151" mpRegen="3.6" />
 			<speed>
 				<walk ground="40" />
 				<run ground="180" />
 			</speed>
-			<attack physical="1950.2231755595" magical="1331.5869440987" critical="4" attackSpeed="253" range="40" />
-			<defence physical="405.85106382979" magical="297.0297029703" />
+			<attack physical="562.217540827167" magical="366.246598863366" critical="4" attackSpeed="253" range="40" />
+			<defence physical="267.320261437908" magical="195.60135489719" />
 		</stats>
 		<status attackable="false" />
 		<skillList>
@@ -2045,18 +2063,18 @@
 			<height normal="25" />
 		</collision>
 	</npc>
-	<npc id="23889" level="85" type="Monster" name="Resurrected Guardian">
+	<npc id="23889" level="65" type="Monster" name="Resurrected Guardian">
 		<race>ETC</race>
 		<sex>FEMALE</sex>
 		<equipment rhand="946" lhand="945" />
-		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="8446" hpRegen="10.5" mp="1188" mpRegen="3.6" />
+		<stats str="79" int="34" dex="42" wit="66" con="75" men="12">
+			<vitals hp="19741.3249211356" hpRegen="10.5" mp="1188.9699918897" mpRegen="3.6" />
 			<speed>
 				<walk ground="80" />
 				<run ground="180" />
 			</speed>
-			<attack physical="1950.2231755595" magical="1331.5869440987" critical="4" attackSpeed="253" range="40" />
-			<defence physical="405.85106382979" magical="297.0297029703" />
+			<attack physical="583.163393080749" magical="379.093269772726" critical="4" attackSpeed="253" range="40" />
+			<defence physical="272.077922077922" magical="199.07100199071" />
 		</stats>
 		<status attackable="false" />
 		<skillList>
@@ -2069,17 +2087,17 @@
 			<height normal="28.5" />
 		</collision>
 	</npc>
-	<npc id="23890" level="85" type="Monster" name="Muddled Guardian Ghost" title="Undead Leader">
+	<npc id="23890" level="66" type="Monster" name="Muddled Guardian Ghost" title="Undead Leader">
 		<race>ETC</race>
 		<sex>FEMALE</sex>
-		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="8446" hpRegen="10.5" mp="1219" mpRegen="3.6" />
+		<stats str="79" int="34" dex="42" wit="66" con="75" men="12">
+			<vitals hp="26936.2776025237" hpRegen="10.5" mp="1220.600162206" mpRegen="3.6" />
 			<speed>
 				<walk ground="45" />
 				<run ground="180" />
 			</speed>
-			<attack physical="1950.2231755595" magical="1331.5869440987" critical="4" attackSpeed="253" range="40" />
-			<defence physical="405.85106382979" magical="297.0297029703" />
+			<attack physical="603.838976272994" magical="392.016519700582" critical="4" attackSpeed="253" range="40" />
+			<defence physical="276.774193548387" magical="203.019124610836" />
 		</stats>
 		<status attackable="false" />
 		<skillList>
@@ -2092,17 +2110,17 @@
 			<height normal="32.5" />
 		</collision>
 	</npc>
-	<npc id="23891" level="85" type="Monster" name="Vindictive Guardian Ghost">
+	<npc id="23891" level="66" type="Monster" name="Vindictive Guardian Ghost">
 		<race>ETC</race>
 		<sex>FEMALE</sex>
-		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="8446" hpRegen="10.5" mp="1219" mpRegen="3.6" />
+		<stats str="79" int="34" dex="42" wit="66" con="75" men="12">
+			<vitals hp="31425.8675078864" hpRegen="10.5" mp="1220.600162206" mpRegen="3.6" />
 			<speed>
 				<walk ground="45" />
 				<run ground="180" />
 			</speed>
-			<attack physical="1950.2231755595" magical="1331.5869440987" critical="4" attackSpeed="253" range="40" />
-			<defence physical="405.85106382979" magical="297.0297029703" />
+			<attack physical="603.838976272994" magical="392.016519700582" critical="4" attackSpeed="253" range="40" />
+			<defence physical="276.774193548387" magical="203.019124610836" />
 		</stats>
 		<status attackable="false" />
 		<skillList>
@@ -2115,17 +2133,17 @@
 			<height normal="32.5" />
 		</collision>
 	</npc>
-	<npc id="23892" level="85" type="Monster" name="Cursed Guardian Ghost" title="Undead Leader">
+	<npc id="23892" level="67" type="Monster" name="Cursed Guardian Ghost" title="Undead Leader">
 		<race>ETC</race>
 		<sex>FEMALE</sex>
-		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="8446" hpRegen="10.5" mp="1251" mpRegen="3.6" />
+		<stats str="79" int="34" dex="42" wit="66" con="75" men="12">
+			<vitals hp="36728.0757097792" hpRegen="10.5" mp="1251.41930251419" mpRegen="3.6" />
 			<speed>
 				<walk ground="45" />
 				<run ground="180" />
 			</speed>
-			<attack physical="1950.2231755595" magical="1331.5869440987" critical="4" attackSpeed="253" range="40" />
-			<defence physical="405.85106382979" magical="297.0297029703" />
+			<attack physical="625.132443314262" magical="405.483648172946" critical="4" attackSpeed="253" range="40" />
+			<defence physical="282.051282051282" magical="206.396739243455" />
 		</stats>
 		<status attackable="false" />
 		<skillList>
@@ -2138,17 +2156,17 @@
 			<height normal="39" />
 		</collision>
 	</npc>
-	<npc id="23893" level="85" type="Monster" name="Arena Saber Tooth">
+	<npc id="23893" level="64" type="Monster" name="Arena Saber Tooth">
 		<race>ETC</race>
 		<sex>FEMALE</sex>
-		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="8446" hpRegen="10.5" mp="1158" mpRegen="3.6" />
+		<stats str="79" int="34" dex="42" wit="66" con="75" men="12">
+			<vitals hp="14993.0599369085" hpRegen="10.5" mp="1158.15085158151" mpRegen="3.6" />
 			<speed>
 				<walk ground="60" />
 				<run ground="180" />
 			</speed>
-			<attack physical="1950.2231755595" magical="1331.5869440987" critical="4" attackSpeed="253" range="40" />
-			<defence physical="405.85106382979" magical="297.0297029703" />
+			<attack physical="562.217540827167" magical="366.246598863366" critical="4" attackSpeed="253" range="40" />
+			<defence physical="267.320261437908" magical="195.60135489719" />
 		</stats>
 		<status attackable="false" />
 		<skillList>
@@ -2161,17 +2179,17 @@
 			<height normal="28" />
 		</collision>
 	</npc>
-	<npc id="23894" level="85" type="Monster" name="Arena Grizzly">
+	<npc id="23894" level="65" type="Monster" name="Arena Grizzly">
 		<race>ETC</race>
 		<sex>FEMALE</sex>
-		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="8446" hpRegen="10.5" mp="1188" mpRegen="3.6" />
+		<stats str="79" int="34" dex="42" wit="66" con="75" men="12">
+			<vitals hp="19741.3249211356" hpRegen="10.5" mp="1188.9699918897" mpRegen="3.6" />
 			<speed>
 				<walk ground="40" />
 				<run ground="180" />
 			</speed>
-			<attack physical="1950.2231755595" magical="1331.5869440987" critical="4" attackSpeed="253" range="40" />
-			<defence physical="405.85106382979" magical="297.0297029703" />
+			<attack physical="583.163393080749" magical="379.093269772726" critical="4" attackSpeed="253" range="40" />
+			<defence physical="272.077922077922" magical="199.07100199071" />
 		</stats>
 		<status attackable="false" />
 		<skillList>
@@ -2184,17 +2202,17 @@
 			<height normal="40" />
 		</collision>
 	</npc>
-	<npc id="23895" level="85" type="Monster" name="Arena Predator" title="Beast King">
+	<npc id="23895" level="66" type="Monster" name="Arena Predator" title="Beast King">
 		<race>ETC</race>
 		<sex>FEMALE</sex>
-		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="8446" hpRegen="10.5" mp="1219" mpRegen="3.6" />
+		<stats str="79" int="34" dex="42" wit="66" con="75" men="12">
+			<vitals hp="26936.2776025237" hpRegen="10.5" mp="1220.600162206" mpRegen="3.6" />
 			<speed>
 				<walk ground="40" />
 				<run ground="180" />
 			</speed>
-			<attack physical="1950.2231755595" magical="1331.5869440987" critical="4" attackSpeed="253" range="40" />
-			<defence physical="405.85106382979" magical="297.0297029703" />
+			<attack physical="603.838976272994" magical="392.016519700582" critical="4" attackSpeed="253" range="40" />
+			<defence physical="276.774193548387" magical="203.019124610836" />
 		</stats>
 		<status attackable="false" />
 		<skillList>
@@ -2207,17 +2225,17 @@
 			<height normal="32.5" />
 		</collision>
 	</npc>
-	<npc id="23896" level="85" type="Monster" name="Arena Basilisk">
+	<npc id="23896" level="66" type="Monster" name="Arena Basilisk">
 		<race>ETC</race>
 		<sex>FEMALE</sex>
-		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="8446" hpRegen="10.5" mp="1219" mpRegen="3.6" />
+		<stats str="79" int="34" dex="42" wit="66" con="75" men="12">
+			<vitals hp="31425.8675078864" hpRegen="10.5" mp="1220.600162206" mpRegen="3.6" />
 			<speed>
 				<walk ground="35" />
 				<run ground="180" />
 			</speed>
-			<attack physical="1950.2231755595" magical="1331.5869440987" critical="4" attackSpeed="253" range="40" />
-			<defence physical="405.85106382979" magical="297.0297029703" />
+			<attack physical="603.838976272994" magical="392.016519700582" critical="4" attackSpeed="253" range="40" />
+			<defence physical="276.774193548387" magical="203.019124610836" />
 		</stats>
 		<status attackable="false" />
 		<skillList>
@@ -2230,17 +2248,17 @@
 			<height normal="25" />
 		</collision>
 	</npc>
-	<npc id="23897" level="85" type="Monster" name="Arena Deadly Fang" title="Beast King">
+	<npc id="23897" level="67" type="Monster" name="Arena Deadly Fang" title="Beast King">
 		<race>ETC</race>
 		<sex>FEMALE</sex>
-		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="8446" hpRegen="10.5" mp="1251" mpRegen="3.6" />
+		<stats str="79" int="34" dex="42" wit="66" con="75" men="12">
+			<vitals hp="36728.0757097792" hpRegen="10.5" mp="1251.41930251419" mpRegen="3.6" />
 			<speed>
 				<walk ground="26" />
 				<run ground="180" />
 			</speed>
-			<attack physical="1950.2231755595" magical="1331.5869440987" critical="4" attackSpeed="253" range="40" />
-			<defence physical="405.85106382979" magical="297.0297029703" />
+			<attack physical="625.132443314262" magical="405.483648172946" critical="4" attackSpeed="253" range="40" />
+			<defence physical="282.051282051282" magical="206.396739243455" />
 		</stats>
 		<status attackable="false" />
 		<skillList>
@@ -2253,17 +2271,17 @@
 			<height normal="33.5" />
 		</collision>
 	</npc>
-	<npc id="23898" level="85" type="Monster" name="Beetle of Terror">
+	<npc id="23898" level="67" type="Monster" name="Beetle of Terror">
 		<race>ETC</race>
 		<sex>FEMALE</sex>
-		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="8446" hpRegen="10.5" mp="1251" mpRegen="3.6" />
+		<stats str="79" int="34" dex="42" wit="66" con="75" men="12">
+			<vitals hp="32136.9085173502" hpRegen="10.5" mp="1251.41930251419" mpRegen="3.6" />
 			<speed>
 				<walk ground="45" />
 				<run ground="180" />
 			</speed>
-			<attack physical="1950.2231755595" magical="1331.5869440987" critical="4" attackSpeed="253" range="40" />
-			<defence physical="405.85106382979" magical="297.0297029703" />
+			<attack physical="625.132443314262" magical="405.483648172946" critical="4" attackSpeed="253" range="40" />
+			<defence physical="282.051282051282" magical="206.396739243455" />
 		</stats>
 		<status attackable="false" />
 		<skillList>
@@ -2276,17 +2294,17 @@
 			<height normal="22" />
 		</collision>
 	</npc>
-	<npc id="23899" level="85" type="Monster" name="Scorpion of Terror">
+	<npc id="23899" level="68" type="Monster" name="Scorpion of Terror">
 		<race>ETC</race>
 		<sex>FEMALE</sex>
-		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="8446" hpRegen="10.5" mp="1282" mpRegen="3.6" />
+		<stats str="79" int="34" dex="42" wit="66" con="75" men="12">
+			<vitals hp="39878.2334384858" hpRegen="10.5" mp="1283.04947283049" mpRegen="3.6" />
 			<speed>
 				<walk ground="37" />
 				<run ground="180" />
 			</speed>
-			<attack physical="1950.2231755595" magical="1331.5869440987" critical="4" attackSpeed="253" range="40" />
-			<defence physical="405.85106382979" magical="297.0297029703" />
+			<attack physical="646.593321752557" magical="418.531253381224" critical="4" attackSpeed="253" range="40" />
+			<defence physical="286.624203821656" magical="209.731326938078" />
 		</stats>
 		<status attackable="false" />
 		<skillList>

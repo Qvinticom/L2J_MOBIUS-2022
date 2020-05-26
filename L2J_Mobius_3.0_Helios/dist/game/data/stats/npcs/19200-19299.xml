@@ -630,7 +630,7 @@
 			<height normal="27" />
 		</collision>
 	</npc>
-	<npc id="19220" level="88" type="Monster" name="Kartia Guard">
+	<npc id="19220" level="87" type="Monster" name="Kartia Guard">
 		<parameters>
 			<param name="MoveAroundSocial" value="120" />
 			<param name="MoveAroundSocial1" value="120" />
@@ -642,13 +642,13 @@
 		<sex>MALE</sex>
 		<mpReward value="90" type="DIFF" ticks="10" affects="SOLO" />
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="4522" hpRegen="8.5" mp="1952" mpRegen="3" />
+			<vitals hp="4522.54335260116" hpRegen="8.5" mp="1952.47524752475" mpRegen="3" />
 			<speed>
 				<walk ground="60" />
 				<run ground="120" />
 			</speed>
-			<attack physical="6924" magical="1244" critical="4" attackSpeed="253" range="40" type="SWORD" distance="80" width="120" random="10" accuracy="5" />
-			<defence physical="422.801358886775" magical="232.278309819016" />
+			<attack physical="9555.47880584945" magical="1053.44297723263" critical="4" attackSpeed="253" range="40" type="SWORD" distance="80" width="120" random="10" accuracy="5" />
+			<defence physical="423.295454545455" magical="232.523252325233" />
 			<attribute>
 				<defence fire="100" water="100" wind="100" earth="100" holy="50" dark="100" />
 				<attack type="DARK" value="180" />
@@ -673,7 +673,7 @@
 			<height normal="14" />
 		</collision>
 	</npc>
-	<npc id="19221" level="88" type="Monster" name="Kartia Watchman">
+	<npc id="19221" level="87" type="Monster" name="Kartia Watchman">
 		<parameters>
 			<param name="MoveAroundSocial" value="200" />
 			<param name="MoveAroundSocial1" value="200" />
@@ -685,13 +685,13 @@
 		<sex>MALE</sex>
 		<mpReward value="90" type="DIFF" ticks="10" affects="SOLO" />
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="4522" hpRegen="8.5" mp="2928" mpRegen="3" />
+			<vitals hp="4522.54335260116" hpRegen="8.5" mp="2928.05280528053" mpRegen="3" />
 			<speed>
 				<walk ground="46" />
 				<run ground="120" />
 			</speed>
-			<attack physical="7984" magical="1428" critical="4" attackSpeed="253" range="40" type="SWORD" distance="80" width="120" random="10" accuracy="5" />
-			<defence physical="422.801358886775" magical="232.278309819016" />
+			<attack physical="12107.9809738075" magical="1457.04961169191" critical="4" attackSpeed="253" range="40" type="SWORD" distance="80" width="120" random="10" accuracy="5" />
+			<defence physical="423.295454545455" magical="232.523252325233" />
 			<attribute>
 				<defence fire="100" water="100" wind="100" earth="100" holy="50" dark="100" />
 				<attack type="DARK" value="180" />
@@ -700,6 +700,8 @@
 		</stats>
 		<status attackable="false" undying="false" />
 		<skillList>
+			<skill id="4410" level="10" /> <!-- Slightly Weak P. Atk. -->
+			<skill id="4411" level="10" /> <!-- Slightly Weak M. Atk. -->
 			<skill id="4415" level="3" /> <!-- One-handed Sword -->
 			<skill id="4416" level="1" /> <!-- Undead -->
 			<skill id="14765" level="2" /> <!-- Blood Siphon Resistance -->
@@ -716,7 +718,7 @@
 			<height normal="40.48" />
 		</collision>
 	</npc>
-	<npc id="19222" level="88" type="Monster" name="Kartia Dimensional Watchman">
+	<npc id="19222" level="87" type="Monster" name="Kartia Dimensional Watchman">
 		<parameters>
 			<param name="MoveAroundSocial" value="70" />
 			<param name="MoveAroundSocial1" value="70" />
@@ -732,13 +734,13 @@
 		<sex>MALE</sex>
 		<mpReward value="90" type="DIFF" ticks="10" affects="SOLO" />
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="155063" hpRegen="8.5" mp="1952" mpRegen="3" />
+			<vitals hp="155063.005780347" hpRegen="8.5" mp="1952.47524752475" mpRegen="3" />
 			<speed>
 				<walk ground="68" />
 				<run ground="160" />
 			</speed>
-			<attack physical="23952" magical="4288" critical="4" attackSpeed="253" range="40" type="SWORD" distance="80" width="120" random="10" accuracy="5" />
-			<defence physical="1268.40407666033" magical="696.834929457047" />
+			<attack physical="33053.9456836714" magical="3630.94387052617" critical="4" attackSpeed="253" range="40" type="SWORD" distance="80" width="120" random="10" accuracy="5" />
+			<defence physical="1528.61445783133" magical="839.993637918009" />
 			<attribute>
 				<defence fire="100" water="100" wind="100" earth="100" holy="50" dark="100" />
 				<attack type="DARK" value="180" />
@@ -747,6 +749,8 @@
 		</stats>
 		<status attackable="false" undying="false" />
 		<skillList>
+			<skill id="4412" level="9" /> <!-- Slightly Weak P. Def. -->
+			<skill id="4413" level="9" /> <!-- Slightly Weak M. Def. -->
 			<skill id="4415" level="3" /> <!-- One-handed Sword -->
 			<skill id="4416" level="1" /> <!-- Undead -->
 			<skill id="14765" level="2" /> <!-- Blood Siphon Resistance -->
@@ -762,7 +766,7 @@
 			<height normal="34" />
 		</collision>
 	</npc>
-	<npc id="19223" level="93" type="Monster" name="Kartia Guard">
+	<npc id="19223" level="92" type="Monster" name="Kartia Guard">
 		<parameters>
 			<param name="MoveAroundSocial" value="150" />
 			<param name="MoveAroundSocial1" value="150" />
@@ -774,13 +778,13 @@
 		<sex>FEMALE</sex>
 		<mpReward value="100" type="DIFF" ticks="10" affects="SOLO" />
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="4822" hpRegen="8.5" mp="2132" mpRegen="3" />
+			<vitals hp="4822.54335260116" hpRegen="8.5" mp="2132.01320132013" mpRegen="3" />
 			<speed>
 				<walk ground="45" />
 				<run ground="120" />
 			</speed>
-			<attack physical="8783" magical="1565" critical="4" attackSpeed="253" range="40" type="SWORD" distance="80" width="120" random="10" accuracy="5" />
-			<defence physical="466.806863913762" magical="262.801587405588" />
+			<attack physical="12120.7032833816" magical="1317.60433867094" critical="4" attackSpeed="253" range="40" type="SWORD" distance="80" width="120" random="10" accuracy="5" />
+			<defence physical="466.850828729282" magical="262.932370585125" />
 			<attribute>
 				<defence fire="100" water="50" wind="100" earth="100" holy="100" dark="100" />
 				<attack type="FIRE" value="180" />
@@ -806,7 +810,7 @@
 			<height normal="33" />
 		</collision>
 	</npc>
-	<npc id="19224" level="93" type="Monster" name="Kartia Watchman">
+	<npc id="19224" level="92" type="Monster" name="Kartia Watchman">
 		<parameters>
 			<param name="MoveAroundSocial" value="60" />
 			<param name="MoveAroundSocial1" value="60" />
@@ -818,13 +822,13 @@
 		<sex>FEMALE</sex>
 		<mpReward value="100" type="DIFF" ticks="10" affects="SOLO" />
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="4822" hpRegen="8.5" mp="3198" mpRegen="3" />
+			<vitals hp="4822.54335260116" hpRegen="8.5" mp="3198.0198019802" mpRegen="3" />
 			<speed>
 				<walk ground="80" />
 				<run ground="120" />
 			</speed>
-			<attack physical="10128" magical="1796" critical="4" attackSpeed="253" range="40" type="SWORD" distance="80" width="120" random="10" accuracy="5" />
-			<defence physical="466.806863913762" magical="262.801587405588" />
+			<attack physical="13976.7947610057" magical="1512.11240273724" critical="4" attackSpeed="253" range="40" type="SWORD" distance="80" width="120" random="10" accuracy="5" />
+			<defence physical="466.850828729282" magical="262.932370585125" />
 			<attribute>
 				<defence fire="100" water="50" wind="100" earth="100" holy="100" dark="100" />
 				<attack type="FIRE" value="180" />
@@ -850,7 +854,7 @@
 			<height normal="40" />
 		</collision>
 	</npc>
-	<npc id="19225" level="93" type="Monster" name="Kartia Dimensional Watchman">
+	<npc id="19225" level="92" type="Monster" name="Kartia Dimensional Watchman">
 		<parameters>
 			<param name="MoveAroundSocial" value="0" />
 			<param name="MoveAroundSocial1" value="150" />
@@ -866,13 +870,13 @@
 		<sex>FEMALE</sex>
 		<mpReward value="100" type="DIFF" ticks="10" affects="SOLO" />
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="165343" hpRegen="8.5" mp="2132" mpRegen="3" />
+			<vitals hp="165343.352601156" hpRegen="8.5" mp="2132.01320132013" mpRegen="3" />
 			<speed>
 				<walk ground="45" />
 				<run ground="160" />
 			</speed>
-			<attack physical="30392" magical="5396" critical="4" attackSpeed="253" range="40" type="SWORD" distance="80" width="120" random="10" accuracy="5" />
-			<defence physical="1400.42059174129" magical="788.404762216763" />
+			<attack physical="41941.0326454218" magical="4542.73024236344" critical="4" attackSpeed="253" range="40" type="SWORD" distance="80" width="120" random="10" accuracy="5" />
+			<defence physical="1400.55248618785" magical="788.432434403661" />
 			<attribute>
 				<defence fire="100" water="50" wind="100" earth="100" holy="100" dark="100" />
 				<attack type="FIRE" value="180" />
@@ -899,7 +903,7 @@
 			<height normal="38" />
 		</collision>
 	</npc>
-	<npc id="19226" level="98" type="Monster" name="Kartia Guard">
+	<npc id="19226" level="97" type="Monster" name="Kartia Guard">
 		<parameters>
 			<param name="MoveAroundSocial" value="100" />
 			<param name="MoveAroundSocial1" value="100" />
@@ -912,13 +916,13 @@
 		<equipment rhand="13979" /> <!-- Monster Only (Dragontroop Commando) -->
 		<mpReward value="110" type="DIFF" ticks="10" affects="SOLO" />
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="5253" hpRegen="8.5" mp="2317" mpRegen="3" />
+			<vitals hp="5253.17919075145" hpRegen="8.5" mp="2317.49174917492" mpRegen="3" />
 			<speed>
 				<walk ground="56" />
 				<run ground="120" />
 			</speed>
-			<attack physical="12864" magical="2264" critical="4" attackSpeed="253" range="40" type="SWORD" distance="80" width="120" random="10" accuracy="5" />
-			<defence physical="515.39249724918" magical="297.335874351375" />
+			<attack physical="17752.6961429016" magical="1895.3521055707" critical="4" attackSpeed="253" range="40" type="SWORD" distance="80" width="120" random="10" accuracy="5" />
+			<defence physical="515.591397849462" magical="297.384577167394" />
 			<attribute>
 				<defence fire="250" water="250" wind="250" earth="200" holy="250" dark="250" />
 				<attack type="WIND" value="330" />
@@ -944,7 +948,7 @@
 			<height normal="42" />
 		</collision>
 	</npc>
-	<npc id="19227" level="98" type="Monster" name="Kartia Watchman">
+	<npc id="19227" level="97" type="Monster" name="Kartia Watchman">
 		<parameters>
 			<param name="MoveAroundSocial" value="120" />
 			<param name="MoveAroundSocial1" value="120" />
@@ -957,13 +961,13 @@
 		<equipment rhand="13981" /> <!-- Monster Only (Dragontoop Tactician) -->
 		<mpReward value="110" type="DIFF" ticks="10" affects="SOLO" />
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="5253" hpRegen="8.5" mp="3476" mpRegen="3" />
+			<vitals hp="5253.17919075145" hpRegen="8.5" mp="3476.56765676568" mpRegen="3" />
 			<speed>
 				<walk ground="82" />
 				<run ground="120" />
 			</speed>
-			<attack physical="12864" magical="2264" critical="4" attackSpeed="253" range="40" type="SWORD" distance="80" width="120" random="10" accuracy="5" />
-			<defence physical="515.39249724918" magical="297.335874351375" />
+			<attack physical="17752.6961429016" magical="1895.3521055707" critical="4" attackSpeed="253" range="40" type="SWORD" distance="80" width="120" random="10" accuracy="5" />
+			<defence physical="515.591397849462" magical="297.384577167394" />
 			<attribute>
 				<defence fire="250" water="250" wind="250" earth="200" holy="250" dark="250" />
 				<attack type="WIND" value="330" />
@@ -989,7 +993,7 @@
 			<height normal="34.5" />
 		</collision>
 	</npc>
-	<npc id="19228" level="98" type="Monster" name="Kartia Dimensional Watchman">
+	<npc id="19228" level="97" type="Monster" name="Kartia Dimensional Watchman">
 		<parameters>
 			<param name="MoveAroundSocial" value="130" />
 			<param name="MoveAroundSocial1" value="130" />
@@ -1006,13 +1010,13 @@
 		<equipment rhand="13978" /> <!-- Monster Only (Dragontroop Commander) -->
 		<mpReward value="110" type="DIFF" ticks="10" affects="SOLO" />
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="180135" hpRegen="8.5" mp="2317" mpRegen="3" />
+			<vitals hp="180135.260115607" hpRegen="8.5" mp="2317.49174917492" mpRegen="3" />
 			<speed>
 				<walk ground="55" />
 				<run ground="160" />
 			</speed>
-			<attack physical="38592" magical="6800" critical="4" attackSpeed="253" range="80" type="POLE" distance="80" width="120" random="10" accuracy="0" />
-			<defence physical="1546.17749174754" magical="892.007623054126" />
+			<attack physical="53257.2913428505" magical="5692.52766342797" critical="4" attackSpeed="253" range="80" type="POLE" distance="80" width="120" random="10" accuracy="0" />
+			<defence physical="1546.23655913978" magical="892.153731502183" />
 			<attribute>
 				<defence fire="250" water="250" wind="250" earth="200" holy="250" dark="250" />
 				<attack type="WIND" value="330" />
@@ -1037,7 +1041,7 @@
 			<height normal="46.5" />
 		</collision>
 	</npc>
-	<npc id="19229" level="88" type="Monster" name="Kartia Guard">
+	<npc id="19229" level="87" type="Monster" name="Kartia Guard">
 		<parameters>
 			<param name="MoveAroundSocial" value="120" />
 			<param name="MoveAroundSocial1" value="120" />
@@ -1049,13 +1053,13 @@
 		<sex>MALE</sex>
 		<acquire exp="1630396" sp="391" />
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="287430" hpRegen="8.5" mp="19524" mpRegen="30" />
+			<vitals hp="287430.057803468" hpRegen="8.5" mp="19524.0924092409" mpRegen="30" />
 			<speed>
 				<walk ground="60" />
 				<run ground="120" />
 			</speed>
-			<attack physical="9315.75997708706" magical="1668.52760670088" critical="4" attackSpeed="253" range="40" type="SWORD" distance="80" width="120" random="10" accuracy="5" />
-			<defence physical="270.592869687536" magical="148.65811828417" />
+			<attack physical="12856.0245262622" magical="1412.91260468807" critical="4" attackSpeed="253" range="40" type="SWORD" distance="80" width="120" random="10" accuracy="5" />
+			<defence physical="271.022727272727" magical="148.889888988899" />
 			<attribute>
 				<defence fire="100" water="100" wind="100" earth="100" holy="50" dark="100" />
 				<attack type="DARK" value="180" />
@@ -1083,7 +1087,7 @@
 			<height normal="14" />
 		</collision>
 	</npc>
-	<npc id="19230" level="88" type="Monster" name="Kartia Watchman">
+	<npc id="19230" level="87" type="Monster" name="Kartia Watchman">
 		<parameters>
 			<param name="MoveAroundSocial" value="200" />
 			<param name="MoveAroundSocial1" value="200" />
@@ -1095,13 +1099,13 @@
 		<sex>MALE</sex>
 		<acquire exp="1630396" sp="391" />
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="287430" hpRegen="8.5" mp="29286" mpRegen="30" />
+			<vitals hp="287430.057803468" hpRegen="8.5" mp="29286.4686468647" mpRegen="30" />
 			<speed>
 				<walk ground="46" />
 				<run ground="120" />
 			</speed>
-			<attack physical="9315.75997708706" magical="3337.05521340176" critical="4" attackSpeed="253" range="40" type="SWORD" distance="80" width="120" random="10" accuracy="5" />
-			<defence physical="270.592869687536" magical="185.822647855213" />
+			<attack physical="12856.0245262622" magical="2825.74576084911" critical="4" attackSpeed="253" range="40" type="SWORD" distance="80" width="120" random="10" accuracy="5" />
+			<defence physical="271.022727272727" magical="186.018601860186" />
 			<attribute>
 				<defence fire="100" water="100" wind="100" earth="100" holy="50" dark="100" />
 				<attack type="DARK" value="180" />
@@ -1129,7 +1133,7 @@
 			<height normal="40.48" />
 		</collision>
 	</npc>
-	<npc id="19231" level="88" type="Monster" name="Kartia Dimensional Watchman">
+	<npc id="19231" level="87" type="Monster" name="Kartia Dimensional Watchman">
 		<parameters>
 			<param name="MoveAroundSocial" value="70" />
 			<param name="MoveAroundSocial1" value="70" />
@@ -1144,13 +1148,13 @@
 		<sex>MALE</sex>
 		<acquire exp="14131541" sp="3391" />
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="287430" hpRegen="8.5" mp="19524" mpRegen="30" />
+			<vitals hp="287430.057803468" hpRegen="8.5" mp="19524.0924092409" mpRegen="30" />
 			<speed>
 				<walk ground="68" />
 				<run ground="160" />
 			</speed>
-			<attack physical="9315.75997708706" magical="1668.52760670088" critical="4" attackSpeed="253" range="40" type="SWORD" distance="80" width="120" random="10" accuracy="5" />
-			<defence physical="338.24108710942" magical="185.822647855213" />
+			<attack physical="12855.9723708673" magical="1412.90295918" critical="4" attackSpeed="253" range="40" type="SWORD" distance="80" width="120" random="10" accuracy="5" />
+			<defence physical="338.561232156273" magical="185.977501859775" />
 			<attribute>
 				<defence fire="100" water="100" wind="100" earth="100" holy="50" dark="100" />
 				<attack type="DARK" value="180" />
@@ -1181,7 +1185,7 @@
 			<height normal="34" />
 		</collision>
 	</npc>
-	<npc id="19232" level="93" type="Monster" name="Kartia Guard">
+	<npc id="19232" level="92" type="Monster" name="Kartia Guard">
 		<parameters>
 			<param name="MoveAroundSocial" value="150" />
 			<param name="MoveAroundSocial1" value="150" />
@@ -1193,13 +1197,13 @@
 		<sex>FEMALE</sex>
 		<acquire exp="1854851" sp="445" />
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="312844" hpRegen="8.5" mp="21324" mpRegen="30" />
+			<vitals hp="312845.086705202" hpRegen="8.5" mp="21324.0924092409" mpRegen="30" />
 			<speed>
 				<walk ground="45" />
 				<run ground="120" />
 			</speed>
-			<attack physical="11819.9958080598" magical="2098.92127856138" critical="4" attackSpeed="253" range="40" type="SWORD" distance="80" width="120" random="10" accuracy="5" />
-			<defence physical="298.756392904808" magical="168.193015939576" />
+			<attack physical="16311.6866562835" magical="1767.0465891339" critical="4" attackSpeed="253" range="40" type="SWORD" distance="80" width="120" random="10" accuracy="5" />
+			<defence physical="298.895027624309" magical="168.480936491439" />
 			<attribute>
 				<defence fire="100" water="50" wind="100" earth="100" holy="100" dark="100" />
 				<attack type="FIRE" value="180" />
@@ -1228,7 +1232,7 @@
 			<height normal="33" />
 		</collision>
 	</npc>
-	<npc id="19233" level="93" type="Monster" name="Kartia Watchman">
+	<npc id="19233" level="92" type="Monster" name="Kartia Watchman">
 		<parameters>
 			<param name="MoveAroundSocial" value="60" />
 			<param name="MoveAroundSocial1" value="60" />
@@ -1240,13 +1244,13 @@
 		<sex>FEMALE</sex>
 		<acquire exp="1854851" sp="445" />
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="312844" hpRegen="8.5" mp="31986" mpRegen="30" />
+			<vitals hp="312845.086705202" hpRegen="8.5" mp="31986.1386138614" mpRegen="30" />
 			<speed>
 				<walk ground="80" />
 				<run ground="120" />
 			</speed>
-			<attack physical="11819.9958080598" magical="4197.84255712276" critical="4" attackSpeed="253" range="40" type="SWORD" distance="80" width="120" random="10" accuracy="5" />
-			<defence physical="298.756392904808" magical="210.24126992447" />
+			<attack physical="16311.6866562835" magical="3534.09317826779" critical="4" attackSpeed="253" range="40" type="SWORD" distance="80" width="120" random="10" accuracy="5" />
+			<defence physical="298.895027624309" magical="210.418831938442" />
 			<attribute>
 				<defence fire="100" water="50" wind="100" earth="100" holy="100" dark="100" />
 				<attack type="FIRE" value="180" />
@@ -1275,7 +1279,7 @@
 			<height normal="40" />
 		</collision>
 	</npc>
-	<npc id="19234" level="93" type="Monster" name="Kartia Dimensional Watchman">
+	<npc id="19234" level="92" type="Monster" name="Kartia Dimensional Watchman">
 		<parameters>
 			<param name="MoveAroundSocial" value="0" />
 			<param name="MoveAroundSocial1" value="150" />
@@ -1290,13 +1294,13 @@
 		<sex>FEMALE</sex>
 		<acquire exp="16077028" sp="3858" />
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="312844" hpRegen="8.5" mp="21324" mpRegen="30" />
+			<vitals hp="312844.075144509" hpRegen="8.5" mp="21324.0924092409" mpRegen="30" />
 			<speed>
 				<walk ground="45" />
 				<run ground="160" />
 			</speed>
-			<attack physical="11819.9958080598" magical="2098.92127856138" critical="4" attackSpeed="253" range="40" type="SWORD" distance="80" width="120" random="10" accuracy="5" />
-			<defence physical="373.44549113101" magical="210.24126992447" />
+			<attack physical="16311.7548040786" magical="1767.02034201689" critical="4" attackSpeed="253" range="40" type="SWORD" distance="80" width="120" random="10" accuracy="5" />
+			<defence physical="373.498926989635" magical="210.313924755073" />
 			<attribute>
 				<defence fire="100" water="50" wind="100" earth="100" holy="100" dark="100" />
 				<attack type="FIRE" value="180" />
@@ -1326,7 +1330,7 @@
 			<height normal="38" />
 		</collision>
 	</npc>
-	<npc id="19235" level="98" type="Monster" name="Kartia Guard">
+	<npc id="19235" level="97" type="Monster" name="Kartia Guard">
 		<parameters>
 			<param name="MoveAroundSocial" value="100" />
 			<param name="MoveAroundSocial1" value="100" />
@@ -1339,13 +1343,13 @@
 		<acquire exp="2064545" sp="495" />
 		<equipment rhand="13979" /> <!-- Monster Only (Dragontroop Commando) -->
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="356012" hpRegen="8.5" mp="23174" mpRegen="30" />
+			<vitals hp="356012.716763006" hpRegen="8.5" mp="23174.2574257426" mpRegen="30" />
 			<speed>
 				<walk ground="56" />
 				<run ground="120" />
 			</speed>
-			<attack physical="15009.136215459" magical="2644.46359515415" critical="4" attackSpeed="253" range="40" type="SWORD" distance="80" width="120" random="10" accuracy="5" />
-			<defence physical="329.851198239475" magical="190.29495958488" />
+			<attack physical="20712.7672735329" magical="2213.7744323903" critical="4" attackSpeed="253" range="40" type="SWORD" distance="80" width="120" random="10" accuracy="5" />
+			<defence physical="330.10752688172" magical="190.567443841158" />
 			<attribute>
 				<defence fire="250" water="250" wind="250" earth="200" holy="250" dark="250" />
 				<attack type="WIND" value="330" />
@@ -1374,7 +1378,7 @@
 			<height normal="42" />
 		</collision>
 	</npc>
-	<npc id="19236" level="98" type="Monster" name="Kartia Watchman">
+	<npc id="19236" level="97" type="Monster" name="Kartia Watchman">
 		<parameters>
 			<param name="MoveAroundSocial" value="120" />
 			<param name="MoveAroundSocial1" value="120" />
@@ -1387,13 +1391,13 @@
 		<acquire exp="2064545" sp="495" />
 		<equipment rhand="13981" /> <!-- Monster Only (Dragontoop Tactician) -->
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="356012" hpRegen="8.5" mp="34761" mpRegen="30" />
+			<vitals hp="356012.716763006" hpRegen="8.5" mp="34761.0561056106" mpRegen="30" />
 			<speed>
 				<walk ground="82" />
 				<run ground="120" />
 			</speed>
-			<attack physical="15009.136215459" magical="5288.92719030829" critical="4" attackSpeed="253" range="40" type="SWORD" distance="80" width="120" random="10" accuracy="5" />
-			<defence physical="329.851198239475" magical="237.8686994811" />
+			<attack physical="20712.7672735329" magical="4427.5488647806" critical="4" attackSpeed="253" range="40" type="SWORD" distance="80" width="120" random="10" accuracy="5" />
+			<defence physical="330.10752688172" magical="238.120586252174" />
 			<attribute>
 				<defence fire="250" water="250" wind="250" earth="200" holy="250" dark="250" />
 				<attack type="WIND" value="330" />
@@ -1422,7 +1426,7 @@
 			<height normal="34.5" />
 		</collision>
 	</npc>
-	<npc id="19237" level="98" type="Monster" name="Kartia Dimensional Watchman">
+	<npc id="19237" level="97" type="Monster" name="Kartia Dimensional Watchman">
 		<parameters>
 			<param name="MoveAroundSocial" value="130" />
 			<param name="MoveAroundSocial1" value="130" />
@@ -1438,13 +1442,13 @@
 		<acquire exp="17895576" sp="4294" />
 		<equipment rhand="13978" /> <!-- Monster Only (Dragontroop Commander) -->
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="356012" hpRegen="8.5" mp="23174" mpRegen="30" />
+			<vitals hp="356012.138728324" hpRegen="8.5" mp="23174.2574257426" mpRegen="30" />
 			<speed>
 				<walk ground="55" />
 				<run ground="160" />
 			</speed>
-			<attack physical="15009.136215459" magical="2644.46359515415" critical="4" attackSpeed="253" range="80" type="POLE" distance="80" width="120" random="10" accuracy="0" />
-			<defence physical="412.313997799344" magical="237.8686994811" />
+			<attack physical="20712.7487667798" magical="2213.78813798666" critical="4" attackSpeed="253" range="80" type="POLE" distance="80" width="120" random="10" accuracy="0" />
+			<defence physical="412.334488580823" magical="237.960163669924" />
 			<attribute>
 				<defence fire="250" water="250" wind="250" earth="200" holy="250" dark="250" />
 				<attack type="WIND" value="330" />
@@ -1485,13 +1489,13 @@
 		<sex>MALE</sex>
 		<mpReward value="20" type="PER" ticks="10" affects="PARTY" />
 		<stats str="79" int="74" dex="42" wit="65" con="75" men="72">
-			<vitals hp="1" hpRegen="4.5" mp="478" mpRegen="1.8" />
+			<vitals hp="1.26182965299685" hpRegen="4.5" mp="478.64406779661" mpRegen="1.8" />
 			<speed>
 				<walk ground="30" />
 				<run ground="80" />
 			</speed>
-			<attack physical="395.438928678502" magical="138.60085411294" critical="4" attackSpeed="253" range="40" type="SWORD" distance="80" width="120" random="10" accuracy="5" />
-			<defence physical="142.318495506993" magical="71.3641045645751" />
+			<attack physical="545.865633074935" magical="126.616576157494" critical="4" attackSpeed="253" range="40" type="SWORD" distance="80" width="120" random="10" accuracy="5" />
+			<defence physical="142.635658914729" magical="71.4754959926422" />
 			<attribute>
 				<defence fire="20" water="20" wind="20" earth="20" holy="20" dark="20" />
 			</attribute>
@@ -1517,13 +1521,13 @@
 		<sex>MALE</sex>
 		<mpReward value="20" type="PER" ticks="10" affects="PARTY" />
 		<stats str="79" int="74" dex="42" wit="65" con="75" men="72">
-			<vitals hp="1" hpRegen="4.5" mp="478" mpRegen="1.8" />
+			<vitals hp="241.640378548896" hpRegen="4.5" mp="478.64406779661" mpRegen="1.8" />
 			<speed>
 				<walk ground="30" />
 				<run ground="80" />
 			</speed>
-			<attack physical="395.438928678502" magical="138.60085411294" critical="4" attackSpeed="253" range="40" type="SWORD" distance="80" width="120" random="10" accuracy="5" />
-			<defence physical="142.318495506993" magical="71.3641045645751" />
+			<attack physical="545.865633074935" magical="126.616576157494" critical="4" attackSpeed="253" range="40" type="SWORD" distance="80" width="120" random="10" accuracy="5" />
+			<defence physical="142.635658914729" magical="71.4754959926422" />
 			<attribute>
 				<defence fire="20" water="20" wind="20" earth="20" holy="20" dark="20" />
 			</attribute>
@@ -1549,13 +1553,13 @@
 		<sex>MALE</sex>
 		<mpReward value="20" type="PER" ticks="10" affects="PARTY" />
 		<stats str="79" int="74" dex="42" wit="65" con="75" men="72">
-			<vitals hp="1" hpRegen="4.5" mp="478" mpRegen="1.8" />
+			<vitals hp="241.640378548896" hpRegen="4.5" mp="478.64406779661" mpRegen="1.8" />
 			<speed>
 				<walk ground="30" />
 				<run ground="80" />
 			</speed>
-			<attack physical="395.438928678502" magical="138.60085411294" critical="4" attackSpeed="253" range="40" type="SWORD" distance="80" width="120" random="10" accuracy="5" />
-			<defence physical="142.318495506993" magical="71.3641045645751" />
+			<attack physical="545.865633074935" magical="126.616576157494" critical="4" attackSpeed="253" range="40" type="SWORD" distance="80" width="120" random="10" accuracy="5" />
+			<defence physical="142.635658914729" magical="71.4754959926422" />
 			<attribute>
 				<defence fire="20" water="20" wind="20" earth="20" holy="20" dark="20" />
 			</attribute>
@@ -1583,13 +1587,13 @@
 		<sex>MALE</sex>
 		<mpReward value="20" type="PER" ticks="10" affects="PARTY" />
 		<stats str="79" int="74" dex="42" wit="65" con="75" men="72">
-			<vitals hp="2354" hpRegen="4.5" mp="478" mpRegen="1.8" />
+			<vitals hp="2354.57413249211" hpRegen="4.5" mp="478.64406779661" mpRegen="1.8" />
 			<speed>
 				<walk ground="15" />
 				<run ground="80" />
 			</speed>
-			<attack physical="395.438928678502" magical="138.60085411294" critical="4" attackSpeed="253" range="40" type="SWORD" distance="80" width="120" random="10" accuracy="5" />
-			<defence physical="142.318495506993" magical="71.3641045645751" />
+			<attack physical="545.865633074935" magical="126.616576157494" critical="4" attackSpeed="253" range="40" type="SWORD" distance="80" width="120" random="10" accuracy="5" />
+			<defence physical="142.635658914729" magical="71.4754959926422" />
 			<attribute>
 				<defence fire="20" water="20" wind="20" earth="20" holy="20" dark="20" />
 			</attribute>
@@ -1985,13 +1989,13 @@
 		<race>DEMONIC</race>
 		<sex>MALE</sex>
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="903529.58601" hpRegen="8.5" mp="15833.964" mpRegen="3" />
+			<vitals hp="1379666.47398844" hpRegen="8.5" mp="19524.0924092409" mpRegen="3" />
 			<speed>
 				<walk ground="34" />
 				<run ground="200" />
 			</speed>
-			<attack physical="24220.9759404264" magical="3337.05521340176" critical="4" attackSpeed="253" range="40" type="SWORD" distance="80" width="120" random="10" accuracy="5" />
-			<defence physical="1014.72326132826" magical="557.467943565638" />
+			<attack physical="33425.0522462758" magical="2822.51529166457" critical="4" attackSpeed="253" range="40" type="SWORD" distance="80" width="120" random="10" accuracy="5" />
+			<defence physical="1015.25423728814" magical="557.51337845649" />
 			<attribute>
 				<defence fire="200" water="200" wind="200" earth="200" holy="150" dark="200" />
 				<attack type="DARK" value="280" />
@@ -2037,13 +2041,13 @@
 		<race>DEMONIC</race>
 		<sex>MALE</sex>
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="1475127.21954" hpRegen="8.5" mp="17293.764" mpRegen="3" />
+			<vitals hp="2252481.50289017" hpRegen="8.5" mp="21324.0924092409" mpRegen="3" />
 			<speed>
 				<walk ground="60" />
 				<run ground="200" />
 			</speed>
-			<attack physical="26741.9145705939" magical="3684.37860033537" critical="4" attackSpeed="253" range="40" type="SWORD" distance="80" width="120" random="10" accuracy="5" />
-			<defence physical="1120.33647339303" magical="630.72380977341" />
+			<attack physical="36904.0151842228" magical="3098.35388322905" critical="4" attackSpeed="253" range="40" type="SWORD" distance="80" width="120" random="10" accuracy="5" />
+			<defence physical="1120.87912087912" magical="631.052116200631" />
 			<attribute>
 				<defence fire="200" water="150" wind="200" earth="200" holy="200" dark="200" />
 				<attack type="FIRE" value="280" />
@@ -2091,13 +2095,13 @@
 		<race>DEMONIC</race>
 		<sex>MALE</sex>
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="2685876.448395" hpRegen="8.5" mp="18794.114" mpRegen="3" />
+			<vitals hp="4101264.16184971" hpRegen="8.5" mp="23174.2574257426" mpRegen="3" />
 			<speed>
 				<walk ground="50" />
 				<run ground="200" />
 			</speed>
-			<attack physical="29525.234518207" magical="4067.85168435116" critical="4" attackSpeed="253" range="40" type="SWORD" distance="80" width="120" random="10" accuracy="5" />
-			<defence physical="1236.94199339803" magical="713.6060984433" />
+			<attack physical="40745.1746788074" magical="3401.65709242194" critical="4" attackSpeed="253" range="40" type="SWORD" distance="80" width="120" random="10" accuracy="5" />
+			<defence physical="1237.43315508021" magical="713.718430666596" />
 			<attribute>
 				<defence fire="350" water="350" wind="350" earth="300" holy="350" dark="350" />
 				<attack type="WIND" value="430" />
@@ -2328,13 +2332,13 @@
 		<race>HUMANOID</race>
 		<sex>MALE</sex>
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="443936" hpRegen="8.5" mp="23550" mpRegen="30" />
+			<vitals hp="443936.12716763" hpRegen="8.5" mp="23550.495049505" mpRegen="30" />
 			<speed>
 				<walk ground="30" />
 				<run ground="210" />
 			</speed>
-			<attack physical="75762.9315245988" magical="21379.1984705962" critical="4" attackSpeed="253" range="40" type="SWORD" distance="80" width="120" random="10" accuracy="5" />
-			<defence physical="735.980486071829" magical="426.676979694223" />
+			<attack physical="104552.878655798" magical="17857.5089581716" critical="4" attackSpeed="253" range="40" type="SWORD" distance="80" width="120" random="10" accuracy="5" />
+			<defence physical="736.328468436786" magical="426.831851463676" />
 			<attribute>
 				<defence fire="250" water="200" wind="250" earth="250" holy="250" dark="250" />
 				<attack type="FIRE" value="330" />
@@ -2377,13 +2381,13 @@
 		<race>HUMANOID</race>
 		<sex>MALE</sex>
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="443936" hpRegen="8.5" mp="23550" mpRegen="30" />
+			<vitals hp="443936.12716763" hpRegen="8.5" mp="23550.495049505" mpRegen="30" />
 			<speed>
 				<walk ground="30" />
 				<run ground="210" />
 			</speed>
-			<attack physical="75762.9315245988" magical="21379.1984705962" critical="4" attackSpeed="253" range="40" type="SWORD" distance="80" width="120" random="10" accuracy="5" />
-			<defence physical="735.980486071829" magical="426.676979694223" />
+			<attack physical="104552.878655798" magical="17857.5089581716" critical="4" attackSpeed="253" range="40" type="SWORD" distance="80" width="120" random="10" accuracy="5" />
+			<defence physical="736.328468436786" magical="426.831851463676" />
 			<attribute>
 				<defence fire="250" water="200" wind="250" earth="250" holy="250" dark="250" />
 				<attack type="FIRE" value="330" />
@@ -2426,13 +2430,13 @@
 		<race>HUMANOID</race>
 		<sex>MALE</sex>
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="443936" hpRegen="8.5" mp="23550" mpRegen="30" />
+			<vitals hp="443936.12716763" hpRegen="8.5" mp="23550.495049505" mpRegen="30" />
 			<speed>
 				<walk ground="30" />
 				<run ground="210" />
 			</speed>
-			<attack physical="75762.9315245988" magical="21379.1984705962" critical="4" attackSpeed="253" range="40" type="SWORD" distance="80" width="120" random="10" accuracy="5" />
-			<defence physical="735.980486071829" magical="426.676979694223" />
+			<attack physical="104552.878655798" magical="17857.5089581716" critical="4" attackSpeed="253" range="40" type="SWORD" distance="80" width="120" random="10" accuracy="5" />
+			<defence physical="736.328468436786" magical="426.831851463676" />
 			<attribute>
 				<defence fire="250" water="200" wind="250" earth="250" holy="250" dark="250" />
 				<attack type="FIRE" value="330" />
@@ -2488,13 +2492,13 @@
 		<race>HUMANOID</race>
 		<sex>MALE</sex>
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="1877539" hpRegen="8.5" mp="22800" mpRegen="30" />
+			<vitals hp="1877539.30635838" hpRegen="8.5" mp="22800" mpRegen="30" />
 			<speed>
 				<walk ground="30" />
 				<run ground="210" />
 			</speed>
-			<attack physical="128810.835640155" magical="11368.0387932822" critical="4" attackSpeed="253" range="40" type="SWORD" distance="80" width="120" random="10" accuracy="5" />
-			<defence physical="3537" magical="2031" />
+			<attack physical="177759.333154583" magical="9495.54600246405" critical="4" attackSpeed="253" range="40" type="SWORD" distance="80" width="120" random="10" accuracy="5" />
+			<defence physical="3537.23404255319" magical="2031.10736605575" />
 			<attribute>
 				<defence fire="250" water="200" wind="250" earth="250" holy="250" dark="250" />
 				<attack type="FIRE" value="330" />
@@ -2545,13 +2549,13 @@
 		<race>HUMANOID</race>
 		<sex>MALE</sex>
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="1877539" hpRegen="8.5" mp="22800" mpRegen="30" />
+			<vitals hp="1877539.30635838" hpRegen="8.5" mp="22800" mpRegen="30" />
 			<speed>
 				<walk ground="30" />
 				<run ground="240" />
 			</speed>
-			<attack physical="128810.835640155" magical="11368.0387932822" critical="4" attackSpeed="253" range="40" type="SWORD" distance="80" width="120" random="10" accuracy="5" />
-			<defence physical="3537" magical="2031" />
+			<attack physical="177759.333154583" magical="9495.54600246405" critical="4" attackSpeed="253" range="40" type="SWORD" distance="80" width="120" random="10" accuracy="5" />
+			<defence physical="3537.23404255319" magical="2031.10736605575" />
 			<attribute>
 				<defence fire="250" water="200" wind="250" earth="250" holy="250" dark="250" />
 				<attack type="FIRE" value="330" />
@@ -2750,13 +2754,13 @@
 		<sex>MALE</sex>
 		<mpReward value="20" type="PER" ticks="10" affects="PARTY" />
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="33003" hpRegen="113.419259781018" mp="1708" mpRegen="3" />
+			<vitals hp="33003.4682080925" hpRegen="113.419259781018" mp="1708.25082508251" mpRegen="3" />
 			<speed>
 				<walk ground="45" />
 				<run ground="180" />
 			</speed>
-			<attack physical="5770.14557436436" magical="3940.26143244462" critical="4" attackSpeed="253" range="40" type="SWORD" distance="80" width="120" random="10" accuracy="5" />
-			<defence physical="364.9655011" magical="400.5988747" />
+			<attack physical="7962.94428044442" magical="3364.82309804408" critical="4" attackSpeed="253" range="40" type="SWORD" distance="80" width="120" random="10" accuracy="5" />
+			<defence physical="365.08875739645" magical="400.726463178862" />
 			<abnormalResist physical="0" magical="0" />
 		</stats>
 		<status attackable="false" undying="false" />
@@ -2775,13 +2779,13 @@
 		<sex>MALE</sex>
 		<mpReward value="20" type="PER" ticks="10" affects="PARTY" />
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="279259" hpRegen="8.5" mp="18818" mpRegen="30" />
+			<vitals hp="279259.537572254" hpRegen="8.5" mp="18818.4818481848" mpRegen="30" />
 			<speed>
 				<walk ground="45" />
 				<run ground="180" />
 			</speed>
-			<attack physical="8473.12270122973" magical="1523.48411932688" critical="4" attackSpeed="253" range="40" type="SWORD" distance="80" width="120" random="10" accuracy="5" />
-			<defence physical="171.6563764" magical="93.38665848" />
+			<attack physical="11693.004919469" magical="1290.11060542951" critical="4" attackSpeed="253" range="40" type="SWORD" distance="80" width="120" random="10" accuracy="5" />
+			<defence physical="172.159090909091" magical="93.7593759375938" />
 			<abnormalResist physical="0" magical="0" />
 		</stats>
 		<status attackable="false" undying="false" />
@@ -2801,13 +2805,13 @@
 		<sex>MALE</sex>
 		<mpReward value="20" type="PER" ticks="10" affects="PARTY" />
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="295833" hpRegen="8.5" mp="20238" mpRegen="30" />
+			<vitals hp="295833.526011561" hpRegen="8.5" mp="20238.2838283828" mpRegen="30" />
 			<speed>
 				<walk ground="45" />
 				<run ground="180" />
 			</speed>
-			<attack physical="30753.7461911858" magical="5491.83510354412" critical="4" attackSpeed="253" range="40" type="SWORD" distance="80" width="120" random="10" accuracy="5" />
-			<defence physical="290.3224723" magical="161.0646835" />
+			<attack physical="42440.2770212435" magical="4623.44229852899" critical="4" attackSpeed="253" range="40" type="SWORD" distance="80" width="120" random="10" accuracy="5" />
+			<defence physical="290.60773480663" magical="161.187389457178" />
 			<abnormalResist physical="0" magical="0" />
 		</stats>
 		<status attackable="false" undying="false" />
@@ -2827,13 +2831,13 @@
 		<sex>MALE</sex>
 		<mpReward value="20" type="PER" ticks="10" affects="PARTY" />
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="355923" hpRegen="8.5" mp="34200" mpRegen="30" />
+			<vitals hp="355923.121387283" hpRegen="8.5" mp="34200" mpRegen="30" />
 			<speed>
 				<walk ground="45" />
 				<run ground="180" />
 			</speed>
-			<attack physical="42936.9452133851" magical="15457.3002768186" critical="4" attackSpeed="253" range="40" type="SWORD" distance="80" width="120" random="10" accuracy="5" />
-			<defence physical="266.7914103" magical="191.4552947" />
+			<attack physical="59253.3696804483" magical="12939.8339994501" critical="4" attackSpeed="253" range="40" type="SWORD" distance="80" width="120" random="10" accuracy="5" />
+			<defence physical="267.204301075269" magical="191.63206643245" />
 			<abnormalResist physical="0" magical="0" />
 		</stats>
 		<status attackable="false" undying="false" />
@@ -3169,13 +3173,13 @@
 		<race>HUMANOID</race>
 		<sex>MALE</sex>
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="99999999" hpRegen="1" mp="10000000" mpRegen="3000" />
+			<vitals hp="99999999.4219653" hpRegen="1" mp="10000000" mpRegen="3000" />
 			<speed>
 				<walk ground="30" />
 				<run ground="240" />
 			</speed>
-			<attack physical="23610.1029394933" magical="5767.28134561036" critical="4" attackSpeed="253" range="40" type="FIST" distance="0" width="0" random="0" accuracy="5" />
-			<defence physical="3679.90243035914" magical="2133.38489847112" />
+			<attack physical="32582.0544769175" magical="4817.29706022657" critical="4" attackSpeed="253" range="40" type="FIST" distance="0" width="0" random="0" accuracy="5" />
+			<defence physical="3680.31914893617" magical="2133.62825644267" />
 			<attribute>
 				<defence fire="350" water="300" wind="350" earth="350" holy="350" dark="350" />
 				<attack type="FIRE" value="400" />
@@ -3365,7 +3369,7 @@
 			<height normal="47.5" />
 		</collision>
 	</npc>
-	<npc id="19294" level="90" type="Monster" name="Cocoon Destroyer" title="Violent">
+	<npc id="19294" level="93" type="Monster" name="Cocoon Destroyer" title="Violent">
 		<parameters>
 			<param name="IsAggressive" value="1" />
 			<param name="party_mode" value="1" />
@@ -3377,13 +3381,13 @@
 		<sex>MALE</sex>
 		<acquire exp="1458000" sp="349" />
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="14467" hpRegen="8.5" mp="2132" mpRegen="3" />
+			<vitals hp="14467.0520231214" hpRegen="8.5" mp="2132.01320132013" mpRegen="3" />
 			<speed>
 				<walk ground="13" />
 				<run ground="180" />
 			</speed>
-			<attack physical="5065.71248916851" magical="899.53769081202" critical="4" attackSpeed="253" range="40" type="SWORD" distance="80" width="120" random="10" accuracy="5" />
-			<defence physical="466.806863913762" magical="262.801587405588" />
+			<attack physical="6990.9334549809" magical="756.470134767893" critical="4" attackSpeed="253" range="40" type="SWORD" distance="80" width="120" random="10" accuracy="5" />
+			<defence physical="560.348742166924" magical="228.576912332244" />
 			<attribute>
 				<attack type="EARTH" value="180" />
 				<defence fire="100" water="100" wind="50" earth="100" holy="100" dark="100" />
@@ -3420,13 +3424,13 @@
 		<race>CONSTRUCT</race>
 		<sex>MALE</sex>
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="5382" hpRegen="8.5" mp="2023" mpRegen="3" />
+			<vitals hp="5382.08092485549" hpRegen="8.5" mp="2023.10231023102" mpRegen="3" />
 			<speed>
 				<walk ground="1" />
 				<run ground="20" />
 			</speed>
-			<attack physical="1423.72742984904" magical="972.221273543337" critical="4" attackSpeed="253" range="40" type="SWORD" distance="80" width="120" random="5" accuracy="5" />
-			<defence physical="379.98257" magical="278.05475" />
+			<attack physical="1965.03928007918" magical="820.444117067458" critical="4" attackSpeed="253" range="40" type="SWORD" distance="80" width="120" random="5" accuracy="5" />
+			<defence physical="456.424581005587" magical="242.093677427009" />
 			<attribute>
 				<defence fire="20" water="20" wind="20" earth="20" holy="20" dark="20" />
 			</attribute>
@@ -3452,13 +3456,13 @@
 		<race>CONSTRUCT</race>
 		<sex>MALE</sex>
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="47374.776435" hpRegen="8.5" mp="1729.052" mpRegen="3" />
+			<vitals hp="14467.0520231214" hpRegen="8.5" mp="2132.01320132013" mpRegen="3" />
 			<speed>
 				<walk ground="250" />
 				<run ground="100" />
 			</speed>
-			<attack physical="5065.71248916851" magical="899.53769081202" critical="4" attackSpeed="253" range="40" type="SWORD" distance="80" width="120" random="10" accuracy="5" />
-			<defence physical="466.806863913762" magical="262.801587405588" />
+			<attack physical="6990.9334549809" magical="756.470134767893" critical="4" attackSpeed="253" range="40" type="SWORD" distance="80" width="120" random="10" accuracy="5" />
+			<defence physical="560.43956043956" magical="228.642071087185" />
 			<attribute>
 				<defence fire="100" water="100" wind="50" earth="100" holy="100" dark="100" />
 				<attack type="EARTH" value="180" />
@@ -3487,13 +3491,13 @@
 		<race>ETC</race>
 		<sex>ETC</sex>
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="14467" hpRegen="8.5" mp="2132" mpRegen="3" />
+			<vitals hp="14467.0520231214" hpRegen="8.5" mp="2132.01320132013" mpRegen="3" />
 			<speed>
 				<walk ground="50" />
 				<run ground="100" />
 			</speed>
-			<attack physical="5065.71248916851" magical="899.53769081202" critical="4" attackSpeed="253" range="40" type="SWORD" distance="80" width="120" random="10" accuracy="5" />
-			<defence physical="466.806863913762" magical="262.801587405588" />
+			<attack physical="6990.9334549809" magical="756.470134767893" critical="4" attackSpeed="253" range="40" type="SWORD" distance="80" width="120" random="10" accuracy="5" />
+			<defence physical="560.43956043956" magical="228.642071087185" />
 			<attribute>
 				<attack type="EARTH" value="180" />
 				<defence fire="100" water="100" wind="50" earth="100" holy="100" dark="100" />
@@ -3542,13 +3546,13 @@
 		<sex>MALE</sex>
 		<mpReward value="920" type="DIFF" ticks="5" affects="PARTY" />
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="14467" hpRegen="8.5" mp="2132" mpRegen="3" />
+			<vitals hp="14467.0520231214" hpRegen="8.5" mp="2132.01320132013" mpRegen="3" />
 			<speed>
 				<walk ground="45" />
 				<run ground="300" />
 			</speed>
-			<attack physical="5065.71248916851" magical="899.53769081202" critical="4" attackSpeed="253" range="40" type="SWORD" distance="80" width="120" random="10" accuracy="5" />
-			<defence physical="466.806863913762" magical="262.801587405588" />
+			<attack physical="6990.9334549809" magical="756.470134767893" critical="4" attackSpeed="253" range="40" type="SWORD" distance="80" width="120" random="10" accuracy="5" />
+			<defence physical="560.43956043956" magical="228.642071087185" />
 			<attribute>
 				<defence fire="100" water="100" wind="50" earth="100" holy="100" dark="100" />
 				<attack type="EARTH" value="180" />
@@ -3585,13 +3589,13 @@
 		<race>HUMANOID</race>
 		<sex>MALE</sex>
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="321920" hpRegen="8.5" mp="22058" mpRegen="30" />
+			<vitals hp="321920.231213873" hpRegen="8.5" mp="22058.0858085809" mpRegen="30" />
 			<speed>
 				<walk ground="40" />
 				<run ground="160" />
 			</speed>
-			<attack physical="13006.6570723381" magical="2302.7074232383" critical="4" attackSpeed="253" range="40" type="SWORD" distance="80" width="120" random="10" accuracy="5" />
-			<defence physical="310.826151178162" magical="176.707787371517" />
+			<attack physical="17949.4571895181" magical="1932.03612219719" critical="4" attackSpeed="253" range="40" type="SWORD" distance="80" width="120" random="10" accuracy="5" />
+			<defence physical="373.369565217391" magical="153.786645205163" />
 			<attribute>
 				<defence fire="250" water="250" wind="200" earth="250" holy="250" dark="250" />
 				<attack type="EARTH" value="330" />

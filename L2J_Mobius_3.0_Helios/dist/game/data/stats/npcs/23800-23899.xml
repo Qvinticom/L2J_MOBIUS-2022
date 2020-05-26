@@ -3,14 +3,14 @@
 	<npc id="23800" level="102" type="Monster" name="Delta Kshana" title="Superion Scout">
 		<race>GIANT</race>
 		<acquire exp="908048947" sp="908061" />
-		<stats>
-			<vitals hp="283012" hpRegen="11.5" mp="24308" mpRegen="3.9" />
+		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
+			<vitals hp="283012.716763006" hpRegen="11.5" mp="24308.2508250825" mpRegen="3.9" />
 			<speed>
 				<walk ground="55" />
 				<run ground="140" />
 			</speed>
-			<attack physical="49047.619047619" magical="8655.46218487395" critical="4" attackSpeed="398" range="40" />
-			<defence physical="3814.81481481481" magical="2215.05376344086" />
+			<attack physical="333994.155065416" magical="51976.9444935764" critical="4" attackSpeed="398" range="40" />
+			<defence physical="2231.41361256545" magical="1293.5220223593" />
 			<attribute>
 			<defence fire="150" water="150" wind="150" earth="150" holy="150" dark="150" default="150" />
 			</attribute>
@@ -48,12 +48,14 @@
 			</lucky>
 		</dropLists>
 	</npc>
-	<npc id="23801" level="89" type="Monster" name="Lillim Royal Knight">
+	<npc id="23801" level="101" type="Monster" name="Lillim Royal Knight">
 		<!-- Lillim Royal Knight ?? -->
 		<race>DEMONIC</race>
 		<equipment rhand="5800" lhand="5799" />
-		<stats>
+		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
 			<vitals hp="58233" hpRegen="10.5" mp="24308" mpRegen="3.6" />
+			<attack physical="59542.3510592642" magical="9095.40427545412" critical="4" attackSpeed="253" range="40" />
+			<defence physical="1988.94736842105" magical="1153.03109258294" />
 			<speed>
 				<walk ground="56" />
 				<run ground="180" />
@@ -83,11 +85,13 @@
 			</spoil>
 		</dropLists>
 	</npc>
-	<npc id="23802" level="87" type="Monster" name="Lillim Slayer">
+	<npc id="23802" level="101" type="Monster" name="Lillim Slayer">
 		<!-- Lillim Slayer ?? -->
 		<race>DEMONIC</race>
-		<stats>
+		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
 			<vitals hp="58233" hpRegen="10.5" mp="24690" mpRegen="3.6" />
+			<attack physical="59542.3510592642" magical="9095.40427545412" critical="4" attackSpeed="253" range="40" />
+			<defence physical="1988.94736842105" magical="1153.03109258294" />
 			<speed>
 				<walk ground="36" />
 				<run ground="180" />
@@ -122,14 +126,14 @@
 		<race>DIVINE</race>
 		<acquire exp="13963332" sp="13975" />
 		<equipment rhand="5793" />
-		<stats>
-			<vitals hp="58233" hpRegen="10.5" mp="24308" mpRegen="3.6" />
+		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
+			<vitals hp="58233.5260115607" hpRegen="10.5" mp="24308.2508250825" mpRegen="3.6" />
 			<speed>
 				<walk ground="49" />
 				<run ground="180" />
 			</speed>
-			<attack physical="23610.1029394933" magical="5767.28134561036" random="10" critical="4" accuracy="5" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
-			<defence physical="3839.95121517957" magical="2066.69244923556" />
+			<attack physical="59542.3510592642" magical="9095.40427545412" random="10" critical="4" accuracy="5" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="1988.94736842105" magical="1153.03109258294" />
 			<attribute>
 			<defence fire="150" water="150" wind="150" earth="150" holy="150" dark="150" default="150" />
 			</attribute>
@@ -147,11 +151,13 @@
 			<skill id="16776" level="1" /> <!-- Sleep -->
 		</skillList>
 	</npc>
-	<npc id="23804" level="88" type="Monster" name="Lillim Great Magus">
+	<npc id="23804" level="101" type="Monster" name="Lillim Great Magus">
 		<!-- Lillim Great Magus ?? -->
 		<race>DEMONIC</race>
-		<stats>
+		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
 			<vitals hp="58233" hpRegen="10.5" mp="24690" mpRegen="3.6" />
+			<attack physical="59542.3510592642" magical="9095.40427545412" critical="4" attackSpeed="253" range="40" />
+			<defence physical="1988.94736842105" magical="1153.03109258294" />
 			<speed>
 				<walk ground="50" />
 				<run ground="180" />
@@ -181,11 +187,13 @@
 			</spoil>
 		</dropLists>
 	</npc>
-	<npc id="23805" level="92" type="Monster" name="Nephilim Royal Guard">
+	<npc id="23805" level="101" type="Monster" name="Nephilim Royal Guard">
 		<!-- Nephilim Royal Guard ?? -->
 		<race>DIVINE</race>
-		<stats>
+		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
 			<vitals hp="58233" hpRegen="10.5" mp="24308" mpRegen="3.6" />
+			<attack physical="59542.3510592642" magical="9095.40427545412" critical="4" attackSpeed="253" range="40" />
+			<defence physical="1988.94736842105" magical="1153.03109258294" />
 			<speed>
 				<walk ground="65" />
 				<run ground="180" />
@@ -219,8 +227,10 @@
 		<!-- Wandering Dead of the Dimension ?? -->
 		<race>UNDEAD</race>
 		<acquire exp="27926665" sp="27950" />
-		<stats>
+		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
 			<vitals hp="58233" hpRegen="10.5" mp="24308" mpRegen="3.6" />
+			<attack physical="59542.3510592642" magical="9095.40427545412" critical="4" attackSpeed="253" range="40" />
+			<defence physical="1988.94736842105" magical="1153.03109258294" />
 			<speed>
 				<walk ground="39" />
 				<run ground="180" />
@@ -248,8 +258,10 @@
 		<!-- Wandering Dimensional Spirit ?? -->
 		<race>BEAST</race>
 		<acquire exp="27926665" sp="27950" />
-		<stats>
+		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
 			<vitals hp="58233" hpRegen="10.5" mp="24690" mpRegen="3.6" />
+			<attack physical="59542.3510592642" magical="9095.40427545412" critical="4" attackSpeed="253" range="40" />
+			<defence physical="1988.94736842105" magical="1153.03109258294" />
 			<speed>
 				<walk ground="88" />
 				<run ground="180" />
@@ -277,8 +289,10 @@
 		<!-- Lost Soul of the Dimension ?? -->
 		<race>UNDEAD</race>
 		<acquire exp="27926665" sp="27950" />
-		<stats>
+		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
 			<vitals hp="58233" hpRegen="10.5" mp="24308" mpRegen="3.6" />
+			<attack physical="59542.3510592642" magical="9095.40427545412" critical="4" attackSpeed="253" range="40" />
+			<defence physical="1988.94736842105" magical="1153.03109258294" />
 			<speed>
 				<walk ground="39" />
 				<run ground="180" />
@@ -306,8 +320,10 @@
 		<!-- Lost Dimensional Evil Thoughts ?? -->
 		<race>DEMONIC</race>
 		<acquire exp="27926665" sp="27950" />
-		<stats>
+		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
 			<vitals hp="58233" hpRegen="10.5" mp="24690" mpRegen="3.6" />
+			<attack physical="59542.3510592642" magical="9095.40427545412" critical="4" attackSpeed="253" range="40" />
+			<defence physical="1988.94736842105" magical="1153.03109258294" />
 			<speed>
 				<walk ground="50" />
 				<run ground="180" />
@@ -336,8 +352,10 @@
 		<race>HUMANOID</race>
 		<acquire exp="27926665" sp="27950" />
 		<equipment rhand="10128" />
-		<stats>
+		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
 			<vitals hp="58233" hpRegen="10.5" mp="24308" mpRegen="3.6" />
+			<attack physical="59542.3510592642" magical="9095.40427545412" critical="8" attackSpeed="253" range="400" />
+			<defence physical="1988.94736842105" magical="1153.03109258294" />
 			<speed>
 				<walk ground="36" />
 				<run ground="180" />
@@ -367,13 +385,13 @@
 		<sex>FEMALE</sex>
 		<acquire exp="20777923" sp="20778" />
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="37639" hpRegen="10.5" mp="23550" mpRegen="3.6" />
+			<vitals hp="37639.8843930636" hpRegen="10.5" mp="23550.495049505" mpRegen="3.6" />
 			<speed>
 				<walk ground="60" />
 				<run ground="160" />
 			</speed>
-			<attack physical="27349" magical="21195" critical="4" attackSpeed="253" range="40" />
-			<defence physical="11721" magical="11775" />
+			<attack physical="94440.7204706402" magical="13873.7978952135" critical="4" attackSpeed="253" range="40" />
+			<defence physical="1051.59574468085" magical="609.858858226248" />
 			<attribute>
 				<defence fire="250" water="200" wind="250" earth="250" holy="250" dark="250" />
 				<attack type="FIRE" value="330" />
@@ -404,13 +422,13 @@
 		<race>DEMONIC</race>
 		<acquire exp="20777923" sp="20778" />
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="37639" hpRegen="10.5" mp="23550" mpRegen="3.6" />
+			<vitals hp="37639.8843930636" hpRegen="10.5" mp="23550.495049505" mpRegen="3.6" />
 			<speed>
 				<walk ground="70" />
 				<run ground="160" />
 			</speed>
-			<attack physical="27349" magical="21195" critical="4" attackSpeed="253" range="40" />
-			<defence physical="11721" magical="11775" />
+			<attack physical="94440.7204706402" magical="13873.7978952135" critical="4" attackSpeed="253" range="40" />
+			<defence physical="1051.59574468085" magical="609.858858226248" />
 			<attribute>
 				<defence fire="250" water="200" wind="250" earth="250" holy="250" dark="250" />
 				<attack type="FIRE" value="330" />
@@ -441,13 +459,13 @@
 		<race>ETC</race>
 		<acquire exp="20777923" sp="20778" />
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="37639" hpRegen="10.5" mp="23550" mpRegen="3.6" />
+			<vitals hp="37639.8843930636" hpRegen="10.5" mp="23550.495049505" mpRegen="3.6" />
 			<speed>
 				<walk ground="13" />
 				<run ground="160" />
 			</speed>
-			<attack physical="27349" magical="21195" critical="4" attackSpeed="253" range="40" />
-			<defence physical="11721" magical="11775" />
+			<attack physical="94440.7204706402" magical="13873.7978952135" critical="4" attackSpeed="253" range="40" />
+			<defence physical="1051.59574468085" magical="609.858858226248" />
 			<attribute>
 				<defence fire="250" water="200" wind="250" earth="250" holy="250" dark="250" />
 				<attack type="FIRE" value="330" />
@@ -479,13 +497,13 @@
 		<race>ELEMENTAL</race>
 		<acquire exp="20777923" sp="20778" />
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="37639" hpRegen="10.5" mp="23550" mpRegen="3.6" />
+			<vitals hp="37639.8843930636" hpRegen="10.5" mp="23550.495049505" mpRegen="3.6" />
 			<speed>
 				<walk ground="38" />
 				<run ground="160" />
 			</speed>
-			<attack physical="27349" magical="21195" critical="4" attackSpeed="253" range="40" />
-			<defence physical="11721" magical="11775" />
+			<attack physical="94440.7204706402" magical="13873.7978952135" critical="4" attackSpeed="253" range="40" />
+			<defence physical="1051.59574468085" magical="609.858858226248" />
 			<attribute>
 				<defence fire="250" water="200" wind="250" earth="250" holy="250" dark="250" />
 				<attack type="FIRE" value="330" />
@@ -516,13 +534,13 @@
 		<race>HUMANOID</race>
 		<acquire exp="20777923" sp="20778" />
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="37639" hpRegen="10.5" mp="23550" mpRegen="3.6" />
+			<vitals hp="37639.8843930636" hpRegen="10.5" mp="23550.495049505" mpRegen="3.6" />
 			<speed>
 				<walk ground="46" />
 				<run ground="160" />
 			</speed>
-			<attack physical="27349" magical="21195" critical="4" attackSpeed="253" range="40" />
-			<defence physical="11721" magical="11775" />
+			<attack physical="94440.7204706402" magical="13873.7978952135" critical="4" attackSpeed="253" range="40" />
+			<defence physical="1051.59574468085" magical="609.858858226248" />
 			<attribute>
 				<defence fire="250" water="200" wind="250" earth="250" holy="250" dark="250" />
 				<attack type="FIRE" value="330" />

@@ -5,9 +5,9 @@
 		<sex>MALE</sex>
 		<acquire exp="9058597719" sp="2174064" raidPoints="100" />
 		<stats str="164" int="188" dex="55" wit="78" con="111" men="149">
-			<vitals hp="27923851.21218" hpRegen="379.3777269" mp="112166.166" mpRegen="3" />
-			<attack physical="236100.20588" magical="41520.885138" random="30" critical="4.75" accuracy="4.75" attackSpeed="250" type="SWORD" range="40" distance="80" width="120" />
-			<defence physical="24330.717385" magical="11870.210597" />
+			<vitals hp="227125529.422745" hpRegen="379.3777269" mp="46148.8763761491" mpRegen="3" />
+			<attack physical="277597.722358994" magical="142687.711009491" random="30" critical="4" accuracy="4.75" attackSpeed="250" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="14422.3135611433" magical="12541.9014684005" />
 			<attribute>
 				<defence fire="750" water="750" wind="750" earth="750" holy="650" dark="750" />
 				<attack type="DARK" value="750" />
@@ -171,13 +171,13 @@
 		<race>GIANT</race>
 		<sex>MALE</sex>
 		<stats str="164" int="188" dex="55" wit="78" con="111" men="149">
-			<vitals hp="247524303" hpRegen="1842.10526315789" mp="51696" mpRegen="1944.44444444444" />
+			<vitals hp="247524303.233935" hpRegen="1842.10526315789" mp="51696.3036963037" mpRegen="1944.44444444444" />
 			<speed>
 				<walk ground="40" />
 				<run ground="180" />
 			</speed>
-			<attack physical="301079.7437" magical="215919.4101" critical="4.75" accuracy="4.75" attackSpeed="253" range="40" />
-			<defence physical="34907.01512" magical="17038.26718" />
+			<attack physical="2247422.68041237" magical="916616.487631411" critical="4" accuracy="4.75" attackSpeed="253" range="40" />
+			<defence physical="89896.9072164948" magical="44948.608092938" />
 			<attribute>
 				<defence fire="750" water="750" wind="650" earth="750" holy="750" dark="750" />
 				<attack type="EARTH" value="750" />
@@ -207,7 +207,7 @@
 		<race>GIANT</race>
 		<sex>MALE</sex>
 		<stats str="164" int="188" dex="55" wit="78" con="111" men="149">
-			<vitals hp="247524303" hpRegen="1842.10526315789" mp="51696" mpRegen="1944.44444444444" />
+			<vitals hp="247524303.233935" hpRegen="1842.10526315789" mp="51696.3036963037" mpRegen="1944.44444444444" />
 			<attribute>
 				<defence fire="750" water="750" wind="650" earth="750" holy="750" dark="750" />
 				<attack type="EARTH" value="750" />
@@ -217,8 +217,8 @@
 				<walk ground="40" />
 				<run ground="180" />
 			</speed>
-			<attack physical="301079.7437" magical="215919.4101" critical="4.75" accuracy="4.75" attackSpeed="253" range="40" />
-			<defence physical="34907.01512" magical="17038.26718" />
+			<attack physical="2247422.68041237" magical="916616.487631411" critical="4" accuracy="4.75" attackSpeed="253" range="40" />
+			<defence physical="89896.9072164948" magical="44948.608092938" />
 		</stats>
 		<status canMove="false" />
 		<skillList>
@@ -244,7 +244,7 @@
 		<sex>MALE</sex>
 		<acquire exp="6127016742000" sp="12254033484" raidPoints="1000" />
 		<stats str="164" int="188" dex="55" wit="78" con="111" men="149">
-			<vitals hp="371833140.10898" hpRegen="444.7141361" mp="84773.83" mpRegen="3.3" />
+			<vitals hp="247524303.233935" hpRegen="444.7141361" mp="51696.3036963037" mpRegen="3.3" />
 			<attribute>
 				<defence fire="750" water="750" wind="650" earth="750" holy="750" dark="750" />
 				<attack type="EARTH" value="750" />
@@ -254,8 +254,8 @@
 				<walk ground="40" />
 				<run ground="180" />
 			</speed>
-			<attack physical="301079.7437" magical="215919.4101" critical="4.75" accuracy="4.75" attackSpeed="253" range="40" />
-			<defence physical="34907.01512" magical="17038.26718" />
+			<attack physical="2247422.68041237" magical="916616.487631411" critical="4" accuracy="4.75" attackSpeed="253" range="40" />
+			<defence physical="89896.9072164948" magical="44948.608092938" />
 		</stats>
 		<status canMove="false" />
 		<skillList>
@@ -367,8 +367,10 @@
 	<npc id="29306" level="99" type="Monster" name="Leopold" title="Superion Siege Cannon">
 		<!-- Leopold - Title: Superion Siege Cannon ?? -->
 		<race>ETC</race>
-		<stats>
+		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
 			<vitals hp="600826" hpRegen="10.5" mp="25848" mpRegen="3.6" />
+			<attack physical="2118998.52724595" magical="987999.233689125" critical="4" attackSpeed="253" range="40" />
+			<defence physical="84759.941089838" magical="42379.970544919" />
 			<speed>
 				<walk ground="1" />
 				<run ground="230" />
@@ -389,10 +391,10 @@
 		<!-- Helios Red Lightning - Title: Enuma Elish ?? -->
 		<race>ETC</race>
 		<acquire exp="0" sp="0" />
-		<stats>
-			<vitals hp="168928" hpRegen="10.5" mp="2355" mpRegen="3.6" />
-			<attack physical="1200000.231122922" magical="110000.9036091231" critical="4" attackSpeed="253" range="900" type="BOW" distance="10"/>
-			<defence physical="1114347.718797982" magical="1112100.4713645644" />
+		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
+			<vitals hp="159275.821635012" hpRegen="10.5" mp="2220.53748231966" mpRegen="3.6" />
+			<attack physical="2118998.52724595" magical="987999.233689125" critical="4" attackSpeed="253" range="900" type="BOW" distance="10"/>
+			<defence physical="84759.941089838" magical="42379.970544919" />
 			<speed>
 				<walk ground="10" />
 				<run ground="230" />
@@ -414,10 +416,10 @@
 		<!-- Helios Blue Lightning - Title: Enuma Elish ?? -->
 		<race>ETC</race>
 		<acquire exp="0" sp="0" />
-		<stats>
-			<vitals hp="168928" hpRegen="10.5" mp="2355" mpRegen="3.6" />
-			<attack physical="1200000.231122922" magical="110000.9036091231" critical="4" attackSpeed="253" range="900" type="BOW" distance="10"/>
-			<defence physical="1114347.718797982" magical="1112100.4713645644" />
+		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
+			<vitals hp="159275.821635012" hpRegen="10.5" mp="2220.53748231966" mpRegen="3.6" />
+			<attack physical="2118998.52724595" magical="987999.233689125" critical="4" attackSpeed="253" range="900" type="BOW" distance="10"/>
+			<defence physical="84759.941089838" magical="42379.970544919" />
 			<speed>
 				<walk ground="10" />
 				<run ground="230" />
@@ -443,9 +445,9 @@
 		<race>GIANT</race>
 		<sex>MALE</sex>
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="2403304" hpRegen="7.5" mp="25848" mpRegen="2.7" />
-			<attack physical="47220.231122922" magical="8304.9036091231" critical="4" attackSpeed="253" range="900" type="BOW" distance="10"/>
-			<defence physical="4347.718797982" magical="2100.4713645644" />
+			<vitals hp="2403304.04624277" hpRegen="7.5" mp="25848.1848184818" mpRegen="2.7" />
+			<attack physical="2247422.68041237" magical="1047877.97512483" critical="4" attackSpeed="253" range="900" type="BOW" distance="10"/>
+			<defence physical="33711.8556701031" magical="16855.8402231976" />
 			<attribute>
 				<defence fire="300" water="300" wind="250" earth="350" holy="300" dark="300" />
 				<attack type="EARTH" value="430" />
@@ -479,9 +481,9 @@
 		<race>GIANT</race>
 		<sex>MALE</sex>
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="2403304" hpRegen="7.5" mp="25848" mpRegen="2.7" />
-			<attack physical="47220.231122922" magical="8304.9036091231" critical="4" attackSpeed="253" range="40" />
-			<defence physical="4347.718797982" magical="2100.4713645644" />
+			<vitals hp="2403304.04624277" hpRegen="7.5" mp="25848.1848184818" mpRegen="2.7" />
+			<attack physical="2247422.68041237" magical="1047877.97512483" critical="4" attackSpeed="253" range="40" />
+			<defence physical="33711.8556701031" magical="16855.8402231976" />
 			<attribute>
 				<defence fire="300" water="300" wind="250" earth="350" holy="300" dark="300" />
 				<attack type="EARTH" value="430" />
@@ -516,9 +518,9 @@
 		<race>GIANT</race>
 		<sex>MALE</sex>
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="3004130" hpRegen="7.5" mp="25848" mpRegen="2.7" />
-			<attack physical="47220.231122922" magical="8304.9036091231" critical="4" attackSpeed="253" range="40" />
-			<defence physical="4347.718797982" magical="2100.4713645644" />
+			<vitals hp="3004130.05780347" hpRegen="7.5" mp="25848.1848184818" mpRegen="2.7" />
+			<attack physical="3034021.00066487" magical="1886180.30036932" critical="4" attackSpeed="253" range="40" />
+			<defence physical="33711.8556701031" magical="16855.8402231976" />
 			<attribute>
 				<defence fire="300" water="300" wind="250" earth="350" holy="300" dark="300" />
 				<attack type="EARTH" value="430" />
@@ -559,9 +561,9 @@
 		<sex>MALE</sex>
 		<equipment rhand="47163" />
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="3004130" hpRegen="7.5" mp="25848" mpRegen="2.7" />
-			<attack physical="47220.231122922" magical="8304.9036091231" critical="4" attackSpeed="253" range="900" type="BOW" distance="10"/>
-			<defence physical="4347.718797982" magical="2100.4713645644" />
+			<vitals hp="3004130.05780347" hpRegen="7.5" mp="25848.1848184818" mpRegen="2.7" />
+			<attack physical="3034021.00066487" magical="1886180.30036932" critical="8" attackSpeed="253" range="900" type="BOW" distance="10"/>
+			<defence physical="33711.8556701031" magical="16855.8402231976" />
 			<attribute>
 				<defence fire="300" water="300" wind="250" earth="350" holy="300" dark="300" />
 				<attack type="EARTH" value="430" />
@@ -600,9 +602,9 @@
 		<race>GIANT</race>
 		<sex>MALE</sex>
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="3004130" hpRegen="7.5" mp="25848" mpRegen="2.7" />
-			<attack physical="47220.231122922" magical="8304.9036091231" critical="4" attackSpeed="253" range="40" />
-			<defence physical="4347.718797982" magical="2100.4713645644" />
+			<vitals hp="3004130.05780347" hpRegen="7.5" mp="25848.1848184818" mpRegen="2.7" />
+			<attack physical="3034021.00066487" magical="1886180.30036932" critical="4" attackSpeed="253" range="40" />
+			<defence physical="33711.8556701031" magical="16855.8402231976" />
 			<attribute>
 				<defence fire="300" water="300" wind="250" earth="350" holy="300" dark="300" />
 				<attack type="EARTH" value="430" />
@@ -643,9 +645,9 @@
 		<race>GIANT</race>
 		<sex>MALE</sex>
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="3004130" hpRegen="7.5" mp="25848" mpRegen="2.7" />
-			<attack physical="47220.231122922" magical="8304.9036091231" critical="4" attackSpeed="253" range="40" />
-			<defence physical="4347.718797982" magical="2100.4713645644" />
+			<vitals hp="3004130.05780347" hpRegen="7.5" mp="25848.1848184818" mpRegen="2.7" />
+			<attack physical="3034021.00066487" magical="1886180.30036932" critical="4" attackSpeed="253" range="40" />
+			<defence physical="33711.8556701031" magical="16855.8402231976" />
 			<attribute>
 				<defence fire="300" water="300" wind="250" earth="350" holy="300" dark="300" />
 				<attack type="EARTH" value="430" />
@@ -684,9 +686,9 @@
 		<race>GIANT</race>
 		<sex>MALE</sex>
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="60082600" hpRegen="7.5" mp="25848" mpRegen="2.7" />
-			<attack physical="47220.231122922" magical="8304.9036091231" critical="4" attackSpeed="253" range="40" />
-			<defence physical="4347.718797982" magical="2100.4713645644" />
+			<vitals hp="60082600" hpRegen="7.5" mp="25848.1848184818" mpRegen="2.7" />
+			<attack physical="3034021.00066487" magical="1886180.30036932" critical="4" attackSpeed="253" range="40" />
+			<defence physical="33711.8556701031" magical="16855.8402231976" />
 			<attribute>
 				<defence fire="300" water="300" wind="250" earth="350" holy="300" dark="300" />
 				<attack type="EARTH" value="430" />
@@ -716,9 +718,9 @@
 		<race>GIANT</race>
 		<sex>MALE</sex>
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="60082600" hpRegen="7.5" mp="25848" mpRegen="2.7" />
-			<attack physical="47220.231122922" magical="8304.9036091231" critical="4" attackSpeed="253" range="40" />
-			<defence physical="4347.718797982" magical="2100.4713645644" />
+			<vitals hp="60082600" hpRegen="7.5" mp="25848.1848184818" mpRegen="2.7" />
+			<attack physical="3034021.00066487" magical="1886180.30036932" critical="4" attackSpeed="253" range="40" />
+			<defence physical="33711.8556701031" magical="16855.8402231976" />
 			<attribute>
 				<defence fire="300" water="300" wind="250" earth="350" holy="300" dark="300" />
 				<attack type="EARTH" value="430" />
@@ -747,14 +749,14 @@
 	<npc id="29317" level="85" type="Monster" name="Lindvior" title="Wind Dragon">
 		<race>ETC</race>
 		<sex>FEMALE</sex>
-		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="209461939" hpRegen="10.5" mp="47100" mpRegen="3.6" />
+		<stats str="164" int="188" dex="55" wit="78" con="111" men="149">
+			<vitals hp="171194854.073111" hpRegen="10.5" mp="38495.5189041728" mpRegen="3.6" />
 			<speed>
 				<walk ground="100" />
 				<run ground="270" />
 			</speed>
-			<attack physical="1950.2231755595" magical="1331.5869440987" critical="4" attackSpeed="253" range="40" />
-			<defence physical="405.85106382979" magical="297.0297029703" />
+			<attack physical="1804005.57991232" magical="723391.437086412" critical="4" attackSpeed="253" range="40" />
+			<defence physical="108240.334794739" magical="54120.2520078566" />
 		</stats>
 		<status attackable="false" />
 		<skillList>
