@@ -47,6 +47,7 @@ import org.l2jmobius.gameserver.handler.IBypassHandler;
 import org.l2jmobius.gameserver.instancemanager.CHSiegeManager;
 import org.l2jmobius.gameserver.instancemanager.CastleManager;
 import org.l2jmobius.gameserver.instancemanager.FortManager;
+import org.l2jmobius.gameserver.instancemanager.RaidBossSpawnManager;
 import org.l2jmobius.gameserver.instancemanager.TownManager;
 import org.l2jmobius.gameserver.instancemanager.WalkingManager;
 import org.l2jmobius.gameserver.instancemanager.ZoneManager;
@@ -1311,7 +1312,7 @@ public class Npc extends Creature
 		super.onDecay();
 		
 		// Decrease its spawn counter
-		if (_spawn != null)
+		if ((_spawn != null) && !RaidBossSpawnManager.getInstance().isDefined(getId()))
 		{
 			_spawn.decreaseCount(this);
 		}

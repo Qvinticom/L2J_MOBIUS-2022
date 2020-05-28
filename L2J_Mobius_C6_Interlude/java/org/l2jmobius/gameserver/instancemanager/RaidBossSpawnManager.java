@@ -185,14 +185,12 @@ public class RaidBossSpawnManager
 			
 			final int RespawnMinDelay = boss.getSpawn().getRespawnMinDelay();
 			final int RespawnMaxDelay = boss.getSpawn().getRespawnMaxDelay();
-			final long respawn_delay = Rnd.get((int) (RespawnMinDelay * 1000 * Config.RAID_MIN_RESPAWN_MULTIPLIER), (int) (RespawnMaxDelay * 1000 * Config.RAID_MAX_RESPAWN_MULTIPLIER));
-			final long respawnTime = Calendar.getInstance().getTimeInMillis() + respawn_delay;
+			final long respawnDelay = Rnd.get((int) (RespawnMinDelay * 1000 * Config.RAID_MIN_RESPAWN_MULTIPLIER), (int) (RespawnMaxDelay * 1000 * Config.RAID_MAX_RESPAWN_MULTIPLIER));
+			final long respawnTime = Calendar.getInstance().getTimeInMillis() + respawnDelay;
 			info.set("currentHP", boss.getMaxHp());
 			info.set("currentMP", boss.getMaxMp());
 			info.set("respawnTime", respawnTime);
-			ScheduledFuture<?> futureSpawn;
-			futureSpawn = ThreadPool.schedule(new SpawnSchedule(boss.getNpcId()), respawn_delay);
-			_schedules.put(boss.getNpcId(), futureSpawn);
+			_schedules.put(boss.getNpcId(), ThreadPool.schedule(new SpawnSchedule(boss.getNpcId()), respawnDelay));
 			
 			// To update immediately the database, used for website to show up RaidBoss status.
 			if (Config.SAVE_RAIDBOSS_STATUS_INTO_DB)

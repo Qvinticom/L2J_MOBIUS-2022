@@ -1136,7 +1136,7 @@ public class Npc extends Creature
 		super.onDecay();
 		
 		// Decrease its spawn counter
-		if (_spawn != null)
+		if ((_spawn != null) && !DBSpawnManager.getInstance().isDefined(getId()))
 		{
 			_spawn.decreaseCount(this);
 		}

@@ -39,6 +39,7 @@ import org.l2jmobius.gameserver.instancemanager.CustomNpcInstanceManager;
 import org.l2jmobius.gameserver.instancemanager.DimensionalRiftManager;
 import org.l2jmobius.gameserver.instancemanager.FortManager;
 import org.l2jmobius.gameserver.instancemanager.QuestManager;
+import org.l2jmobius.gameserver.instancemanager.RaidBossSpawnManager;
 import org.l2jmobius.gameserver.model.DropCategory;
 import org.l2jmobius.gameserver.model.DropData;
 import org.l2jmobius.gameserver.model.Skill;
@@ -2920,7 +2921,7 @@ public class NpcInstance extends Creature
 		super.onDecay();
 		
 		// Decrease its spawn counter
-		if (_spawn != null)
+		if ((_spawn != null) && !RaidBossSpawnManager.getInstance().isDefined(getNpcId()))
 		{
 			_spawn.decreaseCount(this);
 		}
