@@ -424,9 +424,9 @@
 		<equipment rhand="127" /> <!-- Crimson Sword -->
 		<acquire exp="2630" sp="102" />
 		<stats str="79" int="34" dex="42" wit="66" con="75" men="12">
-			<vitals hp="668.13880126183" hpRegen="4.5" mp="358.475263584753" mpRegen="1.8" />
-			<attack physical="129.824894715177" magical="73.4792050408192" random="10" critical="8" accuracy="5" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
-			<defence physical="85.9504132231405" magical="89.8954019684727" />
+			<vitals hp="736.277602523659" hpRegen="4.5" mp="387.672343876723" mpRegen="1.8" />
+			<attack physical="167.344173441734" magical="83.4882480254579" random="10" critical="4" accuracy="5" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="133.333333333333" magical="81.10300081103" />
 			<speed>
 				<walk ground="45" />
 				<run ground="30" />
@@ -436,13 +436,14 @@
 		</stats>
 		<status undying="false" />
 		<skillList>
-			<skill id="4414" level="3" /> <!-- Light Armor Type -->
-			<skill id="4415" level="7" /> <!-- Dagger -->
+			<skill id="4078" level="3" /> <!-- Flame Strike -->
+			<skill id="4273" level="3" /> <!-- Dagger/Rapier Resistance -->
+			<skill id="4274" level="1" /> <!-- Blunt Weapon Vulnerability -->
+			<skill id="4415" level="3" /> <!-- One-handed Sword -->
 			<skill id="4416" level="6" /> <!-- Humanoids -->
 			<skill id="4438" level="2" /> <!-- Greater Sleep Resistance -->
 			<skill id="4439" level="2" /> <!-- Greater Hold Resistance -->
 			<skill id="4444" level="2" /> <!-- Greater Bow/Crossbow Resistance -->
-			<skill id="4445" level="2" /> <!-- Greater Spear Resistance -->
 		</skillList>
 		<corpseTime>3</corpseTime>
 		<exCrtEffect>true</exCrtEffect>
@@ -827,9 +828,9 @@
 		<equipment rhand="72" /> <!-- StormBringer -->
 		<acquire exp="4518" sp="1" />
 		<stats str="79" int="34" dex="42" wit="66" con="75" men="12">
-			<vitals hp="1094.00630914827" hpRegen="5.5" mp="557.177615571776" mpRegen="2.1" />
-			<attack physical="256.15348891211" magical="141.215900173963" random="10" critical="8" accuracy="5" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
-			<defence physical="115.151515151515" magical="120.714805128717" />
+			<vitals hp="1183.59621451104" hpRegen="5.5" mp="610.705596107056" mpRegen="2.1" />
+			<attack physical="324.626865671642" magical="157.498281240115" random="10" critical="4" accuracy="5" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="178.358208955224" magical="107.733836898234" />
 			<speed>
 				<walk ground="45" />
 				<run ground="30" />
@@ -839,13 +840,14 @@
 		</stats>
 		<status undying="false" />
 		<skillList>
-			<skill id="4414" level="3" /> <!-- Light Armor Type -->
-			<skill id="4415" level="7" /> <!-- Dagger -->
+			<skill id="4078" level="4" /> <!-- Flame Strike -->
+			<skill id="4273" level="3" /> <!-- Dagger/Rapier Resistance -->
+			<skill id="4274" level="1" /> <!-- Blunt Weapon Vulnerability -->
+			<skill id="4415" level="3" /> <!-- One-handed Sword -->
 			<skill id="4416" level="6" /> <!-- Humanoids -->
 			<skill id="4438" level="2" /> <!-- Greater Sleep Resistance -->
 			<skill id="4439" level="2" /> <!-- Greater Hold Resistance -->
 			<skill id="4444" level="2" /> <!-- Greater Bow/Crossbow Resistance -->
-			<skill id="4445" level="2" /> <!-- Greater Spear Resistance -->
 		</skillList>
 		<corpseTime>3</corpseTime>
 		<exCrtEffect>true</exCrtEffect>
@@ -1225,9 +1227,9 @@
 		<equipment rhand="133" /> <!-- Raid Sword -->
 		<acquire exp="6998" sp="1" />
 		<stats str="79" int="34" dex="42" wit="66" con="75" men="12">
-			<vitals hp="1621.45110410095" hpRegen="6.5" mp="861.313868613139" mpRegen="2.4" />
-			<attack physical="451.464244567693" magical="245.047581123137" random="10" critical="8" accuracy="5" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
-			<defence physical="148.951048951049" magical="156.1341192084" />
+			<vitals hp="1724.29022082019" hpRegen="6.5" mp="918.08596918086" mpRegen="2.4" />
+			<attack physical="560.344827586207" magical="267.355541221739" random="10" critical="4" accuracy="5" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="228.965517241379" magical="138.714097938865" />
 			<speed>
 				<walk ground="80" />
 				<run ground="30" />
@@ -1237,13 +1239,14 @@
 		</stats>
 		<status undying="false" />
 		<skillList>
-			<skill id="4414" level="3" /> <!-- Light Armor Type -->
-			<skill id="4415" level="7" /> <!-- Dagger -->
+			<skill id="4078" level="5" /> <!-- Flame Strike -->
+			<skill id="4273" level="3" /> <!-- Dagger/Rapier Resistance -->
+			<skill id="4274" level="1" /> <!-- Blunt Weapon Vulnerability -->
+			<skill id="4415" level="3" /> <!-- One-handed Sword -->
 			<skill id="4416" level="6" /> <!-- Humanoids -->
 			<skill id="4438" level="2" /> <!-- Greater Sleep Resistance -->
 			<skill id="4439" level="2" /> <!-- Greater Hold Resistance -->
 			<skill id="4444" level="2" /> <!-- Greater Bow/Crossbow Resistance -->
-			<skill id="4445" level="2" /> <!-- Greater Spear Resistance -->
 		</skillList>
 		<corpseTime>3</corpseTime>
 		<exCrtEffect>true</exCrtEffect>
@@ -1624,9 +1627,9 @@
 		<equipment rhand="79" /> <!-- Damascus Sword -->
 		<acquire exp="10019" sp="2" />
 		<stats str="79" int="34" dex="42" wit="66" con="75" men="12">
-			<vitals hp="2193.05993690852" hpRegen="7.5" mp="1188.15896188159" mpRegen="2.7" />
-			<attack physical="709.683037269244" magical="378.90274609333" random="10" critical="8" accuracy="5" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
-			<defence physical="185.064935064935" magical="193.928489334243" />
+			<vitals hp="2295.26813880126" hpRegen="7.5" mp="1251.41930251419" mpRegen="2.7" />
+			<attack physical="862.713675213675" magical="405.60709752719" random="10" critical="4" accuracy="5" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="282.051282051282" magical="171.044149146339" />
 			<speed>
 				<walk ground="80" />
 				<run ground="30" />
@@ -1636,13 +1639,14 @@
 		</stats>
 		<status undying="false" />
 		<skillList>
-			<skill id="4414" level="3" /> <!-- Light Armor Type -->
-			<skill id="4415" level="7" /> <!-- Dagger -->
+			<skill id="4078" level="6" /> <!-- Flame Strike -->
+			<skill id="4273" level="3" /> <!-- Dagger/Rapier Resistance -->
+			<skill id="4274" level="1" /> <!-- Blunt Weapon Vulnerability -->
+			<skill id="4415" level="3" /> <!-- One-handed Sword -->
 			<skill id="4416" level="6" /> <!-- Humanoids -->
 			<skill id="4438" level="2" /> <!-- Greater Sleep Resistance -->
 			<skill id="4439" level="2" /> <!-- Greater Hold Resistance -->
 			<skill id="4444" level="2" /> <!-- Greater Bow/Crossbow Resistance -->
-			<skill id="4445" level="2" /> <!-- Greater Spear Resistance -->
 		</skillList>
 		<corpseTime>3</corpseTime>
 		<exCrtEffect>true</exCrtEffect>
@@ -2023,9 +2027,9 @@
 		<equipment rhand="2500" /> <!-- Dark Legion's Edge -->
 		<acquire exp="13579" sp="3" />
 		<stats str="79" int="34" dex="42" wit="66" con="75" men="12">
-			<vitals hp="2719.2429022082" hpRegen="8.5" mp="1540.14598540146" mpRegen="3" />
-			<attack physical="992.685475444096" magical="522.843991364853" random="10" critical="8" accuracy="5" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
-			<defence physical="220.606060606061" magical="231.309806234667" />
+			<vitals hp="2802.52365930599" hpRegen="8.5" mp="1607.46147607461" mpRegen="3" />
+			<attack physical="1181.1377245509" magical="547.18386675727" random="10" critical="4" accuracy="5" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="332.934131736527" magical="201.543385248967" />
 			<speed>
 				<walk ground="80" />
 				<run ground="30" />
@@ -2035,13 +2039,14 @@
 		</stats>
 		<status undying="false" />
 		<skillList>
-			<skill id="4414" level="3" /> <!-- Light Armor Type -->
-			<skill id="4415" level="7" /> <!-- Dagger -->
+			<skill id="4078" level="7" /> <!-- Flame Strike -->
+			<skill id="4273" level="3" /> <!-- Dagger/Rapier Resistance -->
+			<skill id="4274" level="1" /> <!-- Blunt Weapon Vulnerability -->
+			<skill id="4415" level="3" /> <!-- One-handed Sword -->
 			<skill id="4416" level="6" /> <!-- Humanoids -->
 			<skill id="4438" level="2" /> <!-- Greater Sleep Resistance -->
 			<skill id="4439" level="2" /> <!-- Greater Hold Resistance -->
 			<skill id="4444" level="2" /> <!-- Greater Bow/Crossbow Resistance -->
-			<skill id="4445" level="2" /> <!-- Greater Spear Resistance -->
 		</skillList>
 		<corpseTime>3</corpseTime>
 		<exCrtEffect>true</exCrtEffect>
@@ -2432,9 +2437,9 @@
 		<equipment rhand="127" /> <!-- Crimson Sword -->
 		<acquire exp="2579" sp="100" />
 		<stats str="79" int="34" dex="42" wit="66" con="75" men="12">
-			<vitals hp="668.13880126183" hpRegen="4.5" mp="358.475263584753" mpRegen="1.8" />
-			<attack physical="129.824894715177" magical="73.4792050408192" random="10" critical="8" accuracy="5" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
-			<defence physical="85.9504132231405" magical="89.8954019684727" />
+			<vitals hp="736.277602523659" hpRegen="4.5" mp="387.672343876723" mpRegen="1.8" />
+			<attack physical="167.344173441734" magical="83.4882480254579" random="10" critical="4" accuracy="5" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="133.333333333333" magical="81.10300081103" />
 			<speed>
 				<walk ground="45" />
 				<run ground="30" />
@@ -2444,13 +2449,14 @@
 		</stats>
 		<status undying="false" />
 		<skillList>
-			<skill id="4414" level="3" /> <!-- Light Armor Type -->
-			<skill id="4415" level="7" /> <!-- Dagger -->
+			<skill id="4078" level="3" /> <!-- Flame Strike -->
+			<skill id="4273" level="3" /> <!-- Dagger/Rapier Resistance -->
+			<skill id="4274" level="1" /> <!-- Blunt Weapon Vulnerability -->
+			<skill id="4415" level="3" /> <!-- One-handed Sword -->
 			<skill id="4416" level="6" /> <!-- Humanoids -->
 			<skill id="4438" level="2" /> <!-- Greater Sleep Resistance -->
 			<skill id="4439" level="2" /> <!-- Greater Hold Resistance -->
 			<skill id="4444" level="2" /> <!-- Greater Bow/Crossbow Resistance -->
-			<skill id="4445" level="2" /> <!-- Greater Spear Resistance -->
 		</skillList>
 		<corpseTime>3</corpseTime>
 		<exCrtEffect>true</exCrtEffect>
@@ -2831,9 +2837,9 @@
 		<equipment rhand="72" /> <!-- StormBringer -->
 		<acquire exp="4518" sp="1" />
 		<stats str="79" int="34" dex="42" wit="66" con="75" men="12">
-			<vitals hp="1094.00630914827" hpRegen="5.5" mp="557.177615571776" mpRegen="2.1" />
-			<attack physical="256.15348891211" magical="141.215900173963" random="10" critical="8" accuracy="5" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
-			<defence physical="115.151515151515" magical="120.714805128717" />
+			<vitals hp="1183.59621451104" hpRegen="5.5" mp="610.705596107056" mpRegen="2.1" />
+			<attack physical="324.626865671642" magical="157.498281240115" random="10" critical="4" accuracy="5" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="178.358208955224" magical="107.733836898234" />
 			<speed>
 				<walk ground="45" />
 				<run ground="30" />
@@ -2843,13 +2849,14 @@
 		</stats>
 		<status undying="false" />
 		<skillList>
-			<skill id="4414" level="3" /> <!-- Light Armor Type -->
-			<skill id="4415" level="7" /> <!-- Dagger -->
+			<skill id="4078" level="4" /> <!-- Flame Strike -->
+			<skill id="4273" level="3" /> <!-- Dagger/Rapier Resistance -->
+			<skill id="4274" level="1" /> <!-- Blunt Weapon Vulnerability -->
+			<skill id="4415" level="3" /> <!-- One-handed Sword -->
 			<skill id="4416" level="6" /> <!-- Humanoids -->
 			<skill id="4438" level="2" /> <!-- Greater Sleep Resistance -->
 			<skill id="4439" level="2" /> <!-- Greater Hold Resistance -->
 			<skill id="4444" level="2" /> <!-- Greater Bow/Crossbow Resistance -->
-			<skill id="4445" level="2" /> <!-- Greater Spear Resistance -->
 		</skillList>
 		<corpseTime>3</corpseTime>
 		<exCrtEffect>true</exCrtEffect>
@@ -3230,9 +3237,9 @@
 		<equipment rhand="133" /> <!-- Raid Sword -->
 		<acquire exp="6998" sp="1" />
 		<stats str="79" int="34" dex="42" wit="66" con="75" men="12">
-			<vitals hp="1621.45110410095" hpRegen="6.5" mp="861.313868613139" mpRegen="2.4" />
-			<attack physical="451.464244567693" magical="245.047581123137" random="10" critical="8" accuracy="5" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
-			<defence physical="148.951048951049" magical="156.1341192084" />
+			<vitals hp="1724.29022082019" hpRegen="6.5" mp="918.08596918086" mpRegen="2.4" />
+			<attack physical="560.344827586207" magical="267.355541221739" random="10" critical="4" accuracy="5" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="228.965517241379" magical="138.714097938865" />
 			<speed>
 				<walk ground="80" />
 				<run ground="30" />
@@ -3242,13 +3249,14 @@
 		</stats>
 		<status undying="false" />
 		<skillList>
-			<skill id="4414" level="3" /> <!-- Light Armor Type -->
-			<skill id="4415" level="7" /> <!-- Dagger -->
+			<skill id="4078" level="5" /> <!-- Flame Strike -->
+			<skill id="4273" level="3" /> <!-- Dagger/Rapier Resistance -->
+			<skill id="4274" level="1" /> <!-- Blunt Weapon Vulnerability -->
+			<skill id="4415" level="3" /> <!-- One-handed Sword -->
 			<skill id="4416" level="6" /> <!-- Humanoids -->
 			<skill id="4438" level="2" /> <!-- Greater Sleep Resistance -->
 			<skill id="4439" level="2" /> <!-- Greater Hold Resistance -->
 			<skill id="4444" level="2" /> <!-- Greater Bow/Crossbow Resistance -->
-			<skill id="4445" level="2" /> <!-- Greater Spear Resistance -->
 		</skillList>
 		<corpseTime>3</corpseTime>
 		<exCrtEffect>true</exCrtEffect>
@@ -3629,9 +3637,9 @@
 		<equipment rhand="79" /> <!-- Damascus Sword -->
 		<acquire exp="10019" sp="2" />
 		<stats str="79" int="34" dex="42" wit="66" con="75" men="12">
-			<vitals hp="2193.05993690852" hpRegen="7.5" mp="1188.15896188159" mpRegen="2.7" />
-			<attack physical="709.683037269244" magical="378.90274609333" random="10" critical="8" accuracy="5" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
-			<defence physical="185.064935064935" magical="193.928489334243" />
+			<vitals hp="2295.26813880126" hpRegen="7.5" mp="1251.41930251419" mpRegen="2.7" />
+			<attack physical="862.713675213675" magical="405.60709752719" random="10" critical="4" accuracy="5" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="282.051282051282" magical="171.044149146339" />
 			<speed>
 				<walk ground="80" />
 				<run ground="30" />
@@ -3641,13 +3649,14 @@
 		</stats>
 		<status undying="false" />
 		<skillList>
-			<skill id="4414" level="3" /> <!-- Light Armor Type -->
-			<skill id="4415" level="7" /> <!-- Dagger -->
+			<skill id="4078" level="6" /> <!-- Flame Strike -->
+			<skill id="4273" level="3" /> <!-- Dagger/Rapier Resistance -->
+			<skill id="4274" level="1" /> <!-- Blunt Weapon Vulnerability -->
+			<skill id="4415" level="3" /> <!-- One-handed Sword -->
 			<skill id="4416" level="6" /> <!-- Humanoids -->
 			<skill id="4438" level="2" /> <!-- Greater Sleep Resistance -->
 			<skill id="4439" level="2" /> <!-- Greater Hold Resistance -->
 			<skill id="4444" level="2" /> <!-- Greater Bow/Crossbow Resistance -->
-			<skill id="4445" level="2" /> <!-- Greater Spear Resistance -->
 		</skillList>
 		<corpseTime>3</corpseTime>
 		<exCrtEffect>true</exCrtEffect>

@@ -81,25 +81,23 @@
 		<acquire exp="85638" sp="20" />
 		<equipment rhand="75" /> <!-- Caliburs -->
 		<stats str="79" int="34" dex="42" wit="66" con="75" men="12">
-			<vitals hp="1933.12302839117" hpRegen="7.5" mp="1036.49635036496" mpRegen="2.7" />
+			<vitals hp="1985.01577287066" hpRegen="7.5" mp="1066.50446066504" mpRegen="2.7" />
 			<speed>
 				<walk ground="27" />
 				<run ground="110" />
 			</speed>
-			<attack physical="664.628727283871" magical="315.593355033872" critical="1" attackSpeed="253" range="40" type="SWORD" distance="80" width="120" random="10" accuracy="5" />
-			<defence physical="198.291641244661" magical="213.243578918855" />
+			<attack physical="691.729323308271" magical="327.643210792231" critical="4" attackSpeed="253" range="40" type="SWORD" distance="80" width="120" random="10" accuracy="5" />
+			<defence physical="252.666666666667" magical="184.914841849148" />
 			<abnormalResist physical="10" magical="10" />
 		</stats>
 		<status attackable="false" undying="false" />
 		<skillList>
-			<skill id="4065" level="1" /> <!-- Heal -->
-			<skill id="4408" level="13" /> <!-- HP Increase (5x) -->
-			<skill id="4410" level="15" /> <!-- Strong P. Atk. -->
-			<skill id="4411" level="10" /> <!-- Slightly Weak M. Atk. -->
-			<skill id="4412" level="12" /> <!-- Slightly Strong P. Def. -->
-			<skill id="4414" level="3" /> <!-- Light Armor Type -->
-			<skill id="4415" level="5" /> <!-- Blunt Weapon -->
-			<skill id="4416" level="9" /> <!-- Demons -->
+			<skill id="4032" level="1" /> <!-- Power Strike -->
+			<skill id="4408" level="16" /> <!-- HP Increase (8x) -->
+			<skill id="4410" level="14" /> <!-- Strong P. Atk. -->
+			<skill id="4411" level="17" /> <!-- Very Strong M. Atk. -->
+			<skill id="4415" level="3" /> <!-- One-handed Sword -->
+			<skill id="4416" level="1" /> <!-- Undead -->
 		</skillList>
 		<ai aggroRange="300" isAggressive="true" clanHelpRange="300">
 			<clanList>
@@ -259,22 +257,24 @@
 		<acquire exp="94499" sp="22" />
 		<equipment rhand="3939" /> <!-- Monster Only (Bensh) -->
 		<stats str="79" int="34" dex="42" wit="66" con="75" men="12">
-			<vitals hp="2141.07255520505" hpRegen="7.5" mp="1158.15085158151" mpRegen="2.7" />
+			<vitals hp="2193.05993690852" hpRegen="7.5" mp="1188.15896188159" mpRegen="2.7" />
 			<speed>
 				<walk ground="80" />
 				<run ground="160" />
 			</speed>
-			<attack physical="785.064983847945" magical="365.934673240812" critical="4" attackSpeed="253" range="40" type="BLUNT" distance="80" width="120" random="20" accuracy="9" />
-			<defence physical="267.320261437908" magical="195.60135489719" />
+			<attack physical="804.646266975034" magical="379.046349556157" critical="1" attackSpeed="253" range="40" type="BLUNT" distance="80" width="120" random="20" accuracy="9" />
+			<defence physical="217.532467532468" magical="234.2011788126" />
 			<abnormalResist physical="10" magical="10" />
 		</stats>
 		<status attackable="false" undying="false" />
 		<skillList>
-			<skill id="4032" level="1" /> <!-- Power Strike -->
-			<skill id="4408" level="13" /> <!-- HP Increase (5x) -->
-			<skill id="4411" level="17" /> <!-- Very Strong M. Atk. -->
-			<skill id="4415" level="13" /> <!-- Two-handed Sword -->
-			<skill id="4416" level="1" /> <!-- Undead -->
+			<skill id="4087" level="1" /> <!-- Blaze -->
+			<skill id="4408" level="16" /> <!-- HP Increase (8x) -->
+			<skill id="4410" level="15" /> <!-- Strong P. Atk. -->
+			<skill id="4411" level="14" /> <!-- Strong M. Atk. -->
+			<skill id="4414" level="3" /> <!-- Light Armor Type -->
+			<skill id="4415" level="5" /> <!-- Blunt Weapon -->
+			<skill id="4416" level="9" /> <!-- Demons -->
 		</skillList>
 		<ai aggroRange="300" isAggressive="true" clanHelpRange="300">
 			<clanList>
@@ -477,23 +477,23 @@
 		<acquire exp="112040" sp="26" />
 		<equipment rhand="147" /> <!-- Tear of Darkness -->
 		<stats str="79" int="34" dex="42" wit="66" con="75" men="12">
-			<vitals hp="2345.11041009464" hpRegen="7.5" mp="1282.23844282238" mpRegen="2.7" />
+			<vitals hp="2395.03154574132" hpRegen="7.5" mp="1314.6796431468" mpRegen="2.7" />
 			<speed>
 				<walk ground="50" />
 				<run ground="170" />
 			</speed>
-			<attack physical="727.710918793721" magical="418.367680885226" critical="8" attackSpeed="253" range="40" type="SWORD" distance="80" width="120" random="10" accuracy="5" />
-			<defence physical="286.974172324491" magical="209.731326938078" />
+			<attack physical="921.557345607979" magical="431.656255425883" critical="4" attackSpeed="253" range="40" type="SWORD" distance="80" width="120" random="10" accuracy="5" />
+			<defence physical="291.714614499425" magical="213.537014793598" />
 			<abnormalResist physical="10" magical="10" />
 		</stats>
 		<status attackable="false" undying="false" />
 		<skillList>
-			<skill id="4040" level="1" /> <!-- Power Shot -->
-			<skill id="4408" level="13" /> <!-- HP Increase (5x) -->
+			<skill id="4032" level="1" /> <!-- Power Strike -->
+			<skill id="4408" level="16" /> <!-- HP Increase (8x) -->
 			<skill id="4410" level="12" /> <!-- Slightly Strong P. Atk. -->
-			<skill id="4411" level="10" /> <!-- Slightly Weak M. Atk. -->
-			<skill id="4412" level="10" /> <!-- Slightly Weak P. Def. -->
-			<skill id="4415" level="9" /> <!-- Bow -->
+			<skill id="4411" level="19" /> <!-- Extremely Strong M. Atk. -->
+			<skill id="4412" level="12" /> <!-- Slightly Strong P. Def. -->
+			<skill id="4415" level="3" /> <!-- One-handed Sword -->
 			<skill id="4416" level="8" /> <!-- Angels -->
 		</skillList>
 		<ai aggroRange="300" isAggressive="true" clanHelpRange="300">
@@ -644,20 +644,21 @@
 		<acquire exp="126994" sp="30" />
 		<equipment rhand="97" /> <!-- Lance -->
 		<stats str="79" int="34" dex="42" wit="66" con="75" men="12">
-			<vitals hp="2586.11987381703" hpRegen="8.5" mp="1442.01135442011" mpRegen="3" />
+			<vitals hp="2632.01892744479" hpRegen="8.5" mp="1475.26358475264" mpRegen="3" />
 			<speed>
 				<walk ground="50" />
 				<run ground="170" />
 			</speed>
-			<attack physical="1039.09465020576" magical="484.381712804029" critical="4" attackSpeed="253" range="40" type="SWORD" distance="80" width="120" random="10" accuracy="5" />
-			<defence physical="310.493827160494" magical="227.288656593874" />
+			<attack physical="1068.04238706079" magical="497.15247484307" critical="4" attackSpeed="253" range="40" type="SWORD" distance="80" width="120" random="10" accuracy="5" />
+			<defence physical="315.114333519241" magical="230.372327457097" />
 			<abnormalResist physical="10" magical="10" />
 		</stats>
 		<status attackable="false" undying="false" />
 		<skillList>
-			<skill id="4408" level="13" /> <!-- HP Increase (5x) -->
+			<skill id="4408" level="16" /> <!-- HP Increase (8x) -->
 			<skill id="4410" level="12" /> <!-- Slightly Strong P. Atk. -->
-			<skill id="4411" level="15" /> <!-- Strong M. Atk. -->
+			<skill id="4411" level="19" /> <!-- Extremely Strong M. Atk. -->
+			<skill id="4412" level="12" /> <!-- Slightly Strong P. Def. -->
 			<skill id="4415" level="3" /> <!-- One-handed Sword -->
 			<skill id="4416" level="8" /> <!-- Angels -->
 		</skillList>
@@ -3308,13 +3309,13 @@
 		<sex>MALE</sex>
 		<acquire exp="1463561" sp="351" />
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="14213.0057803468" hpRegen="8.5" mp="3144.55445544554" mpRegen="30" />
+			<vitals hp="312844.123314066" hpRegen="8.5" mp="21324.0924092409" mpRegen="30" />
 			<speed>
 				<walk ground="57" />
 				<run ground="180" />
 			</speed>
-			<attack physical="6666.56535039797" magical="220.472102424285" critical="4" attackSpeed="253" range="40" type="SWORD" distance="80" width="120" random="10" accuracy="5" />
-			<defence physical="320.69123083953" magical="307.715352147972" />
+			<attack physical="48935.0519726682" magical="5295.0688213131" critical="4" attackSpeed="253" range="40" type="SWORD" distance="80" width="120" random="10" accuracy="5" />
+			<defence physical="466.826406676031" magical="262.863449182081" />
 			<attribute>
 				<attack type="EARTH" value="180" />
 				<defence fire="100" water="100" wind="50" earth="100" holy="100" dark="100" />
@@ -3323,15 +3324,15 @@
 		</stats>
 		<status attackable="false" undying="false" />
 		<skillList>
-			<skill id="4408" level="10" /> <!-- HP Increase (2x) -->
-			<skill id="4410" level="13" /> <!-- Slightly Strong P. Atk. -->
-			<skill id="4411" level="13" /> <!-- Slightly Strong M. Atk. -->
+			<skill id="4408" level="11" /> <!-- HP Increase (3x) -->
+			<skill id="4410" level="14" /> <!-- Strong P. Atk. -->
+			<skill id="4411" level="14" /> <!-- Strong M. Atk. -->
 			<skill id="4412" level="14" /> <!-- Strong P. Def. -->
 			<skill id="4413" level="13" /> <!-- Slightly Strong M. Def. -->
 			<skill id="4415" level="3" /> <!-- One-handed Sword -->
 			<skill id="4416" level="6" /> <!-- Humanoids -->
 			<skill id="5465" level="1" /> <!-- Earth Attack -->
-			<skill id="6610" level="1" /> <!-- Earth Magic -->
+			<skill id="14081" level="1" /> <!-- Garden Judgment -->
 			<skill id="14765" level="3" /> <!-- Blood Siphon Resistance -->
 		</skillList>
 		<ai aggroRange="150" isAggressive="true" clanHelpRange="300">
@@ -4159,13 +4160,13 @@
 		<equipment rhand="15302" /> <!-- Transparent Bow (NPC) -->
 		<mpReward value="94" type="DIFF" ticks="10" affects="SOLO" />
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="13886.1271676301" hpRegen="8.5" mp="3035.64356435644" mpRegen="3" />
+			<vitals hp="13886.1271676301" hpRegen="8.5" mp="2023.10231023102" mpRegen="3" />
 			<speed>
 				<walk ground="45" />
 				<run ground="170" />
 			</speed>
-			<attack physical="5516.00352513571" magical="212.604604502607" critical="4" attackSpeed="253" range="1100" type="BOW" distance="10" width="0" random="5" accuracy="0" />
-			<defence physical="308.278313864906" magical="292.990192874036" />
+			<attack physical="4501.18836351988" magical="662.055324652957" critical="8" attackSpeed="253" range="1100" type="BOW" distance="10" width="0" random="5" accuracy="0" />
+			<defence physical="351.95530726257" magical="219.77616756089" />
 			<attribute>
 				<attack type="DARK" value="180" />
 				<defence fire="100" water="100" wind="100" earth="100" holy="50" dark="100" />
@@ -4177,11 +4178,10 @@
 			<skill id="4408" level="10" /> <!-- HP Increase (2x) -->
 			<skill id="4410" level="14" /> <!-- Strong P. Atk. -->
 			<skill id="4412" level="12" /> <!-- Slightly Strong P. Def. -->
-			<skill id="4413" level="12" /> <!-- Slightly Strong M. Def. -->
-			<skill id="4415" level="3" /> <!-- One-handed Sword -->
-			<skill id="4416" level="9" /> <!-- Demons -->
-			<skill id="5462" level="1" /> <!-- Fire Attack -->
-			<skill id="14637" level="1" /> <!-- Driving Fog -->
+			<skill id="4415" level="9" /> <!-- Bow -->
+			<skill id="4416" level="1" /> <!-- Undead -->
+			<skill id="5467" level="1" /> <!-- Dark Attack -->
+			<skill id="14636" level="1" /> <!-- Merciless Grip -->
 			<skill id="14765" level="2" /> <!-- Blood Siphon Resistance -->
 		</skillList>
 		<ai aggroRange="300" isAggressive="true" clanHelpRange="300" />

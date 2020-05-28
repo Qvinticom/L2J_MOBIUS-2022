@@ -2317,10 +2317,10 @@
 		<race>GIANT</race>
 		<sex>MALE</sex>
 		<acquire exp="38714665651" sp="77429377" raidPoints="30" />
-		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="436754.335260116" hpRegen="419.6050136" mp="24308.2508250825" mpRegen="3.3" />
-			<attack physical="1198421.05263158" magical="543063.20963841" random="30" critical="4" accuracy="4.75" attackSpeed="250" type="SWORD" range="40" distance="80" width="120" />
-			<defence physical="4916.84210526316" magical="2137.57165190203" />
+		<stats str="164" int="188" dex="55" wit="78" con="111" men="149">
+			<vitals hp="14238366.2326753" hpRegen="419.6050136" mp="49380.1198801199" mpRegen="3.3" />
+			<attack physical="1328534.03141361" magical="616974.416701121" random="30" critical="4" accuracy="4.75" attackSpeed="250" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="37198.9528795812" magical="12753.9999267748" />
 			<attribute>
 				<attack type="EARTH" value="450" />
 				<defence fire="300" water="300" wind="250" earth="300" holy="300" dark="300" />
@@ -2338,18 +2338,16 @@
 		</collision>
 		<skillList>
 			<skill id="4045" level="1" /> <!-- Full Magic Attack Resistance -->
-			<skill id="4071" level="1" /> <!-- Bow/ Crossbow Resistance -->
-			<skill id="4379" level="5" /> <!-- Spear Resistance -->
 			<skill id="4416" level="11" /> <!-- Giants -->
-			<skill id="4438" level="5" /> <!-- Greater Sleep Resistance -->
-			<skill id="4461" level="1" /> <!-- Dagger/ Rapier Vulnerability -->
+			<skill id="4494" level="1" /> <!-- Raid Boss -->
 			<skill id="5465" level="1" /> <!-- Earth Attack -->
 			<skill id="14765" level="4" /> <!-- Blood Siphon Resistance -->
-			<skill id="14823" level="1" /> <!-- Instant Kill Attack Resistance -->
-			<skill id="16547" level="10" /> <!-- Danger Zone Attack Resistance -->
+			<skill id="14804" level="10" /> <!-- Damage Reflection Attack Resistance -->
+			<skill id="16590" level="1" /> <!-- Ancient Power Thunder -->
+			<skill id="16591" level="1" /> <!-- Ancient Plasma Wave -->
+			<skill id="16592" level="1" /> <!-- Ancient Earthquake -->
 			<skill id="16596" level="1" /> <!-- Plasma Ball -->
-			<skill id="16597" level="1" /> <!-- Plasma Wave -->
-			<skill id="16608" level="1" /> <!-- Servitor Attack Weakness -->
+			<skill id="16607" level="1" /> <!-- Mimir -->
 		</skillList>
 		<dropLists>
 			<drop>
@@ -2969,14 +2967,14 @@
 		<race>GIANT</race>
 		<sex>MALE</sex>
 		<acquire exp="224175791505" sp="448351616" raidPoints="100" />
-		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="2838024.27745665" hpRegen="1807.01754385965" mp="24690.4290429043" mpRegen="1907.40740740741" />
+		<stats str="164" int="188" dex="55" wit="78" con="111" men="149">
+			<vitals hp="23964834.1033179" hpRegen="1807.01754385965" mp="49380.1198801199" mpRegen="1907.40740740741" />
 			<speed>
 				<walk ground="55" />
 				<run ground="180" />
 			</speed>
-			<attack physical="1594240.83769634" magical="705326.547735601" critical="4" accuracy="4.75" attackSpeed="398" range="40" />
-			<defence physical="6376.96335078534" magical="3188.70630518549" />
+			<attack physical="1354166.66666667" magical="640318.617431733" critical="4" accuracy="4.75" attackSpeed="398" range="40" />
+			<defence physical="54166.6666666667" magical="27083.3333333333" />
 			<attribute>
 				<attack type="EARTH" value="450" />
 				<defence fire="300" water="300" wind="250" earth="300" holy="300" dark="300" />
@@ -2985,18 +2983,16 @@
 		</stats>
 		<skillList>
 			<skill id="4045" level="1" /> <!-- Full Magic Attack Resistance -->
-			<skill id="4071" level="1" /> <!-- Bow/ Crossbow Resistance -->
-			<skill id="4379" level="5" /> <!-- Spear Resistance -->
 			<skill id="4416" level="11" /> <!-- Giants -->
-			<skill id="4438" level="5" /> <!-- Greater Sleep Resistance -->
-			<skill id="4461" level="1" /> <!-- Dagger/ Rapier Vulnerability -->
+			<skill id="4494" level="1" /> <!-- Raid Boss -->
 			<skill id="5465" level="1" /> <!-- Earth Attack -->
 			<skill id="14765" level="4" /> <!-- Blood Siphon Resistance -->
-			<skill id="14823" level="1" /> <!-- Instant Kill Attack Resistance -->
-			<skill id="16547" level="10" /> <!-- Danger Zone Attack Resistance -->
-			<skill id="16596" level="1" /> <!-- Plasma Ball -->
-			<skill id="16597" level="1" /> <!-- Plasma Wave -->
-			<skill id="16608" level="1" /> <!-- Servitor Attack Weakness -->
+			<skill id="14804" level="10" /> <!-- Damage Reflection Attack Resistance -->
+			<skill id="16607" level="1" /> <!-- Mimir -->
+			<skill id="16723" level="3" /> <!-- Powered Mimir Strike -->
+			<skill id="16724" level="3" /> <!-- Powered Mimir Slasher -->
+			<skill id="16725" level="3" /> <!-- Powered Mimir Plasma -->
+			<skill id="16726" level="3" /> <!-- Powered Mimir Storm -->
 		</skillList>
 		<dropLists>
 			<drop>

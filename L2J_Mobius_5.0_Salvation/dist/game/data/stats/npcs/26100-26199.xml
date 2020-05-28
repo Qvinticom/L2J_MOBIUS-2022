@@ -1811,7 +1811,7 @@
 	<npc id="26125" level="104" type="Monster" name="Giant Atelia">
 		<race>CONSTRUCT</race>
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="1328145" hpRegen="7.5" mp="50920" mpRegen="2.7" />
+			<vitals hp="1328145.0867052" hpRegen="7.5" mp="50920.1320132013" mpRegen="2.7" />
 			<attack physical="1258939.84029621" magical="406002.900894355" critical="4" attackSpeed="253" range="40" />
 			<defence physical="42047.1502590674" magical="24376.6138271858" />
 			<attribute>
@@ -1904,7 +1904,7 @@
 		<race>HUMANOID</race>
 		<sex>MALE</sex>
 		<stats str="164" int="188" dex="55" wit="78" con="111" men="149">
-			<vitals hp="1328145" hpRegen="7.5" mp="50920" mpRegen="2.7" />
+			<vitals hp="1328145.31709366" hpRegen="7.5" mp="50920.0799200799" mpRegen="2.7" />
 			<attack physical="1888409.30584174" magical="532717.962116305" critical="4" attackSpeed="253" range="40" />
 			<defence physical="42047.1502590674" magical="24376.4008012713" />
 			<attribute>
@@ -1938,7 +1938,7 @@
 		<sex>MALE</sex>
 		<equipment rhand="17329" />
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="512263" hpRegen="7.5" mp="25074" mpRegen="2.7" />
+			<vitals hp="512263.005780347" hpRegen="7.5" mp="25074.5874587459" mpRegen="2.7" />
 			<attack physical="2246891.21571534" magical="949406.727700334" critical="4" attackSpeed="253" range="40" />
 			<defence physical="37521.875" magical="21752.9565456546" />
 			<attribute>
@@ -1968,7 +1968,7 @@
 		<race>CONSTRUCT</race>
 		<sex>MALE</sex>
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="68300" hpRegen="7.5" mp="25074" mpRegen="2.7" />
+			<vitals hp="68300" hpRegen="7.5" mp="25074.5874587459" mpRegen="2.7" />
 			<attack physical="1123445.60785767" magical="534041.301870353" critical="4" attackSpeed="253" range="40" />
 			<defence physical="18760.9375" magical="10876.6501650165" />
 			<attribute>
@@ -2379,10 +2379,10 @@
 		<race>GIANT</race>
 		<sex>MALE</sex>
 		<acquire exp="38714665651" sp="77429377" raidPoints="30" />
-		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="436754.335260116" hpRegen="419.6050136" mp="24308.2508250825" mpRegen="3.3" />
-			<attack physical="1198421.05263158" magical="543063.20963841" random="30" critical="4" accuracy="4.75" attackSpeed="250" type="SWORD" range="40" distance="80" width="120" />
-			<defence physical="4916.84210526316" magical="2137.57165190203" />
+		<stats str="164" int="188" dex="55" wit="78" con="111" men="149">
+			<vitals hp="14238366.2326753" hpRegen="419.6050136" mp="49380.1198801199" mpRegen="3.3" />
+			<attack physical="1328534.03141361" magical="616974.416701121" random="30" critical="4" accuracy="4.75" attackSpeed="250" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="37198.9528795812" magical="12753.9999267748" />
 			<attribute>
 				<attack type="EARTH" value="450" />
 				<defence fire="300" water="300" wind="250" earth="300" holy="300" dark="300" />
@@ -2399,18 +2399,16 @@
 		</collision>
 		<skillList>
 			<skill id="4045" level="1" /> <!-- Full Magic Attack Resistance -->
-			<skill id="4071" level="1" /> <!-- Bow/Crossbow Resistance -->
-			<skill id="4379" level="5" /> <!-- Spear Resistance -->
 			<skill id="4416" level="11" /> <!-- Giants -->
-			<skill id="4438" level="5" /> <!-- Greater Sleep Resistance -->
-			<skill id="4461" level="1" /> <!-- Dagger/Rapier Vulnerability -->
+			<skill id="4494" level="1" /> <!-- Raid Boss -->
 			<skill id="5465" level="1" /> <!-- Earth Attack -->
 			<skill id="14765" level="4" /> <!-- Blood Siphon Resistance -->
-			<skill id="14823" level="1" /> <!-- Instant Kill Attack Resistance -->
-			<skill id="16547" level="10" /> <!-- Danger Zone Attack Resistance -->
+			<skill id="14804" level="10" /> <!-- Damage Reflect Attack Resistance -->
+			<skill id="16590" level="1" /> <!-- Ancient Power Thunder -->
+			<skill id="16591" level="1" /> <!-- Ancient Plasma Wave -->
+			<skill id="16592" level="1" /> <!-- Ancient Earthquake -->
 			<skill id="16596" level="1" /> <!-- Plasma Ball -->
-			<skill id="16597" level="1" /> <!-- Plasma Wave -->
-			<skill id="16608" level="1" /> <!-- Servitor Attack Weakness -->
+			<skill id="16607" level="1" /> <!-- Mimir -->
 		</skillList>
 		<dropLists>
 			<drop>
@@ -3062,14 +3060,14 @@
 		<race>GIANT</race>
 		<sex>MALE</sex>
 		<acquire exp="224175791505" sp="448351616" raidPoints="100" />
-		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="2838024.27745665" hpRegen="1807.01754385965" mp="24690.4290429043" mpRegen="1907.40740740741" />
+		<stats str="164" int="188" dex="55" wit="78" con="111" men="149">
+			<vitals hp="23964834.1033179" hpRegen="1807.01754385965" mp="49380.1198801199" mpRegen="1907.40740740741" />
 			<speed>
 				<walk ground="55" />
 				<run ground="180" />
 			</speed>
-			<attack physical="1594240.83769634" magical="705326.547735601" critical="4" accuracy="4.75" attackSpeed="398" range="40" />
-			<defence physical="6376.96335078534" magical="3188.70630518549" />
+			<attack physical="1354166.66666667" magical="640318.617431733" critical="4" accuracy="4.75" attackSpeed="398" range="40" />
+			<defence physical="54166.6666666667" magical="27083.3333333333" />
 			<attribute>
 				<attack type="EARTH" value="450" />
 				<defence fire="300" water="300" wind="250" earth="300" holy="300" dark="300" />
@@ -3078,18 +3076,16 @@
 		</stats>
 		<skillList>
 			<skill id="4045" level="1" /> <!-- Full Magic Attack Resistance -->
-			<skill id="4071" level="1" /> <!-- Bow/Crossbow Resistance -->
-			<skill id="4379" level="5" /> <!-- Spear Resistance -->
 			<skill id="4416" level="11" /> <!-- Giants -->
-			<skill id="4438" level="5" /> <!-- Greater Sleep Resistance -->
-			<skill id="4461" level="1" /> <!-- Dagger/Rapier Vulnerability -->
+			<skill id="4494" level="1" /> <!-- Raid Boss -->
 			<skill id="5465" level="1" /> <!-- Earth Attack -->
 			<skill id="14765" level="4" /> <!-- Blood Siphon Resistance -->
-			<skill id="14823" level="1" /> <!-- Instant Kill Attack Resistance -->
-			<skill id="16547" level="10" /> <!-- Danger Zone Attack Resistance -->
-			<skill id="16596" level="1" /> <!-- Plasma Ball -->
-			<skill id="16597" level="1" /> <!-- Plasma Wave -->
-			<skill id="16608" level="1" /> <!-- Servitor Attack Weakness -->
+			<skill id="14804" level="10" /> <!-- Damage Reflect Attack Resistance -->
+			<skill id="16607" level="1" /> <!-- Mimir -->
+			<skill id="16723" level="3" /> <!-- Powered Mimir Strike -->
+			<skill id="16724" level="3" /> <!-- Powered Mimir Slasher -->
+			<skill id="16725" level="3" /> <!-- Powered Mimir Plasma -->
+			<skill id="16726" level="3" /> <!-- Powered Mimir Storm -->
 		</skillList>
 		<dropLists>
 			<drop>
@@ -3475,7 +3471,7 @@
 		<race>HUMAN</race>
 		<sex>FEMALE</sex>
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="2534672" hpRegen="7.5" mp="23550" mpRegen="2.7" />
+			<vitals hp="2534672.25433526" hpRegen="7.5" mp="23550.495049505" mpRegen="2.7" />
 			<attack physical="75000.1001743033" magical="41903.0754718215" critical="4" attackSpeed="253" range="40" />
 			<defence physical="5000" magical="2500.0445990545" />
 			<attribute>
@@ -3503,7 +3499,7 @@
 		<race>HUMAN</race>
 		<sex>FEMALE</sex>
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="2534672" hpRegen="7.5" mp="23550" mpRegen="2.7" />
+			<vitals hp="2534672.25433526" hpRegen="7.5" mp="23550.495049505" mpRegen="2.7" />
 			<attack physical="75000.1001743033" magical="41903.0754718215" critical="4" attackSpeed="253" range="40" />
 			<defence physical="5000" magical="2500.0445990545" />
 			<attribute>
@@ -5958,7 +5954,7 @@
 		<race>HUMANOID</race>
 		<sex>FEMALE</sex>
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="2200000" hpRegen="7.5" mp="24308" mpRegen="2.7" />
+			<vitals hp="2200000" hpRegen="7.5" mp="24308.2508250825" mpRegen="2.7" />
 			<attack physical="59542.3510592642" magical="9095.40427545412" critical="4" attackSpeed="253" range="40" />
 			<defence physical="994.736842105263" magical="576.689247872156" />
 			<attribute>
@@ -6121,7 +6117,7 @@
 		<race>HUMANOID</race>
 		<sex>FEMALE</sex>
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="2450000" hpRegen="7.5" mp="24308" mpRegen="2.7" />
+			<vitals hp="2450000" hpRegen="7.5" mp="24308.2508250825" mpRegen="2.7" />
 			<attack physical="59542.3510592642" magical="9095.40427545412" critical="4" attackSpeed="253" range="40" />
 			<defence physical="994.736842105263" magical="576.689247872156" />
 			<attribute>
@@ -6200,7 +6196,7 @@
 		<race>HUMANOID</race>
 		<sex>FEMALE</sex>
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="2100000" hpRegen="7.5" mp="24308" mpRegen="2.7" />
+			<vitals hp="2100000" hpRegen="7.5" mp="24308.2508250825" mpRegen="2.7" />
 			<attack physical="59542.3510592642" magical="9095.40427545412" critical="4" attackSpeed="253" range="40" />
 			<defence physical="994.736842105263" magical="576.689247872156" />
 			<attribute>
@@ -6279,7 +6275,7 @@
 		<race>HUMANOID</race>
 		<sex>FEMALE</sex>
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="1950000" hpRegen="7.5" mp="24308" mpRegen="2.7" />
+			<vitals hp="1950000" hpRegen="7.5" mp="24308.2508250825" mpRegen="2.7" />
 			<attack physical="59542.3510592642" magical="9095.40427545412" critical="4" attackSpeed="253" range="40" />
 			<defence physical="994.736842105263" magical="576.689247872156" />
 			<attribute>

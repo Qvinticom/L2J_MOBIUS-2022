@@ -216,9 +216,9 @@
 		<sex>MALE</sex>
 		<acquire exp="359484" sp="86" />
 		<stats str="79" int="34" dex="42" wit="66" con="75" men="12">
-			<vitals hp="3643.00736067298" hpRegen="112.40520021868" mp="1743.71451743715" mpRegen="3" />
-			<attack physical="1456.62768031189" magical="671.330034207694" random="10" critical="4" accuracy="5" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
-			<defence physical="350.292397660819" magical="256.043418116869" />
+			<vitals hp="65802.523659306" hpRegen="112.40520021868" mp="1743.71451743715" mpRegen="3" />
+			<attack physical="7689.57115009747" magical="3544.20717254476" random="10" critical="4" accuracy="5" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="447.953216374269" magical="723.147499491537" />
 			<attribute>
 				<attack type="FIRE" value="100" />
 				<defence fire="100" water="50" wind="100" earth="100" holy="100" dark="100" />
@@ -232,16 +232,12 @@
 		</stats>
 		<status undying="false" canBeSown="true" />
 		<skillList>
-			<skill id="4104" level="10" /> <!-- Chill Flame -->
-			<skill id="4160" level="10" /> <!-- Aura Burn -->
-			<skill id="4408" level="14" /> <!-- HP Increase (6x) -->
-			<skill id="4413" level="14" /> <!-- Strong M. Def. -->
-			<skill id="4415" level="1" /> <!-- Bare Hands -->
-			<skill id="4416" level="9" /> <!-- Demons -->
-			<skill id="4439" level="5" /> <!-- Greater Hold Resistance -->
-			<skill id="4443" level="1" /> <!-- Greater Blunt Weapon Resistance -->
-			<skill id="4444" level="1" /> <!-- Greater Bow/Crossbow Resistance -->
-			<skill id="4593" level="1" /> <!-- Decrease P. Def. -->
+			<skill id="4411" level="13" /> <!-- Slightly Strong M. Atk. -->
+			<skill id="4414" level="3" /> <!-- Light Armor Type -->
+			<skill id="4415" level="3" /> <!-- One-handed Sword -->
+			<skill id="4416" level="7" /> <!-- Spirits -->
+			<skill id="5273" level="4" /> <!-- Power Strike -->
+			<skill id="5280" level="3" /> <!-- Burst Shot -->
 			<skill id="5462" level="1" /> <!-- Fire Attack -->
 		</skillList>
 		<exCrtEffect>false</exCrtEffect>

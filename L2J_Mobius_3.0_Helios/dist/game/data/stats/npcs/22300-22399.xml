@@ -267,9 +267,9 @@
 		<sex>MALE</sex>
 		<acquire exp="62370" sp="14" />
 		<stats str="79" int="34" dex="42" wit="66" con="75" men="12">
-			<vitals hp="3643.05993690852" hpRegen="112.558039826218" mp="1743.71451743715" mpRegen="3" />
-			<attack physical="1456.62768031189" magical="671.330034207694" random="10" critical="4" accuracy="5" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
-			<defence physical="280.116959064327" magical="301.311458121474" />
+			<vitals hp="10982.334384858" hpRegen="112.558039826218" mp="1743.71451743715" mpRegen="3" />
+			<attack physical="9293.85964912281" magical="4283.65796111143" random="10" critical="4" accuracy="5" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="559.649122807018" magical="614.675374567806" />
 			<attribute>
 				<attack type="FIRE" value="100" />
 				<defence fire="100" water="50" wind="100" earth="100" holy="100" dark="100" />
@@ -283,11 +283,9 @@
 		</stats>
 		<status undying="false" />
 		<skillList>
-			<skill id="4408" level="12" /> <!-- HP Increase (4x) -->
-			<skill id="4414" level="3" /> <!-- Light Armor Type -->
-			<skill id="4415" level="1" /> <!-- Bare Hands -->
+			<skill id="4415" level="3" /> <!-- One-handed Sword -->
 			<skill id="4416" level="2" /> <!-- Magic Creatures -->
-			<skill id="4614" level="10" /> <!-- Death Bomb -->
+			<skill id="5273" level="3" /> <!-- Power Strike -->
 			<skill id="5462" level="1" /> <!-- Fire Attack -->
 		</skillList>
 		<exCrtEffect>false</exCrtEffect>
@@ -331,9 +329,9 @@
 		<sex>MALE</sex>
 		<acquire exp="158527" sp="38" />
 		<stats str="79" int="34" dex="42" wit="66" con="75" men="12">
-			<vitals hp="3643.00736067298" hpRegen="112.558039826218" mp="1743.71451743715" mpRegen="3" />
-			<attack physical="1456.62768031189" magical="671.330034207694" random="10" critical="4" accuracy="5" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
-			<defence physical="419.909422679506" magical="222.708469046307" />
+			<vitals hp="10982.1240799159" hpRegen="112.558039826218" mp="1743.71451743715" mpRegen="3" />
+			<attack physical="9293.85964912281" magical="4283.65796111143" random="10" critical="4" accuracy="5" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="447.953216374269" magical="723.147499491537" />
 			<attribute>
 				<attack type="FIRE" value="100" />
 				<defence fire="100" water="50" wind="100" earth="100" holy="100" dark="100" />
@@ -347,14 +345,12 @@
 		</stats>
 		<status undying="false" />
 		<skillList>
-			<skill id="4085" level="1" /> <!-- Critical Damage -->
-			<skill id="4408" level="14" /> <!-- HP Increase (6x) -->
-			<skill id="4412" level="14" /> <!-- Strong P. Def. -->
-			<skill id="4414" level="1" /> <!-- Heavy Armor Type -->
-			<skill id="4415" level="1" /> <!-- Bare Hands -->
-			<skill id="4416" level="6" /> <!-- Humanoids -->
-			<skill id="4572" level="10" /> <!-- Triple Sonic Slash -->
-			<skill id="5301" level="3" /> <!-- Stun -->
+			<skill id="4408" level="11" /> <!-- HP Increase (3x) -->
+			<skill id="4414" level="3" /> <!-- Light Armor Type -->
+			<skill id="4415" level="3" /> <!-- One-handed Sword -->
+			<skill id="4416" level="2" /> <!-- Magic Creatures -->
+			<skill id="5312" level="4" /> <!-- Blaze -->
+			<skill id="5314" level="4" /> <!-- Blazing Circle -->
 			<skill id="5462" level="1" /> <!-- Fire Attack -->
 		</skillList>
 		<exCrtEffect>false</exCrtEffect>
@@ -395,9 +391,9 @@
 		<sex>MALE</sex>
 		<acquire exp="343664" sp="82" />
 		<stats str="79" int="34" dex="42" wit="66" con="75" men="12">
-			<vitals hp="3643.00736067298" hpRegen="112.558039826218" mp="1743.71451743715" mpRegen="3" />
-			<attack physical="1456.62768031189" magical="671.364490340242" random="20" critical="4" accuracy="9" attackSpeed="253" type="BLUNT" range="40" distance="80" width="120" />
-			<defence physical="350.292397660819" magical="256.114739403253" />
+			<vitals hp="32946.0567823344" hpRegen="112.558039826218" mp="1743.71451743715" mpRegen="3" />
+			<attack physical="7995.12670565302" magical="3685.04361893881" random="20" critical="1" accuracy="9" attackSpeed="253" type="BLUNT" range="40" distance="80" width="120" />
+			<defence physical="671.789667004978" magical="534.500325711136" />
 			<attribute>
 				<attack type="FIRE" value="100" />
 				<defence fire="100" water="50" wind="100" earth="100" holy="100" dark="100" />
@@ -410,15 +406,13 @@
 		</stats>
 		<status undying="false" />
 		<skillList>
-			<skill id="4157" level="10" /> <!-- Blaze -->
-			<skill id="4408" level="14" /> <!-- HP Increase (6x) -->
-			<skill id="4411" level="14" /> <!-- Strong M. Atk. -->
-			<skill id="4415" level="1" /> <!-- Bare Hands -->
-			<skill id="4416" level="9" /> <!-- Demons -->
-			<skill id="4439" level="5" /> <!-- Greater Hold Resistance -->
-			<skill id="4443" level="1" /> <!-- Greater Blunt Weapon Resistance -->
+			<skill id="4408" level="10" /> <!-- HP Increase (2x) -->
+			<skill id="4412" level="13" /> <!-- Slightly Strong P. Def. -->
+			<skill id="4414" level="1" /> <!-- Heavy Armor Type -->
+			<skill id="4415" level="5" /> <!-- Blunt Weapon -->
+			<skill id="4416" level="2" /> <!-- Magic Creatures -->
 			<skill id="4444" level="1" /> <!-- Greater Bow/Crossbow Resistance -->
-			<skill id="4561" level="10" /> <!-- Fire Burn -->
+			<skill id="5340" level="3" /> <!-- Spinning Slasher -->
 			<skill id="5462" level="1" /> <!-- Fire Attack -->
 		</skillList>
 		<exCrtEffect>false</exCrtEffect>

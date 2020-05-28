@@ -1,13 +1,13 @@
 ﻿<?xml version="1.0" encoding="UTF-8"?>
 <list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../xsd/npcs.xsd">
-	<npc id="29300" level="99" type="RaidBoss" name="Varkaron" title="Dimensional Invader">
+	<npc id="29300" level="97" type="RaidBoss" name="Varkaron" title="Dimensional Invader">
 		<race>UNDEAD</race>
 		<sex>MALE</sex>
 		<acquire exp="9058597719" sp="2174064" raidPoints="100" />
 		<stats str="164" int="188" dex="55" wit="78" con="111" men="149">
-			<vitals hp="231808530.029399" hpRegen="379.3777269" mp="47100.3996003996" mpRegen="3" />
-			<attack physical="283321.38673753" magical="145629.72566948" random="30" critical="4" accuracy="4.75" attackSpeed="250" type="SWORD" range="40" distance="80" width="120" />
-			<defence physical="14719.6808510638" magical="12800.4973749655" />
+			<vitals hp="227125529.422745" hpRegen="379.3777269" mp="46148.8763761491" mpRegen="3" />
+			<attack physical="277597.722358994" magical="142687.711009491" random="30" critical="4" accuracy="4.75" attackSpeed="250" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="14422.3135611433" magical="12541.9014684005" />
 			<attribute>
 				<attack type="DARK" value="450" />
 				<defence fire="350" water="350" wind="350" earth="350" holy="300" dark="350" />

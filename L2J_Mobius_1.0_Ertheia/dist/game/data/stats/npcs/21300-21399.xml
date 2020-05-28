@@ -1010,9 +1010,9 @@
 		<sex>MALE</sex>
 		<acquire exp="126669" sp="30" />
 		<stats str="79" int="34" dex="42" wit="66" con="75" men="12">
-			<vitals hp="2540.06309148265" hpRegen="8.5" mp="1410.38118410381" mpRegen="3" />
-			<attack physical="530.369365220714" magical="471.271907997999" random="10" critical="4" accuracy="5" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
-			<defence physical="305.425799496946" magical="223.95425652376" />
+			<vitals hp="2632.17665615142" hpRegen="8.5" mp="1475.26358475264" mpRegen="3" />
+			<attack physical="1068.00152812423" magical="497.590484996893" random="10" critical="4" accuracy="5" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="251.990062363738" magical="271.527005711013" />
 			<speed>
 				<walk ground="30" />
 				<run ground="160" />
@@ -1022,15 +1022,22 @@
 		</stats>
 		<status undying="false" canBeSown="true" />
 		<skillList>
+			<skill id="4047" level="7" /> <!-- Hold -->
+			<skill id="4156" level="7" /> <!-- Beam Cannon -->
+			<skill id="4160" level="7" /> <!-- Aura Burn -->
+			<skill id="4276" level="1" /> <!-- Bow/Crossbow Vulnerability -->
 			<skill id="4408" level="11" /> <!-- HP Increase (3x) -->
-			<skill id="4410" level="13" /> <!-- Slightly Strong P. Atk. -->
-			<skill id="4411" level="13" /> <!-- Slightly Strong M. Atk. -->
+			<skill id="4410" level="10" /> <!-- Slightly Weak P. Atk. -->
+			<skill id="4411" level="10" /> <!-- Slightly Weak M. Atk. -->
 			<skill id="4412" level="13" /> <!-- Slightly Strong P. Def. -->
 			<skill id="4413" level="9" /> <!-- Slightly Weak M. Def. -->
-			<skill id="4415" level="4" /> <!-- One-handed Sword -->
-			<skill id="4416" level="3" /> <!-- Beast -->
-			<skill id="4579" level="7" /> <!-- Bleed -->
-			<skill id="4789" level="2" /> <!-- High Lv. -->
+			<skill id="4414" level="3" /> <!-- Light Armor Type -->
+			<skill id="4415" level="3" /> <!-- One-handed Sword -->
+			<skill id="4416" level="2" /> <!-- Magic Creatures -->
+			<skill id="4571" level="7" /> <!-- Blazing Circle -->
+			<skill id="4609" level="4" /> <!-- Vampiric Rage -->
+			<skill id="4650" level="1" /> <!-- Dispel Hold -->
+			<skill id="4789" level="3" /> <!-- High Lv. -->
 		</skillList>
 		<shots shotChance="30" spiritChance="30" />
 		<exCrtEffect>false</exCrtEffect>
@@ -1042,8 +1049,8 @@
 		</ai>
 		<dropLists>
 			<drop>
-				<item id="57" min="151" max="351" chance="70" /> <!-- Adena -->
-				<item id="36564" min="1" max="1" chance="0.03000300030003" /> <!-- Greater Synthetic Cokes -->
+				<item id="57" min="146" max="340" chance="70" /> <!-- Adena -->
+				<item id="36559" min="1" max="1" chance="0.03000300030003" /> <!-- Accessory Gem (High-grade) -->
 				<!-- Also drops herbs. -->
 				<item id="8600" min="1" max="1" chance="10" /> <!-- Herb of Life -->
 				<item id="8601" min="1" max="1" chance="8" /> <!-- Major Herb of Life -->
@@ -3578,8 +3585,8 @@
 		<acquire exp="176606" sp="42" />
 		<stats str="79" int="34" dex="42" wit="66" con="75" men="12">
 			<vitals hp="5948.26498422713" hpRegen="8.721" mp="1607.46147607461" mpRegen="3.0804" />
-			<attack physical="1228.94706454859" magical="569.454197996391" random="5" critical="4" accuracy="3" attackSpeed="253" type="DAGGER" range="40" distance="80" width="120" />
-			<defence physical="333.309285044369" magical="243.993588761269" evasion="3" shield="173" shieldRate="20" />
+			<attack physical="1305.4351067979" magical="614.902195344213" random="5" critical="8" accuracy="3" attackSpeed="253" type="DAGGER" range="40" distance="80" width="120" />
+			<defence physical="355.089820359281" magical="239.62128949235" evasion="3" shield="173" shieldRate="20" />
 			<speed>
 				<walk ground="27" />
 				<run ground="175" />
@@ -3589,15 +3596,16 @@
 		</stats>
 		<status undying="false" canBeSown="true" />
 		<skillList>
+			<skill id="4038" level="5" /> <!-- Shackle -->
+			<skill id="4085" level="1" /> <!-- Critical Damage -->
+			<skill id="4086" level="1" /> <!-- Critical Chance -->
 			<skill id="4408" level="10" /> <!-- HP Increase (2x) -->
-			<skill id="4410" level="13" /> <!-- Slightly Strong P. Atk. -->
-			<skill id="4411" level="13" /> <!-- Slightly Strong M. Atk. -->
-			<skill id="4412" level="9" /> <!-- Slightly Weak P. Def. -->
-			<skill id="4413" level="9" /> <!-- Slightly Weak M. Def. -->
-			<skill id="4415" level="3" /> <!-- One-handed Sword -->
+			<skill id="4413" level="10" /> <!-- Slightly Weak M. Def. -->
+			<skill id="4415" level="7" /> <!-- Dagger -->
 			<skill id="4416" level="6" /> <!-- Humanoids -->
-			<skill id="4573" level="9" /> <!-- Sonic Blaster -->
-			<skill id="4789" level="6" /> <!-- High Lv. -->
+			<skill id="4572" level="9" /> <!-- Triple Sonic Slash -->
+			<skill id="4575" level="2" /> <!-- Haste -->
+			<skill id="4789" level="7" /> <!-- High Lv. -->
 		</skillList>
 		<shots shotChance="50" spiritChance="50" />
 		<exCrtEffect>false</exCrtEffect>
@@ -3609,10 +3617,10 @@
 		</ai>
 		<dropLists>
 			<drop>
-				<item id="57" min="82" max="190" chance="70" /> <!-- Adena -->
-				<item id="36523" min="1" max="1" chance="0.3003003003003" /> <!-- Adamantite -->
-				<item id="36558" min="1" max="1" chance="0.149925037481259" /> <!-- Accessory Gem (Mid-grade) -->
-				<item id="959" min="1" max="1" chance="0.0149992500374981" /> <!-- Scroll: Enchant Weapon (S-grade) -->
+				<item id="57" min="116" max="269" chance="70" /> <!-- Adena -->
+				<item id="36524" min="1" max="1" chance="0.03000300030003" /> <!-- Orichalcum -->
+				<item id="6678" min="1" max="1" chance="0.01" /> <!-- Sealed Imperial Crusader Shield -->
+				<item id="6367" min="1" max="1" chance="0.005" /> <!-- Angel Slayer -->
 				<!-- Also drops herbs. -->
 				<item id="8600" min="1" max="1" chance="10" /> <!-- Herb of Life -->
 				<item id="8601" min="1" max="1" chance="8" /> <!-- Major Herb of Life -->
@@ -3625,8 +3633,7 @@
 				<item id="13028" min="1" max="1" chance="0.1" /> <!-- Vitality Replenishing Herb -->
 			</drop>
 			<spoil>
-				<item id="36522" min="1" max="1" chance="2" /> <!-- Silver -->
-				<item id="36523" min="1" max="1" chance="0.75187969924812" /> <!-- Adamantite -->
+				<item id="36553" min="1" max="1" chance="0.3003003003003" /> <!-- Armor Fragment (Mid-grade) -->
 			</spoil>
 			<lucky>
 				<item id="39629" min="1" max="1" chance="100" /> <!-- Fortune Pocket - Stage 1 -->
@@ -3743,8 +3750,8 @@
 		<acquire exp="123051" sp="29" />
 		<stats str="79" int="34" dex="42" wit="66" con="75" men="12">
 			<vitals hp="5948.26498422713" hpRegen="8.925" mp="1607.46147607461" mpRegen="3.1518" />
-			<attack physical="636.495474216575" magical="674.102900669771" random="20" critical="1" accuracy="16" attackSpeed="253" type="BLUNT" range="40" distance="80" width="120" />
-			<defence physical="374.127777502846" magical="261.502075392543" evasion="7" />
+			<attack physical="1425.78479404827" magical="693.237640176403" random="20" critical="1" accuracy="16" attackSpeed="253" type="BLUNT" range="40" distance="80" width="120" />
+			<defence physical="380.338224649602" magical="268.439885556018" evasion="7" />
 			<speed>
 				<walk ground="10" />
 				<run ground="175" />
@@ -3754,15 +3761,15 @@
 		</stats>
 		<status undying="false" canBeSown="true" />
 		<skillList>
+			<skill id="4100" level="9" /> <!-- Prominence -->
 			<skill id="4408" level="10" /> <!-- HP Increase (2x) -->
-			<skill id="4410" level="9" /> <!-- Slightly Weak P. Atk. -->
-			<skill id="4411" level="9" /> <!-- Slightly Weak M. Atk. -->
-			<skill id="4412" level="13" /> <!-- Slightly Strong P. Def. -->
+			<skill id="4410" level="12" /> <!-- Slightly Strong P. Atk. -->
+			<skill id="4411" level="12" /> <!-- Slightly Strong M. Atk. -->
+			<skill id="4412" level="10" /> <!-- Slightly Weak P. Def. -->
 			<skill id="4413" level="10" /> <!-- Slightly Weak M. Def. -->
-			<skill id="4415" level="6" /> <!-- Blunt Weapon -->
+			<skill id="4415" level="5" /> <!-- Blunt Weapon -->
 			<skill id="4416" level="6" /> <!-- Humanoids -->
-			<skill id="4573" level="9" /> <!-- Sonic Blaster -->
-			<skill id="4789" level="8" /> <!-- High Lv. -->
+			<skill id="4789" level="9" /> <!-- High Lv. -->
 		</skillList>
 		<shots shotChance="30" spiritChance="30" />
 		<exCrtEffect>false</exCrtEffect>
@@ -3775,10 +3782,12 @@
 		</ai>
 		<dropLists>
 			<drop>
-				<item id="57" min="81" max="189" chance="70" /> <!-- Adena -->
-				<item id="36528" min="1" max="1" chance="0.3003003003003" /> <!-- Metallic Fiber -->
-				<item id="36563" min="1" max="1" chance="0.03000300030003" /> <!-- Synthetic Cokes -->
-				<item id="6369" min="1" max="1" chance="0.005" /> <!-- Dragon Hunter Axe -->
+				<item id="57" min="81" max="187" chance="70" /> <!-- Adena -->
+				<item id="36529" min="1" max="1" chance="0.149925037481259" /> <!-- Quality Fiber -->
+				<item id="36564" min="1" max="1" chance="0.03000300030003" /> <!-- Greater Synthetic Cokes -->
+				<item id="6684" min="1" max="1" chance="0.01" /> <!-- Sealed Major Arcana Robe -->
+				<item id="6680" min="1" max="1" chance="0.01" /> <!-- Sealed Draconic Leather Armor -->
+				<item id="6579" min="1" max="1" chance="0.005" /> <!-- Arcana Mace -->
 				<!-- Also drops herbs. -->
 				<item id="8600" min="1" max="1" chance="10" /> <!-- Herb of Life -->
 				<item id="8601" min="1" max="1" chance="8" /> <!-- Major Herb of Life -->
@@ -3791,7 +3800,8 @@
 				<item id="13028" min="1" max="1" chance="0.1" /> <!-- Vitality Replenishing Herb -->
 			</drop>
 			<spoil>
-				<item id="36553" min="1" max="1" chance="0.149925037481259" /> <!-- Armor Fragment (Mid-grade) -->
+				<item id="36517" min="1" max="1" chance="5" /> <!-- Leather -->
+				<item id="36518" min="1" max="1" chance="0.75187969924812" /> <!-- Durable Leather -->
 			</spoil>
 			<lucky>
 				<item id="39629" min="1" max="1" chance="100" /> <!-- Fortune Pocket - Stage 1 -->
@@ -3912,8 +3922,8 @@
 		<acquire exp="181987" sp="43" />
 		<stats str="79" int="34" dex="42" wit="66" con="75" men="12">
 			<vitals hp="5948.26498422713" hpRegen="9.027" mp="1607.46147607461" mpRegen="3.1824" />
-			<attack physical="1456.0878243513" magical="712.278186086021" random="20" critical="1" accuracy="18" attackSpeed="253" type="BLUNT" range="40" distance="80" width="120" />
-			<defence physical="386.826347305389" magical="275.911373424377" evasion="9" />
+			<attack physical="1486.52694610778" magical="731.555666486684" random="20" critical="1" accuracy="18" attackSpeed="253" type="BLUNT" range="40" distance="80" width="120" />
+			<defence physical="411.377245508982" magical="296.191126209921" evasion="9" />
 			<speed>
 				<walk ground="10" />
 				<run ground="175" />
@@ -3923,13 +3933,16 @@
 		</stats>
 		<status undying="false" canBeSown="true" />
 		<skillList>
+			<skill id="4030" level="3" /> <!-- Might -->
 			<skill id="4035" level="9" /> <!-- Poison -->
-			<skill id="4100" level="9" /> <!-- Prominence -->
+			<skill id="4158" level="9" /> <!-- Prominence -->
 			<skill id="4408" level="10" /> <!-- HP Increase (2x) -->
 			<skill id="4413" level="10" /> <!-- Slightly Weak M. Def. -->
 			<skill id="4415" level="5" /> <!-- Blunt Weapon -->
 			<skill id="4416" level="6" /> <!-- Humanoids -->
-			<skill id="4789" level="9" /> <!-- High Lv. -->
+			<skill id="4561" level="9" /> <!-- Fire Burn -->
+			<skill id="4575" level="2" /> <!-- Haste -->
+			<skill id="4789" level="10" /> <!-- High Lv. -->
 		</skillList>
 		<shots shotChance="50" spiritChance="50" />
 		<exCrtEffect>false</exCrtEffect>
@@ -3942,8 +3955,8 @@
 		</ai>
 		<dropLists>
 			<drop>
-				<item id="57" min="86" max="201" chance="70" /> <!-- Adena -->
-				<item id="36544" min="1" max="1" chance="0.03000300030003" /> <!-- Orichalcum Wire -->
+				<item id="57" min="119" max="277" chance="70" /> <!-- Adena -->
+				<item id="36539" min="1" max="1" chance="0.03000300030003" /> <!-- Quality Leather Braid -->
 				<item id="6684" min="1" max="1" chance="0.01" /> <!-- Sealed Major Arcana Robe -->
 				<item id="6680" min="1" max="1" chance="0.01" /> <!-- Sealed Draconic Leather Armor -->
 				<item id="6579" min="1" max="1" chance="0.005" /> <!-- Arcana Mace -->
@@ -5851,8 +5864,8 @@
 		<acquire exp="149364" sp="35" />
 		<stats str="79" int="34" dex="42" wit="66" con="75" men="12">
 			<vitals hp="5948.26498422713" hpRegen="8.5" mp="1607.46147607461" mpRegen="3" />
-			<attack physical="1228.94706454859" magical="569.454197996391" random="10" critical="4" accuracy="5" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
-			<defence physical="333.309285044369" magical="243.993588761269" />
+			<attack physical="645.448233966849" magical="569.427113373419" random="10" critical="4" accuracy="5" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="332.934131736527" magical="243.794649144533" />
 			<speed>
 				<walk ground="25" />
 				<run ground="175" />
@@ -5862,15 +5875,15 @@
 		</stats>
 		<status undying="false" canBeSown="true" />
 		<skillList>
+			<skill id="4038" level="5" /> <!-- Shackle -->
+			<skill id="4085" level="1" /> <!-- Critical Damage -->
+			<skill id="4086" level="1" /> <!-- Critical Chance -->
 			<skill id="4408" level="10" /> <!-- HP Increase (2x) -->
-			<skill id="4410" level="13" /> <!-- Slightly Strong P. Atk. -->
-			<skill id="4411" level="13" /> <!-- Slightly Strong M. Atk. -->
-			<skill id="4412" level="9" /> <!-- Slightly Weak P. Def. -->
-			<skill id="4413" level="9" /> <!-- Slightly Weak M. Def. -->
-			<skill id="4415" level="3" /> <!-- One-handed Sword -->
+			<skill id="4415" level="4" /> <!-- One-handed Sword -->
 			<skill id="4416" level="6" /> <!-- Humanoids -->
-			<skill id="4572" level="9" /> <!-- Triple Sonic Slash -->
-			<skill id="4789" level="6" /> <!-- High Lv. -->
+			<skill id="4573" level="9" /> <!-- Sonic Blaster -->
+			<skill id="4575" level="2" /> <!-- Haste -->
+			<skill id="4789" level="7" /> <!-- High Lv. -->
 			<skill id="5620" level="6" /> <!-- Melee Attack Vulnerability -->
 		</skillList>
 		<shots shotChance="50" spiritChance="50" />
@@ -6062,6 +6075,82 @@
 		</collision>
 		<dropLists>
 			<drop>
+				<item id="57" min="76" max="177" chance="70" /> <!-- Adena -->
+				<item id="6714" min="1" max="1" chance="0.3003003003003" /> <!-- Sealed Major Arcana Circlet Pattern -->
+				<item id="6713" min="1" max="1" chance="0.3003003003003" /> <!-- Sealed Major Arcana Boot Design -->
+				<item id="7579" min="1" max="1" chance="0.149925037481259" /> <!-- Draconic Bow Shaft -->
+				<item id="5537" min="1" max="1" chance="0.149925037481259" /> <!-- Soul Separator Head -->
+				<item id="960" min="1" max="1" chance="0.03000300030003" /> <!-- Scroll: Enchant Armor (S-grade) -->
+				<item id="236" min="1" max="1" chance="0.005" /> <!-- Soul Separator -->
+				<!-- Also drops herbs. -->
+				<item id="8600" min="1" max="1" chance="10" /> <!-- Herb of Life -->
+				<item id="8601" min="1" max="1" chance="8" /> <!-- Major Herb of Life -->
+				<item id="8602" min="1" max="1" chance="2" /> <!-- Superior Herb of Life -->
+				<item id="8603" min="1" max="1" chance="19.8" /> <!-- Herb of Mana -->
+				<item id="8604" min="1" max="1" chance="9.9" /> <!-- Major Herb of Mana -->
+				<item id="8605" min="1" max="1" chance="3.3" /> <!-- Superior Herb of Mana -->
+				<item id="34849" min="1" max="1" chance="0.7" /> <!-- Mysterious Herb of Power -->
+				<item id="34850" min="1" max="1" chance="0.7" /> <!-- Mysterious Herb of Magic -->
+				<item id="13028" min="1" max="1" chance="0.1" /> <!-- Vitality Replenishing Herb -->
+			</drop>
+			<spoil>
+				<item id="36532" min="1" max="1" chance="0.75187969924812" /> <!-- Thin Braid -->
+				<item id="36533" min="1" max="1" chance="0.3003003003003" /> <!-- Synthetic Braid -->
+				<item id="36882" min="1" max="1" chance="0.03000300030003" /> <!-- Recipe: Thin Braid - Upgrade -->
+				<item id="36881" min="1" max="1" chance="0.03000300030003" /> <!-- Recipe: Thin Braid - Downgrade -->
+			</spoil>
+		</dropLists>
+	</npc>
+	<npc id="21372" level="78" type="Monster" name="Varka's Chief Escort">
+		<parameters>
+			<param name="MoveAroundSocial" value="65" />
+			<param name="MoveAroundSocial1" value="65" />
+			<param name="MoveAroundSocial2" value="65" />
+			<param name="FriendShip1" value="7221" />
+			<param name="FriendShip2" value="7222" />
+			<param name="FriendShip3" value="7223" />
+			<param name="FriendShip4" value="7224" />
+			<param name="FriendShip5" value="7225" />
+			<param name="SoulShot" value="100" />
+			<param name="SoulShotRate" value="30" />
+			<skill name="PhysicalSpecial" id="4573" level="9" />
+			<skill name="DeBuff1" id="4578" level="1" />
+		</parameters>
+		<race>HUMANOID</race>
+		<sex>MALE</sex>
+		<equipment rhand="2500" lhand="6918" /> <!-- Dark Legion's Edge / Monster Only (Shield of Silenos) -->
+		<acquire exp="120520" sp="28" />
+		<stats str="79" int="34" dex="42" wit="66" con="75" men="12">
+			<attack physical="1229.46877329678" magical="569.513077611549" random="10" critical="4" accuracy="5" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="333.052902459544" magical="243.626077558743" shield="179" shieldRate="20" />
+			<speed>
+				<walk ground="44" />
+				<run ground="175" />
+			</speed>
+			<hitTime>480</hitTime>
+			<abnormalResist physical="10" magical="10" />
+		</stats>
+		<status undying="false" canBeSown="true" />
+		<skillList>
+			<skill id="4410" level="9" /> <!-- Slightly Weak P. Atk. -->
+			<skill id="4411" level="9" /> <!-- Slightly Weak M. Atk. -->
+			<skill id="4412" level="13" /> <!-- Slightly Strong P. Def. -->
+			<skill id="4413" level="13" /> <!-- Slightly Strong M. Def. -->
+			<skill id="4415" level="3" /> <!-- One-handed Sword -->
+			<skill id="4416" level="6" /> <!-- Humanoids -->
+			<skill id="4573" level="9" /> <!-- Sonic Blaster -->
+			<skill id="4789" level="8" /> <!-- High Lv. -->
+			<skill id="5620" level="6" /> <!-- Melee Attack Vulnerability -->
+		</skillList>
+		<shots shotChance="30" spiritChance="30" />
+		<exCrtEffect>false</exCrtEffect>
+		<ai type="BALANCED" clanHelpRange="300" aggroRange="300">
+			<clanList>
+				<clan>VARKA_SILENOS</clan>
+			</clanList>
+		</ai>
+		<dropLists>
+			<drop>
 				<item id="57" min="43" max="100" chance="70" /> <!-- Adena -->
 				<item id="5488" min="1" max="1" chance="0.3003003003003" /> <!-- Sealed Majestic Robe Fabric -->
 				<item id="5487" min="1" max="1" chance="0.3003003003003" /> <!-- Sealed Robe of Nightmare Fabric -->
@@ -6094,6 +6183,10 @@
 				<item id="39629" min="1" max="1" chance="100" /> <!-- Fortune Pocket - Stage 1 -->
 			</lucky>
 		</dropLists>
+		<collision>
+			<radius normal="16" />
+			<height normal="38" />
+		</collision>
 	</npc>
 	<npc id="21373" level="78" type="Monster" name="Varka's Prophet">
 		<parameters>
@@ -6124,7 +6217,7 @@
 		<acquire exp="152613" sp="36" />
 		<stats str="79" int="34" dex="42" wit="66" con="75" men="12">
 			<vitals hp="5948.26498422713" hpRegen="8.5" mp="1607.46147607461" mpRegen="3" />
-			<attack physical="1229.04191616766" magical="569.427113373419" random="20" critical="4" accuracy="9" attackSpeed="253" type="BLUNT" range="40" distance="80" width="120" />
+			<attack physical="561.558043333623" magical="569.427113373419" random="20" critical="1" accuracy="9" attackSpeed="253" type="BLUNT" range="40" distance="80" width="120" />
 			<defence physical="332.934131736527" magical="243.794649144533" />
 			<speed>
 				<walk ground="36" />
@@ -6135,11 +6228,14 @@
 		</stats>
 		<status undying="false" canBeSown="true" />
 		<skillList>
-			<skill id="4066" level="9" /> <!-- Twister -->
-			<skill id="4098" level="9" /> <!-- Silence -->
-			<skill id="4415" level="3" /> <!-- One-handed Sword -->
+			<skill id="4030" level="3" /> <!-- Might -->
+			<skill id="4160" level="9" /> <!-- Aura Burn -->
+			<skill id="4408" level="10" /> <!-- HP Increase (2x) -->
+			<skill id="4415" level="6" /> <!-- Blunt Weapon -->
 			<skill id="4416" level="6" /> <!-- Humanoids -->
-			<skill id="4789" level="9" /> <!-- High Lv. -->
+			<skill id="4563" level="9" /> <!-- Solar Flare -->
+			<skill id="4575" level="2" /> <!-- Haste -->
+			<skill id="4789" level="10" /> <!-- High Lv. -->
 			<skill id="5620" level="6" /> <!-- Melee Attack Vulnerability -->
 		</skillList>
 		<shots shotChance="50" spiritChance="50" />
@@ -6157,15 +6253,89 @@
 		</collision>
 		<dropLists>
 			<drop>
-				<item id="57" min="41" max="95" chance="70" /> <!-- Adena -->
-				<item id="5481" min="1" max="1" chance="0.3003003003003" /> <!-- Sealed Majestic Leather Armor Fabric -->
-				<item id="5480" min="1" max="1" chance="0.3003003003003" /> <!-- Sealed Leather Armor of Nightmare Fabric -->
-				<item id="36558" min="1" max="1" chance="0.03000300030003" /> <!-- Accessory Gem (Mid-grade) -->
-				<item id="36553" min="1" max="1" chance="0.03000300030003" /> <!-- Armor Fragment (Mid-grade) -->
-				<item id="36548" min="1" max="1" chance="0.03000300030003" /> <!-- Weapon Fragment (Mid-grade) -->
+				<item id="57" min="111" max="258" chance="70" /> <!-- Adena -->
+				<item id="36528" min="1" max="1" chance="0.75187969924812" /> <!-- Metallic Fiber -->
+				<item id="5488" min="1" max="1" chance="0.3003003003003" /> <!-- Sealed Majestic Robe Fabric -->
+				<item id="5487" min="1" max="1" chance="0.3003003003003" /> <!-- Sealed Robe of Nightmare Fabric -->
+				<item id="36563" min="1" max="1" chance="0.03000300030003" /> <!-- Synthetic Cokes -->
 				<item id="959" min="1" max="1" chance="0.0149992500374981" /> <!-- Scroll: Enchant Weapon (S-grade) -->
-				<item id="5323" min="1" max="1" chance="0.01" /> <!-- Sealed Majestic Leather Armor -->
-				<item id="5320" min="1" max="1" chance="0.01" /> <!-- Sealed Leather Armor of Nightmare -->
+				<item id="5329" min="1" max="1" chance="0.01" /> <!-- Sealed Majestic Robe -->
+				<item id="5326" min="1" max="1" chance="0.01" /> <!-- Sealed Robe of Nightmare -->
+				<!-- Also drops herbs. -->
+				<item id="8600" min="1" max="1" chance="10" /> <!-- Herb of Life -->
+				<item id="8601" min="1" max="1" chance="8" /> <!-- Major Herb of Life -->
+				<item id="8602" min="1" max="1" chance="2" /> <!-- Superior Herb of Life -->
+				<item id="8603" min="1" max="1" chance="19.8" /> <!-- Herb of Mana -->
+				<item id="8604" min="1" max="1" chance="9.9" /> <!-- Major Herb of Mana -->
+				<item id="8605" min="1" max="1" chance="3.3" /> <!-- Superior Herb of Mana -->
+				<item id="34849" min="1" max="1" chance="0.7" /> <!-- Mysterious Herb of Power -->
+				<item id="34850" min="1" max="1" chance="0.7" /> <!-- Mysterious Herb of Magic -->
+				<item id="13028" min="1" max="1" chance="0.1" /> <!-- Vitality Replenishing Herb -->
+			</drop>
+			<spoil>
+				<item id="36532" min="1" max="1" chance="0.75187969924812" /> <!-- Thin Braid -->
+				<item id="36533" min="1" max="1" chance="0.3003003003003" /> <!-- Synthetic Braid -->
+				<item id="36882" min="1" max="1" chance="0.03000300030003" /> <!-- Recipe: Thin Braid - Upgrade -->
+				<item id="36881" min="1" max="1" chance="0.03000300030003" /> <!-- Recipe: Thin Braid - Downgrade -->
+			</spoil>
+		</dropLists>
+	</npc>
+	<npc id="21374" level="78" type="Monster" name="Prophet's Royal Guard">
+		<parameters>
+			<param name="MoveAroundSocial" value="85" />
+			<param name="MoveAroundSocial1" value="85" />
+			<param name="MoveAroundSocial2" value="85" />
+			<param name="FriendShip1" value="7221" />
+			<param name="FriendShip2" value="7222" />
+			<param name="FriendShip3" value="7223" />
+			<param name="FriendShip4" value="7224" />
+			<param name="FriendShip5" value="7225" />
+			<param name="SoulShot" value="100" />
+			<param name="SoulShotRate" value="30" />
+			<skill name="PhysicalSpecial" id="4573" level="9" />
+			<skill name="DeBuff1" id="4578" level="1" />
+		</parameters>
+		<race>HUMANOID</race>
+		<sex>MALE</sex>
+		<equipment rhand="2500" lhand="6918" /> <!-- Dark Legion's Edge / Monster Only (Shield of Silenos) -->
+		<acquire exp="122548" sp="29" />
+		<stats str="79" int="34" dex="42" wit="66" con="75" men="12">
+			<vitals hp="5948.26498422713" hpRegen="8.5" mp="1607.46147607461" mpRegen="3" />
+			<attack physical="1229.04191616766" magical="569.427113373419" random="10" critical="4" accuracy="5" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="332.934131736527" magical="243.794649144533" shield="183" shieldRate="20" />
+			<speed>
+				<walk ground="34" />
+				<run ground="175" />
+			</speed>
+			<hitTime>480</hitTime>
+			<abnormalResist physical="10" magical="10" />
+		</stats>
+		<status undying="false" canBeSown="true" />
+		<skillList>
+			<skill id="4415" level="3" /> <!-- One-handed Sword -->
+			<skill id="4416" level="6" /> <!-- Humanoids -->
+			<skill id="4573" level="9" /> <!-- Sonic Blaster -->
+			<skill id="4789" level="9" /> <!-- High Lv. -->
+			<skill id="5620" level="6" /> <!-- Melee Attack Vulnerability -->
+		</skillList>
+		<shots shotChance="30" spiritChance="30" />
+		<exCrtEffect>false</exCrtEffect>
+		<ai type="BALANCED" clanHelpRange="300" aggroRange="300">
+			<clanList>
+				<clan>VARKA_SILENOS</clan>
+			</clanList>
+		</ai>
+		<dropLists>
+			<drop>
+				<item id="57" min="44" max="102" chance="70" /> <!-- Adena -->
+				<item id="5541" min="1" max="1" chance="0.0750187546886722" /> <!-- Tallum Glaive Edge -->
+				<item id="36523" min="1" max="1" chance="0.03000300030003" /> <!-- Adamantite -->
+				<item id="36528" min="1" max="1" chance="0.03000300030003" /> <!-- Metallic Fiber -->
+				<item id="36558" min="1" max="1" chance="0.03000300030003" /> <!-- Accessory Gem (Mid-grade) -->
+				<item id="960" min="1" max="1" chance="0.03000300030003" /> <!-- Scroll: Enchant Armor (S-grade) -->
+				<item id="36563" min="1" max="1" chance="0.03000300030003" /> <!-- Synthetic Cokes -->
+				<item id="36553" min="1" max="1" chance="0.03000300030003" /> <!-- Armor Fragment (Mid-grade) -->
+				<item id="305" min="1" max="1" chance="0.01" /> <!-- Tallum Glaive -->
 				<!-- Also drops herbs. -->
 				<item id="8600" min="1" max="1" chance="10" /> <!-- Herb of Life -->
 				<item id="8601" min="1" max="1" chance="8" /> <!-- Major Herb of Life -->
@@ -6187,6 +6357,10 @@
 				<item id="39629" min="1" max="1" chance="100" /> <!-- Fortune Pocket - Stage 1 -->
 			</lucky>
 		</dropLists>
+		<collision>
+			<radius normal="16" />
+			<height normal="41" />
+		</collision>
 	</npc>
 	<npc id="21375" level="78" type="Monster" name="Prophet's Disciple">
 		<parameters>

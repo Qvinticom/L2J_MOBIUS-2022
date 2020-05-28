@@ -2514,7 +2514,7 @@
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
 			<vitals hp="356248.554913295" hpRegen="8.5" mp="23550.495049505" mpRegen="30" />
 			<attack physical="130328.009923613" magical="13873.8209170114" random="10" critical="4" accuracy="5" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
-			<defence physical="630.841121495327" magical="265.209361456414" evasion="7" />
+			<defence physical="525.700934579439" magical="304.990765674876" evasion="7" />
 			<attribute>
 				<attack type="DARK" value="330" />
 				<defence fire="250" water="250" wind="250" earth="250" holy="200" dark="250" />
@@ -2528,17 +2528,17 @@
 		</stats>
 		<status undying="false" canBeSown="true" />
 		<skillList>
+			<skill id="4032" level="9" /> <!-- Power Strike -->
+			<skill id="4065" level="9" /> <!-- Heal -->
 			<skill id="4410" level="10" /> <!-- Slightly Weak P. Atk. -->
 			<skill id="4411" level="10" /> <!-- Slightly Weak M. Atk. -->
 			<skill id="4412" level="19" /> <!-- Extremely Strong P. Def. -->
 			<skill id="4413" level="9" /> <!-- Slightly Weak M. Def. -->
-			<skill id="4414" level="1" /> <!-- Heavy Armor Type -->
 			<skill id="4415" level="3" /> <!-- One-handed Sword -->
 			<skill id="4416" level="6" /> <!-- Humanoids -->
 			<skill id="4417" level="26" /> <!-- Humanoids -->
-			<skill id="4466" level="3" /> <!-- Surrender to Dark -->
-			<skill id="4622" level="9" /> <!-- Drain Energy -->
-			<skill id="4665" level="9" /> <!-- Drain Energy -->
+			<skill id="4612" level="9" /> <!-- Wide Sweep -->
+			<skill id="4641" level="10" /> <!-- Super Strike -->
 			<skill id="4789" level="10" /> <!-- High Lv. -->
 			<skill id="5467" level="1" /> <!-- Dark Attack -->
 			<skill id="14765" level="4" /> <!-- Blood Siphon Resistance -->
@@ -2811,7 +2811,7 @@
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
 			<vitals hp="356248.554913295" hpRegen="8.5" mp="23550.495049505" mpRegen="30" />
 			<attack physical="130328.009923613" magical="13873.8209170114" random="10" critical="4" accuracy="5" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
-			<defence physical="420.560747663551" magical="358.812665499854" evasion="8" />
+			<defence physical="525.700934579439" magical="304.990765674876" evasion="8" />
 			<attribute>
 				<attack type="DARK" value="330" />
 				<defence fire="250" water="250" wind="250" earth="250" holy="200" dark="250" />
@@ -2825,17 +2825,17 @@
 		</stats>
 		<status undying="false" canBeSown="true" />
 		<skillList>
+			<skill id="4032" level="9" /> <!-- Power Strike -->
+			<skill id="4065" level="9" /> <!-- Heal -->
 			<skill id="4410" level="10" /> <!-- Slightly Weak P. Atk. -->
 			<skill id="4411" level="10" /> <!-- Slightly Weak M. Atk. -->
 			<skill id="4412" level="19" /> <!-- Extremely Strong P. Def. -->
 			<skill id="4413" level="9" /> <!-- Slightly Weak M. Def. -->
-			<skill id="4414" level="3" /> <!-- Light Armor Type -->
 			<skill id="4415" level="3" /> <!-- One-handed Sword -->
 			<skill id="4416" level="6" /> <!-- Humanoids -->
 			<skill id="4417" level="26" /> <!-- Humanoids -->
-			<skill id="4466" level="3" /> <!-- Surrender to Dark -->
-			<skill id="4622" level="9" /> <!-- Drain Energy -->
-			<skill id="4665" level="9" /> <!-- Drain Energy -->
+			<skill id="4612" level="9" /> <!-- Wide Sweep -->
+			<skill id="4641" level="10" /> <!-- Super Strike -->
 			<skill id="4789" level="10" /> <!-- High Lv. -->
 			<skill id="5467" level="1" /> <!-- Dark Attack -->
 			<skill id="14765" level="4" /> <!-- Blood Siphon Resistance -->
@@ -3109,7 +3109,7 @@
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
 			<vitals hp="356248.554913295" hpRegen="8.5" mp="23550.495049505" mpRegen="30" />
 			<attack physical="130328.009923613" magical="13873.8209170114" random="10" critical="4" accuracy="5" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
-			<defence physical="630.841121495327" magical="265.209361456414" evasion="8" />
+			<defence physical="525.700934579439" magical="304.990765674876" evasion="8" />
 			<attribute>
 				<attack type="DARK" value="330" />
 				<defence fire="250" water="250" wind="250" earth="250" holy="200" dark="250" />
@@ -3123,16 +3123,19 @@
 		</stats>
 		<status undying="false" canBeSown="true" />
 		<skillList>
+			<skill id="4065" level="9" /> <!-- Heal -->
+			<skill id="4088" level="9" /> <!-- Bleed -->
+			<skill id="4158" level="9" /> <!-- Prominence -->
 			<skill id="4410" level="10" /> <!-- Slightly Weak P. Atk. -->
 			<skill id="4411" level="10" /> <!-- Slightly Weak M. Atk. -->
 			<skill id="4412" level="19" /> <!-- Extremely Strong P. Def. -->
 			<skill id="4413" level="9" /> <!-- Slightly Weak M. Def. -->
-			<skill id="4414" level="1" /> <!-- Heavy Armor Type -->
-			<skill id="4415" level="11" /> <!-- Spear -->
+			<skill id="4415" level="3" /> <!-- One-handed Sword -->
 			<skill id="4416" level="6" /> <!-- Humanoids -->
 			<skill id="4417" level="26" /> <!-- Humanoids -->
 			<skill id="4622" level="9" /> <!-- Drain Energy -->
-			<skill id="4665" level="9" /> <!-- Drain Energy -->
+			<skill id="4641" level="10" /> <!-- Super Strike -->
+			<skill id="4655" level="9" /> <!-- Death Link -->
 			<skill id="4789" level="10" /> <!-- High Lv. -->
 			<skill id="5467" level="1" /> <!-- Dark Attack -->
 			<skill id="14765" level="4" /> <!-- Blood Siphon Resistance -->
@@ -3404,7 +3407,7 @@
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
 			<vitals hp="356248.554913295" hpRegen="8.5" mp="23550.495049505" mpRegen="30" />
 			<attack physical="130328.009923613" magical="13873.8209170114" random="10" critical="4" accuracy="5" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
-			<defence physical="420.560747663551" magical="358.812665499854" evasion="9" />
+			<defence physical="525.700934579439" magical="304.990765674876" evasion="9" />
 			<attribute>
 				<attack type="DARK" value="330" />
 				<defence fire="250" water="250" wind="250" earth="250" holy="200" dark="250" />
@@ -3419,14 +3422,16 @@
 		<status undying="false" canBeSown="true" />
 		<skillList>
 			<skill id="4032" level="9" /> <!-- Power Strike -->
+			<skill id="4065" level="9" /> <!-- Heal -->
 			<skill id="4410" level="10" /> <!-- Slightly Weak P. Atk. -->
 			<skill id="4411" level="10" /> <!-- Slightly Weak M. Atk. -->
 			<skill id="4412" level="19" /> <!-- Extremely Strong P. Def. -->
 			<skill id="4413" level="9" /> <!-- Slightly Weak M. Def. -->
-			<skill id="4414" level="3" /> <!-- Light Armor Type -->
 			<skill id="4415" level="3" /> <!-- One-handed Sword -->
 			<skill id="4416" level="6" /> <!-- Humanoids -->
 			<skill id="4417" level="26" /> <!-- Humanoids -->
+			<skill id="4612" level="9" /> <!-- Wide Sweep -->
+			<skill id="4641" level="10" /> <!-- Super Strike -->
 			<skill id="4789" level="10" /> <!-- High Lv. -->
 			<skill id="5467" level="1" /> <!-- Dark Attack -->
 			<skill id="14765" level="4" /> <!-- Blood Siphon Resistance -->
@@ -3700,7 +3705,7 @@
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
 			<vitals hp="356248.554913295" hpRegen="8.5" mp="23550.495049505" mpRegen="30" />
 			<attack physical="130328.009923613" magical="13873.8209170114" random="10" critical="4" accuracy="5" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
-			<defence physical="630.841121495327" magical="265.209361456414" evasion="9" />
+			<defence physical="525.700934579439" magical="304.990765674876" evasion="9" />
 			<attribute>
 				<attack type="DARK" value="330" />
 				<defence fire="250" water="250" wind="250" earth="250" holy="200" dark="250" />
@@ -3714,17 +3719,19 @@
 		</stats>
 		<status undying="false" canBeSown="true" />
 		<skillList>
+			<skill id="4065" level="9" /> <!-- Heal -->
+			<skill id="4088" level="10" /> <!-- Bleed -->
+			<skill id="4158" level="9" /> <!-- Prominence -->
 			<skill id="4410" level="10" /> <!-- Slightly Weak P. Atk. -->
 			<skill id="4411" level="10" /> <!-- Slightly Weak M. Atk. -->
 			<skill id="4412" level="19" /> <!-- Extremely Strong P. Def. -->
 			<skill id="4413" level="9" /> <!-- Slightly Weak M. Def. -->
-			<skill id="4414" level="1" /> <!-- Heavy Armor Type -->
-			<skill id="4415" level="11" /> <!-- Spear -->
+			<skill id="4415" level="3" /> <!-- One-handed Sword -->
 			<skill id="4416" level="6" /> <!-- Humanoids -->
 			<skill id="4417" level="26" /> <!-- Humanoids -->
-			<skill id="4466" level="3" /> <!-- Surrender to Dark -->
 			<skill id="4622" level="9" /> <!-- Drain Energy -->
-			<skill id="4665" level="9" /> <!-- Drain Energy -->
+			<skill id="4641" level="10" /> <!-- Super Strike -->
+			<skill id="4655" level="9" /> <!-- Death Link -->
 			<skill id="4789" level="10" /> <!-- High Lv. -->
 			<skill id="5467" level="1" /> <!-- Dark Attack -->
 			<skill id="14765" level="4" /> <!-- Blood Siphon Resistance -->
@@ -4152,7 +4159,7 @@
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
 			<vitals hp="356248.265895954" hpRegen="8.5" mp="23550.495049505" mpRegen="30" />
 			<attack physical="65164.108953835" magical="6936.97244026951" random="10" critical="4" accuracy="5" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
-			<defence physical="630.851063829787" magical="265.308677028665" evasion="9" />
+			<defence physical="420.744680851064" magical="358.947033627017" evasion="9" />
 			<attribute>
 				<attack type="DARK" value="330" />
 				<defence fire="250" water="250" wind="250" earth="250" holy="200" dark="250" />
@@ -4168,11 +4175,11 @@
 		<skillList>
 			<skill id="4032" level="9" /> <!-- Power Strike -->
 			<skill id="4408" level="10" /> <!-- HP Increase (2x) -->
-			<skill id="4414" level="1" /> <!-- Heavy Armor Type -->
-			<skill id="4415" level="1" /> <!-- Bare Hands -->
-			<skill id="4416" level="1" /> <!-- Undead -->
-			<skill id="4417" level="36" /> <!-- Undead -->
-			<skill id="4614" level="9" /> <!-- Death Bomb -->
+			<skill id="4414" level="3" /> <!-- Light Armor Type -->
+			<skill id="4415" level="3" /> <!-- One-handed Sword -->
+			<skill id="4416" level="6" /> <!-- Humanoids -->
+			<skill id="4417" level="26" /> <!-- Humanoids -->
+			<skill id="4612" level="9" /> <!-- Wide Sweep -->
 			<skill id="4789" level="10" /> <!-- High Lv. -->
 			<skill id="5467" level="1" /> <!-- Dark Attack -->
 			<skill id="14765" level="4" /> <!-- Blood Siphon Resistance -->
@@ -4739,7 +4746,6 @@
 		<status undying="false" />
 		<skillList>
 			<skill id="4071" level="3" /> <!-- Bow/Crossbow Resistance -->
-			<skill id="4073" level="10" /> <!-- Stun -->
 			<skill id="4084" level="9" /> <!-- Physical Attack Resistance -->
 			<skill id="4285" level="5" /> <!-- Sleep Resistance -->
 			<skill id="4410" level="12" /> <!-- Slightly Strong P. Atk. -->
@@ -4751,6 +4757,9 @@
 			<skill id="4417" level="4" /> <!-- Beast -->
 			<skill id="4439" level="2" /> <!-- Greater Hold Resistance -->
 			<skill id="4445" level="1" /> <!-- Greater Spear Resistance -->
+			<skill id="5079" level="1" /> <!-- Haste Focus -->
+			<skill id="5081" level="2" /> <!-- Silence -->
+			<skill id="5082" level="2" /> <!-- Spinning Slasher -->
 			<skill id="5465" level="1" /> <!-- Earth Attack -->
 			<skill id="5601" level="9" /> <!-- Melee Attack Resistance -->
 		</skillList>

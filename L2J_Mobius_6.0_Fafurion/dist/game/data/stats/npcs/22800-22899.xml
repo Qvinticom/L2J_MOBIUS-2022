@@ -834,9 +834,9 @@
 		<sex>MALE</sex>
 		<acquire exp="743246" sp="178" />
 		<stats str="79" int="34" dex="42" wit="66" con="75" men="12">
-			<vitals hp="32596.214511041" hpRegen="8.5" mp="1846.71532846715" mpRegen="3" />
-			<attack physical="8084.29118773946" magical="3712.85731125199" random="10" critical="4" accuracy="5" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
-			<defence physical="578.867192909569" magical="635.521967009508" />
+			<vitals hp="14736.0672975815" hpRegen="8.5" mp="1846.71532846715" mpRegen="3" />
+			<attack physical="11288.432918527" magical="5184.01629079942" random="10" critical="4" accuracy="5" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="579.042670445599" magical="635.521967009508" />
 			<attribute>
 				<attack type="EARTH" value="180" />
 				<defence fire="100" water="100" wind="50" earth="100" holy="100" dark="100" />
@@ -850,12 +850,15 @@
 		</stats>
 		<status undying="false" canBeSown="true" />
 		<skillList>
-			<skill id="4412" level="9" /> <!-- Slightly Weak P. Def. -->
+			<skill id="4408" level="11" /> <!-- HP Increase (3x) -->
+			<skill id="4410" level="13" /> <!-- Slightly Strong P. Atk. -->
+			<skill id="4411" level="16" /> <!-- Very Strong M. Atk. -->
+			<skill id="4412" level="15" /> <!-- Strong P. Def. -->
 			<skill id="4413" level="4" /> <!-- Extremely Weak M. Def. -->
-			<skill id="4415" level="11" /> <!-- Spear -->
+			<skill id="4415" level="3" /> <!-- One-handed Sword -->
 			<skill id="4416" level="10" /> <!-- Dragons -->
 			<skill id="5465" level="1" /> <!-- Earth Attack -->
-			<skill id="6760" level="1" /> <!-- Dragon Strike -->
+			<skill id="6763" level="1" /> <!-- Dragon Earth Strike -->
 		</skillList>
 		<exCrtEffect>false</exCrtEffect>
 		<sNpcPropHpRate>3</sNpcPropHpRate>
@@ -902,9 +905,9 @@
 		<sex>MALE</sex>
 		<acquire exp="745411" sp="178" />
 		<stats str="79" int="34" dex="42" wit="66" con="75" men="12">
-			<vitals hp="32596.214511041" hpRegen="8.5" mp="1846.71532846715" mpRegen="3" />
-			<attack physical="8084.29118773946" magical="3712.85731125199" random="10" critical="4" accuracy="5" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
-			<defence physical="578.867192909569" magical="635.521967009508" />
+			<vitals hp="14736.0672975815" hpRegen="8.5" mp="1846.71532846715" mpRegen="3" />
+			<attack physical="11288.432918527" magical="5184.01629079942" random="10" critical="4" accuracy="5" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="579.042670445599" magical="635.521967009508" />
 			<attribute>
 				<attack type="EARTH" value="180" />
 				<defence fire="100" water="100" wind="50" earth="100" holy="100" dark="100" />
@@ -918,12 +921,15 @@
 		</stats>
 		<status undying="false" canBeSown="true" />
 		<skillList>
-			<skill id="4412" level="9" /> <!-- Slightly Weak P. Def. -->
+			<skill id="4408" level="11" /> <!-- HP Increase (3x) -->
+			<skill id="4410" level="13" /> <!-- Slightly Strong P. Atk. -->
+			<skill id="4411" level="16" /> <!-- Very Strong M. Atk. -->
+			<skill id="4412" level="15" /> <!-- Strong P. Def. -->
 			<skill id="4413" level="4" /> <!-- Extremely Weak M. Def. -->
-			<skill id="4415" level="11" /> <!-- Spear -->
+			<skill id="4415" level="3" /> <!-- One-handed Sword -->
 			<skill id="4416" level="10" /> <!-- Dragons -->
 			<skill id="5465" level="1" /> <!-- Earth Attack -->
-			<skill id="6760" level="1" /> <!-- Dragon Strike -->
+			<skill id="6763" level="1" /> <!-- Dragon Earth Strike -->
 		</skillList>
 		<exCrtEffect>false</exCrtEffect>
 		<sNpcPropHpRate>3</sNpcPropHpRate>
@@ -968,9 +974,9 @@
 		<sex>MALE</sex>
 		<acquire exp="969216" sp="232" />
 		<stats str="79" int="34" dex="42" wit="66" con="75" men="12">
-			<vitals hp="32596.214511041" hpRegen="8.5" mp="1846.71532846715" mpRegen="3" />
-			<attack physical="8084.29118773946" magical="3712.85731125199" random="10" critical="4" accuracy="5" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
-			<defence physical="578.867192909569" magical="635.521967009508" />
+			<vitals hp="14736.119873817" hpRegen="8.5" mp="1846.71532846715" mpRegen="3" />
+			<attack physical="11288.432918527" magical="5184.01629079942" random="10" critical="4" accuracy="5" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="579.042670445599" magical="635.521967009508" />
 			<attribute>
 				<attack type="EARTH" value="180" />
 				<defence fire="100" water="100" wind="50" earth="100" holy="100" dark="100" />
@@ -984,12 +990,15 @@
 		</stats>
 		<status undying="false" canBeSown="true" />
 		<skillList>
-			<skill id="4412" level="9" /> <!-- Slightly Weak P. Def. -->
+			<skill id="4408" level="12" /> <!-- HP Increase (4x) -->
+			<skill id="4410" level="13" /> <!-- Slightly Strong P. Atk. -->
+			<skill id="4411" level="16" /> <!-- Very Strong M. Atk. -->
+			<skill id="4412" level="15" /> <!-- Strong P. Def. -->
 			<skill id="4413" level="4" /> <!-- Extremely Weak M. Def. -->
-			<skill id="4415" level="11" /> <!-- Spear -->
+			<skill id="4415" level="3" /> <!-- One-handed Sword -->
 			<skill id="4416" level="10" /> <!-- Dragons -->
 			<skill id="5465" level="1" /> <!-- Earth Attack -->
-			<skill id="6760" level="1" /> <!-- Dragon Strike -->
+			<skill id="6763" level="1" /> <!-- Dragon Earth Strike -->
 		</skillList>
 		<exCrtEffect>false</exCrtEffect>
 		<sNpcPropHpRate>4</sNpcPropHpRate>

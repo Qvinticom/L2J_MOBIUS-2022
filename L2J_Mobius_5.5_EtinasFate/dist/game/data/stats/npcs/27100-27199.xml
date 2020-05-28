@@ -297,9 +297,9 @@
 		<sex>FEMALE</sex>
 		<equipment rhand="127" /> <!-- Crimson Sword -->
 		<stats str="79" int="34" dex="42" wit="66" con="75" men="12">
-			<vitals hp="702.208201892744" hpRegen="4.5" mp="372.262773722628" mpRegen="1.8" />
-			<attack physical="157.103825136612" magical="78.0870707056371" random="10" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
-			<defence physical="129.508196721311" magical="95.0633534096499" />
+			<vitals hp="847.318611987382" hpRegen="4.5" mp="432.27899432279" mpRegen="1.8" />
+			<attack physical="203.042328042328" magical="100.335377524539" random="10" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="145.238095238095" magical="106.206310585873" />
 			<attribute>
 				<defence fire="20" water="20" wind="20" earth="20" holy="20" dark="20" />
 			</attribute>
@@ -368,9 +368,9 @@
 		<race>BEAST</race>
 		<sex>FEMALE</sex>
 		<stats str="79" int="34" dex="42" wit="66" con="75" men="12">
-			<vitals hp="604.416403785489" hpRegen="4.5" mp="329.278183292782" mpRegen="1.8" />
-			<attack physical="128.151260504202" magical="63.7012625634263" random="10" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
-			<defence physical="118.487394957983" magical="87.2368412085029" />
+			<vitals hp="809.463722397476" hpRegen="4.5" mp="417.680454176805" mpRegen="1.8" />
+			<attack physical="190.666666666667" magical="93.684054407411" random="10" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="140.8" magical="103.16301703163" />
 			<attribute>
 				<defence fire="20" water="20" wind="20" earth="20" holy="20" dark="20" />
 			</attribute>
@@ -525,9 +525,9 @@
 		<race>DEMONIC</race>
 		<sex>FEMALE</sex>
 		<stats str="79" int="34" dex="42" wit="66" con="75" men="12">
-			<vitals hp="543.217665615142" hpRegen="4.5" mp="300.081103000811" mpRegen="1.8" />
-			<attack physical="111.823361823362" magical="56.3727171146142" random="10" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
-			<defence physical="111.965811965812" magical="81.7961888521499" />
+			<vitals hp="736.277602523659" hpRegen="4.5" mp="387.672343876723" mpRegen="1.8" />
+			<attack physical="167.344173441734" magical="83.4882480254579" random="10" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="133.333333333333" magical="97.5873505693694" />
 			<attribute>
 				<attack type="DARK" value="20" />
 				<defence fire="20" water="20" wind="20" earth="20" holy="-5" dark="184" />
@@ -3184,9 +3184,9 @@
 		<race>PLANT</race>
 		<sex>ETC</sex>
 		<stats str="79" int="34" dex="42" wit="66" con="75" men="12">
-			<vitals hp="1422.08201892744" hpRegen="6.5" mp="747.769667477697" mpRegen="2.4" />
-			<attack physical="422.062350119904" magical="203.073733813267" random="20" critical="4" accuracy="9" attackSpeed="253" type="BLUNT" range="40" distance="80" width="120" />
-			<defence physical="160.431654676259" magical="172.983124878371" />
+			<vitals hp="1673.18611987382" hpRegen="6.5" mp="889.699918896999" mpRegen="2.4" />
+			<attack physical="535.87962962963" magical="256.388987910322" random="20" critical="1" accuracy="9" attackSpeed="253" type="BLUNT" range="40" distance="80" width="120" />
+			<defence physical="179.166666666667" magical="192.818408790929" />
 			<attribute>
 				<defence fire="-13" water="20" wind="20" earth="20" holy="20" dark="20" />
 			</attribute>
@@ -3198,12 +3198,10 @@
 		</stats>
 		<status undying="false" />
 		<skillList>
-			<skill id="4275" level="2" /> <!-- Holy Vulnerability -->
-			<skill id="4278" level="1" /> <!-- Dark Attack -->
-			<skill id="4408" level="9" /> <!-- HP Increase (1/ 2x) -->
+			<skill id="4071" level="5" /> <!-- Bow/ Crossbow Resistance -->
 			<skill id="4414" level="3" /> <!-- Light Armor Type -->
-			<skill id="4415" level="3" /> <!-- One-handed Sword -->
-			<skill id="4416" level="1" /> <!-- Undead -->
+			<skill id="4415" level="5" /> <!-- One-handed Blunt Weapons -->
+			<skill id="4416" level="5" /> <!-- Plants -->
 		</skillList>
 		<exCrtEffect>true</exCrtEffect>
 		<ai clanHelpRange="100" aggroRange="450">
@@ -3228,9 +3226,9 @@
 		<race>PLANT</race>
 		<sex>ETC</sex>
 		<stats str="79" int="34" dex="42" wit="66" con="75" men="12">
-			<vitals hp="1422.08201892744" hpRegen="6.5" mp="747.769667477697" mpRegen="2.4" />
-			<attack physical="422.062350119904" magical="203.073733813267" random="10" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
-			<defence physical="160.431654676259" magical="172.983124878371" />
+			<vitals hp="1673.18611987382" hpRegen="6.5" mp="889.699918896999" mpRegen="2.4" />
+			<attack physical="535.87962962963" magical="256.388987910322" random="10" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="224.305555555556" magical="163.89564747229" />
 			<attribute>
 				<defence fire="-13" water="20" wind="20" earth="20" holy="20" dark="20" />
 			</attribute>
@@ -3242,12 +3240,9 @@
 		</stats>
 		<status undying="false" />
 		<skillList>
-			<skill id="4275" level="2" /> <!-- Holy Vulnerability -->
-			<skill id="4278" level="1" /> <!-- Dark Attack -->
-			<skill id="4408" level="9" /> <!-- HP Increase (1/ 2x) -->
-			<skill id="4414" level="3" /> <!-- Light Armor Type -->
+			<skill id="4071" level="5" /> <!-- Bow/ Crossbow Resistance -->
 			<skill id="4415" level="3" /> <!-- One-handed Sword -->
-			<skill id="4416" level="1" /> <!-- Undead -->
+			<skill id="4416" level="5" /> <!-- Plants -->
 		</skillList>
 		<exCrtEffect>true</exCrtEffect>
 		<ai clanHelpRange="100" aggroRange="450">
@@ -3272,9 +3267,9 @@
 		<race>PLANT</race>
 		<sex>ETC</sex>
 		<stats str="79" int="34" dex="42" wit="66" con="75" men="12">
-			<vitals hp="1422.08201892744" hpRegen="6.5" mp="747.769667477697" mpRegen="2.4" />
-			<attack physical="422.062350119904" magical="203.073733813267" random="10" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
-			<defence physical="160.431654676259" magical="172.983124878371" />
+			<vitals hp="1673.18611987382" hpRegen="6.5" mp="889.699918896999" mpRegen="2.4" />
+			<attack physical="535.87962962963" magical="256.388987910322" random="10" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="224.305555555556" magical="163.89564747229" />
 			<attribute>
 				<defence fire="-13" water="20" wind="20" earth="20" holy="20" dark="20" />
 			</attribute>
@@ -3286,12 +3281,9 @@
 		</stats>
 		<status undying="false" />
 		<skillList>
-			<skill id="4275" level="2" /> <!-- Holy Vulnerability -->
-			<skill id="4278" level="1" /> <!-- Dark Attack -->
-			<skill id="4408" level="9" /> <!-- HP Increase (1/ 2x) -->
-			<skill id="4414" level="3" /> <!-- Light Armor Type -->
+			<skill id="4071" level="5" /> <!-- Bow/ Crossbow Resistance -->
 			<skill id="4415" level="3" /> <!-- One-handed Sword -->
-			<skill id="4416" level="1" /> <!-- Undead -->
+			<skill id="4416" level="5" /> <!-- Plants -->
 		</skillList>
 		<exCrtEffect>true</exCrtEffect>
 		<ai clanHelpRange="100" aggroRange="450">
@@ -3316,9 +3308,9 @@
 		<race>PLANT</race>
 		<sex>ETC</sex>
 		<stats str="79" int="34" dex="42" wit="66" con="75" men="12">
-			<vitals hp="1422.08201892744" hpRegen="6.5" mp="747.769667477697" mpRegen="2.4" />
-			<attack physical="422.062350119904" magical="203.073733813267" random="10" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
-			<defence physical="160.431654676259" magical="172.983124878371" />
+			<vitals hp="1673.18611987382" hpRegen="6.5" mp="889.699918896999" mpRegen="2.4" />
+			<attack physical="535.87962962963" magical="256.388987910322" random="10" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="224.305555555556" magical="163.89564747229" />
 			<attribute>
 				<defence fire="-13" water="20" wind="20" earth="20" holy="20" dark="20" />
 			</attribute>
@@ -3330,12 +3322,9 @@
 		</stats>
 		<status undying="false" />
 		<skillList>
-			<skill id="4275" level="2" /> <!-- Holy Vulnerability -->
-			<skill id="4278" level="1" /> <!-- Dark Attack -->
-			<skill id="4408" level="9" /> <!-- HP Increase (1/ 2x) -->
-			<skill id="4414" level="3" /> <!-- Light Armor Type -->
+			<skill id="4071" level="5" /> <!-- Bow/ Crossbow Resistance -->
 			<skill id="4415" level="3" /> <!-- One-handed Sword -->
-			<skill id="4416" level="1" /> <!-- Undead -->
+			<skill id="4416" level="5" /> <!-- Plants -->
 		</skillList>
 		<exCrtEffect>true</exCrtEffect>
 		<ai clanHelpRange="100" aggroRange="450">

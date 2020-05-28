@@ -923,9 +923,9 @@
 		<acquire exp="440867" sp="105" />
 		<equipment rhand="13979" lhand="13980" />
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="10930.6358381503" hpRegen="8.5" mp="1743.23432343234" mpRegen="3" />
-			<attack physical="1055.57939821137" magical="613.860332624368" critical="4" attackSpeed="253" range="40" />
-			<defence physical="350.292397660819" magical="256.306332387625" />
+			<vitals hp="11506.936416185" hpRegen="8.5" mp="1777.55775577558" mpRegen="3" />
+			<attack physical="1099.49136291692" magical="638.922593361425" critical="4" attackSpeed="253" range="40" />
+			<defence physical="354.082881622661" magical="259.109666868068" />
 			<attribute>
 				<attack type="EARTH" value="100" />
 				<defence fire="100" water="100" wind="50" earth="100" holy="100" dark="100" />
@@ -936,8 +936,12 @@
 			</speed>
 		</stats>
 		<skillList>
-			<skill id="4416" level="9" /> <!-- Demons -->
+			<skill id="4410" level="14" /> <!-- Strong P. Atk. -->
+			<skill id="4412" level="14" /> <!-- Strong P. Def. -->
+			<skill id="4413" level="14" /> <!-- Strong M. Def. -->
+			<skill id="4416" level="10" /> <!-- Dragons -->
 			<skill id="5465" level="1" /> <!-- Earth Attack -->
+			<skill id="16331" level="1" /> <!-- Power Strike -->
 		</skillList>
 		<collision>
 			<radius normal="22" />

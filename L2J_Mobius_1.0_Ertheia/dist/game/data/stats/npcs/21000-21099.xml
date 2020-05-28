@@ -3006,6 +3006,9 @@
 	</npc>
 	<npc id="21067" level="74" type="Monster" name="Guardian Archangel">
 		<parameters>
+			<minions name="Privates">
+				<npc id="20830" count="2" respawnTime="360" weightPoint="1" />
+			</minions>
 			<param name="MoveAroundSocial" value="50" />
 			<param name="MoveAroundSocial1" value="50" />
 			<param name="MoveAroundSocial2" value="50" />
@@ -3226,6 +3229,9 @@
 	</npc>
 	<npc id="21070" level="75" type="Monster" name="Seal Archangel">
 		<parameters>
+			<minions name="Privates">
+				<npc id="20831" count="2" respawnTime="360" weightPoint="1" />
+			</minions>
 			<param name="MoveAroundSocial" value="50" />
 			<param name="MoveAroundSocial1" value="50" />
 			<param name="MoveAroundSocial2" value="50" />
@@ -3365,6 +3371,12 @@
 	</npc>
 	<npc id="21072" level="75" type="Monster" name="Platinum Tribe Guardian Chief">
 		<parameters>
+			<minions name="Privates">
+				<npc id="21069" count="1" respawnTime="360" weightPoint="1" />
+				<npc id="21065" count="1" respawnTime="360" weightPoint="1" />
+				<npc id="21064" count="2" respawnTime="360" weightPoint="1" />
+				<npc id="21066" count="1" respawnTime="360" weightPoint="1" />
+			</minions>
 			<param name="MoveAroundSocial" value="90" />
 			<param name="MoveAroundSocial1" value="74" />
 			<param name="MoveAroundSocial2" value="90" />
@@ -3614,9 +3626,9 @@
 		<equipment rhand="84" /> <!-- Homunkulus' Sword -->
 		<acquire exp="30220" sp="7" />
 		<stats str="79" int="34" dex="42" wit="66" con="75" men="12">
-			<vitals hp="2037.22397476341" hpRegen="7.5" mp="1097.32360097324" mpRegen="2.7" />
-			<attack physical="719.44611679711" magical="340.304744375994" random="10" critical="1" accuracy="5" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
-			<defence physical="257.623171530456" magical="188.652921814284" />
+			<vitals hp="2089.27444794953" hpRegen="7.5" mp="1127.33171127332" mpRegen="2.7" />
+			<attack physical="747.607655502392" magical="352.981571952964" random="10" critical="4" accuracy="5" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="262.55980861244" magical="192.320591859585" />
 			<speed>
 				<walk ground="27" />
 				<run ground="174" />
@@ -3626,19 +3638,18 @@
 		</stats>
 		<status undying="false" canBeSown="true" />
 		<skillList>
-			<skill id="4065" level="6" /> <!-- Heal -->
-			<skill id="4071" level="5" /> <!-- Bow/Crossbow Resistance -->
-			<skill id="4118" level="6" /> <!-- Paralysis -->
+			<skill id="4073" level="6" /> <!-- Stun -->
+			<skill id="4086" level="1" /> <!-- Critical Chance -->
+			<skill id="4275" level="2" /> <!-- Holy Attack Vulnerability -->
 			<skill id="4278" level="1" /> <!-- Dark Attack -->
-			<skill id="4333" level="5" /> <!-- Dark Attack Resistance -->
+			<skill id="4281" level="1" /> <!-- Wind Attack Vulnerability -->
 			<skill id="4408" level="10" /> <!-- HP Increase (2x) -->
 			<skill id="4410" level="12" /> <!-- Slightly Strong P. Atk. -->
 			<skill id="4411" level="12" /> <!-- Slightly Strong M. Atk. -->
-			<skill id="4412" level="10" /> <!-- Slightly Weak P. Def. -->
-			<skill id="4413" level="13" /> <!-- Slightly Strong M. Def. -->
-			<skill id="4415" level="5" /> <!-- Blunt Weapon -->
-			<skill id="4416" level="9" /> <!-- Demons -->
-			<skill id="4438" level="2" /> <!-- Greater Sleep Resistance -->
+			<skill id="4412" level="12" /> <!-- Slightly Strong P. Def. -->
+			<skill id="4413" level="10" /> <!-- Slightly Weak M. Def. -->
+			<skill id="4415" level="3" /> <!-- One-handed Sword -->
+			<skill id="4416" level="1" /> <!-- Undead -->
 		</skillList>
 		<shots shotChance="30" spiritChance="30" />
 		<exCrtEffect>false</exCrtEffect>
@@ -3652,6 +3663,40 @@
 			<radius normal="12" grown="14.5" />
 			<height normal="31" grown="36" />
 		</collision>
+		<dropLists>
+			<drop>
+				<item id="57" min="191" max="446" chance="70" /> <!-- Adena -->
+				<item id="4096" min="1" max="1" chance="1.5" /> <!-- Sealed Blue Wolf Glove Fabric -->
+				<item id="4090" min="1" max="1" chance="1.5" /> <!-- Sealed Blue Wolf Boot Design -->
+				<item id="4091" min="1" max="1" chance="1.5" /> <!-- Sealed Doom Glove Fragment -->
+				<item id="4099" min="1" max="1" chance="1.5" /> <!-- Sealed Doom Boot Fragment -->
+				<item id="8729" min="1" max="1" chance="0.1" /> <!-- Life Stone - Lv. 64 -->
+				<item id="8739" min="1" max="1" chance="0.05" /> <!-- Mid-grade Life Stone - Lv. 64 -->
+				<item id="2475" min="1" max="1" chance="0.03000300030003" /> <!-- Sealed Doom Gloves -->
+				<item id="2487" min="1" max="1" chance="0.03000300030003" /> <!-- Sealed Blue Wolf Gloves -->
+				<item id="601" min="1" max="1" chance="0.03000300030003" /> <!-- Sealed Doom Boots -->
+				<item id="2439" min="1" max="1" chance="0.03000300030003" /> <!-- Sealed Blue Wolf Boots -->
+				<item id="5418" min="1" max="1" chance="0.03000300030003" /> <!-- Recipe: Sealed Tallum Plate Armor(60%) -->
+				<item id="5276" min="1" max="1" chance="0.03000300030003" /> <!-- Recipe: Greater Spiritshot Compressed Package (A-grade) -->
+				<item id="8749" min="1" max="1" chance="0.025" /> <!-- High-grade Life Stone - Lv. 64 -->
+				<item id="5005" min="1" max="1" chance="0.0149992500374981" /> <!-- Recipe: Demon's Dagger (60%) -->
+				<item id="8759" min="1" max="1" chance="0.01" /> <!-- Top-grade Life Stone - Lv. 64 -->
+				<!-- Also drops herbs. -->
+				<item id="8600" min="1" max="1" chance="10" /> <!-- Herb of Life -->
+				<item id="8601" min="1" max="1" chance="8" /> <!-- Major Herb of Life -->
+				<item id="8602" min="1" max="1" chance="2" /> <!-- Superior Herb of Life -->
+				<item id="8603" min="1" max="1" chance="19.8" /> <!-- Herb of Mana -->
+				<item id="8604" min="1" max="1" chance="9.9" /> <!-- Major Herb of Mana -->
+				<item id="8605" min="1" max="1" chance="3.3" /> <!-- Superior Herb of Mana -->
+				<item id="34849" min="1" max="1" chance="0.7" /> <!-- Mysterious Herb of Power -->
+				<item id="34850" min="1" max="1" chance="0.7" /> <!-- Mysterious Herb of Magic -->
+				<item id="13028" min="1" max="1" chance="0.1" /> <!-- Vitality Replenishing Herb -->
+			</drop>
+			<spoil>
+				<item id="4052" min="1" max="1" chance="12.5" /> <!-- Black Ore Earring Piece -->
+				<item id="4616" min="1" max="1" chance="0.75187969924812" /> <!-- Greater CON Dye <Con + 4 DEX - 4> -->
+			</spoil>
+		</dropLists>
 	</npc>
 	<npc id="21076" level="62" type="Monster" name="Bathin's Knight">
 		<parameters>
@@ -3705,12 +3750,22 @@
 		<dropLists>
 			<drop>
 				<item id="57" min="56" max="131" chance="70" /> <!-- Adena -->
-				<item id="1830" min="1" max="1" chance="33.65" /> <!-- Scroll of Escape: Castle -->
+				<item id="1830" min="1" max="1" chance="30" /> <!-- Scroll of Escape: Castle -->
+				<!-- Also drops herbs. -->
+				<item id="8600" min="1" max="1" chance="10" /> <!-- Herb of Life -->
+				<item id="8601" min="1" max="1" chance="8" /> <!-- Major Herb of Life -->
+				<item id="8602" min="1" max="1" chance="2" /> <!-- Superior Herb of Life -->
+				<item id="8603" min="1" max="1" chance="19.8" /> <!-- Herb of Mana -->
+				<item id="8604" min="1" max="1" chance="9.9" /> <!-- Major Herb of Mana -->
+				<item id="8605" min="1" max="1" chance="3.3" /> <!-- Superior Herb of Mana -->
+				<item id="34849" min="1" max="1" chance="0.7" /> <!-- Mysterious Herb of Power -->
+				<item id="34850" min="1" max="1" chance="0.7" /> <!-- Mysterious Herb of Magic -->
+				<item id="13028" min="1" max="1" chance="0.1" /> <!-- Vitality Replenishing Herb -->
 			</drop>
 			<spoil>
-				<item id="36532" min="1" max="1" chance="0.3" /> <!-- Thin Braid -->
-				<item id="36882" min="1" max="1" chance="0.003" /> <!-- Recipe: Thin Braid - Upgrade -->
-				<item id="36881" min="1" max="1" chance="0.0009" /> <!-- Recipe: Thin Braid - Downgrade -->
+				<item id="36532" min="1" max="1" chance="0.75187969924812" /> <!-- Thin Braid -->
+				<item id="36882" min="1" max="1" chance="0.03000300030003" /> <!-- Recipe: Thin Braid - Upgrade -->
+				<item id="36881" min="1" max="1" chance="0.03000300030003" /> <!-- Recipe: Thin Braid - Downgrade -->
 			</spoil>
 			<lucky>
 				<item id="39629" min="1" max="1" chance="100" /> <!-- Fortune Pocket - Stage 1 -->
@@ -3804,6 +3859,10 @@
 	</npc>
 	<npc id="21078" level="70" type="Monster" name="Magus Valac">
 		<parameters>
+			<minions name="Privates">
+				<npc id="21079" count="4" respawnTime="360" weightPoint="1" />
+				<npc id="21080" count="1" respawnTime="360" weightPoint="1" />
+			</minions>
 			<param name="MoveAroundSocial" value="114" />
 			<param name="MoveAroundSocial1" value="114" />
 			<param name="MoveAroundSocial2" value="114" />
@@ -4057,9 +4116,9 @@
 		<equipment rhand="4700" /> <!-- Sword of Delusion -->
 		<acquire exp="38391" sp="9" />
 		<stats str="79" int="34" dex="42" wit="66" con="75" men="12">
-			<vitals hp="2632.17665615142" hpRegen="8.5" mp="1475.26358475264" mpRegen="3" />
-			<attack physical="1068.04238706079" magical="497.330868957889" random="20" critical="1" accuracy="9" attackSpeed="253" type="BLUNT" range="40" distance="80" width="120" />
-			<defence physical="315.114333519241" magical="230.277749095862" />
+			<vitals hp="2676.02523659306" hpRegen="8.5" mp="1507.70478507705" mpRegen="3" />
+			<attack physical="1097.09903917221" magical="510.220604145213" random="20" critical="1" accuracy="9" attackSpeed="253" type="BLUNT" range="40" distance="80" width="120" />
+			<defence physical="319.619404985259" magical="233.67924382701" />
 			<speed>
 				<walk ground="30" />
 				<run ground="174" />
@@ -4069,17 +4128,15 @@
 		</stats>
 		<status undying="false" canBeSown="true" />
 		<skillList>
-			<skill id="4065" level="7" /> <!-- Heal -->
-			<skill id="4098" level="7" /> <!-- Silence -->
-			<skill id="4276" level="1" /> <!-- Bow/Crossbow Vulnerability -->
-			<skill id="4281" level="1" /> <!-- Wind Attack Vulnerability -->
+			<skill id="4093" level="1" /> <!-- Evasion -->
+			<skill id="4118" level="8" /> <!-- Paralysis -->
 			<skill id="4408" level="10" /> <!-- HP Increase (2x) -->
 			<skill id="4410" level="12" /> <!-- Slightly Strong P. Atk. -->
 			<skill id="4411" level="12" /> <!-- Slightly Strong M. Atk. -->
-			<skill id="4412" level="12" /> <!-- Slightly Strong P. Def. -->
-			<skill id="4413" level="13" /> <!-- Slightly Strong M. Def. -->
+			<skill id="4412" level="10" /> <!-- Slightly Weak P. Def. -->
+			<skill id="4413" level="10" /> <!-- Slightly Weak M. Def. -->
 			<skill id="4415" level="5" /> <!-- Blunt Weapon -->
-			<skill id="4416" level="13" /> <!-- Fairies -->
+			<skill id="4416" level="8" /> <!-- Angels -->
 		</skillList>
 		<shots shotChance="30" spiritChance="30" />
 		<exCrtEffect>false</exCrtEffect>
@@ -4803,9 +4860,9 @@
 		<equipment rhand="1472" /> <!-- Dreadbane -->
 		<acquire exp="47166" sp="11" />
 		<stats str="79" int="34" dex="42" wit="66" con="75" men="12">
-			<vitals hp="2632.17665615142" hpRegen="8.5" mp="1475.26358475264" mpRegen="3" />
-			<attack physical="1067.99591002045" magical="497.477396250303" random="10" critical="4" accuracy="5" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
-			<defence physical="314.723926380368" magical="230.372327457097" />
+			<vitals hp="2676.13038906414" hpRegen="8.5" mp="1507.70478507705" mpRegen="3" />
+			<attack physical="1097.09903917221" magical="510.220604145213" random="10" critical="4" accuracy="5" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="319.619404985259" magical="233.67924382701" />
 			<speed>
 				<walk ground="100" />
 				<run ground="174" />
@@ -4815,15 +4872,18 @@
 		</stats>
 		<status undying="false" canBeSown="true" />
 		<skillList>
-			<skill id="4065" level="7" /> <!-- Heal -->
 			<skill id="4085" level="1" /> <!-- Critical Damage -->
 			<skill id="4086" level="1" /> <!-- Critical Chance -->
-			<skill id="4098" level="7" /> <!-- Silence -->
-			<skill id="4408" level="10" /> <!-- HP Increase (2x) -->
+			<skill id="4117" level="8" /> <!-- Paralysis -->
+			<skill id="4152" level="8" /> <!-- Drain Energy -->
+			<skill id="4160" level="8" /> <!-- Aura Burn -->
+			<skill id="4408" level="11" /> <!-- HP Increase (3x) -->
+			<skill id="4410" level="12" /> <!-- Slightly Strong P. Atk. -->
+			<skill id="4411" level="12" /> <!-- Slightly Strong M. Atk. -->
+			<skill id="4412" level="10" /> <!-- Slightly Weak P. Def. -->
+			<skill id="4413" level="10" /> <!-- Slightly Weak M. Def. -->
 			<skill id="4415" level="3" /> <!-- One-handed Sword -->
-			<skill id="4416" level="9" /> <!-- Demons -->
-			<skill id="4438" level="2" /> <!-- Greater Sleep Resistance -->
-			<skill id="4439" level="2" /> <!-- Greater Hold Resistance -->
+			<skill id="4416" level="1" /> <!-- Undead -->
 		</skillList>
 		<shots shotChance="30" spiritChance="30" />
 		<exCrtEffect>false</exCrtEffect>
@@ -4835,9 +4895,9 @@
 		</ai>
 		<dropLists>
 			<drop>
-				<item id="57" min="38" max="88" chance="70" /> <!-- Adena -->
-				<item id="3956" min="1" max="1" chance="0.03000300030003" /> <!-- Recipe: Blessed Spiritshot (A-grade) -->
-				<item id="5161" min="1" max="1" chance="0.03000300030003" /> <!-- Recipe: Spiritshot Compressed Package (A-grade) -->
+				<item id="57" min="60" max="60" chance="70" /> <!-- Adena -->
+				<item id="5156" min="1" max="1" chance="0.03000300030003" /> <!-- Recipe: Soulshot Compressed Package (A-grade) -->
+				<item id="730" min="1" max="1" chance="0.03000300030003" /> <!-- Scroll: Enchant Armor (A-grade) -->
 				<!-- Also drops herbs. -->
 				<item id="8600" min="1" max="1" chance="10" /> <!-- Herb of Life -->
 				<item id="8601" min="1" max="1" chance="8" /> <!-- Major Herb of Life -->

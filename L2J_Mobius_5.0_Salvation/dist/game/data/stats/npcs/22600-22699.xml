@@ -2166,9 +2166,9 @@
 		<equipment rhand="132" /> <!-- Ultimate Sword -->
 		<acquire exp="168700" sp="40" />
 		<stats str="79" int="34" dex="42" wit="66" con="75" men="12">
-			<vitals hp="3643.00736067298" hpRegen="8.5" mp="1743.71451743715" mpRegen="3" />
-			<attack physical="1456.49210746164" magical="671.330034207694" random="10" critical="4" accuracy="5" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
-			<defence physical="419.909422679506" magical="222.708469046307" />
+			<vitals hp="3835.01577287066" hpRegen="8.5" mp="1777.77777777778" mpRegen="3" />
+			<attack physical="1517.44186046512" magical="698.626516480486" random="10" critical="4" accuracy="5" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="425" magical="225.359760344477" />
 			<attribute>
 				<attack type="EARTH" value="100" />
 				<defence fire="100" water="100" wind="50" earth="100" holy="100" dark="100" />
@@ -2182,11 +2182,11 @@
 		</stats>
 		<status undying="false" canBeSown="true" />
 		<skillList>
+			<skill id="4078" level="9" /> <!-- Flame Strike -->
 			<skill id="4116" level="2" /> <!-- Magic Damage Resistance -->
-			<skill id="4244" level="9" /> <!-- Wild Sweep -->
 			<skill id="4408" level="14" /> <!-- HP Increase (6x) -->
-			<skill id="4410" level="14" /> <!-- Strong P. Atk. -->
-			<skill id="4412" level="14" /> <!-- Strong P. Def. -->
+			<skill id="4411" level="14" /> <!-- Strong M. Atk. -->
+			<skill id="4413" level="14" /> <!-- Strong M. Def. -->
 			<skill id="4414" level="1" /> <!-- Heavy Armor Type -->
 			<skill id="4415" level="3" /> <!-- One-handed Sword -->
 			<skill id="4416" level="6" /> <!-- Humanoids -->
@@ -2194,7 +2194,7 @@
 			<skill id="4435" level="5" /> <!-- High Stun Attack Resistance -->
 			<skill id="4438" level="5" /> <!-- Greater Sleep Resistance -->
 			<skill id="4439" level="5" /> <!-- Greater Hold Resistance -->
-			<skill id="4585" level="3" /> <!-- Berserker Spirit -->
+			<skill id="4571" level="9" /> <!-- Blazing Circle -->
 			<skill id="4789" level="6" /> <!-- High Lv. -->
 			<skill id="5465" level="1" /> <!-- Earth Attack -->
 			<skill id="5620" level="3" /> <!-- Melee Attack Vulnerability -->
@@ -4250,8 +4250,8 @@
 		<acquire exp="60377" sp="14" />
 		<stats str="79" int="34" dex="42" wit="66" con="75" men="12">
 			<vitals hp="3461.19873817035" hpRegen="8.5" mp="1708.02919708029" mpRegen="3" />
-			<attack physical="1397.24310776942" magical="644.909013331973" random="10" critical="4" accuracy="5" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
-			<defence physical="346.1210571185" magical="253.245106468762" />
+			<attack physical="1397.05882352941" magical="644.681721699323" random="10" critical="4" accuracy="5" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="345.882352941176" magical="253.245106468762" />
 			<attribute>
 				<attack type="EARTH" value="100" />
 				<defence fire="100" water="100" wind="50" earth="100" holy="100" dark="100" />
@@ -4266,15 +4266,17 @@
 		<status undying="false" canBeSown="true" />
 		<skillList>
 			<skill id="4116" level="9" /> <!-- Magic Attack Resistance -->
+			<skill id="4254" level="9" /> <!-- Prominence -->
 			<skill id="4379" level="4" /> <!-- Spear Resistance -->
-			<skill id="4410" level="14" /> <!-- Strong P. Atk. -->
-			<skill id="4412" level="7" /> <!-- Weak P. Def. -->
+			<skill id="4411" level="9" /> <!-- Slightly Weak M. Atk. -->
 			<skill id="4413" level="14" /> <!-- Strong M. Def. -->
 			<skill id="4415" level="3" /> <!-- One-handed Sword -->
-			<skill id="4416" level="9" /> <!-- Demons -->
-			<skill id="4573" level="9" /> <!-- Sonic Blaster -->
-			<skill id="5467" level="1" /> <!-- Dark Attack -->
+			<skill id="4416" level="6" /> <!-- Humanoids -->
+			<skill id="5465" level="1" /> <!-- Earth Attack -->
 			<skill id="5601" level="11" /> <!-- Melee Attack Resistance -->
+			<skill id="5699" level="7" /> <!-- Decrease P. Def. -->
+			<skill id="6145" level="1" /> <!-- Earth Wyrm's Evil Aura -->
+			<skill id="6146" level="1" /> <!-- Forfeiture of Will -->
 		</skillList>
 		<exCrtEffect>false</exCrtEffect>
 		<ai type="MAGE" clanHelpRange="300" aggroRange="300">
@@ -4331,8 +4333,8 @@
 		<acquire exp="63414" sp="15" />
 		<stats str="79" int="34" dex="42" wit="66" con="75" men="12">
 			<vitals hp="3643.53312302839" hpRegen="8.5" mp="1743.71451743715" mpRegen="3" />
-			<attack physical="1456.49210746164" magical="671.330034207694" random="10" critical="4" accuracy="5" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
-			<defence physical="350.029663530808" magical="256.043418116869" />
+			<attack physical="1456.62768031189" magical="671.744775415187" random="10" critical="4" accuracy="5" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="350.292397660819" magical="256.043418116869" />
 			<attribute>
 				<attack type="EARTH" value="100" />
 				<defence fire="100" water="100" wind="50" earth="100" holy="100" dark="100" />
@@ -4347,15 +4349,17 @@
 		<status undying="false" canBeSown="true" />
 		<skillList>
 			<skill id="4116" level="9" /> <!-- Magic Attack Resistance -->
+			<skill id="4254" level="9" /> <!-- Prominence -->
 			<skill id="4379" level="4" /> <!-- Spear Resistance -->
-			<skill id="4410" level="14" /> <!-- Strong P. Atk. -->
-			<skill id="4412" level="7" /> <!-- Weak P. Def. -->
+			<skill id="4411" level="9" /> <!-- Slightly Weak M. Atk. -->
 			<skill id="4413" level="14" /> <!-- Strong M. Def. -->
-			<skill id="4415" level="11" /> <!-- Spear -->
-			<skill id="4416" level="9" /> <!-- Demons -->
-			<skill id="4573" level="9" /> <!-- Sonic Blaster -->
-			<skill id="5467" level="1" /> <!-- Dark Attack -->
+			<skill id="4415" level="3" /> <!-- One-handed Sword -->
+			<skill id="4416" level="6" /> <!-- Humanoids -->
+			<skill id="5465" level="1" /> <!-- Earth Attack -->
 			<skill id="5601" level="11" /> <!-- Melee Attack Resistance -->
+			<skill id="5699" level="7" /> <!-- Decrease P. Def. -->
+			<skill id="6145" level="1" /> <!-- Earth Wyrm's Evil Aura -->
+			<skill id="6146" level="1" /> <!-- Forfeiture of Will -->
 		</skillList>
 		<exCrtEffect>false</exCrtEffect>
 		<ai type="MAGE" clanHelpRange="300" aggroRange="300">
@@ -5349,9 +5353,9 @@
 		<equipment rhand="6365" /> <!-- Basalt Battlehammer -->
 		<acquire exp="140774" sp="33" />
 		<stats str="79" int="34" dex="42" wit="66" con="75" men="12">
-			<vitals hp="6923.02839116719" hpRegen="8.5" mp="1708.02919708029" mpRegen="3" />
-			<attack physical="1397.2613838924" magical="644.909013331973" random="20" critical="1" accuracy="9" attackSpeed="253" type="BLUNT" range="40" distance="80" width="120" />
-			<defence physical="345.854004252303" magical="253.057956494774" />
+			<vitals hp="7286.43533123028" hpRegen="8.5" mp="1743.71451743715" mpRegen="3" />
+			<attack physical="1456.34978170863" magical="671.330034207694" random="20" critical="1" accuracy="9" attackSpeed="253" type="BLUNT" range="40" distance="80" width="120" />
+			<defence physical="419.925315296273" magical="222.606003682126" />
 			<attribute>
 				<attack type="DARK" value="100" />
 				<defence fire="100" water="100" wind="100" earth="100" holy="50" dark="100" />
@@ -5365,17 +5369,19 @@
 		</stats>
 		<status undying="false" canBeSown="true" />
 		<skillList>
-			<skill id="4065" level="9" /> <!-- Heal -->
+			<skill id="4029" level="2" /> <!-- Shield -->
+			<skill id="4032" level="9" /> <!-- Power Strike -->
 			<skill id="4116" level="9" /> <!-- Magic Attack Resistance -->
 			<skill id="4410" level="13" /> <!-- Slightly Strong P. Atk. -->
 			<skill id="4412" level="9" /> <!-- Slightly Weak P. Def. -->
 			<skill id="4413" level="16" /> <!-- Very Strong M. Def. -->
+			<skill id="4414" level="1" /> <!-- Heavy Armor Type -->
 			<skill id="4415" level="5" /> <!-- Blunt Weapon -->
 			<skill id="4416" level="6" /> <!-- Humanoids -->
 			<skill id="4444" level="3" /> <!-- Greater Bow/Crossbow Resistance -->
-			<skill id="4613" level="9" /> <!-- Clan Heal -->
 			<skill id="5467" level="1" /> <!-- Dark Attack -->
 			<skill id="5620" level="5" /> <!-- Melee Attack Vulnerability -->
+			<skill id="6168" level="9" /> <!-- Stun -->
 		</skillList>
 		<shots shotChance="10" spiritChance="10" />
 		<exCrtEffect>false</exCrtEffect>
@@ -5442,7 +5448,7 @@
 		<acquire exp="136304" sp="32" />
 		<stats str="79" int="34" dex="42" wit="66" con="75" men="12">
 			<vitals hp="7286.43533123028" hpRegen="8.5" mp="1743.71451743715" mpRegen="3" />
-			<attack physical="1456.62768031189" magical="671.24648988631" random="20" critical="1" accuracy="9" attackSpeed="253" type="BLUNT" range="40" distance="80" width="120" />
+			<attack physical="1456.34978170863" magical="671.330034207694" random="20" critical="1" accuracy="9" attackSpeed="253" type="BLUNT" range="40" distance="80" width="120" />
 			<defence physical="350.172620305785" magical="255.996904234445" />
 			<attribute>
 				<attack type="DARK" value="100" />
@@ -5457,16 +5463,16 @@
 		</stats>
 		<status undying="false" canBeSown="true" />
 		<skillList>
+			<skill id="4032" level="9" /> <!-- Power Strike -->
 			<skill id="4046" level="9" /> <!-- Sleep -->
 			<skill id="4116" level="9" /> <!-- Magic Attack Resistance -->
-			<skill id="4158" level="9" /> <!-- Prominence -->
-			<skill id="4160" level="9" /> <!-- Aura Burn -->
-			<skill id="4411" level="13" /> <!-- Slightly Strong M. Atk. -->
+			<skill id="4410" level="13" /> <!-- Slightly Strong P. Atk. -->
 			<skill id="4412" level="9" /> <!-- Slightly Weak P. Def. -->
 			<skill id="4413" level="16" /> <!-- Very Strong M. Def. -->
 			<skill id="4415" level="5" /> <!-- Blunt Weapon -->
 			<skill id="4416" level="6" /> <!-- Humanoids -->
 			<skill id="4444" level="3" /> <!-- Greater Bow/Crossbow Resistance -->
+			<skill id="4596" level="9" /> <!-- Bleed -->
 			<skill id="5467" level="1" /> <!-- Dark Attack -->
 			<skill id="5620" level="5" /> <!-- Melee Attack Vulnerability -->
 		</skillList>

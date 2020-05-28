@@ -885,13 +885,11 @@
 				<walk ground="80" />
 				<run ground="170" />
 			</speed>
-			<attack physical="305.842282695583" magical="203.420652755952" critical="4" attackSpeed="253" range="40" />
+			<attack physical="305.755395683453" magical="203.073733813267" critical="4" attackSpeed="253" range="40" />
 			<defence physical="200.719424460432" magical="147.035656146616" />
 		</stats>
 		<status attackable="false" />
 		<skillList>
-			<skill id="4410" level="7" /> <!-- Weak P. Atk. -->
-			<skill id="4411" level="7" /> <!-- Weak M. Atk. -->
 			<skill id="4416" level="11" /> <!-- Giants -->
 		</skillList>
 		<collision>
@@ -1057,16 +1055,18 @@
 		<race>HUMANOID</race>
 		<sex>FEMALE</sex>
 		<stats str="79" int="34" dex="42" wit="66" con="75" men="12">
-			<vitals hp="2380.17397954306" hpRegen="7.5" mp="1293.71574627049" mpRegen="2.7" />
+			<vitals hp="2345.11041009464" hpRegen="7.5" mp="1282.23844282238" mpRegen="2.7" />
 			<speed>
 				<walk ground="40" />
 				<run ground="170" />
 			</speed>
-			<attack physical="640.925382860867" magical="415.943654123749" critical="4" attackSpeed="253" range="40" />
-			<defence physical="293.548387096774" magical="215.32331398119" />
+			<attack physical="646.496815286624" magical="418.620202976462" critical="4" attackSpeed="253" range="40" />
+			<defence physical="286.426395537445" magical="209.840418287034" />
 		</stats>
 		<status attackable="false" />
 		<skillList>
+			<skill id="4412" level="16" /> <!-- Very Strong P. Def. -->
+			<skill id="4413" level="16" /> <!-- Very Strong M. Def. -->
 			<skill id="4416" level="6" /> <!-- Humanoids -->
 		</skillList>
 		<collision>
@@ -1078,13 +1078,13 @@
 		<race>HUMANOID</race>
 		<sex>FEMALE</sex>
 		<stats str="79" int="34" dex="42" wit="66" con="75" men="12">
-			<vitals hp="2524.42694800022" hpRegen="7.5" mp="1372.12276119597" mpRegen="2.7" />
+			<vitals hp="2380.17397954306" hpRegen="7.5" mp="1293.71574627049" mpRegen="2.7" />
 			<speed>
 				<walk ground="25" />
 				<run ground="170" />
 			</speed>
-			<attack physical="679.769345458495" magical="441.152360434279" critical="4" attackSpeed="253" range="40" />
-			<defence physical="311.339198435973" magical="228.373211798232" />
+			<attack physical="640.925382860867" magical="415.943654123749" critical="4" attackSpeed="253" range="40" />
+			<defence physical="293.548387096774" magical="215.32331398119" />
 		</stats>
 		<status attackable="false" />
 		<skillList>

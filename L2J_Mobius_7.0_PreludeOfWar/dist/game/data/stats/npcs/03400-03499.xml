@@ -14,14 +14,14 @@
 		<sex>MALE</sex>
 		<acquire exp="4035175" sp="968" />
 		<equipment rhand="67" lhand="633" /> <!-- Orcish Sword / Zubei's Shield -->
-		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="6247.39884393064" hpRegen="17.5347470979605" mp="218.481848184818" mpRegen="1.5" />
+		<stats str="164" int="188" dex="55" wit="78" con="111" men="149">
+			<vitals hp="40330" hpRegen="17.5347470979605" mp="231" mpRegen="1.5" />
 			<speed>
 				<walk ground="50" />
 				<run ground="170" />
 			</speed>
-			<attack physical="319.222113143536" magical="54.5527055074646" critical="4" attackSpeed="253" range="40" type="SWORD" distance="80" width="120" random="10" accuracy="4.75" />
-			<defence physical="111.711711711712" magical="160.206799694278" />
+			<attack physical="62.85327646485" magical="3.96218033323786" critical="4" attackSpeed="253" range="40" type="SWORD" distance="80" width="120" random="10" accuracy="4.75" />
+			<defence physical="286.94928" magical="139.98" />
 			<attribute>
 				<defence fire="20" water="20" wind="20" earth="20" holy="20" dark="20" />
 			</attribute>
@@ -29,11 +29,11 @@
 		</stats>
 		<status attackable="false" undying="false" />
 		<skillList>
-			<skill id="4045" level="1" /> <!-- Full Magic Attack Resistance -->
-			<skill id="4414" level="3" /> <!-- Light Armor Type -->
+			<skill id="4790" level="1" /> <!-- Raid Boss (Lv. 23) -->
+			<skill id="4416" level="6" /> <!-- Humanoids -->
+			<skill id="4494" level="1" /> <!-- Raid Boss -->
 			<skill id="4415" level="3" /> <!-- One-handed Sword -->
-			<skill id="4416" level="6" /> <!-- Humanoid -->
-			<skill id="4727" level="2" /> <!-- Stun -->
+			<skill id="4045" level="1" /> <!-- Resist Full Magic Attack -->
 		</skillList>
 		<ai clanHelpRange="300" />
 		<collision>
@@ -125,14 +125,14 @@
 		<sex>MALE</sex>
 		<acquire exp="538023" sp="129" />
 		<equipment rhand="291" /> <!-- Trident -->
-		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="4185.54913294798" hpRegen="17.5347470979605" mp="218.481848184818" mpRegen="1.5" />
+		<stats str="164" int="188" dex="55" wit="78" con="111" men="149">
+			<vitals hp="40330" hpRegen="17.5347470979605" mp="231" mpRegen="1.5" />
 			<speed>
 				<walk ground="52" />
 				<run ground="190" />
 			</speed>
-			<attack physical="130.256676647396" magical="13.6381763768662" critical="8" attackSpeed="253" range="40" type="SWORD" distance="80" width="120" random="10" accuracy="4.75" />
-			<defence physical="111.711711711712" magical="160.206799694278" />
+			<attack physical="62.85327646485" magical="3.96218033323786" critical="4" attackSpeed="253" range="40" type="SWORD" distance="80" width="120" random="10" accuracy="4.75" />
+			<defence physical="286.94928" magical="139.98" />
 			<attribute>
 				<defence fire="20" water="20" wind="20" earth="20" holy="20" dark="20" />
 			</attribute>
@@ -140,10 +140,11 @@
 		</stats>
 		<status attackable="false" undying="false" />
 		<skillList>
-			<skill id="4045" level="1" /> <!-- Full Magic Attack Resistance -->
-			<skill id="4414" level="3" /> <!-- Light Armor Type -->
-			<skill id="4415" level="9" /> <!-- Bow -->
-			<skill id="4416" level="6" /> <!-- Humanoid -->
+			<skill id="4929" level="1" /> <!-- Raid Boss (Lv. 23) -->
+			<skill id="4416" level="6" /> <!-- Humanoids -->
+			<skill id="4494" level="1" /> <!-- Raid Boss -->
+			<skill id="4415" level="3" /> <!-- One-handed Sword -->
+			<skill id="4045" level="1" /> <!-- Resist Full Magic Attack -->
 		</skillList>
 		<ai clanHelpRange="300" />
 		<collision>
@@ -257,14 +258,14 @@
 		<sex>MALE</sex>
 		<acquire exp="1452604" sp="348" />
 		<equipment rhand="216" /> <!-- Dirk -->
-		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="5895.37572254335" hpRegen="16.8269664693931" mp="192.079207920792" mpRegen="1.5" />
+		<stats str="164" int="188" dex="55" wit="78" con="111" men="149">
+			<vitals hp="37886" hpRegen="16.8269664693931" mp="205" mpRegen="1.5" />
 			<speed>
 				<walk ground="80" />
 				<run ground="190" />
 			</speed>
-			<attack physical="135.336402772016" magical="9.30124359048732" critical="1" attackSpeed="253" range="40" type="DAGGER" distance="80" width="120" random="5" accuracy="0" />
-			<defence physical="104.587155963303" magical="149.610211965611" />
+			<attack physical="53.1275788089434" magical="3.16860505219161" critical="8" attackSpeed="253" range="40" type="DAGGER" distance="80" width="120" random="5" accuracy="0" />
+			<defence physical="269.19177" magical="131.32" />
 			<attribute>
 				<defence fire="20" water="20" wind="20" earth="20" holy="20" dark="20" />
 			</attribute>
@@ -272,11 +273,11 @@
 		</stats>
 		<status attackable="false" undying="false" />
 		<skillList>
-			<skill id="4045" level="1" /> <!-- Full Magic Attack Resistance -->
-			<skill id="4414" level="3" /> <!-- Light Armor Type -->
-			<skill id="4415" level="5" /> <!-- One-handed Blunt Weapons -->
-			<skill id="4416" level="6" /> <!-- Humanoid -->
-			<skill id="4783" level="2" /> <!-- Heal -->
+			<skill id="4927" level="1" /> <!-- Raid Boss (Lv. 21) -->
+			<skill id="4416" level="6" /> <!-- Humanoids -->
+			<skill id="4494" level="1" /> <!-- Raid Boss -->
+			<skill id="4415" level="7" /> <!-- Dagger -->
+			<skill id="4045" level="1" /> <!-- Resist Full Magic Attack -->
 		</skillList>
 		<ai clanHelpRange="300" />
 		<collision>
@@ -390,14 +391,14 @@
 		<sex>MALE</sex>
 		<acquire exp="2615583" sp="627" />
 		<equipment rhand="150" /> <!-- Elemental Sword -->
-		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="4362.42774566474" hpRegen="24.0862326352072" mp="245.544554455446" mpRegen="1.5" />
+		<stats str="164" int="188" dex="55" wit="78" con="111" men="149">
+			<vitals hp="56644" hpRegen="24.0862326352072" mp="259" mpRegen="1.5" />
 			<speed>
 				<walk ground="40" />
 				<run ground="170" />
 			</speed>
-			<attack physical="350.3086520989" magical="55.1569538986391" critical="4" attackSpeed="253" range="40" type="SWORD" distance="80" width="120" random="10" accuracy="4.75" />
-			<defence physical="118.58407079646" magical="170.428286972372" />
+			<attack physical="138.03739078453" magical="16.1331725262125" critical="4" attackSpeed="253" range="40" type="SWORD" distance="80" width="120" random="10" accuracy="4.75" />
+			<defence physical="305.50599" magical="149.04" />
 			<attribute>
 				<defence fire="20" water="20" wind="20" earth="20" holy="-32" dark="53" />
 				<attack type="DARK" value="20" />
@@ -406,12 +407,13 @@
 		</stats>
 		<status attackable="false" undying="false" />
 		<skillList>
-			<skill id="4045" level="1" /> <!-- Full Magic Attack Resistance -->
-			<skill id="4275" level="2" /> <!-- Holy Vulnerability -->
-			<skill id="4278" level="1" /> <!-- Dark Attack -->
-			<skill id="4414" level="3" /> <!-- Light Armor Type -->
-			<skill id="4415" level="3" /> <!-- One-handed Sword -->
+			<skill id="4853" level="1" /> <!-- Raid Boss (Lv. 25) -->
 			<skill id="4416" level="1" /> <!-- Undead -->
+			<skill id="4275" level="2" /> <!-- Holy Attack Vulnerability -->
+			<skill id="4278" level="1" /> <!-- Dark Attack -->
+			<skill id="4494" level="1" /> <!-- Raid Boss -->
+			<skill id="4415" level="3" /> <!-- One-handed Sword -->
+			<skill id="4045" level="1" /> <!-- Resist Full Magic Attack -->
 		</skillList>
 		<ai clanHelpRange="300" />
 		<collision>
@@ -523,14 +525,14 @@
 		<race>UNDEAD</race>
 		<sex>MALE</sex>
 		<acquire exp="2615583" sp="627" />
-		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="3340.46242774566" hpRegen="18.4385313667577" mp="245.544554455446" mpRegen="1.5" />
+		<stats str="164" int="188" dex="55" wit="78" con="111" men="149">
+			<vitals hp="43316" hpRegen="18.4385313667577" mp="259" mpRegen="1.5" />
 			<speed>
 				<walk ground="60" />
 				<run ground="190" />
 			</speed>
-			<attack physical="188.93050899716" magical="16.2758224618935" critical="4" attackSpeed="253" range="40" type="FIST" distance="80" width="120" random="5" accuracy="4.75" />
-			<defence physical="118.58407079646" magical="170.428286972372" />
+			<attack physical="74.2223188804512" magical="4.67967242276365" critical="4" attackSpeed="253" range="40" type="FIST" distance="80" width="120" random="5" accuracy="4.75" />
+			<defence physical="305.50599" magical="149.04" />
 			<attribute>
 				<defence fire="20" water="20" wind="20" earth="20" holy="-32" dark="53" />
 				<attack type="DARK" value="20" />
@@ -539,12 +541,13 @@
 		</stats>
 		<status attackable="false" undying="false" />
 		<skillList>
-			<skill id="4045" level="1" /> <!-- Full Magic Attack Resistance -->
-			<skill id="4275" level="2" /> <!-- Holy Vulnerability -->
-			<skill id="4278" level="1" /> <!-- Dark Attack -->
-			<skill id="4414" level="3" /> <!-- Light Armor Type -->
-			<skill id="4415" level="3" /> <!-- One-handed Sword -->
+			<skill id="4846" level="1" /> <!-- Raid Boss (Lv. 25) -->
 			<skill id="4416" level="1" /> <!-- Undead -->
+			<skill id="4275" level="2" /> <!-- Holy Attack Vulnerability -->
+			<skill id="4278" level="1" /> <!-- Dark Attack -->
+			<skill id="4494" level="1" /> <!-- Raid Boss -->
+			<skill id="4415" level="1" /> <!-- Bare Hands -->
+			<skill id="4045" level="1" /> <!-- Resist Full Magic Attack -->
 		</skillList>
 		<ai clanHelpRange="300" />
 		<collision>
@@ -661,14 +664,14 @@
 		<race>UNDEAD</race>
 		<sex>MALE</sex>
 		<acquire exp="1452604" sp="348" />
-		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="5747.39884393064" hpRegen="16.5400323223535" mp="183.498349834984" mpRegen="1.2" />
+		<stats str="164" int="188" dex="55" wit="78" con="111" men="149">
+			<vitals hp="36847" hpRegen="16.5400323223535" mp="192" mpRegen="1.2" />
 			<speed>
 				<walk ground="15" />
 				<run ground="190" />
 			</speed>
-			<attack physical="124.234686873679" magical="7.99359706905652" critical="4" attackSpeed="253" range="40" type="FIST" distance="80" width="120" random="5" accuracy="4.75" />
-			<defence physical="100.925925925926" magical="145.243282498184" />
+			<attack physical="48.8251644288713" magical="2.38238750889189" critical="4" attackSpeed="253" range="40" type="FIST" distance="80" width="120" random="5" accuracy="4.75" />
+			<defence physical="260.61147" magical="127.14" />
 			<attribute>
 				<defence fire="20" water="20" wind="20" earth="20" holy="-32" dark="53" />
 				<attack type="DARK" value="20" />
@@ -677,15 +680,15 @@
 		</stats>
 		<status attackable="false" undying="false" />
 		<skillList>
-			<skill id="4045" level="1" /> <!-- Full Magic Attack Resistance -->
-			<skill id="4273" level="3" /> <!-- Dagger/ Rapier Resistance -->
-			<skill id="4274" level="1" /> <!-- Blunt Weapon Vulnerability -->
-			<skill id="4275" level="2" /> <!-- Holy Vulnerability -->
-			<skill id="4278" level="1" /> <!-- Dark Attack -->
-			<skill id="4414" level="3" /> <!-- Light Armor Type -->
-			<skill id="4415" level="1" /> <!-- Bare Hands -->
+			<skill id="4899" level="1" /> <!-- Raid Boss (Lv. 20) -->
 			<skill id="4416" level="1" /> <!-- Undead -->
-			<skill id="4783" level="1" /> <!-- Heal -->
+			<skill id="4275" level="2" /> <!-- Holy Attack Vulnerability -->
+			<skill id="4278" level="1" /> <!-- Dark Attack -->
+			<skill id="4273" level="3" /> <!-- Dagger/Rapier Resistance -->
+			<skill id="4274" level="1" /> <!-- Blunt Weapon Vulnerability -->
+			<skill id="4494" level="1" /> <!-- Raid Boss -->
+			<skill id="4415" level="1" /> <!-- Bare Hands -->
+			<skill id="4045" level="1" /> <!-- Resist Full Magic Attack -->
 		</skillList>
 		<ai clanHelpRange="300" />
 		<collision>
@@ -853,14 +856,14 @@
 		<race>DEMONIC</race>
 		<sex>MALE</sex>
 		<acquire exp="5476117" sp="1314" />
-		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="5263.00578034682" hpRegen="26.794392073316" mp="387.458745874587" mpRegen="1.8" />
+		<stats str="164" int="188" dex="55" wit="78" con="111" men="149">
+			<vitals hp="69449" hpRegen="26.794392073316" mp="402" mpRegen="1.8" />
 			<speed>
 				<walk ground="80" />
 				<run ground="170" />
 			</speed>
-			<attack physical="418.858895779469" magical="44.2423950056373" critical="4" attackSpeed="253" range="40" type="FIST" distance="80" width="120" random="5" accuracy="4.75" />
-			<defence physical="160.162601626016" magical="229.176432707833" />
+			<attack physical="163.695648646951" magical="12.9299967753255" critical="4" attackSpeed="253" range="40" type="FIST" distance="80" width="120" random="5" accuracy="4.75" />
+			<defence physical="410.18844" magical="200.1" />
 			<attribute>
 				<defence fire="20" water="20" wind="20" earth="20" holy="-13" dark="189" />
 				<attack type="DARK" value="20" />
@@ -869,12 +872,13 @@
 		</stats>
 		<status attackable="false" undying="false" />
 		<skillList>
-			<skill id="4045" level="1" /> <!-- Full Magic Attack Resistance -->
+			<skill id="4847" level="1" /> <!-- Raid Boss (Lv. 35) -->
+			<skill id="4416" level="9" /> <!-- Demons -->
 			<skill id="4278" level="1" /> <!-- Dark Attack -->
 			<skill id="4333" level="5" /> <!-- Dark Attack Resistance -->
-			<skill id="4414" level="3" /> <!-- Light Armor Type -->
-			<skill id="4415" level="3" /> <!-- One-handed Sword -->
-			<skill id="4416" level="9" /> <!-- Demons -->
+			<skill id="4494" level="1" /> <!-- Raid Boss -->
+			<skill id="4415" level="1" /> <!-- Bare Hands -->
+			<skill id="4045" level="1" /> <!-- Resist Full Magic Attack -->
 		</skillList>
 		<ai clanHelpRange="300" />
 		<collision>
@@ -986,14 +990,14 @@
 		<sex>MALE</sex>
 		<acquire exp="2868590" sp="688" />
 		<equipment rhand="192" /> <!-- Crystal Staff -->
-		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="10526.0115606936" hpRegen="26.794392073316" mp="387.458745874587" mpRegen="1.8" />
+		<stats str="164" int="188" dex="55" wit="78" con="111" men="149">
+			<vitals hp="69449" hpRegen="26.794392073316" mp="402" mpRegen="1.8" />
 			<speed>
 				<walk ground="70" />
 				<run ground="160" />
 			</speed>
-			<attack physical="837.717791558939" magical="175.844773369863" critical="1" attackSpeed="253" range="40" type="BLUNT" distance="80" width="120" random="20" accuracy="9" />
-			<defence physical="160.162601626016" magical="229.176432707833" />
+			<attack physical="163.695648646951" magical="12.9299967753255" critical="1" attackSpeed="253" range="40" type="BLUNT" distance="80" width="120" random="20" accuracy="9" />
+			<defence physical="410.18844" magical="200.1" />
 			<attribute>
 				<defence fire="20" water="20" wind="20" earth="20" holy="-83" dark="53" />
 				<attack type="DARK" value="20" />
@@ -1002,13 +1006,13 @@
 		</stats>
 		<status attackable="false" undying="false" />
 		<skillList>
-			<skill id="4045" level="1" /> <!-- Full Magic Attack Resistance -->
-			<skill id="4275" level="2" /> <!-- Holy Vulnerability -->
+			<skill id="4869" level="1" /> <!-- Raid Boss (Lv. 35) -->
+			<skill id="4416" level="9" /> <!-- Demons -->
+			<skill id="4275" level="2" /> <!-- Holy Attack Vulnerability -->
 			<skill id="4278" level="1" /> <!-- Dark Attack -->
-			<skill id="4414" level="3" /> <!-- Light Armor Type -->
-			<skill id="4415" level="5" /> <!-- One-handed Blunt Weapons -->
-			<skill id="4416" level="1" /> <!-- Undead -->
-			<skill id="4727" level="3" /> <!-- Stun -->
+			<skill id="4494" level="1" /> <!-- Raid Boss -->
+			<skill id="4415" level="5" /> <!-- Blunt Weapon -->
+			<skill id="4045" level="1" /> <!-- Resist Full Magic Attack -->
 		</skillList>
 		<collision>
 			<radius normal="18" />
@@ -1101,14 +1105,14 @@
 		<sex>MALE</sex>
 		<acquire exp="4102548" sp="984" />
 		<equipment rhand="1472" /> <!-- Dreadbane -->
-		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="34433.5260115607" hpRegen="72.9643823396131" mp="1007.26072607261" mpRegen="2.4" />
+		<stats str="164" int="188" dex="55" wit="78" con="111" men="149">
+			<vitals hp="221100" hpRegen="72.9643823396131" mp="1036" mpRegen="2.4" />
 			<speed>
 				<walk ground="100" />
 				<run ground="190" />
 			</speed>
-			<attack physical="4133.69262516779" magical="1722.40159236921" critical="4" attackSpeed="253" range="40" type="SWORD" distance="80" width="120" random="10" accuracy="4.75" />
-			<defence physical="291.891891891892" magical="418.181722782771" />
+			<attack physical="785.177450040489" magical="133.511957686818" critical="4" attackSpeed="253" range="40" type="SWORD" distance="80" width="120" random="10" accuracy="4.75" />
+			<defence physical="742.95024" magical="362.44" />
 			<attribute>
 				<defence fire="20" water="20" wind="20" earth="20" holy="-32" dark="53" />
 				<attack type="DARK" value="20" />
@@ -1117,15 +1121,15 @@
 		</stats>
 		<status attackable="false" undying="false" />
 		<skillList>
-			<skill id="4045" level="1" /> <!-- Full Magic Attack Resistance -->
-			<skill id="4273" level="3" /> <!-- Dagger/ Rapier Resistance -->
-			<skill id="4274" level="1" /> <!-- Blunt Weapon Vulnerability -->
-			<skill id="4275" level="2" /> <!-- Holy Vulnerability -->
-			<skill id="4278" level="1" /> <!-- Dark Attack -->
-			<skill id="4414" level="3" /> <!-- Light Armor Type -->
-			<skill id="4415" level="3" /> <!-- One-handed Sword -->
+			<skill id="4947" level="1" /> <!-- Raid Boss (Lv. 60) -->
 			<skill id="4416" level="1" /> <!-- Undead -->
-			<skill id="4743" level="5" /> <!-- Power Strike -->
+			<skill id="4275" level="2" /> <!-- Holy Attack Vulnerability -->
+			<skill id="4278" level="1" /> <!-- Dark Attack -->
+			<skill id="4273" level="3" /> <!-- Dagger/Rapier Resistance -->
+			<skill id="4274" level="1" /> <!-- Blunt Weapon Vulnerability -->
+			<skill id="4494" level="1" /> <!-- Raid Boss -->
+			<skill id="4415" level="3" /> <!-- One-handed Sword -->
+			<skill id="4045" level="1" /> <!-- Resist Full Magic Attack -->
 		</skillList>
 		<ai clanHelpRange="300" />
 		<collision>
@@ -1224,14 +1228,14 @@
 		<race>DEMONIC</race>
 		<sex>MALE</sex>
 		<acquire exp="1342137" sp="322" />
-		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="16728.323699422" hpRegen="71.371053660127" mp="977.557755775578" mpRegen="2.4" />
+		<stats str="164" int="188" dex="55" wit="78" con="111" men="149">
+			<vitals hp="215207" hpRegen="71.371053660127" mp="1007" mpRegen="2.4" />
 			<speed>
 				<walk ground="37" />
 				<run ground="200" />
 			</speed>
-			<attack physical="1968.2001785147" magical="404.520770764441" critical="4" attackSpeed="253" range="40" type="SWORD" distance="80" width="120" random="10" accuracy="4.75" />
-			<defence physical="357.142857142857" magical="348.443007566063" />
+			<attack physical="748.775260587043" magical="122.635476321723" critical="4" attackSpeed="253" range="40" type="SWORD" distance="80" width="120" random="10" accuracy="4.75" />
+			<defence physical="728.44779" magical="355.36" />
 			<attribute>
 				<defence fire="20" water="20" wind="20" earth="20" holy="-13" dark="189" />
 				<attack type="DARK" value="20" />
@@ -1240,11 +1244,13 @@
 		</stats>
 		<status attackable="false" undying="false" />
 		<skillList>
-			<skill id="4045" level="1" /> <!-- Full Magic Attack Resistance -->
-			<skill id="4275" level="2" /> <!-- Holy Vulnerability -->
+			<skill id="4859" level="1" /> <!-- Raid Boss (Lv. 59) -->
+			<skill id="4416" level="9" /> <!-- Demons -->
 			<skill id="4278" level="1" /> <!-- Dark Attack -->
+			<skill id="4333" level="5" /> <!-- Dark Attack Resistance -->
+			<skill id="4494" level="1" /> <!-- Raid Boss -->
 			<skill id="4415" level="3" /> <!-- One-handed Sword -->
-			<skill id="4416" level="1" /> <!-- Undead -->
+			<skill id="4045" level="1" /> <!-- Resist Full Magic Attack -->
 		</skillList>
 		<ai clanHelpRange="300" />
 		<collision>
@@ -1398,14 +1404,14 @@
 		<sex>MALE</sex>
 		<acquire exp="7064466" sp="1695" />
 		<equipment rhand="71" /> <!-- Flamberge -->
-		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="11846.2427745665" hpRegen="53.8546339421093" mp="720.13201320132" mpRegen="2.1" />
+		<stats str="164" int="188" dex="55" wit="78" con="111" men="149">
+			<vitals hp="155046" hpRegen="53.8546339421093" mp="747" mpRegen="2.1" />
 			<speed>
 				<walk ground="70" />
 				<run ground="170" />
 			</speed>
-			<attack physical="1190.36108335751" magical="184.974209375266" critical="4" attackSpeed="253" range="40" type="SWORD" distance="80" width="120" random="10" accuracy="4.75" />
-			<defence physical="294.202898550725" magical="286.506911560721" />
+			<attack physical="458.480434603136" magical="56.5276785347001" critical="4" attackSpeed="253" range="40" type="SWORD" distance="80" width="120" random="10" accuracy="4.75" />
+			<defence physical="600.71532" magical="293.06" />
 			<attribute>
 				<defence fire="20" water="20" wind="20" earth="20" holy="20" dark="20" />
 			</attribute>
@@ -1413,9 +1419,11 @@
 		</stats>
 		<status attackable="false" undying="false" />
 		<skillList>
-			<skill id="4045" level="1" /> <!-- Full Magic Attack Resistance -->
+			<skill id="4840" level="1" /> <!-- Raid Boss (Lv. 50) -->
+			<skill id="4416" level="6" /> <!-- Humanoids -->
+			<skill id="4494" level="1" /> <!-- Raid Boss -->
 			<skill id="4415" level="3" /> <!-- One-handed Sword -->
-			<skill id="4416" level="6" /> <!-- Humanoid -->
+			<skill id="4045" level="1" /> <!-- Resist Full Magic Attack -->
 		</skillList>
 		<ai clanHelpRange="300" />
 		<collision>
@@ -1531,14 +1539,14 @@
 		<sex>MALE</sex>
 		<acquire exp="6829345" sp="1639" />
 		<equipment rhand="84" /> <!-- Homunkulus' Sword -->
-		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="11293.063583815" hpRegen="51.7193112926872" mp="692.409240924093" mpRegen="2.1" />
+		<stats str="164" int="188" dex="55" wit="78" con="111" men="149">
+			<vitals hp="148076" hpRegen="51.7193112926872" mp="720" mpRegen="2.1" />
 			<speed>
 				<walk ground="33" />
 				<run ground="170" />
 			</speed>
-			<attack physical="1118.42781622505" magical="170.825769676701" critical="4" attackSpeed="253" range="40" type="BLUNT" distance="80" width="120" random="20" accuracy="9" />
-			<defence physical="286.861313868613" magical="279.925802799258" />
+			<attack physical="431.283359498593" magical="51.9275982726895" critical="1" attackSpeed="253" range="40" type="BLUNT" distance="80" width="120" random="20" accuracy="9" />
+			<defence physical="586.98906" magical="286.36" />
 			<attribute>
 				<defence fire="20" water="20" wind="20" earth="20" holy="20" dark="20" />
 			</attribute>
@@ -1546,9 +1554,11 @@
 		</stats>
 		<status attackable="false" undying="false" />
 		<skillList>
-			<skill id="4045" level="1" /> <!-- Full Magic Attack Resistance -->
-			<skill id="4415" level="3" /> <!-- One-handed Sword -->
-			<skill id="4416" level="6" /> <!-- Humanoid -->
+			<skill id="4799" level="1" /> <!-- Raid Boss (Lv. 49) -->
+			<skill id="4416" level="6" /> <!-- Humanoids -->
+			<skill id="4494" level="1" /> <!-- Raid Boss -->
+			<skill id="4415" level="5" /> <!-- Blunt Weapon -->
+			<skill id="4045" level="1" /> <!-- Resist Full Magic Attack -->
 		</skillList>
 		<ai clanHelpRange="300" />
 		<collision>
@@ -1662,14 +1672,14 @@
 		<race>BEAST</race>
 		<sex>MALE</sex>
 		<acquire exp="5918766" sp="1420" />
-		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="9189.01734104046" hpRegen="43.342559280568" mp="584.158415841584" mpRegen="2.1" />
+		<stats str="164" int="188" dex="55" wit="78" con="111" men="149">
+			<vitals hp="121183" hpRegen="43.342559280568" mp="610" mpRegen="2.1" />
 			<speed>
 				<walk ground="100" />
 				<run ground="170" />
 			</speed>
-			<attack physical="861.679773934466" magical="117.374236836123" critical="4" attackSpeed="253" range="40" type="SWORD" distance="80" width="120" random="10" accuracy="4.75" />
-			<defence physical="260.902255639098" magical="254.100598029728" />
+			<attack physical="333.674474509607" magical="35.7320100968747" critical="4" attackSpeed="253" range="40" type="SWORD" distance="80" width="120" random="10" accuracy="4.75" />
+			<defence physical="533.36238" magical="260.2" />
 			<attribute>
 				<defence fire="20" water="20" wind="20" earth="20" holy="20" dark="20" />
 			</attribute>
@@ -1677,11 +1687,11 @@
 		</stats>
 		<status attackable="false" undying="false" />
 		<skillList>
-			<skill id="4045" level="1" /> <!-- Full Magic Attack Resistance -->
-			<skill id="4275" level="2" /> <!-- Holy Vulnerability -->
-			<skill id="4278" level="1" /> <!-- Dark Attack -->
+			<skill id="4810" level="1" /> <!-- Raid Boss (Lv. 45) -->
+			<skill id="4416" level="3" /> <!-- Beast -->
+			<skill id="4494" level="1" /> <!-- Raid Boss -->
 			<skill id="4415" level="3" /> <!-- One-handed Sword -->
-			<skill id="4416" level="1" /> <!-- Undead -->
+			<skill id="4045" level="1" /> <!-- Resist Full Magic Attack -->
 		</skillList>
 		<ai clanHelpRange="300" />
 		<collision>
@@ -1803,14 +1813,14 @@
 		<sex>MALE</sex>
 		<acquire exp="3818045" sp="916" />
 		<equipment rhand="183" /> <!-- Mystic Staff -->
-		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="8231.21387283237" hpRegen="39.4112754681274" mp="531.353135313531" mpRegen="2.1" />
+		<stats str="164" int="188" dex="55" wit="78" con="111" men="149">
+			<vitals hp="108760" hpRegen="39.4112754681274" mp="557" mpRegen="2.1" />
 			<speed>
 				<walk ground="15" />
 				<run ground="170" />
 			</speed>
-			<attack physical="613.025952689486" magical="97.5495270464103" critical="8" attackSpeed="253" range="40" type="BLUNT" distance="80" width="120" random="20" accuracy="9" />
-			<defence physical="198.473282442748" magical="283.943975897365" />
+			<attack physical="291.544395528868" magical="29.765523377221" critical="1" attackSpeed="253" range="40" type="BLUNT" distance="80" width="120" random="20" accuracy="9" />
+			<defence physical="507.40251" magical="247.54" />
 			<attribute>
 				<defence fire="20" water="20" wind="20" earth="20" holy="20" dark="20" />
 			</attribute>
@@ -1818,10 +1828,11 @@
 		</stats>
 		<status attackable="false" undying="false" />
 		<skillList>
-			<skill id="4045" level="1" /> <!-- Full Magic Attack Resistance -->
-			<skill id="4414" level="3" /> <!-- Light Armor Type -->
-			<skill id="4415" level="9" /> <!-- Bow -->
-			<skill id="4416" level="6" /> <!-- Humanoid -->
+			<skill id="4863" level="1" /> <!-- Raid Boss (Lv. 43) -->
+			<skill id="4416" level="6" /> <!-- Humanoids -->
+			<skill id="4494" level="1" /> <!-- Raid Boss -->
+			<skill id="4415" level="5" /> <!-- Blunt Weapon -->
+			<skill id="4045" level="1" /> <!-- Resist Full Magic Attack -->
 		</skillList>
 		<ai clanHelpRange="300" />
 		<collision>
@@ -1932,14 +1943,14 @@
 		<race>HUMANOID</race>
 		<sex>MALE</sex>
 		<acquire exp="2615583" sp="627" />
-		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="6680.34682080925" hpRegen="18.4385313667577" mp="245.544554455446" mpRegen="1.5" />
+		<stats str="164" int="188" dex="55" wit="78" con="111" men="149">
+			<vitals hp="43316" hpRegen="18.4385313667577" mp="259" mpRegen="1.5" />
 			<speed>
 				<walk ground="50" />
 				<run ground="190" />
 			</speed>
-			<attack physical="377.205009282523" magical="64.1990774885799" critical="4" attackSpeed="253" range="40" type="FIST" distance="80" width="120" random="5" accuracy="4.75" />
-			<defence physical="118.58407079646" magical="170.428286972372" />
+			<attack physical="74.2223188804512" magical="4.67967242276365" critical="4" attackSpeed="253" range="40" type="FIST" distance="80" width="120" random="5" accuracy="4.75" />
+			<defence physical="305.50599" magical="149.04" />
 			<attribute>
 				<defence fire="20" water="20" wind="20" earth="20" holy="20" dark="20" />
 			</attribute>
@@ -1947,11 +1958,11 @@
 		</stats>
 		<status attackable="false" undying="false" />
 		<skillList>
-			<skill id="4045" level="1" /> <!-- Full Magic Attack Resistance -->
-			<skill id="4414" level="3" /> <!-- Light Armor Type -->
+			<skill id="4954" level="1" /> <!-- Raid Boss (Lv. 25) -->
+			<skill id="4416" level="6" /> <!-- Humanoids -->
+			<skill id="4494" level="1" /> <!-- Raid Boss -->
 			<skill id="4415" level="1" /> <!-- Bare Hands -->
-			<skill id="4416" level="4" /> <!-- Animals -->
-			<skill id="4728" level="2" /> <!-- Stun -->
+			<skill id="4045" level="1" /> <!-- Resist Full Magic Attack -->
 		</skillList>
 		<ai clanHelpRange="300" />
 		<collision>
@@ -2060,14 +2071,14 @@
 		<sex>MALE</sex>
 		<acquire exp="5476117" sp="1314" />
 		<equipment rhand="8532" /> <!-- Monster Only (Spinebone Sword) -->
-		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="13134.1040462428" hpRegen="32.4117473308651" mp="447.524752475248" mpRegen="1.8" />
+		<stats str="164" int="188" dex="55" wit="78" con="111" men="149">
+			<vitals hp="86871" hpRegen="32.4117473308651" mp="463" mpRegen="1.8" />
 			<speed>
 				<walk ground="50" />
 				<run ground="190" />
 			</speed>
-			<attack physical="1129.44555021801" magical="234.424031721522" critical="4" attackSpeed="253" range="40" type="SWORD" distance="80" width="120" random="10" accuracy="4.75" />
-			<defence physical="178.740157480315" magical="255.588319369223" />
+			<attack physical="219.969353828243" magical="17.2993902271801" critical="4" attackSpeed="253" range="40" type="SWORD" distance="80" width="120" random="10" accuracy="4.75" />
+			<defence physical="457.40256" magical="223.14" />
 			<attribute>
 				<defence fire="20" water="20" wind="20" earth="20" holy="20" dark="80" />
 				<attack type="DARK" value="20" />
@@ -2076,13 +2087,13 @@
 		</stats>
 		<status attackable="false" undying="false" />
 		<skillList>
-			<skill id="4045" level="1" /> <!-- Full Magic Attack Resistance -->
+			<skill id="5026" level="1" /> <!-- Raid Boss (Lv. 39) -->
+			<skill id="4416" level="1" /> <!-- Undead -->
 			<skill id="4278" level="1" /> <!-- Dark Attack -->
 			<skill id="4333" level="3" /> <!-- Dark Attack Resistance -->
-			<skill id="4414" level="3" /> <!-- Light Armor Type -->
+			<skill id="4494" level="1" /> <!-- Raid Boss -->
 			<skill id="4415" level="3" /> <!-- One-handed Sword -->
-			<skill id="4416" level="1" /> <!-- Undead -->
-			<skill id="4723" level="3" /> <!-- Power Strike -->
+			<skill id="4045" level="1" /> <!-- Resist Full Magic Attack -->
 		</skillList>
 		<ai clanHelpRange="300" />
 		<collision>
@@ -2172,14 +2183,14 @@
 		<sex>MALE</sex>
 		<acquire exp="5476117" sp="1314" />
 		<equipment rhand="67" lhand="633" /> <!-- Orcish Sword / Zubei's Shield -->
-		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="7866.47398843931" hpRegen="29.4232868171158" mp="417.161716171617" mpRegen="1.8" />
+		<stats str="164" int="188" dex="55" wit="78" con="111" men="149">
+			<vitals hp="77592" hpRegen="29.4232868171158" mp="432" mpRegen="1.8" />
 			<speed>
 				<walk ground="50" />
 				<run ground="190" />
 			</speed>
-			<attack physical="649.36990363232" magical="90.8174125391735" critical="1" attackSpeed="253" range="40" type="BLUNT" distance="80" width="120" random="20" accuracy="9" />
-			<defence physical="168.8" magical="242.283051834595" />
+			<attack physical="190.062213768403" magical="15.0683165832128" critical="1" attackSpeed="253" range="40" type="BLUNT" distance="80" width="120" random="20" accuracy="9" />
+			<defence physical="433.43274" magical="211.44" />
 			<attribute>
 				<defence fire="20" water="20" wind="20" earth="20" holy="20" dark="20" />
 			</attribute>
@@ -2187,12 +2198,11 @@
 		</stats>
 		<status attackable="false" undying="false" />
 		<skillList>
-			<skill id="4045" level="1" /> <!-- Full Magic Attack Resistance -->
-			<skill id="4194" level="3" /> <!-- Aura Burn -->
-			<skill id="4202" level="3" /> <!-- Hold -->
-			<skill id="4414" level="3" /> <!-- Light Armor Type -->
-			<skill id="4415" level="5" /> <!-- One-handed Blunt Weapons -->
-			<skill id="4416" level="6" /> <!-- Humanoid -->
+			<skill id="5027" level="1" /> <!-- Raid Boss (Lv. 37) -->
+			<skill id="4416" level="6" /> <!-- Humanoids -->
+			<skill id="4494" level="1" /> <!-- Raid Boss -->
+			<skill id="4415" level="5" /> <!-- Blunt Weapon -->
+			<skill id="4045" level="1" /> <!-- Resist Full Magic Attack -->
 		</skillList>
 		<ai clanHelpRange="300" />
 		<collision>
@@ -2305,14 +2315,14 @@
 		<sex>MALE</sex>
 		<acquire exp="1670060147" sp="400814" />
 		<equipment rhand="6719" /> <!-- Monster Only (Ketra Orc Chieftain) -->
-		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="23781.5028901734" hpRegen="92.3387631310317" mp="1641.58415841584" mpRegen="3" />
+		<stats str="164" int="188" dex="55" wit="78" con="111" men="149">
+			<vitals hp="300327" hpRegen="92.3387631310317" mp="1674" mpRegen="3" />
 			<speed>
 				<walk ground="24" />
 				<run ground="190" />
 			</speed>
-			<attack physical="3962.57358630509" magical="945.604940565592" critical="8" attackSpeed="253" range="40" type="BLUNT" distance="80" width="120" random="20" accuracy="9" />
-			<defence physical="404.761904761905" magical="580.562257906463" />
+			<attack physical="1445.33274686674" magical="280.52213944732" critical="1" attackSpeed="253" range="40" type="BLUNT" distance="80" width="120" random="20" accuracy="9" />
+			<defence physical="1024.125" magical="499.6" />
 			<attribute>
 				<defence fire="20" water="20" wind="20" earth="20" holy="20" dark="20" />
 			</attribute>
@@ -2320,10 +2330,11 @@
 		</stats>
 		<status attackable="false" undying="false" />
 		<skillList>
-			<skill id="4045" level="1" /> <!-- Full Magic Attack Resistance -->
-			<skill id="4414" level="3" /> <!-- Light Armor Type -->
-			<skill id="4415" level="7" /> <!-- Dagger -->
-			<skill id="4416" level="6" /> <!-- Humanoid -->
+			<skill id="4903" level="1" /> <!-- Raid Boss (Lv. 80) -->
+			<skill id="4416" level="6" /> <!-- Humanoids -->
+			<skill id="4494" level="1" /> <!-- Raid Boss -->
+			<skill id="4415" level="6" /> <!-- Blunt Weapon -->
+			<skill id="4045" level="1" /> <!-- Resist Full Magic Attack -->
 		</skillList>
 		<ai clanHelpRange="300" />
 		<collision>
@@ -2445,14 +2456,14 @@
 		<sex>MALE</sex>
 		<acquire exp="1670060147" sp="400814" />
 		<equipment rhand="6716" /> <!-- Monster Only (Silenos Shaman) -->
-		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="23781.5028901734" hpRegen="92.3387631310317" mp="1641.58415841584" mpRegen="3" />
+		<stats str="164" int="188" dex="55" wit="78" con="111" men="149">
+			<vitals hp="300327" hpRegen="92.3387631310317" mp="1674" mpRegen="3" />
 			<speed>
 				<walk ground="36" />
 				<run ground="190" />
 			</speed>
-			<attack physical="3962.57358630509" magical="945.604940565592" critical="8" attackSpeed="253" range="40" type="BLUNT" distance="80" width="120" random="20" accuracy="9" />
-			<defence physical="404.761904761905" magical="580.562257906463" />
+			<attack physical="1445.33274686674" magical="280.52213944732" critical="1" attackSpeed="253" range="40" type="BLUNT" distance="80" width="120" random="20" accuracy="9" />
+			<defence physical="1024.125" magical="499.6" />
 			<attribute>
 				<defence fire="20" water="20" wind="20" earth="20" holy="20" dark="20" />
 			</attribute>
@@ -2460,10 +2471,11 @@
 		</stats>
 		<status attackable="false" undying="false" />
 		<skillList>
-			<skill id="4045" level="1" /> <!-- Full Magic Attack Resistance -->
-			<skill id="4414" level="3" /> <!-- Light Armor Type -->
-			<skill id="4415" level="7" /> <!-- Dagger -->
-			<skill id="4416" level="6" /> <!-- Humanoid -->
+			<skill id="4907" level="1" /> <!-- Raid Boss (Lv. 80) -->
+			<skill id="4416" level="6" /> <!-- Humanoids -->
+			<skill id="4494" level="1" /> <!-- Raid Boss -->
+			<skill id="4415" level="6" /> <!-- Blunt Weapon -->
+			<skill id="4045" level="1" /> <!-- Resist Full Magic Attack -->
 		</skillList>
 		<ai clanHelpRange="300" />
 		<collision>
@@ -2672,14 +2684,14 @@
 		<race>DEMONIC</race>
 		<sex>MALE</sex>
 		<acquire exp="7846722" sp="1883" />
-		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="31431.2138728324" hpRegen="123.216289543832" mp="1475.24752475248" mpRegen="3" />
+		<stats str="164" int="188" dex="55" wit="78" con="111" men="149">
+			<vitals hp="397437" hpRegen="123.216289543832" mp="1507" mpRegen="3" />
 			<speed>
 				<walk ground="37" />
 				<run ground="170" />
 			</speed>
-			<attack physical="6616.12555539891" magical="2931.74764615555" critical="4" attackSpeed="253" range="40" type="FIST" distance="80" width="120" random="5" accuracy="4.75" />
-			<defence physical="472.39263803681" magical="460.831359209541" />
+			<attack physical="2451.2234804188" magical="868.876026814078" critical="4" attackSpeed="253" range="40" type="FIST" distance="80" width="120" random="5" accuracy="4.75" />
+			<defence physical="957.73869" magical="467.22" />
 			<attribute>
 				<defence fire="20" water="20" wind="20" earth="20" holy="-13" dark="189" />
 				<attack type="DARK" value="20" />
@@ -2688,11 +2700,13 @@
 		</stats>
 		<status attackable="false" undying="false" />
 		<skillList>
-			<skill id="4045" level="1" /> <!-- Full Magic Attack Resistance -->
-			<skill id="4275" level="2" /> <!-- Holy Vulnerability -->
+			<skill id="4809" level="1" /> <!-- Raid Boss (Lv. 75) -->
+			<skill id="4416" level="9" /> <!-- Demons -->
 			<skill id="4278" level="1" /> <!-- Dark Attack -->
-			<skill id="4415" level="3" /> <!-- One-handed Sword -->
-			<skill id="4416" level="1" /> <!-- Undead -->
+			<skill id="4333" level="5" /> <!-- Dark Attack Resistance -->
+			<skill id="4494" level="1" /> <!-- Raid Boss -->
+			<skill id="4415" level="1" /> <!-- Bare Hands -->
+			<skill id="4045" level="1" /> <!-- Resist Full Magic Attack -->
 		</skillList>
 		<ai clanHelpRange="300" />
 		<collision>
@@ -2782,14 +2796,14 @@
 		</parameters>
 		<race>DRAGON</race>
 		<sex>MALE</sex>
-		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="58887.2832369942" hpRegen="117.68436242886" mp="1314.19141914191" mpRegen="2.7" />
+		<stats str="164" int="188" dex="55" wit="78" con="111" men="149">
+			<vitals hp="373386" hpRegen="117.68436242886" mp="1345" mpRegen="2.7" />
 			<speed>
 				<walk ground="70" />
 				<run ground="190" />
 			</speed>
-			<attack physical="5766.57814977808" magical="2401.7703012578" critical="4" attackSpeed="253" range="40" type="SWORD" distance="80" width="120" random="10" accuracy="4.75" />
-			<defence physical="350" magical="501.315954380248" />
+			<attack physical="2154.88111713047" magical="717.403871261232" critical="4" attackSpeed="253" range="40" type="SWORD" distance="80" width="120" random="10" accuracy="4.75" />
+			<defence physical="887.74791" magical="433.08" />
 			<attribute>
 				<defence fire="20" water="20" wind="20" earth="20" holy="20" dark="20" />
 			</attribute>
@@ -2797,13 +2811,11 @@
 		</stats>
 		<status attackable="false" undying="false" />
 		<skillList>
-			<skill id="4045" level="1" /> <!-- Full Magic Attack Resistance -->
-			<skill id="4278" level="1" /> <!-- Dark Attack -->
-			<skill id="4333" level="5" /> <!-- Dark Attack Resistance -->
-			<skill id="4414" level="3" /> <!-- Light Armor Type -->
-			<skill id="4415" level="1" /> <!-- Bare Hands -->
-			<skill id="4416" level="9" /> <!-- Demons -->
-			<skill id="4780" level="6" /> <!-- Heal -->
+			<skill id="4962" level="1" /> <!-- Raid Boss (Lv. 70) -->
+			<skill id="4416" level="10" /> <!-- Dragons -->
+			<skill id="4494" level="1" /> <!-- Raid Boss -->
+			<skill id="4415" level="3" /> <!-- One-handed Sword -->
+			<skill id="4045" level="1" /> <!-- Resist Full Magic Attack -->
 		</skillList>
 		<ai clanHelpRange="300" />
 		<collision>
@@ -2895,14 +2907,14 @@
 		<race>DEMONIC</race>
 		<sex>MALE</sex>
 		<acquire exp="2615583" sp="627" />
-		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="6247.39884393064" hpRegen="18.4385313667577" mp="218.481848184818" mpRegen="1.5" />
+		<stats str="164" int="188" dex="55" wit="78" con="111" men="149">
+			<vitals hp="43316" hpRegen="18.4385313667577" mp="259" mpRegen="1.5" />
 			<speed>
 				<walk ground="41" />
 				<run ground="190" />
 			</speed>
-			<attack physical="319.222113143536" magical="54.5527055074646" critical="4" attackSpeed="253" range="40" type="FIST" distance="80" width="120" random="5" accuracy="4.75" />
-			<defence physical="111.711711711712" magical="160.206799694278" />
+			<attack physical="74.2223188804512" magical="4.67967242276365" critical="4" attackSpeed="253" range="40" type="FIST" distance="80" width="120" random="5" accuracy="4.75" />
+			<defence physical="305.50599" magical="149.04" />
 			<attribute>
 				<defence fire="20" water="20" wind="20" earth="20" holy="-13" dark="53" />
 			</attribute>
@@ -2910,14 +2922,14 @@
 		</stats>
 		<status attackable="false" undying="false" />
 		<skillList>
-			<skill id="4045" level="1" /> <!-- Full Magic Attack Resistance -->
-			<skill id="4273" level="3" /> <!-- Dagger/ Rapier Resistance -->
-			<skill id="4274" level="1" /> <!-- Blunt Weapon Vulnerability -->
-			<skill id="4414" level="3" /> <!-- Light Armor Type -->
-			<skill id="4415" level="1" /> <!-- Bare Hands -->
+			<skill id="4983" level="1" /> <!-- Raid Boss (Lv. 25) -->
 			<skill id="4416" level="9" /> <!-- Demons -->
-			<skill id="4444" level="2" /> <!-- Greater Bow/ Crossbow Resistance -->
-			<skill id="4743" level="2" /> <!-- Power Strike -->
+			<skill id="4444" level="2" /> <!-- Greater Bow/Crossbow Resistance -->
+			<skill id="4273" level="3" /> <!-- Dagger/Rapier Resistance -->
+			<skill id="4274" level="1" /> <!-- Blunt Weapon Vulnerability -->
+			<skill id="4494" level="1" /> <!-- Raid Boss -->
+			<skill id="4415" level="1" /> <!-- Bare Hands -->
+			<skill id="4045" level="1" /> <!-- Resist Full Magic Attack -->
 		</skillList>
 		<ai clanHelpRange="300" />
 		<collision>
@@ -3222,10 +3234,10 @@
 		<sex>MALE</sex>
 		<acquire exp="207470592" sp="49792" raidPoints="30" />
 		<mpReward value="20" type="PER" ticks="10" affects="PARTY" />
-		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="643841.040462428" hpRegen="23103.5" mp="22058.0858085809" mpRegen="30" />
-			<attack physical="59253.2310568215" magical="3864.05783965163" random="10" critical="4" accuracy="0" attackSpeed="253" type="FIST" range="40" distance="80" width="120" />
-			<defence physical="583.152173913044" magical="240.194151740316" />
+		<stats str="164" int="188" dex="55" wit="78" con="111" men="149">
+			<vitals hp="35459535.30342" hpRegen="23103.5" mp="44856" mpRegen="30" />
+			<attack physical="214683.835640155" magical="34104.0387932822" random="10" critical="4" accuracy="0" attackSpeed="253" type="FIST" range="40" distance="80" width="120" />
+			<defence physical="17685" magical="10155" />
 			<speed>
 				<walk ground="60" />
 				<run ground="180" />
@@ -3242,13 +3254,14 @@
 			<height normal="27.5" />
 		</collision>
 		<skillList>
-			<skill id="4414" level="1" /> <!-- Heavy Armor Type -->
-			<skill id="4415" level="1" /> <!-- Bare Hands -->
-			<skill id="4416" level="4" /> <!-- Animals -->
+			<skill id="15413" level="1" /> <!-- Raid Boss (Lv. 96) -->
+			<skill id="4416" level="2" /> <!-- Magic Creatures -->
 			<skill id="5465" level="1" /> <!-- Earth Attack -->
-			<skill id="14765" level="3" /> <!-- Blood Siphon Resistance -->
-			<skill id="23555" level="2" /> <!-- (Power Smash) -->
-			<skill id="23557" level="2" /> <!-- Energy Burst -->
+			<skill id="4414" level="1" /> <!-- Heavy Armor Type -->
+			<skill id="4494" level="1" /> <!-- Raid Boss -->
+			<skill id="4415" level="1" /> <!-- Bare Hands -->
+			<skill id="14765" level="4" /> <!-- Blood Siphon Resistance -->
+			<skill id="4045" level="1" /> <!-- Resist Full Magic Attack -->
 		</skillList>
 		<ai clanHelpRange="300" aggroRange="450">
 			<clanList>
@@ -3456,10 +3469,10 @@
 		<equipment rhand="47164" /> <!-- -->
 		<acquire exp="159805184" sp="38353" raidPoints="30" />
 		<mpReward value="20" type="PER" ticks="10" affects="PARTY" />
-		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="287094.219653179" hpRegen="9827.1" mp="19170.297029703" mpRegen="30" />
-			<attack physical="25416.9755374351" magical="2700.08520358804" random="10" critical="4" accuracy="0" attackSpeed="253" type="FIST" range="40" distance="80" width="120" />
-			<defence physical="497.727272727273" magical="197.302338929545" />
+		<stats str="164" int="188" dex="55" wit="78" con="111" men="149">
+			<vitals hp="19240798.98207" hpRegen="9827.1" mp="39048" mpRegen="30" />
+			<attack physical="108740.05311" magical="18875.915859" random="10" critical="4" accuracy="0" attackSpeed="253" type="FIST" range="40" distance="80" width="120" />
+			<defence physical="19210.828167" magical="9370.70992" />
 			<speed>
 				<walk ground="70" />
 				<run ground="140" />
@@ -3476,12 +3489,12 @@
 			<height normal="37.5" />
 		</collision>
 		<skillList>
-			<skill id="4414" level="1" /> <!-- Heavy Armor Type -->
-			<skill id="4415" level="1" /> <!-- Bare Hands -->
-			<skill id="4416" level="7" /> <!-- Spirits -->
+			<skill id="4416" level="2" /> <!-- Magic Creatures -->
 			<skill id="5465" level="1" /> <!-- Earth Attack -->
-			<skill id="14765" level="3" /> <!-- Blood Siphon Resistance -->
-			<skill id="23547" level="1" /> <!-- (Power Strike) -->
+			<skill id="4415" level="1" /> <!-- Bare Hands -->
+			<skill id="14765" level="4" /> <!-- Blood Siphon Resistance -->
+			<skill id="4414" level="1" /> <!-- Heavy Armor Type -->
+			<skill id="4045" level="1" /> <!-- Resist Full Magic Attack -->
 		</skillList>
 		<ai clanHelpRange="300" aggroRange="450">
 			<clanList>
@@ -3564,10 +3577,10 @@
 		<sex>MALE</sex>
 		<acquire exp="183127104" sp="43950" raidPoints="30" />
 		<mpReward value="53" type="DIFF" ticks="10" affects="PARTY" />
-		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="304019.075144509" hpRegen="10667.3" mp="30897.0297029703" mpRegen="30" />
-			<attack physical="30518.4910633391" magical="6523.30166236615" random="10" critical="4" accuracy="0" attackSpeed="253" type="FIST" range="40" distance="80" width="120" />
-			<defence physical="431.111111111111" magical="217.789894931522" />
+		<stats str="164" int="188" dex="55" wit="78" con="111" men="149">
+			<vitals hp="21357837.419145" hpRegen="10667.3" mp="41920" mpRegen="30" />
+			<attack physical="110573.05311" magical="20640.02495" random="10" critical="4" accuracy="0" attackSpeed="253" type="FIST" range="40" distance="80" width="120" />
+			<defence physical="21005.176917" magical="10245.529071" />
 			<speed>
 				<walk ground="70" />
 				<run ground="140" />
@@ -3580,12 +3593,12 @@
 		</stats>
 		<status attackable="true" />
 		<skillList>
-			<skill id="4414" level="1" /> <!-- Heavy Armor Type -->
-			<skill id="4415" level="1" /> <!-- Bare Hands -->
 			<skill id="4416" level="7" /> <!-- Spirits -->
 			<skill id="5465" level="1" /> <!-- Earth Attack -->
-			<skill id="14765" level="3" /> <!-- Blood Siphon Resistance -->
-			<skill id="23553" level="1" /> <!-- (Wind Strike) -->
+			<skill id="4415" level="1" /> <!-- Bare Hands -->
+			<skill id="14765" level="4" /> <!-- Blood Siphon Resistance -->
+			<skill id="4414" level="1" /> <!-- Heavy Armor Type -->
+			<skill id="4045" level="1" /> <!-- Resist Full Magic Attack -->
 		</skillList>
 		<ai clanHelpRange="300" aggroRange="300">
 			<clanList>
@@ -3667,10 +3680,10 @@
 		<sex>MALE</sex>
 		<acquire exp="198916032" sp="47739" raidPoints="30" />
 		<mpReward value="20" type="PER" ticks="10" affects="PARTY" />
-		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="312844.50867052" hpRegen="10704.9" mp="21324.0924092409" mpRegen="30" />
-			<attack physical="35622.235436913" magical="3530.03606825418" random="10" critical="4" accuracy="0" attackSpeed="253" type="FIST" range="40" distance="80" width="120" />
-			<defence physical="560.43956043956" magical="228.642071087185" />
+		<stats str="164" int="188" dex="55" wit="78" con="111" men="149">
+			<vitals hp="15744949.44027" hpRegen="10704.9" mp="43380" mpRegen="30" />
+			<attack physical="185920.60661" magical="32950.821824" random="10" critical="4" accuracy="0" attackSpeed="253" type="FIST" range="40" distance="80" width="120" />
+			<defence physical="21930.340408" magical="10695.860414" />
 			<speed>
 				<walk ground="70" />
 				<run ground="140" />
@@ -3683,12 +3696,12 @@
 		</stats>
 		<status attackable="true" />
 		<skillList>
-			<skill id="4414" level="1" /> <!-- Heavy Armor Type -->
-			<skill id="4415" level="1" /> <!-- Bare Hands -->
-			<skill id="4416" level="7" /> <!-- Spirits -->
+			<skill id="4416" level="4" /> <!-- Animals -->
 			<skill id="5465" level="1" /> <!-- Earth Attack -->
-			<skill id="14765" level="3" /> <!-- Blood Siphon Resistance -->
-			<skill id="23559" level="1" /> <!-- Mega Storm Strike -->
+			<skill id="4415" level="1" /> <!-- Bare Hands -->
+			<skill id="14765" level="4" /> <!-- Blood Siphon Resistance -->
+			<skill id="4414" level="1" /> <!-- Heavy Armor Type -->
+			<skill id="4045" level="1" /> <!-- Resist Full Magic Attack -->
 		</skillList>
 		<ai clanHelpRange="300" aggroRange="450">
 			<clanList>

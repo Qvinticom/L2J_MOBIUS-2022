@@ -1024,9 +1024,9 @@
 		<acquire exp="440867" sp="105" />
 		<equipment rhand="13979" lhand="13980" />
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="9383.23699421965" hpRegen="8.5" mp="1641.58415841584" mpRegen="3" />
-			<attack physical="930.142257051078" magical="542.983351008176" critical="4" attackSpeed="253" range="40" />
-			<defence physical="337.5" magical="246.738959610247" />
+			<vitals hp="9870.52023121387" hpRegen="8.5" mp="1674.58745874587" mpRegen="3" />
+			<attack physical="970.599284540035" magical="566.041531386912" critical="4" attackSpeed="253" range="40" />
+			<defence physical="341.682608889087" magical="249.907092413205" />
 			<attribute>
 				<attack type="EARTH" value="100" />
 				<defence fire="100" water="100" wind="50" earth="100" holy="100" dark="100" />
@@ -1037,8 +1037,12 @@
 			</speed>
 		</stats>
 		<skillList>
-			<skill id="4416" level="9" /> <!-- Demons -->
+			<skill id="4410" level="14" /> <!-- Strong P. Atk. -->
+			<skill id="4412" level="14" /> <!-- Strong P. Def. -->
+			<skill id="4413" level="14" /> <!-- Strong M. Def. -->
+			<skill id="4416" level="10" /> <!-- Dragons -->
 			<skill id="5465" level="1" /> <!-- Earth Attack -->
+			<skill id="16331" level="1" /> <!-- Power Strike -->
 		</skillList>
 		<dropLists>
 			<drop>

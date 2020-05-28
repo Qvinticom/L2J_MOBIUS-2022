@@ -3977,13 +3977,13 @@
 		<sex>MALE</sex>
 		<acquire exp="1155872" sp="277" />
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="304478.612716763" hpRegen="8.5" mp="20960.396039604" mpRegen="30" />
+			<vitals hp="313367.052023121" hpRegen="8.5" mp="21690.4290429043" mpRegen="30" />
 			<speed>
 				<walk ground="13" />
 				<run ground="120" />
 			</speed>
-			<attack physical="46666.0206840164" magical="5064.72148085195" critical="4" attackSpeed="253" range="40" type="SWORD" distance="80" width="120" random="10" accuracy="5" />
-			<defence physical="458.011049723757" magical="256.732855606003" />
+			<attack physical="102629.625541668" magical="11071.963832458" critical="4" attackSpeed="253" range="40" type="SWORD" distance="80" width="120" random="10" accuracy="5" />
+			<defence physical="476.502732240437" magical="269.436779743548" />
 			<attribute>
 				<attack type="EARTH" value="180" />
 				<defence fire="100" water="100" wind="50" earth="100" holy="100" dark="100" />
@@ -3992,12 +3992,12 @@
 		</stats>
 		<status attackable="false" undying="false" />
 		<skillList>
-			<skill id="4408" level="8" /> <!-- HP Increase (1/4x) -->
-			<skill id="4410" level="10" /> <!-- Slightly Weak P. Atk. -->
+			<skill id="4408" level="10" /> <!-- HP Increase (2x) -->
+			<skill id="4410" level="13" /> <!-- Slightly Strong P. Atk. -->
 			<skill id="4415" level="3" /> <!-- One-handed Sword -->
-			<skill id="4416" level="4" /> <!-- Animals -->
+			<skill id="4416" level="6" /> <!-- Humanoids -->
 			<skill id="5465" level="1" /> <!-- Earth Attack -->
-			<skill id="6602" level="1" /> <!-- Earth Attack -->
+			<skill id="14082" level="1" /> <!-- Gardener's Wrath -->
 			<skill id="14765" level="3" /> <!-- Blood Siphon Resistance -->
 		</skillList>
 		<ai aggroRange="300" isAggressive="true" clanHelpRange="300">

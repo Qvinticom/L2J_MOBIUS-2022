@@ -1202,9 +1202,9 @@
 		<equipment rhand="88" /> <!-- Morning Star -->
 		<acquire exp="3098" sp="1" />
 		<stats str="79" int="34" dex="42" wit="66" con="75" men="12">
-			<vitals hp="1229.02208201893" hpRegen="4.5" mp="637.469586374696" mpRegen="1.8" />
-			<attack physical="342.592592592593" magical="166.001517920523" random="20" critical="1" accuracy="9" attackSpeed="253" type="BLUNT" range="40" distance="80" width="120" />
-			<defence physical="182.222222222222" magical="133.369379111472" />
+			<vitals hp="966.561514195584" hpRegen="4.5" mp="478.507704785077" mpRegen="1.8" />
+			<attack physical="243.540051679587" magical="119.727087227037" random="20" critical="1" accuracy="9" attackSpeed="253" type="BLUNT" range="40" distance="80" width="120" />
+			<defence physical="156.589147286822" magical="115.053094173787" />
 			<speed>
 				<walk ground="34" />
 				<run ground="174" />
@@ -1214,9 +1214,7 @@
 		</stats>
 		<status undying="false" canBeSown="true" />
 		<skillList>
-			<skill id="4032" level="4" /> <!-- Power Strike -->
-			<skill id="4071" level="5" /> <!-- Bow/Crossbow Resistance -->
-			<skill id="4273" level="3" /> <!-- Dagger/Rapier Resistance -->
+			<skill id="4103" level="2" /> <!-- Ultimate Evasion -->
 			<skill id="4408" level="9" /> <!-- HP Increase (1/2x) -->
 			<skill id="4415" level="5" /> <!-- Blunt Weapon -->
 			<skill id="4416" level="6" /> <!-- Humanoids -->
@@ -3271,9 +3269,9 @@
 		<equipment rhand="946" lhand="945" /> <!-- Skeleton Dagger / Skeleton Buckler -->
 		<acquire exp="44501" sp="10" />
 		<stats str="79" int="34" dex="42" wit="66" con="75" men="12">
-			<vitals hp="2037.22397476341" hpRegen="7.5" mp="1097.32360097324" mpRegen="2.7" />
-			<attack physical="719.646799116998" magical="340.156785791482" random="10" critical="4" accuracy="5" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
-			<defence physical="257.615894039735" magical="188.524193938222" shield="136" shieldRate="20" />
+			<vitals hp="2193.05993690852" hpRegen="7.5" mp="1188.15896188159" mpRegen="2.7" />
+			<attack physical="804.65367965368" magical="378.90274609333" random="10" critical="4" accuracy="5" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="272.077922077922" magical="199.07100199071" shield="136" shieldRate="20" />
 			<speed>
 				<walk ground="80" />
 				<run ground="174" />
@@ -3283,7 +3281,8 @@
 		</stats>
 		<status undying="false" canBeSown="true" />
 		<skillList>
-			<skill id="4099" level="2" /> <!-- Berserker Spirit -->
+			<skill id="4073" level="6" /> <!-- Stun -->
+			<skill id="4274" level="1" /> <!-- Blunt Weapon Vulnerability -->
 			<skill id="4275" level="2" /> <!-- Holy Attack Vulnerability -->
 			<skill id="4278" level="1" /> <!-- Dark Attack -->
 			<skill id="4415" level="3" /> <!-- One-handed Sword -->
@@ -3298,13 +3297,17 @@
 		</ai>
 		<dropLists>
 			<drop>
-				<item id="57" min="60" max="141" chance="70" /> <!-- Adena -->
-				<item id="8729" min="1" max="1" chance="0.1" /> <!-- Life Stone - Lv. 64 -->
-				<item id="36559" min="1" max="1" chance="0.0750187546886722" /> <!-- Accessory Gem (High-grade) -->
-				<item id="8739" min="1" max="1" chance="0.05" /> <!-- Mid-grade Life Stone - Lv. 64 -->
-				<item id="8749" min="1" max="1" chance="0.025" /> <!-- High-grade Life Stone - Lv. 64 -->
-				<item id="5308" min="1" max="1" chance="0.01" /> <!-- Sealed Dark Crystal Robe -->
-				<item id="8759" min="1" max="1" chance="0.01" /> <!-- Top-grade Life Stone - Lv. 64 -->
+				<item id="57" min="80" max="188" chance="70" /> <!-- Adena -->
+				<item id="36564" min="1" max="1" chance="0.0750187546886722" /> <!-- Greater Synthetic Cokes -->
+				<item id="6327" min="1" max="1" chance="0.03000300030003" /> <!-- Sealed Majestic Earring -->
+				<item id="6324" min="1" max="1" chance="0.03000300030003" /> <!-- Sealed Phoenix Earring -->
+				<item id="6328" min="1" max="1" chance="0.03000300030003" /> <!-- Sealed Majestic Ring -->
+				<item id="6325" min="1" max="1" chance="0.03000300030003" /> <!-- Sealed Phoenix Ring -->
+				<item id="6326" min="1" max="1" chance="0.03000300030003" /> <!-- Sealed Majestic Necklace -->
+				<item id="6323" min="1" max="1" chance="0.03000300030003" /> <!-- Sealed Phoenix Necklace -->
+				<item id="729" min="1" max="1" chance="0.03000300030003" /> <!-- Scroll: Enchant Weapon (A-grade) -->
+				<item id="5297" min="1" max="1" chance="0.01" /> <!-- Sealed Dark Crystal Leather Armor -->
+				<item id="5301" min="1" max="1" chance="0.01" /> <!-- Sealed Tallum Leather Armor -->
 				<!-- Also drops herbs. -->
 				<item id="8600" min="1" max="1" chance="10" /> <!-- Herb of Life -->
 				<item id="8601" min="1" max="1" chance="8" /> <!-- Major Herb of Life -->
@@ -3317,8 +3320,9 @@
 				<item id="13028" min="1" max="1" chance="0.1" /> <!-- Vitality Replenishing Herb -->
 			</drop>
 			<spoil>
-				<item id="36557" min="1" max="1" chance="0.75187969924812" /> <!-- Accessory Gem -->
-				<item id="36558" min="1" max="1" chance="0.3003003003003" /> <!-- Accessory Gem (Mid-grade) -->
+				<item id="36534" min="1" max="1" chance="0.1" /> <!-- Durable Braid -->
+				<item id="36882" min="1" max="1" chance="0.03000300030003" /> <!-- Recipe: Thin Braid - Upgrade -->
+				<item id="36881" min="1" max="1" chance="0.03000300030003" /> <!-- Recipe: Thin Braid - Downgrade -->
 			</spoil>
 			<lucky>
 				<item id="39629" min="1" max="1" chance="100" /> <!-- Fortune Pocket - Stage 1 -->
@@ -3736,9 +3740,9 @@
 		<equipment rhand="210" /> <!-- Staff of Evil Spirits -->
 		<acquire exp="32859" sp="7" />
 		<stats str="79" int="34" dex="42" wit="66" con="75" men="12">
-			<vitals hp="2295.26813880126" hpRegen="7.5" mp="1251.41930251419" mpRegen="2.7" />
-			<attack physical="869.660352418973" magical="405.483648172946" random="20" critical="8" accuracy="9" attackSpeed="253" type="BLUNT" range="40" distance="80" width="120" />
-			<defence physical="281.769512538743" magical="206.242485860678" />
+			<vitals hp="2345.11041009464" hpRegen="7.5" mp="1282.23844282238" mpRegen="2.7" />
+			<attack physical="892.202277552596" magical="418.531253381224" random="20" critical="1" accuracy="9" attackSpeed="253" type="BLUNT" range="40" distance="80" width="120" />
+			<defence physical="286.974172324491" magical="210.037868692385" />
 			<speed>
 				<walk ground="70" />
 				<run ground="170" />
@@ -3748,17 +3752,17 @@
 		</stats>
 		<status undying="false" canBeSown="true" />
 		<skillList>
-			<skill id="4118" level="6" /> <!-- Paralysis -->
-			<skill id="4276" level="1" /> <!-- Bow/Crossbow Vulnerability -->
+			<skill id="4073" level="6" /> <!-- Stun -->
+			<skill id="4085" level="1" /> <!-- Critical Damage -->
+			<skill id="4086" level="1" /> <!-- Critical Chance -->
 			<skill id="4278" level="1" /> <!-- Dark Attack -->
-			<skill id="4281" level="1" /> <!-- Wind Attack Vulnerability -->
 			<skill id="4333" level="5" /> <!-- Dark Attack Resistance -->
 			<skill id="4408" level="10" /> <!-- HP Increase (2x) -->
 			<skill id="4410" level="12" /> <!-- Slightly Strong P. Atk. -->
 			<skill id="4411" level="12" /> <!-- Slightly Strong M. Atk. -->
 			<skill id="4412" level="10" /> <!-- Slightly Weak P. Def. -->
 			<skill id="4413" level="10" /> <!-- Slightly Weak M. Def. -->
-			<skill id="4415" level="7" /> <!-- Dagger -->
+			<skill id="4415" level="5" /> <!-- Blunt Weapon -->
 			<skill id="4416" level="9" /> <!-- Demons -->
 		</skillList>
 		<shots shotChance="30" spiritChance="30" />
@@ -3970,9 +3974,9 @@
 		<equipment rhand="147" /> <!-- Tear of Darkness -->
 		<acquire exp="44681" sp="10" />
 		<stats str="79" int="34" dex="42" wit="66" con="75" men="12">
-			<vitals hp="2540.06309148265" hpRegen="8.5" mp="1410.38118410381" mpRegen="3" />
-			<attack physical="823.875823875824" magical="471.2112411887" random="10" critical="8" accuracy="5" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
-			<defence physical="244.351921370555" magical="263.106813248292" />
+			<vitals hp="2586.11987381703" hpRegen="8.5" mp="1442.01135442011" mpRegen="3" />
+			<attack physical="1039.09465020576" magical="484.473575098424" random="10" critical="4" accuracy="5" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="310.325476992144" magical="227.288656593874" />
 			<speed>
 				<walk ground="50" />
 				<run ground="170" />
@@ -3982,17 +3986,12 @@
 		</stats>
 		<status undying="false" canBeSown="true" />
 		<skillList>
-			<skill id="4071" level="5" /> <!-- Bow/Crossbow Resistance -->
-			<skill id="4085" level="1" /> <!-- Critical Damage -->
-			<skill id="4086" level="1" /> <!-- Critical Chance -->
-			<skill id="4120" level="7" /> <!-- Stun -->
+			<skill id="4073" level="7" /> <!-- Stun -->
 			<skill id="4408" level="10" /> <!-- HP Increase (2x) -->
 			<skill id="4410" level="12" /> <!-- Slightly Strong P. Atk. -->
 			<skill id="4411" level="12" /> <!-- Slightly Strong M. Atk. -->
-			<skill id="4412" level="10" /> <!-- Slightly Weak P. Def. -->
-			<skill id="4413" level="10" /> <!-- Slightly Weak M. Def. -->
-			<skill id="4414" level="3" /> <!-- Light Armor Type -->
-			<skill id="4415" level="9" /> <!-- Bow -->
+			<skill id="4412" level="12" /> <!-- Slightly Strong P. Def. -->
+			<skill id="4415" level="3" /> <!-- One-handed Sword -->
 			<skill id="4416" level="8" /> <!-- Angels -->
 		</skillList>
 		<shots shotChance="30" spiritChance="30" />
@@ -4041,6 +4040,10 @@
 	</npc>
 	<npc id="20984" level="72" type="Monster" name="Bound Warrior">
 		<parameters>
+			<minions name="Privates">
+				<npc id="21074" count="1" respawnTime="360" weightPoint="1" />
+				<npc id="20985" count="2" respawnTime="360" weightPoint="1" />
+			</minions>
 			<param name="MoveAroundSocial" value="110" />
 			<param name="MoveAroundSocial1" value="74" />
 			<param name="MoveAroundSocial2" value="110" />
@@ -4242,11 +4245,9 @@
 		</stats>
 		<status undying="false" canBeSown="true" />
 		<skillList>
-			<skill id="4097" level="5" /> <!-- Chant of Life -->
-			<skill id="4117" level="5" /> <!-- Paralysis -->
-			<skill id="4276" level="1" /> <!-- Bow/Crossbow Vulnerability -->
+			<skill id="4033" level="5" /> <!-- Aura Burn -->
+			<skill id="4071" level="5" /> <!-- Bow/Crossbow Resistance -->
 			<skill id="4278" level="1" /> <!-- Dark Attack -->
-			<skill id="4281" level="1" /> <!-- Wind Attack Vulnerability -->
 			<skill id="4333" level="5" /> <!-- Dark Attack Resistance -->
 			<skill id="4408" level="10" /> <!-- HP Increase (2x) -->
 			<skill id="4415" level="3" /> <!-- One-handed Sword -->
@@ -4460,9 +4461,9 @@
 		<equipment rhand="5131" /> <!-- Monster Only (Parhit Staff) -->
 		<acquire exp="40210" sp="9" />
 		<stats str="79" int="34" dex="42" wit="66" con="75" men="12">
-			<vitals hp="1183.28075709779" hpRegen="5.5" mp="610.705596107056" mpRegen="2.1" />
-			<attack physical="264.723678902783" magical="157.498281240115" random="30" critical="8" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
-			<defence physical="178.358208955224" magical="130.127949062474" />
+			<vitals hp="1229.02208201893" hpRegen="5.5" mp="637.469586374696" mpRegen="2.1" />
+			<attack physical="342.592592592593" magical="166.001517920523" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="182.222222222222" magical="133.369379111472" />
 			<speed>
 				<walk ground="15" />
 				<run ground="174" />
@@ -4472,9 +4473,11 @@
 		</stats>
 		<status undying="false" canBeSown="true" />
 		<skillList>
-			<skill id="4228" level="4" /> <!-- Double Dagger Attack -->
+			<skill id="4073" level="4" /> <!-- Stun -->
+			<skill id="4085" level="1" /> <!-- Critical Damage -->
+			<skill id="4086" level="1" /> <!-- Critical Chance -->
 			<skill id="4408" level="10" /> <!-- HP Increase (2x) -->
-			<skill id="4415" level="9" /> <!-- Bow -->
+			<skill id="4415" level="3" /> <!-- One-handed Sword -->
 			<skill id="4416" level="6" /> <!-- Humanoids -->
 		</skillList>
 		<shots shotChance="30" spiritChance="30" />
@@ -4487,15 +4490,16 @@
 		</ai>
 		<dropLists>
 			<drop>
-				<item id="57" min="67" max="157" chance="70" /> <!-- Adena -->
-				<item id="36518" min="1" max="1" chance="0.0750187546886722" /> <!-- Durable Leather -->
-				<item id="397" min="1" max="1" chance="0.0750187546886722" /> <!-- Reinforced Mithril Shirt -->
-				<item id="36563" min="1" max="1" chance="0.03000300030003" /> <!-- Synthetic Cokes -->
-				<item id="36548" min="1" max="1" chance="0.03000300030003" /> <!-- Weapon Fragment (Mid-grade) -->
-				<item id="160" min="1" max="1" chance="0.01" /> <!-- Battle Axe -->
-				<item id="89" min="1" max="1" chance="0.01" /> <!-- Big Hammer -->
-				<item id="230" min="1" max="1" chance="0.01" /> <!-- Needle Wolverine -->
-				<item id="161" min="1" max="1" chance="0.01" /> <!-- Silver Axe -->
+				<item id="57" min="71" max="165" chance="70" /> <!-- Adena -->
+				<item id="882" min="1" max="1" chance="1" /> <!-- Mithril Ring -->
+				<item id="851" min="1" max="1" chance="0.5" /> <!-- Onyx Beast's Eye Earring -->
+				<item id="852" min="1" max="1" chance="0.3003003003003" /> <!-- Moonstone Earring -->
+				<item id="883" min="1" max="1" chance="0.149925037481259" /> <!-- Aquastone Ring -->
+				<item id="914" min="1" max="1" chance="0.149925037481259" /> <!-- Dark Necklace -->
+				<item id="915" min="1" max="1" chance="0.1" /> <!-- Aquastone Necklace -->
+				<item id="36538" min="1" max="1" chance="0.03000300030003" /> <!-- Durable Leather Braid -->
+				<item id="951" min="1" max="1" chance="0.03000300030003" /> <!-- Scroll: Enchant Weapon (C-grade) -->
+				<item id="36553" min="1" max="1" chance="0.03000300030003" /> <!-- Armor Fragment (Mid-grade) -->
 				<!-- Also drops herbs. -->
 				<item id="8600" min="1" max="1" chance="10" /> <!-- Herb of Life -->
 				<item id="8601" min="1" max="1" chance="8" /> <!-- Major Herb of Life -->
@@ -4509,8 +4513,8 @@
 			</drop>
 			<spoil>
 				<item id="36531" min="1" max="1" chance="50" /> <!-- Thread -->
-				<item id="36533" min="1" max="1" chance="0.3003003003003" /> <!-- Synthetic Braid -->
-				<item id="36709" min="1" max="1" chance="0.3003003003003" /> <!-- Suspicious Fragment -->
+				<item id="36533" min="1" max="1" chance="0.5" /> <!-- Synthetic Braid -->
+				<item id="36709" min="1" max="1" chance="0.5" /> <!-- Suspicious Fragment -->
 				<item id="36880" min="1" max="1" chance="0.03000300030003" /> <!-- Recipe: Thread - Downgrade -->
 			</spoil>
 			<lucky>
@@ -4690,9 +4694,9 @@
 		<sex>MALE</sex>
 		<acquire exp="22299" sp="5" />
 		<stats str="79" int="34" dex="42" wit="66" con="75" men="12">
-			<vitals hp="1324.29022082019" hpRegen="5.5" mp="692.619626926196" mpRegen="2.1" />
-			<attack physical="380.778588807786" magical="184.422058426" random="10" critical="4" accuracy="5" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
-			<defence physical="191.240875912409" magical="140.302271476015" />
+			<vitals hp="1421.1356466877" hpRegen="5.5" mp="747.769667477697" mpRegen="2.1" />
+			<attack physical="421.844342707652" magical="203.355491421864" random="10" critical="4" accuracy="5" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="200.551887257317" magical="146.830478185832" />
 			<speed>
 				<walk ground="80" />
 				<run ground="174" />
@@ -4702,12 +4706,18 @@
 		</stats>
 		<status undying="false" canBeSown="true" />
 		<skillList>
-			<skill id="4067" level="4" /> <!-- Blow -->
-			<skill id="4276" level="1" /> <!-- Bow/Crossbow Vulnerability -->
-			<skill id="4281" level="1" /> <!-- Wind Attack Vulnerability -->
+			<skill id="4073" level="5" /> <!-- Stun -->
+			<skill id="4085" level="1" /> <!-- Critical Damage -->
+			<skill id="4086" level="1" /> <!-- Critical Chance -->
+			<skill id="4275" level="2" /> <!-- Holy Attack Vulnerability -->
+			<skill id="4278" level="1" /> <!-- Dark Attack -->
 			<skill id="4408" level="10" /> <!-- HP Increase (2x) -->
+			<skill id="4410" level="12" /> <!-- Slightly Strong P. Atk. -->
+			<skill id="4411" level="12" /> <!-- Slightly Strong M. Atk. -->
+			<skill id="4412" level="15" /> <!-- Strong P. Def. -->
+			<skill id="4413" level="10" /> <!-- Slightly Weak M. Def. -->
 			<skill id="4415" level="3" /> <!-- One-handed Sword -->
-			<skill id="4416" level="7" /> <!-- Spirits -->
+			<skill id="4416" level="1" /> <!-- Undead -->
 		</skillList>
 		<shots shotChance="30" spiritChance="30" />
 		<exCrtEffect>false</exCrtEffect>
@@ -4719,9 +4729,9 @@
 		</ai>
 		<dropLists>
 			<drop>
-				<item id="57" min="56" max="130" chance="70" /> <!-- Adena -->
-				<item id="36527" min="1" max="1" chance="0.75187969924812" /> <!-- Synthetic Fiber -->
-				<item id="36562" min="1" max="1" chance="0.0750187546886722" /> <!-- Greater Cokes -->
+				<item id="57" min="73" max="171" chance="70" /> <!-- Adena -->
+				<item id="36557" min="1" max="1" chance="0.75187969924812" /> <!-- Accessory Gem -->
+				<item id="36522" min="1" max="1" chance="0.3003003003003" /> <!-- Silver -->
 				<!-- Also drops herbs. -->
 				<item id="8600" min="1" max="1" chance="10" /> <!-- Herb of Life -->
 				<item id="8601" min="1" max="1" chance="8" /> <!-- Major Herb of Life -->
@@ -4734,8 +4744,8 @@
 				<item id="13028" min="1" max="1" chance="0.1" /> <!-- Vitality Replenishing Herb -->
 			</drop>
 			<spoil>
-				<item id="36527" min="1" max="1" chance="2.5" /> <!-- Synthetic Fiber -->
-				<item id="36562" min="1" max="1" chance="0.3003003003003" /> <!-- Greater Cokes -->
+				<item id="36522" min="1" max="1" chance="0.75187969924812" /> <!-- Silver -->
+				<item id="36557" min="1" max="1" chance="0.3003003003003" /> <!-- Accessory Gem -->
 			</spoil>
 			<lucky>
 				<item id="39629" min="1" max="1" chance="100" /> <!-- Fortune Pocket - Stage 1 -->

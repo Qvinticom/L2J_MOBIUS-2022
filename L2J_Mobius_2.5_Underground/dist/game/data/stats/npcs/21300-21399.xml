@@ -910,9 +910,9 @@
 		<sex>MALE</sex>
 		<acquire exp="126669" sp="30" />
 		<stats str="79" int="34" dex="42" wit="66" con="75" men="12">
-			<vitals hp="2540.06309148265" hpRegen="8.5" mp="1410.38118410381" mpRegen="3" />
-			<attack physical="530.369365220714" magical="471.271907997999" random="10" critical="4" accuracy="5" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
-			<defence physical="305.425799496946" magical="223.95425652376" />
+			<vitals hp="2632.17665615142" hpRegen="8.5" mp="1475.26358475264" mpRegen="3" />
+			<attack physical="1068.00152812423" magical="497.590484996893" random="10" critical="4" accuracy="5" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="251.990062363738" magical="271.527005711013" />
 			<speed>
 				<walk ground="30" />
 				<run ground="160" />
@@ -922,15 +922,22 @@
 		</stats>
 		<status undying="false" canBeSown="true" />
 		<skillList>
+			<skill id="4047" level="7" /> <!-- Hold -->
+			<skill id="4156" level="7" /> <!-- Beam Cannon -->
+			<skill id="4160" level="7" /> <!-- Aura Burn -->
+			<skill id="4276" level="1" /> <!-- Bow/Crossbow Vulnerability -->
 			<skill id="4408" level="11" /> <!-- HP Increase (3x) -->
-			<skill id="4410" level="13" /> <!-- Slightly Strong P. Atk. -->
-			<skill id="4411" level="13" /> <!-- Slightly Strong M. Atk. -->
+			<skill id="4410" level="10" /> <!-- Slightly Weak P. Atk. -->
+			<skill id="4411" level="10" /> <!-- Slightly Weak M. Atk. -->
 			<skill id="4412" level="13" /> <!-- Slightly Strong P. Def. -->
 			<skill id="4413" level="9" /> <!-- Slightly Weak M. Def. -->
-			<skill id="4415" level="4" /> <!-- One-handed Sword -->
-			<skill id="4416" level="3" /> <!-- Beast -->
-			<skill id="4579" level="7" /> <!-- Bleed -->
-			<skill id="4789" level="2" /> <!-- High Lv. -->
+			<skill id="4414" level="3" /> <!-- Light Armor Type -->
+			<skill id="4415" level="3" /> <!-- One-handed Sword -->
+			<skill id="4416" level="2" /> <!-- Magic Creatures -->
+			<skill id="4571" level="7" /> <!-- Blazing Circle -->
+			<skill id="4609" level="4" /> <!-- Vampiric Rage -->
+			<skill id="4650" level="1" /> <!-- Dispel Hold -->
+			<skill id="4789" level="3" /> <!-- High Lv. -->
 		</skillList>
 		<shots shotChance="30" spiritChance="30" />
 		<exCrtEffect>false</exCrtEffect>
@@ -3429,8 +3436,8 @@
 		<acquire exp="176606" sp="42" />
 		<stats str="79" int="34" dex="42" wit="66" con="75" men="12">
 			<vitals hp="5948.26498422713" hpRegen="8.721" mp="1607.46147607461" mpRegen="3.0804" />
-			<attack physical="1228.94706454859" magical="569.454197996391" random="5" critical="4" accuracy="3" attackSpeed="253" type="DAGGER" range="40" distance="80" width="120" />
-			<defence physical="333.309285044369" magical="243.993588761269" evasion="3" shield="173" shieldRate="20" />
+			<attack physical="1305.4351067979" magical="614.902195344213" random="5" critical="8" accuracy="3" attackSpeed="253" type="DAGGER" range="40" distance="80" width="120" />
+			<defence physical="355.089820359281" magical="239.62128949235" evasion="3" shield="173" shieldRate="20" />
 			<speed>
 				<walk ground="27" />
 				<run ground="175" />
@@ -3440,15 +3447,16 @@
 		</stats>
 		<status undying="false" canBeSown="true" />
 		<skillList>
+			<skill id="4038" level="5" /> <!-- Shackle -->
+			<skill id="4085" level="1" /> <!-- Critical Damage -->
+			<skill id="4086" level="1" /> <!-- Critical Chance -->
 			<skill id="4408" level="10" /> <!-- HP Increase (2x) -->
-			<skill id="4410" level="13" /> <!-- Slightly Strong P. Atk. -->
-			<skill id="4411" level="13" /> <!-- Slightly Strong M. Atk. -->
-			<skill id="4412" level="9" /> <!-- Slightly Weak P. Def. -->
-			<skill id="4413" level="9" /> <!-- Slightly Weak M. Def. -->
-			<skill id="4415" level="3" /> <!-- One-handed Sword -->
+			<skill id="4413" level="10" /> <!-- Slightly Weak M. Def. -->
+			<skill id="4415" level="7" /> <!-- Dagger -->
 			<skill id="4416" level="6" /> <!-- Humanoids -->
-			<skill id="4573" level="9" /> <!-- Sonic Blaster -->
-			<skill id="4789" level="6" /> <!-- High Lv. -->
+			<skill id="4572" level="9" /> <!-- Triple Sonic Slash -->
+			<skill id="4575" level="2" /> <!-- Haste -->
+			<skill id="4789" level="7" /> <!-- High Lv. -->
 		</skillList>
 		<shots shotChance="50" spiritChance="50" />
 		<exCrtEffect>false</exCrtEffect>
@@ -3573,8 +3581,8 @@
 		<acquire exp="123051" sp="29" />
 		<stats str="79" int="34" dex="42" wit="66" con="75" men="12">
 			<vitals hp="5948.26498422713" hpRegen="8.925" mp="1607.46147607461" mpRegen="3.1518" />
-			<attack physical="636.495474216575" magical="674.102900669771" random="20" critical="1" accuracy="16" attackSpeed="253" type="BLUNT" range="40" distance="80" width="120" />
-			<defence physical="374.127777502846" magical="261.502075392543" evasion="7" />
+			<attack physical="1425.78479404827" magical="693.237640176403" random="20" critical="1" accuracy="16" attackSpeed="253" type="BLUNT" range="40" distance="80" width="120" />
+			<defence physical="380.338224649602" magical="268.439885556018" evasion="7" />
 			<speed>
 				<walk ground="10" />
 				<run ground="175" />
@@ -3584,15 +3592,15 @@
 		</stats>
 		<status undying="false" canBeSown="true" />
 		<skillList>
+			<skill id="4100" level="9" /> <!-- Prominence -->
 			<skill id="4408" level="10" /> <!-- HP Increase (2x) -->
-			<skill id="4410" level="9" /> <!-- Slightly Weak P. Atk. -->
-			<skill id="4411" level="9" /> <!-- Slightly Weak M. Atk. -->
-			<skill id="4412" level="13" /> <!-- Slightly Strong P. Def. -->
+			<skill id="4410" level="12" /> <!-- Slightly Strong P. Atk. -->
+			<skill id="4411" level="12" /> <!-- Slightly Strong M. Atk. -->
+			<skill id="4412" level="10" /> <!-- Slightly Weak P. Def. -->
 			<skill id="4413" level="10" /> <!-- Slightly Weak M. Def. -->
-			<skill id="4415" level="6" /> <!-- Blunt Weapon -->
+			<skill id="4415" level="5" /> <!-- Blunt Weapon -->
 			<skill id="4416" level="6" /> <!-- Humanoids -->
-			<skill id="4573" level="9" /> <!-- Sonic Blaster -->
-			<skill id="4789" level="8" /> <!-- High Lv. -->
+			<skill id="4789" level="9" /> <!-- High Lv. -->
 		</skillList>
 		<shots shotChance="30" spiritChance="30" />
 		<exCrtEffect>false</exCrtEffect>
@@ -3725,8 +3733,8 @@
 		<acquire exp="181987" sp="43" />
 		<stats str="79" int="34" dex="42" wit="66" con="75" men="12">
 			<vitals hp="5948.26498422713" hpRegen="9.027" mp="1607.46147607461" mpRegen="3.1824" />
-			<attack physical="1456.0878243513" magical="712.278186086021" random="20" critical="1" accuracy="18" attackSpeed="253" type="BLUNT" range="40" distance="80" width="120" />
-			<defence physical="386.826347305389" magical="275.911373424377" evasion="9" />
+			<attack physical="1486.52694610778" magical="731.555666486684" random="20" critical="1" accuracy="18" attackSpeed="253" type="BLUNT" range="40" distance="80" width="120" />
+			<defence physical="411.377245508982" magical="296.191126209921" evasion="9" />
 			<speed>
 				<walk ground="10" />
 				<run ground="175" />
@@ -3736,13 +3744,16 @@
 		</stats>
 		<status undying="false" canBeSown="true" />
 		<skillList>
+			<skill id="4030" level="3" /> <!-- Might -->
 			<skill id="4035" level="9" /> <!-- Poison -->
-			<skill id="4100" level="9" /> <!-- Prominence -->
+			<skill id="4158" level="9" /> <!-- Prominence -->
 			<skill id="4408" level="10" /> <!-- HP Increase (2x) -->
 			<skill id="4413" level="10" /> <!-- Slightly Weak M. Def. -->
 			<skill id="4415" level="5" /> <!-- Blunt Weapon -->
 			<skill id="4416" level="6" /> <!-- Humanoids -->
-			<skill id="4789" level="9" /> <!-- High Lv. -->
+			<skill id="4561" level="9" /> <!-- Fire Burn -->
+			<skill id="4575" level="2" /> <!-- Haste -->
+			<skill id="4789" level="10" /> <!-- High Lv. -->
 		</skillList>
 		<shots shotChance="50" spiritChance="50" />
 		<exCrtEffect>false</exCrtEffect>
@@ -5604,8 +5615,8 @@
 		<acquire exp="149364" sp="35" />
 		<stats str="79" int="34" dex="42" wit="66" con="75" men="12">
 			<vitals hp="5948.26498422713" hpRegen="8.5" mp="1607.46147607461" mpRegen="3" />
-			<attack physical="1228.94706454859" magical="569.454197996391" random="10" critical="4" accuracy="5" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
-			<defence physical="333.309285044369" magical="243.993588761269" />
+			<attack physical="645.448233966849" magical="569.427113373419" random="10" critical="4" accuracy="5" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="332.934131736527" magical="243.794649144533" />
 			<speed>
 				<walk ground="25" />
 				<run ground="175" />
@@ -5615,15 +5626,15 @@
 		</stats>
 		<status undying="false" canBeSown="true" />
 		<skillList>
+			<skill id="4038" level="5" /> <!-- Shackle -->
+			<skill id="4085" level="1" /> <!-- Critical Damage -->
+			<skill id="4086" level="1" /> <!-- Critical Chance -->
 			<skill id="4408" level="10" /> <!-- HP Increase (2x) -->
-			<skill id="4410" level="13" /> <!-- Slightly Strong P. Atk. -->
-			<skill id="4411" level="13" /> <!-- Slightly Strong M. Atk. -->
-			<skill id="4412" level="9" /> <!-- Slightly Weak P. Def. -->
-			<skill id="4413" level="9" /> <!-- Slightly Weak M. Def. -->
-			<skill id="4415" level="3" /> <!-- One-handed Sword -->
+			<skill id="4415" level="4" /> <!-- One-handed Sword -->
 			<skill id="4416" level="6" /> <!-- Humanoids -->
-			<skill id="4572" level="9" /> <!-- Triple Sonic Slash -->
-			<skill id="4789" level="6" /> <!-- High Lv. -->
+			<skill id="4573" level="9" /> <!-- Sonic Blaster -->
+			<skill id="4575" level="2" /> <!-- Haste -->
+			<skill id="4789" level="7" /> <!-- High Lv. -->
 			<skill id="5620" level="6" /> <!-- Melee Attack Vulnerability -->
 		</skillList>
 		<shots shotChance="50" spiritChance="50" />
@@ -5777,8 +5788,8 @@
 		<acquire exp="104604" sp="25" />
 		<stats str="79" int="34" dex="42" wit="66" con="75" men="12">
 			<vitals hp="5948.26498422713" hpRegen="8.5" mp="1607.46147607461" mpRegen="3" />
-			<attack physical="1229.46877329678" magical="569.513077611549" random="20" critical="4" accuracy="9" attackSpeed="253" type="BLUNT" range="40" distance="80" width="120" />
-			<defence physical="333.052902459544" magical="243.626077558743" />
+			<attack physical="561.459426338364" magical="569.459793992873" random="20" critical="1" accuracy="9" attackSpeed="253" type="BLUNT" range="40" distance="80" width="120" />
+			<defence physical="266.49996709877" magical="286.930248389897" />
 			<speed>
 				<walk ground="36" />
 				<run ground="150" />
@@ -5788,14 +5799,16 @@
 		</stats>
 		<status undying="false" canBeSown="true" />
 		<skillList>
-			<skill id="4410" level="9" /> <!-- Slightly Weak P. Atk. -->
-			<skill id="4411" level="9" /> <!-- Slightly Weak M. Atk. -->
-			<skill id="4412" level="13" /> <!-- Slightly Strong P. Def. -->
-			<skill id="4413" level="13" /> <!-- Slightly Strong M. Def. -->
-			<skill id="4415" level="3" /> <!-- One-handed Sword -->
+			<skill id="4408" level="10" /> <!-- HP Increase (2x) -->
+			<skill id="4410" level="12" /> <!-- Slightly Strong P. Atk. -->
+			<skill id="4411" level="12" /> <!-- Slightly Strong M. Atk. -->
+			<skill id="4412" level="10" /> <!-- Slightly Weak P. Def. -->
+			<skill id="4413" level="10" /> <!-- Slightly Weak M. Def. -->
+			<skill id="4414" level="3" /> <!-- Light Armor Type -->
+			<skill id="4415" level="6" /> <!-- Blunt Weapon -->
 			<skill id="4416" level="6" /> <!-- Humanoids -->
-			<skill id="4573" level="9" /> <!-- Sonic Blaster -->
-			<skill id="4789" level="8" /> <!-- High Lv. -->
+			<skill id="4562" level="9" /> <!-- Solar Flare -->
+			<skill id="4789" level="9" /> <!-- High Lv. -->
 			<skill id="5620" level="6" /> <!-- Melee Attack Vulnerability -->
 		</skillList>
 		<shots shotChance="50" spiritChance="50" />
@@ -5945,7 +5958,7 @@
 		<acquire exp="152613" sp="36" />
 		<stats str="79" int="34" dex="42" wit="66" con="75" men="12">
 			<vitals hp="5948.26498422713" hpRegen="8.5" mp="1607.46147607461" mpRegen="3" />
-			<attack physical="1229.04191616766" magical="569.427113373419" random="20" critical="4" accuracy="9" attackSpeed="253" type="BLUNT" range="40" distance="80" width="120" />
+			<attack physical="561.558043333623" magical="569.427113373419" random="20" critical="1" accuracy="9" attackSpeed="253" type="BLUNT" range="40" distance="80" width="120" />
 			<defence physical="332.934131736527" magical="243.794649144533" />
 			<speed>
 				<walk ground="36" />
@@ -5956,11 +5969,14 @@
 		</stats>
 		<status undying="false" canBeSown="true" />
 		<skillList>
-			<skill id="4066" level="9" /> <!-- Twister -->
-			<skill id="4098" level="9" /> <!-- Silence -->
-			<skill id="4415" level="3" /> <!-- One-handed Sword -->
+			<skill id="4030" level="3" /> <!-- Might -->
+			<skill id="4160" level="9" /> <!-- Aura Burn -->
+			<skill id="4408" level="10" /> <!-- HP Increase (2x) -->
+			<skill id="4415" level="6" /> <!-- Blunt Weapon -->
 			<skill id="4416" level="6" /> <!-- Humanoids -->
-			<skill id="4789" level="9" /> <!-- High Lv. -->
+			<skill id="4563" level="9" /> <!-- Solar Flare -->
+			<skill id="4575" level="2" /> <!-- Haste -->
+			<skill id="4789" level="10" /> <!-- High Lv. -->
 			<skill id="5620" level="6" /> <!-- Melee Attack Vulnerability -->
 		</skillList>
 		<shots shotChance="50" spiritChance="50" />

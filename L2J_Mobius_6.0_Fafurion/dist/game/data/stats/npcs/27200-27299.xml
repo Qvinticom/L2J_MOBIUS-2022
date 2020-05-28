@@ -1166,8 +1166,7 @@
 		<skillList>
 			<skill id="4414" level="3" /> <!-- Light Armor Type -->
 			<skill id="4415" level="5" /> <!-- One-handed Blunt Weapons -->
-			<skill id="4416" level="2" /> <!-- Magic Creatures -->
-			<skill id="4542" level="1" /> <!-- Sleep/ Stun Resistance -->
+			<skill id="4416" level="8" /> <!-- Angels -->
 		</skillList>
 		<exCrtEffect>true</exCrtEffect>
 		<ai type="MAGE" clanHelpRange="300" aggroRange="300" />
@@ -1206,8 +1205,7 @@
 		<skillList>
 			<skill id="4414" level="3" /> <!-- Light Armor Type -->
 			<skill id="4415" level="5" /> <!-- One-handed Blunt Weapons -->
-			<skill id="4416" level="2" /> <!-- Magic Creatures -->
-			<skill id="4542" level="1" /> <!-- Sleep/ Stun Resistance -->
+			<skill id="4416" level="8" /> <!-- Angels -->
 		</skillList>
 		<exCrtEffect>true</exCrtEffect>
 		<ai type="MAGE" clanHelpRange="300" aggroRange="300" />
@@ -1413,8 +1411,8 @@
 		<sex>MALE</sex>
 		<stats str="79" int="34" dex="42" wit="66" con="75" men="12">
 			<vitals hp="2719.2429022082" hpRegen="8.5" mp="1540.14598540146" mpRegen="3" />
-			<attack physical="1134.331823987" magical="522.843991364853" random="20" critical="8" accuracy="9" attackSpeed="253" type="BLUNT" range="40" distance="80" width="120" />
-			<defence physical="259.393939393939" magical="279.30659102836" />
+			<attack physical="1125.25252525253" magical="522.843991364853" random="20" critical="1" accuracy="9" attackSpeed="253" type="BLUNT" range="40" distance="80" width="120" />
+			<defence physical="259.038259038259" magical="279.30659102836" />
 			<attribute>
 				<defence fire="20" water="20" wind="20" earth="20" holy="20" dark="53" />
 			</attribute>
@@ -1427,10 +1425,11 @@
 		</stats>
 		<status undying="false" />
 		<skillList>
+			<skill id="4408" level="10" /> <!-- HP Increase (2x) -->
+			<skill id="4412" level="21" /> <!-- Extremely Strong P. Def. -->
 			<skill id="4414" level="3" /> <!-- Light Armor Type -->
-			<skill id="4415" level="7" /> <!-- Dagger -->
+			<skill id="4415" level="5" /> <!-- One-handed Blunt Weapons -->
 			<skill id="4416" level="1" /> <!-- Undead -->
-			<skill id="4542" level="1" /> <!-- Sleep/ Stun Resistance -->
 		</skillList>
 		<exCrtEffect>true</exCrtEffect>
 		<sNpcPropHpRate>2</sNpcPropHpRate>
@@ -1453,8 +1452,8 @@
 		<sex>MALE</sex>
 		<stats str="79" int="34" dex="42" wit="66" con="75" men="12">
 			<vitals hp="2719.2429022082" hpRegen="8.5" mp="1540.14598540146" mpRegen="3" />
-			<attack physical="1134.331823987" magical="522.843991364853" random="20" critical="8" accuracy="9" attackSpeed="253" type="BLUNT" range="40" distance="80" width="120" />
-			<defence physical="259.393939393939" magical="279.30659102836" />
+			<attack physical="1125.25252525253" magical="522.843991364853" random="20" critical="1" accuracy="9" attackSpeed="253" type="BLUNT" range="40" distance="80" width="120" />
+			<defence physical="259.038259038259" magical="279.30659102836" />
 			<attribute>
 				<defence fire="20" water="20" wind="20" earth="20" holy="20" dark="53" />
 			</attribute>
@@ -1467,10 +1466,11 @@
 		</stats>
 		<status undying="false" />
 		<skillList>
+			<skill id="4408" level="10" /> <!-- HP Increase (2x) -->
+			<skill id="4412" level="21" /> <!-- Extremely Strong P. Def. -->
 			<skill id="4414" level="3" /> <!-- Light Armor Type -->
-			<skill id="4415" level="7" /> <!-- Dagger -->
+			<skill id="4415" level="5" /> <!-- One-handed Blunt Weapons -->
 			<skill id="4416" level="1" /> <!-- Undead -->
-			<skill id="4542" level="1" /> <!-- Sleep/ Stun Resistance -->
 		</skillList>
 		<exCrtEffect>true</exCrtEffect>
 		<sNpcPropHpRate>2</sNpcPropHpRate>
@@ -2361,7 +2361,7 @@
 		<equipment rhand="97" /> <!-- Lance -->
 		<stats str="79" int="34" dex="42" wit="66" con="75" men="12">
 			<vitals hp="2719.2429022082" hpRegen="8.5" mp="1540.14598540146" mpRegen="3" />
-			<attack physical="591.05548235983" magical="522.843991364853" random="10" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<attack physical="1125.25252525253" magical="522.843991364853" random="10" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
 			<defence physical="389.090909090909" magical="206.44400206444" />
 			<attribute>
 				<defence fire="20" water="20" wind="20" earth="20" holy="53" dark="-13" />
@@ -2376,9 +2376,8 @@
 		<status undying="false" />
 		<skillList>
 			<skill id="4414" level="1" /> <!-- Heavy Armor Type -->
-			<skill id="4415" level="4" /> <!-- One-handed Sword -->
+			<skill id="4415" level="3" /> <!-- One-handed Sword -->
 			<skill id="4416" level="8" /> <!-- Angels -->
-			<skill id="4542" level="1" /> <!-- Sleep/ Stun Resistance -->
 		</skillList>
 		<exCrtEffect>true</exCrtEffect>
 		<ai clanHelpRange="300" aggroRange="300" />

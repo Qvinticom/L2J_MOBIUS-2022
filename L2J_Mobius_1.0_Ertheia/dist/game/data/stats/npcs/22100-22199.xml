@@ -1065,6 +1065,9 @@
 	</npc>
 	<npc id="22113" level="75" type="Monster" name="Cannibalistic Stakato Leader">
 		<parameters>
+			<minions name="Privates">
+				<npc id="22112" count="3" respawnTime="360" weightPoint="1" />
+			</minions>
 			<param name="MoveAroundSocial" value="80" />
 			<param name="MoveAroundSocial1" value="80" />
 			<param name="MoveAroundSocial2" value="81" />
@@ -1153,6 +1156,9 @@
 	</npc>
 	<npc id="22114" level="75" type="Monster" name="Cannibalistic Stakato Leader">
 		<parameters>
+			<minions name="Privates">
+				<npc id="22112" count="3" respawnTime="360" weightPoint="1" />
+			</minions>
 			<param name="MoveAroundSocial" value="80" />
 			<param name="MoveAroundSocial1" value="80" />
 			<param name="MoveAroundSocial2" value="82" />
@@ -4329,7 +4335,7 @@
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
 			<vitals hp="356248.554913295" hpRegen="8.5" mp="23550.495049505" mpRegen="30" />
 			<attack physical="130328.009923613" magical="13873.8209170114" random="10" critical="4" accuracy="5" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
-			<defence physical="630.841121495327" magical="265.209361456414" evasion="7" />
+			<defence physical="525.700934579439" magical="304.990765674876" evasion="7" />
 			<attribute>
 				<attack type="DARK" value="330" />
 				<defence fire="250" water="250" wind="250" earth="250" holy="200" dark="250" />
@@ -4343,17 +4349,17 @@
 		</stats>
 		<status undying="false" canBeSown="true" />
 		<skillList>
+			<skill id="4032" level="9" /> <!-- Power Strike -->
+			<skill id="4065" level="9" /> <!-- Heal -->
 			<skill id="4410" level="10" /> <!-- Slightly Weak P. Atk. -->
 			<skill id="4411" level="10" /> <!-- Slightly Weak M. Atk. -->
 			<skill id="4412" level="19" /> <!-- Extremely Strong P. Def. -->
 			<skill id="4413" level="9" /> <!-- Slightly Weak M. Def. -->
-			<skill id="4414" level="1" /> <!-- Heavy Armor Type -->
 			<skill id="4415" level="3" /> <!-- One-handed Sword -->
 			<skill id="4416" level="6" /> <!-- Humanoids -->
 			<skill id="4417" level="26" /> <!-- Humanoids -->
-			<skill id="4466" level="3" /> <!-- Surrender to Dark -->
-			<skill id="4622" level="9" /> <!-- Drain Energy -->
-			<skill id="4665" level="9" /> <!-- Drain Energy -->
+			<skill id="4612" level="9" /> <!-- Wide Sweep -->
+			<skill id="4641" level="10" /> <!-- Super Strike -->
 			<skill id="4789" level="10" /> <!-- High Lv. -->
 			<skill id="5467" level="1" /> <!-- Dark Attack -->
 			<skill id="14765" level="4" /> <!-- Blood Siphon Resistance -->
@@ -4664,7 +4670,7 @@
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
 			<vitals hp="356248.554913295" hpRegen="8.5" mp="23550.495049505" mpRegen="30" />
 			<attack physical="130328.009923613" magical="13873.8209170114" random="10" critical="4" accuracy="5" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
-			<defence physical="420.560747663551" magical="358.812665499854" evasion="8" />
+			<defence physical="525.700934579439" magical="304.990765674876" evasion="8" />
 			<attribute>
 				<attack type="DARK" value="330" />
 				<defence fire="250" water="250" wind="250" earth="250" holy="200" dark="250" />
@@ -4678,17 +4684,17 @@
 		</stats>
 		<status undying="false" canBeSown="true" />
 		<skillList>
+			<skill id="4032" level="9" /> <!-- Power Strike -->
+			<skill id="4065" level="9" /> <!-- Heal -->
 			<skill id="4410" level="10" /> <!-- Slightly Weak P. Atk. -->
 			<skill id="4411" level="10" /> <!-- Slightly Weak M. Atk. -->
 			<skill id="4412" level="19" /> <!-- Extremely Strong P. Def. -->
 			<skill id="4413" level="9" /> <!-- Slightly Weak M. Def. -->
-			<skill id="4414" level="3" /> <!-- Light Armor Type -->
 			<skill id="4415" level="3" /> <!-- One-handed Sword -->
 			<skill id="4416" level="6" /> <!-- Humanoids -->
 			<skill id="4417" level="26" /> <!-- Humanoids -->
-			<skill id="4466" level="3" /> <!-- Surrender to Dark -->
-			<skill id="4622" level="9" /> <!-- Drain Energy -->
-			<skill id="4665" level="9" /> <!-- Drain Energy -->
+			<skill id="4612" level="9" /> <!-- Wide Sweep -->
+			<skill id="4641" level="10" /> <!-- Super Strike -->
 			<skill id="4789" level="10" /> <!-- High Lv. -->
 			<skill id="5467" level="1" /> <!-- Dark Attack -->
 			<skill id="14765" level="4" /> <!-- Blood Siphon Resistance -->
@@ -5003,7 +5009,7 @@
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
 			<vitals hp="356248.554913295" hpRegen="8.5" mp="23550.495049505" mpRegen="30" />
 			<attack physical="130328.009923613" magical="13873.8209170114" random="10" critical="4" accuracy="5" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
-			<defence physical="630.841121495327" magical="265.209361456414" evasion="8" />
+			<defence physical="525.700934579439" magical="304.990765674876" evasion="8" />
 			<attribute>
 				<attack type="DARK" value="330" />
 				<defence fire="250" water="250" wind="250" earth="250" holy="200" dark="250" />
@@ -5017,16 +5023,19 @@
 		</stats>
 		<status undying="false" canBeSown="true" />
 		<skillList>
+			<skill id="4065" level="9" /> <!-- Heal -->
+			<skill id="4088" level="9" /> <!-- Bleed -->
+			<skill id="4158" level="9" /> <!-- Prominence -->
 			<skill id="4410" level="10" /> <!-- Slightly Weak P. Atk. -->
 			<skill id="4411" level="10" /> <!-- Slightly Weak M. Atk. -->
 			<skill id="4412" level="19" /> <!-- Extremely Strong P. Def. -->
 			<skill id="4413" level="9" /> <!-- Slightly Weak M. Def. -->
-			<skill id="4414" level="1" /> <!-- Heavy Armor Type -->
-			<skill id="4415" level="11" /> <!-- Spear -->
+			<skill id="4415" level="3" /> <!-- One-handed Sword -->
 			<skill id="4416" level="6" /> <!-- Humanoids -->
 			<skill id="4417" level="26" /> <!-- Humanoids -->
 			<skill id="4622" level="9" /> <!-- Drain Energy -->
-			<skill id="4665" level="9" /> <!-- Drain Energy -->
+			<skill id="4641" level="10" /> <!-- Super Strike -->
+			<skill id="4655" level="9" /> <!-- Death Link -->
 			<skill id="4789" level="10" /> <!-- High Lv. -->
 			<skill id="5467" level="1" /> <!-- Dark Attack -->
 			<skill id="14765" level="4" /> <!-- Blood Siphon Resistance -->
@@ -5337,7 +5346,7 @@
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
 			<vitals hp="356248.554913295" hpRegen="8.5" mp="23550.495049505" mpRegen="30" />
 			<attack physical="130328.009923613" magical="13873.8209170114" random="10" critical="4" accuracy="5" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
-			<defence physical="420.560747663551" magical="358.812665499854" evasion="9" />
+			<defence physical="525.700934579439" magical="304.990765674876" evasion="9" />
 			<attribute>
 				<attack type="DARK" value="330" />
 				<defence fire="250" water="250" wind="250" earth="250" holy="200" dark="250" />
@@ -5352,14 +5361,16 @@
 		<status undying="false" canBeSown="true" />
 		<skillList>
 			<skill id="4032" level="9" /> <!-- Power Strike -->
+			<skill id="4065" level="9" /> <!-- Heal -->
 			<skill id="4410" level="10" /> <!-- Slightly Weak P. Atk. -->
 			<skill id="4411" level="10" /> <!-- Slightly Weak M. Atk. -->
 			<skill id="4412" level="19" /> <!-- Extremely Strong P. Def. -->
 			<skill id="4413" level="9" /> <!-- Slightly Weak M. Def. -->
-			<skill id="4414" level="3" /> <!-- Light Armor Type -->
 			<skill id="4415" level="3" /> <!-- One-handed Sword -->
 			<skill id="4416" level="6" /> <!-- Humanoids -->
 			<skill id="4417" level="26" /> <!-- Humanoids -->
+			<skill id="4612" level="9" /> <!-- Wide Sweep -->
+			<skill id="4641" level="10" /> <!-- Super Strike -->
 			<skill id="4789" level="10" /> <!-- High Lv. -->
 			<skill id="5467" level="1" /> <!-- Dark Attack -->
 			<skill id="14765" level="4" /> <!-- Blood Siphon Resistance -->
@@ -5674,7 +5685,7 @@
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
 			<vitals hp="356248.554913295" hpRegen="8.5" mp="23550.495049505" mpRegen="30" />
 			<attack physical="130328.009923613" magical="13873.8209170114" random="10" critical="4" accuracy="5" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
-			<defence physical="630.841121495327" magical="265.209361456414" evasion="9" />
+			<defence physical="525.700934579439" magical="304.990765674876" evasion="9" />
 			<attribute>
 				<attack type="DARK" value="330" />
 				<defence fire="250" water="250" wind="250" earth="250" holy="200" dark="250" />
@@ -5688,17 +5699,19 @@
 		</stats>
 		<status undying="false" canBeSown="true" />
 		<skillList>
+			<skill id="4065" level="9" /> <!-- Heal -->
+			<skill id="4088" level="10" /> <!-- Bleed -->
+			<skill id="4158" level="9" /> <!-- Prominence -->
 			<skill id="4410" level="10" /> <!-- Slightly Weak P. Atk. -->
 			<skill id="4411" level="10" /> <!-- Slightly Weak M. Atk. -->
 			<skill id="4412" level="19" /> <!-- Extremely Strong P. Def. -->
 			<skill id="4413" level="9" /> <!-- Slightly Weak M. Def. -->
-			<skill id="4414" level="1" /> <!-- Heavy Armor Type -->
-			<skill id="4415" level="11" /> <!-- Spear -->
+			<skill id="4415" level="3" /> <!-- One-handed Sword -->
 			<skill id="4416" level="6" /> <!-- Humanoids -->
 			<skill id="4417" level="26" /> <!-- Humanoids -->
-			<skill id="4466" level="3" /> <!-- Surrender to Dark -->
 			<skill id="4622" level="9" /> <!-- Drain Energy -->
-			<skill id="4665" level="9" /> <!-- Drain Energy -->
+			<skill id="4641" level="10" /> <!-- Super Strike -->
+			<skill id="4655" level="9" /> <!-- Death Link -->
 			<skill id="4789" level="10" /> <!-- High Lv. -->
 			<skill id="5467" level="1" /> <!-- Dark Attack -->
 			<skill id="14765" level="4" /> <!-- Blood Siphon Resistance -->
@@ -6176,7 +6189,7 @@
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
 			<vitals hp="356248.265895954" hpRegen="8.5" mp="23550.495049505" mpRegen="30" />
 			<attack physical="65164.108953835" magical="6936.97244026951" random="10" critical="4" accuracy="5" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
-			<defence physical="630.851063829787" magical="265.308677028665" evasion="9" />
+			<defence physical="420.744680851064" magical="358.947033627017" evasion="9" />
 			<attribute>
 				<attack type="DARK" value="330" />
 				<defence fire="250" water="250" wind="250" earth="250" holy="200" dark="250" />
@@ -6192,11 +6205,11 @@
 		<skillList>
 			<skill id="4032" level="9" /> <!-- Power Strike -->
 			<skill id="4408" level="10" /> <!-- HP Increase (2x) -->
-			<skill id="4414" level="1" /> <!-- Heavy Armor Type -->
-			<skill id="4415" level="1" /> <!-- Bare Hands -->
-			<skill id="4416" level="1" /> <!-- Undead -->
-			<skill id="4417" level="36" /> <!-- Undead -->
-			<skill id="4614" level="9" /> <!-- Death Bomb -->
+			<skill id="4414" level="3" /> <!-- Light Armor Type -->
+			<skill id="4415" level="3" /> <!-- One-handed Sword -->
+			<skill id="4416" level="6" /> <!-- Humanoids -->
+			<skill id="4417" level="26" /> <!-- Humanoids -->
+			<skill id="4612" level="9" /> <!-- Wide Sweep -->
 			<skill id="4789" level="10" /> <!-- High Lv. -->
 			<skill id="5467" level="1" /> <!-- Dark Attack -->
 			<skill id="14765" level="4" /> <!-- Blood Siphon Resistance -->
@@ -6212,16 +6225,24 @@
 		<dropLists>
 			<drop>
 				<item id="57" min="5332" max="12445" chance="20" /> <!-- Adena -->
-				<item id="36523" min="1" max="1" chance="1.5" /> <!-- Adamantite -->
-				<item id="35353" min="1" max="1" chance="0.3003003003003" /> <!-- Eternal Shoe Ingredient -->
-				<item id="36524" min="1" max="1" chance="0.3003003003003" /> <!-- Orichalcum -->
-				<item id="17526" min="1" max="1" chance="0.0149992500374981" /> <!-- Scroll: Enchant Weapon (R-grade) -->
-				<item id="35477" min="1" max="1" chance="0.00750018750468762" /> <!-- Recipe: Eternal Shoes (60%) -->
+				<item id="35336" min="1" max="1" chance="0.3003003003003" /> <!-- Amaranthine Caster Fragment -->
+				<item id="17526" min="1" max="1" chance="0.03000300030003" /> <!-- Scroll: Enchant Weapon (R-grade) -->
+				<item id="35460" min="1" max="1" chance="0.00750018750468762" /> <!-- Recipe: Amaranthine Caster (60%) -->
+				<!-- Also drops herbs. -->
+				<item id="8600" min="1" max="1" chance="10" /> <!-- Herb of Life -->
+				<item id="8601" min="1" max="1" chance="8" /> <!-- Major Herb of Life -->
+				<item id="8602" min="1" max="1" chance="2" /> <!-- Superior Herb of Life -->
+				<item id="8603" min="1" max="1" chance="19.8" /> <!-- Herb of Mana -->
+				<item id="8604" min="1" max="1" chance="9.9" /> <!-- Major Herb of Mana -->
+				<item id="8605" min="1" max="1" chance="3.3" /> <!-- Superior Herb of Mana -->
+				<item id="34849" min="1" max="1" chance="0.7" /> <!-- Mysterious Herb of Power -->
+				<item id="34850" min="1" max="1" chance="0.7" /> <!-- Mysterious Herb of Magic -->
+				<item id="13028" min="1" max="1" chance="0.1" /> <!-- Vitality Replenishing Herb -->
 			</drop>
 			<spoil>
-				<item id="36523" min="1" max="1" chance="9" /> <!-- Adamantite -->
-				<item id="36524" min="1" max="1" chance="0.75187969924812" /> <!-- Orichalcum -->
+				<item id="36533" min="1" max="1" chance="8" /> <!-- Synthetic Braid -->
 				<item id="19448" min="1" max="1" chance="0.149925037481259" /> <!-- Blessed Scroll: Enchant Armor (R-grade) -->
+				<item id="19447" min="1" max="1" chance="0.0750187546886722" /> <!-- Blessed Scroll: Enchant Weapon (R-grade) -->
 			</spoil>
 			<lucky>
 				<item id="39629" min="1" max="1" chance="100" /> <!-- Fortune Pocket - Stage 1 -->
@@ -6759,7 +6780,6 @@
 				<npc id="22218" count="1" respawnTime="360" weightPoint="1" />
 				<npc id="22223" count="1" respawnTime="360" weightPoint="1" />
 				<npc id="22197" count="1" respawnTime="360" weightPoint="1" />
-				<npc id="22197" count="2" respawnTime="0" weightPoint="1" />
 			</minions>
 			<param name="ProbSelfRangeBuff1" value="100" />
 			<param name="ProbPhysicalSpecial1" value="10" />

@@ -4684,7 +4684,8 @@
 	<npc id="25681" level="82" type="RaidBoss" name="Gorgolos" title="Raid Boss">
 		<parameters>
 			<minions name="Privates">
-				<npc id="25682" count="3" respawnTime="360" weightPoint="1" />
+				<npc id="25683" count="1" respawnTime="360" weightPoint="1" />
+				<npc id="25682" count="1" respawnTime="360" weightPoint="1" />
 			</minions>
 			<param name="RaidSpawnMusic" value="Rm01_A" />
 			<skill name="DDMagic_a" id="4196" level="8" />
@@ -4837,7 +4838,8 @@
 	<npc id="25684" level="83" type="RaidBoss" name="Last Titan Utenus" title="Raid Boss">
 		<parameters>
 			<minions name="Privates">
-				<npc id="25685" count="3" respawnTime="360" weightPoint="1" />
+				<npc id="25685" count="1" respawnTime="360" weightPoint="1" />
+				<npc id="25686" count="1" respawnTime="360" weightPoint="1" />
 			</minions>
 			<param name="RaidSpawnMusic" value="Rm01_A" />
 			<skill name="RangeHold_a" id="4197" level="8" />

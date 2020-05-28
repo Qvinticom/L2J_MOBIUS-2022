@@ -2933,7 +2933,7 @@
 		<stats str="79" int="34" dex="42" wit="66" con="75" men="12">
 			<vitals hp="3290.85173501577" hpRegen="8.5" mp="1674.77696674777" mpRegen="3" />
 			<attack physical="1339.63026939616" magical="619.177109595989" random="20" critical="1" accuracy="9" attackSpeed="253" type="BLUNT" range="40" distance="80" width="120" />
-			<defence physical="341.682608889087" magical="250.382302478096" />
+			<defence physical="273.16812741914" magical="294.567414680113" />
 			<speed>
 				<walk ground="36" />
 				<run ground="160" />
@@ -2950,12 +2950,15 @@
 			<skill id="4410" level="16" /> <!-- Very Strong P. Atk. -->
 			<skill id="4412" level="14" /> <!-- Strong P. Def. -->
 			<skill id="4413" level="7" /> <!-- Weak M. Def. -->
+			<skill id="4414" level="3" /> <!-- Light Armor Type -->
 			<skill id="4415" level="5" /> <!-- Blunt Weapon -->
 			<skill id="4416" level="3" /> <!-- Beast -->
 			<skill id="4416" level="24" /> <!-- Unknown Creature -->
 			<skill id="4417" level="4" /> <!-- Beast -->
 			<skill id="4439" level="2" /> <!-- Greater Hold Resistance -->
 			<skill id="4445" level="1" /> <!-- Greater Spear Resistance -->
+			<skill id="5080" level="1" /> <!-- Haste Might -->
+			<skill id="5083" level="1" /> <!-- Stun -->
 			<skill id="5084" level="1" /> <!-- Blinding Blow -->
 		</skillList>
 		<exCrtEffect>false</exCrtEffect>
@@ -2964,16 +2967,15 @@
 		<dropLists>
 			<drop>
 				<item id="57" min="140" max="327" chance="70" /> <!-- Adena -->
-				<item id="9573" min="1" max="1" chance="0.3003003003003" /> <!-- Life Stone - Lv. 80 -->
-				<item id="9574" min="1" max="1" chance="0.149925037481259" /> <!-- Mid-grade Life Stone - Lv. 80 -->
+				<item id="9573" min="1" max="1" chance="0.149925037481259" /> <!-- Life Stone - Lv. 80 -->
+				<item id="9574" min="1" max="1" chance="0.0750187546886722" /> <!-- Mid-grade Life Stone - Lv. 80 -->
 				<item id="9575" min="1" max="1" chance="0.03000300030003" /> <!-- High-grade Life Stone - Lv. 80 -->
 				<item id="960" min="1" max="1" chance="0.03000300030003" /> <!-- Scroll: Enchant Armor (S-grade) -->
 				<item id="9576" min="1" max="1" chance="0.0149992500374981" /> <!-- Top-grade Life Stone - Lv. 80 -->
-				<item id="36891" min="1" max="1" chance="0.01" /> <!-- Recipe: Leather Braid - Upgrade -->
-				<item id="36932" min="1" max="1" chance="0.01" /> <!-- Recipe: Accessory Gem - Upgrade -->
-				<item id="36865" min="1" max="1" chance="0.01" /> <!-- Recipe: Silver - Downgrade -->
+				<item id="36892" min="1" max="1" chance="0.0149992500374981" /> <!-- Recipe: Leather Braid - Combination -->
 				<item id="36904" min="1" max="1" chance="0.01" /> <!-- Recipe: Silver Wire - Upgrade -->
-				<item id="36915" min="1" max="1" chance="0.01" /> <!-- Recipe: Weapon Fragment - Downgrade -->
+				<item id="36874" min="1" max="1" chance="0.01" /> <!-- Recipe: Synthetic Fiber - Upgrade -->
+				<item id="36924" min="1" max="1" chance="0.01" /> <!-- Recipe: Armor Fragment - Upgrade -->
 				<!-- Also drops herbs. -->
 				<item id="8600" min="1" max="1" chance="10" /> <!-- Herb of Life -->
 				<item id="8601" min="1" max="1" chance="8" /> <!-- Major Herb of Life -->
@@ -3020,7 +3022,7 @@
 		<stats str="79" int="34" dex="42" wit="66" con="75" men="12">
 			<vitals hp="3290.85173501577" hpRegen="8.5" mp="1674.77696674777" mpRegen="3" />
 			<attack physical="1339.51743263484" magical="619.177109595989" random="20" critical="1" accuracy="9" attackSpeed="253" type="BLUNT" range="40" distance="80" width="120" />
-			<defence physical="341.682608889087" magical="250.382302478096" />
+			<defence physical="273.16812741914" magical="294.567414680113" />
 			<speed>
 				<walk ground="24" />
 				<run ground="160" />
@@ -3030,20 +3032,23 @@
 		</stats>
 		<status undying="false" canBeSown="true" />
 		<skillList>
-			<skill id="4032" level="10" /> <!-- Power Strike -->
-			<skill id="4071" level="3" /> <!-- Bow/Crossbow Resistance -->
+			<skill id="4071" level="5" /> <!-- Bow/Crossbow Resistance -->
 			<skill id="4084" level="9" /> <!-- Physical Attack Resistance -->
 			<skill id="4285" level="5" /> <!-- Sleep Resistance -->
-			<skill id="4287" level="5" /> <!-- Hold Resistance -->
 			<skill id="4408" level="8" /> <!-- HP Increase (1/4x) -->
 			<skill id="4410" level="14" /> <!-- Strong P. Atk. -->
 			<skill id="4412" level="14" /> <!-- Strong P. Def. -->
 			<skill id="4413" level="7" /> <!-- Weak M. Def. -->
+			<skill id="4414" level="3" /> <!-- Light Armor Type -->
 			<skill id="4415" level="5" /> <!-- Blunt Weapon -->
 			<skill id="4416" level="3" /> <!-- Beast -->
 			<skill id="4416" level="24" /> <!-- Unknown Creature -->
 			<skill id="4417" level="4" /> <!-- Beast -->
+			<skill id="4439" level="2" /> <!-- Greater Hold Resistance -->
 			<skill id="4445" level="1" /> <!-- Greater Spear Resistance -->
+			<skill id="5079" level="1" /> <!-- Haste Focus -->
+			<skill id="5082" level="1" /> <!-- Spinning Slasher -->
+			<skill id="5084" level="1" /> <!-- Blinding Blow -->
 		</skillList>
 		<exCrtEffect>false</exCrtEffect>
 		<sNpcPropHpRate>0.25</sNpcPropHpRate>
@@ -3055,13 +3060,12 @@
 				<item id="9574" min="1" max="1" chance="0.0750187546886722" /> <!-- Mid-grade Life Stone - Lv. 80 -->
 				<item id="9575" min="1" max="1" chance="0.03000300030003" /> <!-- High-grade Life Stone - Lv. 80 -->
 				<item id="9576" min="1" max="1" chance="0.0149992500374981" /> <!-- Top-grade Life Stone - Lv. 80 -->
-				<item id="36892" min="1" max="1" chance="0.0149992500374981" /> <!-- Recipe: Leather Braid - Combination -->
 				<item id="36905" min="1" max="1" chance="0.0149992500374981" /> <!-- Recipe: Silver Wire - Combination -->
 				<item id="959" min="1" max="1" chance="0.0149992500374981" /> <!-- Scroll: Enchant Weapon (S-grade) -->
-				<item id="36857" min="1" max="1" chance="0.01" /> <!-- Recipe: Leather - Downgrade -->
-				<item id="36866" min="1" max="1" chance="0.01" /> <!-- Recipe: Silver - Upgrade -->
-				<item id="36939" min="1" max="1" chance="0.01" /> <!-- Recipe: Greater Cokes - Downgrade -->
-				<item id="36916" min="1" max="1" chance="0.01" /> <!-- Recipe: Weapon Fragment - Upgrade -->
+				<item id="36858" min="1" max="1" chance="0.01" /> <!-- Recipe: Leather - Upgrade -->
+				<item id="36890" min="1" max="1" chance="0.01" /> <!-- Recipe: Leather Braid - Downgrade -->
+				<item id="36931" min="1" max="1" chance="0.01" /> <!-- Recipe: Accessory Gem - Downgrade -->
+				<item id="36903" min="1" max="1" chance="0.01" /> <!-- Recipe: Silver Wire - Downgrade -->
 				<!-- Also drops herbs. -->
 				<item id="8600" min="1" max="1" chance="10" /> <!-- Herb of Life -->
 				<item id="8601" min="1" max="1" chance="8" /> <!-- Major Herb of Life -->

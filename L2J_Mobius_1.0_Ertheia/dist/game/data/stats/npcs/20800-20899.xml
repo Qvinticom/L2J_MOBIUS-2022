@@ -1086,6 +1086,9 @@
 	</npc>
 	<npc id="20814" level="62" type="Monster" name="Blader of Despair">
 		<parameters>
+			<minions name="Privates">
+				<npc id="20812" count="2" respawnTime="360" weightPoint="1" />
+			</minions>
 			<param name="MoveAroundSocial" value="110" />
 			<param name="MoveAroundSocial1" value="110" />
 			<param name="MoveAroundSocial2" value="110" />
@@ -1238,6 +1241,9 @@
 	</npc>
 	<npc id="20816" level="63" type="Monster" name="Hallate's Royal Guard">
 		<parameters>
+			<minions name="Privates">
+				<npc id="20815" count="3" respawnTime="360" weightPoint="1" />
+			</minions>
 			<param name="MoveAroundSocial" value="80" />
 			<param name="MoveAroundSocial1" value="80" />
 			<param name="MoveAroundSocial2" value="80" />
@@ -1860,6 +1866,11 @@
 	</npc>
 	<npc id="20824" level="67" type="Monster" name="Hallate's Commander">
 		<parameters>
+			<minions name="Privates">
+				<npc id="20818" count="1" respawnTime="360" weightPoint="1" />
+				<npc id="20820" count="1" respawnTime="360" weightPoint="1" />
+				<npc id="20822" count="1" respawnTime="360" weightPoint="1" />
+			</minions>
 			<param name="MoveAroundSocial" value="80" />
 			<param name="MoveAroundSocial1" value="80" />
 			<param name="MoveAroundSocial2" value="80" />
@@ -1937,6 +1948,9 @@
 	</npc>
 	<npc id="20825" level="68" type="Monster" name="Hallate's Inspector">
 		<parameters>
+			<minions name="Privates">
+				<npc id="21061" count="3" respawnTime="360" weightPoint="1" />
+			</minions>
 			<param name="MoveAroundSocial" value="140" />
 			<param name="MoveAroundSocial1" value="140" />
 			<param name="MoveAroundSocial2" value="140" />
@@ -2286,6 +2300,12 @@
 	</npc>
 	<npc id="20829" level="71" type="Monster" name="Platinum Tribe Prefect">
 		<parameters>
+			<minions name="Privates">
+				<npc id="20827" count="1" respawnTime="360" weightPoint="1" />
+				<npc id="20823" count="1" respawnTime="360" weightPoint="1" />
+				<npc id="20826" count="2" respawnTime="360" weightPoint="1" />
+				<npc id="20828" count="1" respawnTime="360" weightPoint="1" />
+			</minions>
 			<param name="MoveAroundSocial" value="90" />
 			<param name="MoveAroundSocial1" value="74" />
 			<param name="MoveAroundSocial2" value="90" />

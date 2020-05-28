@@ -391,9 +391,9 @@
 		<equipment rhand="6719" /> <!-- Monster Only (Ketra Orc Chieftain) -->
 		<acquire exp="213499" sp="51" />
 		<stats str="79" int="34" dex="42" wit="66" con="75" men="12">
-			<vitals hp="1821.45110410095" hpRegen="41.206725" mp="1743.71451743715" mpRegen="50" />
-			<attack physical="680.187466301688" magical="671.71387070524" random="20" critical="4" accuracy="9" attackSpeed="253" type="BLUNT" range="40" distance="80" width="120" />
-			<defence physical="350.292397660819" magical="256.114739403253" />
+			<vitals hp="21860.2523659306" hpRegen="41.206725" mp="17430.6569343066" mpRegen="50" />
+			<attack physical="311.061341296504" magical="671.71387070524" random="20" critical="1" accuracy="9" attackSpeed="253" type="BLUNT" range="40" distance="80" width="120" />
+			<defence physical="419.883040935673" magical="222.708469046307" />
 			<attribute>
 				<attack type="FIRE" value="100" />
 				<defence fire="100" water="50" wind="100" earth="100" holy="100" dark="100" />
@@ -407,14 +407,15 @@
 		</stats>
 		<status undying="false" canBeSown="true" />
 		<skillList>
-			<skill id="4065" level="9" /> <!-- Heal -->
+			<skill id="4045" level="1" /> <!-- Full Magic Attack Resistance -->
+			<skill id="4408" level="10" /> <!-- HP Increase (2x) -->
 			<skill id="4410" level="3" /> <!-- Extremely Weak P. Atk. -->
 			<skill id="4411" level="3" /> <!-- Extremely Weak M. Atk. -->
-			<skill id="4415" level="3" /> <!-- One-handed Sword -->
+			<skill id="4414" level="1" /> <!-- Heavy Armor Type -->
+			<skill id="4415" level="6" /> <!-- Blunt Weapon -->
 			<skill id="4416" level="6" /> <!-- Humanoids -->
-			<skill id="4610" level="2" /> <!-- Focus -->
-			<skill id="4613" level="9" /> <!-- Clan Heal -->
 			<skill id="5462" level="1" /> <!-- Fire Attack -->
+			<skill id="6147" level="1" /> <!-- Kasha's Divine Protection -->
 		</skillList>
 		<exCrtEffect>true</exCrtEffect>
 		<sNpcPropHpRate>2</sNpcPropHpRate>

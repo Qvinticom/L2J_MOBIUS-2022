@@ -24,7 +24,7 @@
 		<stats str="79" int="34" dex="42" wit="66" con="75" men="12">
 			<vitals hp="3290.22082018927" hpRegen="8.5" mp="1674.77696674777" mpRegen="3" />
 			<attack physical="1339.74358974359" magical="619.177109595989" random="20" critical="1" accuracy="9" attackSpeed="253" type="BLUNT" range="40" distance="80" width="120" />
-			<defence physical="341.581495427649" magical="250.027594216252" />
+			<defence physical="273.265196342119" magical="294.15011084265" />
 			<speed>
 				<walk ground="36" />
 				<run ground="170" />
@@ -38,14 +38,16 @@
 			<skill id="4084" level="9" /> <!-- Physical Attack Resistance -->
 			<skill id="4285" level="5" /> <!-- Sleep Resistance -->
 			<skill id="4412" level="12" /> <!-- Slightly Strong P. Def. -->
+			<skill id="4414" level="3" /> <!-- Light Armor Type -->
 			<skill id="4415" level="5" /> <!-- One-handed Blunt Weapons -->
 			<skill id="4416" level="3" /> <!-- Beast -->
 			<skill id="4416" level="24" /> <!-- Unknown Creature -->
 			<skill id="4417" level="4" /> <!-- Beast -->
 			<skill id="4439" level="2" /> <!-- Greater Hold Resistance -->
 			<skill id="4445" level="1" /> <!-- Greater Spear Resistance -->
+			<skill id="5080" level="1" /> <!-- Haste Might -->
+			<skill id="5083" level="1" /> <!-- Stun -->
 			<skill id="5084" level="1" /> <!-- Blinding Blow -->
-			<skill id="5105" level="1" /> <!-- Spell Force -->
 			<skill id="5601" level="9" /> <!-- Melee Attack Resistance -->
 		</skillList>
 		<exCrtEffect>false</exCrtEffect>
@@ -531,7 +533,7 @@
 		<stats str="79" int="34" dex="42" wit="66" con="75" men="12">
 			<vitals hp="3290.22082018927" hpRegen="8.5" mp="1674.77696674777" mpRegen="3" />
 			<attack physical="1339.74358974359" magical="619.177109595989" random="20" critical="1" accuracy="9" attackSpeed="253" type="BLUNT" range="40" distance="80" width="120" />
-			<defence physical="341.581495427649" magical="250.027594216252" />
+			<defence physical="273.265196342119" magical="294.15011084265" />
 			<speed>
 				<walk ground="33" />
 				<run ground="150" />
@@ -541,16 +543,21 @@
 		</stats>
 		<status undying="false" />
 		<skillList>
-			<skill id="4071" level="2" /> <!-- Bow/ Crossbow Resistance -->
+			<skill id="4067" level="10" /> <!-- Blow -->
+			<skill id="4071" level="3" /> <!-- Bow/ Crossbow Resistance -->
 			<skill id="4084" level="9" /> <!-- Physical Attack Resistance -->
 			<skill id="4285" level="5" /> <!-- Sleep Resistance -->
 			<skill id="4412" level="12" /> <!-- Slightly Strong P. Def. -->
+			<skill id="4414" level="3" /> <!-- Light Armor Type -->
 			<skill id="4415" level="5" /> <!-- One-handed Blunt Weapons -->
 			<skill id="4416" level="3" /> <!-- Beast -->
 			<skill id="4416" level="24" /> <!-- Unknown Creature -->
 			<skill id="4417" level="4" /> <!-- Beast -->
 			<skill id="4439" level="2" /> <!-- Greater Hold Resistance -->
 			<skill id="4445" level="1" /> <!-- Greater Spear Resistance -->
+			<skill id="5080" level="1" /> <!-- Haste Might -->
+			<skill id="5083" level="1" /> <!-- Stun -->
+			<skill id="5105" level="1" /> <!-- Spell Force -->
 			<skill id="5601" level="9" /> <!-- Melee Attack Resistance -->
 		</skillList>
 		<exCrtEffect>false</exCrtEffect>
@@ -771,7 +778,7 @@
 		<stats str="79" int="34" dex="42" wit="66" con="75" men="12">
 			<vitals hp="3290.22082018927" hpRegen="8.5" mp="1674.77696674777" mpRegen="3" />
 			<attack physical="1339.74358974359" magical="619.177109595989" random="20" critical="1" accuracy="9" attackSpeed="253" type="BLUNT" range="40" distance="80" width="120" />
-			<defence physical="341.581495427649" magical="250.027594216252" />
+			<defence physical="273.265196342119" magical="294.15011084265" />
 			<speed>
 				<walk ground="50" />
 				<run ground="150" />
@@ -781,17 +788,21 @@
 		</stats>
 		<status undying="false" />
 		<skillList>
-			<skill id="4067" level="10" /> <!-- Blow -->
 			<skill id="4071" level="4" /> <!-- Bow/ Crossbow Resistance -->
 			<skill id="4084" level="9" /> <!-- Physical Attack Resistance -->
+			<skill id="4232" level="10" /> <!-- Spinning Slasher -->
 			<skill id="4285" level="5" /> <!-- Sleep Resistance -->
 			<skill id="4412" level="12" /> <!-- Slightly Strong P. Def. -->
+			<skill id="4414" level="3" /> <!-- Light Armor Type -->
 			<skill id="4415" level="5" /> <!-- One-handed Blunt Weapons -->
 			<skill id="4416" level="3" /> <!-- Beast -->
 			<skill id="4416" level="24" /> <!-- Unknown Creature -->
 			<skill id="4417" level="4" /> <!-- Beast -->
 			<skill id="4439" level="2" /> <!-- Greater Hold Resistance -->
 			<skill id="4445" level="1" /> <!-- Greater Spear Resistance -->
+			<skill id="5079" level="1" /> <!-- Haste Focus -->
+			<skill id="5081" level="1" /> <!-- Silence -->
+			<skill id="5105" level="1" /> <!-- Spell Force -->
 			<skill id="5601" level="9" /> <!-- Melee Attack Resistance -->
 		</skillList>
 		<exCrtEffect>false</exCrtEffect>
@@ -4129,9 +4140,9 @@
 		<sex>FEMALE</sex>
 		<acquire exp="173289" sp="41" />
 		<stats str="79" int="34" dex="42" wit="66" con="75" men="12">
-			<vitals hp="3461.04100946372" hpRegen="113.419259781018" mp="1708.02919708029" mpRegen="3" />
-			<attack physical="1397.2613838924" magical="644.837400899768" random="10" critical="4" accuracy="5" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
-			<defence physical="345.649003403014" magical="253.327608415629" />
+			<vitals hp="33003.1545741325" hpRegen="113.419259781018" mp="1708.02919708029" mpRegen="3" />
+			<attack physical="7963.23529411765" magical="3674.60316218336" random="10" critical="4" accuracy="5" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="664.117647058824" magical="528.102915766963" />
 			<attribute>
 				<attack type="DARK" value="100" />
 				<defence fire="100" water="100" wind="100" earth="100" holy="50" dark="100" />
@@ -4144,14 +4155,10 @@
 		</stats>
 		<status undying="false" />
 		<skillList>
-			<skill id="4408" level="12" /> <!-- HP Increase (4x) -->
-			<skill id="4410" level="13" /> <!-- Slightly Strong P. Atk. -->
-			<skill id="4411" level="13" /> <!-- Slightly Strong M. Atk. -->
-			<skill id="4412" level="13" /> <!-- Slightly Strong P. Def. -->
+			<skill id="4414" level="1" /> <!-- Heavy Armor Type -->
 			<skill id="4415" level="3" /> <!-- One-handed Sword -->
-			<skill id="4416" level="2" /> <!-- Magic Creatures -->
-			<skill id="4668" level="10" /> <!-- Drain Energy -->
-			<skill id="5265" level="10" /> <!-- Soul Emission -->
+			<skill id="4416" level="5" /> <!-- Plants -->
+			<skill id="5299" level="3" /> <!-- Spinning Slasher -->
 			<skill id="5467" level="1" /> <!-- Dark Attack -->
 		</skillList>
 		<exCrtEffect>false</exCrtEffect>
@@ -4244,9 +4251,9 @@
 		<sex>MALE</sex>
 		<acquire exp="173289" sp="41" />
 		<stats str="79" int="34" dex="42" wit="66" con="75" men="12">
-			<vitals hp="3461.04100946372" hpRegen="113.419259781018" mp="1708.02919708029" mpRegen="3" />
-			<attack physical="1397.2613838924" magical="644.837400899768" random="10" critical="4" accuracy="5" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
-			<defence physical="345.649003403014" magical="253.327608415629" />
+			<vitals hp="33003.1545741325" hpRegen="113.419259781018" mp="1708.02919708029" mpRegen="3" />
+			<attack physical="7963.23529411765" magical="3674.60316218336" random="10" critical="4" accuracy="5" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="442.941176470588" magical="714.492180155302" />
 			<attribute>
 				<attack type="FIRE" value="100" />
 				<defence fire="100" water="50" wind="100" earth="100" holy="100" dark="100" />
@@ -4260,14 +4267,10 @@
 		</stats>
 		<status undying="false" />
 		<skillList>
-			<skill id="4067" level="10" /> <!-- Blow -->
-			<skill id="4085" level="1" /> <!-- Critical Damage -->
-			<skill id="4408" level="12" /> <!-- HP Increase (4x) -->
-			<skill id="4410" level="13" /> <!-- Slightly Strong P. Atk. -->
-			<skill id="4411" level="13" /> <!-- Slightly Strong M. Atk. -->
-			<skill id="4412" level="13" /> <!-- Slightly Strong P. Def. -->
+			<skill id="4414" level="3" /> <!-- Light Armor Type -->
 			<skill id="4415" level="3" /> <!-- One-handed Sword -->
 			<skill id="4416" level="2" /> <!-- Magic Creatures -->
+			<skill id="5279" level="3" /> <!-- Spinning Slasher -->
 			<skill id="5462" level="1" /> <!-- Fire Attack -->
 		</skillList>
 		<exCrtEffect>false</exCrtEffect>

@@ -3356,14 +3356,14 @@
 		<sex>MALE</sex>
 		<equipment rhand="189" /> <!-- Staff of Life -->
 		<mpReward value="20" type="PER" ticks="10" affects="PARTY" />
-		<stats str="66" int="56" dex="18" wit="66" con="37" men="10">
-			<vitals hp="2395.23336643496" hpRegen="7.5" mp="1314.07648494711" mpRegen="2.7" />
+		<stats str="164" int="188" dex="55" wit="78" con="111" men="149">
+			<vitals hp="2444.35111297774" hpRegen="7.5" mp="1345.15484515485" mpRegen="2.7" />
 			<speed>
 				<walk ground="70" />
 				<run ground="170" />
 			</speed>
-			<attack physical="921.685079397035" magical="414.821696630728" critical="4" attackSpeed="253" range="40" type="BLUNT" distance="80" width="120" random="20" accuracy="9" />
-			<defence physical="291.772151898734" magical="213.202047563626" />
+			<attack physical="950.889650289659" magical="355.845939925155" critical="1" attackSpeed="253" range="40" type="BLUNT" distance="80" width="120" random="20" accuracy="9" />
+			<defence physical="296.22641509434" magical="216.764367707764" />
 			<attribute>
 				<attack type="DARK" value="20" />
 				<defence fire="20" water="20" wind="20" earth="20" holy="-13" dark="189" />
@@ -3372,7 +3372,8 @@
 		</stats>
 		<status attackable="false" undying="false" />
 		<skillList>
-			<skill id="4415" level="3" /> <!-- One-handed Sword -->
+			<skill id="4180" level="1" /> <!-- Stun -->
+			<skill id="4415" level="5" /> <!-- Blunt Weapon -->
 			<skill id="4416" level="9" /> <!-- Demons -->
 			<skill id="5467" level="1" /> <!-- Dark Attack -->
 		</skillList>
@@ -3467,14 +3468,14 @@
 		<race>DEMONIC</race>
 		<sex>MALE</sex>
 		<mpReward value="20" type="PER" ticks="10" affects="PARTY" />
-		<stats str="66" int="56" dex="18" wit="66" con="37" men="10">
-			<vitals hp="2632.57199602781" hpRegen="8.5" mp="1475.18307567128" mpRegen="3" />
+		<stats str="164" int="188" dex="55" wit="78" con="111" men="149">
+			<vitals hp="2676.18647627047" hpRegen="8.5" mp="1507.49250749251" mpRegen="3" />
 			<speed>
 				<walk ground="37" />
 				<run ground="170" />
 			</speed>
-			<attack physical="1068.43600970862" magical="477.932525852452" critical="4" attackSpeed="253" range="40" type="FIST" distance="80" width="120" random="5" accuracy="5" />
-			<defence physical="314.723926380368" magical="230.622931506986" />
+			<attack physical="1096.75932420787" magical="407.891158697264" critical="4" attackSpeed="253" range="40" type="FIST" distance="80" width="120" random="5" accuracy="5" />
+			<defence physical="319.512195121951" magical="233.91242903438" />
 			<attribute>
 				<attack type="DARK" value="20" />
 				<defence fire="20" water="20" wind="20" earth="20" holy="-13" dark="189" />
@@ -3483,8 +3484,9 @@
 		</stats>
 		<status attackable="false" undying="false" />
 		<skillList>
-			<skill id="4415" level="3" /> <!-- One-handed Sword -->
-			<skill id="4416" level="1" /> <!-- Undead -->
+			<skill id="4195" level="1" /> <!-- Twister -->
+			<skill id="4415" level="1" /> <!-- Bare Hands -->
+			<skill id="4416" level="9" /> <!-- Demons -->
 			<skill id="5467" level="1" /> <!-- Dark Attack -->
 		</skillList>
 		<ai clanHelpRange="300" aggroRange="300" />
@@ -3611,14 +3613,14 @@
 		<sex>MALE</sex>
 		<equipment rhand="78" /> <!-- Great Sword -->
 		<mpReward value="20" type="PER" ticks="10" affects="PARTY" />
-		<stats str="66" int="56" dex="18" wit="66" con="37" men="10">
-			<vitals hp="2540.21847070506" hpRegen="8.5" mp="1410.08950366151" mpRegen="3" />
+		<stats str="164" int="188" dex="55" wit="78" con="111" men="149">
+			<vitals hp="2586.30827383452" hpRegen="8.5" mp="1442.05794205794" mpRegen="3" />
 			<speed>
 				<walk ground="40" />
 				<run ground="170" />
 			</speed>
-			<attack physical="1010.08853710038" magical="452.951295036657" critical="4" attackSpeed="253" range="40" type="SWORD" distance="80" width="120" random="10" accuracy="5" />
-			<defence physical="305.590062111801" magical="223.885500002527" />
+			<attack physical="1038.7818659525" magical="387.341913178516" critical="4" attackSpeed="253" range="40" type="SWORD" distance="80" width="120" random="10" accuracy="5" />
+			<defence physical="310.493827160494" magical="226.933560266894" />
 			<attribute>
 				<attack type="DARK" value="20" />
 				<defence fire="20" water="20" wind="20" earth="20" holy="20" dark="189" />
@@ -3627,7 +3629,7 @@
 		</stats>
 		<status attackable="false" undying="false" />
 		<skillList>
-			<skill id="4169" level="1" /> <!-- Stun -->
+			<skill id="4197" level="1" /> <!-- Hold -->
 			<skill id="4415" level="3" /> <!-- One-handed Sword -->
 			<skill id="4416" level="1" /> <!-- Undead -->
 			<skill id="5467" level="1" /> <!-- Dark Attack -->
