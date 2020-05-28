@@ -15,7 +15,8 @@
 			<attack physical="8055.6852044663" magical="3703.98634412387" random="10" critical="4" accuracy="5" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
 			<defence physical="572.649265788245" magical="629.393598717992" />
 			<attribute>
-				<defence fire="100" water="100" wind="100" earth="100" holy="100" dark="50" default="170" />
+				<attack type="HOLY" value="100" />
+				<defence fire="100" water="100" wind="100" earth="100" holy="100" dark="50" />
 			</attribute>
 			<speed>
 				<walk ground="40" />
@@ -843,7 +844,7 @@
 			<defence physical="578.996216177625" magical="635.380435875885" />
 			<attribute>
 				<attack type="DARK" value="180" />
-				<defence fire="100" water="100" wind="100" earth="100" holy="50" dark="100" default="230" />
+				<defence fire="100" water="100" wind="100" earth="100" holy="50" dark="100" />
 			</attribute>
 			<speed>
 				<walk ground="45" />
@@ -909,7 +910,7 @@
 			<defence physical="579.033791374989" magical="635.521967009508" />
 			<attribute>
 				<attack type="DARK" value="180" />
-				<defence fire="100" water="100" wind="100" earth="100" holy="50" dark="100" default="230" />
+				<defence fire="100" water="100" wind="100" earth="100" holy="50" dark="100" />
 			</attribute>
 			<speed>
 				<walk ground="60" />
@@ -975,7 +976,7 @@
 			<defence physical="578.89237199582" magical="635.521967009508" />
 			<attribute>
 				<attack type="DARK" value="180" />
-				<defence fire="100" water="100" wind="100" earth="100" holy="50" dark="100" default="230" />
+				<defence fire="100" water="100" wind="100" earth="100" holy="50" dark="100" />
 			</attribute>
 			<speed>
 				<walk ground="30" />
@@ -1044,7 +1045,7 @@
 			<defence physical="579.310344827586" magical="635.536195007068" />
 			<attribute>
 				<attack type="DARK" value="180" />
-				<defence fire="100" water="100" wind="100" earth="100" holy="50" dark="100" default="230" />
+				<defence fire="100" water="100" wind="100" earth="100" holy="50" dark="100" />
 			</attribute>
 			<speed>
 				<walk ground="45" />
@@ -1113,7 +1114,7 @@
 			<defence physical="579.310344827586" magical="635.536195007068" />
 			<attribute>
 				<attack type="DARK" value="180" />
-				<defence fire="100" water="100" wind="100" earth="100" holy="50" dark="100" default="230" />
+				<defence fire="100" water="100" wind="100" earth="100" holy="50" dark="100" />
 			</attribute>
 			<speed>
 				<walk ground="45" />
@@ -1182,7 +1183,7 @@
 			<defence physical="578.89237199582" magical="635.521967009508" />
 			<attribute>
 				<attack type="DARK" value="180" />
-				<defence fire="100" water="100" wind="100" earth="100" holy="50" dark="100" default="230" />
+				<defence fire="100" water="100" wind="100" earth="100" holy="50" dark="100" />
 			</attribute>
 			<speed>
 				<walk ground="55" />
@@ -1253,7 +1254,7 @@
 			<defence physical="578.867192909569" magical="635.521967009508" />
 			<attribute>
 				<attack type="EARTH" value="180" />
-				<defence fire="100" water="100" wind="50" earth="100" holy="100" dark="100" default="230" />
+				<defence fire="100" water="100" wind="50" earth="100" holy="100" dark="100" />
 			</attribute>
 			<speed>
 				<walk ground="43" />
@@ -1326,7 +1327,7 @@
 			<defence physical="578.867192909569" magical="635.521967009508" />
 			<attribute>
 				<attack type="EARTH" value="180" />
-				<defence fire="100" water="100" wind="50" earth="100" holy="100" dark="100" default="230" />
+				<defence fire="100" water="100" wind="50" earth="100" holy="100" dark="100" />
 			</attribute>
 			<speed>
 				<walk ground="43" />
@@ -1397,7 +1398,7 @@
 			<defence physical="578.867192909569" magical="635.521967009508" />
 			<attribute>
 				<attack type="EARTH" value="180" />
-				<defence fire="100" water="100" wind="50" earth="100" holy="100" dark="100" default="230" />
+				<defence fire="100" water="100" wind="50" earth="100" holy="100" dark="100" />
 			</attribute>
 			<speed>
 				<walk ground="43" />
@@ -1464,7 +1465,7 @@
 			<defence physical="578.867192909569" magical="635.521967009508" />
 			<attribute>
 				<attack type="EARTH" value="180" />
-				<defence fire="100" water="100" wind="50" earth="100" holy="100" dark="100" default="230" />
+				<defence fire="100" water="100" wind="50" earth="100" holy="100" dark="100" />
 			</attribute>
 			<speed>
 				<walk ground="55" />
@@ -1531,7 +1532,7 @@
 			<defence physical="579.042670445599" magical="635.521967009508" />
 			<attribute>
 				<attack type="EARTH" value="180" />
-				<defence fire="100" water="100" wind="50" earth="100" holy="100" dark="100" default="230" />
+				<defence fire="100" water="100" wind="50" earth="100" holy="100" dark="100" />
 			</attribute>
 			<speed>
 				<walk ground="43" />
@@ -1596,7 +1597,7 @@
 			<defence physical="578.996216177625" magical="635.521967009508" />
 			<attribute>
 				<attack type="EARTH" value="180" />
-				<defence fire="100" water="100" wind="50" earth="100" holy="100" dark="100" default="230" />
+				<defence fire="100" water="100" wind="50" earth="100" holy="100" dark="100" />
 			</attribute>
 			<speed>
 				<walk ground="56" />
@@ -1666,7 +1667,7 @@
 			<defence physical="579.033791374989" magical="635.521967009508" />
 			<attribute>
 				<attack type="EARTH" value="180" />
-				<defence fire="100" water="100" wind="50" earth="100" holy="100" dark="100" default="230" />
+				<defence fire="100" water="100" wind="50" earth="100" holy="100" dark="100" />
 			</attribute>
 			<speed>
 				<walk ground="89" />
@@ -1734,7 +1735,7 @@
 			<defence physical="578.987365821222" magical="635.536195007068" />
 			<attribute>
 				<attack type="EARTH" value="180" />
-				<defence fire="100" water="100" wind="50" earth="100" holy="100" dark="100" default="230" />
+				<defence fire="100" water="100" wind="50" earth="100" holy="100" dark="100" />
 			</attribute>
 			<speed>
 				<walk ground="92" />
@@ -1800,7 +1801,7 @@
 			<defence physical="578.996216177625" magical="635.380435875886" />
 			<attribute>
 				<attack type="EARTH" value="180" />
-				<defence fire="100" water="100" wind="50" earth="100" holy="100" dark="100" default="230" />
+				<defence fire="100" water="100" wind="50" earth="100" holy="100" dark="100" />
 			</attribute>
 			<speed>
 				<walk ground="100" />
@@ -1871,7 +1872,7 @@
 			<defence physical="579.310344827586" magical="635.380435875885" />
 			<attribute>
 				<attack type="EARTH" value="180" />
-				<defence fire="100" water="100" wind="50" earth="100" holy="100" dark="100" default="230" />
+				<defence fire="100" water="100" wind="50" earth="100" holy="100" dark="100" />
 			</attribute>
 			<speed>
 				<walk ground="82" />
@@ -1939,7 +1940,7 @@
 			<defence physical="579.009560640241" magical="635.380435875886" />
 			<attribute>
 				<attack type="DARK" value="180" />
-				<defence fire="100" water="100" wind="100" earth="100" holy="50" dark="100" default="250" />
+				<defence fire="100" water="100" wind="100" earth="100" holy="50" dark="100" />
 			</attribute>
 			<speed>
 				<walk ground="50" />
@@ -2008,7 +2009,7 @@
 			<defence physical="579.009560640241" magical="635.380435875886" />
 			<attribute>
 				<attack type="DARK" value="180" />
-				<defence fire="100" water="100" wind="100" earth="100" holy="50" dark="100" default="250" />
+				<defence fire="100" water="100" wind="100" earth="100" holy="50" dark="100" />
 			</attribute>
 			<speed>
 				<walk ground="25" />
@@ -2080,7 +2081,7 @@
 			<defence physical="579.009560640241" magical="635.380435875886" />
 			<attribute>
 				<attack type="DARK" value="180" />
-				<defence fire="100" water="100" wind="100" earth="100" holy="50" dark="100" default="250" />
+				<defence fire="100" water="100" wind="100" earth="100" holy="50" dark="100" />
 			</attribute>
 			<speed>
 				<walk ground="60" />
@@ -2147,7 +2148,7 @@
 			<defence physical="579.042670445599" magical="635.380435875886" />
 			<attribute>
 				<attack type="DARK" value="180" />
-				<defence fire="100" water="100" wind="100" earth="100" holy="50" dark="100" default="230" />
+				<defence fire="100" water="100" wind="100" earth="100" holy="50" dark="100" />
 			</attribute>
 			<speed>
 				<walk ground="54" />
@@ -2222,8 +2223,8 @@
 			<attack physical="5509.83570169157" magical="604.80071865412" critical="4" attackSpeed="253" range="40" type="SWORD" distance="80" width="120" random="10" accuracy="5" />
 			<defence physical="338.418079096045" magical="273.327432444142" />
 			<attribute>
-				<defence fire="100" water="100" wind="50" earth="100" holy="100" dark="100" />
 				<attack type="EARTH" value="180" />
+				<defence fire="100" water="100" wind="50" earth="100" holy="100" dark="100" />
 			</attribute>
 			<abnormalResist physical="10" magical="10" />
 		</stats>
@@ -2288,8 +2289,8 @@
 			<attack physical="6063.21632448993" magical="662.079690701685" critical="4" attackSpeed="253" range="40" type="SWORD" distance="80" width="120" random="10" accuracy="5" />
 			<defence physical="351.95530726257" magical="287.192702181819" />
 			<attribute>
-				<defence fire="100" water="100" wind="100" earth="100" holy="50" dark="100" />
 				<attack type="DARK" value="180" />
+				<defence fire="100" water="100" wind="100" earth="100" holy="50" dark="100" />
 			</attribute>
 			<abnormalResist physical="10" magical="10" />
 		</stats>
@@ -2357,8 +2358,8 @@
 			<attack physical="5777.47978111127" magical="632.317148021893" critical="4" attackSpeed="253" range="40" type="SWORD" distance="80" width="120" random="10" accuracy="5" />
 			<defence physical="345.505617977528" magical="280.517146228833" />
 			<attribute>
-				<defence fire="100" water="100" wind="50" earth="100" holy="100" dark="100" />
 				<attack type="EARTH" value="180" />
+				<defence fire="100" water="100" wind="50" earth="100" holy="100" dark="100" />
 			</attribute>
 			<abnormalResist physical="10" magical="10" />
 		</stats>
@@ -2423,8 +2424,8 @@
 			<attack physical="5777.47978111127" magical="632.317148021893" critical="4" attackSpeed="253" range="40" type="SWORD" distance="80" width="120" random="10" accuracy="5" />
 			<defence physical="345.505617977528" magical="280.517146228833" />
 			<attribute>
-				<defence fire="100" water="100" wind="50" earth="100" holy="100" dark="100" />
 				<attack type="EARTH" value="180" />
+				<defence fire="100" water="100" wind="50" earth="100" holy="100" dark="100" />
 			</attribute>
 			<abnormalResist physical="10" magical="10" />
 		</stats>
@@ -2489,8 +2490,8 @@
 			<attack physical="6357.87077595825" magical="692.096427773777" critical="4" attackSpeed="253" range="40" type="SWORD" distance="80" width="120" random="10" accuracy="5" />
 			<defence physical="359.090909090909" magical="294.656916672059" />
 			<attribute>
-				<defence fire="100" water="100" wind="50" earth="100" holy="100" dark="100" />
 				<attack type="EARTH" value="180" />
+				<defence fire="100" water="100" wind="50" earth="100" holy="100" dark="100" />
 			</attribute>
 			<abnormalResist physical="10" magical="10" />
 		</stats>
@@ -2558,8 +2559,8 @@
 			<attack physical="6990.78534512189" magical="756.485275288056" critical="4" attackSpeed="253" range="40" type="SWORD" distance="80" width="120" random="10" accuracy="5" />
 			<defence physical="373.626373626374" magical="309.533215765015" />
 			<attribute>
-				<defence fire="100" water="100" wind="100" earth="100" holy="50" dark="100" />
 				<attack type="DARK" value="180" />
+				<defence fire="100" water="100" wind="100" earth="100" holy="50" dark="100" />
 			</attribute>
 			<abnormalResist physical="10" magical="10" />
 		</stats>
@@ -2630,8 +2631,8 @@
 			<attack physical="6666.76843423277" magical="723.575228990924" critical="4" attackSpeed="253" range="40" type="SWORD" distance="80" width="120" random="10" accuracy="5" />
 			<defence physical="366.147664490206" magical="301.882641952853" />
 			<attribute>
-				<defence fire="100" water="100" wind="50" earth="100" holy="100" dark="100" />
 				<attack type="EARTH" value="180" />
+				<defence fire="100" water="100" wind="50" earth="100" holy="100" dark="100" />
 			</attribute>
 			<abnormalResist physical="10" magical="10" />
 		</stats>
@@ -2700,8 +2701,8 @@
 			<attack physical="6666.76843423277" magical="723.575228990924" critical="4" attackSpeed="253" range="40" type="SWORD" distance="80" width="120" random="10" accuracy="5" />
 			<defence physical="366.147664490206" magical="302.038653654121" />
 			<attribute>
-				<defence fire="100" water="100" wind="50" earth="100" holy="100" dark="100" />
 				<attack type="EARTH" value="180" />
+				<defence fire="100" water="100" wind="50" earth="100" holy="100" dark="100" />
 			</attribute>
 			<abnormalResist physical="10" magical="10" />
 		</stats>
@@ -2770,8 +2771,8 @@
 			<attack physical="5509.83570169157" magical="604.80071865412" critical="4" attackSpeed="253" range="40" type="SWORD" distance="80" width="120" random="10" accuracy="5" />
 			<defence physical="338.418079096045" magical="273.327432444142" />
 			<attribute>
-				<defence fire="100" water="100" wind="50" earth="100" holy="100" dark="100" />
 				<attack type="EARTH" value="180" />
+				<defence fire="100" water="100" wind="50" earth="100" holy="100" dark="100" />
 			</attribute>
 			<abnormalResist physical="10" magical="10" />
 		</stats>
@@ -2833,8 +2834,8 @@
 			<attack physical="6063.21632448993" magical="662.079690701685" critical="4" attackSpeed="253" range="40" type="SWORD" distance="80" width="120" random="10" accuracy="5" />
 			<defence physical="351.95530726257" magical="287.192702181819" />
 			<attribute>
-				<defence fire="100" water="100" wind="100" earth="100" holy="50" dark="100" />
 				<attack type="DARK" value="180" />
+				<defence fire="100" water="100" wind="100" earth="100" holy="50" dark="100" />
 			</attribute>
 			<abnormalResist physical="10" magical="10" />
 		</stats>
@@ -2899,8 +2900,8 @@
 			<attack physical="5777.47978111127" magical="632.317148021893" critical="4" attackSpeed="253" range="40" type="SWORD" distance="80" width="120" random="10" accuracy="5" />
 			<defence physical="345.505617977528" magical="280.517146228833" />
 			<attribute>
-				<defence fire="100" water="100" wind="50" earth="100" holy="100" dark="100" />
 				<attack type="EARTH" value="180" />
+				<defence fire="100" water="100" wind="50" earth="100" holy="100" dark="100" />
 			</attribute>
 			<abnormalResist physical="10" magical="10" />
 		</stats>
@@ -2962,8 +2963,8 @@
 			<attack physical="5777.47978111127" magical="632.317148021893" critical="4" attackSpeed="253" range="40" type="SWORD" distance="80" width="120" random="10" accuracy="5" />
 			<defence physical="345.505617977528" magical="280.517146228833" />
 			<attribute>
-				<defence fire="100" water="100" wind="50" earth="100" holy="100" dark="100" />
 				<attack type="EARTH" value="180" />
+				<defence fire="100" water="100" wind="50" earth="100" holy="100" dark="100" />
 			</attribute>
 			<abnormalResist physical="10" magical="10" />
 		</stats>
@@ -3025,8 +3026,8 @@
 			<attack physical="6357.87077595825" magical="692.096427773777" critical="4" attackSpeed="253" range="40" type="SWORD" distance="80" width="120" random="10" accuracy="5" />
 			<defence physical="359.444444444444" magical="294.656916672059" />
 			<attribute>
-				<defence fire="100" water="100" wind="50" earth="100" holy="100" dark="100" />
 				<attack type="EARTH" value="180" />
+				<defence fire="100" water="100" wind="50" earth="100" holy="100" dark="100" />
 			</attribute>
 			<abnormalResist physical="10" magical="10" />
 		</stats>
@@ -3090,8 +3091,8 @@
 			<attack physical="6990.78534512189" magical="756.485275288056" critical="4" attackSpeed="253" range="40" type="SWORD" distance="80" width="120" random="10" accuracy="5" />
 			<defence physical="373.626373626374" magical="309.533215765015" />
 			<attribute>
-				<defence fire="100" water="100" wind="100" earth="100" holy="50" dark="100" />
 				<attack type="DARK" value="180" />
+				<defence fire="100" water="100" wind="100" earth="100" holy="50" dark="100" />
 			</attribute>
 			<abnormalResist physical="10" magical="10" />
 		</stats>
@@ -3159,8 +3160,8 @@
 			<attack physical="6666.76843423277" magical="723.575228990924" critical="4" attackSpeed="253" range="40" type="SWORD" distance="80" width="120" random="10" accuracy="5" />
 			<defence physical="366.147664490206" magical="301.882641952853" />
 			<attribute>
-				<defence fire="100" water="100" wind="50" earth="100" holy="100" dark="100" />
 				<attack type="EARTH" value="180" />
+				<defence fire="100" water="100" wind="50" earth="100" holy="100" dark="100" />
 			</attribute>
 			<abnormalResist physical="10" magical="10" />
 		</stats>
@@ -3226,8 +3227,8 @@
 			<attack physical="6666.76843423277" magical="723.575228990924" critical="4" attackSpeed="253" range="40" type="SWORD" distance="80" width="120" random="10" accuracy="5" />
 			<defence physical="366.298342541436" magical="302.038653654121" />
 			<attribute>
-				<defence fire="100" water="100" wind="50" earth="100" holy="100" dark="100" />
 				<attack type="EARTH" value="180" />
+				<defence fire="100" water="100" wind="50" earth="100" holy="100" dark="100" />
 			</attribute>
 			<abnormalResist physical="10" magical="10" />
 		</stats>
@@ -3290,8 +3291,8 @@
 			<attack physical="5509.83570169157" magical="604.80071865412" critical="4" attackSpeed="253" range="40" type="SWORD" distance="80" width="120" random="10" accuracy="5" />
 			<defence physical="507.909604519774" magical="202.024623980453" />
 			<attribute>
-				<defence fire="100" water="100" wind="50" earth="100" holy="100" dark="100" />
 				<attack type="EARTH" value="180" />
+				<defence fire="100" water="100" wind="50" earth="100" holy="100" dark="100" />
 			</attribute>
 			<abnormalResist physical="10" magical="10" />
 		</stats>
@@ -3354,8 +3355,8 @@
 			<attack physical="6063.21632448993" magical="662.079690701685" critical="4" attackSpeed="253" range="40" type="SWORD" distance="80" width="120" random="10" accuracy="5" />
 			<defence physical="527.932960893855" magical="212.27286683004" />
 			<attribute>
-				<defence fire="100" water="100" wind="100" earth="100" holy="50" dark="100" />
 				<attack type="DARK" value="180" />
+				<defence fire="100" water="100" wind="100" earth="100" holy="50" dark="100" />
 			</attribute>
 			<abnormalResist physical="10" magical="10" />
 		</stats>
@@ -3421,8 +3422,8 @@
 			<attack physical="5777.47978111127" magical="632.317148021893" critical="4" attackSpeed="253" range="40" type="SWORD" distance="80" width="120" random="10" accuracy="5" />
 			<defence physical="517.977528089888" magical="207.338760256094" />
 			<attribute>
-				<defence fire="100" water="100" wind="50" earth="100" holy="100" dark="100" />
 				<attack type="EARTH" value="180" />
+				<defence fire="100" water="100" wind="50" earth="100" holy="100" dark="100" />
 			</attribute>
 			<abnormalResist physical="10" magical="10" />
 		</stats>
@@ -3485,8 +3486,8 @@
 			<attack physical="5777.47978111127" magical="632.317148021893" critical="4" attackSpeed="253" range="40" type="SWORD" distance="80" width="120" random="10" accuracy="5" />
 			<defence physical="517.977528089888" magical="207.338760256094" />
 			<attribute>
-				<defence fire="100" water="100" wind="50" earth="100" holy="100" dark="100" />
 				<attack type="EARTH" value="180" />
+				<defence fire="100" water="100" wind="50" earth="100" holy="100" dark="100" />
 			</attribute>
 			<abnormalResist physical="10" magical="10" />
 		</stats>
@@ -3549,8 +3550,8 @@
 			<attack physical="6357.87077595825" magical="692.096427773777" critical="4" attackSpeed="253" range="40" type="SWORD" distance="80" width="120" random="10" accuracy="5" />
 			<defence physical="538.461538461538" magical="217.789894931522" />
 			<attribute>
-				<defence fire="100" water="100" wind="50" earth="100" holy="100" dark="100" />
 				<attack type="EARTH" value="180" />
+				<defence fire="100" water="100" wind="50" earth="100" holy="100" dark="100" />
 			</attribute>
 			<abnormalResist physical="10" magical="10" />
 		</stats>
@@ -3615,8 +3616,8 @@
 			<attack physical="6990.78534512189" magical="756.485275288056" critical="4" attackSpeed="253" range="40" type="SWORD" distance="80" width="120" random="10" accuracy="5" />
 			<defence physical="560.43956043956" magical="228.785420348055" />
 			<attribute>
-				<defence fire="100" water="100" wind="100" earth="100" holy="50" dark="100" />
 				<attack type="DARK" value="180" />
+				<defence fire="100" water="100" wind="100" earth="100" holy="50" dark="100" />
 			</attribute>
 			<abnormalResist physical="10" magical="10" />
 		</stats>
@@ -3685,8 +3686,8 @@
 			<attack physical="6666.76843423277" magical="723.575228990924" critical="4" attackSpeed="253" range="40" type="SWORD" distance="80" width="120" random="10" accuracy="5" />
 			<defence physical="549.472626820693" magical="223.130648399935" />
 			<attribute>
-				<defence fire="100" water="100" wind="50" earth="100" holy="100" dark="100" />
 				<attack type="EARTH" value="180" />
+				<defence fire="100" water="100" wind="50" earth="100" holy="100" dark="100" />
 			</attribute>
 			<abnormalResist physical="10" magical="10" />
 		</stats>
@@ -3754,8 +3755,8 @@
 			<attack physical="6666.76843423277" magical="723.575228990924" critical="4" attackSpeed="253" range="40" type="SWORD" distance="80" width="120" random="10" accuracy="5" />
 			<defence physical="549.298767530812" magical="223.245961396524" />
 			<attribute>
-				<defence fire="100" water="100" wind="50" earth="100" holy="100" dark="100" />
 				<attack type="EARTH" value="180" />
+				<defence fire="100" water="100" wind="50" earth="100" holy="100" dark="100" />
 			</attribute>
 			<abnormalResist physical="10" magical="10" />
 		</stats>
@@ -3824,8 +3825,8 @@
 			<attack physical="5509.83570169157" magical="182.011099117453" critical="4" attackSpeed="253" range="40" type="SWORD" distance="80" width="120" random="10" accuracy="5" />
 			<defence physical="296.045197740113" magical="278.943148552143" />
 			<attribute>
-				<defence fire="50" water="100" wind="100" earth="100" holy="100" dark="100" />
 				<attack type="WATER" value="180" />
+				<defence fire="50" water="100" wind="100" earth="100" holy="100" dark="100" />
 			</attribute>
 			<abnormalResist physical="10" magical="10" />
 		</stats>
@@ -3891,8 +3892,8 @@
 			<attack physical="6063.21632448993" magical="212.661458616305" critical="4" attackSpeed="253" range="40" type="SWORD" distance="80" width="120" random="10" accuracy="5" />
 			<defence physical="308.379888268156" magical="293.157807400852" />
 			<attribute>
-				<defence fire="100" water="100" wind="100" earth="100" holy="50" dark="100" />
 				<attack type="DARK" value="180" />
+				<defence fire="100" water="100" wind="100" earth="100" holy="50" dark="100" />
 			</attribute>
 			<abnormalResist physical="10" magical="10" />
 		</stats>
@@ -3961,8 +3962,8 @@
 			<attack physical="5777.47978111127" magical="186.726752864582" critical="4" attackSpeed="253" range="40" type="SWORD" distance="80" width="120" random="10" accuracy="5" />
 			<defence physical="302.247191011236" magical="285.904994993881" />
 			<attribute>
-				<defence fire="50" water="100" wind="100" earth="100" holy="100" dark="100" />
 				<attack type="WATER" value="180" />
+				<defence fire="50" water="100" wind="100" earth="100" holy="100" dark="100" />
 			</attribute>
 			<abnormalResist physical="10" magical="10" />
 		</stats>
@@ -4028,8 +4029,8 @@
 			<attack physical="5777.47978111127" magical="186.726752864582" critical="4" attackSpeed="253" range="40" type="SWORD" distance="80" width="120" random="10" accuracy="5" />
 			<defence physical="302.247191011236" magical="285.904994993881" />
 			<attribute>
-				<defence fire="50" water="100" wind="100" earth="100" holy="100" dark="100" />
 				<attack type="WATER" value="180" />
+				<defence fire="50" water="100" wind="100" earth="100" holy="100" dark="100" />
 			</attribute>
 			<abnormalResist physical="10" magical="10" />
 		</stats>
@@ -4096,8 +4097,8 @@
 			<attack physical="6357.87077595825" magical="216.480702582254" critical="4" attackSpeed="253" range="40" type="SWORD" distance="80" width="120" random="10" accuracy="5" />
 			<defence physical="314.444444444444" magical="300.3633696703" />
 			<attribute>
-				<defence fire="50" water="100" wind="100" earth="100" holy="100" dark="100" />
 				<attack type="WATER" value="180" />
+				<defence fire="50" water="100" wind="100" earth="100" holy="100" dark="100" />
 			</attribute>
 			<abnormalResist physical="10" magical="10" />
 		</stats>
@@ -4163,8 +4164,8 @@
 			<attack physical="6990.78534512189" magical="224.512284703074" critical="4" attackSpeed="253" range="40" type="SWORD" distance="80" width="120" random="10" accuracy="5" />
 			<defence physical="327.172827172827" magical="315.526058100316" />
 			<attribute>
-				<defence fire="100" water="100" wind="100" earth="100" holy="50" dark="100" />
 				<attack type="DARK" value="180" />
+				<defence fire="100" water="100" wind="100" earth="100" holy="50" dark="100" />
 			</attribute>
 			<abnormalResist physical="10" magical="10" />
 		</stats>
@@ -4236,8 +4237,8 @@
 			<attack physical="6666.76843423277" magical="220.454008248604" critical="4" attackSpeed="253" range="40" type="SWORD" distance="80" width="120" random="10" accuracy="5" />
 			<defence physical="320.441988950276" magical="307.986599764949" />
 			<attribute>
-				<defence fire="50" water="100" wind="100" earth="100" holy="100" dark="100" />
 				<attack type="WATER" value="180" />
+				<defence fire="50" water="100" wind="100" earth="100" holy="100" dark="100" />
 			</attribute>
 			<abnormalResist physical="10" magical="10" />
 		</stats>
@@ -4308,8 +4309,8 @@
 			<attack physical="6666.76843423277" magical="220.454008248604" critical="4" attackSpeed="253" range="40" type="SWORD" distance="80" width="120" random="10" accuracy="5" />
 			<defence physical="320.441988950276" magical="307.986599764949" />
 			<attribute>
-				<defence fire="50" water="100" wind="100" earth="100" holy="100" dark="100" />
 				<attack type="WATER" value="180" />
+				<defence fire="50" water="100" wind="100" earth="100" holy="100" dark="100" />
 			</attribute>
 			<abnormalResist physical="10" magical="10" />
 		</stats>
@@ -4379,8 +4380,8 @@
 			<attack physical="5509.83570169157" magical="182.011099117453" critical="4" attackSpeed="253" range="40" type="SWORD" distance="80" width="120" random="10" accuracy="5" />
 			<defence physical="296.045197740113" magical="278.943148552143" />
 			<attribute>
-				<defence fire="50" water="100" wind="100" earth="100" holy="100" dark="100" />
 				<attack type="WATER" value="180" />
+				<defence fire="50" water="100" wind="100" earth="100" holy="100" dark="100" />
 			</attribute>
 			<abnormalResist physical="10" magical="10" />
 		</stats>
@@ -4445,8 +4446,8 @@
 			<attack physical="6063.21632448993" magical="212.661458616305" critical="4" attackSpeed="253" range="40" type="SWORD" distance="80" width="120" random="10" accuracy="5" />
 			<defence physical="308.379888268156" magical="293.157807400852" />
 			<attribute>
-				<defence fire="100" water="100" wind="100" earth="100" holy="50" dark="100" />
 				<attack type="DARK" value="180" />
+				<defence fire="100" water="100" wind="100" earth="100" holy="50" dark="100" />
 			</attribute>
 			<abnormalResist physical="10" magical="10" />
 		</stats>
@@ -4514,8 +4515,8 @@
 			<attack physical="5777.47978111127" magical="186.726752864582" critical="4" attackSpeed="253" range="40" type="SWORD" distance="80" width="120" random="10" accuracy="5" />
 			<defence physical="302.247191011236" magical="285.904994993881" />
 			<attribute>
-				<defence fire="50" water="100" wind="100" earth="100" holy="100" dark="100" />
 				<attack type="WATER" value="180" />
+				<defence fire="50" water="100" wind="100" earth="100" holy="100" dark="100" />
 			</attribute>
 			<abnormalResist physical="10" magical="10" />
 		</stats>
@@ -4580,8 +4581,8 @@
 			<attack physical="5777.47978111127" magical="186.726752864582" critical="4" attackSpeed="253" range="40" type="SWORD" distance="80" width="120" random="10" accuracy="5" />
 			<defence physical="302.247191011236" magical="285.904994993881" />
 			<attribute>
-				<defence fire="50" water="100" wind="100" earth="100" holy="100" dark="100" />
 				<attack type="WATER" value="180" />
+				<defence fire="50" water="100" wind="100" earth="100" holy="100" dark="100" />
 			</attribute>
 			<abnormalResist physical="10" magical="10" />
 		</stats>
@@ -4647,8 +4648,8 @@
 			<attack physical="6357.87077595825" magical="216.480702582254" critical="4" attackSpeed="253" range="40" type="SWORD" distance="80" width="120" random="10" accuracy="5" />
 			<defence physical="314.444444444444" magical="300.3300330033" />
 			<attribute>
-				<defence fire="50" water="100" wind="100" earth="100" holy="100" dark="100" />
 				<attack type="WATER" value="180" />
+				<defence fire="50" water="100" wind="100" earth="100" holy="100" dark="100" />
 			</attribute>
 			<abnormalResist physical="10" magical="10" />
 		</stats>

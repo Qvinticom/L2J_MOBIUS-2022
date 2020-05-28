@@ -12,7 +12,8 @@
 			<attack physical="333994.155065416" magical="51976.9444935764" critical="4" attackSpeed="398" range="40" />
 			<defence physical="2231.41361256545" magical="1293.5220223593" />
 			<attribute>
-			<defence fire="150" water="150" wind="150" earth="150" holy="150" dark="150" default="150" />
+				<attack type="EARTH" value="400" />
+				<defence fire="400" water="400" wind="350" earth="400" holy="400" dark="400" />
 			</attribute>
 		</stats>
 		<skillList>
@@ -53,6 +54,10 @@
 			<vitals hp="63560.269845" hpRegen="9.5" mp="30165.145" mpRegen="3.3" />
 			<attack physical="59542.3510592642" magical="9095.40427545412" critical="4" attackSpeed="253" range="40" />
 			<defence physical="1988.94736842105" magical="1153.03109258294" />
+			<attribute>
+				<attack type="DARK" value="350" />
+				<defence fire="350" water="350" wind="350" earth="350" holy="300" dark="350" />
+			</attribute>
 			<speed>
 				<walk ground="56" />
 				<run ground="180" />
@@ -78,6 +83,10 @@
 			<vitals hp="63560.269845" hpRegen="9.5" mp="30638.769" mpRegen="3.3" />
 			<attack physical="59542.3510592642" magical="9095.40427545412" critical="4" attackSpeed="253" range="40" />
 			<defence physical="1988.94736842105" magical="1153.03109258294" />
+			<attribute>
+				<attack type="DARK" value="350" />
+				<defence fire="350" water="350" wind="350" earth="350" holy="300" dark="350" />
+			</attribute>
 			<speed>
 				<walk ground="36" />
 				<run ground="180" />
@@ -110,7 +119,8 @@
 			<attack physical="59542.3510592642" magical="9095.40427545412" random="10" critical="4" accuracy="5" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
 			<defence physical="1988.94736842105" magical="1153.03109258294" />
 			<attribute>
-			<defence fire="150" water="150" wind="150" earth="150" holy="150" dark="150" default="150" />
+				<attack type="DARK" value="350" />
+				<defence fire="350" water="350" wind="350" earth="350" holy="300" dark="350" />
 			</attribute>
 		</stats>
 		<collision>
@@ -133,6 +143,10 @@
 			<vitals hp="63560.269845" hpRegen="9.5" mp="30638.769" mpRegen="3.3" />
 			<attack physical="59542.3510592642" magical="9095.40427545412" critical="4" attackSpeed="253" range="40" />
 			<defence physical="1988.94736842105" magical="1153.03109258294" />
+			<attribute>
+				<attack type="DARK" value="350" />
+				<defence fire="350" water="350" wind="350" earth="350" holy="300" dark="350" />
+			</attribute>
 			<speed>
 				<walk ground="50" />
 				<run ground="180" />
@@ -158,6 +172,10 @@
 			<vitals hp="63560.269845" hpRegen="9.5" mp="30165.145" mpRegen="3.3" />
 			<attack physical="59542.3510592642" magical="9095.40427545412" critical="4" attackSpeed="253" range="40" />
 			<defence physical="1988.94736842105" magical="1153.03109258294" />
+			<attribute>
+				<attack type="DARK" value="350" />
+				<defence fire="350" water="350" wind="350" earth="350" holy="300" dark="350" />
+			</attribute>
 			<speed>
 				<walk ground="65" />
 				<run ground="180" />
@@ -184,6 +202,10 @@
 			<vitals hp="63560.269845" hpRegen="9.5" mp="30165.145" mpRegen="3.3" />
 			<attack physical="59542.3510592642" magical="9095.40427545412" critical="4" attackSpeed="253" range="40" />
 			<defence physical="1988.94736842105" magical="1153.03109258294" />
+			<attribute>
+				<attack type="DARK" value="350" />
+				<defence fire="350" water="350" wind="350" earth="350" holy="300" dark="350" />
+			</attribute>
 			<speed>
 				<walk ground="39" />
 				<run ground="180" />
@@ -215,6 +237,10 @@
 			<vitals hp="63560.269845" hpRegen="9.5" mp="30638.769" mpRegen="3.3" />
 			<attack physical="59542.3510592642" magical="9095.40427545412" critical="4" attackSpeed="253" range="40" />
 			<defence physical="1988.94736842105" magical="1153.03109258294" />
+			<attribute>
+				<attack type="DARK" value="350" />
+				<defence fire="350" water="350" wind="350" earth="350" holy="300" dark="350" />
+			</attribute>
 			<speed>
 				<walk ground="88" />
 				<run ground="180" />
@@ -246,6 +272,10 @@
 			<vitals hp="63560.269845" hpRegen="9.5" mp="30165.145" mpRegen="3.3" />
 			<attack physical="59542.3510592642" magical="9095.40427545412" critical="4" attackSpeed="253" range="40" />
 			<defence physical="1988.94736842105" magical="1153.03109258294" />
+			<attribute>
+				<attack type="DARK" value="350" />
+				<defence fire="350" water="350" wind="350" earth="350" holy="300" dark="350" />
+			</attribute>
 			<speed>
 				<walk ground="39" />
 				<run ground="180" />
@@ -277,6 +307,10 @@
 			<vitals hp="63560.269845" hpRegen="9.5" mp="30638.769" mpRegen="3.3" />
 			<attack physical="59542.3510592642" magical="9095.40427545412" critical="4" attackSpeed="253" range="40" />
 			<defence physical="1988.94736842105" magical="1153.03109258294" />
+			<attribute>
+				<attack type="DARK" value="350" />
+				<defence fire="350" water="350" wind="350" earth="350" holy="300" dark="350" />
+			</attribute>
 			<speed>
 				<walk ground="50" />
 				<run ground="180" />
@@ -309,6 +343,10 @@
 			<vitals hp="63560.269845" hpRegen="9.5" mp="30165.145" mpRegen="3.3" />
 			<attack physical="59542.3510592642" magical="9095.40427545412" critical="8" attackSpeed="253" range="400" />
 			<defence physical="1988.94736842105" magical="1153.03109258294" />
+			<attribute>
+				<attack type="DARK" value="350" />
+				<defence fire="350" water="350" wind="350" earth="350" holy="300" dark="350" />
+			</attribute>
 			<speed>
 				<walk ground="36" />
 				<run ground="180" />
@@ -344,6 +382,10 @@
 			<vitals hp="38780.4869504291" hpRegen="9.5" mp="24264.1464146415" mpRegen="3.3" />
 			<attack physical="97302.560484902" magical="14294.2160132502" random="30" critical="4" accuracy="4.75" attackSpeed="250" type="SWORD" range="40" distance="80" width="120" />
 			<defence physical="1083.46228239845" magical="628.33942968765" />
+			<attribute>
+				<attack type="FIRE" value="350" />
+				<defence fire="250" water="200" wind="250" earth="250" holy="250" dark="250" />
+			</attribute>
 			<speed>
 				<walk ground="60" />
 				<run ground="150" />
@@ -387,6 +429,10 @@
 			<vitals hp="38780.4869504291" hpRegen="9.5" mp="24264.1464146415" mpRegen="3.3" />
 			<attack physical="97302.560484902" magical="14294.2160132502" random="30" critical="4" accuracy="4.75" attackSpeed="250" type="SWORD" range="40" distance="80" width="120" />
 			<defence physical="1083.46228239845" magical="628.33942968765" />
+			<attribute>
+				<attack type="FIRE" value="350" />
+				<defence fire="250" water="200" wind="250" earth="250" holy="250" dark="250" />
+			</attribute>
 			<speed>
 				<walk ground="70" />
 				<run ground="150" />
@@ -430,6 +476,10 @@
 			<vitals hp="38400.286097974" hpRegen="9.5" mp="24026.2626262626" mpRegen="3.3" />
 			<attack physical="96348.6138134814" magical="14154.0766405713" random="30" critical="4" accuracy="4.75" attackSpeed="250" type="SWORD" range="40" distance="80" width="120" />
 			<defence physical="1072.84010315925" magical="622.179239200516" />
+			<attribute>
+				<attack type="FIRE" value="350" />
+				<defence fire="250" water="200" wind="250" earth="250" holy="250" dark="250" />
+			</attribute>
 			<speed>
 				<walk ground="13" />
 				<run ground="150" />
@@ -468,6 +518,10 @@
 			<vitals hp="38400.286097974" hpRegen="9.5" mp="24026.2626262626" mpRegen="3.3" />
 			<attack physical="96348.6138134814" magical="14154.0766405713" random="30" critical="4" accuracy="4.75" attackSpeed="250" type="SWORD" range="40" distance="80" width="120" />
 			<defence physical="1072.84010315925" magical="622.179239200516" />
+			<attribute>
+				<attack type="FIRE" value="350" />
+				<defence fire="250" water="200" wind="250" earth="250" holy="250" dark="250" />
+			</attribute>
 			<speed>
 				<walk ground="38" />
 				<run ground="150" />
@@ -506,6 +560,10 @@
 			<vitals hp="38400.286097974" hpRegen="9.5" mp="24026.2626262626" mpRegen="3.3" />
 			<attack physical="96348.6138134814" magical="14154.0766405713" random="30" critical="4" accuracy="4.75" attackSpeed="250" type="SWORD" range="40" distance="80" width="120" />
 			<defence physical="1072.84010315925" magical="622.179239200516" />
+			<attribute>
+				<attack type="FIRE" value="350" />
+				<defence fire="250" water="200" wind="250" earth="250" holy="250" dark="250" />
+			</attribute>
 			<speed>
 				<walk ground="46" />
 				<run ground="150" />
