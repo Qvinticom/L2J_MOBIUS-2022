@@ -502,7 +502,7 @@ public class VillageMasterInstance extends NpcInstance
 						}
 						else
 						{
-							html.replace("<a action=\"bypass -h npc_%objectId%_Subclass 6 1\">%sub1%</a><br>", "");
+							html.replace("<Button ALIGN=LEFT ICON=\"NORMAL\" action=\"bypass -h npc_%objectId%_Subclass 6 1\">%sub1%</Button>", "");
 						}
 						
 						if (player.getSubClasses().containsKey(2))
@@ -511,7 +511,7 @@ public class VillageMasterInstance extends NpcInstance
 						}
 						else
 						{
-							html.replace("<a action=\"bypass -h npc_%objectId%_Subclass 6 2\">%sub2%</a><br>", "");
+							html.replace("<Button ALIGN=LEFT ICON=\"NORMAL\" action=\"bypass -h npc_%objectId%_Subclass 6 2\">%sub2%</Button>", "");
 						}
 						
 						if (player.getSubClasses().containsKey(3))
@@ -520,7 +520,7 @@ public class VillageMasterInstance extends NpcInstance
 						}
 						else
 						{
-							html.replace("<a action=\"bypass -h npc_%objectId%_Subclass 6 3\">%sub3%</a><br>", "");
+							html.replace("<Button ALIGN=LEFT ICON=\"NORMAL\" action=\"bypass -h npc_%objectId%_Subclass 6 3\">%sub3%</Button>", "");
 						}
 					}
 					break;
