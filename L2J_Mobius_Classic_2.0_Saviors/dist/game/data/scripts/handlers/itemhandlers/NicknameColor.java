@@ -33,7 +33,7 @@ public class NicknameColor implements IItemHandler
 			return false;
 		}
 		
-		playable.sendPacket(new ExRequestChangeNicknameColor(item.getObjectId()));
+		playable.sendPacket(new ExRequestChangeNicknameColor(item.getId()));
 		return true;
 	}
 }

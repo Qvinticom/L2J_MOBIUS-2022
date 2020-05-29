@@ -24,11 +24,11 @@ import org.l2jmobius.gameserver.network.OutgoingPackets;
  */
 public class ExRequestChangeNicknameColor implements IClientOutgoingPacket
 {
-	private final int _itemObjectId;
+	private final int _itemId;
 	
-	public ExRequestChangeNicknameColor(int itemObjectId)
+	public ExRequestChangeNicknameColor(int itemId)
 	{
-		_itemObjectId = itemObjectId;
+		_itemId = itemId;
 	}
 	
 	@Override
@@ -36,7 +36,7 @@ public class ExRequestChangeNicknameColor implements IClientOutgoingPacket
 	{
 		OutgoingPackets.EX_CHANGE_NICKNAME_NCOLOR.writeId(packet);
 		
-		packet.writeD(_itemObjectId);
+		packet.writeD(_itemId);
 		return true;
 	}
 }

@@ -41,7 +41,7 @@ public class RequestChangeNicknameColor implements IClientIncomingPacket
 	};
 	
 	private int _colorNum;
-	private int _itemObjectId;
+	private int _itemId;
 	private String _title;
 	
 	@Override
@@ -49,7 +49,7 @@ public class RequestChangeNicknameColor implements IClientIncomingPacket
 	{
 		_colorNum = packet.readD();
 		_title = packet.readS();
-		_itemObjectId = packet.readD();
+		_itemId = packet.readD();
 		return true;
 	}
 	
@@ -67,7 +67,7 @@ public class RequestChangeNicknameColor implements IClientIncomingPacket
 			return;
 		}
 		
-		final ItemInstance item = player.getInventory().getItemByObjectId(_itemObjectId);
+		final ItemInstance item = player.getInventory().getItemByItemId(_itemId);
 		if ((item == null) || (item.getEtcItem() == null) || (item.getEtcItem().getHandlerName() == null) || !item.getEtcItem().getHandlerName().equalsIgnoreCase("NicknameColor"))
 		{
 			return;
