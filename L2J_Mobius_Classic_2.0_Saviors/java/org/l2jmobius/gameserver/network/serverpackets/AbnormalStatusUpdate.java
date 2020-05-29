@@ -49,7 +49,7 @@ public class AbnormalStatusUpdate implements IClientOutgoingPacket
 				packet.writeH(info.getSkill().getDisplayLevel());
 				// packet.writeH(info.getSkill().getSubLevel());
 				packet.writeD(info.getSkill().getAbnormalType().getClientId());
-				writeOptionalD(packet, info.getSkill().isAura() ? -1 : info.getTime());
+				writeOptionalD(packet, info.getSkill().isAura() || info.getSkill().isToggle() ? -1 : info.getTime());
 			}
 		}
 		return true;
