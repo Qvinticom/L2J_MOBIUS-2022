@@ -891,20 +891,7 @@
 		<operateType>P</operateType>
 		<magicCriticalRate>5</magicCriticalRate>
 		<effects>
-			<effect name="VampiricAttack">
-				<amount>
-					<value level="1">0</value>
-					<value level="2">0</value>
-					<value level="3">8</value>
-				</amount>
-				<chance>80</chance>
-			</effect>
 			<effect name="AttackTrait">
-				<SHOCK>
-					<value level="1">5</value>
-					<value level="2">10</value>
-					<value level="3">15</value>
-				</SHOCK>
 				<BLEED>
 					<value level="1">10</value>
 					<value level="2">15</value>
@@ -912,16 +899,16 @@
 				</BLEED>
 				<DERANGEMENT>
 					<value level="1">5</value>
-					<value level="2">15</value>
+					<value level="2">10</value>
 					<value level="3">15</value>
 				</DERANGEMENT>
+				<SHOCK>
+					<value level="1">5</value>
+					<value level="2">10</value>
+					<value level="3">15</value>
+				</SHOCK>
 			</effect>
 			<effect name="DefenceTrait">
-				<SHOCK>
-					<value level="1">5</value>
-					<value level="2">10</value>
-					<value level="3">15</value>
-				</SHOCK>
 				<BLEED>
 					<value level="1">10</value>
 					<value level="2">15</value>
@@ -932,6 +919,19 @@
 					<value level="2">10</value>
 					<value level="3">15</value>
 				</DERANGEMENT>
+				<SHOCK>
+					<value level="1">5</value>
+					<value level="2">10</value>
+					<value level="3">15</value>
+				</SHOCK>
+			</effect>
+			<effect name="HealEffect">
+				<amount>
+					<value level="1">4</value>
+					<value level="2">6</value>
+					<value level="3">8</value>
+				</amount>
+				<mode>PER</mode>
 			</effect>
 			<effect name="HpRegen">
 				<amount>
@@ -941,13 +941,9 @@
 				</amount>
 				<mode>PER</mode>
 			</effect>
-			<effect name="HealEffect">
-				<amount>
-					<value level="1">4</value>
-					<value level="2">6</value>
-					<value level="3">10</value>
-				</amount>
-				<mode>PER</mode>
+			<effect name="VampiricAttack" fromLevel="3" toLevel="3">
+				<amount>8</amount>
+				<chance>80</chance>
 			</effect>
 		</effects>
 	</skill>
