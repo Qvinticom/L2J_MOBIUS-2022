@@ -29,7 +29,7 @@ import org.l2jmobius.gameserver.model.skills.Skill;
 import org.l2jmobius.gameserver.network.OutgoingPackets;
 
 /**
- * @author Sdw
+ * @author Sdw, Mobius
  */
 public class AcquireSkillList implements IClientOutgoingPacket
 {
@@ -63,14 +63,14 @@ public class AcquireSkillList implements IClientOutgoingPacket
 			packet.writeD(skill.getSkillLevel());
 			packet.writeQ(skill.getLevelUpSp());
 			packet.writeC(skill.getGetLevel());
-			packet.writeH(skill.getDualClassLevel()); // Salvation: Changed from byte to short.
+			packet.writeC(skill.getDualClassLevel());
+			packet.writeC(_player.getKnownSkill(skill.getSkillId()) != null ? 0x00 : 0x01);
 			packet.writeC(skill.getRequiredItems().size());
 			for (ItemHolder item : skill.getRequiredItems())
 			{
 				packet.writeD(item.getId());
 				packet.writeQ(item.getCount());
 			}
-			
 			final List<Skill> skillRem = skill.getRemoveSkills().stream().map(_player::getKnownSkill).filter(Objects::nonNull).collect(Collectors.toList());
 			packet.writeC(skillRem.size());
 			for (Skill skillRemove : skillRem)

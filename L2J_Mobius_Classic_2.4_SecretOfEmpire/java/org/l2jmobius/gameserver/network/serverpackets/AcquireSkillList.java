@@ -27,7 +27,6 @@ import org.l2jmobius.gameserver.network.OutgoingPackets;
 
 /**
  * @author Sdw, Mobius
- * @version Classic 2.0
  */
 public class AcquireSkillList implements IClientOutgoingPacket
 {
@@ -61,11 +60,13 @@ public class AcquireSkillList implements IClientOutgoingPacket
 			{
 				continue;
 			}
+			
 			packet.writeD(skill.getSkillId());
 			packet.writeH(skill.getSkillLevel());
 			packet.writeQ(skill.getLevelUpSp());
 			packet.writeC(skill.getGetLevel());
-			packet.writeH(0x00); // Salvation: Changed from byte to short.
+			packet.writeC(0x00); // Skill dual class level.
+			packet.writeC(_player.getKnownSkill(skill.getSkillId()) != null ? 0x00 : 0x01);
 			if (skill.getRequiredItems().size() > 0)
 			{
 				for (ItemHolder item : skill.getRequiredItems())
