@@ -122,7 +122,7 @@ public class OlyManager extends AbstractNpcAI implements IBypassHandler
 							htmltext = getHtm(player, "OlyManager-joinMatchClass.html");
 							break;
 						}
-						default:// Rest is only 1v1 non-class matches
+						default: // Rest is only 1v1 non-class matches
 						{
 							htmltext = getHtm(player, "OlyManager-joinMatch.html");
 							break;

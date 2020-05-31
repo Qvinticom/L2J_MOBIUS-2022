@@ -71,15 +71,12 @@ public class Hero
 	private static final String INSERT_HERO = "INSERT INTO heroes (charId, class_id, count, played, claimed) VALUES (?,?,?,?,?)";
 	private static final String UPDATE_HERO = "UPDATE heroes SET count = ?, played = ?, claimed = ? WHERE charId = ?";
 	private static final String GET_CLAN_ALLY = "SELECT characters.clanid AS clanid, coalesce(clan_data.ally_Id, 0) AS allyId FROM characters LEFT JOIN clan_data ON clan_data.clan_id = characters.clanid WHERE characters.charId = ?";
-	// delete hero items
 	private static final String DELETE_ITEMS = "DELETE FROM items WHERE item_id IN (30392, 30393, 30394, 30395, 30396, 30397, 30398, 30399, 30400, 30401, 30402, 30403, 30404, 30405, 30372, 30373, 6842, 6611, 6612, 6613, 6614, 6615, 6616, 6617, 6618, 6619, 6620, 6621, 9388, 9389, 9390) AND owner_id NOT IN (SELECT charId FROM characters WHERE accesslevel > 0)";
 	
 	private static final Map<Integer, StatSet> HEROES = new ConcurrentHashMap<>();
 	private static final Map<Integer, StatSet> COMPLETE_HEROS = new ConcurrentHashMap<>();
-	
 	private static final Map<Integer, StatSet> HERO_COUNTS = new ConcurrentHashMap<>();
 	private static final Map<Integer, List<StatSet>> HERO_FIGHTS = new ConcurrentHashMap<>();
-	
 	private static final Map<Integer, List<StatSet>> HERO_DIARY = new ConcurrentHashMap<>();
 	private static final Map<Integer, String> HERO_MESSAGE = new ConcurrentHashMap<>();
 	
@@ -128,7 +125,6 @@ public class Hero
 				loadFights(charId);
 				loadDiary(charId);
 				loadMessage(charId);
-				
 				processHeros(ps, charId, hero);
 				HEROES.put(charId, hero);
 			}
@@ -281,7 +277,7 @@ public class Hero
 		data.set(Calendar.MILLISECOND, 0);
 		
 		final long from = data.getTimeInMillis();
-		int numberoffights = 0;
+		int numberOfFights = 0;
 		int victories = 0;
 		int losses = 0;
 		int draws = 0;
@@ -340,10 +336,8 @@ public class Hero
 								fight.set("result", "<font color=\"ffff00\">draw</font>");
 								draws++;
 							}
-							
 							fights.add(fight);
-							
-							numberoffights++;
+							numberOfFights++;
 						}
 					}
 					else if (charId == charTwoId)
@@ -374,10 +368,8 @@ public class Hero
 								fight.set("result", "<font color=\"ffff00\">draw</font>");
 								draws++;
 							}
-							
 							fights.add(fight);
-							
-							numberoffights++;
+							numberOfFights++;
 						}
 					}
 				}
@@ -389,7 +381,7 @@ public class Hero
 			HERO_COUNTS.put(charId, heroCountData);
 			HERO_FIGHTS.put(charId, fights);
 			
-			LOGGER.info("Hero System: Loaded " + numberoffights + " fights for Hero: " + CharNameTable.getInstance().getNameById(charId));
+			LOGGER.info("Hero System: Loaded " + numberOfFights + " fights for Hero: " + CharNameTable.getInstance().getNameById(charId));
 		}
 		catch (SQLException e)
 		{
@@ -631,12 +623,10 @@ public class Hero
 			{
 				player.sendInventoryUpdate(iu);
 			}
-			
 			player.broadcastUserInfo();
 		}
 		
 		deleteItemsInDb();
-		
 		HEROES.clear();
 		
 		if (newHeroes.isEmpty())
@@ -696,9 +686,9 @@ public class Hero
 						{
 							insert.setInt(1, heroId);
 							insert.setInt(2, hero.getInt(Olympiad.CLASS_ID));
-							insert.setInt(3, hero.getInt(COUNT));
-							insert.setInt(4, hero.getInt(PLAYED));
-							insert.setString(5, String.valueOf(hero.getBoolean(CLAIMED)));
+							insert.setInt(3, hero.getInt(COUNT, 0));
+							insert.setInt(4, hero.getInt(PLAYED, 0));
+							insert.setString(5, String.valueOf(hero.getBoolean(CLAIMED, false)));
 							insert.execute();
 							insert.close();
 						}
@@ -726,7 +716,6 @@ public class Hero
 											allyCrest = ClanTable.getInstance().getClan(clanId).getAllyCrestId();
 										}
 									}
-									
 									hero.set(CLAN_CREST, clanCrest);
 									hero.set(CLAN_NAME, clanName);
 									hero.set(ALLY_CREST, allyCrest);
@@ -734,17 +723,17 @@ public class Hero
 								}
 							}
 						}
-						HEROES.put(heroId, hero);
 						
+						HEROES.put(heroId, hero);
 						COMPLETE_HEROS.put(heroId, hero);
 					}
 					else
 					{
 						try (PreparedStatement statement = con.prepareStatement(UPDATE_HERO))
 						{
-							statement.setInt(1, hero.getInt(COUNT));
-							statement.setInt(2, hero.getInt(PLAYED));
-							statement.setString(3, String.valueOf(hero.getBoolean(CLAIMED)));
+							statement.setInt(1, hero.getInt(COUNT, 0));
+							statement.setInt(2, hero.getInt(PLAYED, 0));
+							statement.setString(3, String.valueOf(hero.getBoolean(CLAIMED, false)));
 							statement.setInt(4, heroId);
 							statement.execute();
 						}
@@ -773,11 +762,13 @@ public class Hero
 		{
 			return;
 		}
+		
 		// Prepare new data
 		final StatSet diaryEntry = new StatSet();
 		final String date = (new SimpleDateFormat("yyyy-MM-dd HH")).format(new Date(System.currentTimeMillis()));
 		diaryEntry.set("date", date);
 		diaryEntry.set("action", template.getName() + " was defeated");
+		
 		// Add to old list
 		list.add(diaryEntry);
 	}
@@ -792,11 +783,13 @@ public class Hero
 		{
 			return;
 		}
+		
 		// Prepare new data
 		final StatSet diaryEntry = new StatSet();
 		final String date = (new SimpleDateFormat("yyyy-MM-dd HH")).format(new Date(System.currentTimeMillis()));
 		diaryEntry.set("date", date);
 		diaryEntry.set("action", castle.getName() + " Castle was successfuly taken");
+		
 		// Add to old list
 		list.add(diaryEntry);
 	}
@@ -871,10 +864,7 @@ public class Hero
 	 */
 	public void shutdown()
 	{
-		for (int charId : HERO_MESSAGE.keySet())
-		{
-			saveHeroMessage(charId);
-		}
+		HERO_MESSAGE.keySet().forEach(this::saveHeroMessage);
 	}
 	
 	/**
@@ -926,11 +916,13 @@ public class Hero
 		player.broadcastPacket(new SocialAction(player.getObjectId(), 20016)); // Hero Animation
 		player.sendPacket(new UserInfo(player));
 		player.broadcastUserInfo();
+		
 		// Set Gained hero and reload data
 		setHeroGained(player.getObjectId());
 		loadFights(player.getObjectId());
 		loadDiary(player.getObjectId());
 		HERO_MESSAGE.put(player.getObjectId(), "");
+		
 		EventDispatcher.getInstance().notifyEvent(new OnPlayerTakeHero(player));
 		updateHeroes(false);
 	}

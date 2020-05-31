@@ -25,6 +25,7 @@ import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 import java.util.Map.Entry;
+import java.util.concurrent.ConcurrentHashMap;
 import java.util.logging.Logger;
 
 import org.l2jmobius.commons.database.DatabaseFactory;
@@ -57,9 +58,9 @@ public class Hero
 	private static final String GET_CLAN_ALLY = "SELECT characters.clanid AS clanid, coalesce(clan_data.ally_Id, 0) AS allyId FROM characters LEFT JOIN clan_data ON clan_data.clan_id = characters.clanid  WHERE characters.obj_Id = ?";
 	private static final String GET_CLAN_NAME = "SELECT clan_name FROM clan_data WHERE clan_id = (SELECT clanid FROM characters WHERE char_name = ?)";
 	private static final String DELETE_ITEMS = "DELETE FROM items WHERE item_id IN (6842, 6611, 6612, 6613, 6614, 6615, 6616, 6617, 6618, 6619, 6620, 6621) AND owner_id NOT IN (SELECT obj_id FROM characters WHERE accesslevel > 0)";
-	private static final List<Integer> _heroItems = Arrays.asList(6842, 6611, 6612, 6613, 6614, 6615, 6616, 6617, 6618, 6619, 6620, 6621);
-	private static Map<Integer, StatSet> _heroes;
-	private static Map<Integer, StatSet> _completeHeroes;
+	private static final List<Integer> HERO_ITEMS = Arrays.asList(6842, 6611, 6612, 6613, 6614, 6615, 6616, 6617, 6618, 6619, 6620, 6621);
+	private static final Map<Integer, StatSet> HEROES = new ConcurrentHashMap<>();
+	private static final Map<Integer, StatSet> COMPLETE_HEROES = new ConcurrentHashMap<>();
 	
 	public static final String COUNT = "count";
 	public static final String PLAYED = "played";
@@ -75,8 +76,6 @@ public class Hero
 	
 	private void init()
 	{
-		_heroes = new HashMap<>();
-		_completeHeroes = new HashMap<>();
 		try (Connection con = DatabaseFactory.getConnection())
 		{
 			PreparedStatement statement = null;
@@ -121,7 +120,7 @@ public class Hero
 				}
 				rset2.close();
 				statement2.close();
-				_heroes.put(charId, hero);
+				HEROES.put(charId, hero);
 			}
 			rset.close();
 			statement.close();
@@ -172,15 +171,15 @@ public class Hero
 				}
 				rset2.close();
 				statement2.close();
-				_completeHeroes.put(charId, hero);
+				COMPLETE_HEROES.put(charId, hero);
 			}
 		}
 		catch (SQLException e)
 		{
 			LOGGER.warning("Hero System: Couldnt load Heroes");
 		}
-		LOGGER.info("Hero System: Loaded " + _heroes.size() + " Heroes.");
-		LOGGER.info("Hero System: Loaded " + _completeHeroes.size() + " all time Heroes.");
+		LOGGER.info("Hero System: Loaded " + HEROES.size() + " Heroes.");
+		LOGGER.info("Hero System: Loaded " + COMPLETE_HEROES.size() + " all time Heroes.");
 	}
 	
 	public void putHero(PlayerInstance player, boolean isComplete)
@@ -192,10 +191,10 @@ public class Hero
 			newHero.set(Olympiad.CLASS_ID, player.getClassId().getId());
 			newHero.set(COUNT, 1);
 			newHero.set(PLAYED, 1);
-			_heroes.put(player.getObjectId(), newHero);
+			HEROES.put(player.getObjectId(), newHero);
 			if (isComplete)
 			{
-				_completeHeroes.put(player.getObjectId(), newHero);
+				COMPLETE_HEROES.put(player.getObjectId(), newHero);
 			}
 		}
 		catch (Exception e)
@@ -206,19 +205,19 @@ public class Hero
 	public void deleteHero(PlayerInstance player, boolean isComplete)
 	{
 		final int objId = player.getObjectId();
-		if (_heroes.containsKey(objId))
+		if (HEROES.containsKey(objId))
 		{
-			_heroes.remove(objId);
+			HEROES.remove(objId);
 		}
-		if (isComplete && _completeHeroes.containsKey(objId))
+		if (isComplete && COMPLETE_HEROES.containsKey(objId))
 		{
-			_completeHeroes.remove(objId);
+			COMPLETE_HEROES.remove(objId);
 		}
 	}
 	
 	public Map<Integer, StatSet> getHeroes()
 	{
-		return _heroes;
+		return HEROES;
 	}
 	
 	public synchronized void computeNewHeroes(List<StatSet> newHeroes)
@@ -226,9 +225,9 @@ public class Hero
 		updateHeroes(true);
 		ItemInstance[] items;
 		InventoryUpdate iu;
-		if (_heroes.size() != 0)
+		if (HEROES.size() != 0)
 		{
-			for (StatSet hero : _heroes.values())
+			for (StatSet hero : HEROES.values())
 			{
 				final String name = hero.getString(Olympiad.CHAR_NAME);
 				final PlayerInstance player = World.getInstance().getPlayer(name);
@@ -280,7 +279,7 @@ public class Hero
 						{
 							continue;
 						}
-						if (!_heroItems.contains(item.getItemId()))
+						if (!HERO_ITEMS.contains(item.getItemId()))
 						{
 							continue;
 						}
@@ -297,18 +296,20 @@ public class Hero
 				}
 			}
 		}
+		
 		if (newHeroes.isEmpty())
 		{
-			_heroes.clear();
+			HEROES.clear();
 			return;
 		}
+		
 		final Map<Integer, StatSet> heroes = new HashMap<>();
 		for (StatSet hero : newHeroes)
 		{
 			final int charId = hero.getInt(Olympiad.CHAR_ID);
-			if ((_completeHeroes != null) && _completeHeroes.containsKey(charId))
+			if ((COMPLETE_HEROES != null) && COMPLETE_HEROES.containsKey(charId))
 			{
-				final StatSet oldHero = _completeHeroes.get(charId);
+				final StatSet oldHero = COMPLETE_HEROES.get(charId);
 				final int count = oldHero.getInt(COUNT);
 				oldHero.set(COUNT, count + 1);
 				oldHero.set(PLAYED, 1);
@@ -325,11 +326,11 @@ public class Hero
 			}
 		}
 		deleteItemsInDb();
-		_heroes.clear();
-		_heroes.putAll(heroes);
+		HEROES.clear();
+		HEROES.putAll(heroes);
 		heroes.clear();
 		updateHeroes(false);
-		for (StatSet hero : _heroes.values())
+		for (StatSet hero : HEROES.values())
 		{
 			final String name = hero.getString(Olympiad.CHAR_NAME);
 			final PlayerInstance player = World.getInstance().getPlayer(name);
@@ -401,19 +402,20 @@ public class Hero
 			}
 			else
 			{
-				for (Entry<Integer, StatSet> entry : _heroes.entrySet())
+				for (Entry<Integer, StatSet> entry : HEROES.entrySet())
 				{
 					final Integer heroId = entry.getKey();
 					final StatSet hero = entry.getValue();
-					if ((_completeHeroes == null) || !_completeHeroes.containsKey(heroId))
+					if ((COMPLETE_HEROES == null) || !COMPLETE_HEROES.containsKey(heroId))
 					{
 						statement = con.prepareStatement(INSERT_HERO);
 						statement.setInt(1, heroId);
 						statement.setString(2, hero.getString(Olympiad.CHAR_NAME));
 						statement.setInt(3, hero.getInt(Olympiad.CLASS_ID));
-						statement.setInt(4, hero.getInt(COUNT));
-						statement.setInt(5, hero.getInt(PLAYED));
+						statement.setInt(4, hero.getInt(COUNT, 0));
+						statement.setInt(5, hero.getInt(PLAYED, 0));
 						statement.execute();
+						
 						statement2 = con.prepareStatement(GET_CLAN_ALLY);
 						statement2.setInt(1, heroId);
 						rset2 = statement2.executeQuery();
@@ -442,15 +444,15 @@ public class Hero
 						}
 						rset2.close();
 						statement2.close();
-						// _heroes.remove(heroId);
-						_heroes.put(heroId, hero);
-						_completeHeroes.put(heroId, hero);
+						
+						HEROES.put(heroId, hero);
+						COMPLETE_HEROES.put(heroId, hero);
 					}
 					else
 					{
 						statement = con.prepareStatement(UPDATE_HERO);
-						statement.setInt(1, hero.getInt(COUNT));
-						statement.setInt(2, hero.getInt(PLAYED));
+						statement.setInt(1, hero.getInt(COUNT, 0));
+						statement.setInt(2, hero.getInt(PLAYED, 0));
 						statement.setInt(3, heroId);
 						statement.execute();
 					}
@@ -466,7 +468,7 @@ public class Hero
 	
 	public List<Integer> getHeroItems()
 	{
-		return _heroItems;
+		return HERO_ITEMS;
 	}
 	
 	private void deleteItemsInDb()

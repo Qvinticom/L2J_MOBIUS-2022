@@ -70,15 +70,12 @@ public class Hero
 	private static final String INSERT_HERO = "INSERT INTO heroes (charId, class_id, count, played, claimed) VALUES (?,?,?,?,?)";
 	private static final String UPDATE_HERO = "UPDATE heroes SET count = ?, played = ?, claimed = ? WHERE charId = ?";
 	private static final String GET_CLAN_ALLY = "SELECT characters.clanid AS clanid, coalesce(clan_data.ally_Id, 0) AS allyId FROM characters LEFT JOIN clan_data ON clan_data.clan_id = characters.clanid WHERE characters.charId = ?";
-	// delete hero items
 	private static final String DELETE_ITEMS = "DELETE FROM items WHERE item_id IN (6842, 6611, 6612, 6613, 6614, 6615, 6616, 6617, 6618, 6619, 6620, 6621, 9388, 9389, 9390) AND owner_id NOT IN (SELECT charId FROM characters WHERE accesslevel > 0)";
 	
 	private static final Map<Integer, StatSet> HEROES = new ConcurrentHashMap<>();
 	private static final Map<Integer, StatSet> COMPLETE_HEROS = new ConcurrentHashMap<>();
-	
 	private static final Map<Integer, StatSet> HERO_COUNTS = new ConcurrentHashMap<>();
 	private static final Map<Integer, List<StatSet>> HERO_FIGHTS = new ConcurrentHashMap<>();
-	
 	private static final Map<Integer, List<StatSet>> HERO_DIARY = new ConcurrentHashMap<>();
 	private static final Map<Integer, String> HERO_MESSAGE = new ConcurrentHashMap<>();
 	
@@ -127,7 +124,6 @@ public class Hero
 				loadFights(charId);
 				loadDiary(charId);
 				loadMessage(charId);
-				
 				processHeros(ps, charId, hero);
 				HEROES.put(charId, hero);
 			}
@@ -339,9 +335,7 @@ public class Hero
 								fight.set("result", "<font color=\"ffff00\">draw</font>");
 								draws++;
 							}
-							
 							fights.add(fight);
-							
 							numberOfFights++;
 						}
 					}
@@ -373,9 +367,7 @@ public class Hero
 								fight.set("result", "<font color=\"ffff00\">draw</font>");
 								draws++;
 							}
-							
 							fights.add(fight);
-							
 							numberOfFights++;
 						}
 					}
@@ -630,12 +622,10 @@ public class Hero
 			{
 				player.sendPacket(iu);
 			}
-			
 			player.broadcastUserInfo();
 		}
 		
 		deleteItemsInDb();
-		
 		HEROES.clear();
 		
 		if (newHeroes.isEmpty())
@@ -695,9 +685,9 @@ public class Hero
 						{
 							insert.setInt(1, heroId);
 							insert.setInt(2, hero.getInt(Olympiad.CLASS_ID));
-							insert.setInt(3, hero.getInt(COUNT));
-							insert.setInt(4, hero.getInt(PLAYED));
-							insert.setString(5, String.valueOf(hero.getBoolean(CLAIMED)));
+							insert.setInt(3, hero.getInt(COUNT, 0));
+							insert.setInt(4, hero.getInt(PLAYED, 0));
+							insert.setString(5, String.valueOf(hero.getBoolean(CLAIMED, false)));
 							insert.execute();
 							insert.close();
 						}
@@ -725,7 +715,6 @@ public class Hero
 											allyCrest = ClanTable.getInstance().getClan(clanId).getAllyCrestId();
 										}
 									}
-									
 									hero.set(CLAN_CREST, clanCrest);
 									hero.set(CLAN_NAME, clanName);
 									hero.set(ALLY_CREST, allyCrest);
@@ -733,17 +722,17 @@ public class Hero
 								}
 							}
 						}
-						HEROES.put(heroId, hero);
 						
+						HEROES.put(heroId, hero);
 						COMPLETE_HEROS.put(heroId, hero);
 					}
 					else
 					{
 						try (PreparedStatement statement = con.prepareStatement(UPDATE_HERO))
 						{
-							statement.setInt(1, hero.getInt(COUNT));
-							statement.setInt(2, hero.getInt(PLAYED));
-							statement.setString(3, String.valueOf(hero.getBoolean(CLAIMED)));
+							statement.setInt(1, hero.getInt(COUNT, 0));
+							statement.setInt(2, hero.getInt(PLAYED, 0));
+							statement.setString(3, String.valueOf(hero.getBoolean(CLAIMED, false)));
 							statement.setInt(4, heroId);
 							statement.execute();
 						}
@@ -772,11 +761,13 @@ public class Hero
 		{
 			return;
 		}
+		
 		// Prepare new data
 		final StatSet diaryEntry = new StatSet();
 		final String date = (new SimpleDateFormat("yyyy-MM-dd HH")).format(new Date(System.currentTimeMillis()));
 		diaryEntry.set("date", date);
 		diaryEntry.set("action", template.getName() + " was defeated");
+		
 		// Add to old list
 		list.add(diaryEntry);
 	}
@@ -791,11 +782,13 @@ public class Hero
 		{
 			return;
 		}
+		
 		// Prepare new data
 		final StatSet diaryEntry = new StatSet();
 		final String date = (new SimpleDateFormat("yyyy-MM-dd HH")).format(new Date(System.currentTimeMillis()));
 		diaryEntry.set("date", date);
 		diaryEntry.set("action", castle.getName() + " Castle was successfuly taken");
+		
 		// Add to old list
 		list.add(diaryEntry);
 	}
@@ -923,6 +916,7 @@ public class Hero
 		player.sendPacket(new UserInfo(player));
 		player.sendPacket(new ExBrExtraUserInfo(player));
 		player.broadcastUserInfo();
+		
 		// Set Gained hero and reload data
 		setHeroGained(player.getObjectId());
 		loadFights(player.getObjectId());
