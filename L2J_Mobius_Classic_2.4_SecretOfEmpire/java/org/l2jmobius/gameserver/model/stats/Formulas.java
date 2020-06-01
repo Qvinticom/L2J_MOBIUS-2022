@@ -1396,9 +1396,10 @@ public class Formulas
 	 * @param shld
 	 * @param crit if the ATTACK have critical success
 	 * @param ss if weapon item was charged by soulshot
+	 * @param ssBlessed if shot was blessed
 	 * @return
 	 */
-	public static double calcAutoAttackDamage(Creature attacker, Creature target, byte shld, boolean crit, boolean ss)
+	public static double calcAutoAttackDamage(Creature attacker, Creature target, byte shld, boolean crit, boolean ss, boolean ssBlessed)
 	{
 		// DEFENCE CALCULATION (pDef + sDef)
 		double defence = target.getPDef();
@@ -1423,10 +1424,10 @@ public class Formulas
 		final double cAtk = crit ? calcCritDamage(attacker, target, null) : 1;
 		final double cAtkAdd = crit ? calcCritDamageAdd(attacker, target, null) : 0;
 		final double critMod = crit ? (isRanged ? 0.5 : 1) : 0;
-		final double ssBonus = ss ? 2 * shotsBonus : 1;
-		final double random_damage = attacker.getRandomDamageMultiplier();
+		final double ssBonus = ss ? (ssBlessed ? 2.15 : 2) * shotsBonus : 1;
+		final double randomDamage = attacker.getRandomDamageMultiplier();
 		final double proxBonus = (attacker.isInFrontOf(target) ? 0 : (attacker.isBehind(target) ? 0.2 : 0.05)) * attacker.getPAtk();
-		double attack = (attacker.getPAtk() * random_damage) + proxBonus;
+		double attack = (attacker.getPAtk() * randomDamage) + proxBonus;
 		
 		// ....................______________Critical Section___________________...._______Non-Critical Section______
 		// ATTACK CALCULATION (((pAtk * cAtk * ss + cAtkAdd) * crit) * weaponMod) + (pAtk (1 - crit) * ss * weaponMod)

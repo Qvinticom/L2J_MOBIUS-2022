@@ -1086,7 +1086,7 @@ public abstract class Creature extends WorldObject implements ISkillsHolder, IDe
 			setHeading(Util.calculateHeadingFrom(this, target));
 			
 			// Always try to charge soulshots.
-			if (!isChargedShot(ShotType.SOULSHOTS))
+			if (!isChargedShot(ShotType.SOULSHOTS) && !isChargedShot(ShotType.BLESSED_SOULSHOTS))
 			{
 				rechargeShots(true, false, false);
 			}
@@ -1261,10 +1261,19 @@ public abstract class Creature extends WorldObject implements ISkillsHolder, IDe
 		byte shld = 0;
 		boolean crit = false;
 		boolean shotConsumed = shotConsumedValue;
+		boolean shotBlessed = false;
 		final boolean miss = Formulas.calcHitMiss(this, target);
 		if (!shotConsumed)
 		{
-			shotConsumed = !miss && unchargeShot(ShotType.SOULSHOTS);
+			if (isChargedShot(ShotType.BLESSED_SOULSHOTS))
+			{
+				shotBlessed = true;
+				shotConsumed = !miss && unchargeShot(ShotType.BLESSED_SOULSHOTS);
+			}
+			else
+			{
+				shotConsumed = !miss && unchargeShot(ShotType.SOULSHOTS);
+			}
 		}
 		
 		final int ssGrade = (shotConsumed && (weapon != null)) ? weapon.getItemGrade().ordinal() : 0;
@@ -1274,7 +1283,7 @@ public abstract class Creature extends WorldObject implements ISkillsHolder, IDe
 		{
 			shld = Formulas.calcShldUse(this, target);
 			crit = Formulas.calcCrit(_stat.getCriticalHit(), this, target, null);
-			damage = (int) Formulas.calcAutoAttackDamage(this, target, shld, crit, shotConsumed);
+			damage = (int) Formulas.calcAutoAttackDamage(this, target, shld, crit, shotConsumed, shotBlessed);
 			if (halfDamage)
 			{
 				damage /= 2;

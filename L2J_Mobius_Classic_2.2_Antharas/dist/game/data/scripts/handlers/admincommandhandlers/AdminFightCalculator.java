@@ -229,7 +229,7 @@ public class AdminFightCalculator implements IAdminCommandHandler
 			pdef1 += npcPdef1;
 			if (!calcMiss1)
 			{
-				final double calcDmg1 = Formulas.calcAutoAttackDamage(npc1, npc2, calcShld1, calcCrit1, false);
+				final double calcDmg1 = Formulas.calcAutoAttackDamage(npc1, npc2, calcShld1, calcCrit1, false, false);
 				dmg1 += calcDmg1;
 				npc1.abortAttack();
 			}
@@ -261,7 +261,7 @@ public class AdminFightCalculator implements IAdminCommandHandler
 			pdef2 += npcPdef2;
 			if (!calcMiss2)
 			{
-				final double calcDmg2 = Formulas.calcAutoAttackDamage(npc2, npc1, calcShld2, calcCrit2, false);
+				final double calcDmg2 = Formulas.calcAutoAttackDamage(npc2, npc1, calcShld2, calcCrit2, false, false);
 				dmg2 += calcDmg2;
 				npc2.abortAttack();
 			}
