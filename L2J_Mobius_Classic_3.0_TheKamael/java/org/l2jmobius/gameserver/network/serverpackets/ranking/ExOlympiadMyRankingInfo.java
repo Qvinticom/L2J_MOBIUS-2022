@@ -135,8 +135,8 @@ public class ExOlympiadMyRankingInfo implements IClientOutgoingPacket
 			if (Hero.getInstance().getCompleteHeroes().containsKey(_player.getObjectId()))
 			{
 				final StatSet hero = Hero.getInstance().getCompleteHeroes().get(_player.getObjectId());
-				heroCount = hero.getInt("count");
-				legendCount = hero.getInt("legend_count");
+				heroCount = hero.getInt("count", 0);
+				legendCount = hero.getInt("legend_count", 0);
 			}
 			
 			packet.writeD(year); // Year
