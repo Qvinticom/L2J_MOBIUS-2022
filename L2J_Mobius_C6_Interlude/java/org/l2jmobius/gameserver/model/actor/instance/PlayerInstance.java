@@ -4100,9 +4100,8 @@ public class PlayerInstance extends Playable
 	 * @param reference : WorldObject Object referencing current action like NPC selling item or previous item in transformation
 	 * @param sendMessage : boolean Specifies whether to send message to Client about this action
 	 * @param protectItem the protect item
-	 * @return boolean informing if the action was successful
 	 */
-	public boolean dropItem(String process, ItemInstance item, WorldObject reference, boolean sendMessage, boolean protectItem)
+	public void dropItem(String process, ItemInstance item, WorldObject reference, boolean sendMessage, boolean protectItem)
 	{
 		if (_freight.getItemByObjectId(item.getObjectId()) != null)
 		{
@@ -4110,7 +4109,7 @@ public class PlayerInstance extends Playable
 			sendPacket(ActionFailed.STATIC_PACKET);
 			
 			Util.handleIllegalPlayerAction(this, "Warning!! Character " + getName() + " of account " + getAccountName() + " tried to drop Freight Items", IllegalPlayerAction.PUNISH_KICK);
-			return false;
+			return;
 		}
 		
 		final ItemInstance droppedItem = _inventory.dropItem(process, item, this, reference);
@@ -4120,28 +4119,18 @@ public class PlayerInstance extends Playable
 			{
 				sendPacket(SystemMessageId.INCORRECT_ITEM_COUNT_2);
 			}
-			return false;
+			return;
 		}
 		
-		droppedItem.dropMe(this, (getClientX() + Rnd.get(50)) - 25, (getClientY() + Rnd.get(50)) - 25, getClientZ() + 20);
-		if (Config.DESTROY_DROPPED_PLAYER_ITEM && !Config.LIST_PROTECTED_ITEMS.contains(droppedItem.getItemId()))
+		droppedItem.dropMe(this, (getX() + Rnd.get(50)) - 25, (getY() + Rnd.get(50)) - 25, getZ() + 20);
+		
+		if ((Config.AUTODESTROY_ITEM_AFTER > 0) && Config.DESTROY_DROPPED_PLAYER_ITEM && !Config.LIST_PROTECTED_ITEMS.contains(droppedItem.getItemId()) && ((droppedItem.isEquipable() && Config.DESTROY_EQUIPABLE_PLAYER_ITEM) || !droppedItem.isEquipable()))
 		{
-			if (Config.AUTODESTROY_ITEM_AFTER > 0) // autodestroy enabled
-			{
-				if ((droppedItem.isEquipable() && Config.DESTROY_EQUIPABLE_PLAYER_ITEM) || !droppedItem.isEquipable())
-				{
-					ItemsAutoDestroy.getInstance().addItem(droppedItem);
-					droppedItem.setProtected(false);
-				}
-				else
-				{
-					droppedItem.setProtected(true);
-				}
-			}
-			else
-			{
-				droppedItem.setProtected(true);
-			}
+			ItemsAutoDestroy.getInstance().addItem(droppedItem);
+		}
+		if (Config.DESTROY_DROPPED_PLAYER_ITEM)
+		{
+			droppedItem.setProtected(droppedItem.isEquipable() && (!droppedItem.isEquipable() || !Config.DESTROY_EQUIPABLE_PLAYER_ITEM));
 		}
 		else
 		{
@@ -4153,7 +4142,7 @@ public class PlayerInstance extends Playable
 			droppedItem.getDropProtection().protect(this);
 		}
 		
-		// Send inventory update packet
+		// Send inventory update packet.
 		if (!Config.FORCE_INVENTORY_UPDATE)
 		{
 			final InventoryUpdate playerIU = new InventoryUpdate();
@@ -4165,20 +4154,18 @@ public class PlayerInstance extends Playable
 			sendPacket(new ItemList(this, false));
 		}
 		
-		// Update current load as well
+		// Update current load as well.
 		final StatusUpdate su = new StatusUpdate(getObjectId());
 		su.addAttribute(StatusUpdate.CUR_LOAD, getCurrentLoad());
 		sendPacket(su);
 		
-		// Sends message to client if requested
+		// Sends message to client if requested.
 		if (sendMessage)
 		{
 			final SystemMessage sm = new SystemMessage(SystemMessageId.YOU_HAVE_DROPPED_S1);
 			sm.addItemName(droppedItem.getItemId());
 			sendPacket(sm);
 		}
-		
-		return true;
 	}
 	
 	/**
@@ -4205,9 +4192,9 @@ public class PlayerInstance extends Playable
 			return null;
 		}
 		
-		final ItemInstance invitem = _inventory.getItemByObjectId(objectId);
-		final ItemInstance item = _inventory.dropItem(process, objectId, count, this, reference);
-		if (item == null)
+		final ItemInstance inventoryItem = _inventory.getItemByObjectId(objectId);
+		final ItemInstance droppedItem = _inventory.dropItem(process, objectId, count, this, reference);
+		if (droppedItem == null)
 		{
 			if (sendMessage)
 			{
@@ -4216,30 +4203,31 @@ public class PlayerInstance extends Playable
 			return null;
 		}
 		
-		item.dropMe(this, x, y, z);
-		if ((Config.AUTODESTROY_ITEM_AFTER > 0) && Config.DESTROY_DROPPED_PLAYER_ITEM && !Config.LIST_PROTECTED_ITEMS.contains(item.getItemId()) && ((item.isEquipable() && Config.DESTROY_EQUIPABLE_PLAYER_ITEM) || !item.isEquipable()))
+		droppedItem.dropMe(this, x, y, z);
+		
+		if ((Config.AUTODESTROY_ITEM_AFTER > 0) && Config.DESTROY_DROPPED_PLAYER_ITEM && !Config.LIST_PROTECTED_ITEMS.contains(droppedItem.getItemId()) && ((droppedItem.isEquipable() && Config.DESTROY_EQUIPABLE_PLAYER_ITEM) || !droppedItem.isEquipable()))
 		{
-			ItemsAutoDestroy.getInstance().addItem(item);
+			ItemsAutoDestroy.getInstance().addItem(droppedItem);
 		}
 		if (Config.DESTROY_DROPPED_PLAYER_ITEM)
 		{
-			item.setProtected(item.isEquipable() && (!item.isEquipable() || !Config.DESTROY_EQUIPABLE_PLAYER_ITEM));
+			droppedItem.setProtected(droppedItem.isEquipable() && (!droppedItem.isEquipable() || !Config.DESTROY_EQUIPABLE_PLAYER_ITEM));
 		}
 		else
 		{
-			item.setProtected(true);
+			droppedItem.setProtected(true);
 		}
 		
 		if (protectItem)
 		{
-			item.getDropProtection().protect(this);
+			droppedItem.getDropProtection().protect(this);
 		}
 		
-		// Send inventory update packet
+		// Send inventory update packet.
 		if (!Config.FORCE_INVENTORY_UPDATE)
 		{
 			final InventoryUpdate playerIU = new InventoryUpdate();
-			playerIU.addItem(invitem);
+			playerIU.addItem(inventoryItem);
 			sendPacket(playerIU);
 		}
 		else
@@ -4247,20 +4235,20 @@ public class PlayerInstance extends Playable
 			sendPacket(new ItemList(this, false));
 		}
 		
-		// Update current load as well
+		// Update current load as well.
 		final StatusUpdate su = new StatusUpdate(getObjectId());
 		su.addAttribute(StatusUpdate.CUR_LOAD, getCurrentLoad());
 		sendPacket(su);
 		
-		// Sends message to client if requested
+		// Sends message to client if requested.
 		if (sendMessage)
 		{
 			final SystemMessage sm = new SystemMessage(SystemMessageId.YOU_HAVE_DROPPED_S1);
-			sm.addItemName(item.getItemId());
+			sm.addItemName(droppedItem.getItemId());
 			sendPacket(sm);
 		}
 		
-		return item;
+		return droppedItem;
 	}
 	
 	/**
