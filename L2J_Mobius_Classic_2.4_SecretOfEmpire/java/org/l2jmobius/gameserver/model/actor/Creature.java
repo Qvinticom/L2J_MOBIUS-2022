@@ -259,7 +259,6 @@ public abstract class Creature extends WorldObject implements ISkillsHolder, IDe
 	// set by the start of attack, in game ticks
 	private volatile long _attackEndTime;
 	private volatile long _disableRangedAttackEndTime;
-	private volatile ScheduledFuture<?> _enableRangedAttackTask;
 	
 	private CreatureAI _ai = null;
 	
@@ -1017,14 +1016,7 @@ public abstract class Creature extends WorldObject implements ISkillsHolder, IDe
 					{
 						if (isPlayer())
 						{
-							if ((_enableRangedAttackTask == null) || _enableRangedAttackTask.isDone() || _enableRangedAttackTask.isCancelled())
-							{
-								_enableRangedAttackTask = ThreadPool.schedule(() ->
-								{
-									new NotifyAITask(this, CtrlEvent.EVT_READY_TO_ACT);
-									_enableRangedAttackTask = null;
-								}, 300);
-							}
+							ThreadPool.schedule(new NotifyAITask(this, CtrlEvent.EVT_READY_TO_ACT), 300);
 							sendPacket(ActionFailed.STATIC_PACKET);
 						}
 						return;
@@ -1063,14 +1055,7 @@ public abstract class Creature extends WorldObject implements ISkillsHolder, IDe
 						if (_status.getCurrentMp() < mpConsume)
 						{
 							// If PlayerInstance doesn't have enough MP, stop the attack
-							if ((_enableRangedAttackTask == null) || _enableRangedAttackTask.isDone() || _enableRangedAttackTask.isCancelled())
-							{
-								_enableRangedAttackTask = ThreadPool.schedule(() ->
-								{
-									new NotifyAITask(this, CtrlEvent.EVT_READY_TO_ACT);
-									_enableRangedAttackTask = null;
-								}, 1000);
-							}
+							ThreadPool.schedule(new NotifyAITask(this, CtrlEvent.EVT_READY_TO_ACT), 1000);
 							sendPacket(SystemMessageId.NOT_ENOUGH_MP);
 							sendPacket(ActionFailed.STATIC_PACKET);
 							return;
