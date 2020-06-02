@@ -51,9 +51,19 @@ public class HealOverTime extends AbstractEffect
 		final double maxhp = effected.getMaxRecoverableHp();
 		
 		// Not needed to set the HP and send update packet if player is already at max HP
-		if (hp >= maxhp)
+		if (_power > 0)
 		{
-			return false;
+			if (hp >= maxhp)
+			{
+				return false;
+			}
+		}
+		else
+		{
+			if ((hp - _power) <= 0)
+			{
+				return false;
+			}
 		}
 		
 		double power = _power;
@@ -67,7 +77,14 @@ public class HealOverTime extends AbstractEffect
 		}
 		
 		hp += power * getTicksMultiplier();
-		hp = Math.min(hp, maxhp);
+		if (_power > 0)
+		{
+			hp = Math.min(hp, maxhp);
+		}
+		else
+		{
+			hp = Math.max(hp, 1);
+		}
 		effected.setCurrentHp(hp, false);
 		effected.broadcastStatusUpdate(effector);
 		return skill.isToggle();

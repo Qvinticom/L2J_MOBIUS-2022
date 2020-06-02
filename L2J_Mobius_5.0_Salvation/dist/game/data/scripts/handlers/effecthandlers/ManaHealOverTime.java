@@ -48,9 +48,19 @@ public class ManaHealOverTime extends AbstractEffect
 		final double maxmp = effected.getMaxRecoverableMp();
 		
 		// Not needed to set the MP and send update packet if player is already at max MP
-		if (mp >= maxmp)
+		if (_power > 0)
 		{
-			return true;
+			if (mp >= maxmp)
+			{
+				return true;
+			}
+		}
+		else
+		{
+			if ((mp - _power) <= 0)
+			{
+				return true;
+			}
 		}
 		
 		double power = _power;
@@ -60,7 +70,14 @@ public class ManaHealOverTime extends AbstractEffect
 		}
 		
 		mp += power * getTicksMultiplier();
-		mp = Math.min(mp, maxmp);
+		if (_power > 0)
+		{
+			mp = Math.min(mp, maxmp);
+		}
+		else
+		{
+			mp = Math.max(mp, 1);
+		}
 		effected.setCurrentMp(mp, false);
 		effected.broadcastStatusUpdate(effector);
 		return skill.isToggle();

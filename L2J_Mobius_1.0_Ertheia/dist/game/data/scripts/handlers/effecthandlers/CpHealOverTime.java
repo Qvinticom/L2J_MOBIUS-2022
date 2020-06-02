@@ -48,9 +48,19 @@ public class CpHealOverTime extends AbstractEffect
 		final double maxcp = effected.getMaxRecoverableCp();
 		
 		// Not needed to set the CP and send update packet if player is already at max CP
-		if (cp >= maxcp)
+		if (_power > 0)
 		{
-			return false;
+			if (cp >= maxcp)
+			{
+				return false;
+			}
+		}
+		else
+		{
+			if ((cp - _power) <= 0)
+			{
+				return false;
+			}
 		}
 		
 		double power = _power;
@@ -60,7 +70,14 @@ public class CpHealOverTime extends AbstractEffect
 		}
 		
 		cp += power * getTicksMultiplier();
-		cp = Math.min(cp, maxcp);
+		if (_power > 0)
+		{
+			cp = Math.min(cp, maxcp);
+		}
+		else
+		{
+			cp = Math.max(cp, 1);
+		}
 		effected.setCurrentCp(cp, false);
 		effected.broadcastStatusUpdate(effector);
 		return true;
