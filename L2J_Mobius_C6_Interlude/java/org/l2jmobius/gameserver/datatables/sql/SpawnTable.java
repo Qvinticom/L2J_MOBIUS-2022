@@ -317,7 +317,13 @@ public class SpawnTable
 			{
 				try (Connection con = DatabaseFactory.getConnection())
 				{
-					final PreparedStatement statement = con.prepareStatement("DELETE FROM " + (Config.SAVE_GMSPAWN_ON_CUSTOM ? "custom_spawnlist" : "spawnlist") + " WHERE id=?");
+					PreparedStatement statement;
+					statement = con.prepareStatement("DELETE FROM spawnlist WHERE id=?");
+					statement.setInt(1, spawn.getId());
+					statement.execute();
+					statement.close();
+					
+					statement = con.prepareStatement("DELETE FROM custom_spawnlist WHERE id=?");
 					statement.setInt(1, spawn.getId());
 					statement.execute();
 					statement.close();
