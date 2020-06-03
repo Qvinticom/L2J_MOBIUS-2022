@@ -59,8 +59,8 @@ public class Q348_AnArrogantSearch extends Quest
 	// Monsters
 	private static final int LESSER_GIANT_MAGE = 20657;
 	private static final int LESSER_GIANT_ELDER = 20658;
-	private static final int PLANTINUM_TRIBE_SHAMAN = 20828;
-	private static final int PLANTINUM_TRIBE_OVERLORD = 20829;
+	private static final int PLATINUM_TRIBE_SHAMAN = 20828;
+	private static final int PLATINUM_TRIBE_OVERLORD = 20829;
 	private static final int GUARDIAN_ANGEL = 20859;
 	private static final int SEAL_ANGEL = 20860;
 	
@@ -84,9 +84,9 @@ public class Q348_AnArrogantSearch extends Quest
 		addTalkId(HANELLIN, CLAUDIA_ATHEBALDT, MARTIEN, HARNE, HOLY_ARK_OF_SECRECY_1, HOLY_ARK_OF_SECRECY_2, HOLY_ARK_OF_SECRECY_3, ARK_GUARDIAN_CORPSE, GUSTAV_ATHEBALDT, HARDIN, IASON_HEINE);
 		
 		addSpawnId(ARK_GUARDIAN_ELBEROTH, ARK_GUARDIAN_SHADOW_FANG, ANGEL_KILLER);
-		addAttackId(ARK_GUARDIAN_ELBEROTH, ARK_GUARDIAN_SHADOW_FANG, ANGEL_KILLER, PLANTINUM_TRIBE_SHAMAN, PLANTINUM_TRIBE_OVERLORD);
+		addAttackId(ARK_GUARDIAN_ELBEROTH, ARK_GUARDIAN_SHADOW_FANG, ANGEL_KILLER, PLATINUM_TRIBE_SHAMAN, PLATINUM_TRIBE_OVERLORD);
 		
-		addKillId(LESSER_GIANT_MAGE, LESSER_GIANT_ELDER, ARK_GUARDIAN_ELBEROTH, ARK_GUARDIAN_SHADOW_FANG, ANGEL_KILLER, PLANTINUM_TRIBE_SHAMAN, PLANTINUM_TRIBE_OVERLORD, GUARDIAN_ANGEL, SEAL_ANGEL);
+		addKillId(LESSER_GIANT_MAGE, LESSER_GIANT_ELDER, ARK_GUARDIAN_ELBEROTH, ARK_GUARDIAN_SHADOW_FANG, ANGEL_KILLER, PLATINUM_TRIBE_SHAMAN, PLATINUM_TRIBE_OVERLORD, GUARDIAN_ANGEL, SEAL_ANGEL);
 	}
 	
 	@Override
@@ -104,6 +104,7 @@ public class Q348_AnArrogantSearch extends Quest
 			st.setState(State.STARTED);
 			st.set("cond", "1");
 			st.set("cond", "2");
+			st.set("points", "0");
 			st.playSound(QuestState.SOUND_ACCEPT);
 		}
 		else if (event.equals("30864-09.htm"))
@@ -685,22 +686,32 @@ public class Q348_AnArrogantSearch extends Quest
 				}
 				break;
 			
-			case PLANTINUM_TRIBE_OVERLORD:
-			case PLANTINUM_TRIBE_SHAMAN:
+			case PLATINUM_TRIBE_OVERLORD:
+			case PLATINUM_TRIBE_SHAMAN:
 				final int cond = st.getInt("cond");
-				if (((cond == 24) || (cond == 25)) && (Rnd.get(500) < 1) && st.hasQuestItems(WHITE_FABRIC_TRIBE))
+				if (((cond == 24) || (cond == 25)) && st.hasQuestItems(WHITE_FABRIC_TRIBE))
 				{
-					st.takeItems(WHITE_FABRIC_TRIBE, 1);
-					st.giveItems(BLOODED_FABRIC, 1);
-					
-					if (cond != 24)
+					final int points = st.getInt("points") + ((npc.getNpcId() == PLATINUM_TRIBE_SHAMAN) ? 60 : 70);
+					if (points > ((cond == 24) ? 80000 : 100000))
 					{
-						st.playSound(QuestState.SOUND_ITEMGET);
+						st.set("points", Integer.toString(0));
+						
+						st.takeItems(WHITE_FABRIC_TRIBE, 1);
+						st.giveItems(BLOODED_FABRIC, 1);
+						
+						if (cond != 24)
+						{
+							st.playSound(QuestState.SOUND_ITEMGET);
+						}
+						else
+						{
+							st.playSound(QuestState.SOUND_FINISH);
+							st.exitQuest(true);
+						}
 					}
 					else
 					{
-						st.playSound(QuestState.SOUND_FINISH);
-						st.exitQuest(true);
+						st.set("points", Integer.toString(points));
 					}
 				}
 				break;
@@ -750,6 +761,35 @@ public class Q348_AnArrogantSearch extends Quest
 					npc.broadcastNpcSay("You do not know.. Seven seals are.. coughs");
 				}
 				_shadowFang = null;
+				break;
+			
+			case PLATINUM_TRIBE_OVERLORD:
+			case PLATINUM_TRIBE_SHAMAN:
+				if (((cond == 24) || (cond == 25)) && st.hasQuestItems(WHITE_FABRIC_TRIBE))
+				{
+					final int points = st.getInt("points") + ((npc.getNpcId() == PLATINUM_TRIBE_SHAMAN) ? 600 : 700);
+					if (points > ((cond == 24) ? 80000 : 100000))
+					{
+						st.set("points", Integer.toString(0));
+						
+						st.takeItems(WHITE_FABRIC_TRIBE, 1);
+						st.giveItems(BLOODED_FABRIC, 1);
+						
+						if (cond != 24)
+						{
+							st.playSound(QuestState.SOUND_ITEMGET);
+						}
+						else
+						{
+							st.playSound(QuestState.SOUND_FINISH);
+							st.exitQuest(true);
+						}
+					}
+					else
+					{
+						st.set("points", Integer.toString(points));
+					}
+				}
 				break;
 			
 			case SEAL_ANGEL:
