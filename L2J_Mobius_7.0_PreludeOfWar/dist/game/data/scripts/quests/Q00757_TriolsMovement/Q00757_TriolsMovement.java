@@ -55,7 +55,7 @@ public class Q00757_TriolsMovement extends Quest
 	private static final int TOTEM_COUNT = 100;
 	private static final int SOUL_COUNT = 300;
 	// Reward
-	private static final int DIVINE_BOX = 46432;
+	private static final int DIVINE_BOX = 36232;
 	private static final int ADENA = 57;
 	// Misc
 	private static final int MIN_LEVEL = 97;
