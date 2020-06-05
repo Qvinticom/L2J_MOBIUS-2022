@@ -18,53 +18,45 @@ package org.l2jmobius.gameserver.network.serverpackets;
 
 import org.l2jmobius.gameserver.model.actor.Creature;
 
-/**
- * sample 0000: 5a d8 a8 10 48 d8 a8 10 48 10 04 00 00 01 00 00 Z...H...H....... 0010: 00 f0 1a 00 00 68 28 00 00 .....h(.. format dddddd dddh (h)
- * @version $Revision: 1.4.2.1.2.4 $ $Date: 2005/03/27 15:29:39 $
- */
 public class MagicSkillUse extends GameServerPacket
 {
-	private int _targetId;
-	private final int _skillId;
-	private final int _skillLevel;
-	private final int _hitTime;
-	private final int _reuseDelay;
 	private final int _objectId;
 	private final int _x;
 	private final int _y;
 	private final int _z;
+	private final int _targetId;
+	private final int _targetx;
+	private final int _targety;
+	private final int _targetz;
+	private final int _skillId;
+	private final int _skillLevel;
+	private final int _hitTime;
+	private final int _reuseDelay;
 	
 	public MagicSkillUse(Creature creature, Creature target, int skillId, int skillLevel, int hitTime, int reuseDelay)
 	{
 		_objectId = creature.getObjectId();
+		_x = creature.getX();
+		_y = creature.getY();
+		_z = creature.getZ();
 		if (target != null)
 		{
 			_targetId = target.getObjectId();
+			_targetx = target.getX();
+			_targety = target.getY();
+			_targetz = target.getZ();
 		}
 		else
 		{
 			_targetId = creature.getTargetId();
+			_targetx = creature.getX();
+			_targety = creature.getY();
+			_targetz = creature.getZ();
 		}
 		_skillId = skillId;
 		_skillLevel = skillLevel;
 		_hitTime = hitTime;
 		_reuseDelay = reuseDelay;
-		_x = creature.getX();
-		_y = creature.getY();
-		_z = creature.getZ();
-	}
-	
-	public MagicSkillUse(Creature creature, int skillId, int skillLevel, int hitTime, int reuseDelay)
-	{
-		_objectId = creature.getObjectId();
-		_targetId = creature.getTargetId();
-		_skillId = skillId;
-		_skillLevel = skillLevel;
-		_hitTime = hitTime;
-		_reuseDelay = reuseDelay;
-		_x = creature.getX();
-		_y = creature.getY();
-		_z = creature.getZ();
 	}
 	
 	@Override
@@ -80,12 +72,17 @@ public class MagicSkillUse extends GameServerPacket
 		writeD(_x);
 		writeD(_y);
 		writeD(_z);
-		writeH(0x00); // unknown loop but not AoE
-		// for()
+		// if (_critical) // ?
 		// {
-		writeH(0x00);
-		writeH(0x00);
-		writeH(0x00);
+		// writeD(0x01);
+		// writeH(0x00);
 		// }
+		// else
+		// {
+		writeD(0x00);
+		// }
+		writeD(_targetx);
+		writeD(_targety);
+		writeD(_targetz);
 	}
 }

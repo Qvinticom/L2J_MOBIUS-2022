@@ -377,17 +377,18 @@ public class Wedding implements IVoicedCommandHandler
 		activeChar.sendMessage("After " + (teleportTimer / 60000) + " min. you will be teleported to your fiance.");
 		activeChar.getInventory().reduceAdena("Wedding", Config.WEDDING_TELEPORT_PRICE, activeChar, null);
 		activeChar.getAI().setIntention(CtrlIntention.AI_INTENTION_IDLE);
+		
 		// SoE Animation section
 		activeChar.setTarget(activeChar);
 		activeChar.disableAllSkills();
 		
-		Broadcast.toSelfAndKnownPlayersInRadius(activeChar, new MagicSkillUse(activeChar, 1050, 1, teleportTimer, 0), 810000/* 900 */);
+		// Cast escape animation.
+		Broadcast.toSelfAndKnownPlayersInRadius(activeChar, new MagicSkillUse(activeChar, activeChar, 1050, 1, teleportTimer, 0), 810000 /* 900 */);
 		activeChar.sendPacket(new SetupGauge(0, teleportTimer));
-		// End SoE Animation section
 		
-		final EscapeFinalizer ef = new EscapeFinalizer(activeChar, partner.getX(), partner.getY(), partner.getZ(), partner.isIn7sDungeon());
-		// continue execution later
-		activeChar.setSkillCast(ThreadPool.schedule(ef, teleportTimer));
+		// Continue execution later.
+		final EscapeFinalizer escapeFinalizer = new EscapeFinalizer(activeChar, partner.getX(), partner.getY(), partner.getZ(), partner.isIn7sDungeon());
+		activeChar.setSkillCast(ThreadPool.schedule(escapeFinalizer, teleportTimer));
 		activeChar.setSkillCastEndTime(10 + GameTimeController.getGameTicks() + (teleportTimer / GameTimeController.MILLIS_IN_TICK));
 		return true;
 	}

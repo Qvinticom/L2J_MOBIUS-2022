@@ -17,7 +17,6 @@
 package org.l2jmobius.gameserver.handler.itemhandlers;
 
 import org.l2jmobius.gameserver.handler.IItemHandler;
-import org.l2jmobius.gameserver.model.WorldObject;
 import org.l2jmobius.gameserver.model.actor.Playable;
 import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
 import org.l2jmobius.gameserver.model.items.Item;
@@ -92,12 +91,7 @@ public class FishShots implements IItemHandler
 		
 		weaponInst.setChargedFishshot(true);
 		player.destroyItemWithoutTrace("Consume", item.getObjectId(), 1, null, false);
-		final WorldObject oldTarget = player.getTarget();
-		player.setTarget(player);
-		
-		final MagicSkillUse msu = new MagicSkillUse(player, SKILL_IDS[grade], 1, 0, 0);
-		Broadcast.toSelfAndKnownPlayers(player, msu);
-		player.setTarget(oldTarget);
+		Broadcast.toSelfAndKnownPlayers(player, new MagicSkillUse(player, player, SKILL_IDS[grade], 1, 0, 0));
 	}
 	
 	@Override

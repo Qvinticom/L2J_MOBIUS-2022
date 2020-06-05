@@ -82,7 +82,7 @@ public class Escape implements IUserCommandHandler
 		// Check to see if the current player is in Grandboss zone.
 		if ((GrandBossManager.getInstance().getZone(player) != null) && !player.isGM())
 		{
-			player.sendMessage("You may not use an escape command in Grand boss zone.");
+			player.sendMessage("You may not use an escape command in a grand boss zone.");
 			return false;
 		}
 		
@@ -96,14 +96,14 @@ public class Escape implements IUserCommandHandler
 		// Check to see if the current player is in fun event.
 		if (player.isInFunEvent())
 		{
-			player.sendMessage("You may not escape from an Event.");
+			player.sendMessage("You may not escape from an event.");
 			return false;
 		}
 		
 		// Check to see if the current player is in Observer Mode.
 		if (player.inObserverMode())
 		{
-			player.sendMessage("You may not escape during Observer mode.");
+			player.sendMessage("You may not escape during observer mode.");
 			return false;
 		}
 		
@@ -129,23 +129,26 @@ public class Escape implements IUserCommandHandler
 			player.sendMessage("You use Escape: " + (unstuckTimer / 60000) + " minutes.");
 		}
 		
+		// Abort combat.
 		player.getAI().setIntention(CtrlIntention.AI_INTENTION_IDLE);
-		// SoE Animation section
-		player.setTarget(player);
+		player.abortAttack();
+		player.abortCast(true);
 		player.disableAllSkills();
+		player.setTarget(null); // Like retail we haven't self target.
 		
-		player.setTarget(null); // Like retail we haven't self target
-		Broadcast.toSelfAndKnownPlayersInRadius(player, new MagicSkillUse(player, 1050, 1, unstuckTimer, 0), 810000);
+		// Cast escape animation.
+		Broadcast.toSelfAndKnownPlayersInRadius(player, new MagicSkillUse(player, player, 1050, 1, unstuckTimer, 0), 810000);
 		player.sendPacket(new SetupGauge(0, unstuckTimer));
-		// End SoE Animation section
-		final EscapeFinalizer ef = new EscapeFinalizer(player);
-		// continue execution later
-		player.setSkillCast(ThreadPool.schedule(ef, unstuckTimer));
+		
+		// Continue execution later.
+		final EscapeFinalizer escapeFinalizer = new EscapeFinalizer(player);
+		player.setSkillCast(ThreadPool.schedule(escapeFinalizer, unstuckTimer));
 		player.setSkillCastEndTime(10 + GameTimeController.getGameTicks() + (unstuckTimer / GameTimeController.MILLIS_IN_TICK));
+		
 		return true;
 	}
 	
-	static class EscapeFinalizer implements Runnable
+	private static class EscapeFinalizer implements Runnable
 	{
 		private final PlayerInstance _player;
 		

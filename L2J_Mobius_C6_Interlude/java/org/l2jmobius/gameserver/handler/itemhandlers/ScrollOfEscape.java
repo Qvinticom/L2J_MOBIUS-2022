@@ -27,7 +27,6 @@ import org.l2jmobius.gameserver.instancemanager.CastleManager;
 import org.l2jmobius.gameserver.instancemanager.ClanHallManager;
 import org.l2jmobius.gameserver.instancemanager.FortManager;
 import org.l2jmobius.gameserver.model.Skill;
-import org.l2jmobius.gameserver.model.WorldObject;
 import org.l2jmobius.gameserver.model.actor.Playable;
 import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
 import org.l2jmobius.gameserver.model.entity.event.CTF;
@@ -166,8 +165,6 @@ public class ScrollOfEscape implements IItemHandler
 			return;
 		}
 		
-		player.getAI().setIntention(CtrlIntention.AI_INTENTION_IDLE);
-		// SoE Animation section
 		// Check if this is a blessed scroll, if it is then shorten the cast time.
 		final int itemId = item.getItemId();
 		final SystemMessage sm3 = new SystemMessage(SystemMessageId.USE_S1);
@@ -180,26 +177,26 @@ public class ScrollOfEscape implements IItemHandler
 			return;
 		}
 		
-		player.disableAllSkills();
-		
-		// fix soe
-		final WorldObject oldtarget = player.getTarget();
-		player.setTarget(player);
-		
-		final Skill skill = SkillTable.getInstance().getInfo(escapeSkill, 1);
-		player.broadcastPacket(new MagicSkillUse(player, escapeSkill, 1, skill.getHitTime(), 0));
-		player.setTarget(oldtarget);
-		player.sendPacket(new SetupGauge(0, skill.getHitTime()));
-		// End SoE Animation section
-		player.setTarget(null);
-		
+		// Send consume message.
 		final SystemMessage sm = new SystemMessage(SystemMessageId.S1_HAS_DISAPPEARED);
 		sm.addItemName(itemId);
 		player.sendPacket(sm);
 		
-		final EscapeFinalizer ef = new EscapeFinalizer(player, itemId);
-		// continue execution later
-		player.setSkillCast(ThreadPool.schedule(ef, skill.getHitTime()));
+		// Abort combat.
+		player.getAI().setIntention(CtrlIntention.AI_INTENTION_IDLE);
+		player.abortAttack();
+		player.abortCast(true);
+		player.disableAllSkills();
+		
+		// Cast escape animation.
+		final Skill skill = SkillTable.getInstance().getInfo(escapeSkill, 1);
+		player.broadcastPacket(new MagicSkillUse(player, player, escapeSkill, 1, skill.getHitTime(), 0));
+		player.sendPacket(new SetupGauge(0, skill.getHitTime()));
+		player.setTarget(null);
+		
+		// Continue execution later.
+		final EscapeFinalizer escapeFinalizer = new EscapeFinalizer(player, itemId);
+		player.setSkillCast(ThreadPool.schedule(escapeFinalizer, skill.getHitTime()));
 		player.setSkillCastEndTime(10 + GameTimeController.getGameTicks() + (skill.getHitTime() / GameTimeController.MILLIS_IN_TICK));
 	}
 	
@@ -223,7 +220,6 @@ public class ScrollOfEscape implements IItemHandler
 			}
 			
 			_player.enableAllSkills();
-			
 			_player.setIn7sDungeon(false);
 			
 			try

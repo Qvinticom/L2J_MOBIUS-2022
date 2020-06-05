@@ -98,7 +98,7 @@ public class AdminPolymorph implements IAdminCommandHandler
 			if (obj instanceof Creature)
 			{
 				final Creature creature = (Creature) obj;
-				creature.broadcastPacket(new MagicSkillUse(creature, 1008, 1, 4000, 0));
+				creature.broadcastPacket(new MagicSkillUse(creature, creature, 1008, 1, 4000, 0));
 				creature.sendPacket(new SetupGauge(0, 4000));
 			}
 			

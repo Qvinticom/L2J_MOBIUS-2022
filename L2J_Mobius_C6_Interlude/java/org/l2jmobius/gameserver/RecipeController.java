@@ -368,8 +368,8 @@ public class RecipeController
 					// divided by RATE_CONSUMABLES_COST to remove craft time increase on higher consumables rates
 					_delay = (int) ((Config.ALT_GAME_CREATION_SPEED * _player.getMReuseRate(_skill) * GameTimeController.TICKS_PER_SECOND) / Config.RATE_CONSUMABLE_COST) * GameTimeController.MILLIS_IN_TICK;
 					
-					// FIXME: please fix this packet to show crafting animation (somebody)
-					_player.broadcastPacket(new MagicSkillUse(_player, _skillId, _skillLevel, _delay, 0));
+					// Show crafting animation.
+					_player.broadcastPacket(new MagicSkillUse(_player, _player, _skillId, _skillLevel, _delay, 0));
 					_player.sendPacket(new SetupGauge(0, _delay));
 					ThreadPool.schedule(this, 100 + _delay);
 				}
