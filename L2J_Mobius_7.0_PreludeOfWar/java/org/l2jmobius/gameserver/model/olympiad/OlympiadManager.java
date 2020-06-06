@@ -26,6 +26,7 @@ import java.util.concurrent.ConcurrentHashMap;
 import org.l2jmobius.Config;
 import org.l2jmobius.gameserver.enums.CategoryType;
 import org.l2jmobius.gameserver.instancemanager.AntiFeedManager;
+import org.l2jmobius.gameserver.model.StatSet;
 import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
 import org.l2jmobius.gameserver.network.SystemMessageId;
 import org.l2jmobius.gameserver.network.serverpackets.NpcHtmlMessage;
@@ -192,6 +193,22 @@ public class OlympiadManager
 		{
 			player.sendPacket(SystemMessageId.YOU_MAY_PARTICIPATE_IN_UP_TO_30_MATCHES_PER_WEEK);
 			return false;
+		}
+		
+		StatSet statDat = Olympiad.getNobleStats(charId);
+		if (statDat == null)
+		{
+			statDat = new StatSet();
+			statDat.set(Olympiad.CLASS_ID, player.getBaseClass());
+			statDat.set(Olympiad.CHAR_NAME, player.getName());
+			statDat.set(Olympiad.POINTS, Olympiad.DEFAULT_POINTS);
+			statDat.set(Olympiad.COMP_DONE, 0);
+			statDat.set(Olympiad.COMP_WON, 0);
+			statDat.set(Olympiad.COMP_LOST, 0);
+			statDat.set(Olympiad.COMP_DRAWN, 0);
+			statDat.set(Olympiad.COMP_DONE_WEEK, 0);
+			statDat.set("to_save", true);
+			Olympiad.addNobleStats(charId, statDat);
 		}
 		
 		switch (type)
