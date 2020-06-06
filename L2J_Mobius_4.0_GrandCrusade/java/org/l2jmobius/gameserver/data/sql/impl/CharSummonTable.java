@@ -196,13 +196,12 @@ public class CharSummonTable
 					final int curMp = rs.getInt("curMp");
 					final int time = rs.getInt("time");
 					
+					removeServitor(player, summonObjId);
 					skill = SkillData.getInstance().getSkill(skillId, player.getSkillLevel(skillId));
 					if (skill == null)
 					{
-						removeServitor(player, summonObjId);
 						return;
 					}
-					
 					skill.applyEffects(player, player);
 					
 					if (player.hasServitors())
@@ -223,7 +222,7 @@ public class CharSummonTable
 	
 	public void saveSummon(ServitorInstance summon)
 	{
-		if ((summon == null) || (summon.getLifeTimeRemaining() <= 0))
+		if (summon == null)
 		{
 			return;
 		}
@@ -238,7 +237,7 @@ public class CharSummonTable
 			ps.setInt(3, summon.getReferenceSkill());
 			ps.setInt(4, (int) Math.round(summon.getCurrentHp()));
 			ps.setInt(5, (int) Math.round(summon.getCurrentMp()));
-			ps.setInt(6, summon.getLifeTimeRemaining());
+			ps.setInt(6, Math.max(0, summon.getLifeTimeRemaining()));
 			ps.execute();
 		}
 		catch (Exception e)
