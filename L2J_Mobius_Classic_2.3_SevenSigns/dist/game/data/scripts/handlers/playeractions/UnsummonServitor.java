@@ -18,6 +18,7 @@ package handlers.playeractions;
 
 import org.l2jmobius.gameserver.handler.IPlayerActionHandler;
 import org.l2jmobius.gameserver.model.ActionDataHolder;
+import org.l2jmobius.gameserver.model.WorldObject;
 import org.l2jmobius.gameserver.model.actor.Summon;
 import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
 import org.l2jmobius.gameserver.network.SystemMessageId;
@@ -52,7 +53,15 @@ public class UnsummonServitor implements IPlayerActionHandler
 			
 			if (canUnsummon)
 			{
-				player.getServitors().values().forEach(s -> s.unSummon(player));
+				final WorldObject target = player.getTarget();
+				if ((target != null) && target.isSummon() && (((Summon) target).getOwner() == player))
+				{
+					((Summon) target).unSummon(player);
+				}
+				else
+				{
+					player.getServitors().values().forEach(s -> s.unSummon(player));
+				}
 			}
 		}
 		else
