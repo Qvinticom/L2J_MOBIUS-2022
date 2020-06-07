@@ -19,7 +19,8 @@ package ai.others.OlyBuffer;
 import org.l2jmobius.gameserver.model.actor.Npc;
 import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
 import org.l2jmobius.gameserver.model.holders.SkillHolder;
-import org.l2jmobius.gameserver.model.skills.SkillCaster;
+import org.l2jmobius.gameserver.model.skills.Skill;
+import org.l2jmobius.gameserver.network.serverpackets.MagicSkillUse;
 
 import ai.AbstractNpcAI;
 
@@ -73,7 +74,9 @@ public class OlyBuffer extends AbstractNpcAI
 			if (ALLOWED_BUFFS[buffId] != null)
 			{
 				npc.setScriptValue(npc.getScriptValue() + 1);
-				SkillCaster.triggerCast(npc, player, ALLOWED_BUFFS[buffId].getSkill());
+				final Skill skill = ALLOWED_BUFFS[buffId].getSkill();
+				player.sendPacket(new MagicSkillUse(npc, player, skill.getDisplayId(), skill.getLevel(), 0, 0));
+				skill.applyEffects(npc, player);
 				htmltext = "OlyBuffer-afterBuff.html";
 			}
 			if (npc.getScriptValue() >= 5)
