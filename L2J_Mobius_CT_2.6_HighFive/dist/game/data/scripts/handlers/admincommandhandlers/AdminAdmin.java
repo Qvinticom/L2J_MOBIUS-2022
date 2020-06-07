@@ -77,14 +77,14 @@ public class AdminAdmin implements IAdminCommandHandler
 		}
 		else if (command.startsWith("admin_gmliston"))
 		{
-			AdminData.getInstance().showGm(activeChar);
-			BuilderUtil.sendSysMessage(activeChar, "Registered into GM list");
+			AdminData.getInstance().addGm(activeChar, false);
+			BuilderUtil.sendSysMessage(activeChar, "Registered into GM list.");
 			AdminHtml.showAdminHtml(activeChar, "gm_menu.htm");
 		}
 		else if (command.startsWith("admin_gmlistoff"))
 		{
-			AdminData.getInstance().hideGm(activeChar);
-			BuilderUtil.sendSysMessage(activeChar, "Removed from GM list");
+			AdminData.getInstance().addGm(activeChar, true);
+			BuilderUtil.sendSysMessage(activeChar, "Removed from GM list.");
 			AdminHtml.showAdminHtml(activeChar, "gm_menu.htm");
 		}
 		else if (command.startsWith("admin_silence"))

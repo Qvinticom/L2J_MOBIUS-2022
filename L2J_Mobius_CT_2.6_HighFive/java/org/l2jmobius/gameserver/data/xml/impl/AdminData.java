@@ -250,30 +250,6 @@ public class AdminData implements IXmlReader
 	}
 	
 	/**
-	 * GM will be displayed on clients GM list.
-	 * @param player the player
-	 */
-	public void showGm(PlayerInstance player)
-	{
-		if (_gmList.containsKey(player))
-		{
-			_gmList.put(player, false);
-		}
-	}
-	
-	/**
-	 * GM will no longer be displayed on clients GM list.
-	 * @param player the player
-	 */
-	public void hideGm(PlayerInstance player)
-	{
-		if (_gmList.containsKey(player))
-		{
-			_gmList.put(player, true);
-		}
-	}
-	
-	/**
 	 * Checks if is GM online.
 	 * @param includeHidden the include hidden
 	 * @return true, if is GM online
