@@ -141,6 +141,7 @@ public class Config
 	public static boolean AGGRO_DISTANCE_CHECK_ENABLED;
 	public static int AGGRO_DISTANCE_CHECK_RANGE;
 	public static boolean AGGRO_DISTANCE_CHECK_RAIDS;
+	public static int AGGRO_DISTANCE_CHECK_RAID_RANGE;
 	public static boolean AGGRO_DISTANCE_CHECK_INSTANCES;
 	public static boolean AGGRO_DISTANCE_CHECK_RESTORE_LIFE;
 	public static boolean ALLOWFISHING;
@@ -1521,6 +1522,7 @@ public class Config
 		AGGRO_DISTANCE_CHECK_ENABLED = generalConfig.getBoolean("AggroDistanceCheckEnabled", false);
 		AGGRO_DISTANCE_CHECK_RANGE = generalConfig.getInt("AggroDistanceCheckRange", 1500);
 		AGGRO_DISTANCE_CHECK_RAIDS = generalConfig.getBoolean("AggroDistanceCheckRaids", false);
+		AGGRO_DISTANCE_CHECK_RAID_RANGE = generalConfig.getInt("AggroDistanceCheckRaidRange", 3000);
 		AGGRO_DISTANCE_CHECK_INSTANCES = generalConfig.getBoolean("AggroDistanceCheckInstances", false);
 		AGGRO_DISTANCE_CHECK_RESTORE_LIFE = generalConfig.getBoolean("AggroDistanceCheckRestoreLife", true);
 		MIN_NPC_ANIMATION = generalConfig.getInt("MinNpcAnimation", 5);

@@ -39,6 +39,7 @@ import org.l2jmobius.gameserver.model.actor.instance.DoorInstance;
 import org.l2jmobius.gameserver.model.actor.instance.FestivalMonsterInstance;
 import org.l2jmobius.gameserver.model.actor.instance.FolkInstance;
 import org.l2jmobius.gameserver.model.actor.instance.FriendlyMobInstance;
+import org.l2jmobius.gameserver.model.actor.instance.GrandBossInstance;
 import org.l2jmobius.gameserver.model.actor.instance.GuardInstance;
 import org.l2jmobius.gameserver.model.actor.instance.MinionInstance;
 import org.l2jmobius.gameserver.model.actor.instance.MonsterInstance;
@@ -602,10 +603,10 @@ public class AttackableAI extends CreatureAI
 			return;
 		}
 		
-		if (Config.AGGRO_DISTANCE_CHECK_ENABLED && _actor.isMonster() && !(_actor instanceof NpcWalkerInstance))
+		if (Config.AGGRO_DISTANCE_CHECK_ENABLED && _actor.isMonster() && !(_actor instanceof NpcWalkerInstance) && !(_actor instanceof GrandBossInstance))
 		{
 			final Spawn spawn = ((NpcInstance) _actor).getSpawn();
-			if ((spawn != null) && !_actor.isInsideRadius(spawn.getX(), spawn.getY(), spawn.getZ(), Config.AGGRO_DISTANCE_CHECK_RANGE, true, false))
+			if ((spawn != null) && !_actor.isInsideRadius(spawn.getX(), spawn.getY(), spawn.getZ(), (_actor.isRaid() ? Config.AGGRO_DISTANCE_CHECK_RAID_RANGE : Config.AGGRO_DISTANCE_CHECK_RANGE), true, false))
 			{
 				if ((Config.AGGRO_DISTANCE_CHECK_RAIDS || !_actor.isRaid()) && (Config.AGGRO_DISTANCE_CHECK_INSTANCES || (_actor.getInstanceId() == 0)))
 				{

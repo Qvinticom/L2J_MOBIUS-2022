@@ -601,10 +601,10 @@ public class AttackableAI extends CreatureAI
 			return;
 		}
 		
-		if (Config.AGGRO_DISTANCE_CHECK_ENABLED && npc.isMonster() && !npc.isWalker())
+		if (Config.AGGRO_DISTANCE_CHECK_ENABLED && npc.isMonster() && !npc.isWalker() && !(npc instanceof GrandBossInstance))
 		{
 			final Spawn spawn = npc.getSpawn();
-			if ((spawn != null) && (npc.calculateDistance3D(spawn.getLocation()) > Config.AGGRO_DISTANCE_CHECK_RANGE))
+			if ((spawn != null) && (npc.calculateDistance3D(spawn.getLocation()) > (npc.isRaid() ? Config.AGGRO_DISTANCE_CHECK_RAID_RANGE : Config.AGGRO_DISTANCE_CHECK_RANGE)))
 			{
 				if ((Config.AGGRO_DISTANCE_CHECK_RAIDS || !npc.isRaid()) && (Config.AGGRO_DISTANCE_CHECK_INSTANCES || !npc.isInInstance()))
 				{

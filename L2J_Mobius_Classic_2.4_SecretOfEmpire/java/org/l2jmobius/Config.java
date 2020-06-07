@@ -629,6 +629,7 @@ public class Config
 	public static boolean AGGRO_DISTANCE_CHECK_ENABLED;
 	public static int AGGRO_DISTANCE_CHECK_RANGE;
 	public static boolean AGGRO_DISTANCE_CHECK_RAIDS;
+	public static int AGGRO_DISTANCE_CHECK_RAID_RANGE;
 	public static boolean AGGRO_DISTANCE_CHECK_INSTANCES;
 	public static boolean AGGRO_DISTANCE_CHECK_RESTORE_LIFE;
 	public static boolean GUARD_ATTACK_AGGRO_MOB;
@@ -2033,6 +2034,7 @@ public class Config
 			AGGRO_DISTANCE_CHECK_ENABLED = NPC.getBoolean("AggroDistanceCheckEnabled", true);
 			AGGRO_DISTANCE_CHECK_RANGE = NPC.getInt("AggroDistanceCheckRange", 1500);
 			AGGRO_DISTANCE_CHECK_RAIDS = NPC.getBoolean("AggroDistanceCheckRaids", false);
+			AGGRO_DISTANCE_CHECK_RAID_RANGE = NPC.getInt("AggroDistanceCheckRaidRange", 3000);
 			AGGRO_DISTANCE_CHECK_INSTANCES = NPC.getBoolean("AggroDistanceCheckInstances", false);
 			AGGRO_DISTANCE_CHECK_RESTORE_LIFE = NPC.getBoolean("AggroDistanceCheckRestoreLife", true);
 			GUARD_ATTACK_AGGRO_MOB = NPC.getBoolean("GuardAttackAggroMob", false);
