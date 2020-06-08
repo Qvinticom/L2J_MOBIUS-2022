@@ -503,12 +503,11 @@
 	<skill id="55236" toLevel="1" name="Adventurer's Potion - Casting Spd.">
 		<!-- Increases Casting Spd. -->
 		<icon>icon.etc_potion_of_acumen2_i00</icon>
-	<!-- Increase Cast speed by 15% -->
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>1200</abnormalTime>
-		<abnormalType>ATTACK_TIME_DOWN</abnormalType>
+		<abnormalType>CASTING_TIME_DOWN</abnormalType>
 		<itemConsumeCount>1</itemConsumeCount>
-		<itemConsumeId>70102</itemConsumeId> <!-- Adventurerâ€™s Potion -->
+		<itemConsumeId>70102</itemConsumeId> <!-- Adventurer's Potion -->
 		<mpConsume>75</mpConsume>
 		<isMagic>2</isMagic> <!-- Static Skill -->
 		<magicLvl>1</magicLvl>
