@@ -310,6 +310,8 @@ public class Multisell
 				LOGGER.warning("Error in file " + f + " " + e);
 			}
 		}
+		
+		LOGGER.info("Multisell: Loaded " + _entries.size() + " Multisells.");
 	}
 	
 	protected MultiSellListContainer parseDocument(Document doc)

@@ -262,7 +262,6 @@ public class GameServer
 		Util.printSection("Economy");
 		TradeController.getInstance();
 		Multisell.getInstance();
-		LOGGER.info("Multisell: loaded.");
 		
 		Util.printSection("Clan Halls");
 		ClanHallManager.getInstance();
