@@ -581,7 +581,7 @@ public class AdminPForge implements IAdminCommandHandler
 					// TODO: Implement me!
 					// @formatter:off
 					/*bb.flip();
-					L2GameClientPacket p = (L2GameClientPacket) GameServer.gameServer.getL2GamePacketHandler().handlePacket(bb, activeChar.getClient());
+					GameClientPacket p = (GameClientPacket) GameServer.gameServer.getGamePacketHandler().handlePacket(bb, activeChar.getClient());
 					if (p != null)
 					{
 						p.setBuffers(bb, activeChar.getClient(), new NioNetStringBuffer(2000));

@@ -72,7 +72,7 @@ public class FishermanInstance extends FolkInstance
 		}
 		else
 		{
-			LOGGER.warning("possible client hacker: " + player.getName() + " attempting to buy from GM shop! (L2FishermanInstance)");
+			LOGGER.warning("Possible client hacker: " + player.getName() + " attempting to buy from GM shop! (FishermanInstance)");
 			LOGGER.warning("buylist id:" + value);
 		}
 		

@@ -5487,7 +5487,7 @@ public abstract class Creature extends WorldObject implements ISkillsHolder
 	 * <font color=#FF0000><b><u>Caution</u>: This method DOESN'T send Server->Client packet MoveToPawn/CharMoveToLocation </b></font><br>
 	 * <br>
 	 * <b><u>Example of use</u>:</b><br>
-	 * <li>AI : onIntentionMoveTo(L2CharPosition), onIntentionPickUp(WorldObject), onIntentionInteract(WorldObject)</li>
+	 * <li>AI : onIntentionMoveTo(Location), onIntentionPickUp(WorldObject), onIntentionInteract(WorldObject)</li>
 	 * <li>FollowTask</li><br>
 	 * @param xValue The X position of the destination
 	 * @param yValue The Y position of the destination

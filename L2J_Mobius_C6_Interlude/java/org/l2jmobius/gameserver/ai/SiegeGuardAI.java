@@ -45,7 +45,7 @@ import org.l2jmobius.gameserver.model.actor.instance.SiegeGuardInstance;
  */
 public class SiegeGuardAI extends CreatureAI implements Runnable
 {
-	// protected static final Logger LOGGER = Logger.getLogger(L2SiegeGuardAI.class);
+	// protected static final Logger LOGGER = Logger.getLogger(SiegeGuardAI.class);
 	
 	private static final int MAX_ATTACK_TIMEOUT = 300; // int ticks, i.e. 30 seconds
 	

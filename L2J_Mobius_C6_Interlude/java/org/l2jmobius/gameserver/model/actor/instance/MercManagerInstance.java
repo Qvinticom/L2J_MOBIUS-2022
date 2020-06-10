@@ -122,7 +122,7 @@ public class MercManagerInstance extends FolkInstance
 		}
 		else
 		{
-			LOGGER.warning("possible client hacker: " + player.getName() + " attempting to buy from GM shop! (L2MercManagerIntance)");
+			LOGGER.warning("Possible client hacker: " + player.getName() + " attempting to buy from GM shop! (MercManagerIntance)");
 			LOGGER.warning("buylist id:" + value);
 		}
 	}

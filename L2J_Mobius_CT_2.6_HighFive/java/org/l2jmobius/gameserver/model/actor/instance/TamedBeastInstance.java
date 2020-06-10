@@ -271,7 +271,7 @@ public class TamedBeastInstance extends FeedableBeastInstance
 				int totalBuffsAvailable = 0;
 				for (Skill skill : getTemplate().getSkills().values())
 				{
-					// if the skill is a buff, check if the owner has it already [ owner.getEffect(L2Skill skill) ]
+					// if the skill is a buff, check if the owner has it already [ owner.getEffect(Skill skill) ]
 					if (skill.isContinuous() && !skill.isDebuff())
 					{
 						totalBuffsAvailable++;
@@ -359,7 +359,7 @@ public class TamedBeastInstance extends FeedableBeastInstance
 		{
 			for (Skill skill : getTemplate().getSkills().values())
 			{
-				// if the skill is a debuff, check if the attacker has it already [ attacker.getEffect(L2Skill skill) ]
+				// if the skill is a debuff, check if the attacker has it already [ attacker.getEffect(Skill skill) ]
 				if (skill.isDebuff() && (Rnd.get(3) < 1) && ((attacker != null) && attacker.isAffectedBySkill(skill.getId())))
 				{
 					sitCastAndFollow(skill, attacker);
@@ -379,7 +379,7 @@ public class TamedBeastInstance extends FeedableBeastInstance
 			// if the owner has a lot of HP, then debuff the enemy with a random debuff among the available skills
 			for (Skill skill : getTemplate().getSkills().values())
 			{
-				// if the skill is a buff, check if the owner has it already [ owner.getEffect(L2Skill skill) ]
+				// if the skill is a buff, check if the owner has it already [ owner.getEffect(Skill skill) ]
 				if ((Rnd.get(5) < chance) && skill.hasEffectType(EffectType.CPHEAL, EffectType.HEAL, EffectType.MANAHEAL_BY_LEVEL, EffectType.MANAHEAL_PERCENT))
 				{
 					sitCastAndFollow(skill, _owner);
@@ -532,7 +532,7 @@ public class TamedBeastInstance extends FeedableBeastInstance
 			// get this npc's skills: getSkills()
 			for (Skill skill : _tamedBeast.getTemplate().getSkills().values())
 			{
-				// if the skill is a buff, check if the owner has it already [ owner.getEffect(L2Skill skill) ]
+				// if the skill is a buff, check if the owner has it already [ owner.getEffect(Skill skill) ]
 				if (skill.isContinuous() && !skill.isDebuff())
 				{
 					if (i++ == rand)

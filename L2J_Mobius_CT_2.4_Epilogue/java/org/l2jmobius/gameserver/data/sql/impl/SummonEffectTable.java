@@ -115,9 +115,9 @@ public class SummonEffectTable
 		removeEffects(getServitorEffects(owner, referenceSkill), skillId);
 	}
 	
-	public void applyServitorEffects(ServitorInstance l2ServitorInstance, PlayerInstance owner, int referenceSkill)
+	public void applyServitorEffects(ServitorInstance servitor, PlayerInstance owner, int referenceSkill)
 	{
-		applyEffects(l2ServitorInstance, getServitorEffects(owner, referenceSkill));
+		applyEffects(servitor, getServitorEffects(owner, referenceSkill));
 	}
 	
 	/** Pets **/
@@ -133,9 +133,9 @@ public class SummonEffectTable
 		return _petEffects.containsKey(controlObjectId);
 	}
 	
-	public void applyPetEffects(PetInstance l2PetInstance, int controlObjectId)
+	public void applyPetEffects(PetInstance pet, int controlObjectId)
 	{
-		applyEffects(l2PetInstance, _petEffects.get(controlObjectId));
+		applyEffects(pet, _petEffects.get(controlObjectId));
 	}
 	
 	public void clearPetEffects(int controlObjectId)
