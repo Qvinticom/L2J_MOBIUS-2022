@@ -66,6 +66,7 @@ import org.l2jmobius.gameserver.datatables.xml.FishData;
 import org.l2jmobius.gameserver.datatables.xml.HennaData;
 import org.l2jmobius.gameserver.datatables.xml.ManorSeedData;
 import org.l2jmobius.gameserver.datatables.xml.MapRegionData;
+import org.l2jmobius.gameserver.datatables.xml.MultisellData;
 import org.l2jmobius.gameserver.datatables.xml.PlayerTemplateData;
 import org.l2jmobius.gameserver.datatables.xml.RecipeData;
 import org.l2jmobius.gameserver.datatables.xml.StaticObjectData;
@@ -118,7 +119,6 @@ import org.l2jmobius.gameserver.model.entity.sevensigns.SevenSignsFestival;
 import org.l2jmobius.gameserver.model.entity.siege.clanhalls.BanditStrongholdSiege;
 import org.l2jmobius.gameserver.model.entity.siege.clanhalls.DevastatedCastle;
 import org.l2jmobius.gameserver.model.entity.siege.clanhalls.FortressOfResistance;
-import org.l2jmobius.gameserver.model.multisell.Multisell;
 import org.l2jmobius.gameserver.model.partymatching.PartyMatchRoomList;
 import org.l2jmobius.gameserver.model.partymatching.PartyMatchWaitingList;
 import org.l2jmobius.gameserver.model.spawn.AutoSpawn;
@@ -261,7 +261,7 @@ public class GameServer
 		
 		Util.printSection("Economy");
 		TradeController.getInstance();
-		Multisell.getInstance();
+		MultisellData.getInstance();
 		
 		Util.printSection("Clan Halls");
 		ClanHallManager.getInstance();

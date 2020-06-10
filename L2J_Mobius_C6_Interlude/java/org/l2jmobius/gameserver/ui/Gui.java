@@ -49,8 +49,8 @@ import org.l2jmobius.commons.util.LimitLinesDocumentListener;
 import org.l2jmobius.commons.util.SplashScreen;
 import org.l2jmobius.gameserver.Shutdown;
 import org.l2jmobius.gameserver.cache.HtmCache;
+import org.l2jmobius.gameserver.datatables.xml.MultisellData;
 import org.l2jmobius.gameserver.enums.ChatType;
-import org.l2jmobius.gameserver.model.multisell.Multisell;
 import org.l2jmobius.gameserver.network.serverpackets.CreatureSay;
 import org.l2jmobius.gameserver.util.Broadcast;
 import org.l2jmobius.gameserver.util.Util;
@@ -191,7 +191,7 @@ public class Gui
 		{
 			if (JOptionPane.showOptionDialog(null, "Reload multisells?", "Select an option", JOptionPane.YES_NO_OPTION, JOptionPane.QUESTION_MESSAGE, null, confirmOptions, confirmOptions[1]) == 0)
 			{
-				Multisell.getInstance().reload();
+				MultisellData.getInstance().reload();
 			}
 		});
 		mnReload.add(mntmMultisells);

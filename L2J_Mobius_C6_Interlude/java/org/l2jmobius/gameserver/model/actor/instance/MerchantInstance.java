@@ -20,9 +20,9 @@ import java.util.StringTokenizer;
 
 import org.l2jmobius.Config;
 import org.l2jmobius.gameserver.TradeController;
+import org.l2jmobius.gameserver.datatables.xml.MultisellData;
 import org.l2jmobius.gameserver.model.StoreTradeList;
 import org.l2jmobius.gameserver.model.actor.templates.NpcTemplate;
-import org.l2jmobius.gameserver.model.multisell.Multisell;
 import org.l2jmobius.gameserver.network.GameClient;
 import org.l2jmobius.gameserver.network.serverpackets.ActionFailed;
 import org.l2jmobius.gameserver.network.serverpackets.BuyList;
@@ -171,7 +171,7 @@ public class MerchantInstance extends FolkInstance
 			}
 			
 			final int val = Integer.parseInt(st.nextToken());
-			Multisell.getInstance().SeparateAndSend(val, player, false, getCastle().getTaxRate());
+			MultisellData.getInstance().SeparateAndSend(val, player, false, getCastle().getTaxRate());
 		}
 		else if (actualCommand.equalsIgnoreCase("Exc_Multisell"))
 		{
@@ -181,7 +181,7 @@ public class MerchantInstance extends FolkInstance
 			}
 			
 			final int val = Integer.parseInt(st.nextToken());
-			Multisell.getInstance().SeparateAndSend(val, player, true, getCastle().getTaxRate());
+			MultisellData.getInstance().SeparateAndSend(val, player, true, getCastle().getTaxRate());
 		}
 		else
 		{

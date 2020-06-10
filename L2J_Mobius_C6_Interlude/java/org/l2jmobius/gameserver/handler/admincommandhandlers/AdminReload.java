@@ -26,11 +26,11 @@ import org.l2jmobius.gameserver.datatables.ItemTable;
 import org.l2jmobius.gameserver.datatables.SkillTable;
 import org.l2jmobius.gameserver.datatables.sql.NpcTable;
 import org.l2jmobius.gameserver.datatables.sql.TeleportLocationTable;
+import org.l2jmobius.gameserver.datatables.xml.MultisellData;
 import org.l2jmobius.gameserver.datatables.xml.WalkerRouteData;
 import org.l2jmobius.gameserver.handler.IAdminCommandHandler;
 import org.l2jmobius.gameserver.instancemanager.QuestManager;
 import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
-import org.l2jmobius.gameserver.model.multisell.Multisell;
 import org.l2jmobius.gameserver.util.BuilderUtil;
 
 /**
@@ -63,7 +63,7 @@ public class AdminReload implements IAdminCommandHandler
 				final String type = st.nextToken();
 				if (type.equals("multisell"))
 				{
-					Multisell.getInstance().reload();
+					MultisellData.getInstance().reload();
 					sendReloadPage(activeChar);
 					BuilderUtil.sendSysMessage(activeChar, "Multisell reloaded.");
 				}

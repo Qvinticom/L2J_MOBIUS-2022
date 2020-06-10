@@ -22,6 +22,7 @@ import java.util.logging.Logger;
 
 import org.l2jmobius.Config;
 import org.l2jmobius.gameserver.datatables.ItemTable;
+import org.l2jmobius.gameserver.datatables.xml.MultisellData;
 import org.l2jmobius.gameserver.model.Augmentation;
 import org.l2jmobius.gameserver.model.actor.instance.NpcInstance;
 import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
@@ -33,7 +34,6 @@ import org.l2jmobius.gameserver.model.items.instance.ItemInstance;
 import org.l2jmobius.gameserver.model.multisell.MultiSellEntry;
 import org.l2jmobius.gameserver.model.multisell.MultiSellIngredient;
 import org.l2jmobius.gameserver.model.multisell.MultiSellListContainer;
-import org.l2jmobius.gameserver.model.multisell.Multisell;
 import org.l2jmobius.gameserver.network.SystemMessageId;
 import org.l2jmobius.gameserver.network.serverpackets.ActionFailed;
 import org.l2jmobius.gameserver.network.serverpackets.ItemList;
@@ -95,7 +95,7 @@ public class MultiSellChoose extends GameClientPacket
 			return;
 		}
 		
-		final MultiSellListContainer list = Multisell.getInstance().getList(_listId);
+		final MultiSellListContainer list = MultisellData.getInstance().getList(_listId);
 		final int selectedList = player.getMultiSellId();
 		if ((list == null) || (list.getListId() != _listId) || (selectedList != _listId))
 		{

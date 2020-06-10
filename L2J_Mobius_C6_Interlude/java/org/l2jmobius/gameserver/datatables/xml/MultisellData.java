@@ -14,7 +14,7 @@
  * You should have received a copy of the GNU General Public License
  * along with this program. If not, see <http://www.gnu.org/licenses/>.
  */
-package org.l2jmobius.gameserver.model.multisell;
+package org.l2jmobius.gameserver.datatables.xml;
 
 import java.io.File;
 import java.util.ArrayList;
@@ -33,15 +33,18 @@ import org.l2jmobius.gameserver.model.items.Armor;
 import org.l2jmobius.gameserver.model.items.Item;
 import org.l2jmobius.gameserver.model.items.Weapon;
 import org.l2jmobius.gameserver.model.items.instance.ItemInstance;
+import org.l2jmobius.gameserver.model.multisell.MultiSellEntry;
+import org.l2jmobius.gameserver.model.multisell.MultiSellIngredient;
+import org.l2jmobius.gameserver.model.multisell.MultiSellListContainer;
 import org.l2jmobius.gameserver.network.serverpackets.MultiSellList;
 
 /**
  * Multisell list manager
  * @author programmos
  */
-public class Multisell
+public class MultisellData
 {
-	private static final Logger LOGGER = Logger.getLogger(Multisell.class.getName());
+	private static final Logger LOGGER = Logger.getLogger(MultisellData.class.getName());
 	private final List<MultiSellListContainer> _entries = new ArrayList<>();
 	
 	public MultiSellListContainer getList(int id)
@@ -61,7 +64,7 @@ public class Multisell
 		return null;
 	}
 	
-	private Multisell()
+	private MultisellData()
 	{
 		parseData();
 	}
@@ -444,13 +447,13 @@ public class Multisell
 		}
 	}
 	
-	public static Multisell getInstance()
+	public static MultisellData getInstance()
 	{
 		return SingletonHolder.INSTANCE;
 	}
 	
 	private static class SingletonHolder
 	{
-		protected static final Multisell INSTANCE = new Multisell();
+		protected static final MultisellData INSTANCE = new MultisellData();
 	}
 }

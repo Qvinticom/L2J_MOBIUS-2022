@@ -16,8 +16,8 @@
  */
 package org.l2jmobius.gameserver.model.actor.instance;
 
+import org.l2jmobius.gameserver.datatables.xml.MultisellData;
 import org.l2jmobius.gameserver.model.actor.templates.NpcTemplate;
-import org.l2jmobius.gameserver.model.multisell.Multisell;
 
 /**
  * @author zabbix Lets drink to code!
@@ -35,7 +35,7 @@ public class BlacksmithInstance extends FolkInstance
 		if (command.startsWith("multisell"))
 		{
 			final int listId = Integer.parseInt(command.substring(9).trim());
-			Multisell.getInstance().SeparateAndSend(listId, player, false, getCastle().getTaxRate());
+			MultisellData.getInstance().SeparateAndSend(listId, player, false, getCastle().getTaxRate());
 		}
 		super.onBypassFeedback(player, command);
 	}

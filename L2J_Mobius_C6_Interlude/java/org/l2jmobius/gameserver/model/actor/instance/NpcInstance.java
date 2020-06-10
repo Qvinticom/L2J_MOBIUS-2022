@@ -31,6 +31,7 @@ import org.l2jmobius.gameserver.datatables.SkillTable;
 import org.l2jmobius.gameserver.datatables.sql.ClanTable;
 import org.l2jmobius.gameserver.datatables.sql.HelperBuffTable;
 import org.l2jmobius.gameserver.datatables.sql.SpawnTable;
+import org.l2jmobius.gameserver.datatables.xml.MultisellData;
 import org.l2jmobius.gameserver.datatables.xml.ZoneData;
 import org.l2jmobius.gameserver.enums.ChatType;
 import org.l2jmobius.gameserver.idfactory.IdFactory;
@@ -71,7 +72,6 @@ import org.l2jmobius.gameserver.model.items.Item;
 import org.l2jmobius.gameserver.model.items.Weapon;
 import org.l2jmobius.gameserver.model.items.instance.ItemInstance;
 import org.l2jmobius.gameserver.model.items.type.WeaponType;
-import org.l2jmobius.gameserver.model.multisell.Multisell;
 import org.l2jmobius.gameserver.model.quest.EventType;
 import org.l2jmobius.gameserver.model.quest.Quest;
 import org.l2jmobius.gameserver.model.quest.QuestState;
@@ -1307,11 +1307,11 @@ public class NpcInstance extends Creature
 		}
 		else if (command.startsWith("multisell"))
 		{
-			Multisell.getInstance().SeparateAndSend(Integer.parseInt(command.substring(9).trim()), player, false, getCastle().getTaxRate());
+			MultisellData.getInstance().SeparateAndSend(Integer.parseInt(command.substring(9).trim()), player, false, getCastle().getTaxRate());
 		}
 		else if (command.startsWith("exc_multisell"))
 		{
-			Multisell.getInstance().SeparateAndSend(Integer.parseInt(command.substring(13).trim()), player, true, getCastle().getTaxRate());
+			MultisellData.getInstance().SeparateAndSend(Integer.parseInt(command.substring(13).trim()), player, true, getCastle().getTaxRate());
 		}
 		else if (command.startsWith("Augment"))
 		{
@@ -1387,7 +1387,7 @@ public class NpcInstance extends Creature
 				}
 				else
 				{
-					Multisell.getInstance().SeparateAndSend(10010, player, false, getCastle().getTaxRate());
+					MultisellData.getInstance().SeparateAndSend(10010, player, false, getCastle().getTaxRate());
 				}
 			}
 			catch (NumberFormatException nfe)
@@ -1407,7 +1407,7 @@ public class NpcInstance extends Creature
 				}
 				else
 				{
-					Multisell.getInstance().SeparateAndSend(10011, player, false, getCastle().getTaxRate());
+					MultisellData.getInstance().SeparateAndSend(10011, player, false, getCastle().getTaxRate());
 				}
 			}
 			catch (NumberFormatException nfe)
@@ -1455,7 +1455,7 @@ public class NpcInstance extends Creature
 				}
 				else
 				{
-					Multisell.getInstance().SeparateAndSend(10012, player, false, getCastle().getTaxRate());
+					MultisellData.getInstance().SeparateAndSend(10012, player, false, getCastle().getTaxRate());
 				}
 			}
 			catch (NumberFormatException nfe)
@@ -1475,7 +1475,7 @@ public class NpcInstance extends Creature
 				}
 				else
 				{
-					Multisell.getInstance().SeparateAndSend(10013, player, false, getCastle().getTaxRate());
+					MultisellData.getInstance().SeparateAndSend(10013, player, false, getCastle().getTaxRate());
 				}
 			}
 			catch (NumberFormatException nfe)

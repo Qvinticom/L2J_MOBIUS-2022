@@ -57,6 +57,7 @@ import org.l2jmobius.gameserver.datatables.sql.NpcTable;
 import org.l2jmobius.gameserver.datatables.sql.SpawnTable;
 import org.l2jmobius.gameserver.datatables.sql.TeleportLocationTable;
 import org.l2jmobius.gameserver.datatables.xml.AdminData;
+import org.l2jmobius.gameserver.datatables.xml.MultisellData;
 import org.l2jmobius.gameserver.datatables.xml.ZoneData;
 import org.l2jmobius.gameserver.enums.ChatType;
 import org.l2jmobius.gameserver.instancemanager.DayNightSpawnManager;
@@ -74,7 +75,6 @@ import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
 import org.l2jmobius.gameserver.model.entity.Announcements;
 import org.l2jmobius.gameserver.model.itemcontainer.Inventory;
 import org.l2jmobius.gameserver.model.items.instance.ItemInstance;
-import org.l2jmobius.gameserver.model.multisell.Multisell;
 import org.l2jmobius.gameserver.network.SystemMessageId;
 import org.l2jmobius.gameserver.network.serverpackets.CharInfo;
 import org.l2jmobius.gameserver.network.serverpackets.CreatureSay;
@@ -710,7 +710,7 @@ public class GameStatusThread extends Thread
 						if (type.equals("multisell"))
 						{
 							_print.print("Reloading multisell... ");
-							Multisell.getInstance().reload();
+							MultisellData.getInstance().reload();
 							_print.println("done");
 						}
 						else if (type.equals("skill"))

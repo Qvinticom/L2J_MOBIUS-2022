@@ -21,10 +21,10 @@ import java.util.Map;
 import java.util.logging.Logger;
 
 import org.l2jmobius.Config;
+import org.l2jmobius.gameserver.datatables.xml.MultisellData;
 import org.l2jmobius.gameserver.model.actor.templates.NpcTemplate;
 import org.l2jmobius.gameserver.model.entity.olympiad.Olympiad;
 import org.l2jmobius.gameserver.model.items.instance.ItemInstance;
-import org.l2jmobius.gameserver.model.multisell.Multisell;
 import org.l2jmobius.gameserver.network.SystemMessageId;
 import org.l2jmobius.gameserver.network.serverpackets.ExHeroList;
 import org.l2jmobius.gameserver.network.serverpackets.InventoryUpdate;
@@ -148,7 +148,7 @@ public class OlympiadManagerInstance extends FolkInstance
 				}
 				case 7:
 				{
-					Multisell.getInstance().SeparateAndSend(102, player, false, getCastle().getTaxRate());
+					MultisellData.getInstance().SeparateAndSend(102, player, false, getCastle().getTaxRate());
 					break;
 				}
 				default:
