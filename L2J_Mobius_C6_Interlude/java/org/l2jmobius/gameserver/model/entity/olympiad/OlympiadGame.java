@@ -981,7 +981,7 @@ class OlympiadGame
 	
 	protected void announceGame()
 	{
-		for (Spawn manager : Olympiad.olymanagers)
+		for (Spawn manager : Olympiad.OLY_MANAGERS)
 		{
 			if ((manager != null) && (manager.getLastSpawn() != null))
 			{

@@ -62,7 +62,7 @@ public class Olympiad extends ListenersContainer
 	protected static final Logger LOGGER_OLYMPIAD = Logger.getLogger("olympiad");
 	
 	private static final Map<Integer, StatSet> NOBLES = new ConcurrentHashMap<>();
-	protected static List<StatSet> HEROS_TO_BE;
+	private static List<StatSet> HEROS_TO_BE;
 	private static Map<Integer, Integer> NOBLES_RANK = new HashMap<>();
 	private static List<PlayerInstance> _nonClassBasedRegisters;
 	private static Map<Integer, List<PlayerInstance>> _classBasedRegisters;
@@ -184,6 +184,7 @@ public class Olympiad extends ListenersContainer
 	private void load()
 	{
 		NOBLES.clear();
+		
 		boolean loaded = false;
 		try (Connection con = DatabaseFactory.getConnection();
 			PreparedStatement statement = con.prepareStatement(OLYMPIAD_LOAD_DATA);
@@ -206,13 +207,13 @@ public class Olympiad extends ListenersContainer
 		
 		if (!loaded)
 		{
-			LOGGER.log(Level.INFO, "Olympiad System: failed to load data from database, trying to load from file.");
+			// LOGGER.log(Level.INFO, "Olympiad System: failed to load data from database, trying to load from file.");
 			
 			final Properties olympiadProperties = new Properties();
 			InputStream is = null;
 			try
 			{
-				is = new FileInputStream(new File("./" + Config.OLYMPIAD_CONFIG_FILE));
+				is = new FileInputStream(new File(Config.OLYMPIAD_CONFIG_FILE));
 				olympiadProperties.load(is);
 			}
 			catch (Exception e)

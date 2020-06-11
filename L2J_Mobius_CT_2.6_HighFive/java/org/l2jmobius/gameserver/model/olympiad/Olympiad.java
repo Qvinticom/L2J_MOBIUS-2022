@@ -201,7 +201,7 @@ public class Olympiad extends ListenersContainer
 		
 		if (!loaded)
 		{
-			LOGGER.info("Olympiad System: Failed to load data from database, trying to load from file.");
+			// LOGGER.info("Olympiad System: Failed to load data from database, trying to load from file.");
 			
 			final Properties olympiadProperties = new Properties();
 			try (InputStream is = new FileInputStream(Config.OLYMPIAD_CONFIG_FILE))

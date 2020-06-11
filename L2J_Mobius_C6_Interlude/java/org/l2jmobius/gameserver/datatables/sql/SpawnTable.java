@@ -138,7 +138,7 @@ public class SpawnTable
 						}
 						if (spawnDat.getTemplate().getNpcId() == Olympiad.OLY_MANAGER)
 						{
-							Olympiad.olymanagers.add(spawnDat);
+							Olympiad.OLY_MANAGERS.add(spawnDat);
 						}
 					}
 				}
