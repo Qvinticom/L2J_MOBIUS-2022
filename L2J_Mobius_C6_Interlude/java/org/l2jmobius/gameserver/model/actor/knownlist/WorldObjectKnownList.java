@@ -64,7 +64,7 @@ public class WorldObjectKnownList
 			return false;
 		}
 		
-		return getKnownObjects().put(object.getObjectId(), object) == null;
+		return _knownObjects.put(object.getObjectId(), object) == null;
 	}
 	
 	public boolean knowsObject(WorldObject object)
@@ -73,13 +73,13 @@ public class WorldObjectKnownList
 		{
 			return false;
 		}
-		return (_activeObject == object) || getKnownObjects().containsKey(object.getObjectId());
+		return (_activeObject == object) || _knownObjects.containsKey(object.getObjectId());
 	}
 	
 	/** Remove all WorldObject from _knownObjects */
 	public void removeAllKnownObjects()
 	{
-		getKnownObjects().clear();
+		_knownObjects.clear();
 	}
 	
 	public boolean removeKnownObject(WorldObject object)
@@ -88,7 +88,7 @@ public class WorldObjectKnownList
 		{
 			return false;
 		}
-		return getKnownObjects().remove(object.getObjectId()) != null;
+		return _knownObjects.remove(object.getObjectId()) != null;
 	}
 	
 	/**
@@ -149,7 +149,7 @@ public class WorldObjectKnownList
 				}
 				
 				// Try to add object to active object's known objects
-				// Creature only needs to see visible PlayerInstance and PlayableInstance, when moving. Other l2characters are currently only known from initial spawn area.
+				// Creature only needs to see visible PlayerInstance and PlayableInstance, when moving. Other creatures are currently only known from initial spawn area.
 				// Possibly look into getDistanceToForgetObject values before modifying this approach...
 				addKnownObject(playable);
 			}
@@ -159,7 +159,7 @@ public class WorldObjectKnownList
 	public void forgetObjects()
 	{
 		// Go through knownObjects
-		for (WorldObject object : getKnownObjects().values())
+		for (WorldObject object : _knownObjects.values())
 		{
 			if (object == null)
 			{
