@@ -678,7 +678,7 @@ public class Config
 	public static int DIFFERENT_Z_NEW_MOVIE;
 	public static int HERO_CUSTOM_ITEM_ID;
 	public static int NOOBLE_CUSTOM_ITEM_ID;
-	public static int HERO_CUSTOM_DAY;
+	public static long HERO_CUSTOM_DAY;
 	public static boolean ALLOW_FARM1_COMMAND;
 	public static boolean ALLOW_FARM2_COMMAND;
 	public static boolean ALLOW_PVP1_COMMAND;
@@ -1885,7 +1885,7 @@ public class Config
 		NOOBLE_CUSTOM_ITEM_ID = customServerConfig.getInt("NoobleCustomItemId", 6673);
 		HERO_CUSTOM_ITEMS = customServerConfig.getBoolean("EnableHeroCustomItem", true);
 		HERO_CUSTOM_ITEM_ID = customServerConfig.getInt("HeroCustomItemId", 3481);
-		HERO_CUSTOM_DAY = customServerConfig.getInt("HeroCustomDay", 0);
+		HERO_CUSTOM_DAY = customServerConfig.getLong("HeroCustomDay", 0);
 		ALLOW_CREATE_LVL = customServerConfig.getBoolean("CustomStartingLvl", false);
 		CHAR_CREATE_LVL = customServerConfig.getInt("CharLvl", 80);
 		SPAWN_CHAR = customServerConfig.getBoolean("CustomSpawn", false);

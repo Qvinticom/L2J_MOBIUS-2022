@@ -43,21 +43,21 @@ public class NobleCustomItem implements IItemHandler
 			final PlayerInstance player = (PlayerInstance) playable;
 			if (player.isInOlympiadMode())
 			{
-				player.sendMessage("This Item Cannot Be Used On Olympiad Games.");
+				player.sendMessage("This item cannot be used in Olympiad mode.");
 			}
 			
 			if (player.isNoble())
 			{
-				player.sendMessage("You Are Already A Noblesse!.");
+				player.sendMessage("You are already a noblesse!");
 			}
 			else
 			{
 				player.broadcastPacket(new SocialAction(player.getObjectId(), 16));
 				player.setNoble(true);
-				player.sendMessage("You Are Now a Noble,You Are Granted With Noblesse Status , And Noblesse Skills.");
+				player.sendMessage("You are now a noble, you have been granted noblesse status and skills.");
 				player.broadcastUserInfo();
 				playable.destroyItem("Consume", item.getObjectId(), 1, null, false);
-				player.getInventory().addItem("Tiara", 7694, 1, player, null);
+				player.getInventory().addItem("NobleCustomItem", 7694, 1, player, null);
 			}
 		}
 	}

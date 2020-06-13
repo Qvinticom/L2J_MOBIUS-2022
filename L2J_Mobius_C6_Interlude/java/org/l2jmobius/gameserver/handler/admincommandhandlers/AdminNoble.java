@@ -16,11 +16,8 @@
  */
 package org.l2jmobius.gameserver.handler.admincommandhandlers;
 
-import java.sql.Connection;
-import java.sql.PreparedStatement;
 import java.util.logging.Logger;
 
-import org.l2jmobius.commons.database.DatabaseFactory;
 import org.l2jmobius.gameserver.datatables.xml.AdminData;
 import org.l2jmobius.gameserver.handler.IAdminCommandHandler;
 import org.l2jmobius.gameserver.model.WorldObject;
@@ -30,12 +27,12 @@ import org.l2jmobius.gameserver.util.BuilderUtil;
 
 public class AdminNoble implements IAdminCommandHandler
 {
+	protected static final Logger LOGGER = Logger.getLogger(AdminNoble.class.getName());
+	
 	private static final String[] ADMIN_COMMANDS =
 	{
 		"admin_setnoble"
 	};
-	
-	protected static final Logger LOGGER = Logger.getLogger(AdminNoble.class.getName());
 	
 	@Override
 	public boolean useAdminCommand(String command, PlayerInstance activeChar)
@@ -56,86 +53,32 @@ public class AdminNoble implements IAdminCommandHandler
 				{
 					targetPlayer.setNoble(true);
 					targetPlayer.sendMessage("You are now a noblesse.");
-					updateDatabase(targetPlayer, true);
-					sendMessages(true, targetPlayer, activeChar, true);
+					targetPlayer.getVariables().set("CustomNoble", true);
+					targetPlayer.sendMessage(activeChar.getName() + " has granted noble status from you!");
+					activeChar.sendMessage("You've granted noble status from " + targetPlayer.getName());
+					AdminData.broadcastMessageToGMs("Warn: " + activeChar.getName() + " has set " + targetPlayer.getName() + " as noble !");
 					targetPlayer.broadcastPacket(new SocialAction(targetPlayer.getObjectId(), 16));
 				}
 				else
 				{
 					targetPlayer.setNoble(false);
 					targetPlayer.sendMessage("You are no longer a noblesse.");
-					updateDatabase(targetPlayer, false);
-					sendMessages(false, targetPlayer, activeChar, true);
+					targetPlayer.getVariables().set("CustomNoble", false);
+					targetPlayer.sendMessage(activeChar.getName() + " has revoked noble status for you!");
+					activeChar.sendMessage("You've revoked noble status for " + targetPlayer.getName());
+					AdminData.broadcastMessageToGMs("Warn: " + activeChar.getName() + " has removed noble status of player" + targetPlayer.getName());
 				}
 			}
 			else
 			{
-				BuilderUtil.sendSysMessage(activeChar, "Impossible to set a non Player Target as noble.");
-				LOGGER.info("GM: " + activeChar.getName() + " is trying to set a non Player Target as noble.");
+				BuilderUtil.sendSysMessage(activeChar, "Impossible to set a non player target as noble.");
+				LOGGER.info("GM: " + activeChar.getName() + " is trying to set a non player target as noble.");
 				return false;
 			}
 		}
 		
 		return true;
 	}
-	
-	private void sendMessages(boolean forNewNoble, PlayerInstance player, PlayerInstance gm, boolean notifyGmList)
-	{
-		if (forNewNoble)
-		{
-			player.sendMessage(gm.getName() + " has granted Noble Status from you!");
-			gm.sendMessage("You've granted Noble Status from " + player.getName());
-			if (notifyGmList)
-			{
-				AdminData.broadcastMessageToGMs("Warn: " + gm.getName() + " has set " + player.getName() + " as Noble !");
-			}
-		}
-		else
-		{
-			player.sendMessage(gm.getName() + " has revoked Noble Status for you!");
-			gm.sendMessage("You've revoked Noble Status for " + player.getName());
-			if (notifyGmList)
-			{
-				AdminData.broadcastMessageToGMs("Warn: " + gm.getName() + " has removed Noble Status of player" + player.getName());
-			}
-		}
-	}
-	
-	private void updateDatabase(PlayerInstance player, boolean newNoble)
-	{
-		if (player == null)
-		{
-			return;
-		}
-		
-		try (Connection con = DatabaseFactory.getConnection())
-		{
-			final PreparedStatement stmt = con.prepareStatement(newNoble ? INSERT_DATA : DEL_DATA);
-			if (newNoble)
-			{
-				stmt.setInt(1, player.getObjectId());
-				stmt.setString(2, player.getName());
-				stmt.setInt(3, player.isHero() ? 1 : 0);
-				stmt.setInt(4, 1);
-				stmt.setInt(5, player.isDonator() ? 1 : 0);
-				stmt.execute();
-				stmt.close();
-			}
-			else // deletes from database
-			{
-				stmt.setInt(1, player.getObjectId());
-				stmt.execute();
-				stmt.close();
-			}
-		}
-		catch (Exception e)
-		{
-			LOGGER.warning("Error: could not update database: " + e);
-		}
-	}
-	
-	String INSERT_DATA = "REPLACE INTO characters_custom_data (obj_Id, char_name, hero, noble, donator) VALUES (?,?,?,?,?)";
-	String DEL_DATA = "UPDATE characters_custom_data SET noble = 0 WHERE obj_Id=?";
 	
 	@Override
 	public String[] getAdminCommandList()

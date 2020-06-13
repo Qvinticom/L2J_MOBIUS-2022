@@ -16,27 +16,23 @@
  */
 package org.l2jmobius.gameserver.handler.admincommandhandlers;
 
-import java.sql.Connection;
-import java.sql.PreparedStatement;
 import java.util.logging.Logger;
 
-import org.l2jmobius.commons.database.DatabaseFactory;
 import org.l2jmobius.gameserver.datatables.xml.AdminData;
 import org.l2jmobius.gameserver.handler.IAdminCommandHandler;
 import org.l2jmobius.gameserver.model.WorldObject;
 import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
-import org.l2jmobius.gameserver.model.entity.Announcements;
 import org.l2jmobius.gameserver.network.serverpackets.SocialAction;
 import org.l2jmobius.gameserver.util.BuilderUtil;
 
 public class AdminDonator implements IAdminCommandHandler
 {
+	protected static final Logger LOGGER = Logger.getLogger(AdminDonator.class.getName());
+	
 	private static final String[] ADMIN_COMMANDS =
 	{
 		"admin_setdonator"
 	};
-	
-	protected static final Logger LOGGER = Logger.getLogger(AdminDonator.class.getName());
 	
 	@Override
 	public boolean useAdminCommand(String command, PlayerInstance activeChar)
@@ -57,8 +53,10 @@ public class AdminDonator implements IAdminCommandHandler
 				{
 					targetPlayer.setDonator(true);
 					targetPlayer.updateNameTitleColor();
-					updateDatabase(targetPlayer, true);
-					sendMessages(true, targetPlayer, activeChar, false, true);
+					targetPlayer.getVariables().set("CustomDonator", true);
+					targetPlayer.sendMessage(activeChar.getName() + " has granted you donator status!");
+					activeChar.sendMessage("You have granted donator status to " + targetPlayer.getName());
+					AdminData.broadcastMessageToGMs("Warn: " + activeChar.getName() + " has set " + targetPlayer.getName() + " as donator !");
 					targetPlayer.broadcastPacket(new SocialAction(targetPlayer.getObjectId(), 16));
 					targetPlayer.broadcastUserInfo();
 				}
@@ -66,94 +64,22 @@ public class AdminDonator implements IAdminCommandHandler
 				{
 					targetPlayer.setDonator(false);
 					targetPlayer.updateNameTitleColor();
-					updateDatabase(targetPlayer, false);
-					sendMessages(false, targetPlayer, activeChar, false, true);
+					targetPlayer.getVariables().set("CustomDonator", false);
+					targetPlayer.sendMessage(activeChar.getName() + " has revoked donator status from you!");
+					activeChar.sendMessage("You have revoked donator status from " + targetPlayer.getName());
+					AdminData.broadcastMessageToGMs("Warn: " + activeChar.getName() + " has removed donator status from player" + targetPlayer.getName());
 					targetPlayer.broadcastUserInfo();
 				}
 			}
 			else
 			{
-				BuilderUtil.sendSysMessage(activeChar, "Impossible to set a non Player Target as Donator.");
-				LOGGER.info("GM: " + activeChar.getName() + " is trying to set a non Player Target as Donator.");
+				BuilderUtil.sendSysMessage(activeChar, "Impossible to set a non player target as donator.");
+				LOGGER.info("GM: " + activeChar.getName() + " is trying to set a non player target as donator.");
 				return false;
 			}
 		}
 		return true;
 	}
-	
-	private void sendMessages(boolean forNewDonator, PlayerInstance player, PlayerInstance gm, boolean announce, boolean notifyGmList)
-	{
-		if (forNewDonator)
-		{
-			player.sendMessage(gm.getName() + " has granted Donator Status for you!");
-			gm.sendMessage("You've granted Donator Status for " + player.getName());
-			if (announce)
-			{
-				Announcements.getInstance().announceToAll(player.getName() + " has received Donator Status!");
-			}
-			
-			if (notifyGmList)
-			{
-				AdminData.broadcastMessageToGMs("Warn: " + gm.getName() + " has set " + player.getName() + " as Donator !");
-			}
-		}
-		else
-		{
-			player.sendMessage(gm.getName() + " has revoked Donator Status from you!");
-			gm.sendMessage("You've revoked Donator Status from " + player.getName());
-			if (announce)
-			{
-				Announcements.getInstance().announceToAll(player.getName() + " has lost Donator Status!");
-			}
-			
-			if (notifyGmList)
-			{
-				AdminData.broadcastMessageToGMs("Warn: " + gm.getName() + " has removed Donator Status of player" + player.getName());
-			}
-		}
-	}
-	
-	/**
-	 * @param player
-	 * @param newDonator
-	 */
-	private void updateDatabase(PlayerInstance player, boolean newDonator)
-	{
-		if (player == null)
-		{
-			return;
-		}
-		
-		try (Connection con = DatabaseFactory.getConnection())
-		{
-			final PreparedStatement stmt = con.prepareStatement(newDonator ? INSERT_DATA : DEL_DATA);
-			
-			// if it is a new donator insert proper data
-			if (newDonator)
-			{
-				stmt.setInt(1, player.getObjectId());
-				stmt.setString(2, player.getName());
-				stmt.setInt(3, player.isHero() ? 1 : 0);
-				stmt.setInt(4, player.isNoble() ? 1 : 0);
-				stmt.setInt(5, 1);
-				stmt.execute();
-				stmt.close();
-			}
-			else // deletes from database
-			{
-				stmt.setInt(1, player.getObjectId());
-				stmt.execute();
-				stmt.close();
-			}
-		}
-		catch (Exception e)
-		{
-			LOGGER.warning("Error: could not update database: " + e);
-		}
-	}
-	
-	String INSERT_DATA = "REPLACE INTO characters_custom_data (obj_Id, char_name, hero, noble, donator) VALUES (?,?,?,?,?)";
-	String DEL_DATA = "UPDATE characters_custom_data SET donator = 0 WHERE obj_Id=?";
 	
 	@Override
 	public String[] getAdminCommandList()

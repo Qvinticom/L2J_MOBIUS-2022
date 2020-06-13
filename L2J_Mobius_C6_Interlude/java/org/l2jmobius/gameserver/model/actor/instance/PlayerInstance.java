@@ -122,6 +122,7 @@ import org.l2jmobius.gameserver.model.clan.Clan;
 import org.l2jmobius.gameserver.model.clan.ClanMember;
 import org.l2jmobius.gameserver.model.entity.Announcements;
 import org.l2jmobius.gameserver.model.entity.Duel;
+import org.l2jmobius.gameserver.model.entity.Hero;
 import org.l2jmobius.gameserver.model.entity.Rebirth;
 import org.l2jmobius.gameserver.model.entity.event.CTF;
 import org.l2jmobius.gameserver.model.entity.event.DM;
@@ -240,7 +241,6 @@ public class PlayerInstance extends Playable
 	/** SQL queries */
 	private static final String UPDATE_CHARACTER = "UPDATE characters SET level=?,maxHp=?,curHp=?,maxCp=?,curCp=?,maxMp=?,curMp=?,str=?,con=?,dex=?,_int=?,men=?,wit=?,face=?,hairStyle=?,hairColor=?,heading=?,x=?,y=?,z=?,exp=?,expBeforeDeath=?,sp=?,karma=?,pvpkills=?,pkkills=?,rec_have=?,rec_left=?,clanid=?,maxload=?,race=?,classid=?,deletetime=?,title=?,accesslevel=?,online=?,isin7sdungeon=?,clan_privs=?,wantspeace=?,base_class=?,onlinetime=?,punish_level=?,punish_timer=?,newbie=?,nobless=?,power_grade=?,subpledge=?,last_recom_date=?,lvl_joined_academy=?,apprentice=?,sponsor=?,varka_ketra_ally=?,clan_join_expiry_time=?,clan_create_expiry_time=?,char_name=?,death_penalty_level=?,pc_point=?,name_color=?,title_color=?,aio=?,aio_end=? WHERE obj_id=?";
 	private static final String RESTORE_CHARACTER = "SELECT account_name, obj_Id, char_name, level, maxHp, curHp, maxCp, curCp, maxMp, curMp, acc, crit, evasion, mAtk, mDef, mSpd, pAtk, pDef, pSpd, runSpd, walkSpd, str, con, dex, _int, men, wit, face, hairStyle, hairColor, sex, heading, x, y, z, movement_multiplier, attack_speed_multiplier, colRad, colHeight, exp, expBeforeDeath, sp, karma, pvpkills, pkkills, clanid, maxload, race, classid, deletetime, cancraft, title, rec_have, rec_left, accesslevel, online, char_slot, lastAccess, clan_privs, wantspeace, base_class, onlinetime, isin7sdungeon,punish_level,punish_timer,newbie, nobless, power_grade, subpledge, last_recom_date, lvl_joined_academy, apprentice, sponsor, varka_ketra_ally,clan_join_expiry_time,clan_create_expiry_time,death_penalty_level,pc_point,name_color,title_color,first_log,aio,aio_end FROM characters WHERE obj_id=?";
-	private static final String STATUS_DATA_GET = "SELECT hero, noble, donator, hero_end_date FROM characters_custom_data WHERE obj_Id = ?";
 	private static final String RESTORE_SKILLS_FOR_CHAR_ALT_SUBCLASS = "SELECT skill_id,skill_level FROM character_skills WHERE char_obj_id=? ORDER BY (skill_level+0)";
 	private static final String RESTORE_CHAR_SUBCLASSES = "SELECT class_id,exp,sp,level,class_index FROM character_subclasses WHERE char_obj_id=? ORDER BY class_index ASC";
 	private static final String ADD_CHAR_SUBCLASS = "INSERT INTO character_subclasses (char_obj_id,class_id,exp,sp,level,class_index) VALUES (?,?,?,?,?,?)";
@@ -14955,55 +14955,25 @@ public class PlayerInstance extends Playable
 		}
 	}
 	
-	/**
-	 * restore all Custom Data hero/noble/donator.
-	 */
 	public void restoreCustomStatus()
 	{
-		int hero = 0;
-		int noble = 0;
-		int donator = 0;
-		long heroEnd = 0;
-		
-		try (Connection con = DatabaseFactory.getConnection())
-		{
-			final PreparedStatement statement = con.prepareStatement(STATUS_DATA_GET);
-			statement.setInt(1, getObjectId());
-			
-			final ResultSet rset = statement.executeQuery();
-			
-			while (rset.next())
-			{
-				hero = rset.getInt("hero");
-				noble = rset.getInt("noble");
-				donator = rset.getInt("donator");
-				heroEnd = rset.getLong("hero_end_date");
-			}
-			rset.close();
-			statement.close();
-			
-		}
-		catch (Exception e)
-		{
-			LOGGER.warning("Error: could not restore char custom data info: " + e);
-		}
-		
-		if ((hero > 0) && ((heroEnd == 0) || (heroEnd > System.currentTimeMillis())))
+		final long heroEnd = getVariables().getLong("CustomHeroEnd", 0);
+		if (getVariables().getBoolean("CustomHero", false) && ((heroEnd == 0) || (heroEnd > System.currentTimeMillis())))
 		{
 			setHero(true);
 		}
-		else
+		else if ((Hero.getInstance().getHeroes() != null) && !Hero.getInstance().getHeroes().containsKey(getObjectId()))
 		{
-			// delete wings of destiny
-			destroyItem("HeroEnd", 6842, 1, null, false);
+			// Delete wings of destiny.
+			destroyItem("CustomHeroEnd", 6842, 1, null, false);
 		}
 		
-		if (noble > 0)
+		if (getVariables().getBoolean("CustomNoble", false))
 		{
 			setNoble(true);
 		}
 		
-		if (donator > 0)
+		if (getVariables().getBoolean("CustomDonator", false))
 		{
 			setDonator(true);
 		}

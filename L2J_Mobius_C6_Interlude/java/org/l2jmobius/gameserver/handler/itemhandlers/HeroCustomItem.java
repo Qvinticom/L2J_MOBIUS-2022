@@ -16,12 +16,9 @@
  */
 package org.l2jmobius.gameserver.handler.itemhandlers;
 
-import java.sql.Connection;
-import java.sql.PreparedStatement;
 import java.util.logging.Logger;
 
 import org.l2jmobius.Config;
-import org.l2jmobius.commons.database.DatabaseFactory;
 import org.l2jmobius.gameserver.handler.IItemHandler;
 import org.l2jmobius.gameserver.model.actor.Playable;
 import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
@@ -32,7 +29,10 @@ public class HeroCustomItem implements IItemHandler
 {
 	protected static final Logger LOGGER = Logger.getLogger(HeroCustomItem.class.getName());
 	
-	private static final String INSERT_DATA = "REPLACE INTO characters_custom_data (obj_Id, char_name, hero, noble, donator, hero_end_date) VALUES (?,?,?,?,?,?)";
+	private static final int ITEM_IDS[] =
+	{
+		Config.HERO_CUSTOM_ITEM_ID
+	};
 	
 	@Override
 	public void useItem(Playable playable, ItemInstance item)
@@ -47,22 +47,25 @@ public class HeroCustomItem implements IItemHandler
 			final PlayerInstance player = (PlayerInstance) playable;
 			if (player.isInOlympiadMode())
 			{
-				player.sendMessage("This Item Cannot Be Used On Olympiad Games.");
+				player.sendMessage("This item cannot be used in olympiad mode.");
 			}
 			
 			if (player.isHero())
 			{
-				player.sendMessage("You Are Already A Hero!.");
+				player.sendMessage("You already are a hero!");
 			}
 			else
 			{
 				player.broadcastPacket(new SocialAction(player.getObjectId(), 16));
 				player.setHero(true);
-				updateDatabase(player, Config.HERO_CUSTOM_DAY * 24 * 60 * 60 * 1000);
-				player.sendMessage("You Are Now a Hero,You Are Granted With Hero Status , Skills ,Aura.");
+				player.sendMessage("You are now a hero, you are granted with hero status, skills and aura.");
 				player.broadcastUserInfo();
 				playable.destroyItem("Consume", item.getObjectId(), 1, null, false);
-				player.getInventory().addItem("Wings", 6842, 1, player, null);
+				player.getInventory().addItem("CustomHeroWings", 6842, 1, player, null);
+				
+				final long heroTime = Config.HERO_CUSTOM_DAY * 24 * 60 * 60 * 1000;
+				player.getVariables().set("CustomHero", true);
+				player.getVariables().set("CustomHeroEnd", heroTime == 0 ? 0 : System.currentTimeMillis() + heroTime);
 			}
 		}
 	}
@@ -72,34 +75,4 @@ public class HeroCustomItem implements IItemHandler
 	{
 		return ITEM_IDS;
 	}
-	
-	private void updateDatabase(PlayerInstance player, long heroTime)
-	{
-		if (player == null)
-		{
-			return;
-		}
-		
-		try (Connection con = DatabaseFactory.getConnection())
-		{
-			final PreparedStatement stmt = con.prepareStatement(INSERT_DATA);
-			stmt.setInt(1, player.getObjectId());
-			stmt.setString(2, player.getName());
-			stmt.setInt(3, 1);
-			stmt.setInt(4, player.isNoble() ? 1 : 0);
-			stmt.setInt(5, player.isDonator() ? 1 : 0);
-			stmt.setLong(6, heroTime == 0 ? 0 : System.currentTimeMillis() + heroTime);
-			stmt.execute();
-			stmt.close();
-		}
-		catch (Exception e)
-		{
-			LOGGER.warning("Error: could not update database: " + e);
-		}
-	}
-	
-	private static final int ITEM_IDS[] =
-	{
-		Config.HERO_CUSTOM_ITEM_ID
-	};
 }

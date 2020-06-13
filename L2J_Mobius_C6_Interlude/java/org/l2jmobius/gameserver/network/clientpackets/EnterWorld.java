@@ -268,8 +268,7 @@ public class EnterWorld extends GameClientPacket
 		
 		// Restores custom status
 		player.restoreCustomStatus();
-		
-		ColorSystem(player);
+		colorSystem(player);
 		
 		// Expand Skill
 		player.sendPacket(new ExStorageMaxCount(player));
@@ -651,7 +650,7 @@ public class EnterWorld extends GameClientPacket
 		}
 	}
 	
-	private void ColorSystem(PlayerInstance player)
+	private void colorSystem(PlayerInstance player)
 	{
 		// Color System checks - Start
 		// Check if the custom PvP and PK color systems are enabled and if so check the character's counters
