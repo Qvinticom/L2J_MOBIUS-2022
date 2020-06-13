@@ -3529,6 +3529,7 @@
 		<magicCriticalRate>5</magicCriticalRate>
 		<targetType>ENEMY</targetType>
 		<affectScope>SINGLE</affectScope>
+		<chargeConsume>2</chargeConsume>
 		<conditions>
 			<condition name="EnergySaved">
 				<amount>2</amount>
@@ -3536,7 +3537,6 @@
 		</conditions>
 		<effects>
 			<effect name="EnergyAttack">
-				<chargeConsume>2</chargeConsume>
 				<criticalChance>10</criticalChance>
 				<power>
 					<value level="1">1250</value>
@@ -3579,6 +3579,7 @@
 		<targetType>ENEMY</targetType>
 		<affectScope>RANGE</affectScope>
 		<affectObject>NOT_FRIEND</affectObject>
+		<chargeConsume>3</chargeConsume>
 		<conditions>
 			<condition name="EnergySaved">
 				<amount>3</amount>
@@ -3586,7 +3587,6 @@
 		</conditions>
 		<effects>
 			<effect name="EnergyAttack">
-				<chargeConsume>3</chargeConsume>
 				<criticalChance>10</criticalChance>
 				<power>
 					<value level="1">625</value>

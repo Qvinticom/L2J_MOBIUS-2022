@@ -2914,6 +2914,7 @@
 		<magicCriticalRate>5</magicCriticalRate>
 		<targetType>ENEMY_ONLY</targetType>
 		<affectScope>SINGLE</affectScope>
+		<chargeConsume>2</chargeConsume>
 		<conditions>
 			<condition name="EquipWeapon">
 				<weaponType>
@@ -2926,7 +2927,6 @@
 		</conditions>
 		<effects>
 			<effect name="EnergyAttack">
-				<chargeConsume>2</chargeConsume>
 				<criticalChance>20</criticalChance>
 				<power>4500</power>
 				<overHit>true</overHit>

@@ -488,6 +488,7 @@
 		<magicCriticalRate>5</magicCriticalRate>
 		<targetType>ENEMY</targetType>
 		<affectScope>SINGLE</affectScope>
+		<chargeConsume>3</chargeConsume>
 		<conditions>
 			<condition name="EquipWeapon">
 				<weaponType>
@@ -495,10 +496,12 @@
 					<item>DUALBLUNT</item>
 				</weaponType>
 			</condition>
+			<condition name="EnergySaved">
+				<amount>3</amount>
+			</condition>
 		</conditions>
 		<effects>
 			<effect name="EnergyAttack">
-				<chargeConsume>3</chargeConsume>
 				<criticalChance>15</criticalChance>
 				<power>
 					<value level="1">918</value>
@@ -665,6 +668,7 @@
 		<magicCriticalRate>5</magicCriticalRate>
 		<targetType>ENEMY</targetType>
 		<affectScope>SINGLE</affectScope>
+		<chargeConsume>2</chargeConsume>
 		<conditions>
 			<condition name="EquipWeapon">
 				<weaponType>
@@ -674,10 +678,12 @@
 					<item>DUALBLUNT</item>
 				</weaponType>
 			</condition>
+			<condition name="EnergySaved">
+				<amount>2</amount>
+			</condition>
 		</conditions>
 		<effects>
 			<effect name="EnergyAttack">
-				<chargeConsume>2</chargeConsume>
 				<criticalChance>15</criticalChance>
 				<power>
 					<value level="1">369</value>
@@ -4236,6 +4242,9 @@
 				<weaponType>
 					<item>POLE</item>
 				</weaponType>
+			</condition>
+			<condition name="EnergySaved">
+				<amount>1</amount>
 			</condition>
 		</conditions>
 		<effects>

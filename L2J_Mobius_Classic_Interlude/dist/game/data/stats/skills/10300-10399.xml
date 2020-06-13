@@ -774,6 +774,7 @@
 			<value level="7">-213</value>
 		</effectPoint>
 		<reuseDelay>10000</reuseDelay>
+		<chargeConsume>3</chargeConsume>
 		<conditions>
 			<condition name="EquipWeapon">
 				<weaponType>
@@ -781,6 +782,9 @@
 					<item>BLUNT</item>
 					<item>DUAL</item>
 				</weaponType>
+			</condition>
+			<condition name="EnergySaved">
+				<amount>3</amount>
 			</condition>
 		</conditions>
 		<effects>
@@ -804,7 +808,6 @@
 					<value fromLevel="1" toLevel="7">1</value>
 					<value fromLevel="3" toLevel="7" fromSubLevel="3001" toSubLevel="3020">{0.99 - 0.006 * (subIndex - 1)}</value>
 				</pDefMod>
-				<chargeConsume>3</chargeConsume>
 			</effect>
 		</effects>
 	</skill>

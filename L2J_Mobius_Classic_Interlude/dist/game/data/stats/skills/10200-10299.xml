@@ -797,6 +797,7 @@
 		</effectPoint>
 		<targetType>ENEMY</targetType>
 		<affectScope>SINGLE</affectScope>
+		<chargeConsume>3</chargeConsume>
 		<conditions>
 			<condition name="EquipWeapon">
 				<weaponType>
@@ -807,6 +808,9 @@
 					<item>DUALFIST</item>
 					<item>DUALBLUNT</item>
 				</weaponType>
+			</condition>
+			<condition name="EnergySaved">
+				<amount>3</amount>
 			</condition>
 		</conditions>
 		<effects>
@@ -826,7 +830,6 @@
 					<value fromLevel="7" toLevel="11" fromSubLevel="1001" toSubLevel="1020">{base + base / 100 * subIndex}</value>
 				</power>
 				<ignoreShieldDefence>true</ignoreShieldDefence>
-				<chargeConsume>3</chargeConsume>
 				<criticalChance>
 					<value fromLevel="1" toLevel="11">3</value>
 					<value fromLevel="7" toLevel="11" fromSubLevel="2001" toSubLevel="2020">{base + base / 100 * subIndex}</value>
@@ -895,6 +898,7 @@
 		<trait>KNOCKDOWN</trait>
 		<targetType>ENEMY</targetType>
 		<affectScope>SINGLE</affectScope>
+		<chargeConsume>3</chargeConsume>
 		<conditions>
 			<condition name="EquipWeapon">
 				<weaponType>
@@ -905,6 +909,9 @@
 					<item>DUALFIST</item>
 					<item>DUALBLUNT</item>
 				</weaponType>
+			</condition>
+			<condition name="EnergySaved">
+				<amount>3</amount>
 			</condition>
 		</conditions>
 		<effects>
@@ -922,7 +929,6 @@
 					<value fromLevel="5" toLevel="9" fromSubLevel="1001" toSubLevel="1020">{base + base / 100 * subIndex}</value>
 				</power>
 				<ignoreShieldDefence>true</ignoreShieldDefence>
-				<chargeConsume>3</chargeConsume>
 				<criticalChance>3</criticalChance>
 				<overHit>true</overHit>
 			</effect>
@@ -1452,6 +1458,7 @@
 		<targetType>ENEMY</targetType>
 		<affectScope>RANGE</affectScope>
 		<affectObject>NOT_FRIEND</affectObject>
+		<chargeConsume>3</chargeConsume>
 		<conditions>
 			<condition name="EquipWeapon">
 				<weaponType>
@@ -1468,6 +1475,9 @@
 					<value fromLevel="1" toLevel="10">200</value>
 					<value fromLevel="6" toLevel="10" fromSubLevel="3001" toSubLevel="3020">{base - (3 * subIndex)}</value>
 				</distance>
+			</condition>
+			<condition name="EnergySaved">
+				<amount>3</amount>
 			</condition>
 		</conditions>
 		<effects>
@@ -1486,7 +1496,6 @@
 				</power>
 				<overHit>true</overHit>
 				<criticalChance>3</criticalChance>
-				<chargeConsume>3</chargeConsume>
 			</effect>
 			<effect name="Speed">
 				<amount>-180</amount>

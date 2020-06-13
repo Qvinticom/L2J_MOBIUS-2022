@@ -4124,6 +4124,7 @@
 		<magicCriticalRate>5</magicCriticalRate>
 		<targetType>ENEMY</targetType>
 		<affectScope>SINGLE</affectScope>
+		<chargeConsume>4</chargeConsume>
 		<conditions>
 			<condition name="EquipWeapon">
 				<weaponType>
@@ -4131,10 +4132,12 @@
 					<item>DUALBLUNT</item>
 				</weaponType>
 			</condition>
+			<condition name="EnergySaved">
+				<amount>4</amount>
+			</condition>
 		</conditions>
 		<effects>
 			<effect name="EnergyAttack">
-				<chargeConsume>4</chargeConsume>
 				<criticalChance>
 					<value fromLevel="1" toLevel="34">15</value>
 					<value fromLevel="30" toLevel="34" fromSubLevel="2001" toSubLevel="2020">{base + base / 100 * subIndex}</value>
@@ -5546,6 +5549,7 @@
 		<trait>SHOCK</trait>
 		<targetType>ENEMY</targetType>
 		<affectScope>SINGLE</affectScope>
+		<chargeConsume>2</chargeConsume>
 		<conditions>
 			<condition name="EquipWeapon">
 				<weaponType>
@@ -5864,10 +5868,12 @@
 					<item>DUALFIST</item>
 				</weaponType>
 			</condition>
+			<condition name="EnergySaved">
+				<amount>2</amount>
+			</condition>
 		</conditions>
 		<effects>
 			<effect name="EnergyAttack">
-				<chargeConsume>2</chargeConsume>
 				<criticalChance>15</criticalChance>
 				<overHit>true</overHit>
 				<power>

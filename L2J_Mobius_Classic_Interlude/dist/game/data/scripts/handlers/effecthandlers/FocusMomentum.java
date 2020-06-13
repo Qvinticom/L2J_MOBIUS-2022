@@ -58,7 +58,7 @@ public class FocusMomentum extends AbstractEffect
 		
 		final PlayerInstance player = effected.getActingPlayer();
 		final int currentCharges = player.getCharges();
-		final int maxCharges = Math.min(_maxCharges, (int) effected.getStat().getValue(Stat.MAX_MOMENTUM, 1));
+		final int maxCharges = Math.min(_maxCharges, (int) effected.getStat().getValue(Stat.MAX_MOMENTUM, 8));
 		
 		if (currentCharges >= maxCharges)
 		{
@@ -70,7 +70,6 @@ public class FocusMomentum extends AbstractEffect
 		}
 		
 		final int newCharge = Math.min(currentCharges + _amount, maxCharges);
-		
 		player.setCharges(newCharge);
 		
 		if (newCharge == maxCharges)
