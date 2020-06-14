@@ -740,7 +740,7 @@ public class GeoEngine
 		// Mobius: Double check for doors before normal checkMove to avoid exploiting key movement.
 		if (DoorData.getInstance().checkIfDoorsBetween(ox, oy, oz, tx, ty, tz, instance, false))
 		{
-			return new GeoLocation(ox, oy, oz);
+			return new Location(ox, oy, oz);
 		}
 		if (FenceData.getInstance().checkIfFenceBetween(ox, oy, oz, tx, ty, tz, instance))
 		{
