@@ -53,7 +53,7 @@ public class BaseStatFinalizer implements IStatFunction
 			{
 				for (ArmorSet set : ArmorSetData.getInstance().getSets(item.getId()))
 				{
-					if ((set.getPiecesCount(player, ItemInstance::getId) >= set.getMinimumPieces()) && appliedSets.add(set))
+					if ((set.getPiecesCountById(player) >= set.getMinimumPieces()) && appliedSets.add(set))
 					{
 						baseValue += set.getStatsBonus(BaseStat.valueOf(stat));
 					}

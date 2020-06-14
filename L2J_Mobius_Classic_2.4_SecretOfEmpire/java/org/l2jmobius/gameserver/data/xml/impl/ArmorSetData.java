@@ -18,9 +18,13 @@ package org.l2jmobius.gameserver.data.xml.impl;
 
 import java.io.File;
 import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.Collections;
+import java.util.LinkedHashMap;
+import java.util.LinkedHashSet;
 import java.util.List;
 import java.util.Map;
+import java.util.Set;
 import java.util.concurrent.ConcurrentHashMap;
 import java.util.logging.Logger;
 import java.util.stream.Stream;
@@ -74,11 +78,10 @@ public class ArmorSetData implements IXmlReader
 						final int id = parseInteger(setNode.getAttributes(), "id");
 						final int minimumPieces = parseInteger(setNode.getAttributes(), "minimumPieces", 0);
 						final boolean isVisual = parseBoolean(setNode.getAttributes(), "visual", false);
-						final ArmorSet set = new ArmorSet(id, minimumPieces, isVisual);
-						if (_armorSets.putIfAbsent(id, set) != null)
-						{
-							LOGGER.warning("Duplicate set entry with id: " + id + " in file: " + f.getName());
-						}
+						final Set<Integer> requiredItems = new LinkedHashSet<>();
+						final Set<Integer> optionalItems = new LinkedHashSet<>();
+						final List<ArmorsetSkillHolder> skills = new ArrayList<>();
+						final Map<BaseStat, Double> stats = new LinkedHashMap<>();
 						for (Node innerSetNode = setNode.getFirstChild(); innerSetNode != null; innerSetNode = innerSetNode.getNextSibling())
 						{
 							switch (innerSetNode.getNodeName())
@@ -94,7 +97,7 @@ public class ArmorSetData implements IXmlReader
 										{
 											LOGGER.warning("Attempting to register non existing required item: " + itemId + " to a set: " + f.getName());
 										}
-										else if (!set.addRequiredItem(itemId))
+										else if (!requiredItems.add(itemId))
 										{
 											LOGGER.warning("Attempting to register duplicate required item " + item + " to a set: " + f.getName());
 										}
@@ -112,7 +115,7 @@ public class ArmorSetData implements IXmlReader
 										{
 											LOGGER.warning("Attempting to register non existing optional item: " + itemId + " to a set: " + f.getName());
 										}
-										else if (!set.addOptionalItem(itemId))
+										else if (!optionalItems.add(itemId))
 										{
 											LOGGER.warning("Attempting to register duplicate optional item " + item + " to a set: " + f.getName());
 										}
@@ -126,12 +129,12 @@ public class ArmorSetData implements IXmlReader
 										final NamedNodeMap attrs = node.getAttributes();
 										final int skillId = parseInteger(attrs, "id");
 										final int skillLevel = parseInteger(attrs, "level");
-										final int minPieces = parseInteger(attrs, "minimumPieces", set.getMinimumPieces());
+										final int minPieces = parseInteger(attrs, "minimumPieces", minimumPieces);
 										final int minEnchant = parseInteger(attrs, "minimumEnchant", 0);
 										final boolean isOptional = parseBoolean(attrs, "optional", false);
 										final int artifactSlotMask = parseInteger(attrs, "slotMask", 0);
 										final int artifactBookSlot = parseInteger(attrs, "bookSlot", 0);
-										set.addSkill(new ArmorsetSkillHolder(skillId, skillLevel, minPieces, minEnchant, isOptional, artifactSlotMask, artifactBookSlot));
+										skills.add(new ArmorsetSkillHolder(skillId, skillLevel, minPieces, minEnchant, isOptional, artifactSlotMask, artifactBookSlot));
 									});
 									break;
 								}
@@ -140,14 +143,20 @@ public class ArmorSetData implements IXmlReader
 									forEach(innerSetNode, b -> "stat".equals(b.getNodeName()), node ->
 									{
 										final NamedNodeMap attrs = node.getAttributes();
-										set.addStatsBonus(parseEnum(attrs, BaseStat.class, "type"), parseInteger(attrs, "val"));
+										stats.put(parseEnum(attrs, BaseStat.class, "type"), parseDouble(attrs, "val"));
 									});
 									break;
 								}
 							}
 						}
 						
-						Stream.concat(set.getRequiredItems().stream(), set.getOptionalItems().stream()).forEach(itemHolder -> _armorSetItems.computeIfAbsent(itemHolder, key -> new ArrayList<>()).add(set));
+						final ArmorSet set = new ArmorSet(id, minimumPieces, isVisual, requiredItems, optionalItems, skills, stats);
+						if (_armorSets.putIfAbsent(id, set) != null)
+						{
+							LOGGER.warning("Duplicate set entry with id: " + id + " in file: " + f.getName());
+						}
+						
+						Stream.concat(Arrays.stream(set.getRequiredItems()).boxed(), Arrays.stream(set.getOptionalItems()).boxed()).forEach(itemHolder -> _armorSetItems.computeIfAbsent(itemHolder, key -> new ArrayList<>()).add(set));
 					}
 				}
 			}

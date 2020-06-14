@@ -16,14 +16,12 @@
  */
 package org.l2jmobius.gameserver.model;
 
-import java.util.ArrayList;
-import java.util.LinkedHashMap;
-import java.util.LinkedHashSet;
 import java.util.List;
 import java.util.Map;
 import java.util.Set;
 import java.util.function.Function;
 
+import org.l2jmobius.commons.util.CommonUtil;
 import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
 import org.l2jmobius.gameserver.model.holders.ArmorsetSkillHolder;
 import org.l2jmobius.gameserver.model.itemcontainer.Inventory;
@@ -40,11 +38,11 @@ public class ArmorSet
 	private final int _minimumPieces;
 	private final boolean _isVisual;
 	
-	private final Set<Integer> _requiredItems = new LinkedHashSet<>();
-	private final Set<Integer> _optionalItems = new LinkedHashSet<>();
+	private final int[] _requiredItems;
+	private final int[] _optionalItems;
 	
-	private final List<ArmorsetSkillHolder> _skills = new ArrayList<>();
-	private final Map<BaseStat, Double> _stats = new LinkedHashMap<>();
+	private final List<ArmorsetSkillHolder> _skills;
+	private final Map<BaseStat, Double> _stats;
 	
 	private static final int[] ARMORSET_SLOTS = new int[]
 	{
@@ -55,16 +53,15 @@ public class ArmorSet
 		Inventory.PAPERDOLL_FEET
 	};
 	
-	/**
-	 * @param id
-	 * @param minimumPieces
-	 * @param isVisual
-	 */
-	public ArmorSet(int id, int minimumPieces, boolean isVisual)
+	public ArmorSet(int id, int minimumPieces, boolean isVisual, Set<Integer> requiredItems, Set<Integer> optionalItems, List<ArmorsetSkillHolder> skills, Map<BaseStat, Double> stats)
 	{
 		_id = id;
 		_minimumPieces = minimumPieces;
 		_isVisual = isVisual;
+		_requiredItems = requiredItems.stream().mapToInt(x -> x).toArray();
+		_optionalItems = optionalItems.stream().mapToInt(x -> x).toArray();
+		_skills = skills;
+		_stats = stats;
 	}
 	
 	public int getId()
@@ -89,48 +86,19 @@ public class ArmorSet
 	}
 	
 	/**
-	 * Adds an item to the set
-	 * @param item
-	 * @return {@code true} if item was successfully added, {@code false} in case it already exists
-	 */
-	public boolean addRequiredItem(Integer item)
-	{
-		return _requiredItems.add(item);
-	}
-	
-	/**
 	 * @return the set of items that can form a set
 	 */
-	public Set<Integer> getRequiredItems()
+	public int[] getRequiredItems()
 	{
 		return _requiredItems;
 	}
 	
 	/**
-	 * Adds an shield to the set
-	 * @param item
-	 * @return {@code true} if shield was successfully added, {@code false} in case it already exists
-	 */
-	public boolean addOptionalItem(Integer item)
-	{
-		return _optionalItems.add(item);
-	}
-	
-	/**
 	 * @return the set of shields
 	 */
-	public Set<Integer> getOptionalItems()
+	public int[] getOptionalItems()
 	{
 		return _optionalItems;
-	}
-	
-	/**
-	 * Adds an skill to the set
-	 * @param holder
-	 */
-	public void addSkill(ArmorsetSkillHolder holder)
-	{
-		_skills.add(holder);
 	}
 	
 	/**
@@ -140,16 +108,6 @@ public class ArmorSet
 	public List<ArmorsetSkillHolder> getSkills()
 	{
 		return _skills;
-	}
-	
-	/**
-	 * Adds stats bonus to the set activated when set reaches it's minimal equipped items condition
-	 * @param stat
-	 * @param value
-	 */
-	public void addStatsBonus(BaseStat stat, double value)
-	{
-		_stats.putIfAbsent(stat, value);
 	}
 	
 	/**
@@ -167,7 +125,7 @@ public class ArmorSet
 	 */
 	public boolean containOptionalItem(int shieldId)
 	{
-		return _optionalItems.contains(shieldId);
+		return CommonUtil.contains(_optionalItems, shieldId);
 	}
 	
 	/**
@@ -177,7 +135,7 @@ public class ArmorSet
 	public int getLowestSetEnchant(PlayerInstance player)
 	{
 		// Player don't have full set
-		if (getPiecesCount(player, ItemInstance::getId) < _minimumPieces)
+		if (getPiecesCountById(player) < _minimumPieces)
 		{
 			return 0;
 		}
@@ -187,7 +145,7 @@ public class ArmorSet
 		for (int armorSlot : ARMORSET_SLOTS)
 		{
 			final ItemInstance itemPart = inv.getPaperdollItem(armorSlot);
-			if ((itemPart != null) && _requiredItems.contains(itemPart.getId()) && (enchantLevel > itemPart.getEnchantLevel()))
+			if ((itemPart != null) && CommonUtil.contains(_requiredItems, itemPart.getId()) && (enchantLevel > itemPart.getEnchantLevel()))
 			{
 				enchantLevel = itemPart.getEnchantLevel();
 			}
@@ -201,7 +159,7 @@ public class ArmorSet
 	
 	public boolean hasOptionalEquipped(PlayerInstance player, Function<ItemInstance, Integer> idProvider)
 	{
-		return player.getInventory().getPaperdollItems().stream().anyMatch(item -> _optionalItems.contains(idProvider.apply(item)));
+		return player.getInventory().getPaperdollItems().stream().anyMatch(item -> CommonUtil.contains(_optionalItems, idProvider.apply(item)));
 	}
 	
 	/**
@@ -211,6 +169,11 @@ public class ArmorSet
 	 */
 	public long getPiecesCount(PlayerInstance player, Function<ItemInstance, Integer> idProvider)
 	{
-		return player.getInventory().getPaperdollItemCount(item -> _requiredItems.contains(idProvider.apply(item)));
+		return player.getInventory().getPaperdollItemCount(item -> CommonUtil.contains(_requiredItems, idProvider.apply(item)));
+	}
+	
+	public long getPiecesCountById(PlayerInstance player)
+	{
+		return player.getInventory().getPaperdollItemCount(item -> CommonUtil.contains(_requiredItems, item.getId()));
 	}
 }
