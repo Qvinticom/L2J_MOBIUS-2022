@@ -2225,4 +2225,15 @@ public abstract class Inventory extends ItemContainer
 		}
 		return Arrays.stream(_paperdoll).filter(filter).collect(Collectors.toCollection(LinkedList::new));
 	}
+	
+	@SafeVarargs
+	public final long getPaperdollItemCount(Predicate<ItemInstance>... filters)
+	{
+		Predicate<ItemInstance> filter = Objects::nonNull;
+		for (Predicate<ItemInstance> additionalFilter : filters)
+		{
+			filter = filter.and(additionalFilter);
+		}
+		return Arrays.stream(_paperdoll).filter(filter).count();
+	}
 }

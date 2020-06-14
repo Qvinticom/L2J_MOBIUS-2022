@@ -211,6 +211,6 @@ public class ArmorSet
 	 */
 	public long getPiecesCount(PlayerInstance player, Function<ItemInstance, Integer> idProvider)
 	{
-		return player.getInventory().getPaperdollItems(item -> _requiredItems.contains(idProvider.apply(item))).size();
+		return player.getInventory().getPaperdollItemCount(item -> _requiredItems.contains(idProvider.apply(item)));
 	}
 }
