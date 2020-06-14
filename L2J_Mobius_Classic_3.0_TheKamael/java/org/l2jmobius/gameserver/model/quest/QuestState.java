@@ -464,7 +464,6 @@ public class QuestState
 		{
 			set("cond", Integer.toString(value));
 		}
-		return;
 	}
 	
 	/**

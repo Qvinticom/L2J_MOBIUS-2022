@@ -40,21 +40,6 @@ public class PlayerWarehouse extends Warehouse
 		return ItemLocation.WAREHOUSE;
 	}
 	
-	public String getLocationId()
-	{
-		return "0";
-	}
-	
-	public int getLocationId(boolean dummy)
-	{
-		return 0;
-	}
-	
-	public void setLocationId(PlayerInstance dummy)
-	{
-		return;
-	}
-	
 	@Override
 	public boolean validateCapacity(int slots)
 	{
