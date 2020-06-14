@@ -1,63 +1,62 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../xsd/skillTrees.xsd">
 	<skillTree type="classSkillTree" classId="23" parentClassId="22">
-		<!-- Confirmed CT2.5 -->
-		<skill skillName="Dagger Mastery" skillId="209" skillLvl="9" getLevel="40" levelUpSp="8000" />
-		<skill skillName="Dagger Mastery" skillId="209" skillLvl="10" getLevel="40" levelUpSp="8000" />
-		<skill skillName="Dagger Mastery" skillId="209" skillLvl="11" getLevel="40" levelUpSp="8000" />
-		<skill skillName="Light Armor Mastery" skillId="233" skillLvl="11" getLevel="40" levelUpSp="8000" />
-		<skill skillName="Light Armor Mastery" skillId="233" skillLvl="12" getLevel="40" levelUpSp="8000" />
-		<skill skillName="Light Armor Mastery" skillId="233" skillLvl="13" getLevel="40" levelUpSp="8000" />
-		<skill skillName="Elemental Heal" skillId="58" skillLvl="19" getLevel="40" levelUpSp="8000" />
-		<skill skillName="Elemental Heal" skillId="58" skillLvl="20" getLevel="40" levelUpSp="8000" />
-		<skill skillName="Elemental Heal" skillId="58" skillLvl="21" getLevel="40" levelUpSp="8000" />
-		<skill skillName="Charm" skillId="15" skillLvl="16" getLevel="40" levelUpSp="8000" />
-		<skill skillName="Charm" skillId="15" skillLvl="17" getLevel="40" levelUpSp="8000" />
-		<skill skillName="Charm" skillId="15" skillLvl="18" getLevel="40" levelUpSp="8000" />
-		<skill skillName="Deadly Blow" skillId="263" skillLvl="1" getLevel="40" levelUpSp="8000" />
-		<skill skillName="Deadly Blow" skillId="263" skillLvl="2" getLevel="40" levelUpSp="8000" />
-		<skill skillName="Deadly Blow" skillId="263" skillLvl="3" getLevel="40" levelUpSp="8000" />
-		<skill skillName="Backstab" skillId="30" skillLvl="1" getLevel="40" levelUpSp="8000" />
-		<skill skillName="Backstab" skillId="30" skillLvl="2" getLevel="40" levelUpSp="8000" />
-		<skill skillName="Backstab" skillId="30" skillLvl="3" getLevel="40" levelUpSp="8000" />
-		<skill skillName="Vicious Stance" skillId="312" skillLvl="6" getLevel="40" levelUpSp="8000" />
-		<skill skillName="Unlock" skillId="27" skillLvl="6" getLevel="40" levelUpSp="8000" />
-		<skill skillName="Entangle" skillId="102" skillLvl="2" getLevel="40" levelUpSp="8000" />
-		<skill skillName="Poison Recovery" skillId="21" skillLvl="2" getLevel="40" levelUpSp="8000" />
-		<skill skillName="Critical Chance" skillId="137" skillLvl="2" getLevel="40" levelUpSp="8000" />
-		<skill skillName="Fake Death" skillId="60" skillLvl="1" getLevel="40" levelUpSp="8000" />
-		<skill skillName="Silent Move" skillId="221" skillLvl="1" getLevel="40" levelUpSp="8000" />
-		<skill skillName="Spirit Barrier" skillId="123" skillLvl="1" getLevel="40" levelUpSp="8000">
+		<skill skillName="Dagger Mastery" skillId="209" skillLvl="9" getLevel="40" levelUpSp="80000" />
+		<skill skillName="Dagger Mastery" skillId="209" skillLvl="10" getLevel="40" levelUpSp="80000" />
+		<skill skillName="Dagger Mastery" skillId="209" skillLvl="11" getLevel="40" levelUpSp="80000" />
+		<skill skillName="Light Armor Mastery" skillId="233" skillLvl="11" getLevel="40" levelUpSp="80000" />
+		<skill skillName="Light Armor Mastery" skillId="233" skillLvl="12" getLevel="40" levelUpSp="80000" />
+		<skill skillName="Light Armor Mastery" skillId="233" skillLvl="13" getLevel="40" levelUpSp="80000" />
+		<skill skillName="Elemental Heal" skillId="58" skillLvl="19" getLevel="40" levelUpSp="80000" />
+		<skill skillName="Elemental Heal" skillId="58" skillLvl="20" getLevel="40" levelUpSp="80000" />
+		<skill skillName="Elemental Heal" skillId="58" skillLvl="21" getLevel="40" levelUpSp="80000" />
+		<skill skillName="Charm" skillId="15" skillLvl="16" getLevel="40" levelUpSp="80000" />
+		<skill skillName="Charm" skillId="15" skillLvl="17" getLevel="40" levelUpSp="80000" />
+		<skill skillName="Charm" skillId="15" skillLvl="18" getLevel="40" levelUpSp="80000" />
+		<skill skillName="Deadly Blow" skillId="263" skillLvl="1" getLevel="40" levelUpSp="80000" />
+		<skill skillName="Deadly Blow" skillId="263" skillLvl="2" getLevel="40" levelUpSp="80000" />
+		<skill skillName="Deadly Blow" skillId="263" skillLvl="3" getLevel="40" levelUpSp="80000" />
+		<skill skillName="Backstab" skillId="30" skillLvl="1" getLevel="40" levelUpSp="80000" />
+		<skill skillName="Backstab" skillId="30" skillLvl="2" getLevel="40" levelUpSp="80000" />
+		<skill skillName="Backstab" skillId="30" skillLvl="3" getLevel="40" levelUpSp="80000" />
+		<skill skillName="Vicious Stance" skillId="312" skillLvl="6" getLevel="40" levelUpSp="80000" />
+		<skill skillName="Unlock" skillId="27" skillLvl="6" getLevel="40" levelUpSp="80000" />
+		<skill skillName="Entangle" skillId="102" skillLvl="2" getLevel="40" levelUpSp="80000" />
+		<skill skillName="Poison Recovery" skillId="21" skillLvl="2" getLevel="40" levelUpSp="80000" />
+		<skill skillName="Critical Chance" skillId="137" skillLvl="2" getLevel="40" levelUpSp="80000" />
+		<skill skillName="Fake Death" skillId="60" skillLvl="1" getLevel="40" levelUpSp="80000" />
+		<skill skillName="Silent Move" skillId="221" skillLvl="1" getLevel="40" levelUpSp="80000" />
+		<skill skillName="Spirit Barrier" skillId="123" skillLvl="1" getLevel="40" levelUpSp="80000">
 			<item id="3051" count="1" />
 		</skill>
 		
-		<skill skillName="Dagger Mastery" skillId="209" skillLvl="12" getLevel="41" levelUpSp="230000000" />
-		<skill skillName="Light Armor Mastery" skillId="233" skillLvl="14" getLevel="41" levelUpSp="230000000" />
-		<skill skillName="Elemental Heal" skillId="58" skillLvl="22" getLevel="41" levelUpSp="230000000" />
-		<skill skillName="Charm" skillId="15" skillLvl="19" getLevel="41" levelUpSp="230000000" />
-		<skill skillName="Deadly Blow" skillId="263" skillLvl="4" getLevel="41" levelUpSp="230000000" />
-		<skill skillName="Backstab" skillId="30" skillLvl="4" getLevel="41" levelUpSp="230000000" />
+		<skill skillName="Dagger Mastery" skillId="209" skillLvl="12" getLevel="41" levelUpSp="94000" />
+		<skill skillName="Light Armor Mastery" skillId="233" skillLvl="14" getLevel="41" levelUpSp="94000" />
+		<skill skillName="Elemental Heal" skillId="58" skillLvl="22" getLevel="41" levelUpSp="94000" />
+		<skill skillName="Charm" skillId="15" skillLvl="19" getLevel="41" levelUpSp="94000" />
+		<skill skillName="Deadly Blow" skillId="263" skillLvl="4" getLevel="41" levelUpSp="94000" />
+		<skill skillName="Backstab" skillId="30" skillLvl="4" getLevel="41" levelUpSp="94000" />
 		
-		<skill skillName="Dagger Mastery" skillId="209" skillLvl="13" getLevel="42" levelUpSp="230000000" />
-		<skill skillName="Light Armor Mastery" skillId="233" skillLvl="15" getLevel="42" levelUpSp="230000000" />
-		<skill skillName="Elemental Heal" skillId="58" skillLvl="23" getLevel="42" levelUpSp="230000000" />
-		<skill skillName="Charm" skillId="15" skillLvl="20" getLevel="42" levelUpSp="230000000" />
-		<skill skillName="Deadly Blow" skillId="263" skillLvl="5" getLevel="42" levelUpSp="230000000" />
-		<skill skillName="Backstab" skillId="30" skillLvl="5" getLevel="42" levelUpSp="230000000" />
+		<skill skillName="Dagger Mastery" skillId="209" skillLvl="13" getLevel="42" levelUpSp="94000" />
+		<skill skillName="Light Armor Mastery" skillId="233" skillLvl="15" getLevel="42" levelUpSp="94000" />
+		<skill skillName="Elemental Heal" skillId="58" skillLvl="23" getLevel="42" levelUpSp="94000" />
+		<skill skillName="Charm" skillId="15" skillLvl="20" getLevel="42" levelUpSp="94000" />
+		<skill skillName="Deadly Blow" skillId="263" skillLvl="5" getLevel="42" levelUpSp="94000" />
+		<skill skillName="Backstab" skillId="30" skillLvl="5" getLevel="42" levelUpSp="94000" />
 		
-		<skill skillName="Dagger Mastery" skillId="209" skillLvl="14" getLevel="43" levelUpSp="230000000" />
-		<skill skillName="Light Armor Mastery" skillId="233" skillLvl="16" getLevel="43" levelUpSp="230000000" />
-		<skill skillName="Elemental Heal" skillId="58" skillLvl="24" getLevel="43" levelUpSp="230000000" />
-		<skill skillName="Charm" skillId="15" skillLvl="21" getLevel="43" levelUpSp="230000000" />
-		<skill skillName="Deadly Blow" skillId="263" skillLvl="6" getLevel="43" levelUpSp="230000000" />
-		<skill skillName="Backstab" skillId="30" skillLvl="6" getLevel="43" levelUpSp="230000000" />
-		<skill skillName="Vicious Stance" skillId="312" skillLvl="7" getLevel="43" levelUpSp="230000000" />
-		<skill skillName="Switch" skillId="12" skillLvl="1" getLevel="43" levelUpSp="230000000" />
-		<skill skillName="Unlock" skillId="27" skillLvl="7" getLevel="43" levelUpSp="230000000" />
-		<skill skillName="Acrobatic Move" skillId="225" skillLvl="2" getLevel="43" levelUpSp="230000000" />
-		<skill skillName="Esprit" skillId="171" skillLvl="2" getLevel="43" levelUpSp="230000000" />
-		<skill skillName="Quick Step" skillId="169" skillLvl="2" getLevel="43" levelUpSp="230000000" />
-		<skill skillName="Entangle" skillId="102" skillLvl="3" getLevel="43" levelUpSp="230000000" />
+		<skill skillName="Dagger Mastery" skillId="209" skillLvl="14" getLevel="43" levelUpSp="94000" />
+		<skill skillName="Light Armor Mastery" skillId="233" skillLvl="16" getLevel="43" levelUpSp="94000" />
+		<skill skillName="Elemental Heal" skillId="58" skillLvl="24" getLevel="43" levelUpSp="94000" />
+		<skill skillName="Charm" skillId="15" skillLvl="21" getLevel="43" levelUpSp="94000" />
+		<skill skillName="Deadly Blow" skillId="263" skillLvl="6" getLevel="43" levelUpSp="94000" />
+		<skill skillName="Backstab" skillId="30" skillLvl="6" getLevel="43" levelUpSp="94000" />
+		<skill skillName="Vicious Stance" skillId="312" skillLvl="7" getLevel="43" levelUpSp="94000" />
+		<skill skillName="Switch" skillId="12" skillLvl="1" getLevel="43" levelUpSp="94000" />
+		<skill skillName="Unlock" skillId="27" skillLvl="7" getLevel="43" levelUpSp="94000" />
+		<skill skillName="Acrobatic Move" skillId="225" skillLvl="2" getLevel="43" levelUpSp="94000" />
+		<skill skillName="Esprit" skillId="171" skillLvl="2" getLevel="43" levelUpSp="94000" />
+		<skill skillName="Quick Step" skillId="169" skillLvl="2" getLevel="43" levelUpSp="94000" />
+		<skill skillName="Entangle" skillId="102" skillLvl="3" getLevel="43" levelUpSp="94000" />
 		
 		<skill skillName="Dagger Mastery" skillId="209" skillLvl="15" getLevel="44" levelUpSp="140000" />
 		<skill skillName="Light Armor Mastery" skillId="233" skillLvl="17" getLevel="44" levelUpSp="140000" />
