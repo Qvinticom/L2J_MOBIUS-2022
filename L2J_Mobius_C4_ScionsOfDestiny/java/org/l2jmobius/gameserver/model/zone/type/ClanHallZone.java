@@ -21,8 +21,8 @@ import org.l2jmobius.gameserver.instancemanager.ClanHallManager;
 import org.l2jmobius.gameserver.model.actor.Creature;
 import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
 import org.l2jmobius.gameserver.model.entity.ClanHall;
-import org.l2jmobius.gameserver.model.zone.ZoneRespawn;
 import org.l2jmobius.gameserver.model.zone.ZoneId;
+import org.l2jmobius.gameserver.model.zone.ZoneRespawn;
 import org.l2jmobius.gameserver.network.serverpackets.ClanHallDecoration;
 
 /**
@@ -47,7 +47,11 @@ public class ClanHallZone extends ZoneRespawn
 			{
 				_clanHallId = Integer.parseInt(value);
 				// Register self to the correct clan hall
-				ClanHallManager.getInstance().getClanHallById(_clanHallId).setZone(this);
+				final ClanHall ch = ClanHallManager.getInstance().getClanHallById(_clanHallId);
+				if (ch != null)
+				{
+					ClanHallManager.getInstance().getClanHallById(_clanHallId).setZone(this);
+				}
 				break;
 			}
 			default:
