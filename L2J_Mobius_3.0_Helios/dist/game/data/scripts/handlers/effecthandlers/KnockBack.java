@@ -139,6 +139,7 @@ public class KnockBack extends AbstractEffect
 	public void onExit(Creature effector, Creature effected, Skill skill)
 	{
 		ACTIVE_KNOCKBACKS.remove(effected);
+		effected.updateAbnormalVisualEffects();
 		
 		if (!effected.isPlayer())
 		{
