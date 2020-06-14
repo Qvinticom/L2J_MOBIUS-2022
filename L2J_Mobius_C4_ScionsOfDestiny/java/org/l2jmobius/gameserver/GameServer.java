@@ -56,7 +56,6 @@ import org.l2jmobius.gameserver.datatables.sql.SpawnTable;
 import org.l2jmobius.gameserver.datatables.sql.TeleportLocationTable;
 import org.l2jmobius.gameserver.datatables.xml.AdminData;
 import org.l2jmobius.gameserver.datatables.xml.ArmorSetData;
-import org.l2jmobius.gameserver.datatables.xml.AugmentationData;
 import org.l2jmobius.gameserver.datatables.xml.BoatData;
 import org.l2jmobius.gameserver.datatables.xml.DoorData;
 import org.l2jmobius.gameserver.datatables.xml.ExperienceData;
@@ -89,11 +88,8 @@ import org.l2jmobius.gameserver.instancemanager.ClanHallManager;
 import org.l2jmobius.gameserver.instancemanager.ClassDamageManager;
 import org.l2jmobius.gameserver.instancemanager.CoupleManager;
 import org.l2jmobius.gameserver.instancemanager.CrownManager;
-import org.l2jmobius.gameserver.instancemanager.CursedWeaponsManager;
 import org.l2jmobius.gameserver.instancemanager.DayNightSpawnManager;
 import org.l2jmobius.gameserver.instancemanager.DimensionalRiftManager;
-import org.l2jmobius.gameserver.instancemanager.DuelManager;
-import org.l2jmobius.gameserver.instancemanager.FishingChampionshipManager;
 import org.l2jmobius.gameserver.instancemanager.FortManager;
 import org.l2jmobius.gameserver.instancemanager.FortSiegeManager;
 import org.l2jmobius.gameserver.instancemanager.FourSepulchersManager;
@@ -206,7 +202,6 @@ public class GameServer
 		GameTimeController.getInstance();
 		CharNameTable.getInstance();
 		ExperienceData.getInstance();
-		DuelManager.getInstance();
 		
 		Util.printSection("Players");
 		PlayerTemplateData.getInstance();
@@ -301,19 +296,17 @@ public class GameServer
 		RecipeData.getInstance();
 		RecipeController.getInstance();
 		EventDroplist.getInstance();
-		AugmentationData.getInstance();
 		MonsterRace.getInstance();
 		Lottery.getInstance();
 		MercTicketManager.getInstance();
 		PetitionManager.getInstance();
-		CursedWeaponsManager.getInstance();
 		TaskManager.getInstance();
 		PetDataTable.getInstance();
 		if (Config.SAVE_DROPPED_ITEM)
 		{
 			ItemsOnGroundManager.getInstance();
 		}
-		if ((Config.AUTODESTROY_ITEM_AFTER > 0) || (Config.HERB_AUTO_DESTROY_TIME > 0))
+		if (Config.AUTODESTROY_ITEM_AFTER > 0)
 		{
 			ItemsAutoDestroy.getInstance();
 		}
@@ -377,11 +370,6 @@ public class GameServer
 		else
 		{
 			LOGGER.info("Script: disable load.");
-		}
-		
-		if (Config.ALT_FISH_CHAMPIONSHIP_ENABLED)
-		{
-			FishingChampionshipManager.getInstance();
 		}
 		
 		/* QUESTS */

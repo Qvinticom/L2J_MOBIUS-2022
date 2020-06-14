@@ -136,7 +136,7 @@ public class ItemsOnGroundManager
 				_items.add(item);
 				count++;
 				// add to ItemsAutoDestroy only items not protected
-				if (!Config.LIST_PROTECTED_ITEMS.contains(item.getItemId()) && (result.getLong(8) > -1) && (((Config.AUTODESTROY_ITEM_AFTER > 0) && (item.getItemType() != EtcItemType.HERB)) || ((Config.HERB_AUTO_DESTROY_TIME > 0) && (item.getItemType() == EtcItemType.HERB))))
+				if (!Config.LIST_PROTECTED_ITEMS.contains(item.getItemId()) && (result.getLong(8) > -1) && ((Config.AUTODESTROY_ITEM_AFTER > 0) && (item.getItemType() != EtcItemType.HERB)))
 				{
 					ItemsAutoDestroy.getInstance().addItem(item);
 				}
@@ -231,11 +231,6 @@ public class ItemsOnGroundManager
 				if (item == null)
 				{
 					continue;
-				}
-				
-				if (CursedWeaponsManager.getInstance().isCursed(item.getItemId()))
-				{
-					continue; // Cursed Items not saved to ground, prevent double save
 				}
 				
 				try (Connection con = DatabaseFactory.getConnection())

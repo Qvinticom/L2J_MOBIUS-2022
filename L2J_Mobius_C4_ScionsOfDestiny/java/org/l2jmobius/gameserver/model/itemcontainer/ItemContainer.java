@@ -377,10 +377,7 @@ public abstract class ItemContainer
 			{
 				targetitem.updateDatabase();
 			}
-			if (sourceitem.isAugmented())
-			{
-				sourceitem.getAugmentation().removeBonus(actor);
-			}
+			
 			refreshWeight();
 			target.refreshWeight();
 		}

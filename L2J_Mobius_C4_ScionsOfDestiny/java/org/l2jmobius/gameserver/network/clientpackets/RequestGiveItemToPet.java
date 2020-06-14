@@ -84,11 +84,6 @@ public class RequestGiveItemToPet extends GameClientPacket
 			return;
 		}
 		
-		if (item.isAugmented())
-		{
-			return;
-		}
-		
 		if (!item.isDropable() || !item.isDestroyable() || !item.isTradeable())
 		{
 			player.sendPacket(SystemMessageId.YOUR_PET_CANNOT_CARRY_THIS_ITEM);

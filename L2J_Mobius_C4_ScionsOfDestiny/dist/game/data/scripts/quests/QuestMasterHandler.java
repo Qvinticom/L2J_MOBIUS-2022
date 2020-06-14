@@ -108,25 +108,6 @@ import quests.Q105_SkirmishWithTheOrcs.Q105_SkirmishWithTheOrcs;
 import quests.Q106_ForgottenTruth.Q106_ForgottenTruth;
 import quests.Q107_MercilessPunishment.Q107_MercilessPunishment;
 import quests.Q108_JumbleTumbleDiamondFuss.Q108_JumbleTumbleDiamondFuss;
-import quests.Q109_InSearchOfTheNest.Q109_InSearchOfTheNest;
-import quests.Q110_ToThePrimevalIsle.Q110_ToThePrimevalIsle;
-import quests.Q111_ElrokianHuntersProof.Q111_ElrokianHuntersProof;
-import quests.Q112_WalkOfFate.Q112_WalkOfFate;
-import quests.Q113_StatusOfTheBeaconTower.Q113_StatusOfTheBeaconTower;
-import quests.Q114_ResurrectionOfAnOldManager.Q114_ResurrectionOfAnOldManager;
-import quests.Q115_TheOtherSideOfTruth.Q115_TheOtherSideOfTruth;
-import quests.Q116_BeyondTheHillsOfWinter.Q116_BeyondTheHillsOfWinter;
-import quests.Q117_TheOceanOfDistantStars.Q117_TheOceanOfDistantStars;
-import quests.Q118_ToLeadAndBeLed.Q118_ToLeadAndBeLed;
-import quests.Q119_LastImperialPrince.Q119_LastImperialPrince;
-import quests.Q120_PavelsResearch.Q120_PavelsResearch;
-import quests.Q121_PavelTheGiant.Q121_PavelTheGiant;
-import quests.Q122_OminousNews.Q122_OminousNews;
-import quests.Q123_TheLeaderAndTheFollower.Q123_TheLeaderAndTheFollower;
-import quests.Q124_MeetingTheElroki.Q124_MeetingTheElroki;
-import quests.Q125_TheNameOfEvil_1.Q125_TheNameOfEvil_1;
-import quests.Q126_TheNameOfEvil_2.Q126_TheNameOfEvil_2;
-import quests.Q127_KamaelAWindowToTheFuture.Q127_KamaelAWindowToTheFuture;
 import quests.Q151_CureForFeverDisease.Q151_CureForFeverDisease;
 import quests.Q152_ShardsOfGolem.Q152_ShardsOfGolem;
 import quests.Q153_DeliverGoods.Q153_DeliverGoods;
@@ -298,9 +279,6 @@ import quests.Q501_ProofOfClanAlliance.Q501_ProofOfClanAlliance;
 import quests.Q503_PursuitOfClanAmbition.Q503_PursuitOfClanAmbition;
 import quests.Q504_CompetitionForTheBanditStronghold.Q504_CompetitionForTheBanditStronghold;
 import quests.Q505_BloodOffering.Q505_BloodOffering;
-import quests.Q508_AClansReputation.Q508_AClansReputation;
-import quests.Q509_TheClansPrestige.Q509_TheClansPrestige;
-import quests.Q510_AClansReputation.Q510_AClansReputation;
 import quests.Q601_WatchingEyes.Q601_WatchingEyes;
 import quests.Q602_ShadowOfLight.Q602_ShadowOfLight;
 import quests.Q603_DaimonTheWhiteEyed_Part1.Q603_DaimonTheWhiteEyed_Part1;
@@ -335,32 +313,6 @@ import quests.Q632_NecromancersRequest.Q632_NecromancersRequest;
 import quests.Q633_InTheForgottenVillage.Q633_InTheForgottenVillage;
 import quests.Q634_InSearchOfFragmentsOfDimension.Q634_InSearchOfFragmentsOfDimension;
 import quests.Q635_InTheDimensionalRift.Q635_InTheDimensionalRift;
-import quests.Q636_TheTruthBeyondTheGate.Q636_TheTruthBeyondTheGate;
-import quests.Q637_ThroughTheGateOnceMore.Q637_ThroughTheGateOnceMore;
-import quests.Q638_SeekersOfTheHolyGrail.Q638_SeekersOfTheHolyGrail;
-import quests.Q639_GuardiansOfTheHolyGrail.Q639_GuardiansOfTheHolyGrail;
-import quests.Q640_TheZeroHour.Q640_TheZeroHour;
-import quests.Q641_AttackSailren.Q641_AttackSailren;
-import quests.Q642_APowerfulPrimevalCreature.Q642_APowerfulPrimevalCreature;
-import quests.Q643_RiseAndFallOfTheElrokiTribe.Q643_RiseAndFallOfTheElrokiTribe;
-import quests.Q644_GraveRobberAnnihilation.Q644_GraveRobberAnnihilation;
-import quests.Q645_GhostsOfBatur.Q645_GhostsOfBatur;
-import quests.Q646_SignsOfRevolt.Q646_SignsOfRevolt;
-import quests.Q647_InfluxOfMachines.Q647_InfluxOfMachines;
-import quests.Q648_AnIceMerchantsDream.Q648_AnIceMerchantsDream;
-import quests.Q649_ALooterAndARailroadMan.Q649_ALooterAndARailroadMan;
-import quests.Q650_ABrokenDream.Q650_ABrokenDream;
-import quests.Q651_RunawayYouth.Q651_RunawayYouth;
-import quests.Q652_AnAgedExAdventurer.Q652_AnAgedExAdventurer;
-import quests.Q653_WildMaiden.Q653_WildMaiden;
-import quests.Q654_JourneyToASettlement.Q654_JourneyToASettlement;
-import quests.Q655_AGrandPlanForTamingWildBeasts.Q655_AGrandPlanForTamingWildBeasts;
-import quests.Q659_IdRatherBeCollectingFairyBreath.Q659_IdRatherBeCollectingFairyBreath;
-import quests.Q660_AidingTheFloranVillage.Q660_AidingTheFloranVillage;
-import quests.Q661_MakingTheHarvestGroundsSafe.Q661_MakingTheHarvestGroundsSafe;
-import quests.Q662_AGameOfCards.Q662_AGameOfCards;
-import quests.Q663_SeductiveWhispers.Q663_SeductiveWhispers;
-import quests.Q688_DefeatTheElrokianRaiders.Q688_DefeatTheElrokianRaiders;
 
 /**
  * @author Mobius
@@ -460,25 +412,6 @@ public class QuestMasterHandler
 		Q106_ForgottenTruth.class,
 		Q107_MercilessPunishment.class,
 		Q108_JumbleTumbleDiamondFuss.class,
-		Q109_InSearchOfTheNest.class,
-		Q110_ToThePrimevalIsle.class,
-		Q111_ElrokianHuntersProof.class,
-		Q112_WalkOfFate.class,
-		Q113_StatusOfTheBeaconTower.class,
-		Q114_ResurrectionOfAnOldManager.class,
-		Q115_TheOtherSideOfTruth.class,
-		Q116_BeyondTheHillsOfWinter.class,
-		Q117_TheOceanOfDistantStars.class,
-		Q118_ToLeadAndBeLed.class,
-		Q119_LastImperialPrince.class,
-		Q120_PavelsResearch.class,
-		Q121_PavelTheGiant.class,
-		Q122_OminousNews.class,
-		Q123_TheLeaderAndTheFollower.class,
-		Q124_MeetingTheElroki.class,
-		Q125_TheNameOfEvil_1.class,
-		Q126_TheNameOfEvil_2.class,
-		Q127_KamaelAWindowToTheFuture.class,
 		Q151_CureForFeverDisease.class,
 		Q152_ShardsOfGolem.class,
 		Q153_DeliverGoods.class,
@@ -650,9 +583,6 @@ public class QuestMasterHandler
 		Q503_PursuitOfClanAmbition.class,
 		Q504_CompetitionForTheBanditStronghold.class,
 		Q505_BloodOffering.class,
-		Q508_AClansReputation.class,
-		Q509_TheClansPrestige.class,
-		Q510_AClansReputation.class,
 		Q601_WatchingEyes.class,
 		Q602_ShadowOfLight.class,
 		Q603_DaimonTheWhiteEyed_Part1.class,
@@ -687,32 +617,6 @@ public class QuestMasterHandler
 		Q633_InTheForgottenVillage.class,
 		Q634_InSearchOfFragmentsOfDimension.class,
 		Q635_InTheDimensionalRift.class,
-		Q636_TheTruthBeyondTheGate.class,
-		Q637_ThroughTheGateOnceMore.class,
-		Q638_SeekersOfTheHolyGrail.class,
-		Q639_GuardiansOfTheHolyGrail.class,
-		Q640_TheZeroHour.class,
-		Q641_AttackSailren.class,
-		Q642_APowerfulPrimevalCreature.class,
-		Q643_RiseAndFallOfTheElrokiTribe.class,
-		Q644_GraveRobberAnnihilation.class,
-		Q645_GhostsOfBatur.class,
-		Q646_SignsOfRevolt.class,
-		Q647_InfluxOfMachines.class,
-		Q648_AnIceMerchantsDream.class,
-		Q649_ALooterAndARailroadMan.class,
-		Q650_ABrokenDream.class,
-		Q651_RunawayYouth.class,
-		Q652_AnAgedExAdventurer.class,
-		Q653_WildMaiden.class,
-		Q654_JourneyToASettlement.class,
-		Q655_AGrandPlanForTamingWildBeasts.class,
-		Q659_IdRatherBeCollectingFairyBreath.class,
-		Q660_AidingTheFloranVillage.class,
-		Q661_MakingTheHarvestGroundsSafe.class,
-		Q662_AGameOfCards.class,
-		Q663_SeductiveWhispers.class,
-		Q688_DefeatTheElrokianRaiders.class,
 	};
 	
 	public static void main(String[] args)

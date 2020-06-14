@@ -70,7 +70,6 @@ import org.l2jmobius.gameserver.model.skills.handlers.SkillSignetCasttime;
 import org.l2jmobius.gameserver.model.skills.handlers.SkillSummon;
 import org.l2jmobius.gameserver.model.zone.ZoneId;
 import org.l2jmobius.gameserver.network.SystemMessageId;
-import org.l2jmobius.gameserver.network.serverpackets.EtcStatusUpdate;
 import org.l2jmobius.gameserver.network.serverpackets.SystemMessage;
 import org.l2jmobius.gameserver.util.Util;
 
@@ -2248,10 +2247,7 @@ public abstract class Skill
 							{
 								continue;
 							}
-							if (player.isInDuel() && ((player.getDuelId() != newTarget.getDuelId()) || ((player.getParty() == null) && (player.getParty() != newTarget.getParty()))))
-							{
-								continue;
-							}
+							
 							final PlayerInstance trg = newTarget;
 							final PlayerInstance src = player;
 							// if src is in event and trg not OR viceversa:
@@ -2672,7 +2668,7 @@ public abstract class Skill
 				if (target instanceof Summon)
 				{
 					final Summon targetSummon = (Summon) target;
-					if (((creature instanceof PlayerInstance) && (creature.getPet() != targetSummon) && !targetSummon.isDead() && ((targetSummon.getOwner().getPvpFlag() != 0) || (targetSummon.getOwner().getKarma() > 0) || targetSummon.getOwner().isInDuel())) || (targetSummon.getOwner().isInsideZone(ZoneId.PVP) && ((PlayerInstance) creature).isInsideZone(ZoneId.PVP)))
+					if (((creature instanceof PlayerInstance) && (creature.getPet() != targetSummon) && !targetSummon.isDead() && ((targetSummon.getOwner().getPvpFlag() != 0) || (targetSummon.getOwner().getKarma() > 0))) || (targetSummon.getOwner().isInsideZone(ZoneId.PVP) && ((PlayerInstance) creature).isInsideZone(ZoneId.PVP)))
 					{
 						return new Creature[]
 						{
@@ -2921,7 +2917,6 @@ public abstract class Skill
 							effect.addNumCharges(effectcharge);
 							if (env.target instanceof PlayerInstance)
 							{
-								env.target.sendPacket(new EtcStatusUpdate((PlayerInstance) env.target));
 								final SystemMessage sm = new SystemMessage(SystemMessageId.YOUR_FORCE_HAS_INCREASED_TO_S1_LEVEL);
 								sm.addNumber(effectcharge);
 								env.target.sendPacket(sm);
@@ -3046,11 +3041,6 @@ public abstract class Skill
 			final PlayerInstance targetChar = (PlayerInstance) target;
 			final PlayerInstance activeCh = (PlayerInstance) creature;
 			if (activeCh.isInOlympiadMode() && activeCh.isOlympiadStart() && targetChar.isInOlympiadMode() && targetChar.isOlympiadStart())
-			{
-				return false;
-			}
-			
-			if (activeCh.isInDuel() && targetChar.isInDuel() && (activeCh.getDuelId() == targetChar.getDuelId()))
 			{
 				return false;
 			}

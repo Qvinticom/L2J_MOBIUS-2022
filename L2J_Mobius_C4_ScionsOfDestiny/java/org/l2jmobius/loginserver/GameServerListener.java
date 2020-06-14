@@ -18,36 +18,53 @@ package org.l2jmobius.loginserver;
 
 import java.io.IOException;
 import java.net.Socket;
-import java.util.ArrayList;
 import java.util.List;
+import java.util.concurrent.CopyOnWriteArrayList;
+import java.util.logging.Logger;
 
 import org.l2jmobius.Config;
 
 /**
- * @author KenM
+ * This class waits for incoming connections from GameServers and launches (@link GameServerThread GameServerThreads}
+ * @author luisantonioa, -Wooden-
  */
+
 public class GameServerListener extends FloodProtectedListener
 {
-	private static List<GameServerThread> _gameServers = new ArrayList<>();
+	protected static Logger LOGGER = Logger.getLogger(LoginServer.class.getName());
+	private final List<GameServerThread> _gameServerThreads = new CopyOnWriteArrayList<>();
 	
 	public GameServerListener() throws IOException
 	{
 		super(Config.GAME_SERVER_LOGIN_HOST, Config.GAME_SERVER_LOGIN_PORT);
+		setName(getClass().getSimpleName());
 	}
 	
 	/**
+	 * @return Returns the gameServerThreads.
+	 */
+	public List<GameServerThread> getGameServerThreads()
+	{
+		return _gameServerThreads;
+	}
+	
+	/**
+	 * Removes a GameServerThread from the list
+	 * @param gst
+	 */
+	public void removeGameServer(GameServerThread gst)
+	{
+		_gameServerThreads.remove(gst);
+	}
+	
+	/*
+	 * (non-Javadoc)
 	 * @see org.l2jmobius.loginserver.FloodProtectedListener#addClient(java.net.Socket)
 	 */
 	@Override
 	public void addClient(Socket s)
 	{
 		final GameServerThread gst = new GameServerThread(s);
-		gst.start();
-		_gameServers.add(gst);
-	}
-	
-	public void removeGameServer(GameServerThread gst)
-	{
-		_gameServers.remove(gst);
+		_gameServerThreads.add(gst);
 	}
 }

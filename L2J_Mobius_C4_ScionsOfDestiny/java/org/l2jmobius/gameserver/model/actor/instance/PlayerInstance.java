@@ -77,9 +77,7 @@ import org.l2jmobius.gameserver.handler.skillhandlers.StrSiegeAssault;
 import org.l2jmobius.gameserver.handler.skillhandlers.TakeCastle;
 import org.l2jmobius.gameserver.instancemanager.CastleManager;
 import org.l2jmobius.gameserver.instancemanager.CoupleManager;
-import org.l2jmobius.gameserver.instancemanager.CursedWeaponsManager;
 import org.l2jmobius.gameserver.instancemanager.DimensionalRiftManager;
-import org.l2jmobius.gameserver.instancemanager.DuelManager;
 import org.l2jmobius.gameserver.instancemanager.FortSiegeManager;
 import org.l2jmobius.gameserver.instancemanager.ItemsOnGroundManager;
 import org.l2jmobius.gameserver.instancemanager.QuestManager;
@@ -121,7 +119,6 @@ import org.l2jmobius.gameserver.model.base.SubClass;
 import org.l2jmobius.gameserver.model.clan.Clan;
 import org.l2jmobius.gameserver.model.clan.ClanMember;
 import org.l2jmobius.gameserver.model.entity.Announcements;
-import org.l2jmobius.gameserver.model.entity.Duel;
 import org.l2jmobius.gameserver.model.entity.Hero;
 import org.l2jmobius.gameserver.model.entity.Rebirth;
 import org.l2jmobius.gameserver.model.entity.event.CTF;
@@ -176,15 +173,12 @@ import org.l2jmobius.gameserver.network.serverpackets.ChangeWaitType;
 import org.l2jmobius.gameserver.network.serverpackets.CharInfo;
 import org.l2jmobius.gameserver.network.serverpackets.ConfirmDlg;
 import org.l2jmobius.gameserver.network.serverpackets.CreatureSay;
-import org.l2jmobius.gameserver.network.serverpackets.EtcStatusUpdate;
 import org.l2jmobius.gameserver.network.serverpackets.ExAutoSoulShot;
-import org.l2jmobius.gameserver.network.serverpackets.ExDuelUpdateUserInfo;
 import org.l2jmobius.gameserver.network.serverpackets.ExFishingEnd;
 import org.l2jmobius.gameserver.network.serverpackets.ExFishingStart;
 import org.l2jmobius.gameserver.network.serverpackets.ExOlympiadMode;
 import org.l2jmobius.gameserver.network.serverpackets.ExOlympiadUserInfo;
 import org.l2jmobius.gameserver.network.serverpackets.ExPCCafePointInfo;
-import org.l2jmobius.gameserver.network.serverpackets.ExSetCompassZoneCode;
 import org.l2jmobius.gameserver.network.serverpackets.FriendList;
 import org.l2jmobius.gameserver.network.serverpackets.GameServerPacket;
 import org.l2jmobius.gameserver.network.serverpackets.HennaInfo;
@@ -211,9 +205,7 @@ import org.l2jmobius.gameserver.network.serverpackets.RelationChanged;
 import org.l2jmobius.gameserver.network.serverpackets.Ride;
 import org.l2jmobius.gameserver.network.serverpackets.SendTradeDone;
 import org.l2jmobius.gameserver.network.serverpackets.SetupGauge;
-import org.l2jmobius.gameserver.network.serverpackets.ShortBuffStatusUpdate;
 import org.l2jmobius.gameserver.network.serverpackets.ShortCutInit;
-import org.l2jmobius.gameserver.network.serverpackets.SkillCoolTime;
 import org.l2jmobius.gameserver.network.serverpackets.SkillList;
 import org.l2jmobius.gameserver.network.serverpackets.Snoop;
 import org.l2jmobius.gameserver.network.serverpackets.SocialAction;
@@ -307,7 +299,6 @@ public class PlayerInstance extends Playable
 	private byte _pvpFlag;
 	private byte _siegeState = 0;
 	private int _curWeightPenalty = 0;
-	private int _lastCompassZone; // the last compass zone update send to the client
 	private byte _zoneValidateCounter = 4;
 	private boolean _isIn7sDungeon = false;
 	private int _heroConsecutiveKillCount = 0;
@@ -359,10 +350,6 @@ public class PlayerInstance extends Playable
 	private int[] _olympiadPosition;
 	private int _olympiadGameId = -1;
 	private int _olympiadSide = -1;
-	private boolean _isInDuel = false;
-	private int _duelState = Duel.DUELSTATE_NODUEL;
-	private int _duelId = 0;
-	private SystemMessageId _noDuelReason = SystemMessageId.THERE_IS_NO_OPPONENT_TO_RECEIVE_YOUR_CHALLENGE_FOR_A_DUEL;
 	private BoatInstance _boat;
 	private Location _inBoatPosition;
 	private int _mountType;
@@ -480,7 +467,6 @@ public class PlayerInstance extends Playable
 	private SkillDat _queuedSkill;
 	private boolean _isWearingFormalWear = false;
 	private Location _currentSkillWorldPosition;
-	private int _cursedWeaponEquipedId = 0;
 	private int _reviveRequested = 0;
 	private double _revivePower = 0;
 	private boolean _revivePet = false;
@@ -1781,56 +1767,6 @@ public class PlayerInstance extends Playable
 		}
 		
 		getWorldRegion().revalidateZones(this);
-		
-		if (isInsideZone(ZoneId.SIEGE))
-		{
-			if (_lastCompassZone == ExSetCompassZoneCode.SIEGEWARZONE2)
-			{
-				return;
-			}
-			_lastCompassZone = ExSetCompassZoneCode.SIEGEWARZONE2;
-			sendPacket(new ExSetCompassZoneCode(ExSetCompassZoneCode.SIEGEWARZONE2));
-		}
-		else if (isInsideZone(ZoneId.PVP))
-		{
-			if (_lastCompassZone == ExSetCompassZoneCode.PVPZONE)
-			{
-				return;
-			}
-			_lastCompassZone = ExSetCompassZoneCode.PVPZONE;
-			sendPacket(new ExSetCompassZoneCode(ExSetCompassZoneCode.PVPZONE));
-		}
-		else if (isIn7sDungeon())
-		{
-			if (_lastCompassZone == ExSetCompassZoneCode.SEVENSIGNSZONE)
-			{
-				return;
-			}
-			_lastCompassZone = ExSetCompassZoneCode.SEVENSIGNSZONE;
-			sendPacket(new ExSetCompassZoneCode(ExSetCompassZoneCode.SEVENSIGNSZONE));
-		}
-		else if (isInsideZone(ZoneId.PEACE))
-		{
-			if (_lastCompassZone == ExSetCompassZoneCode.PEACEZONE)
-			{
-				return;
-			}
-			_lastCompassZone = ExSetCompassZoneCode.PEACEZONE;
-			sendPacket(new ExSetCompassZoneCode(ExSetCompassZoneCode.PEACEZONE));
-		}
-		else
-		{
-			if (_lastCompassZone == ExSetCompassZoneCode.GENERALZONE)
-			{
-				return;
-			}
-			if (_lastCompassZone == ExSetCompassZoneCode.SIEGEWARZONE2)
-			{
-				updatePvPStatus();
-			}
-			_lastCompassZone = ExSetCompassZoneCode.GENERALZONE;
-			sendPacket(new ExSetCompassZoneCode(ExSetCompassZoneCode.GENERALZONE));
-		}
 	}
 	
 	/**
@@ -2170,7 +2106,6 @@ public class PlayerInstance extends Playable
 			setOverloaded(false);
 			_curWeightPenalty = 0;
 			super.removeSkill(getKnownSkill(4270));
-			sendPacket(new EtcStatusUpdate(this));
 			Broadcast.toKnownPlayers(this, new CharInfo(this));
 		}
 		else
@@ -2215,7 +2150,6 @@ public class PlayerInstance extends Playable
 						sendSkillList(); // Fix visual bug
 					}
 					
-					sendPacket(new EtcStatusUpdate(this));
 					Broadcast.toKnownPlayers(this, new CharInfo(this));
 				}
 			}
@@ -2317,7 +2251,6 @@ public class PlayerInstance extends Playable
 				super.removeSkill(getKnownSkill(4267));
 			}
 			
-			sendPacket(new EtcStatusUpdate(this));
 			_masteryPenalty = newMasteryPenalty;
 		}
 	}
@@ -2412,7 +2345,7 @@ public class PlayerInstance extends Playable
 		{
 			for (ItemInstance item : getInventory().getItems())
 			{
-				if ((item != null) && item.isEquipped() && (item.getItem() instanceof Weapon) && !isCursedWeaponEquiped())
+				if ((item != null) && item.isEquipped() && (item.getItem() instanceof Weapon))
 				{
 					// No penality for cupid's bow
 					if (item.isCupidBow())
@@ -2507,7 +2440,6 @@ public class PlayerInstance extends Playable
 				super.removeSkill(getKnownSkill(4267));
 			}
 			
-			sendPacket(new EtcStatusUpdate(this));
 			_masteryWeapPenalty = newMasteryPenalty;
 		}
 	}
@@ -3587,10 +3519,6 @@ public class PlayerInstance extends Playable
 			{
 				dropItem("InvDrop", newitem, null, true, true);
 			}
-			else if (CursedWeaponsManager.getInstance().isCursed(newitem.getItemId()))
-			{
-				CursedWeaponsManager.getInstance().activate(this, newitem);
-			}
 		}
 		
 		// If you pickup arrows.
@@ -3702,10 +3630,6 @@ public class PlayerInstance extends Playable
 				if (!isGM() && !_inventory.validateCapacity(item))
 				{
 					dropItem("InvDrop", item, null, true, true);
-				}
-				else if (CursedWeaponsManager.getInstance().isCursed(item.getItemId()))
-				{
-					CursedWeaponsManager.getInstance().activate(this, item);
 				}
 			}
 		}
@@ -4572,13 +4496,7 @@ public class PlayerInstance extends Playable
 					}
 				}
 				
-				// Player with lvl < 21 can't attack a cursed weapon holder
-				// And a cursed weapon holder can't attack players with lvl < 21
-				if ((isCursedWeaponEquiped() && (player.getLevel() < 21)) || (player.isCursedWeaponEquiped() && (getLevel() < 21)))
-				{
-					player.sendPacket(ActionFailed.STATIC_PACKET);
-				}
-				else if (Config.PATHFINDING)
+				if (Config.PATHFINDING)
 				{
 					if (GeoEngine.getInstance().canSeeTarget(player, this))
 					{
@@ -4757,13 +4675,7 @@ public class PlayerInstance extends Playable
 						}
 					}
 					
-					// Player with lvl < 21 can't attack a cursed weapon holder
-					// And a cursed weapon holder can't attack players with lvl < 21
-					if ((isCursedWeaponEquiped() && (player.getLevel() < 21)) || (player.isCursedWeaponEquiped() && (getLevel() < 21)))
-					{
-						player.sendPacket(ActionFailed.STATIC_PACKET);
-					}
-					else if (Config.PATHFINDING)
+					if (Config.PATHFINDING)
 					{
 						if (GeoEngine.getInstance().canSeeTarget(player, this))
 						{
@@ -5027,10 +4939,6 @@ public class PlayerInstance extends Playable
 					spectator.sendPacket(new ExOlympiadUserInfo(this, getOlympiadSide()));
 				}
 			}
-		}
-		if (isInDuel())
-		{
-			DuelManager.getInstance().broadcastToOppositTeam(this, new ExDuelUpdateUserInfo(this));
 		}
 	}
 	
@@ -5363,11 +5271,6 @@ public class PlayerInstance extends Playable
 				handler.useItem(this, target);
 			}
 			ItemTable.getInstance().destroyItem("Consume", target, this, null);
-		}
-		// Cursed Weapons are not distributed
-		else if (CursedWeaponsManager.getInstance().isCursed(target.getItemId()))
-		{
-			addItem("Pickup", target, null, true);
 		}
 		else if (FortSiegeManager.getInstance().isCombat(target.getItemId()))
 		{
@@ -6030,41 +5933,34 @@ public class PlayerInstance extends Playable
 			// Clear resurrect xp calculation
 			setExpBeforeDeath(0);
 			
-			if (isCursedWeaponEquiped())
+			onDieDropItem(killer); // Check if any item should be dropped
+			if ((!isInsideZone(ZoneId.PVP) || isInsideZone(ZoneId.SIEGE)))
 			{
-				CursedWeaponsManager.getInstance().drop(_cursedWeaponEquipedId, killer);
-			}
-			else if ((pk == null) || !pk.isCursedWeaponEquiped())
-			{
-				onDieDropItem(killer); // Check if any item should be dropped
-				if ((!isInsideZone(ZoneId.PVP) || isInsideZone(ZoneId.SIEGE)))
+				if ((pk != null) && (pk.getClan() != null) && (getClan() != null) && !isAcademyMember() && !pk.isAcademyMember() && _clan.isAtWarWith(pk.getClanId()) && pk.getClan().isAtWarWith(_clan.getClanId()))
 				{
-					if ((pk != null) && (pk.getClan() != null) && (getClan() != null) && !isAcademyMember() && !pk.isAcademyMember() && _clan.isAtWarWith(pk.getClanId()) && pk.getClan().isAtWarWith(_clan.getClanId()))
+					if (getClan().getReputationScore() > 0)
 					{
-						if (getClan().getReputationScore() > 0)
-						{
-							pk.getClan().setReputationScore(((PlayerInstance) killer).getClan().getReputationScore() + 2, true);
-							pk.getClan().broadcastToOnlineMembers(new PledgeShowInfoUpdate(pk.getClan())); // Update status to all members
-						}
-						if (pk.getClan().getReputationScore() > 0)
-						{
-							_clan.setReputationScore(_clan.getReputationScore() - 2, true);
-							_clan.broadcastToOnlineMembers(new PledgeShowInfoUpdate(_clan)); // Update status to all members
-						}
+						pk.getClan().setReputationScore(((PlayerInstance) killer).getClan().getReputationScore() + 2, true);
+						pk.getClan().broadcastToOnlineMembers(new PledgeShowInfoUpdate(pk.getClan())); // Update status to all members
 					}
-					if (Config.ALT_GAME_DELEVEL)
+					if (pk.getClan().getReputationScore() > 0)
 					{
-						// Reduce the Experience of the PlayerInstance in function of the calculated Death Penalty
-						// NOTE: deathPenalty +- Exp will update karma
-						if ((getSkillLevel(Skill.SKILL_LUCKY) <= 0) || (getStat().getLevel() > 9))
-						{
-							deathPenalty(((pk != null) && (getClan() != null) && (pk.getClan() != null) && pk.getClan().isAtWarWith(getClanId())));
-						}
+						_clan.setReputationScore(_clan.getReputationScore() - 2, true);
+						_clan.broadcastToOnlineMembers(new PledgeShowInfoUpdate(_clan)); // Update status to all members
 					}
-					else
+				}
+				if (Config.ALT_GAME_DELEVEL)
+				{
+					// Reduce the Experience of the PlayerInstance in function of the calculated Death Penalty
+					// NOTE: deathPenalty +- Exp will update karma
+					if ((getSkillLevel(Skill.SKILL_LUCKY) <= 0) || (getStat().getLevel() > 9))
 					{
-						onDieUpdateKarma(); // Update karma if delevel is not allowed
+						deathPenalty(((pk != null) && (getClan() != null) && (pk.getClan() != null) && pk.getClan().isAtWarWith(getClanId())));
 					}
+				}
+				else
+				{
+					onDieUpdateKarma(); // Update karma if delevel is not allowed
 				}
 			}
 		}
@@ -6105,8 +6001,6 @@ public class PlayerInstance extends Playable
 			sendMessage("You leaved War Legend State");
 		}
 		
-		// Refresh focus force like L2OFF
-		sendPacket(new EtcStatusUpdate(this));
 		return true;
 	}
 	
@@ -6174,8 +6068,7 @@ public class PlayerInstance extends Playable
 				for (ItemInstance itemDrop : getInventory().getItems())
 				{
 					// Don't drop
-					if (itemDrop.isAugmented() || // Dont drop augmented items
-						itemDrop.isShadowItem() || // Dont drop Shadow Items
+					if (itemDrop.isShadowItem() || // Dont drop Shadow Items
 						(itemDrop.getItemId() == 57) || // Adena
 						(itemDrop.getItem().getType2() == Item.TYPE2_QUEST) || // Quest Items
 						Config.KARMA_LIST_NONDROPPABLE_ITEMS.contains(itemDrop.getItemId()) || // Item listed in the non droppable item list
@@ -6255,19 +6148,6 @@ public class PlayerInstance extends Playable
 			return;
 		}
 		
-		if (isCursedWeaponEquipped())
-		{
-			CursedWeaponsManager.getInstance().increaseKills(_cursedWeaponEquipedId);
-			// Custom message for time left
-			// CursedWeapon cw = CursedWeaponsManager.getInstance().getCursedWeapon(_cursedWeaponEquipedId);
-			// SystemMessage msg = SystemMessageId.THERE_IS_S1_HOUR_AND_S2_MINUTE_LEFT_OF_THE_FIXED_USAGE_TIME);
-			// int timeLeftInHours = (int)(((cw.getTimeLeft()/60000)/60));
-			// msg.addItemName(_cursedWeaponEquipedId);
-			// msg.addNumber(timeLeftInHours);
-			// sendPacket(msg);
-			return;
-		}
-		
 		PlayerInstance targetPlayer = null;
 		if (target instanceof PlayerInstance)
 		{
@@ -6286,18 +6166,6 @@ public class PlayerInstance extends Playable
 		if (targetPlayer == this)
 		{
 			return; // Target player is self
-		}
-		
-		if (isCursedWeaponEquiped())
-		{
-			CursedWeaponsManager.getInstance().increaseKills(_cursedWeaponEquipedId);
-			return;
-		}
-		
-		// If in duel and you kill (only can kill l2summon), do nothing
-		if (isInDuel() && targetPlayer.isInDuel())
-		{
-			return;
 		}
 		
 		// If in Arena, do nothing
@@ -6976,11 +6844,6 @@ public class PlayerInstance extends Playable
 			return;
 		}
 		
-		if (isInDuel() && (targetPlayer.getDuelId() == getDuelId()))
-		{
-			return;
-		}
-		
 		if ((!isInsideZone(ZoneId.PVP) || !targetPlayer.isInsideZone(ZoneId.PVP)) && (targetPlayer.getKarma() == 0))
 		{
 			if (checkIfPvP(targetPlayer))
@@ -7583,12 +7446,6 @@ public class PlayerInstance extends Playable
 	 */
 	public boolean disarmWeapons()
 	{
-		// Don't allow disarming a cursed weapon
-		if (isCursedWeaponEquiped() && !getAccessLevel().isGm())
-		{
-			return false;
-		}
-		
 		// Unequip the weapon
 		ItemInstance wpn = getInventory().getPaperdollItem(Inventory.PAPERDOLL_RHAND);
 		if (wpn == null)
@@ -7601,12 +7458,6 @@ public class PlayerInstance extends Playable
 			if (wpn.isWear())
 			{
 				return false;
-			}
-			
-			// Remove augementation boni on unequip
-			if (wpn.isAugmented())
-			{
-				wpn.getAugmentation().removeBonus(this);
 			}
 			
 			final ItemInstance[] unequiped = getInventory().unEquipItemInBodySlotAndRecord(wpn.getItem().getBodyPart());
@@ -8357,8 +8208,6 @@ public class PlayerInstance extends Playable
 				}
 				
 				player.setAccessLevel(rset.getInt("accesslevel"));
-				
-				CursedWeaponsManager.getInstance().checkPlayer(player);
 				
 				player.setAllianceWithVarkaKetra(rset.getInt("varka_ketra_ally"));
 				
@@ -9162,12 +9011,6 @@ public class PlayerInstance extends Playable
 					foundskill = true;
 				}
 				
-				// exclude cursed weapon skills
-				if (isCursedWeaponEquiped() && (skillid == CursedWeaponsManager.getInstance().getCursedWeapon(_cursedWeaponEquipedId).getSkillId()))
-				{
-					foundskill = true;
-				}
-				
 				// exclude clan skills
 				if ((getClan() != null) && (skillid >= 370) && (skillid <= 391))
 				{
@@ -9751,8 +9594,8 @@ public class PlayerInstance extends Playable
 			return true;
 		}
 		
-		// Check if the attacker is not in the same party, excluding duels like L2OFF
-		if ((getParty() != null) && getParty().getPartyMembers().contains(attacker) && ((getDuelState() != Duel.DUELSTATE_DUELLING) || (getDuelId() != ((PlayerInstance) attacker).getDuelId())))
+		// Check if the attacker is not in the same party.
+		if ((getParty() != null) && getParty().getPartyMembers().contains(attacker))
 		{
 			return false;
 		}
@@ -9767,8 +9610,8 @@ public class PlayerInstance extends Playable
 			return false;
 		}
 		
-		// Check if the attacker is not in the same clan, excluding duels like L2OFF
-		if ((getClan() != null) && (attacker != null) && getClan().isMember(attacker.getName()) && ((getDuelState() != Duel.DUELSTATE_DUELLING) || (getDuelId() != ((PlayerInstance) attacker).getDuelId())))
+		// Check if the attacker is not in the same clan.
+		if ((getClan() != null) && (attacker != null) && getClan().isMember(attacker.getName()))
 		{
 			return false;
 		}
@@ -9786,8 +9629,8 @@ public class PlayerInstance extends Playable
 				player = ((Summon) attacker).getOwner();
 			}
 			
-			// Check if the attacker is not in the same ally, excluding duels like L2OFF
-			if ((player != null) && (getAllyId() != 0) && (player.getAllyId() != 0) && (getAllyId() == player.getAllyId()) && ((getDuelState() != Duel.DUELSTATE_DUELLING) || (getDuelId() != player.getDuelId())))
+			// Check if the attacker is not in the same ally.
+			if ((player != null) && (getAllyId() != 0) && (player.getAllyId() != 0) && (getAllyId() == player.getAllyId()))
 			{
 				return false;
 			}
@@ -9830,11 +9673,6 @@ public class PlayerInstance extends Playable
 		// Check if the attacker is a PlayerInstance
 		if (attacker instanceof PlayerInstance)
 		{
-			// is AutoAttackable if both players are in the same duel and the duel is still going on
-			if ((getDuelState() == Duel.DUELSTATE_DUELLING) && (getDuelId() == ((PlayerInstance) attacker).getDuelId()))
-			{
-				return true;
-			}
 			// Check if the PlayerInstance is in an arena or a siege area
 			if (isInsideZone(ZoneId.PVP) && ((PlayerInstance) attacker).isInsideZone(ZoneId.PVP))
 			{
@@ -10152,14 +9990,6 @@ public class PlayerInstance extends Playable
 			}
 		}
 		
-		// Are the target and the player in the same duel?
-		if (isInDuel() && (!(target instanceof PlayerInstance) || (((PlayerInstance) target).getDuelId() != getDuelId())) && (!(target instanceof SummonInstance) || (((Summon) target).getOwner().getDuelId() != getDuelId())))
-		{
-			sendMessage("You cannot do this while duelling.");
-			sendPacket(ActionFailed.STATIC_PACKET);
-			return;
-		}
-		
 		// Pk protection config
 		if (skill.isOffensive() && !isGM() && (target instanceof PlayerInstance) && (((PlayerInstance) target).getPvpFlag() == 0) && (((PlayerInstance) target).getKarma() == 0) && ((getLevel() < Config.ALT_PLAYER_PROTECTION_LEVEL) || (((PlayerInstance) target).getLevel() < Config.ALT_PLAYER_PROTECTION_LEVEL)))
 		{
@@ -10261,7 +10091,6 @@ public class PlayerInstance extends Playable
 			}
 			
 			effect.numCharges -= skill.getNumCharges();
-			sendPacket(new EtcStatusUpdate(this));
 			if (effect.numCharges == 0)
 			{
 				effect.exit(false);
@@ -10577,7 +10406,6 @@ public class PlayerInstance extends Playable
 		if ((target != null) && // target not null and
 			(target != this) && // target is not self and
 			(target instanceof PlayerInstance) && // target is PlayerInstance and
-			(!isInDuel() || (((PlayerInstance) target).getDuelId() != getDuelId())) && // self is not in a duel and attacking opponent
 			!isInsideZone(ZoneId.PVP) && // Pc is not in PvP zone
 			!((PlayerInstance) target).isInsideZone(ZoneId.PVP) // target is not in PvP zone
 		)
@@ -11556,7 +11384,6 @@ public class PlayerInstance extends Playable
 	public void setInRefusalMode(boolean mode)
 	{
 		_messageRefusal = mode;
-		sendPacket(new EtcStatusUpdate(this));
 	}
 	
 	/**
@@ -11744,42 +11571,6 @@ public class PlayerInstance extends Playable
 	}
 	
 	/**
-	 * Checks if is in duel.
-	 * @return true, if is in duel
-	 */
-	public boolean isInDuel()
-	{
-		return _isInDuel;
-	}
-	
-	/**
-	 * Gets the duel id.
-	 * @return the duel id
-	 */
-	public int getDuelId()
-	{
-		return _duelId;
-	}
-	
-	/**
-	 * Sets the duel state.
-	 * @param mode the new duel state
-	 */
-	public void setDuelState(int mode)
-	{
-		_duelState = mode;
-	}
-	
-	/**
-	 * Gets the duel state.
-	 * @return the duel state
-	 */
-	public int getDuelState()
-	{
-		return _duelState;
-	}
-	
-	/**
 	 * Sets the coupon.
 	 * @param coupon the new coupon
 	 */
@@ -11811,97 +11602,6 @@ public class PlayerInstance extends Playable
 	public boolean getCoupon(int coupon)
 	{
 		return (((_hasCoupon == 1) || (_hasCoupon == 3)) && (coupon == 0)) || (((_hasCoupon == 2) || (_hasCoupon == 3)) && (coupon == 1));
-	}
-	
-	/**
-	 * Sets up the duel state using a non 0 duelId.
-	 * @param duelId 0=not in a duel
-	 */
-	public void setInDuel(int duelId)
-	{
-		if (duelId > 0)
-		{
-			_isInDuel = true;
-			_duelState = Duel.DUELSTATE_DUELLING;
-			_duelId = duelId;
-		}
-		else
-		{
-			if (_duelState == Duel.DUELSTATE_DEAD)
-			{
-				enableAllSkills();
-				getStatus().startHpMpRegeneration();
-			}
-			_isInDuel = false;
-			_duelState = Duel.DUELSTATE_NODUEL;
-			_duelId = 0;
-		}
-	}
-	
-	/**
-	 * This returns a SystemMessage stating why the player is not available for duelling.
-	 * @return S1_CANNOT_DUEL... message
-	 */
-	public SystemMessage getNoDuelReason()
-	{
-		final SystemMessage sm = new SystemMessage(_noDuelReason);
-		sm.addString(getName());
-		_noDuelReason = SystemMessageId.THERE_IS_NO_OPPONENT_TO_RECEIVE_YOUR_CHALLENGE_FOR_A_DUEL;
-		return sm;
-	}
-	
-	/**
-	 * Checks if this player might join / start a duel. To get the reason use getNoDuelReason() after calling this function.
-	 * @return true if the player might join/start a duel.
-	 */
-	public boolean canDuel()
-	{
-		if (isInCombat() || isInJail())
-		{
-			_noDuelReason = SystemMessageId.S1_CANNOT_DUEL_BECAUSE_S1_IS_CURRENTLY_ENGAGED_IN_BATTLE;
-			return false;
-		}
-		if (isDead() || isAlikeDead() || (getCurrentHp() < (getMaxHp() / 2)) || (getCurrentMp() < (getMaxMp() / 2)))
-		{
-			_noDuelReason = SystemMessageId.S1_CANNOT_DUEL_BECAUSE_S1_S_HP_OR_MP_IS_BELOW_50_PERCENT;
-			return false;
-		}
-		if (isInDuel())
-		{
-			_noDuelReason = SystemMessageId.S1_CANNOT_DUEL_BECAUSE_S1_IS_ALREADY_ENGAGED_IN_A_DUEL;
-			return false;
-		}
-		if (isInOlympiadMode())
-		{
-			_noDuelReason = SystemMessageId.S1_CANNOT_DUEL_BECAUSE_S1_IS_PARTICIPATING_IN_THE_OLYMPIAD;
-			return false;
-		}
-		if (isCursedWeaponEquiped())
-		{
-			_noDuelReason = SystemMessageId.S1_CANNOT_DUEL_BECAUSE_S1_IS_IN_A_CHAOTIC_STATE;
-			return false;
-		}
-		if (getPrivateStoreType() != STORE_PRIVATE_NONE)
-		{
-			_noDuelReason = SystemMessageId.S1_CANNOT_DUEL_BECAUSE_S1_IS_CURRENTLY_ENGAGED_IN_A_PRIVATE_STORE_OR_MANUFACTURE;
-			return false;
-		}
-		if (isMounted() || isInBoat())
-		{
-			_noDuelReason = SystemMessageId.S1_CANNOT_DUEL_BECAUSE_S1_IS_CURRENTLY_RIDING_A_BOAT_WYVERN_OR_STRIDER;
-			return false;
-		}
-		if (isFishing())
-		{
-			_noDuelReason = SystemMessageId.S1_CANNOT_DUEL_BECAUSE_S1_IS_CURRENTLY_FISHING;
-			return false;
-		}
-		if (isInsideZone(ZoneId.PVP) || isInsideZone(ZoneId.PEACE) || isInsideZone(ZoneId.SIEGE))
-		{
-			_noDuelReason = SystemMessageId.S1_CANNOT_MAKE_A_CHALLENGE_TO_A_DUEL_BECAUSE_S1_IS_CURRENTLY_IN_A_DUEL_PROHIBITED_AREA_PEACEFUL_ZONE_SEVEN_SIGNS_ZONE_NEAR_WATER_RESTART_PROHIBITED_AREA;
-			return false;
-		}
-		return true;
 	}
 	
 	/**
@@ -12449,12 +12149,6 @@ public class PlayerInstance extends Playable
 			}
 		}
 		
-		// Rebind CursedWeapon passive.
-		if (isCursedWeaponEquiped())
-		{
-			CursedWeaponsManager.getInstance().givePassive(_cursedWeaponEquipedId);
-		}
-		
 		stopAllEffects();
 		
 		if (isSubClassActive())
@@ -12532,8 +12226,6 @@ public class PlayerInstance extends Playable
 			checkAllowedSkills();
 		}
 		
-		sendPacket(new EtcStatusUpdate(this));
-		
 		// if player has quest 422: Repent Your Sins, remove it
 		final QuestState st = getQuestState("422_RepentYourSins");
 		if (st != null)
@@ -12587,7 +12279,6 @@ public class PlayerInstance extends Playable
 		}
 		
 		broadcastPacket(new SocialAction(getObjectId(), 15));
-		sendPacket(new SkillCoolTime(this));
 		if (getClan() != null)
 		{
 			getClan().broadcastToOnlineMembers(new PledgeShowMemberListUpdate(this));
@@ -12877,7 +12568,6 @@ public class PlayerInstance extends Playable
 	{
 		super.doRevive();
 		updateEffectIcons();
-		sendPacket(new EtcStatusUpdate(this));
 		_reviveRequested = 0;
 		_revivePower = 0;
 		if (isInParty() && getParty().isInDimensionalRift() && !DimensionalRiftManager.getInstance().checkIfInPeaceZone(getX(), getY(), getZ()))
@@ -13595,12 +13285,6 @@ public class PlayerInstance extends Playable
 			return false;
 		}
 		
-		if (CursedWeaponsManager.getInstance().isCursed(itemId))
-		{
-			// can not trade a cursed weapon
-			return false;
-		}
-		
 		if (item.isWear())
 		{
 			// cannot drop/trade wear-items
@@ -13633,12 +13317,6 @@ public class PlayerInstance extends Playable
 		
 		if ((getActiveEnchantItem() != null) && (getActiveEnchantItem().getObjectId() == objectId))
 		{
-			return false;
-		}
-		
-		if (CursedWeaponsManager.getInstance().isCursed(item.getItemId()))
-		{
-			// can not trade a cursed weapon
 			return false;
 		}
 		
@@ -14073,7 +13751,6 @@ public class PlayerInstance extends Playable
 				return;
 			}
 			
-			_player.sendPacket(new ShortBuffStatusUpdate(0, 0, 0));
 		}
 	}
 	
@@ -14090,7 +13767,6 @@ public class PlayerInstance extends Playable
 			_shortBuffTask = null;
 		}
 		_shortBuffTask = ThreadPool.schedule(new ShortBuffTask(this), 15000);
-		sendPacket(new ShortBuffStatusUpdate(magicId, level, time));
 	}
 	
 	public List<Integer> getFriendList()
@@ -14812,33 +14488,6 @@ public class PlayerInstance extends Playable
 		_powerGrade = power;
 	}
 	
-	/**
-	 * Checks if is cursed weapon equiped.
-	 * @return true, if is cursed weapon equiped
-	 */
-	public boolean isCursedWeaponEquiped()
-	{
-		return _cursedWeaponEquipedId != 0;
-	}
-	
-	/**
-	 * Sets the cursed weapon equipped id.
-	 * @param value the new cursed weapon equipped id
-	 */
-	public void setCursedWeaponEquipedId(int value)
-	{
-		_cursedWeaponEquipedId = value;
-	}
-	
-	/**
-	 * Gets the cursed weapon equipped id.
-	 * @return the cursed weapon equipped id
-	 */
-	public int getCursedWeaponEquipedId()
-	{
-		return _cursedWeaponEquipedId;
-	}
-	
 	/** The _charm of courage. */
 	private boolean _charmOfCourage = false;
 	
@@ -14858,7 +14507,6 @@ public class PlayerInstance extends Playable
 	public void setCharmOfCourage(boolean value)
 	{
 		_charmOfCourage = value;
-		sendPacket(new EtcStatusUpdate(this));
 	}
 	
 	/**
@@ -14913,7 +14561,6 @@ public class PlayerInstance extends Playable
 		_deathPenaltyBuffLevel++;
 		
 		addSkill(SkillTable.getInstance().getInfo(5076, getDeathPenaltyBuffLevel()), false);
-		sendPacket(new EtcStatusUpdate(this));
 		final SystemMessage sm = new SystemMessage(SystemMessageId.YOUR_DEATH_PENALTY_IS_NOW_LEVEL_S1);
 		sm.addNumber(getDeathPenaltyBuffLevel());
 		sendPacket(sm);
@@ -14942,7 +14589,6 @@ public class PlayerInstance extends Playable
 		if (getDeathPenaltyBuffLevel() > 0)
 		{
 			addSkill(SkillTable.getInstance().getInfo(5076, getDeathPenaltyBuffLevel()), false);
-			sendPacket(new EtcStatusUpdate(this));
 			final SystemMessage sm = new SystemMessage(SystemMessageId.YOUR_DEATH_PENALTY_IS_NOW_LEVEL_S1);
 			sm.addNumber(getDeathPenaltyBuffLevel());
 			sendPacket(sm);
@@ -14950,7 +14596,6 @@ public class PlayerInstance extends Playable
 		}
 		else
 		{
-			sendPacket(new EtcStatusUpdate(this));
 			sendPacket(SystemMessageId.YOUR_DEATH_PENALTY_HAS_BEEN_LIFTED);
 		}
 	}
@@ -14997,7 +14642,6 @@ public class PlayerInstance extends Playable
 			sm.addNumber(getDeathPenaltyBuffLevel());
 			sendPacket(sm);
 		}
-		sendPacket(new EtcStatusUpdate(this));
 	}
 	
 	/**
@@ -15046,7 +14690,6 @@ public class PlayerInstance extends Playable
 		{
 			sendSkillList();
 		}
-		sendPacket(new SkillCoolTime(this));
 	}
 	
 	@Override
@@ -15174,15 +14817,6 @@ public class PlayerInstance extends Playable
 	public void setCurrentSkillWorldPosition(Location location)
 	{
 		_currentSkillWorldPosition = location;
-	}
-	
-	/**
-	 * Checks if is cursed weapon equipped.
-	 * @return true, if is cursed weapon equipped
-	 */
-	public boolean isCursedWeaponEquipped()
-	{
-		return _cursedWeaponEquipedId != 0;
 	}
 	
 	/**
@@ -16161,7 +15795,6 @@ public class PlayerInstance extends Playable
 					{
 						_punishLevel = state;
 						stopPunishTask(true);
-						sendPacket(new EtcStatusUpdate(this));
 						sendMessage("Your Chat ban has been lifted");
 						break;
 					}
@@ -16196,7 +15829,6 @@ public class PlayerInstance extends Playable
 				}
 				_punishLevel = state;
 				_punishTimer = 0;
-				sendPacket(new EtcStatusUpdate(this));
 				// Remove the task if any
 				stopPunishTask(false);
 				
@@ -16539,15 +16171,12 @@ public class PlayerInstance extends Playable
 			final ItemInstance equippedItem = getInventory().getPaperdollItem(i);
 			if ((equippedItem != null) && !equippedItem.checkOlympCondition())
 			{
-				if (equippedItem.isAugmented())
-				{
-					equippedItem.getAugmentation().removeBonus(this);
-				}
 				final ItemInstance[] items = getInventory().unEquipItemInSlotAndRecord(i);
 				if (equippedItem.isWear())
 				{
 					continue;
 				}
+				
 				SystemMessage sm = null;
 				if (equippedItem.getEnchantLevel() > 0)
 				{

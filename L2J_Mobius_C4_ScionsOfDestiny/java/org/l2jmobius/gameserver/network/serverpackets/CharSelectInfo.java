@@ -136,7 +136,7 @@ public class CharSelectInfo extends GameServerPacket
 			writeD(0x00);
 			writeD(0x00);
 			
-			writeD(charInfoPackage.getPaperdollObjectId(Inventory.PAPERDOLL_DHAIR));
+			writeD(charInfoPackage.getPaperdollObjectId(Inventory.PAPERDOLL_UNDER));
 			writeD(charInfoPackage.getPaperdollObjectId(Inventory.PAPERDOLL_REAR));
 			writeD(charInfoPackage.getPaperdollObjectId(Inventory.PAPERDOLL_LEAR));
 			writeD(charInfoPackage.getPaperdollObjectId(Inventory.PAPERDOLL_NECK));
@@ -152,9 +152,8 @@ public class CharSelectInfo extends GameServerPacket
 			writeD(charInfoPackage.getPaperdollObjectId(Inventory.PAPERDOLL_BACK));
 			writeD(charInfoPackage.getPaperdollObjectId(Inventory.PAPERDOLL_LRHAND));
 			writeD(charInfoPackage.getPaperdollObjectId(Inventory.PAPERDOLL_HAIR));
-			writeD(charInfoPackage.getPaperdollObjectId(Inventory.PAPERDOLL_FACE));
 			
-			writeD(charInfoPackage.getPaperdollItemId(Inventory.PAPERDOLL_DHAIR));
+			writeD(charInfoPackage.getPaperdollItemId(Inventory.PAPERDOLL_UNDER));
 			writeD(charInfoPackage.getPaperdollItemId(Inventory.PAPERDOLL_REAR));
 			writeD(charInfoPackage.getPaperdollItemId(Inventory.PAPERDOLL_LEAR));
 			writeD(charInfoPackage.getPaperdollItemId(Inventory.PAPERDOLL_NECK));
@@ -170,7 +169,6 @@ public class CharSelectInfo extends GameServerPacket
 			writeD(charInfoPackage.getPaperdollItemId(Inventory.PAPERDOLL_BACK));
 			writeD(charInfoPackage.getPaperdollItemId(Inventory.PAPERDOLL_LRHAND));
 			writeD(charInfoPackage.getPaperdollItemId(Inventory.PAPERDOLL_HAIR));
-			writeD(charInfoPackage.getPaperdollItemId(Inventory.PAPERDOLL_FACE));
 			
 			writeD(charInfoPackage.getHairStyle());
 			writeD(charInfoPackage.getHairColor());
@@ -206,8 +204,6 @@ public class CharSelectInfo extends GameServerPacket
 			}
 			
 			writeC(charInfoPackage.getEnchantEffect() > 127 ? 127 : charInfoPackage.getEnchantEffect());
-			
-			writeD(charInfoPackage.getAugmentationId());
 		}
 	}
 	
@@ -324,27 +320,6 @@ public class CharSelectInfo extends GameServerPacket
 		if (weaponObjId < 1)
 		{
 			weaponObjId = charInfopackage.getPaperdollObjectId(Inventory.PAPERDOLL_RHAND);
-		}
-		
-		if (weaponObjId > 0)
-		{
-			try (Connection con = DatabaseFactory.getConnection())
-			{
-				final PreparedStatement statement = con.prepareStatement("SELECT attributes FROM augmentations WHERE item_id=?");
-				statement.setInt(1, weaponObjId);
-				final ResultSet result = statement.executeQuery();
-				if (result.next())
-				{
-					charInfopackage.setAugmentationId(result.getInt("attributes"));
-				}
-				
-				result.close();
-				statement.close();
-			}
-			catch (Exception e)
-			{
-				LOGGER.warning("Could not restore augmentation info: " + e);
-			}
 		}
 		
 		/*

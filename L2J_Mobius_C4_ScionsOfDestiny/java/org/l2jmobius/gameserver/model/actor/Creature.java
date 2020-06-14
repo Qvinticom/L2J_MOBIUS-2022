@@ -47,7 +47,6 @@ import org.l2jmobius.gameserver.handler.ISkillHandler;
 import org.l2jmobius.gameserver.handler.SkillHandler;
 import org.l2jmobius.gameserver.handler.itemhandlers.Potions;
 import org.l2jmobius.gameserver.instancemanager.DimensionalRiftManager;
-import org.l2jmobius.gameserver.instancemanager.DuelManager;
 import org.l2jmobius.gameserver.instancemanager.GrandBossManager;
 import org.l2jmobius.gameserver.instancemanager.RaidBossSpawnManager;
 import org.l2jmobius.gameserver.model.ChanceSkillList;
@@ -84,7 +83,6 @@ import org.l2jmobius.gameserver.model.actor.stat.CreatureStat;
 import org.l2jmobius.gameserver.model.actor.status.CreatureStatus;
 import org.l2jmobius.gameserver.model.actor.templates.CreatureTemplate;
 import org.l2jmobius.gameserver.model.actor.templates.NpcTemplate;
-import org.l2jmobius.gameserver.model.entity.Duel;
 import org.l2jmobius.gameserver.model.entity.event.CTF;
 import org.l2jmobius.gameserver.model.entity.event.DM;
 import org.l2jmobius.gameserver.model.entity.event.GameEvent;
@@ -818,15 +816,6 @@ public abstract class Creature extends WorldObject implements ISkillsHolder
 			return;
 		}
 		
-		if ((target instanceof PlayerInstance) && (((PlayerInstance) target).getDuelState() == Duel.DUELSTATE_DEAD))
-		{
-			// If PlayerInstance is dead or the target is dead, the action is stoped
-			getAI().setIntention(CtrlIntention.AI_INTENTION_ACTIVE);
-			
-			sendPacket(ActionFailed.STATIC_PACKET);
-			return;
-		}
-		
 		if ((target instanceof DoorInstance) && !((DoorInstance) target).isAttackable(this))
 		{
 			return;
@@ -844,23 +833,6 @@ public abstract class Creature extends WorldObject implements ISkillsHolder
 				sendPacket(new SystemMessage(SystemMessageId.OBSERVERS_CANNOT_PARTICIPATE));
 				sendPacket(ActionFailed.STATIC_PACKET);
 				return;
-			}
-			
-			if (target instanceof PlayerInstance)
-			{
-				if (((PlayerInstance) target).isCursedWeaponEquiped() && (((PlayerInstance) this).getLevel() <= Config.MAX_LEVEL_NEWBIE))
-				{
-					((PlayerInstance) this).sendMessage("Can't attack a cursed player when under level 21.");
-					sendPacket(ActionFailed.STATIC_PACKET);
-					return;
-				}
-				
-				if (((PlayerInstance) this).isCursedWeaponEquiped() && (((PlayerInstance) target).getLevel() <= Config.MAX_LEVEL_NEWBIE))
-				{
-					((PlayerInstance) this).sendMessage("Can't attack a newbie player using a cursed weapon.");
-					sendPacket(ActionFailed.STATIC_PACKET);
-					return;
-				}
 			}
 			
 			if (getObjectId() == target.getObjectId())
@@ -1093,23 +1065,6 @@ public abstract class Creature extends WorldObject implements ISkillsHolder
 			else if (weaponInst != null)
 			{
 				weaponInst.setChargedSoulshot(ItemInstance.CHARGED_NONE);
-			}
-			
-			if (player != null)
-			{
-				if (player.isCursedWeaponEquiped())
-				{
-					// If hitted by a cursed weapon, Cp is reduced to 0
-					if (!target.isInvul())
-					{
-						target.setCurrentCp(0);
-					}
-				}
-				else if (player.isHero() && (target instanceof PlayerInstance) && ((PlayerInstance) target).isCursedWeaponEquiped())
-				{
-					// If a cursed weapon is hitted by a Hero, Cp is reduced to 0
-					target.setCurrentCp(0);
-				}
 			}
 		}
 		
@@ -3188,15 +3143,6 @@ public abstract class Creature extends WorldObject implements ISkillsHolder
 			
 			if ((effect.getSkill().getId() == newEffect.getSkill().getId()) && (effect.getEffectType() == newEffect.getEffectType()) && (effect.getStackType().equals(newEffect.getStackType())))
 			{
-				if (this instanceof PlayerInstance)
-				{
-					final PlayerInstance player = (PlayerInstance) this;
-					if (player.isInDuel())
-					{
-						DuelManager.getInstance().getDuel(player.getDuelId()).onBuffStop(player, effect);
-					}
-				}
-				
 				if (((newEffect.getSkill().getSkillType() == SkillType.BUFF) || (newEffect.getEffectType() == Effect.EffectType.BUFF) || (newEffect.getEffectType() == Effect.EffectType.HEAL_OVER_TIME)) && (newEffect.getStackOrder() >= effect.getStackOrder()))
 				{
 					effect.exit(false);
@@ -4060,6 +4006,12 @@ public abstract class Creature extends WorldObject implements ISkillsHolder
 				{
 					_effects.remove(i);
 					i--;
+					continue;
+				}
+				
+				// C4
+				if (!_effects.get(i).getShowIcon() && !_effects.get(i).getSkill().isPotion())
+				{
 					continue;
 				}
 				

@@ -807,20 +807,6 @@ public abstract class Inventory extends ItemContainer
 		return 0;
 	}
 	
-	public int getPaperdollAugmentationId(int slot)
-	{
-		final ItemInstance item = _paperdoll[slot];
-		if (item != null)
-		{
-			if (item.getAugmentation() != null)
-			{
-				return item.getAugmentation().getAugmentationId();
-			}
-			return 0;
-		}
-		return 0;
-	}
-	
 	/**
 	 * Returns the objectID associated to the item in the paperdoll slot
 	 * @param slot : int pointing out the slot
@@ -902,11 +888,6 @@ public abstract class Inventory extends ItemContainer
 					}
 					
 					listener.notifyUnequiped(slot, old);
-				}
-				
-				if (old.isAugmented() && (getOwner() != null) && (getOwner() instanceof PlayerInstance))
-				{
-					old.getAugmentation().removeBonus((PlayerInstance) getOwner());
 				}
 				
 				old.updateDatabase();

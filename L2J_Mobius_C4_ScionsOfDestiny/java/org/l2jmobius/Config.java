@@ -27,7 +27,6 @@ import java.io.InputStreamReader;
 import java.io.LineNumberReader;
 import java.io.OutputStream;
 import java.math.BigInteger;
-import java.net.UnknownHostException;
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
@@ -129,9 +128,6 @@ public class Config
 	public static int TRADE_PVP_AMOUNT;
 	public static boolean GLOBAL_CHAT_WITH_PVP;
 	public static int GLOBAL_PVP_AMOUNT;
-	public static int BRUT_AVG_TIME;
-	public static int BRUT_LOGON_ATTEMPTS;
-	public static int BRUT_BAN_IP_TIME;
 	public static int MAX_CHAT_LENGTH;
 	public static boolean TRADE_CHAT_IS_NOOBLE;
 	public static boolean PRECISE_DROP_CALCULATION;
@@ -147,7 +143,6 @@ public class Config
 	public static boolean ALLOWFISHING;
 	public static boolean ALLOW_MANOR;
 	public static int AUTODESTROY_ITEM_AFTER;
-	public static int HERB_AUTO_DESTROY_TIME;
 	public static String PROTECTED_ITEMS;
 	public static List<Integer> LIST_PROTECTED_ITEMS = new ArrayList<>();
 	public static boolean DESTROY_DROPPED_PLAYER_ITEM;
@@ -168,7 +163,6 @@ public class Config
 	public static boolean ALLOW_RACE;
 	public static boolean ALLOW_RENTPET;
 	public static boolean ALLOW_BOAT;
-	public static boolean ALLOW_CURSED_WEAPONS;
 	public static boolean ALLOW_NPC_WALKERS;
 	public static int MIN_NPC_ANIMATION;
 	public static int MAX_NPC_ANIMATION;
@@ -254,11 +248,6 @@ public class Config
 	public static float RATE_DROP_QUEST;
 	public static float RATE_KARMA_EXP_LOST;
 	public static float RATE_SIEGE_GUARDS_PRICE;
-	public static float RATE_DROP_COMMON_HERBS;
-	public static float RATE_DROP_MP_HP_HERBS;
-	public static float RATE_DROP_GREATER_HERBS;
-	public static float RATE_DROP_SUPERIOR_HERBS;
-	public static float RATE_DROP_SPECIAL_HERBS;
 	public static int PLAYER_DROP_LIMIT;
 	public static int PLAYER_RATE_DROP;
 	public static int PLAYER_RATE_DROP_ITEM;
@@ -311,13 +300,6 @@ public class Config
 	public static float ALT_LOTTERY_4_NUMBER_RATE;
 	public static float ALT_LOTTERY_3_NUMBER_RATE;
 	public static int ALT_LOTTERY_2_AND_1_NUMBER_PRIZE;
-	public static boolean ALT_FISH_CHAMPIONSHIP_ENABLED;
-	public static int ALT_FISH_CHAMPIONSHIP_REWARD_ITEM;
-	public static int ALT_FISH_CHAMPIONSHIP_REWARD_1;
-	public static int ALT_FISH_CHAMPIONSHIP_REWARD_2;
-	public static int ALT_FISH_CHAMPIONSHIP_REWARD_3;
-	public static int ALT_FISH_CHAMPIONSHIP_REWARD_4;
-	public static int ALT_FISH_CHAMPIONSHIP_REWARD_5;
 	public static int RIFT_MIN_PARTY_SIZE;
 	public static int RIFT_SPAWN_DELAY;
 	public static int RIFT_MAX_JUMPS;
@@ -357,7 +339,6 @@ public class Config
 	public static int LEVEL_TO_GET_PENALTY;
 	public static boolean MASTERY_WEAPON_PENALTY;
 	public static int LEVEL_TO_GET_WEAPON_PENALTY;
-	public static int ACTIVE_AUGMENTS_START_REUSE_TIME;
 	public static boolean NPC_ATTACKABLE;
 	public static List<Integer> INVUL_NPC_LIST;
 	public static boolean DISABLE_ATTACK_NPC_TYPE;
@@ -495,7 +476,6 @@ public class Config
 	public static boolean TVT_ANNOUNCE_TEAM_STATS;
 	public static boolean TVT_ANNOUNCE_REWARD;
 	public static boolean TVT_PRICE_NO_KILLS;
-	public static boolean TVT_JOIN_CURSED;
 	public static boolean TVT_COMMAND;
 	public static long TVT_REVIVE_DELAY;
 	public static boolean TVT_OPEN_FORT_DOORS;
@@ -577,7 +557,6 @@ public class Config
 	public static boolean DM_ALLOW_INTERFERENCE;
 	public static boolean DM_ALLOW_POTIONS;
 	public static boolean DM_ALLOW_SUMMON;
-	public static boolean DM_JOIN_CURSED;
 	public static boolean DM_ON_START_REMOVE_ALL_EFFECTS;
 	public static boolean DM_ON_START_UNSUMMON_PET;
 	public static long DM_REVIVE_DELAY;
@@ -600,7 +579,6 @@ public class Config
 	public static boolean CTF_ON_START_UNSUMMON_PET;
 	public static boolean CTF_ANNOUNCE_TEAM_STATS;
 	public static boolean CTF_ANNOUNCE_REWARD;
-	public static boolean CTF_JOIN_CURSED;
 	public static boolean CTF_REVIVE_RECOVERY;
 	public static boolean CTF_COMMAND;
 	public static boolean CTF_AURA;
@@ -786,7 +764,6 @@ public class Config
 	public static boolean ALT_OLY_SHOW_MONTHLY_WINNERS;
 	public static boolean ALT_OLY_ANNOUNCE_GAMES;
 	public static List<Integer> LIST_OLY_RESTRICTED_SKILLS = new ArrayList<>();
-	public static boolean ALT_OLY_AUGMENT_ALLOW;
 	public static int ALT_OLY_TELEPORT_COUNTDOWN;
 	public static int ALT_OLY_START_TIME;
 	public static int ALT_OLY_MIN;
@@ -832,17 +809,6 @@ public class Config
 	public static boolean ENABLE_DWARF_ENCHANT_BONUS;
 	public static int DWARF_ENCHANT_MIN_LEVEL;
 	public static int DWARF_ENCHANT_BONUS;
-	public static int AUGMENTATION_NG_SKILL_CHANCE;
-	public static int AUGMENTATION_MID_SKILL_CHANCE;
-	public static int AUGMENTATION_HIGH_SKILL_CHANCE;
-	public static int AUGMENTATION_TOP_SKILL_CHANCE;
-	public static int AUGMENTATION_BASESTAT_CHANCE;
-	public static int AUGMENTATION_NG_GLOW_CHANCE;
-	public static int AUGMENTATION_MID_GLOW_CHANCE;
-	public static int AUGMENTATION_HIGH_GLOW_CHANCE;
-	public static int AUGMENTATION_TOP_GLOW_CHANCE;
-	public static boolean DELETE_AUGM_PASSIVE_ON_CHANGE;
-	public static boolean DELETE_AUGM_ACTIVE_ON_CHANGE;
 	public static boolean ENCHANT_HERO_WEAPON;
 	public static int SOUL_CRYSTAL_BREAK_CHANCE;
 	public static int SOUL_CRYSTAL_LEVEL_CHANCE;
@@ -1013,7 +979,6 @@ public class Config
 	public static List<Integer> RAID_INFO_IDS_LIST = new ArrayList<>();
 	
 	public static boolean AUTO_LOOT;
-	public static boolean AUTO_LOOT_HERBS;
 	public static boolean AUTO_LOOT_BOSS;
 	public static boolean AUTO_LEARN_SKILLS;
 	public static boolean AUTO_LEARN_DIVINE_INSPIRATION;
@@ -1245,11 +1210,6 @@ public class Config
 		RATE_DROP_QUEST = ratesConfig.getFloat("RateDropQuest", 1f);
 		RATE_KARMA_EXP_LOST = ratesConfig.getFloat("RateKarmaExpLost", 1f);
 		RATE_SIEGE_GUARDS_PRICE = ratesConfig.getFloat("RateSiegeGuardsPrice", 1f);
-		RATE_DROP_COMMON_HERBS = ratesConfig.getFloat("RateCommonHerbs", 15f);
-		RATE_DROP_MP_HP_HERBS = ratesConfig.getFloat("RateHpMpHerbs", 10f);
-		RATE_DROP_GREATER_HERBS = ratesConfig.getFloat("RateGreaterHerbs", 4f);
-		RATE_DROP_SUPERIOR_HERBS = ratesConfig.getFloat("RateSuperiorHerbs", 0.80f) * 10;
-		RATE_DROP_SPECIAL_HERBS = ratesConfig.getFloat("RateSpecialHerbs", 0.20f) * 10;
 		PLAYER_DROP_LIMIT = ratesConfig.getInt("PlayerDropLimit", 3);
 		PLAYER_RATE_DROP = ratesConfig.getInt("PlayerRateDrop", 5);
 		PLAYER_RATE_DROP_ITEM = ratesConfig.getInt("PlayerRateDropItem", 70);
@@ -1314,13 +1274,6 @@ public class Config
 		ALT_LOTTERY_4_NUMBER_RATE = generalConfig.getFloat("AltLottery4NumberRate", 0.2f);
 		ALT_LOTTERY_3_NUMBER_RATE = generalConfig.getFloat("AltLottery3NumberRate", 0.2f);
 		ALT_LOTTERY_2_AND_1_NUMBER_PRIZE = generalConfig.getInt("AltLottery2and1NumberPrize", 200);
-		ALT_FISH_CHAMPIONSHIP_ENABLED = generalConfig.getBoolean("AltFishChampionshipEnabled", true);
-		ALT_FISH_CHAMPIONSHIP_REWARD_ITEM = generalConfig.getInt("AltFishChampionshipRewardItemId", 57);
-		ALT_FISH_CHAMPIONSHIP_REWARD_1 = generalConfig.getInt("AltFishChampionshipReward1", 800000);
-		ALT_FISH_CHAMPIONSHIP_REWARD_2 = generalConfig.getInt("AltFishChampionshipReward2", 500000);
-		ALT_FISH_CHAMPIONSHIP_REWARD_3 = generalConfig.getInt("AltFishChampionshipReward3", 300000);
-		ALT_FISH_CHAMPIONSHIP_REWARD_4 = generalConfig.getInt("AltFishChampionshipReward4", 200000);
-		ALT_FISH_CHAMPIONSHIP_REWARD_5 = generalConfig.getInt("AltFishChampionshipReward5", 100000);
 		RIFT_MIN_PARTY_SIZE = generalConfig.getInt("RiftMinPartySize", 5);
 		RIFT_MAX_JUMPS = generalConfig.getInt("MaxRiftJumps", 4);
 		RIFT_SPAWN_DELAY = generalConfig.getInt("RiftSpawnDelay", 10000);
@@ -1352,7 +1305,6 @@ public class Config
 		LEVEL_TO_GET_PENALTY = generalConfig.getInt("LevelToGetPenalty", 20);
 		MASTERY_WEAPON_PENALTY = generalConfig.getBoolean("MasteryWeaponPenality", false);
 		LEVEL_TO_GET_WEAPON_PENALTY = generalConfig.getInt("LevelToGetWeaponPenalty", 20);
-		ACTIVE_AUGMENTS_START_REUSE_TIME = generalConfig.getInt("AugmStartReuseTime", 0);
 		INVUL_NPC_LIST = new ArrayList<>();
 		final String t = generalConfig.getString("InvulNpcList", "30001-32132,35092-35103,35142-35146,35176-35187,35218-35232,35261-35278,35308-35319,35352-35367,35382-35407,35417-35427,35433-35469,35497-35513,35544-35587,35600-35617,35623-35628,35638-35640,35644,35645,50007,70010,99999");
 		String as[];
@@ -1476,7 +1428,6 @@ public class Config
 		ANNOUNCE_MAMMON_SPAWN = generalConfig.getBoolean("AnnounceMammonSpawn", true);
 		ALLOW_GUARDS = generalConfig.getBoolean("AllowGuards", false);
 		AUTODESTROY_ITEM_AFTER = generalConfig.getInt("AutoDestroyDroppedItemAfter", 0);
-		HERB_AUTO_DESTROY_TIME = generalConfig.getInt("AutoDestroyHerbTime", 15) * 1000;
 		PROTECTED_ITEMS = generalConfig.getString("ListOfProtectedItems", "");
 		LIST_PROTECTED_ITEMS = new ArrayList<>();
 		for (String id : PROTECTED_ITEMS.split(","))
@@ -1506,7 +1457,6 @@ public class Config
 		ALLOW_MANOR = generalConfig.getBoolean("AllowManor", false);
 		ALLOW_BOAT = generalConfig.getBoolean("AllowBoat", false);
 		ALLOW_NPC_WALKERS = generalConfig.getBoolean("AllowNpcWalkers", true);
-		ALLOW_CURSED_WEAPONS = generalConfig.getBoolean("AllowCursedWeapons", false);
 		DEFAULT_GLOBAL_CHAT = generalConfig.getString("GlobalChat", "ON");
 		DEFAULT_TRADE_CHAT = generalConfig.getString("TradeChat", "ON");
 		MAX_CHAT_LENGTH = generalConfig.getInt("MaxChatLength", 100);
@@ -1686,7 +1636,6 @@ public class Config
 		TVT_ANNOUNCE_TEAM_STATS = tvtConfig.getBoolean("TvTAnnounceTeamStats", false);
 		TVT_ANNOUNCE_REWARD = tvtConfig.getBoolean("TvTAnnounceReward", false);
 		TVT_PRICE_NO_KILLS = tvtConfig.getBoolean("TvTPriceNoKills", false);
-		TVT_JOIN_CURSED = tvtConfig.getBoolean("TvTJoinWithCursedWeapon", true);
 		TVT_COMMAND = tvtConfig.getBoolean("TvTCommand", true);
 		TVT_REVIVE_DELAY = tvtConfig.getLong("TvTReviveDelay", 20000);
 		if (TVT_REVIVE_DELAY < 1000)
@@ -1795,7 +1744,6 @@ public class Config
 		DM_ALLOW_INTERFERENCE = dmConfig.getBoolean("DMAllowInterference", false);
 		DM_ALLOW_POTIONS = dmConfig.getBoolean("DMAllowPotions", false);
 		DM_ALLOW_SUMMON = dmConfig.getBoolean("DMAllowSummon", false);
-		DM_JOIN_CURSED = dmConfig.getBoolean("DMJoinWithCursedWeapon", false);
 		DM_ON_START_REMOVE_ALL_EFFECTS = dmConfig.getBoolean("DMOnStartRemoveAllEffects", true);
 		DM_ON_START_UNSUMMON_PET = dmConfig.getBoolean("DMOnStartUnsummonPet", true);
 		DM_REVIVE_DELAY = dmConfig.getLong("DMReviveDelay", 20000);
@@ -1826,7 +1774,6 @@ public class Config
 		CTF_ON_START_UNSUMMON_PET = ctfConfig.getBoolean("CTFOnStartUnsummonPet", true);
 		CTF_ANNOUNCE_TEAM_STATS = ctfConfig.getBoolean("CTFAnnounceTeamStats", false);
 		CTF_ANNOUNCE_REWARD = ctfConfig.getBoolean("CTFAnnounceReward", false);
-		CTF_JOIN_CURSED = ctfConfig.getBoolean("CTFJoinWithCursedWeapon", true);
 		CTF_REVIVE_RECOVERY = ctfConfig.getBoolean("CTFReviveRecovery", false);
 		CTF_COMMAND = ctfConfig.getBoolean("CTFCommand", true);
 		CTF_AURA = ctfConfig.getBoolean("CTFAura", true);
@@ -2065,7 +2012,6 @@ public class Config
 		{
 			LIST_OLY_RESTRICTED_SKILLS.add(Integer.parseInt(id));
 		}
-		ALT_OLY_AUGMENT_ALLOW = olympiadConfig.getBoolean("AltOlyAugmentAllow", true);
 		ALT_OLY_TELEPORT_COUNTDOWN = olympiadConfig.getInt("AltOlyTeleportCountDown", 120);
 		ALT_OLY_USE_CUSTOM_PERIOD_SETTINGS = olympiadConfig.getBoolean("AltOlyUseCustomPeriodSettings", false);
 		ALT_OLY_PERIOD = OlympiadPeriod.valueOf(olympiadConfig.getString("AltOlyPeriod", "MONTH"));
@@ -2297,17 +2243,6 @@ public class Config
 		ENABLE_DWARF_ENCHANT_BONUS = enchantConfig.getBoolean("EnableDwarfEnchantBonus", false);
 		DWARF_ENCHANT_MIN_LEVEL = enchantConfig.getInt("DwarfEnchantMinLevel", 80);
 		DWARF_ENCHANT_BONUS = enchantConfig.getInt("DwarfEnchantBonus", 15);
-		AUGMENTATION_NG_SKILL_CHANCE = enchantConfig.getInt("AugmentationNGSkillChance", 15);
-		AUGMENTATION_MID_SKILL_CHANCE = enchantConfig.getInt("AugmentationMidSkillChance", 30);
-		AUGMENTATION_HIGH_SKILL_CHANCE = enchantConfig.getInt("AugmentationHighSkillChance", 45);
-		AUGMENTATION_TOP_SKILL_CHANCE = enchantConfig.getInt("AugmentationTopSkillChance", 60);
-		AUGMENTATION_BASESTAT_CHANCE = enchantConfig.getInt("AugmentationBaseStatChance", 1);
-		AUGMENTATION_NG_GLOW_CHANCE = enchantConfig.getInt("AugmentationNGGlowChance", 0);
-		AUGMENTATION_MID_GLOW_CHANCE = enchantConfig.getInt("AugmentationMidGlowChance", 40);
-		AUGMENTATION_HIGH_GLOW_CHANCE = enchantConfig.getInt("AugmentationHighGlowChance", 70);
-		AUGMENTATION_TOP_GLOW_CHANCE = enchantConfig.getInt("AugmentationTopGlowChance", 100);
-		DELETE_AUGM_PASSIVE_ON_CHANGE = enchantConfig.getBoolean("DeleteAgmentPassiveEffectOnChangeWep", true);
-		DELETE_AUGM_ACTIVE_ON_CHANGE = enchantConfig.getBoolean("DeleteAgmentActiveEffectOnChangeWep", true);
 		ENCHANT_HERO_WEAPON = enchantConfig.getBoolean("EnableEnchantHeroWeapons", false);
 		SOUL_CRYSTAL_BREAK_CHANCE = enchantConfig.getInt("SoulCrystalBreakChance", 10);
 		SOUL_CRYSTAL_LEVEL_CHANCE = enchantConfig.getInt("SoulCrystalLevelChance", 32);
@@ -2622,7 +2557,6 @@ public class Config
 	{
 		final PropertiesParser characterConfig = new PropertiesParser(CHARACTER_CONFIG_FILE);
 		AUTO_LOOT = characterConfig.getBoolean("AutoLoot", true);
-		AUTO_LOOT_HERBS = characterConfig.getBoolean("AutoLootHerbs", true);
 		AUTO_LOOT_BOSS = characterConfig.getBoolean("AutoLootBoss", true);
 		AUTO_LEARN_SKILLS = characterConfig.getBoolean("AutoLearnSkills", false);
 		AUTO_LEARN_DIVINE_INSPIRATION = characterConfig.getBoolean("AutoLearnDivineInspiration", false);
@@ -2876,9 +2810,6 @@ public class Config
 		MYSQL_BIN_PATH = serverSettings.getString("MySqlBinLocation", "C:/xampp/mysql/bin/");
 		BACKUP_PATH = serverSettings.getString("BackupPath", "../backup/");
 		BACKUP_DAYS = serverSettings.getInt("BackupDays", 30);
-		BRUT_AVG_TIME = serverSettings.getInt("BrutAvgTime", 30); // in Seconds
-		BRUT_LOGON_ATTEMPTS = serverSettings.getInt("BrutLogonAttempts", 15);
-		BRUT_BAN_IP_TIME = serverSettings.getInt("BrutBanIpTime", 900); // in Seconds
 		SHOW_LICENCE = serverSettings.getBoolean("ShowLicence", false);
 		IP_UPDATE_TIME = serverSettings.getInt("IpUpdateTime", 15);
 		FORCE_GGAUTH = serverSettings.getBoolean("ForceGGAuth", false);
@@ -2946,7 +2877,7 @@ public class Config
 							{
 								LoginController.getInstance().addBanForAddress(address, duration);
 							}
-							catch (UnknownHostException e)
+							catch (Exception e)
 							{
 								LOGGER.warning("Skipped: Invalid address (" + parts[0] + ") on (" + file.getName() + "). Line: " + reader.getLineNumber());
 							}

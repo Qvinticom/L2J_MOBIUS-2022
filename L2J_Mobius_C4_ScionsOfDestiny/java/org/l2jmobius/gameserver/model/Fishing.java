@@ -21,7 +21,6 @@ import java.util.concurrent.Future;
 import org.l2jmobius.commons.concurrent.ThreadPool;
 import org.l2jmobius.commons.util.Rnd;
 import org.l2jmobius.gameserver.datatables.sql.NpcTable;
-import org.l2jmobius.gameserver.instancemanager.FishingChampionshipManager;
 import org.l2jmobius.gameserver.model.actor.instance.PenaltyMonsterInstance;
 import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
 import org.l2jmobius.gameserver.model.actor.templates.NpcTemplate;
@@ -51,7 +50,8 @@ public class Fishing implements Runnable
 	private final double _regenHp;
 	private final boolean _isUpperGrade;
 	private int _lureType;
-	private final int _lureId;
+	@SuppressWarnings("unused")
+	private final int _lureId; // Used by fishing tournament.
 	
 	@Override
 	public void run()
@@ -159,7 +159,6 @@ public class Fishing implements Runnable
 			{
 				_fisher.sendPacket(SystemMessageId.YOU_CAUGHT_SOMETHING);
 				_fisher.addItem("Fishing", _fishId, 1, null, true);
-				FishingChampionshipManager.getInstance().newFish(_fisher, _lureId);
 			}
 		}
 		_fisher.endFishing(win);

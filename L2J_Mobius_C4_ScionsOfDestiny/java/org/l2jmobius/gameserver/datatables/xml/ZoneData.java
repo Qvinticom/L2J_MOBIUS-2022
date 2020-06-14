@@ -136,7 +136,7 @@ public class ZoneData
 				return;
 			}
 			
-			for (final File file : mainDir.listFiles())
+			for (File file : mainDir.listFiles())
 			{
 				if (file.isFile() && file.getName().endsWith(".xml"))
 				{

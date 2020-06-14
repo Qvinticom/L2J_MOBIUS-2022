@@ -16,67 +16,36 @@
  */
 package org.l2jmobius.loginserver.network.clientpackets;
 
-import java.net.InetAddress;
 import java.security.GeneralSecurityException;
+import java.util.List;
 import java.util.logging.Logger;
 
 import javax.crypto.Cipher;
 
 import org.l2jmobius.Config;
-import org.l2jmobius.loginserver.GameServerTable.GameServerInfo;
+import org.l2jmobius.loginserver.GameServerTable;
+import org.l2jmobius.loginserver.GameServerThread;
 import org.l2jmobius.loginserver.LoginClient;
 import org.l2jmobius.loginserver.LoginClient.LoginClientState;
 import org.l2jmobius.loginserver.LoginController;
-import org.l2jmobius.loginserver.LoginController.AuthLoginResult;
+import org.l2jmobius.loginserver.LoginServer;
 import org.l2jmobius.loginserver.network.serverpackets.AccountKicked;
-import org.l2jmobius.loginserver.network.serverpackets.AccountKicked.AccountKickedReason;
-import org.l2jmobius.loginserver.network.serverpackets.LoginFail.LoginFailReason;
+import org.l2jmobius.loginserver.network.serverpackets.LoginFail;
 import org.l2jmobius.loginserver.network.serverpackets.LoginOk;
-import org.l2jmobius.loginserver.network.serverpackets.ServerList;
 
 /**
  * Format: x 0 (a leading null) x: the rsa encrypted block with the login an password
  */
-public class RequestAuthLogin extends LoginClientPacket
+public class RequestAuthLogin extends ClientBasePacket
 {
-	private static final Logger LOGGER = Logger.getLogger(RequestAuthLogin.class.getName());
+	private final static Logger LOGGER = Logger.getLogger(RequestAuthLogin.class.getName());
 	
-	private final byte[] _raw = new byte[128];
-	
-	private String _user;
+	private String _account;
 	private String _password;
-	private int _ncotp;
 	
-	/**
-	 * @return
-	 */
-	public String getPassword()
+	public RequestAuthLogin(byte[] rawPacket, LoginClient client)
 	{
-		return _password;
-	}
-	
-	/**
-	 * @return
-	 */
-	public String getUser()
-	{
-		return _user;
-	}
-	
-	public int getOneTimePassword()
-	{
-		return _ncotp;
-	}
-	
-	@Override
-	public boolean readImpl()
-	{
-		if (super._buf.remaining() >= 128)
-		{
-			readB(_raw);
-			return true;
-		}
-		return false;
+		super(rawPacket, client);
 	}
 	
 	@Override
@@ -86,86 +55,82 @@ public class RequestAuthLogin extends LoginClientPacket
 		try
 		{
 			final Cipher rsaCipher = Cipher.getInstance("RSA/ECB/nopadding");
-			rsaCipher.init(Cipher.DECRYPT_MODE, getClient().getRSAPrivateKey());
-			decrypted = rsaCipher.doFinal(_raw, 0x00, 0x80);
+			rsaCipher.init(Cipher.DECRYPT_MODE, getClient().getPrivateKey());
+			decrypted = rsaCipher.doFinal(getByteBuffer(), 0x01, 0x80);
 		}
 		catch (GeneralSecurityException e)
 		{
-			LOGGER.warning(e.toString());
+			e.printStackTrace();
+			return;
+		}
+		catch (IllegalArgumentException e)
+		{
+			// system folder is corrupted
+			LOGGER.warning("Account with IP " + getClient().getSocket().getInetAddress().getHostAddress() + " is attempting to login with corrupted system.");
 			return;
 		}
 		
-		_user = new String(decrypted, 0x5E, 14).trim();
-		_user = _user.toLowerCase();
-		_password = new String(decrypted, 0x6C, 16).trim();
-		_ncotp = decrypted[0x7c];
-		_ncotp |= decrypted[0x7d] << 8;
-		_ncotp |= decrypted[0x7e] << 16;
-		_ncotp |= decrypted[0x7f] << 24;
+		_account = new String(decrypted, 0x62, 14).trim();
+		_account = _account.toLowerCase();
+		_password = new String(decrypted, 0x70, 16).trim();
 		
-		final LoginController lc = LoginController.getInstance();
-		final LoginClient client = getClient();
-		final InetAddress address = getClient().getConnection().getInetAddress();
-		if (address == null)
+		final LoginController login = LoginController.getInstance();
+		
+		// ip BANNED due to entering wrong password many times
+		if (login.isBannedAddress(getClient().getSocket().getInetAddress().getHostAddress()))
 		{
-			LOGGER.warning("Socket is not connected: " + client.getAccount());
-			client.close(LoginFailReason.REASON_SYSTEM_ERROR);
+			getClient().sendPacket(new AccountKicked(AccountKicked.REASON_ILLEGAL_USE));
 			return;
 		}
-		final AuthLoginResult result = lc.tryAuthLogin(_user, _password, getClient());
 		
-		switch (result)
+		if (!login.isLoginValid(_account, _password, getClient()))
 		{
-			case AUTH_SUCCESS:
+			getClient().sendPacket(new LoginFail(LoginFail.REASON_USER_OR_PASS_WRONG));
+			return;
+		}
+		
+		// Account BANNED (must always be checked after isLoginValid)
+		
+		if (getClient().getAccessLevel() < 0)
+		{
+			getClient().sendPacket(new AccountKicked(AccountKicked.REASON_ILLEGAL_USE));
+			return;
+		}
+		
+		getClient().setAccount(_account);
+		
+		final LoginClient connected = login.getConnectedClient(_account);
+		if (connected != null)
+		{
+			connected.sendPacket(new LoginFail(LoginFail.REASON_ACCOUNT_IN_USE));
+			getClient().sendPacket(new LoginFail(LoginFail.REASON_ACCOUNT_IN_USE));
+			return;
+		}
+		
+		final List<GameServerThread> gslist = LoginServer.getGameServerListener().getGameServerThreads();
+		synchronized (gslist)
+		{
+			for (GameServerThread gameServer : gslist)
 			{
-				client.setAccount(_user);
-				client.setState(LoginClientState.AUTHED_LOGIN);
-				client.setSessionKey(lc.assignSessionKeyToClient(_user, client));
-				if (Config.SHOW_LICENCE)
+				if (gameServer.getPlayersInGame().contains(_account))
 				{
-					client.sendPacket(new LoginOk(getClient().getSessionKey()));
+					gameServer.kickPlayer(_account);
+					getClient().sendPacket(new LoginFail(LoginFail.REASON_ACCOUNT_IN_USE));
+					return;
 				}
-				else
-				{
-					getClient().sendPacket(new ServerList(getClient()));
-				}
-				break;
 			}
-			case INVALID_PASSWORD:
-			{
-				client.close(LoginFailReason.REASON_USER_OR_PASS_WRONG);
-				break;
-			}
-			case ACCOUNT_BANNED:
-			{
-				client.close(new AccountKicked(AccountKickedReason.REASON_PERMANENTLY_BANNED));
-				break;
-			}
-			case ALREADY_ON_LS:
-			{
-				final LoginClient oldClient = lc.getAuthedClient(_user);
-				if (oldClient != null)
-				{
-					// kick the other client
-					oldClient.close(LoginFailReason.REASON_ACCOUNT_IN_USE);
-					lc.removeAuthedLoginClient(_user);
-				}
-				break;
-			}
-			case ALREADY_ON_GS:
-			{
-				final GameServerInfo gsi = lc.getAccountOnGameServer(_user);
-				if (gsi != null)
-				{
-					client.close(LoginFailReason.REASON_ACCOUNT_IN_USE);
-					// kick from there
-					if (gsi.isAuthed())
-					{
-						gsi.getGameServerThread().kickPlayer(_user);
-					}
-				}
-				break;
-			}
+		}
+		
+		getClient().setState(LoginClientState.AUTHED_LOGIN);
+		login.assignKeyToLogin(getClient());
+		
+		if (Config.SHOW_LICENCE)
+		{
+			getClient().sendPacket(new LoginOk(getClient().getSessionKey()));
+		}
+		else
+		{
+			GameServerTable.getInstance().createServerList(getClient());
 		}
 	}
 }

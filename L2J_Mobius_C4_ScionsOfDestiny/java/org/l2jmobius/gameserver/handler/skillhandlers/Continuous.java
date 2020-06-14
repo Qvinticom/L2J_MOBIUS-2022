@@ -24,7 +24,6 @@ import org.l2jmobius.gameserver.ai.CtrlEvent;
 import org.l2jmobius.gameserver.ai.CtrlIntention;
 import org.l2jmobius.gameserver.datatables.SkillTable;
 import org.l2jmobius.gameserver.handler.ISkillHandler;
-import org.l2jmobius.gameserver.instancemanager.DuelManager;
 import org.l2jmobius.gameserver.model.Effect;
 import org.l2jmobius.gameserver.model.Skill;
 import org.l2jmobius.gameserver.model.Skill.SkillType;
@@ -142,19 +141,6 @@ public class Continuous implements ISkillHandler
 				continue;
 			}
 			
-			// Player holding a cursed weapon can't be buffed and can't buff
-			if ((skill.getSkillType() == SkillType.BUFF) && (target != creature))
-			{
-				if ((target instanceof PlayerInstance) && ((PlayerInstance) target).isCursedWeaponEquiped())
-				{
-					continue;
-				}
-				else if ((player != null) && player.isCursedWeaponEquiped())
-				{
-					continue;
-				}
-			}
-			
 			// Possibility of a lethal strike
 			if (!target.isRaid() && (!(target instanceof NpcInstance) || (((NpcInstance) target).getNpcId() != 35062)))
 			{
@@ -229,29 +215,7 @@ public class Continuous implements ISkillHandler
 				continue;
 			}
 			
-			// if this is a debuff let the duel manager know about it so the debuff can be removed after the duel (player & target must be in the same duel)
-			if ((target instanceof PlayerInstance) && (player != null) && ((PlayerInstance) target).isInDuel() && ((skill.getSkillType() == SkillType.DEBUFF) || (skill.getSkillType() == SkillType.BUFF)) && (player.getDuelId() == ((PlayerInstance) target).getDuelId()))
-			{
-				final DuelManager dm = DuelManager.getInstance();
-				if (dm != null)
-				{
-					final Effect[] effects = skill.getEffects(creature, target, ss, sps, bss);
-					if (effects != null)
-					{
-						for (Effect buff : effects)
-						{
-							if (buff != null)
-							{
-								dm.onBuff(((PlayerInstance) target), buff);
-							}
-						}
-					}
-				}
-			}
-			else
-			{
-				skill.getEffects(creature, target, ss, sps, bss);
-			}
+			skill.getEffects(creature, target, ss, sps, bss);
 			
 			if (skill.getSkillType() == SkillType.AGGDEBUFF)
 			{

@@ -57,7 +57,7 @@ public class RequestSocialAction extends GameClientPacket
 			return;
 		}
 		
-		if ((player.getPrivateStoreType() == 0) && (player.getActiveRequester() == null) && !player.isAlikeDead() && (!player.isAllSkillsDisabled() || player.isInDuel()) && (player.getAI().getIntention() == CtrlIntention.AI_INTENTION_IDLE))
+		if ((player.getPrivateStoreType() == 0) && (player.getActiveRequester() == null) && !player.isAlikeDead() && !player.isAllSkillsDisabled() && (player.getAI().getIntention() == CtrlIntention.AI_INTENTION_IDLE))
 		{
 			player.broadcastPacket(new SocialAction(player.getObjectId(), _actionId));
 		}

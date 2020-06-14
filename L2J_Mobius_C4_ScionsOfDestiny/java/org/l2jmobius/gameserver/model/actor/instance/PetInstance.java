@@ -28,7 +28,6 @@ import org.l2jmobius.commons.database.DatabaseFactory;
 import org.l2jmobius.gameserver.ai.CtrlIntention;
 import org.l2jmobius.gameserver.datatables.sql.PetDataTable;
 import org.l2jmobius.gameserver.idfactory.IdFactory;
-import org.l2jmobius.gameserver.instancemanager.CursedWeaponsManager;
 import org.l2jmobius.gameserver.instancemanager.ItemsOnGroundManager;
 import org.l2jmobius.gameserver.model.PetData;
 import org.l2jmobius.gameserver.model.Skill;
@@ -468,14 +467,6 @@ public class PetInstance extends Summon
 		
 		// Herbs
 		if ((target.getItemId() > 8599) && (target.getItemId() < 8615))
-		{
-			final SystemMessage smsg = new SystemMessage(SystemMessageId.YOU_HAVE_FAILED_TO_PICK_UP_S1);
-			smsg.addItemName(target.getItemId());
-			getOwner().sendPacket(smsg);
-			return;
-		}
-		// Cursed weapons
-		if (CursedWeaponsManager.getInstance().isCursed(target.getItemId()))
 		{
 			final SystemMessage smsg = new SystemMessage(SystemMessageId.YOU_HAVE_FAILED_TO_PICK_UP_S1);
 			smsg.addItemName(target.getItemId());

@@ -95,19 +95,6 @@ public class Heal implements ISkillHandler
 				continue;
 			}
 			
-			// Player holding a cursed weapon can't be healed and can't heal
-			if (target != creature)
-			{
-				if ((target instanceof PlayerInstance) && ((PlayerInstance) target).isCursedWeaponEquiped())
-				{
-					continue;
-				}
-				else if ((player != null) && player.isCursedWeaponEquiped())
-				{
-					continue;
-				}
-			}
-			
 			// Fixed about Infinity Rod skill on Raid Boss and BigBoss
 			if ((skill.getId() == 3598) && ((target instanceof RaidBossInstance) || (target instanceof GrandBossInstance)))
 			{

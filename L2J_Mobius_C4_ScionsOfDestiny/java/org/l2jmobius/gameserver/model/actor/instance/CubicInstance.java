@@ -27,7 +27,6 @@ import org.l2jmobius.gameserver.ai.CtrlEvent;
 import org.l2jmobius.gameserver.datatables.SkillTable;
 import org.l2jmobius.gameserver.handler.ISkillHandler;
 import org.l2jmobius.gameserver.handler.SkillHandler;
-import org.l2jmobius.gameserver.instancemanager.DuelManager;
 import org.l2jmobius.gameserver.model.Effect;
 import org.l2jmobius.gameserver.model.Party;
 import org.l2jmobius.gameserver.model.Skill;
@@ -358,76 +357,6 @@ public class CubicInstance
 				return;
 			}
 			
-			// Duel targeting
-			if (_owner.isInDuel())
-			{
-				final PlayerInstance playerA = DuelManager.getInstance().getDuel(_owner.getDuelId()).getPlayerA();
-				final PlayerInstance playerB = DuelManager.getInstance().getDuel(_owner.getDuelId()).getPlayerB();
-				if (DuelManager.getInstance().getDuel(_owner.getDuelId()).isPartyDuel())
-				{
-					final Party partyA = playerA.getParty();
-					final Party partyB = playerB.getParty();
-					Party partyEnemy = null;
-					if (partyA != null)
-					{
-						if (partyA.getPartyMembers().contains(_owner))
-						{
-							if (partyB != null)
-							{
-								partyEnemy = partyB;
-							}
-							else
-							{
-								_target = playerB;
-							}
-						}
-						else
-						{
-							partyEnemy = partyA;
-						}
-					}
-					else if (playerA == _owner)
-					{
-						if (partyB != null)
-						{
-							partyEnemy = partyB;
-						}
-						else
-						{
-							_target = playerB;
-						}
-					}
-					else
-					{
-						_target = playerA;
-					}
-					if (((_target == playerA) || (_target == playerB)) && (_target == ownerTarget))
-					{
-						return;
-					}
-					if (partyEnemy != null)
-					{
-						if (partyEnemy.getPartyMembers().contains(ownerTarget))
-						{
-							_target = (Creature) ownerTarget;
-						}
-						return;
-					}
-				}
-				if ((playerA != _owner) && (ownerTarget == playerA))
-				{
-					_target = playerA;
-					return;
-				}
-				if ((playerB != _owner) && (ownerTarget == playerB))
-				{
-					_target = playerB;
-					return;
-				}
-				_target = null;
-				return;
-			}
-			
 			// Olympiad targeting
 			if (_owner.isInOlympiadMode())
 			{
@@ -705,22 +634,7 @@ public class CubicInstance
 				}
 			}
 			
-			// if this is a debuff let the duel manager know about it so the debuff can be removed after the duel (player & target must be in the same duel)
-			if ((target instanceof PlayerInstance) && ((PlayerInstance) target).isInDuel() && (skill.getSkillType() == SkillType.DEBUFF) && (activeCubic.getOwner().getDuelId() == ((PlayerInstance) target).getDuelId()))
-			{
-				final DuelManager dm = DuelManager.getInstance();
-				for (Effect debuff : skill.getEffects(activeCubic.getOwner(), target))
-				{
-					if (debuff != null)
-					{
-						dm.onBuff(((PlayerInstance) target), debuff);
-					}
-				}
-			}
-			else
-			{
-				skill.getEffects(activeCubic.getOwner(), target);
-			}
+			skill.getEffects(activeCubic.getOwner(), target);
 		}
 	}
 	
@@ -804,22 +718,7 @@ public class CubicInstance
 				{
 					if (Formulas.calcCubicSkillSuccess(activeCubic, target, skill))
 					{
-						// if this is a debuff let the duel manager know about it so the debuff can be removed after the duel (player & target must be in the same duel)
-						if ((target instanceof PlayerInstance) && ((PlayerInstance) target).isInDuel() && (skill.getSkillType() == SkillType.DEBUFF) && (activeCubic.getOwner().getDuelId() == ((PlayerInstance) target).getDuelId()))
-						{
-							final DuelManager dm = DuelManager.getInstance();
-							for (Effect debuff : skill.getEffects(activeCubic.getOwner(), target))
-							{
-								if (debuff != null)
-								{
-									dm.onBuff(((PlayerInstance) target), debuff);
-								}
-							}
-						}
-						else
-						{
-							skill.getEffects(activeCubic.getOwner(), target);
-						}
+						skill.getEffects(activeCubic.getOwner(), target);
 					}
 					break;
 				}
@@ -827,22 +726,7 @@ public class CubicInstance
 				{
 					if (Formulas.calcCubicSkillSuccess(activeCubic, target, skill))
 					{
-						// if this is a debuff let the duel manager know about it so the debuff can be removed after the duel (player & target must be in the same duel)
-						if ((target instanceof PlayerInstance) && ((PlayerInstance) target).isInDuel() && (skill.getSkillType() == SkillType.DEBUFF) && (activeCubic.getOwner().getDuelId() == ((PlayerInstance) target).getDuelId()))
-						{
-							final DuelManager dm = DuelManager.getInstance();
-							for (Effect debuff : skill.getEffects(activeCubic.getOwner(), target))
-							{
-								if (debuff != null)
-								{
-									dm.onBuff(((PlayerInstance) target), debuff);
-								}
-							}
-						}
-						else
-						{
-							skill.getEffects(activeCubic.getOwner(), target);
-						}
+						skill.getEffects(activeCubic.getOwner(), target);
 					}
 					break;
 				}
@@ -873,22 +757,7 @@ public class CubicInstance
 				{
 					if (Formulas.calcCubicSkillSuccess(activeCubic, target, skill))
 					{
-						// if this is a debuff let the duel manager know about it so the debuff can be removed after the duel (player & target must be in the same duel)
-						if ((target instanceof PlayerInstance) && ((PlayerInstance) target).isInDuel() && (skill.getSkillType() == SkillType.DEBUFF) && (activeCubic.getOwner().getDuelId() == ((PlayerInstance) target).getDuelId()))
-						{
-							final DuelManager dm = DuelManager.getInstance();
-							for (Effect debuff : skill.getEffects(activeCubic.getOwner(), target))
-							{
-								if (debuff != null)
-								{
-									dm.onBuff(((PlayerInstance) target), debuff);
-								}
-							}
-						}
-						else
-						{
-							skill.getEffects(activeCubic.getOwner(), target);
-						}
+						skill.getEffects(activeCubic.getOwner(), target);
 					}
 					break;
 				}
@@ -940,12 +809,6 @@ public class CubicInstance
 		Creature target = null;
 		double percentleft = 100.0;
 		Party party = _owner.getParty();
-		
-		// if owner is in a duel but not in a party duel, then it is the same as he does not have a party
-		if (_owner.isInDuel() && !DuelManager.getInstance().getDuel(_owner.getDuelId()).isPartyDuel())
-		{
-			party = null;
-		}
 		
 		if ((party != null) && !_owner.isInOlympiadMode())
 		{

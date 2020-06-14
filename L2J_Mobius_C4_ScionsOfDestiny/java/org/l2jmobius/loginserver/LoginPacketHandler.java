@@ -16,13 +16,11 @@
  */
 package org.l2jmobius.loginserver;
 
-import java.nio.ByteBuffer;
 import java.util.logging.Logger;
 
-import org.l2jmobius.commons.mmocore.IPacketHandler;
-import org.l2jmobius.commons.mmocore.ReceivablePacket;
 import org.l2jmobius.loginserver.LoginClient.LoginClientState;
-import org.l2jmobius.loginserver.network.clientpackets.AuthGameGuard;
+import org.l2jmobius.loginserver.network.clientpackets.ClientBasePacket;
+import org.l2jmobius.loginserver.network.clientpackets.RequestAuthGG;
 import org.l2jmobius.loginserver.network.clientpackets.RequestAuthLogin;
 import org.l2jmobius.loginserver.network.clientpackets.RequestServerList;
 import org.l2jmobius.loginserver.network.clientpackets.RequestServerLogin;
@@ -31,17 +29,15 @@ import org.l2jmobius.loginserver.network.clientpackets.RequestServerLogin;
  * Handler for packets received by Login Server
  * @author KenM
  */
-
-public class LoginPacketHandler implements IPacketHandler<LoginClient>
+public class LoginPacketHandler
 {
 	private static final Logger LOGGER = Logger.getLogger(LoginPacketHandler.class.getName());
 	
-	@Override
-	public ReceivablePacket<LoginClient> handlePacket(ByteBuffer buf, LoginClient client)
+	public static ClientBasePacket handlePacket(byte[] data, LoginClient client)
 	{
-		final int opcode = buf.get() & 0xFF;
-		ReceivablePacket<LoginClient> packet = null;
-		final LoginClientState state = client.getState();
+		final int opcode = data[0] & 0xFF;
+		ClientBasePacket packet = null;
+		final LoginClientState state = client.getClientState();
 		
 		switch (state)
 		{
@@ -49,7 +45,7 @@ public class LoginPacketHandler implements IPacketHandler<LoginClient>
 			{
 				if (opcode == 0x07)
 				{
-					packet = new AuthGameGuard();
+					packet = new RequestAuthGG(data, client);
 				}
 				else
 				{
@@ -61,7 +57,7 @@ public class LoginPacketHandler implements IPacketHandler<LoginClient>
 			{
 				if (opcode == 0x00)
 				{
-					packet = new RequestAuthLogin();
+					packet = new RequestAuthLogin(data, client);
 				}
 				else
 				{
@@ -73,11 +69,11 @@ public class LoginPacketHandler implements IPacketHandler<LoginClient>
 			{
 				if (opcode == 0x05)
 				{
-					packet = new RequestServerList();
+					packet = new RequestServerList(data, client);
 				}
 				else if (opcode == 0x02)
 				{
-					packet = new RequestServerLogin();
+					packet = new RequestServerLogin(data, client);
 				}
 				else
 				{
@@ -89,7 +85,7 @@ public class LoginPacketHandler implements IPacketHandler<LoginClient>
 		return packet;
 	}
 	
-	private void debugOpcode(int opcode, LoginClientState state)
+	private static void debugOpcode(int opcode, LoginClientState state)
 	{
 		LOGGER.info("Unknown Opcode: " + opcode + " for state: " + state.name());
 	}

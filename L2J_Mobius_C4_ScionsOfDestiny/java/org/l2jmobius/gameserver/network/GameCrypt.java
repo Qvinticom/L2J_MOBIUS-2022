@@ -21,14 +21,14 @@ package org.l2jmobius.gameserver.network;
  */
 public class GameCrypt
 {
-	private final byte[] _inKey = new byte[16];
-	private final byte[] _outKey = new byte[16];
+	private final byte[] _inKey = new byte[8];
+	private final byte[] _outKey = new byte[8];
 	private boolean _isEnabled;
 	
 	public void setKey(byte[] key)
 	{
-		System.arraycopy(key, 0, _inKey, 0, 16);
-		System.arraycopy(key, 0, _outKey, 0, 16);
+		System.arraycopy(key, 0, _inKey, 0, 8);
+		System.arraycopy(key, 0, _outKey, 0, 8);
 	}
 	
 	public void decrypt(byte[] raw, int offset, int size)
@@ -42,21 +42,21 @@ public class GameCrypt
 		for (int i = 0; i < size; i++)
 		{
 			final int temp2 = raw[offset + i] & 0xFF;
-			raw[offset + i] = (byte) (temp2 ^ _inKey[i & 15] ^ temp);
+			raw[offset + i] = (byte) (temp2 ^ _inKey[i & 7] ^ temp);
 			temp = temp2;
 		}
 		
-		int old = _inKey[8] & 0xff;
-		old |= (_inKey[9] << 8) & 0xff00;
-		old |= (_inKey[10] << 0x10) & 0xff0000;
-		old |= (_inKey[11] << 0x18) & 0xff000000;
+		int old = _inKey[0] & 0xff;
+		old |= (_inKey[1] << 8) & 0xff00;
+		old |= (_inKey[2] << 0x10) & 0xff0000;
+		old |= (_inKey[3] << 0x18) & 0xff000000;
 		
 		old += size;
 		
-		_inKey[8] = (byte) (old & 0xff);
-		_inKey[9] = (byte) ((old >> 0x08) & 0xff);
-		_inKey[10] = (byte) ((old >> 0x10) & 0xff);
-		_inKey[11] = (byte) ((old >> 0x18) & 0xff);
+		_inKey[0] = (byte) (old & 0xff);
+		_inKey[1] = (byte) ((old >> 0x08) & 0xff);
+		_inKey[2] = (byte) ((old >> 0x10) & 0xff);
+		_inKey[3] = (byte) ((old >> 0x18) & 0xff);
 	}
 	
 	public void encrypt(byte[] raw, int offset, int size)
@@ -71,20 +71,20 @@ public class GameCrypt
 		for (int i = 0; i < size; i++)
 		{
 			final int temp2 = raw[offset + i] & 0xFF;
-			temp = temp2 ^ _outKey[i & 15] ^ temp;
+			temp = temp2 ^ _outKey[i & 7] ^ temp;
 			raw[offset + i] = (byte) temp;
 		}
 		
-		int old = _outKey[8] & 0xff;
-		old |= (_outKey[9] << 8) & 0xff00;
-		old |= (_outKey[10] << 0x10) & 0xff0000;
-		old |= (_outKey[11] << 0x18) & 0xff000000;
+		int old = _outKey[0] & 0xff;
+		old |= (_outKey[1] << 8) & 0xff00;
+		old |= (_outKey[2] << 0x10) & 0xff0000;
+		old |= (_outKey[3] << 0x18) & 0xff000000;
 		
 		old += size;
 		
-		_outKey[8] = (byte) (old & 0xff);
-		_outKey[9] = (byte) ((old >> 0x08) & 0xff);
-		_outKey[10] = (byte) ((old >> 0x10) & 0xff);
-		_outKey[11] = (byte) ((old >> 0x18) & 0xff);
+		_outKey[0] = (byte) (old & 0xff);
+		_outKey[1] = (byte) ((old >> 0x08) & 0xff);
+		_outKey[2] = (byte) ((old >> 0x10) & 0xff);
+		_outKey[3] = (byte) ((old >> 0x18) & 0xff);
 	}
 }

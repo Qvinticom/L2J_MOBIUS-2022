@@ -54,7 +54,7 @@ public class WareHouseDepositList extends GameServerPacket
 		{
 			for (ItemInstance temp : player.getInventory().getItems())
 			{
-				if ((temp != null) && !temp.isEquipped() && (temp.isShadowItem() || temp.isAugmented()))
+				if ((temp != null) && !temp.isEquipped() && temp.isShadowItem())
 				{
 					_items.add(temp);
 				}
@@ -85,16 +85,7 @@ public class WareHouseDepositList extends GameServerPacket
 			writeH(item.getEnchantLevel()); // enchant level -confirmed
 			writeH(0x00); // ? 300
 			writeH(0x00); // ? 200
-			writeD(item.getObjectId()); // item id - confimed
-			if (item.isAugmented())
-			{
-				writeD(0x0000FFFF & item.getAugmentation().getAugmentationId());
-				writeD(item.getAugmentation().getAugmentationId() >> 16);
-			}
-			else
-			{
-				writeQ(0x00);
-			}
+			writeD(item.getObjectId()); // item id - confirmed
 		}
 	}
 }

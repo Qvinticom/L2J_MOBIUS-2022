@@ -20,7 +20,6 @@ import java.util.logging.Logger;
 
 import org.l2jmobius.Config;
 import org.l2jmobius.gameserver.datatables.xml.AdminData;
-import org.l2jmobius.gameserver.instancemanager.CursedWeaponsManager;
 import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
 import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance.SkillDat;
 import org.l2jmobius.gameserver.model.items.Item;
@@ -95,12 +94,6 @@ public class RequestDropItem extends GameClientPacket
 			return;
 		}
 		
-		if (item.isAugmented())
-		{
-			player.sendPacket(SystemMessageId.THE_AUGMENTED_ITEM_CANNOT_BE_DISCARDED);
-			return;
-		}
-		
 		if ((item.getItemType() == EtcItemType.QUEST) && !(player.isGM()))
 		{
 			return;
@@ -111,12 +104,6 @@ public class RequestDropItem extends GameClientPacket
 		{
 			player.sendMessage("Drop item disabled for GM by config!");
 			player.sendPacket(ActionFailed.STATIC_PACKET);
-			return;
-		}
-		
-		// Cursed Weapons cannot be dropped
-		if (CursedWeaponsManager.getInstance().isCursed(item.getItemId()))
-		{
 			return;
 		}
 		
@@ -200,12 +187,6 @@ public class RequestDropItem extends GameClientPacket
 		
 		if (item.isEquipped())
 		{
-			// Remove augementation boni on unequip
-			if (item.isAugmented())
-			{
-				item.getAugmentation().removeBonus(player);
-			}
-			
 			final ItemInstance[] unequiped = player.getInventory().unEquipItemInBodySlotAndRecord(item.getItem().getBodyPart());
 			final InventoryUpdate iu = new InventoryUpdate();
 			for (ItemInstance element : unequiped)

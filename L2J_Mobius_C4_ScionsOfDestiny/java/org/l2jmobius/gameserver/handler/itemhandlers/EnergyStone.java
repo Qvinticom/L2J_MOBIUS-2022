@@ -27,7 +27,6 @@ import org.l2jmobius.gameserver.model.skills.effects.EffectCharge;
 import org.l2jmobius.gameserver.model.skills.handlers.SkillCharge;
 import org.l2jmobius.gameserver.network.SystemMessageId;
 import org.l2jmobius.gameserver.network.serverpackets.ActionFailed;
-import org.l2jmobius.gameserver.network.serverpackets.EtcStatusUpdate;
 import org.l2jmobius.gameserver.network.serverpackets.MagicSkillUse;
 import org.l2jmobius.gameserver.network.serverpackets.SystemMessage;
 
@@ -110,7 +109,6 @@ public class EnergyStone implements IItemHandler
 		final MagicSkillUse msu = new MagicSkillUse(playable, player, skill.getId(), 1, 1, 0);
 		player.sendPacket(msu);
 		player.broadcastPacket(msu);
-		player.sendPacket(new EtcStatusUpdate(player));
 		player.destroyItem("Consume", item.getObjectId(), 1, null, false);
 	}
 	

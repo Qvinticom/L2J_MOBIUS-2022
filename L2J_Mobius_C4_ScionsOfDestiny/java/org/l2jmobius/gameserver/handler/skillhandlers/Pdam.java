@@ -38,7 +38,6 @@ import org.l2jmobius.gameserver.model.skills.BaseStat;
 import org.l2jmobius.gameserver.model.skills.Formulas;
 import org.l2jmobius.gameserver.model.skills.effects.EffectCharge;
 import org.l2jmobius.gameserver.network.SystemMessageId;
-import org.l2jmobius.gameserver.network.serverpackets.EtcStatusUpdate;
 import org.l2jmobius.gameserver.network.serverpackets.SystemMessage;
 
 public class Pdam implements ISkillHandler
@@ -227,23 +226,16 @@ public class Pdam implements ISkillHandler
 						{
 							if (damage >= player.getCurrentHp())
 							{
-								if (player.isInDuel())
+								player.setCurrentHp(0);
+								if (player.isInOlympiadMode())
 								{
-									player.setCurrentHp(1);
+									player.abortAttack();
+									player.abortCast();
+									player.getStatus().stopHpMpRegeneration();
 								}
 								else
 								{
-									player.setCurrentHp(0);
-									if (player.isInOlympiadMode())
-									{
-										player.abortAttack();
-										player.abortCast();
-										player.getStatus().stopHpMpRegeneration();
-									}
-									else
-									{
-										player.doDie(creature);
-									}
+									player.doDie(creature);
 								}
 							}
 							else
@@ -303,7 +295,6 @@ public class Pdam implements ISkillHandler
 						effectcharge++;
 						effect.addNumCharges(1);
 						
-						creature.sendPacket(new EtcStatusUpdate((PlayerInstance) creature));
 						final SystemMessage sm = new SystemMessage(SystemMessageId.YOUR_FORCE_HAS_INCREASED_TO_S1_LEVEL);
 						sm.addNumber(effectcharge);
 						creature.sendPacket(sm);

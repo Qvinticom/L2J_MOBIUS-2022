@@ -272,11 +272,6 @@ public class Wedding implements IVoicedCommandHandler
 			activeChar.sendMessage("Your partner is in an event.");
 			return false;
 		}
-		else if (partner.isInDuel())
-		{
-			activeChar.sendMessage("Your partner is in a duel.");
-			return false;
-		}
 		else if (partner.isFestivalParticipant())
 		{
 			activeChar.sendMessage("Your partner is in a festival.");
@@ -337,11 +332,6 @@ public class Wedding implements IVoicedCommandHandler
 			activeChar.sendMessage("You may not use go to love in VIP.");
 			return false;
 		}
-		else if (activeChar.isInDuel())
-		{
-			activeChar.sendMessage("You are in a duel!");
-			return false;
-		}
 		else if (activeChar.inObserverMode())
 		{
 			activeChar.sendMessage("You are in the observation.");
@@ -360,11 +350,6 @@ public class Wedding implements IVoicedCommandHandler
 		else if (activeChar.isInParty() && activeChar.getParty().isInDimensionalRift())
 		{
 			activeChar.sendMessage("You are in the dimensional rift.");
-			return false;
-		}
-		else if (activeChar.isCursedWeaponEquiped())
-		{
-			activeChar.sendMessage("You have a cursed weapon, you can't go to your partner.");
 			return false;
 		}
 		else if (activeChar.isInsideZone(ZoneId.NO_SUMMON_FRIEND))

@@ -16,8 +16,6 @@
  */
 package ai.bosses;
 
-import java.util.Collection;
-
 import org.l2jmobius.gameserver.ai.CtrlIntention;
 import org.l2jmobius.gameserver.datatables.sql.SpawnTable;
 import org.l2jmobius.gameserver.model.Location;
@@ -163,28 +161,6 @@ public class Gordon extends Quest
 				// startQuestTimer("Start", 1000, npc, null);
 				if ((npc != null) && _isSpawned)
 				{
-					// check if player have Cursed Weapon and in radius
-					if (npc.getNpcId() == GORDON)
-					{
-						final Collection<PlayerInstance> chars = npc.getKnownList().getKnownPlayers().values();
-						if ((chars != null) && !chars.isEmpty())
-						{
-							for (PlayerInstance pc : chars)
-							{
-								if (pc.isCursedWeaponEquipped() && pc.isInsideRadius(npc, 5000, false, false))
-								{
-									npc.setRunning();
-									((Attackable) npc).addDamageHate(pc, 0, 9999);
-									npc.getAI().setIntention(CtrlIntention.AI_INTENTION_ATTACK, pc);
-									_isAttacked = true;
-									cancelQuestTimer("time_isAttacked", null, null);
-									startQuestTimer("time_isAttacked", 180000, npc, null);
-									return super.onAdvEvent(event, npc, player);
-								}
-							}
-						}
-					}
-					// end check
 					if (_isAttacked)
 					{
 						return super.onAdvEvent(event, npc, player);

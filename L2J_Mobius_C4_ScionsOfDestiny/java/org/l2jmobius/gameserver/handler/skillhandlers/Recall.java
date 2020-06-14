@@ -102,12 +102,6 @@ public class Recall implements ISkillHandler
 						continue;
 					}
 					
-					if (targetChar.isInDuel())
-					{
-						targetChar.sendPacket(SystemMessage.sendString("You can't use escape skills during a duel."));
-						continue;
-					}
-					
 					if (targetChar.isAlikeDead())
 					{
 						final SystemMessage sm = new SystemMessage(SystemMessageId.S1_IS_DEAD_AT_THE_MOMENT_AND_CANNOT_BE_SUMMONED);

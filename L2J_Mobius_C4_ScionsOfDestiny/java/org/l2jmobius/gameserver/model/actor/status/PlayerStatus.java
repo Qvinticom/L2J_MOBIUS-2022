@@ -22,7 +22,6 @@ import org.l2jmobius.gameserver.model.actor.Summon;
 import org.l2jmobius.gameserver.model.actor.instance.NpcInstance;
 import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
 import org.l2jmobius.gameserver.model.actor.instance.SummonInstance;
-import org.l2jmobius.gameserver.model.entity.Duel;
 import org.l2jmobius.gameserver.model.skills.Stat;
 import org.l2jmobius.gameserver.network.SystemMessageId;
 import org.l2jmobius.gameserver.network.serverpackets.SystemMessage;
@@ -51,25 +50,6 @@ public class PlayerStatus extends PlayableStatus
 		
 		if (attacker instanceof PlayerInstance)
 		{
-			if (getActiveChar().isInDuel())
-			{
-				// the duel is finishing - players do not recive damage
-				if (getActiveChar().getDuelState() == Duel.DUELSTATE_DEAD)
-				{
-					return;
-				}
-				else if (getActiveChar().getDuelState() == Duel.DUELSTATE_WINNER)
-				{
-					return;
-				}
-				
-				// cancel duel if player got hit by another player, that is not part of the duel
-				if (((PlayerInstance) attacker).getDuelId() != getActiveChar().getDuelId())
-				{
-					getActiveChar().setDuelState(Duel.DUELSTATE_INTERRUPTED);
-				}
-			}
-			
 			if (getActiveChar().isDead() && !getActiveChar().isFakeDeath())
 			{
 				return;
@@ -77,12 +57,6 @@ public class PlayerStatus extends PlayableStatus
 		}
 		else
 		{
-			// if attacked by a non PlayerInstance & non SummonInstance the duel gets canceled
-			if (getActiveChar().isInDuel() && !(attacker instanceof SummonInstance))
-			{
-				getActiveChar().setDuelState(Duel.DUELSTATE_INTERRUPTED);
-			}
-			
 			if (getActiveChar().isDead())
 			{
 				return;

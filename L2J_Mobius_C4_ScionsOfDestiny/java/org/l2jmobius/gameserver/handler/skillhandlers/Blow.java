@@ -182,29 +182,22 @@ public class Blow implements ISkillHandler
 							}
 							if (damage >= player.getCurrentHp())
 							{
-								if (player.isInDuel())
+								player.setCurrentHp(0);
+								if (player.isInOlympiadMode())
 								{
-									player.setCurrentHp(1);
+									player.abortAttack();
+									player.abortCast();
+									player.getStatus().stopHpMpRegeneration();
+									// player.setDead(true);
+									player.setIsPendingRevive(true);
+									if (player.getPet() != null)
+									{
+										player.getPet().getAI().setIntention(CtrlIntention.AI_INTENTION_IDLE, null);
+									}
 								}
 								else
 								{
-									player.setCurrentHp(0);
-									if (player.isInOlympiadMode())
-									{
-										player.abortAttack();
-										player.abortCast();
-										player.getStatus().stopHpMpRegeneration();
-										// player.setDead(true);
-										player.setIsPendingRevive(true);
-										if (player.getPet() != null)
-										{
-											player.getPet().getAI().setIntention(CtrlIntention.AI_INTENTION_IDLE, null);
-										}
-									}
-									else
-									{
-										player.doDie(creature);
-									}
+									player.doDie(creature);
 								}
 							}
 							else

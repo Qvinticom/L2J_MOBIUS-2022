@@ -25,7 +25,6 @@ import org.l2jmobius.commons.concurrent.ThreadPool;
 import org.l2jmobius.gameserver.instancemanager.ItemsOnGroundManager;
 import org.l2jmobius.gameserver.model.World;
 import org.l2jmobius.gameserver.model.items.instance.ItemInstance;
-import org.l2jmobius.gameserver.model.items.type.EtcItemType;
 
 public class ItemsAutoDestroy
 {
@@ -57,20 +56,6 @@ public class ItemsAutoDestroy
 			if ((item == null) || (item.getDropTime() == 0) || (item.getItemLocation() != ItemInstance.ItemLocation.VOID))
 			{
 				_items.remove(item);
-			}
-			else if (item.getItemType() == EtcItemType.HERB)
-			{
-				if ((curtime - item.getDropTime()) > Config.HERB_AUTO_DESTROY_TIME)
-				{
-					World.getInstance().removeVisibleObject(item, item.getWorldRegion());
-					World.getInstance().removeObject(item);
-					_items.remove(item);
-					
-					if (Config.SAVE_DROPPED_ITEM)
-					{
-						ItemsOnGroundManager.getInstance().removeObject(item);
-					}
-				}
 			}
 			else if ((curtime - item.getDropTime()) > (Config.AUTODESTROY_ITEM_AFTER * 1000))
 			{

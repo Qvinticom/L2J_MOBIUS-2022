@@ -160,14 +160,6 @@
 		<node X="110600" Y="-125052" />
 		<node X="112720" Y="-125225" />
 	</zone>
-	<!-- Boss zone Frintezza -->
-	<zone id="12016" type="BossZone" shape="Cuboid" minZ="-6130" maxZ="-3000" bossId="29047">
-		<stat name="name" val="Last Imperial Tomb" />
-		<stat name="Flying" val="false" />
-		<stat name="InvadeTime" val="1800000" />
-		<node X="172176" Y="-74106" />
-		<node X="175984" Y="-90033" />
-	</zone>
 	<!-- Boss zone Lair of Orfen -->
 	<zone id="12018" type="BossZone" shape="NPoly" minZ="-5796" maxZ="-3796" bossId="29014">
 		<stat name="name" val="Lair of Orfen" />

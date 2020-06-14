@@ -25,8 +25,6 @@ import org.l2jmobius.commons.database.DatabaseFactory;
 import org.l2jmobius.gameserver.datatables.OfflineTradeTable;
 import org.l2jmobius.gameserver.datatables.SchemeBufferTable;
 import org.l2jmobius.gameserver.instancemanager.CastleManorManager;
-import org.l2jmobius.gameserver.instancemanager.CursedWeaponsManager;
-import org.l2jmobius.gameserver.instancemanager.FishingChampionshipManager;
 import org.l2jmobius.gameserver.instancemanager.GlobalVariablesManager;
 import org.l2jmobius.gameserver.instancemanager.GrandBossManager;
 import org.l2jmobius.gameserver.instancemanager.ItemsOnGroundManager;
@@ -443,15 +441,8 @@ public class Shutdown extends Thread
 		}
 		LOGGER.info("Olympiad System: Data saved!!");
 		
-		// Save Cursed Weapons data before closing.
-		CursedWeaponsManager.getInstance().saveData();
-		
 		// Save all manor data
 		CastleManorManager.getInstance().save();
-		
-		// Save Fishing tournament data
-		FishingChampionshipManager.getInstance().shutdown();
-		LOGGER.info("Fishing Championship data have been saved!!");
 		
 		// Schemes save.
 		SchemeBufferTable.getInstance().saveSchemes();

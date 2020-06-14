@@ -29,6 +29,10 @@ public class KickPlayer extends ServerBasePacket
 		writeS(account);
 	}
 	
+	/*
+	 * (non-Javadoc)
+	 * @see org.l2jmobius.loginserver.serverpackets.ServerBasePacket#getContent()
+	 */
 	@Override
 	public byte[] getContent()
 	{

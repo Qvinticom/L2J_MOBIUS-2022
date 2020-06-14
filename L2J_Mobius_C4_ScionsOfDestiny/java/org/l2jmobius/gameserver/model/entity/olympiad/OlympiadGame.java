@@ -1106,12 +1106,6 @@ class OlympiadGameTask implements Runnable
 				sm = new SystemMessage(SystemMessageId.YOU_HAVE_CHANGED_FROM_YOUR_MAIN_CLASS_TO_A_SUBCLASS_AND_THEREFORE_ARE_REMOVED_FROM_THE_GRAND_OLYMPIAD_GAMES_WAITING_LIST);
 				defaulted = true;
 			}
-			else if (player.isCursedWeaponEquiped())
-			{
-				sm = new SystemMessage(SystemMessageId.IF_YOU_POSSESS_S1_YOU_CANNOT_PARTICIPATE_IN_THE_OLYMPIAD);
-				sm.addItemName(player.getCursedWeaponEquipedId());
-				defaulted = true;
-			}
 			else if ((player.getInventoryLimit() * 0.8) <= player.getInventory().getSize())
 			{
 				sm = new SystemMessage(SystemMessageId.YOU_CAN_T_JOIN_A_GRAND_OLYMPIAD_GAME_MATCH_WITH_THAT_MUCH_STUFF_ON_YOU_REDUCE_YOUR_WEIGHT_TO_BELOW_80_PERCENT_FULL_AND_REQUEST_TO_JOIN_AGAIN);

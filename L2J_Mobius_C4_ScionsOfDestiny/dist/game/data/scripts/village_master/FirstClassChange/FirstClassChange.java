@@ -59,9 +59,6 @@ public class FirstClassChange extends Quest
 	private static final int BEAD_OF_SEASON = 1292;
 	private static final int MARK_OF_FAITH = 1201;
 	
-	// Reward Item
-	private static final int SHADOW_WEAPON_COUPON_DGRADE = 8869;
-	
 	// @formatter:off
 	
 	// Classes
@@ -141,7 +138,6 @@ public class FirstClassChange extends Quest
 					{
 						suffix = "-" + array[6];
 						st.takeItems(array[7], 1);
-						st.giveItems(SHADOW_WEAPON_COUPON_DGRADE, 15);
 						st.playSound(QuestState.SOUND_FANFARE);
 						
 						player.setClassId(array[0]);

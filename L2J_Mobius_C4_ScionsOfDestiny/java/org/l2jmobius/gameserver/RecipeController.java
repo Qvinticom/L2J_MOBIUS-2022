@@ -125,12 +125,6 @@ public class RecipeController
 	
 	public synchronized void requestMakeItem(PlayerInstance player, int recipeListId)
 	{
-		if (player.isInDuel())
-		{
-			player.sendPacket(SystemMessageId.WHILE_YOU_ARE_ENGAGED_IN_COMBAT_YOU_CANNOT_OPERATE_A_PRIVATE_STORE_OR_PRIVATE_WORKSHOP);
-			return;
-		}
-		
 		final RecipeList recipeList = getValidRecipeList(player, recipeListId);
 		if (recipeList == null)
 		{

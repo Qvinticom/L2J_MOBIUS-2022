@@ -1669,10 +1669,6 @@ public class DM implements EventTask
 						replyMSG.append("<font color=\"FFFF00\">You can't participate to this event.</font><br>");
 					}
 				}
-				else if (eventPlayer.isCursedWeaponEquiped() && !Config.DM_JOIN_CURSED)
-				{
-					replyMSG.append("<font color=\"FFFF00\">You can't participate to this event with a cursed Weapon.</font><br>");
-				}
 				else if (!_started && _joining && (eventPlayer.getLevel() >= _minlvl) && (eventPlayer.getLevel() <= _maxlvl))
 				{
 					if (_players.contains(eventPlayer))

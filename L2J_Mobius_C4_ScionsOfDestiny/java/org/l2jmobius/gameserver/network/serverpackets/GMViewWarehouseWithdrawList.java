@@ -84,34 +84,6 @@ public class GMViewWarehouseWithdrawList extends GameServerPacket
 			}
 			
 			writeD(item.getObjectId());
-			
-			switch (item.getItem().getType2())
-			{
-				case Item.TYPE2_WEAPON:
-				{
-					if (item.isAugmented())
-					{
-						writeD(0x0000FFFF & item.getAugmentation().getAugmentationId());
-						writeD(item.getAugmentation().getAugmentationId() >> 16);
-					}
-					else
-					{
-						writeD(0);
-						writeD(0);
-					}
-					break;
-				}
-				case Item.TYPE2_SHIELD_ARMOR:
-				case Item.TYPE2_ACCESSORY:
-				case Item.TYPE2_PET_WOLF:
-				case Item.TYPE2_PET_HATCHLING:
-				case Item.TYPE2_PET_STRIDER:
-				case Item.TYPE2_PET_BABY:
-				{
-					writeD(0);
-					writeD(0);
-				}
-			}
 		}
 	}
 }

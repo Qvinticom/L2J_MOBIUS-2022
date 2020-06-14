@@ -18,11 +18,9 @@ package org.l2jmobius.gameserver.model.actor.instance;
 
 import java.util.StringTokenizer;
 
-import org.l2jmobius.Config;
 import org.l2jmobius.gameserver.TradeController;
 import org.l2jmobius.gameserver.datatables.SkillTable;
 import org.l2jmobius.gameserver.datatables.sql.SkillTreeTable;
-import org.l2jmobius.gameserver.instancemanager.FishingChampionshipManager;
 import org.l2jmobius.gameserver.model.Skill;
 import org.l2jmobius.gameserver.model.SkillLearn;
 import org.l2jmobius.gameserver.model.StoreTradeList;
@@ -93,35 +91,6 @@ public class FishermanInstance extends FolkInstance
 			player.setSkillLearningClassId(player.getClassId());
 			showSkillList(player);
 		}
-		else if (command.startsWith("FishingChampionship"))
-		{
-			if (Config.ALT_FISH_CHAMPIONSHIP_ENABLED)
-			{
-				FishingChampionshipManager.getInstance().showChampScreen(player, getObjectId());
-			}
-			else
-			{
-				sendHtml(player, this, "no_fish_event001.htm");
-			}
-		}
-		else if (command.startsWith("FishingReward"))
-		{
-			if (Config.ALT_FISH_CHAMPIONSHIP_ENABLED)
-			{
-				if (FishingChampionshipManager.getInstance().isWinner(player.getName()))
-				{
-					FishingChampionshipManager.getInstance().getReward(player);
-				}
-				else
-				{
-					sendHtml(player, this, "no_fish_event_reward001.htm");
-				}
-			}
-			else
-			{
-				sendHtml(player, this, "no_fish_event001.htm");
-			}
-		}
 		
 		final StringTokenizer st = new StringTokenizer(command, " ");
 		final String command2 = st.nextToken();
@@ -189,12 +158,5 @@ public class FishermanInstance extends FolkInstance
 		}
 		
 		player.sendPacket(ActionFailed.STATIC_PACKET);
-	}
-	
-	private void sendHtml(PlayerInstance player, FishermanInstance npc, String htmlName)
-	{
-		final NpcHtmlMessage html = new NpcHtmlMessage(npc.getObjectId());
-		html.setFile("data/html/fisherman/championship/" + htmlName);
-		player.sendPacket(html);
 	}
 }

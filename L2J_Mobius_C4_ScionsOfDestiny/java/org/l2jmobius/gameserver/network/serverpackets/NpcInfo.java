@@ -246,6 +246,5 @@ public class NpcInfo extends GameServerPacket
 		writeF(_collisionRadius);
 		writeF(_collisionHeight);
 		writeD(0x00); // C4
-		writeD(0x00); // C6
 	}
 }

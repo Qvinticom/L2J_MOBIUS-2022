@@ -64,7 +64,7 @@ public class PlayerStat extends PlayableStat
 		}
 		
 		// Set new karma.
-		if (!player.isCursedWeaponEquiped() && (player.getKarma() > 0) && (player.isGM() || !player.isInsideZone(ZoneId.PVP)))
+		if ((player.getKarma() > 0) && (player.isGM() || !player.isInsideZone(ZoneId.PVP)))
 		{
 			final int karmaLost = player.calculateKarmaLost(value);
 			if (karmaLost > 0)

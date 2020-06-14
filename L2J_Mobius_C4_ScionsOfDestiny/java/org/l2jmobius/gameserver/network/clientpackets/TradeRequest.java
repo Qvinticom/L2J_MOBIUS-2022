@@ -89,13 +89,6 @@ public class TradeRequest extends GameClientPacket
 			return;
 		}
 		
-		if (partner.isInDuel())
-		{
-			player.sendMessage("You can't request a trade when partner is in duel.");
-			player.sendPacket(ActionFailed.STATIC_PACKET);
-			return;
-		}
-		
 		if (partner.isImmobilized())
 		{
 			player.sendMessage("You can't request a trade when partner is immobilized.");
@@ -155,13 +148,6 @@ public class TradeRequest extends GameClientPacket
 		if (player.isCastingNow() || player.isCastingPotionNow())
 		{
 			player.sendMessage("You can't request a trade when you are casting.");
-			player.sendPacket(ActionFailed.STATIC_PACKET);
-			return;
-		}
-		
-		if (player.isInDuel())
-		{
-			player.sendMessage("You can't request a trade when you are in duel.");
 			player.sendPacket(ActionFailed.STATIC_PACKET);
 			return;
 		}

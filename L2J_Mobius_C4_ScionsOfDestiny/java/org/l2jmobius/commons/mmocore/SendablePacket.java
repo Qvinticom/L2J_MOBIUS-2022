@@ -84,7 +84,9 @@ public abstract class SendablePacket<T extends MMOClient<?>>extends AbstractPack
 	 */
 	protected final void writeQ(long value)
 	{
-		_buf.putLong(value);
+		// C4 adjustment.
+		// _buf.putLong(value);
+		_buf.putInt((int) value);
 	}
 	
 	/**

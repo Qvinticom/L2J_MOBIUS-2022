@@ -49,8 +49,6 @@ public class NewbieHelper extends Quest
 	private static final int SOULSHOT_NOVICE = 5789;
 	private static final int SPIRITSHOT_NOVICE = 5790;
 	private static final int BLUE_GEM = 6353;
-	private static final int TOKEN = 8542;
-	private static final int SCROLL = 8594;
 	
 	private static final Map<String, Event> _events = new HashMap<>();
 	static
@@ -364,11 +362,6 @@ public class NewbieHelper extends Quest
 				{
 					qs1.playTutorialVoice(isMage && !isOrcMage ? "tutorial_voice_027" : "tutorial_voice_026");
 					qs1.giveItems(isMage && !isOrcMage ? SPIRITSHOT_NOVICE : SOULSHOT_NOVICE, isMage && !isOrcMage ? 100 : 200);
-					qs1.giveItems(TOKEN, 12);
-					if (Rnd.get(100) < 50)
-					{
-						qs1.giveItems(SCROLL, 2);
-					}
 					qs2.set("reward", "1");
 					qs1.setState(State.COMPLETED);
 				}

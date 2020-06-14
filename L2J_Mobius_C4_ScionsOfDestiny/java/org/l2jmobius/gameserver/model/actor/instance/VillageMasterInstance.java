@@ -214,12 +214,6 @@ public class VillageMasterInstance extends FolkInstance
 				return;
 			}
 			
-			if (player.isCursedWeaponEquiped())
-			{
-				player.sendMessage("You can`t change Subclass while Cursed weapon equiped!");
-				return;
-			}
-			
 			final StringBuilder content = new StringBuilder("<html><body>");
 			final NpcHtmlMessage html = new NpcHtmlMessage(getObjectId());
 			Set<PlayerClass> subsAvailable;

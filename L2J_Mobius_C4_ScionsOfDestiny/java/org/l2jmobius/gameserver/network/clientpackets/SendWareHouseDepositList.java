@@ -19,7 +19,6 @@ package org.l2jmobius.gameserver.network.clientpackets;
 import java.util.logging.Logger;
 
 import org.l2jmobius.Config;
-import org.l2jmobius.gameserver.instancemanager.CursedWeaponsManager;
 import org.l2jmobius.gameserver.model.actor.instance.FolkInstance;
 import org.l2jmobius.gameserver.model.actor.instance.NpcInstance;
 import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
@@ -225,12 +224,6 @@ public class SendWareHouseDepositList extends GameClientPacket
 			final int itemId = oldItem.getItemId();
 			if (((itemId >= 6611) && (itemId <= 6621)) || (itemId == 6842))
 			{
-				continue;
-			}
-			
-			if (CursedWeaponsManager.getInstance().isCursed(itemId))
-			{
-				LOGGER.warning(player.getName() + " try to deposit Cursed Weapon on wherehouse.");
 				continue;
 			}
 			

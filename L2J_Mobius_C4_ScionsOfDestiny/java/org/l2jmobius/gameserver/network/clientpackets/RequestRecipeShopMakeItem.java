@@ -19,7 +19,6 @@ package org.l2jmobius.gameserver.network.clientpackets;
 import org.l2jmobius.gameserver.RecipeController;
 import org.l2jmobius.gameserver.model.World;
 import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
-import org.l2jmobius.gameserver.network.SystemMessageId;
 import org.l2jmobius.gameserver.util.Util;
 
 public class RequestRecipeShopMakeItem extends GameClientPacket
@@ -72,12 +71,6 @@ public class RequestRecipeShopMakeItem extends GameClientPacket
 		if (player.isCrafting() || manufacturer.isCrafting())
 		{
 			// player.sendMessage("Currently in Craft Mode.");
-			return;
-		}
-		
-		if (manufacturer.isInDuel() || player.isInDuel())
-		{
-			player.sendPacket(SystemMessageId.WHILE_YOU_ARE_ENGAGED_IN_COMBAT_YOU_CANNOT_OPERATE_A_PRIVATE_STORE_OR_PRIVATE_WORKSHOP);
 			return;
 		}
 		

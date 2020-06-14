@@ -23,7 +23,6 @@ import org.l2jmobius.gameserver.model.actor.Creature;
 import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
 import org.l2jmobius.gameserver.model.skills.effects.EffectCharge;
 import org.l2jmobius.gameserver.network.SystemMessageId;
-import org.l2jmobius.gameserver.network.serverpackets.EtcStatusUpdate;
 import org.l2jmobius.gameserver.network.serverpackets.SystemMessage;
 
 public class SkillChargeEffect extends Skill
@@ -88,10 +87,6 @@ public class SkillChargeEffect extends Skill
 			{
 				getEffects(creature, (Creature) target, false, false, false);
 			}
-		}
-		if (creature instanceof PlayerInstance)
-		{
-			creature.sendPacket(new EtcStatusUpdate((PlayerInstance) creature));
 		}
 	}
 }

@@ -87,12 +87,6 @@ public class RequestJoinParty extends GameClientPacket
 			return;
 		}
 		
-		if (target.isCursedWeaponEquiped() || requestor.isCursedWeaponEquiped())
-		{
-			requestor.sendPacket(SystemMessageId.INVALID_TARGET);
-			return;
-		}
-		
 		if (target.isGM() && target.getAppearance().isInvisible())
 		{
 			requestor.sendMessage("You can't invite GM in invisible mode.");
@@ -113,11 +107,6 @@ public class RequestJoinParty extends GameClientPacket
 		}
 		
 		if (target.isInOlympiadMode() || requestor.isInOlympiadMode())
-		{
-			return;
-		}
-		
-		if (target.isInDuel() || requestor.isInDuel())
 		{
 			return;
 		}

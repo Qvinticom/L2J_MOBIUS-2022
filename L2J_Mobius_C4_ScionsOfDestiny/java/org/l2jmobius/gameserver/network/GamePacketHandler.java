@@ -812,7 +812,7 @@ public class GamePacketHandler implements IPacketHandler<GameClient>, IClientFac
 					}
 					case 0x9d:
 					{
-						msg = new RequestSkillCoolTime();
+						// msg = new RequestSkillCoolTime();
 						break;
 					}
 					case 0x9e:
@@ -1213,7 +1213,7 @@ public class GamePacketHandler implements IPacketHandler<GameClient>, IClientFac
 							}
 							case 0x1f:
 							{
-								msg = new RequestExFishRanking();
+								// msg = new RequestExFishRanking();
 								break;
 							}
 							case 0x20:
@@ -1224,12 +1224,12 @@ public class GamePacketHandler implements IPacketHandler<GameClient>, IClientFac
 							// couldnt find it 0x21 :S
 							case 0x22:
 							{
-								msg = new RequestCursedWeaponList();
+								// msg = new RequestCursedWeaponList();
 								break;
 							}
 							case 0x23:
 							{
-								msg = new RequestCursedWeaponLocation();
+								// msg = new RequestCursedWeaponLocation();
 								break;
 							}
 							case 0x24:
@@ -1245,42 +1245,42 @@ public class GamePacketHandler implements IPacketHandler<GameClient>, IClientFac
 							}
 							case 0x27:
 							{
-								msg = new RequestDuelStart();
+								// msg = new RequestDuelStart();
 								break;
 							}
 							case 0x28:
 							{
-								msg = new RequestDuelAnswerStart();
+								// msg = new RequestDuelAnswerStart();
 								break;
 							}
 							case 0x29:
 							{
-								msg = new RequestConfirmTargetItem();
+								// msg = new RequestConfirmTargetItem();
 								break;
 							}
 							case 0x2a:
 							{
-								msg = new RequestConfirmRefinerItem();
+								// msg = new RequestConfirmRefinerItem();
 								break;
 							}
 							case 0x2b:
 							{
-								msg = new RequestConfirmGemStone();
+								// msg = new RequestConfirmGemStone();
 								break;
 							}
 							case 0x2c:
 							{
-								msg = new RequestRefine();
+								// msg = new RequestRefine();
 								break;
 							}
 							case 0x2d:
 							{
-								msg = new RequestConfirmCancelItem();
+								// msg = new RequestConfirmCancelItem();
 								break;
 							}
 							case 0x2e:
 							{
-								msg = new RequestRefineCancel();
+								// msg = new RequestRefineCancel();
 								break;
 							}
 							case 0x2f:
@@ -1290,7 +1290,7 @@ public class GamePacketHandler implements IPacketHandler<GameClient>, IClientFac
 							}
 							case 0x30:
 							{
-								msg = new RequestDuelSurrender();
+								// msg = new RequestDuelSurrender();
 								break;
 							}
 							default:

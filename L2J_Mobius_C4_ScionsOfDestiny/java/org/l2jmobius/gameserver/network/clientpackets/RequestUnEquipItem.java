@@ -60,13 +60,6 @@ public class RequestUnEquipItem extends GameClientPacket
 			return;
 		}
 		
-		// Prevent of unequiping a cursed weapon
-		if ((_slot == Item.SLOT_LR_HAND) && player.isCursedWeaponEquiped())
-		{
-			// Message ?
-			return;
-		}
-		
 		// Prevent player from unequipping items in special conditions
 		if (player.isStunned() || player.isConfused() || player.isParalyzed() || player.isSleeping() || player.isAlikeDead())
 		{
@@ -86,12 +79,6 @@ public class RequestUnEquipItem extends GameClientPacket
 			player.stopMove(null);
 			player.setTarget(target);
 			player.getAI().setIntention(CtrlIntention.AI_INTENTION_ATTACK);
-		}
-		
-		// Remove augmentation bonus
-		if ((item != null) && item.isAugmented())
-		{
-			item.getAugmentation().removeBonus(player);
 		}
 		
 		final ItemInstance[] unequiped = player.getInventory().unEquipItemInBodySlotAndRecord(_slot);

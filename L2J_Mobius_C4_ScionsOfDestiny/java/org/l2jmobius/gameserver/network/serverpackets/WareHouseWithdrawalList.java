@@ -77,15 +77,6 @@ public class WareHouseWithdrawalList extends GameServerPacket
 			writeH(0x00); // ?
 			writeH(0x00); // ?
 			writeD(item.getObjectId()); // item id - confimed
-			if (item.isAugmented())
-			{
-				writeD(0x0000FFFF & item.getAugmentation().getAugmentationId());
-				writeD(item.getAugmentation().getAugmentationId() >> 16);
-			}
-			else
-			{
-				writeQ(0x00);
-			}
 		}
 	}
 }

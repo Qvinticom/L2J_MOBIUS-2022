@@ -153,13 +153,6 @@ public class RequestPackageSend extends GameClientPacket
 				continue;
 			}
 			
-			// Fix exploit for trade Augmented weapon with freight
-			if (item.isAugmented())
-			{
-				LOGGER.warning("Error depositing a warehouse object for char " + player.getName() + " (item is augmented)");
-				return;
-			}
-			
 			if (!item.isTradeable() || (item.getItemType() == EtcItemType.QUEST))
 			{
 				return;

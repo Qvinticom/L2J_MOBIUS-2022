@@ -16,38 +16,42 @@
  */
 package org.l2jmobius.loginserver.network.clientpackets;
 
+import java.util.logging.Logger;
+
 import org.l2jmobius.Config;
+import org.l2jmobius.loginserver.GameServerTable;
+import org.l2jmobius.loginserver.LoginClient;
 import org.l2jmobius.loginserver.LoginController;
-import org.l2jmobius.loginserver.LoginServer;
-import org.l2jmobius.loginserver.SessionKey;
 import org.l2jmobius.loginserver.network.gameserverpackets.ServerStatus;
-import org.l2jmobius.loginserver.network.serverpackets.LoginFail.LoginFailReason;
-import org.l2jmobius.loginserver.network.serverpackets.PlayFail.PlayFailReason;
+import org.l2jmobius.loginserver.network.serverpackets.LoginFail;
+import org.l2jmobius.loginserver.network.serverpackets.PlayFail;
 import org.l2jmobius.loginserver.network.serverpackets.PlayOk;
 
 /**
- * Fromat is ddc d: first part of session id d: second part of session id c: server ID
+ * Fromat is ddc d: first part of session id d: second part of session id c: server ID (session ID is sent in LoginOk packet and fixed to 0x55555555 0x44444444)
  */
-public class RequestServerLogin extends LoginClientPacket
+public class RequestServerLogin extends ClientBasePacket
 {
-	private int _skey1;
-	private int _skey2;
-	private int _serverId;
+	private final static Logger LOGGER = Logger.getLogger(RequestServerLogin.class.getName());
+	
+	private final int _key1;
+	private final int _key2;
+	private final int _server_id;
 	
 	/**
 	 * @return
 	 */
-	public int getSessionKey1()
+	public int getKey1()
 	{
-		return _skey1;
+		return _key1;
 	}
 	
 	/**
 	 * @return
 	 */
-	public int getSessionKey2()
+	public int getKey2()
 	{
-		return _skey2;
+		return _key2;
 	}
 	
 	/**
@@ -55,47 +59,69 @@ public class RequestServerLogin extends LoginClientPacket
 	 */
 	public int getServerID()
 	{
-		return _serverId;
+		return _server_id;
 	}
 	
-	@Override
-	public boolean readImpl()
+	public RequestServerLogin(byte[] rawPacket, LoginClient client)
 	{
-		if (super._buf.remaining() >= 9)
-		{
-			_skey1 = readD();
-			_skey2 = readD();
-			_serverId = readC();
-			return true;
-		}
-		return false;
+		super(rawPacket, client);
+		_key1 = readD();
+		_key2 = readD();
+		
+		_server_id = readC();// = rawPacket[9] &0xff;
 	}
 	
 	@Override
 	public void run()
 	{
-		final SessionKey sk = getClient().getSessionKey();
 		
-		// if we didnt showed the license we cant check these values
-		if (!Config.SHOW_LICENCE || sk.checkLoginPair(_skey1, _skey2))
+		final LoginController lc = LoginController.getInstance();
+		final int status = GameServerTable.getInstance().getGameServerStatus(getServerID());
+		if ((status == ServerStatus.STATUS_DOWN) || ((status == ServerStatus.STATUS_GM_ONLY) && (getClient().getAccessLevel() <= 0)))
 		{
-			if ((LoginServer.getInstance().getStatus() == ServerStatus.STATUS_DOWN) || ((LoginServer.getInstance().getStatus() == ServerStatus.STATUS_GM_ONLY) && (getClient().getAccessLevel() < 1)))
+			getClient().sendPacket(new PlayFail(PlayFail.REASON_SYSTEM_ERROR));
+			return;
+		}
+		
+		final int onlinePlayers = lc.getOnlinePlayerCount(getServerID());
+		if (onlinePlayers >= lc.getMaxAllowedOnlinePlayers(getServerID()))
+		{
+			if (onlinePlayers == 0)
 			{
-				getClient().close(LoginFailReason.REASON_ACCESS_FAILED);
+				getClient().sendPacket(new PlayFail(PlayFail.REASON_SYSTEM_ERROR));
+				return;
 			}
-			else if (LoginController.getInstance().isLoginPossible(getClient(), _serverId))
+			
+			if (getClient().getAccessLevel() <= 0)
 			{
-				getClient().setJoinedGS(true);
-				getClient().sendPacket(new PlayOk(sk));
-			}
-			else
-			{
-				getClient().close(PlayFailReason.REASON_TOO_MANY_PLAYERS);
+				getClient().sendPacket(new PlayFail(PlayFail.REASON_TOO_MANY_PLAYERS));
+				return;
 			}
 		}
-		else
+		
+		if (Config.SHOW_LICENCE)
 		{
-			getClient().close(LoginFailReason.REASON_ACCESS_FAILED);
+			if (!getClient().getSessionKey().checkLoginPair(_key1, _key2))
+			{
+				getClient().sendPacket(new LoginFail(LoginFail.REASON_ACCESS_FAILED));
+				return;
+			}
+			
+			if (Config.L2WALKER_PROTECTION && !getClient().hasAgreed())
+			{
+				LOGGER.warning("Account " + getClient().getAccount() + " tried to log in using a 3rd party program.");
+				getClient().sendPacket(new LoginFail(LoginFail.REASON_ACCESS_FAILED));
+				return;
+			}
+			getClient().setHasAgreed(false);
 		}
+		
+		if (getClient().getLastServer() != getServerID())
+		{
+			lc.saveLastServer(getClient().getAccount(), getServerID());
+		}
+		
+		getClient().sendPacket(new PlayOk(getClient().getSessionKey()));
+		getClient().setAccount(null);
 	}
 }

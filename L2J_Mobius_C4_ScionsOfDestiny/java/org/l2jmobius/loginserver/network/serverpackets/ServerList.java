@@ -21,9 +21,7 @@ import java.net.UnknownHostException;
 import java.util.ArrayList;
 import java.util.List;
 
-import org.l2jmobius.loginserver.GameServerTable;
-import org.l2jmobius.loginserver.GameServerTable.GameServerInfo;
-import org.l2jmobius.loginserver.LoginClient;
+import org.l2jmobius.loginserver.GameServerTable.GameServer;
 import org.l2jmobius.loginserver.network.gameserverpackets.ServerStatus;
 
 /**
@@ -31,9 +29,11 @@ import org.l2jmobius.loginserver.network.gameserverpackets.ServerStatus;
  * server is down d: 2nd bit: clock 3rd bit: wont dsiplay server name 4th bit: test server (used by client?) c: 0 if you dont want to display brackets in front of sever name ] Server will be considered as Good when the number of online players is less than half the maximum. as Normal between half
  * and 4/5 and Full when there's more than 4/5 of the maximum number of players
  */
-public class ServerList extends LoginServerPacket
+public class ServerList extends ServerBasePacket
 {
 	private final List<ServerData> _servers;
+	
+	private boolean _listDone = false;
 	private final int _lastServer;
 	
 	class ServerData
@@ -49,99 +49,87 @@ public class ServerList extends LoginServerPacket
 		protected int _status;
 		protected int _serverId;
 		
-		ServerData(String pIp, int pPort, boolean pPvp, boolean pTestServer, int pCurrentPlayers, int pMaxPlayers, boolean pBrackets, boolean pClock, int pStatus, int pServerId)
+		ServerData(String pIp, GameServer gs, int pStatus)
 		{
 			_ip = pIp;
-			_port = pPort;
-			_pvp = pPvp;
-			_testServer = pTestServer;
-			_currentPlayers = pCurrentPlayers;
-			_maxPlayers = pMaxPlayers;
-			_brackets = pBrackets;
-			_clock = pClock;
+			_port = gs.port;
+			_pvp = gs.pvp;
+			_testServer = gs.testServer;
+			_currentPlayers = (gs.gst == null ? 0 : gs.gst.getCurrentPlayers());
+			_maxPlayers = gs.maxPlayers;
+			_brackets = gs.brackets;
+			_clock = gs.clock;
 			_status = pStatus;
-			_serverId = pServerId;
+			_serverId = gs.serverId;
 		}
 	}
 	
-	public ServerList(LoginClient client)
+	public ServerList(int lastServer)
 	{
+		_lastServer = lastServer;
 		_servers = new ArrayList<>();
-		_lastServer = client.getLastServer();
-		for (GameServerInfo gsi : GameServerTable.getInstance().getRegisteredGameServers().values())
-		{
-			if ((gsi.getStatus() == ServerStatus.STATUS_GM_ONLY) && (client.getAccessLevel() >= 100))
-			{
-				// Server is GM-Only but you've got GM Status
-				addServer(client.usesInternalIP() ? gsi.getInternalHost() : gsi.getExternalHost(), gsi.getPort(), gsi.isPvp(), gsi.isTestServer(), gsi.getCurrentPlayerCount(), gsi.getMaxPlayers(), gsi.isShowingBrackets(), gsi.isShowingClock(), gsi.getStatus(), gsi.getId());
-			}
-			else if (gsi.getStatus() != ServerStatus.STATUS_GM_ONLY)
-			{
-				// Server is not GM-Only
-				addServer(client.usesInternalIP() ? gsi.getInternalHost() : gsi.getExternalHost(), gsi.getPort(), gsi.isPvp(), gsi.isTestServer(), gsi.getCurrentPlayerCount(), gsi.getMaxPlayers(), gsi.isShowingBrackets(), gsi.isShowingClock(), gsi.getStatus(), gsi.getId());
-			}
-			else
-			{
-				// Server's GM-Only and you've got no GM-Status
-				addServer(client.usesInternalIP() ? gsi.getInternalHost() : gsi.getExternalHost(), gsi.getPort(), gsi.isPvp(), gsi.isTestServer(), gsi.getCurrentPlayerCount(), gsi.getMaxPlayers(), gsi.isShowingBrackets(), gsi.isShowingClock(), ServerStatus.STATUS_DOWN, gsi.getId());
-			}
-		}
 	}
 	
-	public void addServer(String ip, int port, boolean pvp, boolean testServer, int currentPlayer, int maxPlayer, boolean brackets, boolean clock, int status, int serverId)
+	public void addServer(String ip, GameServer game, int status)
 	{
-		_servers.add(new ServerData(ip, port, pvp, testServer, currentPlayer, maxPlayer, brackets, clock, status, serverId));
+		_servers.add(new ServerData(ip, game, status));
 	}
 	
 	@Override
-	public void write()
+	public byte[] getContent()
 	{
-		writeC(0x04);
-		writeC(_servers.size());
-		writeC(_lastServer);
-		
-		for (ServerData server : _servers)
+		if (!_listDone) // list should only be done once even if there are multiple getContent calls
 		{
-			writeC(server._serverId); // server id
+			writeC(0x04);
+			writeC(_servers.size());
+			writeC(_lastServer);
 			
-			try
+			for (ServerData server : _servers)
 			{
-				final InetAddress i4 = InetAddress.getByName(server._ip);
-				final byte[] raw = i4.getAddress();
-				writeC(raw[0] & 0xff);
-				writeC(raw[1] & 0xff);
-				writeC(raw[2] & 0xff);
-				writeC(raw[3] & 0xff);
+				writeC(server._serverId); // server id
+				try
+				{
+					final InetAddress i4 = InetAddress.getByName(server._ip);
+					final byte[] raw = i4.getAddress();
+					writeC(raw[0] & 0xff);
+					writeC(raw[1] & 0xff);
+					writeC(raw[2] & 0xff);
+					writeC(raw[3] & 0xff);
+				}
+				catch (UnknownHostException e)
+				{
+					e.printStackTrace();
+					writeC(127);
+					writeC(0);
+					writeC(0);
+					writeC(1);
+				}
+				
+				writeD(server._port);
+				writeC(0x00); // age limit
+				writeC(server._pvp ? 0x01 : 0x00);
+				
+				writeH(server._currentPlayers);
+				writeH(server._maxPlayers);
+				writeC(server._status == ServerStatus.STATUS_DOWN ? 0x00 : 0x01);
+				
+				int bits = 0;
+				if (server._testServer)
+				{
+					bits |= 0x04;
+				}
+				
+				if (server._clock)
+				{
+					bits |= 0x02;
+				}
+				
+				writeD(bits);
+				writeC(server._brackets ? 0x01 : 0x00);
 			}
-			catch (UnknownHostException e)
-			{
-				e.printStackTrace();
-				writeC(127);
-				writeC(0);
-				writeC(0);
-				writeC(1);
-			}
-			
-			writeD(server._port);
-			writeC(0x00); // age limit
-			writeC(server._pvp ? 0x01 : 0x00);
-			writeH(server._currentPlayers);
-			writeH(server._maxPlayers);
-			writeC(server._status == ServerStatus.STATUS_DOWN ? 0x00 : 0x01);
-			
-			int bits = 0;
-			if (server._testServer)
-			{
-				bits |= 0x04;
-			}
-			
-			if (server._clock)
-			{
-				bits |= 0x02;
-			}
-			
-			writeD(bits);
-			writeC(server._brackets ? 0x01 : 0x00);
+			_listDone = true;
 		}
+		
+		return getBytes();
 	}
 }

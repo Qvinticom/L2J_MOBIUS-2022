@@ -134,13 +134,8 @@ public class InventoryUpdate extends GameServerPacket
 			// 0200-gloves, 0400-chest,
 			// 0800-pants, 1000-feet,
 			// 4000-r.hand, 8000-r.hand
-			writeH(item.getEnchant()); // Enchant level (pet level shown in
-			// control item)
-			writeH(item.getCustomType2()); // Pet name exists or not shown
-			// in
-			// control item
-			writeD(item.getAugemtationBonus());
-			writeD(item.getMana());
+			writeH(item.getEnchant()); // Enchant level (pet level shown in control item)
+			writeH(item.getCustomType2()); // Pet name exists or not shown in control item
 		}
 	}
 }

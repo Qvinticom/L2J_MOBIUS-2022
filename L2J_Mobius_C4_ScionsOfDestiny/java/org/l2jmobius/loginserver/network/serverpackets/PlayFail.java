@@ -19,40 +19,23 @@ package org.l2jmobius.loginserver.network.serverpackets;
 /**
  * @version $Revision: 1.2.4.1 $ $Date: 2005/03/27 15:30:11 $
  */
-public class PlayFail extends LoginServerPacket
+public class PlayFail extends ServerBasePacket
 {
-	public enum PlayFailReason
-	{
-		REASON_SYSTEM_ERROR(0x01),
-		REASON_USER_OR_PASS_WRONG(0x02),
-		REASON3(0x03),
-		REASON4(0x04),
-		REASON_TOO_MANY_PLAYERS(0x0f);
-		
-		private final int _code;
-		
-		PlayFailReason(int code)
-		{
-			_code = code;
-		}
-		
-		public int getCode()
-		{
-			return _code;
-		}
-	}
+	public static int REASON_TOO_MANY_PLAYERS = 0x0f; // too many players on server
+	public static int REASON_SYSTEM_ERROR = 0x01; // system error
+	public static int REASON_USER_OR_PASS_WRONG = 0x02;
+	public static int REASON3 = 0x03;
+	public static int REASON4 = 0x04;
 	
-	private final PlayFailReason _reason;
-	
-	public PlayFail(PlayFailReason reason)
+	public PlayFail(int reason)
 	{
-		_reason = reason;
+		writeC(0x06);
+		writeC(reason);
 	}
 	
 	@Override
-	protected void write()
+	public byte[] getContent()
 	{
-		writeC(0x06);
-		writeC(_reason.getCode());
+		return getBytes();
 	}
 }

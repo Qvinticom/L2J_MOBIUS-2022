@@ -63,10 +63,7 @@ public class ItemList extends GameServerPacket
 			writeH(temp.isEquipped() ? 0x01 : 0x00);
 			writeD(temp.getItem().getBodyPart());
 			writeH(temp.getEnchantLevel());
-			// race tickets
 			writeH(temp.getCustomType2());
-			writeD((temp.isAugmented()) ? temp.getAugmentation().getAugmentationId() : 0x00);
-			writeD(temp.getMana());
 		}
 	}
 }

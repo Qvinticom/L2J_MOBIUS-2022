@@ -60,7 +60,6 @@ import org.l2jmobius.gameserver.model.entity.sevensigns.SevenSigns;
 import org.l2jmobius.gameserver.model.entity.siege.Castle;
 import org.l2jmobius.gameserver.model.entity.siege.FortSiege;
 import org.l2jmobius.gameserver.model.entity.siege.Siege;
-import org.l2jmobius.gameserver.model.itemcontainer.Inventory;
 import org.l2jmobius.gameserver.model.items.instance.ItemInstance;
 import org.l2jmobius.gameserver.model.quest.Quest;
 import org.l2jmobius.gameserver.model.quest.QuestState;
@@ -71,7 +70,6 @@ import org.l2jmobius.gameserver.network.serverpackets.ClientSetTime;
 import org.l2jmobius.gameserver.network.serverpackets.CreatureSay;
 import org.l2jmobius.gameserver.network.serverpackets.Die;
 import org.l2jmobius.gameserver.network.serverpackets.Earthquake;
-import org.l2jmobius.gameserver.network.serverpackets.EtcStatusUpdate;
 import org.l2jmobius.gameserver.network.serverpackets.ExMailArrived;
 import org.l2jmobius.gameserver.network.serverpackets.ExShowScreenMessage;
 import org.l2jmobius.gameserver.network.serverpackets.ExStorageMaxCount;
@@ -83,7 +81,6 @@ import org.l2jmobius.gameserver.network.serverpackets.NpcHtmlMessage;
 import org.l2jmobius.gameserver.network.serverpackets.PlaySound;
 import org.l2jmobius.gameserver.network.serverpackets.PledgeShowMemberListAll;
 import org.l2jmobius.gameserver.network.serverpackets.PledgeShowMemberListUpdate;
-import org.l2jmobius.gameserver.network.serverpackets.PledgeSkillList;
 import org.l2jmobius.gameserver.network.serverpackets.PledgeStatusChanged;
 import org.l2jmobius.gameserver.network.serverpackets.QuestList;
 import org.l2jmobius.gameserver.network.serverpackets.ShortCutInit;
@@ -192,8 +189,6 @@ public class EnterWorld extends GameClientPacket
 			player.restoreEffects();
 		}
 		
-		player.sendPacket(new EtcStatusUpdate(player));
-		
 		final Effect[] effects = player.getAllEffects();
 		if (effects != null)
 		{
@@ -210,25 +205,6 @@ public class EnterWorld extends GameClientPacket
 					player.removeEffect(e);
 				}
 			}
-		}
-		
-		// Apply augmentation boni for equipped items
-		for (ItemInstance temp : player.getInventory().getAugmentedItems())
-		{
-			if ((temp != null) && temp.isEquipped())
-			{
-				temp.getAugmentation().applyBonus(player);
-			}
-		}
-		
-		// Remove Demonic Weapon if character is not Cursed Weapon Equipped
-		if ((player.getInventory().getItemByItemId(8190) != null) && !player.isCursedWeaponEquipped())
-		{
-			player.destroyItem("Zariche", player.getInventory().getItemByItemId(8190), null, true);
-		}
-		if ((player.getInventory().getItemByItemId(8689) != null) && !player.isCursedWeaponEquipped())
-		{
-			player.destroyItem("Akamanah", player.getInventory().getItemByItemId(8689), null, true);
 		}
 		
 		// Apply death penalty
@@ -330,7 +306,6 @@ public class EnterWorld extends GameClientPacket
 		setPledgeClass(player);
 		
 		notifyClanMembers(player);
-		notifySponsorOrApprentice(player);
 		
 		player.setTarget(player);
 		
@@ -364,7 +339,6 @@ public class EnterWorld extends GameClientPacket
 		
 		if (player.getClan() != null)
 		{
-			player.sendPacket(new PledgeSkillList(player.getClan()));
 			for (Siege siege : SiegeManager.getInstance().getSieges())
 			{
 				if (!siege.isInProgress())
@@ -493,21 +467,6 @@ public class EnterWorld extends GameClientPacket
 					sendPacket(sm);
 				}
 			}
-		}
-		
-		// Elrokian Trap like L2OFF
-		final ItemInstance rhand = player.getInventory().getPaperdollItem(Inventory.PAPERDOLL_RHAND);
-		if ((rhand != null) && (rhand.getItemId() == 8763))
-		{
-			player.addSkill(SkillTable.getInstance().getInfo(3626, 1));
-			player.addSkill(SkillTable.getInstance().getInfo(3627, 1));
-			player.addSkill(SkillTable.getInstance().getInfo(3628, 1));
-		}
-		else
-		{
-			player.removeSkill(3626, true);
-			player.removeSkill(3627, true);
-			player.removeSkill(3628, true);
 		}
 		
 		// Send all skills to char
@@ -742,7 +701,6 @@ public class EnterWorld extends GameClientPacket
 		sendPacket(new ItemList(player, false));
 		sendPacket(new ShortCutInit(player));
 		player.broadcastUserInfo();
-		player.sendPacket(new EtcStatusUpdate(player));
 	}
 	
 	private void onEnterAio(PlayerInstance player)
@@ -828,26 +786,6 @@ public class EnterWorld extends GameClientPacket
 			clan.getClanMember(player.getObjectId()).setPlayerInstance(player);
 			clan.broadcastToOtherOnlineMembers(new SystemMessage(SystemMessageId.CLAN_MEMBER_S1_HAS_LOGGED_INTO_GAME).addString(player.getName()), player);
 			clan.broadcastToOtherOnlineMembers(new PledgeShowMemberListUpdate(player), player);
-		}
-	}
-	
-	private void notifySponsorOrApprentice(PlayerInstance player)
-	{
-		if (player.getSponsor() != 0)
-		{
-			final PlayerInstance sponsor = (PlayerInstance) World.getInstance().findObject(player.getSponsor());
-			if (sponsor != null)
-			{
-				sponsor.sendPacket(new SystemMessage(SystemMessageId.YOUR_APPRENTICE_S1_HAS_LOGGED_IN).addString(player.getName()));
-			}
-		}
-		else if (player.getApprentice() != 0)
-		{
-			final PlayerInstance apprentice = (PlayerInstance) World.getInstance().findObject(player.getApprentice());
-			if (apprentice != null)
-			{
-				apprentice.sendPacket(new SystemMessage(SystemMessageId.YOUR_SPONSOR_S1_HAS_LOGGED_IN).addString(player.getName()));
-			}
 		}
 	}
 	

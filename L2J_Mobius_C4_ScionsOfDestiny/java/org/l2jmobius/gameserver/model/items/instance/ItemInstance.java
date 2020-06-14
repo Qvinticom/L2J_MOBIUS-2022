@@ -31,7 +31,6 @@ import org.l2jmobius.gameserver.ai.CtrlIntention;
 import org.l2jmobius.gameserver.datatables.ItemTable;
 import org.l2jmobius.gameserver.geoengine.GeoEngine;
 import org.l2jmobius.gameserver.instancemanager.ItemsOnGroundManager;
-import org.l2jmobius.gameserver.model.Augmentation;
 import org.l2jmobius.gameserver.model.DropProtection;
 import org.l2jmobius.gameserver.model.Location;
 import org.l2jmobius.gameserver.model.World;
@@ -91,7 +90,6 @@ public class ItemInstance extends WorldObject
 	private int _priceSell;
 	private int _priceBuy;
 	private boolean _wear;
-	private Augmentation _augmentation = null;
 	private int _mana = -1;
 	private boolean _consumingMana = false;
 	private static final int MANA_CONSUMPTION_RATE = 60000;
@@ -539,7 +537,7 @@ public class ItemInstance extends WorldObject
 	 */
 	public boolean isDropable()
 	{
-		return !isAugmented() && _item.isDropable();
+		return _item.isDropable();
 	}
 	
 	/**
@@ -557,7 +555,7 @@ public class ItemInstance extends WorldObject
 	 */
 	public boolean isTradeable()
 	{
-		return !isAugmented() && _item.isTradeable();
+		return _item.isTradeable();
 	}
 	
 	/**
@@ -653,53 +651,6 @@ public class ItemInstance extends WorldObject
 			return ((Armor) _item).getPDef();
 		}
 		return 0;
-	}
-	
-	/**
-	 * Returns whether this item is augmented or not.
-	 * @return true if augmented
-	 */
-	public boolean isAugmented()
-	{
-		return _augmentation != null;
-	}
-	
-	/**
-	 * Returns the augmentation object for this item.
-	 * @return augmentation
-	 */
-	public Augmentation getAugmentation()
-	{
-		return _augmentation;
-	}
-	
-	/**
-	 * Sets a new augmentation.
-	 * @param augmentation the augmentation
-	 * @return return true if sucessfull
-	 */
-	public boolean setAugmentation(Augmentation augmentation)
-	{
-		// there shall be no previous augmentation.
-		if (_augmentation != null)
-		{
-			return false;
-		}
-		_augmentation = augmentation;
-		return true;
-	}
-	
-	/**
-	 * Remove the augmentation.
-	 */
-	public void removeAugmentation()
-	{
-		if (_augmentation == null)
-		{
-			return;
-		}
-		_augmentation.deleteAugmentationData();
-		_augmentation = null;
 	}
 	
 	/**
@@ -1091,18 +1042,6 @@ public class ItemInstance extends WorldObject
 			
 			rs.close();
 			statement.close();
-			
-			// load augmentation
-			statement = con.prepareStatement("SELECT attributes,skill,level FROM augmentations WHERE item_id=?");
-			statement.setInt(1, objectId);
-			rs = statement.executeQuery();
-			if (rs.next())
-			{
-				inst._augmentation = new Augmentation(inst, rs.getInt("attributes"), rs.getInt("skill"), rs.getInt("level"), false);
-			}
-			
-			rs.close();
-			statement.close();
 		}
 		catch (Exception e)
 		{
@@ -1254,12 +1193,6 @@ public class ItemInstance extends WorldObject
 		if (_wear)
 		{
 			return;
-		}
-		
-		// delete augmentation data
-		if (isAugmented())
-		{
-			_augmentation.deleteAugmentationData();
 		}
 		
 		try (Connection con = DatabaseFactory.getConnection())
@@ -1454,7 +1387,7 @@ public class ItemInstance extends WorldObject
 	
 	public boolean checkOlympCondition()
 	{
-		return !isHeroItem() && !isOlyRestrictedItem() && !_wear && (Config.ALT_OLY_AUGMENT_ALLOW || !isAugmented());
+		return !isHeroItem() && !isOlyRestrictedItem() && !_wear;
 	}
 	
 	/**

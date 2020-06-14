@@ -230,23 +230,6 @@ public class PlayerInventory extends Inventory
 	}
 	
 	/**
-	 * Get all augmented items
-	 * @return
-	 */
-	public ItemInstance[] getAugmentedItems()
-	{
-		final List<ItemInstance> list = new ArrayList<>();
-		for (ItemInstance item : _items)
-		{
-			if ((item != null) && item.isAugmented())
-			{
-				list.add(item);
-			}
-		}
-		return list.toArray(new ItemInstance[list.size()]);
-	}
-	
-	/**
 	 * Returns the list of items in inventory available for transaction adjusted by tradeList
 	 * @param tradeList
 	 * @return ItemInstance : items in inventory

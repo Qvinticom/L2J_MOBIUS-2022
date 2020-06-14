@@ -23,7 +23,6 @@ import java.util.logging.Logger;
 import org.l2jmobius.Config;
 import org.l2jmobius.commons.database.DatabaseFactory;
 import org.l2jmobius.gameserver.datatables.sql.PetDataTable;
-import org.l2jmobius.gameserver.instancemanager.CursedWeaponsManager;
 import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
 import org.l2jmobius.gameserver.model.items.instance.ItemInstance;
 import org.l2jmobius.gameserver.network.SystemMessageId;
@@ -93,7 +92,7 @@ public class RequestDestroyItem extends GameClientPacket
 		}
 		
 		final int itemId = itemToRemove.getItemId();
-		if (itemToRemove.isWear() || !itemToRemove.isDestroyable() || CursedWeaponsManager.getInstance().isCursed(itemId))
+		if (itemToRemove.isWear() || !itemToRemove.isDestroyable())
 		{
 			player.sendPacket(SystemMessageId.THIS_ITEM_CANNOT_BE_DISCARDED);
 			return;
@@ -112,11 +111,6 @@ public class RequestDestroyItem extends GameClientPacket
 		
 		if (itemToRemove.isEquipped())
 		{
-			if (itemToRemove.isAugmented())
-			{
-				itemToRemove.getAugmentation().removeBonus(player);
-			}
-			
 			final ItemInstance[] unequiped = player.getInventory().unEquipItemInSlotAndRecord(itemToRemove.getEquipSlot());
 			final InventoryUpdate iu = new InventoryUpdate();
 			for (ItemInstance element : unequiped)

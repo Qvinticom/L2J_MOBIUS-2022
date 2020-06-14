@@ -83,8 +83,6 @@ import org.l2jmobius.gameserver.network.GameClient;
 import org.l2jmobius.gameserver.network.SystemMessageId;
 import org.l2jmobius.gameserver.network.serverpackets.ActionFailed;
 import org.l2jmobius.gameserver.network.serverpackets.CreatureSay;
-import org.l2jmobius.gameserver.network.serverpackets.ExShowVariationCancelWindow;
-import org.l2jmobius.gameserver.network.serverpackets.ExShowVariationMakeWindow;
 import org.l2jmobius.gameserver.network.serverpackets.InventoryUpdate;
 import org.l2jmobius.gameserver.network.serverpackets.MagicSkillUse;
 import org.l2jmobius.gameserver.network.serverpackets.MyTargetSelected;
@@ -1301,10 +1299,6 @@ public class NpcInstance extends Creature
 		{
 			makeSupportMagic(player);
 		}
-		else if (command.startsWith("GiveBlessing"))
-		{
-			giveBlessingSupport(player);
-		}
 		else if (command.startsWith("multisell"))
 		{
 			MultisellData.getInstance().SeparateAndSend(Integer.parseInt(command.substring(9).trim()), player, false, getCastle().getTaxRate());
@@ -1312,25 +1306,6 @@ public class NpcInstance extends Creature
 		else if (command.startsWith("exc_multisell"))
 		{
 			MultisellData.getInstance().SeparateAndSend(Integer.parseInt(command.substring(13).trim()), player, true, getCastle().getTaxRate());
-		}
-		else if (command.startsWith("Augment"))
-		{
-			final int cmdChoice = Integer.parseInt(command.substring(8, 9).trim());
-			switch (cmdChoice)
-			{
-				case 1:
-				{
-					player.sendPacket(SystemMessageId.SELECT_THE_ITEM_TO_BE_AUGMENTED);
-					player.sendPacket(new ExShowVariationMakeWindow());
-					break;
-				}
-				case 2:
-				{
-					player.sendPacket(SystemMessageId.SELECT_THE_ITEM_FROM_WHICH_YOU_WISH_TO_REMOVE_AUGMENTATION);
-					player.sendPacket(new ExShowVariationCancelWindow());
-					break;
-				}
-			}
 		}
 		else if (command.startsWith("npcfind_byid"))
 		{
@@ -1340,142 +1315,6 @@ public class NpcInstance extends Creature
 				if (spawn != null)
 				{
 					player.sendPacket(new RadarControl(0, 1, spawn.getX(), spawn.getY(), spawn.getZ()));
-				}
-			}
-			catch (NumberFormatException nfe)
-			{
-				player.sendMessage("Wrong command parameters");
-			}
-		}
-		else if (command.startsWith("newbie_give_coupon"))
-		{
-			try
-			{
-				final NpcHtmlMessage html = new NpcHtmlMessage(getObjectId());
-				if ((player.getLevel() > 25) || (player.getLevel() < 6) || !player.isNewbie())
-				{
-					html.setFile("data/html/adventurers_guide/31760-3.htm");
-					player.sendPacket(html);
-				}
-				else if (player.getCoupon(0))
-				{
-					html.setFile("data/html/adventurers_guide/31760-1.htm");
-					player.sendPacket(html);
-				}
-				else
-				{
-					player.getInventory().addItem("Weapon Coupon", 7832, 1, player, this);
-					player.addCoupon(1);
-					html.setFile("data/html/adventurers_guide/31760-2.htm");
-					player.sendPacket(html);
-				}
-			}
-			catch (NumberFormatException nfe)
-			{
-				player.sendMessage("Wrong command parameters");
-			}
-		}
-		else if (command.startsWith("newbie_give_weapon"))
-		{
-			try
-			{
-				final NpcHtmlMessage html = new NpcHtmlMessage(getObjectId());
-				if ((player.getLevel() > 25) || (player.getLevel() < 6) || !player.isNewbie())
-				{
-					html.setFile("data/html/adventurers_guide/31760-3.htm");
-					player.sendPacket(html);
-				}
-				else
-				{
-					MultisellData.getInstance().SeparateAndSend(10010, player, false, getCastle().getTaxRate());
-				}
-			}
-			catch (NumberFormatException nfe)
-			{
-				player.sendMessage("Wrong command parameters");
-			}
-		}
-		else if (command.startsWith("newbie_return_weapon"))
-		{
-			try
-			{
-				final NpcHtmlMessage html = new NpcHtmlMessage(getObjectId());
-				if ((player.getLevel() > 25) || (player.getLevel() < 6) || !player.isNewbie())
-				{
-					html.setFile("data/html/adventurers_guide/31760-3.htm");
-					player.sendPacket(html);
-				}
-				else
-				{
-					MultisellData.getInstance().SeparateAndSend(10011, player, false, getCastle().getTaxRate());
-				}
-			}
-			catch (NumberFormatException nfe)
-			{
-				player.sendMessage("Wrong command parameters");
-			}
-		}
-		else if (command.startsWith("traveller_give_coupon"))
-		{
-			try
-			{
-				final NpcHtmlMessage html = new NpcHtmlMessage(getObjectId());
-				if ((player.getLevel() > 25) || (player.getClassId().level() != 1) || !player.isNewbie())
-				{
-					html.setFile("data/html/adventurers_guide/31760-6.htm");
-					player.sendPacket(html);
-				}
-				else if (player.getCoupon(1))
-				{
-					html.setFile("data/html/adventurers_guide/31760-4.htm");
-					player.sendPacket(html);
-				}
-				else
-				{
-					player.getInventory().addItem("Weapon Coupon", 7833, 1, player, this);
-					player.addCoupon(2);
-					html.setFile("data/html/adventurers_guide/31760-5.htm");
-					player.sendPacket(html);
-				}
-			}
-			catch (NumberFormatException nfe)
-			{
-				player.sendMessage("Wrong command parameters");
-			}
-		}
-		else if (command.startsWith("traveller_give_weapon"))
-		{
-			try
-			{
-				final NpcHtmlMessage html = new NpcHtmlMessage(getObjectId());
-				if ((player.getLevel() > 25) || (player.getClassId().level() != 1) || !player.isNewbie())
-				{
-					html.setFile("data/html/adventurers_guide/31760-6.htm");
-					player.sendPacket(html);
-				}
-				else
-				{
-					MultisellData.getInstance().SeparateAndSend(10012, player, false, getCastle().getTaxRate());
-				}
-			}
-			catch (NumberFormatException nfe)
-			{
-				player.sendMessage("Wrong command parameters");
-			}
-		}
-		else if (command.startsWith("traveller_return_weapon"))
-		{
-			try
-			{
-				final NpcHtmlMessage html = new NpcHtmlMessage(getObjectId());
-				if ((player.getLevel() > 25) || (player.getClassId().level() != 1) || !player.isNewbie())
-				{
-					html.setFile("data/html/adventurers_guide/31760-6.htm");
-					player.sendPacket(html);
-				}
-				else
-				{
-					MultisellData.getInstance().SeparateAndSend(10013, player, false, getCastle().getTaxRate());
 				}
 			}
 			catch (NumberFormatException nfe)
@@ -1551,37 +1390,6 @@ public class NpcInstance extends Creature
 		}
 		
 		return (Weapon) item;
-	}
-	
-	/**
-	 * Give blessing support.
-	 * @param player the player
-	 */
-	public void giveBlessingSupport(PlayerInstance player)
-	{
-		if (player == null)
-		{
-			return;
-		}
-		
-		// Blessing of protection - author eX1steam.
-		// Prevent a cursed weapon weilder of being buffed - I think no need of that becouse karma check > 0
-		if (player.isCursedWeaponEquiped())
-		{
-			return;
-		}
-		
-		final int playerLevel = player.getLevel();
-		// If the player is too high level, display a message and return
-		if ((playerLevel > 39) || (player.getClassId().level() >= 2))
-		{
-			final String content = "<html><body>Newbie Guide:<br>I'm sorry, but you are not eligible to receive the protection blessing.<br1>It can only be bestowed on <font color=\"LEVEL\">characters below level 39 who have not made a seccond transfer.</font></body></html>";
-			insertObjectIdAndShowChatWindow(player, content);
-			return;
-		}
-		final Skill skill = SkillTable.getInstance().getInfo(5182, 1);
-		broadcastPacket(new MagicSkillUse(this, player, skill.getId(), skill.getLevel(), 0, 0));
-		skill.getEffects(this, player);
 	}
 	
 	/**
@@ -2137,11 +1945,6 @@ public class NpcInstance extends Creature
 		{
 			return;
 		}
-		if (player.isCursedWeaponEquiped())
-		{
-			player.sendMessage("Go away, you're not welcome here.");
-			return;
-		}
 		
 		final int neededmoney = 100;
 		SystemMessage sm;
@@ -2178,12 +1981,6 @@ public class NpcInstance extends Creature
 	public void makeSupportMagic(PlayerInstance player)
 	{
 		if (player == null)
-		{
-			return;
-		}
-		
-		// Prevent a cursed weapon weilder of being buffed
-		if (player.isCursedWeaponEquiped())
 		{
 			return;
 		}

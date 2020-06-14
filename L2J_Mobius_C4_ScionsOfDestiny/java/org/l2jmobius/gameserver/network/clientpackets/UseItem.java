@@ -37,7 +37,6 @@ import org.l2jmobius.gameserver.model.items.instance.ItemInstance;
 import org.l2jmobius.gameserver.model.items.type.WeaponType;
 import org.l2jmobius.gameserver.network.SystemMessageId;
 import org.l2jmobius.gameserver.network.serverpackets.ActionFailed;
-import org.l2jmobius.gameserver.network.serverpackets.EtcStatusUpdate;
 import org.l2jmobius.gameserver.network.serverpackets.InventoryUpdate;
 import org.l2jmobius.gameserver.network.serverpackets.ItemList;
 import org.l2jmobius.gameserver.network.serverpackets.ShowCalculator;
@@ -375,12 +374,6 @@ public class UseItem extends GameClientPacket
 				}
 			}
 			
-			// Don't allow weapon/shield equipment if a cursed weapon is equiped
-			if (player.isCursedWeaponEquiped() && ((bodyPart == Item.SLOT_LR_HAND) || (bodyPart == Item.SLOT_L_HAND) || (bodyPart == Item.SLOT_R_HAND)))
-			{
-				return;
-			}
-			
 			// Don't allow weapon/shield hero equipment during Olimpia
 			if (player.isInOlympiadMode() && ((((bodyPart == Item.SLOT_LR_HAND) || (bodyPart == Item.SLOT_L_HAND) || (bodyPart == Item.SLOT_R_HAND)) && (((item.getItemId() >= 6611) && (item.getItemId() <= 6621)) || (item.getItemId() == 6842))) || Config.LIST_OLY_RESTRICTED_ITEMS.contains(item.getItemId())))
 			{
@@ -402,21 +395,6 @@ public class UseItem extends GameClientPacket
 				player.getAI().setIntention(CtrlIntention.AI_INTENTION_ATTACK);
 			}
 			
-			// Don't allow to put formal wear
-			if (player.isCursedWeaponEquipped() && (itemId == 6408))
-			{
-				return;
-			}
-			
-			// Elrokian Trap like L2OFF, add skills
-			if ((itemId == 8763) && !item.isEquipped())
-			{
-				player.addSkill(SkillTable.getInstance().getInfo(3626, 1));
-				player.addSkill(SkillTable.getInstance().getInfo(3627, 1));
-				player.addSkill(SkillTable.getInstance().getInfo(3628, 1));
-				player.sendSkillList();
-			}
-			
 			// Equip or unEquip
 			ItemInstance[] items = null;
 			final boolean isEquiped = item.isEquipped();
@@ -436,15 +414,6 @@ public class UseItem extends GameClientPacket
 			// Remove the item if it's equiped
 			if (isEquiped)
 			{
-				// Elrokian Trap like L2OFF, remove skills
-				if (itemId == 8763)
-				{
-					player.removeSkill(3626, true);
-					player.removeSkill(3627, true);
-					player.removeSkill(3628, true);
-					player.sendSkillList();
-				}
-				
 				if (item.getEnchantLevel() > 0)
 				{
 					sm = new SystemMessage(SystemMessageId.THE_EQUIPMENT_S1_S2_HAS_BEEN_REMOVED);
@@ -458,12 +427,6 @@ public class UseItem extends GameClientPacket
 				}
 				
 				player.sendPacket(sm);
-				
-				// Remove augementation bonus on unequipment
-				if (item.isAugmented())
-				{
-					item.getAugmentation().removeBonus(player);
-				}
 				
 				switch (item.getEquipSlot())
 				{
@@ -526,12 +489,6 @@ public class UseItem extends GameClientPacket
 				final int tempBodyPart = item.getItem().getBodyPart();
 				ItemInstance tempItem = player.getInventory().getPaperdollItemByItemId(tempBodyPart);
 				
-				// remove augmentation stats for replaced items currently weapons only..
-				if ((tempItem != null) && tempItem.isAugmented())
-				{
-					tempItem.getAugmentation().removeBonus(player);
-				}
-				
 				// check if the item replaces a wear-item
 				if ((tempItem != null) && tempItem.isWear())
 				{
@@ -571,14 +528,6 @@ public class UseItem extends GameClientPacket
 				
 				// Left hand
 				tempItem = player.getInventory().getPaperdollItem(7);
-				// Elrokian Trap like L2OFF, remove skills
-				if ((tempItem != null) && (tempItem.getItemId() == 8763))
-				{
-					player.removeSkill(3626, true);
-					player.removeSkill(3627, true);
-					player.removeSkill(3628, true);
-					player.sendSkillList();
-				}
 				
 				if (item.getEnchantLevel() > 0)
 				{
@@ -592,12 +541,6 @@ public class UseItem extends GameClientPacket
 					sm.addItemName(itemId);
 				}
 				player.sendPacket(sm);
-				
-				// Apply augementation boni on equip
-				if (item.isAugmented())
-				{
-					item.getAugmentation().applyBonus(player);
-				}
 				
 				// Apply cupid's bow skills on equip
 				if (item.isCupidBow())
@@ -628,7 +571,6 @@ public class UseItem extends GameClientPacket
 			
 			player.abortAttack();
 			
-			player.sendPacket(new EtcStatusUpdate(player));
 			// If an "invisible" item has changed (Jewels, helmet), we dont need to send broadcast packet to all other users.
 			if ((((item.getItem().getBodyPart() & Item.SLOT_HEAD) <= 0) && ((item.getItem().getBodyPart() & Item.SLOT_NECK) <= 0) && ((item.getItem().getBodyPart() & Item.SLOT_L_EAR) <= 0) && ((item.getItem().getBodyPart() & Item.SLOT_R_EAR) <= 0) && ((item.getItem().getBodyPart() & Item.SLOT_L_FINGER) <= 0) && ((item.getItem().getBodyPart() & Item.SLOT_R_FINGER) <= 0)))
 			{

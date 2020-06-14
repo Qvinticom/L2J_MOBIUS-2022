@@ -60,13 +60,17 @@ public class FriendList extends GameServerPacket
 	protected final void writeImpl()
 	{
 		writeC(0xfa);
-		writeD(_info.size());
-		for (FriendInfo info : _info)
+		if (_info.size() > 0)
 		{
-			writeD(info._objId);
-			writeS(info._name);
-			writeD(info._online ? 0x01 : 0x00);
-			writeD(info._online ? info._objId : 0x00);
+			writeH(_info.size());
+			for (FriendInfo friend : _info)
+			{
+				writeH(0); // ??
+				writeD(friend._objId);
+				writeS(friend._name);
+				writeD(friend._online ? 0x01 : 0x00);
+				writeH(0); // ??
+			}
 		}
 	}
 }

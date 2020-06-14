@@ -16,18 +16,36 @@
  */
 package org.l2jmobius.loginserver.network.clientpackets;
 
+import org.l2jmobius.loginserver.LoginClient;
+
 /**
+ * This class ...
  * @version $Revision: 1.2.4.1 $ $Date: 2005/03/27 15:30:12 $
  */
-public abstract class ClientBasePacket
+public abstract class ClientBasePacket implements Runnable
 {
+	private final LoginClient _client;
 	private final byte[] _decrypt;
 	private int _off;
 	
-	public ClientBasePacket(byte[] decrypt)
+	public ClientBasePacket(byte[] decrypt, LoginClient client)
 	{
 		_decrypt = decrypt;
 		_off = 1; // skip packet type id
+		_client = client;
+	}
+	
+	@Override
+	public abstract void run();
+	
+	public LoginClient getClient()
+	{
+		return _client;
+	}
+	
+	public byte[] getByteBuffer()
+	{
+		return _decrypt;
 	}
 	
 	public int readD()

@@ -16,32 +16,33 @@
  */
 package org.l2jmobius.loginserver.network.clientpackets;
 
-import org.l2jmobius.loginserver.network.serverpackets.LoginFail.LoginFailReason;
-import org.l2jmobius.loginserver.network.serverpackets.ServerList;
+import org.l2jmobius.loginserver.GameServerTable;
+import org.l2jmobius.loginserver.LoginClient;
+import org.l2jmobius.loginserver.network.serverpackets.LoginFail;
 
 /**
- * Format: ddc d: fist part of session id d: second part of session id c: ?
+ * Format: ddc d: fist part of session id d: second part of session id c: ? (session ID is sent in LoginOk packet and fixed to 0x55555555 0x44444444)
  */
-public class RequestServerList extends LoginClientPacket
+public class RequestServerList extends ClientBasePacket
 {
-	private int _skey1;
-	private int _skey2;
-	private int _data3;
+	private final int _key1;
+	private final int _key2;
+	private final int _data3;
 	
 	/**
 	 * @return
 	 */
-	public int getSessionKey1()
+	public int getKey1()
 	{
-		return _skey1;
+		return _key1;
 	}
 	
 	/**
 	 * @return
 	 */
-	public int getSessionKey2()
+	public int getKey2()
 	{
-		return _skey2;
+		return _key2;
 	}
 	
 	/**
@@ -52,28 +53,26 @@ public class RequestServerList extends LoginClientPacket
 		return _data3;
 	}
 	
-	@Override
-	public boolean readImpl()
+	public RequestServerList(byte[] rawPacket, LoginClient client)
 	{
-		if (super._buf.remaining() >= 8)
-		{
-			_skey1 = readD(); // loginOk 1
-			_skey2 = readD(); // loginOk 2
-			return true;
-		}
-		return false;
+		super(rawPacket, client);
+		_key1 = readD(); // loginOk 1
+		_key2 = readD(); // loginOk 2
+		_data3 = readC(); // ?
 	}
 	
 	@Override
 	public void run()
 	{
-		if (getClient().getSessionKey().checkLoginPair(_skey1, _skey2))
+		if ((getClient().getSessionKey() != null) && getClient().getSessionKey().checkLoginPair(_key1, _key2))
 		{
-			getClient().sendPacket(new ServerList(getClient()));
+			getClient().setHasAgreed(true);
+			GameServerTable.getInstance().createServerList(getClient());
+			
 		}
 		else
 		{
-			getClient().close(LoginFailReason.REASON_ACCESS_FAILED);
+			getClient().sendPacket(new LoginFail(LoginFail.REASON_ACCESS_FAILED));
 		}
 	}
 }

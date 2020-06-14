@@ -17,12 +17,11 @@
 package org.l2jmobius.loginserver.network.gameserverpackets;
 
 import org.l2jmobius.loginserver.SessionKey;
-import org.l2jmobius.loginserver.network.clientpackets.ClientBasePacket;
 
 /**
  * @author -Wooden-
  */
-public class PlayerAuthRequest extends ClientBasePacket
+public class PlayerAuthRequest extends GameServerBasePacket
 {
 	private final String _account;
 	private final SessionKey _sessionKey;

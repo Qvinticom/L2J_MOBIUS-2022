@@ -24,7 +24,6 @@ import org.l2jmobius.gameserver.model.Party;
 import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
 import org.l2jmobius.gameserver.model.entity.olympiad.Olympiad;
 import org.l2jmobius.gameserver.model.entity.sevensigns.SevenSignsFestival;
-import org.l2jmobius.gameserver.model.itemcontainer.Inventory;
 import org.l2jmobius.gameserver.model.zone.ZoneId;
 import org.l2jmobius.gameserver.network.ConnectionState;
 import org.l2jmobius.gameserver.network.GameClient;
@@ -155,11 +154,6 @@ public class RequestRestart extends GameClientPacket
 		if (player.isFlying())
 		{
 			player.removeSkill(SkillTable.getInstance().getInfo(4289, 1));
-		}
-		
-		if ((player.getInventory().getPaperdollItem(Inventory.PAPERDOLL_RHAND) != null) && player.getInventory().getPaperdollItem(Inventory.PAPERDOLL_RHAND).isAugmented())
-		{
-			player.getInventory().getPaperdollItem(Inventory.PAPERDOLL_RHAND).getAugmentation().removeBonus(player);
 		}
 		
 		// delete box from the world

@@ -29,8 +29,6 @@ import java.util.Properties;
 import java.util.logging.Logger;
 
 import org.l2jmobius.Config;
-import org.l2jmobius.loginserver.GameServerTable;
-import org.l2jmobius.loginserver.LoginController;
 import org.l2jmobius.loginserver.LoginServer;
 
 public class LoginStatusThread extends Thread
@@ -193,28 +191,28 @@ public class LoginStatusThread extends Thread
 				else if (usrCommand.equals("status"))
 				{
 					// TODO enhance the output
-					_print.println("Registered Server Count: " + GameServerTable.getInstance().getRegisteredGameServers().size());
+					// _print.println("Registered Server Count: " + GameServerTable.getInstance().getRegisteredGameServers().size());
 				}
-				else if (usrCommand.startsWith("unblock"))
-				{
-					try
-					{
-						usrCommand = usrCommand.substring(8);
-						if (LoginController.getInstance().removeBanForAddress(usrCommand))
-						{
-							LOGGER.warning("IP removed via TELNET by host: " + _cSocket.getInetAddress().getHostAddress());
-							_print.println("The IP " + usrCommand + " has been removed from the hack protection list!");
-						}
-						else
-						{
-							_print.println("IP not found in hack protection list...");
-						}
-					}
-					catch (StringIndexOutOfBoundsException e)
-					{
-						_print.println("Please Enter the IP to Unblock!");
-					}
-				}
+				// else if (usrCommand.startsWith("unblock"))
+				// {
+				// try
+				// {
+				// usrCommand = usrCommand.substring(8);
+				// if (LoginController.getInstance().removeBanForAddress(usrCommand))
+				// {
+				// LOGGER.warning("IP removed via TELNET by host: " + _cSocket.getInetAddress().getHostAddress());
+				// _print.println("The IP " + usrCommand + " has been removed from the hack protection list!");
+				// }
+				// else
+				// {
+				// _print.println("IP not found in hack protection list...");
+				// }
+				// }
+				// catch (StringIndexOutOfBoundsException e)
+				// {
+				// _print.println("Please Enter the IP to Unblock!");
+				// }
+				// }
 				else if (usrCommand.startsWith("shutdown"))
 				{
 					LoginServer.getInstance().shutdown(false);

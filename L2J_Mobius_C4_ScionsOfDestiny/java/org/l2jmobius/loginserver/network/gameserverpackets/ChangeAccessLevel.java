@@ -16,12 +16,10 @@
  */
 package org.l2jmobius.loginserver.network.gameserverpackets;
 
-import org.l2jmobius.loginserver.network.clientpackets.ClientBasePacket;
-
 /**
  * @author -Wooden-
  */
-public class ChangeAccessLevel extends ClientBasePacket
+public class ChangeAccessLevel extends GameServerBasePacket
 {
 	private final int _level;
 	private final String _account;

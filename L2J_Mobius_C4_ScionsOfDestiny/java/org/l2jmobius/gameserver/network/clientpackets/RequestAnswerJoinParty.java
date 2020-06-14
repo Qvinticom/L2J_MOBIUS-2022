@@ -52,12 +52,6 @@ public class RequestAnswerJoinParty extends GameClientPacket
 			return;
 		}
 		
-		if (player.isCursedWeaponEquiped() || requestor.isCursedWeaponEquiped())
-		{
-			requestor.sendPacket(SystemMessageId.INVALID_TARGET);
-			return;
-		}
-		
 		requestor.sendPacket(new JoinParty(_response));
 		if (_response == 1)
 		{

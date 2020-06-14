@@ -76,7 +76,7 @@ public class GMViewCharacterInfo extends GameServerPacket
 		writeD(_player.getMaxLoad());
 		writeD(0x28); // unknown
 		
-		writeD(_player.getInventory().getPaperdollObjectId(Inventory.PAPERDOLL_DHAIR));
+		writeD(_player.getInventory().getPaperdollObjectId(Inventory.PAPERDOLL_UNDER));
 		writeD(_player.getInventory().getPaperdollObjectId(Inventory.PAPERDOLL_REAR));
 		writeD(_player.getInventory().getPaperdollObjectId(Inventory.PAPERDOLL_LEAR));
 		writeD(_player.getInventory().getPaperdollObjectId(Inventory.PAPERDOLL_NECK));
@@ -92,9 +92,8 @@ public class GMViewCharacterInfo extends GameServerPacket
 		writeD(_player.getInventory().getPaperdollObjectId(Inventory.PAPERDOLL_BACK));
 		writeD(_player.getInventory().getPaperdollObjectId(Inventory.PAPERDOLL_LRHAND));
 		writeD(_player.getInventory().getPaperdollObjectId(Inventory.PAPERDOLL_HAIR));
-		writeD(_player.getInventory().getPaperdollObjectId(Inventory.PAPERDOLL_FACE));
 		
-		writeD(_player.getInventory().getPaperdollItemId(Inventory.PAPERDOLL_DHAIR));
+		writeD(_player.getInventory().getPaperdollItemId(Inventory.PAPERDOLL_UNDER));
 		writeD(_player.getInventory().getPaperdollItemId(Inventory.PAPERDOLL_REAR));
 		writeD(_player.getInventory().getPaperdollItemId(Inventory.PAPERDOLL_LEAR));
 		writeD(_player.getInventory().getPaperdollItemId(Inventory.PAPERDOLL_NECK));
@@ -110,45 +109,7 @@ public class GMViewCharacterInfo extends GameServerPacket
 		writeD(_player.getInventory().getPaperdollItemId(Inventory.PAPERDOLL_BACK));
 		writeD(_player.getInventory().getPaperdollItemId(Inventory.PAPERDOLL_LRHAND));
 		writeD(_player.getInventory().getPaperdollItemId(Inventory.PAPERDOLL_HAIR));
-		writeD(_player.getInventory().getPaperdollItemId(Inventory.PAPERDOLL_FACE));
 		
-		// c6 new h's
-		writeH(0x00);
-		writeH(0x00);
-		writeH(0x00);
-		writeH(0x00);
-		writeH(0x00);
-		writeH(0x00);
-		writeH(0x00);
-		writeH(0x00);
-		writeH(0x00);
-		writeH(0x00);
-		writeH(0x00);
-		writeH(0x00);
-		writeH(0x00);
-		writeH(0x00);
-		writeH(0x00);
-		writeH(0x00);
-		writeH(0x00);
-		
-		writeH(0x00);
-		writeH(0x00);
-		writeH(0x00);
-		writeH(0x00);
-		writeH(0x00);
-		writeH(0x00);
-		writeH(0x00);
-		writeH(0x00);
-		writeH(0x00);
-		writeH(0x00);
-		writeH(0x00);
-		writeH(0x00);
-		writeH(0x00);
-		writeH(0x00);
-		writeH(0x00);
-		writeH(0x00);
-		writeH(0x00);
-		// end of c6 new h's
 		writeD(_player.getPAtk(null));
 		writeD(_player.getPAtkSpd());
 		writeD(_player.getPDef(null));

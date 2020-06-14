@@ -152,13 +152,6 @@ public class ScrollOfEscape implements IItemHandler
 			return;
 		}
 		
-		// Check to see if player is in a duel
-		if (player.isInDuel())
-		{
-			player.sendPacket(SystemMessage.sendString("You cannot use escape skills during a duel."));
-			return;
-		}
-		
 		if (player.isParalyzed())
 		{
 			player.sendPacket(SystemMessage.sendString("You may not use an escape skill in a paralyzed."));
@@ -171,7 +164,12 @@ public class ScrollOfEscape implements IItemHandler
 		sm3.addItemName(itemId);
 		player.sendPacket(sm3);
 		
-		final int escapeSkill = (itemId == 1538) || (itemId == 5858) || (itemId == 5859) || (itemId == 3958) || (itemId == 10130) ? 2036 : 2013;
+		int escapeSkill = (itemId == 1538) || (itemId == 5858) || (itemId == 5859) || (itemId == 3958) || (itemId == 10130) ? 2036 : 2013;
+		// C4 adjustment.
+		if ((escapeSkill == 2036) || (escapeSkill == 2177) || (escapeSkill == 2178))
+		{
+			escapeSkill = 2013;
+		}
 		if (!player.destroyItem("Consume", item.getObjectId(), 1, null, false))
 		{
 			return;
@@ -188,16 +186,23 @@ public class ScrollOfEscape implements IItemHandler
 		player.abortCast(true);
 		player.disableAllSkills();
 		
-		// Cast escape animation.
 		final Skill skill = SkillTable.getInstance().getInfo(escapeSkill, 1);
-		player.broadcastPacket(new MagicSkillUse(player, player, escapeSkill, 1, skill.getHitTime(), 0));
-		player.sendPacket(new SetupGauge(0, skill.getHitTime()));
+		int hitTime = skill.getHitTime();
+		// C4 adjustment.
+		if ((escapeSkill == 2036) || (escapeSkill == 2177) || (escapeSkill == 2178))
+		{
+			hitTime = 500;
+		}
+		
+		// Cast escape animation.
+		player.broadcastPacket(new MagicSkillUse(player, player, escapeSkill, 1, hitTime, 0));
+		player.sendPacket(new SetupGauge(0, hitTime));
 		player.setTarget(null);
 		
 		// Continue execution later.
 		final EscapeFinalizer escapeFinalizer = new EscapeFinalizer(player, itemId);
-		player.setSkillCast(ThreadPool.schedule(escapeFinalizer, skill.getHitTime()));
-		player.setSkillCastEndTime(10 + GameTimeController.getGameTicks() + (skill.getHitTime() / GameTimeController.MILLIS_IN_TICK));
+		player.setSkillCast(ThreadPool.schedule(escapeFinalizer, hitTime));
+		player.setSkillCastEndTime(10 + GameTimeController.getGameTicks() + (hitTime / GameTimeController.MILLIS_IN_TICK));
 	}
 	
 	static class EscapeFinalizer implements Runnable

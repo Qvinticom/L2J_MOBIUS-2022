@@ -23,17 +23,12 @@ import java.util.logging.Logger;
 
 import org.l2jmobius.commons.concurrent.ThreadPool;
 import org.l2jmobius.commons.util.Rnd;
-import org.l2jmobius.gameserver.ai.CtrlIntention;
-import org.l2jmobius.gameserver.instancemanager.DuelManager;
 import org.l2jmobius.gameserver.model.actor.Attackable;
 import org.l2jmobius.gameserver.model.actor.Creature;
 import org.l2jmobius.gameserver.model.actor.instance.NpcInstance;
 import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
-import org.l2jmobius.gameserver.model.actor.instance.SummonInstance;
 import org.l2jmobius.gameserver.model.actor.stat.CreatureStat;
-import org.l2jmobius.gameserver.model.entity.Duel;
 import org.l2jmobius.gameserver.model.skills.Formulas;
-import org.l2jmobius.gameserver.network.serverpackets.ActionFailed;
 
 public class CreatureStatus
 {
@@ -130,24 +125,6 @@ public class CreatureStatus
 		double value = amount;
 		if (_creature instanceof PlayerInstance)
 		{
-			if (((PlayerInstance) _creature).isInDuel())
-			{
-				// the duel is finishing - players do not recive damage
-				if (((PlayerInstance) _creature).getDuelState() == Duel.DUELSTATE_DEAD)
-				{
-					return;
-				}
-				else if (((PlayerInstance) _creature).getDuelState() == Duel.DUELSTATE_WINNER)
-				{
-					return;
-				}
-				
-				// cancel duel if player got hit by another player, that is not part of the duel or a monster
-				if (!(attacker instanceof SummonInstance) && (!(attacker instanceof PlayerInstance) || (((PlayerInstance) attacker).getDuelId() != ((PlayerInstance) _creature).getDuelId())))
-				{
-					((PlayerInstance) _creature).setDuelState(Duel.DUELSTATE_INTERRUPTED);
-				}
-			}
 			if (_creature.isDead() && !_creature.isFakeDeath())
 			{
 				return; // Disabled == null check so skills like Body to Mind work again untill another solution is found
@@ -158,11 +135,6 @@ public class CreatureStatus
 			if (_creature.isDead())
 			{
 				return; // Disabled == null check so skills like Body to Mind work again untill another solution is found
-			}
-			
-			if ((attacker instanceof PlayerInstance) && ((PlayerInstance) attacker).isInDuel() && (!(_creature instanceof SummonInstance) || (((SummonInstance) _creature).getOwner().getDuelId() != ((PlayerInstance) attacker).getDuelId()))) // Duelling player attacks mob
-			{
-				((PlayerInstance) attacker).setDuelState(Duel.DUELSTATE_INTERRUPTED);
 			}
 		}
 		
@@ -206,23 +178,8 @@ public class CreatureStatus
 			value = _currentHp - value; // Get diff of Hp vs value
 			if (value <= 0)
 			{
-				// is the dieing one a duelist? if so change his duel state to dead
-				if ((_creature instanceof PlayerInstance) && ((PlayerInstance) _creature).isInDuel())
-				{
-					_creature.disableAllSkills();
-					stopHpMpRegeneration();
-					attacker.getAI().setIntention(CtrlIntention.AI_INTENTION_ACTIVE);
-					attacker.sendPacket(ActionFailed.STATIC_PACKET);
-					
-					// let the DuelManager know of his defeat
-					DuelManager.getInstance().onPlayerDefeat((PlayerInstance) getActiveChar());
-					value = 1;
-				}
-				else
-				{
-					// Set value to 0 if Hp < 0
-					value = 0;
-				}
+				// Set value to 0 if Hp < 0
+				value = 0;
 			}
 			setCurrentHp(value); // Set Hp
 		}

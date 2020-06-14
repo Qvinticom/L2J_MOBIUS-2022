@@ -21,9 +21,16 @@ import java.io.File;
 import java.io.FileInputStream;
 import java.io.IOException;
 import java.io.InputStream;
-import java.net.InetAddress;
-import java.net.UnknownHostException;
+import java.io.InputStreamReader;
+import java.io.LineNumberReader;
+import java.net.ServerSocket;
+import java.net.Socket;
 import java.security.GeneralSecurityException;
+import java.util.concurrent.LinkedBlockingQueue;
+import java.util.concurrent.RejectedExecutionException;
+import java.util.concurrent.ThreadPoolExecutor;
+import java.util.concurrent.TimeUnit;
+import java.util.logging.Level;
 import java.util.logging.LogManager;
 import java.util.logging.Logger;
 
@@ -31,27 +38,33 @@ import org.l2jmobius.Config;
 import org.l2jmobius.commons.database.DatabaseBackup;
 import org.l2jmobius.commons.database.DatabaseFactory;
 import org.l2jmobius.commons.enums.ServerMode;
-import org.l2jmobius.commons.mmocore.SelectorConfig;
-import org.l2jmobius.commons.mmocore.SelectorThread;
-import org.l2jmobius.loginserver.network.gameserverpackets.ServerStatus;
+import org.l2jmobius.loginserver.network.clientpackets.ClientBasePacket;
 import org.l2jmobius.loginserver.ui.Gui;
 import org.l2jmobius.telnet.TelnetStatusThread;
 
 /**
- * @author KenM
+ * This class ...
+ * @version $Revision: 1.9.4.4 $ $Date: 2005/03/27 15:30:09 $
  */
-public class LoginServer
+public class LoginServer extends FloodProtectedListener
 {
-	public Logger LOGGER = Logger.getLogger(LoginServer.class.getName());
+	public static Logger LOGGER = Logger.getLogger(LoginServer.class.getName());
 	
-	public static final int PROTOCOL_REV = 0x0102;
-	private static LoginServer INSTANCE;
-	private GameServerListener _gameServerListener;
-	private SelectorThread<LoginClient> _selectorThread;
+	private static LoginServer _instance;
+	private static GameServerListener _gameServerListener;
 	private TelnetStatusThread _statusServer;
-	private static int _loginStatus = ServerStatus.STATUS_NORMAL;
+	private ServerSocket _serverSocket;
 	
-	private LoginServer() throws Exception
+	private final ThreadPoolExecutor _generalPacketsExecutor;
+	
+	public static int PROTOCOL_REV = 0x0102;
+	
+	public static LoginServer getInstance()
+	{
+		return _instance;
+	}
+	
+	public static void main(String[] args)
 	{
 		// GUI
 		if (!GraphicsEnvironment.isHeadless())
@@ -60,26 +73,39 @@ public class LoginServer
 			new Gui();
 		}
 		
-		// Create log folder
-		final File logFolder = new File(".", "log");
-		logFolder.mkdir();
+		// Load log folder first
+		loadLogFolder();
 		
-		// Create input stream for log file -- or store file data into memory
+		// Initialize config
+		Config.load(ServerMode.LOGIN);
 		
-		try (InputStream is = new FileInputStream(new File("./log.cfg")))
+		try
 		{
-			LogManager.getLogManager().readConfiguration(is);
+			_instance = new LoginServer();
+			_instance.start();
+			LOGGER.info("Login Server ready on " + Config.LOGIN_BIND_ADDRESS + ":" + Config.PORT_LOGIN);
 		}
 		catch (IOException e)
 		{
-			LOGGER.warning(getClass().getSimpleName() + ": " + e.getMessage());
+			LOGGER.log(Level.SEVERE, "FATAL: Failed to start the Login Server Listener. Reason: " + e.getMessage(), e);
+			System.exit(1);
 		}
-		
-		// Load Config
-		Config.load(ServerMode.LOGIN);
+	}
+	
+	private LoginServer() throws IOException
+	{
+		super(Config.LOGIN_BIND_ADDRESS, Config.PORT_LOGIN);
 		
 		// Prepare Database
-		DatabaseFactory.init();
+		try
+		{
+			DatabaseFactory.init();
+		}
+		catch (Exception e)
+		{
+			LOGGER.severe("FATAL: Failed initializing database. Reason: " + e.getMessage());
+			System.exit(1);
+		}
 		
 		try
 		{
@@ -87,63 +113,25 @@ public class LoginServer
 		}
 		catch (GeneralSecurityException e)
 		{
-			LOGGER.severe("FATAL: Failed initializing LoginController. Reason: " + e);
+			LOGGER.log(Level.SEVERE, "FATAL: Failed initializing LoginController. Reason: " + e.getMessage(), e);
 			System.exit(1);
 		}
 		
 		try
 		{
-			GameServerTable.getInstance();
+			GameServerTable.load();
 		}
-		catch (Exception e)
+		catch (GeneralSecurityException e)
 		{
-			LOGGER.severe("Failed to load GameServerTable" + e);
+			LOGGER.log(Level.SEVERE, "FATAL: Failed to load GameServerTable. Reason: " + e.getMessage(), e);
 			System.exit(1);
 		}
 		
-		InetAddress bindAddress = null;
-		if (!Config.LOGIN_BIND_ADDRESS.equals("*"))
-		{
-			try
-			{
-				bindAddress = InetAddress.getByName(Config.LOGIN_BIND_ADDRESS);
-			}
-			catch (UnknownHostException e1)
-			{
-				LOGGER.warning("WARNING: The LoginServer bind address is invalid, using all avaliable IPs " + e1);
-			}
-		}
-		// Load telnet status
-		if (Config.IS_TELNET_ENABLED)
-		{
-			try
-			{
-				_statusServer = new TelnetStatusThread();
-				_statusServer.start();
-			}
-			catch (IOException e)
-			{
-				LOGGER.warning("Failed to start the Telnet Server. Reason: " + e.getMessage());
-			}
-		}
+		// Load Ban file
+		loadBanFile();
 		
-		final SelectorConfig sc = new SelectorConfig();
-		sc.MAX_READ_PER_PASS = Config.MMO_MAX_READ_PER_PASS;
-		sc.MAX_SEND_PER_PASS = Config.MMO_MAX_SEND_PER_PASS;
-		sc.SLEEP_TIME = Config.MMO_SELECTOR_SLEEP_TIME;
-		sc.HELPER_BUFFER_COUNT = Config.MMO_HELPER_BUFFER_COUNT;
-		
-		final LoginPacketHandler lph = new LoginPacketHandler();
-		final SelectorHelper sh = new SelectorHelper();
-		try
-		{
-			_selectorThread = new SelectorThread<>(sc, sh, lph, sh, sh);
-		}
-		catch (IOException e)
-		{
-			LOGGER.severe("Failed to open Selector " + e);
-			System.exit(1);
-		}
+		// start packet executor
+		_generalPacketsExecutor = new ThreadPoolExecutor(4, 6, 15L, TimeUnit.SECONDS, new LinkedBlockingQueue<Runnable>());
 		
 		try
 		{
@@ -153,29 +141,159 @@ public class LoginServer
 		}
 		catch (IOException e)
 		{
-			LOGGER.severe("Failed to start the Game Server Listener" + e);
+			LOGGER.log(Level.SEVERE, "FATAL: Failed to start the Game Server Listener. Reason: " + e.getMessage(), e);
 			System.exit(1);
 		}
 		
-		try
+		if (Config.IS_TELNET_ENABLED)
 		{
-			_selectorThread.openServerSocket(bindAddress, Config.PORT_LOGIN);
-			_selectorThread.start();
-			LOGGER.info("Login Server ready on " + (bindAddress == null ? "*" : bindAddress.getHostAddress()) + ":" + Config.PORT_LOGIN);
+			try
+			{
+				_statusServer = new TelnetStatusThread();
+				_statusServer.start();
+			}
+			catch (IOException e)
+			{
+				LOGGER.severe("Failed to start the Telnet Server. Reason: " + e.getMessage());
+			}
+		}
+		else
+		{
+			// System.out.println("Telnet server is currently disabled.");
+		}
+	}
+	
+	private static void loadLogFolder()
+	{
+		// Local Constants
+		final String LOG_FOLDER = "log"; // Name of folder for log file
+		final String LOG_NAME = "./log.cfg"; // Name of log file
+		
+		/*** Main ***/
+		// Create log folder
+		final File logFolder = new File(Config.DATAPACK_ROOT, LOG_FOLDER);
+		logFolder.mkdir();
+		
+		// Create input stream for log file -- or store file data into memory
+		try (InputStream is = new FileInputStream(new File(LOG_NAME)))
+		{
+			LogManager.getLogManager().readConfiguration(is);
 		}
 		catch (IOException e)
 		{
-			LOGGER.warning("Failed to open server socket" + e);
-			System.exit(1);
+			e.printStackTrace();
 		}
-		
-		// load bannedIps
-		Config.loadBanFile();
 	}
 	
-	public GameServerListener getGameServerListener()
+	private void loadBanFile()
+	{
+		final File bannedFile = new File("./config/others/banned_ip.cfg");
+		if (bannedFile.exists() && bannedFile.isFile())
+		{
+			String line;
+			String[] parts;
+			
+			try (FileInputStream fis = new FileInputStream(bannedFile);
+				InputStreamReader ir = new InputStreamReader(fis);
+				LineNumberReader reader = new LineNumberReader(ir))
+			{
+				while ((line = reader.readLine()) != null)
+				{
+					line = line.trim();
+					// check if this line isnt a comment line
+					if ((line.length() > 0) && (line.charAt(0) != '#'))
+					{
+						// split comments if any
+						parts = line.split("#");
+						
+						// discard comments in the line, if any
+						line = parts[0];
+						
+						parts = line.split(" ");
+						
+						final String address = parts[0];
+						
+						long duration = 0;
+						
+						if (parts.length > 1)
+						{
+							try
+							{
+								duration = Long.parseLong(parts[1]);
+							}
+							catch (NumberFormatException e)
+							{
+								LOGGER.warning("Skipped: Incorrect ban duration (" + parts[1] + ") on (" + bannedFile.getName() + "). Line: " + reader.getLineNumber());
+								continue;
+							}
+						}
+						
+						LoginController.getInstance().addBanForAddress(address, duration);
+					}
+				}
+			}
+			catch (IOException e)
+			{
+				LOGGER.warning("Error while reading the bans file (" + bannedFile.getName() + "). Details: " + e.getMessage());
+			}
+			LOGGER.config("Loaded " + LoginController.getInstance().getBannedIps().size() + " IP Bans.");
+		}
+		else
+		{
+			LOGGER.config("IP Bans file (" + bannedFile.getName() + ") is missing or is a directory, skipped.");
+		}
+	}
+	
+	public TelnetStatusThread getStatusServer()
+	{
+		return _statusServer;
+	}
+	
+	public static GameServerListener getGameServerListener()
 	{
 		return _gameServerListener;
+	}
+	
+	/**
+	 * @param ipAddress
+	 * @return
+	 */
+	public boolean unblockIp(String ipAddress)
+	{
+		if (LoginController.getInstance().ipBlocked(ipAddress))
+		{
+			return true;
+		}
+		
+		return false;
+	}
+	
+	public static class ForeignConnection
+	{
+		public ForeignConnection(long time)
+		{
+			lastConnection = time;
+			connectionNumber = 1;
+		}
+		
+		public int connectionNumber;
+		public long lastConnection;
+	}
+	
+	public void execute(ClientBasePacket packet)
+	{
+		try
+		{
+			_generalPacketsExecutor.execute(packet);
+		}
+		catch (RejectedExecutionException e)
+		{
+			// if the server is shutdown we ignore
+			if (!_generalPacketsExecutor.isShutdown())
+			{
+				LOGGER.severe("Failed executing: " + packet.getClass().getSimpleName() + " for IP: " + packet.getClient().getSocket().getInetAddress().getHostAddress());
+			}
+		}
 	}
 	
 	public void shutdown(boolean restart)
@@ -186,27 +304,41 @@ public class LoginServer
 			DatabaseBackup.performBackup();
 		}
 		
-		LoginController.getInstance().shutdown();
+		// shut down executor
+		try
+		{
+			_generalPacketsExecutor.awaitTermination(1, TimeUnit.SECONDS);
+			_generalPacketsExecutor.shutdown();
+		}
+		catch (Throwable t)
+		{
+		}
+		
+		_gameServerListener.interrupt();
+		GameServerTable.getInstance().shutDown();
+		
+		try
+		{
+			if (_serverSocket != null)
+			{
+				_serverSocket.close();
+			}
+		}
+		catch (IOException e)
+		{
+			e.printStackTrace();
+		}
+		
 		Runtime.getRuntime().exit(restart ? 2 : 0);
 	}
 	
-	public int getStatus()
+	/*
+	 * (non-Javadoc)
+	 * @see org.l2jmobius.loginserver.FloodProtectedListener#addClient(java.net.Socket)
+	 */
+	@Override
+	public void addClient(Socket socket)
 	{
-		return _loginStatus;
-	}
-	
-	public void setStatus(int status)
-	{
-		_loginStatus = status;
-	}
-	
-	public static void main(String[] args) throws Exception
-	{
-		INSTANCE = new LoginServer();
-	}
-	
-	public static LoginServer getInstance()
-	{
-		return INSTANCE;
+		new LoginClient(socket);
 	}
 }

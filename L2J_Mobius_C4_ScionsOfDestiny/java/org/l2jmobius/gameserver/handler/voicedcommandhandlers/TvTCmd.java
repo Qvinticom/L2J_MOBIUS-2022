@@ -73,11 +73,6 @@ public class TvTCmd implements IVoicedCommandHandler
 			activeChar.sendMessage("You are already registered.");
 			return false;
 		}
-		else if (activeChar.isCursedWeaponEquipped())
-		{
-			activeChar.sendMessage("You are not allowed to participate to the event because you are holding a Cursed Weapon.");
-			return false;
-		}
 		else if (activeChar.isInOlympiadMode())
 		{
 			activeChar.sendMessage("You are not allowed to participate to the event because you are in Olympiad.");

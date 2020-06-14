@@ -21,6 +21,7 @@ import java.io.IOException;
 import java.nio.charset.StandardCharsets;
 
 /**
+ * This class ...
  * @version $Revision: 1.2.4.1 $ $Date: 2005/03/27 15:30:11 $
  */
 public abstract class ServerBasePacket
@@ -101,8 +102,6 @@ public abstract class ServerBasePacket
 	
 	public byte[] getBytes()
 	{
-		// if (this instanceof Init)
-		// writeD(0x00); //reserve for XOR initial key
 		writeD(0x00); // reserve for checksum
 		
 		final int padding = _bao.size() % 8;
@@ -113,6 +112,7 @@ public abstract class ServerBasePacket
 				writeC(0x00);
 			}
 		}
+		
 		return _bao.toByteArray();
 	}
 	

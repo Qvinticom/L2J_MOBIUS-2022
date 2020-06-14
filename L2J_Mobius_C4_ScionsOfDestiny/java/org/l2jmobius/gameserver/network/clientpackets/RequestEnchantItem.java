@@ -660,11 +660,6 @@ public class RequestEnchantItem extends GameClientPacket
 					
 					if (item.isEquipped())
 					{
-						if (item.isAugmented())
-						{
-							item.getAugmentation().removeBonus(player);
-						}
-						
 						final ItemInstance[] unequiped = player.getInventory().unEquipItemInSlotAndRecord(item.getEquipSlot());
 						final InventoryUpdate iu = new InventoryUpdate();
 						for (ItemInstance element : unequiped)

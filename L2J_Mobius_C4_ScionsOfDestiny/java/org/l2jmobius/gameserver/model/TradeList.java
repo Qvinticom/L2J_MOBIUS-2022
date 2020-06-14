@@ -51,9 +51,6 @@ public class TradeList
 		private int _price;
 		private int _curcount;
 		
-		/** Augmented Item */
-		private final Augmentation _augmentation = null;
-		
 		public TradeItem(ItemInstance item, int count, int price)
 		{
 			_objectId = item.getObjectId();
@@ -134,15 +131,6 @@ public class TradeList
 		public int getCurCount()
 		{
 			return _curcount;
-		}
-		
-		/**
-		 * Returns whether this item is augmented or not
-		 * @return true if augmented
-		 */
-		public boolean isAugmented()
-		{
-			return _augmentation != null;
 		}
 	}
 	
@@ -1150,14 +1138,6 @@ public class TradeList
 			{
 				final String msg = "Requested Item is not available to sell... You are perfoming illegal operation, it has been segnalated";
 				LOGGER.warning("ATTENTION: Player " + player.getName() + " has performed sell illegal operation..");
-				player.sendMessage(msg);
-				return false;
-			}
-			
-			if (oldItem.getAugmentation() != null)
-			{
-				final String msg = "Transaction failed. Augmented items may not be exchanged.";
-				_owner.sendMessage(msg);
 				player.sendMessage(msg);
 				return false;
 			}

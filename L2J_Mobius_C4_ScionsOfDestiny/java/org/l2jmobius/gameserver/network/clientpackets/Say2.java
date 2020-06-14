@@ -127,12 +127,6 @@ public class Say2 extends GameClientPacket
 			return;
 		}
 		
-		if (player.isCursedWeaponEquiped() && ((chatType == ChatType.TRADE) || (chatType == ChatType.SHOUT)))
-		{
-			player.sendMessage("Shout and trade chatting cannot be used while possessing a cursed weapon.");
-			return;
-		}
-		
 		if ((chatType == ChatType.PETITION_PLAYER) && player.isGM())
 		{
 			chatType = ChatType.PETITION_GM;

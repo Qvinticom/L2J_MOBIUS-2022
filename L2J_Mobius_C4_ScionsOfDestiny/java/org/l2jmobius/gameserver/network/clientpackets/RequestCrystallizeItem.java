@@ -161,11 +161,6 @@ public class RequestCrystallizeItem extends GameClientPacket
 		// unequip if needed
 		if (itemToRemove.isEquipped())
 		{
-			if (itemToRemove.isAugmented())
-			{
-				itemToRemove.getAugmentation().removeBonus(player);
-			}
-			
 			final ItemInstance[] unequiped = player.getInventory().unEquipItemInSlotAndRecord(itemToRemove.getEquipSlot());
 			final InventoryUpdate iu = new InventoryUpdate();
 			for (ItemInstance element : unequiped)

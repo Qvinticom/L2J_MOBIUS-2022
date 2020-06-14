@@ -72,7 +72,7 @@ public class StoreTradeList
 	public void replaceItem(int itemID, int priceValue)
 	{
 		int price = priceValue;
-		for (final ItemInstance item : _items)
+		for (ItemInstance item : _items)
 		{
 			if (item.getItemId() == itemID)
 			{
@@ -88,7 +88,7 @@ public class StoreTradeList
 	
 	public synchronized boolean decreaseCount(int itemID, int count)
 	{
-		for (final ItemInstance item : _items)
+		for (ItemInstance item : _items)
 		{
 			if (item.getItemId() == itemID)
 			{
@@ -104,7 +104,7 @@ public class StoreTradeList
 	
 	public void restoreCount(int time)
 	{
-		for (final ItemInstance item : _items)
+		for (ItemInstance item : _items)
 		{
 			if (item.getCountDecrease() && (item.getTime() == time))
 			{
@@ -168,7 +168,7 @@ public class StoreTradeList
 	
 	public int getPriceForItemId(int itemId)
 	{
-		for (final ItemInstance item : _items)
+		for (ItemInstance item : _items)
 		{
 			if (item.getItemId() == itemId)
 			{
@@ -180,7 +180,7 @@ public class StoreTradeList
 	
 	public boolean countDecrease(int itemId)
 	{
-		for (final ItemInstance item : _items)
+		for (ItemInstance item : _items)
 		{
 			if (item.getItemId() == itemId)
 			{
@@ -204,7 +204,7 @@ public class StoreTradeList
 	
 	public ItemInstance getItem(int objectId)
 	{
-		for (final ItemInstance item : _items)
+		for (ItemInstance item : _items)
 		{
 			if (item.getObjectId() == objectId)
 			{

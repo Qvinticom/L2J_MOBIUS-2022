@@ -62,6 +62,18 @@ public class GameClient extends MMOClient<MMOConnection<GameClient>> implements 
 {
 	protected static final Logger LOGGER = Logger.getLogger(GameClient.class.getName());
 	
+	private final static byte[] CRYPT_KEY =
+	{
+		(byte) 0x94,
+		(byte) 0x35,
+		(byte) 0x00,
+		(byte) 0x00,
+		(byte) 0xa1,
+		(byte) 0x6c,
+		(byte) 0x54,
+		(byte) 0x87 // The last 4 bytes are fixed.
+	};
+	
 	private final FloodProtectors _floodProtectors = new FloodProtectors(this);
 	private final ReentrantLock _playerLock = new ReentrantLock();
 	private final List<Integer> _charSlotMapping = new ArrayList<>();
@@ -87,9 +99,8 @@ public class GameClient extends MMOClient<MMOConnection<GameClient>> implements 
 	
 	public byte[] enableCrypt()
 	{
-		final byte[] key = BlowFishKeygen.getRandomKey();
-		_crypt.setKey(key);
-		return key;
+		_crypt.setKey(CRYPT_KEY);
+		return CRYPT_KEY;
 	}
 	
 	public ConnectionState getState()

@@ -23,7 +23,6 @@ import java.util.logging.Logger;
 import org.l2jmobius.Config;
 import org.l2jmobius.gameserver.datatables.ItemTable;
 import org.l2jmobius.gameserver.datatables.xml.MultisellData;
-import org.l2jmobius.gameserver.model.Augmentation;
 import org.l2jmobius.gameserver.model.actor.instance.NpcInstance;
 import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
 import org.l2jmobius.gameserver.model.itemcontainer.PlayerInventory;
@@ -233,7 +232,7 @@ public class MultiSellChoose extends GameClientPacket
 		}
 		
 		ingredientsList.clear();
-		final List<Augmentation> augmentation = new ArrayList<>();
+		
 		/** All ok, remove items and add final product */
 		for (MultiSellIngredient e : entry.getIngredients())
 		{
@@ -284,16 +283,6 @@ public class MultiSellChoose extends GameClientPacket
 						final ItemInstance[] inventoryContents = inv.getAllItemsByItemId(e.getItemId(), e.getEnchantmentLevel());
 						for (int i = 0; i < (e.getItemCount() * _amount); i++)
 						{
-							if (inventoryContents[i].isAugmented())
-							{
-								augmentation.add(inventoryContents[i].getAugmentation());
-							}
-							
-							if (inventoryContents[i].isEquipped() && inventoryContents[i].isAugmented())
-							{
-								inventoryContents[i].getAugmentation().removeBonus(player);
-							}
-							
 							if (!player.destroyItem("Multisell", inventoryContents[i].getObjectId(), 1, player.getTarget(), true))
 							{
 								return;
@@ -338,11 +327,6 @@ public class MultiSellChoose extends GameClientPacket
 								}
 							}
 							
-							if (itemToTake.isEquipped() && itemToTake.isAugmented())
-							{
-								itemToTake.getAugmentation().removeBonus(player);
-							}
-							
 							if (!player.destroyItem("Multisell", itemToTake.getObjectId(), 1, player.getTarget(), true))
 							{
 								return;
@@ -379,10 +363,6 @@ public class MultiSellChoose extends GameClientPacket
 					product = inv.addItem("Multisell[" + _listId + "]", e.getItemId(), 1, player, player.getTarget());
 					if (maintainEnchantment && (product != null))
 					{
-						if (i < augmentation.size())
-						{
-							product.setAugmentation(new Augmentation(product, augmentation.get(i).getAugmentationId(), augmentation.get(i).getSkill(), true));
-						}
 						product.setEnchantLevel(e.getEnchantmentLevel());
 					}
 				}

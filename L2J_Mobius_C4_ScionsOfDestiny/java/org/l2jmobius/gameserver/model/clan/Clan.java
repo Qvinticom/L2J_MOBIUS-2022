@@ -52,7 +52,6 @@ import org.l2jmobius.gameserver.network.serverpackets.PledgeShowInfoUpdate;
 import org.l2jmobius.gameserver.network.serverpackets.PledgeShowMemberListAll;
 import org.l2jmobius.gameserver.network.serverpackets.PledgeShowMemberListDeleteAll;
 import org.l2jmobius.gameserver.network.serverpackets.PledgeShowMemberListUpdate;
-import org.l2jmobius.gameserver.network.serverpackets.PledgeSkillListAdd;
 import org.l2jmobius.gameserver.network.serverpackets.StatusUpdate;
 import org.l2jmobius.gameserver.network.serverpackets.SystemMessage;
 import org.l2jmobius.gameserver.network.serverpackets.UserInfo;
@@ -1057,22 +1056,6 @@ public class Clan
 			catch (Exception e2)
 			{
 				LOGGER.warning("Error could not store char skills: " + e2);
-			}
-			
-			for (ClanMember temp : _members.values())
-			{
-				try
-				{
-					if (temp.isOnline() && (newSkill.getMinPledgeClass() <= temp.getPlayerInstance().getPledgeClass()))
-					{
-						temp.getPlayerInstance().addSkill(newSkill, false); // Skill is not saved to player DB
-						temp.getPlayerInstance().sendPacket(new PledgeSkillListAdd(newSkill.getId(), newSkill.getLevel()));
-					}
-				}
-				catch (NullPointerException e)
-				{
-					LOGGER.warning(e.toString());
-				}
 			}
 		}
 		

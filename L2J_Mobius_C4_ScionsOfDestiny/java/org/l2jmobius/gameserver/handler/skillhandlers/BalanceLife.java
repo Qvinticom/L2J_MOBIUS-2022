@@ -23,7 +23,6 @@ import org.l2jmobius.gameserver.model.Skill;
 import org.l2jmobius.gameserver.model.Skill.SkillType;
 import org.l2jmobius.gameserver.model.WorldObject;
 import org.l2jmobius.gameserver.model.actor.Creature;
-import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
 import org.l2jmobius.gameserver.network.serverpackets.StatusUpdate;
 
 /**
@@ -54,12 +53,6 @@ public class BalanceLife implements ISkillHandler
 		}
 		
 		Creature target = null;
-		PlayerInstance player = null;
-		if (creature instanceof PlayerInstance)
-		{
-			player = (PlayerInstance) creature;
-		}
-		
 		double fullHP = 0;
 		double currentHPs = 0;
 		for (WorldObject target2 : targets)
@@ -76,19 +69,6 @@ public class BalanceLife implements ISkillHandler
 			if (((GrandBossManager.getInstance().getZone(creature) == null) && (GrandBossManager.getInstance().getZone(target) != null)) || ((GrandBossManager.getInstance().getZone(target) == null) && (GrandBossManager.getInstance().getZone(creature) != null)))
 			{
 				continue;
-			}
-			
-			// Player holding a cursed weapon can't be healed and can't heal
-			if (target != creature)
-			{
-				if ((target instanceof PlayerInstance) && ((PlayerInstance) target).isCursedWeaponEquiped())
-				{
-					continue;
-				}
-				else if ((player != null) && player.isCursedWeaponEquiped())
-				{
-					continue;
-				}
 			}
 			
 			fullHP += target.getMaxHp();

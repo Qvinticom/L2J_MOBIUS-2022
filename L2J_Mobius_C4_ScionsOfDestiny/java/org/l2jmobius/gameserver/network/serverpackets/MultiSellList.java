@@ -55,8 +55,6 @@ public class MultiSellList extends GameServerPacket
 			for (MultiSellEntry ent : _list.getEntries())
 			{
 				writeD(ent.getEntryId());
-				writeD(0x00); // C6
-				writeD(0x00); // C6
 				writeC(1);
 				writeH(ent.getProducts().size());
 				writeH(ent.getIngredients().size());
@@ -68,8 +66,6 @@ public class MultiSellList extends GameServerPacket
 					writeH(ItemTable.getInstance().getTemplate(i.getItemId()).getType2());
 					writeD(i.getItemCount());
 					writeH(i.getEnchantmentLevel()); // enchtant lvl
-					writeD(0x00); // C6
-					writeD(0x00); // C6
 				}
 				
 				for (MultiSellIngredient i : ent.getIngredients())
@@ -84,8 +80,6 @@ public class MultiSellList extends GameServerPacket
 					writeH(typeE);
 					writeD(i.getItemCount()); // Count
 					writeH(i.getEnchantmentLevel()); // Enchant Level
-					writeD(0x00); // C6
-					writeD(0x00); // C6
 				}
 			}
 		}

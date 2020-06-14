@@ -47,7 +47,7 @@ import org.l2jmobius.Config;
 import org.l2jmobius.commons.util.LimitLinesDocumentListener;
 import org.l2jmobius.commons.util.SplashScreen;
 import org.l2jmobius.loginserver.GameServerTable;
-import org.l2jmobius.loginserver.GameServerTable.GameServerInfo;
+import org.l2jmobius.loginserver.GameServerTable.GameServer;
 import org.l2jmobius.loginserver.LoginController;
 import org.l2jmobius.loginserver.LoginServer;
 import org.l2jmobius.loginserver.network.gameserverpackets.ServerStatus;
@@ -139,12 +139,13 @@ public class Gui
 			chckbxmntmEnabled.setSelected(true);
 			chckbxmntmDisabled.setSelected(false);
 			chckbxmntmGmOnly.setSelected(false);
-			LoginServer.getInstance().setStatus(ServerStatus.STATUS_NORMAL);
-			for (GameServerInfo gsi : GameServerTable.getInstance().getRegisteredGameServers().values())
+			// LoginServer.getInstance().setStatus(ServerStatus.STATUS_NORMAL);
+			for (GameServer gsi : GameServerTable.getInstance().getGameServerList())
 			{
 				gsi.setStatus(ServerStatus.STATUS_NORMAL);
 			}
-			LoginServer.getInstance().LOGGER.info("Status changed to enabled.");
+			LoginServer.getInstance();
+			LoginServer.LOGGER.info("Status changed to enabled.");
 		});
 		chckbxmntmEnabled.setSelected(true);
 		mnStatus.add(chckbxmntmEnabled);
@@ -156,12 +157,13 @@ public class Gui
 			chckbxmntmEnabled.setSelected(false);
 			chckbxmntmDisabled.setSelected(true);
 			chckbxmntmGmOnly.setSelected(false);
-			LoginServer.getInstance().setStatus(ServerStatus.STATUS_DOWN);
-			for (GameServerInfo gsi : GameServerTable.getInstance().getRegisteredGameServers().values())
+			// LoginServer.getInstance().setStatus(ServerStatus.STATUS_DOWN);
+			for (GameServer gsi : GameServerTable.getInstance().getGameServerList())
 			{
 				gsi.setStatus(ServerStatus.STATUS_DOWN);
 			}
-			LoginServer.getInstance().LOGGER.info("Status changed to disabled.");
+			LoginServer.getInstance();
+			LoginServer.LOGGER.info("Status changed to disabled.");
 		});
 		mnStatus.add(chckbxmntmDisabled);
 		
@@ -172,12 +174,13 @@ public class Gui
 			chckbxmntmEnabled.setSelected(false);
 			chckbxmntmDisabled.setSelected(false);
 			chckbxmntmGmOnly.setSelected(true);
-			LoginServer.getInstance().setStatus(ServerStatus.STATUS_GM_ONLY);
-			for (GameServerInfo gsi : GameServerTable.getInstance().getRegisteredGameServers().values())
+			// LoginServer.getInstance().setStatus(ServerStatus.STATUS_GM_ONLY);
+			for (GameServer gsi : GameServerTable.getInstance().getGameServerList())
 			{
 				gsi.setStatus(ServerStatus.STATUS_GM_ONLY);
 			}
-			LoginServer.getInstance().LOGGER.info("Status changed to GM only.");
+			LoginServer.getInstance();
+			LoginServer.LOGGER.info("Status changed to GM only.");
 		});
 		mnStatus.add(chckbxmntmGmOnly);
 		

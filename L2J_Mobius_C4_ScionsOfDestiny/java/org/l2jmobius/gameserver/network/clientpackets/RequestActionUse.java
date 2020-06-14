@@ -289,11 +289,6 @@ public class RequestActionUse extends GameClientPacket
 						// You can't mount, dismount, break and drop items while fishing
 						player.sendPacket(new SystemMessage(SystemMessageId.YOU_CANNOT_DO_THAT_WHILE_FISHING_2));
 					}
-					else if (player.isCursedWeaponEquiped())
-					{
-						// You can't mount, dismount, break and drop items while weilding a cursed weapon
-						player.sendPacket(new SystemMessage(SystemMessageId.A_STRIDER_CANNOT_BE_RIDDEN_WHILE_IN_BATTLE));
-					}
 					else if (!pet.isDead() && !player.isMounted())
 					{
 						if (!player.disarmWeapons())

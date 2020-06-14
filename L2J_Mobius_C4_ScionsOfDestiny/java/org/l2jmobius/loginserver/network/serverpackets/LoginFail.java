@@ -19,44 +19,23 @@ package org.l2jmobius.loginserver.network.serverpackets;
 /**
  * Fromat: d d: the failure reason
  */
-public class LoginFail extends LoginServerPacket
+public class LoginFail extends ServerBasePacket
 {
-	public enum LoginFailReason
-	{
-		REASON_SYSTEM_ERROR(0x01),
-		REASON_PASS_WRONG(0x02),
-		REASON_USER_OR_PASS_WRONG(0x03),
-		REASON_ACCESS_FAILED(0x04),
-		REASON_ACCOUNT_IN_USE(0x07),
-		REASON_SERVER_OVERLOADED(0x0f),
-		REASON_SERVER_MAINTENANCE(0x10),
-		REASON_TEMP_PASS_EXPIRED(0x11),
-		REASON_DUAL_BOX(0x23);
-		
-		private final int _code;
-		
-		LoginFailReason(int code)
-		{
-			_code = code;
-		}
-		
-		public int getCode()
-		{
-			return _code;
-		}
-	}
+	public static int REASON_SYSTEM_ERROR = 0x01;
+	public static int REASON_PASS_WRONG = 0x02;
+	public static int REASON_USER_OR_PASS_WRONG = 0x03;
+	public static int REASON_ACCESS_FAILED = 0x04;
+	public static int REASON_ACCOUNT_IN_USE = 0x07;
 	
-	private final LoginFailReason _reason;
-	
-	public LoginFail(LoginFailReason reason)
+	public LoginFail(int reason)
 	{
-		_reason = reason;
+		writeC(0x01);
+		writeD(reason);
 	}
 	
 	@Override
-	protected void write()
+	public byte[] getContent()
 	{
-		writeC(0x01);
-		writeD(_reason.getCode());
+		return getBytes();
 	}
 }

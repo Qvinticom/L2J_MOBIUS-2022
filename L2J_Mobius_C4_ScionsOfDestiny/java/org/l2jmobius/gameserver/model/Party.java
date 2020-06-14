@@ -26,7 +26,6 @@ import org.l2jmobius.commons.concurrent.ThreadPool;
 import org.l2jmobius.commons.util.Rnd;
 import org.l2jmobius.gameserver.GameTimeController;
 import org.l2jmobius.gameserver.datatables.ItemTable;
-import org.l2jmobius.gameserver.instancemanager.DuelManager;
 import org.l2jmobius.gameserver.model.actor.Attackable;
 import org.l2jmobius.gameserver.model.actor.Creature;
 import org.l2jmobius.gameserver.model.actor.Playable;
@@ -432,11 +431,6 @@ public class Party
 				SevenSignsFestival.getInstance().updateParticipants(player, this);
 			}
 			
-			if (player.isInDuel())
-			{
-				DuelManager.getInstance().onRemoveFromParty(player);
-			}
-			
 			if (sendMessage)
 			{
 				player.sendPacket(SystemMessageId.YOU_HAVE_WITHDRAWN_FROM_THE_PARTY);
@@ -487,10 +481,6 @@ public class Party
 				if (leader != null)
 				{
 					leader.setParty(null);
-					if (leader.isInDuel())
-					{
-						DuelManager.getInstance().onRemoveFromParty(leader);
-					}
 				}
 				
 				if (_positionBroadcastTask != null)
@@ -511,7 +501,7 @@ public class Party
 	public void changePartyLeader(String name)
 	{
 		final PlayerInstance player = getPlayerByName(name);
-		if ((player != null) && !player.isInDuel())
+		if (player != null)
 		{
 			if (_members.contains(player))
 			{

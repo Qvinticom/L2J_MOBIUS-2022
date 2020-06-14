@@ -27,7 +27,6 @@ public class ItemInfo
 	private int _objectId;
 	private Item _item;
 	private int _enchant;
-	private int _augmentation;
 	private int _count;
 	private int _price;
 	private int _type1;
@@ -55,16 +54,6 @@ public class ItemInfo
 		
 		// Get the enchant level of the ItemInstance
 		_enchant = item.getEnchantLevel();
-		
-		// Get the augmentation bonus
-		if (item.isAugmented())
-		{
-			_augmentation = item.getAugmentation().getAugmentationId();
-		}
-		else
-		{
-			_augmentation = 0;
-		}
 		
 		// Get the quantity of the ItemInstance
 		_count = item.getCount();
@@ -116,16 +105,6 @@ public class ItemInfo
 		// Get the enchant level of the ItemInstance
 		_enchant = item.getEnchantLevel();
 		
-		// Get the augmentation bonus
-		if (item.isAugmented())
-		{
-			_augmentation = item.getAugmentation().getAugmentationId();
-		}
-		else
-		{
-			_augmentation = 0;
-		}
-		
 		// Get the quantity of the ItemInstance
 		_count = item.getCount();
 		
@@ -156,11 +135,6 @@ public class ItemInfo
 	public int getEnchant()
 	{
 		return _enchant;
-	}
-	
-	public int getAugemtationBonus()
-	{
-		return _augmentation;
 	}
 	
 	public int getCount()

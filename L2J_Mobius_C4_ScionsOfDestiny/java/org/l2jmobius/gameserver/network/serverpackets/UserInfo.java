@@ -18,7 +18,6 @@ package org.l2jmobius.gameserver.network.serverpackets;
 
 import org.l2jmobius.Config;
 import org.l2jmobius.gameserver.datatables.sql.NpcTable;
-import org.l2jmobius.gameserver.instancemanager.CursedWeaponsManager;
 import org.l2jmobius.gameserver.model.actor.Creature;
 import org.l2jmobius.gameserver.model.actor.Summon;
 import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
@@ -100,7 +99,7 @@ public class UserInfo extends GameServerPacket
 		
 		writeD(_player.getActiveWeaponItem() != null ? 40 : 20); // 20 no weapon, 40 weapon equipped
 		
-		writeD(_player.getInventory().getPaperdollObjectId(Inventory.PAPERDOLL_DHAIR));
+		writeD(_player.getInventory().getPaperdollObjectId(Inventory.PAPERDOLL_UNDER));
 		writeD(_player.getInventory().getPaperdollObjectId(Inventory.PAPERDOLL_REAR));
 		writeD(_player.getInventory().getPaperdollObjectId(Inventory.PAPERDOLL_LEAR));
 		writeD(_player.getInventory().getPaperdollObjectId(Inventory.PAPERDOLL_NECK));
@@ -116,9 +115,8 @@ public class UserInfo extends GameServerPacket
 		writeD(_player.getInventory().getPaperdollObjectId(Inventory.PAPERDOLL_BACK));
 		writeD(_player.getInventory().getPaperdollObjectId(Inventory.PAPERDOLL_LRHAND));
 		writeD(_player.getInventory().getPaperdollObjectId(Inventory.PAPERDOLL_HAIR));
-		writeD(_player.getInventory().getPaperdollObjectId(Inventory.PAPERDOLL_FACE));
 		
-		writeD(_player.getInventory().getPaperdollItemId(Inventory.PAPERDOLL_DHAIR));
+		writeD(_player.getInventory().getPaperdollItemId(Inventory.PAPERDOLL_UNDER));
 		writeD(_player.getInventory().getPaperdollItemId(Inventory.PAPERDOLL_REAR));
 		writeD(_player.getInventory().getPaperdollItemId(Inventory.PAPERDOLL_LEAR));
 		writeD(_player.getInventory().getPaperdollItemId(Inventory.PAPERDOLL_NECK));
@@ -134,42 +132,7 @@ public class UserInfo extends GameServerPacket
 		writeD(_player.getInventory().getPaperdollItemId(Inventory.PAPERDOLL_BACK));
 		writeD(_player.getInventory().getPaperdollItemId(Inventory.PAPERDOLL_LRHAND));
 		writeD(_player.getInventory().getPaperdollItemId(Inventory.PAPERDOLL_HAIR));
-		writeD(_player.getInventory().getPaperdollItemId(Inventory.PAPERDOLL_FACE));
 		
-		// c6 new h's
-		writeH(0x00);
-		writeH(0x00);
-		writeH(0x00);
-		writeH(0x00);
-		writeH(0x00);
-		writeH(0x00);
-		writeH(0x00);
-		writeH(0x00);
-		writeH(0x00);
-		writeH(0x00);
-		writeH(0x00);
-		writeH(0x00);
-		writeH(0x00);
-		writeH(0x00);
-		writeD(_player.getInventory().getPaperdollAugmentationId(Inventory.PAPERDOLL_RHAND));
-		writeH(0x00);
-		writeH(0x00);
-		writeH(0x00);
-		writeH(0x00);
-		writeH(0x00);
-		writeH(0x00);
-		writeH(0x00);
-		writeH(0x00);
-		writeH(0x00);
-		writeH(0x00);
-		writeH(0x00);
-		writeH(0x00);
-		writeD(_player.getInventory().getPaperdollAugmentationId(Inventory.PAPERDOLL_LRHAND));
-		writeH(0x00);
-		writeH(0x00);
-		writeH(0x00);
-		writeH(0x00);
-		// end of c6 new h's
 		writeD(_player.getPAtk(null));
 		writeD(_player.getPAtkSpd());
 		writeD(_player.getPDef(null));
@@ -263,6 +226,16 @@ public class UserInfo extends GameServerPacket
 		
 		writeD(_player.getClanPrivileges());
 		
+		// C4 addition
+		writeD(0x00); // swim?
+		writeD(0x00);
+		writeD(0x00);
+		writeD(0x00);
+		writeD(0x00);
+		writeD(0x00);
+		writeD(0x00);
+		// C4 addition end
+		
 		writeH(_player.getRecomLeft()); // c2 recommendations remaining
 		writeH(_player.getRecomHave()); // c2 recommendations received
 		writeD(0x00); // _player.getMountNpcId() > 0 ? _player.getMountNpcId() + 1000000 : 0
@@ -297,21 +270,6 @@ public class UserInfo extends GameServerPacket
 		writeD(_player.getFishZ()); // fishing z
 		writeD(_player.getAppearance().getNameColor());
 		
-		// new c5
-		writeC(_player.isRunning() ? 0x01 : 0x00); // changes the Speed display on Status Window
-		
-		writeD(_player.getPledgeClass()); // changes the text above CP on Status Window
-		writeD(_player.getPledgeType());
-		
-		writeD(_player.getAppearance().getTitleColor());
-		
-		if (_player.isCursedWeaponEquiped())
-		{
-			writeD(CursedWeaponsManager.getInstance().getLevel(_player.getCursedWeaponEquipedId()));
-		}
-		else
-		{
-			writeD(0x00);
-		}
+		// Add heading?
 	}
 }

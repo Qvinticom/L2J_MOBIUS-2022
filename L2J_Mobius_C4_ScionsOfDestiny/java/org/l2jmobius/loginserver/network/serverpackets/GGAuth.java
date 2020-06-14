@@ -19,25 +19,19 @@ package org.l2jmobius.loginserver.network.serverpackets;
 /**
  * Fromat: d d: response
  */
-public class GGAuth extends LoginServerPacket
+public class GGAuth extends ServerBasePacket
 {
 	public static final int SKIP_GG_AUTH_REQUEST = 0x0b;
 	
-	private final int _response;
-	
 	public GGAuth(int response)
 	{
-		_response = response;
+		writeC(0x0b);
+		writeD(response);
 	}
 	
 	@Override
-	protected void write()
+	public byte[] getContent()
 	{
-		writeC(0x0b);
-		writeD(_response);
-		writeD(0x00);
-		writeD(0x00);
-		writeD(0x00);
-		writeD(0x00);
+		return getBytes();
 	}
 }

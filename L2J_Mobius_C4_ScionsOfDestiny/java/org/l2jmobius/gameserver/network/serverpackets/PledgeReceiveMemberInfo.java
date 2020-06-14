@@ -36,24 +36,40 @@ public class PledgeReceiveMemberInfo extends GameServerPacket
 	@Override
 	protected void writeImpl()
 	{
-		writeC(0xfe);
-		writeH(0x3d);
+		writeC(0x53);
+		writeD(_member.getClan().getClanId());
+		writeS(_member.getClan().getName());
+		writeS(_member.getClan().getLeaderName());
+		writeD(_member.getClan().getCrestId()); // crest id .. is used again
+		writeD(_member.getClan().getLevel());
+		writeD(_member.getClan().getHasCastle());
+		writeD(_member.getClan().getHasHideout());
+		writeD(0);
+		writeD(getClient().getPlayer().getLevel()); // ??
+		writeD(_member.getClan().getDissolvingExpiryTime() > System.currentTimeMillis() ? 3 : 0);
+		writeD(0);
 		
-		writeD(_member.getPledgeType());
-		writeS(_member.getName());
-		writeS(_member.getTitle()); // title
-		writeD(_member.getPowerGrade()); // power
+		writeD(_member.getClan().getAllyId());
+		writeS(_member.getClan().getAllyName());
+		writeD(_member.getClan().getAllyCrestId());
 		
-		// clan or subpledge name
-		if (_member.getPledgeType() != 0)
+		writeD(_member.getClan().isAtWar());// new c3
+		
+		writeD(_member.getClan().getMembers().length - 1);
+		for (ClanMember m : _member.getClan().getMembers())
 		{
-			writeS(_member.getClan().getSubPledge(_member.getPledgeType()).getName());
+			// TODO is this c4?
+			if (m.getObjectId() == getClient().getPlayer().getObjectId())
+			{
+				continue;
+			}
+			
+			writeS(m.getName());
+			writeD(m.getLevel());
+			writeD(m.getClassId());
+			writeD(0);
+			writeD(1);
+			writeD(m.isOnline() ? m.getObjectId() : 0); // 1=online 0=offline
 		}
-		else
-		{
-			writeS(_member.getClan().getName());
-		}
-		
-		writeS(_member.getApprenticeOrSponsorName()); // name of this member's apprentice/sponsor
 	}
 }

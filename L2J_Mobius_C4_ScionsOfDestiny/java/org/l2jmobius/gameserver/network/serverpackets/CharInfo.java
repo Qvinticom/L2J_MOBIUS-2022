@@ -20,7 +20,6 @@ import java.util.logging.Logger;
 
 import org.l2jmobius.Config;
 import org.l2jmobius.gameserver.datatables.sql.NpcTable;
-import org.l2jmobius.gameserver.instancemanager.CursedWeaponsManager;
 import org.l2jmobius.gameserver.model.actor.Creature;
 import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
 import org.l2jmobius.gameserver.model.actor.templates.NpcTemplate;
@@ -185,7 +184,7 @@ public class CharInfo extends GameServerPacket
 				writeD(_player.getBaseClass());
 			}
 			
-			writeD(_inv.getPaperdollItemId(Inventory.PAPERDOLL_DHAIR));
+			writeD(0x00);
 			writeD(_inv.getPaperdollItemId(Inventory.PAPERDOLL_HEAD));
 			writeD(_inv.getPaperdollItemId(Inventory.PAPERDOLL_RHAND));
 			writeD(_inv.getPaperdollItemId(Inventory.PAPERDOLL_LHAND));
@@ -196,31 +195,6 @@ public class CharInfo extends GameServerPacket
 			writeD(_inv.getPaperdollItemId(Inventory.PAPERDOLL_BACK));
 			writeD(_inv.getPaperdollItemId(Inventory.PAPERDOLL_LRHAND));
 			writeD(_inv.getPaperdollItemId(Inventory.PAPERDOLL_HAIR));
-			writeD(_inv.getPaperdollItemId(Inventory.PAPERDOLL_FACE));
-			
-			// c6 new h's
-			writeH(0x00);
-			writeH(0x00);
-			writeH(0x00);
-			writeH(0x00);
-			writeD(_inv.getPaperdollAugmentationId(Inventory.PAPERDOLL_RHAND));
-			writeH(0x00);
-			writeH(0x00);
-			writeH(0x00);
-			writeH(0x00);
-			writeH(0x00);
-			writeH(0x00);
-			writeH(0x00);
-			writeH(0x00);
-			writeH(0x00);
-			writeH(0x00);
-			writeH(0x00);
-			writeH(0x00);
-			writeD(_inv.getPaperdollAugmentationId(Inventory.PAPERDOLL_LRHAND));
-			writeH(0x00);
-			writeH(0x00);
-			writeH(0x00);
-			writeH(0x00);
 			
 			writeD(_player.getPvpFlag());
 			writeD(_player.getKarma());
@@ -329,22 +303,6 @@ public class CharInfo extends GameServerPacket
 			writeD(_player.getFishZ());
 			
 			writeD(_player.getAppearance().getNameColor());
-			
-			writeD(_heading);
-			
-			writeD(_player.getPledgeClass());
-			writeD(_player.getPledgeType());
-			
-			writeD(_player.getAppearance().getTitleColor());
-			
-			if (_player.isCursedWeaponEquiped())
-			{
-				writeD(CursedWeaponsManager.getInstance().getLevel(_player.getCursedWeaponEquipedId()));
-			}
-			else
-			{
-				writeD(0x00);
-			}
 		}
 	}
 }

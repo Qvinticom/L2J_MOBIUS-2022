@@ -30,7 +30,6 @@ import org.l2jmobius.gameserver.handler.admincommandhandlers.AdminCache;
 import org.l2jmobius.gameserver.handler.admincommandhandlers.AdminChangeAccessLevel;
 import org.l2jmobius.gameserver.handler.admincommandhandlers.AdminChristmas;
 import org.l2jmobius.gameserver.handler.admincommandhandlers.AdminCreateItem;
-import org.l2jmobius.gameserver.handler.admincommandhandlers.AdminCursedWeapons;
 import org.l2jmobius.gameserver.handler.admincommandhandlers.AdminDMEngine;
 import org.l2jmobius.gameserver.handler.admincommandhandlers.AdminDelete;
 import org.l2jmobius.gameserver.handler.admincommandhandlers.AdminDestroyItems;
@@ -111,7 +110,6 @@ public class AdminCommandHandler
 		registerAdminCommandHandler(new AdminChristmas());
 		registerAdminCommandHandler(new AdminCreateItem());
 		registerAdminCommandHandler(new AdminCTFEngine());
-		registerAdminCommandHandler(new AdminCursedWeapons());
 		registerAdminCommandHandler(new AdminDelete());
 		registerAdminCommandHandler(new AdminDestroyItems());
 		registerAdminCommandHandler(new AdminDMEngine());

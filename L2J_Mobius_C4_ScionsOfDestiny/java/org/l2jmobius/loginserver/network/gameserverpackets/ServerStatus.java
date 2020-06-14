@@ -19,13 +19,11 @@ package org.l2jmobius.loginserver.network.gameserverpackets;
 import java.util.logging.Logger;
 
 import org.l2jmobius.loginserver.GameServerTable;
-import org.l2jmobius.loginserver.GameServerTable.GameServerInfo;
-import org.l2jmobius.loginserver.network.clientpackets.ClientBasePacket;
 
 /**
  * @author -Wooden-
  */
-public class ServerStatus extends ClientBasePacket
+public class ServerStatus extends GameServerBasePacket
 {
 	protected static final Logger LOGGER = Logger.getLogger(ServerStatus.class.getName());
 	
@@ -62,43 +60,58 @@ public class ServerStatus extends ClientBasePacket
 	public ServerStatus(byte[] decrypt, int serverId)
 	{
 		super(decrypt);
-		
-		final GameServerInfo gsi = GameServerTable.getInstance().getRegisteredGameServerById(serverId);
-		if (gsi != null)
+		final int size = readD();
+		for (int i = 0; i < size; i++)
 		{
-			final int size = readD();
-			for (int i = 0; i < size; i++)
+			final int type = readD();
+			final int value = readD();
+			switch (type)
 			{
-				final int type = readD();
-				final int value = readD();
-				
-				switch (type)
+				case SERVER_LIST_STATUS:
 				{
-					case SERVER_LIST_STATUS:
+					GameServerTable.getInstance().setStatus(value, serverId);
+					break;
+				}
+				case SERVER_LIST_CLOCK:
+				{
+					if (value == ON)
 					{
-						gsi.setStatus(value);
-						break;
+						GameServerTable.getInstance().setClock(true, serverId);
 					}
-					case SERVER_LIST_CLOCK:
+					else
 					{
-						gsi.setShowingClock(value == ON);
-						break;
+						GameServerTable.getInstance().setClock(false, serverId);
 					}
-					case SERVER_LIST_SQUARE_BRACKET:
+					break;
+				}
+				case SERVER_LIST_SQUARE_BRACKET:
+				{
+					if (value == ON)
 					{
-						gsi.setShowingBrackets(value == ON);
-						break;
+						GameServerTable.getInstance().setBracket(true, serverId);
 					}
-					case TEST_SERVER:
+					else
 					{
-						gsi.setTestServer(value == ON);
-						break;
+						GameServerTable.getInstance().setBracket(false, serverId);
 					}
-					case MAX_PLAYERS:
+					break;
+				}
+				case TEST_SERVER:
+				{
+					if (value == ON)
 					{
-						gsi.setMaxPlayers(value);
-						break;
+						GameServerTable.getInstance().setTestServer(true, serverId);
 					}
+					else
+					{
+						GameServerTable.getInstance().setTestServer(false, serverId);
+					}
+					break;
+				}
+				case MAX_PLAYERS:
+				{
+					GameServerTable.getInstance().setMaxPlayers(value, serverId);
+					break;
 				}
 			}
 		}

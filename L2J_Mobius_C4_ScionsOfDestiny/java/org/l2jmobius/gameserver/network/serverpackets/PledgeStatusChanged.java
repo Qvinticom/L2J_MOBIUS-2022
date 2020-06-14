@@ -40,7 +40,5 @@ public class PledgeStatusChanged extends GameServerPacket
 		writeD(0);
 		writeD(_clan.getLevel());
 		writeD(0);
-		writeD(0);
-		writeD(0);
 	}
 }

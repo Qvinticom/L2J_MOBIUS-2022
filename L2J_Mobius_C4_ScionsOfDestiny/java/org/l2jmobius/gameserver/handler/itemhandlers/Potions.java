@@ -238,7 +238,7 @@ public class Potions implements IItemHandler
 				return;
 			}
 			
-			if (!Config.ALLOW_POTS_IN_PVP && (activeChar.isInDuel() || (activeChar.getPvpFlag() != 0)))
+			if (!Config.ALLOW_POTS_IN_PVP && (activeChar.getPvpFlag() != 0))
 			{
 				activeChar.sendMessage("You Cannot Use Potions In PvP!");
 				return;

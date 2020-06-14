@@ -32,7 +32,6 @@ import org.l2jmobius.gameserver.model.actor.Playable;
 import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
 import org.l2jmobius.gameserver.model.zone.ZoneId;
 import org.l2jmobius.gameserver.model.zone.ZoneType;
-import org.l2jmobius.gameserver.network.serverpackets.EtcStatusUpdate;
 
 /**
  * another type of damage zone with skills
@@ -143,7 +142,6 @@ public class EffectZone extends ZoneType
 		if ((creature instanceof PlayerInstance) && _isShowDangerIcon)
 		{
 			creature.setInsideZone(ZoneId.DANGER_AREA, true);
-			creature.sendPacket(new EtcStatusUpdate((PlayerInstance) creature));
 		}
 	}
 	
@@ -153,10 +151,6 @@ public class EffectZone extends ZoneType
 		if ((creature instanceof PlayerInstance) && _isShowDangerIcon)
 		{
 			creature.setInsideZone(ZoneId.DANGER_AREA, false);
-			if (!creature.isInsideZone(ZoneId.DANGER_AREA))
-			{
-				creature.sendPacket(new EtcStatusUpdate((PlayerInstance) creature));
-			}
 		}
 		
 		if (getCharactersInside().isEmpty() && (_task != null))

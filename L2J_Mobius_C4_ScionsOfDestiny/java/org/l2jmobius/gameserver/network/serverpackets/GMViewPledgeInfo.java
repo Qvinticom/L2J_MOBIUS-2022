@@ -16,7 +16,6 @@
  */
 package org.l2jmobius.gameserver.network.serverpackets;
 
-import org.l2jmobius.gameserver.datatables.sql.ClanTable;
 import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
 import org.l2jmobius.gameserver.model.clan.Clan;
 import org.l2jmobius.gameserver.model.clan.ClanMember;
@@ -39,20 +38,18 @@ public class GMViewPledgeInfo extends GameServerPacket
 	@Override
 	protected final void writeImpl()
 	{
-		final int TOP = ClanTable.getInstance().getTopRate(_clan.getClanId());
 		writeC(0x90);
 		writeS(_player.getName());
 		writeD(_clan.getClanId());
-		writeD(0x00);
 		writeS(_clan.getName());
 		writeS(_clan.getLeaderName());
 		writeD(_clan.getCrestId()); // -> no, it's no longer used (nuocnam) fix by game
 		writeD(_clan.getLevel());
 		writeD(_clan.getHasCastle());
 		writeD(_clan.getHasHideout());
-		writeD(TOP);
-		writeD(_clan.getReputationScore());
 		writeD(0);
+		writeD(_player.getLevel());
+		writeD(_clan.getDissolvingExpiryTime() > System.currentTimeMillis() ? 3 : 0);
 		writeD(0);
 		
 		writeD(_clan.getAllyId()); // c2
@@ -60,18 +57,17 @@ public class GMViewPledgeInfo extends GameServerPacket
 		writeD(_clan.getAllyCrestId()); // c2
 		writeD(_clan.isAtWar()); // c3
 		
-		final ClanMember[] members = _clan.getMembers();
+		ClanMember[] members = _clan.getMembers();
 		writeD(members.length);
 		
-		for (ClanMember member : members)
+		for (ClanMember m : members)
 		{
-			writeS(member.getName());
-			writeD(member.getLevel());
-			writeD(member.getClassId());
+			writeS(m.getName());
+			writeD(m.getLevel());
+			writeD(m.getClassId());
 			writeD(0);
 			writeD(1);
-			writeD(member.isOnline() ? member.getObjectId() : 0);
-			writeD(0);
+			writeD(m.isOnline() ? m.getObjectId() : 0);
 		}
 	}
 }

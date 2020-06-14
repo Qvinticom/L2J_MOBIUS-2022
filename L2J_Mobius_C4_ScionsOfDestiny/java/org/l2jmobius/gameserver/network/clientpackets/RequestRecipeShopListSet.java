@@ -21,7 +21,6 @@ import org.l2jmobius.gameserver.model.ManufactureItem;
 import org.l2jmobius.gameserver.model.ManufactureList;
 import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
 import org.l2jmobius.gameserver.model.zone.ZoneId;
-import org.l2jmobius.gameserver.network.SystemMessageId;
 import org.l2jmobius.gameserver.network.serverpackets.ActionFailed;
 import org.l2jmobius.gameserver.network.serverpackets.RecipeShopMsg;
 
@@ -55,13 +54,6 @@ public class RequestRecipeShopListSet extends GameClientPacket
 		final PlayerInstance player = getClient().getPlayer();
 		if (player == null)
 		{
-			return;
-		}
-		
-		if (player.isInDuel())
-		{
-			player.sendPacket(SystemMessageId.WHILE_YOU_ARE_ENGAGED_IN_COMBAT_YOU_CANNOT_OPERATE_A_PRIVATE_STORE_OR_PRIVATE_WORKSHOP);
-			player.sendPacket(ActionFailed.STATIC_PACKET);
 			return;
 		}
 		

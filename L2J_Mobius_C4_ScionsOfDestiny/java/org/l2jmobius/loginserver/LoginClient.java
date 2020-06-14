@@ -16,34 +16,33 @@
  */
 package org.l2jmobius.loginserver;
 
+import java.io.BufferedOutputStream;
 import java.io.IOException;
-import java.net.InetAddress;
-import java.nio.ByteBuffer;
+import java.io.InputStream;
+import java.io.OutputStream;
+import java.net.Socket;
+import java.net.SocketException;
 import java.security.interfaces.RSAPrivateKey;
+import java.util.logging.Level;
 import java.util.logging.Logger;
 
 import org.l2jmobius.Config;
-import org.l2jmobius.commons.crypt.LoginCrypt;
-import org.l2jmobius.commons.crypt.ScrambledKeyPair;
-import org.l2jmobius.commons.mmocore.MMOClient;
-import org.l2jmobius.commons.mmocore.MMOConnection;
-import org.l2jmobius.commons.mmocore.SendablePacket;
+import org.l2jmobius.commons.crypt.NewCrypt;
 import org.l2jmobius.commons.util.Rnd;
-import org.l2jmobius.loginserver.network.serverpackets.LoginFail;
-import org.l2jmobius.loginserver.network.serverpackets.LoginFail.LoginFailReason;
-import org.l2jmobius.loginserver.network.serverpackets.LoginServerPacket;
-import org.l2jmobius.loginserver.network.serverpackets.PlayFail;
-import org.l2jmobius.loginserver.network.serverpackets.PlayFail.PlayFailReason;
+import org.l2jmobius.loginserver.LoginController.ScrambledKeyPair;
+import org.l2jmobius.loginserver.network.clientpackets.ClientBasePacket;
+import org.l2jmobius.loginserver.network.serverpackets.Init;
+import org.l2jmobius.loginserver.network.serverpackets.ServerBasePacket;
 
 /**
- * Represents a client connected into the LoginServer
- * @author KenM
+ * This class ...
+ * @version $Revision: 1.15.2.5.2.5 $ $Date: 2005/04/06 16:13:46 $
  */
-public class LoginClient extends MMOClient<MMOConnection<LoginClient>>
+public class LoginClient extends Thread
 {
-	private static final Logger LOGGER = Logger.getLogger(LoginClient.class.getName());
+	private final static Logger LOGGER = Logger.getLogger(LoginClient.class.getName());
 	
-	public enum LoginClientState
+	public static enum LoginClientState
 	{
 		CONNECTED,
 		AUTHED_GG,
@@ -52,112 +51,175 @@ public class LoginClient extends MMOClient<MMOConnection<LoginClient>>
 	
 	private LoginClientState _state;
 	
-	// Crypt
-	private final LoginCrypt _loginCrypt;
-	private final ScrambledKeyPair _scrambledPair;
-	private final byte[] _blowfishKey;
+	private InputStream _in = null;
+	private OutputStream _out = null;
+	private final NewCrypt _crypt;
+	private final Socket _csocket;
 	
-	private String _account = "";
-	private int _accessLevel;
-	private int _lastServer;
-	private boolean _usesInternalIP;
+	private final ScrambledKeyPair _scrambledPair;
 	private SessionKey _sessionKey;
 	private final int _sessionId;
-	private boolean _joinedGS;
-	private final String _ip;
-	private long _connectionStartTime;
 	
-	/**
-	 * @param con
-	 */
-	public LoginClient(MMOConnection<LoginClient> con)
+	private boolean _hasAgreed;
+	
+	private String _account;
+	private int _accessLevel;
+	private int _lastServer;
+	
+	public LoginClient(Socket client)
 	{
-		super(con);
+		super("Login Client " + client.getInetAddress());
+		setDaemon(true);
+		
 		_state = LoginClientState.CONNECTED;
-		final String ip = getConnection().getInetAddress().getHostAddress();
-		_ip = ip;
-		final String[] localip = Config.NETWORK_IP_LIST.split(";");
-		for (String oneIp : localip)
-		{
-			if (ip.startsWith(oneIp) || ip.startsWith("127.0"))
-			{
-				_usesInternalIP = true;
-			}
-		}
+		_csocket = client;
 		
 		_scrambledPair = LoginController.getInstance().getScrambledRSAKeyPair();
-		_blowfishKey = LoginController.getInstance().getBlowfishKey();
-		_sessionId = Rnd.get(Integer.MAX_VALUE);
-		_connectionStartTime = System.currentTimeMillis();
-		_loginCrypt = new LoginCrypt();
-		_loginCrypt.setKey(_blowfishKey);
-		LoginController.getInstance().addLoginClient(this);
-		// This checkup must go next to BAN because it can cause decrease ban account time
-		if (!BruteProtector.canLogin(ip))
-		{
-			LoginController.getInstance().addBanForAddress(getConnection().getInetAddress(), Config.BRUT_BAN_IP_TIME * 1000);
-			LOGGER.warning("Drop connection from IP " + ip + " because of BruteForce.");
-		}
-		// Closer.getInstance().add(this);
-	}
-	
-	public String getIntetAddress()
-	{
-		return _ip;
-	}
-	
-	public boolean usesInternalIP()
-	{
-		return _usesInternalIP;
-	}
-	
-	@Override
-	public boolean decrypt(ByteBuffer buf, int size)
-	{
-		boolean ret = false;
+		_sessionId = Rnd.nextInt();
+		
+		_crypt = new NewCrypt("_;5.]94-31==-%xT!^[$\000");
+		
+		_hasAgreed = false;
+		
 		try
 		{
-			ret = _loginCrypt.decrypt(buf.array(), buf.position(), size);
-			_connectionStartTime = System.currentTimeMillis();
+			_in = client.getInputStream();
+			_out = new BufferedOutputStream(client.getOutputStream());
+			
+			// ensure that no errors occured and start thread
+			start();
 		}
 		catch (IOException e)
 		{
-			LOGGER.warning(e.toString());
-			super.getConnection().close((SendablePacket<LoginClient>) null);
-			return false;
+			try
+			{
+				client.close();
+			}
+			catch (IOException e1)
+			{
+			}
 		}
-		
-		if (!ret)
-		{
-			final byte[] dump = new byte[size];
-			System.arraycopy(buf.array(), buf.position(), dump, 0, size);
-			LOGGER.warning("Wrong checksum from client: " + this);
-			super.getConnection().close((SendablePacket<LoginClient>) null);
-		}
-		
-		return ret;
 	}
 	
 	@Override
-	public boolean encrypt(ByteBuffer buf, int sizeValue)
+	public void run()
 	{
-		final int offset = buf.position();
-		int size = sizeValue;
+		int lengthHi = 0;
+		int lengthLo = 0;
+		int length = 0;
+		boolean checksumOk = false;
+		
 		try
 		{
-			size = _loginCrypt.encrypt(buf.array(), offset, size);
+			// initialize client
+			sendPacket(new Init(this));
+			
+			while (true)
+			{
+				lengthLo = _in.read();
+				lengthHi = _in.read();
+				length = (lengthHi * 256) + lengthLo;
+				
+				if (length < 2)
+				{
+					LOGGER.finer("LoginServer: Client terminated the connection or sent illegal packet size.");
+					break;
+				}
+				
+				final byte[] incoming = new byte[length];
+				incoming[0] = (byte) lengthLo;
+				incoming[1] = (byte) lengthHi;
+				
+				int receivedBytes = 0;
+				int newBytes = 0;
+				while ((newBytes != -1) && (receivedBytes < (length - 2)))
+				{
+					newBytes = _in.read(incoming, 2, length - 2);
+					receivedBytes = receivedBytes + newBytes;
+				}
+				
+				if (receivedBytes != (length - 2))
+				{
+					LOGGER.warning("Incomplete Packet is sent to the server, closing connection.");
+					break;
+				}
+				
+				byte[] decrypt = new byte[length - 2];
+				System.arraycopy(incoming, 2, decrypt, 0, decrypt.length);
+				// decrypt if we have a key
+				_crypt.decrypt(decrypt, 0, decrypt.length);
+				checksumOk = NewCrypt.verifyChecksum(decrypt);
+				
+				if (!checksumOk)
+				{
+					LOGGER.warning("Client is not using latest Authentication method. (Min is " + Config.MIN_PROTOCOL_REVISION + ")");
+					break;
+				}
+				
+				// Execute client packet.
+				final ClientBasePacket packet = LoginPacketHandler.handlePacket(decrypt, this);
+				if (packet != null)
+				{
+					LoginServer.getInstance().execute(packet);
+				}
+			}
+		}
+		catch (SocketException e)
+		{
+			LOGGER.fine("Connection closed unexpectedly.");
+		}
+		catch (Exception e)
+		{
+			LOGGER.log(Level.INFO, "", e);
+		}
+		finally
+		{
+			LoginServer.getInstance().removeFloodProtection(_csocket.getInetAddress().getHostAddress());
+			
+			try
+			{
+				_csocket.close();
+			}
+			catch (Exception e1)
+			{
+				// ignore problems
+			}
+			
+			if (_account != null)
+			{
+				LoginController.getInstance().removeLoginClient(_account);
+				_account = null;
+			}
+		}
+	}
+	
+	/**
+	 * @param sl
+	 */
+	public void sendPacket(ServerBasePacket sl)
+	{
+		try
+		{
+			byte[] data = sl.getContent();
+			
+			if (!(sl instanceof Init))
+			{
+				NewCrypt.appendChecksum(data);
+				_crypt.crypt(data, 0, data.length);
+			}
+			
+			final int len = data.length + 2;
+			_out.write(len & 0xff);
+			_out.write((len >> 8) & 0xff);
+			_out.write(data);
+			_out.flush();
 		}
 		catch (IOException e)
 		{
-			LOGGER.warning(e.toString());
-			return false;
 		}
-		
-		buf.position(offset + size);
-		return true;
 	}
 	
-	public LoginClientState getState()
+	public LoginClientState getClientState()
 	{
 		return _state;
 	}
@@ -167,19 +229,34 @@ public class LoginClient extends MMOClient<MMOConnection<LoginClient>>
 		_state = state;
 	}
 	
-	public byte[] getBlowfishKey()
+	public Socket getSocket()
 	{
-		return _blowfishKey;
+		return _csocket;
 	}
 	
-	public byte[] getScrambledModulus()
+	public void setHasAgreed(boolean ag)
 	{
-		return _scrambledPair._scrambledModulus;
+		_hasAgreed = ag;
 	}
 	
-	public RSAPrivateKey getRSAPrivateKey()
+	public boolean hasAgreed()
 	{
-		return (RSAPrivateKey) _scrambledPair._pair.getPrivate();
+		return _hasAgreed;
+	}
+	
+	public int getSessionId()
+	{
+		return _sessionId;
+	}
+	
+	public void setSessionKey(SessionKey sessionKey)
+	{
+		_sessionKey = sessionKey;
+	}
+	
+	public SessionKey getSessionKey()
+	{
+		return _sessionKey;
 	}
 	
 	public String getAccount()
@@ -212,80 +289,13 @@ public class LoginClient extends MMOClient<MMOConnection<LoginClient>>
 		return _lastServer;
 	}
 	
-	public int getSessionId()
+	public byte[] getScrambledModulus()
 	{
-		return _sessionId;
+		return _scrambledPair._scrambledModulus;
 	}
 	
-	public boolean hasJoinedGS()
+	public RSAPrivateKey getPrivateKey()
 	{
-		return _joinedGS;
-	}
-	
-	public void setJoinedGS(boolean value)
-	{
-		_joinedGS = value;
-	}
-	
-	public void setSessionKey(SessionKey sessionKey)
-	{
-		_sessionKey = sessionKey;
-	}
-	
-	public SessionKey getSessionKey()
-	{
-		return _sessionKey;
-	}
-	
-	public long getConnectionStartTime()
-	{
-		return _connectionStartTime;
-	}
-	
-	public void sendPacket(LoginServerPacket lsp)
-	{
-		getConnection().sendPacket(lsp);
-	}
-	
-	public void close(LoginFailReason reason)
-	{
-		getConnection().close(new LoginFail(reason));
-	}
-	
-	public void close(PlayFailReason reason)
-	{
-		getConnection().close(new PlayFail(reason));
-	}
-	
-	public void close(LoginServerPacket lsp)
-	{
-		getConnection().close(lsp);
-	}
-	
-	@Override
-	public void onDisconnection()
-	{
-		LoginController.getInstance().removeLoginClient(this);
-		if (!_joinedGS && (_account != null))
-		{
-			LoginController.getInstance().removeAuthedLoginClient(getAccount());
-		}
-	}
-	
-	@Override
-	public String toString()
-	{
-		final InetAddress address = getConnection().getInetAddress();
-		if (_state == LoginClientState.AUTHED_LOGIN)
-		{
-			return "[" + _account + " (" + (address == null ? "disconnected" : address.getHostAddress()) + ")]";
-		}
-		return "[" + (address == null ? "disconnected" : address.getHostAddress()) + "]";
-	}
-	
-	@Override
-	protected void onForcedDisconnection()
-	{
-		// Empty
+		return (RSAPrivateKey) _scrambledPair._pair.getPrivate();
 	}
 }

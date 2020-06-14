@@ -88,11 +88,6 @@ public class FarmPvpCmd implements IVoicedCommandHandler
 			activeChar.sendMessage("Sorry, you are in an event.");
 			return false;
 		}
-		else if (activeChar.isInDuel())
-		{
-			activeChar.sendMessage("Sorry, you are in a duel!");
-			return false;
-		}
 		else if (activeChar.inObserverMode())
 		{
 			activeChar.sendMessage("Sorry, you are in the observation mode.");
