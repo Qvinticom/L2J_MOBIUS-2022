@@ -124,7 +124,7 @@ public class DoorData implements IXmlReader
 			final int nodeX = set.getInt("nodeX_0");
 			final int nodeY = set.getInt("nodeY_0");
 			final int posX = set.getInt("nodeX_1");
-			final int posY = set.getInt("nodeX_1");
+			final int posY = set.getInt("nodeY_1");
 			int collisionRadius; // (max) radius for movement checks
 			collisionRadius = Math.min(Math.abs(nodeX - posX), Math.abs(nodeY - posY));
 			if (collisionRadius < 20)
