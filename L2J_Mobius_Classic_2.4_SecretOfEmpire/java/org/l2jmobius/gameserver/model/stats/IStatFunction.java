@@ -92,7 +92,7 @@ public interface IStatFunction
 			final Inventory inv = creature.getInventory();
 			if (inv != null)
 			{
-				for (ItemInstance item : inv.getPaperdollItems(ItemInstance::isEquipped))
+				for (ItemInstance item : inv.getPaperdollItems())
 				{
 					baseValue += item.getItem().getStats(stat, 0);
 				}
@@ -110,7 +110,7 @@ public interface IStatFunction
 		}
 		
 		double value = 0;
-		for (ItemInstance equippedItem : creature.getInventory().getPaperdollItems(ItemInstance::isEquipped, ItemInstance::isEnchanted))
+		for (ItemInstance equippedItem : creature.getInventory().getPaperdollItems(ItemInstance::isEnchanted))
 		{
 			final Item item = equippedItem.getItem();
 			final long bodypart = item.getBodyPart();

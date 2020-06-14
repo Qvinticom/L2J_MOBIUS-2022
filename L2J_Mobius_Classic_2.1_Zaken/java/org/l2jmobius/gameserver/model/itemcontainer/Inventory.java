@@ -20,9 +20,7 @@ import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.util.ArrayList;
-import java.util.Arrays;
 import java.util.Collection;
-import java.util.LinkedList;
 import java.util.List;
 import java.util.Objects;
 import java.util.Set;
@@ -31,7 +29,6 @@ import java.util.function.Function;
 import java.util.function.Predicate;
 import java.util.logging.Level;
 import java.util.logging.Logger;
-import java.util.stream.Collectors;
 
 import org.l2jmobius.Config;
 import org.l2jmobius.commons.database.DatabaseFactory;
@@ -2210,17 +2207,35 @@ public abstract class Inventory extends ItemContainer
 		{
 			filter = filter.and(additionalFilter);
 		}
-		return Arrays.stream(_paperdoll).filter(filter).collect(Collectors.toCollection(LinkedList::new));
+		
+		final List<ItemInstance> items = new ArrayList<>();
+		for (ItemInstance item : _paperdoll)
+		{
+			if (filter.test(item))
+			{
+				items.add(item);
+			}
+		}
+		return items;
 	}
 	
 	@SafeVarargs
-	public final long getPaperdollItemCount(Predicate<ItemInstance>... filters)
+	public final int getPaperdollItemCount(Predicate<ItemInstance>... filters)
 	{
 		Predicate<ItemInstance> filter = Objects::nonNull;
 		for (Predicate<ItemInstance> additionalFilter : filters)
 		{
 			filter = filter.and(additionalFilter);
 		}
-		return Arrays.stream(_paperdoll).filter(filter).count();
+		
+		int count = 0;
+		for (ItemInstance item : _paperdoll)
+		{
+			if (filter.test(item))
+			{
+				count++;
+			}
+		}
+		return count;
 	}
 }

@@ -19,7 +19,7 @@ package org.l2jmobius.gameserver.model.items;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.Collection;
-import java.util.Collections;
+import java.util.EnumMap;
 import java.util.LinkedHashMap;
 import java.util.List;
 import java.util.Map;
@@ -162,7 +162,7 @@ public abstract class Item extends ListenersContainer implements IIdentifiable
 	protected int _type1; // needed for item list (inventory)
 	protected int _type2; // different lists for armor, weapon, etc
 	private Map<AttributeType, AttributeHolder> _elementals = null;
-	protected List<FuncTemplate> _funcTemplates;
+	protected Map<Stat, FuncTemplate> _funcTemplates;
 	protected List<Condition> _preConditions;
 	private List<ItemSkillHolder> _skills;
 	
@@ -673,11 +673,6 @@ public abstract class Item extends ListenersContainer implements IIdentifiable
 		return getItemType() == EtcItemType.SCROLL;
 	}
 	
-	public List<FuncTemplate> getFunctionTemplates()
-	{
-		return _funcTemplates != null ? _funcTemplates : Collections.emptyList();
-	}
-	
 	/**
 	 * Add the FuncTemplate f to the list of functions used with the item
 	 * @param template : FuncTemplate to add
@@ -726,9 +721,12 @@ public abstract class Item extends ListenersContainer implements IIdentifiable
 		
 		if (_funcTemplates == null)
 		{
-			_funcTemplates = new ArrayList<>();
+			_funcTemplates = new EnumMap<>(Stat.class);
 		}
-		_funcTemplates.add(template);
+		if (_funcTemplates.put(template.getStat(), template) != null)
+		{
+			LOGGER.warning("Item with id " + _itemId + " has 2 func templates with same stat: " + template.getStat());
+		}
 	}
 	
 	public void attachCondition(Condition c)
@@ -1018,8 +1016,8 @@ public abstract class Item extends ListenersContainer implements IIdentifiable
 	{
 		if (_funcTemplates != null)
 		{
-			final FuncTemplate template = _funcTemplates.stream().filter(func -> (func.getStat() == stat) && ((func.getFunctionClass() == FuncAdd.class) || (func.getFunctionClass() == FuncSet.class))).findFirst().orElse(null);
-			if (template != null)
+			final FuncTemplate template = _funcTemplates.get(stat);
+			if ((template != null) && ((template.getFunctionClass() == FuncAdd.class) || (template.getFunctionClass() == FuncSet.class)))
 			{
 				return template.getValue();
 			}
