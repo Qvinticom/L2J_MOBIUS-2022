@@ -67,7 +67,7 @@ Recording Gameplay.
 Community Clan search.
 
 Chronicle 5: http://legacy.lineage2.com/news/chronicle5_01.html
-Territories: The Pagan Temple, The Stakato Nest, The Monastery of Silence, The Frozen Labyrinth, The Den of Evil, The Plunderous Plains, The Ice Queen's Castle, The Crypts of Disgrace, The Pavel Ruins
+Removed - Territories: The Pagan Temple, The Stakato Nest, The Monastery of Silence, The Frozen Labyrinth, The Den of Evil, The Plunderous Plains, The Ice Queen's Castle, The Crypts of Disgrace, The Pavel Ruins
 Removed - Rune Castle's Benom.
 Gatekeeper Ordinary, Noblesse, Clan Hall and Seven Signs Priest teleports.
 Removed - Frintezza raid.
