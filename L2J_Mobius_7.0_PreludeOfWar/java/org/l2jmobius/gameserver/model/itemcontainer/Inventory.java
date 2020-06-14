@@ -1355,6 +1355,8 @@ public abstract class Inventory extends ItemContainer
 				item.updateDatabase();
 			}
 			
+			getOwner().getStat().recalculateStats(!getOwner().isPlayer());
+			
 			if (getOwner().isPlayer())
 			{
 				getOwner().sendPacket(new ExUserInfoEquipSlot(getOwner().getActingPlayer()));

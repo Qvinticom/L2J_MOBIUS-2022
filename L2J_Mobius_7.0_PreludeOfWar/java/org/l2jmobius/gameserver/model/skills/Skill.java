@@ -1375,7 +1375,7 @@ public class Skill implements IIdentifiable
 			}
 		}
 		
-		if (passive && checkConditions(SkillConditionScope.PASSIVE, effector, effector))
+		if (passive)
 		{
 			final BuffInfo info = new BuffInfo(effector, effector, this, true, item, null);
 			applyEffectScope(EffectScope.GENERAL, info, false, true);

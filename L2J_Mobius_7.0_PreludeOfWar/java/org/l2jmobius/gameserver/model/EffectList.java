@@ -922,12 +922,6 @@ public class EffectList
 			LOGGER.warning("Passive " + skill + " with abnormal type: " + skill.getAbnormalType() + "!");
 		}
 		
-		// Check for passive skill conditions.
-		if (!skill.checkCondition(info.getEffector(), info.getEffected(), true))
-		{
-			return;
-		}
-		
 		// Remove previous passives of this id.
 		_passives.stream().filter(Objects::nonNull).filter(b -> b.getSkill().getId() == skill.getId()).forEach(b ->
 		{
