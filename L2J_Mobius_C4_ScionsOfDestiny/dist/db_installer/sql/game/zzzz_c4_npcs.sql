@@ -6217,7 +6217,9 @@ UPDATE `npc` SET `idTemplate`='13252' WHERE `id`='18326' AND `type`<>'Pet';
 
 -- Use server side names and titles.
 UPDATE `npc` SET `serverSideName`='1' WHERE `id`<>`idTemplate` AND `type`<>'Pet';
+UPDATE `npc` SET `name`=' ' WHERE `serverSideName`='1' AND `name`='';
 UPDATE `npc` SET `serverSideTitle`='1' WHERE `id`<>`idTemplate` AND `type`<>'Pet';
+UPDATE `npc` SET `title`=' ' WHERE `serverSideTitle`='1' AND `title`='';
 
 -- Custom NPCs.
 UPDATE `custom_npc` SET `idTemplate`='8288' WHERE `id`='31288';
