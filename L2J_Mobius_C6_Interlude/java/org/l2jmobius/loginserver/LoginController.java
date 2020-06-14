@@ -143,7 +143,7 @@ public class LoginController
 			_keyPairs[i] = new ScrambledKeyPair(keygen.generateKeyPair());
 		}
 		
-		LOGGER.info("Cached 10 KeyPairs for RSA communication");
+		LOGGER.info("Cached 10 KeyPairs for RSA communication.");
 		testCipher((RSAPrivateKey) _keyPairs[0]._pair.getPrivate());
 		
 		// Store keys for blowfish communication
@@ -182,7 +182,7 @@ public class LoginController
 				_blowfishKeys[i][j] = (byte) (Rnd.get(255) + 1);
 			}
 		}
-		LOGGER.info("Stored " + _blowfishKeys.length + " keys for Blowfish communication");
+		LOGGER.info("Stored " + _blowfishKeys.length + " keys for Blowfish communication.");
 	}
 	
 	/**
@@ -737,8 +737,7 @@ public class LoginController
 				_lastPassword = password;
 				_lastAttempTime = System.currentTimeMillis();
 			}
-			else
-			// trying the same password is not brute force
+			else // trying the same password is not brute force
 			{
 				_lastAttempTime = System.currentTimeMillis();
 			}

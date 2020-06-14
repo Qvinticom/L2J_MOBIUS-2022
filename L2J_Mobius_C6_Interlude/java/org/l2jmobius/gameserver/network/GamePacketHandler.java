@@ -51,11 +51,6 @@ public class GamePacketHandler implements IPacketHandler<GameClient>, IClientFac
 		}
 		
 		final int opcode = buf.get() & 0xFF;
-		int opcode2 = -1;
-		if ((opcode == 0xd0) && (buf.remaining() >= 2))
-		{
-			opcode2 = buf.getShort() & 0xffff;
-		}
 		
 		ReceivablePacket<GameClient> msg = null;
 		final ConnectionState state = client.getState();
@@ -1053,11 +1048,17 @@ public class GamePacketHandler implements IPacketHandler<GameClient>, IClientFac
 					}
 					case 0xd0:
 					{
-						if (opcode2 == -1)
+						int opcode2 = -1;
+						if (buf.remaining() >= 2)
 						{
-							LOGGER.warning("Client: " + client + " sent a 0xd0 without the second opcode.");
+							opcode2 = buf.getShort() & 0xffff;
+						}
+						else
+						{
+							LOGGER.warning("Client: " + client.toString() + " sent a 0xd0 without the second opcode.");
 							break;
 						}
+						
 						switch (opcode2)
 						{
 							case 1:

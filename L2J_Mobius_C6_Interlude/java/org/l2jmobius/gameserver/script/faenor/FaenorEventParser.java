@@ -37,7 +37,7 @@ import org.l2jmobius.gameserver.script.ScriptEngine;
  */
 public class FaenorEventParser extends FaenorParser
 {
-	static Logger _log = Logger.getLogger(FaenorEventParser.class.getName());
+	private static final Logger LOGGER = Logger.getLogger(FaenorEventParser.class.getName());
 	private DateRange _eventDates = null;
 	
 	@Override
@@ -49,13 +49,13 @@ public class FaenorEventParser extends FaenorParser
 		final Date currentDate = new Date();
 		if (_eventDates.getEndDate().before(currentDate))
 		{
-			_log.info("Event ID: (" + id + ") has passed... Ignored.");
+			LOGGER.info("Event ID: (" + id + ") has passed... Ignored.");
 			return;
 		}
 		
 		if (_eventDates.getStartDate().after(currentDate))
 		{
-			_log.info("Event ID: (" + id + ") is not active yet... Ignored.");
+			LOGGER.info("Event ID: (" + id + ") is not active yet... Ignored.");
 			ThreadPool.schedule(() -> parseEventDropAndMessage(eventNode), _eventDates.getStartDate().getTime() - currentDate.getTime());
 			return;
 		}
@@ -91,7 +91,7 @@ public class FaenorEventParser extends FaenorParser
 		}
 		catch (Exception e)
 		{
-			_log.log(Level.WARNING, "Error in event parser: " + e.getMessage());
+			LOGGER.log(Level.WARNING, "Error in event parser: " + e.getMessage());
 		}
 	}
 	
@@ -117,7 +117,7 @@ public class FaenorEventParser extends FaenorParser
 		}
 		catch (Exception e)
 		{
-			_log.log(Level.WARNING, "ERROR(parseEventDrop):" + e.getMessage());
+			LOGGER.log(Level.WARNING, "ERROR(parseEventDrop):" + e.getMessage());
 		}
 	}
 	

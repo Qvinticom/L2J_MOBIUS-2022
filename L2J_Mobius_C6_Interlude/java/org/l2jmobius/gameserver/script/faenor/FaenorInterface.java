@@ -33,7 +33,7 @@ import org.l2jmobius.gameserver.script.EventDroplist;
  */
 public class FaenorInterface implements EngineInterface
 {
-	protected static final Logger _log = Logger.getLogger(FaenorInterface.class.getName());
+	protected static final Logger LOGGER = Logger.getLogger(FaenorInterface.class.getName());
 	
 	public static FaenorInterface getInstance()
 	{

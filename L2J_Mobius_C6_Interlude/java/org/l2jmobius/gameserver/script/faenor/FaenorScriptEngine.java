@@ -39,7 +39,7 @@ import org.l2jmobius.gameserver.script.ScriptEngine;
  */
 public class FaenorScriptEngine extends ScriptEngine
 {
-	private static final Logger _log = Logger.getLogger(FaenorScriptEngine.class.getName());
+	private static final Logger LOGGER = Logger.getLogger(FaenorScriptEngine.class.getName());
 	public static final String PACKAGE_DIRECTORY = "data/faenor/";
 	
 	protected FaenorScriptEngine()
@@ -56,7 +56,7 @@ public class FaenorScriptEngine extends ScriptEngine
 				}
 				catch (IOException e)
 				{
-					_log.log(Level.WARNING, e.getMessage(), e);
+					LOGGER.log(Level.WARNING, e.getMessage(), e);
 				}
 			}
 		}
@@ -73,23 +73,23 @@ public class FaenorScriptEngine extends ScriptEngine
 		}
 		catch (ParserNotCreatedException e)
 		{
-			_log.log(Level.WARNING, "ERROR: No parser registered for Script: " + parserClass + ": " + e.getMessage());
+			LOGGER.log(Level.WARNING, "ERROR: No parser registered for Script: " + parserClass + ": " + e.getMessage());
 		}
 		
 		if (parser == null)
 		{
-			_log.warning("Unknown Script Type: " + script.getName());
+			LOGGER.warning("Unknown Script Type: " + script.getName());
 			return;
 		}
 		
 		try
 		{
 			parser.parseScript(node, context);
-			_log.info(getClass().getSimpleName() + ": Loaded  " + script.getName() + " successfully.");
+			LOGGER.info(getClass().getSimpleName() + ": Loaded  " + script.getName() + " successfully.");
 		}
 		catch (Exception e)
 		{
-			_log.log(Level.WARNING, "Script Parsing Failed: " + e.getMessage());
+			LOGGER.log(Level.WARNING, "Script Parsing Failed: " + e.getMessage());
 		}
 	}
 	

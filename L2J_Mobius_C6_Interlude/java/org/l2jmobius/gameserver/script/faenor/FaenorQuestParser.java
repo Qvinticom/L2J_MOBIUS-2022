@@ -31,7 +31,7 @@ import org.l2jmobius.gameserver.script.ScriptEngine;
  */
 public class FaenorQuestParser extends FaenorParser
 {
-	protected static final Logger _log = Logger.getLogger(FaenorQuestParser.class.getName());
+	protected static final Logger LOGGER = Logger.getLogger(FaenorQuestParser.class.getName());
 	
 	@Override
 	public void parseScript(Node questNode, ScriptContext context)

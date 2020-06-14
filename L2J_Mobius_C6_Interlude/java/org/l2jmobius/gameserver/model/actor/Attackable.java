@@ -1849,7 +1849,7 @@ public class Attackable extends NpcInstance
 						}
 						else if (!player.getInventory().validateCapacity(itemTemplate) || (!Config.AUTO_LOOT_BOSS && (this instanceof RaidBossInstance)) || (!Config.AUTO_LOOT_BOSS && (this instanceof GrandBossInstance)))
 						{
-							DropItem(player, item);
+							dropItem(player, item);
 						}
 						else
 						{
@@ -1858,7 +1858,7 @@ public class Attackable extends NpcInstance
 					}
 					else
 					{
-						DropItem(player, item); // drop the item on the ground
+						dropItem(player, item); // drop the item on the ground
 					}
 					
 					// Broadcast message if RaidBoss was defeated
@@ -1888,7 +1888,7 @@ public class Attackable extends NpcInstance
 				final Item itemTemplate = ItemTable.getInstance().getTemplate(item.getItemId());
 				if (!player.getInventory().validateCapacity(itemTemplate))
 				{
-					DropItem(player, item);
+					dropItem(player, item);
 				}
 				else
 				{
@@ -1897,7 +1897,7 @@ public class Attackable extends NpcInstance
 			}
 			else
 			{
-				DropItem(player, item);
+				dropItem(player, item);
 			}
 		}
 		
@@ -1919,7 +1919,7 @@ public class Attackable extends NpcInstance
 					final Item itemTemplate = ItemTable.getInstance().getTemplate(item.getItemId());
 					if (!player.getInventory().validateCapacity(itemTemplate))
 					{
-						DropItem(player, item);
+						dropItem(player, item);
 					}
 					else
 					{
@@ -1928,7 +1928,7 @@ public class Attackable extends NpcInstance
 				}
 				else
 				{
-					DropItem(player, item);
+					dropItem(player, item);
 				}
 				spec = true;
 			}
@@ -1963,7 +1963,7 @@ public class Attackable extends NpcInstance
 							final Item itemTemplate = ItemTable.getInstance().getTemplate(item.getItemId());
 							if (!player.getInventory().validateCapacity(itemTemplate))
 							{
-								DropItem(player, item);
+								dropItem(player, item);
 							}
 							else
 							{
@@ -1972,7 +1972,7 @@ public class Attackable extends NpcInstance
 						}
 						else
 						{
-							DropItem(player, item);
+							dropItem(player, item);
 						}
 						break;
 					}
@@ -1989,7 +1989,7 @@ public class Attackable extends NpcInstance
 					final Item itemTemplate = ItemTable.getInstance().getTemplate(item.getItemId());
 					if (!player.getInventory().validateCapacity(itemTemplate))
 					{
-						DropItem(player, item);
+						dropItem(player, item);
 					}
 					else
 					{
@@ -1998,7 +1998,7 @@ public class Attackable extends NpcInstance
 				}
 				else
 				{
-					DropItem(player, item);
+					dropItem(player, item);
 				}
 				spec = true;
 			}
@@ -2027,7 +2027,7 @@ public class Attackable extends NpcInstance
 							final Item itemTemplate = ItemTable.getInstance().getTemplate(item.getItemId());
 							if (!player.getInventory().validateCapacity(itemTemplate))
 							{
-								DropItem(player, item);
+								dropItem(player, item);
 							}
 							else
 							{
@@ -2036,7 +2036,7 @@ public class Attackable extends NpcInstance
 						}
 						else
 						{
-							DropItem(player, item);
+							dropItem(player, item);
 						}
 						break;
 					}
@@ -2053,7 +2053,7 @@ public class Attackable extends NpcInstance
 					final Item itemTemplate = ItemTable.getInstance().getTemplate(item.getItemId());
 					if (!player.getInventory().validateCapacity(itemTemplate))
 					{
-						DropItem(player, item);
+						dropItem(player, item);
 					}
 					else
 					{
@@ -2062,7 +2062,7 @@ public class Attackable extends NpcInstance
 				}
 				else
 				{
-					DropItem(player, item);
+					dropItem(player, item);
 				}
 				
 				mp = true;
@@ -2082,7 +2082,7 @@ public class Attackable extends NpcInstance
 						final Item itemTemplate = ItemTable.getInstance().getTemplate(item.getItemId());
 						if (!player.getInventory().validateCapacity(itemTemplate))
 						{
-							DropItem(player, item);
+							dropItem(player, item);
 						}
 						else
 						{
@@ -2091,7 +2091,7 @@ public class Attackable extends NpcInstance
 					}
 					else
 					{
-						DropItem(player, item);
+						dropItem(player, item);
 					}
 					hp = true;
 				}
@@ -2107,7 +2107,7 @@ public class Attackable extends NpcInstance
 						final Item itemTemplate = ItemTable.getInstance().getTemplate(item.getItemId());
 						if (!player.getInventory().validateCapacity(itemTemplate))
 						{
-							DropItem(player, item);
+							dropItem(player, item);
 						}
 						else
 						{
@@ -2116,7 +2116,7 @@ public class Attackable extends NpcInstance
 					}
 					else
 					{
-						DropItem(player, item);
+						dropItem(player, item);
 					}
 					hp = true;
 				}
@@ -2132,7 +2132,7 @@ public class Attackable extends NpcInstance
 						final Item itemTemplate = ItemTable.getInstance().getTemplate(item.getItemId());
 						if (!player.getInventory().validateCapacity(itemTemplate))
 						{
-							DropItem(player, item);
+							dropItem(player, item);
 						}
 						else
 						{
@@ -2141,7 +2141,7 @@ public class Attackable extends NpcInstance
 					}
 					else
 					{
-						DropItem(player, item);
+						dropItem(player, item);
 					}
 				}
 			}
@@ -2158,7 +2158,7 @@ public class Attackable extends NpcInstance
 						final Item itemTemplate = ItemTable.getInstance().getTemplate(item.getItemId());
 						if (!player.getInventory().validateCapacity(itemTemplate))
 						{
-							DropItem(player, item);
+							dropItem(player, item);
 						}
 						else
 						{
@@ -2167,7 +2167,7 @@ public class Attackable extends NpcInstance
 					}
 					else
 					{
-						DropItem(player, item);
+						dropItem(player, item);
 					}
 					mp = true;
 				}
@@ -2183,7 +2183,7 @@ public class Attackable extends NpcInstance
 						final Item itemTemplate = ItemTable.getInstance().getTemplate(item.getItemId());
 						if (!player.getInventory().validateCapacity(itemTemplate))
 						{
-							DropItem(player, item);
+							dropItem(player, item);
 						}
 						else
 						{
@@ -2192,7 +2192,7 @@ public class Attackable extends NpcInstance
 					}
 					else
 					{
-						DropItem(player, item);
+						dropItem(player, item);
 					}
 					mp = true;
 				}
@@ -2208,7 +2208,7 @@ public class Attackable extends NpcInstance
 						final Item itemTemplate = ItemTable.getInstance().getTemplate(item.getItemId());
 						if (!player.getInventory().validateCapacity(itemTemplate))
 						{
-							DropItem(player, item);
+							dropItem(player, item);
 						}
 						else
 						{
@@ -2217,7 +2217,7 @@ public class Attackable extends NpcInstance
 					}
 					else
 					{
-						DropItem(player, item);
+						dropItem(player, item);
 					}
 				}
 			}
@@ -2232,7 +2232,7 @@ public class Attackable extends NpcInstance
 					final Item itemTemplate = ItemTable.getInstance().getTemplate(item.getItemId());
 					if (!player.getInventory().validateCapacity(itemTemplate))
 					{
-						DropItem(player, item);
+						dropItem(player, item);
 					}
 					else
 					{
@@ -2241,7 +2241,7 @@ public class Attackable extends NpcInstance
 				}
 				else
 				{
-					DropItem(player, item);
+					dropItem(player, item);
 				}
 			}
 		}
@@ -2295,7 +2295,7 @@ public class Attackable extends NpcInstance
 					final Item itemTemplate = ItemTable.getInstance().getTemplate(item.getItemId());
 					if (!player.getInventory().validateCapacity(itemTemplate))
 					{
-						DropItem(player, item);
+						dropItem(player, item);
 					}
 					else
 					{
@@ -2304,7 +2304,7 @@ public class Attackable extends NpcInstance
 				}
 				else
 				{
-					DropItem(player, item); // drop the item on the ground
+					dropItem(player, item); // drop the item on the ground
 				}
 			}
 		}
@@ -2316,8 +2316,14 @@ public class Attackable extends NpcInstance
 	 * @param item
 	 * @return
 	 */
-	public ItemInstance DropItem(PlayerInstance mainDamageDealer, RewardItem item)
+	public ItemInstance dropItem(PlayerInstance mainDamageDealer, RewardItem item)
 	{
+		// Make sure item template exists.
+		if (ItemTable.getInstance().getTemplate(item.getItemId()) == null)
+		{
+			return null;
+		}
+		
 		final int randDropLim = 70;
 		ItemInstance ditem = null;
 		for (int i = 0; i < item.getCount(); i++)
@@ -2349,9 +2355,9 @@ public class Attackable extends NpcInstance
 		return ditem;
 	}
 	
-	public ItemInstance DropItem(PlayerInstance lastAttacker, int itemId, int itemCount)
+	public ItemInstance dropItem(PlayerInstance lastAttacker, int itemId, int itemCount)
 	{
-		return DropItem(lastAttacker, new RewardItem(itemId, itemCount));
+		return dropItem(lastAttacker, new RewardItem(itemId, itemCount));
 	}
 	
 	/**

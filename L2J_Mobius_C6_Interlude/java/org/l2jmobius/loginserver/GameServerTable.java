@@ -66,9 +66,9 @@ public class GameServerTable
 	public GameServerTable()
 	{
 		loadServerNames();
-		LOGGER.info("Loaded " + _serverNames.size() + " server names");
+		LOGGER.info("Loaded " + _serverNames.size() + " server names.");
 		loadRegisteredGameServers();
-		LOGGER.info("Loaded " + _gameServerTable.size() + " registered Game Servers");
+		LOGGER.info("Loaded " + _gameServerTable.size() + " registered Game Servers.");
 		loadRSAKeys();
 		LOGGER.info("Cached " + _keyPairs.length + " RSA keys for Game Server communication.");
 	}

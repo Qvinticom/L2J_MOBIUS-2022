@@ -968,11 +968,11 @@ public class Antharas extends Quest
 			final int countMPHerb = Rnd.get(6, 18);
 			for (int i = 0; i < countHPHerb; i++)
 			{
-				((MonsterInstance) npc).DropItem(killer, 8602, 1);
+				((MonsterInstance) npc).dropItem(killer, 8602, 1);
 			}
 			for (int i = 0; i < countMPHerb; i++)
 			{
-				((MonsterInstance) npc).DropItem(killer, 8605, 1);
+				((MonsterInstance) npc).dropItem(killer, 8605, 1);
 			}
 		}
 		if (_monsters.contains(npc))

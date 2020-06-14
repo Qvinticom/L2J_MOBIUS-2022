@@ -412,7 +412,7 @@ public class NewbieHelper extends Quest
 		}
 		else if ((ex <= 2) && (qs1.getState() == State.STARTED) && (qs2.getInt("Gemstone") == 0) && (Rnd.get(100) < 50))
 		{
-			((MonsterInstance) npc).DropItem(player, BLUE_GEM, 1);
+			((MonsterInstance) npc).dropItem(player, BLUE_GEM, 1);
 			qs1.playSound("ItemSound.quest_tutorial");
 			qs1.set("step", "1");
 		}
