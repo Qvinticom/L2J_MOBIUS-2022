@@ -117,7 +117,7 @@ public enum IncomingPackets implements IIncomingPackets<GameClient>
 	REQUEST_PLEDGE_CREST(0x67, RequestPledgeCrest::new, ConnectionState.IN_GAME),
 	REQUEST_SEND_FRIEND_MSG(0x6B, RequestSendFriendMsg::new, ConnectionState.IN_GAME),
 	REQUEST_SHOW_MINI_MAP(0x6C, RequestShowMiniMap::new, ConnectionState.IN_GAME),
-	REQUEST_RECORD_INFO(0x6E, RequestRecordInfo::new, ConnectionState.IN_GAME),
+	REQUEST_RECORD_INFO(0x6E, null, ConnectionState.IN_GAME),
 	REQUEST_HENNA_EQUIP(0x6F, RequestHennaEquip::new, ConnectionState.IN_GAME),
 	REQUEST_HENNA_REMOVE_LIST(0x70, RequestHennaRemoveList::new, ConnectionState.IN_GAME),
 	REQUEST_HENNA_ITEM_REMOVE_INFO(0x71, RequestHennaItemRemoveInfo::new, ConnectionState.IN_GAME),
