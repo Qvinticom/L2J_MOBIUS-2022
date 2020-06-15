@@ -154,7 +154,10 @@ public class RequestRecordInfo extends GameClientPacket
 				{
 					// Update the state of the Creature object client side by sending Server->Client packet MoveToPawn/CharMoveToLocation and AutoAttackStart to the PlayerInstance
 					final Creature obj = (Creature) object;
-					obj.getAI().describeStateToPlayer(player);
+					if (obj.hasAI())
+					{
+						obj.getAI().describeStateToPlayer(player);
+					}
 				}
 			}
 		}
