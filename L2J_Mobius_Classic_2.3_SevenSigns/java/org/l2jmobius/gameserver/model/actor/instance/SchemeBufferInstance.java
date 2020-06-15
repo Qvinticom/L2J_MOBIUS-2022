@@ -26,7 +26,6 @@ import java.util.StringTokenizer;
 import org.l2jmobius.Config;
 import org.l2jmobius.gameserver.data.xml.impl.SkillData;
 import org.l2jmobius.gameserver.datatables.SchemeBufferTable;
-import org.l2jmobius.gameserver.model.actor.Creature;
 import org.l2jmobius.gameserver.model.actor.Npc;
 import org.l2jmobius.gameserver.model.actor.Summon;
 import org.l2jmobius.gameserver.model.actor.templates.NpcTemplate;
@@ -67,6 +66,7 @@ public class SchemeBufferInstance extends Npc
 			{
 				summon.stopAllEffects();
 			}
+			player.getServitors().values().forEach(servitor -> servitor.stopAllEffects());
 			
 			final NpcHtmlMessage html = new NpcHtmlMessage(getObjectId());
 			html.setFile(player, getHtmlPath(getId(), 0, player));
@@ -97,21 +97,8 @@ public class SchemeBufferInstance extends Npc
 		{
 			final String schemeName = st.nextToken();
 			final int cost = Integer.parseInt(st.nextToken());
-			Creature target = null;
-			if (st.hasMoreTokens())
-			{
-				final String targetType = st.nextToken();
-				if ((targetType != null) && targetType.equalsIgnoreCase("pet"))
-				{
-					target = player.getPet();
-				}
-			}
-			else
-			{
-				target = player;
-			}
-			
-			if (target == null)
+			final boolean buffSummons = st.hasMoreTokens() && st.nextToken().equalsIgnoreCase("pet");
+			if (buffSummons && (player.getPet() == null) && !player.hasServitors())
 			{
 				player.sendMessage("You don't have a pet.");
 			}
@@ -119,7 +106,19 @@ public class SchemeBufferInstance extends Npc
 			{
 				for (int skillId : SchemeBufferTable.getInstance().getScheme(player.getObjectId(), schemeName))
 				{
-					SkillData.getInstance().getSkill(skillId, SkillData.getInstance().getMaxLevel(skillId)).applyEffects(this, target);
+					final Skill skill = SkillData.getInstance().getSkill(skillId, SkillData.getInstance().getMaxLevel(skillId));
+					if (buffSummons)
+					{
+						if (player.getPet() != null)
+						{
+							skill.applyEffects(this, player.getPet());
+						}
+						player.getServitors().values().forEach(servitor -> skill.applyEffects(this, servitor));
+					}
+					else
+					{
+						skill.applyEffects(this, player);
+					}
 				}
 			}
 		}
