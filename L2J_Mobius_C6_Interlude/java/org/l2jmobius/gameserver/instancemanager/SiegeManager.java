@@ -145,7 +145,7 @@ public class SiegeManager
 			return false;
 		}
 		
-		if (clan.getHasCastle() > 0)
+		if (clan.getCastleId() > 0)
 		{
 			return true;
 		}

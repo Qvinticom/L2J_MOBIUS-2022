@@ -39,8 +39,8 @@ public class Clan
 	private String _allyName;
 	private int _allyId;
 	private int _level;
-	private int _hasCastle;
-	private int _hasHideout;
+	private int _castleId;
+	private int _hideoutId;
 	
 	public int getClanId()
 	{
@@ -138,14 +138,14 @@ public class Clan
 		return _level;
 	}
 	
-	public int getHasCastle()
+	public int getCastleId()
 	{
-		return _hasCastle;
+		return _castleId;
 	}
 	
-	public int getHasHideout()
+	public int getHideoutId()
 	{
-		return _hasHideout;
+		return _hideoutId;
 	}
 	
 	public int getCrestId()
@@ -165,12 +165,12 @@ public class Clan
 	
 	public void setHasCastle(int hasCastle)
 	{
-		_hasCastle = hasCastle;
+		_castleId = hasCastle;
 	}
 	
 	public void setHasHideout(int hasHideout)
 	{
-		_hasHideout = hasHideout;
+		_hideoutId = hasHideout;
 	}
 	
 	public void setLevel(int level)
@@ -194,8 +194,8 @@ public class Clan
 			out.write(getClanId() + ";");
 			out.write(getName() + ";");
 			out.write(getLevel() + ";");
-			out.write(getHasCastle() + ";");
-			out.write(getHasHideout() + ";");
+			out.write(getCastleId() + ";");
+			out.write(getHideoutId() + ";");
 			out.write(getAllyId() + ";");
 			out.write("none\r\n");
 			out.write("#memberName;memberLevel;classId;objectId\r\n");

@@ -147,7 +147,7 @@ public class FortSiegeGuardAI extends CreatureAI implements Runnable
 			{
 				player = ((Summon) target).getOwner();
 			}
-			if ((player == null) || ((player.getClan() != null) && (player.getClan().getHasFort() == ((NpcInstance) _actor).getFort().getFortId())))
+			if ((player == null) || ((player.getClan() != null) && (player.getClan().getFortId() == ((NpcInstance) _actor).getFort().getFortId())))
 			{
 				return false;
 			}

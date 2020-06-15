@@ -587,7 +587,7 @@ public class SignsPriestInstance extends FolkInstance
 				final Clan[] clanList = ClanTable.getInstance().getClans();
 				for (Clan clan : clanList)
 				{
-					if ((clan.getAllyId() == allyId) && (clan.getHasCastle() > 0))
+					if ((clan.getAllyId() == allyId) && (clan.getCastleId() > 0))
 					{
 						return true;
 					}
@@ -595,7 +595,7 @@ public class SignsPriestInstance extends FolkInstance
 			}
 		}
 		
-		return playerClan.getHasCastle() > 0;
+		return playerClan.getCastleId() > 0;
 	}
 	
 	private void showChatWindow(PlayerInstance player, int value, String suffix, boolean isDescription)

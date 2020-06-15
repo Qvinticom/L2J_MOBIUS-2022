@@ -130,7 +130,7 @@ public class AuctioneerInstance extends FolkInstance
 							bid = Integer.parseInt(st.nextToken());
 						}
 						
-						final Auction a = new Auction(player.getClan().getHasHideout(), player.getClan(), days * 86400000, bid, ClanHallManager.getInstance().getClanHallByOwner(player.getClan()).getName());
+						final Auction a = new Auction(player.getClan().getHideoutId(), player.getClan(), days * 86400000, bid, ClanHallManager.getInstance().getClanHallByOwner(player.getClan()).getName());
 						if (_pendingAuctions.get(a.getId()) != null)
 						{
 							_pendingAuctions.remove(a.getId());
@@ -165,9 +165,9 @@ public class AuctioneerInstance extends FolkInstance
 			{
 				try
 				{
-					final Auction a = _pendingAuctions.get(player.getClan().getHasHideout());
+					final Auction a = _pendingAuctions.get(player.getClan().getHideoutId());
 					a.confirmAuction();
-					_pendingAuctions.remove(player.getClan().getHasHideout());
+					_pendingAuctions.remove(player.getClan().getHideoutId());
 				}
 				catch (Exception e)
 				{
@@ -268,7 +268,7 @@ public class AuctioneerInstance extends FolkInstance
 					return;
 				}
 				
-				if (((player.getClan().getAuctionBiddedAt() > 0) && (player.getClan().getAuctionBiddedAt() != Integer.parseInt(val))) || (player.getClan().getHasHideout() > 0))
+				if (((player.getClan().getAuctionBiddedAt() > 0) && (player.getClan().getAuctionBiddedAt() != Integer.parseInt(val))) || (player.getClan().getHideoutId() > 0))
 				{
 					player.sendMessage("You can't bid at more than one auction");
 					return;
@@ -386,7 +386,7 @@ public class AuctioneerInstance extends FolkInstance
 			}
 			else if (actualCommand.equalsIgnoreCase("selectedItems"))
 			{
-				if ((player.getClan() != null) && (player.getClan().getHasHideout() == 0) && (player.getClan().getAuctionBiddedAt() > 0))
+				if ((player.getClan() != null) && (player.getClan().getHideoutId() == 0) && (player.getClan().getAuctionBiddedAt() > 0))
 				{
 					final SimpleDateFormat format = new SimpleDateFormat("dd/MM/yyyy HH:mm");
 					final String filename = "data/html/auction/AgitBidInfo.htm";
@@ -417,13 +417,13 @@ public class AuctioneerInstance extends FolkInstance
 					
 					return;
 				}
-				else if ((player.getClan() != null) && (AuctionManager.getInstance().getAuction(player.getClan().getHasHideout()) != null))
+				else if ((player.getClan() != null) && (AuctionManager.getInstance().getAuction(player.getClan().getHideoutId()) != null))
 				{
 					final SimpleDateFormat format = new SimpleDateFormat("dd/MM/yyyy HH:mm");
 					final String filename = "data/html/auction/AgitSaleInfo.htm";
 					final NpcHtmlMessage html = new NpcHtmlMessage(1);
 					html.setFile(filename);
-					final Auction a = AuctionManager.getInstance().getAuction(player.getClan().getHasHideout());
+					final Auction a = AuctionManager.getInstance().getAuction(player.getClan().getHideoutId());
 					if (a != null)
 					{
 						html.replace("%AGIT_NAME%", a.getItemName());
@@ -443,15 +443,15 @@ public class AuctioneerInstance extends FolkInstance
 					}
 					else
 					{
-						LOGGER.warning("Auctioneer Auction null for getHasHideout : " + player.getClan().getHasHideout());
+						LOGGER.warning("Auctioneer Auction null for getHideoutId : " + player.getClan().getHideoutId());
 					}
 					player.sendPacket(html);
 					
 					return;
 				}
-				else if ((player.getClan() != null) && (player.getClan().getHasHideout() != 0))
+				else if ((player.getClan() != null) && (player.getClan().getHideoutId() != 0))
 				{
-					final int ItemId = player.getClan().getHasHideout();
+					final int ItemId = player.getClan().getHideoutId();
 					final String filename = "data/html/auction/AgitInfo.htm";
 					final NpcHtmlMessage html = new NpcHtmlMessage(1);
 					html.setFile(filename);
@@ -518,9 +518,9 @@ public class AuctioneerInstance extends FolkInstance
 			}
 			else if (actualCommand.equalsIgnoreCase("doCancelAuction"))
 			{
-				if (AuctionManager.getInstance().getAuction(player.getClan().getHasHideout()) != null)
+				if (AuctionManager.getInstance().getAuction(player.getClan().getHideoutId()) != null)
 				{
-					AuctionManager.getInstance().getAuction(player.getClan().getHasHideout()).cancelAuction();
+					AuctionManager.getInstance().getAuction(player.getClan().getHideoutId()).cancelAuction();
 					player.sendMessage("Your auction has been canceled");
 				}
 				return;

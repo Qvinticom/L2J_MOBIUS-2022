@@ -42,8 +42,8 @@ public class PledgeReceiveMemberInfo extends GameServerPacket
 		writeS(_member.getClan().getLeaderName());
 		writeD(_member.getClan().getCrestId()); // crest id .. is used again
 		writeD(_member.getClan().getLevel());
-		writeD(_member.getClan().getHasCastle());
-		writeD(_member.getClan().getHasHideout());
+		writeD(_member.getClan().getCastleId());
+		writeD(_member.getClan().getHideoutId());
 		writeD(0);
 		writeD(getClient().getPlayer().getLevel()); // ??
 		writeD(_member.getClan().getDissolvingExpiryTime() > System.currentTimeMillis() ? 3 : 0);

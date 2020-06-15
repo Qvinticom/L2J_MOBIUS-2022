@@ -443,7 +443,7 @@ public class AuctioneerInstance extends Npc
 					}
 					else
 					{
-						LOGGER.warning("Auctioneer Auction null for getHasHideout : " + player.getClan().getHideoutId());
+						LOGGER.warning("Auctioneer Auction null for getHideoutId : " + player.getClan().getHideoutId());
 					}
 					
 					player.sendPacket(html);

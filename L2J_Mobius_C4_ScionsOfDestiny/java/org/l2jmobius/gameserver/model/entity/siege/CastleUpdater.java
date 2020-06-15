@@ -47,9 +47,9 @@ public class CastleUpdater implements Runnable
 		{
 			// Move current castle treasury to clan warehouse every 2 hour
 			final ItemContainer warehouse = _clan.getWarehouse();
-			if ((warehouse != null) && (_clan.getHasCastle() > 0))
+			if ((warehouse != null) && (_clan.getCastleId() > 0))
 			{
-				final Castle castle = CastleManager.getInstance().getCastleById(_clan.getHasCastle());
+				final Castle castle = CastleManager.getInstance().getCastleById(_clan.getCastleId());
 				if (!Config.ALT_MANOR_SAVE_ALL_ACTIONS && ((_runCount % Config.ALT_MANOR_SAVE_PERIOD_RATE) == 0))
 				{
 					castle.saveSeedData();

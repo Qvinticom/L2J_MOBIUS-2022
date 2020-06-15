@@ -45,8 +45,8 @@ public class GMViewPledgeInfo extends GameServerPacket
 		writeS(_clan.getLeaderName());
 		writeD(_clan.getCrestId()); // -> no, it's no longer used (nuocnam) fix by game
 		writeD(_clan.getLevel());
-		writeD(_clan.getHasCastle());
-		writeD(_clan.getHasHideout());
+		writeD(_clan.getCastleId());
+		writeD(_clan.getHideoutId());
 		writeD(0);
 		writeD(_player.getLevel());
 		writeD(_clan.getDissolvingExpiryTime() > System.currentTimeMillis() ? 3 : 0);

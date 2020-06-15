@@ -41,8 +41,8 @@ public class PledgeShowMemberListAll extends ServerBasePacket
 		writeS(_clan.getLeaderName());
 		writeD(0);
 		writeD(_clan.getLevel());
-		writeD(_clan.getHasCastle());
-		writeD(_clan.getHasHideout());
+		writeD(_clan.getCastleId());
+		writeD(_clan.getHideoutId());
 		writeD(0);
 		writeD(_activeChar.getLevel());
 		writeD(0);

@@ -131,7 +131,7 @@ public class RequestRestartPoint extends GameClientPacket
 					{
 						if (_player.getClan() != null)
 						{
-							if (_player.getClan().getHasHideout() == 0)
+							if (_player.getClan().getHideoutId() == 0)
 							{
 								// cheater
 								_player.sendMessage("You may not use this respawn point!");
@@ -162,7 +162,7 @@ public class RequestRestartPoint extends GameClientPacket
 						{
 							isInDefense = true;
 						}
-						if ((_player.getClan().getHasCastle() == 0) && (_player.getClan().getHasFort() == 0) && !isInDefense)
+						if ((_player.getClan().getCastleId() == 0) && (_player.getClan().getFortId() == 0) && !isInDefense)
 						{
 							// cheater
 							_player.sendMessage("You may not use this respawn point!");

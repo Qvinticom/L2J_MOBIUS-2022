@@ -83,8 +83,8 @@ public class PledgeShowMemberListAll extends GameServerPacket
 		
 		writeD(_clan.getCrestId()); // crest id .. is used again
 		writeD(_clan.getLevel());
-		writeD(_clan.getHasCastle());
-		writeD(_clan.getHasHideout());
+		writeD(_clan.getCastleId());
+		writeD(_clan.getHideoutId());
 		writeD(TOP);
 		writeD(_clan.getReputationScore()); // was activechar lvl
 		writeD(0); // 0

@@ -188,7 +188,7 @@ public class FortSiegeGuardInstance extends Attackable
 				{
 					player = ((Summon) attacker).getOwner();
 				}
-				if ((player != null) && (player.getClan() != null) && (player.getClan().getHasFort() == getFort().getFortId()))
+				if ((player != null) && (player.getClan() != null) && (player.getClan().getFortId() == getFort().getFortId()))
 				{
 					return;
 				}

@@ -41,8 +41,8 @@ public class PledgeShowInfoUpdate extends GameServerPacket
 		writeD(_clan.getClanId());
 		writeD(_clan.getCrestId());
 		writeD(_clan.getLevel()); // clan level
-		writeD(_clan.getHasFort() != 0 ? _clan.getHasFort() : _clan.getHasCastle());
-		writeD(_clan.getHasHideout());
+		writeD(_clan.getFortId() != 0 ? _clan.getFortId() : _clan.getCastleId());
+		writeD(_clan.getHideoutId());
 		writeD(TOP);
 		writeD(_clan.getReputationScore()); // clan reputation score
 		writeD(0);

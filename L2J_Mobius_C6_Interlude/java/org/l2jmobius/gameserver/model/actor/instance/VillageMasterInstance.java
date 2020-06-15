@@ -581,7 +581,7 @@ public class VillageMasterInstance extends FolkInstance
 			return;
 		}
 		
-		if ((clan.getHasCastle() != 0) || (clan.getHasHideout() != 0) || (clan.getHasFort() != 0))
+		if ((clan.getCastleId() != 0) || (clan.getHideoutId() != 0) || (clan.getFortId() != 0))
 		{
 			player.sendPacket(SystemMessageId.YOU_CANNOT_DISSOLVE_A_CLAN_WHILE_OWNING_A_CLAN_HALL_OR_CASTLE);
 			return;

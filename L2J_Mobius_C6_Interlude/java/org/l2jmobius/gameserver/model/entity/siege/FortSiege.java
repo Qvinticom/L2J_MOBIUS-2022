@@ -908,7 +908,7 @@ public class FortSiege
 	 */
 	public void removeSiegeClan(Clan clan)
 	{
-		if ((clan == null) || (clan.getHasFort() == getFort().getFortId()) || !FortSiegeManager.getInstance().checkIsRegistered(clan, getFort().getFortId()))
+		if ((clan == null) || (clan.getFortId() == getFort().getFortId()) || !FortSiegeManager.getInstance().checkIsRegistered(clan, getFort().getFortId()))
 		{
 			return;
 		}
@@ -1071,11 +1071,11 @@ public class FortSiege
 		{
 			player.sendMessage("Only clans with Level " + FortSiegeManager.getInstance().getSiegeClanMinLevel() + " and higher may register for a fort siege.");
 		}
-		else if (player.getClan().getHasFort() > 0)
+		else if (player.getClan().getFortId() > 0)
 		{
 			player.sendMessage("You cannot register because your clan already own a fort.");
 		}
-		else if (player.getClan().getHasCastle() > 0)
+		else if (player.getClan().getCastleId() > 0)
 		{
 			player.sendMessage("You cannot register because your clan already own a castle.");
 		}
@@ -1223,7 +1223,7 @@ public class FortSiege
 	 */
 	private void saveSiegeClan(Clan clan, int typeId, boolean isUpdateRegistration)
 	{
-		if (clan.getHasFort() > 0)
+		if (clan.getFortId() > 0)
 		{
 			return;
 		}

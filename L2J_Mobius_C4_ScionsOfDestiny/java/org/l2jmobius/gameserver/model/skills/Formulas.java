@@ -1016,7 +1016,7 @@ public class Formulas
 			
 			if (player.isInsideZone(ZoneId.CLAN_HALL) && (player.getClan() != null))
 			{
-				final int clanHallIndex = player.getClan().getHasHideout();
+				final int clanHallIndex = player.getClan().getHideoutId();
 				if (clanHallIndex > 0)
 				{
 					final ClanHall clansHall = ClanHallManager.getInstance().getClanHallById(clanHallIndex);
@@ -1090,7 +1090,7 @@ public class Formulas
 			
 			if (player.isInsideZone(ZoneId.CLAN_HALL) && (player.getClan() != null))
 			{
-				final int clanHallIndex = player.getClan().getHasHideout();
+				final int clanHallIndex = player.getClan().getHideoutId();
 				if (clanHallIndex > 0)
 				{
 					final ClanHall clansHall = ClanHallManager.getInstance().getClanHallById(clanHallIndex);

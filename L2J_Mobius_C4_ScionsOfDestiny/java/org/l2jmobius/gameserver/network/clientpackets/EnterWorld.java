@@ -822,9 +822,9 @@ public class EnterWorld extends GameClientPacket
 	private void notifyCastleOwner(PlayerInstance player)
 	{
 		final Clan clan = player.getClan();
-		if ((clan != null) && (clan.getHasCastle() > 0))
+		if ((clan != null) && (clan.getCastleId() > 0))
 		{
-			final Castle castle = CastleManager.getInstance().getCastleById(clan.getHasCastle());
+			final Castle castle = CastleManager.getInstance().getCastleById(clan.getCastleId());
 			if ((castle != null) && (player.getObjectId() == clan.getLeaderId()))
 			{
 				Announcements.getInstance().announceToAll("Lord " + player.getName() + " Ruler Of " + castle.getName() + " Castle is now Online!");

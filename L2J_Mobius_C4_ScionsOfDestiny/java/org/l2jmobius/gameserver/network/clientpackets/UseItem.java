@@ -196,14 +196,14 @@ public class UseItem extends GameClientPacket
 		
 		final Clan cl = player.getClan();
 		// A shield that can only be used by the members of a clan that owns a castle.
-		if (((cl == null) || (cl.getHasCastle() == 0)) && (itemId == 7015) && Config.CASTLE_SHIELD && !player.isGM())
+		if (((cl == null) || (cl.getCastleId() == 0)) && (itemId == 7015) && Config.CASTLE_SHIELD && !player.isGM())
 		{
 			player.sendMessage("You can't equip that.");
 			return;
 		}
 		
 		// A shield that can only be used by the members of a clan that owns a clan hall.
-		if (((cl == null) || (cl.getHasHideout() == 0)) && (itemId == 6902) && Config.CLANHALL_SHIELD && !player.isGM())
+		if (((cl == null) || (cl.getHideoutId() == 0)) && (itemId == 6902) && Config.CLANHALL_SHIELD && !player.isGM())
 		{
 			player.sendMessage("You can't equip that.");
 			return;
@@ -224,7 +224,7 @@ public class UseItem extends GameClientPacket
 		}
 		
 		// The Lord's Crown used by castle lords only
-		if ((itemId == 6841) && Config.CASTLE_CROWN && ((cl == null) || (cl.getHasCastle() == 0) || !player.isClanLeader()) && !player.isGM())
+		if ((itemId == 6841) && Config.CASTLE_CROWN && ((cl == null) || (cl.getCastleId() == 0) || !player.isClanLeader()) && !player.isGM())
 		{
 			player.sendMessage("You can't equip that.");
 			return;
@@ -245,7 +245,7 @@ public class UseItem extends GameClientPacket
 				return;
 			}
 			
-			final int circletId = CastleManager.getInstance().getCircletByCastleId(cl.getHasCastle());
+			final int circletId = CastleManager.getInstance().getCircletByCastleId(cl.getCastleId());
 			if ((player.getPledgeType() == -1) || (circletId != itemId))
 			{
 				player.sendMessage("You can't equip that.");

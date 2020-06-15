@@ -68,9 +68,9 @@ public class Clan
 	private String _allyName;
 	private int _allyId = 0;
 	private int _level;
-	private int _hasCastle;
-	private int _hasFort;
-	private int _hasHideout;
+	private int _castleId;
+	private int _fortId;
+	private int _hideoutId;
 	private boolean _hasCrest;
 	private int _hiredGuards;
 	private int _crestId;
@@ -427,7 +427,7 @@ public class Clan
 		exMember.saveApprenticeAndSponsor(0, 0);
 		if (Config.REMOVE_CASTLE_CIRCLETS)
 		{
-			CastleManager.getInstance().removeCirclet(exMember, getHasCastle());
+			CastleManager.getInstance().removeCirclet(exMember, getCastleId());
 		}
 		
 		if (exMember.isOnline())
@@ -609,19 +609,19 @@ public class Clan
 		return _level;
 	}
 	
-	public int getHasCastle()
+	public int getCastleId()
 	{
-		return _hasCastle;
+		return _castleId;
 	}
 	
-	public int getHasFort()
+	public int getFortId()
 	{
-		return _hasFort;
+		return _fortId;
 	}
 	
-	public int getHasHideout()
+	public int getHideoutId()
 	{
-		return _hasHideout;
+		return _hideoutId;
 	}
 	
 	/**
@@ -659,17 +659,17 @@ public class Clan
 	
 	public void setHasCastle(int hasCastle)
 	{
-		_hasCastle = hasCastle;
+		_castleId = hasCastle;
 	}
 	
 	public void setHasFort(int hasFort)
 	{
-		_hasFort = hasFort;
+		_fortId = hasFort;
 	}
 	
 	public void setHasHideout(int hasHideout)
 	{
-		_hasHideout = hasHideout;
+		_hideoutId = hasHideout;
 	}
 	
 	public void setLevel(int level)
@@ -725,7 +725,7 @@ public class Clan
 			statement.setInt(1, _clanId);
 			statement.setString(2, _name);
 			statement.setInt(3, _level);
-			statement.setInt(4, _hasCastle);
+			statement.setInt(4, _castleId);
 			statement.setInt(5, _allyId);
 			statement.setString(6, _allyName);
 			statement.setInt(7, getLeaderId());
@@ -2310,6 +2310,6 @@ public class Clan
 	@Override
 	public String toString()
 	{
-		return "Clan [_name=" + _name + ", _clanId=" + _clanId + ", _leader=" + _leader + ", _members=" + _members + ", _allyName=" + _allyName + ", _allyId=" + _allyId + ", _level=" + _level + ", _hasCastle=" + _hasCastle + ", _hasFort=" + _hasFort + ", _hasHideout=" + _hasHideout + ", _hasCrest=" + _hasCrest + ", _hiredGuards=" + _hiredGuards + ", _crestId=" + _crestId + ", _crestLargeId=" + _crestLargeId + ", _allyCrestId=" + _allyCrestId + ", _auctionBiddedAt=" + _auctionBiddedAt + ", _allyPenaltyExpiryTime=" + _allyPenaltyExpiryTime + ", _allyPenaltyType=" + _allyPenaltyType + ", _charPenaltyExpiryTime=" + _charPenaltyExpiryTime + ", _dissolvingExpiryTime=" + _dissolvingExpiryTime + ", _warehouse=" + _warehouse + ", _atWarWith=" + _atWarWith + ", _atWarAttackers=" + _atWarAttackers + ", _hasCrestLarge=" + _hasCrestLarge + ", _forum=" + _forum + ", _skillList=" + _skillList + ", _notice=" + _notice + ", _noticeEnabled=" + _noticeEnabled + ", _skills=" + _skills + ", _privs=" + _privs + ", _subPledges=" + _subPledges + ", _reputationScore=" + _reputationScore + ", _rank=" + _rank + "]";
+		return "Clan [_name=" + _name + ", _clanId=" + _clanId + ", _leader=" + _leader + ", _members=" + _members + ", _allyName=" + _allyName + ", _allyId=" + _allyId + ", _level=" + _level + ", _hasCastle=" + _castleId + ", _hasFort=" + _fortId + ", _hasHideout=" + _hideoutId + ", _hasCrest=" + _hasCrest + ", _hiredGuards=" + _hiredGuards + ", _crestId=" + _crestId + ", _crestLargeId=" + _crestLargeId + ", _allyCrestId=" + _allyCrestId + ", _auctionBiddedAt=" + _auctionBiddedAt + ", _allyPenaltyExpiryTime=" + _allyPenaltyExpiryTime + ", _allyPenaltyType=" + _allyPenaltyType + ", _charPenaltyExpiryTime=" + _charPenaltyExpiryTime + ", _dissolvingExpiryTime=" + _dissolvingExpiryTime + ", _warehouse=" + _warehouse + ", _atWarWith=" + _atWarWith + ", _atWarAttackers=" + _atWarAttackers + ", _hasCrestLarge=" + _hasCrestLarge + ", _forum=" + _forum + ", _skillList=" + _skillList + ", _notice=" + _notice + ", _noticeEnabled=" + _noticeEnabled + ", _skills=" + _skills + ", _privs=" + _privs + ", _subPledges=" + _subPledges + ", _reputationScore=" + _reputationScore + ", _rank=" + _rank + "]";
 	}
 }

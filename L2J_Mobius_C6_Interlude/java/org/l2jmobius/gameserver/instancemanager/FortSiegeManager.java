@@ -131,7 +131,7 @@ public class FortSiegeManager
 			return false;
 		}
 		
-		if (clan.getHasFort() > 0)
+		if (clan.getFortId() > 0)
 		{
 			return true;
 		}
