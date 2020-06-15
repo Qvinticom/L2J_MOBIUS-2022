@@ -824,7 +824,7 @@ public class AdminEditNpc implements IAdminCommandHandler
 		{
 			adminReply.setHtml(content);
 			adminReply.replace("%npcId%", String.valueOf(npc.getNpcId()));
-			adminReply.replace("%templateId%", String.valueOf(npc.getIdTemplate()));
+			adminReply.replace("%templateId%", String.valueOf(npc.getDisplayId()));
 			adminReply.replace("%name%", npc.getName());
 			adminReply.replace("%serverSideName%", npc.isServerSideName() ? "1" : "0");
 			adminReply.replace("%title%", npc.getTitle());
@@ -897,7 +897,7 @@ public class AdminEditNpc implements IAdminCommandHandler
 			{
 				case "templateId":
 				{
-					newNpcData.set("idTemplate", Integer.parseInt(value));
+					newNpcData.set("displayId", Integer.parseInt(value));
 					break;
 				}
 				case "name":

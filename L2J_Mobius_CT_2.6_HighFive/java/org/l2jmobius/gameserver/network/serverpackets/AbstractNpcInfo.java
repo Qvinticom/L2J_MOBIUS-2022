@@ -39,7 +39,7 @@ public abstract class AbstractNpcInfo implements IClientOutgoingPacket
 	protected int _y;
 	protected int _z;
 	protected int _heading;
-	protected int _idTemplate;
+	protected int _displayId;
 	protected boolean _isAttackable;
 	protected boolean _isSummoned;
 	protected int _mAtkSpd;
@@ -108,7 +108,7 @@ public abstract class AbstractNpcInfo implements IClientOutgoingPacket
 		{
 			super(cha, attacker.canOverrideCond(PlayerCondOverride.SEE_ALL_PLAYERS));
 			_npc = cha;
-			_idTemplate = cha.getTemplate().getDisplayId(); // On every subclass
+			_displayId = cha.getTemplate().getDisplayId(); // On every subclass
 			_rhand = cha.getRightHandItem(); // On every subclass
 			_lhand = cha.getLeftHandItem(); // On every subclass
 			_enchantEffect = cha.getEnchantEffect();
@@ -142,7 +142,7 @@ public abstract class AbstractNpcInfo implements IClientOutgoingPacket
 		{
 			OutgoingPackets.NPC_INFO.writeId(packet);
 			packet.writeD(_npc.getObjectId());
-			packet.writeD(_idTemplate + 1000000); // npctype id
+			packet.writeD(_displayId + 1000000); // npctype id
 			packet.writeD(_isAttackable ? 1 : 0);
 			packet.writeD(_x);
 			packet.writeD(_y);
@@ -267,7 +267,7 @@ public abstract class AbstractNpcInfo implements IClientOutgoingPacket
 			super(cha, (attacker != null) && attacker.canOverrideCond(PlayerCondOverride.SEE_ALL_PLAYERS));
 			
 			_trap = cha;
-			_idTemplate = cha.getTemplate().getDisplayId();
+			_displayId = cha.getTemplate().getDisplayId();
 			_isAttackable = cha.isAutoAttackable(attacker);
 			_rhand = 0;
 			_lhand = 0;
@@ -285,7 +285,7 @@ public abstract class AbstractNpcInfo implements IClientOutgoingPacket
 		{
 			OutgoingPackets.NPC_INFO.writeId(packet);
 			packet.writeD(_trap.getObjectId());
-			packet.writeD(_idTemplate + 1000000); // npctype id
+			packet.writeD(_displayId + 1000000); // npctype id
 			packet.writeD(_isAttackable ? 1 : 0);
 			packet.writeD(_x);
 			packet.writeD(_y);
@@ -368,7 +368,7 @@ public abstract class AbstractNpcInfo implements IClientOutgoingPacket
 			_enchantEffect = cha.getTemplate().getWeaponEnchant();
 			_name = cha.getName();
 			_title = (cha.getOwner() != null) && cha.getOwner().isOnline() ? cha.getOwner().getName() : "";
-			_idTemplate = cha.getTemplate().getDisplayId();
+			_displayId = cha.getTemplate().getDisplayId();
 			_collisionHeight = cha.getTemplate().getfCollisionHeight();
 			_collisionRadius = cha.getTemplate().getfCollisionRadius();
 		}
@@ -378,7 +378,7 @@ public abstract class AbstractNpcInfo implements IClientOutgoingPacket
 		{
 			OutgoingPackets.NPC_INFO.writeId(packet);
 			packet.writeD(_summon.getObjectId());
-			packet.writeD(_idTemplate + 1000000); // npctype id
+			packet.writeD(_displayId + 1000000); // npctype id
 			packet.writeD(_isAttackable ? 1 : 0);
 			packet.writeD(_x);
 			packet.writeD(_y);

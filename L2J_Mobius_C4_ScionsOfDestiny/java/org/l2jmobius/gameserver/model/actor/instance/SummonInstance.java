@@ -179,7 +179,7 @@ public class SummonInstance extends Summon
 		final SystemMessage sm = new SystemMessage(SystemMessageId.THE_SUMMONED_MONSTER_RECEIVED_DAMAGE_OF_S2_CAUSED_BY_S1);
 		if (attacker instanceof NpcInstance)
 		{
-			sm.addNpcName(((NpcInstance) attacker).getTemplate().getNpcId());
+			sm.addString(((NpcInstance) attacker).getTemplate().getName());
 		}
 		else
 		{

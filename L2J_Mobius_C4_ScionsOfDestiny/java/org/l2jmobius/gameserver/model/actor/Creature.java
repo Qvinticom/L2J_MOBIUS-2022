@@ -6132,8 +6132,7 @@ public abstract class Creature extends WorldObject implements ISkillsHolder
 				final SystemMessage sm = new SystemMessage(SystemMessageId.YOU_HAVE_AVOIDED_S1_S_ATTACK);
 				if (this instanceof Summon)
 				{
-					final int mobId = ((Summon) this).getTemplate().getNpcId();
-					sm.addNpcName(mobId);
+					sm.addString(((Summon) this).getTemplate().getName());
 				}
 				else
 				{

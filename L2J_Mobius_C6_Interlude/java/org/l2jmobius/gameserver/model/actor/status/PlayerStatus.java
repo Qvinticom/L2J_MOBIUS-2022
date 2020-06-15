@@ -154,11 +154,11 @@ public class PlayerStatus extends PlayableStatus
 			final SystemMessage smsg = new SystemMessage(SystemMessageId.S1_HIT_YOU_FOR_S2_DAMAGE);
 			if (attacker instanceof NpcInstance)
 			{
-				smsg.addNpcName(((NpcInstance) attacker).getTemplate().getIdTemplate());
+				smsg.addNpcName(((NpcInstance) attacker).getTemplate().getDisplayId());
 			}
 			else if (attacker instanceof Summon)
 			{
-				smsg.addNpcName(((Summon) attacker).getTemplate().getIdTemplate());
+				smsg.addNpcName(((Summon) attacker).getTemplate().getDisplayId());
 			}
 			else
 			{

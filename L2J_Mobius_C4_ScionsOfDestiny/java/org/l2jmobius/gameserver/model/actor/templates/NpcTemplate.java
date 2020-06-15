@@ -35,7 +35,7 @@ import org.l2jmobius.gameserver.model.quest.Quest;
 import org.l2jmobius.gameserver.model.skills.Stat;
 
 /**
- * This cl contains all generic data of a Spawn object.<br>
+ * This class contains all generic data of a Spawn object.<br>
  * <br>
  * <b><u>Data</u>:</b><br>
  * <li>npcId, type, name, sex</li>
@@ -56,7 +56,7 @@ public class NpcTemplate extends CreatureTemplate
 	protected static final Logger LOGGER = Logger.getLogger(NpcTemplate.class.getName());
 	
 	private final int _npcId;
-	private final int _idTemplate;
+	private final int _displayId;
 	private final String _type;
 	private final String _name;
 	private final boolean _serverSideName;
@@ -136,7 +136,7 @@ public class NpcTemplate extends CreatureTemplate
 	{
 		super(set);
 		_npcId = set.getInt("npcId");
-		_idTemplate = set.getInt("idTemplate");
+		_displayId = set.getInt("displayId");
 		_type = set.getString("type");
 		_name = set.getString("name");
 		_serverSideName = set.getBoolean("serverSideName");
@@ -506,9 +506,9 @@ public class NpcTemplate extends CreatureTemplate
 		return _npcId;
 	}
 	
-	public int getIdTemplate()
+	public int getDisplayId()
 	{
-		return _idTemplate;
+		return _displayId;
 	}
 	
 	public boolean isServerSideName()

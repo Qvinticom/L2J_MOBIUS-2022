@@ -34,7 +34,7 @@ public class NpcInfo extends GameServerPacket
 	private int _y;
 	private int _z;
 	private int _heading;
-	private int _idTemplate;
+	private int _displayId;
 	private boolean _isAttackable;
 	private boolean _isSummoned;
 	private int _mAtkSpd;
@@ -71,7 +71,7 @@ public class NpcInfo extends GameServerPacket
 			return;
 		}
 		_creature = cha;
-		_idTemplate = cha.getTemplate().getIdTemplate();
+		_displayId = cha.getTemplate().getDisplayId();
 		_isAttackable = cha.isAutoAttackable(attacker);
 		_rhand = cha.getRightHandItem();
 		_lhand = cha.getLeftHandItem();
@@ -145,7 +145,7 @@ public class NpcInfo extends GameServerPacket
 	public NpcInfo(Summon cha, Creature attacker)
 	{
 		_creature = cha;
-		_idTemplate = cha.getTemplate().getIdTemplate();
+		_displayId = cha.getTemplate().getDisplayId();
 		_isAttackable = cha.isAutoAttackable(attacker); // (cha.getKarma() > 0);
 		_rhand = 0;
 		_lhand = 0;
@@ -189,7 +189,7 @@ public class NpcInfo extends GameServerPacket
 		
 		writeC(0x16);
 		writeD(_creature.getObjectId());
-		writeD(_idTemplate + 1000000); // npctype id
+		writeD(_displayId + 1000000); // npctype id
 		writeD(_isAttackable ? 1 : 0);
 		writeD(_x);
 		writeD(_y);

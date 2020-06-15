@@ -4,7 +4,7 @@
 DROP TABLE IF EXISTS `custom_npc`;
 CREATE TABLE `custom_npc`(
   `id` decimal(11,0) NOT NULL default '0',
-  `idTemplate` int(11) NOT NULL default '0',
+  `displayId` int(11) NOT NULL default '0',
   `name` varchar(200) default NULL,
   `serverSideName` int(1) default '0',
   `title` varchar(45) default '',

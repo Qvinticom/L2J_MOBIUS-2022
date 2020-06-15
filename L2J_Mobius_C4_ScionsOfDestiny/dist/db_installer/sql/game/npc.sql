@@ -5,7 +5,7 @@ SET FOREIGN_KEY_CHECKS=0;
 DROP TABLE IF EXISTS `npc`;
 CREATE TABLE `npc` (
   `id` decimal(11,0) NOT NULL DEFAULT '0',
-  `idTemplate` int(11) NOT NULL DEFAULT '0',
+  `displayId` int(11) NOT NULL DEFAULT '0',
   `name` varchar(200) DEFAULT NULL,
   `serverSideName` int(1) DEFAULT '0',
   `title` varchar(45) DEFAULT '',

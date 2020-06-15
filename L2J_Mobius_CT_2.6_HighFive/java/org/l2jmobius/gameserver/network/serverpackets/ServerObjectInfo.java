@@ -31,7 +31,7 @@ public class ServerObjectInfo implements IClientOutgoingPacket
 	private final int _y;
 	private final int _z;
 	private final int _heading;
-	private final int _idTemplate;
+	private final int _displayId;
 	private final boolean _isAttackable;
 	private final double _collisionHeight;
 	private final double _collisionRadius;
@@ -40,7 +40,7 @@ public class ServerObjectInfo implements IClientOutgoingPacket
 	public ServerObjectInfo(Npc activeChar, Creature actor)
 	{
 		_activeChar = activeChar;
-		_idTemplate = _activeChar.getTemplate().getDisplayId();
+		_displayId = _activeChar.getTemplate().getDisplayId();
 		_isAttackable = _activeChar.isAutoAttackable(actor);
 		_collisionHeight = _activeChar.getCollisionHeight();
 		_collisionRadius = _activeChar.getCollisionRadius();
@@ -56,7 +56,7 @@ public class ServerObjectInfo implements IClientOutgoingPacket
 	{
 		OutgoingPackets.SERVER_OBJECT_INFO.writeId(packet);
 		packet.writeD(_activeChar.getObjectId());
-		packet.writeD(_idTemplate + 1000000);
+		packet.writeD(_displayId + 1000000);
 		packet.writeS(_name); // name
 		packet.writeD(_isAttackable ? 1 : 0);
 		packet.writeD(_x);
