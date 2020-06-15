@@ -50,7 +50,7 @@ public class MonRaceInfo implements IClientOutgoingPacket
 		for (int i = 0; i < 8; i++)
 		{
 			packet.writeD(_monsters[i].getObjectId()); // npcObjectID
-			packet.writeD(_monsters[i].getTemplate().getId() + 1000000); // npcID
+			packet.writeD(_monsters[i].getTemplate().getDisplayId() + 1000000); // npcID
 			packet.writeD(14107); // origin X
 			packet.writeD(181875 + (58 * (7 - i))); // origin Y
 			packet.writeD(-3566); // origin Z
