@@ -69,8 +69,8 @@ public abstract class Inventory extends ItemContainer
 	public static final int PAPERDOLL_BACK = 13;
 	public static final int PAPERDOLL_LRHAND = 14;
 	public static final int PAPERDOLL_FACE = 15;
-	public static final int PAPERDOLL_HAIR = 16;
-	public static final int PAPERDOLL_DHAIR = 17;
+	public static final int PAPERDOLL_HAIR = 15; // 16 - Added after C4.
+	public static final int PAPERDOLL_DHAIR = 15; // 17 - Added after C4.
 	
 	public static final int PAPERDOLL_TOTALSLOTS = 18;
 	
@@ -957,16 +957,16 @@ public abstract class Inventory extends ItemContainer
 				slot = Item.SLOT_L_FINGER;
 				break;
 			}
-			case PAPERDOLL_HAIR:
-			{
-				slot = Item.SLOT_HAIR;
-				break;
-			}
-			case PAPERDOLL_FACE:
-			{
-				slot = Item.SLOT_FACE;
-				break;
-			}
+			// case PAPERDOLL_HAIR:
+			// {
+			// slot = Item.SLOT_HAIR;
+			// break;
+			// }
+			// case PAPERDOLL_FACE:
+			// {
+			// slot = Item.SLOT_FACE;
+			// break;
+			// }
 			case PAPERDOLL_DHAIR:
 			{
 				slot = Item.SLOT_DHAIR;
@@ -1118,16 +1118,16 @@ public abstract class Inventory extends ItemContainer
 				pdollSlot = PAPERDOLL_LFINGER;
 				break;
 			}
-			case Item.SLOT_HAIR:
-			{
-				pdollSlot = PAPERDOLL_HAIR;
-				break;
-			}
-			case Item.SLOT_FACE:
-			{
-				pdollSlot = PAPERDOLL_FACE;
-				break;
-			}
+			// case Item.SLOT_HAIR:
+			// {
+			// pdollSlot = PAPERDOLL_HAIR;
+			// break;
+			// }
+			// case Item.SLOT_FACE:
+			// {
+			// pdollSlot = PAPERDOLL_FACE;
+			// break;
+			// }
 			case Item.SLOT_DHAIR:
 			{
 				setPaperdollItem(PAPERDOLL_HAIR, null);
@@ -1375,36 +1375,36 @@ public abstract class Inventory extends ItemContainer
 				setPaperdollItem(PAPERDOLL_HEAD, item);
 				break;
 			}
-			case Item.SLOT_HAIR:
-			{
-				if (setPaperdollItem(PAPERDOLL_DHAIR, null) != null)
-				{
-					setPaperdollItem(PAPERDOLL_DHAIR, null);
-					setPaperdollItem(PAPERDOLL_HAIR, null);
-					setPaperdollItem(PAPERDOLL_FACE, null);
-				}
-				else
-				{
-					setPaperdollItem(PAPERDOLL_HAIR, null);
-				}
-				setPaperdollItem(PAPERDOLL_HAIR, item);
-				break;
-			}
-			case Item.SLOT_FACE:
-			{
-				if (setPaperdollItem(PAPERDOLL_DHAIR, null) != null)
-				{
-					setPaperdollItem(PAPERDOLL_DHAIR, null);
-					setPaperdollItem(PAPERDOLL_HAIR, null);
-					setPaperdollItem(PAPERDOLL_FACE, null);
-				}
-				else
-				{
-					setPaperdollItem(PAPERDOLL_FACE, null);
-				}
-				setPaperdollItem(PAPERDOLL_FACE, item);
-				break;
-			}
+			// case Item.SLOT_HAIR:
+			// {
+			// if (setPaperdollItem(PAPERDOLL_DHAIR, null) != null)
+			// {
+			// setPaperdollItem(PAPERDOLL_DHAIR, null);
+			// setPaperdollItem(PAPERDOLL_HAIR, null);
+			// setPaperdollItem(PAPERDOLL_FACE, null);
+			// }
+			// else
+			// {
+			// setPaperdollItem(PAPERDOLL_HAIR, null);
+			// }
+			// setPaperdollItem(PAPERDOLL_HAIR, item);
+			// break;
+			// }
+			// case Item.SLOT_FACE:
+			// {
+			// if (setPaperdollItem(PAPERDOLL_DHAIR, null) != null)
+			// {
+			// setPaperdollItem(PAPERDOLL_DHAIR, null);
+			// setPaperdollItem(PAPERDOLL_HAIR, null);
+			// setPaperdollItem(PAPERDOLL_FACE, null);
+			// }
+			// else
+			// {
+			// setPaperdollItem(PAPERDOLL_FACE, null);
+			// }
+			// setPaperdollItem(PAPERDOLL_FACE, item);
+			// break;
+			// }
 			case Item.SLOT_DHAIR:
 			{
 				if (setPaperdollItem(PAPERDOLL_HAIR, null) != null)

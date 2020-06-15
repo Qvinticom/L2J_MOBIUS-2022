@@ -78,8 +78,8 @@ public abstract class Item
 	public static final int SLOT_HATCHLING = 0x100000;
 	public static final int SLOT_STRIDER = 0x200000;
 	public static final int SLOT_BABYPET = 0x400000;
-	public static final int SLOT_FACE = 0x040000;
-	public static final int SLOT_DHAIR = 0x080000;
+	public static final int SLOT_FACE = 0x010000; // 0x040000 - Added after C4.
+	public static final int SLOT_DHAIR = 0x010000; // 0x080000 - Added after C4.
 	
 	public static final int CRYSTAL_NONE = 0x00;
 	public static final int CRYSTAL_D = 0x01;
