@@ -266,6 +266,11 @@ public class AdminSiege implements IAdminCommandHandler
 		{
 			if (castle != null)
 			{
+				if (castle.getCastleId() == 9) // Shuttgart does not exist in C4.
+				{
+					continue;
+				}
+				
 				final String name = castle.getName();
 				cList.append("<td fixwidth=90><a action=\"bypass -h admin_siege " + name + "\">" + name + "</a></td>");
 				i++;
