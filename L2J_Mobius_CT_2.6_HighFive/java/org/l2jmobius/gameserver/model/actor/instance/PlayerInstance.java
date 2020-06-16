@@ -8464,14 +8464,14 @@ public class PlayerInstance extends Playable
 				return false;
 			}
 			
-			// Create a new SkillDat object and queue it in the player _queuedSkill
+			// Create a new SkillUseHolder object and queue it in the player _queuedSkill
 			setQueuedSkill(skill, forceUse, dontMove);
 			sendPacket(ActionFailed.STATIC_PACKET);
 			return false;
 		}
 		
 		setCastingNow(true);
-		// Create a new SkillDat object and set the player _currentSkill
+		// Create a new SkillUseHolder object and set the player _currentSkill
 		// This is used mainly to save & queue the button presses, since Creature has
 		// _lastSkillCast which could otherwise replace it
 		setCurrentSkill(skill, forceUse, dontMove);
@@ -12002,7 +12002,7 @@ public class PlayerInstance extends Playable
 	}
 	
 	/**
-	 * Create a new SkillDat object and set the player _currentSkill.
+	 * Create a new SkillUseHolder object and set the player _currentSkill.
 	 * @param currentSkill
 	 * @param ctrlPressed
 	 * @param shiftPressed
@@ -12026,7 +12026,7 @@ public class PlayerInstance extends Playable
 	}
 	
 	/**
-	 * Create a new SkillDat object and set the player _currentPetSkill.
+	 * Create a new SkillUseHolder object and set the player _currentPetSkill.
 	 * @param currentSkill
 	 * @param ctrlPressed
 	 * @param shiftPressed
@@ -12047,7 +12047,7 @@ public class PlayerInstance extends Playable
 	}
 	
 	/**
-	 * Create a new SkillDat object and queue it in the player _queuedSkill.
+	 * Create a new SkillUseHolder object and queue it in the player _queuedSkill.
 	 * @param queuedSkill
 	 * @param ctrlPressed
 	 * @param shiftPressed

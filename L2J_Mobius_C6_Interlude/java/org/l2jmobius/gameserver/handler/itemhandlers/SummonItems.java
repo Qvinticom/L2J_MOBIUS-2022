@@ -29,11 +29,11 @@ import org.l2jmobius.gameserver.model.World;
 import org.l2jmobius.gameserver.model.actor.Playable;
 import org.l2jmobius.gameserver.model.actor.instance.PetInstance;
 import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
-import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance.SkillDat;
 import org.l2jmobius.gameserver.model.actor.templates.NpcTemplate;
 import org.l2jmobius.gameserver.model.entity.event.CTF;
 import org.l2jmobius.gameserver.model.entity.event.DM;
 import org.l2jmobius.gameserver.model.entity.event.TvT;
+import org.l2jmobius.gameserver.model.holders.SkillUseHolder;
 import org.l2jmobius.gameserver.model.items.instance.ItemInstance;
 import org.l2jmobius.gameserver.model.spawn.Spawn;
 import org.l2jmobius.gameserver.network.SystemMessageId;
@@ -233,8 +233,8 @@ public class SummonItems implements IItemHandler
 		{
 			try
 			{
-				final SkillDat skilldat = _player.getCurrentSkill();
-				if (!_player.isCastingNow() || ((skilldat != null) && (skilldat.getSkillId() != 2046)))
+				final SkillUseHolder skill = _player.getCurrentSkill();
+				if (!_player.isCastingNow() || ((skill != null) && (skill.getSkillId() != 2046)))
 				{
 					return;
 				}

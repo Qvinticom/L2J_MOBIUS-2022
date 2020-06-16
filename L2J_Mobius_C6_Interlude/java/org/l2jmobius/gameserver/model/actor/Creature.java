@@ -74,7 +74,6 @@ import org.l2jmobius.gameserver.model.actor.instance.NpcInstance;
 import org.l2jmobius.gameserver.model.actor.instance.NpcWalkerInstance;
 import org.l2jmobius.gameserver.model.actor.instance.PetInstance;
 import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
-import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance.SkillDat;
 import org.l2jmobius.gameserver.model.actor.instance.RaidBossInstance;
 import org.l2jmobius.gameserver.model.actor.instance.RiftInvaderInstance;
 import org.l2jmobius.gameserver.model.actor.instance.SiegeFlagInstance;
@@ -91,6 +90,7 @@ import org.l2jmobius.gameserver.model.entity.event.GameEvent;
 import org.l2jmobius.gameserver.model.entity.event.TvT;
 import org.l2jmobius.gameserver.model.entity.event.VIP;
 import org.l2jmobius.gameserver.model.entity.olympiad.Olympiad;
+import org.l2jmobius.gameserver.model.holders.SkillUseHolder;
 import org.l2jmobius.gameserver.model.itemcontainer.Inventory;
 import org.l2jmobius.gameserver.model.items.Weapon;
 import org.l2jmobius.gameserver.model.items.instance.ItemInstance;
@@ -7635,11 +7635,11 @@ public abstract class Creature extends WorldObject implements ISkillsHolder
 					if (this instanceof PlayerInstance)
 					{
 						final PlayerInstance currPlayer = (PlayerInstance) this;
-						final SkillDat skilldat = currPlayer.getCurrentSkill();
+						final SkillUseHolder skillUseHolder = currPlayer.getCurrentSkill();
 						// Like L2OFF if the skill is BLOW the player doesn't auto attack
 						// If on XML skill nextActionAttack = true the char auto attack
 						// If CTRL is pressed the autoattack is aborted (like L2OFF)
-						if ((skilldat != null) && !skilldat.isCtrlPressed() && skill.nextActionIsAttack() && (_target != null) && (_target instanceof Creature))
+						if ((skillUseHolder != null) && !skillUseHolder.isCtrlPressed() && skill.nextActionIsAttack() && (_target != null) && (_target instanceof Creature))
 						{
 							getAI().setIntention(AI_INTENTION_ATTACK, _target);
 						}
@@ -7657,8 +7657,8 @@ public abstract class Creature extends WorldObject implements ISkillsHolder
 				if (this instanceof PlayerInstance)
 				{
 					final PlayerInstance currPlayer = (PlayerInstance) this;
-					final SkillDat skilldat = currPlayer.getCurrentSkill();
-					if ((skilldat != null) && !skilldat.isCtrlPressed() && (skill.isOffensive()) && (skill.getSkillType() != SkillType.UNLOCK) && (skill.getSkillType() != SkillType.BLOW) && (skill.getSkillType() != SkillType.DELUXE_KEY_UNLOCK) && (skill.getId() != 345) && (skill.getId() != 346))
+					final SkillUseHolder skillUseHolder = currPlayer.getCurrentSkill();
+					if ((skillUseHolder != null) && !skillUseHolder.isCtrlPressed() && (skill.isOffensive()) && (skill.getSkillType() != SkillType.UNLOCK) && (skill.getSkillType() != SkillType.BLOW) && (skill.getSkillType() != SkillType.DELUXE_KEY_UNLOCK) && (skill.getId() != 345) && (skill.getId() != 346))
 					{
 						if (!skill.isMagic() && skill.nextActionIsAttack())
 						{
@@ -7692,7 +7692,7 @@ public abstract class Creature extends WorldObject implements ISkillsHolder
 			if (this instanceof PlayerInstance)
 			{
 				final PlayerInstance currPlayer = (PlayerInstance) this;
-				final SkillDat queuedSkill = currPlayer.getQueuedSkill();
+				final SkillUseHolder queuedSkill = currPlayer.getQueuedSkill();
 				currPlayer.setCurrentSkill(null, false, false);
 				if (queuedSkill != null)
 				{

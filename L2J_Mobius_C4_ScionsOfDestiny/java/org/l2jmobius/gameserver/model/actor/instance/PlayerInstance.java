@@ -134,6 +134,7 @@ import org.l2jmobius.gameserver.model.entity.siege.FortSiege;
 import org.l2jmobius.gameserver.model.entity.siege.Siege;
 import org.l2jmobius.gameserver.model.entity.siege.clanhalls.DevastatedCastle;
 import org.l2jmobius.gameserver.model.holders.PlayerStatsHolder;
+import org.l2jmobius.gameserver.model.holders.SkillUseHolder;
 import org.l2jmobius.gameserver.model.holders.SummonRequestHolder;
 import org.l2jmobius.gameserver.model.itemcontainer.Inventory;
 import org.l2jmobius.gameserver.model.itemcontainer.ItemContainer;
@@ -462,9 +463,9 @@ public class PlayerInstance extends Playable
 	private final List<String> _validLink = new ArrayList<>();
 	private Forum _forumMail;
 	private Forum _forumMemo;
-	private SkillDat _currentSkill;
-	private SkillDat _currentPetSkill;
-	private SkillDat _queuedSkill;
+	private SkillUseHolder _currentSkill;
+	private SkillUseHolder _currentPetSkill;
+	private SkillUseHolder _queuedSkill;
 	private boolean _isWearingFormalWear = false;
 	private Location _currentSkillWorldPosition;
 	private int _reviveRequested = 0;
@@ -815,70 +816,6 @@ public class PlayerInstance extends Playable
 			{
 				LOGGER.warning(t.getMessage());
 			}
-		}
-	}
-	
-	/**
-	 * Skill casting information (used to queue when several skills are cast in a short time) *.
-	 */
-	public class SkillDat
-	{
-		/** The _skill. */
-		private final Skill _skill;
-		
-		/** The _ctrl pressed. */
-		private final boolean _ctrlPressed;
-		
-		/** The _shift pressed. */
-		private final boolean _shiftPressed;
-		
-		/**
-		 * Instantiates a new skill dat.
-		 * @param skill the skill
-		 * @param ctrlPressed the ctrl pressed
-		 * @param shiftPressed the shift pressed
-		 */
-		protected SkillDat(Skill skill, boolean ctrlPressed, boolean shiftPressed)
-		{
-			_skill = skill;
-			_ctrlPressed = ctrlPressed;
-			_shiftPressed = shiftPressed;
-		}
-		
-		/**
-		 * Checks if is ctrl pressed.
-		 * @return true, if is ctrl pressed
-		 */
-		public boolean isCtrlPressed()
-		{
-			return _ctrlPressed;
-		}
-		
-		/**
-		 * Checks if is shift pressed.
-		 * @return true, if is shift pressed
-		 */
-		public boolean isShiftPressed()
-		{
-			return _shiftPressed;
-		}
-		
-		/**
-		 * Gets the skill.
-		 * @return the skill
-		 */
-		public Skill getSkill()
-		{
-			return _skill;
-		}
-		
-		/**
-		 * Gets the skill id.
-		 * @return the skill id
-		 */
-		public int getSkillId()
-		{
-			return getSkill() != null ? getSkill().getId() : -1;
 		}
 	}
 	
@@ -9775,7 +9712,7 @@ public class PlayerInstance extends Playable
 		
 		final int skillId = skill.getId();
 		int currSkillId = -1;
-		final SkillDat current = getCurrentSkill();
+		final SkillUseHolder current = getCurrentSkill();
 		if (current != null)
 		{
 			currSkillId = current.getSkillId();
@@ -9855,7 +9792,7 @@ public class PlayerInstance extends Playable
 		// failed to cast, or the casting is not yet in progress when this is rechecked
 		if ((currSkillId != -1) && (isCastingNow() || isCastingPotionNow()))
 		{
-			final SkillDat currentSkill = getCurrentSkill();
+			final SkillUseHolder currentSkill = getCurrentSkill();
 			// Check if new skill different from current skill in progress
 			if ((currentSkill != null) && (skill.getId() == currentSkill.getSkillId()))
 			{
@@ -9863,7 +9800,7 @@ public class PlayerInstance extends Playable
 				return;
 			}
 			
-			// Create a new SkillDat object and queue it in the player _queuedSkill
+			// Create a new SkillUseHolder object and queue it in the player _queuedSkill
 			setQueuedSkill(skill, forceUse, dontMove);
 			sendPacket(ActionFailed.STATIC_PACKET);
 			return;
@@ -9897,7 +9834,7 @@ public class PlayerInstance extends Playable
 		
 		// ************************************* Check Casting in Progress *******************************************
 		
-		// Create a new SkillDat object and set the player _currentSkill
+		// Create a new SkillUseHolder object and set the player _currentSkill
 		// This is used mainly to save & queue the button presses, since Creature has
 		// _lastSkillCast which could otherwise replace it
 		setCurrentSkill(skill, forceUse, dontMove);
@@ -9972,8 +9909,8 @@ public class PlayerInstance extends Playable
 		}
 		
 		// Like L2OFF you can't heal random purple people without using CTRL
-		final SkillDat skilldat = getCurrentSkill();
-		if ((skilldat != null) && (skill.getSkillType() == SkillType.HEAL) && !skilldat.isCtrlPressed() && (target instanceof PlayerInstance) && (((PlayerInstance) target).getPvpFlag() == 1) && (this != target))
+		final SkillUseHolder skillUseHolder = getCurrentSkill();
+		if ((skillUseHolder != null) && (skill.getSkillType() == SkillType.HEAL) && !skillUseHolder.isCtrlPressed() && (target instanceof PlayerInstance) && (((PlayerInstance) target).getPvpFlag() == 1) && (this != target))
 		{
 			if (((getClanId() == 0) || (((PlayerInstance) target).getClanId() == 0)) || (getClanId() != ((PlayerInstance) target).getClanId()))
 			{
@@ -10331,7 +10268,7 @@ public class PlayerInstance extends Playable
 			return;
 		}
 		
-		// If all conditions are checked, create a new SkillDat object and set the player _currentSkill
+		// If all conditions are checked, create a new SkillUseHolder object and set the player _currentSkill
 		setCurrentSkill(skill, forceUse, dontMove);
 		
 		// Check if the active Skill can be casted (ex : not sleeping...), Check if the target is correct and Notify the AI with AI_INTENTION_CAST and target
@@ -10406,11 +10343,9 @@ public class PlayerInstance extends Playable
 			(target != this) && // target is not self and
 			(target instanceof PlayerInstance) && // target is PlayerInstance and
 			!isInsideZone(ZoneId.PVP) && // Pc is not in PvP zone
-			!((PlayerInstance) target).isInsideZone(ZoneId.PVP) // target is not in PvP zone
-		)
+			!((PlayerInstance) target).isInsideZone(ZoneId.PVP)) // target is not in PvP zone
 		{
-			final SkillDat skilldat = getCurrentSkill();
-			// SkillDat skilldatpet = getCurrentPetSkill();
+			final SkillUseHolder skillUseHolder = getCurrentSkill();
 			if (skill.isPvpSkill()) // pvp skill
 			{
 				if ((getClan() != null) && (((PlayerInstance) target).getClan() != null) && getClan().isAtWarWith(((PlayerInstance) target).getClan().getClanId()) && ((PlayerInstance) target).getClan().isAtWarWith(getClan().getClanId()))
@@ -10423,7 +10358,7 @@ public class PlayerInstance extends Playable
 					return false;
 				}
 			}
-			else if ((skilldat != null) && !skilldat.isCtrlPressed() && skill.isOffensive() && !srcIsSummon)
+			else if ((skillUseHolder != null) && !skillUseHolder.isCtrlPressed() && skill.isOffensive() && !srcIsSummon)
 			{
 				if ((getClan() != null) && (((PlayerInstance) target).getClan() != null) && getClan().isAtWarWith(((PlayerInstance) target).getClan().getClanId()) && ((PlayerInstance) target).getClan().isAtWarWith(getClan().getClanId()))
 				{
@@ -14423,13 +14358,13 @@ public class PlayerInstance extends Playable
 	 * Get the current skill in use or return null.
 	 * @return the current skill
 	 */
-	public SkillDat getCurrentSkill()
+	public SkillUseHolder getCurrentSkill()
 	{
 		return _currentSkill;
 	}
 	
 	/**
-	 * Create a new SkillDat object and set the player _currentSkill.
+	 * Create a new SkillUseHolder object and set the player _currentSkill.
 	 * @param currentSkill the current skill
 	 * @param ctrlPressed the ctrl pressed
 	 * @param shiftPressed the shift pressed
@@ -14441,20 +14376,20 @@ public class PlayerInstance extends Playable
 			_currentSkill = null;
 			return;
 		}
-		_currentSkill = new SkillDat(currentSkill, ctrlPressed, shiftPressed);
+		_currentSkill = new SkillUseHolder(currentSkill, ctrlPressed, shiftPressed);
 	}
 	
 	/**
 	 * Gets the queued skill.
 	 * @return the queued skill
 	 */
-	public SkillDat getQueuedSkill()
+	public SkillUseHolder getQueuedSkill()
 	{
 		return _queuedSkill;
 	}
 	
 	/**
-	 * Create a new SkillDat object and queue it in the player _queuedSkill.
+	 * Create a new SkillUseHolder object and queue it in the player _queuedSkill.
 	 * @param queuedSkill the queued skill
 	 * @param ctrlPressed the ctrl pressed
 	 * @param shiftPressed the shift pressed
@@ -14466,7 +14401,7 @@ public class PlayerInstance extends Playable
 			_queuedSkill = null;
 			return;
 		}
-		_queuedSkill = new SkillDat(queuedSkill, ctrlPressed, shiftPressed);
+		_queuedSkill = new SkillUseHolder(queuedSkill, ctrlPressed, shiftPressed);
 	}
 	
 	/**
@@ -16291,13 +16226,13 @@ public class PlayerInstance extends Playable
 	 * Get the current pet skill in use or return null.<br>
 	 * @return
 	 */
-	public SkillDat getCurrentPetSkill()
+	public SkillUseHolder getCurrentPetSkill()
 	{
 		return _currentPetSkill;
 	}
 	
 	/**
-	 * Create a new SkillDat object and set the player _currentPetSkill.
+	 * Create a new SkillUseHolder object and set the player _currentPetSkill.
 	 * @param currentSkill
 	 * @param ctrlPressed
 	 * @param shiftPressed
@@ -16309,7 +16244,7 @@ public class PlayerInstance extends Playable
 			_currentPetSkill = null;
 			return;
 		}
-		_currentPetSkill = new SkillDat(currentSkill, ctrlPressed, shiftPressed);
+		_currentPetSkill = new SkillUseHolder(currentSkill, ctrlPressed, shiftPressed);
 	}
 	
 	@Override

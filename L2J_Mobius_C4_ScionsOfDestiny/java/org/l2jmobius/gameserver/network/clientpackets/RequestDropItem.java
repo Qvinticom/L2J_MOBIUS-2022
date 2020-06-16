@@ -21,7 +21,7 @@ import java.util.logging.Logger;
 import org.l2jmobius.Config;
 import org.l2jmobius.gameserver.datatables.xml.AdminData;
 import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
-import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance.SkillDat;
+import org.l2jmobius.gameserver.model.holders.SkillUseHolder;
 import org.l2jmobius.gameserver.model.items.Item;
 import org.l2jmobius.gameserver.model.items.instance.ItemInstance;
 import org.l2jmobius.gameserver.model.items.type.EtcItemType;
@@ -154,7 +154,7 @@ public class RequestDropItem extends GameClientPacket
 		
 		if (player.isCastingNow())
 		{
-			final SkillDat skill = player.getCurrentSkill();
+			final SkillUseHolder skill = player.getCurrentSkill();
 			if (skill != null)
 			{
 				// Cannot discard item that the skill is consuming.

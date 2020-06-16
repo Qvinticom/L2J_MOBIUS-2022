@@ -8398,7 +8398,7 @@ public class PlayerInstance extends Playable
 			// Do not queue skill if called by an item.
 			if (item == null)
 			{
-				// Create a new SkillDat object and queue it in the player _queuedSkill
+				// Create a new SkillUseHolder object and queue it in the player _queuedSkill
 				setQueuedSkill(usedSkill, item, forceUse, dontMove);
 			}
 			sendPacket(ActionFailed.STATIC_PACKET);
@@ -11108,7 +11108,7 @@ public class PlayerInstance extends Playable
 	}
 	
 	/**
-	 * Create a new SkillDat object and queue it in the player _queuedSkill.
+	 * Create a new SkillUseHolder object and queue it in the player _queuedSkill.
 	 * @param queuedSkill
 	 * @param item
 	 * @param ctrlPressed
