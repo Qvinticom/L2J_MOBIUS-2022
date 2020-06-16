@@ -9844,6 +9844,25 @@ public class PlayerInstance extends Playable
 			return;
 		}
 		
+		// If a skill is currently being used, queue this one if this is not the same
+		// Note that this check is currently imperfect: getCurrentSkill() isn't always null when a skill has
+		// failed to cast, or the casting is not yet in progress when this is rechecked
+		if ((currSkillId != -1) && (isCastingNow() || isCastingPotionNow()))
+		{
+			final SkillDat currentSkill = getCurrentSkill();
+			// Check if new skill different from current skill in progress
+			if ((currentSkill != null) && (skill.getId() == currentSkill.getSkillId()))
+			{
+				sendPacket(ActionFailed.STATIC_PACKET);
+				return;
+			}
+			
+			// Create a new SkillDat object and queue it in the player _queuedSkill
+			setQueuedSkill(skill, forceUse, dontMove);
+			sendPacket(ActionFailed.STATIC_PACKET);
+			return;
+		}
+		
 		// Check if skill is in reause time
 		if (isSkillDisabled(skill))
 		{
@@ -9870,8 +9889,7 @@ public class PlayerInstance extends Playable
 			return;
 		}
 		
-		// Check if it's ok to summon
-		// siege golem (13), Wild Hog Cannon (299), Swoop Cannon (448)
+		// Check if it's ok to summon Siege Golem (13), Wild Hog Cannon (299), Swoop Cannon (448)
 		if (((skillId == 13) || (skillId == 299) || (skillId == 448)) && !SiegeManager.getInstance().checkIfOkToSummon(this, false) && !FortSiegeManager.getInstance().checkIfOkToSummon(this, false))
 		{
 			return;
@@ -9879,30 +9897,11 @@ public class PlayerInstance extends Playable
 		
 		// ************************************* Check Casting in Progress *******************************************
 		
-		// If a skill is currently being used, queue this one if this is not the same
-		// Note that this check is currently imperfect: getCurrentSkill() isn't always null when a skill has
-		// failed to cast, or the casting is not yet in progress when this is rechecked
-		if ((currSkillId != -1) && (isCastingNow() || isCastingPotionNow()))
-		{
-			final SkillDat currentSkill = getCurrentSkill();
-			// Check if new skill different from current skill in progress
-			if ((currentSkill != null) && (skill.getId() == currentSkill.getSkillId()))
-			{
-				sendPacket(ActionFailed.STATIC_PACKET);
-				return;
-			}
-			
-			// Create a new SkillDat object and queue it in the player _queuedSkill
-			setQueuedSkill(skill, forceUse, dontMove);
-			sendPacket(ActionFailed.STATIC_PACKET);
-			return;
-		}
-		
 		// Create a new SkillDat object and set the player _currentSkill
 		// This is used mainly to save & queue the button presses, since Creature has
 		// _lastSkillCast which could otherwise replace it
 		setCurrentSkill(skill, forceUse, dontMove);
-		if (getQueuedSkill() != null)
+		if (_queuedSkill != null)
 		{
 			setQueuedSkill(null, false, false);
 		}
