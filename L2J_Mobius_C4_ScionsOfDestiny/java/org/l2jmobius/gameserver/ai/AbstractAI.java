@@ -694,11 +694,10 @@ abstract class AbstractAI implements Ctrl
 	{
 		if (_clientMoving)
 		{
-			final Creature follow = getFollowTarget();
-			if ((_clientMovingToPawnOffset != 0) && (follow != null))
+			if ((_clientMovingToPawnOffset != 0) && isFollowing())
 			{
 				// Send a Server->Client packet MoveToPawn to the actor and all PlayerInstance in its _knownPlayers
-				player.sendPacket(new MoveToPawn(_actor, follow, _clientMovingToPawnOffset));
+				player.sendPacket(new MoveToPawn(_actor, _followTarget, _clientMovingToPawnOffset));
 			}
 			else
 			{
@@ -706,6 +705,11 @@ abstract class AbstractAI implements Ctrl
 				player.sendPacket(new CharMoveToLocation(_actor));
 			}
 		}
+	}
+	
+	public boolean isFollowing()
+	{
+		return (_followTarget != null) && ((_intention == AI_INTENTION_FOLLOW) || CreatureFollowTaskManager.getInstance().isFollowing(_actor));
 	}
 	
 	/**

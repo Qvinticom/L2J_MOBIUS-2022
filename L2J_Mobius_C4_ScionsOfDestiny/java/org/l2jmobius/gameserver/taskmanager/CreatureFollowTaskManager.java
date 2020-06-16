@@ -126,16 +126,21 @@ public class CreatureFollowTaskManager
 		}
 	}
 	
+	public boolean isFollowing(Creature creature)
+	{
+		return NORMAL_FOLLOW_CREATURES.containsKey(creature) || ATTACK_FOLLOW_CREATURES.containsKey(creature);
+	}
+	
 	public void addNormalFollow(Creature creature, int range)
 	{
-		follow(creature, range);
 		NORMAL_FOLLOW_CREATURES.putIfAbsent(creature, range);
+		follow(creature, range);
 	}
 	
 	public void addAttackFollow(Creature creature, int range)
 	{
-		follow(creature, range);
 		ATTACK_FOLLOW_CREATURES.putIfAbsent(creature, range);
+		follow(creature, range);
 	}
 	
 	public void remove(Creature creature)

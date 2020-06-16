@@ -692,7 +692,7 @@ public abstract class AbstractAI implements Ctrl
 	
 	public boolean isFollowing()
 	{
-		return (_target != null) && _target.isCreature() && (_intention == AI_INTENTION_FOLLOW);
+		return (_target != null) && _target.isCreature() && ((_intention == AI_INTENTION_FOLLOW) || CreatureFollowTaskManager.getInstance().isFollowing(_actor));
 	}
 	
 	/**
