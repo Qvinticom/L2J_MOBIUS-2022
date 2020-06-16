@@ -72,6 +72,6 @@ public class EffectFusion extends Effect
 	private void updateBuff()
 	{
 		exit(false);
-		SkillTable.getInstance().getInfo(getSkill().getId(), _effect).getEffects(getEffector(), getEffected(), false, false, false);
+		SkillTable.getInstance().getSkill(getSkill().getId(), _effect).getEffects(getEffector(), getEffected(), false, false, false);
 	}
 }

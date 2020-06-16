@@ -152,7 +152,7 @@ public class FishermanInstance extends FolkInstance
 		int counts = 0;
 		for (SkillLearn s : skills)
 		{
-			final Skill sk = SkillTable.getInstance().getInfo(s.getId(), s.getLevel());
+			final Skill sk = SkillTable.getInstance().getSkill(s.getId(), s.getLevel());
 			if (sk == null)
 			{
 				continue;

@@ -270,7 +270,7 @@ public class Baium extends Quest
 				else if (((_lastAttackVsBaiumTime + 300000) < System.currentTimeMillis()) && (npc.getCurrentHp() < ((npc.getMaxHp() * 3) / 4.0)))
 				{
 					npc.setTarget(npc);
-					npc.doCast(SkillTable.getInstance().getInfo(4135, 1));
+					npc.doCast(SkillTable.getInstance().getSkill(4135, 1));
 					if (GrandBossManager.getInstance().getBossStatus(LIVE_BAIUM) != AWAKE)
 					{
 						cancelQuestTimer("baium_despawn", npc, null);
@@ -398,7 +398,7 @@ public class Baium extends Quest
 				if (sk4258 == 0)
 				{
 					npc.setTarget(attacker);
-					npc.doCast(SkillTable.getInstance().getInfo(4258, 1));
+					npc.doCast(SkillTable.getInstance().getSkill(4258, 1));
 				}
 			}
 			// update a variable with the last action against baium
@@ -500,7 +500,7 @@ public class Baium extends Quest
 			_target = getRandomTarget(npc);
 			if (_target != null)
 			{
-				_skill = SkillTable.getInstance().getInfo(getRandomSkill(npc), 1);
+				_skill = SkillTable.getInstance().getSkill(getRandomSkill(npc), 1);
 			}
 		}
 		
@@ -508,7 +508,7 @@ public class Baium extends Quest
 		Skill skill = _skill;
 		if (skill == null)
 		{
-			skill = SkillTable.getInstance().getInfo(getRandomSkill(npc), 1);
+			skill = SkillTable.getInstance().getSkill(getRandomSkill(npc), 1);
 		}
 		if ((target == null) || target.isDead() || !(_zone.isInsideZone(target)))
 		{

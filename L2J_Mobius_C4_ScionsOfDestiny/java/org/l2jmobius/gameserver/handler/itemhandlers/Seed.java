@@ -349,7 +349,7 @@ public class Seed implements IItemHandler
 		{
 			// TODO: get right skill level
 			monster.setSeeded(_seedId, player);
-			final Skill skill = SkillTable.getInstance().getInfo(2097, 3); // sowing skill
+			final Skill skill = SkillTable.getInstance().getSkill(2097, 3); // sowing skill
 			player.useMagic(skill, false, false);
 		}
 		else

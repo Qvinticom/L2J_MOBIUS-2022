@@ -315,12 +315,12 @@ public class Pdam implements ISkillHandler
 				}
 				else if (skill.getId() == 345) // Sonic Rage
 				{
-					final Skill dummy = SkillTable.getInstance().getInfo(8, 7); // Lv7 Sonic Focus
+					final Skill dummy = SkillTable.getInstance().getSkill(8, 7); // Lv7 Sonic Focus
 					dummy.getEffects(creature, creature, ss, sps, bss);
 				}
 				else if (skill.getId() == 346) // Raging Force
 				{
-					final Skill dummy = SkillTable.getInstance().getInfo(50, 7); // Lv7 Focused Force
+					final Skill dummy = SkillTable.getInstance().getSkill(50, 7); // Lv7 Focused Force
 					dummy.getEffects(creature, creature, ss, sps, bss);
 				}
 			}

@@ -1138,7 +1138,7 @@ public class VanHalter extends Quest
 	// Check bleeding player.
 	protected void addBleeding()
 	{
-		final Skill bleed = SkillTable.getInstance().getInfo(4615, 12);
+		final Skill bleed = SkillTable.getInstance().getSkill(4615, 12);
 		for (NpcInstance tr : _triolRevelation)
 		{
 			if (!tr.getKnownList().getKnownPlayersInRadius(tr.getAggroRange()).iterator().hasNext() || tr.isDead())
@@ -1643,7 +1643,7 @@ public class VanHalter extends Quest
 				case 13:
 				{
 					// High Priestess van Halter uses the skill to kill Ritual Offering.
-					final Skill skill = SkillTable.getInstance().getInfo(1168, 7);
+					final Skill skill = SkillTable.getInstance().getSkill(1168, 7);
 					_ritualOffering.setInvul(false);
 					_vanHalter.setTarget(_ritualOffering);
 					// _vanHalter.setImmobilized(false);

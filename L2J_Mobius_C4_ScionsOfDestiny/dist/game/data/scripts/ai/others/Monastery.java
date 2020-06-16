@@ -83,7 +83,7 @@ public class Monastery extends Quest
 					case 22124:
 					case 22126:
 					{
-						final Skill skill = SkillTable.getInstance().getInfo(4589, 8);
+						final Skill skill = SkillTable.getInstance().getSkill(4589, 8);
 						npc.doCast(skill);
 						break;
 					}
@@ -139,7 +139,7 @@ public class Monastery extends Quest
 							case 22126:
 							case 22127:
 							{
-								final Skill skill = SkillTable.getInstance().getInfo(4589, 8);
+								final Skill skill = SkillTable.getInstance().getSkill(4589, 8);
 								npc.doCast(skill);
 								break;
 							}

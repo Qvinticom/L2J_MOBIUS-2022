@@ -165,7 +165,7 @@ public class Wedding implements IVoicedCommandHandler
 					skillId = 4362;
 				}
 				
-				final Skill skill = SkillTable.getInstance().getInfo(skillId, skillLevel);
+				final Skill skill = SkillTable.getInstance().getSkill(skillId, skillLevel);
 				if (activeChar.getFirstEffect(skill) == null)
 				{
 					skill.getEffects(activeChar, activeChar, false, false, false);

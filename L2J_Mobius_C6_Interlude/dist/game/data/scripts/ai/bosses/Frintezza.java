@@ -880,7 +880,7 @@ public class Frintezza extends Quest
 		else if (event.equals("morph_04"))
 		{
 			_zone.broadcastPacket(new SocialAction(_weakScarlet.getObjectId(), 4));
-			final Skill skill = SkillTable.getInstance().getInfo(5017, 1);
+			final Skill skill = SkillTable.getInstance().getSkill(5017, 1);
 			if (skill != null)
 			{
 				skill.getEffects(_weakScarlet, _weakScarlet, false, false, false);
@@ -972,7 +972,7 @@ public class Frintezza extends Quest
 		else if (event.equals("morph_15"))
 		{
 			_zone.broadcastPacket(new SocialAction(_strongScarlet.getObjectId(), 2));
-			final Skill skill = SkillTable.getInstance().getInfo(5017, 1);
+			final Skill skill = SkillTable.getInstance().getSkill(5017, 1);
 			if (skill != null)
 			{
 				skill.getEffects(_strongScarlet, _strongScarlet, false, false, false);
@@ -1097,7 +1097,7 @@ public class Frintezza extends Quest
 		}
 		else if (event.equals("songs_effect"))
 		{
-			final Skill skill = SkillTable.getInstance().getInfo(5008, _onSong);
+			final Skill skill = SkillTable.getInstance().getSkill(5008, _onSong);
 			if (skill == null)
 			{
 				return null;
@@ -1237,7 +1237,7 @@ public class Frintezza extends Quest
 			if ((_weakScarlet != null) && !_weakScarlet.isDead() && (_secondMorph == 0) && (_thirdMorph == 0) && (_onMorph == 0))
 			{
 				final int i = Rnd.get(0, 1);
-				final Skill skill = SkillTable.getInstance().getInfo(_skill[i][0], _skill[i][1]);
+				final Skill skill = SkillTable.getInstance().getSkill(_skill[i][0], _skill[i][1]);
 				if (skill != null)
 				{
 					_weakScarlet.stopMove(null);
@@ -1261,7 +1261,7 @@ public class Frintezza extends Quest
 					i = Rnd.get(2, 4);
 				}
 				
-				final Skill skill = SkillTable.getInstance().getInfo(_skill[i][0], _skill[i][1]);
+				final Skill skill = SkillTable.getInstance().getSkill(_skill[i][0], _skill[i][1]);
 				if (skill != null)
 				{
 					_weakScarlet.stopMove(null);
@@ -1290,7 +1290,7 @@ public class Frintezza extends Quest
 					i = Rnd.get(6, 9);
 				}
 				
-				final Skill skill = SkillTable.getInstance().getInfo(_skill[i][0], _skill[i][1]);
+				final Skill skill = SkillTable.getInstance().getSkill(_skill[i][0], _skill[i][1]);
 				if (skill != null)
 				{
 					_strongScarlet.stopMove(null);
@@ -1663,7 +1663,7 @@ public class Frintezza extends Quest
 			_bomber = 1;
 			startQuestTimer("bomber", 3000, npc, null);
 			
-			final Skill skill = SkillTable.getInstance().getInfo(5011, 1);
+			final Skill skill = SkillTable.getInstance().getSkill(5011, 1);
 			if (skill != null)
 			{
 				// npc.setCastingNow(true);

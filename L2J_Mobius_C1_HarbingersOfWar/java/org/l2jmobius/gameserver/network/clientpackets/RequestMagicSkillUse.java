@@ -39,7 +39,7 @@ public class RequestMagicSkillUse extends ClientBasePacket
 		
 		final PlayerInstance activeChar = client.getActiveChar();
 		final int level = activeChar.getSkillLevel(magicId);
-		final Skill skill = SkillTable.getInstance().getInfo(magicId, level);
+		final Skill skill = SkillTable.getInstance().getSkill(magicId, level);
 		if (skill != null)
 		{
 			activeChar.stopMove();

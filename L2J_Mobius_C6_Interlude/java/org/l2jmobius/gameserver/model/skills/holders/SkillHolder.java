@@ -51,6 +51,6 @@ public class SkillHolder
 	
 	public Skill getSkill()
 	{
-		return SkillTable.getInstance().getInfo(_skillId, _skillLvl);
+		return SkillTable.getInstance().getSkill(_skillId, _skillLvl);
 	}
 }

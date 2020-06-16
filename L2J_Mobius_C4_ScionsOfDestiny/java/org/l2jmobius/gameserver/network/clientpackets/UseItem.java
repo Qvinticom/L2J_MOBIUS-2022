@@ -461,12 +461,12 @@ public class UseItem extends GameClientPacket
 				{
 					if (item.getItemId() == 9140)
 					{
-						player.removeSkill(SkillTable.getInstance().getInfo(3261, 1));
+						player.removeSkill(SkillTable.getInstance().getSkill(3261, 1));
 					}
 					else
 					{
-						player.removeSkill(SkillTable.getInstance().getInfo(3260, 0));
-						player.removeSkill(SkillTable.getInstance().getInfo(3262, 0));
+						player.removeSkill(SkillTable.getInstance().getSkill(3260, 0));
+						player.removeSkill(SkillTable.getInstance().getSkill(3262, 0));
 					}
 				}
 				
@@ -547,14 +547,14 @@ public class UseItem extends GameClientPacket
 				{
 					if (item.getItemId() == 9140)
 					{
-						player.addSkill(SkillTable.getInstance().getInfo(3261, 1));
+						player.addSkill(SkillTable.getInstance().getSkill(3261, 1));
 					}
 					else
 					{
-						player.addSkill(SkillTable.getInstance().getInfo(3260, 0));
+						player.addSkill(SkillTable.getInstance().getSkill(3260, 0));
 					}
 					
-					player.addSkill(SkillTable.getInstance().getInfo(3262, 0));
+					player.addSkill(SkillTable.getInstance().getSkill(3262, 0));
 				}
 				
 				items = player.getInventory().equipItemAndRecord(item);

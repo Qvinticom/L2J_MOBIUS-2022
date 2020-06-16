@@ -59,7 +59,7 @@ public class Nectar implements IItemHandler
 		final int itemId = item.getItemId();
 		if (itemId == 6391)
 		{
-			player.useMagic(SkillTable.getInstance().getInfo(9998, 1), false, false);
+			player.useMagic(SkillTable.getInstance().getSkill(9998, 1), false, false);
 		}
 	}
 	

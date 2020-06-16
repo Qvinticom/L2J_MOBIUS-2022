@@ -65,7 +65,7 @@ public class Harvester implements IItemHandler
 			return;
 		}
 		
-		final Skill skill = SkillTable.getInstance().getInfo(2098, 1); // harvesting skill
+		final Skill skill = SkillTable.getInstance().getSkill(2098, 1); // harvesting skill
 		player.useMagic(skill, false, false);
 	}
 	

@@ -65,7 +65,7 @@ public class Armor extends Item
 		final int sLv = set.getInt("item_skill_lvl", 0);
 		if ((sId > 0) && (sLv > 0))
 		{
-			_itemSkill = SkillTable.getInstance().getInfo(sId, sLv);
+			_itemSkill = SkillTable.getInstance().getSkill(sId, sLv);
 		}
 	}
 	

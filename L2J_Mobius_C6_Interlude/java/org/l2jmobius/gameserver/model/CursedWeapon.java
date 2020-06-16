@@ -283,23 +283,23 @@ public class CursedWeapon
 			level = _skillMaxLevel;
 		}
 		
-		Skill skill = SkillTable.getInstance().getInfo(_skillId, level);
+		Skill skill = SkillTable.getInstance().getSkill(_skillId, level);
 		// To properly support subclasses this skill can not be stored.
 		_player.addSkill(skill, false);
 		
 		// Void Burst, Void Flow
-		skill = SkillTable.getInstance().getInfo(3630, 1);
+		skill = SkillTable.getInstance().getSkill(3630, 1);
 		_player.addSkill(skill, false);
-		skill = SkillTable.getInstance().getInfo(3631, 1);
+		skill = SkillTable.getInstance().getSkill(3631, 1);
 		_player.addSkill(skill, false);
 		_player.sendSkillList();
 	}
 	
 	public void removeSkill()
 	{
-		_player.removeSkill(SkillTable.getInstance().getInfo(_skillId, _player.getSkillLevel(_skillId)), false);
-		_player.removeSkill(SkillTable.getInstance().getInfo(3630, 1), false);
-		_player.removeSkill(SkillTable.getInstance().getInfo(3631, 1), false);
+		_player.removeSkill(SkillTable.getInstance().getSkill(_skillId, _player.getSkillLevel(_skillId)), false);
+		_player.removeSkill(SkillTable.getInstance().getSkill(3630, 1), false);
+		_player.removeSkill(SkillTable.getInstance().getSkill(3631, 1), false);
 		_player.sendSkillList();
 	}
 	

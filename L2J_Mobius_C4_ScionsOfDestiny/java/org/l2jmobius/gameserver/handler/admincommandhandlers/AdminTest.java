@@ -72,7 +72,7 @@ public class AdminTest implements IAdminCommandHandler
 			final Creature target = (Creature) activeChar.getTarget();
 			BuilderUtil.sendSysMessage(activeChar, "cast");
 			
-			final Skill skill = SkillTable.getInstance().getInfo(1085, 3);
+			final Skill skill = SkillTable.getInstance().getSkill(1085, 3);
 			if (target != null)
 			{
 				BuilderUtil.sendSysMessage(activeChar, "target locked");

@@ -50,7 +50,7 @@ public class AdminRideWyvern implements IAdminCommandHandler
 				petRideId = 12621;
 				
 				// Add skill Wyvern Breath
-				activeChar.addSkill(SkillTable.getInstance().getInfo(4289, 1));
+				activeChar.addSkill(SkillTable.getInstance().getSkill(4289, 1));
 				activeChar.sendSkillList();
 			}
 			else if (command.startsWith("admin_ride_strider"))

@@ -91,7 +91,7 @@ public class RequestAquireSkill extends GameClientPacket
 			return;
 		}
 		
-		final Skill skill = SkillTable.getInstance().getInfo(_id, _level);
+		final Skill skill = SkillTable.getInstance().getSkill(_id, _level);
 		int counts = 0;
 		int requiredSp = 10000000;
 		if (_skillType == 0)
@@ -99,7 +99,7 @@ public class RequestAquireSkill extends GameClientPacket
 			final SkillLearn[] skills = SkillTreeTable.getInstance().getAvailableSkills(player, player.getSkillLearningClassId());
 			for (SkillLearn s : skills)
 			{
-				final Skill sk = SkillTable.getInstance().getInfo(s.getId(), s.getLevel());
+				final Skill sk = SkillTable.getInstance().getSkill(s.getId(), s.getLevel());
 				if ((sk == null) || (sk != skill) || !sk.getCanLearn(player.getSkillLearningClassId()) || !sk.canTeachBy(npcid))
 				{
 					continue;
@@ -157,7 +157,7 @@ public class RequestAquireSkill extends GameClientPacket
 			final SkillLearn[] skillsc = SkillTreeTable.getInstance().getAvailableSkills(player);
 			for (SkillLearn s : skillsc)
 			{
-				final Skill sk = SkillTable.getInstance().getInfo(s.getId(), s.getLevel());
+				final Skill sk = SkillTable.getInstance().getSkill(s.getId(), s.getLevel());
 				if ((sk == null) || (sk != skill))
 				{
 					continue;
@@ -211,7 +211,7 @@ public class RequestAquireSkill extends GameClientPacket
 			final PledgeSkillLearn[] skills = SkillTreeTable.getInstance().getAvailablePledgeSkills(player);
 			for (PledgeSkillLearn s : skills)
 			{
-				final Skill sk = SkillTable.getInstance().getInfo(s.getId(), s.getLevel());
+				final Skill sk = SkillTable.getInstance().getSkill(s.getId(), s.getLevel());
 				if ((sk == null) || (sk != skill))
 				{
 					continue;

@@ -75,8 +75,8 @@ public class SiegeManager
 	
 	public void addSiegeSkills(PlayerInstance character)
 	{
-		character.addSkill(SkillTable.getInstance().getInfo(246, 1), false);
-		character.addSkill(SkillTable.getInstance().getInfo(247, 1), false);
+		character.addSkill(SkillTable.getInstance().getSkill(246, 1), false);
+		character.addSkill(SkillTable.getInstance().getSkill(247, 1), false);
 	}
 	
 	/**
@@ -177,8 +177,8 @@ public class SiegeManager
 	
 	public void removeSiegeSkills(PlayerInstance character)
 	{
-		character.removeSkill(SkillTable.getInstance().getInfo(246, 1));
-		character.removeSkill(SkillTable.getInstance().getInfo(247, 1));
+		character.removeSkill(SkillTable.getInstance().getSkill(246, 1));
+		character.removeSkill(SkillTable.getInstance().getSkill(247, 1));
 	}
 	
 	private final void load()

@@ -84,7 +84,7 @@ public class WyvernManagerInstance extends CastleChamberlainInstance
 						player.sendPacket(mount);
 						player.broadcastPacket(mount);
 						player.setMountType(mount.getMountType());
-						player.addSkill(SkillTable.getInstance().getInfo(4289, 1));
+						player.addSkill(SkillTable.getInstance().getSkill(4289, 1));
 						player.sendMessage("The wyvern has been summoned successfully!");
 					}
 				}

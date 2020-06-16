@@ -63,7 +63,7 @@ public class AdminSuperHaste implements IAdminCommandHandler
 					}
 					else if ((val >= 1) && (val <= 4))
 					{
-						final Skill gmSpeedSkill = SkillTable.getInstance().getInfo(SUPER_HASTE_ID, val);
+						final Skill gmSpeedSkill = SkillTable.getInstance().getSkill(SUPER_HASTE_ID, val);
 						player.doCast(gmSpeedSkill);
 					}
 				}

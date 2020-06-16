@@ -619,7 +619,7 @@ public class SkillTreeTable
 		{
 			for (SkillLearn s : learnable)
 			{
-				final Skill sk = SkillTable.getInstance().getInfo(s.getId(), s.getLevel());
+				final Skill sk = SkillTable.getInstance().getSkill(s.getId(), s.getLevel());
 				if ((sk == null) || ((sk.getId() == Skill.SKILL_DIVINE_INSPIRATION) && !Config.AUTO_LEARN_DIVINE_INSPIRATION && !player.isGM()))
 				{
 					unLearnable++;

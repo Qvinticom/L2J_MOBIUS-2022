@@ -88,7 +88,7 @@ public class CustomPotions implements IItemHandler
 	
 	public boolean usePotion(PlayerInstance player, int magicId, int level)
 	{
-		final Skill skill = SkillTable.getInstance().getInfo(magicId, level);
+		final Skill skill = SkillTable.getInstance().getSkill(magicId, level);
 		if (skill != null)
 		{
 			player.doCast(skill);

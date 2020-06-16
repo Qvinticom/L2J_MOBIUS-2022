@@ -263,7 +263,7 @@ public class CharacterCreate extends GameClientPacket
 		
 		for (SkillLearn startSkill : SkillTreeTable.getInstance().getAvailableSkills(newChar, newChar.getClassId()))
 		{
-			newChar.addSkill(SkillTable.getInstance().getInfo(startSkill.getId(), startSkill.getLevel()), true);
+			newChar.addSkill(SkillTable.getInstance().getSkill(startSkill.getId(), startSkill.getLevel()), true);
 			if ((startSkill.getId() == 1001) || (startSkill.getId() == 1177))
 			{
 				newChar.registerShortCut(new ShortCut(1, 0, 2, startSkill.getId(), 1));

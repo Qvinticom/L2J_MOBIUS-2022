@@ -36,11 +36,11 @@ public class HeroSkillTable
 	private HeroSkillTable()
 	{
 		HERO_SKILLS = new Skill[5];
-		HERO_SKILLS[0] = SkillTable.getInstance().getInfo(395, 1);
-		HERO_SKILLS[1] = SkillTable.getInstance().getInfo(396, 1);
-		HERO_SKILLS[2] = SkillTable.getInstance().getInfo(1374, 1);
-		HERO_SKILLS[3] = SkillTable.getInstance().getInfo(1375, 1);
-		HERO_SKILLS[4] = SkillTable.getInstance().getInfo(1376, 1);
+		HERO_SKILLS[0] = SkillTable.getInstance().getSkill(395, 1);
+		HERO_SKILLS[1] = SkillTable.getInstance().getSkill(396, 1);
+		HERO_SKILLS[2] = SkillTable.getInstance().getSkill(1374, 1);
+		HERO_SKILLS[3] = SkillTable.getInstance().getSkill(1375, 1);
+		HERO_SKILLS[4] = SkillTable.getInstance().getSkill(1376, 1);
 	}
 	
 	public static Skill[] getHeroSkills()

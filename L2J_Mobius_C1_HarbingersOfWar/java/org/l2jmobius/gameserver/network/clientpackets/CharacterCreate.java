@@ -149,7 +149,7 @@ public class CharacterCreate extends ClientBasePacket
 		newChar.setClanId(0);
 		for (SkillLearn startSkill : SkillTreeTable.getInstance().getAvailableSkills(newChar))
 		{
-			newChar.addSkill(SkillTable.getInstance().getInfo(startSkill.getId(), startSkill.getLevel()));
+			newChar.addSkill(SkillTable.getInstance().getSkill(startSkill.getId(), startSkill.getLevel()));
 		}
 		client.saveCharToDisk(newChar);
 		client.getConnection().sendPacket(new CharSelectInfo(client.getLoginName(), client.getSessionId()));

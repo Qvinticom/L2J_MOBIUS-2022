@@ -451,7 +451,7 @@ public class EnterWorld extends GameClientPacket
 		// Apply night/day bonus on skill Shadow Sense
 		if (player.getRace().ordinal() == 2)
 		{
-			final Skill skill = SkillTable.getInstance().getInfo(294, 1);
+			final Skill skill = SkillTable.getInstance().getSkill(294, 1);
 			if ((skill != null) && (player.getSkillLevel(294) == 1))
 			{
 				if (GameTimeController.getInstance().isNowNight())
@@ -572,7 +572,7 @@ public class EnterWorld extends GameClientPacket
 		
 		if (player.getFirstLog() && Config.NEW_PLAYER_EFFECT)
 		{
-			final Skill skill = SkillTable.getInstance().getInfo(2025, 1);
+			final Skill skill = SkillTable.getInstance().getSkill(2025, 1);
 			if (skill != null)
 			{
 				final MagicSkillUse msu = new MagicSkillUse(player, player, 2025, 1, 1, 0);

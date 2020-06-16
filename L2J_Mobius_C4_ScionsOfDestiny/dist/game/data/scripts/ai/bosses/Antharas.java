@@ -690,12 +690,12 @@ public class Antharas extends Quest
 				case 29074:
 				case 29075:
 				{
-					skill = SkillTable.getInstance().getInfo(5097, 1);
+					skill = SkillTable.getInstance().getSkill(5097, 1);
 					break;
 				}
 				case 29076:
 				{
-					skill = SkillTable.getInstance().getInfo(5094, 1);
+					skill = SkillTable.getInstance().getSkill(5094, 1);
 					break;
 				}
 			}
@@ -932,12 +932,12 @@ public class Antharas extends Quest
 				case 29074:
 				case 29075:
 				{
-					skill = SkillTable.getInstance().getInfo(5097, 1);
+					skill = SkillTable.getInstance().getSkill(5097, 1);
 					break;
 				}
 				case 29076:
 				{
-					skill = SkillTable.getInstance().getInfo(5094, 1);
+					skill = SkillTable.getInstance().getSkill(5094, 1);
 					break;
 				}
 			}

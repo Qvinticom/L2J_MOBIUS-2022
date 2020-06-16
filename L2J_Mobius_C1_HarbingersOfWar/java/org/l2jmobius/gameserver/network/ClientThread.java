@@ -524,7 +524,7 @@ public class ClientThread extends Thread
 				final int id = Integer.parseInt(st.nextToken());
 				final int level = Integer.parseInt(st.nextToken());
 				st.nextToken();
-				final Skill skill = SkillTable.getInstance().getInfo(id, level);
+				final Skill skill = SkillTable.getInstance().getSkill(id, level);
 				cha.addSkill(skill);
 			}
 			lnr.close();

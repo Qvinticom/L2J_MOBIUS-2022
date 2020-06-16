@@ -116,7 +116,7 @@ public class Logout extends GameClientPacket
 		
 		if (player.isFlying())
 		{
-			player.removeSkill(SkillTable.getInstance().getInfo(4289, 1));
+			player.removeSkill(SkillTable.getInstance().getSkill(4289, 1));
 		}
 		
 		if (Config.OFFLINE_LOGOUT && player.isSitting())

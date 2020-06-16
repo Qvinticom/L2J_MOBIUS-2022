@@ -53,7 +53,7 @@ public class ChestKey implements IItemHandler
 		
 		final PlayerInstance player = (PlayerInstance) playable;
 		final int itemId = item.getItemId();
-		final Skill skill = SkillTable.getInstance().getInfo(2229, itemId - 6664); // box key skill
+		final Skill skill = SkillTable.getInstance().getSkill(2229, itemId - 6664); // box key skill
 		final WorldObject target = player.getTarget();
 		if (!(target instanceof ChestInstance))
 		{

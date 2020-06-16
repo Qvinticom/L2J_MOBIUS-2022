@@ -34,7 +34,7 @@ public class RequestAquireSkillInfo extends ClientBasePacket
 		final int level = readD();
 		
 		final PlayerInstance activeChar = client.getActiveChar();
-		final Skill skill = SkillTable.getInstance().getInfo(id, level);
+		final Skill skill = SkillTable.getInstance().getSkill(id, level);
 		int requiredSp = 0;
 		for (SkillLearn skill2 : SkillTreeTable.getInstance().getAvailableSkills(activeChar))
 		{

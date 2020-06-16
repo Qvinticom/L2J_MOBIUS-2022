@@ -431,7 +431,7 @@ public class TamedBeastInstance extends FeedableBeastInstance
 				
 				// emulate a call to the owner using food, but bypass all checks for range, etc
 				// this also causes a call to the AI tasks handling feeding, which may call onReceiveFood as required.
-				owner.callSkill(SkillTable.getInstance().getInfo(foodTypeSkillId, 1), targets);
+				owner.callSkill(SkillTable.getInstance().getSkill(foodTypeSkillId, 1), targets);
 				owner.setTarget(oldTarget);
 			}
 			else if (_tamedBeast.getRemainingTime() < (MAX_DURATION - 300000)) // if the owner has no food, the beast immediately despawns, except when it was only newly spawned. Newly spawned beasts can last up to 5 minutes

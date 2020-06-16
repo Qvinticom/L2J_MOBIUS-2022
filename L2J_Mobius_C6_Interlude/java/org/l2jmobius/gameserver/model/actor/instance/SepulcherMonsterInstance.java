@@ -524,7 +524,7 @@ public class SepulcherMonsterInstance extends MonsterInstance
 		@Override
 		public void run()
 		{
-			final Skill fp = SkillTable.getInstance().getInfo(4616, 1); // Invulnerable by petrification
+			final Skill fp = SkillTable.getInstance().getSkill(4616, 1); // Invulnerable by petrification
 			fp.getEffects(activeChar, activeChar, false, false, false);
 		}
 	}

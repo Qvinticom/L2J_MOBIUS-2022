@@ -49,11 +49,11 @@ public class EffectSignet extends Effect
 	{
 		if (getSkill() instanceof SkillSignet)
 		{
-			_skill = SkillTable.getInstance().getInfo(((SkillSignet) getSkill()).effectId, getLevel());
+			_skill = SkillTable.getInstance().getSkill(((SkillSignet) getSkill()).effectId, getLevel());
 		}
 		else if (getSkill() instanceof SkillSignetCasttime)
 		{
-			_skill = SkillTable.getInstance().getInfo(((SkillSignetCasttime) getSkill()).effectId, getLevel());
+			_skill = SkillTable.getInstance().getSkill(((SkillSignetCasttime) getSkill()).effectId, getLevel());
 		}
 		_actor = (EffectPointInstance) getEffected();
 	}

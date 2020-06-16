@@ -163,7 +163,7 @@ public class SummonItems implements IItemHandler
 			{
 				player.setTarget(player);
 				// Skill 2046 used only for animation
-				final Skill skill = SkillTable.getInstance().getInfo(2046, 1);
+				final Skill skill = SkillTable.getInstance().getSkill(2046, 1);
 				player.useMagic(skill, true, true);
 				player.sendPacket(SystemMessageId.SUMMONING_YOUR_PET);
 				ThreadPool.schedule(new PetSummonFinalizer(player, npcTemplate, item), 4800);

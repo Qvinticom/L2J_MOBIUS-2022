@@ -586,9 +586,9 @@ public class AugmentationData
 		{
 			if (level > _maxSkillLevel)
 			{
-				return SkillTable.getInstance().getInfo(_skillId, _maxSkillLevel);
+				return SkillTable.getInstance().getSkill(_skillId, _maxSkillLevel);
 			}
-			return SkillTable.getInstance().getInfo(_skillId, level);
+			return SkillTable.getInstance().getSkill(_skillId, level);
 		}
 		
 		public int getAugmentationSkillId()

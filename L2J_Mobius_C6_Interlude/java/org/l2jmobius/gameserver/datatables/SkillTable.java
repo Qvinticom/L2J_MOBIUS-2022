@@ -65,7 +65,7 @@ public class SkillTable
 		return (skillId * 256) + skillLevel;
 	}
 	
-	public Skill getInfo(int skillId, int level)
+	public Skill getSkill(int skillId, int level)
 	{
 		return _skills.get(getSkillHashCode(skillId, level));
 	}

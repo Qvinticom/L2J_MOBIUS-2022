@@ -363,22 +363,22 @@ public class PlayerInstance extends Creature
 		final int lvl = getLevel();
 		if (lvl == 5)
 		{
-			final Skill skill = SkillTable.getInstance().getInfo(194, 1);
+			final Skill skill = SkillTable.getInstance().getSkill(194, 1);
 			removeSkill(skill);
 		}
 		else if (lvl == 20)
 		{
-			final Skill skill = SkillTable.getInstance().getInfo(239, 1);
+			final Skill skill = SkillTable.getInstance().getSkill(239, 1);
 			addSkill(skill);
 		}
 		else if (lvl == 40)
 		{
-			final Skill skill = SkillTable.getInstance().getInfo(239, 2);
+			final Skill skill = SkillTable.getInstance().getSkill(239, 2);
 			addSkill(skill);
 		}
 		else if (lvl == 52)
 		{
-			final Skill skill = SkillTable.getInstance().getInfo(239, 3);
+			final Skill skill = SkillTable.getInstance().getSkill(239, 3);
 			addSkill(skill);
 		}
 	}

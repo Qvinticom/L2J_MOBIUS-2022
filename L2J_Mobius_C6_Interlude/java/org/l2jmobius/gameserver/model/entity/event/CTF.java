@@ -1574,7 +1574,7 @@ public class CTF implements EventTask
 				{
 					if (player.isFlying())
 					{
-						player.removeSkill(SkillTable.getInstance().getInfo(4289, 1));
+						player.removeSkill(SkillTable.getInstance().getSkill(4289, 1));
 					}
 					
 					player.broadcastPacket(new Ride(player.getObjectId(), Ride.ACTION_DISMOUNT, 0));

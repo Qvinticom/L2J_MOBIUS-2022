@@ -1463,7 +1463,7 @@ public class AdminEditNpc implements IAdminCommandHandler
 			
 			if (skillData.next())
 			{
-				final Skill skill = SkillTable.getInstance().getInfo(skillData.getInt("skillid"), skillData.getInt("level"));
+				final Skill skill = SkillTable.getInstance().getSkill(skillData.getInt("skillid"), skillData.getInt("level"));
 				replyMSG.append("<table>");
 				replyMSG.append("<tr><td>NPC</td><td>" + NpcTable.getInstance().getTemplate(skillData.getInt("npcid")).getName() + "</td></tr>");
 				replyMSG.append("<tr><td>SKILL</td><td>" + skill.getName() + "(" + skillData.getInt("skillid") + ")</td></tr>");
@@ -1491,7 +1491,7 @@ public class AdminEditNpc implements IAdminCommandHandler
 	
 	private void updateNpcSkillData(PlayerInstance activeChar, int npcId, int skillId, int level)
 	{
-		final Skill skillData = SkillTable.getInstance().getInfo(skillId, level);
+		final Skill skillData = SkillTable.getInstance().getSkill(skillId, level);
 		if (skillData == null)
 		{
 			final NpcHtmlMessage adminReply = new NpcHtmlMessage(5);
@@ -1560,7 +1560,7 @@ public class AdminEditNpc implements IAdminCommandHandler
 	private void addNpcSkillData(PlayerInstance activeChar, int npcId, int skillId, int level)
 	{
 		// skill check
-		final Skill skillData = SkillTable.getInstance().getInfo(skillId, level);
+		final Skill skillData = SkillTable.getInstance().getSkill(skillId, level);
 		if (skillData == null)
 		{
 			final NpcHtmlMessage adminReply = new NpcHtmlMessage(5);
@@ -1648,7 +1648,7 @@ public class AdminEditNpc implements IAdminCommandHandler
 			{
 				final int idval = skillDataList.getInt("skillid");
 				final int levelval = skillDataList.getInt("level");
-				skillData = SkillTable.getInstance().getInfo(idval, levelval);
+				skillData = SkillTable.getInstance().getSkill(idval, levelval);
 				if (skillData != null)
 				{
 					npcData.addSkill(skillData);

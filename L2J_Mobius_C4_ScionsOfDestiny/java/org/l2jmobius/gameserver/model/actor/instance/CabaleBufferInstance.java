@@ -158,7 +158,7 @@ public class CabaleBufferInstance extends NpcInstance
 				return false;
 			}
 			
-			final Skill skill = SkillTable.getInstance().getInfo(skillId, skillLevel);
+			final Skill skill = SkillTable.getInstance().getSkill(skillId, skillLevel);
 			if (player.getFirstEffect(skill) == null)
 			{
 				skill.getEffects(_caster, player, false, false, false);

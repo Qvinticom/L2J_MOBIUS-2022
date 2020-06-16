@@ -85,62 +85,62 @@ public class Crystals implements IItemHandler
 		{
 			case 7906:
 			{
-				skill = SkillTable.getInstance().getInfo(2248, 1);
+				skill = SkillTable.getInstance().getSkill(2248, 1);
 				break;
 			}
 			case 7907:
 			{
-				skill = SkillTable.getInstance().getInfo(2249, 1);
+				skill = SkillTable.getInstance().getSkill(2249, 1);
 				break;
 			}
 			case 7908:
 			{
-				skill = SkillTable.getInstance().getInfo(2250, 1);
+				skill = SkillTable.getInstance().getSkill(2250, 1);
 				break;
 			}
 			case 7909:
 			{
-				skill = SkillTable.getInstance().getInfo(2251, 1);
+				skill = SkillTable.getInstance().getSkill(2251, 1);
 				break;
 			}
 			case 7910:
 			{
-				skill = SkillTable.getInstance().getInfo(2252, 1);
+				skill = SkillTable.getInstance().getSkill(2252, 1);
 				break;
 			}
 			case 7911:
 			{
-				skill = SkillTable.getInstance().getInfo(2253, 1);
+				skill = SkillTable.getInstance().getSkill(2253, 1);
 				break;
 			}
 			case 7912:
 			{
-				skill = SkillTable.getInstance().getInfo(2254, 1);
+				skill = SkillTable.getInstance().getSkill(2254, 1);
 				break;
 			}
 			case 7913:
 			{
-				skill = SkillTable.getInstance().getInfo(2255, 1);
+				skill = SkillTable.getInstance().getSkill(2255, 1);
 				break;
 			}
 			case 7914:
 			{
-				skill = SkillTable.getInstance().getInfo(2256, 1);
+				skill = SkillTable.getInstance().getSkill(2256, 1);
 				break;
 			}
 			case 7915:
 			{
-				skill = SkillTable.getInstance().getInfo(2257, 1);
+				skill = SkillTable.getInstance().getSkill(2257, 1);
 				break;
 			}
 			case 7916:
 			{
-				skill = SkillTable.getInstance().getInfo(2258, 1);
+				skill = SkillTable.getInstance().getSkill(2258, 1);
 				break;
 			}
 			case 7917:
 			{
-				skill = SkillTable.getInstance().getInfo(2259, 1);
+				skill = SkillTable.getInstance().getSkill(2259, 1);
 				break;
 			}
 		}

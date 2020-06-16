@@ -217,7 +217,7 @@ public class Orfen extends Quest
 				{
 					attacker.teleToLocation(npc.getX(), npc.getY(), npc.getZ());
 					npc.setTarget(attacker);
-					npc.doCast(SkillTable.getInstance().getInfo(4064, 1));
+					npc.doCast(SkillTable.getInstance().getSkill(4064, 1));
 				}
 			}
 			else

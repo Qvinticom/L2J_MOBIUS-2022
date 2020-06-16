@@ -186,7 +186,7 @@ public class ScrollOfEscape implements IItemHandler
 		player.abortCast(true);
 		player.disableAllSkills();
 		
-		final Skill skill = SkillTable.getInstance().getInfo(escapeSkill, 1);
+		final Skill skill = SkillTable.getInstance().getSkill(escapeSkill, 1);
 		int hitTime = skill.getHitTime();
 		// C4 adjustment.
 		if ((escapeSkill == 2036) || (escapeSkill == 2177) || (escapeSkill == 2178))

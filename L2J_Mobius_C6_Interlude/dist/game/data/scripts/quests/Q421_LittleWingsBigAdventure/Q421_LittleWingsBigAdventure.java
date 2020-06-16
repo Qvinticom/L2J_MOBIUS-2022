@@ -233,7 +233,7 @@ public class Q421_LittleWingsBigAdventure extends Quest
 							// Curse if the registered objectId is the wrong one (switch flutes).
 							htmltext = "30747-18.htm";
 							
-							final Skill skill = SkillTable.getInstance().getInfo(4167, 1);
+							final Skill skill = SkillTable.getInstance().getSkill(4167, 1);
 							if ((skill != null) && (player.getFirstEffect(skill) == null))
 							{
 								skill.getEffects(npc, player);
@@ -309,7 +309,7 @@ public class Q421_LittleWingsBigAdventure extends Quest
 		// Tree curses the killer.
 		if ((Rnd.get(100) < 30) && (originalKiller != null))
 		{
-			final Skill skill = SkillTable.getInstance().getInfo(4243, 1);
+			final Skill skill = SkillTable.getInstance().getSkill(4243, 1);
 			if ((skill != null) && (originalKiller.getFirstEffect(skill) == null))
 			{
 				skill.getEffects(npc, originalKiller);

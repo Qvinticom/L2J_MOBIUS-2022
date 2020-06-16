@@ -40,7 +40,7 @@ final class EffectBestowSkill extends Effect
 	@Override
 	public void onStart()
 	{
-		final Skill tempSkill = SkillTable.getInstance().getInfo(getSkill().getTriggeredId(), getSkill().getTriggeredLevel());
+		final Skill tempSkill = SkillTable.getInstance().getSkill(getSkill().getTriggeredId(), getSkill().getTriggeredLevel());
 		if (tempSkill != null)
 		{
 			getEffected().addSkill(tempSkill);

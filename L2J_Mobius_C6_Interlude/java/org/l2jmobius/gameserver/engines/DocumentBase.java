@@ -381,7 +381,7 @@ public abstract class DocumentBase
 			lvl = Integer.decode(getValue(attrs.getNamedItem("lvl").getNodeValue(), template));
 		}
 		
-		final Skill skill = SkillTable.getInstance().getInfo(id, lvl);
+		final Skill skill = SkillTable.getInstance().getSkill(id, lvl);
 		if (attrs.getNamedItem("chance") != null)
 		{
 			if ((template instanceof Weapon) || (template instanceof Item))

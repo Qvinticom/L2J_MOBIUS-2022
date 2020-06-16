@@ -849,7 +849,7 @@ public class ClanHallManagerInstance extends FolkInstance
 						{
 							skillLevel = Integer.parseInt(st.nextToken());
 						}
-						skill = SkillTable.getInstance().getInfo(skillId, skillLevel);
+						skill = SkillTable.getInstance().getSkill(skillId, skillLevel);
 						if (skill.getSkillType() == SkillType.SUMMON)
 						{
 							player.doCast(skill);

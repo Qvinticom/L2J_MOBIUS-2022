@@ -74,7 +74,7 @@ public class RequestExEnchantSkillInfo extends GameClientPacket
 		
 		boolean canteach = false;
 		
-		final Skill skill = SkillTable.getInstance().getInfo(_skillId, _skillLvl);
+		final Skill skill = SkillTable.getInstance().getSkill(_skillId, _skillLvl);
 		if ((skill == null) || (skill.getId() != _skillId))
 		{
 			return;

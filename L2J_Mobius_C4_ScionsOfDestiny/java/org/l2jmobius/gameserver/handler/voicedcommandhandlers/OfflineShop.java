@@ -136,7 +136,7 @@ public class OfflineShop implements IVoicedCommandHandler
 		
 		if (player.isFlying())
 		{
-			player.removeSkill(SkillTable.getInstance().getInfo(4289, 1));
+			player.removeSkill(SkillTable.getInstance().getSkill(4289, 1));
 		}
 		
 		if ((player.isInStoreMode() && Config.OFFLINE_TRADE_ENABLE) || (player.isCrafting() && Config.OFFLINE_CRAFT_ENABLE))

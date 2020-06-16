@@ -75,7 +75,7 @@ public class EffectForce extends Effect
 	public void updateBuff()
 	{
 		exit(false);
-		final Skill newSkill = SkillTable.getInstance().getInfo(getSkill().getId(), forces);
+		final Skill newSkill = SkillTable.getInstance().getSkill(getSkill().getId(), forces);
 		if (newSkill != null)
 		{
 			newSkill.getEffects(getEffector(), getEffected(), false, false, false);

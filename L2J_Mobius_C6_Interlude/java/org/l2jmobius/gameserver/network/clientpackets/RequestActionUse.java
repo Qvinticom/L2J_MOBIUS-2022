@@ -314,7 +314,7 @@ public class RequestActionUse extends GameClientPacket
 							if (player.isFlying())
 							{
 								// Remove skill Wyvern Breath
-								player.removeSkill(SkillTable.getInstance().getInfo(4289, 1));
+								player.removeSkill(SkillTable.getInstance().getSkill(4289, 1));
 								player.sendSkillList();
 							}
 							if (player.setMountType(0))

@@ -187,7 +187,7 @@ public class WeddingManagerInstance extends NpcInstance
 			ptarget.broadcastPacket(msu);
 			
 			// fireworks
-			final Skill skill = SkillTable.getInstance().getInfo(2025, 1);
+			final Skill skill = SkillTable.getInstance().getSkill(2025, 1);
 			if (skill != null)
 			{
 				msu = new MagicSkillUse(player, player, 2025, 1, 1, 0);

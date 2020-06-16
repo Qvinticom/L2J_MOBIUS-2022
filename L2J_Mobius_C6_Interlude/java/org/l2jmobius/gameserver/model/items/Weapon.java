@@ -101,14 +101,14 @@ public class Weapon extends Item
 		int sLv = set.getInt("item_skill_lvl", 0);
 		if ((sId > 0) && (sLv > 0))
 		{
-			_itemSkill = SkillTable.getInstance().getInfo(sId, sLv);
+			_itemSkill = SkillTable.getInstance().getSkill(sId, sLv);
 		}
 		
 		sId = set.getInt("enchant4_skill_id", 0);
 		sLv = set.getInt("enchant4_skill_lvl", 0);
 		if ((sId > 0) && (sLv > 0))
 		{
-			_enchant4Skill = SkillTable.getInstance().getInfo(sId, sLv);
+			_enchant4Skill = SkillTable.getInstance().getSkill(sId, sLv);
 		}
 		
 		sId = set.getInt("onCast_skill_id", 0);
@@ -116,7 +116,7 @@ public class Weapon extends Item
 		int sCh = set.getInt("onCast_skill_chance", 0);
 		if ((sId > 0) && (sLv > 0) && (sCh > 0))
 		{
-			final Skill skill = SkillTable.getInstance().getInfo(sId, sLv);
+			final Skill skill = SkillTable.getInstance().getSkill(sId, sLv);
 			skill.attach(new ConditionGameChance(sCh), true);
 			attachOnCast(skill);
 		}
@@ -126,7 +126,7 @@ public class Weapon extends Item
 		sCh = set.getInt("onCrit_skill_chance", 0);
 		if ((sId > 0) && (sLv > 0) && (sCh > 0))
 		{
-			final Skill skill = SkillTable.getInstance().getInfo(sId, sLv);
+			final Skill skill = SkillTable.getInstance().getSkill(sId, sLv);
 			skill.attach(new ConditionGameChance(sCh), true);
 			attachOnCrit(skill);
 		}

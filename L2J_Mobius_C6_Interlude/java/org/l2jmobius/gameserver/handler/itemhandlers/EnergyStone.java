@@ -85,7 +85,7 @@ public class EnergyStone implements IItemHandler
 		final EffectCharge effect = player.getChargeEffect();
 		if (effect == null)
 		{
-			final Skill dummy = SkillTable.getInstance().getInfo(skill.getId(), skill.getLevel());
+			final Skill dummy = SkillTable.getInstance().getSkill(skill.getId(), skill.getLevel());
 			if (dummy != null)
 			{
 				dummy.getEffects(player, player);

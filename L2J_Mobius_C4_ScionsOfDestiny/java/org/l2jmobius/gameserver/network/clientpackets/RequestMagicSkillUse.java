@@ -69,7 +69,7 @@ public class RequestMagicSkillUse extends GameClientPacket
 		}
 		
 		// Get the Skill template corresponding to the skillID received from the client
-		final Skill skill = SkillTable.getInstance().getInfo(_magicId, level);
+		final Skill skill = SkillTable.getInstance().getSkill(_magicId, level);
 		
 		// Check the validity of the skill
 		if (skill != null)

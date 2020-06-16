@@ -60,7 +60,7 @@ public class Augmentation
 	
 	public Augmentation(ItemInstance item, int effects, int skill, int skillLevel, boolean save)
 	{
-		this(item, effects, SkillTable.getInstance().getInfo(skill, skillLevel), save);
+		this(item, effects, SkillTable.getInstance().getSkill(skill, skillLevel), save);
 	}
 	
 	public class augmentationStatBonus

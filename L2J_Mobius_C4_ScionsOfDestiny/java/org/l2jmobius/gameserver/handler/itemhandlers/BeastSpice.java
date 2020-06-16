@@ -55,11 +55,11 @@ public class BeastSpice implements IItemHandler
 		final int itemId = item.getItemId();
 		if (itemId == 6643) // Golden Spice
 		{
-			player.useMagic(SkillTable.getInstance().getInfo(2188, 1), false, false);
+			player.useMagic(SkillTable.getInstance().getSkill(2188, 1), false, false);
 		}
 		else if (itemId == 6644) // Crystal Spice
 		{
-			player.useMagic(SkillTable.getInstance().getInfo(2189, 1), false, false);
+			player.useMagic(SkillTable.getInstance().getSkill(2189, 1), false, false);
 		}
 	}
 	

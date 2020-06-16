@@ -130,7 +130,7 @@ public class Firework implements IItemHandler
 	
 	public void useFw(PlayerInstance player, int magicId, int level)
 	{
-		final Skill skill = SkillTable.getInstance().getInfo(magicId, level);
+		final Skill skill = SkillTable.getInstance().getSkill(magicId, level);
 		if (skill != null)
 		{
 			player.useMagic(skill, false, false);

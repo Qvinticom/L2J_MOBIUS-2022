@@ -114,7 +114,7 @@ public class VarkaSilenosSupport extends Quest
 		// Haste: Requires 6 Nepenthese Seeds
 	};
 	
-	private static final Skill VARKA_KETRA_PETRIFICATION = SkillTable.getInstance().getInfo(4578, 1);
+	private static final Skill VARKA_KETRA_PETRIFICATION = SkillTable.getInstance().getSkill(4578, 1);
 	
 	/**
 	 * Names of missions which will be automatically dropped if the alliance is broken.
@@ -162,7 +162,7 @@ public class VarkaSilenosSupport extends Quest
 				htmltext = "31379-4.htm";
 				st.takeItems(SEED, buffInfo[1]);
 				npc.setTarget(player);
-				npc.doCast(SkillTable.getInstance().getInfo(buffInfo[0], 1));
+				npc.doCast(SkillTable.getInstance().getSkill(buffInfo[0], 1));
 				npc.setCurrentHpMp(npc.getMaxHp(), npc.getMaxMp());
 			}
 		}

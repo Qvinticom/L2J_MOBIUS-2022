@@ -167,7 +167,7 @@ public class SkillTable
 		return skill;
 	}
 	
-	public Skill getInfo(int magicId, int level)
+	public Skill getSkill(int magicId, int level)
 	{
 		return _skills.get((magicId * 100) + level);
 	}

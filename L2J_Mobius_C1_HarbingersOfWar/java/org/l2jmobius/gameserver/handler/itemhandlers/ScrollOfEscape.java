@@ -44,7 +44,7 @@ public class ScrollOfEscape implements IItemHandler
 		
 		activeChar.disableAllSkills();
 		activeChar.setTarget(activeChar);
-		final Skill skill = SkillTable.getInstance().getInfo(1050, 1);
+		final Skill skill = SkillTable.getInstance().getSkill(1050, 1);
 		final MagicSkillUser msk = new MagicSkillUser(activeChar, 1050, 1, 20000, 0);
 		activeChar.sendPacket(msk);
 		activeChar.broadcastPacket(msk);

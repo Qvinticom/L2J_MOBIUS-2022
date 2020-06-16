@@ -807,7 +807,7 @@ public abstract class Summon extends Playable
 			}
 		}
 		
-		final Skill skillToCast = SkillTable.getInstance().getInfo(skill.getId(), skillLevel);
+		final Skill skillToCast = SkillTable.getInstance().getSkill(skill.getId(), skillLevel);
 		if (skillToCast != null)
 		{
 			super.doCast(skillToCast);

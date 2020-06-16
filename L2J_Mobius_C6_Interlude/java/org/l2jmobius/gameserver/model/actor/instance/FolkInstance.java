@@ -101,7 +101,7 @@ public class FolkInstance extends NpcInstance
 		int counts = 0;
 		for (SkillLearn s : skills)
 		{
-			final Skill sk = SkillTable.getInstance().getInfo(s.getId(), s.getLevel());
+			final Skill sk = SkillTable.getInstance().getSkill(s.getId(), s.getLevel());
 			if ((sk == null) || !sk.getCanLearn(player.getClassId()) || !sk.canTeachBy(npcId))
 			{
 				continue;
@@ -189,7 +189,7 @@ public class FolkInstance extends NpcInstance
 		int counts = 0;
 		for (EnchantSkillLearn s : skills)
 		{
-			final Skill sk = SkillTable.getInstance().getInfo(s.getId(), s.getLevel());
+			final Skill sk = SkillTable.getInstance().getSkill(s.getId(), s.getLevel());
 			if (sk == null)
 			{
 				continue;

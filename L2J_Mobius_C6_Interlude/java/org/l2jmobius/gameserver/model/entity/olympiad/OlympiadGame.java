@@ -428,7 +428,7 @@ class OlympiadGame
 				// Wind Walk Buff for Both
 				Skill skill;
 				SystemMessage sm;
-				skill = SkillTable.getInstance().getInfo(1204, 2);
+				skill = SkillTable.getInstance().getSkill(1204, 2);
 				skill.getEffects(player, player);
 				player.broadcastPacket(new MagicSkillUse(player, player, skill.getId(), 2, skill.getHitTime(), 0));
 				sm = new SystemMessage(SystemMessageId.THE_EFFECTS_OF_S1_FLOW_THROUGH_YOU);
@@ -437,7 +437,7 @@ class OlympiadGame
 				if (!player.isMageClass())
 				{
 					// Haste Buff to Fighters
-					skill = SkillTable.getInstance().getInfo(1086, 1);
+					skill = SkillTable.getInstance().getSkill(1086, 1);
 					skill.getEffects(player, player);
 					player.broadcastPacket(new MagicSkillUse(player, player, skill.getId(), 1, skill.getHitTime(), 0));
 					sm = new SystemMessage(SystemMessageId.THE_EFFECTS_OF_S1_FLOW_THROUGH_YOU);
@@ -447,7 +447,7 @@ class OlympiadGame
 				else
 				{
 					// Acumen Buff to Mages
-					skill = SkillTable.getInstance().getInfo(1085, 1);
+					skill = SkillTable.getInstance().getSkill(1085, 1);
 					skill.getEffects(player, player);
 					player.broadcastPacket(new MagicSkillUse(player, player, skill.getId(), 1, skill.getHitTime(), 0));
 					sm = new SystemMessage(SystemMessageId.THE_EFFECTS_OF_S1_FLOW_THROUGH_YOU);

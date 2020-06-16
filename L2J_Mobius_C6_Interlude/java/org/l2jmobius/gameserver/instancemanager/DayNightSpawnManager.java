@@ -254,7 +254,7 @@ public class DayNightSpawnManager
 	
 	private void ShadowSenseMsg(int mode)
 	{
-		final Skill skill = SkillTable.getInstance().getInfo(294, 1);
+		final Skill skill = SkillTable.getInstance().getSkill(294, 1);
 		if (skill == null)
 		{
 			return;

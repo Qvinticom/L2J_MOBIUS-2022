@@ -353,7 +353,7 @@ public class Rebirth
 				final String[] currSkill = readSkill.split(",");
 				if (loopBirth == (rebirthLevel - 1))
 				{
-					skill = SkillTable.getInstance().getInfo(Integer.parseInt(currSkill[0]), Integer.parseInt(currSkill[1]));
+					skill = SkillTable.getInstance().getSkill(Integer.parseInt(currSkill[0]), Integer.parseInt(currSkill[1]));
 					break;
 				}
 				loopBirth++;
@@ -367,7 +367,7 @@ public class Rebirth
 				final String[] currSkill = readSkill.split(",");
 				if (loopBirth == (rebirthLevel - 1))
 				{
-					skill = SkillTable.getInstance().getInfo(Integer.parseInt(currSkill[0]), Integer.parseInt(currSkill[1]));
+					skill = SkillTable.getInstance().getSkill(Integer.parseInt(currSkill[0]), Integer.parseInt(currSkill[1]));
 					break;
 				}
 				loopBirth++;

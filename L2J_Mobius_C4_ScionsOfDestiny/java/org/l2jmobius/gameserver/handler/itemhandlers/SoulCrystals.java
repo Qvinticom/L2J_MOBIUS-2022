@@ -118,7 +118,7 @@ public class SoulCrystals implements IItemHandler
 		final int crystalId = item.getItemId();
 		
 		// Soul Crystal Casting section
-		final Skill skill = SkillTable.getInstance().getInfo(2096, 1);
+		final Skill skill = SkillTable.getInstance().getSkill(2096, 1);
 		player.useMagic(skill, false, true);
 		// End Soul Crystal Casting section
 		

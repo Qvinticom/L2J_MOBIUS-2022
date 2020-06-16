@@ -968,7 +968,7 @@ public class Clan
 				final int level = rset.getInt("skill_level");
 				
 				// Create a Skill object for each record
-				final Skill skill = SkillTable.getInstance().getInfo(id, level);
+				final Skill skill = SkillTable.getInstance().getSkill(id, level);
 				
 				// Add the Skill object to the Clan _skills
 				_skills.put(skill.getId(), skill);

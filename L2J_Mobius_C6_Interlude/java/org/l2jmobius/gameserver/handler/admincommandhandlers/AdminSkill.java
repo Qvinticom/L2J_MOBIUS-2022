@@ -197,7 +197,7 @@ public class AdminSkill implements IAdminCommandHandler
 		{
 			for (SkillLearn s : skills)
 			{
-				final Skill sk = SkillTable.getInstance().getInfo(s.getId(), s.getLevel());
+				final Skill sk = SkillTable.getInstance().getSkill(s.getId(), s.getLevel());
 				if ((sk == null) || !sk.getCanLearn(player.getClassId()))
 				{
 					if (countUnlearnable)
@@ -460,7 +460,7 @@ public class AdminSkill implements IAdminCommandHandler
 				final String level = st.nextToken();
 				final int idval = Integer.parseInt(id);
 				final int levelval = Integer.parseInt(level);
-				skill = SkillTable.getInstance().getInfo(idval, levelval);
+				skill = SkillTable.getInstance().getSkill(idval, levelval);
 			}
 			catch (Exception e)
 			{
@@ -498,7 +498,7 @@ public class AdminSkill implements IAdminCommandHandler
 			return;
 		}
 		
-		final Skill skill = SkillTable.getInstance().getInfo(idval, player.getSkillLevel(idval));
+		final Skill skill = SkillTable.getInstance().getSkill(idval, player.getSkillLevel(idval));
 		if (skill != null)
 		{
 			final String skillname = skill.getName();
@@ -549,7 +549,7 @@ public class AdminSkill implements IAdminCommandHandler
 			return;
 		}
 		
-		final Skill skill = SkillTable.getInstance().getInfo(id, level);
+		final Skill skill = SkillTable.getInstance().getSkill(id, level);
 		if (skill != null)
 		{
 			final String skillname = skill.getName();

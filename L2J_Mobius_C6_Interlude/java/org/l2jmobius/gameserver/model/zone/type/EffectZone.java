@@ -168,7 +168,7 @@ public class EffectZone extends ZoneType
 	
 	protected Skill getSkill(int skillId, int skillLvl)
 	{
-		return SkillTable.getInstance().getInfo(skillId, skillLvl);
+		return SkillTable.getInstance().getSkill(skillId, skillLvl);
 	}
 	
 	public int getChance()

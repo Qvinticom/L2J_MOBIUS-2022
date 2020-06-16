@@ -64,7 +64,7 @@ public class RequestExMagicSkillUseGround extends GameClientPacket
 		}
 		
 		// Get the Skill template corresponding to the skillID received from the client
-		final Skill skill = SkillTable.getInstance().getInfo(_skillId, level);
+		final Skill skill = SkillTable.getInstance().getSkill(_skillId, level);
 		if (skill != null)
 		{
 			player.setCurrentSkillWorldPosition(new Location(_x, _y, _z));

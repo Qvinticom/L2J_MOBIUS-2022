@@ -782,7 +782,7 @@ public class Potions implements IItemHandler
 				{
 					_herbstask -= 100;
 				}
-				final Skill skill = SkillTable.getInstance().getInfo(magicId, level);
+				final Skill skill = SkillTable.getInstance().getSkill(magicId, level);
 				if (skill != null)
 				{
 					// Return false if potion is in reuse
@@ -828,7 +828,7 @@ public class Potions implements IItemHandler
 		else if (player instanceof PetInstance)
 		{
 			final PetInstance activeChar = (PetInstance) player;
-			final Skill skill = SkillTable.getInstance().getInfo(magicId, level);
+			final Skill skill = SkillTable.getInstance().getSkill(magicId, level);
 			if (skill != null)
 			{
 				// Return false if potion is in reuse so is not destroyed from inventory

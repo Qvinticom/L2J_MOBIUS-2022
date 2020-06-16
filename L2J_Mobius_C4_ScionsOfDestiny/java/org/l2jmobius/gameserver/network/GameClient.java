@@ -608,7 +608,7 @@ public class GameClient extends MMOClient<MMOConnection<GameClient>> implements 
 					
 					if (player.isFlying())
 					{
-						player.removeSkill(SkillTable.getInstance().getInfo(4289, 1));
+						player.removeSkill(SkillTable.getInstance().getSkill(4289, 1));
 					}
 					
 					if (Olympiad.getInstance().isRegistered(player))
@@ -679,7 +679,7 @@ public class GameClient extends MMOClient<MMOConnection<GameClient>> implements 
 					
 					if (player.isFlying())
 					{
-						player.removeSkill(SkillTable.getInstance().getInfo(4289, 1));
+						player.removeSkill(SkillTable.getInstance().getSkill(4289, 1));
 					}
 					
 					if (Olympiad.getInstance().isRegistered(player))

@@ -1579,7 +1579,7 @@ public class NpcInstance extends Creature
 			insertObjectIdAndShowChatWindow(player, content);
 			return;
 		}
-		final Skill skill = SkillTable.getInstance().getInfo(5182, 1);
+		final Skill skill = SkillTable.getInstance().getSkill(5182, 1);
 		broadcastPacket(new MagicSkillUse(this, player, skill.getId(), skill.getLevel(), 0, 0));
 		skill.getEffects(this, player);
 	}
@@ -2151,7 +2151,7 @@ public class NpcInstance extends Creature
 		}
 		
 		// Skill's animation
-		final Skill skill = SkillTable.getInstance().getInfo(4380, 1);
+		final Skill skill = SkillTable.getInstance().getSkill(4380, 1);
 		if (skill != null)
 		{
 			broadcastPacket(new MagicSkillUse(this, player, skill.getId(), skill.getLevel(), 0, 0));
@@ -2226,7 +2226,7 @@ public class NpcInstance extends Creature
 		{
 			if ((helperBuffItem.isMagicClassBuff() == player.isMageClass()) && (playerLevel >= helperBuffItem.getLowerLevel()) && (playerLevel <= helperBuffItem.getUpperLevel()))
 			{
-				skill = SkillTable.getInstance().getInfo(helperBuffItem.getSkillID(), helperBuffItem.getSkillLevel());
+				skill = SkillTable.getInstance().getSkill(helperBuffItem.getSkillID(), helperBuffItem.getSkillLevel());
 				if (skill.getSkillType() == SkillType.SUMMON)
 				{
 					player.doCast(skill);

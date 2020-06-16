@@ -6252,7 +6252,7 @@ public abstract class Creature extends WorldObject implements ISkillsHolder
 				
 				if (toBeCursed)
 				{
-					final Skill skill = SkillTable.getInstance().getInfo(4515, 1);
+					final Skill skill = SkillTable.getInstance().getSkill(4515, 1);
 					if (skill != null)
 					{
 						abortAttack();
@@ -6888,13 +6888,13 @@ public abstract class Creature extends WorldObject implements ISkillsHolder
 			
 			if (newSkill.isChance() && newSkill.triggerAnotherSkill())
 			{
-				final Skill triggeredSkill = SkillTable.getInstance().getInfo(newSkill.getTriggeredId(), newSkill.getTriggeredLevel());
+				final Skill triggeredSkill = SkillTable.getInstance().getSkill(newSkill.getTriggeredId(), newSkill.getTriggeredLevel());
 				addSkill(triggeredSkill);
 			}
 			
 			if (newSkill.triggerAnotherSkill())
 			{
-				_triggeredSkills.put(newSkill.getTriggeredId(), SkillTable.getInstance().getInfo(newSkill.getTriggeredId(), newSkill.getTriggeredLevel()));
+				_triggeredSkills.put(newSkill.getTriggeredId(), SkillTable.getInstance().getSkill(newSkill.getTriggeredId(), newSkill.getTriggeredLevel()));
 			}
 		}
 		
@@ -8004,7 +8004,7 @@ public abstract class Creature extends WorldObject implements ISkillsHolder
 						{
 							if (skill.isMagic())
 							{
-								final Skill tempSkill = SkillTable.getInstance().getInfo(4215, 1);
+								final Skill tempSkill = SkillTable.getInstance().getSkill(4215, 1);
 								if (tempSkill != null)
 								{
 									abortAttack();
@@ -8030,7 +8030,7 @@ public abstract class Creature extends WorldObject implements ISkillsHolder
 							}
 							else
 							{
-								final Skill tempSkill = SkillTable.getInstance().getInfo(4515, 1);
+								final Skill tempSkill = SkillTable.getInstance().getSkill(4515, 1);
 								if (tempSkill != null)
 								{
 									tempSkill.getEffects(creature, this, false, false, false);

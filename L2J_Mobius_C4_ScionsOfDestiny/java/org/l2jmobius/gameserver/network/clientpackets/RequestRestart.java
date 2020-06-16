@@ -153,7 +153,7 @@ public class RequestRestart extends GameClientPacket
 		// Check if player are flying
 		if (player.isFlying())
 		{
-			player.removeSkill(SkillTable.getInstance().getInfo(4289, 1));
+			player.removeSkill(SkillTable.getInstance().getSkill(4289, 1));
 		}
 		
 		// delete box from the world

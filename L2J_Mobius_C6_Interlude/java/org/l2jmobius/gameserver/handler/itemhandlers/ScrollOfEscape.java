@@ -189,7 +189,7 @@ public class ScrollOfEscape implements IItemHandler
 		player.disableAllSkills();
 		
 		// Cast escape animation.
-		final Skill skill = SkillTable.getInstance().getInfo(escapeSkill, 1);
+		final Skill skill = SkillTable.getInstance().getSkill(escapeSkill, 1);
 		player.broadcastPacket(new MagicSkillUse(player, player, escapeSkill, 1, skill.getHitTime(), 0));
 		player.sendPacket(new SetupGauge(0, skill.getHitTime()));
 		player.setTarget(null);

@@ -2906,7 +2906,7 @@ public abstract class Skill
 				// Implements effect charge
 				if (e.getEffectType() == Effect.EffectType.CHARGE)
 				{
-					env.skill = SkillTable.getInstance().getInfo(8, effector.getSkillLevel(8));
+					env.skill = SkillTable.getInstance().getSkill(8, effector.getSkillLevel(8));
 					final EffectCharge effect = (EffectCharge) env.target.getFirstEffect(Effect.EffectType.CHARGE);
 					if (effect != null)
 					{

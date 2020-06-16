@@ -122,7 +122,7 @@ public class PoisonZone extends ZoneType
 	
 	public Skill getSkill()
 	{
-		return SkillTable.getInstance().getInfo(_skillId, _skillLvl);
+		return SkillTable.getInstance().getSkill(_skillId, _skillLvl);
 	}
 	
 	public String getTargetType()

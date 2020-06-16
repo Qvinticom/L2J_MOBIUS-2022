@@ -186,7 +186,7 @@ public class ScrollOfResurrection implements IItemHandler
 					
 					if (skillId != 0)
 					{
-						final Skill skill = SkillTable.getInstance().getInfo(skillId, skillLevel);
+						final Skill skill = SkillTable.getInstance().getSkill(skillId, skillLevel);
 						player.useMagic(skill, true, true);
 						
 						// Consume the scroll

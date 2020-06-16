@@ -304,8 +304,8 @@ public class QueenAnt extends Quest
 						{
 							getIntoPosition(nurse, _larva);
 							nurse.setTarget(_larva);
-							nurse.doCast(SkillTable.getInstance().getInfo(4020, 1));
-							nurse.doCast(SkillTable.getInstance().getInfo(4024, 1));
+							nurse.doCast(SkillTable.getInstance().getSkill(4020, 1));
+							nurse.doCast(SkillTable.getInstance().getSkill(4024, 1));
 						}
 						continue;
 					}
@@ -315,7 +315,7 @@ public class QueenAnt extends Quest
 						{
 							getIntoPosition(nurse, _queen);
 							nurse.setTarget(_queen);
-							nurse.doCast(SkillTable.getInstance().getInfo(4020, 1));
+							nurse.doCast(SkillTable.getInstance().getSkill(4020, 1));
 						}
 						continue;
 					}
@@ -325,7 +325,7 @@ public class QueenAnt extends Quest
 						{
 							getIntoPosition(_nurses.get(k), nurse);
 							_nurses.get(k).setTarget(nurse);
-							_nurses.get(k).doCast(SkillTable.getInstance().getInfo(4020, 1));
+							_nurses.get(k).doCast(SkillTable.getInstance().getSkill(4020, 1));
 						}
 					}
 					if (notCasting && (nurse.getTarget() != null))

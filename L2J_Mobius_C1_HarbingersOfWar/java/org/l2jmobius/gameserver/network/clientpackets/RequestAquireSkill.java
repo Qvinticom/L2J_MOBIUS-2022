@@ -62,7 +62,7 @@ public class RequestAquireSkill extends ClientBasePacket
 			return;
 		}
 		
-		final Skill skill = SkillTable.getInstance().getInfo(id, level);
+		final Skill skill = SkillTable.getInstance().getSkill(id, level);
 		Collection<SkillLearn> skills = SkillTreeTable.getInstance().getAvailableSkills(player);
 		
 		int requiredSp = 0;

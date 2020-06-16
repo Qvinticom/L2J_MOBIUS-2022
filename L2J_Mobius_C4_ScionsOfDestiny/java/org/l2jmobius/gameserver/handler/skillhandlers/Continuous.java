@@ -85,11 +85,11 @@ public class Continuous implements ISkillHandler
 			Skill skill;
 			if (skillLevel == 0)
 			{
-				skill = SkillTable.getInstance().getInfo(skillEffectId, 1);
+				skill = SkillTable.getInstance().getSkill(skillEffectId, 1);
 			}
 			else
 			{
-				skill = SkillTable.getInstance().getInfo(skillEffectId, skillLevel);
+				skill = SkillTable.getInstance().getSkill(skillEffectId, skillLevel);
 			}
 			
 			if (skill != null)

@@ -124,15 +124,15 @@ public class CombatFlag
 	
 	public void giveSkill()
 	{
-		_player.addSkill(SkillTable.getInstance().getInfo(3318, 1), false);
-		_player.addSkill(SkillTable.getInstance().getInfo(3358, 1), false);
+		_player.addSkill(SkillTable.getInstance().getSkill(3318, 1), false);
+		_player.addSkill(SkillTable.getInstance().getSkill(3358, 1), false);
 		_player.sendSkillList();
 	}
 	
 	public void removeSkill()
 	{
-		_player.removeSkill(SkillTable.getInstance().getInfo(3318, 1), false);
-		_player.removeSkill(SkillTable.getInstance().getInfo(3358, 1), false);
+		_player.removeSkill(SkillTable.getInstance().getSkill(3318, 1), false);
+		_player.removeSkill(SkillTable.getInstance().getSkill(3358, 1), false);
 		_player.sendSkillList();
 	}
 }

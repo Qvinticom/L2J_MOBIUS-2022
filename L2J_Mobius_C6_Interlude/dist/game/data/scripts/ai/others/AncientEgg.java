@@ -42,7 +42,7 @@ public class AncientEgg extends Quest
 	public String onAttack(NpcInstance npc, PlayerInstance attacker, int damage, boolean isPet)
 	{
 		attacker.setTarget(attacker);
-		attacker.doCast(SkillTable.getInstance().getInfo(SIGNAL, 1));
+		attacker.doCast(SkillTable.getInstance().getSkill(SIGNAL, 1));
 		return null;
 	}
 	

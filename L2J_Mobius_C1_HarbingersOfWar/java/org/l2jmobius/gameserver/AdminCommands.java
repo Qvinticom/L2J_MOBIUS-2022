@@ -1220,7 +1220,7 @@ public class AdminCommands extends Thread
 			final String level = st.nextToken();
 			final int idval = Integer.parseInt(id);
 			final int levelval = Integer.parseInt(level);
-			final Skill skill = SkillTable.getInstance().getInfo(idval, levelval);
+			final Skill skill = SkillTable.getInstance().getSkill(idval, levelval);
 			if (skill != null)
 			{
 				player.sendMessage("Admin gave you the skill " + skill.getName() + ".");
@@ -1239,7 +1239,7 @@ public class AdminCommands extends Thread
 	{
 		final PlayerInstance activeChar = client.getActiveChar();
 		final PlayerInstance player = World.getInstance().getPlayer(_characterToManipulate);
-		final Skill skill = SkillTable.getInstance().getInfo(idval, player.getSkillLevel(idval));
+		final Skill skill = SkillTable.getInstance().getSkill(idval, player.getSkillLevel(idval));
 		if (skill != null)
 		{
 			player.sendMessage("Admin removed the skill " + skill.getName() + ".");
@@ -1257,7 +1257,7 @@ public class AdminCommands extends Thread
 	{
 		final PlayerInstance activeChar = client.getActiveChar();
 		final int skillid = Integer.parseInt(value);
-		final Skill skill = SkillTable.getInstance().getInfo(skillid, 1);
+		final Skill skill = SkillTable.getInstance().getSkill(skillid, 1);
 		if ((skill != null) && (skill.getTargetType() == 0))
 		{
 			activeChar.setTarget(activeChar);

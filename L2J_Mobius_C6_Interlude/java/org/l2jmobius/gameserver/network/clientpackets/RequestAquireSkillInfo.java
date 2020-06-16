@@ -63,7 +63,7 @@ public class RequestAquireSkillInfo extends GameClientPacket
 		}
 		
 		boolean canteach = false;
-		final Skill skill = SkillTable.getInstance().getInfo(_id, _level);
+		final Skill skill = SkillTable.getInstance().getSkill(_id, _level);
 		if (skill == null)
 		{
 			return;
@@ -148,7 +148,7 @@ public class RequestAquireSkillInfo extends GameClientPacket
 			final SkillLearn[] skillsc = SkillTreeTable.getInstance().getAvailableSkills(player);
 			for (SkillLearn s : skillsc)
 			{
-				final Skill sk = SkillTable.getInstance().getInfo(s.getId(), s.getLevel());
+				final Skill sk = SkillTable.getInstance().getSkill(s.getId(), s.getLevel());
 				if ((sk == null) || (sk != skill))
 				{
 					continue;

@@ -212,7 +212,7 @@ public abstract class Inventory extends ItemContainer
 				if ((item.getItemId() == 9140) && (getOwner() instanceof PlayerInstance))
 				{
 					player = (PlayerInstance) getOwner();
-					skill = SkillTable.getInstance().getInfo(3261, 1);
+					skill = SkillTable.getInstance().getSkill(3261, 1);
 					player.removeSkill(skill);
 					player.sendSkillList();
 				}
@@ -241,7 +241,7 @@ public abstract class Inventory extends ItemContainer
 				if ((item.getItemId() == 9140) && (getOwner() instanceof PlayerInstance))
 				{
 					player = (PlayerInstance) getOwner();
-					skill = SkillTable.getInstance().getInfo(3261, 1);
+					skill = SkillTable.getInstance().getSkill(3261, 1);
 					player.addSkill(skill, false);
 					player.sendSkillList();
 				}
@@ -407,7 +407,7 @@ public abstract class Inventory extends ItemContainer
 			{
 				if (armorSet.containAll(player))
 				{
-					final Skill skill = SkillTable.getInstance().getInfo(armorSet.getSkillId(), 1);
+					final Skill skill = SkillTable.getInstance().getSkill(armorSet.getSkillId(), 1);
 					if (skill != null)
 					{
 						player.addSkill(skill, false);
@@ -420,7 +420,7 @@ public abstract class Inventory extends ItemContainer
 					
 					if (armorSet.containShield(player)) // has shield from set
 					{
-						final Skill skills = SkillTable.getInstance().getInfo(armorSet.getShieldSkillId(), 1);
+						final Skill skills = SkillTable.getInstance().getSkill(armorSet.getShieldSkillId(), 1);
 						if (skills != null)
 						{
 							player.addSkill(skills, false);
@@ -437,7 +437,7 @@ public abstract class Inventory extends ItemContainer
 						final int skillId = armorSet.getEnchant6skillId();
 						if (skillId > 0)
 						{
-							final Skill skille = SkillTable.getInstance().getInfo(skillId, 1);
+							final Skill skille = SkillTable.getInstance().getSkill(skillId, 1);
 							if (skille != null)
 							{
 								player.addSkill(skille, false);
@@ -455,7 +455,7 @@ public abstract class Inventory extends ItemContainer
 			{
 				if (armorSet.containAll(player))
 				{
-					final Skill skills = SkillTable.getInstance().getInfo(armorSet.getShieldSkillId(), 1);
+					final Skill skills = SkillTable.getInstance().getSkill(armorSet.getShieldSkillId(), 1);
 					if (skills != null)
 					{
 						player.addSkill(skills, false);
@@ -527,7 +527,7 @@ public abstract class Inventory extends ItemContainer
 			{
 				if (removeSkillId1 != 0)
 				{
-					final Skill skill = SkillTable.getInstance().getInfo(removeSkillId1, 1);
+					final Skill skill = SkillTable.getInstance().getSkill(removeSkillId1, 1);
 					if (skill != null)
 					{
 						player.removeSkill(skill);
@@ -540,7 +540,7 @@ public abstract class Inventory extends ItemContainer
 				
 				if (removeSkillId2 != 0)
 				{
-					final Skill skill = SkillTable.getInstance().getInfo(removeSkillId2, 1);
+					final Skill skill = SkillTable.getInstance().getSkill(removeSkillId2, 1);
 					if (skill != null)
 					{
 						player.removeSkill(skill);
@@ -553,7 +553,7 @@ public abstract class Inventory extends ItemContainer
 				
 				if (removeSkillId3 != 0)
 				{
-					final Skill skill = SkillTable.getInstance().getInfo(removeSkillId3, 1);
+					final Skill skill = SkillTable.getInstance().getSkill(removeSkillId3, 1);
 					if (skill != null)
 					{
 						player.removeSkill(skill);

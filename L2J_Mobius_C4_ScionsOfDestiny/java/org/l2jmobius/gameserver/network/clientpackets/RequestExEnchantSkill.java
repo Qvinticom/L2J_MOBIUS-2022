@@ -88,7 +88,7 @@ public class RequestExEnchantSkill extends GameClientPacket
 			return;
 		}
 		
-		final Skill skill = SkillTable.getInstance().getInfo(_skillId, _skillLvl);
+		final Skill skill = SkillTable.getInstance().getSkill(_skillId, _skillLvl);
 		int counts = 0;
 		int requiredSp = 10000000;
 		int requiredExp = 100000;
@@ -98,7 +98,7 @@ public class RequestExEnchantSkill extends GameClientPacket
 		final EnchantSkillLearn[] skills = SkillTreeTable.getInstance().getAvailableEnchantSkills(player);
 		for (EnchantSkillLearn s : skills)
 		{
-			final Skill sk = SkillTable.getInstance().getInfo(s.getId(), s.getLevel());
+			final Skill sk = SkillTable.getInstance().getSkill(s.getId(), s.getLevel());
 			if ((sk == null) || (sk != skill) || !sk.getCanLearn(player.getClassId()) || !sk.canTeachBy(npcid))
 			{
 				continue;
@@ -174,7 +174,7 @@ public class RequestExEnchantSkill extends GameClientPacket
 			if (skill.getLevel() > 100)
 			{
 				_skillLvl = baseLvl;
-				player.addSkill(SkillTable.getInstance().getInfo(_skillId, _skillLvl), true);
+				player.addSkill(SkillTable.getInstance().getSkill(_skillId, _skillLvl), true);
 				player.sendSkillList();
 			}
 			final SystemMessage sm = new SystemMessage(SystemMessageId.SKILL_ENCHANT_FAILED_THE_SKILL_WILL_BE_INITIALIZED);
