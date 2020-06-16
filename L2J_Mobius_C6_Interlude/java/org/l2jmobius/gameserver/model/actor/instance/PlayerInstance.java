@@ -10006,6 +10006,12 @@ public class PlayerInstance extends Playable
 			return;
 		}
 		
+		// Check if it is ok to summon Siege Golem (13), Wild Hog Cannon (299) or Swoop Cannon (448).
+		if (((skillId == 13) || (skillId == 299) || (skillId == 448)) && !SiegeManager.getInstance().checkIfOkToSummon(this, false) && !FortSiegeManager.getInstance().checkIfOkToSummon(this, false))
+		{
+			return;
+		}
+		
 		// If a skill is currently being used, queue this one if this is not the same
 		// Note that this check is currently imperfect: getCurrentSkill() isn't always null when a skill has
 		// failed to cast, or the casting is not yet in progress when this is rechecked
@@ -10025,7 +10031,7 @@ public class PlayerInstance extends Playable
 			return;
 		}
 		
-		// Check if skill is in reause time
+		// Check if skill is in reuse time
 		if (isSkillDisabled(skill))
 		{
 			if ((skill.getId() != 2166))
@@ -10051,12 +10057,6 @@ public class PlayerInstance extends Playable
 			return;
 		}
 		
-		// Check if it's ok to summon Siege Golem (13), Wild Hog Cannon (299), Swoop Cannon (448)
-		if (((skillId == 13) || (skillId == 299) || (skillId == 448)) && !SiegeManager.getInstance().checkIfOkToSummon(this, false) && !FortSiegeManager.getInstance().checkIfOkToSummon(this, false))
-		{
-			return;
-		}
-		
 		// ************************************* Check Casting in Progress *******************************************
 		
 		// Create a new SkillDat object and set the player _currentSkill
@@ -10068,7 +10068,7 @@ public class PlayerInstance extends Playable
 			setQueuedSkill(null, false, false);
 		}
 		
-		// triggered skills cannot be used directly
+		// Triggered skills cannot be used directly
 		if ((_triggeredSkills.size() > 0) && (_triggeredSkills.get(skill.getId()) != null))
 		{
 			sendPacket(ActionFailed.STATIC_PACKET);
