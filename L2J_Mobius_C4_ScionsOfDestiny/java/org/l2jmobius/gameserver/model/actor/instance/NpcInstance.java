@@ -809,7 +809,7 @@ public class NpcInstance extends Creature
 			
 			// Send a Server->Client NpcHtmlMessage() containing the GM console about this NpcInstance
 			final NpcHtmlMessage html = new NpcHtmlMessage(0);
-			final StringBuilder html1 = new StringBuilder("<html><body><center><font color=\"LEVEL\">NPC Information</font></center>");
+			final StringBuilder html1 = new StringBuilder("<html><body><center><font color=\"LEVEL\">NPC Information</font></center><br1>");
 			final String className = getClass().getSimpleName();
 			html1.append("<center><table><tr>");
 			html1.append("<td><button value=\"Kill\" action=\"bypass -h admin_kill\" width=65 height=19 back=\"L2UI_ch3.smallbutton2_over\" fore=\"L2UI_ch3.smallbutton2\"></td>");
