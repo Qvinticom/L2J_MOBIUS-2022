@@ -2473,7 +2473,7 @@ public abstract class AbstractScript extends ManagedScript
 		
 		long minAmountWithBonus = (long) (minAmount * Config.RATE_QUEST_DROP);
 		long maxAmountWithBonus = (long) (maxAmount * Config.RATE_QUEST_DROP);
-		long dropChanceWithBonus = (long) (dropChance * Config.RATE_QUEST_DROP); // TODO separate configs for rate and amount
+		double dropChanceWithBonus = dropChance * Config.RATE_QUEST_DROP; // TODO separate configs for rate and amount
 		if ((npc != null) && Config.CHAMPION_ENABLE && npc.isChampion())
 		{
 			if ((itemId == Inventory.ADENA_ID) || (itemId == Inventory.ANCIENT_ADENA_ID))
@@ -2517,6 +2517,7 @@ public abstract class AbstractScript extends ManagedScript
 				{
 					playSound(player, QuestSound.ITEMSOUND_QUEST_ITEMGET);
 				}
+				
 				// if there is no limit, return true every time an item is given
 				if (limit <= 0)
 				{
