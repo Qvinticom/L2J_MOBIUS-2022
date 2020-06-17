@@ -485,12 +485,12 @@ public class NpcTable
 			npcDat.set("baseRunSpd", npcData.getInt("runspd"));
 			
 			// constants, until we have stats in DB
-			npcDat.safeSet("baseSTR", npcData.getInt("str"), 0, BaseStat.MAX_STAT_VALUE, "Loading npc template id: " + npcData.getInt("displayId"));
-			npcDat.safeSet("baseCON", npcData.getInt("con"), 0, BaseStat.MAX_STAT_VALUE, "Loading npc template id: " + npcData.getInt("displayId"));
-			npcDat.safeSet("baseDEX", npcData.getInt("dex"), 0, BaseStat.MAX_STAT_VALUE, "Loading npc template id: " + npcData.getInt("displayId"));
-			npcDat.safeSet("baseINT", npcData.getInt("int"), 0, BaseStat.MAX_STAT_VALUE, "Loading npc template id: " + npcData.getInt("displayId"));
-			npcDat.safeSet("baseWIT", npcData.getInt("wit"), 0, BaseStat.MAX_STAT_VALUE, "Loading npc template id: " + npcData.getInt("displayId"));
-			npcDat.safeSet("baseMEN", npcData.getInt("men"), 0, BaseStat.MAX_STAT_VALUE, "Loading npc template id: " + npcData.getInt("displayId"));
+			npcDat.safeSet("baseSTR", npcData.getInt("str"), 0, BaseStat.MAX_STAT_VALUE, "Loading npc template id: " + npcData.getInt("id"));
+			npcDat.safeSet("baseCON", npcData.getInt("con"), 0, BaseStat.MAX_STAT_VALUE, "Loading npc template id: " + npcData.getInt("id"));
+			npcDat.safeSet("baseDEX", npcData.getInt("dex"), 0, BaseStat.MAX_STAT_VALUE, "Loading npc template id: " + npcData.getInt("id"));
+			npcDat.safeSet("baseINT", npcData.getInt("int"), 0, BaseStat.MAX_STAT_VALUE, "Loading npc template id: " + npcData.getInt("id"));
+			npcDat.safeSet("baseWIT", npcData.getInt("wit"), 0, BaseStat.MAX_STAT_VALUE, "Loading npc template id: " + npcData.getInt("id"));
+			npcDat.safeSet("baseMEN", npcData.getInt("men"), 0, BaseStat.MAX_STAT_VALUE, "Loading npc template id: " + npcData.getInt("id"));
 			npcDat.set("baseCpMax", 0);
 			npcDat.set("factionId", npcData.getString("faction_id"));
 			npcDat.set("factionRange", npcData.getInt("faction_range"));
