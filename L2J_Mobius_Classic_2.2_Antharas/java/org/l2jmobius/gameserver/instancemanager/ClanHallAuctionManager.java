@@ -18,6 +18,7 @@ package org.l2jmobius.gameserver.instancemanager;
 
 import java.util.HashMap;
 import java.util.Map;
+import java.util.Map.Entry;
 import java.util.logging.Logger;
 
 import org.l2jmobius.gameserver.data.xml.impl.ClanHallData;
@@ -72,21 +73,26 @@ public class ClanHallAuctionManager extends AbstractEventManager<AbstractEvent<?
 	
 	public ClanHallAuction getClanHallAuctionByClan(Clan clan)
 	{
-		//@formatter:off
-		return AUCTIONS.values().stream()
-			.filter(a -> a.getBids().containsKey(clan.getId()))
-			.findFirst()
-			.orElse(null);
-		//@formatter:on
+		for (ClanHallAuction auction : AUCTIONS.values())
+		{
+			if (auction.getBids().containsKey(clan.getId()))
+			{
+				return auction;
+			}
+		}
+		return null;
 	}
 	
 	public boolean checkForClanBid(int clanHallId, Clan clan)
 	{
-		//@formatter:off
-		return AUCTIONS.entrySet().stream()
-			.filter(a -> a.getKey() != clanHallId)
-			.anyMatch(a -> a.getValue().getBids().containsKey(clan.getId()));
-		//@formatter:on
+		for (Entry<Integer, ClanHallAuction> auction : AUCTIONS.entrySet())
+		{
+			if ((auction.getKey() != clanHallId) && auction.getValue().getBids().containsKey(clan.getId()))
+			{
+				return true;
+			}
+		}
+		return false;
 	}
 	
 	public static ClanHallAuctionManager getInstance()

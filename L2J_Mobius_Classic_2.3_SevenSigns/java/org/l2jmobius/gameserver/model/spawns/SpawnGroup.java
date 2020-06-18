@@ -19,7 +19,6 @@ package org.l2jmobius.gameserver.model.spawns;
 import java.util.ArrayList;
 import java.util.Collections;
 import java.util.List;
-import java.util.stream.Collectors;
 
 import org.l2jmobius.gameserver.model.StatSet;
 import org.l2jmobius.gameserver.model.instancezone.Instance;
@@ -117,7 +116,15 @@ public class SpawnGroup implements Cloneable, ITerritorized, IParameterized<Stat
 	
 	public List<NpcSpawnTemplate> getSpawnsById(int id)
 	{
-		return _spawns.stream().filter(spawn -> spawn.getId() == id).collect(Collectors.toList());
+		List<NpcSpawnTemplate> result = new ArrayList<>();
+		for (NpcSpawnTemplate spawn : _spawns)
+		{
+			if (spawn.getId() == id)
+			{
+				result.add(spawn);
+			}
+		}
+		return result;
 	}
 	
 	public void spawnAll()

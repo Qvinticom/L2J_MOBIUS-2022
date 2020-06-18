@@ -215,16 +215,19 @@ public class HomeBoard implements IParseBoardHandler
 					{
 						continue;
 					}
-					targets.stream().filter(target -> !target.isSummon() || !skill.isSharedWithSummon()).forEach(target ->
+					for (Creature target : targets)
 					{
-						skill.applyEffects(player, target);
-						if (Config.COMMUNITYBOARD_CAST_ANIMATIONS)
+						if (skill.isSharedWithSummon() || target.isPlayer())
 						{
-							player.sendPacket(new MagicSkillUse(player, target, skill.getId(), skill.getLevel(), skill.getHitTime(), skill.getReuseDelay()));
-							// not recommend broadcast
-							// player.broadcastPacket(new MagicSkillUse(player, target, skill.getId(), skill.getLevel(), skill.getHitTime(), skill.getReuseDelay()));
+							skill.applyEffects(player, target);
+							if (Config.COMMUNITYBOARD_CAST_ANIMATIONS)
+							{
+								player.sendPacket(new MagicSkillUse(player, target, skill.getId(), skill.getLevel(), skill.getHitTime(), skill.getReuseDelay()));
+								// not recommend broadcast
+								// player.broadcastPacket(new MagicSkillUse(player, target, skill.getId(), skill.getLevel(), skill.getHitTime(), skill.getReuseDelay()));
+							}
 						}
-					});
+					}
 				}
 			}
 			

@@ -438,8 +438,16 @@ public class SchemeBufferInstance extends Npc
 		return (objectsSize / pageSize) + ((objectsSize % pageSize) == 0 ? 0 : 1);
 	}
 	
-	private static long getCountOf(List<Integer> skills, boolean dances)
+	private static int getCountOf(List<Integer> skills, boolean dances)
 	{
-		return skills.stream().filter(sId -> SkillData.getInstance().getSkill(sId, 1).isDance() == dances).count();
+		int count = 0;
+		for (int skillId : skills)
+		{
+			if (SkillData.getInstance().getSkill(skillId, 1).isDance() == dances)
+			{
+				count++;
+			}
+		}
+		return count;
 	}
 }

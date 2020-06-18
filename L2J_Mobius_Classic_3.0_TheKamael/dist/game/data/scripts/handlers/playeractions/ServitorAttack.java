@@ -18,6 +18,7 @@ package handlers.playeractions;
 
 import org.l2jmobius.gameserver.handler.IPlayerActionHandler;
 import org.l2jmobius.gameserver.model.ActionDataHolder;
+import org.l2jmobius.gameserver.model.actor.Summon;
 import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
 import org.l2jmobius.gameserver.network.SystemMessageId;
 
@@ -32,7 +33,13 @@ public class ServitorAttack implements IPlayerActionHandler
 	{
 		if (player.hasServitors())
 		{
-			player.getServitors().values().stream().filter(s -> s.canAttack(player.getTarget(), ctrlPressed)).forEach(s -> s.doAttack(player.getTarget()));
+			for (Summon summon : player.getServitors().values())
+			{
+				if (summon.canAttack(player.getTarget(), ctrlPressed))
+				{
+					summon.doAttack(player.getTarget());
+				}
+			}
 		}
 		else
 		{

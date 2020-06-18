@@ -676,7 +676,13 @@ public class InstanceTemplate extends ListenersContainer implements IIdentifiabl
 		// If any group found then put them into enter group list
 		if (pGroup != null)
 		{
-			pGroup.getMembers().stream().filter(p -> !p.equals(player)).forEach(group::add);
+			for (PlayerInstance member : pGroup.getMembers())
+			{
+				if (!member.equals(player))
+				{
+					group.add(member);
+				}
+			}
 		}
 		return group;
 	}

@@ -90,17 +90,19 @@ public class FenceInstance extends WorldObject
 				deleteObjects[i] = new DeleteObject(_heightFences[i]);
 			}
 			
-			getKnownList().getKnownObjects().values().stream().filter(PlayerInstance.class::isInstance).map(PlayerInstance.class::cast).forEach(player ->
+			for (WorldObject obj : getKnownList().getKnownObjects().values())
 			{
-				for (DeleteObject deleteObject : deleteObjects)
+				if ((obj != null) && obj.isPlayer())
 				{
-					player.sendPacket(deleteObject);
+					for (DeleteObject deleteObject : deleteObjects)
+					{
+						obj.getActingPlayer().sendPacket(deleteObject);
+					}
 				}
-			});
+			}
 		}
 		
 		decayMe();
-		
 		FenceData.getInstance().removeFence(this);
 		return false;
 	}
@@ -113,7 +115,13 @@ public class FenceInstance extends WorldObject
 	public void setState(FenceState type)
 	{
 		_state = type;
-		getKnownList().getKnownObjects().values().stream().filter(PlayerInstance.class::isInstance).map(PlayerInstance.class::cast).forEach(this::sendInfo);
+		for (WorldObject obj : getKnownList().getKnownObjects().values())
+		{
+			if ((obj != null) && obj.isPlayer())
+			{
+				sendInfo(obj.getActingPlayer());
+			}
+		}
 	}
 	
 	public int getWidth()

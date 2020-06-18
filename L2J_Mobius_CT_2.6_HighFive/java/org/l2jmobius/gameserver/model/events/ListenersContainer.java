@@ -78,12 +78,27 @@ public class ListenersContainer
 	
 	public void removeListenerIf(EventType type, Predicate<? super AbstractEventListener> filter)
 	{
-		getListeners(type).stream().filter(filter).forEach(AbstractEventListener::unregisterMe);
+		for (AbstractEventListener listener : getListeners(type))
+		{
+			if (filter.test(listener))
+			{
+				listener.unregisterMe();
+			}
+		}
 	}
 	
 	public void removeListenerIf(Predicate<? super AbstractEventListener> filter)
 	{
-		getListeners().values().forEach(queue -> queue.stream().filter(filter).forEach(AbstractEventListener::unregisterMe));
+		for (Queue<AbstractEventListener> queue : getListeners().values())
+		{
+			for (AbstractEventListener listener : queue)
+			{
+				if (filter.test(listener))
+				{
+					listener.unregisterMe();
+				}
+			}
+		}
 	}
 	
 	public boolean hasListener(EventType type)

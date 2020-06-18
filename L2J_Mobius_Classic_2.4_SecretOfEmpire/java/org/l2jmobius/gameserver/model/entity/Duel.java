@@ -610,8 +610,15 @@ public class Duel
 		}
 		
 		final int instanceId = DuelManager.getInstance().getDuelArena();
-		final OlympiadStadiumZone zone = ZoneManager.getInstance().getAllZones(OlympiadStadiumZone.class) //
-			.stream().filter(z -> z.getInstanceTemplateId() == instanceId).findFirst().orElse(null);
+		OlympiadStadiumZone zone = null;
+		for (OlympiadStadiumZone z : ZoneManager.getInstance().getAllZones(OlympiadStadiumZone.class))
+		{
+			if (z.getInstanceTemplateId() == instanceId)
+			{
+				zone = z;
+				break;
+			}
+		}
 		if (zone == null)
 		{
 			throw new RuntimeException("Unable to find a party duel arena!");

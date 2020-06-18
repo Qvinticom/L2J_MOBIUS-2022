@@ -98,16 +98,34 @@ public class ChatWorld implements IChatHandler
 			{
 				if (activeChar.isGood())
 				{
-					World.getInstance().getAllGoodPlayers().stream().filter(activeChar::isNotBlocked).forEach(cs::sendTo);
+					for (PlayerInstance player : World.getInstance().getAllGoodPlayers())
+					{
+						if (player.isNotBlocked(activeChar))
+						{
+							cs.sendTo(player);
+						}
+					}
 				}
 				if (activeChar.isEvil())
 				{
-					World.getInstance().getAllEvilPlayers().stream().filter(activeChar::isNotBlocked).forEach(cs::sendTo);
+					for (PlayerInstance player : World.getInstance().getAllEvilPlayers())
+					{
+						if (player.isNotBlocked(activeChar))
+						{
+							cs.sendTo(player);
+						}
+					}
 				}
 			}
 			else
 			{
-				World.getInstance().getPlayers().stream().filter(activeChar::isNotBlocked).forEach(cs::sendTo);
+				for (PlayerInstance player : World.getInstance().getPlayers())
+				{
+					if (player.isNotBlocked(activeChar))
+					{
+						cs.sendTo(player);
+					}
+				}
 			}
 			
 			activeChar.setWorldChatUsed(activeChar.getWorldChatUsed() + 1);

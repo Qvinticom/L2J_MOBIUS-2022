@@ -99,7 +99,14 @@ public class SiegeGuardManager
 	 */
 	public SiegeGuardHolder getSiegeGuardByItem(int castleId, int itemId)
 	{
-		return CastleData.getInstance().getSiegeGuardsForCastle(castleId).stream().filter(g -> (g.getItemId() == itemId)).findFirst().orElse(null);
+		for (SiegeGuardHolder holder : CastleData.getInstance().getSiegeGuardsForCastle(castleId))
+		{
+			if (holder.getItemId() == itemId)
+			{
+				return holder;
+			}
+		}
+		return null;
 	}
 	
 	/**
@@ -110,7 +117,14 @@ public class SiegeGuardManager
 	 */
 	public SiegeGuardHolder getSiegeGuardByNpc(int castleId, int npcId)
 	{
-		return CastleData.getInstance().getSiegeGuardsForCastle(castleId).stream().filter(g -> (g.getNpcId() == npcId)).findFirst().orElse(null);
+		for (SiegeGuardHolder holder : CastleData.getInstance().getSiegeGuardsForCastle(castleId))
+		{
+			if (holder.getNpcId() == npcId)
+			{
+				return holder;
+			}
+		}
+		return null;
 	}
 	
 	/**
@@ -120,7 +134,14 @@ public class SiegeGuardManager
 	 */
 	public boolean isTooCloseToAnotherTicket(PlayerInstance player)
 	{
-		return _droppedTickets.stream().filter(g -> g.calculateDistance3D(player) < 25).findFirst().orElse(null) != null;
+		for (ItemInstance ticket : _droppedTickets)
+		{
+			if (ticket.calculateDistance3D(player) < 25)
+			{
+				return true;
+			}
+		}
+		return false;
 	}
 	
 	/**
@@ -131,8 +152,15 @@ public class SiegeGuardManager
 	 */
 	public boolean isAtNpcLimit(int castleId, int itemId)
 	{
-		final long count = _droppedTickets.stream().filter(i -> i.getId() == itemId).count();
 		final SiegeGuardHolder holder = getSiegeGuardByItem(castleId, itemId);
+		long count = 0;
+		for (ItemInstance ticket : _droppedTickets)
+		{
+			if (ticket.getId() == itemId)
+			{
+				count++;
+			}
+		}
 		return count >= holder.getMaxNpcAmout();
 	}
 	

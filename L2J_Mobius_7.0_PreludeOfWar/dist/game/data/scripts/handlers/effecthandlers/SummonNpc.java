@@ -173,7 +173,13 @@ public class SummonNpc extends AbstractEffect
 				// If only single instance is allowed, delete previous NPCs.
 				if (_singleInstance)
 				{
-					player.getSummonedNpcs().stream().filter(npc -> npc.getId() == _npcId).forEach(Npc::deleteMe);
+					for (Npc npc : player.getSummonedNpcs())
+					{
+						if (npc.getId() == _npcId)
+						{
+							npc.deleteMe();
+						}
+					}
 				}
 				
 				final Npc npc = spawn.doSpawn(_isSummonSpawn);

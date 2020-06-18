@@ -2843,7 +2843,13 @@ public class Quest extends AbstractScript implements IIdentifiable
 		}
 		else
 		{
-			getListeners().stream().filter(listener -> listener.getType() == EventType.ON_PLAYER_LOGIN).forEach(AbstractEventListener::unregisterMe);
+			for (AbstractEventListener listener : getListeners())
+			{
+				if (listener.getType() == EventType.ON_PLAYER_LOGIN)
+				{
+					listener.unregisterMe();
+				}
+			}
 		}
 	}
 	

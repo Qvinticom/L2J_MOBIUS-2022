@@ -119,8 +119,15 @@ public class Instance implements IIdentifiable, INamable
 		setStatus(0);
 		spawnDoors();
 		
-		// initialize instance spawns
-		_spawns.stream().filter(SpawnTemplate::isSpawningByDefault).forEach(spawnTemplate -> spawnTemplate.spawnAll(this));
+		// Initialize instance spawns.
+		for (SpawnTemplate spawnTemplate : _spawns)
+		{
+			if (spawnTemplate.isSpawningByDefault())
+			{
+				spawnTemplate.spawnAll(this);
+			}
+		}
+		
 		if (!isDynamic())
 		{
 			// Notify DP scripts
@@ -325,7 +332,11 @@ public class Instance implements IIdentifiable, INamable
 	 */
 	public PlayerInstance getFirstPlayer()
 	{
-		return _players.stream().findFirst().orElse(null);
+		for (PlayerInstance player : _players)
+		{
+			return player;
+		}
+		return null;
 	}
 	
 	/**
@@ -335,7 +346,14 @@ public class Instance implements IIdentifiable, INamable
 	 */
 	public PlayerInstance getPlayerById(int id)
 	{
-		return _players.stream().filter(p -> p.getObjectId() == id).findFirst().orElse(null);
+		for (PlayerInstance player : _players)
+		{
+			if (player.getObjectId() == id)
+			{
+				return player;
+			}
+		}
+		return null;
 	}
 	
 	/**
@@ -344,9 +362,17 @@ public class Instance implements IIdentifiable, INamable
 	 * @param radius radius around target
 	 * @return players within radius
 	 */
-	public Set<PlayerInstance> getPlayersInsideRadius(ILocational object, int radius)
+	public List<PlayerInstance> getPlayersInsideRadius(ILocational object, int radius)
 	{
-		return _players.stream().filter(p -> p.isInsideRadius3D(object, radius)).collect(Collectors.toSet());
+		final List<PlayerInstance> result = new ArrayList<>();
+		for (PlayerInstance player : _players)
+		{
+			if (player.isInsideRadius3D(object, radius))
+			{
+				result.add(player);
+			}
+		}
+		return result;
 	}
 	
 	/**
@@ -543,9 +569,17 @@ public class Instance implements IIdentifiable, INamable
 	 * Get alive NPCs from instance.
 	 * @return set of NPCs from instance
 	 */
-	public Set<Npc> getAliveNpcs()
+	public List<Npc> getAliveNpcs()
 	{
-		return _npcs.stream().filter(n -> n.getCurrentHp() > 0).collect(Collectors.toSet());
+		final List<Npc> result = new ArrayList<>();
+		for (Npc npc : _npcs)
+		{
+			if (npc.getCurrentHp() > 0)
+			{
+				result.add(npc);
+			}
+		}
+		return result;
 	}
 	
 	/**
@@ -555,7 +589,15 @@ public class Instance implements IIdentifiable, INamable
 	 */
 	public List<Npc> getNpcs(int... id)
 	{
-		return _npcs.stream().filter(n -> CommonUtil.contains(id, n.getId())).collect(Collectors.toList());
+		final List<Npc> result = new ArrayList<>();
+		for (Npc npc : _npcs)
+		{
+			if (CommonUtil.contains(id, npc.getId()))
+			{
+				result.add(npc);
+			}
+		}
+		return result;
 	}
 	
 	/**
@@ -566,9 +608,18 @@ public class Instance implements IIdentifiable, INamable
 	 * @return list of filtered NPCs from instance
 	 */
 	@SafeVarargs
+	@SuppressWarnings("unchecked")
 	public final <T extends Creature> List<T> getNpcs(Class<T> clazz, int... ids)
 	{
-		return _npcs.stream().filter(n -> (ids.length == 0) || CommonUtil.contains(ids, n.getId())).filter(clazz::isInstance).map(clazz::cast).collect(Collectors.toList());
+		final List<T> result = new ArrayList<>();
+		for (Npc npc : _npcs)
+		{
+			if (((ids.length == 0) || CommonUtil.contains(ids, npc.getId())) && clazz.isInstance(npc))
+			{
+				result.add((T) npc);
+			}
+		}
+		return result;
 	}
 	
 	/**
@@ -579,9 +630,18 @@ public class Instance implements IIdentifiable, INamable
 	 * @return list of filtered NPCs from instance
 	 */
 	@SafeVarargs
+	@SuppressWarnings("unchecked")
 	public final <T extends Creature> List<T> getAliveNpcs(Class<T> clazz, int... ids)
 	{
-		return _npcs.stream().filter(n -> ((ids.length == 0) || CommonUtil.contains(ids, n.getId())) && (n.getCurrentHp() > 0)).filter(clazz::isInstance).map(clazz::cast).collect(Collectors.toList());
+		final List<T> result = new ArrayList<>();
+		for (Npc npc : _npcs)
+		{
+			if ((((ids.length == 0) || CommonUtil.contains(ids, npc.getId())) && (npc.getCurrentHp() > 0)) && clazz.isInstance(npc))
+			{
+				result.add((T) npc);
+			}
+		}
+		return result;
 	}
 	
 	/**
@@ -591,7 +651,15 @@ public class Instance implements IIdentifiable, INamable
 	 */
 	public List<Npc> getAliveNpcs(int... id)
 	{
-		return _npcs.stream().filter(n -> (n.getCurrentHp() > 0) && CommonUtil.contains(id, n.getId())).collect(Collectors.toList());
+		final List<Npc> result = new ArrayList<>();
+		for (Npc npc : _npcs)
+		{
+			if ((npc.getCurrentHp() > 0) && CommonUtil.contains(id, npc.getId()))
+			{
+				result.add(npc);
+			}
+		}
+		return result;
 	}
 	
 	/**
@@ -601,7 +669,14 @@ public class Instance implements IIdentifiable, INamable
 	 */
 	public Npc getNpc(int id)
 	{
-		return _npcs.stream().filter(n -> n.getId() == id).findFirst().orElse(null);
+		for (Npc npc : _npcs)
+		{
+			if (npc.getId() == id)
+			{
+				return npc;
+			}
+		}
+		return null;
 	}
 	
 	public void addNpc(Npc npc)

@@ -88,7 +88,16 @@ public abstract class ItemContainer
 		{
 			filter = filter.and(additionalFilter);
 		}
-		return (int) _items.stream().filter(filter).count();
+		
+		int count = 0;
+		for (ItemInstance item : _items)
+		{
+			if (filter.test(item))
+			{
+				count++;
+			}
+		}
+		return count;
 	}
 	
 	/**

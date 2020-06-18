@@ -314,7 +314,13 @@ public class Party extends AbstractPlayerGroup
 		msg.addString(player.getName());
 		broadcastPacket(msg);
 		
-		_members.stream().filter(member -> member != player).forEach(member -> member.sendPacket(new PartySmallWindowAdd(player, this)));
+		for (PlayerInstance member : _members)
+		{
+			if (member != player)
+			{
+				member.sendPacket(new PartySmallWindowAdd(player, this));
+			}
+		}
 		
 		// send the position of all party members to the new party member
 		// player.sendPacket(new PartyMemberPosition(this));

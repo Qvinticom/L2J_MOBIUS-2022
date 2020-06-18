@@ -250,7 +250,14 @@ public abstract class AbstractResidence extends ListenersContainer implements IN
 	 */
 	public ResidenceFunction getFunction(ResidenceFunctionType type)
 	{
-		return _functions.values().stream().filter(func -> func.getType() == type).findFirst().orElse(null);
+		for (ResidenceFunction func : _functions.values())
+		{
+			if (func.getType() == type)
+			{
+				return func;
+			}
+		}
+		return null;
 	}
 	
 	/**
@@ -260,7 +267,14 @@ public abstract class AbstractResidence extends ListenersContainer implements IN
 	 */
 	public ResidenceFunction getFunction(int id, int level)
 	{
-		return _functions.values().stream().filter(func -> (func.getId() == id) && (func.getLevel() == level)).findFirst().orElse(null);
+		for (ResidenceFunction func : _functions.values())
+		{
+			if ((func.getId() == id) && (func.getLevel() == level))
+			{
+				return func;
+			}
+		}
+		return null;
 	}
 	
 	/**
@@ -269,7 +283,14 @@ public abstract class AbstractResidence extends ListenersContainer implements IN
 	 */
 	public ResidenceFunction getFunction(int id)
 	{
-		return _functions.values().stream().filter(func -> (func.getId() == id)).findFirst().orElse(null);
+		for (ResidenceFunction func : _functions.values())
+		{
+			if (func.getId() == id)
+			{
+				return func;
+			}
+		}
+		return null;
 	}
 	
 	/**
@@ -288,7 +309,15 @@ public abstract class AbstractResidence extends ListenersContainer implements IN
 	 */
 	public long getFunctionExpiration(ResidenceFunctionType type)
 	{
-		final ResidenceFunction function = _functions.values().stream().filter(func -> func.getTemplate().getType() == type).findFirst().orElse(null);
+		ResidenceFunction function = null;
+		for (ResidenceFunction func : _functions.values())
+		{
+			if (func.getTemplate().getType() == type)
+			{
+				function = func;
+				break;
+			}
+		}
 		return function != null ? function.getExpiration() : -1;
 	}
 	

@@ -23,7 +23,6 @@ import java.util.ArrayList;
 import java.util.Calendar;
 import java.util.List;
 import java.util.Map;
-import java.util.Objects;
 import java.util.concurrent.ConcurrentHashMap;
 import java.util.logging.Level;
 import java.util.logging.Logger;
@@ -888,12 +887,26 @@ public class Castle extends AbstractResidence
 	
 	public DoorInstance getDoor(int doorId)
 	{
-		return _doors.stream().filter(d -> d.getId() == doorId).findFirst().orElse(null);
+		for (DoorInstance door : _doors)
+		{
+			if (door.getId() == doorId)
+			{
+				return door;
+			}
+		}
+		return null;
 	}
 	
 	public DoorInstance getDoor(String doorName)
 	{
-		return _doors.stream().filter(d -> d.getTemplate().getName().equals(doorName)).findFirst().orElse(null);
+		for (DoorInstance door : _doors)
+		{
+			if (door.getTemplate().getName().equals(doorName))
+			{
+				return door;
+			}
+		}
+		return null;
 	}
 	
 	public List<DoorInstance> getDoors()
@@ -1169,7 +1182,13 @@ public class Castle extends AbstractResidence
 	
 	public void spawnSideNpcs()
 	{
-		_sideNpcs.stream().filter(Objects::nonNull).forEach(Npc::deleteMe);
+		for (Npc npc : _sideNpcs)
+		{
+			if (npc != null)
+			{
+				npc.deleteMe();
+			}
+		}
 		_sideNpcs.clear();
 		
 		for (CastleSpawnHolder holder : getSideSpawns())

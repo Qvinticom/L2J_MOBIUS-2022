@@ -203,7 +203,14 @@ public class Forum
 	public Forum getChildByName(String name)
 	{
 		vload();
-		return _children.stream().filter(f -> f.getName().equals(name)).findFirst().orElse(null);
+		for (Forum f : _children)
+		{
+			if (f.getName().equals(name))
+			{
+				return f;
+			}
+		}
+		return null;
 	}
 	
 	/**

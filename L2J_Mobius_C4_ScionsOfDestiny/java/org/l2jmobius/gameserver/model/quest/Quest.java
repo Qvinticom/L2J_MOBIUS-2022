@@ -30,7 +30,6 @@ import java.util.Map;
 import java.util.concurrent.CopyOnWriteArrayList;
 import java.util.logging.Level;
 import java.util.logging.Logger;
-import java.util.stream.Collectors;
 
 import org.l2jmobius.Config;
 import org.l2jmobius.commons.database.DatabaseFactory;
@@ -1354,7 +1353,16 @@ public class Quest extends ManagedScript
 			return (checkPlayerCondition(player, npc, var, value) != null) ? Arrays.asList(player) : Collections.emptyList();
 		}
 		
-		return party.getPartyMembers().stream().filter(m -> checkPlayerCondition(m, npc, var, value) != null).collect(Collectors.toList());
+		final List<PlayerInstance> result = new ArrayList<>();
+		for (PlayerInstance member : party.getPartyMembers())
+		{
+			if (checkPlayerCondition(member, npc, var, value) != null)
+			{
+				result.add(member);
+			}
+		}
+		
+		return result;
 	}
 	
 	/**
@@ -1481,7 +1489,16 @@ public class Quest extends ManagedScript
 			return (checkPlayerState(player, npc, state) != null) ? Arrays.asList(player) : Collections.emptyList();
 		}
 		
-		return party.getPartyMembers().stream().filter(m -> checkPlayerState(m, npc, state) != null).collect(Collectors.toList());
+		final List<PlayerInstance> result = new ArrayList<>();
+		for (PlayerInstance member : party.getPartyMembers())
+		{
+			if (checkPlayerState(member, npc, state) != null)
+			{
+				result.add(member);
+			}
+		}
+		
+		return result;
 	}
 	
 	/**

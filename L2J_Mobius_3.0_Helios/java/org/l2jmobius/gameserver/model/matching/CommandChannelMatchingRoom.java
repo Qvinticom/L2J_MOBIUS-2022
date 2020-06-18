@@ -56,13 +56,25 @@ public class CommandChannelMatchingRoom extends MatchingRoom
 	@Override
 	protected void notifyNewMember(PlayerInstance player)
 	{
-		// Update others player
-		getMembers().stream().filter(p -> p != player).forEach(p -> p.sendPacket(new ExManageMpccRoomMember(p, this, ExManagePartyRoomMemberType.ADD_MEMBER)));
+		// Update other players
+		for (PlayerInstance member : getMembers())
+		{
+			if (member != player)
+			{
+				member.sendPacket(new ExManageMpccRoomMember(member, this, ExManagePartyRoomMemberType.ADD_MEMBER));
+			}
+		}
 		
-		// Send SystemMessage to others player
+		// Send SystemMessage to other players
 		final SystemMessage sm = new SystemMessage(SystemMessageId.C1_ENTERED_THE_COMMAND_CHANNEL_MATCHING_ROOM);
 		sm.addPcName(player);
-		getMembers().stream().filter(p -> p != player).forEach(sm::sendTo);
+		for (PlayerInstance member : getMembers())
+		{
+			if (member != player)
+			{
+				sm.sendTo(member);
+			}
+		}
 		
 		// Update new player
 		player.sendPacket(new ExMPCCRoomInfo(this));

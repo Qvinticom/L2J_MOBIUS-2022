@@ -57,11 +57,17 @@ public class PreparedMultisellListHolder extends MultisellListHolder
 			inventory.getItems(item -> !item.isEquipped() && (item.isArmor() || item.isWeapon())).forEach(item ->
 			{
 				// Check ingredients of each entry to see if it's an entry we'd like to include.
-				list.getEntries().stream().filter(e -> e.getIngredients().stream().anyMatch(i -> i.getId() == item.getId())).forEach(e ->
+				for (MultisellEntryHolder entry : list.getEntries())
 				{
-					_entries.add(e);
-					_itemInfos.add(new ItemInfo(item));
-				});
+					for (ItemChanceHolder holder : entry.getIngredients())
+					{
+						if (holder.getId() == item.getId())
+						{
+							_entries.add(entry);
+							_itemInfos.add(new ItemInfo(item));
+						}
+					}
+				}
 			});
 		}
 	}

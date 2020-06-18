@@ -19,6 +19,7 @@ package handlers.playeractions;
 import org.l2jmobius.gameserver.ai.CtrlIntention;
 import org.l2jmobius.gameserver.handler.IPlayerActionHandler;
 import org.l2jmobius.gameserver.model.ActionDataHolder;
+import org.l2jmobius.gameserver.model.actor.Summon;
 import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
 import org.l2jmobius.gameserver.network.SystemMessageId;
 
@@ -39,17 +40,20 @@ public class ServitorMove implements IPlayerActionHandler
 		
 		if (player.getTarget() != null)
 		{
-			player.getServitors().values().stream().filter(s -> (s != player.getTarget()) && !s.isMovementDisabled()).forEach(s ->
+			for (Summon summon : player.getServitors().values())
 			{
-				if (s.isBetrayed())
+				if ((summon != player.getTarget()) && !summon.isMovementDisabled())
 				{
-					player.sendPacket(SystemMessageId.YOUR_PET_SERVITOR_IS_UNRESPONSIVE_AND_WILL_NOT_OBEY_ANY_ORDERS);
-					return;
+					if (summon.isBetrayed())
+					{
+						player.sendPacket(SystemMessageId.YOUR_PET_SERVITOR_IS_UNRESPONSIVE_AND_WILL_NOT_OBEY_ANY_ORDERS);
+						return;
+					}
+					
+					summon.setFollowStatus(false);
+					summon.getAI().setIntention(CtrlIntention.AI_INTENTION_MOVE_TO, player.getTarget().getLocation());
 				}
-				
-				s.setFollowStatus(false);
-				s.getAI().setIntention(CtrlIntention.AI_INTENTION_MOVE_TO, player.getTarget().getLocation());
-			});
+			}
 		}
 	}
 }

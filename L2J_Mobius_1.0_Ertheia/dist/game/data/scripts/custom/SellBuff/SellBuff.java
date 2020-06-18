@@ -213,12 +213,15 @@ public class SellBuff implements IVoicedCommandHandler, IBypassHandler
 						return false;
 					}
 					
-					final SellBuffHolder holder = player.getSellingBuffs().stream().filter(h -> (h.getSkillId() == skillToChange.getId())).findFirst().orElse(null);
-					if ((holder != null))
+					for (SellBuffHolder holder : player.getSellingBuffs())
 					{
-						player.sendMessage("Price of " + player.getKnownSkill(holder.getSkillId()).getName() + " has been changed to " + price + "!");
-						holder.setPrice(price);
-						SellBuffsManager.getInstance().sendBuffEditMenu(player);
+						if (holder.getSkillId() == skillToChange.getId())
+						{
+							player.sendMessage("Price of " + player.getKnownSkill(holder.getSkillId()).getName() + " has been changed to " + price + "!");
+							holder.setPrice(price);
+							SellBuffsManager.getInstance().sendBuffEditMenu(player);
+							break;
+						}
 					}
 				}
 				break;
@@ -245,11 +248,14 @@ public class SellBuff implements IVoicedCommandHandler, IBypassHandler
 						return false;
 					}
 					
-					final SellBuffHolder holder = player.getSellingBuffs().stream().filter(h -> (h.getSkillId() == skillToRemove.getId())).findFirst().orElse(null);
-					if ((holder != null) && player.getSellingBuffs().remove(holder))
+					for (SellBuffHolder holder : player.getSellingBuffs())
 					{
-						player.sendMessage("Skill " + player.getKnownSkill(holder.getSkillId()).getName() + " has been removed!");
-						SellBuffsManager.getInstance().sendBuffEditMenu(player);
+						if ((holder.getSkillId() == skillToRemove.getId()) && player.getSellingBuffs().remove(holder))
+						{
+							player.sendMessage("Skill " + player.getKnownSkill(holder.getSkillId()).getName() + " has been removed!");
+							SellBuffsManager.getInstance().sendBuffEditMenu(player);
+							break;
+						}
 					}
 				}
 				break;
@@ -390,29 +396,33 @@ public class SellBuff implements IVoicedCommandHandler, IBypassHandler
 						return false;
 					}
 					
-					final SellBuffHolder holder = seller.getSellingBuffs().stream().filter(h -> (h.getSkillId() == skillToBuy.getId())).findFirst().orElse(null);
-					if (holder != null)
+					for (SellBuffHolder holder : player.getSellingBuffs())
 					{
-						if (AbstractScript.getQuestItemsCount(player, Config.SELLBUFF_PAYMENT_ID) >= holder.getPrice())
+						if (holder.getSkillId() == skillToBuy.getId())
 						{
-							AbstractScript.takeItems(player, Config.SELLBUFF_PAYMENT_ID, holder.getPrice());
-							AbstractScript.giveItems(seller, Config.SELLBUFF_PAYMENT_ID, holder.getPrice());
-							seller.reduceCurrentMp(skillToBuy.getMpConsume() * Config.SELLBUFF_MP_MULTIPLER);
-							skillToBuy.activateSkill(seller, player);
-						}
-						else
-						{
-							final Item item = ItemTable.getInstance().getTemplate(Config.SELLBUFF_PAYMENT_ID);
-							if (item != null)
+							if (AbstractScript.getQuestItemsCount(player, Config.SELLBUFF_PAYMENT_ID) >= holder.getPrice())
 							{
-								player.sendMessage("Not enough " + item.getName() + "!");
+								AbstractScript.takeItems(player, Config.SELLBUFF_PAYMENT_ID, holder.getPrice());
+								AbstractScript.giveItems(seller, Config.SELLBUFF_PAYMENT_ID, holder.getPrice());
+								seller.reduceCurrentMp(skillToBuy.getMpConsume() * Config.SELLBUFF_MP_MULTIPLER);
+								skillToBuy.activateSkill(seller, player);
 							}
 							else
 							{
-								player.sendMessage("Not enough items!");
+								final Item item = ItemTable.getInstance().getTemplate(Config.SELLBUFF_PAYMENT_ID);
+								if (item != null)
+								{
+									player.sendMessage("Not enough " + item.getName() + "!");
+								}
+								else
+								{
+									player.sendMessage("Not enough items!");
+								}
 							}
+							break;
 						}
 					}
+					
 					SellBuffsManager.getInstance().sendBuffMenu(player, seller, index);
 				}
 				break;

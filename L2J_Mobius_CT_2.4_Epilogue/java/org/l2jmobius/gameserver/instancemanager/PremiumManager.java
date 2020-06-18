@@ -177,14 +177,17 @@ public class PremiumManager
 		premiumData.put(accountName, newPremiumExpiration);
 		
 		// UPDATE PlAYER PREMIUMSTATUS
-		final PlayerInstance playerOnline = World.getInstance().getPlayers().stream().filter(p -> accountName.equals(p.getAccountName())).findFirst().orElse(null);
-		if (playerOnline != null)
+		for (PlayerInstance player : World.getInstance().getPlayers())
 		{
-			stopExpireTask(playerOnline);
-			startExpireTask(playerOnline, newPremiumExpiration - now);
-			if (!playerOnline.hasPremiumStatus())
+			if (accountName.equals(player.getAccountName()))
 			{
-				playerOnline.setPremiumStatus(true);
+				stopExpireTask(player);
+				startExpireTask(player, newPremiumExpiration - now);
+				if (!player.hasPremiumStatus())
+				{
+					player.setPremiumStatus(true);
+				}
+				break;
 			}
 		}
 	}
@@ -193,11 +196,14 @@ public class PremiumManager
 	{
 		if (checkOnline)
 		{
-			final PlayerInstance playerOnline = World.getInstance().getPlayers().stream().filter(p -> accountName.equals(p.getAccountName())).findFirst().orElse(null);
-			if ((playerOnline != null) && playerOnline.hasPremiumStatus())
+			for (PlayerInstance player : World.getInstance().getPlayers())
 			{
-				playerOnline.setPremiumStatus(false);
-				stopExpireTask(playerOnline);
+				if (accountName.equals(player.getAccountName()) && player.hasPremiumStatus())
+				{
+					player.setPremiumStatus(false);
+					stopExpireTask(player);
+					break;
+				}
 			}
 		}
 		

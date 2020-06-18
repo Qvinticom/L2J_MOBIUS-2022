@@ -162,7 +162,14 @@ public class GrandBossManager implements IStorable
 	
 	public BossZone getZone(Creature creature)
 	{
-		return _zones.values().stream().filter(z -> z.isCharacterInZone(creature)).findFirst().orElse(null);
+		for (BossZone zone : _zones.values())
+		{
+			if (zone.isCharacterInZone(creature))
+			{
+				return zone;
+			}
+		}
+		return null;
 	}
 	
 	public BossZone getZone(Location loc)
@@ -172,7 +179,14 @@ public class GrandBossManager implements IStorable
 	
 	public BossZone getZone(int x, int y, int z)
 	{
-		return _zones.values().stream().filter(zone -> zone.isInsideZone(x, y, z)).findFirst().orElse(null);
+		for (BossZone zone : _zones.values())
+		{
+			if (zone.isInsideZone(x, y, z))
+			{
+				return zone;
+			}
+		}
+		return null;
 	}
 	
 	public boolean checkIfInZone(String zoneType, WorldObject obj)

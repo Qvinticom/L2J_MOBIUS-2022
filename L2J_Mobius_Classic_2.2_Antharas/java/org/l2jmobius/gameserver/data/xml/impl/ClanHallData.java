@@ -175,18 +175,39 @@ public class ClanHallData implements IXmlReader
 	
 	public ClanHall getClanHallByNpcId(int npcId)
 	{
-		return _clanHalls.values().stream().filter(ch -> ch.getNpcs().contains(npcId)).findFirst().orElse(null);
+		for (ClanHall ch : _clanHalls.values())
+		{
+			if (ch.getNpcs().contains(npcId))
+			{
+				return ch;
+			}
+		}
+		return null;
 	}
 	
 	public ClanHall getClanHallByClan(Clan clan)
 	{
-		return _clanHalls.values().stream().filter(ch -> ch.getOwner() == clan).findFirst().orElse(null);
+		for (ClanHall ch : _clanHalls.values())
+		{
+			if (ch.getOwner() == clan)
+			{
+				return ch;
+			}
+		}
+		return null;
 	}
 	
 	public ClanHall getClanHallByDoorId(int doorId)
 	{
 		final DoorInstance door = DoorData.getInstance().getDoor(doorId);
-		return _clanHalls.values().stream().filter(ch -> ch.getDoors().contains(door)).findFirst().orElse(null);
+		for (ClanHall ch : _clanHalls.values())
+		{
+			if (ch.getDoors().contains(door))
+			{
+				return ch;
+			}
+		}
+		return null;
 	}
 	
 	public List<ClanHall> getFreeAuctionableHall()

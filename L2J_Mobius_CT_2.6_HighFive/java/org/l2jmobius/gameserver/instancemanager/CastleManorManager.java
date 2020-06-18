@@ -26,6 +26,7 @@ import java.util.Calendar;
 import java.util.Collection;
 import java.util.Collections;
 import java.util.HashMap;
+import java.util.HashSet;
 import java.util.List;
 import java.util.Map;
 import java.util.Set;
@@ -758,7 +759,15 @@ public class CastleManorManager implements IXmlReader, IStorable
 	
 	public Set<Seed> getSeedsForCastle(int castleId)
 	{
-		return _seeds.values().stream().filter(s -> s.getCastleId() == castleId).collect(Collectors.toSet());
+		Set<Seed> result = new HashSet<>();
+		for (Seed seed : _seeds.values())
+		{
+			if (seed.getCastleId() == castleId)
+			{
+				result.add(seed);
+			}
+		}
+		return result;
 	}
 	
 	public Set<Integer> getSeedIds()

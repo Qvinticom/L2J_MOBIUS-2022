@@ -22,12 +22,12 @@ import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.time.Duration;
 import java.time.Instant;
+import java.util.ArrayList;
 import java.util.List;
 import java.util.concurrent.ScheduledFuture;
 import java.util.concurrent.TimeUnit;
 import java.util.logging.Level;
 import java.util.logging.Logger;
-import java.util.stream.Collectors;
 
 import org.l2jmobius.commons.concurrent.ThreadPool;
 import org.l2jmobius.commons.database.DatabaseFactory;
@@ -150,10 +150,13 @@ public class ClanHall extends AbstractResidence
 	@Override
 	protected void initResidenceZone()
 	{
-		final ClanHallZone zone = ZoneManager.getInstance().getAllZones(ClanHallZone.class).stream().filter(z -> z.getResidenceId() == getResidenceId()).findFirst().orElse(null);
-		if (zone != null)
+		for (ClanHallZone zone : ZoneManager.getInstance().getAllZones(ClanHallZone.class))
 		{
-			setResidenceZone(zone);
+			if (zone.getResidenceId() == getResidenceId())
+			{
+				setResidenceZone(zone);
+				break;
+			}
 		}
 	}
 	
@@ -328,7 +331,15 @@ public class ClanHall extends AbstractResidence
 	
 	public List<ClanHallTeleportHolder> getTeleportList(int functionLevel)
 	{
-		return _teleports.stream().filter(holder -> holder.getMinFunctionLevel() <= functionLevel).collect(Collectors.toList());
+		final List<ClanHallTeleportHolder> result = new ArrayList<>();
+		for (ClanHallTeleportHolder holder : _teleports)
+		{
+			if (holder.getMinFunctionLevel() <= functionLevel)
+			{
+				result.add(holder);
+			}
+		}
+		return result;
 	}
 	
 	public int getMinBid()

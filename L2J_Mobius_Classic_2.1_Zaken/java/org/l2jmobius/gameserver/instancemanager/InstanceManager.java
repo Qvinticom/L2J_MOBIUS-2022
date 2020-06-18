@@ -434,7 +434,24 @@ public class InstanceManager implements IXmlReader
 	 */
 	public Instance getPlayerInstance(PlayerInstance player, boolean isInside)
 	{
-		return _instanceWorlds.values().stream().filter(i -> (isInside) ? i.containsPlayer(player) : i.isAllowed(player)).findFirst().orElse(null);
+		for (Instance instance : _instanceWorlds.values())
+		{
+			if (isInside)
+			{
+				if (instance.containsPlayer(player))
+				{
+					return instance;
+				}
+			}
+			else
+			{
+				if (instance.isAllowed(player))
+				{
+					return instance;
+				}
+			}
+		}
+		return null;
 	}
 	
 	/**
@@ -656,7 +673,15 @@ public class InstanceManager implements IXmlReader
 	 */
 	public long getWorldCount(int templateId)
 	{
-		return _instanceWorlds.values().stream().filter(i -> i.getTemplateId() == templateId).count();
+		long count = 0;
+		for (Instance i : _instanceWorlds.values())
+		{
+			if (i.getTemplateId() == templateId)
+			{
+				count++;
+			}
+		}
+		return count;
 	}
 	
 	/**

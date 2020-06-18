@@ -276,7 +276,13 @@ public class CeremonyOfChaosEvent extends AbstractEvent<CeremonyOfChaosMember>
 	
 	public void stopFight()
 	{
-		getMembers().values().stream().filter(p -> p.getLifeTime() == 0).forEach(this::updateLifeTime);
+		for (CeremonyOfChaosMember member : getMembers().values())
+		{
+			if (member.getLifeTime() == 0)
+			{
+				updateLifeTime(member);
+			}
+		}
 		validateWinner();
 		
 		final List<CeremonyOfChaosMember> winners = getWinners();
@@ -503,7 +509,15 @@ public class CeremonyOfChaosEvent extends AbstractEvent<CeremonyOfChaosMember>
 				getMembers().values().forEach(p -> broadcastPacket(new ExCuriousHouseMemberUpdate(p)));
 				
 				// Validate winner
-				if (getMembers().values().stream().filter(member -> !member.isDefeated()).count() <= 1)
+				int count = 0;
+				for (CeremonyOfChaosMember member : getMembers().values())
+				{
+					if (!member.isDefeated())
+					{
+						count++;
+					}
+				}
+				if (count <= 1)
 				{
 					stopFight();
 				}
@@ -601,12 +615,13 @@ public class CeremonyOfChaosEvent extends AbstractEvent<CeremonyOfChaosMember>
 				targetMember.setDefeated(true);
 				
 				// Delete target player
-				//@formatter:off
-				getMembers().values().stream()
-					.filter(member -> member.getObjectId() != targetPlayer.getObjectId())
-					.map(CeremonyOfChaosMember::getPlayer)
-					.forEach(deleteObject::sendTo);
-				//@formatter:on
+				for (CeremonyOfChaosMember member : getMembers().values())
+				{
+					if (member.getObjectId() != targetPlayer.getObjectId())
+					{
+						deleteObject.sendTo(member.getPlayer());
+					}
+				}
 				
 				// Make the target observer
 				targetPlayer.setObserving(true);

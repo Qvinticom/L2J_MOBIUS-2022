@@ -64,7 +64,14 @@ public class SayuneRequest extends AbstractRequest
 		}
 		else if (_isSelecting)
 		{
-			return _possibleEntries.stream().filter(loc -> loc.getId() == pos).findAny().orElse(null);
+			for (SayuneEntry entry : _possibleEntries)
+			{
+				if (entry.getId() == pos)
+				{
+					return entry;
+				}
+			}
+			return null;
 		}
 		return _possibleEntries.removeFirst();
 	}

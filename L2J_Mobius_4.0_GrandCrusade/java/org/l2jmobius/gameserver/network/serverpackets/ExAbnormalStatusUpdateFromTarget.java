@@ -16,9 +16,8 @@
  */
 package org.l2jmobius.gameserver.network.serverpackets;
 
+import java.util.ArrayList;
 import java.util.List;
-import java.util.Objects;
-import java.util.stream.Collectors;
 
 import org.l2jmobius.commons.network.PacketWriter;
 import org.l2jmobius.gameserver.model.actor.Creature;
@@ -28,19 +27,18 @@ import org.l2jmobius.gameserver.network.OutgoingPackets;
 public class ExAbnormalStatusUpdateFromTarget implements IClientOutgoingPacket
 {
 	private final Creature _creature;
-	private final List<BuffInfo> _effects;
+	private final List<BuffInfo> _effects = new ArrayList<>();
 	
 	public ExAbnormalStatusUpdateFromTarget(Creature creature)
 	{
-		//@formatter:off
 		_creature = creature;
-		_effects = creature.getEffectList().getEffects()
-					.stream()
-					.filter(Objects::nonNull)
-					.filter(BuffInfo::isInUse)
-					.filter(b -> !b.getSkill().isToggle())
-					.collect(Collectors.toList());
-		//@formatter:on
+		for (BuffInfo info : creature.getEffectList().getEffects())
+		{
+			if ((info != null) && info.isInUse() && !info.getSkill().isToggle())
+			{
+				_effects.add(info);
+			}
+		}
 	}
 	
 	@Override

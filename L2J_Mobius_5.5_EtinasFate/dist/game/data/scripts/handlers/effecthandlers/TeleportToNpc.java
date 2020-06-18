@@ -20,6 +20,8 @@ import org.l2jmobius.gameserver.ai.CtrlIntention;
 import org.l2jmobius.gameserver.model.Party;
 import org.l2jmobius.gameserver.model.StatSet;
 import org.l2jmobius.gameserver.model.actor.Creature;
+import org.l2jmobius.gameserver.model.actor.Npc;
+import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
 import org.l2jmobius.gameserver.model.effects.AbstractEffect;
 import org.l2jmobius.gameserver.model.effects.EffectType;
 import org.l2jmobius.gameserver.model.interfaces.ILocational;
@@ -59,13 +61,24 @@ public class TeleportToNpc extends AbstractEffect
 	@Override
 	public void instant(Creature effector, Creature effected, Skill skill, ItemInstance item)
 	{
-		final ILocational teleLocation = effector.getSummonedNpcs().stream().filter(npc -> npc.getId() == _npcId).findAny().orElse(null);
+		ILocational teleLocation = null;
+		for (Npc npc : effector.getSummonedNpcs())
+		{
+			if (npc.getId() == _npcId)
+			{
+				teleLocation = npc;
+			}
+		}
+		
 		if (teleLocation != null)
 		{
 			final Party party = effected.getParty();
 			if (_party && (party != null))
 			{
-				party.getMembers().forEach(p -> teleport(p, teleLocation));
+				for (PlayerInstance member : party.getMembers())
+				{
+					teleport(member, teleLocation);
+				}
 			}
 			else
 			{

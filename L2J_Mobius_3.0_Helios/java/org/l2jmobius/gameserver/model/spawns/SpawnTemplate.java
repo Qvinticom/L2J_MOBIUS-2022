@@ -22,7 +22,6 @@ import java.util.Collections;
 import java.util.List;
 import java.util.function.Consumer;
 import java.util.function.Predicate;
-import java.util.stream.Collectors;
 
 import org.l2jmobius.gameserver.instancemanager.QuestManager;
 import org.l2jmobius.gameserver.model.StatSet;
@@ -124,7 +123,15 @@ public class SpawnTemplate implements Cloneable, ITerritorized, IParameterized<S
 	
 	public List<SpawnGroup> getGroupsByName(String name)
 	{
-		return _groups.stream().filter(group -> String.valueOf(group.getName()).equalsIgnoreCase(name)).collect(Collectors.toList());
+		final List<SpawnGroup> result = new ArrayList<>();
+		for (SpawnGroup group : _groups)
+		{
+			if (String.valueOf(group.getName()).equalsIgnoreCase(name))
+			{
+				result.add(group);
+			}
+		}
+		return result;
 	}
 	
 	@Override
@@ -153,7 +160,13 @@ public class SpawnTemplate implements Cloneable, ITerritorized, IParameterized<S
 	
 	public void spawn(Predicate<SpawnGroup> groupFilter, Instance instance)
 	{
-		_groups.stream().filter(groupFilter).forEach(group -> group.spawnAll(instance));
+		for (SpawnGroup group : _groups)
+		{
+			if (groupFilter.test(group))
+			{
+				group.spawnAll(instance);
+			}
+		}
 	}
 	
 	public void spawnAll()
@@ -178,7 +191,13 @@ public class SpawnTemplate implements Cloneable, ITerritorized, IParameterized<S
 	
 	public void despawn(Predicate<SpawnGroup> groupFilter)
 	{
-		_groups.stream().filter(groupFilter).forEach(SpawnGroup::despawnAll);
+		for (SpawnGroup group : _groups)
+		{
+			if (groupFilter.test(group))
+			{
+				group.despawnAll();
+			}
+		}
 		notifyEvent(script -> script.onSpawnDeactivate(this));
 	}
 	

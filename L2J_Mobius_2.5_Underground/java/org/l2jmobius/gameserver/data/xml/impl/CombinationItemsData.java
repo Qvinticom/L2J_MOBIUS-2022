@@ -20,7 +20,6 @@ import java.io.File;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.logging.Logger;
-import java.util.stream.Collectors;
 
 import org.w3c.dom.Document;
 
@@ -86,17 +85,40 @@ public class CombinationItemsData implements IXmlReader
 	
 	public CombinationItem getItemsBySlots(int firstSlot, int secondSlot)
 	{
-		return _items.stream().filter(item -> (item.getItemOne() == firstSlot) && (item.getItemTwo() == secondSlot)).findFirst().orElse(null);
+		for (CombinationItem item : _items)
+		{
+			if ((item.getItemOne() == firstSlot) && (item.getItemTwo() == secondSlot))
+			{
+				return item;
+			}
+		}
+		return null;
 	}
 	
 	public List<CombinationItem> getItemsByFirstSlot(int id)
 	{
-		return _items.stream().filter(item -> item.getItemOne() == id).collect(Collectors.toList());
+		final List<CombinationItem> result = new ArrayList<>();
+		for (CombinationItem item : _items)
+		{
+			if (item.getItemOne() == id)
+			{
+				result.add(item);
+			}
+		}
+		return result;
 	}
 	
 	public List<CombinationItem> getItemsBySecondSlot(int id)
 	{
-		return _items.stream().filter(item -> item.getItemTwo() == id).collect(Collectors.toList());
+		final List<CombinationItem> result = new ArrayList<>();
+		for (CombinationItem item : _items)
+		{
+			if (item.getItemTwo() == id)
+			{
+				result.add(item);
+			}
+		}
+		return result;
 	}
 	
 	public static final CombinationItemsData getInstance()

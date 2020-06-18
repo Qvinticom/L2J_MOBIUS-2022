@@ -22,7 +22,6 @@ import java.util.Collections;
 import java.util.List;
 import java.util.Map;
 import java.util.concurrent.ConcurrentHashMap;
-import java.util.stream.Collectors;
 
 import org.w3c.dom.Document;
 import org.w3c.dom.NamedNodeMap;
@@ -115,7 +114,18 @@ public class CastleData implements IXmlReader
 	
 	public List<CastleSpawnHolder> getSpawnsForSide(int castleId, CastleSide side)
 	{
-		return _spawns.getOrDefault(castleId, Collections.emptyList()).stream().filter(s -> s.getSide() == side).collect(Collectors.toList());
+		final List<CastleSpawnHolder> result = new ArrayList<>();
+		if (_spawns.containsKey(castleId))
+		{
+			for (CastleSpawnHolder spawn : _spawns.get(castleId))
+			{
+				if (spawn.getSide() == side)
+				{
+					result.add(spawn);
+				}
+			}
+		}
+		return result;
 	}
 	
 	public List<SiegeGuardHolder> getSiegeGuardsForCastle(int castleId)

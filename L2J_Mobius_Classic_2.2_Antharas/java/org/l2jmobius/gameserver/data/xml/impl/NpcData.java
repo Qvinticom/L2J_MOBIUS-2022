@@ -30,7 +30,6 @@ import java.util.Set;
 import java.util.concurrent.ConcurrentHashMap;
 import java.util.function.Predicate;
 import java.util.logging.Logger;
-import java.util.stream.Collectors;
 
 import org.w3c.dom.Document;
 import org.w3c.dom.NamedNodeMap;
@@ -739,11 +738,15 @@ public class NpcData implements IXmlReader
 	 */
 	public List<NpcTemplate> getTemplates(Predicate<NpcTemplate> filter)
 	{
-		//@formatter:off
-			return _npcs.values().stream()
-			.filter(filter)
-			.collect(Collectors.toList());
-		//@formatter:on
+		final List<NpcTemplate> result = new ArrayList<>();
+		for (NpcTemplate npcTemplate : _npcs.values())
+		{
+			if (filter.test(npcTemplate))
+			{
+				result.add(npcTemplate);
+			}
+		}
+		return result;
 	}
 	
 	/**

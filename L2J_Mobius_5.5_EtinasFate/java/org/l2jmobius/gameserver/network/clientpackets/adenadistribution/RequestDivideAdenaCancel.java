@@ -16,8 +16,6 @@
  */
 package org.l2jmobius.gameserver.network.clientpackets.adenadistribution;
 
-import java.util.Objects;
-
 import org.l2jmobius.commons.network.PacketReader;
 import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
 import org.l2jmobius.gameserver.model.actor.request.AdenaDistributionRequest;
@@ -52,12 +50,15 @@ public class RequestDivideAdenaCancel implements IClientIncomingPacket
 		if (_cancel)
 		{
 			final AdenaDistributionRequest request = player.getRequest(AdenaDistributionRequest.class);
-			request.getPlayers().stream().filter(Objects::nonNull).forEach(p ->
+			for (PlayerInstance p : request.getPlayers())
 			{
-				p.sendPacket(SystemMessageId.ADENA_DISTRIBUTION_HAS_BEEN_CANCELLED);
-				p.sendPacket(ExDivideAdenaCancel.STATIC_PACKET);
-				p.removeRequest(AdenaDistributionRequest.class);
-			});
+				if (p != null)
+				{
+					p.sendPacket(SystemMessageId.ADENA_DISTRIBUTION_HAS_BEEN_CANCELLED);
+					p.sendPacket(ExDivideAdenaCancel.STATIC_PACKET);
+					p.removeRequest(AdenaDistributionRequest.class);
+				}
+			}
 		}
 	}
 }

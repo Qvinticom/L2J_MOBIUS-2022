@@ -332,7 +332,13 @@ public class Party extends AbstractPlayerGroup
 		msg.addString(player.getName());
 		broadcastPacket(msg);
 		
-		_members.stream().filter(member -> member != player).forEach(member -> member.sendPacket(new PartySmallWindowAdd(player, this)));
+		for (PlayerInstance member : _members)
+		{
+			if (member != player)
+			{
+				member.sendPacket(new PartySmallWindowAdd(player, this));
+			}
+		}
 		
 		// send the position of all party members to the new party member
 		// player.sendPacket(new PartyMemberPosition(this));
@@ -855,10 +861,13 @@ public class Party extends AbstractPlayerGroup
 				// The servitor penalty
 				float penalty = 1;
 				
-				final Summon summon = member.getServitors().values().stream().filter(s -> ((ServitorInstance) s).getExpMultiplier() > 1).findFirst().orElse(null);
-				if (summon != null)
+				for (Summon summon : member.getServitors().values())
 				{
-					penalty = ((ServitorInstance) summon).getExpMultiplier();
+					if (((ServitorInstance) summon).getExpMultiplier() > 1)
+					{
+						penalty = ((ServitorInstance) summon).getExpMultiplier();
+						break;
+					}
 				}
 				
 				final double sqLevel = member.getLevel() * member.getLevel();

@@ -16,8 +16,6 @@
  */
 package org.l2jmobius.gameserver.network.clientpackets;
 
-import java.util.Objects;
-
 import org.l2jmobius.Config;
 import org.l2jmobius.commons.network.PacketReader;
 import org.l2jmobius.gameserver.data.sql.impl.ClanTable;
@@ -132,7 +130,19 @@ public class RequestStartPledgeWar implements IClientIncomingPacket
 		final ClanWar newClanWar = new ClanWar(clanDeclaringWar, clanDeclaredWar);
 		ClanTable.getInstance().storeClanWars(newClanWar);
 		
-		clanDeclaringWar.getMembers().stream().filter(Objects::nonNull).filter(ClanMember::isOnline).forEach(p -> p.getPlayerInstance().broadcastUserInfo(UserInfoType.CLAN));
-		clanDeclaredWar.getMembers().stream().filter(Objects::nonNull).filter(ClanMember::isOnline).forEach(p -> p.getPlayerInstance().broadcastUserInfo(UserInfoType.CLAN));
+		for (ClanMember member : clanDeclaringWar.getMembers())
+		{
+			if ((member != null) && member.isOnline())
+			{
+				member.getPlayerInstance().broadcastUserInfo(UserInfoType.CLAN);
+			}
+		}
+		for (ClanMember member : clanDeclaredWar.getMembers())
+		{
+			if ((member != null) && member.isOnline())
+			{
+				member.getPlayerInstance().broadcastUserInfo(UserInfoType.CLAN);
+			}
+		}
 	}
 }

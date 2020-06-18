@@ -25,13 +25,11 @@ import java.util.Collection;
 import java.util.Collections;
 import java.util.Iterator;
 import java.util.List;
-import java.util.Objects;
 import java.util.Set;
 import java.util.concurrent.ConcurrentHashMap;
 import java.util.concurrent.ScheduledFuture;
 import java.util.logging.Level;
 import java.util.logging.Logger;
-import java.util.stream.Collectors;
 
 import org.l2jmobius.Config;
 import org.l2jmobius.commons.concurrent.ThreadPool;
@@ -790,14 +788,22 @@ public class Siege implements Siegable
 	@Override
 	public List<PlayerInstance> getAttackersInZone()
 	{
-		//@formatter:off
-		return getAttackerClans().stream()
-			.map(siegeclan -> ClanTable.getInstance().getClan(siegeclan.getClanId()))
-			.filter(Objects::nonNull)
-			.flatMap(clan -> clan.getOnlineMembers(0).stream())
-			.filter(PlayerInstance::isInSiege)
-			.collect(Collectors.toList());
-		//@formatter:on
+		final List<PlayerInstance> result = new ArrayList<>();
+		for (SiegeClan siegeclan : getAttackerClans())
+		{
+			final Clan clan = ClanTable.getInstance().getClan(siegeclan.getClanId());
+			if (clan != null)
+			{
+				for (PlayerInstance member : clan.getOnlineMembers(0))
+				{
+					if (member.isInSiege())
+					{
+						result.add(member);
+					}
+				}
+			}
+		}
+		return result;
 	}
 	
 	/**
@@ -813,15 +819,25 @@ public class Siege implements Siegable
 	 */
 	public List<PlayerInstance> getOwnersInZone()
 	{
-		//@formatter:off
-		return getDefenderClans().stream()
-			.filter(siegeclan -> siegeclan.getClanId() == _castle.getOwnerId())
-			.map(siegeclan -> ClanTable.getInstance().getClan(siegeclan.getClanId()))
-			.filter(Objects::nonNull)
-			.flatMap(clan -> clan.getOnlineMembers(0).stream())
-			.filter(PlayerInstance::isInSiege)
-			.collect(Collectors.toList());
-		//@formatter:on
+		final List<PlayerInstance> result = new ArrayList<>();
+		for (SiegeClan siegeclan : getDefenderClans())
+		{
+			if (siegeclan.getClanId() == _castle.getOwnerId())
+			{
+				final Clan clan = ClanTable.getInstance().getClan(siegeclan.getClanId());
+				if (clan != null)
+				{
+					for (PlayerInstance member : clan.getOnlineMembers(0))
+					{
+						if (member.isInSiege())
+						{
+							result.add(member);
+						}
+					}
+				}
+			}
+		}
+		return result;
 	}
 	
 	/**
@@ -829,7 +845,15 @@ public class Siege implements Siegable
 	 */
 	public List<PlayerInstance> getSpectatorsInZone()
 	{
-		return _castle.getZone().getPlayersInside().stream().filter(p -> !p.isInSiege()).collect(Collectors.toList());
+		final List<PlayerInstance> result = new ArrayList<>();
+		for (PlayerInstance player : _castle.getZone().getPlayersInside())
+		{
+			if (!player.isInSiege())
+			{
+				result.add(player);
+			}
+		}
+		return result;
 	}
 	
 	/**

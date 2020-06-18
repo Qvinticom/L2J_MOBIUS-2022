@@ -379,7 +379,14 @@ public class SellBuffsManager implements IXmlReader
 	
 	public boolean isInSellList(PlayerInstance player, Skill skill)
 	{
-		return player.getSellingBuffs().stream().filter(h -> (h.getSkillId() == skill.getId())).findFirst().orElse(null) != null;
+		for (SellBuffHolder holder : player.getSellingBuffs())
+		{
+			if (holder.getSkillId() == skill.getId())
+			{
+				return true;
+			}
+		}
+		return false;
 	}
 	
 	public boolean canStartSellBuffs(PlayerInstance player)

@@ -17,10 +17,10 @@
 package org.l2jmobius.gameserver.datatables.xml;
 
 import java.io.File;
+import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
-import java.util.stream.Collectors;
 
 import org.w3c.dom.Document;
 import org.w3c.dom.NamedNodeMap;
@@ -91,7 +91,15 @@ public class HennaData implements IXmlReader
 	 */
 	public List<Henna> getAvailableHennasFor(PlayerInstance player)
 	{
-		return _hennas.values().stream().filter(h -> h.canBeUsedBy(player)).collect(Collectors.toList());
+		final List<Henna> result = new ArrayList<>();
+		for (Henna henna : _hennas.values())
+		{
+			if (henna.canBeUsedBy(player))
+			{
+				result.add(henna);
+			}
+		}
+		return result;
 	}
 	
 	public static HennaData getInstance()

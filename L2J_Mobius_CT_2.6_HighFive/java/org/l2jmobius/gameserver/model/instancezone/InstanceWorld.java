@@ -16,11 +16,11 @@
  */
 package org.l2jmobius.gameserver.model.instancezone;
 
+import java.util.ArrayList;
 import java.util.Collection;
 import java.util.List;
 import java.util.Set;
 import java.util.concurrent.ConcurrentHashMap;
-import java.util.stream.Collectors;
 
 import org.l2jmobius.commons.util.CommonUtil;
 import org.l2jmobius.gameserver.model.StatSet;
@@ -169,7 +169,15 @@ public class InstanceWorld
 	 */
 	public List<Npc> getAliveNpcs()
 	{
-		return _instance.getNpcs().stream().filter(n -> n.getCurrentHp() > 0).collect(Collectors.toList());
+		final List<Npc> result = new ArrayList<>();
+		for (Npc npc : _instance.getNpcs())
+		{
+			if (npc.getCurrentHp() > 0)
+			{
+				result.add(npc);
+			}
+		}
+		return result;
 	}
 	
 	/**
@@ -179,7 +187,15 @@ public class InstanceWorld
 	 */
 	public List<Npc> getNpcs(int... id)
 	{
-		return _instance.getNpcs().stream().filter(n -> CommonUtil.contains(id, n.getId())).collect(Collectors.toList());
+		final List<Npc> result = new ArrayList<>();
+		for (Npc npc : _instance.getNpcs())
+		{
+			if (CommonUtil.contains(id, npc.getId()))
+			{
+				result.add(npc);
+			}
+		}
+		return result;
 	}
 	
 	/**
@@ -190,9 +206,18 @@ public class InstanceWorld
 	 * @return list of filtered NPCs from instance
 	 */
 	@SafeVarargs
+	@SuppressWarnings("unchecked")
 	public final <T extends Creature> List<T> getNpcs(Class<T> clazz, int... ids)
 	{
-		return _instance.getNpcs().stream().filter(n -> (ids.length == 0) || CommonUtil.contains(ids, n.getId())).filter(clazz::isInstance).map(clazz::cast).collect(Collectors.toList());
+		final List<T> result = new ArrayList<>();
+		for (Npc npc : _instance.getNpcs())
+		{
+			if (((ids.length == 0) || CommonUtil.contains(ids, npc.getId())) && clazz.isInstance(npc))
+			{
+				result.add((T) npc);
+			}
+		}
+		return result;
 	}
 	
 	/**
@@ -203,9 +228,18 @@ public class InstanceWorld
 	 * @return list of filtered NPCs from instance
 	 */
 	@SafeVarargs
+	@SuppressWarnings("unchecked")
 	public final <T extends Creature> List<T> getAliveNpcs(Class<T> clazz, int... ids)
 	{
-		return _instance.getNpcs().stream().filter(n -> ((ids.length == 0) || CommonUtil.contains(ids, n.getId())) && (n.getCurrentHp() > 0)).filter(clazz::isInstance).map(clazz::cast).collect(Collectors.toList());
+		final List<T> result = new ArrayList<>();
+		for (Npc npc : _instance.getNpcs())
+		{
+			if ((((ids.length == 0) || CommonUtil.contains(ids, npc.getId())) && (npc.getCurrentHp() > 0)) && clazz.isInstance(npc))
+			{
+				result.add((T) npc);
+			}
+		}
+		return result;
 	}
 	
 	/**
@@ -215,7 +249,15 @@ public class InstanceWorld
 	 */
 	public List<Npc> getAliveNpcs(int... id)
 	{
-		return _instance.getNpcs().stream().filter(n -> (n.getCurrentHp() > 0) && CommonUtil.contains(id, n.getId())).collect(Collectors.toList());
+		final List<Npc> result = new ArrayList<>();
+		for (Npc npc : _instance.getNpcs())
+		{
+			if ((npc.getCurrentHp() > 0) && CommonUtil.contains(id, npc.getId()))
+			{
+				result.add(npc);
+			}
+		}
+		return result;
 	}
 	
 	/**
@@ -225,7 +267,14 @@ public class InstanceWorld
 	 */
 	public Npc getNpc(int id)
 	{
-		return _instance.getNpcs().stream().filter(n -> n.getId() == id).findFirst().orElse(null);
+		for (Npc npc : _instance.getNpcs())
+		{
+			if (npc.getId() == id)
+			{
+				return npc;
+			}
+		}
+		return null;
 	}
 	
 	/**

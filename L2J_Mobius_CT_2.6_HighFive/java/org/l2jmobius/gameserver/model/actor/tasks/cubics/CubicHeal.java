@@ -57,7 +57,15 @@ public class CubicHeal implements Runnable
 		
 		try
 		{
-			final Skill skill = _cubic.getSkills().stream().filter(s -> s.getId() == CubicInstance.SKILL_CUBIC_HEAL).findFirst().orElse(null);
+			Skill skill = null;
+			for (Skill s : _cubic.getSkills())
+			{
+				if (s.getId() == CubicInstance.SKILL_CUBIC_HEAL)
+				{
+					skill = s;
+					break;
+				}
+			}
 			if (skill == null)
 			{
 				return;

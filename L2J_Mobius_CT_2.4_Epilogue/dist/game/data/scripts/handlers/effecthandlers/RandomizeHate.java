@@ -16,8 +16,8 @@
  */
 package handlers.effecthandlers;
 
+import java.util.ArrayList;
 import java.util.List;
-import java.util.stream.Collectors;
 
 import org.l2jmobius.commons.util.Rnd;
 import org.l2jmobius.gameserver.model.StatSet;
@@ -63,7 +63,14 @@ public class RandomizeHate extends AbstractEffect
 		}
 		
 		final Attackable effectedMob = (Attackable) info.getEffected();
-		final List<Creature> aggroList = effectedMob.getAggroList().keySet().stream().filter(c -> c != info.getEffector()).collect(Collectors.toList());
+		final List<Creature> aggroList = new ArrayList<>();
+		for (Creature creature : effectedMob.getAggroList().keySet())
+		{
+			if (creature != info.getEffector())
+			{
+				aggroList.add(creature);
+			}
+		}
 		if (aggroList.isEmpty())
 		{
 			return;

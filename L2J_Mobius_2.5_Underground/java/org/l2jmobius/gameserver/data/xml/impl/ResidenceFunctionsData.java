@@ -18,7 +18,6 @@ package org.l2jmobius.gameserver.data.xml.impl;
 
 import java.io.File;
 import java.util.ArrayList;
-import java.util.Collections;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
@@ -89,7 +88,17 @@ public class ResidenceFunctionsData implements IXmlReader
 	 */
 	public ResidenceFunctionTemplate getFunction(int id, int level)
 	{
-		return _functions.getOrDefault(id, Collections.emptyList()).stream().filter(template -> template.getLevel() == level).findAny().orElse(null);
+		if (_functions.containsKey(id))
+		{
+			for (ResidenceFunctionTemplate template : _functions.get(id))
+			{
+				if (template.getLevel() == level)
+				{
+					return template;
+				}
+			}
+		}
+		return null;
 	}
 	
 	/**

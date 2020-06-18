@@ -24,7 +24,6 @@ import java.util.Collection;
 import java.util.Collections;
 import java.util.Map;
 import java.util.Map.Entry;
-import java.util.Objects;
 import java.util.concurrent.ConcurrentHashMap;
 import java.util.logging.Level;
 import java.util.logging.Logger;
@@ -34,7 +33,6 @@ import org.l2jmobius.gameserver.model.Mentee;
 import org.l2jmobius.gameserver.model.World;
 import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
 import org.l2jmobius.gameserver.model.skills.BuffInfo;
-import org.l2jmobius.gameserver.model.skills.Skill;
 import org.l2jmobius.gameserver.model.variables.PlayerVariables;
 
 /**
@@ -134,13 +132,13 @@ public class MentorManager
 			return;
 		}
 		
-		//@formatter:off
-		player.getEffectList().getEffects()
-			.stream()
-			.map(BuffInfo::getSkill)
-			.filter(Skill::isMentoring)
-			.forEach(player::stopSkillEffects);
-		//@formatter:on
+		for (BuffInfo info : player.getEffectList().getEffects())
+		{
+			if (info.getSkill().isMentoring())
+			{
+				player.stopSkillEffects(info.getSkill());
+			}
+		}
 	}
 	
 	public void setPenalty(int mentorId, long penalty)
@@ -250,7 +248,14 @@ public class MentorManager
 	
 	public boolean hasOnlineMentees(int menteorId)
 	{
-		return getMentees(menteorId).stream().filter(Objects::nonNull).filter(Mentee::isOnline).count() > 0;
+		for (Mentee mentee : getMentees(menteorId))
+		{
+			if ((mentee != null) && mentee.isOnline())
+			{
+				return true;
+			}
+		}
+		return false;
 	}
 	
 	public static MentorManager getInstance()

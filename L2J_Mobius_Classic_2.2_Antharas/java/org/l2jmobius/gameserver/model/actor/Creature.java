@@ -19,6 +19,7 @@ package org.l2jmobius.gameserver.model.actor;
 import static org.l2jmobius.gameserver.ai.CtrlIntention.AI_INTENTION_ACTIVE;
 
 import java.lang.ref.WeakReference;
+import java.util.ArrayList;
 import java.util.Collection;
 import java.util.Collections;
 import java.util.EnumSet;
@@ -37,7 +38,6 @@ import java.util.concurrent.atomic.AtomicInteger;
 import java.util.concurrent.locks.StampedLock;
 import java.util.function.Predicate;
 import java.util.logging.Logger;
-import java.util.stream.Collectors;
 
 import org.l2jmobius.Config;
 import org.l2jmobius.commons.concurrent.ThreadPool;
@@ -5093,7 +5093,16 @@ public abstract class Creature extends WorldObject implements ISkillsHolder, IDe
 		{
 			filter = filter.and(additionalFilter);
 		}
-		return _skillCasters.values().stream().filter(filter).collect(Collectors.toList());
+		
+		final List<SkillCaster> result = new ArrayList<>();
+		for (SkillCaster skillCaster : _skillCasters.values())
+		{
+			if (filter.test(skillCaster))
+			{
+				result.add(skillCaster);
+			}
+		}
+		return result;
 	}
 	
 	@SafeVarargs
@@ -5104,7 +5113,15 @@ public abstract class Creature extends WorldObject implements ISkillsHolder, IDe
 		{
 			filter = filter.and(additionalFilter);
 		}
-		return _skillCasters.values().stream().filter(filter).findAny().orElse(null);
+		
+		for (SkillCaster skillCaster : _skillCasters.values())
+		{
+			if (filter.test(skillCaster))
+			{
+				return skillCaster;
+			}
+		}
+		return null;
 	}
 	
 	/**

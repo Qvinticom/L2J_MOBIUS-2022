@@ -18,11 +18,11 @@ package org.l2jmobius.gameserver.model.actor.transform;
 
 import java.util.ArrayList;
 import java.util.List;
-import java.util.Objects;
 
 import org.l2jmobius.gameserver.data.xml.impl.SkillTreeData;
 import org.l2jmobius.gameserver.enums.InventoryBlockType;
 import org.l2jmobius.gameserver.enums.Sex;
+import org.l2jmobius.gameserver.model.SkillLearn;
 import org.l2jmobius.gameserver.model.StatSet;
 import org.l2jmobius.gameserver.model.actor.Creature;
 import org.l2jmobius.gameserver.model.actor.Npc;
@@ -35,6 +35,7 @@ import org.l2jmobius.gameserver.model.holders.SkillHolder;
 import org.l2jmobius.gameserver.model.interfaces.IIdentifiable;
 import org.l2jmobius.gameserver.model.items.type.WeaponType;
 import org.l2jmobius.gameserver.model.skills.AbnormalType;
+import org.l2jmobius.gameserver.model.skills.Skill;
 import org.l2jmobius.gameserver.model.stats.Stat;
 import org.l2jmobius.gameserver.network.serverpackets.ExBasicActionList;
 import org.l2jmobius.gameserver.network.serverpackets.ExUserInfoEquipSlot;
@@ -259,27 +260,30 @@ public class Transform implements IIdentifiable
 				
 				if (addSkills)
 				{
-					//@formatter:off
 					// Add common skills.
-					template.getSkills()
-						.stream()
-						.map(SkillHolder::getSkill)
-						.forEach(player::addTransformSkill);
+					for (SkillHolder h : template.getSkills())
+					{
+						player.addTransformSkill(h.getSkill());
+					}
 					
 					// Add skills depending on level.
-					template.getAdditionalSkills()
-						.stream()
-						.filter(h -> player.getLevel() >= h.getMinLevel())
-						.map(SkillHolder::getSkill)
-						.forEach(player::addTransformSkill);
+					for (AdditionalSkillHolder h : template.getAdditionalSkills())
+					{
+						if (player.getLevel() >= h.getMinLevel())
+						{
+							player.addTransformSkill(h.getSkill());
+						}
+					}
 					
 					// Add collection skills.
-					SkillTreeData.getInstance().getCollectSkillTree().values()
-						.stream()
-						.map(s -> player.getKnownSkill(s.getSkillId()))
-						.filter(Objects::nonNull)
-						.forEach(player::addTransformSkill);
-					//@formatter:on
+					for (SkillLearn s : SkillTreeData.getInstance().getCollectSkillTree().values())
+					{
+						final Skill skill = player.getKnownSkill(s.getSkillId());
+						if (skill != null)
+						{
+							player.addTransformSkill(skill);
+						}
+					}
 				}
 				
 				// Set inventory blocks if needed.

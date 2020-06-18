@@ -137,7 +137,14 @@ public class ClanTable
 	
 	public Clan getClanByName(String clanName)
 	{
-		return _clans.values().stream().filter(c -> c.getName().equalsIgnoreCase(clanName)).findFirst().orElse(null);
+		for (Clan clan : _clans.values())
+		{
+			if (clan.getName().equalsIgnoreCase(clanName))
+			{
+				return clan;
+			}
+		}
+		return null;
 	}
 	
 	/**

@@ -16,12 +16,12 @@
  */
 package org.l2jmobius.gameserver.model;
 
+import java.util.ArrayList;
 import java.util.Collection;
 import java.util.Collections;
 import java.util.EnumSet;
 import java.util.HashSet;
 import java.util.List;
-import java.util.Objects;
 import java.util.Optional;
 import java.util.Queue;
 import java.util.Set;
@@ -30,8 +30,6 @@ import java.util.concurrent.ConcurrentLinkedQueue;
 import java.util.concurrent.atomic.AtomicInteger;
 import java.util.function.Predicate;
 import java.util.logging.Logger;
-import java.util.stream.Collectors;
-import java.util.stream.Stream;
 
 import org.l2jmobius.Config;
 import org.l2jmobius.gameserver.model.actor.Creature;
@@ -137,7 +135,15 @@ public class EffectList
 	 */
 	public List<BuffInfo> getBuffs()
 	{
-		return _actives.stream().filter(b -> b.getSkill().getBuffType().isBuff()).collect(Collectors.toList());
+		final List<BuffInfo> result = new ArrayList<>();
+		for (BuffInfo info : _actives)
+		{
+			if (info.getSkill().getBuffType().isBuff())
+			{
+				result.add(info);
+			}
+		}
+		return result;
 	}
 	
 	/**
@@ -146,7 +152,15 @@ public class EffectList
 	 */
 	public List<BuffInfo> getDances()
 	{
-		return _actives.stream().filter(b -> b.getSkill().getBuffType().isDance()).collect(Collectors.toList());
+		final List<BuffInfo> result = new ArrayList<>();
+		for (BuffInfo info : _actives)
+		{
+			if (info.getSkill().getBuffType().isDance())
+			{
+				result.add(info);
+			}
+		}
+		return result;
 	}
 	
 	/**
@@ -155,7 +169,15 @@ public class EffectList
 	 */
 	public List<BuffInfo> getDebuffs()
 	{
-		return _actives.stream().filter(b -> b.getSkill().isDebuff()).collect(Collectors.toList());
+		final List<BuffInfo> result = new ArrayList<>();
+		for (BuffInfo info : _actives)
+		{
+			if (info.getSkill().getBuffType().isDebuff())
+			{
+				result.add(info);
+			}
+		}
+		return result;
 	}
 	
 	/**
@@ -165,7 +187,21 @@ public class EffectList
 	 */
 	public boolean isAffectedBySkill(int skillId)
 	{
-		return (_actives.stream().anyMatch(i -> i.getSkill().getId() == skillId)) || (_passives.stream().anyMatch(i -> i.getSkill().getId() == skillId));
+		for (BuffInfo info : _actives)
+		{
+			if (info.getSkill().getId() == skillId)
+			{
+				return true;
+			}
+		}
+		for (BuffInfo info : _passives)
+		{
+			if (info.getSkill().getId() == skillId)
+			{
+				return true;
+			}
+		}
+		return false;
 	}
 	
 	/**
@@ -175,7 +211,21 @@ public class EffectList
 	 */
 	public BuffInfo getBuffInfoBySkillId(int skillId)
 	{
-		return Stream.concat(_actives.stream(), _passives.stream()).filter(b -> b.getSkill().getId() == skillId).findFirst().orElse(null);
+		for (BuffInfo info : _actives)
+		{
+			if (info.getSkill().getId() == skillId)
+			{
+				return info;
+			}
+		}
+		for (BuffInfo info : _passives)
+		{
+			if (info.getSkill().getId() == skillId)
+			{
+				return info;
+			}
+		}
+		return null;
 	}
 	
 	/**
@@ -195,7 +245,14 @@ public class EffectList
 	 */
 	public boolean hasAbnormalType(Collection<AbnormalType> types)
 	{
-		return _stackedEffects.stream().anyMatch(types::contains);
+		for (AbnormalType abnormalType : _stackedEffects)
+		{
+			if (types.contains(abnormalType))
+			{
+				return true;
+			}
+		}
+		return false;
 	}
 	
 	/**
@@ -205,7 +262,17 @@ public class EffectList
 	 */
 	public boolean hasAbnormalType(AbnormalType type, Predicate<BuffInfo> filter)
 	{
-		return hasAbnormalType(type) && _actives.stream().filter(i -> i.isAbnormalType(type)).anyMatch(filter);
+		if (hasAbnormalType(type))
+		{
+			for (BuffInfo info : _actives)
+			{
+				if (info.isAbnormalType(type) && filter.test(info))
+				{
+					return true;
+				}
+			}
+		}
+		return false;
 	}
 	
 	/**
@@ -216,7 +283,17 @@ public class EffectList
 	 */
 	public BuffInfo getFirstBuffInfoByAbnormalType(AbnormalType type)
 	{
-		return hasAbnormalType(type) ? _actives.stream().filter(i -> i.isAbnormalType(type)).findFirst().orElse(null) : null;
+		if (hasAbnormalType(type))
+		{
+			for (BuffInfo info : _actives)
+			{
+				if (info.isAbnormalType(type))
+				{
+					return info;
+				}
+			}
+		}
+		return null;
 	}
 	
 	/**
@@ -353,9 +430,18 @@ public class EffectList
 	 */
 	public void stopAllEffectsWithoutExclusions(boolean update, boolean broadcast)
 	{
-		_actives.stream().forEach(this::remove);
-		_passives.stream().forEach(this::remove);
-		_options.stream().forEach(this::remove);
+		for (BuffInfo info : _actives)
+		{
+			remove(info);
+		}
+		for (BuffInfo info : _passives)
+		{
+			remove(info);
+		}
+		for (BuffInfo info : _options)
+		{
+			remove(info);
+		}
 		
 		// Update stats, effect flags and icons.
 		if (update)
@@ -426,9 +512,26 @@ public class EffectList
 	 */
 	public void stopEffects(EffectFlag effectFlag)
 	{
-		if (isAffected(effectFlag))
+		if (isAffected(effectFlag) && !_actives.isEmpty())
 		{
-			stopEffects(info -> info.getEffects().stream().anyMatch(effect -> (effect != null) && ((effect.getEffectFlags() & effectFlag.getMask()) != 0)), true, true);
+			boolean update = false;
+			for (BuffInfo info : _actives)
+			{
+				for (AbstractEffect effect : info.getEffects())
+				{
+					if ((effect != null) && ((effect.getEffectFlags() & effectFlag.getMask()) != 0))
+					{
+						remove(info);
+						update = true;
+					}
+				}
+			}
+			
+			// Update stats, effect flags and icons.
+			if (update)
+			{
+				updateEffectList(true);
+			}
 		}
 	}
 	
@@ -507,7 +610,13 @@ public class EffectList
 	{
 		if (!_actives.isEmpty())
 		{
-			_actives.stream().filter(filter).forEach(this::remove);
+			for (BuffInfo info : _actives)
+			{
+				if (filter.test(info))
+				{
+					remove(info);
+				}
+			}
 			
 			// Update stats, effect flags and icons.
 			if (update)
@@ -923,11 +1032,14 @@ public class EffectList
 		}
 		
 		// Remove previous passives of this id.
-		_passives.stream().filter(Objects::nonNull).filter(b -> b.getSkill().getId() == skill.getId()).forEach(b ->
+		for (BuffInfo b : _passives)
 		{
-			b.setInUse(false);
-			_passives.remove(b);
-		});
+			if ((b != null) && (b.getSkill().getId() == skill.getId()))
+			{
+				b.setInUse(false);
+				_passives.remove(b);
+			}
+		}
 		
 		_passives.add(info);
 		
@@ -940,11 +1052,14 @@ public class EffectList
 		if (info.getOption() != null)
 		{
 			// Remove previous options of this id.
-			_options.stream().filter(Objects::nonNull).filter(b -> b.getOption().getId() == info.getOption().getId()).forEach(b ->
+			for (BuffInfo b : _options)
 			{
-				b.setInUse(false);
-				_options.remove(b);
-			});
+				if ((b != null) && (b.getOption().getId() == info.getOption().getId()))
+				{
+					b.setInUse(false);
+					_options.remove(b);
+				}
+			}
 			
 			_options.add(info);
 			
@@ -969,11 +1084,9 @@ public class EffectList
 			final Optional<ExOlympiadSpelledInfo> os = (player.isInOlympiadMode() && player.isOlympiadStart()) ? Optional.of(new ExOlympiadSpelledInfo(player)) : Optional.empty();
 			if (!_actives.isEmpty())
 			{
-				//@formatter:off
-				_actives.stream()
-					.filter(Objects::nonNull)
-					.filter(BuffInfo::isInUse)
-					.forEach(info ->
+				for (BuffInfo info : _actives)
+				{
+					if ((info != null) && info.isInUse())
 					{
 						if (info.getSkill().isHealingPotionSkill())
 						{
@@ -985,8 +1098,8 @@ public class EffectList
 							ps.filter(p -> !info.getSkill().isToggle()).ifPresent(p -> p.addSkill(info));
 							os.ifPresent(o -> o.addSkill(info));
 						}
-					});
-				//@formatter:on
+					}
+				}
 			}
 			
 			// Send icon update for player buff bar.
@@ -1015,14 +1128,13 @@ public class EffectList
 		
 		// Update effect icons for everyone targeting this owner.
 		final ExAbnormalStatusUpdateFromTarget upd = new ExAbnormalStatusUpdateFromTarget(_owner);
-		
-		// @formatter:off
-		_owner.getStatus().getStatusListener().stream()
-			.filter(Objects::nonNull)
-			.filter(WorldObject::isPlayer)
-			.map(Creature::getActingPlayer)
-			.forEach(upd::sendTo);
-		// @formatter:on
+		for (Creature creature : _owner.getStatus().getStatusListener())
+		{
+			if ((creature != null) && creature.isPlayer())
+			{
+				upd.sendTo(creature.getActingPlayer());
+			}
+		}
 		
 		if (_owner.isPlayer() && (_owner.getTarget() == _owner))
 		{

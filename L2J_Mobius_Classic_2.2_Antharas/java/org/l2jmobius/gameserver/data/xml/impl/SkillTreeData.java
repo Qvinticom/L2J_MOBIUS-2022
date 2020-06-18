@@ -31,7 +31,6 @@ import java.util.Map.Entry;
 import java.util.Set;
 import java.util.concurrent.ConcurrentHashMap;
 import java.util.logging.Logger;
-import java.util.stream.Collectors;
 
 import org.w3c.dom.Document;
 import org.w3c.dom.NamedNodeMap;
@@ -561,7 +560,12 @@ public class SkillTreeData implements IXmlReader
 	 */
 	public List<Skill> getNobleSkillTree()
 	{
-		return _nobleSkillTree.values().stream().map(entry -> SkillData.getInstance().getSkill(entry.getSkillId(), entry.getSkillLevel())).collect(Collectors.toList());
+		final List<Skill> result = new ArrayList<>();
+		for (SkillLearn skill : _nobleSkillTree.values())
+		{
+			result.add(SkillData.getInstance().getSkill(skill.getSkillId(), skill.getSkillLevel()));
+		}
+		return result;
 	}
 	
 	/**
@@ -570,7 +574,15 @@ public class SkillTreeData implements IXmlReader
 	 */
 	public List<Skill> getNobleSkillAutoGetTree()
 	{
-		return _nobleSkillTree.values().stream().filter(entry -> entry.isAutoGet()).map(entry -> SkillData.getInstance().getSkill(entry.getSkillId(), entry.getSkillLevel())).collect(Collectors.toList());
+		final List<Skill> result = new ArrayList<>();
+		for (SkillLearn skill : _nobleSkillTree.values())
+		{
+			if (skill.isAutoGet())
+			{
+				result.add(SkillData.getInstance().getSkill(skill.getSkillId(), skill.getSkillLevel()));
+			}
+		}
+		return result;
 	}
 	
 	/**
@@ -579,7 +591,12 @@ public class SkillTreeData implements IXmlReader
 	 */
 	public List<Skill> getHeroSkillTree()
 	{
-		return _heroSkillTree.values().stream().map(entry -> SkillData.getInstance().getSkill(entry.getSkillId(), entry.getSkillLevel())).collect(Collectors.toList());
+		final List<Skill> result = new ArrayList<>();
+		for (SkillLearn skill : _heroSkillTree.values())
+		{
+			result.add(SkillData.getInstance().getSkill(skill.getSkillId(), skill.getSkillLevel()));
+		}
+		return result;
 	}
 	
 	/**
@@ -588,7 +605,12 @@ public class SkillTreeData implements IXmlReader
 	 */
 	public List<Skill> getGMSkillTree()
 	{
-		return _gameMasterSkillTree.values().stream().map(entry -> SkillData.getInstance().getSkill(entry.getSkillId(), entry.getSkillLevel())).collect(Collectors.toList());
+		final List<Skill> result = new ArrayList<>();
+		for (SkillLearn skill : _gameMasterSkillTree.values())
+		{
+			result.add(SkillData.getInstance().getSkill(skill.getSkillId(), skill.getSkillLevel()));
+		}
+		return result;
 	}
 	
 	/**
@@ -597,7 +619,12 @@ public class SkillTreeData implements IXmlReader
 	 */
 	public List<Skill> getGMAuraSkillTree()
 	{
-		return _gameMasterAuraSkillTree.values().stream().map(entry -> SkillData.getInstance().getSkill(entry.getSkillId(), entry.getSkillLevel())).collect(Collectors.toList());
+		final List<Skill> result = new ArrayList<>();
+		for (SkillLearn skill : _gameMasterAuraSkillTree.values())
+		{
+			result.add(SkillData.getInstance().getSkill(skill.getSkillId(), skill.getSkillLevel()));
+		}
+		return result;
 	}
 	
 	/**

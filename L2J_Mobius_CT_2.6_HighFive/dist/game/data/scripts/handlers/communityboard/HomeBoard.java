@@ -213,7 +213,7 @@ public class HomeBoard implements IParseBoardHandler
 					{
 						continue;
 					}
-					targets.stream().filter(target -> !target.isSummon()).forEach(target ->
+					for (Creature target : targets)
 					{
 						skill.applyEffects(player, target);
 						if (Config.COMMUNITYBOARD_CAST_ANIMATIONS)
@@ -222,7 +222,7 @@ public class HomeBoard implements IParseBoardHandler
 							// not recommend broadcast
 							// player.broadcastPacket(new MagicSkillUse(player, target, skill.getId(), skill.getLevel(), skill.getHitTime(), skill.getReuseDelay()));
 						}
-					});
+					}
 				}
 			}
 			

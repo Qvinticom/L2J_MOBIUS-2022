@@ -81,7 +81,14 @@ public abstract class AbstractEventManager<T extends AbstractEvent<?>>extends Ab
 	
 	public EventScheduler getScheduler(String name)
 	{
-		return _schedulers.stream().filter(scheduler -> scheduler.getName().equalsIgnoreCase(name)).findFirst().orElse(null);
+		for (EventScheduler scheduler : _schedulers)
+		{
+			if (scheduler.getName().equalsIgnoreCase(name))
+			{
+				return scheduler;
+			}
+		}
+		return null;
 	}
 	
 	public void setSchedulers(Set<EventScheduler> schedulers)
@@ -134,11 +141,13 @@ public abstract class AbstractEventManager<T extends AbstractEvent<?>>extends Ab
 	
 	public void startConditionalSchedulers()
 	{
-		//@formatter:off
-		_conditionalSchedulers.stream()
-			.filter(IConditionalEventScheduler::test)
-			.forEach(IConditionalEventScheduler::run);
-		//@formatter:on
+		for (IConditionalEventScheduler scheduler : _conditionalSchedulers)
+		{
+			if (scheduler.test())
+			{
+				scheduler.run();
+			}
+		}
 	}
 	
 	/* ********************** */

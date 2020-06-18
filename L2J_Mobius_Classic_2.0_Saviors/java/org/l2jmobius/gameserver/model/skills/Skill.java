@@ -1710,12 +1710,15 @@ public class Skill implements IIdentifiable
 			return null;
 		}
 		
-		//@formatter:off
-		final int toggleSkillId = creature.getEffectList().getEffects().stream()
-		.filter(info -> info.getSkill().getToggleGroupId() == _attachToggleGroupId)
-		.mapToInt(info -> info.getSkill().getId())
-		.findAny().orElse(0);
-		//@formatter:on
+		int toggleSkillId = 0;
+		for (BuffInfo info : creature.getEffectList().getEffects())
+		{
+			if (info.getSkill().getToggleGroupId() == _attachToggleGroupId)
+			{
+				toggleSkillId = info.getSkill().getId();
+				break;
+			}
+		}
 		
 		// No active toggles with this toggle group ID found.
 		if (toggleSkillId == 0)
@@ -1723,7 +1726,15 @@ public class Skill implements IIdentifiable
 			return null;
 		}
 		
-		final AttachSkillHolder attachedSkill = _attachSkills.stream().filter(ash -> ash.getRequiredSkillId() == toggleSkillId).findAny().orElse(null);
+		AttachSkillHolder attachedSkill = null;
+		for (AttachSkillHolder ash : _attachSkills)
+		{
+			if (ash.getRequiredSkillId() == toggleSkillId)
+			{
+				attachedSkill = ash;
+				break;
+			}
+		}
 		
 		// No attached skills for this toggle found.
 		if (attachedSkill == null)

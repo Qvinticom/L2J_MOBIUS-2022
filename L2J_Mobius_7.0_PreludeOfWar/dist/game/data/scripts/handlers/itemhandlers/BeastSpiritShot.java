@@ -16,8 +16,8 @@
  */
 package handlers.itemhandlers;
 
+import java.util.ArrayList;
 import java.util.List;
-import java.util.stream.Collectors;
 
 import org.l2jmobius.gameserver.enums.ItemSkillType;
 import org.l2jmobius.gameserver.enums.ShotType;
@@ -60,7 +60,15 @@ public class BeastSpiritShot implements IItemHandler
 			return false;
 		}
 		
-		final List<Summon> aliveServitor = playable.getServitors().values().stream().filter(s -> !s.isDead()).collect(Collectors.toList());
+		final List<Summon> aliveServitor = new ArrayList<>();
+		for (Summon s : playable.getServitors().values())
+		{
+			if (!s.isDead())
+			{
+				aliveServitor.add(s);
+			}
+		}
+		
 		if ((pet == null) && aliveServitor.isEmpty())
 		{
 			activeOwner.sendPacket(SystemMessageId.SOULSHOTS_AND_SPIRITSHOTS_ARE_NOT_AVAILABLE_FOR_A_DEAD_PET_OR_SERVITOR_SAD_ISN_T_IT);

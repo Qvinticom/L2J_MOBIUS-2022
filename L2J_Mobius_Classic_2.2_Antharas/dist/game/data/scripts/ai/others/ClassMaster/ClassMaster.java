@@ -769,7 +769,15 @@ public class ClassMaster extends AbstractNpcAI implements IXmlReader
 		}
 		else
 		{
-			final ClassChangeData data = _classChangeData.stream().filter(ccd -> ccd.isInCategory(player)).findFirst().get();
+			ClassChangeData data = null;
+			for (ClassChangeData ccd : _classChangeData)
+			{
+				if (ccd.isInCategory(player))
+				{
+					data = ccd;
+					break;
+				}
+			}
 			if (data != null)
 			{
 				// Required items.
@@ -1066,11 +1074,35 @@ public class ClassMaster extends AbstractNpcAI implements IXmlReader
 	
 	private boolean checkIfClassChangeHasOptions(PlayerInstance player)
 	{
-		boolean showOptions = _classChangeData.stream().filter(ccd -> !ccd.getItemsRequired().isEmpty()).anyMatch(ccd -> ccd.isInCategory(player)); // Check if there are requirements
+		boolean showOptions = false;
+		
+		// Check if there are requirements
+		for (ClassChangeData ccd : _classChangeData)
+		{
+			if (!ccd.getItemsRequired().isEmpty() && ccd.isInCategory(player))
+			{
+				showOptions = true;
+				break;
+			}
+		}
+		
 		if (!showOptions)
 		{
-			showOptions = _classChangeData.stream().filter(ccd -> !ccd.getItemsRewarded().isEmpty()).filter(ccd -> ccd.isInCategory(player)).count() > 1; // Check if there is more than 1 reward to chose.
+			// Check if there is more than 1 reward to chose.
+			int count = 0;
+			for (ClassChangeData ccd : _classChangeData)
+			{
+				if (!ccd.getItemsRewarded().isEmpty() && ccd.isInCategory(player))
+				{
+					count++;
+				}
+			}
+			if (count > 1)
+			{
+				showOptions = true;
+			}
 		}
+		
 		return showOptions;
 	}
 	

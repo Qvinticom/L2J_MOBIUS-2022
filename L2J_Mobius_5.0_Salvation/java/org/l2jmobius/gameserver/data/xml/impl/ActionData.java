@@ -48,7 +48,15 @@ public class ActionData implements IXmlReader
 		_actionData.clear();
 		_actionSkillsData.clear();
 		parseDatapackFile("data/ActionData.xml");
-		_actionData.values().stream().filter(h -> h.getHandler().equals("PetSkillUse") || h.getHandler().equals("ServitorSkillUse")).forEach(h -> _actionSkillsData.put(h.getOptionId(), h.getId()));
+		
+		for (ActionDataHolder holder : _actionData.values())
+		{
+			if (holder.getHandler().equals("PetSkillUse") || holder.getHandler().equals("ServitorSkillUse"))
+			{
+				_actionSkillsData.put(holder.getOptionId(), holder.getId());
+			}
+		}
+		
 		LOGGER.info(getClass().getSimpleName() + ": Loaded " + _actionData.size() + " player actions.");
 	}
 	

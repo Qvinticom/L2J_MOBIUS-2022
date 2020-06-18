@@ -24,7 +24,6 @@ import java.util.HashMap;
 import java.util.Iterator;
 import java.util.List;
 import java.util.Map;
-import java.util.Optional;
 import java.util.OptionalInt;
 import java.util.concurrent.ConcurrentHashMap;
 import java.util.concurrent.atomic.AtomicInteger;
@@ -557,10 +556,12 @@ public class ZoneManager implements IXmlReader
 	{
 		for (Map<Integer, ? extends ZoneType> map : _classZones.values())
 		{
-			final Optional<? extends ZoneType> zoneType = map.values().stream().filter(z -> (z.getName() != null) && z.getName().equals(name)).findAny();
-			if (zoneType.isPresent())
+			for (ZoneType zone : map.values())
 			{
-				return zoneType.get();
+				if ((zone.getName() != null) && zone.getName().equals(name))
+				{
+					return zone;
+				}
 			}
 		}
 		return null;
@@ -589,10 +590,15 @@ public class ZoneManager implements IXmlReader
 	@SuppressWarnings("unchecked")
 	public <T extends ZoneType> T getZoneByName(String name, Class<T> zoneType)
 	{
-		final Optional<? extends ZoneType> zone = _classZones.get(zoneType).values().stream().filter(z -> (z.getName() != null) && z.getName().equals(name)).findAny();
-		if (zone.isPresent())
+		if (_classZones.containsKey(zoneType))
 		{
-			return (T) zone.get();
+			for (ZoneType zone : _classZones.get(zoneType).values())
+			{
+				if ((zone.getName() != null) && zone.getName().equals(name))
+				{
+					return (T) zone;
+				}
+			}
 		}
 		return null;
 	}

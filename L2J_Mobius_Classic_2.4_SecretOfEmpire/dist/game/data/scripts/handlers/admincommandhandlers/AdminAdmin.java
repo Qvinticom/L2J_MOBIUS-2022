@@ -297,7 +297,13 @@ public class AdminAdmin implements IAdminCommandHandler
 					}
 					
 					final CreatureSay cs = new CreatureSay(activeChar, ChatType.WORLD, activeChar.getName(), sb.toString());
-					World.getInstance().getPlayers().stream().filter(activeChar::isNotBlocked).forEach(cs::sendTo);
+					for (PlayerInstance player : World.getInstance().getPlayers())
+					{
+						if (player.isNotBlocked(activeChar))
+						{
+							cs.sendTo(player);
+						}
+					}
 					break;
 				}
 				case "see":

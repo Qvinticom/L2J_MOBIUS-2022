@@ -19,7 +19,6 @@ package org.l2jmobius.gameserver.datatables.xml;
 import java.io.File;
 import java.util.ArrayList;
 import java.util.List;
-import java.util.stream.Collectors;
 
 import org.w3c.dom.Document;
 import org.w3c.dom.NamedNodeMap;
@@ -86,8 +85,15 @@ public class FishData implements IXmlReader
 	 */
 	public Fish getFish(int lvl, int type, int group)
 	{
-		final List<Fish> fish = _fish.stream().filter(f -> (f.getLevel() == lvl) && (f.getType() == type) && (f.getGroup() == group)).collect(Collectors.toList());
-		return fish.get(Rnd.get(fish.size()));
+		final List<Fish> result = new ArrayList<>();
+		for (Fish fish : _fish)
+		{
+			if ((fish.getLevel() == lvl) && (fish.getType() == type) && (fish.getGroup() == group))
+			{
+				result.add(fish);
+			}
+		}
+		return result.get(Rnd.get(result.size()));
 	}
 	
 	public static FishData getInstance()

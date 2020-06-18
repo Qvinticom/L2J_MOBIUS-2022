@@ -140,7 +140,15 @@ public class MailManager
 	
 	public long getUnreadCount(PlayerInstance player)
 	{
-		return getInbox(player.getObjectId()).stream().filter(Message::isUnread).count();
+		long count = 0;
+		for (Message message : getInbox(player.getObjectId()))
+		{
+			if (message.isUnread())
+			{
+				count++;
+			}
+		}
+		return count;
 	}
 	
 	public int getMailsInProgress(int objectId)

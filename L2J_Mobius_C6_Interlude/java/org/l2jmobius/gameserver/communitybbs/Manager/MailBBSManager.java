@@ -532,10 +532,18 @@ public class MailBBSManager extends BaseBBSManager
 		final Timestamp ts = new Timestamp(currentDate - 86400000);
 		
 		// Check sender mails based on previous timestamp. If more than 10 mails have been found for today, then cancel the use.
-		if (getPlayerMails(activeChar.getObjectId()).stream().filter(l -> l.sentDate.after(ts) && (l.location == MailType.SENTBOX)).count() >= 10)
+		int count = 0;
+		for (Mail mail : getPlayerMails(activeChar.getObjectId()))
 		{
-			activeChar.sendPacket(SystemMessageId.NO_MORE_MESSAGES_MAY_BE_SENT_AT_THIS_TIME_EACH_ACCOUNT_IS_ALLOWED_10_MESSAGES_PER_DAY);
-			return;
+			if (mail.sentDate.after(ts) && (mail.location == MailType.SENTBOX))
+			{
+				count++;
+			}
+			if (count >= 10)
+			{
+				activeChar.sendPacket(SystemMessageId.NO_MORE_MESSAGES_MAY_BE_SENT_AT_THIS_TIME_EACH_ACCOUNT_IS_ALLOWED_10_MESSAGES_PER_DAY);
+				return;
+			}
 		}
 		
 		// Format recipient names. If more than 5 are found, cancel the mail.

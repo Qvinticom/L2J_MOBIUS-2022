@@ -26,7 +26,6 @@ import java.util.Map;
 import java.util.function.Consumer;
 import java.util.function.Predicate;
 import java.util.logging.Logger;
-import java.util.stream.Collectors;
 
 import org.l2jmobius.Config;
 import org.l2jmobius.gameserver.datatables.ItemTable;
@@ -752,7 +751,20 @@ public abstract class Item extends ListenersContainer implements IIdentifiable
 	 */
 	public List<ItemSkillHolder> getSkills(Predicate<ItemSkillHolder> condition)
 	{
-		return _skills != null ? _skills.stream().filter(condition).collect(Collectors.toList()) : null;
+		if (_skills == null)
+		{
+			return null;
+		}
+		
+		final List<ItemSkillHolder> result = new ArrayList<>();
+		for (ItemSkillHolder skill : _skills)
+		{
+			if (condition.test(skill))
+			{
+				result.add(skill);
+			}
+		}
+		return result;
 	}
 	
 	/**
@@ -761,7 +773,20 @@ public abstract class Item extends ListenersContainer implements IIdentifiable
 	 */
 	public List<ItemSkillHolder> getSkills(ItemSkillType type)
 	{
-		return _skills != null ? _skills.stream().filter(sk -> sk.getType() == type).collect(Collectors.toList()) : null;
+		if (_skills == null)
+		{
+			return null;
+		}
+		
+		final List<ItemSkillHolder> result = new ArrayList<>();
+		for (ItemSkillHolder skill : _skills)
+		{
+			if (skill.getType() == type)
+			{
+				result.add(skill);
+			}
+		}
+		return result;
 	}
 	
 	/**
@@ -773,7 +798,13 @@ public abstract class Item extends ListenersContainer implements IIdentifiable
 	{
 		if (_skills != null)
 		{
-			_skills.stream().filter(sk -> sk.getType() == type).forEach(action);
+			for (ItemSkillHolder skill : _skills)
+			{
+				if (skill.getType() == type)
+				{
+					action.accept(skill);
+				}
+			}
 		}
 	}
 	

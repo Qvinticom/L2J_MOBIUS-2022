@@ -57,13 +57,25 @@ public class PartyMatchingRoom extends MatchingRoom
 	@Override
 	protected void notifyNewMember(PlayerInstance player)
 	{
-		// Update others player
-		getMembers().stream().filter(p -> p != player).forEach(p -> p.sendPacket(new ExPartyRoomMember(p, this)));
+		// Update other players
+		for (PlayerInstance member : getMembers())
+		{
+			if (member != player)
+			{
+				member.sendPacket(new ExPartyRoomMember(member, this));
+			}
+		}
 		
-		// Send SystemMessage to others player
+		// Send SystemMessage to other players
 		final SystemMessage sm = new SystemMessage(SystemMessageId.C1_HAS_ENTERED_THE_PARTY_ROOM);
 		sm.addPcName(player);
-		getMembers().stream().filter(p -> p != player).forEach(sm::sendTo);
+		for (PlayerInstance member : getMembers())
+		{
+			if (member != player)
+			{
+				sm.sendTo(member);
+			}
+		}
 		
 		// Update new player
 		player.sendPacket(new PartyRoomInfo(this));

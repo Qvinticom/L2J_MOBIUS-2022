@@ -18,15 +18,14 @@ package handlers.effecthandlers;
 
 import java.util.Collections;
 import java.util.HashSet;
-import java.util.Objects;
 import java.util.Set;
 
 import org.l2jmobius.gameserver.model.StatSet;
-import org.l2jmobius.gameserver.model.WorldObject;
 import org.l2jmobius.gameserver.model.actor.Creature;
 import org.l2jmobius.gameserver.model.effects.AbstractEffect;
 import org.l2jmobius.gameserver.model.items.instance.ItemInstance;
 import org.l2jmobius.gameserver.model.skills.AbnormalType;
+import org.l2jmobius.gameserver.model.skills.BuffInfo;
 import org.l2jmobius.gameserver.model.skills.Skill;
 import org.l2jmobius.gameserver.network.serverpackets.AbnormalStatusUpdate;
 import org.l2jmobius.gameserver.network.serverpackets.ExAbnormalStatusUpdateFromTarget;
@@ -94,19 +93,25 @@ public class AbnormalTimeChange extends AbstractEffect
 			{
 				if (_abnormals.isEmpty())
 				{
-					effected.getEffectList().getEffects().stream().filter(b -> b.getSkill().canBeDispelled()).forEach(b ->
+					for (BuffInfo info : effected.getEffectList().getEffects())
 					{
-						b.resetAbnormalTime(b.getTime() + _time);
-						asu.addSkill(b);
-					});
+						if (info.getSkill().canBeDispelled())
+						{
+							info.resetAbnormalTime(info.getTime() + _time);
+							asu.addSkill(info);
+						}
+					}
 				}
 				else
 				{
-					effected.getEffectList().getEffects().stream().filter(b -> b.getSkill().canBeDispelled() && _abnormals.contains(b.getSkill().getAbnormalType())).forEach(b ->
+					for (BuffInfo info : effected.getEffectList().getEffects())
 					{
-						b.resetAbnormalTime(b.getTime() + _time);
-						asu.addSkill(b);
-					});
+						if (info.getSkill().canBeDispelled() && _abnormals.contains(info.getSkill().getAbnormalType()))
+						{
+							info.resetAbnormalTime(info.getTime() + _time);
+							asu.addSkill(info);
+						}
+					}
 				}
 				break;
 			}
@@ -114,19 +119,25 @@ public class AbnormalTimeChange extends AbstractEffect
 			{
 				if (_abnormals.isEmpty())
 				{
-					effected.getEffectList().getDebuffs().stream().filter(b -> b.getSkill().canBeDispelled()).forEach(b ->
+					for (BuffInfo info : effected.getEffectList().getDebuffs())
 					{
-						b.resetAbnormalTime(b.getAbnormalTime());
-						asu.addSkill(b);
-					});
+						if (info.getSkill().canBeDispelled())
+						{
+							info.resetAbnormalTime(info.getAbnormalTime());
+							asu.addSkill(info);
+						}
+					}
 				}
 				else
 				{
-					effected.getEffectList().getDebuffs().stream().filter(b -> b.getSkill().canBeDispelled() && _abnormals.contains(b.getSkill().getAbnormalType())).forEach(b ->
+					for (BuffInfo info : effected.getEffectList().getDebuffs())
 					{
-						b.resetAbnormalTime(b.getAbnormalTime());
-						asu.addSkill(b);
-					});
+						if (info.getSkill().canBeDispelled() && _abnormals.contains(info.getSkill().getAbnormalType()))
+						{
+							info.resetAbnormalTime(info.getAbnormalTime());
+							asu.addSkill(info);
+						}
+					}
 				}
 				break;
 			}
@@ -135,14 +146,13 @@ public class AbnormalTimeChange extends AbstractEffect
 		effected.sendPacket(asu);
 		
 		final ExAbnormalStatusUpdateFromTarget upd = new ExAbnormalStatusUpdateFromTarget(effected);
-		
-		// @formatter:off
-		effected.getStatus().getStatusListener().stream()
-			.filter(Objects::nonNull)
-			.filter(WorldObject::isPlayer)
-			.map(Creature::getActingPlayer)
-			.forEach(upd::sendTo);
-		// @formatter:on
+		for (Creature creature : effected.getStatus().getStatusListener())
+		{
+			if ((creature != null) && creature.isPlayer())
+			{
+				upd.sendTo(creature.getActingPlayer());
+			}
+		}
 		
 		if (effected.isPlayer() && (effected.getTarget() == effected))
 		{

@@ -442,7 +442,14 @@ public class CommissionManager
 	 */
 	public boolean hasCommissionItems(int objectId)
 	{
-		return _commissionItems.values().stream().anyMatch(item -> item.getItemInstance().getObjectId() == objectId);
+		for (CommissionItem item : _commissionItems.values())
+		{
+			if (item.getItemInstance().getObjectId() == objectId)
+			{
+				return true;
+			}
+		}
+		return false;
 	}
 	
 	/**
@@ -452,7 +459,14 @@ public class CommissionManager
 	 */
 	public boolean hasCommissionedItemId(PlayerInstance player, int itemId)
 	{
-		return !_commissionItems.values().stream().filter(c -> (c.getItemInstance().getOwnerId() == player.getObjectId()) && (c.getItemInstance().getItem().getId() == itemId)).collect(Collectors.toList()).isEmpty();
+		for (CommissionItem item : _commissionItems.values())
+		{
+			if ((item.getItemInstance().getOwnerId() == player.getObjectId()) && (item.getItemInstance().getItem().getId() == itemId))
+			{
+				return true;
+			}
+		}
+		return false;
 	}
 	
 	/**

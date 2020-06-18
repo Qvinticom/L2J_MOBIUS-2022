@@ -93,13 +93,19 @@ public class Synergy extends AbstractEffect
 			}
 		}
 		
-		final int abnormalCount = (int) _optionalSlots.stream().filter(effector::hasAbnormalType).count();
+		int abnormalCount = 0;
+		for (AbnormalType abnormalType : _optionalSlots)
+		{
+			if (effector.hasAbnormalType(abnormalType))
+			{
+				abnormalCount++;
+			}
+		}
 		
 		if (abnormalCount >= _minSlot)
 		{
-			final SkillHolder partyBuff = new SkillHolder(_partyBuffSkillId, Math.max(abnormalCount - 1, _skillLevelScaleTo));
+			final SkillHolder partyBuff = new SkillHolder(_partyBuffSkillId, Math.min(abnormalCount - 1, _skillLevelScaleTo));
 			final Skill partyBuffSkill = partyBuff.getSkill();
-			
 			if (partyBuffSkill != null)
 			{
 				final WorldObject target = partyBuffSkill.getTarget(effector, effected, false, false, false);

@@ -16,8 +16,6 @@
  */
 package org.l2jmobius.gameserver.network.clientpackets;
 
-import java.util.Objects;
-
 import org.l2jmobius.commons.network.PacketReader;
 import org.l2jmobius.gameserver.data.sql.impl.ClanTable;
 import org.l2jmobius.gameserver.enums.ClanWarState;
@@ -57,11 +55,14 @@ public class RequestSurrenderPledgeWar implements IClientIncomingPacket
 			return;
 		}
 		
-		if (myClan.getMembers().stream().filter(Objects::nonNull).filter(ClanMember::isOnline).map(ClanMember::getPlayerInstance).anyMatch(p -> !p.isInCombat()))
+		for (ClanMember member : myClan.getMembers())
 		{
-			player.sendPacket(SystemMessageId.A_CEASE_FIRE_DURING_A_CLAN_WAR_CAN_NOT_BE_CALLED_WHILE_MEMBERS_OF_YOUR_CLAN_ARE_ENGAGED_IN_BATTLE);
-			client.sendPacket(ActionFailed.STATIC_PACKET);
-			return;
+			if ((member != null) && member.isOnline() && member.getPlayerInstance().isInCombat())
+			{
+				player.sendPacket(SystemMessageId.A_CEASE_FIRE_DURING_A_CLAN_WAR_CAN_NOT_BE_CALLED_WHILE_MEMBERS_OF_YOUR_CLAN_ARE_ENGAGED_IN_BATTLE);
+				client.sendPacket(ActionFailed.STATIC_PACKET);
+				return;
+			}
 		}
 		
 		final Clan targetClan = ClanTable.getInstance().getClanByName(_pledgeName);

@@ -22,11 +22,9 @@ import java.util.Collection;
 import java.util.LinkedList;
 import java.util.List;
 import java.util.Map;
-import java.util.Optional;
 import java.util.concurrent.ConcurrentHashMap;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.logging.Level;
-import java.util.stream.Collectors;
 
 import org.l2jmobius.Config;
 import org.l2jmobius.commons.concurrent.ThreadPool;
@@ -395,11 +393,27 @@ public class Attackable extends Npc
 				if (party != null)
 				{
 					final CommandChannel command = party.getCommandChannel();
-					//@formatter:off
-					final List<PlayerInstance> members = command != null ? 
-						command.getMembers().stream().filter(p -> p.calculateDistance3D(this) < Config.ALT_PARTY_RANGE).collect(Collectors.toList()) :
-						player.getParty().getMembers().stream().filter(p -> p.calculateDistance3D(this) < Config.ALT_PARTY_RANGE).collect(Collectors.toList());
-					//@formatter:on
+					final List<PlayerInstance> members = new ArrayList<>();
+					if (command != null)
+					{
+						for (PlayerInstance p : command.getMembers())
+						{
+							if (p.calculateDistance3D(this) < Config.ALT_PARTY_RANGE)
+							{
+								members.add(p);
+							}
+						}
+					}
+					else
+					{
+						for (PlayerInstance p : player.getParty().getMembers())
+						{
+							if (p.calculateDistance3D(this) < Config.ALT_PARTY_RANGE)
+							{
+								members.add(p);
+							}
+						}
+					}
 					
 					members.forEach(p ->
 					{
@@ -457,10 +471,13 @@ public class Attackable extends Npc
 					// If this attacker have servitor, get Exp Penalty applied for the servitor.
 					float penalty = 1;
 					
-					final Optional<Summon> summon = attacker.getServitors().values().stream().filter(s -> ((ServitorInstance) s).getExpMultiplier() > 1).findFirst();
-					if (summon.isPresent())
+					for (Summon summon : attacker.getServitors().values())
 					{
-						penalty = ((ServitorInstance) summon.get()).getExpMultiplier();
+						if (((ServitorInstance) summon).getExpMultiplier() > 1)
+						{
+							penalty = ((ServitorInstance) summon).getExpMultiplier();
+							break;
+						}
 					}
 					
 					// If there's NO party in progress

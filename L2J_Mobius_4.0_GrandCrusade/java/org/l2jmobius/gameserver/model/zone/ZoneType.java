@@ -20,7 +20,6 @@ import java.util.ArrayList;
 import java.util.Collection;
 import java.util.List;
 import java.util.Map;
-import java.util.Objects;
 import java.util.concurrent.ConcurrentHashMap;
 import java.util.logging.Logger;
 
@@ -602,16 +601,15 @@ public abstract class ZoneType extends ListenersContainer
 	
 	public void oustAllPlayers()
 	{
-		//@formatter:off
-		_characterList.values().stream()
-			.filter(Objects::nonNull)
-			.filter(WorldObject::isPlayer)
-			.map(WorldObject::getActingPlayer)
-			.filter(PlayerInstance::isOnline)
-			.forEach(player -> player.teleToLocation(TeleportWhereType.TOWN));
-		//@formatter:off
+		for (Creature obj : _characterList.values())
+		{
+			if ((obj != null) && obj.isPlayer() && obj.getActingPlayer().isOnline())
+			{
+				obj.getActingPlayer().teleToLocation(TeleportWhereType.TOWN);
+			}
+		}
 	}
-
+	
 	/**
 	 * @param loc
 	 */

@@ -31,13 +31,12 @@ import java.util.concurrent.ConcurrentLinkedDeque;
 import java.util.concurrent.locks.ReentrantReadWriteLock;
 import java.util.function.BiFunction;
 import java.util.function.BiPredicate;
-import java.util.stream.Stream;
 
 import org.l2jmobius.Config;
 import org.l2jmobius.gameserver.enums.AttributeType;
 import org.l2jmobius.gameserver.enums.Position;
-import org.l2jmobius.gameserver.model.EffectList;
 import org.l2jmobius.gameserver.model.actor.Creature;
+import org.l2jmobius.gameserver.model.effects.AbstractEffect;
 import org.l2jmobius.gameserver.model.items.instance.ItemInstance;
 import org.l2jmobius.gameserver.model.skills.AbnormalType;
 import org.l2jmobius.gameserver.model.skills.BuffInfo;
@@ -896,36 +895,80 @@ public class CreatureStat
 			// Wipe all the data
 			resetStats();
 			
-			// Collect all necessary effects
-			final EffectList effectList = _creature.getEffectList();
-			final Stream<BuffInfo> passives = effectList.getPassives().stream().filter(BuffInfo::isInUse).filter(info -> info.getSkill().checkConditions(SkillConditionScope.PASSIVE, _creature, _creature));
-			final Stream<BuffInfo> options = effectList.getOptions().stream().filter(BuffInfo::isInUse);
-			final Stream<BuffInfo> effectsStream = Stream.concat(effectList.getEffects().stream().filter(BuffInfo::isInUse), Stream.concat(passives, options));
-			
 			// Call pump to each effect
-			//@formatter:off
-			effectsStream.forEach(info -> info.getEffects().stream()
-				.filter(effect -> effect.canStart(info.getEffector(), info.getEffected(), info.getSkill()))
-				.filter(effect -> effect.canPump(info.getEffector(), info.getEffected(), info.getSkill()))
-				.forEach(effect -> effect.pump(info.getEffected(), info.getSkill())));
-			//@formatter:on
+			for (BuffInfo info : _creature.getEffectList().getPassives())
+			{
+				if (info.isInUse() && info.getSkill().checkConditions(SkillConditionScope.PASSIVE, _creature, _creature))
+				{
+					for (AbstractEffect effect : info.getEffects())
+					{
+						if (effect.canStart(info.getEffector(), info.getEffected(), info.getSkill()) && effect.canPump(info.getEffector(), info.getEffected(), info.getSkill()))
+						{
+							effect.pump(info.getEffected(), info.getSkill());
+						}
+					}
+				}
+			}
+			for (BuffInfo info : _creature.getEffectList().getOptions())
+			{
+				if (info.isInUse())
+				{
+					for (AbstractEffect effect : info.getEffects())
+					{
+						if (effect.canStart(info.getEffector(), info.getEffected(), info.getSkill()) && effect.canPump(info.getEffector(), info.getEffected(), info.getSkill()))
+						{
+							effect.pump(info.getEffected(), info.getSkill());
+						}
+					}
+				}
+			}
+			for (BuffInfo info : _creature.getEffectList().getEffects())
+			{
+				if (info.isInUse())
+				{
+					for (AbstractEffect effect : info.getEffects())
+					{
+						if (effect.canStart(info.getEffector(), info.getEffected(), info.getSkill()) && effect.canPump(info.getEffector(), info.getEffected(), info.getSkill()))
+						{
+							effect.pump(info.getEffected(), info.getSkill());
+						}
+					}
+				}
+			}
 			
+			// Pump for summon ABILITY_CHANGE abnormal type.
 			if (_creature.isSummon() && (_creature.getActingPlayer() != null) && _creature.getActingPlayer().hasAbnormalType(AbnormalType.ABILITY_CHANGE))
 			{
-				//@formatter:off
-				_creature.getActingPlayer().getEffectList().getEffects().stream()
-					.filter(BuffInfo::isInUse)
-					.filter(info -> info.isAbnormalType(AbnormalType.ABILITY_CHANGE))
-					.forEach(info -> info.getEffects().stream()
-						.filter(effect -> effect.canStart(info.getEffector(), info.getEffected(), info.getSkill()))
-						.filter(effect -> effect.canPump(_creature, _creature, info.getSkill()))
-						.forEach(effect -> effect.pump(_creature, info.getSkill())));
-				//@formatter:on
+				for (BuffInfo info : _creature.getActingPlayer().getEffectList().getEffects())
+				{
+					if (info.isInUse() && info.isAbnormalType(AbnormalType.ABILITY_CHANGE))
+					{
+						for (AbstractEffect effect : info.getEffects())
+						{
+							if (effect.canStart(info.getEffector(), info.getEffected(), info.getSkill()) && effect.canPump(_creature, _creature, info.getSkill()))
+							{
+								effect.pump(_creature, info.getSkill());
+							}
+						}
+					}
+				}
 			}
 			
 			// Merge with additional stats
-			_additionalAdd.stream().filter(holder -> holder.verifyCondition(_creature)).forEach(holder -> mergeAdd(holder.getStat(), holder.getValue()));
-			_additionalMul.stream().filter(holder -> holder.verifyCondition(_creature)).forEach(holder -> mergeMul(holder.getStat(), holder.getValue()));
+			for (StatHolder holder : _additionalAdd)
+			{
+				if (holder.verifyCondition(_creature))
+				{
+					mergeAdd(holder.getStat(), holder.getValue());
+				}
+			}
+			for (StatHolder holder : _additionalMul)
+			{
+				if (holder.verifyCondition(_creature))
+				{
+					mergeMul(holder.getStat(), holder.getValue());
+				}
+			}
 			_attackSpeedMultiplier = Formulas.calcAtkSpdMultiplier(_creature);
 			_mAttackSpeedMultiplier = Formulas.calcMAtkSpdMultiplier(_creature);
 		}

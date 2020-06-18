@@ -16,8 +16,6 @@
  */
 package org.l2jmobius.gameserver.network.clientpackets;
 
-import java.util.OptionalInt;
-
 import org.l2jmobius.commons.network.PacketReader;
 import org.l2jmobius.gameserver.instancemanager.ClanEntryManager;
 import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
@@ -44,10 +42,10 @@ public class RequestPledgeWaitingApplied implements IClientIncomingPacket
 			return;
 		}
 		
-		final OptionalInt clanId = ClanEntryManager.getInstance().getClanIdForPlayerApplication(player.getObjectId());
-		if (clanId.isPresent())
+		final int clanId = ClanEntryManager.getInstance().getClanIdForPlayerApplication(player.getObjectId());
+		if (clanId > 0)
 		{
-			player.sendPacket(new ExPledgeWaitingListApplied(clanId.getAsInt(), player.getObjectId()));
+			player.sendPacket(new ExPledgeWaitingListApplied(clanId, player.getObjectId()));
 		}
 	}
 }

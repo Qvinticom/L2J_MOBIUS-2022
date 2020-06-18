@@ -19,14 +19,14 @@ package org.l2jmobius.gameserver.model.itemcontainer;
 import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
+import java.util.ArrayList;
 import java.util.Collection;
-import java.util.LinkedList;
+import java.util.List;
 import java.util.Map;
 import java.util.concurrent.ConcurrentHashMap;
 import java.util.function.Predicate;
 import java.util.logging.Level;
 import java.util.logging.Logger;
-import java.util.stream.Collectors;
 
 import org.l2jmobius.Config;
 import org.l2jmobius.commons.database.DatabaseFactory;
@@ -89,7 +89,16 @@ public abstract class ItemContainer
 		{
 			filter = filter.and(additionalFilter);
 		}
-		return (int) _items.values().stream().filter(filter).count();
+		
+		int count = 0;
+		for (ItemInstance item : _items.values())
+		{
+			if (filter.test(item))
+			{
+				count++;
+			}
+		}
+		return count;
 	}
 	
 	/**
@@ -115,7 +124,16 @@ public abstract class ItemContainer
 		{
 			filter = filter.and(additionalFilter);
 		}
-		return _items.values().stream().filter(filter).collect(Collectors.toCollection(LinkedList::new));
+		
+		final List<ItemInstance> result = new ArrayList<>();
+		for (ItemInstance item : _items.values())
+		{
+			if (filter.test(item))
+			{
+				result.add(item);
+			}
+		}
+		return result;
 	}
 	
 	/**
@@ -124,7 +142,14 @@ public abstract class ItemContainer
 	 */
 	public ItemInstance getItemByItemId(int itemId)
 	{
-		return _items.values().stream().filter(item -> item.getId() == itemId).findFirst().orElse(null);
+		for (ItemInstance item : _items.values())
+		{
+			if (item.getId() == itemId)
+			{
+				return item;
+			}
+		}
+		return null;
 	}
 	
 	/**

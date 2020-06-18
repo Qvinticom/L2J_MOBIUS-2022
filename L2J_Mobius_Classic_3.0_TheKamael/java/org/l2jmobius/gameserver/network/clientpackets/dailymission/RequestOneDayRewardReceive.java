@@ -50,13 +50,20 @@ public class RequestOneDayRewardReceive implements IClientIncomingPacket
 			return;
 		}
 		
-		final Collection<DailyMissionDataHolder> reward = DailyMissionData.getInstance().getDailyMissionData(_id);
-		if ((reward == null) || reward.isEmpty())
+		final Collection<DailyMissionDataHolder> rewards = DailyMissionData.getInstance().getDailyMissionData(_id);
+		if ((rewards == null) || rewards.isEmpty())
 		{
 			return;
 		}
 		
-		reward.stream().filter(o -> o.isDisplayable(player)).forEach(r -> r.requestReward(player));
+		for (DailyMissionDataHolder holder : rewards)
+		{
+			if (holder.isDisplayable(player))
+			{
+				holder.requestReward(player);
+			}
+		}
+		
 		player.sendPacket(new ExConnectedTimeAndGettableReward(player));
 		player.sendPacket(new ExOneDayReceiveRewardList(player, true));
 	}

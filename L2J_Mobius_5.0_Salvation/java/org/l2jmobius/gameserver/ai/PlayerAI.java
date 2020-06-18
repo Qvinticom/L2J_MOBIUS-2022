@@ -26,6 +26,7 @@ import static org.l2jmobius.gameserver.ai.CtrlIntention.AI_INTENTION_REST;
 
 import org.l2jmobius.gameserver.model.WorldObject;
 import org.l2jmobius.gameserver.model.actor.Creature;
+import org.l2jmobius.gameserver.model.actor.Summon;
 import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
 import org.l2jmobius.gameserver.model.actor.instance.StaticObjectInstance;
 import org.l2jmobius.gameserver.model.interfaces.ILocational;
@@ -164,7 +165,13 @@ public class PlayerAI extends PlayableAI
 		// Summons in defending mode defend its master when attacked.
 		if (_actor.getActingPlayer().hasServitors())
 		{
-			_actor.getActingPlayer().getServitors().values().stream().filter(summon -> ((SummonAI) summon.getAI()).isDefending()).forEach(summon -> ((SummonAI) summon.getAI()).defendAttack(attacker));
+			for (Summon summon : _actor.getActingPlayer().getServitors().values())
+			{
+				if (((SummonAI) summon.getAI()).isDefending())
+				{
+					((SummonAI) summon.getAI()).defendAttack(attacker);
+				}
+			}
 		}
 	}
 	
@@ -176,7 +183,13 @@ public class PlayerAI extends PlayableAI
 		// Summons in defending mode defend its master when attacked.
 		if (_actor.getActingPlayer().hasServitors())
 		{
-			_actor.getActingPlayer().getServitors().values().stream().filter(summon -> ((SummonAI) summon.getAI()).isDefending()).forEach(summon -> ((SummonAI) summon.getAI()).defendAttack(attacker));
+			for (Summon summon : _actor.getActingPlayer().getServitors().values())
+			{
+				if (((SummonAI) summon.getAI()).isDefending())
+				{
+					((SummonAI) summon.getAI()).defendAttack(attacker);
+				}
+			}
 		}
 	}
 	

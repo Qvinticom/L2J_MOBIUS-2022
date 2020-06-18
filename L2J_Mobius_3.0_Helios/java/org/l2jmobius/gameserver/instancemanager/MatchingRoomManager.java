@@ -16,6 +16,7 @@
  */
 package org.l2jmobius.gameserver.instancemanager;
 
+import java.util.ArrayList;
 import java.util.Collections;
 import java.util.List;
 import java.util.Map;
@@ -103,12 +104,19 @@ public class MatchingRoomManager
 	
 	public List<MatchingRoom> getPartyMathchingRooms(int location, PartyMatchingRoomLevelType type, int requestorLevel)
 	{
-		//@formatter:off
-		return _rooms.getOrDefault(MatchingRoomType.PARTY, Collections.emptyMap()).values().stream()
-				.filter(room -> (location < 0) || (room.getLocation() == location))
-				.filter(room -> (type == PartyMatchingRoomLevelType.ALL) || ((room.getMinLvl() >= requestorLevel) && (room.getMaxLvl() <= requestorLevel)))
-				.collect(Collectors.toList());
-		//@formatter:on
+		final List<MatchingRoom> result = new ArrayList<>();
+		if (_rooms.containsKey(MatchingRoomType.PARTY))
+		{
+			for (MatchingRoom room : _rooms.get(MatchingRoomType.PARTY).values())
+			{
+				if (((location < 0) || (room.getLocation() == location)) //
+					&& ((type == PartyMatchingRoomLevelType.ALL) || ((room.getMinLvl() >= requestorLevel) && (room.getMaxLvl() <= requestorLevel))))
+				{
+					result.add(room);
+				}
+			}
+		}
+		return result;
 	}
 	
 	public Map<Integer, MatchingRoom> getCCMathchingRooms()
@@ -118,12 +126,19 @@ public class MatchingRoomManager
 	
 	public List<MatchingRoom> getCCMathchingRooms(int location, int level)
 	{
-		//@formatter:off
-		return _rooms.getOrDefault(MatchingRoomType.COMMAND_CHANNEL, Collections.emptyMap()).values().stream()
-				.filter(r -> r.getLocation() == location)
-				.filter(r -> (r.getMinLvl() <= level) && (r.getMaxLvl() >= level))
-				.collect(Collectors.toList());
-		//@formatter:on
+		final List<MatchingRoom> result = new ArrayList<>();
+		if (_rooms.containsKey(MatchingRoomType.COMMAND_CHANNEL))
+		{
+			for (MatchingRoom room : _rooms.get(MatchingRoomType.COMMAND_CHANNEL).values())
+			{
+				if ((room.getLocation() == location) //
+					&& ((room.getMinLvl() <= level) && (room.getMaxLvl() >= level)))
+				{
+					result.add(room);
+				}
+			}
+		}
+		return result;
 	}
 	
 	public MatchingRoom getCCMatchingRoom(int roomId)
@@ -133,13 +148,18 @@ public class MatchingRoomManager
 	
 	public MatchingRoom getPartyMathchingRoom(int location, int level)
 	{
-		//@formatter:off
-		return _rooms.getOrDefault(MatchingRoomType.PARTY, Collections.emptyMap()).values().stream()
-				.filter(r -> r.getLocation() == location)
-				.filter(r -> (r.getMinLvl() <= level) && (r.getMaxLvl() >= level))
-				.findFirst()
-				.orElse(null);
-		//@formatter:on
+		if (_rooms.containsKey(MatchingRoomType.PARTY))
+		{
+			for (MatchingRoom room : _rooms.get(MatchingRoomType.PARTY).values())
+			{
+				if ((room.getLocation() == location) //
+					&& ((room.getMinLvl() <= level) && (room.getMaxLvl() >= level)))
+				{
+					return room;
+				}
+			}
+		}
+		return null;
 	}
 	
 	public MatchingRoom getPartyMathchingRoom(int roomId)

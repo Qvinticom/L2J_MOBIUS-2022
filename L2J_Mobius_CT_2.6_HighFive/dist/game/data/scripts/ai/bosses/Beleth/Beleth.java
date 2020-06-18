@@ -772,13 +772,16 @@ public class Beleth extends AbstractNpcAI
 	
 	private void deleteAll()
 	{
-		_minions.stream().filter(n -> !n.isDead()).forEach(n ->
+		for (Npc minion : _minions)
 		{
-			n.abortCast();
-			n.setTarget(null);
-			n.getAI().setIntention(CtrlIntention.AI_INTENTION_IDLE);
-			n.deleteMe();
-		});
+			if (!minion.isDead())
+			{
+				minion.abortCast();
+				minion.setTarget(null);
+				minion.getAI().setIntention(CtrlIntention.AI_INTENTION_IDLE);
+				minion.deleteMe();
+			}
+		}
 		_allowedObjId = 0;
 	}
 	

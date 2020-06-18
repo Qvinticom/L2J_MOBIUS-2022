@@ -328,15 +328,18 @@ public abstract class AbstractOlympiadGame
 				pet.getEffectList().stopEffects(info -> info.getSkill().isBlockedInOlympiad(), true, true);
 			}
 			
-			player.getServitors().values().stream().filter(s -> !s.isDead()).forEach(s ->
+			for (Summon s : player.getServitors().values())
 			{
-				s.setTarget(null);
-				s.abortAttack();
-				s.abortCast();
-				s.getAI().setIntention(CtrlIntention.AI_INTENTION_IDLE);
-				s.stopAllEffectsExceptThoseThatLastThroughDeath();
-				s.getEffectList().stopEffects(info -> info.getSkill().isBlockedInOlympiad(), true, true);
-			});
+				if (!s.isDead())
+				{
+					s.setTarget(null);
+					s.abortAttack();
+					s.abortCast();
+					s.getAI().setIntention(CtrlIntention.AI_INTENTION_IDLE);
+					s.stopAllEffectsExceptThoseThatLastThroughDeath();
+					s.getEffectList().stopEffects(info -> info.getSkill().isBlockedInOlympiad(), true, true);
+				}
+			}
 			
 			player.setCurrentCp(player.getMaxCp());
 			player.setCurrentHp(player.getMaxHp());

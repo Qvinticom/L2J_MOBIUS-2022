@@ -250,10 +250,16 @@ public class SummonAI extends PlayableAI implements Runnable
 	
 	private void allServitorsDefend(Creature attacker)
 	{
-		final Creature Owner = getActor().getOwner();
-		if ((Owner != null) && Owner.getActingPlayer().hasServitors())
+		final Creature owner = getActor().getOwner();
+		if ((owner != null) && owner.getActingPlayer().hasServitors())
 		{
-			Owner.getActingPlayer().getServitors().values().stream().filter(summon -> ((SummonAI) summon.getAI()).isDefending()).forEach(summon -> ((SummonAI) summon.getAI()).defendAttack(attacker));
+			for (Summon summon : owner.getActingPlayer().getServitors().values())
+			{
+				if (((SummonAI) summon.getAI()).isDefending())
+				{
+					((SummonAI) summon.getAI()).defendAttack(attacker);
+				}
+			}
 		}
 		else
 		{

@@ -20,12 +20,13 @@ import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.Statement;
+import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.Collections;
 import java.util.Comparator;
 import java.util.List;
 import java.util.Map;
-import java.util.OptionalInt;
+import java.util.Map.Entry;
 import java.util.concurrent.ConcurrentHashMap;
 import java.util.concurrent.ScheduledFuture;
 import java.util.concurrent.TimeUnit;
@@ -213,9 +214,16 @@ public class ClanEntryManager
 		return false;
 	}
 	
-	public OptionalInt getClanIdForPlayerApplication(int playerId)
+	public Integer getClanIdForPlayerApplication(int playerId)
 	{
-		return _applicantList.entrySet().stream().filter(e -> e.getValue().containsKey(playerId)).mapToInt(e -> e.getKey()).findFirst();
+		for (Entry<Integer, Map<Integer, PledgeApplicantInfo>> entry : _applicantList.entrySet())
+		{
+			if (entry.getValue().containsKey(playerId))
+			{
+				return entry.getKey();
+			}
+		}
+		return 0;
 	}
 	
 	public boolean addToWaitingList(int playerId, PledgeWaitingInfo info)
@@ -345,12 +353,41 @@ public class ClanEntryManager
 	
 	public List<PledgeWaitingInfo> queryWaitingListByName(String name)
 	{
-		return _waitingList.values().stream().filter(p -> p.getPlayerName().toLowerCase().contains(name)).collect(Collectors.toList());
+		final List<PledgeWaitingInfo> result = new ArrayList<>();
+		for (PledgeWaitingInfo p : _waitingList.values())
+		{
+			if (p.getPlayerName().toLowerCase().contains(name))
+			{
+				result.add(p);
+			}
+		}
+		return result;
 	}
 	
 	public List<PledgeRecruitInfo> getSortedClanListByName(String query, int type)
 	{
-		return type == 1 ? _clanList.values().stream().filter(p -> p.getClanName().toLowerCase().contains(query)).collect(Collectors.toList()) : _clanList.values().stream().filter(p -> p.getClanLeaderName().toLowerCase().contains(query)).collect(Collectors.toList());
+		final List<PledgeRecruitInfo> result = new ArrayList<>();
+		if (type == 1)
+		{
+			for (PledgeRecruitInfo p : _clanList.values())
+			{
+				if (p.getClanName().toLowerCase().contains(query))
+				{
+					result.add(p);
+				}
+			}
+		}
+		else
+		{
+			for (PledgeRecruitInfo p : _clanList.values())
+			{
+				if (p.getClanLeaderName().toLowerCase().contains(query))
+				{
+					result.add(p);
+				}
+			}
+		}
+		return result;
 	}
 	
 	public PledgeRecruitInfo getClanById(int clanId)

@@ -153,7 +153,15 @@ public class SpawnData implements IXmlReader
 	
 	public List<SpawnTemplate> getSpawns(Predicate<SpawnTemplate> condition)
 	{
-		return _spawns.stream().filter(condition).collect(Collectors.toList());
+		final List<SpawnTemplate> result = new ArrayList<>();
+		for (SpawnTemplate spawnTemplate : _spawns)
+		{
+			if (condition.test(spawnTemplate))
+			{
+				result.add(spawnTemplate);
+			}
+		}
+		return result;
 	}
 	
 	public List<SpawnGroup> getGroupsByName(String groupName)

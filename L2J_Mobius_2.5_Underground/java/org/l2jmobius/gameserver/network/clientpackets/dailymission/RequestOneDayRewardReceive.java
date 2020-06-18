@@ -31,12 +31,12 @@ import org.l2jmobius.gameserver.network.serverpackets.dailymission.ExOneDayRecei
  */
 public class RequestOneDayRewardReceive implements IClientIncomingPacket
 {
-	private int _reward;
+	private int _id;
 	
 	@Override
 	public boolean read(GameClient client, PacketReader packet)
 	{
-		_reward = packet.readC();
+		_id = packet.readC();
 		return true;
 	}
 	
@@ -49,13 +49,19 @@ public class RequestOneDayRewardReceive implements IClientIncomingPacket
 			return;
 		}
 		
-		final Collection<DailyMissionDataHolder> reward = DailyMissionData.getInstance().getDailyMissionData(_reward);
-		if (reward.isEmpty())
+		final Collection<DailyMissionDataHolder> rewards = DailyMissionData.getInstance().getDailyMissionData(_id);
+		if ((rewards == null) || rewards.isEmpty())
 		{
 			return;
 		}
 		
-		reward.stream().filter(o -> o.isDisplayable(player)).forEach(r -> r.requestReward(player));
+		for (DailyMissionDataHolder holder : rewards)
+		{
+			if (holder.isDisplayable(player))
+			{
+				holder.requestReward(player);
+			}
+		}
 		player.sendPacket(new ExOneDayReceiveRewardList(player));
 	}
 }

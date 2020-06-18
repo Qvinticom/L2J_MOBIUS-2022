@@ -18,7 +18,6 @@ package org.l2jmobius.gameserver.network.serverpackets;
 
 import java.util.ArrayList;
 import java.util.List;
-import java.util.stream.Collectors;
 
 import org.l2jmobius.commons.network.PacketWriter;
 import org.l2jmobius.gameserver.data.xml.impl.SkillData;
@@ -37,7 +36,13 @@ public class ExAlchemySkillList implements IClientOutgoingPacket
 	
 	public ExAlchemySkillList(PlayerInstance player)
 	{
-		_skills.addAll(player.getAllSkills().stream().filter(s -> SkillTreeData.getInstance().isAlchemySkill(s.getId(), s.getLevel())).collect(Collectors.toList()));
+		for (Skill s : player.getAllSkills())
+		{
+			if (SkillTreeData.getInstance().isAlchemySkill(s.getId(), s.getLevel()))
+			{
+				_skills.add(s);
+			}
+		}
 		_skills.add(SkillData.getInstance().getSkill(CommonSkill.ALCHEMY_CUBE.getId(), 1));
 	}
 	

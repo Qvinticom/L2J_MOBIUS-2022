@@ -20,17 +20,16 @@ import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
+import java.util.ArrayList;
 import java.util.Collection;
 import java.util.LinkedList;
 import java.util.List;
 import java.util.Map;
-import java.util.Objects;
 import java.util.concurrent.ConcurrentHashMap;
 import java.util.concurrent.ConcurrentSkipListMap;
 import java.util.concurrent.atomic.AtomicInteger;
 import java.util.logging.Level;
 import java.util.logging.Logger;
-import java.util.stream.Collectors;
 
 import org.l2jmobius.Config;
 import org.l2jmobius.commons.concurrent.ThreadPool;
@@ -663,14 +662,15 @@ public class Clan implements IIdentifiable, INamable
 	 */
 	public List<PlayerInstance> getOnlineMembers(int exclude)
 	{
-		//@formatter:off
-		return _members.values().stream()
-			.filter(member -> member.getObjectId() != exclude)
-			.filter(ClanMember::isOnline)
-			.map(ClanMember::getPlayerInstance)
-			.filter(Objects::nonNull)
-			.collect(Collectors.toList());
-		//@formatter:on
+		final List<PlayerInstance> result = new ArrayList<>();
+		for (ClanMember member : _members.values())
+		{
+			if ((member.getObjectId() != exclude) && member.isOnline() && (member.getPlayerInstance() != null))
+			{
+				result.add(member.getPlayerInstance());
+			}
+		}
+		return result;
 	}
 	
 	/**
@@ -678,11 +678,15 @@ public class Clan implements IIdentifiable, INamable
 	 */
 	public int getOnlineMembersCount()
 	{
-		//@formatter:off
-		return (int) _members.values().stream()
-			.filter(ClanMember::isOnline)
-			.count();
-		//@formatter:on
+		int count = 0;
+		for (ClanMember member : _members.values())
+		{
+			if (member.isOnline())
+			{
+				count++;
+			}
+		}
+		return count;
 	}
 	
 	/**
@@ -2907,7 +2911,14 @@ public class Clan implements IIdentifiable, INamable
 			}
 		}
 		
-		final int currentMaxOnline = (int) _members.values().stream().filter(member -> member.getOnlineTime() > Config.ALT_CLAN_MEMBERS_TIME_FOR_BONUS).count();
+		int currentMaxOnline = 0;
+		for (ClanMember member : _members.values())
+		{
+			if (member.getOnlineTime() > Config.ALT_CLAN_MEMBERS_TIME_FOR_BONUS)
+			{
+				currentMaxOnline++;
+			}
+		}
 		if (getMaxOnlineMembers() < currentMaxOnline)
 		{
 			getVariables().set("MAX_ONLINE_MEMBERS", currentMaxOnline);
