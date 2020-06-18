@@ -114,19 +114,23 @@
 	</skill>
 	<skill id="7029" levels="4" name="Super Haste">
 		<!-- Speed is increased. -->
-		<table name="#runSpd">1.5 2 3 4</table>
-		<table name="#mReuse">1 2 4 30</table>
-		<table name="#mAtkSpd">1.5 1.8 3 4</table>
-		<table name="#pAtkSpd">1.2 1.5 2 3</table>
+		<table name="#runSpd">2 3 4 5</table>
+		<table name="#mReuse">0.01 0.01 0.01 0.01</table>
+		<table name="#mAtkSpd">2 3 4 5</table>
+		<table name="#pAtkSpd">2 3 4 5</table>
+		<table name="#pAtk">250 500 750 1500</table>
+		<table name="#mAtk">250 500 750 1500</table>
 		<set name="target" val="TARGET_SELF"/>
 		<set name="skillType" val="CONT"/>
 		<set name="operateType" val="OP_TOGGLE"/>
 		<for>
-			<effect name="Buff" time="144000" count="1" val="0">
+			<effect count="0x7fffffff" name="MpConsumePerLevel" time="100000" val="0.0001">
 				<mul order="0x30" stat="runSpd" val="#runSpd"/>
 				<div order="0x30" stat="mReuse" val="#mReuse"/>
 				<mul order="0x30" stat="mAtkSpd" val="#mAtkSpd"/>
 				<mul order="0x30" stat="pAtkSpd" val="#pAtkSpd"/>
+				<mul order="0x30" stat="pAtk" val="#pAtk"/>
+				<mul order="0x30" stat="mAtk" val="#mAtk"/>
 			</effect>
 		</for>
 	</skill>
