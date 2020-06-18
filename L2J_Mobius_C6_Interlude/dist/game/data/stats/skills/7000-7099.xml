@@ -126,7 +126,7 @@
 		<for>
 			<effect count="0x7fffffff" name="MpConsumePerLevel" time="100000" val="0.0001">
 				<mul order="0x30" stat="runSpd" val="#runSpd"/>
-				<div order="0x30" stat="mReuse" val="#mReuse"/>
+				<mul order="0x30" stat="mReuse" val="#mReuse"/>
 				<mul order="0x30" stat="mAtkSpd" val="#mAtkSpd"/>
 				<mul order="0x30" stat="pAtkSpd" val="#pAtkSpd"/>
 				<mul order="0x30" stat="pAtk" val="#pAtk"/>
