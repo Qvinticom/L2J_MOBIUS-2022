@@ -407,8 +407,13 @@ public abstract class Summon extends Playable
 	
 	public void unSummon(PlayerInstance owner)
 	{
-		if (isSpawned() && !isDead())
+		if (isSpawned())
 		{
+			if (isDead())
+			{
+				stopDecay();
+			}
+			
 			// Prevent adding effects while unsummoning.
 			setInvul(true);
 			
