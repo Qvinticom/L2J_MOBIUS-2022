@@ -17,16 +17,10 @@
 package org.l2jmobius.loginserver;
 
 /**
- * This class ...
  * @version $Revision: 1.2.4.2 $ $Date: 2005/03/27 15:30:09 $
  */
 public class HackingException extends Exception
 {
-	/**
-	 * Comment for <code>serialVersionUID</code>
-	 */
-	private static final long serialVersionUID = 4050762693478463029L;
-	
 	private final String _ip;
 	private final int _connects;
 	
