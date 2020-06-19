@@ -18,7 +18,6 @@ package org.l2jmobius.gameserver.model.actor.stat;
 
 import java.util.Collections;
 import java.util.Deque;
-import java.util.EnumMap;
 import java.util.EnumSet;
 import java.util.HashSet;
 import java.util.Iterator;
@@ -33,6 +32,7 @@ import java.util.function.BiFunction;
 import java.util.function.BiPredicate;
 
 import org.l2jmobius.Config;
+import org.l2jmobius.commons.util.PrimitiveDoubleEnumMap;
 import org.l2jmobius.gameserver.enums.AttributeType;
 import org.l2jmobius.gameserver.enums.Position;
 import org.l2jmobius.gameserver.model.actor.Creature;
@@ -60,8 +60,8 @@ public class CreatureStat
 	private int _maxBuffCount = Config.BUFFS_MAX_AMOUNT;
 	private double _vampiricSum = 0;
 	
-	private final Map<Stat, Double> _statsAdd = new EnumMap<>(Stat.class);
-	private final Map<Stat, Double> _statsMul = new EnumMap<>(Stat.class);
+	private final PrimitiveDoubleEnumMap _statsAdd = new PrimitiveDoubleEnumMap();
+	private final PrimitiveDoubleEnumMap _statsMul = new PrimitiveDoubleEnumMap();
 	private final Map<Stat, Map<MoveType, Double>> _moveTypeStats = new ConcurrentHashMap<>();
 	private final Map<Integer, Double> _reuseStat = new ConcurrentHashMap<>();
 	private final Map<Integer, Double> _mpConsumeStat = new ConcurrentHashMap<>();
@@ -772,7 +772,7 @@ public class CreatureStat
 	 */
 	public void mergeAdd(Stat stat, double value)
 	{
-		_statsAdd.merge(stat, value, stat::functionAdd);
+		_statsAdd.mergeAdd(stat, value);
 	}
 	
 	/**
@@ -782,7 +782,7 @@ public class CreatureStat
 	 */
 	public void mergeMul(Stat stat, double value)
 	{
-		_statsMul.merge(stat, value, stat::functionMul);
+		_statsMul.mergeMul(stat, value);
 	}
 	
 	/**
@@ -887,8 +887,9 @@ public class CreatureStat
 	public void recalculateStats(boolean broadcast)
 	{
 		// Copy old data before wiping it out
-		final Map<Stat, Double> adds = !broadcast ? Collections.emptyMap() : new EnumMap<>(_statsAdd);
-		final Map<Stat, Double> muls = !broadcast ? Collections.emptyMap() : new EnumMap<>(_statsMul);
+		final PrimitiveDoubleEnumMap adds = !broadcast ? new PrimitiveDoubleEnumMap() : new PrimitiveDoubleEnumMap(_statsAdd);
+		final PrimitiveDoubleEnumMap muls = !broadcast ? new PrimitiveDoubleEnumMap() : new PrimitiveDoubleEnumMap(_statsMul);
+		
 		_lock.writeLock().lock();
 		try
 		{
