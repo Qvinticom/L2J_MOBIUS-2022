@@ -2202,7 +2202,7 @@ public abstract class Inventory extends ItemContainer
 			filter = filter.and(additionalFilter);
 		}
 		
-		final List<ItemInstance> items = new ArrayList<>();
+		final List<ItemInstance> items = new ArrayList<>(_paperdoll.length / (filters.length + 1));
 		for (ItemInstance item : _paperdoll)
 		{
 			if (filter.test(item))
