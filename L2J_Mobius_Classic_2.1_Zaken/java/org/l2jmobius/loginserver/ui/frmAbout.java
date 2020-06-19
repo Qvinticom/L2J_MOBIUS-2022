@@ -77,7 +77,7 @@ public class frmAbout
 		final JLabel site = new JLabel(URL);
 		site.setText("<html><font color=\"#000099\"><u>" + URL + "</u></font></html>");
 		site.setHorizontalAlignment(SwingConstants.CENTER);
-		site.setBounds(76, 148, 140, 14);
+		site.setBounds(76, 128, 140, 14);
 		site.addMouseListener(new MouseAdapter()
 		{
 			@Override
