@@ -127,11 +127,6 @@ public class Q415_PathToAMonk extends Quest
 		}
 		else if (event.equals("32056-08.htm"))
 		{
-			st.set("cond", "20");
-			st.playSound(QuestState.SOUND_MIDDLE);
-		}
-		else if (event.equals("31979-03.htm"))
-		{
 			st.takeItems(FIERY_SPIRIT_SCROLL, 1);
 			st.giveItems(KHAVATARI_TOTEM, 1);
 			st.rewardExpAndSp(3200, 4230);
