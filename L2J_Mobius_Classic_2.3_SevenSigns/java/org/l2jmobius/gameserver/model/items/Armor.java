@@ -42,7 +42,12 @@ public class Armor extends Item
 		_type = set.getEnum("armor_type", ArmorType.class, ArmorType.NONE);
 		
 		final long bodyPart = getBodyPart();
-		if ((bodyPart == Item.SLOT_NECK) || ((bodyPart & Item.SLOT_L_EAR) != 0) || ((bodyPart & Item.SLOT_L_FINGER) != 0) || ((bodyPart & Item.SLOT_R_BRACELET) != 0) || ((bodyPart & Item.SLOT_L_BRACELET) != 0) || ((bodyPart & Item.SLOT_ARTIFACT_BOOK) != 0))
+		if (bodyPart == Item.SLOT_ARTIFACT)
+		{
+			_type1 = Item.TYPE1_SHIELD_ARMOR;
+			_type2 = Item.TYPE2_ACCESSORY;
+		}
+		else if ((bodyPart == Item.SLOT_NECK) || ((bodyPart & Item.SLOT_L_EAR) != 0) || ((bodyPart & Item.SLOT_L_FINGER) != 0) || ((bodyPart & Item.SLOT_R_BRACELET) != 0) || ((bodyPart & Item.SLOT_L_BRACELET) != 0) || ((bodyPart & Item.SLOT_ARTIFACT_BOOK) != 0))
 		{
 			_type1 = Item.TYPE1_WEAPON_RING_EARRING_NECKLACE;
 			_type2 = Item.TYPE2_ACCESSORY;
