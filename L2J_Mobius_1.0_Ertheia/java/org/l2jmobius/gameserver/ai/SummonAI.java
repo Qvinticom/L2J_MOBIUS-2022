@@ -98,13 +98,18 @@ public class SummonAI extends PlayableAI implements Runnable
 		if (checkTargetLostOrDead(attackTarget))
 		{
 			setTarget(null);
-			((Summon) _actor).setFollowStatus(true);
+			if (_startFollow)
+			{
+				((Summon) _actor).setFollowStatus(true);
+			}
 			return;
 		}
+		
 		if (maybeMoveToPawn(attackTarget, _actor.getPhysicalAttackRange()))
 		{
 			return;
 		}
+		
 		clientStopMoving(null);
 		_actor.doAutoAttack(attackTarget);
 	}
@@ -124,11 +129,13 @@ public class SummonAI extends PlayableAI implements Runnable
 			summon.setFollowStatus(true);
 			return;
 		}
+		
 		final boolean val = _startFollow;
 		if (maybeMoveToPawn(target, _actor.getMagicalAttackRange(_skill)))
 		{
 			return;
 		}
+		
 		summon.setFollowStatus(false);
 		setIntention(AI_INTENTION_IDLE);
 		_startFollow = val;
@@ -142,10 +149,12 @@ public class SummonAI extends PlayableAI implements Runnable
 		{
 			return;
 		}
+		
 		if (maybeMoveToPawn(target, 36))
 		{
 			return;
 		}
+		
 		setIntention(AI_INTENTION_IDLE);
 		getActor().doPickupItem(target);
 	}
@@ -157,10 +166,12 @@ public class SummonAI extends PlayableAI implements Runnable
 		{
 			return;
 		}
+		
 		if (maybeMoveToPawn(target, 36))
 		{
 			return;
 		}
+		
 		setIntention(AI_INTENTION_IDLE);
 	}
 	
@@ -171,6 +182,7 @@ public class SummonAI extends PlayableAI implements Runnable
 		{
 			return;
 		}
+		
 		_thinking = true;
 		try
 		{
