@@ -83,6 +83,7 @@ public class SchemeBufferInstance extends Npc
 			{
 				summon.setCurrentHpMp(summon.getMaxHp(), summon.getMaxMp());
 			}
+			player.getServitors().values().forEach(servitor -> servitor.setCurrentHpMp(servitor.getMaxHp(), servitor.getMaxMp()));
 			
 			final NpcHtmlMessage html = new NpcHtmlMessage(getObjectId());
 			html.setFile(player, getHtmlPath(getId(), 0, player));
