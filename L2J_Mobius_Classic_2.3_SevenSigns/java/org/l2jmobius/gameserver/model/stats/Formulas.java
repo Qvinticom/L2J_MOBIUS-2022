@@ -1289,6 +1289,11 @@ public class Formulas
 		
 		if (target.getStat().isInvulnerableTrait(traitType))
 		{
+			// Fixes stun skills dealing 0 damage on targets with stun invul.
+			if (ignoreResistance && (traitType.getType() == 3))
+			{
+				return 1;
+			}
 			return 0;
 		}
 		
