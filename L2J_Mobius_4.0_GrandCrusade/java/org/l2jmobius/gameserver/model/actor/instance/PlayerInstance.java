@@ -11624,13 +11624,7 @@ public class PlayerInstance extends Playable
 		if (isTransformed() && !_transformSkills.isEmpty())
 		{
 			// Include transformation skills and those skills that are allowed during transformation.
-			for (Skill skill : currentSkills)
-			{
-				if (!skill.allowOnTransform())
-				{
-					currentSkills.remove(skill);
-				}
-			}
+			currentSkills = currentSkills.stream().filter(Skill::allowOnTransform).collect(Collectors.toList());
 			
 			// Revelation skills.
 			if (isDualClassActive())
@@ -11663,18 +11657,14 @@ public class PlayerInstance extends Playable
 			currentSkills.addAll(_transformSkills.values());
 		}
 		
-		for (Skill skill : currentSkills)
-		{
-			if ((skill == null) //
-				|| skill.isBlockActionUseSkill() // Skills that are blocked from player use are not shown in skill list.
-				|| SkillTreeData.getInstance().isAlchemySkill(skill.getId(), skill.getLevel()) //
-				|| !skill.isDisplayInList())
-			{
-				currentSkills.remove(skill);
-			}
-		}
-		
-		return currentSkills;
+		//@formatter:off
+		return currentSkills.stream()
+							.filter(Objects::nonNull)
+							.filter(s -> !s.isBlockActionUseSkill()) // Skills that are blocked from player use are not shown in skill list.
+							.filter(s -> !SkillTreeData.getInstance().isAlchemySkill(s.getId(), s.getLevel()))
+							.filter(s -> s.isDisplayInList())
+							.collect(Collectors.toList());
+		//@formatter:on
 	}
 	
 	protected void startFeed(int npcId)
