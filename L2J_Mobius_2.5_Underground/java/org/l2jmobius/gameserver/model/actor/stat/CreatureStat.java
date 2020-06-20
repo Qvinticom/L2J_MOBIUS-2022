@@ -891,6 +891,8 @@ public class CreatureStat
 	 */
 	public void recalculateStats(boolean broadcast)
 	{
+		Set<Stat> changed = null;
+		
 		// Copy old data before wiping it out
 		final Map<Stat, Double> adds;
 		final Map<Stat, Double> muls;
@@ -988,13 +990,10 @@ public class CreatureStat
 			_attackSpeedMultiplier = Formulas.calcAtkSpdMultiplier(_creature);
 			_mAttackSpeedMultiplier = Formulas.calcMAtkSpdMultiplier(_creature);
 			
-			// Notify recalculation to child classes
-			onRecalculateStats(broadcast);
-			
 			if (broadcast && (adds != null) && (muls != null)) // adds and muls cannot be null when broadcast is true, but Eclipse throws warning bellow.
 			{
 				// Calculate the difference between old and new stats
-				final Set<Stat> changed = new HashSet<>();
+				changed = new HashSet<>();
 				for (Stat stat : Stat.values())
 				{
 					if ((_statsAdd.containsKey(stat) ? _statsAdd.get(stat) : stat.getResetAddValue()) != (adds.containsKey(stat) ? adds.get(stat) : stat.getResetAddValue()))
@@ -1006,14 +1005,20 @@ public class CreatureStat
 						changed.add(stat);
 					}
 				}
-				
-				_creature.broadcastModifiedStats(changed);
 			}
 		}
 		finally
 		{
 			_lock.writeLock().unlock();
 		}
+		
+		if (changed != null)
+		{
+			_creature.broadcastModifiedStats(changed);
+		}
+		
+		// Notify recalculation to child classes
+		onRecalculateStats(broadcast);
 	}
 	
 	protected void onRecalculateStats(boolean broadcast)
