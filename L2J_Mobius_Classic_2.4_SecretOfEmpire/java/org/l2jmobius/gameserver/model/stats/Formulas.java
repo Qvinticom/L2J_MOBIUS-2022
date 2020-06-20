@@ -1095,8 +1095,9 @@ public class Formulas
 		final double criticalPosition = calcCriticalPositionBonus(creature, target); // 30% chance from back, 10% chance from side. Include buffs that give positional crit rate.
 		final double chanceBoostMod = (100 + chanceBoost) / 100;
 		final double blowRateMod = creature.getStat().getValue(Stat.BLOW_RATE, 1);
+		final double blowRateDefenseMod = target.getStat().getValue(Stat.BLOW_RATE_DEFENCE, 1);
 		
-		final double rate = criticalPosition * critHeightBonus * weaponCritical * chanceBoostMod * blowRateMod;
+		final double rate = criticalPosition * critHeightBonus * weaponCritical * chanceBoostMod * blowRateMod * blowRateDefenseMod;
 		
 		// Blow rate is capped at 80%
 		return Rnd.get(100) < Math.min(rate, 80);

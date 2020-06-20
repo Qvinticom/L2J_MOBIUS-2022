@@ -129,6 +129,7 @@ public enum Stat
 	CRITICAL_RATE_SKILL("rCritSkill", Stat::defaultValue, MathUtil::add, MathUtil::add, 0, 1),
 	MAGIC_CRITICAL_RATE("mCritRate", new MCritRateFinalizer()),
 	BLOW_RATE("blowRate"),
+	BLOW_RATE_DEFENCE("blowRateDefence"),
 	DEFENCE_CRITICAL_RATE("defCritRate"),
 	DEFENCE_CRITICAL_RATE_ADD("defCritRateAdd"),
 	DEFENCE_MAGIC_CRITICAL_RATE("defMCritRate"),

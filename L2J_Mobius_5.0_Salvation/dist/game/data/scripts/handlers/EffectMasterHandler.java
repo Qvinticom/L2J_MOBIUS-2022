@@ -146,6 +146,7 @@ public class EffectMasterHandler
 		EffectHandler.getInstance().registerHandler("FakeDeath", FakeDeath::new);
 		EffectHandler.getInstance().registerHandler("FatalBlow", FatalBlow::new);
 		EffectHandler.getInstance().registerHandler("FatalBlowRate", FatalBlowRate::new);
+		EffectHandler.getInstance().registerHandler("FatalBlowRateDefence", FatalBlowRateDefence::new);
 		EffectHandler.getInstance().registerHandler("Fear", Fear::new);
 		EffectHandler.getInstance().registerHandler("Feed", Feed::new);
 		EffectHandler.getInstance().registerHandler("FishingExpSpBonus", FishingExpSpBonus::new);

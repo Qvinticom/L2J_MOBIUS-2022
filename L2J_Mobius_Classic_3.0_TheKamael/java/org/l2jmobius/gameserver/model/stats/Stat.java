@@ -144,6 +144,7 @@ public enum Stat
 	MAGIC_CRITICAL_RATE("mCritRate", new MCritRateFinalizer()),
 	MAGIC_CRITICAL_RATE_BY_CRITICAL_RATE("mCritRateByRCrit"),
 	BLOW_RATE("blowRate"),
+	BLOW_RATE_DEFENCE("blowRateDefence"),
 	DEFENCE_CRITICAL_RATE("defCritRate"),
 	DEFENCE_CRITICAL_RATE_ADD("defCritRateAdd"),
 	DEFENCE_MAGIC_CRITICAL_RATE("defMCritRate"),
