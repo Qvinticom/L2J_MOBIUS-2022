@@ -17,6 +17,7 @@
 package ai.areas.AteliaFortress.AteliaManager;
 
 import java.util.ArrayList;
+import java.util.List;
 
 import org.l2jmobius.commons.util.CommonUtil;
 import org.l2jmobius.gameserver.datatables.SpawnTable;
@@ -308,7 +309,7 @@ public class AteliaManager extends AbstractNpcAI
 	private static final int SBCANCEL = 3600000; // Time 1 Hour
 	private static final int DDESPAWN = 10800000; // Time 3 Hour
 	
-	static ArrayList<Npc> FortessSpawns = new ArrayList<>();
+	static List<Npc> FortessSpawns = new ArrayList<>();
 	
 	private AteliaManager()
 	{

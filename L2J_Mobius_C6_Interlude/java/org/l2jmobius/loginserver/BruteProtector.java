@@ -18,6 +18,7 @@ package org.l2jmobius.loginserver;
 
 import java.util.ArrayList;
 import java.util.HashMap;
+import java.util.List;
 import java.util.Map;
 import java.util.logging.Logger;
 
@@ -26,7 +27,7 @@ import org.l2jmobius.Config;
 public class BruteProtector
 {
 	private static final Logger LOGGER = Logger.getLogger(BruteProtector.class.getName());
-	private static final Map<String, ArrayList<Integer>> _clients = new HashMap<>();
+	private static final Map<String, List<Integer>> _clients = new HashMap<>();
 	
 	public static boolean canLogin(String ip)
 	{

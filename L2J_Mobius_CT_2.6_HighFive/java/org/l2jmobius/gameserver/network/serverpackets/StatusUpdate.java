@@ -17,6 +17,7 @@
 package org.l2jmobius.gameserver.network.serverpackets;
 
 import java.util.ArrayList;
+import java.util.List;
 
 import org.l2jmobius.commons.network.PacketWriter;
 import org.l2jmobius.gameserver.model.WorldObject;
@@ -58,7 +59,7 @@ public class StatusUpdate implements IClientOutgoingPacket
 	public static final int MAX_CP = 0x22;
 	
 	private final int _objectId;
-	private final ArrayList<Attribute> _attributes = new ArrayList<>();
+	private final List<Attribute> _attributes = new ArrayList<>();
 	
 	static class Attribute
 	{

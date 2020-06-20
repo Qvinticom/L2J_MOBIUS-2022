@@ -19,6 +19,7 @@ package org.l2jmobius.gameserver.data.xml.impl;
 import java.io.File;
 import java.util.ArrayList;
 import java.util.HashMap;
+import java.util.List;
 import java.util.Map;
 
 import org.w3c.dom.Document;
@@ -33,7 +34,7 @@ import org.l2jmobius.gameserver.model.skills.Skill;
  */
 public class SymbolSealData implements IXmlReader
 {
-	private final Map<Integer, ArrayList<SymbolSealHolder>> _data = new HashMap<>();
+	private final Map<Integer, List<SymbolSealHolder>> _data = new HashMap<>();
 	
 	protected SymbolSealData()
 	{

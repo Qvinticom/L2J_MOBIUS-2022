@@ -261,7 +261,7 @@ public class RainbowSpringsChateau extends ClanHallSiegeEngine
 	
 	protected static Map<Integer, Long> _warDecreesCount = new HashMap<>();
 	protected static List<Clan> _acceptedClans = new ArrayList<>(4);
-	private static Map<String, ArrayList<Clan>> _usedTextPassages = new HashMap<>();
+	private static Map<String, List<Clan>> _usedTextPassages = new HashMap<>();
 	private static Map<Clan, Integer> _pendingItemToGet = new HashMap<>();
 	
 	protected static SiegableHall _rainbow;
@@ -545,7 +545,7 @@ public class RainbowSpringsChateau extends ClanHallSiegeEngine
 			
 			if (_usedTextPassages.containsKey(passage))
 			{
-				final ArrayList<Clan> list = _usedTextPassages.get(passage);
+				final List<Clan> list = _usedTextPassages.get(passage);
 				if (list.contains(clan))
 				{
 					html = "yeti_passage_used.htm";

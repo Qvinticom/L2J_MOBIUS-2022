@@ -70,7 +70,7 @@ public class ItemAuctionInstance
 	private final int _instanceId;
 	private final AtomicInteger _auctionIds;
 	private final Map<Integer, ItemAuction> _auctions;
-	private final ArrayList<AuctionItem> _items;
+	private final List<AuctionItem> _items;
 	private final AuctionDateGenerator _dateGenerator;
 	
 	private ItemAuction _currentAuction;
@@ -346,7 +346,7 @@ public class ItemAuctionInstance
 	public ItemAuction[] getAuctionsByBidder(int bidderObjId)
 	{
 		final Collection<ItemAuction> auctions = getAuctions();
-		final ArrayList<ItemAuction> stack = new ArrayList<>(auctions.size());
+		final List<ItemAuction> stack = new ArrayList<>(auctions.size());
 		for (ItemAuction auction : getAuctions())
 		{
 			if ((auction.getAuctionState() != ItemAuctionState.CREATED) && (auction.getBidFor(bidderObjId) != null))

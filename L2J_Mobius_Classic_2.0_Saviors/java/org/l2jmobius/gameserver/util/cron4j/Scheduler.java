@@ -20,6 +20,7 @@ package org.l2jmobius.gameserver.util.cron4j;
 
 import java.io.File;
 import java.util.ArrayList;
+import java.util.List;
 import java.util.TimeZone;
 
 /**
@@ -53,7 +54,7 @@ public class Scheduler
 	/**
 	 * Registered {@link TaskCollector}s list.
 	 */
-	private final ArrayList<TaskCollector> collectors = new ArrayList<>();
+	private final List<TaskCollector> collectors = new ArrayList<>();
 	
 	/**
 	 * The {@link MemoryTaskCollector} used for memory stored tasks. Represented here for convenience, it is also the first element in the {@link Scheduler#collectors} list.
@@ -68,7 +69,7 @@ public class Scheduler
 	/**
 	 * Registered {@link SchedulerListener}s list.
 	 */
-	private final ArrayList<SchedulerListener> listeners = new ArrayList<>();
+	private final List<SchedulerListener> listeners = new ArrayList<>();
 	
 	/**
 	 * The thread checking the clock and requesting the spawning of launcher threads.
@@ -78,12 +79,12 @@ public class Scheduler
 	/**
 	 * Currently running {@link LauncherThread} instances.
 	 */
-	private ArrayList<LauncherThread> launchers = null;
+	private List<LauncherThread> launchers = null;
 	
 	/**
 	 * Currently running {@link TaskExecutor} instances.
 	 */
-	private ArrayList<TaskExecutor> executors = null;
+	private List<TaskExecutor> executors = null;
 	
 	/**
 	 * Internal lock, used to synchronize status-aware operations.

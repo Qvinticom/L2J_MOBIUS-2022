@@ -19,6 +19,7 @@
 package org.l2jmobius.gameserver.util.cron4j;
 
 import java.util.ArrayList;
+import java.util.List;
 
 /**
  * <p>
@@ -37,12 +38,12 @@ public class TaskTable
 	/**
 	 * Pattern list.
 	 */
-	private final ArrayList<SchedulingPattern> patterns = new ArrayList<>();
+	private final List<SchedulingPattern> patterns = new ArrayList<>();
 	
 	/**
 	 * Task list.
 	 */
-	private final ArrayList<Task> tasks = new ArrayList<>();
+	private final List<Task> tasks = new ArrayList<>();
 	
 	/**
 	 * Adds a task and an associated scheduling pattern to the table.

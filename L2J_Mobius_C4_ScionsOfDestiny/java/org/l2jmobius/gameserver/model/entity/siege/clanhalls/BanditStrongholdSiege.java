@@ -426,7 +426,7 @@ public class BanditStrongholdSiege extends ClanHallSiege
 	
 	public List<String> getRegisteredClans()
 	{
-		final ArrayList<String> clans = new ArrayList<>();
+		final List<String> clans = new ArrayList<>();
 		for (clanPlayersInfo a : _clansInfo.values())
 		{
 			clans.add(a._clanName);

@@ -91,9 +91,8 @@ public class Inventory
 	
 	public ItemInstance findItemByItemId(int itemId)
 	{
-		for (int i = 0; i < _items.size(); ++i)
+		for (final ItemInstance temp : _items)
 		{
-			final ItemInstance temp = _items.get(i);
 			if (temp.getItemId() != itemId)
 			{
 				continue;
@@ -235,7 +234,7 @@ public class Inventory
 	
 	public List<ItemInstance> equipItem(ItemInstance item)
 	{
-		final ArrayList<ItemInstance> changedItems = new ArrayList<>();
+		final List<ItemInstance> changedItems = new ArrayList<>();
 		final int targetSlot = item.getItem().getBodyPart();
 		switch (targetSlot)
 		{
@@ -427,9 +426,8 @@ public class Inventory
 	
 	public ItemInstance getItem(int objectId)
 	{
-		for (int i = 0; i < _items.size(); ++i)
+		for (final ItemInstance temp : _items)
 		{
-			final ItemInstance temp = _items.get(i);
 			if (temp.getObjectId() != objectId)
 			{
 				continue;

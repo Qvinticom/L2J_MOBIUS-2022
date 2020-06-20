@@ -181,7 +181,7 @@ public class MultiSellChoose implements IClientIncomingPacket
 					return;
 				}
 				
-				final ArrayList<Ingredient> ingredientsList = new ArrayList<>(entry.getIngredients().size());
+				final List<Ingredient> ingredientsList = new ArrayList<>(entry.getIngredients().size());
 				// Generate a list of distinct ingredients and counts in order to check if the correct item-counts
 				// are possessed by the player
 				boolean newIng;

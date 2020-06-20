@@ -17,6 +17,7 @@
 package org.l2jmobius.gameserver.model.clientstrings;
 
 import java.util.ArrayList;
+import java.util.List;
 
 /**
  * @author Forsaiken, Zoey76
@@ -31,7 +32,7 @@ public abstract class Builder
 	
 	public static Builder newBuilder(String text)
 	{
-		final ArrayList<Builder> builders = new ArrayList<>();
+		final List<Builder> builders = new ArrayList<>();
 		
 		int index1 = 0;
 		int index2 = 0;

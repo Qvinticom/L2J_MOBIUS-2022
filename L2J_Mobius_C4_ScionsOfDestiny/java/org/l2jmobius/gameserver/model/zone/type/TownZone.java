@@ -19,8 +19,8 @@ package org.l2jmobius.gameserver.model.zone.type;
 import org.l2jmobius.Config;
 import org.l2jmobius.gameserver.model.actor.Creature;
 import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
-import org.l2jmobius.gameserver.model.zone.ZoneRespawn;
 import org.l2jmobius.gameserver.model.zone.ZoneId;
+import org.l2jmobius.gameserver.model.zone.ZoneRespawn;
 
 /**
  * A Town zone

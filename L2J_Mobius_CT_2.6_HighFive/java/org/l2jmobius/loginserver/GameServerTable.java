@@ -29,6 +29,7 @@ import java.sql.ResultSet;
 import java.sql.Statement;
 import java.util.ArrayList;
 import java.util.HashMap;
+import java.util.List;
 import java.util.Map;
 import java.util.logging.Logger;
 
@@ -302,7 +303,7 @@ public class GameServerTable implements IXmlReader
 		private GameServerThread _gst;
 		private int _status;
 		// network
-		private final ArrayList<GameServerAddress> _addrs = new ArrayList<>(5);
+		private final List<GameServerAddress> _addrs = new ArrayList<>(5);
 		private int _port;
 		// config
 		private static final boolean IS_PVP = true;

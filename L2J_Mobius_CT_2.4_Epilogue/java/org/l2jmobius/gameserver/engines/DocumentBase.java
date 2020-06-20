@@ -666,7 +666,7 @@ public abstract class DocumentBase
 				case "clanhall":
 				{
 					final StringTokenizer st = new StringTokenizer(a.getNodeValue(), ",");
-					final ArrayList<Integer> array = new ArrayList<>(st.countTokens());
+					final List<Integer> array = new ArrayList<>(st.countTokens());
 					while (st.hasMoreTokens())
 					{
 						final String item = st.nextToken().trim();
@@ -742,7 +742,7 @@ public abstract class DocumentBase
 				case "class_id_restriction":
 				{
 					final StringTokenizer st = new StringTokenizer(a.getNodeValue(), ",");
-					final ArrayList<Integer> array = new ArrayList<>(st.countTokens());
+					final List<Integer> array = new ArrayList<>(st.countTokens());
 					while (st.hasMoreTokens())
 					{
 						final String item = st.nextToken().trim();
@@ -760,7 +760,7 @@ public abstract class DocumentBase
 				case "instanceid":
 				{
 					final StringTokenizer st = new StringTokenizer(a.getNodeValue(), ",");
-					final ArrayList<Integer> array = new ArrayList<>(st.countTokens());
+					final List<Integer> array = new ArrayList<>(st.countTokens());
 					while (st.hasMoreTokens())
 					{
 						final String item = st.nextToken().trim();
@@ -784,7 +784,7 @@ public abstract class DocumentBase
 				case "haspet":
 				{
 					final StringTokenizer st = new StringTokenizer(a.getNodeValue(), ",");
-					final ArrayList<Integer> array = new ArrayList<>(st.countTokens());
+					final List<Integer> array = new ArrayList<>(st.countTokens());
 					while (st.hasMoreTokens())
 					{
 						final String item = st.nextToken().trim();
@@ -796,7 +796,7 @@ public abstract class DocumentBase
 				case "servitornpcid":
 				{
 					final StringTokenizer st = new StringTokenizer(a.getNodeValue(), ",");
-					final ArrayList<Integer> array = new ArrayList<>(st.countTokens());
+					final List<Integer> array = new ArrayList<>(st.countTokens());
 					while (st.hasMoreTokens())
 					{
 						final String item = st.nextToken().trim();

@@ -627,7 +627,7 @@ public abstract class DocumentBase
 			else if ("class_id_restriction".equalsIgnoreCase(a.getNodeName()))
 			{
 				final StringTokenizer st = new StringTokenizer(a.getNodeValue(), ",");
-				final ArrayList<Integer> array = new ArrayList<>(st.countTokens());
+				final List<Integer> array = new ArrayList<>(st.countTokens());
 				while (st.hasMoreTokens())
 				{
 					final String item = st.nextToken().trim();

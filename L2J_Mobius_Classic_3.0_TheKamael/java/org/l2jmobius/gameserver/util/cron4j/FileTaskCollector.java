@@ -21,6 +21,7 @@ package org.l2jmobius.gameserver.util.cron4j;
 import java.io.File;
 import java.io.IOException;
 import java.util.ArrayList;
+import java.util.List;
 
 /**
  * <p>
@@ -34,7 +35,7 @@ class FileTaskCollector implements TaskCollector
 	/**
 	 * File list.
 	 */
-	private final ArrayList<File> files = new ArrayList<>();
+	private final List<File> files = new ArrayList<>();
 	
 	/**
 	 * Adds a file.

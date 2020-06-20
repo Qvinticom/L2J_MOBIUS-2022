@@ -19,6 +19,7 @@
 package org.l2jmobius.gameserver.util.cron4j;
 
 import java.util.ArrayList;
+import java.util.List;
 
 /**
  * <p>
@@ -37,17 +38,17 @@ class MemoryTaskCollector implements TaskCollector
 	/**
 	 * The inner scheduling pattern list.
 	 */
-	private final ArrayList<SchedulingPattern> patterns = new ArrayList<>();
+	private final List<SchedulingPattern> patterns = new ArrayList<>();
 	
 	/**
 	 * The inner task list.
 	 */
-	private final ArrayList<Task> tasks = new ArrayList<>();
+	private final List<Task> tasks = new ArrayList<>();
 	
 	/**
 	 * IDs for task-pattern couples.
 	 */
-	private final ArrayList<String> ids = new ArrayList<>();
+	private final List<String> ids = new ArrayList<>();
 	
 	/**
 	 * Counts how many task are currently collected by this collector.

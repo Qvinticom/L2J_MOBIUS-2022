@@ -27,6 +27,7 @@ import java.util.Collection;
 import java.util.Comparator;
 import java.util.Date;
 import java.util.HashMap;
+import java.util.List;
 import java.util.Map;
 import java.util.concurrent.ScheduledFuture;
 import java.util.concurrent.TimeUnit;
@@ -69,7 +70,7 @@ public class ItemAuctionInstance
 	private final int _instanceId;
 	private final AtomicInteger _auctionIds;
 	private final Map<Integer, ItemAuction> _auctions;
-	private final ArrayList<AuctionItem> _items;
+	private final List<AuctionItem> _items;
 	private final AuctionDateGenerator _dateGenerator;
 	
 	private ItemAuction _currentAuction;
@@ -593,7 +594,7 @@ public class ItemAuctionInstance
 				return null;
 			}
 			
-			final ArrayList<ItemAuctionBid> auctionBids = new ArrayList<>();
+			final List<ItemAuctionBid> auctionBids = new ArrayList<>();
 			try (PreparedStatement ps = con.prepareStatement(SELECT_PLAYERS_ID_BY_AUCTION_ID))
 			{
 				ps.setInt(1, auctionId);

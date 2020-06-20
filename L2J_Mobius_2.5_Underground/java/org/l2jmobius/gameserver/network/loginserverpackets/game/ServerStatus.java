@@ -17,6 +17,7 @@
 package org.l2jmobius.gameserver.network.loginserverpackets.game;
 
 import java.util.ArrayList;
+import java.util.List;
 
 import org.l2jmobius.commons.network.BaseSendablePacket;
 
@@ -25,7 +26,7 @@ import org.l2jmobius.commons.network.BaseSendablePacket;
  */
 public class ServerStatus extends BaseSendablePacket
 {
-	private final ArrayList<Attribute> _attributes;
+	private final List<Attribute> _attributes;
 	
 	public static final String[] STATUS_STRING =
 	{

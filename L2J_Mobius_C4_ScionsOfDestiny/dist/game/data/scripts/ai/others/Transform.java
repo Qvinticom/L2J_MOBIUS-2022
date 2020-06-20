@@ -17,6 +17,7 @@
 package ai.others;
 
 import java.util.ArrayList;
+import java.util.List;
 
 import org.l2jmobius.Config;
 import org.l2jmobius.commons.util.Rnd;
@@ -32,7 +33,7 @@ import org.l2jmobius.gameserver.network.serverpackets.CreatureSay;
 
 public class Transform extends Quest
 {
-	private final ArrayList<Transformer> _mobs = new ArrayList<>();
+	private final List<Transformer> _mobs = new ArrayList<>();
 	
 	private static class Transformer
 	{

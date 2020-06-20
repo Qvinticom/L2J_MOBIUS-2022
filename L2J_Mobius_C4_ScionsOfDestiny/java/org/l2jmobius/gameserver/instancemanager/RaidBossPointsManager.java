@@ -181,7 +181,7 @@ public class RaidBossPointsManager
 				tmpPoints.put(ownerId, totalPoints);
 			}
 		}
-		final ArrayList<Entry<Integer, Integer>> list = new ArrayList<>(tmpPoints.entrySet());
+		final List<Entry<Integer, Integer>> list = new ArrayList<>(tmpPoints.entrySet());
 		Collections.sort(list, _comparator);
 		int ranking = 1;
 		for (Entry<Integer, Integer> entry : list)
@@ -209,7 +209,7 @@ public class RaidBossPointsManager
 				tmpPoints.put(ownerId, totalPoints);
 			}
 		}
-		final ArrayList<Entry<Integer, Integer>> list = new ArrayList<>(tmpPoints.entrySet());
+		final List<Entry<Integer, Integer>> list = new ArrayList<>(tmpPoints.entrySet());
 		Collections.sort(list, _comparator);
 		int ranking = 1;
 		for (Entry<Integer, Integer> entry : list)

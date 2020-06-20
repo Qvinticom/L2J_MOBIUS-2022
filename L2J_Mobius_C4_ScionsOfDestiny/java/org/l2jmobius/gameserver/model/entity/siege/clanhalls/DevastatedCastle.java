@@ -23,6 +23,7 @@ import java.util.ArrayList;
 import java.util.Calendar;
 import java.util.GregorianCalendar;
 import java.util.HashMap;
+import java.util.List;
 import java.util.Map;
 import java.util.concurrent.ScheduledFuture;
 import java.util.logging.Logger;
@@ -63,8 +64,8 @@ public class DevastatedCastle
 	private NpcInstance _minion1 = null;
 	private NpcInstance _minion2 = null;
 	
-	private final ArrayList<MonsterLocation> _monsters = new ArrayList<>();
-	private ArrayList<Spawn> _spawns = new ArrayList<>();
+	private final List<MonsterLocation> _monsters = new ArrayList<>();
+	private List<Spawn> _spawns = new ArrayList<>();
 	
 	private final Calendar _siegetime = Calendar.getInstance();
 	

@@ -17,6 +17,7 @@
 package ai.bosses.Anais;
 
 import java.util.ArrayList;
+import java.util.List;
 
 import org.l2jmobius.gameserver.ai.CtrlIntention;
 import org.l2jmobius.gameserver.model.Location;
@@ -41,7 +42,7 @@ public class Anais extends AbstractNpcAI
 	// Skill
 	private static SkillHolder DIVINE_NOVA = new SkillHolder(6326, 1);
 	// Instances
-	ArrayList<Npc> _divineBurners = new ArrayList<>(4);
+	List<Npc> _divineBurners = new ArrayList<>(4);
 	private PlayerInstance _nextTarget = null;
 	private Npc _current = null;
 	private int _pot = 0;

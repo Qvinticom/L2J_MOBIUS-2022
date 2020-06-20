@@ -29,6 +29,7 @@ import java.io.Reader;
 import java.net.URL;
 import java.nio.charset.StandardCharsets;
 import java.util.ArrayList;
+import java.util.List;
 
 /**
  * <p>
@@ -304,7 +305,7 @@ public class CronParser
 		size = line.length();
 		
 		// Splitting the line
-		final ArrayList<String> splitted = new ArrayList<>();
+		final List<String> splitted = new ArrayList<>();
 		StringBuilder current = null;
 		boolean quotes = false;
 		for (int i = 0; i < size; i++)
@@ -376,9 +377,9 @@ public class CronParser
 		File stdinFile = null;
 		File stdoutFile = null;
 		File stderrFile = null;
-		final ArrayList<String> envsList = new ArrayList<>();
+		final List<String> envsList = new ArrayList<>();
 		String command = null;
-		final ArrayList<String> argsList = new ArrayList<>();
+		final List<String> argsList = new ArrayList<>();
 		for (int i = 0; i < size; i++)
 		{
 			final String tk = splitted.get(i);

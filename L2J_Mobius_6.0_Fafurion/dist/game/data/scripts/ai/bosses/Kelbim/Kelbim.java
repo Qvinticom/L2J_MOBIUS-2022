@@ -106,7 +106,7 @@ public class Kelbim extends AbstractNpcAI
 	private static GrandBossInstance _kelbimBoss;
 	private static long _lastAction;
 	private static int _bossStage;
-	private static ArrayList<Npc> _minions = new ArrayList<>();
+	private static List<Npc> _minions = new ArrayList<>();
 	
 	public Kelbim()
 	{

@@ -18,7 +18,7 @@
  */
 package org.l2jmobius.gameserver.util.cron4j;
 
-import java.util.ArrayList;
+import java.util.List;
 
 /**
  * <p>
@@ -48,7 +48,7 @@ class DayOfMonthValueMatcher extends IntArrayValueMatcher
 	 * Builds the ValueMatcher.
 	 * @param values An ArrayList of Integer elements, one for every value accepted by the matcher. The match() method will return true only if its parameter will be one of this list or the last-day-of-month setting applies.
 	 */
-	public DayOfMonthValueMatcher(ArrayList<?> values)
+	public DayOfMonthValueMatcher(List<?> values)
 	{
 		super(values);
 	}

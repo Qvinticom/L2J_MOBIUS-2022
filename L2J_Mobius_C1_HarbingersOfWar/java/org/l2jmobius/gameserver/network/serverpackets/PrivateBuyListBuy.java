@@ -46,7 +46,7 @@ public class PrivateBuyListBuy extends ServerBasePacket
 		writeD(_seller.getAdena());
 		final List<TradeItem> buyerslist = _buyer.getBuyList();
 		final Collection<ItemInstance> sellerItems = _seller.getInventory().getItems();
-		final ArrayList<TradeItem> sellerslist = new ArrayList<>();
+		final List<TradeItem> sellerslist = new ArrayList<>();
 		int count = buyerslist.size();
 		for (int i = 0; i < count; ++i)
 		{

@@ -63,9 +63,9 @@ public class AugmentationData
 	private static final int BASESTAT_MEN = 16344;
 	
 	private static List<augmentationStat>[] _augmentationStats = null;
-	private static Map<Integer, ArrayList<augmentationSkill>> _blueSkills = null;
-	private static Map<Integer, ArrayList<augmentationSkill>> _purpleSkills = null;
-	private static Map<Integer, ArrayList<augmentationSkill>> _redSkills = null;
+	private static Map<Integer, List<augmentationSkill>> _blueSkills = null;
+	private static Map<Integer, List<augmentationSkill>> _purpleSkills = null;
+	private static Map<Integer, List<augmentationSkill>> _redSkills = null;
 	
 	private AugmentationData()
 	{

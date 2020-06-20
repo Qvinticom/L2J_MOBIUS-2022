@@ -21,6 +21,7 @@ import static org.l2jmobius.gameserver.ai.CtrlIntention.AI_INTENTION_FOLLOW;
 import static org.l2jmobius.gameserver.ai.CtrlIntention.AI_INTENTION_IDLE;
 
 import java.util.ArrayList;
+import java.util.List;
 
 import org.l2jmobius.gameserver.data.xml.impl.SkillData;
 import org.l2jmobius.gameserver.geoengine.GeoEngine;
@@ -210,7 +211,7 @@ public class ScarletVanHalisha extends AbstractNpcAI
 	
 	private Creature getRandomTarget(Npc npc, Skill skill)
 	{
-		final ArrayList<Creature> result = new ArrayList<>();
+		final List<Creature> result = new ArrayList<>();
 		{
 			for (PlayerInstance obj : npc.getInstanceWorld().getPlayers())
 			{

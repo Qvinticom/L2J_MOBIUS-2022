@@ -19,6 +19,7 @@
 package org.l2jmobius.gameserver.util.cron4j;
 
 import java.util.ArrayList;
+import java.util.List;
 
 /**
  * <p>
@@ -64,7 +65,7 @@ public class TaskExecutor
 	/**
 	 * A list of {@link TaskExecutorListener} instances.
 	 */
-	private final ArrayList<TaskExecutorListener> listeners = new ArrayList<>();
+	private final List<TaskExecutorListener> listeners = new ArrayList<>();
 	
 	/**
 	 * A time stamp reporting the start time of this thread.

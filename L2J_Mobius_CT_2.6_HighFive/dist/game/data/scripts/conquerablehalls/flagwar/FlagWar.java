@@ -781,7 +781,7 @@ public abstract class FlagWar extends ClanHallSiegeEngine
 	{
 		try (Connection con = DatabaseFactory.getConnection())
 		{
-			final ArrayList<Integer> listInstance = _data.get(clanId).players;
+			final List<Integer> listInstance = _data.get(clanId).players;
 			if (listInstance == null)
 			{
 				LOGGER.warning(getName() + ": Tried to load unregistered clan with ID " + clanId);
@@ -880,8 +880,8 @@ public abstract class FlagWar extends ClanHallSiegeEngine
 	{
 		int flag = 0;
 		int npc = 0;
-		ArrayList<Integer> players = new ArrayList<>(18);
-		ArrayList<PlayerInstance> playersInstance = new ArrayList<>(18);
+		List<Integer> players = new ArrayList<>(18);
+		List<PlayerInstance> playersInstance = new ArrayList<>(18);
 		Spawn warrior = null;
 		Spawn flagInstance = null;
 	}

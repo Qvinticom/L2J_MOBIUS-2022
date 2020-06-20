@@ -21,6 +21,7 @@ package org.l2jmobius.gameserver.util.cron4j;
 import java.util.ArrayList;
 import java.util.Calendar;
 import java.util.GregorianCalendar;
+import java.util.List;
 import java.util.StringTokenizer;
 import java.util.TimeZone;
 
@@ -165,27 +166,27 @@ public class SchedulingPattern
 	/**
 	 * The ValueMatcher list for the "minute" field.
 	 */
-	protected ArrayList<ValueMatcher> minuteMatchers = new ArrayList<>();
+	protected List<ValueMatcher> minuteMatchers = new ArrayList<>();
 	
 	/**
 	 * The ValueMatcher list for the "hour" field.
 	 */
-	protected ArrayList<ValueMatcher> hourMatchers = new ArrayList<>();
+	protected List<ValueMatcher> hourMatchers = new ArrayList<>();
 	
 	/**
 	 * The ValueMatcher list for the "day of month" field.
 	 */
-	protected ArrayList<ValueMatcher> dayOfMonthMatchers = new ArrayList<>();
+	protected List<ValueMatcher> dayOfMonthMatchers = new ArrayList<>();
 	
 	/**
 	 * The ValueMatcher list for the "month" field.
 	 */
-	protected ArrayList<ValueMatcher> monthMatchers = new ArrayList<>();
+	protected List<ValueMatcher> monthMatchers = new ArrayList<>();
 	
 	/**
 	 * The ValueMatcher list for the "day of week" field.
 	 */
-	protected ArrayList<ValueMatcher> dayOfWeekMatchers = new ArrayList<>();
+	protected List<ValueMatcher> dayOfWeekMatchers = new ArrayList<>();
 	
 	/**
 	 * How many matcher groups in this pattern?
@@ -270,12 +271,12 @@ public class SchedulingPattern
 		{
 			return new AlwaysTrueValueMatcher();
 		}
-		final ArrayList<Object> values = new ArrayList<>();
+		final List<Object> values = new ArrayList<>();
 		final StringTokenizer st = new StringTokenizer(str, ",");
 		while (st.hasMoreTokens())
 		{
 			final String element = st.nextToken();
-			ArrayList<Integer> local;
+			List<Integer> local;
 			try
 			{
 				local = parseListElement(element, parser);
@@ -311,7 +312,7 @@ public class SchedulingPattern
 	 * @return A list of integers representing the allowed values.
 	 * @throws Exception If the supplied pattern part is not valid.
 	 */
-	private ArrayList<Integer> parseListElement(String str, ValueParser parser) throws Exception
+	private List<Integer> parseListElement(String str, ValueParser parser) throws Exception
 	{
 		final StringTokenizer st = new StringTokenizer(str, "/");
 		final int size = st.countTokens();
@@ -319,7 +320,7 @@ public class SchedulingPattern
 		{
 			throw new Exception("syntax error");
 		}
-		ArrayList<Integer> values;
+		List<Integer> values;
 		try
 		{
 			values = parseRange(st.nextToken(), parser);
@@ -344,7 +345,7 @@ public class SchedulingPattern
 			{
 				throw new Exception("non positive divisor \"" + div + "\"");
 			}
-			final ArrayList<Integer> values2 = new ArrayList<>();
+			final List<Integer> values2 = new ArrayList<>();
 			for (int i = 0; i < values.size(); i += div)
 			{
 				values2.add(values.get(i));
@@ -361,13 +362,13 @@ public class SchedulingPattern
 	 * @return A list of integers representing the allowed values.
 	 * @throws Exception If the supplied pattern part is not valid.
 	 */
-	private ArrayList<Integer> parseRange(String str, ValueParser parser) throws Exception
+	private List<Integer> parseRange(String str, ValueParser parser) throws Exception
 	{
 		if (str.equals("*"))
 		{
 			final int min = parser.getMinValue();
 			final int max = parser.getMaxValue();
-			final ArrayList<Integer> values = new ArrayList<>();
+			final List<Integer> values = new ArrayList<>();
 			for (int i = min; i <= max; i++)
 			{
 				values.add(i);
@@ -392,7 +393,7 @@ public class SchedulingPattern
 		}
 		if (size == 1)
 		{
-			final ArrayList<Integer> values = new ArrayList<>();
+			final List<Integer> values = new ArrayList<>();
 			values.add(v1);
 			return values;
 		}
@@ -406,7 +407,7 @@ public class SchedulingPattern
 		{
 			throw new Exception("invalid value \"" + v2Str + "\", " + e.getMessage());
 		}
-		final ArrayList<Integer> values = new ArrayList<>();
+		final List<Integer> values = new ArrayList<>();
 		if (v1 < v2)
 		{
 			for (int i = v1; i <= v2; i++)

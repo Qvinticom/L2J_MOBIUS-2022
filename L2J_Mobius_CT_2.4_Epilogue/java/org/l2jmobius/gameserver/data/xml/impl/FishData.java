@@ -111,7 +111,7 @@ public class FishData implements IXmlReader
 	 */
 	public List<Fish> getFish(int level, int group, int grade)
 	{
-		final ArrayList<Fish> result = new ArrayList<>();
+		final List<Fish> result = new ArrayList<>();
 		Map<Integer, Fish> fish = null;
 		switch (grade)
 		{

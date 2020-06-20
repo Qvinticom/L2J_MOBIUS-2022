@@ -1068,7 +1068,7 @@ public class Config
 	public static long DEADLOCKCHECK_INTIAL_TIME;
 	public static long DEADLOCKCHECK_DELAY_TIME;
 	
-	public static ArrayList<String> QUESTION_LIST = new ArrayList<>();
+	public static List<String> QUESTION_LIST = new ArrayList<>();
 	
 	public static int SERVER_ID;
 	public static byte[] HEX_ID;

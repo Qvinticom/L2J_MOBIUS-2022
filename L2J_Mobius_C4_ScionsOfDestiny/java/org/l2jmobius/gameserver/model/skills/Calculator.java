@@ -145,7 +145,7 @@ public class Calculator
 			return;
 		}
 		
-		final ArrayList<Func> tmp = new ArrayList<>();
+		final List<Func> tmp = new ArrayList<>();
 		tmp.addAll(Arrays.asList(_functions));
 		
 		if (tmp.contains(f))
