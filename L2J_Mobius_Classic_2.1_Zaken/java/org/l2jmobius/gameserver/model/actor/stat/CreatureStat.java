@@ -881,7 +881,7 @@ public class CreatureStat
 	 */
 	public void recalculateStats(boolean broadcast)
 	{
-		Set<Stat> changed = null;
+		_lock.writeLock().lock();
 		
 		// Copy old data before wiping it out
 		final Map<Stat, Double> adds;
@@ -897,7 +897,9 @@ public class CreatureStat
 			muls = null;
 		}
 		
-		_lock.writeLock().lock();
+		// Set of Stat that changed.
+		Set<Stat> changed = null;
+		
 		try
 		{
 			// Wipe all the data
