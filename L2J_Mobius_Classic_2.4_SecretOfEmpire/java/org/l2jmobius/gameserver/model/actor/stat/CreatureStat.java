@@ -16,7 +16,6 @@
  */
 package org.l2jmobius.gameserver.model.actor.stat;
 
-import java.util.Collections;
 import java.util.Deque;
 import java.util.EnumMap;
 import java.util.EnumSet;
@@ -794,7 +793,11 @@ public class CreatureStat
 		_lock.readLock().lock();
 		try
 		{
-			return _statsAdd.getOrDefault(stat, defaultValue);
+			if (_statsAdd.containsKey(stat))
+			{
+				return _statsAdd.get(stat);
+			}
+			return defaultValue;
 		}
 		finally
 		{
@@ -821,7 +824,11 @@ public class CreatureStat
 		_lock.readLock().lock();
 		try
 		{
-			return _statsMul.getOrDefault(stat, defaultValue);
+			if (_statsMul.containsKey(stat))
+			{
+				return _statsMul.get(stat);
+			}
+			return defaultValue;
 		}
 		finally
 		{
@@ -836,8 +843,7 @@ public class CreatureStat
 	 */
 	public double getValue(Stat stat, double baseValue)
 	{
-		final Double fixedValue = _fixedValue.get(stat);
-		return fixedValue != null ? fixedValue : stat.finalize(_creature, OptionalDouble.of(baseValue));
+		return _fixedValue.containsKey(stat) ? _fixedValue.get(stat) : stat.finalize(_creature, OptionalDouble.of(baseValue));
 	}
 	
 	/**
@@ -846,8 +852,7 @@ public class CreatureStat
 	 */
 	public double getValue(Stat stat)
 	{
-		final Double fixedValue = _fixedValue.get(stat);
-		return fixedValue != null ? fixedValue : stat.finalize(_creature, OptionalDouble.empty());
+		return _fixedValue.containsKey(stat) ? _fixedValue.get(stat) : stat.finalize(_creature, OptionalDouble.empty());
 	}
 	
 	protected void resetStats()
@@ -877,8 +882,19 @@ public class CreatureStat
 	public void recalculateStats(boolean broadcast)
 	{
 		// Copy old data before wiping it out
-		final Map<Stat, Double> adds = !broadcast ? Collections.emptyMap() : new EnumMap<>(_statsAdd);
-		final Map<Stat, Double> muls = !broadcast ? Collections.emptyMap() : new EnumMap<>(_statsMul);
+		final Map<Stat, Double> adds;
+		final Map<Stat, Double> muls;
+		if (broadcast)
+		{
+			adds = new EnumMap<>(_statsAdd);
+			muls = new EnumMap<>(_statsMul);
+		}
+		else
+		{
+			adds = null;
+			muls = null;
+		}
+		
 		_lock.writeLock().lock();
 		try
 		{
@@ -970,17 +986,17 @@ public class CreatureStat
 		// Notify recalculation to child classes
 		onRecalculateStats(broadcast);
 		
-		if (broadcast)
+		if (broadcast && (adds != null) && (muls != null)) // adds and muls cannot be null when broadcast is true, but Eclipse throws warning bellow.
 		{
 			// Calculate the difference between old and new stats
 			final Set<Stat> changed = new HashSet<>();
 			for (Stat stat : Stat.values())
 			{
-				if (_statsAdd.getOrDefault(stat, stat.getResetAddValue()) != adds.getOrDefault(stat, stat.getResetAddValue()))
+				if ((_statsAdd.containsKey(stat) ? _statsAdd.get(stat) : stat.getResetAddValue()) != (adds.containsKey(stat) ? adds.get(stat) : stat.getResetAddValue()))
 				{
 					changed.add(stat);
 				}
-				else if (_statsMul.getOrDefault(stat, stat.getResetMulValue()) != muls.getOrDefault(stat, stat.getResetMulValue()))
+				else if ((_statsMul.containsKey(stat) ? _statsMul.get(stat) : stat.getResetMulValue()) != (muls.containsKey(stat) ? muls.get(stat) : stat.getResetMulValue()))
 				{
 					changed.add(stat);
 				}
@@ -1009,7 +1025,12 @@ public class CreatureStat
 	
 	public double getPositionTypeValue(Stat stat, Position position)
 	{
-		return _positionStats.getOrDefault(stat, Collections.emptyMap()).getOrDefault(position, 1d);
+		final Map<Position, Double> map = _positionStats.get(stat);
+		if ((map != null) && map.containsKey(position))
+		{
+			return map.get(position);
+		}
+		return 1d;
 	}
 	
 	public void mergePositionTypeValue(Stat stat, Position position, double value, BiFunction<? super Double, ? super Double, ? extends Double> func)
@@ -1019,7 +1040,12 @@ public class CreatureStat
 	
 	public double getMoveTypeValue(Stat stat, MoveType type)
 	{
-		return _moveTypeStats.getOrDefault(stat, Collections.emptyMap()).getOrDefault(type, 0d);
+		final Map<MoveType, Double> map = _moveTypeStats.get(stat);
+		if ((map != null) && map.containsKey(type))
+		{
+			return map.get(type);
+		}
+		return 0d;
 	}
 	
 	public void mergeMoveTypeValue(Stat stat, MoveType type, double value)
@@ -1029,7 +1055,7 @@ public class CreatureStat
 	
 	public double getReuseTypeValue(int magicType)
 	{
-		return _reuseStat.getOrDefault(magicType, 1d);
+		return _reuseStat.containsKey(magicType) ? _reuseStat.get(magicType) : 1d;
 	}
 	
 	public void mergeReuseTypeValue(int magicType, double value, BiFunction<? super Double, ? super Double, ? extends Double> func)
@@ -1039,7 +1065,7 @@ public class CreatureStat
 	
 	public double getMpConsumeTypeValue(int magicType)
 	{
-		return _mpConsumeStat.getOrDefault(magicType, 1d);
+		return _mpConsumeStat.containsKey(magicType) ? _mpConsumeStat.get(magicType) : 1d;
 	}
 	
 	public void mergeMpConsumeTypeValue(int magicType, double value, BiFunction<? super Double, ? super Double, ? extends Double> func)
