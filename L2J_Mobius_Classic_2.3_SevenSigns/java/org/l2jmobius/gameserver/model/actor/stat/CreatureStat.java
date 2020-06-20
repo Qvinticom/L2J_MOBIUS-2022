@@ -977,32 +977,32 @@ public class CreatureStat
 			}
 			_attackSpeedMultiplier = Formulas.calcAtkSpdMultiplier(_creature);
 			_mAttackSpeedMultiplier = Formulas.calcMAtkSpdMultiplier(_creature);
+			
+			// Notify recalculation to child classes
+			onRecalculateStats(broadcast);
+			
+			if (broadcast && (adds != null) && (muls != null)) // adds and muls cannot be null when broadcast is true, but Eclipse throws warning bellow.
+			{
+				// Calculate the difference between old and new stats
+				final Set<Stat> changed = new HashSet<>();
+				for (Stat stat : Stat.values())
+				{
+					if ((_statsAdd.containsKey(stat) ? _statsAdd.get(stat) : stat.getResetAddValue()) != (adds.containsKey(stat) ? adds.get(stat) : stat.getResetAddValue()))
+					{
+						changed.add(stat);
+					}
+					else if ((_statsMul.containsKey(stat) ? _statsMul.get(stat) : stat.getResetMulValue()) != (muls.containsKey(stat) ? muls.get(stat) : stat.getResetMulValue()))
+					{
+						changed.add(stat);
+					}
+				}
+				
+				_creature.broadcastModifiedStats(changed);
+			}
 		}
 		finally
 		{
 			_lock.writeLock().unlock();
-		}
-		
-		// Notify recalculation to child classes
-		onRecalculateStats(broadcast);
-		
-		if (broadcast && (adds != null) && (muls != null)) // adds and muls cannot be null when broadcast is true, but Eclipse throws warning bellow.
-		{
-			// Calculate the difference between old and new stats
-			final Set<Stat> changed = new HashSet<>();
-			for (Stat stat : Stat.values())
-			{
-				if ((_statsAdd.containsKey(stat) ? _statsAdd.get(stat) : stat.getResetAddValue()) != (adds.containsKey(stat) ? adds.get(stat) : stat.getResetAddValue()))
-				{
-					changed.add(stat);
-				}
-				else if ((_statsMul.containsKey(stat) ? _statsMul.get(stat) : stat.getResetMulValue()) != (muls.containsKey(stat) ? muls.get(stat) : stat.getResetMulValue()))
-				{
-					changed.add(stat);
-				}
-			}
-			
-			_creature.broadcastModifiedStats(changed);
 		}
 	}
 	
