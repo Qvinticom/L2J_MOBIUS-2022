@@ -47,6 +47,16 @@ public class ExTimedHuntingZoneEnter implements IClientIncomingPacket
 			return;
 		}
 		
+		if (player.isInCombat())
+		{
+			player.sendMessage("You can only enter in time-limited hunting zones while not in combat.");
+			return;
+		}
+		if (player.getReputation() < 0)
+		{
+			player.sendMessage("You can only enter in time-limited hunting zones when you have positive reputation.");
+			return;
+		}
 		if (player.isMounted())
 		{
 			player.sendMessage("Cannot use time-limited hunting zones while mounted.");
