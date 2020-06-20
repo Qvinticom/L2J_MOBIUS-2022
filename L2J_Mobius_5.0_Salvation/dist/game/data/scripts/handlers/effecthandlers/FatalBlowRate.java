@@ -16,61 +16,16 @@
  */
 package handlers.effecthandlers;
 
-import org.l2jmobius.gameserver.enums.StatModifierType;
 import org.l2jmobius.gameserver.model.StatSet;
-import org.l2jmobius.gameserver.model.actor.Creature;
-import org.l2jmobius.gameserver.model.effects.AbstractEffect;
-import org.l2jmobius.gameserver.model.items.instance.ItemInstance;
-import org.l2jmobius.gameserver.model.skills.Skill;
 import org.l2jmobius.gameserver.model.stats.Stat;
 
 /**
- * @author Mobius
+ * @author Sdw
  */
-public class FatalBlowRate extends AbstractEffect
+public class FatalBlowRate extends AbstractStatEffect
 {
-	private final double _amount;
-	private final StatModifierType _mode;
-	
 	public FatalBlowRate(StatSet params)
 	{
-		_amount = params.getDouble("amount", 0);
-		_mode = params.getEnum("mode", StatModifierType.class, StatModifierType.DIFF);
-	}
-	
-	@Override
-	public void onStart(Creature effector, Creature effected, Skill skill, ItemInstance item)
-	{
-		switch (_mode)
-		{
-			case DIFF:
-			{
-				effector.getStat().mergeAdd(Stat.BLOW_RATE, _amount);
-				break;
-			}
-			case PER:
-			{
-				effector.getStat().mergeMul(Stat.BLOW_RATE, (_amount / 100) + 1);
-				break;
-			}
-		}
-	}
-	
-	@Override
-	public void onExit(Creature effector, Creature effected, Skill skill)
-	{
-		switch (_mode)
-		{
-			case DIFF:
-			{
-				effector.getStat().mergeAdd(Stat.BLOW_RATE, _amount * -1);
-				break;
-			}
-			case PER:
-			{
-				effector.getStat().mergeMul(Stat.BLOW_RATE, ((_amount / 100) + 1) * -1);
-				break;
-			}
-		}
+		super(params, Stat.BLOW_RATE);
 	}
 }
