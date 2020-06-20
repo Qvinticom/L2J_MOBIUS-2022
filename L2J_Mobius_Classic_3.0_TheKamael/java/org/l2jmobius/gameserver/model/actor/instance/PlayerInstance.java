@@ -9385,6 +9385,11 @@ public class PlayerInstance extends Playable
 			final Map<Integer, Skill> prevSkillList = new HashMap<>();
 			for (SkillLearn skillInfo : skillTree.values())
 			{
+				if ((skillInfo.getSkillId() == CommonSkill.DIVINE_INSPIRATION.getId()) && !Config.AUTO_LEARN_DIVINE_INSPIRATION)
+				{
+					continue;
+				}
+				
 				if (skillInfo.getGetLevel() <= newClass.getLevel())
 				{
 					final Skill prevSkill = prevSkillList.get(skillInfo.getSkillId());
