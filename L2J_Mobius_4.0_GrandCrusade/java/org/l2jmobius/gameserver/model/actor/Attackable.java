@@ -506,8 +506,8 @@ public class Attackable extends Npc
 							// Distribute the Exp and SP between the PlayerInstance and its Summon
 							if (!attacker.isDead())
 							{
-								exp = attacker.getStat().getValue(Stat.EXPSP_RATE, exp) * Config.EXP_AMOUNT_MULTIPLIERS.getOrDefault(attacker.getClassId(), 1f);
-								sp = attacker.getStat().getValue(Stat.EXPSP_RATE, sp) * Config.SP_AMOUNT_MULTIPLIERS.getOrDefault(attacker.getClassId(), 1f);
+								exp = attacker.getStat().getValue(Stat.EXPSP_RATE, exp) * Config.EXP_AMOUNT_MULTIPLIERS[attacker.getClassId().getId()];
+								sp = attacker.getStat().getValue(Stat.EXPSP_RATE, sp) * Config.SP_AMOUNT_MULTIPLIERS[attacker.getClassId().getId()];
 								attacker.addExpAndSp(exp, sp, useVitalityRate());
 								if (exp > 0)
 								{

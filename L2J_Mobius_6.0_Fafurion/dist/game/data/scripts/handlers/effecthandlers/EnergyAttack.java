@@ -153,11 +153,11 @@ public class EnergyAttack extends AbstractEffect
 		double balanceMod = 1;
 		if (attacker.isPlayable())
 		{
-			balanceMod = effected.isPlayable() ? Config.PVP_ENERGY_SKILL_DAMAGE_MULTIPLIERS.getOrDefault(attacker.getActingPlayer().getClassId(), 1f) : Config.PVE_ENERGY_SKILL_DAMAGE_MULTIPLIERS.getOrDefault(attacker.getActingPlayer().getClassId(), 1f);
+			balanceMod = effected.isPlayable() ? Config.PVP_ENERGY_SKILL_DAMAGE_MULTIPLIERS[attacker.getActingPlayer().getClassId().getId()] : Config.PVE_ENERGY_SKILL_DAMAGE_MULTIPLIERS[attacker.getActingPlayer().getClassId().getId()];
 		}
 		if (effected.isPlayable())
 		{
-			defence *= attacker.isPlayable() ? Config.PVP_ENERGY_SKILL_DEFENCE_MULTIPLIERS.getOrDefault(effected.getActingPlayer().getClassId(), 1f) : Config.PVE_ENERGY_SKILL_DEFENCE_MULTIPLIERS.getOrDefault(effected.getActingPlayer().getClassId(), 1f);
+			defence *= attacker.isPlayable() ? Config.PVP_ENERGY_SKILL_DEFENCE_MULTIPLIERS[effected.getActingPlayer().getClassId().getId()] : Config.PVE_ENERGY_SKILL_DEFENCE_MULTIPLIERS[effected.getActingPlayer().getClassId().getId()];
 		}
 		
 		damage = Math.max(0, damage * effector.getStat().getValue(Stat.PHYSICAL_SKILL_POWER, 1)) * balanceMod;

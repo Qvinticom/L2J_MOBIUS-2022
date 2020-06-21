@@ -106,7 +106,7 @@ public class HpCpHeal extends AbstractEffect
 			amount += staticShotBonus + Math.sqrt(mAtkMul * effector.getMAtk());
 			amount *= effected.getStat().getValue(Stat.HEAL_EFFECT, 1);
 			amount += effected.getStat().getValue(Stat.HEAL_EFFECT_ADD, 0);
-			amount *= (item == null) && effector.isPlayable() ? Config.PLAYER_HEALING_SKILL_MULTIPLIERS.getOrDefault(effector.getActingPlayer().getClassId(), 1f) : 1;
+			amount *= (item == null) && effector.isPlayable() ? Config.PLAYER_HEALING_SKILL_MULTIPLIERS[effector.getActingPlayer().getClassId().getId()] : 1f;
 			// Heal critic, since CT2.3 Gracia Final
 			if (skill.isMagic() && (Formulas.calcCrit(skill.getMagicCriticalRate(), effector, effected, skill) || effector.isAffected(EffectFlag.HPCPHEAL_CRITICAL)))
 			{
