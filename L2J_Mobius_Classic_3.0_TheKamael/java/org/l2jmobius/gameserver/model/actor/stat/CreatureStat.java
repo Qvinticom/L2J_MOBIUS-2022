@@ -795,7 +795,7 @@ public class CreatureStat
 		{
 			if (_statsAdd.containsKey(stat))
 			{
-				return _statsAdd.get(stat);
+				return _statsAdd.get(stat).doubleValue();
 			}
 			return defaultValue;
 		}
@@ -826,7 +826,7 @@ public class CreatureStat
 		{
 			if (_statsMul.containsKey(stat))
 			{
-				return _statsMul.get(stat);
+				return _statsMul.get(stat).doubleValue();
 			}
 			return defaultValue;
 		}
@@ -843,7 +843,7 @@ public class CreatureStat
 	 */
 	public double getValue(Stat stat, double baseValue)
 	{
-		return _fixedValue.containsKey(stat) ? _fixedValue.get(stat) : stat.finalize(_creature, OptionalDouble.of(baseValue));
+		return _fixedValue.containsKey(stat) ? _fixedValue.get(stat).doubleValue() : stat.finalize(_creature, OptionalDouble.of(baseValue));
 	}
 	
 	/**
@@ -852,7 +852,7 @@ public class CreatureStat
 	 */
 	public double getValue(Stat stat)
 	{
-		return _fixedValue.containsKey(stat) ? _fixedValue.get(stat) : stat.finalize(_creature, OptionalDouble.empty());
+		return _fixedValue.containsKey(stat) ? _fixedValue.get(stat).doubleValue() : stat.finalize(_creature, OptionalDouble.empty());
 	}
 	
 	protected void resetStats()
@@ -988,11 +988,11 @@ public class CreatureStat
 				changed = new HashSet<>();
 				for (Stat stat : Stat.values())
 				{
-					if ((_statsAdd.containsKey(stat) ? _statsAdd.get(stat) : stat.getResetAddValue()) != (adds.containsKey(stat) ? adds.get(stat) : stat.getResetAddValue()))
+					if ((_statsAdd.containsKey(stat) ? _statsAdd.get(stat).doubleValue() : stat.getResetAddValue()) != (adds.containsKey(stat) ? adds.get(stat).doubleValue() : stat.getResetAddValue()))
 					{
 						changed.add(stat);
 					}
-					else if ((_statsMul.containsKey(stat) ? _statsMul.get(stat) : stat.getResetMulValue()) != (muls.containsKey(stat) ? muls.get(stat) : stat.getResetMulValue()))
+					else if ((_statsMul.containsKey(stat) ? _statsMul.get(stat).doubleValue() : stat.getResetMulValue()) != (muls.containsKey(stat) ? muls.get(stat).doubleValue() : stat.getResetMulValue()))
 					{
 						changed.add(stat);
 					}
@@ -1035,7 +1035,7 @@ public class CreatureStat
 		final Map<Position, Double> map = _positionStats.get(stat);
 		if ((map != null) && map.containsKey(position))
 		{
-			return map.get(position);
+			return map.get(position).doubleValue();
 		}
 		return 1d;
 	}
@@ -1050,7 +1050,7 @@ public class CreatureStat
 		final Map<MoveType, Double> map = _moveTypeStats.get(stat);
 		if ((map != null) && map.containsKey(type))
 		{
-			return map.get(type);
+			return map.get(type).doubleValue();
 		}
 		return 0d;
 	}
@@ -1062,7 +1062,7 @@ public class CreatureStat
 	
 	public double getReuseTypeValue(int magicType)
 	{
-		return _reuseStat.containsKey(magicType) ? _reuseStat.get(magicType) : 1d;
+		return _reuseStat.containsKey(magicType) ? _reuseStat.get(magicType).doubleValue() : 1d;
 	}
 	
 	public void mergeReuseTypeValue(int magicType, double value, BiFunction<? super Double, ? super Double, ? extends Double> func)
@@ -1072,7 +1072,7 @@ public class CreatureStat
 	
 	public double getMpConsumeTypeValue(int magicType)
 	{
-		return _mpConsumeStat.containsKey(magicType) ? _mpConsumeStat.get(magicType) : 1d;
+		return _mpConsumeStat.containsKey(magicType) ? _mpConsumeStat.get(magicType).doubleValue() : 1d;
 	}
 	
 	public void mergeMpConsumeTypeValue(int magicType, double value, BiFunction<? super Double, ? super Double, ? extends Double> func)
@@ -1085,7 +1085,7 @@ public class CreatureStat
 		final LinkedList<Double> skillEvasions = _skillEvasionStat.get(magicType);
 		if ((skillEvasions != null) && !skillEvasions.isEmpty())
 		{
-			return skillEvasions.peekLast();
+			return skillEvasions.peekLast().doubleValue();
 		}
 		return 0d;
 	}
