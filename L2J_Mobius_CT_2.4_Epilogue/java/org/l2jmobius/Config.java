@@ -714,11 +714,11 @@ public class Config
 	public static boolean SHOW_CREST_WITHOUT_QUEST;
 	public static boolean ENABLE_RANDOM_ENCHANT_EFFECT;
 	public static int MIN_NPC_LVL_DMG_PENALTY;
-	public static Map<Integer, Float> NPC_DMG_PENALTY;
-	public static Map<Integer, Float> NPC_CRIT_DMG_PENALTY;
-	public static Map<Integer, Float> NPC_SKILL_DMG_PENALTY;
+	public static float[] NPC_DMG_PENALTY;
+	public static float[] NPC_CRIT_DMG_PENALTY;
+	public static float[] NPC_SKILL_DMG_PENALTY;
 	public static int MIN_NPC_LVL_MAGIC_PENALTY;
-	public static Map<Integer, Float> NPC_SKILL_CHANCE_PENALTY;
+	public static float[] NPC_SKILL_CHANCE_PENALTY;
 	public static int DECAY_TIME_TASK;
 	public static int DEFAULT_CORPSE_TIME;
 	public static int SPOILED_CORPSE_EXTEND_TIME;
@@ -3578,16 +3578,16 @@ public class Config
 	
 	/**
 	 * @param line the string line to parse
-	 * @return a parsed float map
+	 * @return a parsed float array
 	 */
-	private static Map<Integer, Float> parseConfigLine(String line)
+	private static float[] parseConfigLine(String line)
 	{
 		final String[] propertySplit = line.split(",");
-		final Map<Integer, Float> ret = new HashMap<>(propertySplit.length);
+		final float[] ret = new float[propertySplit.length];
 		int i = 0;
 		for (String value : propertySplit)
 		{
-			ret.put(i++, Float.parseFloat(value));
+			ret[i++] = Float.parseFloat(value);
 		}
 		return ret;
 	}

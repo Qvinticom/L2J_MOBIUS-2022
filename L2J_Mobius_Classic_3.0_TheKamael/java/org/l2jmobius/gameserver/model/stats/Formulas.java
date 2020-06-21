@@ -804,13 +804,13 @@ public class Formulas
 			if ((attacker.getActingPlayer() != null) && !target.isRaid() && !target.isRaidMinion() && (target.getLevel() >= Config.MIN_NPC_LVL_MAGIC_PENALTY) && ((target.getLevel() - attacker.getActingPlayer().getLevel()) >= 3))
 			{
 				final int lvlDiff = target.getLevel() - attacker.getActingPlayer().getLevel() - 2;
-				if (lvlDiff >= Config.NPC_SKILL_CHANCE_PENALTY.size())
+				if (lvlDiff >= Config.NPC_SKILL_CHANCE_PENALTY.length)
 				{
-					targetModifier = Config.NPC_SKILL_CHANCE_PENALTY.get(Config.NPC_SKILL_CHANCE_PENALTY.size() - 1);
+					targetModifier = Config.NPC_SKILL_CHANCE_PENALTY[Config.NPC_SKILL_CHANCE_PENALTY.length - 1];
 				}
 				else
 				{
-					targetModifier = Config.NPC_SKILL_CHANCE_PENALTY.get(lvlDiff);
+					targetModifier = Config.NPC_SKILL_CHANCE_PENALTY[lvlDiff];
 				}
 			}
 		}
@@ -1622,13 +1622,13 @@ public class Formulas
 			if (!target.isRaid() && !target.isRaidMinion() && (target.getLevel() >= Config.MIN_NPC_LVL_DMG_PENALTY) && (attackerPlayer != null) && ((target.getLevel() - attackerPlayer.getLevel()) >= 2))
 			{
 				final int lvlDiff = target.getLevel() - attackerPlayer.getLevel() - 1;
-				if (lvlDiff >= Config.NPC_SKILL_DMG_PENALTY.size())
+				if (lvlDiff >= Config.NPC_SKILL_DMG_PENALTY.length)
 				{
-					pvePenalty = Config.NPC_SKILL_DMG_PENALTY.get(Config.NPC_SKILL_DMG_PENALTY.size() - 1);
+					pvePenalty = Config.NPC_SKILL_DMG_PENALTY[Config.NPC_SKILL_DMG_PENALTY.length - 1];
 				}
 				else
 				{
-					pvePenalty = Config.NPC_SKILL_DMG_PENALTY.get(lvlDiff);
+					pvePenalty = Config.NPC_SKILL_DMG_PENALTY[lvlDiff];
 				}
 			}
 			
