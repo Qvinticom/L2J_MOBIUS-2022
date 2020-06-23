@@ -460,7 +460,6 @@ public class SecondClassChange extends Quest
 				}
 				break;
 		}
-		st.exitQuest(true);
 		
 		return htmltext;
 	}
