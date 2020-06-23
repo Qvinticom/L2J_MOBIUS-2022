@@ -16,9 +16,8 @@
  */
 package ai.others;
 
-import java.util.HashMap;
+import java.util.Arrays;
 import java.util.List;
-import java.util.Map;
 import java.util.concurrent.CopyOnWriteArrayList;
 
 import org.l2jmobius.commons.concurrent.ThreadPool;
@@ -67,8 +66,8 @@ public class SiegeGuards extends AbstractNpcAI
 		35134, 35135, 35136, 35176, 35177, 35178, 35218, 35219, 35220, 35261, 35262, 35263, 35264, 35265, 35308, 35309, 35310, 35352, 35353, 35354, 35497, 35498, 35499, 35500, 35501, 35544, 35545, 35546
 	};
 	//@formatter:on
-	private static final Map<Integer, List<Npc>> RESIDENCE_GUARD_MAP = new HashMap<>();
-	private static final Map<Integer, Boolean> RESIDENCE_WORKING = new HashMap<>();
+	private static final Object[] RESIDENCE_GUARD_MAP = new Object[122];
+	private static final boolean[] RESIDENCE_WORKING = new boolean[122];
 	
 	public SiegeGuards()
 	{
@@ -82,17 +81,17 @@ public class SiegeGuards extends AbstractNpcAI
 		addKillId(MERCENARIES);
 		addKillId(STATIONARY_MERCENARIES);
 		
+		Arrays.fill(RESIDENCE_WORKING, false);
+		
 		// Start task for unknown residences.
-		RESIDENCE_GUARD_MAP.put(0, new CopyOnWriteArrayList<>());
-		RESIDENCE_WORKING.put(0, false);
+		RESIDENCE_GUARD_MAP[0] = new CopyOnWriteArrayList<>();
 		ThreadPool.scheduleAtFixedRate(new AggroCheckTask(0), 0, 3000);
 		
 		// Start tasks for castles.
 		for (Castle castle : CastleManager.getInstance().getCastles())
 		{
 			final int residenceId = castle.getResidenceId();
-			RESIDENCE_GUARD_MAP.put(residenceId, new CopyOnWriteArrayList<>());
-			RESIDENCE_WORKING.put(residenceId, false);
+			RESIDENCE_GUARD_MAP[residenceId] = new CopyOnWriteArrayList<>();
 			ThreadPool.scheduleAtFixedRate(new AggroCheckTask(residenceId), residenceId * 100, 3000);
 		}
 	}
@@ -109,13 +108,17 @@ public class SiegeGuards extends AbstractNpcAI
 		@Override
 		public void run()
 		{
-			if (RESIDENCE_WORKING.get(_residenceId))
+			synchronized (RESIDENCE_WORKING)
 			{
-				return;
+				if (RESIDENCE_WORKING[_residenceId])
+				{
+					return;
+				}
+				RESIDENCE_WORKING[_residenceId] = true;
 			}
-			RESIDENCE_WORKING.put(_residenceId, true);
 			
-			final List<Npc> guards = RESIDENCE_GUARD_MAP.get(_residenceId);
+			@SuppressWarnings("unchecked")
+			final List<Npc> guards = (CopyOnWriteArrayList<Npc>) RESIDENCE_GUARD_MAP[_residenceId];
 			for (Npc guard : guards)
 			{
 				if (guard == null)
@@ -159,7 +162,10 @@ public class SiegeGuards extends AbstractNpcAI
 				}
 			}
 			
-			RESIDENCE_WORKING.put(_residenceId, false);
+			synchronized (RESIDENCE_WORKING)
+			{
+				RESIDENCE_WORKING[_residenceId] = false;
+			}
 		}
 	}
 	
@@ -175,14 +181,24 @@ public class SiegeGuards extends AbstractNpcAI
 	}
 	
 	@Override
+	@SuppressWarnings("unchecked")
 	public String onKill(Npc npc, PlayerInstance killer, boolean isSummon)
 	{
 		final int residenceId = npc.getScriptValue();
-		RESIDENCE_GUARD_MAP.get(RESIDENCE_GUARD_MAP.containsKey(residenceId) ? residenceId : 0).remove(npc);
+		final List<Npc> guardList = (CopyOnWriteArrayList<Npc>) RESIDENCE_GUARD_MAP[residenceId];
+		if (guardList != null)
+		{
+			guardList.remove(npc);
+		}
+		else
+		{
+			((CopyOnWriteArrayList<Npc>) RESIDENCE_GUARD_MAP[0]).remove(npc);
+		}
 		return super.onKill(npc, killer, isSummon);
 	}
 	
 	@Override
+	@SuppressWarnings("unchecked")
 	public String onSpawn(Npc npc)
 	{
 		npc.setRandomWalking(false);
@@ -195,13 +211,14 @@ public class SiegeGuards extends AbstractNpcAI
 		final Fort fortress = npc.getFort();
 		final int residenceId = fortress != null ? fortress.getResidenceId() : (castle != null ? castle.getResidenceId() : 0);
 		npc.setScriptValue(residenceId);
-		if (RESIDENCE_GUARD_MAP.containsKey(residenceId))
+		final List<Npc> guardList = (CopyOnWriteArrayList<Npc>) RESIDENCE_GUARD_MAP[residenceId];
+		if (guardList != null)
 		{
-			RESIDENCE_GUARD_MAP.get(residenceId).add(npc);
+			guardList.add(npc);
 		}
 		else // Residence id not found.
 		{
-			RESIDENCE_GUARD_MAP.get(0).add(npc);
+			((CopyOnWriteArrayList<Npc>) RESIDENCE_GUARD_MAP[0]).add(npc);
 		}
 		
 		return super.onSpawn(npc);
