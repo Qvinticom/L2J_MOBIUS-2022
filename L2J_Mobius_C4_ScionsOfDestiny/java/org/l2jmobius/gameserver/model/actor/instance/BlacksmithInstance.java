@@ -35,7 +35,7 @@ public class BlacksmithInstance extends FolkInstance
 		if (command.startsWith("multisell"))
 		{
 			final int listId = Integer.parseInt(command.substring(9).trim());
-			MultisellData.getInstance().SeparateAndSend(listId, player, false, getCastle().getTaxRate());
+			MultisellData.getInstance().separateAndSend(listId, player, false, getCastle().getTaxRate());
 		}
 		super.onBypassFeedback(player, command);
 	}

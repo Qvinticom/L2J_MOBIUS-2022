@@ -1307,11 +1307,11 @@ public class NpcInstance extends Creature
 		}
 		else if (command.startsWith("multisell"))
 		{
-			MultisellData.getInstance().SeparateAndSend(Integer.parseInt(command.substring(9).trim()), player, false, getCastle().getTaxRate());
+			MultisellData.getInstance().separateAndSend(Integer.parseInt(command.substring(9).trim()), player, false, getCastle().getTaxRate());
 		}
 		else if (command.startsWith("exc_multisell"))
 		{
-			MultisellData.getInstance().SeparateAndSend(Integer.parseInt(command.substring(13).trim()), player, true, getCastle().getTaxRate());
+			MultisellData.getInstance().separateAndSend(Integer.parseInt(command.substring(13).trim()), player, true, getCastle().getTaxRate());
 		}
 		else if (command.startsWith("Augment"))
 		{
@@ -1387,7 +1387,7 @@ public class NpcInstance extends Creature
 				}
 				else
 				{
-					MultisellData.getInstance().SeparateAndSend(10010, player, false, getCastle().getTaxRate());
+					MultisellData.getInstance().separateAndSend(10010, player, false, getCastle().getTaxRate());
 				}
 			}
 			catch (NumberFormatException nfe)
@@ -1407,7 +1407,7 @@ public class NpcInstance extends Creature
 				}
 				else
 				{
-					MultisellData.getInstance().SeparateAndSend(10011, player, false, getCastle().getTaxRate());
+					MultisellData.getInstance().separateAndSend(10011, player, false, getCastle().getTaxRate());
 				}
 			}
 			catch (NumberFormatException nfe)
@@ -1455,7 +1455,7 @@ public class NpcInstance extends Creature
 				}
 				else
 				{
-					MultisellData.getInstance().SeparateAndSend(10012, player, false, getCastle().getTaxRate());
+					MultisellData.getInstance().separateAndSend(10012, player, false, getCastle().getTaxRate());
 				}
 			}
 			catch (NumberFormatException nfe)
@@ -1475,7 +1475,7 @@ public class NpcInstance extends Creature
 				}
 				else
 				{
-					MultisellData.getInstance().SeparateAndSend(10013, player, false, getCastle().getTaxRate());
+					MultisellData.getInstance().separateAndSend(10013, player, false, getCastle().getTaxRate());
 				}
 			}
 			catch (NumberFormatException nfe)

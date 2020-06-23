@@ -234,7 +234,7 @@ public class MultisellData
 		return newEntry;
 	}
 	
-	public void SeparateAndSend(int listId, PlayerInstance player, boolean inventoryOnly, double taxRate)
+	public void separateAndSend(int listId, PlayerInstance player, boolean inventoryOnly, double taxRate)
 	{
 		final MultiSellListContainer list = generateMultiSell(listId, inventoryOnly, player, taxRate);
 		MultiSellListContainer temp = new MultiSellListContainer();

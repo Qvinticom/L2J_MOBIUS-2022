@@ -171,7 +171,7 @@ public class MerchantInstance extends FolkInstance
 			}
 			
 			final int val = Integer.parseInt(st.nextToken());
-			MultisellData.getInstance().SeparateAndSend(val, player, false, getCastle().getTaxRate());
+			MultisellData.getInstance().separateAndSend(val, player, false, getCastle().getTaxRate());
 		}
 		else if (actualCommand.equalsIgnoreCase("Exc_Multisell"))
 		{
@@ -181,7 +181,7 @@ public class MerchantInstance extends FolkInstance
 			}
 			
 			final int val = Integer.parseInt(st.nextToken());
-			MultisellData.getInstance().SeparateAndSend(val, player, true, getCastle().getTaxRate());
+			MultisellData.getInstance().separateAndSend(val, player, true, getCastle().getTaxRate());
 		}
 		else
 		{

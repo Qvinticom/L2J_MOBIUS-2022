@@ -148,7 +148,7 @@ public class OlympiadManagerInstance extends FolkInstance
 				}
 				case 7:
 				{
-					MultisellData.getInstance().SeparateAndSend(102, player, false, getCastle().getTaxRate());
+					MultisellData.getInstance().separateAndSend(102, player, false, getCastle().getTaxRate());
 					break;
 				}
 				default:
