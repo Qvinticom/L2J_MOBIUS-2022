@@ -70,7 +70,7 @@ public class ShadowWeapon extends Quest
 			}
 			
 			// finally, return htm with proper multisell value in it.
-			htmltext = getHtmlText("exchange.htm").replace("%msid%", multisell);
+			htmltext = getHtmlText("exchange.htm").replace("%msid%", multisell).replace("%objectId%", "" + npc.getObjectId());
 		}
 		else
 		{
