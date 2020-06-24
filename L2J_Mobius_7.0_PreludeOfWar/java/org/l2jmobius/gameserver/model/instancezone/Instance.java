@@ -174,6 +174,16 @@ public class Instance implements IIdentifiable, INamable
 	}
 	
 	/**
+	 * Set instance world parameter.
+	 * @param key parameter name
+	 * @param value parameter value
+	 */
+	public void setParameter(String key, boolean value)
+	{
+		_parameters.set(key, value ? Boolean.TRUE : Boolean.FALSE);
+	}
+	
+	/**
 	 * Get instance world parameters.
 	 * @return instance parameters
 	 */
