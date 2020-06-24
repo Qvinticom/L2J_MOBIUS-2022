@@ -824,6 +824,11 @@ public class StatSet implements IParserAdvUtils
 		_set.put(name, value);
 	}
 	
+	public void set(String name, boolean value)
+	{
+		_set.put(name, value ? Boolean.TRUE : Boolean.FALSE);
+	}
+	
 	public void set(String key, byte value)
 	{
 		_set.put(key, value);
