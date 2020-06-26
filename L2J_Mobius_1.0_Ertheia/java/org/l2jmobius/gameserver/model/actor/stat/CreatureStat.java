@@ -803,11 +803,8 @@ public class CreatureStat
 		_lock.readLock().lock();
 		try
 		{
-			if (_statsAdd.containsKey(stat))
-			{
-				return _statsAdd.get(stat).doubleValue();
-			}
-			return defaultValue;
+			final Double val = _statsAdd.get(stat);
+			return val != null ? val.doubleValue() : defaultValue;
 		}
 		finally
 		{
@@ -834,11 +831,8 @@ public class CreatureStat
 		_lock.readLock().lock();
 		try
 		{
-			if (_statsMul.containsKey(stat))
-			{
-				return _statsMul.get(stat).doubleValue();
-			}
-			return defaultValue;
+			final Double val = _statsMul.get(stat);
+			return val != null ? val.doubleValue() : defaultValue;
 		}
 		finally
 		{
@@ -853,7 +847,8 @@ public class CreatureStat
 	 */
 	public double getValue(Stat stat, double baseValue)
 	{
-		return _fixedValue.containsKey(stat) ? _fixedValue.get(stat).doubleValue() : stat.finalize(_creature, OptionalDouble.of(baseValue));
+		final Double val = _fixedValue.get(stat);
+		return val != null ? val.doubleValue() : stat.finalize(_creature, OptionalDouble.of(baseValue));
 	}
 	
 	/**
@@ -862,7 +857,8 @@ public class CreatureStat
 	 */
 	public double getValue(Stat stat)
 	{
-		return _fixedValue.containsKey(stat) ? _fixedValue.get(stat).doubleValue() : stat.finalize(_creature, OptionalDouble.empty());
+		final Double val = _fixedValue.get(stat);
+		return val != null ? val.doubleValue() : stat.finalize(_creature, OptionalDouble.empty());
 	}
 	
 	protected void resetStats()
@@ -1014,7 +1010,7 @@ public class CreatureStat
 			_lock.writeLock().unlock();
 		}
 		
-		if (changed != null)
+		if ((changed != null) && !changed.isEmpty())
 		{
 			_creature.broadcastModifiedStats(changed);
 		}
@@ -1043,9 +1039,13 @@ public class CreatureStat
 	public double getPositionTypeValue(Stat stat, Position position)
 	{
 		final Map<Position, Double> map = _positionStats.get(stat);
-		if ((map != null) && map.containsKey(position))
+		if (map != null)
 		{
-			return map.get(position).doubleValue();
+			final Double val = map.get(position);
+			if (val != null)
+			{
+				return val.doubleValue();
+			}
 		}
 		return 1d;
 	}
@@ -1058,9 +1058,13 @@ public class CreatureStat
 	public double getMoveTypeValue(Stat stat, MoveType type)
 	{
 		final Map<MoveType, Double> map = _moveTypeStats.get(stat);
-		if ((map != null) && map.containsKey(type))
+		if (map != null)
 		{
-			return map.get(type).doubleValue();
+			final Double val = map.get(type);
+			if (val != null)
+			{
+				return val.doubleValue();
+			}
 		}
 		return 0d;
 	}
@@ -1072,7 +1076,8 @@ public class CreatureStat
 	
 	public double getReuseTypeValue(int magicType)
 	{
-		return _reuseStat.containsKey(magicType) ? _reuseStat.get(magicType).doubleValue() : 1d;
+		final Double val = _reuseStat.get(magicType);
+		return val != null ? val.doubleValue() : 1d;
 	}
 	
 	public void mergeReuseTypeValue(int magicType, double value, BiFunction<? super Double, ? super Double, ? extends Double> func)
@@ -1082,7 +1087,8 @@ public class CreatureStat
 	
 	public double getMpConsumeTypeValue(int magicType)
 	{
-		return _mpConsumeStat.containsKey(magicType) ? _mpConsumeStat.get(magicType).doubleValue() : 1d;
+		final Double val = _mpConsumeStat.get(magicType);
+		return val != null ? val.doubleValue() : 1d;
 	}
 	
 	public void mergeMpConsumeTypeValue(int magicType, double value, BiFunction<? super Double, ? super Double, ? extends Double> func)
