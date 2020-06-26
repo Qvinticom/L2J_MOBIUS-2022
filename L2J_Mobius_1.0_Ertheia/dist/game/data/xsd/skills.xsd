@@ -440,13 +440,6 @@
 														<xs:element minOccurs="0" name="instanceId" type="xs:unsignedByte" />
 														<xs:element minOccurs="0" name="itemId" type="xs:unsignedShort" />
 														<xs:element minOccurs="0" name="socialClass" type="xs:int" />
-														<xs:element minOccurs="0" name="npcsIds">
-															<xs:complexType>
-																<xs:sequence>
-																	<xs:element name="item" type="xs:unsignedShort" />
-																</xs:sequence>
-															</xs:complexType>
-														</xs:element>
 														<xs:element minOccurs="0" name="teleportBookmarkSlots" type="xs:unsignedByte" />
 														<xs:element minOccurs="0" name="classIds">
 															<xs:complexType>
