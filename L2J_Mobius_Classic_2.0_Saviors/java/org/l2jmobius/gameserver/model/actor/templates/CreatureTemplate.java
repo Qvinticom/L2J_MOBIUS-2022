@@ -146,7 +146,8 @@ public class CreatureTemplate extends ListenersContainer
 	 */
 	public int getBaseSTR()
 	{
-		return _baseValues.getOrDefault(Stat.STAT_STR, 0d).intValue();
+		final Double val = _baseValues.get(Stat.STAT_STR);
+		return val != null ? val.intValue() : 0;
 	}
 	
 	/**
@@ -154,7 +155,8 @@ public class CreatureTemplate extends ListenersContainer
 	 */
 	public int getBaseCON()
 	{
-		return _baseValues.getOrDefault(Stat.STAT_CON, 0d).intValue();
+		final Double val = _baseValues.get(Stat.STAT_CON);
+		return val != null ? val.intValue() : 0;
 	}
 	
 	/**
@@ -162,7 +164,8 @@ public class CreatureTemplate extends ListenersContainer
 	 */
 	public int getBaseDEX()
 	{
-		return _baseValues.getOrDefault(Stat.STAT_DEX, 0d).intValue();
+		final Double val = _baseValues.get(Stat.STAT_DEX);
+		return val != null ? val.intValue() : 0;
 	}
 	
 	/**
@@ -170,7 +173,8 @@ public class CreatureTemplate extends ListenersContainer
 	 */
 	public int getBaseINT()
 	{
-		return _baseValues.getOrDefault(Stat.STAT_INT, 0d).intValue();
+		final Double val = _baseValues.get(Stat.STAT_INT);
+		return val != null ? val.intValue() : 0;
 	}
 	
 	/**
@@ -178,7 +182,8 @@ public class CreatureTemplate extends ListenersContainer
 	 */
 	public int getBaseWIT()
 	{
-		return _baseValues.getOrDefault(Stat.STAT_WIT, 0d).intValue();
+		final Double val = _baseValues.get(Stat.STAT_WIT);
+		return val != null ? val.intValue() : 0;
 	}
 	
 	/**
@@ -186,7 +191,8 @@ public class CreatureTemplate extends ListenersContainer
 	 */
 	public int getBaseMEN()
 	{
-		return _baseValues.getOrDefault(Stat.STAT_MEN, 0d).intValue();
+		final Double val = _baseValues.get(Stat.STAT_MEN);
+		return val != null ? val.intValue() : 0;
 	}
 	
 	/**
@@ -194,7 +200,8 @@ public class CreatureTemplate extends ListenersContainer
 	 */
 	public float getBaseHpMax()
 	{
-		return _baseValues.getOrDefault(Stat.MAX_HP, 0d).floatValue();
+		final Double val = _baseValues.get(Stat.MAX_HP);
+		return val != null ? val.floatValue() : 0;
 	}
 	
 	/**
@@ -202,7 +209,8 @@ public class CreatureTemplate extends ListenersContainer
 	 */
 	public float getBaseCpMax()
 	{
-		return _baseValues.getOrDefault(Stat.MAX_CP, 0d).floatValue();
+		final Double val = _baseValues.get(Stat.MAX_CP);
+		return val != null ? val.floatValue() : 0;
 	}
 	
 	/**
@@ -210,7 +218,8 @@ public class CreatureTemplate extends ListenersContainer
 	 */
 	public float getBaseMpMax()
 	{
-		return _baseValues.getOrDefault(Stat.MAX_MP, 0d).floatValue();
+		final Double val = _baseValues.get(Stat.MAX_MP);
+		return val != null ? val.floatValue() : 0;
 	}
 	
 	/**
@@ -218,7 +227,8 @@ public class CreatureTemplate extends ListenersContainer
 	 */
 	public float getBaseHpReg()
 	{
-		return _baseValues.getOrDefault(Stat.REGENERATE_HP_RATE, 0d).floatValue();
+		final Double val = _baseValues.get(Stat.REGENERATE_HP_RATE);
+		return val != null ? val.floatValue() : 0;
 	}
 	
 	/**
@@ -226,7 +236,8 @@ public class CreatureTemplate extends ListenersContainer
 	 */
 	public float getBaseMpReg()
 	{
-		return _baseValues.getOrDefault(Stat.REGENERATE_MP_RATE, 0d).floatValue();
+		final Double val = _baseValues.get(Stat.REGENERATE_MP_RATE);
+		return val != null ? val.floatValue() : 0;
 	}
 	
 	/**
@@ -234,7 +245,8 @@ public class CreatureTemplate extends ListenersContainer
 	 */
 	public int getBaseFire()
 	{
-		return _baseValues.getOrDefault(Stat.FIRE_POWER, 0d).intValue();
+		final Double val = _baseValues.get(Stat.FIRE_POWER);
+		return val != null ? val.intValue() : 0;
 	}
 	
 	/**
@@ -242,7 +254,8 @@ public class CreatureTemplate extends ListenersContainer
 	 */
 	public int getBaseWind()
 	{
-		return _baseValues.getOrDefault(Stat.WIND_POWER, 0d).intValue();
+		final Double val = _baseValues.get(Stat.WIND_POWER);
+		return val != null ? val.intValue() : 0;
 	}
 	
 	/**
@@ -250,7 +263,8 @@ public class CreatureTemplate extends ListenersContainer
 	 */
 	public int getBaseWater()
 	{
-		return _baseValues.getOrDefault(Stat.WATER_POWER, 0d).intValue();
+		final Double val = _baseValues.get(Stat.WATER_POWER);
+		return val != null ? val.intValue() : 0;
 	}
 	
 	/**
@@ -258,7 +272,8 @@ public class CreatureTemplate extends ListenersContainer
 	 */
 	public int getBaseEarth()
 	{
-		return _baseValues.getOrDefault(Stat.EARTH_POWER, 0d).intValue();
+		final Double val = _baseValues.get(Stat.EARTH_POWER);
+		return val != null ? val.intValue() : 0;
 	}
 	
 	/**
@@ -266,7 +281,8 @@ public class CreatureTemplate extends ListenersContainer
 	 */
 	public int getBaseHoly()
 	{
-		return _baseValues.getOrDefault(Stat.HOLY_POWER, 0d).intValue();
+		final Double val = _baseValues.get(Stat.HOLY_POWER);
+		return val != null ? val.intValue() : 0;
 	}
 	
 	/**
@@ -274,7 +290,8 @@ public class CreatureTemplate extends ListenersContainer
 	 */
 	public int getBaseDark()
 	{
-		return _baseValues.getOrDefault(Stat.DARK_POWER, 0d).intValue();
+		final Double val = _baseValues.get(Stat.DARK_POWER);
+		return val != null ? val.intValue() : 0;
 	}
 	
 	/**
@@ -282,7 +299,8 @@ public class CreatureTemplate extends ListenersContainer
 	 */
 	public double getBaseFireRes()
 	{
-		return _baseValues.getOrDefault(Stat.FIRE_RES, 0d);
+		final Double val = _baseValues.get(Stat.FIRE_RES);
+		return val != null ? val.intValue() : 0;
 	}
 	
 	/**
@@ -290,7 +308,8 @@ public class CreatureTemplate extends ListenersContainer
 	 */
 	public double getBaseWindRes()
 	{
-		return _baseValues.getOrDefault(Stat.WIND_RES, 0d);
+		final Double val = _baseValues.get(Stat.WIND_RES);
+		return val != null ? val.intValue() : 0;
 	}
 	
 	/**
@@ -298,7 +317,8 @@ public class CreatureTemplate extends ListenersContainer
 	 */
 	public double getBaseWaterRes()
 	{
-		return _baseValues.getOrDefault(Stat.WATER_RES, 0d);
+		final Double val = _baseValues.get(Stat.WATER_RES);
+		return val != null ? val.intValue() : 0;
 	}
 	
 	/**
@@ -306,7 +326,8 @@ public class CreatureTemplate extends ListenersContainer
 	 */
 	public double getBaseEarthRes()
 	{
-		return _baseValues.getOrDefault(Stat.EARTH_RES, 0d);
+		final Double val = _baseValues.get(Stat.EARTH_RES);
+		return val != null ? val.intValue() : 0;
 	}
 	
 	/**
@@ -314,7 +335,8 @@ public class CreatureTemplate extends ListenersContainer
 	 */
 	public double getBaseHolyRes()
 	{
-		return _baseValues.getOrDefault(Stat.HOLY_RES, 0d);
+		final Double val = _baseValues.get(Stat.HOLY_RES);
+		return val != null ? val.intValue() : 0;
 	}
 	
 	/**
@@ -322,7 +344,8 @@ public class CreatureTemplate extends ListenersContainer
 	 */
 	public double getBaseDarkRes()
 	{
-		return _baseValues.getOrDefault(Stat.DARK_RES, 0d);
+		final Double val = _baseValues.get(Stat.DARK_RES);
+		return val != null ? val.intValue() : 0;
 	}
 	
 	/**
@@ -330,7 +353,8 @@ public class CreatureTemplate extends ListenersContainer
 	 */
 	public double getBaseElementRes()
 	{
-		return _baseValues.getOrDefault(Stat.BASE_ATTRIBUTE_RES, 0d);
+		final Double val = _baseValues.get(Stat.BASE_ATTRIBUTE_RES);
+		return val != null ? val.intValue() : 0;
 	}
 	
 	/**
@@ -338,7 +362,8 @@ public class CreatureTemplate extends ListenersContainer
 	 */
 	public int getBasePAtk()
 	{
-		return _baseValues.getOrDefault(Stat.PHYSICAL_ATTACK, 0d).intValue();
+		final Double val = _baseValues.get(Stat.PHYSICAL_ATTACK);
+		return val != null ? val.intValue() : 0;
 	}
 	
 	/**
@@ -346,7 +371,8 @@ public class CreatureTemplate extends ListenersContainer
 	 */
 	public int getBaseMAtk()
 	{
-		return _baseValues.getOrDefault(Stat.MAGIC_ATTACK, 0d).intValue();
+		final Double val = _baseValues.get(Stat.MAGIC_ATTACK);
+		return val != null ? val.intValue() : 0;
 	}
 	
 	/**
@@ -354,7 +380,8 @@ public class CreatureTemplate extends ListenersContainer
 	 */
 	public int getBasePDef()
 	{
-		return _baseValues.getOrDefault(Stat.PHYSICAL_DEFENCE, 0d).intValue();
+		final Double val = _baseValues.get(Stat.PHYSICAL_DEFENCE);
+		return val != null ? val.intValue() : 0;
 	}
 	
 	/**
@@ -362,7 +389,8 @@ public class CreatureTemplate extends ListenersContainer
 	 */
 	public int getBaseMDef()
 	{
-		return _baseValues.getOrDefault(Stat.MAGICAL_DEFENCE, 0d).intValue();
+		final Double val = _baseValues.get(Stat.MAGICAL_DEFENCE);
+		return val != null ? val.intValue() : 0;
 	}
 	
 	/**
@@ -370,7 +398,8 @@ public class CreatureTemplate extends ListenersContainer
 	 */
 	public int getBasePAtkSpd()
 	{
-		return _baseValues.getOrDefault(Stat.PHYSICAL_ATTACK_SPEED, 0d).intValue();
+		final Double val = _baseValues.get(Stat.PHYSICAL_ATTACK_SPEED);
+		return val != null ? val.intValue() : 0;
 	}
 	
 	/**
@@ -378,7 +407,8 @@ public class CreatureTemplate extends ListenersContainer
 	 */
 	public int getBaseMAtkSpd()
 	{
-		return _baseValues.getOrDefault(Stat.MAGIC_ATTACK_SPEED, 0d).intValue();
+		final Double val = _baseValues.get(Stat.MAGIC_ATTACK_SPEED);
+		return val != null ? val.intValue() : 0;
 	}
 	
 	/**
@@ -386,7 +416,8 @@ public class CreatureTemplate extends ListenersContainer
 	 */
 	public int getRandomDamage()
 	{
-		return _baseValues.getOrDefault(Stat.RANDOM_DAMAGE, 0d).intValue();
+		final Double val = _baseValues.get(Stat.RANDOM_DAMAGE);
+		return val != null ? val.intValue() : 0;
 	}
 	
 	/**
@@ -394,7 +425,8 @@ public class CreatureTemplate extends ListenersContainer
 	 */
 	public int getBaseShldDef()
 	{
-		return _baseValues.getOrDefault(Stat.SHIELD_DEFENCE, 0d).intValue();
+		final Double val = _baseValues.get(Stat.SHIELD_DEFENCE);
+		return val != null ? val.intValue() : 0;
 	}
 	
 	/**
@@ -402,7 +434,8 @@ public class CreatureTemplate extends ListenersContainer
 	 */
 	public int getBaseShldRate()
 	{
-		return _baseValues.getOrDefault(Stat.SHIELD_DEFENCE_RATE, 0d).intValue();
+		final Double val = _baseValues.get(Stat.SHIELD_DEFENCE_RATE);
+		return val != null ? val.intValue() : 0;
 	}
 	
 	/**
@@ -410,7 +443,8 @@ public class CreatureTemplate extends ListenersContainer
 	 */
 	public int getBaseCritRate()
 	{
-		return _baseValues.getOrDefault(Stat.CRITICAL_RATE, 0d).intValue();
+		final Double val = _baseValues.get(Stat.CRITICAL_RATE);
+		return val != null ? val.intValue() : 0;
 	}
 	
 	/**
@@ -418,7 +452,8 @@ public class CreatureTemplate extends ListenersContainer
 	 */
 	public int getBaseMCritRate()
 	{
-		return _baseValues.getOrDefault(Stat.MAGIC_CRITICAL_RATE, 0d).intValue();
+		final Double val = _baseValues.get(Stat.MAGIC_CRITICAL_RATE);
+		return val != null ? val.intValue() : 0;
 	}
 	
 	/**
@@ -426,7 +461,8 @@ public class CreatureTemplate extends ListenersContainer
 	 */
 	public int getBaseBreath()
 	{
-		return _baseValues.getOrDefault(Stat.BREATH, 0d).intValue();
+		final Double val = _baseValues.get(Stat.BREATH);
+		return val != null ? val.intValue() : 0;
 	}
 	
 	/**
@@ -434,7 +470,8 @@ public class CreatureTemplate extends ListenersContainer
 	 */
 	public int getBaseAbnormalResistPhysical()
 	{
-		return _baseValues.getOrDefault(Stat.ABNORMAL_RESIST_PHYSICAL, 0d).intValue();
+		final Double val = _baseValues.get(Stat.ABNORMAL_RESIST_PHYSICAL);
+		return val != null ? val.intValue() : 0;
 	}
 	
 	/**
@@ -442,7 +479,8 @@ public class CreatureTemplate extends ListenersContainer
 	 */
 	public int getBaseAbnormalResistMagical()
 	{
-		return _baseValues.getOrDefault(Stat.ABNORMAL_RESIST_MAGICAL, 0d).intValue();
+		final Double val = _baseValues.get(Stat.ABNORMAL_RESIST_MAGICAL);
+		return val != null ? val.intValue() : 0;
 	}
 	
 	/**
@@ -499,7 +537,8 @@ public class CreatureTemplate extends ListenersContainer
 	 */
 	public int getBaseAttackRange()
 	{
-		return _baseValues.getOrDefault(Stat.PHYSICAL_ATTACK_RANGE, 0d).intValue();
+		final Double val = _baseValues.get(Stat.PHYSICAL_ATTACK_RANGE);
+		return val != null ? val.intValue() : 0;
 	}
 	
 	/**
@@ -536,6 +575,7 @@ public class CreatureTemplate extends ListenersContainer
 	 */
 	public double getBaseValue(Stat stat, double defaultValue)
 	{
-		return _baseValues.getOrDefault(stat, defaultValue);
+		final Double val = _baseValues.get(stat);
+		return val != null ? val.doubleValue() : defaultValue;
 	}
 }
