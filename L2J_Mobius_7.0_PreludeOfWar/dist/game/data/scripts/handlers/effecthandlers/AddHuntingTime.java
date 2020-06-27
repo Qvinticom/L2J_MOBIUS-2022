@@ -59,7 +59,7 @@ public class AddHuntingTime extends AbstractEffect
 		long endTime = player.getVariables().getLong(PlayerVariables.HUNTING_ZONE_RESET_TIME + _zoneId, 0);
 		if ((endTime > currentTime) && (((endTime - currentTime) + _time) >= Config.TIME_LIMITED_MAX_ADDED_TIME))
 		{
-			player.getInventory().addItem("AddHuntingTime effect refund", item.getId(), 1, player, false);
+			player.getInventory().addItem("AddHuntingTime effect refund", item.getId(), 1, player, player);
 			player.sendMessage("You cannot exceed the time zone limit.");
 			return;
 		}
