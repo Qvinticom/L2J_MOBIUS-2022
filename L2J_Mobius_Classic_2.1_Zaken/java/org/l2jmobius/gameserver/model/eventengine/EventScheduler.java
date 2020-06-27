@@ -29,8 +29,9 @@ import java.util.logging.Logger;
 import org.l2jmobius.commons.concurrent.ThreadPool;
 import org.l2jmobius.commons.database.DatabaseFactory;
 import org.l2jmobius.gameserver.model.StatSet;
-import org.l2jmobius.gameserver.util.cron4j.PastPredictor;
-import org.l2jmobius.gameserver.util.cron4j.Predictor;
+
+import it.sauronsoftware.cron4j.PastPredictor;
+import it.sauronsoftware.cron4j.Predictor;
 
 /**
  * @author UnAfraid

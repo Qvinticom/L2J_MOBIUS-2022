@@ -27,7 +27,8 @@ import org.l2jmobius.gameserver.model.DailyMissionDataHolder;
 import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
 import org.l2jmobius.gameserver.network.OutgoingPackets;
 import org.l2jmobius.gameserver.network.serverpackets.IClientOutgoingPacket;
-import org.l2jmobius.gameserver.util.cron4j.Predictor;
+
+import it.sauronsoftware.cron4j.Predictor;
 
 /**
  * @author Sdw
