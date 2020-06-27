@@ -47,7 +47,7 @@ public class DecayTaskManager
 			final long time = System.currentTimeMillis();
 			for (Entry<Creature, Long> entry : DECAY_SCHEDULES.entrySet())
 			{
-				if (time > entry.getValue())
+				if (time > entry.getValue().longValue())
 				{
 					final Creature creature = entry.getKey();
 					DECAY_SCHEDULES.remove(creature);
@@ -107,7 +107,7 @@ public class DecayTaskManager
 	public long getRemainingTime(Creature creature)
 	{
 		final Long time = DECAY_SCHEDULES.get(creature);
-		return time != null ? time - System.currentTimeMillis() : Long.MAX_VALUE;
+		return time != null ? time.longValue() - System.currentTimeMillis() : Long.MAX_VALUE;
 	}
 	
 	@Override
@@ -130,7 +130,7 @@ public class DecayTaskManager
 			ret.append('/');
 			ret.append(entry.getKey().getName());
 			ret.append(" decay timer: ");
-			ret.append(entry.getValue() - time);
+			ret.append(entry.getValue().longValue() - time);
 			ret.append(Config.EOL);
 		}
 		

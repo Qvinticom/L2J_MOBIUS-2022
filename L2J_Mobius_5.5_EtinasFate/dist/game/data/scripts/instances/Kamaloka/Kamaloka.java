@@ -464,12 +464,12 @@ public class Kamaloka extends AbstractInstance
 				for (Entry<Integer, Long> entry : instanceTimes.entrySet())
 				{
 					// find instance with same name (kamaloka or labyrinth)
-					if (!instanceName.equals(InstanceManager.getInstance().getInstanceName(entry.getKey())))
+					if (!instanceName.equals(InstanceManager.getInstance().getInstanceName(entry.getKey().intValue())))
 					{
 						continue;
 					}
 					// if found instance still can't be reentered - exit
-					if (System.currentTimeMillis() < entry.getValue())
+					if (System.currentTimeMillis() < entry.getValue().longValue())
 					{
 						final SystemMessage sm = new SystemMessage(SystemMessageId.C1_MAY_NOT_RE_ENTER_YET);
 						sm.addPcName(partyMember);

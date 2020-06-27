@@ -87,7 +87,7 @@ public abstract class ThirdClassTransferQuest extends Quest
 		addTalkId(VANGUARDS);
 		for (Entry<Race, Integer> tag : RACE_TAGS.entrySet())
 		{
-			registerQuestItems(tag.getValue());
+			registerQuestItems(tag.getValue().intValue());
 		}
 		//@formatter:off
 		registerQuestItems(
@@ -159,7 +159,7 @@ public abstract class ThirdClassTransferQuest extends Quest
 				{
 					qs.setCond(4, true);
 					qs.unset("vanguard");
-					takeItems(player, RACE_TAGS.get(player.getRace()), -1);
+					takeItems(player, RACE_TAGS.get(player.getRace()).intValue(), -1);
 					htmltext = event;
 				}
 				break;
@@ -181,9 +181,9 @@ public abstract class ThirdClassTransferQuest extends Quest
 					final int vanguard = qs.getInt("vanguard");
 					if ((vanguard & bit) != bit)
 					{
-						giveItems(player, RACE_TAGS.get(player.getRace()), 1);
+						giveItems(player, RACE_TAGS.get(player.getRace()).intValue(), 1);
 						qs.set("vanguard", vanguard | bit);
-						if (getQuestItemsCount(player, RACE_TAGS.get(player.getRace())) == 4)
+						if (getQuestItemsCount(player, RACE_TAGS.get(player.getRace()).intValue()) == 4)
 						{
 							qs.setCond(3, true);
 							htmltext = "vanguard-04.html";

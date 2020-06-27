@@ -108,7 +108,7 @@ public class KnockBack extends AbstractEffect
 			ACTIVE_KNOCKBACKS.add(effected);
 			
 			// Prevent knocking back raids and town NPCs.
-			if ((effected == null) || effected.isRaid() || (effected.isNpc() && !effected.isAttackable()))
+			if (effected.isRaid() || (effected.isNpc() && !effected.isAttackable()))
 			{
 				return;
 			}

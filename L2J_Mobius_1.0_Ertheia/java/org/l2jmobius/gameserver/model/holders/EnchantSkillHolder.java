@@ -60,7 +60,8 @@ public class EnchantSkillHolder
 	
 	public long getSp(SkillEnchantType type)
 	{
-		return _sp.getOrDefault(type, 0L);
+		final Long val = _sp.get(type);
+		return val != null ? val.longValue() : 0;
 	}
 	
 	public void addChance(SkillEnchantType type, int chance)
@@ -70,7 +71,8 @@ public class EnchantSkillHolder
 	
 	public int getChance(SkillEnchantType type)
 	{
-		return _chance.getOrDefault(type, 100);
+		final Integer val = _chance.get(type);
+		return val != null ? val.intValue() : 100;
 	}
 	
 	public void addRequiredItem(SkillEnchantType type, ItemHolder item)

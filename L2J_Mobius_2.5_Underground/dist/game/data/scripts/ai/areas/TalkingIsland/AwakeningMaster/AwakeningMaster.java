@@ -333,7 +333,7 @@ public class AwakeningMaster extends AbstractNpcAI
 		{
 			if (player.isInCategory(ent.getKey()))
 			{
-				giveItems(player, ent.getValue(), 1);
+				giveItems(player, ent.getValue().intValue(), 1);
 				break;
 			}
 		}

@@ -61,7 +61,7 @@ public class ServitorShare extends AbstractEffect
 		{
 			for (Entry<Stat, Float> stats : _sharedStats.entrySet())
 			{
-				effected.getStat().mergeAdd(stats.getKey(), owner.getStat().getValue(stats.getKey()) * stats.getValue());
+				effected.getStat().mergeAdd(stats.getKey(), owner.getStat().getValue(stats.getKey()) * stats.getValue().floatValue());
 			}
 		}
 	}

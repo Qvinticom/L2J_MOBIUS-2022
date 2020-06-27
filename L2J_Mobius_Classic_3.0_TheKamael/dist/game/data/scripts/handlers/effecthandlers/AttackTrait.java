@@ -54,7 +54,7 @@ public class AttackTrait extends AbstractEffect
 	{
 		for (Entry<TraitType, Float> trait : _attackTraits.entrySet())
 		{
-			effected.getStat().mergeAttackTrait(trait.getKey(), trait.getValue());
+			effected.getStat().mergeAttackTrait(trait.getKey(), trait.getValue().floatValue());
 		}
 	}
 	
@@ -63,7 +63,7 @@ public class AttackTrait extends AbstractEffect
 	{
 		for (Entry<TraitType, Float> trait : _attackTraits.entrySet())
 		{
-			effected.getStat().removeAttackTrait(trait.getKey(), trait.getValue());
+			effected.getStat().removeAttackTrait(trait.getKey(), trait.getValue().floatValue());
 		}
 	}
 }

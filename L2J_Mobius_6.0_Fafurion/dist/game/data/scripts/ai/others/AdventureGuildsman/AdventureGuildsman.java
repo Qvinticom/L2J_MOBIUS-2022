@@ -351,7 +351,7 @@ public class AdventureGuildsman extends AbstractNpcAI
 				{
 					if (player.isInCategory(entry.getKey()))
 					{
-						multisellId = entry.getValue();
+						multisellId = entry.getValue().intValue();
 						break;
 					}
 				}
@@ -369,7 +369,7 @@ public class AdventureGuildsman extends AbstractNpcAI
 				{
 					if (player.isInCategory(entry.getKey()))
 					{
-						multisellId = entry.getValue();
+						multisellId = entry.getValue().intValue();
 						break;
 					}
 				}
@@ -387,7 +387,7 @@ public class AdventureGuildsman extends AbstractNpcAI
 				{
 					if (player.isInCategory(entry.getKey()))
 					{
-						multisellId = entry.getValue();
+						multisellId = entry.getValue().intValue();
 						break;
 					}
 				}
@@ -406,7 +406,7 @@ public class AdventureGuildsman extends AbstractNpcAI
 				{
 					if (player.isInCategory(entry.getKey()))
 					{
-						multisellId = entry.getValue();
+						multisellId = entry.getValue().intValue();
 						break;
 					}
 				}

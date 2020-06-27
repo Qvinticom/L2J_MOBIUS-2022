@@ -179,7 +179,7 @@ public class KnockBack extends AbstractEffect
 			{
 				if ((nearbyPlayer.getRace() != Race.ERTHEIA) && (nearbyPlayer.getTarget() == effected) && nearbyPlayer.isInCategory(CategoryType.SIXTH_CLASS_GROUP) && !nearbyPlayer.isAlterSkillActive())
 				{
-					final int chainSkill = KNOCKBACK_SKILLS.get(nearbyPlayer.getClassId());
+					final int chainSkill = KNOCKBACK_SKILLS.get(nearbyPlayer.getClassId()).intValue();
 					if (nearbyPlayer.getSkillRemainingReuseTime(chainSkill) == -1)
 					{
 						nearbyPlayer.sendPacket(new ExAlterSkillRequest(nearbyPlayer, chainSkill, chainSkill, 3));

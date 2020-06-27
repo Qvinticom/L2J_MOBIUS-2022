@@ -141,7 +141,7 @@ public class PhysicalAttackWeaponBonus extends AbstractEffect
 			
 			// Skill specific mods.
 			final double weaponMod = effector.getAttackType().isRanged() ? 70 : 77;
-			final double weaponBonus = _weaponBonus.getOrDefault(effector.getAttackType(), 1.0);
+			final double weaponBonus = _weaponBonus.containsKey(effector.getAttackType()) ? _weaponBonus.get(effector.getAttackType()).doubleValue() : 1d;
 			final double power = _power + effector.getStat().getValue(Stat.SKILL_POWER_ADD, 0);
 			final double rangedBonus = effector.getAttackType().isRanged() ? attack + power : 0;
 			final double critMod = critical ? Formulas.calcCritDamage(effector, effected, skill) : 1;

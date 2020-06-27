@@ -80,7 +80,7 @@ public class DispelBySlot extends AbstractEffect
 		{
 			// Dispel transformations (buff and by GM)
 			final Short transformToDispel = _dispelAbnormals.get(AbnormalType.TRANSFORM);
-			if ((transformToDispel != null) && ((transformToDispel == effected.getTransformationId()) || (transformToDispel < 0)))
+			if ((transformToDispel != null) && ((transformToDispel.intValue() == effected.getTransformationId()) || (transformToDispel.intValue() < 0)))
 			{
 				effected.stopTransformation(true);
 			}
@@ -94,7 +94,7 @@ public class DispelBySlot extends AbstractEffect
 				}
 				
 				final Short abnormalLevel = _dispelAbnormals.get(info.getSkill().getAbnormalType());
-				return (abnormalLevel != null) && ((abnormalLevel < 0) || (abnormalLevel >= info.getSkill().getAbnormalLvl()));
+				return (abnormalLevel != null) && ((abnormalLevel.shortValue() < 0) || (abnormalLevel.shortValue() >= info.getSkill().getAbnormalLvl()));
 			}, true, true);
 		}
 	}

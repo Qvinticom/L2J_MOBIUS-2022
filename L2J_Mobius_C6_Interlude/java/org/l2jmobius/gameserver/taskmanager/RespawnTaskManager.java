@@ -45,7 +45,7 @@ public class RespawnTaskManager
 			final long time = System.currentTimeMillis();
 			for (Entry<NpcInstance, Long> entry : PENDING_RESPAWNS.entrySet())
 			{
-				if (time > entry.getValue())
+				if (time > entry.getValue().longValue())
 				{
 					final NpcInstance npc = entry.getKey();
 					PENDING_RESPAWNS.remove(npc);

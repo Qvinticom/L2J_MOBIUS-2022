@@ -260,10 +260,13 @@ public class EvilIncubator extends AbstractInstance
 						if (st.isCond(9))
 						{
 							st.setCond(10, true);
-							final int classItemId = CLASS_ITEMS.getOrDefault(player.getClassId(), -1);
-							if ((classItemId != -1) && !hasQuestItems(player, classItemId))
+							if (CLASS_ITEMS.containsKey(player.getClassId()))
 							{
-								giveItems(player, classItemId, 1);
+								final int classItemId = CLASS_ITEMS.get(player.getClassId()).intValue();
+								if (!hasQuestItems(player, classItemId))
+								{
+									giveItems(player, classItemId, 1);
+								}
 							}
 							npc.broadcastSay(ChatType.NPC_GENERAL, NpcStringId.THE_CRY_OF_DESTINY_PENDANT_WILL_BE_HELPFUL_TO_YOU_PLEASE_EQUIP_IT_AND_BRING_OUT_THE_POWER_OF_THE_PENDANT_TO_PREPARE_FOR_THE_NEXT_FIGHT);
 							htmltext = "33170-06.html";
@@ -494,7 +497,7 @@ public class EvilIncubator extends AbstractInstance
 				world.setParameter("WORLD_WAVE", waveId);
 				showOnScreenMsg(world, NpcStringId.I_DEATH_WOUND_CHAMPION_OF_SHILEN_SHALL_END_YOUR_WORLD, ExShowScreenMessage.TOP_CENTER, 5000, true);
 				getTimers().addTimer("SPAWN_WAVE", 20000, e -> manageWaveSpawn(world));
-				final Npc boss = addSpawn(CLASS_BOSS.get(world.getFirstPlayer().getClassId()), BOSS_LOC, false, 0, false, world.getId());
+				final Npc boss = addSpawn(CLASS_BOSS.get(world.getFirstPlayer().getClassId()).intValue(), BOSS_LOC, false, 0, false, world.getId());
 				world.broadcastPacket(new Earthquake(boss, 50, 10));
 				break;
 			}

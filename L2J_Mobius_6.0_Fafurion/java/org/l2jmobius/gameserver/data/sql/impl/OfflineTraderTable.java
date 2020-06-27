@@ -141,9 +141,9 @@ public class OfflineTraderTable
 								for (Entry<Integer, Long> entry : pc.getManufactureItems().entrySet())
 								{
 									stmItems.setInt(1, pc.getObjectId());
-									stmItems.setInt(2, entry.getKey());
+									stmItems.setInt(2, entry.getKey().intValue());
 									stmItems.setLong(3, 0);
-									stmItems.setLong(4, entry.getValue());
+									stmItems.setLong(4, entry.getValue().longValue());
 									stmItems.executeUpdate();
 									stmItems.clearParameters();
 								}
@@ -414,9 +414,9 @@ public class OfflineTraderTable
 								for (Entry<Integer, Long> entry : trader.getManufactureItems().entrySet())
 								{
 									stm3.setInt(1, trader.getObjectId());
-									stm3.setInt(2, entry.getKey());
+									stm3.setInt(2, entry.getKey().intValue());
 									stm3.setLong(3, 0);
-									stm3.setLong(4, entry.getValue());
+									stm3.setLong(4, entry.getValue().longValue());
 									stm3.executeUpdate();
 									stm3.clearParameters();
 								}

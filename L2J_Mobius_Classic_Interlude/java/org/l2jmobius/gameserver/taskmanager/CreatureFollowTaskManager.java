@@ -51,7 +51,7 @@ public class CreatureFollowTaskManager
 			
 			for (Entry<Creature, Integer> entry : NORMAL_FOLLOW_CREATURES.entrySet())
 			{
-				follow(entry.getKey(), entry.getValue());
+				follow(entry.getKey(), entry.getValue().intValue());
 			}
 			
 			_workingNormal = false;
@@ -67,7 +67,7 @@ public class CreatureFollowTaskManager
 			
 			for (Entry<Creature, Integer> entry : ATTACK_FOLLOW_CREATURES.entrySet())
 			{
-				follow(entry.getKey(), entry.getValue());
+				follow(entry.getKey(), entry.getValue().intValue());
 			}
 			
 			_workingAttack = false;

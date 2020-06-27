@@ -87,7 +87,7 @@ public class DecayTaskManager
 						{
 							delay = 8500;
 						}
-						if ((current - entry.getValue()) > delay)
+						if ((current - entry.getValue().longValue()) > delay)
 						{
 							actor.onDecay();
 							_decayTasks.remove(actor);

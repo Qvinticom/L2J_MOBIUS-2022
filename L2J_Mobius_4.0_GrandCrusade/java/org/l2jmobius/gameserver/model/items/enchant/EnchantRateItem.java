@@ -65,7 +65,7 @@ public class EnchantRateItem
 	 */
 	public void setMagicWeapon(boolean magicWeapon)
 	{
-		_isMagicWeapon = magicWeapon;
+		_isMagicWeapon = magicWeapon ? Boolean.TRUE : Boolean.FALSE;
 	}
 	
 	/**
@@ -82,7 +82,7 @@ public class EnchantRateItem
 		{
 			return false;
 		}
-		else if ((_isMagicWeapon != null) && (item.isMagicWeapon() != _isMagicWeapon))
+		else if ((_isMagicWeapon != null) && (item.isMagicWeapon() != _isMagicWeapon.booleanValue()))
 		{
 			return false;
 		}

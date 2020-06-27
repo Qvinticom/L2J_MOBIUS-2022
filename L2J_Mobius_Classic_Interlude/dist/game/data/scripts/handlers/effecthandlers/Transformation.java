@@ -63,7 +63,7 @@ public class Transformation extends AbstractEffect
 	{
 		if (!_id.isEmpty())
 		{
-			effected.transform(_id.get(Rnd.get(_id.size())), true);
+			effected.transform(_id.get(Rnd.get(_id.size())).intValue(), true);
 		}
 	}
 	

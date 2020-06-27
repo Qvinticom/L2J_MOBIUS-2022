@@ -215,7 +215,7 @@ public class OlyManager extends AbstractNpcAI implements IBypassHandler
 					{
 						if (player.isInCategory(entry.getKey()))
 						{
-							multisellId = entry.getValue();
+							multisellId = entry.getValue().intValue();
 							break;
 						}
 					}

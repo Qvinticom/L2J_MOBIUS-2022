@@ -328,7 +328,7 @@ public class Q11027_PathOfDestinyOvercome extends Quest
 					if (player.isInCategory(ent.getKey()))
 					{
 						player.getVariables().set(AWAKE_POWER_REWARDED_VAR, true);
-						giveItems(player, ent.getValue(), 1);
+						giveItems(player, ent.getValue().intValue(), 1);
 						break;
 					}
 				}

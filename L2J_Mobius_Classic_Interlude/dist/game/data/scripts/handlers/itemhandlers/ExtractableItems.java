@@ -201,7 +201,7 @@ public class ExtractableItems implements IItemHandler
 		
 		for (Entry<ItemInstance, Long> entry : extractedItems.entrySet())
 		{
-			sendMessage(player, entry.getKey(), entry.getValue());
+			sendMessage(player, entry.getKey(), entry.getValue().longValue());
 		}
 		
 		return true;
@@ -216,7 +216,7 @@ public class ExtractableItems implements IItemHandler
 			return;
 		}
 		
-		if (extractedItems.get(newItem) != null)
+		if (extractedItems.containsKey(newItem))
 		{
 			extractedItems.put(newItem, extractedItems.get(newItem) + 1);
 		}
@@ -226,7 +226,7 @@ public class ExtractableItems implements IItemHandler
 		}
 	}
 	
-	private void sendMessage(PlayerInstance player, ItemInstance item, Long count)
+	private void sendMessage(PlayerInstance player, ItemInstance item, long count)
 	{
 		final SystemMessage sm;
 		if (count > 1)

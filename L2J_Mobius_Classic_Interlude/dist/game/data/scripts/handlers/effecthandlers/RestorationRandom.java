@@ -131,7 +131,7 @@ public class RestorationRandom extends AbstractEffect
 				newItem.setEnchantLevel(Rnd.get(createdItem.getMinEnchant(), createdItem.getMaxEnchant()));
 			}
 			
-			if (extractedItems.get(newItem) != null)
+			if (extractedItems.containsKey(newItem))
 			{
 				extractedItems.put(newItem, extractedItems.get(newItem) + itemCount);
 			}
@@ -157,7 +157,7 @@ public class RestorationRandom extends AbstractEffect
 						playerIU.addModifiedItem(itemInstance);
 					}
 				}
-				sendMessage(player, entry.getKey(), entry.getValue());
+				sendMessage(player, entry.getKey(), entry.getValue().longValue());
 			}
 			player.sendPacket(playerIU);
 		}
@@ -169,7 +169,7 @@ public class RestorationRandom extends AbstractEffect
 		return EffectType.EXTRACT_ITEM;
 	}
 	
-	private void sendMessage(PlayerInstance player, ItemInstance item, Long count)
+	private void sendMessage(PlayerInstance player, ItemInstance item, long count)
 	{
 		final SystemMessage sm;
 		if (count > 1)

@@ -46,7 +46,7 @@ public class RandomAnimationTaskManager
 			final long time = System.currentTimeMillis();
 			for (Entry<NpcInstance, Long> entry : PENDING_ANIMATIONS.entrySet())
 			{
-				if (time > entry.getValue())
+				if (time > entry.getValue().longValue())
 				{
 					final NpcInstance npc = entry.getKey();
 					if (npc.isInActiveRegion() && !npc.isDead() && !npc.isInCombat() && !npc.isMoving() && !npc.isStunned() && !npc.isSleeping() && !npc.isParalyzed())

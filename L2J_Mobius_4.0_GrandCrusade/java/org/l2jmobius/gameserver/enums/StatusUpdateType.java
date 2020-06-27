@@ -70,6 +70,6 @@ public enum StatusUpdateType
 	
 	public int getValue(Creature creature)
 	{
-		return _valueSupplier.apply(creature);
+		return _valueSupplier.apply(creature).intValue();
 	}
 }

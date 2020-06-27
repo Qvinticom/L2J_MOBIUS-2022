@@ -46,15 +46,15 @@ public class MessageDeletionTaskManager
 			}
 			_working = true;
 			
-			int msgId;
+			Integer msgId;
 			Message msg;
 			final long time = System.currentTimeMillis();
 			for (Entry<Integer, Long> entry : PENDING_MESSAGES.entrySet())
 			{
-				if (time > entry.getValue())
+				if (time > entry.getValue().longValue())
 				{
 					msgId = entry.getKey();
-					msg = MailManager.getInstance().getMessage(msgId);
+					msg = MailManager.getInstance().getMessage(msgId.intValue());
 					if (msg == null)
 					{
 						PENDING_MESSAGES.remove(msgId);
@@ -83,7 +83,7 @@ public class MessageDeletionTaskManager
 						}
 					}
 					
-					MailManager.getInstance().deleteMessageInDb(msgId);
+					MailManager.getInstance().deleteMessageInDb(msgId.intValue());
 					PENDING_MESSAGES.remove(msgId);
 				}
 			}

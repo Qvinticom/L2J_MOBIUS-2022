@@ -173,7 +173,7 @@ public class KartiaHelperElise extends AbstractNpcAI
 				for (Entry<WorldObject, Integer> entry : sortedHpMap.entrySet())
 				{
 					final WorldObject friend = entry.getKey();
-					final int percent = entry.getValue();
+					final int percent = entry.getValue().intValue();
 					if ((friend != null) && (percent < 80) && (percent > 1))
 					{
 						peopleToHeal.add(friend);

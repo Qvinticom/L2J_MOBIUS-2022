@@ -54,9 +54,9 @@ public class DefenceTrait extends AbstractEffect
 	{
 		for (Entry<TraitType, Float> trait : _defenceTraits.entrySet())
 		{
-			if (trait.getValue() < 1.0f)
+			if (trait.getValue().floatValue() < 1.0f)
 			{
-				effected.getStat().mergeDefenceTrait(trait.getKey(), trait.getValue());
+				effected.getStat().mergeDefenceTrait(trait.getKey(), trait.getValue().floatValue());
 			}
 			else
 			{
@@ -70,9 +70,9 @@ public class DefenceTrait extends AbstractEffect
 	{
 		for (Entry<TraitType, Float> trait : _defenceTraits.entrySet())
 		{
-			if (trait.getValue() < 1.0f)
+			if (trait.getValue().floatValue() < 1.0f)
 			{
-				effected.getStat().removeDefenceTrait(trait.getKey(), trait.getValue());
+				effected.getStat().removeDefenceTrait(trait.getKey(), trait.getValue().floatValue());
 			}
 			else
 			{
