@@ -20,6 +20,7 @@ import static org.l2jmobius.gameserver.ai.CtrlIntention.AI_INTENTION_ACTIVE;
 import static org.l2jmobius.gameserver.ai.CtrlIntention.AI_INTENTION_ATTACK;
 import static org.l2jmobius.gameserver.ai.CtrlIntention.AI_INTENTION_IDLE;
 
+import java.lang.ref.WeakReference;
 import java.util.Comparator;
 import java.util.List;
 import java.util.Set;
@@ -697,16 +698,37 @@ public class AttackableAI extends CreatureAI
 			try
 			{
 				final Creature finalTarget = target;
-				World.getInstance().forEachVisibleObjectInRange(npc, Npc.class, factionRange, called ->
+				
+				// Call friendly npcs for help only if this NPC was attacked by the target creature.
+				boolean targetExistsInAttackByList = false;
+				for (final WeakReference<Creature> reference : npc.getAttackByList())
 				{
-					if (!getActiveChar().getTemplate().isClan(called.getTemplate().getClans()))
+					if (reference.get() == finalTarget)
 					{
-						return;
+						targetExistsInAttackByList = true;
+						break;
 					}
-					
-					// Check if the WorldObject is inside the Faction Range of the actor
-					if (called.hasAI() && (Math.abs(finalTarget.getZ() - called.getZ()) < 600) && npc.getAttackByList().stream().anyMatch(o -> o.get() == finalTarget) && ((called.getAI()._intention == CtrlIntention.AI_INTENTION_IDLE) || (called.getAI()._intention == CtrlIntention.AI_INTENTION_ACTIVE)))
+				}
+				if (targetExistsInAttackByList)
+				{
+					World.getInstance().forEachVisibleObjectInRange(npc, Npc.class, factionRange, called ->
 					{
+						// Don't call dead npcs, npcs without ai or npcs which are too far away.
+						if (called.isDead() || !called.hasAI() || (Math.abs(finalTarget.getZ() - called.getZ()) > 600))
+						{
+							return;
+						}
+						// Don't call npcs who are already doing some action (e.g. attacking, casting).
+						if ((called.getAI()._intention != CtrlIntention.AI_INTENTION_IDLE) && (called.getAI()._intention != CtrlIntention.AI_INTENTION_ACTIVE))
+						{
+							return;
+						}
+						// Don't call npcs who aren't in the same clan.
+						if (!getActiveChar().getTemplate().isClan(called.getTemplate().getClans()))
+						{
+							return;
+						}
+						
 						if (finalTarget.isPlayable())
 						{
 							// By default, when a faction member calls for help, attack the caller's attacker.
@@ -719,8 +741,8 @@ public class AttackableAI extends CreatureAI
 							((Attackable) called).addDamageHate(finalTarget, 0, npc.getHating(finalTarget));
 							called.getAI().setIntention(CtrlIntention.AI_INTENTION_ATTACK, finalTarget);
 						}
-					}
-				});
+					});
+				}
 			}
 			catch (NullPointerException e)
 			{

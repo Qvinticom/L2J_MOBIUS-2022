@@ -846,39 +846,61 @@ public class AttackableAI extends CreatureAI
 			// Go through all WorldObject that belong to its faction
 			try
 			{
-				for (Npc called : World.getInstance().getVisibleObjectsInRange(npc, Npc.class, factionRange))
+				final Creature finalTarget = originalAttackTarget;
+				// Call friendly npcs for help only if this NPC was attacked by the target creature.
+				boolean targetExistsInAttackByList = false;
+				for (Creature reference : npc.getAttackByList())
 				{
-					if (!getActiveChar().getTemplate().isClan(called.getTemplate().getClans()))
+					if (reference == finalTarget)
 					{
-						continue;
+						targetExistsInAttackByList = true;
+						break;
 					}
-					
-					// Check if the WorldObject is inside the Faction Range of the actor
-					if (called.hasAI() && (Math.abs(originalAttackTarget.getZ() - called.getZ()) < 600) && npc.getAttackByList().contains(originalAttackTarget) && ((called.getAI()._intention == AI_INTENTION_IDLE) || (called.getAI()._intention == AI_INTENTION_ACTIVE)) && (called.getInstanceId() == npc.getInstanceId()))
+				}
+				if (targetExistsInAttackByList)
+				{
+					World.getInstance().forEachVisibleObjectInRange(npc, Npc.class, factionRange, called ->
 					{
-						if (originalAttackTarget.isPlayable())
+						// Don't call dead npcs, npcs without ai or npcs which are too far away.
+						if (called.isDead() || !called.hasAI() || (Math.abs(finalTarget.getZ() - called.getZ()) > 600))
 						{
-							if (originalAttackTarget.isInParty() && originalAttackTarget.getParty().isInDimensionalRift())
+							return;
+						}
+						// Don't call npcs who are already doing some action (e.g. attacking, casting).
+						if ((called.getAI()._intention != AI_INTENTION_IDLE) && (called.getAI()._intention != AI_INTENTION_ACTIVE))
+						{
+							return;
+						}
+						// Don't call npcs who aren't in the same clan.
+						if (!getActiveChar().getTemplate().isClan(called.getTemplate().getClans()))
+						{
+							return;
+						}
+						
+						if (finalTarget.isPlayable())
+						{
+							// Dimensional Rift check.
+							if (finalTarget.isInParty() && finalTarget.getParty().isInDimensionalRift())
 							{
-								final byte riftType = originalAttackTarget.getParty().getDimensionalRift().getType();
-								final byte riftRoom = originalAttackTarget.getParty().getDimensionalRift().getCurrentRoom();
+								final byte riftType = finalTarget.getParty().getDimensionalRift().getType();
+								final byte riftRoom = finalTarget.getParty().getDimensionalRift().getCurrentRoom();
 								if ((npc instanceof RiftInvaderInstance) && !DimensionalRiftManager.getInstance().getRoom(riftType, riftRoom).checkIfInZone(npc.getX(), npc.getY(), npc.getZ()))
 								{
-									continue;
+									return;
 								}
 							}
 							
 							// By default, when a faction member calls for help, attack the caller's attacker.
 							// Notify the AI with EVT_AGGRESSION
-							called.getAI().notifyEvent(CtrlEvent.EVT_AGGRESSION, originalAttackTarget, 1);
-							EventDispatcher.getInstance().notifyEventAsync(new OnAttackableFactionCall(called, getActiveChar(), originalAttackTarget.getActingPlayer(), originalAttackTarget.isSummon()), called);
+							called.getAI().notifyEvent(CtrlEvent.EVT_AGGRESSION, finalTarget, 1);
+							EventDispatcher.getInstance().notifyEventAsync(new OnAttackableFactionCall(called, getActiveChar(), finalTarget.getActingPlayer(), finalTarget.isSummon()), called);
 						}
-						else if (called.isAttackable() && (getAttackTarget() != null) && (called.getAI()._intention != AI_INTENTION_ATTACK))
+						else if (called.isAttackable() && (called.getAI()._intention != AI_INTENTION_ATTACK))
 						{
-							((Attackable) called).addDamageHate(getAttackTarget(), 0, npc.getHating(getAttackTarget()));
-							called.getAI().setIntention(AI_INTENTION_ATTACK, getAttackTarget());
+							((Attackable) called).addDamageHate(finalTarget, 0, npc.getHating(finalTarget));
+							called.getAI().setIntention(AI_INTENTION_ATTACK, finalTarget);
 						}
-					}
+					});
 				}
 			}
 			catch (NullPointerException e)
