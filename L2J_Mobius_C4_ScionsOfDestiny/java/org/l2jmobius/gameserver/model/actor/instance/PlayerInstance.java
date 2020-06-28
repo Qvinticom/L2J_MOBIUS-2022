@@ -6008,6 +6008,7 @@ public class PlayerInstance extends Playable
 					if (itemDrop.isShadowItem() || // Dont drop Shadow Items
 						(itemDrop.getItemId() == 57) || // Adena
 						(itemDrop.getItem().getType2() == Item.TYPE2_QUEST) || // Quest Items
+						(itemDrop.getItem().isDropable() == false) || // Non-dropable item
 						Config.KARMA_LIST_NONDROPPABLE_ITEMS.contains(itemDrop.getItemId()) || // Item listed in the non droppable item list
 						Config.KARMA_LIST_NONDROPPABLE_PET_ITEMS.contains(itemDrop.getItemId()) || // Item listed in the non droppable pet item list
 						((getPet() != null) && (getPet().getControlItemId() == itemDrop.getItemId() // Control Item of active pet
