@@ -57,6 +57,9 @@ public class SecondClassChange extends Quest
 	private static final int MARK_OF_HEALER = 2820;
 	private static final int MARK_OF_LIFE = 3140;
 	
+	// Reward Item
+	private static final int SHADOW_WEAPON_COUPON_CGRADE = 8870;
+	
 	// @formatter:off
 	private static final Map<String, int[]> Classes = new HashMap<>();
 	static
@@ -100,6 +103,7 @@ public class SecondClassChange extends Quest
 		Classes.put("EE", new int[] {30, 29, 1, 12, 13, 14, 15, MARK_OF_PILGRIM, MARK_OF_LIFE, MARK_OF_HEALER, 26});
 	}
 	
+	// Also used by ShadowWeapon script.
 	public static final int[] SECONDCLASSNPCS =
 	{
 		// Dark Elfs
@@ -154,6 +158,7 @@ public class SecondClassChange extends Quest
 						st.takeItems(array[7], -1);
 						st.takeItems(array[8], -1);
 						st.takeItems(array[9], -1);
+						st.giveItems(SHADOW_WEAPON_COUPON_CGRADE, 15);
 						player.setClassId(array[0]);
 						player.setBaseClass(array[0]);
 						player.sendPacket(new HennaInfo(player));
