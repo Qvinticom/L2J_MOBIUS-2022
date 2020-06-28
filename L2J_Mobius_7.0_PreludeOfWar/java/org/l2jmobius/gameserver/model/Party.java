@@ -97,7 +97,7 @@ public class Party extends AbstractPlayerGroup
 	private Future<?> _positionBroadcastTask = null;
 	protected PartyMemberPosition _positionPacket;
 	private boolean _disbanding = false;
-	private static Map<Integer, Creature> _tacticalSigns = null;
+	private Map<Integer, Creature> _tacticalSigns = null;
 	private static final int[] TACTICAL_SYS_STRINGS =
 	{
 		0,
@@ -603,14 +603,18 @@ public class Party extends AbstractPlayerGroup
 					}
 				}
 				
-				if (getLeader() != null)
+				final PlayerInstance leader = getLeader();
+				if (leader != null)
 				{
-					getLeader().setParty(null);
-					if (getLeader().isInDuel())
+					applyTacticalSigns(leader, true);
+					
+					leader.setParty(null);
+					if (leader.isInDuel())
 					{
-						DuelManager.getInstance().onRemoveFromParty(getLeader());
+						DuelManager.getInstance().onRemoveFromParty(leader);
 					}
 				}
+				
 				if (_changeDistributionTypeRequestTask != null)
 				{
 					_changeDistributionTypeRequestTask.cancel(true);
