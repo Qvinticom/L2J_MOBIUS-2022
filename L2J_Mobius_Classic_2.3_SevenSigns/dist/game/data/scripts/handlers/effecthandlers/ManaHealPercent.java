@@ -70,7 +70,7 @@ public class ManaHealPercent extends AbstractEffect
 		}
 		
 		// Prevents overheal
-		amount = Math.min(amount, effected.getMaxRecoverableMp() - effected.getCurrentMp());
+		amount = Math.min(amount, Math.max(0, effected.getMaxRecoverableMp() - effected.getCurrentMp()));
 		if (amount != 0)
 		{
 			final double newMp = amount + effected.getCurrentMp();

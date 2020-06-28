@@ -75,7 +75,7 @@ public class HealPercent extends AbstractEffect
 		}
 		
 		// Prevents overheal
-		amount = Math.min(amount, effected.getMaxRecoverableHp() - effected.getCurrentHp());
+		amount = Math.min(amount, Math.max(0, effected.getMaxRecoverableHp() - effected.getCurrentHp()));
 		if (amount >= 0)
 		{
 			if (amount != 0)
