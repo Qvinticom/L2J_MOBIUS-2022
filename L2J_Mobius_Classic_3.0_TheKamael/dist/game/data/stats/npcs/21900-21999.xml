@@ -1660,43 +1660,94 @@
 			<height normal="12" />
 		</collision>
 	</npc>
-	<npc id="21959" level="85" type="Npc" name="Cave Banshee">
-		<!-- AUTO GENERATED NPC TODO: FIX IT -->
-		<race>ETC</race>
-		<sex>FEMALE</sex>
-		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="8446" hpRegen="10.5" mp="2355" mpRegen="3.6" />
-			<speed>
-				<walk ground="60" />
-				<run ground="120" />
-			</speed>
+	<npc id="21959" level="83" type="Npc" name="Cave Banshee" element="EARTH">
+		<!-- <attack physical="1950.2231755595" magical="1331.5869440987" critical="4" attackSpeed="253" range="40" />
+			 <defence physical="405.85106382979" magical="297.0297029703" /> -->
+<parameters>
+			<param name="MoveAroundSocial" value="0" />
+			<param name="MoveAroundSocial1" value="0" />
+			<param name="MoveAroundSocial2" value="0" />
+			<param name="SoulShot" value="100" />
+			<param name="SoulShotRate" value="10" />
+			<param name="SpiritShot" value="100" />
+			<param name="SpiritShotRate" value="5" />
+			<param name="LongRangeGuardRate" value="5" />
+			<skill name="DDMagic" id="4001" level="9" />
+		</parameters>
+		<race>DEMONIC</race>
+		<sex>MALE</sex>
+		<acquire exp="1376009" sp="41281" attributeExp="1328" />
+		<equipment rhand="3939" />
+		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
+			<vitals hp="17382.03" hpRegen="6.5" mp="2959.74" mpRegen="2.4" />
 			<attack physical="1950.2231755595" magical="1331.5869440987" critical="4" attackSpeed="253" range="40" />
 			<defence physical="405.85106382979" magical="297.0297029703" />
+			<speed>
+				<walk ground="80" />
+				<run ground="174" />
+			</speed>
+			<hitTime>430</hitTime>
+			<abnormalResist physical="10" magical="10" />
 		</stats>
-		<status attackable="false" />
+		<status  canBeSown="true" />
+		<skillList>
+			<skill id="4001" level="9" /> <!-- NPC Windstrike -->
+			<skill id="4416" level="9" /> <!-- Demons -->
+			<skill id="4408" level="13" /> <!-- HP Increase (5x) -->
+			<skill id="4411" level="14" /> <!-- Strong M. Atk. -->
+			<skill id="4278" level="1" /> <!-- Dark Attack -->
+		</skillList>
+		<shots shotChance="30" spiritChance="30" />
+		<exCrtEffect>false</exCrtEffect>
+		<ai aggroRange="450" clanHelpRange="300" isAggressive="true">
+			<clanList>
+				<clan>ALL</clan>
+			</clanList>
+		</ai>
 		<collision>
-			<radius normal="5" />
-			<height normal="12" />
+			<radius normal="11" />
+			<height normal="28.5" />
 		</collision>
+				<dropLists>
+			<drop>
+				<item id="5313" min="1" max="1" chance="0.01" /> <!-- Sealed Gauntlets of Nightmare -->
+				<item id="5318" min="1" max="1" chance="0.01" /> <!-- Sealed Majestic Gauntlets -->
+				<item id="5514" min="1" max="1" chance="1.672" /> <!-- Sealed Gauntlets of Nightmare Design -->
+				<item id="5515" min="1" max="1" chance="1.619" /> <!-- Sealed Majestic Gauntlet Design -->
+				<item id="57" min="2102" max="4904" chance="70" /> <!-- Adena -->
+				<item id="2133" min="1" max="1" chance="0.5" /> <!-- Gemstone (A-grade) -->
+			</drop>
+			<spoil>
+				<item id="5515" min="1" max="1" chance="7.595" /> <!-- Sealed Majestic Gauntlet Design -->
+				<item id="5514" min="1" max="1" chance="7.504" /> <!-- Sealed Gauntlets of Nightmare Design -->
+			</spoil>
+		</dropLists>
 	</npc>
 	<npc id="21960" level="85" type="Npc" name="Lord Ishka" title="Apostle of the Valley">
-		<!-- AUTO GENERATED NPC TODO: FIX IT -->
+		<!-- AUTO GENERATED NPC TODO: FIX IT SEARCH HOW TO ADD TROPHIES-->
 		<race>ETC</race>
 		<sex>FEMALE</sex>
+		<acquire exp="1458078" sp="43743" attributeExp="1530" />
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="8446" hpRegen="10.5" mp="2355" mpRegen="3.6" />
+			<vitals hp="280292" hpRegen="10.5" mp="3413" mpRegen="3.6" />			
+			<attack physical="1950.2231755595" magical="1331.5869440987" critical="4" attackSpeed="253" range="40" />
+			<defence physical="405.85106382979" magical="297.0297029703" />
 			<speed>
 				<walk ground="60" />
 				<run ground="120" />
 			</speed>
-			<attack physical="1950.2231755595" magical="1331.5869440987" critical="4" attackSpeed="253" range="40" />
-			<defence physical="405.85106382979" magical="297.0297029703" />
 		</stats>
-		<status attackable="false" />
+		<status canBeSown="true" />
 		<collision>
 			<radius normal="5" />
 			<height normal="12" />
 		</collision>
+				<dropLists>
+			<drop>
+				<item id="57" min="4085" max="9532" chance="70" /> <!-- Adena -->
+				<item id="1873" min="1" max="1" chance="1.818" /> <!-- Earth Spirit Evolution Stone -->
+			</drop>
+		</dropLists>
 	</npc>
 	<npc id="21961" level="85" type="Npc" name="Pachycephalosaurus">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->

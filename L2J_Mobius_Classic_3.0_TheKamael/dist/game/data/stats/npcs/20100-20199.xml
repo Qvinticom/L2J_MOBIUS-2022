@@ -1415,7 +1415,7 @@
 			<height normal="35" />
 		</collision>
 	</npc>
-	<npc id="20134" level="59" type="Monster" name="Cave Maiden">
+	<npc id="20134" level="84" type="Monster" name="Cave Maiden" element="EARTH">
 		<parameters>
 			<param name="MoveAroundSocial" value="0" />
 			<param name="MoveAroundSocial1" value="0" />
@@ -1425,16 +1425,16 @@
 			<param name="SpiritShot" value="100" />
 			<param name="SpiritShotRate" value="5" />
 			<param name="LongRangeGuardRate" value="5" />
-			<skill name="HoldMagic" id="4047" level="5" />
+			<skill name="HoldMagic" id="4047" level="9" />
 		</parameters>
 		<race>BEAST</race>
 		<sex>FEMALE</sex>
 		<equipment rhand="68" /> 
-		<acquire exp="35016" sp="1051" attributeExp="14" />
+		<acquire exp="1394760" sp="41843" attributeExp="1428" />
 		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
-			<vitals hp="11905.464" hpRegen="6.5" mp="1120.623" mpRegen="2.4" />
-			<attack physical="461.94387" magical="315.44778" random="30" critical="4.75" accuracy="4.75" attackSpeed="250" type="SWORD" range="40" distance="80" width="120" />
-			<defence physical="242.81593" magical="177.68216" />
+			<vitals hp="87829.82" hpRegen="6.5" mp="3017.43" mpRegen="2.4" />
+			<attack physical="2305.94387" magical="1575.44778" random="30" critical="4.75" accuracy="4.75" attackSpeed="250" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="363.81593" magical="265.68216" />  <!-- physical="242.81593" magical="177.68216" physical="461.94387" magical="315.44778" -->
 			<attribute>
 				<attack type="earth" value="20" />
 				<defence fire="20" water="20" wind="-32" earth="53" holy="20" dark="20" />
@@ -1448,7 +1448,7 @@
 		</stats>
 		<status attackable="true" />
 		<skillList>
-			<skill id="4047" level="5" /> <!-- Hold -->
+			<skill id="4047" level="9" /> <!-- Hold -->
 			<skill id="4416" level="3" /> <!-- Beasts -->
 		</skillList>
 		<shots shotChance="30" spiritChance="30" />
@@ -1460,22 +1460,16 @@
 		</collision>
 		<dropLists>
 			<drop>
-				<item id="357" min="1" max="1" chance="0.03" /> <!-- Zubei's Breastplate -->
-				<item id="383" min="1" max="1" chance="0.03" /> <!-- Zubei's Gaiters -->
-				<item id="2376" min="1" max="1" chance="0.03" /> <!-- Avadon Breastplate -->
-				<item id="2379" min="1" max="1" chance="0.03" /> <!-- Avadon Gaiters -->
-				<item id="57" min="1645" max="3840" chance="70" /> <!-- Adena -->
-				<item id="1864" min="4" max="12" chance="36.27" /> <!-- Stem -->
-				<item id="1867" min="7" max="21" chance="13.21" /> <!-- Animal Skin -->
-				<item id="4057" min="1" max="1" chance="3.576" /> <!-- Zubei's Gaiter Material -->
-				<item id="4065" min="1" max="1" chance="3.471" /> <!-- Avadon Gaiter Material -->
-				<item id="4064" min="1" max="1" chance="2.317" /> <!-- Avadon Breastplate Part -->
-				<item id="4056" min="1" max="1" chance="2.285" /> <!-- Zubei's Breastplate Part -->
+				<item id="5311" min="1" max="1" chance="0.001" /> <!-- Sealed Armor of Nightmare -->
+				<item id="5316" min="1" max="1" chance="0.001" /> <!-- Sealed Majestic Plate Armor -->
+				<item id="2133" min="1" max="1" chance="0.5" /> <!-- Gemstone (A-grade) -->
+				<item id="5522" min="1" max="1" chance="0.1" /> <!-- Sealed Armor of Nightmare Pattern -->
+				<item id="5523" min="1" max="1" chance="0.1" /> <!-- Sealed Majestic Plate Armor Pattern -->
+				<item id="57" min="2044" max="4770" chance="70" /> <!-- Adena -->
 			</drop>
 			<spoil>
-				<item id="1871" min="1" max="1" chance="83.98" /> <!-- Charcoal -->
-				<item id="5475" min="1" max="1" chance="20.4" /> <!-- Recipe: Warsmith' Mold -->
-				<item id="356" min="1" max="1" chance="0.075" /> <!-- Full Plate Armor -->
+				<item id="5481" min="1" max="1" chance="1.978" /> <!-- Sealed Majestic Leather Armor Fabric -->
+				<item id="5480" min="1" max="1" chance="1.924" /> <!-- Sealed Leather Armor of Nightmare Fabric -->
 			</spoil>
 		</dropLists>
 	</npc>
@@ -1612,7 +1606,7 @@
 			<height normal="31" grown="36" />
 		</collision>
 	</npc>
-	<npc id="20137" level="57" type="Monster" name="Drake">
+	<npc id="20137" level="85" type="Monster" name="Drake" element="EARTH">
 		<parameters>
 			<param name="MoveAroundSocial" value="60" />
 			<param name="MoveAroundSocial1" value="60" />
@@ -1622,15 +1616,15 @@
 			<param name="SpiritShot" value="100" />
 			<param name="SpiritShotRate" value="5" />
 			<param name="LongRangeGuardRate" value="5" />
-			<skill name="DDMagic" id="4078" level="5" />
+			<skill name="DDMagic" id="4078" level="10" />
 		</parameters>
 		<race>DRAGON</race>
 		<sex>MALE</sex>
-		<acquire exp="60210" sp="1807" attributeExp="13" />
+		<acquire exp="1435319" sp="43060" attributeExp="1530" />
 		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
-			<vitals hp="9371.565" hpRegen="6.5" mp="1054.704" mpRegen="2.4" />
-			<attack physical="424.23295" magical="289.69611" random="30" critical="4.75" accuracy="4.75" attackSpeed="250" type="SWORD" range="40" distance="80" width="120" />
-			<defence physical="233.18839" magical="170.63714" />
+			<vitals hp="88700.27" hpRegen="6.5" mp="3075.12" mpRegen="2.4" />
+			<attack physical="2120.23295" magical="1445.69611" random="30" critical="4.75" accuracy="4.75" attackSpeed="250" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="349.18839" magical="255.63714" /> <!-- physical="233.18839" magical="170.63714" -->
 			<attribute>
 				<attack type="earth" value="20" />
 				<defence fire="20" water="20" wind="-32" earth="53" holy="20" dark="20" />
@@ -1644,7 +1638,7 @@
 		</stats>
 		<status attackable="true" />
 		<skillList>
-			<skill id="4078" level="5" /> <!-- NPC Flamestrike -->
+			<skill id="4078" level="10" /> <!-- NPC Flamestrike -->
 			<skill id="4416" level="10" /> <!-- Dragons -->
 		</skillList>
 		<shots shotChance="30" spiritChance="30" />
@@ -1658,6 +1652,18 @@
 			<radius normal="30" />
 			<height normal="100" />
 		</collision>
+		<dropLists>
+			<drop>
+				<item id="8684" min="1" max="1" chance="0.001" /> <!-- Shyeed's Bow -->
+				<item id="2133" min="1" max="1" chance="0.5" /> <!-- Gemstone (A-grade) -->
+				<item id="8718" min="1" max="1" chance="0.5" /> <!-- Shyeed's Bow Shaft -->
+				<item id="57" min="2072" max="4834" chance="70" /> <!-- Adena -->
+			</drop>
+			<spoil>
+				<item id="8718" min="1" max="1" chance="1.052" /> <!-- Shyeed's Bow Shaft -->
+				<item id="8702" min="1" max="1" chance="0.1" /> <!-- Recipe: Shyeed's Bow (60%) -->
+			</spoil>
+		</dropLists>
 	</npc>
 	<npc id="20138" level="31" type="Monster" name="Turek Orc Commander" title="Turek Guardian">
 		<parameters>
@@ -1841,22 +1847,22 @@
 			<height normal="27" />
 		</collision>
 	</npc>
-	<npc id="20142" level="60" type="Monster" name="Blood Queen">
+	<npc id="20142" level="85" type="Monster" name="Blood Queen">
 		<parameters>
 			<param name="MoveAroundSocial" value="60" />
 			<param name="MoveAroundSocial1" value="60" />
 			<param name="MoveAroundSocial2" value="60" />
-			<skill name="DDMagic1" id="4039" level="6" />
-			<skill name="DDMagic2" id="4002" level="6" />
-			<skill name="DeBuff" id="4035" level="6" />
+			<skill name="DDMagic1" id="4039" level="10" />
+			<skill name="DDMagic2" id="4002" level="10" />
+			<skill name="DeBuff" id="4035" level="10" />
 		</parameters>
 		<race>DEMONIC</race>
 		<sex>FEMALE</sex>
-		<acquire exp="30672" sp="920" />
+		<acquire exp="1458078" sp="43743" attributeExp="1530" />
 		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
-			<vitals hp="952.23446" hpRegen="6.5" mp="1130.145" mpRegen="2.4" />
-			<attack physical="44.32863" magical="30.2707" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
-			<defence physical="86.87049" magical="63.56806" />
+			<vitals hp="14783.33" hpRegen="6.5" mp="3075.12" mpRegen="2.4" />
+			<attack physical="550.32863" magical="375.2707" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="215.87049" magical="160.56806" /> <!-- x5 DEFphysical="86.87049" DEFmagical="63.56806" x50 ATTphysical="44.32863" ATTmagical="30.2707" -->
 			<speed>
 				<walk ground="80" />
 				<run ground="160" />
@@ -1866,9 +1872,9 @@
 		</stats>
 		<status undying="false" canBeSown="true" />
 		<skillList>
-			<skill id="4002" level="6" /> <!-- NPC HP Drain -->
-			<skill id="4035" level="6" /> <!-- Poison -->
-			<skill id="4039" level="6" /> <!-- NPC MP Drain -->
+			<skill id="4002" level="10" /> <!-- NPC HP Drain -->
+			<skill id="4035" level="10" /> <!-- Poison -->
+			<skill id="4039" level="10" /> <!-- NPC MP Drain -->
 			<skill id="4416" level="9" /> <!-- Demons -->
 			<skill id="4408" level="14" /> <!-- HP Increase (6x) -->
 			<skill id="4410" level="16" /> <!-- Very Strong P. Atk. -->
@@ -1888,24 +1894,13 @@
 		</collision>
 		<dropLists>
 			<drop>
-				<item id="612" min="1" max="1" chance="0.075" /> <!-- Sealed Zubei's Gauntlets -->
-				<item id="2464" min="1" max="1" chance="0.075" /> <!-- Sealed Avadon Gloves -->
-				<item id="2475" min="1" max="1" chance="0.03" /> <!-- Sealed Doom Gloves -->
-				<item id="2487" min="1" max="1" chance="0.03" /> <!-- Sealed Blue Wolf Gloves -->
-				<item id="57" min="2056" max="4798" chance="70" /> <!-- Adena -->
-				<item id="1873" min="1" max="3" chance="18.68" /> <!-- Silver Nugget -->
-				<item id="1876" min="1" max="1" chance="17.2" /> <!-- Mithril Ore -->
-				<item id="4096" min="1" max="1" chance="7.123" /> <!-- Sealed Blue Wolf Glove Fabric -->
-				<item id="1874" min="1" max="1" chance="6.034" /> <!-- Oriharukon Ore -->
-				<item id="4073" min="1" max="3" chance="4.041" /> <!-- Sealed Avadon Glove Fragment -->
-				<item id="4100" min="1" max="3" chance="2.776" /> <!-- Sealed Zubei's Gauntlet Fragment -->
-				<item id="4091" min="2" max="6" chance="1.743" /> <!-- Sealed Doom Glove Fragment -->
-				<item id="952" min="1" max="1" chance="1.16" /> <!-- Scroll: Enchant Armor (C-grade) -->
+				<item id="57" min="2159" max="5038" chance="70" /> <!-- Adena -->
+				<item id="2133" min="1" max="1" chance="0.5" /> <!-- Gemstone (A-grade) -->
+				<item id="49756" min="1" max="1" chance="0.1" /> <!-- Cloth Piece -->
+				<item id="90045" min="1" max="1" chance="0.1" /> <!-- Magical Tablet -->
 			</drop>
 			<spoil>
-				<item id="4938" min="1" max="1" chance="23.41" /> <!-- Recipe: Adamantite Ring (70%) -->
-				<item id="4937" min="1" max="1" chance="15.59" /> <!-- Recipe: Adamantite Earring (70%) -->
-				<item id="4939" min="1" max="1" chance="12.42" /> <!-- Recipe: Adamantite Necklace (70%) -->
+				<item id="49756" min="1" max="1" chance="1.079" /> <!-- Cloth Piece -->
 			</spoil>
 		</dropLists>
 	</npc>
@@ -2085,7 +2080,7 @@
 			</spoil>
 		</dropLists>
 	</npc>
-	<npc id="20146" level="50" type="Monster" name="Headless Knight">
+	<npc id="20146" level="85" type="Monster" name="Headless Knight" element="EARTH">
 		<parameters>
 			<param name="MoveAroundSocial" value="110" />
 			<param name="MoveAroundSocial1" value="110" />
@@ -2095,16 +2090,16 @@
 			<param name="SpiritShot" value="100" />
 			<param name="SpiritShotRate" value="5" />
 			<param name="LongRangeGuardRate" value="5" />
-			<skill name="DDMagic" id="4078" level="5" />
+			<skill name="DDMagic" id="4078" level="9" />
 		</parameters>
 		<race>UNDEAD</race>
 		<sex>MALE</sex>
 		<equipment rhand="124" /> 
-		<acquire exp="19278" sp="579" attributeExp="8" />
+		<acquire exp="1449841" sp="43496" attributeExp="1530" />
 		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
-			<vitals hp="5992.611" hpRegen="5.5" mp="830.76" mpRegen="2.1" />
-			<attack physical="305.54906" magical="208.6504" random="30" critical="4.75" accuracy="4.75" attackSpeed="250" type="SWORD" range="40" distance="80" width="120" />
-			<defence physical="200.23844" magical="146.5258" />
+			<vitals hp="88700.27" hpRegen="5.5" mp="3075.12" mpRegen="2.1" />
+			<attack physical="1525.54906" magical="1040.6504" random="30" critical="4.75" accuracy="4.75" attackSpeed="250" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="300.23844" magical="219.5258" /> <!-- physical="200.23844" magical="146.5258" -->
 			<attribute>
 				<attack type="earth" value="20" />
 				<defence fire="20" water="20" wind="-32" earth="53" holy="20" dark="20" />
@@ -2118,7 +2113,7 @@
 		</stats>
 		<status attackable="true" />
 		<skillList>
-			<skill id="4078" level="5" /> <!-- NPC Flamestrike -->
+			<skill id="4078" level="9" /> <!-- NPC Flamestrike -->
 			<skill id="4416" level="1" /> <!-- Undead -->
 		</skillList>
 		<shots shotChance="30" spiritChance="30" />
@@ -2134,28 +2129,14 @@
 		</collision>
 		<dropLists>
 			<drop>
-				<item id="103" min="1" max="1" chance="0.03" /> <!-- Tower Shield -->
-				<item id="107" min="1" max="1" chance="0.03" /> <!-- Compound Shield -->
-				<item id="517" min="1" max="1" chance="0.03" /> <!-- Compound Helmet -->
-				<item id="60" min="1" max="1" chance="0.0075" /> <!-- Compound Armor -->
-				<item id="57" min="895" max="2095" chance="70" /> <!-- Adena -->
-				<item id="1872" min="1" max="1" chance="26.12" /> <!-- Animal Bone -->
-				<item id="1978" min="1" max="1" chance="3.842" /> <!-- Tower Shield Fragment -->
-				<item id="4055" min="1" max="1" chance="3.826" /> <!-- Compound Shield Fragment -->
-				<item id="2957" min="1" max="1" chance="2.529" /> <!-- Compound Helmet Design -->
-				<item id="1977" min="1" max="1" chance="0.75" /> <!-- Compound Armor Temper -->
-				<item id="1877" min="1" max="1" chance="0.75" /> <!-- Adamantite Nugget -->
-				<item id="3006" min="1" max="1" chance="0.75" /> <!-- Recipe: Demon's Gloves -->
-				<item id="3017" min="1" max="1" chance="0.75" /> <!-- Recipe: Divine Gloves -->
-				<item id="2170" min="1" max="1" chance="0.3" /> <!-- Recipe: Nassen's Earring -->
-				<item id="4601" min="1" max="1" chance="0.03" /> <!-- Greater Dye of STR (STR 3 CON -3) -->
-				<item id="2356" min="1" max="1" chance="0.03" /> <!-- Recipe: Demon's Staff -->
-				<item id="4603" min="1" max="1" chance="0.03" /> <!-- Greater Dye of CON (Con 3 Str -3) -->
+				<item id="8683" min="1" max="1" chance="0.001" /> <!-- Tiphon's Spear -->
+				<item id="2133" min="1" max="1" chance="0.5" /> <!-- Gemstone (A-grade) -->
+				<item id="8717" min="1" max="1" chance="0.5" /> <!-- Tiphon's Spear Edge -->
+				<item id="57" min="2127" max="4964" chance="70" /> <!-- Adena -->
 			</drop>
 			<spoil>
-				<item id="1869" min="1" max="1" chance="88.33" /> <!-- Iron Ore -->
-				<item id="1915" min="1" max="1" chance="37.31" /> <!-- Ring of Ages Gemstone -->
-				<item id="3017" min="1" max="1" chance="11.33" /> <!-- Recipe: Divine Gloves -->
+				<item id="8717" min="1" max="1" chance="1.162" /> <!-- Tiphon's Spear Edge -->
+				<item id="8700" min="1" max="1" chance="0.1" /> <!-- Recipe: Tiphon's Spear (60%) -->
 			</spoil>
 		</dropLists>
 	</npc>

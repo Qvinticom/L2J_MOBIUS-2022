@@ -335,7 +335,7 @@
 		<sex>MALE</sex>
 		<acquire exp="7426723" sp="222802" />
 		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
-			<vitals hp="13861.3153125" hpRegen="8.5" mp="3081.939" mpRegen="3" />
+			<vitals hp="44350.16" hpRegen="8.5" mp="3075.63" mpRegen="3" />
 			<attack physical="1188.872595" magical="811.845865" random="30" critical="4.75" accuracy="4.75" attackSpeed="250" type="SWORD" range="40" distance="80" width="120" />
 			<defence physical="361.78814" magical="264.74086" />
 			<speed>
@@ -384,7 +384,7 @@
 		<equipment rhand="3939" /> 
 		<acquire exp="1014371" sp="30432" />
 		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
-			<vitals hp="43921.338" hpRegen="8.5" mp="3024.147" mpRegen="3" />
+			<vitals hp="43915.64" hpRegen="8.5" mp="3017.84" mpRegen="3" />
 			<attack physical="1144.731301" magical="781.7030834" random="30" critical="4.75" accuracy="4.75" attackSpeed="250" type="SWORD" range="40" distance="80" width="120" />
 			<defence physical="357.86723" magical="261.87171" />
 			<speed>
@@ -591,7 +591,7 @@
 			</spoil>
 		</dropLists>
 	</npc>
-	<npc id="20412" level="60" type="Monster" name="Cave Banshee">
+	<npc id="20412" level="83" type="Monster" name="Cave Banshee" element="EARTH">
 		<parameters>
 			<param name="MoveAroundSocial" value="0" />
 			<param name="MoveAroundSocial1" value="0" />
@@ -601,16 +601,16 @@
 			<param name="SpiritShot" value="100" />
 			<param name="SpiritShotRate" value="5" />
 			<param name="LongRangeGuardRate" value="5" />
-			<skill name="DDMagic" id="4001" level="4" />
+			<skill name="DDMagic" id="4001" level="9" />
 		</parameters>
 		<race>DEMONIC</race>
 		<sex>MALE</sex>
-		<acquire exp="56812" sp="1704" />
+		<acquire exp="1376009" sp="41281" attributeExp="1328" />
 		<equipment rhand="3939" />
 		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
-			<vitals hp="991.89037" hpRegen="6.5" mp="1130.145" mpRegen="2.4" />
-			<attack physical="264.0417091" magical="198.33688" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
-			<defence physical="215.229322" magical="143.17771" />
+			<vitals hp="17382.03" hpRegen="6.5" mp="2959.74" mpRegen="2.4" />
+			<attack physical="1950.2231755595" magical="1331.5869440987" critical="4" attackSpeed="253" range="40" />
+			<defence physical="405.85106382979" magical="297.0297029703" />
 			<speed>
 				<walk ground="80" />
 				<run ground="174" />
@@ -620,7 +620,7 @@
 		</stats>
 		<status undying="false" canBeSown="true" />
 		<skillList>
-			<skill id="4001" level="4" /> <!-- NPC Windstrike -->
+			<skill id="4001" level="9" /> <!-- NPC Windstrike -->
 			<skill id="4416" level="9" /> <!-- Demons -->
 			<skill id="4408" level="13" /> <!-- HP Increase (5x) -->
 			<skill id="4411" level="14" /> <!-- Strong M. Atk. -->
@@ -637,6 +637,20 @@
 			<radius normal="11" />
 			<height normal="28.5" />
 		</collision>
+				<dropLists>
+			<drop>
+				<item id="5314" min="1" max="1" chance="0.01" /> <!-- Sealed Boots of Nightmare -->
+				<item id="5319" min="1" max="1" chance="0.01" /> <!-- Sealed Majestic Boots -->
+				<item id="5503" min="1" max="1" chance="1.672" /> <!-- Sealed Majestic Boot Lining -->
+				<item id="5502" min="1" max="1" chance="1.619" /> <!-- Sealed Boots of Nightmare Lining -->
+				<item id="57" min="2102" max="4904" chance="70" /> <!-- Adena -->
+				<item id="2133" min="1" max="1" chance="0.5" /> <!-- Gemstone (A-grade) -->
+			</drop>
+			<spoil>
+				<item id="5503" min="1" max="1" chance="7.595" /> <!-- Sealed Majestic Boot Lining -->
+				<item id="5502" min="1" max="1" chance="7.504" /> <!-- Sealed Boots of Nightmare Lining -->
+			</spoil>
+		</dropLists>
 	</npc>
 	<npc id="20415" level="17" type="Monster" name="Scarlet Salamander">
 		<!-- L2wiki https://l2wiki.com/classic/Scarlet_Salamander -->

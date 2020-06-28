@@ -1110,7 +1110,7 @@
 			<height normal="25" />
 		</collision>
 	</npc>
-	<npc id="20758" level="49" type="Monster" name="Dragon Bearer Captain">
+	<npc id="20758" level="85" type="Monster" name="Dragon Bearer Captain" element="EARTH">
 		<parameters>
 			<param name="MoveAroundSocial" value="110" />
 			<param name="MoveAroundSocial1" value="110" />
@@ -1120,16 +1120,20 @@
 			<param name="SpiritShot" value="100" />
 			<param name="SpiritShotRate" value="5" />
 			<param name="LongRangeGuardRate" value="5" />
-			<skill name="PhysicalSpecial" id="4032" level="4" /> <!-- NPC Strike -->
+			<skill name="PhysicalSpecial" id="4032" level="9" /> <!-- NPC Strike -->
+			<minions name="Privates">
+				<npc id="20759" count="1" respawnTime="300" weightPoint="1" />
+				<npc id="20760" count="1" respawnTime="300" weightPoint="1" />
+			</minions>
 		</parameters>
 		<race>UNDEAD</race>
 		<sex>MALE</sex>
 		<equipment rhand="123" lhand="945" />
-		<acquire exp="29087" sp="873" attributeExp="7" />
+		<acquire exp="4188044" sp="125642" attributeExp="1530" />
 		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
-			<vitals hp="4341.747" hpRegen="5.5" mp="800.961" mpRegen="2.1" />
-			<attack physical="290.44588" magical="198.33688" random="30" critical="4.75" accuracy="4.75" attackSpeed="250" type="SWORD" range="40" distance="80" width="120" />
-			<defence physical="195.66302" magical="143.17771" />
+			<vitals hp="88700.27" hpRegen="5.5" mp="3705.12" mpRegen="2.1" />
+			<attack physical="1450.44588" magical="990.33688" random="30" critical="4.75" accuracy="4.75" attackSpeed="250" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="390.66302" magical="286.17771" /> <!-- <defence physical="195.66302" magical="143.17771" /> -->
 			<attribute>
 				<attack type="earth" value="20" />
 				<defence fire="20" water="20" wind="-32" earth="53" holy="20" dark="20" />
@@ -1142,7 +1146,7 @@
 		</stats>
 		<status attackable="true" />
 		<skillList>
-			<skill id="4032" level="4" /> <!-- NPC Strike -->
+			<skill id="4032" level="9" /> <!-- NPC Strike -->
 			<skill id="4416" level="1" /> <!-- Undead -->
 		</skillList>
 		<shots shotChance="30" spiritChance="30" />
@@ -1158,25 +1162,17 @@
 		</collision>
 		<dropLists>
 			<drop>
-				<item id="853" min="1" max="1" chance="0.3" /> <!-- Earring of Protection -->
-				<item id="884" min="1" max="1" chance="0.3" /> <!-- Ring of Protection -->
-				<item id="916" min="1" max="1" chance="0.3" /> <!-- Necklace of Protection -->
-				<item id="57" min="1635" max="3819" chance="70" /> <!-- Adena -->
-				<item id="1872" min="3" max="9" chance="16.12" /> <!-- Animal Bone -->
-				<item id="1912" min="1" max="3" chance="7.734" /> <!-- Ring of Protection Gemstone -->
-				<item id="1911" min="1" max="3" chance="3.487" /> <!-- Earring of Protection Gemstone -->
-				<item id="2226" min="1" max="1" chance="2.953" /> <!-- Recipe: Mithril Gauntlets -->
-				<item id="1877" min="1" max="1" chance="2.87" /> <!-- Adamantite Nugget -->
-				<item id="1913" min="2" max="6" chance="2.166" /> <!-- Necklace of Protection Gemstone -->
-				<item id="2337" min="1" max="1" chance="0.3" /> <!-- Recipe: Stick of Eternity -->
+				<item id="2133" min="1" max="1" chance="0.5" /> <!-- Gemstone (A-grade) -->
+				<item id="49756" min="1" max="1" chance="0.1" /> <!-- Cloth Piece -->
+				<item id="90045" min="1" max="1" chance="0.1" /> <!-- Magical Tablet -->
+				<item id="57" min="2115" max="4935" chance="70" /> <!-- Adena -->
 			</drop>
 			<spoil>
-				<item id="2946" min="1" max="1" chance="63.46" /> <!-- Plated Leather Glove Design -->
-				<item id="2167" min="1" max="1" chance="58.43" /> <!-- Recipe: Ring of Ages -->
+				<item id="49756" min="1" max="1" chance="1.119" /> <!-- Cloth Piece -->
 			</spoil>
 		</dropLists>
 	</npc>
-	<npc id="20759" level="48" type="Monster" name="Dragon Bearer Warrior">
+	<npc id="20759" level="84" type="Monster" name="Dragon Bearer Warrior" element="EARTH">
 		<parameters>
 			<param name="MoveAroundSocial" value="167" />
 			<param name="MoveAroundSocial1" value="167" />
@@ -1186,16 +1182,16 @@
 			<param name="SpiritShot" value="100" />
 			<param name="SpiritShotRate" value="5" />
 			<param name="LongRangeGuardRate" value="5" />
-			<skill name="PhysicalSpecial" id="4073" level="4" /> <!-- Stun -->
+			<skill name="PhysicalSpecial" id="4073" level="9" /> <!-- Stun -->
 		</parameters>
 		<race>UNDEAD</race>
 		<sex>MALE</sex>
 		<equipment rhand="2" lhand="945" /> <!-- rhand: Long Sword lhand: Skeleton Buckler -->
-		<acquire exp="8584" sp="257" />
+		<acquire exp="4051344" sp="121541" attributeExp="1428"  />
 		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
-			<vitals hp="543.236705" hpRegen="5.5" mp="754.905" mpRegen="2.1" />
-			<attack physical="303.409755" magical="188.35412" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
-			<defence physical="173.7527545" magical="139.8592" shield="96" shieldRate="20" />
+			<vitals hp="43914.91" hpRegen="5.5" mp="3017.43" mpRegen="2.1" />
+			<attack physical="1515.409755" magical="940.35412" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="346.7527545" magical="278.8592" shield="96" shieldRate="20" /> <!-- <defence physical="173.7527545" magical="139.8592" -->
 			<speed>
 				<walk ground="60" />
 				<run ground="174" />
@@ -1204,7 +1200,7 @@
 		</stats>
 		<status undying="false" canBeSown="true" />
 		<skillList>
-			<skill id="4073" level="4" /> <!-- Stun -->
+			<skill id="4073" level="9" /> <!-- Stun -->
 			<skill id="4416" level="1" /> <!-- Undead -->
 			<skill id="4408" level="10" /> <!-- HP Increase (2x) -->
 			<skill id="4410" level="14" /> <!-- Strong P. Atk. -->
@@ -1227,24 +1223,18 @@
 		</collision>
 		<dropLists>
 			<drop>
-				<item id="398" min="1" max="1" chance="0.03" /> <!-- Plated Leather Armor -->
-				<item id="227" min="1" max="1" chance="0.003" /> <!-- Stiletto -->
-				<item id="242" min="1" max="1" chance="0.003" /> <!-- Soulfire Dirk -->
-				<item id="57" min="457" max="1065" chance="70" /> <!-- Adena -->
-				<item id="1872" min="1" max="1" chance="36.18" /> <!-- Animal Bone -->
-				<item id="1966" min="1" max="1" chance="1.442" /> <!-- Plated Leather Armor Fragment -->
-				<item id="1877" min="1" max="1" chance="1.131" /> <!-- Adamantite Nugget -->
-				<item id="2083" min="1" max="1" chance="0.3" /> <!-- Stiletto Edge -->
-				<item id="2084" min="1" max="1" chance="0.3" /> <!-- Soulfire Dirk Blade -->
-				<item id="2222" min="1" max="1" chance="0.3" /> <!-- Recipe: Compound Armor -->
+				<item id="2133" min="1" max="1" chance="0.5" /> <!-- Gemstone (A-grade) -->
+				<item id="90012" min="1" max="1" chance="0.5" /> <!-- Low-grade Life Stone -->
+				<item id="90013" min="1" max="1" chance="0.1" /> <!-- Mid-grade Life Stone -->
+				<item id="57" min="1963 " max="4580" chance="70" /> <!-- Adena -->
 			</drop>
 			<spoil>
-				<item id="1967" min="1" max="1" chance="17.56" /> <!-- Plated Leather Gaiters Material -->
-				<item id="2343" min="1" max="1" chance="0.75" /> <!-- Recipe: Mace of Underworld -->
+				<item id="90012" min="1" max="1" chance="1.220" /> <!-- Low-grade Life Stone -->
+				<item id="90013" min="1" max="1" chance="0.1" /> <!-- Mid-grade Life Stone -->
 			</spoil>
 		</dropLists>
 	</npc>
-	<npc id="20760" level="48" type="Monster" name="Dragon Bearer Archer">
+	<npc id="20760" level="84" type="Monster" name="Dragon Bearer Archer" element="EARTH">
 		<parameters>
 			<param name="MoveAroundSocial" value="157" />
 			<param name="MoveAroundSocial1" value="157" />
@@ -1253,16 +1243,16 @@
 			<param name="SoulShotRate" value="10" />
 			<param name="SpiritShot" value="100" />
 			<param name="SpiritShotRate" value="5" />
-			<skill name="PhysicalSpecial" id="4120" level="4" /> <!-- Stun -->
+			<skill name="PhysicalSpecial" id="4120" level="9" /> <!-- Stun -->
 		</parameters>
 		<race>UNDEAD</race>
 		<sex>MALE</sex>
 		<equipment rhand="14" /> <!-- rhand: Bow -->
-		<acquire exp="8579" sp="257" />
+		<acquire exp="4045629" sp="121369" attributeExp="1428" />
 		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
-			<vitals hp="543.236705" hpRegen="5.5" mp="754.905" mpRegen="2.1" />
-			<attack physical="528.6248898" magical="178.7041" random="10" critical="8" accuracy="0" attackSpeed="227" reuseDelay="1500" type="BOW" range="500" distance="10" width="0" />
-			<defence physical="205.299259" magical="136.5719" />
+			<vitals hp="43914.91" hpRegen="5.5" mp="3017.43" mpRegen="2.1" />
+			<attack physical="2640.6248898" magical="890.7041" random="10" critical="8" accuracy="0" attackSpeed="227" reuseDelay="1500" type="BOW" range="500" distance="10" width="0" />
+			<defence physical="410.299259" magical="272.5719" /> <!-- physical="205.299259" magical="136.5719" -->
 			<speed>
 				<walk ground="40" />
 				<run ground="174" />
@@ -1271,7 +1261,7 @@
 		</stats>
 		<status undying="false" canBeSown="true" />
 		<skillList>
-			<skill id="4120" level="4" /> <!-- Stun -->
+			<skill id="4120" level="9" /> <!-- Stun -->
 			<skill id="4416" level="1" /> <!-- Undead -->
 			<skill id="4408" level="10" /> <!-- HP Increase (2x) -->
 			<skill id="4410" level="12" /> <!-- Slightly Strong P. Atk. -->
@@ -1294,21 +1284,14 @@
 		</collision>
 		<dropLists>
 			<drop>
-				<item id="355" min="1" max="1" chance="0.03" /> <!-- Dwarven Chain Mail Shirt -->
-				<item id="382" min="1" max="1" chance="0.03" /> <!-- Dwarven Chain Gaiters -->
-				<item id="57" min="456" max="1064" chance="70" /> <!-- Adena -->
-				<item id="1872" min="1" max="1" chance="16.92" /> <!-- Animal Bone -->
-				<item id="1969" min="1" max="1" chance="2.331" /> <!-- Dwarven Chain Gaiter Material -->
-				<item id="1968" min="1" max="1" chance="1.384" /> <!-- Dwarven Chain Mail Shirt Material -->
-				<item id="1877" min="1" max="1" chance="0.75" /> <!-- Adamantite Nugget -->
-				<item id="2225" min="1" max="1" chance="0.3" /> <!-- Recipe: Demon's Stockings -->
-				<item id="2328" min="1" max="1" chance="0.03" /> <!-- Recipe: Sword of Delusion -->
-				<item id="2332" min="1" max="1" chance="0.03" /> <!-- Recipe: Ultimate Sword -->
-				<item id="2347" min="1" max="1" chance="0.03" /> <!-- Recipe: Akat Longbow -->
+				<item id="2133" min="1" max="1" chance="0.5" /> <!-- Gemstone (A-grade) -->
+				<item id="90012" min="1" max="1" chance="0.5" /> <!-- Low-grade Life Stone -->
+				<item id="90013" min="1" max="1" chance="0.1" /> <!-- Mid-grade Life Stone -->
+				<item id="57" min="1941" max="4528" chance="70" /> <!-- Adena -->
 			</drop>
 			<spoil>
-				<item id="1966" min="1" max="1" chance="12.01" /> <!-- Plated Leather Armor Fragment -->
-				<item id="2341" min="1" max="1" chance="0.75" /> <!-- Recipe: Sage's Staff -->
+				<item id="90012" min="1" max="1" chance="1.218" /> <!-- Low-grade Life Stone -->
+				<item id="90013" min="1" max="1" chance="0.1" /> <!-- Mid-grade Life Stone -->
 			</spoil>
 		</dropLists>
 	</npc>
@@ -1325,13 +1308,16 @@
 			<param name="SpiritShot" value="100" />
 			<param name="SpiritShotRate" value="5" />
 			<param name="LongRangeGuardRate" value="5" />
-			<skill name="DDMagic" id="4002" level="6" /> <!-- NPC HP Drain -->
+			<skill name="DDMagic" id="4002" level="10" /> <!-- NPC HP Drain -->
+			<minions name="Privates">
+				<npc id="20762" count="2" respawnTime="1200" weightPoint="1" />
+			</minions>
 		</parameters>
 		<race>DEMONIC</race>
 		<sex>FEMALE</sex>
 		<acquire exp="1978928" sp="59368" />
 		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
-			<vitals hp="11089.05225" hpRegen="8.5" mp="3081.939" mpRegen="3" />
+			<vitals hp="44350.51" hpRegen="8.5" mp="3075.63" mpRegen="3" />
 			<attack physical="1188.872595" magical="811.845865" random="30" critical="4.75" accuracy="4.75" attackSpeed="250" type="SWORD" range="40" distance="80" width="120" />
 			<defence physical="361.78814" magical="264.74086" />
 			<speed>
@@ -1395,7 +1381,7 @@
 		<equipment rhand="1472" /> 
 		<acquire exp="2024296" sp="60729" />
 		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
-			<vitals hp="21960.51075" hpRegen="8.5" mp="3024.147" mpRegen="3" />
+			<vitals hp="43915.01" hpRegen="8.5" mp="3017.84" mpRegen="3" />
 			<attack physical="1144.731301" magical="781.7030834" random="30" critical="4.75" accuracy="4.75" attackSpeed="250" type="SWORD" range="40" distance="80" width="120" />
 			<defence physical="357.86723" magical="261.87171" />
 			<speed>
