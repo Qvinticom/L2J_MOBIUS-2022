@@ -2,7 +2,9 @@
 <list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../xsd/spawns.xsd">
 	<spawn name="Goddard">
 		<group>
-			<npc id="31651" x="65976" y="29864" z="-3744" heading="0" respawnTime="360sec" />
+			<npc id="35323" x="148353" y="-50457" z="-1496" respawnTime="60sec" /> <!-- Altar of Water -->
+			<npc id="35322" x="146601" y="-50441" z="-1496" heading="32768" respawnTime="60sec" /> <!-- Altar of Fire -->
+			<npc id="31651" x="65976" y="29864" z="-3744" heading="0" respawnTime="360sec" /> <!-- Tablet of Vision -->
 		</group>
 	</spawn>
 </list>
