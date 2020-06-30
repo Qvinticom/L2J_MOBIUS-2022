@@ -61,9 +61,6 @@ public class NpcInfo extends GameServerPacket
 	 */
 	public NpcInfo(NpcInstance cha, Creature attacker)
 	{
-		/*
-		 * if(cha.getMxcPoly() != null) { attacker.sendPacket(new MxCPolyInfo(cha)); return; }
-		 */
 		if (cha.getCustomNpcInstance() != null)
 		{
 			attacker.sendPacket(new CustomNpcInfo(cha));

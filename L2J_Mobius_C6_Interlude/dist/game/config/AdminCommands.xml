@@ -225,10 +225,6 @@
 	<admin command="admin_para_all_menu" accessLevel="80" />
 	<admin command="admin_unpara_menu" accessLevel="80" />
 	<admin command="admin_para_menu" accessLevel="80" />
-	<admin command="admin_polyself" accessLevel="80" />
-	<admin command="admin_unpolyself" accessLevel="80" />
-	<admin command="admin_polyself_menu" accessLevel="80" />
-	<admin command="admin_unpolyself_menu" accessLevel="80" />
 	<admin command="admin_clearteams" accessLevel="80" />
 	<admin command="admin_setteam_close" accessLevel="80" /> <!-- set all Gm close players to val team -->
 	<admin command="admin_setteam" accessLevel="80" />
@@ -282,8 +278,6 @@
 	<admin command="admin_event_name" accessLevel="80" />
 	<admin command="admin_event_control_kill" accessLevel="80" />
 	<admin command="admin_event_control_res" accessLevel="80" />
-	<admin command="admin_event_control_poly" accessLevel="80" />
-	<admin command="admin_event_control_unpoly" accessLevel="80" />
 	<admin command="admin_event_control_prize" accessLevel="80" />
 	<admin command="admin_event_control_chatban" accessLevel="80" />
 	<admin command="admin_event_control_finish" accessLevel="80" />
@@ -434,12 +428,6 @@
 
 	<!-- Section: Pledge -->
 	<admin command="admin_pledge" accessLevel="90" /> <!-- Manage Clan -->
-
-	<!-- Section: Polymorph -->
-	<admin command="admin_polymorph" accessLevel="90" />
-	<admin command="admin_unpolymorph" accessLevel="90" />
-	<admin command="admin_polymorph_menu" accessLevel="90" />
-	<admin command="admin_unpolymorph_menu" accessLevel="90" />
 
 	<!-- Section: Quest -->
 	<admin command="admin_quest_reload" accessLevel="90" />

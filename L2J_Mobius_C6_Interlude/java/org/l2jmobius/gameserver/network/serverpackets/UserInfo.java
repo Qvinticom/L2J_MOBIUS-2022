@@ -17,12 +17,10 @@
 package org.l2jmobius.gameserver.network.serverpackets;
 
 import org.l2jmobius.Config;
-import org.l2jmobius.gameserver.datatables.sql.NpcTable;
 import org.l2jmobius.gameserver.instancemanager.CursedWeaponsManager;
 import org.l2jmobius.gameserver.model.actor.Creature;
 import org.l2jmobius.gameserver.model.actor.Summon;
 import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
-import org.l2jmobius.gameserver.model.actor.templates.NpcTemplate;
 import org.l2jmobius.gameserver.model.itemcontainer.Inventory;
 
 public class UserInfo extends GameServerPacket
@@ -216,14 +214,6 @@ public class UserInfo extends GameServerPacket
 		if (_player.getAppearance().isInvisible() && _player.isGM())
 		{
 			title = "[Invisible]";
-		}
-		if (_player.getPoly().isMorphed())
-		{
-			final NpcTemplate polyObj = NpcTable.getInstance().getTemplate(_player.getPoly().getPolyId());
-			if (polyObj != null)
-			{
-				title += " - " + polyObj.getName();
-			}
 		}
 		writeS(title);
 		

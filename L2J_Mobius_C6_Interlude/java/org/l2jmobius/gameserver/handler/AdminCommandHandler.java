@@ -68,7 +68,6 @@ import org.l2jmobius.gameserver.handler.admincommandhandlers.AdminOnline;
 import org.l2jmobius.gameserver.handler.admincommandhandlers.AdminPForge;
 import org.l2jmobius.gameserver.handler.admincommandhandlers.AdminPetition;
 import org.l2jmobius.gameserver.handler.admincommandhandlers.AdminPledge;
-import org.l2jmobius.gameserver.handler.admincommandhandlers.AdminPolymorph;
 import org.l2jmobius.gameserver.handler.admincommandhandlers.AdminQuest;
 import org.l2jmobius.gameserver.handler.admincommandhandlers.AdminReload;
 import org.l2jmobius.gameserver.handler.admincommandhandlers.AdminRepairChar;
@@ -149,7 +148,6 @@ public class AdminCommandHandler
 		registerAdminCommandHandler(new AdminPetition());
 		registerAdminCommandHandler(new AdminPForge());
 		registerAdminCommandHandler(new AdminPledge());
-		registerAdminCommandHandler(new AdminPolymorph());
 		registerAdminCommandHandler(new AdminQuest());
 		registerAdminCommandHandler(new AdminReload());
 		registerAdminCommandHandler(new AdminRepairChar());

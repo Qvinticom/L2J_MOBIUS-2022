@@ -36,13 +36,11 @@ import org.l2jmobius.gameserver.model.actor.instance.NpcInstance;
 import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
 import org.l2jmobius.gameserver.model.entity.event.GameEvent;
 import org.l2jmobius.gameserver.model.spawn.Spawn;
-import org.l2jmobius.gameserver.network.serverpackets.CharInfo;
 import org.l2jmobius.gameserver.network.serverpackets.ItemList;
 import org.l2jmobius.gameserver.network.serverpackets.NpcHtmlMessage;
 import org.l2jmobius.gameserver.network.serverpackets.PlaySound;
 import org.l2jmobius.gameserver.network.serverpackets.Revive;
 import org.l2jmobius.gameserver.network.serverpackets.SocialAction;
-import org.l2jmobius.gameserver.network.serverpackets.UserInfo;
 
 /**
  * This class handles following admin commands: - admin = shows menu
@@ -70,8 +68,6 @@ public class AdminEventEngine implements IAdminCommandHandler
 		"admin_event_name",
 		"admin_event_control_kill",
 		"admin_event_control_res",
-		"admin_event_control_poly",
-		"admin_event_control_unpoly",
 		"admin_event_control_prize",
 		"admin_event_control_chatban",
 		"admin_event_control_finish"
@@ -340,30 +336,6 @@ public class AdminEventEngine implements IAdminCommandHandler
 			
 			showEventControl(activeChar);
 		}
-		else if (command.startsWith("admin_event_control_poly"))
-		{
-			final StringTokenizer st0 = new StringTokenizer(command.substring(25));
-			final StringTokenizer st = new StringTokenizer(st0.nextToken(), "-");
-			final String id = st0.nextToken();
-			
-			while (st.hasMoreElements())
-			{
-				polyTeam(Integer.parseInt(st.nextToken()), id);
-			}
-			
-			showEventControl(activeChar);
-		}
-		else if (command.startsWith("admin_event_control_unpoly"))
-		{
-			final StringTokenizer st = new StringTokenizer(command.substring(27), "-");
-			
-			while (st.hasMoreElements())
-			{
-				unpolyTeam(Integer.parseInt(st.nextToken()));
-			}
-			
-			showEventControl(activeChar);
-		}
 		else if (command.startsWith("admin_event_control_prize"))
 		{
 			final StringTokenizer st0 = new StringTokenizer(command.substring(26));
@@ -599,11 +571,6 @@ public class AdminEventEngine implements IAdminCommandHandler
 		replyMSG.append("<tr><td>&nbsp;</td></tr>");
 		replyMSG.append("<tr><td><button value=\"Resurrect\" action=\"bypass -h admin_event_control_res $team_number\" width=90 height=15 back=\"sek.cbui94\" fore=\"sek.cbui92\"></td><td><font color=\"LEVEL\">Resurrect Team's members</font></td></tr>");
 		replyMSG.append("<tr><td>&nbsp;</td></tr>");
-		replyMSG.append("<tr><td><button value=\"Polymorph\" action=\"bypass -h admin_event_control_poly $team_number $poly_id\" width=90 height=15 back=\"sek.cbui94\" fore=\"sek.cbui92\"></td><td><edit var=\"poly_id\" width=100 height=15><font color=\"LEVEL\">Polymorphs the team into the NPC with the id specified</font></td></tr>");
-		replyMSG.append("<tr><td>&nbsp;</td></tr>");
-		replyMSG.append("<tr><td><button value=\"UnPolymorph\" action=\"bypass -h admin_event_control_unpoly $team_number\" width=90 height=15 back=\"sek.cbui94\" fore=\"sek.cbui92\"></td><td><font color=\"LEVEL\">Unpolymorph the team</font></td></tr>");
-		replyMSG.append("<tr><td>&nbsp;</td></tr>");
-		replyMSG.append("<tr><td>&nbsp;</td></tr>");
 		replyMSG.append("<tr><td><button value=\"Give Item\" action=\"bypass -h admin_event_control_prize $team_number $n $id\" width=90 height=15 back=\"sek.cbui94\" fore=\"sek.cbui92\"> number <edit var=\"n\" width=100 height=15> item id <edit var=\"id\" width=100 height=15></td><td><font color=\"LEVEL\">Give the specified item id to every single member of the team, you can put 5*level, 5*kills or 5 in the number field for example</font></td></tr>");
 		replyMSG.append("<tr><td>&nbsp;</td></tr>");
 		replyMSG.append("<tr><td><button value=\"End\" action=\"bypass -h admin_event_control_finish\" width=90 height=15 back=\"sek.cbui94\" fore=\"sek.cbui92\"></td><td><font color=\"LEVEL\">Will finish the event teleporting back all the players</font></td></tr>");
@@ -763,49 +730,6 @@ public class AdminEventEngine implements IAdminCommandHandler
 		}
 	}
 	
-	void polyTeam(int team, String id)
-	{
-		final LinkedList<String> linked = GameEvent.players.get(team);
-		final Iterator<String> it = linked.iterator();
-		
-		while (it.hasNext())
-		{
-			try
-			{
-				final PlayerInstance target = World.getInstance().getPlayer(it.next());
-				target.getPoly().setPolyInfo("npc", id);
-				target.teleToLocation(target.getX(), target.getY(), target.getZ(), true);
-				target.broadcastPacket(new CharInfo(target));
-				target.sendPacket(new UserInfo(target));
-			}
-			catch (Exception e)
-			{
-			}
-		}
-	}
-	
-	void unpolyTeam(int team)
-	{
-		final LinkedList<String> linked = GameEvent.players.get(team);
-		final Iterator<String> it = linked.iterator();
-		
-		while (it.hasNext())
-		{
-			try
-			{
-				final PlayerInstance target = World.getInstance().getPlayer(it.next());
-				target.getPoly().setPolyInfo(null, "1");
-				target.decayMe();
-				target.spawnMe(target.getX(), target.getY(), target.getZ());
-				target.broadcastPacket(new CharInfo(target));
-				target.sendPacket(new UserInfo(target));
-			}
-			catch (Exception e)
-			{
-			}
-		}
-	}
-	
 	private void createItem(PlayerInstance activeChar, PlayerInstance player, int id, int num)
 	{
 		player.getInventory().addItem("Event", id, num, player, activeChar);
@@ -855,7 +779,6 @@ public class AdminEventEngine implements IAdminCommandHandler
 	void telePlayersBack(int team)
 	{
 		resTeam(team);
-		unpolyTeam(team);
 		
 		final LinkedList<String> linked = GameEvent.players.get(team);
 		final Iterator<String> it = linked.iterator();

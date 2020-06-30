@@ -4130,7 +4130,7 @@ public abstract class Creature extends WorldObject implements ISkillsHolder
 	 * In Server->Client packet, each effect is represented by 1 bit of the map (ex : BLEEDING = 0x0001 (bit 1), SLEEP = 0x0080 (bit 8)...). The map is calculated by applying a BINARY OR operation on each effect.<br>
 	 * <br>
 	 * <b><u>Example of use</u>:</b><br>
-	 * <li>Server Packet : CharInfo, NpcInfo, NpcInfoPoly, UserInfo...</li>
+	 * <li>Server Packet : CharInfo, NpcInfo, UserInfo...</li>
 	 * @return the abnormal effect
 	 */
 	public int getAbnormalEffect()

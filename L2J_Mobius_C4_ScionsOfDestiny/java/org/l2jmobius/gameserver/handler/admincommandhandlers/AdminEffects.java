@@ -27,7 +27,6 @@ import org.l2jmobius.gameserver.model.actor.instance.ChestInstance;
 import org.l2jmobius.gameserver.model.actor.instance.NpcInstance;
 import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
 import org.l2jmobius.gameserver.network.SystemMessageId;
-import org.l2jmobius.gameserver.network.serverpackets.CharInfo;
 import org.l2jmobius.gameserver.network.serverpackets.Earthquake;
 import org.l2jmobius.gameserver.network.serverpackets.ExRedSky;
 import org.l2jmobius.gameserver.network.serverpackets.GameServerPacket;
@@ -38,7 +37,6 @@ import org.l2jmobius.gameserver.network.serverpackets.SocialAction;
 import org.l2jmobius.gameserver.network.serverpackets.StopMove;
 import org.l2jmobius.gameserver.network.serverpackets.SunRise;
 import org.l2jmobius.gameserver.network.serverpackets.SunSet;
-import org.l2jmobius.gameserver.network.serverpackets.UserInfo;
 import org.l2jmobius.gameserver.util.BuilderUtil;
 
 /**
@@ -49,7 +47,6 @@ import org.l2jmobius.gameserver.util.BuilderUtil;
  * <li>gmspeed = temporary Super Haste effect.
  * <li>para/unpara = paralyze/remove paralysis from target
  * <li>para_all/unpara_all = same as para/unpara, affects the whole world.
- * <li>polyself/unpolyself = makes you look as a specified mob.
  * <li>changename = temporary change name
  * <li>clearteams/setteam_close/setteam = team related commands
  * <li>social = forces an Creature instance to broadcast social action packets.
@@ -80,10 +77,6 @@ public class AdminEffects implements IAdminCommandHandler
 		"admin_para_all_menu",
 		"admin_unpara_menu",
 		"admin_para_menu",
-		"admin_polyself",
-		"admin_unpolyself",
-		"admin_polyself_menu",
-		"admin_unpolyself_menu",
 		"admin_clearteams",
 		"admin_setteam_close",
 		"admin_setteam",
@@ -328,34 +321,6 @@ public class AdminEffects implements IAdminCommandHandler
 					creature = (Creature) target;
 					creature.stopAbnormalEffect((short) 0x2000);
 				}
-			}
-			catch (Exception e)
-			{
-			}
-		}
-		else if (command.startsWith("admin_polyself"))
-		{
-			try
-			{
-				final String id = st.nextToken();
-				activeChar.getPoly().setPolyInfo("npc", id);
-				activeChar.teleToLocation(activeChar.getX(), activeChar.getY(), activeChar.getZ(), false);
-				activeChar.broadcastPacket(new CharInfo(activeChar));
-				activeChar.sendPacket(new UserInfo(activeChar));
-			}
-			catch (Exception e)
-			{
-			}
-		}
-		else if (command.startsWith("admin_unpolyself"))
-		{
-			try
-			{
-				activeChar.getPoly().setPolyInfo(null, "1");
-				activeChar.decayMe();
-				activeChar.spawnMe(activeChar.getX(), activeChar.getY(), activeChar.getZ());
-				activeChar.broadcastPacket(new CharInfo(activeChar));
-				activeChar.sendPacket(new UserInfo(activeChar));
 			}
 			catch (Exception e)
 			{

@@ -25,7 +25,6 @@ import org.l2jmobius.gameserver.instancemanager.MercTicketManager;
 import org.l2jmobius.gameserver.model.actor.Creature;
 import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
 import org.l2jmobius.gameserver.model.actor.knownlist.WorldObjectKnownList;
-import org.l2jmobius.gameserver.model.actor.poly.ObjectPoly;
 import org.l2jmobius.gameserver.model.items.instance.ItemInstance;
 import org.l2jmobius.gameserver.network.GameClient;
 import org.l2jmobius.gameserver.network.serverpackets.ActionFailed;
@@ -47,7 +46,6 @@ public abstract class WorldObject
 	private WorldObjectKnownList _knownList;
 	private String _name;
 	private int _objectId;
-	private ObjectPoly _poly;
 	private ObjectPosition _position;
 	
 	// Objects can only see objects in same instancezone, instance 0 is normal world -1 the all seeing world
@@ -349,15 +347,6 @@ public abstract class WorldObject
 	public int getObjectId()
 	{
 		return _objectId;
-	}
-	
-	public ObjectPoly getPoly()
-	{
-		if (_poly == null)
-		{
-			_poly = new ObjectPoly(this);
-		}
-		return _poly;
 	}
 	
 	public ObjectPosition getPosition()
