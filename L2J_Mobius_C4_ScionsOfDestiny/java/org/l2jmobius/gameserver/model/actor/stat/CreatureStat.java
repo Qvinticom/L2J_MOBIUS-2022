@@ -19,7 +19,6 @@ package org.l2jmobius.gameserver.model.actor.stat;
 import org.l2jmobius.Config;
 import org.l2jmobius.gameserver.model.Skill;
 import org.l2jmobius.gameserver.model.actor.Creature;
-import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
 import org.l2jmobius.gameserver.model.skills.Calculator;
 import org.l2jmobius.gameserver.model.skills.Env;
 import org.l2jmobius.gameserver.model.skills.Stat;
@@ -465,7 +464,7 @@ public class CreatureStat
 		
 		double val = calcStat(Stat.MAGIC_ATTACK_SPEED, _creature.getTemplate().getBaseMAtkSpd() * bonusSpdAtk, null, null);
 		val /= _creature.getArmourExpertisePenalty();
-		if ((val > Config.MAX_MATK_SPEED) && (_creature instanceof PlayerInstance))
+		if ((val > Config.MAX_MATK_SPEED) && _creature.isPlayer())
 		{
 			val = Config.MAX_MATK_SPEED;
 		}
@@ -547,7 +546,7 @@ public class CreatureStat
 		{
 			return 1;
 		}
-		return Math.max(1, getRunSpeed() / _creature.getTemplate().getBaseRunSpd());
+		return (float) getRunSpeed() / _creature.getTemplate().getBaseRunSpd();
 	}
 	
 	public void setGmSpeedMultiplier(float multipier)
@@ -702,7 +701,7 @@ public class CreatureStat
 		
 		double val = calcStat(Stat.POWER_ATTACK_SPEED, _creature.getTemplate().getBasePAtkSpd() * bonusAtk, null, null);
 		val /= _creature.getArmourExpertisePenalty();
-		if ((val > Config.MAX_PATK_SPEED) && (_creature instanceof PlayerInstance))
+		if ((val > Config.MAX_PATK_SPEED) && _creature.isPlayer())
 		{
 			val = Config.MAX_PATK_SPEED;
 		}
@@ -869,7 +868,7 @@ public class CreatureStat
 		}
 		
 		val /= _creature.getArmourExpertisePenalty();
-		if ((val > Config.MAX_RUN_SPEED) && !(_creature.isPlayer() && !_creature.getActingPlayer().isGM()))
+		if ((val > Config.MAX_RUN_SPEED) && _creature.isPlayer() && !_creature.getActingPlayer().isGM())
 		{
 			val = Config.MAX_RUN_SPEED;
 		}
@@ -928,10 +927,11 @@ public class CreatureStat
 			return 1;
 		}
 		
-		if (_creature instanceof PlayerInstance)
+		if (_creature.isPlayer())
 		{
 			return (getRunSpeed() * 70) / 100;
 		}
+		
 		return (int) calcStat(Stat.WALK_SPEED, _creature.getTemplate().getBaseWalkSpd(), null, null);
 	}
 	

@@ -27,25 +27,21 @@ import org.l2jmobius.gameserver.model.itemcontainer.Inventory;
 public class UserInfo extends GameServerPacket
 {
 	private final PlayerInstance _player;
+	private final float _moveMultiplier;
 	private final int _runSpd;
 	private final int _walkSpd;
-	private final int _swimRunSpd;
-	private final int _swimWalkSpd;
-	private int _flRunSpd;
-	private int _flWalkSpd;
-	private int _flyRunSpd;
-	private int _flyWalkSpd;
+	private final int _flyRunSpd;
+	private final int _flyWalkSpd;
 	private int _relation;
-	private final float _moveMultiplier;
 	
 	public UserInfo(PlayerInstance player)
 	{
 		_player = player;
-		_moveMultiplier = _player.getMovementSpeedMultiplier();
-		_runSpd = (int) (_player.getRunSpeed() / _moveMultiplier);
-		_walkSpd = (int) (_player.getWalkSpeed() / _moveMultiplier);
-		_swimRunSpd = _flRunSpd = _flyRunSpd = _runSpd;
-		_swimWalkSpd = _flWalkSpd = _flyWalkSpd = _walkSpd;
+		_moveMultiplier = player.getMovementSpeedMultiplier();
+		_runSpd = Math.round(player.getRunSpeed() / _moveMultiplier);
+		_walkSpd = Math.round(player.getWalkSpeed() / _moveMultiplier);
+		_flyRunSpd = player.isFlying() ? _runSpd : 0;
+		_flyWalkSpd = player.isFlying() ? _walkSpd : 0;
 		_relation = _player.isClanLeader() ? 0x40 : 0;
 		if (_player.getSiegeState() == 1)
 		{
@@ -151,13 +147,13 @@ public class UserInfo extends GameServerPacket
 		
 		writeD(_runSpd); // base run speed
 		writeD(_walkSpd); // base walk speed
-		writeD(_swimRunSpd); // swim run speed
-		writeD(_swimWalkSpd); // swim walk speed
-		writeD(_flRunSpd);
-		writeD(_flWalkSpd);
-		writeD(_flyRunSpd); // fly run speed
-		writeD(_flyWalkSpd); // fly walk speed
-		writeF(_moveMultiplier); // run speed multiplier
+		writeD(_runSpd); // swim run speed (calculated by getter)
+		writeD(_walkSpd); // swim walk speed (calculated by getter)
+		writeD(0);
+		writeD(0);
+		writeD(_flyRunSpd);
+		writeD(_flyWalkSpd);
+		writeF(_player.getMovementSpeedMultiplier()); // run speed multiplier
 		writeF(_player.getAttackSpeedMultiplier()); // attack speed multiplier
 		
 		final Summon pet = _player.getPet();

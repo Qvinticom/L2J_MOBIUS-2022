@@ -40,15 +40,10 @@ public class CharInfo extends GameServerPacket
 	private final int _pAtkSpd;
 	private final int _runSpd;
 	private final int _walkSpd;
-	private final int _swimRunSpd;
-	private final int _swimWalkSpd;
-	private int _flRunSpd;
-	private int _flWalkSpd;
-	private int _flyRunSpd;
-	private int _flyWalkSpd;
+	private final int _flyRunSpd;
+	private final int _flyWalkSpd;
 	private final float _moveMultiplier;
 	private final float _attackSpeedMultiplier;
-	private final int _maxCp;
 	
 	public CharInfo(PlayerInstance player)
 	{
@@ -62,11 +57,10 @@ public class CharInfo extends GameServerPacket
 		_pAtkSpd = _player.getPAtkSpd();
 		_moveMultiplier = _player.getMovementSpeedMultiplier();
 		_attackSpeedMultiplier = _player.getAttackSpeedMultiplier();
-		_runSpd = (int) (_player.getRunSpeed() / _moveMultiplier);
-		_walkSpd = (int) (_player.getWalkSpeed() / _moveMultiplier);
-		_swimRunSpd = _flRunSpd = _flyRunSpd = _runSpd;
-		_swimWalkSpd = _flWalkSpd = _flyWalkSpd = _walkSpd;
-		_maxCp = _player.getMaxCp();
+		_runSpd = Math.round(player.getRunSpeed() / _moveMultiplier);
+		_walkSpd = Math.round(player.getWalkSpeed() / _moveMultiplier);
+		_flyRunSpd = player.isFlying() ? _runSpd : 0;
+		_flyWalkSpd = player.isFlying() ? _walkSpd : 0;
 	}
 	
 	@Override
@@ -101,12 +95,12 @@ public class CharInfo extends GameServerPacket
 				writeD(0x00);
 				writeD(_mAtkSpd);
 				writeD(_pAtkSpd);
-				writeD(_runSpd);
-				writeD(_walkSpd);
-				writeD(_swimRunSpd/* 0x32 */); // swimspeed
-				writeD(_swimWalkSpd/* 0x32 */); // swimspeed
-				writeD(_flRunSpd);
-				writeD(_flWalkSpd);
+				writeD(_runSpd); // base run speed
+				writeD(_walkSpd); // base walk speed
+				writeD(_runSpd); // swim run speed (calculated by getter)
+				writeD(_walkSpd); // swim walk speed (calculated by getter)
+				writeD(_flyRunSpd); // fly run speed ?
+				writeD(_flyWalkSpd); // fly walk speed ?
 				writeD(_flyRunSpd);
 				writeD(_flyWalkSpd);
 				writeF(_moveMultiplier);
@@ -231,16 +225,16 @@ public class CharInfo extends GameServerPacket
 			writeD(_player.getPvpFlag());
 			writeD(_player.getKarma());
 			
-			writeD(_runSpd);
-			writeD(_walkSpd);
-			writeD(_swimRunSpd/* 0x32 */); // swimspeed
-			writeD(_swimWalkSpd/* 0x32 */); // swimspeed
-			writeD(_flRunSpd);
-			writeD(_flWalkSpd);
+			writeD(_runSpd); // base run speed
+			writeD(_walkSpd); // base walk speed
+			writeD(_runSpd); // swim run speed (calculated by getter)
+			writeD(_walkSpd); // swim walk speed (calculated by getter)
+			writeD(_flyRunSpd); // fly run speed ?
+			writeD(_flyWalkSpd); // fly walk speed ?
 			writeD(_flyRunSpd);
 			writeD(_flyWalkSpd);
-			writeF(_player.getMovementSpeedMultiplier()); // _activeChar.getProperMultiplier()
-			writeF(_player.getAttackSpeedMultiplier()); // _activeChar.getAttackSpeedMultiplier()
+			writeF(_moveMultiplier);
+			writeF(_attackSpeedMultiplier);
 			writeF(_player.getBaseTemplate().getCollisionRadius());
 			writeF(_player.getBaseTemplate().getCollisionHeight());
 			
@@ -302,7 +296,7 @@ public class CharInfo extends GameServerPacket
 			writeH(_player.getRecomHave()); // Blue value for name (0 = white, 255 = pure blue)
 			writeD(_player.getClassId().getId());
 			
-			writeD(_maxCp);
+			writeD(_player.getMaxCp());
 			writeD((int) _player.getCurrentCp());
 			writeC(_player.isMounted() ? 0 : _player.getEnchantEffect());
 			
