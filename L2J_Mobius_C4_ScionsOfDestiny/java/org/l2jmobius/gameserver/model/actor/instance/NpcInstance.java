@@ -29,6 +29,7 @@ import org.l2jmobius.gameserver.datatables.ItemTable;
 import org.l2jmobius.gameserver.datatables.MobGroupTable;
 import org.l2jmobius.gameserver.datatables.SkillTable;
 import org.l2jmobius.gameserver.datatables.sql.ClanTable;
+import org.l2jmobius.gameserver.datatables.sql.FakePlayerTable;
 import org.l2jmobius.gameserver.datatables.sql.HelperBuffTable;
 import org.l2jmobius.gameserver.datatables.sql.SpawnTable;
 import org.l2jmobius.gameserver.datatables.xml.MultisellData;
@@ -36,7 +37,6 @@ import org.l2jmobius.gameserver.datatables.xml.ZoneData;
 import org.l2jmobius.gameserver.enums.ChatType;
 import org.l2jmobius.gameserver.idfactory.IdFactory;
 import org.l2jmobius.gameserver.instancemanager.CastleManager;
-import org.l2jmobius.gameserver.instancemanager.CustomNpcInstanceManager;
 import org.l2jmobius.gameserver.instancemanager.DimensionalRiftManager;
 import org.l2jmobius.gameserver.instancemanager.FortManager;
 import org.l2jmobius.gameserver.instancemanager.QuestManager;
@@ -108,7 +108,7 @@ public class NpcInstance extends Creature
 	protected static final Logger LOGGER = Logger.getLogger(NpcInstance.class.getName());
 	
 	public static final int INTERACTION_DISTANCE = 150;
-	private CustomNpcInstance _customNpcInstance;
+	private FakePlayerInstance _fakePlayerInstance;
 	private Spawn _spawn;
 	private boolean _isBusy = false;
 	private String _busyMessage = "";
@@ -2683,9 +2683,9 @@ public class NpcInstance extends Creature
 	{
 		_spawn = spawn;
 		// Does this Npc morph into a PlayerInstance?
-		if ((_spawn != null) && CustomNpcInstanceManager.getInstance().isCustomNpcInstance(_spawn.getId(), getNpcId()))
+		if ((_spawn != null) && FakePlayerTable.getInstance().isCustomNpcInstance(_spawn.getId(), getNpcId()))
 		{
-			new CustomNpcInstance(this);
+			new FakePlayerInstance(this);
 		}
 	}
 	
@@ -2867,21 +2867,21 @@ public class NpcInstance extends Creature
 	}
 	
 	/**
-	 * Gets the custom npc instance.
-	 * @return the custom npc instance
+	 * Gets the fake player instance.
+	 * @return the fake player instance
 	 */
-	public CustomNpcInstance getCustomNpcInstance()
+	public FakePlayerInstance getFakePlayerInstance()
 	{
-		return _customNpcInstance;
+		return _fakePlayerInstance;
 	}
 	
 	/**
-	 * Sets the custom npc instance.
-	 * @param arg the new custom npc instance
+	 * Sets the fake player instance.
+	 * @param value the new fake player instance
 	 */
-	public void setCustomNpcInstance(CustomNpcInstance arg)
+	public void setFakePlayerInstance(FakePlayerInstance value)
 	{
-		_customNpcInstance = arg;
+		_fakePlayerInstance = value;
 	}
 	
 	@Override

@@ -17,15 +17,15 @@
 package org.l2jmobius.gameserver.model.actor.instance;
 
 import org.l2jmobius.commons.util.Rnd;
-import org.l2jmobius.gameserver.instancemanager.CustomNpcInstanceManager;
+import org.l2jmobius.gameserver.datatables.sql.FakePlayerTable;
 import org.l2jmobius.gameserver.model.base.ClassId;
 import org.l2jmobius.gameserver.model.items.type.WeaponType;
 
 /**
- * This class manages Npc Polymorph into player instances, they look like regular players. This effect will show up on all clients.
+ * This class manages Fake Player instances, they look like regular players. This effect will show up on all clients.
  * @author Darki699
  */
-public class CustomNpcInstance
+public class FakePlayerInstance
 {
 	private boolean _allowRandomWeapons = true; // Default value
 	private boolean _allowRandomClass = true; // Default value
@@ -39,10 +39,9 @@ public class CustomNpcInstance
 	private ClassId _classId; // ClassId of this (N)Pc
 	
 	/**
-	 * A constructor
 	 * @param myNpc - Receives the NpcInstance as a reference.
 	 */
-	public CustomNpcInstance(NpcInstance myNpc)
+	public FakePlayerInstance(NpcInstance myNpc)
 	{
 		_npcInstance = myNpc;
 		if ((_npcInstance != null) && (_npcInstance.getSpawn() != null))
@@ -65,15 +64,15 @@ public class CustomNpcInstance
 		_boolean = new boolean[4]; // pvp=0 , noble=1, hero=2, isFemaleSex=3
 		
 		// load the Pc Morph Data
-		final CustomNpcInstanceManager.customInfo ci = CustomNpcInstanceManager.getInstance().getCustomData(_npcInstance.getSpawn().getId(), _npcInstance.getNpcId());
+		final FakePlayerTable.customInfo ci = FakePlayerTable.getInstance().getCustomData(_npcInstance.getSpawn().getId(), _npcInstance.getNpcId());
 		if (ci == null)
 		{
-			_npcInstance.setCustomNpcInstance(null);
+			_npcInstance.setFakePlayerInstance(null);
 			_npcInstance = null;
 			return;
 		}
 		
-		_npcInstance.setCustomNpcInstance(this);
+		_npcInstance.setFakePlayerInstance(this);
 		
 		setPcInstanceData(ci);
 		
@@ -445,7 +444,7 @@ public class CustomNpcInstance
 	 * Sets the data received from the CustomNpcInstanceManager
 	 * @param ci the customInfo data
 	 */
-	public void setPcInstanceData(CustomNpcInstanceManager.customInfo ci)
+	public void setPcInstanceData(FakePlayerTable.customInfo ci)
 	{
 		if (ci == null)
 		{

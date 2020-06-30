@@ -1,7 +1,7 @@
 -- ---------------------------
--- Table structure for `npc_to_pc_polymorph`
+-- Table structure for `fake_players`
 -- ---------------------------
-CREATE TABLE IF NOT EXISTS `npc_to_pc_polymorph` (
+CREATE TABLE IF NOT EXISTS `fake_players` (
   `spawn` int(9) NOT NULL default '0',
   `template` int(9) NOT NULL default '0',
   `name` varchar(35) default NULL,

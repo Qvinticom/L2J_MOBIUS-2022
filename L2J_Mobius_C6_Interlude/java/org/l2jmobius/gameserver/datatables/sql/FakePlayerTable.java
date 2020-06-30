@@ -14,7 +14,7 @@
  * You should have received a copy of the GNU General Public License
  * along with this program. If not, see <http://www.gnu.org/licenses/>.
  */
-package org.l2jmobius.gameserver.instancemanager;
+package org.l2jmobius.gameserver.datatables.sql;
 
 import java.sql.Connection;
 import java.sql.PreparedStatement;
@@ -27,13 +27,13 @@ import org.l2jmobius.commons.database.DatabaseFactory;
 import org.l2jmobius.commons.util.Rnd;
 
 /**
- * control for Custom Npcs that look like players.
+ * Table for custom NPCs that look like players.
  * @version 1.00
  * @author Darki699
  */
-public class CustomNpcInstanceManager
+public class FakePlayerTable
 {
-	private static final Logger LOGGER = Logger.getLogger(CustomNpcInstanceManager.class.getName());
+	private static final Logger LOGGER = Logger.getLogger(FakePlayerTable.class.getName());
 	
 	private Map<Integer, customInfo> spawns; // <Object id , info>
 	private Map<Integer, customInfo> templates; // <Npc Template Id , info>
@@ -52,7 +52,7 @@ public class CustomNpcInstanceManager
 	/**
 	 * Constructor Calls to load the data
 	 */
-	CustomNpcInstanceManager()
+	FakePlayerTable()
 	{
 		load();
 	}
@@ -75,7 +75,7 @@ public class CustomNpcInstanceManager
 	}
 	
 	/**
-	 * Just load the data for mysql...
+	 * Just load the data from mysql...
 	 */
 	private final void load()
 	{
@@ -88,7 +88,7 @@ public class CustomNpcInstanceManager
 		try (Connection con = DatabaseFactory.getConnection())
 		{
 			int count = 0;
-			final PreparedStatement statement = con.prepareStatement("SELECT spawn,template,name,title,class_id,female,hair_style,hair_color,face,name_color,title_color, noble,hero,pvp,karma,wpn_enchant,right_hand,left_hand,gloves,chest,legs,feet,hair,hair2, pledge,cw_level,clan_id,ally_id,clan_crest,ally_crest,rnd_class,rnd_appearance,rnd_weapon,rnd_armor,max_rnd_enchant FROM npc_to_pc_polymorph");
+			final PreparedStatement statement = con.prepareStatement("SELECT spawn,template,name,title,class_id,female,hair_style,hair_color,face,name_color,title_color, noble,hero,pvp,karma,wpn_enchant,right_hand,left_hand,gloves,chest,legs,feet,hair,hair2, pledge,cw_level,clan_id,ally_id,clan_crest,ally_crest,rnd_class,rnd_appearance,rnd_weapon,rnd_armor,max_rnd_enchant FROM fake_players");
 			final ResultSet rset = statement.executeQuery();
 			
 			while (rset.next())
@@ -265,7 +265,7 @@ public class CustomNpcInstanceManager
 	{
 		try (Connection con = DatabaseFactory.getConnection())
 		{
-			final PreparedStatement statement = con.prepareStatement("REPLACE INTO npc_to_pc_polymorph VALUES spawn,template,name,title,class_id,female,hair_style,hair_color,face,name_color,title_color, noble,hero,pvp,karma,wpn_enchant,right_hand,left_hand,gloves,chest,legs,feet,hair,hair2, pledge,cw_level,clan_id,ally_id,clan_crest,ally_crest,rnd_class,rnd_appearance,rnd_weapon,rnd_armor,max_rnd_enchant FROM npc_to_pc_polymorph");
+			final PreparedStatement statement = con.prepareStatement("REPLACE INTO fake_players VALUES spawn,template,name,title,class_id,female,hair_style,hair_color,face,name_color,title_color, noble,hero,pvp,karma,wpn_enchant,right_hand,left_hand,gloves,chest,legs,feet,hair,hair2, pledge,cw_level,clan_id,ally_id,clan_crest,ally_crest,rnd_class,rnd_appearance,rnd_weapon,rnd_armor,max_rnd_enchant FROM fake_players");
 			final ResultSet rset = statement.executeQuery();
 			statement.close();
 			
@@ -284,13 +284,13 @@ public class CustomNpcInstanceManager
 		}
 	}
 	
-	public static CustomNpcInstanceManager getInstance()
+	public static FakePlayerTable getInstance()
 	{
 		return SingletonHolder.INSTANCE;
 	}
 	
 	private static class SingletonHolder
 	{
-		protected static final CustomNpcInstanceManager INSTANCE = new CustomNpcInstanceManager();
+		protected static final FakePlayerTable INSTANCE = new FakePlayerTable();
 	}
 }

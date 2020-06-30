@@ -61,12 +61,13 @@ public class NpcInfo extends GameServerPacket
 	 */
 	public NpcInfo(NpcInstance cha, Creature attacker)
 	{
-		if (cha.getCustomNpcInstance() != null)
+		if (cha.getFakePlayerInstance() != null)
 		{
-			attacker.sendPacket(new CustomNpcInfo(cha));
+			attacker.sendPacket(new FakePlayerInfo(cha));
 			attacker.broadcastPacket(new FinishRotation(cha));
 			return;
 		}
+		
 		_creature = cha;
 		_displayId = cha.getTemplate().getDisplayId();
 		_isAttackable = cha.isAutoAttackable(attacker);
