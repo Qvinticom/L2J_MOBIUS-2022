@@ -30,7 +30,7 @@ public class CharInfo extends GameServerPacket
 	private static final Logger LOGGER = Logger.getLogger(CharInfo.class.getName());
 	
 	private final PlayerInstance _player;
-	private final Inventory _inv;
+	private final Inventory _inventory;
 	private final int _x;
 	private final int _y;
 	private final int _z;
@@ -47,15 +47,15 @@ public class CharInfo extends GameServerPacket
 	public CharInfo(PlayerInstance player)
 	{
 		_player = player;
-		_inv = player.getInventory();
-		_x = _player.getX();
-		_y = _player.getY();
-		_z = _player.getZ();
-		_heading = _player.getHeading();
-		_mAtkSpd = _player.getMAtkSpd();
-		_pAtkSpd = _player.getPAtkSpd();
-		_moveMultiplier = _player.getMovementSpeedMultiplier();
-		_attackSpeedMultiplier = _player.getAttackSpeedMultiplier();
+		_inventory = player.getInventory();
+		_x = player.getX();
+		_y = player.getY();
+		_z = player.getZ();
+		_heading = player.getHeading();
+		_mAtkSpd = player.getMAtkSpd();
+		_pAtkSpd = player.getPAtkSpd();
+		_attackSpeedMultiplier = player.getAttackSpeedMultiplier();
+		_moveMultiplier = player.getMovementSpeedMultiplier();
 		_runSpd = Math.round(player.getRunSpeed() / _moveMultiplier);
 		_walkSpd = Math.round(player.getWalkSpeed() / _moveMultiplier);
 		_flyRunSpd = player.isFlying() ? _runSpd : 0;
@@ -106,9 +106,9 @@ public class CharInfo extends GameServerPacket
 				writeF(_attackSpeedMultiplier);
 				writeF(template.getCollisionRadius());
 				writeF(template.getCollisionHeight());
-				writeD(_inv.getPaperdollItemId(Inventory.PAPERDOLL_RHAND)); // right hand weapon
+				writeD(_inventory.getPaperdollItemId(Inventory.PAPERDOLL_RHAND)); // right hand weapon
 				writeD(0);
-				writeD(_inv.getPaperdollItemId(Inventory.PAPERDOLL_LHAND)); // left hand weapon
+				writeD(_inventory.getPaperdollItemId(Inventory.PAPERDOLL_LHAND)); // left hand weapon
 				writeC(1); // name above char 1=true ... ??
 				writeC(_player.isRunning() ? 1 : 0);
 				writeC(_player.isInCombat() ? 1 : 0);
@@ -179,16 +179,16 @@ public class CharInfo extends GameServerPacket
 			}
 			
 			writeD(0x00);
-			writeD(_inv.getPaperdollItemId(Inventory.PAPERDOLL_HEAD));
-			writeD(_inv.getPaperdollItemId(Inventory.PAPERDOLL_RHAND));
-			writeD(_inv.getPaperdollItemId(Inventory.PAPERDOLL_LHAND));
-			writeD(_inv.getPaperdollItemId(Inventory.PAPERDOLL_GLOVES));
-			writeD(_inv.getPaperdollItemId(Inventory.PAPERDOLL_CHEST));
-			writeD(_inv.getPaperdollItemId(Inventory.PAPERDOLL_LEGS));
-			writeD(_inv.getPaperdollItemId(Inventory.PAPERDOLL_FEET));
-			writeD(_inv.getPaperdollItemId(Inventory.PAPERDOLL_BACK));
-			writeD(_inv.getPaperdollItemId(Inventory.PAPERDOLL_LRHAND));
-			writeD(_inv.getPaperdollItemId(Inventory.PAPERDOLL_HAIR));
+			writeD(_inventory.getPaperdollItemId(Inventory.PAPERDOLL_HEAD));
+			writeD(_inventory.getPaperdollItemId(Inventory.PAPERDOLL_RHAND));
+			writeD(_inventory.getPaperdollItemId(Inventory.PAPERDOLL_LHAND));
+			writeD(_inventory.getPaperdollItemId(Inventory.PAPERDOLL_GLOVES));
+			writeD(_inventory.getPaperdollItemId(Inventory.PAPERDOLL_CHEST));
+			writeD(_inventory.getPaperdollItemId(Inventory.PAPERDOLL_LEGS));
+			writeD(_inventory.getPaperdollItemId(Inventory.PAPERDOLL_FEET));
+			writeD(_inventory.getPaperdollItemId(Inventory.PAPERDOLL_BACK));
+			writeD(_inventory.getPaperdollItemId(Inventory.PAPERDOLL_LRHAND));
+			writeD(_inventory.getPaperdollItemId(Inventory.PAPERDOLL_HAIR));
 			
 			writeD(_player.getPvpFlag());
 			writeD(_player.getKarma());
