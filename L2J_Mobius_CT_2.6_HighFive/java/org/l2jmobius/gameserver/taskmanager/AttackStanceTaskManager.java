@@ -30,37 +30,79 @@ import org.l2jmobius.gameserver.network.serverpackets.AutoAttackStop;
 
 /**
  * Attack stance task manager.
- * @author Luca Baldi, Zoey76
+ * @author Luca Baldi
  */
 public class AttackStanceTaskManager
 {
-	protected static final Logger LOGGER = Logger.getLogger(AttackStanceTaskManager.class.getName());
-	
-	protected static final Map<Creature, Long> _attackStanceTasks = new ConcurrentHashMap<>();
+	private static final Logger LOGGER = Logger.getLogger(AttackStanceTaskManager.class.getName());
 	
 	public static final long COMBAT_TIME = 15000;
+	
+	private static final Map<Creature, Long> _attackStanceTasks = new ConcurrentHashMap<>();
+	private static boolean _working = false;
 	
 	/**
 	 * Instantiates a new attack stance task manager.
 	 */
 	protected AttackStanceTaskManager()
 	{
-		ThreadPool.scheduleAtFixedRate(new FightModeScheduler(), 0, 1000);
+		ThreadPool.scheduleAtFixedRate(() ->
+		{
+			if (_working)
+			{
+				return;
+			}
+			_working = true;
+			
+			final long current = System.currentTimeMillis();
+			try
+			{
+				final Iterator<Entry<Creature, Long>> iterator = _attackStanceTasks.entrySet().iterator();
+				Entry<Creature, Long> entry;
+				Creature creature;
+				while (iterator.hasNext())
+				{
+					entry = iterator.next();
+					if ((current - entry.getValue().longValue()) > COMBAT_TIME)
+					{
+						creature = entry.getKey();
+						if (creature != null)
+						{
+							creature.broadcastPacket(new AutoAttackStop(creature.getObjectId()));
+							creature.getAI().setAutoAttacking(false);
+							if (creature.isPlayer() && creature.hasSummon())
+							{
+								creature.getSummon().broadcastPacket(new AutoAttackStop(creature.getSummon().getObjectId()));
+							}
+						}
+						iterator.remove();
+					}
+				}
+			}
+			catch (Exception e)
+			{
+				// Unless caught here, players remain in attack positions.
+				LOGGER.log(Level.WARNING, "Error in AttackStanceTaskManager: " + e.getMessage(), e);
+			}
+			
+			_working = false;
+		}, 0, 1000);
 	}
 	
 	/**
 	 * Adds the attack stance task.
-	 * @param actor the actor
+	 * @param creature the actor
 	 */
-	public void addAttackStanceTask(Creature actor)
+	public void addAttackStanceTask(Creature creature)
 	{
-		if (actor == null)
+		if (creature == null)
 		{
 			return;
 		}
-		if (actor.isPlayable())
+		
+		if (creature.isPlayable())
 		{
-			for (CubicInstance cubic : actor.getActingPlayer().getCubics().values())
+			for (CubicInstance cubic : creature.getActingPlayer().getCubics().values())
 			{
 				if (cubic.getId() != CubicInstance.LIFE_CUBIC)
 				{
@@ -68,7 +110,7 @@ public class AttackStanceTaskManager
 				}
 			}
 		}
-		_attackStanceTasks.put(actor, System.currentTimeMillis());
+		_attackStanceTasks.put(creature, System.currentTimeMillis());
 	}
 	
 	/**
@@ -105,44 +147,6 @@ public class AttackStanceTaskManager
 			return _attackStanceTasks.containsKey(actor);
 		}
 		return false;
-	}
-	
-	protected class FightModeScheduler implements Runnable
-	{
-		@Override
-		public void run()
-		{
-			final long current = System.currentTimeMillis();
-			try
-			{
-				final Iterator<Entry<Creature, Long>> iter = _attackStanceTasks.entrySet().iterator();
-				Entry<Creature, Long> e;
-				Creature actor;
-				while (iter.hasNext())
-				{
-					e = iter.next();
-					if ((current - e.getValue()) > COMBAT_TIME)
-					{
-						actor = e.getKey();
-						if (actor != null)
-						{
-							actor.broadcastPacket(new AutoAttackStop(actor.getObjectId()));
-							actor.getAI().setAutoAttacking(false);
-							if (actor.isPlayer() && actor.hasSummon())
-							{
-								actor.getSummon().broadcastPacket(new AutoAttackStop(actor.getSummon().getObjectId()));
-							}
-						}
-						iter.remove();
-					}
-				}
-			}
-			catch (Exception e)
-			{
-				// Unless caught here, players remain in attack positions.
-				LOGGER.log(Level.WARNING, "Error in FightModeScheduler: " + e.getMessage(), e);
-			}
-		}
 	}
 	
 	/**
