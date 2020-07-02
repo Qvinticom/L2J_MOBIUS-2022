@@ -17,9 +17,9 @@
 package org.l2jmobius.gameserver.data.xml.impl;
 
 import java.io.File;
-import java.util.ArrayList;
 import java.util.Calendar;
-import java.util.List;
+import java.util.HashMap;
+import java.util.Map;
 import java.util.logging.Level;
 import java.util.logging.Logger;
 
@@ -39,7 +39,7 @@ public class SiegeScheduleData implements IXmlReader
 {
 	private static final Logger LOGGER = Logger.getLogger(SiegeScheduleData.class.getName());
 	
-	private final List<SiegeScheduleDate> _scheduleData = new ArrayList<>();
+	private final Map<Integer, SiegeScheduleDate> _scheduleData = new HashMap<>();
 	
 	protected SiegeScheduleData()
 	{
@@ -49,14 +49,8 @@ public class SiegeScheduleData implements IXmlReader
 	@Override
 	public synchronized void load()
 	{
-		_scheduleData.clear();
 		parseDatapackFile("config/SiegeSchedule.xml");
 		LOGGER.info(getClass().getSimpleName() + ": Loaded " + _scheduleData.size() + " siege schedulers.");
-		if (_scheduleData.isEmpty())
-		{
-			_scheduleData.add(new SiegeScheduleDate(new StatSet()));
-			LOGGER.info(getClass().getSimpleName() + ": Emergency loaded " + _scheduleData.size() + " default siege schedulers.");
-		}
 	}
 	
 	@Override
@@ -85,7 +79,7 @@ public class SiegeScheduleData implements IXmlReader
 								}
 								set.set(key, val);
 							}
-							_scheduleData.add(new SiegeScheduleDate(set));
+							_scheduleData.put(set.getInt("castleId"), new SiegeScheduleDate(set));
 							break;
 						}
 					}
@@ -107,9 +101,9 @@ public class SiegeScheduleData implements IXmlReader
 		}
 	}
 	
-	public List<SiegeScheduleDate> getScheduleDates()
+	public SiegeScheduleDate getScheduleDateForCastleId(int castleId)
 	{
-		return _scheduleData;
+		return _scheduleData.get(castleId);
 	}
 	
 	public static SiegeScheduleData getInstance()

@@ -1405,35 +1405,42 @@ public class Siege implements Siegable
 	/** Set the date for the next siege. */
 	private void setNextSiegeDate()
 	{
-		final Calendar cal = getCastle().getSiegeDate();
-		if (cal.getTimeInMillis() < System.currentTimeMillis())
+		final SiegeScheduleDate holder = SiegeScheduleData.getInstance().getScheduleDateForCastleId(_castle.getResidenceId());
+		if (!holder.siegeEnabled())
 		{
-			cal.setTimeInMillis(System.currentTimeMillis());
+			return;
 		}
 		
-		for (SiegeScheduleDate holder : SiegeScheduleData.getInstance().getScheduleDates())
+		final Calendar calendar = _castle.getSiegeDate();
+		if (calendar.getTimeInMillis() < System.currentTimeMillis())
 		{
-			cal.set(Calendar.DAY_OF_WEEK, holder.getDay());
-			cal.set(Calendar.HOUR_OF_DAY, holder.getHour());
-			cal.set(Calendar.MINUTE, 0);
-			cal.set(Calendar.SECOND, 0);
-			if (cal.before(Calendar.getInstance()))
-			{
-				cal.add(Calendar.WEEK_OF_YEAR, 2);
-			}
+			calendar.setTimeInMillis(System.currentTimeMillis());
+		}
+		
+		calendar.set(Calendar.DAY_OF_WEEK, holder.getDay());
+		calendar.set(Calendar.HOUR_OF_DAY, holder.getHour());
+		calendar.set(Calendar.MINUTE, 0);
+		calendar.set(Calendar.SECOND, 0);
+		
+		if (calendar.before(Calendar.getInstance()))
+		{
+			calendar.add(Calendar.WEEK_OF_YEAR, 2);
+		}
+		
+		if (CastleManager.getInstance().getSiegeDates(calendar.getTimeInMillis()) < holder.getMaxConcurrent())
+		{
+			CastleManager.getInstance().registerSiegeDate(getCastle().getResidenceId(), calendar.getTimeInMillis());
 			
-			if (CastleManager.getInstance().getSiegeDates(cal.getTimeInMillis()) < holder.getMaxConcurrent())
-			{
-				CastleManager.getInstance().registerSiegeDate(getCastle().getResidenceId(), cal.getTimeInMillis());
-				break;
-			}
+			Broadcast.toAllOnlinePlayers(new SystemMessage(SystemMessageId.S1_HAS_ANNOUNCED_THE_NEXT_CASTLE_SIEGE_TIME).addCastleId(_castle.getResidenceId()));
+			
+			// Allow registration for next siege
+			_isRegistrationOver = false;
 		}
-		
-		final SystemMessage sm = new SystemMessage(SystemMessageId.S1_HAS_ANNOUNCED_THE_NEXT_CASTLE_SIEGE_TIME);
-		sm.addCastleId(getCastle().getResidenceId());
-		Broadcast.toAllOnlinePlayers(sm);
-		
-		_isRegistrationOver = false; // Allow registration for next siege
+		else
+		{
+			// Deny registration for next siege
+			_isRegistrationOver = true;
+		}
 	}
 	
 	/**

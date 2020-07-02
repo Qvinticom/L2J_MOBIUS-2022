@@ -17,10 +17,11 @@
 package org.l2jmobius.gameserver.data.xml.impl;
 
 import java.io.File;
-import java.util.ArrayList;
 import java.util.Calendar;
-import java.util.List;
+import java.util.HashMap;
+import java.util.Map;
 import java.util.logging.Level;
+import java.util.logging.Logger;
 
 import org.w3c.dom.Document;
 import org.w3c.dom.NamedNodeMap;
@@ -36,7 +37,9 @@ import org.l2jmobius.gameserver.util.Util;
  */
 public class SiegeScheduleData implements IXmlReader
 {
-	private final List<SiegeScheduleDate> _scheduleData = new ArrayList<>();
+	private static final Logger LOGGER = Logger.getLogger(SiegeScheduleData.class.getName());
+	
+	private final Map<Integer, SiegeScheduleDate> _scheduleData = new HashMap<>();
 	
 	protected SiegeScheduleData()
 	{
@@ -46,14 +49,8 @@ public class SiegeScheduleData implements IXmlReader
 	@Override
 	public synchronized void load()
 	{
-		_scheduleData.clear();
 		parseDatapackFile("config/SiegeSchedule.xml");
-		LOGGER.log(Level.INFO, getClass().getSimpleName() + ": Loaded " + _scheduleData.size() + " siege schedulers.");
-		if (_scheduleData.isEmpty())
-		{
-			_scheduleData.add(new SiegeScheduleDate(new StatSet()));
-			LOGGER.log(Level.INFO, getClass().getSimpleName() + ": Emergency Loaded: " + _scheduleData.size() + " default siege schedulers.");
-		}
+		LOGGER.info(getClass().getSimpleName() + ": Loaded " + _scheduleData.size() + " siege schedulers.");
 	}
 	
 	@Override
@@ -82,7 +79,7 @@ public class SiegeScheduleData implements IXmlReader
 								}
 								set.set(key, val);
 							}
-							_scheduleData.add(new SiegeScheduleDate(set));
+							_scheduleData.put(set.getInt("castleId"), new SiegeScheduleDate(set));
 							break;
 						}
 					}
@@ -95,7 +92,7 @@ public class SiegeScheduleData implements IXmlReader
 	{
 		try
 		{
-			return Calendar.class.getField(field).getInt(Calendar.class);
+			return Calendar.class.getField(field).getInt(Calendar.class.getName());
 		}
 		catch (Exception e)
 		{
@@ -104,9 +101,9 @@ public class SiegeScheduleData implements IXmlReader
 		}
 	}
 	
-	public List<SiegeScheduleDate> getScheduleDates()
+	public SiegeScheduleDate getScheduleDateForCastleId(int castleId)
 	{
-		return _scheduleData;
+		return _scheduleData.get(castleId);
 	}
 	
 	public static SiegeScheduleData getInstance()
