@@ -172,6 +172,7 @@ public class Config
 	public static String BBS_DEFAULT;
 	public static boolean SHOW_NPC_LVL;
 	public static boolean SHOW_NPC_AGGRESSION;
+	public static boolean SHOW_NPC_CLAN_CREST;
 	public static int ZONE_TOWN;
 	public static int DEFAULT_PUNISH;
 	public static int DEFAULT_PUNISH_PARAM;
@@ -1481,6 +1482,7 @@ public class Config
 		MAX_MONSTER_ANIMATION = generalConfig.getInt("MaxMonsterAnimation", 60);
 		SHOW_NPC_LVL = generalConfig.getBoolean("ShowNpcLevel", false);
 		SHOW_NPC_AGGRESSION = generalConfig.getBoolean("ShowNpcAggression", false);
+		SHOW_NPC_CLAN_CREST = generalConfig.getBoolean("ShowNpcClanCrest", false);
 		FORCE_INVENTORY_UPDATE = generalConfig.getBoolean("ForceInventoryUpdate", false);
 		FORCE_COMPLETE_STATUS_UPDATE = generalConfig.getBoolean("ForceCompletePlayerStatusUpdate", true);
 		CHAR_DATA_STORE_INTERVAL = generalConfig.getInt("CharacterDataStoreInterval", 15) * 60 * 1000;

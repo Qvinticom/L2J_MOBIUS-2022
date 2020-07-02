@@ -17,12 +17,20 @@
 package org.l2jmobius.gameserver.network.serverpackets;
 
 import org.l2jmobius.Config;
+import org.l2jmobius.gameserver.datatables.sql.ClanTable;
 import org.l2jmobius.gameserver.model.actor.Creature;
 import org.l2jmobius.gameserver.model.actor.Summon;
+import org.l2jmobius.gameserver.model.actor.instance.ControlTowerInstance;
+import org.l2jmobius.gameserver.model.actor.instance.FortSiegeGuardInstance;
+import org.l2jmobius.gameserver.model.actor.instance.GuardInstance;
 import org.l2jmobius.gameserver.model.actor.instance.MonsterInstance;
 import org.l2jmobius.gameserver.model.actor.instance.NpcInstance;
 import org.l2jmobius.gameserver.model.actor.instance.PetInstance;
+import org.l2jmobius.gameserver.model.actor.instance.SiegeGuardInstance;
+import org.l2jmobius.gameserver.model.actor.instance.SiegeNpcInstance;
 import org.l2jmobius.gameserver.model.actor.instance.SummonInstance;
+import org.l2jmobius.gameserver.model.clan.Clan;
+import org.l2jmobius.gameserver.model.zone.ZoneId;
 
 /**
  * @version $Revision: 1.7.2.4.2.9 $ $Date: 2005/04/11 10:05:54 $
@@ -51,6 +59,10 @@ public class NpcInfo extends GameServerPacket
 	private int _lhand;
 	private int _collisionHeight;
 	private int _collisionRadius;
+	protected int _clanCrest;
+	protected int _allyCrest;
+	protected int _allyId;
+	protected int _clanId;
 	private String _name = "";
 	private String _title = "";
 	
@@ -76,6 +88,20 @@ public class NpcInfo extends GameServerPacket
 		_isSummoned = false;
 		_collisionHeight = cha.getCollisionHeight();
 		_collisionRadius = cha.getCollisionRadius();
+		
+		if (Config.SHOW_NPC_CLAN_CREST && (cha.getCastle() != null) && (cha.getCastle().getOwnerId() != 0) && !cha.isMonster() && !cha.isArtefact() && !(cha instanceof ControlTowerInstance))
+		{
+			if (cha.isInsideZone(ZoneId.TOWN) || cha.isInsideZone(ZoneId.CASTLE) //
+				|| (cha instanceof GuardInstance) || (cha instanceof SiegeGuardInstance) || (cha instanceof FortSiegeGuardInstance) || (cha instanceof SiegeNpcInstance))
+			{
+				final Clan clan = ClanTable.getInstance().getClan(cha.getCastle().getOwnerId());
+				_clanCrest = clan.getCrestId();
+				_clanId = clan.getClanId();
+				_allyCrest = clan.getAllyCrestId();
+				_allyId = clan.getAllyId();
+			}
+		}
+		
 		if (cha.getTemplate().isServerSideName())
 		{
 			_name = cha.getTemplate().getName();
@@ -234,11 +260,11 @@ public class NpcInfo extends GameServerPacket
 		}
 		
 		writeD(_creature.getAbnormalEffect()); // C2
-		writeD(0000); // C2
-		writeD(0000); // C2
-		writeD(0000); // C2
-		writeD(0000); // C2
-		writeC(0000); // C2
+		writeD(_clanId); // C2
+		writeD(_clanCrest); // C2
+		writeD(_allyId); // C2
+		writeD(_allyCrest); // C2
+		writeC(0x00); // C2
 		
 		writeC(0x00); // C3 team circle 1-blue, 2-red
 		writeF(_collisionRadius);
