@@ -116,7 +116,7 @@ public class CreatureTemplate extends ListenersContainer
 		_baseAttackType = set.getEnum("baseAtkType", WeaponType.class, WeaponType.FIST);
 		_baseShldRate = set.getInt("baseShldRate", 0);
 		_baseCritRate = set.getInt("baseCritRate", 4);
-		_baseMCritRate = set.getInt("baseMCritRate", 0);
+		_baseMCritRate = set.getInt("baseMCritRate", 5);
 		
 		// SpecialStats
 		_baseBreath = set.getInt("baseBreath", 100);

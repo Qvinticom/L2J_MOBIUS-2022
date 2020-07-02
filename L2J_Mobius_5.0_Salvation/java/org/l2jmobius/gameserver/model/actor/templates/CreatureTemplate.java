@@ -94,7 +94,7 @@ public class CreatureTemplate extends ListenersContainer
 		// Shield and critical rates
 		_baseValues.put(Stat.SHIELD_DEFENCE_RATE, set.getDouble("baseShldRate", 0));
 		_baseValues.put(Stat.CRITICAL_RATE, set.getDouble("baseCritRate", 4));
-		_baseValues.put(Stat.MAGIC_CRITICAL_RATE, set.getDouble("baseMCritRate", 0));
+		_baseValues.put(Stat.MAGIC_CRITICAL_RATE, set.getDouble("baseMCritRate", 5));
 		
 		// Breath under water
 		_baseValues.put(Stat.BREATH, set.getDouble("baseBreath", 100));
