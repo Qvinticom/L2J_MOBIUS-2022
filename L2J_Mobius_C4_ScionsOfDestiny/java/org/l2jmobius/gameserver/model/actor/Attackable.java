@@ -1293,10 +1293,6 @@ public class Attackable extends NpcInstance
 			else
 			{
 				dropChance *= Config.RATE_DROP_ADENA;
-				if (lastAttacker.isDonator())
-				{
-					dropChance *= Config.DONATOR_ADENA_RATE;
-				}
 			}
 		}
 		else if (isSweep)
@@ -1316,10 +1312,6 @@ public class Attackable extends NpcInstance
 			else
 			{
 				dropChance *= Config.RATE_DROP_SPOIL;
-				if (lastAttacker.isDonator())
-				{
-					dropChance *= Config.DONATOR_SPOIL_RATE;
-				}
 			}
 		}
 		else if (this instanceof RaidBossInstance)
@@ -1337,10 +1329,6 @@ public class Attackable extends NpcInstance
 		else
 		{
 			dropChance *= Config.RATE_DROP_ITEMS;
-			if (lastAttacker.isDonator())
-			{
-				dropChance *= Config.DONATOR_DROP_RATE;
-			}
 		}
 		
 		if (Config.CHAMPION_ENABLE && isChampion())
