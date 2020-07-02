@@ -1286,9 +1286,11 @@
 		<effectPoint>-137</effectPoint>
 		<reuseDelay>8000</reuseDelay>
 		<magicCriticalRate>5</magicCriticalRate>
-		<targetType>ENEMY_ONLY</targetType>
-		<affectScope>SINGLE</affectScope>
-		<nextAction>ATTACK</nextAction>
+		<targetType>SELF</targetType>
+		<affectScope>POINT_BLANK</affectScope>
+		<affectObject>NOT_FRIEND</affectObject>
+		<affectRange>150</affectRange>
+		<affectLimit>6-12</affectLimit>
 		<conditions>
 			<condition name="EquipWeapon">
 				<weaponType>
