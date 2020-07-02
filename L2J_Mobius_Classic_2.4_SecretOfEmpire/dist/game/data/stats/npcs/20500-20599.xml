@@ -5164,7 +5164,7 @@
 			</spoil>
 		</dropLists>
 	</npc>
-	<npc id="20589" level="50" type="Monster" name="Fline">
+	<npc id="20589" level="50" type="Monster" name="Fline" element="EARTH">
 		<parameters>
 			<param name="MoveAroundSocial" value="80" />
 			<param name="MoveAroundSocial1" value="80" />
@@ -5178,9 +5178,9 @@
 		</parameters>
 		<race>ELEMENTAL</race>
 		<sex>FEMALE</sex>
-		<acquire exp="6675" sp="200" />
+		<acquire exp="6675" sp="200" attributeExp="8" />
 		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
-			<vitals hp="485.72332" hpRegen="5.5" mp="665.52" mpRegen="2.1" />
+			<vitals hp="1498.97" hpRegen="5.5" mp="665.52" mpRegen="2.1" />
 			<attack physical="213.5439" magical="160.40508" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
 			<defence physical="195.566206" magical="130.09715" />
 			<speed>
@@ -5229,7 +5229,7 @@
 			</spoil>
 		</dropLists>
 	</npc>
-	<npc id="20590" level="51" type="Monster" name="Liele">
+	<npc id="20590" level="51" type="Monster" name="Liele" element="EARTH">
 		<parameters>
 			<param name="MoveAroundSocial" value="0" />
 			<param name="MoveAroundSocial1" value="0" />
@@ -5243,9 +5243,9 @@
 		</parameters>
 		<race>ELEMENTAL</race>
 		<sex>FEMALE</sex>
-		<acquire exp="6944" sp="208" />
+		<acquire exp="6944" sp="208" attributeExp="8" />
 		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
-			<vitals hp="504.812345" hpRegen="6.5" mp="694.725" mpRegen="2.4" />
+			<vitals hp="1551.15" hpRegen="6.5" mp="694.725" mpRegen="2.4" />
 			<attack physical="225.5023636" magical="169.38777" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
 			<defence physical="200.406976" magical="133.31739" />
 			<speed>
@@ -5302,7 +5302,7 @@
 			</spoil>
 		</dropLists>
 	</npc>
-	<npc id="20591" level="52" type="Monster" name="Valley Treant">
+	<npc id="20591" level="52" type="Monster" name="Valley Treant" element="EARTH">
 		<parameters>
 			<param name="MoveAroundSocial" value="120" />
 			<param name="MoveAroundSocial1" value="120" />
@@ -5316,9 +5316,9 @@
 		</parameters>
 		<race>ELEMENTAL</race>
 		<sex>MALE</sex>
-		<acquire exp="7839" sp="235" />
+		<acquire exp="7839" sp="235" attributeExp="9" />
 		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
-			<vitals hp="523.778215" hpRegen="6.5" mp="724.815" mpRegen="2.4" />
+			<vitals hp="1602.98" hpRegen="6.5" mp="724.815" mpRegen="2.4" />
 			<attack physical="237.9049909" magical="178.7041" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
 			<defence physical="205.299259" magical="136.5719" />
 			<speed>
@@ -5372,7 +5372,7 @@
 			</spoil>
 		</dropLists>
 	</npc>
-	<npc id="20592" level="53" type="Monster" name="Satyr">
+	<npc id="20592" level="53" type="Monster" name="Satyr" element="EARTH">
 		<parameters>
 			<param name="MoveAroundSocial" value="71" />
 			<param name="MoveAroundSocial1" value="71" />
@@ -5386,9 +5386,9 @@
 		<race>FAIRY</race>
 		<sex>MALE</sex>
 		<equipment rhand="291" /> <!-- rhand: Trident -->
-		<acquire exp="10897" sp="326" />
+		<acquire exp="10897" sp="326" attributeExp="10"/>
 		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
-			<vitals hp="543.27775666667" hpRegen="6.5" mp="754.905" mpRegen="2.4" />
+			<vitals hp="1657.05" hpRegen="6.5" mp="754.905" mpRegen="2.4" />
 			<attack physical="250.7518636" magical="188.35412" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
 			<defence physical="210.240833" magical="139.8592" />
 			<speed>
@@ -5442,7 +5442,7 @@
 			</spoil>
 		</dropLists>
 	</npc>
-	<npc id="20593" level="54" type="Monster" name="Unicorn">
+	<npc id="20593" level="54" type="Monster" name="Unicorn" element="EARTH">
 		<parameters>
 			<param name="MoveAroundSocial" value="60" />
 			<param name="MoveAroundSocial1" value="60" />
@@ -5456,9 +5456,9 @@
 		</parameters>
 		<race>ELEMENTAL</race>
 		<sex>MALE</sex>
-		<acquire exp="11312" sp="339" />
+		<acquire exp="11312" sp="339" attributeExp="10" />
 		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
-			<vitals hp="563.14676333333" hpRegen="6.5" mp="784.995" mpRegen="2.4" />
+			<vitals hp="1710.12" hpRegen="6.5" mp="784.995" mpRegen="2.4" />
 			<attack physical="264.0417091" magical="198.33688" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
 			<defence physical="215.229322" magical="143.17771" />
 			<speed>
@@ -5511,7 +5511,7 @@
 			</spoil>
 		</dropLists>
 	</npc>
-	<npc id="20594" level="55" type="Monster" name="Forest Runner">
+	<npc id="20594" level="55" type="Monster" name="Forest Runner" element="EARTH">
 		<parameters>
 			<param name="MoveAroundSocial" value="0" />
 			<param name="MoveAroundSocial1" value="0" />
@@ -5524,9 +5524,9 @@
 		</parameters>
 		<race>PLANT</race>
 		<sex>FEMALE</sex>
-		<acquire exp="8076" sp="242" />
+		<acquire exp="8076" sp="242" attributeExp="11" />
 		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
-			<vitals hp="583.01577" hpRegen="6.5" mp="814.2" mpRegen="2.4" />
+			<vitals hp="1764.24" hpRegen="6.5" mp="814.2" mpRegen="2.4" />
 			<attack physical="277.7718727" magical="208.6504" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
 			<defence physical="220.262284" magical="146.5258" />
 			<speed>
@@ -5577,7 +5577,7 @@
 			</spoil>
 		</dropLists>
 	</npc>
-	<npc id="20595" level="56" type="Monster" name="Fline Elder">
+	<npc id="20595" level="56" type="Monster" name="Fline Elder" element="EARTH">
 		<parameters>
 			<param name="MoveAroundSocial" value="80" />
 			<param name="MoveAroundSocial1" value="80" />
@@ -5591,9 +5591,9 @@
 		</parameters>
 		<race>ELEMENTAL</race>
 		<sex>FEMALE</sex>
-		<acquire exp="8418" sp="252" />
+		<acquire exp="8418" sp="252" attributeExp="12" />
 		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
-			<vitals hp="603.582655" hpRegen="6.5" mp="845.175" mpRegen="2.4" />
+			<vitals hp="1819.29" hpRegen="6.5" mp="845.175" mpRegen="2.4" />
 			<attack physical="353.245277" magical="219.29157" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
 			<defence physical="186.2290364" magical="149.90176" />
 			<speed>
@@ -5645,7 +5645,7 @@
 			</spoil>
 		</dropLists>
 	</npc>
-	<npc id="20596" level="57" type="Monster" name="Liele Elder">
+	<npc id="20596" level="57" type="Monster" name="Liele Elder" element="EARTH">
 		<parameters>
 			<param name="MoveAroundSocial" value="0" />
 			<param name="MoveAroundSocial1" value="0" />
@@ -5659,9 +5659,9 @@
 		</parameters>
 		<race>ELEMENTAL</race>
 		<sex>FEMALE</sex>
-		<acquire exp="17423" sp="522" />
+		<acquire exp="17423" sp="522" attributeExp="13" />
 		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
-			<vitals hp="623.780075" hpRegen="6.5" mp="877.035" mpRegen="2.4" />
+			<vitals hp="1874.19" hpRegen="6.5" mp="877.035" mpRegen="2.4" />
 			<attack physical="370.907537" magical="230.25615" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
 			<defence physical="190.4555091" magical="153.30378" />
 			<speed>
@@ -5695,7 +5695,7 @@
 			<height normal="27" />
 		</collision>
 	</npc>
-	<npc id="20597" level="58" type="Monster" name="Valley Treant Elder">
+	<npc id="20597" level="58" type="Monster" name="Valley Treant Elder" element="EARTH">
 		<parameters>
 			<param name="MoveAroundSocial" value="120" />
 			<param name="MoveAroundSocial1" value="120" />
@@ -5709,9 +5709,9 @@
 		</parameters>
 		<race>ELEMENTAL</race>
 		<sex>MALE</sex>
-		<acquire exp="14015" sp="420" />
+		<acquire exp="14015" sp="420" attributeExp="13" />
 		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
-			<vitals hp="644.83958" hpRegen="6.5" mp="907.125" mpRegen="2.4" />
+			<vitals hp="1928.40" hpRegen="6.5" mp="907.125" mpRegen="2.4" />
 			<attack physical="389.082012" magical="241.5387" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
 			<defence physical="194.7120545" magical="156.73001" />
 			<speed>
@@ -5763,7 +5763,7 @@
 			</spoil>
 		</dropLists>
 	</npc>
-	<npc id="20598" level="59" type="Monster" name="Satyr Elder">
+	<npc id="20598" level="59" type="Monster" name="Satyr Elder" element="EARTH">
 		<parameters>
 			<param name="MoveAroundSocial" value="71" />
 			<param name="MoveAroundSocial1" value="71" />
@@ -5777,9 +5777,9 @@
 		<race>FAIRY</race>
 		<sex>MALE</sex>
 		<equipment rhand="297" /> <!-- rhand: Glaive -->
-		<acquire exp="13555" sp="406" />
+		<acquire exp="13555" sp="406" attributeExp="14" />
 		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
-			<vitals hp="665.44751666667" hpRegen="6.5" mp="938.985" mpRegen="2.4" />
+			<vitals hp="1984.11" hpRegen="6.5" mp="938.985" mpRegen="2.4" />
 			<attack physical="407.757944" magical="253.13256" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
 			<defence physical="198.9962636" magical="160.17851" />
 			<speed>
@@ -5828,7 +5828,7 @@
 			</spoil>
 		</dropLists>
 	</npc>
-	<npc id="20599" level="60" type="Monster" name="Elder the Unicorn">
+	<npc id="20599" level="60" type="Monster" name="Elder the Unicorn" element="EARTH">
 		<parameters>
 			<param name="MoveAroundSocial" value="60" />
 			<param name="MoveAroundSocial1" value="60" />
@@ -5842,9 +5842,9 @@
 		</parameters>
 		<race>ELEMENTAL</race>
 		<sex>MALE</sex>
-		<acquire exp="14018" sp="420" />
+		<acquire exp="14018" sp="420" attributeExp="15" />
 		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
-			<vitals hp="686.46597" hpRegen="6.5" mp="969.075" mpRegen="2.4" />
+			<vitals hp="2039.56" hpRegen="6.5" mp="969.075" mpRegen="2.4" />
 			<attack physical="426.922562" magical="265.02979" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
 			<defence physical="203.3056364" magical="163.64727" />
 			<speed>
