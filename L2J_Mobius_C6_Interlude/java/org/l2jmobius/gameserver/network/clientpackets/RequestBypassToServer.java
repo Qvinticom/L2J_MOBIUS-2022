@@ -295,6 +295,15 @@ public class RequestBypassToServer extends GameClientPacket
 				}
 				else
 				{
+					final WorldObject object = player.getTarget();
+					if ((object instanceof NpcInstance) && (player.getLastQuestNpcObject() != object.getObjectId()))
+					{
+						final WorldObject lastQuestNpc = World.getInstance().findObject(player.getLastQuestNpcObject());
+						if ((lastQuestNpc == null) || !player.isInsideRadius(lastQuestNpc, NpcInstance.INTERACTION_DISTANCE, false, false))
+						{
+							player.setLastQuestNpcObject(object.getObjectId());
+						}
+					}
 					player.processQuestEvent(p.substring(0, idx), p.substring(idx).trim());
 				}
 			}
