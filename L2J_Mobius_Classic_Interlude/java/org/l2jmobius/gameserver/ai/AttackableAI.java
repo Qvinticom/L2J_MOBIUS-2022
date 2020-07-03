@@ -40,7 +40,6 @@ import org.l2jmobius.gameserver.model.World;
 import org.l2jmobius.gameserver.model.WorldObject;
 import org.l2jmobius.gameserver.model.actor.Attackable;
 import org.l2jmobius.gameserver.model.actor.Creature;
-import org.l2jmobius.gameserver.model.actor.Npc;
 import org.l2jmobius.gameserver.model.actor.Playable;
 import org.l2jmobius.gameserver.model.actor.instance.DefenderInstance;
 import org.l2jmobius.gameserver.model.actor.instance.GrandBossInstance;
@@ -711,7 +710,7 @@ public class AttackableAI extends CreatureAI
 				}
 				if (targetExistsInAttackByList)
 				{
-					World.getInstance().forEachVisibleObjectInRange(npc, Npc.class, factionRange, called ->
+					World.getInstance().forEachVisibleObjectInRange(npc, Attackable.class, factionRange, called ->
 					{
 						// Don't call dead npcs, npcs without ai or npcs which are too far away.
 						if (called.isDead() || !called.hasAI() || (Math.abs(finalTarget.getZ() - called.getZ()) > 600))
@@ -736,9 +735,9 @@ public class AttackableAI extends CreatureAI
 							called.getAI().notifyEvent(CtrlEvent.EVT_AGGRESSION, finalTarget, 1);
 							EventDispatcher.getInstance().notifyEventAsync(new OnAttackableFactionCall(called, getActiveChar(), finalTarget.getActingPlayer(), finalTarget.isSummon()), called);
 						}
-						else if (called.isAttackable() && (called.getAI()._intention != CtrlIntention.AI_INTENTION_ATTACK))
+						else if (called.getAI()._intention != CtrlIntention.AI_INTENTION_ATTACK)
 						{
-							((Attackable) called).addDamageHate(finalTarget, 0, npc.getHating(finalTarget));
+							called.addDamageHate(finalTarget, 0, npc.getHating(finalTarget));
 							called.getAI().setIntention(CtrlIntention.AI_INTENTION_ATTACK, finalTarget);
 						}
 					});

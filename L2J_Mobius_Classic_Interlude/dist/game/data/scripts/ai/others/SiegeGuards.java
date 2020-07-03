@@ -20,7 +20,6 @@ import java.util.List;
 import java.util.concurrent.CopyOnWriteArrayList;
 
 import org.l2jmobius.commons.concurrent.ThreadPool;
-import org.l2jmobius.gameserver.ai.CtrlIntention;
 import org.l2jmobius.gameserver.geoengine.GeoEngine;
 import org.l2jmobius.gameserver.instancemanager.CastleManager;
 import org.l2jmobius.gameserver.model.World;
@@ -28,7 +27,7 @@ import org.l2jmobius.gameserver.model.WorldObject;
 import org.l2jmobius.gameserver.model.actor.Attackable;
 import org.l2jmobius.gameserver.model.actor.Creature;
 import org.l2jmobius.gameserver.model.actor.Npc;
-import org.l2jmobius.gameserver.model.actor.Summon;
+import org.l2jmobius.gameserver.model.actor.Playable;
 import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
 import org.l2jmobius.gameserver.model.entity.Castle;
 import org.l2jmobius.gameserver.model.entity.Fort;
@@ -118,44 +117,52 @@ public class SiegeGuards extends AbstractNpcAI
 			final List<Npc> guards = RESIDENCE_GUARD_MAP[_residenceId];
 			for (Npc guard : guards)
 			{
-				if (guard == null)
+				// Should never happen.
+				if ((guard == null) || !guard.isAttackable())
 				{
 					continue;
 				}
 				
+				// Remove dead guards.
 				if (guard.isDead())
 				{
 					guards.remove(guard);
 					continue;
 				}
 				
-				final WorldObject target = guard.getTarget();
-				if (!guard.isInCombat() || (target == null) || (guard.calculateDistance2D(target) > guard.getAggroRange()) || target.isInvul())
+				// Skip if guard is currently attacking.
+				if (guard.isInCombat())
 				{
-					for (Creature nearby : World.getInstance().getVisibleObjectsInRange(guard, Creature.class, guard.getAggroRange()))
+					continue;
+				}
+				
+				// Skip if guard has an active target (not dead/invis/invul and is within range).
+				final WorldObject target = guard.getTarget();
+				final Creature targetCreature = (target != null) && target.isCreature() ? (Creature) target : null;
+				if ((targetCreature != null) && !targetCreature.isDead() && !targetCreature.isInvisible() && !targetCreature.isInvul() && (guard.calculateDistance2D(targetCreature) < guard.getAggroRange()))
+				{
+					continue;
+				}
+				
+				// Iterate all players/summons within aggro range...
+				for (Playable nearby : World.getInstance().getVisibleObjectsInRange(guard, Playable.class, guard.getAggroRange()))
+				{
+					// Do not attack players/summons who are dead/invis/invul or cannot be seen.
+					if (nearby.isDead() || nearby.isInvisible() || nearby.isInvul() || !GeoEngine.getInstance().canSeeTarget(guard, nearby))
 					{
-						if (nearby.isPlayable() && GeoEngine.getInstance().canSeeTarget(guard, nearby))
-						{
-							final Summon summon = nearby.isSummon() ? (Summon) nearby : null;
-							final PlayerInstance pl = summon == null ? (PlayerInstance) nearby : summon.getOwner();
-							if (((pl.getSiegeState() != 2) || pl.isRegisteredOnThisSiegeField(guard.getScriptValue())) && ((pl.getSiegeState() != 0) || (guard.getAI().getIntention() != CtrlIntention.AI_INTENTION_IDLE)))
-							{
-								// skip invisible players
-								if (pl.isInvisible() || pl.isInvul())
-								{
-									continue;
-								}
-								
-								if (guard.isAttackable())
-								{
-									((Attackable) guard).addDamageHate(nearby, 0, 999);
-								}
-								guard.setRunning();
-								guard.getAI().setIntention(CtrlIntention.AI_INTENTION_ATTACK, target);
-								break; // no need to search more
-							}
-						}
+						continue;
 					}
+					
+					// Do not attack defenders who are registered to this castle.
+					final PlayerInstance player = nearby.getActingPlayer();
+					if ((player.getSiegeState() == 2) && player.isRegisteredOnThisSiegeField(guard.getScriptValue()))
+					{
+						continue;
+					}
+					
+					// Attack the target and stop searching.
+					((Attackable) guard).addDamageHate(nearby, 0, 999);
+					break;
 				}
 			}
 			

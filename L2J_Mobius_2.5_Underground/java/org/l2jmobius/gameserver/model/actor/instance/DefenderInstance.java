@@ -215,7 +215,9 @@ public class DefenderInstance extends Attackable
 				if (((_fort != null) && _fort.getZone().isActive()) || ((_castle != null) && _castle.getZone().isActive()))
 				{
 					final int activeSiegeId = (_fort != null) ? _fort.getResidenceId() : _castle.getResidenceId();
-					if ((player != null) && (((player.getSiegeState() == 2) && player.isRegisteredOnThisSiegeField(activeSiegeId)) || ((player.getSiegeState() == 1))))
+					
+					// Do not add hate on defenders.
+					if ((player.getSiegeState() == 2) && player.isRegisteredOnThisSiegeField(activeSiegeId))
 					{
 						return;
 					}
