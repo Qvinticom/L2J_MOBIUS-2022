@@ -53,7 +53,7 @@ public class OlympiadStadium
 		_zone = olyzone;
 		_instance = InstanceManager.getInstance().createInstance(olyzone.getInstanceTemplateId(), null);
 		_buffers = _instance.getNpcs().stream().map(Npc::getSpawn).collect(Collectors.toList());
-		_buffers.stream().map(Spawn::getLastSpawn).forEach(Npc::decayMe);
+		_buffers.stream().map(Spawn::getLastSpawn).forEach(Npc::deleteMe);
 	}
 	
 	public OlympiadStadiumZone getZone()
@@ -88,13 +88,11 @@ public class OlympiadStadium
 	
 	public void spawnBuffers()
 	{
-		_buffers.forEach(Spawn::startRespawn);
-		_buffers.forEach(Spawn::doSpawn);
+		_buffers.forEach(spawn -> spawn.doSpawn(false));
 	}
 	
 	public void deleteBuffers()
 	{
-		_buffers.forEach(Spawn::stopRespawn);
 		_buffers.stream().map(Spawn::getLastSpawn).filter(Objects::nonNull).forEach(Npc::deleteMe);
 	}
 	
