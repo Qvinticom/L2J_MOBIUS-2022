@@ -92,7 +92,7 @@ public class Henna
 	
 	public int getBaseStats(BaseStat stat)
 	{
-		return _baseStats.getOrDefault(stat, 0);
+		return !_baseStats.containsKey(stat) ? 0 : _baseStats.get(stat).intValue();
 	}
 	
 	public Map<BaseStat, Integer> getBaseStats()
