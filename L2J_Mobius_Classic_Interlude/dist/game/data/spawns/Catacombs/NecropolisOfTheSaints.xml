@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../xsd/spawns.xsd">
+	<spawn name="NecropolisOfTheSaints">
+		<!-- Monsters -->
+		
+		<!-- NPCs -->
+		<group name="ssq08_npc2224_01">
+			<npc id="31110" x="83440" y="209216" z="-5440" heading="16500" respawnTime="60sec" /> <!-- Gatekeeper Ziggurat -->
+		</group>
+		<group name="ssq08_npc2224_02">
+			<npc id="31102" x="82688" y="209216" z="-5437" heading="32500" respawnTime="60sec" /> <!-- Gatekeeper Ziggurat -->
+		</group>
+	</spawn>
+</list>

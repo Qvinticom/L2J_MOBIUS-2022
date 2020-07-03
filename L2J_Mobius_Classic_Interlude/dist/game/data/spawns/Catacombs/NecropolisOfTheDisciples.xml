@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../xsd/spawns.xsd">
+	<spawn name="NecropolisOThefDisciples">
+		<!-- Monsters -->
+		
+		<!-- NPCs -->
+		<group name="ssq14_npc2517_01">
+			<npc id="31109" x="172672" y="-17600" z="-4897" heading="0" respawnTime="60sec" /> <!-- Gatekeeper Ziggurat -->
+		</group>
+		<group name="ssq14_npc2517_02">
+			<npc id="31101" x="171936" y="-17600" z="-4899" heading="32500" respawnTime="60sec" /> <!-- Gatekeeper Ziggurat -->
+		</group>
+	</spawn>
+</list>

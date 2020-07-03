@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../xsd/spawns.xsd">
+	<spawn name="CatacombOfTheBranded">
+		<!-- Monsters -->
+		
+		<!-- NPCs -->
+		<group name="ssq05_npc2123_01">
+			<npc id="31121" x="46576" y="170304" z="-4977" heading="0" respawnTime="60sec" /> <!-- Gatekeeper Ziggurat -->
+		</group>
+		<group name="ssq05_npc2123_02">
+			<npc id="31115" x="45808" y="170304" z="-4979" heading="32500" respawnTime="60sec" /> <!-- Gatekeeper Ziggurat -->
+		</group>
+	</spawn>
+</list>

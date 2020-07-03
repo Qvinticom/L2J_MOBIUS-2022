@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../xsd/spawns.xsd">
+	<spawn name="CatacombOfTheForbiddenPath">
+		<!-- Monsters -->
+		
+		<!-- NPCs -->
+		<group name="ssq12_npc2320_01">
+			<npc id="31125" x="12947" y="-248487" z="-9576" heading="0" respawnTime="60sec" /> <!-- Gatekeeper Ziggurat -->
+		</group>
+		<group name="ssq12_npc2320_02">
+			<npc id="31119" x="113552" y="84544" z="-6544" heading="32500" respawnTime="60sec" /> <!-- Gatekeeper Ziggurat -->
+		</group>
+	</spawn>
+</list>

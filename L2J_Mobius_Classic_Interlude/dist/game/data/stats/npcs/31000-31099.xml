@@ -2802,226 +2802,196 @@
 			<height normal="28" />
 		</collision>
 	</npc>
-	<npc id="31095" level="70" type="Npc" name="Gatekeeper Ziggurat">
-		<!-- Confirmed CT2.5 -->
+	<npc id="31095" level="70" type="Teleporter" name="Gatekeeper Ziggurat">
+		<!-- Interlude - C6 -->
 		<parameters>
+			<param name="MoveAroundSocial" value="0" />
+			<param name="MoveAroundSocial1" value="0" />
+			<param name="MoveAroundSocial2" value="0" />
 			<param name="Role" value="0" />
 			<param name="SignNumber" value="1" />
 			<param name="PosX" value="-41567" />
 			<param name="PosY" value="209828" />
-			<param name="PosZ" value="-5112" />
+			<param name="PosZ" value="-5062" />
 		</parameters>
 		<race>ETC</race>
 		<sex>ETC</sex>
-		<stats str="40" int="21" dex="30" wit="20" con="43" men="25">
-			<vitals hp="2444" hpRegen="7.5" mp="1345" mpRegen="2.7" />
-			<attack physical="688.86373" magical="470.40463" random="10" critical="4" accuracy="5" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
-			<defence physical="295.91597" magical="216.53847" />
-			<attribute>
-				<defence fire="150" water="150" wind="150" earth="150" holy="150" dark="150" default="150" />
-			</attribute>
+		<equipment rhand="0" lhand="0" /> <!-- ... / ... -->
+		<acquire exp="0" sp="0" raidPoints="0" />
+		<stats str="40" int="21" dex="30" wit="20" con="43" men="20">
+			<vitals hp="2444.46819" hpRegen="7.5" mp="1345.8" mpRegen="2.7" />
+			<attack physical="688.86373" magical="470.40463" random="30" critical="4" accuracy="5" attackSpeed="253" type="FIST" range="40" distance="80" width="120" />
+			<defence physical="295.91597" magical="216.53847" evasion="0" shield="0" shieldRate="0" />
 			<speed>
 				<walk ground="50" />
 				<run ground="120" />
 			</speed>
-			<abnormalResist physical="10" magical="10" />
+			<hitTime>600</hitTime>
 		</stats>
-		<status attackable="false" />
+		<status attackable="false" undying="true" canBeSown="true" />
 		<skillList>
 			<skill id="4045" level="1" /> <!-- Resist Full Magic Attack -->
-			<skill id="4390" level="1" /> <!-- NPC Abnormal Immunity -->
-			<skill id="4408" level="1" /> <!-- HP Increase (1x) -->
-			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
-			<skill id="4410" level="11" /> <!-- Average P. Atk. -->
-			<skill id="4411" level="11" /> <!-- Average M. Atk. -->
-			<skill id="4412" level="11" /> <!-- Average P. Def. -->
-			<skill id="4413" level="11" /> <!-- Average M. Def. -->
-			<skill id="4414" level="2" /> <!-- Standard Type -->
-			<skill id="4415" level="3" /> <!-- One-handed Sword -->
 			<skill id="4416" level="19" /> <!-- Others -->
 		</skillList>
+		<corpseTime>7</corpseTime>
 		<exCrtEffect>true</exCrtEffect>
-		<ai clanHelpRange="300" aggroRange="450" />
+		<ai aggroRange="450" clanHelpRange="300" isAggressive="false" />
 		<collision>
 			<radius normal="7" />
 			<height normal="15" />
 		</collision>
 	</npc>
-	<npc id="31096" level="70" type="Npc" name="Gatekeeper Ziggurat">
-		<!-- Confirmed CT2.5 -->
+	<npc id="31096" level="70" type="Teleporter" name="Gatekeeper Ziggurat">
+		<!-- Interlude - C6 -->
 		<parameters>
+			<param name="MoveAroundSocial" value="0" />
+			<param name="MoveAroundSocial1" value="0" />
+			<param name="MoveAroundSocial2" value="0" />
 			<param name="Role" value="0" />
 			<param name="SignNumber" value="1" />
 			<param name="PosX" value="45249" />
 			<param name="PosY" value="123848" />
-			<param name="PosZ" value="-5438" />
+			<param name="PosZ" value="-5390" />
 		</parameters>
 		<race>ETC</race>
 		<sex>ETC</sex>
-		<stats str="40" int="21" dex="30" wit="20" con="43" men="25">
-			<vitals hp="2444" hpRegen="7.5" mp="1345" mpRegen="2.7" />
-			<attack physical="688.86373" magical="470.40463" random="10" critical="4" accuracy="5" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
-			<defence physical="295.91597" magical="216.53847" />
-			<attribute>
-				<defence fire="150" water="150" wind="150" earth="150" holy="150" dark="150" default="150" />
-			</attribute>
+		<equipment rhand="0" lhand="0" /> <!-- ... / ... -->
+		<acquire exp="0" sp="0" raidPoints="0" />
+		<stats str="40" int="21" dex="30" wit="20" con="43" men="20">
+			<vitals hp="2444.46819" hpRegen="7.5" mp="1345.8" mpRegen="2.7" />
+			<attack physical="688.86373" magical="470.40463" random="30" critical="4" accuracy="5" attackSpeed="253" type="FIST" range="40" distance="80" width="120" />
+			<defence physical="295.91597" magical="216.53847" evasion="0" shield="0" shieldRate="0" />
 			<speed>
 				<walk ground="50" />
 				<run ground="120" />
 			</speed>
-			<abnormalResist physical="10" magical="10" />
+			<hitTime>600</hitTime>
 		</stats>
-		<status attackable="false" />
+		<status attackable="false" undying="true" canBeSown="true" />
 		<skillList>
 			<skill id="4045" level="1" /> <!-- Resist Full Magic Attack -->
-			<skill id="4390" level="1" /> <!-- NPC Abnormal Immunity -->
-			<skill id="4408" level="1" /> <!-- HP Increase (1x) -->
-			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
-			<skill id="4410" level="11" /> <!-- Average P. Atk. -->
-			<skill id="4411" level="11" /> <!-- Average M. Atk. -->
-			<skill id="4412" level="11" /> <!-- Average P. Def. -->
-			<skill id="4413" level="11" /> <!-- Average M. Def. -->
-			<skill id="4414" level="2" /> <!-- Standard Type -->
-			<skill id="4415" level="3" /> <!-- One-handed Sword -->
 			<skill id="4416" level="19" /> <!-- Others -->
 		</skillList>
+		<corpseTime>7</corpseTime>
 		<exCrtEffect>true</exCrtEffect>
-		<ai clanHelpRange="300" aggroRange="450" />
+		<ai aggroRange="450" clanHelpRange="300" isAggressive="false" />
 		<collision>
 			<radius normal="7" />
 			<height normal="15" />
 		</collision>
 	</npc>
-	<npc id="31097" level="70" type="Npc" name="Gatekeeper Ziggurat">
-		<!-- Confirmed CT2.5 -->
+	<npc id="31097" level="70" type="Teleporter" name="Gatekeeper Ziggurat">
+		<!-- Interlude - C6 -->
 		<parameters>
+			<param name="MoveAroundSocial" value="0" />
+			<param name="MoveAroundSocial1" value="0" />
+			<param name="MoveAroundSocial2" value="0" />
 			<param name="Role" value="0" />
 			<param name="SignNumber" value="1" />
 			<param name="PosX" value="111287" />
 			<param name="PosY" value="174018" />
-			<param name="PosZ" value="-5464" />
+			<param name="PosZ" value="-5414" />
 		</parameters>
 		<race>ETC</race>
 		<sex>ETC</sex>
-		<stats str="40" int="21" dex="30" wit="20" con="43" men="25">
-			<vitals hp="2444" hpRegen="7.5" mp="1345" mpRegen="2.7" />
-			<attack physical="688.86373" magical="470.40463" random="10" critical="4" accuracy="5" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
-			<defence physical="295.91597" magical="216.53847" />
-			<attribute>
-				<defence fire="150" water="150" wind="150" earth="150" holy="150" dark="150" default="150" />
-			</attribute>
+		<equipment rhand="0" lhand="0" /> <!-- ... / ... -->
+		<acquire exp="0" sp="0" raidPoints="0" />
+		<stats str="40" int="21" dex="30" wit="20" con="43" men="20">
+			<vitals hp="2444.46819" hpRegen="7.5" mp="1345.8" mpRegen="2.7" />
+			<attack physical="688.86373" magical="470.40463" random="30" critical="4" accuracy="5" attackSpeed="253" type="FIST" range="40" distance="80" width="120" />
+			<defence physical="295.91597" magical="216.53847" evasion="0" shield="0" shieldRate="0" />
 			<speed>
 				<walk ground="50" />
 				<run ground="120" />
 			</speed>
-			<abnormalResist physical="10" magical="10" />
+			<hitTime>600</hitTime>
 		</stats>
-		<status attackable="false" />
+		<status attackable="false" undying="true" canBeSown="true" />
 		<skillList>
 			<skill id="4045" level="1" /> <!-- Resist Full Magic Attack -->
-			<skill id="4390" level="1" /> <!-- NPC Abnormal Immunity -->
-			<skill id="4408" level="1" /> <!-- HP Increase (1x) -->
-			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
-			<skill id="4410" level="11" /> <!-- Average P. Atk. -->
-			<skill id="4411" level="11" /> <!-- Average M. Atk. -->
-			<skill id="4412" level="11" /> <!-- Average P. Def. -->
-			<skill id="4413" level="11" /> <!-- Average M. Def. -->
-			<skill id="4414" level="2" /> <!-- Standard Type -->
-			<skill id="4415" level="3" /> <!-- One-handed Sword -->
 			<skill id="4416" level="19" /> <!-- Others -->
 		</skillList>
+		<corpseTime>7</corpseTime>
 		<exCrtEffect>true</exCrtEffect>
-		<ai clanHelpRange="300" aggroRange="450" />
+		<ai aggroRange="450" clanHelpRange="300" isAggressive="false" />
 		<collision>
 			<radius normal="7" />
 			<height normal="15" />
 		</collision>
 	</npc>
-	<npc id="31098" level="70" type="Npc" name="Gatekeeper Ziggurat">
-		<!-- Confirmed CT2.5 -->
+	<npc id="31098" level="70" type="Teleporter" name="Gatekeeper Ziggurat">
+		<!-- Interlude - C6 -->
 		<parameters>
+			<param name="MoveAroundSocial" value="0" />
+			<param name="MoveAroundSocial1" value="0" />
+			<param name="MoveAroundSocial2" value="0" />
 			<param name="Role" value="0" />
 			<param name="SignNumber" value="1" />
 			<param name="PosX" value="-21666" />
 			<param name="PosY" value="77376" />
-			<param name="PosZ" value="-5198" />
+			<param name="PosZ" value="-5148" />
 		</parameters>
 		<race>ETC</race>
 		<sex>ETC</sex>
-		<stats str="40" int="21" dex="30" wit="20" con="43" men="25">
-			<vitals hp="2444" hpRegen="7.5" mp="1345" mpRegen="2.7" />
-			<attack physical="688.86373" magical="470.40463" random="10" critical="4" accuracy="5" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
-			<defence physical="295.91597" magical="216.53847" />
-			<attribute>
-				<defence fire="150" water="150" wind="150" earth="150" holy="150" dark="150" default="150" />
-			</attribute>
+		<equipment rhand="0" lhand="0" /> <!-- ... / ... -->
+		<acquire exp="0" sp="0" raidPoints="0" />
+		<stats str="40" int="21" dex="30" wit="20" con="43" men="20">
+			<vitals hp="2444.46819" hpRegen="7.5" mp="1345.8" mpRegen="2.7" />
+			<attack physical="688.86373" magical="470.40463" random="30" critical="4" accuracy="5" attackSpeed="253" type="FIST" range="40" distance="80" width="120" />
+			<defence physical="295.91597" magical="216.53847" evasion="0" shield="0" shieldRate="0" />
 			<speed>
 				<walk ground="50" />
 				<run ground="120" />
 			</speed>
-			<abnormalResist physical="10" magical="10" />
+			<hitTime>600</hitTime>
 		</stats>
-		<status attackable="false" />
+		<status attackable="false" undying="true" canBeSown="true" />
 		<skillList>
 			<skill id="4045" level="1" /> <!-- Resist Full Magic Attack -->
-			<skill id="4390" level="1" /> <!-- NPC Abnormal Immunity -->
-			<skill id="4408" level="1" /> <!-- HP Increase (1x) -->
-			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
-			<skill id="4410" level="11" /> <!-- Average P. Atk. -->
-			<skill id="4411" level="11" /> <!-- Average M. Atk. -->
-			<skill id="4412" level="11" /> <!-- Average P. Def. -->
-			<skill id="4413" level="11" /> <!-- Average M. Def. -->
-			<skill id="4414" level="2" /> <!-- Standard Type -->
-			<skill id="4415" level="3" /> <!-- One-handed Sword -->
 			<skill id="4416" level="19" /> <!-- Others -->
 		</skillList>
+		<corpseTime>7</corpseTime>
 		<exCrtEffect>true</exCrtEffect>
-		<ai clanHelpRange="300" aggroRange="450" />
+		<ai aggroRange="450" clanHelpRange="300" isAggressive="false" />
 		<collision>
 			<radius normal="7" />
 			<height normal="15" />
 		</collision>
 	</npc>
-	<npc id="31099" level="70" type="Npc" name="Gatekeeper Ziggurat">
-		<!-- Confirmed CT2.5 -->
+	<npc id="31099" level="70" type="Teleporter" name="Gatekeeper Ziggurat">
+		<!-- Interlude - C6 -->
 		<parameters>
+			<param name="MoveAroundSocial" value="0" />
+			<param name="MoveAroundSocial1" value="0" />
+			<param name="MoveAroundSocial2" value="0" />
 			<param name="Role" value="0" />
 			<param name="SignNumber" value="1" />
 			<param name="PosX" value="-52126" />
 			<param name="PosY" value="79113" />
-			<param name="PosZ" value="-4737" />
+			<param name="PosZ" value="-4687" />
 		</parameters>
 		<race>ETC</race>
 		<sex>ETC</sex>
-		<stats str="40" int="21" dex="30" wit="20" con="43" men="25">
-			<vitals hp="2444" hpRegen="7.5" mp="1345" mpRegen="2.7" />
-			<attack physical="688.86373" magical="470.40463" random="10" critical="4" accuracy="5" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
-			<defence physical="295.91597" magical="216.53847" />
-			<attribute>
-				<defence fire="150" water="150" wind="150" earth="150" holy="150" dark="150" default="150" />
-			</attribute>
+		<equipment rhand="0" lhand="0" /> <!-- ... / ... -->
+		<acquire exp="0" sp="0" raidPoints="0" />
+		<stats str="40" int="21" dex="30" wit="20" con="43" men="20">
+			<vitals hp="2444.46819" hpRegen="7.5" mp="1345.8" mpRegen="2.7" />
+			<attack physical="688.86373" magical="470.40463" random="30" critical="4" accuracy="5" attackSpeed="253" type="FIST" range="40" distance="80" width="120" />
+			<defence physical="295.91597" magical="216.53847" evasion="0" shield="0" shieldRate="0" />
 			<speed>
 				<walk ground="50" />
 				<run ground="120" />
 			</speed>
-			<abnormalResist physical="10" magical="10" />
+			<hitTime>600</hitTime>
 		</stats>
-		<status attackable="false" />
+		<status attackable="false" undying="true" canBeSown="true" />
 		<skillList>
 			<skill id="4045" level="1" /> <!-- Resist Full Magic Attack -->
-			<skill id="4390" level="1" /> <!-- NPC Abnormal Immunity -->
-			<skill id="4408" level="1" /> <!-- HP Increase (1x) -->
-			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
-			<skill id="4410" level="11" /> <!-- Average P. Atk. -->
-			<skill id="4411" level="11" /> <!-- Average M. Atk. -->
-			<skill id="4412" level="11" /> <!-- Average P. Def. -->
-			<skill id="4413" level="11" /> <!-- Average M. Def. -->
-			<skill id="4414" level="2" /> <!-- Standard Type -->
-			<skill id="4415" level="3" /> <!-- One-handed Sword -->
 			<skill id="4416" level="19" /> <!-- Others -->
 		</skillList>
+		<corpseTime>7</corpseTime>
 		<exCrtEffect>true</exCrtEffect>
-		<ai clanHelpRange="300" aggroRange="450" />
+		<ai aggroRange="450" clanHelpRange="300" isAggressive="false" />
 		<collision>
 			<radius normal="7" />
 			<height normal="15" />

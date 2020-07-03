@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../xsd/spawns.xsd">
+	<spawn name="NecropolisOfWorship">
+		<!-- Monsters -->
+		
+		<!-- NPCs -->
+		<group name="ssq09_npc2323_01">
+			<npc id="31105" x="111600" y="174016" z="-5440" heading="16500" respawnTime="60sec" /> <!-- Gatekeeper Ziggurat -->
+		</group>
+		<group name="ssq09_npc2323_02">
+			<npc id="31097" x="110848" y="174016" z="-5437" heading="32500" respawnTime="60sec" /> <!-- Gatekeeper Ziggurat -->
+		</group>
+	</spawn>
+</list>

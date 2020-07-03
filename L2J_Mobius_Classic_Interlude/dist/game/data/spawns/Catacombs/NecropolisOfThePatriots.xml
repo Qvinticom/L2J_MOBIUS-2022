@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../xsd/spawns.xsd">
+	<spawn name="NecropolisOfThePatriots">
+		<!-- Monsters -->
+		
+		<!-- NPCs -->
+		<group name="ssq03_npc1920_01">
+			<npc id="31106" x="-21392" y="77376" z="-5169" heading="16500" respawnTime="60sec" /> <!-- Gatekeeper Ziggurat -->
+		</group>
+		<group name="ssq03_npc1920_02">
+			<npc id="31098" x="-22224" y="77376" z="-5171" heading="32500" respawnTime="60sec" /> <!-- Gatekeeper Ziggurat -->
+		</group>
+	</spawn>
+</list>

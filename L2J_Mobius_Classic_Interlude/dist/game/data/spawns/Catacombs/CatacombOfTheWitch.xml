@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../xsd/spawns.xsd">
+	<spawn name="CatacombOfTheWitch">
+		<!-- Monsters -->
+		
+		<!-- NPCs -->
+		<group name="ssq13_npc2420_01">
+			<npc id="31123" x="140784" y="79680" z="-5425" heading="16500" respawnTime="60sec" /> <!-- Gatekeeper Ziggurat -->
+		</group>
+		<group name="ssq13_npc2420_02">
+			<npc id="31117" x="140032" y="79680" z="-5427" heading="32500" respawnTime="60sec" /> <!-- Gatekeeper Ziggurat -->
+		</group>
+	</spawn>
+</list>

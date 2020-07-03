@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../xsd/spawns.xsd">
+	<spawn name="CatacombOfTheHeretic">
+		<!-- Monsters -->
+		
+		<!-- NPCs -->
+		<group name="ssq06_npc2122_01">
+			<npc id="31120" x="-52850" y="-250269" z="-7904" heading="16500" respawnTime="60sec" /> <!-- Gatekeeper Ziggurat -->
+		</group>
+		<group name="ssq06_npc2122_02">
+			<npc id="31114" x="42608" y="143952" z="-5379" heading="32500" respawnTime="60sec" /> <!-- Gatekeeper Ziggurat -->
+		</group>
+	</spawn>
+</list>

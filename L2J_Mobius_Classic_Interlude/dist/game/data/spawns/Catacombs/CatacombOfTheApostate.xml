@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../xsd/spawns.xsd">
+	<spawn name="CatacombOfTheApostate">
+		<!-- Monsters -->
+		
+		<!-- NPCs -->
+		<group name="ssq11_npc2220_01">
+			<npc id="31122" x="-20230" y="-250788" z="-8161" heading="0" respawnTime="60sec" /> <!-- Gatekeeper Ziggurat -->
+		</group>
+		<group name="ssq11_npc2220_02">
+			<npc id="31116" x="77312" y="78400" z="-5123" heading="32500" respawnTime="60sec" /> <!-- Gatekeeper Ziggurat -->
+		</group>
+	</spawn>
+</list>

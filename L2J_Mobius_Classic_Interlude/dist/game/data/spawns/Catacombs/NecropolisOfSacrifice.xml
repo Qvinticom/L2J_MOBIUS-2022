@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../xsd/spawns.xsd">
+	<spawn name="NecropolisOfSacrifice">
+		<!-- Monsters -->
+		
+		<!-- NPCs -->
+		<group name="ssq01_npc1824_01">
+			<npc id="31103" x="-41568" y="210128" z="-5088" heading="16500" respawnTime="60sec" /> <!-- Gatekeeper Ziggurat -->
+		</group>
+		<group name="ssq01_npc1824_02">
+			<npc id="31095" x="-41568" y="209344" z="-5085" heading="49000" respawnTime="60sec" /> <!-- Gatekeeper Ziggurat -->
+		</group>
+	</spawn>
+</list>

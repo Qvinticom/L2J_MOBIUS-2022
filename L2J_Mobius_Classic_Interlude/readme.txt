@@ -1,7 +1,7 @@
 L2J-Mobius Classic Interlude
 
 Client: https://drive.google.com/uc?id=1_kioRKR5FTOmINAtUQe0KCxrvPzY18Nd&export=download
-Patch: https://www.mediafire.com/file/n6uewuxxs888ih1/L2J_Mobius_Classic_Interlude_Patch_v7.zip
+Patch: https://www.mediafire.com/file/3f0swkvz2sg16k2/L2J_Mobius_Classic_Interlude_Patch_v8.zip
 
 JDK: http://www.mediafire.com/file/xox35mknec8f1q0/bellsoft-jdk14%252B36-windows-amd64.msi
 Eclipse: https://www.mediafire.com/file/d7z5px9po76v1e9/eclipse-java-2020-03-R-Java14-win32-x86_64.zip
