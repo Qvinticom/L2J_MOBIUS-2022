@@ -25,7 +25,6 @@ import org.l2jmobius.gameserver.model.StatSet;
 import org.l2jmobius.gameserver.model.base.ClassId;
 import org.l2jmobius.gameserver.model.skills.Skill;
 import org.l2jmobius.gameserver.model.stats.BaseStat;
-import org.l2jmobius.gameserver.model.stats.Stat;
 
 /**
  * Class for the Henna object.
@@ -37,13 +36,13 @@ public class Henna
 	private final int _dyeItemId;
 	private final boolean _isPremium;
 	private final Map<BaseStat, Integer> _baseStats = new EnumMap<>(BaseStat.class);
-	private final int _wear_fee;
-	private final int _wear_count;
-	private final int _cancel_fee;
-	private final int _cancel_count;
+	private final int _wearFee;
+	private final int _wearCount;
+	private final int _cancelFee;
+	private final int _cancelCount;
 	private final int _duration;
 	private final List<Skill> _skills;
-	private final List<ClassId> _wear_class;
+	private final List<ClassId> _wearClass;
 	
 	public Henna(StatSet set)
 	{
@@ -58,13 +57,13 @@ public class Henna
 		_baseStats.put(BaseStat.WIT, set.getInt("wit", 0));
 		_baseStats.put(BaseStat.LUC, set.getInt("luc", 0));
 		_baseStats.put(BaseStat.CHA, set.getInt("cha", 0));
-		_wear_fee = set.getInt("wear_fee");
-		_wear_count = set.getInt("wear_count");
-		_cancel_fee = set.getInt("cancel_fee");
-		_cancel_count = set.getInt("cancel_count");
+		_wearFee = set.getInt("wear_fee");
+		_wearCount = set.getInt("wear_count");
+		_cancelFee = set.getInt("cancel_fee");
+		_cancelCount = set.getInt("cancel_count");
 		_duration = set.getInt("duration", -1);
 		_skills = new ArrayList<>();
-		_wear_class = new ArrayList<>();
+		_wearClass = new ArrayList<>();
 	}
 	
 	/**
@@ -91,7 +90,7 @@ public class Henna
 		return _isPremium;
 	}
 	
-	public int getBaseStats(Stat stat)
+	public int getBaseStats(BaseStat stat)
 	{
 		return _baseStats.getOrDefault(stat, 0);
 	}
@@ -106,7 +105,7 @@ public class Henna
 	 */
 	public int getWearFee()
 	{
-		return _wear_fee;
+		return _wearFee;
 	}
 	
 	/**
@@ -114,7 +113,7 @@ public class Henna
 	 */
 	public int getWearCount()
 	{
-		return _wear_count;
+		return _wearCount;
 	}
 	
 	/**
@@ -122,7 +121,7 @@ public class Henna
 	 */
 	public int getCancelFee()
 	{
-		return _cancel_fee;
+		return _cancelFee;
 	}
 	
 	/**
@@ -130,7 +129,7 @@ public class Henna
 	 */
 	public int getCancelCount()
 	{
-		return _cancel_count;
+		return _cancelCount;
 	}
 	
 	/**
@@ -162,16 +161,16 @@ public class Henna
 	 */
 	public List<ClassId> getAllowedWearClass()
 	{
-		return _wear_class;
+		return _wearClass;
 	}
 	
 	/**
-	 * @param c the class trying to wear this dye.
+	 * @param classId the class trying to wear this dye.
 	 * @return {@code true} if the player is allowed to wear this dye, {@code false} otherwise.
 	 */
-	public boolean isAllowedClass(ClassId c)
+	public boolean isAllowedClass(ClassId classId)
 	{
-		return _wear_class.contains(c);
+		return _wearClass.contains(classId);
 	}
 	
 	/**
@@ -179,6 +178,6 @@ public class Henna
 	 */
 	public void setWearClassIds(List<ClassId> wearClassIds)
 	{
-		_wear_class.addAll(wearClassIds);
+		_wearClass.addAll(wearClassIds);
 	}
 }

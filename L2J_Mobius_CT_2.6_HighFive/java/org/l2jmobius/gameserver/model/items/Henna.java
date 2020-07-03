@@ -36,11 +36,11 @@ public class Henna
 	private final int _int;
 	private final int _men;
 	private final int _wit;
-	private final int _wear_fee;
-	private final int _wear_count;
-	private final int _cancel_fee;
-	private final int _cancel_count;
-	private final List<ClassId> _wear_class;
+	private final int _wearFee;
+	private final int _wearCount;
+	private final int _cancelFee;
+	private final int _cancelCount;
+	private final List<ClassId> _wearClass;
 	
 	public Henna(StatSet set)
 	{
@@ -52,11 +52,11 @@ public class Henna
 		_int = set.getInt("int", 0);
 		_men = set.getInt("men", 0);
 		_wit = set.getInt("wit", 0);
-		_wear_fee = set.getInt("wear_fee");
-		_wear_count = set.getInt("wear_count");
-		_cancel_fee = set.getInt("cancel_fee");
-		_cancel_count = set.getInt("cancel_count");
-		_wear_class = new ArrayList<>();
+		_wearFee = set.getInt("wear_fee");
+		_wearCount = set.getInt("wear_count");
+		_cancelFee = set.getInt("cancel_fee");
+		_cancelCount = set.getInt("cancel_count");
+		_wearClass = new ArrayList<>();
 	}
 	
 	/**
@@ -128,7 +128,7 @@ public class Henna
 	 */
 	public int getWearFee()
 	{
-		return _wear_fee;
+		return _wearFee;
 	}
 	
 	/**
@@ -136,7 +136,7 @@ public class Henna
 	 */
 	public int getWearCount()
 	{
-		return _wear_count;
+		return _wearCount;
 	}
 	
 	/**
@@ -144,7 +144,7 @@ public class Henna
 	 */
 	public int getCancelFee()
 	{
-		return _cancel_fee;
+		return _cancelFee;
 	}
 	
 	/**
@@ -152,7 +152,7 @@ public class Henna
 	 */
 	public int getCancelCount()
 	{
-		return _cancel_count;
+		return _cancelCount;
 	}
 	
 	/**
@@ -160,16 +160,16 @@ public class Henna
 	 */
 	public List<ClassId> getAllowedWearClass()
 	{
-		return _wear_class;
+		return _wearClass;
 	}
 	
 	/**
-	 * @param c the class trying to wear this dye.
+	 * @param classId the class trying to wear this dye.
 	 * @return {@code true} if the player is allowed to wear this dye, {@code false} otherwise.
 	 */
-	public boolean isAllowedClass(ClassId c)
+	public boolean isAllowedClass(ClassId classId)
 	{
-		return _wear_class.contains(c);
+		return _wearClass.contains(classId);
 	}
 	
 	/**
@@ -177,6 +177,6 @@ public class Henna
 	 */
 	public void setWearClassIds(List<ClassId> wearClassIds)
 	{
-		_wear_class.addAll(wearClassIds);
+		_wearClass.addAll(wearClassIds);
 	}
 }
