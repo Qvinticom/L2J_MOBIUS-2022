@@ -57,7 +57,7 @@ public class WarehouseCacheManager
 			final long cTime = System.currentTimeMillis();
 			for (Entry<PlayerInstance, Long> entry : _cachedWh.entrySet())
 			{
-				if ((cTime - entry.getValue()) > _cacheTime)
+				if ((cTime - entry.getValue().longValue()) > _cacheTime)
 				{
 					final PlayerInstance player = entry.getKey();
 					player.clearWarehouse();
