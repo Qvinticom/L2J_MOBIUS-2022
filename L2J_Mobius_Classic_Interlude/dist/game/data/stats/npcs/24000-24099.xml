@@ -727,18 +727,18 @@
 			<param name="SpiritShot" value="100" />
 			<param name="SpiritShotRate" value="5" />
 			<param name="LongRangeGuardRate" value="5" />
-			<skill name="DeBuff" id="4035" level="3" />
+			<skill name="DeBuff" id="4035" level="6" />
 		</parameters>
 		<race>UNDEAD</race>
 		<sex>MALE</sex>
-		<acquire exp="77020" sp="2310" />
+		<acquire exp="77020" sp="2311" />
 		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
-			<vitals hp="16297" hpRegen="7.5" mp="2018" mpRegen="2.7" />
-			<attack physical="11407.9" magical="1816.2" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
-			<defence physical="4889.1" magical="1009" />
+			<vitals hp="5157.70" hpRegen="7.5" mp="2200.995" mpRegen="2.7" />
+			<attack physical="170.9" magical="120.2" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="450.1" magical="350" />
 			<speed>
-				<walk ground="60" /> <!-- Need retail value -->
-				<run ground="120" /> <!-- Need retail value -->
+				<walk ground="10" />
+				<run ground="180" />
 			</speed>
 			<hitTime>540</hitTime>
 			<abnormalResist physical="10" magical="10" />
@@ -759,18 +759,18 @@
 			</clanList>
 		</ai>
 		<collision>
-			<radius normal="16" /> <!-- Need retail value -->
-			<height normal="13.25" /> <!-- Need retail value -->
+			<radius normal="15.6" />
+			<height normal="28.2" />
 		</collision>
 		<dropLists>
 			<drop>
 				<item id="91" min="1" max="1" chance="0.003" /> <!-- Heavy War Axe -->
 				<item id="92" min="1" max="1" chance="0.003" /> <!-- Spirit's Staff -->
 				<item id="57" min="1096" max="2558" chance="70" /> <!-- Adena -->
-				<item id="1865" min="1" max="3" chance="15.29" /> <!-- Varnish -->
-				<item id="1895" min="1" max="1" chance="13.67" /> <!-- Metallic Fiber -->
-				<item id="1864" min="4" max="12" chance="11.95" /> <!-- Stem -->
-				<item id="1878" min="2" max="6" chance="3.864" /> <!-- Durable Braid -->
+				<item id="1865" min="1" max="3" chance="15.51" /> <!-- Varnish -->
+				<item id="1895" min="1" max="1" chance="14.25" /> <!-- Metallic Fiber -->
+				<item id="1864" min="4" max="12" chance="11.93" /> <!-- Stem -->
+				<item id="1878" min="2" max="6" chance="3.857" /> <!-- Durable Braid -->
 				<item id="4105" min="1" max="1" chance="0.75" /> <!-- Heavy War Axe Head -->
 				<item id="4106" min="1" max="1" chance="0.75" /> <!-- Spirit's Staff Head -->
 			</drop>
@@ -788,15 +788,15 @@
 			<param name="MoveAroundSocial2" value="0" />
 		</parameters>
 		<race>UNDEAD</race>
-		<acquire exp="79766" sp="2392" />
+		<acquire exp="79766" sp="2393" />
 		<stats str="40" int="21" dex="30" wit="20" con="43" men="25">
-			<vitals hp="16616" hpRegen="8.5" mp="2066" mpRegen="3" />
+			<vitals hp="1664.85" hpRegen="8.5" mp="2253.21" mpRegen="3" />
 			<speed>
-				<walk ground="60" /> <!-- Need retail value -->
-				<run ground="120" /> <!-- Need retail value -->
+				<walk ground="60" />
+				<run ground="180" />
 			</speed>
-			<attack physical="11631.2" magical="1859.4" critical="4" attackSpeed="253" range="40" />
-			<defence physical="4984.8" magical="1033" />
+			<attack physical="180.9" magical="130.2" random="30" critical="4" attackSpeed="253" range="40" />
+			<defence physical="410.1" magical="210" />
 			<hitTime>840</hitTime>
 		</stats>
 		<status attackable="true" />
@@ -808,8 +808,8 @@
 			<skill id="4412" level="9" /> <!-- Slightly Weak P. Def. -->
 		</skillList>
 		<collision>
-			<radius normal="16" /> <!-- Need retail value -->
-			<height normal="13.25" /> <!-- Need retail value -->
+			<radius normal="17" />
+			<height normal="26.8" />
 		</collision>
 		<dropLists>
 			<drop>
@@ -839,13 +839,13 @@
 		<race>UNDEAD</race>
 		<acquire exp="86040" sp="2581" />
 		<stats str="40" int="21" dex="30" wit="20" con="43" men="25">
-			<vitals hp="2085.26046" hpRegen="8.5" mp="1871.775" mpRegen="3" />
+			<vitals hp="1696.55" hpRegen="8.5" mp="2306.31" mpRegen="3" />
 			<speed>
-				<walk ground="60" /> <!-- Need retail value -->
-				<run ground="120" /> <!-- Need retail value -->
+				<walk ground="30" />
+				<run ground="180" />
 			</speed>
-			<attack physical="11852.4" magical="1903.5" critical="4" attackSpeed="253" range="40" />
-			<defence physical="5079.6" magical="1057.5" />
+			<attack physical="190.9" magical="14.2" random="30" critical="5" attackSpeed="253" range="40" />
+			<defence physical="410.1" magical="210" />
 			<hitTime>840</hitTime>
 		</stats>
 		<status attackable="true" />
@@ -854,8 +854,8 @@
 			<skill id="4408" level="10" /> <!-- HP Increase (2x) -->
 		</skillList>
 		<collision>
-			<radius normal="16" /> <!-- Need retail value -->
-			<height normal="13.25" /> <!-- Need retail value -->
+			<radius normal="10.4" />
+			<height normal="23.4" />
 		</collision>
 		<dropLists>
 			<drop>
@@ -886,14 +886,15 @@
 		</parameters>
 		<race>UNDEAD</race>
 		<acquire exp="89303" sp="2679" />
+		<equipment rhand="234" />
 		<stats str="40" int="21" dex="30" wit="20" con="43" men="25">
-			<vitals hp="17245" hpRegen="8.5" mp="2163" mpRegen="3" />
+			<vitals hp="1727.89" hpRegen="8.5" mp="2358.525" mpRegen="3" />
 			<speed>
-				<walk ground="60" /> <!-- Need retail value -->
-				<run ground="120" /> <!-- Need retail value -->
+				<walk ground="40" />
+				<run ground="180" />
 			</speed>
-			<attack physical="12071.5" magical="1946.7" critical="4" attackSpeed="253" range="40" />
-			<defence physical="5173.5" magical="1081.5" />
+			<attack physical="210.9" magical="130.2" random="30" critical="4" attackSpeed="253" range="40" />
+			<defence physical="430.1" magical="220" />
 			<hitTime>840</hitTime>
 		</stats>
 		<status attackable="true" />
@@ -903,8 +904,8 @@
 			<skill id="4410" level="12" /> <!-- Slightly Strong P. Atk. -->
 		</skillList>
 		<collision>
-			<radius normal="16" /> <!-- Need retail value -->
-			<height normal="13.25" /> <!-- Need retail value -->
+			<radius normal="13" />
+			<height normal="33.4" />
 		</collision>
 		<dropLists>
 			<drop>
@@ -933,14 +934,15 @@
 		</parameters>
 		<race>DEMONIC</race>
 		<acquire exp="90904" sp="2727" />
+		<equipment rhand="78" />
 		<stats str="40" int="21" dex="30" wit="20" con="43" men="25">
-			<vitals hp="2161.12394" hpRegen="8.5" mp="1957.62" mpRegen="3" />
+			<vitals hp="1758.28" hpRegen="8.5" mp="2412.51" mpRegen="3" />
 			<speed>
-				<walk ground="60" /> <!-- Need retail value -->
-				<run ground="120" /> <!-- Need retail value -->
+				<walk ground="60" />
+				<run ground="180" />
 			</speed>
-			<attack physical="12283.6" magical="1990.8" critical="4" attackSpeed="253" range="40" />
-			<defence physical="5264.4" magical="1106" />
+			<attack physical="235.9" magical="130.2" random="30" critical="4" attackSpeed="253" range="40" />
+			<defence physical="445.1" magical="235" />
 			<hitTime>840</hitTime>
 		</stats>
 		<status attackable="true" />
@@ -951,8 +953,8 @@
 			<skill id="4412" level="10" /> <!-- Slightly Weak P. Def. -->
 		</skillList>
 		<collision>
-			<radius normal="16" /> <!-- Need retail value -->
-			<height normal="13.25" /> <!-- Need retail value -->
+			<radius normal="12" />
+			<height normal="33.5" />
 		</collision>
 		<dropLists>
 			<drop>
@@ -983,13 +985,13 @@
 		<race>UNDEAD</race>
 		<acquire exp="129198" sp="3875" />
 		<stats str="40" int="21" dex="30" wit="20" con="43" men="25">
-			<vitals hp="26323" hpRegen="8.5" mp="2212" mpRegen="3" />
+			<vitals hp="1758.29" hpRegen="8.5" mp="2412.51" mpRegen="3" />
 			<speed>
-				<walk ground="60" /> <!-- Need retail value -->
-				<run ground="120" /> <!-- Need retail value -->
+				<walk ground="45" />
+				<run ground="180" />
 			</speed>
-			<attack physical="18426.1" magical="1990.8" critical="4" attackSpeed="253" range="40" />
-			<defence physical="7896.9" magical="1106" />
+			<attack physical="235.9" magical="130.2" random="30" critical="4" attackSpeed="253" range="40" />
+			<defence physical="445.1" magical="235" />
 			<hitTime>840</hitTime>
 		</stats>
 		<status attackable="true" />
@@ -1000,8 +1002,8 @@
 			<skill id="4413" level="9" /> <!-- Slightly Weak M. Def. -->
 		</skillList>
 		<collision>
-			<radius normal="16" /> <!-- Need retail value -->
-			<height normal="13.25" /> <!-- Need retail value -->
+			<radius normal="16.5" />
+			<height normal="29.45" />
 		</collision>
 		<dropLists>
 			<drop>
@@ -1032,13 +1034,13 @@
 		<race>DEMONIC</race>
 		<acquire exp="94263" sp="2827" />
 		<stats str="40" int="21" dex="30" wit="20" con="43" men="25">
-			<vitals hp="2197.33151" hpRegen="8.5" mp="2000.985" mpRegen="3" />
+			<vitals hp="1787.69" hpRegen="8.5" mp="2465.61" mpRegen="3" />
 			<speed>
-				<walk ground="60" /> <!-- Need retail value -->
-				<run ground="120" /> <!-- Need retail value -->
+				<walk ground="70" />
+				<run ground="180" />
 			</speed>
-			<attack physical="12489.4" magical="2034.9" critical="4" attackSpeed="253" range="40" />
-			<defence physical="5352.6" magical="1130.5" />
+			<attack physical="255.9" magical="140.2" random="30" critical="4" attackSpeed="253" range="40" />
+			<defence physical="455.1" magical="245" />
 			<hitTime>840</hitTime>
 		</stats>
 		<status attackable="true" />
@@ -1048,8 +1050,8 @@
 			<skill id="4410" level="12" /> <!-- Slightly Strong P. Atk. -->
 		</skillList>
 		<collision>
-			<radius normal="16" /> <!-- Need retail value -->
-			<height normal="13.25" /> <!-- Need retail value -->
+			<radius normal="13.2" />
+			<height normal="44.3" />
 		</collision>
 		<dropLists>
 			<drop>
@@ -1081,13 +1083,13 @@
 		<race>UNDEAD</race>
 		<acquire exp="77020" sp="2310" />
 		<stats str="40" int="21" dex="30" wit="20" con="43" men="25">
-			<vitals hp="16297" hpRegen="7.5" mp="2018" mpRegen="2.7" />
+			<vitals hp="1632.88" hpRegen="7.5" mp="2200.995" mpRegen="2.7" />
 			<speed>
-				<walk ground="60" /> <!-- Need retail value -->
-				<run ground="120" /> <!-- Need retail value -->
+				<walk ground="68" />
+				<run ground="180" />
 			</speed>
-			<attack physical="11407.9" magical="1816.2" critical="4" attackSpeed="253" range="40" />
-			<defence physical="4889.1" magical="1009" />
+			<attack physical="170.9" magical="120.2" random="30" critical="4" attackSpeed="253" range="40" />
+			<defence physical="400.1" magical="200" />
 			<hitTime>840</hitTime>
 		</stats>
 		<status attackable="true" />
@@ -1099,8 +1101,8 @@
 			<skill id="4413" level="10" /> <!-- Slightly Weak M. Def. -->
 		</skillList>
 		<collision>
-			<radius normal="16" /> <!-- Need retail value -->
-			<height normal="13.25" /> <!-- Need retail value -->
+			<radius normal="20" />
+			<height normal="34" />
 		</collision>
 		<dropLists>
 			<drop>
@@ -1132,13 +1134,13 @@
 		<race>DEMONIC</race>
 		<acquire exp="79766" sp="2392" />
 		<stats str="40" int="21" dex="30" wit="20" con="43" men="25">
-			<vitals hp="16616" hpRegen="8.5" mp="2066" mpRegen="3" />
+			<vitals hp="1664.85" hpRegen="8.5" mp="2253.21" mpRegen="3" />
 			<speed>
-				<walk ground="60" /> <!-- Need retail value -->
-				<run ground="120" /> <!-- Need retail value -->
+				<walk ground="37" />
+				<run ground="180" />
 			</speed>
-			<attack physical="11631.2" magical="1859.4" critical="4" attackSpeed="253" range="40" />
-			<defence physical="4984.8" magical="1033" />
+			<attack physical="180.9" magical="130.2" random="30" critical="4" attackSpeed="253" range="40" />
+			<defence physical="410.1" magical="210" />
 			<hitTime>840</hitTime>
 		</stats>
 		<status attackable="true" />
@@ -1150,8 +1152,8 @@
 			<skill id="4412" level="9" /> <!-- Slightly Weak P. Def. -->
 		</skillList>
 		<collision>
-			<radius normal="16" /> <!-- Need retail value -->
-			<height normal="13.25" /> <!-- Need retail value -->
+			<radius normal="24" />
+			<height normal="40" />
 		</collision>
 		<dropLists>
 			<drop>
@@ -1178,14 +1180,15 @@
 		</parameters>
 		<race>DEMONIC</race>
 		<acquire exp="86040" sp="2581" />
+		<equipment rhand="5129" lhand="5129" />
 		<stats str="40" int="21" dex="30" wit="20" con="43" men="25">
-			<vitals hp="16932" hpRegen="8.5" mp="2115" mpRegen="3" />
+			<vitals hp="1696.55" hpRegen="8.5" mp="2306.31" mpRegen="3" />
 			<speed>
-				<walk ground="60" /> <!-- Need retail value -->
-				<run ground="120" /> <!-- Need retail value -->
+				<walk ground="22" />
+				<run ground="180" />
 			</speed>
-			<attack physical="11852.4" magical="1903.5" critical="4" attackSpeed="253" range="40" />
-			<defence physical="5079.6" magical="1057.5" />
+			<attack physical="190.9" magical="14.2" random="30" critical="5" attackSpeed="253" range="40" />
+			<defence physical="410.1" magical="210" />
 			<hitTime>840</hitTime>
 		</stats>
 		<status attackable="true" />
@@ -1194,8 +1197,8 @@
 			<skill id="4408" level="10" /> <!-- HP Increase (2x) -->
 		</skillList>
 		<collision>
-			<radius normal="16" /> <!-- Need retail value -->
-			<height normal="13.25" /> <!-- Need retail value -->
+			<radius normal="10.2" />
+			<height normal="22.5" />
 		</collision>
 		<dropLists>
 			<drop>
@@ -1224,14 +1227,15 @@
 		</parameters>
 		<race>UNDEAD</race>
 		<acquire exp="89303" sp="2679" />
+		<equipment rhand="84" />
 		<stats str="40" int="21" dex="30" wit="20" con="43" men="25">
-			<vitals hp="17245" hpRegen="8.5" mp="2163" mpRegen="3" />
+			<vitals hp="1727.89" hpRegen="8.5" mp="2358.525" mpRegen="3" />
 			<speed>
-				<walk ground="60" /> <!-- Need retail value -->
-				<run ground="120" /> <!-- Need retail value -->
+				<walk ground="40" />
+				<run ground="180" />
 			</speed>
-			<attack physical="12071.5" magical="1946.7" critical="4" attackSpeed="253" range="40" />
-			<defence physical="5173.5" magical="1081.5" />
+			<attack physical="210.9" magical="130.2" random="30" critical="4" attackSpeed="253" range="40" />
+			<defence physical="430.1" magical="220" />
 			<hitTime>840</hitTime>
 		</stats>
 		<status attackable="true" />
@@ -1241,8 +1245,8 @@
 			<skill id="4410" level="12" /> <!-- Slightly Strong P. Atk. -->
 		</skillList>
 		<collision>
-			<radius normal="16" /> <!-- Need retail value -->
-			<height normal="13.25" /> <!-- Need retail value -->
+			<radius normal="13" />
+			<height normal="33.4" />
 		</collision>
 		<dropLists>
 			<drop>
@@ -1270,13 +1274,13 @@
 		<race>DEMONIC</race>
 		<acquire exp="90904" sp="2727" />
 		<stats str="40" int="21" dex="30" wit="20" con="43" men="25">
-			<vitals hp="17548" hpRegen="8.5" mp="2212" mpRegen="3" />
+			<vitals hp="1758.28" hpRegen="8.5" mp="2412.51" mpRegen="3" />
 			<speed>
-				<walk ground="60" /> <!-- Need retail value -->
-				<run ground="120" /> <!-- Need retail value -->
+				<walk ground="70" />
+				<run ground="180" />
 			</speed>
-			<attack physical="12283.6" magical="1990.8" critical="4" attackSpeed="253" range="40" />
-			<defence physical="5264.4" magical="1106" />
+			<attack physical="235.9" magical="130.2" random="30" critical="4" attackSpeed="253" range="40" />
+			<defence physical="445.1" magical="235" />
 			<hitTime>840</hitTime>
 		</stats>
 		<status attackable="true" />
@@ -1287,8 +1291,8 @@
 			<skill id="4412" level="10" /> <!-- Slightly Weak P. Def. -->
 		</skillList>
 		<collision>
-			<radius normal="16" /> <!-- Need retail value -->
-			<height normal="13.25" /> <!-- Need retail value -->
+			<radius normal="13.2" />
+			<height normal="44.3" />
 		</collision>
 		<dropLists>
 			<drop>
@@ -1314,13 +1318,13 @@
 		<race>DEMONIC</race>
 		<acquire exp="129198" sp="3875" />
 		<stats str="40" int="21" dex="30" wit="20" con="43" men="25">
-			<vitals hp="2161.2060433333" hpRegen="8.5" mp="1957.62" mpRegen="3" />
+			<vitals hp="1758.29" hpRegen="8.5" mp="2412.51" mpRegen="3" />
 			<speed>
-				<walk ground="60" /> <!-- Need retail value -->
-				<run ground="120" /> <!-- Need retail value -->
+				<walk ground="70" />
+				<run ground="180" />
 			</speed>
-			<attack physical="18426.1" magical="1990.8" critical="4" attackSpeed="253" range="40" />
-			<defence physical="7896.9" magical="1106" />
+			<attack physical="235.9" magical="130.2" random="30" critical="4" attackSpeed="253" range="40" />
+			<defence physical="445.1" magical="235" />
 			<hitTime>840</hitTime>
 		</stats>
 		<status attackable="true" />
@@ -1331,8 +1335,8 @@
 			<skill id="4413" level="9" /> <!-- Slightly Weak M. Def. -->
 		</skillList>
 		<collision>
-			<radius normal="16" /> <!-- Need retail value -->
-			<height normal="13.25" /> <!-- Need retail value -->
+			<radius normal="17" />
+			<height normal="55" />
 		</collision>
 		<dropLists>
 			<drop>
@@ -1358,13 +1362,13 @@
 		<race>BUG</race>
 		<acquire exp="94263" sp="2827" />
 		<stats str="40" int="21" dex="30" wit="20" con="43" men="25">
-			<vitals hp="17842" hpRegen="8.5" mp="2261" mpRegen="3" />
+			<vitals hp="1787.69" hpRegen="8.5" mp="2465.61" mpRegen="3" />
 			<speed>
-				<walk ground="60" /> <!-- Need retail value -->
-				<run ground="120" /> <!-- Need retail value -->
+				<walk ground="37" />
+				<run ground="180" />
 			</speed>
-			<attack physical="12489.4" magical="2034.9" critical="4" attackSpeed="253" range="40" />
-			<defence physical="5352.6" magical="1130.5" />
+			<attack physical="255.9" magical="140.2" random="30" critical="4" attackSpeed="253" range="40" />
+			<defence physical="455.1" magical="245" />
 			<hitTime>840</hitTime>
 		</stats>
 		<status attackable="true" />
@@ -1374,8 +1378,8 @@
 			<skill id="4410" level="12" /> <!-- Slightly Strong P. Atk. -->
 		</skillList>
 		<collision>
-			<radius normal="16" /> <!-- Need retail value -->
-			<height normal="13.25" /> <!-- Need retail value -->
+			<radius normal="22.4" />
+			<height normal="52.2" />
 		</collision>
 		<dropLists>
 			<drop>
@@ -1402,13 +1406,13 @@
 		<race>UNDEAD</race>
 		<acquire exp="181912" sp="5457" />
 		<stats str="40" int="21" dex="30" wit="20" con="43" men="25">
-			<vitals hp="26763" hpRegen="8.5" mp="2261" mpRegen="3" />
+			<vitals hp="1787.75" hpRegen="8.5" mp="2465.61" mpRegen="3" />
 			<speed>
-				<walk ground="60" /> <!-- Need retail value -->
-				<run ground="120" /> <!-- Need retail value -->
+				<walk ground="100" />
+				<run ground="180" />
 			</speed>
-			<attack physical="18734.1" magical="2034.9" critical="4" attackSpeed="253" range="40" />
-			<defence physical="8028.9" magical="1130.5" />
+			<attack physical="290.9" magical="160.2" random="30" critical="4" attackSpeed="253" range="40" />
+			<defence physical="485.1" magical="275" />
 			<hitTime>840</hitTime>
 		</stats>
 		<status attackable="true" />
@@ -1418,13 +1422,15 @@
 			<skill id="4410" level="12" /> <!-- Slightly Strong P. Atk. -->
 		</skillList>
 		<collision>
-			<radius normal="16" /> <!-- Need retail value -->
-			<height normal="13.25" /> <!-- Need retail value -->
+			<radius normal="20" />
+			<height normal="35" />
 		</collision>
 		<dropLists>
 			<drop>
 				<item id="57" min="7895" max="18441" chance="70" /> <!-- Adena -->
 				<item id="2133" min="1" max="1" chance="4.633" /> <!-- Gemstone (A-grade) -->
+				<item id="90012" min="1" max="1" chance="2.481" /> <!-- Common Life Stone -->
+				<item id="90013" min="1" max="1" chance="0.75" /> <!-- Mid-grade Life Stone -->
 			</drop>
 			<spoil>
 				<item id="1887" min="1" max="3" chance="69.24" /> <!-- Varnish of Purity -->
@@ -1441,13 +1447,13 @@
 		<race>DEMONIC</race>
 		<acquire exp="185062" sp="5551" />
 		<stats str="40" int="21" dex="30" wit="20" con="43" men="25">
-			<vitals hp="26763" hpRegen="8.5" mp="2261" mpRegen="3" />
+			<vitals hp="1787.75" hpRegen="8.5" mp="2465.61" mpRegen="3" />
 			<speed>
-				<walk ground="60" /> <!-- Need retail value -->
-				<run ground="120" /> <!-- Need retail value -->
+				<walk ground="30" />
+				<run ground="180" />
 			</speed>
-			<attack physical="18734.1" magical="2034.9" critical="4" attackSpeed="253" range="40" />
-			<defence physical="8028.9" magical="1130.5" />
+			<attack physical="300.9" magical="180.2" random="30" critical="4" attackSpeed="253" range="40" />
+			<defence physical="495.1" magical="285" />
 			<hitTime>840</hitTime>
 		</stats>
 		<status attackable="true" />
@@ -1460,13 +1466,14 @@
 			<skill id="4085" level="1" /> <!-- Critical Damage -->
 		</skillList>
 		<collision>
-			<radius normal="16" /> <!-- Need retail value -->
-			<height normal="13.25" /> <!-- Need retail value -->
+			<radius normal="23" />
+			<height normal="40" />
 		</collision>
 		<dropLists>
 			<drop>
 				<item id="57" min="20427" max="47712" chance="70" /> <!-- Adena -->
 				<item id="2133" min="1" max="1" chance="11.81" /> <!-- Gemstone (A-grade) -->
+				<item id="90045" min="1" max="1" chance="8.292" /> <!-- Magical Tablet -->
 			</drop>
 			<spoil>
 				<item id="1887" min="1" max="7" chance="90.325" /> <!-- Varnish of Purity -->
@@ -1483,13 +1490,13 @@
 		<race>BEAST</race>
 		<acquire exp="0" sp="0" />
 		<stats str="40" int="21" dex="30" wit="20" con="43" men="25">
-			<vitals hp="6232" hpRegen="8.5" mp="2066" mpRegen="3" />
+			<vitals hp="1227.85535" hpRegen="8.5" mp="2253.21" mpRegen="3" />
 			<speed>
-				<walk ground="60" /> <!-- Need retail value -->
-				<run ground="120" /> <!-- Need retail value -->
+				<walk ground="25" />
+				<run ground="180" />
 			</speed>
-			<attack physical="4362.4" magical="1859.4" critical="4" attackSpeed="253" range="40" />
-			<defence physical="1869.6" magical="1033" />
+			<attack physical="872.4" magical="370.45" critical="4" attackSpeed="253" range="40" />
+			<defence physical="934.6" magical="516.5" />
 			<hitTime>840</hitTime>
 		</stats>
 		<status attackable="true" />
@@ -1497,8 +1504,8 @@
 			<skill id="4416" level="3" /> <!-- Beasts -->
 		</skillList>
 		<collision>
-			<radius normal="16" /> <!-- Need retail value -->
-			<height normal="13.25" /> <!-- Need retail value -->
+			<radius normal="30" />
+			<height normal="35" />
 		</collision>
 	</npc>
 	<npc id="24042" level="71" type="Monster" name="Clumsy Wimp">
@@ -1510,13 +1517,13 @@
 		<race>UNDEAD</race>
 		<acquire exp="0" sp="0" />
 		<stats str="40" int="21" dex="30" wit="20" con="43" men="25">
-			<vitals hp="6232" hpRegen="8.5" mp="2066" mpRegen="3" />
+			<vitals hp="1227.85535" hpRegen="8.5" mp="2253.21" mpRegen="3" />
 			<speed>
-				<walk ground="60" /> <!-- Need retail value -->
-				<run ground="120" /> <!-- Need retail value -->
+				<walk ground="60" />
+				<run ground="180" />
 			</speed>
-			<attack physical="4362.4" magical="1859.4" critical="4" attackSpeed="253" range="40" />
-			<defence physical="1869.6" magical="1033" />
+			<attack physical="872.4" magical="370.45" critical="4" attackSpeed="253" range="40" />
+			<defence physical="934.6" magical="516.5" />
 			<hitTime>840</hitTime>
 		</stats>
 		<status attackable="true" />
@@ -1524,8 +1531,8 @@
 			<skill id="4416" level="1" /> <!-- Undead -->
 		</skillList>
 		<collision>
-			<radius normal="16" /> <!-- Need retail value -->
-			<height normal="13.25" /> <!-- Need retail value -->
+			<radius normal="30" />
+			<height normal="39" />
 		</collision>
 	</npc>
 	<npc id="24043" level="101" type="Monster" name="Castle Archer">
@@ -1565,13 +1572,13 @@
 		<race>ETC</race> <!-- TODO: Magic Creatures -->
 		<acquire exp="0" sp="0" />
 		<stats str="40" int="21" dex="30" wit="20" con="43" men="25">
-			<vitals hp="32899" hpRegen="8.5" mp="2212" mpRegen="3" />
+			<vitals hp="1620.4119125" hpRegen="8.5" mp="2412.51" mpRegen="3" />
 			<speed>
-				<walk ground="60" /> <!-- Need retail value -->
-				<run ground="120" /> <!-- Need retail value -->
+				<walk ground="30" />
+				<run ground="180" />
 			</speed>
-			<attack physical="23029.3" magical="1990.8" critical="4" attackSpeed="253" range="40" />
-			<defence physical="9869.7" magical="1106" />
+			<attack physical="773.81598" magical="528.41601" random="30" critical="4.75" accuracy="4.75" attackSpeed="250" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="314.65987" magical="230.25444" />
 			<hitTime>840</hitTime>
 		</stats>
 		<status attackable="true" />
@@ -1580,8 +1587,8 @@
 			<skill id="4408" level="13" /> <!-- HP Increase (5x) -->
 		</skillList>
 		<collision>
-			<radius normal="16" /> <!-- Need retail value -->
-			<height normal="13.25" /> <!-- Need retail value -->
+			<radius normal="11" />
+			<height normal="12" />
 		</collision>
 	</npc>
 	<npc id="24045" level="101" type="Monster" name="Orc Mercenary Warrior">
@@ -1617,21 +1624,21 @@
 		<race>ETC</race> <!-- TODO: Magic Creatures -->
 		<acquire exp="14700" sp="441" />
 		<stats str="40" int="21" dex="30" wit="20" con="43" men="25">
-			<vitals hp="6111" hpRegen="7.5" mp="2018" mpRegen="2.7" />
+			<vitals hp="979.76" hpRegen="7.5" mp="2200.995" mpRegen="2.7" />
 			<speed>
-				<walk ground="60" /> <!-- Need retail value -->
-				<run ground="120" /> <!-- Need retail value -->
+				<walk ground="90" />
+				<run ground="180" />
 			</speed>
-			<attack physical="4277.7" magical="1816.2" critical="4" attackSpeed="253" range="40" />
-			<defence physical="1833.3" magical="1009" />
+			<attack physical="227.7" magical="110.2" critical="4" attackSpeed="253" range="40" />
+			<defence physical="416.3" magical="304" />
 		</stats>
 		<status attackable="true" />
 		<skillList>
 			<skill id="4416" level="2" /> <!-- Magical Creatures -->
 		</skillList>
 		<collision>
-			<radius normal="16" /> <!-- Need retail value -->
-			<height normal="13.25" /> <!-- Need retail value -->
+			<radius normal="11" />
+			<height normal="20" />
 		</collision>
 		<dropLists>
 			<drop>
@@ -1656,21 +1663,21 @@
 		<race>ETC</race> <!-- TODO: Magic Creatures -->
 		<acquire exp="15123" sp="453" />
 		<stats str="40" int="21" dex="30" wit="20" con="43" men="25">
-			<vitals hp="6232" hpRegen="8.5" mp="2066" mpRegen="3" />
+			<vitals hp="999.16" hpRegen="8.5" mp="2253.21" mpRegen="3" />
 			<speed>
-				<walk ground="60" /> <!-- Need retail value -->
-				<run ground="120" /> <!-- Need retail value -->
+				<walk ground="90" />
+				<run ground="180" />
 			</speed>
-			<attack physical="4362.4" magical="1859.4" critical="4" attackSpeed="253" range="40" />
-			<defence physical="1869.6" magical="1033" />
+			<attack physical="237.7" magical="120.2" critical="4" attackSpeed="253" range="40" />
+			<defence physical="429.3" magical="314" />
 		</stats>
 		<status attackable="true" />
 		<skillList>
 			<skill id="4416" level="2" /> <!-- Magical Creatures -->
 		</skillList>
 		<collision>
-			<radius normal="16" /> <!-- Need retail value -->
-			<height normal="13.25" /> <!-- Need retail value -->
+			<radius normal="11" />
+			<height normal="20" />
 		</collision>
 		<dropLists>
 			<drop>
@@ -1700,13 +1707,13 @@
 		<race>HUMAN</race>
 		<acquire exp="15123" sp="453" />
 		<stats str="40" int="21" dex="30" wit="20" con="43" men="25">
-			<vitals hp="6232" hpRegen="8.5" mp="2066" mpRegen="3" />
+			<vitals hp="999.16" hpRegen="8.5" mp="2253.21" mpRegen="3" />
+			<attack physical="237.7" magical="120.2" critical="4" attackSpeed="253" range="40" />
+			<defence physical="429.3" magical="314" />
 			<speed>
-				<walk ground="60" /> <!-- Need retail value -->
-				<run ground="120" /> <!-- Need retail value -->
+				<walk ground="40" />
+				<run ground="180" />
 			</speed>
-			<attack physical="4362.4" magical="1859.4" critical="4" attackSpeed="253" range="40" />
-			<defence physical="1869.6" magical="1033" />
 			<hitTime>840</hitTime>
 		</stats>
 		<status attackable="true" />
@@ -1714,8 +1721,8 @@
 			<skill id="4416" level="14" /> <!-- Humans -->
 		</skillList>
 		<collision>
-			<radius normal="16" /> <!-- Need retail value -->
-			<height normal="13.25" /> <!-- Need retail value -->
+			<radius normal="7" />
+			<height normal="22" />
 		</collision>
 		<dropLists>
 			<drop>
@@ -1737,21 +1744,21 @@
 		<race>HUMAN</race>
 		<acquire exp="15549" sp="466" />
 		<stats str="40" int="21" dex="30" wit="20" con="43" men="25">
-			<vitals hp="6351" hpRegen="8.5" mp="2115" mpRegen="3" />
+			<vitals hp="1018.16" hpRegen="8.5" mp="2306.31" mpRegen="3" />
 			<speed>
-				<walk ground="60" /> <!-- Need retail value -->
-				<run ground="120" /> <!-- Need retail value -->
+				<walk ground="40" />
+				<run ground="180" />
 			</speed>
-			<attack physical="4445.7" magical="1903.5" critical="4" attackSpeed="253" range="40" />
-			<defence physical="1905.3" magical="1057.5" />
+			<attack physical="247.7" magical="130.2" critical="4" attackSpeed="253" range="40" />
+			<defence physical="440.3" magical="324" />
 		</stats>
 		<status attackable="true" />
 		<skillList>
 			<skill id="4416" level="14" /> <!-- Humans -->
 		</skillList>
 		<collision>
-			<radius normal="16" /> <!-- Need retail value -->
-			<height normal="13.25" /> <!-- Need retail value -->
+			<radius normal="7" />
+			<height normal="22" />
 		</collision>
 		<dropLists>
 			<drop>
@@ -1775,13 +1782,13 @@
 		<race>DIVINE</race>
 		<acquire exp="15123" sp="453" />
 		<stats str="40" int="21" dex="30" wit="20" con="43" men="25">
-			<vitals hp="1535.00392" hpRegen="8.5" mp="1828.41" mpRegen="3" />
+			<vitals hp="999.16" hpRegen="8.5" mp="2253.21" mpRegen="3" />
 			<speed>
-				<walk ground="60" /> <!-- Need retail value -->
-				<run ground="120" /> <!-- Need retail value -->
+				<walk ground="70" />
+				<run ground="180" />
 			</speed>
-			<attack physical="4362.4" magical="1859.4" critical="4" attackSpeed="253" range="40" />
-			<defence physical="1869.6" magical="1033" />
+			<attack physical="237.7" magical="120.2" critical="4" attackSpeed="253" range="40" />
+			<defence physical="429.3" magical="314" />
 			<hitTime>840</hitTime>
 		</stats>
 		<status attackable="true" />
@@ -1789,8 +1796,8 @@
 			<skill id="4416" level="8" /> <!-- Angel -->
 		</skillList>
 		<collision>
-			<radius normal="16" /> <!-- Need retail value -->
-			<height normal="13.25" /> <!-- Need retail value -->
+			<radius normal="11" />
+			<height normal="25.4" />
 		</collision>
 		<dropLists>
 			<drop>
@@ -1819,25 +1826,24 @@
 		</dropLists>
 	</npc>
 	<npc id="24051" level="72" type="Monster" name="Starving Spirit">
-		<!-- Source: www.l2wiki.com -->
 		<race>UNDEAD</race>
 		<acquire exp="15549" sp="466" />
 		<stats str="40" int="21" dex="30" wit="20" con="43" men="25">
-			<vitals hp="1564.31481" hpRegen="8.5" mp="1871.775" mpRegen="3" />
+			<vitals hp="1018.16" hpRegen="8.5" mp="2306.31" mpRegen="3" />
 			<speed>
-				<walk ground="60" /> <!-- Need retail value -->
-				<run ground="120" /> <!-- Need retail value -->
+				<walk ground="39" />
+				<run ground="180" />
 			</speed>
-			<attack physical="4445.7" magical="1903.5" critical="4" attackSpeed="253" range="40" />
-			<defence physical="1905.3" magical="1057.5" />
+			<attack physical="247.7" magical="130.2" critical="4" attackSpeed="253" range="40" />
+			<defence physical="440.3" magical="324" />
 		</stats>
 		<status attackable="true" />
 		<skillList>
 			<skill id="4416" level="1" /> <!-- Undead -->
 		</skillList>
 		<collision>
-			<radius normal="16" /> <!-- Need retail value -->
-			<height normal="13.25" /> <!-- Need retail value -->
+			<radius normal="12" />
+			<height normal="26" />
 		</collision>
 		<dropLists>
 			<drop>
@@ -1864,13 +1870,13 @@
 		<race>DIVINE</race>
 		<acquire exp="15549" sp="466" />
 		<stats str="40" int="21" dex="30" wit="20" con="43" men="25">
-			<vitals hp="6351" hpRegen="8.5" mp="2115" mpRegen="3" />
+			<vitals hp="1018.16" hpRegen="8.5" mp="2306.31" mpRegen="3" />
 			<speed>
-				<walk ground="60" /> <!-- Need retail value -->
-				<run ground="120" /> <!-- Need retail value -->
+				<walk ground="61" />
+				<run ground="180" />
 			</speed>
-			<attack physical="4445.7" magical="1903.5" critical="4" attackSpeed="253" range="40" />
-			<defence physical="1905.3" magical="1057.5" />
+			<attack physical="247.7" magical="130.2" critical="4" attackSpeed="253" range="40" />
+			<defence physical="440.3" magical="324" />
 			<hitTime>840</hitTime>
 		</stats>
 		<status attackable="true" />
@@ -1878,8 +1884,8 @@
 			<skill id="4416" level="8" /> <!-- Angel -->
 		</skillList>
 		<collision>
-			<radius normal="16" /> <!-- Need retail value -->
-			<height normal="13.25" /> <!-- Need retail value -->
+			<radius normal="9" />
+			<height normal="23.4" />
 		</collision>
 		<dropLists>
 			<drop>
@@ -1904,25 +1910,25 @@
 		</dropLists>
 	</npc>
 	<npc id="24053" level="73" type="Monster" name="Starving Soldier">
-		<!-- Source: www.l2wiki.com -->
 		<race>UNDEAD</race>
 		<acquire exp="15987" sp="479" />
+		<equipment rhand="47716" />
 		<stats str="40" int="21" dex="30" wit="20" con="43" men="25">
-			<vitals hp="6466" hpRegen="8.5" mp="2163" mpRegen="3" />
+			<vitals hp="1036.68" hpRegen="8.5" mp="2358.525" mpRegen="3" />
 			<speed>
-				<walk ground="60" /> <!-- Need retail value -->
-				<run ground="120" /> <!-- Need retail value -->
+				<walk ground="40" />
+				<run ground="180" />
 			</speed>
-			<attack physical="4526.2" magical="1946.7" critical="4" attackSpeed="253" range="40" />
-			<defence physical="1939.8" magical="1081.5" />
+			<attack physical="257.7" magical="140.2" critical="4" attackSpeed="253" range="40" />
+			<defence physical="450.3" magical="334" />
 		</stats>
 		<status attackable="true" />
 		<skillList>
 			<skill id="4416" level="1" /> <!-- Undead -->
 		</skillList>
 		<collision>
-			<radius normal="16" /> <!-- Need retail value -->
-			<height normal="13.25" /> <!-- Need retail value -->
+			<radius normal="16" />
+			<height normal="28.5" />
 		</collision>
 		<dropLists>
 			<drop>
@@ -1949,13 +1955,13 @@
 		<race>HUMAN</race>
 		<acquire exp="15987" sp="479" />
 		<stats str="40" int="21" dex="30" wit="20" con="43" men="25">
-			<vitals hp="6466" hpRegen="8.5" mp="2163" mpRegen="3" />
+			<vitals hp="1036.68" hpRegen="8.5" mp="2358.525" mpRegen="3" />
 			<speed>
-				<walk ground="60" /> <!-- Need retail value -->
-				<run ground="120" /> <!-- Need retail value -->
+				<walk ground="40" />
+				<run ground="180" />
 			</speed>
-			<attack physical="4526.2" magical="1946.7" critical="4" attackSpeed="253" range="40" />
-			<defence physical="1939.8" magical="1081.5" />
+			<attack physical="257.7" magical="140.2" critical="4" attackSpeed="253" range="40" />
+			<defence physical="450.3" magical="334" />
 			<hitTime>840</hitTime>
 		</stats>
 		<status attackable="true" />
@@ -1963,8 +1969,8 @@
 			<skill id="4416" level="14" /> <!-- Humans -->
 		</skillList>
 		<collision>
-			<radius normal="16" /> <!-- Need retail value -->
-			<height normal="13.25" /> <!-- Need retail value -->
+			<radius normal="15" />
+			<height normal="30" />
 		</collision>
 		<dropLists>
 			<drop>
@@ -1991,21 +1997,21 @@
 		<race>UNDEAD</race>
 		<acquire exp="16428" sp="492" />
 		<stats str="40" int="21" dex="30" wit="20" con="43" men="25">
-			<vitals hp="6580" hpRegen="8.5" mp="2212" mpRegen="3" />
+			<vitals hp="1054.82" hpRegen="8.5" mp="2412.51" mpRegen="3" />
 			<speed>
-				<walk ground="60" /> <!-- Need retail value -->
-				<run ground="120" /> <!-- Need retail value -->
+				<walk ground="39" />
+				<run ground="180" />
 			</speed>
-			<attack physical="4606" magical="1990.8" critical="4" attackSpeed="253" range="40" />
-			<defence physical="1974" magical="1106" />
+			<attack physical="267.7" magical="150.2" critical="4" attackSpeed="253" range="40" />
+			<defence physical="460.3" magical="344" />
 		</stats>
 		<status attackable="true" />
 		<skillList>
 			<skill id="4416" level="1" /> <!-- Undead -->
 		</skillList>
 		<collision>
-			<radius normal="16" /> <!-- Need retail value -->
-			<height normal="13.25" /> <!-- Need retail value -->
+			<radius normal="12" />
+			<height normal="28.5" />
 		</collision>
 		<dropLists>
 			<drop>

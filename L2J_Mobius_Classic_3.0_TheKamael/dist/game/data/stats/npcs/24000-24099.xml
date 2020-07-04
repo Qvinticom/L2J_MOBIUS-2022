@@ -745,7 +745,7 @@
 			<height normal="35" />
 		</collision>
 	</npc>
-	<npc id="24025" level="70" type="Monster" name="Bloody Purple">
+	<npc id="24025" level="70" type="Monster" name="Bloody Purple" element="FIRE">
 		<parameters>
 			<param name="MoveAroundSocial" value="70" />
 			<param name="MoveAroundSocial1" value="70" />
@@ -755,15 +755,15 @@
 			<param name="SpiritShot" value="100" />
 			<param name="SpiritShotRate" value="5" />
 			<param name="LongRangeGuardRate" value="5" />
-			<skill name="DeBuff" id="4035" level="3" />
+			<skill name="DeBuff" id="4035" level="6" />
 		</parameters>
 		<race>UNDEAD</race>
 		<sex>MALE</sex>
-		<acquire exp="77020" sp="2310" />
+		<acquire exp="77020" sp="2311" attributeExp="30" />
 		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
-			<vitals hp="2006.93388" hpRegen="7.5" mp="2200.995" mpRegen="2.7" />
-			<attack physical="11407.9" magical="1816.2" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
-			<defence physical="4889.1" magical="1009" />
+			<vitals hp="5157.70" hpRegen="7.5" mp="2200.995" mpRegen="2.7" />
+			<attack physical="170.9" magical="120.2" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="450.1" magical="350" />
 			<speed>
 				<walk ground="10" />
 				<run ground="180" />
@@ -794,8 +794,8 @@
 			<drop>
 				<item id="91" min="1" max="1" chance="0.003" /> <!-- Heavy War Axe -->
 				<item id="92" min="1" max="1" chance="0.003" /> <!-- Spirit's Staff -->
-				<item id="57" min="1096" max="2558" chance="70" /> <!-- Adena -->
-				<item id="1865" min="1" max="3" chance="15.51" /> <!-- Varnish -->
+				<item id="57" min="1258" max="2934" chance="70" /> <!-- Adena -->
+				<item id="1865" min="9" max="27" chance="3.108" /> <!-- Varnish -->
 				<item id="1895" min="1" max="1" chance="14.25" /> <!-- Metallic Fiber -->
 				<item id="1864" min="4" max="12" chance="11.93" /> <!-- Stem -->
 				<item id="1878" min="2" max="6" chance="3.857" /> <!-- Durable Braid -->
@@ -809,22 +809,22 @@
 			</spoil>
 		</dropLists>
 	</npc>
-	<npc id="24026" level="71" type="Monster" name="Clipher">
+	<npc id="24026" level="71" type="Monster" name="Clipher" element="FIRE">
 		<parameters>
 			<param name="MoveAroundSocial" value="0" />
 			<param name="MoveAroundSocial1" value="0" />
 			<param name="MoveAroundSocial2" value="0" />
 		</parameters>
 		<race>UNDEAD</race>
-		<acquire exp="79766" sp="2392" />
+		<acquire exp="79766" sp="2393" attributeExp="32" />
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="2046.220325" hpRegen="8.5" mp="2253.21" mpRegen="3" />
+			<vitals hp="1664.85" hpRegen="8.5" mp="2253.21" mpRegen="3" />
 			<speed>
 				<walk ground="60" />
 				<run ground="180" />
 			</speed>
-			<attack physical="11631.2" magical="1859.4" critical="4" attackSpeed="253" range="40" />
-			<defence physical="4984.8" magical="1033" />
+			<attack physical="180.9" magical="130.2" random="30" critical="4" attackSpeed="253" range="40" />
+			<defence physical="410.1" magical="210" />
 			<hitTime>840</hitTime>
 		</stats>
 		<status attackable="true" />
@@ -843,8 +843,8 @@
 			<drop>
 				<item id="78" min="1" max="1" chance="0.003" /> <!-- Great Sword -->
 				<item id="142" min="1" max="1" chance="0.003" /> <!-- Keshanberk -->
-				<item id="57" min="1145" max="2673" chance="70" /> <!-- Adena -->
-				<item id="1865" min="1" max="3" chance="16.58" /> <!-- Varnish -->
+				<item id="57" min="1310" max="3056" chance="70" /> <!-- Adena -->
+				<item id="1865" min="9" max="27" chance="3.108" /> <!-- Varnish -->
 				<item id="1895" min="1" max="1" chance="13.7" /> <!-- Metallic Fiber -->
 				<item id="1864" min="4" max="12" chance="12.69" /> <!-- Stem -->
 				<item id="1878" min="2" max="6" chance="4.072" /> <!-- Durable Braid -->
@@ -858,22 +858,22 @@
 			</spoil>
 		</dropLists>
 	</npc>
-	<npc id="24027" level="72" type="Monster" name="Sairon">
+	<npc id="24027" level="72" type="Monster" name="Sairon" element="FIRE">
 		<parameters>
 			<param name="MoveAroundSocial" value="0" />
 			<param name="MoveAroundSocial1" value="0" />
 			<param name="MoveAroundSocial2" value="0" />
 		</parameters>
 		<race>UNDEAD</race>
-		<acquire exp="86040" sp="2581" />
+		<acquire exp="86040" sp="2581" attributeExp="34" />
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="2085.137305" hpRegen="8.5" mp="2306.31" mpRegen="3" />
+			<vitals hp="1696.55" hpRegen="8.5" mp="2306.31" mpRegen="3" />
 			<speed>
 				<walk ground="30" />
 				<run ground="180" />
 			</speed>
-			<attack physical="11852.4" magical="1903.5" critical="4" attackSpeed="253" range="40" />
-			<defence physical="5079.6" magical="1057.5" />
+			<attack physical="190.9" magical="14.2" random="30" critical="5" attackSpeed="253" range="40" />
+			<defence physical="410.1" magical="210" />
 			<hitTime>840</hitTime>
 		</stats>
 		<status attackable="true" />
@@ -890,7 +890,7 @@
 				<item id="266" min="1" max="1" chance="0.003" /> <!-- Great Pata -->
 				<item id="267" min="1" max="1" chance="0.003" /> <!-- Arthro Nail -->
 				<item id="300" min="1" max="1" chance="0.003" /> <!-- Great Axe -->
-				<item id="57" min="1293" max="3017" chance="70" /> <!-- Adena -->
+				<item id="57" min="1447" max="3377" chance="70" /> <!-- Adena -->
 				<item id="1895" min="1" max="1" chance="16.73" /> <!-- Metallic Fiber -->
 				<item id="1864" min="4" max="12" chance="14.83" /> <!-- Stem -->
 				<item id="1878" min="2" max="6" chance="4.545" /> <!-- Durable Braid -->
@@ -906,23 +906,23 @@
 			</spoil>
 		</dropLists>
 	</npc>
-	<npc id="24028" level="73" type="Monster" name="Demon Warrior">
+	<npc id="24028" level="73" type="Monster" name="Demon Warrior" element="FIRE">
 		<parameters>
 			<param name="MoveAroundSocial" value="0" />
 			<param name="MoveAroundSocial1" value="0" />
 			<param name="MoveAroundSocial2" value="0" />
 		</parameters>
 		<race>UNDEAD</race>
-		<acquire exp="89303" sp="2679" />
+		<acquire exp="89303" sp="2679" attributeExp="36" />
 		<equipment rhand="234" />
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="2123.68482" hpRegen="8.5" mp="2358.525" mpRegen="3" />
+			<vitals hp="1727.89" hpRegen="8.5" mp="2358.525" mpRegen="3" />
 			<speed>
 				<walk ground="40" />
 				<run ground="180" />
 			</speed>
-			<attack physical="12071.5" magical="1946.7" critical="4" attackSpeed="253" range="40" />
-			<defence physical="5173.5" magical="1081.5" />
+			<attack physical="210.9" magical="130.2" random="30" critical="4" attackSpeed="253" range="40" />
+			<defence physical="430.1" magical="220" />
 			<hitTime>840</hitTime>
 		</stats>
 		<status attackable="true" />
@@ -939,7 +939,7 @@
 			<drop>
 				<item id="175" min="1" max="1" chance="0.003" /> <!-- Art of Battle Axe -->
 				<item id="210" min="1" max="1" chance="0.003" /> <!-- Staff of Evil Spirits -->
-				<item id="57" min="1357" max="3166" chance="70" /> <!-- Adena -->
+				<item id="57" min="1513" max="3530" chance="70" /> <!-- Adena -->
 				<item id="1895" min="1" max="1" chance="16.99" /> <!-- Metallic Fiber -->
 				<item id="1864" min="4" max="12" chance="15.14" /> <!-- Stem -->
 				<item id="1878" min="2" max="6" chance="4.703" /> <!-- Durable Braid -->
@@ -954,23 +954,23 @@
 			</spoil>
 		</dropLists>
 	</npc>
-	<npc id="24029" level="74" type="Monster" name="Veil Master">
+	<npc id="24029" level="74" type="Monster" name="Veil Master" element="FIRE">
 		<parameters>
 			<param name="MoveAroundSocial" value="0" />
 			<param name="MoveAroundSocial1" value="0" />
 			<param name="MoveAroundSocial2" value="0" />
 		</parameters>
 		<race>DEMONIC</race>
-		<acquire exp="90904" sp="2727" />
+		<acquire exp="90904" sp="2727" attributeExp="38" />
 		<equipment rhand="78" />
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="2161.000785" hpRegen="8.5" mp="2412.51" mpRegen="3" />
+			<vitals hp="1758.28" hpRegen="8.5" mp="2412.51" mpRegen="3" />
 			<speed>
 				<walk ground="60" />
 				<run ground="180" />
 			</speed>
-			<attack physical="12283.6" magical="1990.8" critical="4" attackSpeed="253" range="40" />
-			<defence physical="5264.4" magical="1106" />
+			<attack physical="235.9" magical="130.2" random="30" critical="4" attackSpeed="253" range="40" />
+			<defence physical="445.1" magical="235" />
 			<hitTime>840</hitTime>
 		</stats>
 		<status attackable="true" />
@@ -988,7 +988,7 @@
 			<drop>
 				<item id="79" min="1" max="1" chance="0.003" /> <!-- Damascus -->
 				<item id="171" min="1" max="1" chance="0.003" /> <!-- Deadman's Glory -->
-				<item id="57" min="1372" max="3205" chance="70" /> <!-- Adena -->
+				<item id="57" min="1536" max="3588" chance="70" /> <!-- Adena -->
 				<item id="1895" min="1" max="1" chance="11.2" /> <!-- Metallic Fiber -->
 				<item id="1876" min="1" max="1" chance="8.052" /> <!-- Mithril Ore -->
 				<item id="1866" min="2" max="6" chance="6.678" /> <!-- Suede -->
@@ -1004,22 +1004,22 @@
 			</spoil>
 		</dropLists>
 	</npc>
-	<npc id="24030" level="74" type="Monster" name="Stone Vanul">
+	<npc id="24030" level="74" type="Monster" name="Stone Vanul" element="FIRE">
 		<parameters>
 			<param name="MoveAroundSocial" value="0" />
 			<param name="MoveAroundSocial1" value="0" />
 			<param name="MoveAroundSocial2" value="0" />
 		</parameters>
 		<race>UNDEAD</race>
-		<acquire exp="129198" sp="3875" />
+		<acquire exp="129198" sp="3875" attributeExp="38" />
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="2161.0418366667" hpRegen="8.5" mp="2412.51" mpRegen="3" />
+			<vitals hp="1758.29" hpRegen="8.5" mp="2412.51" mpRegen="3" />
 			<speed>
 				<walk ground="45" />
 				<run ground="180" />
 			</speed>
-			<attack physical="18426.1" magical="1990.8" critical="4" attackSpeed="253" range="40" />
-			<defence physical="7896.9" magical="1106" />
+			<attack physical="235.9" magical="130.2" random="30" critical="4" attackSpeed="253" range="40" />
+			<defence physical="445.1" magical="235" />
 			<hitTime>840</hitTime>
 		</stats>
 		<status attackable="true" />
@@ -1037,7 +1037,7 @@
 			<drop>
 				<item id="97" min="1" max="1" chance="0.0075" /> <!-- Lance -->
 				<item id="268" min="1" max="1" chance="0.0075" /> <!-- Bellion Cestus -->
-				<item id="57" min="2433" max="5685" chance="70" /> <!-- Adena -->
+				<item id="57" min="2140" max="5000" chance="70" /> <!-- Adena -->
 				<item id="1866" min="2" max="6" chance="12.14" /> <!-- Suede -->
 				<item id="1879" min="1" max="1" chance="11.72" /> <!-- Cokes -->
 				<item id="1870" min="5" max="15" chance="7.132" /> <!-- Coal -->
@@ -1053,22 +1053,22 @@
 			</spoil>
 		</dropLists>
 	</npc>
-	<npc id="24031" level="75" type="Monster" name="Death Flyer">
+	<npc id="24031" level="75" type="Monster" name="Death Flyer" element="FIRE">
 		<parameters>
 			<param name="MoveAroundSocial" value="0" />
 			<param name="MoveAroundSocial1" value="0" />
 			<param name="MoveAroundSocial2" value="0" />
 		</parameters>
 		<race>DEMONIC</race>
-		<acquire exp="94263" sp="2827" />
+		<acquire exp="94263" sp="2827" attributeExp="41" />
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="2197.208355" hpRegen="8.5" mp="2465.61" mpRegen="3" />
+			<vitals hp="1787.69" hpRegen="8.5" mp="2465.61" mpRegen="3" />
 			<speed>
 				<walk ground="70" />
 				<run ground="180" />
 			</speed>
-			<attack physical="12489.4" magical="2034.9" critical="4" attackSpeed="253" range="40" />
-			<defence physical="5352.6" magical="1130.5" />
+			<attack physical="255.9" magical="140.2" random="30" critical="4" attackSpeed="253" range="40" />
+			<defence physical="455.1" magical="245" />
 			<hitTime>840</hitTime>
 		</stats>
 		<status attackable="true" />
@@ -1085,7 +1085,7 @@
 			<drop>
 				<item id="234" min="1" max="1" chance="0.003" /> <!-- Demon's Dagger -->
 				<item id="287" min="1" max="1" chance="0.003" /> <!-- Bow of Peril -->
-				<item id="57" min="1438" max="3358" chance="70" /> <!-- Adena -->
+				<item id="57" min="1603" max="3745" chance="70" /> <!-- Adena -->
 				<item id="1895" min="1" max="1" chance="11.52" /> <!-- Metallic Fiber -->
 				<item id="1876" min="1" max="1" chance="8.365" /> <!-- Mithril Ore -->
 				<item id="1866" min="2" max="6" chance="7.066" /> <!-- Suede -->
@@ -1102,22 +1102,22 @@
 			</spoil>
 		</dropLists>
 	</npc>
-	<npc id="24032" level="70" type="Monster" name="Seer">
+	<npc id="24032" level="70" type="Monster" name="Seer" element="FIRE">
 		<parameters>
 			<param name="MoveAroundSocial" value="0" />
 			<param name="MoveAroundSocial1" value="0" />
 			<param name="MoveAroundSocial2" value="0" />
 		</parameters>
 		<race>UNDEAD</race>
-		<acquire exp="77020" sp="2310" />
+		<acquire exp="77020" sp="2310" attributeExp="30" />
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="2006.93388" hpRegen="7.5" mp="2200.995" mpRegen="2.7" />
+			<vitals hp="1632.88" hpRegen="7.5" mp="2200.995" mpRegen="2.7" />
 			<speed>
 				<walk ground="68" />
 				<run ground="180" />
 			</speed>
-			<attack physical="11407.9" magical="1816.2" critical="4" attackSpeed="253" range="40" />
-			<defence physical="4889.1" magical="1009" />
+			<attack physical="170.9" magical="120.2" random="30" critical="4" attackSpeed="253" range="40" />
+			<defence physical="400.1" magical="200" />
 			<hitTime>840</hitTime>
 		</stats>
 		<status attackable="true" />
@@ -1132,11 +1132,12 @@
 			<radius normal="20" />
 			<height normal="34" />
 		</collision>
+		
 		<dropLists>
 			<drop>
 				<item id="91" min="1" max="1" chance="0.003" /> <!-- Heavy War Axe -->
 				<item id="92" min="1" max="1" chance="0.003" /> <!-- Spirit's Staff -->
-				<item id="57" min="1096" max="2558" chance="70" /> <!-- Adena -->
+				<item id="57" min="1258" max="2934" chance="70" /> <!-- Adena -->
 				<item id="1871" min="1" max="3" chance="10.59" /> <!-- Charcoal -->
 				<item id="1895" min="1" max="1" chance="9.143" /> <!-- Metallic Fiber -->
 				<item id="1876" min="1" max="1" chance="6.363" /> <!-- Mithril Ore -->
@@ -1153,22 +1154,22 @@
 			</spoil>
 		</dropLists>
 	</npc>
-	<npc id="24033" level="71" type="Monster" name="Guardian Spirit">
+	<npc id="24033" level="71" type="Monster" name="Guardian Spirit" element="FIRE">
 		<parameters>
 			<param name="MoveAroundSocial" value="0" />
 			<param name="MoveAroundSocial1" value="0" />
 			<param name="MoveAroundSocial2" value="0" />
 		</parameters>
 		<race>DEMONIC</race>
-		<acquire exp="79766" sp="2392" />
+		<acquire exp="79766" sp="2392" attributeExp="32" />
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="2046.220325" hpRegen="8.5" mp="2253.21" mpRegen="3" />
+			<vitals hp="1664.85" hpRegen="8.5" mp="2253.21" mpRegen="3" />
 			<speed>
 				<walk ground="37" />
 				<run ground="180" />
 			</speed>
-			<attack physical="11631.2" magical="1859.4" critical="4" attackSpeed="253" range="40" />
-			<defence physical="4984.8" magical="1033" />
+			<attack physical="180.9" magical="130.2" random="30" critical="4" attackSpeed="253" range="40" />
+			<defence physical="410.1" magical="210" />
 			<hitTime>840</hitTime>
 		</stats>
 		<status attackable="true" />
@@ -1200,23 +1201,23 @@
 			</spoil>
 		</dropLists>
 	</npc>
-	<npc id="24034" level="72" type="Monster" name="Midnight Sairon">
+	<npc id="24034" level="72" type="Monster" name="Midnight Sairon" element="FIRE">
 		<parameters>
 			<param name="MoveAroundSocial" value="0" />
 			<param name="MoveAroundSocial1" value="0" />
 			<param name="MoveAroundSocial2" value="0" />
 		</parameters>
 		<race>DEMONIC</race>
-		<acquire exp="86040" sp="2581" />
+		<acquire exp="86040" sp="2581" attributeExp="34" />
 		<equipment rhand="5129" lhand="5129" />
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="2085.137305" hpRegen="8.5" mp="2306.31" mpRegen="3" />
+			<vitals hp="1696.55" hpRegen="8.5" mp="2306.31" mpRegen="3" />
 			<speed>
 				<walk ground="22" />
 				<run ground="180" />
 			</speed>
-			<attack physical="11852.4" magical="1903.5" critical="4" attackSpeed="253" range="40" />
-			<defence physical="5079.6" magical="1057.5" />
+			<attack physical="190.9" magical="14.2" random="30" critical="5" attackSpeed="253" range="40" />
+			<defence physical="410.1" magical="210" />
 			<hitTime>840</hitTime>
 		</stats>
 		<status attackable="true" />
@@ -1233,7 +1234,7 @@
 				<item id="266" min="1" max="1" chance="0.003" /> <!-- Great Pata -->
 				<item id="267" min="1" max="1" chance="0.003" /> <!-- Arthro Nail -->
 				<item id="300" min="1" max="1" chance="0.003" /> <!-- Great Axe -->
-				<item id="57" min="1293" max="3017" chance="70" /> <!-- Adena -->
+				<item id="57" min="1447" max="3377" chance="70" /> <!-- Adena -->
 				<item id="1870" min="3" max="9" chance="17.96" /> <!-- Coal -->
 				<item id="1874" min="1" max="1" chance="7.502" /> <!-- Oriharukon Ore -->
 				<item id="2120" min="1" max="1" chance="0.75" /> <!-- Great Pata Blade -->
@@ -1247,23 +1248,23 @@
 			</spoil>
 		</dropLists>
 	</npc>
-	<npc id="24035" level="73" type="Monster" name="Daymen">
+	<npc id="24035" level="73" type="Monster" name="Daymen" element="FIRE">
 		<parameters>
 			<param name="MoveAroundSocial" value="0" />
 			<param name="MoveAroundSocial1" value="0" />
 			<param name="MoveAroundSocial2" value="0" />
 		</parameters>
 		<race>UNDEAD</race>
-		<acquire exp="89303" sp="2679" />
+		<acquire exp="89303" sp="2679" attributeExp="36" />
 		<equipment rhand="84" />
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="2123.68482" hpRegen="8.5" mp="2358.525" mpRegen="3" />
+			<vitals hp="1727.89" hpRegen="8.5" mp="2358.525" mpRegen="3" />
 			<speed>
 				<walk ground="40" />
 				<run ground="180" />
 			</speed>
-			<attack physical="12071.5" magical="1946.7" critical="4" attackSpeed="253" range="40" />
-			<defence physical="5173.5" magical="1081.5" />
+			<attack physical="210.9" magical="130.2" random="30" critical="4" attackSpeed="253" range="40" />
+			<defence physical="430.1" magical="220" />
 			<hitTime>840</hitTime>
 		</stats>
 		<status attackable="true" />
@@ -1280,7 +1281,7 @@
 			<drop>
 				<item id="175" min="1" max="1" chance="0.003" /> <!-- Art of Battle Axe -->
 				<item id="210" min="1" max="1" chance="0.003" /> <!-- Staff of Evil Spirits -->
-				<item id="57" min="1357" max="3166" chance="70" /> <!-- Adena -->
+				<item id="57" min="1513" max="3530" chance="70" /> <!-- Adena -->
 				<item id="1870" min="3" max="9" chance="20.13" /> <!-- Coal -->
 				<item id="1874" min="1" max="1" chance="7.861" /> <!-- Oriharukon Ore -->
 				<item id="4117" min="1" max="1" chance="0.75" /> <!-- Art of Battle Axe Blade -->
@@ -1293,22 +1294,22 @@
 			</spoil>
 		</dropLists>
 	</npc>
-	<npc id="24036" level="74" type="Monster" name="Dolores">
+	<npc id="24036" level="74" type="Monster" name="Dolores" element="FIRE">
 		<parameters>
 			<param name="MoveAroundSocial" value="0" />
 			<param name="MoveAroundSocial1" value="0" />
 			<param name="MoveAroundSocial2" value="0" />
 		</parameters>
 		<race>DEMONIC</race>
-		<acquire exp="90904" sp="2727" />
+		<acquire exp="90904" sp="2727" attributeExp="36" />
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="2161.000785" hpRegen="8.5" mp="2412.51" mpRegen="3" />
+			<vitals hp="1758.28" hpRegen="8.5" mp="2412.51" mpRegen="3" />
 			<speed>
 				<walk ground="70" />
 				<run ground="180" />
 			</speed>
-			<attack physical="12283.6" magical="1990.8" critical="4" attackSpeed="253" range="40" />
-			<defence physical="5264.4" magical="1106" />
+			<attack physical="235.9" magical="130.2" random="30" critical="4" attackSpeed="253" range="40" />
+			<defence physical="445.1" magical="235" />
 			<hitTime>840</hitTime>
 		</stats>
 		<status attackable="true" />
@@ -1326,7 +1327,7 @@
 			<drop>
 				<item id="79" min="1" max="1" chance="0.003" /> <!-- Damascus -->
 				<item id="171" min="1" max="1" chance="0.003" /> <!-- Deadman's Glory -->
-				<item id="57" min="1372" max="3205" chance="70" /> <!-- Adena -->
+				<item id="57" min="1536" max="3588" chance="70" /> <!-- Adena -->
 				<item id="1887" min="1" max="1" chance="5.951" /> <!-- Varnish of Purity -->
 				<item id="4114" min="1" max="1" chance="0.75" /> <!-- Damascus Sword Blade -->
 				<item id="4116" min="1" max="1" chance="0.75" /> <!-- Deadman's Glory Stone -->
@@ -1337,22 +1338,22 @@
 			</spoil>
 		</dropLists>
 	</npc>
-	<npc id="24037" level="74" type="Monster" name="Maiden Doll">
+	<npc id="24037" level="74" type="Monster" name="Maiden Doll" element="FIRE">
 		<parameters>
 			<param name="MoveAroundSocial" value="0" />
 			<param name="MoveAroundSocial1" value="0" />
 			<param name="MoveAroundSocial2" value="0" />
 		</parameters>
 		<race>DEMONIC</race>
-		<acquire exp="129198" sp="3875" />
+		<acquire exp="129198" sp="3875" attributeExp="38" />
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="2161.0418366667" hpRegen="8.5" mp="2412.51" mpRegen="3" />
+			<vitals hp="1758.29" hpRegen="8.5" mp="2412.51" mpRegen="3" />
 			<speed>
 				<walk ground="70" />
 				<run ground="180" />
 			</speed>
-			<attack physical="18426.1" magical="1990.8" critical="4" attackSpeed="253" range="40" />
-			<defence physical="7896.9" magical="1106" />
+			<attack physical="235.9" magical="130.2" random="30" critical="4" attackSpeed="253" range="40" />
+			<defence physical="445.1" magical="235" />
 			<hitTime>840</hitTime>
 		</stats>
 		<status attackable="true" />
@@ -1370,33 +1371,33 @@
 			<drop>
 				<item id="97" min="1" max="1" chance="0.0075" /> <!-- Lance -->
 				<item id="268" min="1" max="1" chance="0.0075" /> <!-- Bellion Cestus -->
-				<item id="57" min="2433" max="5685" chance="70" /> <!-- Adena -->
-				<item id="1887" min="1" max="1" chance="10.45" /> <!-- Varnish of Purity -->
-				<item id="4115" min="1" max="1" chance="1.636" /> <!-- Lance Blade -->
-				<item id="4120" min="1" max="1" chance="1.574" /> <!-- Bellion Cestus Edge -->
+				<item id="57" min="2140" max="5000" chance="70" /> <!-- Adena -->
+				<item id="1887" min="1" max="1" chance="9.45" /> <!-- Varnish of Purity -->
+				<item id="4115" min="1" max="1" chance="1.456" /> <!-- Lance Blade -->
+				<item id="4120" min="1" max="1" chance="1.374" /> <!-- Bellion Cestus Edge -->
 			</drop>
 			<spoil>
-				<item id="948" min="1" max="1" chance="4.328" /> <!-- Scroll: Enchant Armor (B-grade) -->
+				<item id="948" min="1" max="1" chance="3.828" /> <!-- Scroll: Enchant Armor (B-grade) -->
 				<item id="947" min="1" max="1" chance="0.75" /> <!-- Scroll: Enchant Weapon (B-grade) -->
 			</spoil>
 		</dropLists>
 	</npc>
-	<npc id="24038" level="75" type="Monster" name="Tor Scorpion">
+	<npc id="24038" level="75" type="Monster" name="Tor Scorpion" element="FIRE">
 		<parameters>
 			<param name="MoveAroundSocial" value="0" />
 			<param name="MoveAroundSocial1" value="0" />
 			<param name="MoveAroundSocial2" value="0" />
 		</parameters>
 		<race>BUG</race>
-		<acquire exp="94263" sp="2827" />
+		<acquire exp="94263" sp="2827" attributeExp="41" />
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="2197.208355" hpRegen="8.5" mp="2465.61" mpRegen="3" />
+			<vitals hp="1787.69" hpRegen="8.5" mp="2465.61" mpRegen="3" />
 			<speed>
 				<walk ground="37" />
 				<run ground="180" />
 			</speed>
-			<attack physical="12489.4" magical="2034.9" critical="4" attackSpeed="253" range="40" />
-			<defence physical="5352.6" magical="1130.5" />
+			<attack physical="255.9" magical="140.2" random="30" critical="4" attackSpeed="253" range="40" />
+			<defence physical="455.1" magical="245" />
 			<hitTime>840</hitTime>
 		</stats>
 		<status attackable="true" />
@@ -1413,7 +1414,7 @@
 			<drop>
 				<item id="234" min="1" max="1" chance="0.003" /> <!-- Demon's Dagger -->
 				<item id="287" min="1" max="1" chance="0.003" /> <!-- Bow of Peril -->
-				<item id="57" min="1438" max="3358" chance="70" /> <!-- Adena -->
+				<item id="57" min="1603" max="3745" chance="70" /> <!-- Adena -->
 				<item id="1887" min="1" max="1" chance="6.222" /> <!-- Varnish of Purity -->
 				<item id="4119" min="1" max="1" chance="0.75" /> <!-- Demon's Dagger Edge -->
 				<item id="4121" min="1" max="1" chance="0.75" /> <!-- Bow of Peril Shaft -->
@@ -1425,22 +1426,22 @@
 			</spoil>
 		</dropLists>
 	</npc>
-	<npc id="24039" level="75" type="Monster" name="Pearl Horror" title="Cursed Soul">
+	<npc id="24039" level="75" type="Monster" name="Pearl Horror" title="Cursed Soul" element="FIRE">
 		<parameters>
 			<param name="MoveAroundSocial" value="0" />
 			<param name="MoveAroundSocial1" value="0" />
 			<param name="MoveAroundSocial2" value="0" />
 		</parameters>
 		<race>UNDEAD</race>
-		<acquire exp="181912" sp="5457" />
+		<acquire exp="181912" sp="5457" attributeExp="41" />
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="2197.2494066667" hpRegen="8.5" mp="2465.61" mpRegen="3" />
+			<vitals hp="1787.75" hpRegen="8.5" mp="2465.61" mpRegen="3" />
 			<speed>
 				<walk ground="100" />
 				<run ground="180" />
 			</speed>
-			<attack physical="18734.1" magical="2034.9" critical="4" attackSpeed="253" range="40" />
-			<defence physical="8028.9" magical="1130.5" />
+			<attack physical="290.9" magical="160.2" random="30" critical="4" attackSpeed="253" range="40" />
+			<defence physical="485.1" magical="275" />
 			<hitTime>840</hitTime>
 		</stats>
 		<status attackable="true" />
@@ -1455,33 +1456,33 @@
 		</collision>
 		<dropLists>
 			<drop>
-				<item id="57" min="7895" max="18441" chance="70" /> <!-- Adena -->
-				<item id="2133" min="1" max="1" chance="4.635" /> <!-- Gemstone (A-grade) -->
-				<item id="90012" min="1" max="1" chance="2.469" /> <!-- Common Life Stone -->
+				<item id="57" min="5896" max="13770" chance="70" /> <!-- Adena -->
+				<item id="2133" min="1" max="1" chance="1.735" /> <!-- Gemstone (A-grade) -->
+				<item id="90012" min="1" max="1" chance="1.869" /> <!-- Common Life Stone -->
 				<item id="90013" min="1" max="1" chance="0.75" /> <!-- Mid-grade Life Stone -->
 			</drop>
 			<spoil>
-				<item id="1887" min="1" max="1" chance="69.16" /> <!-- Varnish of Purity -->
-				<item id="948" min="1" max="1" chance="13.83" /> <!-- Scroll: Enchant Armor (B-grade) -->
+				<item id="1887" min="1" max="1" chance="52.16" /> <!-- Varnish of Purity -->
+				<item id="948" min="1" max="1" chance="9.83" /> <!-- Scroll: Enchant Armor (B-grade) -->
 			</spoil>
 		</dropLists>
 	</npc>
-	<npc id="24040" level="75" type="Monster" name="Midnight Nightmare" title="Zaken's Minion">
+	<npc id="24040" level="75" type="Monster" name="Midnight Nightmare" title="Zaken's Minion" element="FIRE">
 		<parameters>
 			<param name="MoveAroundSocial" value="0" />
 			<param name="MoveAroundSocial1" value="0" />
 			<param name="MoveAroundSocial2" value="0" />
 		</parameters>
 		<race>DEMONIC</race>
-		<acquire exp="185062" sp="5551" />
+		<acquire exp="185062" sp="5551" attributeExp="41" />
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="2197.2494066667" hpRegen="8.5" mp="2465.61" mpRegen="3" />
+			<vitals hp="1787.75" hpRegen="8.5" mp="2465.61" mpRegen="3" />
 			<speed>
 				<walk ground="30" />
 				<run ground="180" />
 			</speed>
-			<attack physical="18734.1" magical="2034.9" critical="4" attackSpeed="253" range="40" />
-			<defence physical="8028.9" magical="1130.5" />
+			<attack physical="300.9" magical="180.2" random="30" critical="4" attackSpeed="253" range="40" />
+			<defence physical="495.1" magical="285" />
 			<hitTime>840</hitTime>
 		</stats>
 		<status attackable="true" />
@@ -1499,12 +1500,12 @@
 		</collision>
 		<dropLists>
 			<drop>
-				<item id="57" min="20427" max="47712" chance="70" /> <!-- Adena -->
-				<item id="2133" min="1" max="1" chance="11.62" /> <!-- Gemstone (A-grade) -->
-				<item id="90045" min="1" max="1" chance="8.299" /> <!-- Magical Tablet -->
+				<item id="57" min="16756" max="39138" chance="70" /> <!-- Adena -->
+				<item id="2133" min="1" max="1" chance="4.82" /> <!-- Gemstone (A-grade) -->
+				<item id="90045" min="1" max="1" chance="3.399" /> <!-- Magical Tablet -->
 			</drop>
 			<spoil>
-				<item id="1887" min="1" max="1" chance="90.8" /> <!-- Varnish of Purity -->
+				<item id="1887" min="1" max="1" chance="72.8" /> <!-- Varnish of Purity -->
 				<item id="729" min="1" max="1" chance="0.75" /> <!-- Scroll: Enchant Weapon (A-grade) -->
 			</spoil>
 		</dropLists>
@@ -1523,8 +1524,8 @@
 				<walk ground="25" />
 				<run ground="180" />
 			</speed>
-			<attack physical="4362.4" magical="1859.4" critical="4" attackSpeed="253" range="40" />
-			<defence physical="1869.6" magical="1033" />
+			<attack physical="872.4" magical="370.45" critical="4" attackSpeed="253" range="40" />
+			<defence physical="934.6" magical="516.5" />
 			<hitTime>840</hitTime>
 		</stats>
 		<status attackable="true" />
@@ -1550,8 +1551,8 @@
 				<walk ground="60" />
 				<run ground="180" />
 			</speed>
-			<attack physical="4362.4" magical="1859.4" critical="4" attackSpeed="253" range="40" />
-			<defence physical="1869.6" magical="1033" />
+			<attack physical="872.4" magical="370.45" critical="4" attackSpeed="253" range="40" />
+			<defence physical="934.6" magical="516.5" />
 			<hitTime>840</hitTime>
 		</stats>
 		<status attackable="true" />
@@ -1569,8 +1570,8 @@
 		<acquire exp="0" sp="0" />
 		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
 			<vitals hp="1227.85535" hpRegen="8.5" mp="2253.21" mpRegen="3" />
-			<attack physical="710.2185" magical="484.98717" random="30" critical="4.75" accuracy="4.75" attackSpeed="250" type="SWORD" range="40" distance="80" width="120" />
-			<defence physical="300.65359" magical="220.00525" />
+			<attack physical="872.4" magical="370.45" critical="4" attackSpeed="253" range="40" />
+			<defence physical="934.6" magical="516.5" />
 			<speed>
 				<walk ground="25" />
 				<run ground="180" />
@@ -1599,8 +1600,8 @@
 				<walk ground="30" />
 				<run ground="180" />
 			</speed>
-			<attack physical="23029.3" magical="1990.8" critical="4" attackSpeed="253" range="40" />
-			<defence physical="9869.7" magical="1106" />
+			<attack physical="773.81598" magical="528.41601" random="30" critical="4.75" accuracy="4.75" attackSpeed="250" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="314.65987" magical="230.25444" />
 			<hitTime>840</hitTime>
 		</stats>
 		<status attackable="true" />
@@ -1636,18 +1637,18 @@
 			<skill id="4408" level="13" /> <!-- HP Increase (5x) -->
 		</skillList>
 	</npc>
-	<npc id="24046" level="70" type="Monster" name="Floating Eye Seer">
+	<npc id="24046" level="70" type="Monster" name="Floating Eye Seer" element="FIRE">
 		<!-- Source: www.l2wiki.com -->
 		<race>ETC</race> <!-- TODO: Magic Creatures -->
-		<acquire exp="14700" sp="441" />
+		<acquire exp="14700" sp="441" attributeExp="30" />
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="1204.20959" hpRegen="7.5" mp="2200.995" mpRegen="2.7" />
+			<vitals hp="979.76" hpRegen="7.5" mp="2200.995" mpRegen="2.7" />
 			<speed>
 				<walk ground="90" />
 				<run ground="180" />
 			</speed>
-			<attack physical="4277.7" magical="1816.2" critical="4" attackSpeed="253" range="40" />
-			<defence physical="1833.3" magical="1009" />
+			<attack physical="227.7" magical="110.2" critical="4" attackSpeed="253" range="40" />
+			<defence physical="416.3" magical="304" />
 		</stats>
 		<status attackable="true" />
 		<skillList>
@@ -1675,18 +1676,18 @@
 			</spoil>
 		</dropLists>
 	</npc>
-	<npc id="24047" level="71" type="Monster" name="Floating Eye Seer" title="Shadow Curse">
+	<npc id="24047" level="71" type="Monster" name="Floating Eye Seer" title="Shadow Curse" element="FIRE">
 		<!-- Source: www.l2wiki.com -->
 		<race>ETC</race> <!-- TODO: Magic Creatures -->
-		<acquire exp="15123" sp="453" />
+		<acquire exp="15123" sp="453" attributeExp="32" />
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="1227.85535" hpRegen="8.5" mp="2253.21" mpRegen="3" />
+			<vitals hp="999.16" hpRegen="8.5" mp="2253.21" mpRegen="3" />
 			<speed>
 				<walk ground="90" />
 				<run ground="180" />
 			</speed>
-			<attack physical="4362.4" magical="1859.4" critical="4" attackSpeed="253" range="40" />
-			<defence physical="1869.6" magical="1033" />
+			<attack physical="237.7" magical="120.2" critical="4" attackSpeed="253" range="40" />
+			<defence physical="429.3" magical="314" />
 		</stats>
 		<status attackable="true" />
 		<skillList>
@@ -1715,22 +1716,22 @@
 			</spoil>
 		</dropLists>
 	</npc>
-	<npc id="24048" level="71" type="Monster" name="Immortal Spirit">
+	<npc id="24048" level="71" type="Monster" name="Immortal Spirit" element="FIRE">
 		<parameters>
 			<param name="MoveAroundSocial" value="0" />
 			<param name="MoveAroundSocial1" value="0" />
 			<param name="MoveAroundSocial2" value="0" />
 		</parameters>
 		<race>HUMAN</race>
-		<acquire exp="15123" sp="453" />
+		<acquire exp="15123" sp="453" attributeExp="32" />
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="1227.85535" hpRegen="8.5" mp="2253.21" mpRegen="3" />
+			<vitals hp="999.16" hpRegen="8.5" mp="2253.21" mpRegen="3" />
+			<attack physical="237.7" magical="120.2" critical="4" attackSpeed="253" range="40" />
+			<defence physical="429.3" magical="314" />
 			<speed>
 				<walk ground="40" />
 				<run ground="180" />
 			</speed>
-			<attack physical="4362.4" magical="1859.4" critical="4" attackSpeed="253" range="40" />
-			<defence physical="1869.6" magical="1033" />
 			<hitTime>840</hitTime>
 		</stats>
 		<status attackable="true" />
@@ -1756,18 +1757,18 @@
 			</spoil>
 		</dropLists>
 	</npc>
-	<npc id="24049" level="72" type="Monster" name="Immortal Spirit" title="Shadow Curse">
+	<npc id="24049" level="72" type="Monster" name="Immortal Spirit" title="Shadow Curse" element="FIRE">
 		<!-- Source: www.l2wiki.com -->
 		<race>HUMAN</race>
-		<acquire exp="15549" sp="466" />
+		<acquire exp="15549" sp="466" attributeExp="34" />
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="1251.2548" hpRegen="8.5" mp="2306.31" mpRegen="3" />
+			<vitals hp="1018.16" hpRegen="8.5" mp="2306.31" mpRegen="3" />
 			<speed>
 				<walk ground="40" />
 				<run ground="180" />
 			</speed>
-			<attack physical="4445.7" magical="1903.5" critical="4" attackSpeed="253" range="40" />
-			<defence physical="1905.3" magical="1057.5" />
+			<attack physical="247.7" magical="130.2" critical="4" attackSpeed="253" range="40" />
+			<defence physical="440.3" magical="324" />
 		</stats>
 		<status attackable="true" />
 		<skillList>
@@ -1790,22 +1791,22 @@
 			</spoil>
 		</dropLists>
 	</npc>
-	<npc id="24050" level="71" type="Monster" name="Starving Spirit">
+	<npc id="24050" level="71" type="Monster" name="Starving Spirit" element="FIRE">
 		<parameters>
 			<param name="MoveAroundSocial" value="0" />
 			<param name="MoveAroundSocial1" value="0" />
 			<param name="MoveAroundSocial2" value="0" />
 		</parameters>
 		<race>DIVINE</race>
-		<acquire exp="15123" sp="453" />
+		<acquire exp="15123" sp="453" attributeExp="32" />
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="1227.85535" hpRegen="8.5" mp="2253.21" mpRegen="3" />
+			<vitals hp="999.16" hpRegen="8.5" mp="2253.21" mpRegen="3" />
 			<speed>
 				<walk ground="70" />
 				<run ground="180" />
 			</speed>
-			<attack physical="4362.4" magical="1859.4" critical="4" attackSpeed="253" range="40" />
-			<defence physical="1869.6" magical="1033" />
+			<attack physical="237.7" magical="120.2" critical="4" attackSpeed="253" range="40" />
+			<defence physical="429.3" magical="314" />
 			<hitTime>840</hitTime>
 		</stats>
 		<status attackable="true" />
@@ -1842,18 +1843,17 @@
 			</spoil>
 		</dropLists>
 	</npc>
-	<npc id="24051" level="72" type="Monster" name="Starving Spirit" title="Shadow Curse">
-		<!-- Source: www.l2wiki.com -->
+	<npc id="24051" level="72" type="Monster" name="Starving Spirit" title="Shadow Curse" element="FIRE">
 		<race>UNDEAD</race>
-		<acquire exp="15549" sp="466" />
+		<acquire exp="15549" sp="466" attributeExp="34" />
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="1251.2548" hpRegen="8.5" mp="2306.31" mpRegen="3" />
+			<vitals hp="1018.16" hpRegen="8.5" mp="2306.31" mpRegen="3" />
 			<speed>
 				<walk ground="39" />
 				<run ground="180" />
 			</speed>
-			<attack physical="4445.7" magical="1903.5" critical="4" attackSpeed="253" range="40" />
-			<defence physical="1905.3" magical="1057.5" />
+			<attack physical="247.7" magical="130.2" critical="4" attackSpeed="253" range="40" />
+			<defence physical="440.3" magical="324" />
 		</stats>
 		<status attackable="true" />
 		<skillList>
@@ -1879,22 +1879,22 @@
 			</spoil>
 		</dropLists>
 	</npc>
-	<npc id="24052" level="72" type="Monster" name="Starving Soldier">
+	<npc id="24052" level="72" type="Monster" name="Starving Soldier" element="FIRE">
 		<parameters>
 			<param name="MoveAroundSocial" value="0" />
 			<param name="MoveAroundSocial1" value="0" />
 			<param name="MoveAroundSocial2" value="0" />
 		</parameters>
 		<race>DIVINE</race>
-		<acquire exp="15549" sp="466" />
+		<acquire exp="15549" sp="466" attributeExp="34" />
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="1251.2548" hpRegen="8.5" mp="2306.31" mpRegen="3" />
+			<vitals hp="1018.16" hpRegen="8.5" mp="2306.31" mpRegen="3" />
 			<speed>
 				<walk ground="61" />
 				<run ground="180" />
 			</speed>
-			<attack physical="4445.7" magical="1903.5" critical="4" attackSpeed="253" range="40" />
-			<defence physical="1905.3" magical="1057.5" />
+			<attack physical="247.7" magical="130.2" critical="4" attackSpeed="253" range="40" />
+			<defence physical="440.3" magical="324" />
 			<hitTime>840</hitTime>
 		</stats>
 		<status attackable="true" />
@@ -1927,19 +1927,18 @@
 			</spoil>
 		</dropLists>
 	</npc>
-	<npc id="24053" level="73" type="Monster" name="Starving Soldier" title="Shadow Curse">
-		<!-- Source: www.l2wiki.com -->
+	<npc id="24053" level="73" type="Monster" name="Starving Soldier" title="Shadow Curse" element="FIRE">
 		<race>UNDEAD</race>
-		<acquire exp="15987" sp="479" />
+		<acquire exp="15987" sp="479" attributeExp="36" />
 		<equipment rhand="47716" />
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="1274.16163" hpRegen="8.5" mp="2358.525" mpRegen="3" />
+			<vitals hp="1036.68" hpRegen="8.5" mp="2358.525" mpRegen="3" />
 			<speed>
 				<walk ground="40" />
 				<run ground="180" />
 			</speed>
-			<attack physical="4526.2" magical="1946.7" critical="4" attackSpeed="253" range="40" />
-			<defence physical="1939.8" magical="1081.5" />
+			<attack physical="257.7" magical="140.2" critical="4" attackSpeed="253" range="40" />
+			<defence physical="450.3" magical="334" />
 		</stats>
 		<status attackable="true" />
 		<skillList>
@@ -1965,22 +1964,22 @@
 			</spoil>
 		</dropLists>
 	</npc>
-	<npc id="24054" level="73" type="Monster" name="Starving Warrior">
+	<npc id="24054" level="73" type="Monster" name="Starving Warrior" element="FIRE">
 		<parameters>
 			<param name="MoveAroundSocial" value="0" />
 			<param name="MoveAroundSocial1" value="0" />
 			<param name="MoveAroundSocial2" value="0" />
 		</parameters>
 		<race>HUMAN</race>
-		<acquire exp="15987" sp="479" />
+		<acquire exp="15987" sp="479" attributeExp="36" />
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="1274.16163" hpRegen="8.5" mp="2358.525" mpRegen="3" />
+			<vitals hp="1036.68" hpRegen="8.5" mp="2358.525" mpRegen="3" />
 			<speed>
 				<walk ground="40" />
 				<run ground="180" />
 			</speed>
-			<attack physical="4526.2" magical="1946.7" critical="4" attackSpeed="253" range="40" />
-			<defence physical="1939.8" magical="1081.5" />
+			<attack physical="257.7" magical="140.2" critical="4" attackSpeed="253" range="40" />
+			<defence physical="450.3" magical="334" />
 			<hitTime>840</hitTime>
 		</stats>
 		<status attackable="true" />
@@ -2011,18 +2010,18 @@
 			</spoil>
 		</dropLists>
 	</npc>
-	<npc id="24055" level="74" type="Monster" name="Starving Warrior" title="Shadow Curse">
+	<npc id="24055" level="74" type="Monster" name="Starving Warrior" title="Shadow Curse" element="FIRE">
 		<!-- Source: www.l2wiki.com -->
 		<race>UNDEAD</race>
-		<acquire exp="16428" sp="492" />
+		<acquire exp="16428" sp="492" attributeExp="38" />
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="1296.32953" hpRegen="8.5" mp="2412.51" mpRegen="3" />
+			<vitals hp="1054.82" hpRegen="8.5" mp="2412.51" mpRegen="3" />
 			<speed>
 				<walk ground="39" />
 				<run ground="180" />
 			</speed>
-			<attack physical="4606" magical="1990.8" critical="4" attackSpeed="253" range="40" />
-			<defence physical="1974" magical="1106" />
+			<attack physical="267.7" magical="150.2" critical="4" attackSpeed="253" range="40" />
+			<defence physical="460.3" magical="344" />
 		</stats>
 		<status attackable="true" />
 		<skillList>
