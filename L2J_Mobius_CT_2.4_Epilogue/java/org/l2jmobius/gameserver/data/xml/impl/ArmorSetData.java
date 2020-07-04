@@ -17,8 +17,10 @@
 package org.l2jmobius.gameserver.data.xml.impl;
 
 import java.io.File;
+import java.util.Collections;
+import java.util.HashMap;
 import java.util.Map;
-import java.util.concurrent.ConcurrentHashMap;
+import java.util.Map.Entry;
 
 import org.w3c.dom.Document;
 import org.w3c.dom.NamedNodeMap;
@@ -34,7 +36,8 @@ import org.l2jmobius.gameserver.model.holders.SkillHolder;
  */
 public class ArmorSetData implements IXmlReader
 {
-	private final Map<Integer, ArmorSet> _armorSets = new ConcurrentHashMap<>();
+	private ArmorSet[] _armorSets;
+	private final Map<Integer, ArmorSet> _armorSetMap = new HashMap<>();
 	
 	/**
 	 * Instantiates a new armor sets data.
@@ -47,9 +50,16 @@ public class ArmorSetData implements IXmlReader
 	@Override
 	public void load()
 	{
-		_armorSets.clear();
 		parseDatapackDirectory("data/stats/armorsets", false);
-		LOGGER.info(getClass().getSimpleName() + ": Loaded " + _armorSets.size() + " armor sets.");
+		
+		_armorSets = new ArmorSet[Collections.max(_armorSetMap.keySet()) + 1];
+		for (Entry<Integer, ArmorSet> armorSet : _armorSetMap.entrySet())
+		{
+			_armorSets[armorSet.getKey()] = armorSet.getValue();
+		}
+		
+		LOGGER.info(getClass().getSimpleName() + ": Loaded " + _armorSetMap.size() + " armor sets.");
+		_armorSetMap.clear();
 	}
 	
 	@Override
@@ -152,7 +162,7 @@ public class ArmorSetData implements IXmlReader
 								}
 							}
 						}
-						_armorSets.put(set.getChestId(), set);
+						_armorSetMap.put(set.getChestId(), set);
 					}
 				}
 			}
@@ -166,7 +176,7 @@ public class ArmorSetData implements IXmlReader
 	 */
 	public boolean isArmorSet(int chestId)
 	{
-		return _armorSets.containsKey(chestId);
+		return _armorSets[chestId] != null;
 	}
 	
 	/**
@@ -176,7 +186,7 @@ public class ArmorSetData implements IXmlReader
 	 */
 	public ArmorSet getSet(int chestId)
 	{
-		return _armorSets.get(chestId);
+		return _armorSets[chestId];
 	}
 	
 	/**

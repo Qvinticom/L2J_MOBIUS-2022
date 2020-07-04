@@ -17,8 +17,10 @@
 package org.l2jmobius.gameserver.datatables.xml;
 
 import java.io.File;
+import java.util.Collections;
 import java.util.HashMap;
 import java.util.Map;
+import java.util.Map.Entry;
 import java.util.logging.Logger;
 
 import org.w3c.dom.Document;
@@ -36,7 +38,7 @@ public class ArmorSetData implements IXmlReader
 {
 	private static final Logger LOGGER = Logger.getLogger(ArmorSetData.class.getName());
 	
-	public Map<Integer, ArmorSet> _armorSets = new HashMap<>();
+	private ArmorSet[] _armorSets;
 	
 	private ArmorSetData()
 	{
@@ -47,12 +49,13 @@ public class ArmorSetData implements IXmlReader
 	public void load()
 	{
 		parseDatapackFile("data/ArmorSets.xml");
-		LOGGER.info(getClass().getSimpleName() + ": Loaded " + _armorSets.size() + " armor sets.");
 	}
 	
 	@Override
 	public void parseDocument(Document doc, File f)
 	{
+		final Map<Integer, ArmorSet> armorSets = new HashMap<>();
+		
 		// StatsSet used to feed informations. Cleaned on every entry.
 		final StatSet set = new StatSet();
 		
@@ -75,18 +78,27 @@ public class ArmorSetData implements IXmlReader
 			
 			// Feed the map with new data.
 			final int chestId = set.getInt("chest");
-			_armorSets.put(chestId, new ArmorSet(chestId, set.getInt("legs"), set.getInt("head"), set.getInt("gloves"), set.getInt("feet"), set.getInt("skillId"), set.getInt("shield"), set.getInt("shieldSkillId"), set.getInt("enchant6Skill")));
+			armorSets.put(chestId, new ArmorSet(chestId, set.getInt("legs"), set.getInt("head"), set.getInt("gloves"), set.getInt("feet"), set.getInt("skillId"), set.getInt("shield"), set.getInt("shieldSkillId"), set.getInt("enchant6Skill")));
 		}
+		
+		_armorSets = new ArmorSet[Collections.max(armorSets.keySet()) + 1];
+		for (Entry<Integer, ArmorSet> armorSet : armorSets.entrySet())
+		{
+			_armorSets[armorSet.getKey()] = armorSet.getValue();
+		}
+		
+		LOGGER.info(getClass().getSimpleName() + ": Loaded " + armorSets.size() + " armor sets.");
+		armorSets.clear();
 	}
 	
 	public boolean setExists(int chestId)
 	{
-		return _armorSets.containsKey(chestId);
+		return _armorSets[chestId] != null;
 	}
 	
 	public ArmorSet getSet(int chestId)
 	{
-		return _armorSets.get(chestId);
+		return _armorSets[chestId];
 	}
 	
 	public static ArmorSetData getInstance()

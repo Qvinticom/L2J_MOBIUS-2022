@@ -20,12 +20,13 @@ import java.io.File;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.Collections;
+import java.util.HashMap;
 import java.util.LinkedHashMap;
 import java.util.LinkedHashSet;
 import java.util.List;
 import java.util.Map;
+import java.util.Map.Entry;
 import java.util.Set;
-import java.util.concurrent.ConcurrentHashMap;
 import java.util.logging.Logger;
 import java.util.stream.Stream;
 
@@ -48,8 +49,9 @@ public class ArmorSetData implements IXmlReader
 {
 	private static final Logger LOGGER = Logger.getLogger(ArmorSetData.class.getName());
 	
-	private final Map<Integer, ArmorSet> _armorSets = new ConcurrentHashMap<>();
-	private final Map<Integer, List<ArmorSet>> _armorSetItems = new ConcurrentHashMap<>();
+	private ArmorSet[] _armorSets;
+	private final Map<Integer, ArmorSet> _armorSetMap = new HashMap<>();
+	private final Map<Integer, List<ArmorSet>> _armorSetItems = new HashMap<>();
 	
 	protected ArmorSetData()
 	{
@@ -59,9 +61,16 @@ public class ArmorSetData implements IXmlReader
 	@Override
 	public void load()
 	{
-		_armorSets.clear();
 		parseDatapackDirectory("data/stats/armorsets", false);
-		LOGGER.info(getClass().getSimpleName() + ": Loaded " + _armorSets.size() + " armor sets.");
+		
+		_armorSets = new ArmorSet[Collections.max(_armorSetMap.keySet()) + 1];
+		for (Entry<Integer, ArmorSet> armorSet : _armorSetMap.entrySet())
+		{
+			_armorSets[armorSet.getKey()] = armorSet.getValue();
+		}
+		
+		LOGGER.info(getClass().getSimpleName() + ": Loaded " + _armorSetMap.size() + " armor sets.");
+		_armorSetMap.clear();
 	}
 	
 	@Override
@@ -151,7 +160,7 @@ public class ArmorSetData implements IXmlReader
 						}
 						
 						final ArmorSet set = new ArmorSet(id, minimumPieces, isVisual, requiredItems, optionalItems, skills, stats);
-						if (_armorSets.putIfAbsent(id, set) != null)
+						if (_armorSetMap.putIfAbsent(id, set) != null)
 						{
 							LOGGER.warning("Duplicate set entry with id: " + id + " in file: " + f.getName());
 						}
@@ -169,7 +178,7 @@ public class ArmorSetData implements IXmlReader
 	 */
 	public ArmorSet getSet(int setId)
 	{
-		return _armorSets.get(setId);
+		return _armorSets[setId];
 	}
 	
 	/**
