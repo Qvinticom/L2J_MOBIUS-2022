@@ -269,12 +269,6 @@ public abstract class AbstractOlympiadGame
 			
 			player.checkItemRestriction();
 			
-			// Remove shot automation
-			player.disableAutoShotsAll();
-			
-			// Discharge any active shots
-			player.unchargeAllShots();
-			
 			// enable skills with cool time <= 15 minutes
 			for (Skill skill : player.getAllSkills())
 			{
