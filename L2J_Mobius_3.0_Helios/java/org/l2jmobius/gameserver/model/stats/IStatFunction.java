@@ -92,10 +92,7 @@ public interface IStatFunction
 			final Inventory inv = creature.getInventory();
 			if (inv != null)
 			{
-				for (ItemInstance item : inv.getPaperdollItems())
-				{
-					baseValue += item.getItem().getStats(stat, 0);
-				}
+				baseValue += inv.getPaperdollCache().getStats(stat);
 			}
 		}
 		

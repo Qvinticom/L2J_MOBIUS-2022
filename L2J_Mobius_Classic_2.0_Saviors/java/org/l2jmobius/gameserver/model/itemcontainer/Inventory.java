@@ -33,6 +33,7 @@ import java.util.logging.Logger;
 import org.l2jmobius.Config;
 import org.l2jmobius.commons.database.DatabaseFactory;
 import org.l2jmobius.commons.util.CommonUtil;
+import org.l2jmobius.gameserver.cache.PaperdollCache;
 import org.l2jmobius.gameserver.data.xml.impl.AppearanceItemData;
 import org.l2jmobius.gameserver.data.xml.impl.ArmorSetData;
 import org.l2jmobius.gameserver.datatables.ItemTable;
@@ -123,6 +124,7 @@ public abstract class Inventory extends ItemContainer
 	
 	private final ItemInstance[] _paperdoll;
 	private final List<PaperdollListener> _paperdollListeners;
+	private final PaperdollCache _paperdollCache = new PaperdollCache();
 	
 	// protected to be accessed from child classes only
 	protected int _totalWeight;
@@ -1209,6 +1211,8 @@ public abstract class Inventory extends ItemContainer
 			if (old != null)
 			{
 				_paperdoll[slot] = null;
+				_paperdollCache.getPaperdollItems().remove(old);
+				
 				// Put old item from paperdoll slot to base location
 				old.setItemLocation(getBaseLocation());
 				old.setLastChange(ItemInstance.MODIFIED);
@@ -1239,6 +1243,8 @@ public abstract class Inventory extends ItemContainer
 			if (item != null)
 			{
 				_paperdoll[slot] = item;
+				_paperdollCache.getPaperdollItems().add(item);
+				
 				item.setItemLocation(getEquipLocation(), slot);
 				item.setLastChange(ItemInstance.MODIFIED);
 				_wearedMask |= item.getItem().getItemMask();
@@ -1254,6 +1260,7 @@ public abstract class Inventory extends ItemContainer
 				item.updateDatabase();
 			}
 			
+			_paperdollCache.clearCachedStats();
 			getOwner().getStat().recalculateStats(!getOwner().isPlayer());
 			
 			if (getOwner().isPlayer())
@@ -2126,19 +2133,7 @@ public abstract class Inventory extends ItemContainer
 		}
 		
 		final PlayerInstance player = getOwner().getActingPlayer();
-		int maxSetEnchant = 0;
-		for (ItemInstance item : getPaperdollItems())
-		{
-			for (ArmorSet set : ArmorSetData.getInstance().getSets(item.getId()))
-			{
-				final int enchantEffect = set.getLowestSetEnchant(player);
-				if (enchantEffect > maxSetEnchant)
-				{
-					maxSetEnchant = enchantEffect;
-				}
-			}
-		}
-		return maxSetEnchant;
+		return _paperdollCache.getMaxSetEnchant(player);
 	}
 	
 	public int getWeaponEnchant()
@@ -2202,6 +2197,11 @@ public abstract class Inventory extends ItemContainer
 	@SafeVarargs
 	public final Collection<ItemInstance> getPaperdollItems(Predicate<ItemInstance>... filters)
 	{
+		if (filters.length == 0)
+		{
+			return _paperdollCache.getPaperdollItems();
+		}
+		
 		Predicate<ItemInstance> filter = Objects::nonNull;
 		for (Predicate<ItemInstance> additionalFilter : filters)
 		{
@@ -2222,6 +2222,11 @@ public abstract class Inventory extends ItemContainer
 	@SafeVarargs
 	public final int getPaperdollItemCount(Predicate<ItemInstance>... filters)
 	{
+		if (filters.length == 0)
+		{
+			return _paperdollCache.getPaperdollItems().size();
+		}
+		
 		Predicate<ItemInstance> filter = Objects::nonNull;
 		for (Predicate<ItemInstance> additionalFilter : filters)
 		{
@@ -2237,5 +2242,10 @@ public abstract class Inventory extends ItemContainer
 			}
 		}
 		return count;
+	}
+	
+	public PaperdollCache getPaperdollCache()
+	{
+		return _paperdollCache;
 	}
 }

@@ -16,15 +16,10 @@
  */
 package org.l2jmobius.gameserver.model.stats.finalizers;
 
-import java.util.HashSet;
 import java.util.OptionalDouble;
-import java.util.Set;
 
-import org.l2jmobius.gameserver.data.xml.impl.ArmorSetData;
-import org.l2jmobius.gameserver.model.ArmorSet;
 import org.l2jmobius.gameserver.model.actor.Creature;
 import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
-import org.l2jmobius.gameserver.model.items.instance.ItemInstance;
 import org.l2jmobius.gameserver.model.stats.BaseStat;
 import org.l2jmobius.gameserver.model.stats.IStatFunction;
 import org.l2jmobius.gameserver.model.stats.Stat;
@@ -46,19 +41,9 @@ public class BaseStatFinalizer implements IStatFunction
 		if (creature.isPlayer())
 		{
 			final PlayerInstance player = creature.getActingPlayer();
-			final Set<ArmorSet> appliedSets = new HashSet<>(2);
 			
 			// Armor sets calculation
-			for (ItemInstance item : player.getInventory().getPaperdollItems())
-			{
-				for (ArmorSet set : ArmorSetData.getInstance().getSets(item.getId()))
-				{
-					if ((set.getPiecesCountById(player) >= set.getMinimumPieces()) && appliedSets.add(set))
-					{
-						baseValue += set.getStatsBonus(BaseStat.valueOf(stat));
-					}
-				}
-			}
+			baseValue += player.getInventory().getPaperdollCache().getBaseStatValue(player, BaseStat.valueOf(stat));
 			
 			// Henna calculation
 			baseValue += player.getHennaValue(BaseStat.valueOf(stat));

@@ -38,6 +38,8 @@ public enum BaseStat
 	CON(Stat.STAT_CON),
 	MEN(Stat.STAT_MEN);
 	
+	private static final BaseStat[] VALUES = BaseStat.values();
+	
 	public static final int MAX_STAT_VALUE = 201;
 	
 	private final double[] _bonus = new double[MAX_STAT_VALUE];
@@ -90,7 +92,7 @@ public enum BaseStat
 	
 	public static BaseStat valueOf(Stat stat)
 	{
-		for (BaseStat baseStat : values())
+		for (BaseStat baseStat : VALUES)
 		{
 			if (baseStat.getStat() == stat)
 			{
