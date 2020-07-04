@@ -57,12 +57,12 @@ public final class PaperdollCache
 		_maxSetEnchant = -1;
 	}
 	
-	public double getBaseStatValue(PlayerInstance player, final BaseStat stat)
+	public double getBaseStatValue(PlayerInstance player, BaseStat stat)
 	{
 		final Double baseStatValue = _baseStatValues.get(stat);
 		if (baseStatValue != null)
 		{
-			return baseStatValue;
+			return baseStatValue.doubleValue();
 		}
 		
 		final Set<ArmorSet> appliedSets = new HashSet<>(2);
@@ -112,7 +112,7 @@ public final class PaperdollCache
 		final Double statValue = _statValues.get(stat);
 		if (statValue != null)
 		{
-			return statValue;
+			return statValue.doubleValue();
 		}
 		
 		double value = 0;
