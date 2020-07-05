@@ -69,6 +69,7 @@ import org.l2jmobius.gameserver.network.serverpackets.ExAdenaInvenCount;
 import org.l2jmobius.gameserver.network.serverpackets.ExAutoSoulShot;
 import org.l2jmobius.gameserver.network.serverpackets.ExBasicActionList;
 import org.l2jmobius.gameserver.network.serverpackets.ExBeautyItemList;
+import org.l2jmobius.gameserver.network.serverpackets.ExEnterWorld;
 import org.l2jmobius.gameserver.network.serverpackets.ExGetBookMarkInfoPacket;
 import org.l2jmobius.gameserver.network.serverpackets.ExNoticePostArrived;
 import org.l2jmobius.gameserver.network.serverpackets.ExNotifyPremiumItem;
@@ -311,6 +312,9 @@ public class EnterWorld implements IClientIncomingPacket
 		{
 			player.sendPacket(new ExVitalityEffectInfo(player));
 		}
+		
+		// Send time.
+		player.sendPacket(new ExEnterWorld());
 		
 		// Send Macro List
 		player.getMacros().sendAllMacros();
