@@ -206,19 +206,22 @@ public class TeleportHolder
 		}
 		
 		// Check if castle is in siege
-		for (int castleId : loc.getCastleId())
+		if (!Config.TELEPORT_WHILE_SIEGE_IN_PROGRESS)
 		{
-			if (CastleManager.getInstance().getCastleById(castleId).getSiege().isInProgress())
+			for (int castleId : loc.getCastleId())
 			{
-				player.sendPacket(SystemMessageId.YOU_CANNOT_TELEPORT_TO_A_VILLAGE_THAT_IS_IN_A_SIEGE);
-				return;
+				if (CastleManager.getInstance().getCastleById(castleId).getSiege().isInProgress())
+				{
+					player.sendPacket(SystemMessageId.YOU_CANNOT_TELEPORT_TO_A_VILLAGE_THAT_IS_IN_A_SIEGE);
+					return;
+				}
 			}
 		}
 		
 		// Validate conditions for NORMAL teleport
 		if (isNormalTeleport())
 		{
-			if (npc.getCastle().getSiege().isInProgress())
+			if (!Config.TELEPORT_WHILE_SIEGE_IN_PROGRESS && npc.getCastle().getSiege().isInProgress())
 			{
 				final NpcHtmlMessage msg = new NpcHtmlMessage(npc.getObjectId());
 				msg.setFile(player, "data/html/teleporter/castleteleporter-busy.htm");

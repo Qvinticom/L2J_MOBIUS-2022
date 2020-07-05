@@ -63,11 +63,14 @@ public class ExRequestTeleport implements IClientIncomingPacket
 			return;
 		}
 		
-		final Castle castle = CastleManager.getInstance().getCastle(teleport.getX(), teleport.getY(), teleport.getZ());
-		if ((castle != null) && castle.getSiege().isInProgress())
+		if (!Config.TELEPORT_WHILE_SIEGE_IN_PROGRESS)
 		{
-			player.sendPacket(SystemMessageId.YOU_CANNOT_TELEPORT_TO_A_VILLAGE_THAT_IS_IN_A_SIEGE);
-			return;
+			final Castle castle = CastleManager.getInstance().getCastle(teleport.getX(), teleport.getY(), teleport.getZ());
+			if ((castle != null) && castle.getSiege().isInProgress())
+			{
+				player.sendPacket(SystemMessageId.YOU_CANNOT_TELEPORT_TO_A_VILLAGE_THAT_IS_IN_A_SIEGE);
+				return;
+			}
 		}
 		
 		if (player.getLevel() > Config.MAX_FREE_TELEPORT_LEVEL)
