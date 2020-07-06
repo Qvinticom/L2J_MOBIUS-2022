@@ -28,6 +28,7 @@ import org.l2jmobius.gameserver.model.actor.stat.PlayerStat;
 import org.l2jmobius.gameserver.model.effects.EffectFlag;
 import org.l2jmobius.gameserver.model.entity.Duel;
 import org.l2jmobius.gameserver.model.skills.AbnormalType;
+import org.l2jmobius.gameserver.model.skills.Skill;
 import org.l2jmobius.gameserver.model.stats.Formulas;
 import org.l2jmobius.gameserver.model.stats.Stat;
 import org.l2jmobius.gameserver.network.SystemMessageId;
@@ -60,16 +61,16 @@ public class PlayerStatus extends PlayableStatus
 	@Override
 	public void reduceHp(double value, Creature attacker)
 	{
-		reduceHp(value, attacker, true, false, false, false);
+		reduceHp(value, attacker, null, true, false, false, false);
 	}
 	
 	@Override
 	public void reduceHp(double value, Creature attacker, boolean awake, boolean isDOT, boolean isHPConsumption)
 	{
-		reduceHp(value, attacker, awake, isDOT, isHPConsumption, false);
+		reduceHp(value, attacker, null, awake, isDOT, isHPConsumption, false);
 	}
 	
-	public void reduceHp(double value, Creature attacker, boolean awake, boolean isDOT, boolean isHPConsumption, boolean ignoreCP)
+	public void reduceHp(double value, Creature attacker, Skill skill, boolean awake, boolean isDOT, boolean isHPConsumption, boolean ignoreCP)
 	{
 		if (getActiveChar().isDead())
 		{
@@ -280,6 +281,11 @@ public class PlayerStatus extends PlayableStatus
 		
 		if (amount > 0)
 		{
+			if ((skill != null) && skill.isBad())
+			{
+				getActiveChar().addDamageTaken(attacker, skill, amount);
+			}
+			
 			double newHp = Math.max(getCurrentHp() - amount, getActiveChar().isUndying() ? 1 : 0);
 			if (newHp <= 0)
 			{

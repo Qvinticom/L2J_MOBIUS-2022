@@ -4587,7 +4587,7 @@ public abstract class Creature extends WorldObject implements ISkillsHolder, IDe
 		}
 		else if (isPlayer())
 		{
-			getActingPlayer().getStatus().reduceHp(amount, attacker, (skill == null) || !skill.isToggle(), isDOT, false, directlyToHp);
+			getActingPlayer().getStatus().reduceHp(amount, attacker, skill, (skill == null) || !skill.isToggle(), isDOT, false, directlyToHp);
 		}
 		else
 		{

@@ -35,6 +35,7 @@ import java.util.Objects;
 import java.util.Set;
 import java.util.concurrent.ConcurrentHashMap;
 import java.util.concurrent.ConcurrentSkipListMap;
+import java.util.concurrent.CopyOnWriteArrayList;
 import java.util.concurrent.Future;
 import java.util.concurrent.ScheduledFuture;
 import java.util.concurrent.TimeUnit;
@@ -219,6 +220,7 @@ import org.l2jmobius.gameserver.model.events.returns.TerminateReturn;
 import org.l2jmobius.gameserver.model.events.timers.TimerHolder;
 import org.l2jmobius.gameserver.model.fishing.Fishing;
 import org.l2jmobius.gameserver.model.holders.AttendanceInfoHolder;
+import org.l2jmobius.gameserver.model.holders.DamageTakenHolder;
 import org.l2jmobius.gameserver.model.holders.ItemHolder;
 import org.l2jmobius.gameserver.model.holders.MonsterBookCardHolder;
 import org.l2jmobius.gameserver.model.holders.MonsterBookRewardHolder;
@@ -288,6 +290,7 @@ import org.l2jmobius.gameserver.network.serverpackets.ExAdenaInvenCount;
 import org.l2jmobius.gameserver.network.serverpackets.ExAlterSkillRequest;
 import org.l2jmobius.gameserver.network.serverpackets.ExAutoSoulShot;
 import org.l2jmobius.gameserver.network.serverpackets.ExBrPremiumState;
+import org.l2jmobius.gameserver.network.serverpackets.ExDieInfo;
 import org.l2jmobius.gameserver.network.serverpackets.ExDuelUpdateUserInfo;
 import org.l2jmobius.gameserver.network.serverpackets.ExGetBookMarkInfoPacket;
 import org.l2jmobius.gameserver.network.serverpackets.ExGetOnAirShip;
@@ -469,6 +472,8 @@ public class PlayerInstance extends Playable
 	
 	/** The PvP Flag state of the PlayerInstance (0=White, 1=Purple) */
 	private byte _pvpFlag;
+	
+	private final List<DamageTakenHolder> _lastDamageTaken = new CopyOnWriteArrayList<>();
 	
 	/** The Fame of this PlayerInstance */
 	private int _fame;
@@ -4742,6 +4747,8 @@ public class PlayerInstance extends Playable
 	@Override
 	public boolean doDie(Creature killer)
 	{
+		Collection<ItemInstance> droppedItems = null;
+		
 		if (killer != null)
 		{
 			final PlayerInstance pk = killer.getActingPlayer();
@@ -4850,7 +4857,7 @@ public class PlayerInstance extends Playable
 				final boolean insidePvpZone = isInsideZone(ZoneId.PVP) || isInsideZone(ZoneId.SIEGE);
 				if ((pk == null) || !pk.isCursedWeaponEquipped())
 				{
-					onDieDropItem(killer); // Check if any item should be dropped
+					droppedItems = onDieDropItem(killer); // Check if any item should be dropped
 					if (!insidePvpZone && (pk != null))
 					{
 						final Clan pkClan = pk.getClan();
@@ -4871,6 +4878,8 @@ public class PlayerInstance extends Playable
 				}
 			}
 		}
+		
+		sendPacket(new ExDieInfo(droppedItems == null ? Collections.emptyList() : droppedItems, _lastDamageTaken));
 		
 		if (isMounted())
 		{
@@ -4916,11 +4925,26 @@ public class PlayerInstance extends Playable
 		return true;
 	}
 	
-	private void onDieDropItem(Creature killer)
+	public void addDamageTaken(Creature attacker, Skill skill, double damage)
 	{
-		if (GameEvent.isParticipant(this) || (killer == null))
+		if (attacker == this)
 		{
 			return;
+		}
+		
+		_lastDamageTaken.add(new DamageTakenHolder(attacker, skill, damage));
+		while (_lastDamageTaken.size() > 10)
+		{
+			_lastDamageTaken.remove(0);
+		}
+	}
+	
+	private Collection<ItemInstance> onDieDropItem(Creature killer)
+	{
+		final List<ItemInstance> droppedItems = new ArrayList<>();
+		if (GameEvent.isParticipant(this) || (killer == null))
+		{
+			return droppedItems;
 		}
 		
 		final PlayerInstance pk = killer.getActingPlayer();
@@ -4928,7 +4952,7 @@ public class PlayerInstance extends Playable
 		// || _clan.isAtWarWith(((PlayerInstance)killer).getClanId())
 		))
 		{
-			return;
+			return droppedItems;
 		}
 		
 		if ((!isInsideZone(ZoneId.PVP) || (pk == null)) && (!isGM() || Config.KARMA_DROP_GM))
@@ -4992,6 +5016,8 @@ public class PlayerInstance extends Playable
 					if (Rnd.get(100) < itemDropPercent)
 					{
 						dropItem("DieDrop", itemDrop, killer, true);
+						droppedItems.add(itemDrop);
+						
 						if (isKarmaDrop)
 						{
 							LOGGER.warning(getName() + " has karma and dropped id = " + itemDrop.getId() + ", count = " + itemDrop.getCount());
@@ -5009,6 +5035,8 @@ public class PlayerInstance extends Playable
 				}
 			}
 		}
+		
+		return droppedItems;
 	}
 	
 	public void onPlayerKill(Playable killedPlayable)
@@ -10077,6 +10105,8 @@ public class PlayerInstance extends Playable
 		{
 			instance.doRevive(this);
 		}
+		
+		_lastDamageTaken.clear();
 	}
 	
 	@Override
