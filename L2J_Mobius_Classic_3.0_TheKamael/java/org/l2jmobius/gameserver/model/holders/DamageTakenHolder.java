@@ -28,11 +28,11 @@ public class DamageTakenHolder
 	private final Skill _skill;
 	private final double _damage;
 	
-	public DamageTakenHolder(Creature creature, Skill skill, double amount)
+	public DamageTakenHolder(Creature creature, Skill skill, double damage)
 	{
 		_creature = creature;
 		_skill = skill;
-		_damage = amount;
+		_damage = damage;
 	}
 	
 	public Creature getCreature()
