@@ -50,16 +50,14 @@ public class ExDieInfo implements IClientOutgoingPacket
 			packet.writeD((int) item.getCount());
 		}
 		
-		boolean first = true; // Missing first character from first name hack.
-		packet.writeH(_lastDamageTaken.size());
+		packet.writeD(_lastDamageTaken.size());
 		for (DamageTakenHolder damageHolder : _lastDamageTaken)
 		{
-			packet.writeS((first ? " " : "") + damageHolder.getCreature().getName());
+			packet.writeS(damageHolder.getCreature().getName());
 			packet.writeH(0x00);
 			packet.writeD(damageHolder.getSkill().getDisplayId());
 			packet.writeF(damageHolder.getDamage());
 			packet.writeD(0x00);
-			first = false;
 		}
 		
 		return true;
