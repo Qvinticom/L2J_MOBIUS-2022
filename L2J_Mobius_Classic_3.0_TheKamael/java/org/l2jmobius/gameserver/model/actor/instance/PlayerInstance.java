@@ -4895,18 +4895,23 @@ public class PlayerInstance extends Playable
 		return true;
 	}
 	
-	public void addDamageTaken(Creature attacker, Skill skill, double damage)
+	public void addDamageTaken(Creature attacker, int skillId, double damage)
 	{
 		if (attacker == this)
 		{
 			return;
 		}
 		
-		_lastDamageTaken.add(new DamageTakenHolder(attacker, skill, damage));
-		while (_lastDamageTaken.size() > 10)
+		_lastDamageTaken.add(new DamageTakenHolder(attacker, skillId, damage));
+		while (_lastDamageTaken.size() > 20)
 		{
 			_lastDamageTaken.remove(0);
 		}
+	}
+	
+	public void clearDamageTaken()
+	{
+		_lastDamageTaken.clear();
 	}
 	
 	private Collection<ItemInstance> onDieDropItem(Creature killer)

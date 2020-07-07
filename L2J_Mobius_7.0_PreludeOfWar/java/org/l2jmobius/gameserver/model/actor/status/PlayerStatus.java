@@ -281,10 +281,7 @@ public class PlayerStatus extends PlayableStatus
 		
 		if (amount > 0)
 		{
-			if ((skill != null) && skill.isBad())
-			{
-				getActiveChar().addDamageTaken(attacker, skill, amount);
-			}
+			getActiveChar().addDamageTaken(attacker, skill != null ? skill.getDisplayId() : 0, amount);
 			
 			double newHp = Math.max(getCurrentHp() - amount, getActiveChar().isUndying() ? 1 : 0);
 			if (newHp <= 0)

@@ -72,6 +72,7 @@ public class AttackStanceTaskManager
 							creature.getAI().setAutoAttacking(false);
 							if (creature.isPlayer() && creature.hasSummon())
 							{
+								creature.getActingPlayer().clearDamageTaken();
 								final Summon pet = creature.getPet();
 								if (pet != null)
 								{

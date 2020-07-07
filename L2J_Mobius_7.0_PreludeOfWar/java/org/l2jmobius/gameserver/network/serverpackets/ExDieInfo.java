@@ -55,7 +55,7 @@ public class ExDieInfo implements IClientOutgoingPacket
 		{
 			packet.writeS(damageHolder.getCreature().getName());
 			packet.writeH(0x00);
-			packet.writeD(damageHolder.getSkill().getDisplayId());
+			packet.writeD(damageHolder.getSkillId());
 			packet.writeF(damageHolder.getDamage());
 			packet.writeD(0x00);
 		}

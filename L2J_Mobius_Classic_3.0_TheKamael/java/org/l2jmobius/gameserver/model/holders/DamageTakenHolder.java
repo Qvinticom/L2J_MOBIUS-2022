@@ -17,7 +17,6 @@
 package org.l2jmobius.gameserver.model.holders;
 
 import org.l2jmobius.gameserver.model.actor.Creature;
-import org.l2jmobius.gameserver.model.skills.Skill;
 
 /**
  * @author Mobius
@@ -25,13 +24,13 @@ import org.l2jmobius.gameserver.model.skills.Skill;
 public class DamageTakenHolder
 {
 	private final Creature _creature;
-	private final Skill _skill;
+	private final int _skillId;
 	private final double _damage;
 	
-	public DamageTakenHolder(Creature creature, Skill skill, double damage)
+	public DamageTakenHolder(Creature creature, int skillId, double damage)
 	{
 		_creature = creature;
-		_skill = skill;
+		_skillId = skillId;
 		_damage = damage;
 	}
 	
@@ -40,9 +39,9 @@ public class DamageTakenHolder
 		return _creature;
 	}
 	
-	public Skill getSkill()
+	public int getSkillId()
 	{
-		return _skill;
+		return _skillId;
 	}
 	
 	public double getDamage()
