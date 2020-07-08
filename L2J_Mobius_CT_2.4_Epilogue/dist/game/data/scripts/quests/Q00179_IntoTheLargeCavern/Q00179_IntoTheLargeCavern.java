@@ -23,6 +23,8 @@ import org.l2jmobius.gameserver.model.quest.Quest;
 import org.l2jmobius.gameserver.model.quest.QuestState;
 import org.l2jmobius.gameserver.model.quest.State;
 
+import quests.Q00178_IconicTrinity.Q00178_IconicTrinity;
+
 /**
  * Into the Large Cavern (179)
  * @author Gnacik
@@ -33,6 +35,9 @@ public class Q00179_IntoTheLargeCavern extends Quest
 	// NPCs
 	private static final int KEKROPUS = 32138;
 	private static final int MENACING_MACHINE = 32258;
+	// Misc
+	private static final int MIN_LEVEL = 17;
+	private static final int MAX_LEVEL = 21;
 	
 	public Q00179_IntoTheLargeCavern()
 	{
@@ -94,9 +99,9 @@ public class Q00179_IntoTheLargeCavern extends Quest
 					}
 					else
 					{
-						final QuestState prev = player.getQuestState("178_IconicTrinity");
+						final QuestState prev = player.getQuestState(Q00178_IconicTrinity.class.getSimpleName());
 						final int level = player.getLevel();
-						if ((prev != null) && prev.isCompleted() && (level >= 17) && (level <= 21) && (player.getClassId().level() == 0))
+						if ((prev != null) && prev.isCompleted() && (level >= MIN_LEVEL) && (level <= MAX_LEVEL) && (player.getClassId().level() == 0))
 						{
 							htmltext = "32138-01.htm";
 						}
