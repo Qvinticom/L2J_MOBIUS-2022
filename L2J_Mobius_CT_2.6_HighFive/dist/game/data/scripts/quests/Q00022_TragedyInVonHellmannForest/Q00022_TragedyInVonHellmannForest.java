@@ -152,6 +152,7 @@ public class Q00022_TragedyInVonHellmannForest extends Quest
 				}
 				else
 				{
+					takeItems(player, CROSS_OF_EINHASAD, -1);
 					qs.setCond(2, true);
 					htmltext = "31334-07.html";
 				}
