@@ -17,7 +17,6 @@
 package quests.Q10812_FacingSadness;
 
 import org.l2jmobius.Config;
-import org.l2jmobius.commons.util.CommonUtil;
 import org.l2jmobius.gameserver.enums.QuestSound;
 import org.l2jmobius.gameserver.instancemanager.QuestManager;
 import org.l2jmobius.gameserver.model.actor.Npc;
@@ -220,10 +219,13 @@ public class Q10812_FacingSadness extends Quest
 	public void actionForEachPlayer(PlayerInstance player, Npc npc, boolean isSummon)
 	{
 		final QuestState qs = getQuestState(player, false);
-		if ((qs != null) && player.isInsideRadius3D(npc, Config.ALT_PARTY_RANGE) && CommonUtil.contains(MONSTERS, npc.getId()))
+		if ((qs != null) && qs.isCond(1) && player.isInsideRadius3D(npc, Config.ALT_PARTY_RANGE))
 		{
-			giveItems(player, PROOF_OF_DISPOSAL, 1);
-			playSound(player, QuestSound.ITEMSOUND_QUEST_ITEMGET);
+			if (getQuestItemsCount(player, PROOF_OF_DISPOSAL) < 8000)
+			{
+				giveItems(player, PROOF_OF_DISPOSAL, 1);
+				playSound(player, QuestSound.ITEMSOUND_QUEST_ITEMGET);
+			}
 			if (getQuestItemsCount(player, PROOF_OF_DISPOSAL) >= 8000)
 			{
 				qs.setCond(2, true);
