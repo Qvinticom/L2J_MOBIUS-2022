@@ -3,6 +3,8 @@
 	<!-- Damage Zones -->
 	<!-- Cruma (Damage Zone) -->
 	<zone name="cruma_boss_damage_zone" type="DamageZone" shape="NPoly" minZ="-6519" maxZ="-6319"> <!-- [20_21] -->
+		<stat name="dmgHPSec" val="18" />
+		<stat name="reuse" val="5000" />
 		<node X="17869" Y="108566" />
 		<node X="18071" Y="108774" />
 		<node X="18072" Y="109060" />
