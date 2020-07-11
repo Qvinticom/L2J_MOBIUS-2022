@@ -16,16 +16,22 @@
  */
 package org.l2jmobius.gameserver.instancemanager;
 
+import java.sql.Connection;
+import java.sql.ResultSet;
+import java.sql.Statement;
 import java.util.ArrayList;
 import java.util.Collection;
 import java.util.List;
 import java.util.Map;
 import java.util.Map.Entry;
 import java.util.concurrent.ConcurrentHashMap;
+import java.util.logging.Level;
 import java.util.logging.Logger;
 
+import org.l2jmobius.commons.database.DatabaseFactory;
 import org.l2jmobius.gameserver.GameTimeController;
 import org.l2jmobius.gameserver.datatables.SkillTable;
+import org.l2jmobius.gameserver.datatables.sql.NpcTable;
 import org.l2jmobius.gameserver.enums.RaidBossStatus;
 import org.l2jmobius.gameserver.model.Skill;
 import org.l2jmobius.gameserver.model.World;
@@ -43,31 +49,24 @@ public class DayNightSpawnManager
 {
 	private static final Logger LOGGER = Logger.getLogger(DayNightSpawnManager.class.getName());
 	
+	private static final int EILHALDER_VON_HELLMAN = 25328;
+	
 	private final List<Spawn> _dayCreatures = new ArrayList<>();
 	private final List<Spawn> _nightCreatures = new ArrayList<>();
 	private final Map<Spawn, RaidBossInstance> _bosses = new ConcurrentHashMap<>();
 	
-	private DayNightSpawnManager()
+	protected DayNightSpawnManager()
 	{
+		// Prevent external initialization.
 	}
 	
 	public void addDayCreature(Spawn spawnDat)
 	{
-		if (_dayCreatures.contains(spawnDat))
-		{
-			LOGGER.warning("DayNightSpawnManager: Spawn already added into day map");
-			return;
-		}
 		_dayCreatures.add(spawnDat);
 	}
 	
 	public void addNightCreature(Spawn spawnDat)
 	{
-		if (_nightCreatures.contains(spawnDat))
-		{
-			LOGGER.warning("DayNightSpawnManager: Spawn already added into night map");
-			return;
-		}
 		_nightCreatures.add(spawnDat);
 	}
 	
@@ -135,7 +134,7 @@ public class DayNightSpawnManager
 		}
 		catch (Exception e)
 		{
-			LOGGER.warning("Error while spawning creatures: " + e.getMessage());
+			LOGGER.log(Level.WARNING, "Error while spawning creatures: " + e.getMessage(), e);
 		}
 	}
 	
@@ -170,22 +169,22 @@ public class DayNightSpawnManager
 		}
 	}
 	
+	public DayNightSpawnManager trim()
+	{
+		((ArrayList<?>) _nightCreatures).trimToSize();
+		((ArrayList<?>) _dayCreatures).trimToSize();
+		return this;
+	}
+	
 	public void notifyChangeMode()
 	{
 		try
 		{
-			if (GameTimeController.getInstance().isNowNight())
-			{
-				changeMode(1);
-			}
-			else
-			{
-				changeMode(0);
-			}
+			changeMode(GameTimeController.getInstance().isNowNight() ? 1 : 0);
 		}
 		catch (Exception e)
 		{
-			LOGGER.warning("Error while notifyChangeMode(): " + e.getMessage());
+			LOGGER.log(Level.WARNING, "Error while notifyChangeMode(): " + e.getMessage(), e);
 		}
 	}
 	
@@ -200,9 +199,20 @@ public class DayNightSpawnManager
 	{
 		try
 		{
+			RaidBossInstance boss;
+			
+			if (_bosses.isEmpty() && (mode == 1))
+			{
+				final Spawn nightBossSpawn = getNightBossSpawn();
+				boss = handleBoss(nightBossSpawn);
+				_bosses.put(nightBossSpawn, boss);
+				handleHellman(boss, mode);
+				return;
+			}
+			
 			for (Entry<Spawn, RaidBossInstance> entry : _bosses.entrySet())
 			{
-				RaidBossInstance boss = entry.getValue();
+				boss = entry.getValue();
 				if ((boss == null) && (mode == 1))
 				{
 					final Spawn spawn = entry.getKey();
@@ -217,27 +227,27 @@ public class DayNightSpawnManager
 					continue;
 				}
 				
-				if ((boss != null) && (boss.getNpcId() == 25328) && boss.getRaidStatus().equals(RaidBossStatus.ALIVE))
+				if ((boss != null) && (boss.getNpcId() == EILHALDER_VON_HELLMAN) && (boss.getRaidStatus() == RaidBossStatus.ALIVE))
 				{
-					handleHellmans(boss, mode);
+					handleHellman(boss, mode);
 				}
 				return;
 			}
 		}
 		catch (Exception e)
 		{
-			LOGGER.warning("Error while specialNoghtBoss(): " + e.getMessage());
+			LOGGER.log(Level.WARNING, "Error while specialNightBoss(): " + e.getMessage(), e);
 		}
 	}
 	
-	private void handleHellmans(RaidBossInstance boss, int mode)
+	private void handleHellman(RaidBossInstance boss, int mode)
 	{
 		switch (mode)
 		{
 			case 0:
 			{
 				boss.deleteMe();
-				LOGGER.warning(getClass().getSimpleName() + ": Deleting Hellman raidboss");
+				LOGGER.info(getClass().getSimpleName() + ": Deleting Hellman raidboss");
 				break;
 			}
 			case 1:
@@ -288,6 +298,35 @@ public class DayNightSpawnManager
 			return raidboss;
 		}
 		return null;
+	}
+	
+	public Spawn getNightBossSpawn()
+	{
+		Spawn spawnDat = null;
+		
+		try (Connection con = DatabaseFactory.getConnection();
+			Statement s = con.createStatement();
+			ResultSet rs = s.executeQuery("SELECT * FROM raidboss_spawnlist WHERE boss_id=" + EILHALDER_VON_HELLMAN))
+		{
+			if (rs.next())
+			{
+				spawnDat = new Spawn(NpcTable.getInstance().getTemplate(EILHALDER_VON_HELLMAN));
+				spawnDat.setX(rs.getInt("loc_x"));
+				spawnDat.setY(rs.getInt("loc_y"));
+				spawnDat.setZ(rs.getInt("loc_z"));
+				spawnDat.setAmount(rs.getInt("amount"));
+				spawnDat.setHeading(rs.getInt("heading"));
+				spawnDat.setRespawnMinDelay(rs.getInt("respawn_min_delay"));
+				spawnDat.setRespawnMaxDelay(rs.getInt("respawn_max_delay"));
+				return spawnDat;
+			}
+		}
+		catch (Exception e)
+		{
+			LOGGER.warning(getClass().getSimpleName() + ": Could not load Eilhalder Von Hellman spawn.");
+		}
+		
+		return spawnDat;
 	}
 	
 	public static DayNightSpawnManager getInstance()
