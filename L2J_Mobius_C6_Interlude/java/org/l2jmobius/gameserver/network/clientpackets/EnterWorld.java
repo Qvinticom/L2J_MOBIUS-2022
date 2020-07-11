@@ -480,7 +480,7 @@ public class EnterWorld extends GameClientPacket
 			final Skill skill = SkillTable.getInstance().getSkill(294, 1);
 			if ((skill != null) && (player.getSkillLevel(294) == 1))
 			{
-				if (GameTimeController.getInstance().isNowNight())
+				if (GameTimeController.getInstance().isNight())
 				{
 					final SystemMessage sm = SystemMessage.getSystemMessage(SystemMessageId.IT_IS_NOW_MIDNIGHT_AND_THE_EFFECT_OF_S1_CAN_BE_FELT);
 					sm.addSkillName(294);

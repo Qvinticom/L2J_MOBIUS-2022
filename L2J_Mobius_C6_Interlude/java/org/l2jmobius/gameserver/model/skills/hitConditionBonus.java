@@ -56,7 +56,7 @@ public class hitConditionBonus
 		}
 		
 		// Get weather bonus
-		if (GameTimeController.getInstance().isNowNight())
+		if (GameTimeController.getInstance().isNight())
 		{
 			mod += darkBonus;
 		}

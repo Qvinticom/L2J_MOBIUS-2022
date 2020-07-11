@@ -70,7 +70,7 @@ public class GameTimeController
 		ThreadPool.scheduleAtFixedRate(new BroadcastSunState(), 0, 600000);
 	}
 	
-	public boolean isNowNight()
+	public boolean isNight()
 	{
 		return _isNight;
 	}
