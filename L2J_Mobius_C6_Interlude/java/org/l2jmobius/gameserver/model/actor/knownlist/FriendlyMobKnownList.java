@@ -75,7 +75,7 @@ public class FriendlyMobKnownList extends AttackableKnownList
 			}
 		}
 		
-		if (getActiveChar().isVisible() && getKnownPlayers().isEmpty())
+		if (getActiveChar().isSpawned() && getKnownPlayers().isEmpty())
 		{
 			getActiveChar().clearAggroList();
 			if (getActiveChar().hasAI())

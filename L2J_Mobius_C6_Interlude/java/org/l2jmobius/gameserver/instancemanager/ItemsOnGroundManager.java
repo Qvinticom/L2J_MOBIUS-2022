@@ -131,7 +131,7 @@ public class ItemsOnGroundManager
 				item.getPosition().getWorldRegion().addVisibleObject(item);
 				item.setDropTime(result.getLong(8));
 				item.setProtected(result.getLong(8) == -1);
-				item.setVisible(true);
+				item.setSpawned(true);
 				World.getInstance().addVisibleObject(item, item.getPosition().getWorldRegion(), null);
 				_items.add(item);
 				count++;

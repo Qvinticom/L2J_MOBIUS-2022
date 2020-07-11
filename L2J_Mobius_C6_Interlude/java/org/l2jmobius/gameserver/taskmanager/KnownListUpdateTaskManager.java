@@ -82,7 +82,7 @@ public class KnownListUpdateTaskManager
 	{
 		for (WorldObject object : region.getVisibleObjects()) // and for all members in region
 		{
-			if (!object.isVisible())
+			if (!object.isSpawned())
 			{
 				continue; // skip dying objects
 			}

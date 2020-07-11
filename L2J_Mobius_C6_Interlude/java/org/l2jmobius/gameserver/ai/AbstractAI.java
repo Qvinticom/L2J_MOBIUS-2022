@@ -152,7 +152,7 @@ abstract class AbstractAI implements Ctrl
 	@Override
 	public void setIntention(CtrlIntention intention, Object arg0, Object arg1)
 	{
-		if (!_actor.isVisible() || !_actor.hasAI())
+		if (!_actor.isSpawned() || !_actor.hasAI())
 		{
 			return;
 		}
@@ -252,7 +252,7 @@ abstract class AbstractAI implements Ctrl
 	@Override
 	public void notifyEvent(CtrlEvent evt, Object arg0, Object arg1)
 	{
-		if (!_actor.isVisible() || !_actor.hasAI() || ((_actor instanceof PlayerInstance) && !((PlayerInstance) _actor).isOnline()) || ((_actor instanceof PlayerInstance) && ((PlayerInstance) _actor).isInOfflineMode()))
+		if (!_actor.isSpawned() || !_actor.hasAI() || ((_actor instanceof PlayerInstance) && !((PlayerInstance) _actor).isOnline()) || ((_actor instanceof PlayerInstance) && ((PlayerInstance) _actor).isInOfflineMode()))
 		{
 			return;
 		}

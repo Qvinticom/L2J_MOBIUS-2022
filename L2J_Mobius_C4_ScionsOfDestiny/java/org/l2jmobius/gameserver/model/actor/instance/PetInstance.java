@@ -476,7 +476,7 @@ public class PetInstance extends Summon
 		
 		synchronized (target)
 		{
-			if (!target.isVisible())
+			if (!target.isSpawned())
 			{
 				getOwner().sendPacket(ActionFailed.STATIC_PACKET);
 				return;

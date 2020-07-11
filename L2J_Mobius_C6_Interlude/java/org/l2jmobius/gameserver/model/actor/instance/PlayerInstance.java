@@ -5192,7 +5192,7 @@ public class PlayerInstance extends Playable
 		synchronized (target)
 		{
 			// Check if the target to pick up is visible
-			if (!target.isVisible())
+			if (!target.isSpawned())
 			{
 				// Send a Server->Client packet ActionFailed to this PlayerInstance
 				sendPacket(ActionFailed.STATIC_PACKET);
@@ -5364,7 +5364,7 @@ public class PlayerInstance extends Playable
 	{
 		// Check if the new target is visible
 		WorldObject newTarget = worldObject;
-		if ((newTarget != null) && !newTarget.isVisible())
+		if ((newTarget != null) && !newTarget.isSpawned())
 		{
 			newTarget = null;
 		}
@@ -13039,7 +13039,7 @@ public class PlayerInstance extends Playable
 			return true;
 		}
 		
-		if (!isVisible())
+		if (!isSpawned())
 		{
 			_move = null;
 			return true;
@@ -13829,7 +13829,7 @@ public class PlayerInstance extends Playable
 		}
 		
 		// Remove the PlayerInstance from the world
-		if (isVisible())
+		if (isSpawned())
 		{
 			try
 			{

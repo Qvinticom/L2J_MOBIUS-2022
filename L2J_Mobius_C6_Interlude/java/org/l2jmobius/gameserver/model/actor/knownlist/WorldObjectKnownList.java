@@ -51,7 +51,7 @@ public class WorldObjectKnownList
 		// Check if already know object
 		if (knowsObject(object))
 		{
-			if (!object.isVisible())
+			if (!object.isSpawned())
 			{
 				removeKnownObject(object);
 			}
@@ -168,7 +168,7 @@ public class WorldObjectKnownList
 			
 			// Remove all invisible objects
 			// Remove all too far objects
-			if (!object.isVisible() || !Util.checkIfInRange(getDistanceToForgetObject(object), _activeObject, object, true))
+			if (!object.isSpawned() || !Util.checkIfInRange(getDistanceToForgetObject(object), _activeObject, object, true))
 			{
 				if ((object instanceof BoatInstance) && (_activeObject instanceof PlayerInstance))
 				{

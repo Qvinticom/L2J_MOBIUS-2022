@@ -1090,7 +1090,7 @@ public class ItemInstance extends WorldObject
 		synchronized (this)
 		{
 			// Set the x,y,z position of the ItemInstance dropped and update its _worldregion
-			setVisible(true);
+			setSpawned(true);
 			getPosition().setWorldPosition(x, y, z);
 			getPosition().setWorldRegion(World.getInstance().getRegion(getPosition().getWorldPosition()));
 			

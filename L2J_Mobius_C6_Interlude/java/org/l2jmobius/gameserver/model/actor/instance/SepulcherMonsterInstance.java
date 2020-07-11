@@ -366,7 +366,7 @@ public class SepulcherMonsterInstance extends MonsterInstance
 				return;
 			}
 			
-			if (!_activeChar.isVisible())
+			if (!_activeChar.isSpawned())
 			{
 				return;
 			}
@@ -392,7 +392,7 @@ public class SepulcherMonsterInstance extends MonsterInstance
 				return;
 			}
 			
-			if (!_activeChar.isVisible())
+			if (!_activeChar.isSpawned())
 			{
 				return;
 			}

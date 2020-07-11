@@ -635,7 +635,7 @@ public class FortSiegeGuardAI extends CreatureAI implements Runnable
 	@Override
 	public void onEvtThink()
 	{
-		// if(getIntention() != AI_INTENTION_IDLE && (!_actor.isVisible() || !_actor.hasAI() || !_actor.isKnownPlayers()))
+		// if(getIntention() != AI_INTENTION_IDLE && (!_actor.isSpawned() || !_actor.hasAI() || !_actor.isKnownPlayers()))
 		// setIntention(AI_INTENTION_IDLE);
 		
 		// Check if the actor can't use skills and if a thinking action isn't already in progress

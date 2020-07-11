@@ -119,7 +119,7 @@ public class ObjectPosition
 		}
 		
 		setWorldPosition(correctX, correctY, z);
-		_activeObject.setVisible(false);
+		_activeObject.setSpawned(false);
 	}
 	
 	/**
@@ -127,7 +127,7 @@ public class ObjectPosition
 	 */
 	public void updateWorldRegion()
 	{
-		if (!_activeObject.isVisible())
+		if (!_activeObject.isSpawned())
 		{
 			return;
 		}

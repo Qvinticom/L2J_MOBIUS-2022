@@ -153,7 +153,7 @@ public class CabaleBufferInstance extends NpcInstance
 		private boolean handleCast(PlayerInstance player, int skillId)
 		{
 			final int skillLevel = player.getLevel() > 40 ? 1 : 2;
-			if (player.isDead() || !player.isVisible() || !isInsideRadius(player, getDistanceToWatchObject(player), false, false))
+			if (player.isDead() || !player.isSpawned() || !isInsideRadius(player, getDistanceToWatchObject(player), false, false))
 			{
 				return false;
 			}

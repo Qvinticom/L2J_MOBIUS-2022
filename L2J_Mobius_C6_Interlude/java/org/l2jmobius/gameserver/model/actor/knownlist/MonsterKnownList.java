@@ -72,7 +72,7 @@ public class MonsterKnownList extends AttackableKnownList
 			getActiveChar().getAI().notifyEvent(CtrlEvent.EVT_FORGET_OBJECT, object);
 		}
 		
-		if (getActiveChar().isVisible() && getKnownPlayers().isEmpty())
+		if (getActiveChar().isSpawned() && getKnownPlayers().isEmpty())
 		{
 			// Clear the _aggroList of the MonsterInstance
 			getActiveChar().clearAggroList();

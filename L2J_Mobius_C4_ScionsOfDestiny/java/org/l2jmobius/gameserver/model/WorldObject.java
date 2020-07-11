@@ -42,7 +42,7 @@ public abstract class WorldObject
 {
 	private static final Logger LOGGER = Logger.getLogger(WorldObject.class.getName());
 	
-	private boolean _visible;
+	private boolean _isSpawned;
 	private WorldObjectKnownList _knownList;
 	private String _name;
 	private int _objectId;
@@ -134,7 +134,7 @@ public abstract class WorldObject
 	public void decayMe()
 	{
 		// Remove the WorldObject from the world
-		_visible = false;
+		_isSpawned = false;
 		World.getInstance().removeVisibleObject(this, getPosition().getWorldRegion());
 		World.getInstance().removeObject(this);
 		getPosition().setWorldRegion(null);
@@ -170,7 +170,7 @@ public abstract class WorldObject
 		
 		synchronized (this)
 		{
-			_visible = false;
+			_isSpawned = false;
 			getPosition().setWorldRegion(null);
 		}
 		
@@ -218,7 +218,7 @@ public abstract class WorldObject
 		synchronized (this)
 		{
 			// Set the x,y,z position of the WorldObject spawn and update its _worldregion
-			_visible = true;
+			_isSpawned = true;
 			getPosition().setWorldRegion(World.getInstance().getRegion(getPosition().getWorldPosition()));
 			
 			// Add the WorldObject spawn in the _allobjects of World
@@ -239,7 +239,7 @@ public abstract class WorldObject
 		synchronized (this)
 		{
 			// Set the x,y,z position of the WorldObject spawn and update its _worldregion
-			_visible = true;
+			_isSpawned = true;
 			
 			int spawnX = x;
 			if (spawnX > World.MAP_MAX_X)
@@ -288,7 +288,7 @@ public abstract class WorldObject
 	
 	public void toggleVisible()
 	{
-		if (isVisible())
+		if (isSpawned())
 		{
 			decayMe();
 		}
@@ -300,21 +300,15 @@ public abstract class WorldObject
 	
 	public abstract boolean isAutoAttackable(Creature attacker);
 	
-	/**
-	 * <b><u>Concept</u>:</b><br>
-	 * <br>
-	 * A WorldObject is visible if <b>__IsVisible</b>=true and <b>_worldregion</b>!=null
-	 * @return the visibility state of the WorldObject.
-	 */
-	public boolean isVisible()
+	public boolean isSpawned()
 	{
 		return getPosition().getWorldRegion() != null;
 	}
 	
-	public void setVisible(boolean value)
+	public void setSpawned(boolean value)
 	{
-		_visible = value;
-		if (!_visible)
+		_isSpawned = value;
+		if (!_isSpawned)
 		{
 			getPosition().setWorldRegion(null);
 		}
@@ -387,7 +381,7 @@ public abstract class WorldObject
 		_instanceId = instanceId;
 		
 		// If we change it for visible objects, me must clear & revalidates knownlists
-		if (_visible && (_knownList != null))
+		if (_isSpawned && (_knownList != null))
 		{
 			if (this instanceof PlayerInstance)
 			{

@@ -69,7 +69,7 @@ public class Resurrect implements ISkillHandler
 				}
 			}
 			
-			if (target.isVisible())
+			if (target.isSpawned())
 			{
 				targetToRes.add(target);
 			}

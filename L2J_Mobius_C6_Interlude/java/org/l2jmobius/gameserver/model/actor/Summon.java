@@ -384,7 +384,7 @@ public abstract class Summon extends Playable
 	{
 		super.broadcastStatusUpdate();
 		
-		if ((_owner != null) && isVisible())
+		if ((_owner != null) && isSpawned())
 		{
 			_owner.sendPacket(new PetStatusUpdate(this));
 		}
@@ -404,7 +404,7 @@ public abstract class Summon extends Playable
 	
 	public synchronized void unSummon(PlayerInstance owner)
 	{
-		if (isVisible() && !isDead())
+		if (isSpawned() && !isDead())
 		{
 			stopAllEffects();
 			

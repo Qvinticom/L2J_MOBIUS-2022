@@ -5145,7 +5145,7 @@ public abstract class Creature extends WorldObject implements ISkillsHolder
 			return true;
 		}
 		
-		if (!isVisible())
+		if (!isSpawned())
 		{
 			_move = null;
 			return true;
@@ -5361,7 +5361,7 @@ public abstract class Creature extends WorldObject implements ISkillsHolder
 	public void setTarget(WorldObject worldObject)
 	{
 		WorldObject object = worldObject;
-		if ((object != null) && !object.isVisible())
+		if ((object != null) && !object.isSpawned())
 		{
 			object = null;
 		}

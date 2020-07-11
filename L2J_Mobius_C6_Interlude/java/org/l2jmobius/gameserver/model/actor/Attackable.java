@@ -1105,7 +1105,7 @@ public class Attackable extends NpcInstance
 					continue;
 				}
 				
-				if (ai._attacker.isAlikeDead() || !getKnownList().knowsObject(ai._attacker) || !ai._attacker.isVisible() || ((ai._attacker instanceof PlayerInstance) && !((PlayerInstance) ai._attacker).isOnline() && !((PlayerInstance) ai._attacker).isInOfflineMode()))
+				if (ai._attacker.isAlikeDead() || !getKnownList().knowsObject(ai._attacker) || !ai._attacker.isSpawned() || ((ai._attacker instanceof PlayerInstance) && !((PlayerInstance) ai._attacker).isOnline() && !((PlayerInstance) ai._attacker).isInOfflineMode()))
 				{
 					ai._hate = 0;
 				}
@@ -1156,7 +1156,7 @@ public class Attackable extends NpcInstance
 			return 0;
 		}
 		
-		if (!ai._attacker.isVisible())
+		if (!ai._attacker.isSpawned())
 		{
 			_aggroList.remove(target);
 			return 0;

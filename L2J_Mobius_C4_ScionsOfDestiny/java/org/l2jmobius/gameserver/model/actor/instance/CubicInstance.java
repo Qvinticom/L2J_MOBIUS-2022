@@ -453,7 +453,7 @@ public class CubicInstance
 						{
 							targetIt = false;
 						}
-						if (!enemy.isVisible())
+						if (!enemy.isSpawned())
 						{
 							targetIt = false;
 						}

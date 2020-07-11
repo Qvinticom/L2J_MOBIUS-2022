@@ -45,7 +45,7 @@ public class RequestPrivateStoreManageBuy extends GameClientPacket
 		}
 		
 		// Fix for privatestore exploit during login
-		if (!player.isVisible() || player.isLocked())
+		if (!player.isSpawned() || player.isLocked())
 		{
 			Util.handleIllegalPlayerAction(player, "Player " + player.getName() + " try exploit at login with privatestore!", Config.DEFAULT_PUNISH);
 			LOGGER.warning("Player " + player.getName() + " try exploit at login with privatestore!");

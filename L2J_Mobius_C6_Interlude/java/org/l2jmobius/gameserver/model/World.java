@@ -503,7 +503,7 @@ public class World
 					continue; // skip our own character
 				}
 				
-				if (!wo.isVisible())
+				if (!wo.isSpawned())
 				{
 					continue; // skip dying objects
 				}
@@ -533,7 +533,7 @@ public class World
 	 */
 	public List<WorldObject> getVisibleObjects(WorldObject object, int radius)
 	{
-		if ((object == null) || !object.isVisible())
+		if ((object == null) || !object.isSpawned())
 		{
 			return Collections.emptyList();
 		}
@@ -600,7 +600,7 @@ public class World
 	 */
 	public List<WorldObject> getVisibleObjects3D(WorldObject object, int radius)
 	{
-		if ((object == null) || !object.isVisible())
+		if ((object == null) || !object.isSpawned())
 		{
 			return Collections.emptyList();
 		}
@@ -684,7 +684,7 @@ public class World
 					continue; // skip our own character
 				}
 				
-				if (!playable.isVisible())
+				if (!playable.isSpawned())
 				{
 					continue; // skip dying objects
 				}

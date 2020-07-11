@@ -204,7 +204,7 @@ public class ChestInstance extends MonsterInstance
 			skillLevel = 6;
 		}
 		
-		if (creature.isDead() || !creature.isVisible() || !creature.isInsideRadius(this, getDistanceToWatchObject(creature), false, false))
+		if (creature.isDead() || !creature.isSpawned() || !creature.isInsideRadius(this, getDistanceToWatchObject(creature), false, false))
 		{
 			return false;
 		}
