@@ -21,6 +21,7 @@ import org.l2jmobius.gameserver.enums.QuestSound;
 import org.l2jmobius.gameserver.enums.Race;
 import org.l2jmobius.gameserver.model.actor.Npc;
 import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
+import org.l2jmobius.gameserver.model.holders.ItemHolder;
 import org.l2jmobius.gameserver.model.quest.Quest;
 import org.l2jmobius.gameserver.model.quest.QuestState;
 import org.l2jmobius.gameserver.model.quest.State;
@@ -48,6 +49,18 @@ public class Q00106_ForgottenTruth extends Quest
 	private static final int KARTAS_TRANSLATION = 988;
 	// Misc
 	private static final int MIN_LVL = 10;
+	// Rewards
+	private static final int ELDRITCH_DAGGER = 989;
+	private static final int ELDRITCH_STAFF = 2373;
+	private static final ItemHolder[] REWARDS =
+	{
+		new ItemHolder(1060, 100), // Lesser Healing Potion
+		new ItemHolder(4412, 10), // Echo Crystal - Theme of Battle
+		new ItemHolder(4413, 10), // Echo Crystal - Theme of Love
+		new ItemHolder(4414, 10), // Echo Crystal - Theme of Solitude
+		new ItemHolder(4415, 10), // Echo Crystal - Theme of Feast
+		new ItemHolder(4416, 10), // Echo Crystal - Theme of Celebration
+	};
 	
 	public Q00106_ForgottenTruth()
 	{
@@ -144,6 +157,14 @@ public class Q00106_ForgottenTruth extends Quest
 							talker.sendPacket(new SocialAction(talker.getObjectId(), 3));
 							giveAdena(talker, 10266, true);
 							addExpAndSp(talker, 24195, 2074);
+							
+							giveItems(talker, qs.getPlayer().isMageClass() ? ELDRITCH_STAFF : ELDRITCH_DAGGER, 1);
+							
+							for (ItemHolder reward : REWARDS)
+							{
+								giveItems(talker, reward);
+							}
+							
 							qs.exitQuest(false, true);
 							htmltext = "30358-07.html";
 						}
