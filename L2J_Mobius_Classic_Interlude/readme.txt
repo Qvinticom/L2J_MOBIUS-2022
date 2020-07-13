@@ -1,11 +1,11 @@
 L2J-Mobius Classic Interlude
 
 Client: https://drive.google.com/uc?id=1_kioRKR5FTOmINAtUQe0KCxrvPzY18Nd&export=download
-Patch: https://www.mediafire.com/file/3f0swkvz2sg16k2/L2J_Mobius_Classic_Interlude_Patch_v8.zip
+Patch: https://www.mediafire.com/file/ddp8oofshea0rrt/L2J_Mobius_Classic_Interlude_Patch_v9.zip
 
 JDK: http://www.mediafire.com/file/xox35mknec8f1q0/bellsoft-jdk14%252B36-windows-amd64.msi
 Eclipse: https://www.mediafire.com/file/d7z5px9po76v1e9/eclipse-java-2020-03-R-Java14-win32-x86_64.zip
-Geodata: https://www.mediafire.com/file/ffr47dh2471r6b5/L2J_Mobius_Classic_Interlude_Geodata_v4.zip
+Geodata: https://www.mediafire.com/file/5ebydcm5ipckpoa/L2J_Mobius_Classic_Interlude_Geodata_v5.zip
 
 This is a Classic server based on the Grand Crusade client.
 The goal is to make a better approximation of what Classic is to older chronicles, like Interlude.
