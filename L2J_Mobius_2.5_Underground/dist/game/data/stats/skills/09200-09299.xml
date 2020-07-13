@@ -311,7 +311,7 @@
 		<affectScope>SINGLE</affectScope>
 		<effects>
 			<effect name="DispelBySlot">
-				<dispel>TRANSFORM,-1</dispel>
+				<dispel>TRANSFORM,-1;SPECIAL_RIDE,1</dispel>
 			</effect>
 		</effects>
 	</skill>
