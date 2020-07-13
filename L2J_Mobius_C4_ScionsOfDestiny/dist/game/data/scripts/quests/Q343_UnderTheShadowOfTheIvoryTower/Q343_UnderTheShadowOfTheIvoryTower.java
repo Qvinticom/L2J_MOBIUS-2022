@@ -28,15 +28,24 @@ import org.l2jmobius.gameserver.model.quest.State;
  */
 public class Q343_UnderTheShadowOfTheIvoryTower extends Quest
 {
-	public int CEMA = 30834;
-	public int ICARUS = 30835;
-	public int MARSHA = 30934;
-	public int TRUMPIN = 30935;
-	public int[] MOBS;
-	public int ORB = 4364;
-	public int ECTOPLASM = 4365;
-	public int CHANCE = 50;
-	public int[] ALLOWED_CLASSES =
+	// NPCs
+	private static final int CEMA = 30834;
+	private static final int ICARUS = 30835;
+	private static final int MARSHA = 30934;
+	private static final int TRUMPIN = 30935;
+	private static final int[] MONSTERS = new int[]
+	{
+		20563,
+		20564,
+		20565,
+		20566
+	};
+	// Items
+	private static final int ORB = 4364;
+	private static final int ECTOPLASM = 4365;
+	// Misc
+	private static final int CHANCE = 50;
+	private static final int[] ALLOWED_CLASSES =
 	{
 		11,
 		12,
@@ -53,21 +62,10 @@ public class Q343_UnderTheShadowOfTheIvoryTower extends Quest
 	public Q343_UnderTheShadowOfTheIvoryTower()
 	{
 		super(343, "Under the Shadow of the Ivory Tower");
-		MOBS = new int[]
-		{
-			20563,
-			20564,
-			20565,
-			20566
-		};
-		
-		addStartNpc(30834);
-		addTalkId(30834, 30835, 30934, 30935);
-		for (int i : MOBS)
-		{
-			addKillId(i);
-		}
-		registerQuestItems(4364);
+		addStartNpc(CEMA);
+		addTalkId(CEMA, ICARUS, MARSHA, TRUMPIN);
+		addKillId(MONSTERS);
+		registerQuestItems(ORB);
 	}
 	
 	@Override
@@ -82,275 +80,291 @@ public class Q343_UnderTheShadowOfTheIvoryTower extends Quest
 		
 		final int random1 = Rnd.get(3);
 		final int random2 = Rnd.get(2);
-		final int orbs = st.getQuestItemsCount(4364);
-		if ("30834-03.htm".equalsIgnoreCase(event))
+		final int orbs = st.getQuestItemsCount(ORB);
+		switch (event)
 		{
-			st.setState(State.STARTED);
-			st.set("cond", "1");
-			st.playSound("ItemSound.quest_accept");
-		}
-		else if ("30834-08.htm".equalsIgnoreCase(event))
-		{
-			if (orbs > 0)
+			case "30834-03.htm":
 			{
-				st.giveItems(57, orbs * 120);
-				st.takeItems(4364, -1);
+				st.setState(State.STARTED);
+				st.set("cond", "1");
+				st.playSound("ItemSound.quest_accept");
+				break;
 			}
-			else
+			case "30834-08.htm":
 			{
-				htmltext = "30834-08.htm";
+				if (orbs > 0)
+				{
+					st.giveItems(57, orbs * 120);
+					st.takeItems(ORB, -1);
+				}
+				else
+				{
+					htmltext = "30834-08.htm";
+				}
+				break;
 			}
-		}
-		else if ("30834-09.htm".equalsIgnoreCase(event))
-		{
-			st.playSound("ItemSound.quest_finish");
-			st.exitQuest(true);
-		}
-		else if ("30934-02.htm".equalsIgnoreCase(event) || "30934-03.htm".equalsIgnoreCase(event))
-		{
-			if (orbs < 10)
+			case "30834-09.htm":
 			{
-				htmltext = "noorbs.htm";
+				st.playSound("ItemSound.quest_finish");
+				st.exitQuest(true);
+				break;
 			}
-			else if ("30934-03.htm".equalsIgnoreCase(event))
+			case "30934-02.htm":
+			case "30934-03.htm":
+			{
+				if (orbs < 10)
+				{
+					htmltext = "noorbs.htm";
+				}
+				else if ("30934-03.htm".equals(event))
+				{
+					if (orbs >= 10)
+					{
+						st.takeItems(ORB, 10);
+						st.set("playing", "1");
+					}
+					else
+					{
+						htmltext = "noorbs.htm";
+					}
+				}
+				break;
+			}
+			case "30934-04.htm":
+			{
+				if (st.getInt("playing") > 0)
+				{
+					switch (random1)
+					{
+						case 0:
+						{
+							htmltext = "30934-05.htm";
+							st.giveItems(ORB, 10);
+							break;
+						}
+						case 1:
+						{
+							htmltext = "30934-06.htm";
+							break;
+						}
+						default:
+						{
+							htmltext = "30934-04.htm";
+							st.giveItems(ORB, 20);
+							break;
+						}
+					}
+					st.unset("playing");
+				}
+				else
+				{
+					htmltext = "Player is cheating";
+					st.takeItems(ORB, -1);
+					st.exitQuest(true);
+				}
+				break;
+			}
+			case "30934-05.htm":
+			{
+				if (st.getInt("playing") > 0)
+				{
+					switch (random1)
+					{
+						case 0:
+						{
+							htmltext = "30934-04.htm";
+							st.giveItems(ORB, 20);
+							break;
+						}
+						case 1:
+						{
+							htmltext = "30934-05.htm";
+							st.giveItems(ORB, 10);
+							break;
+						}
+						default:
+						{
+							htmltext = "30934-06.htm";
+							break;
+						}
+					}
+					st.unset("playing");
+				}
+				else
+				{
+					htmltext = "Player is cheating";
+					st.takeItems(ORB, -1);
+					st.exitQuest(true);
+				}
+				break;
+			}
+			case "30934-06.htm":
+			{
+				if (st.getInt("playing") > 0)
+				{
+					switch (random1)
+					{
+						case 0:
+						{
+							htmltext = "30934-04.htm";
+							st.giveItems(ORB, 20);
+							break;
+						}
+						case 1:
+						{
+							htmltext = "30934-06.htm";
+							break;
+						}
+						default:
+						{
+							htmltext = "30934-05.htm";
+							st.giveItems(ORB, 10);
+							break;
+						}
+					}
+					st.unset("playing");
+				}
+				else
+				{
+					htmltext = "Player is cheating";
+					st.takeItems(ORB, -1);
+					st.exitQuest(true);
+				}
+				break;
+			}
+			case "30935-02.htm":
+			case "30935-03.htm":
+			{
+				st.unset("toss");
+				if (orbs < 10)
+				{
+					htmltext = "noorbs.htm";
+				}
+				break;
+			}
+			case "30935-05.htm":
 			{
 				if (orbs >= 10)
 				{
-					st.takeItems(4364, 10);
-					st.set("playing", "1");
+					if (random2 == 0)
+					{
+						final int toss = st.getInt("toss");
+						if (toss == 4)
+						{
+							st.unset("toss");
+							st.giveItems(ORB, 150);
+							htmltext = "30935-07.htm";
+						}
+						else
+						{
+							st.set("toss", String.valueOf(toss + 1));
+							htmltext = "30935-04.htm";
+						}
+					}
+					else
+					{
+						st.unset("toss");
+						st.takeItems(ORB, 10);
+					}
 				}
 				else
 				{
 					htmltext = "noorbs.htm";
 				}
+				break;
 			}
-		}
-		else if ("30934-04.htm".equalsIgnoreCase(event))
-		{
-			if (st.getInt("playing") > 0)
+			case "30935-06.htm":
 			{
-				switch (random1)
-				{
-					case 0:
-					{
-						htmltext = "30934-05.htm";
-						st.giveItems(4364, 10);
-						break;
-					}
-					case 1:
-					{
-						htmltext = "30934-06.htm";
-						break;
-					}
-					default:
-					{
-						htmltext = "30934-04.htm";
-						st.giveItems(4364, 20);
-						break;
-					}
-				}
-				st.unset("playing");
-			}
-			else
-			{
-				htmltext = "Player is cheating";
-				st.takeItems(4364, -1);
-				st.exitQuest(true);
-			}
-		}
-		else if ("30934-05.htm".equalsIgnoreCase(event))
-		{
-			if (st.getInt("playing") > 0)
-			{
-				switch (random1)
-				{
-					case 0:
-					{
-						htmltext = "30934-04.htm";
-						st.giveItems(4364, 20);
-						break;
-					}
-					case 1:
-					{
-						htmltext = "30934-05.htm";
-						st.giveItems(4364, 10);
-						break;
-					}
-					default:
-					{
-						htmltext = "30934-06.htm";
-						break;
-					}
-				}
-				st.unset("playing");
-			}
-			else
-			{
-				htmltext = "Player is cheating";
-				st.takeItems(4364, -1);
-				st.exitQuest(true);
-			}
-		}
-		else if ("30934-06.htm".equalsIgnoreCase(event))
-		{
-			if (st.getInt("playing") > 0)
-			{
-				switch (random1)
-				{
-					case 0:
-					{
-						htmltext = "30934-04.htm";
-						st.giveItems(4364, 20);
-						break;
-					}
-					case 1:
-					{
-						htmltext = "30934-06.htm";
-						break;
-					}
-					default:
-					{
-						htmltext = "30934-05.htm";
-						st.giveItems(4364, 10);
-						break;
-					}
-				}
-				st.unset("playing");
-			}
-			else
-			{
-				htmltext = "Player is cheating";
-				st.takeItems(4364, -1);
-				st.exitQuest(true);
-			}
-		}
-		else if ("30935-02.htm".equalsIgnoreCase(event) || "30935-03.htm".equalsIgnoreCase(event))
-		{
-			st.unset("toss");
-			if (orbs < 10)
-			{
-				htmltext = "noorbs.htm";
-			}
-		}
-		else if ("30935-05.htm".equalsIgnoreCase(event))
-		{
-			if (orbs >= 10)
-			{
-				if (random2 == 0)
+				if (orbs >= 10)
 				{
 					final int toss = st.getInt("toss");
-					if (toss == 4)
+					st.unset("toss");
+					switch (toss)
 					{
-						st.unset("toss");
-						st.giveItems(4364, 150);
-						htmltext = "30935-07.htm";
+						case 1:
+						{
+							st.giveItems(ORB, 10);
+							break;
+						}
+						case 2:
+						{
+							st.giveItems(ORB, 30);
+							break;
+						}
+						case 3:
+						{
+							st.giveItems(ORB, 70);
+							break;
+						}
+						case 4:
+						{
+							st.giveItems(ORB, 150);
+							break;
+						}
+					}
+				}
+				else
+				{
+					htmltext = "noorbs.htm";
+				}
+				break;
+			}
+			case "30835-02.htm":
+			{
+				if (st.getQuestItemsCount(ECTOPLASM) > 0)
+				{
+					st.takeItems(ECTOPLASM, 1);
+					final int random3 = Rnd.get(1000);
+					if (random3 <= 119)
+					{
+						st.giveItems(955, 1);
+					}
+					else if (random3 <= 169)
+					{
+						st.giveItems(951, 1);
+					}
+					else if (random3 <= 329)
+					{
+						st.giveItems(2511, (Rnd.get(200) + 401));
+					}
+					else if (random3 <= 559)
+					{
+						st.giveItems(2510, (Rnd.get(200) + 401));
+					}
+					else if (random3 <= 561)
+					{
+						st.giveItems(316, 1);
+					}
+					else if (random3 <= 578)
+					{
+						st.giveItems(630, 1);
+					}
+					else if (random3 <= 579)
+					{
+						st.giveItems(188, 1);
+					}
+					else if (random3 <= 581)
+					{
+						st.giveItems(885, 1);
+					}
+					else if (random3 <= 582)
+					{
+						st.giveItems(103, 1);
+					}
+					else if (random3 <= 584)
+					{
+						st.giveItems(917, 1);
 					}
 					else
 					{
-						st.set("toss", String.valueOf(toss + 1));
-						htmltext = "30935-04.htm";
+						st.giveItems(736, 1);
 					}
 				}
 				else
 				{
-					st.unset("toss");
-					st.takeItems(4364, 10);
+					htmltext = "30835-03.htm";
 				}
-			}
-			else
-			{
-				htmltext = "noorbs.htm";
-			}
-		}
-		else if ("30935-06.htm".equalsIgnoreCase(event))
-		{
-			if (orbs >= 10)
-			{
-				final int toss = st.getInt("toss");
-				st.unset("toss");
-				switch (toss)
-				{
-					case 1:
-					{
-						st.giveItems(4364, 10);
-						break;
-					}
-					case 2:
-					{
-						st.giveItems(4364, 30);
-						break;
-					}
-					case 3:
-					{
-						st.giveItems(4364, 70);
-						break;
-					}
-					case 4:
-					{
-						st.giveItems(4364, 150);
-						break;
-					}
-				}
-			}
-			else
-			{
-				htmltext = "noorbs.htm";
-			}
-		}
-		else if ("30835-02.htm".equalsIgnoreCase(event))
-		{
-			if (st.getQuestItemsCount(4365) > 0)
-			{
-				st.takeItems(4365, 1);
-				final int random3 = Rnd.get(1000);
-				if (random3 <= 119)
-				{
-					st.giveItems(955, 1);
-				}
-				else if (random3 <= 169)
-				{
-					st.giveItems(951, 1);
-				}
-				else if (random3 <= 329)
-				{
-					st.giveItems(2511, (Rnd.get(200) + 401));
-				}
-				else if (random3 <= 559)
-				{
-					st.giveItems(2510, (Rnd.get(200) + 401));
-				}
-				else if (random3 <= 561)
-				{
-					st.giveItems(316, 1);
-				}
-				else if (random3 <= 578)
-				{
-					st.giveItems(630, 1);
-				}
-				else if (random3 <= 579)
-				{
-					st.giveItems(188, 1);
-				}
-				else if (random3 <= 581)
-				{
-					st.giveItems(885, 1);
-				}
-				else if (random3 <= 582)
-				{
-					st.giveItems(103, 1);
-				}
-				else if (random3 <= 584)
-				{
-					st.giveItems(917, 1);
-				}
-				else
-				{
-					st.giveItems(736, 1);
-				}
-			}
-			else
-			{
-				htmltext = "30835-03.htm";
+				break;
 			}
 		}
 		return htmltext;
@@ -366,17 +380,15 @@ public class Q343_UnderTheShadowOfTheIvoryTower extends Quest
 			return htmltext;
 		}
 		
-		final int npcId = npc.getNpcId();
-		final int id = st.getState();
-		switch (npcId)
+		switch (npc.getNpcId())
 		{
-			case 30834:
+			case CEMA:
 			{
-				if (id != 2)
+				if (!st.isStarted())
 				{
-					for (int i : ALLOWED_CLASSES)
+					for (int classId : ALLOWED_CLASSES)
 					{
-						if ((st.getPlayer().getClassId().getId() == i) && (st.getPlayer().getLevel() >= 40))
+						if ((st.getPlayer().getClassId().getId() == classId) && (st.getPlayer().getLevel() >= 40))
 						{
 							htmltext = "30834-01.htm";
 						}
@@ -387,7 +399,7 @@ public class Q343_UnderTheShadowOfTheIvoryTower extends Quest
 						st.exitQuest(true);
 					}
 				}
-				else if (st.getQuestItemsCount(4364) > 0)
+				else if (st.getQuestItemsCount(ORB) > 0)
 				{
 					htmltext = "30834-06.htm";
 				}
@@ -397,17 +409,17 @@ public class Q343_UnderTheShadowOfTheIvoryTower extends Quest
 				}
 				break;
 			}
-			case 30835:
+			case ICARUS:
 			{
 				htmltext = "30835-01.htm";
 				break;
 			}
-			case 30934:
+			case MARSHA:
 			{
 				htmltext = "30934-01.htm";
 				break;
 			}
-			case 30935:
+			case TRUMPIN:
 			{
 				htmltext = "30935-01.htm";
 				break;
@@ -425,11 +437,12 @@ public class Q343_UnderTheShadowOfTheIvoryTower extends Quest
 			return null;
 		}
 		
-		if (Rnd.get(100) < 50)
+		if (Rnd.get(100) < CHANCE)
 		{
-			st.giveItems(4364, 1);
+			st.giveItems(ORB, 1);
 			st.playSound("ItemSound.quest_itemget");
 		}
+		
 		return null;
 	}
 }
