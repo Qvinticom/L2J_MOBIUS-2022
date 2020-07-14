@@ -239,7 +239,7 @@
 		<set name="reuse_delay" val="86400000" />
 	</item>
 	<item id="46709" name="Pa'agrio's Blessing" type="EtcItem">
-		<!-- Dimensional Item. When used, increases Max HP/MP/CP 10%, P. Atk. 20%, M. Atk. 30%, P. Def/M. Def 10%, Accuracy 4, Magic Accuracy by 4, Movement Speed 10, Attack/casting Speed 10%, Attack Attribute 100, and reduces Skill MP Consumption 10% for 30 minutes. Buff effect persists through death. Cooldown time is 5 minutes. Cannot be stacked with 'Art of Seduction'. Cannot be used in the Olympiad. -->
+		<!-- Dimensional Item. When used, increases Max HP/MP/CP 10%, P. Atk. 20%, M. Atk. 30%, P. Def/M. Def 10%, Accuracy 4, Magic Accuracy by 4, Speed 10, Attack/casting Speed 10%, Attack Attribute 100, and reduces Skill MP Consumption 10% for 30 minutes. Buff effect persists through death. Cooldown time is 5 minutes. Cannot be stacked with 'Art of Seduction'. Cannot be used in the Olympiad. -->
 		<set name="icon" val="icon.nshop_bless_of_paagrio" />
 		<set name="default_action" val="SKILL_REDUCE" />
 		<set name="immediate_effect" val="true" />
@@ -259,7 +259,7 @@
 		</skills>
 	</item>
 	<item id="46710" name="Lindvior's Earring" additionalName="30-day" type="Armor">
-		<!-- Dimensional Item. MP +59, Petrification Atk./Resistance +50%, Knock Back/Knock Down Atk./Resistance +40%, Pulling Success Rate +40%, Pulling/Danger Zone Resistance +40%, P. Critical Damage +10%, M. Critical Damage +10%, P./M. Abnormal Status Reflection +10%. Reflect damage magic back to the attacker with the probability of 10%. Movement Speed +5, DEX +3, and WIT +3. Wind/Dark Attack Def. decreased. Enables the skill of cancelling Knock Back/Knock Down and increases Knock Back/Knock Down Resistance to 100% instantly. Effect does not stack with identical ones. -->
+		<!-- Dimensional Item. MP +59, Petrification Atk./Resistance +50%, Knock Back/Knock Down Atk./Resistance +40%, Pulling Success Rate +40%, Pulling/Danger Zone Resistance +40%, P. Critical Damage +10%, M. Critical Damage +10%, P./M. Abnormal Status Reflection +10%. Reflect damage magic back to the attacker with the probability of 10%. Speed +5, DEX +3, and WIT +3. Wind/Dark Attack Def. decreased. Enables the skill of cancelling Knock Back/Knock Down and increases Knock Back/Knock Down Resistance to 100% instantly. Effect does not stack with identical ones. -->
 		<set name="icon" val="icon.npoint_earring_of_lind_30day" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="rear;lear" />
@@ -481,7 +481,7 @@
 		<set name="is_freightable" val="true" />
 		<set name="handler" val="ExtractableItems" />
 		<capsuled_items>
-			<item id="46717" min="1" max="1" chance="100" /> <!-- Mysterious Talisman - STR -->
+			<item id="46717" min="1" max="1" chance="100" /> <!-- Mysterious Talisman - STR - 30-day -->
 		</capsuled_items>
 	</item>
 	<item id="46724" name="Mysterious Talisman - INT 30-day pack" type="EtcItem">
@@ -498,7 +498,7 @@
 		<set name="is_freightable" val="true" />
 		<set name="handler" val="ExtractableItems" />
 		<capsuled_items>
-			<item id="46718" min="1" max="1" chance="100" /> <!-- Mysterious Talisman - INT -->
+			<item id="46718" min="1" max="1" chance="100" /> <!-- Mysterious Talisman - INT - 30-day -->
 		</capsuled_items>
 	</item>
 	<item id="46725" name="Mysterious Talisman - DEX 30-day pack" type="EtcItem">
@@ -515,7 +515,7 @@
 		<set name="is_freightable" val="true" />
 		<set name="handler" val="ExtractableItems" />
 		<capsuled_items>
-			<item id="46719" min="1" max="1" chance="100" /> <!-- Mysterious Talisman - DEX -->
+			<item id="46719" min="1" max="1" chance="100" /> <!-- Mysterious Talisman - DEX - 30-day -->
 		</capsuled_items>
 	</item>
 	<item id="46726" name="Mysterious Talisman - WIT 30-day pack" type="EtcItem">
@@ -532,7 +532,7 @@
 		<set name="is_freightable" val="true" />
 		<set name="handler" val="ExtractableItems" />
 		<capsuled_items>
-			<item id="46720" min="1" max="1" chance="100" /> <!-- Mysterious Talisman - WIT -->
+			<item id="46720" min="1" max="1" chance="100" /> <!-- Mysterious Talisman - WIT - 30-day -->
 		</capsuled_items>
 	</item>
 	<item id="46727" name="Mysterious Talisman - CON 30-day pack" type="EtcItem">
@@ -549,7 +549,7 @@
 		<set name="is_freightable" val="true" />
 		<set name="handler" val="ExtractableItems" />
 		<capsuled_items>
-			<item id="46721" min="1" max="1" chance="100" /> <!-- Mysterious Talisman - CON -->
+			<item id="46721" min="1" max="1" chance="100" /> <!-- Mysterious Talisman - CON - 30-day -->
 		</capsuled_items>
 	</item>
 	<item id="46728" name="Mysterious Talisman - MEN 30-day pack" type="EtcItem">
@@ -566,7 +566,7 @@
 		<set name="is_freightable" val="true" />
 		<set name="handler" val="ExtractableItems" />
 		<capsuled_items>
-			<item id="46722" min="1" max="1" chance="100" /> <!-- Mysterious Talisman - MEN -->
+			<item id="46722" min="1" max="1" chance="100" /> <!-- Mysterious Talisman - MEN - 30-day -->
 		</capsuled_items>
 	</item>
 	<item id="46729" name="Scroll of Escape: Town of Goddard" type="EtcItem">
@@ -1070,84 +1070,84 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="46765" name="Ruby Treasure Chest of Good Fortune" type="EtcItem">
+	<item id="46765" name="Ruby Fortune Box" type="EtcItem">
 		<!-- Double click to obtain one of Level 1-5 Rubies. -->
 		<set name="icon" val="icon.etc_bm_jewelbox_ruby_i00" />
 		<set name="default_action" val="SKILL_REDUCE_ON_SKILL_SUCCESS" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="46766" name="Sapphire Treasure Chest of Good Fortune" type="EtcItem">
+	<item id="46766" name="Sapphire Fortune Box" type="EtcItem">
 		<!-- Double click to obtain one of Level 1-5 Sapphires. -->
 		<set name="icon" val="icon.etc_bm_jewelbox_sapphire_i00" />
 		<set name="default_action" val="SKILL_REDUCE_ON_SKILL_SUCCESS" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="46767" name="Topaz Treasure Chest of Good Fortune" type="EtcItem">
+	<item id="46767" name="Topaz Fortune Box" type="EtcItem">
 		<!-- Double click to obtain one of Level 1-5 Topazes. -->
 		<set name="icon" val="icon.etc_bm_jewelbox_topaz_i00" />
 		<set name="default_action" val="SKILL_REDUCE_ON_SKILL_SUCCESS" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="46768" name="Opal Treasure Chest of Good Fortune" type="EtcItem">
+	<item id="46768" name="Opal Fortune Box" type="EtcItem">
 		<!-- Double click to obtain one of Level 1-5 Opals. -->
 		<set name="icon" val="icon.etc_bm_jewelbox_opal_i00" />
 		<set name="default_action" val="SKILL_REDUCE_ON_SKILL_SUCCESS" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="46769" name="Obsidian Treasure Chest of Good Fortune" type="EtcItem">
+	<item id="46769" name="Obsidian Fortune Box" type="EtcItem">
 		<!-- Double click to obtain one of Level 1-5 Obsidians. -->
 		<set name="icon" val="icon.etc_bm_jewelbox_obsidian_i00" />
 		<set name="default_action" val="SKILL_REDUCE_ON_SKILL_SUCCESS" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="46770" name="Diamond Treasure Chest of Good Fortune" type="EtcItem">
+	<item id="46770" name="Diamond Fortune Box" type="EtcItem">
 		<!-- Double click to obtain one of Level 1-5 Diamonds. -->
 		<set name="icon" val="icon.etc_bm_jewelbox_diamond_i00" />
 		<set name="default_action" val="SKILL_REDUCE_ON_SKILL_SUCCESS" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="46771" name="Emerald Treasure Chest of Good Fortune" type="EtcItem">
+	<item id="46771" name="Emerald Fortune Box" type="EtcItem">
 		<!-- Double click to obtain one of Level 1-5 Emeralds. -->
 		<set name="icon" val="icon.etc_bm_jewelbox_emerald_i00" />
 		<set name="default_action" val="SKILL_REDUCE_ON_SKILL_SUCCESS" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="46772" name="Aquamarine Treasure Chest of Good Fortune" type="EtcItem">
+	<item id="46772" name="Aquamarine Fortune Box" type="EtcItem">
 		<!-- Double click to obtain one of Level 1-5 Aquamarines. -->
 		<set name="icon" val="icon.etc_bm_jewelbox_aquamarine_i00" />
 		<set name="default_action" val="SKILL_REDUCE_ON_SKILL_SUCCESS" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="46773" name="Pearl Treasure Chest of Good Fortune" type="EtcItem">
+	<item id="46773" name="Pearl Fortune Box" type="EtcItem">
 		<!-- Double click to obtain one of Level 1-5 Pearls. -->
 		<set name="icon" val="icon.etc_bm_jewelbox_pearl_i00" />
 		<set name="default_action" val="SKILL_REDUCE_ON_SKILL_SUCCESS" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="46774" name="Vital Stone Treasure Chest of Good Fortune" type="EtcItem">
+	<item id="46774" name="Vital Stone Fortune Box" type="EtcItem">
 		<!-- Double click to obtain one of Level 1-5 Vital Stones. -->
 		<set name="icon" val="icon.etc_bm_jewelbox_vital" />
 		<set name="default_action" val="SKILL_REDUCE_ON_SKILL_SUCCESS" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="46775" name="Garnet Treasure Chest of Good Fortune" type="EtcItem">
+	<item id="46775" name="Garnet Fortune Box" type="EtcItem">
 		<!-- Double click to obtain one of Level 1-5 Garnets. -->
 		<set name="icon" val="icon.etc_bm_jewelbox_garnet" />
 		<set name="default_action" val="SKILL_REDUCE_ON_SKILL_SUCCESS" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="46776" name="Tanzanite Treasure Chest of Good Fortune" type="EtcItem">
+	<item id="46776" name="Tanzanite Fortune Box" type="EtcItem">
 		<!-- Double click to obtain one of Level 1-5 Tanzanites. -->
 		<set name="icon" val="icon.etc_bm_jewelbox_tanzanite" />
 		<set name="default_action" val="SKILL_REDUCE_ON_SKILL_SUCCESS" />
@@ -1211,7 +1211,7 @@
 		<set name="is_private_storeable" val="false" />
 	</item>
 	<item id="46782" name="Graduation Gift" type="EtcItem">
-		<!-- A Mentee Graduation Gift. Use to obtain Soulshot (R-grade), Blessed Spiritshot (R-grade), Player Commendation - Enhanced Rosy Seduction, Blessed Scroll of Resurrection, Blessed Scroll of Escape. -->
+		<!-- A Mentee Graduation Gift. Use to obtain Soulshot (R-grade), Blessed Spiritshot (R-grade), Premium Account - Enhanced Rosy Seduction, Blessed Scroll of Resurrection, Blessed Scroll of Escape. -->
 		<set name="icon" val="icon.new_user_box" />
 		<set name="material" val="STEEL" />
 		<set name="weight" val="10" />
@@ -1230,9 +1230,9 @@
 		<capsuled_items>
 			<item id="33640" min="5" max="5" chance="100" /> <!-- Blessed Scroll of Escape -->
 			<item id="33518" min="5" max="5" chance="100" /> <!-- Blessed Scroll of Resurrection -->
-			<item id="33794" min="25000" max="25000" chance="100" /> <!-- Blessed Spiritshot (R-grade) -->
-			<item id="37928" min="10" max="10" chance="100" /> <!-- PA - Art of Seduction -->
-			<item id="33780" min="50000" max="50000" chance="100" /> <!-- Soulshot (R-grade) -->
+			<item id="33794" min="25000" max="25000" chance="100" /> <!-- Blessed Spiritshot (R-grade) - Event -->
+			<item id="37928" min="10" max="10" chance="100" /> <!-- Premium Account - Art of Seduction -->
+			<item id="33780" min="50000" max="50000" chance="100" /> <!-- Soulshot (R-grade) - Event -->
 		</capsuled_items>
 	</item>
 	<item id="46783" name="Blue Dynasty Transformation Potion" type="EtcItem">
@@ -1438,8 +1438,8 @@
 			<stat type="pAtkRange">40</stat>
 		</stats>
 	</item>
-	<item id="46795" name="Paulina's Light Crossbow" type="Weapon">
-		<!-- A Light Crossbow imbued with the energy of Paulina. Enchantment, Soul Crystal, Augment, and Attribute Assignment not possible. <Special Option>. Atk. Spd. +5%, P. Critical Rate +30. -->
+	<item id="46795" name="Paulina's Light Bow" type="Weapon">
+		<!-- A Light Bow imbued with the energy of Paulina. Enchantment, Soul Crystal, Augment, and Attribute Assignment not possible. <Special Option>. Atk. Spd. +5%, P. Critical Rate +30. -->
 		<set name="icon" val="icon.weapon_cyclone_bow_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="BOW" />

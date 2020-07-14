@@ -100,8 +100,8 @@
 			<item id="3887" min="1" max="1" chance="20" /> <!-- Letter - T - Event -->
 		</capsuled_items>
 	</item>
-	<item id="37006" name="Letter Collector's Pouch: RIIS" type="EtcItem">
-		<!-- Magic pouch that contains the letters of RIIS. Double-click to get one of the following letters: R, II and S. -->
+	<item id="37006" name="Letter Collector's Pouch: HIIS" type="EtcItem">
+		<!-- Magic pouch that contains the letters of RIIS. Double-click to get one of the following letters: H, II and S. -->
 		<set name="icon" val="icon.etc_crystal_spice_s_i00" />
 		<set name="weight" val="10" />
 		<set name="is_sellable" val="false" />
@@ -118,7 +118,7 @@
 		</capsuled_items>
 	</item>
 	<item id="37007" name="Letter Collector's Lucky Pouch" type="EtcItem">
-		<!-- Chance to test your luck! You can get Letter Collector's Pouch: RIIS at a certain probability. If you fail, you won't get anything. -->
+		<!-- Chance to test your luck! You can get Letter Collector's Pouch: HIIS at a certain probability. If you fail, you won't get anything. -->
 		<set name="icon" val="icon.etc_crystal_spice_blessed_i00" />
 		<set name="weight" val="10" />
 		<set name="is_sellable" val="false" />
@@ -127,7 +127,7 @@
 		<set name="immediate_effect" val="true" />
 		<set name="handler" val="ExtractableItems" />
 		<capsuled_items>
-			<item id="37006" min="1" max="1" chance="75" /> <!-- Letter Collector's Pouch: RIIS -->
+			<item id="37006" min="1" max="1" chance="75" /> <!-- Letter Collector's Pouch: HIIS -->
 		</capsuled_items>
 	</item>
 	<item id="37008" name="Strawberry Cake (HP)" type="EtcItem">
@@ -413,21 +413,21 @@
 		<set name="extractableCountMin" val="1" />
 		<set name="extractableCountMax" val="1" />
 		<capsuled_items>
-			<item id="35466" min="1" max="1" chance="6" /> <!-- Recipe: Eternal Boots (60%) -->
-			<item id="35463" min="1" max="1" chance="6" /> <!-- Recipe: Eternal Breastplate (60%) -->
-			<item id="35473" min="1" max="1" chance="6" /> <!-- Recipe: Eternal Circlet (60%) -->
-			<item id="35464" min="1" max="1" chance="6" /> <!-- Recipe: Eternal Gaiters (60%) -->
-			<item id="35465" min="1" max="1" chance="6" /> <!-- Recipe: Eternal Gauntlets (60%) -->
-			<item id="35476" min="1" max="1" chance="6" /> <!-- Recipe: Eternal Gloves (60%) -->
-			<item id="35462" min="1" max="1" chance="6" /> <!-- Recipe: Eternal Helmet (60%) -->
-			<item id="35469" min="1" max="1" chance="6" /> <!-- Recipe: Eternal Leather Armor (60%) -->
-			<item id="35472" min="1" max="1" chance="6" /> <!-- Recipe: Eternal Leather Boots (60%) -->
-			<item id="35471" min="1" max="1" chance="6" /> <!-- Recipe: Eternal Leather Gloves (60%) -->
-			<item id="35468" min="1" max="1" chance="6" /> <!-- Recipe: Eternal Leather Helmet (60%) -->
-			<item id="35470" min="1" max="1" chance="6" /> <!-- Recipe: Eternal Leather Leggings (60%) -->
-			<item id="35477" min="1" max="1" chance="6" /> <!-- Recipe: Eternal Shoes (60%) -->
-			<item id="35475" min="1" max="1" chance="6" /> <!-- Recipe: Eternal Stockings (60%) -->
-			<item id="35474" min="1" max="1" chance="6" /> <!-- Recipe: Eternal Tunic (60%) -->
+			<item id="35466" min="1" max="1" chance="6" /> <!-- Recipe:  Eternal Boots (60%) -->
+			<item id="35463" min="1" max="1" chance="6" /> <!-- Recipe:  Eternal Breastplate (60%) -->
+			<item id="35473" min="1" max="1" chance="6" /> <!-- Recipe:  Eternal Circlet (60%) -->
+			<item id="35464" min="1" max="1" chance="6" /> <!-- Recipe:  Eternal Gaiters (60%) -->
+			<item id="35465" min="1" max="1" chance="6" /> <!-- Recipe:  Eternal Gauntlets (60%) -->
+			<item id="35476" min="1" max="1" chance="6" /> <!-- Recipe:  Eternal Gloves (60%) -->
+			<item id="35462" min="1" max="1" chance="6" /> <!-- Recipe:  Eternal Helmet (60%) -->
+			<item id="35469" min="1" max="1" chance="6" /> <!-- Recipe:  Eternal Leather Armor (60%) -->
+			<item id="35472" min="1" max="1" chance="6" /> <!-- Recipe:  Eternal Leather Boots (60%) -->
+			<item id="35471" min="1" max="1" chance="6" /> <!-- Recipe:  Eternal Leather Gloves (60%) -->
+			<item id="35468" min="1" max="1" chance="6" /> <!-- Recipe:  Eternal Leather Helmet (60%) -->
+			<item id="35470" min="1" max="1" chance="6" /> <!-- Recipe:  Eternal Leather Leggings (60%) -->
+			<item id="35477" min="1" max="1" chance="6" /> <!-- Recipe:  Eternal Shoes (60%) -->
+			<item id="35475" min="1" max="1" chance="6" /> <!-- Recipe:  Eternal Stockings (60%) -->
+			<item id="35474" min="1" max="1" chance="6" /> <!-- Recipe:  Eternal Tunic (60%) -->
 		</capsuled_items>
 	</item>
 	<item id="37025" name="Scroll of Escape: Alligator Island" type="EtcItem">
@@ -1604,7 +1604,7 @@
 		<set name="default_action" val="SKILL_REDUCE" />
 	</item>
 	<item id="37092" name="Dimensional Cloak of Light" type="Armor">
-		<!-- Cloak that symbolizes glory and light. With the power of dimension, characters of all levels can wear it. Defense + 50, M. Def. + 40 and STR/MEN/DEX/WIT/INT/CON + 2. Damage received during PvP decreases by 5%. Can use Escape:Castle skill. Part of its effect does not apply when you are chaotic. Cannot be used while in a chaotic state. Cannot be transferred between servers. -->
+		<!-- Cloak that symbolizes glory and light. With the power of dimension, characters of all levels can wear it. Defense +50, M. Def. +40 and STR/MEN/DEX/WIT/INT/CON +2. Damage received during PvP decreases by 5%. Can use Escape: Castle skill. Part of its effect does not apply when you are chaotic. Cannot be used while in a chaotic state. Cannot be transferred between servers. -->
 		<set name="icon" val="icon.amor_goodness_cloak" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="back" />
@@ -1632,7 +1632,7 @@
 		</stats>
 	</item>
 	<item id="37093" name="Dimensional Cloak of Darkness" type="Armor">
-		<!-- Cloak that symbolizes avarice and darkness. With the power of dimension, characters of all levels can wear it. Defense + 50, M. Def. + 40 and STR/MEN/DEX/WIT/INT/CON + 2. Damage received during PvP decreases by 5%. Can use Escape:Castle skill. Cannot be used while in a chaotic state. Cannot be transferred between servers. -->
+		<!-- Cloak that symbolizes avarice and darkness. With the power of dimension, characters of all levels can wear it. Defense +50, M. Def. +40 and STR/MEN/DEX/WIT/INT/CON +2. Damage received during PvP decreases by 5%. Can use Escape: Castle skill. Cannot be used while in a chaotic state. Cannot be transferred between servers. -->
 		<set name="icon" val="icon.amor_evilness_cloak" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="back" />

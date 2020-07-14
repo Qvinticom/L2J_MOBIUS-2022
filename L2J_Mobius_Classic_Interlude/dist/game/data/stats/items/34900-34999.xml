@@ -498,7 +498,7 @@
 		</stats>
 	</item>
 	<item id="34925" name="Cloak of Light" type="Armor">
-		<!-- Cloak that symbolizes glory and light. STR/MEN/DEX/WIT/INT/CON + 2, and Damage Received - 5%. Can use Escape:Castle skill. Cannot be used while in a chaotic state. Can only be equipped by marquis or higher. Cannot be transferred between servers. -->
+		<!-- Cloak that symbolizes glory and light. STR/MEN/DEX/WIT/INT/CON +2, and Damage Received - 5%. Can use Escape: Castle skill. Cannot be used while in a chaotic state. Can only be equipped by marquis or higher. Cannot be transferred between servers. -->
 		<set name="icon" val="icon.amor_goodness_cloak" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="back" />
@@ -538,7 +538,7 @@
 		</stats>
 	</item>
 	<item id="34926" name="Cloak of Darkness" type="Armor">
-		<!-- Cloak that symbolizes avarice and darkness. STR/MEN/DEX/WIT/INT/CON + 2, and Damage Received - 5%. Can use Escape:Castle skill. Can only be equipped by marquis or higher. Cannot be transferred between servers. -->
+		<!-- Cloak that symbolizes avarice and darkness. STR/MEN/DEX/WIT/INT/CON +2, and Damage Received - 5%. Can use Escape: Castle skill. Can only be equipped by marquis or higher. Cannot be transferred between servers. -->
 		<set name="icon" val="icon.amor_evilness_cloak" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="back" />
@@ -736,7 +736,7 @@
 		</skills>
 	</item>
 	<item id="34935" name="Star Agathion - Heejin Jang" additionalName="7-day" type="Armor">
-		<!-- 7-day. Increases CON + 3, MEN + 3, Weight Gauge by 10000, Max HP/MP/CP by 300, M. Def. by 5%, Max HP by 5%, and Attribute Resistance by 10. Usable Skill: Blessed Escape. -->
+		<!-- 7-day. Increases CON +3, MEN +3, Weight Gauge by 10000, Max HP/MP/CP by 300, M. Def. by 5%, Max HP by 5%, and Attribute Resistance by 10. Usable Skill: Blessed Escape. -->
 		<set name="icon" val="icon.bracelet_agathion_bm_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weight" val="150" />
@@ -769,7 +769,7 @@
 		</stats>
 	</item>
 	<item id="34936" name="Star Agathion - Hyuk Jang" additionalName="7-day" type="Armor">
-		<!-- 7-day. Increases CON + 3, MEN + 3, Weight Gauge by 10000, Max HP/MP/CP by 300, P. Atk. by 5%, and Attribute Resistance by 10. Usable Skill: Blessed Escape. -->
+		<!-- 7-day. Increases CON +3, MEN +3, Weight Gauge by 10000, Max HP/MP/CP by 300, P. Atk. by 5%, and Attribute Resistance by 10. Usable Skill: Blessed Escape. -->
 		<set name="icon" val="icon.bracelet_agathion_bm_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weight" val="150" />
@@ -802,7 +802,7 @@
 		</stats>
 	</item>
 	<item id="34937" name="Star Agathion - Sooro Kim" additionalName="7-day" type="Armor">
-		<!-- 7-day. Increases CON + 3, MEN + 3, Weight Gauge by 10000, Max HP/MP/CP by 300, P. Def. by 5%, Max HP by 5%, and Attribute Resistance by 10. Usable Skill: Blessed Escape. -->
+		<!-- 7-day. Increases CON +3, MEN +3, Weight Gauge by 10000, Max HP/MP/CP by 300, P. Def. by 5%, Max HP by 5%, and Attribute Resistance by 10. Usable Skill: Blessed Escape. -->
 		<set name="icon" val="icon.bracelet_agathion_bm_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weight" val="150" />
@@ -835,7 +835,7 @@
 		</stats>
 	</item>
 	<item id="34938" name="Star Agathion - Jaebum Park" additionalName="7-day" type="Armor">
-		<!-- 7-day. Increases CON + 3, MEN + 3, Weight Gauge by 10000, Max HP/MP/CP by 300, M. Atk. By 6%, and Attribute Resistance by 10. Usable Skill: Blessed Escape. -->
+		<!-- 7-day. Increases CON +3, MEN +3, Weight Gauge by 10000, Max HP/MP/CP by 300, M. Atk. By 6%, and Attribute Resistance by 10. Usable Skill: Blessed Escape. -->
 		<set name="icon" val="icon.bracelet_agathion_bm_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weight" val="150" />
@@ -868,7 +868,7 @@
 		</stats>
 	</item>
 	<item id="34939" name="Star Agathion - Shin-young Kim" additionalName="7-day" type="Armor">
-		<!-- 7-day. Increases CON + 3, MEN + 3, Weight Gauge by 10000, Max HP/MP/CP by 300, and Attribute Resistance by 10. Decreases skill cooldown and MP consumed during skill use by 3%. Usable Skill: Blessed Escape. -->
+		<!-- 7-day. Increases CON +3, MEN +3, Weight Gauge by 10000, Max HP/MP/CP by 300, and Attribute Resistance by 10. Decreases skill cooldown and MP consumed during skill use by 3%. Usable Skill: Blessed Escape. -->
 		<set name="icon" val="icon.bracelet_agathion_bm_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weight" val="150" />
@@ -901,7 +901,7 @@
 		</stats>
 	</item>
 	<item id="34940" name="Scroll: Enchant Hair Accessory" additionalName="Event" type="EtcItem">
-		<!-- Increases M. Def. of hair accessories by 2. It is greatly increased starting at + 4. Can be safely enchanted to + 3. -->
+		<!-- Increases M. Def. of hair accessories by 2. It is greatly increased starting at +4. Can be safely enchanted to +3. -->
 		<set name="icon" val="icon.etc_scroll_of_enchant_armor_i05" />
 		<set name="weight" val="10" />
 		<set name="is_stackable" val="true" />
@@ -1134,7 +1134,7 @@
 			<skill id="9436" level="1" /> <!-- Lv. 5 Ancient Dye Pack -->
 		</skills>
 	</item>
-	<item id="34956" name="Letter - M" type="EtcItem">
+	<item id="34956" name="Event Letter - M" type="EtcItem">
 		<!-- Item for the Lineage II 8th Anniversary event. Combine with other letters to create a special word and bring it to Angel Cat to receive a great gift! -->
 		<set name="icon" val="icon.etc_alphabet_m_i00" />
 		<set name="is_oly_restricted" val="true" />
@@ -1306,7 +1306,7 @@
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="34968" name="Pansy" type="EtcItem">
-		<!-- Purple flower called a "Pansy." It means, "Think of me." -->
+		<!-- Purple flower called a "Pansy." It means, "Think of me. -->
 		<set name="icon" val="icon.etc_flower_i04" />
 		<set name="is_clan_depositable" val="false" />
 		<set name="is_mailable" val="false" />
@@ -1710,7 +1710,7 @@
 		</skills>
 	</item>
 	<item id="34990" name="Weapon Fragment" type="EtcItem">
-		<!-- Corroded ingredient. Sell it to a store or trade it in through the Aden Reconstruction Society for a new ingredient. -->
+		<!-- Material used to make Dwarven items. Can be sold in any shop. -->
 		<set name="icon" val="icon.etc_r_weapon_piece_i01" />
 		<set name="price" val="2500" />
 		<set name="is_oly_restricted" val="true" />
@@ -1720,7 +1720,7 @@
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="34991" name="Armor Fragment" type="EtcItem">
-		<!-- Corroded ingredient. Sell it to a store or trade it in through the Aden Reconstruction Society for a new ingredient. -->
+		<!-- Material used to make Dwarven items. Can be sold in any shop. -->
 		<set name="icon" val="icon.etc_r_armor_piece_i01" />
 		<set name="price" val="1000" />
 		<set name="is_oly_restricted" val="true" />
@@ -1730,7 +1730,7 @@
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="34992" name="Accessory Gem" type="EtcItem">
-		<!-- Corroded ingredient. Sell it to a store or trade it in through the Aden Reconstruction Society for a new ingredient. -->
+		<!-- Material used to make Dwarven items. Can be sold in any shop. -->
 		<set name="icon" val="icon.etc_r_acc_piece_i01" />
 		<set name="price" val="1000" />
 		<set name="is_oly_restricted" val="true" />
@@ -1767,7 +1767,7 @@
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="34996" name="Cloak of Radiant Light" type="Armor">
-		<!-- Cloak that symbolizes glory and light. STR/MEN/DEX/WIT/INT/CON/LUC/CHA + 3, and Damage Received - 15%. Can use Escape:Castle skill. Cannot be used while in a chaotic state. Can only be equipped by a lord. Cannot be transferred between servers. -->
+		<!-- Cloak that symbolizes glory and light. STR/MEN/DEX/WIT/INT/CON/LUC/CHA +3, and Damage Received - 15%. Can use Escape: Castle skill. Cannot be used while in a chaotic state. Can only be equipped by a lord. Cannot be transferred between servers. -->
 		<set name="icon" val="icon.amor_goodness_cloak" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="back" />
@@ -1808,7 +1808,7 @@
 		</stats>
 	</item>
 	<item id="34997" name="Cloak of Cold Darkness" type="Armor">
-		<!-- Cloak that symbolizes avarice and darkness. STR/MEN/DEX/WIT/INT/CON/LUC/CHA + 3, and Damage Received - 15%. Can use Escape:Castle skill. Can only be equipped by a lord. Cannot be transferred between servers. -->
+		<!-- Cloak that symbolizes avarice and darkness. STR/MEN/DEX/WIT/INT/CON/LUC/CHA +3, and Damage Received - 15%. Can use Escape: Castle skill. Can only be equipped by a lord. Cannot be transferred between servers. -->
 		<set name="icon" val="icon.amor_evilness_cloak" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="back" />
@@ -1849,7 +1849,7 @@
 		</stats>
 	</item>
 	<item id="34998" name="Tauti's One-handed Axe" type="Weapon">
-		<!-- A weapon made using Tauti's Fragment Augment. When equipped, increases PVP Damage by 15%, Max HP by 25%, P. Atk. by 10%, Atk. Spd. by 15%, and P. Critical Rate by 150. In addition, the Active Skill ?auti's Wrath' can be used. Enchantment, Augment, Appearance Modification, Crystallization, Attribute Assignment are not allowed. 1 Special Soul Crystal can be used. -->
+		<!-- A weapon made using Tauti's Fragment Augment. When equipped, increases PVP Damage by 15%, Max HP by 25%, P. Atk. by 10%, Atk. Spd. by 15%, and P. Critical Rate by 150. In addition, the Active Skill ‘Tauti's Wrath’ can be used. Enchantment, Augment, Appearance Modification, Crystallization, Attribute Assignment are not allowed. 1 special Soul Crystal can be used. -->
 		<set name="icon" val="icon.weapon_tauti_one_hand_axe_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="rhand" />
@@ -1878,7 +1878,7 @@
 		</stats>
 	</item>
 	<item id="34999" name="Tauti's Two-handed Axe" type="Weapon">
-		<!-- A weapon made using Tauti's Fragment Augment. When equipped, increases PVP Damage by 15%, Max HP by 25%, P. Atk. by 10%, Atk. Spd. by 15%, and P. Critical Rate by 150. In addition, the Active Skill ?auti's Wrath' can be used. Enchantment, Augment, Appearance Modification, Crystallization, Attribute Assignment are not allowed. 1 Special Soul Crystal can be used. -->
+		<!-- A weapon made using Tauti's Fragment Augment. When equipped, increases PVP Damage by 15%, Max HP by 25%, P. Atk. by 10%, Atk. Spd. by 15%, and P. Critical Rate by 150. In addition, the Active Skill ‘Tauti's Wrath’ can be used. Enchantment, Augment, Appearance Modification, Crystallization, Attribute Assignment are not allowed. 1 special Soul Crystal can be used. -->
 		<set name="icon" val="icon.weapon_tauti_one_hand_magic_axe_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="lrhand" />

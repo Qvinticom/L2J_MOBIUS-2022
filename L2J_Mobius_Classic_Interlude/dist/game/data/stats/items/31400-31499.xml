@@ -621,7 +621,7 @@
 		</stats>
 	</item>
 	<item id="31420" name="Bound Doom Crusher - Anger" type="Weapon">
-		<!-- Bound Item. <Special Option>. P. Atk. + 32 and decreases Max HP by 15%. Increases damage inflicted during PvP. No Soul Crystal option. -->
+		<!-- Bound Item. <Special Option>. P. Atk. +32 and decreases Max HP by 15%. Increases damage inflicted during PvP. No Soul Crystal option. -->
 		<set name="icon" val="icon.weapon_doom_crusher_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="lrhand" />
@@ -1296,8 +1296,8 @@
 			<stat type="pAtkRange">40</stat>
 		</stats>
 	</item>
-	<item id="31442" name="Bound Sword of Whispering Death - Empower" type="Weapon">
-		<!-- <Special Option>. M. Atk. + 24. No Soul Crystal option. -->
+	<item id="31442" name="Bound Sword of Whispering Death" additionalName="Empower" type="Weapon">
+		<!-- <Soul Crystal Enhancement>. M. Atk. + 24. -->
 		<set name="icon" val="icon.weapon_deathbreath_sword_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="rhand" />
@@ -1330,8 +1330,8 @@
 			<stat type="pAtkRange">40</stat>
 		</stats>
 	</item>
-	<item id="31443" name="Bound Sword of Whispering Death - M. Atk." type="Weapon">
-		<!-- <Special Option>. Increases MP consumption by 15% and M. Atk. by 99 during magic use. No Soul Crystal option. -->
+	<item id="31443" name="Bound Sword of Whispering Death" additionalName="M. Atk." type="Weapon">
+		<!-- <Soul Crystal Enhancement>. Increases MP consumption by 15% and M. Atk. by 99 during magic use. -->
 		<set name="icon" val="icon.weapon_deathbreath_sword_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="rhand" />
@@ -1364,8 +1364,8 @@
 			<stat type="pAtkRange">40</stat>
 		</stats>
 	</item>
-	<item id="31444" name="Bound Sword of Whispering Death - Magic Silence" type="Weapon">
-		<!-- <Special Option>. Has a 10% chance of casting Silence on the target during magic use. No Soul Crystal option. -->
+	<item id="31444" name="Bound Sword of Whispering Death" additionalName="Magic Silence" type="Weapon">
+		<!-- <Soul Crystal Enhancement>. Has a 10% chance of casting Silence on the target during magic use. -->
 		<set name="icon" val="icon.weapon_deathbreath_sword_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="rhand" />
@@ -1573,8 +1573,8 @@
 			<stat type="pAtkRange">40</stat>
 		</stats>
 	</item>
-	<item id="31450" name="Bound Club of Nature - Acumen" type="Weapon">
-		<!-- <Special Option>. Increases Casting Spd. by 15%. No Soul Crystal option. -->
+	<item id="31450" name="Bound Club of Nature" additionalName="Acumen" type="Weapon">
+		<!-- <Soul Crystal Enhancement>. Increases Casting Spd. by 15%. -->
 		<set name="icon" val="icon.weapon_club_of_nature_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="rhand" />
@@ -1608,8 +1608,8 @@
 			<stat type="pAtkRange">40</stat>
 		</stats>
 	</item>
-	<item id="31451" name="Bound Club of Nature - Magic Mental Shield" type="Weapon">
-		<!-- <Special Option>. Has a 50% chance of casting Mental Shield on the target during magic use. No Soul Crystal option. -->
+	<item id="31451" name="Bound Club of Nature" additionalName="Magic Mental Shield" type="Weapon">
+		<!-- <Soul Crystal Enhancement>. Has a 50% chance of casting Mental Shield on the target during magic use. -->
 		<set name="icon" val="icon.weapon_club_of_nature_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="rhand" />
@@ -1643,8 +1643,8 @@
 			<stat type="pAtkRange">40</stat>
 		</stats>
 	</item>
-	<item id="31452" name="Bound Club of Nature - Magic Hold" type="Weapon">
-		<!-- <Special Option>. Has a 6% chance of casting Dryad Root on the target during magic use. No Soul Crystal option. -->
+	<item id="31452" name="Bound Club of Nature" additionalName="Magic Hold" type="Weapon">
+		<!-- <Soul Crystal Enhancement>. Has a 6% chance of casting Dryad Root on the target during magic use. -->
 		<set name="icon" val="icon.weapon_club_of_nature_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="rhand" />
@@ -1884,8 +1884,8 @@
 			<stat type="pAtkRange">40</stat>
 		</stats>
 	</item>
-	<item id="31459" name="Bound Dark Screamer - Evasion" type="Weapon">
-		<!-- <Special Option>. Increases Evasion by 2. No Soul Crystal option. -->
+	<item id="31459" name="Bound Dark Screamer" additionalName="Evasion" type="Weapon">
+		<!-- <Soul Crystal Enhancement>. Increases Evasion by 2. -->
 		<set name="icon" val="icon.weapon_dark_screamer_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="rhand" />
@@ -1919,8 +1919,8 @@
 			<stat type="pAtkRange">40</stat>
 		</stats>
 	</item>
-	<item id="31460" name="Bound Dark Screamer - Focus" type="Weapon">
-		<!-- <Special Option>. Increases Critical by 81. No Soul Crystal option. -->
+	<item id="31460" name="Bound Dark Screamer" additionalName="Focus" type="Weapon">
+		<!-- <Soul Crystal Enhancement>. Increases Critical by 81. -->
 		<set name="icon" val="icon.weapon_dark_screamer_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="rhand" />
@@ -1954,8 +1954,8 @@
 			<stat type="pAtkRange">40</stat>
 		</stats>
 	</item>
-	<item id="31461" name="Bound Dark Screamer - Critical Bleed" type="Weapon">
-		<!-- <Special Option>. Has a 14% chance of casting Bleed on the target during a standard Critical Attack. No Soul Crystal option. -->
+	<item id="31461" name="Bound Dark Screamer" additionalName="Critical Bleed" type="Weapon">
+		<!-- <Soul Crystal Enhancement>. Has a 14% chance of casting Bleed on the target during a standard Critical Attack. -->
 		<set name="icon" val="icon.weapon_dark_screamer_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="rhand" />
@@ -2282,8 +2282,8 @@
 			<stat type="pAtkRange">40</stat>
 		</stats>
 	</item>
-	<item id="31475" name="Bound Dark Elven Dagger - Focus" type="Weapon">
-		<!-- <Special Option>. Increases Critical by 90. No Soul Crystal option. -->
+	<item id="31475" name="Bound Dark Elven Dagger" additionalName="Focus" type="Weapon">
+		<!-- <Soul Crystal Enhancement>. Increases Critical by 90. -->
 		<set name="icon" val="icon.weapon_darkelven_dagger_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="rhand" />
@@ -2317,8 +2317,8 @@
 			<stat type="pAtkRange">40</stat>
 		</stats>
 	</item>
-	<item id="31476" name="Bound Dark Elven Dagger - Back Blow" type="Weapon">
-		<!-- <Special Option>. Increases P. Critical Rate by 50% when attacking the target from behind. No Soul Crystal option. -->
+	<item id="31476" name="Bound Dark Elven Dagger" additionalName="Back Blow" type="Weapon">
+		<!-- <Soul Crystal Enhancement>. Increases P. Critical Rate by 50% when attacking the target from behind. -->
 		<set name="icon" val="icon.weapon_darkelven_dagger_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="rhand" />
@@ -2352,8 +2352,8 @@
 			<stat type="pAtkRange">40</stat>
 		</stats>
 	</item>
-	<item id="31477" name="Bound Dark Elven Dagger - Mortal Strike" type="Weapon">
-		<!-- <Special Option>. Increases the success rate of Mortal Blow and Deadly Blow by 50%. No Soul Crystal option. -->
+	<item id="31477" name="Bound Dark Elven Dagger" additionalName="Mortal Strike" type="Weapon">
+		<!-- <Soul Crystal Enhancement>. Increases the success rate of Mortal Blow and Deadly Blow by 50%. -->
 		<set name="icon" val="icon.weapon_darkelven_dagger_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="rhand" />
@@ -2419,7 +2419,7 @@
 		</stats>
 	</item>
 	<item id="31479" name="Bound Dark Legion's Edge - Critical Damage" type="Weapon">
-		<!-- Bound Item. <Special Option>. P. Atk. + 326 during a Critical Attack. Increases damage inflicted during PvP. No Soul Crystal option. -->
+		<!-- Bound Item. <Special Option>. P. Atk. +326 during a Critical Attack. Increases damage inflicted during PvP. No Soul Crystal option. -->
 		<set name="icon" val="icon.weapon_dark_legions_edge_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="rhand" />
@@ -2693,7 +2693,7 @@
 		</stats>
 	</item>
 	<item id="31487" name="Bound Damascus Sword - Critical Damage" type="Weapon">
-		<!-- Bound Item. <Special Option>. P. Atk. + 262 during a Critical Attack. No Soul Crystal option. -->
+		<!-- Bound Item. <Special Option>. P. Atk. +262 during a Critical Attack. No Soul Crystal option. -->
 		<set name="icon" val="icon.weapon_sword_of_damascus_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="rhand" />
@@ -2963,8 +2963,8 @@
 			<stat type="pAtkRange">40</stat>
 		</stats>
 	</item>
-	<item id="31495" name="Bound Knuckle Duster - Rsk. Evasion" type="Weapon">
-		<!-- <Special Option>. Increases Evasion by 7 when HP drops to 60% or below. No Soul Crystal option. -->
+	<item id="31495" name="Bound Knuckle Duster" additionalName="Rsk. Evasion" type="Weapon">
+		<!-- <Soul Crystal Enhancement>. Increases Evasion by 7 when HP drops to 60% or below. -->
 		<set name="icon" val="icon.weapon_knuckle_dust_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="lrhand" />
@@ -2998,8 +2998,8 @@
 			<stat type="pAtkRange">40</stat>
 		</stats>
 	</item>
-	<item id="31496" name="Bound Knuckle Duster - Rsk. Haste" type="Weapon">
-		<!-- <Special Option>. Increases Atk. Spd. by 12% when HP drops to 60% or below. No Soul Crystal option. -->
+	<item id="31496" name="Bound Knuckle Duster" additionalName="Rsk. Haste" type="Weapon">
+		<!-- <Soul Crystal Enhancement>. Increases Atk. Spd. by 12% when HP drops to 60% or below. -->
 		<set name="icon" val="icon.weapon_knuckle_dust_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="lrhand" />
@@ -3033,8 +3033,8 @@
 			<stat type="pAtkRange">40</stat>
 		</stats>
 	</item>
-	<item id="31497" name="Bound Knuckle Duster - Haste" type="Weapon">
-		<!-- <Special Option>. Increases Atk. Spd. by about 7%. No Soul Crystal option. -->
+	<item id="31497" name="Bound Knuckle Duster" additionalName="Haste" type="Weapon">
+		<!-- <Soul Crystal Enhancement>. Increases Atk. Spd. by about 7%. -->
 		<set name="icon" val="icon.weapon_knuckle_dust_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="lrhand" />
@@ -3101,8 +3101,8 @@
 			<stat type="pAtkRange">40</stat>
 		</stats>
 	</item>
-	<item id="31499" name="Bound Nirvana Axe - M. Atk." type="Weapon">
-		<!-- <Special Option>. Increases MP consumption by 15% and M. Atk. by 99 during magic use. No Soul Crystal option. -->
+	<item id="31499" name="Bound Nirvana Axe" additionalName="M. Atk." type="Weapon">
+		<!-- <Soul Crystal Enhancement>. Increases MP consumption by 15% and M. Atk. by 99 during magic use. -->
 		<set name="icon" val="icon.weapon_nirvana_axe_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="rhand" />

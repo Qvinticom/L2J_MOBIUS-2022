@@ -111,7 +111,7 @@
 		</stats>
 	</item>
 	<item id="47005" name="Old Elemental Shirt" type="Armor">
-		<!-- A gift from Tulesir the Minstrel to heroes of the future having safely completed 10 days of adventure. Though old, its performance is on par with a new one. Enchantment not possible. When equipped, STR +1 , DEX +1, CON +1, INT +1, WIT +1, MEN +1, Max HP/MP +510, Movement Speed +7, 6 Defensive Attributes +6. -->
+		<!-- A gift from Tulesir the Minstrel to heroes of the future having safely completed 10 days of adventure. Though old, its performance is on par with a new one. Enchantment not possible. When equipped, STR +1 , DEX +1, CON +1, INT +1, WIT +1, MEN +1, Max HP/MP +510, Speed +7, 6 Defensive Attributes +6. -->
 		<set name="icon" val="icon.etc_shirts_a_i04" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="underwear" />
@@ -1394,7 +1394,7 @@
 			<item id="46885" min="1" max="1" chance="100" /> <!-- Blessed Paulina's Seraph Ring - Critical Rate -->
 		</capsuled_items>
 	</item>
-	<item id="47068" name="PC Cafe - Paulina's Seraph Heavy Armor Box" additionalName="4-hour" type="EtcItem">
+	<item id="47068" name="Premium Account - Paulina's Seraph Heavy Armor Box" additionalName="4-hour" type="EtcItem">
 		<!-- Double click to obtain a 4-hour Seraph Heavy Armor Set which can be equipped from Lv. 85 upwards. -->
 		<set name="icon" val="icon.event_hero_treasure_box_i00" />
 		<set name="default_action" val="PEEL" />
@@ -1407,14 +1407,14 @@
 		<set name="is_private_storeable" val="false" />
 		<set name="handler" val="ExtractableItems" />
 		<capsuled_items>
-			<item id="46898" min="1" max="1" chance="100" /> <!-- PC Cafe - Paulina's Seraph Breastplate - Heavy Armor -->
-			<item id="46899" min="1" max="1" chance="100" /> <!-- PC Cafe - Paulina's Seraph Gaiters - Heavy Armor -->
-			<item id="46897" min="1" max="1" chance="100" /> <!-- PC Cafe - Paulina's Seraph Helmet - Heavy Armor -->
-			<item id="46900" min="1" max="1" chance="100" /> <!-- PC Cafe - Paulina's Seraph Gauntlets - Heavy Armor -->
-			<item id="46901" min="1" max="1" chance="100" /> <!-- PC Cafe - Paulina's Seraph Boots - Heavy Armor -->
+			<item id="46898" min="1" max="1" chance="100" /> <!-- Premium Account - Paulina's Seraph Breastplate - Heavy Armor -->
+			<item id="46899" min="1" max="1" chance="100" /> <!-- Premium Account - Paulina's Seraph Gaiters - Heavy Armor -->
+			<item id="46897" min="1" max="1" chance="100" /> <!-- Premium Account - Paulina's Seraph Helmet - Heavy Armor -->
+			<item id="46900" min="1" max="1" chance="100" /> <!-- Premium Account - Paulina's Seraph Gauntlets - Heavy Armor -->
+			<item id="46901" min="1" max="1" chance="100" /> <!-- Premium Account - Paulina's Seraph Boots - Heavy Armor -->
 		</capsuled_items>
 	</item>
-	<item id="47069" name="PC Cafe - Paulina's Seraph Light Armor Box" additionalName="4-hour" type="EtcItem">
+	<item id="47069" name="Premium Account - Paulina's Seraph Light Armor Box" additionalName="4-hour" type="EtcItem">
 		<!-- Double click to obtain a 4-hour Seraph Light Armor Set which can be equipped from Lv. 85 upwards. -->
 		<set name="icon" val="icon.event_hero_treasure_box_i00" />
 		<set name="default_action" val="PEEL" />
@@ -1427,14 +1427,14 @@
 		<set name="is_private_storeable" val="false" />
 		<set name="handler" val="ExtractableItems" />
 		<capsuled_items>
-			<item id="46904" min="1" max="1" chance="100" /> <!-- PC Cafe - Paulina's Seraph Leather Armor - Light Armor -->
-			<item id="46905" min="1" max="1" chance="100" /> <!-- PC Cafe - Paulina's Seraph Leather Leggings - Light Armor -->
-			<item id="46903" min="1" max="1" chance="100" /> <!-- PC Cafe - Paulina's Seraph Leather Helmet - Light Armor -->
-			<item id="46906" min="1" max="1" chance="100" /> <!-- PC Cafe - Paulina's Seraph Leather Gloves - Light Armor -->
-			<item id="46907" min="1" max="1" chance="100" /> <!-- PC Cafe - Paulina's Seraph Leather Boots - Light Armor -->
+			<item id="46904" min="1" max="1" chance="100" /> <!-- Premium Account - Paulina's Seraph Leather Armor - Light Armor -->
+			<item id="46905" min="1" max="1" chance="100" /> <!-- Premium Account - Paulina's Seraph Leather Leggings - Light Armor -->
+			<item id="46903" min="1" max="1" chance="100" /> <!-- Premium Account - Paulina's Seraph Leather Helmet - Light Armor -->
+			<item id="46906" min="1" max="1" chance="100" /> <!-- Premium Account - Paulina's Seraph Leather Gloves - Light Armor -->
+			<item id="46907" min="1" max="1" chance="100" /> <!-- Premium Account - Paulina's Seraph Leather Boots - Light Armor -->
 		</capsuled_items>
 	</item>
-	<item id="47070" name="PC Cafe - Paulina's Seraph Robe Box" additionalName="4-hour" type="EtcItem">
+	<item id="47070" name="Premium Account - Paulina's Seraph Robe Box" additionalName="4-hour" type="EtcItem">
 		<!-- Double click to obtain a 4-hour Seraph Robe Set which can be equipped from Lv. 85 upwards. -->
 		<set name="icon" val="icon.event_hero_treasure_box_i00" />
 		<set name="default_action" val="PEEL" />
@@ -1447,15 +1447,15 @@
 		<set name="is_private_storeable" val="false" />
 		<set name="handler" val="ExtractableItems" />
 		<capsuled_items>
-			<item id="46909" min="1" max="1" chance="100" /> <!-- PC Cafe - Paulina's Seraph Tunic - Robe -->
-			<item id="46910" min="1" max="1" chance="100" /> <!-- PC Cafe - Paulina's Seraph Stockings - Robe -->
-			<item id="46908" min="1" max="1" chance="100" /> <!-- PC Cafe - Paulina's Seraph Circlet - Robe -->
-			<item id="46911" min="1" max="1" chance="100" /> <!-- PC Cafe - Paulina's Seraph Gloves - Robe -->
-			<item id="46912" min="1" max="1" chance="100" /> <!-- PC Cafe - Paulina's Seraph Shoes - Robe -->
-			<item id="46913" min="1" max="1" chance="100" /> <!-- PC Cafe - Paulina's Seraph Sigil - Robe -->
+			<item id="46909" min="1" max="1" chance="100" /> <!-- Premium Account - Paulina's Seraph Tunic - Robe -->
+			<item id="46910" min="1" max="1" chance="100" /> <!-- Premium Account - Paulina's Seraph Stockings - Robe -->
+			<item id="46908" min="1" max="1" chance="100" /> <!-- Premium Account - Paulina's Seraph Circlet - Robe -->
+			<item id="46911" min="1" max="1" chance="100" /> <!-- Premium Account - Paulina's Seraph Gloves - Robe -->
+			<item id="46912" min="1" max="1" chance="100" /> <!-- Premium Account - Paulina's Seraph Shoes - Robe -->
+			<item id="46913" min="1" max="1" chance="100" /> <!-- Premium Account - Paulina's Seraph Sigil - Robe -->
 		</capsuled_items>
 	</item>
-	<item id="47071" name="PC Cafe - Paulina's Seraph Accessory Pack" additionalName="4-hour" type="EtcItem">
+	<item id="47071" name="Premium Account - Paulina's Seraph Accessory Pack" additionalName="4-hour" type="EtcItem">
 		<!-- Double click to obtain a 4-hour Seraph Accessory Set which can be equipped from Lv. 85 upwards. -->
 		<set name="icon" val="icon.event_hero_treasure_box_i00" />
 		<set name="default_action" val="PEEL" />
@@ -1468,11 +1468,11 @@
 		<set name="is_private_storeable" val="false" />
 		<set name="handler" val="ExtractableItems" />
 		<capsuled_items>
-			<item id="46914" min="1" max="1" chance="100" /> <!-- PC Cafe - Paulina's Seraph Necklace - Skill Cooldown -->
-			<item id="46915" min="1" max="1" chance="100" /> <!-- PC Cafe - Paulina's Seraph Earring - Vampiric Rage -->
-			<item id="46916" min="1" max="1" chance="100" /> <!-- PC Cafe - Paulina's Seraph Earring - MP Consumption -->
-			<item id="46917" min="1" max="1" chance="100" /> <!-- PC Cafe - Paulina's Seraph Ring - Critical Damage -->
-			<item id="46918" min="1" max="1" chance="100" /> <!-- PC Cafe - Paulina's Seraph Ring - Critical Rate -->
+			<item id="46914" min="1" max="1" chance="100" /> <!-- Premium Account - Paulina's Seraph Necklace - Skill Cooldown -->
+			<item id="46915" min="1" max="1" chance="100" /> <!-- Premium Account - Paulina's Seraph Earring - Vampiric Rage -->
+			<item id="46916" min="1" max="1" chance="100" /> <!-- Premium Account - Paulina's Seraph Earring - MP Consumption -->
+			<item id="46917" min="1" max="1" chance="100" /> <!-- Premium Account - Paulina's Seraph Ring - Critical Damage -->
+			<item id="46918" min="1" max="1" chance="100" /> <!-- Premium Account - Paulina's Seraph Ring - Critical Rate -->
 		</capsuled_items>
 	</item>
 	<item id="47072" name="Blessed Paulina's Specter Dualsword Box" additionalName="30-day" type="EtcItem">

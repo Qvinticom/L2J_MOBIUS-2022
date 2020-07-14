@@ -1,6 +1,6 @@
 ﻿<?xml version="1.0" encoding="UTF-8"?>
 <list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../xsd/items.xsd">
-	<item id="8200" name="Fisherman's Potion - White" type="EtcItem">
+	<item id="8200" name="Corroded Fisherman's Potion - White" type="EtcItem">
 		<!-- Corroded item. Can be traded for a pack through the Aden Reconstruction Society, and can also be sold in shops. -->
 		<set name="icon" val="icon.etc_oblivion_white_i00" />
 		<set name="default_action" val="SKILL_REDUCE" />
@@ -17,7 +17,7 @@
 			<skill id="2274" level="8" /> <!-- Fisherman's Potion - White -->
 		</skills>
 	</item>
-	<item id="8201" name="Fisherman's Potion - Black" type="EtcItem">
+	<item id="8201" name="Corroded Fisherman's Potion - Black" type="EtcItem">
 		<!-- Corroded item. Can be traded for a pack through the Aden Reconstruction Society, and can also be sold in shops. -->
 		<set name="icon" val="icon.etc_oblivion_black_i00" />
 		<set name="default_action" val="SKILL_REDUCE" />
@@ -31,7 +31,7 @@
 		<set name="handler" val="ItemSkills" />
 		<set name="is_oly_restricted" val="true" />
 	</item>
-	<item id="8202" name="Fisherman's Recovery Potion" type="EtcItem">
+	<item id="8202" name="Corroded Fisherman's Recovery Potion" type="EtcItem">
 		<!-- Corroded item. Can be traded for a pack through the Aden Reconstruction Society, and can also be sold in shops. -->
 		<set name="icon" val="icon.etc_oblivion_black_i00" />
 		<set name="default_action" val="SKILL_REDUCE" />

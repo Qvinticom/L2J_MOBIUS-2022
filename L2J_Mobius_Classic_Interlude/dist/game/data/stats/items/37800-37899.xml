@@ -26,7 +26,7 @@
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="37803" name="Master Yogi's Special Scroll: Enchant Weapon" type="EtcItem">
-		<!-- Special weapon enchant scroll containing Master Yogi's power, only usable on Master Yogi's Staff. The item and the enchant value remain intact when enchanting fails. Cannot be used on a Staff enchanted to + 15 or above. Lucky Enchant Stones cannot be used with this item. -->
+		<!-- Special weapon enchant scroll containing Master Yogi's power, only usable on Master Yogi's Staff. The item and the enchant value remain intact when enchanting fails. Cannot be used on a Staff enchanted to +15 or above. Lucky Enchant Stones cannot be used with this item. -->
 		<set name="icon" val="icon.yogi_scroll_of_enchant_weapon_grade_i00" />
 		<set name="is_clan_depositable" val="false" />
 		<set name="is_mailable" val="false" />
@@ -35,7 +35,7 @@
 		<set name="default_action" val="SKILL_REDUCE" />
 	</item>
 	<item id="37804" name="Replica Tiara" type="Armor">
-		<!-- A replica of the Exalted Tiara. Attack Attribute Bonus + 30 when equipped. -->
+		<!-- A replica of the Exalted Tiara. Attack Attribute Bonus +30 when equipped. -->
 		<set name="icon" val="icon.accessory_noblesse2_tiara_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="hair2" />
@@ -755,7 +755,7 @@
 		<set name="default_action" val="SKILL_REDUCE" />
 	</item>
 	<item id="37867" name="Valiant Scroll" type="EtcItem">
-		<!-- For 30 minutes, P. Atk. + 10%, M. Atk. by 21%, P. Def. by 15%, M. Def. by 15%, Max HP, MP, and CP by 15%. Does not disappear upon death. Cannot be used in the Olympiad or the Ceremony of Chaos. -->
+		<!-- For 30 minutes, P. Atk. +10%, M. Atk. by 21%, P. Def. by 15%, M. Def. by 15%, Max HP, MP, and CP by 15%. Does not disappear upon death. Cannot be used in the Olympiad or the Ceremony of Chaos. -->
 		<set name="icon" val="icon.etc_cave_page_i00" />
 		<set name="weight" val="30" />
 		<set name="is_commissionable" val="false" />
@@ -1315,7 +1315,7 @@
 		<set name="weight" val="10" />
 	</item>
 	<item id="37889" name="Herb of Growth" type="EtcItem">
-		<!-- For 10 min., XP/SP obtained through hunting + 50%. -->
+		<!-- For 10 min., XP/SP obtained through hunting +50%. -->
 		<set name="icon" val="BranchSys.icon.br_herb_of_baguette_i00" />
 		<set name="immediate_effect" val="true" />
 		<set name="ex_immediate_effect" val="true" />
@@ -1331,7 +1331,7 @@
 		</skills>
 	</item>
 	<item id="37890" name="Major Herb of Growth" type="EtcItem">
-		<!-- For 10 min., XP/SP obtained through hunting + 100%. -->
+		<!-- For 10 min., XP/SP obtained through hunting +100%. -->
 		<set name="icon" val="BranchSys.icon.br_herb_of_baguette_i00" />
 		<set name="immediate_effect" val="true" />
 		<set name="ex_immediate_effect" val="true" />
@@ -1347,7 +1347,7 @@
 		</skills>
 	</item>
 	<item id="37891" name="Superior Herb of Growth" type="EtcItem">
-		<!-- For 5 min., XP/SP obtained through hunting + 200%. -->
+		<!-- For 5 min., XP/SP obtained through hunting +200%. -->
 		<set name="icon" val="BranchSys.icon.br_herb_of_baguette_i00" />
 		<set name="immediate_effect" val="true" />
 		<set name="ex_immediate_effect" val="true" />
@@ -1389,8 +1389,8 @@
 		<set name="is_questitem" val="true" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="37894" name="Improved Warrior's Recovery Potion" type="EtcItem">
-		<!-- When used, recovers 5000 HP and the remaining power is recovered as CP. But, there is no duration. -->
+	<item id="37894" name="Healing Potion Improved Warrior’s Recovery Potion" type="EtcItem">
+		<!-- When used, recovers 5000 HP and the remaining power is recovered as CP. But, there is no cooldown. -->
 		<set name="icon" val="icon.etc_potion_gold_i00" />
 		<set name="weight" val="180" />
 		<set name="default_action" val="SKILL_REDUCE" />

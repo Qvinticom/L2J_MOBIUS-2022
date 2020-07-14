@@ -1,6 +1,6 @@
 ﻿<?xml version="1.0" encoding="UTF-8"?>
 <list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../xsd/items.xsd">
-	<item id="49800" name="Sibis Coin Box" type="EtcItem">
+	<item id="49800" name="Sibis Coin Box" type="EtcItem">
 		<!-- Double-click to receive 200 Sibi's Coins. The item will be removed after the event is over. -->
 		<set name="icon" val="icon.event_orc_coinbox" />
 		<set name="default_action" val="PEEL" />
@@ -405,7 +405,7 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="49840" name="Rifken’s Recipe Book" type="EtcItem">
+	<item id="49840" name="Rifkens Recipe Book" type="EtcItem">
 		<!-- A book containing secret recipes of Rifken. -->
 		<set name="icon" val="icon.etc_spell_books_hfighter_i00" />
 		<set name="material" val="PAPER" />

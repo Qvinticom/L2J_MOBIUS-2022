@@ -496,8 +496,8 @@
 			<stat type="pAtkRange">40</stat>
 		</stats>
 	</item>
-	<item id="30516" name="Bound Fisted Blade - Rsk. Evasion" type="Weapon">
-		<!-- <Special Option>. Increases Evasion by 6 when HP drops to 60% or below. No Soul Crystal option. -->
+	<item id="30516" name="Bound Fisted Blade" additionalName="Rsk. Evasion" type="Weapon">
+		<!-- <Soul Crystal Enhancement>. Increases Evasion by 6 when HP drops to 60% or below. -->
 		<set name="icon" val="icon.weapon_fist_blade_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="lrhand" />
@@ -531,8 +531,8 @@
 			<stat type="pAtkRange">40</stat>
 		</stats>
 	</item>
-	<item id="30517" name="Bound Fisted Blade - Rsk. Haste" type="Weapon">
-		<!-- <Special Option>. Increases Atk. Spd. by 12% when HP drops to 60% or below. No Soul Crystal option. -->
+	<item id="30517" name="Bound Fisted Blade" additionalName="Rsk. Haste" type="Weapon">
+		<!-- <Soul Crystal Enhancement>. Increases Atk. Spd. by 12% when HP drops to 60% or below. -->
 		<set name="icon" val="icon.weapon_fist_blade_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="lrhand" />
@@ -566,8 +566,8 @@
 			<stat type="pAtkRange">40</stat>
 		</stats>
 	</item>
-	<item id="30518" name="Bound Fisted Blade - Haste" type="Weapon">
-		<!-- <Special Option>. Increases Atk. Spd. by about 7%. No Soul Crystal option. -->
+	<item id="30518" name="Bound Fisted Blade" additionalName="Haste" type="Weapon">
+		<!-- <Soul Crystal Enhancement>. Increases Atk. Spd. by about 7%. -->
 		<set name="icon" val="icon.weapon_fist_blade_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="lrhand" />
@@ -741,7 +741,7 @@
 		</stats>
 	</item>
 	<item id="30523" name="Bound Phoenix Earring" type="Armor">
-		<!-- Phoenix Earring Has the effect of MP + 20. -->
+		<!-- Phoenix Earring Has the effect of MP +20. -->
 		<set name="icon" val="icon.accessary_phoenixs_earing_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="rear;lear" />
@@ -762,7 +762,7 @@
 		</stats>
 	</item>
 	<item id="30524" name="Bound Phoenix Ring" type="Armor">
-		<!-- Phoenix Ring Has the effect of MP + 13. -->
+		<!-- Phoenix Ring Has the effect of MP +13. -->
 		<set name="icon" val="icon.accessary_phoenixs_ring_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="rfinger;lfinger" />
@@ -783,7 +783,7 @@
 		</stats>
 	</item>
 	<item id="30525" name="Bound Phoenix Necklace" type="Armor">
-		<!-- Phoenix Necklace. Has the effect of MP + 26. -->
+		<!-- Bound Phoenix Necklace. Has the effect of MP +26. -->
 		<set name="icon" val="icon.accessary_phoenixs_necklace_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="neck" />
@@ -1251,8 +1251,8 @@
 			<stat type="pAtkRange">40</stat>
 		</stats>
 	</item>
-	<item id="30543" name="Bound Flamberge - Critical Damage" type="Weapon">
-		<!-- <Special Option>. P. Atk. + 174 during a Critical Attack. No Soul Crystal option. -->
+	<item id="30543" name="Bound Flamberge" additionalName="Critical Damage" type="Weapon">
+		<!-- <Soul Crystal Enhancement>. P. Atk. + 174 during a Critical Attack. -->
 		<set name="icon" val="icon.weapon_flamberge_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="lrhand" />
@@ -1285,8 +1285,8 @@
 			<stat type="pAtkRange">40</stat>
 		</stats>
 	</item>
-	<item id="30544" name="Bound Flamberge - Focus" type="Weapon">
-		<!-- <Special Option>. Increases Critical by 86. No Soul Crystal option. -->
+	<item id="30544" name="Bound Flamberge" additionalName="Focus" type="Weapon">
+		<!-- <Soul Crystal Enhancement>. Increases Critical by 86. -->
 		<set name="icon" val="icon.weapon_flamberge_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="lrhand" />
@@ -1319,8 +1319,8 @@
 			<stat type="pAtkRange">40</stat>
 		</stats>
 	</item>
-	<item id="30545" name="Bound Flamberge - Light Armor" type="Weapon">
-		<!-- <Special Option>. Increases Weight Gauge by 20%. No Soul Crystal option. -->
+	<item id="30545" name="Bound Flamberge" additionalName="Light Armor" type="Weapon">
+		<!-- <Soul Crystal Enhancement>. Increases Weight Gauge by 20%. -->
 		<set name="icon" val="icon.weapon_flamberge_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="lrhand" />
@@ -1839,8 +1839,8 @@
 			<stat type="pAtkRange">80</stat>
 		</stats>
 	</item>
-	<item id="30567" name="Bound Poleaxe - Critical Stun" type="Weapon">
-		<!-- <Special Option>. Has about a 25% chance of casting Stun on the target during a Critical Attack. No Soul Crystal option. -->
+	<item id="30567" name="Bound Poleaxe" additionalName="Critical Stun" type="Weapon">
+		<!-- <Soul Crystal Enhancement>. Has about a 25% chance of casting Stun on the target during a Critical Attack. -->
 		<set name="icon" val="icon.weapon_poleaxe_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="lrhand" />
@@ -1875,8 +1875,8 @@
 			<stat type="pAtkRange">80</stat>
 		</stats>
 	</item>
-	<item id="30568" name="Bound Poleaxe - Long Blow" type="Weapon">
-		<!-- <Special Option>. Increases the attack range. No Soul Crystal option. -->
+	<item id="30568" name="Bound Poleaxe" additionalName="Long Blow" type="Weapon">
+		<!-- <Soul Crystal Enhancement>. Increases the attack range. -->
 		<set name="icon" val="icon.weapon_poleaxe_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="lrhand" />
@@ -1910,8 +1910,8 @@
 			<stat type="pAtkRange">80</stat>
 		</stats>
 	</item>
-	<item id="30569" name="Bound Poleaxe - Wide Blow" type="Weapon">
-		<!-- <Special Option>. Broadens the angle of attack. No Soul Crystal option. -->
+	<item id="30569" name="Bound Poleaxe" additionalName="Wide Blow" type="Weapon">
+		<!-- <Soul Crystal Enhancement>. Broadens the angle of attack. -->
 		<set name="icon" val="icon.weapon_poleaxe_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="lrhand" />
@@ -2150,7 +2150,7 @@
 		</stats>
 	</item>
 	<item id="30576" name="Bound Divine Pain - Critical Damage" type="Weapon">
-		<!-- Bound Item. Kamael-exclusive Weapon: Infernal Master Conversion. <Special Option>. P. Atk. + 297 during a Critical Attack. Increases damage inflicted during PvP. No Soul Crystal option. -->
+		<!-- Bound Item. Kamael-exclusive Weapon: Infernal Master Conversion. <Special Option>. P. Atk. +297 during a Critical Attack. Increases damage inflicted during PvP. No Soul Crystal option. -->
 		<set name="icon" val="icon.weapon_pain_of_godness_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="lrhand" />
@@ -2252,8 +2252,8 @@
 			<stat type="pAtkRange">40</stat>
 		</stats>
 	</item>
-	<item id="30579" name="Bound Paradia Staff - Magic Regeneration" type="Weapon">
-		<!-- <Special Option>. Has a 30% chance of casting Regeneration on the target during magic use. No Soul Crystal option. -->
+	<item id="30579" name="Bound Paradia Staff" additionalName="Magic Regeneration" type="Weapon">
+		<!-- <Soul Crystal Enhancement>. Has a 30% chance of casting Regeneration on the target during magic use. -->
 		<set name="icon" val="icon.weapon_paradia_staff_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="lrhand" />
@@ -2287,8 +2287,8 @@
 			<stat type="pAtkRange">40</stat>
 		</stats>
 	</item>
-	<item id="30580" name="Bound Paradia Staff - Magic Mental Shield" type="Weapon">
-		<!-- <Special Option>. Has a 50% chance of casting Mental Shield on the target during magic use. No Soul Crystal option. -->
+	<item id="30580" name="Bound Paradia Staff" additionalName="Magic Mental Shield" type="Weapon">
+		<!-- <Soul Crystal Enhancement>. Has a 50% chance of casting Mental Shield on the target during magic use. -->
 		<set name="icon" val="icon.weapon_paradia_staff_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="lrhand" />
@@ -2322,8 +2322,8 @@
 			<stat type="pAtkRange">40</stat>
 		</stats>
 	</item>
-	<item id="30581" name="Bound Paradia Staff - Magic Hold" type="Weapon">
-		<!-- <Special Option>. Has a 6% chance of casting Dryad Root on the target during magic use. No Soul Crystal option. -->
+	<item id="30581" name="Bound Paradia Staff" additionalName="Magic Hold" type="Weapon">
+		<!-- <Soul Crystal Enhancement>. Has a 6% chance of casting Dryad Root on the target during magic use. -->
 		<set name="icon" val="icon.weapon_paradia_staff_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="lrhand" />
@@ -2426,8 +2426,8 @@
 			<stat type="pAtkRange">40</stat>
 		</stats>
 	</item>
-	<item id="30584" name="Bound Pa'agrio Hammer - Rsk. Evasion" type="Weapon">
-		<!-- <Special Option>. Increases Evasion by 6 when HP drops to 60% or below. No Soul Crystal option. -->
+	<item id="30584" name="Bound Pa'agrio Hammer" additionalName="Rsk. Evasion" type="Weapon">
+		<!-- <Soul Crystal Enhancement>. Increases Evasion by 6 when HP drops to 60% or below. -->
 		<set name="icon" val="icon.weapon_paagrio_hammer_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="lrhand" />
@@ -2461,8 +2461,8 @@
 			<stat type="pAtkRange">40</stat>
 		</stats>
 	</item>
-	<item id="30585" name="Bound Pa'agrio Hammer - Magic Poison" type="Weapon">
-		<!-- <Special Option>. Has a 7% chance of casting Curse Poison on the target during magic use. No Soul Crystal option. -->
+	<item id="30585" name="Bound Pa'agrio Hammer" additionalName="Magic Poison" type="Weapon">
+		<!-- <Soul Crystal Enhancement>. Has a 7% chance of casting Curse Poison on the target during magic use. -->
 		<set name="icon" val="icon.weapon_paagrio_hammer_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="lrhand" />
@@ -2496,8 +2496,8 @@
 			<stat type="pAtkRange">40</stat>
 		</stats>
 	</item>
-	<item id="30586" name="Bound Pa'agrio Hammer - Magic Weakness" type="Weapon">
-		<!-- <Special Option>. Has a 7% chance of casting Curse Weakness on the target during magic use. No Soul Crystal option. -->
+	<item id="30586" name="Bound Pa'agrio Hammer" additionalName="Magic Weakness" type="Weapon">
+		<!-- <Soul Crystal Enhancement>. Has a 7% chance of casting Curse Weakness on the target during magic use. -->
 		<set name="icon" val="icon.weapon_paagrio_hammer_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="lrhand" />
@@ -2564,8 +2564,8 @@
 			<stat type="pAtkRange">40</stat>
 		</stats>
 	</item>
-	<item id="30588" name="Bound Pa'agrio Axe - Mana Up" type="Weapon">
-		<!-- <Special Option>. Increases Max MP by 30%. No Soul Crystal option. -->
+	<item id="30588" name="Bound Pa'agrio Axe" additionalName="Mana Up" type="Weapon">
+		<!-- <Soul Crystal Enhancement>. Increases Max MP by 30%. -->
 		<set name="icon" val="icon.weapon_paagrio_axe_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="lrhand" />
@@ -2599,8 +2599,8 @@
 			<stat type="pAtkRange">40</stat>
 		</stats>
 	</item>
-	<item id="30589" name="Bound Pa'agrio Axe - Magic Weakness" type="Weapon">
-		<!-- <Special Option>. Has a 7% chance of casting Curse Weakness on the target during magic use. No Soul Crystal option. -->
+	<item id="30589" name="Bound Pa'agrio Axe" additionalName="Magic Weakness" type="Weapon">
+		<!-- <Soul Crystal Enhancement>. Has a 7% chance of casting Curse Weakness on the target during magic use. -->
 		<set name="icon" val="icon.weapon_paagrio_axe_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="lrhand" />
@@ -2634,8 +2634,8 @@
 			<stat type="pAtkRange">40</stat>
 		</stats>
 	</item>
-	<item id="30590" name="Bound Pa'agrio Axe - Magic Chaos" type="Weapon">
-		<!-- <Special Option>. Has a 7% chance of casting Curse Chaos on the target during magic use. No Soul Crystal option. -->
+	<item id="30590" name="Bound Pa'agrio Axe" additionalName="Magic Chaos" type="Weapon">
+		<!-- <Soul Crystal Enhancement>. Has a 7% chance of casting Curse Chaos on the target during magic use. -->
 		<set name="icon" val="icon.weapon_paagrio_axe_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="lrhand" />

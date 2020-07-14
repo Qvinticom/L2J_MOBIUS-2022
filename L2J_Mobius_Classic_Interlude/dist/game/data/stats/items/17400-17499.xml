@@ -55,7 +55,7 @@
 		</stats>
 	</item>
 	<item id="17403" name="Seraph Leather Armor" additionalName="Light Armor" type="Armor">
-		<!-- Bestows an assassin or enchant type set option. When enchanted to + 4, increases Evasion, Speed and P. Atk. Resistance, and decreases the chance of receiving P. Critical Hit. -->
+		<!-- Bestows an assassin or enchant type set option. When enchanted to +4, increases Evasion, Speed and P. Atk. Resistance, and decreases the chance of receiving P. Critical Hit. -->
 		<set name="icon" val="icon.armor_t402_u_i00" />
 		<set name="armor_type" val="LIGHT" />
 		<set name="default_action" val="EQUIP" />
@@ -154,7 +154,7 @@
 		</stats>
 	</item>
 	<item id="17408" name="Seraph Tunic" additionalName="Robe" type="Armor">
-		<!-- Bestows a magic or recovery type set option. When enchanted to + 4, increases M. Evasion and Mental Attack Resistance, and decreases Damage and the chance of receiving P. Critical Hit. -->
+		<!-- Bestows a magic or recovery type set option. When enchanted to +4, increases M. Evasion and Mental Attack Resistance, and decreases Damage and the chance of receiving P. Critical Hit. -->
 		<set name="icon" val="icon.armor_t403_u_i00" />
 		<set name="armor_type" val="MAGIC" />
 		<set name="default_action" val="EQUIP" />
@@ -254,7 +254,7 @@
 		</stats>
 	</item>
 	<item id="17413" name="Seraph Necklace" type="Armor">
-		<!-- Seraph Necklace. MP + 62 effect. -->
+		<!-- Seraph Necklace. MP +62 effect. -->
 		<set name="icon" val="icon.r95_necklace_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="neck" />
@@ -271,7 +271,7 @@
 		</stats>
 	</item>
 	<item id="17414" name="Seraph Earring" type="Armor">
-		<!-- Seraph Earring. MP + 46 effect. -->
+		<!-- Seraph Earring. MP +46 effect. -->
 		<set name="icon" val="icon.r95_earring_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="rear;lear" />
@@ -288,7 +288,7 @@
 		</stats>
 	</item>
 	<item id="17415" name="Seraph Ring" type="Armor">
-		<!-- Seraph Ring. MP + 31 effect. -->
+		<!-- Seraph Ring. MP +31 effect. -->
 		<set name="icon" val="icon.r95_ring_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="rfinger;lfinger" />
@@ -304,8 +304,8 @@
 			<stat type="maxMp">31</stat>
 		</stats>
 	</item>
-	<item id="17416" name="Amaranthine Shaper" type="Weapon">
-		<!-- Can bestow 2 regular Soul Crystals and 1 Special Soul Crystal. Increases P. Critical Damage when enchanted to + 4. -->
+	<item id="17416" name="Helios Shaper" type="Weapon">
+		<!-- Can bestow 2 regular Soul Crystals and 1 special Soul Crystal. Increases P. Critical Damage when enchanted to +4. -->
 		<set name="icon" val="icon.weapon_stanpid_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="rhand" />
@@ -335,8 +335,8 @@
 			<stat type="pAtkRange">40</stat>
 		</stats>
 	</item>
-	<item id="17417" name="Amaranthine Cutter" type="Weapon">
-		<!-- Can bestow 2 regular Soul Crystals and 1 Special Soul Crystal. Increases Accuracy and P. Critical Rate when enchanted to + 4. -->
+	<item id="17417" name="Helios Cutter" type="Weapon">
+		<!-- Can bestow 2 regular Soul Crystals and 1 special Soul Crystal. Increases Accuracy and P. Critical Rate when enchanted to +4. -->
 		<set name="icon" val="icon.weapon_plenitas_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="rhand" />
@@ -365,8 +365,8 @@
 			<stat type="pAtkRange">40</stat>
 		</stats>
 	</item>
-	<item id="17418" name="Amaranthine Slasher" type="Weapon">
-		<!-- Can bestow 2 regular Soul Crystals and 1 Special Soul Crystal. Increases P. Atk. when enchanted to + 4. -->
+	<item id="17418" name="Helios Slasher" type="Weapon">
+		<!-- Can bestow 2 regular Soul Crystals and 1 special Soul Crystal. Increases P. Atk. when enchanted to +4. -->
 		<set name="icon" val="icon.weapon_bauen_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="lrhand" />
@@ -395,8 +395,8 @@
 			<stat type="pAtkRange">40</stat>
 		</stats>
 	</item>
-	<item id="17419" name="Amaranthine Avenger" type="Weapon">
-		<!-- Can bestow 2 regular Soul Crystals and 1 Special Soul Crystal. Increases P. Critical Damage when enchanted to + 4. -->
+	<item id="17419" name="Helios Avenger" type="Weapon">
+		<!-- Can bestow 2 regular Soul Crystals and 1 special Soul Crystal. Increases P. Critical Damage when enchanted to +4. -->
 		<set name="icon" val="icon.weapon_qutram_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="rhand" />
@@ -426,8 +426,8 @@
 			<stat type="pAtkRange">40</stat>
 		</stats>
 	</item>
-	<item id="17420" name="Amaranthine Fighter" type="Weapon">
-		<!-- Can bestow 2 regular Soul Crystals and 1 Special Soul Crystal. Increases Atk. Spd. and P. Atk. when enchanted to + 4. -->
+	<item id="17420" name="Helios Fighter" type="Weapon">
+		<!-- Can bestow 2 regular Soul Crystals and 1 special Soul Crystal. Increases Atk. Spd. and P. Atk. when enchanted to +4. -->
 		<set name="icon" val="icon.weapon_durga_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="lrhand" />
@@ -457,8 +457,8 @@
 			<stat type="pAtkRange">40</stat>
 		</stats>
 	</item>
-	<item id="17421" name="Amaranthine Stormer" type="Weapon">
-		<!-- Can bestow 2 regular Soul Crystals and 1 Special Soul Crystal. Increases Multi Attack when enchanted to + 4. -->
+	<item id="17421" name="Helios Stormer" type="Weapon">
+		<!-- Can bestow 2 regular Soul Crystals and 1 special Soul Crystal. Increases Multi Attack when enchanted to +4. -->
 		<set name="icon" val="icon.weapon_crabel_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="lrhand" />
@@ -489,8 +489,8 @@
 			<stat type="pAtkRange">80</stat>
 		</stats>
 	</item>
-	<item id="17422" name="Amaranthine Thrower" type="Weapon">
-		<!-- Can bestow 2 regular Soul Crystals and 1 Special Soul Crystal. Increases P. Skill Power when enchanted to + 4. -->
+	<item id="17422" name="Helios Thrower" type="Weapon">
+		<!-- Can bestow 2 regular Soul Crystals and 1 special Soul Crystal. Increases P. Skill Power when enchanted to +4. -->
 		<set name="icon" val="icon.weapon_castron_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="lrhand" />
@@ -521,8 +521,8 @@
 			<stat type="pAtkRange">500</stat>
 		</stats>
 	</item>
-	<item id="17423" name="Amaranthine Shooter" type="Weapon">
-		<!-- Can bestow 2 regular Soul Crystals and 1 Special Soul Crystal. Increases Atk. Spd. when enchanted to + 4. -->
+	<item id="17423" name="Helios Shooter" type="Weapon">
+		<!-- Can bestow 2 regular Soul Crystals and 1 special Soul Crystal. Increases Atk. Spd. when enchanted to +4. -->
 		<set name="icon" val="icon.weapon_stilla_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="lrhand" />
@@ -553,8 +553,8 @@
 			<stat type="pAtkRange">500</stat>
 		</stats>
 	</item>
-	<item id="17424" name="Amaranthine Buster" type="Weapon">
-		<!-- Can bestow 2 regular Soul Crystals and 1 Special Soul Crystal. Increases M. Accuracy and M. Critical Rate when enchanted to + 4. -->
+	<item id="17424" name="Helios Buster" type="Weapon">
+		<!-- Can bestow 2 regular Soul Crystals and 1 special Soul Crystal. Increases M. Accuracy and M. Critical Rate when enchanted to +4. -->
 		<set name="icon" val="icon.weaon_serapear_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="rhand" />
@@ -584,8 +584,8 @@
 			<stat type="pAtkRange">40</stat>
 		</stats>
 	</item>
-	<item id="17425" name="Amaranthine Caster" type="Weapon">
-		<!-- Can bestow 2 regular Soul Crystals and 1 Special Soul Crystal. Increases M. Accuracy and M. Critical Damage when enchanted to + 4. -->
+	<item id="17425" name="Helios Caster" type="Weapon">
+		<!-- Can bestow 2 regular Soul Crystals and 1 special Soul Crystal. Increases M. Accuracy and M. Critical Damage when enchanted to +4. -->
 		<set name="icon" val="icon.weapon_pilia_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="rhand" />
@@ -616,8 +616,8 @@
 			<stat type="pAtkRange">40</stat>
 		</stats>
 	</item>
-	<item id="17426" name="Amaranthine Retributer" type="Weapon">
-		<!-- Can bestow 2 regular Soul Crystals and 1 Special Soul Crystal. Increases M. Atk., M. Critical Damage, and Casting Spd. when enchanted to + 4. -->
+	<item id="17426" name="Helios Retributer" type="Weapon">
+		<!-- Can bestow 2 regular Soul Crystals and 1 special Soul Crystal. Increases M. Atk., M. Critical Damage, and Casting Spd. when enchanted to +4. -->
 		<set name="icon" val="icon.weapon_shaelon_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="lrhand" />
@@ -649,8 +649,8 @@
 			<stat type="pAtkRange">40</stat>
 		</stats>
 	</item>
-	<item id="17427" name="Amaranthine Dualsword" type="Weapon">
-		<!-- Can bestow 2 regular Soul Crystals and 1 Special Soul Crystal. Increases P. Critical Rate and P. Atk. when enchanted to + 4. -->
+	<item id="17427" name="Helios Dualsword" type="Weapon">
+		<!-- Can bestow 2 regular Soul Crystals and 1 special Soul Crystal. Increases P. Critical Rate and P. Atk. when enchanted to +4. -->
 		<set name="icon" val="icon.weapon_r_dualsword_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="lrhand" />
@@ -679,8 +679,8 @@
 			<stat type="pAtkRange">40</stat>
 		</stats>
 	</item>
-	<item id="17428" name="Amaranthine Dual Dagger" type="Weapon">
-		<!-- Can bestow 2 regular Soul Crystals and 1 Special Soul Crystal. Increases P. Critical Damage increases P. Atk. when enchanted to + 4. -->
+	<item id="17428" name="Helios Dual Dagger" type="Weapon">
+		<!-- Can bestow 2 regular Soul Crystals and 1 special Soul Crystal. Increases P. Critical Damage increases P. Atk. when enchanted to +4. -->
 		<set name="icon" val="icon.weapon_r_dualdagger_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="lrhand" />
@@ -710,8 +710,8 @@
 			<stat type="pAtkRange">40</stat>
 		</stats>
 	</item>
-	<item id="17429" name="Amaranthine Dual Blunt Weapon" type="Weapon">
-		<!-- Can bestow 2 regular Soul Crystals and 1 Special Soul Crystal. Increases P. Skill Power and P. Atk. when enchanted to + 4. -->
+	<item id="17429" name="Helios Dual Blunt Weapon" type="Weapon">
+		<!-- Can bestow 2 regular Soul Crystals and 1 special Soul Crystal. Increases P. Skill Power and P. Atk. when enchanted to +4. -->
 		<set name="icon" val="icon.weapon_r_dualblunt_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="lrhand" />
@@ -759,7 +759,7 @@
 		</stats>
 	</item>
 	<item id="17431" name="Eternal Breastplate" additionalName="Heavy Armor" type="Armor">
-		<!-- Bestows an attack or defense type set option. Increases P. Def. and decreases P. Critical Damage when enchanted to + 4. -->
+		<!-- Bestows an attack or defense type set option. Increases P. Def. and decreases P. Critical Damage when enchanted to +4. -->
 		<set name="icon" val="icon.armor_t701_u_i00" />
 		<set name="armor_type" val="HEAVY" />
 		<set name="default_action" val="EQUIP" />
@@ -873,7 +873,7 @@
 		</stats>
 	</item>
 	<item id="17437" name="Eternal Leather Armor" additionalName="Light Armor" type="Armor">
-		<!-- Bestows an assassin or enchant type set option. When enchanted to + 4, increases Evasion, Speed and P. Atk. Resistance, and decreases the chance of receiving P. Critical Hit. -->
+		<!-- Bestows an assassin or enchant type set option. When enchanted to +4, increases Evasion, Speed and P. Atk. Resistance, and decreases the chance of receiving P. Critical Hit. -->
 		<set name="icon" val="icon.armor_t702_u_i00" />
 		<set name="armor_type" val="LIGHT" />
 		<set name="default_action" val="EQUIP" />
@@ -972,7 +972,7 @@
 		</stats>
 	</item>
 	<item id="17442" name="Eternal Tunic" additionalName="Robe" type="Armor">
-		<!-- Bestows a magic or recovery type set option. When enchanted to + 4, increases M. Evasion and Mental Attack Resistance, and decreases Damage and the chance of receiving P. Critical Hit. -->
+		<!-- Bestows a magic or recovery type set option. When enchanted to +4, increases M. Evasion and Mental Attack Resistance, and decreases Damage and the chance of receiving P. Critical Hit. -->
 		<set name="icon" val="icon.armor_t703_u_i00" />
 		<set name="armor_type" val="MAGIC" />
 		<set name="default_action" val="EQUIP" />
@@ -1072,7 +1072,7 @@
 		</stats>
 	</item>
 	<item id="17447" name="Eternal Necklace" type="Armor">
-		<!-- Eternal Necklace. MP + 65 effect. -->
+		<!-- Eternal Necklace. MP +65 effect. -->
 		<set name="icon" val="icon.r991_necklace_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="neck" />
@@ -1089,7 +1089,7 @@
 		</stats>
 	</item>
 	<item id="17448" name="Eternal Earring" type="Armor">
-		<!-- Eternal Earring. MP + 49 effect. -->
+		<!-- Eternal Earring. MP +49 effect. -->
 		<set name="icon" val="icon.r991_earring_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="rear;lear" />
@@ -1106,7 +1106,7 @@
 		</stats>
 	</item>
 	<item id="17449" name="Eternal Ring" type="Armor">
-		<!-- Eternal Ring. MP + 33 effect. -->
+		<!-- Eternal Ring. MP +33 effect. -->
 		<set name="icon" val="icon.r991_ring_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="rfinger;lfinger" />
@@ -1123,7 +1123,7 @@
 		</stats>
 	</item>
 	<item id="17450" name="Blessed Kaliel Shaper" type="Weapon">
-		<!-- Bestows one of the following functions: Guidance, Haste, or Focus. Two functions can be bestowed through a rare soul crystal. Increases P. Critical Damage when enchanted to + 4. -->
+		<!-- Bestows one of the following functions: Guidance, Haste, or Focus. Two functions can be bestowed through a rare soul crystal. Increases P. Critical Damage when enchanted to +4. -->
 		<set name="icon" val="icon.weapon_vesper_shaper_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="rhand" />
@@ -1154,7 +1154,7 @@
 		</stats>
 	</item>
 	<item id="17451" name="Blessed Kaliel Cutter" type="Weapon">
-		<!-- Bestows one of the following functions: Haste, Focus, or Health. Two functions can be bestowed through a rare soul crystal. Increases Accuracy and P. Critical Rate when enchanted to + 4. -->
+		<!-- Bestows one of the following functions: Haste, Focus, or Health. Two functions can be bestowed through a rare soul crystal. Increases Accuracy and P. Critical Rate when enchanted to +4. -->
 		<set name="icon" val="icon.weapon_vesper_cutter_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="rhand" />
@@ -1184,7 +1184,7 @@
 		</stats>
 	</item>
 	<item id="17452" name="Blessed Kaliel Slasher" type="Weapon">
-		<!-- Bestows one of the following functions: Focus, Damage Up, or Haste. Two functions can be bestowed through a rare soul crystal. Increases P. Atk. when enchanted to + 4. -->
+		<!-- Bestows one of the following functions: Focus, Damage Up, or Haste. Two functions can be bestowed through a rare soul crystal. Increases P. Atk. when enchanted to +4. -->
 		<set name="icon" val="icon.weapon_vesper_slasher_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="lrhand" />
@@ -1214,7 +1214,7 @@
 		</stats>
 	</item>
 	<item id="17453" name="Blessed Kaliel Avenger" type="Weapon">
-		<!-- Bestows one of the following functions: Haste, P. Critical Damage, or Focus. Two functions can be bestowed through a rare soul crystal. Increases P. Critical Damage when enchanted to + 4. -->
+		<!-- Bestows one of the following functions: Haste, P. Critical Damage, or Focus. Two functions can be bestowed through a rare soul crystal. Increases P. Critical Damage when enchanted to +4. -->
 		<set name="icon" val="icon.weapon_vesper_avenger_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="rhand" />
@@ -1245,7 +1245,7 @@
 		</stats>
 	</item>
 	<item id="17454" name="Blessed Kaliel Fighter" type="Weapon">
-		<!-- Bestows one of the following functions: Focus, Damage Up, or Haste. Two functions can be bestowed through a rare soul crystal. Increases Atk. Spd. and P. Atk. when enchanted to + 4. -->
+		<!-- Bestows one of the following functions: Focus, Damage Up, or Haste. Two functions can be bestowed through a rare soul crystal. Increases Atk. Spd. and P. Atk. when enchanted to +4. -->
 		<set name="icon" val="icon.weapon_octoclaw_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="lrhand" />
@@ -1276,7 +1276,7 @@
 		</stats>
 	</item>
 	<item id="17455" name="Blessed Kaliel Stormer" type="Weapon">
-		<!-- Bestows one of the following functions: HP Drain, Guidance, or Damage Up. Two functions can be bestowed through a rare soul crystal. Increases Multi Attack when enchanted to + 4. -->
+		<!-- Bestows one of the following functions: HP Drain, Guidance, or Damage Up. Two functions can be bestowed through a rare soul crystal. Increases Multi Attack when enchanted to +4. -->
 		<set name="icon" val="icon.weapon_vesper_stormer_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="lrhand" />
@@ -1308,7 +1308,7 @@
 		</stats>
 	</item>
 	<item id="17456" name="Blessed Kaliel Thrower" type="Weapon">
-		<!-- Bestows one of the following functions: Damage Up, Focus, or Long Blow. Two functions can be bestowed through a rare soul crystal. Increases P. Skill Power when enchanted to + 4. -->
+		<!-- Bestows one of the following functions: Damage Up, Focus, or Long Blow. Two functions can be bestowed through a rare soul crystal. Increases P. Skill Power when enchanted to +4. -->
 		<set name="icon" val="icon.weapon_vesper_thrower_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="lrhand" />
@@ -1340,7 +1340,7 @@
 		</stats>
 	</item>
 	<item id="17457" name="Blessed Kaliel Shooter" type="Weapon">
-		<!-- Bestows one of the following functions: Focus, Critical Slow, or Haste. Two functions can be bestowed through a rare soul crystal. Increases Atk. Spd. when enchanted to + 4. -->
+		<!-- Bestows one of the following functions: Focus, Critical Slow, or Haste. Two functions can be bestowed through a rare soul crystal. Increases Atk. Spd. when enchanted to +4. -->
 		<set name="icon" val="icon.weapon_vesper_schutze_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="lrhand" />
@@ -1372,7 +1372,7 @@
 		</stats>
 	</item>
 	<item id="17458" name="Blessed Kaliel Buster" type="Weapon">
-		<!-- Bestows one of the following functions: Acumen, Magic Hold, or Mana Up. Two functions can be bestowed through a rare soul crystal. Increases M. Accuracy and M. Critical Rate when enchanted to + 4. -->
+		<!-- Bestows one of the following functions: Acumen, Magic Hold, or Mana Up. Two functions can be bestowed through a rare soul crystal. Increases M. Accuracy and M. Critical Rate when enchanted to +4. -->
 		<set name="icon" val="icon.weapon_vesper_burster_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="rhand" />
@@ -1402,7 +1402,7 @@
 		</stats>
 	</item>
 	<item id="17459" name="Blessed Kaliel Caster" type="Weapon">
-		<!-- Bestows one of the following functions: Empower, Acumen, or Magic Hold. Two functions can be bestowed through a rare soul crystal. Increases M. Accuracy and M. Critical Damage when enchanted to + 4. -->
+		<!-- Bestows one of the following functions: Empower, Acumen, or Magic Hold. Two functions can be bestowed through a rare soul crystal. Increases M. Accuracy and M. Critical Damage when enchanted to +4. -->
 		<set name="icon" val="icon.weapon_vesper_caster_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="rhand" />
@@ -1433,7 +1433,7 @@
 		</stats>
 	</item>
 	<item id="17460" name="Blessed Kaliel Retributer" type="Weapon">
-		<!-- Bestows one of the following functions: MP Regeneration, Acumen, or Empower. Two functions can be bestowed through a rare soul crystal. Increases M. Atk., M. Critical Damage, and Casting Spd. when enchanted to + 4. -->
+		<!-- Bestows one of the following functions: MP Regeneration, Acumen, or Empower. Two functions can be bestowed through a rare soul crystal. Increases M. Atk., M. Critical Damage, and Casting Spd. when enchanted to +4. -->
 		<set name="icon" val="icon.weapon_vesper_singer_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="lrhand" />
@@ -1465,7 +1465,7 @@
 		</stats>
 	</item>
 	<item id="17461" name="Blessed Kaliel Dualsword" type="Weapon">
-		<!-- Bestows one of the following functions: Haste, Damage Up, or Health. Two functions can be bestowed through a rare soul crystal. Increases P. Critical Rate and P. Atk. when enchanted to + 4. -->
+		<!-- Bestows one of the following functions: Haste, Damage Up, or Health. Two functions can be bestowed through a rare soul crystal. Increases P. Critical Rate and P. Atk. when enchanted to +4. -->
 		<set name="icon" val="icon.weapon_r_dualsword_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="lrhand" />
@@ -1495,7 +1495,7 @@
 		</stats>
 	</item>
 	<item id="17462" name="Blessed Kaliel Dual Dagger" type="Weapon">
-		<!-- Bestows one of the following functions: Damage Up, Focus, or Guidance. Two functions can be bestowed through a rare soul crystal. Increases P. Critical Damage increases P. Atk. when enchanted to + 4. -->
+		<!-- Bestows one of the following functions: Damage Up, Focus, or Guidance. Two functions can be bestowed through a rare soul crystal. Increases P. Critical Damage increases P. Atk. when enchanted to +4. -->
 		<set name="icon" val="icon.weapon_r_dualdagger_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="lrhand" />
@@ -1526,7 +1526,7 @@
 		</stats>
 	</item>
 	<item id="17463" name="Blessed Kaliel Dual Blunt Weapon" type="Weapon">
-		<!-- Bestows one of the following functions: Focus, Guidance, or Damage Up. Two functions can be bestowed through a rare soul crystal. Increases P. Skill Power and P. Atk. when enchanted to + 4. -->
+		<!-- Bestows one of the following functions: Focus, Guidance, or Damage Up. Two functions can be bestowed through a rare soul crystal. Increases P. Skill Power and P. Atk. when enchanted to +4. -->
 		<set name="icon" val="icon.weapon_r_dualblunt_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="lrhand" />
@@ -1576,7 +1576,7 @@
 		</stats>
 	</item>
 	<item id="17465" name="Blessed Durandia Breastplate" additionalName="Heavy Armor" type="Armor">
-		<!-- Bestows an attack or defense type set option. Increases P. Def. and decreases P. Critical Damage when enchanted to + 4. -->
+		<!-- Bestows an attack or defense type set option. Increases P. Def. and decreases P. Critical Damage when enchanted to +4. -->
 		<set name="icon" val="icon.armor_t97_u_i00" />
 		<set name="armor_type" val="HEAVY" />
 		<set name="default_action" val="EQUIP" />
@@ -1698,7 +1698,7 @@
 		</stats>
 	</item>
 	<item id="17471" name="Blessed Durandia Leather Armor" additionalName="Light Armor" type="Armor">
-		<!-- Bestows an assassin or enchant type set option. When enchanted to + 4, increases Evasion, Speed and P. Atk. Resistance, and decreases the chance of receiving P. Critical Hit. -->
+		<!-- Bestows an assassin or enchant type set option. When enchanted to +4, increases Evasion, Speed and P. Atk. Resistance, and decreases the chance of receiving P. Critical Hit. -->
 		<set name="icon" val="icon.armor_t98_u_i00" />
 		<set name="armor_type" val="LIGHT" />
 		<set name="default_action" val="EQUIP" />
@@ -1805,7 +1805,7 @@
 		</stats>
 	</item>
 	<item id="17476" name="Blessed Durandia Tunic" additionalName="Robe" type="Armor">
-		<!-- Bestows a magic or recovery type set option. When enchanted to + 4, increases M. Evasion and Mental Attack Resistance, and decreases Damage and the chance of receiving P. Critical Hit. -->
+		<!-- Bestows a magic or recovery type set option. When enchanted to +4, increases M. Evasion and Mental Attack Resistance, and decreases Damage and the chance of receiving P. Critical Hit. -->
 		<set name="icon" val="icon.armor_t99_u_i00" />
 		<set name="armor_type" val="MAGIC" />
 		<set name="default_action" val="EQUIP" />
@@ -1956,7 +1956,7 @@
 		</stats>
 	</item>
 	<item id="17484" name="Cry of Destiny" type="Armor">
-		<!-- Brilliant ring containing the blessing of light from the angel Nevit. - "May the gods always bless your sword..." -->
+		<!-- Brilliant ring containing the blessing of light from the angel Nevit. - "May the gods always bless your sword... -->
 		<set name="icon" val="icon.accessary_blessed_ring_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="crystal_type" val="S" />
@@ -1980,7 +1980,7 @@
 		</skills>
 	</item>
 	<item id="17485" name="Cry of Destiny" type="Armor">
-		<!-- Brilliant ring containing the blessing of light from the angel Nevit. - "May the gods always bless your sword..." -->
+		<!-- Brilliant ring containing the blessing of light from the angel Nevit. - "May the gods always bless your sword... -->
 		<set name="icon" val="icon.accessary_blessed_ring_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="crystal_type" val="S" />
@@ -2004,7 +2004,7 @@
 		</skills>
 	</item>
 	<item id="17486" name="Cry of Destiny" type="Armor">
-		<!-- Brilliant ring containing the blessing of light from the angel Nevit. - "May the gods always bless your sacrifice..." -->
+		<!-- Brilliant ring containing the blessing of light from the angel Nevit. - "May the gods always bless your sacrifice... -->
 		<set name="icon" val="icon.accessary_blessed_ring_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="crystal_type" val="S" />
@@ -2028,7 +2028,7 @@
 		</skills>
 	</item>
 	<item id="17487" name="Cry of Destiny" type="Armor">
-		<!-- Brilliant ring containing the blessing of light from the angel Nevit. - "May the gods always bless your sacrifice..." -->
+		<!-- Brilliant ring containing the blessing of light from the angel Nevit. - "May the gods always bless your sacrifice... -->
 		<set name="icon" val="icon.accessary_blessed_ring_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="crystal_type" val="S" />
@@ -2052,7 +2052,7 @@
 		</skills>
 	</item>
 	<item id="17488" name="Cry of Destiny" type="Armor">
-		<!-- Brilliant ring containing the blessing of light from the angel Nevit. - "May the gods always bless your dagger..." -->
+		<!-- Brilliant ring containing the blessing of light from the angel Nevit. - "May the gods always bless your dagger... -->
 		<set name="icon" val="icon.accessary_blessed_ring_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="crystal_type" val="S" />
@@ -2076,7 +2076,7 @@
 		</skills>
 	</item>
 	<item id="17489" name="Cry of Destiny" type="Armor">
-		<!-- Brilliant ring containing the blessing of light from the angel Nevit. - "May the gods always bless your arrow..." -->
+		<!-- Brilliant ring containing the blessing of light from the angel Nevit. - "May the gods always bless your arrow... -->
 		<set name="icon" val="icon.accessary_blessed_ring_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="crystal_type" val="S" />
@@ -2100,7 +2100,7 @@
 		</skills>
 	</item>
 	<item id="17490" name="Cry of Destiny" type="Armor">
-		<!-- Brilliant ring containing the blessing of light from the angel Nevit. - "May the gods always bless your wisdom..." -->
+		<!-- Brilliant ring containing the blessing of light from the angel Nevit. - "May the gods always bless your wisdom... -->
 		<set name="icon" val="icon.accessary_blessed_ring_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="crystal_type" val="S" />
@@ -2124,7 +2124,7 @@
 		</skills>
 	</item>
 	<item id="17491" name="Cry of Destiny" type="Armor">
-		<!-- Brilliant ring containing the blessing of light from the angel Nevit. - "May the gods always bless your wisdom..." -->
+		<!-- Brilliant ring containing the blessing of light from the angel Nevit. - "May the gods always bless your wisdom... -->
 		<set name="icon" val="icon.accessary_blessed_ring_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="crystal_type" val="S" />
@@ -2148,7 +2148,7 @@
 		</skills>
 	</item>
 	<item id="17492" name="Cry of Destiny" type="Armor">
-		<!-- Brilliant ring containing the blessing of light from the angel Nevit. - "May the gods always bless your wisdom..." -->
+		<!-- Brilliant ring containing the blessing of light from the angel Nevit. - "May the gods always bless your wisdom... -->
 		<set name="icon" val="icon.accessary_blessed_ring_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="crystal_type" val="S" />
@@ -2172,7 +2172,7 @@
 		</skills>
 	</item>
 	<item id="17493" name="Cry of Destiny" type="Armor">
-		<!-- Brilliant ring containing the blessing of light from the angel Nevit. - "May the gods always bless your spirit..." -->
+		<!-- Brilliant ring containing the blessing of light from the angel Nevit. - "May the gods always bless your spirit... -->
 		<set name="icon" val="icon.accessary_blessed_ring_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="crystal_type" val="S" />
@@ -2196,7 +2196,7 @@
 		</skills>
 	</item>
 	<item id="17494" name="Cry of Destiny" type="Armor">
-		<!-- Brilliant ring containing the blessing of light from the angel Nevit. - "May the gods always bless your spirit..." -->
+		<!-- Brilliant ring containing the blessing of light from the angel Nevit. - "May the gods always bless your spirit... -->
 		<set name="icon" val="icon.accessary_blessed_ring_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="crystal_type" val="S" />
@@ -2220,7 +2220,7 @@
 		</skills>
 	</item>
 	<item id="17495" name="Cry of Destiny" type="Armor">
-		<!-- Brilliant ring containing the blessing of light from the angel Nevit. - "May the gods always bless your sacrifice..." -->
+		<!-- Brilliant ring containing the blessing of light from the angel Nevit. - "May the gods always bless your sacrifice... -->
 		<set name="icon" val="icon.accessary_blessed_ring_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="crystal_type" val="S" />
@@ -2244,7 +2244,7 @@
 		</skills>
 	</item>
 	<item id="17496" name="Cry of Destiny" type="Armor">
-		<!-- Brilliant ring containing the blessing of light from the angel Nevit. - "May the gods always bless your sacrifice..." -->
+		<!-- Brilliant ring containing the blessing of light from the angel Nevit. - "May the gods always bless your sacrifice... -->
 		<set name="icon" val="icon.accessary_blessed_ring_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="crystal_type" val="S" />
@@ -2267,7 +2267,7 @@
 		</skills>
 	</item>
 	<item id="17497" name="Cry of Destiny" type="Armor">
-		<!-- Brilliant ring containing the blessing of light from the angel Nevit. - "May the gods always bless your dagger..." -->
+		<!-- Brilliant ring containing the blessing of light from the angel Nevit. - "May the gods always bless your dagger... -->
 		<set name="icon" val="icon.accessary_blessed_ring_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="crystal_type" val="S" />
@@ -2291,7 +2291,7 @@
 		</skills>
 	</item>
 	<item id="17498" name="Cry of Destiny" type="Armor">
-		<!-- Brilliant ring containing the blessing of light from the angel Nevit. - "May the gods always bless your arrow..." -->
+		<!-- Brilliant ring containing the blessing of light from the angel Nevit. - "May the gods always bless your arrow... -->
 		<set name="icon" val="icon.accessary_blessed_ring_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="crystal_type" val="S" />
@@ -2315,7 +2315,7 @@
 		</skills>
 	</item>
 	<item id="17499" name="Cry of Destiny" type="Armor">
-		<!-- Brilliant ring containing the blessing of light from the angel Nevit. - "May the gods always bless your wisdom..." -->
+		<!-- Brilliant ring containing the blessing of light from the angel Nevit. - "May the gods always bless your wisdom... -->
 		<set name="icon" val="icon.accessary_blessed_ring_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="crystal_type" val="S" />

@@ -33,7 +33,7 @@
 		<set name="is_questitem" val="true" />
 	</item>
 	<item id="8102" name="Pa'agrian Sword" additionalName="Focus" type="Weapon">
-		<!-- Not used -->
+		<!-- <Soul Crystal Enhancement>. Increases Critical by 77. -->
 		<set name="icon" val="icon.weapon_sword_of_paagrio_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="SWORD" />
@@ -64,7 +64,7 @@
 		</stats>
 	</item>
 	<item id="8103" name="Pa'agrian Sword" additionalName="Health" type="Weapon">
-		<!-- Not used -->
+		<!-- <Soul Crystal Enhancement>. Increases Max HP by 25%. -->
 		<set name="icon" val="icon.weapon_sword_of_paagrio_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="SWORD" />
@@ -95,7 +95,7 @@
 		</stats>
 	</item>
 	<item id="8104" name="Pa'agrian Sword" additionalName="Critical Drain" type="Weapon">
-		<!-- Not used -->
+		<!-- <Soul Crystal Enhancement>. Absorbs 9 HP from the target during a Critical Attack. -->
 		<set name="icon" val="icon.weapon_sword_of_paagrio_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="SWORD" />
@@ -126,7 +126,7 @@
 		</stats>
 	</item>
 	<item id="8105" name="Guardian's Sword" additionalName="Critical Drain" type="Weapon">
-		<!-- Not used -->
+		<!-- <Soul Crystal Enhancement>. Absorbs 8 HP from the target during a Critical Attack. -->
 		<set name="icon" val="icon.weapon_guardians_sword_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="SWORD" />
@@ -157,7 +157,7 @@
 		</stats>
 	</item>
 	<item id="8106" name="Guardian's Sword" additionalName="Health" type="Weapon">
-		<!-- Not used -->
+		<!-- <Soul Crystal Enhancement>. Increases Max HP by 25%. -->
 		<set name="icon" val="icon.weapon_guardians_sword_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="SWORD" />
@@ -188,7 +188,7 @@
 		</stats>
 	</item>
 	<item id="8107" name="Guardian's Sword" additionalName="Critical Bleed" type="Weapon">
-		<!-- Not used -->
+		<!-- <Soul Crystal Enhancement>. Has a 24% chance of casting Bleed on the target during a standard Critical Attack. -->
 		<set name="icon" val="icon.weapon_guardians_sword_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="SWORD" />
@@ -250,7 +250,7 @@
 		</stats>
 	</item>
 	<item id="8109" name="Infernal Master" additionalName="Critical Damage" type="Weapon">
-		<!-- <Soul Crystal Enhancement>. P. Atk. + 270 during a Critical Attack. Increases damage inflicted during PvP. -->
+		<!-- <Soul Crystal Enhancement>. P. Atk. +270 during a Critical Attack. Increases damage inflicted during PvP. -->
 		<set name="icon" val="icon.weapon_inferno_master_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="SWORD" />
@@ -312,7 +312,7 @@
 		</stats>
 	</item>
 	<item id="8111" name="Mysterious Sword" additionalName="Acumen" type="Weapon">
-		<!-- Not used -->
+		<!-- <Soul Crystal Enhancement>. Increases Casting Spd. by 15%. -->
 		<set name="icon" val="icon.weapon_mystery_sword_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="SWORD" />
@@ -343,7 +343,7 @@
 		</stats>
 	</item>
 	<item id="8112" name="Mysterious Sword" additionalName="M. Atk." type="Weapon">
-		<!-- Not used -->
+		<!-- <Soul Crystal Enhancement>. Increases MP consumption by 15% and M. Atk. by 75 during magic use. -->
 		<set name="icon" val="icon.weapon_mystery_sword_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="SWORD" />
@@ -374,7 +374,7 @@
 		</stats>
 	</item>
 	<item id="8113" name="Mysterious Sword" additionalName="Magic Weakness" type="Weapon">
-		<!-- Not used -->
+		<!-- <Soul Crystal Enhancement>. Has an 8% chance of casting Curse Weakness on the target during magic use. -->
 		<set name="icon" val="icon.weapon_mystery_sword_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="SWORD" />
@@ -405,7 +405,7 @@
 		</stats>
 	</item>
 	<item id="8114" name="Ecliptic Sword" additionalName="Empower" type="Weapon">
-		<!-- Not used -->
+		<!-- <Soul Crystal Enhancement>. M. Atk. + 26. -->
 		<set name="icon" val="icon.weapon_sword_of_eclipse_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="SWORD" />
@@ -436,7 +436,7 @@
 		</stats>
 	</item>
 	<item id="8115" name="Ecliptic Sword" additionalName="M. Atk." type="Weapon">
-		<!-- Not used -->
+		<!-- <Soul Crystal Enhancement>. Increases MP consumption by 15% and M. Atk. by 112 during magic use. -->
 		<set name="icon" val="icon.weapon_sword_of_eclipse_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="SWORD" />
@@ -467,7 +467,7 @@
 		</stats>
 	</item>
 	<item id="8116" name="Ecliptic Sword" additionalName="Magic Silence" type="Weapon">
-		<!-- Not used -->
+		<!-- <Soul Crystal Enhancement>. Has a 10% chance of casting Silence on the target during magic use. -->
 		<set name="icon" val="icon.weapon_sword_of_eclipse_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="SWORD" />
@@ -498,7 +498,7 @@
 		</stats>
 	</item>
 	<item id="8117" name="Wizard's Tear" additionalName="Acumen" type="Weapon">
-		<!-- Not used -->
+		<!-- <Soul Crystal Enhancement>. Increases Casting Spd. by 15%. -->
 		<set name="icon" val="icon.weapon_tears_of_wizard_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="SWORD" />
@@ -529,7 +529,7 @@
 		</stats>
 	</item>
 	<item id="8118" name="Wizard's Tear" additionalName="M. Atk." type="Weapon">
-		<!-- Not used -->
+		<!-- <Soul Crystal Enhancement>. Increases MP consumption by 15% and M. Atk. by 139 during magic use. -->
 		<set name="icon" val="icon.weapon_tears_of_wizard_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="SWORD" />
@@ -560,7 +560,7 @@
 		</stats>
 	</item>
 	<item id="8119" name="Wizard's Tear" additionalName="Conversion" type="Weapon">
-		<!-- Not used -->
+		<!-- <Soul Crystal Enhancement>. Increases Max MP by 60% and decreases Max HP by 40%. -->
 		<set name="icon" val="icon.weapon_tears_of_wizard_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="SWORD" />
@@ -591,7 +591,7 @@
 		</stats>
 	</item>
 	<item id="8120" name="Dwarven Hammer" additionalName="Health" type="Weapon">
-		<!-- Not used -->
+		<!-- <Soul Crystal Enhancement>. Increases Max HP by 25%. -->
 		<set name="icon" val="icon.weapon_dwarven_hammer_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="BLUNT" />
@@ -622,7 +622,7 @@
 		</stats>
 	</item>
 	<item id="8121" name="Dwarven Hammer" additionalName="Anger" type="Weapon">
-		<!-- Not used -->
+		<!-- <Soul Crystal Enhancement>. P. Atk. + 26 and decreases Max HP by 15%. -->
 		<set name="icon" val="icon.weapon_dwarven_hammer_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="BLUNT" />
@@ -653,7 +653,7 @@
 		</stats>
 	</item>
 	<item id="8122" name="Dwarven Hammer" additionalName="Critical Bleed" type="Weapon">
-		<!-- Not used -->
+		<!-- <Soul Crystal Enhancement>. Has a 42% chance of casting Bleed on the target during a standard Critical Attack. -->
 		<set name="icon" val="icon.weapon_dwarven_hammer_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="BLUNT" />
@@ -684,7 +684,7 @@
 		</stats>
 	</item>
 	<item id="8123" name="Karik Horn" additionalName="Focus" type="Weapon">
-		<!-- Not used -->
+		<!-- <Soul Crystal Enhancement>. Increases Critical by 77. -->
 		<set name="icon" val="icon.weapon_horn_of_karik_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="BLUNT" />
@@ -715,7 +715,7 @@
 		</stats>
 	</item>
 	<item id="8124" name="Karik Horn" additionalName="Haste" type="Weapon">
-		<!-- Not used -->
+		<!-- <Soul Crystal Enhancement>. Increases Atk. Spd. by about 7%. -->
 		<set name="icon" val="icon.weapon_horn_of_karik_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="BLUNT" />
@@ -746,7 +746,7 @@
 		</stats>
 	</item>
 	<item id="8125" name="Karik Horn" additionalName="Critical Drain" type="Weapon">
-		<!-- Not used -->
+		<!-- <Soul Crystal Enhancement>. Absorbs 9 HP from the target during a Critical Attack. -->
 		<set name="icon" val="icon.weapon_horn_of_karik_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="BLUNT" />
@@ -871,7 +871,7 @@
 		</stats>
 	</item>
 	<item id="8129" name="Ice Storm Hammer" additionalName="Focus" type="Weapon">
-		<!-- Not used -->
+		<!-- <Soul Crystal Enhancement>. Increases Critical by 68. -->
 		<set name="icon" val="icon.weapon_ice_storm_hammer_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="BLUNT" />
@@ -902,7 +902,7 @@
 		</stats>
 	</item>
 	<item id="8130" name="Ice Storm Hammer" additionalName="Anger" type="Weapon">
-		<!-- Not used -->
+		<!-- <Soul Crystal Enhancement>. P. Atk. + 28 and decreases Max HP by 15%. -->
 		<set name="icon" val="icon.weapon_ice_storm_hammer_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="BLUNT" />
@@ -933,7 +933,7 @@
 		</stats>
 	</item>
 	<item id="8131" name="Ice Storm Hammer" additionalName="Critical Bleed" type="Weapon">
-		<!-- Not used -->
+		<!-- <Soul Crystal Enhancement>. Has a 41% chance of casting Bleed on the target during a standard Critical Attack. -->
 		<set name="icon" val="icon.weapon_ice_storm_hammer_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="BLUNT" />
@@ -964,7 +964,7 @@
 		</stats>
 	</item>
 	<item id="8132" name="Star Buster" additionalName="Health" type="Weapon">
-		<!-- Not used -->
+		<!-- <Soul Crystal Enhancement>. Increases Max HP by 25%. -->
 		<set name="icon" val="icon.weapon_star_buster_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="BLUNT" />
@@ -995,7 +995,7 @@
 		</stats>
 	</item>
 	<item id="8133" name="Star Buster" additionalName="Haste" type="Weapon">
-		<!-- Not used -->
+		<!-- <Soul Crystal Enhancement>. Increases Atk. Spd. by about 6%. -->
 		<set name="icon" val="icon.weapon_star_buster_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="BLUNT" />
@@ -1026,7 +1026,7 @@
 		</stats>
 	</item>
 	<item id="8134" name="Star Buster" additionalName="Rsk. Focus" type="Weapon">
-		<!-- Not used -->
+		<!-- <Soul Crystal Enhancement>. Increases Critical by 99 when HP drops to 60% or below. -->
 		<set name="icon" val="icon.weapon_star_buster_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="BLUNT" />
@@ -1088,7 +1088,7 @@
 		</stats>
 	</item>
 	<item id="8136" name="Doom Crusher" additionalName="Anger" type="Weapon">
-		<!-- <Soul Crystal Enhancement>. P. Atk. + 32 and decreases Max HP by 15%. Increases damage inflicted during PvP. -->
+		<!-- <Soul Crystal Enhancement>. P. Atk. +32 and decreases Max HP by 15%. Increases damage inflicted during PvP. -->
 		<set name="icon" val="icon.weapon_doom_crusher_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="BLUNT" />
@@ -1150,7 +1150,7 @@
 		</stats>
 	</item>
 	<item id="8138" name="Ecliptic Axe" additionalName="Conversion" type="Weapon">
-		<!-- Not used -->
+		<!-- <Soul Crystal Enhancement>. Increases Max MP by 60% and decreases Max HP by 40%. -->
 		<set name="icon" val="icon.weapon_eclipse_axe_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="BLUNT" />
@@ -1182,7 +1182,7 @@
 		</stats>
 	</item>
 	<item id="8139" name="Ecliptic Axe" additionalName="M. Atk." type="Weapon">
-		<!-- Not used -->
+		<!-- <Soul Crystal Enhancement>. Increases MP consumption by 15% and M. Atk. by 112 during magic use. -->
 		<set name="icon" val="icon.weapon_eclipse_axe_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="BLUNT" />
@@ -1214,7 +1214,7 @@
 		</stats>
 	</item>
 	<item id="8140" name="Ecliptic Axe" additionalName="Magic Hold" type="Weapon">
-		<!-- Not used -->
+		<!-- <Soul Crystal Enhancement>. Has a 10% chance of casting Dryad Root on the target during magic use. -->
 		<set name="icon" val="icon.weapon_eclipse_axe_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="BLUNT" />
@@ -1246,7 +1246,7 @@
 		</stats>
 	</item>
 	<item id="8141" name="Spell Breaker" additionalName="Acumen" type="Weapon">
-		<!-- Not used -->
+		<!-- <Soul Crystal Enhancement>. Increases Casting Spd. by 15%. -->
 		<set name="icon" val="icon.weapon_spell_breaker_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="BLUNT" />
@@ -1277,8 +1277,8 @@
 			<stat type="pAtkRange">40</stat>
 		</stats>
 	</item>
-	<item id="8142" name="Spell Breaker" additionalName="Mental Shield" type="Weapon">
-		<!-- Not used -->
+	<item id="8142" name="Spell Breaker" additionalName="Magic Mental Shield" type="Weapon">
+		<!-- <Soul Crystal Enhancement>. Has a 50% chance of casting Mental Shield on the target during magic use. -->
 		<set name="icon" val="icon.weapon_spell_breaker_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="BLUNT" />
@@ -1310,7 +1310,7 @@
 		</stats>
 	</item>
 	<item id="8143" name="Spell Breaker" additionalName="Magic Hold" type="Weapon">
-		<!-- Not used -->
+		<!-- <Soul Crystal Enhancement>. Has a 10% chance of casting Dryad Root on the target during magic use. -->
 		<set name="icon" val="icon.weapon_spell_breaker_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="BLUNT" />
@@ -1342,7 +1342,7 @@
 		</stats>
 	</item>
 	<item id="8144" name="Kaim Vanul's Bones" additionalName="Mana Up" type="Weapon">
-		<!-- Not used -->
+		<!-- <Soul Crystal Enhancement>. Increases Max MP by 30%. -->
 		<set name="icon" val="icon.weapon_bone_of_kaim_vanul_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="BLUNT" />
@@ -1374,7 +1374,7 @@
 		</stats>
 	</item>
 	<item id="8145" name="Kaim Vanul's Bones" additionalName="Magic Silence" type="Weapon">
-		<!-- Not used -->
+		<!-- <Soul Crystal Enhancement>. Has a 10% chance of casting Silence on the target during magic use. -->
 		<set name="icon" val="icon.weapon_bone_of_kaim_vanul_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="BLUNT" />
@@ -1406,7 +1406,7 @@
 		</stats>
 	</item>
 	<item id="8146" name="Kaim Vanul's Bones" additionalName="Conversion" type="Weapon">
-		<!-- Not used -->
+		<!-- <Soul Crystal Enhancement>. Increases Max MP by 60% and decreases Max HP by 40%. -->
 		<set name="icon" val="icon.weapon_bone_of_kaim_vanul_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="BLUNT" />
@@ -2111,7 +2111,7 @@
 		</stats>
 	</item>
 	<item id="8191" name="Frintezza's Necklace" type="Armor">
-		<!-- MP + 42, Sleep/Paralysis/Stun Resistance + 15%, Sleep/Paralysis/Stun Attack Rate + 15%, Poison/Bleed Resistance + 25%, Poison /Bleed Attack Rate + 25%. Decreases skill cooldown. Damage Shield effect. Increases Dark Resistance. -->
+		<!-- MP +42, Sleep/Paralysis/Stun Resistance +15%, Sleep/Paralysis/Stun Attack Rate +15%, Poison/Bleed Resistance +25%, Poison /Bleed Attack Rate +25%. Decreases skill cooldown. Damage Reflect effect. Increases Dark Resistance. -->
 		<set name="icon" val="icon.accessory_necklace_of_frintessa_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="neck" />
@@ -2146,7 +2146,7 @@
 			<skill id="2234" level="1" /> <!-- Soul Breaking Arrow -->
 		</skills>
 	</item>
-	<item id="8193" name="Fisherman's Potion - Green" type="EtcItem">
+	<item id="8193" name="Corroded Fisherman's Potion - Green" type="EtcItem">
 		<!-- Corroded item. Can be traded for a pack through the Aden Reconstruction Society, and can also be sold in shops. -->
 		<set name="icon" val="icon.etc_oblivion_green_i00" />
 		<set name="default_action" val="SKILL_REDUCE" />
@@ -2163,7 +2163,7 @@
 			<skill id="2274" level="1" /> <!-- Fisherman's Potion - Green -->
 		</skills>
 	</item>
-	<item id="8194" name="Fisherman's Potion - Jade" type="EtcItem">
+	<item id="8194" name="Corroded Fisherman's Potion - Jade" type="EtcItem">
 		<!-- Corroded item. Can be traded for a pack through the Aden Reconstruction Society, and can also be sold in shops. -->
 		<set name="icon" val="icon.etc_oblivion_jade_i00" />
 		<set name="default_action" val="SKILL_REDUCE" />
@@ -2180,7 +2180,7 @@
 			<skill id="2274" level="2" /> <!-- Fisherman's Potion - Jade -->
 		</skills>
 	</item>
-	<item id="8195" name="Fisherman's Potion - Blue" type="EtcItem">
+	<item id="8195" name="Corroded Fisherman's Potion - Blue" type="EtcItem">
 		<!-- Corroded item. Can be traded for a pack through the Aden Reconstruction Society, and can also be sold in shops. -->
 		<set name="icon" val="icon.etc_oblivion_blue_i00" />
 		<set name="default_action" val="SKILL_REDUCE" />
@@ -2197,7 +2197,7 @@
 			<skill id="2274" level="3" /> <!-- Fisherman's Potion - Blue -->
 		</skills>
 	</item>
-	<item id="8196" name="Fisherman's Potion - Yellow" type="EtcItem">
+	<item id="8196" name="Corroded Fisherman's Potion - Yellow" type="EtcItem">
 		<!-- Corroded item. Can be traded for a pack through the Aden Reconstruction Society, and can also be sold in shops. -->
 		<set name="icon" val="icon.etc_oblivion_yellow_i00" />
 		<set name="default_action" val="SKILL_REDUCE" />
@@ -2214,7 +2214,7 @@
 			<skill id="2274" level="4" /> <!-- Fisherman's Potion - Yellow -->
 		</skills>
 	</item>
-	<item id="8197" name="Fisherman's Potion - Orange" type="EtcItem">
+	<item id="8197" name="Corroded Fisherman's Potion - Orange" type="EtcItem">
 		<!-- Corroded item. Can be traded for a pack through the Aden Reconstruction Society, and can also be sold in shops. -->
 		<set name="icon" val="icon.etc_oblivion_orange_i00" />
 		<set name="default_action" val="SKILL_REDUCE" />
@@ -2231,7 +2231,7 @@
 			<skill id="2274" level="5" /> <!-- Fisherman's Potion - Orange -->
 		</skills>
 	</item>
-	<item id="8198" name="Fisherman's Potion - Purple" type="EtcItem">
+	<item id="8198" name="Corroded Fisherman's Potion - Purple" type="EtcItem">
 		<!-- Corroded item. Can be traded for a pack through the Aden Reconstruction Society, and can also be sold in shops. -->
 		<set name="icon" val="icon.etc_oblivion_violet_i00" />
 		<set name="default_action" val="SKILL_REDUCE" />
@@ -2248,7 +2248,7 @@
 			<skill id="2274" level="6" /> <!-- Fisherman's Potion - Purple -->
 		</skills>
 	</item>
-	<item id="8199" name="Fisherman's Potion - Red" type="EtcItem">
+	<item id="8199" name="Corroded Fisherman's Potion - Red" type="EtcItem">
 		<!-- Corroded item. Can be traded for a pack through the Aden Reconstruction Society, and can also be sold in shops. -->
 		<set name="icon" val="icon.etc_oblivion_red_i00" />
 		<set name="default_action" val="SKILL_REDUCE" />

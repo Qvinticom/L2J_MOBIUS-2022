@@ -333,7 +333,7 @@
 		</stats>
 	</item>
 	<item id="47320" name="Bloody Eternal Leather Armor" additionalName="Assassin Type / Light Armor" type="Armor">
-		<!-- PvE enchant type item. Damage received from an NPC -8%, P. Atk. +1%, M. Atk. +2%. When enchanted to +4, Evasion and Movement Speed increased, P. Critical Rate Received decreased, and Physical Attack Resistance increased. Othell and Yul classes only. -->
+		<!-- PvE enchant type item. Damage received from an NPC -8%, P. Atk. +1%, M. Atk. +2%. When enchanted to +4, Evasion and Speed increased, P. Critical Rate Received decreased, and Physical Attack Resistance increased. Othell and Yul classes only. -->
 		<set name="icon" val="icon.armor_t802_u_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="armor_type" val="LIGHT" />
@@ -593,7 +593,7 @@
 		</stats>
 	</item>
 	<item id="47336" name="Bloody Eternal Leather Armor" additionalName="Enchant Type / Light Armor" type="Armor">
-		<!-- PvE enchant type item. Damage received from an NPC -8%, P. Atk. +1%, M. Atk. +2%. When enchanted to +4, Evasion and Movement Speed increased, P. Critical Rate Received decreased, and Physical Attack Resistance increased. Othell, Yul, Iss, Aeore, Wynn, Tyrr classes and Eviscerator only. -->
+		<!-- PvE enchant type item. Damage received from an NPC -8%, P. Atk. +1%, M. Atk. +2%. When enchanted to +4, Evasion and Speed increased, P. Critical Rate Received decreased, and Physical Attack Resistance increased. Othell, Yul, Iss, Aeore, Wynn, Tyrr classes and Eviscerator only. -->
 		<set name="icon" val="icon.armor_t802_u_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="armor_type" val="LIGHT" />
@@ -1017,7 +1017,7 @@
 		</skills>
 	</item>
 	<item id="47363" name="Red Noblesse Appearance Stone" type="EtcItem">
-		<!-- Use to change the appearance of your upper or full-bod armor into a Red Noblesse Garment. The stone modifies the appearance of all armor, and all armor appears as a Red Noblesse Outfit. -->
+		<!-- Use to change the appearance of your upper or full-body armor into a Red Noblesse Garment. The stone modifies the appearance of all armor, and all armor appears as a Red Noblesse Garment. -->
 		<set name="icon" val="BranchSys3.icon1.g_scrl_change_chest" />
 		<set name="etcitem_type" val="SCROLL" />
 		<set name="is_stackable" val="true" />
@@ -1027,7 +1027,7 @@
 		<set name="default_action" val="SKILL_REDUCE" />
 	</item>
 	<item id="47364" name="White Noblesse Appearance Stone" type="EtcItem">
-		<!-- Use to change the appearance of your upper or full-bod armor into a White Noblesse Garment. The stone modifies the appearance of all armor, and all armor appears as a White Noblesse Outfit. -->
+		<!-- Use to change the appearance of your upper or full-body armor into a White Noblesse Garment. The stone modifies the appearance of all armor, and all armor appears as a White Noblesse Garment. -->
 		<set name="icon" val="BranchSys3.icon1.g_scrl_change_chest" />
 		<set name="etcitem_type" val="SCROLL" />
 		<set name="is_stackable" val="true" />
@@ -1037,7 +1037,7 @@
 		<set name="default_action" val="SKILL_REDUCE" />
 	</item>
 	<item id="47365" name="Blue Musketeer Appearance Stone" type="EtcItem">
-		<!-- Use to change the appearance of your upper or full-bod armor into a Blue Musketeer Garment. The stone modifies the appearance of all armor, and all armor appears as a Blue Musketeer Outfit. -->
+		<!-- Use to change the appearance of your upper or full-body armor into a Blue Musketeer Garment. The stone modifies the appearance of all armor, and all armor appears as a Blue Musketeer Garment. -->
 		<set name="icon" val="BranchSys3.icon1.g_scrl_change_chest" />
 		<set name="etcitem_type" val="SCROLL" />
 		<set name="is_stackable" val="true" />
@@ -1047,7 +1047,7 @@
 		<set name="default_action" val="SKILL_REDUCE" />
 	</item>
 	<item id="47366" name="Red Musketeer Appearance Stone" type="EtcItem">
-		<!-- Use to change the appearance of your upper or full-bod armor into a Red Musketeer Garment. The stone modifies the appearance of all armor, and all armor appears as a Red Musketeer Outfit. -->
+		<!-- Use to change the appearance of your upper or full-body armor into a Red Musketeer Garment. The stone modifies the appearance of all armor, and all armor appears as a Red Musketeer Garment. -->
 		<set name="icon" val="BranchSys3.icon1.g_scrl_change_chest" />
 		<set name="etcitem_type" val="SCROLL" />
 		<set name="is_stackable" val="true" />
@@ -1056,8 +1056,8 @@
 		<set name="handler" val="Appearance" />
 		<set name="default_action" val="SKILL_REDUCE" />
 	</item>
-	<item id="47367" name="Royal Save Ticket Box" type="EtcItem">
-		<!-- Double click to obtain an R~R99 Red or Blue Royal Save Ticket. -->
+	<item id="47367" name="Royal Save Card Box" type="EtcItem">
+		<!-- Double click to obtain an R~R99 Red or Blue Royal Save Card. -->
 		<set name="icon" val="icon.bm_pendant_pve_box" />
 		<set name="default_action" val="SKILL_REDUCE_ON_SKILL_SUCCESS" />
 		<set name="is_sellable" val="false" />
@@ -1182,7 +1182,7 @@
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="47379" name="Red Dark/Bloody Coupon" additionalName="Event" type="EtcItem">
-		<!-- Red Libra-only Item. Craftsman Black exchanges this for Amaranthine Weapons. It will be deleted after the regular maintenance on Wednesday, March 9, 2016 when the Red Libra merchants leave. -->
+		<!-- Red Libra-only Item. Craftsman Black exchanges this for Helios Weapons. It will be deleted after the regular maintenance on Wednesday, March 9, 2016 when the Red Libra merchants leave. -->
 		<set name="icon" val="icon.event_mahum_memo" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
@@ -1227,7 +1227,7 @@
 		</skills>
 	</item>
 	<item id="47383" name="Red Libra Supplies Lv. 5" additionalName="Event" type="EtcItem">
-		<!-- Red Libra-only Item. A box obtained with Bodyguard Blue's help. A random item can be obtained by double clicking it. It will be deleted after the regular maintenance on Wednesday, March 9, 2016 when the Red Libra merchants leave. -->
+		<!-- Red Libra-only Item. A box obtained with Bodyguard Blue’s help. A random item can be obtained by double clicking it. It will be deleted after the regular maintenance on Wednesday, March 9, 2016 when the Red Libra merchants leave. -->
 		<set name="icon" val="icon.event_mahum_coinbox" />
 		<set name="default_action" val="SKILL_REDUCE_ON_SKILL_SUCCESS" />
 		<set name="is_tradable" val="false" />
@@ -1255,7 +1255,7 @@
 		</skills>
 	</item>
 	<item id="47385" name="Balthus Knight Mark" type="EtcItem">
-		<!-- Makes you eligible to receive a Member of the Balthus Knight disguise for 1 hour. Can be used only by characters of Level 85 or higher. Buff gets deleted upon Subclass/Dual Class change. To be deleted on Wednesday June 15th, 2016 after regular maintenance. -->
+		<!-- Makes you eligible to receive a Member of the Balthus Knight disguise for 1 hour. Can be used only by characters of Level 85 or higher. Buff gets deleted upon Subclass/Dual Class change. This item will be deleted after the event is over. -->
 		<set name="icon" val="icon.ev_balthus_token" />
 		<set name="default_action" val="SKILL_REDUCE" />
 		<set name="is_tradable" val="false" />
@@ -1266,8 +1266,8 @@
 		<set name="is_private_storeable" val="false" />
 		<set name="is_freightable" val="true" />
 	</item>
-	<item id="47386" name="Sibis' Letter" additionalName="Event" type="EtcItem">
-		<!-- Letter from the Vice-Chief of the Balthus Knights. Will be deleted on June 15, 2016, when the Balthus Knight event ends after regular maintenance. -->
+	<item id="47386" name="Sibi's Letter" additionalName="Event" type="EtcItem">
+		<!-- Letter from the Vice-Chief of the Balthus Knights. This item will be deleted after the event is over. -->
 		<set name="icon" val="icon.etc_royal_membership_i00" />
 		<set name="default_action" val="SHOW_HTML" />
 		<set name="immediate_effect" val="true" />
@@ -1278,8 +1278,8 @@
 		<set name="is_stackable" val="true" />
 		<set name="is_private_storeable" val="false" />
 	</item>
-	<item id="47387" name="Balthus Knights Supply Items" type="EtcItem">
-		<!-- Double click to receive 3 Marks of the Balthus Knights. (Can be used once per day.) Cannot be exchanged/dropped/sold in a personal store, but can be kept in personal storage. Will be deleted on June 15th, 2016, when the Balthus Knight event ends after regular maintenance. -->
+	<item id="47387" name="Balthus Knights Supply Box" type="EtcItem">
+		<!-- Double-click to receive 3 Balthus Knight Marks. (Can be used only once a day). This item will be deleted after the event is over. -->
 		<set name="icon" val="icon.etc_ev_kalie_treasure_box" />
 		<set name="default_action" val="PEEL" />
 		<set name="immediate_effect" val="true" />
@@ -1318,8 +1318,8 @@
 		<set name="is_stackable" val="true" />
 		<set name="is_private_storeable" val="false" />
 	</item>
-	<item id="47390" name="Forever/Longing Talisman/Energy of Longing Supply Items" type="EtcItem">
-		<!-- Top-grade Balthus Knights Supply Items. When used, a Forever Talisman/Longing Talisman/Energy of Longing can be obtained. Will be deleted on June 15th, 2016, after regular maintenance. -->
+	<item id="47390" name="Insanity Talisman/Longing Talisman/Energy of Longing Supply Box" type="EtcItem">
+		<!-- Top-grade Balthus Knights Supply Box. When used, an Insanity Talisman/Longing Talisman/Energy of Longing can be obtained. This item will be deleted after the event is over. -->
 		<set name="icon" val="icon.etc_treasure_box_i01" />
 		<set name="default_action" val="PEEL" />
 		<set name="immediate_effect" val="true" />
@@ -1336,8 +1336,8 @@
 			<item id="47420" min="1" max="1" chance="25" /> <!-- Energy of Longing -->
 		</capsuled_items>
 	</item>
-	<item id="47391" name="Venir Stage 11/12/13 Talisman Supply Items" type="EtcItem">
-		<!-- Top-grade Balthus Knight Supply Item. Use to obtain a Venir Talisman Stage 11/12/13. Will be deleted when the event ends. -->
+	<item id="47391" name="Venir Stage 11/12/13 Talisman Supply Box" type="EtcItem">
+		<!-- Top-grade Balthus Knight Supply Box. When used, a Venir Talisman Stage 11/12/13 can be obtained. This item will be deleted after the event is over. -->
 		<set name="icon" val="icon.etc_treasure_box_i02" />
 		<set name="immediate_effect" val="true" />
 		<set name="is_tradable" val="false" />
@@ -1355,15 +1355,15 @@
 			<item id="39646" min="1" max="1" chance="25" /> <!-- Venir's Talisman - Stage 13 -->
 		</capsuled_items>
 	</item>
-	<item id="47392" name="Shining Scroll: Enchant Elemental Shirt" type="EtcItem">
+	<item id="47392" name="Destruction Scroll: Enchant Elemental Shirt" type="EtcItem">
 		<!-- Shirt Enchantment-only Scroll. The enchant level is maintained when enchantment fails. Cannot be used on Shirts of +9 or higher. -->
 		<set name="icon" val="icon.g_scrl_of_ench_wolf_shirt" />
 		<set name="default_action" val="SKILL_REDUCE" />
 		<set name="weight" val="10" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="47393" name="Dark Assassin/White Assassin Suit Supply Items" type="EtcItem">
-		<!-- Top-grade Balthus Knights Supply Items. When used, a Dark Assassin/White Assassin Suit Appearance Stone can be obtained. Will be deleted on June 15th, 2016, after regular maintenance. -->
+	<item id="47393" name="Dark Assassin/White Assassin Suit Supply Box" type="EtcItem">
+		<!-- Top-grade Balthus Knights Supply Box. When used, a Dark Assassin/White Assassin Suit Appearance Stone can be obtained. This item will be deleted after the event is over. -->
 		<set name="icon" val="icon.etc_treasure_box_i04" />
 		<set name="immediate_effect" val="true" />
 		<set name="is_tradable" val="false" />
@@ -1376,7 +1376,7 @@
 		<set name="extractableCountMax" val="1" />
 		<set name="handler" val="ExtractableItems" />
 		<capsuled_items>
-			<item id="47464" min="1" max="1" chance="34" /> <!-- White Assassin Suit Appearance Stone -->
+			<item id="47464" min="1" max="1" chance="34" /> <!-- Appearance Stone: White Assassin Suit -->
 			<item id="40270" min="1" max="1" chance="34" /> <!-- Appearance Stone: Dark Assassin Suit -->
 		</capsuled_items>
 	</item>
@@ -1391,8 +1391,8 @@
 		<set name="is_stackable" val="true" />
 		<set name="is_private_storeable" val="false" />
 	</item>
-	<item id="47395" name="Bottle of Antharas/Valakas/Baium's Soul Supply Item" type="EtcItem">
-		<!-- Top-grade Balthus Knights Supply Items. When used, an Antharas/Valakas/Baium Soul Bottle can be obtained. Will be deleted on June 15th, 2016, after regular maintenance. -->
+	<item id="47395" name="Bottle of Antharas/Valakas/Baium's Soul Supply Box" type="EtcItem">
+		<!-- Top-grade Balthus Knights Supply Box. When used, an Antharas/Valakas/Baium Soul Bottle can be obtained. This item will be deleted after the event is over. -->
 		<set name="icon" val="icon.etc_treasure_box_i06" />
 		<set name="immediate_effect" val="true" />
 		<set name="is_tradable" val="false" />
@@ -1428,8 +1428,8 @@
 			<item id="36169" min="1" max="1" chance="33.333" /> <!-- Gustav's Belt -->
 		</capsuled_items>
 	</item>
-	<item id="47397" name="Seven Signs/Anakim/Lilith Talisman Supply Item" type="EtcItem">
-		<!-- Top-grade Balthus Knights Supply Items. When used, a Seven Signs/Anakim/Lilith's Talisman can be obtained. Will be deleted on June 15th, 2016, after regular maintenance. -->
+	<item id="47397" name="Seven Signs/Anakim/Lilith Talisman Supply Box" type="EtcItem">
+		<!-- Top-grade Balthus Knights Supply Box. When used, a Seven Signs/Anakim/Lilith's Talisman can be obtained. This item will be deleted after the event is over. -->
 		<set name="icon" val="icon.etc_treasure_box_i08" />
 		<set name="immediate_effect" val="true" />
 		<set name="is_tradable" val="false" />
@@ -1447,8 +1447,8 @@
 			<item id="37715" min="1" max="1" chance="25" /> <!-- Talisman - Anakim -->
 		</capsuled_items>
 	</item>
-	<item id="47398" name="Bloody Eternal Enhancement Stone - x2" type="EtcItem">
-		<!-- Top-grade Balthus Knights Supply Items. When used, 2 Bloody Eternal Enhancement Stones can be obtained. Will be deleted on June 15th, 2016, after regular maintenance. -->
+	<item id="47398" name="Bloody Eternal Enhancement Stones Box" type="EtcItem">
+		<!-- Top-grade Balthus Knights Supply Box. When used, 2 Bloody Eternal Enhancement Stones can be obtained. This item will be deleted after the event is over. -->
 		<set name="icon" val="icon.etc_treasure_box_i04" />
 		<set name="immediate_effect" val="true" />
 		<set name="is_tradable" val="false" />
@@ -1462,8 +1462,8 @@
 			<item id="35569" min="2" max="2" chance="75" /> <!-- Bloody Eternal Enhancement Stone -->
 		</capsuled_items>
 	</item>
-	<item id="47399" name="Sibis Coin Box" type="EtcItem">
-		<!-- Top-grade Balthus Knights Supply Items. When used, 1500 Sibis Coins can be obtained. Will be deleted on June 15th, 2016, after regular maintenance. -->
+	<item id="47399" name="Sibi Coin Box" type="EtcItem">
+		<!-- Top-grade Balthus Knights Supply Items. When used, 1500 Sibi Coins can be obtained. This item will be deleted after the event is over. -->
 		<set name="icon" val="icon.etc_treasure_box_i10" />
 		<set name="default_action" val="PEEL" />
 		<set name="immediate_effect" val="true" />
@@ -1476,7 +1476,7 @@
 		<set name="is_clan_depositable" val="false" />
 		<set name="handler" val="ExtractableItems" />
 		<capsuled_items>
-			<item id="49783" min="1500" max="1500" chance="75" /> <!-- Sibis Coin Box -->
+			<item id="49783" min="1500" max="1500" chance="75" /> <!-- Sibi Coin -->
 		</capsuled_items>
 	</item>
 </list>

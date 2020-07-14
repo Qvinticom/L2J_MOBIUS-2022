@@ -70,8 +70,8 @@
 		<set name="is_questitem" val="true" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="39505" name="Scroll of Escape: The Cemetary" type="EtcItem">
-		<!-- Teleports you to The Cemetary. -->
+	<item id="39505" name="Scroll of Escape: The Cemetery" type="EtcItem">
+		<!-- Teleports you to The Cemetery. -->
 		<set name="icon" val="icon.etc_scroll_of_return_i03" />
 		<set name="weight" val="30" />
 		<set name="is_clan_depositable" val="false" />
@@ -113,7 +113,7 @@
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="39508" name="Mark of Gratitude" type="EtcItem">
-		<!-- Obtained by killing Mahum's demonic spirit. Take this to Leo the refugee. -->
+		<!-- Obtained by killing Mahum's demonic spirit. Take this to Refugee Leo. -->
 		<set name="icon" val="icon.etc_yellow_rose_i00" />
 		<set name="is_depositable" val="false" />
 		<set name="is_clan_depositable" val="false" />
@@ -128,7 +128,7 @@
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="39509" name="Barrier Enforcer Key" type="EtcItem">
-		<!-- A key to activating the barrier enforcer in the Sea of Spores. -->
+		<!-- A key to activating the Barrier Enforcer in the Sea of Spores. -->
 		<set name="icon" val="icon.etc_old_key_i03" />
 		<set name="is_depositable" val="false" />
 		<set name="is_clan_depositable" val="false" />
@@ -915,7 +915,7 @@
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="39560" name="Low-grade Wind Dye Pack" type="EtcItem">
-		<!-- Wrapped Pack containing aLv. 1 - 3 CHA/LUC Dye. -->
+		<!-- Wrapped Pack containing a Lv. 1 - 3 CHA/LUC Dye. -->
 		<set name="icon" val="icon.event_hero_treasure_box_i00" />
 		<set name="is_stackable" val="true" />
 		<set name="default_action" val="PEEL" />
@@ -924,17 +924,17 @@
 		<set name="extractableCountMin" val="1" />
 		<set name="extractableCountMax" val="1" />
 		<capsuled_items>
-			<item id="39386" min="1" max="1" chance="30" /> <!-- Lv. 1 Windy LUC Dye - LUC + 1 -->
-			<item id="39381" min="1" max="1" chance="30" /> <!-- Lv. 1 Windy CHA Dye - CHA + 1 -->
-			<item id="39387" min="1" max="1" chance="15" /> <!-- Lv. 2 Windy LUC Dye - LUC + 2 -->
-			<item id="39382" min="1" max="1" chance="15" /> <!-- Lv. 2 Windy CHA Dye - CHA + 2 -->
-			<item id="39388" min="1" max="1" chance="5" /> <!-- Lv. 3 Windy LUC Dye - LUC + 3 -->
-			<item id="39383" min="1" max="1" chance="5" /> <!-- Lv. 3 Windy CHA Dye - CHA + 3 -->
+			<item id="39386" min="1" max="1" chance="30" /> <!-- Lv. 1 Windy LUC Dye - LUC +1 -->
+			<item id="39381" min="1" max="1" chance="30" /> <!-- Lv. 1 Windy CHA Dye - CHA +1 -->
+			<item id="39387" min="1" max="1" chance="15" /> <!-- Lv. 2 Windy LUC Dye - LUC +2 -->
+			<item id="39382" min="1" max="1" chance="15" /> <!-- Lv. 2 Windy CHA Dye - CHA +2 -->
+			<item id="39388" min="1" max="1" chance="5" /> <!-- Lv. 3 Windy LUC Dye - LUC +3 -->
+			<item id="39383" min="1" max="1" chance="5" /> <!-- Lv. 3 Windy CHA Dye - CHA +3 -->
 			<item id="39592" min="1" max="1" chance="50" /> <!-- Tempest Stone -->
 		</capsuled_items>
 	</item>
 	<item id="39561" name="Mid-grade Wind Dye Pack" type="EtcItem">
-		<!-- Wrapped Pack containing aLv. 4 CHA/LUC Dye. -->
+		<!-- Wrapped Pack containing a Lv. 4 CHA/LUC Dye. -->
 		<set name="icon" val="icon.event_hero_treasure_box_i00" />
 		<set name="is_stackable" val="true" />
 		<set name="default_action" val="PEEL" />
@@ -943,13 +943,13 @@
 		<set name="extractableCountMin" val="1" />
 		<set name="extractableCountMax" val="1" />
 		<capsuled_items>
-			<item id="39389" min="1" max="1" chance="50" /> <!-- Lv. 4 Windy LUC Dye - LUC + 4 -->
-			<item id="39384" min="1" max="1" chance="50" /> <!-- Lv. 4 Windy CHA Dye - CHA + 4 -->
+			<item id="39389" min="1" max="1" chance="50" /> <!-- Lv. 4 Windy LUC Dye - LUC +4 -->
+			<item id="39384" min="1" max="1" chance="50" /> <!-- Lv. 4 Windy CHA Dye - CHA +4 -->
 			<item id="39592" min="1" max="1" chance="30" /> <!-- Tempest Stone -->
 		</capsuled_items>
 	</item>
 	<item id="39562" name="High-grade Wind Dye Pack" type="EtcItem">
-		<!-- Wrapped Pack containing aLv. 5 CHA/LUC Dye. -->
+		<!-- Wrapped Pack containing a Lv. 5 CHA/LUC Dye. -->
 		<set name="icon" val="icon.event_hero_treasure_box_i00" />
 		<set name="is_stackable" val="true" />
 		<set name="commissionItemType" val="OTHER_ITEM" />
@@ -959,8 +959,8 @@
 		<set name="extractableCountMin" val="1" />
 		<set name="extractableCountMax" val="1" />
 		<capsuled_items>
-			<item id="39390" min="1" max="1" chance="50" /> <!-- Lv. 5 Windy LUC Dye - LUC + 5 -->
-			<item id="39385" min="1" max="1" chance="50" /> <!-- Lv. 5 Windy CHA Dye - CHA + 5 -->
+			<item id="39390" min="1" max="1" chance="50" /> <!-- Lv. 5 Windy LUC Dye - LUC +5 -->
+			<item id="39385" min="1" max="1" chance="50" /> <!-- Lv. 5 Windy CHA Dye - CHA +5 -->
 			<item id="39592" min="1" max="1" chance="10" /> <!-- Tempest Stone -->
 		</capsuled_items>
 	</item>
@@ -977,8 +977,8 @@
 		<capsuled_items>
 			<item id="39564" min="1" max="1" chance="25" /> <!-- Talisman - Wind Pack - P. Skill Critical Damage -->
 			<item id="39565" min="1" max="1" chance="25" /> <!-- Talisman - Wind Pack - M. Skill Critical Damage -->
-			<item id="39566" min="1" max="1" chance="25" /> <!-- Talisman - Wind Pack -->
-			<item id="39567" min="1" max="1" chance="25" /> <!-- Talisman - Wind Pack -->
+			<item id="39566" min="1" max="1" chance="25" /> <!-- Talisman - Wind Pack - Defense -->
+			<item id="39567" min="1" max="1" chance="25" /> <!-- Talisman - Wind Pack - Talisman -->
 		</capsuled_items>
 	</item>
 	<item id="39564" name="Talisman - Wind Pack" additionalName="P. Skill Critical Damage" type="EtcItem">
@@ -1009,7 +1009,7 @@
 			<item id="39569" min="1" max="1" chance="100" /> <!-- Talisman - Wind: M. Critical Damage - Passive -->
 		</capsuled_items>
 	</item>
-	<item id="39566" name="Talisman - Wind Pack" type="EtcItem">
+	<item id="39566" name="Talisman - Wind Pack" additionalName="Defense" type="EtcItem">
 		<!-- Wrapped Pack containing a Talisman - Wind: Defense. Cannot be used in the Olympiad. -->
 		<set name="icon" val="icon.etc_treasure_box_i01" />
 		<set name="is_stackable" val="true" />
@@ -1020,10 +1020,10 @@
 		<set name="extractableCountMin" val="1" />
 		<set name="extractableCountMax" val="1" />
 		<capsuled_items>
-			<item id="39570" min="1" max="1" chance="100" /> <!-- Talisman - Wind: Defense -->
+			<item id="39570" min="1" max="1" chance="100" /> <!-- Talisman - Wind: Defense - Active -->
 		</capsuled_items>
 	</item>
-	<item id="39567" name="Talisman - Wind Pack" type="EtcItem">
+	<item id="39567" name="Talisman - Wind Pack" additionalName="Talisman" type="EtcItem">
 		<!-- Wrapped Pack containing a Talisman - Wind: Debuff Resistance. Cannot be used in the Olympiad. -->
 		<set name="icon" val="icon.etc_treasure_box_i01" />
 		<set name="is_stackable" val="true" />
@@ -1034,11 +1034,11 @@
 		<set name="extractableCountMin" val="1" />
 		<set name="extractableCountMax" val="1" />
 		<capsuled_items>
-			<item id="39571" min="1" max="1" chance="100" /> <!-- Talisman - Wind: Debuff Resistance -->
+			<item id="39571" min="1" max="1" chance="100" /> <!-- Talisman - Wind: Debuff Resistance - Active -->
 		</capsuled_items>
 	</item>
 	<item id="39568" name="Talisman - Wind: P. Critical Damage" additionalName="Passive" type="Armor">
-		<!-- P. Skill Critical Damage + 10%. -->
+		<!-- P. Skill Critical Damage +10%. -->
 		<set name="icon" val="icon.r85_talisman_ca_up_passive" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="deco1" />
@@ -1056,7 +1056,7 @@
 		</skills>
 	</item>
 	<item id="39569" name="Talisman - Wind: M. Critical Damage" additionalName="Passive" type="Armor">
-		<!-- M. Skill Critical Damage + 10%. -->
+		<!-- M. Skill Critical Damage +10%. -->
 		<set name="icon" val="icon.r_talisman_mc_up_passive" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="deco1" />
@@ -1073,7 +1073,7 @@
 			<skill id="17974" level="1" /> <!-- Talisman - Wind: M. Critical Damage -->
 		</skills>
 	</item>
-	<item id="39570" name="Talisman - Wind: Defense" type="Armor">
+	<item id="39570" name="Talisman - Wind: Defense" additionalName="Active" type="Armor">
 		<!-- For 15 sec., P./M. Def. are maximized. Cooldown is 20 min. -->
 		<set name="icon" val="icon.r85_talisman_pd_up_active" />
 		<set name="default_action" val="EQUIP" />
@@ -1091,7 +1091,7 @@
 			<skill id="17975" level="1" /> <!-- Talisman - Wind: Defense -->
 		</skills>
 	</item>
-	<item id="39571" name="Talisman - Wind: Debuff Resistance" type="Armor">
+	<item id="39571" name="Talisman - Wind: Debuff Resistance" additionalName="Active" type="Armor">
 		<!-- For 15 sec., Debuff Resistance is increased. Cooldown is 20 min. -->
 		<set name="icon" val="icon.r85_talisman_md_up_active" />
 		<set name="default_action" val="EQUIP" />
@@ -1110,7 +1110,7 @@
 		</skills>
 	</item>
 	<item id="39572" name="Talisman - Insanity" type="Armor">
-		<!-- Max HP/MP/CP + 800, P./M. Accuracy + 2, P./M. Evasion + 2, Atk./Casting Spd. + 60, P. Critical Rate + 30, M. Critical Rate + 10, P. Atk. + 638, M. Atk. + 742, Skill Power + 5%, Damage Reflect Resistance + 30, P. Def. + 563, M. Def. + 368, Fixed Damage Resistance + 10%, Vampiric Rage + 5, STR/INT/CON/MEN/DEX/WIT/CHA/LUC + 2. Skill MP Consumption - 3%, Skill Cooldown - 3%. -->
+		<!-- Max HP/MP/CP +800, P./M. Accuracy +2, P./M. Evasion +2, Atk./Casting Spd. +60, P. Critical Rate +30, M. Critical Rate +10, P. Atk. +638, M. Atk. +742, Skill Power +5%, Damage Reflect Resistance +30, P. Def. +563, M. Def. +368, Fixed Damage Resistance +10%, Vampiric Rage +5, STR/INT/CON/MEN/DEX/WIT/CHA/LUC +2. Skill MP Consumption - 3%, Skill Cooldown - 3%. -->
 		<set name="icon" val="icon.accessory_punishment_talisman_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="talisman" />
@@ -1464,7 +1464,7 @@
 		<set name="is_freightable" val="true" />
 	</item>
 	<item id="39590" name="Yum Yum Candy (30-day)" additionalName="Event" type="EtcItem">
-		<!-- XP/SP Gain + 15%. Stacks with Nom Nom Candy, but not with another Yum Yum Candy. -->
+		<!-- XP/SP Gain +15%. Stacks with Nom Nom Candy, but not with another Yum Yum Candy. -->
 		<set name="icon" val="icon.etc_whiteday_candy_i05" />
 		<set name="is_clan_depositable" val="false" />
 		<set name="is_mailable" val="false" />
@@ -1477,7 +1477,7 @@
 		<set name="time" val="43200" />
 	</item>
 	<item id="39591" name="Nom Nom Candy (30-day)" additionalName="Event" type="EtcItem">
-		<!-- XP/SP Gain + 15%. Stacks with Yum Yum Candy, but not with another Nom Nom Candy. -->
+		<!-- XP/SP Gain +15%. Stacks with Yum Yum Candy, but not with another Nom Nom Candy. -->
 		<set name="icon" val="icon.etc_whiteday_candy_i06" />
 		<set name="is_clan_depositable" val="false" />
 		<set name="is_mailable" val="false" />

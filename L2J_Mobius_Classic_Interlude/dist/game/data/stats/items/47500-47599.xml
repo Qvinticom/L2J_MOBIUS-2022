@@ -23,7 +23,7 @@
 		<set name="is_private_storeable" val="false" />
 	</item>
 	<item id="47503" name="High-grade Spirit Stone" type="EtcItem">
-		<!-- Ordinary mineral that has been petrified by a creature's physical or magical damage and dimensional anomalies. Key component used in weapon Augmentation by characters with Lv. 95 or above. -->
+		<!-- Ordinary mineral that has been petrified by a creature's physical or magical damage and dimensional anomalies. Key component used in weapon augmentation by characters with Lv. 95 or above. -->
 		<set name="icon" val="icon.renewal_mineral_r95" />
 		<set name="weight" val="2" />
 		<set name="is_tradable" val="false" />
@@ -563,7 +563,7 @@
 		<set name="is_private_storeable" val="false" />
 	</item>
 	<item id="47547" name="Bait" type="EtcItem">
-		<!-- Fishing time: 105 seconds. Standby time: 15 seconds. Standard Fishing Bait. Fish using this bait to catch a Blueish Box with low probability. -->
+		<!-- Fishing time: 105 seconds. Standby time: 15 seconds. Standard Fishing Bait. Fish using this bait to catch a Bluish Box with low probability. -->
 		<set name="icon" val="icon.etc_normal_lure" />
 		<set name="default_action" val="EQUIP" />
 		<set name="etcitem_type" val="LURE" />
@@ -586,8 +586,8 @@
 		<set name="is_oly_restricted" val="true" />
 		<set name="is_coc_restricted" val="true" />
 	</item>
-	<item id="47549" name="PC Cafe Bait" type="EtcItem">
-		<!-- Fishing time: 105 seconds. Standby time: 15 seconds. Special Fishing Bait. Fish using this bait to catch a Purplish Box with low probability. Can be used outside PC Cafes. -->
+	<item id="47549" name="Premium Account Bait" type="EtcItem">
+		<!-- Fishing time: 105 seconds. Standby time: 15 seconds. Special Fishing Bait. Fish using this bait to catch a Purplish Box with low probability. Can be used outside Premium Accounts. -->
 		<set name="icon" val="icon.etc_bait_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="etcitem_type" val="LURE" />
@@ -613,12 +613,12 @@
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="47552" name="Powerful Fish" type="EtcItem">
-		<!-- Can be exchanged for a Stardust item or hair accessories through a Fishing Guild member. -->
+		<!-- Can be exchanged for a Hair Accessory or other items through a Fishing Guild member. -->
 		<set name="icon" val="icon.etc_bream_i01" />
 		<set name="price" val="1000000" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="47553" name="Blueish Box" type="EtcItem">
+	<item id="47553" name="Bluish Box" type="EtcItem">
 		<!-- Double click to obtain the item. -->
 		<set name="icon" val="icon.etc_treasure_box_i01" />
 		<set name="default_action" val="PEEL" />
@@ -948,7 +948,7 @@
 		<set name="is_stackable" val="true" />
 		<set name="is_private_storeable" val="false" />
 	</item>
-	<item id="47574" name="PC Cafe Treasure Chest" type="EtcItem">
+	<item id="47574" name="Premium Account Treasure Chest" type="EtcItem">
 		<!-- Double click to obtain the item. -->
 		<set name="icon" val="icon.new_user_box" />
 		<set name="default_action" val="SKILL_REDUCE_ON_SKILL_SUCCESS" />

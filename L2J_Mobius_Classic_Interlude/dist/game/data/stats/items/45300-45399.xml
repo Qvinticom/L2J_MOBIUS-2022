@@ -69,8 +69,8 @@
 			<stat type="pAtkRange">400</stat>
 		</stats>
 	</item>
-	<item id="45375" name="Alien Nano Supplement" additionalName="Event" type="EtcItem">
-		<!-- Random basic stat + 6 for 30 min. Cannot be stacked with Fish Stew or other Alien Nano Supplements. -->
+	<item id="45375" name="Battle Rations" additionalName="Event" type="EtcItem">
+		<!-- Random basic stat +6 for 30 min. Cannot be stacked with Fish Stew or other Battle Rations. -->
 		<set name="icon" val="icon.ev_invasion_buff_box" />
 		<set name="is_stackable" val="true" />
 		<set name="is_sellable" val="false" />

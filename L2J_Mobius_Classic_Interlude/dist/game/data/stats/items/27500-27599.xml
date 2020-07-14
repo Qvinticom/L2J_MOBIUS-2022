@@ -145,7 +145,7 @@
 		</skills>
 	</item>
 	<item id="27511" name="Novice Adventurer's Shirt" type="Armor">
-		<!-- Novice Adventurer's shirt. M. Def. + 11 when equipped. -->
+		<!-- Novice Adventurer's shirt. M. Def. +11 when equipped. -->
 		<set name="icon" val="icon.etc_shirts_none_i00" />
 		<set name="weight" val="130" />
 		<set name="armor_type" val="LIGHT" />
@@ -163,7 +163,7 @@
 		</stats>
 	</item>
 	<item id="27512" name="Novice Adventurer's Circlet" type="Armor">
-		<!-- Novice Adventurer's brass-hued hair accessory. Requires 2 hair accessory slots. Critical Rate + 10 when equipped. -->
+		<!-- Novice Adventurer's brass-hued hair accessory. Requires 2 hair accessory slots. Critical Rate +10 when equipped. -->
 		<set name="icon" val="icon.accessory_au_karm_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="hairall" />
@@ -184,7 +184,7 @@
 		</skills>
 	</item>
 	<item id="27513" name="Novice Adventurer's Bracelet" type="Armor">
-		<!-- Novice Adventurer's bracelet. MP + 60 and uses 3 talisman slots when equipped. -->
+		<!-- Novice Adventurer's bracelet. MP +60 and uses 3 talisman slots when equipped. -->
 		<set name="icon" val="icon.accessory_shiny_bracelet" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="rbracelet" />
@@ -218,7 +218,7 @@
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="27515" name="Experienced Adventurer's Shirt" type="Armor">
-		<!-- Experienced Adventurer's shirt. M. Def. + 12 and CON + 2 when equipped. -->
+		<!-- Experienced Adventurer's shirt. M. Def. +12 and CON +2 when equipped. -->
 		<set name="icon" val="icon.etc_shirts_c_i02" />
 		<set name="weight" val="130" />
 		<set name="armor_type" val="LIGHT" />
@@ -239,7 +239,7 @@
 		</stats>
 	</item>
 	<item id="27516" name="Experienced Adventurer's Circlet" type="Armor">
-		<!-- Experienced Adventurer's silver-hued hair accessory. Requires 2 hair accessory slots. Critical Rate + 20 when equipped. -->
+		<!-- Experienced Adventurer's silver-hued hair accessory. Requires 2 hair accessory slots. Critical Rate +20 when equipped. -->
 		<set name="icon" val="icon.accessory_ar_karm_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="hairall" />
@@ -260,7 +260,7 @@
 		</skills>
 	</item>
 	<item id="27517" name="Experienced Adventurer's Bracelet" type="Armor">
-		<!-- Experienced Adventurer's bracelet. MP + 90 and uses 3 talisman slots when equipped. -->
+		<!-- Experienced Adventurer's bracelet. MP +90 and uses 3 talisman slots when equipped. -->
 		<set name="icon" val="icon.accessory_shiny_bracelet" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="rbracelet" />
@@ -295,7 +295,7 @@
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="27519" name="Adventurer's Shirt" type="Armor">
-		<!-- Adventurer's shirt. INT + 2, STR + 2, Speed + 7 when equipped. -->
+		<!-- Adventurer's shirt. INT +2, STR +2, Speed +7 when equipped. -->
 		<set name="icon" val="BranchIcon.icon.shirt_of_explorer_i00" />
 		<set name="weight" val="130" />
 		<set name="armor_type" val="LIGHT" />
@@ -316,7 +316,7 @@
 		</stats>
 	</item>
 	<item id="27520" name="Adventurer's Circlet" type="Armor">
-		<!-- Adventurer's circlet. Requires 2 hair accessory slots. P. Atk. + 3%, M. Atk. + 5% when equipped. -->
+		<!-- Adventurer's circlet. Requires 2 hair accessory slots. P. Atk. +3%, M. Atk. +5% when equipped. -->
 		<set name="icon" val="BranchSys.icon.br_valkyrie_cap_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="hairall" />
@@ -334,7 +334,7 @@
 		</skills>
 	</item>
 	<item id="27521" name="Adventurer's Bracelet" type="Armor">
-		<!-- Adventurer's Bracelet. STR/DEX/CON/INT/WIT/MEN + 1 and uses 3 talisman slots when equipped. -->
+		<!-- Adventurer's Bracelet. STR/DEX/CON/INT/WIT/MEN +1 and uses 3 talisman slots when equipped. -->
 		<set name="icon" val="BranchIcon.icon.bracelet_of_explorer_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="rbracelet" />
@@ -513,7 +513,7 @@
 		<set name="is_private_storeable" val="false" />
 	</item>
 	<item id="27534" name="Diana's Recommendation" additionalName="Event" type="EtcItem">
-		<!-- Diana's recommendation. You can participate in the Miss/Mr. event. -->
+		<!-- With this you can participate in the Mr. & Ms. Lineage 2 contest. Save it until the very end of the contest. -->
 		<set name="icon" val="icon.etc_letter_envelope_i00" />
 		<set name="is_depositable" val="false" />
 		<set name="is_clan_depositable" val="false" />
@@ -524,8 +524,8 @@
 		<set name="is_commissionable" val="false" />
 		<set name="is_private_storeable" val="false" />
 	</item>
-	<item id="27535" name="+ 8 Shiny Elemental Shirt Pack" type="EtcItem">
-		<!-- Double-click to get a + 8 enchanted Shiny Elemental Shirt. -->
+	<item id="27535" name="+8 Shiny Elemental Shirt Pack" type="EtcItem">
+		<!-- Double-click to get a +8 enchanted Shiny Elemental Shirt. -->
 		<set name="icon" val="icon.etc_ev_kalie_treasure_box" />
 		<set name="is_clan_depositable" val="false" />
 		<set name="is_mailable" val="false" />
@@ -536,8 +536,8 @@
 			<item id="37718" min="1" max="1" chance="100" minEnchant="8" maxEnchant="8" /> <!-- Shiny Elemental Shirt -->
 		</capsuled_items>
 	</item>
-	<item id="27536" name="+ 8 Reflect Attack T-shirt Pack" type="EtcItem">
-		<!-- Double-click to get a + 8 enchanted Reflect Attack T-shirt. -->
+	<item id="27536" name="+8 Reflect Attack Shirt Pack" type="EtcItem">
+		<!-- Double-click to get a +8 enchanted Reflect Attack Shirt. -->
 		<set name="icon" val="icon.etc_ev_kalie_treasure_box" />
 		<set name="is_clan_depositable" val="false" />
 		<set name="is_mailable" val="false" />
@@ -548,8 +548,8 @@
 			<item id="46193" min="1" max="1" chance="100" minEnchant="8" maxEnchant="8" /> <!-- Physical Reflect Shirt -->
 		</capsuled_items>
 	</item>
-	<item id="27537" name="+ 8 Reflect Magic T-shirt Pack" type="EtcItem">
-		<!-- Double-click to get a + 8 enchanted Reflect Magic T-shirt. -->
+	<item id="27537" name="+8 Reflect Magic Shirt Pack" type="EtcItem">
+		<!-- Double-click to get a +8 enchanted Reflect Magic Shirt. -->
 		<set name="icon" val="icon.etc_ev_kalie_treasure_box" />
 		<set name="is_clan_depositable" val="false" />
 		<set name="is_mailable" val="false" />
@@ -560,8 +560,8 @@
 			<item id="46194" min="1" max="1" chance="100" minEnchant="8" maxEnchant="8" /> <!-- Magical Reflect Shirt -->
 		</capsuled_items>
 	</item>
-	<item id="27538" name="+ 7 Bloody Amaranthine Pack" type="EtcItem">
-		<!-- Double-click to get a + 7 enchanted Bloody Amaranthine weapon. -->
+	<item id="27538" name="+7 Bloody Helios Pack" type="EtcItem">
+		<!-- Double-click to get a +7 enchanted Bloody Helios weapon. -->
 		<set name="icon" val="icon.etc_ev_kalie_treasure_box" />
 		<set name="is_clan_depositable" val="false" />
 		<set name="is_mailable" val="false" />
@@ -589,7 +589,7 @@
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="27541" name="Mysterious Abnormal State Resistance Dye" additionalName="Abnormal State/ Buff Cancellation Resistance, Abnormal State Reflect, 30-day" type="EtcItem">
-		<!-- Bring this to the village symbol maker to imprint a 30-day magic symbol that boosts stats (Hold, Sleep, Paralysis, Mental Attack, Poison, Bleed, Stun Resistance + 20 / Buff-canceling Attack Resistance + 20 / 5% chance of reflecting physical and magical abnormal status). All classes. -->
+		<!-- Bring this to the village symbol maker to imprint a 30-day magic symbol that boosts stats (Hold, Sleep, Paralysis, Mental Attack, Poison, Bleed, Stun Resistance +20 / Buff-canceling Attack Resistance +20 / 5% chance of reflecting physical and magical abnormal status). All classes. -->
 		<set name="icon" val="BranchSys3.icon1.g_premium_dye_etc_debuff" />
 		<set name="is_stackable" val="true" />
 		<set name="is_clan_depositable" val="false" />
@@ -695,7 +695,7 @@
 		<set name="is_commissionable" val="false" />
 		<set name="is_private_storeable" val="false" />
 	</item>
-	<item id="27551" name="Rare Accessory Pack" additionalName="30-day" type="EtcItem">
+	<item id="27551" name="Rare Accessory Pack" type="EtcItem">
 		<!-- Double-click to get Blessed Antharas' Earring, Blessed Valakas' Necklace, Tauti's Ring, Earth Wyrm Heart Ring, Ruler's Authority, and Lindvior's Earring for 30 days. -->
 		<set name="icon" val="icon.etc_pi_box_belief_pack" />
 		<set name="is_sellable" val="false" />
@@ -881,7 +881,7 @@
 			<item id="38099" min="20" max="20" chance="100" /> <!-- Leona's Scroll: Buffs -->
 			<item id="37730" min="20" max="20" chance="100" /> <!-- Dandy's Scroll: Passion -->
 			<item id="27541" min="1" max="1" chance="100" /> <!-- Mysterious Abnormal State Resistance Dye - Abnormal State/ Buff Cancellation Resistance, Abnormal State Reflect, 30-day -->
-			<item id="27551" min="1" max="1" chance="100" /> <!-- Rare Accessory Pack - 30-day -->
+			<item id="27551" min="1" max="1" chance="100" /> <!-- Rare Accessory Pack -->
 		</capsuled_items>
 	</item>
 	<item id="27564" name="Ultimate Pack" type="EtcItem">
@@ -910,7 +910,7 @@
 			<item id="38099" min="20" max="20" chance="100" /> <!-- Leona's Scroll: Buffs -->
 			<item id="37730" min="20" max="20" chance="100" /> <!-- Dandy's Scroll: Passion -->
 			<item id="27541" min="1" max="1" chance="100" /> <!-- Mysterious Abnormal State Resistance Dye - Abnormal State/ Buff Cancellation Resistance, Abnormal State Reflect, 30-day -->
-			<item id="27551" min="1" max="1" chance="100" /> <!-- Rare Accessory Pack - 30-day -->
+			<item id="27551" min="1" max="1" chance="100" /> <!-- Rare Accessory Pack -->
 			<item id="27542" min="1" max="1" chance="100" /> <!-- Riding Manual: Wolf -->
 		</capsuled_items>
 	</item>
@@ -957,7 +957,7 @@
 		<set name="handler" val="ExtractableItems" />
 		<capsuled_items>
 			<item id="38705" min="1" max="1" chance="100" /> <!-- Steel Spell Breaker -->
-			<item id="38706" min="1" max="1" chance="100" /> <!-- Steel StormBringer*Ultimate Sword -->
+			<item id="38706" min="1" max="1" chance="100" /> <!-- Steel Stormbringer*Ultimate Sword -->
 			<item id="38707" min="1" max="1" chance="100" /> <!-- Steel Wizard's Tear -->
 			<item id="38708" min="1" max="1" chance="100" /> <!-- Steel Great Axe -->
 			<item id="38709" min="1" max="1" chance="100" /> <!-- Steel Twilight Knife -->
@@ -1255,7 +1255,7 @@
 		</skills>
 	</item>
 	<item id="27583" name="Prestige Rune 100%" additionalName="1-hour" type="EtcItem">
-		<!-- Premium User Only. When carried during a hunt, Adena / item drop rate / item acquisition through Spoil + 30%.100%. -->
+		<!-- Premium User Only. When carried during a hunt, Adena / item drop rate / item acquisition through Spoil +30%.100%. -->
 		<set name="icon" val="BranchSys3.lcon.g_rune_itemdrop_up" />
 		<set name="etcitem_type" val="ENCHT_ATTR_RUNE" />
 		<set name="is_depositable" val="false" />
@@ -1439,7 +1439,7 @@
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="27594" name="Maphr's Wind Scroll" type="EtcItem">
-		<!-- Vitality consumption + 200% and XP/SP acquisition + 200% while hunting. Remains after death. Duration is 30 sec. Cooldown is 1 min. Only usable when 1 or more Vitality slot is full. Cannot be used in the Olympiad. -->
+		<!-- Vitality consumption +200% and XP/SP acquisition +200% while hunting. Remains after death. Duration is 30 sec. Cooldown is 1 min. Only usable when 1 or more Vitality slot is full. Cannot be used in the Olympiad. -->
 		<set name="icon" val="icon.freya_scroll" />
 		<set name="etcitem_type" val="SCROLL" />
 		<set name="default_action" val="SKILL_REDUCE" />
@@ -1462,7 +1462,7 @@
 		</skills>
 	</item>
 	<item id="27595" name="Vitality Maintaining Potion" type="EtcItem">
-		<!-- Retains Vitality for 10 min. Cooldown is 30min. Vitality item with limited usage. -->
+		<!-- Retains Vitality for 10 min. Cooldown is 30 min. No weekly usage limit. -->
 		<set name="icon" val="BranchSys.icon.br_vitality_potion_i00" />
 		<set name="etcitem_type" val="POTION" />
 		<set name="weight" val="36" />
@@ -1502,7 +1502,7 @@
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="27598" name="Scroll of Blessing: Weapon (R99-grade)" type="EtcItem">
-		<!-- There is a big chance that the Blacksmith of Mammon will exchange for you standard Amaranthine equipment for Blessed equipment. -->
+		<!-- There is a big chance that the Blacksmith of Mammon will exchange for you standard Helios equipment for Blessed equipment. -->
 		<set name="icon" val="icon.bless_scroll_r99" />
 		<set name="weight" val="100" />
 		<set name="is_clan_depositable" val="false" />

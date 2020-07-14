@@ -420,7 +420,7 @@
 		<set name="handler" val="Recipes" />
 	</item>
 	<item id="36946" name="Lindvior's Earring" type="Armor">
-		<!-- MP +59, P./M. Critical Damage +10%, Movement Speed +5, DEX/WIT +3, Wind/Dark Attack Def. +30, Petrify Atk./Def. Success Rate +50%, Knock Back/Knock Down/Pull Atk./Def. Success Rate +40%, Danger Zone Def. Success Rate +40%, Abnormal Status Reflection +10%, Reflect Damage Magic +10%. Skills Used: Immediately disables Knock Back/Knock Down effects when used, and gives Knock Back/Knock Down Resistance for 5 seconds. Effect does not stack with identical ones. Can be crafted. -->
+		<!-- MP +59, P./M. Critical Damage +10%, Speed +5, DEX/WIT +3, Wind/Dark Attack Def. +30, Petrify Atk./Def. Success Rate +50%, Knock Back/Knock Down/Pull Atk./Def. Success Rate +40%, Danger Zone Def. Success Rate +40%, Abnormal Status Reflection +10%, Reflect Damage Magic +10%. Skills Used: Immediately disables Knock Back/Knock Down effects when used, and gives Knock Back/Knock Down Resistance for 5 seconds. Effect does not stack with identical ones. Can be crafted. -->
 		<set name="icon" val="icon.accessory_earring_of_lind_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="rear;lear" />
@@ -461,7 +461,7 @@
 		</stats>
 	</item>
 	<item id="36949" name="Chaos Essence" type="EtcItem">
-		<!-- Mysterious essence with the power of chaos. Take it to Hardin at the Reliquary of the Giants to change your specialized awakened class. Cannot be used by Ertheia. Can be used only by the main class. 30-day. -->
+		<!-- Mysterious essence with the power of chaos. Take it to Hardin at the Reliquary of the Giants to change your specialized awakened class. Can be used only by the main class. 30-day. -->
 		<set name="icon" val="icon.etc_water_of_silen_i00" />
 		<set name="is_depositable" val="false" />
 		<set name="is_clan_depositable" val="false" />
@@ -624,7 +624,7 @@
 		<set name="is_stackable" val="true" />
 		<set name="is_freightable" val="true" />
 	</item>
-	<item id="36960" name="Fire Stone (+ 60)" type="EtcItem">
+	<item id="36960" name="Fire Stone (+60)" type="EtcItem">
 		<!-- Can bestow fire attribute up to 60 at one time. Additional Elemental attributes cannot be bestowed. Up to 3 types of attributes can be enchanted for armor. Opposite attributes cannot be bestowed at the same time. -->
 		<set name="icon" val="icon.etc_fire_stone_i00" />
 		<set name="default_action" val="SKILL_REDUCE" />
@@ -642,7 +642,7 @@
 			<skill id="12875" level="3" /> <!-- Fire Stone -->
 		</skills>
 	</item>
-	<item id="36961" name="Water Stone (+ 60)" type="EtcItem">
+	<item id="36961" name="Water Stone (+60)" type="EtcItem">
 		<!-- Can bestow water attribute up to 60 at one time. Additional Elemental attributes cannot be bestowed. Up to 3 types of attributes can be enchanted for armor. Opposite attributes cannot be bestowed at the same time. -->
 		<set name="icon" val="icon.etc_water_stone_i00" />
 		<set name="default_action" val="SKILL_REDUCE" />
@@ -660,7 +660,7 @@
 			<skill id="12876" level="3" /> <!-- Water Stone -->
 		</skills>
 	</item>
-	<item id="36962" name="Earth Stone (+ 60)" type="EtcItem">
+	<item id="36962" name="Earth Stone (+60)" type="EtcItem">
 		<!-- Can bestow earth attribute up to 60 at one time. Additional Elemental attributes cannot be bestowed. Up to 3 types of attributes can be enchanted for armor. Opposite attributes cannot be bestowed at the same time. -->
 		<set name="icon" val="icon.etc_earth_stone_i00" />
 		<set name="default_action" val="SKILL_REDUCE" />
@@ -678,7 +678,7 @@
 			<skill id="12878" level="3" /> <!-- Earth Stone -->
 		</skills>
 	</item>
-	<item id="36963" name="Wind Stone (+ 60)" type="EtcItem">
+	<item id="36963" name="Wind Stone (+60)" type="EtcItem">
 		<!-- Can bestow wind attribute up to 60 at one time. Additional Elemental attributes cannot be bestowed. Up to 3 types of attributes can be enchanted for armor. Opposite attributes cannot be bestowed at the same time. -->
 		<set name="icon" val="icon.etc_wind_stone_i00" />
 		<set name="default_action" val="SKILL_REDUCE" />
@@ -696,7 +696,7 @@
 			<skill id="12877" level="3" /> <!-- Wind Stone -->
 		</skills>
 	</item>
-	<item id="36964" name="Dark Stone (+ 60)" type="EtcItem">
+	<item id="36964" name="Dark Stone (+60)" type="EtcItem">
 		<!-- Can bestow dark attribute up to 60 at one time. Additional Elemental attributes cannot be bestowed. Up to 3 types of attributes can be enchanted for armor. Opposite attributes cannot be bestowed at the same time. -->
 		<set name="icon" val="icon.etc_unholy_stone_i00" />
 		<set name="default_action" val="SKILL_REDUCE" />
@@ -714,7 +714,7 @@
 			<skill id="12880" level="3" /> <!-- Dark Stone -->
 		</skills>
 	</item>
-	<item id="36965" name="Holy Stone (+ 60)" type="EtcItem">
+	<item id="36965" name="Holy Stone (+60)" type="EtcItem">
 		<!-- Can bestow holy attribute up to 60 at one time. Additional Elemental attributes cannot be bestowed. Up to 3 types of attributes can be enchanted for armor. Opposite attributes cannot be bestowed at the same time. -->
 		<set name="icon" val="icon.etc_holy_stone_i00" />
 		<set name="default_action" val="SKILL_REDUCE" />
@@ -732,7 +732,7 @@
 			<skill id="12879" level="3" /> <!-- Holy Stone -->
 		</skills>
 	</item>
-	<item id="36966" name="Fire Stone (+ 150)" type="EtcItem">
+	<item id="36966" name="Fire Stone (+150)" type="EtcItem">
 		<!-- Can bestow fire attribute up to level 3 at one time. Additional Elemental attributes cannot be bestowed. Up to 3 types of attributes can be enchanted for armor. Opposite attributes cannot be bestowed at the same time. -->
 		<set name="icon" val="icon.etc_fire_stone_i00" />
 		<set name="default_action" val="SKILL_REDUCE" />
@@ -750,7 +750,7 @@
 			<skill id="12875" level="1" /> <!-- Fire Stone -->
 		</skills>
 	</item>
-	<item id="36967" name="Water Stone (+ 150)" type="EtcItem">
+	<item id="36967" name="Water Stone (+150)" type="EtcItem">
 		<!-- Can bestow water attribute up to level 3 at one time. Additional Elemental attributes cannot be bestowed. Up to 3 types of attributes can be enchanted for armor. Opposite attributes cannot be bestowed at the same time. -->
 		<set name="icon" val="icon.etc_water_stone_i00" />
 		<set name="default_action" val="SKILL_REDUCE" />
@@ -768,7 +768,7 @@
 			<skill id="12876" level="1" /> <!-- Water Stone -->
 		</skills>
 	</item>
-	<item id="36968" name="Earth Stone (+ 150)" type="EtcItem">
+	<item id="36968" name="Earth Stone (+150)" type="EtcItem">
 		<!-- Can bestow earth attribute up to level 3 at one time. Additional Elemental attributes cannot be bestowed. Up to 3 types of attributes can be enchanted for armor. Opposite attributes cannot be bestowed at the same time. -->
 		<set name="icon" val="icon.etc_earth_stone_i00" />
 		<set name="default_action" val="SKILL_REDUCE" />
@@ -786,7 +786,7 @@
 			<skill id="12878" level="1" /> <!-- Earth Stone -->
 		</skills>
 	</item>
-	<item id="36969" name="Wind Stone (+ 150)" type="EtcItem">
+	<item id="36969" name="Wind Stone (+150)" type="EtcItem">
 		<!-- Can bestow wind attribute up to level 3 at one time. Additional Elemental attributes cannot be bestowed. Up to 3 types of attributes can be enchanted for armor. Opposite attributes cannot be bestowed at the same time. -->
 		<set name="icon" val="icon.etc_wind_stone_i00" />
 		<set name="default_action" val="SKILL_REDUCE" />
@@ -804,7 +804,7 @@
 			<skill id="12877" level="1" /> <!-- Wind Stone -->
 		</skills>
 	</item>
-	<item id="36970" name="Dark Stone (+ 150)" type="EtcItem">
+	<item id="36970" name="Dark Stone (+150)" type="EtcItem">
 		<!-- Can bestow dark attribute up to level 3 at one time. Additional Elemental attributes cannot be bestowed. Up to 3 types of attributes can be enchanted for armor. Opposite attributes cannot be bestowed at the same time. -->
 		<set name="icon" val="icon.etc_unholy_stone_i00" />
 		<set name="default_action" val="SKILL_REDUCE" />
@@ -822,7 +822,7 @@
 			<skill id="12880" level="1" /> <!-- Dark Stone -->
 		</skills>
 	</item>
-	<item id="36971" name="Holy Stone (+ 150)" type="EtcItem">
+	<item id="36971" name="Holy Stone (+150)" type="EtcItem">
 		<!-- Can bestow holy attribute up to level 3 at one time. Additional Elemental attributes cannot be bestowed. Up to 3 types of attributes can be enchanted for armor. Opposite attributes cannot be bestowed at the same time. -->
 		<set name="icon" val="icon.etc_holy_stone_i00" />
 		<set name="default_action" val="SKILL_REDUCE" />
@@ -949,7 +949,7 @@
 		</skills>
 	</item>
 	<item id="36978" name="Scroll: Enchant Hair Accessory" type="EtcItem">
-		<!-- Increases M. Def. of hair accessories by 2. It is greatly increased starting at + 4. Can be safely enchanted to + 3. -->
+		<!-- Increases M. Def. of hair accessories by 2. It is greatly increased starting at +4. Can be safely enchanted to +3. -->
 		<set name="icon" val="icon.etc_scroll_of_enchant_armor_i05" />
 		<set name="weight" val="10" />
 		<set name="is_stackable" val="true" />
@@ -980,7 +980,7 @@
 		</skills>
 	</item>
 	<item id="36981" name="9th Anniversary Rocket Gun Hat: Chain Fireworks - STR" type="Armor">
-		<!-- Item to commemorate the 9th anniversary. Hat shaped like a rocket gun. Enables the Chain Fireworks skill. STR + 3 when equipped. -->
+		<!-- Item to commemorate the 9th anniversary. Hat shaped like a rocket gun. Enables the Chain Fireworks skill. STR +3 when equipped. -->
 		<set name="icon" val="BranchSys.icon.br_rocket_cap_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="is_sellable" val="false" />
@@ -991,7 +991,7 @@
 		</skills>
 	</item>
 	<item id="36982" name="9th Anniversary Rocket Gun Hat: Chain Fireworks - DEX" type="Armor">
-		<!-- Item to commemorate the 9th anniversary. Hat shaped like a rocket gun. Enables the Chain Fireworks skill. DEX + 3 when equipped. -->
+		<!-- Item to commemorate the 9th anniversary. Hat shaped like a rocket gun. Enables the Chain Fireworks skill. DEX +3 when equipped. -->
 		<set name="icon" val="BranchSys.icon.br_rocket_cap_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="is_sellable" val="false" />
@@ -1002,7 +1002,7 @@
 		</skills>
 	</item>
 	<item id="36983" name="9th Anniversary Rocket Gun Hat: Chain Fireworks - CON" type="Armor">
-		<!-- Item to commemorate the 9th anniversary. Hat shaped like a rocket gun. Enables the Chain Fireworks skill. CON + 3 when equipped. -->
+		<!-- Item to commemorate the 9th anniversary. Hat shaped like a rocket gun. Enables the Chain Fireworks skill. CON +3 when equipped. -->
 		<set name="icon" val="BranchSys.icon.br_rocket_cap_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="is_sellable" val="false" />
@@ -1013,7 +1013,7 @@
 		</skills>
 	</item>
 	<item id="36984" name="9th Anniversary Rocket Gun Hat: Chain Fireworks - MEN" type="Armor">
-		<!-- Item to commemorate the 9th anniversary. Hat shaped like a rocket gun. Enables the Chain Fireworks skill. MEN + 3 when equipped. -->
+		<!-- Item to commemorate the 9th anniversary. Hat shaped like a rocket gun. Enables the Chain Fireworks skill. MEN +3 when equipped. -->
 		<set name="icon" val="BranchSys.icon.br_rocket_cap_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="is_sellable" val="false" />
@@ -1024,7 +1024,7 @@
 		</skills>
 	</item>
 	<item id="36985" name="9th Anniversary Rocket Gun Hat: Chain Fireworks - INT" type="Armor">
-		<!-- Item to commemorate the 9th anniversary. Hat shaped like a rocket gun. Enables the Chain Fireworks skill. INT + 3 when equipped. -->
+		<!-- Item to commemorate the 9th anniversary. Hat shaped like a rocket gun. Enables the Chain Fireworks skill. INT +3 when equipped. -->
 		<set name="icon" val="BranchSys.icon.br_rocket_cap_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="is_sellable" val="false" />
@@ -1035,7 +1035,7 @@
 		</skills>
 	</item>
 	<item id="36986" name="9th Anniversary Rocket Gun Hat: Chain Fireworks - WIT" type="Armor">
-		<!-- Item to commemorate the 9th anniversary. Hat shaped like a rocket gun. Enables the Chain Fireworks skill. WIT + 3 when equipped. -->
+		<!-- Item to commemorate the 9th anniversary. Hat shaped like a rocket gun. Enables the Chain Fireworks skill. WIT +3 when equipped. -->
 		<set name="icon" val="BranchSys.icon.br_rocket_cap_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="is_sellable" val="false" />
@@ -1046,7 +1046,7 @@
 		</skills>
 	</item>
 	<item id="36987" name="9th Anniversary Rocket Gun Hat: Chain Fireworks - Critical Rate" type="Armor">
-		<!-- Item to commemorate the 9th anniversary. Hat shaped like a rocket gun. Enables the Chain Fireworks skill. P. Critical Rate + 50 when equipped. -->
+		<!-- Item to commemorate the 9th anniversary. Hat shaped like a rocket gun. Enables the Chain Fireworks skill. P. Critical Rate +50 when equipped. -->
 		<set name="icon" val="BranchSys.icon.br_rocket_cap_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="is_sellable" val="false" />
@@ -1057,7 +1057,7 @@
 		</skills>
 	</item>
 	<item id="36988" name="9th Anniversary Rocket Gun Hat: Chain Fireworks - Critical Damage" type="Armor">
-		<!-- Item to commemorate the 9th anniversary. Hat shaped like a rocket gun. Enables the Chain Fireworks skill. P. Critical Damage + 90 and M. Critical Damage + 68 when equipped. -->
+		<!-- Item to commemorate the 9th anniversary. Hat shaped like a rocket gun. Enables the Chain Fireworks skill. P. Critical Damage +90 and M. Critical Damage +68 when equipped. -->
 		<set name="icon" val="BranchSys.icon.br_rocket_cap_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="is_sellable" val="false" />
@@ -1068,7 +1068,7 @@
 		</skills>
 	</item>
 	<item id="36989" name="9th Anniversary Rocket Gun Hat: Chain Fireworks - P. Def." type="Armor">
-		<!-- Item to commemorate the 9th anniversary. Hat shaped like a rocket gun. Enables the Chain Fireworks skill. P. Def. + 5% when equipped. -->
+		<!-- Item to commemorate the 9th anniversary. Hat shaped like a rocket gun. Enables the Chain Fireworks skill. P. Def. +5% when equipped. -->
 		<set name="icon" val="BranchSys.icon.br_rocket_cap_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="is_sellable" val="false" />
@@ -1079,7 +1079,7 @@
 		</skills>
 	</item>
 	<item id="36990" name="9th Anniversary Rocket Gun Hat: Chain Fireworks - M. Def." type="Armor">
-		<!-- Item to commemorate the 9th anniversary. Hat shaped like a rocket gun. Enables the Chain Fireworks skill. M. Def. + 5% when equipped. -->
+		<!-- Item to commemorate the 9th anniversary. Hat shaped like a rocket gun. Enables the Chain Fireworks skill. M. Def. +5% when equipped. -->
 		<set name="icon" val="BranchSys.icon.br_rocket_cap_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="is_sellable" val="false" />
@@ -1090,7 +1090,7 @@
 		</skills>
 	</item>
 	<item id="36991" name="9th Anniversary Rocket Gun Hat: Chain Fireworks - Evasion" type="Armor">
-		<!-- Item to commemorate the 9th anniversary. Hat shaped like a rocket gun. Enables the Chain Fireworks skill. Evasion + 5 when equipped. -->
+		<!-- Item to commemorate the 9th anniversary. Hat shaped like a rocket gun. Enables the Chain Fireworks skill. Evasion +5 when equipped. -->
 		<set name="icon" val="BranchSys.icon.br_rocket_cap_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="is_sellable" val="false" />
@@ -1101,7 +1101,7 @@
 		</skills>
 	</item>
 	<item id="36992" name="9th Anniversary Rocket Gun Hat: Chain Fireworks - P. Atk." type="Armor">
-		<!-- Item to commemorate the 9th anniversary. Hat shaped like a rocket gun. Enables the Chain Fireworks skill. P. Atk. + 5% when equipped. -->
+		<!-- Item to commemorate the 9th anniversary. Hat shaped like a rocket gun. Enables the Chain Fireworks skill. P. Atk. +5% when equipped. -->
 		<set name="icon" val="BranchSys.icon.br_rocket_cap_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="is_sellable" val="false" />
@@ -1112,7 +1112,7 @@
 		</skills>
 	</item>
 	<item id="36993" name="9th Anniversary Rocket Gun Hat: Chain Fireworks - M. Atk." type="Armor">
-		<!-- Item to commemorate the 9th anniversary. Hat shaped like a rocket gun. Enables the Chain Fireworks skill. M. Atk. + 10% when equipped. -->
+		<!-- Item to commemorate the 9th anniversary. Hat shaped like a rocket gun. Enables the Chain Fireworks skill. M. Atk. +10% when equipped. -->
 		<set name="icon" val="BranchSys.icon.br_rocket_cap_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="is_sellable" val="false" />
@@ -1123,7 +1123,7 @@
 		</skills>
 	</item>
 	<item id="36994" name="9th Anniversary Rocket Gun Hat: Chain Fireworks - Accuracy" type="Armor">
-		<!-- Item to commemorate the 9th anniversary. Hat shaped like a rocket gun. Enables the Chain Fireworks skill. Accuracy + 5 when equipped. -->
+		<!-- Item to commemorate the 9th anniversary. Hat shaped like a rocket gun. Enables the Chain Fireworks skill. Accuracy +5 when equipped. -->
 		<set name="icon" val="BranchSys.icon.br_rocket_cap_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="is_sellable" val="false" />

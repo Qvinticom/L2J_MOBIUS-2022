@@ -162,8 +162,8 @@
 			<stat type="pAtkRange">40</stat>
 		</stats>
 	</item>
-	<item id="31005" name="Bound Stiletto - Critical Bleed" type="Weapon">
-		<!-- <Special Option>. Has a 17% chance of casting Bleed on the target during a standard Critical Attack. No Soul Crystal option. -->
+	<item id="31005" name="Bound Stiletto" additionalName="Critical Bleed" type="Weapon">
+		<!-- <Soul Crystal Enhancement>. Has a 17% chance of casting Bleed on the target during a standard Critical Attack. -->
 		<set name="icon" val="icon.weapon_stiletto_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="rhand" />
@@ -197,8 +197,8 @@
 			<stat type="pAtkRange">40</stat>
 		</stats>
 	</item>
-	<item id="31006" name="Bound Stiletto - Critical Poison" type="Weapon">
-		<!-- <Special Option>. Has a 9% chance of casting Poison on the target during a standard Critical Attack. No Soul Crystal option. -->
+	<item id="31006" name="Bound Stiletto" additionalName="Critical Poison" type="Weapon">
+		<!-- <Soul Crystal Enhancement>. Has a 9% chance of casting Poison on the target during a standard Critical Attack. -->
 		<set name="icon" val="icon.weapon_stiletto_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="rhand" />
@@ -232,8 +232,8 @@
 			<stat type="pAtkRange">40</stat>
 		</stats>
 	</item>
-	<item id="31007" name="Bound Stiletto - Mortal Strike" type="Weapon">
-		<!-- <Special Option>. Increases the success rate of Mortal Blow and Deadly Blow by 48%. No Soul Crystal option. -->
+	<item id="31007" name="Bound Stiletto" additionalName="Mortal Strike" type="Weapon">
+		<!-- <Soul Crystal Enhancement>. Increases the success rate of Mortal Blow and Deadly Blow by 48%. -->
 		<set name="icon" val="icon.weapon_stiletto_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="rhand" />
@@ -267,8 +267,8 @@
 			<stat type="pAtkRange">40</stat>
 		</stats>
 	</item>
-	<item id="31008" name="Bound StormBringer*Katana" type="Weapon">
-		<!-- Bound StormBringer*Katana. No Soul Crystal option. -->
+	<item id="31008" name="Bound Stormbringer*Katana" type="Weapon">
+		<!-- Bound Stormbringer*Katana. No Soul Crystal option. -->
 		<set name="icon" val="icon.weapon_dual_sword_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="lrhand" />
@@ -302,8 +302,8 @@
 			<stat type="pAtkRange">40</stat>
 		</stats>
 	</item>
-	<item id="31009" name="Bound StormBringer*Spirit Sword" type="Weapon">
-		<!-- Bound StormBringer*Spirit Sword. No Soul Crystal option. -->
+	<item id="31009" name="Bound Stormbringer*Spirit Sword" type="Weapon">
+		<!-- Bound Stormbringer*Spirit Sword. No Soul Crystal option. -->
 		<set name="icon" val="icon.weapon_dual_sword_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="lrhand" />
@@ -337,8 +337,8 @@
 			<stat type="pAtkRange">40</stat>
 		</stats>
 	</item>
-	<item id="31010" name="Bound StormBringer*StormBringer" type="Weapon">
-		<!-- Bound StormBringer*StormBringer. No Soul Crystal option. -->
+	<item id="31010" name="Bound Stormbringer*Stormbringer" type="Weapon">
+		<!-- Bound Stormbringer*Stormbringer. No Soul Crystal option. -->
 		<set name="icon" val="icon.weapon_dual_sword_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="lrhand" />
@@ -372,8 +372,8 @@
 			<stat type="pAtkRange">40</stat>
 		</stats>
 	</item>
-	<item id="31011" name="Bound StormBringer*Shamshir" type="Weapon">
-		<!-- Bound StormBringer*Shamshir. No Soul Crystal option. -->
+	<item id="31011" name="Bound Stormbringer*Shamshir" type="Weapon">
+		<!-- Bound Stormbringer*Shamshir. No Soul Crystal option. -->
 		<set name="icon" val="icon.weapon_dual_sword_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="lrhand" />
@@ -407,8 +407,8 @@
 			<stat type="pAtkRange">40</stat>
 		</stats>
 	</item>
-	<item id="31012" name="Bound StormBringer*Raid Sword" type="Weapon">
-		<!-- Bound StormBringer*Raid Sword. No Soul Crystal option. -->
+	<item id="31012" name="Bound Stormbringer*Raid Sword" type="Weapon">
+		<!-- Bound Stormbringer*Raid Sword. No Soul Crystal option. -->
 		<set name="icon" val="icon.weapon_dual_sword_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="lrhand" />
@@ -442,8 +442,8 @@
 			<stat type="pAtkRange">40</stat>
 		</stats>
 	</item>
-	<item id="31013" name="Bound StormBringer" type="Weapon">
-		<!-- Bound StormBringer. No Soul Crystal option. -->
+	<item id="31013" name="Bound Stormbringer" type="Weapon">
+		<!-- Bound Stormbringer. No Soul Crystal option. -->
 		<set name="icon" val="icon.weapon_stormbringer_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="rhand" />
@@ -474,8 +474,8 @@
 			<stat type="pAtkRange">40</stat>
 		</stats>
 	</item>
-	<item id="31014" name="Bound StormBringer - Critical Anger" type="Weapon">
-		<!-- <Special Option>. P. Atk. + 248 and decreases HP by 12 during a Critical Attack. No Soul Crystal option. -->
+	<item id="31014" name="Bound Stormbringer" additionalName="Critical Anger" type="Weapon">
+		<!-- <Soul Crystal Enhancement>. P. Atk. + 248 and decreases HP by 12 during a Critical Attack. -->
 		<set name="icon" val="icon.weapon_stormbringer_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="rhand" />
@@ -509,8 +509,8 @@
 			<stat type="pAtkRange">40</stat>
 		</stats>
 	</item>
-	<item id="31015" name="Bound StormBringer - Focus" type="Weapon">
-		<!-- <Special Option>. Increases Critical by 86. No Soul Crystal option. -->
+	<item id="31015" name="Bound Stormbringer" additionalName="Focus" type="Weapon">
+		<!-- <Soul Crystal Enhancement>. Increases Critical by 86. -->
 		<set name="icon" val="icon.weapon_stormbringer_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="rhand" />
@@ -543,8 +543,8 @@
 			<stat type="pAtkRange">40</stat>
 		</stats>
 	</item>
-	<item id="31016" name="Bound StormBringer - Light Armor" type="Weapon">
-		<!-- <Special Option>. Increases Weight Gauge by 20%. No Soul Crystal option. -->
+	<item id="31016" name="Bound Stormbringer" additionalName="Light Armor" type="Weapon">
+		<!-- <Soul Crystal Enhancement>. Increases Weight Gauge by 20%. -->
 		<set name="icon" val="icon.weapon_stormbringer_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="rhand" />
@@ -750,8 +750,8 @@
 			<stat type="pAtkRange">80</stat>
 		</stats>
 	</item>
-	<item id="31022" name="Bound Scorpion - Anger" type="Weapon">
-		<!-- <Special Option>. P. Atk. + 24 and decreases Max HP by 15%. No Soul Crystal option. -->
+	<item id="31022" name="Bound Scorpion" additionalName="Anger" type="Weapon">
+		<!-- <Soul Crystal Enhancement>. P. Atk. + 24 and decreases Max HP by 15%. -->
 		<set name="icon" val="icon.weapon_scorpion_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="lrhand" />
@@ -785,8 +785,8 @@
 			<stat type="pAtkRange">80</stat>
 		</stats>
 	</item>
-	<item id="31023" name="Bound Scorpion - Critical Stun" type="Weapon">
-		<!-- <Special Option>. Has about a 31% chance of casting Stun on the target during a Critical Attack. No Soul Crystal option. -->
+	<item id="31023" name="Bound Scorpion" additionalName="Critical Stun" type="Weapon">
+		<!-- <Soul Crystal Enhancement>. Has about a 31% chance of casting Stun on the target during a Critical Attack. -->
 		<set name="icon" val="icon.weapon_scorpion_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="lrhand" />
@@ -821,8 +821,8 @@
 			<stat type="pAtkRange">80</stat>
 		</stats>
 	</item>
-	<item id="31024" name="Bound Scorpion - Long Blow" type="Weapon">
-		<!-- <Special Option>. Increases the attack range. No Soul Crystal option. -->
+	<item id="31024" name="Bound Scorpion" additionalName="Long Blow" type="Weapon">
+		<!-- <Soul Crystal Enhancement>. Increases the attack range. -->
 		<set name="icon" val="icon.weapon_scorpion_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="lrhand" />
@@ -970,8 +970,8 @@
 			<stat type="pAtkRange">40</stat>
 		</stats>
 	</item>
-	<item id="31029" name="Bound Skull Graver - Anger" type="Weapon">
-		<!-- <Special Option>. P. Atk. + 20 and decreases Max HP by 15%. No Soul Crystal option. -->
+	<item id="31029" name="Bound Skull Graver" additionalName="Anger" type="Weapon">
+		<!-- <Soul Crystal Enhancement>. P. Atk. + 20 and decreases Max HP by 15%. -->
 		<set name="icon" val="icon.weapon_skull_graver_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="rhand" />
@@ -1005,8 +1005,8 @@
 			<stat type="pAtkRange">40</stat>
 		</stats>
 	</item>
-	<item id="31030" name="Bound Skull Graver - Health" type="Weapon">
-		<!-- <Special Option>. Increases Max HP by 25%. No Soul Crystal option. -->
+	<item id="31030" name="Bound Skull Graver" additionalName="Health" type="Weapon">
+		<!-- <Soul Crystal Enhancement>. Increases Max HP by 25%. -->
 		<set name="icon" val="icon.weapon_skull_graver_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="rhand" />
@@ -1040,8 +1040,8 @@
 			<stat type="pAtkRange">40</stat>
 		</stats>
 	</item>
-	<item id="31031" name="Bound Skull Graver - Rsk. Focus" type="Weapon">
-		<!-- <Special Option>. Increases Critical by 138 when HP drops to 60% or below. No Soul Crystal option. -->
+	<item id="31031" name="Bound Skull Graver" additionalName="Rsk. Focus" type="Weapon">
+		<!-- <Soul Crystal Enhancement>. Increases Critical by 138 when HP drops to 60% or below. -->
 		<set name="icon" val="icon.weapon_skull_graver_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="rhand" />
@@ -1430,7 +1430,7 @@
 		</stats>
 	</item>
 	<item id="31042" name="Bound Chevalier Rapier - Critical Damage" type="Weapon">
-		<!-- Kamael-exclusive Weapon: Katana. <Special Option>. P. Atk. + 194 during a Critical Attack. When enchanted to 4 or more, it Has a chance of increasing P. Atk., M. Atk., and healing power, and decreasing MP consumption for skill use for you and your party members during a Critical Attack. No Soul Crystal option. -->
+		<!-- Kamael-exclusive Weapon: Katana. <Special Option>. P. Atk. +194 during a Critical Attack. When enchanted to 4 or more, it Has a chance of increasing P. Atk., M. Atk., and healing power, and decreasing MP consumption for skill use for you and your party members during a Critical Attack. No Soul Crystal option. -->
 		<set name="icon" val="icon.weapon_soldat_estoc_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="rhand" />
@@ -1502,7 +1502,7 @@
 		</stats>
 	</item>
 	<item id="31044" name="Bound Chevalier Rapier - Critical Damage" type="Weapon">
-		<!-- Kamael-exclusive Weapon: Spirit Sword. <Special Option>. P. Atk. + 194 during a Critical Attack. When enchanted to 4 or more, it Has a chance of increasing P. Atk., M. Atk., and healing power, and decreasing MP consumption for skill use for you and your party members during a Critical Attack. No Soul Crystal option. -->
+		<!-- Kamael-exclusive Weapon: Spirit Sword. <Special Option>. P. Atk. +194 during a Critical Attack. When enchanted to 4 or more, it Has a chance of increasing P. Atk., M. Atk., and healing power, and decreasing MP consumption for skill use for you and your party members during a Critical Attack. No Soul Crystal option. -->
 		<set name="icon" val="icon.weapon_soldat_estoc_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="rhand" />
@@ -1751,7 +1751,7 @@
 		</stats>
 	</item>
 	<item id="31051" name="Bound Schlager - Critical Damage" type="Weapon">
-		<!-- Kamael-exclusive Weapon: Flamberge conversion. <Special Option>. P. Atk. + 174 during a Critical Attack. No Soul Crystal option. -->
+		<!-- Kamael-exclusive Weapon: Flamberge conversion. <Special Option>. P. Atk. +174 during a Critical Attack. No Soul Crystal option. -->
 		<set name="icon" val="icon.weapon_schlaeger_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="lrhand" />
@@ -2291,7 +2291,7 @@
 		</stats>
 	</item>
 	<item id="31074" name="Bound Soldat Estoc" type="Weapon">
-		<!-- Kamael-exclusive Weapon: StormBringer conversion, Bound Soldat Estoc. No Soul Crystal option. -->
+		<!-- Kamael-exclusive Weapon: Stormbringer conversion, Bound Soldat Estoc. No Soul Crystal option. -->
 		<set name="icon" val="icon.weapon_soldat_estoc_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="rhand" />
@@ -2327,7 +2327,7 @@
 		</stats>
 	</item>
 	<item id="31075" name="Bound Soldat Estoc - Critical Anger" type="Weapon">
-		<!-- Kamael-exclusive Weapon: StormBringer conversion. <Special Option>\Decreases HP by 12 during a Critical Attack. P. Atk. + 248. When enchanted to 4 or more, it Has a chance of increasing P. Atk., M. Atk., and healing power, and decreasing MP consumption for skill use for you and your party members during a Critical Attack. No Soul Crystal option. -->
+		<!-- Kamael-exclusive Weapon: Stormbringer conversion. <Special Option>\Decreases HP by 12 during a Critical Attack. P. Atk. +248. When enchanted to 4 or more, it Has a chance of increasing P. Atk., M. Atk., and healing power, and decreasing MP consumption for skill use for you and your party members during a Critical Attack. No Soul Crystal option. -->
 		<set name="icon" val="icon.weapon_soldat_estoc_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="rhand" />
@@ -2364,7 +2364,7 @@
 		</stats>
 	</item>
 	<item id="31076" name="Bound Soldat Estoc - Focus" type="Weapon">
-		<!-- Kamael-exclusive Weapon: StormBringer conversion. <Special Option>. Increases Critical by 86. When enchanted to 4 or more, it Has a chance of increasing P. Atk., M. Atk., and healing power, and decreasing MP consumption for skill use for you and your party members during a Critical Attack. No Soul Crystal option. -->
+		<!-- Kamael-exclusive Weapon: Stormbringer conversion. <Special Option>. Increases Critical by 86. When enchanted to 4 or more, it Has a chance of increasing P. Atk., M. Atk., and healing power, and decreasing MP consumption for skill use for you and your party members during a Critical Attack. No Soul Crystal option. -->
 		<set name="icon" val="icon.weapon_soldat_estoc_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="rhand" />
@@ -2400,7 +2400,7 @@
 		</stats>
 	</item>
 	<item id="31077" name="Bound Soldat Estoc - Light Armor" type="Weapon">
-		<!-- Kamael-exclusive Weapon: StormBringer conversion. <Special Option>. Increases Weight Gauge by 20%. When enchanted to 4 or more, it Has a chance of increasing P. Atk., M. Atk., and healing power, and decreasing MP consumption for skill use for you and your party members during a Critical Attack. No Soul Crystal option. -->
+		<!-- Kamael-exclusive Weapon: Stormbringer conversion. <Special Option>. Increases Weight Gauge by 20%. When enchanted to 4 or more, it Has a chance of increasing P. Atk., M. Atk., and healing power, and decreasing MP consumption for skill use for you and your party members during a Critical Attack. No Soul Crystal option. -->
 		<set name="icon" val="icon.weapon_soldat_estoc_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="rhand" />
@@ -2503,7 +2503,7 @@
 		</stats>
 	</item>
 	<item id="31080" name="Bound Soul Separator - Critical Damage" type="Weapon">
-		<!-- Bound Item. <Special Option>. P. Atk. + 200 during a Critical Attack. Increases damage inflicted during PvP. No Soul Crystal option. -->
+		<!-- Bound Item. <Special Option>. P. Atk. +200 during a Critical Attack. Increases damage inflicted during PvP. No Soul Crystal option. -->
 		<set name="icon" val="icon.weapon_soul_separator_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="rhand" />
@@ -2747,8 +2747,8 @@
 			<stat type="pAtkRange">40</stat>
 		</stats>
 	</item>
-	<item id="31087" name="Bound Pa'agrian Sword - Focus" type="Weapon">
-		<!-- <Special Option>. Increases Critical by 77. No Soul Crystal option. -->
+	<item id="31087" name="Bound Pa'agrian Sword" additionalName="Focus" type="Weapon">
+		<!-- <Soul Crystal Enhancement>. Increases Critical by 77. -->
 		<set name="icon" val="icon.weapon_sword_of_paagrio_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="lrhand" />
@@ -2781,8 +2781,8 @@
 			<stat type="pAtkRange">40</stat>
 		</stats>
 	</item>
-	<item id="31088" name="Bound Pa'agrian Sword - Health" type="Weapon">
-		<!-- <Special Option>. Increases Max HP by 25%. No Soul Crystal option. -->
+	<item id="31088" name="Bound Pa'agrian Sword" additionalName="Health" type="Weapon">
+		<!-- <Soul Crystal Enhancement>. Increases Max HP by 25%. -->
 		<set name="icon" val="icon.weapon_sword_of_paagrio_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="lrhand" />
@@ -2815,8 +2815,8 @@
 			<stat type="pAtkRange">40</stat>
 		</stats>
 	</item>
-	<item id="31089" name="Bound Pa'agrian Sword - Critical Drain" type="Weapon">
-		<!-- <Special Option>. Absorbs 9 HP from the target during a Critical Attack. No Soul Crystal option. -->
+	<item id="31089" name="Bound Pa'agrian Sword" additionalName="Critical Drain" type="Weapon">
+		<!-- <Soul Crystal Enhancement>. Absorbs 9 HP from the target during a Critical Attack. -->
 		<set name="icon" val="icon.weapon_sword_of_paagrio_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="lrhand" />
@@ -2881,8 +2881,8 @@
 			<stat type="pAtkRange">40</stat>
 		</stats>
 	</item>
-	<item id="31091" name="Bound Ecliptic Sword - Empower" type="Weapon">
-		<!-- <Special Option>. M. Atk. + 26. No Soul Crystal option. -->
+	<item id="31091" name="Bound Ecliptic Sword" additionalName="Empower" type="Weapon">
+		<!-- <Soul Crystal Enhancement>. M. Atk. + 26. -->
 		<set name="icon" val="icon.weapon_sword_of_eclipse_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="rhand" />
@@ -2915,8 +2915,8 @@
 			<stat type="pAtkRange">40</stat>
 		</stats>
 	</item>
-	<item id="31092" name="Bound Ecliptic Sword - M. Atk." type="Weapon">
-		<!-- <Special Option>. Increases MP consumption by 15% and M. Atk. by 112 during magic use. No Soul Crystal option. -->
+	<item id="31092" name="Bound Ecliptic Sword" additionalName="M. Atk." type="Weapon">
+		<!-- <Soul Crystal Enhancement>. Increases MP consumption by 15% and M. Atk. by 112 during magic use. -->
 		<set name="icon" val="icon.weapon_sword_of_eclipse_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="rhand" />
@@ -2949,8 +2949,8 @@
 			<stat type="pAtkRange">40</stat>
 		</stats>
 	</item>
-	<item id="31093" name="Bound Ecliptic Sword - Magic Silence" type="Weapon">
-		<!-- <Special Option>. Has a 10% chance of casting Silence on the target during magic use. No Soul Crystal option. -->
+	<item id="31093" name="Bound Ecliptic Sword" additionalName="Magic Silence" type="Weapon">
+		<!-- <Soul Crystal Enhancement>. Has a 10% chance of casting Silence on the target during magic use. -->
 		<set name="icon" val="icon.weapon_sword_of_eclipse_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="rhand" />
