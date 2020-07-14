@@ -132,6 +132,7 @@ import quests.Q00331_ArrowOfVengeance.Q00331_ArrowOfVengeance;
 import quests.Q00333_HuntOfTheBlackLion.Q00333_HuntOfTheBlackLion;
 import quests.Q00344_1000YearsTheEndOfLamentation.Q00344_1000YearsTheEndOfLamentation;
 import quests.Q00348_AnArrogantSearch.Q00348_AnArrogantSearch;
+import quests.Q00350_EnhanceYourWeapon.Q00350_EnhanceYourWeapon;
 import quests.Q00354_ConquestOfAlligatorIsland.Q00354_ConquestOfAlligatorIsland;
 import quests.Q00355_FamilyHonor.Q00355_FamilyHonor;
 import quests.Q00356_DigUpTheSeaOfSpores.Q00356_DigUpTheSeaOfSpores;
@@ -342,6 +343,7 @@ public class QuestMasterHandler
 		Q00333_HuntOfTheBlackLion.class,
 		Q00344_1000YearsTheEndOfLamentation.class,
 		Q00348_AnArrogantSearch.class,
+		Q00350_EnhanceYourWeapon.class,
 		Q00354_ConquestOfAlligatorIsland.class,
 		Q00355_FamilyHonor.class,
 		Q00356_DigUpTheSeaOfSpores.class,

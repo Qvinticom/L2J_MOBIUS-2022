@@ -42,6 +42,7 @@ import org.l2jmobius.gameserver.enums.Team;
 import org.l2jmobius.gameserver.instancemanager.CursedWeaponsManager;
 import org.l2jmobius.gameserver.instancemanager.PcCafePointsManager;
 import org.l2jmobius.gameserver.instancemanager.WalkingManager;
+import org.l2jmobius.gameserver.model.AbsorberInfo;
 import org.l2jmobius.gameserver.model.AggroInfo;
 import org.l2jmobius.gameserver.model.CommandChannel;
 import org.l2jmobius.gameserver.model.DamageDoneInfo;
@@ -105,6 +106,9 @@ public class Attackable extends Npc
 	private CommandChannel _firstCommandChannelAttacked = null;
 	private CommandChannelTimer _commandChannelTimer = null;
 	private long _commandChannelLastAttack = 0;
+	// Soul crystal
+	private boolean _absorbed;
+	private final Map<Integer, AbsorberInfo> _absorbersList = new ConcurrentHashMap<>();
 	// Misc
 	private boolean _mustGiveExpSp;
 	
@@ -1285,6 +1289,56 @@ public class Attackable extends Npc
 	public boolean isOverhit()
 	{
 		return _overhit;
+	}
+	
+	/**
+	 * Activate the absorbed soul condition on the Attackable.
+	 */
+	public void absorbSoul()
+	{
+		_absorbed = true;
+	}
+	
+	/**
+	 * @return True if the Attackable had his soul absorbed.
+	 */
+	public boolean isAbsorbed()
+	{
+		return _absorbed;
+	}
+	
+	/**
+	 * Adds an attacker that successfully absorbed the soul of this Attackable into the _absorbersList.
+	 * @param attacker
+	 */
+	public void addAbsorber(PlayerInstance attacker)
+	{
+		// If we have no _absorbersList initiated, do it
+		final AbsorberInfo ai = _absorbersList.get(attacker.getObjectId());
+		
+		// If the Creature attacker isn't already in the _absorbersList of this Attackable, add it
+		if (ai == null)
+		{
+			_absorbersList.put(attacker.getObjectId(), new AbsorberInfo(attacker.getObjectId(), getCurrentHp()));
+		}
+		else
+		{
+			ai.setAbsorbedHp(getCurrentHp());
+		}
+		
+		// Set this Attackable as absorbed
+		absorbSoul();
+	}
+	
+	public void resetAbsorbList()
+	{
+		_absorbed = false;
+		_absorbersList.clear();
+	}
+	
+	public Map<Integer, AbsorberInfo> getAbsorbersList()
+	{
+		return _absorbersList;
 	}
 	
 	/**
