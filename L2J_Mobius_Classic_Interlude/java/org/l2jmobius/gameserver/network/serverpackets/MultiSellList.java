@@ -77,7 +77,8 @@ public class MultiSellList extends AbstractItemPacket
 			packet.writeH(itemEnchantment != null ? itemEnchantment.getEnchantLevel() : 0); // enchant level
 			writeItemAugment(packet, itemEnchantment);
 			writeItemElemental(packet, itemEnchantment);
-			writeItemEnsoulOptions(packet, itemEnchantment);
+			packet.writeC(0x00);
+			packet.writeC(0x00);
 			
 			packet.writeH(entry.getProducts().size());
 			packet.writeH(entry.getIngredients().size());
@@ -102,7 +103,8 @@ public class MultiSellList extends AbstractItemPacket
 				packet.writeD((int) Math.ceil(product.getChance())); // chance
 				writeItemAugment(packet, displayItemEnchantment);
 				writeItemElemental(packet, displayItemEnchantment);
-				writeItemEnsoulOptions(packet, displayItemEnchantment);
+				packet.writeC(0x00);
+				packet.writeC(0x00);
 			}
 			
 			for (ItemChanceHolder ingredient : entry.getIngredients())
@@ -115,7 +117,8 @@ public class MultiSellList extends AbstractItemPacket
 				packet.writeH(ingredient.getEnchantmentLevel() > 0 ? ingredient.getEnchantmentLevel() : displayItemEnchantment != null ? displayItemEnchantment.getEnchantLevel() : 0); // enchant level
 				writeItemAugment(packet, displayItemEnchantment);
 				writeItemElemental(packet, displayItemEnchantment);
-				writeItemEnsoulOptions(packet, displayItemEnchantment);
+				packet.writeC(0x00);
+				packet.writeC(0x00);
 			}
 		}
 		return true;

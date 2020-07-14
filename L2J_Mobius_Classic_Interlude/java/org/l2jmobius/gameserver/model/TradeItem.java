@@ -16,12 +16,9 @@
  */
 package org.l2jmobius.gameserver.model;
 
-import java.util.Collection;
-import java.util.Collections;
 import java.util.Objects;
 
 import org.l2jmobius.gameserver.enums.AttributeType;
-import org.l2jmobius.gameserver.model.ensoul.EnsoulOption;
 import org.l2jmobius.gameserver.model.items.Item;
 import org.l2jmobius.gameserver.model.items.instance.ItemInstance;
 
@@ -48,8 +45,6 @@ public class TradeItem
 		0
 	};
 	private final int[] _enchantOptions;
-	private Collection<EnsoulOption> _soulCrystalOptions;
-	private Collection<EnsoulOption> _soulCrystalSpecialOptions;
 	private int _visualId;
 	private int _augmentationOption1 = -1;
 	private int _augmentationOption2 = -1;
@@ -72,8 +67,6 @@ public class TradeItem
 			_elemDefAttr[type.getClientId()] = item.getDefenceAttribute(type);
 		}
 		_enchantOptions = item.getEnchantOptions();
-		_soulCrystalOptions = item.getSpecialAbilities();
-		_soulCrystalSpecialOptions = item.getAdditionalSpecialAbilities();
 		_visualId = item.getVisualId();
 		if (item.getAugmentation() != null)
 		{
@@ -97,8 +90,6 @@ public class TradeItem
 		_elemAtkType = AttributeType.NONE.getClientId();
 		_elemAtkPower = 0;
 		_enchantOptions = ItemInstance.DEFAULT_ENCHANT_OPTIONS;
-		_soulCrystalOptions = Collections.emptyList();
-		_soulCrystalSpecialOptions = Collections.emptyList();
 	}
 	
 	public TradeItem(TradeItem item, long count, long price)
@@ -120,8 +111,6 @@ public class TradeItem
 			_elemDefAttr[i] = item.getElementDefAttr(i);
 		}
 		_enchantOptions = item.getEnchantOptions();
-		_soulCrystalOptions = item.getSoulCrystalOptions();
-		_soulCrystalSpecialOptions = item.getSoulCrystalSpecialOptions();
 		_visualId = item.getVisualId();
 	}
 	
@@ -223,26 +212,6 @@ public class TradeItem
 	public int[] getEnchantOptions()
 	{
 		return _enchantOptions;
-	}
-	
-	public void setSoulCrystalOptions(Collection<EnsoulOption> soulCrystalOptions)
-	{
-		_soulCrystalOptions = soulCrystalOptions;
-	}
-	
-	public Collection<EnsoulOption> getSoulCrystalOptions()
-	{
-		return _soulCrystalOptions == null ? Collections.emptyList() : _soulCrystalOptions;
-	}
-	
-	public void setSoulCrystalSpecialOptions(Collection<EnsoulOption> soulCrystalSpecialOptions)
-	{
-		_soulCrystalSpecialOptions = soulCrystalSpecialOptions;
-	}
-	
-	public Collection<EnsoulOption> getSoulCrystalSpecialOptions()
-	{
-		return _soulCrystalSpecialOptions == null ? Collections.emptyList() : _soulCrystalSpecialOptions;
 	}
 	
 	public void setAugmentation(int option1, int option2)

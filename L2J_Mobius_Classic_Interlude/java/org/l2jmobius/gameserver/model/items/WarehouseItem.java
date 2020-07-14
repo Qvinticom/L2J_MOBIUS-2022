@@ -16,12 +16,10 @@
  */
 package org.l2jmobius.gameserver.model.items;
 
-import java.util.Collection;
 import java.util.Objects;
 
 import org.l2jmobius.gameserver.enums.AttributeType;
 import org.l2jmobius.gameserver.model.VariationInstance;
-import org.l2jmobius.gameserver.model.ensoul.EnsoulOption;
 import org.l2jmobius.gameserver.model.items.instance.ItemInstance;
 import org.l2jmobius.gameserver.model.items.type.CrystalType;
 import org.l2jmobius.gameserver.model.items.type.ItemType;
@@ -64,8 +62,6 @@ public class WarehouseItem
 	};
 	
 	private final int[] _enchantOptions;
-	private final Collection<EnsoulOption> _soulCrystalOptions;
-	private final Collection<EnsoulOption> _soulCrystalSpecialOptions;
 	
 	private final int _time;
 	
@@ -91,8 +87,6 @@ public class WarehouseItem
 			_elemDefAttr[type.getClientId()] = item.getDefenceAttribute(type);
 		}
 		_enchantOptions = item.getEnchantOptions();
-		_soulCrystalOptions = item.getSpecialAbilities();
-		_soulCrystalSpecialOptions = item.getAdditionalSpecialAbilities();
 	}
 	
 	/**
@@ -272,16 +266,6 @@ public class WarehouseItem
 	public int[] getEnchantOptions()
 	{
 		return _enchantOptions;
-	}
-	
-	public Collection<EnsoulOption> getSoulCrystalOptions()
-	{
-		return _soulCrystalOptions;
-	}
-	
-	public Collection<EnsoulOption> getSoulCrystalSpecialOptions()
-	{
-		return _soulCrystalSpecialOptions;
 	}
 	
 	public int getTime()

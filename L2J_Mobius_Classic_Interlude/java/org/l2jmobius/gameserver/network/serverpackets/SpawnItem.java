@@ -45,7 +45,7 @@ public class SpawnItem implements IClientOutgoingPacket
 		packet.writeD(0x00); // c2
 		packet.writeC(_item.getEnchantLevel()); // Grand Crusade
 		packet.writeC(_item.getAugmentation() != null ? 1 : 0); // Grand Crusade
-		packet.writeC(_item.getSpecialAbilities().size()); // Grand Crusade
+		packet.writeC(0x00); // Grand Crusade
 		return true;
 	}
 }

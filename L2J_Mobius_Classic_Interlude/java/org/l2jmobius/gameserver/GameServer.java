@@ -60,7 +60,6 @@ import org.l2jmobius.gameserver.data.xml.impl.EnchantItemGroupsData;
 import org.l2jmobius.gameserver.data.xml.impl.EnchantItemHPBonusData;
 import org.l2jmobius.gameserver.data.xml.impl.EnchantItemOptionsData;
 import org.l2jmobius.gameserver.data.xml.impl.EnchantSkillGroupsData;
-import org.l2jmobius.gameserver.data.xml.impl.EnsoulData;
 import org.l2jmobius.gameserver.data.xml.impl.EventEngineData;
 import org.l2jmobius.gameserver.data.xml.impl.ExperienceData;
 import org.l2jmobius.gameserver.data.xml.impl.FakePlayerData;
@@ -259,7 +258,6 @@ public class GameServer
 		ItemCrystallizationData.getInstance();
 		OptionData.getInstance();
 		VariationData.getInstance();
-		EnsoulData.getInstance();
 		EnchantItemHPBonusData.getInstance();
 		BuyListData.getInstance();
 		MultisellData.getInstance();

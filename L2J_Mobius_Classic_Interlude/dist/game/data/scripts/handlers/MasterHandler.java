@@ -143,7 +143,6 @@ import handlers.bypasshandlers.Buy;
 import handlers.bypasshandlers.ChangePlayerName;
 import handlers.bypasshandlers.ChatLink;
 import handlers.bypasshandlers.ClanWarehouse;
-import handlers.bypasshandlers.EnsoulWindow;
 import handlers.bypasshandlers.EventEngine;
 import handlers.bypasshandlers.FindPvP;
 import handlers.bypasshandlers.Freight;
@@ -483,7 +482,6 @@ public class MasterHandler
 			ChangePlayerName.class,
 			ChatLink.class,
 			ClanWarehouse.class,
-			EnsoulWindow.class,
 			EventEngine.class,
 			FindPvP.class,
 			Freight.class,

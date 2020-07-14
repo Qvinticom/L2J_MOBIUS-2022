@@ -16,13 +16,10 @@
  */
 package org.l2jmobius.gameserver.model;
 
-import java.util.Collection;
-import java.util.Collections;
 import java.util.Objects;
 
 import org.l2jmobius.gameserver.enums.AttributeType;
 import org.l2jmobius.gameserver.model.buylist.Product;
-import org.l2jmobius.gameserver.model.ensoul.EnsoulOption;
 import org.l2jmobius.gameserver.model.items.Item;
 import org.l2jmobius.gameserver.model.items.WarehouseItem;
 import org.l2jmobius.gameserver.model.items.instance.ItemInstance;
@@ -81,8 +78,6 @@ public class ItemInfo
 	};
 	
 	private int[] _option;
-	private Collection<EnsoulOption> _soulCrystalOptions;
-	private Collection<EnsoulOption> _soulCrystalSpecialOptions;
 	private int _visualId;
 	private long _visualExpiration;
 	
@@ -148,8 +143,6 @@ public class ItemInfo
 			_attributeDefence[type.getClientId()] = item.getDefenceAttribute(type);
 		}
 		_option = item.getEnchantOptions();
-		_soulCrystalOptions = item.getSpecialAbilities();
-		_soulCrystalSpecialOptions = item.getAdditionalSpecialAbilities();
 		_visualId = item.getVisualId();
 		_visualExpiration = item.getVisualLifeTime() > 0 ? (item.getVisualLifeTime() - System.currentTimeMillis()) / 1000 : 0;
 	}
@@ -208,8 +201,6 @@ public class ItemInfo
 		}
 		
 		_option = item.getEnchantOptions();
-		_soulCrystalOptions = item.getSoulCrystalOptions();
-		_soulCrystalSpecialOptions = item.getSoulCrystalSpecialOptions();
 		_visualId = item.getVisualId();
 	}
 	
@@ -249,8 +240,6 @@ public class ItemInfo
 		_mana = -1;
 		_time = -9999;
 		_location = 0;
-		_soulCrystalOptions = Collections.emptyList();
-		_soulCrystalSpecialOptions = Collections.emptyList();
 	}
 	
 	public ItemInfo(WarehouseItem item)
@@ -293,8 +282,6 @@ public class ItemInfo
 			_attributeDefence[i] = item.getElementDefAttr(i);
 		}
 		_option = item.getEnchantOptions();
-		_soulCrystalOptions = item.getSoulCrystalOptions();
-		_soulCrystalSpecialOptions = item.getSoulCrystalSpecialOptions();
 	}
 	
 	public int getObjectId()
@@ -390,16 +377,6 @@ public class ItemInfo
 	public int getVisualId()
 	{
 		return _visualId;
-	}
-	
-	public Collection<EnsoulOption> getSoulCrystalOptions()
-	{
-		return _soulCrystalOptions != null ? _soulCrystalOptions : Collections.emptyList();
-	}
-	
-	public Collection<EnsoulOption> getSoulCrystalSpecialOptions()
-	{
-		return _soulCrystalSpecialOptions != null ? _soulCrystalSpecialOptions : Collections.emptyList();
 	}
 	
 	public long getVisualExpiration()

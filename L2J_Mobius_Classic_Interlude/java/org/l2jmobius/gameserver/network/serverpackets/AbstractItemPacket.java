@@ -22,7 +22,6 @@ import org.l2jmobius.gameserver.enums.ItemListType;
 import org.l2jmobius.gameserver.model.ItemInfo;
 import org.l2jmobius.gameserver.model.TradeItem;
 import org.l2jmobius.gameserver.model.buylist.Product;
-import org.l2jmobius.gameserver.model.ensoul.EnsoulOption;
 import org.l2jmobius.gameserver.model.itemcontainer.PlayerInventory;
 import org.l2jmobius.gameserver.model.items.WarehouseItem;
 import org.l2jmobius.gameserver.model.items.instance.ItemInstance;
@@ -97,10 +96,6 @@ public abstract class AbstractItemPacket extends AbstractMaskPacket<ItemListType
 		{
 			packet.writeD(item.getVisualId()); // Item remodel visual ID
 		}
-		if (containsMask(mask, ItemListType.SOUL_CRYSTAL))
-		{
-			writeItemEnsoulOptions(packet, item);
-		}
 	}
 	
 	protected static int calculateMask(ItemInfo item)
@@ -131,11 +126,6 @@ public abstract class AbstractItemPacket extends AbstractMaskPacket<ItemListType
 		if (item.getVisualId() > 0)
 		{
 			mask |= ItemListType.VISUAL_ID.getMask();
-		}
-		
-		if (((item.getSoulCrystalOptions() != null) && !item.getSoulCrystalOptions().isEmpty()) || ((item.getSoulCrystalSpecialOptions() != null) && !item.getSoulCrystalSpecialOptions().isEmpty()))
-		{
-			mask |= ItemListType.SOUL_CRYSTAL.getMask();
 		}
 		
 		return mask;
@@ -193,29 +183,6 @@ public abstract class AbstractItemPacket extends AbstractMaskPacket<ItemListType
 		for (int op : item.getEnchantOptions())
 		{
 			packet.writeD(op);
-		}
-	}
-	
-	protected void writeItemEnsoulOptions(PacketWriter packet, ItemInfo item)
-	{
-		if (item != null)
-		{
-			packet.writeC(item.getSoulCrystalOptions().size()); // Size of regular soul crystal options.
-			for (EnsoulOption option : item.getSoulCrystalOptions())
-			{
-				packet.writeD(option.getId()); // Regular Soul Crystal Ability ID.
-			}
-			
-			packet.writeC(item.getSoulCrystalSpecialOptions().size()); // Size of special soul crystal options.
-			for (EnsoulOption option : item.getSoulCrystalSpecialOptions())
-			{
-				packet.writeD(option.getId()); // Special Soul Crystal Ability ID.
-			}
-		}
-		else
-		{
-			packet.writeC(0); // Size of regular soul crystal options.
-			packet.writeC(0); // Size of special soul crystal options.
 		}
 	}
 	

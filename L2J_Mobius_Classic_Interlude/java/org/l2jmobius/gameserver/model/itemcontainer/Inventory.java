@@ -324,9 +324,6 @@ public abstract class Inventory extends ItemContainer
 			// Clear enchant bonus
 			item.clearEnchantStats();
 			
-			// Clear SA Bonus
-			item.clearSpecialAbilities();
-			
 			final List<ItemSkillHolder> normalSkills = it.getSkills(ItemSkillType.NORMAL);
 			if (normalSkills != null)
 			{
@@ -495,9 +492,6 @@ public abstract class Inventory extends ItemContainer
 			
 			// Apply enchant stats
 			item.applyEnchantStats();
-			
-			// Apply SA skill
-			item.applySpecialAbilities();
 			
 			final List<ItemSkillHolder> normalSkills = item.getItem().getSkills(ItemSkillType.NORMAL);
 			if (normalSkills != null)

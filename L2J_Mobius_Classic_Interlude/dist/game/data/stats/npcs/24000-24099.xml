@@ -2354,7 +2354,6 @@
 				<item id="35476" min="1" max="1" chance="0.75" /> <!-- Recipe: Eternal Gloves (60%) -->
 				<item id="35477" min="1" max="1" chance="0.75" /> <!-- Recipe: Eternal Shoes (60%) -->
 				<item id="35478" min="1" max="1" chance="0.75" /> <!-- Recipe: Eternal Sigil (60%) -->
-				<item id="46587" min="1" max="1" chance="0.75" /> <!-- Mystic Armor Piece -->
 				<item id="35472" min="1" max="1" chance="0.75" /> <!-- Recipe: Eternal Leather Boots (60%) -->
 				<item id="35471" min="1" max="1" chance="0.75" /> <!-- Recipe: Eternal Leather Gloves (60%) -->
 				<item id="35464" min="1" max="1" chance="0.75" /> <!-- Recipe: Eternal Gaiters (60%) -->
@@ -2410,11 +2409,6 @@
 			<skill id="14823" level="1" /> <!-- Instant Kill Attack Resistance -->
 			<skill id="14804" level="10" /> <!-- Damage Reflection Attack Resistance -->
 		</skillList>
-		<dropLists>
-			<drop>
-				<item id="46587" min="1" max="2" chance="91.835" /> <!-- Mystic Armor Piece -->
-			</drop>
-		</dropLists>
 	</npc>
 	<npc id="24069" level="101" type="Monster" name="Alfred von Hellmann">
 		<race>DEMONIC</race>
@@ -2448,9 +2442,7 @@
 				<item id="17526" min="1" max="2" chance="19.76" /> <!-- Scroll: Enchant Weapon (R-grade) -->
 				<item id="46150" min="1" max="1" chance="10.061" /> <!-- Superior Giant's Codex Chapter 1 -->
 				<item id="30298" min="1" max="1" chance="2.567" /> <!-- Superior Giant's Codex - Mastery -->
-				<item id="39738" min="1" max="1" chance="2.534" /> <!-- Rune Stone -->
 				<item id="46151" min="1" max="1" chance="2.523" /> <!-- Superior Giant's Codex - Mastery Chapter 1 -->
-				<item id="46587" min="1" max="1" chance="0.75" /> <!-- Mystic Armor Piece -->
 			</drop>
 		</dropLists>
 	</npc>

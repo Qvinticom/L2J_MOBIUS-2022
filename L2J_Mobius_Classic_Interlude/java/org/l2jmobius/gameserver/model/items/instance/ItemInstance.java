@@ -38,7 +38,6 @@ import org.l2jmobius.commons.concurrent.ThreadPool;
 import org.l2jmobius.commons.database.DatabaseFactory;
 import org.l2jmobius.gameserver.data.xml.impl.AppearanceItemData;
 import org.l2jmobius.gameserver.data.xml.impl.EnchantItemOptionsData;
-import org.l2jmobius.gameserver.data.xml.impl.EnsoulData;
 import org.l2jmobius.gameserver.data.xml.impl.OptionData;
 import org.l2jmobius.gameserver.datatables.ItemTable;
 import org.l2jmobius.gameserver.enums.AttributeType;
@@ -61,7 +60,6 @@ import org.l2jmobius.gameserver.model.actor.Creature;
 import org.l2jmobius.gameserver.model.actor.Summon;
 import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
 import org.l2jmobius.gameserver.model.conditions.Condition;
-import org.l2jmobius.gameserver.model.ensoul.EnsoulOption;
 import org.l2jmobius.gameserver.model.entity.Castle;
 import org.l2jmobius.gameserver.model.events.EventDispatcher;
 import org.l2jmobius.gameserver.model.events.impl.creature.player.OnPlayerAugment;
@@ -174,8 +172,6 @@ public class ItemInstance extends WorldObject
 	private final DropProtection _dropProtection = new DropProtection();
 	
 	private final List<Options> _enchantOptions = new ArrayList<>();
-	private final EnsoulOption[] _ensoulOptions = new EnsoulOption[2];
-	private final EnsoulOption[] _ensoulSpecialOptions = new EnsoulOption[1];
 	
 	/**
 	 * Constructor of the ItemInstance from the objectId and the itemId.
@@ -248,7 +244,6 @@ public class ItemInstance extends WorldObject
 		if (isEquipable())
 		{
 			restoreAttributes();
-			restoreSpecialAbilities();
 		}
 	}
 	
@@ -1618,8 +1613,6 @@ public class ItemInstance extends WorldObject
 			{
 				updateItemElements(con);
 			}
-			
-			updateSpecialAbilities(con);
 		}
 		catch (Exception e)
 		{
@@ -1665,8 +1658,6 @@ public class ItemInstance extends WorldObject
 			{
 				updateItemElements(con);
 			}
-			
-			updateSpecialAbilities(con);
 		}
 		catch (Exception e)
 		{
@@ -2117,286 +2108,6 @@ public class ItemInstance extends WorldObject
 			return op.getOptions();
 		}
 		return DEFAULT_ENCHANT_OPTIONS;
-	}
-	
-	public Collection<EnsoulOption> getSpecialAbilities()
-	{
-		final List<EnsoulOption> result = new ArrayList<>();
-		for (EnsoulOption ensoulOption : _ensoulOptions)
-		{
-			if (ensoulOption != null)
-			{
-				result.add(ensoulOption);
-			}
-		}
-		return result;
-	}
-	
-	public EnsoulOption getSpecialAbility(int index)
-	{
-		return _ensoulOptions[index];
-	}
-	
-	public Collection<EnsoulOption> getAdditionalSpecialAbilities()
-	{
-		final List<EnsoulOption> result = new ArrayList<>();
-		for (EnsoulOption ensoulSpecialOption : _ensoulSpecialOptions)
-		{
-			if (ensoulSpecialOption != null)
-			{
-				result.add(ensoulSpecialOption);
-			}
-		}
-		return result;
-	}
-	
-	public EnsoulOption getAdditionalSpecialAbility(int index)
-	{
-		return _ensoulSpecialOptions[index];
-	}
-	
-	public void addSpecialAbility(EnsoulOption option, int position, int type, boolean updateInDB)
-	{
-		if ((type == 1) && ((position < 0) || (position > 1))) // two first slots
-		{
-			return;
-		}
-		if ((type == 2) && (position != 0)) // third slot
-		{
-			return;
-		}
-		
-		if (type == 1) // Adding regular ability
-		{
-			final EnsoulOption oldOption = _ensoulOptions[position];
-			if (oldOption != null)
-			{
-				removeSpecialAbility(oldOption);
-			}
-			_ensoulOptions[position] = option;
-		}
-		else if (type == 2) // Adding special ability
-		{
-			final EnsoulOption oldOption = _ensoulSpecialOptions[position];
-			if (oldOption != null)
-			{
-				removeSpecialAbility(oldOption);
-			}
-			_ensoulSpecialOptions[position] = option;
-		}
-		
-		if (updateInDB)
-		{
-			updateSpecialAbilities();
-		}
-	}
-	
-	public void removeSpecialAbility(int position, int type)
-	{
-		if (type == 1)
-		{
-			final EnsoulOption option = _ensoulOptions[position];
-			if (option != null)
-			{
-				removeSpecialAbility(option);
-				_ensoulOptions[position] = null;
-				
-				// Rearrange.
-				if (position == 0)
-				{
-					final EnsoulOption secondEnsoul = _ensoulOptions[1];
-					if (secondEnsoul != null)
-					{
-						removeSpecialAbility(secondEnsoul);
-						_ensoulOptions[1] = null;
-						addSpecialAbility(secondEnsoul, 0, type, true);
-					}
-				}
-			}
-		}
-		else if (type == 2)
-		{
-			final EnsoulOption option = _ensoulSpecialOptions[position];
-			if (option != null)
-			{
-				removeSpecialAbility(option);
-				_ensoulSpecialOptions[position] = null;
-			}
-		}
-	}
-	
-	public void clearSpecialAbilities()
-	{
-		for (EnsoulOption ensoulOption : _ensoulOptions)
-		{
-			clearSpecialAbility(ensoulOption);
-		}
-		for (EnsoulOption ensoulSpecialOption : _ensoulSpecialOptions)
-		{
-			clearSpecialAbility(ensoulSpecialOption);
-		}
-	}
-	
-	public void applySpecialAbilities()
-	{
-		if (!isEquipped())
-		{
-			return;
-		}
-		
-		for (EnsoulOption ensoulOption : _ensoulOptions)
-		{
-			applySpecialAbility(ensoulOption);
-		}
-		for (EnsoulOption ensoulSpecialOption : _ensoulSpecialOptions)
-		{
-			applySpecialAbility(ensoulSpecialOption);
-		}
-	}
-	
-	private void removeSpecialAbility(EnsoulOption option)
-	{
-		try (Connection con = DatabaseFactory.getConnection();
-			PreparedStatement ps = con.prepareStatement("DELETE FROM item_special_abilities WHERE objectId = ? AND optionId = ?"))
-		{
-			ps.setInt(1, getObjectId());
-			ps.setInt(2, option.getId());
-			ps.execute();
-			
-			final Skill skill = option.getSkill();
-			if (skill != null)
-			{
-				final PlayerInstance player = getActingPlayer();
-				if (player != null)
-				{
-					player.removeSkill(skill.getId());
-				}
-			}
-		}
-		catch (Exception e)
-		{
-			LOGGER.log(Level.WARNING, "Couldn't remove special ability for item: " + this, e);
-		}
-	}
-	
-	private void applySpecialAbility(EnsoulOption option)
-	{
-		if (option == null)
-		{
-			return;
-		}
-		
-		final Skill skill = option.getSkill();
-		if (skill != null)
-		{
-			final PlayerInstance player = getActingPlayer();
-			if ((player != null) && (player.getSkillLevel(skill.getId()) != skill.getLevel()))
-			{
-				player.addSkill(skill, false);
-			}
-		}
-	}
-	
-	private void clearSpecialAbility(EnsoulOption option)
-	{
-		if (option == null)
-		{
-			return;
-		}
-		
-		final Skill skill = option.getSkill();
-		if (skill != null)
-		{
-			final PlayerInstance player = getActingPlayer();
-			if (player != null)
-			{
-				player.removeSkill(skill, false, true);
-			}
-		}
-	}
-	
-	private void restoreSpecialAbilities()
-	{
-		try (Connection con = DatabaseFactory.getConnection();
-			PreparedStatement ps = con.prepareStatement("SELECT * FROM item_special_abilities WHERE objectId = ? ORDER BY position"))
-		{
-			ps.setInt(1, getObjectId());
-			try (ResultSet rs = ps.executeQuery())
-			{
-				while (rs.next())
-				{
-					final int optionId = rs.getInt("optionId");
-					final int type = rs.getInt("type");
-					final int position = rs.getInt("position");
-					final EnsoulOption option = EnsoulData.getInstance().getOption(optionId);
-					if (option != null)
-					{
-						addSpecialAbility(option, position, type, false);
-					}
-				}
-			}
-		}
-		catch (Exception e)
-		{
-			LOGGER.log(Level.WARNING, "Couldn't restore special abilities for item: " + this, e);
-		}
-	}
-	
-	public void updateSpecialAbilities()
-	{
-		try (Connection con = DatabaseFactory.getConnection())
-		{
-			updateSpecialAbilities(con);
-		}
-		catch (Exception e)
-		{
-			LOGGER.log(Level.WARNING, "Couldn't update item special abilities", e);
-		}
-	}
-	
-	private void updateSpecialAbilities(Connection con)
-	{
-		try (PreparedStatement ps = con.prepareStatement("INSERT INTO item_special_abilities (`objectId`, `type`, `optionId`, `position`) VALUES (?, ?, ?, ?) ON DUPLICATE KEY UPDATE type = ?, optionId = ?, position = ?"))
-		{
-			ps.setInt(1, getObjectId());
-			for (int i = 0; i < _ensoulOptions.length; i++)
-			{
-				if (_ensoulOptions[i] == null)
-				{
-					continue;
-				}
-				
-				ps.setInt(2, 1); // regular options
-				ps.setInt(3, _ensoulOptions[i].getId());
-				ps.setInt(4, i);
-				
-				ps.setInt(5, 1); // regular options
-				ps.setInt(6, _ensoulOptions[i].getId());
-				ps.setInt(7, i);
-				ps.execute();
-			}
-			
-			for (int i = 0; i < _ensoulSpecialOptions.length; i++)
-			{
-				if (_ensoulSpecialOptions[i] == null)
-				{
-					continue;
-				}
-				
-				ps.setInt(2, 2); // special options
-				ps.setInt(3, _ensoulSpecialOptions[i].getId());
-				ps.setInt(4, i);
-				
-				ps.setInt(5, 2); // special options
-				ps.setInt(6, _ensoulSpecialOptions[i].getId());
-				ps.setInt(7, i);
-				ps.execute();
-			}
-		}
-		catch (Exception e)
-		{
-			LOGGER.log(Level.WARNING, "Couldn't update item special abilities", e);
-		}
 	}
 	
 	/**

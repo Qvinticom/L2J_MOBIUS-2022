@@ -21,8 +21,6 @@ import java.util.List;
 import java.util.OptionalLong;
 
 import org.l2jmobius.commons.network.PacketReader;
-import org.l2jmobius.commons.util.CommonUtil;
-import org.l2jmobius.gameserver.data.xml.impl.EnsoulData;
 import org.l2jmobius.gameserver.data.xml.impl.MultisellData;
 import org.l2jmobius.gameserver.datatables.ItemTable;
 import org.l2jmobius.gameserver.enums.AttributeType;
@@ -31,7 +29,6 @@ import org.l2jmobius.gameserver.model.ItemInfo;
 import org.l2jmobius.gameserver.model.actor.Npc;
 import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
 import org.l2jmobius.gameserver.model.clan.Clan;
-import org.l2jmobius.gameserver.model.ensoul.EnsoulOption;
 import org.l2jmobius.gameserver.model.holders.ItemChanceHolder;
 import org.l2jmobius.gameserver.model.holders.MultisellEntryHolder;
 import org.l2jmobius.gameserver.model.holders.PreparedMultisellListHolder;
@@ -66,8 +63,6 @@ public class MultiSellChoose implements IClientIncomingPacket
 	private short _earthDefence;
 	private short _holyDefence;
 	private short _darkDefence;
-	private EnsoulOption[] _soulCrystalOptions;
-	private EnsoulOption[] _soulCrystalSpecialOptions;
 	
 	@Override
 	public boolean read(GameClient client, PacketReader packet)
@@ -86,18 +81,6 @@ public class MultiSellChoose implements IClientIncomingPacket
 		_earthDefence = (short) packet.readH();
 		_holyDefence = (short) packet.readH();
 		_darkDefence = (short) packet.readH();
-		_soulCrystalOptions = new EnsoulOption[packet.readC()]; // Ensoul size
-		for (int i = 0; i < _soulCrystalOptions.length; i++)
-		{
-			final int ensoulId = packet.readD(); // Ensoul option id
-			_soulCrystalOptions[i] = EnsoulData.getInstance().getOption(ensoulId);
-		}
-		_soulCrystalSpecialOptions = new EnsoulOption[packet.readC()]; // Special ensoul size
-		for (int i = 0; i < _soulCrystalSpecialOptions.length; i++)
-		{
-			final int ensoulId = packet.readD(); // Special ensoul option id.
-			_soulCrystalSpecialOptions[i] = EnsoulData.getInstance().getOption(ensoulId);
-		}
 		return true;
 	}
 	
@@ -143,13 +126,6 @@ public class MultiSellChoose implements IClientIncomingPacket
 			}
 		}
 		
-		if (((_soulCrystalOptions != null) && CommonUtil.contains(_soulCrystalOptions, null)) || ((_soulCrystalSpecialOptions != null) && CommonUtil.contains(_soulCrystalSpecialOptions, null)))
-		{
-			LOGGER.severe("Character: " + player.getName() + " requested multisell entry with invalid soul crystal options. Multisell: " + _listId + " entry: " + _entryId);
-			player.setMultiSell(null);
-			return;
-		}
-		
 		final MultisellEntryHolder entry = list.getEntries().get(_entryId - 1); // Entry Id begins from 1. We currently use entry IDs as index pointer.
 		if (entry == null)
 		{
@@ -181,10 +157,6 @@ public class MultiSellChoose implements IClientIncomingPacket
 			|| (itemEnchantment.getAttributeDefence(AttributeType.DARK) != _darkDefence)
 			|| ((itemEnchantment.getAugmentation() == null) && ((_augmentOption1 != 0) || (_augmentOption2 != 0)))
 			|| ((itemEnchantment.getAugmentation() != null) && ((itemEnchantment.getAugmentation().getOption1Id() != _augmentOption1) || (itemEnchantment.getAugmentation().getOption2Id() != _augmentOption2)))
-			|| ((_soulCrystalOptions != null) && itemEnchantment.getSoulCrystalOptions().stream().anyMatch(e -> !CommonUtil.contains(_soulCrystalOptions, e)))
-			|| ((_soulCrystalOptions == null) && !itemEnchantment.getSoulCrystalOptions().isEmpty())
-			|| ((_soulCrystalSpecialOptions != null) && itemEnchantment.getSoulCrystalSpecialOptions().stream().anyMatch(e -> !CommonUtil.contains(_soulCrystalSpecialOptions, e)))
-			|| ((_soulCrystalSpecialOptions == null) && !itemEnchantment.getSoulCrystalSpecialOptions().isEmpty())
 			))
 		//@formatter:on
 		{
@@ -487,22 +459,6 @@ public class MultiSellChoose implements IClientIncomingPacket
 							if (itemEnchantment.getAttributeDefence(AttributeType.DARK) > 0)
 							{
 								addedItem.setAttribute(new AttributeHolder(AttributeType.DARK, itemEnchantment.getAttributeDefence(AttributeType.DARK)), false);
-							}
-						}
-						if (_soulCrystalOptions != null)
-						{
-							int pos = -1;
-							for (EnsoulOption ensoul : _soulCrystalOptions)
-							{
-								pos++;
-								addedItem.addSpecialAbility(ensoul, pos, 1, false);
-							}
-						}
-						if (_soulCrystalSpecialOptions != null)
-						{
-							for (EnsoulOption ensoul : _soulCrystalSpecialOptions)
-							{
-								addedItem.addSpecialAbility(ensoul, 0, 2, false);
 							}
 						}
 						addedItem.updateDatabase(true);
