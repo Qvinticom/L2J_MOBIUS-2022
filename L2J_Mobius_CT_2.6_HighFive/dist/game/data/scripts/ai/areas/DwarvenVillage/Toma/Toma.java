@@ -38,6 +38,7 @@ public class Toma extends AbstractNpcAI
 	};
 	// Misc
 	private static final int TELEPORT_DELAY = 1800000; // 30 minutes
+	private static Npc _toma;
 	
 	private Toma()
 	{
@@ -51,7 +52,11 @@ public class Toma extends AbstractNpcAI
 	{
 		if (event.equals("RESPAWN_TOMA"))
 		{
-			addSpawn(TOMA, getRandomEntry(LOCATIONS), false, TELEPORT_DELAY);
+			if (_toma != null)
+			{
+				_toma.deleteMe();
+			}
+			_toma = addSpawn(TOMA, getRandomEntry(LOCATIONS), false, TELEPORT_DELAY);
 		}
 		return null;
 	}
