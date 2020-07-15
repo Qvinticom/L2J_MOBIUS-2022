@@ -441,13 +441,6 @@
 		<operateType>T</operateType>
 		<magicCriticalRate>5</magicCriticalRate>
 		<targetType>NONE</targetType>
-		<conditions>
-			<condition name="EquipWeapon">
-				<weaponType>
-					<item>SWORD</item>
-				</weaponType>
-			</condition>
-		</conditions>
 		<effects>
 			<effect name="ManaDamOverTime">
 				<power>1</power>

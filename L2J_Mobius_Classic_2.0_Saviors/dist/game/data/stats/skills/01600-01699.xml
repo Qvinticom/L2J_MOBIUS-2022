@@ -406,23 +406,22 @@
 			<value level="1">1</value>
 			<value level="2">2</value>
 		</abnormalLvl>
-		<abnormalTime>
-			<value fromLevel="1" toLevel="2">5</value>
-		</abnormalTime>
+		<abnormalTime>5</abnormalTime>
 		<abnormalType>RESIST_DEATH</abnormalType>
 		<operateType>A2</operateType>
-		<targetType>SELF</targetType>
-		<affectScope>SINGLE</affectScope>
 		<mpConsume>
 			<value level="1">38</value>
 			<value level="2">42</value>
 		</mpConsume>
 		<hitTime>500</hitTime>
+		<coolTime>300</coolTime>
 		<reuseDelay>600000</reuseDelay>
 		<effectPoint>2</effectPoint>
 		<reuseDelayType>S</reuseDelayType>
 		<basicProperty>NONE</basicProperty>
 		<hitCancelTime>0</hitCancelTime>
+		<targetType>SELF</targetType>
+		<affectScope>SINGLE</affectScope>
 		<effects>
 			<effect name="IgnoreDeath" />
 		</effects>
@@ -441,32 +440,15 @@
 		<magicLvl>
 			<value level="1">46</value>
 			<value level="2">58</value>
-			<value level="2">70</value>
-			<value level="3">70</value> <!-- FIXME: AUTO GENERATED LEVEL -->
+			<value level="3">70</value>
 		</magicLvl>
-		<mpConsume>
-			<value level="1">1</value>
-			<value level="2">2</value>
-			<value level="2">3</value>
-		</mpConsume>
+		<mpConsume>1</mpConsume>
 		<operateType>T</operateType>
 		<magicCriticalRate>5</magicCriticalRate>
 		<targetType>NONE</targetType>
-		<conditions>
-			<condition name="EquipWeapon">
-				<weaponType>
-					<item>SWORD</item>
-					<item>BLUNT</item>
-				</weaponType>
-			</condition>
-		</conditions>
 		<effects>
 			<effect name="ManaDamOverTime">
-				<power>
-					<value level="1">1</value>
-					<value level="2">2</value>
-					<value level="3">3</value>
-				</power>
+				<power>1</power>
 				<ticks>2</ticks>
 			</effect>
 			<effect name="PAtk">
@@ -476,6 +458,9 @@
 					<value level="3">60</value>
 				</amount>
 				<mode>DIFF</mode>
+				<weaponType>
+					<item>SWORD</item>
+				</weaponType>
 			</effect>
 			<effect name="Accuracy">
 				<amount>
@@ -484,14 +469,16 @@
 					<value level="3">3</value>
 				</amount>
 				<mode>DIFF</mode>
+				<weaponType>
+					<item>SWORD</item>
+				</weaponType>
 			</effect>
 			<effect name="PhysicalAttackSpeed">
-				<amount>
-					<value level="1">30</value>
-					<value level="2">30</value>
-					<value level="3">30</value>
-				</amount>
+				<amount>30</amount>
 				<mode>DIFF</mode>
+				<weaponType>
+					<item>SWORD</item>
+				</weaponType>
 			</effect>
 		</effects>
 	</skill>
