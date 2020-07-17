@@ -27,16 +27,16 @@ import java.io.ObjectOutputStream;
 import java.util.Stack;
 import java.util.logging.Logger;
 
-public class IdFactory
+public class IdManager
 {
-	private static Logger _log = Logger.getLogger(IdFactory.class.getName());
+	private static Logger _log = Logger.getLogger(IdManager.class.getName());
 	private int _curOID;
 	private Stack<Integer> _oldOIDs;
 	private static int FIRST_OID = 268435456;
-	private static IdFactory _instance;
+	private static IdManager _instance;
 	
 	@SuppressWarnings("unchecked")
-	private IdFactory()
+	private IdManager()
 	{
 		try
 		{
@@ -54,11 +54,11 @@ public class IdFactory
 		}
 	}
 	
-	public static IdFactory getInstance()
+	public static IdManager getInstance()
 	{
 		if (_instance == null)
 		{
-			_instance = new IdFactory();
+			_instance = new IdManager();
 		}
 		return _instance;
 	}

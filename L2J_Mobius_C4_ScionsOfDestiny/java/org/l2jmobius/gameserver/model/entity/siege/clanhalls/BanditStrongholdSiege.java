@@ -29,8 +29,8 @@ import org.l2jmobius.gameserver.datatables.sql.ClanTable;
 import org.l2jmobius.gameserver.datatables.sql.NpcTable;
 import org.l2jmobius.gameserver.datatables.xml.DoorData;
 import org.l2jmobius.gameserver.enums.ChatType;
-import org.l2jmobius.gameserver.idfactory.IdFactory;
 import org.l2jmobius.gameserver.instancemanager.ClanHallManager;
+import org.l2jmobius.gameserver.instancemanager.IdManager;
 import org.l2jmobius.gameserver.model.World;
 import org.l2jmobius.gameserver.model.actor.Creature;
 import org.l2jmobius.gameserver.model.actor.instance.DecoInstance;
@@ -274,7 +274,7 @@ public class BanditStrongholdSiege extends ClanHallSiege
 					continue;
 				}
 				template = NpcTable.getInstance().getTemplate(35427 + mobCounter);
-				final MonsterInstance questMob = new MonsterInstance(IdFactory.getNextId(), template);
+				final MonsterInstance questMob = new MonsterInstance(IdManager.getInstance().getNextId(), template);
 				questMob.setHeading(100);
 				questMob.getStatus().setCurrentHpMp(questMob.getMaxHp(), questMob.getMaxMp());
 				if (mobCounter == 1)
@@ -321,7 +321,7 @@ public class BanditStrongholdSiege extends ClanHallSiege
 			{
 				template = NpcTable.getInstance().getTemplate(35422 + flagCounter);
 			}
-			final DecoInstance flag = new DecoInstance(IdFactory.getNextId(), template);
+			final DecoInstance flag = new DecoInstance(IdManager.getInstance().getNextId(), template);
 			flag.setTitle(clan.getName());
 			flag.setHeading(100);
 			flag.getStatus().setCurrentHpMp(flag.getMaxHp(), flag.getMaxMp());

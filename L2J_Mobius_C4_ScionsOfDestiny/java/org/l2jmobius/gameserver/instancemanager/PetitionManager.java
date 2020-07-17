@@ -27,7 +27,6 @@ import java.util.logging.Logger;
 import org.l2jmobius.Config;
 import org.l2jmobius.gameserver.datatables.xml.AdminData;
 import org.l2jmobius.gameserver.enums.ChatType;
-import org.l2jmobius.gameserver.idfactory.IdFactory;
 import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
 import org.l2jmobius.gameserver.network.SystemMessageId;
 import org.l2jmobius.gameserver.network.serverpackets.CreatureSay;
@@ -88,7 +87,7 @@ public class PetitionManager
 		
 		public Petition(PlayerInstance petitioner, String petitionText, int petitionType)
 		{
-			_id = IdFactory.getNextId();
+			_id = IdManager.getInstance().getNextId();
 			if ((petitionType - 1) >= PetitionType.values().length)
 			{
 				LOGGER.warning("PetitionManager:Petition : invalid petition type (received type was +1) : " + petitionType);

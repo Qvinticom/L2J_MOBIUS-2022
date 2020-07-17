@@ -27,9 +27,9 @@ import java.util.logging.Logger;
 import org.l2jmobius.commons.concurrent.ThreadPool;
 import org.l2jmobius.commons.database.DatabaseFactory;
 import org.l2jmobius.gameserver.datatables.sql.ClanTable;
-import org.l2jmobius.gameserver.idfactory.IdFactory;
 import org.l2jmobius.gameserver.instancemanager.AuctionManager;
 import org.l2jmobius.gameserver.instancemanager.ClanHallManager;
+import org.l2jmobius.gameserver.instancemanager.IdManager;
 import org.l2jmobius.gameserver.model.World;
 import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
 import org.l2jmobius.gameserver.model.clan.Clan;
@@ -396,7 +396,7 @@ public class Auction
 			else
 			{
 				statement = con.prepareStatement("INSERT INTO auction_bid (id, auctionId, bidderId, bidderName, maxBid, clan_name, time_bid) VALUES (?, ?, ?, ?, ?, ?, ?)");
-				statement.setInt(1, IdFactory.getNextId());
+				statement.setInt(1, IdManager.getInstance().getNextId());
 				statement.setInt(2, _id);
 				statement.setInt(3, bidder.getClanId());
 				statement.setString(4, bidder.getName());

@@ -56,7 +56,7 @@ import org.l2jmobius.gameserver.enums.ShotType;
 import org.l2jmobius.gameserver.enums.Team;
 import org.l2jmobius.gameserver.enums.TeleportWhereType;
 import org.l2jmobius.gameserver.geoengine.GeoEngine;
-import org.l2jmobius.gameserver.idfactory.IdFactory;
+import org.l2jmobius.gameserver.instancemanager.IdManager;
 import org.l2jmobius.gameserver.instancemanager.InstanceManager;
 import org.l2jmobius.gameserver.instancemanager.MapRegionManager;
 import org.l2jmobius.gameserver.instancemanager.QuestManager;
@@ -289,7 +289,7 @@ public abstract class Creature extends WorldObject implements ISkillsHolder, IDe
 	 */
 	public Creature(CreatureTemplate template)
 	{
-		this(IdFactory.getNextId(), template);
+		this(IdManager.getInstance().getNextId(), template);
 	}
 	
 	/**

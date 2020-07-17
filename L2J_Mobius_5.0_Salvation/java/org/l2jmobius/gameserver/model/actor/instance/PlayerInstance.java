@@ -107,7 +107,6 @@ import org.l2jmobius.gameserver.enums.UserInfoType;
 import org.l2jmobius.gameserver.geoengine.GeoEngine;
 import org.l2jmobius.gameserver.handler.IItemHandler;
 import org.l2jmobius.gameserver.handler.ItemHandler;
-import org.l2jmobius.gameserver.idfactory.IdFactory;
 import org.l2jmobius.gameserver.instancemanager.AntiFeedManager;
 import org.l2jmobius.gameserver.instancemanager.CastleManager;
 import org.l2jmobius.gameserver.instancemanager.CursedWeaponsManager;
@@ -116,6 +115,7 @@ import org.l2jmobius.gameserver.instancemanager.FortManager;
 import org.l2jmobius.gameserver.instancemanager.FortSiegeManager;
 import org.l2jmobius.gameserver.instancemanager.GlobalVariablesManager;
 import org.l2jmobius.gameserver.instancemanager.HandysBlockCheckerManager;
+import org.l2jmobius.gameserver.instancemanager.IdManager;
 import org.l2jmobius.gameserver.instancemanager.ItemsOnGroundManager;
 import org.l2jmobius.gameserver.instancemanager.MatchingRoomManager;
 import org.l2jmobius.gameserver.instancemanager.MentorManager;
@@ -1152,7 +1152,7 @@ public class PlayerInstance extends Playable
 	 */
 	private PlayerInstance(PlayerTemplate template, String accountName, PlayerAppearance app)
 	{
-		this(IdFactory.getNextId(), template, accountName, app);
+		this(IdManager.getInstance().getNextId(), template, accountName, app);
 	}
 	
 	@Override

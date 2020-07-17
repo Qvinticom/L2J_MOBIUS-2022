@@ -18,7 +18,7 @@ package org.l2jmobius.gameserver.model.announce;
 
 import java.util.Date;
 
-import org.l2jmobius.gameserver.idfactory.IdFactory;
+import org.l2jmobius.gameserver.instancemanager.IdManager;
 import org.l2jmobius.gameserver.script.DateRange;
 
 /**
@@ -32,7 +32,7 @@ public class EventAnnouncement implements IAnnouncement
 	
 	public EventAnnouncement(DateRange range, String content)
 	{
-		_id = IdFactory.getNextId();
+		_id = IdManager.getInstance().getNextId();
 		_range = range;
 		_content = content;
 	}
@@ -88,7 +88,7 @@ public class EventAnnouncement implements IAnnouncement
 	@Override
 	public boolean deleteMe()
 	{
-		IdFactory.releaseId(_id);
+		IdManager.getInstance().releaseId(_id);
 		return true;
 	}
 	

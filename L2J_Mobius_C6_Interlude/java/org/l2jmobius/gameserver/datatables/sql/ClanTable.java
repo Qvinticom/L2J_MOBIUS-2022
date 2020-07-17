@@ -29,9 +29,9 @@ import java.util.regex.PatternSyntaxException;
 import org.l2jmobius.Config;
 import org.l2jmobius.commons.concurrent.ThreadPool;
 import org.l2jmobius.commons.database.DatabaseFactory;
-import org.l2jmobius.gameserver.idfactory.IdFactory;
 import org.l2jmobius.gameserver.instancemanager.FortManager;
 import org.l2jmobius.gameserver.instancemanager.FortSiegeManager;
+import org.l2jmobius.gameserver.instancemanager.IdManager;
 import org.l2jmobius.gameserver.instancemanager.SiegeManager;
 import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
 import org.l2jmobius.gameserver.model.clan.Clan;
@@ -189,7 +189,7 @@ public class ClanTable
 			return null;
 		}
 		
-		final Clan clan = new Clan(IdFactory.getNextId(), clanName);
+		final Clan clan = new Clan(IdManager.getInstance().getNextId(), clanName);
 		final ClanMember leader = new ClanMember(clan, player.getName(), player.getLevel(), player.getClassId().getId(), player.getObjectId(), player.getPledgeType(), player.getPowerGrade(), player.getTitle());
 		
 		clan.setLeader(leader);
@@ -323,7 +323,7 @@ public class ClanTable
 		final int clanLvl = clan.getLevel();
 		
 		_clans.remove(clanId);
-		IdFactory.releaseId(clanId);
+		IdManager.getInstance().releaseId(clanId);
 		
 		try (Connection con = DatabaseFactory.getConnection())
 		{

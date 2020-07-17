@@ -16,7 +16,7 @@
  */
 package org.l2jmobius.gameserver.model.zone;
 
-import org.l2jmobius.gameserver.idfactory.IdFactory;
+import org.l2jmobius.gameserver.instancemanager.IdManager;
 import org.l2jmobius.gameserver.instancemanager.ZoneManager;
 import org.l2jmobius.gameserver.model.Location;
 import org.l2jmobius.gameserver.model.items.instance.ItemInstance;
@@ -50,7 +50,7 @@ public abstract class ZoneForm
 	
 	protected final void dropDebugItem(int itemId, int num, int x, int y, int z)
 	{
-		final ItemInstance item = new ItemInstance(IdFactory.getNextId(), itemId);
+		final ItemInstance item = new ItemInstance(IdManager.getInstance().getNextId(), itemId);
 		item.setCount(num);
 		item.spawnMe(x, y, z + 5);
 		ZoneManager.getInstance().getDebugItems().add(item);

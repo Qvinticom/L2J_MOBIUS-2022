@@ -27,8 +27,8 @@ import org.l2jmobius.commons.concurrent.ThreadPool;
 import org.l2jmobius.commons.database.DatabaseFactory;
 import org.l2jmobius.gameserver.ai.CtrlIntention;
 import org.l2jmobius.gameserver.datatables.sql.PetDataTable;
-import org.l2jmobius.gameserver.idfactory.IdFactory;
 import org.l2jmobius.gameserver.instancemanager.CursedWeaponsManager;
+import org.l2jmobius.gameserver.instancemanager.IdManager;
 import org.l2jmobius.gameserver.instancemanager.ItemsOnGroundManager;
 import org.l2jmobius.gameserver.model.PetData;
 import org.l2jmobius.gameserver.model.Skill;
@@ -829,11 +829,11 @@ public class PetInstance extends Summon
 		{
 			if (template.getType().equalsIgnoreCase("BabyPet"))
 			{
-				pet = new BabyPetInstance(IdFactory.getNextId(), template, owner, control);
+				pet = new BabyPetInstance(IdManager.getInstance().getNextId(), template, owner, control);
 			}
 			else
 			{
-				pet = new PetInstance(IdFactory.getNextId(), template, owner, control);
+				pet = new PetInstance(IdManager.getInstance().getNextId(), template, owner, control);
 			}
 			
 			final PreparedStatement statement = con.prepareStatement("SELECT item_obj_id, name, level, curHp, curMp, exp, sp, karma, pkkills, fed FROM pets WHERE item_obj_id=?");

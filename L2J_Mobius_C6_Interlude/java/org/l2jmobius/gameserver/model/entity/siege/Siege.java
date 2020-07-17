@@ -31,7 +31,7 @@ import org.l2jmobius.commons.database.DatabaseFactory;
 import org.l2jmobius.gameserver.datatables.sql.ClanTable;
 import org.l2jmobius.gameserver.datatables.sql.NpcTable;
 import org.l2jmobius.gameserver.enums.TeleportWhereType;
-import org.l2jmobius.gameserver.idfactory.IdFactory;
+import org.l2jmobius.gameserver.instancemanager.IdManager;
 import org.l2jmobius.gameserver.instancemanager.MercTicketManager;
 import org.l2jmobius.gameserver.instancemanager.SiegeGuardManager;
 import org.l2jmobius.gameserver.instancemanager.SiegeManager;
@@ -1518,7 +1518,7 @@ public class Siege
 		for (SiegeSpawn _sp : SiegeManager.getInstance().getArtefactSpawnList(id))
 		{
 			ArtefactInstance art;
-			art = new ArtefactInstance(IdFactory.getNextId(), NpcTable.getInstance().getTemplate(_sp.getNpcId()));
+			art = new ArtefactInstance(IdManager.getInstance().getNextId(), NpcTable.getInstance().getTemplate(_sp.getNpcId()));
 			art.setCurrentHpMp(art.getMaxHp(), art.getMaxMp());
 			art.setHeading(_sp.getLocation().getHeading());
 			art.spawnMe(_sp.getLocation().getX(), _sp.getLocation().getY(), _sp.getLocation().getZ() + 50);
@@ -1544,7 +1544,7 @@ public class Siege
 			
 			final NpcTemplate template = NpcTable.getInstance().getTemplate(_sp.getNpcId());
 			template.getStatSet().set("baseHpMax", _sp.getHp());
-			ct = new ControlTowerInstance(IdFactory.getNextId(), template);
+			ct = new ControlTowerInstance(IdManager.getInstance().getNextId(), template);
 			ct.setCurrentHpMp(ct.getMaxHp(), ct.getMaxMp());
 			ct.spawnMe(_sp.getLocation().getX(), _sp.getLocation().getY(), _sp.getLocation().getZ() + 20);
 			_controlTowerCount++;

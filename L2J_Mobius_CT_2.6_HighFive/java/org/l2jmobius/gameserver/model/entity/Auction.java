@@ -32,9 +32,9 @@ import org.l2jmobius.commons.concurrent.ThreadPool;
 import org.l2jmobius.commons.database.DatabaseFactory;
 import org.l2jmobius.gameserver.data.sql.impl.ClanTable;
 import org.l2jmobius.gameserver.enums.AuctionItemType;
-import org.l2jmobius.gameserver.idfactory.IdFactory;
 import org.l2jmobius.gameserver.instancemanager.ClanHallAuctionManager;
 import org.l2jmobius.gameserver.instancemanager.ClanHallManager;
+import org.l2jmobius.gameserver.instancemanager.IdManager;
 import org.l2jmobius.gameserver.model.World;
 import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
 import org.l2jmobius.gameserver.model.clan.Clan;
@@ -352,7 +352,7 @@ public class Auction
 			{
 				try (PreparedStatement ps = con.prepareStatement("INSERT INTO auction_bid (id, auctionId, bidderId, bidderName, maxBid, clan_name, time_bid) VALUES (?, ?, ?, ?, ?, ?, ?)"))
 				{
-					ps.setInt(1, IdFactory.getNextId());
+					ps.setInt(1, IdManager.getInstance().getNextId());
 					ps.setInt(2, _id);
 					ps.setInt(3, bidder.getClanId());
 					ps.setString(4, bidder.getName());

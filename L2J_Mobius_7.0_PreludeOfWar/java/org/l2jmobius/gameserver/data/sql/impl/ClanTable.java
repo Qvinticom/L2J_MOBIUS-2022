@@ -35,10 +35,10 @@ import org.l2jmobius.gameserver.communitybbs.Manager.ForumsBBSManager;
 import org.l2jmobius.gameserver.data.xml.impl.ClanHallData;
 import org.l2jmobius.gameserver.enums.ClanWarState;
 import org.l2jmobius.gameserver.enums.UserInfoType;
-import org.l2jmobius.gameserver.idfactory.IdFactory;
 import org.l2jmobius.gameserver.instancemanager.ClanEntryManager;
 import org.l2jmobius.gameserver.instancemanager.FortManager;
 import org.l2jmobius.gameserver.instancemanager.FortSiegeManager;
+import org.l2jmobius.gameserver.instancemanager.IdManager;
 import org.l2jmobius.gameserver.instancemanager.SiegeManager;
 import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
 import org.l2jmobius.gameserver.model.clan.Clan;
@@ -196,7 +196,7 @@ public class ClanTable
 			return null;
 		}
 		
-		final Clan clan = new Clan(IdFactory.getNextId(), clanName);
+		final Clan clan = new Clan(IdManager.getInstance().getNextId(), clanName);
 		final ClanMember leader = new ClanMember(clan, player);
 		clan.setLeader(leader);
 		leader.setPlayerInstance(player);
@@ -271,7 +271,7 @@ public class ClanTable
 		}
 		
 		_clans.remove(clanId);
-		IdFactory.releaseId(clanId);
+		IdManager.getInstance().releaseId(clanId);
 		
 		try (Connection con = DatabaseFactory.getConnection())
 		{

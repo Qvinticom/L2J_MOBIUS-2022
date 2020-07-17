@@ -19,7 +19,7 @@ package org.l2jmobius.gameserver.model.skills.handlers;
 import org.l2jmobius.commons.util.Rnd;
 import org.l2jmobius.gameserver.datatables.sql.NpcTable;
 import org.l2jmobius.gameserver.datatables.xml.ExperienceData;
-import org.l2jmobius.gameserver.idfactory.IdFactory;
+import org.l2jmobius.gameserver.instancemanager.IdManager;
 import org.l2jmobius.gameserver.model.Skill;
 import org.l2jmobius.gameserver.model.StatSet;
 import org.l2jmobius.gameserver.model.World;
@@ -206,11 +206,11 @@ public class SkillSummon extends Skill
 		}
 		if (summonTemplate.getType().equalsIgnoreCase("SiegeSummon"))
 		{
-			summon = new SiegeSummonInstance(IdFactory.getNextId(), summonTemplate, activeChar, this);
+			summon = new SiegeSummonInstance(IdManager.getInstance().getNextId(), summonTemplate, activeChar, this);
 		}
 		else
 		{
-			summon = new SummonInstance(IdFactory.getNextId(), summonTemplate, activeChar, this);
+			summon = new SummonInstance(IdManager.getInstance().getNextId(), summonTemplate, activeChar, this);
 		}
 		
 		summon.setName(summonTemplate.getName());

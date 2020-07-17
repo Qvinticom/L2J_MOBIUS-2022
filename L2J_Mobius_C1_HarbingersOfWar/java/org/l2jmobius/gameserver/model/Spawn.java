@@ -20,7 +20,7 @@ package org.l2jmobius.gameserver.model;
 import java.lang.reflect.Constructor;
 import java.util.logging.Logger;
 
-import org.l2jmobius.gameserver.IdFactory;
+import org.l2jmobius.gameserver.IdManager;
 import org.l2jmobius.gameserver.model.actor.instance.MonsterInstance;
 import org.l2jmobius.gameserver.model.actor.instance.NpcInstance;
 import org.l2jmobius.gameserver.templates.Npc;
@@ -181,7 +181,7 @@ public class Spawn
 				_template
 			};
 			mob = (NpcInstance) _constructor.newInstance(parameters);
-			mob.setObjectId(IdFactory.getInstance().getNextId());
+			mob.setObjectId(IdManager.getInstance().getNextId());
 			mob.setAutoAttackable(mob instanceof MonsterInstance);
 			if (getRandomx() > 0)
 			{

@@ -24,7 +24,7 @@ import org.l2jmobius.gameserver.handler.ActionHandler;
 import org.l2jmobius.gameserver.handler.ActionShiftHandler;
 import org.l2jmobius.gameserver.handler.IActionHandler;
 import org.l2jmobius.gameserver.handler.IActionShiftHandler;
-import org.l2jmobius.gameserver.idfactory.IdFactory;
+import org.l2jmobius.gameserver.instancemanager.IdManager;
 import org.l2jmobius.gameserver.instancemanager.InstanceManager;
 import org.l2jmobius.gameserver.model.actor.Creature;
 import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
@@ -154,8 +154,8 @@ public abstract class WorldObject extends ListenersContainer implements IIdentif
 	public void refreshId()
 	{
 		World.getInstance().removeObject(this);
-		IdFactory.releaseId(getObjectId());
-		_objectId = IdFactory.getNextId();
+		IdManager.getInstance().releaseId(getObjectId());
+		_objectId = IdManager.getInstance().getNextId();
 	}
 	
 	@Override

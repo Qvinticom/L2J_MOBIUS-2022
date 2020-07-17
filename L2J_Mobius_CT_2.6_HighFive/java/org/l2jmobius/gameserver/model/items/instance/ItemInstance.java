@@ -40,7 +40,7 @@ import org.l2jmobius.gameserver.enums.InstanceType;
 import org.l2jmobius.gameserver.enums.ItemLocation;
 import org.l2jmobius.gameserver.enums.ShotType;
 import org.l2jmobius.gameserver.geoengine.GeoEngine;
-import org.l2jmobius.gameserver.idfactory.IdFactory;
+import org.l2jmobius.gameserver.instancemanager.IdManager;
 import org.l2jmobius.gameserver.instancemanager.ItemsOnGroundManager;
 import org.l2jmobius.gameserver.instancemanager.MercTicketManager;
 import org.l2jmobius.gameserver.model.Augmentation;
@@ -221,7 +221,7 @@ public class ItemInstance extends WorldObject
 	 */
 	public ItemInstance(int itemId)
 	{
-		this(IdFactory.getNextId(), itemId);
+		this(IdManager.getInstance().getNextId(), itemId);
 	}
 	
 	/**

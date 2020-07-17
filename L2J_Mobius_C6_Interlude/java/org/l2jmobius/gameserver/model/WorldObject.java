@@ -19,7 +19,7 @@ package org.l2jmobius.gameserver.model;
 import java.util.logging.Logger;
 
 import org.l2jmobius.Config;
-import org.l2jmobius.gameserver.idfactory.IdFactory;
+import org.l2jmobius.gameserver.instancemanager.IdManager;
 import org.l2jmobius.gameserver.instancemanager.ItemsOnGroundManager;
 import org.l2jmobius.gameserver.instancemanager.MercTicketManager;
 import org.l2jmobius.gameserver.model.actor.Creature;
@@ -193,8 +193,8 @@ public abstract class WorldObject
 	public void refreshId()
 	{
 		World.getInstance().removeObject(this);
-		IdFactory.releaseId(getObjectId());
-		_objectId = IdFactory.getNextId();
+		IdManager.getInstance().releaseId(getObjectId());
+		_objectId = IdManager.getInstance().getNextId();
 	}
 	
 	/**

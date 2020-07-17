@@ -21,7 +21,7 @@ import java.util.concurrent.ConcurrentHashMap;
 
 import org.l2jmobius.gameserver.enums.PetitionState;
 import org.l2jmobius.gameserver.enums.PetitionType;
-import org.l2jmobius.gameserver.idfactory.IdFactory;
+import org.l2jmobius.gameserver.instancemanager.IdManager;
 import org.l2jmobius.gameserver.instancemanager.PetitionManager;
 import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
 import org.l2jmobius.gameserver.network.SystemMessageId;
@@ -47,7 +47,7 @@ public class Petition
 	
 	public Petition(PlayerInstance petitioner, String petitionText, int petitionType)
 	{
-		_id = IdFactory.getNextId();
+		_id = IdManager.getInstance().getNextId();
 		_type = PetitionType.values()[petitionType - 1];
 		_content = petitionText;
 		_petitioner = petitioner;

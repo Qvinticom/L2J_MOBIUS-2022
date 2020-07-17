@@ -25,7 +25,7 @@ import java.util.HashMap;
 import java.util.StringTokenizer;
 import java.util.logging.Logger;
 
-import org.l2jmobius.gameserver.IdFactory;
+import org.l2jmobius.gameserver.IdManager;
 import org.l2jmobius.gameserver.model.World;
 import org.l2jmobius.gameserver.model.actor.instance.ItemInstance;
 import org.l2jmobius.gameserver.templates.Armor;
@@ -495,7 +495,7 @@ public class ItemTable
 	public ItemInstance createItem(int itemId)
 	{
 		final ItemInstance temp = new ItemInstance();
-		temp.setObjectId(IdFactory.getInstance().getNextId());
+		temp.setObjectId(IdManager.getInstance().getNextId());
 		temp.setItem(getTemplate(itemId));
 		World.getInstance().storeObject(temp);
 		return temp;

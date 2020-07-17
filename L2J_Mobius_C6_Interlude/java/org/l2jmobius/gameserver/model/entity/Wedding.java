@@ -23,7 +23,7 @@ import java.util.Calendar;
 import java.util.logging.Logger;
 
 import org.l2jmobius.commons.database.DatabaseFactory;
-import org.l2jmobius.gameserver.idfactory.IdFactory;
+import org.l2jmobius.gameserver.instancemanager.IdManager;
 import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
 
 /**
@@ -90,7 +90,7 @@ public class Wedding
 		try (Connection con = DatabaseFactory.getConnection())
 		{
 			PreparedStatement statement;
-			_Id = IdFactory.getNextId();
+			_Id = IdManager.getInstance().getNextId();
 			statement = con.prepareStatement("INSERT INTO mods_wedding (id, player1Id, player2Id, married, affianceDate, weddingDate) VALUES (?, ?, ?, ?, ?, ?)");
 			statement.setInt(1, _Id);
 			statement.setInt(2, _player1Id);

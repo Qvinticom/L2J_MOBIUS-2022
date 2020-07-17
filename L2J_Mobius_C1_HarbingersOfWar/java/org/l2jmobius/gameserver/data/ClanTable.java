@@ -27,7 +27,7 @@ import java.util.Map;
 import java.util.StringTokenizer;
 import java.util.logging.Logger;
 
-import org.l2jmobius.gameserver.IdFactory;
+import org.l2jmobius.gameserver.IdManager;
 import org.l2jmobius.gameserver.model.Clan;
 import org.l2jmobius.gameserver.model.ClanMember;
 import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
@@ -138,7 +138,7 @@ public class ClanTable
 			return null;
 		}
 		final Clan clan = new Clan();
-		clan.setClanId(IdFactory.getInstance().getNextId());
+		clan.setClanId(IdManager.getInstance().getNextId());
 		clan.setName(clanName);
 		clan.setLevel(0);
 		clan.setHasCastle(0);

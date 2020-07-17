@@ -21,7 +21,7 @@ import java.util.List;
 
 import org.l2jmobius.gameserver.ai.CtrlEvent;
 import org.l2jmobius.gameserver.datatables.sql.NpcTable;
-import org.l2jmobius.gameserver.idfactory.IdFactory;
+import org.l2jmobius.gameserver.instancemanager.IdManager;
 import org.l2jmobius.gameserver.model.Effect;
 import org.l2jmobius.gameserver.model.Location;
 import org.l2jmobius.gameserver.model.Skill;
@@ -72,7 +72,7 @@ public class EffectSignetMDam extends Effect
 			return;
 		}
 		
-		final EffectPointInstance effectPoint = new EffectPointInstance(IdFactory.getNextId(), template, getEffector());
+		final EffectPointInstance effectPoint = new EffectPointInstance(IdManager.getInstance().getNextId(), template, getEffector());
 		effectPoint.getStatus().setCurrentHp(effectPoint.getMaxHp());
 		effectPoint.getStatus().setCurrentMp(effectPoint.getMaxMp());
 		

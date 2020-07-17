@@ -19,7 +19,7 @@ package org.l2jmobius.gameserver.handler.itemhandlers;
 import org.l2jmobius.commons.concurrent.ThreadPool;
 import org.l2jmobius.gameserver.datatables.sql.NpcTable;
 import org.l2jmobius.gameserver.handler.IItemHandler;
-import org.l2jmobius.gameserver.idfactory.IdFactory;
+import org.l2jmobius.gameserver.instancemanager.IdManager;
 import org.l2jmobius.gameserver.model.WorldObject;
 import org.l2jmobius.gameserver.model.actor.Playable;
 import org.l2jmobius.gameserver.model.actor.instance.NpcInstance;
@@ -72,7 +72,7 @@ public class ChristmasTree implements IItemHandler
 		try
 		{
 			final Spawn spawn = new Spawn(template1);
-			spawn.setId(IdFactory.getNextId());
+			spawn.setId(IdManager.getInstance().getNextId());
 			spawn.setX(target.getX());
 			spawn.setY(target.getY());
 			spawn.setZ(target.getZ());

@@ -34,7 +34,7 @@ import org.l2jmobius.commons.database.DatabaseFactory;
 import org.l2jmobius.gameserver.data.xml.impl.EnchantItemHPBonusData;
 import org.l2jmobius.gameserver.engines.DocumentEngine;
 import org.l2jmobius.gameserver.enums.ItemLocation;
-import org.l2jmobius.gameserver.idfactory.IdFactory;
+import org.l2jmobius.gameserver.instancemanager.IdManager;
 import org.l2jmobius.gameserver.model.World;
 import org.l2jmobius.gameserver.model.WorldObject;
 import org.l2jmobius.gameserver.model.actor.Attackable;
@@ -209,7 +209,7 @@ public class ItemTable
 	public ItemInstance createItem(String process, int itemId, long count, Creature actor, Object reference)
 	{
 		// Create and Init the ItemInstance corresponding to the Item Identifier
-		final ItemInstance item = new ItemInstance(IdFactory.getNextId(), itemId);
+		final ItemInstance item = new ItemInstance(IdManager.getInstance().getNextId(), itemId);
 		if (process.equalsIgnoreCase("loot") && !Config.AUTO_LOOT_ITEM_IDS.contains(itemId))
 		{
 			ScheduledFuture<?> itemLootShedule;
@@ -327,7 +327,7 @@ public class ItemTable
 			item.setLastChange(ItemInstance.REMOVED);
 			
 			World.getInstance().removeObject(item);
-			IdFactory.releaseId(item.getObjectId());
+			IdManager.getInstance().releaseId(item.getObjectId());
 			
 			if (Config.LOG_ITEMS)
 			{

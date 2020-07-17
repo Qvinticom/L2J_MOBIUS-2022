@@ -23,7 +23,7 @@ import java.util.logging.Logger;
 
 import org.l2jmobius.commons.database.DatabaseFactory;
 import org.l2jmobius.gameserver.cache.CrestCache;
-import org.l2jmobius.gameserver.idfactory.IdFactory;
+import org.l2jmobius.gameserver.instancemanager.IdManager;
 import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
 import org.l2jmobius.gameserver.model.clan.Clan;
 import org.l2jmobius.gameserver.network.SystemMessageId;
@@ -98,7 +98,7 @@ public class RequestExSetPledgeCrestLarge extends GameClientPacket
 			}
 			
 			final CrestCache crestCache = CrestCache.getInstance();
-			final int newId = IdFactory.getNextId();
+			final int newId = IdManager.getInstance().getNextId();
 			if (!crestCache.savePledgeCrestLarge(newId, _data))
 			{
 				LOGGER.warning("Error loading large crest of clan:" + clan.getName());

@@ -14,7 +14,7 @@
  * You should have received a copy of the GNU General Public License
  * along with this program. If not, see <http://www.gnu.org/licenses/>.
  */
-package org.l2jmobius.gameserver.idfactory;
+package org.l2jmobius.gameserver.instancemanager;
 
 import java.sql.Connection;
 import java.sql.PreparedStatement;
@@ -33,40 +33,12 @@ import org.l2jmobius.commons.database.DatabaseFactory;
 import org.l2jmobius.gameserver.util.PrimeFinder;
 
 /**
- * @author Mobius (reworked from L2J version)
+ * @author Mobius (reworked from L2J IdFactory)
  */
-public abstract class IdFactory
+public class IdManager
 {
-	private static final Logger LOGGER = Logger.getLogger(IdFactory.class.getName());
+	private static final Logger LOGGER = Logger.getLogger(IdManager.class.getName());
 	
-	protected static final String[] ID_CHECKS =
-	{
-		"SELECT owner_id    FROM items                 WHERE object_id >= ?   AND object_id < ?",
-		"SELECT object_id   FROM items                 WHERE object_id >= ?   AND object_id < ?",
-		"SELECT charId     FROM character_quests      WHERE charId >= ?     AND charId < ?",
-		"SELECT charId     FROM character_contacts    WHERE charId >= ?     AND charId < ?",
-		"SELECT contactId  FROM character_contacts    WHERE contactId >= ?  AND contactId < ?",
-		"SELECT charId     FROM character_friends     WHERE charId >= ?     AND charId < ?",
-		"SELECT charId     FROM character_friends     WHERE friendId >= ?   AND friendId < ?",
-		"SELECT charId     FROM character_hennas      WHERE charId >= ? AND charId < ?",
-		"SELECT charId     FROM character_recipebook  WHERE charId >= ?     AND charId < ?",
-		"SELECT charId     FROM character_recipeshoplist  WHERE charId >= ?     AND charId < ?",
-		"SELECT charId     FROM character_shortcuts   WHERE charId >= ? AND charId < ?",
-		"SELECT charId     FROM character_macroses    WHERE charId >= ? AND charId < ?",
-		"SELECT charId     FROM character_skills      WHERE charId >= ? AND charId < ?",
-		"SELECT charId     FROM character_skills_save WHERE charId >= ? AND charId < ?",
-		"SELECT charId     FROM character_subclasses  WHERE charId >= ? AND charId < ?",
-		"SELECT charId     FROM character_ui_actions  WHERE charId >= ? AND charId < ?",
-		"SELECT charId     FROM character_ui_categories  WHERE charId >= ? AND charId < ?",
-		"SELECT charId      FROM characters            WHERE charId >= ?      AND charId < ?",
-		"SELECT clanid      FROM characters            WHERE clanid >= ?      AND clanid < ?",
-		"SELECT clan_id     FROM clan_data             WHERE clan_id >= ?     AND clan_id < ?",
-		"SELECT clan_id     FROM siege_clans           WHERE clan_id >= ?     AND clan_id < ?",
-		"SELECT ally_id     FROM clan_data             WHERE ally_id >= ?     AND ally_id < ?",
-		"SELECT leader_id   FROM clan_data             WHERE leader_id >= ?   AND leader_id < ?",
-		"SELECT item_obj_id FROM pets                  WHERE item_obj_id >= ? AND item_obj_id < ?",
-		"SELECT object_id   FROM itemsonground        WHERE object_id >= ?   AND object_id < ?"
-	};
 	//@formatter:off
 	private static final String[][] ID_EXTRACTS =
 	{
@@ -77,21 +49,23 @@ public abstract class IdFactory
 		{"messages","messageId"}
 	};
 	//@formatter:on
+	
 	private static final String[] TIMESTAMPS_CLEAN =
 	{
 		"DELETE FROM character_instance_time WHERE time <= ?",
 		"DELETE FROM character_skills_save WHERE restore_type = 1 AND systime <= ?"
 	};
-	public static final int FIRST_OID = 0x10000000;
-	public static final int LAST_OID = 0x7FFFFFFF;
-	public static final int FREE_OBJECT_ID_SIZE = LAST_OID - FIRST_OID;
+	
+	private static final int FIRST_OID = 0x10000000;
+	private static final int LAST_OID = 0x7FFFFFFF;
+	private static final int FREE_OBJECT_ID_SIZE = LAST_OID - FIRST_OID;
 	
 	private static BitSet _freeIds;
 	private static AtomicInteger _freeIdCount;
 	private static AtomicInteger _nextFreeId;
 	private static boolean _initialized;
 	
-	public static void init()
+	public IdManager()
 	{
 		// Update characters online status.
 		try (Connection con = DatabaseFactory.getConnection();
@@ -102,7 +76,7 @@ public abstract class IdFactory
 		}
 		catch (Exception e)
 		{
-			LOGGER.warning("IdFactory: Could not update characters online status: " + e);
+			LOGGER.warning("IdManager: Could not update characters online status: " + e);
 		}
 		
 		// Cleanup database.
@@ -164,7 +138,8 @@ public abstract class IdFactory
 				cleanCount += statement.executeUpdate("DELETE FROM pets WHERE pets.item_obj_id NOT IN (SELECT object_id FROM items);");
 				cleanCount += statement.executeUpdate("DELETE FROM seven_signs WHERE seven_signs.charId NOT IN (SELECT charId FROM characters);");
 				cleanCount += statement.executeUpdate("DELETE FROM merchant_lease WHERE merchant_lease.player_id NOT IN (SELECT charId FROM characters);");
-				cleanCount += statement.executeUpdate("DELETE FROM character_reco_bonus WHERE character_reco_bonus.charId NOT IN (SELECT charId FROM characters);");
+				cleanCount += statement.executeUpdate("DELETE FROM character_recommends WHERE character_recommends.charId NOT IN (SELECT charId FROM characters);");
+				cleanCount += statement.executeUpdate("DELETE FROM character_recommends WHERE character_recommends.target_id NOT IN (SELECT charId FROM characters);");
 				cleanCount += statement.executeUpdate("DELETE FROM clan_data WHERE clan_data.leader_id NOT IN (SELECT charId FROM characters);");
 				cleanCount += statement.executeUpdate("DELETE FROM clan_data WHERE clan_data.clan_id NOT IN (SELECT clanid FROM characters);");
 				cleanCount += statement.executeUpdate("DELETE FROM olympiad_fights WHERE olympiad_fights.charOneId NOT IN (SELECT charId FROM characters);");
@@ -201,11 +176,11 @@ public abstract class IdFactory
 				statement.executeUpdate("UPDATE clanhall SET ownerId=0, paidUntil=0, paid=0 WHERE clanhall.ownerId NOT IN (SELECT clan_id FROM clan_data);");
 				statement.executeUpdate("UPDATE fort SET owner=0 WHERE owner NOT IN (SELECT clan_id FROM clan_data);");
 				
-				LOGGER.info("IdFactory: Cleaned " + cleanCount + " elements from database in " + ((System.currentTimeMillis() - cleanupStart) / 1000) + " seconds.");
+				LOGGER.info("IdManager: Cleaned " + cleanCount + " elements from database in " + ((System.currentTimeMillis() - cleanupStart) / 1000) + " seconds.");
 			}
 			catch (Exception e)
 			{
-				LOGGER.warning("IdFactory: Could not clean up database: " + e);
+				LOGGER.warning("IdManager: Could not clean up database: " + e);
 			}
 		}
 		
@@ -221,11 +196,11 @@ public abstract class IdFactory
 					cleanCount += statement.executeUpdate();
 				}
 			}
-			LOGGER.info("IdFactory: Cleaned " + cleanCount + " expired timestamps from database.");
+			LOGGER.info("IdManager: Cleaned " + cleanCount + " expired timestamps from database.");
 		}
 		catch (Exception e)
 		{
-			LOGGER.warning("IdFactory: Could not clean expired timestamps from database. " + e);
+			LOGGER.warning("IdManager: Could not clean expired timestamps from database. " + e);
 		}
 		
 		// Initialize.
@@ -262,7 +237,7 @@ public abstract class IdFactory
 				final int objectId = usedObjectId - FIRST_OID;
 				if (objectId < 0)
 				{
-					LOGGER.warning("IdFactory: Object ID " + usedObjectId + " in DB is less than minimum ID of " + FIRST_OID);
+					LOGGER.warning("IdManager: Object ID " + usedObjectId + " in DB is less than minimum ID of " + FIRST_OID);
 					continue;
 				}
 				_freeIds.set(usedObjectId - FIRST_OID);
@@ -275,7 +250,7 @@ public abstract class IdFactory
 		catch (Exception e)
 		{
 			_initialized = false;
-			LOGGER.severe("IdFactory: Could not be initialized properly: " + e.getMessage());
+			LOGGER.severe("IdManager: Could not be initialized properly: " + e.getMessage());
 		}
 		
 		// Schedule increase capacity task.
@@ -290,10 +265,10 @@ public abstract class IdFactory
 			}
 		}, 30000, 30000);
 		
-		LOGGER.info("IdFactory: " + _freeIds.size() + " id's available.");
+		LOGGER.info("IdManager: " + _freeIds.size() + " id's available.");
 	}
 	
-	public synchronized static void releaseId(int objectId)
+	public void releaseId(int objectId)
 	{
 		synchronized (_nextFreeId)
 		{
@@ -304,12 +279,12 @@ public abstract class IdFactory
 			}
 			else
 			{
-				LOGGER.warning("IdFactory: Release objectID " + objectId + " failed (< " + FIRST_OID + ")");
+				LOGGER.warning("IdManager: Release objectID " + objectId + " failed (< " + FIRST_OID + ")");
 			}
 		}
 	}
 	
-	public synchronized static int getNextId()
+	public int getNextId()
 	{
 		synchronized (_nextFreeId)
 		{
@@ -322,7 +297,7 @@ public abstract class IdFactory
 			{
 				if (_freeIds.size() >= FREE_OBJECT_ID_SIZE)
 				{
-					throw new NullPointerException("IdFactory: Ran out of valid ids.");
+					throw new NullPointerException("IdManager: Ran out of valid ids.");
 				}
 				increaseBitSetCapacity();
 			}
@@ -332,14 +307,14 @@ public abstract class IdFactory
 		}
 	}
 	
-	private static void increaseBitSetCapacity()
+	private void increaseBitSetCapacity()
 	{
 		final BitSet newBitSet = new BitSet(PrimeFinder.nextPrime((usedIdCount() * 11) / 10));
 		newBitSet.or(_freeIds);
 		_freeIds = newBitSet;
 	}
 	
-	private static int usedIdCount()
+	private int usedIdCount()
 	{
 		return _freeIdCount.get() - FIRST_OID;
 	}
@@ -352,5 +327,15 @@ public abstract class IdFactory
 	public static boolean hasInitialized()
 	{
 		return _initialized;
+	}
+	
+	public static IdManager getInstance()
+	{
+		return SingletonHolder.INSTANCE;
+	}
+	
+	private static class SingletonHolder
+	{
+		protected static final IdManager INSTANCE = new IdManager();
 	}
 }

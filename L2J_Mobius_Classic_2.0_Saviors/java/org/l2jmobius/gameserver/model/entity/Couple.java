@@ -24,7 +24,7 @@ import java.util.logging.Level;
 import java.util.logging.Logger;
 
 import org.l2jmobius.commons.database.DatabaseFactory;
-import org.l2jmobius.gameserver.idfactory.IdFactory;
+import org.l2jmobius.gameserver.instancemanager.IdManager;
 import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
 
 /**
@@ -85,7 +85,7 @@ public class Couple
 		try (Connection con = DatabaseFactory.getConnection();
 			PreparedStatement ps = con.prepareStatement("INSERT INTO mods_wedding (id, player1Id, player2Id, married, affianceDate, weddingDate) VALUES (?, ?, ?, ?, ?, ?)"))
 		{
-			_id = IdFactory.getNextId();
+			_id = IdManager.getInstance().getNextId();
 			ps.setInt(1, _id);
 			ps.setInt(2, _player1Id);
 			ps.setInt(3, _player2Id);

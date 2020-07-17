@@ -17,7 +17,7 @@
  */
 package org.l2jmobius.gameserver.handler.itemhandlers;
 
-import org.l2jmobius.gameserver.IdFactory;
+import org.l2jmobius.gameserver.IdManager;
 import org.l2jmobius.gameserver.data.ExperienceTable;
 import org.l2jmobius.gameserver.data.NpcTable;
 import org.l2jmobius.gameserver.handler.IItemHandler;
@@ -82,7 +82,7 @@ public class PetSummon implements IItemHandler
 		final PetInstance newpet = new PetInstance(petTemplate);
 		newpet.setTitle(activeChar.getName());
 		newpet.setControlItemId(item.getObjectId());
-		newpet.setObjectId(IdFactory.getInstance().getNextId());
+		newpet.setObjectId(IdManager.getInstance().getNextId());
 		newpet.setX(activeChar.getX() + 50);
 		newpet.setY(activeChar.getY() + 100);
 		newpet.setZ(activeChar.getZ());

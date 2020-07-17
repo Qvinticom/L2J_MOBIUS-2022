@@ -35,10 +35,10 @@ import org.l2jmobius.gameserver.datatables.sql.SpawnTable;
 import org.l2jmobius.gameserver.datatables.xml.MultisellData;
 import org.l2jmobius.gameserver.datatables.xml.ZoneData;
 import org.l2jmobius.gameserver.enums.ChatType;
-import org.l2jmobius.gameserver.idfactory.IdFactory;
 import org.l2jmobius.gameserver.instancemanager.CastleManager;
 import org.l2jmobius.gameserver.instancemanager.DimensionalRiftManager;
 import org.l2jmobius.gameserver.instancemanager.FortManager;
+import org.l2jmobius.gameserver.instancemanager.IdManager;
 import org.l2jmobius.gameserver.instancemanager.QuestManager;
 import org.l2jmobius.gameserver.instancemanager.RaidBossSpawnManager;
 import org.l2jmobius.gameserver.model.DropCategory;
@@ -1820,7 +1820,7 @@ public class NpcInstance extends Creature
 			sm.addItemName(4442);
 			player.sendPacket(sm);
 			
-			final ItemInstance item = new ItemInstance(IdFactory.getNextId(), 4442);
+			final ItemInstance item = new ItemInstance(IdManager.getInstance().getNextId(), 4442);
 			item.setCount(1);
 			item.setCustomType1(lotonumber);
 			item.setEnchantLevel(enchant);

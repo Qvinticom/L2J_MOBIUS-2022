@@ -22,7 +22,7 @@ import org.l2jmobius.gameserver.datatables.SkillTable;
 import org.l2jmobius.gameserver.datatables.sql.NpcTable;
 import org.l2jmobius.gameserver.datatables.xml.SummonItemData;
 import org.l2jmobius.gameserver.handler.IItemHandler;
-import org.l2jmobius.gameserver.idfactory.IdFactory;
+import org.l2jmobius.gameserver.instancemanager.IdManager;
 import org.l2jmobius.gameserver.model.Skill;
 import org.l2jmobius.gameserver.model.SummonItem;
 import org.l2jmobius.gameserver.model.World;
@@ -145,7 +145,7 @@ public class SummonItems implements IItemHandler
 				try
 				{
 					final Spawn spawn = new Spawn(npcTemplate);
-					spawn.setId(IdFactory.getNextId());
+					spawn.setId(IdManager.getInstance().getNextId());
 					spawn.setX(player.getX());
 					spawn.setY(player.getY());
 					spawn.setZ(player.getZ());

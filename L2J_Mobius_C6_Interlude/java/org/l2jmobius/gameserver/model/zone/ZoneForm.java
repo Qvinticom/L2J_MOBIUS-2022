@@ -19,7 +19,7 @@ package org.l2jmobius.gameserver.model.zone;
 import java.awt.geom.Line2D;
 
 import org.l2jmobius.gameserver.datatables.xml.ZoneData;
-import org.l2jmobius.gameserver.idfactory.IdFactory;
+import org.l2jmobius.gameserver.instancemanager.IdManager;
 import org.l2jmobius.gameserver.model.items.instance.ItemInstance;
 
 /**
@@ -92,7 +92,7 @@ public abstract class ZoneForm
 	
 	protected static final void dropDebugItem(int id, int x, int y, int z)
 	{
-		final ItemInstance item = new ItemInstance(IdFactory.getNextId(), 57);
+		final ItemInstance item = new ItemInstance(IdManager.getInstance().getNextId(), 57);
 		item.setCount(id);
 		item.spawnMe(x, y, z + 5);
 		ZoneData.getInstance().addDebugItem(item);

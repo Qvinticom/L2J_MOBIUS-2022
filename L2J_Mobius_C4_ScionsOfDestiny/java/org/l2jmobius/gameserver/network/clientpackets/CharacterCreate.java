@@ -28,7 +28,7 @@ import org.l2jmobius.gameserver.datatables.sql.CharNameTable;
 import org.l2jmobius.gameserver.datatables.sql.SkillTreeTable;
 import org.l2jmobius.gameserver.datatables.xml.ExperienceData;
 import org.l2jmobius.gameserver.datatables.xml.PlayerTemplateData;
-import org.l2jmobius.gameserver.idfactory.IdFactory;
+import org.l2jmobius.gameserver.instancemanager.IdManager;
 import org.l2jmobius.gameserver.instancemanager.QuestManager;
 import org.l2jmobius.gameserver.model.ShortCut;
 import org.l2jmobius.gameserver.model.SkillLearn;
@@ -122,7 +122,7 @@ public class CharacterCreate extends GameClientPacket
 				return;
 			}
 			
-			final int objectId = IdFactory.getNextId();
+			final int objectId = IdManager.getInstance().getNextId();
 			newChar = PlayerInstance.create(objectId, template, getClient().getAccountName(), _name, _hairStyle, _hairColor, _face, _sex != 0);
 			newChar.setCurrentHp(newChar.getMaxHp()); // L2Off like
 			// newChar.setCurrentCp(template.baseCpMax);

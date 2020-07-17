@@ -32,7 +32,7 @@ import org.l2jmobius.commons.database.DatabaseFactory;
 import org.l2jmobius.gameserver.datatables.sql.PetDataTable;
 import org.l2jmobius.gameserver.engines.DocumentEngine;
 import org.l2jmobius.gameserver.engines.ItemDataHolder;
-import org.l2jmobius.gameserver.idfactory.IdFactory;
+import org.l2jmobius.gameserver.instancemanager.IdManager;
 import org.l2jmobius.gameserver.model.World;
 import org.l2jmobius.gameserver.model.WorldObject;
 import org.l2jmobius.gameserver.model.actor.Attackable;
@@ -178,7 +178,7 @@ public class ItemTable
 	public ItemInstance createItem(String process, int itemId, int count, PlayerInstance actor, WorldObject reference)
 	{
 		// Create and Init the ItemInstance corresponding to the Item Identifier
-		final ItemInstance item = new ItemInstance(IdFactory.getNextId(), itemId);
+		final ItemInstance item = new ItemInstance(IdManager.getInstance().getNextId(), itemId);
 		
 		// create loot schedule also if autoloot is enabled
 		if (process.equalsIgnoreCase("loot")/* && !Config.AUTO_LOOT */)
@@ -293,7 +293,7 @@ public class ItemTable
 			item.setLastChange(ItemInstance.REMOVED);
 			
 			World.getInstance().removeObject(item);
-			IdFactory.releaseId(item.getObjectId());
+			IdManager.getInstance().releaseId(item.getObjectId());
 			
 			// if it's a pet control item, delete the pet as well
 			if (PetDataTable.isPetItem(item.getItemId()))

@@ -27,8 +27,8 @@ import org.w3c.dom.NamedNodeMap;
 import org.w3c.dom.Node;
 
 import org.l2jmobius.commons.util.IXmlReader;
-import org.l2jmobius.gameserver.idfactory.IdFactory;
 import org.l2jmobius.gameserver.instancemanager.ClanHallManager;
+import org.l2jmobius.gameserver.instancemanager.IdManager;
 import org.l2jmobius.gameserver.model.Location;
 import org.l2jmobius.gameserver.model.StatSet;
 import org.l2jmobius.gameserver.model.actor.instance.DoorInstance;
@@ -176,7 +176,7 @@ public class DoorData implements IXmlReader
 		npcDat.set("baseMDef", mDef);
 		
 		final CreatureTemplate template = new CreatureTemplate(npcDat);
-		final DoorInstance door = new DoorInstance(IdFactory.getNextId(), template, id, name, unlockable);
+		final DoorInstance door = new DoorInstance(IdManager.getInstance().getNextId(), template, id, name, unlockable);
 		door.setRange(xMin, yMin, zMin, xMax, yMax, zMax);
 		try
 		{

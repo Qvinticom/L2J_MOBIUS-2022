@@ -31,7 +31,6 @@ import java.util.logging.Logger;
 
 import org.l2jmobius.commons.database.DatabaseFactory;
 import org.l2jmobius.gameserver.enums.MailType;
-import org.l2jmobius.gameserver.idfactory.IdFactory;
 import org.l2jmobius.gameserver.model.World;
 import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
 import org.l2jmobius.gameserver.model.entity.Message;
@@ -277,7 +276,7 @@ public class MailManager
 		}
 		
 		_messages.remove(msgId);
-		IdFactory.releaseId(msgId);
+		IdManager.getInstance().releaseId(msgId);
 	}
 	
 	/**

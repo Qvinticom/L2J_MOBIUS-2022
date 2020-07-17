@@ -17,7 +17,7 @@
 package org.l2jmobius.gameserver.model.itemauction;
 
 import org.l2jmobius.gameserver.datatables.ItemTable;
-import org.l2jmobius.gameserver.idfactory.IdFactory;
+import org.l2jmobius.gameserver.instancemanager.IdManager;
 import org.l2jmobius.gameserver.model.StatSet;
 import org.l2jmobius.gameserver.model.World;
 import org.l2jmobius.gameserver.model.items.instance.ItemInstance;
@@ -78,7 +78,7 @@ public class AuctionItem
 	
 	public ItemInstance createNewItemInstance()
 	{
-		final ItemInstance item = new ItemInstance(IdFactory.getNextId(), _itemId);
+		final ItemInstance item = new ItemInstance(IdManager.getInstance().getNextId(), _itemId);
 		World.getInstance().addObject(item);
 		item.setCount(_itemCount);
 		item.setEnchantLevel(item.getItem().getDefaultEnchantLevel());

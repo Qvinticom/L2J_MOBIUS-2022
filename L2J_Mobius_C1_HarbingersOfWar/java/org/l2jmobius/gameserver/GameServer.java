@@ -78,7 +78,7 @@ public class GameServer extends Thread
 	protected final CharStatTable _modifiers;
 	protected final World _world;
 	protected final CharTemplateTable _charTemplates;
-	protected final IdFactory _idFactory;
+	protected final IdManager _idFactory;
 	protected final SpawnTable _spawnTable;
 	protected final CharNameTable _charNametable;
 	protected final GameTimeController _gameTimeController;
@@ -147,7 +147,7 @@ public class GameServer extends Thread
 		_loginController = LoginController.getInstance();
 		_loginController.setMaxAllowedOnlinePlayers(Config.MAXIMUM_ONLINE_PLAYERS);
 		_charNametable = CharNameTable.getInstance();
-		_idFactory = IdFactory.getInstance();
+		_idFactory = IdManager.getInstance();
 		_itemTable = ItemTable.getInstance();
 		if (!_itemTable.isInitialized())
 		{

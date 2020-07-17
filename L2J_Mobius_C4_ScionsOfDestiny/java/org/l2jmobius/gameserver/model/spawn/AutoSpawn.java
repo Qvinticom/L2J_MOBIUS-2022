@@ -34,7 +34,7 @@ import org.l2jmobius.commons.util.Rnd;
 import org.l2jmobius.gameserver.datatables.sql.NpcTable;
 import org.l2jmobius.gameserver.datatables.sql.SpawnTable;
 import org.l2jmobius.gameserver.datatables.xml.MapRegionData;
-import org.l2jmobius.gameserver.idfactory.IdFactory;
+import org.l2jmobius.gameserver.instancemanager.IdManager;
 import org.l2jmobius.gameserver.model.Location;
 import org.l2jmobius.gameserver.model.actor.instance.NpcInstance;
 import org.l2jmobius.gameserver.model.actor.templates.NpcTemplate;
@@ -140,7 +140,7 @@ public class AutoSpawn
 			}
 		}
 		
-		final int newId = IdFactory.getNextId();
+		final int newId = IdManager.getInstance().getNextId();
 		newSpawn._objectId = newId;
 		
 		synchronized (_registeredSpawns)

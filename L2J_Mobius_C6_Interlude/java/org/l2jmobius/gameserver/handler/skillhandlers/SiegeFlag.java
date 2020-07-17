@@ -18,10 +18,10 @@ package org.l2jmobius.gameserver.handler.skillhandlers;
 
 import org.l2jmobius.gameserver.datatables.sql.NpcTable;
 import org.l2jmobius.gameserver.handler.ISkillHandler;
-import org.l2jmobius.gameserver.idfactory.IdFactory;
 import org.l2jmobius.gameserver.instancemanager.CastleManager;
 import org.l2jmobius.gameserver.instancemanager.FortManager;
 import org.l2jmobius.gameserver.instancemanager.FortSiegeManager;
+import org.l2jmobius.gameserver.instancemanager.IdManager;
 import org.l2jmobius.gameserver.instancemanager.SiegeManager;
 import org.l2jmobius.gameserver.model.Skill;
 import org.l2jmobius.gameserver.model.Skill.SkillType;
@@ -79,7 +79,7 @@ public class SiegeFlag implements ISkillHandler
 		try
 		{
 			// Spawn a new flag
-			final SiegeFlagInstance flag = new SiegeFlagInstance(player, IdFactory.getNextId(), NpcTable.getInstance().getTemplate(35062));
+			final SiegeFlagInstance flag = new SiegeFlagInstance(player, IdManager.getInstance().getNextId(), NpcTable.getInstance().getTemplate(35062));
 			if (skill.isAdvancedFlag())
 			{
 				flag.setAdvanceFlag(true);

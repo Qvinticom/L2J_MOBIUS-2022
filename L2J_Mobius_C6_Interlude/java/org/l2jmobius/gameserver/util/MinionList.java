@@ -27,7 +27,7 @@ import org.l2jmobius.Config;
 import org.l2jmobius.commons.util.Rnd;
 import org.l2jmobius.gameserver.ai.CtrlIntention;
 import org.l2jmobius.gameserver.datatables.sql.NpcTable;
-import org.l2jmobius.gameserver.idfactory.IdFactory;
+import org.l2jmobius.gameserver.instancemanager.IdManager;
 import org.l2jmobius.gameserver.model.MinionData;
 import org.l2jmobius.gameserver.model.actor.instance.MinionInstance;
 import org.l2jmobius.gameserver.model.actor.instance.MonsterInstance;
@@ -198,7 +198,7 @@ public class MinionList
 	 * <li>Set the Minion HP, MP and Heading</li>
 	 * <li>Set the Minion leader to this RaidBoss</li>
 	 * <li>Init the position of the Minion and add it in the world as a visible object</li><br>
-	 * @param minionid The I2NpcTemplate Identifier of the Minion to spawn
+	 * @param minionid The NpcTemplate Identifier of the Minion to spawn
 	 */
 	public void spawnSingleMinion(int minionid)
 	{
@@ -206,7 +206,7 @@ public class MinionList
 		final NpcTemplate minionTemplate = NpcTable.getInstance().getTemplate(minionid);
 		
 		// Create and Init the Minion and generate its Identifier
-		final MinionInstance monster = new MinionInstance(IdFactory.getNextId(), minionTemplate);
+		final MinionInstance monster = new MinionInstance(IdManager.getInstance().getNextId(), minionTemplate);
 		
 		// Set the Minion HP, MP and Heading
 		monster.setCurrentHpMp(monster.getMaxHp(), monster.getMaxMp());

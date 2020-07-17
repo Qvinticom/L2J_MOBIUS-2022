@@ -20,7 +20,7 @@ import java.util.concurrent.Future;
 
 import org.l2jmobius.commons.concurrent.ThreadPool;
 import org.l2jmobius.gameserver.enums.InstanceType;
-import org.l2jmobius.gameserver.idfactory.IdFactory;
+import org.l2jmobius.gameserver.instancemanager.IdManager;
 import org.l2jmobius.gameserver.model.actor.stat.ControllableAirShipStat;
 import org.l2jmobius.gameserver.model.actor.templates.CreatureTemplate;
 import org.l2jmobius.gameserver.model.skills.AbnormalType;
@@ -48,7 +48,7 @@ public class ControllableAirShipInstance extends AirShipInstance
 		super(template);
 		setInstanceType(InstanceType.ControllableAirShipInstance);
 		_ownerId = ownerId;
-		_helmId = IdFactory.getNextId(); // not forget to release !
+		_helmId = IdManager.getInstance().getNextId(); // not forget to release !
 	}
 	
 	@Override
@@ -282,8 +282,8 @@ public class ControllableAirShipInstance extends AirShipInstance
 	public void refreshId()
 	{
 		super.refreshId();
-		IdFactory.releaseId(_helmId);
-		_helmId = IdFactory.getNextId();
+		IdManager.getInstance().releaseId(_helmId);
+		_helmId = IdManager.getInstance().getNextId();
 	}
 	
 	@Override

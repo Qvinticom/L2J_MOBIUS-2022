@@ -29,10 +29,10 @@ import org.l2jmobius.commons.database.DatabaseFactory;
 import org.l2jmobius.gameserver.datatables.sql.ClanTable;
 import org.l2jmobius.gameserver.datatables.sql.NpcTable;
 import org.l2jmobius.gameserver.enums.TeleportWhereType;
-import org.l2jmobius.gameserver.idfactory.IdFactory;
 import org.l2jmobius.gameserver.instancemanager.FortSiegeGuardManager;
 import org.l2jmobius.gameserver.instancemanager.FortSiegeManager;
 import org.l2jmobius.gameserver.instancemanager.FortSiegeManager.SiegeSpawn;
+import org.l2jmobius.gameserver.instancemanager.IdManager;
 import org.l2jmobius.gameserver.instancemanager.MercTicketManager;
 import org.l2jmobius.gameserver.model.SiegeClan;
 import org.l2jmobius.gameserver.model.SiegeClan.SiegeClanType;
@@ -1299,7 +1299,7 @@ public class FortSiege
 		for (SiegeSpawn _sp : FortSiegeManager.getInstance().getCommanderSpawnList(id))
 		{
 			CommanderInstance commander;
-			commander = new CommanderInstance(IdFactory.getNextId(), NpcTable.getInstance().getTemplate(_sp.getNpcId()));
+			commander = new CommanderInstance(IdManager.getInstance().getNextId(), NpcTable.getInstance().getTemplate(_sp.getNpcId()));
 			commander.setCurrentHpMp(commander.getMaxHp(), commander.getMaxMp());
 			commander.setHeading(_sp.getLocation().getHeading());
 			commander.spawnMe(_sp.getLocation().getX(), _sp.getLocation().getY(), _sp.getLocation().getZ() + 50);
@@ -1321,7 +1321,7 @@ public class FortSiege
 		for (SiegeSpawn _sp : FortSiegeManager.getInstance().getFlagList(id))
 		{
 			ArtefactInstance combatflag;
-			combatflag = new ArtefactInstance(IdFactory.getNextId(), NpcTable.getInstance().getTemplate(_sp.getNpcId()));
+			combatflag = new ArtefactInstance(IdManager.getInstance().getNextId(), NpcTable.getInstance().getTemplate(_sp.getNpcId()));
 			combatflag.setCurrentHpMp(combatflag.getMaxHp(), combatflag.getMaxMp());
 			combatflag.setHeading(_sp.getLocation().getHeading());
 			combatflag.spawnMe(_sp.getLocation().getX(), _sp.getLocation().getY(), _sp.getLocation().getZ() + 10);

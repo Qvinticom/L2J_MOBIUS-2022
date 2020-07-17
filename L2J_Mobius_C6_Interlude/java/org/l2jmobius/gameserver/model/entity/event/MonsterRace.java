@@ -35,7 +35,7 @@ import org.l2jmobius.commons.concurrent.ThreadPool;
 import org.l2jmobius.commons.database.DatabaseFactory;
 import org.l2jmobius.commons.util.Rnd;
 import org.l2jmobius.gameserver.datatables.sql.NpcTable;
-import org.l2jmobius.gameserver.idfactory.IdFactory;
+import org.l2jmobius.gameserver.instancemanager.IdManager;
 import org.l2jmobius.gameserver.model.actor.instance.NpcInstance;
 import org.l2jmobius.gameserver.model.actor.templates.NpcTemplate;
 import org.l2jmobius.gameserver.model.zone.type.DerbyTrackZone;
@@ -327,7 +327,7 @@ public class MonsterRace
 			{
 				final NpcTemplate template = NpcTable.getInstance().getTemplate(_npcTemplates.get(i));
 				_constructor = Class.forName("org.l2jmobius.gameserver.model.actor.instance." + template.getType() + "Instance").getConstructors()[0];
-				final int objectId = IdFactory.getNextId();
+				final int objectId = IdManager.getInstance().getNextId();
 				_monsters[i] = (NpcInstance) _constructor.newInstance(objectId, template);
 			}
 			catch (Exception e)

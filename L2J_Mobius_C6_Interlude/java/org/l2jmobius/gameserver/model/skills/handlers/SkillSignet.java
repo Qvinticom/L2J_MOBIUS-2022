@@ -17,7 +17,7 @@
 package org.l2jmobius.gameserver.model.skills.handlers;
 
 import org.l2jmobius.gameserver.datatables.sql.NpcTable;
-import org.l2jmobius.gameserver.idfactory.IdFactory;
+import org.l2jmobius.gameserver.instancemanager.IdManager;
 import org.l2jmobius.gameserver.model.Location;
 import org.l2jmobius.gameserver.model.Skill;
 import org.l2jmobius.gameserver.model.StatSet;
@@ -49,7 +49,7 @@ public class SkillSignet extends Skill
 		}
 		
 		final NpcTemplate template = NpcTable.getInstance().getTemplate(_effectNpcId);
-		final EffectPointInstance effectPoint = new EffectPointInstance(IdFactory.getNextId(), template, caster);
+		final EffectPointInstance effectPoint = new EffectPointInstance(IdManager.getInstance().getNextId(), template, caster);
 		effectPoint.getStatus().setCurrentHp(effectPoint.getMaxHp());
 		effectPoint.getStatus().setCurrentMp(effectPoint.getMaxMp());
 		World.getInstance().storeObject(effectPoint);

@@ -21,7 +21,7 @@ import java.util.StringTokenizer;
 import org.l2jmobius.commons.util.Rnd;
 import org.l2jmobius.gameserver.datatables.sql.NpcTable;
 import org.l2jmobius.gameserver.handler.IAdminCommandHandler;
-import org.l2jmobius.gameserver.idfactory.IdFactory;
+import org.l2jmobius.gameserver.instancemanager.IdManager;
 import org.l2jmobius.gameserver.model.actor.Creature;
 import org.l2jmobius.gameserver.model.actor.instance.MonsterInstance;
 import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
@@ -205,8 +205,8 @@ public class AdminFightCalculator implements IAdminCommandHandler
 			final StringTokenizer st = new StringTokenizer(trimmedParams);
 			mid1 = Integer.parseInt(st.nextToken());
 			mid2 = Integer.parseInt(st.nextToken());
-			npc1 = new MonsterInstance(IdFactory.getNextId(), NpcTable.getInstance().getTemplate(mid1));
-			npc2 = new MonsterInstance(IdFactory.getNextId(), NpcTable.getInstance().getTemplate(mid2));
+			npc1 = new MonsterInstance(IdManager.getInstance().getNextId(), NpcTable.getInstance().getTemplate(mid1));
+			npc2 = new MonsterInstance(IdManager.getInstance().getNextId(), NpcTable.getInstance().getTemplate(mid2));
 		}
 		
 		int miss1 = 0;

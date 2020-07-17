@@ -26,7 +26,7 @@ import org.w3c.dom.NamedNodeMap;
 import org.w3c.dom.Node;
 
 import org.l2jmobius.commons.util.IXmlReader;
-import org.l2jmobius.gameserver.idfactory.IdFactory;
+import org.l2jmobius.gameserver.instancemanager.IdManager;
 import org.l2jmobius.gameserver.model.StatSet;
 import org.l2jmobius.gameserver.model.actor.instance.StaticObjectInstance;
 import org.l2jmobius.gameserver.network.serverpackets.StaticObject;
@@ -74,7 +74,7 @@ public class StaticObjectData implements IXmlReader
 			}
 			
 			// Create and spawn the StaticObject instance.
-			final StaticObjectInstance obj = new StaticObjectInstance(IdFactory.getNextId());
+			final StaticObjectInstance obj = new StaticObjectInstance(IdManager.getInstance().getNextId());
 			obj.setType(set.getInt("type"));
 			obj.setStaticObjectId(set.getInt("id"));
 			obj.setXYZ(set.getInt("x"), set.getInt("y"), set.getInt("z"));

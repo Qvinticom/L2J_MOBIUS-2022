@@ -18,7 +18,7 @@ package org.l2jmobius.gameserver.model.actor.instance;
 
 import org.l2jmobius.gameserver.datatables.xml.FenceData;
 import org.l2jmobius.gameserver.enums.FenceState;
-import org.l2jmobius.gameserver.idfactory.IdFactory;
+import org.l2jmobius.gameserver.instancemanager.IdManager;
 import org.l2jmobius.gameserver.model.WorldObject;
 import org.l2jmobius.gameserver.model.actor.Creature;
 import org.l2jmobius.gameserver.network.serverpackets.DeleteObject;
@@ -42,7 +42,7 @@ public class FenceInstance extends WorldObject
 	
 	public FenceInstance(int x, int y, String name, int width, int length, int height, FenceState state)
 	{
-		super(IdFactory.getNextId());
+		super(IdManager.getInstance().getNextId());
 		
 		_xMin = x - (width / 2);
 		_xMax = x + (width / 2);
@@ -57,7 +57,7 @@ public class FenceInstance extends WorldObject
 			_heightFences = new int[height - 1];
 			for (int i = 0; i < _heightFences.length; i++)
 			{
-				_heightFences[i] = IdFactory.getNextId();
+				_heightFences[i] = IdManager.getInstance().getNextId();
 			}
 		}
 	}

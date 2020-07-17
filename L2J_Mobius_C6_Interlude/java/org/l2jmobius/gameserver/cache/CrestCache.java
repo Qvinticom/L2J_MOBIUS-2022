@@ -31,7 +31,7 @@ import java.util.logging.Logger;
 import org.l2jmobius.Config;
 import org.l2jmobius.commons.database.DatabaseFactory;
 import org.l2jmobius.gameserver.datatables.sql.ClanTable;
-import org.l2jmobius.gameserver.idfactory.IdFactory;
+import org.l2jmobius.gameserver.instancemanager.IdManager;
 import org.l2jmobius.gameserver.model.clan.Clan;
 
 /**
@@ -135,7 +135,7 @@ public class CrestCache
 			
 			LOGGER.info("Found old crest file \"" + file.getName() + "\" for clanId " + clanId);
 			
-			final int newId = IdFactory.getNextId();
+			final int newId = IdManager.getInstance().getNextId();
 			final Clan clan = ClanTable.getInstance().getClan(clanId);
 			if (clan != null)
 			{

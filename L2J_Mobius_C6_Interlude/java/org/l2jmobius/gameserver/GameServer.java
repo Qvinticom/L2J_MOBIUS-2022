@@ -81,7 +81,6 @@ import org.l2jmobius.gameserver.handler.ItemHandler;
 import org.l2jmobius.gameserver.handler.SkillHandler;
 import org.l2jmobius.gameserver.handler.UserCommandHandler;
 import org.l2jmobius.gameserver.handler.VoicedCommandHandler;
-import org.l2jmobius.gameserver.idfactory.IdFactory;
 import org.l2jmobius.gameserver.instancemanager.AuctionManager;
 import org.l2jmobius.gameserver.instancemanager.CastleManager;
 import org.l2jmobius.gameserver.instancemanager.CastleManorManager;
@@ -99,6 +98,7 @@ import org.l2jmobius.gameserver.instancemanager.FortSiegeManager;
 import org.l2jmobius.gameserver.instancemanager.FourSepulchersManager;
 import org.l2jmobius.gameserver.instancemanager.GlobalVariablesManager;
 import org.l2jmobius.gameserver.instancemanager.GrandBossManager;
+import org.l2jmobius.gameserver.instancemanager.IdManager;
 import org.l2jmobius.gameserver.instancemanager.ItemsOnGroundManager;
 import org.l2jmobius.gameserver.instancemanager.MercTicketManager;
 import org.l2jmobius.gameserver.instancemanager.PetitionManager;
@@ -177,9 +177,9 @@ public class GameServer
 			ThreadPool.scheduleAtFixedRate(DeadlockDetector.getInstance(), Config.DEADLOCKCHECK_INTIAL_TIME, Config.DEADLOCKCHECK_DELAY_TIME);
 		}
 		
-		Util.printSection("IdFactory");
-		IdFactory.init();
-		if (!IdFactory.hasInitialized())
+		Util.printSection("IdManager");
+		IdManager.getInstance();
+		if (!IdManager.hasInitialized())
 		{
 			LOGGER.severe("IdFactory: Could not read object IDs from database. Please check your configuration.");
 			throw new Exception("Could not initialize the ID factory!");
@@ -404,7 +404,7 @@ public class GameServer
 		
 		Util.printSection("Game Server");
 		
-		LOGGER.info("IdFactory: Free ObjectID's remaining: " + IdFactory.size());
+		LOGGER.info("IdFactory: Free ObjectID's remaining: " + IdManager.size());
 		
 		if (Config.ALLOW_WEDDING)
 		{

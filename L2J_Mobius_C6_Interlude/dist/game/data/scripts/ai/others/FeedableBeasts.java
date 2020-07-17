@@ -24,7 +24,7 @@ import org.l2jmobius.commons.util.Rnd;
 import org.l2jmobius.gameserver.ai.CtrlIntention;
 import org.l2jmobius.gameserver.datatables.sql.NpcTable;
 import org.l2jmobius.gameserver.enums.ChatType;
-import org.l2jmobius.gameserver.idfactory.IdFactory;
+import org.l2jmobius.gameserver.instancemanager.IdManager;
 import org.l2jmobius.gameserver.model.Skill;
 import org.l2jmobius.gameserver.model.actor.Attackable;
 import org.l2jmobius.gameserver.model.actor.instance.NpcInstance;
@@ -404,7 +404,7 @@ public class FeedableBeasts extends Quest
 			}
 			
 			final NpcTemplate template = NpcTable.getInstance().getTemplate(nextNpcId);
-			final TamedBeastInstance nextNpc = new TamedBeastInstance(IdFactory.getNextId(), template, player, food, npc.getX(), npc.getY(), npc.getZ());
+			final TamedBeastInstance nextNpc = new TamedBeastInstance(IdManager.getInstance().getNextId(), template, player, food, npc.getX(), npc.getY(), npc.getZ());
 			nextNpc.setRunning();
 			
 			// If player has Q020 going, give quest item

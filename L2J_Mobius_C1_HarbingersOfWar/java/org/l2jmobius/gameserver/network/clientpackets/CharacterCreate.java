@@ -19,7 +19,7 @@ package org.l2jmobius.gameserver.network.clientpackets;
 
 import java.io.IOException;
 
-import org.l2jmobius.gameserver.IdFactory;
+import org.l2jmobius.gameserver.IdManager;
 import org.l2jmobius.gameserver.data.CharNameTable;
 import org.l2jmobius.gameserver.data.CharTemplateTable;
 import org.l2jmobius.gameserver.data.ItemTable;
@@ -89,7 +89,7 @@ public class CharacterCreate extends ClientBasePacket
 	
 	private void initNewChar(ClientThread client, PlayerInstance newChar) throws IOException
 	{
-		newChar.setObjectId(IdFactory.getInstance().getNextId());
+		newChar.setObjectId(IdManager.getInstance().getNextId());
 		World.getInstance().storeObject(newChar);
 		final CharTemplate template = CharTemplateTable.getInstance().getTemplate(newChar.getClassId());
 		newChar.setAccuracy(template.getAcc());

@@ -30,7 +30,7 @@ import java.util.List;
 import java.util.StringTokenizer;
 import java.util.logging.Logger;
 
-import org.l2jmobius.gameserver.IdFactory;
+import org.l2jmobius.gameserver.IdManager;
 import org.l2jmobius.gameserver.data.CharNameTable;
 import org.l2jmobius.gameserver.data.ClanTable;
 import org.l2jmobius.gameserver.data.ItemTable;
@@ -211,7 +211,7 @@ public class ClientThread extends Thread
 			saveFile = new File(_charFolder, cha.getName() + "_warehouse.csv");
 			storeWarehouse(cha, saveFile);
 		}
-		IdFactory.getInstance().saveCurrentState();
+		IdManager.getInstance().saveCurrentState();
 	}
 	
 	private void storeShortcuts(PlayerInstance cha, File saveFile)

@@ -27,7 +27,6 @@ import org.l2jmobius.gameserver.datatables.ItemTable;
 import org.l2jmobius.gameserver.datatables.sql.NpcTable;
 import org.l2jmobius.gameserver.datatables.sql.SpawnTable;
 import org.l2jmobius.gameserver.enums.ChatType;
-import org.l2jmobius.gameserver.idfactory.IdFactory;
 import org.l2jmobius.gameserver.model.World;
 import org.l2jmobius.gameserver.model.WorldObject;
 import org.l2jmobius.gameserver.model.actor.Attackable;
@@ -467,7 +466,7 @@ public class ChristmasManager
 		{
 			final NpcTemplate template1 = NpcTable.getInstance().getTemplate(id);
 			final Spawn spawn = new Spawn(template1);
-			spawn.setId(IdFactory.getNextId());
+			spawn.setId(IdManager.getInstance().getNextId());
 			
 			spawn.setX(x);
 			spawn.setY(y);

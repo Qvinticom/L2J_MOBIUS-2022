@@ -109,7 +109,6 @@ import org.l2jmobius.gameserver.handler.ConditionHandler;
 import org.l2jmobius.gameserver.handler.DailyMissionHandler;
 import org.l2jmobius.gameserver.handler.EffectHandler;
 import org.l2jmobius.gameserver.handler.SkillConditionHandler;
-import org.l2jmobius.gameserver.idfactory.IdFactory;
 import org.l2jmobius.gameserver.instancemanager.AirShipManager;
 import org.l2jmobius.gameserver.instancemanager.AntiFeedManager;
 import org.l2jmobius.gameserver.instancemanager.BoatManager;
@@ -128,6 +127,7 @@ import org.l2jmobius.gameserver.instancemanager.FortSiegeManager;
 import org.l2jmobius.gameserver.instancemanager.GlobalVariablesManager;
 import org.l2jmobius.gameserver.instancemanager.GraciaSeedsManager;
 import org.l2jmobius.gameserver.instancemanager.GrandBossManager;
+import org.l2jmobius.gameserver.instancemanager.IdManager;
 import org.l2jmobius.gameserver.instancemanager.InstanceManager;
 import org.l2jmobius.gameserver.instancemanager.ItemAuctionManager;
 import org.l2jmobius.gameserver.instancemanager.ItemsOnGroundManager;
@@ -211,9 +211,9 @@ public class GameServer
 		printSection("ThreadPool");
 		ThreadPool.init();
 		
-		printSection("IdFactory");
-		IdFactory.init();
-		if (!IdFactory.hasInitialized())
+		printSection("IdManager");
+		IdManager.getInstance();
+		if (!IdManager.hasInitialized())
 		{
 			LOGGER.severe(getClass().getSimpleName() + ": Could not read object IDs from database. Please check your configuration.");
 			throw new Exception("Could not initialize the ID factory!");
@@ -431,7 +431,7 @@ public class GameServer
 		
 		Runtime.getRuntime().addShutdownHook(Shutdown.getInstance());
 		
-		LOGGER.info("IdFactory: Free ObjectID's remaining: " + IdFactory.size());
+		LOGGER.info("IdManager: Free ObjectID's remaining: " + IdManager.size());
 		
 		if ((Config.OFFLINE_TRADE_ENABLE || Config.OFFLINE_CRAFT_ENABLE) && Config.RESTORE_OFFLINERS)
 		{

@@ -22,7 +22,7 @@ import java.util.logging.Level;
 
 import org.l2jmobius.Config;
 import org.l2jmobius.commons.util.Rnd;
-import org.l2jmobius.gameserver.idfactory.IdFactory;
+import org.l2jmobius.gameserver.instancemanager.IdManager;
 import org.l2jmobius.gameserver.model.Location;
 import org.l2jmobius.gameserver.model.World;
 import org.l2jmobius.gameserver.model.actor.Creature;
@@ -75,7 +75,7 @@ public class OlympiadGameTeams extends AbstractOlympiadGame
 			}
 			else
 			{
-				_teamOne[i] = new Participant(IdFactory.getNextId(), 1);
+				_teamOne[i] = new Participant(IdManager.getInstance().getNextId(), 1);
 			}
 			
 			if (i < _teamTwoSize)
@@ -89,7 +89,7 @@ public class OlympiadGameTeams extends AbstractOlympiadGame
 			}
 			else
 			{
-				_teamTwo[i] = new Participant(IdFactory.getNextId(), 2);
+				_teamTwo[i] = new Participant(IdManager.getInstance().getNextId(), 2);
 			}
 		}
 	}
@@ -444,7 +444,7 @@ public class OlympiadGameTeams extends AbstractOlympiadGame
 			}
 			else
 			{
-				IdFactory.releaseId(_teamOne[i].getObjectId());
+				IdManager.getInstance().releaseId(_teamOne[i].getObjectId());
 			}
 			
 			if (i < _teamTwoSize)
@@ -453,7 +453,7 @@ public class OlympiadGameTeams extends AbstractOlympiadGame
 			}
 			else
 			{
-				IdFactory.releaseId(_teamTwo[i].getObjectId());
+				IdManager.getInstance().releaseId(_teamTwo[i].getObjectId());
 			}
 			
 			_teamOne[i] = null;
