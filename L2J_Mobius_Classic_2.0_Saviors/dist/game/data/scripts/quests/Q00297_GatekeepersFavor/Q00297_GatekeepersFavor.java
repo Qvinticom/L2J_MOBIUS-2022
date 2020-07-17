@@ -35,9 +35,10 @@ public class Q00297_GatekeepersFavor extends Quest
 	private static final int WHINSTONE_GOLEM = 20521;
 	// Items
 	private static final int STARSTONE = 1573;
-	private static final int GATEKEEPER_TOKEN = 1659;
+	private static final int GATEKEEPER_TOKEN = 736;
 	// Misc
 	private static final int MIN_LEVEL = 15;
+	private static final int MAX_LEVEL = 21;
 	private static final int STARSTONE_COUT = 20;
 	
 	public Q00297_GatekeepersFavor()
@@ -47,6 +48,7 @@ public class Q00297_GatekeepersFavor extends Quest
 		addTalkId(WIRPHY);
 		addKillId(WHINSTONE_GOLEM);
 		registerQuestItems(STARSTONE);
+		addCondMaxLevel(MAX_LEVEL, "30540-01.htm");
 	}
 	
 	@Override
