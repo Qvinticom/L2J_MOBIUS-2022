@@ -32,7 +32,6 @@ import org.l2jmobius.Config;
 import org.l2jmobius.commons.database.DatabaseFactory;
 import org.l2jmobius.gameserver.data.sql.impl.CharNameTable;
 import org.l2jmobius.gameserver.data.xml.impl.ClassListData;
-import org.l2jmobius.gameserver.data.xml.impl.SkillTreeData;
 import org.l2jmobius.gameserver.enums.Race;
 import org.l2jmobius.gameserver.enums.SubclassInfoType;
 import org.l2jmobius.gameserver.handler.IAdminCommandHandler;
@@ -414,7 +413,10 @@ public class AdminEditChar implements IAdminCommandHandler
 					}
 					
 					final String newclass = ClassListData.getInstance().getClass(player.getClassId()).getClassName();
-					SkillTreeData.getInstance().cleanSkillUponChangeClass(player, true);
+					// if (player.isInCategory(CategoryType.SIXTH_CLASS_GROUP))
+					// {
+					// SkillTreeData.getInstance().cleanSkillUponChangeClass(player, false);
+					// }
 					player.store(false);
 					player.broadcastUserInfo();
 					player.sendSkillList();

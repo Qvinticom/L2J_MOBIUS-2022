@@ -19,13 +19,16 @@ package org.l2jmobius.gameserver.network.clientpackets.classchange;
 import org.l2jmobius.Config;
 import org.l2jmobius.commons.network.PacketReader;
 import org.l2jmobius.gameserver.data.xml.impl.CategoryData;
-import org.l2jmobius.gameserver.data.xml.impl.SkillTreeData;
 import org.l2jmobius.gameserver.enums.CategoryType;
+import org.l2jmobius.gameserver.enums.UserInfoType;
+import org.l2jmobius.gameserver.model.ElementalSpirit;
 import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
 import org.l2jmobius.gameserver.model.base.ClassId;
 import org.l2jmobius.gameserver.network.GameClient;
 import org.l2jmobius.gameserver.network.clientpackets.IClientIncomingPacket;
 import org.l2jmobius.gameserver.network.serverpackets.PlaySound;
+import org.l2jmobius.gameserver.network.serverpackets.UserInfo;
+import org.l2jmobius.gameserver.network.serverpackets.elementalspirits.ElementalSpiritInfo;
 
 /**
  * @author Mobius
@@ -94,11 +97,32 @@ public class ExRequestClassChange implements IClientIncomingPacket
 			{
 				player.setBaseClass(player.getActiveClass());
 			}
-			SkillTreeData.getInstance().cleanSkillUponChangeClass(player, false);
+			
+			// Elemental Spirits.
+			if (player.isInCategory(CategoryType.THIRD_CLASS_GROUP))
+			{
+				if (player.getSpirits() == null)
+				{
+					player.initElementalSpirits();
+				}
+				for (ElementalSpirit spirit : player.getSpirits())
+				{
+					if (spirit.getStage() == 0)
+					{
+						spirit.upgrade();
+					}
+				}
+				final UserInfo userInfo = new UserInfo(player);
+				userInfo.addComponentType(UserInfoType.ATT_SPIRITS);
+				player.sendPacket(userInfo);
+				player.sendPacket(new ElementalSpiritInfo(player, player.getActiveElementalSpiritType(), (byte) 0x01));
+			}
+			
 			if (Config.AUTO_LEARN_SKILLS)
 			{
 				player.giveAvailableSkills(Config.AUTO_LEARN_FS_SKILLS, true);
 			}
+			
 			player.store(false); // Save player cause if server crashes before this char is saved, he will lose class.
 			player.broadcastUserInfo();
 			player.sendSkillList();

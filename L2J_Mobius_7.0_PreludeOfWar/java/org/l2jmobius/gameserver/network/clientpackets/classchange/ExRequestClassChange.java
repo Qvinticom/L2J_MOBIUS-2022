@@ -102,18 +102,21 @@ public class ExRequestClassChange implements IClientIncomingPacket
 			{
 				player.setBaseClass(player.getActiveClass());
 			}
-			SkillTreeData.getInstance().cleanSkillUponChangeClass(player, false);
+			
 			if (player.isInCategory(CategoryType.SIXTH_CLASS_GROUP))
 			{
+				SkillTreeData.getInstance().cleanSkillUponChangeClass(player, false); // TODO: Move to skill learn method?
 				for (SkillLearn skill : SkillTreeData.getInstance().getRaceSkillTree(player.getRace()))
 				{
 					player.addSkill(SkillData.getInstance().getSkill(skill.getSkillId(), skill.getSkillLevel()), true);
 				}
 			}
+			
 			if (Config.AUTO_LEARN_SKILLS)
 			{
 				player.giveAvailableSkills(Config.AUTO_LEARN_FS_SKILLS, Config.AUTO_LEARN_FP_SKILLS, true);
 			}
+			
 			player.store(false); // Save player cause if server crashes before this char is saved, he will lose class.
 			player.broadcastUserInfo();
 			player.sendSkillList();
