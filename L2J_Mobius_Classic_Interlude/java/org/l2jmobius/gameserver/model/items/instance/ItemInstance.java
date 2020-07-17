@@ -1695,12 +1695,6 @@ public class ItemInstance extends WorldObject
 				ps.executeUpdate();
 			}
 			
-			try (PreparedStatement ps = con.prepareStatement("DELETE FROM item_special_abilities WHERE objectId = ?"))
-			{
-				ps.setInt(1, getObjectId());
-				ps.executeUpdate();
-			}
-			
 			try (PreparedStatement ps = con.prepareStatement("DELETE FROM item_variables WHERE id = ?"))
 			{
 				ps.setInt(1, getObjectId());

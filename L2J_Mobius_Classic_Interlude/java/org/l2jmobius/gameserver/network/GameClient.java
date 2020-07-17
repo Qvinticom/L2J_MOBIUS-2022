@@ -474,12 +474,6 @@ public class GameClient extends ChannelInboundHandler<GameClient>
 				ps.execute();
 			}
 			
-			try (PreparedStatement ps = con.prepareStatement("DELETE FROM item_special_abilities WHERE objectId IN (SELECT object_id FROM items WHERE items.owner_id=?)"))
-			{
-				ps.setInt(1, objid);
-				ps.execute();
-			}
-			
 			try (PreparedStatement ps = con.prepareStatement("DELETE FROM item_variables WHERE id IN (SELECT object_id FROM items WHERE items.owner_id=?)"))
 			{
 				ps.setInt(1, objid);
