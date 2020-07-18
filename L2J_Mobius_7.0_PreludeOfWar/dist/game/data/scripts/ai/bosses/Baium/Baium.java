@@ -200,6 +200,7 @@ public class Baium extends AbstractNpcAI
 					setStatus(IN_FIGHT);
 					_baium = (GrandBossInstance) addSpawn(BAIUM, BAIUM_LOC, false, 0);
 					_baium.disableCoreAI(true);
+					_baium.setRandomWalking(false);
 					addBoss(_baium);
 					_lastAttack = System.currentTimeMillis();
 					startQuestTimer("WAKEUP_ACTION", 50, _baium, null);
@@ -277,6 +278,7 @@ public class Baium extends AbstractNpcAI
 			case "SPAWN_ARCHANGEL":
 			{
 				_baium.disableCoreAI(false);
+				_baium.setRandomWalking(true);
 				
 				for (Location loc : ARCHANGEL_LOC)
 				{

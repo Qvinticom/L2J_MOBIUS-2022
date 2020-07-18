@@ -268,6 +268,8 @@ public class Antharas extends AbstractNpcAI
 			}
 			case "SPAWN_ANTHARAS":
 			{
+				_antharas.disableCoreAI(true);
+				_antharas.setRandomWalking(false);
 				_antharas.teleToLocation(181323, 114850, -7623, 32542);
 				setStatus(IN_FIGHT);
 				_lastAttack = System.currentTimeMillis();
@@ -314,6 +316,9 @@ public class Antharas extends AbstractNpcAI
 			}
 			case "START_MOVE":
 			{
+				_antharas.disableCoreAI(false);
+				_antharas.setRandomWalking(true);
+				
 				for (PlayerInstance players : World.getInstance().getVisibleObjectsInRange(npc, PlayerInstance.class, 4000))
 				{
 					if (players.isHero())
