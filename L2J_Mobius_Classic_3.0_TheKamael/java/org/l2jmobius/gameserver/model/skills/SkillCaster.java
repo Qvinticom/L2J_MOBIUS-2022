@@ -99,7 +99,7 @@ public class SkillCaster implements Runnable
 	private ScheduledFuture<?> _task;
 	private int _phase;
 	
-	private SkillCaster(Creature caster, WorldObject target, Skill skill, ItemInstance item, SkillCastingType castingType, boolean ctrlPressed, boolean shiftPressed)
+	private SkillCaster(Creature caster, WorldObject target, Skill skill, ItemInstance item, SkillCastingType castingType, boolean ctrlPressed, boolean shiftPressed, int castTime)
 	{
 		Objects.requireNonNull(caster);
 		Objects.requireNonNull(skill);
@@ -111,7 +111,7 @@ public class SkillCaster implements Runnable
 		_item = item;
 		_castingType = castingType;
 		
-		calcSkillTiming(caster, skill);
+		calcSkillTiming(caster, skill, castTime);
 	}
 	
 	/**
@@ -174,7 +174,7 @@ public class SkillCaster implements Runnable
 		}
 		
 		// Schedule a thread that will execute 500ms before casting time is over (for animation issues and retail handling).
-		final SkillCaster skillCaster = new SkillCaster(caster, target, skill, item, castingType, ctrlPressed, shiftPressed);
+		final SkillCaster skillCaster = new SkillCaster(caster, target, skill, item, castingType, ctrlPressed, shiftPressed, castTime);
 		skillCaster.run();
 		return skillCaster;
 	}
@@ -766,7 +766,7 @@ public class SkillCaster implements Runnable
 		}
 	}
 	
-	private void calcSkillTiming(Creature creature, Skill skill)
+	private void calcSkillTiming(Creature creature, Skill skill, int castTime)
 	{
 		final double timeFactor = Formulas.calcSkillTimeFactor(creature, skill);
 		final double cancelTime = Formulas.calcSkillCancelTime(creature, skill);
@@ -777,7 +777,14 @@ public class SkillCaster implements Runnable
 		}
 		else
 		{
-			_hitTime = (int) Math.max((skill.getHitTime() / timeFactor) - cancelTime, 0);
+			if (castTime > -1)
+			{
+				_hitTime = (int) Math.max((castTime / timeFactor) - cancelTime, 0);
+			}
+			else
+			{
+				_hitTime = (int) Math.max((skill.getHitTime() / timeFactor) - cancelTime, 0);
+			}
 			_cancelTime = (int) cancelTime;
 		}
 		_coolTime = (int) (skill.getCoolTime() / timeFactor); // cooltimeMillis / timeFactor
