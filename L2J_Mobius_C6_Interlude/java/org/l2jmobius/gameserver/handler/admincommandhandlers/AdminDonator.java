@@ -61,7 +61,6 @@ public class AdminDonator implements IAdminCommandHandler
 				{
 					targetPlayer.setDonator(true);
 					targetPlayer.updateNameTitleColor();
-					targetPlayer.getVariables().set("CustomDonator", true);
 					targetPlayer.getVariables().set("CustomDonatorEnd", System.currentTimeMillis() + donatorTime);
 					targetPlayer.sendMessage(activeChar.getName() + " has granted you donator status!");
 					activeChar.sendMessage("You have granted donator status to " + targetPlayer.getName());
@@ -73,7 +72,6 @@ public class AdminDonator implements IAdminCommandHandler
 				{
 					targetPlayer.setDonator(false);
 					targetPlayer.updateNameTitleColor();
-					targetPlayer.getVariables().set("CustomDonator", false);
 					targetPlayer.getVariables().remove("CustomDonatorEnd");
 					targetPlayer.sendMessage(activeChar.getName() + " has revoked donator status from you!");
 					activeChar.sendMessage("You have revoked donator status from " + targetPlayer.getName());

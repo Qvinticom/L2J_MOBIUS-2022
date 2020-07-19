@@ -14886,8 +14886,14 @@ public class PlayerInstance extends Playable
 	
 	public void restoreCustomStatus()
 	{
+		final long currentTime = System.currentTimeMillis();
+		if (getVariables().getLong("CustomDonatorEnd", 0) > currentTime)
+		{
+			setDonator(true);
+		}
+		
 		final long heroEnd = getVariables().getLong("CustomHeroEnd", 0);
-		if (getVariables().getBoolean("CustomHero", false) && ((heroEnd == 0) || (heroEnd > System.currentTimeMillis())))
+		if (getVariables().getBoolean("CustomHero", false) && ((heroEnd == 0) || (heroEnd > currentTime)))
 		{
 			setHero(true);
 		}
@@ -14900,12 +14906,6 @@ public class PlayerInstance extends Playable
 		if (getVariables().getBoolean("CustomNoble", false))
 		{
 			setNoble(true);
-		}
-		
-		final long donatorEnd = getVariables().getLong("CustomDonatorEnd", 0);
-		if (getVariables().getBoolean("CustomDonator", false) && ((donatorEnd == 0) || (donatorEnd > System.currentTimeMillis())))
-		{
-			setDonator(true);
 		}
 	}
 	
