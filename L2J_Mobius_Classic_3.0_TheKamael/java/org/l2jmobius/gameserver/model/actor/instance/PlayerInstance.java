@@ -6538,7 +6538,7 @@ public class PlayerInstance extends Playable
 					player.setSponsor(rset.getInt("sponsor"));
 					player.setLvlJoinedAcademy(rset.getInt("lvl_joined_academy"));
 					
-					if ((player.getLevel() >= 76) && (player.getClassId().level() > 2))
+					if ((player.getLevel() >= 40) && (player.getClassId().level() > 1))
 					{
 						player.initElementalSpirits();
 					}
