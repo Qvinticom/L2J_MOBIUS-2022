@@ -24,6 +24,7 @@ import org.l2jmobius.gameserver.model.WorldObject;
 import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
 import org.l2jmobius.gameserver.network.serverpackets.SocialAction;
 import org.l2jmobius.gameserver.util.BuilderUtil;
+import org.l2jmobius.gameserver.util.Util;
 
 public class AdminDonator implements IAdminCommandHandler
 {
@@ -48,8 +49,7 @@ public class AdminDonator implements IAdminCommandHandler
 			if (target instanceof PlayerInstance)
 			{
 				final PlayerInstance targetPlayer = (PlayerInstance) target;
-				final boolean newDonator = !targetPlayer.isDonator();
-				if (newDonator)
+				if (!targetPlayer.isDonator())
 				{
 					targetPlayer.setDonator(true);
 					targetPlayer.updateNameTitleColor();
@@ -59,6 +59,14 @@ public class AdminDonator implements IAdminCommandHandler
 					AdminData.broadcastMessageToGMs("Warn: " + activeChar.getName() + " has set " + targetPlayer.getName() + " as donator !");
 					targetPlayer.broadcastPacket(new SocialAction(targetPlayer.getObjectId(), 16));
 					targetPlayer.broadcastUserInfo();
+					
+					// Optional duration in days parameter.
+					final String value = command.replace("admin_setdonator ", "");
+					if (Util.isDigit(value))
+					{
+						final long donatorTime = Long.valueOf(value) * 24 * 60 * 60 * 1000;
+						targetPlayer.getVariables().set("CustomDonatorEnd", donatorTime == 0 ? 0 : System.currentTimeMillis() + donatorTime);
+					}
 				}
 				else
 				{
@@ -69,6 +77,9 @@ public class AdminDonator implements IAdminCommandHandler
 					activeChar.sendMessage("You have revoked donator status from " + targetPlayer.getName());
 					AdminData.broadcastMessageToGMs("Warn: " + activeChar.getName() + " has removed donator status from player" + targetPlayer.getName());
 					targetPlayer.broadcastUserInfo();
+					
+					// Optional duration in days parameter.
+					targetPlayer.getVariables().remove("CustomDonatorEnd");
 				}
 			}
 			else

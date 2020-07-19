@@ -14547,7 +14547,8 @@ public class PlayerInstance extends Playable
 			setNoble(true);
 		}
 		
-		if (getVariables().getBoolean("CustomDonator", false))
+		final long donatorEnd = getVariables().getLong("CustomDonatorEnd", 0);
+		if (getVariables().getBoolean("CustomDonator", false) && ((donatorEnd == 0) || (donatorEnd > System.currentTimeMillis())))
 		{
 			setDonator(true);
 		}
