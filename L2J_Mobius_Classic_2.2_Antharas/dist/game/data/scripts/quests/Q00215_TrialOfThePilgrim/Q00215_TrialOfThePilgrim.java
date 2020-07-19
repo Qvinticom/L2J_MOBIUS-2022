@@ -144,10 +144,10 @@ public class Q00215_TrialOfThePilgrim extends Quest
 			{
 				if (qs.isMemoState(6) && hasQuestItems(player, TAG_OF_RUMOR))
 				{
-					if (getQuestItemsCount(player, ADENA) >= 100000)
+					if (getQuestItemsCount(player, ADENA) >= 5000)
 					{
 						giveItems(player, BOOK_OF_GERALD, 1);
-						takeItems(player, ADENA, 100000);
+						takeItems(player, ADENA, 5000);
 						qs.setMemoState(7);
 						htmltext = event;
 					}
@@ -263,9 +263,8 @@ public class Q00215_TrialOfThePilgrim extends Quest
 						}
 						else
 						{
-							giveAdena(player, 229298, true);
 							giveItems(player, MARK_OF_PILGRIM, 1);
-							addExpAndSp(player, 1258250, 81606);
+							addExpAndSp(player, 133300, 0);
 							qs.exitQuest(false, true);
 							player.sendPacket(new SocialAction(player.getObjectId(), 3));
 							htmltext = "30648-10.html";
@@ -463,7 +462,7 @@ public class Q00215_TrialOfThePilgrim extends Quest
 					}
 					else if (hasQuestItems(player, GREY_BADGE, BOOK_OF_GERALD))
 					{
-						giveAdena(player, 100000, true);
+						giveAdena(player, 5000, true);
 						takeItems(player, BOOK_OF_GERALD, 1);
 						htmltext = "30650-04.html";
 					}
