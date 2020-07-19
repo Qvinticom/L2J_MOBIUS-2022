@@ -45,41 +45,40 @@ public class AdminDonator implements IAdminCommandHandler
 		
 		if (command.startsWith("admin_setdonator"))
 		{
-			final WorldObject target = activeChar.getTarget();
-			if (target instanceof PlayerInstance)
+			final String value = command.replace("admin_setdonator ", "");
+			if (!Util.isDigit(value))
 			{
-				final PlayerInstance targetPlayer = (PlayerInstance) target;
-				if (!targetPlayer.isDonator())
+				BuilderUtil.sendSysMessage(activeChar, "Syntax: //setdonator [duration in days / 0 to remove]");
+				return false;
+			}
+			
+			final WorldObject target = activeChar.getTarget();
+			if (target.isPlayer())
+			{
+				final PlayerInstance targetPlayer = target.getActingPlayer();
+				final long donatorTime = Long.valueOf(value) * 24 * 60 * 60 * 1000;
+				if (donatorTime > 0)
 				{
 					targetPlayer.setDonator(true);
 					targetPlayer.updateNameTitleColor();
 					targetPlayer.getVariables().set("CustomDonator", true);
+					targetPlayer.getVariables().set("CustomDonatorEnd", System.currentTimeMillis() + donatorTime);
 					targetPlayer.sendMessage(activeChar.getName() + " has granted you donator status!");
 					activeChar.sendMessage("You have granted donator status to " + targetPlayer.getName());
 					AdminData.broadcastMessageToGMs("Warn: " + activeChar.getName() + " has set " + targetPlayer.getName() + " as donator !");
 					targetPlayer.broadcastPacket(new SocialAction(targetPlayer.getObjectId(), 16));
 					targetPlayer.broadcastUserInfo();
-					
-					// Optional duration in days parameter.
-					final String value = command.replace("admin_setdonator ", "");
-					if (Util.isDigit(value))
-					{
-						final long donatorTime = Long.valueOf(value) * 24 * 60 * 60 * 1000;
-						targetPlayer.getVariables().set("CustomDonatorEnd", donatorTime == 0 ? 0 : System.currentTimeMillis() + donatorTime);
-					}
 				}
 				else
 				{
 					targetPlayer.setDonator(false);
 					targetPlayer.updateNameTitleColor();
 					targetPlayer.getVariables().set("CustomDonator", false);
+					targetPlayer.getVariables().remove("CustomDonatorEnd");
 					targetPlayer.sendMessage(activeChar.getName() + " has revoked donator status from you!");
 					activeChar.sendMessage("You have revoked donator status from " + targetPlayer.getName());
 					AdminData.broadcastMessageToGMs("Warn: " + activeChar.getName() + " has removed donator status from player" + targetPlayer.getName());
 					targetPlayer.broadcastUserInfo();
-					
-					// Optional duration in days parameter.
-					targetPlayer.getVariables().remove("CustomDonatorEnd");
 				}
 			}
 			else
