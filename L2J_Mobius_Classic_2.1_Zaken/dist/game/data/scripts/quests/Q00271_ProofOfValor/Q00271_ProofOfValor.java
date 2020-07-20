@@ -38,9 +38,10 @@ public class Q00271_ProofOfValor extends Quest
 	private static final int KASHA_WOLF = 20475;
 	// Rewards
 	private static final int HEALING_POTION = 1539;
-	private static final int NECKLACE_OF_VALOR = 49039;
+	private static final int NECKLACE_OF_VALOR = 1507;
 	// Misc
 	private static final int MIN_LVL = 4;
+	private static final int MAX_LEVEL = 8;
 	
 	public Q00271_ProofOfValor()
 	{
@@ -49,6 +50,7 @@ public class Q00271_ProofOfValor extends Quest
 		addTalkId(RUKAIN);
 		addKillId(KASHA_WOLF);
 		registerQuestItems(KASHA_WOLF_FANG);
+		addCondMaxLevel(MAX_LEVEL, "30577-02.htm");
 	}
 	
 	@Override
