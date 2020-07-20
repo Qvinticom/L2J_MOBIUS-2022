@@ -195,6 +195,11 @@ public class OlympiadManager
 			return false;
 		}
 		
+		if (isRegistered(player, player, true) || isInCompetition(player, player, true))
+		{
+			return false;
+		}
+		
 		StatSet statDat = Olympiad.getNobleStats(charId);
 		if (statDat == null)
 		{
