@@ -604,8 +604,7 @@ public class EffectList
 		{
 			_hiddenBuffs.decrementAndGet();
 		}
-		// Removes the buff from the stack.
-		else
+		else // Removes the buff from the stack.
 		{
 			_stackedEffects.remove(info.getSkill().getAbnormalType());
 		}
@@ -1426,8 +1425,7 @@ public class EffectList
 		{
 			stopSkillEffects(false, skill);
 		}
-		// Verify stacked skills.
-		else
+		else // Verify stacked skills.
 		{
 			synchronized (this)
 			{
@@ -1437,34 +1435,25 @@ public class EffectList
 					// Skills are only replaced if the incoming buff has greater or equal abnormal level.
 					if ((stackedInfo != null) && (skill.getAbnormalLvl() >= stackedInfo.getSkill().getAbnormalLvl()))
 					{
+						stopSkillEffects(false, skill.getAbnormalType());
+						
 						// If it is an herb, set as not in use the lesser buff.
 						// Effect will be present in the effect list.
 						// Effects stats are removed and onActionTime() is not called.
 						// But finish task continues to run, and ticks as well.
-						if (skill.isAbnormalInstant())
+						if (stackedInfo.getSkill().isAbnormalInstant())
 						{
-							if (stackedInfo.getSkill().isAbnormalInstant())
-							{
-								stopSkillEffects(false, skill.getAbnormalType());
-								stackedInfo = _stackedEffects.get(skill.getAbnormalType());
-							}
-							
-							if (stackedInfo != null)
-							{
-								stackedInfo.setInUse(false);
-								// Remove stats
-								stackedInfo.removeStats();
-								_hiddenBuffs.incrementAndGet();
-							}
+							stackedInfo = _stackedEffects.get(skill.getAbnormalType());
 						}
-						// Remove buff that will stack with the abnormal type.
-						else
+						
+						if (stackedInfo != null)
 						{
-							stopSkillEffects(false, skill.getAbnormalType());
+							stackedInfo.setInUse(false);
+							stackedInfo.removeStats();
+							_hiddenBuffs.incrementAndGet();
 						}
 					}
-					// If the new buff is a lesser buff, then don't add it.
-					else
+					else // If the new buff is a lesser buff, then don't add it.
 					{
 						return;
 					}
