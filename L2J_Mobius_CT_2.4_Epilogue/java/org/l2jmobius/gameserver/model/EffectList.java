@@ -1434,22 +1434,33 @@ public class EffectList
 					// Skills are only replaced if the incoming buff has greater or equal abnormal level.
 					if ((stackedInfo != null) && (skill.getAbnormalLvl() >= stackedInfo.getSkill().getAbnormalLvl()))
 					{
-						stopSkillEffects(false, skill.getAbnormalType());
-						
 						// If it is an herb, set as not in use the lesser buff.
 						// Effect will be present in the effect list.
 						// Effects stats are removed and onActionTime() is not called.
 						// But finish task continues to run, and ticks as well.
-						if (stackedInfo.getSkill().isAbnormalInstant())
+						if (skill.isAbnormalInstant())
 						{
-							stackedInfo = _stackedEffects.get(skill.getAbnormalType());
+							if (stackedInfo.getSkill().isAbnormalInstant())
+							{
+								stopSkillEffects(false, skill.getAbnormalType());
+								stackedInfo = _stackedEffects.get(skill.getAbnormalType());
+							}
+							
+							if (stackedInfo != null)
+							{
+								stackedInfo.setInUse(false);
+								// Remove stats
+								stackedInfo.removeStats();
+								_hiddenBuffs.incrementAndGet();
+							}
 						}
-						
-						if (stackedInfo != null)
+						else // Remove buff that will stack with the abnormal type.
 						{
-							stackedInfo.setInUse(false);
-							stackedInfo.removeStats();
-							_hiddenBuffs.incrementAndGet();
+							if (stackedInfo.getSkill().isAbnormalInstant())
+							{
+								stopSkillEffects(false, skill.getAbnormalType());
+							}
+							stopSkillEffects(false, skill.getAbnormalType());
 						}
 					}
 					else // If the new buff is a lesser buff, then don't add it.
