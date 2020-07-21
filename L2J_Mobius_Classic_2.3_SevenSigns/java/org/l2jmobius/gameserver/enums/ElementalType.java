@@ -64,15 +64,15 @@ public enum ElementalType
 			}
 			case WATER:
 			{
-				return EARTH;
+				return WIND;
 			}
 			case WIND:
 			{
-				return FIRE;
+				return EARTH;
 			}
 			case EARTH:
 			{
-				return WIND;
+				return FIRE;
 			}
 			default:
 			{
