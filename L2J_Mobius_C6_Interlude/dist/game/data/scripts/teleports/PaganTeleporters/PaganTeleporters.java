@@ -26,6 +26,7 @@ public class PaganTeleporters extends Quest
 {
 	// Items
 	private static final int VISITOR_MARK = 8064;
+	private static final int FADED_VISITOR_MARK = 8065;
 	private static final int PAGAN_MARK = 8067;
 	
 	public PaganTeleporters()
@@ -66,6 +67,12 @@ public class PaganTeleporters extends Quest
 			case 32034:
 				if (st.hasQuestItems(VISITOR_MARK) || st.hasQuestItems(PAGAN_MARK))
 				{
+					if (st.hasQuestItems(VISITOR_MARK))
+					{
+						st.takeItems(VISITOR_MARK, -1);
+						st.giveItems(FADED_VISITOR_MARK, 1);
+					}
+					
 					DoorData.getInstance().getDoor(19160001).openMe();
 					startQuestTimer("Close_Door1", 10000, npc, player, false);
 					htmltext = "FadedMark.htm";
