@@ -227,7 +227,7 @@ public class Q00660_AidingTheFloranVillage extends Quest
 					tradeItems(player, 500, itemCount1, itemCount2, itemCount3);
 					if (getRandom(100) >= 50)
 					{
-						giveItems(player, SCROLL_ENCHANT_ARMOR_D_GRADE, 1);
+						giveItems(player, SCROLL_ENCHANT_WEAPON_D_GRADE, 1);
 						giveAdena(player, ADENA_REWARD_5, true);
 						htmltext = event;
 					}
