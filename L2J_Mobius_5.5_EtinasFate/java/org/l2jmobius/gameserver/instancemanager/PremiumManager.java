@@ -51,30 +51,30 @@ public class PremiumManager
 	
 	class PremiumExpireTask implements Runnable
 	{
-		final PlayerInstance player;
+		final PlayerInstance _player;
 		
 		PremiumExpireTask(PlayerInstance player)
 		{
-			this.player = player;
+			_player = player;
 		}
 		
 		@Override
 		public void run()
 		{
-			player.setPremiumStatus(false);
+			_player.setPremiumStatus(false);
 		}
 	}
 	
 	// Data Cache
-	private final Map<String, Long> premiumData = new ConcurrentHashMap<>();
+	private final Map<String, Long> _premiumData = new ConcurrentHashMap<>();
 	
 	// expireTasks
-	private final Map<String, ScheduledFuture<?>> expiretasks = new ConcurrentHashMap<>();
+	private final Map<String, ScheduledFuture<?>> _expiretasks = new ConcurrentHashMap<>();
 	
 	// Listeners
-	private final ListenersContainer listenerContainer = Containers.Players();
+	private final ListenersContainer _listenerContainer = Containers.Players();
 	
-	private final Consumer<OnPlayerLogin> playerLoginEvent = event ->
+	private final Consumer<OnPlayerLogin> _playerLoginEvent = event ->
 	{
 		final PlayerInstance player = event.getPlayer();
 		final String accountName = player.getAccountName();
@@ -92,16 +92,15 @@ public class PremiumManager
 		}
 	};
 	
-	private final Consumer<OnPlayerLogout> playerLogoutEvent = event ->
+	private final Consumer<OnPlayerLogout> _playerLogoutEvent = event ->
 	{
-		final PlayerInstance player = event.getPlayer();
-		stopExpireTask(player);
+		stopExpireTask(event.getPlayer());
 	};
 	
 	protected PremiumManager()
 	{
-		listenerContainer.addListener(new ConsumerEventListener(listenerContainer, EventType.ON_PLAYER_LOGIN, playerLoginEvent, this));
-		listenerContainer.addListener(new ConsumerEventListener(listenerContainer, EventType.ON_PLAYER_LOGOUT, playerLogoutEvent, this));
+		_listenerContainer.addListener(new ConsumerEventListener(_listenerContainer, EventType.ON_PLAYER_LOGIN, _playerLoginEvent, this));
+		_listenerContainer.addListener(new ConsumerEventListener(_listenerContainer, EventType.ON_PLAYER_LOGOUT, _playerLogoutEvent, this));
 	}
 	
 	/**
@@ -110,8 +109,7 @@ public class PremiumManager
 	 */
 	private void startExpireTask(PlayerInstance player, long delay)
 	{
-		final ScheduledFuture<?> task = ThreadPool.schedule(new PremiumExpireTask(player), delay);
-		expiretasks.put(player.getAccountName(), task);
+		_expiretasks.put(player.getAccountName(), ThreadPool.schedule(new PremiumExpireTask(player), delay));
 	}
 	
 	/**
@@ -119,7 +117,7 @@ public class PremiumManager
 	 */
 	private void stopExpireTask(PlayerInstance player)
 	{
-		ScheduledFuture<?> task = expiretasks.remove(player.getAccountName());
+		ScheduledFuture<?> task = _expiretasks.remove(player.getAccountName());
 		if (task != null)
 		{
 			task.cancel(false);
@@ -137,7 +135,7 @@ public class PremiumManager
 			{
 				while (rset.next())
 				{
-					premiumData.put(rset.getString(1), rset.getLong(2));
+					_premiumData.put(rset.getString(1), rset.getLong(2));
 				}
 			}
 		}
@@ -149,7 +147,7 @@ public class PremiumManager
 	
 	public long getPremiumExpiration(String accountName)
 	{
-		return premiumData.getOrDefault(accountName, 0L);
+		return _premiumData.getOrDefault(accountName, 0L);
 	}
 	
 	public void addPremiumTime(String accountName, int timeValue, TimeUnit timeUnit)
@@ -174,7 +172,7 @@ public class PremiumManager
 		}
 		
 		// UPDATE CACHE
-		premiumData.put(accountName, newPremiumExpiration);
+		_premiumData.put(accountName, newPremiumExpiration);
 		
 		// UPDATE PlAYER PREMIUMSTATUS
 		for (PlayerInstance player : World.getInstance().getPlayers())
@@ -208,7 +206,7 @@ public class PremiumManager
 		}
 		
 		// UPDATE CACHE
-		premiumData.remove(accountName);
+		_premiumData.remove(accountName);
 		
 		// UPDATE DATABASE
 		try (Connection con = DatabaseFactory.getConnection();
