@@ -27,7 +27,7 @@ import org.l2jmobius.gameserver.model.zone.ZoneType;
  */
 public class NoRestartZone extends ZoneType
 {
-	public NoRestartZone(final int id)
+	public NoRestartZone(int id)
 	{
 		super(id);
 	}

@@ -700,7 +700,7 @@ public class AttackableAI extends CreatureAI
 				
 				// Call friendly npcs for help only if this NPC was attacked by the target creature.
 				boolean targetExistsInAttackByList = false;
-				for (final WeakReference<Creature> reference : npc.getAttackByList())
+				for (WeakReference<Creature> reference : npc.getAttackByList())
 				{
 					if (reference.get() == finalTarget)
 					{

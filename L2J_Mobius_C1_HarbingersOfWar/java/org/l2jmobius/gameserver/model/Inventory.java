@@ -91,7 +91,7 @@ public class Inventory
 	
 	public ItemInstance findItemByItemId(int itemId)
 	{
-		for (final ItemInstance temp : _items)
+		for (ItemInstance temp : _items)
 		{
 			if (temp.getItemId() != itemId)
 			{
@@ -426,7 +426,7 @@ public class Inventory
 	
 	public ItemInstance getItem(int objectId)
 	{
-		for (final ItemInstance temp : _items)
+		for (ItemInstance temp : _items)
 		{
 			if (temp.getObjectId() != objectId)
 			{

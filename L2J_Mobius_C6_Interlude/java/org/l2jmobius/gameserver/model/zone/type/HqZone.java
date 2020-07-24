@@ -27,13 +27,13 @@ import org.l2jmobius.gameserver.model.zone.ZoneType;
  */
 public class HqZone extends ZoneType
 {
-	public HqZone(final int id)
+	public HqZone(int id)
 	{
 		super(id);
 	}
 	
 	@Override
-	protected void onEnter(final Creature character)
+	protected void onEnter(Creature character)
 	{
 		if (character instanceof PlayerInstance)
 		{
@@ -42,7 +42,7 @@ public class HqZone extends ZoneType
 	}
 	
 	@Override
-	protected void onExit(final Creature character)
+	protected void onExit(Creature character)
 	{
 		if (character instanceof PlayerInstance)
 		{
@@ -51,12 +51,12 @@ public class HqZone extends ZoneType
 	}
 	
 	@Override
-	public void onDieInside(final Creature character)
+	public void onDieInside(Creature character)
 	{
 	}
 	
 	@Override
-	public void onReviveInside(final Creature character)
+	public void onReviveInside(Creature character)
 	{
 	}
 }

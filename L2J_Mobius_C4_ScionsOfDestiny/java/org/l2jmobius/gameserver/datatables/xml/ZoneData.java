@@ -160,7 +160,7 @@ public class ZoneData
 		LOGGER.info(getClass().getSimpleName() + ": Loaded " + _classZones.size() + " zones classes and total " + size + " zones.");
 	}
 	
-	private void loadFileZone(final File f, WorldRegion[][] worldRegions) throws Exception
+	private void loadFileZone(File f, WorldRegion[][] worldRegions) throws Exception
 	{
 		Document doc = null;
 		final DocumentBuilderFactory factory = DocumentBuilderFactory.newInstance();

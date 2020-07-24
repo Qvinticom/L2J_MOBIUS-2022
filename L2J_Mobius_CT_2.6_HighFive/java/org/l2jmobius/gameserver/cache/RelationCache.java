@@ -24,7 +24,7 @@ public final class RelationCache
 	private final int _relation;
 	private final boolean _isAutoAttackable;
 	
-	public RelationCache(final int relation, final boolean isAutoAttackable)
+	public RelationCache(int relation, boolean isAutoAttackable)
 	{
 		_relation = relation;
 		_isAutoAttackable = isAutoAttackable;

@@ -706,7 +706,7 @@ public class Castle
 			return null;
 		}
 		
-		for (final DoorInstance door : _doors)
+		for (DoorInstance door : _doors)
 		{
 			if (door.getDoorId() == doorId)
 			{
