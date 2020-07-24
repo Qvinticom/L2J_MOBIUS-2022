@@ -17119,8 +17119,8 @@ public class NpcStringId
 	@ClientString(id = 1010056, message = "Entrance to the Sea of Spores")
 	public static NpcStringId ENTRANCE_TO_THE_SEA_OF_SPORES;
 	
-	@ClientString(id = 1010057, message = "Ancient Battleground (Lv. 60)")
-	public static NpcStringId ANCIENT_BATTLEGROUND_LV_60;
+	@ClientString(id = 1010057, message = "Ancient Battleground (Lv. 64)")
+	public static NpcStringId ANCIENT_BATTLEGROUND_LV_64;
 	
 	@ClientString(id = 1010058, message = "Entrance to Enchanted Valley")
 	public static NpcStringId ENTRANCE_TO_ENCHANTED_VALLEY;
@@ -17149,8 +17149,8 @@ public class NpcStringId
 	@ClientString(id = 1010066, message = "Entrance to the Tanor Silenos Barracks")
 	public static NpcStringId ENTRANCE_TO_THE_TANOR_SILENOS_BARRACKS;
 	
-	@ClientString(id = 1010067, message = "Dragon Valley (Lv. 56)")
-	public static NpcStringId DRAGON_VALLEY_LV_56;
+	@ClientString(id = 1010067, message = "Dragon Valley (Lv. 45)")
+	public static NpcStringId DRAGON_VALLEY_LV_45;
 	
 	@ClientString(id = 1010068, message = "Oracle of Dawn")
 	public static NpcStringId ORACLE_OF_DAWN;
@@ -17215,11 +17215,11 @@ public class NpcStringId
 	@ClientString(id = 1010088, message = "Entrance to Dragon Valley")
 	public static NpcStringId ENTRANCE_TO_DRAGON_VALLEY;
 	
-	@ClientString(id = 1010089, message = "Field of Silence (Lv. 81)")
-	public static NpcStringId FIELD_OF_SILENCE_LV_81;
+	@ClientString(id = 1010089, message = "Field of Silence (Lv. 35)")
+	public static NpcStringId FIELD_OF_SILENCE_LV_35;
 	
-	@ClientString(id = 1010090, message = "Field of Whispers (Lv. 81)")
-	public static NpcStringId FIELD_OF_WHISPERS_LV_81;
+	@ClientString(id = 1010090, message = "Field of Whispers (Lv. 35)")
+	public static NpcStringId FIELD_OF_WHISPERS_LV_35;
 	
 	@ClientString(id = 1010091, message = "Entrance to the Alligator Island")
 	public static NpcStringId ENTRANCE_TO_THE_ALLIGATOR_ISLAND;
@@ -17233,14 +17233,14 @@ public class NpcStringId
 	@ClientString(id = 1010094, message = "Windy Hill (Lv. 26)")
 	public static NpcStringId WINDY_HILL_LV_26;
 	
-	@ClientString(id = 1010095, message = "Orc Barracks (Lv. 35)")
-	public static NpcStringId ORC_BARRACKS_LV_35;
+	@ClientString(id = 1010095, message = "Orc Barracks (Lv. 24)")
+	public static NpcStringId ORC_BARRACKS_LV_24;
 	
 	@ClientString(id = 1010096, message = "Fellmere Harvesting Grounds (Lv. 17)")
 	public static NpcStringId FELLMERE_HARVESTING_GROUNDS_LV_17;
 	
-	@ClientString(id = 1010097, message = "Ruins of Agony (Lv. 25)")
-	public static NpcStringId RUINS_OF_AGONY_LV_25;
+	@ClientString(id = 1010097, message = "Ruins of Agony (Lv. 15)")
+	public static NpcStringId RUINS_OF_AGONY_LV_15;
 	
 	@ClientString(id = 1010098, message = "Abandoned Camp (Lv. 21)")
 	public static NpcStringId ABANDONED_CAMP_LV_21;
@@ -17251,8 +17251,8 @@ public class NpcStringId
 	@ClientString(id = 1010100, message = "Langk Lizardmen Dwellings (Lv. 16)")
 	public static NpcStringId LANGK_LIZARDMEN_DWELLINGS_LV_16;
 	
-	@ClientString(id = 1010101, message = "Ruins of Despair (Lv. 30)")
-	public static NpcStringId RUINS_OF_DESPAIR_LV_30;
+	@ClientString(id = 1010101, message = "Ruins of Despair (Lv. 15)")
+	public static NpcStringId RUINS_OF_DESPAIR_LV_15;
 	
 	@ClientString(id = 1010102, message = "Windawood Manor (Lv. 22)")
 	public static NpcStringId WINDAWOOD_MANOR_LV_22;
@@ -17308,14 +17308,14 @@ public class NpcStringId
 	@ClientString(id = 1010119, message = "Gorgon Flower Garden (Lv. 31)")
 	public static NpcStringId GORGON_FLOWER_GARDEN_LV_31;
 	
-	@ClientString(id = 1010120, message = "Antharas' Lair (Lv. 85)")
-	public static NpcStringId ANTHARAS_LAIR_LV_85;
+	@ClientString(id = 1010120, message = "Antharas' Lair (Lv. 60)")
+	public static NpcStringId ANTHARAS_LAIR_LV_60;
 	
 	@ClientString(id = 1010121, message = "Sea of Spores (Lv. 40)")
 	public static NpcStringId SEA_OF_SPORES_LV_40;
 	
-	@ClientString(id = 1010122, message = "Outlaw Forest (Lv. 46)")
-	public static NpcStringId OUTLAW_FOREST_LV_46;
+	@ClientString(id = 1010122, message = "Outlaw Forest (Lv. 50)")
+	public static NpcStringId OUTLAW_FOREST_LV_50;
 	
 	@ClientString(id = 1010123, message = "Forest of Evil and the Ivory Tower")
 	public static NpcStringId FOREST_OF_EVIL_AND_THE_IVORY_TOWER;
@@ -17377,11 +17377,11 @@ public class NpcStringId
 	@ClientString(id = 1010142, message = "Entrance to the Seal of Shilen")
 	public static NpcStringId ENTRANCE_TO_THE_SEAL_OF_SHILEN_2;
 	
-	@ClientString(id = 1010143, message = "Forsaken Plains (Lv. 58)")
-	public static NpcStringId FORSAKEN_PLAINS_LV_58;
+	@ClientString(id = 1010143, message = "Forsaken Plains (Lv. 55)")
+	public static NpcStringId FORSAKEN_PLAINS_LV_55;
 	
-	@ClientString(id = 1010144, message = "Tower of Insolence (Lv. 70)")
-	public static NpcStringId TOWER_OF_INSOLENCE_LV_70;
+	@ClientString(id = 1010144, message = "Tower of Insolence (Lv. 60)")
+	public static NpcStringId TOWER_OF_INSOLENCE_LV_60;
 	
 	@ClientString(id = 1010145, message = "Giant's Cave")
 	public static NpcStringId GIANT_S_CAVE;
@@ -17437,8 +17437,8 @@ public class NpcStringId
 	@ClientString(id = 1010162, message = "Three-way Crossroads of the Neutral Zone")
 	public static NpcStringId THREE_WAY_CROSSROADS_OF_THE_NEUTRAL_ZONE;
 	
-	@ClientString(id = 1010163, message = "Dark Forest")
-	public static NpcStringId DARK_FOREST;
+	@ClientString(id = 1010163, message = "Dark Forest (Lv. 8)")
+	public static NpcStringId DARK_FOREST_LV_8;
 	
 	@ClientString(id = 1010164, message = "Swampland (Lv. 13)")
 	public static NpcStringId SWAMPLAND_LV_13;
@@ -17455,8 +17455,8 @@ public class NpcStringId
 	@ClientString(id = 1010168, message = "Obelisk of Victory")
 	public static NpcStringId OBELISK_OF_VICTORY;
 	
-	@ClientString(id = 1010169, message = "Talking Island, Western Territory")
-	public static NpcStringId TALKING_ISLAND_WESTERN_TERRITORY;
+	@ClientString(id = 1010169, message = "Talking Island, Northern Territory")
+	public static NpcStringId TALKING_ISLAND_NORTHERN_TERRITORY;
 	
 	@ClientString(id = 1010170, message = "Talking Island, Eastern Territory")
 	public static NpcStringId TALKING_ISLAND_EASTERN_TERRITORY;
@@ -17473,8 +17473,8 @@ public class NpcStringId
 	@ClientString(id = 1010174, message = "The Entrance to the Ruins of Despair (Lv. 19)")
 	public static NpcStringId THE_ENTRANCE_TO_THE_RUINS_OF_DESPAIR_LV_19;
 	
-	@ClientString(id = 1010175, message = "Windmill Hill (Lv. 20)")
-	public static NpcStringId WINDMILL_HILL_LV_20;
+	@ClientString(id = 1010175, message = "Windmill Hill (Lv. 15)")
+	public static NpcStringId WINDMILL_HILL_LV_15;
 	
 	@ClientString(id = 1010176, message = "Red Rock Ridge (Lv. 30)")
 	public static NpcStringId RED_ROCK_RIDGE_LV_30_2;
@@ -17494,8 +17494,8 @@ public class NpcStringId
 	@ClientString(id = 1010181, message = "Fields of Massacre (Lv. 55)")
 	public static NpcStringId FIELDS_OF_MASSACRE_LV_55;
 	
-	@ClientString(id = 1010182, message = "Silent Valley (Lv. 72)")
-	public static NpcStringId SILENT_VALLEY_LV_72;
+	@ClientString(id = 1010182, message = "Silent Valley (Lv. 74)")
+	public static NpcStringId SILENT_VALLEY_LV_74;
 	
 	@ClientString(id = 1010183, message = "Northern Area of the Immortal Plateau, Northern Region")
 	public static NpcStringId NORTHERN_AREA_OF_THE_IMMORTAL_PLATEAU_NORTHERN_REGION;
@@ -17545,8 +17545,8 @@ public class NpcStringId
 	@ClientString(id = 1010198, message = "Southern Shore of Innadril (Garden of Eva)")
 	public static NpcStringId SOUTHERN_SHORE_OF_INNADRIL_GARDEN_OF_EVA;
 	
-	@ClientString(id = 1010199, message = "Borderland Fortress")
-	public static NpcStringId BORDERLAND_FORTRESS;
+	@ClientString(id = 1010199, message = "Town of Goddard")
+	public static NpcStringId TOWN_OF_GGODDARD;
 	
 	@ClientString(id = 1010200, message = "Town of Rune")
 	public static NpcStringId TOWN_OF_RUNE;
@@ -17908,11 +17908,11 @@ public class NpcStringId
 	@ClientString(id = 1010490, message = "Entrance to the Elven Fortress")
 	public static NpcStringId ENTRANCE_TO_THE_ELVEN_FORTRESS;
 	
-	@ClientString(id = 1010491, message = "Varka Silenos Barracks (Lv. 76)")
-	public static NpcStringId VARKA_SILENOS_BARRACKS_LV_76;
+	@ClientString(id = 1010491, message = "Varka Silenos Barracks (Lv. 77)")
+	public static NpcStringId VARKA_SILENOS_BARRACKS_LV_77;
 	
-	@ClientString(id = 1010492, message = "Ketra Orc Outpost (Lv. 76)")
-	public static NpcStringId KETRA_ORC_OUTPOST_LV_76;
+	@ClientString(id = 1010492, message = "Ketra Orc Outpost (Lv. 77)")
+	public static NpcStringId KETRA_ORC_OUTPOST_LV_77;
 	
 	@ClientString(id = 1010493, message = "Town of Rune Guild")
 	public static NpcStringId TOWN_OF_RUNE_GUILD;
@@ -18046,8 +18046,8 @@ public class NpcStringId
 	@ClientString(id = 1010536, message = "Entrance to the Hot Springs Region")
 	public static NpcStringId ENTRANCE_TO_THE_HOT_SPRINGS_REGION;
 	
-	@ClientString(id = 1010537, message = "Wild Beast Pastures (Lv. 83)")
-	public static NpcStringId WILD_BEAST_PASTURES_LV_83;
+	@ClientString(id = 1010537, message = "Wild Beast Pastures (Lv. 63)")
+	public static NpcStringId WILD_BEAST_PASTURES_LV_63;
 	
 	@ClientString(id = 1010538, message = "Entrance to the Valley of Saints")
 	public static NpcStringId ENTRANCE_TO_THE_VALLEY_OF_SAINTS;
@@ -18112,8 +18112,8 @@ public class NpcStringId
 	@ClientString(id = 1010558, message = "Singing Waterfall")
 	public static NpcStringId SINGING_WATERFALL;
 	
-	@ClientString(id = 1010559, message = "Talking Island, Northern Territory")
-	public static NpcStringId TALKING_ISLAND_NORTHERN_TERRITORY;
+	@ClientString(id = 1010559, message = "Talking Island, Western Territory")
+	public static NpcStringId TALKING_ISLAND_WESTERN_TERRITORY;
 	
 	@ClientString(id = 1010560, message = "Elven Fortress (Lv. 10)")
 	public static NpcStringId ELVEN_FORTRESS_LV_10;
@@ -18136,26 +18136,26 @@ public class NpcStringId
 	@ClientString(id = 1010566, message = "Ant Nest (Lv. 29)")
 	public static NpcStringId ANT_NEST_LV_29;
 	
-	@ClientString(id = 1010567, message = "Devil's Isle (Lv. 92)")
-	public static NpcStringId DEVIL_S_ISLE_LV_92;
+	@ClientString(id = 1010567, message = "Devil's Isle (Lv. 45)")
+	public static NpcStringId DEVIL_S_ISLE_LV_45;
 	
-	@ClientString(id = 1010568, message = "Wall of Argos (Lv. 71)")
-	public static NpcStringId WALL_OF_ARGOS_LV_71;
+	@ClientString(id = 1010568, message = "Wall of Argos (Lv. 68)")
+	public static NpcStringId WALL_OF_ARGOS_LV_68;
 	
-	@ClientString(id = 1010569, message = "Den of Evil (Lv. 81)")
-	public static NpcStringId DEN_OF_EVIL_LV_81;
+	@ClientString(id = 1010569, message = "Den of Evil (Lv. 40)")
+	public static NpcStringId DEN_OF_EVIL_LV_40;
 	
 	@ClientString(id = 1010570, message = "Ice Merchant Cabin")
 	public static NpcStringId ICE_MERCHANT_CABIN;
 	
-	@ClientString(id = 1010571, message = "Crypts of Disgrace (Lv. 80)")
-	public static NpcStringId CRYPTS_OF_DISGRACE_LV_80;
+	@ClientString(id = 1010571, message = "Crypts of Disgrace (Lv. 25)")
+	public static NpcStringId CRYPTS_OF_DISGRACE_LV_25;
 	
 	@ClientString(id = 1010572, message = "Plunderous Plains (Lv. 30)")
 	public static NpcStringId PLUNDEROUS_PLAINS_LV_30;
 	
-	@ClientString(id = 1010573, message = "Pavel Ruins (Lv. 73)")
-	public static NpcStringId PAVEL_RUINS_LV_73;
+	@ClientString(id = 1010573, message = "Pavel Ruins (Lv. 46)")
+	public static NpcStringId PAVEL_RUINS_LV_46;
 	
 	@ClientString(id = 1010574, message = "Town of Schuttgart")
 	public static NpcStringId TOWN_OF_SCHUTTGART;
@@ -18190,8 +18190,8 @@ public class NpcStringId
 	@ClientString(id = 1010584, message = "What? You haven't even two pennies to rub together? Harumph!")
 	public static NpcStringId WHAT_YOU_HAVEN_T_EVEN_TWO_PENNIES_TO_RUB_TOGETHER_HARUMPH;
 	
-	@ClientString(id = 1010585, message = "Forest of Mirrors (Lv. 45)")
-	public static NpcStringId FOREST_OF_MIRRORS_LV_45;
+	@ClientString(id = 1010585, message = "Forest of Mirrors (Lv. 40)")
+	public static NpcStringId FOREST_OF_MIRRORS_LV_40;
 	
 	@ClientString(id = 1010586, message = "The Center of the Forest of Mirrors")
 	public static NpcStringId THE_CENTER_OF_THE_FOREST_OF_MIRRORS;
@@ -18211,14 +18211,14 @@ public class NpcStringId
 	@ClientString(id = 1010591, message = "Grave Robber Hideout")
 	public static NpcStringId GRAVE_ROBBER_HIDEOUT;
 	
-	@ClientString(id = 1010592, message = "Forest of the Dead (Lv. 66)")
-	public static NpcStringId FOREST_OF_THE_DEAD_LV_66;
+	@ClientString(id = 1010592, message = "Forest of the Dead (Lv. 63)")
+	public static NpcStringId FOREST_OF_THE_DEAD_LV_63;
 	
 	@ClientString(id = 1010593, message = "The Center of the Forest of the Dead")
 	public static NpcStringId THE_CENTER_OF_THE_FOREST_OF_THE_DEAD;
 	
-	@ClientString(id = 1010594, message = "Mithril Mines (Lv. 81)")
-	public static NpcStringId MITHRIL_MINES_LV_81;
+	@ClientString(id = 1010594, message = "Mithril Mines (Lv. 23)")
+	public static NpcStringId MITHRIL_MINES_LV_23;
 	
 	@ClientString(id = 1010595, message = "The Center of the Mithril Mines")
 	public static NpcStringId THE_CENTER_OF_THE_MITHRIL_MINES;
@@ -18247,8 +18247,8 @@ public class NpcStringId
 	@ClientString(id = 1010603, message = "Cave of Trials (Lv. 10)")
 	public static NpcStringId CAVE_OF_TRIALS_LV_10;
 	
-	@ClientString(id = 1010604, message = "Seal of Shilen (Lv. 61)")
-	public static NpcStringId SEAL_OF_SHILEN_LV_61;
+	@ClientString(id = 1010604, message = "Seal of Shilen (Lv. 60)")
+	public static NpcStringId SEAL_OF_SHILEN_LV_60;
 	
 	@ClientString(id = 1010605, message = "The Center of the Wall of Argos")
 	public static NpcStringId THE_CENTER_OF_THE_WALL_OF_ARGOS;
@@ -18298,8 +18298,8 @@ public class NpcStringId
 	@ClientString(id = 1010620, message = "Frost Lake")
 	public static NpcStringId FROST_LAKE;
 	
-	@ClientString(id = 1010621, message = "Wastelands (Lv. 35)")
-	public static NpcStringId WASTELANDS_LV_35;
+	@ClientString(id = 1010621, message = "Wastelands (Lv. 25)")
+	public static NpcStringId WASTELANDS_LV_25;
 	
 	@ClientString(id = 1010622, message = "Wastelands, Western Region")
 	public static NpcStringId WASTELANDS_WESTERN_REGION;
@@ -18663,6 +18663,9 @@ public class NpcStringId
 	
 	@ClientString(id = 1010742, message = "Whispering Woods")
 	public static NpcStringId WHISPERING_WOODS;
+	
+	@ClientString(id = 1010743, message = "Skyshadow Meadow (Lv. 54)")
+	public static NpcStringId SKYSHADOW_MEADOW_LV_54;
 	
 	@ClientString(id = 1029350, message = "What took so long? I waited for ever.")
 	public static NpcStringId WHAT_TOOK_SO_LONG_I_WAITED_FOR_EVER;
