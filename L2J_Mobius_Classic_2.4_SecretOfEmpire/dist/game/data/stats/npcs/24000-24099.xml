@@ -1516,8 +1516,7 @@
 			<param name="MoveAroundSocial2" value="0" />
 		</parameters>
 		<race>BEAST</race>
-		<acquire exp="0" sp="0" />
-		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
+				<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
 			<vitals hp="1227.85535" hpRegen="8.5" mp="2253.21" mpRegen="3" />
 			<speed>
 				<walk ground="25" />
@@ -1543,8 +1542,7 @@
 			<param name="MoveAroundSocial2" value="0" />
 		</parameters>
 		<race>UNDEAD</race>
-		<acquire exp="0" sp="0" />
-		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
+				<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
 			<vitals hp="1227.85535" hpRegen="8.5" mp="2253.21" mpRegen="3" />
 			<speed>
 				<walk ground="60" />
@@ -1566,8 +1564,7 @@
 	<npc id="24043" level="71" type="Monster" name="Mysterious Creature">
 		<race>DRAGON</race>
 		<sex>MALE</sex>
-		<acquire exp="0" sp="0" />
-		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
+				<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
 			<vitals hp="1227.85535" hpRegen="8.5" mp="2253.21" mpRegen="3" />
 			<attack physical="872.4" magical="370.45" critical="4" attackSpeed="253" range="40" />
 			<defence physical="934.6" magical="516.5" />
@@ -1592,8 +1589,7 @@
 			<param name="MoveAroundSocial2" value="0" />
 		</parameters>
 		<race>ETC</race> <!-- TODO: Magic Creatures -->
-		<acquire exp="0" sp="0" />
-		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
+				<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
 			<vitals hp="1620.4119125" hpRegen="8.5" mp="2412.51" mpRegen="3" />
 			<speed>
 				<walk ground="30" />
@@ -1616,8 +1612,7 @@
 	<npc id="24045" level="74" type="Monster" name="Zaken's Treasure Chest">
 		<race>ETC</race>
 		<sex>MALE</sex>
-		<acquire exp="0" sp="0" />
-		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
+				<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
 			<vitals hp="1620.4119125" hpRegen="8.5" mp="2412.51" mpRegen="3" />
 			<attack physical="773.81598" magical="528.41601" random="30" critical="4.75" accuracy="4.75" attackSpeed="250" type="SWORD" range="40" distance="80" width="120" />
 			<defence physical="314.65987" magical="230.25444" />

@@ -392,8 +392,7 @@
 	<npc id="29307" level="99" type="Monster" name="Helios' Red Lightning" title="Enuma Elish">
 		<!-- Helios Red Lightning - Title: Enuma Elish ?? -->
 		<race>ETC</race>
-		<acquire exp="0" sp="0" />
-		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
+				<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
 			<vitals hp="159275.821635012" hpRegen="10.5" mp="2220.53748231966" mpRegen="3.6" />
 			<attack physical="2118998.52724595" magical="987999.233689125" critical="4" attackSpeed="253" range="40" />
 			<defence physical="84759.941089838" magical="42379.970544919" />
@@ -420,8 +419,7 @@
 	<npc id="29308" level="99" type="Monster" name="Helios' Blue Lightning" title="Enuma Elish">
 		<!-- Helios Blue Lightning - Title: Enuma Elish ?? -->
 		<race>ETC</race>
-		<acquire exp="0" sp="0" />
-		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
+				<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
 			<vitals hp="159275.821635012" hpRegen="10.5" mp="2220.53748231966" mpRegen="3.6" />
 			<attack physical="2118998.52724595" magical="987999.233689125" critical="4" attackSpeed="253" range="40" />
 			<defence physical="84759.941089838" magical="42379.970544919" />
@@ -788,8 +786,7 @@
 	<npc id="29318" level="109" type="RaidBoss" name="Etis van Etina" title="Overlord">
 		<race>HUMANOID</race>
 		<sex>MALE</sex>
-		<acquire exp="0" sp="0" />
-		<stats str="164" int="188" dex="55" wit="78" con="111" men="149">
+				<stats str="164" int="188" dex="55" wit="78" con="111" men="149">
 			<vitals hp="446461141.07331" hpRegen="479.3278415" mp="89800.408" mpRegen="3.3" />
 			<attack physical="324513.8663" magical="232725.1967" random="30" critical="4.75" accuracy="4.75" attackSpeed="250" type="SWORD" range="40" distance="80" width="120" />
 			<defence physical="37623.95403" magical="18364.41698" />
