@@ -1500,8 +1500,8 @@
 		<set name="time" val="43200" />
 		<set name="handler" val="ItemSkills" />
 		<skills>
-			<skill id="55059" level="1"/> <!-- Release Agathion's Seal - Griffin -->
-			<skill id="55060" level="1"/> <!-- Griffin s Benediction -->
+			<skill id="55059" level="1" /> <!-- Release Agathion's Seal - Griffin -->
+			<skill id="55060" level="1" /> <!-- Griffin s Benediction -->
 			<skill id="3267" level="1" type="ON_UNEQUIP" /> <!-- Seal Agathion -->
 		</skills>
 	</item>
@@ -1877,7 +1877,7 @@
 		<set name="is_stackable" val="true" />
 		<set name="handler" val="ItemSkills" />
 		<skills>
-			<skill id="55072" level="1"/> <!-- Lineage II Chest -->
+			<skill id="55072" level="1" /> <!-- Lineage II Chest -->
 		</skills>
 	</item>
 	<item id="29693" name="Chronicle Chest" type="EtcItem">
@@ -1889,7 +1889,7 @@
 		<set name="is_stackable" val="true" />
 		<set name="handler" val="ItemSkills" />
 		<skills>
-			<skill id="55073" level="1"/> <!-- Chronicle Chest -->
+			<skill id="55073" level="1" /> <!-- Chronicle Chest -->
 		</skills>
 	</item>
 	<item id="29694" name="Memories Chest" type="EtcItem">
@@ -1901,7 +1901,7 @@
 		<set name="is_stackable" val="true" />
 		<set name="handler" val="ItemSkills" />
 		<skills>
-			<skill id="55074" level="1"/> <!-- Memories Chest -->
+			<skill id="55074" level="1" /> <!-- Memories Chest -->
 		</skills>
 	</item>
 	<item id="29695" name="Quick Healing Potion" additionalName="Event" type="EtcItem">

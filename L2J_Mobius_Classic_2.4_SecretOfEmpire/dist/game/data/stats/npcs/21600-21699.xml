@@ -3639,7 +3639,7 @@
 		<race>HUMANOID</race>
 		<sex>MALE</sex>
 		<equipment rhand="235" /> <!-- Bloody Orchid -->
-		<acquire exp="124807" sp="3744" attributeExp="948"/>
+		<acquire exp="124807" sp="3744" attributeExp="948" />
 		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
 			<vitals hp="2423.3825125" hpRegen="8.5" mp="2850.585" mpRegen="3" />
 			<attack physical="808.61705" magical="731.48967391304" random="30" critical="4.75" accuracy="4.75" attackSpeed="250" type="SWORD" range="40" distance="80" width="120" />
@@ -3736,7 +3736,7 @@
 		<race>HUMANOID</race>
 		<sex>MALE</sex>
 		<equipment rhand="235" /> <!-- Bloody Orchid -->
-		<acquire exp="163526" sp="4905" attributeExp="948"/>
+		<acquire exp="163526" sp="4905" attributeExp="948" />
 		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
 			<vitals hp="3029.1819575" hpRegen="8.5" mp="3104.58" mpRegen="3" />
 			<attack physical="1004.88515" magical="914.34815217391" random="30" critical="4.75" accuracy="4.75" attackSpeed="250" type="SWORD" range="40" distance="80" width="120" />
@@ -3860,7 +3860,7 @@
 		</parameters>
 		<race>BUG</race>
 		<sex>MALE</sex>
-		<acquire exp="206169" sp="6185" attributeExp="1040"/>
+		<acquire exp="206169" sp="6185" attributeExp="1040" />
 		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
 			<vitals hp="2827.269335" hpRegen="8.5" mp="3753.285" mpRegen="3" />
 			<attack physical="939.4691" magical="853.40152173913" random="30" critical="4.75" accuracy="4.75" attackSpeed="250" type="SWORD" range="40" distance="80" width="120" />
@@ -3945,7 +3945,7 @@
 		<race>UNDEAD</race>
 		<sex>MALE</sex>
 		<equipment rhand="946" lhand="945" /> <!-- Skeleton Dagger / Skeleton Buckler -->
-		<acquire exp="181044" sp="5431" attributeExp="1134"/>
+		<acquire exp="181044" sp="5431" attributeExp="1134" />
 		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
 			<vitals hp="3063.234315" hpRegen="8.5" mp="2907.225" mpRegen="3" />
 			<attack physical="1016.2039" magical="924.62673913043" random="30" critical="4.75" accuracy="4.75" attackSpeed="250" type="SWORD" range="40" distance="80" width="120" />
@@ -4015,7 +4015,7 @@
 		</parameters>
 		<race>CONSTRUCT</race>
 		<sex>MALE</sex>
-		<acquire exp="222900" sp="6687" attributeExp="1230"/>
+		<acquire exp="222900" sp="6687" attributeExp="1230" />
 		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
 			<vitals hp="2940.744352" hpRegen="8.5" mp="3483.36" mpRegen="3" />
 			<attack physical="976.51936" magical="887.65356521739" random="30" critical="4.75" accuracy="4.75" attackSpeed="250" type="SWORD" range="40" distance="80" width="120" />
@@ -4099,7 +4099,7 @@
 		<race>DEMONIC</race>
 		<sex>MALE</sex>
 		<equipment rhand="6722" /> <!-- Monster Only (Ahrimanes) -->
-		<acquire exp="222497" sp="6674" attributeExp="1230"/>
+		<acquire exp="222497" sp="6674" attributeExp="1230" />
 		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
 			<vitals hp="2859.043325" hpRegen="8.5" mp="2907.225" mpRegen="3" />
 			<attack physical="950.0497" magical="862.99239130435" random="30" critical="4.75" accuracy="4.75" attackSpeed="250" type="SWORD" range="40" distance="80" width="120" />
@@ -4183,7 +4183,7 @@
 	<npc id="21674" level="76" type="Monster" name="Balor of Immortality" element="FIRE">
 		<race>DEMONIC</race>
 		<sex>MALE</sex>
-		<acquire exp="79188" sp="2375" attributeExp="684"/>
+		<acquire exp="79188" sp="2375" attributeExp="684" />
 		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
 			<vitals hp="1399.77973" hpRegen="8.5" mp="2683.32" mpRegen="3" />
 			<attack physical="476.129" magical="422.51869565217" random="30" critical="4.75" accuracy="4.75" attackSpeed="250" type="SWORD" range="40" distance="80" width="120" />
@@ -4210,7 +4210,7 @@
 	<npc id="21675" level="76" type="Monster" name="Ashuras of Immortality" element="FIRE">
 		<race>DEMONIC</race>
 		<sex>MALE</sex>
-		<acquire exp="82030" sp="2460" attributeExp="684"/>
+		<acquire exp="82030" sp="2460" attributeExp="684" />
 		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
 			<vitals hp="1418.868755" hpRegen="8.5" mp="2739.075" mpRegen="3" />
 			<attack physical="482.5999" magical="428.28065217391" random="30" critical="4.75" accuracy="4.75" attackSpeed="250" type="SWORD" range="40" distance="80" width="120" />
@@ -4238,7 +4238,7 @@
 	<npc id="21676" level="77" type="Monster" name="Lavasillisk" element="FIRE">
 		<race>BEAST</race>
 		<sex>MALE</sex>
-		<acquire exp="52115" sp="1563" attributeExp="770"/>
+		<acquire exp="52115" sp="1563" attributeExp="770" />
 		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
 			<vitals hp="1418.99191" hpRegen="8.5" mp="2739.075" mpRegen="3" />
 			<attack physical="482.6398" magical="428.31782608696" random="30" critical="4.75" accuracy="4.75" attackSpeed="250" type="SWORD" range="40" distance="80" width="120" />
@@ -4284,7 +4284,7 @@
 	<npc id="21678" level="77" type="Monster" name="Magma Drake" element="FIRE">
 		<race>DRAGON</race>
 		<sex>MALE</sex>
-		<acquire exp="50479" sp="1514" attributeExp="770"/>
+		<acquire exp="50479" sp="1514" attributeExp="770" />
 		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
 			<vitals hp="1436.72623" hpRegen="8.5" mp="2794.83" mpRegen="3" />
 			<attack physical="488.6718" magical="433.67086956522" random="30" critical="4.75" accuracy="4.75" attackSpeed="250" type="SWORD" range="40" distance="80" width="120" />
@@ -4448,7 +4448,7 @@
 	<npc id="21685" level="78" type="Monster" name="Ashuras of Immortality" element="FIRE">
 		<race>DEMONIC</race>
 		<sex>MALE</sex>
-		<acquire exp="94946" sp="2848" attributeExp="858"/>
+		<acquire exp="94946" sp="2848" attributeExp="858" />
 		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
 			<vitals hp="1436.849385" hpRegen="8.5" mp="2794.83" mpRegen="3" />
 			<attack physical="482.5999" magical="428.28065217391" random="30" critical="4.75" accuracy="4.75" attackSpeed="250" type="SWORD" range="40" distance="80" width="120" />
@@ -4476,7 +4476,7 @@
 	<npc id="21686" level="78" type="Monster" name="Flaming Drake" element="FIRE">
 		<race>DRAGON</race>
 		<sex>MALE</sex>
-		<acquire exp="95603" sp="2868" attributeExp="858"/>
+		<acquire exp="95603" sp="2868" attributeExp="858" />
 		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
 			<vitals hp="1453.96793" hpRegen="8.5" mp="2850.585" mpRegen="3" />
 			<attack physical="494.5442" magical="438.8752173913" random="30" critical="4.75" accuracy="4.75" attackSpeed="250" type="SWORD" range="40" distance="80" width="120" />

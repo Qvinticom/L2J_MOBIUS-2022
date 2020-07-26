@@ -20,7 +20,7 @@
 		<condition type="Reenter" />
 	</conditions>
 	<reenter apply="NONE">
-		<reset time="720"/> <!-- 12 hours -->
+		<reset time="720" /> <!-- 12 hours -->
 	</reenter>
 	<spawnlist>
 		<group name="GAME_NPC">

@@ -2,7 +2,7 @@
 	<time duration="60" empty="1" />
 	<locations>
 		<enter type="RANDOM">
-			<location x="179400" y="13683" z="-7396"/> <!-- First Room -->
+			<location x="179400" y="13683" z="-7396" /> <!-- First Room -->
 		</enter>
 		<exit type="ORIGIN" />
 	</locations>
@@ -69,25 +69,25 @@
 	</doorlist>
 	<spawnlist>
 		<group name="general" spawnByDefault="false">
-			<npc id="25856" x="177833" y="14852" z="-13688" heading="0"/> <!-- Isadora -->
-			<npc id="25855" x="178432" y="14848" z="-13688" heading="0"/> <!-- Maliss -->
-			<npc id="34331" x="179521" y="13610" z="-7392" heading="33344"/> <!-- Logart Van Dyke -->
-			<npc id="34331" x="179543" y="13552" z="-9824" heading="32460"/> <!-- Logart Van Dyke -->
-			<npc id="34331" x="179519" y="12797" z="-12768" heading="32712"/> <!-- Logart Van Dyke -->
-			<npc id="34332" x="178149" y="16676" z="-13648" heading="16600"/> <!-- Dinford -->
-			<npc id="19121" x="178150" y="13600" z="-8016" heading="13828"/> <!-- Altar of Sacrifice -->
-			<npc id="19122" x="178150" y="13600" z="-10448" heading="16772"/> <!-- Altar of Sacrifice -->
-			<npc id="19123" x="178150" y="12840" z="-13392" heading="44317"/> <!-- Altar of Sacrifice -->
-			<npc id="19142" x="177584" y="14400" z="-8088" heading="0"/> <!-- Sacrificial Offering -->
-			<npc id="19143" x="177864" y="14534" z="-8088" heading="0"/> <!-- Sacrificial Offering -->
-			<npc id="19144" x="178149" y="14401" z="-8088" heading="0"/> <!-- Sacrificial Offering -->
-			<npc id="19145" x="178439" y="14528" z="-8088" heading="0"/> <!-- Sacrificial Offering -->
-			<npc id="19146" x="178713" y="14417" z="-8088" heading="0"/> <!-- Sacrificial Offering -->
-			<npc id="19147" x="177589" y="14407" z="-10520" heading="0"/> <!-- Sacrificial Offering -->
-			<npc id="19148" x="177863" y="14541" z="-10520" heading="0"/> <!-- Sacrificial Offering -->
-			<npc id="19149" x="178153" y="14415" z="-10520" heading="0"/> <!-- Sacrificial Offering -->
-			<npc id="19150" x="178442" y="14528" z="-10520" heading="0"/> <!-- Sacrificial Offering -->
-			<npc id="19151" x="178712" y="14408" z="-10520" heading="0"/> <!-- Sacrificial Offering -->
+			<npc id="25856" x="177833" y="14852" z="-13688" heading="0" /> <!-- Isadora -->
+			<npc id="25855" x="178432" y="14848" z="-13688" heading="0" /> <!-- Maliss -->
+			<npc id="34331" x="179521" y="13610" z="-7392" heading="33344" /> <!-- Logart Van Dyke -->
+			<npc id="34331" x="179543" y="13552" z="-9824" heading="32460" /> <!-- Logart Van Dyke -->
+			<npc id="34331" x="179519" y="12797" z="-12768" heading="32712" /> <!-- Logart Van Dyke -->
+			<npc id="34332" x="178149" y="16676" z="-13648" heading="16600" /> <!-- Dinford -->
+			<npc id="19121" x="178150" y="13600" z="-8016" heading="13828" /> <!-- Altar of Sacrifice -->
+			<npc id="19122" x="178150" y="13600" z="-10448" heading="16772" /> <!-- Altar of Sacrifice -->
+			<npc id="19123" x="178150" y="12840" z="-13392" heading="44317" /> <!-- Altar of Sacrifice -->
+			<npc id="19142" x="177584" y="14400" z="-8088" heading="0" /> <!-- Sacrificial Offering -->
+			<npc id="19143" x="177864" y="14534" z="-8088" heading="0" /> <!-- Sacrificial Offering -->
+			<npc id="19144" x="178149" y="14401" z="-8088" heading="0" /> <!-- Sacrificial Offering -->
+			<npc id="19145" x="178439" y="14528" z="-8088" heading="0" /> <!-- Sacrificial Offering -->
+			<npc id="19146" x="178713" y="14417" z="-8088" heading="0" /> <!-- Sacrificial Offering -->
+			<npc id="19147" x="177589" y="14407" z="-10520" heading="0" /> <!-- Sacrificial Offering -->
+			<npc id="19148" x="177863" y="14541" z="-10520" heading="0" /> <!-- Sacrificial Offering -->
+			<npc id="19149" x="178153" y="14415" z="-10520" heading="0" /> <!-- Sacrificial Offering -->
+			<npc id="19150" x="178442" y="14528" z="-10520" heading="0" /> <!-- Sacrificial Offering -->
+			<npc id="19151" x="178712" y="14408" z="-10520" heading="0" /> <!-- Sacrificial Offering -->
 		</group>
 		<group name="first_floor" spawnByDefault="false">
 			<!-- 1st floor 1st room -->

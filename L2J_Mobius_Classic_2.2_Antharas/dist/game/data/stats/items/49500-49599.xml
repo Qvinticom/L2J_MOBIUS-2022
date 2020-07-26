@@ -272,7 +272,7 @@
 		<set name="immediate_effect" val="true" />
 		<set name="reuse_delay" val="60000" />
 		<skills>
-			<skill id="39144" level="1"/> <!-- Special Pirate Fruit -->
+			<skill id="39144" level="1" /> <!-- Special Pirate Fruit -->
 		</skills>
 	</item>
 	<item id="49519" name="King Pirate's Treasure Chest" type="EtcItem">
@@ -340,7 +340,7 @@
 		<set name="is_stackable" val="true" />
 		<set name="handler" val="ItemSkills" />
 		<skills>
-			<skill id="55089" level="1"/> <!-- Rare Accessory Pack -->
+			<skill id="55089" level="1" /> <!-- Rare Accessory Pack -->
 		</skills>
 	</item>
 	<item id="49526" name="Improved Scroll of Resurrection" type="EtcItem">
@@ -505,7 +505,7 @@
 		<set name="is_stackable" val="true" />
 		<set name="handler" val="ItemSkills" />
 		<skills>
-			<skill id="39059" level="1"/> <!-- Spellbook Chest -->
+			<skill id="39059" level="1" /> <!-- Spellbook Chest -->
 		</skills>
 	</item>
 	<item id="49542" name="Improved Scroll of Resurrection" type="EtcItem">

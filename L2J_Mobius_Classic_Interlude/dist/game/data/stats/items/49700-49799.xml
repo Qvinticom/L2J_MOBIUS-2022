@@ -12,7 +12,7 @@
 		<set name="is_sellable" val="false" />
 		<set name="handler" val="ItemSkills" />
 		<skills>
-			<skill id="39170" level="1"/> <!-- Balthus Knights Supply -->
+			<skill id="39170" level="1" /> <!-- Balthus Knights Supply -->
 		</skills>
 	</item>
 	<item id="49783" name="Sibi Coin" type="EtcItem">
@@ -37,7 +37,7 @@
 		<set name="is_freightable" val="true" />
 		<set name="handler" val="ItemSkills" />
 		<skills>
-			<skill id="39171" level="1"/> <!-- Member of Balthus Knights -->
+			<skill id="39171" level="1" /> <!-- Member of Balthus Knights -->
 		</skills>
 	</item>
 	<item id="49798" name="Cheer Stamen" additionalName="Event" type="Weapon">

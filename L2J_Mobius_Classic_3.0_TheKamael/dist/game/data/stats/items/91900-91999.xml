@@ -175,17 +175,17 @@
 		<!-- Instantly recovers 50 HP. The remaining points are used to recover CP. -->
 		<set name="icon" val="icon.etc_lesser_potion_red_i00" />
 		<set name="default_action" val="SKILL_REDUCE" />
-		<set name="immediate_effect" val="true"/>
-		<set name="etcitem_type" val="POTION"/>
-		<set name="commissionItemType" val="POTION"/>
-		<set name="handler" val="ItemSkills"/>
+		<set name="immediate_effect" val="true" />
+		<set name="etcitem_type" val="POTION" />
+		<set name="commissionItemType" val="POTION" />
+		<set name="handler" val="ItemSkills" />
 		<set name="material" val="STEEL" />
 		<set name="weight" val="1" />
 		<set name="price" val="30" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 		<skills>
-			<skill id="50151" level="1"/> <!-- HP Potion -->
+			<skill id="50151" level="1" /> <!-- HP Potion -->
 		</skills>
 	</item>
 	<item id="91913" name="Aden Spellbook Chest" type="EtcItem">
@@ -479,7 +479,7 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
 		<skills>
-			<skill id="50183" level="1"/> <!-- Activates 2 jewel slots. -->
+			<skill id="50183" level="1" /> <!-- Activates 2 jewel slots. -->
 		</skills>
 	</item>
 	<item id="91933" name="Adventurer's Agathion Bracelet" type="Armor">
@@ -543,7 +543,7 @@
 		<set name="is_depositable" val="false" />
 		<set name="is_sellable" val="false" />
 		<skills>
-			<skill id="50187" level="1"/> <!-- Adventurer's Rough Jewel -->
+			<skill id="50187" level="1" /> <!-- Adventurer's Rough Jewel -->
 		</skills>
 	</item>
 	<item id="91937" name="Adventurer's Talisman" type="Armor">

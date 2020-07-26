@@ -143,9 +143,9 @@
 		<set name="is_depositable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
-		<set name="handler" val="ItemSkills"/>
+		<set name="handler" val="ItemSkills" />
 		<skills>
-			<skill id="39257" level="1"/> <!-- Newbie MP Recovery Potion -->
+			<skill id="39257" level="1" /> <!-- Newbie MP Recovery Potion -->
 		</skills>
 	</item>
 	<item id="90311" name="Brooch" additionalName="Lv. 1" type="Armor">
@@ -159,8 +159,8 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
 		<skills>
-			<skill id="55468" level="1"/> <!-- Activates 2 jewel slots. -->
-			<skill id="55470" level="1"/> <!-- Inventory Slot +5. -->
+			<skill id="55468" level="1" /> <!-- Activates 2 jewel slots. -->
+			<skill id="55470" level="1" /> <!-- Inventory Slot +5. -->
 		</skills>
 	</item>
 	<item id="90312" name="Brooch" additionalName="Lv. 2" type="Armor">
@@ -174,8 +174,8 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
 		<skills>
-			<skill id="55469" level="1"/> <!-- Activates 3 jewel slots. -->
-			<skill id="55470" level="2"/> <!-- Inventory Slot +9. -->
+			<skill id="55469" level="1" /> <!-- Activates 3 jewel slots. -->
+			<skill id="55470" level="2" /> <!-- Inventory Slot +9. -->
 		</skills>
 	</item>
 	<item id="90313" name="Topaz" additionalName="Lv. 1" type="Armor">
@@ -256,7 +256,7 @@
 		<set name="is_depositable" val="false" />
 		<set name="is_sellable" val="false" />
 		<skills>
-			<skill id="55485" level="1"/> <!-- Greater Garnet -->
+			<skill id="55485" level="1" /> <!-- Greater Garnet -->
 		</skills>
 	</item>
 	<item id="90319" name="Garnet" additionalName="Lv. 2" type="Armor">
@@ -272,7 +272,7 @@
 		<set name="is_depositable" val="false" />
 		<set name="is_sellable" val="false" />
 		<skills>
-			<skill id="55485" level="2"/> <!-- Greater Garnet -->
+			<skill id="55485" level="2" /> <!-- Greater Garnet -->
 		</skills>
 	</item>
 	<item id="90320" name="Garnet" additionalName="Lv. 3" type="Armor">
@@ -288,7 +288,7 @@
 		<set name="is_depositable" val="false" />
 		<set name="is_sellable" val="false" />
 		<skills>
-			<skill id="55485" level="3"/> <!-- Greater Garnet -->
+			<skill id="55485" level="3" /> <!-- Greater Garnet -->
 		</skills>
 	</item>
 	<item id="90321" name="Garnet" additionalName="Lv. 4" type="Armor">
@@ -304,7 +304,7 @@
 		<set name="is_depositable" val="false" />
 		<set name="is_sellable" val="false" />
 		<skills>
-			<skill id="55485" level="4"/> <!-- Greater Garnet -->
+			<skill id="55485" level="4" /> <!-- Greater Garnet -->
 		</skills>
 	</item>
 	<item id="90322" name="Garnet" additionalName="Lv. 5" type="Armor">
@@ -320,7 +320,7 @@
 		<set name="is_depositable" val="false" />
 		<set name="is_sellable" val="false" />
 		<skills>
-			<skill id="55485" level="5"/> <!-- Greater Garnet -->
+			<skill id="55485" level="5" /> <!-- Greater Garnet -->
 		</skills>
 	</item>
 	<item id="90323" name="Jade" additionalName="Lv. 1" type="Armor">
@@ -336,7 +336,7 @@
 		<set name="is_depositable" val="false" />
 		<set name="is_sellable" val="false" />
 		<skills>
-			<skill id="55474" level="1"/> <!-- Jade -->
+			<skill id="55474" level="1" /> <!-- Jade -->
 		</skills>
 	</item>
 	<item id="90324" name="Jade" additionalName="Lv. 2" type="Armor">
@@ -352,7 +352,7 @@
 		<set name="is_depositable" val="false" />
 		<set name="is_sellable" val="false" />
 		<skills>
-			<skill id="55474" level="2"/> <!-- Jade -->
+			<skill id="55474" level="2" /> <!-- Jade -->
 		</skills>
 	</item>
 	<item id="90325" name="Jade" additionalName="Lv. 3" type="Armor">
@@ -368,7 +368,7 @@
 		<set name="is_depositable" val="false" />
 		<set name="is_sellable" val="false" />
 		<skills>
-			<skill id="55474" level="3"/> <!-- Jade -->
+			<skill id="55474" level="3" /> <!-- Jade -->
 		</skills>
 	</item>
 	<item id="90326" name="Jade" additionalName="Lv. 4" type="Armor">
@@ -384,7 +384,7 @@
 		<set name="is_depositable" val="false" />
 		<set name="is_sellable" val="false" />
 		<skills>
-			<skill id="55474" level="4"/> <!-- Jade -->
+			<skill id="55474" level="4" /> <!-- Jade -->
 		</skills>
 	</item>
 	<item id="90327" name="Jade" additionalName="Lv. 5" type="Armor">
@@ -400,7 +400,7 @@
 		<set name="is_depositable" val="false" />
 		<set name="is_sellable" val="false" />
 		<skills>
-			<skill id="55474" level="5"/> <!-- Jade -->
+			<skill id="55474" level="5" /> <!-- Jade -->
 		</skills>
 	</item>
 	<item id="90328" name="Ruby" additionalName="Lv. 1" type="Armor">
@@ -416,7 +416,7 @@
 		<set name="is_depositable" val="false" />
 		<set name="is_sellable" val="false" />
 		<skills>
-			<skill id="55477" level="1"/> <!-- Ruby -->
+			<skill id="55477" level="1" /> <!-- Ruby -->
 		</skills>
 	</item>
 	<item id="90329" name="Ruby" additionalName="Lv. 2" type="Armor">
@@ -432,7 +432,7 @@
 		<set name="is_depositable" val="false" />
 		<set name="is_sellable" val="false" />
 		<skills>
-			<skill id="55477" level="2"/> <!-- Ruby -->
+			<skill id="55477" level="2" /> <!-- Ruby -->
 		</skills>
 	</item>
 	<item id="90330" name="Ruby" additionalName="Lv. 3" type="Armor">
@@ -448,7 +448,7 @@
 		<set name="is_depositable" val="false" />
 		<set name="is_sellable" val="false" />
 		<skills>
-			<skill id="55477" level="3"/> <!-- Ruby -->
+			<skill id="55477" level="3" /> <!-- Ruby -->
 		</skills>
 	</item>
 	<item id="90331" name="Ruby" additionalName="Lv. 4" type="Armor">
@@ -464,7 +464,7 @@
 		<set name="is_depositable" val="false" />
 		<set name="is_sellable" val="false" />
 		<skills>
-			<skill id="55477" level="4"/> <!-- Ruby -->
+			<skill id="55477" level="4" /> <!-- Ruby -->
 		</skills>
 	</item>
 	<item id="90332" name="Ruby" additionalName="Lv. 5" type="Armor">
@@ -480,7 +480,7 @@
 		<set name="is_depositable" val="false" />
 		<set name="is_sellable" val="false" />
 		<skills>
-			<skill id="55477" level="5"/> <!-- Ruby -->
+			<skill id="55477" level="5" /> <!-- Ruby -->
 		</skills>
 	</item>
 	<item id="90333" name="Sapphire" additionalName="Lv. 1" type="Armor">
@@ -496,7 +496,7 @@
 		<set name="is_depositable" val="false" />
 		<set name="is_sellable" val="false" />
 		<skills>
-			<skill id="55481" level="1"/> <!-- Sapphire -->
+			<skill id="55481" level="1" /> <!-- Sapphire -->
 		</skills>
 	</item>
 	<item id="90334" name="Sapphire" additionalName="Lv. 2" type="Armor">
@@ -512,7 +512,7 @@
 		<set name="is_depositable" val="false" />
 		<set name="is_sellable" val="false" />
 		<skills>
-			<skill id="55481" level="2"/> <!-- Sapphire -->
+			<skill id="55481" level="2" /> <!-- Sapphire -->
 		</skills>
 	</item>
 	<item id="90335" name="Sapphire" additionalName="Lv. 3" type="Armor">
@@ -528,7 +528,7 @@
 		<set name="is_depositable" val="false" />
 		<set name="is_sellable" val="false" />
 		<skills>
-			<skill id="55481" level="3"/> <!-- Sapphire -->
+			<skill id="55481" level="3" /> <!-- Sapphire -->
 		</skills>
 	</item>
 	<item id="90336" name="Sapphire" additionalName="Lv. 4" type="Armor">
@@ -544,7 +544,7 @@
 		<set name="is_depositable" val="false" />
 		<set name="is_sellable" val="false" />
 		<skills>
-			<skill id="55481" level="4"/> <!-- Sapphire -->
+			<skill id="55481" level="4" /> <!-- Sapphire -->
 		</skills>
 	</item>
 	<item id="90337" name="Sapphire" additionalName="Lv. 5" type="Armor">
@@ -560,7 +560,7 @@
 		<set name="is_depositable" val="false" />
 		<set name="is_sellable" val="false" />
 		<skills>
-			<skill id="55481" level="5"/> <!-- Sapphire -->
+			<skill id="55481" level="5" /> <!-- Sapphire -->
 		</skills>
 	</item>
 	<item id="90338" name="Diamond" additionalName="Lv. 1" type="Armor">
@@ -576,7 +576,7 @@
 		<set name="is_depositable" val="false" />
 		<set name="is_sellable" val="false" />
 		<skills>
-			<skill id="55475" level="1"/> <!-- Diamond -->
+			<skill id="55475" level="1" /> <!-- Diamond -->
 		</skills>
 	</item>
 	<item id="90339" name="Diamond" additionalName="Lv. 2" type="Armor">
@@ -592,7 +592,7 @@
 		<set name="is_depositable" val="false" />
 		<set name="is_sellable" val="false" />
 		<skills>
-			<skill id="55475" level="2"/> <!-- Diamond -->
+			<skill id="55475" level="2" /> <!-- Diamond -->
 		</skills>
 	</item>
 	<item id="90340" name="Diamond" additionalName="Lv. 3" type="Armor">
@@ -608,7 +608,7 @@
 		<set name="is_depositable" val="false" />
 		<set name="is_sellable" val="false" />
 		<skills>
-			<skill id="55475" level="3"/> <!-- Diamond -->
+			<skill id="55475" level="3" /> <!-- Diamond -->
 		</skills>
 	</item>
 	<item id="90341" name="Diamond" additionalName="Lv. 4" type="Armor">
@@ -624,7 +624,7 @@
 		<set name="is_depositable" val="false" />
 		<set name="is_sellable" val="false" />
 		<skills>
-			<skill id="55475" level="4"/> <!-- Diamond -->
+			<skill id="55475" level="4" /> <!-- Diamond -->
 		</skills>
 	</item>
 	<item id="90342" name="Diamond" additionalName="Lv. 5" type="Armor">
@@ -640,7 +640,7 @@
 		<set name="is_depositable" val="false" />
 		<set name="is_sellable" val="false" />
 		<skills>
-			<skill id="55475" level="5"/> <!-- Diamond -->
+			<skill id="55475" level="5" /> <!-- Diamond -->
 		</skills>
 	</item>
 	<item id="90343" name="Pearl" additionalName="Lv. 1" type="Armor">
@@ -656,7 +656,7 @@
 		<set name="is_depositable" val="false" />
 		<set name="is_sellable" val="false" />
 		<skills>
-			<skill id="55476" level="1"/> <!-- Pearl -->
+			<skill id="55476" level="1" /> <!-- Pearl -->
 		</skills>
 	</item>
 	<item id="90344" name="Pearl" additionalName="Lv. 2" type="Armor">
@@ -672,7 +672,7 @@
 		<set name="is_depositable" val="false" />
 		<set name="is_sellable" val="false" />
 		<skills>
-			<skill id="55476" level="2"/> <!-- Pearl -->
+			<skill id="55476" level="2" /> <!-- Pearl -->
 		</skills>
 	</item>
 	<item id="90345" name="Pearl" additionalName="Lv. 3" type="Armor">
@@ -688,7 +688,7 @@
 		<set name="is_depositable" val="false" />
 		<set name="is_sellable" val="false" />
 		<skills>
-			<skill id="55476" level="3"/> <!-- Pearl -->
+			<skill id="55476" level="3" /> <!-- Pearl -->
 		</skills>
 	</item>
 	<item id="90346" name="Pearl" additionalName="Lv. 4" type="Armor">
@@ -704,7 +704,7 @@
 		<set name="is_depositable" val="false" />
 		<set name="is_sellable" val="false" />
 		<skills>
-			<skill id="55476" level="4"/> <!-- Pearl -->
+			<skill id="55476" level="4" /> <!-- Pearl -->
 		</skills>
 	</item>
 	<item id="90347" name="Pearl" additionalName="Lv. 5" type="Armor">
@@ -720,7 +720,7 @@
 		<set name="is_depositable" val="false" />
 		<set name="is_sellable" val="false" />
 		<skills>
-			<skill id="55476" level="5"/> <!-- Pearl -->
+			<skill id="55476" level="5" /> <!-- Pearl -->
 		</skills>
 	</item>
 	<item id="90353" name="Vital Stone" additionalName="Lv. 1" type="Armor">
@@ -736,7 +736,7 @@
 		<set name="is_depositable" val="false" />
 		<set name="is_sellable" val="false" />
 		<skills>
-			<skill id="55472" level="1"/> <!-- Vital Stone -->
+			<skill id="55472" level="1" /> <!-- Vital Stone -->
 		</skills>
 	</item>
 	<item id="90354" name="Vital Stone" additionalName="Lv. 2" type="Armor">
@@ -752,7 +752,7 @@
 		<set name="is_depositable" val="false" />
 		<set name="is_sellable" val="false" />
 		<skills>
-			<skill id="55472" level="2"/> <!-- Vital Stone -->
+			<skill id="55472" level="2" /> <!-- Vital Stone -->
 		</skills>
 	</item>
 	<item id="90355" name="Vital Stone" additionalName="Lv. 3" type="Armor">
@@ -768,7 +768,7 @@
 		<set name="is_depositable" val="false" />
 		<set name="is_sellable" val="false" />
 		<skills>
-			<skill id="55472" level="3"/> <!-- Vital Stone -->
+			<skill id="55472" level="3" /> <!-- Vital Stone -->
 		</skills>
 	</item>
 	<item id="90356" name="Vital Stone" additionalName="Lv. 4" type="Armor">
@@ -784,7 +784,7 @@
 		<set name="is_depositable" val="false" />
 		<set name="is_sellable" val="false" />
 		<skills>
-			<skill id="55472" level="4"/> <!-- Vital Stone -->
+			<skill id="55472" level="4" /> <!-- Vital Stone -->
 		</skills>
 	</item>
 	<item id="90357" name="Vital Stone" additionalName="Lv. 5" type="Armor">
@@ -800,7 +800,7 @@
 		<set name="is_depositable" val="false" />
 		<set name="is_sellable" val="false" />
 		<skills>
-			<skill id="55472" level="5"/> <!-- Vital Stone -->
+			<skill id="55472" level="5" /> <!-- Vital Stone -->
 		</skills>
 	</item>
 	<item id="90358" name="Shine Ore" type="EtcItem">

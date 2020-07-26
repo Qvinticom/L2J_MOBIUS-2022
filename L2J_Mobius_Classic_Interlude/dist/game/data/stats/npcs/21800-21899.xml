@@ -41,27 +41,27 @@
 		</collision>
 		<dropLists>
 			<drop>
-				<item id="57" min="1853" max="3785" chance="70"/> <!-- Adena -->
-				<item id="212" min="1" max="1" chance="0.0004"/> <!-- Dasparion's Staff -->
-				<item id="2504" min="1" max="1" chance="0.0004"/> <!-- Meteor Shower -->
-				<item id="1344" min="10" max="30" chance="16.6667"/> <!-- Mithril Arrow -->
-				<item id="1867" min="1" max="3" chance="9.0909"/> <!-- Animal Skin -->
-				<item id="1872" min="1" max="1" chance="20"/> <!-- Animal Bone -->
-				<item id="1882" min="1" max="1" chance="2.8571"/> <!-- Leather -->
-				<item id="1894" min="1" max="1" chance="0.4405"/> <!-- Crafted Leather -->
-				<item id="4042" min="1" max="1" chance="1.7060"/> <!-- Enria -->
-				<item id="5272" min="1" max="1" chance="0.0114"/> <!-- Recipe: Greater Soulshot (S) Compressed Package(100%) -->
-				<item id="5532" min="1" max="1" chance="0.1147"/> <!-- Meteor Shower Head -->
-				<item id="5543" min="1" max="1" chance="0.1158"/> <!-- Dasparion's Staff Edge -->
-				<item id="8341" min="1" max="1" chance="0.0436"/> <!-- Spiritual Eye Piece -->
-				<item id="8346" min="1" max="1" chance="0.0374"/> <!-- Hammer Piece of Destroyer -->
-				<item id="8732" min="1" max="1" chance="0.1062"/> <!-- EtcItem" name="Life Stone: level 76 -->
-				<item id="8742" min="1" max="1" chance="0.0228"/> <!-- Mid-Grade Life Stone: level 76 -->
+				<item id="57" min="1853" max="3785" chance="70" /> <!-- Adena -->
+				<item id="212" min="1" max="1" chance="0.0004" /> <!-- Dasparion's Staff -->
+				<item id="2504" min="1" max="1" chance="0.0004" /> <!-- Meteor Shower -->
+				<item id="1344" min="10" max="30" chance="16.6667" /> <!-- Mithril Arrow -->
+				<item id="1867" min="1" max="3" chance="9.0909" /> <!-- Animal Skin -->
+				<item id="1872" min="1" max="1" chance="20" /> <!-- Animal Bone -->
+				<item id="1882" min="1" max="1" chance="2.8571" /> <!-- Leather -->
+				<item id="1894" min="1" max="1" chance="0.4405" /> <!-- Crafted Leather -->
+				<item id="4042" min="1" max="1" chance="1.7060" /> <!-- Enria -->
+				<item id="5272" min="1" max="1" chance="0.0114" /> <!-- Recipe: Greater Soulshot (S) Compressed Package(100%) -->
+				<item id="5532" min="1" max="1" chance="0.1147" /> <!-- Meteor Shower Head -->
+				<item id="5543" min="1" max="1" chance="0.1158" /> <!-- Dasparion's Staff Edge -->
+				<item id="8341" min="1" max="1" chance="0.0436" /> <!-- Spiritual Eye Piece -->
+				<item id="8346" min="1" max="1" chance="0.0374" /> <!-- Hammer Piece of Destroyer -->
+				<item id="8732" min="1" max="1" chance="0.1062" /> <!-- EtcItem" name="Life Stone: level 76 -->
+				<item id="8742" min="1" max="1" chance="0.0228" /> <!-- Mid-Grade Life Stone: level 76 -->
 			</drop>
 			<spoil>
-				<item id="4042" min="1" max="1" chance="7.6772"/> <!-- Enria -->
-				<item id="5167" min="1" max="1" chance="0.2047"/> <!-- Recipe: Blessed Spiritshot (S) Compressed Package (100%) -->
-				<item id="5529" min="1" max="1" chance="1.2637"/> <!-- Dragon Slayer Edge -->
+				<item id="4042" min="1" max="1" chance="7.6772" /> <!-- Enria -->
+				<item id="5167" min="1" max="1" chance="0.2047" /> <!-- Recipe: Blessed Spiritshot (S) Compressed Package (100%) -->
+				<item id="5529" min="1" max="1" chance="1.2637" /> <!-- Dragon Slayer Edge -->
 			</spoil>
 		</dropLists>
 	</npc>
@@ -92,7 +92,7 @@
 		</stats>
 		<status undying="false" canBeSown="true" />
 		<skillList>
-			<skill id="4408" level="12"/> <!-- HP Modifiers -->
+			<skill id="4408" level="12" /> <!-- HP Modifiers -->
 			<skill id="4410" level="14" /> <!-- P. Atk. Modifiers -->
 			<skill id="4411" level="14" /> <!-- M. Atk. Modifiers -->
 			<skill id="4412" level="8" /> <!-- P. Def. Modifiers -->
@@ -140,7 +140,7 @@
 		</stats>
 		<status undying="false" canBeSown="true" />
 		<skillList>
-			<skill id="4408" level="12"/> <!-- HP Modifiers -->
+			<skill id="4408" level="12" /> <!-- HP Modifiers -->
 			<skill id="4410" level="14" /> <!-- P. Atk. Modifiers -->
 			<skill id="4411" level="14" /> <!-- M. Atk. Modifiers -->
 			<skill id="4412" level="8" /> <!-- P. Def. Modifiers -->
@@ -188,7 +188,7 @@
 		</stats>
 		<status undying="false" canBeSown="true" />
 		<skillList>
-			<skill id="4408" level="12"/> <!-- HP Modifiers -->
+			<skill id="4408" level="12" /> <!-- HP Modifiers -->
 			<skill id="4410" level="14" /> <!-- P. Atk. Modifiers -->
 			<skill id="4411" level="14" /> <!-- M. Atk. Modifiers -->
 			<skill id="4412" level="8" /> <!-- P. Def. Modifiers -->
@@ -236,7 +236,7 @@
 		</stats>
 		<status undying="false" canBeSown="true" />
 		<skillList>
-			<skill id="4408" level="12"/> <!-- HP Modifiers -->
+			<skill id="4408" level="12" /> <!-- HP Modifiers -->
 			<skill id="4410" level="14" /> <!-- P. Atk. Modifiers -->
 			<skill id="4411" level="14" /> <!-- M. Atk. Modifiers -->
 			<skill id="4412" level="8" /> <!-- P. Def. Modifiers -->

@@ -569,7 +569,7 @@
 		<set name="is_freightable" val="true" />
 		<set name="handler" val="ItemSkills" />
 		<skills>
-			<skill id="39187" level="1"/> <!-- Ornament Supply Box (A-grade) -->
+			<skill id="39187" level="1" /> <!-- Ornament Supply Box (A-grade) -->
 		</skills>
 	</item>
 	<item id="49851" name="Sayha's Gust" type="EtcItem">
@@ -612,9 +612,9 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 		<set name="is_freightable" val="true" />
-		<set name="handler" val="ItemSkills"/>
+		<set name="handler" val="ItemSkills" />
 		<skills>
-			<skill id="39198" level="1"/> <!-- Melissa's MP Recovery Potion -->
+			<skill id="39198" level="1" /> <!-- Melissa's MP Recovery Potion -->
 		</skills>
 	</item>
 	<item id="49855" name="Sayha's Golden Gift" type="EtcItem">

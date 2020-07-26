@@ -1278,7 +1278,7 @@
 			<attack physical="295358.4152" magical="211816.358" random="30" critical="4.75" accuracy="4.75" attackSpeed="250" type="SWORD" range="40" distance="80" width="120" />
 			<defence physical="34243.68753" magical="16714.49407" />
 			<attribute>
-				<defence fire="300" water="300" wind="300" earth="300" holy="250" dark="370"/>
+				<defence fire="300" water="300" wind="300" earth="300" holy="250" dark="370" />
 			</attribute>
 			<speed>
 				<walk ground="60" />
@@ -1390,7 +1390,7 @@
 			<attack physical="48571.42857142857" magical="8571.428571428571" critical="4" attackSpeed="253" range="40" />
 			<defence physical="3777.777777777778" magical="2193.548387096774" />
 			<attribute>
-				<defence fire="100" water="100" wind="100" earth="100" holy="100" dark="250"/>
+				<defence fire="100" water="100" wind="100" earth="100" holy="100" dark="250" />
 			</attribute>
 			<speed>
 				<walk ground="50" />
@@ -1419,7 +1419,7 @@
 			<attack physical="48571.42857142857" magical="8571.428571428571" critical="4" attackSpeed="253" range="40" />
 			<defence physical="3777.777777777778" magical="2193.548387096774" />
 			<attribute>
-				<defence fire="100" water="100" wind="100" earth="100" holy="100" dark="100"/>
+				<defence fire="100" water="100" wind="100" earth="100" holy="100" dark="100" />
 			</attribute>
 			<speed>
 				<walk ground="50" />
@@ -1697,7 +1697,7 @@
 			<attack physical="49523.80952380952" magical="8739.495798319328" critical="4" attackSpeed="253" range="40" />
 			<defence physical="3851.851851851852" magical="2236.559139784946" />
 			<attribute>
-				<defence fire="300" water="300" wind="300" earth="300" holy="250" dark="370"/>
+				<defence fire="300" water="300" wind="300" earth="300" holy="250" dark="370" />
 			</attribute>
 		</stats>
 		<skillList>
@@ -1993,8 +1993,8 @@
 		<skillList>
 			<skill id="4416" level="11" /> <!-- Giants -->
 			<skill id="4494" level="1" /> <!-- Raid Boss -->
-			<skill id="5465" level="1"/> <!-- Earth Attack -->
-			<skill id="16746" level="1"/> <!-- Ramona -->
+			<skill id="5465" level="1" /> <!-- Earth Attack -->
+			<skill id="16746" level="1" /> <!-- Ramona -->
 		</skillList>
 		<ai clanHelpRange="400">
 			<clanList>
@@ -2022,8 +2022,8 @@
 		<skillList>
 			<skill id="4416" level="11" /> <!-- Giants -->
 			<skill id="4494" level="1" /> <!-- Raid Boss -->
-			<skill id="5465" level="1"/> <!-- Earth Attack -->
-			<skill id="16746" level="1"/> <!-- Ramona -->
+			<skill id="5465" level="1" /> <!-- Earth Attack -->
+			<skill id="16746" level="1" /> <!-- Ramona -->
 		</skillList>
 		<ai clanHelpRange="400">
 			<clanList>
@@ -2049,14 +2049,14 @@
 			<attack physical="49523.8095238095" magical="8739.49579831933" critical="4" type="BLUNT" attackSpeed="253" range="40" />
 			<defence physical="3851.85185185185" magical="2236.55913978495" />
 			<attribute>
-				<defence fire="300" water="300" wind="250" earth="370" holy="300" dark="300"/>
+				<defence fire="300" water="300" wind="250" earth="370" holy="300" dark="300" />
 			</attribute>
 		</stats>
 		<skillList>
 			<skill id="4416" level="11" /> <!-- Giants -->
 			<skill id="4494" level="1" /> <!-- Raid Boss -->
-			<skill id="5465" level="1"/> <!-- Earth Attack -->
-			<skill id="16746" level="1"/> <!-- Ramona -->
+			<skill id="5465" level="1" /> <!-- Earth Attack -->
+			<skill id="16746" level="1" /> <!-- Ramona -->
 		</skillList>
 		<ai clanHelpRange="400">
 			<clanList>
@@ -2231,7 +2231,7 @@
 			<skill id="14823" level="1" /> <!-- Lethal Strike Resistance -->
 			<skill id="16547" level="10" /> <!-- Danger Zone Attack Resistance -->
 			<skill id="4379" level="5" /> <!-- Spear Resistance -->
-			<skill id="4438" level="5"/>
+			<skill id="4438" level="5" />
 			<skill id="4461" level="1" /> <!-- Dagger/Rapier Vulnerability -->
 			<skill id="16608" level="1" /> <!-- Servitor Attack Weakness -->
 			<skill id="4071" level="1" /> <!-- Bow/Crossbow Resistance -->
@@ -2462,7 +2462,7 @@
 			<attack physical="42272.973579315" magical="7578.7167543818" critical="4" attackSpeed="253" range="40" />
 			<defence physical="4244.623655914" magical="2030.7649339907" />
 			<attribute>
-				<defence fire="300" water="300" wind="250" earth="370" holy="300" dark="300"/>
+				<defence fire="300" water="300" wind="250" earth="370" holy="300" dark="300" />
 			</attribute>
 		</stats>
 		<skillList>
@@ -2607,7 +2607,7 @@
 			<attack physical="33816.118085312" magical="6016.0251046437" critical="4" attackSpeed="253" range="40" />
 			<defence physical="3845.3038674033" magical="1795.166159807" />
 			<attribute>
-				<defence fire="300" water="300" wind="250" earth="370" holy="300" dark="300"/>
+				<defence fire="300" water="300" wind="250" earth="370" holy="300" dark="300" />
 			</attribute>
 		</stats>
 		<skillList>

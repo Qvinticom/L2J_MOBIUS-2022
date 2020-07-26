@@ -536,7 +536,7 @@
 		<race>UNDEAD</race>
 		<sex>MALE</sex>
 		<equipment rhand="1472" /> <!-- Dreadbane -->
-		<acquire exp="15169" sp="501"/>
+		<acquire exp="15169" sp="501" />
 		<stats str="40" int="41" dex="30" wit="20" con="43" men="10">
 			<vitals hp="16012" hpRegen="185" mp="889" mpRegen="2.4" />
 			<attack physical="470" magical="715" random="30" critical="7" accuracy="40" attackSpeed="253" type="FIST" range="40" distance="80" width="120" />
@@ -725,7 +725,7 @@
 		</parameters>
 		<race>CONSTRUCT</race>
 		<sex>MALE</sex>
-		<acquire exp="2915" sp="215"/> <!-- Need confirm retail values -->
+		<acquire exp="2915" sp="215" /> <!-- Need confirm retail values -->
 		<stats str="40" int="41" dex="30" wit="20" con="43" men="10">
 			<vitals hp="13389" hpRegen="162" mp="720" mpRegen="2.1" />
 			<attack physical="391" magical="66" random="30" critical="7" accuracy="40" attackSpeed="253" type="FIST" range="40" distance="80" width="120" />
@@ -1021,7 +1021,7 @@
 		</parameters>
 		<race>BEAST</race>
 		<sex>MALE</sex>
-		<acquire exp="16035" sp="481"/> <!-- Need confirm retail values -->
+		<acquire exp="16035" sp="481" /> <!-- Need confirm retail values -->
 		<stats str="40" int="41" dex="30" wit="20" con="43" men="10">
 			<vitals hp="10619" hpRegen="158" mp="36936" mpRegen="2.1" />
 			<attack physical="298" magical="40" random="30" critical="7" accuracy="40" attackSpeed="253" type="FIST" range="40" distance="80" width="120" />
@@ -1065,7 +1065,7 @@
 		</parameters>
 		<race>BEAST</race>
 		<sex>MALE</sex>
-		<acquire exp="2915" sp="215"/> <!-- Need confirm retail values -->
+		<acquire exp="2915" sp="215" /> <!-- Need confirm retail values -->
 		<stats str="40" int="41" dex="30" wit="20" con="43" men="10">
 			<vitals hp="10619" hpRegen="162" mp="36936" mpRegen="2.1" />
 			<attack physical="1058" magical="1563" random="30" critical="15" accuracy="40" attackSpeed="253" type="FIST" range="40" distance="80" width="120" />
@@ -1109,7 +1109,7 @@
 		</parameters>
 		<race>BUG</race>
 		<sex>FEMALE</sex>
-		<acquire exp="16035" sp="481"/> <!-- Need confirm retail values -->
+		<acquire exp="16035" sp="481" /> <!-- Need confirm retail values -->
 		<stats str="40" int="41" dex="30" wit="20" con="43" men="10">
 			<vitals hp="10619" hpRegen="158" mp="36936" mpRegen="2.1" />
 			<attack physical="298" magical="40" random="30" critical="7" accuracy="40" attackSpeed="253" type="FIST" range="40" distance="80" width="120" />
@@ -1148,7 +1148,7 @@
 	<npc id="29018" level="49" type="Monster" name="Riba Iren">
 		<race>BUG</race>
 		<sex>FEMALE</sex>
-		<acquire exp="2915" sp="215"/> <!-- Need confirm retail values -->
+		<acquire exp="2915" sp="215" /> <!-- Need confirm retail values -->
 		<stats str="40" int="41" dex="30" wit="20" con="43" men="10">
 			<vitals hp="10619" hpRegen="162" mp="36936" mpRegen="2.1" />
 			<attack physical="1058" magical="1563" random="30" critical="7" accuracy="40" attackSpeed="253" type="FIST" range="40" distance="80" width="120" />

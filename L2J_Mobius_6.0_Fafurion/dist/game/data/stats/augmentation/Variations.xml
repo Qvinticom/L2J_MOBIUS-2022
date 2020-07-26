@@ -5136,7 +5136,7 @@
 			<optionGroup weaponType="warrior" order="0">
 				<optionCategory chance="100.0">
 					<optionRange from="31116" to="31208" chance="1.063" /> <!-- P. Atk. + 138 -> CON + 2 -->
-					<option id="31209" chance="1.141"/> <!-- MEN + 2 -->
+					<option id="31209" chance="1.141" /> <!-- MEN + 2 -->
 				</optionCategory>
 			</optionGroup>
 			<optionGroup weaponType="warrior" order="1">
@@ -5156,7 +5156,7 @@
 			<optionGroup weaponType="mage" order="0">
 				<optionCategory chance="100.0">
 					<optionRange from="31116" to="31208" chance="1.063" /> <!-- P. Atk. + 138 -> CON + 2 -->
-					<option id="31209" chance="1.141"/> <!-- MEN + 2 -->
+					<option id="31209" chance="1.141" /> <!-- MEN + 2 -->
 				</optionCategory>
 			</optionGroup>
 			<optionGroup weaponType="mage" order="1">
@@ -5182,33 +5182,33 @@
 				</optionCategory>
 				<optionCategory chance="35.0">
 					<optionRange from="30330" to="30334" chance="16.666" /> <!-- Fire Resistance + 10. -> Holy Resistance + 10. -->
-					<option id="30335" chance="16.67"/> <!-- Dark Resistance + 10. -->
+					<option id="30335" chance="16.67" /> <!-- Dark Resistance + 10. -->
 				</optionCategory>
 				<optionCategory chance="9.0">
 					<optionRange from="30324" to="30328" chance="16.666" /> <!-- Fire Resistance + 20. -> Holy Resistance + 20. -->
-					<option id="30329" chance="16.67"/> <!-- Dark Resistance + 20. -->
+					<option id="30329" chance="16.67" /> <!-- Dark Resistance + 20. -->
 				</optionCategory>
 				<optionCategory chance="1.0">
 					<optionRange from="30315" to="30322" chance="11.111" /> <!-- P. Def. + 5%. -> M. Skill Critical Damage + 1%. -->
-					<option id="30323" chance="11.112"/> <!-- Received Heal Amount + 1%. -->
+					<option id="30323" chance="11.112" /> <!-- Received Heal Amount + 1%. -->
 				</optionCategory>
 			</optionGroup>
 			<optionGroup weaponType="warrior" order="1">
 				<optionCategory chance="55.0">
 					<optionRange from="30374" to="30375" chance="33.333" /> <!-- Max HP + 266, HP Recovery Bonus + 8. -> Max MP + 117, MP Recovery Bonus + 4. -->
-					<option id="30376" chance="33.334"/> <!-- Max CP + 266, CP Recovery Bonus + 8. -->
+					<option id="30376" chance="33.334" /> <!-- Max CP + 266, CP Recovery Bonus + 8. -->
 				</optionCategory>
 				<optionCategory chance="35.0">
 					<optionRange from="30363" to="30372" chance="9.09" /> <!-- Stun Resistance + 5. -> Pull Resistance + 5. -->
-					<option id="30373" chance="9.1"/> <!-- Petrify Resistance + 5. -->
+					<option id="30373" chance="9.1" /> <!-- Petrify Resistance + 5. -->
 				</optionCategory>
 				<optionCategory chance="9.0">
 					<optionRange from="30352" to="30361" chance="9.09" /> <!-- Stun Resistance + 10. -> Pull Resistance + 10. -->
-					<option id="30362" chance="9.1"/> <!-- Petrify Resistance + 10. -->
+					<option id="30362" chance="9.1" /> <!-- Petrify Resistance + 10. -->
 				</optionCategory>
 				<optionCategory chance="1.0">
 					<optionRange from="30340" to="30350" chance="8.33" /> <!-- M. Def. + 5%. -> MEN +1 -->
-					<option id="30351" chance="8.37"/> <!-- Speed + 7. -->
+					<option id="30351" chance="8.37" /> <!-- Speed + 7. -->
 				</optionCategory>
 			</optionGroup>
 		</variation>
@@ -5217,47 +5217,47 @@
 			<optionGroup weaponType="warrior" order="0">
 				<optionCategory chance="100.0">
 					<optionRange from="30377" to="30451" chance="1.315" /> <!-- P. Atk. + 40 -> Max CP + 250 -->
-					<option id="30452" chance="1.375"/> <!-- Max CP + 500 -->
+					<option id="30452" chance="1.375" /> <!-- Max CP + 500 -->
 				</optionCategory>
 			</optionGroup>
 			<optionGroup weaponType="warrior" order="1">
 				<optionCategory chance="55.0">
 					<optionRange from="30453" to="30511" chance="1.666" /> <!-- P. Critical Rate + 1.1% -> Passive: M. Skill Critical Damage + 3%. -->
-					<option id="30512" chance="1.706"/> <!-- Passive: M. Skill Critical Damage + 5%. -->
+					<option id="30512" chance="1.706" /> <!-- Passive: M. Skill Critical Damage + 5%. -->
 				</optionCategory>
 				<optionCategory chance="35.0">
 					<optionRange from="30513" to="30522" chance="10.0" /> <!-- Passive: Attack Attribute + 5. -> Passive: Attack Attribute + 30. -->
 				</optionCategory>
 				<optionCategory chance="7.0">
 					<optionRange from="30523" to="30587" chance="1.515" /> <!-- Stun Attack Success Rate + 1% -> Passive: Petrification Attack Success Rate + 5%. -->
-					<option id="30588" chance="1.525"/> <!-- Passive: Petrification Attack Success Rate + 10%. -->
+					<option id="30588" chance="1.525" /> <!-- Passive: Petrification Attack Success Rate + 10%. -->
 				</optionCategory>
 				<optionCategory chance="3.0">
 					<optionRange from="32237" to="32372" chance="0.729" /> <!-- Passive: Max HP + 3%. -> Active: Not targeted by enemies for 4 seconds. -->
-					<option id="32373" chance="0.856"/> <!-- Active: Not targeted by enemies for 5 seconds. -->
+					<option id="32373" chance="0.856" /> <!-- Active: Not targeted by enemies for 5 seconds. -->
 				</optionCategory>
 			</optionGroup>
 			<optionGroup weaponType="mage" order="0">
 				<optionCategory chance="100.0">
 					<optionRange from="30377" to="30451" chance="1.315" /> <!-- P. Atk. + 40 -> Max CP + 250 -->
-					<option id="30452" chance="1.375"/> <!-- Max CP + 500 -->
+					<option id="30452" chance="1.375" /> <!-- Max CP + 500 -->
 				</optionCategory>
 			</optionGroup>
 			<optionGroup weaponType="mage" order="1">
 				<optionCategory chance="55.0">
 					<optionRange from="30453" to="30511" chance="1.666" /> <!-- P. Critical Rate + 1.1% -> Passive: M. Skill Critical Damage + 3%. -->
-					<option id="30512" chance="1.706"/> <!-- Passive: M. Skill Critical Damage + 5%. -->
+					<option id="30512" chance="1.706" /> <!-- Passive: M. Skill Critical Damage + 5%. -->
 				</optionCategory>
 				<optionCategory chance="35.0">
 					<optionRange from="30513" to="30522" chance="10.0" /> <!-- Passive: Attack Attribute + 5. -> Passive: Attack Attribute + 30. -->
 				</optionCategory>
 				<optionCategory chance="7.0">
 					<optionRange from="30523" to="30587" chance="1.515" /> <!-- Stun Attack Success Rate + 1% -> Passive: Petrification Attack Success Rate + 5%. -->
-					<option id="30588" chance="1.525"/> <!-- Passive: Petrification Attack Success Rate + 10%. -->
+					<option id="30588" chance="1.525" /> <!-- Passive: Petrification Attack Success Rate + 10%. -->
 				</optionCategory>
 				<optionCategory chance="3.0">
 					<optionRange from="32237" to="32372" chance="0.729" /> <!-- Passive: Max HP + 3%. -> Active: Not targeted by enemies for 4 seconds. -->
-					<option id="32373" chance="0.856"/> <!-- Active: Not targeted by enemies for 5 seconds. -->
+					<option id="32373" chance="0.856" /> <!-- Active: Not targeted by enemies for 5 seconds. -->
 				</optionCategory>
 			</optionGroup>
 		</variation>
@@ -5266,47 +5266,47 @@
 			<optionGroup weaponType="warrior" order="0">
 				<optionCategory chance="100.0">
 					<optionRange from="30589" to="30675" chance="1.136" /> <!-- P. Atk. + 73 -> WIT + 1 -->
-					<option id="30676" chance="1.168"/> <!-- MEN + 1 -->
+					<option id="30676" chance="1.168" /> <!-- MEN + 1 -->
 				</optionCategory>
 			</optionGroup>
 			<optionGroup weaponType="warrior" order="1">
 				<optionCategory chance="55.0">
 					<optionRange from="30677" to="30735" chance="1.666" /> <!-- P. Critical Rate + 1.65% -> Passive: M. Skill Critical Damage + 3%. -->
-					<option id="30736" chance="1.706"/> <!-- Passive: M. Skill Critical Damage + 7%. -->
+					<option id="30736" chance="1.706" /> <!-- Passive: M. Skill Critical Damage + 7%. -->
 				</optionCategory>
 				<optionCategory chance="35.0">
 					<optionRange from="30737" to="30746" chance="10.0" /> <!-- Passive: Attack Attribute + 5. -> Passive: Attack Attribute + 50. -->
 				</optionCategory>
 				<optionCategory chance="7.0">
 					<optionRange from="30747" to="30844" chance="1.01" /> <!-- Stun Attack Success Rate + 2% -> Passive: Petrification Attack Success Rate + 10%. -->
-					<option id="30845" chance="1.02"/> <!-- Passive: Petrification Attack Success Rate + 20%. -->
+					<option id="30845" chance="1.02" /> <!-- Passive: Petrification Attack Success Rate + 20%. -->
 				</optionCategory>
 				<optionCategory chance="3.0">
 					<optionRange from="32374" to="32527" chance="0.645" /> <!-- Passive: Max HP + 3%. -> Active: Not targeted by enemies for 4 seconds. -->
-					<option id="32528" chance="0.67"/> <!-- Active: Not targeted by enemies for 5 seconds. -->
+					<option id="32528" chance="0.67" /> <!-- Active: Not targeted by enemies for 5 seconds. -->
 				</optionCategory>
 			</optionGroup>
 			<optionGroup weaponType="mage" order="0">
 				<optionCategory chance="100.0">
 					<optionRange from="30589" to="30675" chance="1.136" /> <!-- P. Atk. + 73 -> WIT + 1 -->
-					<option id="30676" chance="1.168"/> <!-- MEN + 1 -->
+					<option id="30676" chance="1.168" /> <!-- MEN + 1 -->
 				</optionCategory>
 			</optionGroup>
 			<optionGroup weaponType="mage" order="1">
 				<optionCategory chance="55.0">
 					<optionRange from="30677" to="30735" chance="1.666" /> <!-- P. Critical Rate + 1.65% -> Passive: M. Skill Critical Damage + 3%. -->
-					<option id="30736" chance="1.706"/> <!-- Passive: M. Skill Critical Damage + 7%. -->
+					<option id="30736" chance="1.706" /> <!-- Passive: M. Skill Critical Damage + 7%. -->
 				</optionCategory>
 				<optionCategory chance="35.0">
 					<optionRange from="30737" to="30746" chance="10.0" /> <!-- Passive: Attack Attribute + 5. -> Passive: Attack Attribute + 50. -->
 				</optionCategory>
 				<optionCategory chance="7.0">
 					<optionRange from="30747" to="30844" chance="1.01" /> <!-- Stun Attack Success Rate + 2% -> Passive: Petrification Attack Success Rate + 10%. -->
-					<option id="30845" chance="1.02"/> <!-- Passive: Petrification Attack Success Rate + 20%. -->
+					<option id="30845" chance="1.02" /> <!-- Passive: Petrification Attack Success Rate + 20%. -->
 				</optionCategory>
 				<optionCategory chance="3.0">
 					<optionRange from="32374" to="32527" chance="0.645" /> <!-- Passive: Max HP + 3%. -> Active: Not targeted by enemies for 4 seconds. -->
-					<option id="32528" chance="0.67"/> <!-- Active: Not targeted by enemies for 5 seconds. -->
+					<option id="32528" chance="0.67" /> <!-- Active: Not targeted by enemies for 5 seconds. -->
 				</optionCategory>
 			</optionGroup>
 		</variation>
@@ -5315,47 +5315,47 @@
 			<optionGroup weaponType="warrior" order="0">
 				<optionCategory chance="100.0">
 					<optionRange from="30846" to="30934" chance="1.111" /> <!-- P. Atk. + 110 -> CON + 2 -->
-					<option id="30935" chance="1.121"/> <!-- MEN + 2 -->
+					<option id="30935" chance="1.121" /> <!-- MEN + 2 -->
 				</optionCategory>
 			</optionGroup>
 			<optionGroup weaponType="warrior" order="1">
 				<optionCategory chance="55.0">
 					<optionRange from="30936" to="30994" chance="1.666" /> <!-- P. Critical Rate + 2.2% -> Passive: M. Skill Critical Damage + 5%. -->
-					<option id="30995" chance="1.706"/> <!-- Passive: M. Skill Critical Damage + 10%. -->
+					<option id="30995" chance="1.706" /> <!-- Passive: M. Skill Critical Damage + 10%. -->
 				</optionCategory>
 				<optionCategory chance="35.0">
 					<optionRange from="30996" to="31005" chance="10.0" /> <!-- Passive: Attack Attribute + 5. -> Passive: Attack Attribute + 60. -->
 				</optionCategory>
 				<optionCategory chance="7.0">
 					<optionRange from="31006" to="31114" chance="0.909" /> <!-- Stun Attack Success Rate + 2% -> Passive: Petrification Attack Success Rate + 12%. -->
-					<option id="31115" chance="0.919"/> <!-- Passive: Petrification Attack Success Rate + 25%. -->
+					<option id="31115" chance="0.919" /> <!-- Passive: Petrification Attack Success Rate + 25%. -->
 				</optionCategory>
 				<optionCategory chance="3.0">
 					<optionRange from="32529" to="32682" chance="0.645" /> <!-- Passive: Max HP + 5%. -> Active: Not targeted by enemies for 5 seconds. -->
-					<option id="32683" chance="0.67"/> <!-- Active: Not targeted by enemies for 6 seconds. -->
+					<option id="32683" chance="0.67" /> <!-- Active: Not targeted by enemies for 6 seconds. -->
 				</optionCategory>
 			</optionGroup>
 			<optionGroup weaponType="mage" order="0">
 				<optionCategory chance="100.0">
 					<optionRange from="30846" to="30934" chance="1.111" /> <!-- P. Atk. + 110 -> CON + 2 -->
-					<option id="30935" chance="1.121"/> <!-- MEN + 2 -->
+					<option id="30935" chance="1.121" /> <!-- MEN + 2 -->
 				</optionCategory>
 			</optionGroup>
 			<optionGroup weaponType="mage" order="1">
 				<optionCategory chance="55.0">
 					<optionRange from="30936" to="30994" chance="1.666" /> <!-- P. Critical Rate + 2.2% -> Passive: M. Skill Critical Damage + 5%. -->
-					<option id="30995" chance="1.706"/> <!-- Passive: M. Skill Critical Damage + 10%. -->
+					<option id="30995" chance="1.706" /> <!-- Passive: M. Skill Critical Damage + 10%. -->
 				</optionCategory>
 				<optionCategory chance="35.0">
 					<optionRange from="30996" to="31005" chance="10.0" /> <!-- Passive: Attack Attribute + 5. -> Passive: Attack Attribute + 60. -->
 				</optionCategory>
 				<optionCategory chance="7.0">
 					<optionRange from="31006" to="31114" chance="0.909" /> <!-- Stun Attack Success Rate + 2% -> Passive: Petrification Attack Success Rate + 12%. -->
-					<option id="31115" chance="0.919"/> <!-- Passive: Petrification Attack Success Rate + 25%. -->
+					<option id="31115" chance="0.919" /> <!-- Passive: Petrification Attack Success Rate + 25%. -->
 				</optionCategory>
 				<optionCategory chance="3.0">
 					<optionRange from="32529" to="32682" chance="0.645" /> <!-- Passive: Max HP + 5%. -> Active: Not targeted by enemies for 5 seconds. -->
-					<option id="32683" chance="0.67"/> <!-- Active: Not targeted by enemies for 6 seconds. -->
+					<option id="32683" chance="0.67" /> <!-- Active: Not targeted by enemies for 6 seconds. -->
 				</optionCategory>
 			</optionGroup>
 		</variation>
@@ -5364,47 +5364,47 @@
 			<optionGroup weaponType="warrior" order="0">
 				<optionCategory chance="100.0">
 					<optionRange from="31116" to="31208" chance="1.063" /> <!-- P. Atk. + 138 -> CON + 2 -->
-					<option id="31209" chance="1.141"/> <!-- MEN + 2 -->
+					<option id="31209" chance="1.141" /> <!-- MEN + 2 -->
 				</optionCategory>
 			</optionGroup>
 			<optionGroup weaponType="warrior" order="1">
 				<optionCategory chance="55.0">
 					<optionRange from="31210" to="31268" chance="1.666" /> <!-- P. Critical Rate + 3.3% -> Passive: M. Skill Critical Damage + 8%. -->
-					<option id="31269" chance="1.706"/> <!-- Passive: M. Skill Critical Damage + 15%. -->
+					<option id="31269" chance="1.706" /> <!-- Passive: M. Skill Critical Damage + 15%. -->
 				</optionCategory>
 				<optionCategory chance="35.0">
 					<optionRange from="31270" to="31279" chance="10.0" /> <!-- Passive: Attack Attribute + 10. -> Passive: Attack Attribute + 70. -->
 				</optionCategory>
 				<optionCategory chance="7.0">
 					<optionRange from="31280" to="31377" chance="1.0101" /> <!-- Stun Attack Success Rate + 3% -> Passive: Petrification Attack Success Rate + 15%. -->
-					<option id="31378" chance="1.0102"/> <!-- Passive: Petrification Attack Success Rate + 30%. -->
+					<option id="31378" chance="1.0102" /> <!-- Passive: Petrification Attack Success Rate + 30%. -->
 				</optionCategory>
 				<optionCategory chance="3.0">
 					<optionRange from="32684" to="32837" chance="0.645" /> <!-- Passive: Max HP + 8%. -> Active: Not targeted by enemies for 5 seconds. -->
-					<option id="32838" chance="0.67"/> <!-- Active: Not targeted by enemies for 6 seconds. -->
+					<option id="32838" chance="0.67" /> <!-- Active: Not targeted by enemies for 6 seconds. -->
 				</optionCategory>
 			</optionGroup>
 			<optionGroup weaponType="mage" order="0">
 				<optionCategory chance="100.0">
 					<optionRange from="31116" to="31208" chance="1.063" /> <!-- P. Atk. + 138 -> CON + 2 -->
-					<option id="31209" chance="1.141"/> <!-- MEN + 2 -->
+					<option id="31209" chance="1.141" /> <!-- MEN + 2 -->
 				</optionCategory>
 			</optionGroup>
 			<optionGroup weaponType="mage" order="1">
 				<optionCategory chance="55.0">
 					<optionRange from="31210" to="31268" chance="1.666" /> <!-- P. Critical Rate + 3.3% -> Passive: M. Skill Critical Damage + 8%. -->
-					<option id="31269" chance="1.706"/> <!-- Passive: M. Skill Critical Damage + 15%. -->
+					<option id="31269" chance="1.706" /> <!-- Passive: M. Skill Critical Damage + 15%. -->
 				</optionCategory>
 				<optionCategory chance="35.0">
 					<optionRange from="31270" to="31279" chance="10.0" /> <!-- Passive: Attack Attribute + 10. -> Passive: Attack Attribute + 70. -->
 				</optionCategory>
 				<optionCategory chance="7.0">
 					<optionRange from="31280" to="31377" chance="1.0101" /> <!-- Stun Attack Success Rate + 3% -> Passive: Petrification Attack Success Rate + 15%. -->
-					<option id="31378" chance="1.0102"/> <!-- Passive: Petrification Attack Success Rate + 30%. -->
+					<option id="31378" chance="1.0102" /> <!-- Passive: Petrification Attack Success Rate + 30%. -->
 				</optionCategory>
 				<optionCategory chance="3.0">
 					<optionRange from="32684" to="32837" chance="0.645" /> <!-- Passive: Max HP + 8%. -> Active: Not targeted by enemies for 5 seconds. -->
-					<option id="32838" chance="0.67"/> <!-- Active: Not targeted by enemies for 6 seconds. -->
+					<option id="32838" chance="0.67" /> <!-- Active: Not targeted by enemies for 6 seconds. -->
 				</optionCategory>
 			</optionGroup>
 		</variation>
@@ -5496,17 +5496,17 @@
 			<optionGroup weaponType="warrior" order="0">
 				<optionCategory chance="100.0">
 					<optionRange from="31379" to="31411" chance="3.0303" /> <!-- P. Def. + 7 -> CP Recovery Rate + 2 -->
-					<option id="31412" chance="3.0304"/> <!-- CP Recovery Rate + 3 -->
+					<option id="31412" chance="3.0304" /> <!-- CP Recovery Rate + 3 -->
 				</optionCategory>
 			</optionGroup>
 			<optionGroup weaponType="warrior" order="1">
 				<optionCategory chance="65.0">
 					<optionRange from="31413" to="31429" chance="4.545" /> <!-- Fire Resistance + 1 -> Dark Resistance + 2 -->
-					<option id="31430" chance="5.565"/> <!-- Dark Resistance + 5 -->
+					<option id="31430" chance="5.565" /> <!-- Dark Resistance + 5 -->
 				</optionCategory>
 				<optionCategory chance="35.0">
 					<optionRange from="31431" to="31451" chance="4.545" /> <!-- Stun Resistance + 1% -> Passive: Petrification Resistance + 1%. -->
-					<option id="31452" chance="4.555"/> <!-- Passive: Petrification Resistance + 2%. -->
+					<option id="31452" chance="4.555" /> <!-- Passive: Petrification Resistance + 2%. -->
 				</optionCategory>
 			</optionGroup>
 		</variation>
@@ -5515,25 +5515,25 @@
 			<optionGroup weaponType="warrior" order="0">
 				<optionCategory chance="100.0">
 					<optionRange from="31453" to="31494" chance="2.325" /> <!-- P. Def. + 15 -> CP Recovery Rate + 3 -->
-					<option id="31495" chance="2.35"/> <!-- CP Recovery Rate + 5 -->
+					<option id="31495" chance="2.35" /> <!-- CP Recovery Rate + 5 -->
 				</optionCategory>
 			</optionGroup>
 			<optionGroup weaponType="warrior" order="1">
 				<optionCategory chance="55.0">
 					<optionRange from="31496" to="31530" chance="2.702" /> <!-- Fire Resistance + 1 -> Dark Resistance + 5 -->
-					<option id="31531" chance="2.728"/> <!-- Dark Resistance + 8 -->
+					<option id="31531" chance="2.728" /> <!-- Dark Resistance + 8 -->
 				</optionCategory>
 				<optionCategory chance="35.0">
 					<optionRange from="31532" to="31563" chance="3.0303" /> <!-- Stun Resistance + 1% -> Passive: Petrification Resistance + 2%. -->
-					<option id="31564" chance="3.0304"/> <!-- Passive: Petrification Resistance + 4%. -->
+					<option id="31564" chance="3.0304" /> <!-- Passive: Petrification Resistance + 4%. -->
 				</optionCategory>
 				<optionCategory chance="9.0">
 					<optionRange from="31565" to="31618" chance="1.818" /> <!-- Stun/Hold Resistance + 3% -> Passive: Aerial Yoke/Petrification Resistance + 3%. -->
-					<option id="31619" chance="1.828"/> <!-- Passive: Pull/Petrification Resistance + 3%. -->
+					<option id="31619" chance="1.828" /> <!-- Passive: Pull/Petrification Resistance + 3%. -->
 				</optionCategory>
 				<optionCategory chance="1.0">
 					<optionRange from="31620" to="31673" chance="1.818" /> <!-- Stun/Hold Resistance + 4% -> Passive: Aerial Yoke/Petrification Resistance + 4%. -->
-					<option id="31674" chance="1.828"/> <!-- Passive: Pull/Petrification Resistance + 4%. -->
+					<option id="31674" chance="1.828" /> <!-- Passive: Pull/Petrification Resistance + 4%. -->
 				</optionCategory>
 			</optionGroup>
 		</variation>
@@ -5542,25 +5542,25 @@
 			<optionGroup weaponType="warrior" order="0">
 				<optionCategory chance="100.0">
 					<optionRange from="31675" to="31715" chance="2.439" /> <!-- P. Def. + 18 -> CP Recovery Rate + 3 -->
-					<option id="31716" chance="2.44"/> <!-- CP Recovery Rate + 5 -->
+					<option id="31716" chance="2.44" /> <!-- CP Recovery Rate + 5 -->
 				</optionCategory>
 			</optionGroup>
 			<optionGroup weaponType="warrior" order="1">
 				<optionCategory chance="55.0">
 					<optionRange from="31717" to="31745" chance="3.333" /> <!-- Fire Resistance + 2 -> Dark Resistance + 5 -->
-					<option id="31746" chance="3.343"/> <!-- Dark Resistance + 9 -->
+					<option id="31746" chance="3.343" /> <!-- Dark Resistance + 9 -->
 				</optionCategory>
 				<optionCategory chance="35.0">
 					<optionRange from="31747" to="31789" chance="2.272" /> <!-- Stun Resistance + 1% -> Passive: Petrification Resistance + 3%. -->
-					<option id="31790" chance="2.304"/> <!-- Passive: Petrification Resistance + 4%. -->
+					<option id="31790" chance="2.304" /> <!-- Passive: Petrification Resistance + 4%. -->
 				</optionCategory>
 				<optionCategory chance="9.0">
 					<optionRange from="31791" to="31844" chance="1.818" /> <!-- Stun/Hold Resistance + 5% -> Passive: Aerial Yoke/Petrification Resistance + 5%. -->
-					<option id="31845" chance="1.828"/> <!-- Passive: Pull/Petrification Resistance + 5%. -->
+					<option id="31845" chance="1.828" /> <!-- Passive: Pull/Petrification Resistance + 5%. -->
 				</optionCategory>
 				<optionCategory chance="1.0">
 					<optionRange from="31846" to="31899" chance="1.818" /> <!-- Stun/Hold Resistance + 6% -> Passive: Aerial Yoke/Petrification Resistance + 6%. -->
-					<option id="31900" chance="1.828"/> <!-- Passive: Pull/Petrification Resistance + 6%. -->
+					<option id="31900" chance="1.828" /> <!-- Passive: Pull/Petrification Resistance + 6%. -->
 				</optionCategory>
 			</optionGroup>
 		</variation>
@@ -5569,24 +5569,24 @@
 			<optionGroup weaponType="warrior" order="0">
 				<optionCategory chance="100.0">
 					<optionRange from="31901" to="31940" chance="2.439" /> <!-- P. Def. + 22 -> CP Recovery Rate + 3 -->
-					<option id="31941" chance="2.44"/> <!-- CP Recovery Rate + 5 -->
+					<option id="31941" chance="2.44" /> <!-- CP Recovery Rate + 5 -->
 				</optionCategory>
 			</optionGroup>
 			<optionGroup weaponType="warrior" order="1">
 				<optionCategory chance="55.0">
 					<optionRange from="31942" to="31964" chance="4.166" /> <!-- Fire Resistance + 3 -> Dark Resistance + 5 -->
-					<option id="31965" chance="4.182"/> <!-- Dark Resistance + 10 -->
+					<option id="31965" chance="4.182" /> <!-- Dark Resistance + 10 -->
 				</optionCategory>
 				<optionCategory chance="35.0">
 					<optionRange from="31966" to="31998" chance="3.125" /> <!-- Stun Resistance + 2% -> Passive: Petrification Resistance + 5%. -->
 				</optionCategory>
 				<optionCategory chance="9.0">
 					<optionRange from="31999" to="32052" chance="1.818" /> <!-- Stun/Hold Resistance + 6% -> Passive: Aerial Yoke/Petrification Resistance + 6%. -->
-					<option id="32053" chance="1.828"/> <!-- Passive: Pull/Petrification Resistance + 6%. -->
+					<option id="32053" chance="1.828" /> <!-- Passive: Pull/Petrification Resistance + 6%. -->
 				</optionCategory>
 				<optionCategory chance="1.0">
 					<optionRange from="32054" to="32107" chance="1.818" /> <!-- Stun/Hold Resistance + 7% -> Passive: Aerial Yoke/Petrification Resistance + 7%. -->
-					<option id="32108" chance="1.828"/> <!-- Passive: Pull/Petrification Resistance + 7%. -->
+					<option id="32108" chance="1.828" /> <!-- Passive: Pull/Petrification Resistance + 7%. -->
 				</optionCategory>
 			</optionGroup>
 		</variation>
@@ -5595,25 +5595,25 @@
 			<optionGroup weaponType="warrior" order="0">
 				<optionCategory chance="100.0">
 					<optionRange from="32109" to="32148" chance="2.439" /> <!-- P. Def. + 22 -> CP Recovery Rate + 3 -->
-					<option id="32149" chance="2.44"/> <!-- CP Recovery Rate + 5 -->
+					<option id="32149" chance="2.44" /> <!-- CP Recovery Rate + 5 -->
 				</optionCategory>
 			</optionGroup>
 			<optionGroup weaponType="warrior" order="1">
 				<optionCategory chance="55.0">
 					<optionRange from="32150" to="32172" chance="4.16" /> <!-- Fire Resistance + 3 -> Dark Resistance + 5 -->
-					<option id="32173" chance="4.32"/> <!-- Dark Resistance + 10 -->
+					<option id="32173" chance="4.32" /> <!-- Dark Resistance + 10 -->
 				</optionCategory>
 				<optionCategory chance="35.0">
 					<optionRange from="32174" to="32205" chance="3.03" /> <!-- Stun Resistance + 2% -> Passive: Petrification Resistance + 3%. -->
-					<option id="32206" chance="3.04"/> <!-- Passive: Petrification Resistance + 5%. -->
+					<option id="32206" chance="3.04" /> <!-- Passive: Petrification Resistance + 5%. -->
 				</optionCategory>
 				<optionCategory chance="7.0">
 					<optionRange from="32207" to="32220" chance="6.666" /> <!-- Fire/Water Resistance + 8 -> Earth/Dark Resistance + 8 -->
-					<option id="32221" chance="6.676"/> <!-- Holy/Dark Resistance + 8 -->
+					<option id="32221" chance="6.676" /> <!-- Holy/Dark Resistance + 8 -->
 				</optionCategory>
 				<optionCategory chance="3.0">
 					<optionRange from="32222" to="32235" chance="6.666" /> <!-- Fire/Water Resistance + 9 -> Earth/Dark Resistance + 9 -->
-					<option id="32236" chance="6.676"/> <!-- Holy/Dark Resistance + 9 -->
+					<option id="32236" chance="6.676" /> <!-- Holy/Dark Resistance + 9 -->
 				</optionCategory>
 			</optionGroup>
 		</variation>
@@ -5622,47 +5622,47 @@
 			<optionGroup weaponType="warrior" order="0">
 				<optionCategory chance="100.0">
 					<optionRange from="31116" to="31208" chance="1.063" /> <!-- P. Atk. + 138 -> CON + 2 -->
-					<option id="31209" chance="1.141"/> <!-- MEN + 2 -->
+					<option id="31209" chance="1.141" /> <!-- MEN + 2 -->
 				</optionCategory>
 			</optionGroup>
 			<optionGroup weaponType="warrior" order="1">
 				<optionCategory chance="55.0">
 					<optionRange from="31210" to="31268" chance="1.666" /> <!-- P. Critical Rate + 3.3% -> Passive: M. Skill Critical Damage + 8%. -->
-					<option id="31269" chance="1.706"/> <!-- Passive: M. Skill Critical Damage + 15%. -->
+					<option id="31269" chance="1.706" /> <!-- Passive: M. Skill Critical Damage + 15%. -->
 				</optionCategory>
 				<optionCategory chance="35.0">
 					<optionRange from="31270" to="31279" chance="10.0" /> <!-- Passive: Attack Attribute + 10. -> Passive: Attack Attribute + 70. -->
 				</optionCategory>
 				<optionCategory chance="7.0">
 					<optionRange from="31280" to="31377" chance="1.0101" /> <!-- Stun Attack Success Rate + 3% -> Passive: Petrification Attack Success Rate + 15%. -->
-					<option id="31378" chance="1.0102"/> <!-- Passive: Petrification Attack Success Rate + 30%. -->
+					<option id="31378" chance="1.0102" /> <!-- Passive: Petrification Attack Success Rate + 30%. -->
 				</optionCategory>
 				<optionCategory chance="3.0">
 					<optionRange from="32684" to="32837" chance="0.645" /> <!-- Passive: Max HP + 8%. -> Active: Not targeted by enemies for 5 seconds. -->
-					<option id="32838" chance="0.67"/> <!-- Active: Not targeted by enemies for 6 seconds. -->
+					<option id="32838" chance="0.67" /> <!-- Active: Not targeted by enemies for 6 seconds. -->
 				</optionCategory>
 			</optionGroup>
 			<optionGroup weaponType="mage" order="0">
 				<optionCategory chance="100.0">
 					<optionRange from="31116" to="31208" chance="1.063" /> <!-- P. Atk. + 138 -> CON + 2 -->
-					<option id="31209" chance="1.141"/> <!-- MEN + 2 -->
+					<option id="31209" chance="1.141" /> <!-- MEN + 2 -->
 				</optionCategory>
 			</optionGroup>
 			<optionGroup weaponType="mage" order="1">
 				<optionCategory chance="55.0">
 					<optionRange from="31210" to="31268" chance="1.666" /> <!-- P. Critical Rate + 3.3% -> Passive: M. Skill Critical Damage + 8%. -->
-					<option id="31269" chance="1.706"/> <!-- Passive: M. Skill Critical Damage + 15%. -->
+					<option id="31269" chance="1.706" /> <!-- Passive: M. Skill Critical Damage + 15%. -->
 				</optionCategory>
 				<optionCategory chance="35.0">
 					<optionRange from="31270" to="31279" chance="10.0" /> <!-- Passive: Attack Attribute + 10. -> Passive: Attack Attribute + 70. -->
 				</optionCategory>
 				<optionCategory chance="7.0">
 					<optionRange from="31280" to="31377" chance="1.0101" /> <!-- Stun Attack Success Rate + 3% -> Passive: Petrification Attack Success Rate + 15%. -->
-					<option id="31378" chance="1.0102"/> <!-- Passive: Petrification Attack Success Rate + 30%. -->
+					<option id="31378" chance="1.0102" /> <!-- Passive: Petrification Attack Success Rate + 30%. -->
 				</optionCategory>
 				<optionCategory chance="3.0">
 					<optionRange from="32684" to="32837" chance="0.645" /> <!-- Passive: Max HP + 8%. -> Active: Not targeted by enemies for 5 seconds. -->
-					<option id="32838" chance="0.67"/> <!-- Active: Not targeted by enemies for 6 seconds. -->
+					<option id="32838" chance="0.67" /> <!-- Active: Not targeted by enemies for 6 seconds. -->
 				</optionCategory>
 			</optionGroup>
 		</variation>
@@ -5690,7 +5690,7 @@
 				<optionCategory chance="100.0">
 					<optionRange from="40031" to="40072" chance="2.083" /> <!-- PvP Damage + 1% when equipping Topaz Lv. 4 or above -> M. Skill Power + 5% when equipping Blue Cat's Eye Lv. 4 or above -->
 					<optionRange from="40223" to="40227" chance="2.083" /> <!-- PvP Damage + 1% when equipping Amethyst Lv. 4 or above -> Reflect 2% of Received Damage when equipping Cat's Eye Lv. 4 or above -->
-					<option id="40228" chance="2.099"/> <!-- Reflect 5% of Received Damage when equipping Cat's Eye Lv. 4 or above -->
+					<option id="40228" chance="2.099" /> <!-- Reflect 5% of Received Damage when equipping Cat's Eye Lv. 4 or above -->
 				</optionCategory>
 			</optionGroup>
 		</variation>
@@ -5699,13 +5699,13 @@
 			<optionGroup weaponType="warrior" order="0">
 				<optionCategory chance="100.0">
 					<optionRange from="32174" to="32202" chance="3.33" /> <!-- Stun Resistance + 2% -> Pull Resistance + 3% -->
-					<option id="32203" chance="3.34"/> <!-- Pull Resistance + 5% -->
+					<option id="32203" chance="3.34" /> <!-- Pull Resistance + 5% -->
 				</optionCategory>
 			</optionGroup>
 			<optionGroup weaponType="warrior" order="1">
 				<optionCategory chance="100.0">
 					<optionRange from="33209" to="33233" chance="3.84" /> <!-- PvP Damage + 5% -> Holy Resistance + 10 -->
-					<option id="33234" chance="4.0"/> <!-- Darkness Resistance + 10 -->
+					<option id="33234" chance="4.0" /> <!-- Darkness Resistance + 10 -->
 				</optionCategory>
 			</optionGroup>
 		</variation>
@@ -5713,12 +5713,12 @@
 		<variation mineralId="36718">
 			<optionGroup weaponType="warrior" order="0">
 				<optionCategory chance="100.0">
-					<option id="3659" chance="100"/> <!-- P. Def. + 7.73. / M. Atk. + 3.78. -->
+					<option id="3659" chance="100" /> <!-- P. Def. + 7.73. / M. Atk. + 3.78. -->
 				</optionCategory>
 			</optionGroup>
 			<optionGroup weaponType="warrior" order="1">
 				<optionCategory chance="100.0">
-					<option id="7288" chance="100"/> <!-- HP Recovery + 0.23. -->
+					<option id="7288" chance="100" /> <!-- HP Recovery + 0.23. -->
 				</optionCategory>
 			</optionGroup>
 		</variation>

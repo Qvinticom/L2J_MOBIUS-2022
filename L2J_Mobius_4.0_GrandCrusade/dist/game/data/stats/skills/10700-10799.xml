@@ -2939,7 +2939,7 @@
 		<targetType>SELF</targetType>
 		<affectScope>SINGLE</affectScope>
 		<conditions>
-			<condition name="OpNotInPeacezone"/>
+			<condition name="OpNotInPeacezone" />
 		</conditions>
 		<effects>
 			<effect name="DeleteHate" />

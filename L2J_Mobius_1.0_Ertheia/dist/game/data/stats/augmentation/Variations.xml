@@ -5170,33 +5170,33 @@
 				</optionCategory>
 				<optionCategory chance="35.0">
 					<optionRange from="30330" to="30334" chance="16.666" /> <!-- Fire Resistance + 10. -> Holy Resistance + 10. -->
-					<option id="30335" chance="16.67"/> <!-- Dark Resistance + 10. -->
+					<option id="30335" chance="16.67" /> <!-- Dark Resistance + 10. -->
 				</optionCategory>
 				<optionCategory chance="9.0">
 					<optionRange from="30324" to="30328" chance="16.666" /> <!-- Fire Resistance + 20. -> Holy Resistance + 20. -->
-					<option id="30329" chance="16.67"/> <!-- Dark Resistance + 20. -->
+					<option id="30329" chance="16.67" /> <!-- Dark Resistance + 20. -->
 				</optionCategory>
 				<optionCategory chance="1.0">
 					<optionRange from="30315" to="30322" chance="11.111" /> <!-- P. Def. + 5%. -> M. Skill Critical Damage + 1%. -->
-					<option id="30323" chance="11.112"/> <!-- Received Heal Amount + 1%. -->
+					<option id="30323" chance="11.112" /> <!-- Received Heal Amount + 1%. -->
 				</optionCategory>
 			</optionGroup>
 			<optionGroup weaponType="warrior" order="1">
 				<optionCategory chance="55.0">
 					<optionRange from="30374" to="30375" chance="33.333" /> <!-- Max HP + 266, HP Recovery Bonus + 8. -> Max MP + 117, MP Recovery Bonus + 4. -->
-					<option id="30376" chance="33.334"/> <!-- Max CP + 266, CP Recovery Bonus + 8. -->
+					<option id="30376" chance="33.334" /> <!-- Max CP + 266, CP Recovery Bonus + 8. -->
 				</optionCategory>
 				<optionCategory chance="35.0">
 					<optionRange from="30363" to="30372" chance="9.09" /> <!-- Stun Resistance + 5. -> Pull Resistance + 5. -->
-					<option id="30373" chance="9.1"/> <!-- Petrify Resistance + 5. -->
+					<option id="30373" chance="9.1" /> <!-- Petrify Resistance + 5. -->
 				</optionCategory>
 				<optionCategory chance="9.0">
 					<optionRange from="30352" to="30361" chance="9.09" /> <!-- Stun Resistance + 10. -> Pull Resistance + 10. -->
-					<option id="30362" chance="9.1"/> <!-- Petrify Resistance + 10. -->
+					<option id="30362" chance="9.1" /> <!-- Petrify Resistance + 10. -->
 				</optionCategory>
 				<optionCategory chance="1.0">
 					<optionRange from="30340" to="30350" chance="8.33" /> <!-- M. Def. + 5%. -> MEN +1 -->
-					<option id="30351" chance="8.37"/> <!-- Speed + 7. -->
+					<option id="30351" chance="8.37" /> <!-- Speed + 7. -->
 				</optionCategory>
 			</optionGroup>
 		</variation>

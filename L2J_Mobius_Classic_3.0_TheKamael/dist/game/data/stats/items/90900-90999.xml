@@ -37,12 +37,12 @@
 		<set name="is_sellable" val="false" />
 		<set name="time" val="21600" />
 		<skills>
-			<skill id="51028" level="1"/> <!-- Release Agathion's Seal - Pisces -->
+			<skill id="51028" level="1" /> <!-- Release Agathion's Seal - Pisces -->
 			<skill id="3267" level="1" /> <!-- Seal Agathion -->
-			<skill id="51030" level="1"/>
-			<skill id="51031" level="1"/>
-			<skill id="51032" level="1"/>
-			<skill id="51033" level="1"/>
+			<skill id="51030" level="1" />
+			<skill id="51031" level="1" />
+			<skill id="51032" level="1" />
+			<skill id="51033" level="1" />
 		</skills>
 	</item>
 	<item id="90903" name="Agathion Cancer" additionalName="15-day" type="Armor">
@@ -59,12 +59,12 @@
 		<set name="is_sellable" val="false" />
 		<set name="time" val="21600" />
 		<skills>
-			<skill id="51029" level="1"/> <!-- Release Agathion's Seal - Cancer -->
-			<skill id="3267" level="1"/> <!-- Seal Agathion -->
-			<skill id="51030" level="1"/>
-			<skill id="51031" level="1"/>
-			<skill id="51032" level="1"/>
-			<skill id="51033" level="1"/>
+			<skill id="51029" level="1" /> <!-- Release Agathion's Seal - Cancer -->
+			<skill id="3267" level="1" /> <!-- Seal Agathion -->
+			<skill id="51030" level="1" />
+			<skill id="51031" level="1" />
+			<skill id="51032" level="1" />
+			<skill id="51033" level="1" />
 		</skills>
 	</item>
 	<item id="90904" name="Agathion Box: Aries" additionalName="60-day" type="EtcItem">
@@ -417,8 +417,8 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
 		<skills>
-			<skill id="55510" level="1"/> <!-- Activates 4 jewel slots. -->
-			<skill id="55511" level="1"/> <!-- Inventory Slot +12. -->
+			<skill id="55510" level="1" /> <!-- Activates 4 jewel slots. -->
+			<skill id="55511" level="1" /> <!-- Inventory Slot +12. -->
 		</skills>
 	</item>
 	<item id="90935" name="Greater Jewel Box" additionalName="Lv. 4" type="EtcItem">

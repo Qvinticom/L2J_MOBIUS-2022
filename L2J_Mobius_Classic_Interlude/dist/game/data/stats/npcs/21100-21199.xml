@@ -2606,20 +2606,20 @@
 		</collision>
 		<dropLists>
 			<drop>
-				<item id="57" min="593" max="1182" chance="70"/> <!-- Adena -->
-				<item id="605" min="1" max="1" chance="0.2302"/> <!-- Leather Gauntlets -->
-				<item id="1123" min="1" max="1" chance="0.2302"/> <!-- Blue Buckskin Boots -->
-				<item id="1867" min="1" max="1" chance="17.0303"/> <!-- Animal Skin -->
-				<item id="1872" min="1" max="1" chance="17.0303"/> <!-- Animal Bone -->
-				<item id="1875" min="1" max="1" chance="0.8515"/> <!-- Stone of Purity -->
-				<item id="1881" min="1" max="1" chance="1.7031"/> <!-- Coarse Bone Powder -->
-				<item id="2250" min="1" max="1" chance="3.1932"/> <!-- Recipe: Bone Arrow -->
-				<item id="6035" min="1" max="1" chance="1.0644"/> <!-- Magic Haste Potion -->
+				<item id="57" min="593" max="1182" chance="70" /> <!-- Adena -->
+				<item id="605" min="1" max="1" chance="0.2302" /> <!-- Leather Gauntlets -->
+				<item id="1123" min="1" max="1" chance="0.2302" /> <!-- Blue Buckskin Boots -->
+				<item id="1867" min="1" max="1" chance="17.0303" /> <!-- Animal Skin -->
+				<item id="1872" min="1" max="1" chance="17.0303" /> <!-- Animal Bone -->
+				<item id="1875" min="1" max="1" chance="0.8515" /> <!-- Stone of Purity -->
+				<item id="1881" min="1" max="1" chance="1.7031" /> <!-- Coarse Bone Powder -->
+				<item id="2250" min="1" max="1" chance="3.1932" /> <!-- Recipe: Bone Arrow -->
+				<item id="6035" min="1" max="1" chance="1.0644" /> <!-- Magic Haste Potion -->
 			</drop> 
 			<spoil>
-				<item id="955" min="1" max="1" chance="0.5610"/> <!-- Scroll: Enchant Weapon (Grade D) -->
-				<item id="1872" min="1" max="3" chance="93.4937"/> <!-- Animal Bone -->
-				<item id="1875" min="1" max="1" chance="9.3494"/> <!-- Stone of Purity -->
+				<item id="955" min="1" max="1" chance="0.5610" /> <!-- Scroll: Enchant Weapon (Grade D) -->
+				<item id="1872" min="1" max="3" chance="93.4937" /> <!-- Animal Bone -->
+				<item id="1875" min="1" max="1" chance="9.3494" /> <!-- Stone of Purity -->
 			</spoil>
 		</dropLists>
 	</npc>
@@ -2665,21 +2665,21 @@
 		</collision>
 		<dropLists>
 			<drop>
-				<item id="57" min="893" max="1781" chance="70"/> <!-- Adena -->
-				<item id="129" min="1" max="1" chance="0.0078"/> <!-- Sword of Revolution -->
-				<item id="1832" min="1" max="1" chance="14.2857"/> <!-- Greater Antidote -->
-				<item id="1866" min="1" max="1" chance="9.0909"/> <!-- Suede -->
-				<item id="1871" min="1" max="1" chance="14.2857"/> <!-- Charcoal -->
-				<item id="1885" min="1" max="1" chance="1.1364"/> <!-- High Grade Suede -->
-				<item id="2034" min="1" max="1" chance="0.5766"/> <!-- Sword of Revolution Blade -->
-				<item id="2146" min="1" max="1" chance="0.8547"/> <!-- Recipe: Artisan's frame -->
-				<item id="5220" min="1" max="1" chance="0.4386"/> <!-- Metal Hardener -->
-				<item id="5473" min="1" max="1" chance="1.0309"/> <!-- Recipe: Durable Metal Plate(100%) -->
+				<item id="57" min="893" max="1781" chance="70" /> <!-- Adena -->
+				<item id="129" min="1" max="1" chance="0.0078" /> <!-- Sword of Revolution -->
+				<item id="1832" min="1" max="1" chance="14.2857" /> <!-- Greater Antidote -->
+				<item id="1866" min="1" max="1" chance="9.0909" /> <!-- Suede -->
+				<item id="1871" min="1" max="1" chance="14.2857" /> <!-- Charcoal -->
+				<item id="1885" min="1" max="1" chance="1.1364" /> <!-- High Grade Suede -->
+				<item id="2034" min="1" max="1" chance="0.5766" /> <!-- Sword of Revolution Blade -->
+				<item id="2146" min="1" max="1" chance="0.8547" /> <!-- Recipe: Artisan's frame -->
+				<item id="5220" min="1" max="1" chance="0.4386" /> <!-- Metal Hardener -->
+				<item id="5473" min="1" max="1" chance="1.0309" /> <!-- Recipe: Durable Metal Plate(100%) -->
 			</drop> 
 			<spoil>
-				<item id="1825" min="1" max="1" chance="15.0797"/> <!-- Recipe: Oriharukon -->
-				<item id="1885" min="1" max="1" chance="17.5930"/> <!-- High Grade Suede -->
-				<item id="1902" min="1" max="1" chance="21.3897"/> <!-- Elven Earring Beads -->
+				<item id="1825" min="1" max="1" chance="15.0797" /> <!-- Recipe: Oriharukon -->
+				<item id="1885" min="1" max="1" chance="17.5930" /> <!-- High Grade Suede -->
+				<item id="1902" min="1" max="1" chance="21.3897" /> <!-- Elven Earring Beads -->
 			</spoil>
 		</dropLists>
 	</npc>
@@ -2706,9 +2706,9 @@
 		</stats>
 		<status attackable="true" undying="false" canBeSown="true" />
 		<skillList>
-			<skill id="4066" level="4"/> <!-- NPC Twister -->
-			<skill id="4275" level="2"/> <!-- Sacred Attack Weak Point -->
-			<skill id="4278" level="1"/> <!-- Dark Attack -->
+			<skill id="4066" level="4" /> <!-- NPC Twister -->
+			<skill id="4275" level="2" /> <!-- Sacred Attack Weak Point -->
+			<skill id="4278" level="1" /> <!-- Dark Attack -->
 			<skill id="4408" level="12" /> <!-- HP Increase (4x) -->
 			<skill id="4410" level="10" /> <!-- Slightly Strong P. Atk. -->
 			<skill id="4411" level="10" /> <!-- Slightly Strong M. Atk. -->
@@ -2729,30 +2729,30 @@
 		</collision>
 		<dropLists>
 			<drop>
-				<item id="57" min="951" max="1898" chance="70"/> <!-- Adena -->
-				<item id="88" min="1" max="1" chance="0.0017"/> <!-- Morning Star -->
-				<item id="90" min="1" max="1" chance="0.0017"/> <!-- Goat Head Staff -->
-				<item id="158" min="1" max="1" chance="0.0017"/> <!-- Tarbar -->
-				<item id="169" min="1" max="1" chance="0.0017"/> <!-- Skull Breaker -->
-				<item id="172" min="1" max="1" chance="0.0017"/> <!-- Heavy Bone Club -->
-				<item id="1805" min="1" max="1" chance="0.0489"/> <!-- Recipe: Soulshot: C-Grade -->
-				<item id="1867" min="1" max="1" chance="20"/> <!-- Animal Skin -->
-				<item id="1872" min="1" max="1" chance="20"/> <!-- Animal Bone -->
-				<item id="1875" min="1" max="1" chance="1.2048"/> <!-- Stone of Purity -->
-				<item id="1881" min="1" max="1" chance="2"/> <!-- Coarse Bone Powder -->
-				<item id="2031" min="1" max="1" chance="0.1187"/> <!-- Morning Star Head -->
-				<item id="2032" min="1" max="1" chance="0.1084"/> <!-- Goat Head Staff Head -->
-				<item id="2035" min="1" max="1" chance="0.1187"/> <!-- Tarbar Head -->
-				<item id="2036" min="1" max="1" chance="0.1187"/> <!-- Skull Breaker Head -->
-				<item id="2037" min="1" max="1" chance="0.1187"/> <!-- Heavy Bone Club Head -->
-				<item id="2990" min="1" max="1" chance="1.0753"/> <!-- Recipe: Chain Boots -->
-				<item id="7643" min="1" max="1" chance="10.9917"/> <!-- Spellbook - Summon Nightshade -->
-				<item id="7644" min="1" max="1" chance="10.9917"/> <!-- Spellbook - Summon Cursed Man -->
+				<item id="57" min="951" max="1898" chance="70" /> <!-- Adena -->
+				<item id="88" min="1" max="1" chance="0.0017" /> <!-- Morning Star -->
+				<item id="90" min="1" max="1" chance="0.0017" /> <!-- Goat Head Staff -->
+				<item id="158" min="1" max="1" chance="0.0017" /> <!-- Tarbar -->
+				<item id="169" min="1" max="1" chance="0.0017" /> <!-- Skull Breaker -->
+				<item id="172" min="1" max="1" chance="0.0017" /> <!-- Heavy Bone Club -->
+				<item id="1805" min="1" max="1" chance="0.0489" /> <!-- Recipe: Soulshot: C-Grade -->
+				<item id="1867" min="1" max="1" chance="20" /> <!-- Animal Skin -->
+				<item id="1872" min="1" max="1" chance="20" /> <!-- Animal Bone -->
+				<item id="1875" min="1" max="1" chance="1.2048" /> <!-- Stone of Purity -->
+				<item id="1881" min="1" max="1" chance="2" /> <!-- Coarse Bone Powder -->
+				<item id="2031" min="1" max="1" chance="0.1187" /> <!-- Morning Star Head -->
+				<item id="2032" min="1" max="1" chance="0.1084" /> <!-- Goat Head Staff Head -->
+				<item id="2035" min="1" max="1" chance="0.1187" /> <!-- Tarbar Head -->
+				<item id="2036" min="1" max="1" chance="0.1187" /> <!-- Skull Breaker Head -->
+				<item id="2037" min="1" max="1" chance="0.1187" /> <!-- Heavy Bone Club Head -->
+				<item id="2990" min="1" max="1" chance="1.0753" /> <!-- Recipe: Chain Boots -->
+				<item id="7643" min="1" max="1" chance="10.9917" /> <!-- Spellbook - Summon Nightshade -->
+				<item id="7644" min="1" max="1" chance="10.9917" /> <!-- Spellbook - Summon Cursed Man -->
 			</drop> 
 			<spoil>
-				<item id="1894" min="1" max="1" chance="7.9584"/> <!-- Crafted Leather -->
-				<item id="1903" min="1" max="1" chance="37.8338"/> <!-- Elven Ring Piece -->
-				<item id="2145" min="1" max="1" chance="16.2010"/> <!-- Recipe: Mithril Alloy -->
+				<item id="1894" min="1" max="1" chance="7.9584" /> <!-- Crafted Leather -->
+				<item id="1903" min="1" max="1" chance="37.8338" /> <!-- Elven Ring Piece -->
+				<item id="2145" min="1" max="1" chance="16.2010" /> <!-- Recipe: Mithril Alloy -->
 			</spoil>
 		</dropLists>
 	</npc>
@@ -2799,20 +2799,20 @@
 		</collision>
 		<dropLists>
 			<drop>
-				<item id="57" min="1113" max="2260" chance="70"/> <!-- Adena -->
-				<item id="262" min="1" max="1" chance="0.0077"/> <!-- Scallop Jamadhr -->
-				<item id="1868" min="1" max="3" chance="25"/> <!-- Thread -->
-				<item id="1873" min="1" max="1" chance="9.0909"/> <!-- Silver Nugget -->
-				<item id="1889" min="1" max="1" chance="1.3889"/> <!-- Compound Braid -->
-				<item id="2053" min="1" max="1" chance="0.5727"/> <!-- Scallop Jamadhr Edge -->
-				<item id="2199" min="1" max="1" chance="1.0204"/> <!-- Recipe: Karmian Stockings -->
-				<item id="2301" min="1" max="1" chance="0.1570"/> <!-- Recipe: Battle Axe -->
-				<item id="5549" min="1" max="1" chance="2.2727"/> <!-- Metallic Thread -->
+				<item id="57" min="1113" max="2260" chance="70" /> <!-- Adena -->
+				<item id="262" min="1" max="1" chance="0.0077" /> <!-- Scallop Jamadhr -->
+				<item id="1868" min="1" max="3" chance="25" /> <!-- Thread -->
+				<item id="1873" min="1" max="1" chance="9.0909" /> <!-- Silver Nugget -->
+				<item id="1889" min="1" max="1" chance="1.3889" /> <!-- Compound Braid -->
+				<item id="2053" min="1" max="1" chance="0.5727" /> <!-- Scallop Jamadhr Edge -->
+				<item id="2199" min="1" max="1" chance="1.0204" /> <!-- Recipe: Karmian Stockings -->
+				<item id="2301" min="1" max="1" chance="0.1570" /> <!-- Recipe: Battle Axe -->
+				<item id="5549" min="1" max="1" chance="2.2727" /> <!-- Metallic Thread -->
 			</drop> 
 			<spoil>
-				<item id="1805" min="1" max="1" chance="0.9195"/> <!-- Recipe: Soulshot: C-Grade -->
-				<item id="1905" min="1" max="1" chance="26.8330"/> <!-- Omen Beast's Eye Earring Gemstone -->
-				<item id="1906" min="1" max="1" chance="37.9166"/> <!-- Mithril Ring Wire -->
+				<item id="1805" min="1" max="1" chance="0.9195" /> <!-- Recipe: Soulshot: C-Grade -->
+				<item id="1905" min="1" max="1" chance="26.8330" /> <!-- Omen Beast's Eye Earring Gemstone -->
+				<item id="1906" min="1" max="1" chance="37.9166" /> <!-- Mithril Ring Wire -->
 			</spoil>
 		</dropLists>
 	</npc>
@@ -2863,24 +2863,24 @@
 		</collision>
 		<dropLists>
 			<drop>
-				<item id="57" min="1099" max="2253" chance="70"/> <!-- Adena -->
-				<item id="281" min="1" max="1" chance="0.0057"/> <!-- Crystallized Ice Bow -->
-				<item id="1864" min="1" max="3" chance="9.0909"/> <!-- Stem -->
-				<item id="1869" min="1" max="1" chance="9.0909"/> <!-- Iron Ore -->
-				<item id="1880" min="1" max="1" chance="0.7042"/> <!-- Steel -->
-				<item id="2074" min="1" max="1" chance="0.4583"/> <!-- Crystallized Ice Bow Shaft -->
-				<item id="2163" min="1" max="1" chance="0.5263"/> <!-- Recipe: Earring of Protection -->
-				<item id="2217" min="1" max="1" chance="0.8547"/> <!-- Recipe: Knight's Shield -->
-				<item id="5550" min="1" max="1" chance="0.1099"/> <!-- Durable Metal Plate -->
-				<item id="6037" min="1" max="3" chance="5.8824"/> <!-- Waking Scroll -->
-				<item id="8723" min="1" max="1" chance="0.3953"/> <!-- Life Stone: level 46 -->
-				<item id="8733" min="1" max="1" chance="0.1099"/> <!-- Mid-Grade Life Stone: level 46 -->
-				<item id="8743" min="1" max="1" chance="0.0053"/> <!-- High-Grade Life Stone: level 46 -->
+				<item id="57" min="1099" max="2253" chance="70" /> <!-- Adena -->
+				<item id="281" min="1" max="1" chance="0.0057" /> <!-- Crystallized Ice Bow -->
+				<item id="1864" min="1" max="3" chance="9.0909" /> <!-- Stem -->
+				<item id="1869" min="1" max="1" chance="9.0909" /> <!-- Iron Ore -->
+				<item id="1880" min="1" max="1" chance="0.7042" /> <!-- Steel -->
+				<item id="2074" min="1" max="1" chance="0.4583" /> <!-- Crystallized Ice Bow Shaft -->
+				<item id="2163" min="1" max="1" chance="0.5263" /> <!-- Recipe: Earring of Protection -->
+				<item id="2217" min="1" max="1" chance="0.8547" /> <!-- Recipe: Knight's Shield -->
+				<item id="5550" min="1" max="1" chance="0.1099" /> <!-- Durable Metal Plate -->
+				<item id="6037" min="1" max="3" chance="5.8824" /> <!-- Waking Scroll -->
+				<item id="8723" min="1" max="1" chance="0.3953" /> <!-- Life Stone: level 46 -->
+				<item id="8733" min="1" max="1" chance="0.1099" /> <!-- Mid-Grade Life Stone: level 46 -->
+				<item id="8743" min="1" max="1" chance="0.0053" /> <!-- High-Grade Life Stone: level 46 -->
 			</drop> 
 			<spoil>
-				<item id="1869" min="1" max="5" chance="91.2739"/> <!-- Iron Ore -->
-				<item id="1880" min="1" max="1" chance="27.3822"/> <!-- Steel -->
-				<item id="5550" min="1" max="1" chance="3.6510"/> <!-- Durable Metal Plate -->
+				<item id="1869" min="1" max="5" chance="91.2739" /> <!-- Iron Ore -->
+				<item id="1880" min="1" max="1" chance="27.3822" /> <!-- Steel -->
+				<item id="5550" min="1" max="1" chance="3.6510" /> <!-- Durable Metal Plate -->
 			</spoil>
 		</dropLists>
 	</npc>
@@ -2930,27 +2930,27 @@
 		</collision>
 		<dropLists>
 			<drop>
-				<item id="57" min="1269" max="2596" chance="70"/> <!-- Adena -->
-				<item id="226" min="1" max="1" chance="33"/> <!-- Cursed Dagger -->
-				<item id="232" min="1" max="1" chance="33"/> <!-- Dark Elven Dagger -->
-				<item id="1868" min="1" max="1" chance="25"/> <!-- Thread -->
-				<item id="1873" min="1" max="1" chance="5"/> <!-- Silver Nugget -->
-				<item id="1876" min="1" max="1" chance="2.0408"/> <!-- Mithril Ore -->
-				<item id="1895" min="1" max="1" chance="3.7037"/> <!-- Metallic Fiber -->
-				<item id="2070" min="1" max="1" chance="0.2964"/> <!-- Cursed Dagger Blade -->
-				<item id="2072" min="1" max="1" chance="0.2964"/> <!-- Dark Elven Dagger Edge -->
-				<item id="2215" min="1" max="1" chance="0.1988"/> <!-- Recipe: Robe of Seal -->
-				<item id="2228" min="1" max="1" chance="0.3968"/> <!-- Recipe: Shining Circlet -->
-				<item id="4042" min="1" max="1" chance="1.5465"/> <!-- Enria -->
-				<item id="8723" min="1" max="1" chance="0.5525"/> <!-- Life Stone: level 46 -->
-				<item id="8733" min="1" max="1" chance="0.1546"/> <!-- Mid-Grade Life Stone: level 46 -->
-				<item id="8743" min="1" max="1" chance="0.0442"/> <!-- High-Grade Life Stone: level 46 -->
-				<item id="8753" min="1" max="1" chance="0.0110"/> <!-- Top-Grade Life Stone: level 46 -->
+				<item id="57" min="1269" max="2596" chance="70" /> <!-- Adena -->
+				<item id="226" min="1" max="1" chance="33" /> <!-- Cursed Dagger -->
+				<item id="232" min="1" max="1" chance="33" /> <!-- Dark Elven Dagger -->
+				<item id="1868" min="1" max="1" chance="25" /> <!-- Thread -->
+				<item id="1873" min="1" max="1" chance="5" /> <!-- Silver Nugget -->
+				<item id="1876" min="1" max="1" chance="2.0408" /> <!-- Mithril Ore -->
+				<item id="1895" min="1" max="1" chance="3.7037" /> <!-- Metallic Fiber -->
+				<item id="2070" min="1" max="1" chance="0.2964" /> <!-- Cursed Dagger Blade -->
+				<item id="2072" min="1" max="1" chance="0.2964" /> <!-- Dark Elven Dagger Edge -->
+				<item id="2215" min="1" max="1" chance="0.1988" /> <!-- Recipe: Robe of Seal -->
+				<item id="2228" min="1" max="1" chance="0.3968" /> <!-- Recipe: Shining Circlet -->
+				<item id="4042" min="1" max="1" chance="1.5465" /> <!-- Enria -->
+				<item id="8723" min="1" max="1" chance="0.5525" /> <!-- Life Stone: level 46 -->
+				<item id="8733" min="1" max="1" chance="0.1546" /> <!-- Mid-Grade Life Stone: level 46 -->
+				<item id="8743" min="1" max="1" chance="0.0442" /> <!-- High-Grade Life Stone: level 46 -->
+				<item id="8753" min="1" max="1" chance="0.0110" /> <!-- Top-Grade Life Stone: level 46 -->
 			</drop> 
 			<spoil>
-				<item id="1908" min="1" max="1" chance="29.9146"/> <!-- Moonstone Earring Wire -->
-				<item id="1909" min="1" max="1" chance="42.6601"/> <!-- Aquastone Ring Wire -->
-				<item id="2163" min="1" max="1" chance="16.1172"/> <!-- Recipe: Earring of Protection -->
+				<item id="1908" min="1" max="1" chance="29.9146" /> <!-- Moonstone Earring Wire -->
+				<item id="1909" min="1" max="1" chance="42.6601" /> <!-- Aquastone Ring Wire -->
+				<item id="2163" min="1" max="1" chance="16.1172" /> <!-- Recipe: Earring of Protection -->
 			</spoil>
 		</dropLists>
 	</npc>
@@ -4055,22 +4055,22 @@
 		</collision>
 		<dropLists>
 			<drop>
-				<item id="6360" min="108" max="211" chance="70"/> <!-- Blue Seal Stone -->
-				<item id="6361" min="33" max="63" chance="70"/> <!-- Green Seal Stone -->
-				<item id="6362" min="22" max="41" chance="70"/> <!-- Red Seal Stone -->
-				<item id="47" min="1" max="1" chance="0.1127"/> <!-- Helmet -->
-				<item id="628" min="1" max="1" chance="0.1611"/> <!-- Hoplon -->
-				<item id="1864" min="1" max="1" chance="28.6117"/> <!-- Stem -->
-				<item id="1869" min="1" max="1" chance="14.3059"/> <!-- Iron Ore -->
-				<item id="1880" min="1" max="1" chance="1.4306"/> <!-- Steel -->
-				<item id="2155" min="1" max="1" chance="2.2963"/> <!-- Recipe: Elven Ring -->
-				<item id="5550" min="1" max="1" chance="0.1908"/> <!-- Durable Metal Plate -->
-				<item id="6035" min="1" max="1" chance="1.1922"/> <!-- Magic Haste Potion -->
+				<item id="6360" min="108" max="211" chance="70" /> <!-- Blue Seal Stone -->
+				<item id="6361" min="33" max="63" chance="70" /> <!-- Green Seal Stone -->
+				<item id="6362" min="22" max="41" chance="70" /> <!-- Red Seal Stone -->
+				<item id="47" min="1" max="1" chance="0.1127" /> <!-- Helmet -->
+				<item id="628" min="1" max="1" chance="0.1611" /> <!-- Hoplon -->
+				<item id="1864" min="1" max="1" chance="28.6117" /> <!-- Stem -->
+				<item id="1869" min="1" max="1" chance="14.3059" /> <!-- Iron Ore -->
+				<item id="1880" min="1" max="1" chance="1.4306" /> <!-- Steel -->
+				<item id="2155" min="1" max="1" chance="2.2963" /> <!-- Recipe: Elven Ring -->
+				<item id="5550" min="1" max="1" chance="0.1908" /> <!-- Durable Metal Plate -->
+				<item id="6035" min="1" max="1" chance="1.1922" /> <!-- Magic Haste Potion -->
 			</drop> 
 			<spoil>
-				<item id="1901" min="1" max="2" chance="22.2980"/> <!-- Tiger's Eye Earring Stone -->
-				<item id="1938" min="1" max="1" chance="10.8529"/> <!-- Mithril Banded Mail Material -->
-				<item id="2154" min="1" max="1" chance="17.2845"/> <!-- Recipe: Elven Earring -->
+				<item id="1901" min="1" max="2" chance="22.2980" /> <!-- Tiger's Eye Earring Stone -->
+				<item id="1938" min="1" max="1" chance="10.8529" /> <!-- Mithril Banded Mail Material -->
+				<item id="2154" min="1" max="1" chance="17.2845" /> <!-- Recipe: Elven Earring -->
 			</spoil>
 		</dropLists>
 	</npc>
@@ -4132,24 +4132,24 @@
 		</collision>
 		<dropLists>
 			<drop>
-				<item id="6360" min="96" max="192" chance="70"/> <!-- Blue Seal Stone -->
-				<item id="6361" min="68" max="136" chance="70"/> <!-- Green Seal Stone -->
-				<item id="6362" min="24" max="44" chance="70"/> <!-- Red Seal Stone -->
-				<item id="83" min="1" max="1" chance="0.0051"/> <!-- Sword of Magic -->
-				<item id="124" min="1" max="1" chance="0.0038"/> <!-- Two-Handed Sword -->
-				<item id="127" min="1" max="1" chance="0.0038"/> <!-- Crimson Sword -->
-				<item id="130" min="1" max="1" chance="0.0038"/> <!-- Elven Sword -->
-				<item id="144" min="1" max="1" chance="0.0051"/> <!-- Sword of Occult -->
-				<item id="1865" min="1" max="1" chance="27.3010"/> <!-- Varnish -->
-				<item id="1870" min="1" max="3" chance="13.6505"/> <!-- Coal -->
-				<item id="1874" min="1" max="1" chance="1.8201"/> <!-- Oriharukon Ore -->
-				<item id="2026" min="1" max="1" chance="0.2191"/> <!-- Two-Handed Sword Edge -->
-				<item id="2191" min="1" max="1" chance="3.6548"/> <!-- Recipe: RIP Gauntlets -->
+				<item id="6360" min="96" max="192" chance="70" /> <!-- Blue Seal Stone -->
+				<item id="6361" min="68" max="136" chance="70" /> <!-- Green Seal Stone -->
+				<item id="6362" min="24" max="44" chance="70" /> <!-- Red Seal Stone -->
+				<item id="83" min="1" max="1" chance="0.0051" /> <!-- Sword of Magic -->
+				<item id="124" min="1" max="1" chance="0.0038" /> <!-- Two-Handed Sword -->
+				<item id="127" min="1" max="1" chance="0.0038" /> <!-- Crimson Sword -->
+				<item id="130" min="1" max="1" chance="0.0038" /> <!-- Elven Sword -->
+				<item id="144" min="1" max="1" chance="0.0051" /> <!-- Sword of Occult -->
+				<item id="1865" min="1" max="1" chance="27.3010" /> <!-- Varnish -->
+				<item id="1870" min="1" max="3" chance="13.6505" /> <!-- Coal -->
+				<item id="1874" min="1" max="1" chance="1.8201" /> <!-- Oriharukon Ore -->
+				<item id="2026" min="1" max="1" chance="0.2191" /> <!-- Two-Handed Sword Edge -->
+				<item id="2191" min="1" max="1" chance="3.6548" /> <!-- Recipe: RIP Gauntlets -->
 			</drop> 
 			<spoil>
-				<item id="1865" min="1" max="5" chance="68.4631"/> <!-- Varnish -->
-				<item id="1870" min="1" max="5" chance="68.4631"/> <!-- Coal -->
-				<item id="1939" min="1" max="1" chance="18.0403"/> <!-- Mithril Banded Gaiters Material -->
+				<item id="1865" min="1" max="5" chance="68.4631" /> <!-- Varnish -->
+				<item id="1870" min="1" max="5" chance="68.4631" /> <!-- Coal -->
+				<item id="1939" min="1" max="1" chance="18.0403" /> <!-- Mithril Banded Gaiters Material -->
 			</spoil>
 		</dropLists>
 	</npc>
@@ -4211,29 +4211,29 @@
 		</collision>
 		<dropLists>
 			<drop>
-				<item id="6360" min="89" max="178" chance="70"/> <!-- Blue Seal Stone -->
-				<item id="6361" min="105" max="206" chance="70"/> <!-- Green Seal Stone -->
-				<item id="6362" min="24" max="45" chance="70"/> <!-- Red Seal Stone -->
-				<item id="88" min="1" max="1" chance="0.0018"/> <!-- Morning Star -->
-				<item id="90" min="1" max="1" chance="0.0018"/> <!-- Goat Head Staff -->
-				<item id="158" min="1" max="1" chance="0.0018"/> <!-- Tarbar -->
-				<item id="169" min="1" max="1" chance="0.0018"/> <!-- Skull Breaker -->
-				<item id="172" min="1" max="1" chance="0.0018"/> <!-- Heavy Bone Club -->
-				<item id="1341" min="60" max="180" chance="11.1111"/> <!-- Bone Arrow -->
-				<item id="1866" min="1" max="1" chance="14.2857"/> <!-- Suede -->
-				<item id="1871" min="2" max="6" chance="5.5556"/> <!-- Charcoal -->
-				<item id="1877" min="1" max="1" chance="0.6410"/> <!-- Adamantite Nugget -->
-				<item id="2031" min="1" max="1" chance="0.1267"/> <!-- Morning Star Head -->
-				<item id="2032" min="1" max="1" chance="0.1157"/> <!-- Goat Head Staff Head -->
-				<item id="2035" min="1" max="1" chance="0.1267"/> <!-- Tarbar Head -->
-				<item id="2036" min="1" max="1" chance="0.1267"/> <!-- Skull Breaker Head -->
-				<item id="2037" min="1" max="1" chance="0.1267"/> <!-- Heavy Bone Club Head -->
-				<item id="2147" min="1" max="1" chance="1.5385"/> <!-- Recipe: Blacksmith's frame -->
+				<item id="6360" min="89" max="178" chance="70" /> <!-- Blue Seal Stone -->
+				<item id="6361" min="105" max="206" chance="70" /> <!-- Green Seal Stone -->
+				<item id="6362" min="24" max="45" chance="70" /> <!-- Red Seal Stone -->
+				<item id="88" min="1" max="1" chance="0.0018" /> <!-- Morning Star -->
+				<item id="90" min="1" max="1" chance="0.0018" /> <!-- Goat Head Staff -->
+				<item id="158" min="1" max="1" chance="0.0018" /> <!-- Tarbar -->
+				<item id="169" min="1" max="1" chance="0.0018" /> <!-- Skull Breaker -->
+				<item id="172" min="1" max="1" chance="0.0018" /> <!-- Heavy Bone Club -->
+				<item id="1341" min="60" max="180" chance="11.1111" /> <!-- Bone Arrow -->
+				<item id="1866" min="1" max="1" chance="14.2857" /> <!-- Suede -->
+				<item id="1871" min="2" max="6" chance="5.5556" /> <!-- Charcoal -->
+				<item id="1877" min="1" max="1" chance="0.6410" /> <!-- Adamantite Nugget -->
+				<item id="2031" min="1" max="1" chance="0.1267" /> <!-- Morning Star Head -->
+				<item id="2032" min="1" max="1" chance="0.1157" /> <!-- Goat Head Staff Head -->
+				<item id="2035" min="1" max="1" chance="0.1267" /> <!-- Tarbar Head -->
+				<item id="2036" min="1" max="1" chance="0.1267" /> <!-- Skull Breaker Head -->
+				<item id="2037" min="1" max="1" chance="0.1267" /> <!-- Heavy Bone Club Head -->
+				<item id="2147" min="1" max="1" chance="1.5385" /> <!-- Recipe: Blacksmith's frame -->
 			</drop> 
 			<spoil>
-				<item id="1825" min="1" max="1" chance="17.2903"/> <!-- Recipe: Oriharukon -->
-				<item id="1902" min="1" max="1" chance="24.5252"/> <!-- Elven Earring Beads -->
-				<item id="2145" min="1" max="1" chance="17.2903"/> <!-- Recipe: Mithril Alloy -->
+				<item id="1825" min="1" max="1" chance="17.2903" /> <!-- Recipe: Oriharukon -->
+				<item id="1902" min="1" max="1" chance="24.5252" /> <!-- Elven Earring Beads -->
+				<item id="2145" min="1" max="1" chance="17.2903" /> <!-- Recipe: Mithril Alloy -->
 			</spoil>
 		</dropLists>
 	</npc>
@@ -4356,23 +4356,23 @@
 		</collision>
 		<dropLists>
 			<drop>
-				<item id="6360" min="33" max="62" chance="70"/> <!-- Blue Seal Stone -->
-				<item id="6361" min="211" max="425" chance="70"/> <!-- Green Seal Stone -->
-				<item id="6362" min="25" max="45" chance="70"/> <!-- Red Seal Stone -->
-				<item id="281" min="1" max="1" chance="68"/> <!-- Crystallized Ice Bow -->
-				<item id="1868" min="1" max="3" chance="200000"/> <!-- Thread -->
-				<item id="1873" min="1" max="1" chance="76923"/> <!-- Silver Nugget -->
-				<item id="1876" min="1" max="1" chance="40000"/> <!-- Mithril Ore -->
-				<item id="1895" min="1" max="1" chance="55556"/> <!-- Metallic Fiber -->
-				<item id="2074" min="1" max="1" chance="5479"/> <!-- Crystallized Ice Bow Shaft -->
-				<item id="2164" min="1" max="1" chance="13699"/> <!-- Recipe: Ring of Protection -->
-				<item id="3002" min="1" max="1" chance="11905"/> <!-- Recipe: Dwarven Chain Gloves -->
-				<item id="4042" min="1" max="1" chance="3509"/> <!-- Enria -->
+				<item id="6360" min="33" max="62" chance="70" /> <!-- Blue Seal Stone -->
+				<item id="6361" min="211" max="425" chance="70" /> <!-- Green Seal Stone -->
+				<item id="6362" min="25" max="45" chance="70" /> <!-- Red Seal Stone -->
+				<item id="281" min="1" max="1" chance="68" /> <!-- Crystallized Ice Bow -->
+				<item id="1868" min="1" max="3" chance="200000" /> <!-- Thread -->
+				<item id="1873" min="1" max="1" chance="76923" /> <!-- Silver Nugget -->
+				<item id="1876" min="1" max="1" chance="40000" /> <!-- Mithril Ore -->
+				<item id="1895" min="1" max="1" chance="55556" /> <!-- Metallic Fiber -->
+				<item id="2074" min="1" max="1" chance="5479" /> <!-- Crystallized Ice Bow Shaft -->
+				<item id="2164" min="1" max="1" chance="13699" /> <!-- Recipe: Ring of Protection -->
+				<item id="3002" min="1" max="1" chance="11905" /> <!-- Recipe: Dwarven Chain Gloves -->
+				<item id="4042" min="1" max="1" chance="3509" /> <!-- Enria -->
 			</drop> 
 			<spoil>
-				<item id="1873" min="1" max="3" chance="654639"/> <!-- Silver Nugget -->
-				<item id="1908" min="1" max="1" chance="309962"/> <!-- Moonstone Earring Wire -->
-				<item id="2163" min="1" max="1" chance="167000"/> <!-- Recipe: Earring of Protection -->
+				<item id="1873" min="1" max="3" chance="654639" /> <!-- Silver Nugget -->
+				<item id="1908" min="1" max="1" chance="309962" /> <!-- Moonstone Earring Wire -->
+				<item id="2163" min="1" max="1" chance="167000" /> <!-- Recipe: Earring of Protection -->
 			</spoil>
 		</dropLists>
 	</npc>
@@ -4434,24 +4434,24 @@
 		</collision>
 		<dropLists>
 			<drop>
-				<item id="6361" min="268" max="532" chance="70"/> <!-- Green Seal Stone -->
-				<item id="6362" min="25" max="45" chance="70"/> <!-- Red Seal Stone -->
-				<item id="227" min="1" max="1" chance="0.0029"/> <!-- Stiletto -->
-				<item id="242" min="1" max="1" chance="0.0029"/> <!-- Soulfire Dirk -->
-				<item id="951" min="1" max="1" chance="0.0423"/> <!-- Scroll: Enchant Weapon (Grade C) -->
-				<item id="1866" min="1" max="1" chance="16.6667"/> <!-- Suede -->
-				<item id="1871" min="1" max="3" chance="8.3333"/> <!-- Charcoal -->
-				<item id="1877" min="1" max="1" chance="0.9346"/> <!-- Adamantite Nugget -->
-				<item id="2083" min="1" max="1" chance="0.2740"/> <!-- Stiletto Edge -->
-				<item id="2084" min="1" max="1" chance="0.2740"/> <!-- Soulfire Dirk Blade -->
-				<item id="4040" min="1" max="1" chance="0.5714"/> <!-- Mold Lubricant -->
-				<item id="4041" min="1" max="1" chance="0.2114"/> <!-- Mold Hardener -->
-				<item id="6037" min="1" max="3" chance="25"/> <!-- Waking Scroll -->
+				<item id="6361" min="268" max="532" chance="70" /> <!-- Green Seal Stone -->
+				<item id="6362" min="25" max="45" chance="70" /> <!-- Red Seal Stone -->
+				<item id="227" min="1" max="1" chance="0.0029" /> <!-- Stiletto -->
+				<item id="242" min="1" max="1" chance="0.0029" /> <!-- Soulfire Dirk -->
+				<item id="951" min="1" max="1" chance="0.0423" /> <!-- Scroll: Enchant Weapon (Grade C) -->
+				<item id="1866" min="1" max="1" chance="16.6667" /> <!-- Suede -->
+				<item id="1871" min="1" max="3" chance="8.3333" /> <!-- Charcoal -->
+				<item id="1877" min="1" max="1" chance="0.9346" /> <!-- Adamantite Nugget -->
+				<item id="2083" min="1" max="1" chance="0.2740" /> <!-- Stiletto Edge -->
+				<item id="2084" min="1" max="1" chance="0.2740" /> <!-- Soulfire Dirk Blade -->
+				<item id="4040" min="1" max="1" chance="0.5714" /> <!-- Mold Lubricant -->
+				<item id="4041" min="1" max="1" chance="0.2114" /> <!-- Mold Hardener -->
+				<item id="6037" min="1" max="3" chance="25" /> <!-- Waking Scroll -->
 			</drop> 
 			<spoil>
-				<item id="440" min="1" max="1" chance="0.1053"/> <!-- Robe of Seal -->
-				<item id="1912" min="1" max="1" chance="40.1114"/> <!-- Ring of Protection Gemstone -->
-				<item id="4590" min="1" max="1" chance="1.2408"/> <!-- Greater Dye of STR (Str+2 Dex-2) -->
+				<item id="440" min="1" max="1" chance="0.1053" /> <!-- Robe of Seal -->
+				<item id="1912" min="1" max="1" chance="40.1114" /> <!-- Ring of Protection Gemstone -->
+				<item id="4590" min="1" max="1" chance="1.2408" /> <!-- Greater Dye of STR (Str+2 Dex-2) -->
 			</spoil>
 		</dropLists>
 	</npc>
@@ -4517,23 +4517,23 @@
 		</collision>
 		<dropLists>
 			<drop>
-				<item id="6360" min="133" max="267" chance="70"/> <!-- Blue Seal Stone -->
-				<item id="6361" min="219" max="437" chance="70"/> <!-- Green Seal Stone -->
-				<item id="6362" min="11" max="22" chance="70"/> <!-- Red Seal Stone -->
-				<item id="326" min="1" max="1" chance="0.0037"/> <!-- Heathen's Book -->
-				<item id="1864" min="4" max="12" chance="5"/> <!-- Stem -->
-				<item id="1865" min="2" max="6" chance="3.8462"/> <!-- Varnish -->
-				<item id="1866" min="3" max="9" chance="2.3256"/> <!-- Suede -->
-				<item id="1868" min="1" max="3" chance="14.2857"/> <!-- Thread -->
-				<item id="1873" min="1" max="1" chance="7.6923"/> <!-- Silver Nugget -->
-				<item id="2110" min="1" max="1" chance="0.4419"/> <!-- Heathen's Book Page -->
-				<item id="2232" min="1" max="1" chance="0.1188"/> <!-- Recipe: Drake Leather Armor -->
-				<item id="3012" min="1" max="1" chance="0.3571"/> <!-- Recipe: Full Plate Helmet -->
+				<item id="6360" min="133" max="267" chance="70" /> <!-- Blue Seal Stone -->
+				<item id="6361" min="219" max="437" chance="70" /> <!-- Green Seal Stone -->
+				<item id="6362" min="11" max="22" chance="70" /> <!-- Red Seal Stone -->
+				<item id="326" min="1" max="1" chance="0.0037" /> <!-- Heathen's Book -->
+				<item id="1864" min="4" max="12" chance="5" /> <!-- Stem -->
+				<item id="1865" min="2" max="6" chance="3.8462" /> <!-- Varnish -->
+				<item id="1866" min="3" max="9" chance="2.3256" /> <!-- Suede -->
+				<item id="1868" min="1" max="3" chance="14.2857" /> <!-- Thread -->
+				<item id="1873" min="1" max="1" chance="7.6923" /> <!-- Silver Nugget -->
+				<item id="2110" min="1" max="1" chance="0.4419" /> <!-- Heathen's Book Page -->
+				<item id="2232" min="1" max="1" chance="0.1188" /> <!-- Recipe: Drake Leather Armor -->
+				<item id="3012" min="1" max="1" chance="0.3571" /> <!-- Recipe: Full Plate Helmet -->
 			</drop> 
 			<spoil>
-				<item id="1872" min="1" max="11" chance="84.2436"/> <!-- Animal Bone -->
-				<item id="4041" min="1" max="1" chance="3.2965"/> <!-- Mold Hardener -->
-				<item id="4601" min="1" max="1" chance="0.8424"/> <!-- Greater Dye of STR (Str+3 Con-3) -->
+				<item id="1872" min="1" max="11" chance="84.2436" /> <!-- Animal Bone -->
+				<item id="4041" min="1" max="1" chance="3.2965" /> <!-- Mold Hardener -->
+				<item id="4601" min="1" max="1" chance="0.8424" /> <!-- Greater Dye of STR (Str+3 Con-3) -->
 			</spoil>
 		</dropLists>
 	</npc>
@@ -5549,21 +5549,21 @@
 		</collision>
 		<dropLists>
 			<drop>
-				<item id="6360" min="108" max="211" chance="70"/> <!-- Blue Seal Stone -->
-				<item id="6361" min="33" max="63" chance="70"/> <!-- Green Seal Stone -->
-				<item id="6362" min="22" max="41" chance="70"/> <!-- Red Seal Stone -->
-				<item id="47" min="1" max="1" chance="0.1127"/> <!-- Helmet -->
-				<item id="628" min="1" max="1" chance="0.1611"/> <!-- Hoplon -->
-				<item id="1864" min="1" max="3" chance="17.1670"/> <!-- Stem -->
-				<item id="1869" min="1" max="1" chance="17.1670"/> <!-- Iron Ore -->
-				<item id="1880" min="1" max="1" chance="1.7167"/> <!-- Steel -->
-				<item id="2155" min="1" max="1" chance="2.7556"/> <!-- Recipe: Elven Ring -->
-				<item id="5550" min="1" max="1" chance="0.2290"/> <!-- Durable Metal Plate -->
+				<item id="6360" min="108" max="211" chance="70" /> <!-- Blue Seal Stone -->
+				<item id="6361" min="33" max="63" chance="70" /> <!-- Green Seal Stone -->
+				<item id="6362" min="22" max="41" chance="70" /> <!-- Red Seal Stone -->
+				<item id="47" min="1" max="1" chance="0.1127" /> <!-- Helmet -->
+				<item id="628" min="1" max="1" chance="0.1611" /> <!-- Hoplon -->
+				<item id="1864" min="1" max="3" chance="17.1670" /> <!-- Stem -->
+				<item id="1869" min="1" max="1" chance="17.1670" /> <!-- Iron Ore -->
+				<item id="1880" min="1" max="1" chance="1.7167" /> <!-- Steel -->
+				<item id="2155" min="1" max="1" chance="2.7556" /> <!-- Recipe: Elven Ring -->
+				<item id="5550" min="1" max="1" chance="0.2290" /> <!-- Durable Metal Plate -->
 			</drop> 
 			<spoil>
-				<item id="1901" min="1" max="1" chance="22.2980"/> <!-- Tiger's Eye Earring Stone -->
-				<item id="1938" min="1" max="1" chance="10.8529"/> <!-- Mithril Banded Mail Material -->
-				<item id="2154" min="1" max="1" chance="17.2845"/> <!-- Recipe: Elven Earring -->
+				<item id="1901" min="1" max="1" chance="22.2980" /> <!-- Tiger's Eye Earring Stone -->
+				<item id="1938" min="1" max="1" chance="10.8529" /> <!-- Mithril Banded Mail Material -->
+				<item id="2154" min="1" max="1" chance="17.2845" /> <!-- Recipe: Elven Earring -->
 			</spoil>
 		</dropLists>
 	</npc>
@@ -5594,7 +5594,7 @@
 			<skill id="4029" level="2" /> <!-- NPC Shield -->
 			<skill id="4285" level="3" /> <!-- Resist Sleep Attacks -->
 			<skill id="4287" level="3" /> <!-- Resist Hold Attacks -->
-			<skill id="4336" level="2"/> <!-- Dark Attack Weak Point -->
+			<skill id="4336" level="2" /> <!-- Dark Attack Weak Point -->
 			<skill id="4408" level="12" /> <!-- HP Increase (4x) -->
 			<skill id="4410" level="13" /> <!-- Slightly Strong P. Atk. -->
 			<skill id="4411" level="13" /> <!-- Slightly Strong M. Atk. -->
@@ -5624,25 +5624,25 @@
 		</collision>
 		<dropLists>
 			<drop>
-				<item id="6360" min="96" max="192" chance="70"/> <!-- Blue Seal Stone -->
-				<item id="6361" min="68" max="136" chance="70"/> <!-- Green Seal Stone -->
-				<item id="6362" min="24" max="44" chance="70"/> <!-- Red Seal Stone -->
-				<item id="83" min="1" max="1" chance="0.0051"/> <!-- Sword of Magic -->
-				<item id="124" min="1" max="1" chance="0.0038"/> <!-- Two-Handed Sword -->
-				<item id="127" min="1" max="1" chance="0.0038"/> <!-- Crimson Sword -->
-				<item id="130" min="1" max="1" chance="0.0038"/> <!-- Elven Sword -->
-				<item id="144" min="1" max="1" chance="0.0051"/> <!-- Sword of Occult -->
-				<item id="1865" min="1" max="1" chance="16.6667"/> <!-- Varnish -->
-				<item id="1870" min="1" max="1" chance="16.6667"/> <!-- Coal -->
-				<item id="1874" min="1" max="1" chance="1.0417"/> <!-- Oriharukon Ore -->
-				<item id="2026" min="1" max="1" chance="0.2191"/> <!-- Two-Handed Sword Edge -->
-				<item id="2191" min="1" max="1" chance="2.1277"/> <!-- Recipe: RIP Gauntlets -->
-				<item id="8317" min="1" max="1" chance="0.1481"/> <!-- Recipe: Titan Hammer (100%) -->
+				<item id="6360" min="96" max="192" chance="70" /> <!-- Blue Seal Stone -->
+				<item id="6361" min="68" max="136" chance="70" /> <!-- Green Seal Stone -->
+				<item id="6362" min="24" max="44" chance="70" /> <!-- Red Seal Stone -->
+				<item id="83" min="1" max="1" chance="0.0051" /> <!-- Sword of Magic -->
+				<item id="124" min="1" max="1" chance="0.0038" /> <!-- Two-Handed Sword -->
+				<item id="127" min="1" max="1" chance="0.0038" /> <!-- Crimson Sword -->
+				<item id="130" min="1" max="1" chance="0.0038" /> <!-- Elven Sword -->
+				<item id="144" min="1" max="1" chance="0.0051" /> <!-- Sword of Occult -->
+				<item id="1865" min="1" max="1" chance="16.6667" /> <!-- Varnish -->
+				<item id="1870" min="1" max="1" chance="16.6667" /> <!-- Coal -->
+				<item id="1874" min="1" max="1" chance="1.0417" /> <!-- Oriharukon Ore -->
+				<item id="2026" min="1" max="1" chance="0.2191" /> <!-- Two-Handed Sword Edge -->
+				<item id="2191" min="1" max="1" chance="2.1277" /> <!-- Recipe: RIP Gauntlets -->
+				<item id="8317" min="1" max="1" chance="0.1481" /> <!-- Recipe: Titan Hammer (100%) -->
 			</drop> 
 			<spoil>
-				<item id="1865" min="1" max="5" chance="68.4631"/> <!-- Varnish -->
-				<item id="1870" min="1" max="5" chance="68.4631"/> <!-- Coal -->
-				<item id="1939" min="1" max="1" chance="18.0403"/> <!-- Mithril Banded Gaiters Material -->
+				<item id="1865" min="1" max="5" chance="68.4631" /> <!-- Varnish -->
+				<item id="1870" min="1" max="5" chance="68.4631" /> <!-- Coal -->
+				<item id="1939" min="1" max="1" chance="18.0403" /> <!-- Mithril Banded Gaiters Material -->
 			</spoil>
 		</dropLists>
 	</npc>
@@ -5672,7 +5672,7 @@
 		<skillList>
 			<skill id="4032" level="3" /> <!-- NPC Strike -->
 			<skill id="4287" level="5" /> <!-- Resist Hold Attacks -->
-			<skill id="4336" level="2"/> <!-- Dark Attack Weak Point -->
+			<skill id="4336" level="2" /> <!-- Dark Attack Weak Point -->
 			<skill id="4408" level="12" /> <!-- HP Increase (4x) -->
 			<skill id="4410" level="13" /> <!-- Slightly Strong P. Atk. -->
 			<skill id="4411" level="13" /> <!-- Slightly Strong M. Atk. -->
@@ -5703,31 +5703,31 @@
 		</collision>
 		<dropLists>
 			<drop>
-				<item id="6360" min="89" max="178" chance="70"/> <!-- Blue Seal Stone -->
-				<item id="6361" min="105" max="206" chance="70"/> <!-- Green Seal Stone -->
-				<item id="6362" min="24" max="45" chance="70"/> <!-- Red Seal Stone -->
-				<item id="88" min="1" max="1" chance="0.0018"/> <!-- Morning Star -->
-				<item id="90" min="1" max="1" chance="0.0018"/> <!-- Goat Head Staff -->
-				<item id="158" min="1" max="1" chance="0.0018"/> <!-- Tarbar -->
-				<item id="169" min="1" max="1" chance="0.0018"/> <!-- Skull Breaker -->
-				<item id="172" min="1" max="1" chance="0.0018"/> <!-- Heavy Bone Club -->
-				<item id="1866" min="1" max="1" chance="16.6667"/> <!-- Suede -->
-				<item id="1871" min="1" max="3" chance="12.5000"/> <!-- Charcoal -->
-				<item id="1877" min="1" max="1" chance="1.0938"/> <!-- Adamantite Nugget -->
-				<item id="2031" min="1" max="1" chance="0.1267"/> <!-- Morning Star Head -->
-				<item id="2032" min="1" max="1" chance="0.1157"/> <!-- Goat Head Staff Head -->
-				<item id="2035" min="1" max="1" chance="0.1267"/> <!-- Tarbar Head -->
-				<item id="2036" min="1" max="1" chance="0.1267"/> <!-- Skull Breaker Head -->
-				<item id="2037" min="1" max="1" chance="0.1267"/> <!-- Heavy Bone Club Head -->
-				<item id="2147" min="1" max="1" chance="1.6949"/> <!-- Recipe: Blacksmith's frame -->
-				<item id="7638" min="1" max="1" chance="7.8207"/> <!-- Spellbook - Mass Summon Storm Cubic -->
-				<item id="7639" min="1" max="1" chance="7.8207"/> <!-- Spellbook - Mass Summon Aqua Cubic -->
-				<item id="7640" min="1" max="1" chance="7.8207"/> <!-- Spellbook - Mass Summon Phantom Cubic -->
+				<item id="6360" min="89" max="178" chance="70" /> <!-- Blue Seal Stone -->
+				<item id="6361" min="105" max="206" chance="70" /> <!-- Green Seal Stone -->
+				<item id="6362" min="24" max="45" chance="70" /> <!-- Red Seal Stone -->
+				<item id="88" min="1" max="1" chance="0.0018" /> <!-- Morning Star -->
+				<item id="90" min="1" max="1" chance="0.0018" /> <!-- Goat Head Staff -->
+				<item id="158" min="1" max="1" chance="0.0018" /> <!-- Tarbar -->
+				<item id="169" min="1" max="1" chance="0.0018" /> <!-- Skull Breaker -->
+				<item id="172" min="1" max="1" chance="0.0018" /> <!-- Heavy Bone Club -->
+				<item id="1866" min="1" max="1" chance="16.6667" /> <!-- Suede -->
+				<item id="1871" min="1" max="3" chance="12.5000" /> <!-- Charcoal -->
+				<item id="1877" min="1" max="1" chance="1.0938" /> <!-- Adamantite Nugget -->
+				<item id="2031" min="1" max="1" chance="0.1267" /> <!-- Morning Star Head -->
+				<item id="2032" min="1" max="1" chance="0.1157" /> <!-- Goat Head Staff Head -->
+				<item id="2035" min="1" max="1" chance="0.1267" /> <!-- Tarbar Head -->
+				<item id="2036" min="1" max="1" chance="0.1267" /> <!-- Skull Breaker Head -->
+				<item id="2037" min="1" max="1" chance="0.1267" /> <!-- Heavy Bone Club Head -->
+				<item id="2147" min="1" max="1" chance="1.6949" /> <!-- Recipe: Blacksmith's frame -->
+				<item id="7638" min="1" max="1" chance="7.8207" /> <!-- Spellbook - Mass Summon Storm Cubic -->
+				<item id="7639" min="1" max="1" chance="7.8207" /> <!-- Spellbook - Mass Summon Aqua Cubic -->
+				<item id="7640" min="1" max="1" chance="7.8207" /> <!-- Spellbook - Mass Summon Phantom Cubic -->
 			</drop> 
 			<spoil>
-				<item id="1825" min="1" max="1" chance="17.2903"/> <!-- Recipe: Oriharukon -->
-				<item id="1902" min="1" max="1" chance="24.5252"/> <!-- Elven Earring Beads -->
-				<item id="2145" min="1" max="1" chance="17.2903"/> <!-- Recipe: Mithril Alloy -->
+				<item id="1825" min="1" max="1" chance="17.2903" /> <!-- Recipe: Oriharukon -->
+				<item id="1902" min="1" max="1" chance="24.5252" /> <!-- Elven Earring Beads -->
+				<item id="2145" min="1" max="1" chance="17.2903" /> <!-- Recipe: Mithril Alloy -->
 			</spoil>
 		</dropLists>
 	</npc>
@@ -5849,23 +5849,23 @@
 		</collision>
 		<dropLists>
 			<drop>
-				<item id="6360" min="33" max="62" chance="70"/> <!-- Blue Seal Stone -->
-				<item id="6361" min="211" max="425" chance="70"/> <!-- Green Seal Stone -->
-				<item id="6362" min="25" max="45" chance="70"/> <!-- Red Seal Stone -->
-				<item id="281" min="1" max="1" chance="68"/> <!-- Crystallized Ice Bow -->
-				<item id="1868" min="1" max="3" chance="200000"/> <!-- Thread -->
-				<item id="1873" min="1" max="1" chance="76923"/> <!-- Silver Nugget -->
-				<item id="1876" min="1" max="1" chance="37037"/> <!-- Mithril Ore -->
-				<item id="1895" min="1" max="1" chance="52632"/> <!-- Metallic Fiber -->
-				<item id="2074" min="1" max="1" chance="5479"/> <!-- Crystallized Ice Bow Shaft -->
-				<item id="2164" min="1" max="1" chance="13158"/> <!-- Recipe: Ring of Protection -->
-				<item id="2228" min="1" max="1" chance="5263"/> <!-- Recipe: Shining Circlet -->
-				<item id="4042" min="1" max="1" chance="3390"/> <!-- Enria -->
-				<item id="6036" min="1" max="1" chance="5525"/> <!-- Greater Magic Haste Potion -->
+				<item id="6360" min="33" max="62" chance="70" /> <!-- Blue Seal Stone -->
+				<item id="6361" min="211" max="425" chance="70" /> <!-- Green Seal Stone -->
+				<item id="6362" min="25" max="45" chance="70" /> <!-- Red Seal Stone -->
+				<item id="281" min="1" max="1" chance="68" /> <!-- Crystallized Ice Bow -->
+				<item id="1868" min="1" max="3" chance="200000" /> <!-- Thread -->
+				<item id="1873" min="1" max="1" chance="76923" /> <!-- Silver Nugget -->
+				<item id="1876" min="1" max="1" chance="37037" /> <!-- Mithril Ore -->
+				<item id="1895" min="1" max="1" chance="52632" /> <!-- Metallic Fiber -->
+				<item id="2074" min="1" max="1" chance="5479" /> <!-- Crystallized Ice Bow Shaft -->
+				<item id="2164" min="1" max="1" chance="13158" /> <!-- Recipe: Ring of Protection -->
+				<item id="2228" min="1" max="1" chance="5263" /> <!-- Recipe: Shining Circlet -->
+				<item id="4042" min="1" max="1" chance="3390" /> <!-- Enria -->
+				<item id="6036" min="1" max="1" chance="5525" /> <!-- Greater Magic Haste Potion -->
 			</drop> 
 			<spoil>
-				<item id="440" min="1" max="1" chance="926"/> <!-- Robe of Seal -->
-				<item id="1908" min="1" max="2" chance="309962"/> <!-- Moonstone Earring Wire -->
+				<item id="440" min="1" max="1" chance="926" /> <!-- Robe of Seal -->
+				<item id="1908" min="1" max="2" chance="309962" /> <!-- Moonstone Earring Wire -->
 			</spoil>
 		</dropLists>
 	</npc>
@@ -5925,23 +5925,23 @@
 		</collision>
 		<dropLists>
 			<drop>
-				<item id="6361" min="268" max="532" chance="70"/> <!-- Green Seal Stone -->
-				<item id="6362" min="25" max="45" chance="70"/> <!-- Red Seal Stone -->
-				<item id="227" min="1" max="1" chance="0.0029"/> <!-- Stiletto -->
-				<item id="242" min="1" max="1" chance="0.0029"/> <!-- Soulfire Dirk -->
-				<item id="951" min="1" max="1" chance="0.0500"/> <!-- Scroll: Enchant Weapon (Grade C) -->
-				<item id="1866" min="1" max="1" chance="16.6667"/> <!-- Suede -->
-				<item id="1871" min="1" max="1" chance="25"/> <!-- Charcoal -->
-				<item id="1877" min="1" max="1" chance="1.3889"/> <!-- Adamantite Nugget -->
-				<item id="2083" min="1" max="1" chance="0.2740"/> <!-- Stiletto Edge -->
-				<item id="2084" min="1" max="1" chance="0.2740"/> <!-- Soulfire Dirk Blade -->
-				<item id="4040" min="1" max="1" chance="0.4444"/> <!-- Mold Lubricant -->
-				<item id="4041" min="1" max="1" chance="0.2967"/> <!-- Mold Hardener -->
+				<item id="6361" min="268" max="532" chance="70" /> <!-- Green Seal Stone -->
+				<item id="6362" min="25" max="45" chance="70" /> <!-- Red Seal Stone -->
+				<item id="227" min="1" max="1" chance="0.0029" /> <!-- Stiletto -->
+				<item id="242" min="1" max="1" chance="0.0029" /> <!-- Soulfire Dirk -->
+				<item id="951" min="1" max="1" chance="0.0500" /> <!-- Scroll: Enchant Weapon (Grade C) -->
+				<item id="1866" min="1" max="1" chance="16.6667" /> <!-- Suede -->
+				<item id="1871" min="1" max="1" chance="25" /> <!-- Charcoal -->
+				<item id="1877" min="1" max="1" chance="1.3889" /> <!-- Adamantite Nugget -->
+				<item id="2083" min="1" max="1" chance="0.2740" /> <!-- Stiletto Edge -->
+				<item id="2084" min="1" max="1" chance="0.2740" /> <!-- Soulfire Dirk Blade -->
+				<item id="4040" min="1" max="1" chance="0.4444" /> <!-- Mold Lubricant -->
+				<item id="4041" min="1" max="1" chance="0.2967" /> <!-- Mold Hardener -->
 			</drop> 
 			<spoil>
-				<item id="1911" min="1" max="1" chance="27.6857"/> <!-- Earring of Protection Gemstone -->
-				<item id="2166" min="1" max="1" chance="12.6181"/> <!-- Recipe: Earrings of Binding (100%) -->
-				<item id="2167" min="1" max="1" chance="18.9915"/> <!-- Recipe: Ring of Ages -->
+				<item id="1911" min="1" max="1" chance="27.6857" /> <!-- Earring of Protection Gemstone -->
+				<item id="2166" min="1" max="1" chance="12.6181" /> <!-- Recipe: Earrings of Binding (100%) -->
+				<item id="2167" min="1" max="1" chance="18.9915" /> <!-- Recipe: Ring of Ages -->
 			</spoil>
 		</dropLists>
 	</npc>
@@ -6007,22 +6007,22 @@
 		</collision>
 		<dropLists>
 			<drop>
-				<item id="6360" min="145" max="291" chance="70"/> <!-- Blue Seal Stone -->
-				<item id="6361" min="238" max="476" chance="70"/> <!-- Green Seal Stone -->
-				<item id="6362" min="12" max="24" chance="70"/> <!-- Red Seal Stone -->
-				<item id="326" min="1" max="1" chance="0.0040"/> <!-- Heathen's Book -->
-				<item id="1867" min="1" max="3" chance="11.1111"/> <!-- Animal Skin -->
-				<item id="1869" min="2" max="6" chance="6.2500"/> <!-- Iron Ore -->
-				<item id="1870" min="2" max="6" chance="5"/> <!-- Coal -->
-				<item id="1871" min="3" max="9" chance="4.3478"/> <!-- Charcoal -->
-				<item id="1872" min="1" max="21" chance="2.3810"/> <!-- Animal Bone -->
-				<item id="2110" min="1" max="1" chance="0.4811"/> <!-- Heathen's Book Page -->
-				<item id="2232" min="1" max="1" chance="0.1235"/> <!-- Recipe: Drake Leather Armor -->
+				<item id="6360" min="145" max="291" chance="70" /> <!-- Blue Seal Stone -->
+				<item id="6361" min="238" max="476" chance="70" /> <!-- Green Seal Stone -->
+				<item id="6362" min="12" max="24" chance="70" /> <!-- Red Seal Stone -->
+				<item id="326" min="1" max="1" chance="0.0040" /> <!-- Heathen's Book -->
+				<item id="1867" min="1" max="3" chance="11.1111" /> <!-- Animal Skin -->
+				<item id="1869" min="2" max="6" chance="6.2500" /> <!-- Iron Ore -->
+				<item id="1870" min="2" max="6" chance="5" /> <!-- Coal -->
+				<item id="1871" min="3" max="9" chance="4.3478" /> <!-- Charcoal -->
+				<item id="1872" min="1" max="21" chance="2.3810" /> <!-- Animal Bone -->
+				<item id="2110" min="1" max="1" chance="0.4811" /> <!-- Heathen's Book Page -->
+				<item id="2232" min="1" max="1" chance="0.1235" /> <!-- Recipe: Drake Leather Armor -->
 			</drop> 
 			<spoil>
-				<item id="1872" min="1" max="11" chance="91.7243"/> <!-- Animal Bone -->
-				<item id="4041" min="1" max="1" chance="3.5892"/> <!-- Mold Hardener -->
-				<item id="4603" min="1" max="1" chance="0.9172"/> <!-- Greater Dye of CON (Con+3 Str-3) -->
+				<item id="1872" min="1" max="11" chance="91.7243" /> <!-- Animal Bone -->
+				<item id="4041" min="1" max="1" chance="3.5892" /> <!-- Mold Hardener -->
+				<item id="4603" min="1" max="1" chance="0.9172" /> <!-- Greater Dye of CON (Con+3 Str-3) -->
 			</spoil>
 		</dropLists>
 	</npc>

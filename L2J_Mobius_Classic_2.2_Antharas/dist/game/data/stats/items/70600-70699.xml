@@ -407,9 +407,9 @@
 		<set name="is_depositable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
-		<set name="handler" val="ItemSkills"/>
+		<set name="handler" val="ItemSkills" />
 		<skills>
-			<skill id="39258" level="1"/> <!-- Warrior MP Recovery Potion -->
+			<skill id="39258" level="1" /> <!-- Warrior MP Recovery Potion -->
 		</skills>
 	</item>
 	<item id="70643" name="Golden Mermaid's Scale" additionalName="7-day" type="EtcItem">

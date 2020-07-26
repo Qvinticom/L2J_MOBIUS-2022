@@ -21,7 +21,7 @@
 			<param name="limit" value="14" />
 		</condition>
 		<condition type="GroupMax">
-			<param name="html" value="condBigGroup.html"/>
+			<param name="html" value="condBigGroup.html" />
 			<param name="limit" value="35" />
 		</condition>
 		<condition type="Level" showMessageAndHtml="true">
@@ -36,8 +36,8 @@
 		<reset day="SATURDAY" hour="6" minute="30" />
 	</reenter>
 	<doorlist>
-		<door id="15240001"/>
-		<door id="15240002"/>
+		<door id="15240001" />
+		<door id="15240002" />
 	</doorlist>
 	<spawnlist>
 		<group>

@@ -162,8 +162,8 @@
 		<set name="enchant_enabled" val="0" />
 		<set name="commissionItemType" val="NECKLACE" />
 		<skills>
-			<skill id="54027" level="4"/> <!-- Attribute XP +15% -->
-			<skill id="54023" level="4"/> <!-- Water Attack Defense +80 -->
+			<skill id="54027" level="4" /> <!-- Attribute XP +15% -->
+			<skill id="54023" level="4" /> <!-- Water Attack Defense +80 -->
 		</skills>
 		<stats>
 			<stat type="mDef">96</stat>
@@ -184,8 +184,8 @@
 		<set name="enchant_enabled" val="0" /> <!-- TODO: Possible Upgrade - https://l2wiki.com/classic/Ignis%27_Necklace -->
 		<set name="commissionItemType" val="NECKLACE" />
 		<skills>
-			<skill id="54027" level="5"/> <!-- Attribute XP +30% -->
-			<skill id="54023" level="5"/> <!-- Water Attack Defense +100 -->
+			<skill id="54027" level="5" /> <!-- Attribute XP +30% -->
+			<skill id="54023" level="5" /> <!-- Water Attack Defense +100 -->
 		</skills>
 		<stats>
 			<stat type="mDef">100</stat>
@@ -206,8 +206,8 @@
 		<set name="enchant_enabled" val="0" />
 		<set name="commissionItemType" val="NECKLACE" />
 		<skills>
-			<skill id="54027" level="4"/> <!-- Attribute XP +15% -->
-			<skill id="54024" level="4"/> <!-- Fire Attack Defense +80 -->
+			<skill id="54027" level="4" /> <!-- Attribute XP +15% -->
+			<skill id="54024" level="4" /> <!-- Fire Attack Defense +80 -->
 		</skills>
 		<stats>
 			<stat type="mDef">96</stat>
@@ -228,8 +228,8 @@
 		<set name="enchant_enabled" val="0" /> <!-- TODO: Possible Upgrade - https://l2wiki.com/classic/Ignis%27_Necklace -->
 		<set name="commissionItemType" val="NECKLACE" />
 		<skills>
-			<skill id="54027" level="5"/> <!-- Attribute XP +30% -->
-			<skill id="54024" level="5"/> <!-- Fire Attack Defense +100 -->
+			<skill id="54027" level="5" /> <!-- Attribute XP +30% -->
+			<skill id="54024" level="5" /> <!-- Fire Attack Defense +100 -->
 		</skills>
 		<stats>
 			<stat type="mDef">100</stat>
@@ -250,8 +250,8 @@
 		<set name="enchant_enabled" val="0" />
 		<set name="commissionItemType" val="NECKLACE" />
 		<skills>
-			<skill id="54027" level="4"/> <!-- Attribute XP +15% -->
-			<skill id="54026" level="4"/> <!-- Earth Attack Defense +80 -->
+			<skill id="54027" level="4" /> <!-- Attribute XP +15% -->
+			<skill id="54026" level="4" /> <!-- Earth Attack Defense +80 -->
 		</skills>
 		<stats>
 			<stat type="mDef">96</stat>
@@ -273,8 +273,8 @@
 		<set name="enchant_enabled" val="0" /> <!-- TODO: Possible Upgrade - https://l2wiki.com/classic/Ignis%27_Necklace -->
 		<set name="commissionItemType" val="NECKLACE" />
 		<skills>
-			<skill id="54027" level="5"/> <!-- Attribute XP +30% -->
-			<skill id="54025" level="5"/> <!-- Wind Attack Defense +100 -->
+			<skill id="54027" level="5" /> <!-- Attribute XP +30% -->
+			<skill id="54025" level="5" /> <!-- Wind Attack Defense +100 -->
 		</skills>
 		<stats>
 			<stat type="mDef">100</stat>
@@ -295,8 +295,8 @@
 		<set name="enchant_enabled" val="0" />
 		<set name="commissionItemType" val="NECKLACE" />
 		<skills>
-			<skill id="54027" level="4"/> <!-- Attribute XP +15% -->
-			<skill id="54026" level="4"/> <!-- Earth Attack Defense +80 -->
+			<skill id="54027" level="4" /> <!-- Attribute XP +15% -->
+			<skill id="54026" level="4" /> <!-- Earth Attack Defense +80 -->
 		</skills>
 		<stats>
 			<stat type="mDef">96</stat>
@@ -317,8 +317,8 @@
 		<set name="enchant_enabled" val="0" /> <!-- TODO: Possible Upgrade - https://l2wiki.com/classic/Ignis%27_Necklace -->
 		<set name="commissionItemType" val="NECKLACE" />
 		<skills>
-			<skill id="54027" level="5"/> <!-- Attribute XP +30% -->
-			<skill id="54026" level="5"/> <!-- Earth Attack Defense +100 -->
+			<skill id="54027" level="5" /> <!-- Attribute XP +30% -->
+			<skill id="54026" level="5" /> <!-- Earth Attack Defense +100 -->
 		</skills>
 		<stats>
 			<stat type="mDef">100</stat>
@@ -379,10 +379,10 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
 		<skills>
-			<skill id="51101" level="1"/> <!-- Summon Agathion Ignis -->
-			<skill id="3267" level="1"/> <!-- Seal Agathion -->
-			<skill id="51093" level="1"/> <!-- Fire Attack +100 -->
-			<skill id="51089" level="1"/>
+			<skill id="51101" level="1" /> <!-- Summon Agathion Ignis -->
+			<skill id="3267" level="1" /> <!-- Seal Agathion -->
+			<skill id="51093" level="1" /> <!-- Fire Attack +100 -->
+			<skill id="51089" level="1" />
 		</skills>
 	</item>
 	<item id="91130" name="Agathion Nebula" type="Armor">
@@ -396,10 +396,10 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
 		<skills>
-			<skill id="51102" level="1"/> <!-- Summon Agathion Nebula -->
-			<skill id="3267" level="1"/> <!-- Seal Agathion -->
-			<skill id="51094" level="1"/> <!-- Water Attack +100 -->
-			<skill id="51090" level="1"/>
+			<skill id="51102" level="1" /> <!-- Summon Agathion Nebula -->
+			<skill id="3267" level="1" /> <!-- Seal Agathion -->
+			<skill id="51094" level="1" /> <!-- Water Attack +100 -->
+			<skill id="51090" level="1" />
 		</skills>
 	</item>
 	<item id="91131" name="Agathion Procella" type="Armor">
@@ -413,10 +413,10 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
 		<skills>
-			<skill id="51103" level="1"/> <!-- Summon Agathion Procella -->
-			<skill id="3267" level="1"/> <!-- Seal Agathion -->
-			<skill id="51095" level="1"/> <!-- Wind Attack +100 -->
-			<skill id="51091" level="1"/>
+			<skill id="51103" level="1" /> <!-- Summon Agathion Procella -->
+			<skill id="3267" level="1" /> <!-- Seal Agathion -->
+			<skill id="51095" level="1" /> <!-- Wind Attack +100 -->
+			<skill id="51091" level="1" />
 		</skills>
 	</item>
 	<item id="91132" name="Agathion Petram" type="Armor">
@@ -430,10 +430,10 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
 		<skills>
-			<skill id="51101" level="1"/> <!-- Summon Agathion Petram -->
-			<skill id="3267" level="1"/> <!-- Seal Agathion -->
-			<skill id="51096" level="1"/> <!-- Earth Attack +100 -->
-			<skill id="51092" level="1"/>
+			<skill id="51101" level="1" /> <!-- Summon Agathion Petram -->
+			<skill id="3267" level="1" /> <!-- Seal Agathion -->
+			<skill id="51096" level="1" /> <!-- Earth Attack +100 -->
+			<skill id="51092" level="1" />
 		</skills>
 	</item>
 	<item id="91133" name="Improved Master Fisherman's Blessing (2 h.)" type="EtcItem">
@@ -729,8 +729,8 @@
 		<set name="is_sellable" val="false" />
 		<skills>
 			<skill id="51025" level="4" /> <!-- Expand Agathion Slots -->
-			<skill id="55885" level="1"/> <!-- Agathion Bracelet Stats Increase -->
-			<skill id="55886" level="1"/> <!-- Agathion Bracelet Resistance Increase -->
+			<skill id="55885" level="1" /> <!-- Agathion Bracelet Stats Increase -->
+			<skill id="55886" level="1" /> <!-- Agathion Bracelet Resistance Increase -->
 		</skills>
 	</item>
 	<item id="91162" name="Golden Cheer Stamen" additionalName="Event" type="Weapon">
@@ -765,7 +765,7 @@
 		<set name="weight" val="20" />
 		<set name="is_stackable" val="true" />
 		<skills>
-			<skill id="54034" level="1"/> <!-- Anakim Power -->
+			<skill id="54034" level="1" /> <!-- Anakim Power -->
 		</skills>
 	</item>
 	<item id="91164" name="Anakim's Rune - Stage 2" type="EtcItem">
@@ -776,7 +776,7 @@
 		<set name="weight" val="20" />
 		<set name="is_stackable" val="true" />
 		<skills>
-			<skill id="54034" level="2"/> <!-- Anakim Power -->
+			<skill id="54034" level="2" /> <!-- Anakim Power -->
 		</skills>
 	</item>
 	<item id="91165" name="Anakim's Rune - Stage 3" type="EtcItem">
@@ -787,7 +787,7 @@
 		<set name="weight" val="20" />
 		<set name="is_stackable" val="true" />
 		<skills>
-			<skill id="54034" level="3"/> <!-- Anakim Power -->
+			<skill id="54034" level="3" /> <!-- Anakim Power -->
 		</skills>
 	</item>
 	<item id="91166" name="Anakim's Rune - Stage 4" type="EtcItem">
@@ -798,7 +798,7 @@
 		<set name="weight" val="20" />
 		<set name="is_stackable" val="true" />
 		<skills>
-			<skill id="54034" level="4"/> <!-- Anakim Power -->
+			<skill id="54034" level="4" /> <!-- Anakim Power -->
 		</skills>
 	</item>
 	<item id="91167" name="Anakim's Rune - Stage 5" type="EtcItem">
@@ -809,7 +809,7 @@
 		<set name="weight" val="20" />
 		<set name="is_stackable" val="true" />
 		<skills>
-			<skill id="54034" level="5"/> <!-- Anakim Power -->
+			<skill id="54034" level="5" /> <!-- Anakim Power -->
 		</skills>
 	</item>
 	<item id="91168" name="Anakim's Rune - Stage 6" type="EtcItem">
@@ -820,7 +820,7 @@
 		<set name="weight" val="20" />
 		<set name="is_stackable" val="true" />
 		<skills>
-			<skill id="54034" level="6"/> <!-- Anakim Power -->
+			<skill id="54034" level="6" /> <!-- Anakim Power -->
 		</skills>
 	</item>
 	<item id="91169" name="Anakim's Rune - Stage 7" type="EtcItem">
@@ -831,7 +831,7 @@
 		<set name="weight" val="20" />
 		<set name="is_stackable" val="true" />
 		<skills>
-			<skill id="54034" level="7"/> <!-- Anakim Power -->
+			<skill id="54034" level="7" /> <!-- Anakim Power -->
 		</skills>
 	</item>
 	<item id="91170" name="Anakim's Rune - Stage 8" type="EtcItem">
@@ -842,7 +842,7 @@
 		<set name="weight" val="20" />
 		<set name="is_stackable" val="true" />
 		<skills>
-			<skill id="54034" level="8"/> <!-- Anakim Power -->
+			<skill id="54034" level="8" /> <!-- Anakim Power -->
 		</skills>
 	</item>
 	<item id="91171" name="Anakim's Rune - Stage 9" type="EtcItem">
@@ -853,7 +853,7 @@
 		<set name="weight" val="20" />
 		<set name="is_stackable" val="true" />
 		<skills>
-			<skill id="54034" level="9"/> <!-- Anakim Power -->
+			<skill id="54034" level="9" /> <!-- Anakim Power -->
 		</skills>
 	</item>
 	<item id="91172" name="Anakim's Rune - Stage 10" type="EtcItem">
@@ -864,7 +864,7 @@
 		<set name="weight" val="20" />
 		<set name="is_stackable" val="true" />
 		<skills>
-			<skill id="54034" level="10"/> <!-- Anakim Power -->
+			<skill id="54034" level="10" /> <!-- Anakim Power -->
 		</skills>
 	</item>
 	<item id="91173" name="Lilith's Rune - Stage 1" type="EtcItem">
@@ -875,7 +875,7 @@
 		<set name="weight" val="20" />
 		<set name="is_stackable" val="true" />
 		<skills>
-			<skill id="54035" level="1"/> <!-- Lilith Power -->
+			<skill id="54035" level="1" /> <!-- Lilith Power -->
 		</skills>
 	</item>
 	<item id="91174" name="Lilith's Rune - Stage 2" type="EtcItem">
@@ -886,7 +886,7 @@
 		<set name="weight" val="20" />
 		<set name="is_stackable" val="true" />
 		<skills>
-			<skill id="54035" level="2"/> <!-- Lilith Power -->
+			<skill id="54035" level="2" /> <!-- Lilith Power -->
 		</skills>
 	</item>
 	<item id="91175" name="Lilith's Rune - Stage 3" type="EtcItem">
@@ -897,7 +897,7 @@
 		<set name="weight" val="20" />
 		<set name="is_stackable" val="true" />
 		<skills>
-			<skill id="54035" level="3"/> <!-- Lilith Power -->
+			<skill id="54035" level="3" /> <!-- Lilith Power -->
 		</skills>
 	</item>
 	<item id="91176" name="Lilith's Rune - Stage 4" type="EtcItem">
@@ -908,7 +908,7 @@
 		<set name="weight" val="20" />
 		<set name="is_stackable" val="true" />
 		<skills>
-			<skill id="54035" level="4"/> <!-- Lilith Power -->
+			<skill id="54035" level="4" /> <!-- Lilith Power -->
 		</skills>
 	</item>
 	<item id="91177" name="Lilith's Rune - Stage 5" type="EtcItem">
@@ -919,7 +919,7 @@
 		<set name="weight" val="20" />
 		<set name="is_stackable" val="true" />
 		<skills>
-			<skill id="54035" level="5"/> <!-- Lilith Power -->
+			<skill id="54035" level="5" /> <!-- Lilith Power -->
 		</skills>
 	</item>
 	<item id="91178" name="Lilith's Rune - Stage 6" type="EtcItem">
@@ -930,7 +930,7 @@
 		<set name="weight" val="20" />
 		<set name="is_stackable" val="true" />
 		<skills>
-			<skill id="54035" level="6"/> <!-- Lilith Power -->
+			<skill id="54035" level="6" /> <!-- Lilith Power -->
 		</skills>
 	</item>
 	<item id="91179" name="Lilith's Rune - Stage 7" type="EtcItem">
@@ -941,7 +941,7 @@
 		<set name="weight" val="20" />
 		<set name="is_stackable" val="true" />
 		<skills>
-			<skill id="54035" level="7"/> <!-- Lilith Power -->
+			<skill id="54035" level="7" /> <!-- Lilith Power -->
 		</skills>
 	</item>
 	<item id="91180" name="Lilith's Rune - Stage 8" type="EtcItem">
@@ -952,7 +952,7 @@
 		<set name="weight" val="20" />
 		<set name="is_stackable" val="true" />
 		<skills>
-			<skill id="54035" level="8"/> <!-- Lilith Power -->
+			<skill id="54035" level="8" /> <!-- Lilith Power -->
 		</skills>
 	</item>
 	<item id="91181" name="Lilith's Rune - Stage 9" type="EtcItem">
@@ -963,7 +963,7 @@
 		<set name="weight" val="20" />
 		<set name="is_stackable" val="true" />
 		<skills>
-			<skill id="54035" level="9"/> <!-- Lilith Power -->
+			<skill id="54035" level="9" /> <!-- Lilith Power -->
 		</skills>
 	</item>
 	<item id="91182" name="Lilith's Rune - Stage 10" type="EtcItem">
@@ -974,7 +974,7 @@
 		<set name="weight" val="20" />
 		<set name="is_stackable" val="true" />
 		<skills>
-			<skill id="54035" level="10"/> <!-- Lilith Power -->
+			<skill id="54035" level="10" /> <!-- Lilith Power -->
 		</skills>
 	</item>
 	<item id="91183" name="Wind Treasure Chest" type="EtcItem">
@@ -997,9 +997,9 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
-		<set name="handler" val="ItemSkills"/>
+		<set name="handler" val="ItemSkills" />
 		<skills>
-			<skill id="51125" level="1"/>
+			<skill id="51125" level="1" />
 		</skills>
 	</item>
 	<item id="91185" name="Intermediate Spirit's Blessing" type="EtcItem">
@@ -1014,7 +1014,7 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 		<skills>
-			<skill id="51126" level="1"/> <!-- Intermediate Spirit's Blessing -->
+			<skill id="51126" level="1" /> <!-- Intermediate Spirit's Blessing -->
 		</skills>
 	</item>
 	<item id="91186" name="Advanced Spirit's Blessing" type="EtcItem">
@@ -1029,7 +1029,7 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 		<skills>
-			<skill id="51127" level="1"/> <!-- Advanced Spirit's Blessing -->
+			<skill id="51127" level="1" /> <!-- Advanced Spirit's Blessing -->
 		</skills>
 	</item>
 	<item id="91187" name="Spirit's Varnish" type="EtcItem">
@@ -1063,7 +1063,7 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 		<skills>
-			<skill id="51130" level="1"/> <!-- Fire Attribute Attack Potion -->
+			<skill id="51130" level="1" /> <!-- Fire Attribute Attack Potion -->
 		</skills>
 	</item>
 	<item id="91190" name="Water Attribute Attack Potion" type="EtcItem">
@@ -1079,7 +1079,7 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 		<skills>
-			<skill id="51131" level="1"/> <!-- Water Attribute Attack Potion -->
+			<skill id="51131" level="1" /> <!-- Water Attribute Attack Potion -->
 		</skills>
 	</item>
 	<item id="91191" name="Wind Attribute Attack Potion" type="EtcItem">
@@ -1095,7 +1095,7 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 		<skills>
-			<skill id="51132" level="1"/> <!-- Wind Attribute Attack Potion -->
+			<skill id="51132" level="1" /> <!-- Wind Attribute Attack Potion -->
 		</skills>
 	</item>
 	<item id="91192" name="Earth Attribute Attack Potion" type="EtcItem">
@@ -1111,7 +1111,7 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 		<skills>
-			<skill id="51133" level="1"/> <!-- Earth Attribute Attack Potion -->
+			<skill id="51133" level="1" /> <!-- Earth Attribute Attack Potion -->
 		</skills>
 	</item>
 	<item id="91193" name="Amulet of Winds" additionalName="30-day" type="EtcItem">

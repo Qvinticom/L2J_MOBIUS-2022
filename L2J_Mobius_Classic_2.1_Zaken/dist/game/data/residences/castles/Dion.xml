@@ -3,10 +3,10 @@
 	<castle id="2"> <!-- Dion Castle -->
 		<spawns>
 			<!-- Light -->
-			<npc id="35142" castleSide="LIGHT" x="22172" y="160923" z="-2666" heading="49152"/> <!-- Chamberlain of Light -->
-			<npc id="36610" castleSide="LIGHT" x="15756" y="142848" z="-2706" heading="13605"/> <!-- Proclaimer -->
+			<npc id="35142" castleSide="LIGHT" x="22172" y="160923" z="-2666" heading="49152" /> <!-- Chamberlain of Light -->
+			<npc id="36610" castleSide="LIGHT" x="15756" y="142848" z="-2706" heading="13605" /> <!-- Proclaimer -->
 			<!-- Dark -->
-			<npc id="36654" castleSide="DARK" x="22172" y="160923" z="-2666" heading="49152"/> <!-- Chamberlain of Darkness -->
+			<npc id="36654" castleSide="DARK" x="22172" y="160923" z="-2666" heading="49152" /> <!-- Chamberlain of Darkness -->
 		</spawns>
 		<siegeGuards>
 			<guard itemId="6051" type="SWORD" stationary="true" npcId="35030" npcMaxAmount="2" /> <!-- Greater Mercenary Posting Ticket (Sword/Stationary) -->
