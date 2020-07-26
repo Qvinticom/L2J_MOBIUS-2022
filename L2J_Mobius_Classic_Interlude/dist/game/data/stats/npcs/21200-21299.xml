@@ -2738,309 +2738,258 @@
 			<height normal="36" />
 		</collision>
 	</npc>
-	<npc id="21236" level="30" type="Monster" name="Barrow Sentinel">
-		<!-- Confirmed CT2.5 -->
+	<npc id="21236" level="30" type="Monster" name="Barrow Sentinel" title="">
+		<!-- Interlude - C6 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="167" />
 			<param name="MoveAroundSocial1" value="167" />
 			<param name="MoveAroundSocial2" value="167" />
 			<param name="MaxRoarCount" value="4" />
-			<param name="SoulShot" value="100" />
-			<param name="SoulShotRate" value="10" />
-			<param name="SpiritShot" value="100" />
-			<param name="SpiritShotRate" value="5" />
-			<param name="LongRangeGuardRate" value="5" />
 			<skill name="Fury" id="4317" level="1" /> <!-- Increase Rage Might -->
 		</parameters>
 		<race>UNDEAD</race>
 		<sex>MALE</sex>
-		<equipment rhand="69" /> <!-- rhand: Bastard Sword -->
-		<acquire exp="3828" sp="209" />
+		<equipment rhand="69" lhand="0" /> <!-- Bastard Sword / ... -->
+		<acquire exp="3828" sp="208" raidPoints="0" />
 		<stats str="40" int="21" dex="30" wit="20" con="43" men="20">
 			<vitals hp="604.08419" hpRegen="3.5" mp="329.4" mpRegen="1.5" />
 			<attack physical="92.64226" magical="63.26266" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
-			<defence physical="118.46427" magical="78.8748547991048" />
-			<attribute>
-				<attack type="DARK" value="20" />
-				<defence fire="20" water="20" wind="20" earth="20" holy="-32" dark="53" />
-			</attribute>
+			<defence physical="118.46427" magical="78.8748547991048" evasion="0" shield="0" shieldRate="0" />
 			<speed>
 				<walk ground="60" />
 				<run ground="140" />
 			</speed>
 			<hitTime>300</hitTime>
 		</stats>
-		<status undying="false" canBeSown="true" />
+		<status attackable="true" undying="false" canBeSown="true" />
 		<skillList>
-			<skill id="4274" level="1" /> <!-- Blunt Weapon Weak Point -->
+			<skill id="4274" level="1" /> <!-- Blunt Attack Weak Point -->
+			<skill id="4275" level="2" /> <!-- Sacred Attack Weak Point -->
+			<skill id="4278" level="1" /> <!-- Dark Attack -->
 			<skill id="4317" level="1" /> <!-- Increase Rage Might -->
 			<skill id="4408" level="12" /> <!-- HP Increase (4x) -->
-			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
-			<skill id="4410" level="11" /> <!-- Average P. Atk. -->
-			<skill id="4411" level="11" /> <!-- Average M. Atk. -->
-			<skill id="4412" level="11" /> <!-- Average P. Def. -->
-			<skill id="4413" level="11" /> <!-- Average M. Def. -->
-			<skill id="4414" level="2" /> <!-- Standard Type -->
-			<skill id="4415" level="3" /> <!-- One-handed Sword -->
 			<skill id="4416" level="1" /> <!-- Undead -->
 		</skillList>
+		<corpseTime>7</corpseTime>
 		<exCrtEffect>false</exCrtEffect>
-		<sNpcPropHpRate>4</sNpcPropHpRate>
-		<ai aggroRange="1000" clanHelpRange="300" isAggressive="false">
+		<ai aggroRange="500" clanHelpRange="300" isAggressive="true">
 			<clanList>
 				<clan>C_DUNGEON</clan>
 			</clanList>
 		</ai>
-		<dropLists>
-			<drop>
-				<item id="57" min="546" max="1092" chance="70" /> <!-- Adena -->
-				<item id="69" min="1" max="1" chance="0.00570828011147678" /> <!-- Bastard Sword -->
-				<item id="125" min="1" max="1" chance="0.00570828011147678" /> <!-- Spinebone Sword -->
-				<item id="2021" min="1" max="1" chance="0.178566473630816" /> <!-- Spinebone Sword Blade -->
-				<item id="126" min="1" max="1" chance="0.00570828011147678" /> <!-- Artisan's Sword -->
-				<item id="128" min="1" max="1" chance="0.00570868291147053" /> <!-- Knight's Sword -->
-				<item id="1867" min="1" max="3" chance="11.787701959507" /> <!-- Animal Skin -->
-				<item id="1872" min="1" max="1" chance="23.5754450687141" /> <!-- Animal Bone -->
-				<item id="1882" min="1" max="1" chance="3.92922026993561" /> <!-- Leather -->
-				<item id="2184" min="1" max="1" chance="1.85733286663818" /> <!-- Recipe: Mithril Banded Gaiters -->
-			</drop>
-			<spoil>
-				<item id="1061" min="1" max="1" chance="78.4398" /> <!-- Greater Healing Potion -->
-				<item id="1900" min="1" max="1" chance="14.1604" /> <!-- Enchanted Necklace Chain -->
-				<item id="2153" min="1" max="1" chance="20.1284" /> <!-- Recipe: Tiger's Eye Earring -->
-			</spoil>
-		</dropLists>
 		<collision>
 			<radius normal="11" />
 			<height normal="31" />
 		</collision>
+		<dropLists>
+			<drop>
+				<item id="57" min="546" max="1092" chance="70.0000"/> <!-- Adena -->
+				<item id="69" min="1" max="1" chance="0.0044"/> <!-- Bastard Sword -->
+				<item id="125" min="1" max="1" chance="0.0044"/> <!-- Spinebone Sword -->
+				<item id="126" min="1" max="1" chance="0.0044"/> <!-- Artisan's Sword -->
+				<item id="128" min="1" max="1" chance="0.0044"/> <!-- Knight's Sword -->
+				<item id="1867" min="1" max="3" chance="11.1111"/> <!-- Animal Skin -->
+				<item id="1872" min="1" max="1" chance="20.0000"/> <!-- Animal Bone -->
+				<item id="1882" min="1" max="1" chance="3.4483"/> <!-- Leather -->
+				<item id="2021" min="1" max="1" chance="0.1787"/> <!-- Spinebone Sword Blade -->
+				<item id="2184" min="1" max="1" chance="1.9231"/> <!-- Recipe: Mithril Banded Gaiters -->
+			</drop> 
+			<spoil>
+				<item id="1061" min="1" max="2" chance="78.4398"/> <!-- Healing Potion -->
+				<item id="1900" min="1" max="1" chance="14.1604"/> <!-- Enchanted Necklace Chain -->
+				<item id="2153" min="1" max="2" chance="20.1284"/> <!-- Recipe: Tiger's Eye Earring -->
+			</spoil>
+		</dropLists>
 	</npc>
-	<npc id="21237" level="32" type="Monster" name="Barrow Monk">
-		<!-- Confirmed CT2.5 -->
+	<npc id="21237" level="32" type="Monster" name="Barrow Monk" title="">
+		<!-- Interlude - C6 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="70" />
 			<param name="MoveAroundSocial1" value="70" />
 			<param name="MoveAroundSocial2" value="70" />
-			<param name="SoulShot" value="100" />
-			<param name="SoulShotRate" value="10" />
-			<param name="SpiritShot" value="100" />
-			<param name="SpiritShotRate" value="5" />
-			<param name="LongRangeGuardRate" value="5" />
 			<skill name="Buff" id="4099" level="1" /> <!-- NPC Berserk -->
 		</parameters>
 		<race>UNDEAD</race>
 		<sex>MALE</sex>
-		<acquire exp="4443" sp="250" />
+		<equipment rhand="0" lhand="0" /> <!-- ... / ... -->
+		<acquire exp="4440" sp="248" raidPoints="0" />
 		<stats str="40" int="21" dex="30" wit="20" con="43" men="20">
 			<vitals hp="668.47132" hpRegen="4.5" mp="358.32" mpRegen="1.8" />
-			<attack physical="106.16525" magical="72.49711" random="50" critical="1" accuracy="9" attackSpeed="253" type="BLUNT" range="40" distance="80" width="120" />
-			<defence physical="125.57727" magical="83.6107570481808" />
-			<attribute>
-				<attack type="DARK" value="20" />
-				<defence fire="20" water="20" wind="20" earth="20" holy="-32" dark="53" />
-			</attribute>
+			<attack physical="106.16525" magical="72.49711" random="50" critical="1" accuracy="9" attackSpeed="253" type="FIST" range="40" distance="80" width="120" />
+			<defence physical="125.57727" magical="83.6107570481808" evasion="0" shield="0" shieldRate="0" />
 			<speed>
 				<walk ground="10" />
 				<run ground="110" />
 			</speed>
 			<hitTime>540</hitTime>
 		</stats>
-		<status undying="false" canBeSown="true" />
+		<status attackable="true" undying="false" canBeSown="true" />
 		<skillList>
 			<skill id="4099" level="1" /> <!-- NPC Berserk -->
+			<skill id="4275" level="2" /> <!-- Sacred Attack Weak Point -->
+			<skill id="4278" level="1" /> <!-- Dark Attack -->
 			<skill id="4408" level="12" /> <!-- HP Increase (4x) -->
-			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
-			<skill id="4410" level="11" /> <!-- Average P. Atk. -->
-			<skill id="4411" level="11" /> <!-- Average M. Atk. -->
-			<skill id="4412" level="11" /> <!-- Average P. Def. -->
-			<skill id="4413" level="11" /> <!-- Average M. Def. -->
 			<skill id="4414" level="3" /> <!-- Light Armor Type -->
-			<skill id="4415" level="5" /> <!-- Blunt Weapons -->
 			<skill id="4416" level="1" /> <!-- Undead -->
 		</skillList>
+		<corpseTime>7</corpseTime>
 		<exCrtEffect>false</exCrtEffect>
-		<sNpcPropHpRate>4</sNpcPropHpRate>
-		<ai aggroRange="1000" clanHelpRange="300">
+		<ai aggroRange="500" clanHelpRange="300" isAggressive="true">
 			<clanList>
 				<clan>C_DUNGEON</clan>
 			</clanList>
 		</ai>
-		<dropLists>
-			<drop>
-				<item id="57" min="626" max="1255" chance="70" /> <!-- Adena -->
-				<item id="86" min="1" max="1" chance="0.0032746079005599" /> <!-- Tomahawk -->
-				<item id="179" min="1" max="1" chance="0.0032746079005599" /> <!-- Mace of Prayer -->
-				<item id="180" min="1" max="1" chance="0.0032746079005599" /> <!-- Mace of Judgment -->
-				<item id="2022" min="1" max="1" chance="0.126370302880704" /> <!-- Mace of Judgment Head -->
-				<item id="181" min="1" max="1" chance="0.0032746079005599" /> <!-- Mace of Miracle -->
-				<item id="182" min="1" max="1" chance="0.0032746079005599" /> <!-- Doom Hammer -->
-				<item id="183" min="1" max="1" chance="0.0032746079005599" /> <!-- Mystic Staff -->
-				<item id="184" min="1" max="1" chance="0.0032746079005599" /> <!-- Conjuror's Staff -->
-				<item id="2023" min="1" max="1" chance="0.100532588587254" /> <!-- Conjuror's Staff Head -->
-				<item id="185" min="1" max="1" chance="0.00327486100056767" /> <!-- Staff of Mana -->
-				<item id="1868" min="1" max="3" chance="13.5219309201851" /> <!-- Thread -->
-				<item id="1873" min="1" max="1" chance="5.40876269445419" /> <!-- Silver Nugget -->
-				<item id="5549" min="1" max="1" chance="1.35217858158874" /> <!-- Metallic Thread -->
-				<item id="1889" min="1" max="1" chance="0.901484633125305" /> <!-- Compound Braid -->
-				<item id="2265" min="1" max="1" chance="0.139832174823761" /> <!-- Recipe: Spiked Club -->
-				<item id="6037" min="1" max="1" chance="27.0439102084694" /> <!-- Waking Scroll -->
-			</drop>
-			<spoil>
-				<item id="1933" min="1" max="1" chance="17.4667" /> <!-- Dark Stockings Fabric -->
-				<item id="2183" min="1" max="1" chance="9.7676" /> <!-- Recipe: Mithril Banded Mail -->
-				<item id="1935" min="1" max="1" chance="8.2942" /> <!-- Scale Mail Fragment -->
-			</spoil>
-		</dropLists>
 		<collision>
 			<radius normal="14" />
 			<height normal="25.3" />
 		</collision>
+		<dropLists>
+			<drop>
+				<item id="57" min="626" max="1255" chance="70.0000"/> <!-- Adena -->
+				<item id="86" min="1" max="1" chance="0.0026"/> <!-- Tomahawk -->
+				<item id="179" min="1" max="1" chance="0.0026"/> <!-- Mace of Prayer -->
+				<item id="180" min="1" max="1" chance="0.0026"/> <!-- Mace of Judgment -->
+				<item id="181" min="1" max="1" chance="0.0026"/> <!-- Mace of Miracle -->
+				<item id="182" min="1" max="1" chance="0.0026"/> <!-- Doom Hammer -->
+				<item id="183" min="1" max="1" chance="0.0026"/> <!-- Mystic Staff -->
+				<item id="184" min="1" max="1" chance="0.0026"/> <!-- Conjuror's Staff -->
+				<item id="185" min="1" max="1" chance="0.0026"/> <!-- Staff of Mana -->
+				<item id="1868" min="1" max="3" chance="12.5000"/> <!-- Thread -->
+				<item id="1873" min="1" max="1" chance="5.0000"/> <!-- Silver Nugget -->
+				<item id="1889" min="1" max="1" chance="0.7634"/> <!-- Compound Braid -->
+				<item id="2022" min="1" max="1" chance="0.1264"/> <!-- Mace of Judgment Head -->
+				<item id="2023" min="1" max="1" chance="0.1006"/> <!-- Conjuror's Staff Head -->
+				<item id="2265" min="1" max="1" chance="0.1218"/> <!-- Recipe: Spiked Club -->
+				<item id="5549" min="1" max="1" chance="1.2048"/> <!-- Metallic Thread -->
+				<item id="6037" min="1" max="1" chance="25.0000"/> <!-- Waking Scroll -->
+			</drop> 
+			<spoil>
+				<item id="1933" min="1" max="1" chance="17.4667"/> <!-- Dark Stocking Fabric -->
+				<item id="1935" min="1" max="1" chance="8.2942"/> <!-- Scale Mail Fragment -->
+				<item id="2183" min="1" max="1" chance="9.7676"/> <!-- Recipe: Mithril Banded Mail -->
+			</spoil>
+		</dropLists>
 	</npc>
-	<npc id="21238" level="35" type="Monster" name="Grave Sentinel">
-		<!-- Confirmed CT2.5 -->
+	<npc id="21238" level="35" type="Monster" name="Grave Sentinel" title="">
+		<!-- Interlude - C6 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="0" />
 			<param name="MoveAroundSocial1" value="0" />
 			<param name="MoveAroundSocial2" value="0" />
-			<param name="SoulShot" value="100" />
-			<param name="SoulShotRate" value="10" />
-			<param name="SpiritShot" value="100" />
-			<param name="SpiritShotRate" value="5" />
-			<param name="LongRangeGuardRate" value="5" />
 			<skill name="PhysicalSpecial" id="4032" level="3" /> <!-- NPC Strike -->
 		</parameters>
 		<race>FAIRY</race>
 		<sex>MALE</sex>
-		<acquire exp="5603" sp="332" />
+		<equipment rhand="0" lhand="0" /> <!-- ... / ... -->
+		<acquire exp="5600" sp="332" raidPoints="0" />
 		<stats str="40" int="21" dex="30" wit="20" con="43" men="20">
 			<vitals hp="772.73802" hpRegen="4.5" mp="402.6" mpRegen="1.8" />
-			<attack physical="129.32896" magical="88.31491" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
-			<defence physical="136.72948" magical="91.0360303625432" />
-			<attribute>
-				<attack type="DARK" value="20" />
-				<defence fire="20" water="20" wind="53" earth="20" holy="20" dark="110" />
-			</attribute>
+			<attack physical="129.32896" magical="88.31491" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="FIST" range="40" distance="80" width="120" />
+			<defence physical="136.72948" magical="91.0360303625432" evasion="0" shield="0" shieldRate="0" />
 			<speed>
 				<walk ground="60" />
 				<run ground="140" />
 			</speed>
 			<hitTime>340</hitTime>
 		</stats>
-		<status undying="false" canBeSown="true" />
+		<status attackable="true" undying="false" canBeSown="true" />
 		<skillList>
 			<skill id="4032" level="3" /> <!-- NPC Strike -->
+			<skill id="4278" level="1" /> <!-- Dark Attack -->
+			<skill id="4333" level="5" /> <!-- Resist Dark Attack -->
 			<skill id="4408" level="12" /> <!-- HP Increase (4x) -->
-			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
-			<skill id="4410" level="11" /> <!-- Average P. Atk. -->
-			<skill id="4411" level="11" /> <!-- Average M. Atk. -->
-			<skill id="4412" level="11" /> <!-- Average P. Def. -->
-			<skill id="4413" level="11" /> <!-- Average M. Def. -->
-			<skill id="4414" level="2" /> <!-- Standard Type -->
-			<skill id="4415" level="3" /> <!-- One-handed Sword -->
 			<skill id="4416" level="13" /> <!-- Fairies -->
 		</skillList>
+		<corpseTime>7</corpseTime>
 		<exCrtEffect>false</exCrtEffect>
-		<sNpcPropHpRate>4</sNpcPropHpRate>
-		<ai aggroRange="1000" clanHelpRange="300">
+		<ai aggroRange="500" clanHelpRange="300" isAggressive="true">
 			<clanList>
 				<clan>C_DUNGEON</clan>
 			</clanList>
 		</ai>
-		<dropLists>
-			<drop>
-				<item id="57" min="781" max="1559" chance="70" /> <!-- Adena -->
-				<item id="260" min="1" max="1" chance="0.0264999996870756" /> <!-- Triple-Edged Jamadhr -->
-				<item id="1874" min="1" max="1" chance="0.93677262071991" /> <!-- Oriharukon Ore -->
-				<item id="1878" min="1" max="1" chance="5.62059459811783" /> <!-- Braided Hemp -->
-				<item id="1884" min="1" max="1" chance="8.64711290224457" /> <!-- Cord -->
-				<item id="1889" min="1" max="1" chance="0.93677262071991" /> <!-- Compound Braid -->
-				<item id="5220" min="1" max="1" chance="0.562071797672272" /> <!-- Metal Hardener -->
-				<item id="2190" min="1" max="1" chance="1.00368495077133" /> <!-- Recipe: Mithril Stockings -->
-				<item id="1341" min="20" max="60" chance="23.4191921393929" /> <!-- Bone Arrow -->
-			</drop>
-			<spoil>
-				<item id="1878" min="1" max="1" chance="73.9986" /> <!-- Braided Hemp -->
-				<item id="1884" min="1" max="3" chance="56.922" /> <!-- Cord -->
-				<item id="1901" min="1" max="1" chance="25.552" /> <!-- Tiger's Eye Earring Stone -->
-			</spoil>
-		</dropLists>
 		<collision>
 			<radius normal="10" />
 			<height normal="30" />
 		</collision>
+		<dropLists>
+			<drop>
+				<item id="57" min="781" max="1559" chance="70.0000"/> <!-- Adena -->
+				<item id="260" min="1" max="1" chance="203"/> <!-- Triple-Edged Jamadhr -->
+				<item id="1341" min="20" max="60" chance="234192"/> <!-- Bone Arrow -->
+				<item id="1874" min="1" max="1" chance="9368"/> <!-- Oriharukon Ore -->
+				<item id="1878" min="1" max="1" chance="56206"/> <!-- Braided Hemp -->
+				<item id="1884" min="1" max="1" chance="86472"/> <!-- Cord -->
+				<item id="1889" min="1" max="1" chance="9368"/> <!-- Compound Braid -->
+				<item id="2190" min="1" max="1" chance="10037"/> <!-- Recipe: Mithril Stockings -->
+				<item id="5220" min="1" max="1" chance="5621"/> <!-- Metal Hardener -->
+			</drop> 
+			<spoil>
+				<item id="1878" min="1" max="2" chance="739986"/> <!-- Braided Hemp -->
+				<item id="1884" min="1" max="3" chance="569220"/> <!-- Cord -->
+				<item id="1901" min="1" max="2" chance="255520"/> <!-- Tiger's Eye Earring Stone -->
+			</spoil>
+		</dropLists>
 	</npc>
-	<npc id="21239" level="37" type="Monster" name="Grave Monk">
-		<!-- Confirmed CT2.5 -->
+	<npc id="21239" level="37" type="Monster" name="Grave Monk" title="">
+		<!-- Interlude - C6 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="110" />
 			<param name="MoveAroundSocial1" value="110" />
 			<param name="MoveAroundSocial2" value="110" />
-			<param name="SoulShot" value="100" />
-			<param name="SoulShotRate" value="10" />
-			<param name="SpiritShot" value="100" />
-			<param name="SpiritShotRate" value="5" />
-			<param name="LongRangeGuardRate" value="5" />
 			<skill name="DDMagic" id="4002" level="3" /> <!-- NPC HP Drain -->
 		</parameters>
 		<race>DEMONIC</race>
 		<sex>FEMALE</sex>
-		<acquire exp="5940" sp="365" />
+		<equipment rhand="0" lhand="0" /> <!-- ... / ... -->
+		<acquire exp="5940" sp="364" raidPoints="0" />
 		<stats str="40" int="21" dex="30" wit="20" con="43" men="20">
 			<vitals hp="847.31754" hpRegen="4.5" mp="432.72" mpRegen="1.8" />
-			<attack physical="146.82587" magical="100.26304" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
-			<defence physical="144.47758" magical="96.1948088105753" />
-			<attribute>
-				<attack type="DARK" value="20" />
-				<defence fire="20" water="20" wind="20" earth="20" holy="-13" dark="184" />
-			</attribute>
+			<attack physical="146.82587" magical="100.26304" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="FIST" range="40" distance="80" width="120" />
+			<defence physical="144.47758" magical="96.1948088105753" evasion="0" shield="0" shieldRate="0" />
 			<speed>
 				<walk ground="60" />
 				<run ground="120" />
 			</speed>
 			<hitTime>840</hitTime>
 		</stats>
-		<status undying="false" canBeSown="true" />
+		<status attackable="true" undying="false" canBeSown="true" />
 		<skillList>
 			<skill id="4002" level="3" /> <!-- NPC HP Drain -->
+			<skill id="4278" level="1" /> <!-- Dark Attack -->
+			<skill id="4333" level="5" /> <!-- Resist Dark Attack -->
 			<skill id="4408" level="12" /> <!-- HP Increase (4x) -->
-			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
-			<skill id="4410" level="11" /> <!-- Average P. Atk. -->
-			<skill id="4411" level="11" /> <!-- Average M. Atk. -->
-			<skill id="4412" level="11" /> <!-- Average P. Def. -->
-			<skill id="4413" level="11" /> <!-- Average M. Def. -->
 			<skill id="4414" level="3" /> <!-- Light Armor Type -->
-			<skill id="4415" level="3" /> <!-- One-handed Sword -->
 			<skill id="4416" level="9" /> <!-- Demons -->
 		</skillList>
+		<corpseTime>7</corpseTime>
 		<exCrtEffect>false</exCrtEffect>
-		<sNpcPropHpRate>4</sNpcPropHpRate>
-		<ai aggroRange="1000" clanHelpRange="300">
+		<ai aggroRange="500" clanHelpRange="300" isAggressive="true">
 			<clanList>
 				<clan>C_DUNGEON</clan>
 			</clanList>
 		</ai>
-		<dropLists>
-			<drop>
-				<item id="57" min="824" max="1645" chance="70" /> <!-- Adena -->
-				<item id="279" min="1" max="1" chance="0.00938995233535767" /> <!-- Reinforced Long Bow -->
-				<item id="2040" min="1" max="1" chance="0.583410068836212" /> <!-- Reinforced Long Bow Shaft -->
-				<item id="1870" min="1" max="1" chance="16.8071725545959" /> <!-- Coal -->
-				<item id="1865" min="1" max="1" chance="16.8071725545959" /> <!-- Varnish -->
-				<item id="1874" min="1" max="1" chance="1.12047562269974" /> <!-- Oriharukon Ore -->
-				<item id="2145" min="1" max="1" chance="1.2004959478569" /> <!-- Recipe: Mithril Alloy -->
-				<item id="2208" min="1" max="1" chance="1.71852628588486" /> <!-- Recipe: Ogre Power Gauntlets -->
-				<item id="6036" min="1" max="1" chance="0.560256918399811" /> <!-- Greater Magic Haste Potion -->
-			</drop>
-			<spoil>
-				<item id="1825" min="1" max="1" chance="13.9345" /> <!-- Recipe: Oriharukon -->
-				<item id="1902" min="1" max="1" chance="19.7653" /> <!-- Elven Earring Beads -->
-				<item id="2145" min="1" max="1" chance="13.9345" /> <!-- Recipe: Mithril Alloy -->
-			</spoil>
-		</dropLists>
 		<collision>
 			<radius normal="10" />
 			<height normal="43.2" />
 		</collision>
+		<dropLists>
+			<drop>
+				<item id="57" min="824" max="1645" chance="70.0000"/> <!-- Adena -->
+				<item id="279" min="1" max="1" chance="73"/> <!-- Strengthened Long Bow -->
+				<item id="1865" min="1" max="1" chance="142857"/> <!-- Varnish -->
+				<item id="1870" min="1" max="1" chance="166667"/> <!-- Coal -->
+				<item id="1874" min="1" max="1" chance="9709"/> <!-- Oriharukon Ore -->
+				<item id="2040" min="1" max="1" chance="5834"/> <!-- Strengthened Long Bow Shaft -->
+				<item id="2145" min="1" max="1" chance="9901"/> <!-- Recipe: Mithril Alloy -->
+				<item id="2208" min="1" max="1" chance="14706"/> <!-- Recipe: Ogre Power Gauntlets -->
+				<item id="6036" min="1" max="1" chance="7752"/> <!-- Greater Magic Haste Potion -->
+			</drop> 
+			<spoil>
+				<item id="1825" min="1" max="1" chance="139345"/> <!-- Recipe: Oriharukon -->
+				<item id="1902" min="1" max="1" chance="197653"/> <!-- Elven Earring Beads -->
+				<item id="2145" min="1" max="1" chance="139345"/> <!-- Recipe: Mithril Alloy -->
+			</spoil>
+		</dropLists>
 	</npc>
 	<npc id="21240" level="40" type="Monster" name="Barrow Overlord">
 		<!-- Confirmed CT2.5 -->

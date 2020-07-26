@@ -2517,48 +2517,40 @@
 			<height normal="27" grown="34" />
 		</collision>
 	</npc>
-	<npc id="21143" level="31" type="Monster" name="Catacomb Scavenger Bat">
+	<npc id="21143" level="31" type="Monster" name="Catacomb Scavenger Bat" title="">
+		<!-- Interlude - C6 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="0" />
 			<param name="MoveAroundSocial1" value="0" />
 			<param name="MoveAroundSocial2" value="0" />
-			<param name="SoulShot" value="100" />
-			<param name="SoulShotRate" value="10" />
-			<param name="SpiritShot" value="100" />
-			<param name="SpiritShotRate" value="5" />
-			<param name="LongRangeGuardRate" value="5" />
 			<skill name="DDMagic" id="4002" level="3" /> <!-- NPC HP Drain -->
 		</parameters>
 		<race>BEAST</race>
 		<sex>MALE</sex>
-		<acquire exp="6254" sp="1" />
-		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
-			<vitals hp="894" hpRegen="18" mp="343" mpRegen="1.8" />
-			<attack physical="99.21986" magical="67.7543" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
-			<defence physical="103.6899615" magical="89.26566" evasion="10" />
+		<equipment rhand="0" lhand="0" /> <!-- ... / ... -->
+		<acquire exp="4168" sp="228" raidPoints="0" />
+		<stats str="40" int="21" dex="30" wit="20" con="43" men="20">
+			<vitals hp="635.76437" hpRegen="4.5" mp="343.8" mpRegen="1.8" />
+			<attack physical="99.21986" magical="67.7543" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="FIST" range="40" distance="80" width="120" />
+			<defence physical="121.98819" magical="81.2211098160515" evasion="0" shield="0" shieldRate="0" />
 			<speed>
 				<walk ground="60" />
 				<run ground="140" />
 			</speed>
 			<hitTime>500</hitTime>
 		</stats>
-		<status undying="false" canBeSown="true" />
+		<status attackable="true" undying="false" canBeSown="true" />
 		<skillList>
 			<skill id="4002" level="3" /> <!-- NPC HP Drain -->
-			<skill id="4276" level="1" /> <!-- Weak Point against Bow/Crossbow Weapons -->
+			<skill id="4276" level="1" /> <!-- Archery Attack Weak Point -->
+			<skill id="4281" level="1" /> <!-- Wind Attack Weak Point -->
 			<skill id="4408" level="12" /> <!-- HP Increase (4x) -->
-			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
-			<skill id="4410" level="11" /> <!-- Average P. Atk. -->
-			<skill id="4411" level="11" /> <!-- Average M. Atk. -->
-			<skill id="4412" level="11" /> <!-- Average P. Def. -->
-			<skill id="4413" level="11" /> <!-- Average M. Def. -->
 			<skill id="4414" level="3" /> <!-- Light Armor Type -->
-			<skill id="4415" level="3" /> <!-- One-handed Sword -->
-			<skill id="4416" level="4" /> <!-- Animals -->
+			<skill id="4416" level="3" /> <!-- Beasts -->
 		</skillList>
+		<corpseTime>7</corpseTime>
 		<exCrtEffect>false</exCrtEffect>
-		<sNpcPropHpRate>4</sNpcPropHpRate>
-		<ai aggroRange="500" clanHelpRange="300">
+		<ai aggroRange="500" clanHelpRange="300" isAggressive="true">
 			<clanList>
 				<clan>C_DUNGEON</clan>
 			</clanList>
@@ -2616,20 +2608,20 @@
 		</collision>
 		<dropLists>
 			<drop>
-				<item id="57" min="702" max="1399" chance="70.0000"/> <!-- Adena -->
-				<item id="47" min="1" max="1" chance="0.1160"/> <!-- Helmet -->
-				<item id="628" min="1" max="1" chance="0.1657"/> <!-- Hoplon -->
-				<item id="1865" min="1" max="1" chance="14.7186"/> <!-- Varnish -->
-				<item id="1870" min="1" max="1" chance="14.7186"/> <!-- Coal -->
-				<item id="1875" min="1" max="1" chance="0.9813"/> <!-- Stone of Purity -->
-				<item id="1879" min="1" max="1" chance="2.4531"/> <!-- Cokes -->
-				<item id="2187" min="1" max="1" chance="0.6571"/> <!-- Recipe: Manticore Skin Shirt -->
-				<item id="6035" min="1" max="1" chance="1.2266"/> <!-- Magic Haste Potion -->
+				<item id="57" min="593" max="1182" chance="70.0000"/> <!-- Adena -->
+				<item id="605" min="1" max="1" chance="0.2302"/> <!-- Leather Gauntlets -->
+				<item id="1123" min="1" max="1" chance="0.2302"/> <!-- Blue Buckskin Boots -->
+				<item id="1867" min="1" max="1" chance="17.0303"/> <!-- Animal Skin -->
+				<item id="1872" min="1" max="1" chance="17.0303"/> <!-- Animal Bone -->
+				<item id="1875" min="1" max="1" chance="0.8515"/> <!-- Stone of Purity -->
+				<item id="1881" min="1" max="1" chance="1.7031"/> <!-- Coarse Bone Powder -->
+				<item id="2250" min="1" max="1" chance="3.1932"/> <!-- Recipe: Bone Arrow -->
+				<item id="6035" min="1" max="1" chance="1.0644"/> <!-- Magic Haste Potion -->
 			</drop> 
 			<spoil>
-				<item id="1901" min="1" max="1" chance="22.9413"/> <!-- Tiger's Eye Earring Stone -->
-				<item id="1938" min="1" max="1" chance="11.1661"/> <!-- Mithril Banded Mail Material -->
-				<item id="2154" min="1" max="1" chance="17.7832"/> <!-- Recipe: Elven Earring -->
+				<item id="955" min="1" max="1" chance="0.5610"/> <!-- Scroll: Enchant Weapon (Grade D) -->
+				<item id="1872" min="1" max="3" chance="93.4937"/> <!-- Animal Bone -->
+				<item id="1875" min="1" max="1" chance="9.3494"/> <!-- Stone of Purity -->
 			</spoil>
 		</dropLists>
 	</npc>
