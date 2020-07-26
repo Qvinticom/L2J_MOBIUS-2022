@@ -1819,8 +1819,8 @@
 			<abnormalResist physical="230" magical="230" />
 		</stats>
 		<skillList>
-			<skill id="4416" level="6" /><!--  Humanoids  -->
-			<skill id="5464" level="1" /><!--  Wind Attack  -->
+			<skill id="4416" level="6" /> <!-- Humanoids -->
+			<skill id="5464" level="1" /> <!-- Wind Attack -->
 		</skillList>
 		<corpseTime>15</corpseTime>
 		<exCrtEffect>true</exCrtEffect>
@@ -1837,7 +1837,7 @@
 	<npc id="29046" level="85" type="Monster" name="Scarlet van Halisha">
 		<race>DEMONIC</race>
 		<sex>MALE</sex>
-		<equipment rhand="8204" /><!--  Monster Only (Follower of Frintezza Calibur)  -->
+		<equipment rhand="8204" /> <!-- Monster Only (Follower of Frintezza Calibur) -->
 		<acquire exp="130849003" sp="31403" />
 		<stats str="164" int="188" dex="55" wit="78" con="111" men="149">
 			<vitals hp="19146585" hpRegen="248.43" mp="17588" mpRegen="109" />
@@ -1855,23 +1855,23 @@
 			<abnormalResist physical="230" magical="230" />
 		</stats>
 		<skillList>
-			<skill id="4045" level="1" /><!--  Resist Full Magic Attack  -->
-			<skill id="4071" level="4" /><!--  Resist Bow/Crossbow Weapons  -->
-			<skill id="4408" level="1" /><!--  HP Increase (1x)  -->
-			<skill id="4409" level="1" /><!--  MP Increase (1x)  -->
-			<skill id="4410" level="11" /><!--  Average P. Atk.  -->
-			<skill id="4411" level="11" /><!--  Average M. Atk.  -->
-			<skill id="4412" level="11" /><!--  Average P. Def.  -->
-			<skill id="4413" level="11" /><!--  Average M. Def.  -->
-			<skill id="4414" level="2" /><!--  Standard Type  -->
-			<skill id="4415" level="1" /><!--  Bare Hands  -->
-			<skill id="4416" level="9" /><!--  Demons  -->
-			<skill id="5078" level="1" /><!--  Frintezza Critical Power  -->
-			<skill id="4494" level="1" /><!--  Raid Boss  -->
-			<skill id="14768" level="1" /><!--  Raid Boss (Lv. 85)  -->
-			<skill id="5467" level="1" /><!--  Dark Attacks  -->
-			<skill id="5017" level="1" /><!--  Demon  -->
-			<skill id="14765" level="4" /><!--  Blood Siphon Resistance  -->
+			<skill id="4045" level="1" /> <!-- Resist Full Magic Attack -->
+			<skill id="4071" level="4" /> <!-- Resist Bow/Crossbow Weapons -->
+			<skill id="4408" level="1" /> <!-- HP Increase (1x) -->
+			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
+			<skill id="4410" level="11" /> <!-- Average P. Atk. -->
+			<skill id="4411" level="11" /> <!-- Average M. Atk. -->
+			<skill id="4412" level="11" /> <!-- Average P. Def. -->
+			<skill id="4413" level="11" /> <!-- Average M. Def. -->
+			<skill id="4414" level="2" /> <!-- Standard Type -->
+			<skill id="4415" level="1" /> <!-- Bare Hands -->
+			<skill id="4416" level="9" /> <!-- Demons -->
+			<skill id="5078" level="1" /> <!-- Frintezza Critical Power -->
+			<skill id="4494" level="1" /> <!-- Raid Boss -->
+			<skill id="14768" level="1" /> <!-- Raid Boss (Lv. 85) -->
+			<skill id="5467" level="1" /> <!-- Dark Attacks -->
+			<skill id="5017" level="1" /> <!-- Demon -->
+			<skill id="14765" level="4" /> <!-- Blood Siphon Resistance -->
 		</skillList>
 		<corpseTime>18</corpseTime>
 		<exCrtEffect>true</exCrtEffect>
@@ -2032,17 +2032,17 @@
 		</stats>
 		<status undying="false" />
 		<skillList>
-			<skill id="4045" level="1" /><!--  Resist Full Magic Attack  -->
-			<skill id="4408" level="1" /><!--  HP Increase (1x)  -->
-			<skill id="4409" level="1" /><!--  MP Increase (1x)  -->
-			<skill id="4410" level="11" /><!--  Average P. Atk.  -->
-			<skill id="4411" level="11" /><!--  Average M. Atk.  -->
-			<skill id="4412" level="11" /><!--  Average P. Def.  -->
-			<skill id="4413" level="11" /><!--  Average M. Def.  -->
-			<skill id="4414" level="2" /><!--  Standard Type  -->
-			<skill id="4415" level="1" /><!--  Bare Hands  -->
-			<skill id="4416" level="2" /><!--  Magic Creatures  -->
-			<skill id="5464" level="1" /><!--  Wind Attacks  -->
+			<skill id="4045" level="1" /> <!-- Resist Full Magic Attack -->
+			<skill id="4408" level="1" /> <!-- HP Increase (1x) -->
+			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
+			<skill id="4410" level="11" /> <!-- Average P. Atk. -->
+			<skill id="4411" level="11" /> <!-- Average M. Atk. -->
+			<skill id="4412" level="11" /> <!-- Average P. Def. -->
+			<skill id="4413" level="11" /> <!-- Average M. Def. -->
+			<skill id="4414" level="2" /> <!-- Standard Type -->
+			<skill id="4415" level="1" /> <!-- Bare Hands -->
+			<skill id="4416" level="2" /> <!-- Magic Creatures -->
+			<skill id="5464" level="1" /> <!-- Wind Attacks -->
 		</skillList>
 		<exCrtEffect>true</exCrtEffect>
 		<ai type="CORPSE" clanHelpRange="1000" isAggressive="true" aggroRange="6000">
@@ -2075,17 +2075,17 @@
 		</stats>
 		<status undying="false" />
 		<skillList>
-			<skill id="4045" level="1" /><!--  Resist Full Magic Attack  -->
-			<skill id="4408" level="1" /><!--  HP Increase (1x)  -->
-			<skill id="4409" level="1" /><!--  MP Increase (1x)  -->
-			<skill id="4410" level="11" /><!--  Average P. Atk.  -->
-			<skill id="4411" level="11" /><!--  Average M. Atk.  -->
-			<skill id="4412" level="11" /><!--  Average P. Def.  -->
-			<skill id="4413" level="11" /><!--  Average M. Def.  -->
-			<skill id="4414" level="2" /><!--  Standard Type  -->
-			<skill id="4415" level="1" /><!--  Bare Hands  -->
-			<skill id="4416" level="2" /><!--  Magic Creatures  -->
-			<skill id="5464" level="1" /><!--  Wind Attacks  -->
+			<skill id="4045" level="1" /> <!-- Resist Full Magic Attack -->
+			<skill id="4408" level="1" /> <!-- HP Increase (1x) -->
+			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
+			<skill id="4410" level="11" /> <!-- Average P. Atk. -->
+			<skill id="4411" level="11" /> <!-- Average M. Atk. -->
+			<skill id="4412" level="11" /> <!-- Average P. Def. -->
+			<skill id="4413" level="11" /> <!-- Average M. Def. -->
+			<skill id="4414" level="2" /> <!-- Standard Type -->
+			<skill id="4415" level="1" /> <!-- Bare Hands -->
+			<skill id="4416" level="2" /> <!-- Magic Creatures -->
+			<skill id="5464" level="1" /> <!-- Wind Attacks -->
 		</skillList>
 		<exCrtEffect>true</exCrtEffect>
 		<ai type="CORPSE" clanHelpRange="1000" isAggressive="true" aggroRange="6000">
@@ -2118,18 +2118,18 @@
 		</stats>
 		<status undying="false" />
 		<skillList>
-			<skill id="4045" level="1" /><!--  Resist Full Magic Attack  -->
-			<skill id="4408" level="1" /><!--  HP Increase (1x)  -->
-			<skill id="4409" level="1" /><!--  MP Increase (1x)  -->
-			<skill id="4410" level="11" /><!--  Average P. Atk.  -->
-			<skill id="4411" level="11" /><!--  Average M. Atk.  -->
-			<skill id="4412" level="11" /><!--  Average P. Def.  -->
-			<skill id="4413" level="11" /><!--  Average M. Def.  -->
-			<skill id="4414" level="3" /><!--  Light Armor Type  -->
-			<skill id="4415" level="1" /><!--  Bare Hands  -->
-			<skill id="4416" level="9" /><!--  Demons  -->
-			<skill id="5467" level="1" /><!--  Dark Attacks  -->
-			<skill id="5009" level="1" /><!--  Frintezza Ghost Fighter  -->
+			<skill id="4045" level="1" /> <!-- Resist Full Magic Attack -->
+			<skill id="4408" level="1" /> <!-- HP Increase (1x) -->
+			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
+			<skill id="4410" level="11" /> <!-- Average P. Atk. -->
+			<skill id="4411" level="11" /> <!-- Average M. Atk. -->
+			<skill id="4412" level="11" /> <!-- Average P. Def. -->
+			<skill id="4413" level="11" /> <!-- Average M. Def. -->
+			<skill id="4414" level="3" /> <!-- Light Armor Type -->
+			<skill id="4415" level="1" /> <!-- Bare Hands -->
+			<skill id="4416" level="9" /> <!-- Demons -->
+			<skill id="5467" level="1" /> <!-- Dark Attacks -->
+			<skill id="5009" level="1" /> <!-- Frintezza Ghost Fighter -->
 		</skillList>
 		<exCrtEffect>true</exCrtEffect>
 		<ai type="BALANCED" aggroRange="450" clanHelpRange="2000" isAggressive="true">
@@ -2162,18 +2162,18 @@
 		</stats>
 		<status undying="false" />
 		<skillList>
-		<skill id="4045" level="1" /><!--  Resist Full Magic Attack  -->
-			<skill id="4408" level="1" /><!--  HP Increase (1x)  -->
-			<skill id="4409" level="1" /><!--  MP Increase (1x)  -->
-			<skill id="4410" level="11" /><!--  Average P. Atk.  -->
-			<skill id="4411" level="11" /><!--  Average M. Atk.  -->
-			<skill id="4412" level="11" /><!--  Average P. Def.  -->
-			<skill id="4413" level="11" /><!--  Average M. Def.  -->
-			<skill id="4414" level="3" /><!--  Light Armor Type  -->
-			<skill id="4415" level="1" /><!--  Bare Hands  -->
-			<skill id="4416" level="9" /><!--  Demons  -->
-			<skill id="5467" level="1" /><!--  Dark Attacks  -->
-			<skill id="5010" level="1" /><!--  Frintezza Ghost Mage  -->
+		<skill id="4045" level="1" /> <!-- Resist Full Magic Attack -->
+			<skill id="4408" level="1" /> <!-- HP Increase (1x) -->
+			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
+			<skill id="4410" level="11" /> <!-- Average P. Atk. -->
+			<skill id="4411" level="11" /> <!-- Average M. Atk. -->
+			<skill id="4412" level="11" /> <!-- Average P. Def. -->
+			<skill id="4413" level="11" /> <!-- Average M. Def. -->
+			<skill id="4414" level="3" /> <!-- Light Armor Type -->
+			<skill id="4415" level="1" /> <!-- Bare Hands -->
+			<skill id="4416" level="9" /> <!-- Demons -->
+			<skill id="5467" level="1" /> <!-- Dark Attacks -->
+			<skill id="5010" level="1" /> <!-- Frintezza Ghost Mage -->
 		</skillList>
 		<exCrtEffect>true</exCrtEffect>
 		<ai type="BALANCED" aggroRange="450" clanHelpRange="2000" isAggressive="true">
@@ -2202,15 +2202,15 @@
 		</stats>
 		<status attackable="false" />
 		<skillList>
-			<skill id="4408" level="1" /><!--  HP Increase (1x)  -->
-			<skill id="4409" level="1" /><!--  MP Increase (1x)  -->
-			<skill id="4410" level="11" /><!--  Average P. Atk.  -->
-			<skill id="4411" level="11" /><!--  Average M. Atk.  -->
-			<skill id="4412" level="11" /><!--  Average P. Def.  -->
-			<skill id="4413" level="11" /><!--  Average M. Def.  -->
-			<skill id="4414" level="2" /><!--  Standard Type  -->
-			<skill id="4415" level="1" /><!--  Bare Hands  -->
-			<skill id="4416" level="2" /><!--  Magic Creatures  -->
+			<skill id="4408" level="1" /> <!-- HP Increase (1x) -->
+			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
+			<skill id="4410" level="11" /> <!-- Average P. Atk. -->
+			<skill id="4411" level="11" /> <!-- Average M. Atk. -->
+			<skill id="4412" level="11" /> <!-- Average P. Def. -->
+			<skill id="4413" level="11" /> <!-- Average M. Def. -->
+			<skill id="4414" level="2" /> <!-- Standard Type -->
+			<skill id="4415" level="1" /> <!-- Bare Hands -->
+			<skill id="4416" level="2" /> <!-- Magic Creatures -->
 		</skillList>
 		<exCrtEffect>true</exCrtEffect>
 		<ai type="BALANCED">
@@ -2239,16 +2239,16 @@
 		</stats>
 		<status attackable="false" />
 		<skillList>
-			<skill id="4408" level="1" /><!--  HP Increase (1x)  -->
-			<skill id="4409" level="1" /><!--  MP Increase (1x)  -->
-			<skill id="4410" level="11" /><!--  Average P. Atk.  -->
-			<skill id="4411" level="11" /><!--  Average M. Atk.  -->
-			<skill id="4412" level="11" /><!--  Average P. Def.  -->
-			<skill id="4413" level="11" /><!--  Average M. Def.  -->
-			<skill id="4414" level="2" /><!--  Standard Type  -->
-			<skill id="4415" level="1" /><!--  Bare Hands  -->
-			<skill id="4416" level="2" /><!--  Magic Creatures  -->
-			<skill id="5004" level="1" /><!--  Dimensional Stun  -->
+			<skill id="4408" level="1" /> <!-- HP Increase (1x) -->
+			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
+			<skill id="4410" level="11" /> <!-- Average P. Atk. -->
+			<skill id="4411" level="11" /> <!-- Average M. Atk. -->
+			<skill id="4412" level="11" /> <!-- Average P. Def. -->
+			<skill id="4413" level="11" /> <!-- Average M. Def. -->
+			<skill id="4414" level="2" /> <!-- Standard Type -->
+			<skill id="4415" level="1" /> <!-- Bare Hands -->
+			<skill id="4416" level="2" /> <!-- Magic Creatures -->
+			<skill id="5004" level="1" /> <!-- Dimensional Stun -->
 		</skillList>
 		<exCrtEffect>true</exCrtEffect>
 		<ai type="BALANCED">
@@ -2387,25 +2387,25 @@
 		<status attackable="false" />
 		<skillList>
 			<skill id="4045" level="1" />
-			<!--  Resist Full Magic Attack  -->
+			<!-- Resist Full Magic Attack -->
 			<skill id="4408" level="1" />
-			<!--  HP Increase (1x)  -->
+			<!-- HP Increase (1x) -->
 			<skill id="4409" level="1" />
-			<!--  MP Increase (1x)  -->
+			<!-- MP Increase (1x) -->
 			<skill id="4410" level="11" />
-			<!--  Average P. Atk.  -->
+			<!-- Average P. Atk. -->
 			<skill id="4411" level="11" />
-			<!--  Average M. Atk.  -->
+			<!-- Average M. Atk. -->
 			<skill id="4412" level="11" />
-			<!--  Average P. Def.  -->
+			<!-- Average P. Def. -->
 			<skill id="4413" level="11" />
-			<!--  Average M. Def.  -->
+			<!-- Average M. Def. -->
 			<skill id="4414" level="2" />
-			<!--  Standard Type  -->
+			<!-- Standard Type -->
 			<skill id="4415" level="3" />
-			<!--  One-handed Sword  -->
+			<!-- One-handed Sword -->
 			<skill id="4416" level="19" />
-			<!--  Others  -->
+			<!-- Others -->
 		</skillList>
 		<exCrtEffect>true</exCrtEffect>
 		<ai type="BALANCED" clanHelpRange="300" isAggressive="true" aggroRange="500" />

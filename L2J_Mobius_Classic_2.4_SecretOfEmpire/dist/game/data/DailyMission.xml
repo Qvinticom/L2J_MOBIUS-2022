@@ -2378,7 +2378,7 @@
 		</items>
 	</reward>
 	<reward id="1118" reward_id="812" name="Exploration of Forgotten Island" requiredCompletion="200" isOneTime="false" dailyReset="false">
-		<!-- Receive it when you kill 200 monsters in inner part of Forgotten Island.  (For characters that reached Lv. 78 or higher.) -->
+		<!-- Receive it when you kill 200 monsters in inner part of Forgotten Island. (For characters that reached Lv. 78 or higher.) -->
 		<handler name="monster">
 			<param name="ids">21737,21738,21739,21740,21741,21746,21747,21748,21749,21750,21752,21753</param>
 			<param name="minLevel">78</param>

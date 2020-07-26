@@ -4,7 +4,7 @@
 		<level id="1" atk="0" def="0" critRate="0" critDam="0" maxExp="0" />
 	</spirit>
 
-	<spirit name="Ignis - Minor Flame Spirit"  type="1" stage="1" npcId="13566" extractItem="91040" maxCharacteristics="5">
+	<spirit name="Ignis - Minor Flame Spirit" type="1" stage="1" npcId="13566" extractItem="91040" maxCharacteristics="5">
 		<level id="1" atk="10" def="10" critRate="1" critDam="1" maxExp="57713" />
 		<level id="2" atk="13" def="15" critRate="2" critDam="2" maxExp="135313" />
 		<level id="3" atk="16" def="20" critRate="3" critDam="3" maxExp="238082" />
@@ -86,7 +86,7 @@
 		<level id="1" atk="0" def="0" critRate="0" critDam="0" maxExp="0" />
 	</spirit>
 
-	<spirit name="Nebula - Minor Water Spirit"  type="2" stage="1" npcId="13570" extractItem="91039" maxCharacteristics="5">
+	<spirit name="Nebula - Minor Water Spirit" type="2" stage="1" npcId="13570" extractItem="91039" maxCharacteristics="5">
 		<level id="1" atk="10" def="10" critRate="1" critDam="1" maxExp="57713" />
 		<level id="2" atk="13" def="15" critRate="2" critDam="2" maxExp="135313" />
 		<level id="3" atk="16" def="20" critRate="3" critDam="3" maxExp="238082" />
@@ -168,7 +168,7 @@
 		<level id="1" atk="0" def="0" critRate="0" critDam="0" maxExp="0" />
 	</spirit>
 
-	<spirit name="Procella - Minor Wind Spirit"  type="3" stage="1" npcId="13574" extractItem="91041" maxCharacteristics="5">
+	<spirit name="Procella - Minor Wind Spirit" type="3" stage="1" npcId="13574" extractItem="91041" maxCharacteristics="5">
 		<level id="1" atk="10" def="10" critRate="1" critDam="1" maxExp="57713" />
 		<level id="2" atk="13" def="15" critRate="2" critDam="2" maxExp="135313" />
 		<level id="3" atk="16" def="20" critRate="3" critDam="3" maxExp="238082" />
@@ -250,7 +250,7 @@
 		<level id="1" atk="0" def="0" critRate="0" critDam="0" maxExp="0" />
 	</spirit>
 
-	<spirit name="Petram - Minor Earth Spirit"  type="4" stage="1" npcId="13578" extractItem="91042" maxCharacteristics="5">
+	<spirit name="Petram - Minor Earth Spirit" type="4" stage="1" npcId="13578" extractItem="91042" maxCharacteristics="5">
 		<level id="1" atk="10" def="10" critRate="1" critDam="1" maxExp="57713" />
 		<level id="2" atk="13" def="15" critRate="2" critDam="2" maxExp="135313" />
 		<level id="3" atk="16" def="20" critRate="3" critDam="3" maxExp="238082" />
@@ -293,7 +293,7 @@
 		<level id="8" atk="117" def="171" critRate="28" critDam="28" maxExp="38022549" />
 		<level id="9" atk="122" def="178" critRate="29" critDam="29" maxExp="45840213" />
 		<level id="10" atk="127" def="185" critRate="30" critDam="30" maxExp="54572992" />
-		<itemToEvolve id="91032" count="5" />  <!-- TODO confirm evolution requirements -->
+		<itemToEvolve id="91032" count="5" /> <!-- TODO confirm evolution requirements -->
 		<itemToEvolve id="57" count="5000000" />
 		<absorbItem id="91038" experience="9300" />
 	</spirit>
@@ -309,7 +309,7 @@
 		<level id="8" atk="175" def="249" critRate="38" critDam="38" maxExp="625108258" />
 		<level id="9" atk="181" def="257" critRate="39" critDam="39" maxExp="765274429" />
 		<level id="10" atk="187" def="265" critRate="40" critDam="40" maxExp="906984857" />
-		<itemToEvolve id="91032" count="10" />  <!-- TODO confirm evolution requirements -->
+		<itemToEvolve id="91032" count="10" /> <!-- TODO confirm evolution requirements -->
 		<itemToEvolve id="57" count="7000000" />
 		<absorbItem id="91038" experience="9300" />
 	</spirit>
