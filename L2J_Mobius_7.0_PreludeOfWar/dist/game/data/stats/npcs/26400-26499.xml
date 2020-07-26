@@ -608,7 +608,7 @@
 	<npc id="26431" level="106" type="RaidBoss" name="Avenger Alusion">
 		<race>UNDEAD</race>
 		<sex>MALE</sex>
-		<acquire exp="3332257463808" sp="2999031659" raidPoints="0" />
+		<acquire exp="3332257463808" sp="2999031659" />
 		<stats str="164" int="188" dex="55" wit="78" con="111" men="149">
 			<vitals hp="240004230.66992" hpRegen="453.2459686" mp="86023.581" mpRegen="3.3" />
 			<attack physical="306855.9531" magical="220061.8201" random="30" critical="4.75" accuracy="4.75" attackSpeed="250" type="SWORD" range="40" distance="80" width="120" />
@@ -676,7 +676,7 @@
 	<npc id="26432" level="106" type="RaidBoss" name="Avenger Graff">
 		<race>UNDEAD</race>
 		<sex>MALE</sex>
-		<acquire exp="3332257463808" sp="2999031659" raidPoints="0" />
+		<acquire exp="3332257463808" sp="2999031659" />
 		<stats str="164" int="188" dex="55" wit="78" con="111" men="149">
 			<vitals hp="240004230.66992" hpRegen="453.2459686" mp="86023.581" mpRegen="3.3" />
 			<attack physical="306855.9531" magical="220061.8201" random="30" critical="4.75" accuracy="4.75" attackSpeed="250" type="SWORD" range="40" distance="80" width="120" />
@@ -744,7 +744,7 @@
 	<npc id="26433" level="116" type="RaidBoss" name="Demon Venoma">
 		<race>DEMONIC</race>
 		<sex>MALE</sex>
-		<acquire exp="4583834285184" sp="4125450760" raidPoints="0" />
+		<acquire exp="4583834285184" sp="4125450760" />
 		<stats str="164" int="188" dex="55" wit="78" con="111" men="149">
 			<vitals hp="147352470.80583" hpRegen="543.0227337" mp="98179.66" mpRegen="3.6" />
 			<attack physical="367636.4933" magical="263650.599" random="30" critical="4.75" accuracy="4.75" attackSpeed="250" type="SWORD" range="40" distance="80" width="120" />
@@ -812,7 +812,7 @@
 	<npc id="26434" level="116" type="RaidBoss" name="Fiend Sarboth">
 		<race>DEMONIC</race>
 		<sex>MALE</sex>
-		<acquire exp="4583834285184" sp="4125450760" raidPoints="0" />
+		<acquire exp="4583834285184" sp="4125450760" />
 		<stats str="164" int="188" dex="55" wit="78" con="111" men="149">
 			<vitals hp="147352470.80583" hpRegen="543.0227337" mp="98179.66" mpRegen="3.6" />
 			<attack physical="367636.4933" magical="263650.599" random="30" critical="4.75" accuracy="4.75" attackSpeed="250" type="SWORD" range="40" distance="80" width="120" />
@@ -880,7 +880,7 @@
 	<npc id="26435" level="108" type="RaidBoss" name="Watcher Tristan">
 		<race>DRAGON</race>
 		<sex>MALE</sex>
-		<acquire exp="3557421649152" sp="3201679471" raidPoints="0" />
+		<acquire exp="3557421649152" sp="3201679471" />
 		<stats str="164" int="188" dex="55" wit="78" con="111" men="149">
 			<vitals hp="217701032.10752" hpRegen="470.5528213" mp="88542.547" mpRegen="3.3" />
 			<attack physical="318573.0144" magical="228464.7134" random="30" critical="4.75" accuracy="4.75" attackSpeed="250" type="SWORD" range="40" distance="80" width="120" />
@@ -948,7 +948,7 @@
 	<npc id="26436" level="108" type="RaidBoss" name="Watcher Setheth">
 		<race>DRAGON</race>
 		<sex>MALE</sex>
-		<acquire exp="3557421649152" sp="3201679471" raidPoints="0" />
+		<acquire exp="3557421649152" sp="3201679471" />
 		<stats str="164" int="188" dex="55" wit="78" con="111" men="149">
 			<vitals hp="217701032.10752" hpRegen="470.5528213" mp="88542.547" mpRegen="3.3" />
 			<attack physical="318573.0144" magical="228464.7134" random="30" critical="4.75" accuracy="4.75" attackSpeed="250" type="SWORD" range="40" distance="80" width="120" />
@@ -1016,7 +1016,7 @@
 	<npc id="26437" level="114" type="RaidBoss" name="Berserker Zetahl">
 		<race>HUMANOID</race>
 		<sex>MALE</sex>
-		<acquire exp="4308330575808" sp="3877497477" raidPoints="0" />
+		<acquire exp="4308330575808" sp="3877497477" />
 		<stats str="164" int="188" dex="55" wit="78" con="111" men="149">
 			<vitals hp="162454985.36911" hpRegen="524.4188804" mp="95735.306" mpRegen="3.6" />
 			<attack physical="355041.3385" magical="254617.9807" random="30" critical="4.75" accuracy="4.75" attackSpeed="250" type="SWORD" range="40" distance="80" width="120" />
@@ -1084,7 +1084,7 @@
 	<npc id="26438" level="114" type="RaidBoss" name="Berserker Tabris">
 		<race>HUMANOID</race>
 		<sex>MALE</sex>
-		<acquire exp="4308330575808" sp="3877497477" raidPoints="0" />
+		<acquire exp="4308330575808" sp="3877497477" />
 		<stats str="164" int="188" dex="55" wit="78" con="111" men="149">
 			<vitals hp="162454985.36911" hpRegen="524.4188804" mp="95735.306" mpRegen="3.6" />
 			<attack physical="355041.3385" magical="254617.9807" random="30" critical="4.75" accuracy="4.75" attackSpeed="250" type="SWORD" range="40" distance="80" width="120" />
@@ -1152,7 +1152,7 @@
 	<npc id="26439" level="112" type="RaidBoss" name="Ferocious Valac">
 		<race>DEMONIC</race>
 		<sex>MALE</sex>
-		<acquire exp="4044498296832" sp="3640048402" raidPoints="0" />
+		<acquire exp="4044498296832" sp="3640048402" />
 		<stats str="164" int="188" dex="55" wit="78" con="111" men="149">
 			<vitals hp="179115608.24732" hpRegen="506.1392772" mp="93288.519" mpRegen="3.6" />
 			<attack physical="342665.7071" magical="245742.7937" random="30" critical="4.75" accuracy="4.75" attackSpeed="250" type="SWORD" range="40" distance="80" width="120" />
@@ -1220,7 +1220,7 @@
 	<npc id="26440" level="112" type="RaidBoss" name="Arrogant Lebruum">
 		<race>DEMONIC</race>
 		<sex>MALE</sex>
-		<acquire exp="4044498296832" sp="3640048402" raidPoints="0" />
+		<acquire exp="4044498296832" sp="3640048402" />
 		<stats str="164" int="188" dex="55" wit="78" con="111" men="149">
 			<vitals hp="179115608.24732" hpRegen="506.1392772" mp="93288.519" mpRegen="3.6" />
 			<attack physical="342665.7071" magical="245742.7937" random="30" critical="4.75" accuracy="4.75" attackSpeed="250" type="SWORD" range="40" distance="80" width="120" />

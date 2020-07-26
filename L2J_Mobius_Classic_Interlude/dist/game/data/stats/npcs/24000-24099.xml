@@ -2305,7 +2305,7 @@
 	<npc id="24067" level="101" type="Monster" name="Sophie von Hellmann">
 		<race>UNDEAD</race>
 		<sex>FEMALE</sex>
-		<acquire exp="7950775691" sp="7950863" raidPoints="0" />
+		<acquire exp="7950775691" sp="7950863" />
 		<stats str="164" int="188" dex="55" wit="78" con="111" men="149">
 			<vitals hp="1825009.334685" hpRegen="411.3974312" mp="78477.226" mpRegen="3.3" />
 			<attack physical="278523.7147" magical="199743.3485" random="30" critical="4.75" accuracy="4.75" attackSpeed="250" type="SWORD" range="40" distance="80" width="120" />
@@ -2388,7 +2388,7 @@
 	<npc id="24068" level="101" type="Monster" name="Eilhalder von Hellmann">
 		<race>DEMONIC</race>
 		<sex>MALE</sex>
-		<acquire exp="235387962" sp="56493" raidPoints="0" />
+		<acquire exp="235387962" sp="56493" />
 		<stats str="40" int="21" dex="30" wit="20" con="43" men="25">
 			<vitals hp="1825009.334685" hpRegen="9.5" mp="78477.226" mpRegen="3.3" />
 			<attack physical="42356" magical="31566" random="30" critical="4.75" accuracy="4.75" attackSpeed="250" type="SWORD" range="40" distance="80" width="120" />
@@ -2450,7 +2450,6 @@
 		<race>HUMAN</race>
 		<sex>MALE</sex>
 		<equipment rhand="36218" />
-		<acquire exp="0" sp="0" raidPoints="0" />
 		<stats str="164" int="188" dex="55" wit="78" con="111" men="149">
 			<vitals hp="6759299.01969" hpRegen="419.6050136" mp="78477.226" mpRegen="3.3" />
 			<attack physical="284080.4007" magical="203728.3272" random="30" critical="4.75" accuracy="4.75" attackSpeed="250" type="SWORD" range="40" distance="80" width="120" />
@@ -2469,7 +2468,6 @@
 	<npc id="24071" level="102" type="RaidBoss" name="Kain van Halter" title="Traitor">
 		<race>HUMANOID</race>
 		<sex>MALE</sex>
-		<acquire exp="0" sp="0" raidPoints="0" />
 		<stats str="164" int="188" dex="55" wit="78" con="111" men="149">
 			<vitals hp="23657549.092575" hpRegen="419.6050136" mp="78477.226" mpRegen="3.3" />
 			<attack physical="284080.4007" magical="203728.3272" random="30" critical="4.75" accuracy="4.75" attackSpeed="250" type="SWORD" range="40" distance="80" width="120" />

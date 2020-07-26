@@ -963,7 +963,7 @@
 	<npc id="26327" level="108" type="RaidBoss" name="Etis van Etina" title="Overlord">
 		<race>HUMANOID</race>
 		<sex>MALE</sex>
-		<acquire exp="0" sp="0" raidPoints="0" />
+		<acquire exp="0" sp="0" />
 		<stats str="164" int="188" dex="55" wit="78" con="111" men="149">
 			<vitals hp="5765311.36464" hpRegen="470.5528213" mp="88540.925" mpRegen="3.3" />
 			<attack physical="318573.0144" magical="228464.7134" random="30" critical="4.75" accuracy="4.75" attackSpeed="250" type="SWORD" range="40" distance="80" width="120" />
@@ -989,7 +989,7 @@
 	<npc id="26328" level="108" type="RaidBoss" name="Etis van Etina" title="Overlord">
 		<race>HUMANOID</race>
 		<sex>MALE</sex>
-		<acquire exp="701228482560" sp="631104048" raidPoints="0" />
+		<acquire exp="701228482560" sp="631104048" />
 		<stats str="164" int="188" dex="55" wit="78" con="111" men="149">
 			<vitals hp="5765311.36464" hpRegen="470.5528213" mp="88540.925" mpRegen="3.3" />
 			<attack physical="318573.0144" magical="228464.7134" random="30" critical="4.75" accuracy="4.75" attackSpeed="250" type="SWORD" range="40" distance="80" width="120" />
@@ -1551,7 +1551,7 @@
 	</npc>
 	<npc id="26352" level="85" type="RaidBoss" name="Scarlet van Halisha">
 		<race>HUMANOID</race>
-		<acquire exp="51569936" sp="12376" raidPoints="0" />
+		<acquire exp="51569936" sp="12376" />
 		<equipment rhand="8222" />
 		<stats str="164" int="188" dex="55" wit="78" con="111" men="149">
 			<vitals hp="6338224" hpRegen="1491.22807017544" mp="373427" mpRegen="1574.07407407407" />
@@ -1689,7 +1689,7 @@
 	</npc>
 	<npc id="26359" level="85" type="RaidBoss" name="Freya" title="Ice Queen">
 		<race>HUMANOID</race>
-		<acquire exp="51569936" sp="12376" raidPoints="0" />
+		<acquire exp="51569936" sp="12376" />
 		<stats str="164" int="188" dex="55" wit="78" con="111" men="149">
 			<vitals hp="6338224" hpRegen="1491.22807017544" mp="373427" mpRegen="1574.07407407407" />
 			<speed>

@@ -2517,7 +2517,7 @@
 			<height normal="27" grown="34" />
 		</collision>
 	</npc>
-	<npc id="21143" level="31" type="Monster" name="Catacomb Scavenger Bat" title="">
+	<npc id="21143" level="31" type="Monster" name="Catacomb Scavenger Bat">
 		<!-- Interlude - C6 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="0" />
@@ -2527,8 +2527,7 @@
 		</parameters>
 		<race>BEAST</race>
 		<sex>MALE</sex>
-		<equipment rhand="0" lhand="0" /> <!-- ... / ... -->
-		<acquire exp="4168" sp="228" raidPoints="0" />
+		<acquire exp="4168" sp="228" />
 		<stats str="40" int="21" dex="30" wit="20" con="43" men="20">
 			<vitals hp="635.76437" hpRegen="4.5" mp="343.8" mpRegen="1.8" />
 			<attack physical="99.21986" magical="67.7543" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="FIST" range="40" distance="80" width="120" />
@@ -2560,7 +2559,7 @@
 			<height normal="33.5" />
 		</collision>
 	</npc>
-	<npc id="21144" level="34" type="Monster" name="Catacomb Shadow" title="">
+	<npc id="21144" level="34" type="Monster" name="Catacomb Shadow">
 		<!-- Interlude - C6 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="0" />
@@ -2572,8 +2571,7 @@
 		</parameters>
 		<race>DEMONIC</race>
 		<sex>MALE</sex>
-		<equipment rhand="0" lhand="0" /> <!-- ... / ... -->
-		<acquire exp="5016" sp="292" raidPoints="0" />
+		<acquire exp="5016" sp="292" />
 		<stats str="40" int="21" dex="30" wit="20" con="43" men="20">
 			<vitals hp="736.96177" hpRegen="4.5" mp="387.72" mpRegen="1.8" />
 			<attack physical="121.20802" magical="82.76936" random="50" critical="9" accuracy="0" attackSpeed="253" type="FIST" range="40" distance="80" width="120" />
@@ -2608,7 +2606,7 @@
 		</collision>
 		<dropLists>
 			<drop>
-				<item id="57" min="593" max="1182" chance="70.0000"/> <!-- Adena -->
+				<item id="57" min="593" max="1182" chance="70"/> <!-- Adena -->
 				<item id="605" min="1" max="1" chance="0.2302"/> <!-- Leather Gauntlets -->
 				<item id="1123" min="1" max="1" chance="0.2302"/> <!-- Blue Buckskin Boots -->
 				<item id="1867" min="1" max="1" chance="17.0303"/> <!-- Animal Skin -->
@@ -2625,7 +2623,7 @@
 			</spoil>
 		</dropLists>
 	</npc>
-	<npc id="21145" level="38" type="Monster" name="Catacomb Stakato Soldier" title="">
+	<npc id="21145" level="38" type="Monster" name="Catacomb Stakato Soldier">
 		<!-- Interlude - C6 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="90" />
@@ -2636,7 +2634,7 @@
 		<race>HUMANOID</race>
 		<sex>MALE</sex>
 		<equipment rhand="232" lhand="0" /> <!-- Dark Elven Dagger / ... -->
-		<acquire exp="6444" sp="400" raidPoints="0" />
+		<acquire exp="6444" sp="400" />
 		<stats str="40" int="21" dex="30" wit="20" con="43" men="20">
 			<vitals hp="886.09975" hpRegen="4.5" mp="447.96" mpRegen="1.8" />
 			<attack physical="156.22273" magical="106.67987" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="DAGGER" range="40" distance="80" width="120" />
@@ -2667,7 +2665,7 @@
 		</collision>
 		<dropLists>
 			<drop>
-				<item id="57" min="893" max="1781" chance="70.0000"/> <!-- Adena -->
+				<item id="57" min="893" max="1781" chance="70"/> <!-- Adena -->
 				<item id="129" min="1" max="1" chance="0.0078"/> <!-- Sword of Revolution -->
 				<item id="1832" min="1" max="1" chance="14.2857"/> <!-- Greater Antidote -->
 				<item id="1866" min="1" max="1" chance="9.0909"/> <!-- Suede -->
@@ -2685,7 +2683,7 @@
 			</spoil>
 		</dropLists>
 	</npc>
-	<npc id="21146" level="40" type="Monster" name="Grave Keeper Dark Horror" title="">
+	<npc id="21146" level="40" type="Monster" name="Grave Keeper Dark Horror">
 		<!-- Interlude - C6 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="110" />
@@ -2695,8 +2693,7 @@
 		</parameters>
 		<race>UNDEAD</race>
 		<sex>MALE</sex>
-		<equipment rhand="0" lhand="0" /> <!-- ... / ... -->
-		<acquire exp="6940" sp="448" raidPoints="0" />
+		<acquire exp="6940" sp="448" />
 		<stats str="40" int="21" dex="30" wit="20" con="43" men="20">
 			<vitals hp="966.57792" hpRegen="4.5" mp="478.8" mpRegen="1.8" />
 			<attack physical="176.36077" magical="120.43155" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="FIST" range="40" distance="80" width="120" />
@@ -2732,17 +2729,17 @@
 		</collision>
 		<dropLists>
 			<drop>
-				<item id="57" min="951" max="1898" chance="70.0000"/> <!-- Adena -->
+				<item id="57" min="951" max="1898" chance="70"/> <!-- Adena -->
 				<item id="88" min="1" max="1" chance="0.0017"/> <!-- Morning Star -->
 				<item id="90" min="1" max="1" chance="0.0017"/> <!-- Goat Head Staff -->
 				<item id="158" min="1" max="1" chance="0.0017"/> <!-- Tarbar -->
 				<item id="169" min="1" max="1" chance="0.0017"/> <!-- Skull Breaker -->
 				<item id="172" min="1" max="1" chance="0.0017"/> <!-- Heavy Bone Club -->
 				<item id="1805" min="1" max="1" chance="0.0489"/> <!-- Recipe: Soulshot: C-Grade -->
-				<item id="1867" min="1" max="1" chance="20.0000"/> <!-- Animal Skin -->
-				<item id="1872" min="1" max="1" chance="20.0000"/> <!-- Animal Bone -->
+				<item id="1867" min="1" max="1" chance="20"/> <!-- Animal Skin -->
+				<item id="1872" min="1" max="1" chance="20"/> <!-- Animal Bone -->
 				<item id="1875" min="1" max="1" chance="1.2048"/> <!-- Stone of Purity -->
-				<item id="1881" min="1" max="1" chance="2.0000"/> <!-- Coarse Bone Powder -->
+				<item id="1881" min="1" max="1" chance="2"/> <!-- Coarse Bone Powder -->
 				<item id="2031" min="1" max="1" chance="0.1187"/> <!-- Morning Star Head -->
 				<item id="2032" min="1" max="1" chance="0.1084"/> <!-- Goat Head Staff Head -->
 				<item id="2035" min="1" max="1" chance="0.1187"/> <!-- Tarbar Head -->
@@ -2759,7 +2756,7 @@
 			</spoil>
 		</dropLists>
 	</npc>
-	<npc id="21147" level="43" type="Monster" name="Catacomb Gargoyle" title="">
+	<npc id="21147" level="43" type="Monster" name="Catacomb Gargoyle">
 		<!-- Interlude - C6 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="0" />
@@ -2769,8 +2766,7 @@
 		</parameters>
 		<race>BEAST</race>
 		<sex>MALE</sex>
-		<equipment rhand="0" lhand="0" /> <!-- ... / ... -->
-		<acquire exp="8456" sp="572" raidPoints="0" />
+		<acquire exp="8456" sp="572" />
 		<stats str="40" int="21" dex="30" wit="20" con="43" men="20">
 			<vitals hp="1094.28943" hpRegen="5.5" mp="557.4" mpRegen="2.1" />
 			<attack physical="210.04832" magical="143.43577" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="FIST" range="40" distance="80" width="120" />
@@ -2803,9 +2799,9 @@
 		</collision>
 		<dropLists>
 			<drop>
-				<item id="57" min="1113" max="2260" chance="70.0000"/> <!-- Adena -->
+				<item id="57" min="1113" max="2260" chance="70"/> <!-- Adena -->
 				<item id="262" min="1" max="1" chance="0.0077"/> <!-- Scallop Jamadhr -->
-				<item id="1868" min="1" max="3" chance="25.0000"/> <!-- Thread -->
+				<item id="1868" min="1" max="3" chance="25"/> <!-- Thread -->
 				<item id="1873" min="1" max="1" chance="9.0909"/> <!-- Silver Nugget -->
 				<item id="1889" min="1" max="1" chance="1.3889"/> <!-- Compound Braid -->
 				<item id="2053" min="1" max="1" chance="0.5727"/> <!-- Scallop Jamadhr Edge -->
@@ -2820,7 +2816,7 @@
 			</spoil>
 		</dropLists>
 	</npc>
-	<npc id="21148" level="44" type="Monster" name="Catacomb Liviona" title="">
+	<npc id="21148" level="44" type="Monster" name="Catacomb Liviona">
 		<!-- Interlude - C6 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="57" />
@@ -2832,8 +2828,7 @@
 		</parameters>
 		<race>CONSTRUCT</race>
 		<sex>MALE</sex>
-		<equipment rhand="0" lhand="0" /> <!-- ... / ... -->
-		<acquire exp="8400" sp="572" raidPoints="0" />
+		<acquire exp="8400" sp="572" />
 		<stats str="40" int="21" dex="30" wit="20" con="43" men="20">
 			<vitals hp="1138.62924" hpRegen="5.5" mp="584" mpRegen="2.1" />
 			<attack physical="222.23112" magical="151.75505" random="50" critical="1" accuracy="9" attackSpeed="253" type="FIST" range="40" distance="80" width="120" />
@@ -2868,7 +2863,7 @@
 		</collision>
 		<dropLists>
 			<drop>
-				<item id="57" min="1099" max="2253" chance="70.0000"/> <!-- Adena -->
+				<item id="57" min="1099" max="2253" chance="70"/> <!-- Adena -->
 				<item id="281" min="1" max="1" chance="0.0057"/> <!-- Crystallized Ice Bow -->
 				<item id="1864" min="1" max="3" chance="9.0909"/> <!-- Stem -->
 				<item id="1869" min="1" max="1" chance="9.0909"/> <!-- Iron Ore -->
@@ -2889,7 +2884,7 @@
 			</spoil>
 		</dropLists>
 	</npc>
-	<npc id="21149" level="46" type="Monster" name="Decayed Ancient Pikeman" title="">
+	<npc id="21149" level="46" type="Monster" name="Decayed Ancient Pikeman">
 		<!-- Interlude - C6 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="0" />
@@ -2900,7 +2895,7 @@
 		<race>UNDEAD</race>
 		<sex>MALE</sex>
 		<equipment rhand="96" lhand="0" /> <!-- Scythe / ... -->
-		<acquire exp="9676" sp="684" raidPoints="0" />
+		<acquire exp="9676" sp="684" />
 		<stats str="40" int="21" dex="30" wit="20" con="43" men="20">
 			<vitals hp="1229.78678" hpRegen="5.5" mp="637.8" mpRegen="2.1" />
 			<attack physical="248.0526" magical="169.38777" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="POLE" range="40" distance="80" width="120" />
@@ -2935,11 +2930,11 @@
 		</collision>
 		<dropLists>
 			<drop>
-				<item id="57" min="1269" max="2596" chance="70.0000"/> <!-- Adena -->
+				<item id="57" min="1269" max="2596" chance="70"/> <!-- Adena -->
 				<item id="226" min="1" max="1" chance="33"/> <!-- Cursed Dagger -->
 				<item id="232" min="1" max="1" chance="33"/> <!-- Dark Elven Dagger -->
-				<item id="1868" min="1" max="1" chance="25.0000"/> <!-- Thread -->
-				<item id="1873" min="1" max="1" chance="5.0000"/> <!-- Silver Nugget -->
+				<item id="1868" min="1" max="1" chance="25"/> <!-- Thread -->
+				<item id="1873" min="1" max="1" chance="5"/> <!-- Silver Nugget -->
 				<item id="1876" min="1" max="1" chance="2.0408"/> <!-- Mithril Ore -->
 				<item id="1895" min="1" max="1" chance="3.7037"/> <!-- Metallic Fiber -->
 				<item id="2070" min="1" max="1" chance="0.2964"/> <!-- Cursed Dagger Blade -->
@@ -4004,7 +3999,7 @@
 			<height normal="42" />
 		</collision>
 	</npc>
-	<npc id="21170" level="33" type="Monster" name="Lith Medium" title="">
+	<npc id="21170" level="33" type="Monster" name="Lith Medium">
 		<!-- Interlude - C6 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="130" />
@@ -4015,7 +4010,7 @@
 		<race>DEMONIC</race>
 		<sex>MALE</sex>
 		<equipment rhand="5797" lhand="0" /> <!-- Tomb Savant A / ... -->
-		<acquire exp="5228" sp="300" raidPoints="0" />
+		<acquire exp="5228" sp="300" />
 		<stats str="40" int="21" dex="30" wit="20" con="43" men="20">
 			<vitals hp="702.20463" hpRegen="4.5" mp="372.96" mpRegen="1.8" />
 			<attack physical="113.49065" magical="77.49941" random="50" critical="1" accuracy="9" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
@@ -4060,9 +4055,9 @@
 		</collision>
 		<dropLists>
 			<drop>
-				<item id="6360" min="108" max="211" chance="70.0000"/> <!-- Blue Seal Stone -->
-				<item id="6361" min="33" max="63" chance="70.0000"/> <!-- Green Seal Stone -->
-				<item id="6362" min="22" max="41" chance="70.0000"/> <!-- Red Seal Stone -->
+				<item id="6360" min="108" max="211" chance="70"/> <!-- Blue Seal Stone -->
+				<item id="6361" min="33" max="63" chance="70"/> <!-- Green Seal Stone -->
+				<item id="6362" min="22" max="41" chance="70"/> <!-- Red Seal Stone -->
 				<item id="47" min="1" max="1" chance="0.1127"/> <!-- Helmet -->
 				<item id="628" min="1" max="1" chance="0.1611"/> <!-- Hoplon -->
 				<item id="1864" min="1" max="1" chance="28.6117"/> <!-- Stem -->
@@ -4079,7 +4074,7 @@
 			</spoil>
 		</dropLists>
 	</npc>
-	<npc id="21171" level="36" type="Monster" name="Lith Overlord" title="">
+	<npc id="21171" level="36" type="Monster" name="Lith Overlord">
 		<!-- Interlude - C6 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="120" />
@@ -4090,7 +4085,7 @@
 		<race>DEMONIC</race>
 		<sex>MALE</sex>
 		<equipment rhand="5796" lhand="0" /> <!-- Tomb Guard B / ... -->
-		<acquire exp="6676" sp="404" raidPoints="0" />
+		<acquire exp="6676" sp="404" />
 		<stats str="40" int="21" dex="30" wit="20" con="43" men="20">
 			<vitals hp="809.52639" hpRegen="4.5" mp="417.6" mpRegen="1.8" />
 			<attack physical="137.86467" magical="94.1437" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
@@ -4137,9 +4132,9 @@
 		</collision>
 		<dropLists>
 			<drop>
-				<item id="6360" min="96" max="192" chance="70.0000"/> <!-- Blue Seal Stone -->
-				<item id="6361" min="68" max="136" chance="70.0000"/> <!-- Green Seal Stone -->
-				<item id="6362" min="24" max="44" chance="70.0000"/> <!-- Red Seal Stone -->
+				<item id="6360" min="96" max="192" chance="70"/> <!-- Blue Seal Stone -->
+				<item id="6361" min="68" max="136" chance="70"/> <!-- Green Seal Stone -->
+				<item id="6362" min="24" max="44" chance="70"/> <!-- Red Seal Stone -->
 				<item id="83" min="1" max="1" chance="0.0051"/> <!-- Sword of Magic -->
 				<item id="124" min="1" max="1" chance="0.0038"/> <!-- Two-Handed Sword -->
 				<item id="127" min="1" max="1" chance="0.0038"/> <!-- Crimson Sword -->
@@ -4158,7 +4153,7 @@
 			</spoil>
 		</dropLists>
 	</npc>
-	<npc id="21172" level="39" type="Monster" name="Lith Patrolman" title="">
+	<npc id="21172" level="39" type="Monster" name="Lith Patrolman">
 		<!-- Interlude - C6 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="120" />
@@ -4169,7 +4164,7 @@
 		<race>DEMONIC</race>
 		<sex>MALE</sex>
 		<equipment rhand="5795" lhand="0" /> <!-- Tomb Guard A / ... -->
-		<acquire exp="7888" sp="500" raidPoints="0" />
+		<acquire exp="7888" sp="500" />
 		<stats str="40" int="21" dex="30" wit="20" con="43" men="20">
 			<vitals hp="925.85879" hpRegen="4.5" mp="463.32" mpRegen="1.8" />
 			<attack physical="166.06476" magical="113.4007" random="10" critical="8" accuracy="0" attackSpeed="289" type="SWORD" range="40" distance="80" width="120" />
@@ -4216,9 +4211,9 @@
 		</collision>
 		<dropLists>
 			<drop>
-				<item id="6360" min="89" max="178" chance="70.0000"/> <!-- Blue Seal Stone -->
-				<item id="6361" min="105" max="206" chance="70.0000"/> <!-- Green Seal Stone -->
-				<item id="6362" min="24" max="45" chance="70.0000"/> <!-- Red Seal Stone -->
+				<item id="6360" min="89" max="178" chance="70"/> <!-- Blue Seal Stone -->
+				<item id="6361" min="105" max="206" chance="70"/> <!-- Green Seal Stone -->
+				<item id="6362" min="24" max="45" chance="70"/> <!-- Red Seal Stone -->
 				<item id="88" min="1" max="1" chance="0.0018"/> <!-- Morning Star -->
 				<item id="90" min="1" max="1" chance="0.0018"/> <!-- Goat Head Staff -->
 				<item id="158" min="1" max="1" chance="0.0018"/> <!-- Tarbar -->
@@ -4303,7 +4298,7 @@
 			<height normal="40" />
 		</collision>
 	</npc>
-	<npc id="21174" level="45" type="Monster" name="Lith Commander" title="">
+	<npc id="21174" level="45" type="Monster" name="Lith Commander">
 		<!-- Interlude - C6 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="120" />
@@ -4314,7 +4309,7 @@
 		<race>DEMONIC</race>
 		<sex>MALE</sex>
 		<equipment rhand="5796" lhand="0" /> <!-- Tomb Guard B / ... -->
-		<acquire exp="10924" sp="760" raidPoints="0" />
+		<acquire exp="10924" sp="760" />
 		<stats str="40" int="21" dex="30" wit="20" con="43" men="20">
 			<vitals hp="1183.80594" hpRegen="5.5" mp="610.8" mpRegen="2.1" />
 			<attack physical="234.89829" magical="160.40508" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
@@ -4361,9 +4356,9 @@
 		</collision>
 		<dropLists>
 			<drop>
-				<item id="6360" min="33" max="62" chance="70.0000"/> <!-- Blue Seal Stone -->
-				<item id="6361" min="211" max="425" chance="70.0000"/> <!-- Green Seal Stone -->
-				<item id="6362" min="25" max="45" chance="70.0000"/> <!-- Red Seal Stone -->
+				<item id="6360" min="33" max="62" chance="70"/> <!-- Blue Seal Stone -->
+				<item id="6361" min="211" max="425" chance="70"/> <!-- Green Seal Stone -->
+				<item id="6362" min="25" max="45" chance="70"/> <!-- Red Seal Stone -->
 				<item id="281" min="1" max="1" chance="68"/> <!-- Crystallized Ice Bow -->
 				<item id="1868" min="1" max="3" chance="200000"/> <!-- Thread -->
 				<item id="1873" min="1" max="1" chance="76923"/> <!-- Silver Nugget -->
@@ -4381,7 +4376,7 @@
 			</spoil>
 		</dropLists>
 	</npc>
-	<npc id="21175" level="48" type="Monster" name="Lilim Butcher" title="">
+	<npc id="21175" level="48" type="Monster" name="Lilim Butcher">
 		<!-- Interlude - C6 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="75" />
@@ -4392,7 +4387,7 @@
 		<race>DEMONIC</race>
 		<sex>MALE</sex>
 		<equipment rhand="232" lhand="232" /> <!-- Dark Elven Dagger / Dark Elven Dagger -->
-		<acquire exp="12372" sp="904" raidPoints="0" />
+		<acquire exp="12372" sp="904" />
 		<stats str="40" int="21" dex="30" wit="20" con="43" men="20">
 			<vitals hp="1324.01623" hpRegen="5.5" mp="692.4" mpRegen="2.1" />
 			<attack physical="275.82705" magical="188.35412" random="10" critical="8" accuracy="0" attackSpeed="289" type="DAGGER" range="40" distance="80" width="120" />
@@ -4439,8 +4434,8 @@
 		</collision>
 		<dropLists>
 			<drop>
-				<item id="6361" min="268" max="532" chance="70.0000"/> <!-- Green Seal Stone -->
-				<item id="6362" min="25" max="45" chance="70.0000"/> <!-- Red Seal Stone -->
+				<item id="6361" min="268" max="532" chance="70"/> <!-- Green Seal Stone -->
+				<item id="6362" min="25" max="45" chance="70"/> <!-- Red Seal Stone -->
 				<item id="227" min="1" max="1" chance="0.0029"/> <!-- Stiletto -->
 				<item id="242" min="1" max="1" chance="0.0029"/> <!-- Soulfire Dirk -->
 				<item id="951" min="1" max="1" chance="0.0423"/> <!-- Scroll: Enchant Weapon (Grade C) -->
@@ -4451,7 +4446,7 @@
 				<item id="2084" min="1" max="1" chance="0.2740"/> <!-- Soulfire Dirk Blade -->
 				<item id="4040" min="1" max="1" chance="0.5714"/> <!-- Mold Lubricant -->
 				<item id="4041" min="1" max="1" chance="0.2114"/> <!-- Mold Hardener -->
-				<item id="6037" min="1" max="3" chance="25.0000"/> <!-- Waking Scroll -->
+				<item id="6037" min="1" max="3" chance="25"/> <!-- Waking Scroll -->
 			</drop> 
 			<spoil>
 				<item id="440" min="1" max="1" chance="0.1053"/> <!-- Robe of Seal -->
@@ -4460,7 +4455,7 @@
 			</spoil>
 		</dropLists>
 	</npc>
-	<npc id="21176" level="51" type="Monster" name="Lilim Magus" title="">
+	<npc id="21176" level="51" type="Monster" name="Lilim Magus">
 		<!-- Interlude - C6 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="110" />
@@ -4474,8 +4469,7 @@
 		</parameters>
 		<race>DEMONIC</race>
 		<sex>FEMALE</sex>
-		<equipment rhand="0" lhand="0" /> <!-- ... / ... -->
-		<acquire exp="12492" sp="952" raidPoints="0" />
+		<acquire exp="12492" sp="952" />
 		<stats str="40" int="21" dex="30" wit="20" con="43" men="20">
 			<vitals hp="1470.41596" hpRegen="6.5" mp="775.8" mpRegen="2.4" />
 			<attack physical="321.13207" magical="219.29157" random="50" critical="1" accuracy="9" attackSpeed="253" type="FIST" range="40" distance="80" width="120" />
@@ -4523,11 +4517,11 @@
 		</collision>
 		<dropLists>
 			<drop>
-				<item id="6360" min="133" max="267" chance="70.0000"/> <!-- Blue Seal Stone -->
-				<item id="6361" min="219" max="437" chance="70.0000"/> <!-- Green Seal Stone -->
-				<item id="6362" min="11" max="22" chance="70.0000"/> <!-- Red Seal Stone -->
+				<item id="6360" min="133" max="267" chance="70"/> <!-- Blue Seal Stone -->
+				<item id="6361" min="219" max="437" chance="70"/> <!-- Green Seal Stone -->
+				<item id="6362" min="11" max="22" chance="70"/> <!-- Red Seal Stone -->
 				<item id="326" min="1" max="1" chance="0.0037"/> <!-- Heathen's Book -->
-				<item id="1864" min="4" max="12" chance="5.0000"/> <!-- Stem -->
+				<item id="1864" min="4" max="12" chance="5"/> <!-- Stem -->
 				<item id="1865" min="2" max="6" chance="3.8462"/> <!-- Varnish -->
 				<item id="1866" min="3" max="9" chance="2.3256"/> <!-- Suede -->
 				<item id="1868" min="1" max="3" chance="14.2857"/> <!-- Thread -->
@@ -5500,7 +5494,7 @@
 			<height normal="40" />
 		</collision>
 	</npc>
-	<npc id="21191" level="33" type="Monster" name="Gigant Cleric" title="">
+	<npc id="21191" level="33" type="Monster" name="Gigant Cleric">
 		<!-- Interlude - C6 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="98" />
@@ -5511,7 +5505,7 @@
 		<race>DIVINE</race>
 		<sex>MALE</sex>
 		<equipment rhand="5793" lhand="0" /> <!-- Tomb Savant A / ... -->
-		<acquire exp="5228" sp="300" raidPoints="0" />
+		<acquire exp="5228" sp="300" />
 		<stats str="40" int="21" dex="30" wit="20" con="43" men="20">
 			<vitals hp="702.20463" hpRegen="4.5" mp="372.96" mpRegen="1.8" />
 			<attack physical="113.49065" magical="77.49941" random="50" critical="1" accuracy="9" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
@@ -5555,9 +5549,9 @@
 		</collision>
 		<dropLists>
 			<drop>
-				<item id="6360" min="108" max="211" chance="70.0000"/> <!-- Blue Seal Stone -->
-				<item id="6361" min="33" max="63" chance="70.0000"/> <!-- Green Seal Stone -->
-				<item id="6362" min="22" max="41" chance="70.0000"/> <!-- Red Seal Stone -->
+				<item id="6360" min="108" max="211" chance="70"/> <!-- Blue Seal Stone -->
+				<item id="6361" min="33" max="63" chance="70"/> <!-- Green Seal Stone -->
+				<item id="6362" min="22" max="41" chance="70"/> <!-- Red Seal Stone -->
 				<item id="47" min="1" max="1" chance="0.1127"/> <!-- Helmet -->
 				<item id="628" min="1" max="1" chance="0.1611"/> <!-- Hoplon -->
 				<item id="1864" min="1" max="3" chance="17.1670"/> <!-- Stem -->
@@ -5573,7 +5567,7 @@
 			</spoil>
 		</dropLists>
 	</npc>
-	<npc id="21192" level="36" type="Monster" name="Gigant Officer" title="">
+	<npc id="21192" level="36" type="Monster" name="Gigant Officer">
 		<!-- Interlude - C6 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="85" />
@@ -5584,7 +5578,7 @@
 		<race>DIVINE</race>
 		<sex>MALE</sex>
 		<equipment rhand="5792" lhand="0" /> <!-- Tomb Guard B / ... -->
-		<acquire exp="6676" sp="404" raidPoints="0" />
+		<acquire exp="6676" sp="404" />
 		<stats str="40" int="21" dex="30" wit="20" con="43" men="20">
 			<vitals hp="809.52639" hpRegen="4.5" mp="417.6" mpRegen="1.8" />
 			<attack physical="137.86467" magical="94.1437" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
@@ -5630,9 +5624,9 @@
 		</collision>
 		<dropLists>
 			<drop>
-				<item id="6360" min="96" max="192" chance="70.0000"/> <!-- Blue Seal Stone -->
-				<item id="6361" min="68" max="136" chance="70.0000"/> <!-- Green Seal Stone -->
-				<item id="6362" min="24" max="44" chance="70.0000"/> <!-- Red Seal Stone -->
+				<item id="6360" min="96" max="192" chance="70"/> <!-- Blue Seal Stone -->
+				<item id="6361" min="68" max="136" chance="70"/> <!-- Green Seal Stone -->
+				<item id="6362" min="24" max="44" chance="70"/> <!-- Red Seal Stone -->
 				<item id="83" min="1" max="1" chance="0.0051"/> <!-- Sword of Magic -->
 				<item id="124" min="1" max="1" chance="0.0038"/> <!-- Two-Handed Sword -->
 				<item id="127" min="1" max="1" chance="0.0038"/> <!-- Crimson Sword -->
@@ -5652,7 +5646,7 @@
 			</spoil>
 		</dropLists>
 	</npc>
-	<npc id="21193" level="39" type="Monster" name="Gigant Raider" title="">
+	<npc id="21193" level="39" type="Monster" name="Gigant Raider">
 		<!-- Interlude - C6 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="85" />
@@ -5663,7 +5657,7 @@
 		<race>DIVINE</race>
 		<sex>MALE</sex>
 		<equipment rhand="5791" lhand="0" /> <!-- Tomb Guard A / ... -->
-		<acquire exp="7888" sp="500" raidPoints="0" />
+		<acquire exp="7888" sp="500" />
 		<stats str="40" int="21" dex="30" wit="20" con="43" men="20">
 			<vitals hp="925.85879" hpRegen="4.5" mp="463.32" mpRegen="1.8" />
 			<attack physical="166.06476" magical="113.4007" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
@@ -5709,9 +5703,9 @@
 		</collision>
 		<dropLists>
 			<drop>
-				<item id="6360" min="89" max="178" chance="70.0000"/> <!-- Blue Seal Stone -->
-				<item id="6361" min="105" max="206" chance="70.0000"/> <!-- Green Seal Stone -->
-				<item id="6362" min="24" max="45" chance="70.0000"/> <!-- Red Seal Stone -->
+				<item id="6360" min="89" max="178" chance="70"/> <!-- Blue Seal Stone -->
+				<item id="6361" min="105" max="206" chance="70"/> <!-- Green Seal Stone -->
+				<item id="6362" min="24" max="45" chance="70"/> <!-- Red Seal Stone -->
 				<item id="88" min="1" max="1" chance="0.0018"/> <!-- Morning Star -->
 				<item id="90" min="1" max="1" chance="0.0018"/> <!-- Goat Head Staff -->
 				<item id="158" min="1" max="1" chance="0.0018"/> <!-- Tarbar -->
@@ -5798,7 +5792,7 @@
 			<height normal="40" />
 		</collision>
 	</npc>
-	<npc id="21195" level="45" type="Monster" name="Gigant Commander" title="">
+	<npc id="21195" level="45" type="Monster" name="Gigant Commander">
 		<!-- Interlude - C6 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="85" />
@@ -5809,7 +5803,7 @@
 		<race>DIVINE</race>
 		<sex>MALE</sex>
 		<equipment rhand="5792" lhand="0" /> <!-- Tomb Guard B / ... -->
-		<acquire exp="10924" sp="760" raidPoints="0" />
+		<acquire exp="10924" sp="760" />
 		<stats str="40" int="21" dex="30" wit="20" con="43" men="20">
 			<vitals hp="1183.80594" hpRegen="5.5" mp="610.8" mpRegen="2.1" />
 			<attack physical="234.89829" magical="160.40508" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
@@ -5855,9 +5849,9 @@
 		</collision>
 		<dropLists>
 			<drop>
-				<item id="6360" min="33" max="62" chance="70.0000"/> <!-- Blue Seal Stone -->
-				<item id="6361" min="211" max="425" chance="70.0000"/> <!-- Green Seal Stone -->
-				<item id="6362" min="25" max="45" chance="70.0000"/> <!-- Red Seal Stone -->
+				<item id="6360" min="33" max="62" chance="70"/> <!-- Blue Seal Stone -->
+				<item id="6361" min="211" max="425" chance="70"/> <!-- Green Seal Stone -->
+				<item id="6362" min="25" max="45" chance="70"/> <!-- Red Seal Stone -->
 				<item id="281" min="1" max="1" chance="68"/> <!-- Crystallized Ice Bow -->
 				<item id="1868" min="1" max="3" chance="200000"/> <!-- Thread -->
 				<item id="1873" min="1" max="1" chance="76923"/> <!-- Silver Nugget -->
@@ -5875,7 +5869,7 @@
 			</spoil>
 		</dropLists>
 	</npc>
-	<npc id="21196" level="48" type="Monster" name="Nephilim Sentinel" title="">
+	<npc id="21196" level="48" type="Monster" name="Nephilim Sentinel">
 		<!-- Interlude - C6 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="71" />
@@ -5885,8 +5879,7 @@
 		</parameters>
 		<race>DIVINE</race>
 		<sex>MALE</sex>
-		<equipment rhand="0" lhand="0" /> <!-- ... / ... -->
-		<acquire exp="12372" sp="904" raidPoints="0" />
+		<acquire exp="12372" sp="904" />
 		<stats str="40" int="21" dex="30" wit="20" con="43" men="20">
 			<vitals hp="1324.01623" hpRegen="5.5" mp="692.4" mpRegen="2.1" />
 			<attack physical="275.82705" magical="188.35412" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="FIST" range="40" distance="80" width="120" />
@@ -5932,13 +5925,13 @@
 		</collision>
 		<dropLists>
 			<drop>
-				<item id="6361" min="268" max="532" chance="70.0000"/> <!-- Green Seal Stone -->
-				<item id="6362" min="25" max="45" chance="70.0000"/> <!-- Red Seal Stone -->
+				<item id="6361" min="268" max="532" chance="70"/> <!-- Green Seal Stone -->
+				<item id="6362" min="25" max="45" chance="70"/> <!-- Red Seal Stone -->
 				<item id="227" min="1" max="1" chance="0.0029"/> <!-- Stiletto -->
 				<item id="242" min="1" max="1" chance="0.0029"/> <!-- Soulfire Dirk -->
 				<item id="951" min="1" max="1" chance="0.0500"/> <!-- Scroll: Enchant Weapon (Grade C) -->
 				<item id="1866" min="1" max="1" chance="16.6667"/> <!-- Suede -->
-				<item id="1871" min="1" max="1" chance="25.0000"/> <!-- Charcoal -->
+				<item id="1871" min="1" max="1" chance="25"/> <!-- Charcoal -->
 				<item id="1877" min="1" max="1" chance="1.3889"/> <!-- Adamantite Nugget -->
 				<item id="2083" min="1" max="1" chance="0.2740"/> <!-- Stiletto Edge -->
 				<item id="2084" min="1" max="1" chance="0.2740"/> <!-- Soulfire Dirk Blade -->
@@ -5952,7 +5945,7 @@
 			</spoil>
 		</dropLists>
 	</npc>
-	<npc id="21197" level="51" type="Monster" name="Nephilim Priest" title="">
+	<npc id="21197" level="51" type="Monster" name="Nephilim Priest">
 		<!-- Interlude - C6 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="0" />
@@ -5966,8 +5959,7 @@
 		</parameters>
 		<race>DIVINE</race>
 		<sex>MALE</sex>
-		<equipment rhand="0" lhand="0" /> <!-- ... / ... -->
-		<acquire exp="13564" sp="1032" raidPoints="0" />
+		<acquire exp="13564" sp="1032" />
 		<stats str="40" int="21" dex="30" wit="20" con="43" men="20">
 			<vitals hp="1470.41596" hpRegen="6.5" mp="775.8" mpRegen="2.4" />
 			<attack physical="321.13207" magical="219.29157" random="50" critical="1" accuracy="9" attackSpeed="253" type="FIST" range="40" distance="80" width="120" />
@@ -6015,13 +6007,13 @@
 		</collision>
 		<dropLists>
 			<drop>
-				<item id="6360" min="145" max="291" chance="70.0000"/> <!-- Blue Seal Stone -->
-				<item id="6361" min="238" max="476" chance="70.0000"/> <!-- Green Seal Stone -->
-				<item id="6362" min="12" max="24" chance="70.0000"/> <!-- Red Seal Stone -->
+				<item id="6360" min="145" max="291" chance="70"/> <!-- Blue Seal Stone -->
+				<item id="6361" min="238" max="476" chance="70"/> <!-- Green Seal Stone -->
+				<item id="6362" min="12" max="24" chance="70"/> <!-- Red Seal Stone -->
 				<item id="326" min="1" max="1" chance="0.0040"/> <!-- Heathen's Book -->
 				<item id="1867" min="1" max="3" chance="11.1111"/> <!-- Animal Skin -->
 				<item id="1869" min="2" max="6" chance="6.2500"/> <!-- Iron Ore -->
-				<item id="1870" min="2" max="6" chance="5.0000"/> <!-- Coal -->
+				<item id="1870" min="2" max="6" chance="5"/> <!-- Coal -->
 				<item id="1871" min="3" max="9" chance="4.3478"/> <!-- Charcoal -->
 				<item id="1872" min="1" max="21" chance="2.3810"/> <!-- Animal Bone -->
 				<item id="2110" min="1" max="1" chance="0.4811"/> <!-- Heathen's Book Page -->

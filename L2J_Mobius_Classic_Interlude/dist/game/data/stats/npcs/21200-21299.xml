@@ -1103,7 +1103,7 @@
 			<height normal="31" />
 		</collision>
 	</npc>
-	<npc id="21213" level="32" type="Monster" name="Hallowed Monk" title="">
+	<npc id="21213" level="32" type="Monster" name="Hallowed Monk">
 		<!-- Interlude - C6 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="70" />
@@ -1113,8 +1113,7 @@
 		</parameters>
 		<race>UNDEAD</race>
 		<sex>MALE</sex>
-		<equipment rhand="0" lhand="0" /> <!-- ... / ... -->
-		<acquire exp="4440" sp="248" raidPoints="0" />
+		<acquire exp="4440" sp="248" />
 		<stats str="40" int="21" dex="30" wit="20" con="43" men="20">
 			<vitals hp="668.47132" hpRegen="4.5" mp="358.32" mpRegen="1.8" />
 			<attack physical="106.16525" magical="72.49711" random="50" critical="1" accuracy="9" attackSpeed="253" type="FIST" range="40" distance="80" width="120" />
@@ -1148,11 +1147,11 @@
 		</collision>
 		<dropLists>
 			<drop>
-				<item id="57" min="626" max="1255" chance="70.0000"/> <!-- Adena -->
+				<item id="57" min="626" max="1255" chance="70"/> <!-- Adena -->
 				<item id="275" min="1" max="1" chance="0.0084"/> <!-- Long Bow -->
 				<item id="276" min="1" max="1" chance="0.0084"/> <!-- Elven Bow -->
 				<item id="1061" min="1" max="1" chance="9.0909"/> <!-- Healing Potion -->
-				<item id="1864" min="3" max="9" chance="5.0000"/> <!-- Stem -->
+				<item id="1864" min="3" max="9" chance="5"/> <!-- Stem -->
 				<item id="1869" min="1" max="1" chance="14.2857"/> <!-- Iron Ore -->
 				<item id="1878" min="1" max="1" chance="5.8824"/> <!-- Braided Hemp -->
 				<item id="1884" min="1" max="1" chance="8.3333"/> <!-- Cord -->
@@ -1164,7 +1163,7 @@
 			</spoil>
 		</dropLists>
 	</npc>
-	<npc id="21214" level="35" type="Monster" name="Vault Sentinel" title="">
+	<npc id="21214" level="35" type="Monster" name="Vault Sentinel">
 		<!-- Interlude - C6 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="0" />
@@ -1174,8 +1173,7 @@
 		</parameters>
 		<race>FAIRY</race>
 		<sex>MALE</sex>
-		<equipment rhand="0" lhand="0" /> <!-- ... / ... -->
-		<acquire exp="5600" sp="332" raidPoints="0" />
+		<acquire exp="5600" sp="332" />
 		<stats str="40" int="21" dex="30" wit="20" con="43" men="20">
 			<vitals hp="772.73802" hpRegen="4.5" mp="402.6" mpRegen="1.8" />
 			<attack physical="129.32896" magical="88.31491" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="FIST" range="40" distance="80" width="120" />
@@ -1207,7 +1205,7 @@
 		</collision>
 		<dropLists>
 			<drop>
-				<item id="57" min="781" max="1559" chance="70.0000"/> <!-- Adena -->
+				<item id="57" min="781" max="1559" chance="70"/> <!-- Adena -->
 				<item id="223" min="1" max="1" chance="0.0041"/> <!-- Kukuri -->
 				<item id="238" min="1" max="1" chance="0.0041"/> <!-- Dagger of Mana -->
 				<item id="239" min="1" max="1" chance="0.0041"/> <!-- Mystic Knife -->
@@ -1226,7 +1224,7 @@
 			</spoil>
 		</dropLists>
 	</npc>
-	<npc id="21215" level="37" type="Monster" name="Vault Monk" title="">
+	<npc id="21215" level="37" type="Monster" name="Vault Monk">
 		<!-- Interlude - C6 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="110" />
@@ -1236,8 +1234,7 @@
 		</parameters>
 		<race>DEMONIC</race>
 		<sex>FEMALE</sex>
-		<equipment rhand="0" lhand="0" /> <!-- ... / ... -->
-		<acquire exp="5940" sp="364" raidPoints="0" />
+		<acquire exp="5940" sp="364" />
 		<stats str="40" int="21" dex="30" wit="20" con="43" men="20">
 			<vitals hp="847.31754" hpRegen="4.5" mp="432.72" mpRegen="1.8" />
 			<attack physical="146.82587" magical="100.26304" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="FIST" range="40" distance="80" width="120" />
@@ -1270,10 +1267,10 @@
 		</collision>
 		<dropLists>
 			<drop>
-				<item id="57" min="824" max="1645" chance="70.0000"/> <!-- Adena -->
+				<item id="57" min="824" max="1645" chance="70"/> <!-- Adena -->
 				<item id="318" min="1" max="1" chance="0.0073"/> <!-- Crucifix of Blood -->
 				<item id="1825" min="1" max="1" chance="1.0417"/> <!-- Recipe: Oriharukon -->
-				<item id="1866" min="1" max="1" chance="10.0000"/> <!-- Suede -->
+				<item id="1866" min="1" max="1" chance="10"/> <!-- Suede -->
 				<item id="1871" min="1" max="1" chance="16.6667"/> <!-- Charcoal -->
 				<item id="1885" min="1" max="1" chance="1.4286"/> <!-- High Grade Suede -->
 				<item id="2042" min="1" max="1" chance="0.4659"/> <!-- Crucifix of Blood Piece -->
@@ -1345,7 +1342,7 @@
 			<height normal="30.5" />
 		</collision>
 	</npc>
-	<npc id="21217" level="42" type="Monster" name="Hallowed Priest" title="">
+	<npc id="21217" level="42" type="Monster" name="Hallowed Priest">
 		<!-- Interlude - C6 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="0" />
@@ -1355,8 +1352,7 @@
 		</parameters>
 		<race>DEMONIC</race>
 		<sex>FEMALE</sex>
-		<equipment rhand="0" lhand="0" /> <!-- ... / ... -->
-		<acquire exp="7652" sp="508" raidPoints="0" />
+		<acquire exp="7652" sp="508" />
 		<stats str="40" int="21" dex="30" wit="20" con="43" men="20">
 			<vitals hp="1050.81652" hpRegen="5.5" mp="531.0" mpRegen="2.1" />
 			<attack physical="198.34591" magical="135.44454" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="FIST" range="40" distance="80" width="120" />
@@ -1389,7 +1385,7 @@
 		</collision>
 		<dropLists>
 			<drop>
-				<item id="57" min="1020" max="2061" chance="70.0000"/> <!-- Adena -->
+				<item id="57" min="1020" max="2061" chance="70"/> <!-- Adena -->
 				<item id="396" min="1" max="1" chance="293"/> <!-- Salamander Skin Mail -->
 				<item id="1868" min="1" max="3" chance="142857"/> <!-- Thread -->
 				<item id="1873" min="1" max="1" chance="62500"/> <!-- Silver Nugget -->
@@ -1406,7 +1402,7 @@
 			</spoil>
 		</dropLists>
 	</npc>
-	<npc id="21218" level="45" type="Monster" name="Vault Overlord" title="">
+	<npc id="21218" level="45" type="Monster" name="Vault Overlord">
 		<!-- Interlude - C6 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="80" />
@@ -1417,7 +1413,7 @@
 		<race>UNDEAD</race>
 		<sex>MALE</sex>
 		<equipment rhand="297" lhand="0" /> <!-- Glaive / ... -->
-		<acquire exp="9260" sp="644" raidPoints="0" />
+		<acquire exp="9260" sp="644" />
 		<stats str="40" int="21" dex="30" wit="20" con="43" men="20">
 			<vitals hp="1183.80594" hpRegen="5.5" mp="610.8" mpRegen="2.1" />
 			<attack physical="234.89829" magical="160.40508" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="POLE" range="40" distance="80" width="120" />
@@ -1453,10 +1449,10 @@
 		</collision>
 		<dropLists>
 			<drop>
-				<item id="57" min="1220" max="2478" chance="70.0000"/> <!-- Adena -->
+				<item id="57" min="1220" max="2478" chance="70"/> <!-- Adena -->
 				<item id="354" min="1" max="1" chance="0.0142"/> <!-- Chain Mail Shirt -->
 				<item id="381" min="1" max="1" chance="0.0227"/> <!-- Chain Gaiters -->
-				<item id="1864" min="1" max="1" chance="25.0000"/> <!-- Stem -->
+				<item id="1864" min="1" max="1" chance="25"/> <!-- Stem -->
 				<item id="1869" min="1" max="1" chance="12.5000"/> <!-- Iron Ore -->
 				<item id="1880" min="1" max="1" chance="1.6949"/> <!-- Steel -->
 				<item id="1959" min="1" max="1" chance="0.9622"/> <!-- Chain Mail Shirt Material -->
@@ -1475,7 +1471,7 @@
 			</spoil>
 		</dropLists>
 	</npc>
-	<npc id="21219" level="47" type="Monster" name="Vault Priest" title="">
+	<npc id="21219" level="47" type="Monster" name="Vault Priest">
 		<!-- Interlude - C6 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="60" />
@@ -1485,8 +1481,7 @@
 		</parameters>
 		<race>DEMONIC</race>
 		<sex>FEMALE</sex>
-		<equipment rhand="0" lhand="0" /> <!-- ... / ... -->
-		<acquire exp="9584" sp="684" raidPoints="0" />
+		<acquire exp="9584" sp="684" />
 		<stats str="40" int="21" dex="30" wit="20" con="43" men="20">
 			<vitals hp="1276.53628" hpRegen="5.5" mp="665.0" mpRegen="2.1" />
 			<attack physical="261.69549" magical="178.7041" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="FIST" range="40" distance="80" width="120" />
@@ -1519,11 +1514,11 @@
 		</collision>
 		<dropLists>
 			<drop>
-				<item id="57" min="1258" max="2567" chance="70.0000"/> <!-- Adena -->
+				<item id="57" min="1258" max="2567" chance="70"/> <!-- Adena -->
 				<item id="440" min="1" max="1" chance="0.0196"/> <!-- Robe of Seal -->
 				<item id="951" min="1" max="1" chance="0.0186"/> <!-- Scroll: Enchant Weapon (Grade C) -->
 				<item id="1866" min="1" max="1" chance="12.5000"/> <!-- Suede -->
-				<item id="1871" min="1" max="1" chance="20.0000"/> <!-- Charcoal -->
+				<item id="1871" min="1" max="1" chance="20"/> <!-- Charcoal -->
 				<item id="1877" min="1" max="1" chance="0.8929"/> <!-- Adamantite Nugget -->
 				<item id="1970" min="1" max="1" chance="1.5466"/> <!-- Robe of Seal Fabric -->
 				<item id="4040" min="1" max="1" chance="0.2237"/> <!-- Mold Lubricant -->
@@ -2705,7 +2700,7 @@
 			<height normal="36" />
 		</collision>
 	</npc>
-	<npc id="21236" level="30" type="Monster" name="Barrow Sentinel" title="">
+	<npc id="21236" level="30" type="Monster" name="Barrow Sentinel">
 		<!-- Interlude - C6 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="167" />
@@ -2717,7 +2712,7 @@
 		<race>UNDEAD</race>
 		<sex>MALE</sex>
 		<equipment rhand="69" lhand="0" /> <!-- Bastard Sword / ... -->
-		<acquire exp="3828" sp="208" raidPoints="0" />
+		<acquire exp="3828" sp="208" />
 		<stats str="40" int="21" dex="30" wit="20" con="43" men="20">
 			<vitals hp="604.08419" hpRegen="3.5" mp="329.4" mpRegen="1.5" />
 			<attack physical="92.64226" magical="63.26266" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
@@ -2750,13 +2745,13 @@
 		</collision>
 		<dropLists>
 			<drop>
-				<item id="57" min="546" max="1092" chance="70.0000"/> <!-- Adena -->
+				<item id="57" min="546" max="1092" chance="70"/> <!-- Adena -->
 				<item id="69" min="1" max="1" chance="0.0044"/> <!-- Bastard Sword -->
 				<item id="125" min="1" max="1" chance="0.0044"/> <!-- Spinebone Sword -->
 				<item id="126" min="1" max="1" chance="0.0044"/> <!-- Artisan's Sword -->
 				<item id="128" min="1" max="1" chance="0.0044"/> <!-- Knight's Sword -->
 				<item id="1867" min="1" max="3" chance="11.1111"/> <!-- Animal Skin -->
-				<item id="1872" min="1" max="1" chance="20.0000"/> <!-- Animal Bone -->
+				<item id="1872" min="1" max="1" chance="20"/> <!-- Animal Bone -->
 				<item id="1882" min="1" max="1" chance="3.4483"/> <!-- Leather -->
 				<item id="2021" min="1" max="1" chance="0.1787"/> <!-- Spinebone Sword Blade -->
 				<item id="2184" min="1" max="1" chance="1.9231"/> <!-- Recipe: Mithril Banded Gaiters -->
@@ -2768,7 +2763,7 @@
 			</spoil>
 		</dropLists>
 	</npc>
-	<npc id="21237" level="32" type="Monster" name="Barrow Monk" title="">
+	<npc id="21237" level="32" type="Monster" name="Barrow Monk">
 		<!-- Interlude - C6 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="70" />
@@ -2778,8 +2773,7 @@
 		</parameters>
 		<race>UNDEAD</race>
 		<sex>MALE</sex>
-		<equipment rhand="0" lhand="0" /> <!-- ... / ... -->
-		<acquire exp="4440" sp="248" raidPoints="0" />
+		<acquire exp="4440" sp="248" />
 		<stats str="40" int="21" dex="30" wit="20" con="43" men="20">
 			<vitals hp="668.47132" hpRegen="4.5" mp="358.32" mpRegen="1.8" />
 			<attack physical="106.16525" magical="72.49711" random="50" critical="1" accuracy="9" attackSpeed="253" type="FIST" range="40" distance="80" width="120" />
@@ -2812,7 +2806,7 @@
 		</collision>
 		<dropLists>
 			<drop>
-				<item id="57" min="626" max="1255" chance="70.0000"/> <!-- Adena -->
+				<item id="57" min="626" max="1255" chance="70"/> <!-- Adena -->
 				<item id="86" min="1" max="1" chance="0.0026"/> <!-- Tomahawk -->
 				<item id="179" min="1" max="1" chance="0.0026"/> <!-- Mace of Prayer -->
 				<item id="180" min="1" max="1" chance="0.0026"/> <!-- Mace of Judgment -->
@@ -2822,13 +2816,13 @@
 				<item id="184" min="1" max="1" chance="0.0026"/> <!-- Conjuror's Staff -->
 				<item id="185" min="1" max="1" chance="0.0026"/> <!-- Staff of Mana -->
 				<item id="1868" min="1" max="3" chance="12.5000"/> <!-- Thread -->
-				<item id="1873" min="1" max="1" chance="5.0000"/> <!-- Silver Nugget -->
+				<item id="1873" min="1" max="1" chance="5"/> <!-- Silver Nugget -->
 				<item id="1889" min="1" max="1" chance="0.7634"/> <!-- Compound Braid -->
 				<item id="2022" min="1" max="1" chance="0.1264"/> <!-- Mace of Judgment Head -->
 				<item id="2023" min="1" max="1" chance="0.1006"/> <!-- Conjuror's Staff Head -->
 				<item id="2265" min="1" max="1" chance="0.1218"/> <!-- Recipe: Spiked Club -->
 				<item id="5549" min="1" max="1" chance="1.2048"/> <!-- Metallic Thread -->
-				<item id="6037" min="1" max="1" chance="25.0000"/> <!-- Waking Scroll -->
+				<item id="6037" min="1" max="1" chance="25"/> <!-- Waking Scroll -->
 			</drop> 
 			<spoil>
 				<item id="1933" min="1" max="1" chance="17.4667"/> <!-- Dark Stocking Fabric -->
@@ -2837,7 +2831,7 @@
 			</spoil>
 		</dropLists>
 	</npc>
-	<npc id="21238" level="35" type="Monster" name="Grave Sentinel" title="">
+	<npc id="21238" level="35" type="Monster" name="Grave Sentinel">
 		<!-- Interlude - C6 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="0" />
@@ -2847,8 +2841,7 @@
 		</parameters>
 		<race>FAIRY</race>
 		<sex>MALE</sex>
-		<equipment rhand="0" lhand="0" /> <!-- ... / ... -->
-		<acquire exp="5600" sp="332" raidPoints="0" />
+		<acquire exp="5600" sp="332" />
 		<stats str="40" int="21" dex="30" wit="20" con="43" men="20">
 			<vitals hp="772.73802" hpRegen="4.5" mp="402.6" mpRegen="1.8" />
 			<attack physical="129.32896" magical="88.31491" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="FIST" range="40" distance="80" width="120" />
@@ -2880,7 +2873,7 @@
 		</collision>
 		<dropLists>
 			<drop>
-				<item id="57" min="781" max="1559" chance="70.0000"/> <!-- Adena -->
+				<item id="57" min="781" max="1559" chance="70"/> <!-- Adena -->
 				<item id="260" min="1" max="1" chance="203"/> <!-- Triple-Edged Jamadhr -->
 				<item id="1341" min="20" max="60" chance="234192"/> <!-- Bone Arrow -->
 				<item id="1874" min="1" max="1" chance="9368"/> <!-- Oriharukon Ore -->
@@ -2897,7 +2890,7 @@
 			</spoil>
 		</dropLists>
 	</npc>
-	<npc id="21239" level="37" type="Monster" name="Grave Monk" title="">
+	<npc id="21239" level="37" type="Monster" name="Grave Monk">
 		<!-- Interlude - C6 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="110" />
@@ -2907,8 +2900,7 @@
 		</parameters>
 		<race>DEMONIC</race>
 		<sex>FEMALE</sex>
-		<equipment rhand="0" lhand="0" /> <!-- ... / ... -->
-		<acquire exp="5940" sp="364" raidPoints="0" />
+		<acquire exp="5940" sp="364" />
 		<stats str="40" int="21" dex="30" wit="20" con="43" men="20">
 			<vitals hp="847.31754" hpRegen="4.5" mp="432.72" mpRegen="1.8" />
 			<attack physical="146.82587" magical="100.26304" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="FIST" range="40" distance="80" width="120" />
@@ -2941,7 +2933,7 @@
 		</collision>
 		<dropLists>
 			<drop>
-				<item id="57" min="824" max="1645" chance="70.0000"/> <!-- Adena -->
+				<item id="57" min="824" max="1645" chance="70"/> <!-- Adena -->
 				<item id="279" min="1" max="1" chance="73"/> <!-- Strengthened Long Bow -->
 				<item id="1865" min="1" max="1" chance="142857"/> <!-- Varnish -->
 				<item id="1870" min="1" max="1" chance="166667"/> <!-- Coal -->

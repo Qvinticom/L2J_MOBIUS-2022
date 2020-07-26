@@ -672,7 +672,7 @@
 		</parameters>
 		<race>UNDEAD</race>
 		<sex>MALE</sex>
-		<acquire exp="433606" sp="104" raidPoints="0" />
+		<acquire exp="433606" sp="104" />
 		<stats str="79" int="74" dex="42" wit="65" con="75" men="72">
 			<vitals hp="226581.072555205" hpRegen="294.2109061" mp="1097.62711864407" mpRegen="2.7" />
 			<speed>
@@ -805,7 +805,7 @@
 		</parameters>
 		<race>DEMONIC</race>
 		<sex>FEMALE</sex>
-		<acquire exp="470082" sp="112" raidPoints="0" />
+		<acquire exp="470082" sp="112" />
 		<stats str="79" int="74" dex="42" wit="65" con="75" men="72">
 			<vitals hp="252431.545741325" hpRegen="294.2109061" mp="1219.66101694915" mpRegen="2.7" />
 			<speed>
@@ -895,7 +895,7 @@
 	<npc id="25815" level="70" type="Monster" name="Ken" title="Savage">
 		<race>DIVINE</race>
 		<sex>MALE</sex>
-		<acquire exp="502954" sp="120" raidPoints="0" />
+		<acquire exp="502954" sp="120" />
 		<equipment rhand="147" /> <!-- Tear of Darkness -->
 		<stats str="79" int="74" dex="42" wit="65" con="75" men="72">
 			<vitals hp="274258.044164038" hpRegen="294.2109061" mp="1345.08474576271" mpRegen="2.7" />
@@ -958,7 +958,7 @@
 		</parameters>
 		<race>DIVINE</race>
 		<sex>MALE</sex>
-		<acquire exp="518128" sp="124" raidPoints="0" />
+		<acquire exp="518128" sp="124" />
 		<equipment rhand="15302" /> <!-- Transparent Bow (NPC) -->
 		<stats str="79" int="74" dex="42" wit="65" con="75" men="72">
 			<vitals hp="284017.034700315" hpRegen="299.9232164" mp="1410.16949152542" mpRegen="3" />
@@ -1091,7 +1091,7 @@
 		</parameters>
 		<race>DIVINE</race>
 		<sex>MALE</sex>
-		<acquire exp="540998" sp="129" raidPoints="0" />
+		<acquire exp="540998" sp="129" />
 		<stats str="79" int="74" dex="42" wit="65" con="75" men="72">
 			<vitals hp="297703.470031546" hpRegen="310.756323" mp="1507.1186440678" mpRegen="3" />
 			<speed>
@@ -1187,7 +1187,7 @@
 		</parameters>
 		<race>DIVINE</race>
 		<sex>FEMALE</sex>
-		<acquire exp="540998" sp="129" raidPoints="0" />
+		<acquire exp="540998" sp="129" />
 		<stats str="79" int="74" dex="42" wit="65" con="75" men="72">
 			<vitals hp="297703.470031546" hpRegen="310.756323" mp="1507.1186440678" mpRegen="3" />
 			<speed>
@@ -2126,7 +2126,7 @@
 		</parameters>
 		<race>DEMONIC</race>
 		<sex>FEMALE</sex>
-		<acquire exp="79392320" sp="19054" raidPoints="0" />
+		<acquire exp="79392320" sp="19054" />
 		<mpReward value="53" type="DIFF" ticks="10" affects="PARTY" />
 		<stats str="164" int="188" dex="55" wit="78" con="111" men="149">
 			<vitals hp="556686.266274675" hpRegen="341.1770035" mp="22800.1998001998" mpRegen="3" />
@@ -2204,7 +2204,7 @@
 		</parameters>
 		<race>HUMANOID</race>
 		<sex>MALE</sex>
-		<acquire exp="102758769" sp="24662" raidPoints="0" />
+		<acquire exp="102758769" sp="24662" />
 		<mpReward value="53" type="DIFF" ticks="10" affects="PARTY" />
 		<stats str="164" int="188" dex="55" wit="78" con="111" men="149">
 			<vitals hp="170948.341033179" hpRegen="348.6550231" mp="22800.1998001998" mpRegen="3" />
@@ -2276,7 +2276,7 @@
 		</parameters>
 		<race>HUMANOID</race>
 		<sex>MALE</sex>
-		<acquire exp="201701376" sp="48408" raidPoints="0" />
+		<acquire exp="201701376" sp="48408" />
 		<equipment rhand="75" lhand="103" /> <!-- Caliburs / Tower Shield -->
 		<mpReward value="53" type="DIFF" ticks="10" affects="PARTY" />
 		<stats str="164" int="188" dex="55" wit="78" con="111" men="149">
@@ -2351,7 +2351,7 @@
 		</parameters>
 		<race>DEMONIC</race>
 		<sex>MALE</sex>
-		<acquire exp="116034352" sp="27848" raidPoints="0" />
+		<acquire exp="116034352" sp="27848" />
 		<mpReward value="53" type="DIFF" ticks="10" affects="PARTY" />
 		<stats str="164" int="188" dex="55" wit="78" con="111" men="149">
 			<vitals hp="575603.107937841" hpRegen="356.2141053" mp="22800.1998001998" mpRegen="3" />
@@ -2429,7 +2429,7 @@
 		</parameters>
 		<race>UNDEAD</race>
 		<sex>MALE</sex>
-		<acquire exp="186239900" sp="44697" raidPoints="0" />
+		<acquire exp="186239900" sp="44697" />
 		<equipment rhand="78" /> <!-- Great Sword -->
 		<mpReward value="53" type="DIFF" ticks="10" affects="PARTY" />
 		<stats str="164" int="188" dex="55" wit="78" con="111" men="149">
@@ -2759,7 +2759,7 @@
 		</parameters>
 		<race>DRAGON</race>
 		<sex>MALE</sex>
-		<acquire exp="224759808" sp="53942" raidPoints="0" />
+		<acquire exp="224759808" sp="53942" />
 		<mpReward value="53" type="DIFF" ticks="10" affects="PARTY" />
 		<stats str="164" int="188" dex="55" wit="78" con="111" men="149">
 			<vitals hp="595103.317933641" hpRegen="371.5754571" mp="22800.1998001998" mpRegen="3" />
@@ -2841,7 +2841,7 @@
 		</parameters>
 		<race>DEMONIC</race>
 		<sex>MALE</sex>
-		<acquire exp="328495104" sp="78838" raidPoints="0" />
+		<acquire exp="328495104" sp="78838" />
 		<mpReward value="53" type="DIFF" ticks="10" affects="PARTY" />
 		<stats str="164" int="188" dex="55" wit="78" con="111" men="149">
 			<vitals hp="303889.122217556" hpRegen="371.5754571" mp="22800.1998001998" mpRegen="3" />
@@ -3343,7 +3343,7 @@
 		</parameters>
 		<race>PLANT</race>
 		<sex>MALE</sex>
-		<acquire exp="198916032" sp="47739" raidPoints="0" />
+		<acquire exp="198916032" sp="47739" />
 		<mpReward value="20" type="PER" ticks="10" affects="PARTY" />
 		<stats str="164" int="188" dex="55" wit="78" con="111" men="149">
 			<vitals hp="3453619.06761865" hpRegen="356.2141053" mp="22800.1998001998" mpRegen="3" />
@@ -4271,7 +4271,7 @@
 	<npc id="25881" level="99" type="Monster" name="Veridan" title="Hell's Warden">
 		<race>DEMONIC</race>
 		<sex>MALE</sex>
-		<acquire exp="5170145112" sp="10340349" raidPoints="0" />
+		<acquire exp="5170145112" sp="10340349" />
 		<equipment rhand="5800" lhand="5799" /> <!-- Nephilim Lord / Nephilim Lord -->
 		<mpReward value="20" type="PER" ticks="10" affects="PARTY" />
 		<stats str="164" int="188" dex="55" wit="78" con="111" men="149">
@@ -5240,7 +5240,7 @@
 		<race>UNDEAD</race>
 		<sex>MALE</sex>
 		<equipment rhand="96" /> <!-- scythe -->
-		<acquire exp="0" sp="0" raidPoints="0" />
+		<acquire exp="0" sp="0" />
 		<stats str="164" int="188" dex="55" wit="78" con="111" men="149">
 			<vitals hp="209097.018059639" hpRegen="379.3777269" mp="22428.0719280719" mpRegen="3" />
 			<attack physical="56467.9584029121" magical="5295.07909179883" random="10" critical="8" accuracy="0" attackSpeed="253" type="SWORD" range="40" distance="10" width="0" />

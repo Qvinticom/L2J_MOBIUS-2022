@@ -1966,7 +1966,7 @@
 			<height normal="23.5" />
 		</collision>
 	</npc>
-	<npc id="31075" level="70" type="Teleporter" name="Gatekeeper Ziggurat" title="">
+	<npc id="31075" level="70" type="Teleporter" name="Gatekeeper Ziggurat">
 		<!-- CLASSIC NPC -->
 		<race>HUMAN</race>
 		<sex>FEMALE</sex>
@@ -1983,7 +1983,7 @@
 			<height normal="40" />
 		</collision>
 	</npc>
-	<npc id="31076" level="70" type="Npc" name="Newbie Helper" title="">
+	<npc id="31076" level="70" type="Npc" name="Newbie Helper">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="0" />
@@ -2816,8 +2816,6 @@
 		</parameters>
 		<race>ETC</race>
 		<sex>ETC</sex>
-		<equipment rhand="0" lhand="0" /> <!-- ... / ... -->
-		<acquire exp="0" sp="0" raidPoints="0" />
 		<stats str="40" int="21" dex="30" wit="20" con="43" men="20">
 			<vitals hp="2444.46819" hpRegen="7.5" mp="1345.8" mpRegen="2.7" />
 			<attack physical="688.86373" magical="470.40463" random="30" critical="4" accuracy="5" attackSpeed="253" type="FIST" range="40" distance="80" width="120" />
@@ -2855,8 +2853,6 @@
 		</parameters>
 		<race>ETC</race>
 		<sex>ETC</sex>
-		<equipment rhand="0" lhand="0" /> <!-- ... / ... -->
-		<acquire exp="0" sp="0" raidPoints="0" />
 		<stats str="40" int="21" dex="30" wit="20" con="43" men="20">
 			<vitals hp="2444.46819" hpRegen="7.5" mp="1345.8" mpRegen="2.7" />
 			<attack physical="688.86373" magical="470.40463" random="30" critical="4" accuracy="5" attackSpeed="253" type="FIST" range="40" distance="80" width="120" />
@@ -2894,8 +2890,6 @@
 		</parameters>
 		<race>ETC</race>
 		<sex>ETC</sex>
-		<equipment rhand="0" lhand="0" /> <!-- ... / ... -->
-		<acquire exp="0" sp="0" raidPoints="0" />
 		<stats str="40" int="21" dex="30" wit="20" con="43" men="20">
 			<vitals hp="2444.46819" hpRegen="7.5" mp="1345.8" mpRegen="2.7" />
 			<attack physical="688.86373" magical="470.40463" random="30" critical="4" accuracy="5" attackSpeed="253" type="FIST" range="40" distance="80" width="120" />
@@ -2933,8 +2927,6 @@
 		</parameters>
 		<race>ETC</race>
 		<sex>ETC</sex>
-		<equipment rhand="0" lhand="0" /> <!-- ... / ... -->
-		<acquire exp="0" sp="0" raidPoints="0" />
 		<stats str="40" int="21" dex="30" wit="20" con="43" men="20">
 			<vitals hp="2444.46819" hpRegen="7.5" mp="1345.8" mpRegen="2.7" />
 			<attack physical="688.86373" magical="470.40463" random="30" critical="4" accuracy="5" attackSpeed="253" type="FIST" range="40" distance="80" width="120" />
@@ -2972,8 +2964,6 @@
 		</parameters>
 		<race>ETC</race>
 		<sex>ETC</sex>
-		<equipment rhand="0" lhand="0" /> <!-- ... / ... -->
-		<acquire exp="0" sp="0" raidPoints="0" />
 		<stats str="40" int="21" dex="30" wit="20" con="43" men="20">
 			<vitals hp="2444.46819" hpRegen="7.5" mp="1345.8" mpRegen="2.7" />
 			<attack physical="688.86373" magical="470.40463" random="30" critical="4" accuracy="5" attackSpeed="253" type="FIST" range="40" distance="80" width="120" />
