@@ -5,7 +5,7 @@ System: https://mega.nz/#!B10W0QSR!xon-5i8Z8g5-VoJPTt16leYVIVV8GosQE_OSH1j7pnM
 
 JDK: http://www.mediafire.com/file/xox35mknec8f1q0/bellsoft-jdk14%252B36-windows-amd64.msi
 Eclipse: https://www.mediafire.com/file/d7z5px9po76v1e9/eclipse-java-2020-03-R-Java14-win32-x86_64.zip
-Geodata: http://www.mediafire.com/file/wdpw79qh4w780rg/L2J_Mobius_5.5_EtinasFate_Geodata.zip
+Geodata: https://www.mediafire.com/file/9zm5dal5jyj313w/L2J_Mobius_5.5_EtinasFate_Geodata.zip
 
 
 Working features...

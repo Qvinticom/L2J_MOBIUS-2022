@@ -5,7 +5,7 @@ System: https://mega.nz/#!98likSra!vP3uaDwJs8oiY5q60UzBSXAbgNELWX_dycWb98Mz96U
 
 JDK: http://www.mediafire.com/file/xox35mknec8f1q0/bellsoft-jdk14%252B36-windows-amd64.msi
 Eclipse: https://www.mediafire.com/file/d7z5px9po76v1e9/eclipse-java-2020-03-R-Java14-win32-x86_64.zip
-Geodata: https://www.mediafire.com/file/436qd4e73wvvzyl/L2J_Mobius_7.0_PreludeOfWar_Geodata.zip
+Geodata: https://www.mediafire.com/file/ef4gn45tic0kjmm/L2J_Mobius_7.0_PreludeOfWar_Geodata.zip
 
 Working features...
 

@@ -8,7 +8,7 @@ System: https://mega.nz/#!xolCkYjD!TpdBo8SwYpPYJN86H_r5AxZljTZAfyj-o2H9cfy2bNc
 
 JDK: http://www.mediafire.com/file/xox35mknec8f1q0/bellsoft-jdk14%252B36-windows-amd64.msi
 Eclipse: https://www.mediafire.com/file/d7z5px9po76v1e9/eclipse-java-2020-03-R-Java14-win32-x86_64.zip
-Geodata: https://www.mediafire.com/file/bq3lk60l007roua/L2J_Mobius_6.0_Fafurion_Geodata.zip
+Geodata: https://www.mediafire.com/file/w6j8cphwoji06is/L2J_Mobius_6.0_Fafurion_Geodata.zip
 
 
 Working features...
