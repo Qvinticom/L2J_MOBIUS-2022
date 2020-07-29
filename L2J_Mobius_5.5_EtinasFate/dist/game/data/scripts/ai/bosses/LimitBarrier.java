@@ -25,6 +25,7 @@ import org.l2jmobius.gameserver.model.holders.SkillHolder;
 import org.l2jmobius.gameserver.model.skills.Skill;
 import org.l2jmobius.gameserver.network.NpcStringId;
 import org.l2jmobius.gameserver.network.serverpackets.ExShowScreenMessage;
+import org.l2jmobius.gameserver.scripting.annotations.Disabled;
 
 import ai.AbstractNpcAI;
 
@@ -40,6 +41,7 @@ import ai.AbstractNpcAI;
  *         OK - Raid Bosses in instances do not use Limit Barrier.<br>
  *         OK - All Raid Bosses who use Limit Barrier are listed below:
  */
+@Disabled // Behaviour does not go well with low population servers.
 public final class LimitBarrier extends AbstractNpcAI
 {
 	// NPCs
