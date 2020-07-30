@@ -110,7 +110,6 @@
 			<param name="LongRangeGuardRate" value="5" />
 			<skill name="SleepMagic" id="4046" level="4" />
 			<skill name="DDMagic" id="4039" level="4" />
-			<skill name="CancelMagic" id="4094" level="4" />
 		</parameters>
 		<race>ELEMENTAL</race>
 		<sex>MALE</sex>
@@ -131,7 +130,6 @@
 		<skillList>
 			<skill id="4039" level="4" /> <!-- NPC MP Drain -->
 			<skill id="4046" level="4" /> <!-- Sleep -->
-			<skill id="4094" level="4" /> <!-- NPC Cancel Magic -->
 			<skill id="4118" level="4" /> <!-- Paralysis -->
 			<skill id="4416" level="9" /> <!-- Demons -->
 			<skill id="4408" level="13" /> <!-- HP Increase (5x) -->
@@ -611,7 +609,6 @@
 			<param name="SpiritShotRate" value="5" />
 			<param name="LongRangeGuardRate" value="5" />
 			<skill name="DDMagic" id="4002" level="6" /> <!-- NPC HP Drain -->
-			<skill name="CancelMagic" id="4094" level="6" /> <!-- NPC Cancel Magic -->
 			<skill name="SleepMagic" id="4046" level="6" /> <!-- Sleep -->
 		</parameters>
 		<race>CONSTRUCT</race>
@@ -632,7 +629,6 @@
 			<skill id="4002" level="6" /> <!-- NPC HP Drain -->
 			<skill id="4046" level="6" /> <!-- Sleep -->
 			<skill id="4088" level="6" /> <!-- Bleed -->
-			<skill id="4094" level="6" /> <!-- NPC Cancel Magic -->
 			<skill id="4098" level="6" /> <!-- Silence -->
 			<skill id="4416" level="2" /> <!-- Magical Creatures -->
 			<skill id="4408" level="11" /> <!-- HP Increase (3x) -->
@@ -1350,7 +1346,6 @@
 			<param name="SpiritShotRate" value="5" />
 			<param name="LongRangeGuardRate" value="5" />
 			<skill name="DDMagic" id="4039" level="6" /> <!-- NPC MP Drain -->
-			<skill name="CancelMagic" id="4094" level="6" /> <!-- NPC Cancel Magic -->
 			<skill name="SleepMagic" id="4046" level="6" /> <!-- Sleep -->
 		</parameters>
 		<race>DEMONIC</race>
@@ -1370,7 +1365,6 @@
 		<skillList>
 			<skill id="4039" level="6" /> <!-- NPC MP Drain -->
 			<skill id="4046" level="6" /> <!-- Sleep -->
-			<skill id="4094" level="6" /> <!-- NPC Cancel Magic -->
 			<skill id="4416" level="9" /> <!-- Demons -->
 			<skill id="4408" level="12" /> <!-- HP Increase (4x) -->
 			<skill id="4410" level="12" /> <!-- Slightly Strong P. Atk. -->
@@ -1784,7 +1778,6 @@
 			<param name="SpiritShotRate" value="5" />
 			<param name="LongRangeGuardRate" value="5" />
 			<skill name="DDMagic" id="4066" level="7" /> <!-- NPC Twister -->
-			<skill name="CancelMagic" id="4094" level="7" /> <!-- NPC Cancel Magic -->
 			<skill name="SleepMagic" id="4046" level="7" /> <!-- Sleep -->
 		</parameters>
 		<race>DIVINE</race>
@@ -1806,7 +1799,6 @@
 			<skill id="4046" level="7" /> <!-- Sleep -->
 			<skill id="4066" level="7" /> <!-- NPC Twister -->
 			<skill id="4073" level="7" /> <!-- Stun -->
-			<skill id="4094" level="7" /> <!-- NPC Cancel Magic -->
 			<skill id="4416" level="8" /> <!-- Angel -->
 			<skill id="4408" level="13" /> <!-- HP Increase (5x) -->
 			<skill id="4410" level="16" /> <!-- Very Strong P. Atk. -->
@@ -2079,7 +2071,7 @@
 			<radius normal="10" grown="12" />
 			<height normal="28" grown="33" />
 		</collision>
-		<dropLists> <!-- CT2.5 -->
+		<dropLists>
 			<drop>
 				<item id="57" min="430" max="872" chance="70" /> <!-- Adena -->
 				<item id="1125" min="1" max="1" chance="0.011" /> <!-- Assault Boots -->
@@ -2165,7 +2157,7 @@
 			<radius normal="11" />
 			<height normal="27" />
 		</collision>
-		<dropLists> <!-- CT2.5 -->
+		<dropLists>
 			<drop>
 				<item id="57" min="475" max="974" chance="70" /> <!-- Adena -->
 				<item id="281" min="1" max="1" chance="0.003" /> <!-- Crystallized Ice Bow -->
@@ -2236,7 +2228,7 @@
 			<radius normal="26" />
 			<height normal="25.5" />
 		</collision>
-		<dropLists> <!-- CT2.5 -->
+		<dropLists>
 			<drop>
 				<item id="57" min="720" max="1455" chance="70" /> <!-- Adena -->
 				<item id="353" min="1" max="1" chance="0.015" /> <!-- Half Plate Armor -->
@@ -2312,7 +2304,7 @@
 			<radius normal="15" />
 			<height normal="28" />
 		</collision>
-		<dropLists> <!-- CT2.5 -->
+		<dropLists>
 			<drop>
 				<item id="57" min="392" max="796" chance="70" /> <!-- Adena -->
 				<item id="439" min="1" max="1" chance="0.007904" /> <!-- Karmian Tunic -->
@@ -2393,7 +2385,7 @@
 			<radius normal="10" />
 			<height normal="23" />
 		</collision>
-		<dropLists> <!-- CT2.5 -->
+		<dropLists>
 			<drop>
 				<item id="57" min="822" max="1686" chance="70" /> <!-- Adena -->
 				<item id="96" min="1" max="1" chance="0.0018" /> <!-- Scythe -->
@@ -2469,7 +2461,7 @@
 			<radius normal="21" grown="25" />
 			<height normal="44" grown="52.5" />
 		</collision>
-		<dropLists> <!-- CT2.5 -->
+		<dropLists>
 			<drop>
 				<item id="57" min="811" max="1647" chance="70" /> <!-- Adena -->
 				<item id="62" min="1" max="1" chance="0.01" /> <!-- Reinforced Mithril Boots -->
@@ -2556,7 +2548,7 @@
 			<radius normal="10" />
 			<height normal="33.5" />
 		</collision>
-		<dropLists> <!-- CT2.5 -->
+		<dropLists>
 			<drop>
 				<item id="57" min="760" max="1544" chance="70" /> <!-- Adena -->
 				<item id="852" min="1" max="1" chance="0.03" /> <!-- Moonstone Earring -->
@@ -2635,7 +2627,7 @@
 			<radius normal="12" />
 			<height normal="26" />
 		</collision>
-		<dropLists> <!-- CT2.5 -->
+		<dropLists>
 			<drop>
 				<item id="57" min="453" max="926" chance="70" /> <!-- Adena -->
 				<item id="631" min="1" max="1" chance="0.017" /> <!-- Eldarake -->
@@ -2798,7 +2790,7 @@
 			<radius normal="17" />
 			<height normal="55" />
 		</collision>
-		<dropLists> <!-- CT2.5 -->
+		<dropLists>
 			<drop>
 				<item id="57" min="482" max="980" chance="70" /> <!-- Adena -->
 				<item id="282" min="1" max="1" chance="0.0012" /> <!-- Elemental Bow -->
@@ -2876,7 +2868,7 @@
 			<radius normal="15" />
 			<height normal="30" />
 		</collision>
-		<dropLists> <!-- CT2.5 -->
+		<dropLists>
 			<drop>
 				<item id="57" min="459" max="937" chance="70" /> <!-- Adena -->
 				<item id="853" min="1" max="1" chance="0.011" /> <!-- Earring of Protection -->
@@ -2958,7 +2950,7 @@
 			<radius normal="11" />
 			<height normal="28.5" />
 		</collision>
-		<dropLists> <!-- CT2.5 -->
+		<dropLists>
 			<drop>
 				<item id="57" min="583" max="1184" chance="70" /> <!-- Adena -->
 				<item id="283" min="1" max="1" chance="0.0019" /> <!-- Akat Longbow -->
@@ -3036,7 +3028,7 @@
 			<radius normal="24" grown="29" />
 			<height normal="40" grown="48" />
 		</collision>
-		<dropLists> <!-- CT2.5 -->
+		<dropLists>
 			<drop>
 				<item id="57" min="521" max="1058" chance="70" /> <!-- Adena -->
 				<item id="854" min="1" max="1" chance="0.008" /> <!-- Earring of Seal -->
@@ -3119,7 +3111,7 @@
 			<radius normal="17" />
 			<height normal="28" />
 		</collision>
-		<dropLists> <!-- CT2.5 -->
+		<dropLists>
 			<drop>
 				<item id="57" min="712" max="1439" chance="70" /> <!-- Adena -->
 				<item id="77" min="1" max="1" chance="0.0003" /> <!-- Tsurugi -->
@@ -3244,7 +3236,6 @@
 			<param name="LongRangeGuardRate" value="5" />
 			<skill name="SleepMagic" id="4046" level="5" />
 			<skill name="DDMagic" id="4087" level="5" />
-			<skill name="CancelMagic" id="4094" level="5" />
 		</parameters>
 		<race>DEMONIC</race>
 		<sex>MALE</sex>
@@ -3267,7 +3258,6 @@
 			<skill id="4085" level="1" /> <!-- Critical Damage -->
 			<skill id="4086" level="1" /> <!-- Critical Chance -->
 			<skill id="4087" level="5" /> <!-- NPC Blaze -->
-			<skill id="4094" level="5" /> <!-- NPC Cancel Magic -->
 			<skill id="4408" level="10" /> <!-- HP Increase (2x) -->
 			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
 			<skill id="4410" level="8" /> <!-- Weak P. Atk. -->
@@ -3362,7 +3352,7 @@
 			<radius normal="10" />
 			<height normal="23" />
 		</collision>
-		<dropLists> <!-- CT2.5 -->
+		<dropLists>
 			<drop>
 				<item id="57" min="766" max="1566" chance="70" /> <!-- Adena -->
 				<item id="96" min="1" max="1" chance="0.0018" /> <!-- Scythe -->
@@ -3961,7 +3951,6 @@
 			<param name="SpiritShotRate" value="5" />
 			<param name="LongRangeGuardRate" value="5" />
 			<skill name="DDMagic" id="4087" level="7" /> <!-- NPC Blaze -->
-			<skill name="CancelMagic" id="4094" level="7" /> <!-- NPC Cancel Magic -->
 			<skill name="SleepMagic" id="4046" level="7" /> <!-- Sleep -->
 		</parameters>
 		<race>DIVINE</race>
@@ -3981,7 +3970,6 @@
 		<skillList>
 			<skill id="4046" level="7" /> <!-- Sleep -->
 			<skill id="4087" level="7" /> <!-- NPC Blaze -->
-			<skill id="4094" level="7" /> <!-- NPC Cancel Magic -->
 			<skill id="4416" level="8" /> <!-- Angel -->
 			<skill id="4408" level="14" /> <!-- HP Increase (6x) -->
 			<skill id="4410" level="15" /> <!-- Strong P. Atk. -->

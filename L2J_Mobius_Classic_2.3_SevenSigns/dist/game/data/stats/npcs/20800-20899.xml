@@ -110,7 +110,6 @@
 			<param name="LongRangeGuardRate" value="5" />
 			<skill name="SleepMagic" id="4046" level="4" />
 			<skill name="DDMagic" id="4039" level="4" />
-			<skill name="CancelMagic" id="4094" level="4" />
 		</parameters>
 		<race>DEMONIC</race>
 		<sex>MALE</sex>
@@ -131,7 +130,6 @@
 		<skillList>
 			<skill id="4039" level="4" /> <!-- NPC MP Drain -->
 			<skill id="4046" level="4" /> <!-- Sleep -->
-			<skill id="4094" level="4" /> <!-- NPC Cancel Magic -->
 			<skill id="4118" level="4" /> <!-- Paralysis -->
 			<skill id="4416" level="9" /> <!-- Demons -->
 			<skill id="4408" level="13" /> <!-- HP Increase (5x) -->
@@ -611,7 +609,6 @@
 			<param name="SpiritShotRate" value="5" />
 			<param name="LongRangeGuardRate" value="5" />
 			<skill name="DDMagic" id="4002" level="6" /> <!-- NPC HP Drain -->
-			<skill name="CancelMagic" id="4094" level="6" /> <!-- NPC Cancel Magic -->
 			<skill name="SleepMagic" id="4046" level="6" /> <!-- Sleep -->
 		</parameters>
 		<race>CONSTRUCT</race>
@@ -632,7 +629,6 @@
 			<skill id="4002" level="6" /> <!-- NPC HP Drain -->
 			<skill id="4046" level="6" /> <!-- Sleep -->
 			<skill id="4088" level="6" /> <!-- Bleed -->
-			<skill id="4094" level="6" /> <!-- NPC Cancel Magic -->
 			<skill id="4098" level="6" /> <!-- Silence -->
 			<skill id="4416" level="2" /> <!-- Magical Creatures -->
 			<skill id="4408" level="11" /> <!-- HP Increase (3x) -->
@@ -1350,7 +1346,6 @@
 			<param name="SpiritShotRate" value="5" />
 			<param name="LongRangeGuardRate" value="5" />
 			<skill name="DDMagic" id="4039" level="6" /> <!-- NPC MP Drain -->
-			<skill name="CancelMagic" id="4094" level="6" /> <!-- NPC Cancel Magic -->
 			<skill name="SleepMagic" id="4046" level="6" /> <!-- Sleep -->
 		</parameters>
 		<race>DEMONIC</race>
@@ -1370,7 +1365,6 @@
 		<skillList>
 			<skill id="4039" level="6" /> <!-- NPC MP Drain -->
 			<skill id="4046" level="6" /> <!-- Sleep -->
-			<skill id="4094" level="6" /> <!-- NPC Cancel Magic -->
 			<skill id="4416" level="9" /> <!-- Demons -->
 			<skill id="4408" level="12" /> <!-- HP Increase (4x) -->
 			<skill id="4410" level="12" /> <!-- Slightly Strong P. Atk. -->
@@ -1784,7 +1778,6 @@
 			<param name="SpiritShotRate" value="5" />
 			<param name="LongRangeGuardRate" value="5" />
 			<skill name="DDMagic" id="4066" level="7" /> <!-- NPC Twister -->
-			<skill name="CancelMagic" id="4094" level="7" /> <!-- NPC Cancel Magic -->
 			<skill name="SleepMagic" id="4046" level="7" /> <!-- Sleep -->
 		</parameters>
 		<race>DIVINE</race>
@@ -1806,7 +1799,6 @@
 			<skill id="4046" level="7" /> <!-- Sleep -->
 			<skill id="4066" level="7" /> <!-- NPC Twister -->
 			<skill id="4073" level="7" /> <!-- Stun -->
-			<skill id="4094" level="7" /> <!-- NPC Cancel Magic -->
 			<skill id="4416" level="8" /> <!-- Angel -->
 			<skill id="4408" level="13" /> <!-- HP Increase (5x) -->
 			<skill id="4410" level="16" /> <!-- Very Strong P. Atk. -->
@@ -3245,7 +3237,6 @@
 			<param name="LongRangeGuardRate" value="5" />
 			<skill name="SleepMagic" id="4046" level="5" />
 			<skill name="DDMagic" id="4087" level="5" />
-			<skill name="CancelMagic" id="4094" level="5" />
 		</parameters>
 		<race>DEMONIC</race>
 		<sex>MALE</sex>
@@ -3268,7 +3259,6 @@
 			<skill id="4085" level="1" /> <!-- Critical Damage -->
 			<skill id="4086" level="1" /> <!-- Critical Chance -->
 			<skill id="4087" level="5" /> <!-- NPC Blaze -->
-			<skill id="4094" level="5" /> <!-- NPC Cancel Magic -->
 			<skill id="4408" level="10" /> <!-- HP Increase (2x) -->
 			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
 			<skill id="4410" level="8" /> <!-- Weak P. Atk. -->
@@ -3962,7 +3952,6 @@
 			<param name="SpiritShotRate" value="5" />
 			<param name="LongRangeGuardRate" value="5" />
 			<skill name="DDMagic" id="4087" level="7" /> <!-- NPC Blaze -->
-			<skill name="CancelMagic" id="4094" level="7" /> <!-- NPC Cancel Magic -->
 			<skill name="SleepMagic" id="4046" level="7" /> <!-- Sleep -->
 		</parameters>
 		<race>DIVINE</race>
@@ -3982,7 +3971,6 @@
 		<skillList>
 			<skill id="4046" level="7" /> <!-- Sleep -->
 			<skill id="4087" level="7" /> <!-- NPC Blaze -->
-			<skill id="4094" level="7" /> <!-- NPC Cancel Magic -->
 			<skill id="4416" level="8" /> <!-- Angel -->
 			<skill id="4408" level="14" /> <!-- HP Increase (6x) -->
 			<skill id="4410" level="15" /> <!-- Strong P. Atk. -->

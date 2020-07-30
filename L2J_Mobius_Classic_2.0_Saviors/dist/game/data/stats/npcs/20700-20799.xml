@@ -2883,7 +2883,7 @@
 			<radius normal="13" />
 			<height normal="11" />
 		</collision>
-		<dropLists> <!-- CT2.5 -->
+		<dropLists>
 			<drop>
 				<item id="57" min="137" max="273" chance="70" /> <!-- Adena -->
 				<item id="316" min="1" max="1" chance="0.003" /> <!-- Sage's Blood -->
@@ -2955,7 +2955,7 @@
 			<radius normal="10" grown="12" />
 			<height normal="22" grown="27" />
 		</collision>
-		<dropLists> <!-- CT2.5 -->
+		<dropLists>
 			<drop>
 				<item id="57" min="154" max="309" chance="70" /> <!-- Adena -->
 				<item id="83" min="1" max="1" chance="0.075" /> <!-- Sword of Magic -->
@@ -3030,7 +3030,7 @@
 			<radius normal="10" />
 			<height normal="29" />
 		</collision>
-		<dropLists> <!-- CT2.5 -->
+		<dropLists>
 			<drop>
 				<item id="57" min="149" max="298" chance="70" /> <!-- Adena -->
 				<item id="1124" min="1" max="1" chance="0.005" /> <!-- Boots of Strength -->
@@ -3116,7 +3116,7 @@
 			<radius normal="12" />
 			<height normal="50" />
 		</collision>
-		<dropLists> <!-- CT2.5 -->
+		<dropLists>
 			<drop>
 				<item id="57" min="166" max="330" chance="70" /> <!-- Adena -->
 				<item id="395" min="1" max="1" chance="0.006" /> <!-- Manticore Skin Shirt -->
@@ -3190,7 +3190,7 @@
 			<radius normal="12" />
 			<height normal="50" />
 		</collision>
-		<dropLists> <!-- CT2.5 -->
+		<dropLists>
 			<drop>
 				<item id="57" min="199" max="397" chance="70" /> <!-- Adena -->
 				<item id="850" min="1" max="1" chance="0.012" /> <!-- Elven Earring -->
@@ -3265,7 +3265,7 @@
 			<radius normal="30" />
 			<height normal="39" />
 		</collision>
-		<dropLists> <!-- CT2.5 -->
+		<dropLists>
 			<drop>
 				<item id="57" min="355" max="708" chance="70" /> <!-- Adena -->
 				<item id="260" min="1" max="1" chance="0.012" /> <!-- Triple-Edged Jamadhr -->
@@ -3336,7 +3336,7 @@
 			<radius normal="18" />
 			<height normal="29" />
 		</collision>
-		<dropLists> <!-- CT2.5 -->
+		<dropLists>
 			<drop>
 				<item id="57" min="333" max="668" chance="70" /> <!-- Adena -->
 				<item id="393" min="1" max="1" chance="0.011" /> <!-- Mithril Banded Mail -->
@@ -3488,7 +3488,7 @@
 			<radius normal="18" />
 			<height normal="29" />
 		</collision>
-		<dropLists> <!-- CT2.5 -->
+		<dropLists>
 			<drop>
 				<item id="57" min="735" max="1467" chance="70" /> <!-- Adena -->
 				<item id="352" min="1" max="1" chance="0.013" /> <!-- Brigandine -->
@@ -3568,7 +3568,7 @@
 			<radius normal="16" />
 			<height normal="31" />
 		</collision>
-		<dropLists> <!-- CT2.5 -->
+		<dropLists>
 			<drop>
 				<item id="57" min="684" max="1363" chance="70" /> <!-- Adena -->
 				<item id="88" min="1" max="1" chance="0.002" /> <!-- Morning Star -->
@@ -3728,7 +3728,7 @@
 			<radius normal="15" />
 			<height normal="36" />
 		</collision>
-		<dropLists> <!-- CT2.5 -->
+		<dropLists>
 			<drop>
 				<item id="57" min="678" max="1356" chance="70" /> <!-- Adena -->
 				<item id="225" min="1" max="1" chance="0.006" /> <!-- Mithril Dagger -->
@@ -3800,7 +3800,7 @@
 			<radius normal="13" />
 			<height normal="40" />
 		</collision>
-		<dropLists> <!-- CT2.5 -->
+		<dropLists>
 			<drop>
 				<item id="57" min="636" max="1285" chance="70" /> <!-- Adena -->
 				<item id="851" min="1" max="1" chance="0.03" /> <!-- Onyx Beast's Eye Earring -->
@@ -3878,7 +3878,7 @@
 			<radius normal="15" />
 			<height normal="38" />
 		</collision>
-		<dropLists> <!-- CT2.5 -->
+		<dropLists>
 			<drop>
 				<item id="57" min="671" max="1364" chance="70" /> <!-- Adena -->
 				<item id="396" min="1" max="1" chance="0.023" /> <!-- Salamander Skin Mail -->
@@ -3915,7 +3915,6 @@
 			<param name="SpiritShotRate" value="5" />
 			<param name="LongRangeGuardRate" value="5" />
 			<skill name="DDMagic" id="4034" level="4" />
-			<skill name="CancelMagic" id="4094" level="4" />
 			<skill name="SleepMagic" id="4046" level="4" />
 		</parameters>
 		<race>BUG</race>
@@ -3939,7 +3938,6 @@
 			<skill id="4046" level="4" /> <!-- Sleep -->
 			<skill id="4076" level="3" /> <!-- Decrease Speed -->
 			<skill id="4085" level="1" /> <!-- Critical Damage -->
-			<skill id="4094" level="4" /> <!-- NPC Cancel Magic -->
 			<skill id="4098" level="4" /> <!-- Silence -->
 			<skill id="4408" level="11" /> <!-- HP Increase (3x) -->
 			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
@@ -3965,7 +3963,7 @@
 			<radius normal="15" />
 			<height normal="39" />
 		</collision>
-		<dropLists> <!-- CT2.5 -->
+		<dropLists>
 			<drop>
 				<item id="57" min="1015" max="2079" chance="70" /> <!-- Adena -->
 				<item id="397" min="1" max="1" chance="0.021" /> <!-- Reinforced Mithril Shirt -->
@@ -4040,7 +4038,7 @@
 			<radius normal="13" />
 			<height normal="44" />
 		</collision>
-		<dropLists> <!-- CT2.5 -->
+		<dropLists>
 			<drop>
 				<item id="57" min="826" max="1677" chance="70" /> <!-- Adena -->
 				<item id="71" min="1" max="1" chance="0.003" /> <!-- Flamberge -->
@@ -4115,7 +4113,7 @@
 			<radius normal="12" />
 			<height normal="27" />
 		</collision>
-		<dropLists> <!-- CT2.5 -->
+		<dropLists>
 			<drop>
 				<item id="57" min="828" max="1693" chance="70" /> <!-- Adena -->
 				<item id="354" min="1" max="1" chance="0.012" /> <!-- Chain Mail Shirt -->
