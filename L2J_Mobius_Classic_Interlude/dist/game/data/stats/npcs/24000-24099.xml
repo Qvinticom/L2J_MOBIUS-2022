@@ -1485,7 +1485,7 @@
 			<param name="MoveAroundSocial2" value="0" />
 		</parameters>
 		<race>BEAST</race>
-				<stats str="40" int="21" dex="30" wit="20" con="43" men="25">
+		<stats str="40" int="21" dex="30" wit="20" con="43" men="25">
 			<vitals hp="1227.85535" hpRegen="8.5" mp="2253.21" mpRegen="3" />
 			<speed>
 				<walk ground="25" />
@@ -1511,7 +1511,7 @@
 			<param name="MoveAroundSocial2" value="0" />
 		</parameters>
 		<race>UNDEAD</race>
-				<stats str="40" int="21" dex="30" wit="20" con="43" men="25">
+		<stats str="40" int="21" dex="30" wit="20" con="43" men="25">
 			<vitals hp="1227.85535" hpRegen="8.5" mp="2253.21" mpRegen="3" />
 			<speed>
 				<walk ground="60" />
@@ -1565,7 +1565,7 @@
 			<param name="MoveAroundSocial2" value="0" />
 		</parameters>
 		<race>ETC</race> <!-- TODO: Magic Creatures -->
-				<stats str="40" int="21" dex="30" wit="20" con="43" men="25">
+		<stats str="40" int="21" dex="30" wit="20" con="43" men="25">
 			<vitals hp="1620.4119125" hpRegen="8.5" mp="2412.51" mpRegen="3" />
 			<speed>
 				<walk ground="30" />
@@ -2078,7 +2078,7 @@
 	<npc id="24058" level="100" type="Monster" name="Vampire Warrior">
 		<race>UNDEAD</race>
 		<sex>MALE</sex>
-				<stats str="40" int="21" dex="30" wit="20" con="43" men="25">
+		<stats str="40" int="21" dex="30" wit="20" con="43" men="25">
 			<vitals hp="1782710.269425" hpRegen="9.5" mp="29693.143" mpRegen="3.3" />
 			<attack physical="38999" magical="27961" random="30" critical="4.75" accuracy="4.75" attackSpeed="250" type="SWORD" range="40" distance="80" width="120" />
 			<defence physical="3421" magical="1985" />
@@ -2103,7 +2103,7 @@
 	<npc id="24059" level="100" type="Monster" name="Vampire Rogue">
 		<race>UNDEAD</race>
 		<sex>MALE</sex>
-				<stats str="40" int="21" dex="30" wit="20" con="43" men="25">
+		<stats str="40" int="21" dex="30" wit="20" con="43" men="25">
 			<vitals hp="1782710.269425" hpRegen="9.5" mp="29693.143" mpRegen="3.3" />
 			<attack physical="38999" magical="27961" random="30" critical="4.75" accuracy="4.75" attackSpeed="250" type="SWORD" range="40" distance="80" width="120" />
 			<defence physical="3421" magical="1985" />
@@ -2129,7 +2129,7 @@
 		<race>UNDEAD</race>
 		<sex>MALE</sex>
 		<equipment rhand="47898" />
-				<stats str="40" int="21" dex="30" wit="20" con="43" men="25">
+		<stats str="40" int="21" dex="30" wit="20" con="43" men="25">
 			<vitals hp="1782710.269425" hpRegen="9.5" mp="29693.143" mpRegen="3.3" />
 			<attack physical="38999" magical="27961" random="30" critical="4.75" accuracy="4.75" attackSpeed="250" type="SWORD" range="40" distance="80" width="120" />
 			<defence physical="3421" magical="1985" />
@@ -2153,7 +2153,7 @@
 	<npc id="24061" level="100" type="Monster" name="Vampire Wizard">
 		<race>UNDEAD</race>
 		<sex>FEMALE</sex>
-				<stats str="79" int="34" dex="42" wit="66" con="75" men="12">
+		<stats str="79" int="34" dex="42" wit="66" con="75" men="12">
 			<vitals hp="1782710.269425" hpRegen="9.5" mp="29693.143" mpRegen="3.3" />
 			<attack physical="38999" magical="27961" random="30" critical="4.75" accuracy="4.75" attackSpeed="250" type="SWORD" range="40" distance="80" width="120" />
 			<defence physical="3421" magical="1985" />
@@ -2279,7 +2279,7 @@
 	<npc id="24066" level="100" type="Monster" name="Cannon">
 		<race>ETC</race>
 		<sex>MALE</sex>
-				<stats str="40" int="21" dex="30" wit="20" con="43" men="25">
+		<stats str="40" int="21" dex="30" wit="20" con="43" men="25">
 			<vitals hp="1013894.916045" hpRegen="9.5" mp="78477.226" mpRegen="3.3" />
 			<attack physical="38999" magical="27961" random="30" critical="4.75" accuracy="4.75" attackSpeed="250" type="SWORD" range="40" distance="80" width="120" />
 			<defence physical="3421" magical="1985" />
