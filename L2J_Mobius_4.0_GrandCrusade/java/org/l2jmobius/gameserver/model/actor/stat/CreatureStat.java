@@ -16,6 +16,7 @@
  */
 package org.l2jmobius.gameserver.model.actor.stat;
 
+import java.util.Collections;
 import java.util.Deque;
 import java.util.EnumMap;
 import java.util.EnumSet;
@@ -887,25 +888,11 @@ public class CreatureStat
 	 */
 	public void recalculateStats(boolean broadcast)
 	{
-		_lock.writeLock().lock();
-		
 		// Copy old data before wiping it out
-		final Map<Stat, Double> adds;
-		final Map<Stat, Double> muls;
-		if (broadcast)
-		{
-			adds = new EnumMap<>(_statsAdd);
-			muls = new EnumMap<>(_statsMul);
-		}
-		else
-		{
-			adds = null;
-			muls = null;
-		}
+		final Map<Stat, Double> adds = !broadcast ? Collections.emptyMap() : new EnumMap<>(_statsAdd);
+		final Map<Stat, Double> muls = !broadcast ? Collections.emptyMap() : new EnumMap<>(_statsMul);
 		
-		// Set of Stat that changed.
-		Set<Stat> changed = null;
-		
+		_lock.writeLock().lock();
 		try
 		{
 			// Wipe all the data
@@ -987,36 +974,32 @@ public class CreatureStat
 			}
 			_attackSpeedMultiplier = Formulas.calcAtkSpdMultiplier(_creature);
 			_mAttackSpeedMultiplier = Formulas.calcMAtkSpdMultiplier(_creature);
-			
-			if (broadcast && (adds != null) && (muls != null)) // adds and muls cannot be null when broadcast is true, but Eclipse throws warning bellow.
-			{
-				// Calculate the difference between old and new stats
-				changed = new HashSet<>();
-				for (Stat stat : Stat.values())
-				{
-					if ((_statsAdd.containsKey(stat) ? _statsAdd.get(stat).doubleValue() : stat.getResetAddValue()) != (adds.containsKey(stat) ? adds.get(stat).doubleValue() : stat.getResetAddValue()))
-					{
-						changed.add(stat);
-					}
-					else if ((_statsMul.containsKey(stat) ? _statsMul.get(stat).doubleValue() : stat.getResetMulValue()) != (muls.containsKey(stat) ? muls.get(stat).doubleValue() : stat.getResetMulValue()))
-					{
-						changed.add(stat);
-					}
-				}
-			}
 		}
 		finally
 		{
 			_lock.writeLock().unlock();
 		}
 		
-		if ((changed != null) && !changed.isEmpty())
-		{
-			_creature.broadcastModifiedStats(changed);
-		}
-		
 		// Notify recalculation to child classes
 		onRecalculateStats(broadcast);
+		
+		if (broadcast)
+		{
+			// Calculate the difference between old and new stats
+			final Set<Stat> changed = new HashSet<>();
+			for (Stat stat : Stat.values())
+			{
+				if (_statsAdd.getOrDefault(stat, stat.getResetAddValue()) != adds.getOrDefault(stat, stat.getResetAddValue()))
+				{
+					changed.add(stat);
+				}
+				else if (_statsMul.getOrDefault(stat, stat.getResetMulValue()) != muls.getOrDefault(stat, stat.getResetMulValue()))
+				{
+					changed.add(stat);
+				}
+			}
+			_creature.broadcastModifiedStats(changed);
+		}
 	}
 	
 	protected void onRecalculateStats(boolean broadcast)
