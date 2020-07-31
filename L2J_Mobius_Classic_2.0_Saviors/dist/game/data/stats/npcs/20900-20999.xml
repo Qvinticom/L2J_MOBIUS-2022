@@ -4104,7 +4104,9 @@
 			<param name="MoveAroundSocial1" value="0" />
 			<param name="MoveAroundSocial2" value="0" />
 			<minions name="Privates">
-				<npc id="21073" count="1" respawnTime="0" weightPoint="1" />
+				<npc id="20978" count="2" respawnTime="0" weightPoint="1" />
+				<npc id="20979" count="2" respawnTime="0" weightPoint="1" />
+				<npc id="21073" count="2" respawnTime="0" weightPoint="1" />
 			</minions>
 			<param name="SoulShot" value="100" />
 			<param name="SoulShotRate" value="10" />
@@ -4509,6 +4511,11 @@
 			<param name="SpiritShotRate" value="5" />
 			<param name="LongRangeGuardRate" value="5" />
 			<skill name="PhysicalSpecial" id="4073" level="7" /> <!-- Stun -->
+			<minions name="Privates">
+				<npc id="20984" count="2" respawnTime="0" weightPoint="1" />
+				<npc id="20985" count="2" respawnTime="0" weightPoint="1" />
+				<npc id="21074" count="2" respawnTime="0" weightPoint="1" />
+			</minions>
 		</parameters>
 		<race>DIVINE</race>
 		<sex>MALE</sex>
@@ -4537,7 +4544,7 @@
 		<shots shotChance="30" spiritChance="30" />
 		<exCrtEffect>false</exCrtEffect>
 		<sNpcPropHpRate>2</sNpcPropHpRate>
-		<ai aggroRange="500" clanHelpRange="400">
+		<ai aggroRange="500" clanHelpRange="400" isAggressive="true">
 			<clanList>
 				<clan>TOWER_GUARD</clan>
 			</clanList>

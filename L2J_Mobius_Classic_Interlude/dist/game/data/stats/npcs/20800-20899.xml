@@ -697,7 +697,7 @@
 		<shots shotChance="30" spiritChance="30" />
 		<exCrtEffect>false</exCrtEffect>
 		<sNpcPropHpRate>3</sNpcPropHpRate>
-		<ai aggroRange="500" clanHelpRange="400">
+		<ai aggroRange="500" clanHelpRange="400" isAggressive="true">
 			<clanList>
 				<clan>TOWER_GHOST</clan>
 			</clanList>
@@ -756,7 +756,7 @@
 		<shots shotChance="30" spiritChance="30" />
 		<exCrtEffect>false</exCrtEffect>
 		<sNpcPropHpRate>3</sNpcPropHpRate>
-		<ai type="BALANCED" aggroRange="500" clanHelpRange="400">
+		<ai type="BALANCED" aggroRange="500" clanHelpRange="400" isAggressive="true">
 			<clanList>
 				<clan>HALLATE</clan>
 			</clanList>
@@ -829,7 +829,7 @@
 		<shots shotChance="30" spiritChance="30" />
 		<exCrtEffect>false</exCrtEffect>
 		<sNpcPropHpRate>3</sNpcPropHpRate>
-		<ai type="BALANCED" aggroRange="500" clanHelpRange="400">
+		<ai type="BALANCED" aggroRange="500" clanHelpRange="400" isAggressive="true">
 			<clanList>
 				<clan>TOWER_GHOST</clan>
 			</clanList>
@@ -882,7 +882,7 @@
 		<shots shotChance="30" spiritChance="30" />
 		<exCrtEffect>false</exCrtEffect>
 		<sNpcPropHpRate>3</sNpcPropHpRate>
-		<ai type="ARCHER" aggroRange="500" clanHelpRange="400" dodge="15">
+		<ai type="ARCHER" aggroRange="500" clanHelpRange="400" dodge="15" isAggressive="true">
 			<clanList>
 				<clan>TOWER_GHOST</clan>
 			</clanList>
@@ -931,7 +931,7 @@
 		<shots shotChance="30" spiritChance="30" />
 		<exCrtEffect>false</exCrtEffect>
 		<sNpcPropHpRate>3</sNpcPropHpRate>
-		<ai aggroRange="500" clanHelpRange="300">
+		<ai aggroRange="500" clanHelpRange="300" isAggressive="true">
 			<clanList>
 				<clan>TOWER_GHOST</clan>
 			</clanList>
@@ -986,7 +986,7 @@
 		<shots shotChance="30" spiritChance="30" />
 		<exCrtEffect>false</exCrtEffect>
 		<sNpcPropHpRate>3</sNpcPropHpRate>
-		<ai aggroRange="500" clanHelpRange="400">
+		<ai aggroRange="500" clanHelpRange="400" isAggressive="true">
 			<clanList>
 				<clan>TOWER_GHOST</clan>
 			</clanList>
@@ -1038,7 +1038,7 @@
 		<shots shotChance="30" spiritChance="30" />
 		<exCrtEffect>false</exCrtEffect>
 		<sNpcPropHpRate>4</sNpcPropHpRate>
-		<ai aggroRange="500" clanHelpRange="400">
+		<ai aggroRange="500" clanHelpRange="400" isAggressive="true">
 			<clanList>
 				<clan>HALLATE</clan>
 			</clanList>
@@ -1112,7 +1112,7 @@
 		<shots shotChance="30" spiritChance="30" />
 		<exCrtEffect>false</exCrtEffect>
 		<sNpcPropHpRate>3</sNpcPropHpRate>
-		<ai type="BALANCED" aggroRange="500" clanHelpRange="400">
+		<ai type="BALANCED" aggroRange="500" clanHelpRange="400" isAggressive="true">
 			<clanList>
 				<clan>HALLATE</clan>
 			</clanList>
@@ -1185,7 +1185,7 @@
 		<shots shotChance="30" spiritChance="30" />
 		<exCrtEffect>false</exCrtEffect>
 		<sNpcPropHpRate>3</sNpcPropHpRate>
-		<ai aggroRange="500" clanHelpRange="400">
+		<ai aggroRange="500" clanHelpRange="400" isAggressive="true">
 			<clanList>
 				<clan>TOWER_GHOST</clan>
 			</clanList>
@@ -1238,7 +1238,7 @@
 		<shots shotChance="30" spiritChance="30" />
 		<exCrtEffect>false</exCrtEffect>
 		<sNpcPropHpRate>3</sNpcPropHpRate>
-		<ai aggroRange="500" clanHelpRange="400">
+		<ai aggroRange="500" clanHelpRange="400" isAggressive="true">
 			<clanList>
 				<clan>HALLATE</clan>
 			</clanList>
@@ -1301,7 +1301,7 @@
 		<shots shotChance="30" spiritChance="30" />
 		<exCrtEffect>false</exCrtEffect>
 		<sNpcPropHpRate>3</sNpcPropHpRate>
-		<ai type="ARCHER" aggroRange="500" clanHelpRange="400" dodge="15">
+		<ai type="ARCHER" aggroRange="500" clanHelpRange="400" dodge="15" isAggressive="true">
 			<clanList>
 				<clan>TOWER_GHOST</clan>
 			</clanList>
@@ -1361,7 +1361,7 @@
 		<shots shotChance="30" spiritChance="30" />
 		<exCrtEffect>false</exCrtEffect>
 		<sNpcPropHpRate>4</sNpcPropHpRate>
-		<ai aggroRange="500" clanHelpRange="400">
+		<ai aggroRange="500" clanHelpRange="400" isAggressive="true">
 			<clanList>
 				<clan>HALLATE</clan>
 			</clanList>
@@ -1431,7 +1431,7 @@
 		<shots shotChance="30" spiritChance="30" />
 		<exCrtEffect>false</exCrtEffect>
 		<sNpcPropHpRate>4</sNpcPropHpRate>
-		<ai aggroRange="500" clanHelpRange="400">
+		<ai aggroRange="500" clanHelpRange="400" isAggressive="true">
 			<clanList>
 				<clan>TOWER_GUARD</clan>
 			</clanList>
@@ -1489,7 +1489,7 @@
 		<shots shotChance="30" spiritChance="30" />
 		<exCrtEffect>false</exCrtEffect>
 		<sNpcPropHpRate>4</sNpcPropHpRate>
-		<ai type="BALANCED" aggroRange="500" clanHelpRange="400">
+		<ai type="BALANCED" aggroRange="500" clanHelpRange="400" isAggressive="true">
 			<clanList>
 				<clan>HALLATE</clan>
 			</clanList>
@@ -1553,7 +1553,7 @@
 		<shots shotChance="30" spiritChance="30" />
 		<exCrtEffect>false</exCrtEffect>
 		<sNpcPropHpRate>4</sNpcPropHpRate>
-		<ai aggroRange="500" clanHelpRange="400">
+		<ai aggroRange="500" clanHelpRange="400" isAggressive="true">
 			<clanList>
 				<clan>TOWER_GUARD</clan>
 			</clanList>
@@ -1622,7 +1622,7 @@
 		<shots shotChance="30" spiritChance="30" />
 		<exCrtEffect>false</exCrtEffect>
 		<sNpcPropHpRate>4</sNpcPropHpRate>
-		<ai aggroRange="500" clanHelpRange="400">
+		<ai aggroRange="500" clanHelpRange="400" isAggressive="true">
 			<clanList>
 				<clan>HALLATE</clan>
 			</clanList>
@@ -1702,7 +1702,7 @@
 		<shots shotChance="30" spiritChance="30" />
 		<exCrtEffect>false</exCrtEffect>
 		<sNpcPropHpRate>4</sNpcPropHpRate>
-		<ai aggroRange="500" clanHelpRange="400">
+		<ai aggroRange="500" clanHelpRange="400" isAggressive="true">
 			<clanList>
 				<clan>HALLATE</clan>
 			</clanList>
@@ -1786,7 +1786,7 @@
 		<shots shotChance="30" spiritChance="30" />
 		<exCrtEffect>false</exCrtEffect>
 		<sNpcPropHpRate>3</sNpcPropHpRate>
-		<ai type="ARCHER" aggroRange="500" clanHelpRange="400" dodge="15">
+		<ai type="ARCHER" aggroRange="500" clanHelpRange="400" dodge="15" isAggressive="true">
 			<clanList>
 				<clan>TOWER_GUARD</clan>
 			</clanList>
@@ -1844,7 +1844,7 @@
 		<shots shotChance="30" spiritChance="30" />
 		<exCrtEffect>false</exCrtEffect>
 		<sNpcPropHpRate>4</sNpcPropHpRate>
-		<ai aggroRange="500" clanHelpRange="400">
+		<ai aggroRange="500" clanHelpRange="400" isAggressive="true">
 			<clanList>
 				<clan>TOWER_GUARD</clan>
 			</clanList>
@@ -1918,7 +1918,7 @@
 		<shots shotChance="30" spiritChance="30" />
 		<exCrtEffect>false</exCrtEffect>
 		<sNpcPropHpRate>5</sNpcPropHpRate>
-		<ai type="MAGE" aggroRange="500" clanHelpRange="400">
+		<ai type="MAGE" aggroRange="500" clanHelpRange="400" isAggressive="true">
 			<clanList>
 				<clan>TOWER_GUARD</clan>
 			</clanList>
@@ -1991,7 +1991,7 @@
 		<shots shotChance="30" spiritChance="30" />
 		<exCrtEffect>false</exCrtEffect>
 		<sNpcPropHpRate>5</sNpcPropHpRate>
-		<ai type="BALANCED" aggroRange="500" clanHelpRange="400">
+		<ai type="BALANCED" aggroRange="500" clanHelpRange="400" isAggressive="true">
 			<clanList>
 				<clan>TOWER_GUARD</clan>
 			</clanList>
@@ -2050,7 +2050,7 @@
 		<shots shotChance="30" spiritChance="30" />
 		<exCrtEffect>false</exCrtEffect>
 		<sNpcPropHpRate>4</sNpcPropHpRate>
-		<ai aggroRange="500" clanHelpRange="400">
+		<ai aggroRange="500" clanHelpRange="400" isAggressive="true">
 			<clanList>
 				<clan>TOWER_GUARD</clan>
 			</clanList>
@@ -2108,7 +2108,7 @@
 		<shots shotChance="30" spiritChance="30" />
 		<exCrtEffect>false</exCrtEffect>
 		<sNpcPropHpRate>5</sNpcPropHpRate>
-		<ai aggroRange="500" clanHelpRange="400">
+		<ai aggroRange="500" clanHelpRange="400" isAggressive="true">
 			<clanList>
 				<clan>TOWER_GUARD</clan>
 			</clanList>

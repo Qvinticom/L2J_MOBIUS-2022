@@ -2665,7 +2665,7 @@
 		<shots shotChance="30" spiritChance="30" />
 		<exCrtEffect>false</exCrtEffect>
 		<sNpcPropHpRate>4</sNpcPropHpRate>
-		<ai aggroRange="500" clanHelpRange="400">
+		<ai aggroRange="500" clanHelpRange="400" isAggressive="true">
 			<clanList>
 				<clan>HALLATE</clan>
 			</clanList>
@@ -2748,7 +2748,7 @@
 		<shots shotChance="30" spiritChance="30" />
 		<exCrtEffect>false</exCrtEffect>
 		<sNpcPropHpRate>4</sNpcPropHpRate>
-		<ai aggroRange="500" clanHelpRange="400">
+		<ai aggroRange="500" clanHelpRange="400" isAggressive="true">
 			<clanList>
 				<clan>TOWER_GUARD</clan>
 			</clanList>
@@ -2805,7 +2805,7 @@
 		<shots shotChance="30" spiritChance="30" />
 		<exCrtEffect>false</exCrtEffect>
 		<sNpcPropHpRate>4</sNpcPropHpRate>
-		<ai type="BALANCED" aggroRange="500" clanHelpRange="400">
+		<ai type="BALANCED" aggroRange="500" clanHelpRange="400" isAggressive="true">
 			<clanList>
 				<clan>TOWER_GUARD</clan>
 			</clanList>
@@ -2879,7 +2879,7 @@
 		<shots shotChance="30" spiritChance="30" />
 		<exCrtEffect>false</exCrtEffect>
 		<sNpcPropHpRate>4</sNpcPropHpRate>
-		<ai type="ARCHER" aggroRange="500" clanHelpRange="400" dodge="15">
+		<ai type="ARCHER" aggroRange="500" clanHelpRange="400" dodge="15" isAggressive="true">
 			<clanList>
 				<clan>TOWER_GUARD</clan>
 			</clanList>
@@ -2932,7 +2932,7 @@
 		<shots shotChance="30" spiritChance="30" />
 		<exCrtEffect>false</exCrtEffect>
 		<sNpcPropHpRate>5</sNpcPropHpRate>
-		<ai type="BALANCED" aggroRange="500" clanHelpRange="400">
+		<ai type="BALANCED" aggroRange="500" clanHelpRange="400" isAggressive="true">
 			<clanList>
 				<clan>TOWER_GUARD</clan>
 			</clanList>
@@ -3003,7 +3003,7 @@
 		<shots shotChance="30" spiritChance="30" />
 		<exCrtEffect>false</exCrtEffect>
 		<sNpcPropHpRate>5</sNpcPropHpRate>
-		<ai type="MAGE" aggroRange="500" clanHelpRange="400">
+		<ai type="MAGE" aggroRange="500" clanHelpRange="400" isAggressive="true">
 			<clanList>
 				<clan>TOWER_GUARD</clan>
 			</clanList>
@@ -3083,7 +3083,7 @@
 		<shots shotChance="30" spiritChance="30" />
 		<exCrtEffect>false</exCrtEffect>
 		<sNpcPropHpRate>5</sNpcPropHpRate>
-		<ai aggroRange="500" clanHelpRange="400">
+		<ai aggroRange="500" clanHelpRange="400" isAggressive="true">
 			<clanList>
 				<clan>TOWER_GUARD</clan>
 			</clanList>
@@ -3139,7 +3139,7 @@
 		<shots shotChance="30" spiritChance="30" />
 		<exCrtEffect>false</exCrtEffect>
 		<sNpcPropHpRate>5</sNpcPropHpRate>
-		<ai aggroRange="500" clanHelpRange="400">
+		<ai aggroRange="500" clanHelpRange="400" isAggressive="true">
 			<clanList>
 				<clan>TOWER_GUARD</clan>
 			</clanList>
@@ -3209,7 +3209,7 @@
 		<shots shotChance="30" spiritChance="30" />
 		<exCrtEffect>false</exCrtEffect>
 		<sNpcPropHpRate>5</sNpcPropHpRate>
-		<ai aggroRange="500" clanHelpRange="400">
+		<ai aggroRange="500" clanHelpRange="400" isAggressive="true">
 			<clanList>
 				<clan>TOWER_GUARD</clan>
 			</clanList>
@@ -3268,7 +3268,7 @@
 		<shots shotChance="30" spiritChance="30" />
 		<exCrtEffect>false</exCrtEffect>
 		<sNpcPropHpRate>5</sNpcPropHpRate>
-		<ai aggroRange="500" clanHelpRange="400">
+		<ai aggroRange="500" clanHelpRange="400" isAggressive="true">
 			<clanList>
 				<clan>TOWER_GUARD</clan>
 			</clanList>
@@ -3324,7 +3324,7 @@
 		<shots shotChance="30" spiritChance="30" />
 		<exCrtEffect>false</exCrtEffect>
 		<sNpcPropHpRate>5</sNpcPropHpRate>
-		<ai type="BALANCED" aggroRange="500" clanHelpRange="400">
+		<ai type="BALANCED" aggroRange="500" clanHelpRange="400" isAggressive="true">
 			<clanList>
 				<clan>TOWER_GUARD</clan>
 			</clanList>
@@ -3397,7 +3397,7 @@
 		<shots shotChance="30" spiritChance="30" />
 		<exCrtEffect>false</exCrtEffect>
 		<sNpcPropHpRate>5</sNpcPropHpRate>
-		<ai type="MAGE" aggroRange="500" clanHelpRange="400">
+		<ai type="MAGE" aggroRange="500" clanHelpRange="400" isAggressive="true">
 			<clanList>
 				<clan>TOWER_GUARD</clan>
 			</clanList>
@@ -3571,6 +3571,10 @@
 			<param name="SpiritShotRate" value="5" />
 			<param name="LongRangeGuardRate" value="5" />
 			<skill name="PhysicalSpecial" id="4073" level="6" /> <!-- Stun -->
+			<minions name="Privates">
+				<npc id="21076" count="2" respawnTime="0" weightPoint="1" />
+				<npc id="21077" count="2" respawnTime="0" weightPoint="1" />
+			</minions>
 		</parameters>
 		<race>UNDEAD</race>
 		<sex>MALE</sex>
@@ -3603,7 +3607,7 @@
 		<shots shotChance="30" spiritChance="30" />
 		<exCrtEffect>false</exCrtEffect>
 		<sNpcPropHpRate>2</sNpcPropHpRate>
-		<ai aggroRange="500" clanHelpRange="200">
+		<ai aggroRange="500" clanHelpRange="200" isAggressive="true">
 			<clanList>
 				<clan>HALLATE</clan>
 			</clanList>
@@ -3772,6 +3776,10 @@
 			<param name="SpiritShotRate" value="5" />
 			<param name="LongRangeGuardRate" value="5" />
 			<skill name="SelfRangeDDMagic" id="4072" level="7" /> <!-- Stun -->
+			<minions name="Privates">
+				<npc id="21079" count="2" respawnTime="0" weightPoint="1" />
+				<npc id="21080" count="2" respawnTime="0" weightPoint="1" />
+			</minions>
 		</parameters>
 		<race>DEMONIC</race>
 		<sex>MALE</sex>
@@ -3803,7 +3811,7 @@
 		<shots shotChance="30" spiritChance="30" />
 		<exCrtEffect>false</exCrtEffect>
 		<sNpcPropHpRate>2</sNpcPropHpRate>
-		<ai aggroRange="500" clanHelpRange="200">
+		<ai aggroRange="500" clanHelpRange="200" isAggressive="true">
 			<clanList>
 				<clan>HALLATE</clan>
 			</clanList>
@@ -3974,6 +3982,10 @@
 			<param name="SpiritShotRate" value="5" />
 			<param name="LongRangeGuardRate" value="5" />
 			<skill name="DeBuff" id="4118" level="8" /> <!-- Paralysis -->
+			<minions name="Privates">
+				<npc id="21082" count="2" respawnTime="0" weightPoint="1" />
+				<npc id="21083" count="2" respawnTime="0" weightPoint="1" />
+			</minions>
 		</parameters>
 		<race>DIVINE</race>
 		<sex>MALE</sex>
@@ -4004,7 +4016,7 @@
 		<shots shotChance="30" spiritChance="30" />
 		<exCrtEffect>false</exCrtEffect>
 		<sNpcPropHpRate>2</sNpcPropHpRate>
-		<ai aggroRange="500" clanHelpRange="200">
+		<ai aggroRange="500" clanHelpRange="200" isAggressive="true">
 			<clanList>
 				<clan>TOWER_GUARD</clan>
 			</clanList>
