@@ -356,7 +356,7 @@ public class Q336_CoinsOfMagic extends Quest
 		final int npcId = npc.getNpcId();
 		if ((npcId == HARIT_LIZARDMAN_MATRIARCH) || (npcId == HARIT_LIZARDMAN_SHAMAN))
 		{
-			if ((cond == 2) && (Rnd.get(100) < (10.0 * npc.getTemplate().getBaseHpConsumeRate())))
+			if ((cond == 2) && (Rnd.get(1000) < 63))
 			{
 				st.giveItems(KALDIS_COIN, 1);
 				st.set("cond", "3");
