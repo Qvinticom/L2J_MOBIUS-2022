@@ -285,7 +285,7 @@ public class Q242_PossessorOfAPreciousSoul extends Quest
 					case ANGEL_CORPSE:
 						if (cond == 4)
 						{
-							npc.deleteMe();
+							npc.doDie(npc);
 							int hair = st.getInt("angel");
 							hair++;
 							
