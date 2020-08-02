@@ -189,6 +189,9 @@
 	<admin command="admin_edit_npc" accessLevel="90" />
 	<admin command="admin_save_npc" accessLevel="90" />
 	<admin command="admin_show_skilllist_npc" accessLevel="80" />
+	<admin command="admin_edit_skill_npc" accessLevel="80" />
+	<admin command="admin_del_skill_npc" accessLevel="80" />
+	<admin command="admin_add_skill_npc" accessLevel="80" />
 	<admin command="admin_show_droplist" accessLevel="80" />
 	<admin command="admin_edit_drop" accessLevel="90" />
 	<admin command="admin_add_drop" accessLevel="90" />
