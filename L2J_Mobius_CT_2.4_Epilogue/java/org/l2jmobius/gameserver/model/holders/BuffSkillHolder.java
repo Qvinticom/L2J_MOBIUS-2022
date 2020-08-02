@@ -22,13 +22,15 @@ package org.l2jmobius.gameserver.model.holders;
 public class BuffSkillHolder
 {
 	private final int _id;
+	private final int _level;
 	private final int _price;
 	private final String _type;
 	private final String _description;
 	
-	public BuffSkillHolder(int id, int price, String type, String description)
+	public BuffSkillHolder(int id, int level, int price, String type, String description)
 	{
 		_id = id;
+		_level = level;
 		_price = price;
 		_type = type;
 		_description = description;
@@ -37,6 +39,11 @@ public class BuffSkillHolder
 	public int getId()
 	{
 		return _id;
+	}
+	
+	public int getLevel()
+	{
+		return _level;
 	}
 	
 	public int getPrice()

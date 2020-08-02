@@ -107,7 +107,7 @@ public class SchemeBufferInstance extends Npc
 			{
 				for (int skillId : SchemeBufferTable.getInstance().getScheme(player.getObjectId(), schemeName))
 				{
-					final Skill skill = SkillData.getInstance().getSkill(skillId, SkillData.getInstance().getMaxLevel(skillId));
+					final Skill skill = SkillData.getInstance().getSkill(skillId, SchemeBufferTable.getInstance().getAvailableBuff(skillId).getLevel());
 					if (buffSummons)
 					{
 						if (player.getPet() != null)

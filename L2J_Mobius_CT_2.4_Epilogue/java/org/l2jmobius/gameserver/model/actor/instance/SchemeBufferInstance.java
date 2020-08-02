@@ -119,7 +119,7 @@ public class SchemeBufferInstance extends Npc
 			{
 				for (int skillId : SchemeBufferTable.getInstance().getScheme(player.getObjectId(), schemeName))
 				{
-					SkillData.getInstance().getSkill(skillId, SkillData.getInstance().getMaxLevel(skillId)).applyEffects(this, target);
+					SkillData.getInstance().getSkill(skillId, SchemeBufferTable.getInstance().getAvailableBuff(skillId).getLevel()).applyEffects(this, target);
 				}
 			}
 		}

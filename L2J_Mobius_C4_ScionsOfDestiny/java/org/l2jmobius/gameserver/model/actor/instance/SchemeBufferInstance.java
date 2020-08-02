@@ -116,7 +116,7 @@ public class SchemeBufferInstance extends FolkInstance
 			{
 				for (int skillId : SchemeBufferTable.getInstance().getScheme(player.getObjectId(), schemeName))
 				{
-					SkillTable.getInstance().getSkill(skillId, SkillTable.getInstance().getMaxLevel(skillId, 1)).getEffects(this, target);
+					SkillTable.getInstance().getSkill(skillId, SchemeBufferTable.getInstance().getAvailableBuff(skillId).getLevel()).getEffects(this, target);
 				}
 			}
 		}

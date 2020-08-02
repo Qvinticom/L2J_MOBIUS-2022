@@ -115,7 +115,7 @@ public class SchemeBufferTable
 					
 					final NamedNodeMap attrs = c.getAttributes();
 					final int skillId = Integer.parseInt(attrs.getNamedItem("id").getNodeValue());
-					_availableBuffs.put(skillId, new BuffSkillHolder(skillId, Integer.parseInt(attrs.getNamedItem("price").getNodeValue()), category, attrs.getNamedItem("desc").getNodeValue()));
+					_availableBuffs.put(skillId, new BuffSkillHolder(skillId, Integer.parseInt(attrs.getNamedItem("level").getNodeValue()), Integer.parseInt(attrs.getNamedItem("price").getNodeValue()), category, attrs.getNamedItem("desc").getNodeValue()));
 				}
 			}
 		}
