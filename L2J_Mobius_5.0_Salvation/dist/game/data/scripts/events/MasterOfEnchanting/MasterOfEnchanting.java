@@ -87,11 +87,11 @@ public class MasterOfEnchanting extends LongTimeEvent
 		else if (event.equalsIgnoreCase("buy_scroll_24"))
 		{
 			final long curTime = System.currentTimeMillis();
-			final String value = player.getVariables().getString("MasterOfEnchanting");
+			final String value = player.getVariables().getString("MasterOfEnchanting", "");
 			final long reuse = value.equals("") ? 0 : Long.parseLong(value);
 			if (player.getCreateDate().after(getEventPeriod().getStartDate()))
 			{
-				return "32599-bidth.htm";
+				return "32599-birth.htm";
 			}
 			
 			if (curTime > reuse)
