@@ -96,7 +96,7 @@ public class TerritoryManagers extends AbstractNpcAI
 			{
 				// L2J Custom for minimum badges required.
 				final NpcHtmlMessage html = new NpcHtmlMessage(npc.getObjectId());
-				html.setFile(player, "data/scripts/ai/npc/TerritoryManagers/36490-04.html");
+				html.setFile(player, "data/scripts/ai/others/TerritoryManagers/36490-04.html");
 				html.replace("%badge%", String.valueOf(TerritoryWarManager.MINTWBADGEFORNOBLESS));
 				player.sendPacket(html);
 				break;
@@ -188,20 +188,20 @@ public class TerritoryManagers extends AbstractNpcAI
 				final NpcHtmlMessage html = new NpcHtmlMessage(npc.getObjectId());
 				if (TerritoryWarManager.getInstance().isTWInProgress() || (reward[0] == 0))
 				{
-					html.setFile(player, "data/scripts/ai/npc/TerritoryManagers/reward-0a.html");
+					html.setFile(player, "data/scripts/ai/others/TerritoryManagers/reward-0a.html");
 				}
 				else if (reward[0] != territoryId)
 				{
-					html.setFile(player, "data/scripts/ai/npc/TerritoryManagers/reward-0b.html");
+					html.setFile(player, "data/scripts/ai/others/TerritoryManagers/reward-0b.html");
 					html.replace("%castle%", CastleManager.getInstance().getCastleById(reward[0] - 80).getName());
 				}
 				else if (reward[1] == 0)
 				{
-					html.setFile(player, "data/scripts/ai/npc/TerritoryManagers/reward-0a.html");
+					html.setFile(player, "data/scripts/ai/others/TerritoryManagers/reward-0a.html");
 				}
 				else
 				{
-					html.setFile(player, "data/scripts/ai/npc/TerritoryManagers/reward-1.html");
+					html.setFile(player, "data/scripts/ai/others/TerritoryManagers/reward-1.html");
 					html.replace("%castle%", CastleManager.getInstance().getCastleById(reward[0] - 80).getName());
 					html.replace("%badge%", String.valueOf(reward[1]));
 					html.replace("%adena%", String.valueOf(reward[1] * 5000));
@@ -223,20 +223,20 @@ public class TerritoryManagers extends AbstractNpcAI
 				final NpcHtmlMessage html = new NpcHtmlMessage(npc.getObjectId());
 				if (TerritoryWarManager.getInstance().isTWInProgress() || (reward[0] == 0))
 				{
-					html.setFile(player, "data/scripts/ai/npc/TerritoryManagers/reward-0a.html");
+					html.setFile(player, "data/scripts/ai/others/TerritoryManagers/reward-0a.html");
 				}
 				else if (reward[0] != territoryId)
 				{
-					html.setFile(player, "data/scripts/ai/npc/TerritoryManagers/reward-0b.html");
+					html.setFile(player, "data/scripts/ai/others/TerritoryManagers/reward-0b.html");
 					html.replace("%castle%", CastleManager.getInstance().getCastleById(reward[0] - 80).getName());
 				}
 				else if (reward[1] == 0)
 				{
-					html.setFile(player, "data/scripts/ai/npc/TerritoryManagers/reward-0a.html");
+					html.setFile(player, "data/scripts/ai/others/TerritoryManagers/reward-0a.html");
 				}
 				else
 				{
-					html.setFile(player, "data/scripts/ai/npc/TerritoryManagers/reward-2.html");
+					html.setFile(player, "data/scripts/ai/others/TerritoryManagers/reward-2.html");
 					player.addItem("ReceiveRewards", badgeId, reward[1], npc, true);
 					player.addAdena("ReceiveRewards", reward[1] * 5000, npc, true);
 					TerritoryWarManager.getInstance().resetReward(player);
