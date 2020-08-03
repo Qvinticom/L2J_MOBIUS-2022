@@ -178,7 +178,11 @@ public class ArmorSetData implements IXmlReader
 	 */
 	public ArmorSet getSet(int setId)
 	{
-		return _armorSets[setId];
+		if (_armorSets.length >= setId)
+		{
+			return _armorSets[setId];
+		}
+		return null;
 	}
 	
 	/**

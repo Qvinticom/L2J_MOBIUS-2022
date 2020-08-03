@@ -176,7 +176,7 @@ public class ArmorSetData implements IXmlReader
 	 */
 	public boolean isArmorSet(int chestId)
 	{
-		return _armorSets[chestId] != null;
+		return (_armorSets.length >= chestId) && (_armorSets[chestId] != null);
 	}
 	
 	/**
@@ -186,7 +186,11 @@ public class ArmorSetData implements IXmlReader
 	 */
 	public ArmorSet getSet(int chestId)
 	{
-		return _armorSets[chestId];
+		if (_armorSets.length >= chestId)
+		{
+			return _armorSets[chestId];
+		}
+		return null;
 	}
 	
 	/**
