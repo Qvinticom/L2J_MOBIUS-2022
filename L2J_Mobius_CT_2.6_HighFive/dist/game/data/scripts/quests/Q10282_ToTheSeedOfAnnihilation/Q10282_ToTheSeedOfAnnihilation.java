@@ -63,6 +63,7 @@ public class Q10282_ToTheSeedOfAnnihilation extends Quest
 			}
 			case "32734-02.htm":
 			{
+				giveAdena(player, 212182, true);
 				addExpAndSp(player, 1148480, 99110);
 				qs.exitQuest(false);
 				break;
