@@ -386,7 +386,7 @@ public class Valakas extends AbstractNpcAI
 	{
 		((Attackable) npc).setCanReturnToSpawnPoint(false);
 		npc.setRandomWalking(false);
-		npc.disableCoreAI(true);
+		// npc.disableCoreAI(true);
 		return super.onSpawn(npc);
 	}
 	
