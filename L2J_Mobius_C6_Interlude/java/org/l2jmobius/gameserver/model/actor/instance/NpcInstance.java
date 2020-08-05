@@ -880,26 +880,9 @@ public class NpcInstance extends Creature
 			
 			final NpcHtmlMessage html = new NpcHtmlMessage(0);
 			final StringBuilder html1 = new StringBuilder("<html><body>");
-			html1.append("<br><center><font color=\"LEVEL\">[Combat Stats]</font></center>");
+			html1.append("<br><center><font color=\"LEVEL\">[Drop Info]</font>");
 			html1.append("<table border=0 width=\"100%\">");
-			html1.append("<tr><td>Max.HP</td><td>" + (int) (getMaxHp() / getStat().calcStat(Stat.MAX_HP, 1, this, null)) + "*" + (int) getStat().calcStat(Stat.MAX_HP, 1, this, null) + "</td><td>Max.MP</td><td>" + getMaxMp() + "</td></tr>");
-			html1.append("<tr><td>P.Atk.</td><td>" + getPAtk(null) + "</td><td>M.Atk.</td><td>" + getMAtk(null, null) + "</td></tr>");
-			html1.append("<tr><td>P.Def.</td><td>" + getPDef(null) + "</td><td>M.Def.</td><td>" + getMDef(null, null) + "</td></tr>");
-			html1.append("<tr><td>Accuracy</td><td>" + getAccuracy() + "</td><td>Evasion</td><td>" + getEvasionRate(null) + "</td></tr>");
-			html1.append("<tr><td>Critical</td><td>" + getCriticalHit(null, null) + "</td><td>Speed</td><td>" + getRunSpeed() + "</td></tr>");
-			html1.append("<tr><td>Atk.Speed</td><td>" + getPAtkSpd() + "</td><td>Cast.Speed</td><td>" + getMAtkSpd() + "</td></tr>");
-			html1.append("<tr><td>Race</td><td>" + getTemplate().getRace() + "</td><td></td><td></td></tr>");
-			html1.append("</table>");
 			
-			html1.append("<br><center><font color=\"LEVEL\">[Basic Stats]</font></center>");
-			html1.append("<table border=0 width=\"100%\">");
-			html1.append("<tr><td>STR</td><td>" + getSTR() + "</td><td>DEX</td><td>" + getDEX() + "</td><td>CON</td><td>" + getCON() + "</td></tr>");
-			html1.append("<tr><td>INT</td><td>" + getINT() + "</td><td>WIT</td><td>" + getWIT() + "</td><td>MEN</td><td>" + getMEN() + "</td></tr>");
-			html1.append("</table>");
-			
-			html1.append("<br><center><font color=\"LEVEL\">[Drop Info]</font><br>");
-			html1.append("Rates legend: <font color=\"ff0000\">50%+</font> <font color=\"00ff00\">30%+</font> <font color=\"0000ff\">less than 30%</font>");
-			html1.append("<table border=0 width=\"100%\">");
 			for (DropCategory cat : getTemplate().getDropData())
 			{
 				final List<DropData> drops = cat.getAllDrops();
@@ -912,26 +895,14 @@ public class NpcInstance extends Creature
 							continue;
 						}
 						
-						final String name = ItemTable.getInstance().getTemplate(drop.getItemId()).getName();
-						if (drop.getChance() >= 600000)
-						{
-							html1.append("<tr><td><font color=\"ff0000\">" + name + "</font></td><td>" + (drop.isQuestDrop() ? "Quest" : cat.isSweep() ? "Sweep" : "Drop") + "</td></tr>");
-						}
-						else if (drop.getChance() >= 300000)
-						{
-							html1.append("<tr><td><font color=\"00ff00\">" + name + "</font></td><td>" + (drop.isQuestDrop() ? "Quest" : cat.isSweep() ? "Sweep" : "Drop") + "</td></tr>");
-						}
-						else
-						{
-							html1.append("<tr><td><font color=\"0000ff\">" + name + "</font></td><td>" + (drop.isQuestDrop() ? "Quest" : cat.isSweep() ? "Sweep" : "Drop") + "</td></tr>");
-						}
+						final Item item = ItemTable.getInstance().getTemplate(drop.getItemId());
+						html1.append("<tr><td><br><img src=\"" + item.getIcon() + "\" width=32 height=32>" + (drop.isQuestDrop() ? "Quest" : cat.isSweep() ? "<font color=\"0040FF\">" : "<font color=\"FFFFFF\">") + item.getName() + "</font> </td><td>" + (drop.getChance() / 10000.0) + "%</td><td>" + (drop.isQuestDrop() ? "Quest" : cat.isSweep() ? "Sweep" : "Drop") + "</td></tr>");
 					}
 				}
 			}
 			
 			html1.append("</table>");
 			html1.append("</body></html>");
-			
 			html.setHtml(html1.toString());
 			player.sendPacket(html);
 		}

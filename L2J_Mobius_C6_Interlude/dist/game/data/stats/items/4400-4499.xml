@@ -2,6 +2,7 @@
 <list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../xsd/items.xsd">
 	<item id="4400" type="EtcItem" name="White Fabric">
 		<!-- A large piece of white cloth given by Magister Hanellin. Hanellin will tell you its purpose. -->
+		<set name="icon" val="icon.etc_piece_of_cloth_white_i00" />
 		<set name="item_type" val="none" />
 		<set name="consume_type" val="stackable" />
 		<set name="crystal_type" val="none" />
@@ -10,6 +11,7 @@
 	</item>
 	<item id="4401" type="EtcItem" name="Green Dimensional Stone">
 		<!-- Activates a Dimensional Vortex. Allows you to move to the first floor of the Tower of Insolence. -->
+		<set name="icon" val="icon.etc_gem_green_i00" />
 		<set name="item_type" val="none" />
 		<set name="weight" val="10" />
 		<set name="consume_type" val="stackable" />
@@ -18,6 +20,7 @@
 	</item>
 	<item id="4402" type="EtcItem" name="Blue Dimensional Stone">
 		<!-- Activates a Dimensional Vortex. Allows you to move to the fifth floor of the Tower of Insolence. -->
+		<set name="icon" val="icon.etc_gem_blue_i00" />
 		<set name="item_type" val="none" />
 		<set name="weight" val="10" />
 		<set name="consume_type" val="stackable" />
@@ -26,6 +29,7 @@
 	</item>
 	<item id="4403" type="EtcItem" name="Red Dimensional Stone">
 		<!-- Activates a Dimensional Vortex. Allows you to move to the 10th floor of the Tower of Insolence. -->
+		<set name="icon" val="icon.etc_gem_red_i00" />
 		<set name="item_type" val="none" />
 		<set name="weight" val="10" />
 		<set name="consume_type" val="stackable" />
@@ -34,6 +38,7 @@
 	</item>
 	<item id="4404" type="EtcItem" name="Green Dimensional Stone - Shard">
 		<!-- A broken shard of the green Dimensional Stone. Collect these and take them to Researcher Kaplan. -->
+		<set name="icon" val="icon.etc_broken_crystal_green_i00" />
 		<set name="item_type" val="none" />
 		<set name="weight" val="10" />
 		<set name="consume_type" val="stackable" />
@@ -41,6 +46,7 @@
 	</item>
 	<item id="4405" type="EtcItem" name="Blue Dimensional Stone - Shard">
 		<!-- A broken shard of the blue Dimensional Stone. Collect these and take them to Researcher Euclie. -->
+		<set name="icon" val="icon.etc_broken_crystal_blue_i00" />
 		<set name="item_type" val="none" />
 		<set name="weight" val="10" />
 		<set name="consume_type" val="stackable" />
@@ -48,6 +54,7 @@
 	</item>
 	<item id="4406" type="EtcItem" name="Red Dimensional Stone - Shard">
 		<!-- A broken shard of the red Dimensional Stone. Collect these and take them to Researcher Pitagon. -->
+		<set name="icon" val="icon.etc_broken_crystal_red_i00" />
 		<set name="item_type" val="none" />
 		<set name="weight" val="10" />
 		<set name="consume_type" val="stackable" />
@@ -55,12 +62,14 @@
 	</item>
 	<item id="4407" type="EtcItem" name="Bill of Iason Heine">
 		<!-- Its value is 1000 adena, redeemable by Roman of the Blacksmith Guild in Innadril. You can use it to buy various ingredients. -->
+		<set name="icon" val="icon.etc_paper_black_i00" />
 		<set name="item_type" val="none" />
 		<set name="consume_type" val="stackable" />
 		<set name="crystal_type" val="none" />
 	</item>
 	<item id="4408" type="EtcItem" name="Musical Score - Theme of Love">
 		<!-- Posthumously released musical score of Gillian. If you take it to Maestro Melody, you can have an echo crystal made. -->
+		<set name="icon" val="icon.etc_musical_note_i01" />
 		<set name="item_type" val="none" />
 		<set name="weight" val="20" />
 		<set name="consume_type" val="stackable" />
@@ -68,6 +77,7 @@
 	</item>
 	<item id="4409" type="EtcItem" name="Musical Score - Theme of Battle">
 		<!-- The musical score for the Battle March of Flames. If you take it to Maestro Melody, you can have an echo crystal made. -->
+		<set name="icon" val="icon.etc_musical_note_i01" />
 		<set name="item_type" val="none" />
 		<set name="weight" val="20" />
 		<set name="consume_type" val="stackable" />
@@ -75,6 +85,7 @@
 	</item>
 	<item id="4410" type="EtcItem" name="Musical Score - Theme of Journey">
 		<!-- A musical score composed by Troubadour Swan. If you take it to Maestro Melody, you can have an echo crystal made. -->
+		<set name="icon" val="icon.etc_musical_note_i01" />
 		<set name="item_type" val="none" />
 		<set name="weight" val="20" />
 		<set name="consume_type" val="stackable" />
@@ -82,6 +93,7 @@
 	</item>
 	<item id="4411" type="EtcItem" name="Echo Crystal - Theme of Journey">
 		<!-- An echo crystal that plays the theme music of a journey. May only be used once. -->
+		<set name="icon" val="icon.etc_echo_crystal_i00" />
 		<set name="item_type" val="none" />
 		<set name="weight" val="10" />
 		<set name="consume_type" val="stackable" />
@@ -89,6 +101,7 @@
 	</item>
 	<item id="4412" type="EtcItem" name="Echo Crystal - Theme of Battle">
 		<!-- An echo crystal that plays the theme music of a battle. -->
+		<set name="icon" val="icon.etc_echo_crystal_i01" />
 		<set name="item_type" val="none" />
 		<set name="weight" val="10" />
 		<set name="consume_type" val="stackable" />
@@ -96,6 +109,7 @@
 	</item>
 	<item id="4413" type="EtcItem" name="Echo Crystal - Theme of Love">
 		<!-- An echo crystal that plays the theme music of love. May only be used once. -->
+		<set name="icon" val="icon.etc_echo_crystal_i02" />
 		<set name="item_type" val="none" />
 		<set name="weight" val="10" />
 		<set name="consume_type" val="stackable" />
@@ -103,6 +117,7 @@
 	</item>
 	<item id="4414" type="EtcItem" name="Echo Crystal - Theme of Solitude">
 		<!-- An echo crystal that plays the theme music of solitude. May only be used once. -->
+		<set name="icon" val="icon.etc_echo_crystal_i03" />
 		<set name="item_type" val="none" />
 		<set name="weight" val="10" />
 		<set name="consume_type" val="stackable" />
@@ -110,6 +125,7 @@
 	</item>
 	<item id="4415" type="EtcItem" name="Echo Crystal - Theme of the Feast">
 		<!-- An echo crystal that plays the theme music of a feast. May only be used once. -->
+		<set name="icon" val="icon.etc_echo_crystal_i04" />
 		<set name="item_type" val="none" />
 		<set name="weight" val="10" />
 		<set name="consume_type" val="stackable" />
@@ -117,6 +133,7 @@
 	</item>
 	<item id="4416" type="EtcItem" name="Echo Crystal - Theme of Celebration">
 		<!-- An echo crystal that plays the theme music of a celebration. May only be used once. -->
+		<set name="icon" val="icon.etc_echo_crystal_i00" />
 		<set name="item_type" val="none" />
 		<set name="weight" val="10" />
 		<set name="consume_type" val="stackable" />
@@ -124,6 +141,7 @@
 	</item>
 	<item id="4417" type="EtcItem" name="Echo Crystal - Theme of Comedy">
 		<!-- An echo crystal that plays the theme music of a comedy. May only be used once. -->
+		<set name="icon" val="icon.etc_echo_crystal_i01" />
 		<set name="item_type" val="none" />
 		<set name="weight" val="10" />
 		<set name="consume_type" val="stackable" />
@@ -131,6 +149,7 @@
 	</item>
 	<item id="4418" type="EtcItem" name="Musical Score - Theme of Celebration">
 		<!-- A musical score containing the theme music of a celebration. If you take it to Maestro Melody, you can have an echo crystal made. -->
+		<set name="icon" val="icon.etc_musical_note_i01" />
 		<set name="item_type" val="none" />
 		<set name="weight" val="20" />
 		<set name="consume_type" val="stackable" />
@@ -138,6 +157,7 @@
 	</item>
 	<item id="4419" type="EtcItem" name="Musical Score - Theme of Comedy">
 		<!-- A musical score containing the theme music of a comedy. If you take it to Maestro Melody, you can have an echo crystal made. -->
+		<set name="icon" val="icon.etc_musical_note_i01" />
 		<set name="item_type" val="none" />
 		<set name="weight" val="20" />
 		<set name="consume_type" val="stackable" />
@@ -145,6 +165,7 @@
 	</item>
 	<item id="4420" type="EtcItem" name="Musical Score - Theme of Solitude">
 		<!-- A musical score composed by Musician Nanarin. If you take it to Maestro Melody, you can have an echo crystal made. -->
+		<set name="icon" val="icon.etc_musical_note_i01" />
 		<set name="item_type" val="none" />
 		<set name="weight" val="20" />
 		<set name="consume_type" val="stackable" />
@@ -152,6 +173,7 @@
 	</item>
 	<item id="4421" type="EtcItem" name="Musical Score - Theme of the Feast">
 		<!-- A musical score composed by Musician Barbado. If you take it to Maestro Melody, you can have an echo crystal made. -->
+		<set name="icon" val="icon.etc_musical_note_i02" />
 		<set name="item_type" val="none" />
 		<set name="weight" val="20" />
 		<set name="consume_type" val="stackable" />
@@ -159,6 +181,7 @@
 	</item>
 	<item id="4422" type="EtcItem" name="Dragon Bugle of Wind">
 		<!-- A bugle used to play the strider of the Wind. -->
+		<set name="icon" val="icon.etc_bugle_i00" />
 		<set name="item_type" val="pet_collar" />
 		<set name="weight" val="20" />
 		<set name="consume_type" val="normal" />
@@ -166,6 +189,7 @@
 	</item>
 	<item id="4423" type="EtcItem" name="Dragon Bugle of Star">
 		<!-- A bugle used to play the strider of a Star. -->
+		<set name="icon" val="icon.etc_bugle_i00" />
 		<set name="item_type" val="pet_collar" />
 		<set name="weight" val="20" />
 		<set name="consume_type" val="normal" />
@@ -173,6 +197,7 @@
 	</item>
 	<item id="4424" type="EtcItem" name="Dragon Bugle of Dusk">
 		<!-- A bugle used to play the strider of the Dusk. -->
+		<set name="icon" val="icon.etc_bugle_i00" />
 		<set name="item_type" val="pet_collar" />
 		<set name="weight" val="20" />
 		<set name="consume_type" val="normal" />
@@ -180,6 +205,7 @@
 	</item>
 	<item id="4425" type="EtcItem" name="Penitent's Manacles">
 		<!-- The heavy manacles used to summon a Sin Eater. Summoning the Sin Eater consumes all the summoner's Exp. The Sin Eater must be fed Food for Wolves. -->
+		<set name="icon" val="icon.etc_leash_i00" />
 		<set name="item_type" val="pet_collar" />
 		<set name="weight" val="800" />
 		<set name="consume_type" val="normal" />
@@ -191,6 +217,7 @@
 	</item>
 	<item id="4426" type="EtcItem" name="Manacles of Penitent">
 		<!-- Having consumed your sins, the Sin Eater has disappeared, leaving you with this ordinary pair of manacles. To repeat this quest, take them back to the Black Judge. -->
+		<set name="icon" val="icon.etc_leash_i00" />
 		<set name="item_type" val="none" />
 		<set name="weight" val="50" />
 		<set name="consume_type" val="normal" />
@@ -200,6 +227,7 @@
 	</item>
 	<item id="4427" type="EtcItem" name="Alligator Leather Belt">
 		<!-- An Alligator Leather Belt designed and created by Verche, a master leather craftsman. -->
+		<set name="icon" val="icon.etc_prefect_belt_i00" />
 		<set name="item_type" val="none" />
 		<set name="weight" val="20" />
 		<set name="consume_type" val="normal" />
@@ -207,6 +235,7 @@
 	</item>
 	<item id="4428" type="EtcItem" name="Blue Alligator Leather Belt">
 		<!-- An Alligator Leather Belt designed and created by Verche, a master leather craftsman. It is made from a rare blue type of Leather. -->
+		<set name="icon" val="icon.etc_prefect_belt_i00" />
 		<set name="item_type" val="none" />
 		<set name="weight" val="20" />
 		<set name="consume_type" val="normal" />
@@ -214,6 +243,7 @@
 	</item>
 	<item id="4429" type="EtcItem" name="Bejeweled Leather Belt">
 		<!-- An Alligator Leather Belt designed and created by Verche, a master leather craftsman. It is made from a Leather that is studded with rare jewels. -->
+		<set name="icon" val="icon.etc_prefect_belt_i00" />
 		<set name="item_type" val="none" />
 		<set name="weight" val="20" />
 		<set name="consume_type" val="normal" />
@@ -221,6 +251,7 @@
 	</item>
 	<item id="4430" type="EtcItem" name="Alligator Leather Purse">
 		<!-- An Alligator Leather Purse designed and created by Verche, a master leather craftsman. -->
+		<set name="icon" val="icon.etc_handbag_i00" />
 		<set name="item_type" val="none" />
 		<set name="weight" val="20" />
 		<set name="consume_type" val="normal" />
@@ -228,6 +259,7 @@
 	</item>
 	<item id="4431" type="EtcItem" name="Blue Alligator Leather Purse">
 		<!-- An Alligator Leather Purse designed and created by Verche, a master leather craftsman. It is made from a rare blue type of Leather. -->
+		<set name="icon" val="icon.etc_handbag_i00" />
 		<set name="item_type" val="none" />
 		<set name="weight" val="20" />
 		<set name="consume_type" val="normal" />
@@ -235,6 +267,7 @@
 	</item>
 	<item id="4432" type="EtcItem" name="Bejeweled Purse">
 		<!-- An Alligator Leather Purse designed and created by Verche, a master leather craftsman. It is made of Leather studded with rare jewels. -->
+		<set name="icon" val="icon.etc_handbag_i00" />
 		<set name="item_type" val="none" />
 		<set name="weight" val="20" />
 		<set name="consume_type" val="normal" />
@@ -242,6 +275,7 @@
 	</item>
 	<item id="4433" type="EtcItem" name="Elemental Stone Powder">
 		<!-- Elemental stone powder obtained from a stone statue in the Forgotten Temple. Can be sold at any store or taken to Magister Nell. -->
+		<set name="icon" val="icon.etc_powder_white_i00" />
 		<set name="item_type" val="none" />
 		<set name="weight" val="10" />
 		<set name="consume_type" val="stackable" />
@@ -249,6 +283,7 @@
 	</item>
 	<item id="4434" type="EtcItem" name="Elemental Stone Shards">
 		<!-- The shards of elemental stones obtained from stone statues in the Forgotten Temple. Can be sold at any store or taken to Magister Nell. -->
+		<set name="icon" val="icon.etc_broken_crystal_green_i00" />
 		<set name="item_type" val="none" />
 		<set name="weight" val="100" />
 		<set name="consume_type" val="stackable" />
@@ -256,6 +291,7 @@
 	</item>
 	<item id="4435" type="EtcItem" name="Elemental Stone Lump">
 		<!-- The lumps of elemental stone obtained from stone statues in the Forgotten Temple. Can be sold at any store or taken to Magister Nell. -->
+		<set name="icon" val="icon.etc_crystal_green_i00" />
 		<set name="item_type" val="none" />
 		<set name="weight" val="1000" />
 		<set name="consume_type" val="stackable" />
@@ -263,6 +299,7 @@
 	</item>
 	<item id="4436" type="EtcItem" name="Bentley's Request">
 		<!-- A request to find and bring back jade crystals from creatures such as Fline, Liele, Satyr etc. that inhabit the Enchanted Valley. -->
+		<set name="icon" val="icon.etc_piece_of_paper_gray_i00" />
 		<set name="item_type" val="quest" />
 		<set name="consume_type" val="stackable" />
 		<set name="crystal_type" val="none" />
@@ -272,6 +309,7 @@
 	</item>
 	<item id="4437" type="EtcItem" name="Carson's Request">
 		<!-- A request to recover the works of the ancient sculptor Berona from Hatar Ratmen and Vanor Silenos in the area near the Cemetery. -->
+		<set name="icon" val="icon.etc_piece_of_paper_black_i00" />
 		<set name="item_type" val="quest" />
 		<set name="consume_type" val="stackable" />
 		<set name="crystal_type" val="none" />
@@ -281,6 +319,7 @@
 	</item>
 	<item id="4438" type="EtcItem" name="Knuckle Duster Edge">
 		<!-- An essential ingredient needed by a Dwarf to make a Knuckle Duster. It can be bought from a regular store. -->
+		<set name="icon" val="icon.etc_sword_body_i00" />
 		<set name="item_type" val="material" />
 		<set name="weight" val="60" />
 		<set name="consume_type" val="stackable" />
@@ -289,6 +328,7 @@
 	</item>
 	<item id="4439" type="EtcItem" name="Avadon Shield Fragment">
 		<!-- An essential ingredient needed by a Dwarf to make an Avadon Shield. It can be bought from a regular store. -->
+		<set name="icon" val="icon.etc_plate_silver_i00" />
 		<set name="item_type" val="material" />
 		<set name="weight" val="60" />
 		<set name="consume_type" val="stackable" />
@@ -297,6 +337,7 @@
 	</item>
 	<item id="4440" type="EtcItem" name="Recipe: Knuckle Duster">
 		<!-- For Dwarves only. The recipe for a Knuckle Duster. Requires Create Item - Skill Level 5. The success rate is 100%. -->
+		<set name="icon" val="icon.etc_recipe_yellow_i00" />
 		<set name="item_type" val="recipe" />
 		<set name="weight" val="30" />
 		<set name="consume_type" val="stackable" />
@@ -305,6 +346,7 @@
 	</item>
 	<item id="4441" type="EtcItem" name="Recipe: Avadon Shield">
 		<!-- For Dwarves only. The recipe for an Avadon Shield. Requires Create Item - Skill Level 6. The success rate is 100%. -->
+		<set name="icon" val="icon.etc_recipe_red_i00" />
 		<set name="item_type" val="recipe" />
 		<set name="weight" val="30" />
 		<set name="consume_type" val="stackable" />
@@ -313,6 +355,7 @@
 	</item>
 	<item id="4442" type="EtcItem" name="Lottery Ticket">
 		<!-- A lottery ticket from Aden, redeemable at any lottery sales location. Winning numbers are posted every Saturday at 7 p.m. You can't win if you don't play! Good luck! -->
+		<set name="icon" val="icon.etc_lottery_card_i00" />
 		<set name="item_type" val="lotto" />
 		<set name="weight" val="20" />
 		<set name="consume_type" val="normal" />
@@ -320,6 +363,7 @@
 	</item>
 	<item id="4443" type="EtcItem" name="Monster Race Ticket - Single">
 		<!-- A winning ticket from the monster race. Redeemable at the cashier of the race. -->
+		<set name="icon" val="icon.etc_ticket_i00" />
 		<set name="item_type" val="race_ticket" />
 		<set name="weight" val="20" />
 		<set name="consume_type" val="normal" />
@@ -330,6 +374,7 @@
 	</item>
 	<item id="4444" type="EtcItem" name="Monster Race Ticket - Double">
 		<!-- A winning daily double ticket from the monster race. Redeemable at the cashier of the race. -->
+		<set name="icon" val="icon.etc_ticket_i00" />
 		<set name="item_type" val="race_ticket" />
 		<set name="weight" val="20" />
 		<set name="consume_type" val="normal" />
@@ -340,6 +385,7 @@
 	</item>
 	<item id="4445" type="EtcItem" name="Dye of STR (Str+1 Con-3)">
 		<!-- Dye of STR <Str+1 Con-3> - Collect and take 10 units of this magical dye to the symbol maker in town and you will receive a symbol that boosts your abilities. Can be used after completion of first class transfer and prior to completion of second class transfer by all classes. -->
+		<set name="icon" val="icon.etc_str_hena_i00" />
 		<set name="item_type" val="dye" />
 		<set name="weight" val="150" />
 		<set name="consume_type" val="stackable" />
@@ -348,6 +394,7 @@
 	</item>
 	<item id="4446" type="EtcItem" name="Dye of STR (Str+1 Dex-3)">
 		<!-- Dye of STR <Str+1 Dex-3> - Collect and take 10 units of this magical dye to the symbol maker in town and you will receive a symbol that boosts your abilities. Can be used after completion of first class transfer and prior to completion of second class transfer by all classes. -->
+		<set name="icon" val="icon.etc_str_hena_i00" />
 		<set name="item_type" val="dye" />
 		<set name="weight" val="150" />
 		<set name="consume_type" val="stackable" />
@@ -355,6 +402,7 @@
 	</item>
 	<item id="4447" type="EtcItem" name="Dye of CON (Con+1 Str-3)">
 		<!-- Dye of CON <Con+1 Str-3> - Collect and take 10 units of this magical dye to the symbol maker in town and you will receive a symbol that boosts your abilities. Can be used after completion of first class transfer and prior to completion of second class transfer by all classes. -->
+		<set name="icon" val="icon.etc_con_hena_i00" />
 		<set name="item_type" val="dye" />
 		<set name="weight" val="150" />
 		<set name="consume_type" val="stackable" />
@@ -363,6 +411,7 @@
 	</item>
 	<item id="4448" type="EtcItem" name="Dye of CON (Con+1 Dex-3)">
 		<!-- Dye of CON <Con+1 Dex-3> - Collect and take 10 units of this magical dye to the symbol maker in town and you will receive a symbol that boosts your abilities. Can be used after completion of first class transfer and prior to completion of second class transfer by all classes. -->
+		<set name="icon" val="icon.etc_con_hena_i00" />
 		<set name="item_type" val="dye" />
 		<set name="weight" val="150" />
 		<set name="consume_type" val="stackable" />
@@ -370,6 +419,7 @@
 	</item>
 	<item id="4449" type="EtcItem" name="Dye of DEX (Dex+1 Str-3)">
 		<!-- Dye of DEX <Dex+1 Str-3> - Collect and take 10 units of this magical dye to the symbol maker in town and you will receive a symbol that boosts your abilities. Can be used after completion of first class transfer and prior to completion of second class transfer by all classes. -->
+		<set name="icon" val="icon.etc_dex_hena_i00" />
 		<set name="item_type" val="dye" />
 		<set name="weight" val="150" />
 		<set name="consume_type" val="stackable" />
@@ -377,6 +427,7 @@
 	</item>
 	<item id="4450" type="EtcItem" name="Dye of DEX (Dex+1 Con-3)">
 		<!-- Dye of DEX <Dex+1 Con-3> - Collect and take 10 units of this magical dye to the symbol maker in town and you will receive a symbol that boosts your abilities. Can be used after completion of first class transfer and prior to completion of second class transfer by all classes. -->
+		<set name="icon" val="icon.etc_dex_hena_i00" />
 		<set name="item_type" val="dye" />
 		<set name="weight" val="150" />
 		<set name="consume_type" val="stackable" />
@@ -384,6 +435,7 @@
 	</item>
 	<item id="4451" type="EtcItem" name="Dye of INT (Int+1 Men-3)">
 		<!-- Dye of INT <Int+1 Men-3> - Collect and take 10 units of this magical dye to the symbol maker in town and you will receive a symbol that boosts your abilities. Can be used after completion of first class transfer and prior to completion of second class transfer by Non-Healer Mystic classes. -->
+		<set name="icon" val="icon.etc_int_hena_i00" />
 		<set name="item_type" val="dye" />
 		<set name="weight" val="150" />
 		<set name="consume_type" val="stackable" />
@@ -392,6 +444,7 @@
 	</item>
 	<item id="4452" type="EtcItem" name="Dye of INT (Int+1 Wit-3)">
 		<!-- Dye of INT <Int+1 Wit-3> - Collect and take 10 units of this magical dye to the symbol maker in town and you will receive a symbol that boosts your abilities. Can be used after completion of first class transfer and prior to completion of second class transfer by the Fighter and Non-Healer Mystic classes. -->
+		<set name="icon" val="icon.etc_int_hena_i00" />
 		<set name="item_type" val="dye" />
 		<set name="weight" val="150" />
 		<set name="consume_type" val="stackable" />
@@ -400,6 +453,7 @@
 	</item>
 	<item id="4453" type="EtcItem" name="Dye of MEN (Men+1 Int-3)">
 		<!-- Dye of MEN <Men+1 Int-3> - Collect and take 10 units of this magical dye to the symbol maker in town and you will receive a symbol that boosts your abilities. Can be used after completion of first class transfer and prior to completion of second class transfer by Non-Healer Mystic classes. -->
+		<set name="icon" val="icon.etc_men_hena_i00" />
 		<set name="item_type" val="dye" />
 		<set name="weight" val="150" />
 		<set name="consume_type" val="stackable" />
@@ -407,6 +461,7 @@
 	</item>
 	<item id="4454" type="EtcItem" name="Dye of MEN (Men+1 Wit-3)">
 		<!-- Dye of MEN <Men+1 Wit-3> - Collect and take 10 units of this magical dye to the symbol maker in town and you will receive a symbol that boosts your abilities. Can be used after completion of first class transfer and prior to completion of second class transfer by all Mystic classes. -->
+		<set name="icon" val="icon.etc_men_hena_i00" />
 		<set name="item_type" val="dye" />
 		<set name="weight" val="150" />
 		<set name="consume_type" val="stackable" />
@@ -414,6 +469,7 @@
 	</item>
 	<item id="4455" type="EtcItem" name="Dye of WIT (Wit+1 Int-3)">
 		<!-- Dye of WIT <Wit+1 Int-3> - Collect and take 10 units of this magical dye to the symbol maker in town and you will receive a symbol that boosts your abilities. Can be used after completion of first class transfer and prior to completion of second class transfer by the Fighter and Non-Healer Mystic classes. -->
+		<set name="icon" val="icon.etc_wit_hena_i00" />
 		<set name="item_type" val="dye" />
 		<set name="weight" val="150" />
 		<set name="consume_type" val="stackable" />
@@ -421,6 +477,7 @@
 	</item>
 	<item id="4456" type="EtcItem" name="Dye of WIT (Wit+1 Men-3)">
 		<!-- Dye of WIT <Wit+1 Men-3> - Collect and take 10 units of this magical dye to the symbol maker in town and you will receive a symbol that boosts your abilities. Can be used after completion of first class transfer and prior to completion of second class transfer by all Mystic classes. -->
+		<set name="icon" val="icon.etc_wit_hena_i00" />
 		<set name="item_type" val="dye" />
 		<set name="weight" val="150" />
 		<set name="consume_type" val="stackable" />
@@ -428,6 +485,7 @@
 	</item>
 	<item id="4457" type="EtcItem" name="Dye of STR (Str+1 Con-2)">
 		<!-- Dye of STR <Str+1 Con-2> - Collect and take 10 units of this magical dye to the symbol maker in town and you will receive a symbol that boosts your abilities. Can be used after completion of first class transfer and prior to completion of second class transfer by all classes. -->
+		<set name="icon" val="icon.etc_str_hena_i00" />
 		<set name="item_type" val="dye" />
 		<set name="weight" val="150" />
 		<set name="consume_type" val="stackable" />
@@ -436,6 +494,7 @@
 	</item>
 	<item id="4458" type="EtcItem" name="Dye of STR (Str+1 Dex-2)">
 		<!-- Dye of STR <Str+1 Dex-2> - Collect and take 10 units of this magical dye to the symbol maker in town and you will receive a symbol that boosts your abilities. Can be used after completion of first class transfer and prior to completion of second class transfer by all classes. -->
+		<set name="icon" val="icon.etc_str_hena_i00" />
 		<set name="item_type" val="dye" />
 		<set name="weight" val="150" />
 		<set name="consume_type" val="stackable" />
@@ -443,6 +502,7 @@
 	</item>
 	<item id="4459" type="EtcItem" name="Dye of CON (Con+1 Str-2)">
 		<!-- Dye of CON <Con+1 Str-2> - Collect and take 10 units of this magical dye to the symbol maker in town and you will receive a symbol that boosts your abilities. Can be used after completion of first class transfer and prior to completion of second class transfer by all classes. -->
+		<set name="icon" val="icon.etc_con_hena_i00" />
 		<set name="item_type" val="dye" />
 		<set name="weight" val="150" />
 		<set name="consume_type" val="stackable" />
@@ -450,6 +510,7 @@
 	</item>
 	<item id="4460" type="EtcItem" name="Dye of CON (Con+1 Dex-2)">
 		<!-- Dye of CON <Con+1 Dex-2> - Collect and take 10 units of this magical dye to the symbol maker in town and you will receive a symbol that boosts your abilities. Can be used after completion of first class transfer and prior to completion of second class transfer by all classes. -->
+		<set name="icon" val="icon.etc_con_hena_i00" />
 		<set name="item_type" val="dye" />
 		<set name="weight" val="150" />
 		<set name="consume_type" val="stackable" />
@@ -458,6 +519,7 @@
 	</item>
 	<item id="4461" type="EtcItem" name="Dye of DEX (Dex+1 Str-2)">
 		<!-- Dye of DEX <Dex+1 Str-2> - Collect and take 10 units of this magical dye to the symbol maker in town and you will receive a symbol that boosts your abilities. Can be used after completion of first class transfer and prior to completion of second class transfer by all classes. -->
+		<set name="icon" val="icon.etc_dex_hena_i00" />
 		<set name="item_type" val="dye" />
 		<set name="weight" val="150" />
 		<set name="consume_type" val="stackable" />
@@ -465,6 +527,7 @@
 	</item>
 	<item id="4462" type="EtcItem" name="Dye of DEX (Dex+1 Con-2)">
 		<!-- Dye of DEX <Dex+1 Con-2> - Collect and take 10 units of this magical dye to the symbol maker in town and you will receive a symbol that boosts your abilities. Can be used after completion of first class transfer and prior to completion of second class transfer by all classes. -->
+		<set name="icon" val="icon.etc_dex_hena_i00" />
 		<set name="item_type" val="dye" />
 		<set name="weight" val="150" />
 		<set name="consume_type" val="stackable" />
@@ -473,6 +536,7 @@
 	</item>
 	<item id="4463" type="EtcItem" name="Dye of INT (Int+1 Men-2)">
 		<!-- Dye of INT <Int+1 Men-2> - Collect and take 10 units of this magical dye to the symbol maker in town and you will receive a symbol that boosts your abilities. Can be used after completion of first class transfer and prior to completion of second class transfer by Non-Healer Mystic classes. -->
+		<set name="icon" val="icon.etc_int_hena_i00" />
 		<set name="item_type" val="dye" />
 		<set name="weight" val="150" />
 		<set name="consume_type" val="stackable" />
@@ -481,6 +545,7 @@
 	</item>
 	<item id="4464" type="EtcItem" name="Dye of INT (Int+1 Wit-2)">
 		<!-- Dye of INT <Int+1 Wit-2> - Collect and take 10 units of this magical dye to the symbol maker in town and you will receive a symbol that boosts your abilities. Can be used after completion of first class transfer and prior to completion of second class transfer by the Fighter and Non-Healer Mystic classes. -->
+		<set name="icon" val="icon.etc_int_hena_i00" />
 		<set name="item_type" val="dye" />
 		<set name="weight" val="150" />
 		<set name="consume_type" val="stackable" />
@@ -488,6 +553,7 @@
 	</item>
 	<item id="4465" type="EtcItem" name="Dye of MEN (Men+1 Int-2)">
 		<!-- Dye of MEN <Men+1 Int-2> - Collect and take 10 units of this magical dye to the symbol maker in town and you will receive a symbol that boosts your abilities. Can be used after completion of first class transfer and prior to completion of second class transfer by Non-Healer Mystic classes. -->
+		<set name="icon" val="icon.etc_men_hena_i00" />
 		<set name="item_type" val="dye" />
 		<set name="weight" val="150" />
 		<set name="consume_type" val="stackable" />
@@ -495,6 +561,7 @@
 	</item>
 	<item id="4466" type="EtcItem" name="Dye of MEN (Men+1 Wit-2)">
 		<!-- Dye of MEN <Men+1 Wit-2> - Collect and take 10 units of this magical dye to the symbol maker in town and you will receive a symbol that boosts your abilities. Can be used after completion of first class transfer and prior to completion of second class transfer by all Mystic classes. -->
+		<set name="icon" val="icon.etc_men_hena_i00" />
 		<set name="item_type" val="dye" />
 		<set name="weight" val="150" />
 		<set name="consume_type" val="stackable" />
@@ -503,6 +570,7 @@
 	</item>
 	<item id="4467" type="EtcItem" name="Dye of WIT (Wit+1 Int-2)">
 		<!-- Dye of WIT <Wit+1 Int-2> - Collect and take 10 units of this magical dye to the symbol maker in town and you will receive a symbol that boosts your abilities. Can be used after completion of first class transfer and prior to completion of second class transfer by the Fighter and Non-Healer Mystic classes. -->
+		<set name="icon" val="icon.etc_wit_hena_i00" />
 		<set name="item_type" val="dye" />
 		<set name="weight" val="150" />
 		<set name="consume_type" val="stackable" />
@@ -511,6 +579,7 @@
 	</item>
 	<item id="4468" type="EtcItem" name="Dye of WIT (Wit+1 Men-2)">
 		<!-- Dye of WIT <Wit+1 Men-2> - Collect and take 10 units of this magical dye to the symbol maker in town and you will receive a symbol that boosts your abilities. Can be used after completion of first class transfer and prior to completion of second class transfer by all Mystic classes. -->
+		<set name="icon" val="icon.etc_wit_hena_i00" />
 		<set name="item_type" val="dye" />
 		<set name="weight" val="150" />
 		<set name="consume_type" val="stackable" />
@@ -519,6 +588,7 @@
 	</item>
 	<item id="4469" type="EtcItem" name="Dye of STR (Str+1 Con-1)">
 		<!-- Dye of STR <Str+1 Con-1> - Collect and take 10 units of this magical dye to the symbol maker in town and you will receive a symbol that boosts your abilities. Can be used after completion of first class transfer and prior to completion of second class transfer by all classes. -->
+		<set name="icon" val="icon.etc_str_hena_i00" />
 		<set name="item_type" val="dye" />
 		<set name="weight" val="150" />
 		<set name="consume_type" val="stackable" />
@@ -527,6 +597,7 @@
 	</item>
 	<item id="4470" type="EtcItem" name="Dye of STR (Str+1 Dex-1)">
 		<!-- Dye of STR <Str+1 Dex-1> - Collect and take 10 units of this magical dye to the symbol maker in town and you will receive a symbol that boosts your abilities. Can be used after completion of first class transfer and prior to completion of second class transfer by all classes. -->
+		<set name="icon" val="icon.etc_str_hena_i00" />
 		<set name="item_type" val="dye" />
 		<set name="weight" val="150" />
 		<set name="consume_type" val="stackable" />
@@ -535,6 +606,7 @@
 	</item>
 	<item id="4471" type="EtcItem" name="Dye of CON (Con+1 Str-1)">
 		<!-- Dye of CON <Con+1 Str-1> - Collect and take 10 units of this magical dye to the symbol maker in town and you will receive a symbol that boosts your abilities. Can be used after completion of first class transfer and prior to completion of second class transfer by all classes. -->
+		<set name="icon" val="icon.etc_con_hena_i00" />
 		<set name="item_type" val="dye" />
 		<set name="weight" val="150" />
 		<set name="consume_type" val="stackable" />
@@ -543,6 +615,7 @@
 	</item>
 	<item id="4472" type="EtcItem" name="Dye of CON (Con+1 Dex-1)">
 		<!-- Dye of CON <Con+1 Dex-1> - Collect and take 10 units of this magical dye to the symbol maker in town and you will receive a symbol that boosts your abilities. Can be used after completion of first class transfer and prior to completion of second class transfer by all classes. -->
+		<set name="icon" val="icon.etc_con_hena_i00" />
 		<set name="item_type" val="dye" />
 		<set name="weight" val="150" />
 		<set name="consume_type" val="stackable" />
@@ -551,6 +624,7 @@
 	</item>
 	<item id="4473" type="EtcItem" name="Dye of DEX (Dex+1 Str-1)">
 		<!-- Dye of DEX <Dex+1 Str-1> - Collect and take 10 units of this magical dye to the symbol maker in town and you will receive a symbol that boosts your abilities. Can be used after completion of first class transfer and prior to completion of second class transfer by all classes. -->
+		<set name="icon" val="icon.etc_dex_hena_i00" />
 		<set name="item_type" val="dye" />
 		<set name="weight" val="150" />
 		<set name="consume_type" val="stackable" />
@@ -559,6 +633,7 @@
 	</item>
 	<item id="4474" type="EtcItem" name="Dye of DEX (Dex+1 Con-1)">
 		<!-- Dye of DEX <Dex+1 Con-1> - Collect and take 10 units of this magical dye to the symbol maker in town and you will receive a symbol that boosts your abilities. Can be used after completion of first class transfer and prior to completion of second class transfer by all classes. -->
+		<set name="icon" val="icon.etc_dex_hena_i00" />
 		<set name="item_type" val="dye" />
 		<set name="weight" val="150" />
 		<set name="consume_type" val="stackable" />
@@ -567,6 +642,7 @@
 	</item>
 	<item id="4475" type="EtcItem" name="Dye of INT (Int+1 Men-1)">
 		<!-- Dye of INT <Int+1 Men-1> - Collect and take 10 units of this magical dye to the symbol maker in town and you will receive a symbol that boosts your abilities. Can be used after completion of first class transfer and prior to completion of second class transfer by Non-Healer Mystic classes. -->
+		<set name="icon" val="icon.etc_int_hena_i00" />
 		<set name="item_type" val="dye" />
 		<set name="weight" val="150" />
 		<set name="consume_type" val="stackable" />
@@ -575,6 +651,7 @@
 	</item>
 	<item id="4476" type="EtcItem" name="Dye of INT (Int+1 Wit-1)">
 		<!-- Dye of INT <Int+1 Wit-1> - Collect and take 10 units of this magical dye to the symbol maker in town and you will receive a symbol that boosts your abilities. Can be used after completion of first class transfer and prior to completion of second class transfer by the Fighter and Non-Healer Mystic classes. -->
+		<set name="icon" val="icon.etc_int_hena_i00" />
 		<set name="item_type" val="dye" />
 		<set name="weight" val="150" />
 		<set name="consume_type" val="stackable" />
@@ -583,6 +660,7 @@
 	</item>
 	<item id="4477" type="EtcItem" name="Dye of MEN (Men+1 Int-1)">
 		<!-- Dye of MEN <Men+1 Int-1> - Collect and take 10 units of this magical dye to the symbol maker in town and you will receive a symbol that boosts your abilities. Can be used after completion of first class transfer and prior to completion of second class transfer by Non-Healer Mystic classes. -->
+		<set name="icon" val="icon.etc_men_hena_i00" />
 		<set name="item_type" val="dye" />
 		<set name="weight" val="150" />
 		<set name="consume_type" val="stackable" />
@@ -591,6 +669,7 @@
 	</item>
 	<item id="4478" type="EtcItem" name="Dye of MEN (Men+1 Wit-1)">
 		<!-- Dye of MEN <Men+1 Wit-1> - Collect and take 10 units of this magical dye to the symbol maker in town and you will receive a symbol that boosts your abilities. Can be used after completion of first class transfer and prior to completion of second class transfer by all Mystic classes. -->
+		<set name="icon" val="icon.etc_men_hena_i00" />
 		<set name="item_type" val="dye" />
 		<set name="weight" val="150" />
 		<set name="consume_type" val="stackable" />
@@ -599,6 +678,7 @@
 	</item>
 	<item id="4479" type="EtcItem" name="Dye of WIT (Wit+1 Int-1)">
 		<!-- Dye of WIT <Wit+1 Int-1> - Collect and take 10 units of this magical dye to the symbol maker in town and you will receive a symbol that boosts your abilities. Can be used after completion of first class transfer and prior to completion of second class transfer by the Fighter and Non-Healer Mystic classes. -->
+		<set name="icon" val="icon.etc_wit_hena_i00" />
 		<set name="item_type" val="dye" />
 		<set name="weight" val="150" />
 		<set name="consume_type" val="stackable" />
@@ -607,6 +687,7 @@
 	</item>
 	<item id="4480" type="EtcItem" name="Dye of WIT (Wit+1 Men-1)">
 		<!-- Dye of WIT <Wit+1 Men-1> - Collect and take 10 units of this magical dye to the symbol maker in town and you will receive a symbol that boosts your abilities. Can be used after completion of first class transfer and prior to completion of second class transfer by all Mystic classes. -->
+		<set name="icon" val="icon.etc_wit_hena_i00" />
 		<set name="item_type" val="dye" />
 		<set name="weight" val="150" />
 		<set name="consume_type" val="stackable" />
@@ -615,6 +696,7 @@
 	</item>
 	<item id="4481" type="EtcItem" name="Greater Dye of STR (Str+1 Con-3)">
 		<!-- Greater Dye of STR <Str+1 Con-3>. Collect and take 10 units of this type of magical dye to the symbol maker in town and you will receive a symbol that boosts your abilities tatooed onto your body. Can be used by all classes after completion of their second class transfer, and can be kept and used after the completion of the third class transfer as well. -->
+		<set name="icon" val="icon.etc_str_hena_i01" />
 		<set name="item_type" val="dye" />
 		<set name="weight" val="150" />
 		<set name="consume_type" val="stackable" />
@@ -623,6 +705,7 @@
 	</item>
 	<item id="4482" type="EtcItem" name="Greater Dye of STR (Str+1 Dex-3)">
 		<!-- Greater Dye of STR <Str+1 Dex-3>. Collect and take 10 units of this type of magical dye to the symbol maker in town and you will receive a symbol that boosts your abilities tatooed onto your body. Can be used by all classes after completion of their second class transfer, and can be kept and used after the completion of the third class transfer as well. -->
+		<set name="icon" val="icon.etc_str_hena_i01" />
 		<set name="item_type" val="dye" />
 		<set name="weight" val="150" />
 		<set name="consume_type" val="stackable" />
@@ -631,6 +714,7 @@
 	</item>
 	<item id="4483" type="EtcItem" name="Greater Dye of CON(Con+1 Str-3)">
 		<!-- Greater Dye of CON<Con+1 Str-3>. Collect and take 10 units of this type of magical dye to the symbol maker in town and you will receive a symbol that boosts your abilities tatooed onto your body. Can be used by all classes after completion of their second class transfer, and can be kept and used after the completion of the third class transfer as well. -->
+		<set name="icon" val="icon.etc_con_hena_i01" />
 		<set name="item_type" val="dye" />
 		<set name="weight" val="150" />
 		<set name="consume_type" val="stackable" />
@@ -638,6 +722,7 @@
 	</item>
 	<item id="4484" type="EtcItem" name="Greater Dye of CON(Con+1 Dex-3)">
 		<!-- Greater Dye of CON<Con+1 Str-3>. Collect and take 10 units of this type of magical dye to the symbol maker in town and you will receive a symbol that boosts your abilities tatooed onto your body. Can be used by all classes after completion of their second class transfer, and can be kept and used after the completion of the third class transfer as well. -->
+		<set name="icon" val="icon.etc_con_hena_i01" />
 		<set name="item_type" val="dye" />
 		<set name="weight" val="150" />
 		<set name="consume_type" val="stackable" />
@@ -646,6 +731,7 @@
 	</item>
 	<item id="4485" type="EtcItem" name="Greater Dye of DEX (Dex+1 Str-3)">
 		<!-- Greater Dye of DEX <Dex+1 Str-3>. Collect and take 10 units of this type of magical dye to the symbol maker in town and you will receive a symbol that boosts your abilities tatooed onto your body. Can be used by all classes after completion of their second class transfer, and can be kept and used after the completion of the third class transfer as well. -->
+		<set name="icon" val="icon.etc_dex_hena_i01" />
 		<set name="item_type" val="dye" />
 		<set name="weight" val="150" />
 		<set name="consume_type" val="stackable" />
@@ -654,6 +740,7 @@
 	</item>
 	<item id="4486" type="EtcItem" name="Greater Dye of DEX (Dex+1 Con-3)">
 		<!-- Greater Dye of DEX <Dex+1 Con-3>. Collect and take 10 units of this type of magical dye to the symbol maker in town and you will receive a symbol that boosts your abilities tatooed onto your body. Can be used by all classes after completion of their second class transfer, and can be kept and used after the completion of the third class transfer as well. -->
+		<set name="icon" val="icon.etc_dex_hena_i01" />
 		<set name="item_type" val="dye" />
 		<set name="weight" val="150" />
 		<set name="consume_type" val="stackable" />
@@ -661,6 +748,7 @@
 	</item>
 	<item id="4487" type="EtcItem" name="Greater Dye of INT (Int+1 Men-3)">
 		<!-- Greater Dye of INT <Int+1 Men-3>. Collect and take 10 units of this type of magical dye to the symbol maker in town and you will receive a symbol that boosts your abilities tatooed onto your body. Can be used by the Wizard class after completion of their second class transfer, and can be kept and used after the completion of the third class transfer as well. -->
+		<set name="icon" val="icon.etc_int_hena_i01" />
 		<set name="item_type" val="dye" />
 		<set name="weight" val="150" />
 		<set name="consume_type" val="stackable" />
@@ -668,6 +756,7 @@
 	</item>
 	<item id="4488" type="EtcItem" name="Greater Dye of INT (Int+1 Wit-3)">
 		<!-- Greater Dye of INT <Int+1 Wit-3>. Collect and take 10 units of this type of magical dye to the symbol maker in town and you will receive a symbol that boosts your abilities tatooed onto your body. Can be used by the Wizard class and the Warrior class after completion of their second class transfer, and can be kept and used after the completion of the third class transfer as well. -->
+		<set name="icon" val="icon.etc_int_hena_i01" />
 		<set name="item_type" val="dye" />
 		<set name="weight" val="150" />
 		<set name="consume_type" val="stackable" />
@@ -676,6 +765,7 @@
 	</item>
 	<item id="4489" type="EtcItem" name="Greater Dye of MEN (Men+1 Int-3)">
 		<!-- Greater Dye of MEN <Men+1 Int-3>. Collect and take 10 units of this type of magical dye to the symbol maker in town and you will receive a symbol that boosts your abilities tatooed onto your body. Can be used by the Wizard class after completion of their second class transfer, and can be kept and used after the completion of the third class transfer as well. -->
+		<set name="icon" val="icon.etc_men_hena_i01" />
 		<set name="item_type" val="dye" />
 		<set name="weight" val="150" />
 		<set name="consume_type" val="stackable" />
@@ -683,6 +773,7 @@
 	</item>
 	<item id="4490" type="EtcItem" name="Greater Dye of MEN (Men+1 Wit-3)">
 		<!-- Greater Dye of MEN <Men+1 Wit-3>. Collect and take 10 units of this type of magical dye to the symbol maker in town and you will receive a symbol that boosts your abilities tatooed onto your body. Can be used by the Wizard class and the Healer class after completion of their second class transfer, and can be kept and used after the completion of the third class transfer as well. -->
+		<set name="icon" val="icon.etc_men_hena_i01" />
 		<set name="item_type" val="dye" />
 		<set name="weight" val="150" />
 		<set name="consume_type" val="stackable" />
@@ -691,6 +782,7 @@
 	</item>
 	<item id="4491" type="EtcItem" name="Greater Dye of WIT (Wit+1 Int-3)">
 		<!-- Greater Dye of WIT <Wit+1 Int-3>. Collect and take 10 units of this type of magical dye to the symbol maker in town and you will receive a symbol that boosts your abilities tatooed onto your body. Can be used by the Warrior class and the Wizard class after completion of their second class transfer, and can be kept and used after the completion of the third class transfer as well. -->
+		<set name="icon" val="icon.etc_wit_hena_i01" />
 		<set name="item_type" val="dye" />
 		<set name="weight" val="150" />
 		<set name="consume_type" val="stackable" />
@@ -699,6 +791,7 @@
 	</item>
 	<item id="4492" type="EtcItem" name="Greater Dye of WIT (Wit+1 Men-3)">
 		<!-- Greater Dye of WIT <Wit+1 Men-3>. Collect and take 10 units of this type of magical dye to the symbol maker in town and you will receive a symbol that boosts your abilities tatooed onto your body. Can be used by the wizard class and healer class after completion of their second class transfer, and can be kept and used after the completion of the third class transfer as well. -->
+		<set name="icon" val="icon.etc_wit_hena_i01" />
 		<set name="item_type" val="dye" />
 		<set name="weight" val="150" />
 		<set name="consume_type" val="stackable" />
@@ -707,6 +800,7 @@
 	</item>
 	<item id="4493" type="EtcItem" name="Greater Dye of STR (Str+1 Con-2)">
 		<!-- Greater Dye of STR <Str+1 Con-2>. Collect and take 10 units of this type of magical dye to the symbol maker in town and you will receive a symbol that boosts your abilities tatooed onto your body. Can be used by all classes after completion of their second class transfer, and can be kept and used after the completion of the third class transfer as well. -->
+		<set name="icon" val="icon.etc_str_hena_i01" />
 		<set name="item_type" val="dye" />
 		<set name="weight" val="150" />
 		<set name="consume_type" val="stackable" />
@@ -715,6 +809,7 @@
 	</item>
 	<item id="4494" type="EtcItem" name="Greater Dye of STR (Str+1 Dex-2)">
 		<!-- Greater Dye of STR <Str+1 Dex-2>. Collect and take 10 units of this type of magical dye to the symbol maker in town and you will receive a symbol that boosts your abilities tatooed onto your body. Can be used by all classes after completion of their second class transfer, and can be kept and used after the completion of the third class transfer as well. -->
+		<set name="icon" val="icon.etc_str_hena_i01" />
 		<set name="item_type" val="dye" />
 		<set name="weight" val="150" />
 		<set name="consume_type" val="stackable" />
@@ -723,6 +818,7 @@
 	</item>
 	<item id="4495" type="EtcItem" name="Greater Dye of CON (Con+1 Str-2)">
 		<!-- Greater Dye of CON <Con+1 Str-2>. Collect and take 10 units of this type of magical dye to the symbol maker in town and you will receive a symbol that boosts your abilities tatooed onto your body. Can be used by all classes after completion of their second class transfer, and can be kept and used after the completion of the third class transfer as well. -->
+		<set name="icon" val="icon.etc_con_hena_i01" />
 		<set name="item_type" val="dye" />
 		<set name="weight" val="150" />
 		<set name="consume_type" val="stackable" />
@@ -730,6 +826,7 @@
 	</item>
 	<item id="4496" type="EtcItem" name="Greater Dye of CON (Con+1 Dex-2)">
 		<!-- Greater Dye of CON <Con+1 Dex-2>. Collect and take 10 units of this type of magical dye to the symbol maker in town and you will receive a symbol that boosts your abilities tatooed onto your body. Can be used by all classes after completion of their second class transfer, and can be kept and used after the completion of the third class transfer as well. -->
+		<set name="icon" val="icon.etc_con_hena_i01" />
 		<set name="item_type" val="dye" />
 		<set name="weight" val="150" />
 		<set name="consume_type" val="stackable" />
@@ -737,6 +834,7 @@
 	</item>
 	<item id="4497" type="EtcItem" name="Greater Dye of DEX (Dex+1 Str-2)">
 		<!-- Greater Dye of DEX <Dex+1 Str-2>. Collect and take 10 units of this type of magical dye to the symbol maker in town and you will receive a symbol that boosts your abilities tatooed onto your body. Can be used by all classes after completion of their second class transfer, and can be kept and used after the completion of the third class transfer as well. -->
+		<set name="icon" val="icon.etc_dex_hena_i01" />
 		<set name="item_type" val="dye" />
 		<set name="weight" val="150" />
 		<set name="consume_type" val="stackable" />
@@ -745,6 +843,7 @@
 	</item>
 	<item id="4498" type="EtcItem" name="Greater Dye of DEX (Dex+1 Con-2)">
 		<!-- Greater Dye of DEX <Dex+1 Con-2>. Collect and take 10 units of this type of magical dye to the symbol maker in town and you will receive a symbol that boosts your abilities tatooed onto your body. Can be used by all classes after completion of their second class transfer, and can be kept and used after the completion of the third class transfer as well. -->
+		<set name="icon" val="icon.etc_dex_hena_i01" />
 		<set name="item_type" val="dye" />
 		<set name="weight" val="150" />
 		<set name="consume_type" val="stackable" />
@@ -753,6 +852,7 @@
 	</item>
 	<item id="4499" type="EtcItem" name="Greater Dye of INT (Int+1 Men-2)">
 		<!-- Greater Dye of INT <Int+1 Men-2>. Collect and take 10 units of this type of magical dye to the symbol maker in town and you will receive a symbol that boosts your abilities tatooed onto your body. Can be used by the Wizard class after completion of their second class transfer, and can be kept and used after the completion of the third class transfer as well. -->
+		<set name="icon" val="icon.etc_int_hena_i01" />
 		<set name="item_type" val="dye" />
 		<set name="weight" val="150" />
 		<set name="consume_type" val="stackable" />

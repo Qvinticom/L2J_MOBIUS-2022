@@ -2,6 +2,7 @@
 <list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../xsd/items.xsd">
 	<item id="8400" type="EtcItem" name="Spellbook: Turn Undead">
 		<!-- Spellbook needed to learn Turn Undead. Used by Bishops and Elven Elders. -->
+		<set name="icon" val="icon.etc_spell_books_assistance_i00" />
 		<set name="item_type" val="spellbook" />
 		<set name="weight" val="120" />
 		<set name="consume_type" val="normal" />
@@ -10,6 +11,7 @@
 	</item>
 	<item id="8401" type="EtcItem" name="Spellbook: Major Heal">
 		<!-- Spellbook needed to learn Major Heal. Used by Bishops and Elven Elders. -->
+		<set name="icon" val="icon.etc_spell_books_assistance_i00" />
 		<set name="item_type" val="spellbook" />
 		<set name="weight" val="120" />
 		<set name="consume_type" val="normal" />
@@ -18,6 +20,7 @@
 	</item>
 	<item id="8402" type="EtcItem" name="Spellbook: Major Group Heal">
 		<!-- Spellbook needed to learn Major Group Heal. Used by Bishops. -->
+		<set name="icon" val="icon.etc_spell_books_assistance_i00" />
 		<set name="item_type" val="spellbook" />
 		<set name="weight" val="120" />
 		<set name="consume_type" val="normal" />
@@ -26,6 +29,7 @@
 	</item>
 	<item id="8403" type="EtcItem" name="Small Nimble Green Fish - Upper Grade">
 		<!-- Double-click to randomly transform an item. The transformed item can be used to make other items. -->
+		<set name="icon" val="icon.etc_tuna_i06" />
 		<set name="item_type" val="none" />
 		<set name="weight" val="100" />
 		<set name="consume_type" val="stackable" />
@@ -33,6 +37,7 @@
 	</item>
 	<item id="8404" type="EtcItem" name="Small Ugly Green Fish - Upper Grade">
 		<!-- Double-click to randomly transform an item. The transformed item can be used to make other items. -->
+		<set name="icon" val="icon.etc_angler_i06" />
 		<set name="item_type" val="none" />
 		<set name="weight" val="100" />
 		<set name="consume_type" val="stackable" />
@@ -40,6 +45,7 @@
 	</item>
 	<item id="8405" type="EtcItem" name="Small Pudgy Green Fish - Upper Grade">
 		<!-- Double-click to randomly transform an item. The transformed item can be used to make other items. -->
+		<set name="icon" val="icon.etc_bream_i06" />
 		<set name="item_type" val="none" />
 		<set name="weight" val="100" />
 		<set name="consume_type" val="stackable" />
@@ -47,6 +53,7 @@
 	</item>
 	<item id="8406" type="EtcItem" name="Nimble Green Fish - Upper Grade">
 		<!-- Double-click to randomly transform an item. The transformed item can be used to make other items. -->
+		<set name="icon" val="icon.etc_tuna_i06" />
 		<set name="item_type" val="none" />
 		<set name="weight" val="100" />
 		<set name="consume_type" val="stackable" />
@@ -54,6 +61,7 @@
 	</item>
 	<item id="8407" type="EtcItem" name="Ugly Green Fish - Upper Grade">
 		<!-- Double-click to randomly transform an item. The transformed item can be used to make other items. -->
+		<set name="icon" val="icon.etc_angler_i06" />
 		<set name="item_type" val="none" />
 		<set name="weight" val="100" />
 		<set name="consume_type" val="stackable" />
@@ -61,6 +69,7 @@
 	</item>
 	<item id="8408" type="EtcItem" name="Pudgy Green Fish - Upper Grade">
 		<!-- Double-click to randomly transform an item. The transformed item can be used to make other items. -->
+		<set name="icon" val="icon.etc_bream_i06" />
 		<set name="item_type" val="none" />
 		<set name="weight" val="100" />
 		<set name="consume_type" val="stackable" />
@@ -68,6 +77,7 @@
 	</item>
 	<item id="8409" type="EtcItem" name="Large Nimble Green Fish - Upper Grade">
 		<!-- Double-click to randomly transform an item. The transformed item can be used to make other items. -->
+		<set name="icon" val="icon.etc_tuna_i06" />
 		<set name="item_type" val="none" />
 		<set name="weight" val="100" />
 		<set name="consume_type" val="stackable" />
@@ -75,6 +85,7 @@
 	</item>
 	<item id="8410" type="EtcItem" name="Large Ugly Green Fish - Upper Grade">
 		<!-- Double-click to randomly transform an item. The transformed item can be used to make other items. -->
+		<set name="icon" val="icon.etc_angler_i06" />
 		<set name="item_type" val="none" />
 		<set name="weight" val="100" />
 		<set name="consume_type" val="stackable" />
@@ -82,6 +93,7 @@
 	</item>
 	<item id="8411" type="EtcItem" name="Large Pudgy Green Fish - Upper Grade">
 		<!-- Double-click to randomly transform an item. The transformed item can be used to make other items. -->
+		<set name="icon" val="icon.etc_bream_i06" />
 		<set name="item_type" val="none" />
 		<set name="weight" val="100" />
 		<set name="consume_type" val="stackable" />
@@ -90,6 +102,7 @@
 	</item>
 	<item id="8412" type="EtcItem" name="Small Jade Nimble Fish - Upper Grade">
 		<!-- Double-click to randomly transform an item. The transformed item can be used to make other items. -->
+		<set name="icon" val="icon.etc_tuna_i07" />
 		<set name="item_type" val="none" />
 		<set name="weight" val="100" />
 		<set name="consume_type" val="stackable" />
@@ -97,6 +110,7 @@
 	</item>
 	<item id="8413" type="EtcItem" name="Small Jade Ugly Fish - Upper Grade">
 		<!-- Double-click to randomly transform an item. The transformed item can be used to make other items. -->
+		<set name="icon" val="icon.etc_angler_i07" />
 		<set name="item_type" val="none" />
 		<set name="weight" val="100" />
 		<set name="consume_type" val="stackable" />
@@ -104,6 +118,7 @@
 	</item>
 	<item id="8414" type="EtcItem" name="Small Jade Fat Fish - Upper Grade">
 		<!-- Double-click to randomly transform an item. The transformed item can be used to make other items. -->
+		<set name="icon" val="icon.etc_bream_i07" />
 		<set name="item_type" val="none" />
 		<set name="weight" val="100" />
 		<set name="consume_type" val="stackable" />
@@ -112,6 +127,7 @@
 	</item>
 	<item id="8415" type="EtcItem" name="Jade Nimble Fish - Upper Grade">
 		<!-- Double-click to randomly transform an item. The transformed item can be used to make other items. -->
+		<set name="icon" val="icon.etc_tuna_i07" />
 		<set name="item_type" val="none" />
 		<set name="weight" val="100" />
 		<set name="consume_type" val="stackable" />
@@ -119,6 +135,7 @@
 	</item>
 	<item id="8416" type="EtcItem" name="Jade Ugly Fish - Upper Grade">
 		<!-- Double-click to randomly transform an item. The transformed item can be used to make other items. -->
+		<set name="icon" val="icon.etc_angler_i07" />
 		<set name="item_type" val="none" />
 		<set name="weight" val="100" />
 		<set name="consume_type" val="stackable" />
@@ -126,6 +143,7 @@
 	</item>
 	<item id="8417" type="EtcItem" name="Jade Fat Fish - Upper Grade">
 		<!-- Double-click to randomly transform an item. The transformed item can be used to make other items. -->
+		<set name="icon" val="icon.etc_bream_i07" />
 		<set name="item_type" val="none" />
 		<set name="weight" val="100" />
 		<set name="consume_type" val="stackable" />
@@ -133,6 +151,7 @@
 	</item>
 	<item id="8418" type="EtcItem" name="Large Jade Nimble Fish - Upper Grade">
 		<!-- Double-click to randomly transform an item. The transformed item can be used to make other items. -->
+		<set name="icon" val="icon.etc_tuna_i07" />
 		<set name="item_type" val="none" />
 		<set name="weight" val="100" />
 		<set name="consume_type" val="stackable" />
@@ -141,6 +160,7 @@
 	</item>
 	<item id="8419" type="EtcItem" name="Large Jade Ugly Fish - Upper Grade">
 		<!-- Double-click to randomly transform an item. The transformed item can be used to make other items. -->
+		<set name="icon" val="icon.etc_angler_i07" />
 		<set name="item_type" val="none" />
 		<set name="weight" val="100" />
 		<set name="consume_type" val="stackable" />
@@ -148,6 +168,7 @@
 	</item>
 	<item id="8420" type="EtcItem" name="Large Jade Fat Fish - Upper Grade">
 		<!-- Double-click to randomly transform an item. The transformed item can be used to make other items. -->
+		<set name="icon" val="icon.etc_bream_i07" />
 		<set name="item_type" val="none" />
 		<set name="weight" val="100" />
 		<set name="consume_type" val="stackable" />
@@ -156,6 +177,7 @@
 	</item>
 	<item id="8421" type="EtcItem" name="Small Blue Nimble Fish - Upper Grade">
 		<!-- Double-click to randomly transform an item. The transformed item can be used to make other items. -->
+		<set name="icon" val="icon.etc_tuna_i01" />
 		<set name="item_type" val="none" />
 		<set name="weight" val="100" />
 		<set name="consume_type" val="stackable" />
@@ -163,6 +185,7 @@
 	</item>
 	<item id="8422" type="EtcItem" name="Small Blue Ugly Fish - Upper Grade">
 		<!-- Double-click to randomly transform an item. The transformed item can be used to make other items. -->
+		<set name="icon" val="icon.etc_angler_i01" />
 		<set name="item_type" val="none" />
 		<set name="weight" val="100" />
 		<set name="consume_type" val="stackable" />
@@ -170,6 +193,7 @@
 	</item>
 	<item id="8423" type="EtcItem" name="Small Blue Fat Fish - Upper Grade">
 		<!-- Double-click to randomly transform an item. The transformed item can be used to make other items. -->
+		<set name="icon" val="icon.etc_bream_i01" />
 		<set name="item_type" val="none" />
 		<set name="weight" val="100" />
 		<set name="consume_type" val="stackable" />
@@ -178,6 +202,7 @@
 	</item>
 	<item id="8424" type="EtcItem" name="Blue Nimble Fish - Upper Grade">
 		<!-- Double-click to randomly transform an item. The transformed item can be used to make other items. -->
+		<set name="icon" val="icon.etc_tuna_i01" />
 		<set name="item_type" val="none" />
 		<set name="weight" val="100" />
 		<set name="consume_type" val="stackable" />
@@ -185,6 +210,7 @@
 	</item>
 	<item id="8425" type="EtcItem" name="Blue Ugly Fish - Upper Grade">
 		<!-- Double-click to randomly transform an item. The transformed item can be used to make other items. -->
+		<set name="icon" val="icon.etc_angler_i01" />
 		<set name="item_type" val="none" />
 		<set name="weight" val="100" />
 		<set name="consume_type" val="stackable" />
@@ -193,6 +219,7 @@
 	</item>
 	<item id="8426" type="EtcItem" name="Blue Fat Fish - Upper Grade">
 		<!-- Double-click to randomly transform an item. The transformed item can be used to make other items. -->
+		<set name="icon" val="icon.etc_bream_i01" />
 		<set name="item_type" val="none" />
 		<set name="weight" val="100" />
 		<set name="consume_type" val="stackable" />
@@ -200,6 +227,7 @@
 	</item>
 	<item id="8427" type="EtcItem" name="Large Blue Nimble Fish - Upper Grade">
 		<!-- Double-click to randomly transform an item. The transformed item can be used to make other items. -->
+		<set name="icon" val="icon.etc_tuna_i01" />
 		<set name="item_type" val="none" />
 		<set name="weight" val="100" />
 		<set name="consume_type" val="stackable" />
@@ -207,6 +235,7 @@
 	</item>
 	<item id="8428" type="EtcItem" name="Large Blue Ugly Fish - Upper Grade">
 		<!-- Double-click to randomly transform an item. The transformed item can be used to make other items. -->
+		<set name="icon" val="icon.etc_angler_i01" />
 		<set name="item_type" val="none" />
 		<set name="weight" val="100" />
 		<set name="consume_type" val="stackable" />
@@ -214,6 +243,7 @@
 	</item>
 	<item id="8429" type="EtcItem" name="Large Blue Fat Fish - Upper Grade">
 		<!-- Double-click to randomly transform an item. The transformed item can be used to make other items. -->
+		<set name="icon" val="icon.etc_bream_i01" />
 		<set name="item_type" val="none" />
 		<set name="weight" val="100" />
 		<set name="consume_type" val="stackable" />
@@ -221,6 +251,7 @@
 	</item>
 	<item id="8430" type="EtcItem" name="Small Yellow Nimble Fish - Upper Grade">
 		<!-- Double-click to randomly transform an item. The transformed item can be used to make other items. -->
+		<set name="icon" val="icon.etc_tuna_i02" />
 		<set name="item_type" val="none" />
 		<set name="weight" val="100" />
 		<set name="consume_type" val="stackable" />
@@ -229,6 +260,7 @@
 	</item>
 	<item id="8431" type="EtcItem" name="Small Yellow Ugly Fish - Upper Grade">
 		<!-- Double-click to randomly transform an item. The transformed item can be used to make other items. -->
+		<set name="icon" val="icon.etc_angler_i02" />
 		<set name="item_type" val="none" />
 		<set name="weight" val="100" />
 		<set name="consume_type" val="stackable" />
@@ -236,6 +268,7 @@
 	</item>
 	<item id="8432" type="EtcItem" name="Small Yellow Fat Fish - Upper Grade">
 		<!-- Double-click to randomly transform an item. The transformed item can be used to make other items. -->
+		<set name="icon" val="icon.etc_bream_i02" />
 		<set name="item_type" val="none" />
 		<set name="weight" val="100" />
 		<set name="consume_type" val="stackable" />
@@ -243,6 +276,7 @@
 	</item>
 	<item id="8433" type="EtcItem" name="Yellow Nimble Fish - Upper Grade">
 		<!-- Double-click to randomly transform an item. The transformed item can be used to make other items. -->
+		<set name="icon" val="icon.etc_tuna_i02" />
 		<set name="item_type" val="none" />
 		<set name="weight" val="100" />
 		<set name="consume_type" val="stackable" />
@@ -250,6 +284,7 @@
 	</item>
 	<item id="8434" type="EtcItem" name="Yellow Ugly Fish - Upper Grade">
 		<!-- Double-click to randomly transform an item. The transformed item can be used to make other items. -->
+		<set name="icon" val="icon.etc_angler_i02" />
 		<set name="item_type" val="none" />
 		<set name="weight" val="100" />
 		<set name="consume_type" val="stackable" />
@@ -257,6 +292,7 @@
 	</item>
 	<item id="8435" type="EtcItem" name="Yellow Fat Fish - Upper Grade">
 		<!-- Double-click to randomly transform an item. The transformed item can be used to make other items. -->
+		<set name="icon" val="icon.etc_bream_i02" />
 		<set name="item_type" val="none" />
 		<set name="weight" val="100" />
 		<set name="consume_type" val="stackable" />
@@ -264,6 +300,7 @@
 	</item>
 	<item id="8436" type="EtcItem" name="Large Yellow Nimble Fish - Upper Grade">
 		<!-- Double-click to randomly transform an item. The transformed item can be used to make other items. -->
+		<set name="icon" val="icon.etc_tuna_i02" />
 		<set name="item_type" val="none" />
 		<set name="weight" val="100" />
 		<set name="consume_type" val="stackable" />
@@ -272,6 +309,7 @@
 	</item>
 	<item id="8437" type="EtcItem" name="Large Yellow Ugly Fish - Upper Grade">
 		<!-- Double-click to randomly transform an item. The transformed item can be used to make other items. -->
+		<set name="icon" val="icon.etc_angler_i02" />
 		<set name="item_type" val="none" />
 		<set name="weight" val="100" />
 		<set name="consume_type" val="stackable" />
@@ -280,6 +318,7 @@
 	</item>
 	<item id="8438" type="EtcItem" name="Large Yellow Fat Fish - Upper Grade">
 		<!-- Double-click to randomly transform an item. The transformed item can be used to make other items. -->
+		<set name="icon" val="icon.etc_bream_i02" />
 		<set name="item_type" val="none" />
 		<set name="weight" val="100" />
 		<set name="consume_type" val="stackable" />
@@ -287,6 +326,7 @@
 	</item>
 	<item id="8439" type="EtcItem" name="Small Orange Nimble Fish - Upper Grade">
 		<!-- Double-click to randomly transform an item. The transformed item can be used to make other items. -->
+		<set name="icon" val="icon.etc_tuna_i08" />
 		<set name="item_type" val="none" />
 		<set name="weight" val="100" />
 		<set name="consume_type" val="stackable" />
@@ -295,6 +335,7 @@
 	</item>
 	<item id="8440" type="EtcItem" name="Small Orange Ugly Fish - Upper Grade">
 		<!-- Double-click to randomly transform an item. The transformed item can be used to make other items. -->
+		<set name="icon" val="icon.etc_angler_i08" />
 		<set name="item_type" val="none" />
 		<set name="weight" val="100" />
 		<set name="consume_type" val="stackable" />
@@ -303,6 +344,7 @@
 	</item>
 	<item id="8441" type="EtcItem" name="Small Orange Fat Fish - Upper Grade">
 		<!-- Double-click to randomly transform an item. The transformed item can be used to make other items. -->
+		<set name="icon" val="icon.etc_bream_i08" />
 		<set name="item_type" val="none" />
 		<set name="weight" val="100" />
 		<set name="consume_type" val="stackable" />
@@ -311,6 +353,7 @@
 	</item>
 	<item id="8442" type="EtcItem" name="Orange Nimble Fish - Upper Grade">
 		<!-- Double-click to randomly transform an item. The transformed item can be used to make other items. -->
+		<set name="icon" val="icon.etc_tuna_i08" />
 		<set name="item_type" val="none" />
 		<set name="weight" val="100" />
 		<set name="consume_type" val="stackable" />
@@ -318,6 +361,7 @@
 	</item>
 	<item id="8443" type="EtcItem" name="Orange Ugly Fish - Upper Grade">
 		<!-- Double-click to randomly transform an item. The transformed item can be used to make other items. -->
+		<set name="icon" val="icon.etc_angler_i08" />
 		<set name="item_type" val="none" />
 		<set name="weight" val="100" />
 		<set name="consume_type" val="stackable" />
@@ -325,6 +369,7 @@
 	</item>
 	<item id="8444" type="EtcItem" name="Orange Fat Fish - Upper Grade">
 		<!-- Double-click to randomly transform an item. The transformed item can be used to make other items. -->
+		<set name="icon" val="icon.etc_bream_i08" />
 		<set name="item_type" val="none" />
 		<set name="weight" val="100" />
 		<set name="consume_type" val="stackable" />
@@ -332,6 +377,7 @@
 	</item>
 	<item id="8445" type="EtcItem" name="Large Orange Nimble Fish - Upper Grade">
 		<!-- Double-click to randomly transform an item. The transformed item can be used to make other items. -->
+		<set name="icon" val="icon.etc_tuna_i08" />
 		<set name="item_type" val="none" />
 		<set name="weight" val="100" />
 		<set name="consume_type" val="stackable" />
@@ -339,6 +385,7 @@
 	</item>
 	<item id="8446" type="EtcItem" name="Large Orange Ugly Fish - Upper Grade">
 		<!-- Double-click to randomly transform an item. The transformed item can be used to make other items. -->
+		<set name="icon" val="icon.etc_angler_i08" />
 		<set name="item_type" val="none" />
 		<set name="weight" val="100" />
 		<set name="consume_type" val="stackable" />
@@ -346,6 +393,7 @@
 	</item>
 	<item id="8447" type="EtcItem" name="Large Orange Fat Fish - Upper Grade">
 		<!-- Double-click to randomly transform an item. The transformed item can be used to make other items. -->
+		<set name="icon" val="icon.etc_bream_i08" />
 		<set name="item_type" val="none" />
 		<set name="weight" val="100" />
 		<set name="consume_type" val="stackable" />
@@ -353,6 +401,7 @@
 	</item>
 	<item id="8448" type="EtcItem" name="Small Purple Nimble Fish - Upper Grade">
 		<!-- Double-click to randomly transform an item. The transformed item can be used to make other items. -->
+		<set name="icon" val="icon.etc_tuna_i04" />
 		<set name="item_type" val="none" />
 		<set name="weight" val="100" />
 		<set name="consume_type" val="stackable" />
@@ -360,6 +409,7 @@
 	</item>
 	<item id="8449" type="EtcItem" name="Small Purple Ugly Fish - Upper Grade">
 		<!-- Double-click to randomly transform an item. The transformed item can be used to make other items. -->
+		<set name="icon" val="icon.etc_angler_i04" />
 		<set name="item_type" val="none" />
 		<set name="weight" val="100" />
 		<set name="consume_type" val="stackable" />
@@ -367,6 +417,7 @@
 	</item>
 	<item id="8450" type="EtcItem" name="Small Purple Fat Fish - Upper Grade">
 		<!-- Double-click to randomly transform an item. The transformed item can be used to make other items. -->
+		<set name="icon" val="icon.etc_bream_i04" />
 		<set name="item_type" val="none" />
 		<set name="weight" val="100" />
 		<set name="consume_type" val="stackable" />
@@ -374,6 +425,7 @@
 	</item>
 	<item id="8451" type="EtcItem" name="Purple Nimble Fish - Upper Grade">
 		<!-- Double-click to randomly transform an item. The transformed item can be used to make other items. -->
+		<set name="icon" val="icon.etc_tuna_i04" />
 		<set name="item_type" val="none" />
 		<set name="weight" val="100" />
 		<set name="consume_type" val="stackable" />
@@ -381,6 +433,7 @@
 	</item>
 	<item id="8452" type="EtcItem" name="Purple Ugly Fish - Upper Grade">
 		<!-- Double-click to randomly transform an item. The transformed item can be used to make other items. -->
+		<set name="icon" val="icon.etc_angler_i04" />
 		<set name="item_type" val="none" />
 		<set name="weight" val="100" />
 		<set name="consume_type" val="stackable" />
@@ -388,6 +441,7 @@
 	</item>
 	<item id="8453" type="EtcItem" name="Purple Fat Fish - Upper Grade">
 		<!-- Double-click to randomly transform an item. The transformed item can be used to make other items. -->
+		<set name="icon" val="icon.etc_bream_i04" />
 		<set name="item_type" val="none" />
 		<set name="weight" val="100" />
 		<set name="consume_type" val="stackable" />
@@ -395,6 +449,7 @@
 	</item>
 	<item id="8454" type="EtcItem" name="Large Purple Nimble Fish - Upper Grade">
 		<!-- Double-click to randomly transform an item. The transformed item can be used to make other items. -->
+		<set name="icon" val="icon.etc_tuna_i04" />
 		<set name="item_type" val="none" />
 		<set name="weight" val="100" />
 		<set name="consume_type" val="stackable" />
@@ -402,6 +457,7 @@
 	</item>
 	<item id="8455" type="EtcItem" name="Large Purple Ugly Fish - Upper Grade">
 		<!-- Double-click to randomly transform an item. The transformed item can be used to make other items. -->
+		<set name="icon" val="icon.etc_angler_i04" />
 		<set name="item_type" val="none" />
 		<set name="weight" val="100" />
 		<set name="consume_type" val="stackable" />
@@ -409,6 +465,7 @@
 	</item>
 	<item id="8456" type="EtcItem" name="Large Purple Fat Fish - Upper Grade">
 		<!-- Double-click to randomly transform an item. The transformed item can be used to make other items. -->
+		<set name="icon" val="icon.etc_bream_i04" />
 		<set name="item_type" val="none" />
 		<set name="weight" val="100" />
 		<set name="consume_type" val="stackable" />
@@ -416,6 +473,7 @@
 	</item>
 	<item id="8457" type="EtcItem" name="Small Red Nimble Fish - Upper Grade">
 		<!-- Double-click to randomly transform an item. The transformed item can be used to make other items. -->
+		<set name="icon" val="icon.etc_tuna_i03" />
 		<set name="item_type" val="none" />
 		<set name="weight" val="100" />
 		<set name="consume_type" val="stackable" />
@@ -423,6 +481,7 @@
 	</item>
 	<item id="8458" type="EtcItem" name="Small Red Ugly Fish - Upper Grade">
 		<!-- Double-click to randomly transform an item. The transformed item can be used to make other items. -->
+		<set name="icon" val="icon.etc_angler_i03" />
 		<set name="item_type" val="none" />
 		<set name="weight" val="100" />
 		<set name="consume_type" val="stackable" />
@@ -430,6 +489,7 @@
 	</item>
 	<item id="8459" type="EtcItem" name="Small Red Fat Fish - Upper Grade">
 		<!-- Double-click to randomly transform an item. The transformed item can be used to make other items. -->
+		<set name="icon" val="icon.etc_bream_i03" />
 		<set name="item_type" val="none" />
 		<set name="weight" val="100" />
 		<set name="consume_type" val="stackable" />
@@ -438,6 +498,7 @@
 	</item>
 	<item id="8460" type="EtcItem" name="Red Nimble Fish - Upper Grade">
 		<!-- Double-click to randomly transform an item. The transformed item can be used to make other items. -->
+		<set name="icon" val="icon.etc_tuna_i03" />
 		<set name="item_type" val="none" />
 		<set name="weight" val="100" />
 		<set name="consume_type" val="stackable" />
@@ -445,6 +506,7 @@
 	</item>
 	<item id="8461" type="EtcItem" name="Red Ugly Fish - Upper Grade">
 		<!-- Double-click to randomly transform an item. The transformed item can be used to make other items. -->
+		<set name="icon" val="icon.etc_angler_i03" />
 		<set name="item_type" val="none" />
 		<set name="weight" val="100" />
 		<set name="consume_type" val="stackable" />
@@ -452,6 +514,7 @@
 	</item>
 	<item id="8462" type="EtcItem" name="Red Fat Fish - Upper Grade">
 		<!-- Double-click to randomly transform an item. The transformed item can be used to make other items. -->
+		<set name="icon" val="icon.etc_bream_i03" />
 		<set name="item_type" val="none" />
 		<set name="weight" val="100" />
 		<set name="consume_type" val="stackable" />
@@ -459,6 +522,7 @@
 	</item>
 	<item id="8463" type="EtcItem" name="Large Red Nimble Fish - Upper Grade">
 		<!-- Double-click to randomly transform an item. The transformed item can be used to make other items. -->
+		<set name="icon" val="icon.etc_tuna_i03" />
 		<set name="item_type" val="none" />
 		<set name="weight" val="100" />
 		<set name="consume_type" val="stackable" />
@@ -466,6 +530,7 @@
 	</item>
 	<item id="8464" type="EtcItem" name="Large Red Ugly Fish - Upper Grade">
 		<!-- Double-click to randomly transform an item. The transformed item can be used to make other items. -->
+		<set name="icon" val="icon.etc_angler_i03" />
 		<set name="item_type" val="none" />
 		<set name="weight" val="100" />
 		<set name="consume_type" val="stackable" />
@@ -474,6 +539,7 @@
 	</item>
 	<item id="8465" type="EtcItem" name="Large Red Fat Fish - Upper Grade">
 		<!-- Double-click to randomly transform an item. The transformed item can be used to make other items. -->
+		<set name="icon" val="icon.etc_bream_i03" />
 		<set name="item_type" val="none" />
 		<set name="weight" val="100" />
 		<set name="consume_type" val="stackable" />
@@ -481,6 +547,7 @@
 	</item>
 	<item id="8466" type="EtcItem" name="Small White Nimble Fish - Upper Grade">
 		<!-- Double-click to randomly transform an item. The transformed item can be used to make other items. -->
+		<set name="icon" val="icon.etc_tuna_i00" />
 		<set name="item_type" val="none" />
 		<set name="weight" val="100" />
 		<set name="consume_type" val="stackable" />
@@ -488,6 +555,7 @@
 	</item>
 	<item id="8467" type="EtcItem" name="Small White Ugly Fish - Upper Grade">
 		<!-- Double-click to randomly transform an item. The transformed item can be used to make other items. -->
+		<set name="icon" val="icon.etc_angler_i00" />
 		<set name="item_type" val="none" />
 		<set name="weight" val="100" />
 		<set name="consume_type" val="stackable" />
@@ -495,6 +563,7 @@
 	</item>
 	<item id="8468" type="EtcItem" name="Small White Fat Fish - Upper Grade">
 		<!-- Double-click to randomly transform an item. The transformed item can be used to make other items. -->
+		<set name="icon" val="icon.etc_bream_i00" />
 		<set name="item_type" val="none" />
 		<set name="weight" val="100" />
 		<set name="consume_type" val="stackable" />
@@ -502,6 +571,7 @@
 	</item>
 	<item id="8469" type="EtcItem" name="White Nimble Fish - Upper Grade">
 		<!-- Double-click to randomly transform an item. The transformed item can be used to make other items. -->
+		<set name="icon" val="icon.etc_tuna_i00" />
 		<set name="item_type" val="none" />
 		<set name="weight" val="100" />
 		<set name="consume_type" val="stackable" />
@@ -509,6 +579,7 @@
 	</item>
 	<item id="8470" type="EtcItem" name="White Ugly Fish - Upper Grade">
 		<!-- Double-click to randomly transform an item. The transformed item can be used to make other items. -->
+		<set name="icon" val="icon.etc_angler_i00" />
 		<set name="item_type" val="none" />
 		<set name="weight" val="100" />
 		<set name="consume_type" val="stackable" />
@@ -516,6 +587,7 @@
 	</item>
 	<item id="8471" type="EtcItem" name="White Fat Fish - Upper Grade">
 		<!-- Double-click to randomly transform an item. The transformed item can be used to make other items. -->
+		<set name="icon" val="icon.etc_bream_i00" />
 		<set name="item_type" val="none" />
 		<set name="weight" val="100" />
 		<set name="consume_type" val="stackable" />
@@ -523,6 +595,7 @@
 	</item>
 	<item id="8472" type="EtcItem" name="High Grade - Large White Nimble Fish">
 		<!-- Double-click to randomly transform an item. The transformed item can be used to make other items. -->
+		<set name="icon" val="icon.etc_tuna_i00" />
 		<set name="item_type" val="none" />
 		<set name="weight" val="100" />
 		<set name="consume_type" val="stackable" />
@@ -530,6 +603,7 @@
 	</item>
 	<item id="8473" type="EtcItem" name="Large White Ugly Fish - Upper Grade">
 		<!-- Double-click to randomly transform an item. The transformed item can be used to make other items. -->
+		<set name="icon" val="icon.etc_angler_i00" />
 		<set name="item_type" val="none" />
 		<set name="weight" val="100" />
 		<set name="consume_type" val="stackable" />
@@ -537,6 +611,7 @@
 	</item>
 	<item id="8474" type="EtcItem" name="Large White Fat Fish - Upper Grade">
 		<!-- Double-click to randomly transform an item. The transformed item can be used to make other items. -->
+		<set name="icon" val="icon.etc_bream_i00" />
 		<set name="item_type" val="none" />
 		<set name="weight" val="100" />
 		<set name="consume_type" val="stackable" />
@@ -544,6 +619,7 @@
 	</item>
 	<item id="8475" type="EtcItem" name="Small Black Nimble Fish: Upper Grade">
 		<!-- Double-click to randomly transform an item. The transformed item can be used to make other items. -->
+		<set name="icon" val="icon.etc_tuna_i05" />
 		<set name="item_type" val="none" />
 		<set name="weight" val="100" />
 		<set name="consume_type" val="stackable" />
@@ -551,6 +627,7 @@
 	</item>
 	<item id="8476" type="EtcItem" name="Small Black Ugly Fish - Upper Grade">
 		<!-- Double-click to randomly transform an item. The transformed item can be used to make other items. -->
+		<set name="icon" val="icon.etc_angler_i05" />
 		<set name="item_type" val="none" />
 		<set name="weight" val="100" />
 		<set name="consume_type" val="stackable" />
@@ -558,6 +635,7 @@
 	</item>
 	<item id="8477" type="EtcItem" name="Small Black Fat Fish - Upper Grade">
 		<!-- Double-click to randomly transform an item. The transformed item can be used to make other items. -->
+		<set name="icon" val="icon.etc_bream_i05" />
 		<set name="item_type" val="none" />
 		<set name="weight" val="100" />
 		<set name="consume_type" val="stackable" />
@@ -565,6 +643,7 @@
 	</item>
 	<item id="8478" type="EtcItem" name="Black Nimble Fish - Upper Grade">
 		<!-- Double-click to randomly transform an item. The transformed item can be used to make other items. -->
+		<set name="icon" val="icon.etc_tuna_i05" />
 		<set name="item_type" val="none" />
 		<set name="weight" val="100" />
 		<set name="consume_type" val="stackable" />
@@ -572,6 +651,7 @@
 	</item>
 	<item id="8479" type="EtcItem" name="Black Ugly Fish - Upper Grade">
 		<!-- Double-click to randomly transform an item. The transformed item can be used to make other items. -->
+		<set name="icon" val="icon.etc_angler_i05" />
 		<set name="item_type" val="none" />
 		<set name="weight" val="100" />
 		<set name="consume_type" val="stackable" />
@@ -579,6 +659,7 @@
 	</item>
 	<item id="8480" type="EtcItem" name="Black Fat Fish - Upper Grade">
 		<!-- Double-click to randomly transform an item. The transformed item can be used to make other items. -->
+		<set name="icon" val="icon.etc_bream_i05" />
 		<set name="item_type" val="none" />
 		<set name="weight" val="100" />
 		<set name="consume_type" val="stackable" />
@@ -586,6 +667,7 @@
 	</item>
 	<item id="8481" type="EtcItem" name="Large Black Nimble Fish - Upper Grade">
 		<!-- Double-click to randomly transform an item. The transformed item can be used to make other items. -->
+		<set name="icon" val="icon.etc_tuna_i05" />
 		<set name="item_type" val="none" />
 		<set name="weight" val="100" />
 		<set name="consume_type" val="stackable" />
@@ -593,6 +675,7 @@
 	</item>
 	<item id="8482" type="EtcItem" name="Large Black Ugly Fish - Upper Grade">
 		<!-- Double-click to randomly transform an item. The transformed item can be used to make other items. -->
+		<set name="icon" val="icon.etc_angler_i05" />
 		<set name="item_type" val="none" />
 		<set name="weight" val="100" />
 		<set name="consume_type" val="stackable" />
@@ -600,6 +683,7 @@
 	</item>
 	<item id="8483" type="EtcItem" name="Large Black Fat Fish - Upper Grade">
 		<!-- Double-click to randomly transform an item. The transformed item can be used to make other items. -->
+		<set name="icon" val="icon.etc_bream_i05" />
 		<set name="item_type" val="none" />
 		<set name="weight" val="100" />
 		<set name="consume_type" val="stackable" />
@@ -607,6 +691,7 @@
 	</item>
 	<item id="8484" type="EtcItem" name="Prize-Winning Fishing Lure">
 		<!-- Use this lure to increase your chances of catching a large, prize-winning fish. -->
+		<set name="icon" val="icon.etc_gludio_fish_lure_i00" />
 		<set name="item_type" val="lure" />
 		<set name="weight" val="4" />
 		<set name="consume_type" val="stackable" />
@@ -615,6 +700,7 @@
 	</item>
 	<item id="8485" type="EtcItem" name="Prize-Winning Night Fishing Lure">
 		<!-- Use this lure at night to increase your chances of catching a large, prize-winning fish. It cannot be used during the day. -->
+		<set name="icon" val="icon.etc_gludio_fish_lure_i00" />
 		<set name="item_type" val="lure" />
 		<set name="weight" val="4" />
 		<set name="consume_type" val="stackable" />
@@ -623,6 +709,7 @@
 	</item>
 	<item id="8486" type="EtcItem" name="Prize-Winning Novice Fishing Lure">
 		<!-- Novice fishermen should use this lure to increase the chances of catching a large, prize-winning fish. Only fish intended for novice fishermen will take this bait, however. -->
+		<set name="icon" val="icon.etc_gludio_fish_lure_i00" />
 		<set name="item_type" val="lure" />
 		<set name="weight" val="5" />
 		<set name="consume_type" val="stackable" />
@@ -631,6 +718,7 @@
 	</item>
 	<item id="8487" type="EtcItem" name="Recipe: Destroyer Hammer (60%)">
 		<!-- This formula for manufacturing a Destroyer Hammer can only be used by Dwarves and Requires Create Item - Skill Level 7. The success rate is 60%. -->
+		<set name="icon" val="icon.etc_recipe_violet_i00" />
 		<set name="item_type" val="recipe" />
 		<set name="weight" val="30" />
 		<set name="consume_type" val="stackable" />
@@ -639,54 +727,63 @@
 	</item>
 	<item id="8488" type="EtcItem" name="Engraved Hammer">
 		<!-- A hammer with a pattern engraved on its handle. -->
+		<set name="icon" val="icon.weapon_big_hammer_i00" />
 		<set name="item_type" val="quest" />
 		<set name="consume_type" val="stackable" />
 		<set name="crystal_type" val="none" />
 	</item>
 	<item id="8489" type="EtcItem" name="Daimon's Eyes">
 		<!-- Eyes obtained by killing Daimon the White-Eyed. -->
+		<set name="icon" val="icon.etc_eyeball_i00" />
 		<set name="item_type" val="quest" />
 		<set name="consume_type" val="stackable" />
 		<set name="crystal_type" val="none" />
 	</item>
 	<item id="8490" type="EtcItem" name="Hestia's Fairy Stone">
 		<!-- Fairy Stone obtained by defeating Hestia, the Guardian Deity of the Hot Springs. -->
+		<set name="icon" val="icon.etc_crystal_gold_i00" />
 		<set name="item_type" val="none" />
 		<set name="consume_type" val="stackable" />
 		<set name="crystal_type" val="none" />
 	</item>
 	<item id="8491" type="EtcItem" name="Nucleus of Lesser Golem">
 		<!-- Nucleus obtained by defeating the Lesser Golem. -->
+		<set name="icon" val="icon.etc_bead_white_i00" />
 		<set name="item_type" val="none" />
 		<set name="consume_type" val="stackable" />
 		<set name="crystal_type" val="none" />
 	</item>
 	<item id="8492" type="EtcItem" name="Falston's Fang">
 		<!-- Fangs obtained by killing Falston, the Demon's Agent. -->
+		<set name="icon" val="icon.etc_fang_ivory_i00" />
 		<set name="item_type" val="quest" />
 		<set name="consume_type" val="stackable" />
 		<set name="crystal_type" val="none" />
 	</item>
 	<item id="8493" type="EtcItem" name="Shaid's Talon">
 		<!-- Talon obtained by defeating Spike Stakato Queen Shaid. -->
+		<set name="icon" val="icon.etc_claw_i00" />
 		<set name="item_type" val="quest" />
 		<set name="consume_type" val="stackable" />
 		<set name="crystal_type" val="none" />
 	</item>
 	<item id="8494" type="EtcItem" name="Nucleus of Flamestone Giant">
 		<!-- Nucleus obtained by defeating Flamestone Giant -->
+		<set name="icon" val="icon.etc_bead_red_i00" />
 		<set name="item_type" val="none" />
 		<set name="consume_type" val="stackable" />
 		<set name="crystal_type" val="none" />
 	</item>
 	<item id="8495" type="EtcItem" name="Book of Grey Star">
 		<!-- The book that Obi the railroad worker said was stolen by thieves. It tells the story of a train that flys. -->
+		<set name="icon" val="icon.etc_memopad_i00" />
 		<set name="item_type" val="quest" />
 		<set name="consume_type" val="stackable" />
 		<set name="crystal_type" val="none" />
 	</item>
 	<item id="8496" type="EtcItem" name="Gludio's Luminous Lure">
 		<!-- A luminous lure that is used to catch Gludio's Big Fish. It is used in Gludio Territory by fishermen whose Fishing Mastery Level is between 7 and 9. -->
+		<set name="icon" val="icon.etc_gludio_fish_lure_i00" />
 		<set name="item_type" val="lure" />
 		<set name="weight" val="5" />
 		<set name="consume_type" val="stackable" />
@@ -694,6 +791,7 @@
 	</item>
 	<item id="8497" type="EtcItem" name="Dion's Luminous Lure">
 		<!-- This luminous fishing lure can be used to catch Dion's Big Fish. It is used in Dion Territory by fishermen whose Fishing Mastery Level is 10-12. -->
+		<set name="icon" val="icon.etc_gludio_fish_lure_i00" />
 		<set name="item_type" val="lure" />
 		<set name="weight" val="4" />
 		<set name="consume_type" val="stackable" />
@@ -701,6 +799,7 @@
 	</item>
 	<item id="8498" type="EtcItem" name="Giran's Luminous Lure">
 		<!-- This luminous fishing lure can be used to catch Giran's Big Fish. It is used in Giran Territory by fishermen whose Fishing Mastery Level is 16-18. -->
+		<set name="icon" val="icon.etc_gludio_fish_lure_i00" />
 		<set name="item_type" val="lure" />
 		<set name="weight" val="3" />
 		<set name="consume_type" val="stackable" />
@@ -708,6 +807,7 @@
 	</item>
 	<item id="8499" type="EtcItem" name="Oren's Luminous Lure">
 		<!-- This luminous fishing lure can be used to catch Oren's Big Fish. It is used in Oren Territory by fishermen whose Fishing Mastery Level is 7-9. -->
+		<set name="icon" val="icon.etc_gludio_fish_lure_i00" />
 		<set name="item_type" val="lure" />
 		<set name="weight" val="5" />
 		<set name="consume_type" val="stackable" />

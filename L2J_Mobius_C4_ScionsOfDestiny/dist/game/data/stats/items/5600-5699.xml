@@ -2,6 +2,7 @@
 <list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../xsd/items.xsd">
 	<item id="5600" type="Weapon" name="Meteor Shower - Critical Bleed">
 		<!-- <Soul Crystal Enhancement>. During a critical attack, increases probability of drawing target's blood by 42%. Effect 7. Enhances damage to a target during PvP. -->
+		<set name="icon" val="icon.weapon_meteor_shower_i01" />
 		<set name="bodypart" val="rhand" />
 		<set name="crystallizable" val="true" />
 		<set name="weight" val="1600" />
@@ -35,6 +36,7 @@
 	</item>
 	<item id="5601" type="Weapon" name="Meteor Shower - Rsk. Haste">
 		<!-- <Soul Crystal Enhancement>. When HP drops to 60% or below, increases Atk. Spd. by 11%. Enhances damage to a target during PvP. -->
+		<set name="icon" val="icon.weapon_meteor_shower_i01" />
 		<set name="bodypart" val="rhand" />
 		<set name="crystallizable" val="true" />
 		<set name="weight" val="1600" />
@@ -73,6 +75,7 @@
 	</item>
 	<item id="5602" type="Weapon" name="Elysian - Health">
 		<!-- <Soul Crystal Enhancement>. Increases maximum HP by 25%. Enhances damage to a target during PvP. -->
+		<set name="icon" val="icon.weapon_elysian_i01" />
 		<set name="bodypart" val="rhand" />
 		<set name="crystallizable" val="true" />
 		<set name="weight" val="1580" />
@@ -105,6 +108,7 @@
 	</item>
 	<item id="5603" type="Weapon" name="Elysian - Anger">
 		<!-- <Soul Crystal Enhancement>. Decreases maximum HP by 15% and increases P. Atk. by 32. Enhances damage to a target during PvP. -->
+		<set name="icon" val="icon.weapon_elysian_i01" />
 		<set name="bodypart" val="rhand" />
 		<set name="crystallizable" val="true" />
 		<set name="weight" val="1580" />
@@ -137,6 +141,7 @@
 	</item>
 	<item id="5604" type="Weapon" name="Elysian - Critical Drain">
 		<!-- <Soul Crystal Enhancement>. During a critical attack, absorbs 19 HP from target. Enhances damage to a target during PvP. -->
+		<set name="icon" val="icon.weapon_elysian_i01" />
 		<set name="bodypart" val="rhand" />
 		<set name="crystallizable" val="true" />
 		<set name="weight" val="1580" />
@@ -169,6 +174,7 @@
 	</item>
 	<item id="5605" type="Weapon" name="Branch of The Mother Tree - Conversion">
 		<!-- <Soul Crystal Enhancement>. Increases maximum MP by 60% and decreases maximum HP by 40%. Enhances damage to a target during PvP. -->
+		<set name="icon" val="icon.weapon_worldtrees_branch_i01" />
 		<set name="bodypart" val="lrhand" />
 		<set name="crystallizable" val="true" />
 		<set name="weight" val="900" />
@@ -199,6 +205,7 @@
 	</item>
 	<item id="5606" type="Weapon" name="Branch of The Mother Tree - Magic Damage">
 		<!-- <Soul Crystal Enhancement>. Grants a 30% chance to boost damage to Power 8 when using bad magic. Enhances damage to a target during PvP. -->
+		<set name="icon" val="icon.weapon_worldtrees_branch_i01" />
 		<set name="bodypart" val="lrhand" />
 		<set name="crystallizable" val="true" />
 		<set name="weight" val="900" />
@@ -231,6 +238,7 @@
 	</item>
 	<item id="5607" type="Weapon" name="Branch of The Mother Tree - Acumen">
 		<!-- <Soul Crystal Enhancement>. Increases Casting Spd. by 15%. Enhances damage to a target during PvP. -->
+		<set name="icon" val="icon.weapon_worldtrees_branch_i01" />
 		<set name="bodypart" val="lrhand" />
 		<set name="crystallizable" val="true" />
 		<set name="weight" val="900" />
@@ -261,6 +269,7 @@
 	</item>
 	<item id="5608" type="Weapon" name="Carnage Bow - Light">
 		<!-- <Soul Crystal Enhancement>. The weight of a weapon will decrease by 30%. Enhances damage to a target during PvP. -->
+		<set name="icon" val="icon.weapon_carnium_bow_i01" />
 		<set name="bodypart" val="lrhand" />
 		<set name="crystallizable" val="true" />
 		<set name="weight" val="500" />
@@ -292,6 +301,7 @@
 	</item>
 	<item id="5609" type="Weapon" name="Carnage Bow - Critical Bleed">
 		<!-- <Soul Crystal Enhancement>. During a critical attack, increases probability of drawing target's blood by 35%. Effect 7. Enhances damage to a target during PvP. -->
+		<set name="icon" val="icon.weapon_carnium_bow_i01" />
 		<set name="bodypart" val="lrhand" />
 		<set name="crystallizable" val="true" />
 		<set name="weight" val="1670" />
@@ -326,6 +336,7 @@
 	</item>
 	<item id="5610" type="Weapon" name="Carnage Bow - Mana Up">
 		<!-- <Soul Crystal Enhancement>. Increases maximum MP by 30%. Enhances damage to a target during PvP. -->
+		<set name="icon" val="icon.weapon_carnium_bow_i01" />
 		<set name="bodypart" val="lrhand" />
 		<set name="crystallizable" val="true" />
 		<set name="weight" val="1670" />
@@ -356,6 +367,7 @@
 	</item>
 	<item id="5611" type="Weapon" name="Soul Bow - Cheap Shot">
 		<!-- <Soul Crystal Enhancement>. During a general attack, 2 MP will be consumed at the probability rate of 38%. Enhances damage to a target during PvP. -->
+		<set name="icon" val="icon.weapon_soul_bow_i01" />
 		<set name="bodypart" val="lrhand" />
 		<set name="crystallizable" val="true" />
 		<set name="weight" val="1660" />
@@ -393,6 +405,7 @@
 	</item>
 	<item id="5612" type="Weapon" name="Soul Bow - Quick Recovery">
 		<!-- <Soul Crystal Enhancement>. Decreases re-use delay by about 15%. Enhances damage to a target during PvP. -->
+		<set name="icon" val="icon.weapon_soul_bow_i01" />
 		<set name="bodypart" val="lrhand" />
 		<set name="crystallizable" val="true" />
 		<set name="weight" val="1660" />
@@ -426,6 +439,7 @@
 	</item>
 	<item id="5613" type="Weapon" name="Soul Bow - Critical Poison">
 		<!-- <Soul Crystal Enhancement>. During a critical attack, poisons a target with a 18% chance of success. Effect 7. Enhances damage to a target during PvP. -->
+		<set name="icon" val="icon.weapon_soul_bow_i01" />
 		<set name="bodypart" val="lrhand" />
 		<set name="crystallizable" val="true" />
 		<set name="weight" val="1660" />
@@ -460,6 +474,7 @@
 	</item>
 	<item id="5614" type="Weapon" name="Bloody Orchid - Focus">
 		<!-- <Soul Crystal Enhancement>. Increases Critical Attack by 67. Enhances damage to a target during PvP. -->
+		<set name="icon" val="icon.weapon_bloody_orchid_i01" />
 		<set name="bodypart" val="rhand" />
 		<set name="crystallizable" val="true" />
 		<set name="weight" val="960" />
@@ -494,6 +509,7 @@
 	</item>
 	<item id="5615" type="Weapon" name="Bloody Orchid - Back Blow">
 		<!-- <Soul Crystal Enhancement>. When attacking a target from behind, increases Critical Attack by 37%. Enhances damage to a target during PvP. -->
+		<set name="icon" val="icon.weapon_bloody_orchid_i01" />
 		<set name="bodypart" val="rhand" />
 		<set name="crystallizable" val="true" />
 		<set name="weight" val="960" />
@@ -526,6 +542,7 @@
 	</item>
 	<item id="5616" type="Weapon" name="Bloody Orchid - Critical Bleed">
 		<!-- <Soul Crystal Enhancement>. During a critical attack, increases chance of drawing target's blood by 12%. Effect 7. Enhances damage to a target during PvP. -->
+		<set name="icon" val="icon.weapon_bloody_orchid_i01" />
 		<set name="bodypart" val="rhand" />
 		<set name="crystallizable" val="true" />
 		<set name="weight" val="960" />
@@ -559,6 +576,7 @@
 	</item>
 	<item id="5617" type="Weapon" name="Soul Separator - Guidance">
 		<!-- <Soul Crystal Enhancement>. Increases Accuracy by about 4. -->
+		<set name="icon" val="icon.weapon_soul_separator_i01" />
 		<set name="bodypart" val="rhand" />
 		<set name="crystallizable" val="true" />
 		<set name="weight" val="950" />
@@ -591,6 +609,7 @@
 	</item>
 	<item id="5618" type="Weapon" name="Soul Separator - Critical Damage">
 		<!-- <Soul Crystal Enhancement>. During a critical attack, increases P. Atk. by 200. Enhances damage to a target during PvP. -->
+		<set name="icon" val="icon.weapon_soul_separator_i01" />
 		<set name="bodypart" val="rhand" />
 		<set name="crystallizable" val="true" />
 		<set name="weight" val="950" />
@@ -625,6 +644,7 @@
 	</item>
 	<item id="5619" type="Weapon" name="Soul Separator - Rsk. Haste">
 		<!-- <Soul Crystal Enhancement>. When HP drops to 60% or below, increases Atk. Spd. by 11%. Enhances damage to a target during PvP. -->
+		<set name="icon" val="icon.weapon_soul_separator_i01" />
 		<set name="bodypart" val="rhand" />
 		<set name="crystallizable" val="true" />
 		<set name="weight" val="950" />
@@ -663,6 +683,7 @@
 	</item>
 	<item id="5620" type="Weapon" name="Blood Tornado - Haste">
 		<!-- <Soul Crystal Enhancement>. Increases Atk. Spd. by about 6%. Enhances damage to a target during PvP. -->
+		<set name="icon" val="icon.weapon_blood_tornado_i01" />
 		<set name="bodypart" val="lrhand" />
 		<set name="crystallizable" val="true" />
 		<set name="weight" val="1370" />
@@ -697,6 +718,7 @@
 	</item>
 	<item id="5621" type="Weapon" name="Blood Tornado - Focus">
 		<!-- <Soul Crystal Enhancement>. Increases Critical Attack by 61. Enhances damage to a target during PvP. -->
+		<set name="icon" val="icon.weapon_blood_tornado_i01" />
 		<set name="bodypart" val="lrhand" />
 		<set name="crystallizable" val="true" />
 		<set name="weight" val="1370" />
@@ -731,6 +753,7 @@
 	</item>
 	<item id="5622" type="Weapon" name="Blood Tornado - Anger">
 		<!-- <Soul Crystal Enhancement>. Decreases maximum HP by 15% and increases P. Atk. by 38. Enhances damage to a target during PvP. -->
+		<set name="icon" val="icon.weapon_blood_tornado_i01" />
 		<set name="bodypart" val="lrhand" />
 		<set name="crystallizable" val="true" />
 		<set name="weight" val="1370" />
@@ -763,6 +786,7 @@
 	</item>
 	<item id="5623" type="Weapon" name="Dragon Grinder - Rsk. Evasion">
 		<!-- <Soul Crystal Enhancement>. When HP drops to 60% or below, increases Evasion by 6. Enhances damage to a target during PvP. -->
+		<set name="icon" val="icon.weapon_dragon_grinder_i01" />
 		<set name="bodypart" val="lrhand" />
 		<set name="crystallizable" val="true" />
 		<set name="weight" val="1350" />
@@ -801,6 +825,7 @@
 	</item>
 	<item id="5624" type="Weapon" name="Dragon Grinder - Guidance">
 		<!-- <Soul Crystal Enhancement>. Increases Accuracy by about 5. Enhances damage to a target during PvP. -->
+		<set name="icon" val="icon.weapon_dragon_grinder_i01" />
 		<set name="bodypart" val="lrhand" />
 		<set name="crystallizable" val="true" />
 		<set name="weight" val="1350" />
@@ -833,6 +858,7 @@
 	</item>
 	<item id="5625" type="Weapon" name="Dragon Grinder - Health">
 		<!-- <Soul Crystal Enhancement>. Increases maximum HP by 25%. Enhances damage to a target during PvP. -->
+		<set name="icon" val="icon.weapon_dragon_grinder_i01" />
 		<set name="bodypart" val="lrhand" />
 		<set name="crystallizable" val="true" />
 		<set name="weight" val="1350" />
@@ -865,6 +891,7 @@
 	</item>
 	<item id="5626" type="Weapon" name="Halberd - Haste">
 		<!-- <Soul Crystal Enhancement>. Increases Atk. Spd. by about 6%. Enhances damage to a target during PvP. -->
+		<set name="icon" val="icon.weapon_halbard_i01" />
 		<set name="bodypart" val="lrhand" />
 		<set name="crystallizable" val="true" />
 		<set name="weight" val="1900" />
@@ -900,6 +927,7 @@
 	</item>
 	<item id="5627" type="Weapon" name="Halberd - Critical Stun">
 		<!-- <Soul Crystal Enhancement>. Has a 25% chance to stun during a critical attack. Enhances damage to target during PvP. -->
+		<set name="icon" val="icon.weapon_halbard_i01" />
 		<set name="bodypart" val="lrhand" />
 		<set name="crystallizable" val="true" />
 		<set name="weight" val="1900" />
@@ -934,6 +962,7 @@
 	</item>
 	<item id="5628" type="Weapon" name="Halberd - Wide Blow">
 		<!-- <Soul Crystal Enhancement>. Broadens the angle of attack. Enhances damage to a target during PvP. -->
+		<set name="icon" val="icon.weapon_halbard_i01" />
 		<set name="bodypart" val="lrhand" />
 		<set name="crystallizable" val="true" />
 		<set name="weight" val="1900" />
@@ -964,6 +993,7 @@
 		</for>
 	</item>
 	<item id="5629" type="Weapon" name="Orcish Halberd">
+		<set name="icon" val="icon.weapon_orcish_halbard_i01" />
 		<set name="bodypart" val="lrhand" />
 		<set name="crystallizable" val="true" />
 		<set name="weight" val="1880" />
@@ -991,6 +1021,7 @@
 		</for>
 	</item>
 	<item id="5630" type="Weapon" name="Orcish Halberd">
+		<set name="icon" val="icon.weapon_orcish_halbard_i01" />
 		<set name="bodypart" val="lrhand" />
 		<set name="crystallizable" val="true" />
 		<set name="weight" val="1880" />
@@ -1018,6 +1049,7 @@
 		</for>
 	</item>
 	<item id="5631" type="Weapon" name="Orcish Halberd">
+		<set name="icon" val="icon.weapon_orcish_halbard_i01" />
 		<set name="bodypart" val="lrhand" />
 		<set name="crystallizable" val="true" />
 		<set name="weight" val="1880" />
@@ -1046,6 +1078,7 @@
 	</item>
 	<item id="5632" type="Weapon" name="Tallum Glaive - Guidance">
 		<!-- <Soul Crystal Enhancement>. Increases Accuracy by about 4. Enhances damage to a target during PvP. -->
+		<set name="icon" val="icon.weapon_tallum_glaive_i01" />
 		<set name="bodypart" val="lrhand" />
 		<set name="crystallizable" val="true" />
 		<set name="weight" val="1840" />
@@ -1079,6 +1112,7 @@
 	</item>
 	<item id="5633" type="Weapon" name="Tallum Glaive - Health">
 		<!-- <Soul Crystal Enhancement>. Increases maximum HP by 25%. Enhances damage to a target during PvP. -->
+		<set name="icon" val="icon.weapon_tallum_glaive_i01" />
 		<set name="bodypart" val="lrhand" />
 		<set name="crystallizable" val="true" />
 		<set name="weight" val="1840" />
@@ -1112,6 +1146,7 @@
 	</item>
 	<item id="5634" type="Weapon" name="Tallum Glaive - Wide Blow">
 		<!-- <Soul Crystal Enhancement>. Broadens the angle of attack. Enhances damage to a target during PvP. -->
+		<set name="icon" val="icon.weapon_tallum_glaive_i01" />
 		<set name="bodypart" val="lrhand" />
 		<set name="crystallizable" val="true" />
 		<set name="weight" val="1840" />
@@ -1143,6 +1178,7 @@
 	</item>
 	<item id="5635" type="Weapon" name="Tallum Blade - Critical Poison">
 		<!-- <Soul Crystal Enhancement>. During a critical attack, poisons a target with a 10% chance of success. Effect 7. Enhances damage to a target during PvP. -->
+		<set name="icon" val="icon.weapon_tallum_blade_i01" />
 		<set name="bodypart" val="rhand" />
 		<set name="crystallizable" val="true" />
 		<set name="weight" val="1330" />
@@ -1175,6 +1211,7 @@
 	</item>
 	<item id="5636" type="Weapon" name="Tallum Blade - Haste">
 		<!-- <Soul Crystal Enhancement>. Increases Atk. Spd. by about 6%. Enhances damage to a target during PvP. -->
+		<set name="icon" val="icon.weapon_tallum_blade_i01" />
 		<set name="bodypart" val="rhand" />
 		<set name="crystallizable" val="true" />
 		<set name="weight" val="1330" />
@@ -1208,6 +1245,7 @@
 	</item>
 	<item id="5637" type="Weapon" name="Tallum Blade - Anger">
 		<!-- <Soul Crystal Enhancement>. Decreases maximum HP by 15% and increases P. Atk. by 31. Enhances damage to a target during PvP. -->
+		<set name="icon" val="icon.weapon_tallum_blade_i01" />
 		<set name="bodypart" val="rhand" />
 		<set name="crystallizable" val="true" />
 		<set name="weight" val="1330" />
@@ -1239,6 +1277,7 @@
 	</item>
 	<item id="5638" type="Weapon" name="Elemental Sword - Magic Power">
 		<!-- <Soul Crystal Enhancement>. When using magic, it increases MP Consumption by15% and M. Atk. B increases by 153. Enhances damage to a target during PvP. -->
+		<set name="icon" val="icon.weapon_elemental_sword_i01" />
 		<set name="bodypart" val="rhand" />
 		<set name="crystallizable" val="true" />
 		<set name="weight" val="830" />
@@ -1270,6 +1309,7 @@
 	</item>
 	<item id="5639" type="Weapon" name="Elemental Sword - Magic Paralyze">
 		<!-- <Soul Crystal Enhancement>. When using bad magic, paralyzes target with a 5% chance of success. Enhances damage to a target during PvP. -->
+		<set name="icon" val="icon.weapon_elemental_sword_i01" />
 		<set name="bodypart" val="rhand" />
 		<set name="crystallizable" val="true" />
 		<set name="weight" val="830" />
@@ -1302,6 +1342,7 @@
 	</item>
 	<item id="5640" type="Weapon" name="Elemental Sword - Empower">
 		<!-- <Soul Crystal Enhancement>. Increases M. Atk. by 30. Enhances damage to a target during PvP. -->
+		<set name="icon" val="icon.weapon_elemental_sword_i01" />
 		<set name="bodypart" val="rhand" />
 		<set name="crystallizable" val="true" />
 		<set name="weight" val="830" />
@@ -1334,6 +1375,7 @@
 	</item>
 	<item id="5641" type="Weapon" name="Sword of Miracles - Magic Power">
 		<!-- <Soul Crystal Enhancement>. When using magic, it increases MP Consumption by 15% and increases M. Atk. by 167. Enhances damage to a target during PvP. -->
+		<set name="icon" val="icon.weapon_sword_of_miracle_i01" />
 		<set name="bodypart" val="rhand" />
 		<set name="crystallizable" val="true" />
 		<set name="weight" val="840" />
@@ -1365,6 +1407,7 @@
 	</item>
 	<item id="5642" type="Weapon" name="Sword of Miracles - Magic Silence">
 		<!-- <Soul Crystal Enhancement>. When using bad magic against a target, casts Silence upon target with a 10% chance of success. Effect 1. Enhances damage to a target during PvP. -->
+		<set name="icon" val="icon.weapon_sword_of_miracle_i01" />
 		<set name="bodypart" val="rhand" />
 		<set name="crystallizable" val="true" />
 		<set name="weight" val="840" />
@@ -1397,6 +1440,7 @@
 	</item>
 	<item id="5643" type="Weapon" name="Sword of Miracles - Acumen">
 		<!-- <Soul Crystal Enhancement>. Increases Casting Spd. by 15%. Enhances damage to a target during PvP. -->
+		<set name="icon" val="icon.weapon_sword_of_miracle_i01" />
 		<set name="bodypart" val="rhand" />
 		<set name="crystallizable" val="true" />
 		<set name="weight" val="840" />
@@ -1426,6 +1470,7 @@
 	</item>
 	<item id="5644" type="Weapon" name="Dragon Slayer - Health">
 		<!-- <Soul Crystal Enhancement>. Increases maximum HP by 25%. Enhances damage to a target during PvP. -->
+		<set name="icon" val="icon.weapon_dragon_slayer_i01" />
 		<set name="bodypart" val="lrhand" />
 		<set name="crystallizable" val="true" />
 		<set name="weight" val="1840" />
@@ -1457,6 +1502,7 @@
 	</item>
 	<item id="5645" type="Weapon" name="Dragon Slayer - Critical Bleed">
 		<!-- <Soul Crystal Enhancement>. During a critical attack, increases probability of drawing target's blood by 24%. Effect 7. Enhances damage to a target during PvP. -->
+		<set name="icon" val="icon.weapon_dragon_slayer_i01" />
 		<set name="bodypart" val="lrhand" />
 		<set name="crystallizable" val="true" />
 		<set name="weight" val="1840" />
@@ -1489,6 +1535,7 @@
 	</item>
 	<item id="5646" type="Weapon" name="Dragon Slayer - Critical Drain">
 		<!-- <Soul Crystal Enhancement>. During a critical attack, absorbs 11 HP from target. Enhances damage to a target during PvP. -->
+		<set name="icon" val="icon.weapon_dragon_slayer_i01" />
 		<set name="bodypart" val="lrhand" />
 		<set name="crystallizable" val="true" />
 		<set name="weight" val="1840" />
@@ -1521,6 +1568,7 @@
 	</item>
 	<item id="5647" type="Weapon" name="Dark Legion's Edge - Critical Damage">
 		<!-- <Soul Crystal Enhancement>. During a critical attack, increases P. Atk. by 326. Enhances damage to a target during PvP. -->
+		<set name="icon" val="icon.weapon_dark_legions_edge_i01" />
 		<set name="bodypart" val="rhand" />
 		<set name="crystallizable" val="true" />
 		<set name="weight" val="1320" />
@@ -1554,6 +1602,7 @@
 	</item>
 	<item id="5648" type="Weapon" name="Dark Legion's Edge - Health">
 		<!-- <Soul Crystal Enhancement>. Increases maximum HP by 25%. Enhances damage to a target during PvP. -->
+		<set name="icon" val="icon.weapon_dark_legions_edge_i01" />
 		<set name="bodypart" val="rhand" />
 		<set name="crystallizable" val="true" />
 		<set name="weight" val="1320" />
@@ -1585,6 +1634,7 @@
 	</item>
 	<item id="5649" type="Weapon" name="Dark Legion's Edge - Rsk. Focus">
 		<!-- <Soul Crystal Enhancement>. When HP drops to 60% or below, increases Critical Attack by 130. Enhances damage to a target during PvP. -->
+		<set name="icon" val="icon.weapon_dark_legions_edge_i01" />
 		<set name="bodypart" val="rhand" />
 		<set name="crystallizable" val="true" />
 		<set name="weight" val="1320" />
@@ -1622,6 +1672,7 @@
 	</item>
 	<item id="5650" type="EtcItem" name="Alternative Dark Coda Seed">
 		<!-- Plant this seed onto a monster in the Gludio area and it will bear the fruit of the Alternative Dark Coda. For best results, a level 5-15 character must plant it on a level 5-15 monster. -->
+		<set name="icon" val="icon.etc_coda_seed_i00" />
 		<set name="item_type" val="seed" />
 		<set name="weight" val="1" />
 		<set name="consume_type" val="stackable" />
@@ -1630,6 +1681,7 @@
 	</item>
 	<item id="5651" type="EtcItem" name="Alternative Red Coda Seed">
 		<!-- Plant this seed onto a monster in the Gludio area and it will bear the fruit of the Alternative Red Coda. For best results, a level 8-18 character must plant it on a level 8-18 monster. -->
+		<set name="icon" val="icon.etc_coda_seed_i00" />
 		<set name="item_type" val="seed" />
 		<set name="weight" val="1" />
 		<set name="consume_type" val="stackable" />
@@ -1638,6 +1690,7 @@
 	</item>
 	<item id="5652" type="EtcItem" name="Alternative Chilly Coda Seed">
 		<!-- Plant this seed onto a monster in the Gludio area and it will bear the fruit of the Alternative Chilly Coda. For best results, a level 11-21 character must plant it on a level 11-21 monster. -->
+		<set name="icon" val="icon.etc_coda_seed_i00" />
 		<set name="item_type" val="seed" />
 		<set name="weight" val="1" />
 		<set name="consume_type" val="stackable" />
@@ -1646,6 +1699,7 @@
 	</item>
 	<item id="5653" type="EtcItem" name="Alternative Blue Coda Seed">
 		<!-- Plant this seed onto a monster in the Gludio area and it will bear the fruit of the Alternative Blue Coda. For best results, a level 14-24 character must plant it on a level 14-24 monster. -->
+		<set name="icon" val="icon.etc_coda_seed_i00" />
 		<set name="item_type" val="seed" />
 		<set name="weight" val="1" />
 		<set name="consume_type" val="stackable" />
@@ -1654,6 +1708,7 @@
 	</item>
 	<item id="5654" type="EtcItem" name="Alternative Golden Coda Seed">
 		<!-- Plant this seed onto a monster in the Gludio area and it will bear the fruit of the Alternative Golden Coda. For best results, a level 17-27 character must plant it on a level 17-27 monster. -->
+		<set name="icon" val="icon.etc_coda_seed_i00" />
 		<set name="item_type" val="seed" />
 		<set name="weight" val="1" />
 		<set name="consume_type" val="stackable" />
@@ -1662,6 +1717,7 @@
 	</item>
 	<item id="5655" type="EtcItem" name="Alternative Lute Coda Seed">
 		<!-- Plant this seed onto a monster in the Gludio area and it will bear the fruit of the Alternative Lute Coda. For best results, a level 20-30 character must plant it on a level 20-30 monster. -->
+		<set name="icon" val="icon.etc_coda_seed_i00" />
 		<set name="item_type" val="seed" />
 		<set name="weight" val="1" />
 		<set name="consume_type" val="stackable" />
@@ -1670,6 +1726,7 @@
 	</item>
 	<item id="5656" type="EtcItem" name="Alternative Desert Coda Seed">
 		<!-- Plant this seed onto a monster in the Gludio area and it will bear the fruit of the Alternative Desert Coda. For best results, a level 23-33 character must plant it on a level 23-33 monster. -->
+		<set name="icon" val="icon.etc_coda_seed_i00" />
 		<set name="item_type" val="seed" />
 		<set name="weight" val="1" />
 		<set name="consume_type" val="stackable" />
@@ -1678,6 +1735,7 @@
 	</item>
 	<item id="5657" type="EtcItem" name="Alternative Blue Cobol Seed">
 		<!-- Plant this seed onto a monster in the Gludio area and it will bear the fruit of the Alternative Blue Coda. For best results, a level 32-42 character must plant it on a level 32-42 monster. -->
+		<set name="icon" val="icon.etc_cobol_seed_i00" />
 		<set name="item_type" val="seed" />
 		<set name="weight" val="1" />
 		<set name="consume_type" val="stackable" />
@@ -1686,6 +1744,7 @@
 	</item>
 	<item id="5658" type="EtcItem" name="Alternative Blue Coda Seed">
 		<!-- Plant this seed onto a monster in the Dion area and it will bear the fruit of the Alternative Blue Coda. For best results, a level 14-24 character must plant it on a level 14-24 monster. -->
+		<set name="icon" val="icon.etc_coda_seed_i00" />
 		<set name="item_type" val="seed" />
 		<set name="weight" val="1" />
 		<set name="consume_type" val="stackable" />
@@ -1694,6 +1753,7 @@
 	</item>
 	<item id="5659" type="EtcItem" name="Alternative Golden Coda Seed">
 		<!-- Plant this seed onto a monster in the Dion area and it will bear the fruit of the Alternative Golden Coda. For best results, a level 17-27 character must plant it on a level 17-27 monster. -->
+		<set name="icon" val="icon.etc_coda_seed_i00" />
 		<set name="item_type" val="seed" />
 		<set name="weight" val="1" />
 		<set name="consume_type" val="stackable" />
@@ -1702,6 +1762,7 @@
 	</item>
 	<item id="5660" type="EtcItem" name="Alternative Lute Coda Seed">
 		<!-- Plant this seed onto a monster in the Dion area and it will bear the fruit of the Alternative Lute Coda. For best results, a level 20-23 character must plant it on a level 20-23 monster. -->
+		<set name="icon" val="icon.etc_coda_seed_i00" />
 		<set name="item_type" val="seed" />
 		<set name="weight" val="1" />
 		<set name="consume_type" val="stackable" />
@@ -1710,6 +1771,7 @@
 	</item>
 	<item id="5661" type="EtcItem" name="Alternative Desert Coda Seed">
 		<!-- Plant this seed onto a monster in the Dion area and it will bear the fruit of the Alternative Desert Coda. For best results, a level 23-33 character must plant it on a level 23-33 monster. -->
+		<set name="icon" val="icon.etc_coda_seed_i00" />
 		<set name="item_type" val="seed" />
 		<set name="weight" val="1" />
 		<set name="consume_type" val="stackable" />
@@ -1718,6 +1780,7 @@
 	</item>
 	<item id="5662" type="EtcItem" name="Alternative Red Cobol Seed">
 		<!-- Plant this seed onto a monster in the Dion area and it will bear the fruit of the Alternative Red Cobol. For best results, a level 26-36 character must plant it on a level 26-36 monster. -->
+		<set name="icon" val="icon.etc_cobol_seed_i00" />
 		<set name="item_type" val="seed" />
 		<set name="weight" val="1" />
 		<set name="consume_type" val="stackable" />
@@ -1726,6 +1789,7 @@
 	</item>
 	<item id="5663" type="EtcItem" name="Alternative Chilly Cobol Seed">
 		<!-- Plant this seed onto a monster in the Dion area and it will bear the fruit of the Alternative Chilly Cobol. For best results, a level 29-39 character must plant it on a level 29-39 monster. -->
+		<set name="icon" val="icon.etc_cobol_seed_i00" />
 		<set name="item_type" val="seed" />
 		<set name="weight" val="1" />
 		<set name="consume_type" val="stackable" />
@@ -1734,6 +1798,7 @@
 	</item>
 	<item id="5664" type="EtcItem" name="Alternative Thorn Cobol Seed">
 		<!-- Plant this seed onto a monster in the Dion area and it will bear the fruit of the Alternative Thorn Cobol. For best results, a level 35-45 character must plant it on a level 35-45 monster. -->
+		<set name="icon" val="icon.etc_cobol_seed_i00" />
 		<set name="item_type" val="seed" />
 		<set name="weight" val="1" />
 		<set name="consume_type" val="stackable" />
@@ -1742,6 +1807,7 @@
 	</item>
 	<item id="5665" type="EtcItem" name="Alternative Golden Cobol Seed">
 		<!-- Plant this seed onto a monster in the Dion area and it will bear the fruit of the Alternative Golden Cobol. For best results, a level 38-48 character must plant it on a level 38-48 monster. -->
+		<set name="icon" val="icon.etc_cobol_seed_i00" />
 		<set name="item_type" val="seed" />
 		<set name="weight" val="1" />
 		<set name="consume_type" val="stackable" />
@@ -1750,6 +1816,7 @@
 	</item>
 	<item id="5666" type="EtcItem" name="Alternative Great Cobol Seed">
 		<!-- Plant this seed onto a monster in the Dion area and it will bear the fruit of the Alternative Great Cobol. For best results, a level 41-51 character must plant it on a level 41-51 monster. -->
+		<set name="icon" val="icon.etc_cobol_seed_i00" />
 		<set name="item_type" val="seed" />
 		<set name="weight" val="1" />
 		<set name="consume_type" val="stackable" />
@@ -1758,6 +1825,7 @@
 	</item>
 	<item id="5667" type="EtcItem" name="Alternative Red Cobol Seed">
 		<!-- Plant this seed onto a monster in the Giran area and it will bear the fruit of the Alternative Red Cobol. For best results, a level 26-36 character must plant it on a level 26-36 monster. -->
+		<set name="icon" val="icon.etc_cobol_seed_i00" />
 		<set name="item_type" val="seed" />
 		<set name="weight" val="1" />
 		<set name="consume_type" val="stackable" />
@@ -1766,6 +1834,7 @@
 	</item>
 	<item id="5668" type="EtcItem" name="Alternative Chilly Cobol Seed">
 		<!-- Plant this seed onto a monster in the Giran area and it will bear the fruit of the Alternative Chilly Cobol. For best results, a level 29-39 character must plant it on a level 29-39 monster. -->
+		<set name="icon" val="icon.etc_cobol_seed_i00" />
 		<set name="item_type" val="seed" />
 		<set name="weight" val="1" />
 		<set name="consume_type" val="stackable" />
@@ -1774,6 +1843,7 @@
 	</item>
 	<item id="5669" type="EtcItem" name="Alternative Blue Cobol Seed">
 		<!-- Plant this seed onto a monster in the Giran area and it will bear the fruit of the Alternative Blue Cobol. For best results, a level 32-42 character must plant it on a level 32-42 monster. -->
+		<set name="icon" val="icon.etc_cobol_seed_i00" />
 		<set name="item_type" val="seed" />
 		<set name="weight" val="1" />
 		<set name="consume_type" val="stackable" />
@@ -1782,6 +1852,7 @@
 	</item>
 	<item id="5670" type="EtcItem" name="Alternative Thorn Cobol Seed">
 		<!-- Plant this seed onto a monster in the Giran area and it will bear the fruit of the Alternative Thorn Cobol. For best results, a level 35-45 character must plant it on a level 35-45 monster. -->
+		<set name="icon" val="icon.etc_cobol_seed_i00" />
 		<set name="item_type" val="seed" />
 		<set name="weight" val="1" />
 		<set name="consume_type" val="stackable" />
@@ -1790,6 +1861,7 @@
 	</item>
 	<item id="5671" type="EtcItem" name="Alternative Golden Cobol Seed">
 		<!-- Plant this seed onto a monster in the Giran area and it will bear the fruit of the Alternative Golden Cobol. For best results, a level 38-48 character must plant it on a level 38-48 monster. -->
+		<set name="icon" val="icon.etc_cobol_seed_i00" />
 		<set name="item_type" val="seed" />
 		<set name="weight" val="1" />
 		<set name="consume_type" val="stackable" />
@@ -1798,6 +1870,7 @@
 	</item>
 	<item id="5672" type="EtcItem" name="Alternative Great Cobol Seed">
 		<!-- Plant this seed onto a monster in the Giran area and it will bear the fruit of the Alternative Great Cobol. For best results, a level 41-51 character must plant it on a level 41-51 monster. -->
+		<set name="icon" val="icon.etc_cobol_seed_i00" />
 		<set name="item_type" val="seed" />
 		<set name="weight" val="1" />
 		<set name="consume_type" val="stackable" />
@@ -1806,6 +1879,7 @@
 	</item>
 	<item id="5673" type="EtcItem" name="Alternative Red Codran Seed">
 		<!-- Plant this seed onto a monster in the Giran area and it will bear the fruit of the Alternative Red Codran. For best results, a level 44-54 character must plant it on a level 44-54 monster. -->
+		<set name="icon" val="icon.etc_codran_seed_i00" />
 		<set name="item_type" val="seed" />
 		<set name="weight" val="1" />
 		<set name="consume_type" val="stackable" />
@@ -1814,6 +1888,7 @@
 	</item>
 	<item id="5674" type="EtcItem" name="Alternative Twin Codran Seed">
 		<!-- Plant this seed onto a monster in the Giran area and it will bear the fruit of the Alternative Twin Codran. For best results, a level 53-63 character must plant it on a level 53-63 monster. -->
+		<set name="icon" val="icon.etc_codran_seed_i00" />
 		<set name="item_type" val="seed" />
 		<set name="weight" val="1" />
 		<set name="consume_type" val="stackable" />
@@ -1822,6 +1897,7 @@
 	</item>
 	<item id="5675" type="EtcItem" name="Alternative Desert Codran Seed">
 		<!-- Plant this seed onto a monster in the Giran area and it will bear the fruit of the Alternative Desert Codran. For best results, a level 59-69 character must plant it on a level 59-69 monster. -->
+		<set name="icon" val="icon.etc_codran_seed_i00" />
 		<set name="item_type" val="seed" />
 		<set name="weight" val="1" />
 		<set name="consume_type" val="stackable" />
@@ -1830,6 +1906,7 @@
 	</item>
 	<item id="5676" type="EtcItem" name="Alternative Dark Coda Seed">
 		<!-- Plant this seed onto a monster in the Oren area and it will bear the fruit of the Alternative Dark Coda. For best results, a level 5-15 character must plant it on a level 5-15 monster. -->
+		<set name="icon" val="icon.etc_coda_seed_i00" />
 		<set name="item_type" val="seed" />
 		<set name="weight" val="1" />
 		<set name="consume_type" val="stackable" />
@@ -1838,6 +1915,7 @@
 	</item>
 	<item id="5677" type="EtcItem" name="Alternative Red Coda Seed">
 		<!-- Plant this seed onto a monster in the Oren area and it will bear the fruit of the Alternative Red Coda. For best results, a level 8-18 character must plant it on a level 8-18 monster. -->
+		<set name="icon" val="icon.etc_coda_seed_i00" />
 		<set name="item_type" val="seed" />
 		<set name="weight" val="1" />
 		<set name="consume_type" val="stackable" />
@@ -1846,6 +1924,7 @@
 	</item>
 	<item id="5678" type="EtcItem" name="Alternative Blue Coda Seed">
 		<!-- Plant this seed onto a monster in the Oren area and it will bear the fruit of the Alternative Blue Coda. For best results, a level 14-24 character must plant it on a level 14-24 monster. -->
+		<set name="icon" val="icon.etc_coda_seed_i00" />
 		<set name="item_type" val="seed" />
 		<set name="weight" val="1" />
 		<set name="consume_type" val="stackable" />
@@ -1854,6 +1933,7 @@
 	</item>
 	<item id="5679" type="EtcItem" name="Alternative Red Cobol Seed">
 		<!-- Plant this seed onto a monster in the Oren area and it will bear the fruit of the Alternative Red Cobol. For best results, a level 26-36 character must plant it on a level 26-36 monster. -->
+		<set name="icon" val="icon.etc_cobol_seed_i00" />
 		<set name="item_type" val="seed" />
 		<set name="weight" val="1" />
 		<set name="consume_type" val="stackable" />
@@ -1862,6 +1942,7 @@
 	</item>
 	<item id="5680" type="EtcItem" name="Alternative Chilly Cobol Seed">
 		<!-- Plant this seed onto a monster in the Oren area and it will bear the fruit of the Alternative Chilly Cobol. For best results, a level 29-39 character must plant it on a level 29-39 monster. -->
+		<set name="icon" val="icon.etc_cobol_seed_i00" />
 		<set name="item_type" val="seed" />
 		<set name="weight" val="1" />
 		<set name="consume_type" val="stackable" />
@@ -1870,6 +1951,7 @@
 	</item>
 	<item id="5681" type="EtcItem" name="Alternative Blue Cobol Seed">
 		<!-- Plant this seed onto a monster in the Oren area and it will bear the fruit of the Alternative Blue Cobol. For best results, a level 32-42 character must plant it on a level 32-42 monster. -->
+		<set name="icon" val="icon.etc_cobol_seed_i00" />
 		<set name="item_type" val="seed" />
 		<set name="weight" val="1" />
 		<set name="consume_type" val="stackable" />
@@ -1878,6 +1960,7 @@
 	</item>
 	<item id="5682" type="EtcItem" name="Alternative Thorn Cobol Seed">
 		<!-- Plant this seed onto a monster in the Oren area and it will bear the fruit of the Alternative Thorn Cobol. For best results, a level 35-45 character must plant it on a level 35-45 monster. -->
+		<set name="icon" val="icon.etc_cobol_seed_i00" />
 		<set name="item_type" val="seed" />
 		<set name="weight" val="1" />
 		<set name="consume_type" val="stackable" />
@@ -1886,6 +1969,7 @@
 	</item>
 	<item id="5683" type="EtcItem" name="Alternative Sea Codran Seed">
 		<!-- Plant this seed onto a monster in the Oren area and it will bear the fruit of the Alternative Sea Codran. For best results, a level 45-55 character must plant it on a level 45-55 monster. -->
+		<set name="icon" val="icon.etc_codran_seed_i00" />
 		<set name="item_type" val="seed" />
 		<set name="weight" val="1" />
 		<set name="consume_type" val="stackable" />
@@ -1894,6 +1978,7 @@
 	</item>
 	<item id="5684" type="EtcItem" name="Alternative Chilly Codran Seed">
 		<!-- Plant this seed onto a monster in the Oren area and it will bear the fruit of the Alternative Chilly Codran. For best results, a level 47-57 character must plant it on a level 47-57 monster. -->
+		<set name="icon" val="icon.etc_codran_seed_i00" />
 		<set name="item_type" val="seed" />
 		<set name="weight" val="1" />
 		<set name="consume_type" val="stackable" />
@@ -1902,6 +1987,7 @@
 	</item>
 	<item id="5685" type="EtcItem" name="Alternative Blue Codran Seed">
 		<!-- Plant this seed onto a monster in the Oren area and it will bear the fruit of the Alternative Blue Codran. For best results, a level 50-60 character must plant it on a level 50-60 monster. -->
+		<set name="icon" val="icon.etc_codran_seed_i00" />
 		<set name="item_type" val="seed" />
 		<set name="weight" val="1" />
 		<set name="consume_type" val="stackable" />
@@ -1910,6 +1996,7 @@
 	</item>
 	<item id="5686" type="EtcItem" name="Alternative Twin Codran Seed">
 		<!-- Plant this seed onto a monster in the Oren area and it will bear the fruit of the Alternative Twin Codran. For best results, a level 53-63 character must plant it on a level 53-63 monster. -->
+		<set name="icon" val="icon.etc_codran_seed_i00" />
 		<set name="item_type" val="seed" />
 		<set name="weight" val="1" />
 		<set name="consume_type" val="stackable" />
@@ -1918,6 +2005,7 @@
 	</item>
 	<item id="5687" type="EtcItem" name="Alternative Thorn Cobol Seed">
 		<!-- Plant this seed onto a monster in the Aden area and it will bear the fruit of the Alternative Thorn Cobol. For best results, a level 35-45 character must plant it on a level 35-45 monster. -->
+		<set name="icon" val="icon.etc_cobol_seed_i00" />
 		<set name="item_type" val="seed" />
 		<set name="weight" val="1" />
 		<set name="consume_type" val="stackable" />
@@ -1926,6 +2014,7 @@
 	</item>
 	<item id="5688" type="EtcItem" name="Alternative Golden Cobol Seed">
 		<!-- Plant this seed onto a monster in the Aden area and it will bear the fruit of the Alternative Golden Cobol. For best results, a level 38-48 character must plant it on a level 38-48 monster. -->
+		<set name="icon" val="icon.etc_cobol_seed_i00" />
 		<set name="item_type" val="seed" />
 		<set name="weight" val="1" />
 		<set name="consume_type" val="stackable" />
@@ -1934,6 +2023,7 @@
 	</item>
 	<item id="5689" type="EtcItem" name="Alternative Great Cobol Seed">
 		<!-- Plant this seed onto a monster in the Aden area and it will bear the fruit of the Alternative Great Cobol. For best results, a level 41-51 character must plant it on a level 41-51 monster. -->
+		<set name="icon" val="icon.etc_cobol_seed_i00" />
 		<set name="item_type" val="seed" />
 		<set name="weight" val="1" />
 		<set name="consume_type" val="stackable" />
@@ -1942,6 +2032,7 @@
 	</item>
 	<item id="5690" type="EtcItem" name="Alternative Red Codran Seed">
 		<!-- Plant this seed onto a monster in the Aden area and it will bear the fruit of the Alternative Red Codran. For best results, a level 44-54 character must plant it on a level 44-54 monster. -->
+		<set name="icon" val="icon.etc_codran_seed_i00" />
 		<set name="item_type" val="seed" />
 		<set name="weight" val="1" />
 		<set name="consume_type" val="stackable" />
@@ -1950,6 +2041,7 @@
 	</item>
 	<item id="5691" type="EtcItem" name="Alternative Chilly Codran Seed">
 		<!-- Plant this seed onto a monster in the Aden area and it will bear the fruit of the Alternative Chilly Codran. For best results, a level 47-57 character must plant it on a level 47-57 monster. -->
+		<set name="icon" val="icon.etc_codran_seed_i00" />
 		<set name="item_type" val="seed" />
 		<set name="weight" val="1" />
 		<set name="consume_type" val="stackable" />
@@ -1958,6 +2050,7 @@
 	</item>
 	<item id="5692" type="EtcItem" name="Alternative Blue Codran Seed">
 		<!-- Plant this seed onto a monster in the Aden area and it will bear the fruit of the Alternative Blue Codran. For best results, a level 50-60 character must plant it on a level 50-60 monster. -->
+		<set name="icon" val="icon.etc_codran_seed_i00" />
 		<set name="item_type" val="seed" />
 		<set name="weight" val="1" />
 		<set name="consume_type" val="stackable" />
@@ -1966,6 +2059,7 @@
 	</item>
 	<item id="5693" type="EtcItem" name="Alternative Twin Codran Seed">
 		<!-- Plant this seed onto a monster in the Aden area and it will bear the fruit of the Alternative Twin Codran. For best results, a level 53-63 character must plant it on a level 53-63 monster. -->
+		<set name="icon" val="icon.etc_codran_seed_i00" />
 		<set name="item_type" val="seed" />
 		<set name="weight" val="1" />
 		<set name="consume_type" val="stackable" />
@@ -1974,6 +2068,7 @@
 	</item>
 	<item id="5694" type="EtcItem" name="Alternative Great Codran Seed">
 		<!-- Plant this seed onto a monster in the Aden area and it will bear the fruit of the Alternative Great Codran. For best results, a level 56-66 character must plant it on a level 56-66 monster. -->
+		<set name="icon" val="icon.etc_codran_seed_i00" />
 		<set name="item_type" val="seed" />
 		<set name="weight" val="1" />
 		<set name="consume_type" val="stackable" />
@@ -1982,6 +2077,7 @@
 	</item>
 	<item id="5695" type="EtcItem" name="Alternative Desert Codran Seed">
 		<!-- Plant this seed onto a monster in the Aden area and it will bear the fruit of the Alternative Desert Codran. For best results, a level 59-69 character must plant it on a level 59-69 monster. -->
+		<set name="icon" val="icon.etc_codran_seed_i00" />
 		<set name="item_type" val="seed" />
 		<set name="weight" val="1" />
 		<set name="consume_type" val="stackable" />
@@ -1990,6 +2086,7 @@
 	</item>
 	<item id="5696" type="EtcItem" name="Alternative Chilly Cobol Seed">
 		<!-- Plant this seed onto a monster in the Innadril area and it will bear the fruit of the Alternative Chilly Cobol. For best results, a level 29-39 character must plant it on a level 29-39 monster. -->
+		<set name="icon" val="icon.etc_cobol_seed_i00" />
 		<set name="item_type" val="seed" />
 		<set name="weight" val="1" />
 		<set name="consume_type" val="stackable" />
@@ -1998,6 +2095,7 @@
 	</item>
 	<item id="5697" type="EtcItem" name="Alternative Blue Cobol Seed">
 		<!-- Plant this seed onto a monster in the Innadril area and it will bear the fruit of the Alternative Blue Cobol. For best results, a level 32-42 character must plant it on a level 32-42 monster. -->
+		<set name="icon" val="icon.etc_cobol_seed_i00" />
 		<set name="item_type" val="seed" />
 		<set name="weight" val="1" />
 		<set name="consume_type" val="stackable" />
@@ -2006,6 +2104,7 @@
 	</item>
 	<item id="5698" type="EtcItem" name="Alternative Thorn Cobol Seed">
 		<!-- Plant this seed onto a monster in the Innadril area and it will bear the fruit of the Alternative Thorn Cobol. For best results, a level 35-45 character must plant it on a level 35-45 monster. -->
+		<set name="icon" val="icon.etc_cobol_seed_i00" />
 		<set name="item_type" val="seed" />
 		<set name="weight" val="1" />
 		<set name="consume_type" val="stackable" />
@@ -2014,6 +2113,7 @@
 	</item>
 	<item id="5699" type="EtcItem" name="Alternative Golden Cobol Seed">
 		<!-- Plant this seed onto a monster in the Innadril area and it will bear the fruit of the Alternative Golden Cobol. For best results, a level 38-48 character must plant it on a level 38-48 monster. -->
+		<set name="icon" val="icon.etc_cobol_seed_i00" />
 		<set name="item_type" val="seed" />
 		<set name="weight" val="1" />
 		<set name="consume_type" val="stackable" />

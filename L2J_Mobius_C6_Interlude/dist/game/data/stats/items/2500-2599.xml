@@ -2,6 +2,7 @@
 <list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../xsd/items.xsd">
 	<item id="2500" type="Weapon" name="Dark Legion's Edge">
 		<!-- Bestows one of the following functions: Critical Damage, Health, or Rsk. Focus. -->
+		<set name="icon" val="icon.weapon_dark_legions_edge_i00" />
 		<set name="bodypart" val="rhand" />
 		<set name="crystallizable" val="true" />
 		<set name="weight" val="1320" />
@@ -27,6 +28,7 @@
 		</for>
 	</item>
 	<item id="2501" type="Weapon" name="Bone Club">
+		<set name="icon" val="icon.weapon_club_i00" />
 		<set name="bodypart" val="rhand" />
 		<set name="weight" val="1850" />
 		<set name="soulshots" val="2" />
@@ -52,6 +54,7 @@
 	</item>
 	<item id="2502" type="Weapon" name="Dwarven War Hammer">
 		<!-- Bestows either Anger, Health or Haste. -->
+		<set name="icon" val="icon.weapon_dwarven_warhammer_i00" />
 		<set name="bodypart" val="rhand" />
 		<set name="crystallizable" val="true" />
 		<set name="weight" val="1670" />
@@ -79,6 +82,7 @@
 	</item>
 	<item id="2503" type="Weapon" name="Yaksa Mace">
 		<!-- Bestows one of the following functions: Anger, Health, or Rsk. Focus. -->
+		<set name="icon" val="icon.weapon_yaksa_mace_i00" />
 		<set name="bodypart" val="rhand" />
 		<set name="crystallizable" val="true" />
 		<set name="weight" val="1640" />
@@ -106,6 +110,7 @@
 	</item>
 	<item id="2504" type="Weapon" name="Meteor Shower">
 		<!-- Bestows one of the following functions: Focus, Critical Bleed, or Rsk. Haste. -->
+		<set name="icon" val="icon.weapon_meteor_shower_i00" />
 		<set name="bodypart" val="rhand" />
 		<set name="crystallizable" val="true" />
 		<set name="weight" val="1600" />
@@ -133,6 +138,7 @@
 	</item>
 	<item id="2505" type="Weapon" name="Iron Canine">
 		<!-- Double-click to wear. Only for wolves. -->
+		<set name="icon" val="icon.etc_pet_arms_i00" />
 		<set name="bodypart" val="wolf" />
 		<set name="weight" val="100" />
 		<set name="soulshots" val="1" />
@@ -154,6 +160,7 @@
 	</item>
 	<item id="2506" type="Armor" name="Wolf's Leather Armor">
 		<!-- Double-click to wear. Only for wolves. -->
+		<set name="icon" val="icon.etc_pet_armor_i00" />
 		<set name="bodypart" val="wolf" />
 		<set name="armor_type" val="pet" />
 		<set name="weight" val="160" />
@@ -167,6 +174,7 @@
 		</for>
 	</item>
 	<item id="2507" type="Weapon" name="Lizardspear">
+		<set name="icon" val="icon.weapon_doomed_dagger_i00" />
 		<set name="bodypart" val="rhand" />
 		<set name="weight" val="300" />
 		<set name="soulshots" val="2" />
@@ -192,6 +200,7 @@
 		</for>
 	</item>
 	<item id="2508" type="EtcItem" name="Cursed Bone">
+		<set name="icon" val="icon.etc_piece_bone_red_i00" />
 		<set name="item_type" val="material" />
 		<set name="weight" val="3" />
 		<set name="consume_type" val="stackable" />
@@ -200,6 +209,7 @@
 	</item>
 	<item id="2509" type="EtcItem" name="Spiritshot: No Grade">
 		<!-- The power of a higher-level spirit is bestowed upon a weapon causing its magic power to momentarily increase. Used with a no grade weapon. -->
+		<set name="icon" val="icon.etc_spell_shot_white_i00" />
 		<set name="item_type" val="shot" />
 		<set name="weight" val="5" />
 		<set name="consume_type" val="stackable" />
@@ -208,6 +218,7 @@
 	</item>
 	<item id="2510" type="EtcItem" name="Spiritshot: D-grade">
 		<!-- The power of a higher-level spirit is bestowed upon a weapon causing its magic power to momentarily increase. Used with a D-grade weapon. -->
+		<set name="icon" val="icon.etc_spell_shot_blue_i00" />
 		<set name="item_type" val="shot" />
 		<set name="weight" val="5" />
 		<set name="consume_type" val="stackable" />
@@ -216,6 +227,7 @@
 	</item>
 	<item id="2511" type="EtcItem" name="Spiritshot: C-grade">
 		<!-- The power of a higher-level spirit is bestowed upon a weapon causing its magic power to momentarily increase. Used with a C-grade weapon. -->
+		<set name="icon" val="icon.etc_spell_shot_green_i00" />
 		<set name="item_type" val="shot" />
 		<set name="weight" val="3" />
 		<set name="consume_type" val="stackable" />
@@ -224,6 +236,7 @@
 	</item>
 	<item id="2512" type="EtcItem" name="Spiritshot: B-grade">
 		<!-- The power of a higher-level spirit is bestowed upon a weapon causing its magic power to momentarily increase. Used with a B-grade weapon. -->
+		<set name="icon" val="icon.etc_spell_shot_red_i00" />
 		<set name="item_type" val="shot" />
 		<set name="weight" val="3" />
 		<set name="consume_type" val="stackable" />
@@ -232,6 +245,7 @@
 	</item>
 	<item id="2513" type="EtcItem" name="Spiritshot: A-grade">
 		<!-- The power of a higher-level spirit is bestowed upon a weapon causing its magic power to momentarily increase. Used with an A-grade weapon. -->
+		<set name="icon" val="icon.etc_spell_shot_silver_i00" />
 		<set name="item_type" val="shot" />
 		<set name="weight" val="2" />
 		<set name="consume_type" val="stackable" />
@@ -240,6 +254,7 @@
 	</item>
 	<item id="2514" type="EtcItem" name="Spiritshot: S-grade">
 		<!-- The power of a higher-level spirit is bestowed upon a weapon causing its magic power to momentarily increase. Used with an S-grade weapon. -->
+		<set name="icon" val="icon.etc_spell_shot_gold_i00" />
 		<set name="item_type" val="shot" />
 		<set name="weight" val="2" />
 		<set name="consume_type" val="stackable" />
@@ -248,6 +263,7 @@
 	</item>
 	<item id="2515" type="EtcItem" name="Food For Wolves">
 		<!-- When the hunger gauge of a wolf reaches 55% or below, its food will be consumed automatically. -->
+		<set name="icon" val="icon.etc_pouch_yellow_i00" />
 		<set name="item_type" val="none" />
 		<set name="weight" val="40" />
 		<set name="consume_type" val="stackable" />
@@ -255,6 +271,7 @@
 		<set name="price" val="100" />
 	</item>
 	<item id="2516" type="Weapon" name="Saber*Saber">
+		<set name="icon" val="icon.weapon_dual_sword_i00" />
 		<set name="bodypart" val="lrhand" />
 		<set name="crystallizable" val="true" />
 		<set name="weight" val="2530" />
@@ -280,6 +297,7 @@
 		</for>
 	</item>
 	<item id="2517" type="Weapon" name="Saber*Bastard Sword">
+		<set name="icon" val="icon.weapon_dual_sword_i00" />
 		<set name="bodypart" val="lrhand" />
 		<set name="crystallizable" val="true" />
 		<set name="weight" val="2520" />
@@ -305,6 +323,7 @@
 		</for>
 	</item>
 	<item id="2518" type="Weapon" name="Saber*Spinebone Sword">
+		<set name="icon" val="icon.weapon_dual_sword_i00" />
 		<set name="bodypart" val="lrhand" />
 		<set name="crystallizable" val="true" />
 		<set name="weight" val="2530" />
@@ -330,6 +349,7 @@
 		</for>
 	</item>
 	<item id="2519" type="Weapon" name="Saber*Artisan's Sword">
+		<set name="icon" val="icon.weapon_dual_sword_i00" />
 		<set name="bodypart" val="lrhand" />
 		<set name="crystallizable" val="true" />
 		<set name="weight" val="2520" />
@@ -355,6 +375,7 @@
 		</for>
 	</item>
 	<item id="2520" type="Weapon" name="Saber*Knight's Sword">
+		<set name="icon" val="icon.weapon_dual_sword_i00" />
 		<set name="bodypart" val="lrhand" />
 		<set name="crystallizable" val="true" />
 		<set name="weight" val="2510" />
@@ -380,6 +401,7 @@
 		</for>
 	</item>
 	<item id="2521" type="Weapon" name="Saber*Crimson Sword">
+		<set name="icon" val="icon.weapon_dual_sword_i00" />
 		<set name="bodypart" val="lrhand" />
 		<set name="crystallizable" val="true" />
 		<set name="weight" val="2530" />
@@ -405,6 +427,7 @@
 		</for>
 	</item>
 	<item id="2522" type="Weapon" name="Saber*Elven Sword">
+		<set name="icon" val="icon.weapon_dual_sword_i00" />
 		<set name="bodypart" val="lrhand" />
 		<set name="crystallizable" val="true" />
 		<set name="weight" val="2510" />
@@ -430,6 +453,7 @@
 		</for>
 	</item>
 	<item id="2523" type="Weapon" name="Saber*Sword of Revolution">
+		<set name="icon" val="icon.weapon_dual_sword_i00" />
 		<set name="bodypart" val="lrhand" />
 		<set name="crystallizable" val="true" />
 		<set name="weight" val="2420" />
@@ -455,6 +479,7 @@
 		</for>
 	</item>
 	<item id="2524" type="Weapon" name="Saber*Elven Long Sword">
+		<set name="icon" val="icon.weapon_dual_sword_i00" />
 		<set name="bodypart" val="lrhand" />
 		<set name="crystallizable" val="true" />
 		<set name="weight" val="2420" />
@@ -480,6 +505,7 @@
 		</for>
 	</item>
 	<item id="2525" type="Weapon" name="Bastard Sword*Bastard Sword">
+		<set name="icon" val="icon.weapon_dual_sword_i00" />
 		<set name="bodypart" val="lrhand" />
 		<set name="crystallizable" val="true" />
 		<set name="weight" val="2470" />
@@ -505,6 +531,7 @@
 		</for>
 	</item>
 	<item id="2526" type="Weapon" name="Bastard Sword*Spinebone Sword">
+		<set name="icon" val="icon.weapon_dual_sword_i00" />
 		<set name="bodypart" val="lrhand" />
 		<set name="crystallizable" val="true" />
 		<set name="weight" val="2470" />
@@ -530,6 +557,7 @@
 		</for>
 	</item>
 	<item id="2527" type="Weapon" name="Bastard Sword*Artisan's Sword">
+		<set name="icon" val="icon.weapon_dual_sword_i00" />
 		<set name="bodypart" val="lrhand" />
 		<set name="crystallizable" val="true" />
 		<set name="weight" val="2480" />
@@ -555,6 +583,7 @@
 		</for>
 	</item>
 	<item id="2528" type="Weapon" name="Bastard Sword*Knight's Sword">
+		<set name="icon" val="icon.weapon_dual_sword_i00" />
 		<set name="bodypart" val="lrhand" />
 		<set name="crystallizable" val="true" />
 		<set name="weight" val="2500" />
@@ -580,6 +609,7 @@
 		</for>
 	</item>
 	<item id="2529" type="Weapon" name="Bastard Sword*Crimson Sword">
+		<set name="icon" val="icon.weapon_dual_sword_i00" />
 		<set name="bodypart" val="lrhand" />
 		<set name="crystallizable" val="true" />
 		<set name="weight" val="2470" />
@@ -605,6 +635,7 @@
 		</for>
 	</item>
 	<item id="2530" type="Weapon" name="Bastard Sword*Elven Sword">
+		<set name="icon" val="icon.weapon_dual_sword_i00" />
 		<set name="bodypart" val="lrhand" />
 		<set name="crystallizable" val="true" />
 		<set name="weight" val="2460" />
@@ -630,6 +661,7 @@
 		</for>
 	</item>
 	<item id="2531" type="Weapon" name="Bastard Sword*Sword of Revolution">
+		<set name="icon" val="icon.weapon_dual_sword_i00" />
 		<set name="bodypart" val="lrhand" />
 		<set name="crystallizable" val="true" />
 		<set name="weight" val="2450" />
@@ -655,6 +687,7 @@
 		</for>
 	</item>
 	<item id="2532" type="Weapon" name="Bastard Sword*Elven Long Sword">
+		<set name="icon" val="icon.weapon_dual_sword_i00" />
 		<set name="bodypart" val="lrhand" />
 		<set name="crystallizable" val="true" />
 		<set name="weight" val="2430" />
@@ -680,6 +713,7 @@
 		</for>
 	</item>
 	<item id="2533" type="Weapon" name="Spinebone Sword*Spinebone Sword">
+		<set name="icon" val="icon.weapon_dual_sword_i00" />
 		<set name="bodypart" val="lrhand" />
 		<set name="crystallizable" val="true" />
 		<set name="weight" val="2520" />
@@ -705,6 +739,7 @@
 		</for>
 	</item>
 	<item id="2534" type="Weapon" name="Spinebone Sword*Artisan's Sword">
+		<set name="icon" val="icon.weapon_dual_sword_i00" />
 		<set name="bodypart" val="lrhand" />
 		<set name="crystallizable" val="true" />
 		<set name="weight" val="2460" />
@@ -730,6 +765,7 @@
 		</for>
 	</item>
 	<item id="2535" type="Weapon" name="Spinebone Sword*Knight's Sword">
+		<set name="icon" val="icon.weapon_dual_sword_i00" />
 		<set name="bodypart" val="lrhand" />
 		<set name="crystallizable" val="true" />
 		<set name="weight" val="2470" />
@@ -755,6 +791,7 @@
 		</for>
 	</item>
 	<item id="2536" type="Weapon" name="Spinebone Sword*Crimson Sword">
+		<set name="icon" val="icon.weapon_dual_sword_i00" />
 		<set name="bodypart" val="lrhand" />
 		<set name="crystallizable" val="true" />
 		<set name="weight" val="2520" />
@@ -780,6 +817,7 @@
 		</for>
 	</item>
 	<item id="2537" type="Weapon" name="Spinebone Sword*Elven Sword">
+		<set name="icon" val="icon.weapon_dual_sword_i00" />
 		<set name="bodypart" val="lrhand" />
 		<set name="crystallizable" val="true" />
 		<set name="weight" val="2460" />
@@ -805,6 +843,7 @@
 		</for>
 	</item>
 	<item id="2538" type="Weapon" name="Spinebone Sword*Sword of Revolution">
+		<set name="icon" val="icon.weapon_dual_sword_i00" />
 		<set name="bodypart" val="lrhand" />
 		<set name="crystallizable" val="true" />
 		<set name="weight" val="2460" />
@@ -830,6 +869,7 @@
 		</for>
 	</item>
 	<item id="2539" type="Weapon" name="Spinebone Sword*Elven Long Sword">
+		<set name="icon" val="icon.weapon_dual_sword_i00" />
 		<set name="bodypart" val="lrhand" />
 		<set name="crystallizable" val="true" />
 		<set name="weight" val="2390" />
@@ -855,6 +895,7 @@
 		</for>
 	</item>
 	<item id="2540" type="Weapon" name="Artisan's Sword*Artisan's Sword">
+		<set name="icon" val="icon.weapon_dual_sword_i00" />
 		<set name="bodypart" val="lrhand" />
 		<set name="crystallizable" val="true" />
 		<set name="weight" val="2480" />
@@ -880,6 +921,7 @@
 		</for>
 	</item>
 	<item id="2541" type="Weapon" name="Artisan's Sword*Knight's Sword">
+		<set name="icon" val="icon.weapon_dual_sword_i00" />
 		<set name="bodypart" val="lrhand" />
 		<set name="crystallizable" val="true" />
 		<set name="weight" val="2470" />
@@ -905,6 +947,7 @@
 		</for>
 	</item>
 	<item id="2542" type="Weapon" name="Artisan's Sword*Crimson Sword">
+		<set name="icon" val="icon.weapon_dual_sword_i00" />
 		<set name="bodypart" val="lrhand" />
 		<set name="crystallizable" val="true" />
 		<set name="weight" val="2450" />
@@ -930,6 +973,7 @@
 		</for>
 	</item>
 	<item id="2543" type="Weapon" name="Artisan's Sword*Elven Sword">
+		<set name="icon" val="icon.weapon_dual_sword_i00" />
 		<set name="bodypart" val="lrhand" />
 		<set name="crystallizable" val="true" />
 		<set name="weight" val="2470" />
@@ -955,6 +999,7 @@
 		</for>
 	</item>
 	<item id="2544" type="Weapon" name="Artisan's Sword*Sword of Revolution">
+		<set name="icon" val="icon.weapon_dual_sword_i00" />
 		<set name="bodypart" val="lrhand" />
 		<set name="crystallizable" val="true" />
 		<set name="weight" val="2420" />
@@ -980,6 +1025,7 @@
 		</for>
 	</item>
 	<item id="2545" type="Weapon" name="Artisan's Sword*Elven Long Sword">
+		<set name="icon" val="icon.weapon_dual_sword_i00" />
 		<set name="bodypart" val="lrhand" />
 		<set name="crystallizable" val="true" />
 		<set name="weight" val="2410" />
@@ -1005,6 +1051,7 @@
 		</for>
 	</item>
 	<item id="2546" type="Weapon" name="Knight's Sword*Knight's Sword">
+		<set name="icon" val="icon.weapon_dual_sword_i00" />
 		<set name="bodypart" val="lrhand" />
 		<set name="crystallizable" val="true" />
 		<set name="weight" val="2460" />
@@ -1030,6 +1077,7 @@
 		</for>
 	</item>
 	<item id="2547" type="Weapon" name="Knight's Sword*Crimson Sword">
+		<set name="icon" val="icon.weapon_dual_sword_i00" />
 		<set name="bodypart" val="lrhand" />
 		<set name="crystallizable" val="true" />
 		<set name="weight" val="2460" />
@@ -1055,6 +1103,7 @@
 		</for>
 	</item>
 	<item id="2548" type="Weapon" name="Knight's Sword*Elven Sword">
+		<set name="icon" val="icon.weapon_dual_sword_i00" />
 		<set name="bodypart" val="lrhand" />
 		<set name="crystallizable" val="true" />
 		<set name="weight" val="2450" />
@@ -1080,6 +1129,7 @@
 		</for>
 	</item>
 	<item id="2549" type="Weapon" name="Knight's Sword*Sword of Revolution">
+		<set name="icon" val="icon.weapon_dual_sword_i00" />
 		<set name="bodypart" val="lrhand" />
 		<set name="crystallizable" val="true" />
 		<set name="weight" val="2430" />
@@ -1105,6 +1155,7 @@
 		</for>
 	</item>
 	<item id="2550" type="Weapon" name="Knight's Sword*Elven Long Sword">
+		<set name="icon" val="icon.weapon_dual_sword_i00" />
 		<set name="bodypart" val="lrhand" />
 		<set name="crystallizable" val="true" />
 		<set name="weight" val="2370" />
@@ -1130,6 +1181,7 @@
 		</for>
 	</item>
 	<item id="2551" type="Weapon" name="Crimson Sword*Crimson Sword">
+		<set name="icon" val="icon.weapon_dual_sword_i00" />
 		<set name="bodypart" val="lrhand" />
 		<set name="crystallizable" val="true" />
 		<set name="weight" val="2440" />
@@ -1155,6 +1207,7 @@
 		</for>
 	</item>
 	<item id="2552" type="Weapon" name="Crimson Sword*Elven Sword">
+		<set name="icon" val="icon.weapon_dual_sword_i00" />
 		<set name="bodypart" val="lrhand" />
 		<set name="crystallizable" val="true" />
 		<set name="weight" val="2450" />
@@ -1180,6 +1233,7 @@
 		</for>
 	</item>
 	<item id="2553" type="Weapon" name="Crimson Sword*Sword of Revolution">
+		<set name="icon" val="icon.weapon_dual_sword_i00" />
 		<set name="bodypart" val="lrhand" />
 		<set name="crystallizable" val="true" />
 		<set name="weight" val="2390" />
@@ -1206,6 +1260,7 @@
 	</item>
 	<item id="2554" type="Weapon" name="Crimson Sword*Elven Long Sword">
 		<!-- When enchanted, the P.Atk of a dualsword will increase more significantly than that of one-handed or fist weapon. When enchanted by 4 or more, its Accuracy will increase by 2. -->
+		<set name="icon" val="icon.weapon_dual_sword_i00" />
 		<set name="bodypart" val="lrhand" />
 		<set name="crystallizable" val="true" />
 		<set name="weight" val="2360" />
@@ -1235,6 +1290,7 @@
 		</for>
 	</item>
 	<item id="2555" type="Weapon" name="Elven Sword*Elven Sword">
+		<set name="icon" val="icon.weapon_dual_sword_i00" />
 		<set name="bodypart" val="lrhand" />
 		<set name="crystallizable" val="true" />
 		<set name="weight" val="2440" />
@@ -1260,6 +1316,7 @@
 		</for>
 	</item>
 	<item id="2556" type="Weapon" name="Elven Sword*Sword of Revolution">
+		<set name="icon" val="icon.weapon_dual_sword_i00" />
 		<set name="bodypart" val="lrhand" />
 		<set name="crystallizable" val="true" />
 		<set name="weight" val="2410" />
@@ -1286,6 +1343,7 @@
 	</item>
 	<item id="2557" type="Weapon" name="Elven Sword*Elven Long Sword">
 		<!-- When enchanted, the P.Atk of a dualsword will increase more significantly than that of one-handed or fist weapon. When enchanted by 4 or more, its P. Atk will increase by 61 during a critical attack. -->
+		<set name="icon" val="icon.weapon_dual_sword_i00" />
 		<set name="bodypart" val="lrhand" />
 		<set name="crystallizable" val="true" />
 		<set name="weight" val="2410" />
@@ -1317,6 +1375,7 @@
 	</item>
 	<item id="2558" type="Weapon" name="Sword of Revolution*Sword of Revolution">
 		<!-- When enchanted, the P.Atk of a dualsword will increase more significantly than that of one-handed or fist weapon. When enchanted by 4 or more, its maximum HP will increase by 25%. -->
+		<set name="icon" val="icon.weapon_dual_sword_i00" />
 		<set name="bodypart" val="lrhand" />
 		<set name="crystallizable" val="true" />
 		<set name="weight" val="2360" />
@@ -1348,6 +1407,7 @@
 	</item>
 	<item id="2559" type="Weapon" name="Sword of Revolution*Elven Long Sword">
 		<!-- When enchanted, the P.Atk of a dualsword will increase more significantly than that of one-handed or fist weapon. When enchanted by 4 or more, its Critical Attack will increase by 50. -->
+		<set name="icon" val="icon.weapon_dual_sword_i00" />
 		<set name="bodypart" val="lrhand" />
 		<set name="crystallizable" val="true" />
 		<set name="weight" val="2340" />
@@ -1379,6 +1439,7 @@
 	</item>
 	<item id="2560" type="Weapon" name="Elven Long Sword*Elven Long Sword">
 		<!-- When enchanted, the P.Atk of a dualsword will increase more significantly than that of one-handed or fist weapon. When enchanted by 4 or more, its Atk. Spd. will increase by 4%. -->
+		<set name="icon" val="icon.weapon_dual_sword_i00" />
 		<set name="bodypart" val="lrhand" />
 		<set name="crystallizable" val="true" />
 		<set name="weight" val="2340" />
@@ -1410,6 +1471,7 @@
 	</item>
 	<item id="2561" type="Weapon" name="Stormbringer*Stormbringer">
 		<!-- When enchanted, the P.Atk of a dualsword will increase more significantly than that of one-handed or fist weapon. When enchanted by 4 or more, its Accuracy will increase by 2. -->
+		<set name="icon" val="icon.weapon_dual_sword_i00" />
 		<set name="bodypart" val="lrhand" />
 		<set name="crystallizable" val="true" />
 		<set name="weight" val="2330" />
@@ -1440,6 +1502,7 @@
 	</item>
 	<item id="2562" type="Weapon" name="Stormbringer*Shamshir">
 		<!-- When enchanted, the P.Atk of a dualsword will increase more significantly than that of one-handed or fist weapon. When enchanted by 4 or more, its P. Atk. will increase by 49 during a critical attack. -->
+		<set name="icon" val="icon.weapon_dual_sword_i00" />
 		<set name="bodypart" val="lrhand" />
 		<set name="crystallizable" val="true" />
 		<set name="weight" val="2300" />
@@ -1471,6 +1534,7 @@
 	</item>
 	<item id="2563" type="Weapon" name="Stormbringer*Katana">
 		<!-- When enchanted, the P.Atk of a dualsword will increase more significantly than that of one-handed or fist weapon. When enchanted by 4 or more, its maximum HP will increase by 25%. -->
+		<set name="icon" val="icon.weapon_dual_sword_i00" />
 		<set name="bodypart" val="lrhand" />
 		<set name="crystallizable" val="true" />
 		<set name="weight" val="2320" />
@@ -1502,6 +1566,7 @@
 	</item>
 	<item id="2564" type="Weapon" name="Stormbringer*Spirit Sword">
 		<!-- When enchanted, the P.Atk of a dualsword will increase more significantly than that of one-handed or fist weapon. When enchanted by 4 or more, its critical attack will increase by 24. -->
+		<set name="icon" val="icon.weapon_dual_sword_i00" />
 		<set name="bodypart" val="lrhand" />
 		<set name="crystallizable" val="true" />
 		<set name="weight" val="2310" />
@@ -1533,6 +1598,7 @@
 	</item>
 	<item id="2565" type="Weapon" name="Stormbringer*Raid Sword">
 		<!-- When enchanted, the P.Atk of a dualsword will increase more significantly than that of one-handed or fist weapon. When enchanted by 4 or more, its Atk. Spd. will increase by 2%. -->
+		<set name="icon" val="icon.weapon_dual_sword_i00" />
 		<set name="bodypart" val="lrhand" />
 		<set name="crystallizable" val="true" />
 		<set name="weight" val="2340" />
@@ -1564,6 +1630,7 @@
 	</item>
 	<item id="2566" type="Weapon" name="Stormbringer*Caliburs">
 		<!-- When enchanted, the P.Atk of a dualsword will increase more significantly than that of one-handed or fist weapon. When enchanted by 4 or more, its Accuracy will increase by 5. -->
+		<set name="icon" val="icon.weapon_dual_sword_i00" />
 		<set name="bodypart" val="lrhand" />
 		<set name="crystallizable" val="true" />
 		<set name="weight" val="2260" />
@@ -1594,6 +1661,7 @@
 	</item>
 	<item id="2567" type="Weapon" name="Stormbringer*Sword of Limit">
 		<!-- When enchanted, the P.Atk of a dualsword will increase more significantly than that of one-handed or fist weapon. When enchanted by 4 or more, its P. Atk will increase by 166 during a critical attack. -->
+		<set name="icon" val="icon.weapon_dual_sword_i00" />
 		<set name="bodypart" val="lrhand" />
 		<set name="crystallizable" val="true" />
 		<set name="weight" val="2240" />
@@ -1625,6 +1693,7 @@
 	</item>
 	<item id="2568" type="Weapon" name="Stormbringer*Sword of Delusion">
 		<!-- When enchanted, the P.Atk of a dualsword will increase more significantly than that of one-handed or fist weapon. When enchanted by 4 or more, its maximum HP will increase by 25%. -->
+		<set name="icon" val="icon.weapon_dual_sword_i00" />
 		<set name="bodypart" val="lrhand" />
 		<set name="crystallizable" val="true" />
 		<set name="weight" val="2230" />
@@ -1656,6 +1725,7 @@
 	</item>
 	<item id="2569" type="Weapon" name="Stormbringer*Sword of Nightmare">
 		<!-- When enchanted, the P.Atk of a dualsword will increase more significantly than that of one-handed or fist weapon. When enchanted by 4 or more, its critical will increase by 76. -->
+		<set name="icon" val="icon.weapon_dual_sword_i00" />
 		<set name="bodypart" val="lrhand" />
 		<set name="crystallizable" val="true" />
 		<set name="weight" val="2250" />
@@ -1687,6 +1757,7 @@
 	</item>
 	<item id="2570" type="Weapon" name="Stormbringer*Tsurugi">
 		<!-- When enchanted, the P.Atk of a dualsword will increase more significantly than that of one-handed or fist weapon. When enchanted by 4 or more, its Atk. Spd. will increase by 7%. -->
+		<set name="icon" val="icon.weapon_dual_sword_i00" />
 		<set name="bodypart" val="lrhand" />
 		<set name="crystallizable" val="true" />
 		<set name="weight" val="2220" />
@@ -1718,6 +1789,7 @@
 	</item>
 	<item id="2571" type="Weapon" name="Stormbringer*Samurai Long sword">
 		<!-- When enchanted, the P.Atk of a dualsword will increase more significantly than that of one-handed or fist weapon. When enchanted by 4 or more, its Accuracy will increase by 4. -->
+		<set name="icon" val="icon.weapon_dual_sword_i00" />
 		<set name="bodypart" val="lrhand" />
 		<set name="crystallizable" val="true" />
 		<set name="weight" val="2150" />
@@ -1748,6 +1820,7 @@
 	</item>
 	<item id="2572" type="Weapon" name="Shamshir*Shamshir">
 		<!-- When enchanted, the P.Atk of a dualsword will increase more significantly than that of one-handed or fist weapon. When enchanted by 4 or more, its Accuracy will increase by 2. -->
+		<set name="icon" val="icon.weapon_dual_sword_i00" />
 		<set name="bodypart" val="lrhand" />
 		<set name="crystallizable" val="true" />
 		<set name="weight" val="2330" />
@@ -1778,6 +1851,7 @@
 	</item>
 	<item id="2573" type="Weapon" name="Shamshir*Katana">
 		<!-- When enchanted, the P.Atk of a dualsword will increase more significantly than that of one-handed or fist weapon. When enchanted by 4 or more, its P. Atk. will increase by 84 during a critical attack. -->
+		<set name="icon" val="icon.weapon_dual_sword_i00" />
 		<set name="bodypart" val="lrhand" />
 		<set name="crystallizable" val="true" />
 		<set name="weight" val="2310" />
@@ -1809,6 +1883,7 @@
 	</item>
 	<item id="2574" type="Weapon" name="Shamshir*Spirit Sword">
 		<!-- When enchanted, the P.Atk of a dualsword will increase more significantly than that of one-handed or fist weapon. When enchanted by 4 or more, its maximum HP will increase by 25%. -->
+		<set name="icon" val="icon.weapon_dual_sword_i00" />
 		<set name="bodypart" val="lrhand" />
 		<set name="crystallizable" val="true" />
 		<set name="weight" val="2280" />
@@ -1840,6 +1915,7 @@
 	</item>
 	<item id="2575" type="Weapon" name="Shamshir*Raid Sword">
 		<!-- When enchanted, the P.Atk of a dualsword will increase more significantly than that of one-handed or fist weapon. When enchanted by 4 or more, its critical will increase by 40. -->
+		<set name="icon" val="icon.weapon_dual_sword_i00" />
 		<set name="bodypart" val="lrhand" />
 		<set name="crystallizable" val="true" />
 		<set name="weight" val="2280" />
@@ -1871,6 +1947,7 @@
 	</item>
 	<item id="2576" type="Weapon" name="Shamshir*Caliburs">
 		<!-- When enchanted, the P.Atk of a dualsword will increase more significantly than that of one-handed or fist weapon. When enchanted by 4 or more, its Accuracy will increase by 4. -->
+		<set name="icon" val="icon.weapon_dual_sword_i00" />
 		<set name="bodypart" val="lrhand" />
 		<set name="crystallizable" val="true" />
 		<set name="weight" val="2230" />
@@ -1901,6 +1978,7 @@
 	</item>
 	<item id="2577" type="Weapon" name="Shamshir*Sword of Limit">
 		<!-- When enchanted, the P.Atk of a dualsword will increase more significantly than that of one-handed or fist weapon. When enchanted by 4 or more, P. Atk. will increase by 146 during a critical attack. -->
+		<set name="icon" val="icon.weapon_dual_sword_i00" />
 		<set name="bodypart" val="lrhand" />
 		<set name="crystallizable" val="true" />
 		<set name="weight" val="2240" />
@@ -1932,6 +2010,7 @@
 	</item>
 	<item id="2578" type="Weapon" name="Shamshir*Sword of Delusion">
 		<!-- When enchanted, the P.Atk of a dualsword will increase more significantly than that of one-handed or fist weapon. When enchanted by 4 or more, its maximum HP will increase by 25%. -->
+		<set name="icon" val="icon.weapon_dual_sword_i00" />
 		<set name="bodypart" val="lrhand" />
 		<set name="crystallizable" val="true" />
 		<set name="weight" val="2200" />
@@ -1963,6 +2042,7 @@
 	</item>
 	<item id="2579" type="Weapon" name="Shamshir*Sword of Nightmare">
 		<!-- When enchanted, the P.Atk of a dualsword will increase more significantly than that of one-handed or fist weapon. When enchanted by 4 or more, its critical will increase by 65. -->
+		<set name="icon" val="icon.weapon_dual_sword_i00" />
 		<set name="bodypart" val="lrhand" />
 		<set name="crystallizable" val="true" />
 		<set name="weight" val="2210" />
@@ -1994,6 +2074,7 @@
 	</item>
 	<item id="2580" type="Weapon" name="Shamshir*Tsurugi">
 		<!-- When enchanted, the P.Atk of a dualsword will increase more significantly than that of one-handed or fist weapon. When enchanted by 4 or more, its Atk. Spd. will increase by 6%. -->
+		<set name="icon" val="icon.weapon_dual_sword_i00" />
 		<set name="bodypart" val="lrhand" />
 		<set name="crystallizable" val="true" />
 		<set name="weight" val="2220" />
@@ -2025,6 +2106,7 @@
 	</item>
 	<item id="2581" type="Weapon" name="Shamshir*Samurai Long Sword">
 		<!-- When enchanted, the P.Atk of a dualsword will increase more significantly than that of one-handed or fist weapon. When enchanted by 4 or more, its Accuracy will increase by 3. -->
+		<set name="icon" val="icon.weapon_dual_sword_i00" />
 		<set name="bodypart" val="lrhand" />
 		<set name="crystallizable" val="true" />
 		<set name="weight" val="2110" />
@@ -2055,6 +2137,7 @@
 	</item>
 	<item id="2582" type="Weapon" name="Katana*Katana">
 		<!-- When enchanted, the P.Atk of a dualsword will increase more significantly than that of one-handed or fist weapon. When enchanted by 4 or more, its Atk. Spd. will increase by 4%. -->
+		<set name="icon" val="icon.weapon_dual_sword_i00" />
 		<set name="bodypart" val="lrhand" />
 		<set name="crystallizable" val="true" />
 		<set name="weight" val="2270" />
@@ -2086,6 +2169,7 @@
 	</item>
 	<item id="2583" type="Weapon" name="Katana*Spirit Sword">
 		<!-- When enchanted, the P.Atk of a dualsword will increase more significantly than that of one-handed or fist weapon. When enchanted by 4 or more, its Accuracy will increase by 2. -->
+		<set name="icon" val="icon.weapon_dual_sword_i00" />
 		<set name="bodypart" val="lrhand" />
 		<set name="crystallizable" val="true" />
 		<set name="weight" val="2250" />
@@ -2116,6 +2200,7 @@
 	</item>
 	<item id="2584" type="Weapon" name="Katana*Raid Sword">
 		<!-- When enchanted, the P.Atk of a dualsword will increase more significantly than that of one-handed or fist weapon. When enchanted by 4 or more, P. Atk. will increase by 84 during a critical attack. -->
+		<set name="icon" val="icon.weapon_dual_sword_i00" />
 		<set name="bodypart" val="lrhand" />
 		<set name="crystallizable" val="true" />
 		<set name="weight" val="2270" />
@@ -2147,6 +2232,7 @@
 	</item>
 	<item id="2585" type="Weapon" name="Katana*Caliburs">
 		<!-- When enchanted, the P.Atk of a dualsword will increase more significantly than that of one-handed or fist weapon. When enchanted by 4 or more, Accuracy will increase by 4. -->
+		<set name="icon" val="icon.weapon_dual_sword_i00" />
 		<set name="bodypart" val="lrhand" />
 		<set name="crystallizable" val="true" />
 		<set name="weight" val="2220" />
@@ -2177,6 +2263,7 @@
 	</item>
 	<item id="2586" type="Weapon" name="Katana*Sword of Limit">
 		<!-- When enchanted, the P.Atk of a dualsword will increase more significantly than that of one-handed or fist weapon. When enchanted by 4 or more, P. Atk. will increase by 146 during a critical attack. -->
+		<set name="icon" val="icon.weapon_dual_sword_i00" />
 		<set name="bodypart" val="lrhand" />
 		<set name="crystallizable" val="true" />
 		<set name="weight" val="2180" />
@@ -2208,6 +2295,7 @@
 	</item>
 	<item id="2587" type="Weapon" name="Katana*Sword of Delusion">
 		<!-- When enchanted, the P.Atk of a dualsword will increase more significantly than that of one-handed or fist weapon. When enchanted by 4 or more, maximum HP will increase by 25%. -->
+		<set name="icon" val="icon.weapon_dual_sword_i00" />
 		<set name="bodypart" val="lrhand" />
 		<set name="crystallizable" val="true" />
 		<set name="weight" val="2190" />
@@ -2239,6 +2327,7 @@
 	</item>
 	<item id="2588" type="Weapon" name="Katana*Sword of Nightmare">
 		<!-- When enchanted, the P.Atk of a dualsword will increase more significantly than that of one-handed or fist weapon. When enchanted by 4 or more, critical will increase by 65. -->
+		<set name="icon" val="icon.weapon_dual_sword_i00" />
 		<set name="bodypart" val="lrhand" />
 		<set name="crystallizable" val="true" />
 		<set name="weight" val="2170" />
@@ -2270,6 +2359,7 @@
 	</item>
 	<item id="2589" type="Weapon" name="Katana*Tsurugi">
 		<!-- When enchanted, the P.Atk of a dualsword will increase more significantly than that of one-handed or fist weapon. When enchanted by 4 or more, Atk. Spd. will increase by 6%. -->
+		<set name="icon" val="icon.weapon_dual_sword_i00" />
 		<set name="bodypart" val="lrhand" />
 		<set name="crystallizable" val="true" />
 		<set name="weight" val="2210" />
@@ -2301,6 +2391,7 @@
 	</item>
 	<item id="2590" type="Weapon" name="Katana*Samurai Long Sword">
 		<!-- When enchanted, the P.Atk of a dualsword will increase more significantly than that of one-handed or fist weapon. When enchanted by 4 or more, P. Atk. will increase by 106 during a critical attack. -->
+		<set name="icon" val="icon.weapon_dual_sword_i00" />
 		<set name="bodypart" val="lrhand" />
 		<set name="crystallizable" val="true" />
 		<set name="weight" val="2130" />
@@ -2332,6 +2423,7 @@
 	</item>
 	<item id="2591" type="Weapon" name="Spirit Sword*Spirit Sword">
 		<!-- When enchanted, the P.Atk of a dualsword will increase more significantly than that of one-handed or fist weapon. When enchanted by 4 or more, maximum HP will increase by 25%. -->
+		<set name="icon" val="icon.weapon_dual_sword_i00" />
 		<set name="bodypart" val="lrhand" />
 		<set name="crystallizable" val="true" />
 		<set name="weight" val="2240" />
@@ -2363,6 +2455,7 @@
 	</item>
 	<item id="2592" type="Weapon" name="Spirit Sword*Raid Sword">
 		<!-- When enchanted, the P.Atk of a dualsword will increase more significantly than that of one-handed or fist weapon. When enchanted by 4 or more, critical will increase by 40. -->
+		<set name="icon" val="icon.weapon_dual_sword_i00" />
 		<set name="bodypart" val="lrhand" />
 		<set name="crystallizable" val="true" />
 		<set name="weight" val="2260" />
@@ -2394,6 +2487,7 @@
 	</item>
 	<item id="2593" type="Weapon" name="Spirit Sword*Caliburs">
 		<!-- When enchanted, the P.Atk of a dualsword will increase more significantly than that of one-handed or fist weapon. When enchanted by 4 or more, Accuracy will increase by 4. -->
+		<set name="icon" val="icon.weapon_dual_sword_i00" />
 		<set name="bodypart" val="lrhand" />
 		<set name="crystallizable" val="true" />
 		<set name="weight" val="2240" />
@@ -2424,6 +2518,7 @@
 	</item>
 	<item id="2594" type="Weapon" name="Spirit Sword*Sword of Limit">
 		<!-- When enchanted, the P.Atk of a dualsword will increase more significantly than that of one-handed or fist weapon. When enchanted by 4 or more, P. Atk. will increase by 146 during a critical attack. -->
+		<set name="icon" val="icon.weapon_dual_sword_i00" />
 		<set name="bodypart" val="lrhand" />
 		<set name="crystallizable" val="true" />
 		<set name="weight" val="2240" />
@@ -2455,6 +2550,7 @@
 	</item>
 	<item id="2595" type="Weapon" name="Spirit Sword*Sword of Delusion">
 		<!-- When enchanted, the P.Atk of a dualsword will increase more significantly than that of one-handed or fist weapon. When enchanted by 4 or more, maximum HP will increase by 25%. -->
+		<set name="icon" val="icon.weapon_dual_sword_i00" />
 		<set name="bodypart" val="lrhand" />
 		<set name="crystallizable" val="true" />
 		<set name="weight" val="2250" />
@@ -2486,6 +2582,7 @@
 	</item>
 	<item id="2596" type="Weapon" name="Spirit Sword*Sword of Nightmare">
 		<!-- When enchanted, the P.Atk of a dualsword will increase more significantly than that of one-handed or fist weapon. When enchanted by 4 or more, critical will increase by 65. -->
+		<set name="icon" val="icon.weapon_dual_sword_i00" />
 		<set name="bodypart" val="lrhand" />
 		<set name="crystallizable" val="true" />
 		<set name="weight" val="2250" />
@@ -2517,6 +2614,7 @@
 	</item>
 	<item id="2597" type="Weapon" name="Spirit Sword*Tsurugi">
 		<!-- When enchanted, the P.Atk of a dualsword will increase more significantly than that of one-handed or fist weapon. When enchanted by 4 or more, Atk. Spd. will increase by 6%. -->
+		<set name="icon" val="icon.weapon_dual_sword_i00" />
 		<set name="bodypart" val="lrhand" />
 		<set name="crystallizable" val="true" />
 		<set name="weight" val="2220" />
@@ -2548,6 +2646,7 @@
 	</item>
 	<item id="2598" type="Weapon" name="Spirit Sword*Samurai Long Sword">
 		<!-- When enchanted, the P.Atk of a dualsword will increase more significantly than that of one-handed or fist weapon. When enchanted by 4 or more, maximum HP will increase by 25%. -->
+		<set name="icon" val="icon.weapon_dual_sword_i00" />
 		<set name="bodypart" val="lrhand" />
 		<set name="crystallizable" val="true" />
 		<set name="weight" val="2110" />
@@ -2579,6 +2678,7 @@
 	</item>
 	<item id="2599" type="Weapon" name="Raid Sword*Raid Sword">
 		<!-- When enchanted, the P.Atk of a dualsword will increase more significantly than that of one-handed or fist weapon. When enchanted by 4 or more, Atk. Spd. will increase by 4%. -->
+		<set name="icon" val="icon.weapon_dual_sword_i00" />
 		<set name="bodypart" val="lrhand" />
 		<set name="crystallizable" val="true" />
 		<set name="weight" val="2250" />

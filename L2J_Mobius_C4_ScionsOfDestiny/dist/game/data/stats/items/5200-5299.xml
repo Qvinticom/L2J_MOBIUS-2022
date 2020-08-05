@@ -2,6 +2,7 @@
 <list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../xsd/items.xsd">
 	<item id="5200" type="EtcItem" name="Chest Key - Grade 5">
 		<!-- Opens a level 30 treasure chest with a success rate of 60%. When opening a higher level treasure chest, the success rate will decrease. -->
+		<set name="icon" val="icon.etc_key_i00" />
 		<set name="item_type" val="none" />
 		<set name="weight" val="10" />
 		<set name="consume_type" val="stackable" />
@@ -10,6 +11,7 @@
 	</item>
 	<item id="5201" type="EtcItem" name="Chest Key - Grade 4">
 		<!-- Opens a level 40 treasure chest with a success rate of 60%. When opening a higher level treasure chest, the success rate will decrease. -->
+		<set name="icon" val="icon.etc_key_i00" />
 		<set name="item_type" val="none" />
 		<set name="weight" val="10" />
 		<set name="consume_type" val="stackable" />
@@ -18,6 +20,7 @@
 	</item>
 	<item id="5202" type="EtcItem" name="Chest Key - Grade 3">
 		<!-- Opens a level 50 treasure chest with a success rate of 60%. When opening a higher level treasure chest, the success rate will decrease. -->
+		<set name="icon" val="icon.etc_key_i00" />
 		<set name="item_type" val="none" />
 		<set name="weight" val="10" />
 		<set name="consume_type" val="stackable" />
@@ -26,6 +29,7 @@
 	</item>
 	<item id="5203" type="EtcItem" name="Chest Key - Grade 2">
 		<!-- Opens a level 60 treasure chest with a success rate of 60%. When opening a higher level treasure chest, the success rate will decrease. -->
+		<set name="icon" val="icon.etc_key_i00" />
 		<set name="item_type" val="none" />
 		<set name="weight" val="10" />
 		<set name="consume_type" val="stackable" />
@@ -34,6 +38,7 @@
 	</item>
 	<item id="5204" type="EtcItem" name="Chest Key - Grade 1">
 		<!-- Opens a level 70 treasure chest with a success rate of 60%. When opening a higher level treasure chest, the success rate will decrease. -->
+		<set name="icon" val="icon.etc_key_i00" />
 		<set name="item_type" val="none" />
 		<set name="weight" val="10" />
 		<set name="consume_type" val="stackable" />
@@ -42,71 +47,83 @@
 	</item>
 	<item id="5205" type="EtcItem" name="Mercenary Posting Ticket (Sword/Stationary)">
 		<!-- Innadril/Sword/Stationary -->
+		<set name="icon" val="icon.mticket_sword_fix_i00" />
 		<set name="item_type" val="castle_guard" />
 		<set name="consume_type" val="stackable" />
 		<set name="crystal_type" val="none" />
 	</item>
 	<item id="5206" type="EtcItem" name="Mercenary Posting Ticket (Spear/Stationary)">
 		<!-- Innadril/Spear/Stationary -->
+		<set name="icon" val="icon.mticket_pole_fix_i00" />
 		<set name="item_type" val="castle_guard" />
 		<set name="consume_type" val="stackable" />
 		<set name="crystal_type" val="none" />
 	</item>
 	<item id="5207" type="EtcItem" name="Mercenary Posting Ticket (Bow/Stationary)">
 		<!-- Innadril/Bow/Stationary -->
+		<set name="icon" val="icon.mticket_bow_fix_i00" />
 		<set name="item_type" val="castle_guard" />
 		<set name="consume_type" val="stackable" />
 		<set name="crystal_type" val="none" />
 	</item>
 	<item id="5208" type="EtcItem" name="Mercenary Posting Ticket (Cleric/Stationary)">
 		<!-- Innadril/Cleric/Stationary -->
+		<set name="icon" val="icon.mticket_cleric_fix_i00" />
 		<set name="item_type" val="castle_guard" />
 		<set name="consume_type" val="stackable" />
 		<set name="crystal_type" val="none" />
 	</item>
 	<item id="5209" type="EtcItem" name="Mercenary Posting Ticket (Wizard/Stationary)">
 		<!-- Innadril/Wizard/Stationary -->
+		<set name="icon" val="icon.mticket_wizard_fix_i00" />
 		<set name="item_type" val="castle_guard" />
 		<set name="consume_type" val="stackable" />
 		<set name="crystal_type" val="none" />
 	</item>
 	<item id="5210" type="EtcItem" name="Mercenary Posting Ticket (Sword/Mobile)">
 		<!-- Innadril/Sword/Mobile -->
+		<set name="icon" val="icon.mticket_sword_move_i00" />
 		<set name="item_type" val="castle_guard" />
 		<set name="consume_type" val="stackable" />
 		<set name="crystal_type" val="none" />
 	</item>
 	<item id="5211" type="EtcItem" name="Mercenary Posting Ticket (Spear/Mobile)">
 		<!-- Innadril/Spear/Mobile -->
+		<set name="icon" val="icon.mticket_pole_move_i00" />
 		<set name="item_type" val="castle_guard" />
 		<set name="consume_type" val="stackable" />
 		<set name="crystal_type" val="none" />
 	</item>
 	<item id="5212" type="EtcItem" name="Mercenary Posting Ticket (Bow/Mobile)">
 		<!-- Innadril/Bow/Mobile -->
+		<set name="icon" val="icon.mticket_bow_move_i00" />
 		<set name="item_type" val="castle_guard" />
 		<set name="consume_type" val="stackable" />
 		<set name="crystal_type" val="none" />
 	</item>
 	<item id="5213" type="EtcItem" name="Mercenary Posting Ticket (Cleric/Mobile)">
 		<!-- Innadril/Cleric/Mobile -->
+		<set name="icon" val="icon.mticket_cleric_move_i00" />
 		<set name="item_type" val="castle_guard" />
 		<set name="consume_type" val="stackable" />
 		<set name="crystal_type" val="none" />
 	</item>
 	<item id="5214" type="EtcItem" name="Mercenary Posting Ticket (Wizard/Mobile)">
 		<!-- Innadril/Wizard/Mobile -->
+		<set name="icon" val="icon.mticket_wizard_move_i00" />
 		<set name="item_type" val="castle_guard" />
 		<set name="consume_type" val="stackable" />
 		<set name="crystal_type" val="none" />
 	</item>
 	<item id="5215" type="EtcItem" name="Mercenary Posting Ticket (Teleporter1)">
 		<!-- Innadril/Teleporter/Inner Castle, Guard -->
+		<set name="icon" val="icon.mticket_teleporter_fix_i00" />
 		<set name="item_type" val="castle_guard" />
 		<set name="consume_type" val="stackable" />
 		<set name="crystal_type" val="none" />
 	</item>
 	<item id="5216" type="Armor" name="Wolf Level 75 Armor">
+		<set name="icon" val="icon.etc_pet_armor_i02" />
 		<set name="bodypart" val="wolf" />
 		<set name="armor_type" val="pet" />
 		<set name="weight" val="160" />
@@ -120,6 +137,7 @@
 		</for>
 	</item>
 	<item id="5217" type="Weapon" name="Wolf Level 75 Weapon">
+		<set name="icon" val="icon.etc_pet_arms_i02" />
 		<set name="bodypart" val="wolf" />
 		<set name="weight" val="100" />
 		<set name="soulshots" val="1" />
@@ -141,18 +159,21 @@
 	</item>
 	<item id="5218" type="EtcItem" name="Mercenary Posting Ticket (Teleporter2)">
 		<!-- Innadril/Teleporter/Outer Castle, Guardian -->
+		<set name="icon" val="icon.mticket_teleporter_fix_i00" />
 		<set name="item_type" val="castle_guard" />
 		<set name="consume_type" val="stackable" />
 		<set name="crystal_type" val="none" />
 	</item>
 	<item id="5219" type="EtcItem" name="Mercenary Posting Ticket (Teleporter3)">
 		<!-- Innadril/Teleporter/Inner Castle, Outer Castle -->
+		<set name="icon" val="icon.mticket_teleporter_fix_i00" />
 		<set name="item_type" val="castle_guard" />
 		<set name="consume_type" val="stackable" />
 		<set name="crystal_type" val="none" />
 	</item>
 	<item id="5220" type="EtcItem" name="Metal Hardener">
 		<!-- Ingredient used by Dwarves. It is specifically designed to be used to create C-grade items. Available in general stores. -->
+		<set name="icon" val="icon.etc_plate_blue_i00" />
 		<set name="item_type" val="material" />
 		<set name="weight" val="2" />
 		<set name="consume_type" val="stackable" />
@@ -161,6 +182,7 @@
 	</item>
 	<item id="5221" type="EtcItem" name="Seed: Chilly Cobol">
 		<!-- Plant this seed onto a monster in the Innadril area and it will bear the fruit of the Chilly Cobol. For best results, a level 29-39 character must plant it on a level 29-39 monster. -->
+		<set name="icon" val="icon.etc_cobol_seed_i00" />
 		<set name="item_type" val="seed" />
 		<set name="weight" val="1" />
 		<set name="consume_type" val="stackable" />
@@ -169,6 +191,7 @@
 	</item>
 	<item id="5222" type="EtcItem" name="Seed: Blue Cobol">
 		<!-- Plant this seed onto a monster in the Innadril area and it will bear the fruit of the Blue Cobol. For best results, a level 32-42 character must plant it on a level 32-42 monster. -->
+		<set name="icon" val="icon.etc_cobol_seed_i00" />
 		<set name="item_type" val="seed" />
 		<set name="weight" val="1" />
 		<set name="consume_type" val="stackable" />
@@ -177,6 +200,7 @@
 	</item>
 	<item id="5223" type="EtcItem" name="Seed: Thorn Cobol">
 		<!-- Plant this seed onto a monster in the Innadril area and it will bear the fruit of the Thorn Cobol. For best results, a level 35-45 character must plant it on a level 35-45 monster. -->
+		<set name="icon" val="icon.etc_cobol_seed_i00" />
 		<set name="item_type" val="seed" />
 		<set name="weight" val="1" />
 		<set name="consume_type" val="stackable" />
@@ -185,6 +209,7 @@
 	</item>
 	<item id="5224" type="EtcItem" name="Seed: Golden Cobol">
 		<!-- Plant this seed onto a monster in the Innadril area and it will bear the fruit of the Golden Cobol. For best results, a level 38-48 character must plant it on a level 38-48 monster. -->
+		<set name="icon" val="icon.etc_cobol_seed_i00" />
 		<set name="item_type" val="seed" />
 		<set name="weight" val="1" />
 		<set name="consume_type" val="stackable" />
@@ -193,6 +218,7 @@
 	</item>
 	<item id="5225" type="EtcItem" name="Seed: Great Cobol">
 		<!-- Plant this seed onto a monster in the Innadril area and it will bear the fruit of the Great Cobol. For best results, a level 41-51 character must plant it on a level 41-51 monster. -->
+		<set name="icon" val="icon.etc_cobol_seed_i00" />
 		<set name="item_type" val="seed" />
 		<set name="weight" val="1" />
 		<set name="consume_type" val="stackable" />
@@ -201,6 +227,7 @@
 	</item>
 	<item id="5226" type="EtcItem" name="Seed: Red Codran">
 		<!-- Plant this seed onto a monster in the Innadril area and it will bear the fruit of the Red Codran. For best results, a level 44-54 character must plant it on a level 44-54 monster. -->
+		<set name="icon" val="icon.etc_codran_seed_i00" />
 		<set name="item_type" val="seed" />
 		<set name="weight" val="1" />
 		<set name="consume_type" val="stackable" />
@@ -209,6 +236,7 @@
 	</item>
 	<item id="5227" type="EtcItem" name="Seed: Sea Codran">
 		<!-- Plant this seed onto a monster in the Innadril area and it will bear the fruit of the Sea Codran. For best results, a level 45-55 character must plant it on a level 45-55 monster. -->
+		<set name="icon" val="icon.etc_codran_seed_i00" />
 		<set name="item_type" val="seed" />
 		<set name="weight" val="1" />
 		<set name="consume_type" val="stackable" />
@@ -216,12 +244,14 @@
 		<set name="price" val="50" />
 	</item>
 	<item id="5228" type="EtcItem" name="Trash">
+		<set name="icon" val="icon.etc_codran_seed_i00" />
 		<set name="item_type" val="none" />
 		<set name="weight" val="20" />
 		<set name="consume_type" val="stackable" />
 		<set name="crystal_type" val="none" />
 	</item>
 	<item id="5229" type="EtcItem" name="Trash">
+		<set name="icon" val="icon.etc_codran_seed_i00" />
 		<set name="item_type" val="none" />
 		<set name="weight" val="20" />
 		<set name="consume_type" val="stackable" />
@@ -229,6 +259,7 @@
 	</item>
 	<item id="5230" type="EtcItem" name="Recipe: Mithril Arrow (100%)">
 		<!-- For Dwarves only. The recipe for a Mithril Arrow. Requires Create Item - Skill Level 4. The success rate is 100%. -->
+		<set name="icon" val="icon.etc_recipe_violet_i00" />
 		<set name="item_type" val="recipe" />
 		<set name="weight" val="30" />
 		<set name="consume_type" val="stackable" />
@@ -237,6 +268,7 @@
 	</item>
 	<item id="5231" type="EtcItem" name="Recipe: Metal Hardener (100%)">
 		<!-- For Dwarves only. The recipe for a Metal Hardener. Requires Create Item - Skill Level 4. The success rate is 100%. -->
+		<set name="icon" val="icon.etc_recipe_blue_i00" />
 		<set name="item_type" val="recipe" />
 		<set name="weight" val="30" />
 		<set name="consume_type" val="stackable" />
@@ -245,6 +277,7 @@
 	</item>
 	<item id="5232" type="EtcItem" name="White Fabric">
 		<!-- A large piece of white cloth given by Magister Hanellin. Kill Guardian Angels and Seal Angels and soak the cloth with their blood. -->
+		<set name="icon" val="icon.etc_piece_of_cloth_white_i00" />
 		<set name="item_type" val="quest" />
 		<set name="consume_type" val="stackable" />
 		<set name="crystal_type" val="none" />
@@ -254,6 +287,7 @@
 	</item>
 	<item id="5233" type="Weapon" name="Keshanberk*Keshanberk">
 		<!-- When enchanted, the P.Atk of a dualsword will increase more significantly than that of one-handed or fist weapon. When enchanted by 4 or more, Atk. Spd. will increase by 8%. Inflicts additional damage to target during PvP. -->
+		<set name="icon" val="icon.weapon_dual_sword_i00" />
 		<set name="bodypart" val="lrhand" />
 		<set name="crystallizable" val="true" />
 		<set name="weight" val="2080" />
@@ -288,6 +322,7 @@
 	</item>
 	<item id="5234" type="EtcItem" name="Mystery Potion">
 		<!-- Legend says that if you drink this potion your head will grow larger! Believe it if you will! -->
+		<set name="icon" val="icon.etc_lesser_potion_clear_i00" />
 		<set name="item_type" val="potion" />
 		<set name="weight" val="50" />
 		<set name="consume_type" val="stackable" />
@@ -296,6 +331,7 @@
 	</item>
 	<item id="5235" type="EtcItem" name="Facelifting Potion - A">
 		<!-- A beauty potion that changes one's facial appearance to Type A. May be used by either male or female characters. The results may be viewed on the Character Creation Screen. -->
+		<set name="icon" val="icon.etc_lesser_potion_purple_i00" />
 		<set name="item_type" val="potion" />
 		<set name="weight" val="50" />
 		<set name="consume_type" val="stackable" />
@@ -304,6 +340,7 @@
 	</item>
 	<item id="5236" type="EtcItem" name="Facelifting Potion - B">
 		<!-- A beauty potion that changes one's facial appearance to Type B. May be used by either male or female characters. The results may be viewed on the Character Creation Screen. -->
+		<set name="icon" val="icon.etc_lesser_potion_purple_i00" />
 		<set name="item_type" val="potion" />
 		<set name="weight" val="50" />
 		<set name="consume_type" val="stackable" />
@@ -312,6 +349,7 @@
 	</item>
 	<item id="5237" type="EtcItem" name="Facelifting Potion - C">
 		<!-- A beauty potion that changes one's facial appearance to Type C. May be used by either male or female characters. The results may be viewed on the Character Creation Screen. -->
+		<set name="icon" val="icon.etc_lesser_potion_purple_i00" />
 		<set name="item_type" val="potion" />
 		<set name="weight" val="50" />
 		<set name="consume_type" val="stackable" />
@@ -320,6 +358,7 @@
 	</item>
 	<item id="5238" type="EtcItem" name="Dye Potion - A">
 		<!-- A beauty potion that changes one's hair color to Type A. May be used by either male or female characters. The results may be viewed on the Character Creation Screen. -->
+		<set name="icon" val="icon.etc_lesser_potion_scarlet_i00" />
 		<set name="item_type" val="potion" />
 		<set name="weight" val="50" />
 		<set name="consume_type" val="stackable" />
@@ -328,6 +367,7 @@
 	</item>
 	<item id="5239" type="EtcItem" name="Dye Potion - B">
 		<!-- A beauty potion that changes one's hair color to Type B. May be used by either male or female characters. The results may be viewed on the Character Creation Screen. -->
+		<set name="icon" val="icon.etc_lesser_potion_scarlet_i00" />
 		<set name="item_type" val="potion" />
 		<set name="weight" val="50" />
 		<set name="consume_type" val="stackable" />
@@ -336,6 +376,7 @@
 	</item>
 	<item id="5240" type="EtcItem" name="Dye Potion - C">
 		<!-- A beauty potion that changes one's hair color to Type C. May be used by either male or female characters. The results may be viewed on the Character Creation Screen. -->
+		<set name="icon" val="icon.etc_lesser_potion_scarlet_i00" />
 		<set name="item_type" val="potion" />
 		<set name="weight" val="50" />
 		<set name="consume_type" val="stackable" />
@@ -344,6 +385,7 @@
 	</item>
 	<item id="5241" type="EtcItem" name="Dye Potion - D">
 		<!-- A beauty potion that changes one's hair color to Type D. May be used by either male or female characters. The results may be viewed on the Character Creation Screen. -->
+		<set name="icon" val="icon.etc_lesser_potion_scarlet_i00" />
 		<set name="item_type" val="potion" />
 		<set name="weight" val="50" />
 		<set name="consume_type" val="stackable" />
@@ -352,6 +394,7 @@
 	</item>
 	<item id="5242" type="EtcItem" name="Hair Style Change Potion - A">
 		<!-- A beauty potion that changes one's hair style to Type A. May be used by either male or female characters. The results may be viewed on the Character Creation Screen. -->
+		<set name="icon" val="icon.etc_lesser_potion_green_i00" />
 		<set name="item_type" val="potion" />
 		<set name="weight" val="50" />
 		<set name="consume_type" val="stackable" />
@@ -360,6 +403,7 @@
 	</item>
 	<item id="5243" type="EtcItem" name="Hair Style Change Potion - B">
 		<!-- A beauty potion that changes one's hair style to Type B. May be used by either male or female characters. The results may be viewed on the Character Creation Screen. -->
+		<set name="icon" val="icon.etc_lesser_potion_green_i00" />
 		<set name="item_type" val="potion" />
 		<set name="weight" val="50" />
 		<set name="consume_type" val="stackable" />
@@ -368,6 +412,7 @@
 	</item>
 	<item id="5244" type="EtcItem" name="Hair Style Change Potion - C">
 		<!-- A beauty potion that changes one's hair style to Type C. May be used by either male or female characters. The results may be viewed on the Character Creation Screen. -->
+		<set name="icon" val="icon.etc_lesser_potion_green_i00" />
 		<set name="item_type" val="potion" />
 		<set name="weight" val="50" />
 		<set name="consume_type" val="stackable" />
@@ -376,6 +421,7 @@
 	</item>
 	<item id="5245" type="EtcItem" name="Hair Style Change Potion - D">
 		<!-- A beauty potion that changes one's hair style to Type D. May be used by either male or female characters. The results may be viewed on the Character Creation Screen. -->
+		<set name="icon" val="icon.etc_lesser_potion_green_i00" />
 		<set name="item_type" val="potion" />
 		<set name="weight" val="50" />
 		<set name="consume_type" val="stackable" />
@@ -384,6 +430,7 @@
 	</item>
 	<item id="5246" type="EtcItem" name="Hair Style Change Potion - E">
 		<!-- A beauty potion that changes one's hair style to Type E. May be used by either male or female characters. The results may be viewed on the Character Creation Screen. -->
+		<set name="icon" val="icon.etc_lesser_potion_green_i00" />
 		<set name="item_type" val="potion" />
 		<set name="weight" val="50" />
 		<set name="consume_type" val="stackable" />
@@ -392,6 +439,7 @@
 	</item>
 	<item id="5247" type="EtcItem" name="Hair Style Change Potion - F">
 		<!-- A beauty potion that changes one's hair style to Type F. May be used by either male or female characters. The results may be viewed on the Character Creation Screen. -->
+		<set name="icon" val="icon.etc_lesser_potion_green_i00" />
 		<set name="item_type" val="potion" />
 		<set name="weight" val="50" />
 		<set name="consume_type" val="stackable" />
@@ -400,6 +448,7 @@
 	</item>
 	<item id="5248" type="EtcItem" name="Hair Style Change Potion - G">
 		<!-- A beauty potion that changes one's hair style to Type G. May be used by either male or female characters. The results may be viewed on the Character Creation Screen. -->
+		<set name="icon" val="icon.etc_lesser_potion_green_i00" />
 		<set name="item_type" val="potion" />
 		<set name="weight" val="50" />
 		<set name="consume_type" val="stackable" />
@@ -408,6 +457,7 @@
 	</item>
 	<item id="5249" type="EtcItem" name="Commemorative Item: First Anniversary of Lineage II Service">
 		<!-- After the conclusion of the event, this item is traded for an actual item through a drawing. -->
+		<set name="icon" val="icon.etc_l2_i00" />
 		<set name="item_type" val="none" />
 		<set name="consume_type" val="normal" />
 		<set name="crystal_type" val="none" />
@@ -418,6 +468,7 @@
 	</item>
 	<item id="5250" type="EtcItem" name="Greater Compressed Package of Soulshots: No-grade">
 		<!-- A small package of compressed soulshots. Upon use, changes into 1000 No-grade soulshots. -->
+		<set name="icon" val="icon.etc_pouch_gray_i00" />
 		<set name="item_type" val="shot" />
 		<set name="weight" val="600" />
 		<set name="consume_type" val="normal" />
@@ -426,6 +477,7 @@
 	</item>
 	<item id="5251" type="EtcItem" name="Greater Compressed Package of Soulshots: D-grade">
 		<!-- A small package of compressed soulshots. Upon use, changes into 1000 D-grade soulshots. -->
+		<set name="icon" val="icon.etc_pouch_gray_i00" />
 		<set name="item_type" val="shot" />
 		<set name="weight" val="450" />
 		<set name="consume_type" val="normal" />
@@ -434,6 +486,7 @@
 	</item>
 	<item id="5252" type="EtcItem" name="Greater Compressed Package of Soulshots: C-grade">
 		<!-- A small package of compressed soulshots. Upon use, changes into 1000 C-grade soulshots. -->
+		<set name="icon" val="icon.etc_pouch_gray_i00" />
 		<set name="item_type" val="shot" />
 		<set name="weight" val="450" />
 		<set name="consume_type" val="normal" />
@@ -442,6 +495,7 @@
 	</item>
 	<item id="5253" type="EtcItem" name="Greater Compressed Package of Soulshots: B-grade">
 		<!-- A small package of compressed soulshots. Upon use, changes into 1000 B-grade soulshots. -->
+		<set name="icon" val="icon.etc_pouch_gray_i00" />
 		<set name="item_type" val="shot" />
 		<set name="weight" val="300" />
 		<set name="consume_type" val="normal" />
@@ -450,6 +504,7 @@
 	</item>
 	<item id="5254" type="EtcItem" name="Greater Compressed Package of Soulshots: A-grade">
 		<!-- A small package of compressed soulshots. Upon use, changes into 1000 A-grade soulshots. -->
+		<set name="icon" val="icon.etc_pouch_gray_i00" />
 		<set name="item_type" val="shot" />
 		<set name="weight" val="300" />
 		<set name="consume_type" val="normal" />
@@ -458,6 +513,7 @@
 	</item>
 	<item id="5255" type="EtcItem" name="Greater Compressed Package of Soulshots: S-grade">
 		<!-- A small package of compressed soulshots. Upon use, changes into 1000 S-grade soulshots. -->
+		<set name="icon" val="icon.etc_pouch_gray_i00" />
 		<set name="item_type" val="shot" />
 		<set name="weight" val="300" />
 		<set name="consume_type" val="normal" />
@@ -466,6 +522,7 @@
 	</item>
 	<item id="5256" type="EtcItem" name="Greater Compressed Package of Spiritshots: No-grade">
 		<!-- A small package of compressed spiritshots. Upon use, changes into 1000 No-grade spiritshots. -->
+		<set name="icon" val="icon.etc_pouch_gray_i00" />
 		<set name="item_type" val="shot" />
 		<set name="weight" val="750" />
 		<set name="consume_type" val="normal" />
@@ -474,6 +531,7 @@
 	</item>
 	<item id="5257" type="EtcItem" name="Greater Compressed Package of Spiritshots: D-grade">
 		<!-- A small package of compressed spiritshots. Upon use, changes into 1000 D-grade spiritshots. -->
+		<set name="icon" val="icon.etc_pouch_gray_i00" />
 		<set name="item_type" val="shot" />
 		<set name="weight" val="750" />
 		<set name="consume_type" val="normal" />
@@ -482,6 +540,7 @@
 	</item>
 	<item id="5258" type="EtcItem" name="Greater Compressed Package of Spiritshots: C-grade">
 		<!-- A small package of compressed spiritshots. Upon use, changes into 1000 C-grade spiritshots. -->
+		<set name="icon" val="icon.etc_pouch_gray_i00" />
 		<set name="item_type" val="shot" />
 		<set name="weight" val="450" />
 		<set name="consume_type" val="normal" />
@@ -490,6 +549,7 @@
 	</item>
 	<item id="5259" type="EtcItem" name="Greater Compressed Package of Spiritshots: B-grade">
 		<!-- A small package of compressed spiritshots. Upon use, changes into 1000 B-grade spiritshots. -->
+		<set name="icon" val="icon.etc_pouch_gray_i00" />
 		<set name="item_type" val="shot" />
 		<set name="weight" val="450" />
 		<set name="consume_type" val="normal" />
@@ -498,6 +558,7 @@
 	</item>
 	<item id="5260" type="EtcItem" name="Greater Compressed Package of Spiritshots: A-grade">
 		<!-- A small package of compressed spiritshots. Upon use, changes into 1000 A-grade spiritshots. -->
+		<set name="icon" val="icon.etc_pouch_gray_i00" />
 		<set name="item_type" val="shot" />
 		<set name="weight" val="300" />
 		<set name="consume_type" val="normal" />
@@ -506,6 +567,7 @@
 	</item>
 	<item id="5261" type="EtcItem" name="Greater Compressed Package of Spiritshots: S-grade">
 		<!-- A small package of compressed spiritshots. Upon use, changes into 1000 S-grade spiritshots. -->
+		<set name="icon" val="icon.etc_pouch_gray_i00" />
 		<set name="item_type" val="shot" />
 		<set name="weight" val="300" />
 		<set name="consume_type" val="normal" />
@@ -514,6 +576,7 @@
 	</item>
 	<item id="5262" type="EtcItem" name="Greater Compressed Package of Blessed Spiritshots: No-grade">
 		<!-- A small package of compressed blessed spiritshots. Upon use, changes into 1000 No-grade blessed spiritshots. -->
+		<set name="icon" val="icon.etc_pouch_gray_i00" />
 		<set name="item_type" val="shot" />
 		<set name="weight" val="750" />
 		<set name="consume_type" val="normal" />
@@ -522,6 +585,7 @@
 	</item>
 	<item id="5263" type="EtcItem" name="Greater Compressed Package of Blessed Spiritshots: D-grade">
 		<!-- A small package of compressed blessed spiritshots. Upon use, changes into 1000 D-grade blessed spiritshots. -->
+		<set name="icon" val="icon.etc_pouch_gray_i00" />
 		<set name="item_type" val="shot" />
 		<set name="weight" val="750" />
 		<set name="consume_type" val="normal" />
@@ -530,6 +594,7 @@
 	</item>
 	<item id="5264" type="EtcItem" name="Greater Compressed Package of Blessed Spiritshots: C-grade">
 		<!-- A small package of compressed blessed spiritshots. Upon use, changes into 1000 C-grade blessed spiritshots. -->
+		<set name="icon" val="icon.etc_pouch_gray_i00" />
 		<set name="item_type" val="shot" />
 		<set name="weight" val="450" />
 		<set name="consume_type" val="normal" />
@@ -538,6 +603,7 @@
 	</item>
 	<item id="5265" type="EtcItem" name="Greater Compressed Package of Blessed Spiritshots: B-grade">
 		<!-- A small package of compressed blessed spiritshots. Upon use, changes into 1000 B-grade blessed spiritshots. -->
+		<set name="icon" val="icon.etc_pouch_gray_i00" />
 		<set name="item_type" val="shot" />
 		<set name="weight" val="450" />
 		<set name="consume_type" val="normal" />
@@ -546,6 +612,7 @@
 	</item>
 	<item id="5266" type="EtcItem" name="Greater Compressed Package of Blessed Spiritshots: A-grade">
 		<!-- A small package of compressed blessed spiritshots. Upon use, changes into 1000 A-grade blessed spiritshots. -->
+		<set name="icon" val="icon.etc_pouch_gray_i00" />
 		<set name="item_type" val="shot" />
 		<set name="weight" val="300" />
 		<set name="consume_type" val="normal" />
@@ -554,6 +621,7 @@
 	</item>
 	<item id="5267" type="EtcItem" name="Greater Compressed Package of Blessed Spiritshots: S-grade">
 		<!-- A small package of compressed blessed spiritshots. Upon use, changes into 1000 S-grade blessed spiritshots. -->
+		<set name="icon" val="icon.etc_pouch_gray_i00" />
 		<set name="item_type" val="shot" />
 		<set name="weight" val="300" />
 		<set name="consume_type" val="normal" />
@@ -562,6 +630,7 @@
 	</item>
 	<item id="5268" type="EtcItem" name="Recipe: Greater Soulshot (D) Compressed Package (100%)">
 		<!-- For Dwarves only. The recipe for the Greater Compressed Package of Soulshots: Grade D. Requires Create Item - Skill Level 2. The success rate is 100%. -->
+		<set name="icon" val="icon.etc_recipe_blue_i00" />
 		<set name="item_type" val="recipe" />
 		<set name="weight" val="30" />
 		<set name="consume_type" val="stackable" />
@@ -570,6 +639,7 @@
 	</item>
 	<item id="5269" type="EtcItem" name="Recipe: Greater Soulshot (C) Compressed Package(100%)">
 		<!-- For Dwarves only. The recipe for the Greater Compressed Package of Soulshots: Grade C. Requires Create Item - Skill Level 4. The success rate is 100%. -->
+		<set name="icon" val="icon.etc_recipe_yellow_i00" />
 		<set name="item_type" val="recipe" />
 		<set name="weight" val="30" />
 		<set name="consume_type" val="stackable" />
@@ -578,6 +648,7 @@
 	</item>
 	<item id="5270" type="EtcItem" name="Recipe: Greater Soulshot (B) Compressed Package(100%)">
 		<!-- For Dwarves only. The recipe for the Greater Compressed Package of Soulshots: Grade B. Requires Create Item - Skill Level 6. The success rate is 100%. -->
+		<set name="icon" val="icon.etc_recipe_red_i00" />
 		<set name="item_type" val="recipe" />
 		<set name="weight" val="30" />
 		<set name="consume_type" val="stackable" />
@@ -586,6 +657,7 @@
 	</item>
 	<item id="5271" type="EtcItem" name="Recipe: Greater Soulshot (A) Compressed Package(100%)">
 		<!-- For Dwarves only. The recipe for the Greater Compressed Package of Soulshots: Grade A. Requires Create Item - Skill Level 7. The success rate is 100%. -->
+		<set name="icon" val="icon.etc_recipe_violet_i00" />
 		<set name="item_type" val="recipe" />
 		<set name="weight" val="30" />
 		<set name="consume_type" val="stackable" />
@@ -594,6 +666,7 @@
 	</item>
 	<item id="5272" type="EtcItem" name="Recipe: Greater Soulshot (S) Compressed Package(100%)">
 		<!-- For Dwarves only. The recipe for the Greater Compressed Package of Soulshots: Grade S. Requires Create Item - Skill Level 8. The success rate is 100%. -->
+		<set name="icon" val="icon.etc_recipe_black_i00" />
 		<set name="item_type" val="recipe" />
 		<set name="weight" val="30" />
 		<set name="consume_type" val="stackable" />
@@ -602,6 +675,7 @@
 	</item>
 	<item id="5273" type="EtcItem" name="Recipe: Greater Spiritshot (D) Compressed Package(100%)">
 		<!-- For Dwarves only. The recipe for the Greater Compressed Package of Spiritshots: Grade D. Requires Create Item - Skill Level 2. The success rate is 100%. -->
+		<set name="icon" val="icon.etc_recipe_blue_i00" />
 		<set name="item_type" val="recipe" />
 		<set name="weight" val="30" />
 		<set name="consume_type" val="stackable" />
@@ -610,6 +684,7 @@
 	</item>
 	<item id="5274" type="EtcItem" name="Recipe: Greater Spiritshot (C) Compressed Package(100%)">
 		<!-- For Dwarves only. The recipe for the Greater Compressed Package of Spiritshots: Grade C. Requires Create Item - Skill Level 4. The success rate is 100%. -->
+		<set name="icon" val="icon.etc_recipe_yellow_i00" />
 		<set name="item_type" val="recipe" />
 		<set name="weight" val="30" />
 		<set name="consume_type" val="stackable" />
@@ -618,6 +693,7 @@
 	</item>
 	<item id="5275" type="EtcItem" name="Recipe: Greater Spiritshot (B) Compressed Package(100%)">
 		<!-- For Dwarves only. The recipe for the Greater Compressed Package of Spiritshots: Grade B. Requires Create Item - Skill Level 6. The success rate is 100%. -->
+		<set name="icon" val="icon.etc_recipe_red_i00" />
 		<set name="item_type" val="recipe" />
 		<set name="weight" val="30" />
 		<set name="consume_type" val="stackable" />
@@ -626,6 +702,7 @@
 	</item>
 	<item id="5276" type="EtcItem" name="Recipe: Greater Spiritshot (A) Compressed Package(100%)">
 		<!-- For Dwarves only. The recipe for the Greater Compressed Package of Spiritshots: Grade A. Requires Create Item - Skill Level 7. The success rate is 100%. -->
+		<set name="icon" val="icon.etc_recipe_violet_i00" />
 		<set name="item_type" val="recipe" />
 		<set name="weight" val="30" />
 		<set name="consume_type" val="stackable" />
@@ -634,6 +711,7 @@
 	</item>
 	<item id="5277" type="EtcItem" name="Recipe: Greater Spiritshot (S) Compressed Package(100%)">
 		<!-- For Dwarves only. The recipe for the Greater Compressed Package of Spiritshots: Grade S. Requires Create Item - Skill Level 8. The success rate is 100%. -->
+		<set name="icon" val="icon.etc_recipe_black_i00" />
 		<set name="item_type" val="recipe" />
 		<set name="weight" val="30" />
 		<set name="consume_type" val="stackable" />
@@ -642,6 +720,7 @@
 	</item>
 	<item id="5278" type="EtcItem" name="Recipe: Greater Blessed Spiritshot (D) Compressed Package(100%)">
 		<!-- For Dwarves only. The recipe for the Greater Compressed Package of Blessed Spiritshots: Grade D. Requires Create Item - Skill Level 2. The success rate is 100%. -->
+		<set name="icon" val="icon.etc_recipe_blue_i00" />
 		<set name="item_type" val="recipe" />
 		<set name="weight" val="30" />
 		<set name="consume_type" val="stackable" />
@@ -650,6 +729,7 @@
 	</item>
 	<item id="5279" type="EtcItem" name="Recipe: Greater Blessed Spiritshot (C) Compressed Package(100%)">
 		<!-- For Dwarves only. The recipe for the Greater Compressed Package of Blessed Spiritshots: Grade C. Requires Create Item - Skill Level 4. The success rate is 100%. -->
+		<set name="icon" val="icon.etc_recipe_yellow_i00" />
 		<set name="item_type" val="recipe" />
 		<set name="weight" val="30" />
 		<set name="consume_type" val="stackable" />
@@ -658,6 +738,7 @@
 	</item>
 	<item id="5280" type="EtcItem" name="Recipe: Greater Blessed Spiritshot (B) Compressed Package(100%)">
 		<!-- For Dwarves only. The recipe for the Greater Compressed Package of Blessed Spiritshots: Grade B. Requires Create Item - Skill Level 6. The success rate is 100%. -->
+		<set name="icon" val="icon.etc_recipe_red_i00" />
 		<set name="item_type" val="recipe" />
 		<set name="weight" val="30" />
 		<set name="consume_type" val="stackable" />
@@ -666,6 +747,7 @@
 	</item>
 	<item id="5281" type="EtcItem" name="Recipe: Greater Blessed Spiritshot (A) Compressed Package(100%)">
 		<!-- For Dwarves only. The recipe for the Greater Compressed Package of Blessed Spiritshots: Grade A. Requires Create Item - Skill Level 7. The success rate is 100%. -->
+		<set name="icon" val="icon.etc_recipe_violet_i00" />
 		<set name="item_type" val="recipe" />
 		<set name="weight" val="30" />
 		<set name="consume_type" val="stackable" />
@@ -674,6 +756,7 @@
 	</item>
 	<item id="5282" type="EtcItem" name="Recipe: Greater Blessed Spiritshot (S) Compressed Package(100%)">
 		<!-- For Dwarves only. The recipe for the Greater Compressed Package of Blessed Spiritshots: Grade S. Requires Create Item - Skill Level 8. The success rate is 100%. -->
+		<set name="icon" val="icon.etc_recipe_black_i00" />
 		<set name="item_type" val="recipe" />
 		<set name="weight" val="30" />
 		<set name="consume_type" val="stackable" />
@@ -682,11 +765,13 @@
 	</item>
 	<item id="5283" type="EtcItem" name="Rice Cake">
 		<!-- A rice Cake that restores one's HP and MP. -->
+		<set name="icon" val="icon.etc_mochi_i00" />
 		<set name="item_type" val="potion" />
 		<set name="consume_type" val="stackable" />
 		<set name="crystal_type" val="none" />
 	</item>
 	<item id="5284" type="Weapon" name="Zweihander">
+		<set name="icon" val="icon.weapon_zweihander_i00" />
 		<set name="bodypart" val="lrhand" />
 		<set name="weight" val="1530" />
 		<set name="soulshots" val="2" />
@@ -710,6 +795,7 @@
 		</for>
 	</item>
 	<item id="5285" type="Weapon" name="Heavy Sword">
+		<set name="icon" val="icon.weapon_heavy_sword_i00" />
 		<set name="bodypart" val="lrhand" />
 		<set name="crystallizable" val="true" />
 		<set name="weight" val="1520" />
@@ -736,6 +822,7 @@
 	</item>
 	<item id="5286" type="Weapon" name="Berserker Blade">
 		<!-- Bestows one of the following functions: Focus Critical Damage, Focus or Haste. -->
+		<set name="icon" val="icon.weapon_berserker_blade_i00" />
 		<set name="bodypart" val="lrhand" />
 		<set name="crystallizable" val="true" />
 		<set name="weight" val="1380" />
@@ -762,6 +849,7 @@
 	</item>
 	<item id="5287" type="Armor" name="Sealed Dark Crystal breastplate">
 		<!-- Sealed Dark Crystal Breastplate. Its seal can be broken with the help of the Blacksmith of Mammon. -->
+		<set name="icon" val="icon.armor_t74_u_i02" />
 		<set name="bodypart" val="chest" />
 		<set name="crystallizable" val="true" />
 		<set name="armor_type" val="heavy" />
@@ -777,6 +865,7 @@
 	</item>
 	<item id="5288" type="Armor" name="Sealed Dark Crystal Gaiters">
 		<!-- Sealed Dark Crystal Gaiters. Its seal can be broken with the help of the Blacksmith of Mammon. -->
+		<set name="icon" val="icon.armor_t74_l_i02" />
 		<set name="bodypart" val="legs" />
 		<set name="crystallizable" val="true" />
 		<set name="armor_type" val="heavy" />
@@ -792,6 +881,7 @@
 	</item>
 	<item id="5289" type="Armor" name="Sealed Dark Crystal Helmet">
 		<!-- Sealed Dark Crystal Helmet. Its seal can be broken with the help of the Blacksmith of Mammon. -->
+		<set name="icon" val="icon.armor_helmet_i02" />
 		<set name="bodypart" val="head" />
 		<set name="crystallizable" val="true" />
 		<set name="armor_type" val="none" />
@@ -807,6 +897,7 @@
 	</item>
 	<item id="5290" type="Armor" name="Sealed Dark Crystal Gloves">
 		<!-- Sealed Dark Crystal Gloves. Its seal can be broken with the help of the Blacksmith of Mammon. -->
+		<set name="icon" val="icon.armor_t74_g_i02" />
 		<set name="bodypart" val="gloves" />
 		<set name="crystallizable" val="true" />
 		<set name="armor_type" val="none" />
@@ -822,6 +913,7 @@
 	</item>
 	<item id="5291" type="Armor" name="Sealed Dark Crystal Boots">
 		<!-- Sealed Dark Crystal Boots. Its seal can be broken with the help of the Blacksmith of Mammon. -->
+		<set name="icon" val="icon.armor_t74_b_i02" />
 		<set name="bodypart" val="feet" />
 		<set name="crystallizable" val="true" />
 		<set name="armor_type" val="none" />
@@ -837,6 +929,7 @@
 	</item>
 	<item id="5292" type="Weapon" name="Sealed Dark Crystal Shield">
 		<!-- Sealed Dark Crystal Shield. Its seal can be broken with the help of the Blacksmith of Mammon. -->
+		<set name="icon" val="icon.shield_dark_crystal_shield_i02" />
 		<set name="bodypart" val="lhand" />
 		<set name="crystallizable" val="true" />
 		<set name="weight" val="1190" />
@@ -856,6 +949,7 @@
 	</item>
 	<item id="5293" type="Armor" name="Sealed Tallum Plate Armor">
 		<!-- Sealed Tallum Plate Armor. Its seal can be broken with the help of the Blacksmith of Mammon. -->
+		<set name="icon" val="icon.armor_t77_ul_i02" />
 		<set name="bodypart" val="fullarmor" />
 		<set name="crystallizable" val="true" />
 		<set name="armor_type" val="heavy" />
@@ -871,6 +965,7 @@
 	</item>
 	<item id="5294" type="Armor" name="Sealed Tallum Helmet">
 		<!-- Sealed Tallum Helmet. Its seal can be broken with the help of the Blacksmith of Mammon. -->
+		<set name="icon" val="icon.armor_helmet_i02" />
 		<set name="bodypart" val="head" />
 		<set name="crystallizable" val="true" />
 		<set name="armor_type" val="none" />
@@ -886,6 +981,7 @@
 	</item>
 	<item id="5295" type="Armor" name="Sealed Tallum Gloves">
 		<!-- Sealed Tallum Gloves. Its seal can be broken with the help of the Blacksmith of Mammon. -->
+		<set name="icon" val="icon.armor_t77_g_i02" />
 		<set name="bodypart" val="gloves" />
 		<set name="crystallizable" val="true" />
 		<set name="armor_type" val="none" />
@@ -901,6 +997,7 @@
 	</item>
 	<item id="5296" type="Armor" name="Sealed Tallum Boots">
 		<!-- Sealed Tallum Boots. Its seal can be broken with the help of the Blacksmith of Mammon. -->
+		<set name="icon" val="icon.armor_t77_b_i02" />
 		<set name="bodypart" val="feet" />
 		<set name="crystallizable" val="true" />
 		<set name="armor_type" val="none" />
@@ -916,6 +1013,7 @@
 	</item>
 	<item id="5297" type="Armor" name="Sealed Dark Crystal Leather Armor">
 		<!-- Sealed Dark Crystal Leather Armor. Its seal can be broken with the help of the Blacksmith of Mammon. -->
+		<set name="icon" val="icon.armor_t75_u_i02" />
 		<set name="bodypart" val="chest" />
 		<set name="crystallizable" val="true" />
 		<set name="armor_type" val="light" />
@@ -931,6 +1029,7 @@
 	</item>
 	<item id="5298" type="Armor" name="Sealed Dark Crystal Leggings">
 		<!-- Sealed Dark Crystal Leggings. Its seal can be broken with the help of the Blacksmith of Mammon. -->
+		<set name="icon" val="icon.armor_t75_l_i02" />
 		<set name="bodypart" val="legs" />
 		<set name="crystallizable" val="true" />
 		<set name="armor_type" val="light" />
@@ -946,6 +1045,7 @@
 	</item>
 	<item id="5299" type="Armor" name="Sealed Gloves of The Underworld">
 		<!-- Sealed Gloves of The Underworld. Its seal can be broken with the help of the Blacksmith of Mammon. -->
+		<set name="icon" val="icon.armor_t40_g_i00" />
 		<set name="bodypart" val="gloves" />
 		<set name="crystallizable" val="true" />
 		<set name="armor_type" val="none" />

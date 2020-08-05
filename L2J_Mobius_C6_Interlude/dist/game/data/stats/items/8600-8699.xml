@@ -49,42 +49,49 @@
 		<set name="sellable" val="false" />
 	</item>
 	<item id="8608" type="EtcItem" name="Herb of Atk. Spd.">
+		<set name="icon" val="icon.etc_attack_sp_herb_i00" />
 		<set name="item_type" val="herb" />
 		<set name="consume_type" val="normal" />
 		<set name="crystal_type" val="none" />
 		<set name="sellable" val="false" />
 	</item>
 	<item id="8609" type="EtcItem" name="Herb of Casting Spd.">
+		<set name="icon" val="icon.etc_magic_sp_herb_i00" />
 		<set name="item_type" val="herb" />
 		<set name="consume_type" val="normal" />
 		<set name="crystal_type" val="none" />
 		<set name="sellable" val="false" />
 	</item>
 	<item id="8610" type="EtcItem" name="Herb of Critical Attack.">
+		<set name="icon" val="icon.etc_critical_herb_i00" />
 		<set name="item_type" val="herb" />
 		<set name="consume_type" val="normal" />
 		<set name="crystal_type" val="none" />
 		<set name="sellable" val="false" />
 	</item>
 	<item id="8611" type="EtcItem" name="Herb of Speed">
+		<set name="icon" val="icon.etc_move_herb_i00" />
 		<set name="item_type" val="herb" />
 		<set name="consume_type" val="normal" />
 		<set name="crystal_type" val="none" />
 		<set name="sellable" val="false" />
 	</item>
 	<item id="8612" type="EtcItem" name="Herb of the Warrior">
+		<set name="icon" val="icon.etc_warrior_set_i00" />
 		<set name="item_type" val="herb" />
 		<set name="consume_type" val="normal" />
 		<set name="crystal_type" val="none" />
 		<set name="sellable" val="false" />
 	</item>
 	<item id="8613" type="EtcItem" name="Herb of the Mystic">
+		<set name="icon" val="icon.etc_magic_set_i00" />
 		<set name="item_type" val="herb" />
 		<set name="consume_type" val="normal" />
 		<set name="crystal_type" val="none" />
 		<set name="sellable" val="false" />
 	</item>
 	<item id="8614" type="EtcItem" name="Herb of Recovery">
+		<set name="icon" val="icon.etc_recovery_set_i00" />
 		<set name="item_type" val="herb" />
 		<set name="consume_type" val="normal" />
 		<set name="crystal_type" val="none" />
@@ -92,6 +99,7 @@
 	</item>
 	<item id="8615" type="EtcItem" name="Summoning Crystal">
 		<!-- A crystal imbued with mystical power. Used for teleportation magic. -->
+		<set name="icon" val="icon.etc_recall_crystal_i00" />
 		<set name="item_type" val="none" />
 		<set name="weight" val="10" />
 		<set name="consume_type" val="stackable" />
@@ -100,6 +108,7 @@
 	</item>
 	<item id="8616" type="EtcItem" name="Spellbook: Summon Friend">
 		<!-- Spellbook needed to learn Summon Friend. Used by Warlocks, Elemental Summoners and Phantom Summoners. -->
+		<set name="icon" val="icon.etc_party_sommons_i00" />
 		<set name="item_type" val="spellbook" />
 		<set name="weight" val="120" />
 		<set name="consume_type" val="normal" />
@@ -108,6 +117,7 @@
 	</item>
 	<item id="8617" type="EtcItem" name="Spellbook: Word of Invitation">
 		<!-- Spellbook needed to learn Word of Invitation. Used by Sorcerers, Spellsingers and Spellhowlers. -->
+		<set name="icon" val="icon.etc_party_sommons_i01" />
 		<set name="item_type" val="spellbook" />
 		<set name="weight" val="120" />
 		<set name="consume_type" val="normal" />
@@ -115,6 +125,7 @@
 	</item>
 	<item id="8618" type="EtcItem" name="Ancient Book - Divine Inspiration (Modern Language Version)">
 		<!-- Restores forgotten abilities. The book was re-published after being translated into the modern language. (Can only be used by characters level 52 or higher.) -->
+		<set name="icon" val="icon.etc_add_buffslot_i00" />
 		<set name="item_type" val="none" />
 		<set name="weight" val="120" />
 		<set name="consume_type" val="normal" />
@@ -122,6 +133,7 @@
 	</item>
 	<item id="8619" type="EtcItem" name="Ancient Book - Divine Inspiration (Original Language Version)">
 		<!-- Restores forgotten abilities. This book was published by ancient scholars for research purposes. It contains more information than the modern language version. (Can only be used by characters level 61 or higher.) -->
+		<set name="icon" val="icon.etc_add_buffslot_i01" />
 		<set name="item_type" val="none" />
 		<set name="weight" val="120" />
 		<set name="consume_type" val="normal" />
@@ -129,6 +141,7 @@
 	</item>
 	<item id="8620" type="EtcItem" name="Ancient Book - Divine Inspiration (Manuscript)">
 		<!-- Restores forgotten abilities. This book is a hand-written copy of the original. It is almost the same as the original version. (Can only be used by characters level 76 or higher.) -->
+		<set name="icon" val="icon.etc_add_buffslot_i02" />
 		<set name="item_type" val="none" />
 		<set name="weight" val="120" />
 		<set name="consume_type" val="normal" />
@@ -136,6 +149,7 @@
 	</item>
 	<item id="8621" type="EtcItem" name="Ancient Book - Divine Inspiration (Original Version)">
 		<!-- Restores forgotten abilities. Those who lack the requisite knowledge cannot understand its contents. (Can only be used by characters level 76 or higher.) This item cannot be exchanged or dropped. -->
+		<set name="icon" val="icon.etc_add_buffslot_i03" />
 		<set name="item_type" val="none" />
 		<set name="weight" val="120" />
 		<set name="consume_type" val="normal" />
@@ -146,6 +160,7 @@
 	</item>
 	<item id="8622" type="EtcItem" name="Elixir of Life (No Grade)">
 		<!-- Regenerates HP. Can only be used by characters below level 19 upon themselves. Re-use delay is 5 minutes. -->
+		<set name="icon" val="icon.etc_super_hp_potion_i00" />
 		<set name="item_type" val="potion" />
 		<set name="weight" val="5" />
 		<set name="consume_type" val="stackable" />
@@ -154,6 +169,7 @@
 	</item>
 	<item id="8623" type="EtcItem" name="Elixir of Life (D-Grade)">
 		<!-- Regenerates HP. This item can only be used by a character whose level is between 20 and 39. Re-use delay is 5 minutes. -->
+		<set name="icon" val="icon.etc_super_hp_potion_i01" />
 		<set name="item_type" val="potion" />
 		<set name="weight" val="5" />
 		<set name="consume_type" val="stackable" />
@@ -162,6 +178,7 @@
 	</item>
 	<item id="8624" type="EtcItem" name="Elixir of Life (C-Grade)">
 		<!-- Regenerates HP. This item can only be used by a character whose level is between 40 and 51. Re-use delay is 5 minutes. -->
+		<set name="icon" val="icon.etc_super_hp_potion_i02" />
 		<set name="item_type" val="potion" />
 		<set name="weight" val="5" />
 		<set name="consume_type" val="stackable" />
@@ -170,6 +187,7 @@
 	</item>
 	<item id="8625" type="EtcItem" name="Elixir of Life (B-Grade)">
 		<!-- Regenerates HP. This item can only be used by a character whose level is between 52 and 60. Re-use delay is 5 minutes. -->
+		<set name="icon" val="icon.etc_super_hp_potion_i03" />
 		<set name="item_type" val="potion" />
 		<set name="weight" val="5" />
 		<set name="consume_type" val="stackable" />
@@ -178,6 +196,7 @@
 	</item>
 	<item id="8626" type="EtcItem" name="Elixir of Life (A-Grade)">
 		<!-- Regenerates HP. This item can only be used by a character whose level is between 61 and 75. Re-use delay is 5 minutes. -->
+		<set name="icon" val="icon.etc_super_hp_potion_i04" />
 		<set name="item_type" val="potion" />
 		<set name="weight" val="5" />
 		<set name="consume_type" val="stackable" />
@@ -186,6 +205,7 @@
 	</item>
 	<item id="8627" type="EtcItem" name="Elixir of Life (S-Grade)">
 		<!-- Regenerates HP. This item can only be used by a character whose level is 76 or higher. Re-use delay is 5 minutes. -->
+		<set name="icon" val="icon.etc_super_hp_potion_i05" />
 		<set name="item_type" val="potion" />
 		<set name="weight" val="5" />
 		<set name="consume_type" val="stackable" />
@@ -194,6 +214,7 @@
 	</item>
 	<item id="8628" type="EtcItem" name="Elixir of Mental Strength (No Grade)">
 		<!-- Regenerates MP. Can only be used by characters below level 19 upon themselves. Re-use delay is 5 minutes. -->
+		<set name="icon" val="icon.etc_super_mp_potion_i00" />
 		<set name="item_type" val="potion" />
 		<set name="weight" val="5" />
 		<set name="consume_type" val="stackable" />
@@ -202,6 +223,7 @@
 	</item>
 	<item id="8629" type="EtcItem" name="Elixir of Mental Strength (D-Grade)">
 		<!-- Regenerates MP. Can be used by characters above level 20 and below level 39 upon themselves. Re-use delay 5 minutes. -->
+		<set name="icon" val="icon.etc_super_mp_potion_i01" />
 		<set name="item_type" val="potion" />
 		<set name="weight" val="5" />
 		<set name="consume_type" val="stackable" />
@@ -210,6 +232,7 @@
 	</item>
 	<item id="8630" type="EtcItem" name="Elixir of Mental Strength (C-Grade)">
 		<!-- Regenerates MP. Can be used by characters above level 40 and below level 51 upon themselves. Re-use delay 5 minutes. -->
+		<set name="icon" val="icon.etc_super_mp_potion_i02" />
 		<set name="item_type" val="potion" />
 		<set name="weight" val="5" />
 		<set name="consume_type" val="stackable" />
@@ -218,6 +241,7 @@
 	</item>
 	<item id="8631" type="EtcItem" name="Elixir of Mental Strength (B-Grade)">
 		<!-- Regenerates MP. Can be used by characters above level 52 and below level 60 upon themselves. Re-use delay 5 minutes. -->
+		<set name="icon" val="icon.etc_super_mp_potion_i03" />
 		<set name="item_type" val="potion" />
 		<set name="weight" val="5" />
 		<set name="consume_type" val="stackable" />
@@ -226,6 +250,7 @@
 	</item>
 	<item id="8632" type="EtcItem" name="Elixir of Mental Strength (A-Grade)">
 		<!-- Regenerates MP. Can be used by characters above level 61 and below level 75 upon themselves. Re-use delay 5 minutes. -->
+		<set name="icon" val="icon.etc_super_mp_potion_i04" />
 		<set name="item_type" val="potion" />
 		<set name="weight" val="5" />
 		<set name="consume_type" val="stackable" />
@@ -234,6 +259,7 @@
 	</item>
 	<item id="8633" type="EtcItem" name="Elixir of Mental Strength (S-Grade)">
 		<!-- Regenerates MP. Can be used by characters above level 76 upon themselves. Re-use delay 5 minutes. -->
+		<set name="icon" val="icon.etc_super_mp_potion_i05" />
 		<set name="item_type" val="potion" />
 		<set name="weight" val="5" />
 		<set name="consume_type" val="stackable" />
@@ -242,6 +268,7 @@
 	</item>
 	<item id="8634" type="EtcItem" name="Elixir of CP (No Grade)">
 		<!-- Regenerates CP. Can only be used by characters below level 19 upon themselves. Re-use delay is 5 minutes. -->
+		<set name="icon" val="icon.etc_super_cp_potion_i00" />
 		<set name="item_type" val="potion" />
 		<set name="weight" val="5" />
 		<set name="consume_type" val="stackable" />
@@ -250,6 +277,7 @@
 	</item>
 	<item id="8635" type="EtcItem" name="Elixir of CP (D-Grade)">
 		<!-- Regenerates CP. This item can only be used by a character whose level is between 20 and 39. Re-use delay is 5 minutes. -->
+		<set name="icon" val="icon.etc_super_cp_potion_i01" />
 		<set name="item_type" val="potion" />
 		<set name="weight" val="5" />
 		<set name="consume_type" val="stackable" />
@@ -258,6 +286,7 @@
 	</item>
 	<item id="8636" type="EtcItem" name="Elixir of CP (C-Grade)">
 		<!-- Regenerates CP. This item can only be used by a character whose level is between 40 and 51. Re-use delay is 5 minutes. -->
+		<set name="icon" val="icon.etc_super_cp_potion_i02" />
 		<set name="item_type" val="potion" />
 		<set name="weight" val="5" />
 		<set name="consume_type" val="stackable" />
@@ -266,6 +295,7 @@
 	</item>
 	<item id="8637" type="EtcItem" name="Elixir of CP (B-Grade)">
 		<!-- Regenerates CP. This item can only be used by a character whose level is between 52 and 60. Re-use delay is 5 minutes. -->
+		<set name="icon" val="icon.etc_super_cp_potion_i03" />
 		<set name="item_type" val="potion" />
 		<set name="weight" val="5" />
 		<set name="consume_type" val="stackable" />
@@ -274,6 +304,7 @@
 	</item>
 	<item id="8638" type="EtcItem" name="Elixir of CP (A-Grade)">
 		<!-- Regenerates CP. This item can only be used by a character whose level is between 61 and 75. Re-use delay is 5 minutes. -->
+		<set name="icon" val="icon.etc_super_cp_potion_i04" />
 		<set name="item_type" val="potion" />
 		<set name="weight" val="5" />
 		<set name="consume_type" val="stackable" />
@@ -282,6 +313,7 @@
 	</item>
 	<item id="8639" type="EtcItem" name="Elixir of CP (S-Grade)">
 		<!-- Regenerates CP. This item can only be used by a character whose level is 76 or higher. Re-use delay is 5 minutes. -->
+		<set name="icon" val="icon.etc_super_cp_potion_i05" />
 		<set name="item_type" val="potion" />
 		<set name="weight" val="5" />
 		<set name="consume_type" val="stackable" />
@@ -290,6 +322,7 @@
 	</item>
 	<item id="8640" type="EtcItem" name="Recipe: Elixir of Life (No Grade) (100%)">
 		<!-- Usable by all races. The recipe for the Elixir of Life (No Grade). Requires Create Common Item Skill Level 1. -->
+		<set name="icon" val="icon.etc_recipe_white_i00" />
 		<set name="item_type" val="recipe" />
 		<set name="weight" val="30" />
 		<set name="consume_type" val="stackable" />
@@ -297,6 +330,7 @@
 	</item>
 	<item id="8641" type="EtcItem" name="Recipe: Elixir of Life (D-Grade)">
 		<!-- Usable by all races. The recipe for the Elixir of Life (D-Grade). Requires Create Common Item Skill Level 2. -->
+		<set name="icon" val="icon.etc_recipe_blue_i00" />
 		<set name="item_type" val="recipe" />
 		<set name="weight" val="30" />
 		<set name="consume_type" val="stackable" />
@@ -304,6 +338,7 @@
 	</item>
 	<item id="8642" type="EtcItem" name="Recipe: Elixir of Life (C-Grade) (100%)">
 		<!-- Usable by all races. The recipe for the Elixir of Life (C-Grade). Requires Create Common Item Skill Level 3. -->
+		<set name="icon" val="icon.etc_recipe_yellow_i00" />
 		<set name="item_type" val="recipe" />
 		<set name="weight" val="30" />
 		<set name="consume_type" val="stackable" />
@@ -311,6 +346,7 @@
 	</item>
 	<item id="8643" type="EtcItem" name="Recipe: Elixir of Life (B-Grade) (100%)">
 		<!-- Usable by all races. The recipe for the Elixir of Life (B-Grade). Requires Create Common Item Skill Level 4. -->
+		<set name="icon" val="icon.etc_recipe_red_i00" />
 		<set name="item_type" val="recipe" />
 		<set name="weight" val="30" />
 		<set name="consume_type" val="stackable" />
@@ -319,6 +355,7 @@
 	</item>
 	<item id="8644" type="EtcItem" name="Recipe: Elixir of Life (A-Grade) (100%)">
 		<!-- Usable by all races. The recipe for the Elixir of Life (A-Grade). Requires Create Common Item Skill Level 5. -->
+		<set name="icon" val="icon.etc_recipe_violet_i00" />
 		<set name="item_type" val="recipe" />
 		<set name="weight" val="30" />
 		<set name="consume_type" val="stackable" />
@@ -327,6 +364,7 @@
 	</item>
 	<item id="8645" type="EtcItem" name="Recipe: Elixir of Life (S-Grade) (100%)">
 		<!-- Usable by all races. The recipe for the Elixir of Life (S-Grade). Requires Create Common Item Skill Level 6. -->
+		<set name="icon" val="icon.etc_recipe_black_i00" />
 		<set name="item_type" val="recipe" />
 		<set name="weight" val="30" />
 		<set name="consume_type" val="stackable" />
@@ -335,6 +373,7 @@
 	</item>
 	<item id="8646" type="EtcItem" name="Recipe: Elixir of Mental Strength (No Grade) (100%)">
 		<!-- Usable by all races. The recipe for the Elixir of Mental Strength (No Grade). Requires Create Common Item Skill Level 1. -->
+		<set name="icon" val="icon.etc_recipe_white_i00" />
 		<set name="item_type" val="recipe" />
 		<set name="weight" val="30" />
 		<set name="consume_type" val="stackable" />
@@ -342,6 +381,7 @@
 	</item>
 	<item id="8647" type="EtcItem" name="Recipe: Elixir of Mental Strength (D-Grade) (100%)">
 		<!-- Usable by all races. The recipe for the Elixir of Mental Strength (D-Grade). Requires Create Common Item Skill Level 2. -->
+		<set name="icon" val="icon.etc_recipe_blue_i00" />
 		<set name="item_type" val="recipe" />
 		<set name="weight" val="30" />
 		<set name="consume_type" val="stackable" />
@@ -349,6 +389,7 @@
 	</item>
 	<item id="8648" type="EtcItem" name="Recipe: Elixir of Mental Strength (C-Grade) (100%)">
 		<!-- Usable by all races. The recipe for the Elixir of Mental Strength (C-Grade). Requires Create Common Item Skill Level 3. -->
+		<set name="icon" val="icon.etc_recipe_yellow_i00" />
 		<set name="item_type" val="recipe" />
 		<set name="weight" val="30" />
 		<set name="consume_type" val="stackable" />
@@ -357,6 +398,7 @@
 	</item>
 	<item id="8649" type="EtcItem" name="Recipe: Elixir of Mental Strength (B-Grade) (100%)">
 		<!-- Usable by all races. The recipe for the Elixir of Mental Strength (B-Grade). Requires Create Common Item Skill Level 4. -->
+		<set name="icon" val="icon.etc_recipe_red_i00" />
 		<set name="item_type" val="recipe" />
 		<set name="weight" val="30" />
 		<set name="consume_type" val="stackable" />
@@ -365,6 +407,7 @@
 	</item>
 	<item id="8650" type="EtcItem" name="Recipe: Elixir of Mental Strength (A-Grade) (100%)">
 		<!-- Usable by all races. The recipe for the Elixir of Mental Strength (A-Grade). Requires Create Common Item Skill Level 5. -->
+		<set name="icon" val="icon.etc_recipe_violet_i00" />
 		<set name="item_type" val="recipe" />
 		<set name="weight" val="30" />
 		<set name="consume_type" val="stackable" />
@@ -373,6 +416,7 @@
 	</item>
 	<item id="8651" type="EtcItem" name="Recipe: Elixir of Mental Strength (S-Grade) (100%)">
 		<!-- Usable by all races. The recipe for the Elixir of Mental Strength (S-Grade). Requires Create Common Item Skill Level 6. -->
+		<set name="icon" val="icon.etc_recipe_black_i00" />
 		<set name="item_type" val="recipe" />
 		<set name="weight" val="30" />
 		<set name="consume_type" val="stackable" />
@@ -381,6 +425,7 @@
 	</item>
 	<item id="8652" type="EtcItem" name="Recipe: Elixir of CP (No Grade) (100%)">
 		<!-- Usable by all races. The recipe for the Elixir of CP (No Grade). Requires Create Common Item Skill Level 1. -->
+		<set name="icon" val="icon.etc_recipe_white_i00" />
 		<set name="item_type" val="recipe" />
 		<set name="weight" val="30" />
 		<set name="consume_type" val="stackable" />
@@ -388,6 +433,7 @@
 	</item>
 	<item id="8653" type="EtcItem" name="Recipe: Elixir of CP (D-Grade) (100%)">
 		<!-- Usable by all races. The recipe for the Elixir of CP (D-Grade). Requires Create Common Item Skill Level 2. -->
+		<set name="icon" val="icon.etc_recipe_blue_i00" />
 		<set name="item_type" val="recipe" />
 		<set name="weight" val="30" />
 		<set name="consume_type" val="stackable" />
@@ -395,6 +441,7 @@
 	</item>
 	<item id="8654" type="EtcItem" name="Recipe: Elixir of CP (C-Grade) (100%)">
 		<!-- Usable by all races. The recipe for the Elixir of CP (C-Grade). Requires Create Common Item Skill Level 3. -->
+		<set name="icon" val="icon.etc_recipe_yellow_i00" />
 		<set name="item_type" val="recipe" />
 		<set name="weight" val="30" />
 		<set name="consume_type" val="stackable" />
@@ -402,6 +449,7 @@
 	</item>
 	<item id="8655" type="EtcItem" name="Recipe: Elixir of CP (B-Grade) (100%)">
 		<!-- Usable by all races. The recipe for the Elixir of CP (B-Grade). Requires Create Common Item Skill Level 4. -->
+		<set name="icon" val="icon.etc_recipe_red_i00" />
 		<set name="item_type" val="recipe" />
 		<set name="weight" val="30" />
 		<set name="consume_type" val="stackable" />
@@ -409,6 +457,7 @@
 	</item>
 	<item id="8656" type="EtcItem" name="Recipe: Elixir of CP (A-Grade) (100%)">
 		<!-- Usable by all races. The recipe for the Elixir of CP (A-Grade). Requires Create Common Item Skill Level 5. -->
+		<set name="icon" val="icon.etc_recipe_violet_i00" />
 		<set name="item_type" val="recipe" />
 		<set name="weight" val="30" />
 		<set name="consume_type" val="stackable" />
@@ -416,6 +465,7 @@
 	</item>
 	<item id="8657" type="EtcItem" name="Recipe: Elixir of CP (S-Grade) (100%)">
 		<!-- Usable by all races. The recipe for the Elixir of CP (S-Grade). Requires Create Common Item Skill Level 6. -->
+		<set name="icon" val="icon.etc_recipe_black_i00" />
 		<set name="item_type" val="recipe" />
 		<set name="weight" val="30" />
 		<set name="consume_type" val="stackable" />
@@ -423,6 +473,7 @@
 	</item>
 	<item id="8658" type="EtcItem" name="Mysterious Solvent">
 		<!-- Dilutes any substance it is mixed with. Used when creating an elixir. -->
+		<set name="icon" val="icon.etc_dragon_blood_i00" />
 		<set name="item_type" val="none" />
 		<set name="weight" val="2" />
 		<set name="consume_type" val="stackable" />
@@ -431,12 +482,14 @@
 	</item>
 	<item id="8659" type="EtcItem" name="Coffer of Shadows">
 		<!-- A mystical object that has a tiny bit of unstable dark energy trapped inside. Double-click to transform into a random special item. -->
+		<set name="icon" val="icon.etc_box_of_adventure_1_i00" />
 		<set name="item_type" val="potion" />
 		<set name="consume_type" val="stackable" />
 		<set name="crystal_type" val="none" />
 	</item>
 	<item id="8660" type="Armor" name="Demon Horns">
 		<!-- A hair accessory for the 2006 Halloween Event. -->
+		<set name="icon" val="icon.accessory_hair_cornu_i00" />
 		<set name="bodypart" val="hair" />
 		<set name="armor_type" val="none" />
 		<set name="weight" val="10" />
@@ -447,6 +500,7 @@
 	</item>
 	<item id="8661" type="Armor" name="Mask of Spirits">
 		<!-- A hair accessory for the 2006 Halloween Event. -->
+		<set name="icon" val="icon.accessory_worldcup_mask_i00" />
 		<set name="bodypart" val="face" />
 		<set name="armor_type" val="none" />
 		<set name="weight" val="10" />
@@ -457,6 +511,7 @@
 	</item>
 	<item id="8662" type="Armor" name="Fairy Antennae (Event)">
 		<!-- Cute antennae hair accessory with stars. This is an event item which cannot be exchanged or dropped. -->
+		<set name="icon" val="icon.accessory_hair_feeler_i00" />
 		<set name="bodypart" val="hair" />
 		<set name="armor_type" val="none" />
 		<set name="weight" val="10" />
@@ -470,6 +525,7 @@
 	</item>
 	<item id="8663" type="EtcItem" name="Enlightenment Oil">
 		<!-- Altered Realities Event Item. The label reads "Effects of this oil may be unpredictable. Results are temporary at best." -->
+		<set name="icon" val="icon.etc_lesser_potion_clear_i00" />
 		<set name="item_type" val="potion" />
 		<set name="weight" val="50" />
 		<set name="consume_type" val="stackable" />
@@ -477,6 +533,7 @@
 	</item>
 	<item id="8664" type="EtcItem" name="Masking Oil">
 		<!-- Altered Realities Event Item. The label reads "Effects of this oil may be unpredictable. BEWARE! Changes caused will be permanent. Drink at your own risk!" -->
+		<set name="icon" val="icon.etc_lesser_potion_purple_i00" />
 		<set name="item_type" val="potion" />
 		<set name="weight" val="50" />
 		<set name="consume_type" val="stackable" />
@@ -484,6 +541,7 @@
 	</item>
 	<item id="8665" type="EtcItem" name="Masking Oil">
 		<!-- Altered Realities Event Item. The label reads "Effects of this oil may be unpredictable. BEWARE! Changes caused will be permanent. Drink at your own risk!" -->
+		<set name="icon" val="icon.etc_lesser_potion_purple_i00" />
 		<set name="item_type" val="potion" />
 		<set name="weight" val="50" />
 		<set name="consume_type" val="stackable" />
@@ -491,6 +549,7 @@
 	</item>
 	<item id="8666" type="EtcItem" name="Masking Oil">
 		<!-- Altered Realities Event Item. The label reads "Effects of this oil may be unpredictable. BEWARE! Changes caused will be permanent. Drink at your own risk!" -->
+		<set name="icon" val="icon.etc_lesser_potion_purple_i00" />
 		<set name="item_type" val="potion" />
 		<set name="weight" val="50" />
 		<set name="consume_type" val="stackable" />
@@ -498,6 +557,7 @@
 	</item>
 	<item id="8667" type="EtcItem" name="Chameleon Oil">
 		<!-- Altered Realities Event Item. The label reads "Effects of this oil may be unpredictable. BEWARE! Changes caused will be permanent. Drink at your own risk!" -->
+		<set name="icon" val="icon.etc_lesser_potion_scarlet_i00" />
 		<set name="item_type" val="potion" />
 		<set name="weight" val="50" />
 		<set name="consume_type" val="stackable" />
@@ -505,6 +565,7 @@
 	</item>
 	<item id="8668" type="EtcItem" name="Chameleon Oil">
 		<!-- Altered Realities Event Item. The label reads "Effects of this oil may be unpredictable. BEWARE! Changes caused will be permanent. Drink at your own risk!" -->
+		<set name="icon" val="icon.etc_lesser_potion_scarlet_i00" />
 		<set name="item_type" val="potion" />
 		<set name="weight" val="50" />
 		<set name="consume_type" val="stackable" />
@@ -512,6 +573,7 @@
 	</item>
 	<item id="8669" type="EtcItem" name="Chameleon Oil">
 		<!-- Altered Realities Event Item. The label reads "Effects of this oil may be unpredictable. BEWARE! Changes caused will be permanent. Drink at your own risk!" -->
+		<set name="icon" val="icon.etc_lesser_potion_scarlet_i00" />
 		<set name="item_type" val="potion" />
 		<set name="weight" val="50" />
 		<set name="consume_type" val="stackable" />
@@ -519,6 +581,7 @@
 	</item>
 	<item id="8670" type="EtcItem" name="Chameleon Oil">
 		<!-- Altered Realities Event Item. The label reads "Effects of this oil may be unpredictable. BEWARE! Changes caused will be permanent. Drink at your own risk!" -->
+		<set name="icon" val="icon.etc_lesser_potion_scarlet_i00" />
 		<set name="item_type" val="potion" />
 		<set name="weight" val="50" />
 		<set name="consume_type" val="stackable" />
@@ -526,6 +589,7 @@
 	</item>
 	<item id="8671" type="EtcItem" name="Luxury Oil">
 		<!-- Altered Realities Event Item. The label reads "Effects of this oil may be unpredictable. BEWARE! Changes caused will be permanent. Drink at your own risk!" -->
+		<set name="icon" val="icon.etc_lesser_potion_green_i00" />
 		<set name="item_type" val="potion" />
 		<set name="weight" val="50" />
 		<set name="consume_type" val="stackable" />
@@ -533,6 +597,7 @@
 	</item>
 	<item id="8672" type="EtcItem" name="Luxury Oil">
 		<!-- Altered Realities Event Item. The label reads "Effects of this oil may be unpredictable. BEWARE! Changes caused will be permanent. Drink at your own risk!" -->
+		<set name="icon" val="icon.etc_lesser_potion_green_i00" />
 		<set name="item_type" val="potion" />
 		<set name="weight" val="50" />
 		<set name="consume_type" val="stackable" />
@@ -540,6 +605,7 @@
 	</item>
 	<item id="8673" type="EtcItem" name="Luxury Oil">
 		<!-- Altered Realities Event Item. The label reads "Effects of this oil may be unpredictable. BEWARE! Changes caused will be permanent. Drink at your own risk!" -->
+		<set name="icon" val="icon.etc_lesser_potion_green_i00" />
 		<set name="item_type" val="potion" />
 		<set name="weight" val="50" />
 		<set name="consume_type" val="stackable" />
@@ -547,6 +613,7 @@
 	</item>
 	<item id="8674" type="EtcItem" name="Luxury Oil">
 		<!-- Altered Realities Event Item. The label reads "Effects of this oil may be unpredictable. BEWARE! Changes caused will be permanent. Drink at your own risk!" -->
+		<set name="icon" val="icon.etc_lesser_potion_green_i00" />
 		<set name="item_type" val="potion" />
 		<set name="weight" val="50" />
 		<set name="consume_type" val="stackable" />
@@ -554,6 +621,7 @@
 	</item>
 	<item id="8675" type="EtcItem" name="Luxury Oil">
 		<!-- Altered Realities Event Item. The label reads "Effects of this oil may be unpredictable. BEWARE! Changes caused will be permanent. Drink at your own risk!" -->
+		<set name="icon" val="icon.etc_lesser_potion_green_i00" />
 		<set name="item_type" val="potion" />
 		<set name="weight" val="50" />
 		<set name="consume_type" val="stackable" />
@@ -561,6 +629,7 @@
 	</item>
 	<item id="8676" type="EtcItem" name="Luxury Oil">
 		<!-- Altered Realities Event Item. The label reads "Effects of this oil may be unpredictable. BEWARE! Changes caused will be permanent. Drink at your own risk!" -->
+		<set name="icon" val="icon.etc_lesser_potion_green_i00" />
 		<set name="item_type" val="potion" />
 		<set name="weight" val="50" />
 		<set name="consume_type" val="stackable" />
@@ -568,6 +637,7 @@
 	</item>
 	<item id="8677" type="EtcItem" name="Luxury Oil">
 		<!-- Altered Realities Event Item. The label reads "Effects of this oil may be unpredictable. BEWARE! Changes caused will be permanent. Drink at your own risk!" -->
+		<set name="icon" val="icon.etc_lesser_potion_green_i00" />
 		<set name="item_type" val="potion" />
 		<set name="weight" val="50" />
 		<set name="consume_type" val="stackable" />
@@ -575,6 +645,7 @@
 	</item>
 	<item id="8678" type="Weapon" name="Sirra's Blade">
 		<!-- Bestows Haste, Health, or Critical Poison. -->
+		<set name="icon" val="icon.weapon_sirr_blade_i00" />
 		<set name="bodypart" val="rhand" />
 		<set name="crystallizable" val="true" />
 		<set name="weight" val="1300" />
@@ -600,6 +671,7 @@
 	</item>
 	<item id="8679" type="Weapon" name="Sword of Ipos">
 		<!-- Bestows Focus, Haste, or Health. -->
+		<set name="icon" val="icon.weapon_sword_of_ipos_i00" />
 		<set name="bodypart" val="lrhand" />
 		<set name="crystallizable" val="true" />
 		<set name="weight" val="1820" />
@@ -625,6 +697,7 @@
 	</item>
 	<item id="8680" type="Weapon" name="Barakiel's Axe">
 		<!-- Bestows Health, Haste, or Focus. -->
+		<set name="icon" val="icon.weapon_barakiel_axe_i00" />
 		<set name="bodypart" val="rhand" />
 		<set name="crystallizable" val="true" />
 		<set name="weight" val="1550" />
@@ -651,6 +724,7 @@
 	</item>
 	<item id="8681" type="Weapon" name="Behemoth's Tuning Fork">
 		<!-- Bestows Focus, Health, or Anger. -->
+		<set name="icon" val="icon.weapon_tuning_fork_of_behemoth_i00" />
 		<set name="bodypart" val="lrhand" />
 		<set name="crystallizable" val="true" />
 		<set name="weight" val="1890" />
@@ -677,6 +751,7 @@
 	</item>
 	<item id="8682" type="Weapon" name="Naga Storm">
 		<!-- Bestows Focus, Critical Damage, or Back Blow. -->
+		<set name="icon" val="icon.weapon_naga_storm_i00" />
 		<set name="bodypart" val="rhand" />
 		<set name="crystallizable" val="true" />
 		<set name="weight" val="930" />
@@ -703,6 +778,7 @@
 	</item>
 	<item id="8683" type="Weapon" name="Tiphon's Spear">
 		<!-- Bestows either Critical Stun, Towering Blow or Wide Blow. -->
+		<set name="icon" val="icon.weapon_tiphon_spear_i00" />
 		<set name="bodypart" val="lrhand" />
 		<set name="crystallizable" val="true" />
 		<set name="weight" val="1820" />
@@ -730,6 +806,7 @@
 	</item>
 	<item id="8684" type="Weapon" name="Shyeed's Bow">
 		<!-- Bestows Cheap Shot, Focus, or Quick Recovery. -->
+		<set name="icon" val="icon.weapon_shyid_bow_i00" />
 		<set name="bodypart" val="lrhand" />
 		<set name="crystallizable" val="true" />
 		<set name="weight" val="1640" />
@@ -757,6 +834,7 @@
 	</item>
 	<item id="8685" type="Weapon" name="Sobekk's Hurricane">
 		<!-- Bestows Rsk. Haste, Haste, or Critical Drain. -->
+		<set name="icon" val="icon.weapon_sobekk_hurricane_i00" />
 		<set name="bodypart" val="lrhand" />
 		<set name="crystallizable" val="true" />
 		<set name="weight" val="1330" />
@@ -783,6 +861,7 @@
 	</item>
 	<item id="8686" type="Weapon" name="Themis' Tongue">
 		<!-- Bestows Mana Up, Magic Mental Shield, or Magic Focus. -->
+		<set name="icon" val="icon.weapon_tongue_of_themis_i00" />
 		<set name="bodypart" val="rhand" />
 		<set name="crystallizable" val="true" />
 		<set name="weight" val="820" />
@@ -808,6 +887,7 @@
 	</item>
 	<item id="8687" type="Weapon" name="Cabrio's Hand">
 		<!-- Bestows Conversion, Mana Up, or Magic Silence. -->
+		<set name="icon" val="icon.weapon_hand_of_cabrio_i00" />
 		<set name="bodypart" val="rhand" />
 		<set name="crystallizable" val="true" />
 		<set name="weight" val="1510" />
@@ -834,6 +914,7 @@
 	</item>
 	<item id="8688" type="Weapon" name="Daimon Crystal">
 		<!-- Bestows Mana Up, Acumen, or Magic Mental Shield. -->
+		<set name="icon" val="icon.weapon_crystal_of_deamon_i00" />
 		<set name="bodypart" val="lrhand" />
 		<set name="crystallizable" val="true" />
 		<set name="weight" val="880" />
@@ -860,6 +941,7 @@
 	</item>
 	<item id="8689" type="Weapon" name="Blood Sword Akamanah">
 		<!-- A demonic twin blade forged in blood by Gran Kain, the god of chaos. The blade anguishes at the touch of air, and it craves blood to renew its energies. It becomes stronger every time it is supplied with blood. -->
+		<set name="icon" val="icon.weapon_dual_sword_i00" />
 		<set name="bodypart" val="lrhand" />
 		<set name="crystallizable" val="true" />
 		<set name="weight" val="1840" />
@@ -886,6 +968,7 @@
 	</item>
 	<item id="8690" type="EtcItem" name="Recipe: Sirra's Blade (60%)">
 		<!-- For Dwarves only. Recipe for making Sirra's Blade. Requires Create Item - Skill Level 8. 60% success rate. -->
+		<set name="icon" val="icon.etc_recipe_violet_i00" />
 		<set name="item_type" val="recipe" />
 		<set name="weight" val="30" />
 		<set name="consume_type" val="stackable" />
@@ -893,6 +976,7 @@
 	</item>
 	<item id="8691" type="EtcItem" name="Recipe: Sirra's Blade (100%)">
 		<!-- For Dwarves only. Recipe for making Sirra's Blade. Requires Create Item - Skill Level 8. 100% success rate. -->
+		<set name="icon" val="icon.etc_recipe_violet_i00" />
 		<set name="item_type" val="recipe" />
 		<set name="weight" val="30" />
 		<set name="consume_type" val="stackable" />
@@ -900,6 +984,7 @@
 	</item>
 	<item id="8692" type="EtcItem" name="Recipe: Sword of Ipos (60%)">
 		<!-- For Dwarves only. Recipe for making Sword of Ipos. Requires Create Item - Skill Level 8. 60% success rate. -->
+		<set name="icon" val="icon.etc_recipe_violet_i00" />
 		<set name="item_type" val="recipe" />
 		<set name="weight" val="30" />
 		<set name="consume_type" val="stackable" />
@@ -907,6 +992,7 @@
 	</item>
 	<item id="8693" type="EtcItem" name="Recipe: Sword of Ipos (100%)">
 		<!-- For Dwarves only. Recipe for making Sword of Ipos. Requires Create Item - Skill Level 8. 100% success rate. -->
+		<set name="icon" val="icon.etc_recipe_violet_i00" />
 		<set name="item_type" val="recipe" />
 		<set name="weight" val="30" />
 		<set name="consume_type" val="stackable" />
@@ -914,6 +1000,7 @@
 	</item>
 	<item id="8694" type="EtcItem" name="Recipe: Barakiel's Axe (60%)">
 		<!-- For Dwarves only. Recipe for making Barakiel's Axe. Requires Create Item - Skill Level 8. 60% success rate. -->
+		<set name="icon" val="icon.etc_recipe_violet_i00" />
 		<set name="item_type" val="recipe" />
 		<set name="weight" val="30" />
 		<set name="consume_type" val="stackable" />
@@ -921,6 +1008,7 @@
 	</item>
 	<item id="8695" type="EtcItem" name="Recipe: Barakiel's Axe (100%)">
 		<!-- For Dwarves only. Recipe for making Barakiel's Axe. Requires Create Item - Skill Level 8. 100% success rate. -->
+		<set name="icon" val="icon.etc_recipe_violet_i00" />
 		<set name="item_type" val="recipe" />
 		<set name="weight" val="30" />
 		<set name="consume_type" val="stackable" />
@@ -928,6 +1016,7 @@
 	</item>
 	<item id="8696" type="EtcItem" name="Recipe: Behemoth's Tuning Fork (60%)">
 		<!-- For Dwarves only. Recipe for making Behemoth's Tuning Fork. Requires Create Item - Skill Level 8. 60% success rate. -->
+		<set name="icon" val="icon.etc_recipe_violet_i00" />
 		<set name="item_type" val="recipe" />
 		<set name="weight" val="30" />
 		<set name="consume_type" val="stackable" />
@@ -935,6 +1024,7 @@
 	</item>
 	<item id="8697" type="EtcItem" name="Recipe: Behemoth's Tuning Fork (100%)">
 		<!-- For Dwarves only. Recipe for making Behemoth's Tuning Fork. Requires Create Item - Skill Level 8. 100% success rate. -->
+		<set name="icon" val="icon.etc_recipe_violet_i00" />
 		<set name="item_type" val="recipe" />
 		<set name="weight" val="30" />
 		<set name="consume_type" val="stackable" />
@@ -942,6 +1032,7 @@
 	</item>
 	<item id="8698" type="EtcItem" name="Recipe: Naga Storm (60%)">
 		<!-- For Dwarves only. Recipe for making Naga Storm. Requires Create Item - Skill Level 8. 60% success rate. -->
+		<set name="icon" val="icon.etc_recipe_violet_i00" />
 		<set name="item_type" val="recipe" />
 		<set name="weight" val="30" />
 		<set name="consume_type" val="stackable" />
@@ -949,6 +1040,7 @@
 	</item>
 	<item id="8699" type="EtcItem" name="Recipe: Naga Storm (100%)">
 		<!-- For Dwarves only. Recipe for making Naga Storm. Requires Create Item - Skill Level 8. 100% success rate. -->
+		<set name="icon" val="icon.etc_recipe_violet_i00" />
 		<set name="item_type" val="recipe" />
 		<set name="weight" val="30" />
 		<set name="consume_type" val="stackable" />

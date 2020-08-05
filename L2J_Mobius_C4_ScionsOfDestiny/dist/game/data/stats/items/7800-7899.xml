@@ -2,6 +2,7 @@
 <list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../xsd/items.xsd">
 	<item id="7800" type="EtcItem" name="Small Black Fat Fish - For Beginners">
 		<!-- Double-click to randomly change into another item. The changed item can be used as a regular ingredient to make other items. -->
+		<set name="icon" val="icon.etc_bream_i05" />
 		<set name="item_type" val="none" />
 		<set name="weight" val="100" />
 		<set name="consume_type" val="stackable" />
@@ -9,6 +10,7 @@
 	</item>
 	<item id="7801" type="EtcItem" name="Black Nimble Fish - For Beginners">
 		<!-- Double-click to randomly change into another item. The changed item can be used as a regular ingredient to make other items. -->
+		<set name="icon" val="icon.etc_tuna_i05" />
 		<set name="item_type" val="none" />
 		<set name="weight" val="100" />
 		<set name="consume_type" val="stackable" />
@@ -16,6 +18,7 @@
 	</item>
 	<item id="7802" type="EtcItem" name="Black Ugly Fish - For Beginners">
 		<!-- Double-click to randomly change into another item. The changed item can be used as a regular ingredient to make other items. -->
+		<set name="icon" val="icon.etc_tuna_i05" />
 		<set name="item_type" val="none" />
 		<set name="weight" val="100" />
 		<set name="consume_type" val="stackable" />
@@ -23,6 +26,7 @@
 	</item>
 	<item id="7803" type="EtcItem" name="Black Fat Fish - For Beginners">
 		<!-- Double-click to randomly change into another item. The changed item can be used as a regular ingredient to make other items. -->
+		<set name="icon" val="icon.etc_tuna_i05" />
 		<set name="item_type" val="none" />
 		<set name="weight" val="100" />
 		<set name="consume_type" val="stackable" />
@@ -30,6 +34,7 @@
 	</item>
 	<item id="7804" type="EtcItem" name="Large Black Nimble Fish - For Beginners">
 		<!-- Double-click to randomly change into another item. The changed item can be used as a regular ingredient to make other items. -->
+		<set name="icon" val="icon.etc_angler_i05" />
 		<set name="item_type" val="none" />
 		<set name="weight" val="100" />
 		<set name="consume_type" val="stackable" />
@@ -37,6 +42,7 @@
 	</item>
 	<item id="7805" type="EtcItem" name="Large Black Ugly Fish - For Beginners">
 		<!-- Double-click to randomly change into another item. The changed item can be used as a regular ingredient to make other items. -->
+		<set name="icon" val="icon.etc_angler_i05" />
 		<set name="item_type" val="none" />
 		<set name="weight" val="100" />
 		<set name="consume_type" val="stackable" />
@@ -44,6 +50,7 @@
 	</item>
 	<item id="7806" type="EtcItem" name="Large Black Fat Fish - For Beginners">
 		<!-- Double-click to randomly change into another item. The changed item can be used as a regular ingredient to make other items. -->
+		<set name="icon" val="icon.etc_angler_i05" />
 		<set name="item_type" val="none" />
 		<set name="weight" val="100" />
 		<set name="consume_type" val="stackable" />
@@ -51,6 +58,7 @@
 	</item>
 	<item id="7807" type="EtcItem" name="Green Colored Lure - For Beginners">
 		<!-- A lure used by beginners. Since only the fish intended for beginners take the bait, a player can easily learn how to fish. This bait is preferred by fast moving fish. -->
+		<set name="icon" val="icon.etc_bait_i00" />
 		<set name="item_type" val="lure" />
 		<set name="weight" val="5" />
 		<set name="consume_type" val="stackable" />
@@ -59,6 +67,7 @@
 	</item>
 	<item id="7808" type="EtcItem" name="Purple Colored Lure - For Beginners">
 		<!-- A lure used by beginners. Since only the fish intended for beginners take the bait, a player can easily learn how to fish. This bait is preferred by fat fish. -->
+		<set name="icon" val="icon.etc_bait_i01" />
 		<set name="item_type" val="lure" />
 		<set name="weight" val="5" />
 		<set name="consume_type" val="stackable" />
@@ -67,6 +76,7 @@
 	</item>
 	<item id="7809" type="EtcItem" name="Yellow Colored Lure - For Beginners">
 		<!-- A lure used by beginners. Since only the fish intended for beginners take the bait, a player can easily learn how to fish. This bait is preferred by ugly fish. -->
+		<set name="icon" val="icon.etc_bait_i02" />
 		<set name="item_type" val="lure" />
 		<set name="weight" val="5" />
 		<set name="consume_type" val="stackable" />
@@ -75,6 +85,7 @@
 	</item>
 	<item id="7810" type="Weapon" name="Soulfire Dirk - Mana Up">
 		<!-- <Soul Crystal Enhancement>. Increases maximum MP by 30%. -->
+		<set name="icon" val="icon.weapon_dagger_of_magicflame_i01" />
 		<set name="bodypart" val="rhand" />
 		<set name="crystallizable" val="true" />
 		<set name="weight" val="750" />
@@ -104,6 +115,7 @@
 	</item>
 	<item id="7811" type="Weapon" name="Soulfire Dirk - Magic Hold">
 		<!-- <Soul Crystal Enhancement>. Casts Dryad Root magic against the target with a 10% chance of success when using bad magic. Effect 1. -->
+		<set name="icon" val="icon.weapon_dagger_of_magicflame_i01" />
 		<set name="bodypart" val="rhand" />
 		<set name="crystallizable" val="true" />
 		<set name="weight" val="750" />
@@ -134,6 +146,7 @@
 	</item>
 	<item id="7812" type="Weapon" name="Soulfire Dirk - Magic Silence">
 		<!-- <Soul Crystal Enhancement>. When using bad magic against a target, casts Silence upon target with a 10% chance of success. Effect 1. -->
+		<set name="icon" val="icon.weapon_dagger_of_magicflame_i01" />
 		<set name="bodypart" val="rhand" />
 		<set name="crystallizable" val="true" />
 		<set name="weight" val="750" />
@@ -163,6 +176,7 @@
 	</item>
 	<item id="7813" type="Weapon" name="Hell Knife - Magic Regeneration">
 		<!-- <Soul Crystal Enhancement>. Casts HP Regeneration magic upon the target with a 30% chance of success when using good magic. Effect 3. -->
+		<set name="icon" val="icon.weapon_hell_knife_i01" />
 		<set name="bodypart" val="rhand" />
 		<set name="crystallizable" val="true" />
 		<set name="weight" val="740" />
@@ -195,6 +209,7 @@
 	</item>
 	<item id="7814" type="Weapon" name="Hell Knife - Mental Shield">
 		<!-- <Soul Crystal Enhancement>. Casts Mental Shield magic upon the target with a 50% chance of success when using good magic. Effect 4. -->
+		<set name="icon" val="icon.weapon_hell_knife_i01" />
 		<set name="bodypart" val="rhand" />
 		<set name="crystallizable" val="true" />
 		<set name="weight" val="740" />
@@ -225,6 +240,7 @@
 	</item>
 	<item id="7815" type="Weapon" name="Hell Knife - Magic Weakness">
 		<!-- <Soul Crystal Enhancement>. Casts Curse Weakness against the target with a 7% chance of success when using bad magic. Effect 3. -->
+		<set name="icon" val="icon.weapon_hell_knife_i01" />
 		<set name="bodypart" val="rhand" />
 		<set name="crystallizable" val="true" />
 		<set name="weight" val="740" />
@@ -255,6 +271,7 @@
 	</item>
 	<item id="7816" type="Weapon" name="Apprentice Adventurer's Staff">
 		<!-- Apprentice Adventurer's Staff. This item cannot be exchanged, dropped, crystallized, or enchanted. If one's PK count is 1 or more, it cannot be used. -->
+		<set name="icon" val="icon.weapon_apprentices_staff_i00" />
 		<set name="bodypart" val="lrhand" />
 		<set name="weight" val="1070" />
 		<set name="soulshots" val="2" />
@@ -282,6 +299,7 @@
 	</item>
 	<item id="7817" type="Weapon" name="Apprentice Adventurer's Bone Club">
 		<!-- Apprentice Adventurer's Bone Club. This item cannot be exchanged, dropped, crystallized, or enchanted. If one's PK count is 1 or more, it cannot be used. -->
+		<set name="icon" val="icon.weapon_club_i00" />
 		<set name="bodypart" val="rhand" />
 		<set name="weight" val="1850" />
 		<set name="soulshots" val="2" />
@@ -309,6 +327,7 @@
 	</item>
 	<item id="7818" type="Weapon" name="Apprentice Adventurer's Knife">
 		<!-- Apprentice Adventurer's Knife. This item cannot be exchanged, dropped, crystallized, or enchanted. If one's PK count is 1 or more, it cannot be used. -->
+		<set name="icon" val="icon.weapon_shining_knife_i00" />
 		<set name="bodypart" val="rhand" />
 		<set name="weight" val="1120" />
 		<set name="soulshots" val="2" />
@@ -336,6 +355,7 @@
 	</item>
 	<item id="7819" type="Weapon" name="Apprentice Adventurer's Cestus">
 		<!-- Apprentice Adventurer's Cestus. This item cannot be exchanged, dropped, crystallized, or enchanted. If one's PK count is 1 or more, it cannot be used. -->
+		<set name="icon" val="icon.weapon_vipers_canine_i00" />
 		<set name="bodypart" val="lrhand" />
 		<set name="weight" val="1570" />
 		<set name="soulshots" val="2" />
@@ -363,6 +383,7 @@
 	</item>
 	<item id="7820" type="Weapon" name="Apprentice Adventurer's Bow">
 		<!-- Apprentice Adventurer's Bow. This item cannot be exchanged, dropped, crystallized, or enchanted. If one's PK count is 1 or more, it cannot be used. -->
+		<set name="icon" val="icon.weapon_short_bow_i00" />
 		<set name="bodypart" val="lrhand" />
 		<set name="weight" val="1900" />
 		<set name="soulshots" val="7" />
@@ -391,6 +412,7 @@
 	</item>
 	<item id="7821" type="Weapon" name="Apprentice Adventurer's Long Sword">
 		<!-- Apprentice Adventurer's Long Sword. This item cannot be exchanged, dropped, crystallized, or enchanted. If one's PK count is 1 or more, it cannot be used. -->
+		<set name="icon" val="icon.weapon_long_sword_i00" />
 		<set name="bodypart" val="rhand" />
 		<set name="weight" val="1560" />
 		<set name="soulshots" val="2" />
@@ -417,6 +439,7 @@
 	</item>
 	<item id="7822" type="Weapon" name="Traveler's Mace">
 		<!-- Traveler's Mace. This item cannot be exchanged, dropped, crystallized, or enchanted. If one's PK count is 1 or more, it cannot be used. -->
+		<set name="icon" val="icon.weapon_mace_of_prayer_i00" />
 		<set name="bodypart" val="rhand" />
 		<set name="weight" val="1300" />
 		<set name="soulshots" val="2" />
@@ -444,6 +467,7 @@
 	</item>
 	<item id="7823" type="Weapon" name="Traveler's Dark Elven Bow">
 		<!-- Traveler's Dark Elven Bow. This item cannot be exchanged, dropped, crystallized, or enchanted. If one's PK count is 1 or more, it cannot be used. -->
+		<set name="icon" val="icon.weapon_dark_elven_bow_i00" />
 		<set name="bodypart" val="lrhand" />
 		<set name="weight" val="1830" />
 		<set name="soulshots" val="6" />
@@ -472,6 +496,7 @@
 	</item>
 	<item id="7824" type="Weapon" name="Traveler's Long Bow">
 		<!-- Traveler's Long Bow. This item cannot be exchanged, dropped, crystallized, or enchanted. If one's PK count is 1 or more, it cannot be used. -->
+		<set name="icon" val="icon.weapon_strengthening_bow_i00" />
 		<set name="bodypart" val="lrhand" />
 		<set name="weight" val="1830" />
 		<set name="soulshots" val="6" />
@@ -500,6 +525,7 @@
 	</item>
 	<item id="7825" type="Weapon" name="Traveler's Staff">
 		<!-- Traveler's Staff. This item cannot be exchanged, dropped, crystallized, or enchanted. If one's PK count is 1 or more, it cannot be used. -->
+		<set name="icon" val="icon.weapon_staff_of_mana_i00" />
 		<set name="bodypart" val="lrhand" />
 		<set name="weight" val="1040" />
 		<set name="soulshots" val="2" />
@@ -527,6 +553,7 @@
 	</item>
 	<item id="7826" type="Weapon" name="Traveler's Bastard Sword">
 		<!-- Traveler's Bastard Sword. This item cannot be exchanged, dropped, crystallized, or enchanted. If one's PK count is 1 or more, it cannot be used. -->
+		<set name="icon" val="icon.weapon_bastard_sword_i00" />
 		<set name="bodypart" val="rhand" />
 		<set name="weight" val="1510" />
 		<set name="soulshots" val="2" />
@@ -553,6 +580,7 @@
 	</item>
 	<item id="7827" type="Weapon" name="Traveler's Wand">
 		<!-- Traveler's Wand. This item cannot be exchanged, dropped, crystallized, or enchanted. If one's PK count is 1 or more, it cannot be used. -->
+		<set name="icon" val="icon.weapon_divine_tome_i00" />
 		<set name="bodypart" val="rhand" />
 		<set name="weight" val="570" />
 		<set name="soulshots" val="2" />
@@ -579,6 +607,7 @@
 	</item>
 	<item id="7828" type="Weapon" name="Traveler's Jamadhr">
 		<!-- Traveler's Jamadhr. This item cannot be exchanged, dropped, crystallized, or enchanted. If one's PK count is 1 or more, it cannot be used. -->
+		<set name="icon" val="icon.weapon_baghnakh_i00" />
 		<set name="bodypart" val="lrhand" />
 		<set name="weight" val="1550" />
 		<set name="soulshots" val="2" />
@@ -606,6 +635,7 @@
 	</item>
 	<item id="7829" type="Weapon" name="Traveler's Tomahawk">
 		<!-- Traveler's Tomahawk. This item cannot be exchanged, dropped, crystallized, or enchanted. If one's PK count is 1 or more, it cannot be used. -->
+		<set name="icon" val="icon.weapon_tomahawk_i00" />
 		<set name="bodypart" val="rhand" />
 		<set name="weight" val="1780" />
 		<set name="soulshots" val="2" />
@@ -633,6 +663,7 @@
 	</item>
 	<item id="7830" type="Weapon" name="Traveler's Poniard Dagger">
 		<!-- Traveler's Poniard Dagger. This item cannot be exchanged, dropped, crystallized, or enchanted. If one's PK count is 1 or more, it cannot be used. -->
+		<set name="icon" val="icon.weapon_dirk_i00" />
 		<set name="bodypart" val="rhand" />
 		<set name="weight" val="1090" />
 		<set name="soulshots" val="2" />
@@ -660,6 +691,7 @@
 	</item>
 	<item id="7831" type="Weapon" name="Traveler's Pike">
 		<!-- Traveler's Pike. This item cannot be exchanged, dropped, crystallized, or enchanted. If one's PK count is 1 or more, it cannot be used. -->
+		<set name="icon" val="icon.weapon_pike_i00" />
 		<set name="bodypart" val="lrhand" />
 		<set name="weight" val="2090" />
 		<set name="soulshots" val="2" />
@@ -688,6 +720,7 @@
 	</item>
 	<item id="7832" type="EtcItem" name="Apprentice Adventurer's Weapon Exchange Coupon">
 		<!-- An exchange coupon that is needed to borrow weapons for apprentice adventurers from the Adventurers' Guild. -->
+		<set name="icon" val="icon.etc_lottery_card_i00" />
 		<set name="item_type" val="none" />
 		<set name="weight" val="1" />
 		<set name="consume_type" val="normal" />
@@ -698,6 +731,7 @@
 	</item>
 	<item id="7833" type="EtcItem" name="Adventurer's Weapon Exchange Coupon">
 		<!-- An exchange coupon that is needed to borrow weapons for apprentice adventurers from the Adventurers' Guild. -->
+		<set name="icon" val="icon.etc_lottery_card_i00" />
 		<set name="item_type" val="none" />
 		<set name="weight" val="1" />
 		<set name="consume_type" val="normal" />
@@ -707,6 +741,7 @@
 		<set name="tradeable" val="false" />
 	</item>
 	<item id="7834" type="Weapon" name="Art of Battle Axe">
+		<set name="icon" val="icon.weapon_monster_i00" />
 		<set name="bodypart" val="rhand" />
 		<set name="crystallizable" val="true" />
 		<set name="weight" val="1570" />
@@ -734,6 +769,7 @@
 	</item>
 	<item id="7835" type="EtcItem" name="Amulet: Seal of Disease">
 		<!-- Amulet required for the Seal of Disease spell. Used by Dominators. -->
+		<set name="icon" val="icon.etc_orcish_talisman_i00" />
 		<set name="item_type" val="spellbook" />
 		<set name="weight" val="120" />
 		<set name="consume_type" val="normal" />
@@ -742,6 +778,7 @@
 	</item>
 	<item id="7836" type="Armor" name="Santa's Hat">
 		<!-- A Santa Claus hat that was created to celebrate the holiday. This hat can be worn only during the end of year holiday season. It uses 2 hair accessory slots. -->
+		<set name="icon" val="icon.accessory_santas_cap_i00" />
 		<set name="bodypart" val="dhair" />
 		<set name="armor_type" val="none" />
 		<set name="weight" val="10" />
@@ -753,6 +790,7 @@
 	</item>
 	<item id="7837" type="Armor" name="Sayha's White Mask">
 		<!-- 2006 Lineage II Epic Collection Souvenir. -->
+		<set name="icon" val="icon.accessory_full_mask_i00" />
 		<set name="bodypart" val="face" />
 		<set name="armor_type" val="none" />
 		<set name="weight" val="10" />
@@ -766,6 +804,7 @@
 	</item>
 	<item id="7838" type="EtcItem" name="Santa's Hat">
 		<!-- A Santa Claus hat that was created to celebrate the holiday. This hat can be worn only during the end of year holiday season. -->
+		<set name="icon" val="icon.accessory_santas_cap_i00" />
 		<set name="item_type" val="none" />
 		<set name="weight" val="10" />
 		<set name="consume_type" val="normal" />
@@ -774,6 +813,7 @@
 	</item>
 	<item id="7839" type="Armor" name="Gran Kain's Black Mask">
 		<!-- 2007 Lineage II Limited Edition Souvenir. -->
+		<set name="icon" val="icon.accessory_full_mask_i01" />
 		<set name="bodypart" val="face" />
 		<set name="armor_type" val="none" />
 		<set name="weight" val="10" />
@@ -787,6 +827,7 @@
 	</item>
 	<item id="7840" type="Armor" name="Rabbit Ears (Event)">
 		<!-- for Japan -->
+		<set name="icon" val="icon.accessory_rabbit_ear_i00" />
 		<set name="bodypart" val="hair" />
 		<set name="armor_type" val="none" />
 		<set name="weight" val="10" />
@@ -800,6 +841,7 @@
 	</item>
 	<item id="7841" type="Armor" name="Racoon Ears (Event)">
 		<!-- for Japan -->
+		<set name="icon" val="icon.accessory_racoon_ear_i00" />
 		<set name="bodypart" val="hair" />
 		<set name="armor_type" val="none" />
 		<set name="weight" val="10" />
@@ -813,6 +855,7 @@
 	</item>
 	<item id="7842" type="Armor" name="Cat Ears (Event)">
 		<!-- for Japan -->
+		<set name="icon" val="icon.accessory_cat_ear_i00" />
 		<set name="bodypart" val="hair" />
 		<set name="armor_type" val="none" />
 		<set name="weight" val="10" />
@@ -826,6 +869,7 @@
 	</item>
 	<item id="7843" type="Armor" name="Pirate's Eyepatch (Event)">
 		<!-- for Japan -->
+		<set name="icon" val="icon.accessory_eye_bandage_i00" />
 		<set name="bodypart" val="face" />
 		<set name="armor_type" val="none" />
 		<set name="weight" val="10" />
@@ -839,6 +883,7 @@
 	</item>
 	<item id="7844" type="Armor" name="Monocle (Event)">
 		<!-- for Japan -->
+		<set name="icon" val="icon.accessory_glasses_i00" />
 		<set name="bodypart" val="face" />
 		<set name="armor_type" val="none" />
 		<set name="weight" val="10" />
@@ -852,6 +897,7 @@
 	</item>
 	<item id="7845" type="Armor" name="Outlaw's Eyepatch (Event)">
 		<!-- Purple eyepatch accessory. It cannot be exchanged for an event item and can't be dropped. -->
+		<set name="icon" val="icon.accessory_outlaw_eyepatch_i00" />
 		<set name="bodypart" val="face" />
 		<set name="armor_type" val="none" />
 		<set name="weight" val="10" />
@@ -865,6 +911,7 @@
 	</item>
 	<item id="7846" type="Armor" name="Lady's Hairpin (Event)">
 		<!-- for Japan -->
+		<set name="icon" val="icon.accessory_maidens_hairpin_i00" />
 		<set name="bodypart" val="hair" />
 		<set name="armor_type" val="none" />
 		<set name="weight" val="10" />
@@ -878,6 +925,7 @@
 	</item>
 	<item id="7847" type="Armor" name="Noblewoman's Hairpin (Event)">
 		<!-- for Japan -->
+		<set name="icon" val="icon.accessory_hairpin_i00" />
 		<set name="bodypart" val="hair" />
 		<set name="armor_type" val="none" />
 		<set name="weight" val="10" />
@@ -891,6 +939,7 @@
 	</item>
 	<item id="7848" type="Armor" name="Forget-me-not Hairpin (Event)">
 		<!-- for Japan -->
+		<set name="icon" val="icon.accessory_forget_me_not_hairpin_i00" />
 		<set name="bodypart" val="hair" />
 		<set name="armor_type" val="none" />
 		<set name="weight" val="10" />
@@ -904,6 +953,7 @@
 	</item>
 	<item id="7849" type="Armor" name="Daisy Hairpin (Event)">
 		<!-- for Japan -->
+		<set name="icon" val="icon.accessory_daisy_hairpin_i00" />
 		<set name="bodypart" val="hair" />
 		<set name="armor_type" val="none" />
 		<set name="weight" val="10" />

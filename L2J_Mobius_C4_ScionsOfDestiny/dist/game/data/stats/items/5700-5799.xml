@@ -2,6 +2,7 @@
 <list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../xsd/items.xsd">
 	<item id="5700" type="EtcItem" name="Alternative Great Cobol Seed">
 		<!-- Plant this seed onto a monster in the Innadril area and it will bear the fruit of the Alternative Great Cobol. For best results, a level 41-51 character must plant it on a level 41-51 monster. -->
+		<set name="icon" val="icon.etc_cobol_seed_i00" />
 		<set name="item_type" val="seed" />
 		<set name="weight" val="1" />
 		<set name="consume_type" val="stackable" />
@@ -10,6 +11,7 @@
 	</item>
 	<item id="5701" type="EtcItem" name="Alternative Red Codran Seed">
 		<!-- Plant this seed onto a monster in the Innadril area and it will bear the fruit of the Alternative Red Codran. For best results, a level 44-54 character must plant it on a level 44-54 monster. -->
+		<set name="icon" val="icon.etc_codran_seed_i00" />
 		<set name="item_type" val="seed" />
 		<set name="weight" val="1" />
 		<set name="consume_type" val="stackable" />
@@ -18,6 +20,7 @@
 	</item>
 	<item id="5702" type="EtcItem" name="Alternative Sea Codran Seed">
 		<!-- Plant this seed onto a monster in the Innadril area and it will bear the fruit of the Alternative Sea Codran. For best results, a level 44-54 character must plant it on a level 44-54 monster. -->
+		<set name="icon" val="icon.etc_codran_seed_i00" />
 		<set name="item_type" val="seed" />
 		<set name="weight" val="1" />
 		<set name="consume_type" val="stackable" />
@@ -26,6 +29,7 @@
 	</item>
 	<item id="5703" type="EtcItem" name="Lucky Charm">
 		<!-- Bestows blessing on its owner such that when the owner dies during a boss/raid war, his/her abilities will not be diminished. This item can only be used on self by a character whose level is 19 or below. -->
+		<set name="icon" val="icon.etc_charm_of_luck_i00" />
 		<set name="item_type" val="scroll" />
 		<set name="weight" val="10" />
 		<set name="consume_type" val="stackable" />
@@ -33,6 +37,7 @@
 		<set name="price" val="100" />
 	</item>
 	<item id="5704" type="Weapon" name="Keshanberk*Keshanberk">
+		<set name="icon" val="icon.weapon_dual_sword_i00" />
 		<set name="bodypart" val="lrhand" />
 		<set name="crystallizable" val="true" />
 		<set name="weight" val="2080" />
@@ -64,6 +69,7 @@
 	</item>
 	<item id="5705" type="Weapon" name="Keshanberk*Damascus">
 		<!-- When enchanted, the P.Atk of a dualsword will increase more significantly than that of one-handed or fist weapon. When enchanted by 4 or more, maximum HP will increase by 25% as well. Enhances damage to target during PvP. -->
+		<set name="icon" val="icon.weapon_dual_sword_i00" />
 		<set name="bodypart" val="lrhand" />
 		<set name="crystallizable" val="true" />
 		<set name="weight" val="2080" />
@@ -98,6 +104,7 @@
 	</item>
 	<item id="5706" type="Weapon" name="Damascus*Damascus">
 		<!-- When enchanted, the P.Atk of a dualsword will increase more significantly than that of one-handed or fist weapon. When enchanted by 4 or more, Accuracy will increase by 6. Enhances damage to target during PvP. -->
+		<set name="icon" val="icon.weapon_dual_sword_i00" />
 		<set name="bodypart" val="lrhand" />
 		<set name="crystallizable" val="true" />
 		<set name="weight" val="2080" />
@@ -131,6 +138,7 @@
 	</item>
 	<item id="5707" type="EtcItem" name="Record of Seven Signs">
 		<!-- An item used for studying the current situation of the Seven Signs system. -->
+		<set name="icon" val="icon.etc_ssq_scroll_i00" />
 		<set name="item_type" val="none" />
 		<set name="consume_type" val="normal" />
 		<set name="crystal_type" val="none" />
@@ -138,12 +146,14 @@
 	</item>
 	<item id="5708" type="EtcItem" name="Lord of the Manor's Certificate of Approval">
 		<!-- When one possesses this item, although one does not belong to a castle owning clan, one can join the Lords of Dawn. -->
+		<set name="icon" val="icon.etc_permit_card_i00" />
 		<set name="item_type" val="ticket_of_lo" />
 		<set name="consume_type" val="normal" />
 		<set name="crystal_type" val="none" />
 	</item>
 	<item id="5709" type="Armor" name="Sealed Zubei's Gauntlets">
 		<!-- The set effect will appear only after the seal is broken. -->
+		<set name="icon" val="icon.armor_t64_g_i02" />
 		<set name="bodypart" val="gloves" />
 		<set name="crystallizable" val="true" />
 		<set name="armor_type" val="none" />
@@ -159,6 +169,7 @@
 	</item>
 	<item id="5710" type="Armor" name="Zubei's Gauntlets - Heavy Armor">
 		<!-- Part of the heavy Zubei's set. -->
+		<set name="icon" val="icon.armor_t64_g_i00" />
 		<set name="bodypart" val="gloves" />
 		<set name="crystallizable" val="true" />
 		<set name="armor_type" val="none" />
@@ -174,6 +185,7 @@
 	</item>
 	<item id="5711" type="Armor" name="Zubei's Gauntlets - Light Armor">
 		<!-- Part of the light Zubei's set. -->
+		<set name="icon" val="icon.armor_t65_g_i00" />
 		<set name="bodypart" val="gloves" />
 		<set name="crystallizable" val="true" />
 		<set name="armor_type" val="none" />
@@ -189,6 +201,7 @@
 	</item>
 	<item id="5712" type="Armor" name="Zubei's Gauntlets - Robe">
 		<!-- Part of the Zubei's robe set. -->
+		<set name="icon" val="icon.armor_t56_g_i00" />
 		<set name="bodypart" val="gloves" />
 		<set name="crystallizable" val="true" />
 		<set name="armor_type" val="none" />
@@ -204,6 +217,7 @@
 	</item>
 	<item id="5713" type="Armor" name="Sealed Avadon Gloves">
 		<!-- The set effect will appear only after the seal is broken. -->
+		<set name="icon" val="icon.armor_t66_g_i00" />
 		<set name="bodypart" val="gloves" />
 		<set name="crystallizable" val="true" />
 		<set name="armor_type" val="none" />
@@ -219,6 +233,7 @@
 	</item>
 	<item id="5714" type="Armor" name="Avadon Gloves - Heavy Armor">
 		<!-- Part of the heavy avadon set. -->
+		<set name="icon" val="icon.armor_t66_g_i00" />
 		<set name="bodypart" val="gloves" />
 		<set name="crystallizable" val="true" />
 		<set name="armor_type" val="none" />
@@ -234,6 +249,7 @@
 	</item>
 	<item id="5715" type="Armor" name="Avadon Gloves - Light Armor">
 		<!-- Part of the light avadon set. -->
+		<set name="icon" val="icon.armor_t67_g_i00" />
 		<set name="bodypart" val="gloves" />
 		<set name="crystallizable" val="true" />
 		<set name="armor_type" val="none" />
@@ -249,6 +265,7 @@
 	</item>
 	<item id="5716" type="Armor" name="Avadon Gloves - Robe">
 		<!-- Part of the Avadon Robe set. -->
+		<set name="icon" val="icon.armor_t59_g_i00" />
 		<set name="bodypart" val="gloves" />
 		<set name="crystallizable" val="true" />
 		<set name="armor_type" val="none" />
@@ -264,6 +281,7 @@
 	</item>
 	<item id="5717" type="Armor" name="Sealed Blue Wolf Gloves">
 		<!-- The set effect will appear only after the seal is broken. -->
+		<set name="icon" val="icon.armor_t68_g_i00" />
 		<set name="bodypart" val="gloves" />
 		<set name="crystallizable" val="true" />
 		<set name="armor_type" val="none" />
@@ -279,6 +297,7 @@
 	</item>
 	<item id="5718" type="Armor" name="Blue Wolf Gloves - Heavy Armor">
 		<!-- Part of the heavy blue wolf set. -->
+		<set name="icon" val="icon.armor_t68_g_i00" />
 		<set name="bodypart" val="gloves" />
 		<set name="crystallizable" val="true" />
 		<set name="armor_type" val="none" />
@@ -294,6 +313,7 @@
 	</item>
 	<item id="5719" type="Armor" name="Blue Wolf Gloves - Light Armor">
 		<!-- Part of the light blue wolf set. -->
+		<set name="icon" val="icon.armor_t69_g_i00" />
 		<set name="bodypart" val="gloves" />
 		<set name="crystallizable" val="true" />
 		<set name="armor_type" val="none" />
@@ -309,6 +329,7 @@
 	</item>
 	<item id="5720" type="Armor" name="Blue Wolf Gloves - Robe">
 		<!-- Part of the blue wolf robe set. -->
+		<set name="icon" val="icon.armor_t70_g_i00" />
 		<set name="bodypart" val="gloves" />
 		<set name="crystallizable" val="true" />
 		<set name="armor_type" val="none" />
@@ -324,6 +345,7 @@
 	</item>
 	<item id="5721" type="Armor" name="Sealed Doom Gloves">
 		<!-- The set effect will appear only after the seal is broken. -->
+		<set name="icon" val="icon.armor_t71_g_i00" />
 		<set name="bodypart" val="gloves" />
 		<set name="crystallizable" val="true" />
 		<set name="armor_type" val="none" />
@@ -339,6 +361,7 @@
 	</item>
 	<item id="5722" type="Armor" name="Doom Gloves - Heavy Armor">
 		<!-- Part of the heavy doom set. -->
+		<set name="icon" val="icon.armor_t71_g_i00" />
 		<set name="bodypart" val="gloves" />
 		<set name="crystallizable" val="true" />
 		<set name="armor_type" val="none" />
@@ -354,6 +377,7 @@
 	</item>
 	<item id="5723" type="Armor" name="Doom Gloves - Light Armor">
 		<!-- Part of the light doom set. -->
+		<set name="icon" val="icon.armor_t72_g_i00" />
 		<set name="bodypart" val="gloves" />
 		<set name="crystallizable" val="true" />
 		<set name="armor_type" val="none" />
@@ -369,6 +393,7 @@
 	</item>
 	<item id="5724" type="Armor" name="Doom Gloves - Robe">
 		<!-- Part of the doom robe set. -->
+		<set name="icon" val="icon.armor_t73_g_i00" />
 		<set name="bodypart" val="gloves" />
 		<set name="crystallizable" val="true" />
 		<set name="armor_type" val="none" />
@@ -384,6 +409,7 @@
 	</item>
 	<item id="5725" type="Armor" name="Sealed Zubei's Boots">
 		<!-- The set effect will appear only after the seal is broken. -->
+		<set name="icon" val="icon.armor_t64_b_i00" />
 		<set name="bodypart" val="feet" />
 		<set name="crystallizable" val="true" />
 		<set name="armor_type" val="none" />
@@ -399,6 +425,7 @@
 	</item>
 	<item id="5726" type="Armor" name="Zubei's Boots - Heavy Armor">
 		<!-- Part of the heavy Zubei's set. -->
+		<set name="icon" val="icon.armor_t64_b_i00" />
 		<set name="bodypart" val="feet" />
 		<set name="crystallizable" val="true" />
 		<set name="armor_type" val="none" />
@@ -414,6 +441,7 @@
 	</item>
 	<item id="5727" type="Armor" name="Zubei's Boots - Light Armor">
 		<!-- Part of the light Zubei's set. -->
+		<set name="icon" val="icon.armor_t65_b_i00" />
 		<set name="bodypart" val="feet" />
 		<set name="crystallizable" val="true" />
 		<set name="armor_type" val="none" />
@@ -429,6 +457,7 @@
 	</item>
 	<item id="5728" type="Armor" name="Zubei's Boots - Robe">
 		<!-- Part of the Zubei's robe set. -->
+		<set name="icon" val="icon.armor_t56_b_i00" />
 		<set name="bodypart" val="feet" />
 		<set name="crystallizable" val="true" />
 		<set name="armor_type" val="none" />
@@ -444,6 +473,7 @@
 	</item>
 	<item id="5729" type="Armor" name="Sealed Avadon Boots">
 		<!-- The set effect will appear only after the seal is broken. -->
+		<set name="icon" val="icon.armor_t66_b_i00" />
 		<set name="bodypart" val="feet" />
 		<set name="crystallizable" val="true" />
 		<set name="armor_type" val="none" />
@@ -459,6 +489,7 @@
 	</item>
 	<item id="5730" type="Armor" name="Avadon Boots - Heavy Armor">
 		<!-- Part of the heavy avadon set. -->
+		<set name="icon" val="icon.armor_t66_b_i00" />
 		<set name="bodypart" val="feet" />
 		<set name="crystallizable" val="true" />
 		<set name="armor_type" val="none" />
@@ -474,6 +505,7 @@
 	</item>
 	<item id="5731" type="Armor" name="Avadon Boots - Light Armor">
 		<!-- Part of the light avadon set. -->
+		<set name="icon" val="icon.armor_t67_b_i00" />
 		<set name="bodypart" val="feet" />
 		<set name="crystallizable" val="true" />
 		<set name="armor_type" val="none" />
@@ -489,6 +521,7 @@
 	</item>
 	<item id="5732" type="Armor" name="Avadon Boots - Robe">
 		<!-- Part of the Avadon Robe set. -->
+		<set name="icon" val="icon.armor_t59_b_i00" />
 		<set name="bodypart" val="feet" />
 		<set name="crystallizable" val="true" />
 		<set name="armor_type" val="none" />
@@ -504,6 +537,7 @@
 	</item>
 	<item id="5733" type="Armor" name="Sealed Blue Wolf Boots">
 		<!-- The set effect will appear only after the seal is broken. -->
+		<set name="icon" val="icon.armor_t68_b_i00" />
 		<set name="bodypart" val="feet" />
 		<set name="crystallizable" val="true" />
 		<set name="armor_type" val="none" />
@@ -519,6 +553,7 @@
 	</item>
 	<item id="5734" type="Armor" name="Blue Wolf Boots - Heavy Armor">
 		<!-- Part of the heavy blue wolf set. -->
+		<set name="icon" val="icon.armor_t68_b_i00" />
 		<set name="bodypart" val="feet" />
 		<set name="crystallizable" val="true" />
 		<set name="armor_type" val="none" />
@@ -534,6 +569,7 @@
 	</item>
 	<item id="5735" type="Armor" name="Blue Wolf Boots - Light Armor">
 		<!-- Part of the light blue wolf set. -->
+		<set name="icon" val="icon.armor_t69_b_i00" />
 		<set name="bodypart" val="feet" />
 		<set name="crystallizable" val="true" />
 		<set name="armor_type" val="none" />
@@ -549,6 +585,7 @@
 	</item>
 	<item id="5736" type="Armor" name="Blue Wolf Boots - Robe">
 		<!-- Part of the blue wolf robe set. -->
+		<set name="icon" val="icon.armor_t70_b_i00" />
 		<set name="bodypart" val="feet" />
 		<set name="crystallizable" val="true" />
 		<set name="armor_type" val="none" />
@@ -564,6 +601,7 @@
 	</item>
 	<item id="5737" type="Armor" name="Sealed Boots of Doom">
 		<!-- The set effect will appear only after the seal is broken. -->
+		<set name="icon" val="icon.armor_t71_b_i00" />
 		<set name="bodypart" val="feet" />
 		<set name="crystallizable" val="true" />
 		<set name="armor_type" val="none" />
@@ -579,6 +617,7 @@
 	</item>
 	<item id="5738" type="Armor" name="Doom Boots - Heavy Armor">
 		<!-- Part of the heavy doom set. -->
+		<set name="icon" val="icon.armor_t71_b_i00" />
 		<set name="bodypart" val="feet" />
 		<set name="crystallizable" val="true" />
 		<set name="armor_type" val="none" />
@@ -594,6 +633,7 @@
 	</item>
 	<item id="5739" type="Armor" name="Doom Boots - Light Armor">
 		<!-- Part of the light doom set. -->
+		<set name="icon" val="icon.armor_t72_b_i00" />
 		<set name="bodypart" val="feet" />
 		<set name="crystallizable" val="true" />
 		<set name="armor_type" val="none" />
@@ -609,6 +649,7 @@
 	</item>
 	<item id="5740" type="Armor" name="Doom Boots - Robe">
 		<!-- Part of the doom robe set. -->
+		<set name="icon" val="icon.armor_t73_b_i00" />
 		<set name="bodypart" val="feet" />
 		<set name="crystallizable" val="true" />
 		<set name="armor_type" val="none" />
@@ -624,6 +665,7 @@
 	</item>
 	<item id="5741" type="EtcItem" name="Recipe: Sealed Zubei's Gauntlets (100%)">
 		<!-- For Dwarves only. The recipe for the sealed Zubei's gauntlet. Requires Create Item - Skill Level 6. The success rate is 100%. -->
+		<set name="icon" val="icon.etc_recipe_red_i00" />
 		<set name="item_type" val="recipe" />
 		<set name="weight" val="30" />
 		<set name="consume_type" val="stackable" />
@@ -631,6 +673,7 @@
 	</item>
 	<item id="5742" type="EtcItem" name="Recipe: Zubei's Gauntlets (60%)">
 		<!-- For Dwarves only. The recipe for the sealed Zubei's gauntlet. Requires Create Item - Skill Level 6. The success rate is 60%. -->
+		<set name="icon" val="icon.etc_recipe_red_i00" />
 		<set name="item_type" val="recipe" />
 		<set name="weight" val="30" />
 		<set name="consume_type" val="stackable" />
@@ -638,6 +681,7 @@
 	</item>
 	<item id="5743" type="EtcItem" name="Recipe: Sealed Avadon Gloves (100%)">
 		<!-- For Dwarves only. The recipe for the Sealed Avadon Gloves. Requires Create Item - Skill Level 6. The success rate is 100%. -->
+		<set name="icon" val="icon.etc_recipe_red_i00" />
 		<set name="item_type" val="recipe" />
 		<set name="weight" val="30" />
 		<set name="consume_type" val="stackable" />
@@ -645,6 +689,7 @@
 	</item>
 	<item id="5744" type="EtcItem" name="Recipe: Sealed Avadon Gloves (60%)">
 		<!-- For Dwarves only. The recipe for the Sealed Avadon Gloves. Requires Create Item - Skill Level 6. The success rate is 60%. -->
+		<set name="icon" val="icon.etc_recipe_red_i00" />
 		<set name="item_type" val="recipe" />
 		<set name="weight" val="30" />
 		<set name="consume_type" val="stackable" />
@@ -652,6 +697,7 @@
 	</item>
 	<item id="5745" type="EtcItem" name="Recipe: Sealed Blue Wolf Gloves (100%)">
 		<!-- For Dwarves only. The recipe for the sealed Blue Wolf gloves. Requires Create Item - Skill Level 7. The success rate is 100%. -->
+		<set name="icon" val="icon.etc_recipe_violet_i00" />
 		<set name="item_type" val="recipe" />
 		<set name="weight" val="30" />
 		<set name="consume_type" val="stackable" />
@@ -659,6 +705,7 @@
 	</item>
 	<item id="5746" type="EtcItem" name="Recipe: Sealed Blue Wolf Gloves (60%)">
 		<!-- For Dwarves only. The recipe for the sealed Blue Wolf gloves. Requires Create Item - Skill Level 7. The success rate is 60%. -->
+		<set name="icon" val="icon.etc_recipe_violet_i00" />
 		<set name="item_type" val="recipe" />
 		<set name="weight" val="30" />
 		<set name="consume_type" val="stackable" />
@@ -666,6 +713,7 @@
 	</item>
 	<item id="5747" type="EtcItem" name="Recipe: Sealed Doom Gloves (100%)">
 		<!-- For Dwarves only. The recipe for the Sealed Doom Gloves. Requires Create Item - Skill Level 7. The success rate is 100%. -->
+		<set name="icon" val="icon.etc_recipe_violet_i00" />
 		<set name="item_type" val="recipe" />
 		<set name="weight" val="30" />
 		<set name="consume_type" val="stackable" />
@@ -673,6 +721,7 @@
 	</item>
 	<item id="5748" type="EtcItem" name="Recipe: Sealed Doom Gloves (60%)">
 		<!-- For Dwarves only. The recipe for the Sealed Doom Gloves. Requires Create Item - Skill Level 7. The success rate is 60%. -->
+		<set name="icon" val="icon.etc_recipe_violet_i00" />
 		<set name="item_type" val="recipe" />
 		<set name="weight" val="30" />
 		<set name="consume_type" val="stackable" />
@@ -680,6 +729,7 @@
 	</item>
 	<item id="5749" type="EtcItem" name="Recipe: Sealed Zubei's Boots (100%)">
 		<!-- For Dwarves only. The recipe for the Sealed Zubei's Boots. Requires Create Item - Skill Level 6. The success rate is 100%. -->
+		<set name="icon" val="icon.etc_recipe_red_i00" />
 		<set name="item_type" val="recipe" />
 		<set name="weight" val="30" />
 		<set name="consume_type" val="stackable" />
@@ -687,6 +737,7 @@
 	</item>
 	<item id="5750" type="EtcItem" name="Recipe: Sealed Zubei's Boots (60%)">
 		<!-- For Dwarves only. The recipe for the Sealed Zubei's Boots. Requires Create Item - Skill Level 6. The success rate is 60%. -->
+		<set name="icon" val="icon.etc_recipe_red_i00" />
 		<set name="item_type" val="recipe" />
 		<set name="weight" val="30" />
 		<set name="consume_type" val="stackable" />
@@ -694,6 +745,7 @@
 	</item>
 	<item id="5751" type="EtcItem" name="Recipe: Sealed Avadon Boots (100%)">
 		<!-- For Dwarves only. The recipe for the Sealed Avadon Boots. Requires Create Item - Skill Level 6. The success rate is 100%. -->
+		<set name="icon" val="icon.etc_recipe_red_i00" />
 		<set name="item_type" val="recipe" />
 		<set name="weight" val="30" />
 		<set name="consume_type" val="stackable" />
@@ -701,6 +753,7 @@
 	</item>
 	<item id="5752" type="EtcItem" name="Recipe: Sealed Avadon Boots (60%)">
 		<!-- For Dwarves only. The recipe for the Sealed Avadon Boots. Requires Create Item - Skill Level 6. The success rate is 60%. -->
+		<set name="icon" val="icon.etc_recipe_red_i00" />
 		<set name="item_type" val="recipe" />
 		<set name="weight" val="30" />
 		<set name="consume_type" val="stackable" />
@@ -708,6 +761,7 @@
 	</item>
 	<item id="5753" type="EtcItem" name="Recipe: Sealed Blue Wolf Boots (100%)">
 		<!-- For Dwarves only. The recipe for the sealed Blue Wolf Boots. Requires Create Item - Skill Level 7. The success rate is 100%. -->
+		<set name="icon" val="icon.etc_recipe_violet_i00" />
 		<set name="item_type" val="recipe" />
 		<set name="weight" val="30" />
 		<set name="consume_type" val="stackable" />
@@ -715,6 +769,7 @@
 	</item>
 	<item id="5754" type="EtcItem" name="Recipe: Sealed Blue Wolf Boots (60%)">
 		<!-- For Dwarves only. The recipe for the sealed Blue Wolf Boots. Requires Create Item - Skill Level 7. The success rate is 60%. -->
+		<set name="icon" val="icon.etc_recipe_violet_i00" />
 		<set name="item_type" val="recipe" />
 		<set name="weight" val="30" />
 		<set name="consume_type" val="stackable" />
@@ -722,6 +777,7 @@
 	</item>
 	<item id="5755" type="EtcItem" name="Recipe: Sealed Boots of Doom (100%)">
 		<!-- For Dwarves only. The recipe for the sealed Doom Boots. Requires Create Item - Skill Level 7. The success rate is 100%. -->
+		<set name="icon" val="icon.etc_recipe_violet_i00" />
 		<set name="item_type" val="recipe" />
 		<set name="weight" val="30" />
 		<set name="consume_type" val="stackable" />
@@ -729,6 +785,7 @@
 	</item>
 	<item id="5756" type="EtcItem" name="Recipe: Sealed Boots of Doom (60%)">
 		<!-- For Dwarves only. The recipe for the sealed Doom Boots. Requires Create Item - Skill Level 7. The success rate is 60%. -->
+		<set name="icon" val="icon.etc_recipe_violet_i00" />
 		<set name="item_type" val="recipe" />
 		<set name="weight" val="30" />
 		<set name="consume_type" val="stackable" />
@@ -736,6 +793,7 @@
 	</item>
 	<item id="5757" type="EtcItem" name="Sealed Zubei's Gauntlet Part">
 		<!-- An essential ingredient needed by a Dwarf to make a pair of Sealed Zubei's Gauntlets. It can also be sold to a regular store. -->
+		<set name="icon" val="icon.etc_plate_silver_i00" />
 		<set name="item_type" val="material" />
 		<set name="weight" val="60" />
 		<set name="consume_type" val="stackable" />
@@ -743,6 +801,7 @@
 	</item>
 	<item id="5758" type="EtcItem" name="Sealed Avadon Gloves Part">
 		<!-- An essential ingredient needed by a Dwarf to make a pair of Sealed Avadon Gloves. It can also be sold to a regular store. -->
+		<set name="icon" val="icon.etc_plate_silver_i00" />
 		<set name="item_type" val="material" />
 		<set name="weight" val="60" />
 		<set name="consume_type" val="stackable" />
@@ -750,6 +809,7 @@
 	</item>
 	<item id="5759" type="EtcItem" name="Sealed Blue Wolf Gloves Fabric">
 		<!-- An essential ingredient needed by a Dwarf to make a pair of Sealed Blue Wolf Gloves. It can also be sold to a regular store. -->
+		<set name="icon" val="icon.etc_leather_gray_i00" />
 		<set name="item_type" val="material" />
 		<set name="weight" val="60" />
 		<set name="consume_type" val="stackable" />
@@ -757,6 +817,7 @@
 	</item>
 	<item id="5760" type="EtcItem" name="Sealed Doom Gloves Part">
 		<!-- An essential ingredient needed by a Dwarf to make a pair of Sealed Doom Gloves. It can also be sold to a regular store. -->
+		<set name="icon" val="icon.etc_plate_silver_i00" />
 		<set name="item_type" val="material" />
 		<set name="weight" val="60" />
 		<set name="consume_type" val="stackable" />
@@ -764,6 +825,7 @@
 	</item>
 	<item id="5761" type="EtcItem" name="Sealed Zubei's Boots Design">
 		<!-- An essential ingredient needed by a Dwarf to make a pair of Sealed Zubei's Boots. It can also be sold to a regular store. -->
+		<set name="icon" val="icon.etc_pouch_brown_i00" />
 		<set name="item_type" val="material" />
 		<set name="weight" val="60" />
 		<set name="consume_type" val="stackable" />
@@ -771,6 +833,7 @@
 	</item>
 	<item id="5762" type="EtcItem" name="Sealed Avadon Boots Design">
 		<!-- An essential ingredient needed by a Dwarf to make a pair of Sealed Avadon Boots. It can also be sold to a regular store. -->
+		<set name="icon" val="icon.etc_codran_seed_i00" />
 		<set name="item_type" val="material" />
 		<set name="weight" val="60" />
 		<set name="consume_type" val="stackable" />
@@ -778,6 +841,7 @@
 	</item>
 	<item id="5763" type="EtcItem" name="Sealed Blue Wolf Boots Design">
 		<!-- An essential ingredient needed by a Dwarf to make a pair of Sealed Blue Wolf Boots. It can also be sold to a regular store. -->
+		<set name="icon" val="icon.etc_codran_seed_i00" />
 		<set name="item_type" val="material" />
 		<set name="weight" val="60" />
 		<set name="consume_type" val="stackable" />
@@ -785,6 +849,7 @@
 	</item>
 	<item id="5764" type="EtcItem" name="Sealed Doom Boots Part">
 		<!-- An essential ingredient needed by a Dwarf to make a pair of Sealed Boots of Doom. It can also be sold to a regular store. -->
+		<set name="icon" val="icon.etc_codran_seed_i00" />
 		<set name="item_type" val="material" />
 		<set name="weight" val="60" />
 		<set name="consume_type" val="stackable" />
@@ -792,6 +857,7 @@
 	</item>
 	<item id="5765" type="Armor" name="Dark Crystal Gloves - Heavy Armor">
 		<!-- Part of the heavy dark crystal set. -->
+		<set name="icon" val="icon.armor_t74_g_i00" />
 		<set name="bodypart" val="gloves" />
 		<set name="crystallizable" val="true" />
 		<set name="armor_type" val="none" />
@@ -807,6 +873,7 @@
 	</item>
 	<item id="5766" type="Armor" name="Dark Crystal Gloves - Light Armor">
 		<!-- Part of the light dark crystal set. -->
+		<set name="icon" val="icon.armor_t75_g_i00" />
 		<set name="bodypart" val="gloves" />
 		<set name="crystallizable" val="true" />
 		<set name="armor_type" val="none" />
@@ -822,6 +889,7 @@
 	</item>
 	<item id="5767" type="Armor" name="Dark Crystal Gloves - Robe">
 		<!-- Part of the dark crystal robe set. -->
+		<set name="icon" val="icon.armor_t76_g_i00" />
 		<set name="bodypart" val="gloves" />
 		<set name="crystallizable" val="true" />
 		<set name="armor_type" val="none" />
@@ -837,6 +905,7 @@
 	</item>
 	<item id="5768" type="Armor" name="Tallum Gloves - Heavy Armor">
 		<!-- Part of the heavy tallum set. -->
+		<set name="icon" val="icon.armor_t77_g_i00" />
 		<set name="bodypart" val="gloves" />
 		<set name="crystallizable" val="true" />
 		<set name="armor_type" val="none" />
@@ -852,6 +921,7 @@
 	</item>
 	<item id="5769" type="Armor" name="Tallum Gloves - Light Armor">
 		<!-- Part of the light tallum set. -->
+		<set name="icon" val="icon.armor_t78_g_i00" />
 		<set name="bodypart" val="gloves" />
 		<set name="crystallizable" val="true" />
 		<set name="armor_type" val="none" />
@@ -867,6 +937,7 @@
 	</item>
 	<item id="5770" type="Armor" name="Tallum Gloves - Robe">
 		<!-- Part of the robe tallum set. -->
+		<set name="icon" val="icon.armor_t79_g_i00" />
 		<set name="bodypart" val="gloves" />
 		<set name="crystallizable" val="true" />
 		<set name="armor_type" val="none" />
@@ -882,6 +953,7 @@
 	</item>
 	<item id="5771" type="Armor" name="Gauntlets of Nightmare - Heavy Armor">
 		<!-- Part of the heavy nightmare set. -->
+		<set name="icon" val="icon.armor_t80_g_i00" />
 		<set name="bodypart" val="gloves" />
 		<set name="crystallizable" val="true" />
 		<set name="armor_type" val="none" />
@@ -897,6 +969,7 @@
 	</item>
 	<item id="5772" type="Armor" name="Gauntlets of Nightmare - Light Armor">
 		<!-- Part of the light nightmare set. -->
+		<set name="icon" val="icon.armor_t81_g_i00" />
 		<set name="bodypart" val="gloves" />
 		<set name="crystallizable" val="true" />
 		<set name="armor_type" val="none" />
@@ -912,6 +985,7 @@
 	</item>
 	<item id="5773" type="Armor" name="Gauntlets of Nightmare - Robe">
 		<!-- Part of the nightmare robe set. -->
+		<set name="icon" val="icon.armor_t82_g_i00" />
 		<set name="bodypart" val="gloves" />
 		<set name="crystallizable" val="true" />
 		<set name="armor_type" val="none" />
@@ -927,6 +1001,7 @@
 	</item>
 	<item id="5774" type="Armor" name="Majestic Gauntlets - Heavy Armor">
 		<!-- Part of the heavy majestic set. -->
+		<set name="icon" val="icon.armor_t83_g_i00" />
 		<set name="bodypart" val="gloves" />
 		<set name="crystallizable" val="true" />
 		<set name="armor_type" val="none" />
@@ -942,6 +1017,7 @@
 	</item>
 	<item id="5775" type="Armor" name="Majestic Gauntlets - Light Armor">
 		<!-- Part of the light majestic set. -->
+		<set name="icon" val="icon.armor_t84_g_i00" />
 		<set name="bodypart" val="gloves" />
 		<set name="crystallizable" val="true" />
 		<set name="armor_type" val="none" />
@@ -957,6 +1033,7 @@
 	</item>
 	<item id="5776" type="Armor" name="Majestic Gauntlets - Robe">
 		<!-- Part of the majestic robe set. -->
+		<set name="icon" val="icon.armor_t85_g_i00" />
 		<set name="bodypart" val="gloves" />
 		<set name="crystallizable" val="true" />
 		<set name="armor_type" val="none" />
@@ -972,6 +1049,7 @@
 	</item>
 	<item id="5777" type="Armor" name="Dark Crystal Boots - Heavy Armor">
 		<!-- Part of the heavy dark crystal set. -->
+		<set name="icon" val="icon.armor_t74_b_i00" />
 		<set name="bodypart" val="feet" />
 		<set name="crystallizable" val="true" />
 		<set name="armor_type" val="none" />
@@ -987,6 +1065,7 @@
 	</item>
 	<item id="5778" type="Armor" name="Dark Crystal Boots - Light Armor">
 		<!-- Part of the light dark crystal set. -->
+		<set name="icon" val="icon.armor_t75_b_i00" />
 		<set name="bodypart" val="feet" />
 		<set name="crystallizable" val="true" />
 		<set name="armor_type" val="none" />
@@ -1002,6 +1081,7 @@
 	</item>
 	<item id="5779" type="Armor" name="Dark Crystal Boots - Robe">
 		<!-- Part of the dark crystal robe set. -->
+		<set name="icon" val="icon.armor_t76_b_i00" />
 		<set name="bodypart" val="feet" />
 		<set name="crystallizable" val="true" />
 		<set name="armor_type" val="none" />
@@ -1017,6 +1097,7 @@
 	</item>
 	<item id="5780" type="Armor" name="Tallum Boots - Heavy Armor">
 		<!-- Part of the heavy tallum set. -->
+		<set name="icon" val="icon.armor_t77_b_i00" />
 		<set name="bodypart" val="feet" />
 		<set name="crystallizable" val="true" />
 		<set name="armor_type" val="none" />
@@ -1032,6 +1113,7 @@
 	</item>
 	<item id="5781" type="Armor" name="Tallum Boots - Light Armor">
 		<!-- Part of the light tallum set. -->
+		<set name="icon" val="icon.armor_t78_b_i00" />
 		<set name="bodypart" val="feet" />
 		<set name="crystallizable" val="true" />
 		<set name="armor_type" val="none" />
@@ -1047,6 +1129,7 @@
 	</item>
 	<item id="5782" type="Armor" name="Tallum Boots - Robe">
 		<!-- Part of the robe tallum set. -->
+		<set name="icon" val="icon.armor_t79_b_i00" />
 		<set name="bodypart" val="feet" />
 		<set name="crystallizable" val="true" />
 		<set name="armor_type" val="none" />
@@ -1062,6 +1145,7 @@
 	</item>
 	<item id="5783" type="Armor" name="Boots of Nightmare - Heavy Armor">
 		<!-- Part of the heavy nightmare set. -->
+		<set name="icon" val="icon.armor_t80_b_i00" />
 		<set name="bodypart" val="feet" />
 		<set name="crystallizable" val="true" />
 		<set name="armor_type" val="none" />
@@ -1077,6 +1161,7 @@
 	</item>
 	<item id="5784" type="Armor" name="Boots of Nightmare - Light Armor">
 		<!-- Part of the light nightmare set. -->
+		<set name="icon" val="icon.armor_t81_b_i00" />
 		<set name="bodypart" val="feet" />
 		<set name="crystallizable" val="true" />
 		<set name="armor_type" val="none" />
@@ -1092,6 +1177,7 @@
 	</item>
 	<item id="5785" type="Armor" name="Boots of Nightmare - Robe">
 		<!-- Part of the nightmare robe set. -->
+		<set name="icon" val="icon.armor_t82_b_i00" />
 		<set name="bodypart" val="feet" />
 		<set name="crystallizable" val="true" />
 		<set name="armor_type" val="none" />
@@ -1107,6 +1193,7 @@
 	</item>
 	<item id="5786" type="Armor" name="Majestic Boots - Heavy Armor">
 		<!-- Part of the heavy majestic set. -->
+		<set name="icon" val="icon.armor_t83_b_i00" />
 		<set name="bodypart" val="feet" />
 		<set name="crystallizable" val="true" />
 		<set name="armor_type" val="none" />
@@ -1122,6 +1209,7 @@
 	</item>
 	<item id="5787" type="Armor" name="Majestic Boots - Light Armor">
 		<!-- Part of the light majestic set. -->
+		<set name="icon" val="icon.armor_t84_b_i00" />
 		<set name="bodypart" val="feet" />
 		<set name="crystallizable" val="true" />
 		<set name="armor_type" val="none" />
@@ -1137,6 +1225,7 @@
 	</item>
 	<item id="5788" type="Armor" name="Majestic Boots - Robe">
 		<!-- Part of the majestic robe set. -->
+		<set name="icon" val="icon.armor_t85_b_i00" />
 		<set name="bodypart" val="feet" />
 		<set name="crystallizable" val="true" />
 		<set name="armor_type" val="none" />
@@ -1152,6 +1241,7 @@
 	</item>
 	<item id="5789" type="EtcItem" name="Soulshot: No Grade for Beginners">
 		<!-- A Soulshot: No Grade for use by newbies. -->
+		<set name="icon" val="icon.etc_soulshot_none_for_rookie_i00" />
 		<set name="item_type" val="none" />
 		<set name="weight" val="1" />
 		<set name="consume_type" val="stackable" />
@@ -1162,6 +1252,7 @@
 	</item>
 	<item id="5790" type="EtcItem" name="Spiritshot: No Grade for Beginners">
 		<!-- A Spiritshot: No Grade for use by newbies. -->
+		<set name="icon" val="icon.etc_spiritshot_none_for_rookie_i00" />
 		<set name="item_type" val="none" />
 		<set name="weight" val="1" />
 		<set name="consume_type" val="stackable" />
@@ -1171,6 +1262,7 @@
 		<set name="tradeable" val="false" />
 	</item>
 	<item id="5791" type="Weapon" name="Tomb Guard A">
+		<set name="icon" val="icon.weapon_monster_i00" />
 		<set name="bodypart" val="lrhand" />
 		<set name="crystallizable" val="true" />
 		<set name="weight" val="2180" />
@@ -1195,6 +1287,7 @@
 		</for>
 	</item>
 	<item id="5792" type="Weapon" name="Tomb Guard B">
+		<set name="icon" val="icon.weapon_monster_i00" />
 		<set name="bodypart" val="lrhand" />
 		<set name="crystallizable" val="true" />
 		<set name="weight" val="2180" />
@@ -1219,6 +1312,7 @@
 		</for>
 	</item>
 	<item id="5793" type="Weapon" name="Tomb Savant A">
+		<set name="icon" val="icon.weapon_monster_i00" />
 		<set name="bodypart" val="rhand" />
 		<set name="crystallizable" val="true" />
 		<set name="weight" val="1380" />
@@ -1243,6 +1337,7 @@
 		</for>
 	</item>
 	<item id="5794" type="Weapon" name="Tomb Savant B">
+		<set name="icon" val="icon.weapon_monster_i00" />
 		<set name="bodypart" val="rhand" />
 		<set name="crystallizable" val="true" />
 		<set name="weight" val="1380" />
@@ -1267,6 +1362,7 @@
 		</for>
 	</item>
 	<item id="5795" type="Weapon" name="Tomb Guard A">
+		<set name="icon" val="icon.weapon_monster_i00" />
 		<set name="bodypart" val="lrhand" />
 		<set name="crystallizable" val="true" />
 		<set name="weight" val="2180" />
@@ -1291,6 +1387,7 @@
 		</for>
 	</item>
 	<item id="5796" type="Weapon" name="Tomb Guard B">
+		<set name="icon" val="icon.weapon_monster_i00" />
 		<set name="bodypart" val="lrhand" />
 		<set name="crystallizable" val="true" />
 		<set name="weight" val="2180" />
@@ -1315,6 +1412,7 @@
 		</for>
 	</item>
 	<item id="5797" type="Weapon" name="Tomb Savant A">
+		<set name="icon" val="icon.weapon_monster_i00" />
 		<set name="bodypart" val="rhand" />
 		<set name="crystallizable" val="true" />
 		<set name="weight" val="1380" />
@@ -1339,6 +1437,7 @@
 		</for>
 	</item>
 	<item id="5798" type="Weapon" name="Tomb Savant B">
+		<set name="icon" val="icon.weapon_monster_i00" />
 		<set name="bodypart" val="rhand" />
 		<set name="crystallizable" val="true" />
 		<set name="weight" val="1380" />
@@ -1363,6 +1462,7 @@
 		</for>
 	</item>
 	<item id="5799" type="Weapon" name="Nephilim Lord">
+		<set name="icon" val="icon.weapon_monster_i00" />
 		<set name="bodypart" val="lhand" />
 		<set name="crystallizable" val="true" />
 		<set name="weight" val="1320" />

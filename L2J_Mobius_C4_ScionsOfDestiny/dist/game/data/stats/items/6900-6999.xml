@@ -2,6 +2,7 @@
 <list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../xsd/items.xsd">
 	<item id="6900" type="EtcItem" name="Recipe: Arcana Mace (100%)">
 		<!-- For Dwarves only. The recipe for an Arcana Mace. Requires Create Item - Skill Level 9. The success rate is 100%. -->
+		<set name="icon" val="icon.etc_recipe_black_i00" />
 		<set name="item_type" val="recipe" />
 		<set name="weight" val="30" />
 		<set name="consume_type" val="stackable" />
@@ -10,6 +11,7 @@
 	</item>
 	<item id="6901" type="EtcItem" name="Recipe: Shining Arrow (100%)">
 		<!-- For Dwarves only. The recipe for a Shining Arrow. Requires Create Item - Skill Level 5. The success rate is 100%. -->
+		<set name="icon" val="icon.etc_recipe_black_i00" />
 		<set name="item_type" val="recipe" />
 		<set name="weight" val="30" />
 		<set name="consume_type" val="stackable" />
@@ -18,6 +20,7 @@
 	</item>
 	<item id="6902" type="Weapon" name="Pledge Shield">
 		<!-- A shield that can only be used by the members of a clan that owns a clan hall. -->
+		<set name="icon" val="icon.shield_pledge_shield_i00" />
 		<set name="bodypart" val="lhand" />
 		<set name="crystallizable" val="true" />
 		<set name="weight" val="1380" />
@@ -36,6 +39,7 @@
 	</item>
 	<item id="6903" type="EtcItem" name="Music Box M">
 		<!-- Music Box playing Minu's music. Disappear after the one-time use. -->
+		<set name="icon" val="icon.etc_m_i00" />
 		<set name="item_type" val="none" />
 		<set name="weight" val="10" />
 		<set name="consume_type" val="stackable" />
@@ -43,6 +47,7 @@
 	</item>
 	<item id="6904" type="EtcItem" name="Party Mask Fabric">
 		<!-- Main ingredient essentially required to make a Party Mask. Can also be sold at ordinary shops. -->
+		<set name="icon" val="icon.etc_piece_of_cloth_blue_i00" />
 		<set name="item_type" val="material" />
 		<set name="weight" val="60" />
 		<set name="consume_type" val="stackable" />
@@ -51,6 +56,7 @@
 	</item>
 	<item id="6905" type="EtcItem" name="Hair Pin Piece">
 		<!-- Main ingredient essentially required to make a Noblewoman's Hairpin. Can also be sold at ordinary shops. -->
+		<set name="icon" val="icon.etc_broken_crystal_green_i00" />
 		<set name="item_type" val="material" />
 		<set name="weight" val="60" />
 		<set name="consume_type" val="stackable" />
@@ -59,6 +65,7 @@
 	</item>
 	<item id="6906" type="EtcItem" name="Pirate's Eye Patch Material">
 		<!-- Main component necessary to make a Pirate's Eye Patch. May also be sold at ordinary shops. -->
+		<set name="icon" val="icon.etc_braided_hemp_i00" />
 		<set name="item_type" val="material" />
 		<set name="weight" val="60" />
 		<set name="consume_type" val="stackable" />
@@ -67,6 +74,7 @@
 	</item>
 	<item id="6907" type="EtcItem" name="Monocle Piece">
 		<!-- Main ingredient essentially required to make a Monocle. Can also be sold at ordinary shops. -->
+		<set name="icon" val="icon.etc_bark_blue_i00" />
 		<set name="item_type" val="material" />
 		<set name="weight" val="60" />
 		<set name="consume_type" val="stackable" />
@@ -75,6 +83,7 @@
 	</item>
 	<item id="6908" type="EtcItem" name="Fish Oil">
 		<!-- Used as an ingredient for general manufacture or can be exchanged for a Proof of Catching a Fish by a Fishing Guild Member. Can also be sold at ordinary shops. -->
+		<set name="icon" val="icon.etc_fish_oil_i00" />
 		<set name="item_type" val="material" />
 		<set name="weight" val="30" />
 		<set name="consume_type" val="stackable" />
@@ -83,6 +92,7 @@
 	</item>
 	<item id="6909" type="EtcItem" name="Greater Fish Oil">
 		<!-- Used as an ingredient for general manufacture or can be exchanged for a Proof of Catching a Fish by a Fishing Guild Member. Can also be sold at ordinary shops. -->
+		<set name="icon" val="icon.etc_fish_oil_i01" />
 		<set name="item_type" val="material" />
 		<set name="weight" val="30" />
 		<set name="consume_type" val="stackable" />
@@ -91,6 +101,7 @@
 	</item>
 	<item id="6910" type="EtcItem" name="Premium Fish Oil">
 		<!-- Used as an ingredient for general manufacture or can be exchanged for a Proof of Catching a Fish by a Fishing Guild Member. Can also be sold at ordinary shops. -->
+		<set name="icon" val="icon.etc_fish_oil_i02" />
 		<set name="item_type" val="material" />
 		<set name="weight" val="30" />
 		<set name="consume_type" val="stackable" />
@@ -99,6 +110,7 @@
 	</item>
 	<item id="6911" type="EtcItem" name="Fish Scale">
 		<!-- Used as an ingredient for general manufacture or can be exchanged for a Proof of Catching a Fish by a Fishing Guild Member. Can also be sold at ordinary shops. -->
+		<set name="icon" val="icon.etc_fish_scale_i00" />
 		<set name="item_type" val="material" />
 		<set name="weight" val="30" />
 		<set name="consume_type" val="stackable" />
@@ -107,6 +119,7 @@
 	</item>
 	<item id="6912" type="EtcItem" name="Shiny Fish Scale">
 		<!-- Used as an ingredient for general manufacture or can be exchanged for a Proof of Catching a Fish by a Fishing Guild Member. Can also be sold at ordinary shops. -->
+		<set name="icon" val="icon.etc_fish_scale_i01" />
 		<set name="item_type" val="material" />
 		<set name="weight" val="30" />
 		<set name="consume_type" val="stackable" />
@@ -115,6 +128,7 @@
 	</item>
 	<item id="6913" type="EtcItem" name="Fish Gem">
 		<!-- Used as an ingredient for general manufacture or can be exchanged for a Proof of Catching a Fish by a Fishing Guild Member. Can also be sold at ordinary shops. -->
+		<set name="icon" val="icon.etc_fish_gem_i00" />
 		<set name="item_type" val="material" />
 		<set name="weight" val="30" />
 		<set name="consume_type" val="stackable" />
@@ -123,6 +137,7 @@
 	</item>
 	<item id="6914" type="EtcItem" name="Shiny Fish Gem">
 		<!-- Used as an ingredient for general manufacture or can be exchanged for a Proof of Catching a Fish by a Fishing Guild Member. Can also be sold at ordinary shops. -->
+		<set name="icon" val="icon.etc_fish_gem_i01" />
 		<set name="item_type" val="material" />
 		<set name="weight" val="30" />
 		<set name="consume_type" val="stackable" />
@@ -131,6 +146,7 @@
 	</item>
 	<item id="6915" type="EtcItem" name="Thin Fish Bone">
 		<!-- Used as an ingredient for general manufacture or can be exchanged for a Proof of Catching a Fish by a Fishing Guild Member. Can also be sold at ordinary shops. -->
+		<set name="icon" val="icon.etc_fang_gray_i00" />
 		<set name="item_type" val="material" />
 		<set name="weight" val="30" />
 		<set name="consume_type" val="stackable" />
@@ -139,6 +155,7 @@
 	</item>
 	<item id="6916" type="EtcItem" name="Thick Fish Bone">
 		<!-- Used as an ingredient for general manufacture or can be exchanged for a Proof of Catching a Fish by a Fishing Guild Member. Can also be sold at ordinary shops. -->
+		<set name="icon" val="icon.etc_fang_ivory_i00" />
 		<set name="item_type" val="material" />
 		<set name="weight" val="30" />
 		<set name="consume_type" val="stackable" />
@@ -146,6 +163,7 @@
 		<set name="price" val="450" />
 	</item>
 	<item id="6917" type="Weapon" name="Monster Only (Poison Sting)">
+		<set name="icon" val="icon.weapon_monster_i00" />
 		<set name="bodypart" val="rhand" />
 		<set name="weight" val="6" />
 		<set name="crystal_type" val="none" />
@@ -162,6 +180,7 @@
 		</for>
 	</item>
 	<item id="6918" type="Weapon" name="Monster Only (Shield of Silenos)">
+		<set name="icon" val="icon.weapon_monster_i00" />
 		<set name="bodypart" val="lhand" />
 		<set name="weight" val="1380" />
 		<set name="crystal_type" val="none" />
@@ -178,6 +197,7 @@
 		</for>
 	</item>
 	<item id="6919" type="Weapon" name="Monster Only (Shield of Ketra Orc)">
+		<set name="icon" val="icon.weapon_monster_i00" />
 		<set name="bodypart" val="lhand" />
 		<set name="weight" val="1320" />
 		<set name="crystal_type" val="none" />
@@ -196,6 +216,7 @@
 	</item>
 	<item id="6920" type="EtcItem" name="Recipe: Greater Fish Oil (100%)">
 		<!-- This recipe for mid-grade Fish Oil can be used by all races. Requires Create Common Item Skill Level 2. -->
+		<set name="icon" val="icon.etc_recipe_green_i00" />
 		<set name="item_type" val="recipe" />
 		<set name="weight" val="30" />
 		<set name="consume_type" val="stackable" />
@@ -204,6 +225,7 @@
 	</item>
 	<item id="6921" type="EtcItem" name="Recipe: Premium Fish Oil(100%)">
 		<!-- This recipe for high-grade Fish Oil can be used by all races. Requires Create Common Item Skill Level 3. -->
+		<set name="icon" val="icon.etc_recipe_green_i00" />
 		<set name="item_type" val="recipe" />
 		<set name="weight" val="30" />
 		<set name="consume_type" val="stackable" />
@@ -212,6 +234,7 @@
 	</item>
 	<item id="6922" type="EtcItem" name="Recipe: Party Mask (100%)">
 		<!-- This technique to create a Party Mask can be used by all races. Requires Create Common Item Skill Level 4. -->
+		<set name="icon" val="icon.etc_recipe_green_i00" />
 		<set name="item_type" val="recipe" />
 		<set name="weight" val="30" />
 		<set name="consume_type" val="stackable" />
@@ -220,6 +243,7 @@
 	</item>
 	<item id="6923" type="EtcItem" name="Recipe: Lady's Hair Pin (100%)">
 		<!-- This technique to create a Lady's Hair Pin can be used by all races. Requires Create Common Item Skill Level 4. -->
+		<set name="icon" val="icon.etc_recipe_green_i00" />
 		<set name="item_type" val="recipe" />
 		<set name="weight" val="30" />
 		<set name="consume_type" val="stackable" />
@@ -228,6 +252,7 @@
 	</item>
 	<item id="6924" type="EtcItem" name="Recipe: Pirate's Eye Patch (100%)">
 		<!-- This method of creating a Pirate's Eye Patch may be used by all races. Requires Create Common Item - Skill Level 4. -->
+		<set name="icon" val="icon.etc_recipe_green_i00" />
 		<set name="item_type" val="recipe" />
 		<set name="weight" val="30" />
 		<set name="consume_type" val="stackable" />
@@ -236,6 +261,7 @@
 	</item>
 	<item id="6925" type="EtcItem" name="Recipe: Monocle (100%)">
 		<!-- This technique to create a Monocle can be used by all races. Requires Create Common Item Skill Level 4. -->
+		<set name="icon" val="icon.etc_recipe_green_i00" />
 		<set name="item_type" val="recipe" />
 		<set name="weight" val="30" />
 		<set name="consume_type" val="stackable" />
@@ -244,6 +270,7 @@
 	</item>
 	<item id="6926" type="EtcItem" name="Recipe: Lesser Healing Potion (100%)">
 		<!-- This recipe for a Lesser Healing Potion can be used by all races. Requires Create Common Item Skill Level 1. -->
+		<set name="icon" val="icon.etc_recipe_green_i00" />
 		<set name="item_type" val="recipe" />
 		<set name="weight" val="30" />
 		<set name="consume_type" val="stackable" />
@@ -252,6 +279,7 @@
 	</item>
 	<item id="6927" type="EtcItem" name="Recipe: Healing Potion (100%)">
 		<!-- This recipe for a Healing Potion can be used by all races. Requires Create Common Item Skill Level 2. -->
+		<set name="icon" val="icon.etc_recipe_green_i00" />
 		<set name="item_type" val="recipe" />
 		<set name="weight" val="30" />
 		<set name="consume_type" val="stackable" />
@@ -260,6 +288,7 @@
 	</item>
 	<item id="6928" type="EtcItem" name="Recipe: Greater Healing Potion (100%)">
 		<!-- This recipe for a Greater Healing Potion can be used by all races. Requires Create Common Item Skill Level 5. -->
+		<set name="icon" val="icon.etc_recipe_green_i00" />
 		<set name="item_type" val="recipe" />
 		<set name="weight" val="30" />
 		<set name="consume_type" val="stackable" />
@@ -268,6 +297,7 @@
 	</item>
 	<item id="6929" type="EtcItem" name="Recipe: Antidote (100%)">
 		<!-- This recipe for a standard Antidote can be used by all races. Requires Create Common Item Skill Level 1. -->
+		<set name="icon" val="icon.etc_recipe_green_i00" />
 		<set name="item_type" val="recipe" />
 		<set name="weight" val="30" />
 		<set name="consume_type" val="stackable" />
@@ -276,6 +306,7 @@
 	</item>
 	<item id="6930" type="EtcItem" name="Recipe: Greater Antidote (100%)">
 		<!-- This recipe for a powerful Antidote can be used by all races. Requires Create Common Item Skill Level 2. -->
+		<set name="icon" val="icon.etc_recipe_green_i00" />
 		<set name="item_type" val="recipe" />
 		<set name="weight" val="30" />
 		<set name="consume_type" val="stackable" />
@@ -284,6 +315,7 @@
 	</item>
 	<item id="6931" type="EtcItem" name="Recipe: Bandage (100%)">
 		<!-- This technique to create a Bandage can be used by all races. Requires Create Common Item Skill Level 1. -->
+		<set name="icon" val="icon.etc_recipe_green_i00" />
 		<set name="item_type" val="recipe" />
 		<set name="weight" val="30" />
 		<set name="consume_type" val="stackable" />
@@ -292,6 +324,7 @@
 	</item>
 	<item id="6932" type="EtcItem" name="Recipe: Emergency Dressing (100%)">
 		<!-- This technique to create an Emergency Dressing can be used by all races. Requires Create Common Item Skill Level 2. -->
+		<set name="icon" val="icon.etc_recipe_green_i00" />
 		<set name="item_type" val="recipe" />
 		<set name="weight" val="30" />
 		<set name="consume_type" val="stackable" />
@@ -300,6 +333,7 @@
 	</item>
 	<item id="6933" type="EtcItem" name="Recipe: Haste Potion (100%)">
 		<!-- This recipe for a Haste Potion can be used by all races. Requires Create Common Item Skill Level 1. -->
+		<set name="icon" val="icon.etc_recipe_green_i00" />
 		<set name="item_type" val="recipe" />
 		<set name="weight" val="30" />
 		<set name="consume_type" val="stackable" />
@@ -308,6 +342,7 @@
 	</item>
 	<item id="6934" type="EtcItem" name="Recipe: Potion of Alacrity (100%)">
 		<!-- This recipe for a potion allowing swifter attacks can be used by all races. Requires Create Common Item Skill Level 1. -->
+		<set name="icon" val="icon.etc_recipe_green_i00" />
 		<set name="item_type" val="recipe" />
 		<set name="weight" val="30" />
 		<set name="consume_type" val="stackable" />
@@ -316,6 +351,7 @@
 	</item>
 	<item id="6935" type="EtcItem" name="Recipe: Greater Haste Potion (100%)">
 		<!-- This recipe for a powerful Haste Potion can be used by all races Requires Create Common Item Skill Level 3. -->
+		<set name="icon" val="icon.etc_recipe_green_i00" />
 		<set name="item_type" val="recipe" />
 		<set name="weight" val="30" />
 		<set name="consume_type" val="stackable" />
@@ -324,6 +360,7 @@
 	</item>
 	<item id="6936" type="EtcItem" name="Recipe: Greater Swift Attack Potion (100%)">
 		<!-- This recipe for a potion allowing for greater swift attacks can be used by all races. Requires Create Common Item Skill Level 3. -->
+		<set name="icon" val="icon.etc_recipe_green_i00" />
 		<set name="item_type" val="recipe" />
 		<set name="weight" val="30" />
 		<set name="consume_type" val="stackable" />
@@ -332,6 +369,7 @@
 	</item>
 	<item id="6937" type="EtcItem" name="Recipe: Magic Haste Potion (100%)">
 		<!-- This recipe for a Magic Haste Potion can be used by all races. Requires Create Common Item Skill Level 1. -->
+		<set name="icon" val="icon.etc_recipe_green_i00" />
 		<set name="item_type" val="recipe" />
 		<set name="weight" val="30" />
 		<set name="consume_type" val="stackable" />
@@ -340,6 +378,7 @@
 	</item>
 	<item id="6938" type="EtcItem" name="Recipe: Greater Magic Haste Potion (100%)">
 		<!-- This recipe for a Greater Magic Haste Potion can be used by all races. Requires Create Common Item Skill Level 3. -->
+		<set name="icon" val="icon.etc_recipe_green_i00" />
 		<set name="item_type" val="recipe" />
 		<set name="weight" val="30" />
 		<set name="consume_type" val="stackable" />
@@ -348,6 +387,7 @@
 	</item>
 	<item id="6939" type="EtcItem" name="Recipe: Mystery Potion (100%)">
 		<!-- This recipe for a mysterious potion can be used by all races. Requires Create Common Item Skill Level 2. -->
+		<set name="icon" val="icon.etc_recipe_green_i00" />
 		<set name="item_type" val="recipe" />
 		<set name="weight" val="30" />
 		<set name="consume_type" val="stackable" />
@@ -356,6 +396,7 @@
 	</item>
 	<item id="6940" type="EtcItem" name="Recipe: Facelifting Potion - A (100%)">
 		<!-- This recipe for a facelifting potion can be used by all races. Requires Create Common Item Skill Level 3. -->
+		<set name="icon" val="icon.etc_recipe_green_i00" />
 		<set name="item_type" val="recipe" />
 		<set name="weight" val="30" />
 		<set name="consume_type" val="stackable" />
@@ -364,6 +405,7 @@
 	</item>
 	<item id="6941" type="EtcItem" name="Recipe: Facelifting Potion - B (100%)">
 		<!-- This recipe for a facelifting potion can be used by all races. Requires Create Common Item Skill Level 3. -->
+		<set name="icon" val="icon.etc_recipe_green_i00" />
 		<set name="item_type" val="recipe" />
 		<set name="weight" val="30" />
 		<set name="consume_type" val="stackable" />
@@ -372,6 +414,7 @@
 	</item>
 	<item id="6942" type="EtcItem" name="Recipe: Facelifting Potion - C (100%)">
 		<!-- This recipe for a facelifting potion can be used by all races. Requires Create Common Item Skill Level 3. -->
+		<set name="icon" val="icon.etc_recipe_green_i00" />
 		<set name="item_type" val="recipe" />
 		<set name="weight" val="30" />
 		<set name="consume_type" val="stackable" />
@@ -380,6 +423,7 @@
 	</item>
 	<item id="6943" type="EtcItem" name="Recipe: Dye Potion - A (100%)">
 		<!-- This recipe for a dye potion can be used by all races. Requires Create Common Item Skill Level 3. -->
+		<set name="icon" val="icon.etc_recipe_green_i00" />
 		<set name="item_type" val="recipe" />
 		<set name="weight" val="30" />
 		<set name="consume_type" val="stackable" />
@@ -388,6 +432,7 @@
 	</item>
 	<item id="6944" type="EtcItem" name="Recipe: Dye Potion - B (100%)">
 		<!-- This recipe for a dye potion can be used by all races. Requires Create Common Item Skill Level 3. -->
+		<set name="icon" val="icon.etc_recipe_green_i00" />
 		<set name="item_type" val="recipe" />
 		<set name="weight" val="30" />
 		<set name="consume_type" val="stackable" />
@@ -396,6 +441,7 @@
 	</item>
 	<item id="6945" type="EtcItem" name="Recipe: Dye Potion - C (100%)">
 		<!-- This recipe for a dye potion can be used by all races. Requires Create Common Item Skill Level 3. -->
+		<set name="icon" val="icon.etc_recipe_green_i00" />
 		<set name="item_type" val="recipe" />
 		<set name="weight" val="30" />
 		<set name="consume_type" val="stackable" />
@@ -404,6 +450,7 @@
 	</item>
 	<item id="6946" type="EtcItem" name="Recipe: Dye Potion - D (100%)">
 		<!-- This recipe for a dye potion can be used by all races. Requires Create Common Item Skill Level 3. -->
+		<set name="icon" val="icon.etc_recipe_green_i00" />
 		<set name="item_type" val="recipe" />
 		<set name="weight" val="30" />
 		<set name="consume_type" val="stackable" />
@@ -412,6 +459,7 @@
 	</item>
 	<item id="6947" type="EtcItem" name="Recipe: Hair Style Change Potion - A (100%)">
 		<!-- This recipe for a potion that changes a character's hair style can be used by all races. Requires Create Common Item Skill Level 3. -->
+		<set name="icon" val="icon.etc_recipe_green_i00" />
 		<set name="item_type" val="recipe" />
 		<set name="weight" val="30" />
 		<set name="consume_type" val="stackable" />
@@ -420,6 +468,7 @@
 	</item>
 	<item id="6948" type="EtcItem" name="Recipe: Hair Style Change Potion - B (100%)">
 		<!-- This recipe for a potion that changes a character's hair style can be used by all races. Requires Create Common Item Skill Level 3. -->
+		<set name="icon" val="icon.etc_recipe_green_i00" />
 		<set name="item_type" val="recipe" />
 		<set name="weight" val="30" />
 		<set name="consume_type" val="stackable" />
@@ -428,6 +477,7 @@
 	</item>
 	<item id="6949" type="EtcItem" name="Recipe: Hair Style Change Potion - C (100%)">
 		<!-- This recipe for a potion that changes a character's hair style can be used by all races. Requires Create Common Item Skill Level 3. -->
+		<set name="icon" val="icon.etc_recipe_green_i00" />
 		<set name="item_type" val="recipe" />
 		<set name="weight" val="30" />
 		<set name="consume_type" val="stackable" />
@@ -436,6 +486,7 @@
 	</item>
 	<item id="6950" type="EtcItem" name="Recipe: Hair Style Change Potion - D (100%)">
 		<!-- This recipe for a potion that changes a character's hair style can be used by all races. Requires Create Common Item Skill Level 3. -->
+		<set name="icon" val="icon.etc_recipe_green_i00" />
 		<set name="item_type" val="recipe" />
 		<set name="weight" val="30" />
 		<set name="consume_type" val="stackable" />
@@ -444,6 +495,7 @@
 	</item>
 	<item id="6951" type="EtcItem" name="Recipe: Hair Style Change Potion - E (100%)">
 		<!-- This recipe for a potion that changes a character's hair style can be used by all races. Requires Create Common Item Skill Level 3. -->
+		<set name="icon" val="icon.etc_recipe_green_i00" />
 		<set name="item_type" val="recipe" />
 		<set name="weight" val="30" />
 		<set name="consume_type" val="stackable" />
@@ -452,6 +504,7 @@
 	</item>
 	<item id="6952" type="EtcItem" name="Recipe: Hair Style Change Potion - F (100%)">
 		<!-- This recipe for a potion that changes a character's hair style can be used by all races. Requires Create Common Item Skill Level 3. -->
+		<set name="icon" val="icon.etc_recipe_green_i00" />
 		<set name="item_type" val="recipe" />
 		<set name="weight" val="30" />
 		<set name="consume_type" val="stackable" />
@@ -460,6 +513,7 @@
 	</item>
 	<item id="6953" type="EtcItem" name="Recipe: Hair Style Change Potion - G (100%)">
 		<!-- This recipe for a potion that changes a character's hair style can be used by all races. Requires Create Common Item Skill Level 3. -->
+		<set name="icon" val="icon.etc_recipe_green_i00" />
 		<set name="item_type" val="recipe" />
 		<set name="weight" val="30" />
 		<set name="consume_type" val="stackable" />
@@ -468,6 +522,7 @@
 	</item>
 	<item id="6954" type="EtcItem" name="Recipe: Dye of STR (Str+1 Con-1) (100%)">
 		<!-- This recipe for Dye of STR <Str+1 Con-1> can be used by all races. Requires Create Common Item Skill Level 4. -->
+		<set name="icon" val="icon.etc_recipe_green_i00" />
 		<set name="item_type" val="recipe" />
 		<set name="weight" val="30" />
 		<set name="consume_type" val="stackable" />
@@ -476,6 +531,7 @@
 	</item>
 	<item id="6955" type="EtcItem" name="Recipe: Dye of STR (Str+1 Dex-1) (100%)">
 		<!-- This recipe for Dye of STR <Str+1 Dex-1> can be used by all races. Requires Create Common Item Skill Level 4. -->
+		<set name="icon" val="icon.etc_recipe_green_i00" />
 		<set name="item_type" val="recipe" />
 		<set name="weight" val="30" />
 		<set name="consume_type" val="stackable" />
@@ -484,6 +540,7 @@
 	</item>
 	<item id="6956" type="EtcItem" name="Recipe: Dye of CON (Con+1 Str-1) (100%)">
 		<!-- This recipe for Dye of CON <Con+1 Str-1> can be used by all races. Requires Create Common Item Skill Level 4. -->
+		<set name="icon" val="icon.etc_recipe_green_i00" />
 		<set name="item_type" val="recipe" />
 		<set name="weight" val="30" />
 		<set name="consume_type" val="stackable" />
@@ -492,6 +549,7 @@
 	</item>
 	<item id="6957" type="EtcItem" name="Recipe: Dye of CON (Con+1 Dex-1) (100%)">
 		<!-- This recipe for Dye of CON <Con+1 Dex-1> can be used by all races. Requires Create Common Item Skill Level 4. -->
+		<set name="icon" val="icon.etc_recipe_green_i00" />
 		<set name="item_type" val="recipe" />
 		<set name="weight" val="30" />
 		<set name="consume_type" val="stackable" />
@@ -500,6 +558,7 @@
 	</item>
 	<item id="6958" type="EtcItem" name="Recipe: Dye of DEX (Dex+1 Str-1) (100%)">
 		<!-- This recipe for Dye of DEX <Dex+1 Str-1> can be used by all races. Requires Create Common Item Skill Level 4. -->
+		<set name="icon" val="icon.etc_recipe_green_i00" />
 		<set name="item_type" val="recipe" />
 		<set name="weight" val="30" />
 		<set name="consume_type" val="stackable" />
@@ -508,6 +567,7 @@
 	</item>
 	<item id="6959" type="EtcItem" name="Recipe: Dye of DEX (Dex+1 Con-1) (100%)">
 		<!-- This recipe for Dye of DEX <Dex+1 Con-1> can be used by all races. Requires Create Common Item Skill Level 4. -->
+		<set name="icon" val="icon.etc_recipe_green_i00" />
 		<set name="item_type" val="recipe" />
 		<set name="weight" val="30" />
 		<set name="consume_type" val="stackable" />
@@ -516,6 +576,7 @@
 	</item>
 	<item id="6960" type="EtcItem" name="Recipe: Dye of INT (Int+1 Men-1) (100%)">
 		<!-- This recipe for Dye of INT <Int+1 Men-1> can be used by all races. Requires Create Common Item Skill Level 4. -->
+		<set name="icon" val="icon.etc_recipe_green_i00" />
 		<set name="item_type" val="recipe" />
 		<set name="weight" val="30" />
 		<set name="consume_type" val="stackable" />
@@ -524,6 +585,7 @@
 	</item>
 	<item id="6961" type="EtcItem" name="Recipe: Dye of INT (Int+1 Wit-1) (100%)">
 		<!-- This recipe for Dye of INT <Int+1 Wit-1> can be used by all races. Requires Create Common Item Skill Level 4. -->
+		<set name="icon" val="icon.etc_recipe_green_i00" />
 		<set name="item_type" val="recipe" />
 		<set name="weight" val="30" />
 		<set name="consume_type" val="stackable" />
@@ -532,6 +594,7 @@
 	</item>
 	<item id="6962" type="EtcItem" name="Recipe: Dye of MEN (Men+1 Int-1) (100%)">
 		<!-- This recipe for Dye of MEN <Men+1 Int-1> can be used by all races. Requires Create Common Item Skill Level 4. -->
+		<set name="icon" val="icon.etc_recipe_green_i00" />
 		<set name="item_type" val="recipe" />
 		<set name="weight" val="30" />
 		<set name="consume_type" val="stackable" />
@@ -540,6 +603,7 @@
 	</item>
 	<item id="6963" type="EtcItem" name="Recipe: Dye of MEN (Men+1 Wit-1) (100%)">
 		<!-- This recipe for Dye of MEN <Men+1 Wit-1> can be used by all races. Requires Create Common Item Skill Level 4. -->
+		<set name="icon" val="icon.etc_recipe_green_i00" />
 		<set name="item_type" val="recipe" />
 		<set name="weight" val="30" />
 		<set name="consume_type" val="stackable" />
@@ -548,6 +612,7 @@
 	</item>
 	<item id="6964" type="EtcItem" name="Recipe: Dye of WIT(Wit+1 Int-1) (100%)">
 		<!-- This recipe for Dye of WIT <Wit+1 Int-1> can be used by all races. Requires Create Common Item Skill Level 4. -->
+		<set name="icon" val="icon.etc_recipe_green_i00" />
 		<set name="item_type" val="recipe" />
 		<set name="weight" val="30" />
 		<set name="consume_type" val="stackable" />
@@ -556,6 +621,7 @@
 	</item>
 	<item id="6965" type="EtcItem" name="Recipe: Dye of WIT(Wit+1 Men-1) (100%)">
 		<!-- This recipe for Dye of WIT <Wit+1 Men-1>. Requires Create Common Item Skill Level 4. -->
+		<set name="icon" val="icon.etc_recipe_green_i00" />
 		<set name="item_type" val="recipe" />
 		<set name="weight" val="30" />
 		<set name="consume_type" val="stackable" />
@@ -564,6 +630,7 @@
 	</item>
 	<item id="6966" type="EtcItem" name="Recipe: Greater Dye of STR (Str+1 Con-1) (100%)">
 		<!-- This recipe for Greater Dye of STR <Str+1 Con-1> can be used by all races. Requires Create Common Item Skill Level 4. -->
+		<set name="icon" val="icon.etc_recipe_green_i00" />
 		<set name="item_type" val="recipe" />
 		<set name="weight" val="30" />
 		<set name="consume_type" val="stackable" />
@@ -572,6 +639,7 @@
 	</item>
 	<item id="6967" type="EtcItem" name="Recipe: Greater Dye of STR (Str+1 Dex-1) (100%)">
 		<!-- This recipe for Greater Dye of STR <Str+1 Dex-1> can be used by all races. Requires Create Common Item Skill Level 4. -->
+		<set name="icon" val="icon.etc_recipe_green_i00" />
 		<set name="item_type" val="recipe" />
 		<set name="weight" val="30" />
 		<set name="consume_type" val="stackable" />
@@ -580,6 +648,7 @@
 	</item>
 	<item id="6968" type="EtcItem" name="Recipe: Greater Dye of CON (Con+1 Str-1) (100%)">
 		<!-- This recipe for Greater Dye of CON <Con+1 Str-1> can be used by all races. Requires Create Common Item Skill Level 4. -->
+		<set name="icon" val="icon.etc_recipe_green_i00" />
 		<set name="item_type" val="recipe" />
 		<set name="weight" val="30" />
 		<set name="consume_type" val="stackable" />
@@ -588,6 +657,7 @@
 	</item>
 	<item id="6969" type="EtcItem" name="Recipe: Greater Dye of CON (Con+1 Dex-1) (100%)">
 		<!-- This recipe for Greater Dye of CON <Con+1 Dex-1> can be used by all races. Requires Create Common Item Skill Level 4. -->
+		<set name="icon" val="icon.etc_recipe_green_i00" />
 		<set name="item_type" val="recipe" />
 		<set name="weight" val="30" />
 		<set name="consume_type" val="stackable" />
@@ -596,6 +666,7 @@
 	</item>
 	<item id="6970" type="EtcItem" name="Recipe: Greater Dye of DEX (Dex+1 Str-1) (100%)">
 		<!-- This recipe for Greater Dye of DEX <Dex+1 Str-1> can be used by all races. Requires Create Common Item Skill Level 4. -->
+		<set name="icon" val="icon.etc_recipe_green_i00" />
 		<set name="item_type" val="recipe" />
 		<set name="weight" val="30" />
 		<set name="consume_type" val="stackable" />
@@ -604,6 +675,7 @@
 	</item>
 	<item id="6971" type="EtcItem" name="Recipe: Greater Dye of DEX (Dex+1 Con-1) (100%)">
 		<!-- This recipe for Greater Dye of DEX <Dex+1 Con-1> can be used by all races. Requires Create Common Item Skill Level 4. -->
+		<set name="icon" val="icon.etc_recipe_green_i00" />
 		<set name="item_type" val="recipe" />
 		<set name="weight" val="30" />
 		<set name="consume_type" val="stackable" />
@@ -612,6 +684,7 @@
 	</item>
 	<item id="6972" type="EtcItem" name="Recipe: Greater Dye of INT (Int+1 Men-1) (100%)">
 		<!-- This recipe for Greater Dye of INT <Int+1 Men-1> can be used by all races. Requires Create Common Item Skill Level 4. -->
+		<set name="icon" val="icon.etc_recipe_green_i00" />
 		<set name="item_type" val="recipe" />
 		<set name="weight" val="30" />
 		<set name="consume_type" val="stackable" />
@@ -620,6 +693,7 @@
 	</item>
 	<item id="6973" type="EtcItem" name="Recipe: Greater Dye of INT (Int+1 Wit-1) (100%)">
 		<!-- This recipe for Greater Dye of INT <Int+1 Wit-1> can be used by all races. Requires Create Common Item Skill Level 4. -->
+		<set name="icon" val="icon.etc_recipe_green_i00" />
 		<set name="item_type" val="recipe" />
 		<set name="weight" val="30" />
 		<set name="consume_type" val="stackable" />
@@ -628,6 +702,7 @@
 	</item>
 	<item id="6974" type="EtcItem" name="Recipe: Greater Dye of MEN (Men+1 Int-1) (100%)">
 		<!-- This recipe for Greater Dye of MEN <Men+1 Int-1> can be used by all races. Requires Create Common Item Skill Level 4. -->
+		<set name="icon" val="icon.etc_recipe_green_i00" />
 		<set name="item_type" val="recipe" />
 		<set name="weight" val="30" />
 		<set name="consume_type" val="stackable" />
@@ -636,6 +711,7 @@
 	</item>
 	<item id="6975" type="EtcItem" name="Recipe: Greater Dye of MEN (Men+1 Wit-1) (100%)">
 		<!-- This recipe for Greater Dye of MEN <Men+1 Wit-1> can be used by all races. Requires Create Common Item Skill Level 4. -->
+		<set name="icon" val="icon.etc_recipe_green_i00" />
 		<set name="item_type" val="recipe" />
 		<set name="weight" val="30" />
 		<set name="consume_type" val="stackable" />
@@ -644,6 +720,7 @@
 	</item>
 	<item id="6976" type="EtcItem" name="Recipe: Greater Dye of WIT(Wit+1 Int-1) (100%)">
 		<!-- This recipe for Greater Dye of WIT <Wit+1 Int-1> can be used by all races. Requires Create Common Item Skill Level 4. -->
+		<set name="icon" val="icon.etc_recipe_green_i00" />
 		<set name="item_type" val="recipe" />
 		<set name="weight" val="30" />
 		<set name="consume_type" val="stackable" />
@@ -652,6 +729,7 @@
 	</item>
 	<item id="6977" type="EtcItem" name="Recipe: Greater Dye of WIT(Wit+1 Men-1) (100%)">
 		<!-- This recipe for Greater Dye of WIT <Wit+1 Men-1> can be used by all races. Requires Create Common Item Skill Level 4. -->
+		<set name="icon" val="icon.etc_recipe_green_i00" />
 		<set name="item_type" val="recipe" />
 		<set name="weight" val="30" />
 		<set name="consume_type" val="stackable" />
@@ -660,6 +738,7 @@
 	</item>
 	<item id="6978" type="EtcItem" name="Recipe: Greater Dye of STR (Str+2 Con-2) (100%)">
 		<!-- This recipe for Greater Dye of STR <Str+2 Con-2> can be used by all races. Requires Create Common Item Skill Level 5. -->
+		<set name="icon" val="icon.etc_recipe_green_i00" />
 		<set name="item_type" val="recipe" />
 		<set name="weight" val="30" />
 		<set name="consume_type" val="stackable" />
@@ -668,6 +747,7 @@
 	</item>
 	<item id="6979" type="EtcItem" name="Recipe: Greater Dye of STR (Str+2 Dex-2) (100%)">
 		<!-- This recipe for Greater Dye of STR <Str+2 Dex-2> can be used by all races. Requires Create Common Item Skill Level 5. -->
+		<set name="icon" val="icon.etc_recipe_green_i00" />
 		<set name="item_type" val="recipe" />
 		<set name="weight" val="30" />
 		<set name="consume_type" val="stackable" />
@@ -676,6 +756,7 @@
 	</item>
 	<item id="6980" type="EtcItem" name="Recipe: Greater Dye of CON (Con+2 Str-2) (100%)">
 		<!-- This recipe for Greater Dye of CON <Con+2 Str-2> can be used by all races. Requires Create Common Item Skill Level 5. -->
+		<set name="icon" val="icon.etc_recipe_green_i00" />
 		<set name="item_type" val="recipe" />
 		<set name="weight" val="30" />
 		<set name="consume_type" val="stackable" />
@@ -684,6 +765,7 @@
 	</item>
 	<item id="6981" type="EtcItem" name="Recipe: Greater Dye of CON (Con+2 Dex-2) (100%)">
 		<!-- This recipe for Greater Dye of CON <Con+2 Dex-2> can be used by all races. Requires Create Common Item Skill Level 5. -->
+		<set name="icon" val="icon.etc_recipe_green_i00" />
 		<set name="item_type" val="recipe" />
 		<set name="weight" val="30" />
 		<set name="consume_type" val="stackable" />
@@ -692,6 +774,7 @@
 	</item>
 	<item id="6982" type="EtcItem" name="Recipe: Greater Dye of DEX (Dex+2 Str-2) (100%)">
 		<!-- This recipe for Greater Dye of DEX <Dex+2 Str-2> can be used by all races. Requires Create Common Item Skill Level 5. -->
+		<set name="icon" val="icon.etc_recipe_green_i00" />
 		<set name="item_type" val="recipe" />
 		<set name="weight" val="30" />
 		<set name="consume_type" val="stackable" />
@@ -700,6 +783,7 @@
 	</item>
 	<item id="6983" type="EtcItem" name="Recipe: Greater Dye of DEX (Dex+2 Con-2) (100%)">
 		<!-- This recipe for Greater Dye of DEX <Dex+2 Con-2> can be used by all races. Requires Create Common Item Skill Level 5. -->
+		<set name="icon" val="icon.etc_recipe_green_i00" />
 		<set name="item_type" val="recipe" />
 		<set name="weight" val="30" />
 		<set name="consume_type" val="stackable" />
@@ -708,6 +792,7 @@
 	</item>
 	<item id="6984" type="EtcItem" name="Recipe: Greater Dye of INT (Int+2 Men-2) (100%)">
 		<!-- This recipe for Greater Dye of INT <Int+2 Men-2> can be used by all races. Requires Create Common Item Skill Level 5. -->
+		<set name="icon" val="icon.etc_recipe_green_i00" />
 		<set name="item_type" val="recipe" />
 		<set name="weight" val="30" />
 		<set name="consume_type" val="stackable" />
@@ -716,6 +801,7 @@
 	</item>
 	<item id="6985" type="EtcItem" name="Recipe: Greater Dye of INT (Int+2 Wit-2) (100%)">
 		<!-- This recipe for Greater Dye of INT <Int+2 Wit-2> can be used by all races. Requires Create Common Item Skill Level 5. -->
+		<set name="icon" val="icon.etc_recipe_green_i00" />
 		<set name="item_type" val="recipe" />
 		<set name="weight" val="30" />
 		<set name="consume_type" val="stackable" />
@@ -724,6 +810,7 @@
 	</item>
 	<item id="6986" type="EtcItem" name="Recipe: Greater Dye of MEN (Men+2 Int-2) (100%)">
 		<!-- This recipe for Greater Dye of MEN <Men+2 Int-2> can be used by all races. Requires Create Common Item Skill Level 5. -->
+		<set name="icon" val="icon.etc_recipe_green_i00" />
 		<set name="item_type" val="recipe" />
 		<set name="weight" val="30" />
 		<set name="consume_type" val="stackable" />
@@ -732,6 +819,7 @@
 	</item>
 	<item id="6987" type="EtcItem" name="Recipe: Greater Dye of MEN (Men+2 Wit-2) (100%)">
 		<!-- This recipe for Greater Dye of MEN <Men+2 Wit-2> can be used by all races. Requires Create Common Item Skill Level 5. -->
+		<set name="icon" val="icon.etc_recipe_green_i00" />
 		<set name="item_type" val="recipe" />
 		<set name="weight" val="30" />
 		<set name="consume_type" val="stackable" />
@@ -740,6 +828,7 @@
 	</item>
 	<item id="6988" type="EtcItem" name="Recipe: Greater Dye of WIT(Wit+2 Int-2) (100%)">
 		<!-- This recipe for Greater Dye of WIT <Wit+2 Int-2> can be used by all races. Requires Create Common Item Skill Level 5. -->
+		<set name="icon" val="icon.etc_recipe_green_i00" />
 		<set name="item_type" val="recipe" />
 		<set name="weight" val="30" />
 		<set name="consume_type" val="stackable" />
@@ -748,6 +837,7 @@
 	</item>
 	<item id="6989" type="EtcItem" name="Recipe: Greater Dye of WIT(Wit+2 Men-2) (100%)">
 		<!-- This recipe for Greater Dye of WIT <Wit+2 Men-2> can be used by all races. Requires Create Common Item Skill Level 5. -->
+		<set name="icon" val="icon.etc_recipe_green_i00" />
 		<set name="item_type" val="recipe" />
 		<set name="weight" val="30" />
 		<set name="consume_type" val="stackable" />
@@ -756,6 +846,7 @@
 	</item>
 	<item id="6990" type="EtcItem" name="Recipe: Greater Dye of STR (Str+3 Con-3) (100%)">
 		<!-- This recipe for Greater Dye of STR <Str+3 Con-3> can be used by all races. Requires Create Common Item Skill Level 5. -->
+		<set name="icon" val="icon.etc_recipe_green_i00" />
 		<set name="item_type" val="recipe" />
 		<set name="weight" val="30" />
 		<set name="consume_type" val="stackable" />
@@ -764,6 +855,7 @@
 	</item>
 	<item id="6991" type="EtcItem" name="Recipe: Greater Dye of STR (Str+3 Dex-3) (100%)">
 		<!-- This recipe for Greater Dye of STR <Str+3 Dex-3> can be used by all races. Requires Create Common Item Skill Level 5. -->
+		<set name="icon" val="icon.etc_recipe_green_i00" />
 		<set name="item_type" val="recipe" />
 		<set name="weight" val="30" />
 		<set name="consume_type" val="stackable" />
@@ -772,6 +864,7 @@
 	</item>
 	<item id="6992" type="EtcItem" name="Recipe: Greater Dye of CON (Con+3 Str-3) (100%)">
 		<!-- This recipe for Greater Dye of CON <Con+3 Str-3> can be used by all races. Requires Create Common Item Skill Level 5. -->
+		<set name="icon" val="icon.etc_recipe_green_i00" />
 		<set name="item_type" val="recipe" />
 		<set name="weight" val="30" />
 		<set name="consume_type" val="stackable" />
@@ -780,6 +873,7 @@
 	</item>
 	<item id="6993" type="EtcItem" name="Recipe: Greater Dye of CON (Con+3 Dex-3) (100%)">
 		<!-- This recipe for Greater Dye of CON <Con+3 Dex-3> can be used by all races. Requires Create Common Item Skill Level 5. -->
+		<set name="icon" val="icon.etc_recipe_green_i00" />
 		<set name="item_type" val="recipe" />
 		<set name="weight" val="30" />
 		<set name="consume_type" val="stackable" />
@@ -788,6 +882,7 @@
 	</item>
 	<item id="6994" type="EtcItem" name="Recipe: Greater Dye of DEX (Dex+3 Str-3) (100%)">
 		<!-- This recipe for Greater Dye of DEX <Dex+3 Str-3> can be used by all races. Requires Create Common Item Skill Level 5. -->
+		<set name="icon" val="icon.etc_recipe_green_i00" />
 		<set name="item_type" val="recipe" />
 		<set name="weight" val="30" />
 		<set name="consume_type" val="stackable" />
@@ -796,6 +891,7 @@
 	</item>
 	<item id="6995" type="EtcItem" name="Recipe: Greater Dye of DEX (Dex+3 Con-3) (100%)">
 		<!-- This recipe for Greater Dye of DEX <Dex+3 Con-3> can be used by all races. Requires Create Common Item Skill Level 5. -->
+		<set name="icon" val="icon.etc_recipe_green_i00" />
 		<set name="item_type" val="recipe" />
 		<set name="weight" val="30" />
 		<set name="consume_type" val="stackable" />
@@ -804,6 +900,7 @@
 	</item>
 	<item id="6996" type="EtcItem" name="Recipe: Greater Dye of INT (Int+3 Men-3) (100%)">
 		<!-- This recipe for Greater Dye of INT <Int+3 Men-3> can be used by all races. Requires Create Common Item Skill Level 5. -->
+		<set name="icon" val="icon.etc_recipe_green_i00" />
 		<set name="item_type" val="recipe" />
 		<set name="weight" val="30" />
 		<set name="consume_type" val="stackable" />
@@ -812,6 +909,7 @@
 	</item>
 	<item id="6997" type="EtcItem" name="Recipe: Greater Dye of INT (Int+3 Wit-3) (100%)">
 		<!-- This recipe for Greater Dye of INT <Int+3 Wit-3> can be used by all races. Requires Create Common Item Skill Level 5. -->
+		<set name="icon" val="icon.etc_recipe_green_i00" />
 		<set name="item_type" val="recipe" />
 		<set name="weight" val="30" />
 		<set name="consume_type" val="stackable" />
@@ -820,6 +918,7 @@
 	</item>
 	<item id="6998" type="EtcItem" name="Recipe: Greater Dye of MEN (Men+3 Int-3) (100%)">
 		<!-- This recipe for Greater Dye of MEN <Men+3 Int-3> can be used by all races. Requires Create Common Item Skill Level 5. -->
+		<set name="icon" val="icon.etc_recipe_green_i00" />
 		<set name="item_type" val="recipe" />
 		<set name="weight" val="30" />
 		<set name="consume_type" val="stackable" />
@@ -828,6 +927,7 @@
 	</item>
 	<item id="6999" type="EtcItem" name="Recipe: Greater Dye of MEN (Men+3 Wit-3) (100%)">
 		<!-- This recipe for Greater Dye of MEN <Men+3 Wit-3> can be used by all races. Requires Create Common Item Skill Level 5. -->
+		<set name="icon" val="icon.etc_recipe_green_i00" />
 		<set name="item_type" val="recipe" />
 		<set name="weight" val="30" />
 		<set name="consume_type" val="stackable" />

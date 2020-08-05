@@ -1,6 +1,7 @@
 ﻿<?xml version="1.0" encoding="UTF-8"?>
 <list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../xsd/items.xsd">
 	<item id="1" type="Weapon" name="Short Sword">
+		<set name="icon" val="icon.weapon_small_sword_i00" />
 		<set name="bodypart" val="rhand" />
 		<set name="weight" val="1600" />
 		<set name="soulshots" val="1" />
@@ -24,6 +25,7 @@
 		</for>
 	</item>
 	<item id="2" type="Weapon" name="Long Sword">
+		<set name="icon" val="icon.weapon_long_sword_i00" />
 		<set name="bodypart" val="rhand" />
 		<set name="weight" val="1560" />
 		<set name="soulshots" val="2" />
@@ -47,6 +49,7 @@
 		</for>
 	</item>
 	<item id="3" type="Weapon" name="Broadsword">
+		<set name="icon" val="icon.weapon_broad_sword_i00" />
 		<set name="bodypart" val="rhand" />
 		<set name="weight" val="1590" />
 		<set name="soulshots" val="1" />
@@ -70,6 +73,7 @@
 		</for>
 	</item>
 	<item id="4" type="Weapon" name="Club">
+		<set name="icon" val="icon.weapon_club_i00" />
 		<set name="bodypart" val="rhand" />
 		<set name="weight" val="1870" />
 		<set name="soulshots" val="1" />
@@ -94,6 +98,7 @@
 		</for>
 	</item>
 	<item id="5" type="Weapon" name="Mace">
+		<set name="icon" val="icon.weapon_mace_i00" />
 		<set name="bodypart" val="rhand" />
 		<set name="weight" val="1880" />
 		<set name="soulshots" val="1" />
@@ -118,6 +123,7 @@
 		</for>
 	</item>
 	<item id="6" type="Weapon" name="Apprentice's Wand">
+		<set name="icon" val="icon.weapon_apprentices_wand_i00" />
 		<set name="bodypart" val="rhand" />
 		<set name="weight" val="1350" />
 		<set name="soulshots" val="1" />
@@ -145,6 +151,7 @@
 		</for>
 	</item>
 	<item id="7" type="Weapon" name="Apprentice's Rod">
+		<set name="icon" val="icon.weapon_apprentices_rod_i00" />
 		<set name="bodypart" val="rhand" />
 		<set name="weight" val="1330" />
 		<set name="soulshots" val="1" />
@@ -169,6 +176,7 @@
 		</for>
 	</item>
 	<item id="8" type="Weapon" name="Willow Staff">
+		<set name="icon" val="icon.weapon_willow_staff_i00" />
 		<set name="bodypart" val="lrhand" />
 		<set name="weight" val="1080" />
 		<set name="soulshots" val="1" />
@@ -193,6 +201,7 @@
 		</for>
 	</item>
 	<item id="9" type="Weapon" name="Cedar Staff">
+		<set name="icon" val="icon.weapon_cedar_staff_i00" />
 		<set name="bodypart" val="lrhand" />
 		<set name="weight" val="1090" />
 		<set name="soulshots" val="2" />
@@ -217,6 +226,7 @@
 		</for>
 	</item>
 	<item id="10" type="Weapon" name="Dagger">
+		<set name="icon" val="icon.weapon_dagger_i00" />
 		<set name="bodypart" val="rhand" />
 		<set name="weight" val="1160" />
 		<set name="soulshots" val="1" />
@@ -244,6 +254,7 @@
 		</for>
 	</item>
 	<item id="11" type="Weapon" name="Bone Dagger">
+		<set name="icon" val="icon.weapon_bone_dagger_i00" />
 		<set name="bodypart" val="rhand" />
 		<set name="weight" val="1150" />
 		<set name="soulshots" val="1" />
@@ -268,6 +279,7 @@
 		</for>
 	</item>
 	<item id="12" type="Weapon" name="Knife">
+		<set name="icon" val="icon.weapon_knife_i00" />
 		<set name="bodypart" val="rhand" />
 		<set name="weight" val="1140" />
 		<set name="soulshots" val="1" />
@@ -292,6 +304,7 @@
 		</for>
 	</item>
 	<item id="13" type="Weapon" name="Short Bow">
+		<set name="icon" val="icon.weapon_short_bow_i00" />
 		<set name="bodypart" val="lrhand" />
 		<set name="weight" val="1950" />
 		<set name="soulshots" val="1" />
@@ -317,6 +330,7 @@
 		</for>
 	</item>
 	<item id="14" type="Weapon" name="Bow">
+		<set name="icon" val="icon.weapon_bow_i00" />
 		<set name="bodypart" val="lrhand" />
 		<set name="weight" val="1930" />
 		<set name="soulshots" val="1" />
@@ -342,6 +356,7 @@
 		</for>
 	</item>
 	<item id="15" type="Weapon" name="Short Spear">
+		<set name="icon" val="icon.weapon_short_spear_i00" />
 		<set name="bodypart" val="lrhand" />
 		<set name="weight" val="2140" />
 		<set name="soulshots" val="2" />
@@ -367,6 +382,7 @@
 		</for>
 	</item>
 	<item id="16" type="Weapon" name="Long Spear">
+		<set name="icon" val="icon.weapon_long_spear_i00" />
 		<set name="bodypart" val="lrhand" />
 		<set name="weight" val="2120" />
 		<set name="soulshots" val="2" />
@@ -393,6 +409,7 @@
 	</item>
 	<item id="17" type="EtcItem" name="Wooden Arrow">
 		<!-- An arrow made of wood. It is an arrow used for a no grade bow. -->
+		<set name="icon" val="icon.etc_wooden_quiver_i00" />
 		<set name="item_type" val="arrow" />
 		<set name="weight" val="6" />
 		<set name="consume_type" val="stackable" />
@@ -400,6 +417,7 @@
 		<set name="price" val="2" />
 	</item>
 	<item id="18" type="Weapon" name="Leather Shield">
+		<set name="icon" val="icon.shield_leather_shield_i00" />
 		<set name="bodypart" val="lhand" />
 		<set name="weight" val="1430" />
 		<set name="crystal_type" val="none" />
@@ -416,6 +434,7 @@
 		</for>
 	</item>
 	<item id="19" type="Weapon" name="Small Shield">
+		<set name="icon" val="icon.shield_small_shield_i00" />
 		<set name="bodypart" val="lhand" />
 		<set name="weight" val="1420" />
 		<set name="crystal_type" val="none" />
@@ -432,6 +451,7 @@
 		</for>
 	</item>
 	<item id="20" type="Weapon" name="Buckler">
+		<set name="icon" val="icon.shield_buckler_i00" />
 		<set name="bodypart" val="lhand" />
 		<set name="weight" val="1410" />
 		<set name="crystal_type" val="none" />
@@ -448,6 +468,7 @@
 		</for>
 	</item>
 	<item id="21" type="Armor" name="Shirt">
+		<set name="icon" val="icon.armor_t02_u_i00" />
 		<set name="bodypart" val="chest" />
 		<set name="armor_type" val="light" />
 		<set name="weight" val="4830" />
@@ -459,6 +480,7 @@
 		</for>
 	</item>
 	<item id="22" type="Armor" name="Leather Shirt">
+		<set name="icon" val="icon.armor_t04_u_i00" />
 		<set name="bodypart" val="chest" />
 		<set name="armor_type" val="light" />
 		<set name="weight" val="4830" />
@@ -470,6 +492,7 @@
 		</for>
 	</item>
 	<item id="23" type="Armor" name="Wooden Breastplate">
+		<set name="icon" val="icon.armor_t06_u_i00" />
 		<set name="bodypart" val="chest" />
 		<set name="armor_type" val="light" />
 		<set name="weight" val="4820" />
@@ -481,6 +504,7 @@
 		</for>
 	</item>
 	<item id="24" type="Armor" name="Bone Breastplate">
+		<set name="icon" val="icon.armor_t32_u_i00" />
 		<set name="bodypart" val="chest" />
 		<set name="armor_type" val="light" />
 		<set name="weight" val="4770" />
@@ -492,6 +516,7 @@
 		</for>
 	</item>
 	<item id="25" type="Armor" name="Piece Bone Breastplate">
+		<set name="icon" val="icon.armor_t33_u_i00" />
 		<set name="bodypart" val="chest" />
 		<set name="armor_type" val="heavy" />
 		<set name="weight" val="8970" />
@@ -503,6 +528,7 @@
 		</for>
 	</item>
 	<item id="26" type="Armor" name="Bronze Breastplate">
+		<set name="icon" val="icon.armor_t34_u_i00" />
 		<set name="bodypart" val="chest" />
 		<set name="armor_type" val="heavy" />
 		<set name="weight" val="8920" />
@@ -514,6 +540,7 @@
 		</for>
 	</item>
 	<item id="27" type="Armor" name="Hard Leather Shirt">
+		<set name="icon" val="icon.armor_t30_u_i00" />
 		<set name="bodypart" val="chest" />
 		<set name="armor_type" val="light" />
 		<set name="weight" val="4720" />
@@ -525,6 +552,7 @@
 		</for>
 	</item>
 	<item id="28" type="Armor" name="Pants">
+		<set name="icon" val="icon.armor_t02_l_i00" />
 		<set name="bodypart" val="legs" />
 		<set name="armor_type" val="light" />
 		<set name="weight" val="1740" />
@@ -536,6 +564,7 @@
 		</for>
 	</item>
 	<item id="29" type="Armor" name="Leather Pants">
+		<set name="icon" val="icon.armor_t04_l_i00" />
 		<set name="bodypart" val="legs" />
 		<set name="armor_type" val="light" />
 		<set name="weight" val="1730" />
@@ -547,6 +576,7 @@
 		</for>
 	</item>
 	<item id="30" type="Armor" name="Hard Leather Pants">
+		<set name="icon" val="icon.armor_t06_l_i00" />
 		<set name="bodypart" val="legs" />
 		<set name="armor_type" val="light" />
 		<set name="weight" val="1700" />
@@ -558,6 +588,7 @@
 		</for>
 	</item>
 	<item id="31" type="Armor" name="Bone Gaiters">
+		<set name="icon" val="icon.armor_t32_l_i00" />
 		<set name="bodypart" val="legs" />
 		<set name="armor_type" val="light" />
 		<set name="weight" val="1680" />
@@ -569,6 +600,7 @@
 		</for>
 	</item>
 	<item id="32" type="Armor" name="Piece Bone Gaiters">
+		<set name="icon" val="icon.armor_t33_l_i00" />
 		<set name="bodypart" val="legs" />
 		<set name="armor_type" val="heavy" />
 		<set name="weight" val="4020" />
@@ -580,6 +612,7 @@
 		</for>
 	</item>
 	<item id="33" type="Armor" name="Hard Leather Gaiters">
+		<set name="icon" val="icon.armor_t30_l_i00" />
 		<set name="bodypart" val="legs" />
 		<set name="armor_type" val="light" />
 		<set name="weight" val="1610" />
@@ -591,6 +624,7 @@
 		</for>
 	</item>
 	<item id="34" type="Armor" name="Bronze Gaiters">
+		<set name="icon" val="icon.armor_t34_l_i00" />
 		<set name="bodypart" val="legs" />
 		<set name="armor_type" val="heavy" />
 		<set name="weight" val="3960" />
@@ -602,6 +636,7 @@
 		</for>
 	</item>
 	<item id="35" type="Armor" name="Cloth Shoes">
+		<set name="icon" val="icon.armor_t02_b_i00" />
 		<set name="bodypart" val="feet" />
 		<set name="armor_type" val="none" />
 		<set name="weight" val="1320" />
@@ -613,6 +648,7 @@
 		</for>
 	</item>
 	<item id="36" type="Armor" name="Leather Sandals">
+		<set name="icon" val="icon.armor_t03_b_i00" />
 		<set name="bodypart" val="feet" />
 		<set name="armor_type" val="none" />
 		<set name="weight" val="1320" />
@@ -624,6 +660,7 @@
 		</for>
 	</item>
 	<item id="37" type="Armor" name="Leather Shoes">
+		<set name="icon" val="icon.armor_t05_b_i00" />
 		<set name="bodypart" val="feet" />
 		<set name="armor_type" val="none" />
 		<set name="weight" val="1320" />
@@ -635,6 +672,7 @@
 		</for>
 	</item>
 	<item id="38" type="Armor" name="Low Boots">
+		<set name="icon" val="icon.armor_t32_b_i00" />
 		<set name="bodypart" val="feet" />
 		<set name="armor_type" val="none" />
 		<set name="weight" val="1320" />
@@ -646,6 +684,7 @@
 		</for>
 	</item>
 	<item id="39" type="Armor" name="Boots">
+		<set name="icon" val="icon.armor_t30_b_i00" />
 		<set name="bodypart" val="feet" />
 		<set name="armor_type" val="none" />
 		<set name="weight" val="1310" />
@@ -657,6 +696,7 @@
 		</for>
 	</item>
 	<item id="40" type="Armor" name="Leather Boots">
+		<set name="icon" val="icon.armor_t09_b_i00" />
 		<set name="bodypart" val="feet" />
 		<set name="crystallizable" val="true" />
 		<set name="armor_type" val="none" />
@@ -671,6 +711,7 @@
 		</for>
 	</item>
 	<item id="41" type="Armor" name="Cloth Cap">
+		<set name="icon" val="icon.armor_cloth_helmet_i00" />
 		<set name="bodypart" val="head" />
 		<set name="armor_type" val="none" />
 		<set name="weight" val="660" />
@@ -682,6 +723,7 @@
 		</for>
 	</item>
 	<item id="42" type="Armor" name="Leather Cap">
+		<set name="icon" val="icon.armor_leather_helmet_i00" />
 		<set name="bodypart" val="head" />
 		<set name="armor_type" val="none" />
 		<set name="weight" val="660" />
@@ -693,6 +735,7 @@
 		</for>
 	</item>
 	<item id="43" type="Armor" name="Wooden Helmet">
+		<set name="icon" val="icon.armor_leather_helmet_i00" />
 		<set name="bodypart" val="head" />
 		<set name="armor_type" val="none" />
 		<set name="weight" val="660" />
@@ -704,6 +747,7 @@
 		</for>
 	</item>
 	<item id="44" type="Armor" name="Leather Helmet">
+		<set name="icon" val="icon.armor_leather_helmet_i00" />
 		<set name="bodypart" val="head" />
 		<set name="armor_type" val="none" />
 		<set name="weight" val="650" />
@@ -715,6 +759,7 @@
 		</for>
 	</item>
 	<item id="45" type="Armor" name="Bone Helmet">
+		<set name="icon" val="icon.armor_leather_helmet_i00" />
 		<set name="bodypart" val="head" />
 		<set name="crystallizable" val="true" />
 		<set name="armor_type" val="none" />
@@ -729,6 +774,7 @@
 		</for>
 	</item>
 	<item id="46" type="Armor" name="Bronze Helmet">
+		<set name="icon" val="icon.armor_helmet_i00" />
 		<set name="bodypart" val="head" />
 		<set name="crystallizable" val="true" />
 		<set name="armor_type" val="none" />
@@ -743,6 +789,7 @@
 		</for>
 	</item>
 	<item id="47" type="Armor" name="Helmet">
+		<set name="icon" val="icon.armor_helmet_i00" />
 		<set name="bodypart" val="head" />
 		<set name="crystallizable" val="true" />
 		<set name="armor_type" val="none" />
@@ -757,6 +804,7 @@
 		</for>
 	</item>
 	<item id="48" type="Armor" name="Short Gloves">
+		<set name="icon" val="icon.armor_t02_g_i00" />
 		<set name="bodypart" val="gloves" />
 		<set name="armor_type" val="none" />
 		<set name="weight" val="660" />
@@ -768,6 +816,7 @@
 		</for>
 	</item>
 	<item id="49" type="Armor" name="Gloves">
+		<set name="icon" val="icon.armor_t06_g_i00" />
 		<set name="bodypart" val="gloves" />
 		<set name="armor_type" val="none" />
 		<set name="weight" val="660" />
@@ -779,6 +828,7 @@
 		</for>
 	</item>
 	<item id="50" type="Armor" name="Leather Gloves">
+		<set name="icon" val="icon.armor_t32_g_i00" />
 		<set name="bodypart" val="gloves" />
 		<set name="armor_type" val="none" />
 		<set name="weight" val="650" />
@@ -790,6 +840,7 @@
 		</for>
 	</item>
 	<item id="51" type="Armor" name="Bracer">
+		<set name="icon" val="icon.armor_t30_g_i00" />
 		<set name="bodypart" val="gloves" />
 		<set name="armor_type" val="none" />
 		<set name="weight" val="650" />
@@ -801,6 +852,7 @@
 		</for>
 	</item>
 	<item id="52" type="Armor" name="Hemp Cloak">
+		<set name="icon" val="icon.armor_back01" />
 		<set name="bodypart" val="underwear" />
 		<set name="armor_type" val="none" />
 		<set name="weight" val="260" />
@@ -812,6 +864,7 @@
 		</for>
 	</item>
 	<item id="53" type="Armor" name="Cotton Cloak">
+		<set name="icon" val="icon.armor_back02" />
 		<set name="bodypart" val="underwear" />
 		<set name="armor_type" val="none" />
 		<set name="weight" val="250" />
@@ -823,6 +876,7 @@
 		</for>
 	</item>
 	<item id="54" type="Armor" name="Silk Cloak">
+		<set name="icon" val="icon.armor_back03" />
 		<set name="bodypart" val="underwear" />
 		<set name="armor_type" val="none" />
 		<set name="weight" val="250" />
@@ -834,6 +888,7 @@
 		</for>
 	</item>
 	<item id="55" type="Armor" name="Cotton Undergarment">
+		<set name="icon" val="icon.armor_underwear01" />
 		<set name="bodypart" val="underwear" />
 		<set name="armor_type" val="none" />
 		<set name="weight" val="170" />
@@ -845,6 +900,7 @@
 		</for>
 	</item>
 	<item id="56" type="Armor" name="Wool Undergarment">
+		<set name="icon" val="icon.armor_underwear01" />
 		<set name="bodypart" val="underwear" />
 		<set name="armor_type" val="none" />
 		<set name="weight" val="170" />
@@ -856,12 +912,14 @@
 		</for>
 	</item>
 	<item id="57" type="EtcItem" name="Adena">
+		<set name="icon" val="icon.etc_adena_i00" />
 		<set name="item_type" val="none" />
 		<set name="consume_type" val="asset" />
 		<set name="crystal_type" val="none" />
 		<set name="price" val="1" />
 	</item>
 	<item id="58" type="Armor" name="Mithril Breastplate">
+		<set name="icon" val="icon.armor_t19_u_i00" />
 		<set name="bodypart" val="chest" />
 		<set name="crystallizable" val="true" />
 		<set name="armor_type" val="heavy" />
@@ -876,6 +934,7 @@
 		</for>
 	</item>
 	<item id="59" type="Armor" name="Mithril Gaiters">
+		<set name="icon" val="icon.armor_t19_l_i00" />
 		<set name="bodypart" val="legs" />
 		<set name="crystallizable" val="true" />
 		<set name="armor_type" val="heavy" />
@@ -891,6 +950,7 @@
 	</item>
 	<item id="60" type="Armor" name="Composite Armor">
 		<!-- Full body armor. -->
+		<set name="icon" val="icon.armor_t61_ul_i00" />
 		<set name="bodypart" val="fullarmor" />
 		<set name="crystallizable" val="true" />
 		<set name="armor_type" val="heavy" />
@@ -905,6 +965,7 @@
 		</for>
 	</item>
 	<item id="61" type="Armor" name="Mithril Gloves">
+		<set name="icon" val="icon.armor_t46_g_i00" />
 		<set name="bodypart" val="gloves" />
 		<set name="crystallizable" val="true" />
 		<set name="armor_type" val="none" />
@@ -919,6 +980,7 @@
 		</for>
 	</item>
 	<item id="62" type="Armor" name="Mithril Boots">
+		<set name="icon" val="icon.armor_t47_b_i00" />
 		<set name="bodypart" val="feet" />
 		<set name="crystallizable" val="true" />
 		<set name="armor_type" val="none" />
@@ -933,6 +995,7 @@
 		</for>
 	</item>
 	<item id="63" type="Armor" name="Gauntlets">
+		<set name="icon" val="icon.armor_t10_g_i00" />
 		<set name="bodypart" val="gloves" />
 		<set name="crystallizable" val="true" />
 		<set name="armor_type" val="none" />
@@ -947,6 +1010,7 @@
 		</for>
 	</item>
 	<item id="64" type="Armor" name="Composite Boots">
+		<set name="icon" val="icon.armor_t61_b_i00" />
 		<set name="bodypart" val="feet" />
 		<set name="crystallizable" val="true" />
 		<set name="armor_type" val="none" />
@@ -961,6 +1025,7 @@
 		</for>
 	</item>
 	<item id="65" type="EtcItem" name="Red Potion">
+		<set name="icon" val="icon.etc_potion_red_i00" />
 		<set name="item_type" val="potion" />
 		<set name="weight" val="80" />
 		<set name="consume_type" val="stackable" />
@@ -968,6 +1033,7 @@
 		<set name="price" val="40" />
 	</item>
 	<item id="66" type="Weapon" name="Gladius">
+		<set name="icon" val="icon.weapon_gladius_i00" />
 		<set name="bodypart" val="rhand" />
 		<set name="weight" val="1570" />
 		<set name="soulshots" val="2" />
@@ -991,6 +1057,7 @@
 		</for>
 	</item>
 	<item id="67" type="Weapon" name="Orcish Sword">
+		<set name="icon" val="icon.weapon_orcish_sword_i00" />
 		<set name="bodypart" val="rhand" />
 		<set name="weight" val="1570" />
 		<set name="soulshots" val="2" />
@@ -1014,6 +1081,7 @@
 		</for>
 	</item>
 	<item id="68" type="Weapon" name="Falchion">
+		<set name="icon" val="icon.weapon_falchion_i00" />
 		<set name="bodypart" val="rhand" />
 		<set name="weight" val="1530" />
 		<set name="soulshots" val="2" />
@@ -1037,6 +1105,7 @@
 		</for>
 	</item>
 	<item id="69" type="Weapon" name="Bastard Sword">
+		<set name="icon" val="icon.weapon_bastard_sword_i00" />
 		<set name="bodypart" val="rhand" />
 		<set name="crystallizable" val="true" />
 		<set name="weight" val="1510" />
@@ -1062,6 +1131,7 @@
 		</for>
 	</item>
 	<item id="70" type="Weapon" name="Claymore">
+		<set name="icon" val="icon.weapon_claymore_i00" />
 		<set name="bodypart" val="lrhand" />
 		<set name="crystallizable" val="true" />
 		<set name="weight" val="2090" />
@@ -1088,6 +1158,7 @@
 	</item>
 	<item id="71" type="Weapon" name="Flamberge">
 		<!-- Bestows one of the following functions: Critical Damage, Focus or Light. -->
+		<set name="icon" val="icon.weapon_flamberge_i00" />
 		<set name="bodypart" val="lrhand" />
 		<set name="crystallizable" val="true" />
 		<set name="weight" val="2010" />
@@ -1114,6 +1185,7 @@
 	</item>
 	<item id="72" type="Weapon" name="Stormbringer">
 		<!-- Bestows one of the following functions: Critical Anger, Focus or Light. -->
+		<set name="icon" val="icon.weapon_stormbringer_i00" />
 		<set name="bodypart" val="rhand" />
 		<set name="crystallizable" val="true" />
 		<set name="weight" val="1430" />
@@ -1140,6 +1212,7 @@
 	</item>
 	<item id="73" type="Weapon" name="Shamshir">
 		<!-- Bestows one of the following functions: Guidance, Back Blow, Rsk. Or Evasion. -->
+		<set name="icon" val="icon.weapon_shamshir_i00" />
 		<set name="bodypart" val="rhand" />
 		<set name="crystallizable" val="true" />
 		<set name="weight" val="1420" />
@@ -1166,6 +1239,7 @@
 	</item>
 	<item id="74" type="Weapon" name="Katana">
 		<!-- Bestows one of the following functions: Focus, Critical Damage or Haste. -->
+		<set name="icon" val="icon.weapon_katana_i00" />
 		<set name="bodypart" val="rhand" />
 		<set name="crystallizable" val="true" />
 		<set name="weight" val="1420" />
@@ -1192,6 +1266,7 @@
 	</item>
 	<item id="75" type="Weapon" name="Caliburs">
 		<!-- Bestows either Guidance, Focus or Critical Damage. -->
+		<set name="icon" val="icon.weapon_caliburs_i00" />
 		<set name="bodypart" val="rhand" />
 		<set name="crystallizable" val="true" />
 		<set name="weight" val="1400" />
@@ -1218,6 +1293,7 @@
 	</item>
 	<item id="76" type="Weapon" name="Sword of Delusion">
 		<!-- Bestows one of the following functions: Focus, Health, or Rsk. Haste. -->
+		<set name="icon" val="icon.weapon_sword_of_delusion_i00" />
 		<set name="bodypart" val="rhand" />
 		<set name="crystallizable" val="true" />
 		<set name="weight" val="1400" />
@@ -1244,6 +1320,7 @@
 	</item>
 	<item id="77" type="Weapon" name="Tsurugi">
 		<!-- Bestows one of the following functions: Focus, Critical Damage or Haste. -->
+		<set name="icon" val="icon.weapon_tsurugi_i00" />
 		<set name="bodypart" val="rhand" />
 		<set name="crystallizable" val="true" />
 		<set name="weight" val="1400" />
@@ -1270,6 +1347,7 @@
 	</item>
 	<item id="78" type="Weapon" name="Great Sword">
 		<!-- Bestows one of the following functions: Health, Critical Damage or Focus. -->
+		<set name="icon" val="icon.weapon_great_sword_i00" />
 		<set name="bodypart" val="lrhand" />
 		<set name="crystallizable" val="true" />
 		<set name="weight" val="1930" />
@@ -1296,6 +1374,7 @@
 	</item>
 	<item id="79" type="Weapon" name="Sword of Damascus">
 		<!-- Bestows one of the following functions: Focus, Critical Damage or Haste. -->
+		<set name="icon" val="icon.weapon_sword_of_damascus_i00" />
 		<set name="bodypart" val="rhand" />
 		<set name="crystallizable" val="true" />
 		<set name="weight" val="1350" />
@@ -1322,6 +1401,7 @@
 	</item>
 	<item id="80" type="Weapon" name="Tallum Blade">
 		<!-- Bestows one of the following functions: Critical Poison, Haste or Anger. -->
+		<set name="icon" val="icon.weapon_tallum_blade_i00" />
 		<set name="bodypart" val="rhand" />
 		<set name="crystallizable" val="true" />
 		<set name="weight" val="1330" />
@@ -1348,6 +1428,7 @@
 	</item>
 	<item id="81" type="Weapon" name="Dragon Slayer">
 		<!-- Bestows one of the following functions: Health, Critical Bleed or Critical Drain. -->
+		<set name="icon" val="icon.weapon_dragon_slayer_i00" />
 		<set name="bodypart" val="lrhand" />
 		<set name="crystallizable" val="true" />
 		<set name="weight" val="1840" />
@@ -1373,6 +1454,7 @@
 		</for>
 	</item>
 	<item id="82" type="Weapon" name="God's Blade">
+		<set name="icon" val="icon.weapon_forgotten_blade_i00" />
 		<set name="bodypart" val="rhand" />
 		<set name="crystallizable" val="true" />
 		<set name="weight" val="1300" />
@@ -1401,6 +1483,7 @@
 		</for>
 	</item>
 	<item id="83" type="Weapon" name="Sword of Magic">
+		<set name="icon" val="icon.weapon_sword_of_magic_i00" />
 		<set name="bodypart" val="rhand" />
 		<set name="crystallizable" val="true" />
 		<set name="weight" val="970" />
@@ -1427,6 +1510,7 @@
 	</item>
 	<item id="84" type="Weapon" name="Homunkulus's Sword">
 		<!-- Bestows one of the following functions: Acumen, Conversion or Paralyze. -->
+		<set name="icon" val="icon.weapon_homunkuluss_sword_i00" />
 		<set name="bodypart" val="rhand" />
 		<set name="crystallizable" val="true" />
 		<set name="weight" val="950" />
@@ -1452,6 +1536,7 @@
 		</for>
 	</item>
 	<item id="85" type="Weapon" name="Phantom Sword">
+		<set name="icon" val="icon.weapon_phantom_sword_i00" />
 		<set name="bodypart" val="rhand" />
 		<set name="crystallizable" val="true" />
 		<set name="weight" val="860" />
@@ -1477,6 +1562,7 @@
 		</for>
 	</item>
 	<item id="86" type="Weapon" name="Tomahawk">
+		<set name="icon" val="icon.weapon_tomahawk_i00" />
 		<set name="bodypart" val="rhand" />
 		<set name="crystallizable" val="true" />
 		<set name="weight" val="1780" />
@@ -1503,6 +1589,7 @@
 		</for>
 	</item>
 	<item id="87" type="Weapon" name="Iron Hammer">
+		<set name="icon" val="icon.weapon_iron_hammer_i00" />
 		<set name="bodypart" val="rhand" />
 		<set name="weight" val="1850" />
 		<set name="soulshots" val="2" />
@@ -1527,6 +1614,7 @@
 		</for>
 	</item>
 	<item id="88" type="Weapon" name="Morning Star">
+		<set name="icon" val="icon.weapon_morning_star_i00" />
 		<set name="bodypart" val="rhand" />
 		<set name="crystallizable" val="true" />
 		<set name="weight" val="1720" />
@@ -1554,6 +1642,7 @@
 	</item>
 	<item id="89" type="Weapon" name="Big Hammer">
 		<!-- Bestows either Health, Rsk. Focus or Haste. -->
+		<set name="icon" val="icon.weapon_big_hammer_i00" />
 		<set name="bodypart" val="rhand" />
 		<set name="crystallizable" val="true" />
 		<set name="weight" val="1710" />
@@ -1580,6 +1669,7 @@
 		</for>
 	</item>
 	<item id="90" type="Weapon" name="Goat Head Staff">
+		<set name="icon" val="icon.weapon_goathead_staff_i00" />
 		<set name="bodypart" val="lrhand" />
 		<set name="crystallizable" val="true" />
 		<set name="weight" val="1000" />
@@ -1607,6 +1697,7 @@
 	</item>
 	<item id="91" type="Weapon" name="Heavy War Axe">
 		<!-- Bestows either Anger, Health, or Rsk. Focus. -->
+		<set name="icon" val="icon.weapon_heavy_war_axe_i00" />
 		<set name="bodypart" val="rhand" />
 		<set name="crystallizable" val="true" />
 		<set name="weight" val="1620" />
@@ -1634,6 +1725,7 @@
 	</item>
 	<item id="92" type="Weapon" name="Sprite's Staff">
 		<!-- Bestows either Regeneration, Mental Shield or Hold. -->
+		<set name="icon" val="icon.weapon_sprites_staff_i00" />
 		<set name="bodypart" val="lrhand" />
 		<set name="crystallizable" val="true" />
 		<set name="weight" val="960" />
@@ -1660,6 +1752,7 @@
 		</for>
 	</item>
 	<item id="93" type="Weapon" name="Winged Spear">
+		<set name="icon" val="icon.weapon_winged_spear_i00" />
 		<set name="bodypart" val="lrhand" />
 		<set name="crystallizable" val="true" />
 		<set name="weight" val="2060" />
@@ -1688,6 +1781,7 @@
 	</item>
 	<item id="94" type="Weapon" name="Bec de Corbin">
 		<!-- Bestows either Critical Stun, Towering Blow or Light. -->
+		<set name="icon" val="icon.weapon_bech_de_corbin_i00" />
 		<set name="bodypart" val="lrhand" />
 		<set name="crystallizable" val="true" />
 		<set name="weight" val="2020" />
@@ -1716,6 +1810,7 @@
 	</item>
 	<item id="95" type="Weapon" name="Poleaxe">
 		<!-- Bestows one of the following functions: Wide Blow, Towering Blow or Critical Stun. -->
+		<set name="icon" val="icon.weapon_poleaxe_i00" />
 		<set name="bodypart" val="lrhand" />
 		<set name="crystallizable" val="true" />
 		<set name="weight" val="2010" />
@@ -1744,6 +1839,7 @@
 	</item>
 	<item id="96" type="Weapon" name="Scythe">
 		<!-- Bestows either Anger, Critical Stun or Light. -->
+		<set name="icon" val="icon.weapon_scythe_i00" />
 		<set name="bodypart" val="lrhand" />
 		<set name="crystallizable" val="true" />
 		<set name="weight" val="2040" />
@@ -1772,6 +1868,7 @@
 	</item>
 	<item id="97" type="Weapon" name="Lance">
 		<!-- Bestows either Anger, Critical Stun or Towering Blow. -->
+		<set name="icon" val="icon.weapon_lancia_i00" />
 		<set name="bodypart" val="lrhand" />
 		<set name="crystallizable" val="true" />
 		<set name="weight" val="1920" />
@@ -1800,6 +1897,7 @@
 	</item>
 	<item id="98" type="Weapon" name="Halberd">
 		<!-- Bestows one of the following functions: Haste, Critical Stun or Wide Blow. -->
+		<set name="icon" val="icon.weapon_halbard_i00" />
 		<set name="bodypart" val="lrhand" />
 		<set name="crystallizable" val="true" />
 		<set name="weight" val="1900" />
@@ -1827,6 +1925,7 @@
 		</for>
 	</item>
 	<item id="99" type="Weapon" name="Apprentice's Spellbook">
+		<set name="icon" val="icon.weapon_apprentices_spellbook_i00" />
 		<set name="bodypart" val="rhand" />
 		<set name="weight" val="650" />
 		<set name="soulshots" val="1" />

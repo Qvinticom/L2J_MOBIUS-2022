@@ -118,6 +118,7 @@ public abstract class Item
 	
 	private final int _itemId;
 	private final String _name;
+	private final String _icon;
 	private final int _type1; // needed for item list (inventory)
 	private final int _type2; // different lists for armor, weapon, etc
 	private final int _weight;
@@ -148,6 +149,7 @@ public abstract class Item
 	 * <li>type</li>
 	 * <li>_itemId</li>
 	 * <li>_name</li>
+	 * <li>_icon</li>
 	 * <li>_type1 & _type2</li>
 	 * <li>_weight</li>
 	 * <li>_crystallizable</li>
@@ -165,6 +167,7 @@ public abstract class Item
 		_type = type;
 		_itemId = set.getInt("item_id");
 		_name = set.getString("name");
+		_icon = set.getString("icon", "");
 		_type1 = set.getInt("type1"); // needed for item list (inventory)
 		_type2 = set.getInt("type2"); // different lists for armor, weapon, etc
 		_weight = set.getInt("weight", 0);
@@ -367,6 +370,15 @@ public abstract class Item
 	public String getName()
 	{
 		return _name;
+	}
+	
+	/**
+	 * Returns the icon of the item
+	 * @return String
+	 */
+	public String getIcon()
+	{
+		return _icon;
 	}
 	
 	/**

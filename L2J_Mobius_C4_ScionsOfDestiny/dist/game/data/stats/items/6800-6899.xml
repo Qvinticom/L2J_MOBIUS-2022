@@ -2,210 +2,245 @@
 <list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../xsd/items.xsd">
 	<item id="6800" type="EtcItem" name="Greater Mercenary Posting Ticket (Cleric/Mobile)">
 		<!-- Goddard/Cleric/Mobile. Posting impossible when Seal of Strife is owned by Dusk. -->
+		<set name="icon" val="icon.mticket_cleric_move_i00" />
 		<set name="item_type" val="castle_guard" />
 		<set name="consume_type" val="stackable" />
 		<set name="crystal_type" val="none" />
 	</item>
 	<item id="6801" type="EtcItem" name="Greater Mercenary Posting Ticket (Wizard/Mobile)">
 		<!-- Goddard/Wizard/Mobile. Posting impossible when Seal of Strife is owned by Dusk. -->
+		<set name="icon" val="icon.mticket_wizard_move_i00" />
 		<set name="item_type" val="castle_guard" />
 		<set name="consume_type" val="stackable" />
 		<set name="crystal_type" val="none" />
 	</item>
 	<item id="6802" type="EtcItem" name="Dawn Mercenary Posting Ticket (Sword/Stationary)">
 		<!-- Goddard/Sword/Stationary. Posting possible when Seal of Strife is owned by Dawn. -->
+		<set name="icon" val="icon.mticket_sword_fix_i00" />
 		<set name="item_type" val="castle_guard" />
 		<set name="consume_type" val="stackable" />
 		<set name="crystal_type" val="none" />
 	</item>
 	<item id="6803" type="EtcItem" name="Dawn Mercenary Posting Ticket (Spear/Stationary)">
 		<!-- Goddard/Spear/Stationary. Posting possible when Seal of Strife is owned by Dawn. -->
+		<set name="icon" val="icon.mticket_pole_fix_i00" />
 		<set name="item_type" val="castle_guard" />
 		<set name="consume_type" val="stackable" />
 		<set name="crystal_type" val="none" />
 	</item>
 	<item id="6804" type="EtcItem" name="Dawn Mercenary Posting Ticket (Bow/Stationary)">
 		<!-- Goddard/Bow/Stationary. Posting possible when Seal of Strife is owned by Dawn. -->
+		<set name="icon" val="icon.mticket_bow_fix_i00" />
 		<set name="item_type" val="castle_guard" />
 		<set name="consume_type" val="stackable" />
 		<set name="crystal_type" val="none" />
 	</item>
 	<item id="6805" type="EtcItem" name="Dawn Mercenary Posting Ticket (Cleric/Stationary)">
 		<!-- Goddard/Cleric/Stationary. Posting possible when Seal of Strife is owned by Dawn. -->
+		<set name="icon" val="icon.mticket_cleric_fix_i00" />
 		<set name="item_type" val="castle_guard" />
 		<set name="consume_type" val="stackable" />
 		<set name="crystal_type" val="none" />
 	</item>
 	<item id="6806" type="EtcItem" name="Dawn Mercenary Posting Ticket (Wizard/Stationary)">
 		<!-- Goddard/Wizard/Stationary. Posting possible when Seal of Strife is owned by Dawn. -->
+		<set name="icon" val="icon.mticket_wizard_fix_i00" />
 		<set name="item_type" val="castle_guard" />
 		<set name="consume_type" val="stackable" />
 		<set name="crystal_type" val="none" />
 	</item>
 	<item id="6807" type="EtcItem" name="Dawn Mercenary Posting Ticket (Sword/Mobile)">
 		<!-- Goddard/Sword/Mobile. Posting possible when Seal of Strife is owned by Dawn. -->
+		<set name="icon" val="icon.mticket_sword_move_i00" />
 		<set name="item_type" val="castle_guard" />
 		<set name="consume_type" val="stackable" />
 		<set name="crystal_type" val="none" />
 	</item>
 	<item id="6808" type="EtcItem" name="Dawn Mercenary Posting Ticket (Spear/Mobile)">
 		<!-- Goddard/Spear/Mobile. Posting possible when Seal of Strife is owned by Dawn. -->
+		<set name="icon" val="icon.mticket_pole_move_i00" />
 		<set name="item_type" val="castle_guard" />
 		<set name="consume_type" val="stackable" />
 		<set name="crystal_type" val="none" />
 	</item>
 	<item id="6809" type="EtcItem" name="Dawn Mercenary Posting Ticket (Bow/Mobile)">
 		<!-- Goddard/Bow/Mobile. Posting possible when Seal of Strife is owned by Dawn. -->
+		<set name="icon" val="icon.mticket_bow_move_i00" />
 		<set name="item_type" val="castle_guard" />
 		<set name="consume_type" val="stackable" />
 		<set name="crystal_type" val="none" />
 	</item>
 	<item id="6810" type="EtcItem" name="Dawn Mercenary Posting Ticket (Cleric/Mobile)">
 		<!-- Goddard/Cleric/Mobile. Posting possible when Seal of Strife is owned by Dawn. -->
+		<set name="icon" val="icon.mticket_cleric_move_i00" />
 		<set name="item_type" val="castle_guard" />
 		<set name="consume_type" val="stackable" />
 		<set name="crystal_type" val="none" />
 	</item>
 	<item id="6811" type="EtcItem" name="Dawn Mercenary Posting Ticket (Wizard/Mobile)">
 		<!-- Goddard/Wizard/Mobile. Posting possible when Seal of Strife is owned by Dawn. -->
+		<set name="icon" val="icon.mticket_wizard_move_i00" />
 		<set name="item_type" val="castle_guard" />
 		<set name="consume_type" val="stackable" />
 		<set name="crystal_type" val="none" />
 	</item>
 	<item id="6812" type="EtcItem" name="Greater Recruit Posting Ticket (Sword/Stationary)">
 		<!-- Goddard/Sword/Stationary. Posting possible when Seal of Strife is owned by Dusk. -->
+		<set name="icon" val="icon.mticket_sword_fix_i00" />
 		<set name="item_type" val="castle_guard" />
 		<set name="consume_type" val="stackable" />
 		<set name="crystal_type" val="none" />
 	</item>
 	<item id="6813" type="EtcItem" name="Greater Recruit Posting Ticket (Spear/Stationary)">
 		<!-- Goddard/Spear/Stationary. Posting possible when Seal of Strife is owned by Dusk. -->
+		<set name="icon" val="icon.mticket_pole_fix_i00" />
 		<set name="item_type" val="castle_guard" />
 		<set name="consume_type" val="stackable" />
 		<set name="crystal_type" val="none" />
 	</item>
 	<item id="6814" type="EtcItem" name="Greater Recruit Posting Ticket (Bow/Stationary)">
 		<!-- Goddard/Bow/Stationary. Posting possible when Seal of Strife is owned by Dusk. -->
+		<set name="icon" val="icon.mticket_bow_fix_i00" />
 		<set name="item_type" val="castle_guard" />
 		<set name="consume_type" val="stackable" />
 		<set name="crystal_type" val="none" />
 	</item>
 	<item id="6815" type="EtcItem" name="Greater Recruit Posting Ticket (Cleric/Stationary)">
 		<!-- Goddard/Cleric/Stationary. Posting possible when Seal of Strife is owned by Dusk. -->
+		<set name="icon" val="icon.mticket_cleric_fix_i00" />
 		<set name="item_type" val="castle_guard" />
 		<set name="consume_type" val="stackable" />
 		<set name="crystal_type" val="none" />
 	</item>
 	<item id="6816" type="EtcItem" name="Greater Recruit Posting Ticket (Wizard/Stationary)">
 		<!-- Goddard/Wizard/Stationary. Posting possible when Seal of Strife is owned by Dusk. -->
+		<set name="icon" val="icon.mticket_wizard_fix_i00" />
 		<set name="item_type" val="castle_guard" />
 		<set name="consume_type" val="stackable" />
 		<set name="crystal_type" val="none" />
 	</item>
 	<item id="6817" type="EtcItem" name="Greater Recruit Posting Ticket (Sword/Mobile)">
 		<!-- Goddard/Sword/Mobile. Posting possible when Seal of Strife is owned by Dusk. -->
+		<set name="icon" val="icon.mticket_sword_move_i00" />
 		<set name="item_type" val="castle_guard" />
 		<set name="consume_type" val="stackable" />
 		<set name="crystal_type" val="none" />
 	</item>
 	<item id="6818" type="EtcItem" name="Greater Recruit Posting Ticket (Spear/Mobile)">
 		<!-- Goddard/Spear/Mobile. Posting possible when Seal of Strife is owned by Dusk. -->
+		<set name="icon" val="icon.mticket_pole_move_i00" />
 		<set name="item_type" val="castle_guard" />
 		<set name="consume_type" val="stackable" />
 		<set name="crystal_type" val="none" />
 	</item>
 	<item id="6819" type="EtcItem" name="Greater Recruit Posting Ticket (Bow/Mobile)">
 		<!-- Goddard/Bow/Mobile. Posting possible when Seal of Strife is owned by Dusk. -->
+		<set name="icon" val="icon.mticket_bow_move_i00" />
 		<set name="item_type" val="castle_guard" />
 		<set name="consume_type" val="stackable" />
 		<set name="crystal_type" val="none" />
 	</item>
 	<item id="6820" type="EtcItem" name="Greater Recruit Posting Ticket (Cleric/Mobile)">
 		<!-- Goddard/Cleric/Mobile. Posting possible when Seal of Strife is owned by Dusk. -->
+		<set name="icon" val="icon.mticket_cleric_move_i00" />
 		<set name="item_type" val="castle_guard" />
 		<set name="consume_type" val="stackable" />
 		<set name="crystal_type" val="none" />
 	</item>
 	<item id="6821" type="EtcItem" name="Greater Recruit Posting Ticket (Wizard/Mobile)">
 		<!-- Goddard/Wizard/Mobile. Posting possible when Seal of Strife is owned by Dusk. -->
+		<set name="icon" val="icon.mticket_wizard_move_i00" />
 		<set name="item_type" val="castle_guard" />
 		<set name="consume_type" val="stackable" />
 		<set name="crystal_type" val="none" />
 	</item>
 	<item id="6822" type="EtcItem" name="Recruit Posting Ticket (Sword/Stationary)">
 		<!-- Goddard/Sword/Stationary. Posting possible when Seal of Strife is owned by Dusk. -->
+		<set name="icon" val="icon.mticket_sword_fix_i00" />
 		<set name="item_type" val="castle_guard" />
 		<set name="consume_type" val="stackable" />
 		<set name="crystal_type" val="none" />
 	</item>
 	<item id="6823" type="EtcItem" name="Recruit Posting Ticket (Spear/Stationary)">
 		<!-- Goddard/Spear/Stationary. Posting possible when Seal of Strife is owned by Dusk. -->
+		<set name="icon" val="icon.mticket_pole_fix_i00" />
 		<set name="item_type" val="castle_guard" />
 		<set name="consume_type" val="stackable" />
 		<set name="crystal_type" val="none" />
 	</item>
 	<item id="6824" type="EtcItem" name="Recruit Posting Ticket (Bow/Stationary)">
 		<!-- Goddard/Bow/Stationary. Posting possible when Seal of Strife is owned by Dusk. -->
+		<set name="icon" val="icon.mticket_bow_fix_i00" />
 		<set name="item_type" val="castle_guard" />
 		<set name="consume_type" val="stackable" />
 		<set name="crystal_type" val="none" />
 	</item>
 	<item id="6825" type="EtcItem" name="Recruit Posting Ticket (Cleric/Stationary)">
 		<!-- Goddard/Cleric/Stationary. Posting possible when Seal of Strife is owned by Dusk. -->
+		<set name="icon" val="icon.mticket_cleric_fix_i00" />
 		<set name="item_type" val="castle_guard" />
 		<set name="consume_type" val="stackable" />
 		<set name="crystal_type" val="none" />
 	</item>
 	<item id="6826" type="EtcItem" name="Recruit Posting Ticket (Wizard/Stationary)">
 		<!-- Goddard/Wizard/Stationary. Posting possible when Seal of Strife is owned by Dusk. -->
+		<set name="icon" val="icon.mticket_wizard_fix_i00" />
 		<set name="item_type" val="castle_guard" />
 		<set name="consume_type" val="stackable" />
 		<set name="crystal_type" val="none" />
 	</item>
 	<item id="6827" type="EtcItem" name="Recruit Posting Ticket (Sword/Mobile)">
 		<!-- Goddard/Sword/Mobile. Posting possible when Seal of Strife is owned by Dusk. -->
+		<set name="icon" val="icon.mticket_sword_move_i00" />
 		<set name="item_type" val="castle_guard" />
 		<set name="consume_type" val="stackable" />
 		<set name="crystal_type" val="none" />
 	</item>
 	<item id="6828" type="EtcItem" name="Recruit Posting Ticket (Spear/Mobile)">
 		<!-- Goddard/Spear/Mobile. Posting possible when Seal of Strife is owned by Dusk. -->
+		<set name="icon" val="icon.mticket_pole_move_i00" />
 		<set name="item_type" val="castle_guard" />
 		<set name="consume_type" val="stackable" />
 		<set name="crystal_type" val="none" />
 	</item>
 	<item id="6829" type="EtcItem" name="Recruit Posting Ticket (Bow/Mobile)">
 		<!-- Goddard/Bow/Mobile. Posting possible when Seal of Strife is owned by Dusk. -->
+		<set name="icon" val="icon.mticket_bow_move_i00" />
 		<set name="item_type" val="castle_guard" />
 		<set name="consume_type" val="stackable" />
 		<set name="crystal_type" val="none" />
 	</item>
 	<item id="6830" type="EtcItem" name="Recruit Posting Ticket (Cleric/Mobile)">
 		<!-- Goddard/Cleric/Mobile. Posting possible when Seal of Strife is owned by Dusk. -->
+		<set name="icon" val="icon.mticket_cleric_move_i00" />
 		<set name="item_type" val="castle_guard" />
 		<set name="consume_type" val="stackable" />
 		<set name="crystal_type" val="none" />
 	</item>
 	<item id="6831" type="EtcItem" name="Recruit Posting Ticket (Wizard/Mobile)">
 		<!-- Goddard/Wizard/Mobile. Posting possible when Seal of Strife is owned by Dusk. -->
+		<set name="icon" val="icon.mticket_wizard_move_i00" />
 		<set name="item_type" val="castle_guard" />
 		<set name="consume_type" val="stackable" />
 		<set name="crystal_type" val="none" />
 	</item>
 	<item id="6832" type="EtcItem" name="Nephilim Warrior Posting Ticket (Sword/Mobile)">
 		<!-- Goddard/Sword/Mobile. Posting possible when Seal of Strife is owned by Dawn. -->
+		<set name="icon" val="icon.mticket_sword_move_i00" />
 		<set name="item_type" val="castle_guard" />
 		<set name="consume_type" val="stackable" />
 		<set name="crystal_type" val="none" />
 	</item>
 	<item id="6833" type="EtcItem" name="Nephilim Shaman Posting Ticket (Wizard/Mobile)">
 		<!-- Goddard/Wizard/Mobile. Posting possible when Seal of Strife is owned by Dawn. -->
+		<set name="icon" val="icon.mticket_wizard_move_i00" />
 		<set name="item_type" val="castle_guard" />
 		<set name="consume_type" val="stackable" />
 		<set name="crystal_type" val="none" />
 	</item>
 	<item id="6834" type="Armor" name="Circlet of Innadril">
 		<!-- Daffodil Circlet. Can be worn by the lord of Innadril Castle and clan members but not by allies. Allows use of Residential Skills when equipped. -->
+		<set name="icon" val="icon.accessory_pledge_cap1_i00" />
 		<set name="bodypart" val="face" />
 		<set name="armor_type" val="none" />
 		<set name="weight" val="10" />
@@ -221,6 +256,7 @@
 	</item>
 	<item id="6835" type="Armor" name="Circlet of Dion">
 		<!-- Torchlight Circlet. Can be worn by the lord of Dion Castle and clan members but not by allies. Allows use of Residential Skills when equipped. -->
+		<set name="icon" val="icon.accessory_pledge_cap1_i02" />
 		<set name="bodypart" val="face" />
 		<set name="armor_type" val="none" />
 		<set name="weight" val="10" />
@@ -236,6 +272,7 @@
 	</item>
 	<item id="6836" type="Armor" name="Circlet of Goddard">
 		<!-- Shield Circlet. Can be worn by the lord of Goddard Castle and clan members but not by allies. Allows use of Residential Skills when equipped. -->
+		<set name="icon" val="icon.accessory_pledge_cap1_i03" />
 		<set name="bodypart" val="face" />
 		<set name="armor_type" val="none" />
 		<set name="weight" val="10" />
@@ -251,6 +288,7 @@
 	</item>
 	<item id="6837" type="Armor" name="Circlet of Oren">
 		<!-- Tower Circlet. Can be worn by the lord of Oren Castle and clan members but not by allies. Allows use of Residential Skills when equipped. -->
+		<set name="icon" val="icon.accessory_pledge_cap1_i04" />
 		<set name="bodypart" val="face" />
 		<set name="armor_type" val="none" />
 		<set name="weight" val="10" />
@@ -266,6 +304,7 @@
 	</item>
 	<item id="6838" type="Armor" name="Circlet of Gludio">
 		<!-- Three-Swords Circlet. Can be worn by the lord of Gludio Castle and clan members but not by allies. Allows use of Residential Skills when equipped. -->
+		<set name="icon" val="icon.accessory_pledge_cap1_i05" />
 		<set name="bodypart" val="face" />
 		<set name="armor_type" val="none" />
 		<set name="weight" val="10" />
@@ -281,6 +320,7 @@
 	</item>
 	<item id="6839" type="Armor" name="Circlet of Giran">
 		<!-- Cross Circlet. Can be worn by the lord of Giran Castle and clan members but not by allies. Allows use of Residential Skills when equipped. -->
+		<set name="icon" val="icon.accessory_pledge_cap1_i06" />
 		<set name="bodypart" val="face" />
 		<set name="armor_type" val="none" />
 		<set name="weight" val="10" />
@@ -296,6 +336,7 @@
 	</item>
 	<item id="6840" type="Armor" name="Circlet of Aden">
 		<!-- Lion Circlet. Can be worn by the lord of Aden Castle and clan members but not by allies. Allows use of Residential Skills when equipped. -->
+		<set name="icon" val="icon.accessory_pledge_cap2_i07" />
 		<set name="bodypart" val="face" />
 		<set name="armor_type" val="none" />
 		<set name="weight" val="10" />
@@ -311,6 +352,7 @@
 	</item>
 	<item id="6841" type="Armor" name="The Lord's Crown">
 		<!-- Lord's crown hair accessory. Allows use of Residential Skills when equipped. -->
+		<set name="icon" val="icon.accessory_crown_i00" />
 		<set name="bodypart" val="face" />
 		<set name="armor_type" val="none" />
 		<set name="weight" val="10" />
@@ -326,6 +368,7 @@
 	</item>
 	<item id="6842" type="Armor" name="Wings of Destiny Circlet">
 		<!-- Hair accessory exclusively used by Heroes. -->
+		<set name="icon" val="icon.accessory_hero_cap_i00" />
 		<set name="bodypart" val="face" />
 		<set name="armor_type" val="none" />
 		<set name="weight" val="10" />
@@ -339,6 +382,7 @@
 	</item>
 	<item id="6843" type="Armor" name="Cat Ear">
 		<!-- Cat-ear shaped hair accessory -->
+		<set name="icon" val="icon.accessory_cat_ear_i00" />
 		<set name="bodypart" val="hair" />
 		<set name="armor_type" val="none" />
 		<set name="weight" val="10" />
@@ -350,6 +394,7 @@
 	</item>
 	<item id="6844" type="Armor" name="Lady's Hair Pin">
 		<!-- Hair accessory exclusive for women -->
+		<set name="icon" val="icon.accessory_hairpin_i00" />
 		<set name="bodypart" val="hair" />
 		<set name="armor_type" val="none" />
 		<set name="weight" val="10" />
@@ -361,6 +406,7 @@
 	</item>
 	<item id="6845" type="Armor" name="Pirate's Eye Patch">
 		<!-- Eye patch accessory -->
+		<set name="icon" val="icon.accessory_eye_bandage_i00" />
 		<set name="bodypart" val="face" />
 		<set name="armor_type" val="none" />
 		<set name="weight" val="10" />
@@ -372,6 +418,7 @@
 	</item>
 	<item id="6846" type="Armor" name="Monocle">
 		<!-- Monocle accessory with attached ring -->
+		<set name="icon" val="icon.accessory_glasses_i00" />
 		<set name="bodypart" val="face" />
 		<set name="armor_type" val="none" />
 		<set name="weight" val="10" />
@@ -383,6 +430,7 @@
 	</item>
 	<item id="6847" type="EtcItem" name="Recipe: Sealed Tateossian Earring (70%)">
 		<!-- For Dwarves only. The recipe for sealed Tateossian earrings. Requires Create Item - Skill Level 9. The success rate is 70%. -->
+		<set name="icon" val="icon.etc_recipe_black_i00" />
 		<set name="item_type" val="recipe" />
 		<set name="weight" val="30" />
 		<set name="consume_type" val="stackable" />
@@ -391,6 +439,7 @@
 	</item>
 	<item id="6848" type="EtcItem" name="Recipe: Sealed Tateossian Earring (100%)">
 		<!-- For Dwarves only. The recipe for sealed Tateossian earrings. Requires Create Item - Skill Level 9. The success rate is 100%. -->
+		<set name="icon" val="icon.etc_recipe_black_i00" />
 		<set name="item_type" val="recipe" />
 		<set name="weight" val="30" />
 		<set name="consume_type" val="stackable" />
@@ -399,6 +448,7 @@
 	</item>
 	<item id="6849" type="EtcItem" name="Recipe: Sealed Tateossian Ring(70%)">
 		<!-- For Dwarves only. The recipe for a Sealed Tateossian Ring. Requires Create Item - Skill Level 9. The success rate is 70%. -->
+		<set name="icon" val="icon.etc_recipe_black_i00" />
 		<set name="item_type" val="recipe" />
 		<set name="weight" val="30" />
 		<set name="consume_type" val="stackable" />
@@ -407,6 +457,7 @@
 	</item>
 	<item id="6850" type="EtcItem" name="Recipe: Sealed Tateossian Ring(100%)">
 		<!-- For Dwarves only. The recipe for a Sealed Tateossian Ring. Requires Create Item - Skill Level 9. The success rate is 100%. -->
+		<set name="icon" val="icon.etc_recipe_black_i00" />
 		<set name="item_type" val="recipe" />
 		<set name="weight" val="30" />
 		<set name="consume_type" val="stackable" />
@@ -415,6 +466,7 @@
 	</item>
 	<item id="6851" type="EtcItem" name="Recipe: Sealed Tateossian Necklace(70%)">
 		<!-- For Dwarves only. The recipe for a Sealed Tateossian Necklace. Requires Create Item - Skill Level 9. The success rate is 70%. -->
+		<set name="icon" val="icon.etc_recipe_black_i00" />
 		<set name="item_type" val="recipe" />
 		<set name="weight" val="30" />
 		<set name="consume_type" val="stackable" />
@@ -423,6 +475,7 @@
 	</item>
 	<item id="6852" type="EtcItem" name="Recipe: Sealed Tateossian Necklace(100%)">
 		<!-- For Dwarves only. The recipe for a Sealed Tateossian Necklace. Requires Create Item - Skill Level 9. The success rate is 100%. -->
+		<set name="icon" val="icon.etc_recipe_black_i00" />
 		<set name="item_type" val="recipe" />
 		<set name="weight" val="30" />
 		<set name="consume_type" val="stackable" />
@@ -431,6 +484,7 @@
 	</item>
 	<item id="6853" type="EtcItem" name="Recipe: Sealed Imperial Crusader Breastplate (60%)">
 		<!-- For Dwarves only. The recipe for a Sealed Imperial Crusader Breastplate. Requires Create Item - Skill Level 9. The success rate is 60%. -->
+		<set name="icon" val="icon.etc_recipe_black_i00" />
 		<set name="item_type" val="recipe" />
 		<set name="weight" val="30" />
 		<set name="consume_type" val="stackable" />
@@ -439,6 +493,7 @@
 	</item>
 	<item id="6854" type="EtcItem" name="Recipe: Sealed Imperial Crusader Breastplate (100%)">
 		<!-- For Dwarves only. The recipe for a Sealed Imperial Crusader Breastplate. Requires Create Item - Skill Level 9. The success rate is 100%. -->
+		<set name="icon" val="icon.etc_recipe_black_i00" />
 		<set name="item_type" val="recipe" />
 		<set name="weight" val="30" />
 		<set name="consume_type" val="stackable" />
@@ -447,6 +502,7 @@
 	</item>
 	<item id="6855" type="EtcItem" name="Recipe: Sealed Imperial Crusader Gaiters (60%)">
 		<!-- For Dwarves only. The recipe for Sealed Imperial Crusader Gaiters. Requires Create Item - Skill Level 9. The success rate is 60%. -->
+		<set name="icon" val="icon.etc_recipe_black_i00" />
 		<set name="item_type" val="recipe" />
 		<set name="weight" val="30" />
 		<set name="consume_type" val="stackable" />
@@ -455,6 +511,7 @@
 	</item>
 	<item id="6856" type="EtcItem" name="Recipe: Sealed Imperial Crusader Gaiters (100%)">
 		<!-- For Dwarves only. The recipe for Sealed Imperial Crusader Gaiters. Requires Create Item - Skill Level 9. The success rate is 100%. -->
+		<set name="icon" val="icon.etc_recipe_black_i00" />
 		<set name="item_type" val="recipe" />
 		<set name="weight" val="30" />
 		<set name="consume_type" val="stackable" />
@@ -463,6 +520,7 @@
 	</item>
 	<item id="6857" type="EtcItem" name="Recipe: Sealed Imperial Crusader Gauntlets (60%)">
 		<!-- For Dwarves only. The recipe for Sealed Imperial Crusader Gauntlets. Requires Create Item - Skill Level 9. The success rate is 60%. -->
+		<set name="icon" val="icon.etc_recipe_black_i00" />
 		<set name="item_type" val="recipe" />
 		<set name="weight" val="30" />
 		<set name="consume_type" val="stackable" />
@@ -471,6 +529,7 @@
 	</item>
 	<item id="6858" type="EtcItem" name="Recipe: Sealed Imperial Crusader Gauntlets (100%)">
 		<!-- For Dwarves only. The recipe for Sealed Imperial Crusader Gauntlets. Requires Create Item - Skill Level 9. The success rate is 100%. -->
+		<set name="icon" val="icon.etc_recipe_black_i00" />
 		<set name="item_type" val="recipe" />
 		<set name="weight" val="30" />
 		<set name="consume_type" val="stackable" />
@@ -479,6 +538,7 @@
 	</item>
 	<item id="6859" type="EtcItem" name="Recipe: Sealed Imperial Crusader Boots (60%)">
 		<!-- For Dwarves only. The recipe for a Sealed Imperial Crusader Boots. Requires Create Item - Skill Level 9. The success rate is 60%. -->
+		<set name="icon" val="icon.etc_recipe_black_i00" />
 		<set name="item_type" val="recipe" />
 		<set name="weight" val="30" />
 		<set name="consume_type" val="stackable" />
@@ -487,6 +547,7 @@
 	</item>
 	<item id="6860" type="EtcItem" name="Recipe: Sealed Imperial Crusader Boots (100%)">
 		<!-- For Dwarves only. The recipe for a Sealed Imperial Crusader Boots. Requires Create Item - Skill Level 9. The success rate is 100%. -->
+		<set name="icon" val="icon.etc_recipe_black_i00" />
 		<set name="item_type" val="recipe" />
 		<set name="weight" val="30" />
 		<set name="consume_type" val="stackable" />
@@ -495,6 +556,7 @@
 	</item>
 	<item id="6861" type="EtcItem" name="Recipe: Sealed Imperial Crusader Shield (60%)">
 		<!-- For Dwarves only. The recipe for a Sealed Imperial Crusader Shield. Requires Create Item - Skill Level 9. The success rate is 60%. -->
+		<set name="icon" val="icon.etc_recipe_black_i00" />
 		<set name="item_type" val="recipe" />
 		<set name="weight" val="30" />
 		<set name="consume_type" val="stackable" />
@@ -503,6 +565,7 @@
 	</item>
 	<item id="6862" type="EtcItem" name="Recipe: Sealed Imperial Crusader Shield (100%)">
 		<!-- For Dwarves only. The recipe for a Sealed Imperial Crusader Shield. Requires Create Item - Skill Level 9. The success rate is 100%. -->
+		<set name="icon" val="icon.etc_recipe_black_i00" />
 		<set name="item_type" val="recipe" />
 		<set name="weight" val="30" />
 		<set name="consume_type" val="stackable" />
@@ -511,6 +574,7 @@
 	</item>
 	<item id="6863" type="EtcItem" name="Recipe: Sealed Imperial Crusader Helmet (60%)">
 		<!-- For Dwarves only. The recipe for a Sealed Imperial Crusader Helmet. Requires Create Item - Skill Level 9. The success rate is 60%. -->
+		<set name="icon" val="icon.etc_recipe_black_i00" />
 		<set name="item_type" val="recipe" />
 		<set name="weight" val="30" />
 		<set name="consume_type" val="stackable" />
@@ -519,6 +583,7 @@
 	</item>
 	<item id="6864" type="EtcItem" name="Recipe: Sealed Imperial Crusader Helmet (100%)">
 		<!-- For Dwarves only. The recipe for a Sealed Imperial Crusader Helmet. Requires Create Item - Skill Level 9. The success rate is 100%. -->
+		<set name="icon" val="icon.etc_recipe_black_i00" />
 		<set name="item_type" val="recipe" />
 		<set name="weight" val="30" />
 		<set name="consume_type" val="stackable" />
@@ -527,6 +592,7 @@
 	</item>
 	<item id="6865" type="EtcItem" name="Recipe: Sealed Draconic Leather Armor (60%)">
 		<!-- For Dwarves only. The recipe for Sealed Draconic Leather Armor. Requires Create Item - Skill Level 9. The success rate is 60%. -->
+		<set name="icon" val="icon.etc_recipe_black_i00" />
 		<set name="item_type" val="recipe" />
 		<set name="weight" val="30" />
 		<set name="consume_type" val="stackable" />
@@ -535,6 +601,7 @@
 	</item>
 	<item id="6866" type="EtcItem" name="Recipe: Sealed Draconic Leather Armor (100%)">
 		<!-- For Dwarves only. The recipe for Sealed Draconic Leather Armor. Requires Create Item - Skill Level 9. The success rate is 100%. -->
+		<set name="icon" val="icon.etc_recipe_black_i00" />
 		<set name="item_type" val="recipe" />
 		<set name="weight" val="30" />
 		<set name="consume_type" val="stackable" />
@@ -543,6 +610,7 @@
 	</item>
 	<item id="6867" type="EtcItem" name="Recipe: Sealed Draconic Leather Gloves (60%)">
 		<!-- For Dwarves only. The recipe for Sealed Draconic Leather Gloves. Requires Create Item - Skill Level 9. The success rate is 60%. -->
+		<set name="icon" val="icon.etc_recipe_black_i00" />
 		<set name="item_type" val="recipe" />
 		<set name="weight" val="30" />
 		<set name="consume_type" val="stackable" />
@@ -551,6 +619,7 @@
 	</item>
 	<item id="6868" type="EtcItem" name="Recipe: Sealed Draconic Leather Gloves (100%)">
 		<!-- For Dwarves only. The recipe for Sealed Draconic Leather Gloves. Requires Create Item - Skill Level 9. The success rate is 100%. -->
+		<set name="icon" val="icon.etc_recipe_black_i00" />
 		<set name="item_type" val="recipe" />
 		<set name="weight" val="30" />
 		<set name="consume_type" val="stackable" />
@@ -559,6 +628,7 @@
 	</item>
 	<item id="6869" type="EtcItem" name="Recipe: Sealed Draconic Leather Boots (60%)">
 		<!-- For Dwarves only. The recipe for Sealed Draconic Leather Boots. Requires Create Item - Skill Level 9. The success rate is 60%. -->
+		<set name="icon" val="icon.etc_recipe_black_i00" />
 		<set name="item_type" val="recipe" />
 		<set name="weight" val="30" />
 		<set name="consume_type" val="stackable" />
@@ -567,6 +637,7 @@
 	</item>
 	<item id="6870" type="EtcItem" name="Recipe: Sealed Draconic Leather Boots (100%)">
 		<!-- For Dwarves only. The recipe for Sealed Draconic Leather Boots. Requires Create Item - Skill Level 9. The success rate is 100%. -->
+		<set name="icon" val="icon.etc_recipe_black_i00" />
 		<set name="item_type" val="recipe" />
 		<set name="weight" val="30" />
 		<set name="consume_type" val="stackable" />
@@ -575,6 +646,7 @@
 	</item>
 	<item id="6871" type="EtcItem" name="Recipe: Sealed Draconic Leather Helmet (60%)">
 		<!-- For Dwarves only. The recipe for a Sealed Draconic Leather Helmet. Requires Create Item - Skill Level 9. The success rate is 60%. -->
+		<set name="icon" val="icon.etc_recipe_black_i00" />
 		<set name="item_type" val="recipe" />
 		<set name="weight" val="30" />
 		<set name="consume_type" val="stackable" />
@@ -583,6 +655,7 @@
 	</item>
 	<item id="6872" type="EtcItem" name="Recipe: Sealed Draconic Leather Helmet (100%)">
 		<!-- For Dwarves only. The recipe for a Sealed Draconic Leather Helmet. Requires Create Item - Skill Level 9. The success rate is 100%. -->
+		<set name="icon" val="icon.etc_recipe_black_i00" />
 		<set name="item_type" val="recipe" />
 		<set name="weight" val="30" />
 		<set name="consume_type" val="stackable" />
@@ -591,6 +664,7 @@
 	</item>
 	<item id="6873" type="EtcItem" name="Recipe: Sealed Major Arcana Robe (60%)">
 		<!-- For Dwarves only. The recipe for a Sealed Major Arcana Robe. Requires Create Item - Skill Level 9. The success rate is 60%. -->
+		<set name="icon" val="icon.etc_recipe_black_i00" />
 		<set name="item_type" val="recipe" />
 		<set name="weight" val="30" />
 		<set name="consume_type" val="stackable" />
@@ -599,6 +673,7 @@
 	</item>
 	<item id="6874" type="EtcItem" name="Recipe: Sealed Major Arcana Robe (100%)">
 		<!-- For Dwarves only. The recipe for a Sealed Major Arcana Robe. Requires Create Item - Skill Level 9. The success rate is 100%. -->
+		<set name="icon" val="icon.etc_recipe_black_i00" />
 		<set name="item_type" val="recipe" />
 		<set name="weight" val="30" />
 		<set name="consume_type" val="stackable" />
@@ -607,6 +682,7 @@
 	</item>
 	<item id="6875" type="EtcItem" name="Recipe: Sealed Major Arcana Gloves (60%)">
 		<!-- For Dwarves only. The recipe for Sealed Major Arcana Gloves. Requires Create Item - Skill Level 9. The success rate is 60%. -->
+		<set name="icon" val="icon.etc_recipe_black_i00" />
 		<set name="item_type" val="recipe" />
 		<set name="weight" val="30" />
 		<set name="consume_type" val="stackable" />
@@ -615,6 +691,7 @@
 	</item>
 	<item id="6876" type="EtcItem" name="Recipe: Sealed Major Arcana Gloves (100%)">
 		<!-- For Dwarves only. The recipe for Sealed Major Arcana Gloves. Requires Create Item - Skill Level 9. The success rate is 100%. -->
+		<set name="icon" val="icon.etc_recipe_black_i00" />
 		<set name="item_type" val="recipe" />
 		<set name="weight" val="30" />
 		<set name="consume_type" val="stackable" />
@@ -623,6 +700,7 @@
 	</item>
 	<item id="6877" type="EtcItem" name="Recipe: Sealed Major Arcana Boots (60%)">
 		<!-- For Dwarves only. The recipe for Sealed Major Arcana Boots. Requires Create Item - Skill Level 9. The success rate is 60%. -->
+		<set name="icon" val="icon.etc_recipe_black_i00" />
 		<set name="item_type" val="recipe" />
 		<set name="weight" val="30" />
 		<set name="consume_type" val="stackable" />
@@ -631,6 +709,7 @@
 	</item>
 	<item id="6878" type="EtcItem" name="Recipe: Sealed Major Arcana Boots (100%)">
 		<!-- For Dwarves only. The recipe for Sealed Major Arcana Boots. Requires Create Item - Skill Level 9. The success rate is 100%. -->
+		<set name="icon" val="icon.etc_recipe_black_i00" />
 		<set name="item_type" val="recipe" />
 		<set name="weight" val="30" />
 		<set name="consume_type" val="stackable" />
@@ -639,6 +718,7 @@
 	</item>
 	<item id="6879" type="EtcItem" name="Recipe: Sealed Major Arcana Circlet (60%)">
 		<!-- For Dwarves only. The recipe for a Sealed Major Arcana Circlet. Requires Create Item - Skill Level 9. The success rate is 60%. -->
+		<set name="icon" val="icon.etc_recipe_black_i00" />
 		<set name="item_type" val="recipe" />
 		<set name="weight" val="30" />
 		<set name="consume_type" val="stackable" />
@@ -647,6 +727,7 @@
 	</item>
 	<item id="6880" type="EtcItem" name="Recipe: Sealed Major Arcana Circlet (100%)">
 		<!-- For Dwarves only. The recipe for a Sealed Major Arcana Circlet. Requires Create Item - Skill Level 9. The success rate is 100%. -->
+		<set name="icon" val="icon.etc_recipe_black_i00" />
 		<set name="item_type" val="recipe" />
 		<set name="weight" val="30" />
 		<set name="consume_type" val="stackable" />
@@ -655,6 +736,7 @@
 	</item>
 	<item id="6881" type="EtcItem" name="Recipe: Forgotten Blade (60%)">
 		<!-- For Dwarves only. The recipe for a Forgotten Blade. Requires Create Item - Skill Level 9. The success rate is 60%. -->
+		<set name="icon" val="icon.etc_recipe_black_i00" />
 		<set name="item_type" val="recipe" />
 		<set name="weight" val="30" />
 		<set name="consume_type" val="stackable" />
@@ -663,6 +745,7 @@
 	</item>
 	<item id="6882" type="EtcItem" name="Recipe: Forgotten Blade (100%)">
 		<!-- For Dwarves only. The recipe for a Forgotten Blade. Requires Create Item - Skill Level 9. The success rate is 100%. -->
+		<set name="icon" val="icon.etc_recipe_black_i00" />
 		<set name="item_type" val="recipe" />
 		<set name="weight" val="30" />
 		<set name="consume_type" val="stackable" />
@@ -671,6 +754,7 @@
 	</item>
 	<item id="6883" type="EtcItem" name="Recipe: Basalt Battlehammer (60%)">
 		<!-- For Dwarves only. The recipe for a Basalt Battlehammer. Requires Create Item - Skill Level 9. The success rate is 60%. -->
+		<set name="icon" val="icon.etc_recipe_black_i00" />
 		<set name="item_type" val="recipe" />
 		<set name="weight" val="30" />
 		<set name="consume_type" val="stackable" />
@@ -679,6 +763,7 @@
 	</item>
 	<item id="6884" type="EtcItem" name="Recipe: Basalt Battlehammer (100%)">
 		<!-- For Dwarves only. The recipe for a Basalt Battlehammer. Requires Create Item - Skill Level 9. The success rate is 100%. -->
+		<set name="icon" val="icon.etc_recipe_black_i00" />
 		<set name="item_type" val="recipe" />
 		<set name="weight" val="30" />
 		<set name="consume_type" val="stackable" />
@@ -687,6 +772,7 @@
 	</item>
 	<item id="6885" type="EtcItem" name="Recipe: Imperial Staff (60%)">
 		<!-- For Dwarves only. The recipe for an Imperial Staff. Requires Create Item - Skill Level 9. The success rate is 60%. -->
+		<set name="icon" val="icon.etc_recipe_black_i00" />
 		<set name="item_type" val="recipe" />
 		<set name="weight" val="30" />
 		<set name="consume_type" val="stackable" />
@@ -695,6 +781,7 @@
 	</item>
 	<item id="6886" type="EtcItem" name="Recipe: Imperial Staff(100%)">
 		<!-- For Dwarves only. The recipe for an Imperial Staff. Requires Create Item - Skill Level 9. The success rate is 100%. -->
+		<set name="icon" val="icon.etc_recipe_black_i00" />
 		<set name="item_type" val="recipe" />
 		<set name="weight" val="30" />
 		<set name="consume_type" val="stackable" />
@@ -703,6 +790,7 @@
 	</item>
 	<item id="6887" type="EtcItem" name="Recipe: Angel Slayer (60%)">
 		<!-- For Dwarves only. The recipe for an Angel Slayer. Requires Create Item - Skill Level 9. The success rate is 60%. -->
+		<set name="icon" val="icon.etc_recipe_black_i00" />
 		<set name="item_type" val="recipe" />
 		<set name="weight" val="30" />
 		<set name="consume_type" val="stackable" />
@@ -711,6 +799,7 @@
 	</item>
 	<item id="6888" type="EtcItem" name="Recipe: Angel Slayer (100%)">
 		<!-- For Dwarves only. The recipe for an Angel Slayer. Requires Create Item - Skill Level 9. The success rate is 100%. -->
+		<set name="icon" val="icon.etc_recipe_black_i00" />
 		<set name="item_type" val="recipe" />
 		<set name="weight" val="30" />
 		<set name="consume_type" val="stackable" />
@@ -719,6 +808,7 @@
 	</item>
 	<item id="6889" type="EtcItem" name="Recipe: Shining Bow (60%)">
 		<!-- For Dwarves only. The recipe for a Shining Bow. Requires Create Item - Skill Level 9. The success rate is 60%. -->
+		<set name="icon" val="icon.etc_recipe_black_i00" />
 		<set name="item_type" val="recipe" />
 		<set name="weight" val="30" />
 		<set name="consume_type" val="stackable" />
@@ -727,6 +817,7 @@
 	</item>
 	<item id="6890" type="EtcItem" name="Recipe: Shining Bow (100%)">
 		<!-- For Dwarves only. The recipe for a Shining Bow. Requires Create Item - Skill Level 9. The success rate is 100%. -->
+		<set name="icon" val="icon.etc_recipe_black_i00" />
 		<set name="item_type" val="recipe" />
 		<set name="weight" val="30" />
 		<set name="consume_type" val="stackable" />
@@ -735,6 +826,7 @@
 	</item>
 	<item id="6891" type="EtcItem" name="Recipe: Dragon Hunter Axe (60%)">
 		<!-- For Dwarves only. The recipe for a Dragon Hunter Axe. Requires Create Item - Skill Level 9. The success rate is 60%. -->
+		<set name="icon" val="icon.etc_recipe_black_i00" />
 		<set name="item_type" val="recipe" />
 		<set name="weight" val="30" />
 		<set name="consume_type" val="stackable" />
@@ -743,6 +835,7 @@
 	</item>
 	<item id="6892" type="EtcItem" name="Recipe: Dragon Hunter Axe (100%)">
 		<!-- For Dwarves only. The recipe for a Dragon Hunter Axe. Requires Create Item - Skill Level 9. The success rate is 100%. -->
+		<set name="icon" val="icon.etc_recipe_black_i00" />
 		<set name="item_type" val="recipe" />
 		<set name="weight" val="30" />
 		<set name="consume_type" val="stackable" />
@@ -751,6 +844,7 @@
 	</item>
 	<item id="6893" type="EtcItem" name="Recipe: Saint Spear (60%)">
 		<!-- For Dwarves only. The recipe for a Saint Spear. Requires Create Item - Skill Level 9. The success rate is 60%. -->
+		<set name="icon" val="icon.etc_recipe_black_i00" />
 		<set name="item_type" val="recipe" />
 		<set name="weight" val="30" />
 		<set name="consume_type" val="stackable" />
@@ -759,6 +853,7 @@
 	</item>
 	<item id="6894" type="EtcItem" name="Recipe: Saint Spear (100%)">
 		<!-- For Dwarves only. The recipe for a Saint Spear. Requires Create Item - Skill Level 9. The success rate is 100%. -->
+		<set name="icon" val="icon.etc_recipe_black_i00" />
 		<set name="item_type" val="recipe" />
 		<set name="weight" val="30" />
 		<set name="consume_type" val="stackable" />
@@ -767,6 +862,7 @@
 	</item>
 	<item id="6895" type="EtcItem" name="Recipe: Demon Splinter (60%)">
 		<!-- For Dwarves only. The recipe for a Demon Splinter. Requires Create Item - Skill Level 9. The success rate is 60%. -->
+		<set name="icon" val="icon.etc_recipe_black_i00" />
 		<set name="item_type" val="recipe" />
 		<set name="weight" val="30" />
 		<set name="consume_type" val="stackable" />
@@ -775,6 +871,7 @@
 	</item>
 	<item id="6896" type="EtcItem" name="Recipe: Demon Splinter (100%)">
 		<!-- For Dwarves only. The recipe for a Demon Splinter. Requires Create Item - Skill Level 9. The success rate is 100%. -->
+		<set name="icon" val="icon.etc_recipe_black_i00" />
 		<set name="item_type" val="recipe" />
 		<set name="weight" val="30" />
 		<set name="consume_type" val="stackable" />
@@ -783,6 +880,7 @@
 	</item>
 	<item id="6897" type="EtcItem" name="Recipe: Heavens Divider (60%)">
 		<!-- For Dwarves only. The recipe for a Heaven's Divider. Requires Create Item - Skill Level 9. The success rate is 60%. -->
+		<set name="icon" val="icon.etc_recipe_black_i00" />
 		<set name="item_type" val="recipe" />
 		<set name="weight" val="30" />
 		<set name="consume_type" val="stackable" />
@@ -791,6 +889,7 @@
 	</item>
 	<item id="6898" type="EtcItem" name="Recipe: Heavens Divider (100%)">
 		<!-- For Dwarves only. The recipe for a Heaven's Divider. Requires Create Item - Skill Level 9. The success rate is 100%. -->
+		<set name="icon" val="icon.etc_recipe_black_i00" />
 		<set name="item_type" val="recipe" />
 		<set name="weight" val="30" />
 		<set name="consume_type" val="stackable" />
@@ -799,6 +898,7 @@
 	</item>
 	<item id="6899" type="EtcItem" name="Recipe: Arcana Mace (60%)">
 		<!-- For Dwarves only. The recipe for an Arcana Mace. Requires Create Item - Skill Level 9. The success rate is 60%. -->
+		<set name="icon" val="icon.etc_recipe_black_i00" />
 		<set name="item_type" val="recipe" />
 		<set name="weight" val="30" />
 		<set name="consume_type" val="stackable" />

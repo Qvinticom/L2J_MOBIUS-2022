@@ -2,6 +2,7 @@
 <list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../xsd/items.xsd">
 	<item id="7700" type="EtcItem" name="Recipe: Daisy Hairpin (100%)">
 		<!-- This technique for creating a Daisy Hairpin can be used by all races. Requires Create Common Item Skill Level 4. -->
+		<set name="icon" val="icon.etc_recipe_green_i00" />
 		<set name="item_type" val="recipe" />
 		<set name="weight" val="30" />
 		<set name="consume_type" val="stackable" />
@@ -10,6 +11,7 @@
 	</item>
 	<item id="7701" type="Weapon" name="Stick of Faith - Mana Up">
 		<!-- <Soul Crystal Enhancement>. Increases maximum MP by 30%. -->
+		<set name="icon" val="icon.weapon_stick_of_faith_i01" />
 		<set name="bodypart" val="rhand" />
 		<set name="crystallizable" val="true" />
 		<set name="weight" val="1160" />
@@ -39,6 +41,7 @@
 	</item>
 	<item id="7702" type="Weapon" name="Stick of Faith - Magic Hold">
 		<!-- <Soul Crystal Enhancement>. Casts Dryad Root magic against the target with a 10% chance of success when using bad magic. Effect 1. -->
+		<set name="icon" val="icon.weapon_stick_of_faith_i01" />
 		<set name="bodypart" val="rhand" />
 		<set name="crystallizable" val="true" />
 		<set name="weight" val="1160" />
@@ -69,6 +72,7 @@
 	</item>
 	<item id="7703" type="Weapon" name="Stick of Faith - Magic Shield">
 		<!-- <Soul Crystal Enhancement>. Casts Mental Shield magic upon the target with a 50% chance of success when using good magic. Effect 2. -->
+		<set name="icon" val="icon.weapon_stick_of_faith_i01" />
 		<set name="bodypart" val="rhand" />
 		<set name="crystallizable" val="true" />
 		<set name="weight" val="1160" />
@@ -99,6 +103,7 @@
 	</item>
 	<item id="7704" type="Weapon" name="Stick of Eternity - Empower">
 		<!-- <Soul Crystal Enhancement>. Increases M. Atk. by 24. -->
+		<set name="icon" val="icon.weapon_stick_of_eternity_i01" />
 		<set name="bodypart" val="rhand" />
 		<set name="crystallizable" val="true" />
 		<set name="weight" val="1130" />
@@ -128,6 +133,7 @@
 	</item>
 	<item id="7705" type="Weapon" name="Stick of Eternity - Rsk., Evasion">
 		<!-- <Soul Crystal Enhancement>. Increases Evasion by 7 when HP becomes 60% or lower. -->
+		<set name="icon" val="icon.weapon_stick_of_eternity_i01" />
 		<set name="bodypart" val="rhand" />
 		<set name="crystallizable" val="true" />
 		<set name="weight" val="1130" />
@@ -161,6 +167,7 @@
 	</item>
 	<item id="7706" type="Weapon" name="Stick of Eternity - Blessed Body">
 		<!-- <Soul Crystal Enhancement>. Casts Blessed Body upon the target with a 20% chance of success when using good magic. Effect 3. -->
+		<set name="icon" val="icon.weapon_stick_of_eternity_i01" />
 		<set name="bodypart" val="rhand" />
 		<set name="crystallizable" val="true" />
 		<set name="weight" val="1130" />
@@ -190,6 +197,7 @@
 	</item>
 	<item id="7707" type="Weapon" name="Nirvana Axe - Magic Power">
 		<!-- <Soul Crystal Enhancement>. When using magic, the amount of MP consumption increases by 15% and M. Atk. also increases by 99. -->
+		<set name="icon" val="icon.weapon_nirvana_axe_i01" />
 		<set name="bodypart" val="rhand" />
 		<set name="crystallizable" val="true" />
 		<set name="weight" val="1150" />
@@ -220,6 +228,7 @@
 	</item>
 	<item id="7708" type="Weapon" name="Nirvana Axe - Magic Poison">
 		<!-- <Soul Crystal Enhancement>. Casts Curse Poison against the target with a 7% chance of success when using bad magic. Effect 7. -->
+		<set name="icon" val="icon.weapon_nirvana_axe_i01" />
 		<set name="bodypart" val="rhand" />
 		<set name="crystallizable" val="true" />
 		<set name="weight" val="1150" />
@@ -250,6 +259,7 @@
 	</item>
 	<item id="7709" type="Weapon" name="Nirvana Axe - Magic Weakness">
 		<!-- <Soul Crystal Enhancement>. Casts Curse Weakness against the target with a 7% chance of success when using bad magic. Effect 3. -->
+		<set name="icon" val="icon.weapon_nirvana_axe_i01" />
 		<set name="bodypart" val="rhand" />
 		<set name="crystallizable" val="true" />
 		<set name="weight" val="1150" />
@@ -280,6 +290,7 @@
 	</item>
 	<item id="7710" type="Weapon" name="Club of Nature - Acumen">
 		<!-- <Soul Crystal Enhancement>. Increases Casting Spd. by 15%. -->
+		<set name="icon" val="icon.weapon_club_of_nature_i01" />
 		<set name="bodypart" val="rhand" />
 		<set name="crystallizable" val="true" />
 		<set name="weight" val="1100" />
@@ -310,6 +321,7 @@
 	</item>
 	<item id="7711" type="Weapon" name="Club of Nature - Magic Mental Shield">
 		<!-- <Soul Crystal Enhancement>. Casts Mental Shield magic upon the target with a 50% chance of success when using good magic. Effect 3. -->
+		<set name="icon" val="icon.weapon_club_of_nature_i01" />
 		<set name="bodypart" val="rhand" />
 		<set name="crystallizable" val="true" />
 		<set name="weight" val="1100" />
@@ -340,6 +352,7 @@
 	</item>
 	<item id="7712" type="Weapon" name="Club of Nature - Magic Hold">
 		<!-- <Soul Crystal Enhancement>. Casts Dryad Root magic against the target with a 10% chance of success when using bad magic. Effect 1. -->
+		<set name="icon" val="icon.weapon_club_of_nature_i01" />
 		<set name="bodypart" val="rhand" />
 		<set name="crystallizable" val="true" />
 		<set name="weight" val="1100" />
@@ -370,6 +383,7 @@
 	</item>
 	<item id="7713" type="Weapon" name="Mace of The Underworld - Mana Up">
 		<!-- <Soul Crystal Enhancement>. Increases maximum MP by 30% -->
+		<set name="icon" val="icon.weapon_mace_of_underworld_i01" />
 		<set name="bodypart" val="rhand" />
 		<set name="crystallizable" val="true" />
 		<set name="weight" val="1090" />
@@ -399,6 +413,7 @@
 	</item>
 	<item id="7714" type="Weapon" name="Mace of The Underworld - Magic Silence">
 		<!-- <Soul Crystal Enhancement>. When using bad magic against a target, casts Silence upon target with a 10% chance of success. Effect 1. -->
+		<set name="icon" val="icon.weapon_mace_of_underworld_i01" />
 		<set name="bodypart" val="rhand" />
 		<set name="crystallizable" val="true" />
 		<set name="weight" val="1090" />
@@ -428,6 +443,7 @@
 	</item>
 	<item id="7715" type="Weapon" name="Mace of The Underworld - Conversion">
 		<!-- <Soul Crystal Enhancement>. Increases maximum MP by 60% and decreases maximum HP by 40%. -->
+		<set name="icon" val="icon.weapon_mace_of_underworld_i01" />
 		<set name="bodypart" val="rhand" />
 		<set name="crystallizable" val="true" />
 		<set name="weight" val="1090" />
@@ -461,6 +477,7 @@
 	</item>
 	<item id="7716" type="Weapon" name="Inferno Staff - Acumen">
 		<!-- <Soul Crystal Enhancement>. Increases Casting Spd. by 15%. -->
+		<set name="icon" val="icon.weapon_inferno_staff_i01" />
 		<set name="bodypart" val="lrhand" />
 		<set name="crystallizable" val="true" />
 		<set name="weight" val="1000" />
@@ -491,6 +508,7 @@
 	</item>
 	<item id="7717" type="Weapon" name="Inferno Staff - Magic Silence">
 		<!-- <Soul Crystal Enhancement>. When using bad magic against a target, casts Silence upon target with a 10% chance of success. Effect 1. -->
+		<set name="icon" val="icon.weapon_inferno_staff_i01" />
 		<set name="bodypart" val="lrhand" />
 		<set name="crystallizable" val="true" />
 		<set name="weight" val="1000" />
@@ -520,6 +538,7 @@
 	</item>
 	<item id="7718" type="Weapon" name="Inferno Staff - Magic Paralyze">
 		<!-- <Soul Crystal Enhancement>. When using bad magic, paralyzes target with a 5% chance of success. Effect 1. -->
+		<set name="icon" val="icon.weapon_inferno_staff_i01" />
 		<set name="bodypart" val="lrhand" />
 		<set name="crystallizable" val="true" />
 		<set name="weight" val="1000" />
@@ -549,6 +568,7 @@
 	</item>
 	<item id="7719" type="Weapon" name="Poleaxe - Critical Stun">
 		<!-- <Soul Crystal Enhancement>. During a critical attack, produces a stun effect at the rate of about 25%. -->
+		<set name="icon" val="icon.weapon_poleaxe_i01" />
 		<set name="bodypart" val="lrhand" />
 		<set name="crystallizable" val="true" />
 		<set name="weight" val="2010" />
@@ -579,6 +599,7 @@
 	</item>
 	<item id="7720" type="Weapon" name="Poleaxe - Towering Blow">
 		<!-- <Soul Crystal Enhancement>. Increases attack range. -->
+		<set name="icon" val="icon.weapon_poleaxe_i01" />
 		<set name="bodypart" val="lrhand" />
 		<set name="crystallizable" val="true" />
 		<set name="weight" val="2010" />
@@ -608,6 +629,7 @@
 	</item>
 	<item id="7721" type="Weapon" name="Poleaxe - Wide Blow">
 		<!-- <Soul Crystal Enhancement>. Broadens angle of attack. -->
+		<set name="icon" val="icon.weapon_poleaxe_i01" />
 		<set name="bodypart" val="lrhand" />
 		<set name="crystallizable" val="true" />
 		<set name="weight" val="2010" />
@@ -638,6 +660,7 @@
 	</item>
 	<item id="7722" type="Weapon" name="Sword of Valhalla - Acumen">
 		<!-- <Soul Crystal Enhancement>. Increases Casting Spd. by 15%. -->
+		<set name="icon" val="icon.weapon_sword_of_valhalla_i01" />
 		<set name="bodypart" val="rhand" />
 		<set name="crystallizable" val="true" />
 		<set name="weight" val="900" />
@@ -667,6 +690,7 @@
 	</item>
 	<item id="7723" type="Weapon" name="Sword of Valhalla - Magic Weakness">
 		<!-- <Soul Crystal Enhancement>. Casts Curse Weakness against the target with a 7% chance of success when using bad magic. Effect 3. -->
+		<set name="icon" val="icon.weapon_sword_of_valhalla_i01" />
 		<set name="bodypart" val="rhand" />
 		<set name="crystallizable" val="true" />
 		<set name="weight" val="900" />
@@ -696,6 +720,7 @@
 	</item>
 	<item id="7724" type="Weapon" name="Sword of Valhalla - Magic Regeneration">
 		<!-- <Soul Crystal Enhancement>. Casts Regeneration upon the target with a 30% chance of success when using good magic. Effect 3. -->
+		<set name="icon" val="icon.weapon_sword_of_valhalla_i01" />
 		<set name="bodypart" val="rhand" />
 		<set name="crystallizable" val="true" />
 		<set name="weight" val="900" />
@@ -725,6 +750,7 @@
 	</item>
 	<item id="7725" type="EtcItem" name="Loot - Gray Pouch">
 		<!-- An item recovered from the swampland. It is a dirty and worn out gray pouch that is ripped here and there. It seems to contain an object that looks like a water bottle. If you double-click it, you can view what it contains. -->
+		<set name="icon" val="icon.etc_pouch_gray_i00" />
 		<set name="item_type" val="none" />
 		<set name="weight" val="1" />
 		<set name="consume_type" val="stackable" />
@@ -732,6 +758,7 @@
 	</item>
 	<item id="7726" type="EtcItem" name="Small Nimble Green Fish - For Beginners">
 		<!-- Double-click to randomly change into another item. The changed item can be used as a regular ingredient to make other items. -->
+		<set name="icon" val="icon.etc_tuna_i06" />
 		<set name="item_type" val="none" />
 		<set name="weight" val="100" />
 		<set name="consume_type" val="stackable" />
@@ -740,6 +767,7 @@
 	</item>
 	<item id="7727" type="EtcItem" name="Small Ugly Green Fish - For Beginners">
 		<!-- Double-click to randomly change into another item. The changed item can be used as a regular ingredient to make other items. -->
+		<set name="icon" val="icon.etc_angler_i06" />
 		<set name="item_type" val="none" />
 		<set name="weight" val="100" />
 		<set name="consume_type" val="stackable" />
@@ -748,6 +776,7 @@
 	</item>
 	<item id="7728" type="EtcItem" name="Small Pudgy Green Fish - For Beginners">
 		<!-- Double-click to randomly change into another item. The changed item can be used as a regular ingredient to make other items. -->
+		<set name="icon" val="icon.etc_bream_i06" />
 		<set name="item_type" val="none" />
 		<set name="weight" val="100" />
 		<set name="consume_type" val="stackable" />
@@ -756,6 +785,7 @@
 	</item>
 	<item id="7729" type="EtcItem" name="Nimble Green Fish - For Beginners">
 		<!-- Double-click to randomly change into another item. The changed item can be used as a regular ingredient to make other items. -->
+		<set name="icon" val="icon.etc_tuna_i06" />
 		<set name="item_type" val="none" />
 		<set name="weight" val="100" />
 		<set name="consume_type" val="stackable" />
@@ -764,6 +794,7 @@
 	</item>
 	<item id="7730" type="EtcItem" name="Ugly Green Fish - For Beginners">
 		<!-- Double-click to randomly change into another item. The changed item can be used as a regular ingredient to make other items. -->
+		<set name="icon" val="icon.etc_angler_i06" />
 		<set name="item_type" val="none" />
 		<set name="weight" val="100" />
 		<set name="consume_type" val="stackable" />
@@ -772,6 +803,7 @@
 	</item>
 	<item id="7731" type="EtcItem" name="Pudgy Green Fish - For Beginners">
 		<!-- Double-click to randomly change into another item. The changed item can be used as a regular ingredient to make other items. -->
+		<set name="icon" val="icon.etc_bream_i06" />
 		<set name="item_type" val="none" />
 		<set name="weight" val="100" />
 		<set name="consume_type" val="stackable" />
@@ -780,6 +812,7 @@
 	</item>
 	<item id="7732" type="EtcItem" name="Large Nimble Green Fish - For Beginners">
 		<!-- Double-click to randomly change into another item. The changed item can be used as a regular ingredient to make other items. -->
+		<set name="icon" val="icon.etc_tuna_i06" />
 		<set name="item_type" val="none" />
 		<set name="weight" val="100" />
 		<set name="consume_type" val="stackable" />
@@ -788,6 +821,7 @@
 	</item>
 	<item id="7733" type="EtcItem" name="Large Ugly Green Fish - For Beginners">
 		<!-- Double-click to randomly change into another item. The changed item can be used as a regular ingredient to make other items. -->
+		<set name="icon" val="icon.etc_angler_i06" />
 		<set name="item_type" val="none" />
 		<set name="weight" val="100" />
 		<set name="consume_type" val="stackable" />
@@ -796,6 +830,7 @@
 	</item>
 	<item id="7734" type="EtcItem" name="Large Pudgy Green Fish - For Beginners">
 		<!-- Double-click to randomly change into another item. The changed item can be used as a regular ingredient to make other items. -->
+		<set name="icon" val="icon.etc_bream_i06" />
 		<set name="item_type" val="none" />
 		<set name="weight" val="100" />
 		<set name="consume_type" val="stackable" />
@@ -804,6 +839,7 @@
 	</item>
 	<item id="7735" type="EtcItem" name="Small Jade Nimble Fish - For Beginners">
 		<!-- Double-click to randomly change into another item. The changed item can be used as a regular ingredient to make other items. -->
+		<set name="icon" val="icon.etc_tuna_i07" />
 		<set name="item_type" val="none" />
 		<set name="weight" val="100" />
 		<set name="consume_type" val="stackable" />
@@ -812,6 +848,7 @@
 	</item>
 	<item id="7736" type="EtcItem" name="Small Jade Ugly Fish - For Beginners">
 		<!-- Double-click to randomly change into another item. The changed item can be used as a regular ingredient to make other items. -->
+		<set name="icon" val="icon.etc_angler_i07" />
 		<set name="item_type" val="none" />
 		<set name="weight" val="100" />
 		<set name="consume_type" val="stackable" />
@@ -819,6 +856,7 @@
 	</item>
 	<item id="7737" type="EtcItem" name="Small Jade Fat Fish - For Beginners">
 		<!-- Double-click to randomly change into another item. The changed item can be used as a regular ingredient to make other items. -->
+		<set name="icon" val="icon.etc_bream_i07" />
 		<set name="item_type" val="none" />
 		<set name="weight" val="100" />
 		<set name="consume_type" val="stackable" />
@@ -827,6 +865,7 @@
 	</item>
 	<item id="7738" type="EtcItem" name="Jade Nimble Fish - For Beginners">
 		<!-- Double-click to randomly change into another item. The changed item can be used as a regular ingredient to make other items. -->
+		<set name="icon" val="icon.etc_tuna_i07" />
 		<set name="item_type" val="none" />
 		<set name="weight" val="100" />
 		<set name="consume_type" val="stackable" />
@@ -835,6 +874,7 @@
 	</item>
 	<item id="7739" type="EtcItem" name="Jade Ugly Fish - For Beginners">
 		<!-- Double-click to randomly change into another item. The changed item can be used as a regular ingredient to make other items. -->
+		<set name="icon" val="icon.etc_angler_i07" />
 		<set name="item_type" val="none" />
 		<set name="weight" val="100" />
 		<set name="consume_type" val="stackable" />
@@ -843,6 +883,7 @@
 	</item>
 	<item id="7740" type="EtcItem" name="Jade Fat Fish - For Beginners">
 		<!-- Double-click to randomly change into another item. The changed item can be used as a regular ingredient to make other items. -->
+		<set name="icon" val="icon.etc_bream_i07" />
 		<set name="item_type" val="none" />
 		<set name="weight" val="100" />
 		<set name="consume_type" val="stackable" />
@@ -851,6 +892,7 @@
 	</item>
 	<item id="7741" type="EtcItem" name="Large Jade Nimble Fish - For Beginners">
 		<!-- Double-click to randomly change into another item. The changed item can be used as a regular ingredient to make other items. -->
+		<set name="icon" val="icon.etc_tuna_i07" />
 		<set name="item_type" val="none" />
 		<set name="weight" val="100" />
 		<set name="consume_type" val="stackable" />
@@ -859,6 +901,7 @@
 	</item>
 	<item id="7742" type="EtcItem" name="Large Jade Ugly Fish - For Beginners">
 		<!-- Double-click to randomly change into another item. The changed item can be used as a regular ingredient to make other items. -->
+		<set name="icon" val="icon.etc_angler_i07" />
 		<set name="item_type" val="none" />
 		<set name="weight" val="100" />
 		<set name="consume_type" val="stackable" />
@@ -867,6 +910,7 @@
 	</item>
 	<item id="7743" type="EtcItem" name="Large Jade Fat Fish - For Beginners">
 		<!-- Double-click to randomly change into another item. The changed item can be used as a regular ingredient to make other items. -->
+		<set name="icon" val="icon.etc_bream_i07" />
 		<set name="item_type" val="none" />
 		<set name="weight" val="100" />
 		<set name="consume_type" val="stackable" />
@@ -874,6 +918,7 @@
 	</item>
 	<item id="7744" type="EtcItem" name="Small Blue Nimble Fish - For Beginners">
 		<!-- Double-click to randomly change into another item. The changed item can be used as a regular ingredient to make other items. -->
+		<set name="icon" val="icon.etc_tuna_i01" />
 		<set name="item_type" val="none" />
 		<set name="weight" val="100" />
 		<set name="consume_type" val="stackable" />
@@ -882,6 +927,7 @@
 	</item>
 	<item id="7745" type="EtcItem" name="Small Blue Ugly Fish - For Beginners">
 		<!-- Double-click to randomly change into another item. The changed item can be used as a regular ingredient to make other items. -->
+		<set name="icon" val="icon.etc_angler_i01" />
 		<set name="item_type" val="none" />
 		<set name="weight" val="100" />
 		<set name="consume_type" val="stackable" />
@@ -889,6 +935,7 @@
 	</item>
 	<item id="7746" type="EtcItem" name="Small Blue Fat Fish - For Beginners">
 		<!-- Double-click to randomly change into another item. The changed item can be used as a regular ingredient to make other items. -->
+		<set name="icon" val="icon.etc_bream_i01" />
 		<set name="item_type" val="none" />
 		<set name="weight" val="100" />
 		<set name="consume_type" val="stackable" />
@@ -896,6 +943,7 @@
 	</item>
 	<item id="7747" type="EtcItem" name="Blue Nimble Fish - For Beginners">
 		<!-- Double-click to randomly change into another item. The changed item can be used as a regular ingredient to make other items. -->
+		<set name="icon" val="icon.etc_tuna_i01" />
 		<set name="item_type" val="none" />
 		<set name="weight" val="100" />
 		<set name="consume_type" val="stackable" />
@@ -903,6 +951,7 @@
 	</item>
 	<item id="7748" type="EtcItem" name="Blue Ugly Fish - For Beginners">
 		<!-- Double-click to randomly change into another item. The changed item can be used as a regular ingredient to make other items. -->
+		<set name="icon" val="icon.etc_angler_i01" />
 		<set name="item_type" val="none" />
 		<set name="weight" val="100" />
 		<set name="consume_type" val="stackable" />
@@ -910,6 +959,7 @@
 	</item>
 	<item id="7749" type="EtcItem" name="Blue Fat Fish - For Beginners">
 		<!-- Double-click to randomly change into another item. The changed item can be used as a regular ingredient to make other items. -->
+		<set name="icon" val="icon.etc_bream_i01" />
 		<set name="item_type" val="none" />
 		<set name="weight" val="100" />
 		<set name="consume_type" val="stackable" />
@@ -917,6 +967,7 @@
 	</item>
 	<item id="7750" type="EtcItem" name="Large Blue Nimble Fish - For Beginners">
 		<!-- Double-click to randomly change into another item. The changed item can be used as a regular ingredient to make other items. -->
+		<set name="icon" val="icon.etc_tuna_i01" />
 		<set name="item_type" val="none" />
 		<set name="weight" val="100" />
 		<set name="consume_type" val="stackable" />
@@ -924,6 +975,7 @@
 	</item>
 	<item id="7751" type="EtcItem" name="Large Blue Ugly Fish - For Beginners">
 		<!-- Double-click to randomly change into another item. The changed item can be used as a regular ingredient to make other items. -->
+		<set name="icon" val="icon.etc_angler_i01" />
 		<set name="item_type" val="none" />
 		<set name="weight" val="100" />
 		<set name="consume_type" val="stackable" />
@@ -931,6 +983,7 @@
 	</item>
 	<item id="7752" type="EtcItem" name="Large Blue Fat Fish - For Beginners">
 		<!-- Double-click to randomly change into another item. The changed item can be used as a regular ingredient to make other items. -->
+		<set name="icon" val="icon.etc_bream_i01" />
 		<set name="item_type" val="none" />
 		<set name="weight" val="100" />
 		<set name="consume_type" val="stackable" />
@@ -938,6 +991,7 @@
 	</item>
 	<item id="7753" type="EtcItem" name="Small Yellow Nimble Fish - For Beginners">
 		<!-- Double-click to randomly change into another item. The changed item can be used as a regular ingredient to make other items. -->
+		<set name="icon" val="icon.etc_tuna_i02" />
 		<set name="item_type" val="none" />
 		<set name="weight" val="100" />
 		<set name="consume_type" val="stackable" />
@@ -945,6 +999,7 @@
 	</item>
 	<item id="7754" type="EtcItem" name="Small Yellow Ugly Fish - For Beginners">
 		<!-- Double-click to randomly change into another item. The changed item can be used as a regular ingredient to make other items. -->
+		<set name="icon" val="icon.etc_angler_i02" />
 		<set name="item_type" val="none" />
 		<set name="weight" val="100" />
 		<set name="consume_type" val="stackable" />
@@ -952,6 +1007,7 @@
 	</item>
 	<item id="7755" type="EtcItem" name="Small Yellow Fat Fish - For Beginners">
 		<!-- Double-click to randomly change into another item. The changed item can be used as a regular ingredient to make other items. -->
+		<set name="icon" val="icon.etc_bream_i02" />
 		<set name="item_type" val="none" />
 		<set name="weight" val="100" />
 		<set name="consume_type" val="stackable" />
@@ -959,6 +1015,7 @@
 	</item>
 	<item id="7756" type="EtcItem" name="Yellow Nimble Fish - For Beginners">
 		<!-- Double-click to randomly change into another item. The changed item can be used as a regular ingredient to make other items. -->
+		<set name="icon" val="icon.etc_tuna_i02" />
 		<set name="item_type" val="none" />
 		<set name="weight" val="100" />
 		<set name="consume_type" val="stackable" />
@@ -966,6 +1023,7 @@
 	</item>
 	<item id="7757" type="EtcItem" name="Yellow Ugly Fish - For Beginners">
 		<!-- Double-click to randomly change into another item. The changed item can be used as a regular ingredient to make other items. -->
+		<set name="icon" val="icon.etc_angler_i02" />
 		<set name="item_type" val="none" />
 		<set name="weight" val="100" />
 		<set name="consume_type" val="stackable" />
@@ -974,6 +1032,7 @@
 	</item>
 	<item id="7758" type="EtcItem" name="Yellow Fat Fish - For Beginners">
 		<!-- Double-click to randomly change into another item. The changed item can be used as a regular ingredient to make other items. -->
+		<set name="icon" val="icon.etc_bream_i02" />
 		<set name="item_type" val="none" />
 		<set name="weight" val="100" />
 		<set name="consume_type" val="stackable" />
@@ -981,6 +1040,7 @@
 	</item>
 	<item id="7759" type="EtcItem" name="Large Yellow Nimble Fish - For Beginners">
 		<!-- Double-click to randomly change into another item. The changed item can be used as a regular ingredient to make other items. -->
+		<set name="icon" val="icon.etc_tuna_i02" />
 		<set name="item_type" val="none" />
 		<set name="weight" val="100" />
 		<set name="consume_type" val="stackable" />
@@ -988,6 +1048,7 @@
 	</item>
 	<item id="7760" type="EtcItem" name="Large Yellow Ugly Fish - For Beginners">
 		<!-- Double-click to randomly change into another item. The changed item can be used as a regular ingredient to make other items. -->
+		<set name="icon" val="icon.etc_angler_i02" />
 		<set name="item_type" val="none" />
 		<set name="weight" val="100" />
 		<set name="consume_type" val="stackable" />
@@ -995,6 +1056,7 @@
 	</item>
 	<item id="7761" type="EtcItem" name="Large Yellow Fat Fish - For Beginners">
 		<!-- Double-click to randomly change into another item. The changed item can be used as a regular ingredient to make other items. -->
+		<set name="icon" val="icon.etc_bream_i02" />
 		<set name="item_type" val="none" />
 		<set name="weight" val="100" />
 		<set name="consume_type" val="stackable" />
@@ -1002,6 +1064,7 @@
 	</item>
 	<item id="7762" type="EtcItem" name="Small Orange Nimble Fish - For Beginners">
 		<!-- Double-click to randomly change into another item. The changed item can be used as a regular ingredient to make other items. -->
+		<set name="icon" val="icon.etc_tuna_i08" />
 		<set name="item_type" val="none" />
 		<set name="weight" val="100" />
 		<set name="consume_type" val="stackable" />
@@ -1009,6 +1072,7 @@
 	</item>
 	<item id="7763" type="EtcItem" name="Small Orange Ugly Fish - For Beginners">
 		<!-- Double-click to randomly change into another item. The changed item can be used as a regular ingredient to make other items. -->
+		<set name="icon" val="icon.etc_angler_i08" />
 		<set name="item_type" val="none" />
 		<set name="weight" val="100" />
 		<set name="consume_type" val="stackable" />
@@ -1016,6 +1080,7 @@
 	</item>
 	<item id="7764" type="EtcItem" name="Small Orange Fat Fish - For Beginners">
 		<!-- Double-click to randomly change into another item. The changed item can be used as a regular ingredient to make other items. -->
+		<set name="icon" val="icon.etc_bream_i08" />
 		<set name="item_type" val="none" />
 		<set name="weight" val="100" />
 		<set name="consume_type" val="stackable" />
@@ -1023,6 +1088,7 @@
 	</item>
 	<item id="7765" type="EtcItem" name="Orange Nimble Fish - For Beginners">
 		<!-- Double-click to randomly change into another item. The changed item can be used as a regular ingredient to make other items. -->
+		<set name="icon" val="icon.etc_tuna_i08" />
 		<set name="item_type" val="none" />
 		<set name="weight" val="100" />
 		<set name="consume_type" val="stackable" />
@@ -1030,6 +1096,7 @@
 	</item>
 	<item id="7766" type="EtcItem" name="Orange Ugly Fish - For Beginners">
 		<!-- Double-click to randomly change into another item. The changed item can be used as a regular ingredient to make other items. -->
+		<set name="icon" val="icon.etc_angler_i08" />
 		<set name="item_type" val="none" />
 		<set name="weight" val="100" />
 		<set name="consume_type" val="stackable" />
@@ -1037,6 +1104,7 @@
 	</item>
 	<item id="7767" type="EtcItem" name="Orange Fat Fish - For Beginners">
 		<!-- Double-click to randomly change into another item. The changed item can be used as a regular ingredient to make other items. -->
+		<set name="icon" val="icon.etc_bream_i08" />
 		<set name="item_type" val="none" />
 		<set name="weight" val="100" />
 		<set name="consume_type" val="stackable" />
@@ -1044,6 +1112,7 @@
 	</item>
 	<item id="7768" type="EtcItem" name="Large Orange Nimble Fish - For Beginners">
 		<!-- Double-click to randomly change into another item. The changed item can be used as a regular ingredient to make other items. -->
+		<set name="icon" val="icon.etc_tuna_i08" />
 		<set name="item_type" val="none" />
 		<set name="weight" val="100" />
 		<set name="consume_type" val="stackable" />
@@ -1051,6 +1120,7 @@
 	</item>
 	<item id="7769" type="EtcItem" name="Large Orange Ugly Fish - For Beginners">
 		<!-- Double-click to randomly change into another item. The changed item can be used as a regular ingredient to make other items. -->
+		<set name="icon" val="icon.etc_angler_i08" />
 		<set name="item_type" val="none" />
 		<set name="weight" val="100" />
 		<set name="consume_type" val="stackable" />
@@ -1058,6 +1128,7 @@
 	</item>
 	<item id="7770" type="EtcItem" name="Large Orange Fat Fish - For Beginners">
 		<!-- Double-click to randomly change into another item. The changed item can be used as a regular ingredient to make other items. -->
+		<set name="icon" val="icon.etc_bream_i08" />
 		<set name="item_type" val="none" />
 		<set name="weight" val="100" />
 		<set name="consume_type" val="stackable" />
@@ -1065,6 +1136,7 @@
 	</item>
 	<item id="7771" type="EtcItem" name="Small Purple Nimble Fish - For Beginners">
 		<!-- Double-click to randomly change into another item. The changed item can be used as a regular ingredient to make other items. -->
+		<set name="icon" val="icon.etc_tuna_i04" />
 		<set name="item_type" val="none" />
 		<set name="weight" val="100" />
 		<set name="consume_type" val="stackable" />
@@ -1072,6 +1144,7 @@
 	</item>
 	<item id="7772" type="EtcItem" name="Small Purple Ugly Fish - For Beginners">
 		<!-- Double-click to randomly change into another item. The changed item can be used as a regular ingredient to make other items. -->
+		<set name="icon" val="icon.etc_angler_i04" />
 		<set name="item_type" val="none" />
 		<set name="weight" val="100" />
 		<set name="consume_type" val="stackable" />
@@ -1079,6 +1152,7 @@
 	</item>
 	<item id="7773" type="EtcItem" name="Small Purple Fat Fish - For Beginners">
 		<!-- Double-click to randomly change into another item. The changed item can be used as a regular ingredient to make other items. -->
+		<set name="icon" val="icon.etc_bream_i04" />
 		<set name="item_type" val="none" />
 		<set name="weight" val="100" />
 		<set name="consume_type" val="stackable" />
@@ -1087,6 +1161,7 @@
 	</item>
 	<item id="7774" type="EtcItem" name="Purple Nimble Fish - For Beginners">
 		<!-- Double-click to randomly change into another item. The changed item can be used as a regular ingredient to make other items. -->
+		<set name="icon" val="icon.etc_tuna_i04" />
 		<set name="item_type" val="none" />
 		<set name="weight" val="100" />
 		<set name="consume_type" val="stackable" />
@@ -1094,6 +1169,7 @@
 	</item>
 	<item id="7775" type="EtcItem" name="Purple Ugly Fish - For Beginners">
 		<!-- Double-click to randomly change into another item. The changed item can be used as a regular ingredient to make other items. -->
+		<set name="icon" val="icon.etc_angler_i04" />
 		<set name="item_type" val="none" />
 		<set name="weight" val="100" />
 		<set name="consume_type" val="stackable" />
@@ -1101,6 +1177,7 @@
 	</item>
 	<item id="7776" type="EtcItem" name="Purple Fat Fish - For Beginners">
 		<!-- Double-click to randomly change into another item. The changed item can be used as a regular ingredient to make other items. -->
+		<set name="icon" val="icon.etc_bream_i04" />
 		<set name="item_type" val="none" />
 		<set name="weight" val="100" />
 		<set name="consume_type" val="stackable" />
@@ -1108,6 +1185,7 @@
 	</item>
 	<item id="7777" type="EtcItem" name="Large Purple Nimble Fish - For Beginners">
 		<!-- Double-click to randomly change into another item. The changed item can be used as a regular ingredient to make other items. -->
+		<set name="icon" val="icon.etc_tuna_i04" />
 		<set name="item_type" val="none" />
 		<set name="weight" val="100" />
 		<set name="consume_type" val="stackable" />
@@ -1115,6 +1193,7 @@
 	</item>
 	<item id="7778" type="EtcItem" name="Large Purple Ugly Fish - For Beginners">
 		<!-- Double-click to randomly change into another item. The changed item can be used as a regular ingredient to make other items. -->
+		<set name="icon" val="icon.etc_angler_i04" />
 		<set name="item_type" val="none" />
 		<set name="weight" val="100" />
 		<set name="consume_type" val="stackable" />
@@ -1122,6 +1201,7 @@
 	</item>
 	<item id="7779" type="EtcItem" name="Large Purple Fat Fish - For Beginners">
 		<!-- Double-click to randomly change into another item. The changed item can be used as a regular ingredient to make other items. -->
+		<set name="icon" val="icon.etc_bream_i04" />
 		<set name="item_type" val="none" />
 		<set name="weight" val="100" />
 		<set name="consume_type" val="stackable" />
@@ -1129,6 +1209,7 @@
 	</item>
 	<item id="7780" type="EtcItem" name="Small Red Nimble Fish - For Beginners">
 		<!-- Double-click to randomly change into another item. The changed item can be used as a regular ingredient to make other items. -->
+		<set name="icon" val="icon.etc_tuna_i03" />
 		<set name="item_type" val="none" />
 		<set name="weight" val="100" />
 		<set name="consume_type" val="stackable" />
@@ -1136,6 +1217,7 @@
 	</item>
 	<item id="7781" type="EtcItem" name="Small Red Ugly Fish - For Beginners">
 		<!-- Double-click to randomly change into another item. The changed item can be used as a regular ingredient to make other items. -->
+		<set name="icon" val="icon.etc_angler_i03" />
 		<set name="item_type" val="none" />
 		<set name="weight" val="100" />
 		<set name="consume_type" val="stackable" />
@@ -1143,6 +1225,7 @@
 	</item>
 	<item id="7782" type="EtcItem" name="Small Red Fat Fish - For Beginners">
 		<!-- Double-click to randomly change into another item. The changed item can be used as a regular ingredient to make other items. -->
+		<set name="icon" val="icon.etc_bream_i03" />
 		<set name="item_type" val="none" />
 		<set name="weight" val="100" />
 		<set name="consume_type" val="stackable" />
@@ -1150,6 +1233,7 @@
 	</item>
 	<item id="7783" type="EtcItem" name="Red Nimble Fish - For Beginners">
 		<!-- Double-click to randomly change into another item. The changed item can be used as a regular ingredient to make other items. -->
+		<set name="icon" val="icon.etc_tuna_i03" />
 		<set name="item_type" val="none" />
 		<set name="weight" val="100" />
 		<set name="consume_type" val="stackable" />
@@ -1157,6 +1241,7 @@
 	</item>
 	<item id="7784" type="EtcItem" name="Red Ugly Fish - For Beginners">
 		<!-- Double-click to randomly change into another item. The changed item can be used as a regular ingredient to make other items. -->
+		<set name="icon" val="icon.etc_angler_i03" />
 		<set name="item_type" val="none" />
 		<set name="weight" val="100" />
 		<set name="consume_type" val="stackable" />
@@ -1164,6 +1249,7 @@
 	</item>
 	<item id="7785" type="EtcItem" name="Red Fat Fish - For Beginners">
 		<!-- Double-click to randomly change into another item. The changed item can be used as a regular ingredient to make other items. -->
+		<set name="icon" val="icon.etc_bream_i03" />
 		<set name="item_type" val="none" />
 		<set name="weight" val="100" />
 		<set name="consume_type" val="stackable" />
@@ -1171,6 +1257,7 @@
 	</item>
 	<item id="7786" type="EtcItem" name="Large Red Nimble Fish - For Beginners">
 		<!-- Double-click to randomly change into another item. The changed item can be used as a regular ingredient to make other items. -->
+		<set name="icon" val="icon.etc_tuna_i03" />
 		<set name="item_type" val="none" />
 		<set name="weight" val="100" />
 		<set name="consume_type" val="stackable" />
@@ -1178,6 +1265,7 @@
 	</item>
 	<item id="7787" type="EtcItem" name="Large Red Ugly Fish - For Beginners">
 		<!-- Double-click to randomly change into another item. The changed item can be used as a regular ingredient to make other items. -->
+		<set name="icon" val="icon.etc_angler_i03" />
 		<set name="item_type" val="none" />
 		<set name="weight" val="100" />
 		<set name="consume_type" val="stackable" />
@@ -1185,6 +1273,7 @@
 	</item>
 	<item id="7788" type="EtcItem" name="Large Red Fat Fish - For Beginners">
 		<!-- Double-click to randomly change into another item. The changed item can be used as a regular ingredient to make other items. -->
+		<set name="icon" val="icon.etc_bream_i03" />
 		<set name="item_type" val="none" />
 		<set name="weight" val="100" />
 		<set name="consume_type" val="stackable" />
@@ -1192,6 +1281,7 @@
 	</item>
 	<item id="7789" type="EtcItem" name="Small White Nimble Fish - For Beginners">
 		<!-- Double-click to randomly change into another item. The changed item can be used as a regular ingredient to make other items. -->
+		<set name="icon" val="icon.etc_tuna_i00" />
 		<set name="item_type" val="none" />
 		<set name="weight" val="100" />
 		<set name="consume_type" val="stackable" />
@@ -1199,6 +1289,7 @@
 	</item>
 	<item id="7790" type="EtcItem" name="Small White Ugly Fish - For Beginners">
 		<!-- Double-click to randomly change into another item. The changed item can be used as a regular ingredient to make other items. -->
+		<set name="icon" val="icon.etc_angler_i00" />
 		<set name="item_type" val="none" />
 		<set name="weight" val="100" />
 		<set name="consume_type" val="stackable" />
@@ -1206,6 +1297,7 @@
 	</item>
 	<item id="7791" type="EtcItem" name="Small White Fat Fish - For Beginners">
 		<!-- Double-click to randomly change into another item. The changed item can be used as a regular ingredient to make other items. -->
+		<set name="icon" val="icon.etc_bream_i00" />
 		<set name="item_type" val="none" />
 		<set name="weight" val="100" />
 		<set name="consume_type" val="stackable" />
@@ -1213,6 +1305,7 @@
 	</item>
 	<item id="7792" type="EtcItem" name="White Nimble Fish - For Beginners">
 		<!-- Double-click to randomly change into another item. The changed item can be used as a regular ingredient to make other items. -->
+		<set name="icon" val="icon.etc_tuna_i00" />
 		<set name="item_type" val="none" />
 		<set name="weight" val="100" />
 		<set name="consume_type" val="stackable" />
@@ -1220,6 +1313,7 @@
 	</item>
 	<item id="7793" type="EtcItem" name="White Ugly Fish - For Beginners">
 		<!-- Double-click to randomly change into another item. The changed item can be used as a regular ingredient to make other items. -->
+		<set name="icon" val="icon.etc_angler_i00" />
 		<set name="item_type" val="none" />
 		<set name="weight" val="100" />
 		<set name="consume_type" val="stackable" />
@@ -1227,6 +1321,7 @@
 	</item>
 	<item id="7794" type="EtcItem" name="White Fat Fish - For Beginners">
 		<!-- Double-click to randomly change into another item. The changed item can be used as a regular ingredient to make other items. -->
+		<set name="icon" val="icon.etc_bream_i00" />
 		<set name="item_type" val="none" />
 		<set name="weight" val="100" />
 		<set name="consume_type" val="stackable" />
@@ -1234,6 +1329,7 @@
 	</item>
 	<item id="7795" type="EtcItem" name="Large White Nimble Fish - For Beginners">
 		<!-- Double-click to randomly change into another item. The changed item can be used as a regular ingredient to make other items. -->
+		<set name="icon" val="icon.etc_tuna_i00" />
 		<set name="item_type" val="none" />
 		<set name="weight" val="100" />
 		<set name="consume_type" val="stackable" />
@@ -1241,6 +1337,7 @@
 	</item>
 	<item id="7796" type="EtcItem" name="Large White Ugly Fish - For Beginners">
 		<!-- Double-click to randomly change into another item. The changed item can be used as a regular ingredient to make other items. -->
+		<set name="icon" val="icon.etc_angler_i00" />
 		<set name="item_type" val="none" />
 		<set name="weight" val="100" />
 		<set name="consume_type" val="stackable" />
@@ -1248,6 +1345,7 @@
 	</item>
 	<item id="7797" type="EtcItem" name="Large White Fat Fish - For Beginners">
 		<!-- Double-click to randomly change into another item. The changed item can be used as a regular ingredient to make other items. -->
+		<set name="icon" val="icon.etc_bream_i00" />
 		<set name="item_type" val="none" />
 		<set name="weight" val="100" />
 		<set name="consume_type" val="stackable" />
@@ -1255,6 +1353,7 @@
 	</item>
 	<item id="7798" type="EtcItem" name="Small Black Nimble Fish: For Beginners">
 		<!-- Double-click to randomly change into another item. The changed item can be used as a regular ingredient to make other items. -->
+		<set name="icon" val="icon.etc_tuna_i05" />
 		<set name="item_type" val="none" />
 		<set name="weight" val="100" />
 		<set name="consume_type" val="stackable" />
@@ -1262,6 +1361,7 @@
 	</item>
 	<item id="7799" type="EtcItem" name="Small Black Ugly Fish - For Beginners">
 		<!-- Double-click to randomly change into another item. The changed item can be used as a regular ingredient to make other items. -->
+		<set name="icon" val="icon.etc_angler_i05" />
 		<set name="item_type" val="none" />
 		<set name="weight" val="100" />
 		<set name="consume_type" val="stackable" />
