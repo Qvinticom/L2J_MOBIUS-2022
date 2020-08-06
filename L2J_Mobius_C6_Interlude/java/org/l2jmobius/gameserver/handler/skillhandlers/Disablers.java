@@ -17,9 +17,12 @@
 package org.l2jmobius.gameserver.handler.skillhandlers;
 
 import java.io.IOException;
+import java.util.ArrayList;
+import java.util.List;
 import java.util.logging.Logger;
 
 import org.l2jmobius.Config;
+import org.l2jmobius.commons.concurrent.ThreadPool;
 import org.l2jmobius.commons.util.Rnd;
 import org.l2jmobius.gameserver.ai.AttackableAI;
 import org.l2jmobius.gameserver.ai.CtrlEvent;
@@ -38,6 +41,7 @@ import org.l2jmobius.gameserver.model.actor.Summon;
 import org.l2jmobius.gameserver.model.actor.instance.PetInstance;
 import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
 import org.l2jmobius.gameserver.model.actor.instance.SiegeSummonInstance;
+import org.l2jmobius.gameserver.model.actor.tasks.player.CancelSkillRestoreTask;
 import org.l2jmobius.gameserver.model.skills.Formulas;
 import org.l2jmobius.gameserver.model.skills.Stat;
 import org.l2jmobius.gameserver.network.SystemMessageId;
@@ -427,6 +431,8 @@ public class Disablers implements ISkillHandler
 							}
 							break;
 						}
+						
+						final List<Skill> cancelledBuffs = new ArrayList<>();
 						int lvlmodifier = 52 + (skill.getLevel() * 2);
 						if (skill.getLevel() == 12)
 						{
@@ -480,6 +486,15 @@ public class Disablers implements ISkillHandler
 										
 										if (Rnd.get(100) < rate)
 										{
+											if (Config.RESTORE_CANCELLED_BUFFS_SECONDS > 0)
+											{
+												// store them
+												if (!cancelledBuffs.contains(e.getSkill()))
+												{
+													cancelledBuffs.add(e.getSkill());
+												}
+											}
+											// cancel them
 											e.exit(true);
 											maxfive--;
 											if (maxfive == 0)
@@ -489,6 +504,10 @@ public class Disablers implements ISkillHandler
 										}
 									}
 								}
+							}
+							if ((Config.RESTORE_CANCELLED_BUFFS_SECONDS > 0) && (cancelledBuffs.size() > 0))
+							{
+								ThreadPool.schedule(new CancelSkillRestoreTask((PlayerInstance) target, cancelledBuffs), Config.RESTORE_CANCELLED_BUFFS_SECONDS * 1000);
 							}
 						}
 						else if (creature instanceof PlayerInstance)

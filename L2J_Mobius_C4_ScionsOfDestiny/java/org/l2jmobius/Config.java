@@ -86,6 +86,7 @@ public class Config
 	private static final String EVENT_TW_CONFIG_FILE = "./config/events/TW.ini";
 	// custom
 	private static final String BANK_CONFIG_FILE = "./config/custom/Bank.ini";
+	private static final String CANCEL_SKILL_RESTORE_BUFFS_CONFIG_FILE = "./config/custom/CancelSkillRestoreBuffs.ini";
 	private static final String CHAMPION_CONFIG_FILE = "./config/custom/Champion.ini";
 	private static final String MERCHANT_ZERO_SELL_PRICE_CONFIG_FILE = "./config/custom/MerchantZeroSellPrice.ini";
 	private static final String OFFLINE_CONFIG_FILE = "./config/custom/Offline.ini";
@@ -537,6 +538,8 @@ public class Config
 	public static boolean BANKING_SYSTEM_ENABLED;
 	public static int BANKING_SYSTEM_GOLDBARS;
 	public static int BANKING_SYSTEM_ADENA;
+	
+	public static int RESTORE_CANCELLED_BUFFS_SECONDS;
 	
 	public static int BUFFER_MAX_SCHEMES;
 	public static int BUFFER_STATIC_BUFF_COST;
@@ -1713,6 +1716,12 @@ public class Config
 		BANKING_SYSTEM_ENABLED = bankConfig.getBoolean("BankingEnabled", false);
 		BANKING_SYSTEM_GOLDBARS = bankConfig.getInt("BankingGoldbarCount", 1);
 		BANKING_SYSTEM_ADENA = bankConfig.getInt("BankingAdenaCount", 500000000);
+	}
+	
+	public static void loadCancelSkillRestoreBuffsConfig()
+	{
+		final PropertiesParser cancelSkillRestoreBuffsConfig = new PropertiesParser(CANCEL_SKILL_RESTORE_BUFFS_CONFIG_FILE);
+		RESTORE_CANCELLED_BUFFS_SECONDS = cancelSkillRestoreBuffsConfig.getInt("SecondsToReturnCancelledBuffs", 0);
 	}
 	
 	public static void loadBufferConfig()
@@ -3025,6 +3034,7 @@ public class Config
 			loadgeodataConfig();
 			
 			// Custom
+			loadCancelSkillRestoreBuffsConfig();
 			loadChampionConfig();
 			loadMerchantZeroPriceConfig();
 			loadWeddingConfig();
