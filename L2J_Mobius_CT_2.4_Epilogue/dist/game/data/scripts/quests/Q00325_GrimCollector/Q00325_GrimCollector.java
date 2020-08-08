@@ -133,36 +133,33 @@ public class Q00325_GrimCollector extends Quest
 			case "30434-06.html":
 			case "30434-07.html":
 			{
-				if (hasQuestItems(player, getRegisteredItemIds()))
+				final long head = getQuestItemsCount(player, ZOMBIE_HEAD);
+				final long heart = getQuestItemsCount(player, ZOMBIE_HEART);
+				final long liver = getQuestItemsCount(player, ZOMBIE_LIVER);
+				final long skull = getQuestItemsCount(player, SKULL);
+				final long rib = getQuestItemsCount(player, RIB_BONE);
+				final long spine = getQuestItemsCount(player, SPINE);
+				final long arm = getQuestItemsCount(player, ARM_BONE);
+				final long thigh = getQuestItemsCount(player, THIGH_BONE);
+				final long complete = getQuestItemsCount(player, COMPLETE_SKELETON);
+				final long totalCount = (head + heart + liver + skull + rib + spine + arm + thigh + complete);
+				if (totalCount > 0)
 				{
-					final long head = getQuestItemsCount(player, ZOMBIE_HEAD);
-					final long heart = getQuestItemsCount(player, ZOMBIE_HEART);
-					final long liver = getQuestItemsCount(player, ZOMBIE_LIVER);
-					final long skull = getQuestItemsCount(player, SKULL);
-					final long rib = getQuestItemsCount(player, RIB_BONE);
-					final long spine = getQuestItemsCount(player, SPINE);
-					final long arm = getQuestItemsCount(player, ARM_BONE);
-					final long thigh = getQuestItemsCount(player, THIGH_BONE);
-					final long complete = getQuestItemsCount(player, COMPLETE_SKELETON);
-					final long totalCount = (head + heart + liver + skull + rib + spine + arm + thigh + complete);
-					if (totalCount > 0)
+					long sum = ((head * 30) + (heart * 20) + (liver * 20) + (skull * 100) + (rib * 40) + (spine * 14) + (arm * 14) + (thigh * 14));
+					if (totalCount >= 10)
 					{
-						long sum = ((head * 30) + (heart * 20) + (liver * 20) + (skull * 100) + (rib * 40) + (spine * 14) + (arm * 14) + (thigh * 14));
-						if (totalCount >= 10)
-						{
-							sum += 1629;
-						}
-						
-						if (complete > 0)
-						{
-							sum += 543 + (complete * 341);
-						}
-						
-						giveAdena(player, sum, true);
+						sum += 1629;
 					}
 					
-					takeItems(player, -1, getRegisteredItemIds());
+					if (complete > 0)
+					{
+						sum += 543 + (complete * 341);
+					}
+					
+					giveAdena(player, sum, true);
 				}
+				
+				takeItems(player, -1, ZOMBIE_HEAD, ZOMBIE_HEART, ZOMBIE_LIVER, SKULL, RIB_BONE, SPINE, ARM_BONE, THIGH_BONE, COMPLETE_SKELETON);
 				
 				if (event.equals("30434-06.html"))
 				{
