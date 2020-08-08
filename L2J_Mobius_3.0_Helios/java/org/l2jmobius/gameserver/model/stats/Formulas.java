@@ -48,6 +48,7 @@ import org.l2jmobius.gameserver.model.skills.BuffInfo;
 import org.l2jmobius.gameserver.model.skills.Skill;
 import org.l2jmobius.gameserver.model.skills.SkillCaster;
 import org.l2jmobius.gameserver.network.SystemMessageId;
+import org.l2jmobius.gameserver.network.serverpackets.ExMagicAttackInfo;
 import org.l2jmobius.gameserver.network.serverpackets.SystemMessage;
 import org.l2jmobius.gameserver.util.Util;
 
@@ -698,6 +699,7 @@ public class Formulas
 				sm.addString(target.getName());
 				sm.addSkillName(skill);
 				attacker.sendPacket(sm);
+				attacker.sendPacket(new ExMagicAttackInfo(attacker.getObjectId(), target.getObjectId(), ExMagicAttackInfo.RESISTED));
 				return false;
 			}
 		}
@@ -729,6 +731,7 @@ public class Formulas
 			sm.addString(target.getName());
 			sm.addSkillName(skill);
 			attacker.sendPacket(sm);
+			attacker.sendPacket(new ExMagicAttackInfo(attacker.getObjectId(), target.getObjectId(), ExMagicAttackInfo.RESISTED));
 			return false;
 		}
 		return true;
