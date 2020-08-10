@@ -31,6 +31,7 @@ import org.l2jmobius.gameserver.model.actor.instance.ClassMasterInstance;
 import org.l2jmobius.gameserver.model.actor.instance.NpcInstance;
 import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
 import org.l2jmobius.gameserver.model.actor.instance.SymbolMakerInstance;
+import org.l2jmobius.gameserver.model.entity.Rebirth;
 import org.l2jmobius.gameserver.model.entity.event.CTF;
 import org.l2jmobius.gameserver.model.entity.event.DM;
 import org.l2jmobius.gameserver.model.entity.event.GameEvent;
@@ -307,10 +308,13 @@ public class RequestBypassToServer extends GameClientPacket
 					player.processQuestEvent(p.substring(0, idx), p.substring(idx).trim());
 				}
 			}
-			
-			if (_command.startsWith("OlympiadArenaChange"))
+			else if (_command.startsWith("OlympiadArenaChange"))
 			{
 				Olympiad.bypassChangeArena(_command, player);
+			}
+			else if (_command.startsWith("custom_rebirth_"))
+			{
+				Rebirth.getInstance().handleCommand(player, _command);
 			}
 		}
 		catch (Exception e)

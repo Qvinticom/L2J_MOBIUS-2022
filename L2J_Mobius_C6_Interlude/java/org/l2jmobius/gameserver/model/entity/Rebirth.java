@@ -125,7 +125,6 @@ public class Rebirth
 			player.sendMessage("You do not meet the level requirement for a Rebirth!");
 			return;
 		}
-		
 		else if (player.isSubClassActive())
 		{
 			player.sendMessage("Please switch to your Main Class before attempting a Rebirth.");
@@ -198,7 +197,6 @@ public class Rebirth
 			
 			// Resets character to first class.
 			player.setClassId(player.getBaseClass());
-			
 			player.broadcastUserInfo();
 			
 			final byte lvl = Byte.parseByte(returnToLevel + "");
@@ -279,7 +277,7 @@ public class Rebirth
 		final ItemInstance itemNeeded = player.getInventory().getItemByItemId(itemId);
 		if ((itemNeeded == null) || (itemNeeded.getCount() < itemAmount))
 		{
-			player.sendMessage("You need atleast " + itemAmount + "  [ " + itemName + " ] to request a Rebirth!");
+			player.sendMessage("You need at least " + itemAmount + "  " + itemName + " to request a Rebirth!");
 			return false;
 		}
 		
@@ -314,7 +312,7 @@ public class Rebirth
 			player.addSkill(bonusSkill, false);
 			
 			// If you'd rather make it simple, simply comment this out and replace with a simple player.sendmessage();
-			rebirthText = new CreatureSay(0, ChatType.HERO_VOICE, "Rebirth Manager ", " Granted you [ " + bonusSkill.getName() + " ] level [ " + bonusSkill.getLevel() + " ]!");
+			rebirthText = new CreatureSay(0, ChatType.HERO_VOICE, "Rebirth Manager", "Granted you " + bonusSkill.getName() + " level " + bonusSkill.getLevel() + "!");
 			player.sendPacket(rebirthText);
 		}
 	}
