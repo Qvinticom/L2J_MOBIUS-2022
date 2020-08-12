@@ -14814,7 +14814,7 @@ public class PlayerInstance extends Playable
 	 */
 	public void calculateDeathPenaltyBuffLevel(Creature killer)
 	{
-		if ((Rnd.get(100) <= Config.DEATH_PENALTY_CHANCE) && !(killer instanceof PlayerInstance) && !isGM() && (!getCharmOfLuck() || (!(killer instanceof GrandBossInstance) && !(killer instanceof RaidBossInstance))) && (!isInsideZone(ZoneId.PVP) && !isInsideZone(ZoneId.SIEGE)))
+		if ((Config.DEATH_PENALTY_CHANCE > 0) && (Rnd.get(100) < Config.DEATH_PENALTY_CHANCE) && !killer.isPlayer() && !isGM() && !getCharmOfLuck() && !(killer instanceof GrandBossInstance) && !(killer instanceof RaidBossInstance) && !isInsideZone(ZoneId.PVP) && !isInsideZone(ZoneId.SIEGE))
 		{
 			increaseDeathPenaltyBuffLevel();
 		}
