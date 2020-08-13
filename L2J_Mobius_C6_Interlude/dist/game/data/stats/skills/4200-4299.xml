@@ -1149,9 +1149,9 @@
 			</effect>
 		</for>
 	</skill>
-	<skill id="4267" levels="1" name="Grade Penalty">
+	<skill id="4267" levels="10" name="Grade Penalty">
 		<!-- A penalty applied when the grade of equipment one is wearing is not appropriate for one's level. -->
-		<table name="#rate">0.22 0.19 0.16 0.13 0.1</table>
+		<table name="#rate">0.22 0.19 0.16 0.13 0.1 0.1 0.1 0.1 0.1 0.1</table>
 		<set name="target" val="TARGET_SELF" />
 		<set name="skillType" val="DEBUFF" />
 		<set name="operateType" val="OP_PASSIVE" />
