@@ -33,16 +33,13 @@ public class PlayerTemplate extends CreatureTemplate
 	private final ClassId _classId;
 	private final String _className;
 	private final int _classBaseLevel;
-	private final float _levelHpAdd;
-	private final float _levelHpMod;
-	private final float _levelCpAdd;
-	private final float _levelCpMod;
-	private final float _levelMpAdd;
-	private final float _levelMpMod;
 	private final int _spawnX;
 	private final int _spawnY;
 	private final int _spawnZ;
 	private final List<ItemHolder> _items = new ArrayList<>();
+	private final float[] _hpTable;
+	private final float[] _mpTable;
+	private final float[] _cpTable;
 	
 	public PlayerTemplate(StatSet set)
 	{
@@ -54,17 +51,36 @@ public class PlayerTemplate extends CreatureTemplate
 		_spawnY = set.getInt("spawnY");
 		_spawnZ = set.getInt("spawnZ");
 		_classBaseLevel = set.getInt("baseLevel");
-		_levelHpAdd = set.getFloat("levelHpAdd");
-		_levelHpMod = set.getFloat("levelHpMod");
-		_levelCpAdd = set.getFloat("levelCpAdd");
-		_levelCpMod = set.getFloat("levelCpMod");
-		_levelMpAdd = set.getFloat("levelMpAdd");
-		_levelMpMod = set.getFloat("levelMpMod");
+		
 		String[] item;
 		for (String split : set.getString("items").split(";"))
 		{
 			item = split.split(",");
 			_items.add(new ItemHolder(Integer.parseInt(item[0]), Integer.parseInt(item[1])));
+		}
+		
+		int counter = 0;
+		final String[] hpValues = set.getString("hpTable").split(";");
+		_hpTable = new float[hpValues.length];
+		for (String value : hpValues)
+		{
+			_hpTable[counter++] = Float.valueOf(value);
+		}
+		
+		counter = 0;
+		final String[] mpValues = set.getString("mpTable").split(";");
+		_mpTable = new float[mpValues.length];
+		for (String value : mpValues)
+		{
+			_mpTable[counter++] = Float.valueOf(value);
+		}
+		
+		counter = 0;
+		final String[] cpValues = set.getString("cpTable").split(";");
+		_cpTable = new float[cpValues.length];
+		for (String value : cpValues)
+		{
+			_cpTable[counter++] = Float.valueOf(value);
 		}
 	}
 	
@@ -108,34 +124,31 @@ public class PlayerTemplate extends CreatureTemplate
 		return _classBaseLevel;
 	}
 	
-	public float getLevelHpAdd()
+	public float getBaseHpMax(int level)
 	{
-		return _levelHpAdd;
+		if (level > _hpTable.length)
+		{
+			return _hpTable[_hpTable.length - 1];
+		}
+		return _hpTable[level - 1];
 	}
 	
-	public float getLevelHpMod()
+	public float getBaseMpMax(int level)
 	{
-		return _levelHpMod;
+		if (level > _mpTable.length)
+		{
+			return _mpTable[_mpTable.length - 1];
+		}
+		return _mpTable[level - 1];
 	}
 	
-	public float getLevelCpAdd()
+	public float getBaseCpMax(int level)
 	{
-		return _levelCpAdd;
-	}
-	
-	public float getLevelCpMod()
-	{
-		return _levelCpMod;
-	}
-	
-	public float getLevelMpAdd()
-	{
-		return _levelMpAdd;
-	}
-	
-	public float getLevelMpMod()
-	{
-		return _levelMpMod;
+		if (level > _cpTable.length)
+		{
+			return _cpTable[_cpTable.length - 1];
+		}
+		return _cpTable[level - 1];
 	}
 	
 	public int getBaseFallSafeHeight(boolean female)

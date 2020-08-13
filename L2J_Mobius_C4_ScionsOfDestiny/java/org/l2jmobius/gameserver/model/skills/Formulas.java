@@ -707,11 +707,7 @@ public class Formulas
 		public void calc(Env env)
 		{
 			final PlayerTemplate t = (PlayerTemplate) env.player.getTemplate();
-			final int lvl = Math.max(env.player.getLevel() - t.getClassBaseLevel(), -50);
-			final double hpmod = t.getLevelHpMod() * lvl;
-			final double hpmax = (t.getLevelHpAdd() + hpmod) * lvl;
-			final double hpmin = (t.getLevelHpAdd() * lvl) + hpmod;
-			env.value += (hpmax + hpmin) / 2;
+			env.value += t.getBaseHpMax(env.player.getLevel());
 		}
 	}
 	
@@ -754,11 +750,7 @@ public class Formulas
 		public void calc(Env env)
 		{
 			final PlayerTemplate t = (PlayerTemplate) env.player.getTemplate();
-			final int lvl = Math.max(env.player.getLevel() - t.getClassBaseLevel(), -50);
-			final double cpmod = t.getLevelCpMod() * lvl;
-			final double cpmax = (t.getLevelCpAdd() + cpmod) * lvl;
-			final double cpmin = (t.getLevelCpAdd() * lvl) + cpmod;
-			env.value += (cpmax + cpmin) / 2;
+			env.value += t.getBaseCpMax(env.player.getLevel());
 		}
 	}
 	
@@ -801,11 +793,7 @@ public class Formulas
 		public void calc(Env env)
 		{
 			final PlayerTemplate t = (PlayerTemplate) env.player.getTemplate();
-			final int lvl = Math.max(env.player.getLevel() - t.getClassBaseLevel(), -50);
-			final double mpmod = t.getLevelMpMod() * lvl;
-			final double mpmax = (t.getLevelMpAdd() + mpmod) * lvl;
-			final double mpmin = (t.getLevelMpAdd() * lvl) + mpmod;
-			env.value += (mpmax + mpmin) / 2;
+			env.value += t.getBaseMpMax(env.player.getLevel());
 		}
 	}
 	

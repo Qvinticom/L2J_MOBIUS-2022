@@ -102,9 +102,9 @@ public class CreatureTemplate
 		_baseINT = set.getInt("baseINT");
 		_baseWIT = set.getInt("baseWIT");
 		_baseMEN = set.getInt("baseMEN");
-		_baseHpMax = set.getFloat("baseHpMax");
-		_baseCpMax = set.getFloat("baseCpMax");
-		_baseMpMax = set.getFloat("baseMpMax");
+		_baseHpMax = set.getFloat("baseHpMax", 1);
+		_baseCpMax = set.getFloat("baseCpMax", 1);
+		_baseMpMax = set.getFloat("baseMpMax", 1);
 		_baseHpReg = set.getFloat("baseHpReg");
 		_baseMpReg = set.getFloat("baseMpReg");
 		_basePAtk = set.getInt("basePAtk");
@@ -113,7 +113,7 @@ public class CreatureTemplate
 		_baseMDef = set.getInt("baseMDef");
 		_basePAtkSpd = set.getInt("basePAtkSpd");
 		_baseMAtkSpd = set.getInt("baseMAtkSpd");
-		_baseMReuseRate = set.getFloat("baseMReuseDelay", 1.f);
+		_baseMReuseRate = set.getFloat("baseMReuseDelay", 1);
 		_baseShldDef = set.getInt("baseShldDef");
 		_baseAtkRange = set.getInt("baseAtkRange");
 		_baseShldRate = set.getInt("baseShldRate");
