@@ -42,7 +42,7 @@ public class TradeUpdate extends AbstractItemPacket
 		
 		packet.writeH(1);
 		packet.writeH((_newCount > 0) && _item.getItem().isStackable() ? 3 : 2);
-		writeItem(packet, _item);
+		writeTradeItem(packet, _item);
 		return true;
 	}
 }
