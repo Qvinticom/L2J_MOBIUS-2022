@@ -46,7 +46,7 @@ public class ExResponseCommissionBuyInfo extends AbstractItemPacket
 			packet.writeQ(_commissionItem.getPricePerUnit());
 			packet.writeQ(_commissionItem.getCommissionId());
 			packet.writeD(0); // CommissionItemType seems client does not really need it.
-			writeItem(packet, _commissionItem.getItemInfo());
+			writeCommissionItem(packet, _commissionItem.getItemInfo());
 		}
 		return true;
 	}

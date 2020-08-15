@@ -201,4 +201,17 @@ public abstract class AbstractItemPacket extends AbstractMaskPacket<ItemListType
 			packet.writeH(0x00);
 		}
 	}
+	
+	protected void writeCommissionItem(PacketWriter packet, ItemInfo item)
+	{
+		packet.writeD(0); // Always 0
+		packet.writeD(item.getItem().getId());
+		packet.writeQ(item.getCount());
+		packet.writeH(item.getItem().getType2());
+		packet.writeQ(item.getItem().getBodyPart());
+		packet.writeH(item.getEnchantLevel());
+		packet.writeH(item.getCustomType2());
+		writeItemElementalAndEnchant(packet, item);
+		packet.writeD(item.getVisualId());
+	}
 }

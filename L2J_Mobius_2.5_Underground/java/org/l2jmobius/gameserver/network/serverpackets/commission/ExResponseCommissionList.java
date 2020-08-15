@@ -90,7 +90,7 @@ public class ExResponseCommissionList extends AbstractItemPacket
 					packet.writeD((commissionItem.getDurationInDays() - 1) / 2);
 					packet.writeD((int) commissionItem.getEndTime().getEpochSecond());
 					packet.writeS(null); // Seller Name its not displayed somewhere so i am not sending it to decrease traffic.
-					writeItem(packet, commissionItem.getItemInfo());
+					writeCommissionItem(packet, commissionItem.getItemInfo());
 				}
 				break;
 			}
