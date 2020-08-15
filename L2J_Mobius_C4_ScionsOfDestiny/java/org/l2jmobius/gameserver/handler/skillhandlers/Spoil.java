@@ -16,6 +16,8 @@
  */
 package org.l2jmobius.gameserver.handler.skillhandlers;
 
+import java.util.List;
+
 import org.l2jmobius.gameserver.ai.CtrlEvent;
 import org.l2jmobius.gameserver.handler.ISkillHandler;
 import org.l2jmobius.gameserver.model.Skill;
@@ -39,7 +41,7 @@ public class Spoil implements ISkillHandler
 	};
 	
 	@Override
-	public void useSkill(Creature creature, Skill skill, WorldObject[] targets)
+	public void useSkill(Creature creature, Skill skill, List<Creature> targets)
 	{
 		if (!(creature instanceof PlayerInstance))
 		{

@@ -16,6 +16,7 @@
  */
 package org.l2jmobius.gameserver.handler.skillhandlers;
 
+import java.util.List;
 import java.util.logging.Logger;
 
 import org.l2jmobius.Config;
@@ -49,7 +50,7 @@ public class Harvest implements ISkillHandler
 	private MonsterInstance _target;
 	
 	@Override
-	public void useSkill(Creature creature, Skill skill, WorldObject[] targets)
+	public void useSkill(Creature creature, Skill skill, List<Creature> targets)
 	{
 		if (!(creature instanceof PlayerInstance))
 		{
@@ -58,7 +59,7 @@ public class Harvest implements ISkillHandler
 		
 		_player = (PlayerInstance) creature;
 		
-		final WorldObject[] targetList = skill.getTargetList(creature);
+		final List<Creature> targetList = skill.getTargetList(creature);
 		final InventoryUpdate iu = Config.FORCE_INVENTORY_UPDATE ? null : new InventoryUpdate();
 		if (targetList == null)
 		{

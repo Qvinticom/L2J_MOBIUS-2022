@@ -16,6 +16,8 @@
  */
 package org.l2jmobius.gameserver.handler.skillhandlers;
 
+import java.util.List;
+
 import org.l2jmobius.gameserver.handler.ISkillHandler;
 import org.l2jmobius.gameserver.model.Skill;
 import org.l2jmobius.gameserver.model.Skill.SkillType;
@@ -33,7 +35,7 @@ public class GiveSp implements ISkillHandler
 	};
 	
 	@Override
-	public void useSkill(Creature creature, Skill skill, WorldObject[] targets)
+	public void useSkill(Creature creature, Skill skill, List<Creature> targets)
 	{
 		for (WorldObject obj : targets)
 		{

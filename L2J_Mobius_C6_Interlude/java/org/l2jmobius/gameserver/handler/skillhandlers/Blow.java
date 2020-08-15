@@ -16,13 +16,14 @@
  */
 package org.l2jmobius.gameserver.handler.skillhandlers;
 
+import java.util.List;
+
 import org.l2jmobius.Config;
 import org.l2jmobius.gameserver.ai.CtrlIntention;
 import org.l2jmobius.gameserver.handler.ISkillHandler;
 import org.l2jmobius.gameserver.model.Effect;
 import org.l2jmobius.gameserver.model.Skill;
 import org.l2jmobius.gameserver.model.Skill.SkillType;
-import org.l2jmobius.gameserver.model.WorldObject;
 import org.l2jmobius.gameserver.model.actor.Creature;
 import org.l2jmobius.gameserver.model.actor.Summon;
 import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
@@ -49,7 +50,7 @@ public class Blow implements ISkillHandler
 	};
 	
 	@Override
-	public void useSkill(Creature creature, Skill skill, WorldObject[] targets)
+	public void useSkill(Creature creature, Skill skill, List<Creature> targets)
 	{
 		if (creature.isAlikeDead())
 		{
@@ -61,7 +62,7 @@ public class Blow implements ISkillHandler
 		final boolean ss = creature.checkSs();
 		Formulas.getInstance();
 		
-		for (Creature target : (Creature[]) targets)
+		for (Creature target : targets)
 		{
 			if (target.isAlikeDead())
 			{

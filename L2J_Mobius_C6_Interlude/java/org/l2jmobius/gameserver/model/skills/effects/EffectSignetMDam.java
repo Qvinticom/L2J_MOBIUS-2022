@@ -143,7 +143,7 @@ public class EffectSignetMDam extends Effect
 		
 		if (!targets.isEmpty())
 		{
-			caster.broadcastPacket(new MagicSkillLaunched(caster, getSkill().getDisplayId(), getSkill().getLevel(), targets.toArray(new Creature[targets.size()])));
+			caster.broadcastPacket(new MagicSkillLaunched(caster, getSkill().getDisplayId(), getSkill().getLevel(), targets));
 			for (Creature target : targets)
 			{
 				final boolean mcrit = Formulas.calcMCrit(caster.getMCriticalHit(target, getSkill()));

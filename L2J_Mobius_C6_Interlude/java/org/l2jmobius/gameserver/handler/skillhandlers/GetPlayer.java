@@ -16,6 +16,8 @@
  */
 package org.l2jmobius.gameserver.handler.skillhandlers;
 
+import java.util.List;
+
 import org.l2jmobius.commons.util.Rnd;
 import org.l2jmobius.gameserver.handler.ISkillHandler;
 import org.l2jmobius.gameserver.model.Skill;
@@ -33,7 +35,7 @@ public class GetPlayer implements ISkillHandler
 	};
 	
 	@Override
-	public void useSkill(Creature creature, Skill skill, WorldObject[] targets)
+	public void useSkill(Creature creature, Skill skill, List<Creature> targets)
 	{
 		if (creature.isAlikeDead())
 		{

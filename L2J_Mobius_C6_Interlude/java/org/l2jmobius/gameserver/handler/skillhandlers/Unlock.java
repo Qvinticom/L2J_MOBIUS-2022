@@ -16,6 +16,8 @@
  */
 package org.l2jmobius.gameserver.handler.skillhandlers;
 
+import java.util.List;
+
 import org.l2jmobius.commons.util.Rnd;
 import org.l2jmobius.gameserver.ai.CtrlIntention;
 import org.l2jmobius.gameserver.handler.ISkillHandler;
@@ -39,9 +41,9 @@ public class Unlock implements ISkillHandler
 	};
 	
 	@Override
-	public void useSkill(Creature creature, Skill skill, WorldObject[] targets)
+	public void useSkill(Creature creature, Skill skill, List<Creature> targets)
 	{
-		final WorldObject[] targetList = skill.getTargetList(creature);
+		final List<Creature> targetList = skill.getTargetList(creature);
 		if (targetList == null)
 		{
 			return;

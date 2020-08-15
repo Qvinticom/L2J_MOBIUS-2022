@@ -80,7 +80,7 @@ public class Disablers implements ISkillHandler
 	};
 	
 	@Override
-	public void useSkill(Creature creature, Skill skill, WorldObject[] targets)
+	public void useSkill(Creature creature, Skill skill, List<Creature> targets)
 	{
 		final SkillType type = skill.getSkillType();
 		final boolean bss = creature.checkBss();
@@ -671,10 +671,10 @@ public class Disablers implements ISkillHandler
 									LOGGER.warning("Couldn't find skill handler for HEAL.");
 									continue;
 								}
-								final WorldObject[] tgts = new WorldObject[]
-								{
-									target
-								};
+								
+								final List<Creature> tgts = new ArrayList<>();
+								tgts.add(target);
+								
 								try
 								{
 									healhandler.useSkill(creature, skill, tgts);

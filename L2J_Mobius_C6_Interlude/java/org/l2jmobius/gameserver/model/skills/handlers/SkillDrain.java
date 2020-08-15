@@ -16,6 +16,8 @@
  */
 package org.l2jmobius.gameserver.model.skills.handlers;
 
+import java.util.List;
+
 import org.l2jmobius.gameserver.model.Effect;
 import org.l2jmobius.gameserver.model.Skill;
 import org.l2jmobius.gameserver.model.StatSet;
@@ -43,7 +45,7 @@ public class SkillDrain extends Skill
 	}
 	
 	@Override
-	public void useSkill(Creature creature, WorldObject[] targets)
+	public void useSkill(Creature creature, List<Creature> targets)
 	{
 		if (creature.isAlikeDead())
 		{
@@ -168,9 +170,9 @@ public class SkillDrain extends Skill
 		getEffectsSelf(creature);
 	}
 	
-	public void useCubicSkill(CubicInstance activeCubic, WorldObject[] targets)
+	public void useCubicSkill(CubicInstance activeCubic, List<Creature> targets)
 	{
-		for (Creature target : (Creature[]) targets)
+		for (Creature target : targets)
 		{
 			if (target.isAlikeDead() && (getTargetType() != SkillTargetType.TARGET_CORPSE_MOB))
 			{

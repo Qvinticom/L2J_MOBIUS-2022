@@ -16,6 +16,8 @@
  */
 package org.l2jmobius.gameserver.model.skills.handlers;
 
+import java.util.List;
+
 import org.l2jmobius.commons.util.Rnd;
 import org.l2jmobius.gameserver.datatables.sql.NpcTable;
 import org.l2jmobius.gameserver.datatables.xml.ExperienceData;
@@ -106,7 +108,7 @@ public class SkillSummon extends Skill
 	}
 	
 	@Override
-	public void useSkill(Creature caster, WorldObject[] targets)
+	public void useSkill(Creature caster, List<Creature> targets)
 	{
 		if (caster.isAlikeDead() || !(caster instanceof PlayerInstance))
 		{
@@ -141,7 +143,7 @@ public class SkillSummon extends Skill
 				cubicSkillLevel = ((getLevel() - 100) / 7) + 8;
 			}
 			
-			if (targets.length > 1) // Mass cubic skill
+			if (targets.size() > 1) // Mass cubic skill
 			{
 				for (WorldObject obj : targets)
 				{
@@ -236,7 +238,7 @@ public class SkillSummon extends Skill
 		// Check to see if we should do the decay right after the cast
 		if (getTargetType() == SkillTargetType.TARGET_CORPSE_MOB)
 		{
-			final Creature target = (Creature) targets[0];
+			final Creature target = targets.get(0);
 			if (target.isDead() && (target instanceof NpcInstance))
 			{
 				summon.spawnMe(target.getX(), target.getY(), target.getZ() + 5);

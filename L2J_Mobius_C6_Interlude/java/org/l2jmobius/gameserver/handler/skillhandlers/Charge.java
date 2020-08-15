@@ -16,6 +16,7 @@
  */
 package org.l2jmobius.gameserver.handler.skillhandlers;
 
+import java.util.List;
 import java.util.logging.Logger;
 
 import org.l2jmobius.gameserver.handler.ISkillHandler;
@@ -36,7 +37,7 @@ public class Charge implements ISkillHandler
 	};
 	
 	@Override
-	public void useSkill(Creature creature, Skill skill, WorldObject[] targets)
+	public void useSkill(Creature creature, Skill skill, List<Creature> targets)
 	{
 		for (WorldObject target1 : targets)
 		{

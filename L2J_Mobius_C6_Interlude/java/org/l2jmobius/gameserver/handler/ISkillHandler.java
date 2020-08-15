@@ -17,10 +17,10 @@
 package org.l2jmobius.gameserver.handler;
 
 import java.io.IOException;
+import java.util.List;
 
 import org.l2jmobius.gameserver.model.Skill;
 import org.l2jmobius.gameserver.model.Skill.SkillType;
-import org.l2jmobius.gameserver.model.WorldObject;
 import org.l2jmobius.gameserver.model.actor.Creature;
 
 public interface ISkillHandler
@@ -32,7 +32,7 @@ public interface ISkillHandler
 	 * @param targets
 	 * @throws IOException
 	 */
-	void useSkill(Creature creature, Skill skill, WorldObject[] targets) throws IOException;
+	void useSkill(Creature creature, Skill skill, List<Creature> targets) throws IOException;
 	
 	/**
 	 * this method is called at initialization to register all the item ids automatically

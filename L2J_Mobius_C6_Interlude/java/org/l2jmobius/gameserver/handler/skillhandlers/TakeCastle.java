@@ -16,12 +16,13 @@
  */
 package org.l2jmobius.gameserver.handler.skillhandlers;
 
+import java.util.List;
+
 import org.l2jmobius.gameserver.handler.ISkillHandler;
 import org.l2jmobius.gameserver.instancemanager.CastleManager;
 import org.l2jmobius.gameserver.instancemanager.FortManager;
 import org.l2jmobius.gameserver.model.Skill;
 import org.l2jmobius.gameserver.model.Skill.SkillType;
-import org.l2jmobius.gameserver.model.WorldObject;
 import org.l2jmobius.gameserver.model.actor.Creature;
 import org.l2jmobius.gameserver.model.actor.instance.ArtefactInstance;
 import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
@@ -40,7 +41,7 @@ public class TakeCastle implements ISkillHandler
 	};
 	
 	@Override
-	public void useSkill(Creature creature, Skill skill, WorldObject[] targets)
+	public void useSkill(Creature creature, Skill skill, List<Creature> targets)
 	{
 		if (!(creature instanceof PlayerInstance))
 		{
@@ -77,9 +78,9 @@ public class TakeCastle implements ISkillHandler
 		
 		try
 		{
-			if ((castle != null) && (targets[0] instanceof ArtefactInstance))
+			if ((castle != null) && (targets.get(0) instanceof ArtefactInstance))
 			{
-				castle.Engrave(player.getClan(), targets[0].getObjectId());
+				castle.Engrave(player.getClan(), targets.get(0).getObjectId());
 			}
 			else if (fort != null)
 			{

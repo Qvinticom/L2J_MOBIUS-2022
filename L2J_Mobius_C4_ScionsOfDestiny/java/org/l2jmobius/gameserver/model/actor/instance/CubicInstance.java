@@ -573,10 +573,8 @@ public class CubicInstance
 							
 							final SkillType type = skill.getSkillType();
 							final ISkillHandler handler = SkillHandler.getInstance().getSkillHandler(skill.getSkillType());
-							final Creature[] targets =
-							{
-								target
-							};
+							final List<Creature> targets = new ArrayList<>();
+							targets.add(target);
 							
 							if ((type == SkillType.PARALYZE) || (type == SkillType.STUN) || (type == SkillType.ROOT) || (type == SkillType.AGGDAMAGE))
 							{
@@ -615,9 +613,9 @@ public class CubicInstance
 	 * @param skill the skill
 	 * @param targets the targets
 	 */
-	public void useCubicContinuous(CubicInstance activeCubic, Skill skill, WorldObject[] targets)
+	public void useCubicContinuous(CubicInstance activeCubic, Skill skill, List<Creature> targets)
 	{
-		for (Creature target : (Creature[]) targets)
+		for (Creature target : targets)
 		{
 			if ((target == null) || target.isDead())
 			{
@@ -644,9 +642,9 @@ public class CubicInstance
 	 * @param skill the skill
 	 * @param targets the targets
 	 */
-	public void useCubicMdam(CubicInstance activeCubic, Skill skill, WorldObject[] targets)
+	public void useCubicMdam(CubicInstance activeCubic, Skill skill, List<Creature> targets)
 	{
-		for (Creature target : (Creature[]) targets)
+		for (Creature target : targets)
 		{
 			if (target == null)
 			{
@@ -703,9 +701,9 @@ public class CubicInstance
 	 * @param skill the skill
 	 * @param targets the targets
 	 */
-	public void useCubicDisabler(SkillType type, CubicInstance activeCubic, Skill skill, WorldObject[] targets)
+	public void useCubicDisabler(SkillType type, CubicInstance activeCubic, Skill skill, List<Creature> targets)
 	{
-		for (Creature target : (Creature[]) targets)
+		for (Creature target : targets)
 		{
 			if ((target == null) || target.isDead())
 			{
@@ -905,10 +903,9 @@ public class CubicInstance
 					final Creature target = _target;
 					if ((target != null) && !target.isDead() && ((target.getMaxHp() - target.getCurrentHp()) > skill.getPower()))
 					{
-						final Creature[] targets =
-						{
-							target
-						};
+						final List<Creature> targets = new ArrayList<>();
+						targets.add(target);
+						
 						final ISkillHandler handler = SkillHandler.getInstance().getSkillHandler(skill.getSkillType());
 						if (handler != null)
 						{

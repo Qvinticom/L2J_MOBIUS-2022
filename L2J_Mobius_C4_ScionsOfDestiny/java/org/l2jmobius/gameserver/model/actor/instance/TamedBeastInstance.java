@@ -18,6 +18,8 @@ package org.l2jmobius.gameserver.model.actor.instance;
 
 import static org.l2jmobius.gameserver.ai.CtrlIntention.AI_INTENTION_IDLE;
 
+import java.util.ArrayList;
+import java.util.List;
 import java.util.concurrent.Future;
 
 import org.l2jmobius.commons.concurrent.ThreadPool;
@@ -424,10 +426,8 @@ public class TamedBeastInstance extends FeedableBeastInstance
 			{
 				final WorldObject oldTarget = owner.getTarget();
 				owner.setTarget(_tamedBeast);
-				final WorldObject[] targets =
-				{
-					_tamedBeast
-				};
+				final List<Creature> targets = new ArrayList<>();
+				targets.add(_tamedBeast);
 				
 				// emulate a call to the owner using food, but bypass all checks for range, etc
 				// this also causes a call to the AI tasks handling feeding, which may call onReceiveFood as required.

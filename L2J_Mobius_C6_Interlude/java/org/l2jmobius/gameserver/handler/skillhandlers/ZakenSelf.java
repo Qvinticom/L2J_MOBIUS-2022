@@ -16,6 +16,8 @@
  */
 package org.l2jmobius.gameserver.handler.skillhandlers;
 
+import java.util.List;
+
 import org.l2jmobius.commons.util.Rnd;
 import org.l2jmobius.gameserver.handler.ISkillHandler;
 import org.l2jmobius.gameserver.model.Skill;
@@ -31,7 +33,7 @@ public class ZakenSelf implements ISkillHandler
 	};
 	
 	@Override
-	public void useSkill(Creature creature, Skill skill, WorldObject[] targets)
+	public void useSkill(Creature creature, Skill skill, List<Creature> targets)
 	{
 		try
 		{
@@ -41,59 +43,75 @@ public class ZakenSelf implements ISkillHandler
 				{
 					continue;
 				}
+				
 				final Creature target = (Creature) target1;
-				final int ch = (Rnd.get(14) + 1);
-				if (ch == 1)
+				switch (Rnd.get(14) + 1)
 				{
-					target.teleToLocation(55299, 219120, -2952, true);
-				}
-				else if (ch == 2)
-				{
-					target.teleToLocation(56363, 218043, -2952, true);
-				}
-				else if (ch == 3)
-				{
-					target.teleToLocation(54245, 220162, -2952, true);
-				}
-				else if (ch == 4)
-				{
-					target.teleToLocation(56289, 220126, -2952, true);
-				}
-				else if (ch == 5)
-				{
-					target.teleToLocation(55299, 219120, -3224, true);
-				}
-				else if (ch == 6)
-				{
-					target.teleToLocation(56363, 218043, -3224, true);
-				}
-				else if (ch == 7)
-				{
-					target.teleToLocation(54245, 220162, -3224, true);
-				}
-				else if (ch == 8)
-				{
-					target.teleToLocation(56289, 220126, -3224, true);
-				}
-				else if (ch == 9)
-				{
-					target.teleToLocation(55299, 219120, -3496, true);
-				}
-				else if (ch == 10)
-				{
-					target.teleToLocation(56363, 218043, -3496, true);
-				}
-				else if (ch == 11)
-				{
-					target.teleToLocation(54245, 220162, -3496, true);
-				}
-				else if (ch == 12)
-				{
-					target.teleToLocation(56289, 220126, -3496, true);
-				}
-				else
-				{
-					target.teleToLocation(53930, 217760, -2944, true);
+					case 1:
+					{
+						target.teleToLocation(55299, 219120, -2952, true);
+						break;
+					}
+					case 2:
+					{
+						target.teleToLocation(56363, 218043, -2952, true);
+						break;
+					}
+					case 3:
+					{
+						target.teleToLocation(54245, 220162, -2952, true);
+						break;
+					}
+					case 4:
+					{
+						target.teleToLocation(56289, 220126, -2952, true);
+						break;
+					}
+					case 5:
+					{
+						target.teleToLocation(55299, 219120, -3224, true);
+						break;
+					}
+					case 6:
+					{
+						target.teleToLocation(56363, 218043, -3224, true);
+						break;
+					}
+					case 7:
+					{
+						target.teleToLocation(54245, 220162, -3224, true);
+						break;
+					}
+					case 8:
+					{
+						target.teleToLocation(56289, 220126, -3224, true);
+						break;
+					}
+					case 9:
+					{
+						target.teleToLocation(55299, 219120, -3496, true);
+						break;
+					}
+					case 10:
+					{
+						target.teleToLocation(56363, 218043, -3496, true);
+						break;
+					}
+					case 11:
+					{
+						target.teleToLocation(54245, 220162, -3496, true);
+						break;
+					}
+					case 12:
+					{
+						target.teleToLocation(56289, 220126, -3496, true);
+						break;
+					}
+					default:
+					{
+						target.teleToLocation(53930, 217760, -2944, true);
+						break;
+					}
 				}
 			}
 		}

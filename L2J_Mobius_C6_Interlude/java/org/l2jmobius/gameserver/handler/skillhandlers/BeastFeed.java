@@ -16,10 +16,11 @@
  */
 package org.l2jmobius.gameserver.handler.skillhandlers;
 
+import java.util.List;
+
 import org.l2jmobius.gameserver.handler.ISkillHandler;
 import org.l2jmobius.gameserver.model.Skill;
 import org.l2jmobius.gameserver.model.Skill.SkillType;
-import org.l2jmobius.gameserver.model.WorldObject;
 import org.l2jmobius.gameserver.model.actor.Creature;
 import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
 
@@ -34,14 +35,14 @@ public class BeastFeed implements ISkillHandler
 	};
 	
 	@Override
-	public void useSkill(Creature creature, Skill skill, WorldObject[] targets)
+	public void useSkill(Creature creature, Skill skill, List<Creature> targets)
 	{
 		if (!(creature instanceof PlayerInstance))
 		{
 			return;
 		}
 		
-		final WorldObject[] targetList = skill.getTargetList(creature);
+		final List<Creature> targetList = skill.getTargetList(creature);
 		if (targetList == null)
 		{
 			return;

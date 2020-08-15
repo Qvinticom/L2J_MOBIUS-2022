@@ -16,13 +16,14 @@
  */
 package org.l2jmobius.gameserver.model.skills.handlers;
 
+import java.util.List;
+
 import org.l2jmobius.gameserver.datatables.sql.NpcTable;
 import org.l2jmobius.gameserver.instancemanager.IdManager;
 import org.l2jmobius.gameserver.model.Location;
 import org.l2jmobius.gameserver.model.Skill;
 import org.l2jmobius.gameserver.model.StatSet;
 import org.l2jmobius.gameserver.model.World;
-import org.l2jmobius.gameserver.model.WorldObject;
 import org.l2jmobius.gameserver.model.actor.Creature;
 import org.l2jmobius.gameserver.model.actor.instance.EffectPointInstance;
 import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
@@ -41,7 +42,7 @@ public class SkillSignet extends Skill
 	}
 	
 	@Override
-	public void useSkill(Creature caster, WorldObject[] targets)
+	public void useSkill(Creature caster, List<Creature> targets)
 	{
 		if (caster.isAlikeDead())
 		{

@@ -16,10 +16,11 @@
  */
 package org.l2jmobius.gameserver.model.skills.handlers;
 
+import java.util.List;
+
 import org.l2jmobius.commons.util.Rnd;
 import org.l2jmobius.gameserver.model.Skill;
 import org.l2jmobius.gameserver.model.StatSet;
-import org.l2jmobius.gameserver.model.WorldObject;
 import org.l2jmobius.gameserver.model.actor.Creature;
 
 /**
@@ -40,7 +41,7 @@ public class SkillCreateItem extends Skill
 	}
 	
 	@Override
-	public void useSkill(Creature creature, WorldObject[] targets)
+	public void useSkill(Creature creature, List<Creature> targets)
 	{
 		if (creature.isAlikeDead() || (_createItemId == 0) || (_createItemCount == 0))
 		{

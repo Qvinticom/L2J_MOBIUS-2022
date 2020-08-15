@@ -16,6 +16,7 @@
  */
 package org.l2jmobius.gameserver.model;
 
+import java.util.List;
 import java.util.concurrent.ConcurrentHashMap;
 
 import org.l2jmobius.gameserver.handler.ISkillHandler;
@@ -156,9 +157,9 @@ public class ChanceSkillList extends ConcurrentHashMap<Skill, ChanceCondition>
 				}
 				
 				final ISkillHandler handler = SkillHandler.getInstance().getSkillHandler(castedSkill.getSkillType());
-				final WorldObject[] targets = castedSkill.getTargetList(_owner, false, target);
+				final List<Creature> targets = castedSkill.getTargetList(_owner, false, target);
 				_owner.broadcastPacket(new MagicSkillLaunched(_owner, castedSkill.getDisplayId(), castedSkill.getLevel(), targets));
-				_owner.broadcastPacket(new MagicSkillUse(_owner, (Creature) targets[0], castedSkill.getDisplayId(), castedSkill.getLevel(), 0, 0));
+				_owner.broadcastPacket(new MagicSkillUse(_owner, targets.get(0), castedSkill.getDisplayId(), castedSkill.getLevel(), 0, 0));
 				
 				// Launch the magic skill and calculate its effects
 				if (handler != null)

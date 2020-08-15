@@ -408,8 +408,8 @@ public class Weapon extends Item
 			{
 				// Get the skill handler corresponding to the skill type
 				final ISkillHandler handler = SkillHandler.getInstance().getSkillHandler(skill.getSkillType());
-				final Creature[] targets = new Creature[1];
-				targets[0] = target;
+				final List<Creature> targets = new ArrayList<>();
+				targets.add(target);
 				
 				// Launch the magic skill and calculate its effects
 				if (handler != null)

@@ -39,7 +39,7 @@ public class Resurrect implements ISkillHandler
 	};
 	
 	@Override
-	public void useSkill(Creature creature, Skill skill, WorldObject[] targets)
+	public void useSkill(Creature creature, Skill skill, List<Creature> targets)
 	{
 		PlayerInstance player = null;
 		if (creature instanceof PlayerInstance)

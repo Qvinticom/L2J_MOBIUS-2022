@@ -1545,21 +1545,21 @@ public abstract class Creature extends WorldObject implements ISkillsHolder
 		}
 		
 		// Get all possible targets of the skill in a table in function of the skill target type
-		final WorldObject[] targets = skill.getTargetList(creature);
+		final List<Creature> targets = skill.getTargetList(creature);
 		// Set the target of the skill in function of Skill Type and Target Type
 		Creature target = null;
 		if ((skill.getTargetType() == SkillTargetType.TARGET_AURA) || (skill.getTargetType() == SkillTargetType.TARGET_GROUND) || skill.isPotion())
 		{
 			target = this;
 		}
-		else if ((targets == null) || (targets.length == 0))
+		else if ((targets == null) || targets.isEmpty())
 		{
 			getAI().notifyEvent(CtrlEvent.EVT_CANCEL);
 			return;
 		}
 		else if (((skill.getSkillType() == SkillType.BUFF) || (skill.getSkillType() == SkillType.HEAL) || (skill.getSkillType() == SkillType.COMBATPOINTHEAL) || (skill.getSkillType() == SkillType.COMBATPOINTPERCENTHEAL) || (skill.getSkillType() == SkillType.MANAHEAL) || (skill.getSkillType() == SkillType.REFLECT) || (skill.getSkillType() == SkillType.SEED) || (skill.getTargetType() == SkillTargetType.TARGET_SELF) || (skill.getTargetType() == SkillTargetType.TARGET_PET) || (skill.getTargetType() == SkillTargetType.TARGET_PARTY) || (skill.getTargetType() == SkillTargetType.TARGET_CLAN) || (skill.getTargetType() == SkillTargetType.TARGET_ALLY)) && !skill.isPotion())
 		{
-			target = (Creature) targets[0];
+			target = targets.get(0);
 		}
 		else
 		{
@@ -2955,7 +2955,7 @@ public abstract class Creature extends WorldObject implements ISkillsHolder
 	 */
 	class MagicUseTask implements Runnable
 	{
-		WorldObject[] _targets;
+		List<Creature> _targets;
 		Skill _skill;
 		int _coolTime;
 		int _phase;
@@ -2967,7 +2967,7 @@ public abstract class Creature extends WorldObject implements ISkillsHolder
 		 * @param coolTime the cool time
 		 * @param phase the phase
 		 */
-		public MagicUseTask(WorldObject[] targets, Skill skill, int coolTime, int phase)
+		public MagicUseTask(List<Creature> targets, Skill skill, int coolTime, int phase)
 		{
 			_targets = targets;
 			_skill = skill;
@@ -7310,9 +7310,9 @@ public abstract class Creature extends WorldObject implements ISkillsHolder
 	 * @param coolTime the cool time
 	 * @param instant the instant
 	 */
-	public void onMagicLaunchedTimer(WorldObject[] targets, Skill skill, int coolTime, boolean instant)
+	public void onMagicLaunchedTimer(List<Creature> targets, Skill skill, int coolTime, boolean instant)
 	{
-		if ((skill == null) || (((targets == null) || (targets.length <= 0)) && (skill.getTargetType() != SkillTargetType.TARGET_AURA)))
+		if ((skill == null) || (((targets == null) || targets.isEmpty()) && (skill.getTargetType() != SkillTargetType.TARGET_AURA)))
 		{
 			_skillCast = null;
 			enableAllSkills();
@@ -7331,22 +7331,22 @@ public abstract class Creature extends WorldObject implements ISkillsHolder
 			escapeRange = skill.getSkillRadius();
 		}
 		
-		WorldObject[] finalTargets = null;
+		List<Creature> finalTargets = null;
 		int skipped = 0;
 		if (escapeRange > 0)
 		{
 			final List<Creature> targetList = new ArrayList<>();
-			for (int i = 0; (targets != null) && (i < targets.length); i++)
+			if (targets != null)
 			{
-				if (targets[i] instanceof Creature)
+				for (Creature target : targets)
 				{
-					if (!Util.checkIfInRange(escapeRange, this, targets[i], true))
+					if (!Util.checkIfInRange(escapeRange, this, target, true))
 					{
 						continue;
 					}
 					
 					// Check if the target is behind a wall
-					if ((skill.getSkillRadius() > 0) && skill.isOffensive() && Config.PATHFINDING && !GeoEngine.getInstance().canSeeTarget(this, targets[i]))
+					if ((skill.getSkillRadius() > 0) && skill.isOffensive() && Config.PATHFINDING && !GeoEngine.getInstance().canSeeTarget(this, target))
 					{
 						skipped++;
 						continue;
@@ -7356,19 +7356,20 @@ public abstract class Creature extends WorldObject implements ISkillsHolder
 					{
 						if (this instanceof PlayerInstance)
 						{
-							if (((Creature) targets[i]).isInsidePeaceZone((PlayerInstance) this))
+							if (target.isInsidePeaceZone((PlayerInstance) this))
 							{
 								continue;
 							}
 						}
-						else if (isInsidePeaceZone(this, targets[i]))
+						else if (isInsidePeaceZone(this, target))
 						{
 							continue;
 						}
 					}
-					targetList.add((Creature) targets[i]);
+					targetList.add(target);
 				}
 			}
+			
 			if (targetList.isEmpty() && (skill.getTargetType() != SkillTargetType.TARGET_AURA))
 			{
 				if (this instanceof PlayerInstance)
@@ -7382,7 +7383,7 @@ public abstract class Creature extends WorldObject implements ISkillsHolder
 				abortCast();
 				return;
 			}
-			finalTargets = targetList.toArray(new Creature[targetList.size()]);
+			finalTargets = targetList;
 		}
 		else
 		{
@@ -7438,9 +7439,9 @@ public abstract class Creature extends WorldObject implements ISkillsHolder
 	 * @param coolTime the cool time
 	 * @param instant the instant
 	 */
-	public void onMagicHitTimer(WorldObject[] targets, Skill skill, int coolTime, boolean instant)
+	public void onMagicHitTimer(List<Creature> targets, Skill skill, int coolTime, boolean instant)
 	{
-		if ((skill == null) || (((targets == null) || (targets.length <= 0)) && (skill.getTargetType() != SkillTargetType.TARGET_AURA)))
+		if ((skill == null) || (((targets == null) || targets.isEmpty()) && (skill.getTargetType() != SkillTargetType.TARGET_AURA)))
 		{
 			_skillCast = null;
 			enableAllSkills();
@@ -7471,7 +7472,7 @@ public abstract class Creature extends WorldObject implements ISkillsHolder
 				mog.exit(true);
 			}
 			
-			final WorldObject target = targets == null ? null : targets[0];
+			final WorldObject target = targets == null ? null : targets.get(0);
 			if (target != null)
 			{
 				notifyQuestEventSkillFinished(skill, target);
@@ -7479,10 +7480,10 @@ public abstract class Creature extends WorldObject implements ISkillsHolder
 			return;
 		}
 		
-		final WorldObject[] targets2 = targets;
+		final List<Creature> targets2 = targets;
 		try
 		{
-			if ((targets2 != null) && (targets2.length != 0))
+			if ((targets2 != null) && !targets2.isEmpty())
 			{
 				// Go through targets table
 				for (WorldObject target2 : targets2)
@@ -7610,7 +7611,7 @@ public abstract class Creature extends WorldObject implements ISkillsHolder
 	 * @param targets the targets
 	 * @param skill the skill
 	 */
-	public void onMagicFinalizer(WorldObject[] targets, Skill skill)
+	public void onMagicFinalizer(List<Creature> targets, Skill skill)
 	{
 		if (skill.isPotion())
 		{
@@ -7709,7 +7710,7 @@ public abstract class Creature extends WorldObject implements ISkillsHolder
 				{
 					try
 					{
-						if ((targets != null) && (targets.length > 0))
+						if (targets != null)
 						{
 							for (WorldObject target : targets)
 							{
@@ -7900,7 +7901,7 @@ public abstract class Creature extends WorldObject implements ISkillsHolder
 	 * @param skill The Skill to use
 	 * @param targets The table of WorldObject targets
 	 */
-	public void callSkill(Skill skill, WorldObject[] targets)
+	public void callSkill(Skill skill, List<Creature> targets)
 	{
 		try
 		{
@@ -7909,7 +7910,7 @@ public abstract class Creature extends WorldObject implements ISkillsHolder
 				return;
 			}
 			
-			if ((targets == null) || (targets.length == 0))
+			if ((targets == null) || targets.isEmpty())
 			{
 				getAI().notifyEvent(CtrlEvent.EVT_CANCEL);
 				return;

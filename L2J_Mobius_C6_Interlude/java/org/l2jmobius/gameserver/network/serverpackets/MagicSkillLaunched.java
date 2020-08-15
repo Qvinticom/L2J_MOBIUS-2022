@@ -16,6 +16,9 @@
  */
 package org.l2jmobius.gameserver.network.serverpackets;
 
+import java.util.ArrayList;
+import java.util.List;
+
 import org.l2jmobius.gameserver.model.WorldObject;
 import org.l2jmobius.gameserver.model.actor.Creature;
 
@@ -29,27 +32,25 @@ public class MagicSkillLaunched extends GameServerPacket
 	private final int _skillId;
 	private final int _skillLevel;
 	private int _numberOfTargets;
-	private WorldObject[] _targets;
+	private List<Creature> _targets;
 	private final int _singleTargetId;
 	
-	public MagicSkillLaunched(Creature creature, int skillId, int skillLevel, WorldObject[] targets)
+	public MagicSkillLaunched(Creature creature, int skillId, int skillLevel, List<Creature> targets)
 	{
 		_objectId = creature.getObjectId();
 		_skillId = skillId;
 		_skillLevel = skillLevel;
+		
 		if (targets != null)
 		{
-			_numberOfTargets = targets.length;
+			_numberOfTargets = targets.size();
 			_targets = targets;
 		}
 		else
 		{
 			_numberOfTargets = 1;
-			final WorldObject[] objs =
-			{
-				creature
-			};
-			_targets = objs;
+			_targets = new ArrayList<>();
+			_targets.add(creature);
 		}
 		
 		_singleTargetId = 0;

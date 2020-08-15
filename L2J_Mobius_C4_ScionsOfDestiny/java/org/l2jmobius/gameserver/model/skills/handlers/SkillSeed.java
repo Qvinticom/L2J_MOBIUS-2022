@@ -16,6 +16,8 @@
  */
 package org.l2jmobius.gameserver.model.skills.handlers;
 
+import java.util.List;
+
 import org.l2jmobius.gameserver.model.Effect;
 import org.l2jmobius.gameserver.model.Skill;
 import org.l2jmobius.gameserver.model.StatSet;
@@ -31,7 +33,7 @@ public class SkillSeed extends Skill
 	}
 	
 	@Override
-	public void useSkill(Creature caster, WorldObject[] targets)
+	public void useSkill(Creature caster, List<Creature> targets)
 	{
 		if (caster.isAlikeDead())
 		{

@@ -16,9 +16,10 @@
  */
 package org.l2jmobius.gameserver.model.skills.handlers;
 
+import java.util.List;
+
 import org.l2jmobius.gameserver.model.Skill;
 import org.l2jmobius.gameserver.model.StatSet;
-import org.l2jmobius.gameserver.model.WorldObject;
 import org.l2jmobius.gameserver.model.actor.Creature;
 import org.l2jmobius.gameserver.network.serverpackets.ActionFailed;
 
@@ -30,7 +31,7 @@ public class SkillDefault extends Skill
 	}
 	
 	@Override
-	public void useSkill(Creature caster, WorldObject[] targets)
+	public void useSkill(Creature caster, List<Creature> targets)
 	{
 		caster.sendPacket(ActionFailed.STATIC_PACKET);
 		caster.sendMessage("Skill not implemented.  Skill ID: " + getId() + " " + getSkillType());

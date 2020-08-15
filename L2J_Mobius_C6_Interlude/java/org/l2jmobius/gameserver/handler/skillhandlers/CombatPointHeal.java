@@ -16,6 +16,8 @@
  */
 package org.l2jmobius.gameserver.handler.skillhandlers;
 
+import java.util.List;
+
 import org.l2jmobius.gameserver.handler.ISkillHandler;
 import org.l2jmobius.gameserver.handler.SkillHandler;
 import org.l2jmobius.gameserver.model.Skill;
@@ -35,7 +37,7 @@ public class CombatPointHeal implements ISkillHandler
 	};
 	
 	@Override
-	public void useSkill(Creature actChar, Skill skill, WorldObject[] targets)
+	public void useSkill(Creature creature, Skill skill, List<Creature> targets)
 	{
 		// check for other effects
 		try
@@ -43,7 +45,7 @@ public class CombatPointHeal implements ISkillHandler
 			final ISkillHandler handler = SkillHandler.getInstance().getSkillHandler(SkillType.BUFF);
 			if (handler != null)
 			{
-				handler.useSkill(actChar, skill, targets);
+				handler.useSkill(creature, skill, targets);
 			}
 		}
 		catch (Exception e)

@@ -16,10 +16,11 @@
  */
 package org.l2jmobius.gameserver.handler.skillhandlers;
 
+import java.util.List;
+
 import org.l2jmobius.gameserver.handler.ISkillHandler;
 import org.l2jmobius.gameserver.model.Skill;
 import org.l2jmobius.gameserver.model.Skill.SkillType;
-import org.l2jmobius.gameserver.model.WorldObject;
 import org.l2jmobius.gameserver.model.actor.Creature;
 import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
 import org.l2jmobius.gameserver.model.skills.Stat;
@@ -37,9 +38,9 @@ public class ManaHeal implements ISkillHandler
 	};
 	
 	@Override
-	public void useSkill(Creature actChar, Skill skill, WorldObject[] targets)
+	public void useSkill(Creature creature, Skill skill, List<Creature> targets)
 	{
-		for (Creature target : (Creature[]) targets)
+		for (Creature target : targets)
 		{
 			if ((target == null) || target.isDead() || target.isInvul())
 			{
@@ -62,10 +63,10 @@ public class ManaHeal implements ISkillHandler
 			sump.addAttribute(StatusUpdate.CUR_MP, (int) target.getCurrentMp());
 			target.sendPacket(sump);
 			
-			if ((actChar instanceof PlayerInstance) && (actChar != target))
+			if ((creature instanceof PlayerInstance) && (creature != target))
 			{
 				final SystemMessage sm = new SystemMessage(SystemMessageId.S2_MP_HAS_BEEN_RESTORED_BY_S1);
-				sm.addString(actChar.getName());
+				sm.addString(creature.getName());
 				sm.addNumber((int) mp);
 				target.sendPacket(sm);
 			}
@@ -79,20 +80,20 @@ public class ManaHeal implements ISkillHandler
 		
 		if (skill.isMagic() && skill.useSpiritShot())
 		{
-			if (actChar.checkBss())
+			if (creature.checkBss())
 			{
-				actChar.removeBss();
+				creature.removeBss();
 			}
-			if (actChar.checkSps())
+			if (creature.checkSps())
 			{
-				actChar.removeSps();
+				creature.removeSps();
 			}
 		}
 		else if (skill.useSoulShot())
 		{
-			if (actChar.checkSs())
+			if (creature.checkSs())
 			{
-				actChar.removeSs();
+				creature.removeSs();
 			}
 		}
 	}

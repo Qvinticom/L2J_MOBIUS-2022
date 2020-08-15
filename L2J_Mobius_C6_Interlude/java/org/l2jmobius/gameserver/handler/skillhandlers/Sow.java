@@ -16,6 +16,7 @@
  */
 package org.l2jmobius.gameserver.handler.skillhandlers;
 
+import java.util.List;
 import java.util.logging.Logger;
 
 import org.l2jmobius.commons.util.Rnd;
@@ -24,7 +25,6 @@ import org.l2jmobius.gameserver.datatables.xml.ManorSeedData;
 import org.l2jmobius.gameserver.handler.ISkillHandler;
 import org.l2jmobius.gameserver.model.Skill;
 import org.l2jmobius.gameserver.model.Skill.SkillType;
-import org.l2jmobius.gameserver.model.WorldObject;
 import org.l2jmobius.gameserver.model.actor.Creature;
 import org.l2jmobius.gameserver.model.actor.instance.MonsterInstance;
 import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
@@ -50,7 +50,7 @@ public class Sow implements ISkillHandler
 	private int _seedId;
 	
 	@Override
-	public void useSkill(Creature creature, Skill skill, WorldObject[] targets)
+	public void useSkill(Creature creature, Skill skill, List<Creature> targets)
 	{
 		if (!(creature instanceof PlayerInstance))
 		{
@@ -59,20 +59,21 @@ public class Sow implements ISkillHandler
 		
 		_player = (PlayerInstance) creature;
 		
-		final WorldObject[] targetList = skill.getTargetList(creature);
+		final List<Creature> targetList = skill.getTargetList(creature);
 		if (targetList == null)
 		{
 			return;
 		}
 		
-		for (int index = 0; index < targetList.length; index++)
+		for (@SuppressWarnings("unused")
+		Creature element : targetList)
 		{
-			if (!(targetList[0] instanceof MonsterInstance))
+			if (!(targetList.get(0) instanceof MonsterInstance))
 			{
 				continue;
 			}
 			
-			_target = (MonsterInstance) targetList[0];
+			_target = (MonsterInstance) targetList.get(0);
 			if (_target.isSeeded())
 			{
 				_player.sendPacket(ActionFailed.STATIC_PACKET);
@@ -104,6 +105,7 @@ public class Sow implements ISkillHandler
 				_player.sendPacket(ActionFailed.STATIC_PACKET);
 				break;
 			}
+			
 			// Consuming used seed
 			_player.destroyItem("Consume", item.getObjectId(), 1, null, false);
 			SystemMessage sm = null;
@@ -126,7 +128,8 @@ public class Sow implements ISkillHandler
 			{
 				_player.getParty().broadcastToPartyMembers(sm);
 			}
-			// TODO: Mob should not agro on player, this way doesn't work really nice
+			
+			// TODO: Mob should not aggro on player, this way doesn't work really nice
 			_target.getAI().setIntention(CtrlIntention.AI_INTENTION_IDLE);
 		}
 	}

@@ -16,6 +16,8 @@
  */
 package org.l2jmobius.gameserver.handler.skillhandlers;
 
+import java.util.List;
+
 import org.l2jmobius.commons.util.Rnd;
 
 //
@@ -65,7 +67,7 @@ public class Continuous implements ISkillHandler
 	};
 	
 	@Override
-	public void useSkill(Creature creature, Skill skillValue, WorldObject[] targets)
+	public void useSkill(Creature creature, Skill skillValue, List<Creature> targets)
 	{
 		if (creature == null)
 		{
