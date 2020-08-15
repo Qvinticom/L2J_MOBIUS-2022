@@ -322,6 +322,16 @@
 		<node X="-253907" Y="221193" />
 	</zone>
 	
+	<!-- Heavenly rift zone -->
+	<zone name="heavenly_rift" type="NoRestartZone" shape="NPoly" minZ="12000" maxZ="10800">
+		<node X="114169" Y="13781" />
+		<node X="112353" Y="15581" />
+		<node X="111219" Y="15072" />
+		<node X="111584" Y="14238" />
+		<node X="112815" Y="12991" />
+		<node X="113640" Y="12642" />
+	</zone>
+	
 	<!-- High five zone -->
 	<zone name="olympiad_no_restart" type="NoRestartZone" shape="Cuboid" minZ="-8485" maxZ="1149">
 		<stat name="restartTime" val="0" />

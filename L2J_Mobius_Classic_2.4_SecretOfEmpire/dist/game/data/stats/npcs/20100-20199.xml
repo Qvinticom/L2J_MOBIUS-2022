@@ -1745,7 +1745,11 @@
 		</skillList>
 		<shots shotChance="30" spiritChance="30" />
 		<exCrtEffect>false</exCrtEffect>
-		<ai aggroRange="500" clanHelpRange="300" isAggressive="false" />
+		<ai aggroRange="2000" clanHelpRange="300" isAggressive="true">
+			<clanList>
+				<clan>ALL</clan>
+			</clanList>
+		</ai>
 		<collision>
 			<radius normal="13.5" />
 			<height normal="36.5" />
