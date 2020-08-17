@@ -102,6 +102,7 @@ public class SkillConditionMasterHandler
 		SkillConditionHandler.getInstance().registerHandler("OpNotInstantzone", OpNotInstantzoneSkillCondition::new);
 		SkillConditionHandler.getInstance().registerHandler("OpNotOlympiad", OpNotOlympiadSkillCondition::new);
 		SkillConditionHandler.getInstance().registerHandler("OpNotTerritory", OpNotTerritorySkillCondition::new);
+		SkillConditionHandler.getInstance().registerHandler("OpOlympiad", OpOlympiadSkillCondition::new);
 		SkillConditionHandler.getInstance().registerHandler("OpPeacezone", OpPeacezoneSkillCondition::new);
 		SkillConditionHandler.getInstance().registerHandler("OpPkcount", OpPkcountSkillCondition::new);
 		SkillConditionHandler.getInstance().registerHandler("OpPledge", OpPledgeSkillCondition::new);
