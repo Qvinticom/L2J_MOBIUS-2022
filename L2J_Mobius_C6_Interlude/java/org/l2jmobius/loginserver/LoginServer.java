@@ -46,6 +46,7 @@ public class LoginServer
 	
 	public static final int PROTOCOL_REV = 0x0102;
 	private static LoginServer INSTANCE;
+	private Thread _restartLoginServer;
 	private GameServerListener _gameServerListener;
 	private SelectorThread<LoginClient> _selectorThread;
 	private TelnetStatusThread _statusServer;
@@ -113,6 +114,7 @@ public class LoginServer
 				LOGGER.warning("WARNING: The LoginServer bind address is invalid, using all avaliable IPs " + e1);
 			}
 		}
+		
 		// Load telnet status
 		if (Config.IS_TELNET_ENABLED)
 		{
@@ -171,11 +173,39 @@ public class LoginServer
 		
 		// load bannedIps
 		Config.loadBanFile();
+		
+		if (Config.LOGIN_SERVER_SCHEDULE_RESTART)
+		{
+			LOGGER.info("Scheduled LS restart after " + Config.LOGIN_SERVER_SCHEDULE_RESTART_TIME + " hours");
+			_restartLoginServer = new LoginServerRestart();
+			_restartLoginServer.setDaemon(true);
+			_restartLoginServer.start();
+		}
 	}
 	
-	public GameServerListener getGameServerListener()
+	class LoginServerRestart extends Thread
 	{
-		return _gameServerListener;
+		public LoginServerRestart()
+		{
+			setName("LoginServerRestart");
+		}
+		
+		@Override
+		public void run()
+		{
+			while (!isInterrupted())
+			{
+				try
+				{
+					Thread.sleep(Config.LOGIN_SERVER_SCHEDULE_RESTART_TIME * 3600000);
+				}
+				catch (InterruptedException e)
+				{
+					return;
+				}
+				shutdown(true);
+			}
+		}
 	}
 	
 	public void shutdown(boolean restart)
@@ -188,6 +218,11 @@ public class LoginServer
 		
 		LoginController.getInstance().shutdown();
 		Runtime.getRuntime().exit(restart ? 2 : 0);
+	}
+	
+	public GameServerListener getGameServerListener()
+	{
+		return _gameServerListener;
 	}
 	
 	public int getStatus()

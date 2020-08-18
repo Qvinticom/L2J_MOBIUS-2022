@@ -74,12 +74,11 @@ public class LoginClient extends MMOClient<MMOConnection<LoginClient>>
 	{
 		super(con);
 		_state = LoginClientState.CONNECTED;
-		final String ip = getConnection().getInetAddress().getHostAddress();
-		_ip = ip;
+		_ip = getConnection().getInetAddress().getHostAddress();
 		final String[] localip = Config.NETWORK_IP_LIST.split(";");
 		for (String oneIp : localip)
 		{
-			if (ip.startsWith(oneIp) || ip.startsWith("127.0"))
+			if (_ip.startsWith(oneIp) || _ip.startsWith("127.0"))
 			{
 				_usesInternalIP = true;
 			}
@@ -92,13 +91,13 @@ public class LoginClient extends MMOClient<MMOConnection<LoginClient>>
 		_loginCrypt = new LoginCrypt();
 		_loginCrypt.setKey(_blowfishKey);
 		LoginController.getInstance().addLoginClient(this);
+		
 		// This checkup must go next to BAN because it can cause decrease ban account time
-		if (!BruteProtector.canLogin(ip))
+		if (!BruteProtector.canLogin(_ip))
 		{
 			LoginController.getInstance().addBanForAddress(getConnection().getInetAddress(), Config.BRUT_BAN_IP_TIME * 1000);
-			LOGGER.warning("Drop connection from IP " + ip + " because of BruteForce.");
+			LOGGER.warning("Drop connection from IP " + _ip + " because of BruteForce.");
 		}
-		// Closer.getInstance().add(this);
 	}
 	
 	public String getIntetAddress()

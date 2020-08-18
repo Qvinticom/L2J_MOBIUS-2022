@@ -130,6 +130,8 @@ public class Config
 	public static int TRADE_PVP_AMOUNT;
 	public static boolean GLOBAL_CHAT_WITH_PVP;
 	public static int GLOBAL_PVP_AMOUNT;
+	public static boolean LOGIN_SERVER_SCHEDULE_RESTART;
+	public static long LOGIN_SERVER_SCHEDULE_RESTART_TIME;
 	public static int MAX_CHAT_LENGTH;
 	public static boolean TRADE_CHAT_IS_NOOBLE;
 	public static boolean PRECISE_DROP_CALCULATION;
@@ -2839,6 +2841,8 @@ public class Config
 		MYSQL_BIN_PATH = serverSettings.getString("MySqlBinLocation", "C:/xampp/mysql/bin/");
 		BACKUP_PATH = serverSettings.getString("BackupPath", "../backup/");
 		BACKUP_DAYS = serverSettings.getInt("BackupDays", 30);
+		LOGIN_SERVER_SCHEDULE_RESTART = serverSettings.getBoolean("LoginRestartSchedule", false);
+		LOGIN_SERVER_SCHEDULE_RESTART_TIME = serverSettings.getLong("LoginRestartTime", 24);
 		SHOW_LICENCE = serverSettings.getBoolean("ShowLicence", false);
 		IP_UPDATE_TIME = serverSettings.getInt("IpUpdateTime", 15);
 		FORCE_GGAUTH = serverSettings.getBoolean("ForceGGAuth", false);

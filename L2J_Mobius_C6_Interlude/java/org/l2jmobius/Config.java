@@ -134,6 +134,8 @@ public class Config
 	public static int BRUT_AVG_TIME;
 	public static int BRUT_LOGON_ATTEMPTS;
 	public static int BRUT_BAN_IP_TIME;
+	public static boolean LOGIN_SERVER_SCHEDULE_RESTART;
+	public static long LOGIN_SERVER_SCHEDULE_RESTART_TIME;
 	public static int MAX_CHAT_LENGTH;
 	public static boolean TRADE_CHAT_IS_NOOBLE;
 	public static boolean PRECISE_DROP_CALCULATION;
@@ -2908,6 +2910,8 @@ public class Config
 		BRUT_AVG_TIME = serverSettings.getInt("BrutAvgTime", 30); // in Seconds
 		BRUT_LOGON_ATTEMPTS = serverSettings.getInt("BrutLogonAttempts", 15);
 		BRUT_BAN_IP_TIME = serverSettings.getInt("BrutBanIpTime", 900); // in Seconds
+		LOGIN_SERVER_SCHEDULE_RESTART = serverSettings.getBoolean("LoginRestartSchedule", false);
+		LOGIN_SERVER_SCHEDULE_RESTART_TIME = serverSettings.getLong("LoginRestartTime", 24);
 		SHOW_LICENCE = serverSettings.getBoolean("ShowLicence", false);
 		IP_UPDATE_TIME = serverSettings.getInt("IpUpdateTime", 15);
 		FORCE_GGAUTH = serverSettings.getBoolean("ForceGGAuth", false);

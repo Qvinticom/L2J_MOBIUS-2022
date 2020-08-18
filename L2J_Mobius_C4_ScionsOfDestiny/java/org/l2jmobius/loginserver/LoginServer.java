@@ -50,19 +50,13 @@ public class LoginServer extends FloodProtectedListener
 {
 	public static Logger LOGGER = Logger.getLogger(LoginServer.class.getName());
 	
-	private static LoginServer _instance;
+	public static int PROTOCOL_REV = 0x0102;
+	private static LoginServer INSTANCE;
+	private Thread _restartLoginServer;
 	private static GameServerListener _gameServerListener;
+	private final ThreadPoolExecutor _generalPacketsExecutor;
 	private TelnetStatusThread _statusServer;
 	private ServerSocket _serverSocket;
-	
-	private final ThreadPoolExecutor _generalPacketsExecutor;
-	
-	public static int PROTOCOL_REV = 0x0102;
-	
-	public static LoginServer getInstance()
-	{
-		return _instance;
-	}
 	
 	public static void main(String[] args)
 	{
@@ -81,8 +75,8 @@ public class LoginServer extends FloodProtectedListener
 		
 		try
 		{
-			_instance = new LoginServer();
-			_instance.start();
+			INSTANCE = new LoginServer();
+			INSTANCE.start();
 			LOGGER.info("Login Server ready on " + Config.LOGIN_BIND_ADDRESS + ":" + Config.PORT_LOGIN);
 		}
 		catch (IOException e)
@@ -242,6 +236,14 @@ public class LoginServer extends FloodProtectedListener
 		{
 			LOGGER.config("IP Bans file (" + bannedFile.getName() + ") is missing or is a directory, skipped.");
 		}
+		
+		if (Config.LOGIN_SERVER_SCHEDULE_RESTART)
+		{
+			LOGGER.info("Scheduled LS restart after " + Config.LOGIN_SERVER_SCHEDULE_RESTART_TIME + " hours");
+			_restartLoginServer = new LoginServerRestart();
+			_restartLoginServer.setDaemon(true);
+			_restartLoginServer.start();
+		}
 	}
 	
 	public TelnetStatusThread getStatusServer()
@@ -296,6 +298,31 @@ public class LoginServer extends FloodProtectedListener
 		}
 	}
 	
+	class LoginServerRestart extends Thread
+	{
+		public LoginServerRestart()
+		{
+			setName("LoginServerRestart");
+		}
+		
+		@Override
+		public void run()
+		{
+			while (!isInterrupted())
+			{
+				try
+				{
+					Thread.sleep(Config.LOGIN_SERVER_SCHEDULE_RESTART_TIME * 3600000);
+				}
+				catch (InterruptedException e)
+				{
+					return;
+				}
+				shutdown(true);
+			}
+		}
+	}
+	
 	public void shutdown(boolean restart)
 	{
 		// Backup database.
@@ -340,5 +367,10 @@ public class LoginServer extends FloodProtectedListener
 	public void addClient(Socket socket)
 	{
 		new LoginClient(socket);
+	}
+	
+	public static LoginServer getInstance()
+	{
+		return INSTANCE;
 	}
 }
