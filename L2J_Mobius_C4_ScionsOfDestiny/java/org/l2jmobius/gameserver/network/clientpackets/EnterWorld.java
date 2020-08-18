@@ -39,6 +39,7 @@ import org.l2jmobius.gameserver.instancemanager.CrownManager;
 import org.l2jmobius.gameserver.instancemanager.DimensionalRiftManager;
 import org.l2jmobius.gameserver.instancemanager.FortSiegeManager;
 import org.l2jmobius.gameserver.instancemanager.PetitionManager;
+import org.l2jmobius.gameserver.instancemanager.ServerRestartManager;
 import org.l2jmobius.gameserver.instancemanager.SiegeManager;
 import org.l2jmobius.gameserver.model.Effect;
 import org.l2jmobius.gameserver.model.Skill;
@@ -266,6 +267,11 @@ public class EnterWorld extends GameClientPacket
 		
 		SevenSigns.getInstance().sendCurrentPeriodMsg(player);
 		Announcements.getInstance().showAnnouncements(player);
+		
+		if ((Config.SERVER_RESTART_SCHEDULE_ENABLED) && (Config.SERVER_RESTART_SCHEDULE_MESSAGE))
+		{
+			player.sendPacket(new CreatureSay(0, ChatType.WHISPER, "[SERVER]", "Next restart is scheduled at " + ServerRestartManager.getInstance().getNextRestartTime() + "."));
+		}
 		
 		loadTutorial(player);
 		

@@ -42,6 +42,7 @@ import org.l2jmobius.commons.util.PropertiesParser;
 import org.l2jmobius.commons.util.StringUtil;
 import org.l2jmobius.gameserver.model.entity.olympiad.OlympiadPeriod;
 import org.l2jmobius.gameserver.util.FloodProtectorConfig;
+import org.l2jmobius.gameserver.util.Util;
 import org.l2jmobius.loginserver.LoginController;
 
 public class Config
@@ -1135,6 +1136,11 @@ public class Config
 	public static String PET_NAME_TEMPLATE;
 	public static String CLAN_NAME_TEMPLATE;
 	public static String ALLY_NAME_TEMPLATE;
+	public static boolean SERVER_RESTART_SCHEDULE_ENABLED;
+	public static boolean SERVER_RESTART_SCHEDULE_MESSAGE;
+	public static int SERVER_RESTART_SCHEDULE_COUNTDOWN;
+	public static String[] SERVER_RESTART_SCHEDULE;
+	public static List<Integer> SERVER_RESTART_DAYS;
 	
 	public static int IP_UPDATE_TIME;
 	public static boolean SHOW_LICENCE;
@@ -1224,6 +1230,18 @@ public class Config
 		PET_NAME_TEMPLATE = serverConfig.getString("PetNameTemplate", ".*");
 		CLAN_NAME_TEMPLATE = serverConfig.getString("ClanNameTemplate", ".*");
 		ALLY_NAME_TEMPLATE = serverConfig.getString("AllyNameTemplate", ".*");
+		SERVER_RESTART_SCHEDULE_ENABLED = serverConfig.getBoolean("ServerRestartScheduleEnabled", false);
+		SERVER_RESTART_SCHEDULE_MESSAGE = serverConfig.getBoolean("ServerRestartScheduleMessage", false);
+		SERVER_RESTART_SCHEDULE_COUNTDOWN = serverConfig.getInt("ServerRestartScheduleCountdown", 600);
+		SERVER_RESTART_SCHEDULE = serverConfig.getString("ServerRestartSchedule", "08:00").split(",");
+		SERVER_RESTART_DAYS = new ArrayList<>();
+		for (String day : serverConfig.getString("ServerRestartDays", "").trim().split(","))
+		{
+			if (Util.isDigit(day))
+			{
+				SERVER_RESTART_DAYS.add(Integer.parseInt(day));
+			}
+		}
 	}
 	
 	public static void loadTelnetConfig()

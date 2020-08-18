@@ -105,6 +105,7 @@ import org.l2jmobius.gameserver.instancemanager.PetitionManager;
 import org.l2jmobius.gameserver.instancemanager.QuestManager;
 import org.l2jmobius.gameserver.instancemanager.RaidBossPointsManager;
 import org.l2jmobius.gameserver.instancemanager.RaidBossSpawnManager;
+import org.l2jmobius.gameserver.instancemanager.ServerRestartManager;
 import org.l2jmobius.gameserver.instancemanager.SiegeManager;
 import org.l2jmobius.gameserver.model.World;
 import org.l2jmobius.gameserver.model.entity.Announcements;
@@ -469,6 +470,11 @@ public class GameServer
 		if (Config.L2WALKER_PROTECTION)
 		{
 			LOGGER.info("L2Walker protection actived.");
+		}
+		
+		if (Config.SERVER_RESTART_SCHEDULE_ENABLED)
+		{
+			ServerRestartManager.getInstance();
 		}
 		
 		System.gc();
