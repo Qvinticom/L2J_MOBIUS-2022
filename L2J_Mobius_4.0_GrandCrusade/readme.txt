@@ -5,7 +5,7 @@ Mirror: https://mega.nz/#!0eB0RIZS!RGm506vctH72n7H9tCNpepWfIfs1AvFB5NkcsNcMYA4
 System: https://mega.nz/#!Fk0SAK6L!v3JSzKN6QuNzINgel0wp7zXovh0DOYzqxcm7etQOSLI
 
 JDK: http://www.mediafire.com/file/xox35mknec8f1q0/bellsoft-jdk14%252B36-windows-amd64.msi
-Eclipse: https://www.mediafire.com/file/d7z5px9po76v1e9/eclipse-java-2020-03-R-Java14-win32-x86_64.zip
+Eclipse: http://www.mediafire.com/file/jubqhdvaldmip9t/eclipse-java-2020-06-R-win32-x86_64.zip
 Geodata: http://www.mediafire.com/file/gxjyde9ji7w0zs7/L2J_Mobius_4.0_GrandCrusade_Geodata.zip
 
 

@@ -5,7 +5,7 @@ Client mirror 2: https://mega.nz/#!BZVjgI7L!bIJp-VpomuUGkqUZSGBE-VUXs_eLEpX21s_I
 System: https://mega.nz/file/B5sVlTgJ#a19JJWZ7llbAZF9XnU91Z98ZbO_Rb56s9AvQ_QyDz-c
 
 JDK: http://www.mediafire.com/file/xox35mknec8f1q0/bellsoft-jdk14%252B36-windows-amd64.msi
-Eclipse: https://www.mediafire.com/file/d7z5px9po76v1e9/eclipse-java-2020-03-R-Java14-win32-x86_64.zip
+Eclipse: http://www.mediafire.com/file/jubqhdvaldmip9t/eclipse-java-2020-06-R-win32-x86_64.zip
 Geodata: http://www.mediafire.com/file/ega48fmtx35t6iy/L2J_Mobius_CT_2.6_HighFive_Geodata.zip
 
 What is done

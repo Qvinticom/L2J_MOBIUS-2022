@@ -6,7 +6,7 @@ Use mega downloader to download https://megadownloader.en.softonic.com/
 System: https://mega.nz/#!ZgtSUQKR!CNGdlcf2TRiDKvH8NJowEQUfafoJyzsv-g2SM9kpOB4
 
 JDK: http://www.mediafire.com/file/xox35mknec8f1q0/bellsoft-jdk14%252B36-windows-amd64.msi
-Eclipse: https://www.mediafire.com/file/d7z5px9po76v1e9/eclipse-java-2020-03-R-Java14-win32-x86_64.zip
+Eclipse: http://www.mediafire.com/file/jubqhdvaldmip9t/eclipse-java-2020-06-R-win32-x86_64.zip
 Geodata: http://www.mediafire.com/file/tas8fp9ee2r6mn9/L2J_Mobius_Classic_2.2_Antharas_Geodata.zip
 
 Saviors: https://eu.4game.com/lineage2classic/play/saviors/

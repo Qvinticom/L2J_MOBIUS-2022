@@ -4,7 +4,7 @@ Client: https://drive.google.com/uc?id=0B0Pl9EOrFIjuSVNPXzRpRFRZWlk&export=downl
 System: https://mega.nz/#!Fp8QBYYD!jLmMH7wisNk198-A7AYqhA1VMDru_OXpJbunXpBh4ww
 
 JDK: http://www.mediafire.com/file/xox35mknec8f1q0/bellsoft-jdk14%252B36-windows-amd64.msi
-Eclipse: https://www.mediafire.com/file/d7z5px9po76v1e9/eclipse-java-2020-03-R-Java14-win32-x86_64.zip
+Eclipse: http://www.mediafire.com/file/jubqhdvaldmip9t/eclipse-java-2020-06-R-win32-x86_64.zip
 Geodata: http://www.mediafire.com/file/oxk8o5tiq0rdmz5/L2J_Mobius_Classic_2.0_Saviors_Geodata.zip
 
 Saviors: https://eu.4game.com/lineage2classic/play/saviors/

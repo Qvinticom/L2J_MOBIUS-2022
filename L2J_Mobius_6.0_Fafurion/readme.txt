@@ -7,7 +7,7 @@ Client mirror 2: https://drive.google.com/uc?id=1yeYwrQEIcmAz5Ha1R05c3QgntRPy9y0
 System: https://mega.nz/#!xolCkYjD!TpdBo8SwYpPYJN86H_r5AxZljTZAfyj-o2H9cfy2bNc
 
 JDK: http://www.mediafire.com/file/xox35mknec8f1q0/bellsoft-jdk14%252B36-windows-amd64.msi
-Eclipse: https://www.mediafire.com/file/d7z5px9po76v1e9/eclipse-java-2020-03-R-Java14-win32-x86_64.zip
+Eclipse: http://www.mediafire.com/file/jubqhdvaldmip9t/eclipse-java-2020-06-R-win32-x86_64.zip
 Geodata: https://www.mediafire.com/file/w6j8cphwoji06is/L2J_Mobius_6.0_Fafurion_Geodata.zip
 
 

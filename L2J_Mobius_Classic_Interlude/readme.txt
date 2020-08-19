@@ -5,7 +5,7 @@ Patch: https://www.mediafire.com/file/dn0w50i8659jrxs/L2J_Mobius_Classic_Interlu
 System: https://www.mediafire.com/file/mvergqghqz4jzpq/L2J_Mobius_Classic_Interlude_System_v11.zip
 
 JDK: http://www.mediafire.com/file/xox35mknec8f1q0/bellsoft-jdk14%252B36-windows-amd64.msi
-Eclipse: https://www.mediafire.com/file/d7z5px9po76v1e9/eclipse-java-2020-03-R-Java14-win32-x86_64.zip
+Eclipse: http://www.mediafire.com/file/jubqhdvaldmip9t/eclipse-java-2020-06-R-win32-x86_64.zip
 Geodata: https://www.mediafire.com/file/5ebydcm5ipckpoa/L2J_Mobius_Classic_Interlude_Geodata_v5.zip
 
 This is a Classic server based on the Grand Crusade client.
