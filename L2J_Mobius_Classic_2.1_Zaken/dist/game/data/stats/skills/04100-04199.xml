@@ -2758,10 +2758,16 @@
 		<effectRange>1100</effectRange>
 		<hitTime>2000</hitTime>
 		<magicLvl>1</magicLvl>
+		<isMagic>1</isMagic> <!-- Magic Skill -->
+		<reuseDelay>20000</reuseDelay>
 		<operateType>A1</operateType>
 		<magicCriticalRate>-5</magicCriticalRate>
 		<targetType>ENEMY</targetType>
 		<affectScope>SINGLE</affectScope>
+		<effects>
+			<effect name="CallPc">
+			</effect>
+		</effects>
 	</skill>
 	<skill id="4162" toLevel="3" name="Decrease Atk. Spd.">
 		<!-- Atk. Spd. decreases momentarily. Effect $s1. -->
