@@ -57,96 +57,253 @@
 			<height normal="16" />
 		</collision>
 	</npc>
-	<npc id="9003" level="75" type="Npc" name="Tumran Bugbear Warrior" title="Incredibly Strong Monster">
+	<npc id="9003" level="24" type="Monster" name="Tumran Bugbear Warrior" title="Incredibly Strong Monster">
 		<!-- Classic NPC -->
-		<race>ETC</race>
-		<sex>FEMALE</sex>
+		<parameters>
+			<param name="MoveAroundSocial" value="124" />
+			<param name="MoveAroundSocial1" value="124" />
+			<param name="MoveAroundSocial2" value="124" />
+			<param name="SoulShot" value="200" />
+			<param name="SoulShotRate" value="5" />
+			<param name="SpiritShot" value="100" />
+			<param name="SpiritShotRate" value="10" />
+			<param name="LongRangeGuardRate" value="10" />
+		</parameters>
+		<race>GIANT</race>
+		<sex>MALE</sex>
+		<equipment rhand="88" /> <!-- rhand: Morning Star -->
+		<acquire exp="3483" sp="102" />
 		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
-			<vitals hp="306149" hpRegen="8.5" mp="245" mpRegen="3" />
+			<vitals hp="612" hpRegen="3.5" mp="245" mpRegen="1.5" />
 			<speed>
-				<walk ground="60" />
-				<run ground="160" />
+				<walk ground="55" />
+				<run ground="130" />
 			</speed>
-			<attack physical="795.07855864326" magical="542.73382161824" critical="4" attackSpeed="253" range="40" />
-			<defence physical="319.51219512195" magical="233.84045721645" />
+			<hitTime>280</hitTime>
+			<attack physical="66.216557" magical="41.10666" random="30" critical="1" accuracy="9" attackSpeed="253" type="BLUNT" range="40" distance="80" width="120" />
+			<defence physical="89.73562727" magical="72.2311" />
 		</stats>
 		<status attackable="false" />
+		<skillList>
+			<skill id="4416" level="11" /> <!-- Giant -->
+			<skill id="4408" level="16" /> <!-- HP Increase (1x) -->
+			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
+			<skill id="4410" level="12" /> <!-- Slightly Strong P. Atk. -->
+			<skill id="4411" level="12" /> <!-- Slightly Strong M. Atk. -->
+			<skill id="4412" level="10" /> <!-- Slightly Weak P. Def. -->
+			<skill id="4413" level="10" /> <!-- Slightly Weak M. Def. -->
+		</skillList>
+		<shots shotChance="30" spiritChance="30" />
+		<exCrtEffect>false</exCrtEffect>
+		<ai aggroRange="1000" clanHelpRange="300">
+			<clanList>
+				<clan>BUGBEAR</clan>
+			</clanList>
+		</ai>
 		<collision>
 			<radius normal="42.5" />
 			<height normal="95.5" />
 		</collision>
 	</npc>
-	<npc id="9004" level="75" type="Npc" name="Ruin Imp Elder" title="Incredibly Strong Monster">
+	<npc id="9004" level="24" type="Monster" name="Ruin Imp Elder" title="Incredibly Strong Monster">
 		<!-- Classic NPC -->
-		<race>ETC</race>
-		<sex>FEMALE</sex>
+		<parameters>
+			<param name="MoveAroundSocial" value="0" />
+			<param name="MoveAroundSocial1" value="0" />
+			<param name="MoveAroundSocial2" value="0" />
+			<param name="SoulShot" value="200" />
+			<param name="SoulShotRate" value="5" />
+			<param name="SpiritShot" value="100" />
+			<param name="SpiritShotRate" value="10" />
+			<param name="LongRangeGuardRate" value="10" />
+		</parameters>
+		<race>FAIRY</race>
+		<sex>MALE</sex>
+		<acquire exp="2847" sp="84" />
 		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
-			<vitals hp="256190" hpRegen="8.5" mp="205" mpRegen="3" />
+			<vitals hp="512" hpRegen="3.5" mp="205" mpRegen="1.5" />
+			<attack physical="52.711164" magical="32.72263" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="81.57326364" magical="65.66095" />
 			<speed>
-				<walk ground="50" />
-				<run ground="150" />
+				<walk ground="60" />
+				<run ground="80" />
 			</speed>
-			<attack physical="795.07855864326" magical="542.73382161824" critical="4" attackSpeed="253" range="40" />
-			<defence physical="319.51219512195" magical="233.84045721645" />
+			<hitTime>340</hitTime>
+			<abnormalResist physical="10" magical="10" />
 		</stats>
 		<status attackable="false" />
+		<skillList>
+			<skill id="4276" level="1" /> <!-- Weak Point against Bow/Crossbow Weapons -->
+			<skill id="4281" level="1" />
+			<skill id="4408" level="16" /> <!-- HP Increase (1x) -->
+			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
+			<skill id="4410" level="12" /> <!-- Slightly Strong P. Atk. -->
+			<skill id="4411" level="12" /> <!-- Slightly Strong M. Atk. -->
+			<skill id="4412" level="10" /> <!-- Slightly Weak P. Def. -->
+			<skill id="4413" level="10" /> <!-- Slightly Weak M. Def. -->
+			<skill id="4414" level="2" /> <!-- Standard Type -->
+			<skill id="4415" level="3" /> <!-- One-handed Sword -->
+			<skill id="4416" level="13" /> <!-- Fairies -->
+		</skillList>
+		<shots shotChance="30" spiritChance="30" />
+		<exCrtEffect>false</exCrtEffect>
+		<ai aggroRange="450" clanHelpRange="300" isAggressive="false">
+			<clanList>
+				<clan>DEMONIC</clan>
+			</clanList>
+		</ai>
 		<collision>
 			<radius normal="25" />
 			<height normal="67.5" />
 		</collision>
 	</npc>
-	<npc id="9005" level="75" type="Npc" name="Ol Mahum Novice" title="Incredibly Strong Monster">
+	<npc id="9005" level="29" type="Monster" name="Ol Mahum Novice" title="Incredibly Strong Monster">
 		<!-- Classic NPC -->
-		<race>ETC</race>
-		<sex>FEMALE</sex>
+		<parameters>
+			<param name="MoveAroundSocial" value="130" />
+			<param name="MoveAroundSocial1" value="130" />
+			<param name="MoveAroundSocial2" value="130" />
+		</parameters>
+		<race>HUMANOID</race>
+		<sex>MALE</sex>
+		<equipment rhand="1" /> <!-- Short Sword -->
+		<acquire exp="5247" sp="226" />
 		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
-			<vitals hp="198715" hpRegen="8.5" mp="166" mpRegen="3" />
+			<vitals hp="300.13964686998395" hpRegen="2.5" mp="166" mpRegen="1.2" />
+			<attack physical="34.8979" magical="23.83074" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="78.68469" magical="57.57804" />
 			<speed>
 				<walk ground="50" />
-				<run ground="150" />
+				<run ground="110" />
 			</speed>
-			<attack physical="795.07855864326" magical="542.73382161824" critical="4" attackSpeed="253" range="40" />
-			<defence physical="319.51219512195" magical="233.84045721645" />
+			<hitTime>460</hitTime>
+			<abnormalResist physical="10" magical="10" />
 		</stats>
-		<status attackable="false" />
+		<status undying="false" />
+		<skillList>
+			<skill id="4408" level="16" /> <!-- HP Increase (1x) -->
+			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
+			<skill id="4410" level="11" /> <!-- Average P. Atk. -->
+			<skill id="4411" level="11" /> <!-- Average M. Atk. -->
+			<skill id="4412" level="11" /> <!-- Average P. Def. -->
+			<skill id="4413" level="11" /> <!-- Average M. Def. -->
+			<skill id="4414" level="2" /> <!-- Standard Type -->
+			<skill id="4415" level="3" /> <!-- One-handed Sword -->
+			<skill id="4416" level="6" /> <!-- Humanoids -->
+		</skillList>
+		<shots shotChance="30" spiritChance="30" />
+		<exCrtEffect>false</exCrtEffect>
+		<ai aggroRange="450" clanHelpRange="300" isAggressive="false">
+			<clanList>
+				<clan>OL_MAHUM</clan>
+			</clanList>
+		</ai>
 		<collision>
 			<radius normal="30" />
 			<height normal="66" />
 		</collision>
 	</npc>
-	<npc id="9006" level="75" type="Npc" name="Turek Orc Elder" title="Incredibly Strong Monster">
+	<npc id="9006" level="30" type="Monster" name="Turek Orc Elder" title="Incredibly Strong Monster">
 		<!-- Classic NPC -->
-		<race>ETC</race>
-		<sex>FEMALE</sex>
+		<parameters>
+			<param name="MoveAroundSocial" value="70" />
+			<param name="MoveAroundSocial1" value="70" />
+			<param name="MoveAroundSocial2" value="70" />
+			<param name="SoulShot" value="100" />
+			<param name="SoulShotRate" value="10" />
+			<param name="SpiritShot" value="100" />
+			<param name="SpiritShotRate" value="5" />
+			<param name="LongRangeGuardRate" value="5" />
+		</parameters>
+		<race>HUMANOID</race>
+		<sex>MALE</sex>
+		<equipment rhand="7" /> <!-- Apprentice's Rod -->
+		<acquire exp="11787" sp="351" />
 		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
-			<vitals hp="518257" hpRegen="8.5" mp="387" mpRegen="3" />
+			<vitals hp="1036" hpRegen="4.5" mp="387" mpRegen="1.8" />
+			<attack physical="110.1891091" magical="82.76936" random="30" critical="1" accuracy="9" attackSpeed="253" type="BLUNT" range="40" distance="80" width="120" />
+			<defence physical="146.24346" magical="97.28601" />
 			<speed>
 				<walk ground="45" />
 				<run ground="120" />
 			</speed>
-			<attack physical="795.07855864326" magical="542.73382161824" critical="4" attackSpeed="253" range="40" />
-			<defence physical="319.51219512195" magical="233.84045721645" />
+			<hitTime>260</hitTime>
+			<abnormalResist physical="10" magical="10" />
 		</stats>
 		<status attackable="false" />
+		<skillList>
+			<skill id="4408" level="16" /> <!-- HP Increase (1x) -->
+			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
+			<skill id="4411" level="10" /> <!-- Slightly Weak M. Atk. -->
+			<skill id="4412" level="12" /> <!-- Slightly Strong P. Def. -->
+			<skill id="4413" level="12" /> <!-- Slightly Strong M. Def. -->
+			<skill id="4414" level="2" /> <!-- Standard Type -->
+			<skill id="4415" level="5" /> <!-- Blunt Weapons -->
+			<skill id="4416" level="6" /> <!-- Humanoids -->
+		</skillList>
+		<shots shotChance="30" spiritChance="30" />
+		<exCrtEffect>false</exCrtEffect>
+		<ai type="BALANCED" aggroRange="450" clanHelpRange="300" isAggressive="false">
+			<clanList>
+				<clan>ORC</clan>
+			</clanList>
+		</ai>
 		<collision>
 			<radius normal="25" />
 			<height normal="60.5" />
 		</collision>
 	</npc>
-	<npc id="9007" level="75" type="Npc" name="Torfe" title="Incredibly Strong Monster">
+	<npc id="9007" level="50" type="Monster" name="Torfe" title="Incredibly Strong Monster">
 		<!-- Classic NPC -->
-		<race>ETC</race>
-		<sex>FEMALE</sex>
+		<parameters>
+			<param name="MoveAroundSocial" value="0" />
+			<param name="MoveAroundSocial1" value="0" />
+			<param name="MoveAroundSocial2" value="0" />
+			<param name="AttackRange" value="2" />
+			<param name="Attack_DecayRatio" value="30" />
+			<param name="SoulShot" value="100" />
+			<param name="SoulShotRate" value="10" />
+			<param name="SpiritShot" value="100" />
+			<param name="SpiritShotRate" value="5" />
+			<param name="LongRangeGuardRate" value="5" />
+		</parameters>
+		<race>BEAST</race>
+		<sex>MALE</sex>
+		<acquire exp="58740" sp="1761" />
 		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
-			<vitals hp="723726" hpRegen="8.5" mp="720" mpRegen="3" />
+			<vitals hp="1456.3423330887747" hpRegen="11" mp="720" mpRegen="2.1" />
+			<attack physical="319.490468" magical="198.33688" random="30" critical="1" accuracy="9" attackSpeed="253" type="BLUNT" range="40" distance="80" width="120" />
+			<defence physical="177.8754727" magical="143.17771" />
 			<speed>
-				<walk ground="60" />
-				<run ground="180" />
+				<walk ground="70" />
+				<run ground="174" />
 			</speed>
-			<attack physical="795.07855864326" magical="542.73382161824" critical="4" attackSpeed="253" range="40" />
-			<defence physical="319.51219512195" magical="233.84045721645" />
+			<hitTime>300</hitTime>
+			<abnormalResist physical="10" magical="10" />
 		</stats>
 		<status attackable="false" />
+		<skillList>
+			<skill id="4273" level="3" /> <!-- Resist Daggers/Rapier Weapon -->
+			<skill id="4274" level="1" /> <!-- Blunt Weapon Weak Point -->
+			<skill id="4408" level="17" /> <!-- HP Increase (2x) -->
+			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
+			<skill id="4410" level="15" /> <!-- Slightly Strong P. Atk. -->
+			<skill id="4411" level="14" /> <!-- Slightly Strong M. Atk. -->
+			<skill id="4412" level="10" /> <!-- Slightly Weak P. Def. -->
+			<skill id="4413" level="13" /> <!-- Slightly Strong M. Def. -->
+			<skill id="4414" level="2" /> <!-- Standard Type -->
+			<skill id="4415" level="3" /> <!-- One-handed Sword -->
+			<skill id="4416" level="3" /> <!-- Beasts -->
+			<skill id="4444" level="2" /> <!-- Higher Resist Bow/Crossbow Weapons -->
+		</skillList>
+		<shots shotChance="30" spiritChance="30" />
+		<exCrtEffect>false</exCrtEffect>
+		<sNpcPropHpRate>2</sNpcPropHpRate>
+		<ai clanHelpRange="300" aggroRange="450" isAggressive="false">
+			<clanList>
+				<clan>TORFE</clan>
+			</clanList>
+		</ai>
 		<collision>
 			<radius normal="35" />
 			<height normal="75.5" />
