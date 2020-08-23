@@ -40,6 +40,6 @@ public class RequestInzoneWaitingTime implements IClientIncomingPacket
 		{
 			return;
 		}
-		client.sendPacket(new ExInzoneWaiting(player, true));
+		client.sendPacket(new ExInzoneWaiting(player, false));
 	}
 }
