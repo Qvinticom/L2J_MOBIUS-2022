@@ -141,14 +141,14 @@ public class FortressOfTheDead extends AbstractInstance
 			{
 				if (world.getAliveNpcs(VAMPIRIC_SOLDIER).isEmpty())
 				{
-					startQuestTimer("vampire_dead", 3000, npc, player);
+					startQuestTimer("vampire_dead", 180, npc, player);
 				}
 			}
 			else if (npc.getId() == VON_HELLMAN)
 			{
 				npc.deleteMe();
 				playMovie(player, Movie.ERT_QUEST_A);
-				startQuestTimer("hellman_dead", 6000, npc, player);
+				startQuestTimer("hellman_dead", 180, npc, player);
 			}
 		}
 		return super.onKill(npc, player, isSummon);
