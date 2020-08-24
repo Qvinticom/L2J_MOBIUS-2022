@@ -57,13 +57,18 @@ public class SkillDrain extends Skill
 		for (WorldObject target2 : targets)
 		{
 			final Creature target = (Creature) target2;
+			if (creature.isPlayable() && target.isInvul())
+			{
+				continue;
+			}
+			
 			if (target.isAlikeDead() && (getTargetType() != SkillTargetType.TARGET_CORPSE_MOB))
 			{
 				continue;
 			}
 			
 			// Like L2OFF no effect on invul object except Npcs
-			if ((creature != target) && (target.isInvul() && !(target instanceof NpcInstance)))
+			if ((creature != target) && (target.isInvul() && !target.isNpc()))
 			{
 				continue; // No effect on invulnerable chars unless they cast it themselves.
 			}

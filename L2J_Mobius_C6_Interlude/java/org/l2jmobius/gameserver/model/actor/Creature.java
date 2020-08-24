@@ -9054,56 +9054,56 @@ public abstract class Creature extends WorldObject implements ISkillsHolder
 	
 	/**
 	 * Reduce current hp.
-	 * @param i the i
+	 * @param amount the amount
 	 * @param attacker the attacker
 	 */
-	public void reduceCurrentHp(double i, Creature attacker)
+	public void reduceCurrentHp(double amount, Creature attacker)
 	{
-		reduceCurrentHp(i, attacker, true);
+		reduceCurrentHp(amount, attacker, true);
 	}
 	
 	/**
 	 * Reduce current hp.
-	 * @param i the i
+	 * @param amount the amount
 	 * @param attacker the attacker
 	 * @param awake the awake
 	 */
-	public void reduceCurrentHp(double i, Creature attacker, boolean awake)
+	public void reduceCurrentHp(double amount, Creature attacker, boolean awake)
 	{
-		if ((this instanceof NpcInstance) && Config.INVUL_NPC_LIST.contains(((NpcInstance) this).getNpcId()))
+		if (isNpc() && Config.INVUL_NPC_LIST.contains(((NpcInstance) this).getNpcId()))
 		{
 			return;
 		}
 		
 		if (Config.CHAMPION_ENABLE && _champion && (Config.CHAMPION_HP != 0))
 		{
-			getStatus().reduceHp(i / Config.CHAMPION_HP, attacker, awake);
+			getStatus().reduceHp(amount / Config.CHAMPION_HP, attacker, awake);
 		}
 		else if (_advanceFlag)
 		{
-			getStatus().reduceHp(i / _advanceMultiplier, attacker, awake);
+			getStatus().reduceHp(amount / _advanceMultiplier, attacker, awake);
 		}
 		else if (_isUnkillable)
 		{
 			final double hpToReduce = getStatus().getCurrentHp() - 1;
-			if (i > getStatus().getCurrentHp())
+			if (amount > getStatus().getCurrentHp())
 			{
 				getStatus().reduceHp(hpToReduce, attacker, awake);
 			}
 			else
 			{
-				getStatus().reduceHp(i, attacker, awake);
+				getStatus().reduceHp(amount, attacker, awake);
 			}
 		}
 		else
 		{
-			getStatus().reduceHp(i, attacker, awake);
+			getStatus().reduceHp(amount, attacker, awake);
 		}
 	}
 	
 	private long _nextReducingHPByOverTime = -1;
 	
-	public void reduceCurrentHpByDamOverTime(double i, Creature attacker, boolean awake, int period)
+	public void reduceCurrentHpByDamOverTime(double amount, Creature attacker, boolean awake, int period)
 	{
 		if (_nextReducingHPByOverTime > System.currentTimeMillis())
 		{
@@ -9111,12 +9111,12 @@ public abstract class Creature extends WorldObject implements ISkillsHolder
 		}
 		
 		_nextReducingHPByOverTime = System.currentTimeMillis() + (period * 1000);
-		reduceCurrentHp(i, attacker, awake);
+		reduceCurrentHp(amount, attacker, awake);
 	}
 	
 	private long _nextReducingMPByOverTime = -1;
 	
-	public void reduceCurrentMpByDamOverTime(double i, int period)
+	public void reduceCurrentMpByDamOverTime(double amount, int period)
 	{
 		if (_nextReducingMPByOverTime > System.currentTimeMillis())
 		{
@@ -9124,7 +9124,7 @@ public abstract class Creature extends WorldObject implements ISkillsHolder
 		}
 		
 		_nextReducingMPByOverTime = System.currentTimeMillis() + (period * 1000);
-		reduceCurrentMp(i);
+		reduceCurrentMp(amount);
 	}
 	
 	/**
