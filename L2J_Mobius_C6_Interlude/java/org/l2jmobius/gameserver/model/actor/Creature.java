@@ -5497,35 +5497,35 @@ public abstract class Creature extends WorldObject implements ISkillsHolder
 	protected void moveToLocation(int xValue, int yValue, int zValue, int offsetValue)
 	{
 		// Block movement during Event start
-		if (this instanceof PlayerInstance)
+		if (isPlayer())
 		{
-			if (GameEvent.active && ((PlayerInstance) this).eventSitForced)
+			if (GameEvent.active && getActingPlayer().eventSitForced)
 			{
-				((PlayerInstance) this).sendMessage("A dark force beyond your mortal understanding makes your knees to shake when you try to stand up...");
-				((PlayerInstance) this).getClient().sendPacket(ActionFailed.STATIC_PACKET);
+				getActingPlayer().sendMessage("A dark force beyond your mortal understanding makes your knees to shake when you try to stand up...");
+				getActingPlayer().getClient().sendPacket(ActionFailed.STATIC_PACKET);
 				return;
 			}
-			else if ((TvT.isSitForced() && ((PlayerInstance) this)._inEventTvT) || (CTF.isSitForced() && ((PlayerInstance) this)._inEventCTF) || (DM.isSitForced() && ((PlayerInstance) this)._inEventDM))
+			else if ((TvT.isSitForced() && getActingPlayer()._inEventTvT) || (CTF.isSitForced() && getActingPlayer()._inEventCTF) || (DM.isSitForced() && getActingPlayer()._inEventDM))
 			{
-				((PlayerInstance) this).sendMessage("A dark force beyond your mortal understanding makes your knees to shake when you try to stand up...");
-				((PlayerInstance) this).getClient().sendPacket(ActionFailed.STATIC_PACKET);
+				getActingPlayer().sendMessage("A dark force beyond your mortal understanding makes your knees to shake when you try to stand up...");
+				getActingPlayer().getClient().sendPacket(ActionFailed.STATIC_PACKET);
 				return;
 			}
-			else if (VIP._sitForced && ((PlayerInstance) this)._inEventVIP)
+			else if (VIP._sitForced && getActingPlayer()._inEventVIP)
 			{
-				((PlayerInstance) this).sendMessage("A dark force beyond your mortal understanding makes your knees to shake when you try to stand up...");
-				((PlayerInstance) this).sendPacket(ActionFailed.STATIC_PACKET);
+				getActingPlayer().sendMessage("A dark force beyond your mortal understanding makes your knees to shake when you try to stand up...");
+				getActingPlayer().sendPacket(ActionFailed.STATIC_PACKET);
 				return;
 			}
-		}
-		
-		// Fix archer bug with movement/hittask
-		if ((this instanceof PlayerInstance) && isAttackingNow())
-		{
-			final ItemInstance rhand = ((PlayerInstance) this).getInventory().getPaperdollItem(Inventory.PAPERDOLL_RHAND);
-			if (((rhand != null) && (rhand.getItemType() == WeaponType.BOW)))
+			
+			// Fix archer bug with movement/hittask
+			if (isAttackingNow())
 			{
-				return;
+				final ItemInstance rhand = getActingPlayer().getInventory().getPaperdollItem(Inventory.PAPERDOLL_RHAND);
+				if (((rhand != null) && (rhand.getItemType() == WeaponType.BOW)))
+				{
+					return;
+				}
 			}
 		}
 		
@@ -5635,9 +5635,9 @@ public abstract class Creature extends WorldObject implements ISkillsHolder
 		// GEODATA MOVEMENT CHECKS AND PATHFINDING
 		m.onGeodataPathIndex = -1; // Initialize not on geodata path
 		m.disregardingGeodata = false;
-		if (!_isFlying && !isInWater && !(this instanceof BoatInstance) && !(this instanceof NpcWalkerInstance) && !_cursorKeyMovement)
+		if (!_isFlying && !isInWater && !isBoat() && !(this instanceof NpcWalkerInstance) && !_cursorKeyMovement)
 		{
-			final boolean isInBoat = (this instanceof PlayerInstance) && ((PlayerInstance) this).isInBoat();
+			final boolean isInBoat = isPlayer() && getActingPlayer().isInBoat();
 			if (isInBoat)
 			{
 				m.disregardingGeodata = true;
@@ -5673,11 +5673,11 @@ public abstract class Creature extends WorldObject implements ISkillsHolder
 				{
 					LOGGER.warning("Character " + getName() + " outside world area, in coordinates x:" + curX + " y:" + curY);
 					getAI().setIntention(CtrlIntention.AI_INTENTION_IDLE);
-					if (this instanceof PlayerInstance)
+					if (isPlayer())
 					{
-						((PlayerInstance) this).deleteMe();
+						getActingPlayer().deleteMe();
 					}
-					else if (this instanceof Summon)
+					else if (isSummon())
 					{
 						return;
 					}
@@ -5739,9 +5739,9 @@ public abstract class Creature extends WorldObject implements ISkillsHolder
 			}
 			
 			// If no distance to go through, the movement is cancelled
-			if ((distance < 1) && (Config.PATHFINDING || (this instanceof Playable) || _isAfraid || (this instanceof RiftInvaderInstance)))
+			if ((distance < 1) && (Config.PATHFINDING || isPlayable() || _isAfraid || (this instanceof RiftInvaderInstance)))
 			{
-				if (this instanceof Summon)
+				if (isSummon())
 				{
 					// Do not break following owner.
 					if (getAI().getFollowTarget() != getActingPlayer())

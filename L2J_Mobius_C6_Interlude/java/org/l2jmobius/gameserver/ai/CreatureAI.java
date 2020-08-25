@@ -306,7 +306,7 @@ public class CreatureAI extends AbstractAI
 			return;
 		}
 		
-		if ((_actor instanceof PlayerInstance) && (_actor.isAttackingNow() || _actor.isCastingNow()) && !_actor.isMoving())
+		if (_actor.isPlayer() && _actor.isCastingNow() && !_actor.isMoving())
 		{
 			// Cancel action client side by sending Server->Client packet ActionFailed to the PlayerInstance actor
 			clientActionFailed();
@@ -320,7 +320,7 @@ public class CreatureAI extends AbstractAI
 		clientStopAutoAttack();
 		
 		// Abort the attack of the Creature and send Server->Client ActionFailed packet
-		if (_actor instanceof PlayerInstance)
+		if (_actor.isPlayer())
 		{
 			final ItemInstance rhand = ((PlayerInstance) _actor).getInventory().getPaperdollItem(Inventory.PAPERDOLL_RHAND);
 			if (((rhand != null) && (rhand.getItemType() == WeaponType.BOW)))
