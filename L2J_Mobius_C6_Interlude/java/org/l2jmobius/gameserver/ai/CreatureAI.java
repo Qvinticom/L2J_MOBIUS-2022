@@ -306,23 +306,20 @@ public class CreatureAI extends AbstractAI
 			return;
 		}
 		
-		if (_actor.isPlayer() && _actor.isCastingNow() && !_actor.isMoving())
-		{
-			// Cancel action client side by sending Server->Client packet ActionFailed to the PlayerInstance actor
-			clientActionFailed();
-			return;
-		}
-		
-		// Set the Intention of this AbstractAI to AI_INTENTION_MOVE_TO
-		changeIntention(AI_INTENTION_MOVE_TO, pos, null);
-		
-		// Stop the actor auto-attack client side by sending Server->Client packet AutoAttackStop (broadcast)
-		clientStopAutoAttack();
-		
-		// Abort the attack of the Creature and send Server->Client ActionFailed packet
-		if (_actor.isPlayer())
+		if ((_actor.isPlayer()))
 		{
 			final ItemInstance rhand = ((PlayerInstance) _actor).getInventory().getPaperdollItem(Inventory.PAPERDOLL_RHAND);
+			if ((_actor.isAttackingNow() && (rhand != null) && (rhand.getItemType() == WeaponType.BOW)) || (_actor.isCastingNow() && !_actor.isMoving()))
+			{
+				clientActionFailed();
+				return;
+			}
+			
+			changeIntention(AI_INTENTION_MOVE_TO, pos, null);
+			
+			// Stop the actor auto-attack client side by sending Server->Client packet AutoAttackStop (broadcast)
+			clientStopAutoAttack();
+			
 			if (((rhand != null) && (rhand.getItemType() == WeaponType.BOW)))
 			{
 				if (!_actor.isAttackingNow())
@@ -337,6 +334,9 @@ public class CreatureAI extends AbstractAI
 		}
 		else // case Npc
 		{
+			changeIntention(AI_INTENTION_MOVE_TO, pos, null);
+			// Stop the actor auto-attack client side by sending Server->Client packet AutoAttackStop (broadcast)
+			clientStopAutoAttack();
 			_actor.abortAttack();
 		}
 		
