@@ -90,6 +90,7 @@ public class Config
 	private static final String BANK_CONFIG_FILE = "./config/custom/Bank.ini";
 	private static final String CANCEL_SKILL_RESTORE_BUFFS_CONFIG_FILE = "./config/custom/CancelSkillRestoreBuffs.ini";
 	private static final String CHAMPION_CONFIG_FILE = "./config/custom/Champion.ini";
+	private static final String CUSTOM_CUSTOM_MAIL_MANAGER_CONFIG_FILE = "./config/custom/CustomMailManager.ini";
 	private static final String MERCHANT_ZERO_SELL_PRICE_CONFIG_FILE = "./config/custom/MerchantZeroSellPrice.ini";
 	private static final String OFFLINE_CONFIG_FILE = "./config/custom/Offline.ini";
 	private static final String OTHER_CONFIG_FILE = "./config/custom/Other.ini";
@@ -472,6 +473,9 @@ public class Config
 	public static int CHAMPION_REWARD_ID;
 	public static int CHAMPION_REWARD_QTY;
 	public static String CHAMP_TITLE;
+	
+	public static boolean CUSTOM_MAIL_MANAGER_ENABLED;
+	public static int CUSTOM_MAIL_MANAGER_DELAY;
 	
 	public static boolean MERCHANT_ZERO_SELL_PRICE;
 	
@@ -1671,6 +1675,13 @@ public class Config
 		CHAMPION_REWARD_ID = championConfig.getInt("ChampionRewardItemID", 6393);
 		CHAMPION_REWARD_QTY = championConfig.getInt("ChampionRewardItemQty", 1);
 		CHAMP_TITLE = championConfig.getString("ChampionTitle", "Champion");
+	}
+	
+	public static void loadCustomMailManagerConfig()
+	{
+		final PropertiesParser customMailManagerConfig = new PropertiesParser(CUSTOM_CUSTOM_MAIL_MANAGER_CONFIG_FILE);
+		CUSTOM_MAIL_MANAGER_ENABLED = customMailManagerConfig.getBoolean("CustomMailManagerEnabled", false);
+		CUSTOM_MAIL_MANAGER_DELAY = customMailManagerConfig.getInt("DatabaseQueryDelay", 30) * 1000;
 	}
 	
 	public static void loadMerchantZeroPriceConfig()
@@ -3127,6 +3138,7 @@ public class Config
 			// Custom
 			loadCancelSkillRestoreBuffsConfig();
 			loadChampionConfig();
+			loadCustomMailManagerConfig();
 			loadMerchantZeroPriceConfig();
 			loadWeddingConfig();
 			loadRebirthConfig();

@@ -89,6 +89,7 @@ import org.l2jmobius.gameserver.instancemanager.ClassDamageManager;
 import org.l2jmobius.gameserver.instancemanager.CoupleManager;
 import org.l2jmobius.gameserver.instancemanager.CrownManager;
 import org.l2jmobius.gameserver.instancemanager.CursedWeaponsManager;
+import org.l2jmobius.gameserver.instancemanager.CustomMailManager;
 import org.l2jmobius.gameserver.instancemanager.DayNightSpawnManager;
 import org.l2jmobius.gameserver.instancemanager.DimensionalRiftManager;
 import org.l2jmobius.gameserver.instancemanager.DuelManager;
@@ -367,6 +368,11 @@ public class GameServer
 		
 		// Schedule auto opening/closing doors.
 		DoorData.getInstance().checkAutoOpen();
+		
+		if (Config.CUSTOM_MAIL_MANAGER_ENABLED)
+		{
+			CustomMailManager.getInstance();
+		}
 		
 		Util.printSection("Scripts");
 		if (!Config.ALT_DEV_NO_SCRIPT)
