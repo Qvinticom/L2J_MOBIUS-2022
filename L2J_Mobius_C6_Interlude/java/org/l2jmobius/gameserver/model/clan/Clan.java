@@ -746,7 +746,7 @@ public class Clan
 	{
 		try (Connection con = DatabaseFactory.getConnection())
 		{
-			PreparedStatement statement = con.prepareStatement("UPDATE characters SET clanid=0, title=?, clan_join_expiry_time=?, clan_create_expiry_time=?, clan_privs=0, wantspeace=0, subpledge=0, lvl_joined_academy=0, apprentice=0, sponsor=0 WHERE obj_Id=?");
+			PreparedStatement statement = con.prepareStatement("UPDATE characters SET clanid=0, title=?, clan_join_expiry_time=?, clan_create_expiry_time=?, clan_privs=0, wantspeace=0, subpledge=0, lvl_joined_academy=0, apprentice=0, sponsor=0 WHERE charId=?");
 			statement.setString(1, "");
 			statement.setLong(2, clanJoinExpiryTime);
 			statement.setLong(3, clanCreateExpiryTime);
@@ -820,13 +820,13 @@ public class Clan
 				setAuctionBiddedAt(clanData.getInt("auction_bid_at"), false);
 				
 				final int leaderId = clanData.getInt("leader_id");
-				final PreparedStatement statement2 = con.prepareStatement("SELECT char_name,level,classid,obj_Id,title,power_grade,subpledge,apprentice,sponsor FROM characters WHERE clanid=?");
+				final PreparedStatement statement2 = con.prepareStatement("SELECT char_name,level,classid,charId,title,power_grade,subpledge,apprentice,sponsor FROM characters WHERE clanid=?");
 				statement2.setInt(1, _clanId);
 				final ResultSet clanMembers = statement2.executeQuery();
 				
 				while (clanMembers.next())
 				{
-					member = new ClanMember(this, clanMembers.getString("char_name"), clanMembers.getInt("level"), clanMembers.getInt("classid"), clanMembers.getInt("obj_id"), clanMembers.getInt("subpledge"), clanMembers.getInt("power_grade"), clanMembers.getString("title"));
+					member = new ClanMember(this, clanMembers.getString("char_name"), clanMembers.getInt("level"), clanMembers.getInt("classid"), clanMembers.getInt("charId"), clanMembers.getInt("subpledge"), clanMembers.getInt("power_grade"), clanMembers.getString("title"));
 					if (member.getObjectId() == leaderId)
 					{
 						setLeader(member);

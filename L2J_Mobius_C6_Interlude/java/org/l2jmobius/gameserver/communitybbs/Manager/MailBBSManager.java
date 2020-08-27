@@ -800,7 +800,7 @@ public class MailBBSManager extends BaseBBSManager
 		boolean isGM = false;
 		try (Connection con = DatabaseFactory.getConnection())
 		{
-			final PreparedStatement statement = con.prepareStatement("SELECT accesslevel FROM characters WHERE obj_Id = ?");
+			final PreparedStatement statement = con.prepareStatement("SELECT accesslevel FROM characters WHERE charId = ?");
 			statement.setInt(1, charId);
 			final ResultSet result = statement.executeQuery();
 			result.next();

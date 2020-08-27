@@ -165,7 +165,7 @@ public class AdminAio implements IAdminCommandHandler
 			
 			try (Connection con = DatabaseFactory.getConnection())
 			{
-				final PreparedStatement statement = con.prepareStatement("UPDATE characters SET aio=1, aio_end=? WHERE obj_id=?");
+				final PreparedStatement statement = con.prepareStatement("UPDATE characters SET aio=1, aio_end=? WHERE charId=?");
 				statement.setLong(1, player.getAioEndTime());
 				statement.setInt(2, player.getObjectId());
 				statement.execute();
@@ -206,7 +206,7 @@ public class AdminAio implements IAdminCommandHandler
 		
 		try (Connection con = DatabaseFactory.getConnection())
 		{
-			final PreparedStatement statement = con.prepareStatement("UPDATE characters SET Aio=0, Aio_end=0 WHERE obj_id=?");
+			final PreparedStatement statement = con.prepareStatement("UPDATE characters SET Aio=0, Aio_end=0 WHERE charId=?");
 			statement.setInt(1, player.getObjectId());
 			statement.execute();
 			statement.close();

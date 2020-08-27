@@ -1816,7 +1816,7 @@ public class Quest extends ManagedScript
 	{
 		try (Connection con = DatabaseFactory.getConnection())
 		{
-			final PreparedStatement stm = con.prepareStatement("DELETE FROM character_quests WHERE name = ? and char_id IN (SELECT obj_Id FROM characters WHERE clanid = ? AND online = 0)");
+			final PreparedStatement stm = con.prepareStatement("DELETE FROM character_quests WHERE name = ? and char_id IN (SELECT charId FROM characters WHERE clanid = ? AND online = 0)");
 			stm.setString(1, getName());
 			stm.setInt(2, clanId);
 			stm.executeUpdate();

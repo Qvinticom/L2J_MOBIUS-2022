@@ -69,7 +69,7 @@ public class AdminRepairChar implements IAdminCommandHandler
 			statement.execute();
 			statement.close();
 			
-			statement = con.prepareStatement("SELECT obj_id FROM characters where char_name=?");
+			statement = con.prepareStatement("SELECT charId FROM characters where char_name=?");
 			statement.setString(1, parts[1]);
 			final ResultSet rset = statement.executeQuery();
 			int objId = 0;

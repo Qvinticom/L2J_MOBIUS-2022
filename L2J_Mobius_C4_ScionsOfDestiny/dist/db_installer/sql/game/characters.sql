@@ -3,7 +3,7 @@
 -- ---------------------------
 CREATE TABLE IF NOT EXISTS characters (
   account_name varchar(45) default NULL,
-  obj_Id decimal(11,0) NOT NULL default '0',
+  charId decimal(11,0) NOT NULL default '0',
   char_name varchar(35) NOT NULL,
   `level` decimal(11,0) default NULL,
   maxHp decimal(11,0) default 1,

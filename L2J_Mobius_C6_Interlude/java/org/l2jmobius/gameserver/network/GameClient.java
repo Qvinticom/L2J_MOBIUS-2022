@@ -215,7 +215,7 @@ public class GameClient extends MMOClient<MMOConnection<GameClient>> implements 
 		
 		try (Connection con = DatabaseFactory.getConnection())
 		{
-			PreparedStatement statement = con.prepareStatement("SELECT clanId from characters WHERE obj_Id=?");
+			PreparedStatement statement = con.prepareStatement("SELECT clanId from characters WHERE charId=?");
 			statement.setInt(1, objid);
 			final ResultSet rs = statement.executeQuery();
 			rs.next();
@@ -248,7 +248,7 @@ public class GameClient extends MMOClient<MMOConnection<GameClient>> implements 
 				}
 				else
 				{
-					statement = con.prepareStatement("UPDATE characters SET deletetime=? WHERE obj_Id=?");
+					statement = con.prepareStatement("UPDATE characters SET deletetime=? WHERE charId=?");
 					statement.setLong(1, System.currentTimeMillis() + (Config.DELETE_DAYS * 86400000)); // 24*60*60*1000 = 86400000
 					statement.setInt(2, objid);
 					statement.execute();
@@ -282,7 +282,7 @@ public class GameClient extends MMOClient<MMOConnection<GameClient>> implements 
 		
 		try (Connection con = DatabaseFactory.getConnection())
 		{
-			final PreparedStatement statement = con.prepareStatement("UPDATE characters SET deletetime=0 WHERE obj_id=?");
+			final PreparedStatement statement = con.prepareStatement("UPDATE characters SET deletetime=0 WHERE charId=?");
 			statement.setInt(1, objid);
 			statement.execute();
 			statement.close();
@@ -385,7 +385,7 @@ public class GameClient extends MMOClient<MMOConnection<GameClient>> implements 
 			statement.execute();
 			statement.close();
 			
-			statement = con.prepareStatement("DELETE FROM characters WHERE obj_Id=?");
+			statement = con.prepareStatement("DELETE FROM characters WHERE charId=?");
 			statement.setInt(1, objid);
 			statement.execute();
 			statement.close();

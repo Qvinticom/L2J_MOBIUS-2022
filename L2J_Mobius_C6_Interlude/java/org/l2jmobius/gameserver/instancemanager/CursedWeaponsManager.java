@@ -249,7 +249,7 @@ public class CursedWeaponsManager
 						statement.close();
 						
 						// Restore the player's old karma and pk count
-						statement = con.prepareStatement("UPDATE characters SET karma=?, pkkills=? WHERE obj_id=?");
+						statement = con.prepareStatement("UPDATE characters SET karma=?, pkkills=? WHERE charId=?");
 						statement.setInt(1, cw.getPlayerKarma());
 						statement.setInt(2, cw.getPlayerPkKills());
 						statement.setInt(3, playerId);

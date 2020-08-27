@@ -353,11 +353,11 @@ public class ClanTable
 				String query;
 				if (Config.CLAN_LEADER_COLORED == 1)
 				{
-					query = "UPDATE characters SET name_color = '000000' WHERE obj_Id = ?";
+					query = "UPDATE characters SET name_color = '000000' WHERE charId = ?";
 				}
 				else
 				{
-					query = "UPDATE characters SET title_color = 'FFFF77' WHERE obj_Id = ?";
+					query = "UPDATE characters SET title_color = 'FFFF77' WHERE charId = ?";
 				}
 				statement = con.prepareStatement(query);
 				statement.setInt(1, leaderId);

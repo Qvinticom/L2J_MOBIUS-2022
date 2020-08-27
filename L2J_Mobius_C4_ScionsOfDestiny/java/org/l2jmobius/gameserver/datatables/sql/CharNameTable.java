@@ -54,7 +54,7 @@ public class CharNameTable
 		
 		try (Connection con = DatabaseFactory.getConnection())
 		{
-			final PreparedStatement statement = con.prepareStatement("SELECT char_name FROM characters WHERE obj_Id=?");
+			final PreparedStatement statement = con.prepareStatement("SELECT char_name FROM characters WHERE charId=?");
 			statement.setInt(1, objId);
 			final ResultSet rset = statement.executeQuery();
 			
@@ -80,7 +80,7 @@ public class CharNameTable
 		
 		try (Connection con = DatabaseFactory.getConnection())
 		{
-			final PreparedStatement statement = con.prepareStatement("SELECT obj_Id FROM characters WHERE char_name=?");
+			final PreparedStatement statement = con.prepareStatement("SELECT charId FROM characters WHERE char_name=?");
 			statement.setString(1, name);
 			final ResultSet rset = statement.executeQuery();
 			
@@ -106,7 +106,7 @@ public class CharNameTable
 		
 		try (Connection con = DatabaseFactory.getConnection())
 		{
-			final PreparedStatement statement = con.prepareStatement("SELECT accesslevel FROM characters WHERE obj_Id=?");
+			final PreparedStatement statement = con.prepareStatement("SELECT accesslevel FROM characters WHERE charId=?");
 			statement.setInt(1, objId);
 			final ResultSet rset = statement.executeQuery();
 			

@@ -201,7 +201,7 @@ public class Repair implements IVoicedCommandHandler, ICustomByPassHandler
 		try (Connection con = DatabaseFactory.getConnection())
 		{
 			PreparedStatement statement;
-			statement = con.prepareStatement("SELECT obj_Id FROM characters WHERE char_name=?");
+			statement = con.prepareStatement("SELECT charId FROM characters WHERE char_name=?");
 			statement.setString(1, charName);
 			final ResultSet rset = statement.executeQuery();
 			int objId = 0;
@@ -216,7 +216,7 @@ public class Repair implements IVoicedCommandHandler, ICustomByPassHandler
 				con.close();
 				return;
 			}
-			statement = con.prepareStatement("UPDATE characters SET x=17867, y=170259, z=-3503 WHERE obj_Id=?");
+			statement = con.prepareStatement("UPDATE characters SET x=17867, y=170259, z=-3503 WHERE charId=?");
 			statement.setInt(1, objId);
 			statement.execute();
 			statement.close();
