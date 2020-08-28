@@ -4129,7 +4129,8 @@ public class PlayerInstance extends Playable
 	@Override
 	public void broadcastPacket(IClientOutgoingPacket mov)
 	{
-		if (!(mov instanceof CharInfo))
+		final boolean isCharInfo = mov instanceof CharInfo;
+		if (!isCharInfo)
 		{
 			sendPacket(mov);
 		}
@@ -4140,8 +4141,10 @@ public class PlayerInstance extends Playable
 			{
 				return;
 			}
+			
 			player.sendPacket(mov);
-			if (mov instanceof CharInfo)
+			
+			if (isCharInfo)
 			{
 				final int relation = getRelation(player);
 				final boolean isAutoAttackable = isAutoAttackable(player);
@@ -4160,22 +4163,24 @@ public class PlayerInstance extends Playable
 	}
 	
 	@Override
-	public void broadcastPacket(IClientOutgoingPacket mov, int radiusInKnownlist)
+	public void broadcastPacket(IClientOutgoingPacket mov, int radius)
 	{
-		if (!(mov instanceof CharInfo))
+		final boolean isCharInfo = mov instanceof CharInfo;
+		if (!isCharInfo)
 		{
 			sendPacket(mov);
 		}
 		
 		World.getInstance().forEachVisibleObject(this, PlayerInstance.class, player ->
 		{
-			if (!isVisibleFor(player) || (calculateDistance3D(player) >= radiusInKnownlist))
+			if (!isVisibleFor(player) || (calculateDistance3D(player) >= radius))
 			{
 				return;
 			}
 			
 			player.sendPacket(mov);
-			if (mov instanceof CharInfo)
+			
+			if (isCharInfo)
 			{
 				final int relation = getRelation(player);
 				final boolean isAutoAttackable = isAutoAttackable(player);

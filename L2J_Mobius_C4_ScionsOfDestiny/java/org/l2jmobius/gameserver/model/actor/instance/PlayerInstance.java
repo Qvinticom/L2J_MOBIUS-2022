@@ -4982,6 +4982,69 @@ public class PlayerInstance extends Playable
 		Broadcast.toKnownPlayers(this, new TitleUpdate(this));
 	}
 	
+	@Override
+	public void broadcastPacket(GameServerPacket mov)
+	{
+		final boolean isCharInfo = mov instanceof CharInfo;
+		if (!isCharInfo)
+		{
+			sendPacket(mov);
+		}
+		
+		for (PlayerInstance player : getKnownList().getKnownPlayers().values())
+		{
+			if (!player.isGM() && (getAppearance().isInvisible() || inObserverMode()))
+			{
+				continue;
+			}
+			
+			player.sendPacket(mov);
+			
+			if (isCharInfo)
+			{
+				final int relation = getRelation(player);
+				if ((getKnownList().getKnownRelations().get(player.getObjectId()) != null) && (getKnownList().getKnownRelations().get(player.getObjectId()) != relation))
+				{
+					player.sendPacket(new RelationChanged(this, relation, player.isAutoAttackable(this)));
+				}
+			}
+		}
+	}
+	
+	@Override
+	public void broadcastPacket(GameServerPacket mov, int radius)
+	{
+		final boolean isCharInfo = mov instanceof CharInfo;
+		if (!isCharInfo)
+		{
+			sendPacket(mov);
+		}
+		
+		for (PlayerInstance player : getKnownList().getKnownPlayers().values())
+		{
+			if (!isInsideRadius(player, radius, true, false))
+			{
+				continue;
+			}
+			
+			if (!player.isGM() && (getAppearance().isInvisible() || inObserverMode()))
+			{
+				continue;
+			}
+			
+			player.sendPacket(mov);
+			
+			if (isCharInfo)
+			{
+				final int relation = getRelation(player);
+				if ((getKnownList().getKnownRelations().get(player.getObjectId()) != null) && (getKnownList().getKnownRelations().get(player.getObjectId()) != relation))
+				{
+					player.sendPacket(new RelationChanged(this, relation, player.isAutoAttackable(this)));
+				}
+			}
+		}
+	}
+	
 	/**
 	 * @return the Alliance Identifier of the PlayerInstance.
 	 */

@@ -110,10 +110,8 @@ import org.l2jmobius.gameserver.model.zone.type.TownZone;
 import org.l2jmobius.gameserver.network.SystemMessageId;
 import org.l2jmobius.gameserver.network.serverpackets.ActionFailed;
 import org.l2jmobius.gameserver.network.serverpackets.Attack;
-import org.l2jmobius.gameserver.network.serverpackets.BeginRotation;
 import org.l2jmobius.gameserver.network.serverpackets.ChangeMoveType;
 import org.l2jmobius.gameserver.network.serverpackets.ChangeWaitType;
-import org.l2jmobius.gameserver.network.serverpackets.CharInfo;
 import org.l2jmobius.gameserver.network.serverpackets.CharMoveToLocation;
 import org.l2jmobius.gameserver.network.serverpackets.ExOlympiadSpelledInfo;
 import org.l2jmobius.gameserver.network.serverpackets.GameServerPacket;
@@ -125,7 +123,6 @@ import org.l2jmobius.gameserver.network.serverpackets.MyTargetSelected;
 import org.l2jmobius.gameserver.network.serverpackets.NpcInfo;
 import org.l2jmobius.gameserver.network.serverpackets.PartySpelled;
 import org.l2jmobius.gameserver.network.serverpackets.PetInfo;
-import org.l2jmobius.gameserver.network.serverpackets.RelationChanged;
 import org.l2jmobius.gameserver.network.serverpackets.Revive;
 import org.l2jmobius.gameserver.network.serverpackets.SetupGauge;
 import org.l2jmobius.gameserver.network.serverpackets.StatusUpdate;
@@ -204,7 +201,6 @@ public abstract class Creature extends WorldObject implements ISkillsHolder
 	private final byte[] _zones = new byte[ZoneId.getZoneCount()];
 	private boolean _advanceFlag = false;
 	private int _advanceMultiplier = 1;
-	private byte _startingRotationCounter = 4;
 	
 	/**
 	 * Check if the character is in the given zone Id.
@@ -369,109 +365,24 @@ public abstract class Creature extends WorldObject implements ISkillsHolder
 		getAttackByList().add(creature);
 	}
 	
-	/**
-	 * Checks if is starting rotation allowed.
-	 * @return true, if is starting rotation allowed
-	 */
-	public synchronized boolean isStartingRotationAllowed()
-	{
-		// This function is called too often from movement arrow
-		_startingRotationCounter--;
-		if (_startingRotationCounter < 0)
-		{
-			_startingRotationCounter = 4;
-		}
-		
-		if (_startingRotationCounter == 4)
-		{
-			return true;
-		}
-		return false;
-	}
-	
 	public void broadcastPacket(GameServerPacket mov)
 	{
-		if (!(mov instanceof CharInfo))
-		{
-			sendPacket(mov);
-		}
-		
-		// don't broadcast anytime the rotating packet
-		if ((mov instanceof BeginRotation) && !isStartingRotationAllowed())
-		{
-			return;
-		}
-		
 		for (PlayerInstance player : getKnownList().getKnownPlayers().values())
 		{
-			if (player != null)
-			{
-				if ((this instanceof PlayerInstance) && !player.isGM() && (((PlayerInstance) this).getAppearance().isInvisible() || ((PlayerInstance) this).inObserverMode()))
-				{
-					return;
-				}
-				
-				try
-				{
-					player.sendPacket(mov);
-					
-					if ((mov instanceof CharInfo) && (this instanceof PlayerInstance))
-					{
-						final int relation = ((PlayerInstance) this).getRelation(player);
-						if ((getKnownList().getKnownRelations().get(player.getObjectId()) != null) && (getKnownList().getKnownRelations().get(player.getObjectId()) != relation))
-						{
-							player.sendPacket(new RelationChanged((PlayerInstance) this, relation, player.isAutoAttackable(this)));
-						}
-					}
-				}
-				catch (NullPointerException e)
-				{
-					LOGGER.warning(e.toString());
-				}
-			}
+			player.sendPacket(mov);
 		}
 	}
 	
-	/**
-	 * Send a packet to the Creature AND to all PlayerInstance in the radius (max knownlist radius) from the Creature.<br>
-	 * <br>
-	 * <b><u>Concept</u>:</b><br>
-	 * <br>
-	 * PlayerInstance in the detection area of the Creature are identified in <b>_knownPlayers</b>. In order to inform other players of state modification on the Creature, server just need to go through _knownPlayers to send Server->Client Packet
-	 * @param mov the mov
-	 * @param radiusInKnownlist the radius in knownlist
-	 */
-	public void broadcastPacket(GameServerPacket mov, int radiusInKnownlist)
+	public void broadcastPacket(GameServerPacket mov, int radius)
 	{
-		if (!(mov instanceof CharInfo))
-		{
-			sendPacket(mov);
-		}
-		
 		for (PlayerInstance player : getKnownList().getKnownPlayers().values())
 		{
-			try
+			if (!isInsideRadius(player, radius, true, false))
 			{
-				if (!isInsideRadius(player, radiusInKnownlist, false, false))
-				{
-					continue;
-				}
-				
-				player.sendPacket(mov);
-				
-				if ((mov instanceof CharInfo) && (this instanceof PlayerInstance))
-				{
-					final int relation = ((PlayerInstance) this).getRelation(player);
-					if ((getKnownList().getKnownRelations().get(player.getObjectId()) != null) && (getKnownList().getKnownRelations().get(player.getObjectId()) != relation))
-					{
-						player.sendPacket(new RelationChanged((PlayerInstance) this, relation, player.isAutoAttackable(this)));
-					}
-				}
+				continue;
 			}
-			catch (NullPointerException e)
-			{
-				LOGGER.warning(e.toString());
-			}
+			
+			player.sendPacket(mov);
 		}
 	}
 	
