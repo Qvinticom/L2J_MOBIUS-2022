@@ -642,7 +642,7 @@ public class PlayerInstance extends Playable
 		 */
 		public void doPickupItem(WorldObject object)
 		{
-			this.doPickupItem(object);
+			PlayerInstance.this.doPickupItem(object);
 		}
 		
 		/**
@@ -651,7 +651,7 @@ public class PlayerInstance extends Playable
 		 */
 		public void doInteract(Creature target)
 		{
-			this.doInteract(target);
+			PlayerInstance.this.doInteract(target);
 		}
 		
 		@Override
