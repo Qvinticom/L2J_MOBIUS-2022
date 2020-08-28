@@ -664,7 +664,7 @@ public class PlayerInstance extends Playable
 				final Siege siege = SiegeManager.getInstance().getSiege(PlayerInstance.this);
 				if ((((siege == null) || !siege.isInProgress()) && ((thisLevel >= 20) && (targetLevel < 20))) || ((thisLevel >= 40) && (targetLevel < 40)) || ((thisLevel >= 52) && (targetLevel < 52)) || ((thisLevel >= 61) && (targetLevel < 61)) || ((thisLevel >= 76) && (targetLevel < 76)))
 				{
-					sendMessage("You can only engage in PvP if your target is within your level grade.");
+					sendMessage("You can only engage in PvP when your target is within your level grade.");
 					sendPacket(ActionFailed.STATIC_PACKET);
 					return;
 				}
@@ -9864,7 +9864,7 @@ public class PlayerInstance extends Playable
 			final Siege siege = SiegeManager.getInstance().getSiege(this);
 			if ((((siege == null) || !siege.isInProgress()) && ((thisLevel >= 20) && (targetLevel < 20))) || ((thisLevel >= 40) && (targetLevel < 40)) || ((thisLevel >= 52) && (targetLevel < 52)) || ((thisLevel >= 61) && (targetLevel < 61)) || ((thisLevel >= 76) && (targetLevel < 76)))
 			{
-				sendMessage("You can only engage in PvP if your target is within your level grade.");
+				sendMessage("You can only engage in PvP when your target is within your level grade.");
 				sendPacket(ActionFailed.STATIC_PACKET);
 				return;
 			}
