@@ -115,11 +115,14 @@ public class SoulShots implements IItemHandler
 		}
 		
 		// Charge soulshot
+		if (weaponInst.getChargedSoulshot() != itemId)
+		{
+			Broadcast.toSelfAndKnownPlayersInRadius(player, new MagicSkillUse(player, player, SKILL_IDS[weaponGrade], 1, 0, 0), 360000);
+		}
 		weaponInst.setChargedSoulshot(ItemInstance.CHARGED_SOULSHOT);
 		
 		// Send message to client
 		player.sendPacket(SystemMessageId.POWER_OF_THE_SPIRITS_ENABLED);
-		Broadcast.toSelfAndKnownPlayersInRadius(player, new MagicSkillUse(player, player, SKILL_IDS[weaponGrade], 1, 0, 0), 360000/* 600 */);
 	}
 	
 	@Override

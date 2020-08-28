@@ -122,11 +122,14 @@ public class BlessedSpiritShot implements IItemHandler
 		}
 		
 		// Charge Blessed Spiritshot
+		if (weaponInst.getChargedSpiritshot() != itemId)
+		{
+			Broadcast.toSelfAndKnownPlayersInRadius(player, new MagicSkillUse(player, player, SKILL_IDS[weaponGrade], 1, 0, 0), 360000);
+		}
 		weaponInst.setChargedSpiritshot(ItemInstance.CHARGED_BLESSED_SPIRITSHOT);
 		
 		// Send message to client
 		player.sendPacket(SystemMessageId.POWER_OF_MANA_ENABLED);
-		Broadcast.toSelfAndKnownPlayersInRadius(player, new MagicSkillUse(player, player, SKILL_IDS[weaponGrade], 1, 0, 0), 360000/* 600 */);
 	}
 	
 	@Override
