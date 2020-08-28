@@ -5380,16 +5380,6 @@ public abstract class Creature extends WorldObject implements ISkillsHolder
 				getActingPlayer().sendPacket(ActionFailed.STATIC_PACKET);
 				return;
 			}
-			
-			// Fix archer bug with movement/hittask
-			if (isAttackingNow())
-			{
-				final ItemInstance rhand = getActingPlayer().getInventory().getPaperdollItem(Inventory.PAPERDOLL_RHAND);
-				if (((rhand != null) && (rhand.getItemType() == WeaponType.BOW)))
-				{
-					return;
-				}
-			}
 		}
 		
 		// Get the Move Speed of the Creature
