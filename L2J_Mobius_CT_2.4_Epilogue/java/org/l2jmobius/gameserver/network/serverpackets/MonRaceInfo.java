@@ -57,8 +57,8 @@ public class MonRaceInfo implements IClientOutgoingPacket
 			packet.writeD(12080); // end X
 			packet.writeD(181875 + (58 * (7 - i))); // end Y
 			packet.writeD(-3566); // end Z
-			packet.writeF(_monsters[i].getTemplate().getfCollisionHeight()); // coll. height
-			packet.writeF(_monsters[i].getTemplate().getfCollisionRadius()); // coll. radius
+			packet.writeF(_monsters[i].getTemplate().getFCollisionHeight()); // coll. height
+			packet.writeF(_monsters[i].getTemplate().getFCollisionRadius()); // coll. radius
 			packet.writeD(120); // ?? unknown
 			for (int j = 0; j < 20; j++)
 			{

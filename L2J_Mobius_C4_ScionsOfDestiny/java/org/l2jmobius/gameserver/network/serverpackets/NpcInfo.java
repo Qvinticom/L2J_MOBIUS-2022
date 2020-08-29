@@ -57,8 +57,8 @@ public class NpcInfo extends GameServerPacket
 	private int _flyWalkSpd;
 	private int _rhand;
 	private int _lhand;
-	private int _collisionHeight;
-	private int _collisionRadius;
+	private float _collisionHeight;
+	private float _collisionRadius;
 	protected int _clanCrest;
 	protected int _allyCrest;
 	protected int _allyId;
@@ -86,8 +86,8 @@ public class NpcInfo extends GameServerPacket
 		_rhand = cha.getRightHandItem();
 		_lhand = cha.getLeftHandItem();
 		_isSummoned = false;
-		_collisionHeight = cha.getCollisionHeight();
-		_collisionRadius = cha.getCollisionRadius();
+		_collisionHeight = cha.getTemplate().getFCollisionHeight();
+		_collisionRadius = cha.getTemplate().getFCollisionRadius();
 		
 		if (Config.SHOW_NPC_CLAN_CREST && (cha.getCastle() != null) && (cha.getCastle().getOwnerId() != 0) && !cha.isMonster() && !cha.isArtefact() && !(cha instanceof ControlTowerInstance))
 		{
@@ -174,8 +174,8 @@ public class NpcInfo extends GameServerPacket
 		_rhand = 0;
 		_lhand = 0;
 		_isSummoned = cha.isShowSummonAnimation();
-		_collisionHeight = _creature.getTemplate().getCollisionHeight();
-		_collisionRadius = _creature.getTemplate().getCollisionRadius();
+		_collisionHeight = _creature.getTemplate().getFCollisionHeight();
+		_collisionRadius = _creature.getTemplate().getFCollisionRadius();
 		if (cha.getTemplate().isServerSideName() || (cha instanceof PetInstance) || (cha instanceof SummonInstance))
 		{
 			_name = _creature.getName();

@@ -78,8 +78,8 @@ public class CreatureTemplate extends ListenersContainer
 	/** For client info use {@link #_fCollisionHeight} */
 	private int _collisionHeight;
 	
-	private double _fCollisionRadius;
-	private double _fCollisionHeight;
+	private float _fCollisionRadius;
+	private float _fCollisionHeight;
 	
 	private final double[] _moveType = new double[MoveType.values().length];
 	/** The creature's race. */
@@ -135,8 +135,8 @@ public class CreatureTemplate extends ListenersContainer
 		_baseElementRes = set.getInt("baseElementRes", 0);
 		
 		// Geometry
-		_fCollisionHeight = set.getDouble("collisionHeight", 0);
-		_fCollisionRadius = set.getDouble("collisionRadius", 0);
+		_fCollisionHeight = set.getFloat("collisionHeight", 0);
+		_fCollisionRadius = set.getFloat("collisionRadius", 0);
 		_collisionRadius = (int) _fCollisionRadius;
 		_collisionHeight = (int) _fCollisionHeight;
 		
@@ -467,7 +467,7 @@ public class CreatureTemplate extends ListenersContainer
 	/**
 	 * @return the fCollisionRadius
 	 */
-	public double getfCollisionRadius()
+	public float getFCollisionRadius()
 	{
 		return _fCollisionRadius;
 	}
@@ -475,7 +475,7 @@ public class CreatureTemplate extends ListenersContainer
 	/**
 	 * @return the fCollisionHeight
 	 */
-	public double getfCollisionHeight()
+	public float getFCollisionHeight()
 	{
 		return _fCollisionHeight;
 	}

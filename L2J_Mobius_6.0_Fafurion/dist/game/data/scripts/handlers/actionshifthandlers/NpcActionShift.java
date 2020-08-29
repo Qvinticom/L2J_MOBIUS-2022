@@ -88,8 +88,8 @@ public class NpcActionShift implements IActionShiftHandler
 			html.replace("%men%", String.valueOf(npc.getMEN()));
 			html.replace("%loc%", target.getX() + " " + target.getY() + " " + target.getZ());
 			html.replace("%heading%", String.valueOf(npc.getHeading()));
-			html.replace("%collision_radius%", String.valueOf(npc.getTemplate().getfCollisionRadius()));
-			html.replace("%collision_height%", String.valueOf(npc.getTemplate().getfCollisionHeight()));
+			html.replace("%collision_radius%", String.valueOf(npc.getTemplate().getFCollisionRadius()));
+			html.replace("%collision_height%", String.valueOf(npc.getTemplate().getFCollisionHeight()));
 			html.replace("%clanHall%", clanHall != null ? clanHall.getName() : "none");
 			html.replace("%mpRewardValue%", npc.getTemplate().getMpRewardValue());
 			html.replace("%mpRewardTicks%", npc.getTemplate().getMpRewardTicks());

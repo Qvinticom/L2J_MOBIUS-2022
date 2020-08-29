@@ -41,8 +41,8 @@ public class CreatureTemplate extends ListenersContainer
 	/** For client info use {@link #_fCollisionHeight} */
 	private int _collisionHeight;
 	
-	private double _fCollisionRadius;
-	private double _fCollisionHeight;
+	private float _fCollisionRadius;
+	private float _fCollisionHeight;
 	
 	protected final Map<Stat, Double> _baseValues = new EnumMap<>(Stat.class);
 	
@@ -118,8 +118,8 @@ public class CreatureTemplate extends ListenersContainer
 		_baseValues.put(Stat.BASE_ATTRIBUTE_RES, set.getDouble("baseElementRes", 0));
 		
 		// Geometry
-		_fCollisionHeight = set.getDouble("collision_height", 0);
-		_fCollisionRadius = set.getDouble("collision_radius", 0);
+		_fCollisionHeight = set.getFloat("collision_height", 0);
+		_fCollisionRadius = set.getFloat("collision_radius", 0);
 		_collisionRadius = (int) _fCollisionRadius;
 		_collisionHeight = (int) _fCollisionHeight;
 		
@@ -522,7 +522,7 @@ public class CreatureTemplate extends ListenersContainer
 	/**
 	 * @return the fCollisionRadius
 	 */
-	public double getfCollisionRadius()
+	public float getFCollisionRadius()
 	{
 		return _fCollisionRadius;
 	}
@@ -530,7 +530,7 @@ public class CreatureTemplate extends ListenersContainer
 	/**
 	 * @return the fCollisionHeight
 	 */
-	public double getfCollisionHeight()
+	public float getFCollisionHeight()
 	{
 		return _fCollisionHeight;
 	}

@@ -37,6 +37,8 @@ public class PlayerTemplate extends CreatureTemplate
 	private final int _spawnY;
 	private final int _spawnZ;
 	private final List<ItemHolder> _items = new ArrayList<>();
+	private final float _fCollisionRadiusFemale;
+	private final float _fCollisionHeightFemale;
 	private final float[] _hpTable;
 	private final float[] _mpTable;
 	private final float[] _cpTable;
@@ -51,6 +53,8 @@ public class PlayerTemplate extends CreatureTemplate
 		_spawnY = set.getInt("spawnY");
 		_spawnZ = set.getInt("spawnZ");
 		_classBaseLevel = set.getInt("baseLevel");
+		_fCollisionRadiusFemale = set.getFloat("collision_radius_female");
+		_fCollisionHeightFemale = set.getFloat("collision_height_female");
 		
 		String[] item;
 		for (String split : set.getString("items").split(";"))
@@ -122,6 +126,16 @@ public class PlayerTemplate extends CreatureTemplate
 	public int getClassBaseLevel()
 	{
 		return _classBaseLevel;
+	}
+	
+	public float getFCollisionRadiusFemale()
+	{
+		return _fCollisionRadiusFemale;
+	}
+	
+	public float getFCollisionHeightFemale()
+	{
+		return _fCollisionHeightFemale;
 	}
 	
 	public float getBaseHpMax(int level)

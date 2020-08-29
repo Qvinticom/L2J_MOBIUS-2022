@@ -202,7 +202,7 @@ public class Transform implements IIdentifiable
 		return _type == TransformType.PURE_STAT;
 	}
 	
-	public double getCollisionHeight(Creature creature, double defaultCollisionHeight)
+	public float getCollisionHeight(Creature creature, float defaultCollisionHeight)
 	{
 		final TransformTemplate template = getTemplate(creature);
 		if ((template != null) && (template.getCollisionHeight() != null))
@@ -212,7 +212,7 @@ public class Transform implements IIdentifiable
 		return defaultCollisionHeight;
 	}
 	
-	public double getCollisionRadius(Creature creature, double defaultCollisionRadius)
+	public float getCollisionRadius(Creature creature, float defaultCollisionRadius)
 	{
 		final TransformTemplate template = getTemplate(creature);
 		if ((template != null) && (template.getCollisionRadius() != null))

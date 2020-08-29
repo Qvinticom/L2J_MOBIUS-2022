@@ -56,8 +56,8 @@ public abstract class AbstractNpcInfo implements IClientOutgoingPacket
 	protected int _lhand;
 	protected int _chest;
 	protected int _enchantEffect;
-	protected double _collisionHeight;
-	protected double _collisionRadius;
+	protected float _collisionHeight;
+	protected float _collisionRadius;
 	protected String _name = "";
 	protected String _title = "";
 	protected final boolean _gmSeeInvis;
@@ -112,8 +112,8 @@ public abstract class AbstractNpcInfo implements IClientOutgoingPacket
 			_rhand = cha.getRightHandItem(); // On every subclass
 			_lhand = cha.getLeftHandItem(); // On every subclass
 			_enchantEffect = cha.getEnchantEffect();
-			_collisionHeight = cha.getCollisionHeight(); // On every subclass
-			_collisionRadius = cha.getCollisionRadius(); // On every subclass
+			_collisionHeight = cha.getTemplate().getFCollisionHeight(); // On every subclass
+			_collisionRadius = cha.getTemplate().getFCollisionRadius(); // On every subclass
 			_isAttackable = cha.isAutoAttackable(attacker);
 			
 			// npc crest of owning clan/ally of castle
@@ -269,8 +269,8 @@ public abstract class AbstractNpcInfo implements IClientOutgoingPacket
 			_isAttackable = cha.isAutoAttackable(attacker);
 			_rhand = 0;
 			_lhand = 0;
-			_collisionHeight = _trap.getTemplate().getfCollisionHeight();
-			_collisionRadius = _trap.getTemplate().getfCollisionRadius();
+			_collisionHeight = _trap.getTemplate().getFCollisionHeight();
+			_collisionRadius = _trap.getTemplate().getFCollisionRadius();
 			if (cha.getTemplate().isUsingServerSideName())
 			{
 				_name = cha.getName();
@@ -365,8 +365,8 @@ public abstract class AbstractNpcInfo implements IClientOutgoingPacket
 			_name = cha.getName();
 			_title = (cha.getOwner() != null) && cha.getOwner().isOnline() ? cha.getOwner().getName() : "";
 			_displayId = cha.getTemplate().getDisplayId();
-			_collisionHeight = cha.getTemplate().getfCollisionHeight();
-			_collisionRadius = cha.getTemplate().getfCollisionRadius();
+			_collisionHeight = cha.getTemplate().getFCollisionHeight();
+			_collisionRadius = cha.getTemplate().getFCollisionRadius();
 		}
 		
 		@Override

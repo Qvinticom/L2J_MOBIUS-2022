@@ -106,9 +106,8 @@ public class CharInfo extends GameServerPacket
 		writeD(_flyWalkSpd);
 		writeF(_moveMultiplier);
 		writeF(_player.getAttackSpeedMultiplier());
-		writeF(_player.getBaseTemplate().getCollisionRadius());
-		writeF(_player.getBaseTemplate().getCollisionHeight());
-		
+		writeF(_player.getCollisionRadius());
+		writeF(_player.getCollisionHeight());
 		writeD(_player.getAppearance().getHairStyle());
 		writeD(_player.getAppearance().getHairColor());
 		writeD(_player.getAppearance().getFace());

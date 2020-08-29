@@ -13412,30 +13412,30 @@ public class PlayerInstance extends Playable
 		}
 	}
 	
-	public double getCollisionRadius()
+	public float getCollisionRadius()
 	{
 		if (isMounted() && (_mountNpcId > 0))
 		{
-			return NpcData.getInstance().getTemplate(getMountNpcId()).getfCollisionRadius();
+			return NpcData.getInstance().getTemplate(getMountNpcId()).getFCollisionRadius();
 		}
 		if (isTransformed())
 		{
 			return _transformation.getCollisionRadius(this);
 		}
-		return _appearance.isFemale() ? getBaseTemplate().getFCollisionRadiusFemale() : getBaseTemplate().getfCollisionRadius();
+		return _appearance.isFemale() ? getBaseTemplate().getFCollisionRadiusFemale() : getBaseTemplate().getFCollisionRadius();
 	}
 	
-	public double getCollisionHeight()
+	public float getCollisionHeight()
 	{
 		if (isMounted() && (_mountNpcId > 0))
 		{
-			return NpcData.getInstance().getTemplate(getMountNpcId()).getfCollisionHeight();
+			return NpcData.getInstance().getTemplate(getMountNpcId()).getFCollisionHeight();
 		}
 		if (isTransformed())
 		{
 			return _transformation.getCollisionHeight(this);
 		}
-		return _appearance.isFemale() ? getBaseTemplate().getFCollisionHeightFemale() : getBaseTemplate().getfCollisionHeight();
+		return _appearance.isFemale() ? getBaseTemplate().getFCollisionHeightFemale() : getBaseTemplate().getFCollisionHeight();
 	}
 	
 	public int getClientX()

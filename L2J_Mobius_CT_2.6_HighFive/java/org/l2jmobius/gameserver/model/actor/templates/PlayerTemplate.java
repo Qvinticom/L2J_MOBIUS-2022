@@ -42,8 +42,8 @@ public class PlayerTemplate extends CreatureTemplate
 	private final double[] _baseMpReg;
 	private final double[] _baseCpReg;
 	
-	private final double _fCollisionHeightFemale;
-	private final double _fCollisionRadiusFemale;
+	private final float _fCollisionHeightFemale;
+	private final float _fCollisionRadiusFemale;
 	
 	private final int _baseSafeFallHeight;
 	
@@ -75,8 +75,8 @@ public class PlayerTemplate extends CreatureTemplate
 		_baseSlotDef.put(Inventory.PAPERDOLL_LFINGER, set.getInt("baseMDefrfinger", 0));
 		_baseSlotDef.put(Inventory.PAPERDOLL_NECK, set.getInt("baseMDefneck", 0));
 		
-		_fCollisionRadiusFemale = set.getDouble("collisionFemaleradius");
-		_fCollisionHeightFemale = set.getDouble("collisionFemaleheight");
+		_fCollisionRadiusFemale = set.getFloat("collisionFemaleradius");
+		_fCollisionHeightFemale = set.getFloat("collisionFemaleheight");
 		_baseSafeFallHeight = set.getInt("baseSafeFall", 333);
 		_creationPoints = creationPoints;
 	}
@@ -206,7 +206,7 @@ public class PlayerTemplate extends CreatureTemplate
 	/**
 	 * @return the template collision height for female characters.
 	 */
-	public double getFCollisionHeightFemale()
+	public float getFCollisionHeightFemale()
 	{
 		return _fCollisionHeightFemale;
 	}
@@ -214,7 +214,7 @@ public class PlayerTemplate extends CreatureTemplate
 	/**
 	 * @return the template collision radius for female characters.
 	 */
-	public double getFCollisionRadiusFemale()
+	public float getFCollisionRadiusFemale()
 	{
 		return _fCollisionRadiusFemale;
 	}

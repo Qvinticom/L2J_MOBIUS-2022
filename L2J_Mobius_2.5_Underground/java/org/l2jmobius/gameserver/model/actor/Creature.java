@@ -503,15 +503,15 @@ public abstract class Creature extends WorldObject implements ISkillsHolder, IDe
 		return _transform.filter(transform -> !transform.isStance()).map(Transform::getDisplayId).orElse(0);
 	}
 	
-	public double getCollisionRadius()
+	public float getCollisionRadius()
 	{
-		final double defaultCollisionRadius = _template.getCollisionRadius();
+		final float defaultCollisionRadius = _template.getCollisionRadius();
 		return _transform.map(transform -> transform.getCollisionRadius(this, defaultCollisionRadius)).orElse(defaultCollisionRadius);
 	}
 	
-	public double getCollisionHeight()
+	public float getCollisionHeight()
 	{
-		final double defaultCollisionHeight = _template.getCollisionHeight();
+		final float defaultCollisionHeight = _template.getCollisionHeight();
 		return _transform.map(transform -> transform.getCollisionHeight(this, defaultCollisionHeight)).orElse(defaultCollisionHeight);
 	}
 	

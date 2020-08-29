@@ -183,13 +183,13 @@ public class Transform implements IIdentifiable
 		return _type == TransformType.PURE_STAT;
 	}
 	
-	public double getCollisionHeight(PlayerInstance player)
+	public float getCollisionHeight(PlayerInstance player)
 	{
 		final TransformTemplate template = getTemplate(player);
 		return template != null ? template.getCollisionHeight() : player.getCollisionHeight();
 	}
 	
-	public double getCollisionRadius(PlayerInstance player)
+	public float getCollisionRadius(PlayerInstance player)
 	{
 		final TransformTemplate template = getTemplate(player);
 		return template != null ? template.getCollisionRadius() : player.getCollisionRadius();

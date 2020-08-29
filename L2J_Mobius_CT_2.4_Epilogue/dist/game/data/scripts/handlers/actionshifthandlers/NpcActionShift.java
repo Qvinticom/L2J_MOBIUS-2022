@@ -95,8 +95,8 @@ public class NpcActionShift implements IActionShiftHandler
 			html.replace("%men%", String.valueOf(((Creature) target).getMEN()));
 			html.replace("%loc%", target.getX() + " " + target.getY() + " " + target.getZ());
 			html.replace("%heading%", String.valueOf(((Creature) target).getHeading()));
-			html.replace("%collision_radius%", String.valueOf(((Creature) target).getTemplate().getfCollisionRadius()));
-			html.replace("%collision_height%", String.valueOf(((Creature) target).getTemplate().getfCollisionHeight()));
+			html.replace("%collision_radius%", String.valueOf(((Creature) target).getTemplate().getFCollisionRadius()));
+			html.replace("%collision_height%", String.valueOf(((Creature) target).getTemplate().getFCollisionHeight()));
 			html.replace("%loc2d%", String.valueOf((int) player.calculateDistance2D(target)));
 			html.replace("%loc3d%", String.valueOf((int) player.calculateDistance3D(target)));
 			

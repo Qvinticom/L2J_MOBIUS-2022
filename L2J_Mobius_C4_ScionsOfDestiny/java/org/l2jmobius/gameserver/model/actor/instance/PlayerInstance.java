@@ -7871,10 +7871,10 @@ public class PlayerInstance extends Playable
 			statement.setInt(29, getAppearance().getHairStyle());
 			statement.setInt(30, getAppearance().getHairColor());
 			statement.setInt(31, getAppearance().isFemale() ? 1 : 0);
-			statement.setDouble(32, 1/* getMovementMultiplier() */);
-			statement.setDouble(33, 1/* getAttackSpeedMultiplier() */);
-			statement.setDouble(34, getTemplate().getCollisionRadius());
-			statement.setDouble(35, getTemplate().getCollisionHeight());
+			statement.setDouble(32, 1 /* getMovementMultiplier() */);
+			statement.setDouble(33, 1 /* getAttackSpeedMultiplier() */);
+			statement.setDouble(34, getCollisionRadius());
+			statement.setDouble(35, getCollisionHeight());
 			statement.setLong(36, getExp());
 			statement.setInt(37, getSp());
 			statement.setInt(38, getKarma());
@@ -15383,6 +15383,24 @@ public class PlayerInstance extends Playable
 	public void setOfflineStartTime(long time)
 	{
 		_offlineShopStart = time;
+	}
+	
+	public float getCollisionRadius()
+	{
+		if (isMounted() && (_summon != null))
+		{
+			return _summon.getTemplate().getCollisionRadius();
+		}
+		return _appearance.isFemale() ? getBaseTemplate().getFCollisionRadiusFemale() : getBaseTemplate().getFCollisionRadius();
+	}
+	
+	public float getCollisionHeight()
+	{
+		if (isMounted() && (_summon != null))
+		{
+			return _summon.getTemplate().getCollisionHeight();
+		}
+		return _appearance.isFemale() ? getBaseTemplate().getFCollisionHeightFemale() : getBaseTemplate().getFCollisionHeight();
 	}
 	
 	/**

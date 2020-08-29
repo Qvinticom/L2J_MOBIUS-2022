@@ -90,8 +90,13 @@ public class CreatureTemplate
 	private final int _baseMpConsumeRate;
 	private final int _baseHpConsumeRate;
 	
+	/** For client info use {@link #_fCollisionRadius} */
 	private final int _collisionRadius;
+	/** For client info use {@link #_fCollisionHeight} */
 	private final int _collisionHeight;
+	
+	private final float _fCollisionRadius;
+	private final float _fCollisionHeight;
 	
 	public CreatureTemplate(StatSet set)
 	{
@@ -160,8 +165,10 @@ public class CreatureTemplate
 		_baseHpConsumeRate = set.getInt("baseHpConsumeRate", 0);
 		
 		// Geometry
-		_collisionRadius = (int) set.getFloat("collision_radius"); // TODO: Support float.
-		_collisionHeight = (int) set.getFloat("collision_height"); // TODO: Support float.
+		_fCollisionRadius = set.getFloat("collision_radius", 0);
+		_fCollisionHeight = set.getFloat("collision_height", 0);
+		_collisionRadius = (int) _fCollisionRadius;
+		_collisionHeight = (int) _fCollisionHeight;
 	}
 	
 	public int getBaseSTR()
@@ -462,5 +469,15 @@ public class CreatureTemplate
 	public int getCollisionHeight()
 	{
 		return _collisionHeight;
+	}
+	
+	public float getFCollisionRadius()
+	{
+		return _fCollisionRadius;
+	}
+	
+	public float getFCollisionHeight()
+	{
+		return _fCollisionHeight;
 	}
 }

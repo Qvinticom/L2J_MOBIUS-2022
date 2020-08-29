@@ -107,8 +107,8 @@ public class PetInfo extends GameServerPacket
 		
 		writeF(1/* _cha.getProperMultiplier() */);
 		writeF(1/* _cha.getAttackSpeedMultiplier() */);
-		writeF(_summon.getTemplate().getCollisionRadius());
-		writeF(_summon.getTemplate().getCollisionHeight());
+		writeF(_summon.getTemplate().getFCollisionRadius());
+		writeF(_summon.getTemplate().getFCollisionHeight());
 		writeD(0); // right hand weapon
 		writeD(0);
 		writeD(0); // left hand weapon

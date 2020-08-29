@@ -112,8 +112,8 @@ public class NpcTemplate extends CreatureTemplate implements IIdentifiable
 	private Set<Integer> _ignoreClanNpcIds;
 	private CopyOnWriteArrayList<DropHolder> _dropListDeath;
 	private CopyOnWriteArrayList<DropHolder> _dropListSpoil;
-	private double _collisionRadiusGrown;
-	private double _collisionHeightGrown;
+	private float _collisionRadiusGrown;
+	private float _collisionHeightGrown;
 	private int _mpRewardValue;
 	private MpRewardType _mpRewardType;
 	private int _mpRewardTicks;
@@ -196,8 +196,8 @@ public class NpcTemplate extends CreatureTemplate implements IIdentifiable
 		_maxSkillChance = set.getInt("maxSkillChance", 15);
 		_hitTimeFactor = set.getInt("hitTime", 100) / 100d;
 		_hitTimeFactorSkill = set.getInt("hitTimeSkill", 100) / 100d;
-		_collisionRadiusGrown = set.getDouble("collisionRadiusGrown", 0);
-		_collisionHeightGrown = set.getDouble("collisionHeightGrown", 0);
+		_collisionRadiusGrown = set.getFloat("collisionRadiusGrown", 0);
+		_collisionHeightGrown = set.getFloat("collisionHeightGrown", 0);
 		_mpRewardValue = set.getInt("mpRewardValue", 0);
 		_mpRewardType = set.getEnum("mpRewardType", MpRewardType.class, MpRewardType.DIFF);
 		_mpRewardTicks = set.getInt("mpRewardTicks", 0);
@@ -937,12 +937,12 @@ public class NpcTemplate extends CreatureTemplate implements IIdentifiable
 		return null;
 	}
 	
-	public double getCollisionRadiusGrown()
+	public float getCollisionRadiusGrown()
 	{
 		return _collisionRadiusGrown;
 	}
 	
-	public double getCollisionHeightGrown()
+	public float getCollisionHeightGrown()
 	{
 		return _collisionHeightGrown;
 	}

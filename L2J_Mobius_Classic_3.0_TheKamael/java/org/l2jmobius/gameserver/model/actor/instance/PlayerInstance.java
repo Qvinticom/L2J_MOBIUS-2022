@@ -12318,26 +12318,26 @@ public class PlayerInstance extends Playable
 	}
 	
 	@Override
-	public double getCollisionRadius()
+	public float getCollisionRadius()
 	{
 		if (isMounted() && (_mountNpcId > 0))
 		{
-			return NpcData.getInstance().getTemplate(getMountNpcId()).getfCollisionRadius();
+			return NpcData.getInstance().getTemplate(getMountNpcId()).getFCollisionRadius();
 		}
 		
-		final double defaultCollisionRadius = _appearance.isFemale() ? getBaseTemplate().getFCollisionRadiusFemale() : getBaseTemplate().getfCollisionRadius();
+		final float defaultCollisionRadius = _appearance.isFemale() ? getBaseTemplate().getFCollisionRadiusFemale() : getBaseTemplate().getFCollisionRadius();
 		return getTransformation().map(transform -> transform.getCollisionRadius(this, defaultCollisionRadius)).orElse(defaultCollisionRadius);
 	}
 	
 	@Override
-	public double getCollisionHeight()
+	public float getCollisionHeight()
 	{
 		if (isMounted() && (_mountNpcId > 0))
 		{
-			return NpcData.getInstance().getTemplate(getMountNpcId()).getfCollisionHeight();
+			return NpcData.getInstance().getTemplate(getMountNpcId()).getFCollisionHeight();
 		}
 		
-		final double defaultCollisionHeight = _appearance.isFemale() ? getBaseTemplate().getFCollisionHeightFemale() : getBaseTemplate().getfCollisionHeight();
+		final float defaultCollisionHeight = _appearance.isFemale() ? getBaseTemplate().getFCollisionHeightFemale() : getBaseTemplate().getFCollisionHeight();
 		return getTransformation().map(transform -> transform.getCollisionHeight(this, defaultCollisionHeight)).orElse(defaultCollisionHeight);
 	}
 	

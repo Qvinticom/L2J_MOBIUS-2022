@@ -38,8 +38,8 @@ import org.l2jmobius.gameserver.network.serverpackets.ExBasicActionList;
  */
 public class TransformTemplate
 {
-	private final double _collisionRadius;
-	private final double _collisionHeight;
+	private final float _collisionRadius;
+	private final float _collisionHeight;
 	private final WeaponType _baseAttackType;
 	private final int _baseAttackRange;
 	private final double _baseRandomDamage;
@@ -55,8 +55,8 @@ public class TransformTemplate
 	
 	public TransformTemplate(StatSet set)
 	{
-		_collisionRadius = set.getDouble("radius", 0);
-		_collisionHeight = set.getDouble("height", 0);
+		_collisionRadius = set.getFloat("radius", 0);
+		_collisionHeight = set.getFloat("height", 0);
 		_baseAttackType = set.getEnum("attackType", WeaponType.class, WeaponType.FIST);
 		_baseAttackRange = set.getInt("range", 40);
 		_baseRandomDamage = set.getDouble("randomDamage", 0);
@@ -148,12 +148,12 @@ public class TransformTemplate
 		return _baseStats.get(stat.ordinal());
 	}
 	
-	public double getCollisionRadius()
+	public float getCollisionRadius()
 	{
 		return _collisionRadius;
 	}
 	
-	public double getCollisionHeight()
+	public float getCollisionHeight()
 	{
 		return _collisionHeight;
 	}

@@ -106,8 +106,8 @@ public class PetInfo implements IClientOutgoingPacket
 		packet.writeD(_flyWalkSpd);
 		packet.writeF(_moveMultiplier);
 		packet.writeF(_summon.getAttackSpeedMultiplier()); // attack speed multiplier
-		packet.writeF(_summon.getTemplate().getfCollisionRadius());
-		packet.writeF(_summon.getTemplate().getfCollisionHeight());
+		packet.writeF(_summon.getTemplate().getFCollisionRadius());
+		packet.writeF(_summon.getTemplate().getFCollisionHeight());
 		packet.writeD(_summon.getWeapon()); // right hand weapon
 		packet.writeD(_summon.getArmor()); // body armor
 		packet.writeD(0x00); // left hand weapon

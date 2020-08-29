@@ -45,7 +45,7 @@ public class Grow extends AbstractEffect
 		if (info.getEffected().isNpc())
 		{
 			final Npc npc = (Npc) info.getEffected();
-			npc.setCollisionRadius(npc.getTemplate().getfCollisionRadius());
+			npc.setCollisionRadius(npc.getTemplate().getFCollisionRadius());
 		}
 	}
 	

@@ -180,8 +180,8 @@ public class Npc extends Creature
 		_currentEnchant = Config.ENABLE_RANDOM_ENCHANT_EFFECT ? Rnd.get(4, 21) : getTemplate().getWeaponEnchant();
 		
 		// initialize the "current" collisions
-		_currentCollisionHeight = getTemplate().getfCollisionHeight();
-		_currentCollisionRadius = getTemplate().getfCollisionRadius();
+		_currentCollisionHeight = getTemplate().getFCollisionHeight();
+		_currentCollisionRadius = getTemplate().getFCollisionRadius();
 		setFlying(template.isFlying());
 	}
 	
@@ -1175,8 +1175,8 @@ public class Npc extends Creature
 		// we do need to reset the weapons back to the initial template weapon.
 		_currentLHandId = getTemplate().getLHandId();
 		_currentRHandId = getTemplate().getRHandId();
-		_currentCollisionHeight = getTemplate().getfCollisionHeight();
-		_currentCollisionRadius = getTemplate().getfCollisionRadius();
+		_currentCollisionHeight = getTemplate().getFCollisionHeight();
+		_currentCollisionRadius = getTemplate().getFCollisionRadius();
 		
 		final Weapon weapon = (killer != null) ? killer.getActiveWeaponItem() : null;
 		_killingBlowWeaponId = (weapon != null) ? weapon.getId() : 0;

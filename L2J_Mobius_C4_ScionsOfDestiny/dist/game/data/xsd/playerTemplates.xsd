@@ -27,7 +27,9 @@
 								<xs:attribute type="xs:int" name="spawnY" use="required"/>
 								<xs:attribute type="xs:int" name="spawnZ" use="required"/>
 								<xs:attribute type="xs:float" name="collision_radius" use="required"/>
+								<xs:attribute type="xs:float" name="collision_radius_female" use="required"/>
 								<xs:attribute type="xs:float" name="collision_height" use="required"/>
+								<xs:attribute type="xs:float" name="collision_height_female" use="required"/>
 								<xs:attribute type="xs:string" name="items" use="required"/>
 								<xs:attribute type="xs:string" name="hpTable" use="required"/>
 								<xs:attribute type="xs:string" name="mpTable" use="required"/>
