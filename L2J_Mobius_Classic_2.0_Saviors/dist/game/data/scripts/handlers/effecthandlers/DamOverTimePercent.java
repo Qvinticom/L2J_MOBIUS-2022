@@ -71,13 +71,11 @@ public class DamOverTimePercent extends AbstractEffect
 				{
 					return skill.isToggle();
 				}
-				
 				damage = effected.getCurrentHp() - 1;
 			}
 		}
 		
 		effector.doAttack(damage, effected, skill, true, false, false, false);
-		
 		return skill.isToggle();
 	}
 }

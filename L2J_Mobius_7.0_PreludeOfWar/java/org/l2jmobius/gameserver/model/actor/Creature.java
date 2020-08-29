@@ -1166,7 +1166,7 @@ public abstract class Creature extends WorldObject implements ISkillsHolder, IDe
 			
 			// Flag the attacker if it's a PlayerInstance outside a PvP area
 			final PlayerInstance player = getActingPlayer();
-			if (player != null)
+			if ((player != null) && (player != target))
 			{
 				AttackStanceTaskManager.getInstance().addAttackStanceTask(player);
 				player.updatePvPStatus(target);
@@ -4396,13 +4396,15 @@ public abstract class Creature extends WorldObject implements ISkillsHolder, IDe
 		}
 		
 		// Start attack stance and notify being attacked.
-		if (target.hasAI())
+		if ((this != target))
 		{
-			target.getAI().clientStartAutoAttack();
-			target.getAI().notifyEvent(CtrlEvent.EVT_ATTACKED, this);
+			if (target.hasAI())
+			{
+				target.getAI().clientStartAutoAttack();
+				target.getAI().notifyEvent(CtrlEvent.EVT_ATTACKED, this);
+			}
+			getAI().clientStartAutoAttack();
 		}
-		
-		getAI().clientStartAutoAttack();
 		
 		// ImmobileDamageBonus and ImmobileDamageResist effect bonuses.
 		double damage = damageValue;

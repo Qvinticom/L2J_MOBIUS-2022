@@ -71,10 +71,10 @@ public class DamOverTimePercent extends AbstractEffect
 				{
 					return info.getSkill().isToggle();
 				}
-				
 				damage = info.getEffected().getCurrentHp() - 1;
 			}
 		}
+		
 		info.getEffected().reduceCurrentHpByDOT(damage, info.getEffector(), info.getSkill());
 		info.getEffected().notifyDamageReceived(damage, info.getEffector(), info.getSkill(), false, true);
 		return info.getSkill().isToggle();
