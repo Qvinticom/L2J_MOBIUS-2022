@@ -22,13 +22,16 @@ import org.l2jmobius.gameserver.network.GameClient;
 import org.l2jmobius.gameserver.network.serverpackets.ExInzoneWaiting;
 
 /**
- * @author UnAfraid
+ * @author Mobius
  */
 public class RequestInzoneWaitingTime implements IClientIncomingPacket
 {
+	private boolean _hide;
+	
 	@Override
 	public boolean read(GameClient client, PacketReader packet)
 	{
+		_hide = packet.readC() == 0;
 		return true;
 	}
 	
@@ -40,6 +43,6 @@ public class RequestInzoneWaitingTime implements IClientIncomingPacket
 		{
 			return;
 		}
-		client.sendPacket(new ExInzoneWaiting(player, false));
+		client.sendPacket(new ExInzoneWaiting(player, _hide));
 	}
 }
