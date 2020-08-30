@@ -16,7 +16,6 @@
  */
 package org.l2jmobius.gameserver.handler;
 
-import java.io.IOException;
 import java.util.List;
 
 import org.l2jmobius.gameserver.model.Skill;
@@ -30,9 +29,8 @@ public interface ISkillHandler
 	 * @param creature
 	 * @param skill
 	 * @param targets
-	 * @throws IOException
 	 */
-	void useSkill(Creature creature, Skill skill, List<Creature> targets) throws IOException;
+	void useSkill(Creature creature, Skill skill, List<Creature> targets);
 	
 	/**
 	 * this method is called at initialization to register all the item ids automatically

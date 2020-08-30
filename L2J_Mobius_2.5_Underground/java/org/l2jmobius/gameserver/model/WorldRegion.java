@@ -16,8 +16,8 @@
  */
 package org.l2jmobius.gameserver.model;
 
-import java.util.Map;
-import java.util.concurrent.ConcurrentHashMap;
+import java.util.ArrayList;
+import java.util.List;
 import java.util.concurrent.ScheduledFuture;
 
 import org.l2jmobius.Config;
@@ -28,9 +28,9 @@ import org.l2jmobius.gameserver.taskmanager.RandomAnimationTaskManager;
 
 public class WorldRegion
 {
-	/** Map containing visible objects in this world region. */
-	private final Map<Integer, WorldObject> _visibleObjects = new ConcurrentHashMap<>();
-	/** Map containing nearby regions forming this world region's effective area. */
+	/** List containing visible objects in this world region. */
+	private final List<WorldObject> _visibleObjects = new ArrayList<>();
+	/** Array containing nearby regions forming this world region's effective area. */
 	private WorldRegion[] _surroundingRegions;
 	private final int _regionX;
 	private final int _regionY;
@@ -52,8 +52,9 @@ public class WorldRegion
 		
 		if (!isOn)
 		{
-			for (WorldObject wo : _visibleObjects.values())
+			for (int i = 0; i < _visibleObjects.size(); i++)
 			{
+				final WorldObject wo = _visibleObjects.get(i);
 				if (wo.isAttackable())
 				{
 					final Attackable mob = (Attackable) wo;
@@ -87,15 +88,16 @@ public class WorldRegion
 		}
 		else
 		{
-			for (WorldObject wo : _visibleObjects.values())
+			for (int i = 0; i < _visibleObjects.size(); i++)
 			{
+				final WorldObject wo = _visibleObjects.get(i);
 				if (wo.isAttackable())
 				{
 					// Start HP/MP/CP regeneration task.
 					((Attackable) wo).getStatus().startHpMpRegeneration();
 					RandomAnimationTaskManager.getInstance().add((Npc) wo);
 				}
-				else if (wo instanceof Npc)
+				else if (wo.isNpc())
 				{
 					RandomAnimationTaskManager.getInstance().add((Npc) wo);
 				}
@@ -110,11 +112,19 @@ public class WorldRegion
 	
 	public boolean areNeighborsEmpty()
 	{
-		for (WorldRegion worldRegion : _surroundingRegions)
+		for (int i = 0; i < _surroundingRegions.length; i++)
 		{
-			if (worldRegion.isActive() && worldRegion.getVisibleObjects().values().stream().anyMatch(WorldObject::isPlayable))
+			final WorldRegion worldRegion = _surroundingRegions[i];
+			if (worldRegion.isActive())
 			{
-				return false;
+				final List<WorldObject> regionObjects = worldRegion.getVisibleObjects();
+				for (int j = 0; j < regionObjects.size(); j++)
+				{
+					if (regionObjects.get(j).isPlayable())
+					{
+						return false;
+					}
+				}
 			}
 		}
 		return true;
@@ -157,9 +167,9 @@ public class WorldRegion
 			// Then, set a timer to activate the neighbors.
 			_neighborsTask = ThreadPool.schedule(() ->
 			{
-				for (WorldRegion worldRegion : _surroundingRegions)
+				for (int i = 0; i < _surroundingRegions.length; i++)
 				{
-					worldRegion.setActive(true);
+					_surroundingRegions[i].setActive(true);
 				}
 			}, 1000 * Config.GRID_NEIGHBOR_TURNON_TIME);
 		}
@@ -183,8 +193,9 @@ public class WorldRegion
 			// Suggest means: first check if a neighbor has PlayerInstances in it. If not, deactivate.
 			_neighborsTask = ThreadPool.schedule(() ->
 			{
-				for (WorldRegion worldRegion : _surroundingRegions)
+				for (int i = 0; i < _surroundingRegions.length; i++)
 				{
+					final WorldRegion worldRegion = _surroundingRegions[i];
 					if (worldRegion.areNeighborsEmpty())
 					{
 						worldRegion.setActive(false);
@@ -206,7 +217,13 @@ public class WorldRegion
 			return;
 		}
 		
-		_visibleObjects.put(object.getObjectId(), object);
+		synchronized (_visibleObjects)
+		{
+			if (!_visibleObjects.contains(object))
+			{
+				_visibleObjects.add(object);
+			}
+		}
 		
 		// If this is the first player to enter the region, activate self and neighbors.
 		if (object.isPlayable() && !_active && !Config.GRIDS_ALWAYS_ON)
@@ -230,7 +247,11 @@ public class WorldRegion
 		{
 			return;
 		}
-		_visibleObjects.remove(object.getObjectId());
+		
+		synchronized (_visibleObjects)
+		{
+			_visibleObjects.remove(object);
+		}
 		
 		if (object.isPlayable() && areNeighborsEmpty() && !Config.GRIDS_ALWAYS_ON)
 		{
@@ -238,7 +259,7 @@ public class WorldRegion
 		}
 	}
 	
-	public Map<Integer, WorldObject> getVisibleObjects()
+	public List<WorldObject> getVisibleObjects()
 	{
 		return _visibleObjects;
 	}

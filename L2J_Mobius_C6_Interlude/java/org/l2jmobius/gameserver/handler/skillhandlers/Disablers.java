@@ -16,7 +16,6 @@
  */
 package org.l2jmobius.gameserver.handler.skillhandlers;
 
-import java.io.IOException;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.logging.Logger;
@@ -675,14 +674,14 @@ public class Disablers implements ISkillHandler
 								final List<Creature> tgts = new ArrayList<>();
 								tgts.add(target);
 								
-								try
-								{
-									healhandler.useSkill(creature, skill, tgts);
-								}
-								catch (IOException e)
-								{
-									LOGGER.warning(e.getMessage());
-								}
+								// try
+								// {
+								healhandler.useSkill(creature, skill, tgts);
+								// }
+								// catch (IOException e)
+								// {
+								// LOGGER.warning(e.getMessage());
+								// }
 							}
 						}
 						for (String stat : negateEffectTypes)

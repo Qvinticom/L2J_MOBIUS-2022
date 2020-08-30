@@ -16,10 +16,9 @@
  */
 package org.l2jmobius.gameserver.model;
 
-import java.util.Collection;
+import java.util.ArrayList;
 import java.util.Collections;
 import java.util.List;
-import java.util.concurrent.ConcurrentHashMap;
 import java.util.concurrent.ScheduledFuture;
 import java.util.logging.Logger;
 
@@ -31,9 +30,7 @@ import org.l2jmobius.gameserver.ai.SiegeGuardAI;
 import org.l2jmobius.gameserver.datatables.sql.SpawnTable;
 import org.l2jmobius.gameserver.model.actor.Attackable;
 import org.l2jmobius.gameserver.model.actor.Creature;
-import org.l2jmobius.gameserver.model.actor.Playable;
 import org.l2jmobius.gameserver.model.actor.instance.NpcInstance;
-import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
 import org.l2jmobius.gameserver.model.spawn.Spawn;
 import org.l2jmobius.gameserver.model.zone.ZoneManager;
 import org.l2jmobius.gameserver.model.zone.ZoneType;
@@ -44,8 +41,7 @@ public class WorldRegion
 {
 	private static final Logger LOGGER = Logger.getLogger(WorldRegion.class.getName());
 	
-	private final Collection<PlayerInstance> _playerObjects = ConcurrentHashMap.newKeySet();
-	private final Collection<WorldObject> _visibleObjects = ConcurrentHashMap.newKeySet();
+	private final List<WorldObject> _visibleObjects = new ArrayList<>();
 	private WorldRegion[] _surroundingRegions;
 	private final int _regionX;
 	private final int _regionY;
@@ -74,7 +70,6 @@ public class WorldRegion
 		{
 			return;
 		}
-		
 		_zoneManager.unregisterZone(zone);
 	}
 	
@@ -127,8 +122,9 @@ public class WorldRegion
 	{
 		if (!isOn)
 		{
-			for (WorldObject wo : _visibleObjects)
+			for (int i = 0; i < _visibleObjects.size(); i++)
 			{
+				final WorldObject wo = _visibleObjects.get(i);
 				if (wo instanceof Attackable)
 				{
 					final Attackable mob = (Attackable) wo;
@@ -174,8 +170,9 @@ public class WorldRegion
 		}
 		else
 		{
-			for (WorldObject wo : _visibleObjects)
+			for (int i = 0; i < _visibleObjects.size(); i++)
 			{
+				final WorldObject wo = _visibleObjects.get(i);
 				if (wo instanceof Attackable)
 				{
 					// Start HP/MP/CP Regeneration task
@@ -190,20 +187,28 @@ public class WorldRegion
 		}
 	}
 	
-	public Boolean isActive()
+	public boolean isActive()
 	{
 		return _active;
 	}
 	
 	// check if all 9 neighbors (including self) are inactive or active but with no players.
 	// returns true if the above condition is met.
-	public Boolean areNeighborsEmpty()
+	public boolean areNeighborsEmpty()
 	{
-		for (WorldRegion worldRegion : _surroundingRegions)
+		for (int i = 0; i < _surroundingRegions.length; i++)
 		{
-			if (worldRegion.isActive() && !worldRegion.getAllPlayers().isEmpty())
+			final WorldRegion worldRegion = _surroundingRegions[i];
+			if (worldRegion.isActive())
 			{
-				return false;
+				final List<WorldObject> regionObjects = worldRegion.getVisibleObjects();
+				for (int j = 0; j < regionObjects.size(); j++)
+				{
+					if (regionObjects.get(j).isPlayable())
+					{
+						return false;
+					}
+				}
 			}
 		}
 		return true;
@@ -246,9 +251,9 @@ public class WorldRegion
 			// Then, set a timer to activate the neighbors.
 			_neighborsTask = ThreadPool.schedule(() ->
 			{
-				for (WorldRegion worldRegion : _surroundingRegions)
+				for (int i = 0; i < _surroundingRegions.length; i++)
 				{
-					worldRegion.setActive(true);
+					_surroundingRegions[i].setActive(true);
 				}
 			}, 1000 * Config.GRID_NEIGHBOR_TURNON_TIME);
 		}
@@ -272,8 +277,9 @@ public class WorldRegion
 			// Suggest means: first check if a neighbor has PlayerInstances in it. If not, deactivate.
 			_neighborsTask = ThreadPool.schedule(() ->
 			{
-				for (WorldRegion worldRegion : _surroundingRegions)
+				for (int i = 0; i < _surroundingRegions.length; i++)
 				{
+					final WorldRegion worldRegion = _surroundingRegions[i];
 					if (worldRegion.areNeighborsEmpty())
 					{
 						worldRegion.setActive(false);
@@ -296,17 +302,18 @@ public class WorldRegion
 			return;
 		}
 		
-		_visibleObjects.add(object);
-		
-		if (object instanceof PlayerInstance)
+		synchronized (_visibleObjects)
 		{
-			_playerObjects.add((PlayerInstance) object);
-			
-			// if this is the first player to enter the region, activate self & neighbors
-			if ((_playerObjects.size() == 1) && !Config.GRIDS_ALWAYS_ON)
+			if (!_visibleObjects.contains(object))
 			{
-				startActivation();
+				_visibleObjects.add(object);
 			}
+		}
+		
+		// If this is the first player to enter the region, activate self and neighbors.
+		if (object.isPlayable() && !_active && !Config.GRIDS_ALWAYS_ON)
+		{
+			startActivation();
 		}
 	}
 	
@@ -323,22 +330,36 @@ public class WorldRegion
 			return;
 		}
 		
-		_visibleObjects.remove(object);
-		
-		if (object instanceof Playable)
+		if (_visibleObjects.isEmpty())
 		{
-			_playerObjects.remove(object);
-			
-			if (_playerObjects.isEmpty() && !Config.GRIDS_ALWAYS_ON)
-			{
-				startDeactivation();
-			}
+			return;
+		}
+		
+		synchronized (_visibleObjects)
+		{
+			_visibleObjects.remove(object);
+		}
+		
+		if (object.isPlayable() && areNeighborsEmpty() && !Config.GRIDS_ALWAYS_ON)
+		{
+			startDeactivation();
 		}
 	}
 	
 	public void setSurroundingRegions(WorldRegion[] regions)
 	{
 		_surroundingRegions = regions;
+		
+		// Make sure that this region is always the first region to improve bulk operations when this region should be updated first.
+		for (int i = 0; i < _surroundingRegions.length; i++)
+		{
+			if (_surroundingRegions[i] == this)
+			{
+				final WorldRegion first = _surroundingRegions[0];
+				_surroundingRegions[0] = this;
+				_surroundingRegions[i] = first;
+			}
+		}
 	}
 	
 	/**
@@ -349,12 +370,7 @@ public class WorldRegion
 		return _surroundingRegions;
 	}
 	
-	public Collection<PlayerInstance> getAllPlayers()
-	{
-		return _playerObjects;
-	}
-	
-	public Collection<WorldObject> getVisibleObjects()
+	public List<WorldObject> getVisibleObjects()
 	{
 		return _visibleObjects;
 	}
@@ -370,8 +386,9 @@ public class WorldRegion
 	public synchronized void deleteVisibleNpcSpawns()
 	{
 		LOGGER.info("Deleting all visible NPCs in Region: " + getName());
-		for (WorldObject obj : _visibleObjects)
+		for (int i = 0; i < _visibleObjects.size(); i++)
 		{
+			final WorldObject obj = _visibleObjects.get(i);
 			if (obj instanceof NpcInstance)
 			{
 				final NpcInstance target = (NpcInstance) obj;
@@ -404,8 +421,10 @@ public class WorldRegion
 			final int down = y - range;
 			final int left = x + range;
 			final int right = x - range;
-			for (ZoneType e : _zoneManager.getZones())
+			final List<ZoneType> zones = _zoneManager.getZones();
+			for (int i = 0; i < zones.size(); i++)
 			{
+				final ZoneType e = zones.get(i);
 				if (e instanceof PeaceZone)
 				{
 					if (e.isInsideZone(x, up, z))

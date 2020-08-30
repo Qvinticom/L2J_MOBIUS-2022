@@ -16,7 +16,6 @@
  */
 package org.l2jmobius.gameserver.model.items;
 
-import java.io.IOException;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -404,36 +403,36 @@ public class Weapon extends Item
 				continue; // Skill condition not met
 			}
 			
-			try
+			// try
+			// {
+			// Get the skill handler corresponding to the skill type
+			final ISkillHandler handler = SkillHandler.getInstance().getSkillHandler(skill.getSkillType());
+			final List<Creature> targets = new ArrayList<>();
+			targets.add(target);
+			
+			// Launch the magic skill and calculate its effects
+			if (handler != null)
 			{
-				// Get the skill handler corresponding to the skill type
-				final ISkillHandler handler = SkillHandler.getInstance().getSkillHandler(skill.getSkillType());
-				final List<Creature> targets = new ArrayList<>();
-				targets.add(target);
-				
-				// Launch the magic skill and calculate its effects
-				if (handler != null)
-				{
-					handler.useSkill(caster, skill, targets);
-				}
-				else
-				{
-					skill.useSkill(caster, targets);
-				}
-				
-				if ((caster instanceof PlayerInstance) && (target instanceof NpcInstance))
-				{
-					for (Quest quest : ((NpcInstance) target).getTemplate().getEventQuests(EventType.ON_SKILL_USE))
-					{
-						quest.notifySkillUse((NpcInstance) target, (PlayerInstance) caster, skill);
-					}
-				}
-				
-				output = true;
+				handler.useSkill(caster, skill, targets);
 			}
-			catch (IOException e)
+			else
 			{
+				skill.useSkill(caster, targets);
 			}
+			
+			if ((caster instanceof PlayerInstance) && (target instanceof NpcInstance))
+			{
+				for (Quest quest : ((NpcInstance) target).getTemplate().getEventQuests(EventType.ON_SKILL_USE))
+				{
+					quest.notifySkillUse((NpcInstance) target, (PlayerInstance) caster, skill);
+				}
+			}
+			
+			output = true;
+			// }
+			// catch (IOException e)
+			// {
+			// }
 		}
 		
 		return output;

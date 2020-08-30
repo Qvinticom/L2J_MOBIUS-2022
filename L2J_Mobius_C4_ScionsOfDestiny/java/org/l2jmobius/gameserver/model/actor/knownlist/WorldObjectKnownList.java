@@ -141,9 +141,9 @@ public class WorldObjectKnownList
 		else
 		{
 			// Go through all visible WorldObject near the Creature
-			for (WorldObject playable : World.getInstance().getVisiblePlayers(_activeObject))
+			for (WorldObject object : World.getInstance().getVisibleObjects(_activeObject))
 			{
-				if (playable == null)
+				if ((object == null) || !object.isPlayable())
 				{
 					return;
 				}
@@ -151,7 +151,7 @@ public class WorldObjectKnownList
 				// Try to add object to active object's known objects
 				// Creature only needs to see visible PlayerInstance and PlayableInstance, when moving. Other creatures are currently only known from initial spawn area.
 				// Possibly look into getDistanceToForgetObject values before modifying this approach...
-				addKnownObject(playable);
+				addKnownObject(object);
 			}
 		}
 	}

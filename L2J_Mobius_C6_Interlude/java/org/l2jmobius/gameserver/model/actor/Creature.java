@@ -2796,17 +2796,17 @@ public abstract class Creature extends WorldObject implements ISkillsHolder
 		@Override
 		public void run()
 		{
-			try
+			// try
+			// {
+			if (_creature != null)
 			{
-				if (_creature != null)
-				{
-					_creature.enableSkill(_skill);
-				}
+				_creature.enableSkill(_skill);
 			}
-			catch (Throwable e)
-			{
-				LOGGER.warning(e.getMessage());
-			}
+			// }
+			// catch (Throwable e)
+			// {
+			// LOGGER.warning(e.getMessage());
+			// }
 		}
 	}
 	
@@ -2850,14 +2850,14 @@ public abstract class Creature extends WorldObject implements ISkillsHolder
 		@Override
 		public void run()
 		{
-			try
-			{
-				onHitTimer(_hitTarget, _damage, _crit, _miss, _soulshot, _shld);
-			}
-			catch (Throwable e)
-			{
-				LOGGER.warning("fixme:hit task unhandled exception " + e);
-			}
+			// try
+			// {
+			onHitTimer(_hitTarget, _damage, _crit, _miss, _soulshot, _shld);
+			// }
+			// catch (Throwable e)
+			// {
+			// LOGGER.warning("fixme:hit task unhandled exception " + e);
+			// }
 		}
 	}
 	
@@ -2950,14 +2950,14 @@ public abstract class Creature extends WorldObject implements ISkillsHolder
 		@Override
 		public void run()
 		{
-			try
-			{
-				_currPlayer.useMagic(_queuedSkill, _isCtrlPressed, _isShiftPressed);
-			}
-			catch (Throwable e)
-			{
-				LOGGER.warning(e.getMessage());
-			}
+			// try
+			// {
+			_currPlayer.useMagic(_queuedSkill, _isCtrlPressed, _isShiftPressed);
+			// }
+			// catch (Throwable e)
+			// {
+			// LOGGER.warning(e.getMessage());
+			// }
 		}
 	}
 	
@@ -2980,14 +2980,14 @@ public abstract class Creature extends WorldObject implements ISkillsHolder
 		@Override
 		public void run()
 		{
-			try
-			{
-				getAI().notifyEvent(_evt, null);
-			}
-			catch (Throwable t)
-			{
-				LOGGER.warning(t.getMessage());
-			}
+			// try
+			// {
+			getAI().notifyEvent(_evt, null);
+			// }
+			// catch (Throwable t)
+			// {
+			// LOGGER.warning(t.getMessage());
+			// }
 		}
 	}
 	
@@ -2999,25 +2999,25 @@ public abstract class Creature extends WorldObject implements ISkillsHolder
 		@Override
 		public void run()
 		{
-			try
+			// try
+			// {
+			if (System.currentTimeMillis() > _pvpFlagLasts)
 			{
-				if (System.currentTimeMillis() > _pvpFlagLasts)
-				{
-					stopPvPFlag();
-				}
-				else if (System.currentTimeMillis() > (_pvpFlagLasts - 5000))
-				{
-					updatePvPFlag(2);
-				}
-				else
-				{
-					updatePvPFlag(1);
-				}
+				stopPvPFlag();
 			}
-			catch (Exception e)
+			else if (System.currentTimeMillis() > (_pvpFlagLasts - 5000))
 			{
-				LOGGER.warning("error in pvp flag task: " + e);
+				updatePvPFlag(2);
 			}
+			else
+			{
+				updatePvPFlag(1);
+			}
+			// }
+			// catch (Exception e)
+			// {
+			// LOGGER.warning("error in pvp flag task: " + e);
+			// }
 		}
 	}
 	
@@ -4736,14 +4736,14 @@ public abstract class Creature extends WorldObject implements ISkillsHolder
 				{
 					for (PlayerInstance player : getKnownList().getKnownPlayers().values())
 					{
-						try
-						{
-							player.sendPacket(su);
-						}
-						catch (NullPointerException e)
-						{
-							LOGGER.warning(e.toString());
-						}
+						// try
+						// {
+						player.sendPacket(su);
+						// }
+						// catch (NullPointerException e)
+						// {
+						// LOGGER.warning(e.toString());
+						// }
 					}
 				}
 			}
@@ -5555,18 +5555,18 @@ public abstract class Creature extends WorldObject implements ISkillsHolder
 				final int gty = (originalY - World.MAP_MIN_Y) >> 4;
 				if (isOnGeodataPath())
 				{
-					try
+					// try
+					// {
+					if ((gtx == _move.geoPathGtx) && (gty == _move.geoPathGty))
 					{
-						if ((gtx == _move.geoPathGtx) && (gty == _move.geoPathGty))
-						{
-							return;
-						}
-						_move.onGeodataPathIndex = -1; // Set not on geodata path.
+						return;
 					}
-					catch (NullPointerException e)
-					{
-						// nothing
-					}
+					_move.onGeodataPathIndex = -1; // Set not on geodata path.
+					// }
+					// catch (NullPointerException e)
+					// {
+					// // nothing
+					// }
 				}
 				
 				// Temporary fix for character outside world region errors (should not happen)
@@ -7382,116 +7382,116 @@ public abstract class Creature extends WorldObject implements ISkillsHolder
 		}
 		
 		final List<Creature> targets2 = targets;
-		try
+		// try
+		// {
+		if ((targets2 != null) && !targets2.isEmpty())
 		{
-			if ((targets2 != null) && !targets2.isEmpty())
+			// Go through targets table
+			for (WorldObject target2 : targets2)
 			{
-				// Go through targets table
-				for (WorldObject target2 : targets2)
+				if (target2 == null)
 				{
-					if (target2 == null)
+					continue;
+				}
+				
+				if (target2 instanceof Playable)
+				{
+					final Creature target = (Creature) target2;
+					
+					// If the skill is type STEALTH(ex: Dance of Shadow)
+					if (skill.isAbnormalEffectByName(ABNORMAL_EFFECT_STEALTH))
 					{
-						continue;
+						final Effect silentMove = target.getFirstEffect(Effect.EffectType.SILENT_MOVE);
+						if (silentMove != null)
+						{
+							silentMove.exit(true);
+						}
 					}
 					
-					if (target2 instanceof Playable)
+					if ((skill.getSkillType() == SkillType.BUFF) || (skill.getSkillType() == SkillType.SEED))
 					{
-						final Creature target = (Creature) target2;
+						final SystemMessage smsg = new SystemMessage(SystemMessageId.THE_EFFECTS_OF_S1_FLOW_THROUGH_YOU);
+						smsg.addString(skill.getName());
+						target.sendPacket(smsg);
+					}
+					
+					if ((this instanceof PlayerInstance) && (target instanceof Summon))
+					{
+						((Summon) target).getOwner().sendPacket(new PetInfo((Summon) target));
+						sendPacket(new NpcInfo((Summon) target, this));
 						
-						// If the skill is type STEALTH(ex: Dance of Shadow)
-						if (skill.isAbnormalEffectByName(ABNORMAL_EFFECT_STEALTH))
-						{
-							final Effect silentMove = target.getFirstEffect(Effect.EffectType.SILENT_MOVE);
-							if (silentMove != null)
-							{
-								silentMove.exit(true);
-							}
-						}
-						
-						if ((skill.getSkillType() == SkillType.BUFF) || (skill.getSkillType() == SkillType.SEED))
-						{
-							final SystemMessage smsg = new SystemMessage(SystemMessageId.THE_EFFECTS_OF_S1_FLOW_THROUGH_YOU);
-							smsg.addString(skill.getName());
-							target.sendPacket(smsg);
-						}
-						
-						if ((this instanceof PlayerInstance) && (target instanceof Summon))
-						{
-							((Summon) target).getOwner().sendPacket(new PetInfo((Summon) target));
-							sendPacket(new NpcInfo((Summon) target, this));
-							
-							// The PetInfo packet wipes the PartySpelled (list of active spells' icons). Re-add them
-							((Summon) target).updateEffectIcons(true);
-						}
+						// The PetInfo packet wipes the PartySpelled (list of active spells' icons). Re-add them
+						((Summon) target).updateEffectIcons(true);
 					}
 				}
 			}
 		}
-		catch (Exception e)
+		// }
+		// catch (Exception e)
+		// {
+		// LOGGER.warning(e.toString());
+		// }
+		
+		// try
+		// {
+		final StatusUpdate su = new StatusUpdate(getObjectId());
+		boolean isSendStatus = false;
+		
+		// Consume MP of the Creature and Send the Server->Client packet StatusUpdate with current HP and MP to all other PlayerInstance to inform
+		final double mpConsume = getStat().getMpConsume(skill);
+		if (mpConsume > 0)
 		{
-			LOGGER.warning(e.toString());
+			if (skill.isDance())
+			{
+				getStatus().reduceMp(calcStat(Stat.DANCE_MP_CONSUME_RATE, mpConsume, null, null));
+			}
+			else if (skill.isMagic())
+			{
+				getStatus().reduceMp(calcStat(Stat.MAGICAL_MP_CONSUME_RATE, mpConsume, null, null));
+			}
+			else
+			{
+				getStatus().reduceMp(calcStat(Stat.PHYSICAL_MP_CONSUME_RATE, mpConsume, null, null));
+			}
+			
+			su.addAttribute(StatusUpdate.CUR_MP, (int) getStatus().getCurrentMp());
+			isSendStatus = true;
 		}
 		
-		try
+		// Consume HP if necessary and Send the Server->Client packet StatusUpdate with current HP and MP to all other PlayerInstance to inform
+		if (skill.getHpConsume() > 0)
 		{
-			final StatusUpdate su = new StatusUpdate(getObjectId());
-			boolean isSendStatus = false;
-			
-			// Consume MP of the Creature and Send the Server->Client packet StatusUpdate with current HP and MP to all other PlayerInstance to inform
-			final double mpConsume = getStat().getMpConsume(skill);
-			if (mpConsume > 0)
+			double consumeHp;
+			consumeHp = calcStat(Stat.HP_CONSUME_RATE, skill.getHpConsume(), null, null);
+			if ((consumeHp + 1) >= getStatus().getCurrentHp())
 			{
-				if (skill.isDance())
-				{
-					getStatus().reduceMp(calcStat(Stat.DANCE_MP_CONSUME_RATE, mpConsume, null, null));
-				}
-				else if (skill.isMagic())
-				{
-					getStatus().reduceMp(calcStat(Stat.MAGICAL_MP_CONSUME_RATE, mpConsume, null, null));
-				}
-				else
-				{
-					getStatus().reduceMp(calcStat(Stat.PHYSICAL_MP_CONSUME_RATE, mpConsume, null, null));
-				}
-				
-				su.addAttribute(StatusUpdate.CUR_MP, (int) getStatus().getCurrentMp());
-				isSendStatus = true;
+				consumeHp = getStatus().getCurrentHp() - 1.0;
 			}
 			
-			// Consume HP if necessary and Send the Server->Client packet StatusUpdate with current HP and MP to all other PlayerInstance to inform
-			if (skill.getHpConsume() > 0)
-			{
-				double consumeHp;
-				consumeHp = calcStat(Stat.HP_CONSUME_RATE, skill.getHpConsume(), null, null);
-				if ((consumeHp + 1) >= getStatus().getCurrentHp())
-				{
-					consumeHp = getStatus().getCurrentHp() - 1.0;
-				}
-				
-				getStatus().reduceHp(consumeHp, this);
-				su.addAttribute(StatusUpdate.CUR_HP, (int) getStatus().getCurrentHp());
-				isSendStatus = true;
-			}
-			
-			// Send a Server->Client packet StatusUpdate with MP modification to the PlayerInstance
-			if (isSendStatus)
-			{
-				sendPacket(su);
-			}
-			
-			// Consume Items if necessary and Send the Server->Client packet InventoryUpdate with Item modification to all the Creature
-			if (skill.getItemConsume() > 0)
-			{
-				consumeItem(skill.getItemConsumeId(), skill.getItemConsume());
-			}
-			
-			// Launch the magic skill in order to calculate its effects
-			callSkill(skill, targets);
+			getStatus().reduceHp(consumeHp, this);
+			su.addAttribute(StatusUpdate.CUR_HP, (int) getStatus().getCurrentHp());
+			isSendStatus = true;
 		}
-		catch (Exception e)
+		
+		// Send a Server->Client packet StatusUpdate with MP modification to the PlayerInstance
+		if (isSendStatus)
 		{
-			LOGGER.warning(e.toString());
+			sendPacket(su);
 		}
+		
+		// Consume Items if necessary and Send the Server->Client packet InventoryUpdate with Item modification to all the Creature
+		if (skill.getItemConsume() > 0)
+		{
+			consumeItem(skill.getItemConsumeId(), skill.getItemConsume());
+		}
+		
+		// Launch the magic skill in order to calculate its effects
+		callSkill(skill, targets);
+		// }
+		// catch (Exception e)
+		// {
+		// LOGGER.warning(e.toString());
+		// }
 		
 		if (instant || (coolTime == 0))
 		{
@@ -7609,23 +7609,23 @@ public abstract class Creature extends WorldObject implements ISkillsHolder
 				// Launch weapon Special ability skill effect if available
 				if (activeWeapon != null)
 				{
-					try
+					// try
+					// {
+					if (targets != null)
 					{
-						if (targets != null)
+						for (WorldObject target : targets)
 						{
-							for (WorldObject target : targets)
+							if ((target instanceof Creature) && !((Creature) target).isDead() && activeWeapon.getSkillEffects(this, (Creature) target, skill))
 							{
-								if ((target instanceof Creature) && !((Creature) target).isDead() && activeWeapon.getSkillEffects(this, (Creature) target, skill))
-								{
-									sendPacket(SystemMessage.sendString("Target affected by weapon special ability!"));
-								}
+								sendPacket(SystemMessage.sendString("Target affected by weapon special ability!"));
 							}
 						}
 					}
-					catch (Exception e)
-					{
-						LOGGER.warning(e.toString());
-					}
+					// }
+					// catch (Exception e)
+					// {
+					// LOGGER.warning(e.toString());
+					// }
 				}
 			}
 		}
@@ -7804,312 +7804,283 @@ public abstract class Creature extends WorldObject implements ISkillsHolder
 	 */
 	public void callSkill(Skill skill, List<Creature> targets)
 	{
-		try
+		// try
+		// {
+		if (skill.isToggle() && (getFirstEffect(skill.getId()) != null))
 		{
-			if (skill.isToggle() && (getFirstEffect(skill.getId()) != null))
+			return;
+		}
+		
+		if ((targets == null) || targets.isEmpty())
+		{
+			getAI().notifyEvent(CtrlEvent.EVT_CANCEL);
+			return;
+		}
+		
+		// Do initial checkings for skills and set pvp flag/draw aggro when needed
+		for (WorldObject target : targets)
+		{
+			if (target instanceof Creature)
 			{
-				return;
-			}
-			
-			if ((targets == null) || targets.isEmpty())
-			{
-				getAI().notifyEvent(CtrlEvent.EVT_CANCEL);
-				return;
-			}
-			
-			// Do initial checkings for skills and set pvp flag/draw aggro when needed
-			for (WorldObject target : targets)
-			{
+				// Set some values inside target's instance for later use
+				final Creature creature = (Creature) target;
+				if ((skill.getEffectType() == SkillType.BUFF) && creature.isBlockBuff())
+				{
+					continue;
+				}
+				
 				if (target instanceof Creature)
 				{
-					// Set some values inside target's instance for later use
-					final Creature creature = (Creature) target;
-					if ((skill.getEffectType() == SkillType.BUFF) && creature.isBlockBuff())
+					final Creature targ = (Creature) target;
+					if (ChanceSkillList.canTriggerByCast(this, targ, skill))
 					{
-						continue;
-					}
-					
-					if (target instanceof Creature)
-					{
-						final Creature targ = (Creature) target;
-						if (ChanceSkillList.canTriggerByCast(this, targ, skill))
+						// Maybe launch chance skills on us
+						if (_chanceSkills != null)
 						{
-							// Maybe launch chance skills on us
-							if (_chanceSkills != null)
-							{
-								_chanceSkills.onSkillHit(targ, false, skill.isMagic(), skill.isOffensive());
-							}
-							// Maybe launch chance skills on target
-							if (targ.getChanceSkills() != null)
-							{
-								targ.getChanceSkills().onSkillHit(this, true, skill.isMagic(), skill.isOffensive());
-							}
+							_chanceSkills.onSkillHit(targ, false, skill.isMagic(), skill.isOffensive());
+						}
+						// Maybe launch chance skills on target
+						if (targ.getChanceSkills() != null)
+						{
+							targ.getChanceSkills().onSkillHit(this, true, skill.isMagic(), skill.isOffensive());
 						}
 					}
+				}
+				
+				if (Config.ALLOW_RAID_BOSS_PETRIFIED && ((this instanceof PlayerInstance) || (this instanceof Summon))) // Check if option is True Or False.
+				{
+					boolean toBeCursed = false;
 					
-					if (Config.ALLOW_RAID_BOSS_PETRIFIED && ((this instanceof PlayerInstance) || (this instanceof Summon))) // Check if option is True Or False.
+					// check on BossZone raid lvl
+					if (!(creature.getTarget() instanceof Playable) && !(creature.getTarget() instanceof SummonInstance))
 					{
-						boolean toBeCursed = false;
-						
-						// check on BossZone raid lvl
-						if (!(creature.getTarget() instanceof Playable) && !(creature.getTarget() instanceof SummonInstance))
+						// this must work just on mobs/raids
+						if ((creature.isRaid() && (getLevel() > (creature.getLevel() + 8))) || (!(creature instanceof PlayerInstance) && ((creature.getTarget() instanceof RaidBossInstance) && (getLevel() > (((RaidBossInstance) creature.getTarget()).getLevel() + 8)))) || (!(creature instanceof PlayerInstance) && ((creature.getTarget() instanceof GrandBossInstance) && (getLevel() > (((GrandBossInstance) creature.getTarget()).getLevel() + 8)))))
 						{
-							// this must work just on mobs/raids
-							if ((creature.isRaid() && (getLevel() > (creature.getLevel() + 8))) || (!(creature instanceof PlayerInstance) && ((creature.getTarget() instanceof RaidBossInstance) && (getLevel() > (((RaidBossInstance) creature.getTarget()).getLevel() + 8)))) || (!(creature instanceof PlayerInstance) && ((creature.getTarget() instanceof GrandBossInstance) && (getLevel() > (((GrandBossInstance) creature.getTarget()).getLevel() + 8)))))
+							toBeCursed = true;
+						}
+						
+						// advanced check too if not already cursed
+						if (!toBeCursed)
+						{
+							int bossId = -1;
+							NpcTemplate bossTemplate = null;
+							final BossZone bossZone = GrandBossManager.getInstance().getZone(this);
+							if (bossZone != null)
 							{
-								toBeCursed = true;
+								bossId = bossZone.getBossId();
 							}
 							
-							// advanced check too if not already cursed
-							if (!toBeCursed)
+							if (bossId != -1)
 							{
-								int bossId = -1;
-								NpcTemplate bossTemplate = null;
-								final BossZone bossZone = GrandBossManager.getInstance().getZone(this);
-								if (bossZone != null)
+								bossTemplate = NpcTable.getInstance().getTemplate(bossId);
+								if ((bossTemplate != null) && (getLevel() > (bossTemplate.getLevel() + 8)))
 								{
-									bossId = bossZone.getBossId();
-								}
-								
-								if (bossId != -1)
-								{
-									bossTemplate = NpcTable.getInstance().getTemplate(bossId);
-									if ((bossTemplate != null) && (getLevel() > (bossTemplate.getLevel() + 8)))
+									MonsterInstance bossInstance = null;
+									if (bossTemplate.getType().equals("RaidBoss"))
 									{
-										MonsterInstance bossInstance = null;
-										if (bossTemplate.getType().equals("RaidBoss"))
+										if (RaidBossSpawnManager.getInstance().getStatSet(bossId) != null)
 										{
-											if (RaidBossSpawnManager.getInstance().getStatSet(bossId) != null)
-											{
-												bossInstance = RaidBossSpawnManager.getInstance().getBoss(bossId);
-											}
+											bossInstance = RaidBossSpawnManager.getInstance().getBoss(bossId);
 										}
-										else if (bossTemplate.getType().equals("GrandBoss"))
+									}
+									else if (bossTemplate.getType().equals("GrandBoss"))
+									{
+										if (GrandBossManager.getInstance().getStatSet(bossId) != null)
 										{
-											if (GrandBossManager.getInstance().getStatSet(bossId) != null)
-											{
-												bossInstance = GrandBossManager.getInstance().getBoss(bossId);
-											}
+											bossInstance = GrandBossManager.getInstance().getBoss(bossId);
 										}
-										
-										// max allowed rage into take cursed is 3000
-										if ((bossInstance != null/* && alive */) && bossInstance.isInsideRadius(this, 3000, false, false))
-										{
-											toBeCursed = true;
-										}
+									}
+									
+									// max allowed rage into take cursed is 3000
+									if ((bossInstance != null/* && alive */) && bossInstance.isInsideRadius(this, 3000, false, false))
+									{
+										toBeCursed = true;
 									}
 								}
 							}
 						}
-						
-						if (toBeCursed)
+					}
+					
+					if (toBeCursed)
+					{
+						if (skill.isMagic())
 						{
-							if (skill.isMagic())
+							final Skill tempSkill = SkillTable.getInstance().getSkill(4215, 1);
+							if (tempSkill != null)
 							{
-								final Skill tempSkill = SkillTable.getInstance().getSkill(4215, 1);
-								if (tempSkill != null)
+								abortAttack();
+								abortCast();
+								getAI().setIntention(CtrlIntention.AI_INTENTION_IDLE);
+								tempSkill.getEffects(creature, this, false, false, false);
+								if (this instanceof Summon)
 								{
-									abortAttack();
-									abortCast();
-									getAI().setIntention(CtrlIntention.AI_INTENTION_IDLE);
-									tempSkill.getEffects(creature, this, false, false, false);
-									if (this instanceof Summon)
+									final Summon src = ((Summon) this);
+									if (src.getOwner() != null)
 									{
-										final Summon src = ((Summon) this);
-										if (src.getOwner() != null)
-										{
-											src.getOwner().abortAttack();
-											src.getOwner().abortCast();
-											src.getOwner().getAI().setIntention(CtrlIntention.AI_INTENTION_IDLE);
-											tempSkill.getEffects(creature, src.getOwner(), false, false, false);
-										}
+										src.getOwner().abortAttack();
+										src.getOwner().abortCast();
+										src.getOwner().getAI().setIntention(CtrlIntention.AI_INTENTION_IDLE);
+										tempSkill.getEffects(creature, src.getOwner(), false, false, false);
 									}
-								}
-								else
-								{
-									LOGGER.warning("Skill 4215 at level 1 is missing in DP.");
 								}
 							}
 							else
 							{
-								final Skill tempSkill = SkillTable.getInstance().getSkill(4515, 1);
-								if (tempSkill != null)
+								LOGGER.warning("Skill 4215 at level 1 is missing in DP.");
+							}
+						}
+						else
+						{
+							final Skill tempSkill = SkillTable.getInstance().getSkill(4515, 1);
+							if (tempSkill != null)
+							{
+								tempSkill.getEffects(creature, this, false, false, false);
+							}
+							else
+							{
+								LOGGER.warning("Skill 4515 at level 1 is missing in DP.");
+							}
+							
+							if (creature instanceof MinionInstance)
+							{
+								final MonsterInstance leader = ((MinionInstance) creature).getLeader();
+								leader.stopHating(this);
+								if (leader.hasMinions())
 								{
-									tempSkill.getEffects(creature, this, false, false, false);
-								}
-								else
-								{
-									LOGGER.warning("Skill 4515 at level 1 is missing in DP.");
-								}
-								
-								if (creature instanceof MinionInstance)
-								{
-									final MonsterInstance leader = ((MinionInstance) creature).getLeader();
-									leader.stopHating(this);
-									if (leader.hasMinions())
+									for (MinionInstance minion : leader.getSpawnedMinions())
 									{
-										for (MinionInstance minion : leader.getSpawnedMinions())
+										if (leader.getMostHated() == null)
 										{
-											if (leader.getMostHated() == null)
-											{
-												((AttackableAI) minion.getAI()).setGlobalAggro(-25);
-												minion.clearAggroList();
-												minion.getAI().setIntention(CtrlIntention.AI_INTENTION_ACTIVE);
-												minion.setWalking();
-											}
-											if ((minion != null) && !minion.isDead())
-											{
-												((AttackableAI) minion.getAI()).setGlobalAggro(-25);
-												minion.clearAggroList();
-												minion.getAI().setIntention(CtrlIntention.AI_INTENTION_ACTIVE);
-												minion.addDamage(((Attackable) creature).getMostHated(), 100);
-											}
+											((AttackableAI) minion.getAI()).setGlobalAggro(-25);
+											minion.clearAggroList();
+											minion.getAI().setIntention(CtrlIntention.AI_INTENTION_ACTIVE);
+											minion.setWalking();
 										}
-									}
-								}
-								else
-								{
-									((Attackable) creature).stopHating(this);
-									final Collection<MinionInstance> spawnedMinions = ((MonsterInstance) creature).getSpawnedMinions();
-									if ((spawnedMinions != null) && !spawnedMinions.isEmpty())
-									{
-										for (MinionInstance minion : spawnedMinions)
+										if ((minion != null) && !minion.isDead())
 										{
-											if (((Attackable) creature).getMostHated() == null)
-											{
-												((AttackableAI) minion.getAI()).setGlobalAggro(-25);
-												minion.clearAggroList();
-												minion.getAI().setIntention(CtrlIntention.AI_INTENTION_ACTIVE);
-												minion.setWalking();
-											}
-											if ((minion != null) && !minion.isDead())
-											{
-												((AttackableAI) minion.getAI()).setGlobalAggro(-25);
-												minion.clearAggroList();
-												minion.getAI().setIntention(CtrlIntention.AI_INTENTION_ACTIVE);
-												minion.addDamage(((Attackable) creature).getMostHated(), 100);
-											}
+											((AttackableAI) minion.getAI()).setGlobalAggro(-25);
+											minion.clearAggroList();
+											minion.getAI().setIntention(CtrlIntention.AI_INTENTION_ACTIVE);
+											minion.addDamage(((Attackable) creature).getMostHated(), 100);
 										}
 									}
 								}
 							}
-							return;
+							else
+							{
+								((Attackable) creature).stopHating(this);
+								final Collection<MinionInstance> spawnedMinions = ((MonsterInstance) creature).getSpawnedMinions();
+								if ((spawnedMinions != null) && !spawnedMinions.isEmpty())
+								{
+									for (MinionInstance minion : spawnedMinions)
+									{
+										if (((Attackable) creature).getMostHated() == null)
+										{
+											((AttackableAI) minion.getAI()).setGlobalAggro(-25);
+											minion.clearAggroList();
+											minion.getAI().setIntention(CtrlIntention.AI_INTENTION_ACTIVE);
+											minion.setWalking();
+										}
+										if ((minion != null) && !minion.isDead())
+										{
+											((AttackableAI) minion.getAI()).setGlobalAggro(-25);
+											minion.clearAggroList();
+											minion.getAI().setIntention(CtrlIntention.AI_INTENTION_ACTIVE);
+											minion.addDamage(((Attackable) creature).getMostHated(), 100);
+										}
+									}
+								}
+							}
+						}
+						return;
+					}
+				}
+				
+				PlayerInstance activeChar = null;
+				if (this instanceof PlayerInstance)
+				{
+					activeChar = (PlayerInstance) this;
+				}
+				else if (this instanceof Summon)
+				{
+					activeChar = ((Summon) this).getOwner();
+				}
+				
+				if (activeChar != null)
+				{
+					if (skill.isOffensive())
+					{
+						if ((creature instanceof PlayerInstance) || (creature instanceof Summon))
+						{
+							// Signets are a special case, casted on target_self but don't harm self
+							if ((skill.getSkillType() != SkillType.SIGNET) && (skill.getSkillType() != SkillType.SIGNET_CASTTIME))
+							{
+								creature.getAI().notifyEvent(CtrlEvent.EVT_ATTACKED, activeChar);
+								activeChar.updatePvPStatus(creature);
+							}
+						}
+						else if (creature instanceof Attackable)
+						{
+							switch (skill.getSkillType())
+							{
+								case AGGREDUCE:
+								case AGGREDUCE_CHAR:
+								case AGGREMOVE:
+								{
+									break;
+								}
+								default:
+								{
+									((Creature) target).addAttackerToAttackByList(this);
+									int hitTime = Formulas.getInstance().calcMAtkSpd(activeChar, skill, skill.getHitTime());
+									if ((checkBss() || checkSps()) && !skill.isStaticHitTime() && !skill.isPotion() && skill.isMagic())
+									{
+										hitTime = (int) (0.70 * hitTime);
+									}
+									ThreadPool.schedule(new notifyAiTaskDelayed(CtrlEvent.EVT_ATTACKED, this, target), hitTime);
+									break;
+								}
+							}
 						}
 					}
-					
+					else if (creature instanceof PlayerInstance)
+					{
+						// Casting non offensive skill on player with pvp flag set or with karma
+						if (!creature.equals(this) && ((((PlayerInstance) creature).getPvpFlag() > 0) || (((PlayerInstance) creature).getKarma() > 0)))
+						{
+							activeChar.updatePvPStatus();
+						}
+					}
+					else if ((creature instanceof Attackable) && (skill.getSkillType() != SkillType.SUMMON) && (skill.getSkillType() != SkillType.BEAST_FEED) && (skill.getSkillType() != SkillType.UNLOCK) && (skill.getSkillType() != SkillType.DELUXE_KEY_UNLOCK))
+					{
+						activeChar.updatePvPStatus(this);
+					}
+				}
+			}
+			if (target instanceof MonsterInstance)
+			{
+				if (!skill.isOffensive() && (skill.getSkillType() != SkillType.UNLOCK) && (skill.getSkillType() != SkillType.SUMMON) && (skill.getSkillType() != SkillType.DELUXE_KEY_UNLOCK) && (skill.getSkillType() != SkillType.BEAST_FEED))
+				{
 					PlayerInstance activeChar = null;
 					if (this instanceof PlayerInstance)
 					{
 						activeChar = (PlayerInstance) this;
+						activeChar.updatePvPStatus(activeChar);
 					}
 					else if (this instanceof Summon)
 					{
 						activeChar = ((Summon) this).getOwner();
 					}
-					
-					if (activeChar != null)
-					{
-						if (skill.isOffensive())
-						{
-							if ((creature instanceof PlayerInstance) || (creature instanceof Summon))
-							{
-								// Signets are a special case, casted on target_self but don't harm self
-								if ((skill.getSkillType() != SkillType.SIGNET) && (skill.getSkillType() != SkillType.SIGNET_CASTTIME))
-								{
-									creature.getAI().notifyEvent(CtrlEvent.EVT_ATTACKED, activeChar);
-									activeChar.updatePvPStatus(creature);
-								}
-							}
-							else if (creature instanceof Attackable)
-							{
-								switch (skill.getSkillType())
-								{
-									case AGGREDUCE:
-									case AGGREDUCE_CHAR:
-									case AGGREMOVE:
-									{
-										break;
-									}
-									default:
-									{
-										((Creature) target).addAttackerToAttackByList(this);
-										int hitTime = Formulas.getInstance().calcMAtkSpd(activeChar, skill, skill.getHitTime());
-										if ((checkBss() || checkSps()) && !skill.isStaticHitTime() && !skill.isPotion() && skill.isMagic())
-										{
-											hitTime = (int) (0.70 * hitTime);
-										}
-										ThreadPool.schedule(new notifyAiTaskDelayed(CtrlEvent.EVT_ATTACKED, this, target), hitTime);
-										break;
-									}
-								}
-							}
-						}
-						else if (creature instanceof PlayerInstance)
-						{
-							// Casting non offensive skill on player with pvp flag set or with karma
-							if (!creature.equals(this) && ((((PlayerInstance) creature).getPvpFlag() > 0) || (((PlayerInstance) creature).getKarma() > 0)))
-							{
-								activeChar.updatePvPStatus();
-							}
-						}
-						else if ((creature instanceof Attackable) && (skill.getSkillType() != SkillType.SUMMON) && (skill.getSkillType() != SkillType.BEAST_FEED) && (skill.getSkillType() != SkillType.UNLOCK) && (skill.getSkillType() != SkillType.DELUXE_KEY_UNLOCK))
-						{
-							activeChar.updatePvPStatus(this);
-						}
-					}
-				}
-				if (target instanceof MonsterInstance)
-				{
-					if (!skill.isOffensive() && (skill.getSkillType() != SkillType.UNLOCK) && (skill.getSkillType() != SkillType.SUMMON) && (skill.getSkillType() != SkillType.DELUXE_KEY_UNLOCK) && (skill.getSkillType() != SkillType.BEAST_FEED))
-					{
-						PlayerInstance activeChar = null;
-						if (this instanceof PlayerInstance)
-						{
-							activeChar = (PlayerInstance) this;
-							activeChar.updatePvPStatus(activeChar);
-						}
-						else if (this instanceof Summon)
-						{
-							activeChar = ((Summon) this).getOwner();
-						}
-					}
 				}
 			}
-			
-			ISkillHandler handler = null;
-			// Check if the skill effects are already in progress on the Creature
-			if (skill.isToggle() && (getFirstEffect(skill.getId()) != null))
-			{
-				handler = SkillHandler.getInstance().getSkillHandler(skill.getSkillType());
-				if (handler != null)
-				{
-					handler.useSkill(this, skill, targets);
-				}
-				else
-				{
-					skill.useSkill(this, targets);
-				}
-				return;
-			}
-			
-			// Check if over-hit is possible
-			if (skill.isOverhit())
-			{
-				// Set the "over-hit enabled" flag on each of the possible targets
-				for (WorldObject target : targets)
-				{
-					final Creature creature = (Creature) target;
-					if (creature instanceof Attackable)
-					{
-						((Attackable) creature).overhitEnabled(true);
-					}
-				}
-			}
-			
-			// Get the skill handler corresponding to the skill type (PDAM, MDAM, SWEEP...) started in gameserver
+		}
+		
+		ISkillHandler handler = null;
+		// Check if the skill effects are already in progress on the Creature
+		if (skill.isToggle() && (getFirstEffect(skill.getId()) != null))
+		{
 			handler = SkillHandler.getInstance().getSkillHandler(skill.getSkillType());
-			
-			// Launch the magic skill and calculate its effects
 			if (handler != null)
 			{
 				handler.useSkill(this, skill, targets);
@@ -8118,44 +8089,72 @@ public abstract class Creature extends WorldObject implements ISkillsHolder
 			{
 				skill.useSkill(this, targets);
 			}
-			
-			// if the skill is a potion, must delete the potion item
-			if (skill.isPotion() && (this instanceof Playable))
+			return;
+		}
+		
+		// Check if over-hit is possible
+		if (skill.isOverhit())
+		{
+			// Set the "over-hit enabled" flag on each of the possible targets
+			for (WorldObject target : targets)
 			{
-				Potions.deletePotionItem((Playable) this, skill.getId(), skill.getLevel());
-			}
-			
-			if ((this instanceof PlayerInstance) || (this instanceof Summon))
-			{
-				final PlayerInstance caster = this instanceof PlayerInstance ? (PlayerInstance) this : ((Summon) this).getOwner();
-				for (WorldObject target : targets)
+				final Creature creature = (Creature) target;
+				if (creature instanceof Attackable)
 				{
-					if (target instanceof NpcInstance)
+					((Attackable) creature).overhitEnabled(true);
+				}
+			}
+		}
+		
+		// Get the skill handler corresponding to the skill type (PDAM, MDAM, SWEEP...) started in gameserver
+		handler = SkillHandler.getInstance().getSkillHandler(skill.getSkillType());
+		
+		// Launch the magic skill and calculate its effects
+		if (handler != null)
+		{
+			handler.useSkill(this, skill, targets);
+		}
+		else
+		{
+			skill.useSkill(this, targets);
+		}
+		
+		// if the skill is a potion, must delete the potion item
+		if (skill.isPotion() && (this instanceof Playable))
+		{
+			Potions.deletePotionItem((Playable) this, skill.getId(), skill.getLevel());
+		}
+		
+		if ((this instanceof PlayerInstance) || (this instanceof Summon))
+		{
+			final PlayerInstance caster = this instanceof PlayerInstance ? (PlayerInstance) this : ((Summon) this).getOwner();
+			for (WorldObject target : targets)
+			{
+				if (target instanceof NpcInstance)
+				{
+					final NpcInstance npc = (NpcInstance) target;
+					for (Quest quest : npc.getTemplate().getEventQuests(EventType.ON_SKILL_USE))
 					{
-						final NpcInstance npc = (NpcInstance) target;
-						for (Quest quest : npc.getTemplate().getEventQuests(EventType.ON_SKILL_USE))
-						{
-							quest.notifySkillUse(npc, caster, skill);
-						}
+						quest.notifySkillUse(npc, caster, skill);
 					}
 				}
-				
-				if (skill.getAggroPoints() > 0)
+			}
+			
+			if (skill.getAggroPoints() > 0)
+			{
+				for (WorldObject spMob : caster.getKnownList().getKnownObjects().values())
 				{
-					for (WorldObject spMob : caster.getKnownList().getKnownObjects().values())
+					if (spMob instanceof NpcInstance)
 					{
-						if (spMob instanceof NpcInstance)
+						final NpcInstance npcMob = (NpcInstance) spMob;
+						if (npcMob.isInsideRadius(caster, 1000, true, true) && npcMob.hasAI() && (npcMob.getAI().getIntention() == AI_INTENTION_ATTACK))
 						{
-							final NpcInstance npcMob = (NpcInstance) spMob;
-							if (npcMob.isInsideRadius(caster, 1000, true, true) && npcMob.hasAI() && (npcMob.getAI().getIntention() == AI_INTENTION_ATTACK))
+							final WorldObject npcTarget = npcMob.getTarget();
+							for (WorldObject target : targets)
 							{
-								final WorldObject npcTarget = npcMob.getTarget();
-								for (WorldObject target : targets)
+								if ((npcTarget == target) || (npcMob == target))
 								{
-									if ((npcTarget == target) || (npcMob == target))
-									{
-										npcMob.seeSpell(caster, target, skill);
-									}
+									npcMob.seeSpell(caster, target, skill);
 								}
 							}
 						}
@@ -8163,10 +8162,11 @@ public abstract class Creature extends WorldObject implements ISkillsHolder
 				}
 			}
 		}
-		catch (Exception e)
-		{
-			LOGGER.warning(e.getMessage());
-		}
+		// }
+		// catch (Exception e)
+		// {
+		// LOGGER.warning(e.getMessage());
+		// }
 	}
 	
 	/**

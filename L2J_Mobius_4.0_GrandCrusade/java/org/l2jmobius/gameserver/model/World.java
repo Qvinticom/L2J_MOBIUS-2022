@@ -406,10 +406,13 @@ public class World
 		oldRegion.removeVisibleObject(object);
 		
 		// Go through all surrounding WorldRegion Creatures
-		for (WorldRegion worldRegion : oldRegion.getSurroundingRegions())
+		final WorldRegion[] surroundingRegions = oldRegion.getSurroundingRegions();
+		for (int i = 0; i < surroundingRegions.length; i++)
 		{
-			for (WorldObject wo : worldRegion.getVisibleObjects().values())
+			final List<WorldObject> visibleObjects = surroundingRegions[i].getVisibleObjects();
+			for (int j = 0; j < visibleObjects.size(); j++)
 			{
+				final WorldObject wo = visibleObjects.get(j);
 				if (wo == object)
 				{
 					continue;
@@ -466,15 +469,19 @@ public class World
 			return;
 		}
 		
-		for (WorldRegion worldRegion : oldRegion.getSurroundingRegions())
+		final WorldRegion[] oldSurroundingRegions = oldRegion.getSurroundingRegions();
+		for (int i = 0; i < oldSurroundingRegions.length; i++)
 		{
+			final WorldRegion worldRegion = oldSurroundingRegions[i];
 			if (newRegion.isSurroundingRegion(worldRegion))
 			{
 				continue;
 			}
 			
-			for (WorldObject wo : worldRegion.getVisibleObjects().values())
+			final List<WorldObject> visibleObjects = worldRegion.getVisibleObjects();
+			for (int j = 0; j < visibleObjects.size(); j++)
 			{
+				final WorldObject wo = visibleObjects.get(j);
 				if (wo == object)
 				{
 					continue;
@@ -522,15 +529,19 @@ public class World
 			}
 		}
 		
-		for (WorldRegion worldRegion : newRegion.getSurroundingRegions())
+		final WorldRegion[] newSurroundingRegions = newRegion.getSurroundingRegions();
+		for (int i = 0; i < newSurroundingRegions.length; i++)
 		{
+			final WorldRegion worldRegion = newSurroundingRegions[i];
 			if (oldRegion.isSurroundingRegion(worldRegion))
 			{
 				continue;
 			}
 			
-			for (WorldObject wo : worldRegion.getVisibleObjects().values())
+			final List<WorldObject> visibleObjects = worldRegion.getVisibleObjects();
+			for (int j = 0; j < visibleObjects.size(); j++)
 			{
+				final WorldObject wo = visibleObjects.get(j);
 				if ((wo == object) || (wo.getInstanceWorld() != object.getInstanceWorld()))
 				{
 					continue;
@@ -610,27 +621,30 @@ public class World
 			return;
 		}
 		
-		final WorldRegion centerWorldRegion = getRegion(object);
-		if (centerWorldRegion == null)
+		final WorldRegion worldRegion = getRegion(object);
+		if (worldRegion == null)
 		{
 			return;
 		}
 		
-		for (WorldRegion region : centerWorldRegion.getSurroundingRegions())
+		final WorldRegion[] surroundingRegions = worldRegion.getSurroundingRegions();
+		for (int i = 0; i < surroundingRegions.length; i++)
 		{
-			for (WorldObject visibleObject : region.getVisibleObjects().values())
+			final List<WorldObject> visibleObjects = surroundingRegions[i].getVisibleObjects();
+			for (int j = 0; j < visibleObjects.size(); j++)
 			{
-				if ((visibleObject == null) || (visibleObject == object) || !clazz.isInstance(visibleObject))
+				final WorldObject wo = visibleObjects.get(j);
+				if ((wo == null) || (wo == object) || !clazz.isInstance(wo))
 				{
 					continue;
 				}
 				
-				if (visibleObject.getInstanceWorld() != object.getInstanceWorld())
+				if (wo.getInstanceWorld() != object.getInstanceWorld())
 				{
 					continue;
 				}
 				
-				c.accept(clazz.cast(visibleObject));
+				c.accept(clazz.cast(wo));
 			}
 		}
 	}
@@ -662,29 +676,32 @@ public class World
 			return;
 		}
 		
-		final WorldRegion centerWorldRegion = getRegion(object);
-		if (centerWorldRegion == null)
+		final WorldRegion worldRegion = getRegion(object);
+		if (worldRegion == null)
 		{
 			return;
 		}
 		
-		for (WorldRegion region : centerWorldRegion.getSurroundingRegions())
+		final WorldRegion[] surroundingRegions = worldRegion.getSurroundingRegions();
+		for (int i = 0; i < surroundingRegions.length; i++)
 		{
-			for (WorldObject visibleObject : region.getVisibleObjects().values())
+			final List<WorldObject> visibleObjects = surroundingRegions[i].getVisibleObjects();
+			for (int j = 0; j < visibleObjects.size(); j++)
 			{
-				if ((visibleObject == null) || (visibleObject == object) || !clazz.isInstance(visibleObject))
+				final WorldObject wo = visibleObjects.get(j);
+				if ((wo == null) || (wo == object) || !clazz.isInstance(wo))
 				{
 					continue;
 				}
 				
-				if (visibleObject.getInstanceWorld() != object.getInstanceWorld())
+				if (wo.getInstanceWorld() != object.getInstanceWorld())
 				{
 					continue;
 				}
 				
-				if (visibleObject.calculateDistance3D(object) <= range)
+				if (wo.calculateDistance3D(object) <= range)
 				{
-					c.accept(clazz.cast(visibleObject));
+					c.accept(clazz.cast(wo));
 				}
 			}
 		}
