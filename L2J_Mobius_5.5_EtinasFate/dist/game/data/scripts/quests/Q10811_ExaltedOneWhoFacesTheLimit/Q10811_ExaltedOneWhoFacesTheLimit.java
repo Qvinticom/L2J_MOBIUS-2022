@@ -51,6 +51,7 @@ public class Q10811_ExaltedOneWhoFacesTheLimit extends Quest
 		super(10811);
 		addStartNpc(LIONEL);
 		addTalkId(LIONEL);
+		addCondMinLevel(MIN_LEVEL, "33907-07.html");
 		registerQuestItems(LIONEL_HUNTER_MISSING_LIST, ELIKIA_CERTIFICATE, MYSTERIOUS_BUTLER_CERTIFICATE, SIR_ERIC_RODEMAI_CERTIFICATE, GALLADUCI_RODEMAI_CERTIFICATE);
 	}
 	
@@ -66,8 +67,8 @@ public class Q10811_ExaltedOneWhoFacesTheLimit extends Quest
 		String htmltext = null;
 		switch (event)
 		{
-			case "33383-03.html":
-			case "33383-04.html":
+			case "33907-03.html":
+			case "33907-04.html":
 			{
 				htmltext = event;
 				break;
@@ -78,14 +79,14 @@ public class Q10811_ExaltedOneWhoFacesTheLimit extends Quest
 				playMovie(player, Movie.SC_HONORS);
 				break;
 			}
-			case "33383-05.html":
+			case "33907-05.html":
 			{
 				qs.setCond(2);
 				giveItems(player, LIONEL_HUNTER_MISSING_LIST, 1);
 				htmltext = event;
 				break;
 			}
-			case "33383-09.html":
+			case "33907-09.html":
 			{
 				if (qs.isCond(3))
 				{
@@ -115,22 +116,22 @@ public class Q10811_ExaltedOneWhoFacesTheLimit extends Quest
 		{
 			case State.CREATED:
 			{
-				htmltext = (player.getLevel() >= MIN_LEVEL) && (player.getNobleLevel() > 0) ? "33383-01.htm" : "33383-07.htm";
+				htmltext = (player.getLevel() >= MIN_LEVEL) && (player.getNobleLevel() > 0) ? "33907-01.htm" : "33907-07.htm";
 				break;
 			}
 			case State.STARTED:
 			{
 				if (qs.isCond(1))
 				{
-					htmltext = "33383-02.html";
+					htmltext = "33907-02.html";
 				}
 				else if (qs.isCond(2))
 				{
-					htmltext = "33383-06.html";
+					htmltext = "33907-06.html";
 				}
 				else if (qs.isCond(3))
 				{
-					htmltext = "33383-08.html";
+					htmltext = "33907-08.html";
 				}
 				break;
 			}
