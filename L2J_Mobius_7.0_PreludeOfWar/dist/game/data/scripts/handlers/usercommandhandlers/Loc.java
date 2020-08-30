@@ -24,7 +24,6 @@ import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
 import org.l2jmobius.gameserver.model.zone.type.RespawnZone;
 import org.l2jmobius.gameserver.network.SystemMessageId;
 import org.l2jmobius.gameserver.network.serverpackets.SystemMessage;
-import org.l2jmobius.gameserver.network.serverpackets.sessionzones.TimedHuntingZoneEnter;
 
 /**
  * Loc user command.
@@ -67,8 +66,6 @@ public class Loc implements IUserCommandHandler
 			sm.addString(player.getX() + ", " + player.getY() + ", " + player.getZ());
 		}
 		player.sendPacket(sm);
-		
-		player.sendPacket(new TimedHuntingZoneEnter(1));
 		return true;
 	}
 	
