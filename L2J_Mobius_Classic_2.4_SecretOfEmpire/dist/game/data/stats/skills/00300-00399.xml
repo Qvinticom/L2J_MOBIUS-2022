@@ -1406,8 +1406,8 @@
 		<magicCriticalRate>5</magicCriticalRate>
 		<targetType>NONE</targetType>
 		<effects>
-			<effect name="DamOverTime">
-				<power>50</power>
+			<effect name="HealOverTime">
+				<power>-50</power>
 				<ticks>5</ticks>
 			</effect>
 			<effect name="MagicalAttackSpeed">
@@ -1473,8 +1473,8 @@
 		<magicCriticalRate>5</magicCriticalRate>
 		<targetType>NONE</targetType>
 		<effects>
-			<effect name="DamOverTime">
-				<power>50</power>
+			<effect name="HealOverTime">
+				<power>-50</power>
 				<ticks>5</ticks>
 			</effect>
 			<effect name="MagicalAttackSpeed">
