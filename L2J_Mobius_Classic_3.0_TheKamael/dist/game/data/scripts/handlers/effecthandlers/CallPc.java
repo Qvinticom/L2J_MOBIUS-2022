@@ -17,6 +17,7 @@
 package handlers.effecthandlers;
 
 import org.l2jmobius.gameserver.model.StatSet;
+import org.l2jmobius.gameserver.model.WorldObject;
 import org.l2jmobius.gameserver.model.actor.Creature;
 import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
 import org.l2jmobius.gameserver.model.effects.AbstractEffect;
@@ -61,30 +62,39 @@ public class CallPc extends AbstractEffect
 		
 		final PlayerInstance target = effected.getActingPlayer();
 		final PlayerInstance player = effector.getActingPlayer();
-		if (checkSummonTargetStatus(target, player))
+		if (player != null)
 		{
-			if ((_itemId != 0) && (_itemCount != 0))
+			if (checkSummonTargetStatus(target, player))
 			{
-				if (target.getInventory().getInventoryItemCount(_itemId, 0) < _itemCount)
+				if ((_itemId != 0) && (_itemCount != 0))
 				{
-					final SystemMessage sm = new SystemMessage(SystemMessageId.S1_IS_REQUIRED_FOR_SUMMONING);
+					if (target.getInventory().getInventoryItemCount(_itemId, 0) < _itemCount)
+					{
+						final SystemMessage sm = new SystemMessage(SystemMessageId.S1_IS_REQUIRED_FOR_SUMMONING);
+						sm.addItemName(_itemId);
+						target.sendPacket(sm);
+						return;
+					}
+					target.getInventory().destroyItemByItemId("Consume", _itemId, _itemCount, player, target);
+					final SystemMessage sm = new SystemMessage(SystemMessageId.S1_DISAPPEARED);
 					sm.addItemName(_itemId);
 					target.sendPacket(sm);
-					return;
 				}
-				target.getInventory().destroyItemByItemId("Consume", _itemId, _itemCount, player, target);
-				final SystemMessage sm = new SystemMessage(SystemMessageId.S1_DISAPPEARED);
-				sm.addItemName(_itemId);
-				target.sendPacket(sm);
+				target.addScript(new SummonRequestHolder(player));
+				
+				final ConfirmDlg confirm = new ConfirmDlg(SystemMessageId.C1_WISHES_TO_SUMMON_YOU_FROM_S2_DO_YOU_ACCEPT.getId());
+				confirm.getSystemMessage().addString(player.getName());
+				confirm.getSystemMessage().addZoneName(player.getX(), player.getY(), player.getZ());
+				confirm.addTime(30000);
+				confirm.addRequesterId(player.getObjectId());
+				target.sendPacket(confirm);
 			}
-			target.addScript(new SummonRequestHolder(player));
-			
-			final ConfirmDlg confirm = new ConfirmDlg(SystemMessageId.C1_WISHES_TO_SUMMON_YOU_FROM_S2_DO_YOU_ACCEPT.getId());
-			confirm.getSystemMessage().addString(player.getName());
-			confirm.getSystemMessage().addZoneName(player.getX(), player.getY(), player.getZ());
-			confirm.addTime(30000);
-			confirm.addRequesterId(player.getObjectId());
-			target.sendPacket(confirm);
+		}
+		else if (target != null)
+		{
+			final WorldObject previousTarget = target.getTarget();
+			target.teleToLocation(effector);
+			target.setTarget(previousTarget);
 		}
 	}
 	
