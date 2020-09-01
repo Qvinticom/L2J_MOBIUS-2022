@@ -467,15 +467,15 @@ public class World
 	 */
 	public List<WorldObject> getVisibleObjects(WorldObject object)
 	{
-		if (object == null)
+		if ((object == null) || !object.isSpawned())
 		{
-			return null;
+			return Collections.emptyList();
 		}
 		
 		final WorldRegion region = object.getWorldRegion();
 		if (region == null)
 		{
-			return null;
+			return Collections.emptyList();
 		}
 		
 		// Create a list in order to contain all visible WorldObject
