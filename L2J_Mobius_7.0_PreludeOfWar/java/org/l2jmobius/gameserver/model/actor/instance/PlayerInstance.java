@@ -265,6 +265,7 @@ import org.l2jmobius.gameserver.model.skills.CommonSkill;
 import org.l2jmobius.gameserver.model.skills.Skill;
 import org.l2jmobius.gameserver.model.skills.SkillCaster;
 import org.l2jmobius.gameserver.model.skills.SkillCastingType;
+import org.l2jmobius.gameserver.model.skills.targets.AffectScope;
 import org.l2jmobius.gameserver.model.skills.targets.TargetType;
 import org.l2jmobius.gameserver.model.stats.BaseStat;
 import org.l2jmobius.gameserver.model.stats.Formulas;
@@ -14331,6 +14332,26 @@ public class PlayerInstance extends Playable
 					}
 					if (!isAffectedBySkill(skillId) && !isInsideZone(ZoneId.PEACE) && !hasSkillReuse(skill.getReuseHashCode()) && skill.checkCondition(this, this, false))
 					{
+						// Summon check.
+						if (skill.getAffectScope() == AffectScope.SUMMON_EXCEPT_MASTER)
+						{
+							if (!hasServitors()) // Is this check truly needed?
+							{
+								continue;
+							}
+							int occurrences = 0;
+							for (Summon servitor : _servitors.values())
+							{
+								if (servitor.isAffectedBySkill(skillId))
+								{
+									occurrences++;
+								}
+							}
+							if (occurrences == _servitors.size())
+							{
+								continue;
+							}
+						}
 						doCast(skill);
 					}
 				}
