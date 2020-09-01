@@ -442,7 +442,7 @@ public class MonsterRace
 	{
 		try (Connection con = DatabaseFactory.getConnection())
 		{
-			PreparedStatement statement = con.prepareStatement("INSERT INTO mdt_history (race_id, first, second, odd_rate) VALUES (?,?,?,?)");
+			PreparedStatement statement = con.prepareStatement("REPLACE INTO mdt_history (race_id, first, second, odd_rate) VALUES (?,?,?,?)");
 			statement.setInt(1, history.getRaceId());
 			statement.setInt(2, history.getFirst());
 			statement.setInt(3, history.getSecond());
