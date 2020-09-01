@@ -53,7 +53,6 @@ public class ChestKey implements IItemHandler
 		
 		final PlayerInstance player = (PlayerInstance) playable;
 		final int itemId = item.getItemId();
-		final Skill skill = SkillTable.getInstance().getSkill(2229, itemId - 6664); // box key skill
 		final WorldObject target = player.getTarget();
 		if (!(target instanceof ChestInstance))
 		{
@@ -65,11 +64,12 @@ public class ChestKey implements IItemHandler
 			final ChestInstance chest = (ChestInstance) target;
 			if (chest.isDead() || chest.isInteracted())
 			{
-				player.sendMessage("The chest Is empty.");
+				player.sendMessage("The chest is empty.");
 				player.sendPacket(ActionFailed.STATIC_PACKET);
-				
 				return;
 			}
+			
+			final Skill skill = SkillTable.getInstance().getSkill(2229, itemId - 6664); // box key skill
 			player.useMagic(skill, false, false);
 		}
 	}

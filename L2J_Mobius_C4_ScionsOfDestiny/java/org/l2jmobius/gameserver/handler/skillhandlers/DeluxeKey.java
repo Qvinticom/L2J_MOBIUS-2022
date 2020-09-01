@@ -17,7 +17,6 @@
 package org.l2jmobius.gameserver.handler.skillhandlers;
 
 import java.util.List;
-import java.util.logging.Logger;
 
 import org.l2jmobius.gameserver.handler.ISkillHandler;
 import org.l2jmobius.gameserver.model.Skill;
@@ -30,8 +29,6 @@ import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
  */
 public class DeluxeKey implements ISkillHandler
 {
-	private static final Logger LOGGER = Logger.getLogger(DeluxeKey.class.getName());
-	
 	private static final SkillType[] SKILL_IDS =
 	{
 		SkillType.DELUXE_KEY_UNLOCK
@@ -45,13 +42,10 @@ public class DeluxeKey implements ISkillHandler
 			return;
 		}
 		
-		final List<Creature> targetList = skill.getTargetList(creature);
-		if (targetList == null)
+		if (skill.getTargetList(creature) == null)
 		{
 			return;
 		}
-		
-		LOGGER.info("Delux key casting succeded.");
 		
 		// This is just a dummy skill handler for the golden food and crystal food skills, since the AI responce onSkillUse handles the rest.
 	}

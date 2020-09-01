@@ -33,14 +33,16 @@ public class Chests extends Quest
 {
 	// NPCs
 	private static final int[] CHESTS =
-	{// @formatter:off
+	{
+		// @formatter:off
 		18265,18266,18267,18268,18269,18270,18271,18272,18273,18274,18275,
 		18276,18277,18278,18279,18280,18281,18282,18283,18284,18285,18286,
 		18287,18288,18289,18290,18291,18292,18293,18294,18295,18296,18297,
 		18298,21671,21694,21717,21740,21763,21786,21801,21802,21803,21804,
 		21805,21806,21807,21808,21809,21810,21811,21812,21813,21814,21815,
 		21816,21817,21818,21819,21820,21821,21822
-	}; // @formatter:on
+		// @formatter:on
+	};
 	// Skill
 	private static final int SKILL_DELUXE_KEY = 2229;
 	// Misc
@@ -64,13 +66,14 @@ public class Chests extends Quest
 		// if this has already been interacted, no further ai decisions are needed
 		// if it's the first interaction, check if this is a box or mimic
 		final ChestInstance chest = (ChestInstance) npc;
-		if (chest.isInteracted())
+		if (!chest.isInteracted())
 		{
 			chest.setInteracted();
-			if (Rnd.get(100) < IS_BOX)
+			final boolean isDeluxeSkill = skill.getId() == SKILL_DELUXE_KEY;
+			if ((Rnd.get(100) < IS_BOX) || isDeluxeSkill)
 			{
-				// if it's a box, either it will be successfully openned by a proper key, or instantly disappear
-				if (skill.getId() == SKILL_DELUXE_KEY)
+				// if it's a box, either it will be successfully opened by a proper key, or instantly disappear
+				if (isDeluxeSkill)
 				{
 					// check the chance to open the box
 					final int keyLevelNeeded = chest.getLevel() / 10;
